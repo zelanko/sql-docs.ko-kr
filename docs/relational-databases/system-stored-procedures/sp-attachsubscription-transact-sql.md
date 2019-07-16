@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47e1eec1aaa8162565f481b2d82982781e1a3c8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9f144d9d896fb75af5f59850c249b9044d1b781
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046154"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_attachsubscription** 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
  게시 보존 기간이 만료된 경우에는 구독을 게시에 연결할 수 없습니다. 보존 기간이 경과된 구독을 지정하면 구독을 연결할 때 또는 구독을 처음으로 동기화할 때 오류가 발생합니다. 게시 보존 기간을 사용 하 여 게시 **0** (제한 없음)은 무시 됩니다.  

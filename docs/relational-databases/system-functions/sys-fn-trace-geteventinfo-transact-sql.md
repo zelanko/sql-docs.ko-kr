@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5b1c858a-ca43-4e2b-9d67-8654daaf0cc5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5bcb1856b9ee6206040b292ecd4642bac3066f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 62296eb8d1ef53969e33f3807bd81f47025a4893
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059286"
 ---
 # <a name="sysfntracegeteventinfo-transact-sql"></a>sys.fn_trace_geteventinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,12 +50,12 @@ fn_trace_geteventinfo ( trace_id )
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**eventid**|**int**|추적하는 이벤트의 ID|  
 |**columnid**|**int**|각 이벤트에 대해 수집한 모든 열의 ID|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  에 특정 추적의 ID를 전달 하면 **fn_trace_geteventinfo** 해당 추적에 대 한 정보를 반환 합니다. 잘못된 ID를 전달하면 빈 행 집합이 반환됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

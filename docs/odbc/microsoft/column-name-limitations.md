@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a339f61-c52f-40ad-8deb-d785f72753d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8a80ed397ae494bc686ef76aaeeef10b61662f19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14e62555db2e88c6573f3bdca0d4a1a2733d428b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006242"
 ---
 # <a name="column-name-limitations"></a>열 이름 제한 사항
 열 이름 (예를 들어, 공백) 유효한 문자를 포함할 수 있습니다. 열 이름은 문자, 숫자 및 밑줄을 제외한 모든 문자가 들어 있는 경우 백 따옴표 (')에 포함 하 여 이름을 구분 해야 합니다.  

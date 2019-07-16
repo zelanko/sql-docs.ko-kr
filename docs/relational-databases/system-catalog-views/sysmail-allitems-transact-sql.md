@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28101e099f698039058aa4a4b252616aa4eef4b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060319"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62759859"
   
  실패 상태의 메시지만 보려면 [sysmail_faileditems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)합니다. 보내지 않은 메시지만 보려면 [sysmail_unsentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)합니다. 보낸 메시지만 보려면 [sysmail_sentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-sentitems-transact-sql.md)합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|메일 큐의 메일 항목 식별자입니다.|  
 |**profile_id**|**int**|메시지를 보내는 데 사용되는 프로필의 식별자입니다.|  
@@ -62,7 +61,7 @@ ms.locfileid: "62759859"
 |**last_mod_date**|**datetime**|행을 마지막으로 수정한 날짜와 시간입니다.|  
 |**last_mod_user**|**sysname**|행을 마지막으로 수정한 사용자입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **sysmail_allitems** 보기 모든 메시지의 상태를 확인 하려면 데이터베이스 메일이 처리 하 합니다. 데이터베이스 메일 문제를 해결할 때는 이 뷰를 사용하여 보낸 메시지의 특성을 보내지 않은 메시지의 특성과 비교하여 문제의 근원을 확인할 수 있습니다.  
   
  이 보기에 의해 노출 된 시스템 테이블에 모든 메시지를 포함 하 고 발생할 수 있습니다 합니다 **msdb** 데이터베이스 증가 합니다. 테이블 크기를 줄이려면 뷰에서 오래된 메시지를 주기적으로 삭제하십시오. 자세한 내용은 [보관 데이터베이스 메일 메시지 및 이벤트 로그에 SQL Server 에이전트 작업을 만드는](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)합니다.  

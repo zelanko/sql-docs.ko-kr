@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6152e7f1c1b64cfdeafffe7d5d9eb021bfd4c4a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045786"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||스냅숏의 대체 폴더 위치를 지정합니다. NULL로 설정하면 게시자가 지정한 기본 위치에서 스냅숏 파일이 선택됩니다.|  
 |**distrib_job_login**||에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다.|  
@@ -103,7 +102,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_change_subscription_properties** 모든 유형의 복제에 사용 됩니다.  
   
  **sp_change_subscription_properties** 끌어오기 구독에 사용 됩니다.  

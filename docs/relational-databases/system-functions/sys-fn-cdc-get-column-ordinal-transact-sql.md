@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4bb21a57-2b94-4208-8bdf-6a3e2681d881
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a3170d1b191538f23b374a59af19084effa73e81
-ms.sourcegitcommit: 5d6e1c827752c3aa2d02c4c7653aefb2736fffc3
+ms.openlocfilehash: 893c7b0a4c7c88c0fdc7bf89b01b61bfaae6f2f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "49072017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046502"
 ---
 # <a name="sysfncdcgetcolumnordinal-transact-sql"></a>sys.fn_cdc_get_column_ordinal(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sys.fn_cdc_get_column_ordinal ( 'capture_instance','column_name')
 ## <a name="return-type"></a>반환 형식  
  **int**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수는 변경 데이터 캡처 업데이트 마스크에서 캡처된 열의 서수 위치를 식별하는 함수로, 함수를 사용 하 여 함께에서 주로 사용 됩니다 [sys.fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) 변경 데이터를 쿼리할 때 업데이트 마스크에서 정보를 추출 하 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

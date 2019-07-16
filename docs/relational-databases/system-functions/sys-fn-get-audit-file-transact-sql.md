@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 571ed8140e408577626c437d38080ccabb6c241f
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 350b1eca94f8041a0a38105c650e1c0ec7e1f617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046277"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,13 +83,13 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 표에서는 이 함수가 반환할 수 있는 감사 파일 내용에 대해 설명합니다.  
   
-| 열 이름 | 형식 | Description |  
+| 열 이름 | 형식 | 설명 |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | 동작의 ID입니다. Null을 허용하지 않습니다. |  
 | additional_information | **nvarchar(4000)** | 단일 이벤트에만 적용되는 고유 정보가 XML로 반환됩니다. 감사 가능한 적은 수의 동작에 이 종류의 정보가 포함되어 있습니다.<br /><br /> TSQL 스택이 연결되어 있는 동작에 대해 단일 TSQL 스택 수준이 XML 형식으로 표시됩니다. 이 XML 형식은 다음과 같습니다.<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> 프레임 nest_level은 프레임의 현재 중첩 수준을 나타냅니다. 모듈 이름은 세 부분(database_name, schema_name, object_name)으로 된 형식으로 표시됩니다.  모듈 이름 등의 잘못 된 xml 문자가 이스케이프 구문 분석 됩니다 `'\<'`, `'>'`를 `'/'`, `'_x'`합니다. 로 이스케이프 됩니다 `_xHHHH\_`합니다. HHHH는 해당 문자에 대한 4자리 16진수 UCS-2 코드를 나타냅니다.<br /><br /> Null을 허용합니다. 이벤트에서 보고한 추가 정보가 없으면 NULL을 반환합니다. |
 | affected_rows | **bigint** | **적용 대상**: Azure SQL DB에만<br /><br /> 실행된 된 문의 영향을 받는 행의 수입니다. |  
 | application_name | **nvarchar(128)** | **적용 대상**: Azure SQL DB + SQL 서버 (2017부터 시작)<br /><br /> 감사 이벤트를 발생 시킨 문을 실행 하는 클라이언트 응용 프로그램의 이름 |  
-| audit_file_offset | **bigint** | **에 대 한 변경은**: SQL Server에만 해당<br /><br /> 감사 레코드가 포함된 파일의 버퍼 오프셋입니다. Null을 허용하지 않습니다. |  
+| audit_file_offset | **bigint** | **에 대 한 변경은**: SQL Server만<br /><br /> 감사 레코드가 포함된 파일의 버퍼 오프셋입니다. Null을 허용하지 않습니다. |  
 | audit_schema_version | **int** | 항상 1 |  
 | class_type | **varchar(2)** | 감사가 수행되는 감사 가능한 엔터티의 형식입니다. Null을 허용하지 않습니다. |  
 | client_ip | **nvarchar(128)** | **적용 대상**: Azure SQL DB + SQL 서버 (2017부터 시작)<br /><br />    원본 IP는 클라이언트 응용 프로그램 |  
@@ -128,7 +127,7 @@ fn_get_audit_file ( file_pattern,
 | user_defined_information | **nvarchar(4000)** | **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], Azure SQL DB 및 관리 되는 인스턴스<br /><br /> 사용자가 사용 하 여 감사 로그에 기록 하려는 추가 정보를 기록 하는 데 사용 합니다 **sp_audit_write** 저장 프로시저입니다. |  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경우는 *file_pattern* 에 전달 된 인수 **fn_get_audit_file** 경로 또는 존재 하지 않는 파일을 참조 하거나 파일이 감사 파일이 없으면는 **MSG_INVALID_AUDIT_FILE**오류 메시지가 반환 됩니다.  
   
 ## <a name="permissions"></a>사용 권한

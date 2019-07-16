@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 475d08ae-eb8b-49de-afd6-33c96ab8004d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4a56efcc95965d3af9d01f618baba416a65226ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: bf9c38fe71c1282b19b947fc1771714dd138c45a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52807885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017705"
 ---
 # <a name="msmergegenhistory-transact-sql"></a>MSmerge_genhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSmerge_genhistory** 테이블 (보존 기간) 구독자에서 인식 하는 각 세대에 대해 하나의 행을 포함 합니다. 교환 기간 동안 공통 generation을 보내지 못하게 하고 백업에서 복원한 구독자를 다시 동기화하는 데 사용됩니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**guidsrc**|**uniqueidentifier**|구독자에서 generation에 의해 식별되는 변경 사항의 전역 식별자입니다.|  
 |**pubid**|**uniqueidentifier**|게시 식별자입니다.|  

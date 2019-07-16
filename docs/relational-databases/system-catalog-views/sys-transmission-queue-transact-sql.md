@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: f3515d1a-be8f-4a27-8058-8865f0919838
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a039ebee35dbea950f73500ab2284d63bf93553
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bd461a677a7bfab145846baaf09c0a8a62d6f8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47761491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022602"
 ---
 # <a name="systransmissionqueue-transact-sql"></a>sys.transmission_queue(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이 카탈로그 뷰는 다음 표와 같이 전송 큐의 각 메시지에 대한 행을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**conversation_handle**|**uniqueidentifier**|이 메시지가 속하는 대화의 식별자입니다. NULL을 허용하지 않습니다.|  
 |**to_service_name**|**nvarchar(256)**|이 메시지를 받을 서비스 이름입니다. NULL을 허용합니다.|  

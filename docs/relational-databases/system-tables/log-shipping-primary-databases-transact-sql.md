@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 56888756-a798-42be-9b5e-0f9aa05a2cc6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3904f6188ad1087c58a6044c1abd9fc2493c8129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 893f016fba45d18947af376425012d21964709b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004723"
 ---
 # <a name="logshippingprimarydatabases-transact-sql"></a>log_shipping_primary_databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   로그 전달 구성에서 주 데이터베이스마다 하나의 레코드를 저장합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**primary_id**|**uniqueidentifier**|로그 전달 구성의 주 데이터베이스의 ID입니다.|  
 |**primary_database**|**sysname**|로그 전달 구성의 주 데이터베이스의 이름입니다.|  

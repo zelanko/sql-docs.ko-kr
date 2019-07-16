@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b6f6538aa13b2236c7dca52189b37addad85ae53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9934771b6a887f6ae0984e79ce11729145e3d410
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507264"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051540"
 ---
 # <a name="sysdmdbobjectsimpactedonversionchange-azure-sql-database"></a>sys.dm_db_objects_impacted_on_version_change(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   이 데이터베이스 범위 시스템 뷰는 조기 경보 시스템으로 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 주요 릴리스 업그레이드에 의해 영향을 받는 개체를 확인할 수 있도록 설계되어 있습니다. 업그레이드 전후에 이 뷰를 사용하여 영향을 받는 개체의 전체 목록을 가져올 수 있습니다. 전체 서버에서 전체 개수를 가져오려면 각 데이터베이스에서 이 뷰를 쿼리해야 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|class|**int** NOT NULL|영향을 받는 개체의 클래스:<br /><br /> **1** = constraint<br /><br /> **7** = 인덱스 및 힙|  
+|클래스|**int** NOT NULL|영향을 받는 개체의 클래스:<br /><br /> **1** = constraint<br /><br /> **7** = 인덱스 및 힙|  
 |class_desc|**nvarchar(60)** NOT NULL|클래스 설명:<br /><br /> **OBJECT_OR_COLUMN**<br /><br /> **INDEX**|  
 |major_id|**int** NOT NULL|제약 조건의 개체 ID 또는 인덱스나 힙을 포함하는 테이블의 개체 ID입니다.|  
 |minor_id|**int** NULL|**NULL** 제약 조건에 대 한<br /><br /> 인덱스 및 힙의 경우 Index_id|  
@@ -60,7 +59,7 @@ class  class_desc        major_id    minor_id    dependency
 1      OBJECT_OR_COLUMN  101575400   NULL        geometry     
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ### <a name="how-to-update-impacted-objects"></a>영향을 받는 개체를 업데이트하는 방법  
  다음 순서 단계는 곧 있을 6월 서비스 릴리스 업그레이드 이후에 수행될 수정 작업에 대해 설명합니다.  

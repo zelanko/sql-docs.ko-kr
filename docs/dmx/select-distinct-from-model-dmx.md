@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5906dc6d964603576831a5c7009cd0224f0ffb08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928443"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM &lt;모델 &gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +32,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *n*  
  (선택 사항) 반환할 행 수를 지정하는 정수입니다.  
   
- *expression list*  
+ *식 목록*  
  관련 열 식별자(모델에서 파생됨) 또는 식의 쉼표로 구분된 목록입니다.  
   
  *model*  
@@ -45,7 +44,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *expression*  
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **SELECT DISTINCT FROM** 문을 단일 열 또는 관련된 열 집합에만 작동 합니다. 이 절은 관련 없는 열 집합에는 적용되지 않습니다.  
   
  합니다 **SELECT DISTINCT FROM** 문을 사용 하면 직접 중첩된 테이블 안의 열을 참조할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
@@ -56,7 +55,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
   
  결과 **SELECT DISTINCT FROM \<모델 >** 문 열 유형에 따라 달라 집니다. 다음 표에서는 지원되는 열 유형 및 문의 출력 결과에 대해 설명합니다.  
   
-|열 유형|출력|  
+|열 유형|Output|  
 |-----------------|------------|  
 |불연속|열의 고유 값|  
 |불연속화됨|열에서 불연속화된 각 버킷의 중간점|  
@@ -135,7 +134,7 @@ FROM [TM Decision Tree]
 >  최소 버킷의 최소값과 최대 버킷의 최대값은 단순히 관측 값 중 가장 높은 값과 가장 낮은 값입니다. 이러한 관측 범위에서 벗어나는 값은 최소 버킷과 최대 버킷에 속하는 것으로 간주됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [선택 &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [선택 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ff069ef0602e419eda93df0ca5a72dbf7c8ef1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045163"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access 데이터 형식
 다음 표에서 Microsoft Access 데이터 형식, 테이블을 만드는 데 사용 되는 데이터 형식 및 ODBC SQL 데이터 형식을 보여 줍니다.  
@@ -38,8 +37,8 @@ ms.locfileid: "63026899"
 |날짜/시간|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
 |긴 이진|LONGBINARY|SQL_LONGVARBINARY|  
-|긴 텍스트|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
-|메모|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
+|긴 텍스트|LONGTEXT|[2] SQL_LONGVARCHAR SQL_WLONGVARCHAR [3]|  
+|메모|LONGTEXT|[2] SQL_LONGVARCHAR SQL_WLONGVARCHAR [3]|  
 |수 (FieldSize = 미혼)|단일|SQL_REAL|  
 |수 (FieldSize DOUBLE =)|DOUBLE|SQL_DOUBLE|  
 |수 (FieldSize 바이트 =)|부호 없는 바이트|SQL_TINYINT|  
@@ -47,7 +46,7 @@ ms.locfileid: "63026899"
 |수 (FieldSize 정수 (LONG) =)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXT|VARCHAR|SQL_VARCHAR[1] SQL_WVARCHAR[2]|  
+|TEXT|VARCHAR|[1] SQL_VARCHAR SQL_WVARCHAR [2]|  
 |VARBINARY|VARBINARY|SQL_VARBINARY|  
   
  [1] 4.0 응용 프로그램에 액세스 합니다. 최대 길이 4000 바이트입니다. LONGBINARY 비슷하게 사용 되는 동작입니다.  
@@ -61,7 +60,7 @@ ms.locfileid: "63026899"
   
  다음 표에서 Microsoft Access 데이터 형식에 대해 제한 사항을 보여 줍니다.  
   
-|데이터 형식|Description|  
+|데이터 형식|설명|  
 |---------------|-----------------|  
 |BINARY, VARBINARY 및 VARCHAR|0 BINARY, VARBINARY 또는 VARCHAR 열을 만들 지정 되지 않은 길이 실제로 510-바이트 열을 반환 합니다.|  
 |BYTE|Microsoft 액세스 번호 필드는 FieldSize 바이트 같음를 사용 하 여 서명 되지 않은 경우에 Microsoft Access 드라이버를 사용 하는 경우 음수 필드에 삽입할 수 있습니다.|  

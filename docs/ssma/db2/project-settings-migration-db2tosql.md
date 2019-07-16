@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4fe3619ae24f8dbee774aef95abc37ad57ca6e19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40c6c1063ff738428072f3198cae8827e78e2390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63266524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060150"
 ---
 # <a name="project-settings-migration-db2tosql"></a>프로젝트 설정 (마이그레이션) (DB2ToSQL)
 마이그레이션 페이지의 **프로젝트 설정** 대화 상자에는 SSMA를 DB2에서 데이터를 마이그레이션합니다 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -46,7 +45,7 @@ ms.locfileid: "63266524"
 |**트리거 실행**|SQL Server 테이블에 데이터를 추가할 때 SSMA 삽입 트리거를 실행 해야 하는지 여부를 지정 합니다.<br /><br />**기본 모드**:  False<br /><br />**낙관적 모드**:  False<br /><br />**전체 모드**:  False|  
 |**ID 유지**|SQL Server에 지정 된 기본값에 관계 없이 SQL Server로 데이터를 추가할 때 SSMA 원본 데이터의 null 값을 유지할지 여부를 지정 합니다.<br /><br />**기본 모드**:  True<br /><br />**낙관적 모드**:  True<br /><br />**전체 모드**:  False|  
 |**Null 유지**|SQL Server에 지정 된 기본값에 관계 없이 SQL Server로 데이터를 추가할 때 SSMA 원본 데이터의 null 값을 유지할지 여부를 지정 합니다.<br /><br />**기본 모드**:  True<br /><br />**낙관적 모드**:  True<br /><br />**전체 모드**:  True|  
-|**오류를 사용 하 여 문자열 자르기 작업 표시**|대상 열 크기를 사용 하면 소스 문자열 길이 보다 작으면, 값 잘립니다 및 오류로 표시 됩니다.<br /><br />**기본 모드**:  사용자 계정 컨트롤<br /><br />**낙관적 모드**:  사용자 계정 컨트롤<br /><br />**전체 모드**:  사용자 계정 컨트롤|  
+|**오류를 사용 하 여 문자열 자르기 작업 표시**|대상 열 크기를 사용 하면 소스 문자열 길이 보다 작으면, 값 잘립니다 및 오류로 표시 됩니다.<br /><br />**기본 모드**:  예<br /><br />**낙관적 모드**:  예<br /><br />**전체 모드**:  예|  
 |**오류 발생 시**|데이터 마이그레이션 오류가 발생 하면 중지 합니다. 세 가지 옵션이 있습니다.<br /><br />**마이그레이션을 중지 합니다.** 데이터 마이그레이션 작업 중지<br /><br />**다음 테이블에 계속 진행 합니다.** 현재 테이블에 데이터 마이그레이션을 중지 하 고 노드로 진행 합니다.<br /><br />**다음 일괄 처리를 계속 진행 합니다.** 현재 일괄 처리로 데이터 마이그레이션을 중지 하 고 노드로 진행 합니다.<br /><br />**기본 모드**: 다음 일괄 처리를 계속 합니다.<br /><br />**낙관적 모드**: 다음 일괄 처리를 계속 합니다.<br /><br />**전체 모드**: 다음 일괄 처리를 계속 합니다.|  
 |**지원 되지 않는 날짜를 대체 합니다.**|SSMA는 가장 이전 버전 보다 이전 날짜를 수정 해야 하는지 여부를 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 날짜 (1753 01 년 1 월).<br /><br />현재 날짜 값을 유지 하려면 선택 **아무 작업도 수행**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 1753 년 1 월 1 일 이전의 날짜를 datetime 열에서 허용 하지 않습니다. 이전 날짜를 사용 하 여 문자 값을 datetime 값 변환 해야 합니다.<br /><br />1753 년 1 월 1 일 이전의 날짜를 NULL로 변환 하려면 **NULL 바꿉니다**합니다.<br /><br />지원 되는 날짜가 1753 년 1 월 1 일 이전의 날짜를 바꾸려면 선택 **지원 되는 날짜에 가까운 바꿉니다**합니다.<br /><br />**기본 모드**: 작업 안 함<br /><br />**낙관적 모드**: 작업 안 함<br /><br />**전체 모드**: 지원 되는 날짜에 가까운 대체|  
 |**테이블 잠금**|데이터 마이그레이션 중 데이터 테이블에 추가할 때 SSMA 테이블 잠금 여부를 지정 합니다. 대량 복사 작업의 기간 동안 대량 업데이트 잠금을 가져옵니다. 값이 False 이면 잠금이 행 수준에서 설정 됩니다.<br /><br />**기본 모드**:  True<br /><br />**낙관적 모드**:  True<br /><br />**전체 모드**:  True|  

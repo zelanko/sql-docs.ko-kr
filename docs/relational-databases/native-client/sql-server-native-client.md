@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: e4d4fe39-0090-42a7-8405-6378370d11cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b39b71f65dfe9c41c3e2ea7282729691e78a5986
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e11bc1094f7bab993eb67542c16360e874db87f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031784"
 ---
 # <a name="sql-server-native-client"></a>SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,6 +60,6 @@ ODBC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 
 
 -   [문자 변환을 처리 시 ODBC 드라이버 동작 변경](../../relational-databases/native-client/features/odbc-driver-behavior-change-when-handling-character-conversions.md)  
 
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
 [SQL Server Native Client 설치](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)  
  [SQL Server Native Client 기능](../../relational-databases/native-client/features/sql-server-native-client-features.md)  

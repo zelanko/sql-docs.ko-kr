@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 97964286b3281eee4e5b6850065c85034628bfdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c39665f54a915282a6c59fe7d57b24d0cde0a5e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62994400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045933"
 ---
 # <a name="spcertifyremovable-transact-sql"></a>sp_certify_removable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,12 +45,12 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>인수  
 `[ @dbname = ] 'dbname'` 데이터베이스를 확인 하도록 지정 합니다. *dbname* 됩니다 **sysname**합니다.  
   
-`[ @autofix = ] 'auto'` 시스템 관리자에 게 데이터베이스 및 모든 데이터베이스 개체의 소유권을 부여 하 고 사용자가 만든 데이터베이스 사용자 및 기본 권한이 아닌 권한을 삭제 합니다. *자동* 됩니다 **nvarchar(4)**, 기본값은 NULL입니다.  
+`[ @autofix = ] 'auto'` 시스템 관리자에 게 데이터베이스 및 모든 데이터베이스 개체의 소유권을 부여 하 고 사용자가 만든 데이터베이스 사용자 및 기본 권한이 아닌 권한을 삭제 합니다. *자동* 됩니다 **nvarchar(4)** , 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스를 올바르게 구성한 경우 **sp_certify_removable** 다음 작업을 수행 합니다.  
   
 -   파일을 복사할 수 있도록 데이터베이스를 오프라인으로 설정합니다.  

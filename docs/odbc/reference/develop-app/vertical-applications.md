@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df7a2d036692cefcd1b2ea2338d51938a11ea85a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d0ed7a5f488765b56b2af0688ca14361590ab44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022109"
 ---
 # <a name="vertical-applications"></a>수직 애플리케이션
 수직 응용 프로그램에는 일반적으로 단일 DBMS에 대해 잘 정의 된 작업을 수행 합니다. 예를 들어 주문 입력 응용 프로그램을 회사의 주문을 추적 합니다. 이러한 유형의 응용 프로그램의 공통점은 데이터베이스 스키마는 응용 프로그램 개발자가 일반적으로 설계, 단일 고객에 대 한 단일 DBMS를 사용 하 여 작동 한 수가 다른 Dbms 사용 하 여 응용 프로그램 작동이,입니다.  

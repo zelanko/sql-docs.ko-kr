@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 93462a0f9529b20b3a74d37a3b844eb643e9f7b3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fbbe2e782da5892640ab66a93911b959317d0538
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022289"
 ---
 # <a name="spmschangedistributionagentproperties-transact-sql"></a>sp_MSchange_distribution_agent_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +55,11 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` 변경할 게시 속성이입니다. *속성* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @value = ] 'value'` 새 속성 값이입니다. *값* 됩니다 **nvarchar(524)**, 기본값은 NULL입니다.  
+`[ @value = ] 'value'` 새 속성 값이입니다. *값* 됩니다 **nvarchar(524)** , 기본값은 NULL입니다.  
   
  이 표에서는 변경할 수 있는 배포 에이전트 작업의 속성 및 그 속성 값의 제한에 대해 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다.|  
 |**distrib_job_password**||에이전트 작업 실행에 사용된 Windows 계정의 암호입니다.|  
@@ -84,7 +83,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_MSchange_distribution_agent_properties** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
  게시자 인스턴스에서 실행 하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전을 사용할지 또는 [sp_changesubscription](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) 배포자에서 실행 되는 밀어넣기 구독을 동기화 하는 병합 에이전트 작업의 속성을 변경 합니다.  

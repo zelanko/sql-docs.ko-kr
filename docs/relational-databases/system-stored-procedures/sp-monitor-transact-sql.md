@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb628496-2f9b-40e4-b018-d0831c4cb018
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5312413386dae9915b9ac6649b4210541d45b1db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d91f774973588096ea73675d9b0e9ebf6368f1ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47644431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022320"
 ---
 # <a name="spmonitor-transact-sql"></a>sp_monitor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_monitor
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**last_run**|시간 **sp_monitor** 을 마지막으로 실행 합니다.|  
 |**current_run**|시간 **sp_monitor** 를 실행 합니다.|  
@@ -60,7 +59,7 @@ sp_monitor
 |**total_errors**|읽고 쓰는 중에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 발생한 오류 수입니다.|  
 |**연결**|로그인 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 시도한 로그인 수입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 일련의 함수를 통해 수행한 작업량을 추적합니다. 실행 **sp_monitor** 이러한 함수로 반환 된 현재 값을 표시 하 고 프로시저를 실행 된 마지막 시간 이후 변경 된 정도 보여 줍니다.  
   
  형태로 각 열에 대 한 통계가 출력 됩니다 *수*(*번호*)-*번호*% 또는 *번호*(*수*). 첫 번째 *수* 시간 (초) 수를 나타냅니다 (에 대 한 **cpu_busy**하십시오 **io_busy**, 및 **유휴**) 또는 총 수 (에 대 한 다른 변수) 이므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다시 시작 되었습니다. *번호* 괄호로 초 또는 마지막 시간 이후 총 수를 의미 **sp_monitor** 실행 되었습니다. 백분율은 이후 시간 비율로 **sp_monitor** 을 마지막으로 실행 합니다. 예를 들어 보고서를 보여 줍니다 **cpu_busy** 으로 4250 (215)-68 %CPU 되었습니다 이후의 사용 중인 4250 초 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이후의 215 초를 마지막으로 시작한 **sp_monitor** 마지막 실행 및 68%를 총 시간 이후 **sp_monitor** 을 마지막으로 실행 합니다.  

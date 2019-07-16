@@ -1,5 +1,5 @@
 ---
-title: SQLParamData Function | Microsoft Docs
+title: SQLParamData 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0d92abe17128bff382d4b291fa9d20fe5c4fa77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41cb718b5425315856fe4db27658cce873f90e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018939"
 ---
 # <a name="sqlparamdata-function"></a>SQLParamData 함수
 **규칙**  
@@ -56,7 +55,7 @@ SQLRETURN SQLParamData(
 ## <a name="diagnostics"></a>진단  
  때 **SQLParamData** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여는 *HandleType* SQL_의 HANDLE_STMT와 *처리할* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLParamData** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07006|제한 된 데이터 형식 특성을 위반 했습니다.|로 식별 된 데이터 값을 *ValueType* 에서 인수 **SQLBindParameter** 바인딩된 매개 변수에서 식별 되는 데이터 형식 변환 하지 못했습니다에 대 한는 *ParameterType*에 인수 **SQLBindParameter**합니다.<br /><br /> SQL_PARAM_OUTPUT 또는 SQL_PARAM_INPUT_OUTPUT 수 변환할 없습니다으로 식별 되는 데이터 형식으로 바인딩된 매개 변수에 대해 반환 되는 데이터 값을 *ValueType* 에서 인수 **SQLBindParameter**합니다.<br /><br /> (하나 이상의 행에 대 한 데이터 값을 변환할 수 없습니다, 하지만 하나 이상의 행이 성공적으로 반환 하는 경우이 함수 SQL_SUCCESS_WITH_INFO를 반환 합니다.)|  
@@ -86,7 +85,7 @@ SQLRETURN SQLParamData(
   
  여기서 변수는 다음 표와 같이 정의 됩니다.  
   
-|변수|Description|  
+|변수|설명|  
 |--------------|-----------------|  
 |*바인딩된 주소*|사용 하 여 지정 된 주소를 *TargetValuePtr* 에서 인수 **SQLBindCol**합니다.|  
 |*바인딩 오프셋*|SQL_ATTR_ROW_BIND_OFFSET_PTR 문 특성을 사용 하 여 지정 된 주소에 저장 된 값입니다.|  

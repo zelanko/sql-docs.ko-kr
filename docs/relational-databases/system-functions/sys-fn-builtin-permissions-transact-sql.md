@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 460e620f9b91b3b616b487f6324e640dbaf4f83a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660752"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046518"
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  DEFAULT와 동일합니다.  
   
- **'**<securable_class>**'**  
+ **'** <securable_class> **'**  
  보안 개체 클래스의 이름으로 호출 되 면 sys.fn_builtin_permissions는 클래스에 적용 되는 모든 사용 권한을 반환 합니다. < securable_class >는 따옴표로 묶어야 하는 문자열 리터럴입니다. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>반환된 테이블  
@@ -77,7 +76,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|서버의 데이터 정렬|보안 개체 클래스에 대한 설명입니다.|  
 |permission_name|**nvarchar(60)**|서버의 데이터 정렬|사용 권한 이름입니다.|  
-|유형|**varchar(4)**|서버의 데이터 정렬|단축 사용 권한 유형 코드입니다. 다음 표를 참조하십시오.|  
+|type|**varchar(4)**|서버의 데이터 정렬|단축 사용 권한 유형 코드입니다. 다음 표를 참조하십시오.|  
 |covering_permission_name|**nvarchar(60)**|서버의 데이터 정렬|NULL이 아니면 이 클래스에 대한 다른 사용 권한을 포함하는 사용 권한의 이름입니다.|  
 |parent_class_desc|**nvarchar(60)**|서버의 데이터 정렬|NULL이 아니면 현재 클래스를 포함하는 부모 클래스의 이름입니다.|  
 |parent_covering_permission_name|**nvarchar(60)**|서버의 데이터 정렬|NULL이 아니면 부모 클래스에 대한 다른 모든 사용 권한을 포함하는 사용 권한의 이름입니다.|  
@@ -103,7 +102,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER|엔드포인트|  
 |AL|ALTER|FULLTEXT CATALOG|  
 |AL|ALTER|FULLTEXT STOPLIST|  
-|AL|ALTER|Login|  
+|AL|ALTER|LOGIN|  
 |AL|ALTER|MESSAGE TYPE|  
 |AL|ALTER|OBJECT|  
 |AL|ALTER|REMOTE SERVICE BINDING|  
@@ -114,7 +113,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |AL|ALTER<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER ROLE|  
 |AL|ALTER|SERVICE|  
 |AL|ALTER|SYMMETRIC KEY|  
-|AL|ALTER|User|  
+|AL|ALTER|USER|  
 |AL|ALTER|XML SCHEMA COLLECTION|  
 |ALAA|ALTER ANY SERVER AUDIT|SERVER|  
 |ALAG|ALTER ANY AVAILABILITY GROUP<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
@@ -168,7 +167,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|엔드포인트|  
 |CL|CONTROL|FULLTEXT CATALOG|  
 |CL|CONTROL|FULLTEXT STOPLIST|  
-|CL|CONTROL|Login|  
+|CL|CONTROL|LOGIN|  
 |CL|CONTROL|MESSAGE TYPE|  
 |CL|CONTROL|OBJECT|  
 |CL|CONTROL|REMOTE SERVICE BINDING|  
@@ -181,7 +180,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CL|CONTROL|SERVICE|  
 |CL|CONTROL|SYMMETRIC KEY|  
 |CL|CONTROL|TYPE|  
-|CL|CONTROL|User|  
+|CL|CONTROL|USER|  
 |CL|CONTROL|XML SCHEMA COLLECTION|  
 |CO|CONNECT|DATABASE|  
 |CO|CONNECT|엔드포인트|  
@@ -221,9 +220,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **적용 대상**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|DATABASE|  
-|DL|Delete|DATABASE|  
-|DL|Delete|OBJECT|  
-|DL|Delete|SCHEMA|  
+|DL|DELETE|DATABASE|  
+|DL|DELETE|OBJECT|  
+|DL|DELETE|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |EX|CREATE 문을 실행하기 전에|DATABASE|  
 |EX|CREATE 문을 실행하기 전에|OBJECT|  
@@ -231,8 +230,8 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |EX|CREATE 문을 실행하기 전에|TYPE|  
 |EX|CREATE 문을 실행하기 전에|XML SCHEMA COLLECTION|  
 |IAL|IMPERSONATE ANY LOGIN<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|SERVER|  
-|IM|IMPERSONATE|Login|  
-|IM|IMPERSONATE|User|  
+|IM|IMPERSONATE|LOGIN|  
+|IM|IMPERSONATE|USER|  
 |IN|INSERT|DATABASE|  
 |IN|INSERT|OBJECT|  
 |IN|INSERT|SCHEMA|  
@@ -298,7 +297,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|엔드포인트|  
 |VW|VIEW DEFINITION|FULLTEXT CATALOG|  
 |VW|VIEW DEFINITION|FULLTEXT STOPLIST|  
-|VW|VIEW DEFINITION|Login|  
+|VW|VIEW DEFINITION|LOGIN|  
 |VW|VIEW DEFINITION|MESSAGE TYPE|  
 |VW|VIEW DEFINITION|OBJECT|  
 |VW|VIEW DEFINITION|REMOTE SERVICE BINDING|  
@@ -310,7 +309,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |VW|VIEW DEFINITION|SERVICE|  
 |VW|VIEW DEFINITION|SYMMETRIC KEY|  
 |VW|VIEW DEFINITION|TYPE|  
-|VW|VIEW DEFINITION|User|  
+|VW|VIEW DEFINITION|USER|  
 |VW|VIEW DEFINITION|XML SCHEMA COLLECTION|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
 |VWCK|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
@@ -323,7 +322,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  `sys.fn_builtin_permissions`는 미리 정의된 사용 권한 계층의 복사본을 생성하는 테이블 반환 함수입니다. 이 계층에는 적용되는 모든 사용 권한이 포함됩니다. `DEFAULT` 결과 집합의 루트는 사용 권한 계층의 방향이 지정 된, 방향이 있는 비순환 그래프에 설명 합니다 (클래스 = SERVER, 사용 권한 = CONTROL SERVER).  
   
  `sys.fn_builtin_permissions`는 상호 관련된 매개 변수를 허용하지 않습니다.  
@@ -337,20 +336,20 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-all-built-in-permissions"></a>1. 모든 기본 제공 사용 권한 나열   
+### <a name="a-listing-all-built-in-permissions"></a>A. 모든 기본 제공 사용 권한 나열   
 사용 하 여 `DEFAULT` 또는 모든 사용 권한을 반환 하는 빈 문자열입니다.   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
-### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>2. 대칭 키에 설정할 수 있는 사용 권한 나열   
+### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>2\. 대칭 키에 설정할 수 있는 사용 권한 나열   
 해당 클래스의 모든 가능한 사용 권한을 반환 하는 클래스를 지정 합니다.   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  
 ```  
   
-### <a name="c-listing-classes-on-which-there-is-a-select-permission"></a>3. SELECT 사용 권한이 있는 클래스 나열   
+### <a name="c-listing-classes-on-which-there-is-a-select-permission"></a>3\. SELECT 사용 권한이 있는 클래스 나열   
   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(DEFAULT)   

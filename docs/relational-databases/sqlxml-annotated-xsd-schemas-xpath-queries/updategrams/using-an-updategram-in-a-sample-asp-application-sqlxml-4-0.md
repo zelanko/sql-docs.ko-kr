@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 10eff799-4c39-4b52-8b38-7ea6f68454a8
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df2b73b8c3289844f8660d46629449d570a44ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57d28079992cceefb913b1418c1092a5d96f3c7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046542"
 ---
 # <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>예제 ASP 응용 프로그램에서 Updategram 사용(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

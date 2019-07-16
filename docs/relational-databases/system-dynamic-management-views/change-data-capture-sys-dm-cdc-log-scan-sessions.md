@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d789ec1dd936b7eb40ecae56226a5879754a2260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017988"
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>변경 데이터 캡처-sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스의 각 로그 검색 세션에 대해 한 개의 행을 반환합니다. 반환된 마지막 행은 현재 세션을 나타냅니다. 이 뷰를 사용하면 현재 로그 검색 세션에 대한 상태 정보, 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 마지막으로 시작된 이후의 모든 세션에 대한 집계 정보를 반환할 수 있습니다.  
    
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|세션의 ID입니다.<br /><br /> 0일 경우 이 행에서 반환된 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 마지막으로 시작된 이후의 모든 세션에 대한 집계입니다.|  
 |**start_time**|**datetime**|세션의 시작 시간입니다.<br /><br /> 때 **session_id** = 0, 집계 된 데이터 수집을 시작한 시간입니다.|  
@@ -56,7 +55,7 @@ ms.locfileid: "47698591"
 |**empty_scan_count**|**int**|변경 데이터 캡처 트랜잭션을 포함하지 않은 연속적인 세션 수입니다.|  
 |**failed_sessions_count**|**int**|실패한 세션 수입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 동적 관리 뷰의 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작할 때마다 다시 설정됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

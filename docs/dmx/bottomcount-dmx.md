@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 382cfe7e7ce77fec66d2b9e5b370f397abd14dce
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a7874168f5f3e6ebededd2ce75f5f762f7fbd1e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022573"
 ---
 # <a name="bottomcount-dmx"></a>BottomCount(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ BottomCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>반환 형식  
  \<테이블 식 >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  제공 하는 값을 \<식의 순위를 지정 > 인수에서 제공 되는 행의 오름차순이 결정는 \<테이블 식 > 인수 및 맨 아래 행에서 지정 된 수를 \<수 > 인수가 반환 됩니다.  
   
 ## <a name="examples"></a>예  

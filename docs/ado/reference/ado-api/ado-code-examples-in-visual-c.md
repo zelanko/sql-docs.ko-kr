@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5a727eaf511e65d46fb5c297c65bb1517cfb72c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7741b6757cef08dcc4d5a05574f22c4f4538d97f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921184"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++의 ADO 코드 예제
 다음 코드 예제를 사용 하 여 ADO 메서드, 속성 및 Microsoft 시각적 개체에 쓸 때 이벤트를 사용 하는 방법을 알아보려면 C++입니다.  

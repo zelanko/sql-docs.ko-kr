@@ -5,17 +5,16 @@ description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터 (미
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49577ce5a29a0c014fea7c8c9a0c5c320a9b7174
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958661"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에 대 한 보안 개념
 
@@ -61,7 +60,7 @@ ms.locfileid: "67729111"
  + CONTROLLER_PASSWORD < controller_password > =
 
 SQL Master SA 암호: 
- + MSSQL_SA_PASSWORD=<controller_sa_password>
+ + MSSQL_SA_PASSWORD < controller_sa_password > =
 
 HDFS/Spark 끝점에 액세스 하기 위한 암호:
  + KNOX_PASSWORD=<knox_password>

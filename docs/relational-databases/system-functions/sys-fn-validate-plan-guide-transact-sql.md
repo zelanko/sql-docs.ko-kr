@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 844a6de4bd0ee770cd8406d3024a6a7f3bec3e4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059183"
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |msgnum|**int**|오류 메시지 ID입니다.|  
 |severity|**tinyint**|1에서 25 사이의 메시지 심각도입니다.|  
@@ -63,7 +62,7 @@ sys.fn_validate_plan_guide ( plan_guide_id )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-validating-all-plan-guides-in-a-database"></a>1. 데이터베이스에 있는 모든 계획 지침 확인  
+### <a name="a-validating-all-plan-guides-in-a-database"></a>A. 데이터베이스에 있는 모든 계획 지침 확인  
  다음 예에서는 현재 데이터베이스에 있는 모든 계획 지침의 유효성을 확인합니다. 빈 결과 집합이 반환되면 모든 계획 지침을 사용할 수 있습니다.  
   
 ```sql  
@@ -75,7 +74,7 @@ CROSS APPLY fn_validate_plan_guide(plan_guide_id);
 GO  
 ```  
   
-### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>2. 데이터베이스를 변경하기 전에 계획 지침 유효성 테스트  
+### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>2\. 데이터베이스를 변경하기 전에 계획 지침 유효성 테스트  
  다음 예에서는 명시적 트랜잭션을 사용하여 인덱스를 삭제합니다. `sys.fn_validate_plan_guide` 함수는이 작업에 데이터베이스에 있는 모든 계획 지침을 무효화 됩니다 있는지 여부를 확인 하려면 실행 합니다. 함수의 결과에 따라 `DROP INDEX` 문이 커밋되거나 트랜잭션이 롤백되고 인덱스가 삭제되지 않습니다.  
   
 ```sql  

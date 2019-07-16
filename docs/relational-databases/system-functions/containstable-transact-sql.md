@@ -32,14 +32,13 @@ helpviewer_keywords:
 ms.assetid: e580c210-cf57-419d-9544-7f650f2ab814
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 534d1457f984c496b416edae421ab0f52c619eeb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64540608739f0257425eec042e4b701606170c23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042922"
 ---
 # <a name="containstable-transact-sql"></a>CONTAINSTABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -145,7 +144,7 @@ CONTAINSTABLE
  <contains_search_condition>  
  *column_name*에서 검색할 텍스트와 일치 조건을 지정합니다. 검색 조건에 대 한 자세한 내용은 [포함 &#40;TRANSACT-SQL&#41;](../../t-sql/queries/contains-transact-sql.md)합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  전체 텍스트 조건자와 함수는 단일 테이블에서 작동합니다. 이 사실은 FROM 조건자에 표시됩니다. 여러 테이블을 검색하려면 FROM 절에 조인된 테이블을 사용하여 두 개 이상의 테이블을 합한 결과 집합을 대상으로 검색 작업을 수행합니다.  
   
  반환 되는 테이블에 명명 된 열 **키** 전체 텍스트 키 값이 들어 있는입니다. 전체 텍스트 인덱싱된 각 테이블에 반환 된 값과 해당 값은 항상 고유 열에는 **키** 열은 지정 된 선택 조건과 일치 하는 행의 전체 텍스트 키 값을 검색 포함 조건입니다. 합니다 **TableFulltextKeyColumn** OBJECTPROPERTYEX 함수에서 가져온 속성을이 고유 키 열의 id를 제공 합니다. 전체 텍스트 인덱스의 전체 텍스트 키에 연결 된 열의 ID를 가져오려면 **sys.fulltext_indexes**합니다. 자세한 내용은 [sys.fulltext_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql.md)합니다.  
@@ -170,7 +169,7 @@ FROM table AS FT_TBL INNER JOIN
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-example"></a>1. 간단한 예  
+### <a name="a-simple-example"></a>A. 간단한 예  
  다음 예제에서는 만들고 두 개의 열을 3 지방 및 해당 플래그 색의 간단한 테이블을 채웁니다. It가 만들고 전체 텍스트 카탈로그 및 테이블에 인덱스를 채웁니다. 그런 다음 **CONTAINSTABLE** 구문을 보여 줍니다. 이 예제에서는 검색 값을 여러 번 충족 될 때 순위 값을 더 높은 증가 하는 방법을 보여 줍니다. 마지막 쿼리, 탄자니아 녹색 및 검정색 모두 포함 하는 쿼리 된 색 중 하나만 포함 하는 이탈리아 보다 더 높은 순위를 있습니다.  
   
 ```  
@@ -191,7 +190,7 @@ SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green') ORDER BY RANK DESC;
 SELECT * FROM CONTAINSTABLE (Flags, FlagColors, 'Green or Black') ORDER BY RANK DESC;  
 ```  
   
-### <a name="b-returning-rank-values"></a>2. 순위 값 반환  
+### <a name="b-returning-rank-values"></a>2\. 순위 값 반환  
  다음 예에서는 "frame," "wheel" 또는 "tire"라는 단어가 포함된 모든 제품 이름을 검색하며 각 단어에는 다른 가중치가 지정됩니다. 선택 조건과 일치하여 반환된 각 행에 대해 상대적인 일치 정도(등급 값)가 표시되며 등급 값이 가장 높은 행이 제일 먼저 반환됩니다.  
   
 ```  
@@ -208,7 +207,7 @@ ORDER BY KEY_TBL.RANK DESC;
 GO  
 ```  
   
-### <a name="c-returning-rank-values-greater-than-a-specified-value"></a>3. 지정된 값보다 큰 등급 값 반환  
+### <a name="c-returning-rank-values-greater-than-a-specified-value"></a>3\. 지정된 값보다 큰 등급 값 반환  
   
 ||  
 |-|  
@@ -233,7 +232,7 @@ GO
 > [!NOTE]  
 >  전체 텍스트 쿼리에서 정수를 최대 거리로 지정하지 않은 경우 거리가 100개의 논리적 용어보다 항목만 포함하는 문서는 NEAR 요구 사항을 충족하지 않으며 순위가 0이 됩니다.  
   
-### <a name="d-returning-top-5-ranked-results-using-topnbyrank"></a>4. top_n_by_rank를 사용하여 상위 5개 결과 반환  
+### <a name="d-returning-top-5-ranked-results-using-topnbyrank"></a>4\. top_n_by_rank를 사용하여 상위 5개 결과 반환  
  다음 예에서는 `Description` 열에 "light"나 "lightweight"라는 단어와 근접한 "aluminum"이라는 단어가 포함된 상위 5개 제품에 대한 설명을 반환합니다.  
   
 ```  
@@ -256,7 +255,7 @@ GO
   
  `GO`  
   
-### <a name="e-specifying-the-language-argument"></a>5. LANGUAGE 인수 지정  
+### <a name="e-specifying-the-language-argument"></a>5\. LANGUAGE 인수 지정  
  다음 예에서는 `LANGUAGE` 인수를 사용하는 방법을 보여 줍니다.  
   
 ```  

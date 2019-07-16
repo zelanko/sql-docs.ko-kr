@@ -3,18 +3,17 @@ title: Linux의 SQL Server 보안 시작
 description: 이 문서에서는 일반적인 보안 동작을 설명 합니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 9fe29cadaa14168871e7448350d41bc89afed05b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019504"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux의 SQL Server의 보안 기능에 대 한 연습
 
@@ -181,7 +180,7 @@ Create a new user `TestUser` with `SELECT` permission on the table, then execute
 사용자 TestUser 만들 로그인 없이   
 권한 부여 선택 ON Person.EmailAddress TestUser; 하려면    
  
-EXECUTE AS USER = 'TestUser';   
+사용자로 실행 = 'TestUser';   
 선택 EmailAddressID, EmailAddress Person.EmailAddress;에서       
 되돌리기;    
 ```
@@ -223,13 +222,13 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
+암호로 암호화 마스터 키 만들기 = ' * ';  
 GO  
 
 만들 인증서 MyServerCert SUBJECT = '내 데이터베이스 암호화 키 인증서';  
 GO  
 
-USE AdventureWorks2014;   GO
+사용 하 여 AdventureWorks2014;   이동
   
 CREATE DATABASE ENCRYPTION KEY  
 WITH ALGORITHM = AES_256  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4102c272fe9d880e6213917091b6078a413aebf8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f85095941311459da2fdc757a11895795ebb418e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046158"
 ---
 # <a name="spattachschedule-transact-sql"></a>sp_attach_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_attach_schedule
 > [!NOTE]  
 >  어느 *schedule_id* 하거나 *schedule_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  일정과 작업의 소유자는 같아야 합니다.  
   
  일정은 둘 이상의 작업에 대해 설정할 수 있습니다. 작업은 둘 이상의 일정으로 실행할 수 있습니다.  

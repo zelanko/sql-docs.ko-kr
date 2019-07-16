@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 83c182ad-4713-439b-8769-9b7408aec8b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2bfbe04376b71401694eb8bea025b8418cfea643
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 468fa452a5b9015bf5fcc613c040f76160e87210
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046509"
 ---
 # <a name="sysfncdcdecrementlsn-transact-sql"></a>sys.fn_cdc_decrement_lsn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.fn_cdc_decrement_lsn ( lsn_value )
 ## <a name="return-type"></a>반환 형식  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수에 의해 반환된 LSN은 지정된 값보다 항상 작으며 두 값 사이에는 LSN 값이 존재할 수 없습니다.  
   
 ## <a name="permissions"></a>사용 권한  

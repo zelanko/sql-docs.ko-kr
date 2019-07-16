@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd5c396db88a8377a46bd965b664bc2a667d51de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e09efe938dabb031e1c57020f051cd5ab03e55a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63001529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010573"
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_syscollector_stop_collection_set
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_syscollector_create_collection_set은 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

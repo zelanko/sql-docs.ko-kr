@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b29ee604f1b584fcbdcd0ef91e32c84d89cc5f96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045995"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**varbinary(16)**|명령의 시퀀스 번호입니다.|  
 |**originator_srvname**|**sysname**|트랜잭션이 시작된 서버입니다.|  
@@ -83,7 +82,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
  긴 명령은 결과 집합에서 여러 행으로 분할될 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_browsereplcmds** 트랜잭션 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

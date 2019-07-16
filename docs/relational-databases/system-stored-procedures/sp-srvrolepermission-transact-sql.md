@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5709667f-e3e4-48a2-93ec-af5e22a2ac58
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f23d8766a89619654ba89bc6d70cec342b11b8fe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6613c4e94ce8c802e45fe003ac73e51b3f38072b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032813"
 ---
 # <a name="spsrvrolepermission-transact-sql"></a>sp_srvrolepermission(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
 ## <a name="arguments"></a>인수  
 `[ @srvrolename = ] 'role'` 사용 권한이 반환 되는 고정된 서버 역할의 이름이입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. 역할을 지정하지 않으면 모든 고정 서버 역할의 사용 권한이 반환됩니다. *역할* 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**sysadmin**|시스템 관리자입니다.|  
 |**securityadmin**|보안 관리자입니다.|  
@@ -61,12 +60,12 @@ sp_srvrolepermission [ [ @srvrolename = ] 'role']
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**ServerRole**|**sysname**|고정 서버 역할의 이름입니다.|  
 |**사용 권한**|**sysname**|와 관련 된 권한은 **ServerRole**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  실행할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문, 고정 서버 역할의 멤버가 수행할 수 있는 기타 특수 작업 등의 사용 권한이 나열됩니다. 가 고정된 서버 역할의 목록을 표시 하려면 실행 **sp_helpsrvrole**합니다.  
   
  합니다 **sysadmin** 고정된 서버 역할에 다른 모든 고정된 서버 역할의 권한이 있습니다.  

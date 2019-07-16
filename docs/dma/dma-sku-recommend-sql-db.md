@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: 5effd31d37af5fbe119f1ad23781b994fa89c240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d87df240d4b83e53ef8f670609d2c896df7fe62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054676"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>온-프레미스 데이터베이스에 대 한 오른쪽 Azure SQL Database/관리 인스턴스 SKU를 식별 합니다.
 

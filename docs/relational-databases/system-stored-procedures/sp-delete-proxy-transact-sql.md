@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dfd44237699c000447bbdfb2638d0d66550414dd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a5750e7a2346f55d97e19ba58db548f726b38cd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009196"
 ---
 # <a name="spdeleteproxy-transact-sql"></a>sp_delete_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  어느 **@proxy_name** 하거나 **@proxy_id** 지정 해야 합니다. 두 인수가 모두 지정될 경우 두 인수는 같은 프록시를 참조해야 합니다. 그렇지 않으면 저장 프로시저가 실패합니다.  
   
  작업 단계가 지정된 프록시를 참조할 경우 해당 프록시는 삭제할 수 없으며 저장 프로시저가 실패합니다.  

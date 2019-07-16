@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 218371ab6d8133dbaf1865eeffc11f92883b4305
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896590"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,16 +41,16 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @ProcName = ] 'procedure'` 옵션을 설정할 프로시저의 이름이입니다. *프로시저* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
+`[ @ProcName = ] 'procedure'` 옵션을 설정할 프로시저의 이름이입니다. *프로시저* 됩니다 **nvarchar(776)** , 기본값은 없습니다.  
   
 `[ @OptionName = ] 'option'` 설정 옵션의 이름이입니다. 에 대 한 값만 *옵션* 됩니다 **시작**합니다.  
   
-`[ @OptionValue = ] 'value'` 옵션을 설정할 것인지 여부입니다 (**true** 또는 **온**) 또는 해제 (**false** 또는 **해제**). *값* 됩니다 **varchar(12)**, 기본값은 없습니다.  
+`[ @OptionValue = ] 'value'` 옵션을 설정할 것인지 여부입니다 (**true** 또는 **온**) 또는 해제 (**false** 또는 **해제**). *값* 됩니다 **varchar(12)** , 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 오류 번호(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  시작 프로시저에 있어야 합니다 **마스터** 데이터베이스 하며 입력 또는 출력 매개 변수를 포함할 수 없습니다. 시작할 때 모든 데이터베이스가 복구되고 "복구 완료" 메시지가 기록되면 저장 프로시저의 실행이 시작됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

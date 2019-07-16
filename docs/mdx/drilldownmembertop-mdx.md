@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2dde2a96b34485fd6d460699a20055e289f2f1ad
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 1ebb3054ab25729ef5d75034dbee1d720f4dd928
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031243"
 ---
 # <a name="drilldownmembertop-mdx"></a>DrilldownMemberTop(MDX)
 
@@ -50,7 +49,7 @@ DrillDownMemberTop(<Set_Expression1>, <Set_Expression2>, <Count> [,[<Numeric_Exp
  *Include_Calc_Members*  
  계산 멤버를 드릴다운 결과에 포함할 수 있게 하는 키워드입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  숫자 식이 지정 되는 **DrilldownMemberTop** 일련의 자식에 대해 계산 된 숫자 식의 값에 따라 첫 번째 집합의 각 멤버의 자식을 차례로 내림차순 정렬 함수 멤버입니다. 숫자 식이 지정되지 않은 경우 이 함수는 쿼리 컨텍스트에서 확인된 대로 자식 멤버 집합이 나타내는 셀의 값에 따라 첫 번째 집합에 있는 각 멤버의 자식을 내림차순으로 정렬합니다. 이 동작은 멤버 집합을 정렬하지 않고 일반적인 순서로 반환하는 TopCount 및 Head(MDX) 함수와 비슷합니다.  
   
  정렬 후 합니다 **DrilldownMemberTop** 함수에 지정 된 자식 멤버의 수 및 부모 멤버를 포함 하는 집합을 반환 *개수* 두 집합 모두에 포함 되며 가장 높은 값을 사용 하 여 .  

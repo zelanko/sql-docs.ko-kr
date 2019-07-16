@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7ebc6a783aa8520c3ab16465143acdf1a6bf6628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0288dde74d2a172c9b0f8bdb865f4467fb0f637
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919722"
 ---
 # <a name="commandtext-property-ado"></a>CommandText 속성(ADO)
 공급자에 대해 실행할 명령의 텍스트를 나타냅니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66698942"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  가져오거나를 **문자열** SQL 문, 테이블 이름, 상대 URL 또는 저장된 프로시저와 같은 공급자 명령을 포함 하는 값입니다. 기본값은 빈 문자열 ("").  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 합니다 **CommandText** 나타내는 명령의 텍스트를 반환 하는 속성을 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다. 일반적으로이 SQL 문을 있지만 다른 유형의 저장된 프로시저 호출과 같은 공급자가 인식 하는 명령 문 수도 있습니다. 특정 언어 또는 공급자의 쿼리 프로세서에서 지 원하는 버전의 SQL 문 이어야 합니다.  
   
  경우는 [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) 의 속성을 **명령** 개체로 설정 됩니다 **True** 및 **명령** 설정 하는 경우 개체에 대해 열린 연결에 바인딩된 **CommandText** 속성인 ADO 준비 쿼리 (즉, 공급자가 저장 되는 쿼리의 컴파일된 폼) 호출 하는 경우를 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 또는 [엽니다](../../../ado/reference/ado-api/open-method-ado-connection.md)메서드.  

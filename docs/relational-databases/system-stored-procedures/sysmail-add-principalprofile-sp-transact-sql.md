@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf12b97028d3d98f7d5cc5ab034db95411d913dc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0a8db1f3b8d9bc209b6f8ed238cbf0be6177e578
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017825"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  프로필을 공개 하려면를 지정 된 **@principal_id** 의 **0** 또는 **@principal_name** 의 **공용**합니다. 공개 프로필은 모든 사용자에 게 제공 합니다 **msdb** 데이터베이스, 사용자는 또한의 멤버 여야 하지만 **DatabaseMailUserRole** 실행할 **sp_send_dbmail**합니다.  
   
  데이터베이스 사용자는 하나의 기본 프로필만 가질 수 있습니다. 때 **@is_default** 는 '**1**' 사용자가 이미 하나 이상의 프로필을 사용 하 여 연결 지정된 된 프로필에는 사용자에 대 한 기본 프로필이 됩니다. 이전에 기본 프로필이던 프로필은 사용자와 계속 연결되어 있긴 하지만 더 이상 기본 프로필이 아닙니다.  

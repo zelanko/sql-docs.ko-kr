@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b28967d1000a8e307c99d05ea840dd62ced09fb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e6ee58a9c04c64c71ab63c3bbd639ae0c3357a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059099"
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |module_guid|**uniqueidentifier**|이벤트 모듈 GUID입니다. Null을 허용하지 않습니다.|  
 |package_guid|**uniqueidentifier**|이벤트 패키지 GUID입니다. Null을 허용하지 않습니다.|  
@@ -79,7 +78,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |timestamp_utc|**datetime2**|**적용 대상**: [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지<br /><br />날짜 및 시간 (UTC 표준 시간대) 이벤트입니다. Null을 허용하지 않습니다.|  
 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  실행 하 여 설정 하는 큰 결과 읽는 **sys.fn_xe_file_target_read_file** 에서 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 오류가 발생할 수 있습니다. 사용 된 **파일로 결과 저장** 모드 (**Ctrl + Shift + F**) 큰 결과 집합을 파일로 내보내고 대신 다른 도구를 사용 하 여 파일 읽기를 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -87,7 +86,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="examples"></a>예  
   
-### <a name="a-retrieving-data-from-file-targets"></a>1. 파일 대상에서 데이터 가져오기  
+### <a name="a-retrieving-data-from-file-targets"></a>A. 파일 대상에서 데이터 가져오기  
  다음 예에서는 모든 파일의 행을 모두 가져옵니다. 이 예에서 파일 대상과 메타파일은 C:\ 드라이브의 추적 폴더에 있습니다.  
   
 ```  

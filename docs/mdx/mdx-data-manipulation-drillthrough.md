@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0149898e44476233eafcb226a221fc5cc48ae1d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006260"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX 데이터 조작 - DRILLTHROUGH
 
@@ -42,7 +41,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  *Set_of_Attributes_and_Measures*  
  쉼표로 구분된 차원 특성 및 측정값 목록입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  드릴스루는 최종 사용자가 세부 정보를 가져오기 위해 큐브에서 단일 셀을 선택하고 해당 셀의 원본 데이터에서 결과 집합을 검색하는 작업입니다. 기본적으로 드릴스루 결과 집합은 선택한 큐브 셀 값을 계산하기 위해 평가된 테이블 행에서 파생됩니다. 최종 사용자가 드릴스루하려면 해당 클라이언트 응용 프로그램에서 이 기능을 지원해야 합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 결과 ROLAP 파티션 또는 차원을 쿼리하지 않는 한 MOLAP 저장소에서 직접 검색 됩니다.  
   
 > [!IMPORTANT]  

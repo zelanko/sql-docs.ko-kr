@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e4a71411fca869d3562481c3e15f6faa5895df22
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 19c0a4d2a95b81c26b746a8ece9defce61fe712f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009128"
 ---
 # <a name="spdeletenotification-transact-sql"></a>sp_delete_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_delete_notification
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  알림을 제거하는 경우 알림만 제거되며 경고 및 운영자는 그대로 유지됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

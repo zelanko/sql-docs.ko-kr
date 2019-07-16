@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 19aecc4dc642e9aee636c860f63b9b39e0471fa4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5aa91ac2ab5b4056a693535c19a9e250a865dd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020659"
 ---
 # <a name="prevmember-mdx"></a>PrevMember(MDX)
 
@@ -32,7 +31,7 @@ Member_Expression.PrevMember
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **PrevMember** 함수는 지정 된 멤버와 같은 수준의 이전 멤버를 반환 합니다.  
   
 ## <a name="example"></a>예제  

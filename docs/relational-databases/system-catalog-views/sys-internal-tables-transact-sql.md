@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a5821c70-f150-4676-8476-3a31f7403dca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a84e1d2fa9d65cfdab4e4753315d44346af4597e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b3f262943d41f1cd9592ab805d02bce3ade77a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044543"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63004532"
  내부 테이블에는 사용자가 액세스할 수 있는 데이터가 포함되지 않으며 스키마가 고정되어 변경할 수 없습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서는 내부 테이블 이름을 참조할 수 없습니다. 예를 들어 선택과 같은 문은 실행할 수 없습니다 \* FROM  *\<sys.internal_table_name >* 합니다. 그러나 카탈로그 뷰를 쿼리하여 내부 테이블의 메타데이터를 볼 수 있습니다.  
   
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**\<Sys.objects에서 상속 된 열 >**||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.|  
 |**internal_type**|**tinyint**|내부 테이블의 유형입니다.<br /><br /> 3 = **query_disk_store_query_hints**<br /><br /> 4 = **query_disk_store_query_template_parameterization**<br /><br /> 6 = **query_disk_store_wait_stats**<br /><br /> 201 = **queue_messages**<br /><br /> 202 = **xml_index_nodes**<br /><br /> 203 = **fulltext_catalog_freelist**<br /><br /> 205 = **query_notification**<br /><br /> 206 = **service_broker_map**<br /><br /> 207 = **extended_indexes** (예: 공간 인덱스)<br /><br /> 208 = **filestream_tombstone**<br /><br /> 209 = **change_tracking**<br /><br /> 210 = **tracked_committed_transactions**<br /><br /> 220 = **contained_features**<br /><br /> 225 = **filetable_updates**<br /><br /> 236 = **selective_xml_index_node_table**<br /><br /> 240 = **query_disk_store_query_text**<br /><br /> 241 = **query_disk_store_query**<br /><br /> 242 = **query_disk_store_plan**<br /><br /> 243 = **query_disk_store_runtime_stats**<br /><br /> 244 = **query_disk_store_runtime_stats_interval**<br /><br /> 245 = **query_context_settings**|  
@@ -49,7 +48,7 @@ ms.locfileid: "63004532"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  내부 테이블은 부모 엔터티와 동일한 파일 그룹에 저장됩니다. 아래의 예 6에 표시된 카탈로그 쿼리를 사용하여 내부 테이블에서 행 내부, 행 외부 및 LOB(Large Object) 데이터에 사용되는 페이지 수를 반환할 수 있습니다.  
   
  사용할 수는 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 시스템 프로시저를 내부 테이블에 대 한 공간 사용 현황 데이터를 반환 합니다. **sp_spaceused** 다음과 같은 방법으로 내부 테이블 공간을 보고 합니다.  
@@ -61,7 +60,7 @@ ms.locfileid: "63004532"
 ## <a name="examples"></a>예  
  다음 예에서는 카탈로그 뷰를 사용하여 내부 테이블 메타데이터를 쿼리하는 방법을 보여 줍니다.  
   
-### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>1\. sys.objects 카탈로그 뷰에서 열을 상속하는 내부 테이블 표시  
+### <a name="a-show-internal-tables-that-inherit-columns-from-the-sysobjects-catalog-view"></a>A. sys.objects 카탈로그 뷰에서 열을 상속하는 내부 테이블 표시  
   
 ```  
 SELECT * FROM sys.objects WHERE type = 'IT';  

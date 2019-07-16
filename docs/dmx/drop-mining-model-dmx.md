@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f1cc0d35f7110d8ef805b8e1c07220a032c5a8b6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 3743836f9976f52665c0358d1f338528a7593476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38052311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061657"
 ---
 # <a name="drop-mining-model-dmx"></a>DROP MINING MODEL(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +28,7 @@ DROP MINING MODEL <model >
 ```  
   
 ## <a name="arguments"></a>인수  
- *모델*  
+ *model*  
  모델 식별자입니다.  
   
 ## <a name="examples"></a>예  

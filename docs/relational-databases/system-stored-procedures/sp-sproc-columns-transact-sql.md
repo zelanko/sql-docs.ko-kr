@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032819"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +65,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|프로시저 한정자 이름입니다. 이 열은 NULL이 될 수 있습니다.|  
 |**PROCEDURE_OWNER**|**sysname**|프로시저 소유자 이름입니다. 이 열은 항상 값을 반환합니다.|  
@@ -89,7 +88,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**IS_NULLABLE**|**varchar(254)**|테이블에 있는 열의 Null 허용 여부입니다. ISO 규칙을 따라서 null 허용 여부를 결정합니다. ISO 호환 DBMS에서는 빈 문자열을 반환할 수 없습니다.<br /><br /> 열이 NULL을 포함할 수 있으면 YES를 표시하고 NULL을 포함할 수 없으면 NO를 표시합니다.<br /><br /> Null 허용 여부를 알 수 없으면 이 열에서는 길이가 0인 문자열을 반환합니다.<br /><br /> 이 열에 반환되는 값은 NULLABLE 열에 반환되는 값과 다릅니다.|  
 |**SS_DATA_TYPE**|**tinyint**|확장 저장 프로시저에 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_sproc_columns** 같습니다 **SQLProcedureColumns** ODBC에서. 반환 된 결과 정렬 **PROCEDURE_QUALIFIER**, **PROCEDURE_OWNER**를 **PROCEDURE_NAME**, 및 매개 변수는 프로시저에 나타나는 순서 정의 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

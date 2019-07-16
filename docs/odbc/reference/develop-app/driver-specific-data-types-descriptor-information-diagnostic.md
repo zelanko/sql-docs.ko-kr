@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: ad4c76d3-5191-4262-b47c-5dd1d19d1154
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30c310e6c6b2833da6e1d9167faee2e979bb4616
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa17a5552855916798c78e0e7d371b58e58a401e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046921"
 ---
 # <a name="driver-specific-data-types-descriptor-types-information-types-diagnostic-types-and-attributes"></a>드라이버별 데이터 형식, 설명자 형식, 정보 형식, 진단 형식 및 특성
 드라이버 다음에 대 한 드라이버 관련 값을 할당할 수 있습니다.  
   
--   **SQL 데이터 형식 표시기** 이러한, *ParameterType* 에 **SQLBindParameter** 및 *DataType* 에 **SQLGetTypeInfo** 반환한 **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**, ** SQLDescribeParam**, **SQLProcedureColumns**, 및 **SQLSpecialColumns**합니다.  
+-   **SQL 데이터 형식 표시기** 이러한, *ParameterType* 에 **SQLBindParameter** 및 *DataType* 에 **SQLGetTypeInfo** 반환한 **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLGetTypeInfo**,  **SQLDescribeParam**, **SQLProcedureColumns**, 및 **SQLSpecialColumns**합니다.  
   
 -   **설명자 필드** 이들은 **SQLColAttribute**, **SQLGetDescField** 및 **SQLSetDescField** 에서 *FieldIdentifier* 에서 사용됩니다.  
   

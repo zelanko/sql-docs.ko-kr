@@ -5,17 +5,16 @@ description: Mssqlctl bdc 명령에 대 한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96ecf1c987baffec0ff71b8b6ef5eccb204b3108
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a9da2de60248246bee3daeeaee40d3071da69c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957954"
 ---
 # <a name="mssqlctl-bdc"></a>mssqlctl bdc
 
@@ -27,13 +26,13 @@ ms.locfileid: "67727488"
 |     |     |
 | --- | --- |
 [mssqlctl bdc create](#mssqlctl-bdc-create) | 빅 데이터 클러스터를 만듭니다.
-[mssqlctl bdc delete](#mssqlctl-bdc-delete) | 빅 데이터 클러스터를 삭제 합니다.
+[mssqlctl bdc 삭제](#mssqlctl-bdc-delete) | 빅 데이터 클러스터를 삭제 합니다.
 [mssqlctl bdc config](reference-mssqlctl-bdc-config.md) | 구성 명령입니다.
 [mssqlctl bdc 끝점](reference-mssqlctl-bdc-endpoint.md) | 끝점 명령입니다.
 [mssqlctl bdc 상태](reference-mssqlctl-bdc-status.md) | 상태 명령입니다.
 [mssqlctl bdc 디버그](reference-mssqlctl-bdc-debug.md) | 명령을 디버그 합니다.
 [mssqlctl bdc storage-pool](reference-mssqlctl-bdc-storage-pool.md) | 저장소 풀 명령입니다.
-[mssqlctl bdc control](reference-mssqlctl-bdc-control.md) | 컨트롤 명령입니다.
+[mssqlctl bdc 컨트롤](reference-mssqlctl-bdc-control.md) | 컨트롤 명령입니다.
 [mssqlctl bdc 풀](reference-mssqlctl-bdc-pool.md) | 풀 명령입니다.
 ## <a name="mssqlctl-bdc-create"></a>mssqlctl bdc 만들기
 SQL Server 빅 데이터 클러스터 만들기-kube 구성 ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'DOCKER_USERNAME', 'DOCKER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'] 다음 환경 변수를 함께 시스템에 필요 합니다.
@@ -60,7 +59,7 @@ mssqlctl bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--config-profile -c`
 BDC 구성 프로필, 클러스터를 배포 하는 데: ['aks-개발-테스트 ', ' kubeadm-개발-테스트 ', ' minikube-개발-테스트 ']
 #### `--accept-eula -a`
-사용 약관 수락 하 시겠습니까? [yes/no]. '예'로 ACCEPT_EULA 환경 변수를 설정할 수 있습니다이 인수를 사용.
+사용 약관 수락 하 시겠습니까? [예/아니요]입니다. '예'로 ACCEPT_EULA 환경 변수를 설정할 수 있습니다이 인수를 사용.
 #### `--node-label -l`
 배포 하려면 노드를 지정 하는 데 BDC 노드의 레이블.
 #### `--force -f`

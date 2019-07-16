@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 3027c4f7-6b4d-4089-a369-5926e8a8da1c
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e73bb8428e9155aa779ee3f06029cc1149e0b485
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1bf8d568031541df8f4dfa80a4148ad759dad54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043004"
 ---
 # <a name="changetrackingcurrentversion-transact-sql"></a>CHANGE_TRACKING_CURRENT_VERSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ CHANGE_TRACKING_CURRENT_VERSION ( )
 ## <a name="return-type"></a>반환 형식  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스에 대해 변경 내용 추적이 설정되어 있지 않으면 NULL을 반환합니다.  
   
 ## <a name="examples"></a>예  

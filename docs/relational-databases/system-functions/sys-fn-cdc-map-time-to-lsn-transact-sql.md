@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c22074e686f9dff1d988d7453c0c546fa6e049b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046336"
 ---
 # <a name="sysfncdcmaptimetolsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ```  
   
 ## <a name="arguments"></a>인수  
- **'**< relational_operator >**'** {보다 작은 가장 큰 | 보다 작은 가장 큰 같거나 | 보다 큰 가장 작은 | 최소 크기 보다 크거나 같은}  
+ **'** < relational_operator > **'** {보다 작은 가장 큰 | 보다 작은 가장 큰 같거나 | 보다 큰 가장 작은 | 최소 크기 보다 크거나 같은}  
  내에서 고유한 LSN 값을 식별 하는 데 사용 되는 **cdc.lsn_time_mapping** 테이블과 연결된 된 **tran_end_time** 비교할 때 관계를 충족 하는 *tracking_time*  값입니다.  
   
  *relational_operator* 됩니다 **nvarchar(30)** 합니다.  
@@ -61,7 +60,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ## <a name="return-type"></a>반환 형식  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  알아야 하는 방법을 **sys.fn_cdc_map_time_lsn** 날짜/시간 범위를 LSN 범위 매핑한 다음 시나리오를 고려를 사용할 수 있습니다. 변경 데이터를 매일 추출하려는 고객이 있다고 가정해 보십시오. 즉, 고객은 지정된 날에 자정까지(자정 포함)의 변경 내용만 원합니다. 시간 범위의 하한은 전날 자정까지이며 자정은 포함하지 않습니다. 상한은 지정된 날의 자정까지이며 자정도 포함합니다. 다음 예제에서는 어떻게 함수 **sys.fn_cdc_map_time_to_lsn** 변경 데이터 캡처 열거 함수를 모두 반환 하는 데 필요한 LSN 기반 범위로이 시간 기반 범위를 체계적으로 매핑할 수 해당 범위 내의 변경 내용입니다.  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  

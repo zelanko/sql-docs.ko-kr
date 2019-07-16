@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ce54144c3f7f367248cdb9d92484874deaaf78fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22b1b6bf2abbf322cec690d9e466f2ea40fcb72a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059252"
 ---
 # <a name="sysfntracegetfilterinfo-transact-sql"></a>sys.fn_trace_getfilterinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,14 +52,14 @@ fn_trace_getfilterinfo ( trace_id )
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 정보를 반환합니다. 열에 대 한 자세한 내용은 참조 하세요. [sp_trace_setfilter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**columnid**|**int**|필터가 적용되는 열의 ID입니다.|  
 |**logical_operator**|**int**|AND 또는 OR 연산자의 적용 여부를 지정합니다.|  
 |**comparison_operator**|**int**|비교 유형을 지정합니다.<br /><br /> 0 = 같음<br /><br /> 1 = 같지 않음<br /><br /> 2 = 보다 큼<br /><br /> 3 = 보다 작음<br /><br /> 4 = 크거나 같음<br /><br /> 5 = 작거나 같음<br /><br /> 6 = 유사함<br /><br /> 7 = 유사하지 않음|  
 |**value**|**sql_variant**|필터가 적용되는 값을 지정합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용자 설정 *trace_id* 식별, 수정 및 추적을 제어 하는 값입니다. 에 특정 추적의 ID를 전달 하면 **fn_trace_getfilterinfo** 해당 추적에 대 한 모든 필터 정보를 반환 합니다. 지정된 추적에 필터가 없는 경우 이 함수는 빈 행 집합을 반환합니다. 잘못된 ID를 전달하면 빈 행 집합이 반환됩니다. 추적에 대 한 유사한 정보를 참조 하세요. [sys.fn_trace_getinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)합니다.  
   
 ## <a name="permissions"></a>사용 권한  

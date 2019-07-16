@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 390ef0c2-107c-4443-9495-80f35f22d168
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c7c3d1f4ccc6b6a7fc9f398c528dcab79ffbd426
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e00eece4d8a3064806b401975aa299e76518f3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061199"
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>고급 개체 선택(MySQLToSQL)
 합니다 **고급 개체 섹션** 대화 상자를 사용 하면 개체 이름에 문자열 및 부분 문자열을 사용 하 여 데이터베이스 개체를 필터링 한 다음 선택 하거나 해당 개체의 선택을 취소 합니다. SSMA는 선택한 개체에 대 한 변환 및 마이그레이션 작업을 수행합니다.  

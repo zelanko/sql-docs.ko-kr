@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: edbe8a3404217f330b5b62a9d433c7d560b28656
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e78241252733e8298c0bc727f9c45dd6df2768ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008207"
 ---
 # <a name="operators---arithmetic"></a>연산자 - 산술
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +22,7 @@ ms.locfileid: "62502697"
   
  다음 표에서는 DMX에서 지원하는 산술 연산자를 설명합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |[+ &#40;추가&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|두 수를 더합니다.|  
 |[- &#40;빼기&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|한 수에서 다른 수를 뺍니다.|  

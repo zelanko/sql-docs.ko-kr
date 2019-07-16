@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 70b06749d1cbecc2127c70fee28b60f49583d5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e40e377310b33034b4abecdc5e58eab17d39695d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959195"
 ---
 # <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac 확장(미리 보기)
 
@@ -24,7 +23,7 @@ ms.locfileid: "66797990"
 
 이 환경은 현재 초기 미리 보기 중입니다. 문제를 보고 하 고 기능 요청 하십시오 [여기 있습니다.](https://github.com/microsoft/azuredatastudio/issues)
 
-![data-actions](media/sql-server-dacpac-extension/data-tier-application-actions.png)
+![데이터 작업](media/sql-server-dacpac-extension/data-tier-application-actions.png)
 
  ### <a name="requirements"></a>요구 사항
  * 이 마법사는 SQL Server 인스턴스를 시작 하는 활성 연결이 필요 합니다.

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71df952769ae509ba25b256ecdc9ddef3a54ebe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926642"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Microsoft OLE DB Provider for Microsoft Jet 개요
 OLE DB Provider for Microsoft Jet ADO를 Microsoft Jet 데이터베이스에 액세스할 수 있습니다.
@@ -58,7 +57,7 @@ Microsoft.Jet.OLEDB.4.0
 
  다음 표에서 해당 OLE DB 속성 이름 괄호로 함께 이러한 속성을 나열합니다.
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |Jet OLEDB:Compact 회수 공간 크기 (DBPROP_JETOLEDB_COMPACTFREESPACESIZE)|예상 (바이트)를 데이터베이스를 압축 하 여 회수 될 수 있는 공간의 양 나타냅니다. 이 값은 데이터베이스 연결을 설정한 후에 유효 합니다.|
 |Jet OLEDB:Connection 컨트롤 (DBPROP_JETOLEDB_CONNECTIONCONTROL)|사용자는 데이터베이스에 연결할 수 있는지 여부를 나타냅니다.|
@@ -92,7 +91,7 @@ Microsoft.Jet.OLEDB.4.0
 ## <a name="provider-specific-recordset-and-command-properties"></a>공급자 관련 레코드 집합 및 명령 속성
  Jet 공급자에서는 여러 공급자별 **레코드 집합** 하 고 **명령** 속성입니다. 이러한 속성 액세스 및 통해 설정 합니다 **속성** 의 컬렉션을 **레코드 집합** 또는 **명령** 개체입니다. 테이블에는 ADO 속성 이름 및 해당 OLE DB 속성 이름을 괄호로 나열합니다.
 
-|속성 이름|Description|
+|속성 이름|설명|
 |-------------------|-----------------|
 |Jet OLEDB:Bulk 트랜잭션 (DBPROP_JETOLEDB_BULKNOTRANSACTIONS)|SQL 대량 작업이 트랜잭션 여부를 나타냅니다. 대규모의 대량 작업 리소스 지연으로 인해 트랜잭션 하는 경우 실패할 수 있습니다.|
 |Jet OLEDB:Enable Fat 커서 (DBPROP_JETOLEDB_ENABLEFATCURSOR)|원격 행 원본에 대 한 레코드 집합을 채울 때 Jet 여러 행을 캐시 해야 하는지 여부를 나타냅니다.|
@@ -208,7 +207,7 @@ Microsoft.Jet.OLEDB.4.0
 |IConnectionPointContainer|DBPROP_IConnectionPointContainer|
 |IConvertType|DBPROP_IConvertType|
 |ILockBytes|DBPROP_ILockBytes|
-|Immobile Rows|DBPROP_IMMOBILEROWS|
+|부동 행|DBPROP_IMMOBILEROWS|
 |IRowset|DBPROP_IRowset|
 |IRowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|
@@ -283,7 +282,7 @@ Microsoft.Jet.OLEDB.4.0
 |IConnectionPointContainer|DBPROP_IConnectionPointContainer|
 |IConvertType|DBPROP_IConvertType|
 |ILockBytes|DBPROP_ILockBytes|
-|Immobile Rows|DBPROP_IMMOBILEROWS|
+|부동 행|DBPROP_IMMOBILEROWS|
 |IRowset|DBPROP_IRowset|
 |IRowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|

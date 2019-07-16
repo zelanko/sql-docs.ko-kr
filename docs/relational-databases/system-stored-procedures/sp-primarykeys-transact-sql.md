@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0f76dd31-5b7b-4209-9e2e-b9ed5cac164d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 91b3956f37830d66d6680452b452f2d928551beb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ccae0385ef8c9305f4972ff6dcbd7a7960200370
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056307"
 ---
 # <a name="spprimarykeys-transact-sql"></a>sp_primarykeys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CAT**|**sysname**|테이블 카탈로그입니다.|  
 |**TABLE_SCHEM**|**sysname**|테이블 스키마입니다.|  
@@ -65,7 +64,7 @@ sp_primarykeys [ @table_server = ] 'table_server'
 |**KEY_SEQ**|**int**|기본 키가 여러 열로 구성된 경우 열의 시퀀스 번호입니다.|  
 |**PK_NAME**|**sysname**|기본 키 식별자입니다. 데이터 원본에 적용할 수 없을 경우에는 NULL을 반환합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_primarykeys** PRIMARY_KEYS 행 집합을 쿼리하여 실행 되는 **IDBSchemaRowset** 에 해당 하는 OLE DB 공급자의 인터페이스 *table_server*합니다. 합니다 *table_name*를 *table_schema*를 *table_catalog*, 및 *열* 매개 변수는 행을 제한 하려면이 인터페이스에 전달 됩니다 반환 됩니다.  
   
  **sp_primarykeys** 지정 된 연결 된 서버의 OLE DB 공급자의 PRIMARY_KEYS 행 집합을 지원 하지 않는 경우 설정 하는 빈 결과 반환 합니다 **IDBSchemaRowset** 인터페이스입니다.  

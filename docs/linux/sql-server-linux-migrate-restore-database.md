@@ -4,18 +4,17 @@ description: 이 자습서에서는 Windows에서 SQL Server 데이터베이스 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/16/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
-ms.openlocfilehash: 2ec273a58c2a907b6059972816736382e10df883
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: f5eebdbedb548c28db6a83038a6f6b84c5bad336
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025928"
 ---
 # <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>백업 및 복원을 사용 하 여 Linux를 Windows에서 SQL Server 데이터베이스 마이그레이션
 

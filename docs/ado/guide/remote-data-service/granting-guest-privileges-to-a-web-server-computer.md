@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e851a22d-01bc-4eb0-bc42-92b8f65d1c63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7fed7d31e0ee52e3f9691913b06f9a9ffede51e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bddf6ce0bbfb78435118ef3d87303a94c792c96d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704288"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922640"
 ---
 # <a name="granting-guest-privileges-to-a-web-server-computer"></a>웹 서버 컴퓨터에 게스트 권한 부여
 웹 서버 계정을 (IUSR_*ComputerName*) rds. 사용 하도록 웹 서버 컴퓨터의 게스트 로컬 그룹에 추가 해야 합니다  

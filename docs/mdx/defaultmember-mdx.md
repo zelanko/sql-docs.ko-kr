@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3a0c11acadcbdcadfd9398baff09db9292c87eb2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5843ec42cf4ba712a2e55c9cc96dd6f482c0760
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047088"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember(MDX)
 
@@ -32,7 +31,7 @@ Hierarchy_Expression.DefaultMember
  *Hierarchy_Expression*  
  계층을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  특성의 기본 멤버는 쿼리에 특성이 포함되어 있지 않을 때 식을 평가하는 데 사용됩니다.  
   
 ## <a name="example"></a>예제  

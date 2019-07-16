@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13cf57e181c3fbb1371c10b554eb9da344a951d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004738"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서 실행될 작업의 각 단계에 대한 정보를 포함합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|작업의 ID입니다.|  
 |**step_id**|**int**|작업 단계의 ID입니다.|  
@@ -53,7 +52,7 @@ ms.locfileid: "62470748"
 |**retry_interval**|**int**|재시도 간에 대기하는 시간입니다.|  
 |**os_run_priority**|**int**|예약되어 있습니다.|  
 |**output_file_name**|**nvarchar(200)**|일 때 단계의 출력 파일의 이름을 저장 되 **하위 시스템** 이 TSQL, PowerShell, 또는 **CmdExec**_합니다._|  
-|**last_run_outcome**|**int**|작업 단계의 이전 실행 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **2** = Retry<br /><br /> **3** = 취소<br /><br /> **5** = 알 수 없음|  
+|**last_run_outcome**|**int**|작업 단계의 이전 실행 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **2** = 다시 시도<br /><br /> **3** = 취소<br /><br /> **5** = 알 수 없음|  
 |**last_run_duration**|**int**|단계가 마지막으로 실행되었을 때의 시간(hhmmss)입니다.|  
 |**last_run_retries**|**int**|작업 단계의 마지막 실행에서 재시도한 횟수입니다.|  
 |**last_run_date**|**int**|단계가 마지막으로 실행을 시작했을 때의 날짜(yyyymmdd)입니다.|  

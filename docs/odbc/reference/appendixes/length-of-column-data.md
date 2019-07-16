@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c762c881-ebe0-4eac-84d5-f30281fc3eca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6d14fa4303dd1f67a77bf14dcebeeb933ccce9e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d2998eace4772624a1e6590ab2541577147f5c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041614"
 ---
 # <a name="length-of-column-data"></a>열 데이터의 길이
 > [!IMPORTANT]  

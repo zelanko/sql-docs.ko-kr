@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f486bb1-fad8-4064-ac9d-61f2de85b68b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1db402e7c015ef50ce47b5137e670d9f1836a326
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23b7539c32b6cb675f8616d9b8ec9db89be1208b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022156"
 ---
 # <a name="using-sqlgetdiagrec-and-sqlgetdiagfield"></a>SQLGetDiagRec 및 SQLGetDiagField 사용
 응용 프로그램 호출 **SQLGetDiagRec** 하거나 **SQLGetDiagField** 진단 정보를 검색 합니다. 이러한 함수는 환경, 연결, 문 또는 설명자 핸들을 수락 하 고 마지막으로 해당 핸들을 사용 하는 함수에서 진단을 반환 합니다. 특정 핸들을 로그온 진단 해당 핸들을 사용 하 여 새 함수를 호출할 때 삭제 됩니다. 함수가 여러 진단 레코드를 반환 하는 경우 응용 프로그램에서는 이러한 함수를 여러 번; 상태 레코드의 총 수를 호출 하 여 검색 됩니다 **SQLGetDiagField** SQL_DIAG_NUMBER 옵션을 사용 하 여 헤더 레코드 (레코드 0)에 대 한 합니다.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2cded902-9272-4667-ac4b-a4f95a9f008e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 982596981c6c363abcad57b94427fcb4178c2c65
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 72e321b74f3e949030a6d599c082acf36db12687
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054916"
 ---
 # <a name="sphelpjobschedule-transact-sql"></a>sp_help_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,12 +61,12 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|일정 ID입니다.|  
 |**schedule_name**|**sysname**|일정 이름입니다.|  
 |**enabled**|**int**|일정을 사용할지 (**1**) 또는 사용 안 함 (**0**).|  
-|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = Once<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월을 기준으로 **freq_interval**<br /><br /> **64** = 때 실행할 **SQLServerAgent** 서비스 시작 합니다.|  
+|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = 1<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월을 기준으로 **freq_interval**<br /><br /> **64** = 때 실행할 **SQLServerAgent** 서비스 시작 합니다.|  
 |**freq_interval**|**int**|작업이 실행되는 요일입니다. 값의 값에 따라 달라 집니다 **freq_type**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
 |**freq_subday_type**|**int**|에 대 한 단위 **freq_subday_interval**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
 |**freq_subday_interval**|**int**|수가 **freq_subday_type** 작업의 각 실행 간에 발생 하는 기간. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
@@ -86,7 +85,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 > **참고: sp_help_jobschedule** 에서 값을 반환 합니다 **dbo.sysjobschedules** 하 고 **dbo.sysschedules** 시스템 테이블 **msdb**합니다. **sysjobschedules** 20 분 마다 업데이트 합니다. 이는 저장 프로시저에서 반환하는 값에 영향을 줄 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  매개 변수 **sp_help_jobschedule** 특정 조합 에서만에서 사용할 수 있습니다. 하는 경우 *schedule_id* 도 지정 된 *job_id* 나 *job_name* 지정할 수 있습니다. 이 고, 그렇지 합니다 *job_id* 하거나 *job_name* 매개 변수는 함께 사용할 수 있습니다 *schedule_name*합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -104,7 +103,7 @@ sp_help_jobschedule { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-job-schedule-for-a-specific-job"></a>1. 특정 작업에 대한 작업 일정 반환  
+### <a name="a-returning-the-job-schedule-for-a-specific-job"></a>A. 특정 작업에 대한 작업 일정 반환  
  다음 예에서는 `BackupDatabase`라는 작업에 관한 일정 정보를 반환합니다.  
   
 ```  
@@ -116,7 +115,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>2. 특정 일정에 대한 작업 일정 반환  
+### <a name="b-returning-the-job-schedule-for-a-specific-schedule"></a>2\. 특정 일정에 대한 작업 일정 반환  
  다음 예에서는 `NightlyJobs`라는 일정과 `RunReports`라는 작업에 관한 정보를 반환합니다.  
   
 ```  
@@ -129,7 +128,7 @@ EXEC dbo.sp_help_jobschedule
 GO  
 ```  
   
-### <a name="c-returning-the-job-schedule-and-schedule-description-for-a-specific-schedule"></a>3. 특정 일정에 대한 작업 일정 및 일정 설명 반환  
+### <a name="c-returning-the-job-schedule-and-schedule-description-for-a-specific-schedule"></a>3\. 특정 일정에 대한 작업 일정 및 일정 설명 반환  
  다음 예에서는 `NightlyJobs`라는 일정과 `RunReports`라는 작업에 관한 정보를 반환합니다. 반환된 결과 집합에는 일정 설명이 포함됩니다.  
   
 ```  

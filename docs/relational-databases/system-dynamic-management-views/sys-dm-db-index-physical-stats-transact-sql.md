@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: c6427f786de727f22c3dd74b0dcf91d63b36c4ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004876"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sys.dm_db_index_physical_stats (
   
  기본 테이블 또는 뷰에 대한 모든 인덱스 정보를 반환하려면 NULL을 지정합니다. NULL을 지정 하는 경우 *index_id*에 NULL을 지정 해야 *partition_number*합니다.  
   
- *partition_number* | NULL | 0 | DEFAULT  
+ *partition_number* | NULL | 0 | 기본  
  개체의 파티션 번호입니다. *partition_number* 됩니다 **int**합니다. 유효한 입력은는 *partion_number* 인덱스 또는 힙의 경우 NULL, 0 또는 DEFAULT입니다. 기본값은 0입니다. 이 컨텍스트에서 NULL, 0 및 DEFAULT는 동등한 값입니다.  
   
  소유하는 개체의 모든 파티션에 대한 정보를 반환하려면 NULL을 지정합니다.  
@@ -87,7 +86,7 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|테이블 또는 뷰의 데이터베이스 ID입니다.|  
 |object_id|**int**|인덱스가 있는 테이블 또는 뷰의 개체 ID입니다.|  
@@ -95,7 +94,7 @@ sys.dm_db_index_physical_stats (
 |partition_number|**int**|테이블, 뷰 또는 인덱스 등의 소유하는 개체 내의 1부터 시작하는 파티션 번호입니다.<br /><br /> 1 = 분할되지 않은 인덱스 또는 힙|  
 |index_type_desc|**nvarchar(60)**|인덱스 유형에 대한 설명입니다.<br /><br /> HEAP<br /><br /> CLUSTERED  INDEX<br /><br /> NONCLUSTERED  INDEX<br /><br /> PRIMARY  XML  INDEX<br /><br /> 확장 인덱스<br /><br /> XML INDEX<br /><br /> COLUMNSTORE 매핑 인덱스 (내부)<br /><br /> DELETEBUFFER COLUMNSTORE (내부)<br /><br /> DELETEBITMAP COLUMNSTORE (내부)|  
 |hobt_id|**bigint**|힙 또는 B-트리 ID에 인덱스 또는 파티션이입니다.<br /><br /> 사용자 정의 인덱스 hobt_id를 반환 하는 것 외에도 내부 columnstore 인덱스의 hobt_id도 반환 합니다.|  
-|alloc_unit_type_desc|**nvarchar(60)**|할당 단위 유형에 대한 설명입니다.<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> 형식의 열에 저장 된 데이터가 LOB_DATA 할당 단위가 **텍스트**, **ntext**를 **이미지**를 **varchar (max)**, **nvarchar (max)** 하십시오 **varbinary (max)**, 및 **xml**합니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.<br /><br /> ROW_OVERFLOW_DATA 할당 단위 형식 열에 저장 된 데이터가 포함 **varchar (n)**, **nvarchar (n)** 하십시오 **varbinary (n)**, 및 **sql_ variant** 행 외부로 밀어넣은 합니다.|  
+|alloc_unit_type_desc|**nvarchar(60)**|할당 단위 유형에 대한 설명입니다.<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> 형식의 열에 저장 된 데이터가 LOB_DATA 할당 단위가 **텍스트**, **ntext**를 **이미지**를 **varchar (max)** , **nvarchar (max)** 하십시오 **varbinary (max)** , 및 **xml**합니다. 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요.<br /><br /> ROW_OVERFLOW_DATA 할당 단위 형식 열에 저장 된 데이터가 포함 **varchar (n)** , **nvarchar (n)** 하십시오 **varbinary (n)** , 및 **sql_ variant** 행 외부로 밀어넣은 합니다.|  
 |index_depth|**tinyint**|인덱스 수준의 수입니다.<br /><br /> 1 = 힙 또는 LOB_DATA나 ROW_OVERFLOW_DATA 할당 단위|  
 |index_level|**tinyint**|인덱스의 현재 수준입니다.<br /><br /> 인덱스 리프 수준, 힙 및 LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위에 대해 0입니다.<br /><br /> 리프가 아닌 인덱스 수준의 경우 0보다 큽니다. *index_level* 인덱스의 루트 수준에서 가장 높은 됩니다.<br /><br /> 인덱스의 리프가 아닌 수준 파일만 처리 시기 *모드* = DETAILED입니다.|  
 |avg_fragmentation_in_percent|**float**|인덱스의 논리적 조각화 또는 IN_ROW_DATA 할당 단위에서 힙의 익스텐트 조각화입니다.<br /><br /> 값은 여러 파일을 고려하여 백분율로 측정됩니다. 논리적 조각화 및 익스텐트 조각화에 대한 정의는 주의를 참조하세요.<br /><br /> LOB_DATA 및 ROW_OVERFLOW_DATA 할당 단위에 대해 0입니다.<br /><br /> 에 대 한 NULL 경우 힙에 *모드* = SAMPLED 합니다.|  
@@ -112,10 +111,10 @@ sys.dm_db_index_physical_stats (
 |forwarded_record_count|**bigint**|다른 데이터 위치로의 전달 포인터가 있는 힙의 레코드 수입니다. 이 상태는 업데이트하는 동안 원본 위치에 새 행을 저장할 공간이 충분하지 않은 경우에 발생합니다.<br /><br /> 힙의 IN_ROW_DATA 할당 단위 이외의 모든 할당 단위에 대해 NULL입니다.<br /><br /> 에 대 한 NULL 경우 힙에 *모드* = LIMITED입니다.|  
 |compressed_page_count|**bigint**|압축된 페이지 수입니다.<br /><br /> 힙의 경우 새로 할당된 페이지는 PAGE 압축되지 않습니다. 힙은 데이터를 대량으로 가져오거나 힙을 다시 작성하는 경우의 두 가지 특별한 조건에서 PAGE 압축됩니다. 일반적으로 페이지 할당을 발생시키는 DML 작업은 PAGE 압축되지 않습니다. compressed_page_count 값이 원하는 임계값보다 커지면 힙을 다시 작성하십시오.<br /><br /> 클러스터형 인덱스가 있는 테이블의 경우 compressed_page_count 값은 PAGE 압축의 효율성을 나타냅니다.|  
 |hobt_id|BIGINT|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Columnstore 인덱스에 대 한 파티션에 대 한 내부 columnstore 데이터를 추적 하는 행 집합에 대 한 ID입니다. 행 집합으로 데이터를 힙에 저장 되는지 이진 트리. 부모 columnstore 인덱스와 동일한 인덱스 ID를 갖습니다. 자세한 내용은 [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)합니다.<br /><br /> 경우에는 NULL|  
-|column_store_delete_buffer_state|TINYINT|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 드레이닝<br /><br /> 3 = 플러시하는 중<br /><br /> 4 = RETIRING<br /><br /> 5 = READY|  
+|column_store_delete_buffer_state|TINYINT|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = 드레이닝<br /><br /> 3 = 플러시하는 중<br /><br /> 4 = 사용 중지<br /><br /> 5 = 준비|  
 |column_store_delete_buff_state_desc||**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> 유효 하지 않음-부모 인덱스가 columnstore 인덱스가 아닙니다.<br /><br /> -Deleters 열고 스캐너가 옵션을 사용 합니다.<br /><br /> 드레이닝-deleters 드레이닝는 하지만 스캐너에서 계속 사용 합니다.<br /><br /> 플러시하는 중-버퍼 닫히고 버퍼의 행 삭제 비트맵에 기록 됩니다.<br /><br /> 사용 중지 중-닫힌된 삭제 버퍼의 행 삭제 비트맵에 기록 된 하지만 스캐너 여전히 사용 하기 때문에 버퍼에 잘리지 않습니다. 새 스캐너는 열기 버퍼는 충분 하므로 사용 되지 않는 버퍼를 사용 하지 않아도 됩니다.<br /><br /> 준비-이 삭제 버퍼를 사용할 준비가 된 것입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sys.dm_db_index_physical_stats 동적 관리 함수는 DBCC SHOWCONTIG 문을 대체합니다.  
   
 ## <a name="scanning-modes"></a>검색 모드  
@@ -178,7 +177,7 @@ GO
   
  **논리적 조각화**  
   
- 인덱스의 리프 페이지에서 순서가 잘못된 페이지의 비율입니다. 순서가 잘못된 페이지란 인덱스에 할당된 다음 물리적 페이지가 현재 리프 페이지의 다음 페이지 포인터가 가리키는 페이지와 다른 경우를 나타냅니다.  
+ 인덱스의 리프 페이지에서 순서가 잘못된 페이지의 비율입니다. 순서가 잘못된 페이지란 인덱스에 할당된 다음 물리적 페이지가 현재 리프 페이지의 다음 페이지  포인터가 가리키는 페이지와 다른 경우를 나타냅니다.  
   
  **익스텐트 조각화**  
   
@@ -239,7 +238,7 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-information-about-a-specified-table"></a>1. 지정한 테이블에 대한 정보 반환  
+### <a name="a-returning-information-about-a-specified-table"></a>A. 지정한 테이블에 대한 정보 반환  
  다음 예에서는 `Person.Address` 테이블의 모든 인덱스와 파티션에 대한 크기 및 조각화 통계를 반환합니다. 최대한의 성능을 발휘하고 반환되는 통계를 제한하기 위해 검색 모드를 `'LIMITED'`로 설정합니다. 이 쿼리를 실행하려면 최소한 `Person.Address` 테이블에 대한 CONTROL  권한이 필요합니다.  
   
 ```  
@@ -265,7 +264,7 @@ GO
   
 ```  
   
-### <a name="b-returning-information-about-a-heap"></a>2. 힙에 대한 정보 반환  
+### <a name="b-returning-information-about-a-heap"></a>2\. 힙에 대한 정보 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `dbo.DatabaseLog` 힙에 대한 모든 통계를 반환합니다. 테이블에 LOB  데이터가 들어 있으므로 `LOB_DATA` 할당 단위에 대한 행이 반환되고 힙의 데이터 페이지를 저장하는 `IN_ROW_ALLOCATION_UNIT`에 대한 행도 반환됩니다. 이 쿼리를 실행하려면 최소한 `dbo.DatabaseLog` 테이블에 대한 CONTROL  권한이 필요합니다.  
   
 ```  
@@ -285,7 +284,7 @@ GO
   
 ```  
   
-### <a name="c-returning-information-for-all-databases"></a>3. 모든 데이터베이스에 대한 정보 반환  
+### <a name="c-returning-information-for-all-databases"></a>3\. 모든 데이터베이스에 대한 정보 반환  
  다음 예에서는 모든 매개 변수에 와일드카드인 `NULL`을 지정하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 모든 테이블과 인덱스에 대한 모든 통계를 반환합니다. 이 쿼리를 실행 하는 VIEW SERVER STATE 권한이 필요 합니다.  
   
 ```  
@@ -294,7 +293,7 @@ GO
   
 ```  
   
-### <a name="d-using-sysdmdbindexphysicalstats-in-a-script-to-rebuild-or-reorganize-indexes"></a>4. 스크립트에 sys.dm_db_index_physical_stats를 사용하여 인덱스를 다시 작성하거나 다시 구성  
+### <a name="d-using-sysdmdbindexphysicalstats-in-a-script-to-rebuild-or-reorganize-indexes"></a>4\. 스크립트에 sys.dm_db_index_physical_stats를 사용하여 인덱스를 다시 작성하거나 다시 구성  
  다음 예에서는 데이터베이스에서 평균 조각화가 10%를 넘는 모든 파티션을 자동으로 다시 구성하거나 다시 작성합니다. 이 쿼리를 실행하려면 VIEW DATABASE STATE 권한이 필요합니다. 이 예에서는 데이터베이스 이름을 지정하지 않고 `DB_ID`를 첫 번째 매개 변수로 지정합니다. 현재 데이터베이스의 호환성 수준이 80 이하이면 오류가 발생합니다. 오류를 해결하려면 `DB_ID()`를 올바른 데이터베이스 이름으로 대체합니다. 데이터베이스 호환성 수준에 대 한 자세한 내용은 참조 하세요. [ALTER DATABASE 호환성 수준 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)합니다.  
   
 ```  
@@ -366,7 +365,7 @@ GO
   
 ```  
   
-### <a name="e-using-sysdmdbindexphysicalstats-to-show-the-number-of-page-compressed-pages"></a>5. sys.dm_db_index_physical_stats를 사용하여 페이지 대 압축된 페이지 수 표시  
+### <a name="e-using-sysdmdbindexphysicalstats-to-show-the-number-of-page-compressed-pages"></a>5\. sys.dm_db_index_physical_stats를 사용하여 페이지 대 압축된 페이지 수 표시  
  다음 예에서는 행 및 페이지가 압축된 페이지에 대한 총 페이지 수를 표시하고 비교하는 방법을 보여 줍니다. 이 정보는 인덱스 또는 테이블 압축의 효과를 확인할 때 사용할 수 있습니다.  
   
 ```  
@@ -382,7 +381,7 @@ JOIN sys.objects o on o.object_id = ips.object_id
 ORDER BY record_count DESC;  
 ```  
   
-### <a name="f-using-sysdmdbindexphysicalstats-in-sampled-mode"></a>6. SAMPLED 모드에서 sys.dm_db_index_physical_stats 사용  
+### <a name="f-using-sysdmdbindexphysicalstats-in-sampled-mode"></a>6\. SAMPLED 모드에서 sys.dm_db_index_physical_stats 사용  
  다음 예에서는 SAMPLED 모드가 DETAILED 모드 결과와 다른 대략적인 값을 어떻게 반환하는지를 보여 줍니다.  
   
 ```  
@@ -407,7 +406,7 @@ FROM sys.dm_db_index_physical_stats (db_id(),
     object_id ('t3'), null, null, 'DETAILED');  
 ```  
   
-### <a name="g-querying-service-broker-queues-for-index-fragmentation"></a>7. 인덱스 조각화에 대 한 service broker 큐를 쿼리합니다.  
+### <a name="g-querying-service-broker-queues-for-index-fragmentation"></a>7\. 인덱스 조각화에 대 한 service broker 큐를 쿼리합니다.  
   
 ||  
 |-|  
@@ -428,7 +427,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [인덱스 관련 동적 관리 뷰 및 함수 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [시스템 뷰 &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 405aa29c-8bd8-42d3-9f39-7494b643fc6f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 64f5763284ec35caee46565ec596e72870b5631f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c3573b876a10b4400969bf63200682e91bfc45fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47756791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046342"
 ---
 # <a name="sysfncdcmaplsntotime-transact-sql"></a>sys.fn_cdc_map_lsn_to_time(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.fn_cdc_map_lsn_to_time ( lsn_value )
 ## <a name="return-type"></a>반환 형식  
  **datetime**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  변경이 커밋된를 기반으로 하는 시간을 확인 하려면이 함수를 사용할 수 있습니다 합니다 **__ $start_lsn** 값에 변경 데이터의 행을 반환 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

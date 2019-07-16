@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1797200ce5369f49035f1a950d606e34e584edc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41c3a6848d71d7ba8f22667c117686485bb569b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019967"
 ---
 # <a name="spmergemetadataretentioncleanup-transact-sql"></a>sp_mergemetadataretentioncleanup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_mergemetadataretentioncleanup [ [ @num_genhistory_rows = ] num_genhistory_row
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
 >  이러한 게시 중 하나가 무한 게시 보존 기간을 사용 하 여 데이터베이스에 게시가 여러 개를 실행 중인 **sp_mergemetadataretentioncleanup** 병합 복제 변경 내용 추적 정리 하지 않습니다 데이터베이스에 대 한 메타 데이터입니다. 그러므로 무한 게시 보존은 신중히 사용하십시오. 게시에 무한 보존 기간이 있는지를 확인 하려면 실행 [sp_helpmergepublication &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) 설정의 값을 사용 하 여 결과의 모든 게시 게시자 **0** 에 대 한 **보존**합니다.  

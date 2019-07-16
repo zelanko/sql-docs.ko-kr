@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2988d031e523c5199bed6c4a557078c803e7bd6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0ffc6fb258799b0ab0bb03e7acbd922f6a67d1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918979"
 ---
 # <a name="editmode-property"></a>EditMode 속성
 현재 레코드의 편집 상태를 나타냅니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66698320"
 ## <a name="return-value"></a>반환 값  
  반환 된 [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ADO는 현재 레코드와 연결 된 편집 버퍼를 유지 합니다. 이 속성에는이 버퍼에 변경 사항이 있는지 여부 또는 새 레코드를 만들어졌는지를 나타냅니다. 사용 된 **EditMode** 현재 레코드의 편집 상태를 확인 하는 속성입니다. 편집 프로세스가 중단 된 보류 중인 변경 내용에 대 한 테스트를 사용 해야 하는지 여부를 확인 합니다 [업데이트](../../../ado/reference/ado-api/update-method.md) 또는 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 메서드.  
   
  *즉시 업데이트 모드* 는 **EditMode** 속성으로 다시 설정 됩니다 **adEditNone** 호출에 성공한 후 합니다 **업데이트** 메서드 . 호출 하 여 [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md) 삭제 되지 않습니다 성공적으로 데이터 원본에서 레코드를 (예를 들어, 때문에 참조 무결성 위반)를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 편집 모드로 유지 됩니다 (**EditMode** = **adEditInProgress**). 따라서 **CancelUpdate** 현재 레코드를 이동 하기 전에 호출 해야 합니다 (예를 들어 [이동](../../../ado/reference/ado-api/move-method-ado.md)하십시오 [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md), 또는 [닫기](../../../ado/reference/ado-api/close-method-ado.md) ).  

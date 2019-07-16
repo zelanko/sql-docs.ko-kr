@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 624b9bdd-ed93-4140-bd4e-00d714a2558c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 9eccd3d42c092202a73d14742a10c97dac9d1159
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: c1b503ea721aa83f9e9954a2181b1b252b211474
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016142"
 ---
 # <a name="propertyvaltype-property-clientnetworkprotocolproperty-class"></a>PropertyValType 속성(ClientNetworkProtocolProperty 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ object.PropertyValType [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  A **uint32** 속성 값의 데이터 형식을 지정 하는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>관련 항목  
  [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)  

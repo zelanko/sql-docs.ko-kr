@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 182a86a05cd0dae6adf85d2168fe884ace910a82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a8856b28d8eec76d2bc262c4209b007c0a7fa04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020643"
 ---
 # <a name="qtd-mdx"></a>Qtd(MDX)
 
@@ -32,7 +31,7 @@ Qtd( [ Member_Expression ] )
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경우 멤버 expressionis 지정 되지 않은 한, 기본값은 있으며 수준 유형이 인 첫 번째 계층의 현재 멤버 *분기* 형식의 첫 번째 차원의 *시간* 측정값 그룹에 있습니다.  
   
  합니다 **Qtd** 함수에 대 한 바로 가기 함수는 합니다 [PeriodsToDate &#40;MDX&#41; ](../mdx/periodstodate-mdx.md) 인 수준 식 인수가로 설정 된 함수 *분기*. 즉, `Qtd(Member_Expression)`은 `PeriodsToDate(Quarter_Level_Expression, Member_Expression)`과 동일합니다.  

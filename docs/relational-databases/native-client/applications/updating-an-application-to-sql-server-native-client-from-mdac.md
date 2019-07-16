@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2860efdd-c59a-4deb-8a0e-5124a8f4e6dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4de00026a0d48a9850d7c13b18525c1a1d84820f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 269afec77614cdcd92e23b1fa66915c44cfa28e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069509"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>MDAC에서 SQL Server Native Client로 애플리케이션 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ ms.locfileid: "52511809"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 TABLE_TYPE이 SYNONYM으로 설정된 TABLES 및 TABLE_INFO 스키마 행 집합에 동의어를 반환합니다.  
   
--   데이터 형식의 값을 반환 **varchar (max)**, **nvarchar (max)**, **varbinary (max)** 하십시오 **xml**, **udt**, 다른 큰 개체 유형의 클라이언트 버전을 반환할 수 없습니다 또는 이전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]합니다. 이러한 유형을 반환 값으로 사용하려는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용해야 합니다.  
+-   데이터 형식의 값을 반환 **varchar (max)** , **nvarchar (max)** , **varbinary (max)** 하십시오 **xml**, **udt**, 다른 큰 개체 유형의 클라이언트 버전을 반환할 수 없습니다 또는 이전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]합니다. 이러한 유형을 반환 값으로 사용하려는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용해야 합니다.  
   
 -   MDAC를 사용하면 수동 및 암시적 트랜잭션을 시작할 때 다음 문을 실행할 수 있지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서는 실행할 수 없습니다. 자동 커밋 모드로 이러한 문을 실행해야 합니다.  
   

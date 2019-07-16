@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: b122c8dbd5e087ab8b871eb7a29e3bb2b330acaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a717c47163e03e6430272ca44d2120c7328289e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061779"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Data Migration Assistant를 실행 하기 위한 모범 사례
 이 문서에서는 설치, 평가 및 마이그레이션에 대 한 몇 가지 모범 사례 정보를 제공 합니다.

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc3538ab8485b7fb9658c665d4ed7dddf53aba33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 213cc6ea9be57590d52755fdbba3151882ac0a38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055173"
 ---
 # <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ sp_help_fulltext_catalog_components
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**전체 텍스트 카탈로그 이름**|**int**|전체 텍스트 카탈로그의 이름입니다.|  
-|**full-text catalog id**|**sysname**|전체 텍스트 카탈로그의 ID입니다.|  
-|**componenttype**|**sysname**|구성 요소의 유형입니다. 다음 중 하나일 수 있습니다.<br /><br /> Assert<br /><br /> 프로토콜 처리기<br /><br /> 단어 분리기|  
+|**전체 텍스트 카탈로그 id**|**sysname**|전체 텍스트 카탈로그의 ID입니다.|  
+|**componenttype**|**sysname**|구성 요소의 유형입니다. 다음 중 하나일 수 있습니다.<br /><br /> Filter<br /><br /> 프로토콜 처리기<br /><br /> 단어 분리기|  
 |**componentname**|**sysname**|구성 요소의 이름입니다.|  
 |**clsid**|**uniqueidentifier**|구성 요소의 클래스 식별자입니다.|  
 |**fullpath**|**nvarchar(256)**|구성 요소 위치에 대한 경로입니다.<br /><br /> NULL = 호출자의 멤버가 아닌 **serveradmin** 고정된 서버 역할입니다.|  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7a0d36c8-c6e9-431d-a5a4-6c1802bce846
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e1eb288a7bb99f5f24f05e4369836d21031f7e68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 791c20214ff3eda4b5bb1f2bd3214b25ea972d74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63001392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010549"
 ---
 # <a name="spsyscollectorupdatecollectionitem-transact-sql"></a>sp_syscollector_update_collection_item(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_syscollector_update_collection_item
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 1 (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  컬렉션 집합이 캐시되지 않은 모드로 설정된 경우 이 모드에서는 데이터 컬렉션과 업로드가 모두 컬렉션 집합에 지정된 일정에 따라 발생하므로 빈도 변경이 무시됩니다. 컬렉션 집합의 상태를 보려면 다음 쿼리를 실행합니다. `<collection_item_id>`를 업데이트할 컬렉션 항목의 ID로 바꿉니다.  
   
 ```  
@@ -92,7 +91,7 @@ WHERE collection_item_id = <collection_item_id>;
 ## <a name="examples"></a>예  
  다음 예제에서 정의 된 예에서 만들어진 컬렉션 항목에 기반한 [sp_syscollector_create_collection_item &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-item-transact-sql.md)합니다.  
   
-### <a name="a-changing-the-collection-frequency"></a>1\. 컬렉션 빈도 변경  
+### <a name="a-changing-the-collection-frequency"></a>A. 컬렉션 빈도 변경  
  다음 예에서는 지정한 컬렉션 항목에 대한 컬렉션 빈도를 변경합니다.  
   
 ```  

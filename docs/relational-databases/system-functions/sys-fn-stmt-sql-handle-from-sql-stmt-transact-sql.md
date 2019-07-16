@@ -1,5 +1,5 @@
 ---
-title: sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs
+title: sys.fn_stmt_sql_handle_from_sql_stmt (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92ebff45c8599e6257ad22f563da6af5067d8e3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059268"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 -   기본값은 0 NULL  
   
--   0-없음  
+-   0 - 없음  
   
 -   1-사용자  
   
@@ -58,7 +57,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="columns-returned"></a>반환되는 열  
  다음 표에서 열이 나열 되어 해당 sys.fn_stmt_sql_handle_from_sql_stmt 반환 합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |**statement_sql_handle**|**varbinary(64)**|SQL 핸들입니다.|  
 |**query_sql_text**|**nvarchar(max)**|텍스트는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.|  
@@ -67,7 +66,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="permissions"></a>사용 권한  
  필요 합니다 **EXECUTE** 데이터베이스에 대 한 권한 및 **삭제** 의 쿼리 저장소 카탈로그 뷰 사용 권한.  

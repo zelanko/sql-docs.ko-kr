@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef3f22ffa0456c69b7e46f8c5aadfc89f95ccc67
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 220e21713935409d7d85ecd156524883dbbace08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022457"
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요. 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
-`[ @optional_command_line = ] 'optional_command_line'` 선택적 명령 프롬프트 배포 에이전트에 제공 됩니다. 예를 들어 **-DefinitionFile** C:\Distdef.txt 또는 **-CommitBatchSize** 10입니다. *optional_command_line* 됩니다 **nvarchar(4000)**, 기본값은 빈 문자열을 사용 하 여 합니다.  
+`[ @optional_command_line = ] 'optional_command_line'` 선택적 명령 프롬프트 배포 에이전트에 제공 됩니다. 예를 들어 **-DefinitionFile** C:\Distdef.txt 또는 **-CommitBatchSize** 10입니다. *optional_command_line* 됩니다 **nvarchar(4000)** , 기본값은 빈 문자열을 사용 하 여 합니다.  
   
 `[ @frequency_type = ] frequency_type` 배포 에이전트를 예약 하는 빈도입니다. *frequency_type* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
   
@@ -149,7 +148,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 배포 에이전트의 날짜가입니다. 이 매개 변수를 사용 하면 *frequency_type* 로 설정 된 **32** (매월 상대적)입니다. *frequency_relative_interval* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1** (기본값)|첫째|  
 |**2**|Second|  
@@ -161,7 +160,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_subday = ] frequency_subday` 정의 된 기간 동안 다시 예약 하는 빈도 방법이입니다. *frequency_subday* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1** (기본값)|한 번|  
 |**2**|Second|  
@@ -178,11 +177,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @active_end_date = ] active_end_date` 배포 에이전트가 중지 되 면 날짜 예약 된 형식은 YYYYMMDD입니다. *active_end_date* 됩니다 **int**, 기본값은 **0**합니다.  
   
-`[ @distribution_jobid = ] _distribution_jobidOUTPUT` 이 작업에 대 한 배포 에이전트의 ID입니다. *distribution_jobid* 됩니다 **binary(16)**, 기본값은 NULL이 고 출력 매개 변수입니다.  
+`[ @distribution_jobid = ] _distribution_jobidOUTPUT` 이 작업에 대 한 배포 에이전트의 ID입니다. *distribution_jobid* 됩니다 **binary(16)** , 기본값은 NULL이 고 출력 매개 변수입니다.  
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password` 설정 *encrypted_distributor_password* 는 지원 되지 않습니다. 이 설정 하려고 **비트** 매개 변수를 **1** 오류가 발생 합니다.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 구독을 통해 동기화 할 수 있는지 여부는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronization Manager. *enabled_for_syncmgr* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. 하는 경우 **false**의 구독이 동기화 관리자에 등록 되지 않았습니다. 하는 경우 **true**, 구독이 동기화 관리자에 등록 및 시작 하지 않고 동기화 할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` 구독을 통해 동기화 할 수 있는지 여부는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Synchronization Manager. *enabled_for_syncmgr* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. 하는 경우 **false**의 구독이 동기화 관리자에 등록 되지 않았습니다. 하는 경우 **true**, 구독이 동기화 관리자에 등록 및 시작 하지 않고 동기화 할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
   
 `[ @ftp_address = ] 'ftp_address'` 이전 버전과 호환성에 해당 합니다.  
   
@@ -192,11 +191,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @ftp_password = ] 'ftp_password'` 이전 버전과 호환성에 해당 합니다.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_` 스냅숏의 대체 폴더의 위치를 지정 합니다. *alternate_snapshot_folder* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_` 스냅숏의 대체 폴더의 위치를 지정 합니다. *alternate_snapshot_folder* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다.  
   
-`[ @working_directory = ] 'working_director'` 게시용 데이터 및 스키마 파일을 저장 하는 데 작업 디렉터리의 이름이입니다. *working_directory* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다. 이름은 UNC 형식으로 지정해야 합니다.  
+`[ @working_directory = ] 'working_director'` 게시용 데이터 및 스키마 파일을 저장 하는 데 작업 디렉터리의 이름이입니다. *working_directory* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 이름은 UNC 형식으로 지정해야 합니다.  
   
-`[ @use_ftp = ] 'use_ftp'` 스냅숏을 검색 하려면 일반 프로토콜 대신 FTP 사용 하 여 지정 합니다. *use_ftp* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다.  
+`[ @use_ftp = ] 'use_ftp'` 스냅숏을 검색 하려면 일반 프로토콜 대신 FTP 사용 하 여 지정 합니다. *use_ftp* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다.  
   
 `[ @publication_type = ] publication_type` 게시의 복제 유형을 지정합니다. *publication_type* 되는 **tinyint** 이며 기본값은 **0**합니다. 하는 경우 **0**, 게시는 트랜잭션 유형입니다. 하는 경우 **1**, 게시는 스냅숏 유형입니다. 하는 경우 **2**, 게시는 병합 유형입니다.  
   
@@ -207,7 +206,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  경우에 암호를 지정 해야 합니다 *dts_package_name* 지정 됩니다.  
   
-`[ @dts_package_location = ] 'dts_package_location'` 패키지 위치를 지정합니다. *dts_package_location* 되는 **nvarchar(12)**, 기본값은 **구독자**합니다. 패키지의 위치 일 수 있습니다 **배포자** 하거나 **구독자**합니다.  
+`[ @dts_package_location = ] 'dts_package_location'` 패키지 위치를 지정합니다. *dts_package_location* 되는 **nvarchar(12)** , 기본값은 **구독자**합니다. 패키지의 위치 일 수 있습니다 **배포자** 하거나 **구독자**합니다.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -221,7 +220,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @job_name = ] 'job_name'` 기존 에이전트 작업의 이름이입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 새로 만든 작업(기본값) 대신 기존 작업을 사용하여 구독이 동기화될 경우에만 지정됩니다. 구성원이 아닌 경우는 **sysadmin** 고정 서버 역할을 지정 해야 *job_login* 하 고 *job_password* 지정 하는 경우 *job_name*.  
   
-`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 Windows 계정의 로그인이입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 없습니다. 이 Windows 계정은 에이전트가 구독자에 연결할 때 항상 사용됩니다.  
+`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 Windows 계정의 로그인이입니다. *job_login* 됩니다 **nvarchar(257)** , 기본값은 없습니다. 이 Windows 계정은 에이전트가 구독자에 연결할 때 항상 사용됩니다.  
   
 `[ @job_password = ] 'job_password'` 에이전트가 실행 되는 Windows 계정의 암호가입니다. *job_password* 됩니다 **sysname**, 기본값은 없습니다.  
   
@@ -231,7 +230,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_addpullsubscription_agent** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
 ## <a name="example"></a>예제  

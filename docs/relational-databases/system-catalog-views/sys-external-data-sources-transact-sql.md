@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0b15109f261e1d793235593c54a0178b7e76f2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 152265e072d9f21baae715692cada63ee4f7ab11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005186"
 ---
 # <a name="sysexternaldatasources-transact-sql"></a>sys.external_data_sources (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -28,13 +27,13 @@ ms.locfileid: "47805941"
   
  각 외부 데이터 원본에 대 한 서버에 대 한 행을 포함 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |data_source_id|**int**|외부 데이터 원본에 대 한 개체 ID입니다.||  
-|NAME|**sysname**|외부 데이터 원본의 이름입니다.||  
+|name|**sysname**|외부 데이터 원본의 이름입니다.||  
 |위치|**nvarchar(4000)**|프로토콜, IP 주소 및 외부 데이터 원본에 대 한 포트를 포함 하는 연결 문자열입니다.||  
 |type_desc|**nvarchar(255)**|문자열로 표시 되는 데이터 원본 유형입니다.|HADOOP, RDBMS, SHARD_MAP_MANAGER, RemoteDataArchiveTypeExtDataSource|  
-|유형|**tinyint**|데이터 원본 유형에 숫자로 표시 합니다.|0-HADOOP<br /><br /> 1 - RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
+|type|**tinyint**|데이터 원본 유형에 숫자로 표시 합니다.|0-HADOOP<br /><br /> 1 - RDBMS<br /><br /> 2-SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
 |resource_manager_location|**nvarchar(4000)**|HADOOP, IP 및 포트 입력에 대 한 Hadoop 리소스 관리자의 위치입니다. Hadoop 데이터 원본에 대해 작업을 제출 하는 것에 대 한 사용 됩니다.<br /><br /> 다른 유형의 외부 데이터 원본에 대해 NULL입니다.||  
 |credential_id|**int**|데이터베이스의 개체 ID 범위는 외부 데이터 원본에 연결 하는 데 사용 하는 자격 증명.||  
 |database_name|**sysname**|형식용 RDBMS, 원격 데이터베이스의 이름입니다. 형식의 경우 SHARD_MAP_MANAGER 분할 된 데이터베이스 맵 관리자 데이터베이스의 이름입니다. 다른 유형의 외부 데이터 원본에 대해 NULL입니다.||  

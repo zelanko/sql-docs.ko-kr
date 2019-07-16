@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e95081c03a5a3f91b601e9db1ddbb24b9c5f295a
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004587"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>QNames 관련 함수 - expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
  *$paramLocal*  
  QName의 로컬 이름 부분입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음에 적용 된 **expanded-qname ()** 함수:  
   
 -   경우는 *$paramLocal* 지정한 값이 올바른 어휘 형식이 xs: ncname 유형에 대 한, 빈 시퀀스가 반환 되 고 동적 오류를 나타냅니다.  
@@ -53,7 +52,7 @@ fn:expanded-QName($paramURI as xs:string?, $paramLocal as xs:string?) as xs:QNam
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** 유형 열에는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다.  
   
-### <a name="a-replacing-a-qname-type-node-value"></a>1. QName 유형 노드 값 바꾸기  
+### <a name="a-replacing-a-qname-type-node-value"></a>A. QName 유형 노드 값 바꾸기  
  이 예에서는 QName 유형 요소 노드의 값을 수정하는 방법을 보여 줍니다. 이 예에서는 다음을 수행합니다.  
   
 -   QName 유형의 요소를 정의하는 XML 스키마 컬렉션을 만듭니다.  
@@ -114,7 +113,7 @@ SELECT * from T
 go  
 ```  
   
- 다음은 결과입니다. QName 유형의 <`ElemQN`> 요소에 새로운 값이 있습니다.  
+ 다음은 결과입니다. 요소가 <`ElemQN`> QName의 이제 형식이 새 값:  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -132,7 +131,7 @@ drop xml schema collection SC
 go  
 ```  
   
-### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>2. expanded-QName() 함수 사용 시 제한 사항 해결  
+### <a name="b-dealing-with-the-limitations-when-using-the-expanded-qname-function"></a>2\. expanded-QName() 함수 사용 시 제한 사항 해결  
  합니다 **Expanded-qname** 함수는 XML 생성에 사용할 수 없습니다. 다음은 이에 대한 예입니다. 이 제한 사항을 해결하기 위해 이 예에서는 먼저 노드를 삽입한 다음 해당 노드를 수정합니다.  
   
 ```  
@@ -158,7 +157,7 @@ SELECT *
 FROM T  
 ```  
   
- 다음 예에서는 또 다른 <`root`> 요소를 추가하려고 하지만 XML 생성에는 expanded-QName() 함수가 지원되지 않으므로 실패합니다.  
+ 다음 시도 추가 하는 다른 <`root`> 요소가 있지만 실패할 expanded-qname () 함수는 XML 생성에서 지원 되지 않습니다.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -166,7 +165,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- 이에 대한 해결 방법은 먼저 <`root`> 요소의 값으로 인스턴스를 삽입한 다음 수정하는 것입니다. 이 예에서는 <`root`> 요소를 삽입할 때 nil 초기 값이 사용됩니다. 이 예의 XML 스키마 컬렉션에서는 <`root`> 요소에 nil 값을 사용할 수 있습니다.  
+ 이 솔루션에 대 한 값으로 인스턴스를 먼저 삽입 하는 것은 <`root`> 요소 다음 수정 합니다. 이 예제에서는 nil 초기 값은 사용 경우를 <`root`> 요소를 삽입 합니다. 이 예제 XML 스키마 컬렉션에 대 한 nil 값을 허용 합니다 <`root`> 요소입니다.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -201,7 +200,7 @@ FROM T
 ```  
   
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  
- 한 가지 제한 사항이 있습니다. 합니다 **expanded-qname ()** 함수는 두 번째 인수로 빈 시퀀스를 허용 하 고 두 번째 인수가 잘못 되었을 때 런타임 오류를 발생 시키는 대신 빈 반환 됩니다.  
+ 하나의 제한이 적용이 됩니다. 합니다 **expanded-qname ()** 함수는 두 번째 인수로 빈 시퀀스를 허용 하 고 두 번째 인수가 잘못 되었을 때 런타임 오류를 발생 시키는 대신 빈 반환 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [QNames 관련 함수 &#40;XQuery&#41;](https://msdn.microsoft.com/library/7e07eb26-f551-4b63-ab77-861684faff71)  

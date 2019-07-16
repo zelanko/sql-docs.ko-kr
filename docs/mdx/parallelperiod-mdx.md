@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c1f495ce1fad9a318ea5e6c1f3fadd88f8313cd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4122c13a5371cc0ffe1c5c6235ad750e7fdadad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63473079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020703"
 ---
 # <a name="parallelperiod-mdx"></a>ParallelPeriod (MDX)
 
@@ -38,7 +37,7 @@ ParallelPeriod( [ Level_Expression [ ,Index [ , Member_Expression ] ] ] )
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  유사 하지만 [사촌](../mdx/cousin-mdx.md) 함수는 **ParallelPeriod** 함수 시계열에 보다 밀접 한 관련이 있습니다. 합니다 **ParallelPeriod** 함수 지정된 된 수준에서 지정된 된 멤버의 상위 항목을 사용 하는 지정한 간격이 상위의 형제로 찾아서 마지막 간에 지정된 된 멤버의 병렬 기간을 반환 합니다.는 형제의 하위 항목입니다.  
   
  합니다 **ParallelPeriod** 함수에는 기본값을 지정 합니다.  

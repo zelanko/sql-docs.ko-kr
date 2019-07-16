@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 64368e9f68b62f61b84d0bcb45278870bfab8689
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb8193dd3e345ab8290239e0f01cbea82221a64c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945099"
 ---
 # <a name="import-statuses-master-data-services"></a>가져오기 상태(Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65485866"
 
   **준비 일괄 처리** 페이지의 **통합 관리** 기능 영역에서는 다음 상태가 표시될 수 있습니다.  
   
-|상태|Description|Status_ID|  
+|상태|설명|Status_ID|  
 |------------|-----------------|----------------|  
 |실행을 위해 대기|일괄 처리가 시작되지 않았습니다.|1|  
 |실행 중|일괄 처리가 진행 중입니다.|2|  

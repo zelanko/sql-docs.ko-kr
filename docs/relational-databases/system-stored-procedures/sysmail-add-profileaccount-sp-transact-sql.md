@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7cbf430f-1997-45ea-9707-0086184de744
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 44dc2d5341e536179fe0bf6ef152ef7d39afe966
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 11ada827add27ae2186fdcc565b3dd2f99f76452
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017757"
 ---
 # <a name="sysmailaddprofileaccountsp-transact-sql"></a>sysmail_add_profileaccount_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sysmail_add_profileaccount_sp { [ @profile_id = ] profile_id | [ @profile_name =
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  프로필과 계정 모두 이미 있어야 합니다. 그렇지 않으면 저장 프로시저가 오류를 반환합니다.  
   
  이 저장 프로시저는 지정한 프로필에 이미 연결되어 있는 계정의 시퀀스 번호를 변경하지 않습니다. 계정의 시퀀스 번호를 업데이트 하는 방법에 대 한 자세한 내용은 참조 하세요. [sysmail_update_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-update-profileaccount-sp-transact-sql.md)합니다.  

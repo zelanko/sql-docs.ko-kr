@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7a23407b546bcde2dd1fde81654da4fe861e0719
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3038bd010c5ca76ad26a301bad45ff4e1aa29460
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008062"
 ---
 # <a name="predictassociation-dmx"></a>PredictAssociation(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +35,7 @@ PredictAssociation(<table column reference>, option1, option2, n ...)
 ## <a name="return-type"></a>반환 형식  
  \<테이블 식 >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  에 대 한 옵션을 **PredictAssociation** EXCLUDE_NULL, INCLUDE_NULL, INCLUSIVE, EXCLUSIVE (기본값), INPUT_ONLY, INCLUDE_STATISTICS 및 INCLUDE_NODE_ID 함수를 포함 합니다.  
   
 > [!NOTE]  

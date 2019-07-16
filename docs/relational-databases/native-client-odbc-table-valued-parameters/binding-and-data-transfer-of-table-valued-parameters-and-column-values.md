@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0a2ea462-d613-42b6-870f-c7fa086a6b42
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f8b291344939bcbafa7f91080837d2302efb1d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02d7ef2dad2e83b0cce95bac2716c92c18f40625
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020259"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>테이블 반환 매개 변수 및 열 값에 대한 바인딩 및 데이터 전송
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -80,7 +79,7 @@ ms.locfileid: "62738559"
   
 3.  SQLExecute 또는 SQLExecDirect를 호출합니다. 이렇게 하면 실행 시 데이터 매개 변수로 처리할 SQL_PARAM_INPUT 또는 SQL_PARAM_INPUT_OUTPUT 매개 변수가 있는 경우 SQL_NEED_DATA가 반환됩니다. 이 경우 응용 프로그램을 다음을 수행합니다.  
   
-    -   Calls SQLParamData. 이 반환 합니다 *ParameterValuePtr* SQL_NEED_DATA의 반환 코드 및 실행 시 데이터 매개 변수 값. 드라이버에 모든 매개 변수 데이터 전달 되었는지, SQLParamData SQL_SUCCESS, SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR를 반환 합니다. 실행 시 데이터 매개 변수에 대 한 *ParameterValuePtr*, 동일한 설명자 필드 SQL_DESC_DATA_PTR과 값은 필수 매개 변수를 고유 하 게 식별 하는 토큰으로 간주 될 수 있습니다. 이 "토큰"은 바인딩 시 응용 프로그램에서 드라이버로 전달된 다음 실행 시 응용 프로그램으로 다시 전달됩니다.  
+    -   SQLParamData를 호출합니다. 이 반환 합니다 *ParameterValuePtr* SQL_NEED_DATA의 반환 코드 및 실행 시 데이터 매개 변수 값. 드라이버에 모든 매개 변수 데이터 전달 되었는지, SQLParamData SQL_SUCCESS, SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR를 반환 합니다. 실행 시 데이터 매개 변수에 대 한 *ParameterValuePtr*, 동일한 설명자 필드 SQL_DESC_DATA_PTR과 값은 필수 매개 변수를 고유 하 게 식별 하는 토큰으로 간주 될 수 있습니다. 이 "토큰"은 바인딩 시 응용 프로그램에서 드라이버로 전달된 다음 실행 시 응용 프로그램으로 다시 전달됩니다.  
   
 4.  Null 테이블 반환 매개 변수의 테이블 반환 매개 변수 행 데이터를 보내려면 테이블 반환 매개 변수 행이 없는 경우 응용 프로그램이 호출 된 SQLPutData *StrLen_or_Ind* SQL_DEFAULT_PARAM으로 설정 합니다.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3a49ff6-46ad-4ee7-b6fe-7e54213dc33e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9bdab8cd50a16913f37115f0d38c00c5c699bc0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5bcafb24313851f58fd18fc19ebabd0ee98f6dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022328"
 ---
 # <a name="spmigrateusertocontained-transact-sql"></a>sp_migrate_user_to_contained(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,19 +42,19 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@username =** ] **N'***user***'**  
+ [ **@username =** ] **N'***user***'**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인에 매핑된 현재 포함된 데이터베이스의 사용자 이름입니다. 값이 **sysname**, 기본값은 **NULL**합니다.  
   
- [**@rename =** ] **N'***copy_login_name***'** | **N'***keep_name***'**  
+ [ **@rename =** ] **N'***copy_login_name***'**  | **N'***keep_name***'**  
  사용 하 여 로그인 기반 데이터베이스 사용자 로그인 이름 대신 다른 사용자 이름이 *keep_name* 마이그레이션하는 동안 데이터베이스 사용자 이름을 유지 합니다. 사용 하 여 *copy_login_name* 사용자 대신 로그인의 이름으로 새 포함 된 데이터베이스 사용자를 만들려고 합니다. 로그인 기반 데이터베이스 사용자의 사용자 이름이 로그인 이름과 같으면 두 옵션 모두 이름을 변경하지 않고 포함된 데이터베이스 사용자를 만듭니다.  
   
- [**@disablelogin =** ] **N'***disable_login***'** | **N'***do_not_disable_login***'**  
+ [ **@disablelogin =** ] **N'***disable_login***'**  | **N'***do_not_disable_login***'**  
  *disable_login* master 데이터베이스의 로그인을 사용 하지 않도록 설정 합니다. 로그인은 사용 하지 않도록 설정 하는 경우에 연결 하려면 연결으로 포함 된 데이터베이스 이름을 제공 해야 합니다 **초기 카탈로그** 연결 문자열의 일부로.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_migrate_user_to_contained** 속성 또는 로그인의 권한을 관계 없이 암호를 사용 하 여 포함된 된 데이터베이스 사용자를 만듭니다. 로그인 비활성화 된 경우 또는 사용자가 거부 한 경우 프로시저가 성공할 수 있습니다 예를 들어 합니다 **연결** 데이터베이스에 대 한 사용 권한.  
   
  **sp_migrate_user_to_contained** 는 다음 제한 사항이 있습니다.  
@@ -80,7 +79,7 @@ sp_migrate_user_to_contained [ @username = ] N'user' ,
   
 ## <a name="examples"></a>예  
   
-### <a name="a-migrating-a-single-user"></a>1. 단일 사용자 마이그레이션  
+### <a name="a-migrating-a-single-user"></a>A. 단일 사용자 마이그레이션  
  다음 예에서는 `Barry`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 암호를 포함하는 포함된 데이터베이스 사용자로 마이그레이션합니다. 예제는 사용자 이름을 변경 하지 않습니다 하 고 사용 하도록 설정 하는 대로 로그인을 유지 합니다.  
   
 ```sql  
@@ -91,7 +90,7 @@ sp_migrate_user_to_contained
   
 ```  
   
-### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>2. 로그인을 포함하는 모든 데이터베이스 사용자를 로그인을 포함하지 않는 포함된 데이터베이스 사용자로 마이그레이션  
+### <a name="b-migrating-all-database-users-with-logins-to-contained-database-users-without-logins"></a>2\. 로그인을 포함하는 모든 데이터베이스 사용자를 로그인을 포함하지 않는 포함된 데이터베이스 사용자로 마이그레이션  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 기반으로 하는 모든 사용자를 암호를 가진 포함된 데이터베이스 사용자로 마이그레이션합니다. 이 예에서는 활성화되지 않은 로그인을 제외합니다. 이 예는 포함된 데이터베이스에서 실행해야 합니다.  
   
 ```sql  

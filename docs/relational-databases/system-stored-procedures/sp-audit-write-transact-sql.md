@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c523848-1ce6-49ad-92b3-e0e90f24f1c2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 450b1cdde9185edee5eac41f52d209e43a7ae22f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60dbabcadaf5108572eaba6361fab28eaf0f49b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996255"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046146"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
  입력 매개 변수가 잘못되었거나 대상 감사 로그에 쓸 수 없는 경우 실패가 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경우는 **USER_DEFINED_AUDIT_GROUP** 서버 감사 사양 또는 데이터베이스 감사 사양에 의해 트리거되는 이벤트에 추가 됩니다 **sp_audit_write** 감사 로그에 포함 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -64,7 +63,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-user-defined-audit-event-with-informational-text"></a>1\. 정보 텍스트를 포함하여 사용자 정의 감사 이벤트 만들기  
+### <a name="a-creating-a-user-defined-audit-event-with-informational-text"></a>A. 정보 텍스트를 포함하여 사용자 정의 감사 이벤트 만들기  
  다음 예에서는 ID가 27인 감사 이벤트, succeeded 값 0, 그리고 선택적으로 포함되는 정보 텍스트를 작성합니다.  
   
 ```  
