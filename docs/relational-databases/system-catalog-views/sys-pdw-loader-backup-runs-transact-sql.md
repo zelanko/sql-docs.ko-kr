@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_loader_backup_runs (Transact-SQL) | Microsoft Docs
+title: sys.pdw_loader_backup_runs (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -11,24 +11,23 @@ dev_langs:
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 067a39c807b546bc8364bab05d0423f86407a625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8e7826e4dcefdbed65fb0fa1f3368411a9ef12a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127465"
 ---
 # <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   진행 중인 및 완료 된 백업 및 복원 작업에 대 한 정보가 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], 및 지속적인 및 완료 된 백업, 복원 및 로드 작업에서 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다. 이 정보는 시스템을 다시 시작해도 유지됩니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|특정 백업, 복원 또는 부하 실행에 대 한 고유 식별자입니다.<br /><br /> 이 보기에 대 한 키입니다.||  
-|NAME|**nvarchar(255)**|부하에 대 한 null입니다. 백업 또는 복원에 대 한 선택적 이름입니다.||  
+|name|**nvarchar(255)**|부하에 대 한 null입니다. 백업 또는 복원에 대 한 선택적 이름입니다.||  
 |submit_time|**datetime**|요청이 제출 된 시간입니다.||  
 |start_time|**datetime**|작업이 시작된 시간입니다.||  
 |end_time|**datetime**|작업 완료, 실패 또는 취소 된 시간입니다.||  
@@ -40,7 +39,7 @@ ms.locfileid: "63047224"
 |Principal_id|**int**|작업을 요청 하는 사용자의 ID입니다.||  
 |session_id|**nvarchar(32)**|작업을 수행 하는 세션 ID입니다.|Session_id를 참조 하세요 [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)합니다.|  
 |request_id|**nvarchar(32)**|작업을 수행 하는 요청의 ID입니다. 로드에 대 한이 부하와 관련 된 현재 또는 마지막 요청입니다...|참조의 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)합니다.|  
-|상태|**nvarchar(16)**|실행의 상태입니다.|'CANCELLED','COMPLETED','FAILED','QUEUED','RUNNING'|  
+|상태|**nvarchar(16)**|실행의 상태입니다.|'취소'를 ' 완료 ', '실패', '큐 대기', 'RUNNING'|  
 |진행률|**int**|완료 비율입니다.|0에서 100 사이의|  
 |command|**nvarchar(4000)**|전체 텍스트는 사용자가 제출한 명령입니다.|(공백을 계산) 4000 자 보다 긴 경우 잘립니다.|  
 |rows_processed|**bigint**|이 작업의 일부로 처리 하는 행 수입니다.||  

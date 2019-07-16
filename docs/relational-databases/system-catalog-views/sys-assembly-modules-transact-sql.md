@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 5f9e644e-8065-49a2-b53d-db7df98f70d8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ade1adbfeb8292e894ce18db305687c7092707cf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 68e91d6935549bc8dd421361c092c3ad1fb01905
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118168"
 ---
 # <a name="sysassemblymodules-transact-sql"></a>sys.assembly_modules(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   CLR(공용 언어 런타임) 어셈블리가 정의한 각 함수, 프로시저 또는 트리거당 한 개의 행을 반환합니다. 이 카탈로그 뷰는 CLR 저장 프로시저, CLR 트리거 또는 CLR 함수를 각각의 기본 구현에 매핑합니다. TA, AF, PC, FS 및 FT 유형의 개체는 하나의 연결된 어셈블리 모듈을 가집니다. 개체 및 어셈블리 간의 연결을 찾기 위해 이 카탈로그 뷰를 다른 카탈로그 뷰에 조인할 수 있습니다. 예를 들어, CLR 저장 프로시저를 만들 때 표시 됩니다에 한 행씩 **sys.objects**하나씩의 행 **sys.procedures** (에서 상속 하는 **sys.objects**), 및 한 행과만 **sys.assembly_modules**합니다. 저장된 프로시저 자체가 메타 데이터 표현 **sys.objects** 하 고 **sys.procedures**합니다. 프로시저의 기본 CLR 구현에 대 한 참조에 포함 됩니다 **sys.assembly_modules**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|SQL 개체의 식별 번호입니다. 데이터베이스 내에서 고유합니다.|  
 |**assembly_id**|**int**|이 모듈이 생성된 어셈블리의 ID입니다.|  

@@ -17,27 +17,26 @@ helpviewer_keywords:
 ms.assetid: b3b3a7d7-0b78-46c0-9755-045f7a5692b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 845b665c108c2d91ef5876667e71a5c883ec8e80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 304e904ab95e4be58ba2a373bd6ed9c11131049f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094892"
 ---
 # <a name="syspolicypolicycategorysubscriptions-transact-sql"></a>syspolicy_policy_category_subscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 각 정책 기반 관리 구독에 대해 한 행을 표시합니다. 각 행에는 대상 및 정책 범주 쌍을 설명합니다. 다음 표에서는 syspolicy_policy_group_subscriptions 뷰의 열을 설명합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |policy_category_subscription_id|**int**|이 레코드의 ID입니다.|  
 |target_type|**sysname**|이 구독의 대상인 데이터베이스 개체의 유형입니다.|  
 |target_object|**sysname**|대상 개체의 이름입니다.|  
 |policy_category_id|**int**|대상에 적용된 정책 범주의 ID입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 뷰는 정책 범주로 구독되는 대상을 표시합니다.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 908d01cc-e704-45d9-9e85-d2df6da3e6f5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9fa56614c65dfc14982c62fb71ce117f8872805c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af2402ce4f1e49ee572a9d271497c2798d679070
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120086"
 ---
 # <a name="spdefaultlanguage-transact-sql"></a>sp_defaultlanguage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_defaultlanguage [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_defaultlanguage** 추가 옵션을 지 원하는 ALTER LOGIN을 호출 합니다. 다른 로그인 기본값을 변경 하는 방법에 대 한 내용은 [ALTER LOGIN &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)합니다.  
   
  SET LANGUAGE 문을 사용하여 현재 세션의 언어를 변경할 수 있습니다. 사용 된 @@LANGUAGE 현재 언어 설정을 표시 하는 함수입니다.  

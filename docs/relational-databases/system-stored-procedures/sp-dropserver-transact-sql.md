@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b486237208e5a374d5cae6da6fd82a22ee0ebe18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124830"
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -45,12 +44,12 @@ sp_dropserver [ @server = ] 'server'
  제거할 서버입니다. *server* 은 **sysname**이며 기본값은 없습니다. *서버* 존재 해야 합니다.  
   
  *droplogins*  
- 원격 및 연결 된 서버 로그인에 대 한 관련 있는 여부를 나타냅니다 *서버* 경우에 제거 해야 **droplogins** 지정 됩니다. **`@droplogins`** 됩니다 **char(10)**, 기본값은 NULL입니다.  
+ 원격 및 연결 된 서버 로그인에 대 한 관련 있는 여부를 나타냅니다 *서버* 경우에 제거 해야 **droplogins** 지정 됩니다. **`@droplogins`** 됩니다 **char(10)** , 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  실행 하는 경우 **sp_dropserver** 원격 및 연결 된 서버 로그인 항목이 연결 된 또는 복제 게시자로 구성 되는 서버에서 오류 메시지가 반환 됩니다. 서버를 제거 하는 경우 서버에 대 한 모든 원격 및 연결 된 서버 로그인을 제거 하려면 사용 합니다 **droplogins** 인수입니다.  
   
  **sp_dropserver** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  

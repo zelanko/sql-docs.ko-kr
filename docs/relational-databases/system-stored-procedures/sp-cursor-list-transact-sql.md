@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8c6cef14177e871f35ccd5c84af4a2b28e35aff5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5adcaab96bfe9af3945b479e4bff5180ca8140d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108585"
 ---
 # <a name="spcursorlist-transact-sql"></a>sp_cursor_list(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
  [ @cursor_scope= ] *cursor_scope*  
  보고할 커서 수준을 지정합니다. *cursor_scope* 됩니다 **int**이며 기본값은 없고 수 이러한 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |1|모든 로컬 커서를 보고합니다.|  
 |2|모든 전역 커서를 보고합니다.|  
@@ -62,7 +61,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
   
  다음은 sp_cursor_list에 의해 반환되는 커서의 형식입니다. 이 형식은 sp_describe_cursor에 의해 반환되는 커서 형식과 동일합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |reference_name|**sysname**|커서를 참조할 때 사용하는 이름입니다. DECLARE CURSOR 문에서 지정된 이름으로 커서를 참조하는 경우 참조 이름과 커서 이름이 동일합니다. 커서에 대한 참조가 변수를 통해 이루어지는 경우 참조 이름은 커서 변수의 이름이 됩니다.|  
 |cursor_name|**sysname**|DECLARE CURSOR 문의 커서 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]커서 변수를 커서로 설정 하 여 커서를 만든 경우 **cursor_name** 은 커서 변수의 이름을 반환 합니다.  이전 릴리스의 경우 이 출력 열은 시스템에서 생성한 이름을 반환합니다.|  
@@ -79,7 +78,7 @@ sp_cursor_list [ @cursor_return = ] cursor_variable_name OUTPUT
 |last_operation|**smallint**|커서에서 수행된 마지막 작업입니다.<br /><br /> 0 = 커서에서 작업이 수행되지 않았습니다.<br /><br /> 1 = OPEN<br /><br /> 2 = 인출<br /><br /> 3 = 삽입<br /><br /> 4 = 업데이트<br /><br /> 5 = 삭제<br /><br /> 6 = 닫기<br /><br /> 7 = 할당 취소|  
 |cursor_handle|**int**|서버 범위에서 커서를 식별하는 고유한 값입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_cursor_list는 연결에 의해 열린 현재 서버 커서의 목록을 작성하고 커서의 스크롤 가능 여부 및 업데이트 가능성 등과 같은 각 커서의 전역 특성을 설명합니다. sp_cursor_list에 의해 나열되는 커서는 다음과 같습니다.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서  

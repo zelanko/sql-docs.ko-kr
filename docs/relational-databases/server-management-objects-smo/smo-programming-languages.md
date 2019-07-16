@@ -17,21 +17,20 @@ helpviewer_keywords:
 ms.assetid: f5e5a832-03e9-477b-b55d-491c678ebb43
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 93c72834a7299129109074c2cbaf14760fd34ae8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b667b1f2b30afc958f2916a1dd7fa0b4da0ff085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62943059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092829"
 ---
 # <a name="smo-programming-languages"></a>SMO 프로그래밍 언어
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   이 섹션에서는 설명 프로그래밍 하는 방법 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.NET.
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[Visual C에서 시작&#35; .NET](../../relational-databases/server-management-objects-smo/smo-programming-getting-started-in-visual-csharp-net.md)|Visual C#.NET에서 SMO 프로그램 작성을 시작 하는 방법에 정보를 제공 합니다.|  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7b5ccd47f2b702c998a9e9268db523da1bfceaec
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 94b77b30d96b5361967398a35335f6aa96587f1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085335"
 ---
 # <a name="spdeletejob-transact-sql"></a>sp_delete_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **@originating_server** 인수는 내부 용도로 예약 되어 있습니다.  
   
  합니다 **@delete_unused_schedule** 인수는 자동으로 모든 작업에 연결 되어 있지 않은 일정을 제거 하 여 이전 버전의 SQL Server를 사용 하 여 이전 버전과 호환성을 제공 합니다. 이 매개 변수는 이전 버전과의 호환성 동작이 기본적으로 설정되어 있습니다. 작업에 연결 되어 있지 않은 일정을 유지 하기 위해 값을 제공 해야 합니다 **0** 으로 **@delete_unused_schedule** 인수입니다.  
@@ -101,7 +100,7 @@ GO
 ## <a name="see-also"></a>관련 항목  
  [sp_add_job&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

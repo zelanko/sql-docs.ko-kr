@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4c18863-ed92-4aa2-a04f-7ed832fc9e07
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 002f74a57ee17f2699325d97e7335dcdae2a8aa4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 67ba388871720ff804063f27a378b838d300baf0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126387"
 ---
 # <a name="spscriptdynamicupdproc-transact-sql"></a>sp_scriptdynamicupdproc(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_scriptdynamicupdproc [ @artid =] artid
 ## <a name="result-sets"></a>결과 집합  
  반환 된 결과 집합을 단일 이루어져 **nvarchar(4000)** 열입니다. 결과 집합은 사용자 지정 저장 프로시저를 만드는 데 사용되는 완전한 CREATE PROCEDURE 문을 형성합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_scriptdynamicupdproc** 트랜잭션 복제에 사용 됩니다. 기본 MCALL 스크립팅 논리는 UPDATE 문 내에 모든 열을 포함하며 비트맵을 사용하여 변경된 열을 확인합니다. 변경되지 않은 열은 일반적으로 별 문제없이 원래 상태로 다시 설정됩니다. 열이 인덱싱된 경우 추가 처리가 발생합니다. 동적 방법에는 변경된 열만 포함되므로 최적의 UPDATE 문자열이 제공됩니다. 그러나 동적 UPDATE 문이 작성되는 런타임에 추가 처리가 발생합니다. 동적 방법과 정적 방법을 테스트한 다음 최적의 해결 방법을 선택하는 것이 좋습니다.  
   
 ## <a name="permissions"></a>사용 권한  

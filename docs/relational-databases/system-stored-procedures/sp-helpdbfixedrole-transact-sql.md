@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1f3b4416ac9c297af84240e630730b0bad855780
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc461bcd1b5adbbc64b2eadaa4bb55af690ea88a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123825"
 ---
 # <a name="sphelpdbfixedrole-transact-sql"></a>sp_helpdbfixedrole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +46,15 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|고정 데이터베이스 역할의 이름입니다.|  
 |**설명**|**nvarchar(70)**|설명은 **DbFixedRole 합니다.**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에 표시된 것과 같이 고정 데이터베이스 역할은 데이터베이스 수준에서 정의되며 특정 데이터베이스 수준의 관리 작업을 수행할 수 있는 사용 권한이 있습니다. 고정 데이터베이스 역할은 추가하거나 제거할 수 없습니다. 고정 데이터베이스 역할에 부여된 사용 권한은 변경할 수 없습니다.  
   
-|고정 데이터베이스 역할|Description|  
+|고정 데이터베이스 역할|설명|  
 |-------------------------|-----------------|  
 |**db_owner**|데이터베이스 소유자입니다.|  
 |**db_accessadmin**|데이터베이스 액세스 관리자입니다.|  
@@ -69,7 +68,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
   
  다음 표에서는 데이터베이스 역할을 수정하는 데 사용되는 저장 프로시저를 보여 줍니다.  
   
-|저장 프로시저|작업|  
+|저장 프로시저|Action|  
 |----------------------|------------|  
 |**sp_addrolemember**|고정 데이터베이스 역할에 데이터베이스 사용자를 추가합니다.|  
 |**sp_helprole**|고정 데이터베이스 역할의 멤버 목록을 표시합니다.|  

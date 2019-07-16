@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18fc2e1dfadff4e276cd40ff6d64a0aa2fc9a06e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137566"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'` 보려는 게시의 이름이입니다. *게시* 은 sysname 이며 기본값은 **%**, 모든 게시에 대 한 정보를 반환 하는 합니다.  
+`[ @publication = ] 'publication'` 보려는 게시의 이름이입니다. *게시* 은 sysname 이며 기본값은 **%** , 모든 게시에 대 한 정보를 반환 하는 합니다.  
   
 `[ @found = ] 'found' OUTPUT` 가 반환 하는 행을 나타내는 플래그입니다. *찾을*됩니다 **int** 이며 기본값은 출력 매개 변수를 **23456**합니다. **1** 은 게시를 찾았음을 나타냅니다. **0** 게시를 찾지 못했음을 나타냅니다.  
   
@@ -51,10 +50,10 @@ sp_helppublication [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|게시에 대한 ID입니다.|  
-|NAME|**sysname**|게시의 이름입니다.|  
+|name|**sysname**|게시의 이름입니다.|  
 |restricted|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |상태|**tinyint**|게시의 현재 상태입니다.<br /><br /> **0** = 비활성입니다.<br /><br /> **1** = 활성입니다.|  
 |태스크(task)||이전 버전과의 호환성을 위해서 사용됩니다.|  
@@ -87,8 +86,8 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**bit**|해당 게시를 구독하는 구독 데이터베이스를 복사하는 기능이 활성화되었는지 여부를 지정합니다. **0** 복사 허용 되지 않음을 의미 합니다.|  
 |centralized_conflicts|**bit**|게시자에 충돌 레코드를 저장하는지 여부를 지정합니다.<br /><br /> **0** = 충돌 레코드가 충돌을 일으킨 구독자 및 게시자 양쪽 모두에서 저장 됩니다.<br /><br /> **1** = 충돌 레코드가 게시자에 저장 됩니다.|  
 |conflict_retention|**int**|충돌 보존 기간(일)을 지정합니다.|  
-|conflict_policy|**int**|지연 업데이트 구독자 옵션을 사용할 때 수행하는 충돌 해결 정책을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = 게시자 wins 충돌 합니다.<br /><br /> **2** = 구독자 내용 적용 충돌 합니다.<br /><br /> **3** = 구독이 다시 초기화 됩니다.|  
-|queue_type||사용할 큐의 유형을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **msmq** = 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐에 트랜잭션을 저장 합니다.<br /><br /> **sql** = 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 트랜잭션을 저장 합니다.<br /><br /> 참고: 메시지 큐에 대한 지원이 중지되었습니다.|  
+|conflict_policy|**int**|지연 업데이트 구독자 옵션을 사용할 때 수행하는 충돌 해결 정책을 지정합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **1** = 게시자 wins 충돌 합니다.<br /><br /> **2** = 구독자 내용 적용 충돌 합니다.<br /><br /> **3** = 구독이 다시 초기화 됩니다.|  
+|queue_type||사용할 큐의 유형을 지정합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **msmq** = 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐에 트랜잭션을 저장 합니다.<br /><br /> **sql** = 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 트랜잭션을 저장 합니다.<br /><br /> 참고: 메시지 큐에 대 한 지원이 더 이상 사용 되지 않습니다.|  
 |backward_comp_level||데이터베이스 호환성 수준으로서 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|게시에 게시 되어 있는지 여부를 지정 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory??? 합니다. 값이 **1** 게시 됨을 나타냅니다. 값 **0** 게시 되지 않습니다 나타냅니다.|  
 |allow_initialize_from_backup|**bit**|구독자가 초기 스냅숏 대신 백업으로부터 이 게시에 대한 구독을 초기화할 수 있는지 여부를 나타냅니다. **1** 백업에서 구독을 초기화할 수 있음을 의미 하 고 **0** 즉 그렇게 할 수 없습니다. 자세한 내용은 [는 트랜잭션 구독이 스냅숏 없이 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) 스냅숏 없이 트랜잭션 구독자입니다.|  
@@ -105,7 +104,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_helppublication은 스냅숏 및 트랜잭션 복제에 사용됩니다.  
   
  sp_helppublication은 이 프로시저를 실행하는 사용자가 소유하는 모든 게시에 대한 정보를 반환합니다.  

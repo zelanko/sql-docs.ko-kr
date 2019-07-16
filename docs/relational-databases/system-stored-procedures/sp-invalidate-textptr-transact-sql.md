@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4409b44a04411357d0109fb643fd13fcff6451b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81df88f6e451d71dc5778e49162db97def7ed27d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113188"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 트랜잭션, 데이터베이스별로 최대 1,024개의 활성화된 유효 행 내부 텍스트 포인터를 허용합니다. 단, 두 개 이상의 데이터베이스에 걸쳐 있는 트랜잭션은 각 데이터베이스에서 1,024개의 행 내부 텍스트 포인터를 가질 수 있습니다. **sp_invalidate_textptr** 행 내부 텍스트 포인터를 무효화 하 고 따라서 추가 행 내부 텍스트 포인터에 대 한 공간을 사용할 수 있습니다.  
   
  Text in row 옵션에 대 한 자세한 내용은 참조 하세요. [sp_tableoption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)합니다.  

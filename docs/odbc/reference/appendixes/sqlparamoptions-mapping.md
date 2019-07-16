@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 57ed65f6-9620-4738-b331-19d2a2b5cae4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 821af40a9550cc6e5fc038bb8e9a24f9e4323441
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 7f4fa71c06b4a9bf3b01d39fa02d4eadeb9b0778
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125716"
 ---
 # <a name="sqlparamoptions-mapping"></a>SQLParamOptions 매핑
 응용 프로그램을 호출할 때 **SQLParamOptions** 는 ODBC를 통한 *3.x* 드라이버, 호출  

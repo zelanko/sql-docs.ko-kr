@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 46700bb94749269eb56e60cade035fdf4c8f388c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094823"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "54124685"
 |**fast_multicol_updateproc**|**bit**|병합 에이전트를 사용하도록 설정하여 한 UPDATE 문에서 같은 행의 여러 열에 변경 사항을 적용했는지 여부를 지정합니다.<br /><br /> **0** = 각 열에 대해 별도 업데이트로 변경 하는 문제입니다.<br /><br /> **1** 하나의 문에서 여러 열 업데이트는 UPDATE 문에서 발급자 =.|  
 |**check_permissions**|**int**|병합 에이전트가 변경 내용을 게시자에 적용할 때 확인할 테이블 수준 사용 권한의 비트맵입니다. *check_permissions* 다음이 값 중 하나일 수 있습니다.<br /><br /> **0x00** = 권한을 확인 하지 않습니다.<br /><br /> **0x10** = 검사 전에 구독자에서 삽입 내용이 게시자에서 사용 권한을 업로드할 수 있습니다.<br /><br /> **0x20** 구독자에서 수행한 Update를 업로드 하기 전에 = 게시자에서 사용 권한을 확인 합니다.<br /><br /> **0x40** 삭제가 구독자를 업로드 하기 전에 = 게시자에서 사용 권한을 확인 합니다.|  
 |**maxversion_at_cleanup**|**int**|다음 번 병합 에이전트가 실행될 때 정리되는 최대 생성입니다.|  
-|**processing_order**|**int**|병합 게시에서 아티클의 처리 순서를 나타냅니다. 여기서 값 **0** 나타내고은 아티클이 정렬 되지 문서에서 가장 낮은 값에서 가장 높은 값 순서 대로 처리 됩니다. 두 아티클의 값이 같으면 동시에 처리됩니다. 자세한 내용은 [병합 복제 지정할 속성](../../relational-databases/replication/merge/specify-merge-replication-properties.md)합니다.|  
+|**processing_order**|**int**|병합 게시에서 아티클의 처리 순서를 나타냅니다. 여기서 값 **0** 나타내고은 아티클이 정렬 되지 문서에서 가장 낮은 값에서 가장 높은 값 순서 대로 처리 됩니다. 두 아티클의 값이 같으면 동시에 처리됩니다. 자세한 내용은 [병합 복제 속성 지정](../../relational-databases/replication/merge/specify-merge-replication-properties.md)을 참조하세요.|  
 |**upload_options**|**tinyint**|구독자에서 변경이 수행되거나 업로드될 수 있는지 여부를 정의하며 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 구독자에서 업데이트에 대 한 제한은 없습니다; 모든 변경 내용이 게시자로 업로드 됩니다.<br /><br /> **1** = 허용 되지만 변경 내용이 구독자에서 게시자로 업로드 되지 않습니다.<br /><br /> **2** = 구독자에서 변경이 허용 되지 않습니다.|  
 |**published_in_tran_pub**|**bit**|병합 게시의 아티클이 트랜잭션 게시에도 게시됨을 나타냅니다.<br /><br /> **0** = 아티클을 트랜잭션 아티클에도 게시 되지 않습니다.<br /><br /> **1** = 아티클을 트랜잭션 아티클에도 게시 합니다.|  
 |**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -94,7 +93,7 @@ ms.locfileid: "54124685"
 |**partition_view_id**|**int**|구독자 파티션을 정의하는 뷰를 식별합니다.|  
 |**repl_view_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**partition_deleted_view_rule**|**sysname**|이전의 열 값을 기준으로 삭제 또는 업데이트된 각 행의 파티션 ID를 검색하기 위해 병합 복제 트리거 내에서 사용하는 문입니다.|  
-|**partition_inserted_view_rule**|**sysname**|새로운 열 값을 기준으로 삽입 또는 업데이트된 각 행의 파티션 ID를 검색하기 위해 병합 복제 트리거 내에서 사용하는 문입니다.|  
+|**partition_inserted_view_rule**|**Sysname**|새로운 열 값을 기준으로 삽입 또는 업데이트된 각 행의 파티션 ID를 검색하기 위해 병합 복제 트리거 내에서 사용하는 문입니다.|  
 |**membership_eval_proc_name**|**sysname**|에 있는 행의 현재 파티션 Id를 평가 하는 프로시저의 이름을 [MSmerge_contents &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)합니다.|  
 |**column_list**|**sysname**|아티클에 게시된 열을 쉼표로 구분한 목록입니다.|  
 |**column_list_blob**|**sysname**|BLOB(Binary Large Object) 열을 포함하여 아티클에 게시된 열을 쉼표로 구분한 목록입니다.|  

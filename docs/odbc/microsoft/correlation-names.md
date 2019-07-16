@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76c36c6f-f8e1-4ece-a77b-611dde3bdd8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0b8a253f9d252beb42080d2085adb962206ebd94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 535c169123923cdb36c355e098f6e0c55ebb9d56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127314"
 ---
 # <a name="correlation-names"></a>상관 관계 이름
 상관 관계 이름은 완전히 지원 테이블 목록에 포함 합니다. 예를 들어 다음 문자열에 E1 되 Emp 라는 테이블에 대 한 상관 관계 이름입니다.  

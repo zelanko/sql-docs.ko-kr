@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 75dcdea6-ff6b-4ac8-aa11-a1f9edbeb8e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9a80167d00a76f667132647b3d152dda5c1a4b3
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 5f27efed55a2ae63b8c3726263077441bdacc49b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135716"
 ---
 # <a name="what-the-driver-does"></a>드라이버가 수행하는 작업
 다음 표에서 기능 및 문 특성 ODBC *3.x* 드라이버 블록 및 스크롤 가능 커서에 대해 구현 해야 합니다.  

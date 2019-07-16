@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4b972abd2674d88274545d1ce4394be88f43c65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124335"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
   
 `[ @action = ] 'action'` 수행할 동작이입니다. *동작* 됩니다 **varchar(20)"** 수 없고 기본값을 사용 하 여 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**add**|추가 *column_name* 의 *qualified_table_name* 테이블의 비활성 전체 텍스트 인덱스를 합니다. 이 동작으로 전체 텍스트 인덱싱에 열을 사용할 수 있습니다.|  
 |**drop**|제거 *column_name* 의 *qualified_table_name* 테이블의 비활성 전체 텍스트 인덱스에서 합니다.|  
@@ -75,7 +74,7 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  전체 텍스트 인덱스가 활성화되었을 경우 진행 중인 채우기가 모두 중지됩니다. 또한 활성화된 전체 텍스트 인덱스가 있는 테이블에 대해 변경 내용 추적을 사용할 수 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 인덱스가 현재 상태인지 확인합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 테이블에서 모든 현재 채우기를 중지하고 기존 인덱스를 삭제한 후 채우기를 새로 시작합니다.  
   
  변경 내용 추적이 진행 중이고 인덱스를 보관하는 동안 전체 텍스트 인덱스에서 열을 추가하거나 삭제해야 할 경우 테이블은 비활성 상태이어야 하고 필요한 열은 추가 또는 삭제되어야 합니다. 이러한 동작은 열을 고정시킵니다. 실제 채우기가 시작되면 테이블은 나중에 활성화될 수 있습니다.  

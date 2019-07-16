@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: afe9eacb2f5e42dc945505d54e420877a8f4cbca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af9086ba9de7d9c61bcedecd4331e7e0e77d6489
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121118"
 ---
 # <a name="syspolicypolicycategories-transact-sql"></a>syspolicy_policy_categories(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +30,13 @@ ms.locfileid: "47646501"
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 각 정책 기반 관리 정책 범주를 한 행으로 표시합니다. 정책 범주에는 많은 정책이 있을 때 정책을 구성할 수 있습니다. 다음 표에서는 syspolicy_policy_groups 뷰의 열을 설명합니다.  
  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |policy_category_id|**int**|정책 범주의 ID입니다.|  
-|NAME|**sysname**|정책 범주의 이름입니다.|  
+|name|**sysname**|정책 범주의 이름입니다.|  
 |mandate_database_subscriptions|**bit**|명시적 구독을 사용하지 않고 정책 범주를 인스턴스의 모든 데이터베이스에 적용할 것인지(1) 아니면 명시적 구독을 사용하여 정책 범주를 데이터베이스에 적용해야 하는지(0)를 표시합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  정책 기반 관리 정책 그룹의 목록을 표시합니다.  
   
 ## <a name="permissions"></a>사용 권한  

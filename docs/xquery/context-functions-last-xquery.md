@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7220b0fe10f88ec9ba78d31a8507d12eba7aafff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038997"
 ---
 # <a name="context-functions---last-xquery"></a>컨텍스트 함수 - last(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +34,13 @@ ms.locfileid: "51674072"
 fn:last() as xs:integer  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SQL server에서 **fn:last()** 상황별 조건자의 경우에만 사용할 수 있습니다. 특히 사용 시 대괄호(`[ ]`)로 묶어야 합니다.  
   
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>1. last() XQuery 함수를 사용하여 마지막 두 제조 단계 검색  
+### <a name="a-using-the-last-xquery-function-to-retrieve-the-last-two-manufacturing-steps"></a>A. last() XQuery 함수를 사용하여 마지막 두 제조 단계 검색  
  다음 쿼리는 특정 제품 모델의 마지막 두 제조 단계를 검색합니다. 값이 고, 반환한 제조 단계 수를 **last ()** 함수는이 쿼리에서 마지막 두 제조 단계 검색 하는 데 사용 됩니다.  
   
 ```  

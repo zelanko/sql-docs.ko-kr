@@ -18,14 +18,13 @@ ms.assetid: 940eea1b-54f5-445f-b844-c894d9f3941b
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f61b7a2a7a1dd84896db36ad6bdf771d6f20b37b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 2155087406860a70c70d8a2be6a8ed64425adb57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126500"
 ---
 # <a name="creating-constant-elements-using-sqlis-constant-sqlxml-40"></a>sql:is-constant를 사용하여 상수 요소 만들기(SQLXML 4.0)
 
@@ -43,7 +42,7 @@ ms.locfileid: "67585151"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>1\. 컨테이너 요소를 추가하는 sql:is-constant 지정  
+### <a name="a-specifying-sqlis-constant-to-add-a-container-element"></a>A. 컨테이너 요소를 추가하는 sql:is-constant 지정  
  이 주석이 추가 된 XSD 스키마  **\<CustomerOrders >** 지정 하 여 상수 요소로 정의 됩니다 합니다 **sql:은 상수** 특성 값이 1 인 합니다. 따라서  **\<CustomerOrders >** 데이터베이스 테이블 또는 열에 매핑되어 있지 않습니다. 이 상수 요소 구성 합니다  **\<순서 >** 자식 요소입니다.  
   
  하지만  **\<CustomerOrders >** 에 매핑되지 않는 경우 데이터베이스 테이블 또는 열을 포함 하는 컨테이너 요소를 결과 XML에 계속 표시 되는  **\<순서 >** 자식 요소입니다.  

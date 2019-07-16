@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 0cf24fe6-5e3c-45fa-81b8-4f52ddf8501d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 027b711c5c1a2cb2d35e65efdc2b00f441841d8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44e9d92c7371451d6bfdd2e1513c3f8fdac8447b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129995"
 ---
 # <a name="descriptor-transitions"></a>설명자 전환
 ODBC 설명자는 다음 세 가지 상태입니다.  
   
-|State|Description|  
+|State|설명|  
 |-----------|-----------------|  
 |D0|할당 되지 않은 설명자|  
 |D1i|암시적으로 할당 된 설명자|  
@@ -35,7 +34,7 @@ ODBC 설명자는 다음 세 가지 상태입니다.
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> Explicit|  
+|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> 명시적 방법|  
 |------------------------|----------------------|----------------------|  
 |D1i[1]|--|--|  
 |D1e[2]|--|--|  
@@ -46,13 +45,13 @@ ODBC 설명자는 다음 세 가지 상태입니다.
   
 ## <a name="sqlcopydesc"></a>SQLCopyDesc  
   
-|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> Explicit|  
+|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> 명시적 방법|  
 |------------------------|----------------------|----------------------|  
 |(IH)|--|--|  
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> Explicit|  
+|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> 명시적 방법|  
 |------------------------|----------------------|----------------------|  
 |--[1]|D0|--|  
 |(IH)[2]|(HY017)|D0|  
@@ -63,13 +62,13 @@ ODBC 설명자는 다음 세 가지 상태입니다.
   
 ## <a name="sqlgetdescfield-and-sqlgetdescrec"></a>SQLGetDescField 및 SQLGetDescRec  
   
-|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> Explicit|  
+|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> 명시적 방법|  
 |------------------------|----------------------|----------------------|  
 |(IH)|--|--|  
   
 ## <a name="sqlsetdescfield-and-sqlsetdescrec"></a>SQLSetDescField 및 SQLSetDescRec  
   
-|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> Explicit|  
+|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> 명시적 방법|  
 |------------------------|----------------------|----------------------|  
 |(IH)[1]|--|--|  
   
@@ -77,6 +76,6 @@ ODBC 설명자는 다음 세 가지 상태입니다.
   
 ## <a name="all-other-odbc-functions"></a>다른 모든 ODBC 함수  
   
-|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> Explicit|  
+|D0<br /><br /> 할당되지 않음|D1i<br /><br /> 암시적 방법|D1e<br /><br /> 명시적 방법|  
 |------------------------|----------------------|----------------------|  
 |--|--|--|

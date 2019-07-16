@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 013b7a7a2124788f3f1bcaa6d09b8ef7b10562e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a981595c19c321ab498fe9eb65b8570eb17f3ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999992"
 ---
 # <a name="descendants-mdx"></a>Descendants(MDX)
 
@@ -55,7 +54,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
  *Desc_Flag*  
  가능한 각 하위 항목 집합을 구별할 수 있는 설명 플래그를 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  수준이 지정 된 경우는 **Descendants** 함수에 지정 된 플래그로 수정 필요에 따라 지정 된 수준에서 지정된 된 집합의 멤버나 지정된 된 멤버의 하위 항목을 포함 하는 집합을 반환  *Desc_Flag*합니다.  
   
  하는 경우 *거리* 를 지정 합니다 **하위** 함수는 지정 된 멤버 또는 해결 수준 지정 된 수는 지정된 된 집합의 멤버의 하위 항목을 포함 하는 집합을 반환 에 지정 된 플래그로 수정 필요에 따라, 지정된 된 멤버의 계층 구조 *Desc_Flag*합니다. 일반적으로 이 함수와 Distance 인수를 사용하면 비정형 계층을 처리할 수 있습니다. 지정된 거리가 0인 경우 이 함수는 지정된 멤버나 지정된 집합으로만 구성된 집합을 반환합니다.  
@@ -92,7 +91,7 @@ Descendants(Set_Expression [ , Distance [ ,Desc_Flag ] ] )
   
  설명 플래그 값을 변경하여 지정된 수준 또는 거리에서 하위 항목을 포함하거나 제외할 수 있습니다. 지정된 수준 또는 거리의 전/후에 있는 자식(리프 노드까지)은 물론, 지정한 수준이나 거리에 관계없이 리프 자식 항목을 포함 또는 제외할 수 있습니다. 다음 표에에서 허용 되는 플래그를 *Desc_Flag* 인수입니다.  
   
-|플래그|Description|  
+|플래그|설명|  
 |----------|-----------------|  
 |자체|지정된 수준 또는 지정된 거리에 있는 하위 멤버만 반환합니다. 이 함수는 지정된 수준이 지정된 멤버의 수준인 경우 지정된 멤버를 포함합니다.|  
 |AFTER|지정된 수준에 종속되거나 지정된 거리에 있는 모든 수준의 하위 멤버를 반환합니다.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30547551cc1793622eaa981c07bbc002d07a094d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20310c60759aea17d61b9252fd73d226567a7a54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027234"
 ---
 # <a name="like-predicate-escape-character"></a>LIKE 조건자 이스케이프 문자
 에 **같은** 조건자 백분율 기호 (%) 일치 항목 0 개 이상의 문자 및 밑줄 (_)에 하나의 문자와 일치 합니다. 실제 백분율 기호를 검색 하거나 검색할에서 밑줄을 **같은** 조건자에 이스케이프 문자가 앞에 나와야 합니다 백분율 기호 또는 밑줄. 정의 하는 이스케이프 시퀀스를 **같은** 조건자 이스케이프 문자는:  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 22f6793b-2f43-4281-b35a-28f48e504dd8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1763ee0cd8c5bc2017160de44b9c047781649eba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be36bd8efc059c1a4f9b5ddf2cdd7faf32cf7dd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107455"
 ---
 # <a name="sql-type-identifiers"></a>SQL 형식 식별자
 각 데이터 원본에는 자체 SQL 데이터 형식을 정의합니다. ODBC 형식 식별자를 정의 하 고 각 형식 식별자에 매핑될 수 있는 SQL 데이터 형식의 일반 특징을 설명 합니다. 드라이버 관련 ODBC SQL 형식 식별자에 내부 데이터 소스의 각 데이터 유형에 매핑되는 방법을 것입니다.  

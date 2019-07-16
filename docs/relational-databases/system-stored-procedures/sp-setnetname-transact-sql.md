@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f416ba81-3835-4588-b0a3-2fe75589490e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67d07d2ea4bd1656ed8f24458410f5812ed22e70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03282ae181ec9fc032e5f64549840d3d292b385e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62656468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104406"
 ---
 # <a name="spsetnetname-transact-sql"></a>sp_setnetname(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_setnetname
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  컴퓨터 이름에 잘못된 식별자가 있는 경우 Windows 컴퓨터에 일부 원격 저장 프로시저를 호출하면 문제가 발생할 수 있습니다.  
   
  연결된 서버와 원격 서버는 같은 네임스페이스에 있으므로 이름이 같으면 안 됩니다. 그러나 정의할 수 있습니다 지정된 된 서버에 대해 원격 서버와 연결된 된 서버 이름을 다르게 지정 하 고 사용 하 여 **sp_setnetname** 둘 중의 네트워크 이름을 기본 서버의 네트워크 이름으로 설정 합니다.  

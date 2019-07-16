@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: acb4ff1637c1530527af88affaf437334596016b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094339"
 ---
 # <a name="sending-long-data"></a>Long 데이터 전송
 Dbms 정의할 *긴 데이터* 모든 문자 또는 이진 데이터 254 자 같은 특정 크기입니다. 메모리, 긴 텍스트 문서나 비트맵 항목이 나타내는 하는 경우에 긴 데이터의 전체 항목을 저장 하지 못할 수도 있습니다. 이러한 데이터는 단일 버퍼에 저장할 수 없으므로 데이터 원본으로 보냅니다 드라이버에 사용 하 여 파트 **SQLPutData** 문이 실행 되는 경우. 실행 시 데이터는 전송 하는 매개 변수 라고 *실행 시 데이터 매개 변수*합니다.  

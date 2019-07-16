@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c2f19ab1-e742-4d56-ba8e-8ffd40cf4925
 ms.author: vanto
 author: VanMSFT
-manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c235c23ac0be8dcaf6dc57dae14be9732f5c09f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7123c1bd3fee61a3d0671a0d8fbe27c2943ba7ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124846"
 ---
 # <a name="spdroprolemember-transact-sql"></a>sp_droprolemember(Transact-SQL)
 
@@ -61,7 +60,7 @@ sp_droprolemember 'role' ,
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_droprolemember는 sysmembers 테이블에서 행을 삭제 하 여 데이터베이스 역할에서 멤버를 제거 합니다. 역할에서 멤버를 제거하는 경우 이 멤버는 해당 역할의 멤버 자격을 통해 부여 받은 모든 사용 권한을 잃게 됩니다.  
   
  고정된 서버 역할에서 사용자를 제거할 sp_dropsrvrolemember를 사용 합니다. 사용자가 public 역할에서 제거할 수 없습니다 및 dbo 역할에서 제거할 수 없습니다.  

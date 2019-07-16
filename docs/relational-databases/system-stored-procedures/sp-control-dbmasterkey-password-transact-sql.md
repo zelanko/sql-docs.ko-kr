@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: af6e23ba3cce2ef4dfaa6901f51a9d6c0b034e60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0af97dacdf5927428042d8e67593a0c6ee78542d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108769"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  @action=N'drop'  
  지정된 데이터베이스에 대한 자격 증명이 자격 증명 저장소에서 삭제되도록 지정합니다. 전달 되는 값 @action 됩니다 **nvarchar**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 키 암호화 및 암호 해독을 위한 데이터베이스 마스터 키가 필요한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 인스턴스의 서비스 마스터 키로 데이터베이스 마스터 키의 암호를 해독하려고 시도합니다. 암호 해독에 실패하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 마스터 키가 필요한 데이터베이스와 패밀리 GUID가 동일한 마스터 키 자격 증명을 자격 증명 저장소에서 검색합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 암호 해독이 성공하거나 남은 자격 증명이 없을 때까지 일치하는 각 자격 증명을 사용하여 데이터베이스 마스터 키의 암호화를 해독하려고 시도합니다.  
   
 > [!CAUTION]  
@@ -75,14 +74,14 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  sp_control_dbmasterkey_password로 추가한 자격 증명을 사용하여 데이터베이스 마스터 키를 여는 경우 데이터베이스 마스터 키는 서비스 마스터 키에 의해 다시 암호화됩니다. 데이터베이스가 읽기 전용 모드인 경우 재암호화 작업이 실패하고 데이터베이스 마스터 키가 암호화되지 않은 상태로 남습니다. 이후에 데이터베이스 마스터 키에 액세스하려면 OPEN MASTER KEY 문과 암호를 사용해야 합니다. 암호를 사용하지 않아도 되도록 하려면 데이터베이스를 읽기 전용 모드로 전환하기 전에 자격 증명을 만들어야 합니다.  
   
- **이전 버전과 잠재적인 호환성 문제:** 현재 저장된 프로시저 확인 하지 않습니다 마스터 키가 있는지 여부를 합니다. 이전 버전과의 호환성을 위해 허용되지만 경고가 표시됩니다. 이 기능은 더 이상 지원되지 않습니다. 향후 릴리스에서 마스터 키가 있어야 하 고 저장된 프로시저에 사용 된 암호에 **sp_control_dbmasterkey_password** 데이터베이스 마스터 키를 암호화 하는 데 사용 된 암호 중 하 나와 동일한 암호 여야 합니다.  
+ **잠재적인 이전 버전과 호환성 문제:** 현재 저장된 프로시저는 마스터 키가 있는지을 확인 하지 않습니다. 이전 버전과의 호환성을 위해 허용되지만 경고가 표시됩니다. 이 기능은 더 이상 지원되지 않습니다. 향후 릴리스에서 마스터 키가 있어야 하 고 저장된 프로시저에 사용 된 암호에 **sp_control_dbmasterkey_password** 데이터베이스 마스터 키를 암호화 하는 데 사용 된 암호 중 하 나와 동일한 암호 여야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>1. AdventureWorks2012 마스터 키에 대한 자격 증명 만들기  
+### <a name="a-creating-a-credential-for-the-adventureworks2012-master-key"></a>A. AdventureWorks2012 마스터 키에 대한 자격 증명 만들기  
  다음 예에서는 `AdventureWorks2012` 데이터베이스 마스터 키에 대한 자격 증명을 만들고 마스터 키 암호를 자격 증명에 암호로 저장합니다. 때문에 전달 되는 모든 매개 변수 `sp_control_dbmasterkey_password` 데이터 형식 이어야 합니다 **nvarchar**, 캐스팅 연산자를 사용 하 여 텍스트 문자열을 변환할지 `N`합니다.  
   
 ```  
@@ -91,7 +90,7 @@ EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',
 GO  
 ```  
   
-### <a name="b-dropping-a-credential-for-a-database-master-key"></a>2. 데이터베이스 마스터 키에 대한 자격 증명 삭제  
+### <a name="b-dropping-a-credential-for-a-database-master-key"></a>2\. 데이터베이스 마스터 키에 대한 자격 증명 삭제  
  다음 예에서는 예 1에서 만든 자격 증명을 삭제합니다. 여기에는 암호를 포함한 모든 매개 변수가 필요합니다.  
   
 ```  

@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac637a677d7e7b6b8604ef9262fd1c17bc0c94ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2da3cb344573731c70839612381aeb07485850f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030236"
 ---
 # <a name="programming-specific-tasks"></a>프로그래밍 관련 태스크
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   SMO 개체를 사용하는 프로그래밍 관련 태스크에는 백업, 통계 모니터링, 복제, 인스턴스 개체 관리, 구성 옵션 설정 등 특정 기능이 있는 프로그램에만 필요한 복잡한 작업이 포함됩니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[SMO에서 연결된 서버 사용](../../../relational-databases/server-management-objects-smo/tasks/using-linked-servers-in-smo.md)|SMO가 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 개체를 사용하여 OLE-DB 서버에 연결하는 방법에 대해 설명합니다.|  
 |[SMO에서 SQL Server 구성](../../../relational-databases/server-management-objects-smo/tasks/configuring-sql-server-in-smo.md)|SMO에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 구성 설정을 보고 수정하는 방법에 대해 설명합니다.|  

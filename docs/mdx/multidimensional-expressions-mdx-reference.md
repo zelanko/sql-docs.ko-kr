@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: efed0e6e396e83ba13aa058639e47e37dd376dde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fce73abd82afe64c5ecc971e13ba161b880e6c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088411"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>MDX(Multidimensional Expressions) 참조
 
@@ -22,7 +21,7 @@ ms.locfileid: "63278016"
     
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[MDX 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|MDX 식, 문 및 스크립트에 대해 MDX 언어에서 사용할 수 있는 다양한 구문 요소를 설명합니다.|  
 |[MDX 언어 참조&#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|MDX 언어를 정의하는 문, 연산자 및 함수를 설명합니다.|  

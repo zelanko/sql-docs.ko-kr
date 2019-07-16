@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 17993952-def6-4a16-b1c1-323ec42967f8
 ms.author: vanto
 author: VanMSFT
-manager: jroth
-ms.openlocfilehash: 76871b93dc05f68f5678833c81ee7426e7f8f950
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a94c22c7f524572a4b629c27d49ad35a84c3b02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123807"
 ---
 # <a name="spgrantpublicationaccess-transact-sql"></a>sp_grant_publication_access(Transact-SQL)
 
@@ -48,7 +47,7 @@ sp_grant_publication_access [ @publication = ] 'publication', [ @login = ] 'logi
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_grant_publication_access** 스냅숏, 트랜잭션 및 병합 복제에 사용 됩니다.  
   
  이 저장 프로시저는 반복적으로 호출할 수 있습니다.  

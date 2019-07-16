@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af2441fadc30254871a5d74209d645fc93a99456
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2c1aaa12ed6ffb86b6e3f7979deac0e6f933dff8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124384"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +63,9 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  없음  
   
 ## <a name="result-sets"></a>결과 집합  
- 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (_카탈로그_**.** _스키마_**.** _테이블_)에 결과 집합에 표시 됩니다.  
+ 다양 한 DBMS 제품에서는 테이블에 대해 세 부분으로 이루어진 이름 (_카탈로그_ **.** _스키마_ **.** _테이블_)에 결과 집합에 표시 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**PKTABLE_CAT**|**sysname**|기본 키가 있는 테이블의 카탈로그입니다.|  
 |**PKTABLE_SCHEM**|**sysname**|기본 키가 있는 테이블의 스키마입니다.|  
@@ -85,7 +84,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
   
  결과 집합에서 FK_NAME 및 PK_NAME 열은 항상 NULL을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_foreignkeys** 의 FOREIGN_KEYS 행 집합을 쿼리 합니다 **IDBSchemaRowset** 에 해당 하는 OLE DB 공급자의 인터페이스 *table_server*합니다. 합니다 *table_name*를 *table_schema*를 *table_catalog*, 및 *열* 매개 변수는 행을 제한 하려면이 인터페이스에 전달 됩니다 반환 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

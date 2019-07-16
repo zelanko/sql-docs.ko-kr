@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: fabfac2d228be78efb2fc728d1b405ec7edce035
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085040"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 1.  하는 경우 **sp_help** 실행은 인수 없이 현재 데이터베이스에 존재 하는 모든 유형의 개체의 요약 정보가 반환 됩니다.  
   
-    |열 이름|데이터 형식|Description|  
+    |열 이름|데이터 형식|설명|  
     |-----------------|---------------|-----------------|  
     |**이름**|**nvarchar(** 128 **)**|개체 이름|  
     |**소유자**|**nvarchar(** 128 **)**|개체 소유자. 개체를 소유한 데이터베이스 보안 주체로, 기본적으로 개체가 포함된 스키마의 소유자로 설정됩니다.|  
@@ -61,7 +60,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 2.  경우 *이름을* 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 또는 사용자 정의 데이터 형식으로 **sp_help** 결과 집합을 반환 합니다.  
   
-    |열 이름|데이터 형식|Description|  
+    |열 이름|데이터 형식|설명|  
     |-----------------|---------------|-----------------|  
     |**Type_name**|**nvarchar(** 128 **)**|데이터 형식의 이름입니다.|  
     |**Storage_type**|**nvarchar(** 128 **)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식의 이름입니다.|  
@@ -77,7 +76,7 @@ sp_help [ [ @objname = ] 'name' ]
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-    |열 이름|데이터 형식|Description|  
+    |열 이름|데이터 형식|설명|  
     |-----------------|---------------|-----------------|  
     |**이름**|**nvarchar(** 128 **)**|테이블 이름|  
     |**소유자**|**nvarchar(** 128 **)**|테이블 소유자입니다.|  
@@ -90,7 +89,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   열 개체에 대해 반환되는 추가 결과 집합입니다.  
   
-        |열 이름|데이터 형식|Description|  
+        |열 이름|데이터 형식|설명|  
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|열 이름입니다.|  
         |**형식**|**nvarchar(** 128 **)**|열의 데이터 형식입니다.|  
@@ -105,7 +104,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   ID 열에 대해 반환되는 추가 결과 집합입니다.  
   
-        |열 이름|데이터 형식|Description|  
+        |열 이름|데이터 형식|설명|  
         |-----------------|---------------|-----------------|  
         |**ID**|**nvarchar(** 128 **)**|데이터 형식이 ID로 선언되는 열의 이름입니다.|  
         |**초기값**|**numeric**|ID 열의 시작 값입니다.|  
@@ -114,19 +113,19 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   열에 대해 반환된 추가 결과 집합입니다.  
   
-        |열 이름|데이터 형식|Description|  
+        |열 이름|데이터 형식|설명|  
         |-----------------|---------------|-----------------|  
         |**RowGuidCol**|**sysname**|GUID(Globally Unique Identifier) 열의 이름입니다.|  
   
     -   파일 그룹에 대해 반환되는 추가 결과 집합입니다.  
   
-        |열 이름|데이터 형식|Description|  
+        |열 이름|데이터 형식|설명|  
         |-----------------|---------------|-----------------|  
         |**Data_located_on_filegroup**|**nvarchar(** 128 **)**|데이터의 위치를 가리키는 파일 그룹: 기본, 보조 또는 트랜잭션 로그입니다.|  
   
     -   인덱스에 대해 반환되는 추가 결과 집합입니다.  
   
-        |열 이름|데이터 형식|Description|  
+        |열 이름|데이터 형식|설명|  
         |-----------------|---------------|-----------------|  
         |**index_name**|**sysname**|인덱스 이름입니다.|  
         |**Index_description**|**varchar(** 210 **)**|인덱스에 대한 설명입니다.|  
@@ -134,7 +133,7 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   제약 조건에 대해 반환되는 추가 결과 집합입니다.  
   
-        |열 이름|데이터 형식|Description|  
+        |열 이름|데이터 형식|설명|  
         |-----------------|---------------|-----------------|  
         |**constraint_type**|**nvarchar(** 146 **)**|제약 조건의 유형입니다.|  
         |**constraint_name**|**nvarchar(** 128 **)**|제약 조건의 이름입니다.|  
@@ -146,13 +145,13 @@ sp_help [ [ @objname = ] 'name' ]
   
     -   참조하는 개체에 대해 반환되는 추가 결과 집합입니다.  
   
-        |열 이름|데이터 형식|Description|  
+        |열 이름|데이터 형식|설명|  
         |-----------------|---------------|-----------------|  
         |**테이블에서 참조**|**nvarchar(** 516 **)**|테이블을 참조하는 다른 데이터베이스 개체를 식별합니다.|  
   
     -   저장 프로시저, 함수 또는 확장 저장 프로시저에 대해 반환되는 추가 결과 집합입니다.  
   
-        |열 이름|데이터 형식|Description|  
+        |열 이름|데이터 형식|설명|  
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar(** 128 **)**|저장 프로시저 매개 변수의 이름입니다.|  
         |**형식**|**nvarchar(** 128 **)**|저장 프로시저 매개 변수의 데이터 형식입니다.|  
@@ -161,7 +160,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**소수 자릿수**|**int**|소수점 오른쪽 자릿수입니다.|  
         |**Param_order**|**smallint**|매개 변수의 순서입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **sp_help** 프로시저에서 현재 데이터베이스 에서만 개체를 찾습니다.  
   
  때 *이름을* 지정 하지 않으면 **sp_help** 개체 이름, 소유자 및 현재 데이터베이스의 모든 개체에 대 한 개체 형식입니다. **sp_helptrigger** 트리거에 대 한 정보를 제공 합니다.  
@@ -173,7 +172,7 @@ sp_help [ [ @objname = ] 'name' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-information-about-all-objects"></a>1\. 모든 개체에 대한 정보 반환  
+### <a name="a-returning-information-about-all-objects"></a>A. 모든 개체에 대한 정보 반환  
  다음 예에서는 `master` 데이터베이스의 각 개체에 대한 정보를 나열합니다.  
   
 ```  

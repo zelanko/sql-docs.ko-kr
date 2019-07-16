@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 05ef20ebb3458e32cda4cc1f0bbe9a924ed8e422
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e9edc319a539d438cdb7eb126694812d9084d24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63281695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084618"
 ---
 # <a name="new-project-db2tosql"></a>새 프로젝트 (DB2ToSQL)
 사용 된 **새 프로젝트** 대화 상자의 새 SSMA 프로젝트를 만듭니다. 액세스 하는 **새 프로젝트** 대화 상자의 합니다 **파일** 메뉴에서 클릭 **새 프로젝트**.  
@@ -24,7 +23,7 @@ ms.locfileid: "63281695"
 **이름**  
 프로젝트의 이름을 입력 합니다. SSMA는 파일 확장명이 추가 됩니다.  
   
-**위치**  
+**Location**:  
 입력 하거나 폴더 또는 프로젝트를 저장할 네트워크 위치를 찾습니다.  
   
 **로 마이그레이션**  

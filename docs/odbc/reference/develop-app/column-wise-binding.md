@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f91dca1ac20173f9c10b4a52adf292e7abc45d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083379"
 ---
 # <a name="column-wise-binding"></a>열 단위 바인딩
 열 단위 바인딩을 사용 하는 경우 응용 프로그램, 세 개의 배열에 하나 또는 두 개 또는 일부 경우에는 반환 될 데이터는 각 열에 바인딩합니다. 첫 번째 배열을 데이터 값을 보유 하 고 두 번째 배열 길이/표시기 버퍼 저장 키를 누릅니다. 표시기 및 길이 값은 SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 설명자 필드를 다른 값을 설정 하 여 별도 버퍼에 저장할 있습니다. 이 작업을 세 번째 배열 바인딩되어 있습니다. 각 배열에는 행 집합의 행이 있는 만큼의 요소가 포함 됩니다.  

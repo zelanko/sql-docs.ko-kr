@@ -8,15 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8ab2b355c551b868cec3ee4329460f8bb0532236
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 17f1233310ce8b070e12fbf25dca0e256ff34664
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37972669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070745"
 ---
-# <a name="divide-dmx"></a>(나누기) (DMX)
+# <a name="divide-dmx"></a>(나누기)(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   한 수를 다른 수로 나누는 산술 연산을 수행합니다.  
@@ -38,7 +37,7 @@ Dividend / Divisor
 ## <a name="return-value"></a>반환 값  
  우선 순위가 더 높은 매개 변수의 데이터 형식을 갖는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 연산자가 반환하는 값은 첫 번째 식을 두 번째 식으로 나누어 나온 몫입니다.  
   
  두 식이 모두 동일한 데이터 형식으로 되어 있거나 식 하나가 암시적으로 다른 식의 데이터 형식으로 변환될 수 있어야 합니다. Divisor가 Null 값으로 계산되는 경우에는 오류가 발생합니다. Divisor와 Dividend가 모두 Null 값으로 계산되는 경우 연산자는 Null 값을 반환합니다.  
