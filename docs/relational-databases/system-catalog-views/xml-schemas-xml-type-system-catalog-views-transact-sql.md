@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 51f90fd71649debd199702c6f78a918c9db9279d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6aeedf7820309c7dfbb3e715eedfd6c9d7f67701
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929773"
 ---
 # <a name="xml-schemas-xml-type-system-catalog-views-transact-sql"></a>XML 스키마(XML 유형 시스템) 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

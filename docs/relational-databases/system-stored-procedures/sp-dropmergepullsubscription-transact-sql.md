@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f15e5104c03e271b72f6b61dc40077aabdea4e76
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ab2cda06971e56a8c15e2fb7382977a36fe7a34a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933883"
 ---
 # <a name="spdropmergepullsubscription-transact-sql"></a>sp_dropmergepullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_dropmergepullsubscription** 병합 복제에 사용 됩니다.  
   
  **sp_dropmergepullsubscription** 병합 에이전트에서 생성 되지 않습니다 하지만 해당 병합 끌어오기 구독에 대 한 병합 에이전트를 삭제 **sp_addmergepullsubscription**합니다.  

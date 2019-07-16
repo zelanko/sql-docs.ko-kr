@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f9f84131307282b00fd99c1d5770ac352e31713
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024080"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209068"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>데이터 원본에 시간이 아닌 테이블을 생성하여 차원 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34024080"
   
 -   Customer  
   
--   날짜  
+-   Date  
   
 -   Department  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34024080"
   
  **변경 차원임** 확인란을 선택한 경우 차원 마법사에서 다음 표에 표시된 특성을 정의합니다.  
   
-|Attribute|형식|  
+|attribute|type|  
 |---------------|----------|  
 |SCD 원래 ID|SCDOriginalID|  
 |SCD 종료 날짜|SCDEndDate|  
@@ -98,8 +98,8 @@ ms.locfileid: "34024080"
 ## <a name="completing-the-dimension-wizard"></a>차원 마법사 완료  
  **마법사 완료** 페이지에서 새 차원의 이름을 입력하고 차원 구조를 확인합니다. **마침** 을 클릭한 후 스키마 생성 마법사를 시작하려면 **지금 스키마 생성**확인란을 선택합니다. 대부분의 경우 추가 개체를 만들려면 이 확인란을 선택하지 않아야 합니다. 이 확인란을 선택하지 않을 경우 나중에 차원 디자이너를 사용하여 스키마를 생성할 수 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [시간 테이블을 생성 하 여 시간 차원 만들기](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
- [시간 테이블을 생성 하 여 시간 차원 만들기](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
+## <a name="see-also"></a>관련 항목  
+ [시간 테이블을 생성하여 시간 차원 만들기](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)   
+ [시간 테이블을 생성하여 시간 차원 만들기](../../analysis-services/multidimensional-models/create-a-time-dimension-by-generating-a-time-table.md)  
   
   

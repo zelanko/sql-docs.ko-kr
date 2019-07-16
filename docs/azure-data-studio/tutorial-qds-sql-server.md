@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 10795ae2e1836e018e103a51cb7bea718ec9299f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c94d2cf8b80ad7724cc1f710dc67d3f4a13c59e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959063"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>자습서: 추가 된 *느린 쿼리 5* 데이터베이스 대시보드 위젯의 샘플
 

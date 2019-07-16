@@ -1,5 +1,5 @@
 ---
-title: (Analysis Services) 기본적으로 해제 기능 | Microsoft Docs
+title: (Analysis Services)를 기본적으로 해제 기능 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3238e09bea0ef150dde01c78ef5d2c802c1c1853
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016240"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209501"
 ---
 # <a name="features-off-by-default-analysis-services"></a>기본적으로 해제되어 있는 기능(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

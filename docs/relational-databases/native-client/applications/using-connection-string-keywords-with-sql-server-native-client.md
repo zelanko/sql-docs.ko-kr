@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 16008eec-eddf-4d10-ae99-29db26ed6372
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26400946d2ea9e656a659bf9d3a761fa0e5e8f74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7d5bd6584316ceb1da4462ab2459781b1cf1e32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069191"
 ---
 # <a name="using-connection-string-keywords-with-sql-server-native-client"></a>SQL Server Native Client에서 연결 문자열 키워드 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

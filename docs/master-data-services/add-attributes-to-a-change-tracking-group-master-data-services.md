@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e153eb5f-70ca-4c6f-89d8-1f937ed3917d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 335bdd657c0aa2f687d89f31dfcdd45d757e0cbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3ba92322f64550f8a773b49ba533e96e113e17f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047891"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>변경 내용 추적 그룹에 특성 추가(Master Data Services)
 

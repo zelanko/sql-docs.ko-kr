@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 344956b349e51a448a768988ff5062bfbc532562
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afee71d4f37e2b3a27247fbeacf51dab66cc1e23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933280"
 ---
 # <a name="cursorlocation-property-ado"></a>CursorLocation 속성(ADO)
 커서 서비스의 위치를 나타냅니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66698430"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환을 **긴** 중 하나로 설정할 수 있는 값을 [CursorLocationEnum](../../../ado/reference/ado-api/cursorlocationenum.md) 값.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 속성을 사용 하면 공급자에 액세스할 수 있는 다양 한 커서 라이브러리를 선택할 수 있습니다. 일반적으로 클라이언트 쪽 커서 라이브러리 또는 있는 하나를 사용 하 여 서버에서 선택할 수 있습니다.  
   
  이 속성 설정 속성을 설정한 후에 설정 하는 연결을 영향을 줍니다. 변경 된 **CursorLocation** 속성이 기존 연결에 영향을 주지 않습니다.  

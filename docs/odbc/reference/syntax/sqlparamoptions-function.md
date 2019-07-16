@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 631e022e9c424344053153647fcf292c1c3f90db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40b3f876993d8c7c334594f11b87cc5d2ed8ff0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947944"
 ---
 # <a name="sqlparamoptions-function"></a>SQLParamOptions 함수
 **규칙**  
@@ -37,7 +36,7 @@ ms.locfileid: "62465328"
 > [!NOTE]  
 >  자세한 내용은 관리자에 대 한 어떤를 드라이버에 대 한 경우는 ODBC 2이이 함수를를 매핑합니다. *x* 응용 프로그램이 작동을 ODBC 3. *x* 드라이버를 참조 하세요 [사용 되지 않는 함수 매핑](../../../odbc/reference/appendixes/mapping-deprecated-functions.md) 부록 g:에서 이전 버전과 호환성에 대 한 드라이버 지침입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  참조 [ODBC 64-Bit 정보](../../../odbc/reference/odbc-64-bit-information.md)이면 응용 프로그램을 64 비트 운영 체제에서 실행 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

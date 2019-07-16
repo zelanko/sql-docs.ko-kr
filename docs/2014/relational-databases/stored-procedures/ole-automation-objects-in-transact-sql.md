@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 06913c27af89657aef5a0a5397cd77a1ee025299
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48075803"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211850"
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Transact-SQL의 OLE 자동화 개체
   [!INCLUDE[tsql](../../includes/tsql-md.md)] 에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리, 저장 프로시저 및 트리거를 통해 OLE 자동화 개체를 참조할 수 있도록 하는 몇 가지 시스템 저장 프로시저가 포함됩니다. 이러한 시스템 저장 프로시저는 확장 저장 프로시저처럼 실행되며 저장 프로시저를 통해 실행되는 OLE 자동화 개체는 확장 저장 프로시저와 같은 방식으로 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스의 주소 공간에서 실행됩니다.  
@@ -31,13 +31,13 @@ ms.locfileid: "48075803"
   
  개체의 인스턴스가 생성된 후에는 다음과 같은 저장 프로시저를 호출하여 개체의 속성, 메서드 및 개체 관련 오류 정보에 대한 작업을 수행합니다.  
   
--   속성 값을 가져오는**sp_OAGetProperty**   
+-   속성 값을 가져오는**sp_OAGetProperty**  
   
--   속성 값을 설정하는**sp_OASetProperty**   
+-   속성 값을 설정하는**sp_OASetProperty**  
   
--   메서드를 호출하는**sp_OAMethod**   
+-   메서드를 호출하는**sp_OAMethod**  
   
--   최신 오류 정보를 가져오는**sp_OAGetErrorInfo**   
+-   최신 오류 정보를 가져오는**sp_OAGetErrorInfo**  
   
  개체가 더 이상 필요하지 않을 때는 **sp_OADestroy** 를 호출하여 **sp_OACreate**로 생성된 개체의 인스턴스를 할당 취소합니다.  
   

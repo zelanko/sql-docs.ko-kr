@@ -13,17 +13,16 @@ helpviewer_keywords:
 ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8e9d28588237030c45bd352994ac77d511db139e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ab30ca777997a8d7dff819c3c797cae740922ca4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913537"
 ---
 # <a name="accessing-the-current-transaction"></a>현재 트랜잭션 액세스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  트랜잭션 시점에서 실행 되는 공용 언어 런타임 (CLR) 코드에 활성 상태 이면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 입력 트랜잭션을 통해 노출 되는 **System.Transactions.Transaction** 클래스입니다. **Transaction.Current** 속성은 현재 트랜잭션에 액세스하는 데 사용됩니다. 대부분의 경우 트랜잭션에 명시적으로 액세스할 필요가 없습니다. 데이터베이스 연결의 경우 ADO.NET에서는 **Transaction.Current** 메서드를 호출할 때 **Connection.Open** 를 자동으로 검사하고 연결 문자열에서 **Enlist** 키워드가 false로 설정되지 않은 경우 연결을 트랜잭션에 투명하게 참여시킵니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 실행되는 CLR(공용 언어 런타임) 코드를 입력하는 시점에 트랜잭션이 활성 상태인 경우 트랜잭션은 **System.Transactions.Transaction** 클래스를 통해 표시됩니다. **Transaction.Current** 속성은 현재 트랜잭션에 액세스하는 데 사용됩니다. 대부분의 경우 트랜잭션에 명시적으로 액세스할 필요가 없습니다. 데이터베이스 연결의 경우 ADO.NET에서는 **Transaction.Current** 메서드를 호출할 때 **Connection.Open** 를 자동으로 검사하고 연결 문자열에서 **Enlist** 키워드가 false로 설정되지 않은 경우 연결을 트랜잭션에 투명하게 참여시킵니다.  
   
  다음 시나리오에서는 **Transaction** 개체를 직접 사용할 수 있습니다.  
   

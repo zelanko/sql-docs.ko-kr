@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ef2e02ec156aeed69089a585d743e16e592eb95f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e632db34fbbacbee61cd943067052af27a8cfe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938675"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord 및 RecordChangeComplete 이벤트(ADO)
 합니다 **WillChangeRecord** 이벤트에서 하나 이상의 레코드 (행) 하기 전에 호출 되는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 변경 합니다. 합니다 **RecordChangeComplete** 후 이벤트를 호출 하거나 더 많은 레코드를 변경 합니다.  
@@ -61,7 +60,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
  *pRecordset*  
  A **레코드 집합** 개체입니다. 합니다 **레코드 집합** 이 이벤트가 발생 한입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  A **WillChangeRecord** 하거나 **RecordChangeComplete** 다음으로 인해 행의 변경된 된 첫 번째 필드에 대 한 이벤트가 발생할 수 있습니다 **Recordset** 작업: [업데이트](../../../ado/reference/ado-api/update-method.md), [삭제할](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)를 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)를 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), 및 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md). 값을 **레코드 집합** [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) 작업 발생할 이벤트를 결정 합니다.  
   
  중 합니다 **WillChangeRecord** 이벤트를 **레코드 집합** [필터](../../../ado/reference/ado-api/filter-property.md) 속성이로 설정 되어 **adFilterAffectedRecords**합니다. 이벤트를 처리 하는 동안이 속성을 변경할 수 없습니다.  

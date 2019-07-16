@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: eaf6f4e7-2ea0-49a3-89ee-e219e025257c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cc95d911207fb6c69caa90f893e6d073207c53ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e864d225ade97737ab0471a5b6a19fb66d875857
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949770"
 ---
 # <a name="dimensions-collection-ado-md"></a>Dimensions 컬렉션(ADO MD)
 포함 된 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) 큐브를 구성 하는 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **차원** 은 표준 ADO 컬렉션입니다. 속성 및 컬렉션의 메서드를 사용 하 여 다음을 수행할 수 있습니다.  
   
 -   사용 하 여 컬렉션에서 개체의 번호를 가져올는 [개수](../../../ado/reference/ado-api/count-property-ado.md) 속성입니다.  

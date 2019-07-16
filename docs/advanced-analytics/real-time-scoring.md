@@ -7,13 +7,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 22f6c48aec0c9434b17ceda0a2b729f6e63bf136
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: cccbae1e1957baedaba665e68a3a058db69f4885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962371"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>SQL Server machine learning에서 sp_rxPredict으로 실시간 점수 매기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -22,7 +21,7 @@ ms.locfileid: "58645475"
 
 ## <a name="how-real-time-scoring-works"></a>실시간 점수 매기기 작업
 
-같은 RevoScaleR 또는 MicrosoftML 함수에 따라 특정 모델 유형에 대해 SQL Server 2017 및 SQL Server 2016에서 지원 되는 실시간 점수 매기기 [(RevoScaleR) rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). 네이티브 c + + 라이브러리를 사용 하 여 기계 학습 모델을 특수 이진 형식으로 저장을 위해 제공 하는 사용자 입력을 기반으로 점수를 생성 합니다.
+같은 RevoScaleR 또는 MicrosoftML 함수에 따라 특정 모델 유형에 대해 SQL Server 2017 및 SQL Server 2016에서 지원 되는 실시간 점수 매기기 [(RevoScaleR) rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). 기본 사용 하 여 C++ 특수 이진 형식으로 저장 된 모델을 학습 하는 컴퓨터에 제공 하는 사용자 입력을 기반으로 점수를 생성 하는 라이브러리입니다.
 
 외부 언어 런타임을 호출 하지 않고도 점수를 매기기 위해 학습 된 모델을를 사용할 수 있으므로 여러 프로세스의 오버 헤드가 줄었습니다. 이 시나리오를 평가 하는 프로덕션에 대 한 훨씬 더 빠른 예측 성능을 지원 합니다. 데이터를 SQL 서버를 벗어나지, 때문에 결과 생성 하 고 R과 SQL 간 데이터 변환 하지 않고도 새 테이블에 삽입할 수 있습니다.
 

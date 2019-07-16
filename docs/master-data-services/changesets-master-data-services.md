@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f6c6662cf12eaae7f43dc4041598cf9711eca128
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5136be23e428e670e5f6928944203c446c120ba1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913647"
 ---
 # <a name="changesets-master-data-services"></a>변경 집합(Master Data Services)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65487392"
   
      다음 워크플로를 따릅니다.  
   
-    1.  변경 집합을 만듭니다. 변경 집합은 열림 상태입니다.  [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
+    1.  변경 집합을 만듭니다. 변경 집합은 열림 상태입니다. [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
     2.  변경 집합을 적용하고 일부 변경 내용을 변경 집합에 추가합니다. [변경 집합 적용 및 업데이트&#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)를 참조하세요.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "65487392"
   
      다음 워크플로를 따릅니다.  
   
-    1.  변경 집합을 만듭니다. 변경 집합은 열림 상태입니다.  [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
+    1.  변경 집합을 만듭니다. 변경 집합은 열림 상태입니다. [Create a Changeset &#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)  
   
     2.  변경 집합을 적용하고 일부 변경 내용을 변경 집합에 추가합니다. [변경 집합 적용 및 업데이트&#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)를 참조하세요.  
   

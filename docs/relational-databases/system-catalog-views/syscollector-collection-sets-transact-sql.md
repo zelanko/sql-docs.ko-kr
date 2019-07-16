@@ -18,24 +18,23 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dcc027ad80d4bbe1142a9e17add52f8a42d7d404
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060379"
 ---
 # <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   일정, 컬렉션 모드 및 해당 상태를 포함한 컬렉션 집합에 대한 정보를 제공합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|컬렉션 집합의 로컬 식별자입니다. Null을 허용하지 않습니다.|  
 |collection_set_uid|**uniqueidentifier**|컬렉션 집합의 전역 고유 식별자입니다. Null을 허용하지 않습니다.|  
-|NAME|**nvarchar(4000)**|컬렉션 집합의 이름입니다. Null을 허용합니다.|  
+|name|**nvarchar(4000)**|컬렉션 집합의 이름입니다. Null을 허용합니다.|  
 |target|**nvarchar(max)**|컬렉션 집합의 대상을 식별합니다. Null을 허용합니다.|  
 |is_system|**bit**|설정(1) 또는 해제(0)하여 컬렉션 집합이 데이터 수집기에 포함되는지, 아니면 dc_admin에 의해 나중에 추가되는지를 나타냅니다. 이는 자체적으로 또는 타사에서 개발한 사용자 지정 컬렉션 집합이 될 수 있습니다. Null을 허용하지 않습니다.|  
 |is_running|**bit**|컬렉션 집합이 실행 중인지 여부를 나타냅니다. Null을 허용하지 않습니다.|  
@@ -53,7 +52,7 @@ ms.locfileid: "62760195"
 ## <a name="permissions"></a>사용 권한  
  dc_operator, dc_proxy에 대한 SELECT가 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터 수집기 API를 통해 사용자는 자신이 만든 컬렉션 집합만 변경 또는 삭제할 수 있습니다. 시스템에서 제공되는 컬렉션 집합은 수정 또는 삭제할 수 없지만 시스템 컬렉션 집합을 사용하거나 사용하지 않도록 설정하고 해당 구성을 변경할 수는 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  

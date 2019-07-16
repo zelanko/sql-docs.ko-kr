@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 18c4b6448438ebb8c95f999569d51edfecf04206
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375828"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211582"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자에 WQL 사용
   관리 응용 프로그램은 서버 이벤트용 WMI 공급자를 통해 WQL(WMI Query Language) 문을 실행하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트에 액세스합니다. WQL은 몇 가지 WMI 관련 확장 기능이 포함된 SQL(구조적 쿼리 언어)의 단순화된 일부입니다. WQL을 사용할 경우 응용 프로그램은 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스, 데이터베이스 또는 데이터베이스 개체(현재 지원되는 유일한 개체는 큐임)에 대해 이벤트 유형을 검색합니다. 쿼리 또는 데이터베이스 범위 또는 개체 범위 이벤트 알림에 대 한 대상 데이터베이스에서 만든 이벤트 알림을를 변환 하는 서버 이벤트 용 WMI 공급자를 **마스터** 서버 범위 이벤트에 대 한 데이터베이스 알림입니다.  
@@ -82,7 +82,7 @@ WHERE where_condition
   
  `=` 피연산자만 `DatabaseName`, `SchemaName` 및 `ObjectName`과 함께 사용할 수 있습니다. 다른 식은 이러한 이벤트 속성과 함께 사용할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 *where_condition* 서버 이벤트 용 WMI 공급자의 구문은 다음을 결정 합니다.  
   
 -   지정 된 검색할 공급자가는 범위 *event_type*: 서버 수준, 데이터베이스 수준 또는 개체 수준 (현재 지원 되는 유일한 개체는 큐). 궁극적으로 이 범위는 대상 데이터베이스에 생성되는 이벤트 알림 유형을 결정합니다. 이 프로세스를 이벤트 알림 등록이라고 합니다.  
@@ -91,7 +91,7 @@ WHERE where_condition
   
  서버 이벤트용 WMI 공급자는 아래에서 위로, 첫 번째 일치 알고리즘을 사용하여 기본 EVENT NOTIFICATION에 대한 가능한 가장 좁은 범위를 생성합니다. 이 알고리즘은 서버의 내부 활동과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 WMI 호스트 프로세스 인스턴스 간의 네트워크 트래픽을 최소화합니다. 공급자를 검사 합니다 *event_type* FROM 절 및 WHERE 절에 조건을 지정 하 고 가능한 가장 좁은 범위로 기본 EVENT NOTIFICATION을 등록 하려고 합니다. 공급자는 가장 좁은 범위를 등록할 수 없는 경우 등록에 성공할 때까지 연속적으로 더 높은 범위에 등록을 시도합니다. 가장 높은 범위인 서버 수준에 도달했지만 실패하는 경우 소비자에게 오류를 반환합니다.  
   
- 예를 들어 경우 DatabaseName =**'** AdventureWorks **'** WHERE 절에서 공급자의 이벤트 알림을 등록 하려고 하는 지정 된 된 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스입니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스가 있고 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에 이벤트 알림을 만드는 데 필요한 권한이 호출 클라이언트에 있으면 등록이 성공합니다. 그렇지 않으면 서버 수준에서 이벤트 알림이 등록됩니다. WMI 클라이언트에 필요한 사용 권한이 있으면 등록이 성공합니다. 하지만 이 시나리오에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 만들 때까지 이벤트가 클라이언트에 반환되지 않습니다.  
+ 예를 들어 경우 DatabaseName = **'** AdventureWorks **'** WHERE 절에서 공급자의 이벤트 알림을 등록 하려고 하는 지정 된 된 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스입니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스가 있고 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]에 이벤트 알림을 만드는 데 필요한 권한이 호출 클라이언트에 있으면 등록이 성공합니다. 그렇지 않으면 서버 수준에서 이벤트 알림이 등록됩니다. WMI 클라이언트에 필요한 사용 권한이 있으면 등록이 성공합니다. 하지만 이 시나리오에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 만들 때까지 이벤트가 클라이언트에 반환되지 않습니다.  
   
  합니다 *where_condition* 특정 데이터베이스, 스키마 또는 개체에 대 한 쿼리를 추가로 제한 하는 필터 역할도 할 수 있습니다. 예를 들어 다음 WQL 쿼리를 살펴보십시오.  
   
@@ -115,14 +115,14 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-querying-for-events-at-the-server-scope"></a>1. 서버 범위에서 이벤트 쿼리  
- 다음 WQL 쿼리는 `SERVER_MEMORY_CHANGE` 인스턴스에서 발생하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적 이벤트의 모든 이벤트 속성을 검색합니다.  
+### <a name="a-querying-for-events-at-the-server-scope"></a>A. 서버 범위에서 이벤트 쿼리  
+ 다음 WQL 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 발생하는 `SERVER_MEMORY_CHANGE` 추적 이벤트의 모든 이벤트 속성을 검색합니다.  
   
 ```  
 SELECT * FROM SERVER_MEMORY_CHANGE  
 ```  
   
-### <a name="b-querying-for-events-at-the-database-scope"></a>2. 데이터베이스 범위에서 이벤트 쿼리  
+### <a name="b-querying-for-events-at-the-database-scope"></a>2\. 데이터베이스 범위에서 이벤트 쿼리  
  다음 WQL 쿼리는 `AdventureWorks` 데이터베이스에서 발생하고 `DDL_DATABASE_LEVEL_EVENTS` 이벤트 그룹에 속한 이벤트의 특정 이벤트 속성을 검색합니다.  
   
 ```  
@@ -130,7 +130,7 @@ SELECT SPID, SQLInstance, DatabaseName FROM DDL_DATABASE_LEVEL_EVENTS
 WHERE DatabaseName = 'AdventureWorks'   
 ```  
   
-### <a name="c-querying-for-events-at-the-database-scope-filtering-by-schema-and-object"></a>3. 스키마 및 개체로 필터링하여 데이터베이스 범위에서 이벤트 쿼리  
+### <a name="c-querying-for-events-at-the-database-scope-filtering-by-schema-and-object"></a>3\. 스키마 및 개체로 필터링하여 데이터베이스 범위에서 이벤트 쿼리  
  다음 쿼리는 `ALTER_TABLE` 테이블에서 발생하는 `AdventureWorks.Sales.SalesOrderDetail` 이벤트의 모든 이벤트 속성을 검색합니다.  
   
 ```  
@@ -139,7 +139,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
     AND ObjectType='Table' AND ObjectName = 'SalesOrderDetail'  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [용 WMI 공급자 서버 이벤트 개념](https://technet.microsoft.com/library/ms180560.aspx)   
  [이벤트 알림 (데이터베이스 엔진)](https://technet.microsoft.com/library/ms182602.aspx)  
   

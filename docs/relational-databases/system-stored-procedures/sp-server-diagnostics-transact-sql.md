@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 30ea7fba212cc99b8d6d7e58397d29731048c6f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056302"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ## <a name="result-sets"></a>결과 집합  
 **sp_server_diagnostics** 다음 정보를 반환 합니다.  
   
-|Column|데이터 형식|Description|  
+|Column|데이터 형식|설명|  
 |------------|---------------|-----------------|  
 |**creation_time**|**datetime**|행 만들기의 타임스탬프를 나타냅니다. 단일 행 집합의 각 행은 타임스탬프가 같습니다.|  
 |**component_type**|**sysname**|행에 대 한 정보를 포함 하는지 여부를 나타냅니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 수준 구성 요소 또는 Always On 가용성 그룹에 대 한 합니다.<br /><br /> instance<br /><br /> Always On: AvailabilityGroup|  
@@ -68,19 +67,19 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
  다음은 다섯 가지 구성 요소에 대한 설명입니다.  
   
--   **system**: 시스템 큐브 뷰에서 spinlock, 엄격한 처리 조건, 잠겨 있는 태스크, 페이지 폴트 및 CPU 사용에 대한 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
+-   **system**: Spinlock, 엄격한 처리 조건, 잠겨 있는 태스크, 페이지 폴트 및 CPU 사용량에 시스템의 관점에서 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
   
--   **resource**:  리소스 큐브 뷰에서 실제 및 가상 메모리, 버퍼 풀, 페이지, 캐시 및 기타 메모리 개체에 대한 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
+-   **resource**:  실제 및 가상 메모리를 버퍼 풀, 페이지, 캐시 및 기타 메모리 개체에서 리소스의 관점에서 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
   
--   **query_processing**: 쿼리 처리 큐브 뷰에서 작업자 스레드, 태스크, 잠겨 있는 태스크, 대기 유형, CPU 사용량이 많은 세션 및 차단 태스크에 대한 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
+-   **query_processing**: 작업자 스레드, 태스크, 대기 유형, CPU 사용량이 많은 세션 및 차단 작업에서 쿼리 처리 관점에서 데이터를 수집합니다. 이 정보는 전반적인 상태 권장 사항을 생성합니다.  
   
--   **io_subsystem**: IO에 대한 데이터를 수집합니다. 이 구성 요소는 진단 데이터와 함께 IO 하위 시스템에 대한 정상 상태 또는 경고 상태만 생성합니다.  
+-   **io_subsystem**: IO 시 데이터를 수집합니다. 이 구성 요소는 진단 데이터와 함께 IO 하위 시스템에 대한 정상 상태 또는 경고 상태만 생성합니다.  
   
 -   **이벤트**: 오류 및 링 버퍼 예외, 메모리, 스케줄러 모니터, 버퍼 풀, spinlock에서 메모리 브로커에 대 한 링 버퍼 이벤트에 대 한 세부 정보를 포함 하 여 서버에 의해 기록 된 이벤트 데이터 및 저장된 프로시저를 통해 화면 수집 보안 및 연결 합니다. 이벤트는 항상 상태로 0을 표시합니다.  
   
--   **\<가용성 그룹의 이름 >**: 지정된 된 가용성 그룹에 대 한 데이터 수집 (경우 component_type = "항상에서: AvailabilityGroup").  
+-   **\<가용성 그룹의 이름 >** : 지정된 된 가용성 그룹에 대 한 데이터 수집 (경우 component_type = "항상에서: AvailabilityGroup").  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 오류 큐브 뷰에서 시스템, 리소스 및 쿼리 처리 구성 요소는 오류 감지에 활용되고, IO 하위 시스템 및 이벤트 구성 요소는 진단용으로만 활용됩니다.  
   
 다음 표에서는 각 구성 요소와 관련 상태를 보여 줍니다.  

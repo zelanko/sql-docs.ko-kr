@@ -18,11 +18,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131813"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196431"
 ---
 # <a name="create-indexed-views"></a>인덱싱된 뷰 만들기
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 인덱싱된 뷰를 만드는 방법에 대해 설명합니다. 뷰에 만들어지는 첫 번째 인덱스는 고유 클러스터형 인덱스여야 합니다. 고유 클러스터형 인덱스가 만들어진 후에 비클러스터형 인덱스를 더 만들 수 있습니다. 뷰에 고유 클러스터형 인덱스를 만들면 클러스터형 인덱스가 있는 테이블의 저장 방식과 마찬가지로 데이터베이스에 뷰가 저장되므로 쿼리 성능이 향상됩니다. 쿼리 최적화 프로그램은 인덱싱된 뷰를 사용하여 쿼리 실행 속도를 높일 수 있습니다. 최적화 프로그램이 인덱싱된 뷰를 대신 사용하므로 쿼리에서 해당 뷰를 참조할 필요가 없습니다.  
@@ -86,11 +86,11 @@ ms.locfileid: "54131813"
   
 -   인덱스를 만들 때 IGNORE_DUP_KEY 옵션은 OFF(기본 설정)로 설정되어야 합니다.  
   
--   테이블은 뷰 정의에서 _schema_**.**_tablename_ 처럼 두 부분으로 구성된 이름으로 참조되어야 합니다.  
+-   테이블은 뷰 정의에서 _schema_ **.** _tablename_ 처럼 두 부분으로 구성된 이름으로 참조되어야 합니다.  
   
 -   뷰에서 참조하는 사용자 정의 함수는 WITH SCHEMABINDING 옵션을 사용하여 만들어야 합니다.  
   
--   뷰에서 참조하는 사용자 정의 함수는 두 부분으로 구성된 이름 _schema_**.**_function_으로 참조되어야 합니다.  
+-   뷰에서 참조하는 사용자 정의 함수는 두 부분으로 구성된 이름 _schema_ **.** _function_으로 참조되어야 합니다.  
   
 -   사용자 정의 함수의 데이터 액세스 속성은 NO SQL이어야 하고 외부 액세스 속성은 NO여야 합니다.  
   
