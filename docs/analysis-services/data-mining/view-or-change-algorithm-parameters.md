@@ -1,5 +1,5 @@
 ---
-title: 보기 또는 변경 알고리즘 매개 변수 | Microsoft Docs
+title: 뷰 또는 알고리즘 매개 변수를 변경 | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58b512d726d45a8ceabb76a4ce2b1e6c8c62815b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209565"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>알고리즘 매개 변수 확인 또는 변경
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34018220"
   
 -   모델 생성에 사용되는 내부 홀드아웃 집합의 크기 또는 초기값을 지정합니다.  
   
- 각 알고리즘마다 제공되는 매개 변수는 크게 다릅니다. 각 알고리즘에 대해 설정할 수 있는 매개 변수 목록은 이 섹션의 기술 참조 항목 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요.  
+ 각 알고리즘 마다 제공 되는 매개 변수는 매우 다양 합니다. 각 알고리즘에 대해 설정할 수 있는 매개 변수 목록은이 섹션의 기술 참조 항목을 참조: [데이터 마이닝 알고리즘 &#40;Analysis Services-데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)합니다.  
   
 ### <a name="change-an-algorithm-parameter"></a>알고리즘 매개 변수 변경  
   
@@ -61,7 +61,7 @@ ms.locfileid: "34018220"
   
     ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 태스크 및 방법](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 572644cf673c70000cee7de77f2bca9199f19675
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780775"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211092"
 ---
 # <a name="profiler-utility"></a>프로파일러 유틸리티
   **profiler** 유틸리티는 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 도구를 실행합니다. 이 항목에서 나중에 나열된 옵션 인수를 사용하여 애플리케이션 시작 방법을 제어할 수 있습니다.  
@@ -69,10 +69,10 @@ ms.locfileid: "52780775"
  현재 사용자의 자격 증명으로 Windows 인증을 사용하는 연결을 지정합니다.  
   
  **/S**  *sql_server_name*  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 지정합니다. 프로파일러는 지정된 **/U** 및 **/P** 스위치 또는 **/E** 스위치에서 지정된 인증 정보를 사용하여 지정된 서버에 자동으로 연결합니다.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 **/S** *sql_server_name*\\*instance_name*을 사용합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스를 지정합니다. 프로파일러는 지정된 **/U** 및 **/P** 스위치 또는 **/E** 스위치에서 지정된 인증 정보를 사용하여 지정된 서버에 자동으로 연결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 **/S** *sql_server_name*\\*instance_name*을 사용합니다.  
   
  **/A**  *analysis_services_server_name*  
- Analysis Services 인스턴스를 지정합니다. 프로파일러는 지정된 **/U** 및 **/P** 스위치 또는 **/E** 스위치에서 지정된 인증 정보를 사용하여 지정된 서버에 자동으로 연결합니다.  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 명명된 인스턴스에 연결하려면 **/A** *analysis_services_server_name\instance_name*을 사용합니다.  
+ Analysis Services 인스턴스를 지정합니다. 프로파일러는 지정된 **/U** 및 **/P** 스위치 또는 **/E** 스위치에서 지정된 인증 정보를 사용하여 지정된 서버에 자동으로 연결합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 명명된 인스턴스에 연결하려면 **/A** *analysis_services_server_name\instance_name*을 사용합니다.  
   
  **/D** *database*  
  연결에 사용할 데이터베이스 이름을 지정합니다. 데이터베이스를 지정하지 않으면 이 옵션은 지정된 사용자의 기본 데이터베이스를 선택합니다.  

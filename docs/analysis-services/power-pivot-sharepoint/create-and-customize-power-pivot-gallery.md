@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0cc45718f864f14ade20348b5dae76286ea14f3a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417124"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208250"
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52417124"
   
 -   [극장식 보기 또는 갤러리 보기로 전환](#switch)  
   
-##  <a name="prereq"></a> 필수 구성 요소  
+##  <a name="prereq"></a> 사전 요구 사항  
   
 -   Silverlight가 있어야 합니다. Silverlight는 Microsoft Update를 통해 다운로드하여 설치할 수 있습니다. Silverlight가 없는 브라우저를 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 라이브러리를 보는 경우 페이지의 링크를 클릭하여 Silverlight를 설치합니다. 설치한 다음에는 브라우저를 닫은 후 다시 열어야 합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52417124"
   
  미리 보기 이미지는 Excel 서비스가 통합 문서를 렌더링하는 방식을 기반으로 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리의 표현은 브라우저에 표시되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 모양과 동일해야 합니다. 하지만 미리 보기의 화면 영역은 제한되어 있습니다. 따라서 사용 가능한 공간에 맞도록 통합 문서 또는 보고서의 일부가 잘릴 수 있습니다. 이 경우 통합 문서 또는 보고서를 열어 전체 문서를 봐야 할 수 있습니다.  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에서는 외부 데이터 원본에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 데이터 새로 고침이 지원되지만 추가 구성이 필요합니다. 팜 또는 서비스 관리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 Excel  서비스 신뢰할 수 있는 위치로 추가해야 합니다. 자세한 내용은 [중앙 관리에서 파워 피벗 사이트에 대한 신뢰할 수 있는 위치 만들기](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에서는 외부 데이터 원본에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 데이터 새로 고침이 지원되지만 추가 구성이 필요합니다. 팜 또는 서비스 관리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 Excel  서비스 신뢰할 수 있는 위치로 추가해야 합니다. 자세한 내용은 [Create a trusted location for Power Pivot sites in Central Administration](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)을 참조하세요.  
   
 ##  <a name="createlib"></a> Power Pivot 갤러리 만들기  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 새 서버 설치 옵션을 사용하여 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 를 설치하면 만들어집니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 를 기존 팜에 추가한 경우 또는 추가 라이브러리가 필요한 경우 애플리케이션이나 사이트에 대해 새로 만들 수 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "52417124"
   
     3.  라이브러리에서 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리**를 클릭합니다.  
   
-    1.  **SharePoint 2013**: 설정 아이콘을 누릅니다 ![SharePoint 설정](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")합니다.  **사이트 콘텐츠**를 클릭합니다.  
+    1.  **SharePoint 2013**: 설정 아이콘을 누릅니다 ![SharePoint 설정](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")합니다. **사이트 콘텐츠**를 클릭합니다.  
   
     2.  **앱 추가**를 클릭합니다.  
   
@@ -132,11 +132,11 @@ ms.locfileid: "52417124"
   
  다음 표에서는 각 미리 보기 페이지의 축소판 그림 스케치를 표시하는 데 사용할 수 있는 여러 레이아웃을 설명합니다.  
   
-|보기|Description|  
+|보기|설명|  
 |----------|-----------------|  
 |갤러리 보기(기본)|갤러리는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리의 기본 보기입니다. 미리 보기가 왼쪽에 나타납니다. 미리 보기 옆에 각 워크시트에 대한 더 작은 축소판 그림이 왼쪽에서 오른쪽의 순서로 순차적으로 나타납니다.|  
 |모든 문서|문서 라이브러리의 표준 레이아웃입니다. 이 보기를 선택하여 개별 문서를 관리하거나 라이브러리 내용을 목록 형식으로 볼 수 있습니다.<br /><br /> 이 보기를 사용하여 속성을 편집하거나, 개별 문서를 삭제하거나 이동합니다.<br /><br /> 버전 관리를 사용하는 경우 이 보기를 사용하여 라이브러리에서 문서를 체크 인 또는 체크 아웃해야 합니다.|  
-|극장식 보기 및 회전식 보기|이 보기는 소수의 관련 문서를 특별하게 보여 주는 경우 가장 적합한 특수한 보기입니다. 축소판 그림의 전체 표시에는 라이브러리에 있는 모든 문서의 모든 페이지가 포함됩니다. 문서 수가 많은 경우 이러한 보기를 사용하여 특정 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 찾거나 여는 것이 적합하지 않을 수 있습니다.<br /><br /> 극장식 보기: 미리 보기 영역이 중앙에 있습니다. 각 워크시트에 대한 더 작은 축소판 그림이 페이지 아래의 양쪽에 나타납니다.<br /><br /> 회전식 보기: 미리 보기 영역이 중앙에 있습니다. 현재 축소판 그림의 바로 앞과 뒤에 있는 축소판 그림이 미리 보기 영역에 인접하여 나타납니다.|  
+|극장식 보기 및 회전식 보기|이 보기는 소수의 관련 문서를 특별하게 보여 주는 경우 가장 적합한 특수한 보기입니다. 축소판 그림의 전체 표시에는 라이브러리에 있는 모든 문서의 모든 페이지가 포함됩니다. 문서 수가 많은 경우 이러한 보기를 사용하여 특정 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 찾거나 여는 것이 적합하지 않을 수 있습니다.<br /><br /> 극장식 보기: 미리 보기 영역이 가운데 표시 됩니다. 각 워크시트에 대한 더 작은 축소판 그림이 페이지 아래의 양쪽에 나타납니다.<br /><br /> 회전식 보기: 미리 보기 영역이 가운데 표시 됩니다. 현재 축소판 그림의 바로 앞과 뒤에 있는 축소판 그림이 미리 보기 영역에 인접하여 나타납니다.|  
   
 ### <a name="switch-to-a-different-view"></a>다른 보기로 전환  
   

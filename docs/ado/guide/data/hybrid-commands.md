@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e8ca40e8-459c-40e2-8dd3-3ec6d5ee7b51
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1f4334f31875a946d31041cd6d37998dd50200f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 486b76708354d4caf7e9efb2f73539b3eea9abf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925036"
 ---
 # <a name="hybrid-commands"></a>하이브리드 명령
 하이브리드 명령은 부분적으로 매개 변수가 있는 명령입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  

@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24367bfec4b0e25fec60eb49c77a74e1ccd54f46
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68187152"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
   합니다 **bcp** 의 인스턴스 간에 데이터를 대량 복사 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 사용자가 지정한 형식의 데이터 파일. **bcp** 유틸리티를 사용하여 많은 수의 새 행을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블로 가져오거나 테이블에서 데이터 파일로 데이터를 내보낼 수 있습니다. **queryout** 옵션과 함께 사용하는 경우를 제외하고 이 유틸리티를 사용하는 데에는 [!INCLUDE[tsql](../includes/tsql-md.md)]에 대한 지식이 필요하지 않습니다. 테이블로 데이터를 가져오려면 해당 테이블에 대해 만든 서식 파일을 사용하거나 이 테이블의 열에 적합한 테이블 구조와 데이터 형식을 알아야 합니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "57579763"
   
 -   **queryout** 은 쿼리에서 복사하며 쿼리에서 데이터를 대량 복사하는 경우에만 지정해야 합니다.  
   
--   **형식** 지정 된 옵션에 따라 서식 파일을 만듭니다 (**-n**, `-c`를 `-w`, 또는 **-N**)과 테이블 또는 뷰 구분 기호입니다. 데이터를 대량 복사하는 경우 **bcp** 명령은 서식 파일을 참조할 수 있으므로 대화형으로 서식 정보를 다시 입력할 필요가 없습니다. **format** 옵션에는 **-f** 옵션이 필요하며 XML 서식 파일을 만드는 경우 **-x** 옵션도 필요합니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)를 참조하세요. **nul** 을 값으로 지정해야 합니다(**format nul**).  
+-   **형식** 지정 된 옵션에 따라 서식 파일을 만듭니다 ( **-n**, `-c`를 `-w`, 또는 **-N**)과 테이블 또는 뷰 구분 기호입니다. 데이터를 대량 복사하는 경우 **bcp** 명령은 서식 파일을 참조할 수 있으므로 대화형으로 서식 정보를 다시 입력할 필요가 없습니다. **format** 옵션에는 **-f** 옵션이 필요하며 XML 서식 파일을 만드는 경우 **-x** 옵션도 필요합니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md)를 참조하세요. **nul** 을 값으로 지정해야 합니다(**format nul**).  
   
  *owner*  
  테이블 또는 뷰의 소유자 이름입니다. 작업을 수행하는 사용자가 지정한 테이블 또는 뷰를 소유하고 있는 경우에는*owner* 를 생략할 수 있습니다. *owner*를 지정하지 않은 경우 작업을 수행하는 사용자가 지정한 테이블이나 뷰의 소유자가 아니면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 오류 메시지를 반환하고 작업이 취소됩니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "57579763"
  **-b** _batch_size_  
  가져온 데이터의 일괄 처리당 행 수를 지정합니다. 각 일괄 처리는 커밋되기 전에 전체 일괄 처리를 가져오는 별도의 트랜잭션으로 가져오고 기록합니다. 기본적으로 데이터 파일의 모든 행은 하나의 일괄 처리로 가져옵니다. 여러 일괄 처리에 행을 분산시키려면 데이터 파일의 행 수보다 작은 *batch_size* 를 지정합니다. 일괄 처리에 대한 트랜잭션이 실패하면 현재 일괄 처리에서 삽입한 내용만 롤백됩니다. 커밋된 트랜잭션으로 이미 가져온 일괄 처리는 나중에 발생한 오류의 영향을 받지 않습니다.  
   
- 와 함께에서이 옵션을 사용 하지 않으면 합니다 **-h "** ROWS_PER_BATCH  **= *`bb`*"** 옵션입니다.  
+ 와 함께에서이 옵션을 사용 하지 않으면 합니다 **-h "** ROWS_PER_BATCH  **= *`bb`* "** 옵션입니다.  
   
  `-c`  
  문자 데이터 형식을 사용하여 작업을 수행합니다. 이 그러면 각 필드를 표시 하지 않습니다. 사용 하 여 `char` 접두사와 저장소 유형으로 **\t** (탭 문자) 필드 구분 기호로 사용 하 고 **\r\n** (줄 바꿈 문자)를 행 종결자로 합니다. `-c`이 `-w`과 호환되지 않는 경우.  
@@ -175,13 +175,13 @@ ms.locfileid: "57579763"
   
  *first_row* 는 최대 2^63-1의 값을 갖는 양의 정수입니다. **-F**_first_row_는 1부터 시작합니다.  
   
- **-h"** _hint_[ **,**... *n*] **"**  
+ **-h"** _hint_[ **,** ... *n*] **"**  
  데이터를 테이블 또는 뷰로 대량으로 가져올 때 사용할 힌트를 지정합니다.  
   
- ORDER **(**_column_[ASC | DESC] [**,**...*n*]**)**  
+ ORDER **(** _column_[ASC | DESC] [ **,** ...*n*] **)**  
  데이터 파일에 있는 데이터의 정렬 순서입니다. 가져올 데이터를 테이블의 클러스터형 인덱스(있는 경우)에 따라 정렬하면 대량 가져오기 성능이 향상됩니다. 데이터 파일을 클러스터형 인덱스 키와 다른 순서로 정렬하거나 테이블에 클러스터형 인덱스가 없으면 ORDER 절이 무시됩니다. 지정한 열 이름은 대상 테이블에서 올바른 열 이름이어야 합니다. 기본적으로 **bcp** 는 데이터 파일이 정렬되지 않은 것으로 간주합니다. 대량 가져오기 작업을 최적화하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 가져온 데이터가 정렬되어 있는지도 확인합니다.  
   
- ROWS_PER_BATCH **=**_bb_  
+ ROWS_PER_BATCH **=** _bb_  
  일괄 처리당 데이터 행 수( *bb*)입니다. **-b** 를 지정하지 않은 경우에 사용되며 전체 데이터 파일을 단일 트랜잭션으로 서버에 보냅니다. 서버는 *bb*값에 따라 대량 로드를 최적화합니다. 기본적으로 ROWS_PER_BATCH는 알 수 없습니다.  
   
  KILOBYTES_PER_BATCH **=** _cc_  
@@ -210,7 +210,7 @@ ms.locfileid: "57579763"
  **in** 인수와 함께 지정하면 대량 복사 작업 중에 대상 테이블에 정의한 삽입 트리거가 실행됩니다. FIRE_TRIGGERS를 지정하지 않으면 삽입 트리거가 실행되지 않습니다. FIRE_TRIGGERS는 **out**, **queryout** 및 **format** 인수에 대해 무시됩니다.  
   
  **-i** _input_file_  
- 대화형 모드를 사용 하 여 대량 복사를 수행할 때 각 데이터 필드에 대 한 명령 프롬프트 질문의 응답이 포함 된 응답 파일의 이름을 지정 합니다 (**-n**, `-c`합니다 `-w`, 또는 **- N** 지정 되지 않은).  
+ 대화형 모드를 사용 하 여 대량 복사를 수행할 때 각 데이터 필드에 대 한 명령 프롬프트 질문의 응답이 포함 된 응답 파일의 이름을 지정 합니다 ( **-n**, `-c`합니다 `-w`, 또는 **- N** 지정 되지 않은).  
   
  *input_file* 이 하이픈(-) 또는 슬래시(/)로 시작하는 경우에는 **-i** 와 *input_file* 값 사이에 공백을 포함하지 마세요.  
   
@@ -281,8 +281,8 @@ ms.locfileid: "57579763"
  **-R**  
  클라이언트 컴퓨터의 로캘 설정에 정의된 국가별 형식을 사용하여 통화, 날짜 및 시간 데이터를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 로 대량 복사하도록 지정합니다. 기본적으로 국가별 설정은 무시됩니다.  
   
- **-S** _server_name_[ **\\**_instance_name_]  
- 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. 서버를 지정하지 않으면 **bcp** 유틸리티가 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터나 명명된 로컬 인스턴스에서 **bcp** 명령을 실행할 때 이 옵션을 지정해야 합니다. 서버에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name*만 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 *server_name**_\\_** instance_name*을 지정합니다.  
+ **-S** _server_name_[ **\\** _instance_name_]  
+ 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스를 지정합니다. 서버를 지정하지 않으면 **bcp** 유틸리티가 로컬 컴퓨터에 있는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 의 기본 인스턴스에 연결됩니다. 네트워크의 원격 컴퓨터나 명명된 로컬 인스턴스에서 **bcp** 명령을 실행할 때 이 옵션을 지정해야 합니다. 서버에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하려면 *server_name*만 지정합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 명명된 인스턴스에 연결하려면 *server_name ** _\\_** instance_name*을 지정합니다.  
   
  `-t` *field_term*  
  필드 종결자를 지정합니다. 기본값은 **\t** (탭 문자)입니다. 기본 필드 종결자를 재정의하려면 이 매개 변수를 사용합니다. 자세한 내용은 [필드 및 행 종결자 지정&#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)을 참조하세요.  
@@ -326,7 +326,7 @@ ms.locfileid: "57579763"
  **-x**  
  **format** 및 **-f**_format_file_ 옵션과 함께 사용되며 기본 비 XML 서식 파일 대신 XML 기반 서식 파일을 생성합니다. 데이터를 가져오거나 내보낼 때 **-x**는 작동하지 않습니다. **format** 및 **-f**_format_file_을 함께 사용하지 않으면 오류가 생성됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **bcp** 12.0 클라이언트를 설치할 때 설치 됩니다 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 도구입니다. [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]와 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 둘 다에 대해 도구를 설치하면 PATH 환경 변수의 값에 따라 **bcp** 12.0 클라이언트 대신 이전 **bcp** 클라이언트를 사용할 수 있습니다. 이 환경 변수는 실행 파일을 검색하기 위해 Windows에서 사용하는 디렉터리 집합을 정의합니다. 사용 중인 버전을 확인하려면 Windows 명령 프롬프트에서 **bcp /v** 명령을 실행합니다. PATH 환경 변수에서 명령 경로를 설정하는 방법은 Windows 도움말을 참조하십시오.  
   
  XML 서식 파일은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 도구를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client와 함께 설치한 경우에만 지원됩니다.  
@@ -414,25 +414,25 @@ ms.locfileid: "57579763"
 ## <a name="examples"></a>예  
  이 섹션에서는 다음과 같은 예를 보여 줍니다.  
   
--   1. 데이터 파일로 테이블 행 복사(트러스트된 연결 사용)  
+-   1\. 데이터 파일로 테이블 행 복사(트러스트된 연결 사용)  
   
--   2. 데이터 파일로 테이블 행 복사(혼합 모드 인증 사용)  
+-   2\. 데이터 파일로 테이블 행 복사(혼합 모드 인증 사용)  
   
--   3. 파일에서 테이블로 데이터 복사  
+-   3\. 파일에서 테이블로 데이터 복사  
   
--   4. 데이터 파일로 특정 열 복사  
+-   4\. 데이터 파일로 특정 열 복사  
   
--   5. 데이터 파일로 특정 행 복사  
+-   5\. 데이터 파일로 특정 행 복사  
   
--   6. 쿼리에서 데이터 파일로 데이터 복사  
+-   6\. 쿼리에서 데이터 파일로 데이터 복사  
   
--   7. 비 XML 서식 파일 만들기  
+-   7\. 비 XML 서식 파일 만들기  
   
--   8. XML 서식 파일 만들기  
+-   8\. XML 서식 파일 만들기  
   
--   9.  **bcp**에서 서식 파일을 사용하여 대량 가져오기 수행  
+-   9\. **bcp**에서 서식 파일을 사용하여 대량 가져오기 수행  
   
-### <a name="a-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>1. 데이터 파일로 테이블 행 복사(트러스트된 연결 사용)  
+### <a name="a-copying-table-rows-into-a-data-file-with-a-trusted-connection"></a>1\. 데이터 파일로 테이블 행 복사(트러스트된 연결 사용)  
  다음 예에서는 **테이블의** out `AdventureWorks2012.Sales.Currency` 옵션에 대해 설명합니다. 이 예에서는 `Currency.dat` 라는 데이터 파일을 만들고 문자 형식을 사용하여 테이블 데이터를 파일에 복사합니다. 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  
   
  명령 프롬프트에서 다음 명령을 입력합니다.  
@@ -441,7 +441,7 @@ ms.locfileid: "57579763"
 bcp AdventureWorks2012.Sales.Currency out Currency.dat -T -c  
 ```  
   
-### <a name="b-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>2. 데이터 파일로 테이블 행 복사(혼합 모드 인증 사용)  
+### <a name="b-copying-table-rows-into-a-data-file-with-mixed-mode-authentication"></a>2\. 데이터 파일로 테이블 행 복사(혼합 모드 인증 사용)  
  다음 예에서는 **테이블의** out `AdventureWorks2012.Sales.Currency` 옵션에 대해 설명합니다. 이 예에서는 `Currency.dat`라는 데이터 파일을 만들고 문자 형식을 사용하여 테이블 데이터를 파일에 복사합니다.  
   
  이 예에서는 혼합 모드 인증을 사용하고 있다고 가정합니다. **-U** 스위치를 사용하여 로그인 ID를 지정해야 합니다. 또한 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 연결하지 않는 한 **-S** 스위치를 사용하여 시스템 이름을 지정하고 원하는 경우 인스턴스 이름을 지정합니다.  
@@ -452,7 +452,7 @@ bcp AdventureWorks2012.Sales.Currency out Currency.dat -c -U<login_id> -S<server
   
  시스템에서 암호를 묻는 메시지를 표시합니다.  
   
-### <a name="c-copying-data-from-a-file-to-a-table"></a>3. 파일에서 테이블로 데이터 복사  
+### <a name="c-copying-data-from-a-file-to-a-table"></a>3\. 파일에서 테이블로 데이터 복사  
  다음 예에서는 앞의 예에서 만든 `Currency.dat` 파일을 사용하여 **in** 옵션에 대해 설명합니다. 그러나 먼저 이 예에서는 데이터를 복사해 넣을 빈 `AdventureWorks2012 Sales.Currency` 테이블 복사본 `Sales.Currency2`를 만듭니다. 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  
   
  빈 테이블을 만들려면 쿼리 편집기에서 다음 명령을 입력합니다.  
@@ -478,7 +478,7 @@ GO
 SELECT * FROM Sales.Currency2  
 ```  
   
-### <a name="d-copying-a-specific-column-into-a-data-file"></a>4. 데이터 파일로 특정 열 복사  
+### <a name="d-copying-a-specific-column-into-a-data-file"></a>4\. 데이터 파일로 특정 열 복사  
  특정 열을 복사하려면 **queryout** 옵션을 사용합니다. 다음 예에서는 `Name` 테이블의 `Sales.Currency` 열만 데이터 파일로 복사합니다. 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  
   
  Windows 명령 프롬프트에서 다음을 입력합니다.  
@@ -487,7 +487,7 @@ SELECT * FROM Sales.Currency2
 bcp "SELECT Name FROM AdventureWorks.Sales.Currency" queryout Currency.Name.dat -T -c  
 ```  
   
-### <a name="e-copying-a-specific-row-into-a-data-file"></a>5. 데이터 파일로 특정 행 복사  
+### <a name="e-copying-a-specific-row-into-a-data-file"></a>5\. 데이터 파일로 특정 행 복사  
  특정 행을 복사하려면 **queryout** 옵션을 사용합니다. 다음 예에서는 `Jarrod Rana`라는 연락처 행만 `AdventureWorks2012.Person.Person` 테이블에서 데이터 파일(`Jarrod Rana.dat`)로 복사합니다. 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  
   
  Windows 명령 프롬프트에서 다음을 입력합니다.  
@@ -496,7 +496,7 @@ bcp "SELECT Name FROM AdventureWorks.Sales.Currency" queryout Currency.Name.dat 
 bcp "SELECT * FROM AdventureWorks2012.Person.Person WHERE FirstName='Jarrod' AND LastName='Rana' "  queryout "Jarrod Rana.dat" -T -c  
 ```  
   
-### <a name="f-copying-data-from-a-query-to-a-data-file"></a>6. 쿼리에서 데이터 파일로 데이터 복사  
+### <a name="f-copying-data-from-a-query-to-a-data-file"></a>6\. 쿼리에서 데이터 파일로 데이터 복사  
  [!INCLUDE[tsql](../includes/tsql-md.md)] 문의 결과 집합을 데이터 파일로 복사하려면 **queryout** 옵션을 사용합니다. 다음 예에서는 `AdventureWorks2012.Person.Person` 테이블에서 성과 이름을 기준으로 정렬된 이름을 `Contacts.txt` 데이터 파일로 복사합니다. 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  
   
  Windows 명령 프롬프트에서 다음을 입력합니다.  
@@ -505,7 +505,7 @@ bcp "SELECT * FROM AdventureWorks2012.Person.Person WHERE FirstName='Jarrod' AND
 bcp "SELECT FirstName, LastName FROM AdventureWorks2012.Person.Person ORDER BY LastName, Firstname" queryout Contacts.txt -c -T  
 ```  
   
-### <a name="g-creating-a-non-xml-format-file"></a>7. 비 XML 서식 파일 만들기  
+### <a name="g-creating-a-non-xml-format-file"></a>7\. 비 XML 서식 파일 만들기  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스의 `Currency.fmt` 테이블에 대해 `Sales.Currency`라는 비 XML 서식 파일을 만듭니다. 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  
   
  Windows 명령 프롬프트에서 다음을 입력합니다.  
@@ -516,7 +516,7 @@ bcp AdventureWorks2012.Sales.Currency format nul -T -c  -f Currency.fmt
   
  자세한 내용은 [비 XML 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md)에서 원래 지원했던 서식 파일입니다.  
   
-### <a name="h-creating-an-xml-format-file"></a>8. XML 서식 파일 만들기  
+### <a name="h-creating-an-xml-format-file"></a>8\. XML 서식 파일 만들기  
  다음 예에서는 `Currency.xml` 데이터베이스의 `Sales.Currency` 테이블에 대해 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 이라는 XML 서식 파일을 만듭니다. 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  
   
  Windows 명령 프롬프트에서 다음을 입력합니다.  
@@ -530,7 +530,7 @@ bcp AdventureWorks2012.Sales.Currency format nul -T -c -x -f Currency.xml
   
  자세한 내용은 [XML 서식 파일&#40;SQL Server&#41;](../relational-databases/import-export/xml-format-files-sql-server.md)의 두 가지 서식 파일 유형을 대량으로 내보내고 가져올 수 있습니다.  
   
-### <a name="i-using-a-format-file-to-bulk-import-with-bcp"></a>9. bcp에서 서식 파일을 사용하여 대량 가져오기 수행  
+### <a name="i-using-a-format-file-to-bulk-import-with-bcp"></a>9\. bcp에서 서식 파일을 사용하여 대량 가져오기 수행  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스로 데이터를 가져올 때 이전에 만든 서식 파일을 사용하려면 **in** 옵션과 함께 **-f** 스위치를 사용합니다. 예를 들어 다음 명령은 이전에 만든 서식 파일인 `Currency.dat`을 사용하여 데이터 파일 `Sales.Currency`의 내용을 `Sales.Currency2` 테이블의 복사본인 `Currency.xml`로 대량 복사합니다. 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  
   
  Windows 명령 프롬프트에서 다음을 입력합니다.  

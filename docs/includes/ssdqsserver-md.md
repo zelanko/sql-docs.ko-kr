@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 307ab84b6e68aee462cfffb600944a44a71118eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62862369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212390"
 ---
-Data Quality 서버
+ Data Quality 서버 
