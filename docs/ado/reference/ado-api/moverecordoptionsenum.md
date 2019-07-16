@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8119b553ba7d85b9a3e1cabc49975967a0a751af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dcdb825073b267c3e3351001ecc7b11c969582e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932043"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 동작을 지정 합니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체 [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) 메서드.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|기본. 기본 이동 작업을 수행합니다. 하이퍼텍스트 링크를 업데이트 하는 작업 및 대상 파일 또는 디렉터리가 이미 있으면 작업이 실패 합니다.|  
 |**adMoveOverWrite**|1|이미 존재 하는 경우에 대상 파일 또는 디렉터리를 덮어씁니다.|  

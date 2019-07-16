@@ -1,5 +1,5 @@
 ---
-title: 메모, 도형, Excel 서비스에서 지원 되지 않는 다른 개체 | Microsoft Docs
+title: 메모, 도형, Excel Services에서 지원 되지 않는 다른 개체 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: df13c3fa92d5439e559e286424438569b3ead86b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164387"
 ---
-# <a name="comments-shapes-other-objects-not-supported-by-excel-services"></a>메모, 도형, Excel 서비스에서 지원 되지 않는 다른 개체
+# <a name="comments-shapes-other-objects-not-supported-by-excel-services"></a>메모, 도형 Excel Services에서 지원 되지 않는 다른 개체
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   이 오류는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 필드 목록에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 슬라이서를 추가할 때 발생합니다.  
   
-## <a name="details"></a>세부 정보  
+## <a name="details"></a>설명  
   
 |||  
 |-|-|  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 632df5807e1e857c852807d0088219dee4448b6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946703"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,12 +59,12 @@ sp_update_proxy
   
 `[ @enabled = ] is_enabled` 프록시 사용 여부입니다. *is_enabled* 플래그가 **tinyint**, 기본값은 NULL입니다. 때 *is_enabled* 됩니다 **0**, 프록시를 사용 하지 않는 및 작업 단계에서 사용할 수 없습니다. 이 인수가 NULL이면 프록시의 상태는 변경되지 않은 상태로 유지됩니다.  
   
-`[ @description = ] 'description'` 프록시의 새 설명입니다. *설명을* 됩니다 **nvarchar(512)**, 기본값은 NULL 사용 하 여 합니다. 이 인수가 NULL이면 프록시에 대한 설명은 변경되지 않은 상태로 유지됩니다.  
+`[ @description = ] 'description'` 프록시의 새 설명입니다. *설명을* 됩니다 **nvarchar(512)** , 기본값은 NULL 사용 하 여 합니다. 이 인수가 NULL이면 프록시에 대한 설명은 변경되지 않은 상태로 유지됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  어느 **@proxy_name** 하거나 **@proxy_id** 지정 해야 합니다. 두 인수가 모두 지정될 경우 두 인수는 같은 프록시를 참조해야 합니다. 그렇지 않으면 저장 프로시저가 실패합니다.  
   
  어느 **@credential_name** 하거나 **@credential_id** 프록시에 대 한 자격 증명을 변경 하려면 반드시 지정 해야 합니다. 두 인수를 모두 지정하면 두 인수는 같은 자격 증명을 참조해야 합니다. 그렇지 않으면 저장 프로시저가 실패합니다.  

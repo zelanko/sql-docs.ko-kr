@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fead9d6f80c62995cf156adc092221113a9ff24c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6afb061e07b3d01395031b4ce00fe315364ef382
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045009"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Microsoft 제공 ODBC 드라이버
 *드라이버* ODBC api에서 함수를 구현 하는 라이브러리입니다. 각 드라이버 특정 데이터베이스 관리 시스템 (DBMS)에 따라 다릅니다. 대부분의 경우에서 드라이버는 기본 DBMS;의 기능 노출 DBMS에 의해 지원 하지 않는 기능이 구현 않아도 함께 제공 됩니다. 드라이버는 특정 작업을 수행 하 고 두 가지 범주로 분류할 수 있습니다: 파일 및 DBMS 기반 합니다. 드라이버 및 드라이버 아키텍처에 대 한 자세한 내용은 참조 하세요. [드라이버](../../odbc/reference/drivers.md)합니다.  

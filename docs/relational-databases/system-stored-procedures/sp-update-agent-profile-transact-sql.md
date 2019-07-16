@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf8ec9183ce1bac5557040aa3256ef5e6499c0f5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5e90136d319ed0f04766bfec503126999bb73dd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061225"
 ---
 # <a name="spupdateagentprofile-transact-sql"></a>sp_update_agent_profile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@agent_type=**] **'***agent_type***'**  
+ [ **@agent_type=** ] **'***agent_type***'**  
  에이전트의 유형입니다. *agent_type* 됩니다 **int**이며 기본값은 없고 수 이러한 값 중 하나일 수 있습니다.  
   
 |값|Description|  
@@ -49,16 +48,16 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**4**|병합 에이전트입니다.|  
 |**9**|큐 판독기 에이전트입니다.|  
   
- [**@agent_id=**] *agent_id*  
+ [ **@agent_id=** ] *agent_id*  
  에이전트의 ID입니다. *agent_id* 됩니다 **int**, 기본값은 없습니다.  
   
- [**@profile_id=**] *profile_id*  
+ [ **@profile_id=** ] *profile_id*  
  에이전트가 사용해야 하는 프로필의 ID입니다. *profile_id* 됩니다 **int**, 기본값은 없습니다. 각 에이전트에 대해 정의 된 프로필의 목록을 보려면 사용 하 여 [sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)합니다. 시스템 프로필에 대 한 자세한 내용은 참조 하세요. [복제 에이전트 프로필](../../relational-databases/replication/agents/replication-agent-profiles.md)합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_update_agent_profile** 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

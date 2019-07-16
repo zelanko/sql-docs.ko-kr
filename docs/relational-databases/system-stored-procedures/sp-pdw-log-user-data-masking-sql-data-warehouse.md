@@ -10,14 +10,13 @@ dev_langs:
 ms.assetid: 43c63b42-03cb-4fb5-8362-ec3b7e22a590
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a24007abad9148a02da3542587967ae9dcc63f16
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18798dece1c801ad0cc4854b7fccc15529a56d5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056453"
 ---
 # <a name="sppdwloguserdatamasking-sql-data-warehouse"></a>sp_pdw_log_user_data_masking (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -50,7 +49,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
   
  실행 **sp_pdw_ log_user_data_masking** 스칼라 결과 집합으로 어플라이언스에 TDE 로그 사용자 데이터 마스킹의 현재 상태를 반환 하는 매개 변수 없이 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용자 데이터에 마스킹 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동에서 미리 정의 된 상수 값을 사용 하 여 리터럴 수 있도록 대체 로그 **선택** 및 DML 문 처럼 사용자 데이터를 포함할 수 있습니다. 설정 *masking_mode* 1로 열 이름이 나 테이블 이름 같은 메타 데이터를을 마스크 하지 않습니다. 설정 *masking_mode* 2 열 이름이 나 테이블 이름 등의 메타 데이터를 사용 하 여 문을 제거 합니다.  
   
  사용자 데이터에서 마스킹 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 활동 로그는 다음과 같은 방법으로 구현 됩니다.  
