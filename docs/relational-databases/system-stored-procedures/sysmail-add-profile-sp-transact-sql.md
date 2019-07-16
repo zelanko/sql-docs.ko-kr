@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a828e55c-633a-41cf-9769-a0698b446e6c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b00e0eed5a27c9d795de027f82b01763c44ab80e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f70661db4dbd34475a5708b8ae9ca3691c94e689
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63472118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017806"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 메일 프로필에는 여러 개의 데이터베이스 메일 계정이 있습니다. 데이터베이스 메일 저장 프로시저는 해당 프로시저에서 생성된 프로필 이름이나 프로필 ID로 프로필을 참조할 수 있습니다. 프로필에 계정을 추가 하는 방법에 대 한 자세한 내용은 참조 하세요. [sysmail_add_profileaccount_sp &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql.md)합니다.  
   
  저장된 프로시저를 사용 하 여 프로필 이름 및 설명을 변경할 수 있습니다 **sysmail_update_profile_sp**반면 프로필 id 프로필의 수명 동안 일정 하 게 유지 합니다.  

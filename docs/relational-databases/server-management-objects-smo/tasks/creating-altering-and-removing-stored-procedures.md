@@ -12,27 +12,26 @@ helpviewer_keywords:
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46a4bad9a7eb57f45b210cea68f146a4340b8f1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1eaec75e05dba6d6fd859c1537d7a528df16959c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939032"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>저장 프로시저 생성, 변경 및 제거
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 저장된 프로시저에서 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체입니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects(SMO)에서 저장 프로시저는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체로 표시됩니다.  
   
- 만들기는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> smo에서 개체에 설정 해야 합니다 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> 속성을는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 저장된 프로시저를 정의 하는 스크립트입니다. 매개 변수가 필요 합니다 \@ 접두사를 사용 하 여 개별적으로 만들어야 합니다 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 개체를 추가 하는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 컬렉션은 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체.  
+ SMO에서 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체를 만들려면 저장 프로시저를 정의하는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> 속성을 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트로 설정해야 합니다. 매개 변수가 필요 합니다 \@ 접두사를 사용 하 여 개별적으로 만들어야 합니다 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 개체를 추가 하는 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> 컬렉션은 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체.  
   
 ## <a name="example"></a>예제  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Visual Basic에서 저장 프로시저 생성, 변경 및 제거  
- 이 코드 예제에 대 한 저장된 프로시저를 만드는 방법을 보여 줍니다는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스입니다. 이 예에서는 직원 ID 번호를 제공하면 직원의 성을 반환합니다. 저장 프로시저에는 직원 ID 번호를 지정하는 입력 매개 변수 하나와 직원의 성을 반환하는 출력 매개 변수 하나가 필요합니다.  
+ 이 코드 예제는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스에 대한 저장 프로시저를 만드는 방법을 보여 줍니다. 이 예에서는 직원 ID 번호를 제공하면 직원의 성을 반환합니다. 저장 프로시저에는 직원 ID 번호를 지정하는 입력 매개 변수 하나와 직원의 성을 반환하는 출력 매개 변수 하나가 필요합니다.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -70,7 +69,7 @@ sp.Drop()
 ``` 
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-c"></a>Visual C#에서 저장 프로시저 생성, 변경 및 제거  
- 이 코드 예제에 대 한 저장된 프로시저를 만드는 방법을 보여 줍니다는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스입니다. 이 예에서는 직원 ID 번호(`BusinessEntityID`)를 제공하면 직원의 성을 반환합니다. 저장 프로시저에는 직원 ID 번호를 지정하는 입력 매개 변수 하나와 직원의 성을 반환하는 출력 매개 변수 하나가 필요합니다.  
+ 이 코드 예제는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스에 대한 저장 프로시저를 만드는 방법을 보여 줍니다. 이 예에서는 직원 ID 번호(`BusinessEntityID`)를 제공하면 직원의 성을 반환합니다. 저장 프로시저에는 직원 ID 번호를 지정하는 입력 매개 변수 하나와 직원의 성을 반환하는 출력 매개 변수 하나가 필요합니다.  
   
 ```csharp  
 {  
@@ -110,7 +109,7 @@ sp.Drop()
 ```  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-powershell"></a>PowerShell에서 저장 프로시저 생성, 변경 및 제거  
- 이 코드 예제에 대 한 저장된 프로시저를 만드는 방법을 보여 줍니다는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스입니다. 이 예에서는 직원 ID 번호(`BusinessEntityID`)를 제공하면 직원의 성을 반환합니다. 저장 프로시저에는 직원 ID 번호를 지정하는 입력 매개 변수 하나와 직원의 성을 반환하는 출력 매개 변수 하나가 필요합니다.  
+ 이 코드 예제는 [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] 데이터베이스에 대한 저장 프로시저를 만드는 방법을 보여 줍니다. 이 예에서는 직원 ID 번호(`BusinessEntityID`)를 제공하면 직원의 성을 반환합니다. 저장 프로시저에는 직원 ID 번호를 지정하는 입력 매개 변수 하나와 직원의 성을 반환하는 출력 매개 변수 하나가 필요합니다.  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80918c74613e0fb608a9d48c1e56ad2cf206b06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940294"
 ---
 # <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   등록된 각 암호화 공급자에 대해 하나의 행을 반환합니다.  
     
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|암호화 공급자의 ID 번호입니다.|  
 |**name**|**sysname**|암호화 공급자의 이름입니다.|  
@@ -42,7 +41,7 @@ ms.locfileid: "47791241"
 |**dll_path**|**nvarchar(512)**|EKM(Extensible Key Management) API(응용 프로그래밍 인터페이스)를 구현하는 DLL의 경로입니다.|  
 |**is_enabled**|**bit**|공급자가 서버에서 설정되어 있는지 여부입니다.<br /><br /> 0 = 설정 안 함(기본값)<br /><br /> 1 = 사용|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **sys.cryptographic_providers** 뷰는 공개적으로 표시 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

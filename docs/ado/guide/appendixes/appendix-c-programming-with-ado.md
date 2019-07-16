@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63dfa7de6bd952f86718b90ce446868c9d74be10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926873"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>부록 C: 개발 환경에서 ADO를 사용한 프로그래밍
 ADO는 Microsoft Visual Basic, VBScript, JScript 및 시각적 개체를 포함 하 여 여러 프로그래밍 언어를 사용 하 여 사용할 수 있는 COM 자동화 인터페이스 구성 요소 C++입니다. ADO의 버전을 사용 하 여 이러한 도구 및 Microsoft Office 및 Microsoft SQL Server와 같은 다른 응용 프로그램의 각 설치 됩니다.

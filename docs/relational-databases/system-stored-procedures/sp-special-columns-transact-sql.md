@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c82970caa25089320a1dc5daf68076f27478081f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032845"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_special_columns [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |SCOPE|**smallint**|행 ID의 실제 범위로 0, 1 또는 2가 될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 항상 0을 반환 합니다. 이 필드는 항상 값을 반환합니다.<br /><br /> 0 = SQL_SCOPE_CURROW. 행 ID는 해당 행에 있는 동안에만 유효하도록 보장됩니다. 행 ID를 사용하여 나중에 다시 선택하는 경우 행이 업데이트되거나 다른 트랜잭션에 의해 삭제되면 그 행을 반환하지 않을 수도 있습니다.<br /><br /> 1 = SQL_SCOPE_TRANSACTION. 행 ID는 현재 트랜잭션 기간 동안 유효하도록 보장됩니다.<br /><br /> 2 = SQL_SCOPE_SESSION. 행 ID는 트랜잭션 경계와 상관없이 세션 기간 동안 유효하도록 보장됩니다.|  
 |COLUMN_NAME|**sysname**|각 열에 대 한 열 이름 합니다 *테이블*반환 합니다. 이 필드는 항상 값을 반환합니다.|  
@@ -86,7 +85,7 @@ sp_special_columns [ @table_name = ] 'table_name'
 |SCALE|**smallint**|데이터 원본의 소수 자릿수입니다. 소수 자릿수가 적용되지 않는 데이터 형식에 대해서는 NULL이 반환됩니다.|  
 |PSEUDO_COLUMN|**smallint**|열이 의사(pseudo) 열인지 여부를 나타냅니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]은 항상 1을 반환합니다.<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_special_columns는 ODBC의 SQLSpecialColumns와 같습니다. 반환되는 값은 SCOPE에 의해 순서가 정해집니다.  
   
 ## <a name="permissions"></a>사용 권한  

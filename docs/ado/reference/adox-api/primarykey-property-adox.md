@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 30185312-5e09-4804-852d-e505d660113a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f40553d6b992a2cae7d886663d1f622d788eb847
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afd6ad45295ab5a888c3b392adb0019197710e15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965549"
 ---
 # <a name="primarykey-property-adox"></a>PrimaryKey 속성(ADOX)
 인덱스 테이블에 기본 키를 나타내는지 여부를 나타냅니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66706326"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환 된 **부울** 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  기본값은 **False**입니다.  
   
  이 속성은 읽기 전용 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 컬렉션에 이미 추가 된 개체입니다.  

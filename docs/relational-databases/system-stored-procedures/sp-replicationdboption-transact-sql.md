@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e8285713df1fb17b2e82dcfa6edac0fd6db5500a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950669"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +41,13 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@dbname=**] **'***dbname***'**  
+ [ **@dbname=** ] **'***dbname***'**  
  복제 데이터베이스 옵션을 설정할 데이터베이스입니다. *db_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [**@optname=**] **'***optname***'**  
+ [ **@optname=** ] **'***optname***'**  
  설정 또는 해제할 복제 데이터베이스 옵션입니다. *optname* 됩니다 **sysname**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**병합 게시**|병합 게시용으로 데이터베이스를 사용할 수 있습니다.|  
 |**publish**|다른 유형의 게시용으로 데이터베이스를 사용할 수 있습니다.|  
@@ -64,7 +63,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_replicationdboption** 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
  이 프로시저는 지정된 옵션에 따라 특정 복제 시스템 테이블, 보안 계정 등을 만들거나 삭제합니다. 해당 범주는 비트를 설정 합니다 **master.sysdatabases** 시스템 테이블 및 필요한 시스템 테이블을 만듭니다.  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c2a78073-626b-4159-996e-1808f6bfb6d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2e8182a0fca11105541f8dd435f352ba0d393731
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: af0e10f23d376c96fd7be0a75cf713dd76a2c149
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041012"
 ---
 # <a name="sysspxtpbinddbresourcepool-transact-sql"></a>sys.sp_xtp_bind_db_resource_pool(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -108,7 +107,7 @@ Database 'Hekaton_DB' is currently bound to a resource pool. A database must be 
 *%D ID 사용 하 여 데이터베이스 ID %d 사용 하 여 리소스 풀 사이 리소스 바인딩이 성공적으로 작성 되었습니다.*  
   
 ## <a name="examples"></a>예  
-1.  다음 코드 예제에서는 리소스 풀 Pool_Hekaton에 데이터베이스 Hekaton_DB를 바인딩합니다.  
+A.  다음 코드 예제에서는 리소스 풀 Pool_Hekaton에 데이터베이스 Hekaton_DB를 바인딩합니다.  
   
 ```sql  
 sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'  
@@ -116,7 +115,7 @@ sys.sp_xtp_bind_db_resource_pool N'Hekaton_DB', N'Pool_Hekaton'
  
  다음에 데이터베이스를 온라인 상태로 전환할 때 바인딩이 적용됩니다.  
  
- 2. 위 예제에서는 몇 가지 기본 검사를 포함 하는의 확장 된 예입니다.  다음 실행 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
+ 2\. 위 예제에서는 몇 가지 기본 검사를 포함 하는의 확장 된 예입니다.  다음 실행 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]\:
  
 ```sql
 DECLARE @resourcePool sysname = N'Pool_Hekaton';
@@ -154,6 +153,6 @@ END
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스를 리소스 풀에 바인딩하는 방법에 대한 지침은](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [sys.sp_xtp_unbind_db_resource_pool &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
+ [sys.sp_xtp_unbind_db_resource_pool &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-xtp-unbind-db-resource-pool-transact-sql.md)  
   
   

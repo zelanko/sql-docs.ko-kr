@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d31b9ff3a60b746309224b0e0f9669cef229f234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933493"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString 속성(ADO)
 데이터 원본에 연결 하는 데 사용 하는 정보를 나타냅니다.  
@@ -29,17 +28,17 @@ ms.locfileid: "66695961"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 **문자열** 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 합니다 **ConnectionString** 계열이 포함 된 자세한 연결 문자열을 전달 하 여 데이터 원본을 지정 하려면 속성 *인수* *= value* 로 문 구분 세미콜론으로 구분 합니다.  
   
  ADO에 대 한 다섯 개의 인수를 지원 합니다 **ConnectionString** 속성; ADO에서 처리 하지 않고 공급자에 직접 다른 인수 전달 합니다. 인수 ADO 지원은 다음과 같습니다.  
   
-|인수|Description|  
+|인수|설명|  
 |--------------|-----------------|  
 |*Provider=*|연결에 사용할 공급자의 이름을 지정 합니다.|  
 |*파일 이름 =*|미리 설정 된 연결 정보를 포함 하는 공급자별 파일 (예를 들어 지속형된 데이터 원본 개체)의 이름을 지정 합니다.|  
 |*원격 공급자 =*|클라이언트 쪽 연결을 열 때 사용할 공급자의 이름을 지정 합니다. (원격 데이터 서비스만 해당입니다.)|  
-|*Remote Server=*|클라이언트 쪽 연결을 열 때 사용할 서버를의 경로 이름을 지정 합니다. (원격 데이터 서비스만 해당입니다.)|  
+|*원격 서버 =*|클라이언트 쪽 연결을 열 때 사용할 서버를의 경로 이름을 지정 합니다. (원격 데이터 서비스만 해당입니다.)|  
 |*URL=*|파일 또는 디렉터리와 같은 리소스를 식별 하는 절대 URL로 연결 문자열을 지정 합니다.|  
   
  설정한 후는 **ConnectionString** 속성 및 open 합니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체 공급자 내용을 변경할 수 속성의 예를 들어 ADO 정의한 인수 이름에 매핑하여 해당 특정 공급자에 해당 합니다.  

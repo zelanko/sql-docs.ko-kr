@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e2da78373d8bcb613bb11dca54857bc7b98dfe1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982615"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208341"
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>구성 설정 참조(SharePoint용 Power Pivot)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "38982615"
 ##  <a name="LoadingData"></a> 데이터 로드 제한 시간  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터는 팜에서 Analysis Services 서버 인스턴스에 의해 검색되고 로드됩니다. 마지막으로 데이터를 액세스한 방법과 시기에 따라 콘텐츠 라이브러리나 로컬 파일 캐시에서 데이터가 로드됩니다. 데이터는 쿼리나 처리 요청을 받을 때마다 메모리에 로드됩니다. 전체적인 서버 가용성을 최대화하기 위해 할당된 시간 내에 완료할 수 없을 경우 데이터 로드 요청을 중지하도록 서버에 지시하는 제한 시간 값을 설정할 수 있습니다.  
   
-|속성|Default|유효한 값|Description|  
+|이름|Default|유효한 값|Description|  
 |----------|-------------|------------------|-----------------|  
 |데이터 로드 제한 시간|1800(초 단위)|1 ~ 3600|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램에서 특정 Analysis Services 서버 인스턴스의 응답을 기다릴 시간을 지정합니다.<br /><br /> 기본적으로 서비스 애플리케이션은 특정 요청을 전달한 엔진 서비스 인스턴스로부터 데이터 페이로드를 30분 동안 기다립니다.<br /><br /> 이 기간 내에 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본이 로드될 수 없는 경우 스레드가 중지되고 새로운 스레드가 시작됩니다.|  
   
@@ -56,7 +56,7 @@ ms.locfileid: "38982615"
   
  연결 풀의 각 유형에는 연결 관리를 위해 시스템 메모리를 최적으로 사용하기 위해 설정할 수 있는 상한값이 있습니다.  
   
-|속성|Default|유효한 값|Description|  
+|이름|Default|유효한 값|Description|  
 |----------|-------------|------------------|-----------------|  
 |연결 풀 제한 시간|1800(초 단위)|1 ~ 3600|이 설정은 데이터 연결 풀에 적용됩니다.<br /><br /> 유휴 연결을 연결 풀에서 제거하기 전에 유지할 수 있는 시간을 지정합니다.<br /><br /> 기본적으로 서비스 애플리케이션에서는 5분 넘게 연결이 비활성 상태인 경우 연결을 제거합니다.|  
 |최대 사용자 연결 풀 크기|1000|-1, 0 또는 1 ~ 10000<br /><br /> -1은 유휴 연결 수에 제한이 없음을 의미합니다.<br /><br /> 0은 유휴 연결을 유지하지 않음을 의미합니다. 따라서 매번 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 대한 새로운 연결이 만들어져야 합니다.|이 설정은 특정 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 인스턴스에 대해 만들어진 모든 데이터 연결 풀의 유휴 연결에 적용됩니다.<br /><br /> SharePoint 사용자, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 및 서비스 인스턴스의 고유한 조합에 대해 개별 연결 풀이 만들어집니다. 많은 사용자가 다양한 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 원본에 액세스하는 경우 연결 풀 크기의 증가로 인해 서버 성능이 향상될 수 있습니다.<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 인스턴스에 대해 100개가 넘는 유휴 연결이 있는 경우 새로 유휴 상태가 되는 연결은 풀로 반환되지 않고 연결이 해제됩니다.|  
@@ -94,7 +94,7 @@ ms.locfileid: "38982615"
   
 ## <a name="see-also"></a>관련 항목  
  [중앙 관리에서 파워 피벗 서비스 응용 프로그램 만들기 및 구성](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [SharePoint 2010을 사용 하 여 파워 피벗 데이터 새로 고침](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [SharePoint 2010에서 Power Pivot 데이터 새로 고침](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [사용 현황 데이터 수집 구성&#40;SharePoint용 파워 피벗](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Power Pivot 서비스 계정 구성](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [Power Pivot 관리 대시보드 및 사용 데이터](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  

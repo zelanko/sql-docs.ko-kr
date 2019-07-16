@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9e84a58e-db48-4821-a0cd-5c711fcbe36b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 444e41699c1a61acb82acc419a2f23db6142f7bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c99b63800d8b007ed11c21a042edc4f51ff7c92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003223"
 ---
 # <a name="sqldisconnect-function"></a>SQLDisconnect 함수
 **규칙**  
@@ -52,7 +51,7 @@ SQLRETURN SQLDisconnect(
 ## <a name="diagnostics"></a>진단  
  때 **SQLDisconnect** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여는 *HandleType* SQL_의 HANDLE_DBC와 *처리할* 의 *ConnectionHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLDisconnect** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01002|연결 끊김 오류|연결 해제 하는 동안 오류가 발생 했습니다. 그러나 연결 해제가 했습니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  

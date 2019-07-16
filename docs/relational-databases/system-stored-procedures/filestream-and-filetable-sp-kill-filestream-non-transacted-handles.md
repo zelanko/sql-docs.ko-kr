@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7188353e-ab29-49a0-8f25-7fb8ab122589
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7189499084c40d297f30514ba2f9bf5c01ada510
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 98c986c26c8d0d0cc6e2b8ff3573f0a20d938975
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942261"
 ---
 # <a name="spkillfilestreamnontransactedhandles-transact-sql"></a>sp_kill_filestream_non_transacted_handles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ EXEC sp_kill_filestream_non_transacted_handles @dbname, @table_name, @handle_id;
 GO  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [FileTable 관리](../../relational-databases/blob/manage-filetables.md)  
  [Filestream 및 FileTable 동적 관리 뷰 (TRANSACT-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
  <br>[Filestream 및 FileTable 카탈로그 뷰 (TRANSACT-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)

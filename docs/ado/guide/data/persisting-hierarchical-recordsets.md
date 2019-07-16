@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 43798bb5-98a6-4ad6-9bf8-78154b3a1827
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f25b61ca54b3a4ac15584ecf31874f90787c735d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34649bba37f922e7597bf09870e3e9d3bcf522dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924623"
 ---
 # <a name="persisting-hierarchical-recordsets"></a>계층적 레코드 집합 유지
 계층을 저장할 수 있습니다 **레코드 집합** ADTG 또는 XML 형식으로 호출 하 여 파일에는 [저장](../../../ado/reference/ado-api/save-method.md) 메서드. 그러나 두 가지 제한 사항 적용 계층을 저장 하는 경우 **레코드 집합**XML 형식에서: 경우 XML에 저장할 수 없습니다는 계층적 **Recordset** 보류 중인 업데이트가 포함 매개 변수가 있는 저장할 수 없습니다 계층적 **레코드 집합**.  

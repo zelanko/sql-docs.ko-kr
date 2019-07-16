@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e80433c224f08b9074a8d1ef93ef96bdc157853
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147168"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178846"
 ---
 # <a name="database-readwritemodes"></a>ReadWriteMode 데이터베이스
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "50147168"
   
 |읽기 전용 모드|제한되는 작업|  
 |-------------------|---------------------------|  
-|XML/A 명령<br /><br /> <br /><br /> 참고: 다음 명령 중 하나를 실행하면 오류가 발생합니다.|**만들기**<br /><br /> **Alter**<br /><br /> **Delete**<br /><br /> **처리**<br /><br /> **MergePartitions**<br /><br /> **DesignAggregations**<br /><br /> **CommitTransaction**<br /><br /> **복원**<br /><br /> **동기화**<br /><br /> **Insert**<br /><br /> **Update**<br /><br /> **Drop**<br /><br /> <br /><br /> 참고: 읽기 전용으로 설정된 데이터베이스에서는 셀 쓰기 저장이 가능하지만 변경 내용을 커밋할 수 없습니다.|  
-|MDX 문<br /><br /> <br /><br /> 참고: 다음 문 중 하나를 실행하면 오류가 발생합니다.|**COMMIT TRAN**<br /><br /> **CREATE SESSION CUBE**<br /><br /> **ALTER CUBE**<br /><br /> **ALTER DIMENSION**<br /><br /> **CREATE DIMENSION MEMBER**<br /><br /> **DROP DIMENSION MEMBER**<br /><br /> **ALTER DIMENSION**<br /><br /> <br /><br /> 참고: 피벗 테이블 그룹화 기능은 **CREATE SESSION CUBE** 명령을 사용하여 내부적으로 구현되므로 Excel 사용자는 이 기능을 사용할 수 없습니다.|  
-|DMX 문<br /><br /> <br /><br /> 참고: 다음 문 중 하나를 실행하면 오류가 발생합니다.|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
+|XML/A 명령<br /><br /> <br /><br /> 참고: 이러한 명령 중 하나를 실행 하면 오류가 발생 합니다.|**만들기**<br /><br /> **Alter**<br /><br /> **Delete**<br /><br /> **처리**<br /><br /> **MergePartitions**<br /><br /> **DesignAggregations**<br /><br /> **CommitTransaction**<br /><br /> **복원**<br /><br /> **동기화**<br /><br /> **삽입**<br /><br /> **Update 함수**<br /><br /> **Drop**<br /><br /> <br /><br /> 참고: 읽기 전용으로 설정 된 데이터베이스의 셀 쓰기 저장이 가능 그러나 변경 내용을 커밋할 수 없습니다.|  
+|MDX 문<br /><br /> <br /><br /> 참고: 이러한 문 중 하나를 실행 하면 오류가 발생 합니다.|**COMMIT TRAN**<br /><br /> **CREATE SESSION CUBE**<br /><br /> **ALTER CUBE**<br /><br /> **ALTER DIMENSION**<br /><br /> **CREATE DIMENSION MEMBER**<br /><br /> **DROP DIMENSION MEMBER**<br /><br /> **ALTER DIMENSION**<br /><br /> <br /><br /> 참고: 기능을 사용 하 여 내부적으로 구현 되므로 Excel 사용자가 피벗 테이블 그룹화 기능은 사용할 수 없습니다 **CREATE SESSION CUBE** 명령입니다.|  
+|DMX 문<br /><br /> <br /><br /> 참고: 이러한 문 중 하나를 실행 하면 오류가 발생 합니다.|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
 |백그라운드 작업|데이터베이스를 수정하는 백그라운드 작업은 사용할 수 없습니다. 여기에는 지연 처리, 자동 관리 캐싱 등이 포함됩니다.|  
   
 ## <a name="readwritemode-usage"></a>ReadWriteMode 사용법  

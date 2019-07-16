@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8c56b233-1be8-442c-8d0e-a4c96465bc99
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d5c1975e72a90defc15e4fcb41f0cfe44a714dc8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c88b8029ee5d96986cf9b366bd8faee53ca1393b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963220"
 ---
 # <a name="url-property-rds"></a>URL 속성(RDS)
 상대 또는 절대 URL이 포함 된 문자열을 나타냅니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8013a792-639d-4550-b262-e65d30f9d291
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 925812e534afed0555c03a36e7d317a92163e5b6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: cc02137e23c3871066c01ae1a7e9655232c349c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032905"
 ---
 # <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
   
 ## <a name="result-set"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |destination_server|**sysname**|변경 내용이 복제되는 대상 서버의 이름입니다.|  
 |pub_name|**sysname**|게시의 이름입니다.|  
@@ -73,7 +72,7 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_showpendingchanges는 병합 복제에 사용됩니다.  
   
  sp_showpendingchanges는 병합 복제의 문제를 해결할 때 사용합니다.  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ade713272a4916a1ea316fe33724246d6e4248bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95ba0d84d99d2f0cd51b363a42b8620b55459b7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917749"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 특성을 지정 하는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체입니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adParamSigned**|16|매개 변수에 부호 있는 값을 허용 하는지 나타냅니다.|  
 |**adParamNullable**|64|매개 변수에 null 값을 허용 하는지 나타냅니다.|  

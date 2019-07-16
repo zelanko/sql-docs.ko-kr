@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 60a05111-c542-45b5-a0cb-433ddcf6286a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ec0ce7f6ec09dd60d36ab3faecf6fd723e0f5868
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbcfbf5dbd6d6680363c6c329d066191d22acfee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63005827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033058"
 ---
 # <a name="databases-and-files-catalog-views-transact-sql"></a>데이터베이스 및 파일 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "63005827"
   
 |||  
 |-|-|  
-|[이 (가) &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)|[sys.database_recovery_status &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)|  
+|[이 (가) &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)|[sys.database_recovery_status &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-recovery-status-transact-sql.md)|  
 |[sys.database_connection_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-connection-stats-azure-sql-database.md)|[sys.database_scoped_configurations&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)|  
 |[sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)|[sys.database_usage &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md)|  
 |[sys.database_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)|[sys.master_files&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)|  

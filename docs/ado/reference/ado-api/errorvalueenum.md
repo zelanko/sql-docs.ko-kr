@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0f9efa743e6e5f9efe99e08001980ab87bf13247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932870"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO에서 런타임 오류 유형을 지정합니다.  
@@ -37,7 +36,7 @@ ADO에서 런타임 오류 유형을 지정합니다.
 > [!NOTE]
 >  OLE DB 오류 ADO 응용 프로그램에 전달할 수 있습니다. 일반적으로 Windows 기능 코드의로 식별할 수 있습니다 *4*합니다. 예를 들어, 0x800***4***합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|변경할 수 없습니다는 **ActiveConnection** 의 속성을 **레코드 집합** 있는 개체를 **명령** 원본으로 개체입니다.|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|서버 작업을 완료할 수 없습니다.|  

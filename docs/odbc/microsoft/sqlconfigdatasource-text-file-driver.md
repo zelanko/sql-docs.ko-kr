@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1635538f69b313a73a24ab1531f8793c7d98741e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46bb00fb01ed3fee8098420794af089f2d8b981e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054077"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource(텍스트 파일 드라이버)
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "62665259"
   
  합니다 **SQLConfigDataSource** 함수를 추가 하는 데 사용 되는 수정 또는 데이터 원본 삭제 동적으로 다음과 같은 키워드를 사용 합니다.  
   
-|키워드|Description|  
+|키워드|설명|  
 |-------------|-----------------|  
 |CHARACTERSET|OEM 또는 ANSI 텍스트 드라이버입니다.|  
 |COLNAMEHEADER|텍스트 드라이버에 대 한 데이터의 첫 번째 레코드 열 이름을 지정 하는지 여부를 나타냅니다. TRUE 또는 FALSE입니다.|  

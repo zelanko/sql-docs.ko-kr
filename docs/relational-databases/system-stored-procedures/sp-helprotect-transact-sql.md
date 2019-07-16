@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62635870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997479"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**소유자**|**sysname**|개체 소유자의 이름입니다.|  
 |**개체**|**sysname**|개체 이름입니다.|  
@@ -73,7 +72,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |**동작**|**nvarchar(60)**|사용 권한의 이름입니다. 유효한 사용 권한 문은 개체의 유형에 따라 달라집니다.|  
 |**열**|**sysname**|사용 권한의 유형입니다.<br /><br /> All  =  사용 권한이 개체의 모든 현재 열을 포함합니다.<br /><br /> New  =  사용 권한이 미래의 개체에서 (ALTER문을 사용하여)  변경할 수 있는 모든 새 열을 포함합니다.<br /><br /> All+New  =  All과 New의 조합입니다.<br /><br /> 사용 권한의 유형이 열에 적용되지 않는 경우에는 마침표를 반환합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 절차의 모든 매개 변수는 선택 사항입니다. 매개 변수 없이 `sp_helprotect`를 실행한 경우에는 현재 데이터베이스에 부여되었거나 거부된 모든 사용 권한을 표시합니다.  
   
  전부가 아니라 일부 매개 변수가 지정된 경우에는 명명된 매개 변수를 사용하여 특정 매개 변수를 식별하거나 `NULL`을 자리 표시자로 사용합니다. 예를 들어 사용 권한을 부여한 데이터베이스 소유자(`dbo`)에 관한 사용 권한을 모두 보고하려면 다음을 실행합니다.  
@@ -97,7 +96,7 @@ EXEC sp_helprotect @grantorname = 'dbo';
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-the-permissions-for-a-table"></a>1\. 테이블에 대한 사용 권한 나열  
+### <a name="a-listing-the-permissions-for-a-table"></a>A. 테이블에 대한 사용 권한 나열  
  다음 예에서는 `titles` 테이블에 대한 사용 권한을 나열합니다.  
   
 ```  

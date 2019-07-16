@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7493c09964db2e0a8cbd17c6a2278dd554a2dcc
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579453"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207891"
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>호환성 수준 1200 이상에 대한 테이블 형식 모델 프로그래밍
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

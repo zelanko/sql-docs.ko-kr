@@ -2,19 +2,18 @@
 title: Analytics Platform System-수평 확장 데이터 웨어하우스의에서 새로운 기능
 description: Microsoft Analytics Platform System에서는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스의에서 새로운 기능을 참조 하세요.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b56791e9fd59aef57c2d107e21eb76896ebb4910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78b2b0e7fd05bbfa430c7a8939378091850537ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959810"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Analytics Platform System에서는 스케일 아웃 MPP 데이터 웨어하우스의에서 새로운 기능
 Microsoft Analytics Platform System (APS)에 대 한 최신 어플라이언스 업데이트의 새로운 기능을 참조 하세요. AP는 MPP SQL Server 병렬 데이터 웨어하우스를 호스트 하는 스케일 아웃 온-프레미스 어플라이언스입니다. 
@@ -48,7 +47,7 @@ APS Informatica 10.2.0 및 10.2.0 버전을 사용 하 여 작동 하는 대 한
 | AP 버전 | Informatica PowerCenter | 드라이버 |
 |:---|:---|:---|
 | APS 2016 | 9.6.1 | SQL Server Native Client 11.x |
-| APS 2016 이상 | 10.2.0, 10.2.0 Hotfix 1 | SQL Server Native Client 11.x |
+| APS 2016 이상 | 10.2.0, 10.2.0 핫픽스 1 | SQL Server Native Client 11.x |
 
 <a name="h2-aps-cu7.2"></a>
 ## <a name="aps-cu72"></a>APS CU7.2
@@ -115,7 +114,7 @@ AP는 T-SQL의 하위 집합을 지원 [DBCC 명령을](https://docs.microsoft.c
 ### <a name="bug-fixes"></a>버그 수정
 AP CU7.1를 사용 하 여 SQL Server 2016 SP2 CU2를 업그레이드 했습니다. 업그레이드는 아래에 설명 된 몇 가지 문제를 해결 합니다.
 
-| Title | Description |
+| Title | 설명 |
 |:---|:---|
 | **튜플 이동 기 교착 상태가 발생할** |업그레이드는 분산 트랜잭션 및 튜플 이동 기 백그라운드 스레드에서 교착 상태를 오래 가능성을 해결합니다. CU7.1를 설치한 후 SQL Server 시작 매개 변수 또는 전역 추적 플래그가 튜플 이동 기를 중지 하려면 TF634를 사용한 고객 안전 하 게 제거할 수 있습니다. | 
 | **특정 lag/잠재 고객 쿼리 실패** |이 업그레이드를 사용 하 여 오류가 발생 하는 지연/잠재 고객의 중첩 된 함수를 사용 하 여 CCI 테이블에 대 한 특정 쿼리 고정 됩니다. | 
@@ -182,7 +181,7 @@ AP AU6 T-SQL 호환성 향상 된 기능을 지원합니다.  이러한 추가 �
 
 **보안 함수**
 
-- [CHECKSUM()][] and [BINARY_CHECKSUM()][]
+- [CHECKSUM()][] 고 [BINARY_CHECKSUM()][]
 - [HAS_PERMS_BY_NAME()][]
 
 **추가 기능**

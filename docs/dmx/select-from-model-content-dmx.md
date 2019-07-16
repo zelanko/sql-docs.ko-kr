@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906730"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;모델&gt;합니다. 콘텐츠 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,15 +45,15 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  *expression*  
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
-## <a name="remarks"></a>Remarks  
- 합니다 **SELECT FROM**  _\<모델 >_**합니다. 콘텐츠** 문은 각 알고리즘에 관련 된 내용을 반환 합니다. 예를 들어 사용자 지정 응용 프로그램에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 사용할 수는 **SELECT FROM \<모델 >. 콘텐츠** 문을 모델의 NODE_RULE 열 값을 반환 합니다.  
+## <a name="remarks"></a>설명  
+ 합니다 **SELECT FROM**  _\<모델 >_ **합니다. 콘텐츠** 문은 각 알고리즘에 관련 된 내용을 반환 합니다. 예를 들어 사용자 지정 응용 프로그램에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 사용할 수는 **SELECT FROM \<모델 >. 콘텐츠** 문을 모델의 NODE_RULE 열 값을 반환 합니다.  
   
  다음 표에서는 마이닝 모델 콘텐츠에 포함된 열을 나열합니다.  
   
 > [!NOTE]  
 >  알고리즘은 콘텐츠를 올바르게 표시하기 위해 열을 다르게 해석할 수 있습니다. 각 알고리즘 및 해석 하 고 각 모델 유형에 대해 콘텐츠 마이닝 모델을 쿼리 하는 방법에 대 한 팁에 대 한 콘텐츠는 마이닝 모델의 설명을 참조 하세요 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)합니다.  
   
-|CONTENT 행 집합 열|Description|  
+|CONTENT 행 집합 열|설명|  
 |---------------------------|-----------------|  
 |MODEL_CATALOG|카탈로그 이름입니다. 공급자가 카탈로그를 지원하지 않을 경우 NULL입니다.|  
 |MODEL_SCHEMA|정규화되지 않은 스키마 이름입니다. 공급자가 스키마를 지원하지 않을 경우 NULL입니다.|  
@@ -62,7 +61,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |ATTRIBUTE_NAME|노드에 해당하는 특성 이름입니다.|  
 |NODE_NAME|노드 이름입니다.|  
 |NODE_UNIQUE_NAME|모델 내에서 노드의 고유한 이름입니다.|  
-|NODE_TYPE|노드 유형을 나타내는 정수입니다. .|  
+|NODE_TYPE|노드 유형을 나타내는 정수입니다. 을 선택합니다.|  
 |NODE_GUID|노드 GUID입니다. GUID가 없는 경우 NULL입니다.|  
 |NODE_CAPTION|노드에 연결된 레이블 또는 캡션이며 주로 표시 목적으로 사용됩니다. 캡션이 없는 경우 NODE_NAME이 반환됩니다.|  
 |CHILDREN_CARDINALITY|노드에 있는 자식 수입니다.|  
@@ -121,7 +120,7 @@ WHERE NODE_TYPE = 26
   
 |MODEL_NAME|NODE_DISTRIBUTION.ATTRIBUTE_NAME|NODE_DISTRIBUTION.ATTRIBUTE_VALUE|NODE_DISTRIBUTION.SUPPORT|NODE_DISTRIBUTION.PROBABILITY|NODE_DISTRIBUTION.VARIANCE|NODE_DISTRIBUTION.VALUETYPE|  
 |-----------------|----------------------------------------|-----------------------------------------|--------------------------------|------------------------------------|---------------------------------|----------------------------------|  
-|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1.|  
+|TM_NaiveBayes|Bike Buyer|Missing|0|0|0|1\.|  
 |TM_NaiveBayes|Bike Buyer|0|6556|0.506685215240745|0||  
 |TM_NaiveBayes|Bike Buyer|1|6383|0.493314784759255|0||  
   
@@ -144,7 +143,7 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>관련 항목  
- [선택 &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [선택 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   

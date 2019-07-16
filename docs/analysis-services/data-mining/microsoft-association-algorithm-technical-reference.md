@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21f779f1e0b1764fd35d6399aa220e244574d576
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545589"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183167"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft 연결 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -133,7 +133,7 @@ ms.locfileid: "52545589"
  마이닝 구조 열에 적용됩니다.  
   
  MODEL_EXISTENCE_ONLY  
- 열이 두 가지 가능한 상태인 **누락** 하 고 **기존**합니다. Null은 누락 값입니다.  
+ 열의 상태를 가진 것으로 간주 됩니다 것을 의미 합니다. **누락** 하 고 **기존**합니다. Null은 누락 값입니다.  
   
  마이닝 모델 열에 적용됩니다.  
   
@@ -151,7 +151,7 @@ ms.locfileid: "52545589"
 > [!NOTE]  
 >  Cyclical  및 Ordered  내용 유형이 지원되기는 하지만 알고리즘은 해당 유형을 불연속 값으로 처리하고 특수한 처리를 수행하지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft 연결 알고리즘](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [연결 모델 쿼리 예제](../../analysis-services/data-mining/association-model-query-examples.md)   
  [연결 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: b7f53e11-15f0-4602-8134-b166160888f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a19baf0d76c34e58e9cb4c9f73a0f77bbb47e7c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5edf4347eb5c4ec776402aefc0ed0ee1cfe9c539
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910280"
 ---
 # <a name="batching-stored-procedure-calls"></a>저장 프로시저 호출 일괄 처리
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -3,18 +3,17 @@ title: SQL Server 2017 및 2019에 대 한 Linux 리포지토리 구성
 description: 확인 하 고 SQL Server 2019 및 Linux의 SQL Server 2017에 대 한 소스 리포지토리를 구성 합니다. 소스 리포지토리에 설치 및 업그레이드 하는 동안 적용 되는 SQL Server의 버전에 적용 됩니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 05299a2efd374dc7d58b5e32fcdea918b12fc1d3
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 33616b9a7767156e4cfd69d233f7dcfe5fc080f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967526"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>설치 및 Linux의 SQL Server 업그레이드에 대 한 리포지토리 구성
 
@@ -54,7 +53,7 @@ Linux의 SQL Server를 설치할 때 Microsoft 리포지토리를 구성 해야 
 
 - **GDR**: GDR 리포지토리는 해당 릴리스 이후 기본 SQL Server 릴리스 및만 중요 한 수정 사항 및 보안 업데이트 패키지를 포함합니다. 이러한 업데이트는 다음 CU 릴리스에 추가 됩니다.
 
-각 CU는 하며 GDR 릴리스는 전체 SQL Server 패키지 및 해당 저장소에 대 한 모든 이전 업데이트를 포함합니다. CU 릴리스에 GDR 릴리스에서 업데이트는 SQL Server에 대 한 구성된 리포지토리를 변경 하 여 지원 됩니다. 할 수도 있습니다 [다운 그레이드](sql-server-linux-setup.md#rollback) 주요 버전 내에서 모든 릴리스를 (예: 2017).
+각 CU는 하며 GDR 릴리스는 전체 SQL Server 패키지 및 해당 저장소에 대 한 모든 이전 업데이트를 포함합니다. CU 릴리스에 GDR 릴리스에서 업데이트는 SQL Server에 대 한 구성된 리포지토리를 변경 하 여 지원 됩니다. 할 수도 있습니다 [다운 그레이드](sql-server-linux-setup.md#rollback) 주요 버전 내에서 모든 릴리스를 (예: 2017)입니다.
 
 > [!NOTE]
 > CU로 GDR 버전에서 업데이트할 수 있습니다 리포지토리를 변경 하 여 언제 든 지 릴리스 합니다. 업데이트를 CU에서 릴리스에서 GDR 릴리스로 지원 되지 않습니다.

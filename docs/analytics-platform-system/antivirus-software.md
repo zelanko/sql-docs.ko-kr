@@ -2,19 +2,18 @@
 title: Analytics Platform System 바이러스 백신 소프트웨어 | Microsoft Docs
 description: 데이터 센터에서 바이러스 백신 소프트웨어에 필요한 경우 분석 플랫폼 시스템에 바이러스 백신 소프트웨어를 설치 하려면 이러한 지침을 따르세요. 데이터 센터의 요구 사항 확실 하지 않은 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e52841ebe96d8aab84e4d09c91b590e8e4d7e2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961601"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Analytics Platform System에 대 한 바이러스 백신 소프트웨어
 데이터 센터에서 바이러스 백신 소프트웨어에 필요한 경우 분석 플랫폼 시스템에 바이러스 백신 소프트웨어를 설치 하려면 이러한 지침을 따르세요. 데이터 센터의 요구 사항 확실 하지 않은 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "63199616"
   
 -   C:\ProgramData\Microsoft\Windows\Hyper-V-가상 컴퓨터 구성 디렉터리  
   
--   C:\Users\Public\Documents\Hyper-V\Virtual Hard Disks - Default virtual hard disk drive directory  
+-   기본 가상 하드 디스크 드라이브 디렉터리 C:\Users\Public\Documents\Hyper-V\Virtual 하드 디스크  
   
 -   C:\clusterStorage-가상 하드 디스크 드라이브 디렉터리  
   

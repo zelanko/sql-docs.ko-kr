@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7a8c96e0-1328-4f35-97fc-b6d9cb808bae
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 34218bbe7e8ac2e94acbb55ceb8bd64008e67c1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1ad817a6659bd1ee6bd9f6d042c90d04c337193
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992042"
 ---
 # <a name="run-dqsinstallerexe-to-complete-data-quality-server-installation"></a>DQSInstaller.exe를 실행하여 Data Quality 서버 설치 완료
 
@@ -56,7 +55,7 @@ ms.locfileid: "66776342"
 3.  데이터베이스 마스터 키에 대한 암호를 입력하라는 메시지가 표시됩니다. 데이터베이스 마스터 키는 나중에 [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS)에서 참조 데이터 공급자를 설정할 때 DQS_MAIN 데이터베이스에 저장되는 참조 데이터 서비스 공급자 키를 암호화하기 위해 필요합니다.  
   
     > [!IMPORTANT]  
-    >  암호 적어도 8 자 이어야 하며 다음 네 가지 범주 중 3 가지 문자를 포함 해야 합니다. 영어 대문자(A, B, C,... Z), 영어 소문자(a, b, c,...), 숫자(0, 1, 2,... 9) 및 영숫자가 아닌 문자 또는 특수 문자(~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?//)로 분류되는 4가지 범주입니다. 예를 들어 P@ssword을 참조하십시오. 현재 암호가 요구 사항을 따르지 않을 경우 설치 프로그램에서 다른 암호를 입력하라는 메시지가 표시됩니다.  
+    >  암호 적어도 8 자 이어야 하며 다음 네 가지 범주 중 3 가지 문자를 포함 해야 합니다. 영어 대문자(A, B, C,... Z), 영어 소문자(a, b, c,...), 숫자(0, 1, 2,... 9) 및 영숫자가 아닌 문자 또는 특수 문자(~!@#$%^&*()_-+=|\\{}[]:;"'<>,.?//)로 분류되는 4가지 범주입니다. 예: P@ssword. 현재 암호가 요구 사항을 따르지 않을 경우 설치 프로그램에서 다른 암호를 입력하라는 메시지가 표시됩니다.  
   
 4.  암호를 제공하고, 다시 암호를 확인한 다음 Enter 키를 눌러 설치를 계속합니다.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66776342"
 ##  <a name="CommandPrompt"></a> 명령 프롬프트에서 DQSInstaller.exe 실행  
  다음 명령줄 매개 변수를 사용하여 명령 프롬프트에서 DQSInstaller.exe를 실행할 수 있습니다.  
   
-|DQSInstaller.exe 매개 변수|Description|예제 구문|  
+|DQSInstaller.exe 매개 변수|설명|예제 구문|  
 |--------------------------------|-----------------|-------------------|  
 |-collation|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]설치에 사용되는 서버 데이터 정렬입니다.<br /><br /> DQS는 대/소문자를 구분하지 않는 데이터 정렬만 지원합니다. 대/소문자를 구분하는 데이터 정렬을 지정하는 경우 설치 프로그램은 지정된 데이터 정렬의 대/소문자 구분 없는 버전을 사용하려고 합니다. 대/소문자 구분 없는 버전이 없거나 해당 데이터 정렬을 SQL에서 지원하지 않는 경우 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 설치가 실패합니다.<br /><br /> 서버 데이터 정렬이 지정되지 않는 경우 기본 데이터 정렬 SQL_Latin1_General_CP1_CI_AS가 사용됩니다.|`dqsinstaller.exe -collation <collation_name>`|  
 |-upgradedlls|DQS 데이터베이스(DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA)를 다시 만드는 것을 건너뛰고, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스에서 DQS가 사용하는 SQLCLR(SQL 공용 언어 런타임) 어셈블리만 업데이트합니다.<br /><br /> 자세한 내용은 [.NET Framework 업데이트 후 SQLCLR 어셈블리 업그레이드](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)를 참조하세요.|`dqsinstaller.exe -upgradedlls`|  

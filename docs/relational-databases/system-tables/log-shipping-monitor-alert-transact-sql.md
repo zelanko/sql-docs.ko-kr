@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 1c775e48-9898-4149-b9d1-04d465f23438
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2e5bdee7bfd46e99424169e0890c6aa6bf4d4187
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a97fe48c710fb2945cd377da92808404addd094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990083"
 ---
 # <a name="logshippingmonitoralert-transact-sql"></a>log_shipping_monitor_alert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   로그 전달에 대한 경고 작업 ID를 저장합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.   
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**alert_job_id**|**uniqueidentifier**|로그 전달 경고 작업의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업 ID입니다.|  
   

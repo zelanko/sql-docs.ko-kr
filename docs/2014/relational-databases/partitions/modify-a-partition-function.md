@@ -11,11 +11,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d43e86596e30352286cb94e8994177247856a7c
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763675"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206979"
 ---
 # <a name="modify-a-partition-function"></a>파티션 함수 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 을 사용하여 분할된 테이블이나 인덱스의 파티션 함수에 지정된 파티션 수를 하나씩 더하거나 빼서 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 테이블이나 인덱스가 분할되는 방식을 변경할 수 있습니다. 파티션 추가는 기존의 한 파티션을 두 파티션으로 "분할"하고 새 파티션의 경계를 다시 정의하는 것입니다. 파티션 삭제는 두 파티션의 경계를 하나로 "병합"하는 것입니다. 이 마지막 동작에서 한 파티션은 다시 채워지고 다른 한 파티션은 할당되지 않은 상태로 남게 됩니다.  

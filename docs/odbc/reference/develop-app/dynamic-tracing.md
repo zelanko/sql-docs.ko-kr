@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ebe58a83-a7b0-4747-86c8-2af2940471ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63dbfda01d96cad53e5830e598b5812ed79d8f04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8420589761a1f8cb1f9cf8a3022842863fd30758
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046893"
 ---
 # <a name="dynamic-tracing"></a>동적 추적
 추적을 사용 하도록 설정 또는 언제 든 지 실행 응용 프로그램에서 사용 하지 않도록 설정 수 있습니다. 이렇게 하면 응용 프로그램을 여러 개의 함수 호출을 추적 합니다.  

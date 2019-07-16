@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 12b02d97-702b-434f-baf6-e49a6b2cd4de
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 12e538228afae8df0e48d795ad110b34cc45c430
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 5e288607f11d5be8cdc467cc97c7a6c5a4e21b21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040683"
 ---
 # <a name="propertynumval-property-clientnetworkprotocolproperty-class"></a>PropertyNumVal 속성(ClientNetworkProtocolProperty 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,5 +42,5 @@ object.PropertyNumVal [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  현재 속성의 숫자 값을 지정하는**int32** 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   

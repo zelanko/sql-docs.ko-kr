@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d2a04f5052a0b686d3669c976ec7c4bee09e52b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57b187bf4f14bd5c05f91a433fa331e954fa0fb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020373"
 ---
 # <a name="row-status-array"></a>행 상태 배열
 데이터 뿐만 아니라 **SQLFetch** 하 고 **SQLFetchScroll** 행 집합의 각 행의 상태를 제공 하는 배열을 반환할 수 있습니다. 이 배열은 SQL_ATTR_ROW_STATUS_PTR 문 특성을 통해 지정 됩니다. 이 배열 응용 프로그램에 의해 할당 되 고 SQL_ATTR_ROW_ARRAY_SIZE 문 특성에 의해 지정 된 만큼의 요소가 있어야 합니다. 배열의 값 설정 됩니다 **SQLBulkOperations**를 **SQLFetch**합니다 **SQLFetchScroll**, 및 **SQLSetPos 합니다.** 값의 행과 마지막 페치된 이후로 해당 상태가 변경 되었는지 여부 상태를 설명 합니다.  
   
-|행 상태 배열 값입니다.|Description|  
+|행 상태 배열 값입니다.|설명|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|행을 성공적으로 가져온 및 마지막 페치된 후 변경 되지 않은 합니다.|  
 |SQL_ROW_SUCCESS_WITH_INFO|행을 성공적으로 가져온 및 마지막 페치된 후 변경 되지 않은 합니다. 그러나 행에 대 한 경고가 반환 되었습니다.|  

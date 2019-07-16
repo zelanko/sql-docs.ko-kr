@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 86d77985-a0d0-405a-8587-c85a20540a0e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 52cb60fc8d0c214bbc3d827617cf088a89b2aa83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1bdc406778bea0d6355e747998d2517b841fc17b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922778"
 ---
 # <a name="datafactory-customization"></a>DataFactory 사용자 지정
 원격 데이터 서비스 (RDS)는 3 계층 클라이언트/서버 시스템에서 데이터 액세스를 쉽게 수행 하는 방법을 제공 합니다. 원격 데이터 원본 또는 연결 문자열에서 쿼리를 수행 하려면 연결 및 명령 문자열 매개 변수를 지정 하는 클라이언트 데이터 컨트롤 및 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 업데이트를 수행 하는 매개 변수 개체입니다.  

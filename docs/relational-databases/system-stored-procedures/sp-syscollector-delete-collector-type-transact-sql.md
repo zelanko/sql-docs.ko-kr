@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3f32905e-0005-42cb-aef1-7bd04c51fbac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e7f36eb20b4a5f72ce980f8e35cb39580f4f5142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c22170fff456a2ed65c295a1974539da20499c52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000868"
 ---
 # <a name="spsyscollectordeletecollectortype-transact-sql"></a>sp_syscollector_delete_collector_type(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_syscollector_delete_collector_type [[ @collector_type_uid = ] 'collector_type
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  어느 *collector_type_uid* 또는 *이름* 해야 값, 둘 다 NULL 일 수 없습니다.  
   
  이 수집기 형식의 컬렉션 항목이 있으면 이 프로시저에서 오류가 발생됩니다.  

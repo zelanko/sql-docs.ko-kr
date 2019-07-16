@@ -4,18 +4,17 @@ titleSuffix: SQL Server
 description: 이 빠른 시작에서는 선택한 클라우드의 Linux에서 SQL Server를 실행하는 방법을 보여 줍니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/25/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 00b2f24de925c1d957e535030079ad0b1e18487d
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 39cde4a4f3b4e970bfe1367432e986c48f55a975
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910519"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>빠른 시작: 클라우드에서 SQL Server를 실행 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]

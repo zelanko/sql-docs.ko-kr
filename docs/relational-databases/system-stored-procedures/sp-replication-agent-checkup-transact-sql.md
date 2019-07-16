@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50357c2e-71aa-4e13-9e2e-0977a3655cc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 73335322d9e4c8602e299255ebcd3b3b183aaaec
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 15d226e20448e503344667ed801bdbd9b7cb07f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950712"
 ---
 # <a name="spreplicationagentcheckup-transact-sql"></a>sp_replication_agent_checkup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_replication_agent_checkup [ [ @heartbeat_interval = ] heartbeat_interval ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **sp_replication_agent_checkup** 주의 대상으로 하는 각 에이전트에 대해 14151 오류를 발생 시킵니다. 또한 에이전트에 대한 실패 기록 메시지를 기록합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_replication_agent_checkup** 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

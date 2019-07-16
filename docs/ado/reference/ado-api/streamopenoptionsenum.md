@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 091c640ab09cf70cff5e6f7ce3d7bf1dc9dd34ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 562e79590a2a5f1f5e9bb609b9a0ad0ea8b2bfd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928682"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 열기에 대 한 옵션을 지정 하는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다. OR 연산을 사용 하 여 값을 결합할 수 있습니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adOpenStreamAsync**|1|열립니다는 **Stream** 비동기 모드의 개체입니다.|  
 |**adOpenStreamFromRecord**|4|콘텐츠를 식별 하는 *소스* 매개 변수는 이미 열려 있어야 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체입니다. 기본 동작을 처리 하는 것 *원본* 트리 구조에서 노드로 직접 가리키는 url입니다. 해당 노드와 연결 된 기본 스트림이 열려 있습니다.|  

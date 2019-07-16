@@ -5,17 +5,16 @@ description: Kubernetes에서 실행 하 고 관계형 둘 다에 대 한 확장
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dd9b649dbb7bf2fc68c34ae22a1d270515756df8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 166fa1d5b736720b8bab7dff6a8ea56c63a702fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958850"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터란 무엇인가요?
 

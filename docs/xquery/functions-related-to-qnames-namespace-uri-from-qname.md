@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ab3f003-2a3b-4268-9e88-b615e35701b2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 111eff61472e33c6517f733d45f1ea0e3bd1700c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 96edefd5409520109e2b2155507dd8879ed4b0d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946625"
 ---
 # <a name="functions-related-to-qnames---namespace-uri-from-qname"></a>QNames 관련 함수 - namespace-uri-from-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ namespace-uri-from-QName($arg as xs:QName?) as xs:string?
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>1. QName에서 네임스페이스 URI 검색  
+### <a name="a-retrieve-the-namespace-uri-from-a-qname"></a>A. QName에서 네임스페이스 URI 검색  
  작업 샘플을 보려면 [QName의 로컬 이름 &#40;XQuery&#41;](../xquery/functions-related-to-qnames-local-name-from-qname.md)합니다.  
   
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  

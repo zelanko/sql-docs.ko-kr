@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe71adc1be14b40d18baf50eecd68c2bef65c836
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997566"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +39,11 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @dbname = ] 'dbname'` 데이터베이스의 이름이입니다. *dbname* 됩니다 **sysname**, 기본값은 **%** 합니다. 하는 경우 **%**, 한 다음 게시자의 모든 데이터베이스를 포함 하는 결과 집합, 그렇지 않으면 지정된 된 데이터베이스에 대 한 정보만 반환 됩니다. 아래에 설명된 바와 같이 사용자가 적절한 권한을 가지고 있지 않은 데이터베이스에 대해서는 정보가 반환되지 않습니다.  
+`[ @dbname = ] 'dbname'` 데이터베이스의 이름이입니다. *dbname* 됩니다 **sysname**, 기본값은 **%** 합니다. 하는 경우 **%** , 한 다음 게시자의 모든 데이터베이스를 포함 하는 결과 집합, 그렇지 않으면 지정된 된 데이터베이스에 대 한 정보만 반환 됩니다. 아래에 설명된 바와 같이 사용자가 적절한 권한을 가지고 있지 않은 데이터베이스에 대해서는 정보가 반환되지 않습니다.  
   
 `[ @type = ] 'type'` 결과 집합에 있는 데이터베이스만 포함 되도록 제한 지정한 복제 옵션인 *형식* 값이 설정 되었습니다. *형식* 됩니다 **sysname**, 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**publish**|트랜잭션 복제가 허용됩니다.|  
 |**병합 게시**|병합 복제가 허용됩니다.|  
@@ -68,7 +67,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helpreplicationdboption** 스냅숏, 트랜잭션 및 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

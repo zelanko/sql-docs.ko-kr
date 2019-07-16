@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f60ce03d303941855b0b1eaa242b03966db1e79f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946103"
 ---
 # <a name="xqueries-involving-hierarchy"></a>계층 포함 XQuery
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -30,10 +29,10 @@ ms.locfileid: "51670842"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>1. 제조 지침 문서에서 작업 센터 위치와 해당 위치의 첫 번째 제조 단계 검색  
+### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. 제조 지침 문서에서 작업 센터 위치와 해당 위치의 첫 번째 제조 단계 검색  
  제품 모델 7에 대해 쿼리를 포함 하는 XML을 생성 합니다 <`ManuInstr`> 요소를 사용 하 여 **ProductModelID** 하 고 **ProductModelName** 특성 및 하나 이상의 <`Location`> 자식 요소입니다.  
   
- 각 <`Location`> 요소에는 자체 특성 집합과 하나의 <`step`> 자식 요소가 있습니다. 이 <`step`> 자식 요소는 작업 센터 위치의 첫 번째 제조 단계입니다.  
+ 각 <`Location`> 요소와 특성의 고유한 집합이 <`step`> 자식 요소입니다. 이 <`step`> 자식 요소는 작업 센터 위치의 첫 번째 제조 단계입니다.  
   
 ```sql
 SELECT Instructions.query('  
@@ -62,7 +61,7 @@ WHERE ProductModelID=7
   
 -   합니다 **1!s!sql:column ()** 생성 되는 XML의 관계형 값을 포함 하는 데 사용 됩니다.  
   
--   <`Location`> 요소를 생성할 때 $wc/@*는 모든 작업 센터 위치 특성을 검색합니다.  
+-   생성은 <`Location`> 요소를 $wc/@* 모든 작업 센터 위치 특성을 검색 합니다.  
   
 -   합니다 **string ()** 함수에서 문자열 값을 반환 합니다 <`step`> 요소입니다.  
   
@@ -84,8 +83,8 @@ WHERE ProductModelID=7
 </ManuInstr>   
 ```  
   
-### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>2. AdditionalContactInfo 열에서 모든 전화 번호 찾기  
- 다음 쿼리는 <`telephoneNumber`> 요소에 대한 전체 계층을 검색하여 특정 고객 연락처의 추가 전화 번호를 검색합니다. <`telephoneNumber`> 요소는 계층의 아무 곳에나 표시될 수 있기 때문에 이 쿼리는 검색 시 하위 항목과 자체 연산자(//)를 사용합니다.  
+### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>2\. AdditionalContactInfo 열에서 모든 전화 번호 찾기  
+ 에 대 한 전체 계층 구조를 검색 하 여 특정 고객 연락처에 대 한 추가 전화 번호를 검색 하는 다음 쿼리는 <`telephoneNumber`> 요소입니다. 때문에 <`telephoneNumber`> 요소의 아무 위치에 계층 하위 항목과 자체 연산자를 사용 하 여 쿼리 (/ /) 검색에서 합니다.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -112,11 +111,11 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- <`AdditionalContactInfo`>의 <`telephoneNumber`> 자식 요소와 같이 최상위 전화 번호만 검색하려면 쿼리의 FOR 식이 다음으로 변경됩니다.  
+ 특히 최상위 전화 번호만 검색 하는 <`telephoneNumber`> 자식 요소 <`AdditionalContactInfo`>, 쿼리의 FOR 식이 변경  
   
- `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber` 을 참조하세요.  
+ `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`항목을 참조하세요.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [XQuery 기초](../xquery/xquery-basics.md)   
  [XML 생성 &#40;XQuery&#41;](../xquery/xml-construction-xquery.md)   
  [XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)  

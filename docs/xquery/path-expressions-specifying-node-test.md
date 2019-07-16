@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1d216db1a0d8d83279babb2e772413dfb94889c2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946421"
 ---
 # <a name="path-expressions---specifying-node-test"></a>경로 식 - 노드 테스트 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +39,9 @@ ms.locfileid: "51657969"
   
  노드 테스트 조건은 다음을 포함할 수 있습니다.  
   
--   노드 이름 -  지정된 이름이 있는 주 노드 종류의 노드만 반환됩니다.  
+-   노드 이름 - 지정된 이름이 있는 주 노드 종류의 노드만 반환됩니다.  
   
--   노드 유형 -  지정된 유형의 노드만 반환됩니다.  
+-   노드 유형 - 지정된 유형의 노드만 반환됩니다.  
   
 > [!NOTE]  
 >  XQuery 경로 식에 지정된 노드 이름은 Transact-SQL 쿼리와 같은 데이터 정렬 구분 규칙이 적용되지 않고 항상 대/소문자를 구분합니다.  
@@ -93,7 +92,7 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
 ## <a name="node-type-as-node-test"></a>노드 테스트로서의 노드 유형  
  요소 노드가 아닌 노드 유형을 쿼리하려면 노드 유형 테스트를 사용합니다. 다음 표에 표시된 것처럼 사용 가능한 노드 유형 테스트는 네 가지입니다.  
   
-|노드 유형|반환 값|예제|  
+|노드 형식|반환 값|예제|  
 |---------------|-------------|-------------|  
 |`comment()`|주석 노드에 대해 True|`following::comment()`는 컨텍스트 노드 다음에 나타나는 모든 주석 노드를 선택합니다.|  
 |`node()`|모든 종류의 노드에 대해 True|`preceding::node()`는 컨텍스트 노드 이전에 나타나는 모든 노드를 선택합니다.|  
@@ -111,7 +110,7 @@ child::comment()
 ## <a name="examples"></a>예  
  다음 예에서는 노드 이름과 노드 종류를 비교합니다.  
   
-### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>1. 경로 식에서 노드 테스트로 노드 이름과 노드 유형을 지정한 결과  
+### <a name="a-results-of-specifying-the-node-name-and-the-node-type-as-node-tests-in-a-path-expression"></a>A. 경로 식에서 노드 테스트로 노드 이름과 노드 유형을 지정한 결과  
  다음 예제에서는 간단한 XML 문서에 할당 됩니다는 **xml** 형식 변수입니다. 문서는 다른 경로 식을 사용하여 쿼리됩니다. 그런 다음 결과가 비교됩니다.  
   
 ```  
@@ -199,10 +198,10 @@ text2
 text3  
 ```  
   
-### <a name="b-specifying-a-node-name-in-the-node-test"></a>2. 노드 테스트에서 노드 이름 지정  
+### <a name="b-specifying-a-node-name-in-the-node-test"></a>2\. 노드 테스트에서 노드 이름 지정  
  다음 예에서는 모든 경로 식에서 노드 테스트로 노드 이름을 지정합니다. 그 결과 모든 식에서 노드 테스트에 지정된 노드 이름이 있는 축에 대한 주 노드 종류의 노드를 반환합니다.  
   
- 다음 쿼리 식은 `Production.ProductModel` 테이블에 저장된 제품 카탈로그 XML 문서에서 <`Warranty`> 요소를 반환합니다.  
+ 다음 쿼리 식을 반환 합니다 <`Warranty`>에 저장 된 제품 카탈로그 XML 문서에서 요소를 `Production.ProductModel` 테이블:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -222,7 +221,7 @@ WHERE ProductModelID=19
   
 -   축 단계의 선택적 단계 한정자 부분은 식의 어느 단계에서도 지정되지 않습니다.  
   
- 쿼리는 <`ProductDescription`> 요소의 <`Features`> 요소 자식 중 <`Warranty`> 요소 자식을 반환합니다.  
+ 쿼리에서 반환 합니다 <`Warranty`> 요소 자식을 <`Features`> 요소 자식에는 <`ProductDescription`> 요소입니다.  
   
  다음은 결과입니다.  
   
@@ -245,9 +244,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 와일드카드 문자는 노드 이름에 대해 지정됩니다. 따라서 쿼리는 <`ProductDescription`> 요소 노드의 <`Features`> 요소 노드 자식 중 모든 요소 노드 자식을 반환합니다.  
+ 와일드카드 문자는 노드 이름에 대해 지정됩니다. 따라서 쿼리는 모든 요소 노드 자식을 반환 합니다 <`Features`> 요소 노드 자식에는 <`ProductDescription`> 요소 노드.  
   
- 다음 쿼리는 이전 쿼리와 비슷하지만 와일드카드 문자와 함께 네임스페이스가 지정되어 있다는 점이 다릅니다. 그 결과 해당 네이스페이스의 모든 요소 노드 자식이 반환됩니다. <`Features`> 요소에는 다른 네임스페이스의 요소가 포함될 수 있습니다.  
+ 다음 쿼리는 이전 쿼리와 비슷하지만 와일드카드 문자와 함께 네임스페이스가 지정되어 있다는 점이 다릅니다. 그 결과 해당 네이스페이스의 모든 요소 노드 자식이 반환됩니다. <`Features`> 요소는 서로 다른 네임 스페이스에서 요소를 포함할 수 있습니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -271,9 +270,9 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- 이 쿼리는 제품 카탈로그 XML 문서에서 모든 네임스페이스의 <`Maintenance`> 요소 노드 자식을 반환합니다.  
+ 이 쿼리는 반환 된 <`Maintenance`> 제품 카탈로그 XML 문서에서 모든 네임 스페이스에서 요소 노드 자식을 합니다.  
   
-### <a name="c-specifying-node-kind-in-the-node-test"></a>3. 노드 테스트에서 노드 종류 지정  
+### <a name="c-specifying-node-kind-in-the-node-test"></a>3\. 노드 테스트에서 노드 종류 지정  
  다음 예에서는 모든 경로 식에서 노드 테스트로 노드 종류를 지정합니다. 그 결과 모든 식은 노드 테스트에 지정된 종류의 노드를 반환합니다.  
   
  다음 쿼리의 경우 경로 식이 세 번째 단계에서 노드 종류를 지정합니다.  
@@ -296,7 +295,7 @@ WHERE ProductModelID=19
   
 -   처음 두 단계는 노드 테스트로 노드 이름을 지정하고 세 번째 단계는 노드 테스트로 노드 종류를 지정합니다.  
   
--   식은 <`ProductDescription`> 요소 노드의 <`Features`> 요소 자식 중 텍스트 노드 자식을 반환합니다.  
+-   식 텍스트 노드 자식을 반환 된 <`Features`> 요소 자식에는 <`ProductDescription`> 요소 노드.  
   
  텍스트 노드 하나만 반환됩니다. 다음은 결과입니다.  
   
@@ -304,7 +303,7 @@ WHERE ProductModelID=19
 These are the product highlights.   
 ```  
   
- 다음 쿼리는 <`ProductDescription`> 요소의 주석 노드 자식을 반환합니다.  
+ 다음 쿼리는 주석 노드 자식을 반환 합니다 <`ProductDescription`> 요소:  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -320,7 +319,7 @@ WHERE ProductModelID=19
   
 -   두 번째 단계는 노드 테스트로 노드 종류를 지정합니다.  
   
--   그 결과 식은 <`ProductDescription`> 요소 노드의 주석 노드 자식을 반환합니다.  
+-   결과적으로, 식이 주석 노드 자식을 반환 합니다 <`ProductDescription`> 요소 노드.  
   
  다음은 결과입니다.  
   

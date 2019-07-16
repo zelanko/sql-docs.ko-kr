@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: dbed0eba3fec73d7134b1ce21275c28dbd387fcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b31b884e0f86bf2aebe4859cd1c7a441669e813
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905996"
 ---
 # <a name="isempty-mdx"></a>IsEmpty(MDX)
 
@@ -32,7 +31,7 @@ IsEmpty(Value_Expression)
  *Value_Expression*  
  일반적으로 멤버나 튜플의 셀 좌표를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **IsEmpty** 함수에서 반환 **true** 평가 식이 빈 셀 값인 경우. 반환이 고, 그렇지 **false**합니다.  
   
 > [!NOTE]  

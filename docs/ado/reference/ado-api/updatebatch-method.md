@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11c930efdffe5eb685494843f2b0abe7b753ea3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9d74fe938ce486a4cd15573af8166dbed12ba6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937849"
 ---
 # <a name="updatebatch-method"></a>UpdateBatch 메서드
 모든 보류 중인 일괄 처리 업데이트를 디스크에 씁니다.  
@@ -41,7 +40,7 @@ recordset.UpdateBatch AffectRecords, PreserveStatus
  *PreserveStatus*  
  (선택 사항) A **부울** 에 표시 된 대로 로컬 변경 여부를 지정 하는 값을 [상태](../../../ado/reference/ado-api/status-property-ado-recordset.md) 속성을 적용 해야 합니다. 이 값 설정 하는 경우 **True**서 **상태** 업데이트가 완료 되 면 각 레코드의 속성이 변경 되지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여는 **UpdateBatch** 메서드를 수정 하는 경우를 **레코드 집합** 개체에 대 한 모든 변경 내용을 전송할 일괄 업데이트 모드에서는 **레코드 집합** 기본 데이터베이스 개체입니다.  
   
  경우는 **레코드 집합** 개체가 일괄 처리 업데이트를 지원, 호출할 때까지 로컬로 여러 변경 내용을 하나 이상의 레코드를 캐시할 수 있습니다 합니다 **UpdateBatch** 메서드. 현재 레코드를 편집 하거나 호출 하는 경우 새 레코드를 추가 하는 경우는 **UpdateBatch** 메서드를 ADO를 자동으로 호출 합니다 [업데이트](../../../ado/reference/ado-api/update-method.md) 하기 전에 현재 레코드에 보류 중인 변경 내용을 저장 하는 방법 공급자에 게 일괄 처리 된 변경 내용을 전송 합니다. 키 집합 또는 정적 커서에만 사용 하 여 업데이트 하는 일괄 처리를 사용 해야 합니다.  

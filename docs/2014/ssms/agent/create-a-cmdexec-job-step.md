@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 896a3d19345805d5468f3ec238ae5e75be34daba
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822257"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211471"
 ---
 # <a name="create-a-cmdexec-job-step"></a>CmdExec 작업 단계 만들기
   이 항목에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Server 관리 개체를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 실행 프로그램이나 운영 체제 명령을 사용하는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 에이전트 작업 단계를 만들고 정의하는 방법에 대해 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "52822257"
   
 -   **CmdExec 작업 단계를 만들려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMS)  
+     [SQL Server Management Studio](#SSMS)  
   
      [Transact-SQL](#TSQL)  
   

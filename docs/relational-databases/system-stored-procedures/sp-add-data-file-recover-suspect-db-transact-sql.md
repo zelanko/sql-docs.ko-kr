@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b25262aa-a228-48b7-8739-6581c760b171
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee4b0fd37a3174f6e1c4a981cece8587ef48e1d5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2c95b74b5c1875f2a1f1db40ec42e3f3ada87a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942368"
 ---
 # <a name="spadddatafilerecoversuspectdb-transact-sql"></a>sp_add_data_file_recover_suspect_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,19 +47,19 @@ sp_add_data_file_recover_suspect_db [ @dbName= ] 'database'
 ## <a name="arguments"></a>인수  
 `[ @dbName = ] 'database_ '` 데이터베이스의 이름이입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @filegroup = ] 'filegroup_name_ '` 파일을 추가할 파일 그룹이입니다. *filegroup_name* 됩니다 **nvarchar(260)**, 기본값은 NULL 이며 주 파일을 나타내는입니다.  
+`[ @filegroup = ] 'filegroup_name_ '` 파일을 추가할 파일 그룹이입니다. *filegroup_name* 됩니다 **nvarchar(260)** , 기본값은 NULL 이며 주 파일을 나타내는입니다.  
   
-`[ @name = ] 'logical_file_name_ '` 사용 하는 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일을 참조 하도록 합니다. 이 이름은 서버에서 고유해야 합니다. *logical_file_name* 됩니다 **nvarchar(260)**, 기본값은 없습니다.  
+`[ @name = ] 'logical_file_name_ '` 사용 하는 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일을 참조 하도록 합니다. 이 이름은 서버에서 고유해야 합니다. *logical_file_name* 됩니다 **nvarchar(260)** , 기본값은 없습니다.  
   
-`[ @filename = ] 'os_file_name_ '` 경로 및 파일 이름은 운영 체제에서 파일에 사용 합니다. 파일은 반드시 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스에 있어야 합니다. *os_file_name* 됩니다 **nvarchar(260)**, 기본값은 없습니다.  
+`[ @filename = ] 'os_file_name_ '` 경로 및 파일 이름은 운영 체제에서 파일에 사용 합니다. 파일은 반드시 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 인스턴스에 있어야 합니다. *os_file_name* 됩니다 **nvarchar(260)** , 기본값은 없습니다.  
   
-`[ @size = ] 'size_ '` 파일의 초기 크기가입니다. *크기* 됩니다 **nvarchar(20)**, 기본값은 NULL입니다. 소수점이 포함되지 않은 정수를 지정하십시오. 메가바이트를 지정하려면 MB를, 킬로바이트를 지정하려면 KB를 사용합니다. 기본값은 MB입니다. 최소값은 512KB입니다. 하는 경우 *크기* 지정 하지 않으면 기본값은 1MB입니다.  
+`[ @size = ] 'size_ '` 파일의 초기 크기가입니다. *크기* 됩니다 **nvarchar(20)** , 기본값은 NULL입니다. 소수점이 포함되지 않은 정수를 지정하십시오. 메가바이트를 지정하려면 MB를, 킬로바이트를 지정하려면 KB를 사용합니다. 기본값은 MB입니다. 최소값은 512KB입니다. 하는 경우 *크기* 지정 하지 않으면 기본값은 1MB입니다.  
   
-`[ @maxsize = ] 'max_size_ '` 파일이 증가할 수 있는 최대 크기가입니다. *max_size* 됩니다 **nvarchar(20)**, 기본값은 NULL입니다. 소수점이 포함되지 않은 정수를 지정하십시오. 메가바이트를 지정하려면 MB를, 킬로바이트를 지정하려면 KB를 사용합니다. 기본값은 MB입니다.  
+`[ @maxsize = ] 'max_size_ '` 파일이 증가할 수 있는 최대 크기가입니다. *max_size* 됩니다 **nvarchar(20)** , 기본값은 NULL입니다. 소수점이 포함되지 않은 정수를 지정하십시오. 메가바이트를 지정하려면 MB를, 킬로바이트를 지정하려면 KB를 사용합니다. 기본값은 MB입니다.  
   
  하는 경우 *max_size* 지정 하지 않으면 디스크가 꽉 찰 때까지 파일이 커집니다. 디스크가 꽉 차는 시점이 되면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 로그에서 관리자에게 경고 메시지를 표시합니다.  
   
-`[ @filegrowth = ] 'growth_increment_ '` 공간이 새로 필요할 때마다 파일에 추가 하는 공간의 크기가입니다. *growth_increment* 됩니다 **nvarchar(20)**, 기본값은 NULL입니다. 값 0은 증가하지 않음을 나타냅니다. 소수점이 포함되지 않은 정수를 지정하십시오. 값은 MB, KB 또는 %로 지정할 수 있습니다. %가 지정된 경우, 증가분은 공간이 증가될 당시의 파일 크기의 지정된 비율을 의미합니다. MB, KB 또는 % 접미사를 붙이지 않고 숫자를 지정하면 MB가 기본값이 됩니다.  
+`[ @filegrowth = ] 'growth_increment_ '` 공간이 새로 필요할 때마다 파일에 추가 하는 공간의 크기가입니다. *growth_increment* 됩니다 **nvarchar(20)** , 기본값은 NULL입니다. 값 0은 증가하지 않음을 나타냅니다. 소수점이 포함되지 않은 정수를 지정하십시오. 값은 MB, KB 또는 %로 지정할 수 있습니다. %가 지정된 경우, 증가분은 공간이 증가될 당시의 파일 크기의 지정된 비율을 의미합니다. MB, KB 또는 % 접미사를 붙이지 않고 숫자를 지정하면 MB가 기본값이 됩니다.  
   
  하는 경우 *growth_increment* NULL 기본값은 10% 이며 최소값은 64KB입니다. 지정한 크기는 64KB 단위로 반올림됩니다.  
   
@@ -85,7 +84,7 @@ EXEC sp_add_data_file_recover_suspect_db db1, fg1, file2,
   
 ## <a name="see-also"></a>관련 항목  
  [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [sp_add_log_file_recover_suspect_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)   
+ [sp_add_log_file_recover_suspect_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-log-file-recover-suspect-db-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

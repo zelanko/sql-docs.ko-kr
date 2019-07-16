@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 18ac429a536b657b7f7c0cf91c100eed8a152e52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed669adc19dddc96ba953ba73f73805925968d19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058907"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>명령줄에서 Data Migration Assistant 실행
 
@@ -41,7 +40,7 @@ DmaCmd.exe /AssessmentName="string"
 /AssessmentResultJson="file"|/AssessmentResultCsv="file"
 ```
 
-|인수  |Description  | 필수 (Y/N)
+|인수  |설명  | 필수 (Y/N)
 |---------|---------|---------------|
 | `/help or /?`     | Dmacmd.exe 도움말 텍스트를 사용 하는 방법        | N
 |`/AssessmentName`     |   평가 프로젝트의 이름   | Y
@@ -249,7 +248,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true 
 ```
 
-|인수  |Description  | 필수 (Y/N)
+|인수  |설명  | 필수 (Y/N)
 |---------|---------|---------------|
 |`/Action=SkuRecommendation` | DMA 명령줄을 사용 하 여 SKU 평가 실행 합니다. | Y
 |`/SkuRecommendationInputDataFilePath` | 데이터베이스를 호스팅하는 컴퓨터에서 수집 된 성능 카운터 파일에 전체 경로 | Y
@@ -338,6 +337,6 @@ DmaCmd.exe /Action=AssessTargetReadiness
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 - [Data Migration Assistant](https://aka.ms/get-dma) 다운로드 합니다.
 - 이 문서 [온-프레미스 데이터베이스에 대 한 올바른 Azure SQL 데이터베이스 SKU 확인](https://aka.ms/dma-sku-recommend-sqldb)합니다.

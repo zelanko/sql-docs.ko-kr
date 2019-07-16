@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b17bdd7204ec52ef5a2fc27d7bc364be7f017189
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aef8f768dd991e4e6ed740cc56600a6f1a8020e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965956"
 ---
 # <a name="inherittypeenum"></a>InheritTypeEnum
 개체는 사용 하 여 설정 하는 사용 권한을 상속 하는 방법 지정 [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adInheritBoth**|3|개체와 다른 컨테이너는 기본 개체에 포함 된 항목을 상속 합니다.|  
 |**adInheritContainers**|2|다른 컨테이너는 기본 개체에 포함 된 항목을 상속 합니다.|  

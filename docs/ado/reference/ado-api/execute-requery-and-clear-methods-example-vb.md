@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed5e1b60-3769-4b26-a253-1d721e37941d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bda27b7941244ac77de08e81baeb1307c14c60cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eff8b97d1248acaae23f5bcd21e050da61cf4346
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932882"
 ---
 # <a name="execute-requery-and-clear-methods-example-vb"></a>실행, requery, Clear 메서드 예제 (VB)
 이 예제에서는 합니다 **Execute** 둘 다에서 실행 될 경우 메서드는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 또한 사용 하 여는 [Requery](../../../ado/reference/ado-api/requery-method.md) 의 현재 데이터를 검색 하는 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 및 [선택을 취소](../../../ado/reference/ado-api/clear-method-ado.md) 내용의 선택을 취소 하는 방법은 [오류](../../../ado/reference/ado-api/errors-collection-ado.md)컬렉션입니다. (는 **오류** 을 통해 컬렉션에 액세스를 **연결** 의 개체를 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md).) ExecuteCommand 및 PrintOutput 절차는이 프로시저를 실행 하도록 필요 합니다.  

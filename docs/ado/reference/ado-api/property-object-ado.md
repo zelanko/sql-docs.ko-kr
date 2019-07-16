@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: b2a4767c-03c7-4935-a3bc-df3e1a38a009
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: af077c1606148eacb4f93ba6cfb52c3bb5eeefce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43bfa816a9ca8a93cdc1188a98e54d3e0d9111b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917551"
 ---
 # <a name="property-object-ado"></a>속성 개체(ADO)
 공급자가 정의한 ADO 개체의 동적 특성을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ADO 개체에는 두 가지 유형의 속성: 기본 제공 및 동적입니다.  
   
  기본 제공 속성은 이러한 ado에서 구현 하 고 즉시 사용할 수 있는 새 개체 속성을 사용 하 여는 `MyObject.Property` 구문입니다. 로 표시 되지 않습니다 **속성** 개체의 개체 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션 특징을 수정할 수 없습니다. 해당 값을 변경할 수 있지만 있도록 합니다.  

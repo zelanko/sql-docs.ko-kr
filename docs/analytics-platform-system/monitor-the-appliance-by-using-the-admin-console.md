@@ -2,19 +2,18 @@
 title: 관리 콘솔-분석 플랫폼 시스템 모니터링 | Microsoft Docs
 description: Analytics Platform System에 대 한 관리 콘솔 어플라이언스 상태, 상태 및 성능 정보를 표시 하는 웹 응용 프로그램을 됩니다. 사용자가 인터넷 브라우저를 통해 관리 콘솔에 연결합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7fb3bf769d3145118359af0e33e3cf01a0b6d325
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960484"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>관리 콘솔-Analytics Platform System을 사용 하 여 어플라이언스 모니터링
 관리 콘솔 어플라이언스 상태, 상태 및 성능 정보를 표시 하는 SQL Server PDW 웹 응용 프로그램은 사용자가 Internet Explorer를 통해 관리 콘솔에 연결합니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "63027540"
 홈  
 어플라이언스 상태 요약을 제공합니다.  
   
-상태  
+Health  
 각 노드 내에서 각 모니터링 대상된 구성 요소의 상태를 표시 하는 표시기를 사용 하 여 어플라이언스 토폴로지를 표시 합니다. 개별 노드의 현재 상태 및 노드 구성 요소의 속성을 볼 수 있습니다.  
   
 하드웨어 및 소프트웨어 경고가 표시 됩니다.  
@@ -50,7 +49,7 @@ PDW 상태 요약을 제공합니다.
 백업/복원  
 백업 및 복원 작업을 PDW의 로그를 표시 합니다.  
   
-상태  
+Health  
 각 노드 내에서 각 모니터링 대상된 구성 요소의 상태를 표시 하는 표시기를 사용 하 여 PDW 토폴로지를 표시 합니다. 개별 노드의 현재 상태 및 노드 구성 요소의 속성을 볼 수 있습니다.  
   
 하드웨어 및 소프트웨어 경고가 표시 됩니다.  

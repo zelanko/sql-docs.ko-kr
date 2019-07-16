@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906102"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +44,13 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @object_type = ] 'object_type'` 반환할 정보의 형식입니다. *object_type*됩니다 **char (9)**, 기본값은 없습니다. *object_type* 제공 된 운영자 이름에 할당 된 경고를 나열 하는 경고를 수 있습니다*를* 이거나 제공된 된 경고 이름을 담당 하는 연산자를 나열 하는 OPERATORS*합니다.*  
+`[ @object_type = ] 'object_type'` 반환할 정보의 형식입니다. *object_type*됩니다 **char (9)** , 기본값은 없습니다. *object_type* 제공 된 운영자 이름에 할당 된 경고를 나열 하는 경고를 수 있습니다*를* 이거나 제공된 된 경고 이름을 담당 하는 연산자를 나열 하는 OPERATORS*합니다.*  
   
 `[ @name = ] 'name'` 운영자 이름 (하는 경우 *object_type* is 연산자) 또는 경고 이름 (하는 경우 *object_type* 이 ALERTS 인). *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
   
 `[ @enum_type = ] 'enum_type'` 합니다 *object_type*반환 되는 정보입니다. *enum_type* 은 대부분의 경우에서 ACTUAL입니다. *enum_type*됩니다 **char(10)** 이며 기본값은 없고 수 이러한 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |ACTUAL|만 나열 합니다 *object_types* 연관 *이름*합니다.|  
 |ALL|모든를 나열 합니다*object_types* 연관 되지 않은 포함 *이름*합니다.|  
@@ -74,7 +73,7 @@ sp_help_notification
 ## <a name="result-sets"></a>결과 집합  
  경우 *object_type* 됩니다 **경고**, 결과 집합의 지정된 된 운영자에 대 한 모든 경고를 나열 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|경고 ID 번호입니다.|  
 |**alert_name**|**sysname**|경고 이름입니다.|  
@@ -87,7 +86,7 @@ sp_help_notification
   
  경우 **object_type** 됩니다 **연산자**, 결과 집합의 지정된 된 경고에 대 한 모든 연산자를 나열 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**operator_id**|**int**|운영자의 ID입니다.|  
 |**operator_name**|**sysname**|운영자 이름입니다.|  
@@ -98,7 +97,7 @@ sp_help_notification
 |**has_pager**|**int**|운영자에게 호출기 주소가 있습니다.<br /><br /> **1** = 예<br /><br /> **0** = 아니요|  
 |**has_netsend**|**int**|운영자가 Net Send 알림을 구성했습니다.<br /><br /> **1** = 예<br /><br /> **0** = 아니요|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 저장된 프로시저에서 실행 되어야 합니다는 **msdb** 데이터베이스입니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -106,7 +105,7 @@ sp_help_notification
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-alerts-for-a-specific-operator"></a>1. 특정 운영자에 대한 경고 나열  
+### <a name="a-listing-alerts-for-a-specific-operator"></a>A. 특정 운영자에 대한 경고 나열  
  다음 예에서는 `François Ajenstat`라는 운영자가 받는 모든 종류의 알림에 관한 경고를 모두 반환합니다.  
   
 ```  
@@ -121,7 +120,7 @@ EXEC dbo.sp_help_notification
 GO  
 ```  
   
-### <a name="b-listing-operators-for-a-specific-alert"></a>2. 특정 경고에 대한 운영자 나열  
+### <a name="b-listing-operators-for-a-specific-alert"></a>2\. 특정 경고에 대한 운영자 나열  
  다음 예에서는 `Test Alert`라는 경고에 관한 모든 종류의 알림을 받는 운영자를 모두 반환합니다.  
   
 ```  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 184c795a-c2e8-4d20-9902-12e60b2f0e45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee695c62fc60b2ebb0ae9bb33ef9008ba617b49a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e2ed50ac3f9e914953abdd64907199a5f978af2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915467"
 ---
 # <a name="driver-tasks"></a>드라이버 작업
 드라이버에서 수행 하는 특정 작업은 다음과 같습니다.  

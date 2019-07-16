@@ -21,23 +21,22 @@ helpviewer_keywords:
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 839e471e8861f081762f6129dff731e66bed77a7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041063"
 ---
 # <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  각 Always on 가용성 그룹을 나타내거나 네트워크 이름이 없음을 가용성 그룹과 연결에서 Windows Server 장애 조치 클러스터링 (WSFC) 각 가용성 그룹 수신기 구성에 대 한 행을 반환 합니다. 0 개 행을 반환 하 클러스터입니다. 이 뷰에는 클러스터에서 수집되는 실시간 구성이 표시됩니다.  
+  각 Always On 가용성 그룹에 대해 0개의 행을 반환하여 가용성 그룹에 연결된 네트워크 이름이 없음을 나타내거나 WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 각 가용성 그룹 수신기 구성에 대해 하나의 행을 반환합니다. 이 뷰에는 클러스터에서 수집되는 실시간 구성이 표시됩니다.  
   
 > [!NOTE]  
 >  이 카탈로그 뷰는 WSFC 클러스터에 정의된 IP 구성을 자세히 설명하지 않습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|가용성 그룹 ID (**group_id**)에서 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)합니다.|  
 |**listener_id**|**nvarchar(36)**|클러스터 리소스 ID의 GUID입니다.|  

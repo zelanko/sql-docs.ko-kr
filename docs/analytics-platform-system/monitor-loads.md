@@ -2,19 +2,18 @@
 title: 병렬 데이터 웨어하우스 로드 모니터링 | Microsoft Docs
 description: 활성 및 최근 모니터 Analytics Platform System (APS) 관리 콘솔 또는 병렬 데이터 웨어하우스 (PDW) 시스템 뷰를 사용 하 여 로드 합니다. "
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cb840c64c2235a2f3902c45633aa5471655482dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eadf20e036c6c76cd3bece7c404fde2af4a7d70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960603"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에 로드 모니터링
 활성 및 최근 모니터 [dwloader](dwloader.md) Analytics Platform System (APS) 관리 콘솔 또는 병렬 데이터 웨어하우스 (PDW)를 사용 하 여 로드 [시스템 뷰](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)합니다. 

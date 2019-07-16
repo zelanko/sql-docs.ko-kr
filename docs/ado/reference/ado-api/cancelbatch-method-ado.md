@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 572738c966651e35f2980ea75c3770ddc4bd029d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1c6a9f57d30b47641b9280e25a97336c28b0496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920164"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch 메서드(ADO)
 보류 중인 일괄 처리 업데이트를 취소합니다.  
@@ -38,7 +37,7 @@ recordset.CancelBatchAffectRecords
  *AffectRecords*  
  (선택 사항) [AffectEnum](../../../ado/reference/ado-api/affectenum.md) 레코드 수를 나타내는 값을 **CancelBatch** 메서드 적용 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여는 **CancelBatch** 에서 보류 중인 업데이트를 취소 하는 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 일괄 업데이트 모드에서. 경우는 **Recordset** 즉시 업데이트 모드에 호출 **CancelBatch** 없이 **adAffectCurrent** 오류가 발생 합니다.  
   
  현재 레코드를 편집 하거나 호출 하는 경우 새 레코드를 추가 하는 경우 **CancelBatch**, ADO 첫 번째 호출을 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) 캐시 된 변경 사항을 취소 하는 방법입니다. 그런 다음 모든 보류 중인 변경 내용을 합니다 **레코드 집합** 취소 됩니다.  

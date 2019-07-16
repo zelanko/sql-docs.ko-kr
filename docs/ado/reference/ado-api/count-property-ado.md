@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 10f531b601e44f346e27b52e40e6591457055ee8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 292a4a8c26b3b10aa47fcbe7046a5897f601ed9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698455"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919352"
 ---
 # <a name="count-property-ado"></a>Count 속성(ADO)
 컬렉션의 개체 수를 나타냅니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66698455"
 ## <a name="return-value"></a>반환 값  
  반환 된 **긴** 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여는 **개수** 속성을 지정된 된 컬렉션에 있는 개체의 수를 결정 합니다.  
   
  컬렉션의 멤버에 대 한 번호는 0부터 시작, 때문에 항상 0 멤버를 사용 하 여 시작 및 끝 값을 사용 하 여 루프를 코딩 해야 합니다 **개수** 에서 1 뺀 속성이 있습니다. Microsoft Visual Basic을 사용 하는 검사 하지 않고 컬렉션의 멤버를 반복 하는 경우는 **개수** 속성을 사용 하 여는 **각각에 대해... 다음** 명령입니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9c6779c9-1208-4696-ac51-c39f3a6d9240
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: eb0afbbe470a1cc9cddbf9e9f2f892deb7ce0864
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 685dd476b5d434ff9dd8feb0e23400dd703ca0d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922088"
 ---
 # <a name="step-3-server-obtains-a-recordset-rds-tutorial"></a>3단계: 서버가 레코드 집합을 가져옵니다(RDS 자습서).
 서버 프로그램 연결 문자열 및 명령 텍스트를 사용 하 여 원하는 행에 대 한 데이터 원본 쿼리. ADO는 일반적으로이 검색 하는 데 사용 됩니다 **레코드 집합**이지만 OLE DB를 사용할 수와 같은 다른 Microsoft 데이터 액세스 인터페이스, 합니다.  

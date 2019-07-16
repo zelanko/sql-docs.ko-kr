@@ -2,19 +2,18 @@
 title: DNS 전달자를 사용 하 여 분석 플랫폼 시스템에 | Microsoft Docs "
 description: Analytics Platform System에서 비 어플라이언스 DNS 이름을 확인 하려면 DNS 전달자를 사용 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 841d2da521bada840c1298d3fb9cea28c2835b4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959822"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>DNS 전달자를 사용 하 여 분석 플랫폼 시스템에 비 어플라이언스 DNS 이름을 확인 하려면
 Active Directory Domain Services 노드에서 DNS 전달자를 구성할 수 있습니다 ( **_어플라이언스\_도메인_-AD01** 하 고  **_어플라이언스\_ 도메인_-AD02**) 스크립트 및 소프트웨어 응용 프로그램을 외부 서버에 액세스를 허용 하기 위해 분석 플랫폼 시스템 어플라이언스입니다.  

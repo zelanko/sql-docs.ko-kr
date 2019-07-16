@@ -2,19 +2,18 @@
 title: Parallel Data Warehouse로 데이터 로드 | Microsoft Docs
 description: 로드 하거나 Integration Services, bcp 유틸리티, dwloader, 또는 SQL INSERT 문을 사용 하 여 데이터를 SQL Server 병렬 데이터 웨어하우스 (PDW)를 삽입 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f4551f77b1348ece34dc87dc8abeb91e27290d00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b046839b7c4932b43230d28cc106db1e2ea5d5a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960698"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Parallel Data Warehouse로 데이터 로드
 로드 하거나 Integration Services를 사용 하 여 데이터를 SQL Server 병렬 데이터 웨어하우스 (PDW)를 삽입할 수 있습니다 [bcp 유틸리티](../tools/bcp-utility.md)하십시오 **dwloader** 명령줄 로더 또는 SQL INSERT 문을 합니다.  
@@ -43,7 +42,7 @@ For more information, see [Prepared statements](prepared-statements.md).
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|태스크|Description|  
+|태스크|설명|  
 |--------|---------------|  
 |준비 데이터베이스를 만듭니다.|[준비 데이터베이스 만들기](staging-database.md)|  
 |Integration Services를 사용 하 여 로드 합니다.|[Integration Services를 사용하여 로드](load-with-ssis.md)|  

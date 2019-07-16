@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 93384c8152109b01720ae7e861731638316d4966
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 6210cfe67b4c360f14fc3e68929a5ac4f5f5d570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962820"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>기계 학습 (R 및 Python) 구성에서 SQL Server 인스턴스 요소를 업그레이드 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -277,7 +276,7 @@ R 및 Python 기능의 데이터베이스 엔진 인스턴스를 복구 하려�
 
 ### <a name="parameters"></a>매개 변수
 
-|이름|Description|
+|이름|설명|
 |------|------|
 |*list*| 현재 컴퓨터의 모든 SQL Database 인스턴스 ID 목록을 표시합니다.|
 |*bind*| 지정된 SQL Database 인스턴스를 최신 버전의 R 서버로 업그레이드하고 인스턴스가 R 서버의 향후 업그레이드를 자동으로 가져오도록 합니다.|
@@ -333,7 +332,7 @@ Microsoft Machine Learning Server 9.2.1 및 9.3에이 문제가 없습니다.
 > [!NOTE]
 > 설치가 완료 될 때까지 대기 해야 합니다. R 라이브러리 버전을 사용 하 여 연결을 제거한 다음 새 R 라이브러리를 추가 하는 데 시간이 오래 걸릴 수 있습니다. 작업이 완료 되 면 임시 폴더 제거 됩니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 + [Machine Learning Server에 대 한 Windows (인터넷 연결)를 설치 합니다.](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)
 + [Machine Learning Server에 대 한 Windows (오프 라인)를 설치 합니다.](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-offline)

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54222842aa51e6904944a8b97507a3368e144612
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5fa9e40e0f83e4d47d4f31cfd43f4215ec60ea49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943517"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|게시자의 이름입니다.|  
 |**distribution_db**|**sysname**|지정된 게시자에 대한 배포 데이터베이스입니다.|  
-|**security_mode**|**int**|복제 에이전트가 지연 업데이트 구독을 위해 게시자에 연결하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 게시자와 연결하는 데 사용한 보안 모드입니다.<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication<br /><br /> **1** = Windows 인증|  
+|**security_mode**|**int**|복제 에이전트가 지연 업데이트 구독을 위해 게시자에 연결하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 게시자와 연결하는 데 사용한 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증|  
 |**login**|**sysname**|복제 에이전트가 지연 업데이트 구독을 위해 게시자에 연결하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 아닌 게시자와 연결하는 데 사용한 로그인 이름입니다.|  
 |**password**|**nvarchar(524)**|간단히 암호화된 형식으로 반환되는 암호입니다. 암호는 NULL에 대 한 사용자 이외의 **sysadmin**합니다.|  
 |**active**|**bit**|원격 게시자가 배포자로 로컬 서버를 사용하는지 여부를 지정합니다.<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
@@ -63,7 +62,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helpdistpublisher** 모든 유형의 복제에 사용 됩니다.  
   
  **sp_helpdistpublisher** 게시자 로그인이 표시 되지 것입니다 또는 결과에서 암호 설정 되어 비-**sysadmin** 로그인 합니다.  

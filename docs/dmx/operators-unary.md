@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d44e4a7269c8fb11533b7fb287684c9a6b7b5d83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 311a71926aa2eacae9aa7754b778c037b69d35e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008126"
 ---
 # <a name="operators---unary"></a>연산자 - 단항
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +22,7 @@ ms.locfileid: "62501882"
   
  다음 표에서는 DMX가 지원하는 단항 연산자를 설명합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |[- &#40;음수&#41; &#40;MDX&#41;](../mdx/negative-mdx.md)|숫자 식의 음수 값을 반환합니다.|  
 |[+ &#40;긍정&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|숫자 식의 양수 값을 반환합니다.|  

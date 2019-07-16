@@ -5,17 +5,16 @@ description: Mssqlctl bdc 구성 섹션 명령에 대 한 참조 문서입니다
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3ca96ddbbf64b04e8ccd8854a8338fe6e118debb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3f3ba7854b4df63495926e4cc207de7cbe6a9378
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958198"
 ---
 # <a name="mssqlctl-bdc-config-section"></a>mssqlctl bdc 구성 섹션
 
@@ -26,8 +25,8 @@ ms.locfileid: "67728698"
 ## <a name="commands"></a>명령
 |     |     |
 | --- | --- |
-[mssqlctl bdc config section show](#mssqlctl-bdc-config-section-show) | 구성 프로필에서 섹션을 가져옵니다.
-[mssqlctl bdc config section set](#mssqlctl-bdc-config-section-set) | 구성 프로필에 대 한 섹션을 설정합니다.
+[mssqlctl bdc 구성 섹션 show](#mssqlctl-bdc-config-section-show) | 구성 프로필에서 섹션을 가져옵니다.
+[mssqlctl bdc 구성 섹션 집합](#mssqlctl-bdc-config-section-set) | 구성 프로필에 대 한 섹션을 설정합니다.
 ## <a name="mssqlctl-bdc-config-section-show"></a>mssqlctl bdc 구성 섹션 show
 지정 된 json 경로 따라 선택한 구성 프로필에서 지정된 된 섹션을 가져옵니다.
 ```bash

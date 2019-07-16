@@ -2,19 +2,18 @@
 title: Dwloader 데이터 형식 변환 규칙-병렬 데이터 웨어하우스 | Microsoft Docs
 description: 이 항목에서는 입력된 데이터 형식 및 암시적 데이터 형식 변환을 해당 dwloader 병렬 데이터 웨어하우스 (PDW)에 데이터를 로드할 때 명령줄 로더 지원. "
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 46d092ee5d3b981c60d7bd5bde49f9994dab4b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a15e129ad1cbf52a3daab5459e9ca7d06d195b9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961031"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>데이터 형식 변환 규칙 dwloader-병렬 데이터 웨어하우스
 입력된 데이터 형식 및 암시적 데이터 형식 변환에 설명 하는 [dwloader 명령줄 로더](dwloader.md) PDW에 데이터를 로드할 때를 지원 합니다. 암시적 데이터 변환이 입력된 데이터를 SQL Server PDW 대상 테이블의 데이터 형식이 일치 하지 않는 경우 발생 합니다. SQL Server PDW로 성공적으로 로드 데이터를 확인 하기 위한 로드 프로세스를 디자인 하는 경우이 정보를 사용 합니다.  
@@ -86,7 +85,7 @@ ms.locfileid: "63042579"
 ### <a name="DateFormats"></a>날짜/시간 형식  
 Dwloader는 SQL Server PDW에 로드 하는 입력된 데이터에 대 한 다음 데이터 형식을 지원 합니다. 자세한 내용은 표 다음에 나열 됩니다.  
   
-|Datetime|Smalldatetime|date|Datetime2|datetimeoffset|  
+|datetime|Smalldatetime|date|Datetime2|datetimeoffset|  
 |------------|-----------------|--------|-------------|------------------|  
 |[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fff]|[M[M]]M-[d]d-[yy]yy HH:mm[:00]|[M[M]]M-[d]d-[yy]yy|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff]|[M[M]]M-[d]d-[yy]yy HH:mm:ss[.fffffff] zzz|  
 |[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm[:00][tt]||[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt]|[M[M]]M-[d]d-[yy]yy hh:mm:ss[.fffffff][tt] zzz|  

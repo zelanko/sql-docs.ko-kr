@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8d6532998f65625bf3dacd11de2949a3478ba6ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 461c91d7261b42b5828e2c515a89e8203f40e357
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049272"
 ---
 # <a name="drilldownleveltop-mdx"></a>DrilldownLevelTop(MDX)
 
@@ -45,7 +44,7 @@ DrilldownLevelTop(<Set_Expression>, <Count> [,[<Level_Expression>] [,[<Numeric_E
  *Include_Calc_Members*  
  계산 멤버를 드릴다운 결과에 추가하기 위한 키워드입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  숫자 식이 지정 되는 **DrilldownLevelTop** 일련의 자식에 대해 계산 된 숫자 식의 값에 따라 지정된 된 집합의 각 멤버의 자식을 차례로 내림차순 정렬 함수 멤버입니다. 숫자 식이 지정되지 않은 경우 이 함수는 쿼리 컨텍스트에서 확인된 대로 자식 구성원 집합이 나타내는 셀의 값에 따라 지정된 집합에 있는 각 구성원의 자식을 내림차순으로 정렬합니다.  
   
  정렬 후 합니다 **DrilldownLevelTop** 함수에 지정 된 자식 멤버의 수 및 부모 멤버를 포함 하는 집합을 반환 *개수* 가장 높은 값을 사용 하 여 합니다.  

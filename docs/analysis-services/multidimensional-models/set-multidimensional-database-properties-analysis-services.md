@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 489d738ac8d654477687528ad64c2fed76877dde
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147178"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208489"
 ---
 # <a name="set-multidimensional-database-properties-analysis-services"></a>다차원 데이터베이스 속성 설정(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "50147178"
 ## <a name="database-properties"></a>데이터베이스 속성  
  위의 기능 외에도 속성 창에서 다양한 데이터베이스 속성을 구성할 수 있습니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |집계 접두사|데이터베이스의 모든 파티션에 대한 집계 이름에 사용할 수 있는 공통 접두사입니다. 자세한 내용은 [AggregationPrefix 요소&#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/aggregationprefix-element-assl)를 참조하세요.|  
 |데이터 정렬|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 배포하면 다른 값을 제공하지 않는 한 데이터베이스는 Collation 서버 속성에서 상속합니다.|  

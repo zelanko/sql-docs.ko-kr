@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 23d551f5-3d5b-434b-ade6-fef15f1710e7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0416ea7890b3afd430dfd1892cdfc3cd03ca3cfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d32d79b0a0481d2ade05a78c80d72587817a04b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918569"
 ---
 # <a name="getoledbcommand-method"></a>get_OLEDBCommand 메서드
 기본 OLE DB 명령을 먼저 OLE DB 명령에 ADO 명령에 설정 하는 모든 매개 변수 정보를 전파를 반환 합니다.  

@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bbf05e0b177cc61ed9de757db46f8950aaa7dccd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a6146a942e572e28692ceaafd77d6958cdab9dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964959"
 ---
 # <a name="users-collection-adox"></a>Users 컬렉션(ADOX)
 모든 포함 저장 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 의 개체를 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 하거나 [그룹](../../../ado/reference/adox-api/group-object-adox.md)합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **사용자** 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 카탈로그의 모든 사용자를 나타냅니다. 합니다 **사용자** 에 대 한 컬렉션을 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 특정 그룹의 멤버 자격이 있는 사용자만을 나타냅니다.  
   
  합니다 [추가](../../../ado/reference/adox-api/append-method-adox-users.md) 에 대 한 메서드는 **사용자** 컬렉션이 ADOX에 대 한 고유 합니다. 다음 작업을 수행할 수 있습니다.  

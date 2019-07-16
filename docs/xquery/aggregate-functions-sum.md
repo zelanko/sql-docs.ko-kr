@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0f626eb9f5c1b654428175dc456910b183fe0c3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63046860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985746"
 ---
 # <a name="aggregate-functions---sum"></a>집계 함수 - sum
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  *$arg*  
  합계가 계산되는 일련의 원자 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  에 전달 되는 세분화 된 값의 유형도 **sum ()** 동일한 기본 유형의 하위 유형 이어야 합니다. 허용된 기준 유형은 3가지 기본 제공 숫자 기준 유형이거나 xdt:untypedAtomic입니다. xdt:untypedAtomic 유형의 값이 xs:double로 캐스팅됩니다. 이러한 종류의 혼합 없거나 다른 형식의 다른 값을 전달 하는 경우 정적 오류가 발생 합니다.  
   
  결과인 **sum ()** 입력이 필요에 따라 빈 시퀀스인 경우에 xdt: untypedatomic의 경우 xs: double 처럼 전달 된 유형의 기본 유형을 받습니다. 입력이 정적으로 빈 경우 결과는 정적 및 동적 xs:integer 유형의 0입니다.  
@@ -51,7 +50,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** 유형 열에는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다.  
   
-### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>1\. sum() XQuery 함수를 사용하여 제조 프로세스의 모든 작업 센터 위치에 대한 총 근로 시간 검색  
+### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. sum() XQuery 함수를 사용하여 제조 프로세스의 모든 작업 센터 위치에 대한 총 근로 시간 검색  
  다음 쿼리에서는 제조 지침이 저장된 모든 제품 모델에 대해 제조 프로세스에 포함된 모든 작업 센터 위치에 대한 총 근로 시간을 검색합니다.  
   
 ```  

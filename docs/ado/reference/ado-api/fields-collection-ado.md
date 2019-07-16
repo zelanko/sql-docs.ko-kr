@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8483a908e31b9e4554c5594ecc5bbf186bbef88f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c9216ee655e371633837c5653ebac56fac1a782
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918709"
 ---
 # <a name="fields-collection-ado"></a>Fields 컬렉션(ADO)
 모든 포함 된 [필드](../../../ado/reference/ado-api/field-object.md) 의 개체를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 또는 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  A **레코드 집합** 개체에는 **필드** 컬렉션으로 이루어져 **필드** 개체입니다. 각 **필드** 개체의 열에 해당 합니다 **Recordset**합니다. 채울 수 있습니다는 **필드** 열기 전에 컬렉션의 **레코드 집합** 호출 하 여를 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 컬렉션 메서드.  
   
 > [!NOTE]

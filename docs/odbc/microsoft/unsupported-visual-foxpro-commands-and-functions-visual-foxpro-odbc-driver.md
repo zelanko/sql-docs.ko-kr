@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db6aff35944b8811e79627c6076ab61e838edf3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912319"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>지원되지 않는 Visual FoxPro 명령 및 함수(Visual FoxPro ODBC 드라이버)
 다음 표에서 FoxPro 명령 및 Visual FoxPro ODBC 드라이버에서 지원 되지 않지만 Microsoft® Visual FoxPro®에서 지원 되는 함수를 나열 합니다.  
@@ -237,7 +236,7 @@ ms.locfileid: "62633373"
 |연결 명령 이름 바꾸기|명령 테이블 이름 바꾸기|명령에서 복원|  
 |보고서 명령|() 함수를 다시 쿼리|창 명령 복원|  
 |복원 명령 매크로|화면 명령 복원|RGBSCHEME () 함수|  
-|다시 시작 명령|RGB () 함수|실행 &AMP;#124; ! Command|  
+|다시 시작 명령|RGB () 함수|실행 &#124; ! Command|  
 |RMDIR 명령|ROW () 함수||  
 |RUNSCRIPT 명령|RDLEVEL () 함수||  
   
@@ -287,7 +286,7 @@ ms.locfileid: "62633373"
   
 ||||  
 |-|-|-|  
-|_TABS System Memory Variable|텍스트는 중... ENDTEXT 명령|TXTWIDTH () 함수|  
+|_TABS 시스템 메모리 변수|텍스트는 중... ENDTEXT 명령|TXTWIDTH () 함수|  
 |() 함수를 변환 합니다.|_TRANSPORT 시스템 메모리 변수||  
 |명령 유형|_THROTTLE 시스템 메모리 변수||  
   

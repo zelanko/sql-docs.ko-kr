@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d1c8892-4bbc-4e71-bf4b-ba52c0ea9549
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6a5886ae206f3b16f30da406a8ccc42cc8cba7a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eaaa72c302c9218810ce653ea59fe5ff29a54ef0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963871"
 ---
 # <a name="internettimeout-property-rds"></a>InternetTimeout 속성(RDS)
 요청 시간이 초과 되기 전에 대기할 시간 (밀리초)의 수를 나타냅니다.  

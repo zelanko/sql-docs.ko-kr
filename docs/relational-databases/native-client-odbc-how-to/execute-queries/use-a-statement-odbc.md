@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: f7573f8f-6f21-4e03-8dd5-a5f2ea4878cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3ee6581bca5dac6331571d1b1b71957cc3df7eac
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: abf5910d032b921f6cefa1aeb89fef1a6fcfbc44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898457"
 ---
 # <a name="use-a-statement-odbc"></a>문 사용(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "51661312"
   
      블록 커서를 사용하여 결과 집합을 한 번에 여러 행씩 인출합니다.  
   
-     \- 또는-  
+     \- 또는 -  
   
      [SQLRowCount](../../../relational-databases/native-client-odbc-api/sqlrowcount.md)를 호출하여 INSERT, UPDATE 또는 DELETE 문의 영향을 받는 행 수를 확인합니다.  
   

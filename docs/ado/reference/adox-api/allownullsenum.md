@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 53fadcddd49ebf68949da0a7dca3cb37da0b5d93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48e9d8c40d2ab76b902d285526fcd9e9abf7be07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967333"
 ---
 # <a name="allownullsenum"></a>AllowNullsEnum
 Null 값을 사용 하 여 레코드는 인덱싱되어 있는지 여부를 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adIndexNullsAllow**|0|인덱스에서 항목의 키 열에 null을 허용 합니다. 키 열에는 null 값을 입력 하는 경우 항목의 인덱스에 삽입 됩니다.|  
 |**adIndexNullsDisallow**|1|기본. 인덱스 키 열에 null 항목을 허용 하지 않습니다. 키 열에는 null 값을 입력 하는 경우 오류가 발생 합니다.|  

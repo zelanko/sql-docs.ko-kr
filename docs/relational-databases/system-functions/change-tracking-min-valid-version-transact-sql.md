@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5a43d23f-adcf-4c0b-95ad-07cee03c1f9d
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d2858c61ea7316b1bafa06a1181b31e97b0724b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5bb0baec2284d17d84c7a8c3dddd13de3fa69510
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042937"
 ---
 # <a name="changetrackingminvalidversion-transact-sql"></a>CHANGE_TRACKING_MIN_VALID_VERSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ CHANGE_TRACKING_MIN_VALID_VERSION ( table_object_id )
 ## <a name="return-type"></a>반환 형식  
  **bigint**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수를 사용 하 여 값의 유효성을 검사 하는 *last_sync_version* CHANGETABLE에 대 한 매개 변수입니다. 하는 경우 *last_sync_version* CHANGETABLE 이후의 호출에서 반환 되는 결과가 유효 하지 않을이 함수로 보고 되는 값 보다 작습니다.  
   
  CHANGE_TRACKING_MIN_VALID_VERSION은 다음 정보를 사용하여 반환 값을 결정합니다.  

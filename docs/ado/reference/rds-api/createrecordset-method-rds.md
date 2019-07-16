@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0ac86f4ceac4c806bfa3f6df5cc9e2024b4d03d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964511"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset 메서드(RDS)
 빈 만듭니다 연결 끊김 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  

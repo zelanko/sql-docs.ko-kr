@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc006a940318ba84c3670ed9d10b96f728219668
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: dd7d1ddf40805eb94ca71594c7e4f7f6dae6ca7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899952"
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 현재 할당된 메모리 개체를 반환합니다. 사용할 수 있습니다 **sys.dm_os_memory_objects** 누수 메모리 사용을 분석 하 고 가능한 메모리를 확인 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**memory_object_address**|**varbinary(8)**|메모리 개체의 주소입니다. Null을 허용하지 않습니다.|  
 |**parent_address**|**varbinary(8)**|상위 메모리 개체의 주소입니다. Null을 허용합니다.|  
@@ -62,9 +61,9 @@ ms.locfileid: "47800651"
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  메모리 개체는 힙으로, 메모리 클럭보다 세분화된 할당 기능을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 메모리 클럭 대신 메모리 개체를 사용합니다. 메모리 개체는 메모리 클럭의 페이지 할당자 인터페이스를 사용하여 페이지를 할당합니다. 메모리 개체는 가상 또는 공유 메모리 인터페이스를 사용하지 않습니다. 구성 요소는 할당 패턴에 따라 여러 다른 유형의 메모리 개체를 만들어 임의의 크기를 가진 영역을 할당할 수 있습니다.  
   
  메모리 개체의 일반적인 페이지 크기는 8KB입니다. 하지만 증분 메모리 개체의 페이지 크기의 범위는 512바이트에서 8KB 사이가 될 수 있습니다.  
