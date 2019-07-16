@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c4ce8532-a4d8-4f74-9488-9389b6695958
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5c34c7d72a1cbc1a035f8b1232f894017422c010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df62de2c5c51680047270d320ecc7c461bc47c53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931433"
 ---
 # <a name="record-ado-for-visual-c-syntax"></a>레코드(Visual C++ 구문에 대한 ADO)
 ## <a name="methods"></a>메서드  

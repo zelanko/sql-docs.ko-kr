@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d694a105-69b1-4ff6-99d3-1f408b916b81
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 008c1915c793eedb27d70cac27e135c2c7e753c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68b0ac877b812d78e3eddf433a08a87b8f9d45f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896868"
 ---
 # <a name="create-an-index-master-data-services"></a>인덱스 만들기(Master Data Services)
 
@@ -51,7 +50,7 @@ ms.locfileid: "65477078"
   
  생성되는 각 인덱스에 대해 열이 4개 포함된 행이 표에 추가됩니다. 다음 표에서는 이러한 열에 대해 설명합니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |상태|인덱스 상태입니다.<br /><br /> **저장**을 클릭하면 인덱스가 업데이트 중임을 나타내는 ![상태 업데이트 아이콘](../master-data-services/media/mds-statusicon-updating.png "상태 업데이트 아이콘") 이미지가 표시됩니다.<br /><br /> 인덱스를 만들거나 편집할 때 오류가 발생하면 ![오류 상태 아이콘](../master-data-services/media/mds-statusicon-error.png "오류 상태 아이콘") 이미지가 표시됩니다.<br /><br /> 그렇지 않으면 상태가 정상이고 ![정상 상태 아이콘](../master-data-services/media/mds-statusicon-ok.png "정상 상태 아이콘")이미지가 표시됩니다.|  
 |이름|인덱스 이름입니다.|  

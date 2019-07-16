@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8fb4a9c3-19af-4a34-8004-572729ba3d15
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f732d1b8ab70fa5b188147f493af050a80bdca5b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 616e5547c4acf59f88dc67c5aabc507eb30fe251
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055304"
 ---
 # <a name="sphelpagentparameter-transact-sql"></a>sp_help_agent_parameter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|에이전트 프로필의 ID입니다.|  
 |**parameter_name**|**sysname**|매개 변수의 이름입니다.|  
@@ -51,7 +50,7 @@ sp_help_agent_parameter [ [ @profile_id = ] profile_id ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_help_agent_parameter** 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aac0c6b837fcd25b0e1f06344a2745c68b05dea3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763635"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206039"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>T-SQL 문 실행 태스크(유지 관리 계획)
   **T-SQL 문 실행 태스크** 대화 상자를 사용하여 선택한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 유지 관리 계획에 추가하여 유지 관리 계획을 사용자 지정할 수 있습니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "52763635"
  서버에 대한 인증 방법을 지정합니다.  
   
  **Windows NT 통합 보안 사용**  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스에 연결합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인스턴스에 연결합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  

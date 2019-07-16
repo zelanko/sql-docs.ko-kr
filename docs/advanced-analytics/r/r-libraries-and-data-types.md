@@ -7,13 +7,12 @@ ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 79570a1479078234328a17d4de2a12c821c76f3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93a0e15d8fdca31971cd16d187ae88a180fb481f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62643341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962539"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R 및 SQL Server 간의 데이터 형식 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -105,7 +104,7 @@ R에서 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이�
 
 ## <a name="examples"></a>예
 
-### <a name="example-1-implicit-conversion"></a>예 1: 암시적 변환
+### <a name="example-1-implicit-conversion"></a>예제 1: 암시적 변환
 
 다음 예제에서는 SQL Server와 R 간에 왕복을 수행할 때 데이터를 변환하는 방법을 보여 줍니다.
 
@@ -167,7 +166,7 @@ R에서 `str` 함수를 사용할 경우 출력 데이터의 스키마를 가져
 -   **열 C4**: 이 열에는 R 스크립트에서 생성된 값이 포함되며 원본 데이터에 표시되지 않습니다.
 
 
-## <a name="example-2-dynamic-column-selection-using-r"></a>예 2: R을 사용 하 여 동적 열 선택
+## <a name="example-2-dynamic-column-selection-using-r"></a>예제 2: R을 사용 하 여 동적 열 선택
 
 다음 예제에서는 R 코드를 사용하여 잘못된 열 형식이 있는지 확인하는 방법을 보여 줍니다. SQL Server 시스템 뷰를 사용하여 지정된 테이블의 스키마를 가져오고 지정된 잘못된 형식이 포함된 열을 제거합니다.
 
@@ -179,5 +178,5 @@ columnList <- do.call(paste, c(as.list(columns$COLUMN_NAME), sep = ","))
 sqlQuery <- paste("SELECT", columnList, "FROM testdata")
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 

@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 75f2784c9d144cdb33bb4062d08c3a855413e0ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944c36a13f76e4518081e506f003e4549ddcb217
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926838"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>원격 데이터 서비스에 대 한 Internet Explorer 오류 코드
 다음 표에서 원격 데이터 서비스 사용과 관련 된 Microsoft® Internet Explorer 오류 코드를 나열 합니다. 낮은 2 바이트의 양의 10 진수 변환, 전체 오류 코드 및 16 진수 값은 음수 10 진수 변환 표시 됩니다.
 
-|Internet Explorer (Wininet) 오류|Number|Description|
+|Internet Explorer (Wininet) 오류|Number|설명|
 |------------------------------------------|------------|-----------------|
 |**IDS_WinInet_CantConnect**|8195 -2146820093 0x800A2003|인터넷 클라이언트 오류: 서버에 연결할 수 없습니다.|
 |**IDS_WinInet_ ConnectionReset**|12031 -2146816257 0x800A2EFF|인터넷 클라이언트 오류: 연결을 다시 설정 합니다.|

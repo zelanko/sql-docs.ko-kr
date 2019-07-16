@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c4755799-c60a-4b5e-a01f-b85dd0e0a7f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a22afb8e59d692ae4fae010adc819cd930b8ab46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 29307c3764a81f60ad02108ba498daab85bc0b3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921711"
 ---
 # <a name="absoluteposition-and-cursorlocation-properties-example-vb"></a>AbsolutePosition 및 CursorLocation 속성 예제 (VB)
 이 예제에서는 하는 방법을 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 속성의 모든 레코드를 열거 하는 루프의 진행률을 추적할 수는 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 사용 합니다 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성을 사용 합니다 **AbsolutePosition** 클라이언트 커서에 커서를 설정 하 여 속성입니다.  

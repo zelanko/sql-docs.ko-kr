@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 84f343ebda18e65217b18446707373a743b6a9d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046373"
 ---
 # <a name="sysfncdcincrementlsn-transact-sql"></a>sys.fn_cdc_increment_lsn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.fn_cdc_increment_lsn ( lsn_value )
 ## <a name="return-type"></a>반환 형식  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수에 의해 반환된 LSN 값은 지정된 값보다 항상 크며 두 값 사이에는 LSN 값이 없습니다.  
   
  시간에 따른 변경 데이터 스트림을 체계적으로 쿼리하려면 쿼리 함수 호출을 주기적으로 반복하면서 각 호출 시 쿼리에서 반환되는 변경을 제한하는 새 쿼리 간격을 지정하면 됩니다. 데이터 손실을 방지하기 위해 이전 쿼리의 상한을 사용하여 후속 쿼리의 하한을 생성하는 경우가 많습니다. 쿼리 간격은 닫힌 간격이므로 새 하한은 이전 상한보다 큰 동시에 LSN 값이 이 값과 이전 상한 사이에 있는 변경이 없을 만큼 작아야 합니다. sys.fn_cdc_increment_lsn 함수는 이 값을 얻는 데 사용됩니다.  

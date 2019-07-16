@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ae8ef851-646c-4889-bc11-c8ec78762572
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 604feac612c2c937593cdd484a05d45462396823
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1f874aa26001b7d595f319a59d5c116907aa096e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054957"
 ---
 # <a name="sphelpjobcount-transact-sql"></a>sp_help_jobcount(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,11 +51,11 @@ sp_help_jobcount
 ## <a name="result-sets"></a>결과 집합  
  다음 결과 집합을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**JobCount**|**int**|지정한 일정에 대한 작업 수입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 프로시저는 지정한 일정에 연결된 작업 수를 나열합니다.  
   
 ## <a name="permissions"></a>사용 권한  

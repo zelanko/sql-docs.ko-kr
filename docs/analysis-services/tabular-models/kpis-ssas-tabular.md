@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2f6714d61ce53b251a6511aaf78c803213e19860
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072320"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207630"
 ---
 # <a name="kpis"></a>KPI
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -69,9 +69,9 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  핵심 성과 지표 대화 상자를 보려면 테이블에 대한 측정값 표에서 기준 값으로 사용되는 측정값을 마우스 오른쪽 단추로 클릭한 다음 **KPI 만들기**를 클릭합니다. 측정값이 기준 값으로 KPI에 확장된 후에는 KPI와 관련된 측정값을 식별하는 아이콘이 측정값 표의 측정값 이름 옆에 나타납니다.  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="bkmk_related_tasks"></a> 관련 태스크  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[KPI 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|기본 측정값, 대상 측정값 및 상태 임계값을 사용하여 KPI를 만드는 방법을 설명합니다.|  
   

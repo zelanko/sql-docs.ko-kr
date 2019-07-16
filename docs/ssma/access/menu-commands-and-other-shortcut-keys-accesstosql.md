@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 10cf92089a87f2d57fc303d8b722df70941fb455
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbfb9aa200560cf8d2b4ae42486f8a39b179e88b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907135"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-accesstosql"></a>메뉴 명령 및 기타 바로 가기 키 (AccessToSQL)
 다음 섹션에서는 메뉴 명령 및 기타 바로 가기 키 SSMA의 다양 한 대화 상자에서 사용 하 여 액세스 응용 프로그램에 대 한 액세스를 바로 가기 키를 설명 합니다.  

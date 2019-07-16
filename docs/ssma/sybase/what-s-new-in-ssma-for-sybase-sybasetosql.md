@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 727ede7a057491eea2ea230d7057aa3228b5fc82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af728d438f01203308258d8f074f145494780a3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944571"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL) 용 SSMA의 새로운 기능
 이 문서에서는 SAP ASE (이전의 Sybase 용 SSMA) 각 릴리스의 변경 내용에 대 한 SQL Server Migration Assistant (SSMA)를 나열 합니다.
@@ -271,6 +270,6 @@ Sybase 용 SSMA의 2006 년 11 월 릴리스에서 다음 변경 내용을 포�
 
 SSMA for Sybase의 2006년 7월 릴리스가 첫 버전입니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [Sybase 용 SSMA 시작 &#40;SybaseToSQL&#41;](../../ssma/sybase/getting-started-with-ssma-for-sybase-sybasetosql.md)

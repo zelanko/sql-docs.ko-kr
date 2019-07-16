@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4ba9720f87cd41849cc118482ffbf4731049e8c9
-ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51818499"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209553"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>SQL Server 프로파일러를 사용하여 데이터 마이닝 모니터링(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51818499"
 ## <a name="using-traces-to-monitor-data-mining"></a>추적을 사용하여 데이터 마이닝 모니터링  
  추적 정보를 캡처할 때는 SQL Server 인스턴스에서 캡처 정보를 파일에 저장할지 아니면 테이블에 저장할지 여부를 지정할 수 있습니다. 데이터를 저장하기 위해 사용하는 방법에 관계없이 SQL Server 프로파일러를 사용하여 추적을 보고 이벤트를 기준으로 필터링할 수 있습니다. 다음 표에서는 데이터 마이닝과 관련된 기본 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 추적의 몇 가지 이벤트 및 하위 클래스를 보여 줍니다.  
   
-|EventClass|EventSubclass|Description|  
+|EventClass|EventSubclass|설명|  
 |----------------|-------------------|-----------------|  
 |**Query Begin**<br /><br /> **쿼리 끝**|**0 - MDXQuery**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 저장 프로시저에 대한 모든 호출의 텍스트를 포함합니다.|  
 |**Query Begin**<br /><br /> **쿼리 끝**|**1 - DMXQuery**|DMX(Data Mining Extensions) 문의 텍스트와 결과를 포함합니다.|  

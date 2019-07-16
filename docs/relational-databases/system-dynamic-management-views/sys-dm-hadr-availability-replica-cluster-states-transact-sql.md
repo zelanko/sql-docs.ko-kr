@@ -20,22 +20,21 @@ helpviewer_keywords:
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5e39bd1072f3de3448381d9ac457ef8ab4459184
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5021a2074d49d7a8b1da88d82c52b175f16ff3c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900642"
 ---
 # <a name="sysdmhadravailabilityreplicaclusterstates-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Windows Server 장애 조치 클러스터링 (WSFC) 클러스터의 Always On의 각 가용성 복제본 (조인 상태)에 관계 없이 모든 Always On 가용성 그룹 (복제본 위치)에 관계 없이 대 한 행을 반환합니다.  
+  WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터에 있는 모든 Always On 가용성 그룹(복제본 위치에 상관없음)의 각 Always On 가용성 복제본(조인 상태에 상관없음)에 대해 하나의 행을 반환합니다.  
   
 ##  <a name="connected_state"></a>  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|가용성 복제본의 고유한 식별자입니다.|  
 |**replica_server_name**|**nvarchar(256)**|복제본을 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름입니다.|  

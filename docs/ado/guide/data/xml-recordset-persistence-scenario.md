@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 893921a7100ca22cae219f5a0e88d543499053b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55ea62fac0cb2fe73b368429bb164cd28147fa7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923361"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>XML 레코드 집합 지속성 시나리오
 이 시나리오에서는 레코드 집합 개체의 내용을 ASP 응답 개체에 직접 저장 하는 ASP Active Server Pages () 응용 프로그램을 만듭니다.  

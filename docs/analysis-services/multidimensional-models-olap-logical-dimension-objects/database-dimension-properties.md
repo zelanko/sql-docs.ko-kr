@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7c7944ab279f2b036a3acd7cf75bd775d0ec6d6c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180778"
 ---
 # <a name="database-dimension-properties"></a>데이터베이스 차원 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 차원의 특성 및 특성 또는 차원에 포함 된 계층에 다양 한 차원 속성의 설정에 따라 차원에 대 한 메타 데이터에 의해 정의 됩니다. 다음 표에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 속성을 설명합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 차원의 특성 및 특성 또는 계층을 차원에 포함 된 다양 한 차원 속성의 설정에 따라 차원에 대 한 메타 데이터에 의해 정의 됩니다. 다음 표에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 속성을 설명합니다.  
   
 |속성|Description|  
 |--------------|-----------------|  
@@ -45,9 +45,9 @@ ms.locfileid: "34021510"
 |**WriteEnabled**|보안 권한에 따라 차원 쓰기 저장(writeback)을 사용할 수 있는지 여부를 나타냅니다.|  
   
 > [!NOTE]  
->  Null 값과 다른 데이터 무결성 문제를 작업할 때 ErrorConfiguration 및 UnknownMember 속성에 대 한 값을 설정 하는 방법에 대 한 자세한 내용은 참조 [Analysis Services 2005에서 데이터 무결성 문제 처리](http://go.microsoft.com/fwlink/?LinkId=81891)합니다.  
+>  Null 값 및 다른 데이터 무결성 문제를 작업할 때 ErrorConfiguration 및 UnknownMember 속성에 대 한 값을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [Analysis Services 2005에서 데이터 무결성 문제 처리](http://go.microsoft.com/fwlink/?LinkId=81891)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [특성 및 특성 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
  [사용자 계층](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [차원 관계](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

@@ -11,14 +11,13 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 5d125f6bdbc024e0f72cb138075e5abb97ae93eb
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: c6947ae0df357c1a1bd1da2973ff3bf6a81717f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059336"
 ---
 # <a name="sysworkloadmanagementworkloadclassifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact SQL)
 
@@ -26,11 +25,11 @@ ms.locfileid: "67413231"
 
  워크 로드 분류자에 대 한 세부 정보를 반환 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|분류자의 고유 ID입니다. Null을 허용하지 않습니다.||
 group_name|**sysname**|분류자에 할당 된 작업 그룹의 이름입니다. Null을 허용하지 않습니다. |정적 리소스 클래스</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>동적 리소스 클래스</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
-NAME|**sysname**|분류자의 이름입니다. 인스턴스에 고유 해야 합니다. Null을 허용하지 않습니다.||
+name|**sysname**|분류자의 이름입니다. 인스턴스에 고유 해야 합니다. Null을 허용하지 않습니다.||
 |importance|**sysname**|공유 리소스에 대 한 작업 그룹 및이 작업 그룹에서 요청의 상대적 중요도가입니다.  중요도 분류자에 지정 된 작업 그룹 중요도 설정 보다 우선 합니다.|낮음, 높으나 높음, 보통, 높으나, 높음 |
 |create_time|**datetime**|분류자를 만든 시간입니다. Null을 허용하지 않습니다.||
 modify_time|**datetime**|분류자를 마지막으로 수정한 시간입니다. Null을 허용하지 않습니다.||

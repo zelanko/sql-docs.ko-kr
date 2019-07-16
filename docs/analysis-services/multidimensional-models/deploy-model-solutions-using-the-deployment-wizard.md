@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cde312f2bfad67c6cfe61a9b8379973c1f59a56c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38004665"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178520"
 ---
 # <a name="deploy-model-solutions-using-the-deployment-wizard"></a>배포 마법사를 사용하여 모델 솔루션 배포
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38004665"
 ## <a name="in-this-section"></a>섹션 내용  
  다음 항목에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사, 입력 파일 및 배포 스크립트를 사용하는 방법에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[Analysis Services 배포 마법사 실행](../../analysis-services/multidimensional-models/running-the-analysis-services-deployment-wizard.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사를 실행할 수 있는 여러 방법에 대해 설명합니다.|  
 |[배포 스크립트를 만드는 데 사용하는 입력 파일 이해](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 마법사가 입력 값으로 사용하는 파일 및 이러한 각 파일에 포함되는 내용에 대해 설명하고 각 입력 파일에서 값을 수정하는 방법을 설명하는 항목 링크를 제공합니다.|  
@@ -41,7 +41,7 @@ ms.locfileid: "38004665"
 ## <a name="see-also"></a>관련 항목  
  [XMLA를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-xmla.md)   
  [Analysis Services 데이터베이스 동기화](../../analysis-services/multidimensional-models/synchronize-analysis-services-databases.md)   
- [배포 스크립트를 만드는 데 입력된 파일 이해](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)   
+ [배포 스크립트를 만드는 데 사용하는 입력 파일 이해](../../analysis-services/multidimensional-models/deployment-script-files-input-used-to-create-deployment-script.md)   
  [배포 유틸리티를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md)  
   
   

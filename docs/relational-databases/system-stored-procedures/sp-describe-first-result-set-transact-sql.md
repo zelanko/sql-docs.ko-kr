@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053053"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -63,7 +62,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 ## <a name="result-sets"></a>결과 집합  
  이 공통 메타데이터는 결과 메타데이터의 각 열에 대한 하나의 행이 포함된 결과 집합으로 반환됩니다. 각 행은 다음 섹션에 설명된 형식으로 열의 유형과 Null 허용 여부를 설명합니다. 모든 제어 경로에 대해 첫 번째 문이 없을 경우 행이 0개인 결과 집합이 반환됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**비트 NOT NULL**|해당 열이 정보 검색을 목적으로 추가되어 실제로 결과 집합에 나타나지 않는 별도의 열임을 나타냅니다.|  
 |**column_ordinal**|**int NOT NULL**|결과 집합에서 열의 서수 위치를 포함합니다. 첫 번째 열의 위치가 1로 지정 됩니다.|  
@@ -71,8 +70,8 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**is_nullable**|**비트 NOT NULL**|열이 NULL을 허용하는 경우 1, 열이 NULL을 허용하지 않는 경우 0, 열이 NULL을 허용하는지 확인할 수 없는 경우 1을 포함합니다.|  
 |**system_type_id**|**int NOT NULL**|Sys.types에 지정 된 대로 열 데이터 형식의 system_type_id를 포함 합니다. CLR 형식의 경우 system_type_name 열에서 NULL을 반환해도 이 열은 값 240을 반환합니다.|  
 |**system_type_name**|**nvarchar(256) NULL**|열의 데이터 형식에 지정한 이름 및 인수(length, precision, scale 등)를 포함합니다. 데이터 형식이 사용자 정의 별칭 형식인 경우 기본 시스템 형식이 여기에 지정됩니다. 데이터 형식이 CLR 사용자 정의 형식인 경우 이 열에 NULL이 반환됩니다.|  
-|**max_length**|**smallint NOT NULL**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)**, **nvarchar (max)** 하십시오 **varbinary (max)**, 또는 **xml**.<br /><br /> 에 대 한 **텍스트** 열을 **max_length** 값이 16 또는 값으로 설정 됩니다 **sp_tableoption 'text in row'** 합니다.|  
-|**전체 자릿수**|**tinyint NOT NULL**|숫자 기반일 경우 열의 전체 자릿수이고 그렇지 않으면 0을 반환합니다.|  
+|**max_length**|**smallint NOT NULL**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)** , **nvarchar (max)** 하십시오 **varbinary (max)** , 또는 **xml**.<br /><br /> 에 대 한 **텍스트** 열을 **max_length** 값이 16 또는 값으로 설정 됩니다 **sp_tableoption 'text in row'** 합니다.|  
+|**precision**|**tinyint NOT NULL**|숫자 기반일 경우 열의 전체 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**scale**|**tinyint NOT NULL**|숫자 기반일 경우 열의 소수 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**collation_name**|**sysname NULL**|문자 기반일 경우 열의 데이터 정렬 이름이고 그렇지 않으면 NULL을 반환합니다.|  
 |**user_type_id**|**int NULL**|CLR 및 별칭 형식의 경우 sys.types에 지정된 대로 열 데이터 형식의 user_type_id를 포함합니다. 그렇지 않으면 NULL입니다.|  
@@ -105,7 +104,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**tds_collation_id**|**int NULL**|내부적으로만 사용할 수 있습니다.|  
 |**tds_collation_sort_id**|**tinyint NULL**|내부적으로만 사용할 수 있습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_describe_first_result_set** 는 경우 (가상)에 대 한 첫 번째 결과 집합 메타 데이터를 반환 하는 절차는 일괄 처리 하는 경우 해당 일괄 처리 (A) 이후에 실행 한 다음 일괄 처리 보장 됩니다 (1) 최적화 시간 오류를 발생 시킵니다, (2) 발생 시킵니다 (3) 런타임 오류를 반환 결과가 없습니다. 설정 또는 (4)에서 설명한 동일한 메타 데이터를 사용 하 여 첫 번째 결과 집합 **sp_describe_first_result_set**합니다.  
   
  이름, Null 허용 여부 및 데이터 형식이 다를 수 있습니다. 하는 경우 **sp_describe_first_result_set** 반환은 빈 결과 집합을 일괄 처리 실행은 아니요 결과 집합을 반환 합니다.  
@@ -159,7 +158,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 ### <a name="typical-examples"></a>일반적인 예  
   
-#### <a name="a-simple-example"></a>1. 간단한 예  
+#### <a name="a-simple-example"></a>A. 간단한 예  
  다음 예에서는 단일 쿼리에서 반환되는 결과 집합을 설명합니다.  
   
 ```  
@@ -176,7 +175,7 @@ WHERE object_id = @id1'
 , @params = N'@id1 int'  
 ```  
   
-#### <a name="b-browse-mode-examples"></a>2. 찾아보기 모드 예제  
+#### <a name="b-browse-mode-examples"></a>2\. 찾아보기 모드 예제  
  다음 세 가지 예제는 여러 가지 탐색 정보 모드 간의 주요 차이점을 보여줍니다. 쿼리 결과에는 관련된 열만 포함되었습니다.  
   
  정보가 없음을 나타내는 0을 반환하는 예제가 반환됩니다.  
@@ -191,7 +190,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -204,7 +203,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -217,7 +216,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|NAME|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  
@@ -298,7 +297,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 결과: 오류, 일치 하지 않는 형식 (**varchar(10)** 비교 **nvarchar(10)**).  
+ 결과: 오류, 일치 하지 않는 형식 (**varchar(10)** 비교 **nvarchar(10)** ).  
   
 #### <a name="result-set-can-return-an-error"></a>결과 집합이 오류를 반환할 수 있음  
  첫 번째 결과 집합이 오류 또는 결과 집합입니다.  

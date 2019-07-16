@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 493ee56380a3e4665b10cbe27ef1cd1ea764438b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182758"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34019370"
 > [!NOTE]  
 >  모델에 여러 개의 트리가 포함되어 있는 경우 **Microsoft 트리 뷰어**에서는 한 번에 하나의 트리만 볼 수 있습니다. 그러나 **일반 콘텐츠 트리 뷰어** 에서는 동일한 모델의 모든 트리가 동시에 표시됩니다.  
   
- ![의사 결정 트리에 대 한 모델 콘텐츠의 구조](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "한 의사 결정 트리에 대 한 모델 콘텐츠 구조")  
+ ![의사 결정 트리 모델 콘텐츠의 구조](../../analysis-services/data-mining/media/modelcontentstructure-dt.gif "한 의사 결정 트리에 대 한 모델 콘텐츠 구조")  
   
  예측 가능한 각 특성의 트리에는 선택한 입력 열이 예측 가능한 해당 특성의 결과에 미친 영향을 설명하는 정보가 들어 있습니다. 각 트리의 맨 처음에는 예측 가능한 특성이 포함된 노드(NODE_TYPE = 9)가 있고 그 다음에는 입력 특성을 나타내는 일련의 노드(NODE_TYPE = 10)가 있습니다. 특성은 사례 수준 열이나 중첩 테이블 열의 값에 해당합니다. 중첩 테이블 열의 값은 일반적으로 중첩 테이블의 **Key** 열에 있는 값입니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34019370"
  Microsoft 의사 결정 트리 알고리즘에서는 연속 데이터 형식을 입력으로 사용할 수 없으므로 열에 연속 숫자 데이터 형식이 있는 경우 해당 값은 불연속화됩니다. 알고리즘은 모든 연속 특성에 대해 분할 지점에서 해당 알고리즘 방식의 분할을 수행합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연속 특성을 버킷 팅;에 대 한 메서드를 자동으로 선택 그러나 입력의 방법을 연속 값을 제어할 수 있습니다에 마이닝 구조 열의 내용 유형을 설정 하 여 분할 **Discretized** 로 설정한 다음는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 또는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 속성입니다.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연속 특성을 버킷팅하기 위한 방법을 자동으로 선택합니다. 그러나 사용자가 마이닝 구조 열의 내용 유형을 **Discretized** 로 설정한 다음 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> 또는 <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> 속성을 설정하여 입력의 연속 값이 불연속화되는 방식을 제어할 수도 있습니다.  
   
  [Top](#bkmk_Top)  
   
@@ -70,7 +70,7 @@ ms.locfileid: "34019370"
  NODE_TYPE  
  의사 결정 트리 모델에서는 다음과 같은 노드 유형이 만들어집니다.  
   
-|노드 유형|Description|  
+|노드 유형|설명|  
 |---------------|-----------------|  
 |1(모델)|모델의 루트 노드입니다.|  
 |2(트리)|모델의 분류 트리에 대한 부모 노드입니다. **"All"** 이라는 레이블이 표시됩니다.|  
@@ -155,7 +155,7 @@ ms.locfileid: "34019370"
  MSOLAP_NODE_SHORT_CAPTION  
  표시용 레이블입니다.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>설명  
  Naive Bayes 또는 신경망 모델에 있는 한계 통계 노드와 달리 의사 결정 트리 모델에는 모델 전체에 대한 통계를 저장하는 별도의 노드가 없습니다. 대신 이 모델은 예측 가능한 각 특성에 대해 별도의 트리를 만들며 이 트리의 최상위에는 (All) 노드가 있습니다. 각 트리는 서로 독립적입니다. 모델에 예측 가능한 특성이 하나만 있는 경우에는 트리가 하나뿐이므로 (All) 노드도 하나만 있습니다.  
   
  출력 특성을 나타내는 각 트리는 추가적으로 분할을 나타내는 내부 분기(NODE_TYPE = 3)로 세분화됩니다. 이러한 각 트리에는 대상 특성의 분포에 대한 통계가 들어 있습니다. 또한 각 리프 노드(NODE_TYPE = 4)에는 입력 특성과 해당 값을 설명하는 통계가 각 특성-값 쌍을 지원하는 사례 수와 함께 들어 있습니다. 따라서 의사 결정 트리의 분기에서는 원본 데이터를 쿼리하지 않고도 데이터의 확률 또는 분포를 쉽게 볼 수 있습니다. 트리의 각 수준은 반드시 바로 아래에 있는 자식 노드의 합계를 나타냅니다.  
@@ -202,7 +202,7 @@ ms.locfileid: "34019370"
  XML 조각으로 표현되는 특성은 단순한 특성이거나 복잡한 특성일 수 있습니다. 단순한 특성에는 모델 열의 이름과 특성 값이 포함됩니다. 모델 열에 중첩 테이블이 들어 있는 경우 중첩 테이블 특성은 테이블 이름, 키 값 및 특성의 연결로 표현됩니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 중첩 테이블 사용을 지원하는 확장과 함께 2.0 버전의 PMML 표준을 지원합니다. 데이터에 중첩 테이블이 들어 있는 경우 PMML 버전의 모델을 생성하면 해당 모델에서 조건자가 포함된 모든 요소는 확장으로 표시됩니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 중첩 테이블 사용을 지원하는 확장과 함께 2.0 버전의 PMML 표준을 지원합니다. 데이터에 중첩 테이블이 들어 있는 경우 PMML 버전의 모델을 생성하면 해당 모델에서 조건자가 포함된 모든 요소는 확장으로 표시됩니다.  
   
  [Top](#bkmk_Top)  
   
@@ -231,7 +231,7 @@ ms.locfileid: "34019370"
 |Age < 30|40|Age < 30 and Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 and Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- 모든 모델에서 가능한 누락 값을 설명하기 위해 약간의 조정이 이루어집니다. 연속 특성의 경우 각 값 또는 값의 범위로 표현 되는 상태 (예를 들어 Age \<30 일의 보존 기간 = 30 및 Age > 30) 및 확률은 다음과 같이 계산 됩니다: 상태가 존재 (값 = 1), 다른 상태가 존재 (값 = 0), 상태는  **누락 된**합니다. 누락 값을 나타내기 위해 확률을 조정하는 방법에 대한 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)을 참조하세요.  
+ 모든 모델에서 가능한 누락 값을 설명하기 위해 약간의 조정이 이루어집니다. 연속 특성의 경우 각 값 또는 값의 범위로 표현 되는 상태 (예를 들어 Age \<30 일 기간 = 30 및 Age > 30) 확률은 다음과 같이 계산 됩니다: 상태가 됩니다 (값 = 1), 다른 상태가 존재 (값 = 0), 상태가  **누락 된**합니다. 누락 값을 나타내기 위해 확률을 조정하는 방법에 대한 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)을 참조하세요.  
   
  각 노드에 대한 확률은 다음과 같이 분포에서 거의 직접 계산됩니다.  
   
@@ -246,12 +246,12 @@ ms.locfileid: "34019370"
   
  연속 값에 대해 분산을 계산하는 방법에 대한 자세한 내용은 [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)를 참조하세요.  
   
-#### <a name="value-type"></a>값 유형  
+#### <a name="value-type"></a>값 형식  
  값 유형 열에서는 NODE_DISTRIBUTION 테이블의 다른 열에 제공된 숫자 값의 의미에 대한 정보를 제공합니다. 쿼리에 값 유형을 사용하여 중첩 테이블에서 특정 행을 검색할 수 있습니다. 예를 들어 [의사 결정 트리 모델 쿼리 예제](../../analysis-services/data-mining/decision-trees-model-query-examples.md)를 참조하세요.  
   
  <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> 열거형의 유형 중 다음 유형이 분류 트리에 사용됩니다.  
   
-|값 유형|Description|  
+|값 유형|설명|  
 |----------------|-----------------|  
 |1(누락)|누락 값과 관련된 개수, 확률 또는 기타 통계를 나타냅니다.|  
 |4 (Discrete)|불연속 또는 불연속화된 값과 관련된 개수, 확률 또는 기타 통계를 나타냅니다.|  
@@ -267,7 +267,7 @@ ms.locfileid: "34019370"
   
  리프 노드를 제외한 트리의 다른 모든 노드의 경우 각 노드의 점수는 현재 노드에 대한 최상의 분할 점수에서 부모 노드의 분할 점수를 뺀 값을 나타냅니다. 일반적으로 부모 노드의 분할 점수는 항상 자식 노드의 분할 점수보다 높아야 합니다. 의사 결정 트리 모델에서는 먼저 가장 중요한 특성에 따라 분할하기 때문입니다.  
   
- 선택하는 알고리즘 매개 변수에 따라 여러 가지 방법으로 분할 점수를 계산할 수 있습니다. 각 점수 매기기 방법에서 점수가 계산되는 방식에 대한 설명은 이 항목에서 다루지 않습니다. 자세한 내용은[Research 웹 사이트의 "](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)Bayesian 네트워크 학습: 지식 및 통계 데이터의 조합(Learning Bayesian Networks: The Combination of Knowledge and Statistical Data) [!INCLUDE[msCoName](../../includes/msconame-md.md)] "을 참조하세요.  
+ 선택하는 알고리즘 매개 변수에 따라 여러 가지 방법으로 분할 점수를 계산할 수 있습니다. 각 점수 매기기 방법에서 점수가 계산되는 방식에 대한 설명은 이 항목에서 다루지 않습니다. 자세한 내용은 "[Learning Bayesian Networks: Combination of Knowledge and Statistical Data](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)"의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research 웹 사이트입니다.  
   
 > [!NOTE]  
 >  연속 및 불연속 예측 가능 특성이 모두 있는 의사 결정 트리 모델을 만드는 경우 각 트리 유형을 나타내는 (All) 노드에는 완전히 다른 점수가 표시됩니다. 각 모델은 독립적으로 간주되며 회귀 평가에 사용되는 방법은 분류 평가에 사용되는 방법과 완전히 다릅니다. 따라서 노드 점수 값을 비교할 수 없습니다.  
@@ -289,7 +289,7 @@ ms.locfileid: "34019370"
   
  회귀 노드에 대한 자세한 내용은 [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25fd7bb6-cfdd-463f-bea8-c6fcb805d3f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 877fa31954cb0bf7255d831475c875fb43d002b8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: e15996a9db6e1b782875f2dd3d73d0e3e514c8f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210012"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044443"
 ---
 # <a name="sysmailstartsp-transact-sql"></a>sysmail_start_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sysmail_start_sp
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 메일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 시 설정되거나 설치되지 않습니다. 데이터베이스 메일 구성 마법사를 사용하여 데이터베이스 메일 개체를 설정하고 설치할 수 있습니다.  
   
  이 저장된 프로시저에는 **msdb** 데이터베이스입니다. 이 저장 프로시저는 보내는 메시지 요청이 있는 데이터베이스 메일 큐를 시작하고 외부 프로그램에 대한 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 활성화를 설정합니다.  

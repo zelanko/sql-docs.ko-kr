@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 150bde1d-adb6-4e77-90e9-4dc93499a746
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4425c814fb8814ec1ef7822d4642ccf6fcc0dd70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb2fc54692a77441bb2516ad72c0c44951152f56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045185"
 ---
 # <a name="messages-returned-by-the-odbc-driver-for-oracle"></a>Oracle용 ODBC 드라이버에서 반환한 메시지
 > [!IMPORTANT]  

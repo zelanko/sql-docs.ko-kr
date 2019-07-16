@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: aac800e225eb5323b1bffeafda77d059f0a837e2
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5611ce3da4f12bca5cb271cabe8af3e149dcbf35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928322"
 ---
 # <a name="select-from-ltmodelgt-dmx"></a>SELECT FROM &lt;모델&gt; (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +36,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  *n*  
  (선택 사항) 반환할 행의 수를 지정하는 정수입니다.  
   
- *모델*  
+ *model*  
  모델 식별자입니다.  
   
  *조건 목록*  
@@ -46,7 +45,7 @@ SELECT <expression list> [TOP <n>] FROM <model>
  *expression*  
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  열에는 *식 목록* 예측 또는 예측 전용으로 정의 하거나 관련 예측 가능한 열을 해야 합니다.  
   
 ## <a name="naive-bayes-example"></a>Naive Bayes 예  
@@ -65,7 +64,7 @@ FROM Forecasting
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [선택 &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [선택 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3f36bc8-6f69-49b0-83cd-2ccd3afebfbe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e88823d01e34a18bebe209f3939f8cb3532530f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71e50c4f611342c8e06687c47ab1c45fb60974ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964574"
 ---
 # <a name="converttostring-method-rds"></a>ConvertToString 메서드(RDS)
 변환 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 레코드 집합 데이터를 나타내는 MIME 문자열로 합니다.  
@@ -38,7 +37,7 @@ DataFactory.ConvertToString(Recordset)
  *DataFactory*  
  나타내는 개체 변수를 [업데이트할](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) 개체입니다.  
   
- *Recordset*  
+ *레코드 집합*  
  나타내는 개체 변수를 **레코드 집합** 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  

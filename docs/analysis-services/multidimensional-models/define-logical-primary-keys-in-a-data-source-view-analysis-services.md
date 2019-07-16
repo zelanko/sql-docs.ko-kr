@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 (Analysis Services)에서 논리적 기본 키 정의 | Microsoft Docs
+title: Data Source View (Analysis Services)에서 논리적 기본 키 정의 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 90684f55414fa9e3f0d68a8ec90884fdae4d2c0a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021068"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178732"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 논리적 기본 키 정의(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "34021068"
   
      키를 설정하면 키 아이콘을 통해 기본 키 열이 식별됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [데이터 원본 뷰 & #40; 명명 된 계산을 정의 합니다. Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰에서 명명된 계산 정의&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

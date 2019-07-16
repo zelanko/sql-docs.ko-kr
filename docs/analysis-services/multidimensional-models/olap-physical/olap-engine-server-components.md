@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2e8acd27d64d2aaed12cffd1e05fc2faf62da044
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208602"
 ---
 # <a name="olap-engine-server-components"></a>OLAP 엔진 서버 구성 요소
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  서버 구성 요소 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 는 **msmdsrv.exe** 응용 프로그램을 Windows 서비스로 실행 됩니다. 이 애플리케이션은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.  
+  서버 구성 요소 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 되는 **msmdsrv.exe** Windows 서비스로 실행 되는 응용 프로그램입니다. 이 애플리케이션은 보안 구성 요소, XMLA(XML for Analysis) 수신기 구성 요소, 쿼리 프로세서 구성 요소 및 다음 기능을 수행하는 다른 많은 내부 구성 요소로 이루어집니다.  
   
 -   클라이언트로부터 수신한 문 구문 분석  
   
@@ -50,15 +50,15 @@ ms.locfileid: "34026930"
   
 |포트|Description|  
 |----------|-----------------|  
-|2383| [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 기본 인스턴스|  
-|2382| [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 다른 인스턴스에 대한 리디렉터|  
-|서버 시작 시 동적으로 할당됩니다.| [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 명명된 인스턴스|  
+|2383|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 기본 인스턴스|  
+|2382|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 다른 인스턴스에 대한 리디렉터|  
+|서버 시작 시 동적으로 할당됩니다.|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 명명된 인스턴스|  
   
- 참조 [Analysis Services 액세스를 허용 하도록 Windows 방화벽을 구성](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 내용을 확인 합니다.  
+ 참조 [Analysis Services 액세스를 허용 하도록 Windows 방화벽 구성](../../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) 대 한 자세한 내용은 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [개체 명명 규칙 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/olap-physical/object-naming-rules-analysis-services.md)   
- [물리적 아키텍처 &#40;Analysis Services-다차원 데이터&#41;](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
+ [물리적 아키텍처&#40;Analysis Services - 다차원 데이터&#41;](../../../analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-physical-architecture.md)   
  [논리적 아키텍처 &#40;Analysis Services-다차원 데이터&#41;](../../../analysis-services/multidimensional-models/olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
   

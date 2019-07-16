@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 251c35977421d63027fbc9d6042e193125da854d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933295"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter 메서드(ADO)
 새로 만듭니다 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체 속성을 지정 합니다.  
@@ -53,7 +52,7 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
  *Value*  
  (선택 사항) A **Variant** 에 대 한 값을 지정 하는 **매개 변수** 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 합니다 **CreateParameter** 메서드를 만들기 위한 **매개 변수** 지정 된 이름, 형식, 방향, 크기 및 값을 사용 하 여 개체입니다. 인수에 전달 하는 모든 값에 해당 요소에 기록 됩니다 **매개 변수** 속성입니다.  
   
  이 메서드가 자동으로 추가 하지 않습니다는 **매개 변수** 개체를 **매개 변수** 의 컬렉션을 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체. 이렇게 하면 추가 하는 경우 ADO에서 해당 값은 유효성을 검사 하는 추가 속성을 설정할 수 있습니다 합니다 **매개 변수** 개체 컬렉션입니다.  

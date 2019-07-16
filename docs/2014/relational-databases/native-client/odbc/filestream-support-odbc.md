@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111141"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206595"
 ---
 # <a name="filestream-support-odbc"></a>FILESTREAM 지원(ODBC)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client의 ODBC에서는 향상된 FILESTREAM 기능을 지원합니다. 이 기능에 대 한 자세한 내용은 참조 하세요. [FILESTREAM 지원](../features/filestream-support.md)합니다. FILESTREAM에 대 한 ODB 지원을 설명 하는 샘플을 보려면 [송신 및 수신 데이터 증분 방식으로 FILESTREAM을 사용 하 여 &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md)합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "48111141"
  바인딩된 열에 SQLFetch를 호출 하는 경우 버퍼 전체 값을 보유할 만큼 크지 않은 경우 "데이터가 잘렸습니다." 경고가 나타납니다. 이 경고를 무시 하 고 SQLParamData 및 SQLPutData 호출을 사용 하 여이 바인딩된 열의 데이터를 업데이트 합니다. SQLBindCol과 바인딩된 경우 SQLSetPos를 사용 하 여 FILESTREAM 데이터를 업데이트할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- FILESTREAM 열은 `varbinary(max)` 열과 똑같은 방식으로 동작하지만 크기 제한은 없습니다. 이러한 열은 SQL_VARBINARY로 바인딩됩니다. 그러나 이미지 열에 사용되는 SQL_LONGVARBINARY에는 가지 제한 사항이 있습니다. 예를 들어 SQL_LONGVARBINARY는 출력 매개 변수로 사용할 수 없습니다. 다음 예에서는 FILESTREAM 열에 대한 직접 NTFS 액세스를 보여 줍니다. 이러한 예에서는 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 코드가 데이터베이스에서 실행되었다고 가정합니다.  
+ FILESTREAM 열은 `varbinary(max)` 열과 똑같은 방식으로 동작하지만 크기 제한은 없습니다. 이러한 열은 SQL_VARBINARY로 바인딩됩니다. 그러나 이미지 열에 사용되는 SQL_LONGVARBINARY에는 가지 제한 사항이 있습니다. 예를 들어 출력 매개 변수로 사용할 수는 SQL_LONGVARBINARY 없습니다.) 다음 예제에서는 FILESTREAM 열에 대 한 직접 NTFS 액세스를 보여 줍니다. 이러한 예에서는 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 코드가 데이터베이스에서 실행되었다고 가정합니다.  
   
 ```  
 CREATE TABLE fileStreamDocs(  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b125eeaab0ea833a801123ea4540f076696894d0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9852aaaf0b719bfa03736997959d76110dff4d6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997511"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="arguments"></a>인수  
 `[ @optname = ] 'option_name'` 쿼리할 복제 옵션의 이름이입니다. *option_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**transactional**|트랜잭션 복제를 사용하는 경우 반환되는 결과 집합입니다.|  
 |**merge**|병합 복제를 사용하는 경우 반환되는 결과 집합입니다.|  
@@ -48,7 +47,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**optname**|**sysname**|복제 옵션의 이름이며 다음 중 하나입니다.<br /><br /> **transactional**<br /><br /> **merge**|  
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -60,7 +59,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helpreplicationoption** 특정 서버에서 사용 하도록 설정 하는 복제 옵션에 대 한 정보를 가져오는 데 사용 됩니다. 특정 데이터베이스에 대 한 정보를 가져오려면 **sp_helpreplicationdboption**합니다.  
   
 ## <a name="permissions"></a>사용 권한  

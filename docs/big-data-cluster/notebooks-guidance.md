@@ -5,17 +5,16 @@ description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터에 �
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea907e507c9b37b8a6b911b7e1705ce31f231796
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 166964f97f5201d906ea2d1f6262b7a221eb2cba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958294"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법
 
@@ -102,7 +101,7 @@ Notebook SQL 커널에 연결 하 여 기존 텍스트 셀을 추가 하려는 �
 | SQL 커널 | 관계형 데이터베이스에서 대상으로 하는 SQL 코드를 작성 합니다.
 |PySpark3 및 PySpark 커널| 클러스터에서 Spark 계산을 사용 하 여 Python 코드를 작성 합니다.
 |Spark 커널|클러스터에서 Spark 계산을 사용 하 여 Scala 및 R 코드를 작성 합니다.
-|Python Kernel|로컬 개발에 대 한 Python 코드를 작성 합니다.
+|Python 커널|로컬 개발에 대 한 Python 코드를 작성 합니다.
 
 `Attach to` 연결할 커널에 대 한 컨텍스트를 제공 합니다. SQL 커널을 사용 하는 경우 있습니다 `Attach to` SQL Server 인스턴스 중 하나입니다.
 

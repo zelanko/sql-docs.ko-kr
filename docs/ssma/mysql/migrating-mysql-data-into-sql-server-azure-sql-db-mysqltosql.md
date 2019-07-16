@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6a7f4d6-68aa-4a38-93bf-53eba0d7dc82
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1e5c4c996a7dea9da3eccb24da2b6021a13d2590
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83a4a2d1bea5074cc268590d4074bde631f28694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908831"
 ---
 # <a name="migrating-mysql-data-into-sql-server---azure-sql-db-mysqltosql"></a>마이그레이션 MySQL 데이터를 SQL Server-Azure SQL DB (MySQLToSQL)
 사용 하 여 변환된 된 개체를 성공적으로 동기화 한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure MySQL에서 데이터를 마이그레이션할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다.  
@@ -64,7 +63,7 @@ ms.locfileid: "63312006"
   
 **데이터를 마이그레이션**  
   
-1.  다음을 확인합니다.  
+1.  다음 사항을 확인합니다.  
   
     -   MySQL 공급자 SSMA를 실행 하는 컴퓨터에 설치 됩니다.  
   

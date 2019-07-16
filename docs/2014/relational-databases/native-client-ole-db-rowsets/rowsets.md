@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c78f634f78cdcd970c1d731071a291930cf00ee
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48049763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206649"
 ---
 # <a name="rowsets"></a>행 집합
   행 집합은 데이터 열이 포함된 행의 집합입니다. 행 집합은 모든 OLE DB 데이터 공급자가 결과 집합 데이터를 테이블 형식으로 노출할 수 있도록 하는 중앙 개체입니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "48049763"
   
 -   [행 집합 및 SQL Server 커서](rowsets-and-sql-server-cursors.md)  
   
--   [행 페치](fetching-rows.md)  
+-   [행 인출](fetching-rows.md)  
   
 -   [IRow를 사용하여 단일 행 페치](fetching-a-single-row-with-irow.md)  
   

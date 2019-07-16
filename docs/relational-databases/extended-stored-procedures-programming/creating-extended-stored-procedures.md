@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec645ca897bb3760cb5ac866fbc28de5e2f6fcab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c22077de3bf41bc09864ac2c7f24dbdd4ecc3e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032045"
 ---
 # <a name="creating-extended-stored-procedures"></a>확장 저장 프로시저 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47711811"
   
  확장 저장 프로시저 DLL을 만드는 데 필요한 파일은 다음과 같습니다.  
   
-|파일|Description|  
+|파일|설명|  
 |----------|-----------------|  
 |Srv.h|확장 저장 프로시저 API 헤더 파일|  
 |Opends60.lib|Opends60.dll용 가져오기 라이브러리|  
@@ -64,7 +63,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport)은 Microsoft 전용 컴파일러 확장입니다. 컴파일러에서 이 지시어를 지원하지 않으면 DEF 파일의 EXPORTS 섹션 아래에서 이 함수를 내보내야 합니다.  
   
- 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적을 사용 하 여 시작 플래그-T260 또는 시스템 관리자 권한이 있는 사용자는 DBCC TRACEON (260)를 실행 하는 경우 및 확장 저장 프로시저가 DLL __getxpversion (), 경고 메시지를 지원 하지 않습니다 (오류 8131: 확장 저장된 프로시저 DLL '%' 내보내지 않습니다 \__GetXpVersion().) 오류 로그에 출력 됩니다. (유의 \__GetXpVersion()에 밑줄 두 개를 사용 하 여 시작 합니다.)  
+ 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 추적을 사용 하 여 시작 플래그-T260 또는 시스템 관리자 권한이 있는 사용자는 DBCC TRACEON (260)를 실행 하는 경우 및 확장 저장 프로시저가 DLL __getxpversion (), 경고 메시지를 지원 하지 않습니다 (오류 8131: 확장된 저장된 프로시저 DLL '%'을 내보내지 않습니다 \__GetXpVersion().) 오류 로그에 출력 됩니다. (유의 \__GetXpVersion()에 밑줄 두 개를 사용 하 여 시작 합니다.)  
   
  확장 저장 프로시저 DLL이 __GetXpVersion()을 내보내지만 함수에서 반환하는 버전이 서버에 필요한 버전보다 낮을 경우 함수에서 반환한 버전과 서버에 필요한 버전을 알리는 경고 메시지가 오류 로그에 출력됩니다. 잘못 된 값을 반환 하는이 메시지를 받게 되 면 \__GetXpVersion(), 또는 이전 버전 srv.h를 사용 하 여 컴파일하는 합니다.  
   

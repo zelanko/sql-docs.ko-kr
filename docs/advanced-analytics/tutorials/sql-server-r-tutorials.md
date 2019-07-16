@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 99dc3aa20bd3f31766ed66a6cdabea5cf38553f6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 467c9320880f1b113cecd36101345f6ee99f7b75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961930"
 ---
 # <a name="sql-server-r-language-tutorials"></a>SQL Server R 언어 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "58510160"
 
 ## <a name="r-quickstarts-and-tutorials"></a>R 빠른 시작 및 자습서
 
-| 링크 | Description |
+| 링크 | 설명 |
 |------|-------------|
 | [빠른 시작: T-SQL에서 R 사용](rtsql-using-r-code-in-transact-sql-quickstart.md) | SQL Server Management Studio와 같은 T-SQL 쿼리 편집기를 사용 하 여 R 함수를 호출 하기 위한 기본 구문을 보여 주는 이와 사용 하 여 몇 가지 빠른 시작의 첫 번째입니다. |
 | [자습서: 데이터 과학자를 위한 데이터베이스 내 R 분석에 알아봅니다](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | 이 자습서에서는 SQL Server에 새 R 개발자를 위해 다음을 설명 합니다. SQL Server의 센터가 일반적인 데이터 과학 작업 하는 방법입니다. 로드 및 데이터 시각화, 학습 및 SQL 서버에 저장 하는 모델 및 예측 분석 모델을 사용 합니다. |
@@ -40,12 +39,12 @@ ms.locfileid: "58510160"
 
 ## <a name="code-samples"></a>코드 샘플
 
-| 링크 | Description |
+| 링크 | 설명 |
 |------|-------------|
 | [R 및 SQL Server를 사용 하 여 예측 모델 빌드](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Ski 차량 대 여 사업에서 기계 학습 향후 대 여 예측을 비즈니스 계획 및 직원 미래 수요를 충족 하기 위해 도움이 되는 사용 하는 방법을 알아봅니다. |
 | [고객 수행 R 및 SQL Server를 사용 하 여 클러스터링](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | 판매 데이터를 기반으로 하는 세그먼트 고객에 게 자율된 학습을 사용 합니다. |
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 + [SQL Server에 R 확장](../concepts/extension-r.md)
 + [SQL Server Machine Learning Services 자습서](machine-learning-services-tutorials.md)

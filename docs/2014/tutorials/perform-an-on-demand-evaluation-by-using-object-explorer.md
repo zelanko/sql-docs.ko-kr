@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028284"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210942"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>개체 탐색기를 사용하여 요청 시 평가 수행
   이 태스크에서는 개체 탐색기를 사용하여 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 단일 인스턴스에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 최선의 구현 방법 정책에 대한 요청 시 평가를 수행합니다.  
@@ -38,13 +38,13 @@ ms.locfileid: "56028284"
     > [!NOTE]  
     >  기본적으로 로컬 인스턴스가 정책의 원본으로 사용됩니다. 이전에 최선의 구현 방법 정책을 가져온 경우 만들어진 다른 정책과 함께 해당 정책이 나열됩니다. 가져온된 최선의 구현 방법 정책 중 하나를 선택 하 고 클릭 **평가**합니다. 최선의 구현 방법 정책을 가져오지 않은 경우 이 절차를 계속합니다.  
   
-3.  에 **정책 평가** 대화 상자에서 다음을 **원본** 상자에서 줄임표 (**...** ) 단추입니다.  
+3.  에 **정책 평가** 대화 상자에서 다음을 **원본** 상자에서 줄임표 ( **...** ) 단추입니다.  
   
 4.  에 **원본 선택** 대화 상자에서 선택할 수 있습니다 **파일** 또는 **Server** 를 평가할 정책 파일의 원본으로 합니다. 클릭 하면 **Server**, 로컬 또는 원격 서버에서 정책 기반 관리에 이전에 가져온 모든 최선의 구현 방법 정책의 요청 시 평가 수행할 수 있습니다. 이 자습서에서는 클릭 **파일**, 한 다음 평가할 개별 정책 파일을 선택 합니다. 이렇게 하려면 다음 단계를 수행합니다.  
   
     1.  클릭 **파일**합니다.  
   
-    2.  옆에 **파일**, 줄임표 (**...** ) 단추입니다.  
+    2.  옆에 **파일**, 줄임표 ( **...** ) 단추입니다.  
   
     3.  에 **정책 선택** 대화 상자에서 최선의 구현 방법 정책을 포함 하는 다음 폴더를 찾습니다.  
   

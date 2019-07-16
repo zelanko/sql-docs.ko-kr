@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: eb73bd77-2e7e-4498-a266-4d7c990a0d56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8df4339ae30b9058e5a5864c37807c6b02e4fdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3424c58d25be69d2ddc42a3088aa457ebddf1d4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947608"
 ---
 # <a name="interval-data-type-precision"></a>간격 데이터 형식 전체 자릿수
 전체 자릿수는 간격 데이터 형식에 대 한 전체 자릿수, 전체 자릿수 간격 및 초 전체 자릿수를 유도 하는 간격을 포함 합니다.  

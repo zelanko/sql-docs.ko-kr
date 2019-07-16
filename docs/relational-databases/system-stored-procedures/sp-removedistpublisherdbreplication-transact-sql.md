@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9bfe002a-25b5-4226-bcfb-feb2060d6b4a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ef656dd25ea3d0a62baf7ca52653c22b9d895ea
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c92355cf5113960d92229157c86346135daad19e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006947"
 ---
 # <a name="spremovedistpublisherdbreplication-transact-sql"></a>sp_Removedistpublisherdbreplication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_removedistpublisherdbreplication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_removedistpublisherdbreplication** 트랜잭션 및 스냅숏 복제에 사용 됩니다.  
   
  **sp_removedistpublisherdbreplication** 배포 데이터베이스를 삭제 하지 않고 게시 된 데이터베이스를 만들어야 하는 경우에 사용 됩니다. 다음 메타 데이터가 제거됩니다.  

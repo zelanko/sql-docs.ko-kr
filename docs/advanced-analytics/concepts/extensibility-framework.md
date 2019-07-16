@@ -7,13 +7,12 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 8e5f874e43e70ce1bddfe21b745199fef44aa04a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3d4d8108fda500d48425abfb52fd9f72c6faa147
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963053"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 아키텍처 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +56,7 @@ SQL Server와 R 및 Python으로 개발 하는 동안 이동 데이터 과학 �
 | 신뢰할 수 있는 시작 관리자 | 확장명 | SQL Server 버전 |
 |-------------------|-----------|---------------------|
 | R 언어에 대 한 RLauncher.dll | [R 확장](extension-r.md) | SQL Server 2016, SQL Server 2017 |
-| Pythonlauncher.dll for Python 3.5 | [Python 확장](extension-python.md) | SQL Server 2017 |
+| Python 3.5에 대 한 Pythonlauncher.dll | [Python 확장](extension-python.md) | SQL Server 2017 |
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스는 자체 사용자 계정으로 실행됩니다. 실행 패드를 실행 하는 계정을 변경 하면 경우에 관련 파일에 변경 내용이 기록 되도록 되도록 SQL Server 구성 관리자를 사용 하 여 수행 해야 합니다.
 
@@ -71,7 +70,7 @@ SQL Server와 R 및 Python으로 개발 하는 동안 이동 데이터 과학 �
 
 실제로 BxlServer는 SQL Server 데이터를 전송 하 고 작업을 관리를 사용 하는 시간 환경을 실행 하는 언어와 함께 제공 합니다. BXL 이진 교환 언어 의미 하 고 SQL Server와 외부 프로세스 간에 데이터를 효율적으로 이동 하는 데 데이터 형식을 참조 합니다. BxlServer는 Microsoft R Client 및 Microsoft R Server와 같은 관련된 제품의 중요 한 부분 이기도합니다.
 
-**SQL Satellite** 외부 코드를 지 원하는 SQL Server 2016 부터는 데이터베이스 엔진에 포함 된 확장성 API 또는 C 또는 c + +를 사용 하 여 구현 된 외부 런타임을입니다.
+**SQL Satellite** 외부 코드를 지 원하는 SQL Server 2016 부터는 데이터베이스 엔진에 포함 된 확장성 API 또는 C를 사용 하 여 구현 된 외부 런타임을 또는 C++합니다.
 
 BxlServer는 SQL Satellite를 사용하여 다음 작업을 수행합니다.
 

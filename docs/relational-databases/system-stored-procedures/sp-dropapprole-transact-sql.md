@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 author: VanMSFT
-manager: jroth
-ms.openlocfilehash: 0928137201d9a731051ab95e603744f60c3a52e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36c3aaf72390ac5005ff5577000820f07ac5856d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001036"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole(Transact-SQL)
 
@@ -48,7 +47,7 @@ sp_dropapprole [@rolename = ] 'role'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_dropapprole** 응용 프로그램 역할을 제거 하려면만 사용할 수 있습니다. 보안 개체를 소유하는 역할은 삭제할 수 없습니다. 보안 개체를 소유한 응용 프로그램 역할을 삭제하려면 먼저 보안 개체의 소유권을 이전하거나 보안 개체를 삭제해야 합니다.  
   
  **sp_dropapprole** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  

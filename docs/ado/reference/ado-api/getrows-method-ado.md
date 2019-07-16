@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6babeebec1eac78949f0a80eb0701b5b5ba1dcc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d96b7968c7aba8d1249db2f43b53fc8a22596419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918456"
 ---
 # <a name="getrows-method-ado"></a>GetRows 메서드(ADO)
 여러 레코드를 검색 한 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 배열로 개체입니다.  
@@ -47,7 +46,7 @@ array = recordset.GetRows(Rows, Start, Fields )
  *Fields*  
  (선택 사항) A **Variant** 필드 이름 또는 서 수 위치 번호 배열을 단일 필드 이름이 나 서 수 위치를 나타내는입니다. ADO 이러한 필드에만 데이터를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 합니다 **GetRows** 에서 레코드를 복사 하는 메서드를 **레코드 집합** 2 차원 배열로 합니다. 첫 번째 첨자 필드를 식별 하 고 두 번째 레코드 번호를 식별 합니다. 합니다 *배열* 변수는 자동으로 올바른 차원이 구분 시 크기를 **GetRows** 메서드 데이터를 반환 합니다.  
   
  에 대 한 값을 지정 하지 않으면 합니다 *행* 인수를 **GetRows** 의 모든 레코드를 자동으로 검색 하는 메서드를 **레코드 집합** 개체. 를 사용할 수 있는 것 보다 더 많은 레코드를 요청 하는 경우 **GetRows** 만 사용할 수 있는 레코드 수를 반환 합니다.  

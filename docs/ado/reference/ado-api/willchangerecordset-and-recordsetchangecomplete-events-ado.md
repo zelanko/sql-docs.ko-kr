@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5d44659-e0d9-46d9-a297-99c43555082f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c5ca84c5759523bf17c4e047b22cafbd48dce547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd4e2f1485c18ce1fecc76d4eb23aa4132d85329
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938684"
 ---
 # <a name="willchangerecordset-and-recordsetchangecomplete-events-ado"></a>WillChangeRecordset 및 RecordsetChangeComplete 이벤트(ADO)
 **WillChangeRecordset** 보류 중인 작업을 변경 하기 전에 이벤트 라고 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md). 합니다 **RecordsetChangeComplete** 이벤트 후에 호출 됩니다 합니다 **레코드 집합** 변경 되었습니다.  
@@ -59,7 +58,7 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  *pRecordset*  
  A **레코드 집합** 개체입니다. 합니다 **레코드 집합** 이 이벤트가 발생 한입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  A **WillChangeRecordset** 또는 **RecordsetChangeComplete** 이벤트 때문에 발생할 수 있습니다 합니다 **레코드 집합** [Requery](../../../ado/reference/ado-api/requery-method.md) 또는[열려](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드.  
   
  공급자는 책갈피를 지원 하지 않는 경우는 **RecordsetChange** 이벤트 알림이 발생 될 때마다 새 행이 공급자에서 검색 됩니다. 이 이벤트의 빈도에 따라 달라 집니다 합니다 **RecordsetCacheSize** 속성입니다.  

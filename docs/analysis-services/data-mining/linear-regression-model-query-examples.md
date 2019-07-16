@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e967bcb024a20c09105447780e5d672d4dc843fa
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019180"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183256"
 ---
 # <a name="linear-regression-model-query-examples"></a>선형 회귀 모델 쿼리 예제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34019180"
   
  [맨 위로 이동](#bkmk_top)  
   
-###  <a name="bkmk_Query1"></a> 예제 쿼리 1: 데이터 마이닝 스키마 행 집합을 사용하여 모델에 사용된 매개 변수 확인  
+###  <a name="bkmk_Query1"></a> 예제 쿼리 1: 데이터 마이닝 스키마 행 집합을 사용 하 여 모델에 사용할 매개 변수를 확인 합니다.  
  데이터 마이닝 스키마 행 집합을 쿼리하면 모델에 대한 메타데이터를 찾을 수 있습니다. 이러한 메타데이터로는 모델이 만들어진 시기, 모델이 마지막으로 처리된 시기, 모델의 기반이 되는 마이닝 구조의 이름, 예측 가능한 특성으로 지정된 열 이름 등이 포함됩니다. 모델을 처음으로 만들 때 사용한 매개 변수를 반환할 수도 있습니다.  
   
 ```  
@@ -79,13 +79,13 @@ FROM LR_PredictIncome.CONTENT
   
  예상 결과:  
   
-|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
+|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|Missing|0|0.000457142857142857|0|1.|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
-|Age|471.687717702463|0|0|126.969442359327|7|  
-|Age|234.680904692439|0|0|0|8|  
-|Age|45.4269617936399|0|0|126.969442359327|9|  
+|나이|471.687717702463|0|0|126.969442359327|7|  
+|나이|234.680904692439|0|0|0|8|  
+|나이|45.4269617936399|0|0|126.969442359327|9|  
 ||35793.5477381267|0|0|1012968919.28372|11|  
   
  반면 **마이닝 범례**에서 회귀 수식은 다음과 같이 나타납니다.  
@@ -141,7 +141,7 @@ FROM LR_PredictIncome.CONTENT
   
  [맨 위로 이동](#bkmk_top)  
   
-###  <a name="bkmk_Query4"></a> 예제 쿼리 4: 단일 쿼리를 사용하여 수입 예측  
+###  <a name="bkmk_Query4"></a> 예제 쿼리 4: 단일 쿼리를 사용 하 여 수입 예측  
  회귀 모델에서 단일 쿼리를 만드는 가장 쉬운 방법은 **단일 쿼리 입력** 대화 상자를 사용하는 것입니다. 예를 들어 적절한 회귀 모델을 선택하고 **단일 쿼리**를 선택한 다음 **Age** 값으로 **20**을 입력하여 다음과 같은 DMX 쿼리를 작성할 수 있습니다.  
   
 ```  
@@ -159,7 +159,7 @@ NATURAL PREDICTION JOIN
   
  [맨 위로 이동](#bkmk_top)  
   
-###  <a name="bkmk_Query5"></a> 예제 쿼리 5: 회귀 모델에 예측 함수 사용  
+###  <a name="bkmk_Query5"></a> 예제 쿼리 5: 예측 함수를 사용 하 여 회귀 모델  
  선형 회귀 모델에 여러 표준 예측 함수를 사용할 수 있습니다. 다음 예에서는 예측 쿼리 결과에 기술 통계를 추가하는 방법을 보여 줍니다. 이러한 결과에서 이 모델의 평균과 상당한 편차가 있다는 것을 알 수 있습니다.  
   
 ```  
@@ -191,15 +191,15 @@ NATURAL PREDICTION JOIN
 |[PredictHistogram & #40; DMX & #41;](../../dmx/predicthistogram-dmx.md)|지정한 열에 대한 예측 값을 반환합니다.|  
 |[PredictNodeId & #40; DMX & #41;](../../dmx/predictnodeid-dmx.md)|각 사례에 대한 Node_ID를 반환합니다.|  
 |[PredictStdev & #40; DMX & #41;](../../dmx/predictstdev-dmx.md)|예측 값의 표준 편차를 반환합니다.|  
-|[PredictSupport & #40; DMX & #41;](../../dmx/predictsupport-dmx.md)|지정한 상태에 대한 지원 값을 반환합니다.|  
+|[PredictSupport&#40;DMX&#41;](../../dmx/predictsupport-dmx.md)|지정한 상태에 대한 지원 값을 반환합니다.|  
 |[PredictVariance & #40; DMX & #41;](../../dmx/predictvariance-dmx.md)|지정한 열의 분산을 반환합니다.|  
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통적인 함수 목록에 대해서는 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요. 이러한 함수를 사용하는 방법은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft 선형 회귀 알고리즘](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 선형 회귀 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [선형 회귀 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [선형 회귀 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

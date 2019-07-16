@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b06ffc7a8400d3b02698009b2452282658cf959e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900773"
 ---
 # <a name="sysdmhadravailabilitygroupstates-transact-sql"></a>sys.dm_hadr_availability_group_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47745361"
 > [!NOTE]  
 >  전체 목록은 쿼리 합니다 [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) 카탈로그 뷰.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|가용성 그룹의 고유한 식별자입니다.|  
 |**primary_replica**|**varchar(128)**|현재 주 복제본을 호스팅하는 서버 인스턴스의 이름입니다.<br /><br /> NULL = 주 복제본이 아니거나 WSFC 장애 조치(Failover) 클러스터와 통신할 수 없습니다.|  
@@ -43,7 +42,7 @@ ms.locfileid: "47745361"
 |**primary_recovery_health_desc**|**nvarchar(60)**|에 대 한 설명을 **primary_replica_health**하나씩입니다.<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|복구 상태를 보조 복제본 중 하나를 나타냅니다.<br /><br /> 0 = 진행 중<br /><br /> 1 = 온라인<br /><br /> NULL<br /><br /> 주 복제본에는 **secondary_recovery_health** 열은 NULL입니다.|  
 |**secondary_recovery_health_desc**|**nvarchar(60)**|에 대 한 설명을 **secondary_recovery_health**하나씩입니다.<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**synchronization_health**|**tinyint**|에 대 한 롤업을 반영 합니다 **synchronization_health** 가용성 그룹의 모든 가용성 복제본의 합니다. 가능한 값 및 해당 설명이 같습니다.<br /><br /> 0: 올바른 상태가 아닙니다. 가용성 복제본이 하나도 정상 상태인 **synchronization_health** (2 = 정상).<br /><br /> 1: 부분적으로 정상. 가용성 복제본의 전체가 아닌 일부의 동기화 상태가 정상입니다.<br /><br /> 2: 정상 상태입니다. 모든 가용성 복제본의 동기화 상태가 정상입니다.<br /><br /> 복제본 동기화 상태에 대 한 자세한 참조를 **synchronization_health** 열에 [sys.dm_hadr_availability_replica_states &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
+|**synchronization_health**|**tinyint**|에 대 한 롤업을 반영 합니다 **synchronization_health** 가용성 그룹의 모든 가용성 복제본의 합니다. 가능한 값 및 해당 설명이 같습니다.<br /><br /> 0: 정상이 아님. 가용성 복제본이 하나도 정상 상태인 **synchronization_health** (2 = 정상).<br /><br /> 1: 부분적으로 정상. 가용성 복제본의 전체가 아닌 일부의 동기화 상태가 정상입니다.<br /><br /> 2: 정상입니다. 모든 가용성 복제본의 동기화 상태가 정상입니다.<br /><br /> 복제본 동기화 상태에 대 한 자세한 참조를 **synchronization_health** 열에 [sys.dm_hadr_availability_replica_states &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
 |**synchronization_health_desc**|**nvarchar(60)**|에 대 한 설명을 **synchronization_health**하나씩입니다.<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
 ## <a name="security"></a>보안  

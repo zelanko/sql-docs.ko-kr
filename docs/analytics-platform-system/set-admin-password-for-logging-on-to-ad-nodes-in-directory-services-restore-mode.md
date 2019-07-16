@@ -2,19 +2,18 @@
 title: Analytics Platform System Active Directory 암호-설정 | Microsoft Docs
 description: 디렉터리 서비스 복원 모드에서 Analytics Platform System (APS)에서 Active Directory 노드 관리자 로그온 암호를 설정 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3df6203a4d98bace5d23a92e70a596a34dedb60e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e0b197a044f2f008b886d5f2ff39b603821fd29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960062"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>디렉터리 서비스의 AD 노드에 로그온 복원 모드 (DSRM)-Analytics Platform System 대 한 관리자 암호 설정
 디렉터리 서비스 복원 모드 (DSRM)에 Active Directory Domain Services (AD DS)를 복구 하기에 대 한 부팅 모드입니다. AD DS를 복원 해야 하는 경우 또는 AD DS에 실패 한 어플라이언스 AD 노드에 로그온 하는 것이 됩니다. DSRM 암호 어플라이언스 하드웨어 공급 업체 사이트에서 설치 하는 동안 초기화 된 및 어플라이언스 관리자가 변경 해야 합니다. Analytics Platform System에 두 개의 AD DS (도메인 컨트롤러);  **_appliance_domain_-AD01** 하 고  **_appliance_domain_-AD02**합니다. 각 AD 어플라이언스 노드에 대해 다음 단계를 사용 하 여 DSRM 암호를 변경 합니다.  

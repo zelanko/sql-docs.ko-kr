@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c357efe4636c1b502cdb57305b9072907d4b2e98
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532073"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165215"
 ---
 # <a name="assl-xml-conventions"></a>ASSL XML 표기 규칙
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -137,7 +137,7 @@ ms.locfileid: "52532073"
 |**Boolean**|False|  
 |**String**|""(빈 문자열)|  
 |**정수** 또는 **Long**|0 (영)|  
-|**타임 스탬프**|12시: 00 AM, 1/1/0001 (해당 하는.NET Frameworks **System.DateTime** 틱 수가 0 인)|  
+|**타임스탬프**|12시: 00 AM, 1/1/0001 (해당 하는.NET Frameworks **System.DateTime** 틱 수가 0 인)|  
   
  존재하기는 하지만 비어 있는 요소는 기본값이 아닌 Null 문자열 값을 갖는 것으로 해석됩니다.  
   

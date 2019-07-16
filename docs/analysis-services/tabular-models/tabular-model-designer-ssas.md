@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8be4f1f78b444933cc1ad7f4ec4fb71b28bfae1b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072570"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207468"
 ---
 # <a name="tabular-model-designer"></a>테이블 형식 모델 디자이너
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -108,7 +108,7 @@ ms.locfileid: "53072570"
   
  기본적으로 **오류 목록** 은 오류가 반환되어야만 표시됩니다. 그러나 **오류 목록** 창은 언제든지 확인할 수 있습니다. **오류 목록** 창을 보려면 **보기** 메뉴를 클릭한 다음 **오류 목록**을 클릭합니다.  
   
-### <a name="output"></a>출력  
+### <a name="output"></a>Output  
  빌드 및 배포 정보가 **출력** 창 및 모달 진행률 대화 상자에 표시됩니다. **출력** 창을 보려면 **보기** 메뉴를 클릭한 다음 출력을 클릭합니다.  
   
 ### <a name="menu-items"></a>메뉴 항목  
@@ -129,7 +129,7 @@ ms.locfileid: "53072570"
  **바로 가기 키**  
  도구->옵션->키보드 대화 상자를 통해 Analysis Services 키보드 바로 가기를 구성하거나 다시 매핑할 수 있습니다. 빌드, 저장, 디버그, 새 프로젝트 등과 같은 전역 [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] 바로 가기가 테이블 형식 모델 디자이너 컨텍스트에서 지원됩니다. 그 외 테이블 형식 모델 디자이너용 바로 가기 키는 Analysis Services 컨텍스트에서 지원됩니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [테이블 형식 모델 프로젝트](../../analysis-services/tabular-models/tabular-model-projects-ssas-tabular.md)   
   
   

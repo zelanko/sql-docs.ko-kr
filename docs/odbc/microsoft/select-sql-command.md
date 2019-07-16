@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c2d991afa179fdfbb536853e302b33de8bf12e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85f281aefe79a09806c42e13cd771f976362d053
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943783"
 ---
 # <a name="select---sql-command"></a>SELECT - SQL 명령
 하나 이상의 테이블에서 데이터를 검색합니다.  
@@ -48,7 +47,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 > [!NOTE]  
 >  A *하위*, 다음 인수에서 참조 하는 SELECT 내에서 선택 및 괄호로 묶어야 합니다. 동일한 수준에서 최대 2 개의 하위를 할 수 있습니다 (중첩 되지 않음) WHERE 절에 있습니다. (인수 섹션 참조). 하위 쿼리는 조인 조건이 여러 개 포함할 수 있습니다.  
   
- [ALL &#124; DISTINCT]   [*Alias*.] *Select_Item* [AS *Column_Name*]    [, [*Alias*.] *Select_Item* [AS *Column_Name*] ...]  
+ [모든 &#124; DISTINCT]   [*별칭*.] *Select_Item* [AS *Column_Name*] [, [*별칭*.] *Select_Item* [AS *Column_Name*]...]  
  SELECT 절에는 필드, 상수 및 쿼리 결과에 표시 되는 식을 지정 합니다.  
   
  기본적으로 쿼리 결과에 모든 행을 표시 모든 합니다.  
@@ -126,7 +125,7 @@ FROM [DatabaseName!]Table [Local_Alias]
 |--------------|----------------|  
 |=|같음|  
 |==|정확 하 게 일치|  
-|LIKE|SQL LIKE|  
+|LIKE|같은 SQL|  
 |<>, !=, #|같지 않음|  
 |>|두 개|  
 |>=|보다 크거나 같음|  
@@ -272,7 +271,7 @@ WHERE customer.cust_id NOT IN ;
   
  ORDER BY와 함께 순서를 지정 하지 않는 경우 쿼리 결과 순서가 지정 되지 않은 표시 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  선택은 다른 Visual FoxPro 명령 처럼 Visual FoxPro에 기본 제공 되는 SQL 명령입니다. 사용 하는 경우 쿼리를 제기 하기 위해 선택, Visual FoxPro 쿼리를 해석 하 고 테이블에서 지정된 된 데이터를 검색 합니다. (마찬가지로 다른 Visual FoxPro 명령) 명령 프롬프트 창 또는 Visual FoxPro 프로그램 내에서 SELECT 쿼리를 만들 수 있습니다.  
   
 > [!NOTE]  

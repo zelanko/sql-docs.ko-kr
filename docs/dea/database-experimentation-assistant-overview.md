@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: 25b5d051f6241919f34a60a42582e8a101052290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1183c6a443406f6031453b876f9165257db82c07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058904"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>데이터베이스 실험 도우미의 개요
 
@@ -92,7 +91,7 @@ ms.locfileid: "66794462"
 수집할 이벤트를 결정할 수 있습니다. 또한 수집 된 이벤트를 Microsoft로 보낼지 여부를 결정 합니다. 네 가지 유형의 이벤트는
 
 *   **TraceEvent**: 응용 프로그램 (예: "트리거 중지 캡처")에 대 한 이벤트를 사용 합니다.
-*   **Exception**: 응용 프로그램 사용 하는 동안 throw 된 예외입니다.
+*   **예외**: 응용 프로그램 사용 하는 동안 throw 된 예외입니다.
 *   **DiagnosticEvent**: 문제가 발생할 때 진단을 지원 하기 위해 이벤트 로그 (*되지* Microsoft로 전송) 합니다.
 *   **FeedbackEvent**: 응용 프로그램을 통해 제출 된 사용자 피드백
 

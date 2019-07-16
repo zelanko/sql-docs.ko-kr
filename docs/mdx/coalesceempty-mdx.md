@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 78e4f59ab1e994e34a7f0b1a0c519f34e20a2bd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f760220b02396591e684a83305111e487908d19b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006308"
 ---
 # <a name="coalesceempty-mdx"></a>CoalesceEmpty(MDX)
 
@@ -45,7 +44,7 @@ CoalesceEmpty(String_Expression1 [ ,String_Expression2,...n] )
  *String_Expression2*  
  첫 번째 문자열 식에서 반환되는 NULL을 대체하는 유효한 문자열 식으로서, 일반적으로 지정된 문자열 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  하나 이상의 숫자 식이 지정 된 경우 경우 합니다 **CoalesceEmpty** 함수는 비어 있지 않은 값으로 확인 될 수 있는 (왼쪽에서 오른쪽) 첫 번째 숫자 식의 숫자 값을 반환 합니다. 모든 지정된 숫자 식이 비어 있지 않은 값으로 확인될 수 없으면 함수가 빈 셀 값을 반환합니다. 일반적으로 두 번째 숫자 식의 값은 첫 번째 숫자 식에서 반환되는 NULL을 대체하는 숫자 값입니다.  
   
  문자열 식이 하나 이상 지정된 경우 이 함수는 비어 있지 않은 값으로 확인될 수 있는 첫 번째 문자열 식(왼쪽에서 오른쪽의 순서로)의 문자열 값을 반환합니다. 모든 지정된 문자열 식이 비어 있지 않은 값으로 확인될 수 없으면 함수가 빈 셀 값을 반환합니다. 일반적으로 두 번째 문자열 식의 값은 첫 번째 문자열 식에서 반환되는 NULL을 대체하는 문자열 값입니다.  

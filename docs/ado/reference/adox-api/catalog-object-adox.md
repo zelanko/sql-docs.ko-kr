@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7cdadbf3db6447f46fefac19d4979c266165905f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9843ad9ac0a456f7e38e741e08ce9b66f862fd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967058"
 ---
 # <a name="catalog-object-adox"></a>카탈로그 개체(ADOX)
 컬렉션을 포함 ([테이블](../../../ado/reference/adox-api/tables-collection-adox.md), [뷰](../../../ado/reference/adox-api/views-collection-adox.md)를 [사용자가](../../../ado/reference/adox-api/users-collection-adox.md)를 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md), 및 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md))는 스키마 카탈로그는 데이터 원본에 대해 설명 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  수정할 수는 **카탈로그** 추가 또는 개체를 제거 하거나 기존 개체를 수정 하 여 개체입니다. 일부 공급자의 일부를 지원 하지는 **카탈로그** 개체 또는 스키마 정보를 보는 지원할 수 있습니다.  
   
  메서드와 속성을 사용 하 여는 **카탈로그** 개체를 할 수 있습니다.  

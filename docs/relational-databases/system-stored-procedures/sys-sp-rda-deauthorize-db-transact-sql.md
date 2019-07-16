@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2e362e15-2cd5-4856-9f0b-54df56b0866b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7ba94ff4f7093e0974e947c8f8ba2deccd2825ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6aeb27d4fb452a4ed5b7f45086f601eacb4f0339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65979991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905108"
 ---
 # <a name="syssprdadeauthorizedb-transact-sql"></a>sys.sp_rda_deauthorize_db (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_rda_deauthorize_db
 ## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  실행 한 후 **sp_rda_deauthorize_db** , 스트레치 사용 데이터베이스 및 테이블에 대 한 모든 쿼리가 실패 합니다. 즉, 쿼리 모드를 사용 하지 않도록 설정 됩니다. 이 모드를 종료 하려면 다음 중 하나를 수행 합니다.  
   
 -   실행할 [sys.sp_rda_reauthorize_db &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 원격 Azure 데이터베이스에 다시 연결 합니다. 이 작업이 자동으로 다시 설정 쿼리 모드를 LOCAL_AND_REMOTE를 Stretch Database 대 한 기본 동작 합니다. 즉, 쿼리는 로컬 및 원격 데이터에서 결과 반환합니다.  
@@ -51,7 +50,7 @@ sp_rda_deauthorize_db
 -   실행 [sys.sp_rda_set_query_mode &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md) 계속 해 서만 로컬 데이터에 대해 실행 하는 쿼리 수 있도록 LOCAL_ONLY 인수를 사용 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [sys.sp_rda_set_query_mode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)   
+ [sys.sp_rda_set_query_mode &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-set-query-mode-transact-sql.md)   
  [sys.sp_rda_reauthorize_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md)   
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   

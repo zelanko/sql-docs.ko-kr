@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b834f7f6-9588-4d59-a3e2-83d8e8e722e1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb4874233f85a2565c3d30546749fa9bffe79ebb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 209a41ff29f8063ec6c46fe1fb5e821be1419cd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019983"
 ---
 # <a name="spmergedummyupdate-transact-sql"></a>sp_mergedummyupdate(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,14 +37,14 @@ sp_mergedummyupdate [ @source_object =] 'source_object', [ @rowguid =] 'rowguid'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @source_object = ] 'source_object'` 원본 개체의 이름이입니다. *source_object*됩니다 **nvarchar(386)**, 기본값은 없습니다.  
+`[ @source_object = ] 'source_object'` 원본 개체의 이름이입니다. *source_object*됩니다 **nvarchar(386)** , 기본값은 없습니다.  
   
 `[ @rowguid = ] 'rowguid'` 행 식별자가입니다. *rowguid* 됩니다 **uniqueidentifier**, 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_mergedummyupdate** 병합 복제에 사용 됩니다.  
   
  **sp_mergedummyupdate** 복제 충돌 뷰어 (Wzcnflct.exe)에 자신의 대체를 작성 하는 경우에 유용 합니다.  

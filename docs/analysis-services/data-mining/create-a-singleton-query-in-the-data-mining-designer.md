@@ -1,5 +1,5 @@
 ---
-title: 데이터 마이닝 디자이너에서 단일 쿼리를 작성 | Microsoft Docs
+title: 데이터 마이닝 디자이너에서 단일 쿼리를 만들려면 | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d30fee91882ecd2f76fde1e0c61d0e5bc3d302bc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183927"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>데이터 마이닝 디자이너에서 단일 쿼리 작성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -76,7 +76,7 @@ AS [t]
   
      새 화면이 열리고 쿼리 결과를 표시합니다. 방금 만든 DMX 문을 보려면 **SQL**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [예측 쿼리 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
+## <a name="see-also"></a>관련 항목  
+ [예측 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/prediction-queries-data-mining.md)  
   
   

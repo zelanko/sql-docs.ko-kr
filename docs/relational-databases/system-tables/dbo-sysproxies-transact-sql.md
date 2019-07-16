@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: a73da875-be22-45fc-b5e2-ea7ebd48e2d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a37300ad1bf16ac76fbcbd0c6e77870077f7f631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1dd486757a912d8f0364f55570a368292cf39ab7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984898"
 ---
 # <a name="dbosysproxies-transact-sql"></a>dbo.sysproxies(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 계정의 특성을 정의합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|프록시 계정의 ID입니다.|  
 |**name**|**sysname**|프록시 계정의 이름입니다.|  
@@ -42,7 +41,7 @@ ms.locfileid: "62470602"
 |**user_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* 사용자 또는 프록시 자격 증명을 사용 하 여 연결 된 그룹입니다.|  
 |**credential_date_created**|**datetime**|자격 증명을 작성한 날짜와 시간입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  구성원만 합니다 **sysadmin** 고정된 서버 역할에 액세스할 수 합니다 **sysproxies** 테이블입니다.  
   
 ## <a name="see-also"></a>관련 항목  

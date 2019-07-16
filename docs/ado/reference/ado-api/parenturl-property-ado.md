@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 65120ce6-3900-4cd4-b322-3b9816d74737
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 65704cea2a396e0f03de4bbcdc9f031f4c9af583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54b2db44fe2e1971356f96d33aa8de0b02781b1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931649"
 ---
 # <a name="parenturl-property-ado"></a>ParentURL 속성(ADO)
 부모를 가리키는 절대 URL 문자열을 나타냅니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 현재 **레코드** 개체입니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66703470"
 ## <a name="return-value"></a>반환 값  
  반환 된 **문자열** 부모의 URL을 나타내는 값 **레코드**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **ParentURL** 속성을 여는 데 원본에 따라 달라 집니다 합니다 **레코드** 개체입니다. 예를 들어 합니다 **레코드** 에서 참조 하는 디렉터리의 상대 경로 이름을 포함 하는 소스를 사용 하 여 열 수 있습니다 합니다 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성입니다.  
   
  가정 폴더 "first"에서 "두 번째" 포함 되어 있습니다. 엽니다는 **레코드** 다음 구문을 사용 하 여 개체:  

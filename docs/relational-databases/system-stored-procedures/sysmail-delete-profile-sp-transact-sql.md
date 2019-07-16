@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 71998653-4a02-446d-b6f7-50646a29e8a2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 601be3bb276576aaaf4c13e42e09d0de41b3b0f7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9442f4d3637fcb7c891eacbe7546254708918ad3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909205"
 ---
 # <a name="sysmaildeleteprofilesp-transact-sql"></a>sysmail_delete_profile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sysmail_delete_profile_sp  { [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  프로필을 삭제해도 프로필에서 사용하는 계정은 삭제되지 않습니다.  
   
  이 저장 프로시저는 사용자가 프로필에 액세스할 수 있는지 여부에 관계없이 프로필을 삭제합니다. 사용자에 대 한 기본 개인 프로필이 나 기본 공개 프로필을 제거 하는 동안 주의 해야 합니다 **msdb** 데이터베이스입니다. 사용할 수 있으면 기본 프로필이 없을 **sp_send_dbmail** 인수로 프로필 이름이 필요 합니다. 따라서 기본 프로필을 제거 발생할 수 있습니다에 대 한 호출 **sp_send_dbmail** 실패 합니다. 자세한 내용은 [sp_send_dbmail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-send-dbmail-transact-sql.md)합니다.  

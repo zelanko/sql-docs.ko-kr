@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_set_rpo_duration (Transact-SQL) | Microsoft Docs
+title: sys.sp_rda_set_rpo_duration (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: 95c80c5b-9252-4612-9ea7-544c48834fd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f46dd0bbedfebec5e21800b477a23d664446bf24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12d703b03483e1ea4641a822291106de3598f05e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905011"
 ---
-# <a name="syssprdasetrpoduration-transact-sql"></a>sys.sp_rda_set_rpo_duration (Transact-SQL)
+# <a name="syssprdasetrpoduration-transact-sql"></a>sys.sp_rda_set_rpo_duration (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   확인 하려면 원격 Azure 데이터베이스를 전체 복원 지정 시간 복원은 필요한 경우 준비 테이블의 SQL Server 유지 하는 마이그레이션된 데이터의 시간 수를 설정 합니다.    
@@ -51,11 +50,11 @@ sp_rda_set_rpo_duration [ @duration_hrs = ] duration_hrs
 ## <a name="permissions"></a>사용 권한    
  Db_owner 권한이 필요합니다.    
     
-## <a name="remarks"></a>Remarks    
+## <a name="remarks"></a>설명    
  실행 하 여 현재 값을 가져올 [sys.sp_rda_get_rpo_duration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)합니다.    
     
 ## <a name="see-also"></a>관련 항목    
- [sys.sp_rda_get_rpo_duration &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)     
+ [sys.sp_rda_get_rpo_duration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-rda-get-rpo-duration-transact-sql.md)     
  [스트레치 사용 데이터베이스 (Stretch Database)를 복원 합니다.](../../sql-server/stretch-database/restore-stretch-enabled-databases-stretch-database.md)     
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)    
     

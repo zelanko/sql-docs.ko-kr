@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6f9990103da1de5107ceaf3432f4da2a9a4486c4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510209"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208585"
 ---
 # <a name="parent-child-dimension"></a>부모-자식 차원
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "52510209"
   
  그러나 부모-자식 계층에는 자식 멤버에서 집계되는 데이터뿐 아니라 기본 데이터 원본에서 파생되는 데이터를 포함하는 리프가 아닌 멤버가 있을 수 있습니다. 부모-자식 계층의 이러한 리프가 아닌 멤버에 대해서는 기본 팩트 테이블 데이터가 포함된 특별한 시스템 생성 자식 멤버를 만들 수 있습니다. *데이터 멤버*라고 하는 이러한 특수 자식 멤버에는 리프가 아닌 멤버와 직접 연결되며 리프가 아닌 멤버의 하위 항목에서 계산되는 요약 값에 독립적인 값이 포함됩니다. 데이터 멤버에 대한 자세한 내용은 [부모-자식 계층의 특성](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [부모-자식 계층의 특성](../../analysis-services/multidimensional-models/parent-child-dimension-attributes.md)   
  [데이터베이스 차원 속성](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)  
   

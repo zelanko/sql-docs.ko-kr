@@ -46,11 +46,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5d310ce3482c14556ba2d85d03339f1b00e78b3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860754"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68191368"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server-2014"></a>Hardware and Software Requirements for Installing SQL Server 2014
 
@@ -76,7 +76,7 @@ ms.locfileid: "58860754"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 지원 파일  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 에 [!INCLUDE[win8](../../includes/win8-md.md)]를 설치하기 위한 최소 버전 요구 사항은 [Windows Server 2012 또는 Windows 8에 SQL Server 설치](https://support.microsoft.com/kb/2681562)(https://support.microsoft.com/kb/2681562))를 참조하십시오.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 에 [!INCLUDE[win8](../../includes/win8-md.md)]를 설치하기 위한 최소 버전 요구 사항은 [Windows Server 2012 또는 Windows 8에 SQL Server 설치](https://support.microsoft.com/kb/2681562)(https://support.microsoft.com/kb/2681562) )를 참조하십시오.  
   
  이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "58860754"
 |모니터|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 Super-VGA(800x600) 이상 해상도의 모니터가 필요합니다.|  
 |인터넷|인터넷 기능을 사용하려면 인터넷에 액세스해야 합니다(요금이 부과될 수 있음).|  
   
- * 실행 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 가상 머신에서 낮아집니다 실행 보다 고유 하 게 가상화 오버 헤드 때문입니다.  
+ \* 실행 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 가상 머신에서 낮아집니다 실행 보다 고유 하 게 가상화 오버 헤드 때문입니다.  
   
 ##  <a name="pmosr"></a> 프로세서, 메모리 및 운영 체제 요구 사항  
  모든 버전의 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에는 다음과 같은 메모리 및 프로세서 요구 사항이 적용됩니다.  

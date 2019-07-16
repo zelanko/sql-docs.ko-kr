@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 23e35ac5-fbbf-4922-970c-f4fac44c1263
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b89823af1295b329046395a8f3c345401ca61805
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bca1d879c0988ffb48eb5ae2fd080b1133e24339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060336"
 ---
 # <a name="syscollectorexecutionstats-transact-sql"></a>syscollector_execution_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   컬렉션 집합 또는 패키지에 대한 태스크 실행 정보를 제공합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**log_id**|**bigint**|각 컬렉션 집합의 실행을 식별합니다. 이 뷰와 자세한 다른 로그를 조인하는 데 사용됩니다. Null을 허용하지 않습니다.|  
 |**task_name**|**nvarchar(128)**|이 정보의 대상인 컬렉션 집합 또는 패키지 태스크의 이름입니다. Null을 허용하지 않습니다.|  

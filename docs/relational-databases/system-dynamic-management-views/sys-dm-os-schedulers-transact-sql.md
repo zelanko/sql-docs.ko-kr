@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f167aa6f4572fc1a44db83cfb9f7ea7b7a092b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899838"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "65626768"
 > [!NOTE]  
 >  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_os_schedulers**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |scheduler_address|**varbinary(8)**|스케줄러의 메모리 주소입니다. Null을 허용하지 않습니다.|  
 |parent_node_id|**int**|부모 노드라고도 하는 스케줄러가 속한 노드의 ID입니다. 이것은 NUMA(Non-Uniform Memory Access) 노드를 나타냅니다. Null을 허용하지 않습니다.|  
@@ -71,11 +70,11 @@ ms.locfileid: "65626768"
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
 
 ## <a name="examples"></a>예  
   
-### <a name="a-monitoring-hidden-and-nonhidden-schedulers"></a>1\. 숨겨진 스케줄러 및 숨겨지지 않은 스케줄러 모니터링  
+### <a name="a-monitoring-hidden-and-nonhidden-schedulers"></a>A. 숨겨진 스케줄러 및 숨겨지지 않은 스케줄러 모니터링  
  다음 쿼리에서는 모든 스케줄러에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 태스크 및 작업자 상태를 출력합니다. 이 쿼리는 다음 조건을 충족시키는 컴퓨터 시스템에서 실행되었습니다.  
   
 -   프로세스(CPU) 두 개  

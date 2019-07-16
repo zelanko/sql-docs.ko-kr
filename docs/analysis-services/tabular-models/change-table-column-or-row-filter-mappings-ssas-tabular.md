@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a421f9c43b827f24b15073a4d9a41904f8812f4b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071760"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207752"
 ---
 # <a name="change-table-column-or-row-filter-mappings"></a>테이블, 열 또는 행 필터 매핑 변경 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]

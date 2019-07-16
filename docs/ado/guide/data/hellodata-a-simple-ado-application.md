@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 97957adf53cfea64693530b79920dd54d6d0a1bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925133"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 간단한 ADO 애플리케이션
 각각 4 개의 주요 ADO 작업을 통해이 간단한 응용 프로그램 단계: 가져오기, 검사, 편집 및 데이터를 업데이트 합니다. 이러한 작업은 Microsoft® SQL Server에 포함 된 Northwind 샘플 데이터베이스에 대해 수행 됩니다. ADO의 기본 사항에 집중 하 고 코드 혼란을 방지 하기 위해이 예제에서 오류 처리는 최소화 됩니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "66700640"
   
  ![HelloData VB 응용 프로그램에 대 한 Form1을 보여 줍니다](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   
-|컨트롤 형식|속성|값|  
+|컨트롤 종류|속성|값|  
 |------------------|--------------|-----------|  
 |Form|이름|Form1|  
 ||높이|6500|  

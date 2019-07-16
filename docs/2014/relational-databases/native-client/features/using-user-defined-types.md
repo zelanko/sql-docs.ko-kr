@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2adbf40b3fe0b0e079198087a47f525d464a41b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808625"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206608"
 ---
 # <a name="using-user-defined-types"></a>사용자 정의 형식 사용
   [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터 UDT(사용자 정의 형식)가 도입되었습니다. UDT는 개체와 사용자 지정 데이터 구조를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있도록 SQL 유형 시스템을 확장합니다. UDT는 여러 데이터 형식과 동작이 포함될 수 있어 단일 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 데이터 형식으로 구성된 일반적인 별칭 데이터 형식과 차별화됩니다. UDT는 검증할 수 있는 코드를 생성하는 .NET CLR(공용 언어 런타임)에서 지원하는 모든 언어를 사용하여 정의합니다. Microsoft Visual 여기에 C# <sup>??</sup> 및 Visual Basic<sup>??</sup> .NET입니다. 데이터는 .NET 클래스 또는 구조체의 필드와 속성으로 노출되며 동작은 클래스 또는 구조체의 메서드로 정의됩니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "52808625"
 |DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|지원 되는<sup>6</sup>|해당 없음<sup>2</sup>|지원 되는<sup>4</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|지원 되는<sup>3,6</sup>|해당 없음<sup>2</sup>|해당 사항 없음|해당 없음<sup>2</sup>|  
   
- <sup>1</sup>DBTYPE_UDT 이외의 서버 유형이 **ICommandWithParameters::SetParameterInfo**로 지정되고 접근자 유형이 DBTYPE_UDT인 경우 문을 실행하면 오류가 발생합니다(DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR임). 그렇지는 데이터가 서버로 전송 됩니다 있지만 서버는 매개 변수의 데이터 형식으로 UDT에서 암시적 변환이 오류를 반환 합니다.  
+ <sup>1</sup>DBTYPE_UDT 이외의 서버 유형이 **ICommandWithParameters::SetParameterInfo**로 지정되고 접근자 유형이 DBTYPE_UDT인 경우 문을 실행하면 오류가 발생합니다(DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR임). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 UDT에서 매개 변수의 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
   
  <sup>2</sup>이 항목의 범위를 벗어납니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "52808625"
 #### <a name="the-sqlassemblies-schema-rowset"></a>SQL_ASSEMBLIES 스키마 행 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 등록된 된 Udt를 설명 하는 새 공급자 특정 스키마 행 집합을 노출 합니다. ASSEMBLY 서버가 DBTYPE_WSTR로 지정되지만 행 집합에는 없을 수 있습니다. 이 속성이 지정되지 않은 경우 행 집합은 기본적으로 현재 서버를 사용합니다. SQL_ASSEMBLIES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
-|열 이름|형식|Description|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|형식을 포함하는 어셈블리의 카탈로그 이름입니다.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|형식을 포함하는 어셈블리의 스키마 이름 또는 소유자 이름입니다. 어셈블리 범위는 스키마가 아니라 데이터베이스에 의해 결정되지만 여전히 여기에서 나타내는 소유자를 가집니다.|  
@@ -104,7 +104,7 @@ ms.locfileid: "52808625"
 #### <a name="the-sqlassemblies-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES 스키마 행 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 지정 된 서버의 어셈블리 종속성을 설명 하는 새 공급자별 스키마 행 집합을 제공 합니다. ASSEMBLY_SERVER가 호출자에 의해 DBTYPE_WSTR로 지정되지만 행 집합에는 없을 수 있습니다. 이 속성이 지정되지 않은 경우 행 집합은 기본적으로 현재 서버를 사용합니다. SQL_ASSEMBLY_DEPENDENCIES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
-|열 이름|형식|Description|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|형식을 포함하는 어셈블리의 카탈로그 이름입니다.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|형식을 포함하는 어셈블리의 스키마 이름 또는 소유자 이름입니다. 어셈블리 범위는 스키마가 아니라 데이터베이스에 의해 결정되지만 여전히 여기에서 나타내는 소유자를 가집니다.|  
@@ -114,7 +114,7 @@ ms.locfileid: "52808625"
 #### <a name="the-sqlusertypes-schema-rowset"></a>SQL_USER_TYPES 스키마 행 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자는 새로운 스키마 행 집합, SQL_USER_TYPES 시기를 설명 하는 지정 된 서버의 등록된 된 Udt가 추가 됩니다. UDT_SERVER가 호출자에 의해 DBTYPE_WSTR로 지정되어야 하지만 행 집합에는 없을 수 있습니다. SQL_USER_TYPES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
-|열 이름|형식|Description|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|UDT 열의 경우 이 속성이 UDT가 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -137,7 +137,7 @@ ms.locfileid: "52808625"
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
  OLE DB를 통해 Udt를 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 다음 값이 포함 된 새로운 DBPROPSET_SQLSERVERPARAMETER 속성 집합을 구현 합니다.  
   
-|이름|형식|Description|  
+|이름|형식|설명|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.<br /><br /> UDT 매개 변수의 경우 이 속성이 사용자 정의 형식이 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.<br /><br /> UDT 매개 변수의 경우 이 속성이 사용자 정의 형식이 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -148,7 +148,7 @@ ms.locfileid: "52808625"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 속성 집합  
  테이블 만들기를 지원 합니다 **ITableDefinition** 인터페이스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 DBPROPSET_SQLSERVERCOLUMN 속성 집합을 다음 3 개의 새 열을 추가 합니다.  
   
-|이름|Description|형식|Description|  
+|이름|설명|type|설명|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|DBTYPE_UDT 형식인 열의 경우 이 속성이 UDT가 정의되어 있는 카탈로그의 이름을 지정하는 문자열입니다.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|DBTYPE_UDT 형식인 열의 경우 이 속성이 UDT가 정의되어 있는 스키마의 이름을 지정하는 문자열입니다.|  
@@ -179,7 +179,7 @@ ms.locfileid: "52808625"
 #### <a name="the-icolumnsrowset-interface"></a>IColumnsRowset 인터페이스  
  외에 합니다 **ISSCommandWithParameters** 인터페이스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client도 호출에서 반환 된 행 집합에 새 값을 추가 합니다 **icolumnsrowset:: Getcolumnrowset** 메서드 다음을 포함합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|type|설명|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|UDT 카탈로그 이름 식별자입니다.|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|UDT 스키마 이름 식별자입니다.|  

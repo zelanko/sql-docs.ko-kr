@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4013dbd3de9b0866aff0dd8d1256be0839299235
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce1182decfb5afe63e43aa527d89d1ebc44d179a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895725"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -113,7 +112,7 @@ RETCODE bcp_colfmt (
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **bcp_colfmt** 함수를 사용하여 대량 복사에 사용할 사용자 파일 형식을 지정할 수 있습니다. 대량 복사의 경우 형식에는 다음과 같은 부분이 포함됩니다.  
   
 -   사용자 파일 열에서 데이터베이스 열로의 매핑  

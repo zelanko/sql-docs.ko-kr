@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0a72a030e504fca472596fd8e98faec0b98e5803
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48164263"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211873"
 ---
 # <a name="delete-statistics"></a>통계 삭제
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 다음을 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 의 테이블 및 뷰에서 통계를 삭제할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]  
@@ -33,7 +33,7 @@ ms.locfileid: "48164263"
   
 -   **다음을 사용하여 테이블 또는 뷰에서 통계를 삭제하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

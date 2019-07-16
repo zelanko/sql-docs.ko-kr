@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2045dfa9923fb745f0f9d3936579a4e73a50564
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018040"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210064"
 ---
 # <a name="decision-trees-model-query-examples"></a>의사 결정 트리 모델 쿼리 예제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
   
  COMPLEXITY_PENALTY=0.5, MAXIMUM_INPUT_ATTRIBUTES=255,MAXIMUM_OUTPUT_ATTRIBUTES=255,MINIMUM_SUPPORT=10,SCORE_METHOD=4,SPLIT_METHOD=3,FORCE_REGRESSOR=  
   
-###  <a name="bkmk_Query2"></a> 예제 쿼리 2: DMX를 사용하여 모델 내용에 대한 정보 반환  
+###  <a name="bkmk_Query2"></a> 예제 쿼리 2: DMX를 사용 하 여 모델 콘텐츠에 대 한 정보 반환  
  다음 쿼리는 [Basic Data Mining Tutorial](http://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)에서 모델을 작성할 때 만들어진 의사 결정 트리에 대한 몇 가지 기본 정보를 반환합니다. 각 트리 구조는 자체 노드에 저장됩니다. 이 모델에는 예측 가능한 특성이 하나이므로 트리 노드가 한 개뿐입니다. 그러나 의사 결정 트리 알고리즘을 사용하여 연결 모델을 만드는 경우 각 제품에 대해 하나씩 수백 개의 트리가 있을 수 있습니다.  
   
  이 쿼리는 예측 가능한 특정 특성을 나타내는 최상위 트리 노드인 유형 2 노드를 모두 반환합니다.  
@@ -75,7 +75,7 @@ WHERE NODE_TYPE = 2
   
 |MODEL_NAME|NODE_NAME|NODE_CAPTION|NODE_SUPPORT|CHILDREN_CARDINALITY|  
 |-----------------|----------------|-------------------|-------------------|---------------------------|  
-|TM_DecisionTree|000000001|모두|12939|5|  
+|TM_DecisionTree|000000001|All|12939|5|  
   
  이러한 결과의 의미는 무엇입니까? 의사 결정 트리 모델에서 특정 노드의 카디널리티를 보면 해당 노드의 직접 자식 수를 알 수 있습니다. 이 노드의 카디널리티는 5이므로 모델에서 잠재적 자전거 구매자의 대상 모집단이 5개의 하위 그룹으로 나뉘었음을 알 수 있습니다.  
   
@@ -94,7 +94,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
   
  예제 결과:  
   
-|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|SUPPORT|  
+|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|별칭|  
 |----------------|-------------------|-----------------------|------------------------|-------------|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|Missing|0|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|0|1067|  
@@ -188,7 +188,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
  공급자가 여기에 표시된 것과 같은 계층적 행 집합을 지원하지 않는 경우 쿼리에 FLATTENED 키워드를 사용하여 반복되는 열 값 대신 Null을 포함하는 테이블로 결과를 반환할 수 있습니다. 자세한 내용은 [중첩 테이블&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/nested-tables-analysis-services-data-mining.md) 또는 [DMX Select 문 이해](../../dmx/understanding-the-dmx-select-statement.md)를 참조하세요.  
   
 ###  <a name="bkmk_Query5"></a> 예제 쿼리 5: 의사 결정 트리 모델에서 연결 예측  
- 다음 예제 쿼리는 Association 마이닝 구조를 기반으로 합니다. 이 예제의 단계별 작업을 따라가려면 이 마이닝 구조에 새 모델을 추가하고 Microsoft 의사 결정 트리를 알고리즘으로 선택합니다. 연결 마이닝 구조를 만드는 방법은 [3단원: 시장 바구니 시나리오 구축&#40;중급 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)을 참조하세요.  
+ 다음 예제 쿼리는 Association 마이닝 구조를 기반으로 합니다. 이 예제의 단계별 작업을 따라가려면 이 마이닝 구조에 새 모델을 추가하고 Microsoft 의사 결정 트리를 알고리즘으로 선택합니다. 연결 마이닝 구조를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [단원 3: 시장 바구니 시나리오 구축 &#40;중급 데이터 마이닝 자습서&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)합니다.  
   
  다음 예제 쿼리는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 필드를 선택한 다음 드롭다운 목록에서 이러한 필드의 값을 선택하여 간단하게 만들 수 있는 단일 쿼리입니다.  
   
@@ -242,7 +242,7 @@ WHERE NODE_TYPE = 25
   
 |T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Yearly Income|Missing|0|0.000457142857142857|0|1.|  
+|Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
 ||57220.8876687257|0|0|1041216662.54387|11|  
   
@@ -267,7 +267,7 @@ WHERE NODE_TYPE = 25
   
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘에 공통된 함수 목록은 [일반 예측 함수&#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)를 참조하세요. 특정 함수의 구문은 [DMX&#40;Data Mining Extensions&#41; 함수 참조](../../dmx/data-mining-extensions-dmx-function-reference.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 의사 결정 트리 알고리즘](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)   
  [Microsoft 의사 결정 트리 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   

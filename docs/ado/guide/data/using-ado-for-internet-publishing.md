@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d399fce4-b70b-418f-8110-3deb3448863c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ac7922dda2d486f4783d1230296dc89b81cb4fe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: decbc7c3b377234d91fe6b3e662d9449298041c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923613"
 ---
 # <a name="using-ado-for-internet-publishing"></a>인터넷 게시용 ADO 사용
 [OLE DB Provider for Internet Publishing](../../../ado/guide/data/the-ole-db-provider-for-internet-publishing.md) ADO 사용 하 여 다른 유형의 데이터에 액세스 하는 특정 예제를 보여 줍니다. 이 섹션의 예에서는 인터넷 게시 공급자를 사용 하 여 특정 하지만 전자 메일 저장소 공급자와 같은 다른 유형의 데이터를 다른 공급자와 함께 ADO 사용 하는 경우에 원리와 유사한 이어야 합니다.  

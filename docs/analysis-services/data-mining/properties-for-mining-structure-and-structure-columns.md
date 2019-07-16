@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 72f89879ac7b50f35af283e13b25fb8c8b439b2d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182451"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>마이닝 구조 및 구조 열의 속성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "34017140"
   
 ### <a name="properties-of-the-mining-structure"></a>마이닝 구조 속성  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
-|**CacheMode**|학습이 완료된 다음 학습에 사용된 사례를 캐시할지, 아니면 삭제할지를 지정합니다. **참고:**  드릴스루 및 홀드아웃을 사용하려면 이 속성을 **KeepTrainingCases** 로 설정해야 합니다.|  
+|**CacheMode**|학습이 완료된 다음 학습에 사용된 사례를 캐시할지, 아니면 삭제할지를 지정합니다. **참고:**  이 속성으로 설정 되어 있어야 **KeepTrainingCases** 드릴스루 및 홀드 아웃을 사용 하도록 설정 합니다.|  
 |**데이터 정렬**|열의 기본 데이터 정렬을 지정합니다. 데이터 정렬을 지정하지 않으면 서버의 데이터 정렬이 사용됩니다.|  
 |**설명**|마이닝 구조를 설명합니다. 설명에는 구조에 있는 데이터의 용도와 컴퍼지션을 명시하는 것이 가장 좋습니다.|  
 |**ErrorConfiguration(기본값)**|오류(있는 경우)의 특수 처리 옵션을 지정합니다.|  
-|**HoldoutMaxCases**|테스트 데이터 집합으로 예약할 수 있는 최대 구조 사례 수를 지정합니다.  **HoldoutMaxCases** 와 **HoldoutPercent**모두에 대한 값을 지정하면 조건이 결합됩니다. **참고:**  이 속성을 설정하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 를 **KeepTrainingCases**을 클릭합니다.|  
-|**HoldoutPercent**|테스트 데이터 집합으로 예약할 구조 사례의 비율을 지정합니다. **HoldoutMaxCases** 와 **HoldoutPercent**모두에 대한 값을 지정하면 조건이 결합됩니다. **참고:**  이 속성을 설정하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 를 **KeepTrainingCases**을 클릭합니다.|  
-|**HoldoutSeed**|테스트 데이터 집합을 다시 만들 수 있도록 홀드아웃 테스트 집합의 분할을 초기화하는 초기값을 지정합니다. **참고:**  이 속성을 설정하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 를 **KeepTrainingCases**을 클릭합니다.|  
+|**HoldoutMaxCases**|테스트 데이터 집합으로 예약할 수 있는 최대 구조 사례 수를 지정합니다.  **HoldoutMaxCases** 와 **HoldoutPercent**모두에 대한 값을 지정하면 조건이 결합됩니다. **참고:**  이 속성을 설정 하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 으로 설정 되어 있어야 **KeepTrainingCases**합니다.|  
+|**HoldoutPercent**|테스트 데이터 집합으로 예약할 구조 사례의 비율을 지정합니다. **HoldoutMaxCases** 와 **HoldoutPercent**모두에 대한 값을 지정하면 조건이 결합됩니다. **참고:**  이 속성을 설정 하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 으로 설정 되어 있어야 **KeepTrainingCases**합니다.|  
+|**HoldoutSeed**|테스트 데이터 집합을 다시 만들 수 있도록 홀드아웃 테스트 집합의 분할을 초기화하는 초기값을 지정합니다. **참고:**  이 속성을 설정 하려면 <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> 으로 설정 되어 있어야 **KeepTrainingCases**합니다.|  
 |**ID**|마이닝 구조의 고유 식별자를 표시합니다.<br /><br /> 구조를 만들 때 마이닝 구조에 할당한 이름이 ID로 사용됩니다. **Name** 속성에 대해 새 값을 입력하여 나중에 이름을 변경하면 새 이름이 별칭으로만 사용되며 ID는 변경되지 않습니다.|  
 |**언어**|마이닝 구조의 캡션에 대한 언어를 지정합니다.|  
 |**이름**|마이닝 구조의 이름이나 별칭을 지정합니다.<br /><br /> Name 속성의 값을 변경하면 새 이름이 캡션이나 별칭으로만 사용되며 마이닝 구조의 식별자는 변경되지 않습니다.|  
@@ -48,7 +48,7 @@ ms.locfileid: "34017140"
   
 ### <a name="properties-of-the-mining-structure-columns"></a>마이닝 구조 열 속성  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|분류된 열이 설명하는 열을 식별합니다.|  
 |**콘텐츠**|열의 내용 유형입니다.|  
@@ -68,7 +68,7 @@ ms.locfileid: "34017140"
   
  속성을 설정하거나 변경하는 방법은 [마이닝 구조 태스크 및 방법](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [관계형 마이닝 구조 만들기](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [마이닝 구조 열](../../analysis-services/data-mining/mining-structure-columns.md)  
   

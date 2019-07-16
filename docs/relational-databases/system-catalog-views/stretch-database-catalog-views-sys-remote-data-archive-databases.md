@@ -18,20 +18,19 @@ ms.assetid: 25bffb0c-9821-40b4-88cf-75f854891a09
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 74a44e8c3e6b0be026ac716d43b539869345b3b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 339d960a136e9cf939032068c21ec737f4d37ceb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018202"
 ---
 # <a name="stretch-database-catalog-views---sysremotedataarchivedatabases"></a>카탈로그 뷰-Stretch Database sys.remote_data_archive_databases
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   스트레치가 활성화 된 로컬 데이터베이스에서 데이터를 저장 하는 각 원격 데이터베이스에 대해 하나의 행을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**remote_database_id**|**int**|자동으로 생성 된 로컬 식별자 원격 데이터베이스의 합니다.|  
 |**remote_database_name**|**sysname**|원격 데이터베이스의 이름입니다.|  

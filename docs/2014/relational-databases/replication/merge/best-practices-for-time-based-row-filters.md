@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5df70271c281673c71fb378564f454f0822998ab
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786145"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210711"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>시간 기반 행 필터에 대한 최상의 구현 방법
   애플리케이션 사용자가 테이블의 시간 기반 데이터 하위 집합을 필요로 하는 경우가 종종 있습니다. 예를 들어 영업 사원이 지난 주의 주문 데이터를 필요로 하거나, 행사 계획자가 다음 주의 행사 데이터를 필요로 할 수 있습니다. 대부분의 경우 응용 프로그램에서는 `GETDATE()` 함수가 들어 있는 쿼리를 사용하여 이 작업을 수행합니다. 예를 들어 다음과 같은 행 필터 문을 사용한다고 가정합니다.  

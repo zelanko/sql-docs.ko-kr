@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e288a1823ca2dca44b4c032b1618710212c2a65
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023490"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164035"
 ---
 # <a name="delete-power-pivot-gallery"></a>파워 피벗 갤러리 삭제
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "34023490"
   
 5.  사용 권한 및 관리에서 **이 라이브러리 삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [파워 피벗 갤러리](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)  
   
   

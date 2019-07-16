@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 925eefdbe8f5ff9196689026edb685c8f76d7d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920805"
 ---
 # <a name="adorecordconstruction-interface"></a>ADORecordConstruction 인터페이스
 합니다 **ADORecordConstruction**인터페이스는 ADO를 만드는 데 사용 됩니다 **레코드** OLE DB 개체 **행** 개체 c에서 /C++ 응용 프로그램입니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66718170"
 |||  
 |-|-|  
 |[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|쓰기 전용입니다.<br />OLE DB의 컨테이너를 설정 **행** 개체의이 ADO **레코드** 개체입니다.|  
-|[Row](../../../ado/reference/ado-api/row-property-ado.md)|읽기/쓰기입니다.<br />OLE DB를 가져오거나 **행** 개체에서 /이 ADO **레코드** 개체입니다.|  
+|[행](../../../ado/reference/ado-api/row-property-ado.md)|읽기/쓰기입니다.<br />OLE DB를 가져오거나 **행** 개체에서 /이 ADO **레코드** 개체입니다.|  
   
 ## <a name="methods"></a>메서드  
  없음  
@@ -41,7 +40,7 @@ ms.locfileid: "66718170"
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  OLE DB를 제공 **행** 개체 (`pRow`), ADO 생성 **레코드** 개체 (`adoR`), 다음 세 가지 기본 작업에 금액:  
   
 1.  ADO를 만듭니다 **레코드** 개체:  

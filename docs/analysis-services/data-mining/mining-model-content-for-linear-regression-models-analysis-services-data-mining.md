@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c016d54d9272409e3edc3d6fc379980b952dd917
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120183"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182746"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>선형 회귀 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "49120183"
  모델의 이름입니다.  
   
  ATTRIBUTE_NAME  
- **루트 노드:** 비어 있습니다.  
+ **루트 노드:** 비어 있음  
   
  **회귀 노드:** 예측 가능한 특성의 이름입니다.  
   
@@ -54,16 +54,16 @@ ms.locfileid: "49120183"
  NODE_TYPE  
  선형 회귀 모델이 출력하는 노드 유형은 다음과 같습니다.  
   
-|노드 유형 ID|형식|Description|  
+|노드 유형 ID|type|설명|  
 |------------------|----------|-----------------|  
 |25|회귀 트리 루트|입력 및 출력 변수 간의 관계를 설명하는 수식을 포함합니다.|  
   
  NODE_CAPTION  
  노드에 연결된 레이블 또는 캡션입니다. 이 속성은 주로 표시용으로 사용됩니다.  
   
- **루트 노드:** 비어 있습니다.  
+ **루트 노드:** 비어 있음  
   
- **회귀 노드:** 모든 항목을 포함합니다.  
+ **회귀 노드:** 모두  
   
  CHILDREN_CARDINALITY  
  노드에 있는 예상 자식 수입니다.  
@@ -78,9 +78,9 @@ ms.locfileid: "49120183"
  NODE_DESCRIPTION  
  노드에 대한 설명입니다.  
   
- **루트 노드:** 비어 있습니다.  
+ **루트 노드:** 비어 있음  
   
- **회귀 노드:** 모든 항목을 포함합니다.  
+ **회귀 노드:** 모두  
   
  NODE_RULE  
  선형 회귀 모델에는 사용되지 않습니다.  
@@ -91,23 +91,23 @@ ms.locfileid: "49120183"
  NODE_PROBABILITY  
  이 노드와 관련된 확률입니다.  
   
- **루트 노드:** 0입니다.  
+ **루트 노드:** 0  
   
- **회귀 노드:** 1입니다.  
+ **회귀 노드:** 1  
   
  MARGINAL_PROBABILITY  
  부모 노드에서 해당 노드에 도달할 확률입니다.  
   
- **루트 노드:** 0입니다.  
+ **루트 노드:** 0  
   
- **회귀 노드:** 1입니다.  
+ **회귀 노드:** 1  
   
  NODE_DISTRIBUTION  
  노드의 값에 대한 통계를 제공하는 중첩 테이블입니다.  
   
- **루트 노드:** 0입니다.  
+ **루트 노드:** 0  
   
- **회귀 노드:** 회귀 수식을 작성하는 데 사용된 요소가 들어 있는 테이블입니다. 회귀 노드에는 다음과 같은 값 유형이 들어 있습니다.  
+ **회귀 노드:** 회귀 수식을 작성 하는 데 사용 된 요소가 들어 있는 테이블입니다. 회귀 노드에는 다음과 같은 값 유형이 들어 있습니다.  
   
 |VALUETYPE|  
 |---------------|  
@@ -121,7 +121,7 @@ ms.locfileid: "49120183"
  NODE_SUPPORT  
  이 노드를 지지하는 사례 수입니다.  
   
- **루트 노드:** 0입니다.  
+ **루트 노드:** 0  
   
  **회귀 노드:** 학습 사례의 수입니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "49120183"
  MSOLAP_NODE_SHORT_CAPTION  
  표시용 레이블입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하여 모델을 만드는 경우 데이터 마이닝 엔진은 의사 결정 트리 모델의 특수한 인스턴스를 만들고 단일 노드의 모든 학습 데이트를 포함하도록 트리를 제한하는 매개 변수를 제공합니다. 모든 연속 입력은 잠재적인 회귀 변수로 플래그가 지정되고 계산되지만 최종 모델에서는 데이터에 맞는 회귀 변수만 회귀 변수로 유지됩니다. 분석에서는 각 회귀 변수에 대해 회귀 수식이 하나씩 생성되거나 회귀 수식이 전혀 생성되지 않습니다.  
   
  **Microsoft 트리 뷰어**의 **(All)** 노드를 클릭하여 [마이닝 범례](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)에서 전체 회귀 수식을 볼 수 있습니다.  
@@ -148,9 +148,9 @@ ms.locfileid: "49120183"
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
-|Age|471.687717702463|0|0|126.969442359327|7|  
-|Age|234.680904692439|0|0|0|8|  
-|Age|45.4269617936399|0|0|126.969442359327|9|  
+|나이|471.687717702463|0|0|126.969442359327|7|  
+|나이|234.680904692439|0|0|0|8|  
+|나이|45.4269617936399|0|0|126.969442359327|9|  
 ||35793.5477381267|0|0|1012968919.28372|11|  
   
  NODE_DISTRIBUTION 테이블에는 여러 행이 각각 변수별로 그룹화되어 들어 있습니다. 처음 두 개의 행은 값 유형이 항상 1과 3이며 대상 특성을 설명합니다. 그 이후 행은 특정 *회귀 변수*의 수식에 대한 정보를 제공합니다. 회귀 변수는 출력 변수와 선형 관계가 있는 입력 변수입니다. 여러 회귀 변수를 사용할 수 있으며 각 회귀 변수에는 계수(VALUETYPE = 7), 득점(VALUETYPE = 8) 및 통계(VALUETYPE = 9)에 대한 별도의 행이 있습니다. 마지막으로 테이블에는 수식의 절편(VALUETYPE = 11)이 포함된 행이 있습니다.  
@@ -183,7 +183,7 @@ ms.locfileid: "49120183"
  따라서 평균 연령이 45세라고 간주하면 회귀 수식의 절편(VALUETYPE = 11)은 평균 수입을 알려 줍니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 선형 회귀 알고리즘](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Microsoft 선형 회귀 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
  [선형 회귀 모델 쿼리 예제](../../analysis-services/data-mining/linear-regression-model-query-examples.md)  

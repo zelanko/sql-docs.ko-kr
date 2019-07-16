@@ -20,11 +20,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 ms.openlocfilehash: 8bdbaf1fdb0fb0c27127611ace0fac00d861838f
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743138"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68220269"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "50743138"
 > [!NOTE]  
 > 이 동적 관리 뷰 (DMV)는 설치 하 고 외부 스크립트 실행을 지 원하는 기능을 사용 하도록 설정 하는 경우에 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016에서 R Services](../../advanced-analytics/r/sql-server-r-services.md) 하 고 [Machine Learning 서비스 (R, Python) SQL Server 2017의](../../advanced-analytics/what-is-sql-server-machine-learning.md)합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |language|**nvarchar**|등록된 외부 스크립트 언어의 이름입니다. 각 외부 스크립트에서 연결된 실행 프로그램을 시작하려면 스크립트 요청에서 언어를 지정 해야 합니다. |  
 |counter_name|**nvarchar**|등록된 외부 스크립트 함수의 이름입니다. Null을 허용하지 않습니다.|  
@@ -47,7 +47,7 @@ ms.locfileid: "50743138"
 > [!NOTE]  
 >  외부 스크립트를 실행하는 사용자에게는 추가 권한 EXECUTE ANY EXTERNAL SCRIPT가 있어야 합니다. 하지만 이 DMV는 이 권한이 없는 관리자가 사용할 수 있습니다. 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   이 DMV는 내부 원격 분석용으로 제공되어 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]에서 제공되는 새로운 외부 스크립트 실행 기능의 전반적인 사용을 모니터링합니다. 원격 분석 서비스는 LaunchPad가 실행될 때 시작되고, 등록된 외부 스크립트 함수를 호출할 때마다 디스크 기반 카운터를 늘립니다.
 
 일반적으로 생성된 프로세스가 활성 상태인 경우에만 성능 카운터가 유효합니다. 따라서 DMV에서 쿼리는 실행이 중지된 서비스의 데이터 세부 정보를 표시할 수 없습니다. 예를 들어 시작 관리자 외부 스크립트를 실행 하 고 아직 매우 빠르게 완료 하는 경우 기존의 DMV 데이터가 표시 되지 않을 수 있습니다.

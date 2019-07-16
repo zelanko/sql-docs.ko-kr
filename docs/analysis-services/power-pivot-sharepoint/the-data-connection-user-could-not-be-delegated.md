@@ -1,5 +1,5 @@
 ---
-title: 데이터 연결 사용자를 위임할 수 | Microsoft Docs
+title: 데이터 연결 사용자를 위임할 수 없습니다 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbf9b41b58e4c492c4b278aa4cad60fa26dbcb08
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208010"
 ---
 # <a name="the-data-connection-user-could-not-be-delegated"></a>데이터 연결 사용자를 위임할 수 없습니다.
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,12 +27,12 @@ ms.locfileid: "34028344"
 |적용 대상|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint|  
 |제품 버전|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |원인|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 공급자 사용을 시도할 때 연결하지 못했습니다.|  
-|메시지 텍스트|데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 연결을 새로 고치지 못했습니다.|  
+|메시지 텍스트|데이터 연결은 Windows 인증을 사용하지만 사용자 자격 증명을 위임할 수 없습니다. PowerPivot 데이터 연결을: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터|  
   
 ## <a name="explanation"></a>설명  
  이 오류 메시지는 여러 가지 원인으로 인해 표시됩니다. 이러한 모든 원인에 공통적으로 적용되는 요인은 Excel 서비스가 SharePoint의 클레임 토큰에서 유효한 Windows 사용자 ID를 가져올 수 없다는 것입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터가 포함된 Excel 통합 문서의 경우 이 오류는 다음 조건 중 하나라도 해당하는 경우 발생합니다.  
   
--   Windows 토큰 서비스에 대한 클레임이 실행 중이지 않은 경우. SharePoint 로그 파일을 통해 이 오류의 원인을 확인할 수 있습니다. SharePoint 로그에 "파이프 끝점 'net.pipe://localhost/s4u/022694f3-9fbd-422b-b4b2-312e25dae2a2'을(를) 로컬 컴퓨터에서 찾을 수 없습니다." 메시지가 포함되어 있으면 Windows 토큰 서비스에 대한 클레임이 실행 중이지 않은 것입니다. 클레임을 시작하려면 중앙 관리를 통해 서비스 콘솔 애플리케이션에서 서비스가 실행 중인지 확인합니다.  
+-   Windows 토큰 서비스에 대한 클레임이 실행 중이지 않은 경우. SharePoint 로그 파일을 통해 이 오류의 원인을 확인할 수 있습니다. SharePoint 로그에 "파이프 엔드포인트 'net.pipe://localhost/s4u/022694f3-9fbd-422b-b4b2-312e25dae2a2'을(를) 로컬 컴퓨터에서 찾을 수 없습니다." 메시지가 포함되어 있으면 Windows 토큰 서비스에 대한 클레임이 실행 중이지 않은 것입니다. 클레임을 시작하려면 중앙 관리를 통해 서비스 콘솔 애플리케이션에서 서비스가 실행 중인지 확인합니다.  
   
 -   도메인 컨트롤러로 사용자 ID의 유효성을 검사할 수 없는 경우. Windows 토큰 서비스에 대한 클레임은 캐시된 자격 증명을 사용하지 않으며, 각 연결에 대해 사용자 ID 유효성을 검사합니다. SharePoint 로그 파일을 통해 이 오류의 원인을 확인할 수 있습니다. SharePoint 로그에 "IClaimsIdentity에서 WindowsIdentity을(를) 가져오지 못했습니다." 메시지가 포함되어 있으면 사용자 ID를 인증할 수 없는 것입니다.  
   

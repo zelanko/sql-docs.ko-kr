@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6bd73a1bd7a9f41b20300e4abf47688a6c78794
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6d7a35d0697d1dcbda8f9f64b7ac5a32307d5c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051144"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>날짜, 시간 및 타임스탬프 이스케이프 시퀀스
 ODBC 날짜, 시간 및 타임 스탬프 리터럴에 대 한 이스케이프 시퀀스를 정의합니다. 이러한 이스케이프 시퀀스 구문은 다음과 같습니다.  
@@ -53,5 +52,5 @@ timestamp-separator ::=
      (The blank character)years-value ::= digit digit digit digitmonths-value ::= digit digitdays-value ::= digit digithours-value ::= digit digitminutes-value ::= digit digitseconds-value ::= digit digit[.digit...]  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  날짜, 시간 및 타임 스탬프 리터럴 이스케이프 시퀀스는 데이터 원본에서 날짜, 시간 및 타임 스탬프 데이터 형식을 지 원하는 경우 지원 됩니다. 응용 프로그램에서 호출 해야 **SQLGetTypeInfo** 이러한 데이터 형식이 지원 되는지 여부를 확인 하려면.

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: f84cf007-ddf1-4396-a07c-3e0729abc769
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0bedb8ba74d7965df34a102fb0d53a0cbdb248dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4630ae8d92dbf0e9b1c5bf615dd82d436a5751f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63139027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006651"
 ---
 # <a name="connecting-to-sql-server-accesstosql"></a>SQL Server (AccessToSQL)에 연결
 Access 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 대상 인스턴스에 연결 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. SSMA 가져옵니다 인스턴스의 데이터베이스에 대 한 메타 데이터에 연결 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 데이터베이스 메타 데이터를 표시 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타 데이터 탐색기입니다. SSMA는 인스턴스에 대 한 정보를 저장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 연결 해도 암호를 저장 하지 않습니다.  
@@ -98,12 +97,12 @@ Access 데이터베이스 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](
 ||||||||
 |-|-|-|-|-|-|-|
 |**프로젝트 형식 및 대상 서버 버전**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 (버전: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 (버전: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 (Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 (Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 (Version:13.x)|SQL Azure|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|사용자 계정 컨트롤|예|예|예|사용자 계정 컨트롤||  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||사용자 계정 컨트롤|예|사용자 계정 컨트롤||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||사용자 계정 컨트롤|사용자 계정 컨트롤||
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||사용자 계정 컨트롤||
-|SQL Azure||||||사용자 계정 컨트롤|
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|예|예|예|예|예||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||예|예|예|예||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||예|예|예||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||예|예||
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||예||
+|SQL Azure||||||예|
   
 > [!IMPORTANT]  
 > 데이터베이스 개체의 변환에 연결 된 SQL Server의 버전에 따라 하지 않지만 프로젝트 형식에 따라 수행 됩니다. SQL Server 2005 프로젝트의 경우 변환 상위 버전의 SQL Server (SQL Server 2008/s q L Server 2012/SQL Server 2014/SQL Server 2016)에 연결한 경우에 SQL Server 2005에 따라 수행 됩니다.  

@@ -2,19 +2,18 @@
 title: 획득 및 병렬 데이터 웨어하우스 백업 서버-구성 | Microsoft Docs
 description: 이 문서에서는 Analytics Platform System (APS) 및 병렬 데이터 웨어하우스 (PDW)의 백업 및 복원 기능을 사용 하 여 백업 서버로 비 어플라이언스 Windows 시스템을 구성 하는 방법을 설명 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cba345eb7a5aec9ef857819a1f0499266649f6e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f79cb13658328927cab81bbf8d559066c5a4d5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63040829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961643"
 ---
 # <a name="acquire-and-configure-a-backup-server-for-parallel-data-warehouse"></a>획득 및 Parallel Data Warehouse에 대 한 백업 서버 구성
 이 문서에서는 Analytics Platform System (APS) 및 병렬 데이터 웨어하우스 (PDW)의 백업 및 복원 기능을 사용 하 여 백업 서버로 비 어플라이언스 Windows 시스템을 구성 하는 방법을 설명 합니다.  

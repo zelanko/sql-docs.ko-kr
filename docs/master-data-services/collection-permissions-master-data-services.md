@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 81b56aa57aeb6dd1cb2b2063c41c2dc9ccd6fb19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e2e1dbbf51533e03d3e1f5a6930dd0a022cf215
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941096"
 ---
 # <a name="collection-permissions-master-data-services"></a>컬렉션 권한(Master Data Services)
 
@@ -30,11 +29,11 @@ ms.locfileid: "65484239"
 > [!NOTE]  
 >  이러한 사용 권한은 사용자 인터페이스의 **탐색기** 기능 영역에만 적용됩니다.  
   
-|사용 권한|Description|  
+|사용 권한|설명|  
 |----------------|-----------------|  
 |**읽기**|사용자는 컬렉션 멤버 및 멤버 특성을 읽을 수 있습니다.|  
 |**만들기**|사용자는 컬렉션 멤버를 만들고 특성 값을 할당할 수 있습니다.|  
-|**Update**|사용자는 컬렉션 멤버, 특성 및 관계를 업데이트할 수 있습니다.|  
+|**Update 함수**|사용자는 컬렉션 멤버, 특성 및 관계를 업데이트할 수 있습니다.|  
 |**Delete**|사용자는 컬렉션 멤버를 삭제할 수 있습니다.|  
 |**거부**|컬렉션 멤버에 대한 모든 액세스를 거부합니다.|  
   

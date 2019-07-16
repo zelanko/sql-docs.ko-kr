@@ -7,13 +7,12 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f31da296bf55b7da55a4e5a8398d411bc5a5b0ea
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: d5a434b6e089cd77a2bd685506e5552c4e1e7f6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961941"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>SQL Server 2017 Python 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "58510320"
 
 ## <a name="python-quickstarts-and-tutorials"></a>Python 빠른 시작 및 자습서
 
-| 링크 | Description |
+| 링크 | 설명 |
 |------|-------------|
 | [빠른 시작: SQL Server에서 "hello world" Python 스크립트](quickstart-python-run-using-t-sql.md) | T-sql로 Python을 호출 하는 방법의 기본 사항을 알아봅니다. |
 | [빠른 시작: 만들기, 학습 및 Python 모델을 사용 하 여 SQL Server에서 저장된 프로시저를 사용 하 여](quickstart-python-train-score-in-tsql.md) | 입력 및 저장된 프로시저 실행을 제공 하는 저장된 프로시저에서 Python 코드를 포함 하는 방법을 설명 합니다. |
@@ -42,12 +41,12 @@ ms.locfileid: "58510320"
 
 이러한 샘플 및 SQL Server 개발 팀에서 제공 하는 데모에는 실제 응용 프로그램에 포함 된 분석을 사용할 수 있는 방법을 강조 표시 합니다.
 
-| 링크 | Description |
+| 링크 | 설명 |
 |------|-------------|
 | [Python 및 SQL Server를 사용 하 여 예측 모델 빌드](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Ski 차량 대 여 사업에서 기계 학습 향후 대 여 예측을 비즈니스 계획 및 직원 미래 수요를 충족 하기 위해 도움이 되는 사용 하는 방법을 알아봅니다. |
 | [고객 수행 Python 및 SQL Server를 사용 하 여 클러스터링](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Kmeans 알고리즘을 사용 하 여 고객의 감독 되지 않은 클러스터링을 수행 하는 방법에 알아봅니다. |
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 + [SQL Server에 대 한 Python 확장](../concepts/extension-python.md)
 + [SQL Server Machine Learning Services 자습서](machine-learning-services-tutorials.md)

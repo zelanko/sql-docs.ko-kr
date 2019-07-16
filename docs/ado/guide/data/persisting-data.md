@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0f2d47229b7383c11740ca3d7a20ad8e420931a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63323fd8ed18f57a68633dce0525d1d37e4978ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924702"
 ---
 # <a name="persisting-data"></a>데이터 유지
 (예: 랩톱), 이식 가능한 컴퓨팅 연결 및 연결이 끊긴 상태에서 실행할 수 있는 응용 프로그램에 대 한 필요 하 게 되었습니다. ADO는 개발자에 게 클라이언트 커서를 저장 하는 기능을 제공 하 여이 대 한 지원을 추가 했습니다 **레코드 집합** 디스크를 나중에 다시 로드 합니다.  
@@ -113,7 +112,7 @@ Destination, PersistFormat
 'EndPersist  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 섹션에서는 다음 항목을 다룹니다.  
   
 -   [레코드 집합 지속성에 대한 자세한 정보](../../../ado/guide/data/more-about-recordset-persistence.md)  

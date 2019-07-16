@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6bdf66ed9214a151886caedcf2247935a07f7811
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48144863"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206734"
 ---
 # <a name="running-stored-procedures"></a>저장 프로시저 실행
   저장 프로시저는 데이터베이스에 저장된 실행 가능한 개체입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음과 같은 프로시저를 지원합니다.  

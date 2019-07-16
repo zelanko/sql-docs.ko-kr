@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 69bee937-7b2c-49ee-8866-7518c683fad4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d2be7854240a52edd8f3308ea92e3ea7eb25924f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 192db2e6c074305ca258d76652351175c8a82751
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907153"
 ---
 # <a name="mapping-source-and-target-databases-accesstosql"></a>원본 및 대상 데이터베이스 (AccessToSQL) 매핑
 에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 마이그레이션에 대 한 대상 데이터베이스를 지정 해야 합니다. Access 데이터베이스를 여러 개 있는 경우를 매핑할 수 있습니다 이러한 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 (또는 스키마) 또는 연결 된 SQL Azure 데이터베이스에서 여러 스키마입니다.  

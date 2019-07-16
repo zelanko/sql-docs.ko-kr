@@ -14,30 +14,29 @@ helpviewer_keywords:
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6352a5ae894adb09f714a78386bfecfa3ce1df77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041626"
 ---
 # <a name="interval-literal-syntax"></a>간격 리터럴 구문
 ODBC의 간격 리터럴에 대 한 구문을 사용 됩니다.  
   
- *interval-literal ::= INTERVAL* [+ *&#124;* -] *interval-string interval-qualifier*  
+ *간격 리터럴:: 간격 =* [+ *&#124;* -] *간격 문자열 간격-한정자*  
   
- *interval-string* ::= *quote* { *year-month-literal* &#124; *day-time-literal* } *quote*  
+ *간격-문자열* :: = *견적* {0} *연도-월-리터럴* &#124; *하루 시간 리터럴* } *견적*  
   
  *year-month-literal* ::= *years-value* &#124; [*years-value* -] *months-value*  
   
- *day-time-literal* ::= *day-time-interval* &#124; *time-interval*  
+ *날짜-시간-리터럴이* :: = *날짜-시간 간격* &#124; *시간 간격*  
   
  *day-time-interval* ::= *days-value* [*hours-value* [:*minutes-value*[:*seconds-value*]]]  
   
  *time-interval* ::= *hours-value* [:*minutes-value* [:*seconds-value* ] ]  
   
- &#124; *minutes-value* [:*seconds-value* ]  
+ &#124;*분 값* [:*초 값* ]  
   
  &#124; *seconds-value*  
   
@@ -51,7 +50,7 @@ ODBC의 간격 리터럴에 대 한 구문을 사용 됩니다.
   
  *minutes-value* ::= *datetime-value*  
   
- *seconds-value* ::= *seconds-integer-value* [.[*seconds-fraction*] ]  
+ *초 값* :: = *정수값 초* [. [ *초의 소수*]]  
   
  *seconds-integer-value* ::= *unsigned-integer*  
   
@@ -59,11 +58,11 @@ ODBC의 간격 리터럴에 대 한 구문을 사용 됩니다.
   
  *datetime-value* ::= *unsigned-integer*  
   
- *interval-qualifier* ::= *start-field* TO *end-field* &#124; *single-datetime-field*  
+ *간격 한정자* :: = *시작 필드* TO *끝 필드* &#124; *단일 날짜/시간 필드*  
   
  *start-field* ::= *non-second-datetime-field* [(*interval-leading-field-precision* )]  
   
- *end-field* ::= *non-second-datetime-field* &#124; SECOND[(*interval-fractional-seconds-precision*)]  
+ *끝 필드* :: = *비-두 번째-날짜/시간-필드* &#124; 두 번째 [(*간격 소수-시간 (초)-정밀도*)]  
   
  *단일 날짜/시간 필드* :: = *비-두 번째-날짜/시간-필드* [(*간격 최고의-필드 정밀도*)] &#124; 두 번째 [(*최고의 필드 정밀도 간격*  [, (*간격 소수-시간 (초)-정밀도*)]  
   
@@ -73,7 +72,7 @@ ODBC의 간격 리터럴에 대 한 구문을 사용 됩니다.
   
  *interval-fractional-seconds-precision* ::= *unsigned-integer*  
   
- *interval-leading-field-precision* ::= *unsigned-integer*  
+ *간격 최고의-필드 정밀도* :: = *부호 없는 정수*  
   
  *quote* ::= '  
   

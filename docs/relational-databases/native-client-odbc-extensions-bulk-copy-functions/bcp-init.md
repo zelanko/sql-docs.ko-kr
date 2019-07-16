@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6a25862c-7f31-4873-ab65-30f3abde89d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74400acc3030967a985fca6041a60b96947ef64b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e47c7c4f5324da021db2624e5e936493fd54ea45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895525"
 ---
 # <a name="bcpinit"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +66,7 @@ RETCODE bcp_init (
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  호출 **bcp_init** 다른 대량 복사 함수를 호출 하기 전에 합니다. **bcp_init** 간의 데이터 대량 복사에 필요한 초기화를 수행 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다.  
   
  합니다 **bcp_init** 대량 복사 함수를 사용 하 여 사용 하도록 설정 하는 ODBC 연결 핸들을 사용 하 여 함수를 제공 해야 합니다. 핸들을 사용 하려면 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) sql_copt_ss_bcp를 할당 되었지만 연결 되지 않음 연결 핸들에 SQL_BCP_ON을 설정 합니다. 연결된 핸들에 특성을 할당하려고 하면 오류가 발생합니다.  
@@ -84,7 +83,7 @@ RETCODE bcp_init (
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 복사 대상일 때는 데이터 파일에 있는 열의 서수 위치가 데이터베이스 테이블에 있는 열의 서수 위치와 동일해야 하며, 복사 하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]하십시오 **bcp_exec** 데이터베이스 테이블에 있는 열의 서 수 위치를 기준으로 데이터를 배치 합니다.  
   
--   데이터베이스 데이터 형식의 길이가 가변적인 경우 (예를 들어 **varbinary(22)**) 데이터 파일의 데이터 길이 또는 null 표시기를 붙일 경우 데이터베이스 열에서 null 값을 포함할 수 있습니다. 표시자의 길이는 데이터 형식 및 대량 복사 버전에 따라 다릅니다.  
+-   데이터베이스 데이터 형식의 길이가 가변적인 경우 (예를 들어 **varbinary(22)** ) 데이터 파일의 데이터 길이 또는 null 표시기를 붙일 경우 데이터베이스 열에서 null 값을 포함할 수 있습니다. 표시자의 길이는 데이터 형식 및 대량 복사 버전에 따라 다릅니다.  
   
  데이터 파일에 대 한 지정 된 데이터 형식 값을 변경 하려면 호출 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 하 고 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)합니다.  
   

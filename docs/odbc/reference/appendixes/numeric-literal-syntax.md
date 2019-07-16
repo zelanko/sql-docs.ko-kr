@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990721"
 ---
 # <a name="numeric-literal-syntax"></a>숫자 리터럴 구문
 ODBC의 숫자 리터럴에 대 한 구문을 사용 됩니다.  
@@ -31,13 +30,13 @@ ODBC의 숫자 리터럴에 대 한 구문을 사용 됩니다.
   
  *부호 없는 숫자-리터럴* :: = *정확한 숫자-리터럴 &#124; 대략적인 숫자-리터럴*  
   
- *exact-numeric-literal* ::= *unsigned-integer* [*period*[*unsigned-integer*]] *&#124;period unsigned-integer*  
+ *정확한 숫자-리터럴* :: = *부호 없는 정수* [*기간*[*부호 없는 정수*]]  *&#124;기간 부호 없는 정수*  
   
  *sign* :: = *더하기 &#124; 빼기 기호*  
   
  *대략적인 숫자-리터럴* :: = *E가 지 수*  
   
- *mantissa* ::= *exact-numeric-literal*  
+ *가 수* :: = *정확한 숫자-리터럴*  
   
  *exponent* ::= *signed-integer*  
   
@@ -51,4 +50,4 @@ ODBC의 숫자 리터럴에 대 한 구문을 사용 됩니다.
   
  *digit* ::= 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9 &#124; 0  
   
- *period* ::= .
+ *기간* :: =.

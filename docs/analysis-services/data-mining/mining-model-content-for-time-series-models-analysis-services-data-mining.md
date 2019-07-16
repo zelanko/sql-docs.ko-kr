@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18013587c8c6eb23989f8f22150b8980d0e5afc1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513777"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182651"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>시계열 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "52513777"
 >  수식을 보려는 경우 완전한 회귀 수식을 리프 노드 수준에서 찾을 수 있지만 중간 또는 루트 노드에서는 찾을 수 없습니다.  
   
 ### <a name="structure-of-an-arima-model"></a>ARIMA 모델의 구조  
- ARIMA 알고리즘은 단일 데이터 계열의 각 조합에 대 한 정보를 만듭니다 (같은 **[Region]**) 및 예측 가능한 특성 (같은 **[Sales Amount]**)-설명 하는 수식 합니다 시간이 지남에 따라 예측 가능한 특성을 변경 합니다.  
+ ARIMA 알고리즘은 단일 데이터 계열의 각 조합에 대 한 정보를 만듭니다 (같은 **[Region]** ) 및 예측 가능한 특성 (같은 **[Sales Amount]** )-설명 하는 수식 합니다 시간이 지남에 따라 예측 가능한 특성을 변경 합니다.  
   
  각 계열에 대한 수식은 데이터에서 발견되는 각 주기 구조에 대해 하나씩 여러 구성 요소에서 파생됩니다. 예를 들어 매월 수집되는 판매 데이터가 있는 경우 알고리즘은 월별, 분기별 또는 연도별 주기 구조를 검색할 수 있습니다.  
   

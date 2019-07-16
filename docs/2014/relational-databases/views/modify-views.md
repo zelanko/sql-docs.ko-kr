@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef528fb128c81de1d2be07196dfe2a20ceaebba4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135083"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196400"
 ---
 # <a name="modify-views"></a>뷰 수정
   뷰를 정의한 후 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 해당 뷰를 삭제하고 다시 만들지 않고 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 해당 정의를 수정할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "54135083"
   
 -   **뷰를 수정하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

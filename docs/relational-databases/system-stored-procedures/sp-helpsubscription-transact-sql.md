@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07259854acfcad39a583b117a51bcda9de809486
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dd33fc16d399cc6d628eb4b3e80af98efca4ecc8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048353"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'` 연결된 된 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **%**,이 서버에 대 한 모든 구독 정보를 반환 하는 합니다.  
+`[ @publication = ] 'publication'` 연결된 된 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **%** ,이 서버에 대 한 모든 구독 정보를 반환 하는 합니다.  
   
 `[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 **%** 은 선택한 게시 및 구독자에 대 한 모든 구독 정보를 반환 하는 합니다. 하는 경우 **모든**에 게시에 대 한 전체 구독에 대 한 하나의 항목만 반환 됩니다.  
   
@@ -64,15 +63,15 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**subscriber**|**sysname**|구독자의 이름입니다.|  
 |**publication**|**sysname**|게시의 이름입니다.|  
 |**article**|**sysname**|아티클의 이름입니다.|  
 |**대상 데이터베이스**|**sysname**|복제된 데이터가 있는 대상 데이터베이스의 이름입니다.|  
 |**구독 상태**|**tinyint**|구독 상태입니다.<br /><br /> **0** = 비활성<br /><br /> **1** = 구독<br /><br /> **2** = 활성|  
-|**동기화 유형**|**tinyint**|구독 동기화 유형입니다.<br /><br /> **1** = Automatic<br /><br /> **2** = 없음|  
-|**구독 유형**|**int**|구독 유형:<br /><br /> **0** = Push<br /><br /> **1** = 끌어오기<br /><br /> **2** = Anonymous|  
+|**동기화 유형**|**tinyint**|구독 동기화 유형입니다.<br /><br /> **1** = 자동<br /><br /> **2** = 없음|  
+|**구독 유형**|**int**|구독 유형:<br /><br /> **0** = 밀어넣기<br /><br /> **1** = 끌어오기<br /><br /> **2** = 익명|  
 |**전체 구독**|**bit**|구독이 게시 내의 모든 아티클에 관한 것인지 표시합니다.<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
 |**구독 이름**|**nvarchar(255)**|구독의 이름입니다.|  
 |**업데이트 모드**|**int**|**0** = 읽기 전용<br /><br /> **1** = 즉시 업데이트 구독|  
@@ -84,9 +83,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|구독에 할당된 경우 DTS 패키지의 위치입니다. 패키지에 값이 없으면 **0** 패키지 위치를 지정 합니다 **배포자**합니다. 값이 **1** 를 지정 합니다 **구독자**합니다.|  
 |**subscriber_security_mode**|**smallint**|구독자의 보안 모드 위치 **1** Windows 인증을 의미 하 고 **0** 의미 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.|  
 |**subscriber_login**|**sysname**|구독자의 로그인 이름입니다.|  
-|**subscriber_password**||실제 구독자 암호는 반환되지 않습니다. 결과에서 마스킹를 "**&#42;&#42;&#42;&#42;&#42;&#42;**" 문자열입니다.|  
+|**subscriber_password**||실제 구독자 암호는 반환되지 않습니다. 결과에서 마스킹를 " **&#42;&#42;&#42;&#42;&#42;&#42;** " 문자열입니다.|  
 |**job_login**|**sysname**|배포 에이전트가 실행되는 Windows 계정의 이름입니다.|  
-|**job_password**||실제 작업 암호는 반환되지 않습니다. 결과에서 마스킹를 "**&#42;&#42;&#42;&#42;&#42;&#42;**" 문자열입니다.|  
+|**job_password**||실제 작업 암호는 반환되지 않습니다. 결과에서 마스킹를 " **&#42;&#42;&#42;&#42;&#42;&#42;** " 문자열입니다.|  
 |**distrib_agent_name**|**nvarchar(100)**|구독을 동기화하는 에이전트 작업의 이름입니다.|  
 |**subscriber_type**|**tinyint**|구독자의 유형으로 다음 중 하나일 수 있습니다.<br /><br /> **0** = SQL Server 구독자<br /><br /> **1** = ODBC 데이터 원본 서버<br /><br /> **2** = Microsoft JET 데이터베이스 (사용 되지 않음)<br /><br /> **3** = OLE DB 공급자|  
 |**subscriber_provider**|**sysname**|SQL Server 이외 데이터 원본에 대한 OLE DB 공급자 등록에 사용되는 고유한 PROGID(프로그래밍 식별자)입니다.|  
@@ -98,7 +97,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helpsubscription** 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

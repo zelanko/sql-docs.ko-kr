@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19d555e988ecc1093388d751ea9f66a720b21def
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506038"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209740"
 ---
 # <a name="prediction-queries-data-mining"></a>예측 쿼리(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "52506038"
 ###  <a name="bkmk_PredFunc"></a> 예측 함수 추가  
  값을 예측하는 것 외에도 예측 쿼리를 사용자 지정하여 예측과 관련된 여러 종류의 정보를 반환할 수 있습니다. 예를 들어 예측에 따라 고객에게 권장할 제품 목록을 만드는 경우 예측을 평가하여 최상위 권장 사항만 사용자에게 제공할 수 있도록 각 예측에 대한 확률을 반환할 수 있습니다.  
   
- 이렇게 하려면 쿼리에 *예측 함수* 를 추가합니다. 지원되는 함수는 모델 또는 쿼리 유형마다 다릅니다. 예를 들어 클러스터링 모델은 모델에서 만들어진 클러스터에 대한 추가 세부 정보를 제공하는 특수한 예측 함수를 지원하지만 시계열 모델에는 시간 경과에 따른 차이를 계산하는 함수가 있습니다. 또한 모든 모델 유형에서 작동하는 일반 예측 함수도 있습니다. 다양한 유형의 쿼리에서 지원하는 예측 함수 목록은 다음 DMX 참조 항목을 참조하십시오.  [일반 예측 함수 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)합니다.  
+ 이렇게 하려면 쿼리에 *예측 함수* 를 추가합니다. 지원되는 함수는 모델 또는 쿼리 유형마다 다릅니다. 예를 들어 클러스터링 모델은 모델에서 만들어진 클러스터에 대한 추가 세부 정보를 제공하는 특수한 예측 함수를 지원하지만 시계열 모델에는 시간 경과에 따른 차이를 계산하는 함수가 있습니다. 또한 모든 모델 유형에서 작동하는 일반 예측 함수도 있습니다. 다양 한 유형의 쿼리에서 지 원하는 예측 함수 목록은 DMX 참조이 항목을 참조 하세요.  [일반 예측 함수 &#40;DMX&#41;](../../dmx/general-prediction-functions-dmx.md)합니다.  
   
 ###  <a name="bkmk_SingletonQuery"></a> 단일 예측 쿼리 만들기  
  단일 예측 쿼리는 빠른 예측을 실시간으로 만들려는 경우에 유용합니다. 일반적인 시나리오는 웹 사이트에서 폼을 사용하는 등의 방법으로 고객으로부터 정보를 얻은 다음 해당 데이터를 단일 예측 쿼리에 입력으로 전송하려는 경우입니다. 예를 들어 고객이 목록에서 제품을 선택하는 경우 추천할 최고의 제품을 예측하는 쿼리에 대한 입력으로 해당 선택을 사용할 수 있습니다.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f36ad40a2b16401218fe2a5927407464fe6ac11b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056374"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,19 +45,19 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @operation = ] 'operation'` 게시 된 작업에 대 한 작업의 형식입니다. *작업이*됩니다 **varchar(64)**, 기본값은 없습니다. 유효한 작업에 종속 *object_type*합니다.  
+`[ @operation = ] 'operation'` 게시 된 작업에 대 한 작업의 형식입니다. *작업이*됩니다 **varchar(64)** , 기본값은 없습니다. 유효한 작업에 종속 *object_type*합니다.  
   
-|개체 유형|연산|  
+|개체 유형|작업(Operation)|  
 |-----------------|---------------|  
-|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> Delete<br /><br /> START<br /><br /> STOP|  
+|**JOB**|INSERT<br /><br /> UPDATE<br /><br /> DELETE<br /><br /> START<br /><br /> STOP|  
 |**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
-|**SCHEDULE**|INSERT<br /><br /> UPDATE<br /><br /> Delete|  
+|**SCHEDULE**|INSERT<br /><br /> UPDATE<br /><br /> DELETE|  
   
-`[ @object_type = ] 'object'` 연산을 게시할 개체의 형식입니다. 올바른 유형은 **작업이**, **SERVER**, 및 **일정**합니다. *개체* 됩니다 **varchar(64)**, 기본값은 **작업**합니다.  
+`[ @object_type = ] 'object'` 연산을 게시할 개체의 형식입니다. 올바른 유형은 **작업이**, **SERVER**, 및 **일정**합니다. *개체* 됩니다 **varchar(64)** , 기본값은 **작업**합니다.  
   
 `[ @job_id = ] job_id` 작업이 적용 되는 작업의 작업 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 없습니다. **0x00** 모든 작업을 나타냅니다. 경우 *개체* 됩니다 **SERVER**, 한 다음 *job_id*필요 하지 않습니다.  
   
-`[ @specific_target_server = ] 'target_server'` 지정된 된 작업이 적용 되는 대상 서버의 이름입니다. 하는 경우 *job_id* 지정 되어 있지만 *target_server* 지정 하지 않으면 작업의 모든 작업 서버에 대해 연산이 게시 됩니다. *target_server* 됩니다 **nvarchar(30)**, 기본값은 NULL입니다.  
+`[ @specific_target_server = ] 'target_server'` 지정된 된 작업이 적용 되는 대상 서버의 이름입니다. 하는 경우 *job_id* 지정 되어 있지만 *target_server* 지정 하지 않으면 작업의 모든 작업 서버에 대해 연산이 게시 됩니다. *target_server* 됩니다 **nvarchar(30)** , 기본값은 NULL입니다.  
   
 `[ @value = ] value` 폴링 간격 (초)입니다. *value* 는 **int**이며 기본값은 NULL입니다. 경우에만이 매개 변수 지정 *작업이* 됩니다 **SET-POLL**합니다.  
   
@@ -70,7 +69,7 @@ sp_post_msx_operation
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_post_msx_operation** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
  **sp_post_msx_operation** 수를 항상 호출 안전 하 게 먼저 현재 서버가 다중 서버 Microsoft SQL Server 에이전트 경우 및 경우를 결정 하기 때문에 여부 *개체*다중 서버 작업입니다.  
@@ -90,7 +89,7 @@ sp_post_msx_operation
  [sp_resync_targetserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-resync-targetserver-transact-sql.md)   
  [sp_start_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
  [sp_stop_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-stop-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [sp_update_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

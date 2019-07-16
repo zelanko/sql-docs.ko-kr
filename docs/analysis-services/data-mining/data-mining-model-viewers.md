@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7db05fc43c7054e36d38eebe1047fe5c22802dab
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017950"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183726"
 ---
 # <a name="data-mining-model-viewers"></a>데이터 마이닝 모델 뷰어
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,43 +37,43 @@ ms.locfileid: "34017950"
   
      왼쪽에 있는 일반 뷰어에는 모델에 있는 노드 목록이 표시됩니다. 노드를 클릭하면 해당 내용이 오른쪽 창에 표시됩니다.  
   
- ![마이닝 모델 디자이너 개요](../../analysis-services/data-mining/media/generic-mining-model-tab1.gif "마이닝 모델 디자이너의 개요")  
+ ![마이닝 모델 디자이너 개요](../../analysis-services/data-mining/media/generic-mining-model-tab1.gif "마이닝 모델 디자이너 개요")  
   
 ## <a name="more-about-the-microsoft-generic-content-tree-viewer"></a>Microsoft 일반 콘텐츠 트리 뷰어에 대한 자세한 정보  
  [Microsoft 일반 콘텐츠 트리 뷰어&#40;데이터 마이닝&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c)를 사용하여 각 모델을 볼 수도 있습니다. 이 뷰어에는 표준 HTML 테이블 형식에 따라 마이닝 모델의 내용이 표시됩니다. 모드 정렬과 각 노드의 내용은 결과를 생성하는 데 사용된 알고리즘에 따라 크게 달라집니다.  
   
  사용자 지정 뷰어가 모델을 탐색하고 이해하기 위해 디자인된 반면 일반 뷰어는 이미 모델을 이해하고 있으며 특정 노드에서 통계 또는 규칙을 추출하려고 할 때 보다 유용합니다. 예를 들어 노드 확률, 회귀 수식 등과 같이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 분석 중에 캡처하는 패턴 및 통계에 대한 자세한 정보를 보려면 일반 뷰어를 사용합니다.  
   
- 이 뷰어에 표시되는 모든 정보를 가져오도록 DMX를 사용하여 *내용 쿼리* 를 작성할 수도 있습니다. 자세한 내용은 [내용 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)를 참조하세요.  
+ 이 뷰어에 표시되는 모든 정보를 가져오도록 DMX를 사용하여 *내용 쿼리* 를 작성할 수도 있습니다. 자세한 내용은 [내용 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)을 참조하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  다음 항목에서는 각 뷰어에 대해 자세히 설명하고 각 뷰어에서 정보를 해석하는 방법에 대해 알아봅니다.  
   
- [Microsoft 트리 뷰어를 사용 하 여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
+ [Microsoft 트리 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 트리 뷰어에 대해 설명합니다. 이 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 의사 결정 트리 알고리즘과 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 선형 회귀 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다.  
   
- [Microsoft 클러스터 뷰어를 사용 하 여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ [Microsoft 클러스터 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터 뷰어에 대해 설명합니다. 이 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다.  
   
- [Microsoft 시계열 뷰어를 사용 하 여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ [Microsoft 시계열 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 뷰어에 대해 설명합니다. 이 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다.  
   
- [Microsoft Naive Bayes 뷰어를 사용 하 여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
+ [Microsoft Naive Bayes 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 뷰어에 대해 설명합니다. 이 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다.  
   
- [Microsoft 시퀀스 클러스터 뷰어를 사용 하 여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ [Microsoft 시퀀스 클러스터 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터 뷰어에 대해 설명합니다. 이 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다.  
   
- [Microsoft 연결 규칙 뷰어를 사용 하 여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ [Microsoft 연결 규칙 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 규칙 뷰어에 대해 설명합니다. 이 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다.  
   
- [Microsoft 신경망 뷰어를 사용 하 여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
+ [Microsoft 신경망 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-neural-network-viewer.md)  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 뷰어에 대해 설명합니다. 이 뷰어는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 로지스틱 회귀 분석 알고리즘을 사용하는 모델을 포함하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 신경망 알고리즘을 사용하여 작성된 마이닝 모델을 표시합니다.  
   
- [Microsoft 일반 콘텐츠 트리 뷰어를 사용 하 여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
+ [Microsoft 일반 콘텐츠 트리 뷰어를 사용하여 모델 찾아보기](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)  
  모든 데이터 마이닝 모델에 대한 일반 뷰어에서 사용할 수 있는 세부 정보에 대해 설명하고 각 알고리즘의 정보를 해석하는 방법에 대한 예를 제공합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [데이터 마이닝 디자이너](../../analysis-services/data-mining/data-mining-designer.md)  
   

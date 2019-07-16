@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6b1aa4b-3369-4255-a892-c0e5cc9cb693
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b69d1ae90224b94d5db5f9658942e1beed0b61d1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a80ff5308edee02d24d214a6520a090750600edc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950574"
 ---
 # <a name="spreplmonitorhelppublicationthresholds-transact-sql"></a>sp_replmonitorhelppublicationthresholds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**metric_id**|**int**|복제 성능 메트릭의 ID이며 다음 중 하나가 될 수 있습니다.<br /><br /> **1expiration** -트랜잭션 게시에 대 한 구독의 만료가 임박 했는지 모니터링 합니다.<br /><br /> **2latency** -트랜잭션 게시에 대 한 구독의 성능 모니터링 합니다.<br /><br /> **4mergeexpiration** -병합 게시에 대 한 구독의 만료가 임박 했는지 모니터링 합니다.<br /><br /> **5mergeslowrunduration** -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.<br /><br /> **6mergefastrunduration** -고대역폭 (LAN) 연결을 통한 병합 동기화의 기간을 모니터링 합니다.<br /><br /> **7mergefastrunspeed** -고대역폭 (LAN) 연결을 통한 병합 동기화의 동기화 속도 모니터링 합니다.<br /><br /> **8mergeslowrunspeed** -저대역폭 (전화 접속) 연결을 통한 병합 동기화의 동기화 속도 모니터링 합니다.|  
 |**title**|**sysname**|복제 성능 메트릭의 이름입니다.|  
@@ -70,7 +69,7 @@ sp_replmonitorhelppublicationthresholds [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_replmonitorhelppublicationthresholds** 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

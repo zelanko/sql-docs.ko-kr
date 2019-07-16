@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3ecee500204303dfcbcd8e179b9cb9cb0a94bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ca64355a80ce8892f0ea0494e165d934d8d7a88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057095"
 ---
 # <a name="rules-for-conversions"></a>변환에 대한 규칙
 이 섹션의 규칙은 숫자 리터럴을 포함 하는 변환에 적용 됩니다. 이러한 규칙을 위해 다음 조건에 정의 됩니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "63032926"
   
 -   *NT:* 숫자 대상 값입니다.  
   
--   *NS:* 숫자 원본 값입니다.  
+-   *NS.* 숫자 원본 값입니다.  
   
 -   *CT:* 문자 대상 값입니다.  
   
@@ -76,7 +75,7 @@ ms.locfileid: "63032926"
   
     -   NS 0 보다 작은 경우의 결과 Y 하면:  
   
-         '-' &#124;&#124; YP  
+         '-' &#124; &#124; YP  
   
          여기서 '&#124;&#124;'은 문자열 연결 연산자.  
   

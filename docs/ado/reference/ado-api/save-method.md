@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0953b76ff642387679c907e6f0b3364cbac898df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931171"
 ---
 # <a name="save-method"></a>Save 메서드
 저장 합니다 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 파일에서 또는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -41,7 +40,7 @@ recordset.Save Destination, PersistFormat
  *PersistFormat*  
  (선택 사항) [PersistFormatEnum](../../../ado/reference/ado-api/persistformatenum.md) 되는 형식을 지정 하는 값을 **레코드 집합** (XML 또는 ADTG) 저장 하는 것입니다. 기본값은 **adPersistADTG**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 [Save 메서드](../../../ado/reference/ado-api/save-method.md) 메서드를 열 때만 호출할 수 있습니다 **레코드 집합**합니다. 사용 합니다 [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) 이상 복원 방법 합니다 **레코드 집합** 에서 *대상*합니다.  
   
  경우는 [필터 속성](../../../ado/reference/ado-api/filter-property.md) 속성에 적용 되는 **레코드 집합**, 다음 필터에서 액세스할 수 있는 행만 저장 됩니다. 경우는 **Recordset** 계층형 현재 자식 **레코드 집합** 및 자식의 부모를 포함 하 여 저장 됩니다 **레코드 집합**. 경우 자식의 Save 메서드 **레코드 집합** 는 자식 노드와 모든 자식이 저장 되지만 호출 됩니다.  

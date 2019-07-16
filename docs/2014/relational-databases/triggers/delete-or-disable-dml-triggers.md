@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1195d1b15ed845728cd254032fc7187b3f355f8f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536795"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196525"
 ---
 # <a name="delete-or-disable-dml-triggers"></a>DML 트리거 삭제 또는 해제
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 DML 트리거를 삭제하거나 비활성화하는 방법에 대해 설명합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "58536795"
   
 -   **DML 트리거를 삭제하거나 비활성화하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

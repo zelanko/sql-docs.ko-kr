@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f9b8898a3cc75cf47ae783a1dd2a120c8954ab8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec72b2b1908f967caee4610e27315acaab787ac9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917168"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name 속성-동적(ADO)
 이름을 지정 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "66711658"
 ## <a name="return-values"></a>반환 값  
  반환 된 **문자열** 값의 이름입니다 합니다 **레코드 집합**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  때까지 또는 연결의 기간에 대 한 이름을 유지 합니다 **레코드 집합** 닫혀 있습니다.  
   
  **변형 이름** 속성은 주로의 다시 셰이핑 기능을 사용 하 여 사용 합니다 [OLE DB에 대 한 Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 서비스 공급자입니다. 이름은 다시 형성에 참여 하도록 고유 해야 합니다.  

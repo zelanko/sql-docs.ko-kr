@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_request_steps (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_request_steps (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2017
 ms.prod: sql
@@ -11,25 +11,24 @@ dev_langs:
 ms.assetid: cc563e88-0d34-436e-b914-b60d6ee0d50b
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 63a39ab5ace1ec3666b3f5c70cc628268304ce92
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ae1a8aa94eebe6eae203c0b09641b13a18eca9d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899155"
 ---
 # <a name="sysdmpdwrequeststeps-transact-sql"></a>sys.dm_pdw_request_steps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   지정된 된 요청을 작성 하거나 쿼리 하는 모든 단계에 대 한 정보를 보유 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]합니다. 쿼리 단계 마다 하나의 행을 나열합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |request_id|**nvarchar(32)**|request_id 및 step_index이이 보기에 대 한 키를 구성 합니다.<br /><br /> 요청과 연결 된 고유 숫자 id입니다.|참조의 request_id [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)합니다.|  
 |step_index|**int**|request_id 및 step_index이이 보기에 대 한 키를 구성 합니다.<br /><br /> 요청을 구성 하는 단계의 순서에서이 단계의 위치입니다.|0 (n-1)를 n 단계를 사용 하 여 요청입니다.|  
-|operation_type|**nvarchar(35)**|이 단계에서 표시 하는 작업의 형식입니다.|**DMS 쿼리 계획 작업:** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **SQL 쿼리 계획 작업:** ' OnOperation', 'RemoteOperation'<br /><br /> **다른 쿼리 계획 작업:** 'MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **읽기에 대 한 외부 작업:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **MapReduce에 대 한 외부 작업:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **쓰기에 대 한 외부 작업:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 자세한 내용은 "쿼리 계획 이해"에서 참조 된 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]합니다.|  
+|operation_type|**nvarchar(35)**|이 단계에서 표시 하는 작업의 형식입니다.|**DMS 쿼리 계획 작업:** 'ReturnOperation', 'PartitionMoveOperation', 'MoveOperation', 'BroadcastMoveOperation', 'ShuffleMoveOperation', 'TrimMoveOperation', 'CopyOperation', 'DistributeReplicatedTableMoveOperation'<br /><br /> **SQL 쿼리 계획 작업:** ' OnOperation', 'RemoteOperation'<br /><br /> **다른 쿼리 계획 작업:** ' MetaDataCreateOperation', 'RandomIDOperation'<br /><br /> **읽기에 대 한 외부 작업:** 'HadoopShuffleOperation', 'HadoopRoundRobinOperation', 'HadoopBroadcastOperation'<br /><br /> **MapReduce에 대 한 외부 작업:** 'HadoopJobOperation', 'HdfsDeleteOperation'<br /><br /> **쓰기에 대 한 외부 작업:** 'ExternalExportDistributedOperation', 'ExternalExportReplicatedOperation', 'ExternalExportControlOperation'<br /><br /> 자세한 내용은 "쿼리 계획 이해"에서 참조 된 [!INCLUDE[pdw-product-documentation](../../includes/pdw-product-documentation-md.md)]합니다.|  
 |distribution_type|**nvarchar(32)**|이 단계를 진행 하는 배포의 형식입니다.|'AllNodes', 'AllDistributions', 'AllComputeNodes', 'ComputeNode', 'Distribution', 'SubsetNodes', 'SubsetDistributions', 'Unspecified'|  
 |location_type|**nvarchar(32)**|위치 단계는 실행 중입니다.|' 계산 ', 'Control', 'DMS'|  
 |상태|**nvarchar(32)**|이 단계의 상태입니다.|보류 중, 실행 중, 완료, 실패, UndoFailed PendingCancel, 취소, 취소, 중단|  

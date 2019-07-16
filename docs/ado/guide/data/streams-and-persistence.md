@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ad5bf52c-fd10-4cfa-bf7d-fcedcaa41eea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 246d894ff38cc0dd74e96bb0fcbdb7b170b51d53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22fbf503196c467a7816bf4e9c76151276cc6d4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924024"
 ---
 # <a name="streams-and-persistence"></a>스트림 및 지속성
 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 [저장](../../../ado/reference/ado-api/save-method.md) 메서드 저장소 또는 *지속 되 면*, **레코드 집합** 파일인 및 [엽니다](../../../ado/reference/ado-api/open-method-ado-recordset.md)메서드를 복원 합니다 **레코드 집합** 해당 파일에서.  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a02c22fb-542d-465e-a629-30fd59dcbebf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 089a261eaea2701354af6082827c12491810b74c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbce299e2e9f67b705f940480913c7d8ac367d0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919793"
 ---
 # <a name="command-object-ado"></a>명령 개체(ADO)
 데이터 원본에 대해 실행 하려는 특정 명령을 정의 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여를 **명령** 데이터베이스를 쿼리하고의 레코드를 반환 하는 개체를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 대량 작업을 실행 하거나 데이터베이스의 구조를 조작 하는 개체. 일부 공급자의 기능에 따라 **명령** 컬렉션, 메서드 또는 속성 참조 될 때 오류를 생성할 수 있습니다.  
   
  컬렉션, 메서드 및 속성을 사용 하 여는 **명령** 개체를 다음을 수행할 수 있습니다.  
