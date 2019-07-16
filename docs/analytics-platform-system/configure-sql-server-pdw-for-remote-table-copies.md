@@ -2,19 +2,18 @@
 title: 원격 테이블 복사본에 대 한 병렬 데이터 웨어하우스 구성 | Microsoft Docs
 description: 원격 테이블 복사 기능을 사용 하 여 비 어플라이언스 서버의 SMP SQL Server 데이터베이스에 테이블을 복사 하는 병렬 데이터 웨어하우스를 구성 하는 방법을 설명 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fdac0b6ed211e223c3fad7ba15ac79a282c61303
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f3abd60cb4f87abc5e6cbdc420fc6c551b0ab15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62509525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961228"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>원격 테이블 복사본에 대 한 병렬 데이터 웨어하우스 구성
 원격 테이블 복사 기능을 사용 하 여 비 어플라이언스 서버의 SMP SQL Server 데이터베이스에 테이블을 복사 하는 SQL Server PDW 구성 하는 방법에 설명 합니다.  

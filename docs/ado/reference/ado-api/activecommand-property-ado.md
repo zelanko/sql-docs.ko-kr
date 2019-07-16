@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fef3eac34a624925401eeac2fd82b2f34eaa3a1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2a2f23360cf3ce032d14af7ca475d5c2c3ea638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921673"
 ---
 # <a name="activecommand-property-ado"></a>ActiveCommand 속성(ADO)
 나타냅니다 합니다 [명령](../../../ado/reference/ado-api/command-object-ado.md) 만든 연결 된 개체 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66704048"
 ## <a name="return-value"></a>반환 값  
  반환을 **Variant** 를 포함 하는 **명령** 개체입니다. 기본값은 null 개체 참조입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **ActiveCommand** 속성은 읽기 전용입니다.  
   
  경우는 **명령** 개체 만들기는 현재 사용 하지 **레코드 집합**에 **Null** 개체 참조가 반환 됩니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4241a6ab-7465-471b-9890-57c6b572037e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 58c88e60e4d4b4fa0b25cb5bdafe3ad248a794de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2826041b1385966f9ac4f76358588b4af6d414f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941060"
 ---
 # <a name="configure-email-notifications-master-data-services"></a>전자 메일 알림 구성(Master Data Services)
 

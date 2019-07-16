@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d33467a5-5a56-450d-98c1-c3ce6f9f103c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8103da63d91c5d59d1bfc4ac5b738ba8f333d1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ae1a96f2f5a72f354e376faa3e9e7370f9fcb92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932478"
 ---
 # <a name="getrows-method-example-jscript"></a>GetRows 메서드 예제(JScript)
 이 예제에서는 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 의 모든 행을 검색 하는 메서드는 *Custiomers* 에서 테이블을 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 결과 데이터를 사용 하 여 배열을 채우는 합니다. **GetRows** 메서드는 원하는 행 수보다 적은 두 가지 경우에 반환: 경우 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 에 도달한 경우 **GetRows** 했던 레코드를 검색 하려고 했습니다. 다른 사용자가 삭제 합니다. 함수 반환 **False** 두 번째 경우 발생 하는 경우에 합니다. 잘라내기 및 메모장 이나 다른 텍스트 편집기에 다음 코드를 붙여넣고,으로 저장 **GetRowsJS.asp**합니다.  

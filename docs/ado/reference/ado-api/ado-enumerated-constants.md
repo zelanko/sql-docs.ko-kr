@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4d9b2e581bfbce225bd34e78761b9e8ade621172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a2b02498905b73f321d7585b5c91adfbfd1b4b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921027"
 ---
 # <a name="ado-enumerated-constants"></a>ADO 열거 상수
 디버깅을 돕기 위해 ADO 열거 각 상수에 대 한 값을 나열 합니다. 그러나이 값은 참고용 으로만 제공 되며 ADO 릴리스마다에서 변경 될 수 있습니다. 코드는 실제 값이 아니라, 각 열거형된 상수 이름을 의존 합니다.  

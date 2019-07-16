@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: ea432d05ea1fde8ec0d2585d0618ea6feba86ccc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20158894567c1452a8d605f5cec84354654c5e96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959595"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>시작 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 확장성
 
@@ -274,8 +273,8 @@ Azure Data Studio 확장에 대 한 사용 가능한 데이터베이스 연결�
 
 |컨텍스트 변수| description|
 |:---|:---|
-|`connectionProvider` | 문자열은 현재 연결의 공급자에 대 한 식별자입니다. 예: `connectionProvider == 'MSSQL'`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.|
-|`serverName`|문자열은 현재 연결의 서버 이름입니다. 예: `serverName == 'localhost'`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.|
-|`databaseName` | 문자열의 현재 연결 데이터베이스 이름입니다. 예: `databaseName == 'master'`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.|
+|`connectionProvider` | 문자열은 현재 연결의 공급자에 대 한 식별자입니다. 예: `connectionProvider == 'MSSQL'`항목을 참조하세요.|
+|`serverName`|문자열은 현재 연결의 서버 이름입니다. 예: `serverName == 'localhost'`항목을 참조하세요.|
+|`databaseName` | 문자열의 현재 연결 데이터베이스 이름입니다. 예: `databaseName == 'master'`항목을 참조하세요.|
 |`connection` | 현재 연결 (IConnectionProfile)에 대 한 전체 연결 프로필 개체|
 |`dashboardContext` | 대시보드 페이지의 컨텍스트 문자열에서 현재은. 'Database' 또는 'server '입니다. 예: `dashboardContext == 'database'`|

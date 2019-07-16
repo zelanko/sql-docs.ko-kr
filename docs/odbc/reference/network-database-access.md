@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f31dd938-e992-436b-b613-145c23973064
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1ff13d2e46377b0d29c9bbc8e8ad1705dedc048b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f8eaebca02ef3987e3613b5dd896e0f7c130086
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938030"
 ---
 # <a name="network-database-access"></a>네트워크 데이터베이스 액세스
 네트워크를 통해 데이터베이스를 액세스, 구성 요소를 각각의 독립적인 프로그래밍 인터페이스를 아래에 있는 숫자에 필요 합니다. 이러한 구성 요소는 다음 그림에 표시 됩니다.  

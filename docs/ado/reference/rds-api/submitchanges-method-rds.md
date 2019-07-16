@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e35b5c2939c01fa0e8a10995ebcc620eae66fe56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 783ad55a2355759f7625d536272f5243cd1c61c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963284"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges 메서드(RDS)
 보류 중인 변경 내용을 로컬로 캐시 된 및 업데이트할 수 있는 전송 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 에 지정 된 데이터 원본에는 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성 또는 [URL](../../../ado/reference/rds-api/url-property-rds.md) 속성.  
@@ -44,7 +43,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *대량 삽입 태스크 편집기*  
  A **문자열** 사용 하 여 만든 연결을 나타내는 값을 **rds. DataControl** 개체의 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성입니다.  
   
- *Recordset*  
+ *레코드 집합*  
  나타내는 개체 변수를 **레코드 집합** 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  

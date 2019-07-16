@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5c0530ad-68d0-4cba-b1af-9386d566c7c5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 051e91d54a1f0311d5a8aeb69b4ea4672234a8f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4274c51be7bc2d94ca26312b246176bd58d197f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920181"
 ---
 # <a name="cancel-method-example-vb"></a>Cancel 메서드 예제(VB)
 이 예제에서는 합니다 [취소](../../../ado/reference/ado-api/cancel-method-ado.md) 에서 명령 실행을 취소 하는 메서드를 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 연결이 사용 중인 경우 개체.  

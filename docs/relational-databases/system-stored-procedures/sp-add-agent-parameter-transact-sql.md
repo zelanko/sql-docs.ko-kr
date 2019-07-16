@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 055f4765-0574-47c3-bf7d-6ef6e9bd8b34
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dcc28a97ab7f01f4e13d3918361506113f0de24b
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: a61b85090dc88dddbb28c923f4acdc6e8fa07cb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941804"
 ---
 # <a name="spaddagentparameter-transact-sql"></a>sp_add_agent_parameter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a945eef43a1fc12689853c3fa209f6126df4f0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951873"
 ---
 # <a name="considering-database-features-to-use"></a>사용할 데이터베이스 기능 고려
 기본 수준의 상호 운용성을 알게 되 면 응용 프로그램에서 사용 하는 데이터베이스 기능 고려 되어야 합니다. 예를 들어, SQL 문을 응용 프로그램 실행 됩니다. 스크롤 가능 커서를 사용 하 여 응용 프로그램은? 트랜잭션? 프로시저? Long 데이터? 기능에 대 한 아이디어 모든 Dbms에서 지원 되지 않는에 대 한 참조를 [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md)를 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), 및 [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) 함수 설명과 [ 부록 c: SQL 문법을](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md)합니다. 응용 프로그램에 필요한 기능 일부 Dbms 대상 Dbms의 목록에서 제거할 수 있습니다. 또한 응용 프로그램이 여러 Dbms를 쉽게 대상 수 표시 될 수 있습니다.  

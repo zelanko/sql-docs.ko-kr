@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 66a208d9-b580-4655-a41e-1d36e5b5bfca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48c6e95a644c643721a7cb1c6f15c5eaf1e5a995
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19d719ddb4e5a2f7851a1d12dc4abe69069a354f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926758"
 ---
 # <a name="microsoft-ole-db-provider-for-internet-publishing-overview"></a>Microsoft OLE DB Provider for Internet 게시 개요
 Microsoft OLE DB Provider for Internet Publishing는 ADO를 Microsoft FrontPage 또는 Microsoft Internet Information Server 제공한 리소스에 액세스할 수 있습니다. 리소스에는 HTML 파일, Windows 2000 웹 폴더 등 웹 원본 파일이 포함 됩니다.
@@ -41,7 +40,7 @@ MSDAIPP.DSO
 "Provider=MSDAIPP.DSO;Data Source=ResourceURL;User ID=MyUserID;Password=MyPassword;"
 ```
 
- -또는-
+ 또는
 
 ```vb
 "URL=ResourceURL;User ID=MyUserID;Password=MyPassword;"

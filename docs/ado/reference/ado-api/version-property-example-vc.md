@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e74633d19bf165b362995f587f9cf641baadb1d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04000b62ea8d48b78d7673444003564ae0701193
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938691"
 ---
 # <a name="version-property-example-vc"></a>Version 속성 예제(VC++)
 이 예제에서는 합니다 [버전](../../../ado/reference/ado-api/version-property-ado.md) 의 속성을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 현재 ADO 버전을 표시 하는 개체입니다. 또한 여러 동적 속성을 사용 하 여 보여 줍니다.  

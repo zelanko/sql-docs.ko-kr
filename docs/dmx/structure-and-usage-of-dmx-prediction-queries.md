@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 37ff157cbddb0894880f12097c977b923d92f177
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938064"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>DMX 예측 쿼리의 구조 및 사용법
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "37981917"
   
 -   **TOP**  
   
--   **FROM***\<모델 >***PREDICTION JOIN**  
+-   **FROM** *\<모델 >* **PREDICTION JOIN**  
   
 -   **ON**  
   
@@ -70,7 +69,7 @@ ms.locfileid: "37981917"
  예측 문의 구문에 대 한 자세한 내용은 참조 [선택에서 &#60;모델&#62; PREDICTION JOIN &#40;DMX&#41; ](../dmx/select-from-model-prediction-join-dmx.md) 하 고 [SELECT FROM &#60;모델&#62; &#40;DMX &#41;](../dmx/select-from-model-dmx.md).  
   
 ## <a name="see-also"></a>관련 항목  
- [Data Mining Extensions &#40;DMX&#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   

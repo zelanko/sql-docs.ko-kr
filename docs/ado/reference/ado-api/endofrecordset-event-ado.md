@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 414094da95076a7fb3781877645c5d43a03e6a7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a83f101d46a94a4ea43a85424677fc1c8da08be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918945"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset 이벤트(ADO)
 합니다 **EndOfRecordset** 이벤트의 끝을 지난 행으로 이동 하 려 할 때 호출 됩니다 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
@@ -48,7 +47,7 @@ EndOfRecordset fMoreData, adStatus, pRecordset
  *pRecordset*  
  A **레코드 집합** 개체입니다. 합니다 **레코드 집합** 이 이벤트가 발생 한입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **EndOfRecordset** 이벤트는 경우에 발생할 수 있습니다 합니다 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) 작업이 실패 합니다.  
   
  끝을 넘어 이동 하려고 시도 하는 경우이 이벤트 처리기가 호출 된 **레코드 집합** 호출 등으로 인해 개체 **MoveNext**합니다. 그러나이 이벤트에서 수를 데이터베이스에서 더 많은 레코드를 검색 하 고 끝에 추가 합니다는 **레코드 집합**합니다. 이 경우에 설정할 *fMoreData* VARIANT_TRUE를 반환 **EndOfRecordset**합니다. 그런 다음 호출 **MoveNext** 새로 검색된 된 레코드에 액세스 하려면 다시 합니다.  

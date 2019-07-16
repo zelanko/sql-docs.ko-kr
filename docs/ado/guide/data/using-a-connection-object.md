@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4b34f971-5699-43e7-9b15-137d334fa66e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b19713028bcc5569a6a4aace4528e7c725cf7d0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f1b867e1870b81641c7cea09d9a8fb3accfcc01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923642"
 ---
 # <a name="using-a-connection-object"></a>연결 개체 사용
 열기 전에 **연결** 개체를 데이터 원본 및 연결 형식에 대 한 특정 정보를 정의 해야 합니다. 대부분의이 정보에서 유지 되는 *ConnectionString* 의 매개 변수를 [Open 메서드](../../../ado/reference/ado-api/open-method-ado-connection.md) 에 **연결** 개체를 또는 [ConnectionString 속성](../../../ado/reference/ado-api/connectionstring-property-ado.md) 에 **연결** 개체입니다. 연결 문자열을 작은따옴표로 묶인 값과 세미콜론으로 구분 된 인수/값 쌍의 목록으로 구성 됩니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  

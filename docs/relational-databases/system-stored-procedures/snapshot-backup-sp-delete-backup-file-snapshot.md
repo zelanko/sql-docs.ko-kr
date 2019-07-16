@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 5afe5530-a404-4fa5-af3c-bc7c3ca43ce6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f411018b4a26e878e8f64efff6f17186f84a42fe
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf376712d51f542f6da5eaa8e89b53779eda0c07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941832"
 ---
 # <a name="spdeletebackupfilesnapshot-transact-sql"></a>sp_delete_backup_file_snapshot (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sys.sp_delete_backup_file_snapshot
 ## <a name="permissions"></a>사용 권한  
  ALTER ANY DATABASE 권한이 필요합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.fn_db_backup_file_snapshots &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)   
  [sp_delete_backup&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
   

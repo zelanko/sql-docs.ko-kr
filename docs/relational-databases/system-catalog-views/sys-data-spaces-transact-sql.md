@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: f39d55fe-2c0f-472d-a77f-cebc6fea95b5
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cb158fd85d3f4a38868ef4eb753ae8b58639ff9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6f165789bc0965278f74acd00270d2b92e9e69f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719758"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940273"
 ---
 # <a name="sysdataspaces-transact-sql"></a>sys.data_spaces(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   각 데이터 공간마다 한 행을 포함합니다. 파일 그룹, 파티션 구성표 또는 FILESTREAM 데이터 파일 그룹일 수 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|데이터베이스 내에서 고유한 데이터 공간의 이름입니다.|  
+|name|**sysname**|데이터베이스 내에서 고유한 데이터 공간의 이름입니다.|  
 |data_space_id|**int**|데이터베이스 내에서 고유한 데이터 공간 ID 수입니다.|  
-|유형|**char(2)**|데이터 공간 유형입니다.<br /><br /> FG = 파일 그룹<br /><br /> FD = FILESTREAM 데이터 파일 그룹<br /><br /> FX = 메모리 액세스에 최적화된 테이블 파일 그룹<br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> PS = 파티션 구성표|  
+|type|**char(2)**|데이터 공간 유형입니다.<br /><br /> FG = 파일 그룹<br /><br /> FD = FILESTREAM 데이터 파일 그룹<br /><br /> FX = 메모리 액세스에 최적화된 테이블 파일 그룹<br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> PS = 파티션 구성표|  
 |type_desc|**nvarchar(60)**|데이터 공간 유형에 대한 설명입니다.<br /><br /> FILESTREAM_DATA_FILEGROUP<br /><br /> MEMORY_OPTIMIZED_DATA_FILEGROUP<br /><br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> PARTITION_SCHEME<br /><br /> ROWS_FILEGROUP|  
 |is_default|**bit**|1 = 기본 데이터 공간입니다. 파일 그룹 또는 파티션 구성표가 CREATE TABLE 또는 CREATE INDEX 문에 지정되지 않은 경우에 기본 데이터 공간을 사용합니다.<br /><br /> 0 = 기본 데이터 공간이 아닙니다.|  
 |is_system|**bit**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 1 = 데이터 공간이 전체 텍스트 인덱스 조각에 사용됩니다.<br /><br /> 0 = 데이터 공간이 전체 텍스트 인덱스 조각에 사용되지 않습니다.|  

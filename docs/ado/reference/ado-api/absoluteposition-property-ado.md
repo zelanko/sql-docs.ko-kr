@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 79f8ee5e-fc70-46d8-8c29-ebf943c66592
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 467834d2cfd5e56c14d9c7565d6749fa6848251e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b9795f962d0ead59a8d4f993e799a0ae4e2b750
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921691"
 ---
 # <a name="absoluteposition-property-ado"></a>AbsolutePosition 속성(ADO)
 서 수 위치를 나타내는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 현재 레코드입니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66718352"
   
  64 비트 코드를 64 비트 값의 저장소를 제공 하는 데이터 형식을 사용 합니다. 예를 들어, Long 또는 다른을 사용할 수 있습니다 DBORDINAL와 같은 64 비트 길이 값입니다. 사용 하지 마세요 **PositionEnum** 32 비트 길이 제한 되므로 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  설정 하기 위해 합니다 **AbsolutePosition** 속성, ADO를 사용 하는 OLE DB 공급자를 구현 해야 합니다 [IRowsetLocate:IRowset](https://msdn.microsoft.com/library/windows/desktop/ms721190.aspx) 인터페이스입니다.  
   
  에 액세스 하는 **AbsolutePosition** 의 속성을 **레코드 집합** 정방향 전용 중 하나를 사용 하 여 열려 있는 하거나 동적 커서에 오류를 발생 시킵니다 **adErrFeatureNotAvailable**. 기타 커서 유형으로 올바른 위치 반환할 OLE DB 공급자를 지원 하기만 합니다 **IRowsetScroll:IRowsetLocate** 인터페이스입니다. 공급자를 지원 하지 않는 경우는 **IRowsetScroll** 인터페이스의 속성이로 설정 되어 **adPosUnknown**합니다. 지원 하는지 여부를 확인 하 여 공급자에 대 한 설명서를 참조 하세요 **IRowsetScroll**합니다.  

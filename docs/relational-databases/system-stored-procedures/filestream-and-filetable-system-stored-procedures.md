@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 79d01c66d26e15518f2acdb2babfa0fa805da536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1ebcaf4659d7be880f0f0e901b2eadcc9002b2d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942245"
 ---
 # <a name="filestream-and-filetable-system-stored-procedures-transact-sql"></a>Filestream 및 FileTable 시스템 저장 프로시저 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47842371"
   FileTable 데이터에 대한 비트랜잭션 핸들 파일을 닫습니다.
 
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 [Filestream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetable](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Filestream 및 FileTable 동적 관리 뷰(Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)

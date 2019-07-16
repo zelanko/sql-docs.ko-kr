@@ -2,19 +2,18 @@
 title: 준비 데이터베이스-병렬 데이터 웨어하우스를 사용 하 여 | Microsoft Docs
 description: SQL Server 병렬 데이터 웨어하우스 (PDW)는 스테이징 데이터베이스를 사용 하 여 로드 프로세스 중에 일시적으로 데이터를 저장 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 52ede16185515c3df00ff21ece784d62eec984ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 824ad4dedee0224023f50b6855b2de1e53581304
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960030"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>병렬 데이터 웨어하우스 (PDW)에서 준비 데이터베이스를 사용 하 여
 SQL Server 병렬 데이터 웨어하우스 (PDW)는 스테이징 데이터베이스를 사용 하 여 로드 프로세스 중에 일시적으로 데이터를 저장 합니다. 기본적으로 SQL Server PDW 대상 데이터베이스를 사용 하 여 준비 데이터베이스와 테이블 조각화를 유발할 수 있습니다. 테이블 조각화를 줄이기 위해 사용자 정의 준비 데이터베이스를 만들 수 있습니다. 또는 로드 실패에서 롤백 문제가 없는 경우 임시 테이블을 건너뛰고 대상 테이블에 직접 로드 하 여 성능을 향상 하는 fastappend 로드 모드를 사용할 수 있습니다.  
@@ -63,7 +62,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
 ## <a name="Examples"></a>예제  
   
-### <a name="a-create-a-staging-database"></a>1. 준비 데이터베이스 만들기 
+### <a name="a-create-a-staging-database"></a>A. 준비 데이터베이스 만들기 
 다음 예제에서는 모든 로드 어플라이언스에 사용에 대 한 스테이징 데이터베이스, Stagedb를를 만듭니다. 복제 된 5 개의 각 5GB가 동시에 로드 하는 크기의 테이블을 예측 한다고 가정 합니다. 이 동시성 복제 된 크기에 대 한 최소 25GB를 할당 하면 됩니다. 테이블 크기 100 distributed 6에 예상 가정 200, 400, 500, 500 및 550GB 동시에 로드 됩니다. 이 동시성 2250 GB 이상 분산된 테이블 크기에 할당 됩니다.  
   
 ```sql  

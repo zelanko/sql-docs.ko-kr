@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 743bf6f78fa84f628a20bed23af0ace8cf23d06f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03edfc5b6d95c5cd6497d96d7014641f3032fb84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959201"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>SQL Server 중앙 관리 서버 확장(미리 보기)
 중앙 관리 서버 확장을 사용 하면 하나 이상의 그룹으로 구성 된 SQL server 인스턴스 목록을 저장할 수 있습니다. CMS 그룹을 사용 하 여 수행 되는 작업 서버 그룹의 모든 서버에서 작동 합니다.

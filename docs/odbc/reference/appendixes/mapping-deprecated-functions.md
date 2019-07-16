@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990714"
 ---
 # <a name="mapping-deprecated-functions"></a>사용되지 않는 함수 매핑
 이 섹션에서는 설명 하는 방법을 사용 되지 않는 함수는 ODBC로 매핑됩니다 *3.x* ODBC의 이전 버전과 호환성을 보장 하기 위해 드라이버 관리자 *3.x* ODBC를 사용 하 여 사용 되는 드라이버 *2.x* 응용 프로그램입니다. 드라이버 관리자는 응용 프로그램의 버전에 관계 없이이 매핑을 수행합니다. 때문에 각 ODBC *2.x* 함수를 다음 목록에서 해당 ODBC에 매핑된 *3.x* ODBC에서 호출 된 경우 함수 *3.x* ODBC드라이버*3.x* 드라이버는 ODBC를 구현 하지 않아도 *2.x* 함수입니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ee9a48b4bec625e4d64caf20aa1b5c8eaefe34f3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946411"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>경로 식 - 축약형 구문 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

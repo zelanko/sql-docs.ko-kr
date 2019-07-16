@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 002713c8c3eb92a33cbb1461eaacb8a0d63a5c3f
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 78e2a544766875b03144eb85b12aacee59295a2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962873"
 ---
 # <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 기계를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -100,7 +99,7 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 ### <a name="r-verification-steps"></a>R 확인 단계
 
-1. Start **RGUI.EXE** at C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64.
+1. 시작 **RGUI 합니다. EXE** C:\Program Files\Microsoft SQL Server\MSSQL14에서. MSSQLSERVER\R_SERVICES\bin\x64 합니다.
 
 2. 명령 프롬프트에서 다음 R 스크립트에 붙여 넣습니다.
 
@@ -205,10 +204,10 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 + [Microsoft Computational Network Toolkit는 가장 효율적인 분산된 심층 학습 계산 성능을 제공합니다](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 + [SQL Server 2016 R Services](sql-r-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md)
++ [SQL Server 2017 Machine Learning 서비스](sql-machine-learning-services-windows-install.md)
 + [SQL Server 인스턴스에 R 및 Python 구성 요소를 업그레이드 합니다.](../install/upgrade-r-and-python.md)
 + [R에 대 한 MicrosoftML 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [Python 용 microsoftml 패키지](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

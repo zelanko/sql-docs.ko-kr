@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: aabff9d9-20ea-4b68-b8fd-1e33061bd0ef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3a7db9667f24e11fe6a75f73e0dd7e79522db13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba56db60d38f6babc52f81f65f9b94e2c3a2f531
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939692"
 ---
 # <a name="text-file-driver-programming-considerations"></a>텍스트 파일 드라이버 프로그래밍 고려 사항
 이 섹션에서는 다음 항목을 다룹니다.  

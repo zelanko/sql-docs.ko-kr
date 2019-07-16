@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7225f8a7612f08947720eb2912722dc92b7a2a96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85bef64902f014e7b5269d6df328128bc8fe8d6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937888"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 검색할 때 형식을 지정 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 문자열로 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adClipString**|2|행 구분 *RowDelimiter*를 사용 하 여 열 *ColumnDelimiter*, 및 값을 null *NullExpr*합니다. 세 매개 변수를 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) 메서드는만 유효는 *StringFormat* 의 **adClipString**합니다.|  
   

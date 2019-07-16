@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2509b32c-a995-4364-9152-d8c83129bdd8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6ad7cdfdfc3c08175faf0584f2ae5069fcd39acb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae0b32385b98ac1b48688a7f89bbd7c91842a106
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911590"
 ---
 # <a name="activeconnection-property-ado-md"></a>ActiveConnection 속성(ADO MD)
 에 ADO [연결](../../../ado/reference/ado-api/connection-object-ado.md) 카탈로그 현재 속한 또는 현재 셀 집합 개체입니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66719014"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 **Variant** 연결을 정의 하는 문자열을 포함 하는 또는 **연결** 개체입니다. 기본적으로 비어 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  유효한 ADO에이 속성을 설정할 수 있습니다 **연결** 개체 또는 유효한 연결 문자열입니다. 이 속성을 설정 하 여 연결 문자열에 공급자를 만듭니다 **연결** 이 정의 사용 하 여 연결을 엽니다.  
   
  사용 하는 경우는 *ActiveConnection* 인수를 [엽니다](../../../ado/reference/ado-md-api/open-method-ado-md.md) 를 여는 메서드를 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체를 **ActiveConnection** 속성은 인수의 값을 상속 합니다.  

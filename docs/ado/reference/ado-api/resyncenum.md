@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: d3df2c90-e570-4c40-a79a-25b3448a009c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2bc43e772ab8f1e330d393461944cb2ecd585149
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a872ee5f4af49d9fbe97621a5d2549fd9472202
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931237"
 ---
 # <a name="resyncenum"></a>ResyncEnum
 호출 하 여 기본 값을 덮어쓸지 여부를 지정 [Resync](../../../ado/reference/ado-api/resync-method.md)합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adResyncAllValues**|2|기본. 데이터를 덮어쓰고 보류 중인 업데이트가 취소 됩니다.|  
 |**adResyncUnderlyingValues**|1|데이터를 덮어쓰지 않습니다 및 보류 중인 업데이트를 취소 하지 않습니다.|  

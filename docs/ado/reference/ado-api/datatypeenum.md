@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7cb3e56d0219973be97b694ee2b22dbbb58eb0d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933222"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 데이터 형식을 지정 된 [필드](../../../ado/reference/ado-api/field-object.md), [매개 변수](../../../ado/reference/ado-api/parameter-object.md), 또는 [속성](../../../ado/reference/ado-api/property-object-ado.md). 해당 OLE DB 유형 표시기는 다음 표의 설명 열에 대 한 괄호 안에 표시 됩니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**AdArray**|0x2000|다른 데이터 형식의 배열을 지정 하는 다른 데이터 형식 상수를 항상 함께 플래그 값입니다. ADOX에 적용 되지 않습니다.|  
 |**adBigInt**|20|8 바이트 부호 있는 정수 (DBTYPE_I8)를 나타냅니다.|  

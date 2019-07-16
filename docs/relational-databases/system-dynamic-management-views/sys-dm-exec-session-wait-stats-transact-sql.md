@@ -16,22 +16,21 @@ helpviewer_keywords:
 ms.assetid: df84842a-71eb-4fda-b448-5953cf9985dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 89054576eb64a913e67bf3ae9a3f53d0c79eb48f
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f04f959a55e183185796360476e7dc59a6889937
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936914"
 ---
 # <a name="sysdmexecsessionwaitstats-transact-sql"></a>sys.dm_exec_session_wait_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   각 세션에 대해 실행 중인 스레드로 인해 발생 한 모든 대기에 대 한 정보를 반환 합니다. 이 뷰를 사용 하 여 성능 문제를 진단할 수 있습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션 아니라 특정 쿼리 및 일괄 처리와 합니다.  이 보기는 세션에 대 한 집계 되는 동일한 정보를 반환 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) 제공 하지만 합니다 **session_id** 번호도 합니다.  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|세션의 id입니다.|  
 |wait_type|**nvarchar(60)**|대기 유형의 이름입니다. 자세한 내용은 [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)를 참조하세요.|  
@@ -40,7 +39,7 @@ ms.locfileid: "53206612"
 |max_wait_time_ms|**bigint**|이 대기 유형의 최대 대기 시간입니다.|  
 |signal_wait_time_ms|**bigint**|대기 스레드가 신호를 받은 시간과 실행을 시작한 시간 사이의 차이입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 DMV 세션 열릴 때나 세션 다시 설정 되는 세션에 대 한 정보를 다시 설정 (하는 경우 연결 풀링),  
   
  대기 유형에 대 한 자세한 내용은 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)합니다.  

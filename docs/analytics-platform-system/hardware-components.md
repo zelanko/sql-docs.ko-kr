@@ -2,19 +2,18 @@
 title: 하드웨어 구성 요소-Analytics Platform System | Microsoft Docs
 description: Analytics Platform System (APS) 비즈니스 요구 사항에 따라 적절 한 양의 처리 및 저장소를 구매할 수 있도록 확장 가능한 구성 요소를 사용 합니다. AP를 주문할 때 이러한 핵심 하드웨어 구성 요소 조합을 해야 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 8cf7fd100f72e14b09ea086a1ebff5140a9068a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f7f3bd8f4d5500a59675d40ff7f50d1afd9a199
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960883"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>Analytics Platform System에 대 한 하드웨어 구성 요소
 

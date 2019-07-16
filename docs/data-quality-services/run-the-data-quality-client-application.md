@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 0b2aa202-7ab2-4c9d-b0f1-802588053a1e
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: b34e3fa7ba8bafd88ed9da4a237d624ebc45cad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e63edc53ff8fe59f74b408bdb86a172b9835bac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935013"
 ---
 # <a name="run-the-data-quality-client-application"></a>데이터 품질 클라이언트 애플리케이션 실행
 

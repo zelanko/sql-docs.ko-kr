@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8d60f772d7848d0e207f83b5c7a1a10da4b43b37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043037"
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,13 +72,13 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
  행 및 메타 데이터 열 __ $start_lsn의 행을 적용 하는 데 필요한 작업이 마지막 변경의 LSN을 반환 하 고 \_ \_$operation 합니다. 또한 업데이트 작업이 반환 하는 경우 (\_\_$operation = 4) 업데이트에서 수정 된 캡처된 열에 반환 된 값에 표시 됩니다 \_ \_$update_mask 합니다.  
   
  all with merge  
- 메타데이터 열 __$start_lsn에서 해당 행의 마지막 변경에 대한 LSN을 반환합니다. 열 \_ \_$operation 두 값 중 하나가 됩니다: 1 개 삭제 및 5는 변경을 적용 하는 데 필요한 작업이 삽입 또는 업데이트 임을 나타냅니다. 열 \_ \_$update_mask는 항상 NULL입니다.  
+ 메타데이터 열 __$start_lsn에서 해당 행의 마지막 변경에 대한 LSN을 반환합니다. 열 \_ \_$operation 두 값 중 하나로 설정 됩니다. 1은 삭제 이며, 5는 변경을 적용 하는 데 필요한 작업이 삽입 또는 업데이트 임을 나타내려면입니다. 열 \_ \_$update_mask는 항상 NULL입니다.  
   
  지정된 변경에 대한 정확한 작업을 확인하는 논리를 사용하면 쿼리의 복잡성이 가중되므로 경우에 따라 이 옵션을 통해 쿼리 성능을 향상시킬 수 있습니다. 변경 데이터를 적용하는 데 필요한 작업이 삽입 또는 업데이트 중 하나임을 나타내는 것으로 충분하여 두 작업을 명시적으로 구별할 필요가 없을 경우가 이에 속합니다. 이 옵션은 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 환경과 같이 병합 작업을 직접 사용할 수 있는 대상 환경에 가장 유용합니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |__$start_lsn|**binary(10)**|변경에 대한 커밋 트랜잭션과 연관된 LSN입니다.<br /><br /> 동일한 트랜잭션에서 커밋된 변경의 커밋 LSN은 모두 동일합니다. 예를 들어 원본 테이블에는 업데이트 작업 두 행의 두 열을 수정 하는 경우 변경 테이블 각각 동일한 __ $start_lsnvalue 4 개 행을 포함 됩니다.|  
 |__$operation|**int**|변경 데이터의 행을 대상 데이터 원본에 적용하는 데 필요한 DML(데이터 조작 언어) 작업을 식별합니다.<br /><br /> row_filter_option 매개 변수의 값이 all 또는 all with mask일 경우 이 열의 값은 다음 값 중 하나일 수 있습니다.<br /><br /> 1 = 삭제<br /><br /> 2 = 삽입<br /><br /> 4 = 업데이트<br /><br /> row_filter_option 매개 변수의 값이 all with merge일 경우 이 열의 값은 다음 값 중 하나일 수 있습니다.<br /><br /> 1 = 삭제|  
@@ -89,7 +88,7 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="permissions"></a>사용 권한  
  sysadmin 고정 서버 역할 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다. 다른 모든 사용자의 경우 원본 테이블에서 캡처된 모든 열에 대한 SELECT 권한이 필요하며 캡처 인스턴스에 대한 제어 역할이 정의된 경우 해당 데이터베이스 역할의 멤버 자격이 필요합니다. 호출자에게 원본 데이터를 볼 수 있는 권한이 없으면 함수는 오류 208(개체 이름이 잘못되었습니다)을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  지정된 LSN 범위가 캡처 인스턴스에 대한 변경 추적 시간대를 벗어나는 경우 함수는 오류 208(개체 이름이 잘못되었습니다)을 반환합니다.
 
  행의 고유 식별자에 수정 fn_cdc_get_net_changes 삭제를 사용 하 여 초기 업데이트 명령을 표시 하 여 다음 명령을 대신 삽입 하면 됩니다.  이 동작은 변경 전후에 키를 추적 해야 합니다.

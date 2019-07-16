@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b784553302bf9df30750f239291ca179ecf6cf74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f0c76a668c7191467e9f66ba48c486aceea16df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924342"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>스트림으로 결과 집합 검색
 기존에 결과 수신 하는 대신 **레코드 집합** 개체, ADO 스트림으로 대신 쿼리 결과 검색할 수 있습니다. ADO **Stream** 개체 (또는 COM을 지 원하는 다른 개체 **IStream** ASP 같은 인터페이스 **요청** 고 **응답** 개체 ) 이러한 결과 포함 하기 위해 사용할 수 있습니다. XML 형식으로 결과 검색 하는 데이 기능에 대 한 하나의 사용이 됩니다. SQL Server를 사용 하 여 예를 들어, XML 결과 반환할 수 있습니다 SQL SELECT 쿼리를 사용 하 여 FOR XML 절을 사용 하 여 XPath 쿼리를 사용 하 여 등 여러 가지 방법으로.  
@@ -179,5 +178,5 @@ adoCmd.Execute , , adExecuteStream
 Response.write "</XML>"  
 ```  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>설명  
  이 시점에서 XML을 클라이언트 브라우저에 스트리밍된 및 표시할 준비가 된 것입니다. 이 XML 문서를 DOM 및 각 자식 노드를 통해 반복를 HTML에서 제품 목록을 작성할 인스턴스에 바인딩할 클라이언트 측 VBScript를 사용 하 여 이루어집니다.

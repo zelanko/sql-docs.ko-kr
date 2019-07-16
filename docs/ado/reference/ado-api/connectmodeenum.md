@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3528034b4a87115d704e7cbbc1f9d98a36e11794
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933452"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 데이터 수정에 사용할 수 있는 권한을 지정는 [연결](../../../ado/reference/ado-api/connection-object-ado.md)연를 [레코드](../../../ado/reference/ado-api/record-object-ado.md)에 대 한 값을 지정 하거나를 [모드](../../../ado/reference/ado-api/mode-property-ado.md) 의 속성을  **레코드** 하 고 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adModeRead**|1|읽기 전용 권한을 나타냅니다.|  
 |**adModeReadWrite**|3|읽기/쓰기 권한을 나타냅니다.|  

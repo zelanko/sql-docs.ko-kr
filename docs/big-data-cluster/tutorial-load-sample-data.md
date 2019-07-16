@@ -5,17 +5,16 @@ description: 이 자습서에는 SQL Server 빅 데이터 클러스터에 샘플
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f4ea5540c0188ec9a57ad8b6780cf3ab6af5dfc2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 30e3756251cc8df5ba9e14278983d44d0f6d4ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957782"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 데이터 로드
 
@@ -68,7 +67,7 @@ ms.locfileid: "67727350"
    | <SQL_MASTER_IP> | 마스터 인스턴스 IP 주소입니다. |
    | <SQL_MASTER_SA_PASSWORD> | 마스터 인스턴스에 대 한 SA 암호입니다. |
    | <KNOX_IP> | HDFS/Spark 게이트웨이의 IP 주소입니다. |
-   | <KNOX_PASSWORD> | HDFS/Spark 게이트웨이에 대 한 암호입니다. |
+   | < KNOX_PASSWORD > | HDFS/Spark 게이트웨이에 대 한 암호입니다. |
 
    > [!TIP]
    > 사용 하 여 [kubectl](cluster-troubleshooting-commands.md) SQL Server 마스터 인스턴스와 Knox에 대 한 IP 주소를 찾을 수 있습니다. 실행할 `kubectl get svc -n <your-big-data-cluster-name>` 마스터 인스턴스에 대 한 외부 IP 주소를 확인 하 고 (**마스터 svc 외부**) 및 Knox (**게이트웨이 svc 외부**). 클러스터의 기본 이름은 **mssql 클러스터**합니다.
@@ -104,7 +103,7 @@ ms.locfileid: "67727350"
    | <SQL_MASTER_IP> | 마스터 인스턴스 IP 주소입니다. |
    | <SQL_MASTER_SA_PASSWORD> | 마스터 인스턴스에 대 한 SA 암호입니다. |
    | <KNOX_IP> | HDFS/Spark 게이트웨이의 IP 주소입니다. |
-   | <KNOX_PASSWORD> | HDFS/Spark 게이트웨이에 대 한 암호입니다. |
+   | < KNOX_PASSWORD > | HDFS/Spark 게이트웨이에 대 한 암호입니다. |
 
    > [!TIP]
    > 사용 하 여 [kubectl](cluster-troubleshooting-commands.md) SQL Server 마스터 인스턴스와 Knox에 대 한 IP 주소를 찾을 수 있습니다. 실행할 `kubectl get svc -n <your-big-data-cluster-name>` 마스터 인스턴스에 대 한 외부 IP 주소를 확인 하 고 (**마스터 svc 외부**) 및 Knox (**게이트웨이 svc 외부**). 클러스터의 기본 이름은 **mssql 클러스터**합니다.

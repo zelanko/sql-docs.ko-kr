@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fdd0a3091440295e393d969f1b8161b83fb58d95
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 83dbe0c2ea6eb066f208223acd2c6062f964fcf3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38063963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938084"
 ---
 # <a name="ltsource-data-querygt"></a>&lt;원본 데이터 쿼리&gt;
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "38063963"
 ## <a name="query-types"></a>쿼리 유형  
  일반적으로 원본 데이터를 지정하는 3가지 방법은 다음과 같습니다.  
   
- [OPENQUERY &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openquery.md)  
+ [OPENQUERY &#40;DMX&#41;](../dmx/source-data-query-openquery.md)  
  이 문은 기존 데이터 원본을 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 외부에 있는 데이터를 쿼리합니다.  
   
  하는 동안 **OPENQUERY** 함수를 비슷합니다 **OPENROWSET**를 **OPENQUERY** 다음과 같은 이점이 있습니다.  
@@ -33,10 +32,10 @@ ms.locfileid: "38063963"
   
 -   관리자는 서버의 데이터에 액세스하는 방법을 더욱 자세하게 제어할 수 있습니다. 예를 들어 관리자는 서버에 로드되는 공급자 및 액세스할 수 있는 외부 데이터를 관리할 수 있습니다.  
   
- [OPENROWSET &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-openrowset.md)  
+ [OPENROWSET &#40;DMX&#41;](../dmx/source-data-query-openrowset.md)  
  이 문은 기존 데이터 원본을 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스 외부에 있는 데이터를 쿼리합니다.  
   
- [도형 &AMP;#40;DMX&AMP;#41;](../dmx/source-data-query-shape.md)  
+ [도형 &#40;DMX&#41;](../dmx/source-data-query-shape.md)  
  이 문은 여러 데이터 원본을 쿼리하여 중첩 테이블을 만듭니다. 사용 하 여 **셰이프**, 단일 계층적 테이블에 여러 원본의 데이터를 결합할 수 있습니다. 이를 통해 테이블 안에 테이블을 포함하는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 테이블 중첩 기능을 사용할 수 있습니다.  
   
  원본 데이터를 지정하는 경우 다음과 같은 옵션도 사용할 수 있습니다.  

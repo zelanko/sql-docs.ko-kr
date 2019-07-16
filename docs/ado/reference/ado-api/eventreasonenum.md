@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ba7675f5fe0abe02130de3c6bfc905070b24ec10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918871"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 발생할 이벤트를 발생 시킨 이유를 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adRsnAddNew**|1|작업에 새 레코드를 추가 합니다.|  
 |**adRsnClose**|9|작업을 종료 합니다 **레코드 집합**합니다.|  

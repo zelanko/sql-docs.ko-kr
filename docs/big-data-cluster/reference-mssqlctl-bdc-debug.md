@@ -5,17 +5,16 @@ description: Mssqlctl bdc 디버그 명령에 대 한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 20257039a40594cd592bcc4d4f6050027d8858ea
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9e7fc8e54a1473803dbeacb9c671b060b8ff8b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958102"
 ---
 # <a name="mssqlctl-bdc-debug"></a>mssqlctl bdc 디버그
 
@@ -26,9 +25,9 @@ ms.locfileid: "67728572"
 ## <a name="commands"></a>명령
 |     |     |
 | --- | --- |
-[mssqlctl bdc debug copy-logs](#mssqlctl-bdc-debug-copy-logs) | 로그를 복사 합니다.
+[mssqlctl bdc 디버그 복사 로그](#mssqlctl-bdc-debug-copy-logs) | 로그를 복사 합니다.
 [mssqlctl bdc 디버그 덤프](#mssqlctl-bdc-debug-dump) | 트리거 로깅 덤프 합니다.
-## <a name="mssqlctl-bdc-debug-copy-logs"></a>mssqlctl bdc debug copy-logs
+## <a name="mssqlctl-bdc-debug-copy-logs"></a>mssqlctl bdc 디버그 복사 로그
 빅 데이터 클러스터에서 디버그 로그를 복사-kube 구성 시스템에 필요 합니다.
 ```bash
 mssqlctl bdc debug copy-logs --namespace -n 

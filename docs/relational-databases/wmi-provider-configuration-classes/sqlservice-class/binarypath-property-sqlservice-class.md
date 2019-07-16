@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 31f7376410879fa3700de38cf26537621f4c8810
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fd5e74f67e43293f797ea18ecf8e6d5fe0a926d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929724"
 ---
 # <a name="binarypath-property-sqlservice-class-"></a>BinaryPath 속성(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ object.BinaryPath [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  서비스의 이진 경로를 지정하는 문자열 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>관련 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

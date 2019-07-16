@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0489bb43ee3b41ebf4334da0d6b8045e117acc39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932898"
 ---
 # <a name="execute-method-ado-connection"></a>Execute 메서드(ADO 연결)
 지정 된 쿼리, SQL 문, 저장된 프로시저 또는 공급자별 텍스트를 실행합니다.  
@@ -54,7 +53,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
  Execute를 사용 하 여 adCmdFile 또는 adCmdTableDirect CommandTypeEnum 값을 사용 하지 마세요. 옵션으로 이러한 값만 사용할 수 있습니다는 [Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) 하 고 [Requery 메서드](../../../ado/reference/ado-api/requery-method.md) 메서드를 **레코드 집합**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여는 **Execute** 메서드를 [연결 개체 (ADO)](../../../ado/reference/ado-api/connection-object-ado.md) 개체가 메서드에 전달 하 여 CommandText 인수에 지정된 된 연결에서 모든 쿼리를 실행 합니다. CommandText 인수는 행을 반환 하는 쿼리를 지정 하는 경우 실행을 생성 하는 결과 새에 저장 됩니다 **레코드 집합** 개체입니다. 공급자가 반환 하는 경우 명령을 아닙니다 (예를 들어 SQL 업데이트 쿼리) 결과를 반환 **아무** 옵션으로 긴 **adExecuteNoRecords** 지정; 그렇지 않으면 반환을 실행는 닫힌 **레코드 집합**합니다.  
   
  반환 된 **레코드 집합** 개체는 항상 읽기 전용, 정방향 전용 커서입니다. 필요한 경우는 **레코드 집합** 더 많은 기능을 사용 하 여 개체에 **레코드 집합** desired 속성 설정을 사용 하 여 개체를 사용 하 여 합니다 **레코드 집합** 개체의 [ Open 메서드 (ADO 레코드 집합)](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드는 쿼리를 실행 하 고 원하는 커서 유형을 반환 합니다.  

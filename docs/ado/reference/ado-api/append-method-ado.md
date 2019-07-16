@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 987b7d7006ff448a92eee1926a2c60c3b7ae039e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920667"
 ---
 # <a name="append-method-ado"></a>Append 메서드(ADO)
 컬렉션에 개체를 추가합니다. 컬렉션이 [필드](../../../ado/reference/ado-api/fields-collection-ado.md), 새 [필드](../../../ado/reference/ado-api/field-object.md) 컬렉션에 추가 하기 전에 개체를 만들 수 있습니다.  
@@ -59,7 +58,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
  *FieldValue*  
  (선택 사항) A **Variant** 새 필드의 값을 나타내는입니다. 지정 하지 않으면 필드는 null 값을 사용 하 여 추가 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="parameters-collection"></a>Parameters 컬렉션  
  설정 해야 합니다는 [형식](../../../ado/reference/ado-api/type-property-ado.md) 의 속성을 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 를 추가 하기 전에 개체를 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션입니다. 가변 길이 데이터 형식에서 선택 하는 경우 설정 해야 합니다 [크기](../../../ado/reference/ado-api/size-property-ado-parameter.md) 속성을 0 보다 큰 값입니다.  
@@ -79,7 +78,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
   
  경우 런타임 오류가 발생 합니다 **추가** 메서드를 호출 합니다 **필드** 개방적이 고 컬렉션 **레코드 집합**, 또는 **레코드 집합** 여기서는 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성이 설정 되어 있습니다. 필드에만 추가할 수 있습니다는 **레코드 집합** 열려 있지 않으면을 데이터 원본에 아직 연결 되지 않은 합니다. 이 경우 일반적으로 때를 **레코드 집합** 개체가 사용 하 여 만들어집니다는 [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md) 메서드 또는 개체 변수에 할당 합니다.  
   
-## <a name="record"></a>레코드  
+## <a name="record"></a>녹음  
  경우 런타임 오류가 발생 하지 것입니다 합니다 **추가** 메서드를 호출 합니다 **필드** 개방적이 고 컬렉션 **레코드**합니다. 새 필드를 추가할 수는 **필드** 의 컬렉션을 **레코드** 개체입니다. 경우는 **레코드** 에서 파생 된를 **레코드 집합**, 새 필드에 표시 되지 것입니다는 **필드** 의 컬렉션을 **레코드 집합** 개체.  
   
  존재 하지 않는 필드를 작성 및에 추가 합니다 **필드** 컬렉션에 이미 존재 하는 경우에 따라 필드 개체에 값을 할당 하 여 컬렉션입니다. 할당 작업은 자동 생성 및의 추가 트리거한 합니다 **필드** 개체 및 할당을 완료할 수 됩니다.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5c06451e-06ec-4da6-9a87-2d043469248a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2234450af35b5bd84be0f2855b3e187c87aede15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2c48630a8d8cafc96f192e07d41a6245f86e60c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938422"
 ---
 # <a name="formattedvalue-property-ado-md"></a>FormattedValue 속성(ADO MD)
 서식이 지정 된 표시를 나타냅니다는 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 값입니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66709465"
 ## <a name="return-values"></a>반환 값  
  반환 된 **문자열** 읽기 전용입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여는 **FormattedValue** 속성의 형식이 지정 된 표시 값을 가져옵니다 합니다 [값](../../../ado/reference/ado-md-api/value-property-ado-md.md) 속성을 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 개체. 예를 들어 셀의 값이 1056.87, 및이 값을 달러 금액을 표현할 **FormattedValue** $1,056.87 것입니다.  
   
 ## <a name="applies-to"></a>적용 대상  

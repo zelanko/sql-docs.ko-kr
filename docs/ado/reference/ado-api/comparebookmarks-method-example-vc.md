@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c806149a6d56547b5336bcbb59455c0cc297088a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 137805600b30876baa96e8b795b99b62b140e915
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933592"
 ---
 # <a name="comparebookmarks-method-example-vc"></a>CompareBookmarks 메서드 예제(VC++)
 이 예제에서는 합니다 [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) 메서드. 책갈피의 상대 값은 특정 책갈피를 소유자가 없는 경우 특별 한 경우가 아니면 필요 하지 않습니다.  

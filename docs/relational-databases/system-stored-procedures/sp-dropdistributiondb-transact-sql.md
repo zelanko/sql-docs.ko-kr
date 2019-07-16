@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6dd1846-2259-4d29-93af-a70a5d25a0c5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f35e6acad099f1a5d68659fa20b9213ff78e0b6c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3acf4ee5515bad2db88e2d928ca897ba9e04a085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927817"
 ---
 # <a name="spdropdistributiondb-transact-sql"></a>sp_dropdistributiondb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_dropdistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_dropdistributiondb** 모든 유형의 복제에 사용 됩니다.  
   
  이 저장된 프로시저를 실행 하 여 배포자를 삭제 하기 전에 실행 해야 합니다 **sp_dropdistributor**합니다.  

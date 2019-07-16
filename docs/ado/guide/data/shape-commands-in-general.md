@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f44063e4f1994e01f3685fdb2c7c47a5c41d4998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924173"
 ---
 # <a name="shape-commands-in-general"></a>일반적인 셰이핑 명령
 모양의 열의 정의 데이터 셰이핑 **Recordset**, 열 및는 방식을 나타내는 엔터티 간의 관계를 **레코드 집합** 데이터로 채워집니다.  
   
  모양의 **레코드 집합** 열에는 다음과 같은 유형의 구성 될 수 있습니다.  
   
-|열 유형|Description|  
+|열 유형|설명|  
 |-----------------|-----------------|  
 |data|필드를 **레코드 집합** 테이블을 데이터 공급자는 쿼리 명령에서 반환 된, 또는 이전에 모양 **레코드 집합**합니다.|  
 |장|다른에 대 한 참조가 **레코드 집합**라는 *장*합니다. 장 열 수 있도록 정의 *부모-자식* 관계 위치를 *부모* 은 합니다 **레코드 집합** 장 열을 포함 하는 는*자식* 은 합니다 **레코드 집합** 장 나타내는입니다.|  

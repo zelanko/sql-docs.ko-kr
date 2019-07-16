@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: bc9e1a37-e969-47e9-8382-0bbfffa2034f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6ae4a8adbadc97ad2ea5e3659187481fa71e81b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82a5473a68303d429794d8b98c4e91293e4e30cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921407"
 ---
 # <a name="adcpropupdateresyncenum"></a>ADCPROP_UPDATERESYNC_ENUM
 지정 여부는 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드 뒤에 암시적 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 메서드 작업 그렇다면 해당 작업의 범위.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adResyncAll**|15|호출 **Resync** 결합된 한 다른 모든 ADCPROP_UPDATERESYNC_ENUM 멤버 값을 사용 하 여 합니다.|  
 |**adResyncAutoIncrement**|1|기본. 자동으로 증가 되거나 Microsoft Jet 일련 번호 필드 등 Microsoft SQL Server Id 열 데이터 원본에 의해 생성 되는 열에 대 한 새 id 값을 검색 하려고 시도 합니다.|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 203fdabe-9b5c-4840-824c-792b508262c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8935e36676e2016d5fbf72239130956d40a875e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3902917eb2c219983c6d1ac3c86f738d272aeb5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939843"
 ---
 # <a name="supported-versions-of-foxpro"></a>지원되는 FoxPro 버전
 FoxPro 테이블에 저장 된 데이터에 액세스 하기 위해 Microsoft® Visual FoxPro® ODBC Driver를 사용할 수 있습니다. FoxPro 데이터의 다음 버전은 지원 됩니다.  

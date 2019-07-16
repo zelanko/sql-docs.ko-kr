@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: caad25759038fde0107fa7602394de2a8a01e38c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931050"
 ---
 # <a name="size-property-ado-parameter"></a>Size 속성(ADO 매개 변수)
 최대 크기를 바이트 또는 문자를 나타냅니다는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체입니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66711499"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환을 **긴** 바이트 또는 문자 값의 최대 크기를 나타내는 값을 **매개 변수** 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여는 **크기** 에서 읽거나 쓸 값에 대 한 최대 크기를 결정 하는 속성을 [값](../../../ado/reference/ado-api/value-property-ado.md) 의 속성을 **매개 변수** 개체.  
   
  에 대 한 가변 길이 데이터 형식을 지정 하는 경우는 **매개 변수** 개체 (예를 들어 모든 **문자열** 와 같이 입력 **집합이 있으므로 필요**), 개체를 설정 해야 합니다  **크기** 를 추가 하기 전에 속성을 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션 그렇지 않으면 오류가 발생 합니다.  

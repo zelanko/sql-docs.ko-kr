@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1fa38e78-6b5b-414d-ba0a-3dd26b29b766
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 59bfebe5885d0f18811b6b6c8df0f12634ed316f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26da0367e494bd74253b904393a2dad62308a608
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931634"
 ---
 # <a name="precision-property-ado"></a>Precision 속성(ADO)
 숫자 값에 대 한 전체 자릿수를 나타냅니다는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체 또는 숫자 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66703242"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 **바이트** 값을 나타내는 데 사용 되는 최대 자릿수를 나타내는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **정밀도** 숫자에 대 한 값을 나타내는 데 사용 되는 숫자의 최대 수를 확인 하는 속성 **매개 변수** 또는 **필드** 개체입니다.  
   
  값은 읽기/쓰기를 **매개 변수** 개체입니다.  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_requests (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 961878494958f0f7ef5d1814c0836a98f5da5682
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: c4e12ee4d40cb200124748c07bcc3e78a5076a07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936952"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
 
@@ -108,7 +107,7 @@ ms.locfileid: "67716581"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-finding-the-query-text-for-a-running-batch"></a>1\. 실행 중인 일괄 처리에 대한 쿼리 텍스트 찾기
+### <a name="a-finding-the-query-text-for-a-running-batch"></a>A. 실행 중인 일괄 처리에 대한 쿼리 텍스트 찾기
 
  다음 예에서는 `sys.dm_exec_requests`를 쿼리하여 필요한 쿼리를 찾고 출력에서 `sql_handle`을 복사합니다.  
 
@@ -191,4 +190,4 @@ GO
 - [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
 - [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
 - [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [sys.dm_exec_sql_text &#40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+- [sys.dm_exec_sql_text & amp;#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  

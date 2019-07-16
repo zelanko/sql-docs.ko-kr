@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 94bec3334bb637bf27189d35194fccd605931789
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ab43149a0e938be4359203b0da750b04a82b545
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936688"
 ---
 # <a name="type-property-example-field-vb"></a>Type 속성 예제(필드)(VB)
 이 예제에서는 합니다 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성의 값에 해당 하는 상수의 이름을 표시 하 여를 [형식](../../../ado/reference/ado-api/type-property-ado.md) 모든 속성을 [필드](../../../ado/reference/ado-api/field-object.md) 개체를 ***직원*** 테이블입니다. FieldType 함수는이 절차를 실행 하려면 필요 합니다.  

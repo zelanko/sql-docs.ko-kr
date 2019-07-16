@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 55f5d599ea2399697a0b96cc3d316776179b7562
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d7251e3a403168e8383e636a8e6b5f712b9f7bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922522"
 ---
 # <a name="rds-programming-model-in-detail"></a>RDS 프로그래밍 모델 세부 정보
 다음은 RDS 프로그래밍 모델의 주요 요소입니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 90783d893d4765957361356895907f6659c08d9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a5d11102989e3194f3b878b94610e4802084f97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922999"
 ---
 # <a name="referencing-the-ado-libraries"></a>ADO 라이브러리 참조
 ADO의 최신 버전으로 패키지 *msado15.dll*합니다. ADO MD 및 ADOX의 최신 버전으로 패키지 되 *msadom.dll* 하 고 *msadox.dll*, 각각. 이러한 라이브러리는 기본적으로 설치 됩니다 *$installDir*, 여기서 *$installDir* 는는 ADO 라이브러리를 설치한 컴퓨터에 디렉터리의 경로 의미 합니다. 응용 프로그램에서 ADO 라이브러리를 사용 하려면 응용 프로그램 프로젝트에서 명시적으로 참조할 해야 있습니다.  

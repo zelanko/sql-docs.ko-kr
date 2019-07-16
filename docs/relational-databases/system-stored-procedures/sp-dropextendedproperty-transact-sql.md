@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e01b14407198ed88654527bd247a116c200fb1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 560cecf8b6cc0aff5b503602c521e503e7cc7fcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934019"
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_dropextendedproperty
  삭제할 속성의 이름입니다. *property_name* 됩니다 **sysname** NULL 일 수 없습니다.  
   
  [ @level0type=] {'*level0_object_type*'}  
- 지정된 수준 0 개체 유형의 이름입니다. *level0_object_type* 됩니다 **varchar(128)**, 기본값은 NULL입니다.  
+ 지정된 수준 0 개체 유형의 이름입니다. *level0_object_type* 됩니다 **varchar(128)** , 기본값은 NULL입니다.  
   
  유효한 입력은 ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE 및 NULL입니다.  
   
@@ -80,8 +79,8 @@ sp_dropextendedproperty
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
- 확장 속성을 지정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 개체는 세 수준(0, 1, 2)으로 분류됩니다. 수준 0은 최고 수준이며 데이터베이스 범위에 포함된 개체로 정의됩니다. 수준 1 개체는 스키마나 USER 범위에 포함되어 있고 수준 2 개체는 수준 1 개체에 포함되어 있습니다. 모든 수준의 개체에 대해 확장 속성을 정의할 수 있습니다. 한 수준에 있는 개체를 참조할 때는 모든 상위 수준 개체의 유형과 이름으로 한정해야 합니다.  
+## <a name="remarks"></a>설명  
+ 개체의 확장된 속성을 지정 하기 위해는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 세 가지 수준으로 분류 됩니다. 0, 1 및 2입니다. 수준 0은 최고 수준이며 데이터베이스 범위에 포함된 개체로 정의됩니다. 수준 1 개체는 스키마나 USER 범위에 포함되어 있고 수준 2 개체는 수준 1 개체에 포함되어 있습니다. 모든 수준의 개체에 대해 확장 속성을 정의할 수 있습니다. 한 수준에 있는 개체를 참조할 때는 모든 상위 수준 개체의 유형과 이름으로 한정해야 합니다.  
   
  지정 된 유효한 *property_name*경우 모든 개체 유형과 이름이 null이 고 현재 데이터베이스에 있는 속성, 해당 속성이 삭제 됩니다. 이 항목의 뒷부분에 나오는 예 2를 참조하십시오.  
   
@@ -92,7 +91,7 @@ sp_dropextendedproperty
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-an-extended-property-on-a-column"></a>1. 열의 확장 속성 삭제  
+### <a name="a-dropping-an-extended-property-on-a-column"></a>1\. 열의 확장 속성 삭제  
  다음 예에서는 `caption` 스키마에 포함되어 있는 `id` 테이블의 `T1` 열에서 `dbo` 속성을 제거합니다.  
   
 ```  
@@ -121,7 +120,7 @@ DROP TABLE T1;
 GO  
 ```  
   
-### <a name="b-dropping-an-extended-property-on-a-database"></a>2. 데이터베이스의 확장 속성 삭제  
+### <a name="b-dropping-an-extended-property-on-a-database"></a>2\. 데이터베이스의 확장 속성 삭제  
  다음 예제에서는 명명 된 속성을 제거 `MS_Description` 에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 샘플 데이터베이스. 이 속성은 데이터베이스 자체에 있으므로 개체 유형과 이름이 지정되지 않습니다.  
   
 ```  

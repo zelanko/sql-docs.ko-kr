@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 9435f6c2-16e7-41b1-906d-d9f09b336f8f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b9e8c3cc4d091027881f41faff401eef3b5e349f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a531208e03c38af7edfa8baf071f855ecd89024d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63215947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944647"
 ---
 # <a name="troubleshooting-mysqltosql"></a>문제 해결(MySQLToSQL)
 콘솔 스크립트 또는 명령을 실행 하는 마이그레이션 문제 중간 흔하게 것입니다.  
   
 수정 가능한 오류와 관련 될 수 있습니다.  
   
-1.  기능  
+1.  함수  
   
 2.  절차  
   

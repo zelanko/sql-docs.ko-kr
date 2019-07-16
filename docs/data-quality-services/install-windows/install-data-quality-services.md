@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: f709a2a58b6dd6f18c992a79c94ad63bdd8f0ef6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0a769bc9471c4bbbedfa2cec7d749b87267fb5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935173"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services 설치
 
@@ -24,7 +23,7 @@ ms.locfileid: "66776472"
 
   [!INCLUDE[ssDQSnoversionLong](../../includes/ssdqsnoversionlong-md.md)] (DQS)에는 **[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]** 및 **[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]** 의 두 가지 구성 요소가 포함됩니다.  
   
-|DQS 구성 요소|Description|  
+|DQS 구성 요소|설명|  
 |-------------------|-----------------|  
 |[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]|[!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] 위쪽에 설치 되는 [!INCLUDE[ssNoversion](../../includes/ssNoVersion-md.md)] 데이터베이스 엔진, 세 데이터베이스를 포함 하 고: DQS_MAIN, DQS_PROJECTS 및 DQS_STAGING_DATA 합니다. DQS_MAIN은 DQS 저장 프로시저, DQS 엔진 및 게시된 기술 자료를 포함합니다. DQS_PROJECTS는 데이터 품질 프로젝트 정보를 포함합니다. DQS_STAGING_DATA는 DQS 작업을 수행하기 위해 원본 데이터를 복사한 다음 처리된 데이터를 내보낼 수 있는 준비 영역입니다.|  
 |[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)]|[!INCLUDE[ssDQSClient](../../includes/ssdqsclient-md.md)] 는 [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)]에 연결할 수 있게 해주는 독립 실행형 응용 프로그램으로, 데이터 품질 작업 및 DQS와 관련된 기타 관리 태스크를 수행하기 위한 매우 직관적인 그래픽 사용자 인터페이스를 제공합니다.|  

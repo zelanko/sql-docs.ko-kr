@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f8d11e97fd31745752449c5649e1096d0bb667a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949493"
 ---
 # <a name="member-object-ado-md"></a>Member 개체(ADO MD)
 셀 집합의 축 따라 위치 멤버나 수준의 멤버의 자식을 큐브의 수준의 멤버를 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  속성을 **멤버** 사용 되는 컨텍스트에 따라 달라 집니다. **멤버** 의 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 에서 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 에 [자식](../../../ado/reference/ado-md-api/children-property-ado-md.md) 반환 하는 속성을 **멤버** 에서 현재에서 계층 구조에서 다음 하위 수준의 **멤버**합니다. 에 대 한는 **멤버** 의 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md)의 **자식** 컬렉션은 항상 비어 있습니다. 또한 합니다 [형식](../../../ado/reference/ado-md-api/type-property-ado-md.md) 속성에만 적용 됩니다 **멤버** 의 **수준**합니다.  
   
  A **멤버** 의 **위치** 에 두 속성을 표시 하는 경우에 유용 합니다 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md): [DrilledDown](../../../ado/reference/ado-md-api/drilleddown-property-ado-md.md) 하 고 [ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)합니다. 이러한 속성에 액세스 하는 경우 오류가 발생 한 **멤버** 의 **수준**합니다.  
@@ -69,12 +68,12 @@ ms.locfileid: "66709022"
   
  합니다 **속성** 공급자가 제공한 속성을 포함 하는 컬렉션입니다. 다음 표에서 사용할 수 있는 속성을 보여 줍니다. 실제 속성은 공급자의 구현에 따라 달라질 수 있습니다. 사용 가능한 속성의 전체 목록에 대 한 공급자에 대 한 설명서를 참조 하세요.  
   
-|이름|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |CatalogName|이 큐브가 속한 카탈로그의 이름입니다.|  
 |ChildrenCardinality|멤버의 자식 수입니다.|  
 |CubeName|큐브 이름입니다.|  
-|Description|멤버의 의미 있는 설명입니다.|  
+|설명|멤버의 의미 있는 설명입니다.|  
 |DimensionUniqueName|모호 하지 않은 이름의 합니다 [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)합니다.|  
 |HierarchyUniqueName|계층의 명확한 이름입니다.|  
 |LevelNumber|계층의 루트 수준 사이의 거리입니다.|  

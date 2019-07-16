@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 109e031e95b7535733bd9cb71baa4d20128ceb5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937912"
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_help_log_shipping_primary_database
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |**primary_id**|로그 전달 구성의 주 데이터베이스의 ID입니다.|  
 |**primary_database**|로그 전달 구성의 주 데이터베이스의 이름입니다.|  
@@ -70,7 +69,7 @@ sp_help_log_shipping_primary_database
 |**last_backup_date_utc**|주 데이터베이스에서 마지막으로 수행된 트랜잭션 로그 백업 작업의 시간과 날짜(UTC)입니다.|  
 |**history_retention_period**|지정된 기본 데이터베이스의 로그 전달 기록 레코드가 삭제되기까지 보관되는 기간(분)입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_help_log_shipping_primary_database** 에서 실행 해야 합니다 **마스터** 주 서버의 데이터베이스입니다.  
   
 ## <a name="permissions"></a>사용 권한  

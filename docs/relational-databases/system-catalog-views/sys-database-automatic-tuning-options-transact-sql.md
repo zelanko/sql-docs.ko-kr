@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 16b47d55-8019-41ff-ad34-1e0112178067
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8655e529f2a254daab46431b4d7b3e44768f33f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 437dbbc4ea7deb32a9723febb443cc67941fdc5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940211"
 ---
 # <a name="sysdatabaseautomatictuningoptions-transact-sql"></a>sys.database\_자동\_tuning_options (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]

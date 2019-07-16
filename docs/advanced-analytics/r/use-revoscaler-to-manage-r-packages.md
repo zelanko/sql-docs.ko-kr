@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0d5ba43e913f91ab93f80249cae3d0c8cf8e1740
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 93c46f9165d4fb2aa781242e6552db5f1306eb21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962391"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 함수를 사용 하 여 찾거나 SQL Server에 R 패키지를 설치 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +24,7 @@ SQL Server 2017의 Machine Learning Services RevoScaleR의 최신 버전을 이�
 
 다음 표에서 R 패키지 설치 및 관리에 사용 되는 함수를 설명 합니다.
 
-| 기능 | Description |
+| 함수 | 설명 |
 |----------|-------------|
 | [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) | 원격 SQL Server의 인스턴스 라이브러리의 경로 확인 합니다. |
 | [rxFindPackage](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxfindpackage) | 원격 SQL Server에서 하나 이상의 패키지에 대 한 경로 가져옵니다. |
@@ -207,7 +206,7 @@ exec sp_execute_external_script
   @database_name = @database_name;
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 + [원격 R 패키지 관리 사용](r-package-how-to-enable-or-disable.md)
 + [R 패키지 동기화](package-install-uninstall-and-sync.md)

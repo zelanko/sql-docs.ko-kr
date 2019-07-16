@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 056076c3-8adf-4f51-8a1b-ca39696ac390
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 23495d6f2d18964bb35395666c3c7b867e508e20
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 72737a9b623e7979617784c1ef49c3f6d09aaea8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942498"
 ---
 # <a name="coresppurgedata-transact-sql"></a>core.sp_purge_data(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ core.sp_purge_data
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 프로시저는 보존 기간을 기준으로 제거에 적합한 core.snapshots 뷰에서 행을 선택합니다. 그러면 제거에 적합한 모든 행이 core.snapshots_internal 테이블에서 삭제됩니다. 이전 행을 삭제하면 모든 관리 데이터 웨어하우스 테이블에서 연계 삭제 동작이 트리거됩니다. 이 작업은 수집된 데이터를 저장하는 모든 테이블에 대해 정의된 ON DELETE CASCADE 절을 사용하여 수행됩니다.  
   
  각 스냅숏과 이와 연결된 데이터는 명시적 트랜잭션 내에서 삭제된 다음 커밋됩니다. 따라서 제거 작업을 수동으로 중지 하거나 값을 지정한 경우 @duration 초과 되 면 커밋되지 않은 데이터가 유지 됩니다. 이 데이터는 다음에 작업이 실행될 때 제거될 수 있습니다.  
@@ -76,7 +75,7 @@ core.sp_purge_data
   
 ## <a name="examples"></a>예  
   
-### <a name="a-running-sppurgedata-with-no-parameters"></a>1. 매개 변수 없이 sp_purge_data 실행  
+### <a name="a-running-sppurgedata-with-no-parameters"></a>A. 매개 변수 없이 sp_purge_data 실행  
  다음 예에서는 매개 변수를 지정하지 않고 core.sp_purge_data를 실행합니다. 따라서 모든 매개 변수에 대해 기본값 NULL이 연결된 동작과 함께 사용됩니다.  
   
 ```  
@@ -85,7 +84,7 @@ EXECUTE core.sp_purge_data;
 GO  
 ```  
   
-### <a name="b-specifying-retention-and-duration-values"></a>2. 보존 및 기간 값 지정  
+### <a name="b-specifying-retention-and-duration-values"></a>2\. 보존 및 기간 값 지정  
  다음 예에서는 관리 데이터 웨어하우스에서 7일보다 오래된 데이터를 제거합니다. 또한는 @duration 작업이 5 분 이상 실행 되지 않도록 매개 변수를 지정 합니다.  
   
 ```  
@@ -94,7 +93,7 @@ EXECUTE core.sp_purge_data @retention_days = 7, @duration = 5;
 GO  
 ```  
   
-### <a name="c-specifying-an-instance-name-and-collection-set"></a>3. 인스턴스 이름 및 컬렉션 집합 지정  
+### <a name="c-specifying-an-instance-name-and-collection-set"></a>3\. 인스턴스 이름 및 컬렉션 집합 지정  
  다음 예에서는 관리 데이터 웨어하우스에서 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 지정된 컬렉션 집합에 대한 데이터를 제거합니다. 때문에 @retention_days 지정 하지 않으면 제거에 적합 한 컬렉션 집합의 행을 확인 하려면 core.snapshots 뷰의 valid_through 열에 값이 사용 됩니다.  
   
 ```  

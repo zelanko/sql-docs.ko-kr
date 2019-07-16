@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2dd0d404-383d-4e7e-a492-3eab5ab501d6
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b918534fc70cbe2e707f4e2e32d1818ac8dea277
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 933563a35d86e51afc34ae19bdd356e43b472227
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63214293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944618"
 ---
 # <a name="shortcut-keyssybase-to-sql"></a>바로 가기 키(Sybase To SQL)
 SSMA 응용 프로그램을 탐색 하려면 바로 가기 키를 사용할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 31c0781c-96c8-4460-90ea-134066154fc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 035f4ae31a364055cee18ac4026b2c2760d3661d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad9942121c6b6173e773cc601f33b572a58512d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928535"
 ---
 # <a name="adox-object-model"></a>ADOX 개체 모델
 다음 다이어그램에서는 개체 표시 되 고 ADOX 관련 되는 방법을 보여 줍니다. 특정 개체 또는 컬렉션에 대 한 자세한 내용은 특정 참조 항목을 참조 하거나 [ADOX 개체](../../../ado/reference/adox-api/adox-objects.md) 하 고 [ADOX 컬렉션](../../../ado/reference/adox-api/adox-collections.md)합니다.  

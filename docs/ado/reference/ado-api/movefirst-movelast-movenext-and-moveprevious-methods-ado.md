@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: a61a01a7-5b33-4150-9126-21dfa63654cb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 83e216f15da49150481af18ee98aac1f604b2394
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5f0cdacc6e0d7e5512dbc259815e5b9562c9b68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918117"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-ado"></a>MoveFirst, MoveLast, MoveNext 및 MovePrevious 메서드 (ADO)
 첫 번째, 마지막으로 이동의 지정 된 다음 또는 이전 레코드 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체와 현재 레코드로 설정 합니다.  
@@ -43,7 +42,7 @@ ms.locfileid: "66707475"
 recordset.{MoveFirst | MoveLast | MoveNext | MovePrevious}  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 합니다 **MoveFirst** 레코드 현재 위치에서 첫 번째 레코드를 이동 하는 방법의 **레코드 집합**합니다.  
   
  사용 하 여는 **MoveLast** 마지막 레코드의 현재 위치를 이동 하는 방법에 기록 합니다 **레코드 집합**합니다. 합니다 **레코드 집합** 메서드 호출에서 오류를 생성 하는 고, 그렇지 않으면 개체는 책갈피 또는 이전 버전과 커서 이동을 지원 해야 합니다.  

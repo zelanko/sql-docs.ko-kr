@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a21c38506d44c687d639b13ca452e155a97adcef
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929948"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>노드 함수 - namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ fn:namespace-uri($arg as node()?) as xs:string
  *$arg*  
  네임스페이스 URI 부분이 검색되는 노드 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 -   인수가 생략된 경우 기본값은 컨텍스트 노드입니다.  
   
@@ -52,7 +51,7 @@ fn:namespace-uri($arg as node()?) as xs:string
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>1. 특정 노드의 네임스페이스 URI 검색  
+### <a name="a-retrieve-namespace-uri-of-a-specific-node"></a>A. 특정 노드의 네임스페이스 URI 검색  
  다음은 형식화되지 않은 XML 인스턴스에 대해 지정된 쿼리입니다. 쿼리 식 `namespace-uri(/ROOT[1])`은 지정된 노드의 네임스페이스 URI 부분을 검색합니다.  
   
 ```  
@@ -62,7 +61,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  지정된 QName에 네임스페이스 URI 부분이 없고 로컬 이름 부분만 있는 경우 결과는 길이가 0인 문자열입니다.  
   
- 다음 쿼리는 형식화 된 Instructions에 대해 지정 됩니다 **xml** 열입니다. `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` 식은 <`root`> 요소에 대한 첫 번째 <`Location`> 요소 자식의 네임스페이스 URI를 반환합니다.  
+ 다음 쿼리는 형식화 된 Instructions에 대해 지정 됩니다 **xml** 열입니다. 식 `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`, 네임 스페이스 URI의 첫 번째 반환 <`Location`> 요소 자식에는 <`root`> 요소입니다.  
   
 ```  
 SELECT Instructions.query('  
@@ -78,7 +77,7 @@ WHERE ProductModelID=7
 https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelManuInstructions  
 ```  
   
-### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>2. 조건자의 인수 없이 namespace-uri() 사용  
+### <a name="b-using-namespace-uri-without-argument-in-a-predicate"></a>2\. 조건자의 인수 없이 namespace-uri() 사용  
  다음 쿼리는 형식화된 CatalogDescription xml 열에 대해 지정되었습니다. 이 식은 네임스페이스 URI가 `https://www.adventure-works.com/schemas/OtherFeatures`인 모든 요소 노드를 반환합니다. 네임 스페이스-**uri ()** 함수 인수 없이 지정 되 고 컨텍스트 노드를 사용 합니다.  
   
 ```  
@@ -99,7 +98,7 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- 이전 쿼리의 네임스페이스 URI를 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`으로 바꿀 수 있습니다. 그런 다음 확장 QName의 네임스페이스 URI 부분이 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`인 <`ProductDescription`> 요소의 모든 요소 노드 자식을 검색합니다.  
+ 이전 쿼리의 네임스페이스 URI를 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`으로 바꿀 수 있습니다. 다음의 모든 요소 노드 자식을 받게를 <`ProductDescription`> 요소의 확장 된 QName의 네임 스페이스 URI 부분이 있는 `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`합니다.  
   
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  
  제한 사항은 다음과 같습니다.  

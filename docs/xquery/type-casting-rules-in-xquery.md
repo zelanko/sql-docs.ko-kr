@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f2e91306-2b1b-4e1c-b6d8-a34fb9980057
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 352d6be6f924fc8285a25d3f83ef5bee74c03acb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: a8372e5079b79cc694ccf51f1b6f7cddcf0fed43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946210"
 ---
 # <a name="type-casting-rules-in-xquery"></a>XQuery의 캐스트 규칙
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ create xml schema collection myCollection as N'
 go  
 ```  
   
- 다음 쿼리는 정적 오류를 반환하는데 문서 인스턴스 내에 있는 최상위 수준 <`root`> 요소의 수를 알 수 없기 때문입니다.  
+ 다음 쿼리는 얼마나 많은 최상위 수준의 알 수 없는 때문에 정적 오류를 반환 <`root`> 요소가 문서 인스턴스에 있습니다.  
   
 ```  
 declare @x xml(myCollection)  
@@ -106,7 +105,7 @@ select @x.query('/root/A cast as xs:string?')
 go  
 ```  
   
- 식에 단일 <`root`> 요소를 지정하면 쿼리가 수행됩니다. 이 쿼리는 xs:string으로 형식화된 단순 유형 값의 시퀀스를 반환합니다.  
+ Singleton을 지정 하 여 <`root`> 식의 요소를 쿼리 성공 합니다. 이 쿼리는 xs:string으로 형식화된 단순 유형 값의 시퀀스를 반환합니다.  
   
 ```  
 declare @x xml(myCollection)  
@@ -116,7 +115,7 @@ select @x.query('/root[1]/A cast as xs:string?')
 go  
 ```  
   
- 다음 예에서 xml 유형 변수에는 XML 스키마 컬렉션을 지정하는 문서 키워드가 포함됩니다. 이는 XML 인스턴스가 단일 최상위 수준의 요소가 있는 문서여야 한다는 의미입니다. XML 인스턴스에 <`root`> 요소를 두 개 만들면 오류가 반환됩니다.  
+ 다음 예에서 xml 유형 변수에는 XML 스키마 컬렉션을 지정하는 문서 키워드가 포함됩니다. 이는 XML 인스턴스가 단일 최상위 수준의 요소가 있는 문서여야 한다는 의미입니다. 두 개 만드는 경우 <`root`> XML 인스턴스에 있는 요소의 오류가 반환 됩니다.  
   
 ```  
 declare @x xml(document myCollection)  

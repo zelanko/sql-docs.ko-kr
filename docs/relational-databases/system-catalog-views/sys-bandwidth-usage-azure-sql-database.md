@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4b7534a806a856dee922ead1055da6a7567a4d8c
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: ea963c07a15cd5c2db3cca113680026d3100936b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942574"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage(Azure SQL Database)
 

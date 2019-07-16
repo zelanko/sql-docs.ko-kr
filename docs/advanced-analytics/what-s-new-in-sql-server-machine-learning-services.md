@@ -5,17 +5,16 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f7b7daefb0f5e9514372fadd9377b05c84784e34
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: b3b5b5a8a1386086f03681db49b72aca5a294d3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961663"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 새로운 기능
 
@@ -64,7 +63,7 @@ R에 대 한 새 기능에 포함 됩니다 [ **패키지 관리**](r/install-ad
 
 ### <a name="r-libraries"></a>R 라이브러리
 
-| 패키지 | Description |
+| 패키지 | 설명 |
 |---------|-------------|
 | [**MicrosoftML**](r/ref-r-microsoftml.md) | 이 릴리스에서 MicrosoftML 이전 SQL Server 2016 R Services에 필요한 업그레이드 단계를 제거는 기본 R 설치에 포함 됩니다. MicrosoftML의 최첨단 기계 학습 알고리즘 및 크기를 조정 하거나 원격 계산 컨텍스트에서 실행할 수 있는 데이터 변환을 제공 합니다. 사용자 지정 가능한 심층 신경망, 빠른 의사 결정 트리 및 의사 결정 포리스트, 선형 회귀 및 로지스틱 회귀 알고리즘에 포함 됩니다.  |
 
@@ -80,7 +79,7 @@ T-SQL을 사용할 수 있습니다 [PREDICT](../t-sql/queries/predict-transact-
 
 ### <a name="python-libraries"></a>Python 라이브러리
 
-| 패키지 | Description |
+| 패키지 | 설명 |
 |---------|-------------|
 |[**revoscalepy**](python/ref-py-revoscalepy.md)| Python-RevoScaleR에 해당 합니다. 선형 및 로지스틱 회귀, 의사 결정 트리, 승격 된 트리 및 임의 포리스트의 모든 병렬 및 원격 계산 컨텍스트에서 실행 되 고 수에 대 한 Python 모델을 만들 수 있습니다. 이 패키지는 여러 데이터 원본 및 원격 계산 컨텍스트 사용을 지원합니다. 데이터 과학자 또는 개발자가 데이터를 탐색 하거나 데이터를 이동 하지 않고 모델을 작성 하는 원격 SQL Server에서 Python 코드를 실행할 수 있습니다. |
 |[**microsoftml**](python/ref-py-microsoftml.md) |MicrosoftML R 패키지의 Python에 해당 합니다. |

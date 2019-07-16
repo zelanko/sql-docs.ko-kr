@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: db586609b90ba023e2a1700642cb678e8f08a8b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97add08a1d656e8c163600bb0ea8dda7fca264b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932640"
 ---
 # <a name="filtergroupenum"></a>FilterGroupEnum
 필터링 할 레코드의 그룹을 지정 된 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adFilterAffectedRecords**|2|마지막 영향을 받는 레코드만 보기에 대 한 필터 [삭제](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md)를 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), 또는 [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) 호출 합니다.|  
 |**adFilterConflictingRecords**|5|마지막 일괄 처리 업데이트를 실패 한 레코드를 보기 위한 필터입니다.|  

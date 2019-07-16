@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3df6609af185d09c01641de495ae23687a083e07
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0909a94ea49f2a4deee20cd29b26b0e1e2aaf6e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895680"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -117,7 +116,7 @@ RETCODE bcp_control (
  BCPODBC  
  TRUE 인 경우 지정 **날짜/시간** 하 고 **smalldatetime** 문자 형식으로 저장 하는 값에 ODBC 타임 스탬프 이스케이프 시퀀스 접두사 및 접미사 사용 합니다. BCPODBC 옵션 DB_OUT에만 적용 됩니다.  
   
- FALSE 인 경우는 **날짜/시간** 1997 년 1 월 1 일을 나타내는 값을 문자열로 변환 됩니다. 변환됩니다. TRUE 이면 동일한 **날짜/시간** 값으로 표현 됩니다. {ts ' 1997-01-01 00:00:00.000'}.  
+ FALSE 인 경우는 **날짜/시간** 1997 년 1 월 1 일을 나타내는 값을 문자열로 변환 됩니다. 1997-01-01 00:00:00.000. TRUE 이면 동일한 **날짜/시간** 값으로 표현 됩니다. {ts ' 1997-01-01 00:00:00.000'}.  
   
  BCPROWCOUNT  
  현재(또는 마지막) BCP 작업에 의해 영향을 받는 행의 수를 반환합니다.  
@@ -134,7 +133,7 @@ RETCODE bcp_control (
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수는 대량 복사를 취소하기 전에 허용되는 오류 수, 데이터 파일에서 복사할 첫 번째 행과 마지막 행의 번호 및 일괄 처리 크기를 비롯하여 대량 복사 작업에 대한 여러 가지 제어 매개 변수를 설정합니다.  
   
  또한 이 함수는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 SELECT의 결과 집합을 대량 복사할 때 SELECT 문을 지정하는 데 사용됩니다. 설정 *eOption* 을 설정 하 고 BCPHINTS *iValue* SELECT 문을 포함 하는 SQLTCHAR 문자열에 대 한 포인터입니다.  

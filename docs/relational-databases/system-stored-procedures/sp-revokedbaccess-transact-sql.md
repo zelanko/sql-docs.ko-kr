@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c997cfa1-539d-485c-a664-9c6f76bfe0c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c1db15a2f8c8e1d7616065ff88aa40b08f92127a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5eea0129b76a7bb7825987da98be40ba4a66d6fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941712"
 ---
 # <a name="sprevokedbaccess-transact-sql"></a>sp_revokedbaccess(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_revokedbaccess [ @name_in_db = ] 'name'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 사용자가 제거되면 해당 사용자에 종속된 사용 권한 및 별칭도 제거됩니다.  
   
  **sp_revokedbaccess** 현재 데이터베이스에서 데이터베이스 사용자만 제거할 수 있습니다. 현재 데이터베이스의 개체를 소유하는 데이터베이스를 제거하기 전에 개체 소유권을 전송하거나 개체를 데이터베이스에서 삭제해야 합니다. 자세한 내용은 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)을 참조하세요.  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 8b241d1f90a24ae69ab180404621a2feda393c01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940235"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats(Azure SQL Database)
 
@@ -33,7 +32,7 @@ ms.locfileid: "59242331"
 
   에 대 한 통계를 포함 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터베이스 **연결** 데이터베이스 연결 성공 및 실패 개요를 제공 하는 이벤트입니다. 연결 이벤트에 대 한 자세한 내용은 참조에서 이벤트 유형을 [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)합니다.  
   
-|통계|형식|Description|  
+|통계|type|설명|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|데이터베이스의 이름입니다.|  
 |**start_time**|**datetime2**|집계 간격 시작의 UTC 날짜 및 시간입니다. 시간은 항상 5분의 배수입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
@@ -44,7 +43,7 @@ ms.locfileid: "59242331"
 |**terminated_connection_count**|**int**|**_에 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> 종료된 연결 수:|  
 |**throttled_connection_count**|**int**|**_에 적용 됩니다 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] v11._**<br /><br /> 정체된 연결 수입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ### <a name="event-aggregation"></a>이벤트 집계
 

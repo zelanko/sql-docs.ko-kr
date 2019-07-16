@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e08af60-f668-4092-8b6a-9e8b6db90448
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b920b343b9269ae32547edbf5533f651ac1aa785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ad0cfea4762dc1e6e757a0fe6182505927b70c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932095"
 ---
 # <a name="move-method-example-vc"></a>Move 메서드 예제(VC++)
 이 예제에서는 합니다 [이동](../../../ado/reference/ado-api/move-method-ado.md) 사용자 입력을 기반으로 하는 레코드 포인터를 하는 방법입니다.  

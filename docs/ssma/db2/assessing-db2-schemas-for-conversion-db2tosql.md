@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8892f5a4-72ba-4406-8649-7a9d67f4c1d9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fe66ff5b8902a737ff9a2ac0815069a4f01ea129
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 506b9a32b465c9006fe4030bd6fcbb8ba4d0f136
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938330"
 ---
 # <a name="assessing-db2-schemas-for-conversion-db2tosql"></a>(DB2ToSQL) 변환을 위해 DB2 스키마 평가
 개체를 로드 하 고 데이터를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 얼마나 복잡 마이그레이션 되며 얼마나 많은 시간을 결정 해야 마이그레이션 걸립니다. SSMA는 성공적으로 변환 하는 개체의 비율을 표시 하는 평가 보고서를 만들 수 있습니다. 또한 SSMA 변환 오류가 발생 하는 특정 문제를 볼 수 있습니다.  

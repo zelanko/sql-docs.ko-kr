@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_rda_schema_update_status (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_rda_schema_update_status (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 364e3caa-a7c6-4be5-a029-0b19da34de3e
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 85c12ae224203def43c9f9953cada0c336e9ebbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 611fe9d5bea47204b655f2defe5072d2dd17be92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937010"
 ---
 # <a name="stretch-database---sysdmdbrdaschemaupdatestatus"></a>Stretch Database - sys.dm_db_rda_schema_update_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "65947388"
   
  **dm_db_rda_schema_update_status** 범위 현재 데이터베이스 컨텍스트를 지정 합니다. 스트레치 사용 테이블 스키마 업데이트 상태를 보려는 데이터베이스 컨텍스트에서 되는지 확인 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|원격 데이터 보관 스키마 로컬 스트레치 사용 테이블의 ID는 업데이트 중입니다.|  
 |**database_id**|**int**|로컬 스트레치 사용 테이블을 포함 하는 데이터베이스의 ID입니다.|  

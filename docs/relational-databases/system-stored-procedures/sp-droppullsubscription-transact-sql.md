@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7352d94a-f8f2-42ea-aaf1-d08c3b5a0e76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2afa58b9fe8844aa4bb74187ef77393f0bc5681f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 706f76f0b12ad6ce9077a36115bba4634cd94642
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933840"
 ---
 # <a name="spdroppullsubscription-transact-sql"></a>sp_droppullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_droppullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_droppullsubscription** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
  **sp_droppullsubscription** 에서 해당 행을 삭제 합니다 [MSreplication_subscriptions &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md) 테이블 및 구독자에서 해당 배포자 에이전트입니다. 남아 있는 행이 없는 경우 [MSreplication_subscriptions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/msreplication-subscriptions-transact-sql.md), 테이블을 삭제 합니다.  

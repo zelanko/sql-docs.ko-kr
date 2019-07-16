@@ -7,13 +7,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 6d68d7f36ea6539142bab0ea0e4b50ef6dca8444
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c8e8ad13ddc34148f1718b7843e00545cd758c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962091"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>R 및 Python에서 SQL Server Machine Learning 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -66,7 +65,7 @@ T-SQL에서 R 또는 Python을 실행 하는 방법 및 SQL 프로덕션 환경�
 
 이러한 샘플 및 SQL Server 및 R Server 개발 팀에서 제공 하는 데모에는 실제 응용 프로그램에 포함 된 분석을 사용할 수 있는 방법을 강조 표시 합니다.
 
-| 링크 | Description | 
+| 링크 | 설명 | 
 |------|-------------|
 | [고객 수행 R 및 SQL Server를 사용 하 여 클러스터링](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | 판매 데이터를 기반으로 하는 세그먼트 고객에 게 자율된 학습을 사용 합니다. 이 예제에서는 클러스터링 모델을 만드는 데 Microsoft R의 확장 가능한 rxKmeans 알고리즘을 사용 합니다. |
 | [고객 수행 Python 및 SQL Server를 사용 하 여 클러스터링](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Kmeans 알고리즘을 사용 하 여 고객의 감독 되지 않은 클러스터링을 수행 하는 방법에 알아봅니다. 이 예제는 Python 언어에 데이터베이스를 사용합니다.| SQL Server 2017 |

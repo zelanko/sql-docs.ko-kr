@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59c6718ce034f8a0b9d37bc62591a7ffc44ce999
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946289"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +39,11 @@ ms.locfileid: "54255128"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- 합니다 `instance of` 연산자는 `Occurrence indicator`, 카디널리티, 결과 시퀀스의 항목 수를 지정 합니다. 카디널리티가 지정되지 않은 경우 1로 간주됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 물음표만 (**?)**  발생 표시 지원 됩니다. **?** 발생 표시 함을 `Expression` 0 개 이상의 항목을 반환할 수 있습니다. 경우는 **?** 발생 표시를 지정 하면 `instance of` 경우 True를 반환 합니다 `Expression` 형식이 지정 된 일치 `SequenceType`여부에 관계 없이 `Expression` 단일 또는 빈 시퀀스를 반환 합니다.  
+ 합니다 `instance of` 연산자는 `Occurrence indicator`, 카디널리티, 결과 시퀀스의 항목 수를 지정 합니다. 카디널리티가 지정되지 않은 경우 1로 간주됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], 물음표만 ( **?)**  발생 표시 지원 됩니다. **?** 발생 표시 함을 `Expression` 0 개 이상의 항목을 반환할 수 있습니다. 경우는 **?** 발생 표시를 지정 하면 `instance of` 경우 True를 반환 합니다 `Expression` 형식이 지정 된 일치 `SequenceType`여부에 관계 없이 `Expression` 단일 또는 빈 시퀀스를 반환 합니다.  
   
  경우는 **?** 발생 표시를 지정 하지 않으면 `sequence of` 경우에만 True를 반환 합니다는 `Expression` 일치 항목을 입력 합니다 `Type` 지정 및 `Expression` 단일 반환 합니다.  
   
- **참고** 더하기 기호 (**+**)와 별표 (**&#42;**) 발생 표시가 지원 되지 않습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **참고** 더하기 기호 ( **+** )와 별표 ( **&#42;** ) 발생 표시가 지원 되지 않습니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  다음 예제에서는 사용을 보여 합니다**인스턴스의** XQuery 연산자입니다.  
   
@@ -139,7 +138,7 @@ where ProductModelID=19
  쿼리에서 True를 반환합니다.  
   
 ### <a name="example-c"></a>예 3  
- 공용 구조체 유형을 사용할 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 `instance of` 식에 제한 사항이 있습니다. 특히 요소나 특성의 유형이 공용 구조체 유형이면 `instance of`가 정확한 유형을 확인하지 못할 수도 있습니다. 따라서 SequenceType에 사용된 원자성 유형이 simpleType 계층에서 실제 식 유형의 최상위 부모가 아닐 경우 쿼리에서 False를 반환합니다. 즉, SequenceType에 지정된 원자성 유형은 anySimpleType의 직계 자식이어야 합니다. 형식 계층 구조에 대 한 자세한 내용은 참조 하세요. [XQuery의 형식 캐스트 규칙](../xquery/type-casting-rules-in-xquery.md)합니다.  
+ 공용 구조체 유형을 사용 하는 경우는 `instance of` 식에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 제한이: 특히 요소나 특성 유형의 경우 구조체 형식 `instance of` 정확 하 게 형식을 확인할 수 있습니다. 따라서 SequenceType에 사용된 원자성 유형이 simpleType 계층에서 실제 식 유형의 최상위 부모가 아닐 경우 쿼리에서 False를 반환합니다. 즉, SequenceType에 지정된 원자성 유형은 anySimpleType의 직계 자식이어야 합니다. 형식 계층 구조에 대 한 자세한 내용은 참조 하세요. [XQuery의 형식 캐스트 규칙](../xquery/type-casting-rules-in-xquery.md)합니다.  
   
  다음 쿼리 예에서는 아래의 작업을 수행합니다.  
   
@@ -164,7 +163,7 @@ CREATE XML SCHEMA COLLECTION MyTestSchema AS '
 Go  
 ```  
   
- `instance of` 식에 지정한 SequenceType이 지정된 실제 식 유형의 최상위 부모가 아니므로 다음 쿼리는 False를 반환합니다. 즉, <`TestElement`>의 값은 정수 유형입니다. 최상위 부모는 xs:decimal입니다. 그러나 xs:decimal는 `instance of` 연산자의 두 번째 피연산자로 지정되지 않습니다.  
+ `instance of` 식에 지정한 SequenceType이 지정된 실제 식 유형의 최상위 부모가 아니므로 다음 쿼리는 False를 반환합니다. 즉, 값은 <`TestElement`> 정수 형식이 합니다. 최상위 부모는 xs:decimal입니다. 그러나 xs:decimal는 `instance of` 연산자의 두 번째 피연산자로 지정되지 않습니다.  
   
 ```  
 SET QUOTED_IDENTIFIER ON  
@@ -191,7 +190,7 @@ go
 ### <a name="example-d"></a>예 4  
  이 예제에서는 먼저 XML 스키마 컬렉션을 만들고 사용 하 여 입력 하는 **xml** 변수입니다. 형식화 된 **xml** 변수 보여 주기 위해 다음 쿼리는 `instance of` 기능입니다.  
   
- 다음 XML 스키마 컬렉션은 단순 유형 myType과 myType 유형의 <`root`> 요소를 정의합니다.  
+ 다음 XML 스키마 컬렉션 정의 단순 형식과 요소를 <`root`>, myType의:  
   
 ```  
 drop xml schema collection SC  
@@ -239,7 +238,7 @@ go
   
 -   형식화 된 만듭니다 **xml** 변수와 예제 XML 인스턴스를 할당 합니다.  
   
--   변수에 대한 쿼리를 지정합니다. 쿼리 식이 첫 번째 <`Customer`>의 OrderList IDRERS 유형 특성에서 첫 번째 순서 ID 값을 검색합니다. 검색된 값은 IDREF 유형입니다. 따라서 `instance of`에서는 True를 반환합니다.  
+-   변수에 대한 쿼리를 지정합니다. 첫 번째 OrderList IDRERS 유형 특성에서 첫 번째 순서 ID 값을 검색 하는 쿼리 식 <`Customer`>. 검색된 값은 IDREF 유형입니다. 따라서 `instance of`에서는 True를 반환합니다.  
   
 ```  
 create xml schema collection SC as  
@@ -315,7 +314,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   한 형태를 사용 하는 경우는 **element()** 시퀀스와 같은 형식 이름을 지정 하는 유형의 `element(ElementName, TypeName)`, 물음표 (?)로 유형을 한 정해야 합니다. 예를 들어 `element(Title, xs:string?)`는 요소가 null일 수 있음을 나타냅니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 런타임 검색을 지원 하지 않습니다 합니다 **xsi: nil** 사용 하 여 속성 `instance of`합니다.  
   
--   공용 구조체로 형식화된 요소나 특성에서 `Expression`의 값을 가져올 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 파생되지 않은 기본 유형만 식별할 수 있습니다. 이 기본 유형에서 값 유형이 파생됩니다. 예를 들어 <`e1`>이 (xs:integer | xs:string) 정적 유형을 갖도록 정의되면 다음 예에서 False를 반환합니다.  
+-   공용 구조체로 형식화된 요소나 특성에서 `Expression`의 값을 가져올 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 파생되지 않은 기본 유형만 식별할 수 있습니다. 이 기본 유형에서 값 유형이 파생됩니다. 예를 들어 경우 <`e1`>의 정적 형식을 갖도록 정의 됩니다 (xs: integer | xs: string), 다음 False를 반환 합니다.  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  

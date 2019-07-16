@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57bda520-e98b-443c-a8bc-d8430e89a383
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cf814281f2700cac9158f66dee9a44187817ea5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e19a30e60bb953dd8f521699b23fd00406d2d95d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931073"
 ---
 # <a name="seek-method-and-index-property-example-vc"></a>Seek 메서드 및 인덱스 속성 예제(VC++)
 이 예에서는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [Seek](../../../ado/reference/ado-api/seek-method.md) 메서드 및 [인덱스](../../../ado/reference/ado-api/index-property.md) 와 함께에서 속성을 지정 ***직원 ID***를 찾습니다 직원의 이름에는 ***직원*** Nwind.mdb 데이터베이스의 테이블입니다.  

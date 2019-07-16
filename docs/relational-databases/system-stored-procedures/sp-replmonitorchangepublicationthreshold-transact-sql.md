@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 587c66322a7d40f42f81bceb48e1c0d422322d46
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d23822fc27e02d5f40824f738c70044c61020eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950652"
 ---
 # <a name="spreplmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_replmonitorchangepublicationthreshold** 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b360eed1619317e7ca3092bc47da086c520bf04
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8bf38ef67089c65d53bedcb56afd81de3e21a413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933878"
 ---
 # <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +48,9 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscriber_db = ] 'subscriber_db'` 구독 데이터베이스의 이름이입니다. *subscription_database*됩니다 **sysname**, 기본값은 NULL입니다.  
   
-`[ @subscription_type = ] 'subscription_type'` 구독의 유형이입니다. *subscription_type*됩니다 **nvarchar(15)**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @subscription_type = ] 'subscription_type'` 구독의 유형이입니다. *subscription_type*됩니다 **nvarchar(15)** , 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**all**|밀어넣기, 끌어오기 및 익명 구독|  
 |**anonymous**|익명 구독입니다.|  
@@ -66,7 +65,7 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_dropmergesubscription** 병합 복제에 사용 됩니다.  
   
 ## <a name="example"></a>예제  

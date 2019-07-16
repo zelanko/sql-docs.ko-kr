@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b73e699141e598115f9ce178b74d10cbf22b0f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e8bb3c3787effe8418db735a72425a793b73e35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931857"
 ---
 # <a name="optimize-property-dynamic-ado"></a>Optimize 속성-동적(ADO)
 인덱스를 만들어야 하는지 여부를 지정 된 [필드](../../../ado/reference/ado-api/field-object.md)합니다.  
@@ -27,7 +26,7 @@ ms.locfileid: "66719157"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 **부울** 인덱스를 만들어야 하는지 여부를 나타내는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  인덱스를 찾거나 값이 정렬 하는 작업의 성능을 향상 시킬 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 인덱스는 ADO; 내부 명시적으로 액세스 하거나 응용 프로그램에서 사용할 수 없습니다.  
   
  인덱스를 만들려면 필드를 설정 합니다 **최적화** 속성을 **True**합니다. 인덱스를 삭제 하려면이 속성을 설정 **False**합니다.  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e9136a3057000258518cb64d048a8cc6245e7c20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d5cc44950754c4b63e644d2d9210edcc94bd9ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933260"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 어떤 기능을 지정 합니다 [지원](../../../ado/reference/ado-api/supports-method.md) 메서드를 테스트 해야 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|지원 합니다 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) 새 레코드를 추가 하는 방법입니다.|  
 |**adApproxPosition**|0x4000|지원 합니다 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 하 고 [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md) 속성입니다.|  

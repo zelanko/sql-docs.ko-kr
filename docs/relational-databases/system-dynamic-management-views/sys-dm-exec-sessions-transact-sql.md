@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49638971a01d2082938d4759bb9f597d7bfdf254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 209914c7b8b5b67f5b9d3129bf09f2b222b7bf4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936901"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -98,7 +97,7 @@ ms.locfileid: "66462622"
 **[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]:** 필요한 `VIEW DATABASE STATE` 현재 데이터베이스에 대 한 모든 연결을 확인 합니다. `VIEW DATABASE STATE` 에 부여할 수 없습니다는 `master` 데이터베이스. 
   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경우는 **일반 조건 호환성 사용** 서버 구성 옵션을 사용 하면 로그온 통계는 다음과 같은 열에 표시 됩니다.  
   
 -   last_successful_logon  
@@ -125,7 +124,7 @@ ms.locfileid: "66462622"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-finding-users-that-are-connected-to-the-server"></a>1\. 서버에 연결된 사용자 찾기  
+### <a name="a-finding-users-that-are-connected-to-the-server"></a>A. 서버에 연결된 사용자 찾기  
  다음 예에서는 서버에 연결되는 사용자를 찾고 각 사용자에 대한 세션 수를 반환합니다.  
   
 ```sql  

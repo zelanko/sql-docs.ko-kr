@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d34dfd26-9ca7-4c9c-a918-396f05fecca9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 899cf7a819d486bd48abfc13debb2cecbc46a0dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a13e09895a25ac095888b42097bf47cbe27b369
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931238"
 ---
 # <a name="resync-method-example-vc"></a>Resync 메서드 예제(VC++)
 이 예제에서는 합니다 [Resync](../../../ado/reference/ado-api/resync-method.md) 정적 레코드 집합에서 데이터 새로 고침 하는 방법.  

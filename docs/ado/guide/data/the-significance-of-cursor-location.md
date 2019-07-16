@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 70ef5b1c-0459-41a1-b796-031f61a29a8a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ed59dc8c4dd2cc53c4ad86992e5b778f0f8b17ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e663ac5cdcf85fc1d050e0f066b597d29141ebfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923897"
 ---
 # <a name="the-significance-of-cursor-location"></a>커서 위치의 중요성
 모든 커서는 해당 데이터를 저장할 임시 리소스를 사용 합니다. 이러한 리소스는 메모리, 디스크 페이징 파일, 임시 디스크 파일 또는 데이터베이스의 임시 저장소 수 있습니다. 커서 라고 한 *클라이언트 쪽* 클라이언트 컴퓨터에서 이러한 리소스가 있는 경우에 커서입니다. 커서 라고 한 *서버측* 커서 서버에 이러한 리소스가 있는 경우.  

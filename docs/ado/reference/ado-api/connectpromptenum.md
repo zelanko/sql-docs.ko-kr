@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 40ce74748e15a2715de26e813007e00be0c33729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919440"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 데이터 원본에 연결을 열 때 누락 된 매개 변수를 묻는 대화 상자를 표시할지 여부를 지정 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|항상 표시합니다.|  
 |**adPromptComplete**|2|자세한 정보가 필요한 경우 메시지 표시 합니다.|  

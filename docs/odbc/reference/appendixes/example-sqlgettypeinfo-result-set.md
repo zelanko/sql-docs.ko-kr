@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc1952cc-7581-4d69-9c72-7dc1cd370836
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6e41dbd41aefeabecd9d60278aca718a413e33d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8264f1dfad8bff5d676cd4de8c8b9d7763b39b52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948743"
 ---
 # <a name="example-sqlgettypeinfo-result-set"></a>SQLGetTypeInfo 결과 집합의 예제
 응용 프로그램 호출 **SQLGetTypeInfo** 데이터 원본과 해당 데이터 형식의 특성에서 지원 되는 데이터 형식을 확인 하려면. 다음 표에 결과 집합 예제 반환한 **SQLGetTypeInfo** SQL_CHAR, SQL_LONGVARCHAR, SQL_DECIMAL, SQL_REAL, SQL_DATETIME, SQL_INTERVAL_YEAR, 및 SQL_INTERVAL_DAY_TO_SECOND 지 원하는 데이터 원본에 대 한 합니다.  

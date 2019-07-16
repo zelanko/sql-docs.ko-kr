@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ca778a91b154de3a4dbcde1d663af5173af5ebe8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8549d71fdb0ed6a081c7143931ca3d8a26d5e0bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945284"
 ---
 # <a name="filter-operators-master-data-services"></a>필터 연산자(Master Data Services)
 
@@ -29,7 +28,7 @@ ms.locfileid: "65483822"
   
 ## <a name="filter-operators"></a>필터 연산자  
   
-|컨트롤 이름|Description|  
+|컨트롤 이름|설명|  
 |------------------|-----------------|  
 |**같음**|지정된 조건과 정확히 같은 특성 값을 반환합니다. 예를 들어 **Mountain-100**을 필터링하려면 **Mountain-100**을 입력해야 합니다.|  
 |**같지 않음**|지정된 조건과 같지 않은 특성 값을 반환합니다. 필터 조건은 결과에서 생략할 특성 값과 정확히 같아야 합니다. 예를 들어 **Mountain-100**과 일치하는 결과를 생략하려면 **Mountain-100**을 입력해야 합니다.<br /><br /> <br /><br /> 참고: "Is not equal" 절을 사용하여 특성에 필터 조건을 적용하면 특성이 NULL인 멤버가 필터 조건을 전달하고 SET ANSI_NULLS가 데이터베이스 문자열에서 ON으로 설정된 경우 결과가 반환됩니다. 이 동작을 중지하려면 데이터베이스 설정에서 SET ANSI_NULLS를 OFF로 설정합니다. SET ANSI_NULLS가 OFF로 설정된 경우 데이터 값이 Null이면 Null 값에 대한 모든 데이터 비교가 TRUE로 평가되고 멤버가 "Is not equal" 절을 전달하지 않는 결과가 발생합니다. 자세한 내용은 [SET ANSI_NULLS&#40;Transact-SQL&#41;](../t-sql/statements/set-ansi-nulls-transact-sql.md)를 참조하세요.|  

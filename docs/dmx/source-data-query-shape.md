@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8e5c86484252d45c8c7edbd79690159e116d9b3a
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c928d4c96917479f8c37415d5ebe2db9b7f9eb98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938112"
 ---
 # <a name="ltsource-data-querygt---shape"></a>&lt;원본 데이터 쿼리와&gt; -셰이프
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +54,7 @@ APPEND ({ <child table query> }
  *열 표 이름*  
  중첩 테이블의 부모 테이블에서 새로 추가된 열 이름  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  부모 테이블 및 자식 테이블에 관련되는 열을 기준으로 쿼리를 정렬해야 합니다.  
   
 ## <a name="examples"></a>예  

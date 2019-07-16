@@ -2,19 +2,18 @@
 title: 구성 검사 목록-Analytics Platform System | Microsoft Docs
 description: 자체 환경에 대 한 Analytics Platform System을 구성 하는 데 필요한 작업에 대 한 검사 목록을 제공 합니다. 이러한 구성 태스크는 어플라이언스에 사용 하기 전에 필요 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ada3d2f782a33caf5334361a9682c53cf7cdec95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9977ac8ea73e37afef85a46d6794ea5136357b44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961593"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Analytics Platform System에 대 한 어플라이언스 구성 검사 목록
 자체 환경에 대 한 Analytics Platform System을 구성 하는 데 필요한 작업에 대 한 검사 목록을 제공 합니다. 이러한 구성 태스크는 어플라이언스에 사용 하기 전에 필요 합니다.  
@@ -49,7 +48,7 @@ SQL Server PDW**Configuration Manager** (PDWCM)는 어플라이언스 수준 작
   
 사용 하 여 **Configuration Manager** 다음 구성 작업을 수행할 수 있습니다.  
   
-|구성 태스크|Description|  
+|구성 태스크|설명|  
 |----------------------|---------------|  
 |물리적 구성 요소 이름에 잘 알고|[PDW 및 어플라이언스 패브릭 물리적 구성 요소 &#40;Analytics Platform System&#41;](pdw-and-appliance-fabric-physical-components.md)|  
 |SQL Server PDW 구성 관리자를 시작 합니다.|[Configuration Manager 시작 &#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)|  
@@ -67,7 +66,7 @@ SQL Server PDW**Configuration Manager** (PDWCM)는 어플라이언스 수준 작
 ## <a name="AddTasks"></a>추가 구성 작업을 수행 합니다.  
 수행한 후 합니다 **Configuration Manager** 다음과 같은 추가 구성 작업을 수행 하는 작업을 합니다. 이러한 태스크 중 일부는 선택적입니다.  
   
-|구성 태스크|Description|  
+|구성 태스크|설명|  
 |----------------------|---------------|  
 |타사 바이러스 백신 소프트웨어를 설치 하 고 외부에서 노드를 연결 하는 것에 대 한 SQL Server PDW 어플라이언스에 구성 수 있습니다.<br /><br />(옵션)|자세한 내용은 [바이러스 백신 소프트웨어 &#40;Analytics Platform System&#41;](antivirus-software.md)합니다.|  
 |DSRM 암호를 변경할 수 있습니다.<br /><br />(옵션)|자세한 내용은 [디렉터리 서비스 복원 모드로 AD 노드에 로그온에 대 한 관리자 암호 설정 &#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)합니다.|  

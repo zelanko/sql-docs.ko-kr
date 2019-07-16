@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 970555ceef08d07aafb506f006652abec2139d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf2b072acfda34ebdcafc1af82cd90c6be5d2537
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939965"
 ---
 # <a name="axis-object-ado-md"></a>Axis 개체(ADO MD)
 하나 이상의 차원 선택한 멤버를 포함 하는 셀 집합의 필터 축을 또는 위치를 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **축** 개체에 포함 될 수는 [축](../../../ado/reference/ado-md-api/axes-collection-ado-md.md) 컬렉션 반환 되는 또는 [FilterAxis](../../../ado/reference/ado-md-api/filteraxis-property-ado-md.md) 속성을 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)합니다.  
   
  컬렉션 및 속성을 사용 하 여는 **축** 개체를 다음을 수행할 수 있습니다.  

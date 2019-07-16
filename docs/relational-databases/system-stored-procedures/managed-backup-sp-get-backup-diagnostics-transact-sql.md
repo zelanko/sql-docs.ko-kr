@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 84fe7cea5418a022282958a7c16d263e5c7e9604
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942042"
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> 인수  
  @xevent_channel  
- 확장 이벤트의 유형입니다. 기본값은 이전 30분 동안 기록된 모든 이벤트를 반환하도록 설정됩니다. 기록된 이벤트는 활성화된 확장 이벤트의 유형에 따라 달라집니다. 이 매개 변수를 사용하여 특정 유형의 이벤트만 표시되도록 저장 프로시저를 필터링할 수 있습니다. 전체 이벤트 이름을 지정하거나 부분 문자열을 **'Admin'**, **'분석'** 합니다 **'Operational'**, 및 **'Debug'** 합니다. 합니다 @event_channel 됩니다 **VARCHAR (255)** 합니다.  
+ 확장 이벤트의 유형입니다. 기본값은 이전 30분 동안 기록된 모든 이벤트를 반환하도록 설정됩니다. 기록된 이벤트는 활성화된 확장 이벤트의 유형에 따라 달라집니다. 이 매개 변수를 사용하여 특정 유형의 이벤트만 표시되도록 저장 프로시저를 필터링할 수 있습니다. 전체 이벤트 이름을 지정 하거나 같은 부분 문자열을 지정할 수 있습니다. **'Admin'** , **'분석'** 합니다 **'Operational'** , 및 **'Debug'** 합니다. 합니다 @event_channel 됩니다 **VARCHAR (255)** 합니다.  
   
  현재 사용 가능한 형식 사용 이벤트의 목록을 가져오려면 합니다 **managed_backup.fn_get_current_xevent_settings** 함수입니다.  
   
@@ -60,10 +59,10 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ||||  
 |-|-|-|  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |event_type|NVARCHAR(512)|확장 이벤트 유형|  
 |이벤트|NVARCHAR(512)|이벤트 로그의 요약입니다.|  
-|timestamp|timestamp|이벤트 발생 시 표시되는 이벤트의 타임스탬프입니다.|  
+|타임 스탬프|timestamp|이벤트 발생 시 표시되는 이벤트의 타임스탬프입니다.|  
   
 ## <a name="security"></a>보안  
   

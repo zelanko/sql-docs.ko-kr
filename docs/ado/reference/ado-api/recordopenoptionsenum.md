@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0ed637d8e77ef7fc152f994da81db010fa80900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba165d51dde5224dac65467061eac0d38aeefc7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931420"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 열기에 대 한 옵션을 지정 하는 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다. 이러한 값을 사용 하 여 결합할 수 있습니다 또는 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|필드와 연결 공급자에 게 나타내는 합니다 **레코드** 처음에 검색할 필요는 없지만 필드에 액세스 하는 첫 번째 시도에서 검색할 수 있습니다. 이 플래그가 없는 것으로 표시 된 기본 동작을 모두 검색 하는 것은 **레코드** 필드 개체입니다.|  
 |**adDelayFetchStream**|0x4000|기본 스트림에 연결 된 공급자에 게 알립니다 합니다 **레코드** 처음 검색할 필요 합니다. 이 플래그가 없는 것으로 표시 된 기본 동작을 연결 된 기본 스트림을 검색 하는 것은 **레코드** 개체입니다.|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6402d81d-7349-47b1-95ca-99b0c0f4f373
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 39052fc5c90650ec55f3620fe9bfec99151e5539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8504dde4c5d86de50fd110d57675df269f659ce6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945263"
 ---
 # <a name="folder-and-file-permissions-master-data-services"></a>폴더 및 파일 사용 권한(Master Data Services)
 

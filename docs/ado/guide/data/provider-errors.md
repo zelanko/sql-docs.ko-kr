@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56fff67f882eceec3c07553e5c465da65a69ce65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924541"
 ---
 # <a name="provider-errors"></a>공급자 오류
 공급자 오류가 발생 하면-2147467259의 런타임 오류를 반환 됩니다. 이 오류를 받게 되 면 확인 합니다 **오류** 활성 컬렉션 **연결** 발생 한 문제를 설명 하는 하나 이상의 오류를 포함 하는 개체입니다.  
@@ -65,7 +64,7 @@ End Function
 ## <a name="the-error-object"></a>Error 개체  
  검사 하 여는 **오류** 발생 한 오류 수를 결정 하 고 더 중요 한 응용 프로그램 또는 개체에 따라 오류가 발생 한 개체입니다. 합니다 **오류** 개체에는 다음 속성이 있습니다.  
   
-|속성 이름|Description|  
+|속성 이름|설명|  
 |-------------------|-----------------|  
 |**설명**|발생 한 오류의 텍스트 설명입니다.|  
 |**HelpContext, HelpFile**|발생 한 오류에 대 한 설명을 포함 하는 도움말 및 도움말 파일을 가리킵니다.|  

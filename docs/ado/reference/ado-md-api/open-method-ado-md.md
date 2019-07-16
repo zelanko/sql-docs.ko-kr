@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a87d8080-a238-45e5-bc80-9a8625b3810f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e22ab07f40ad6b4ef916d950909957b04c9d5be1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 089fad427989c26ed1ed22ec3e9267297a29b820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949384"
 ---
 # <a name="open-method-ado-md"></a>Open 메서드(ADO MD)
 다차원 쿼리 결과 검색 하 고 결과를 반환 된 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)합니다.  
@@ -41,7 +40,7 @@ Cellset.Open Source, ActiveConnection
  *ActiveConnection*  
  (선택 사항) A **Variant** 로 평가 되는 중 하나를 지정 하는 문자열을 유효한 ADO [연결](../../../ado/reference/ado-api/connection-object-ado.md) 변수 이름 또는 연결에 대 한 정의 개체입니다. 합니다 *ActiveConnection* 인수를 열 때 사용할 연결을 지정 합니다 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체입니다. 이 인수에 대 한 연결 정의 전달 하는 경우 ADO는 지정된 된 매개 변수를 사용 하 여 새 연결을 엽니다. 합니다 *ActiveConnection* 인수에 해당 합니다 [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) 속성입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **엽니다** 메서드는 해당 매개 변수 중 하나가 생략 되 고 열기를 시도 하기 전에 해당 속성 값 설정 되지 않은 경우 오류를 생성 합니다 **셀 집합**합니다.  
   
 ## <a name="applies-to"></a>적용 대상  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6863a14a467e1d884d43b982451ec5807820486b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9799fb3f05871c16cfcd8edb5f2a50c6f7792978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924698"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>명명된 명령에 매개 변수 전달
 명령의 결과로 전달 됩니다와 마찬가지로 *아웃* 명명 된 명령의 매개 변수 매개 변수화 된 명령 수에 대 한 되었습니다로 전달 된 *에서* 명명 된 명령에는 변수.  

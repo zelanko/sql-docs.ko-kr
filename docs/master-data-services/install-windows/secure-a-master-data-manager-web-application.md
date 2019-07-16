@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 08e73462f3536f1aff6aecbf44692a7f24f54aa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cbec8d77386985e7f33863793b86eb2db0b8d6bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944898"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>마스터 데이터 관리자 웹 애플리케이션의 보안 설정
 

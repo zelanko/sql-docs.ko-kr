@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 97fc2e4a7c6146b82a48d4dc28d8b86ff94f7cd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 249ab4a4a4f82e5fd6eebfd326c71971f401bcc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952192"
 ---
 # <a name="depth-property-ado-md"></a>Depth 속성(ADO MD)
 사이의 수준 수가 표시 된 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 및 계층 구조의 루트입니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66719000"
 ## <a name="return-values"></a>반환 값  
  정수를 반환 하 고 읽기 전용입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  A **수준** 계층의 루트에 **깊이** 영 (0)의 값입니다.  
   
 ## <a name="applies-to"></a>적용 대상  

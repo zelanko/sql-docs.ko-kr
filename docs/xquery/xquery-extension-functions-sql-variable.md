@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6e2e5063-c1cf-4b5a-b642-234921e3f4f7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe1115c7e0cf0e4f78ff09acb405c64912af3471
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 56a8c53a22fefec7fbda4c2ac7476ae46d664199
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946002"
 ---
 # <a name="xquery-extension-functions---sqlvariable"></a>XQuery 확장 함수 - sql:variable()
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51658002"
 sql:variable("variableName") as xdt:anyAtomicType?  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  항목에 설명 된 대로 [관계형 데이터 내에서 XML 데이터 바인딩](../t-sql/xml/binding-relational-data-inside-xml-data.md)를 사용 하는 경우이 함수를 사용할 수 있습니다 [XML 데이터 형식 메서드](../t-sql/xml/xml-data-type-methods.md) XQuery 내 관계형 값을 제공할 합니다.  
   
  예를 들어 합니다 [query () 메서드](../t-sql/xml/query-method-xml-data-type.md) 에 저장 된 XML 인스턴스에 대해 쿼리를 지정 하는 데 사용 되는 **xml** 데이터 형식 변수 또는 열입니다. 일부 경우에는 쿼리에서 [!INCLUDE[tsql](../includes/tsql-md.md)] 변수 또는 매개 변수로부터 값을 사용하거나 관계형 및 XML 데이터를 함께 사용할 수 있습니다. 이 작업을 수행 하려면 사용 합니다 **sql: variable** 함수입니다.  
@@ -46,7 +45,7 @@ sql:variable("variableName") as xdt:anyAtomicType?
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>1. sql:variable() 함수를 사용하여 Transact-SQL 변수 값을 XML로 가져오기  
+### <a name="a-using-the-sqlvariable-function-to-bring-a-transact-sql-variable-value-into-xml"></a>A. sql:variable() 함수를 사용하여 Transact-SQL 변수 값을 XML로 가져오기  
  다음 예에서는 다음으로 구성된 XML 인스턴스를 생성합니다.  
   
 -   비-XML 열의 값(`ProductID`). 합니다 [1!s!sql:column () 함수](../xquery/xquery-extension-functions-sql-column.md) XML에이 값을 바인딩하는 데 사용 됩니다.  

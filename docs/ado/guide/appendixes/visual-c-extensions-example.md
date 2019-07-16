@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9739c278-582c-402b-a158-7f68a1b2c293
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76be5e7c1dd88cb15c9f32db818aa63606f0ba7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d3517f40b15081ca2ee4621d07455cc13bb577d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926397"
 ---
 # <a name="visual-c-extensions-example"></a>Visual C++ 확장 예제
 이 프로그램에서는 값 필드에서 검색 되 고 C로 변환 하는 방법을 보여 줍니다. /C++ 변수입니다.  

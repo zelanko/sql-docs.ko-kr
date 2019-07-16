@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 96a01955-a6b4-4cbf-9c73-52bcd1e9fb25
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99acfb2507701f0e4b47aff5b0595b61fc45c425
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 624fa1976792a700342a114f82aa5ca6b75c70ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931567"
 ---
 # <a name="propertyattributesenum"></a>PropertyAttributesEnum
 특성을 지정 하는 [속성](../../../ado/reference/ado-api/property-object-ado.md) 개체입니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adPropNotSupported**|0|속성 공급자가 지원 되지 않습니다 나타냅니다.|  
 |**adPropRequired**|1|사용자 데이터 소스가 초기화 되기 전에이 속성에 값을 지정 해야 함을 나타냅니다.|  

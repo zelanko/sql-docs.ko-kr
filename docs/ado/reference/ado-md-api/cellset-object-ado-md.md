@@ -15,25 +15,24 @@ helpviewer_keywords:
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 52ede9c21077c81dd1bd90f12acbfc3dff796d50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9524e9801f284d3dff3125b850cdd1fd32a361a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928643"
 ---
 # <a name="cellset-object-ado-md"></a>Cellset 개체(ADO MD)
 다차원 쿼리 결과를 나타냅니다. 큐브 또는 기타 셀 집합에서 선택 된 셀의 컬렉션입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  내에서 데이터를 **Cellset** 직접 배열 유사 액세스를 사용 하 여 검색 됩니다. 해당 멤버에 대 한 데이터를 가져올 특정 멤버를 다운 드릴 수 있습니다. 예를 들어, 다음 코드 캡션을 반환 하는 첫 번째 멤버의 첫 번째 위치에서 명명 된 셀 집합의 첫 번째 축에 `cst`:  
   
 ```  
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  집합에서 현재 셀의 개념이 없었습니다 있습니다. 대신 합니다 [항목](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) 속성을 특정 검색 [셀](../../../ado/reference/ado-md-api/cell-object-ado-md.md) 셀 집합에서 개체입니다. 인수는 **항목** 속성이 검색 되는 셀을 결정 합니다. 셀의 고유한 서 수 값을 지정할 수 있습니다. 셀은 셀 집합의 각 축 따라 위치 번호를 사용 하 여 검색할 수도 있습니다. 셀을 검색 하는 방법에 대 한 자세한 내용은 참조는 [항목](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) 속성입니다.  
   
  컬렉션, 메서드 및 속성을 사용 하 여는 **Cellset** 개체를 다음을 수행할 수 있습니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b62c66ca-58d5-430e-9257-eb38c65e48c2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7361b453272289107ea3c5ae268b951178aa1b43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4dc881b96a1e2641d4946340c9462455197f2043
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919252"
 ---
 # <a name="cursortype-property-ado"></a>CursorType 속성(ADO)
 사용 되는 커서의 유형을 나타냅니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66695502"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) 값입니다. 기본값은 **adOpenForwardOnly**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 합니다 **CursorType** 속성을 열 때 사용 해야 하는 커서의 유형을 지정 하는 **레코드 집합** 개체입니다.  
   
  설정만 **adOpenStatic** 경우 지원 되는 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이로 설정 되어 **adUseClient**합니다. 지원 되지 않는 값을 설정 하는 경우 없음 오류가 발생 합니다. 지원 되는 가장 가까운 **CursorType** 대신 사용 됩니다.  
