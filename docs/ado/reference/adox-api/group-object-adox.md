@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8f11fb5e227b5b6ebd418775247756da55c359af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4b3de5f445ddd09bf7d069b0b93d82c6f8de978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966217"
 ---
 # <a name="group-object-adox"></a>그룹 개체(ADOX)
 보안된 데이터베이스 내에서 액세스 권한이 있는 그룹 계정을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md) 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 카탈로그의 모든 그룹 계정을 나타냅니다. 합니다 **그룹** 에 대 한 컬렉션을 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 사용자가 속한 그룹에만 나타냅니다.  
   
  속성, 컬렉션 및의 메서드를 사용 하 여는 **그룹** 개체를 할 수 있습니다.  

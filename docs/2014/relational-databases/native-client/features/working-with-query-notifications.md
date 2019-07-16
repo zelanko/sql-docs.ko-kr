@@ -22,11 +22,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7a149e8940896210a408b36c7cb06814646fd322
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375945"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206606"
 ---
 # <a name="working-with-query-notifications"></a>쿼리 알림 작업
   쿼리 알림은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 도입되었습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입된 Service Broker 인프라를 기반으로 구축된 쿼리 알림을 통해 응용 프로그램은 데이터 변경 시 알림을 받을 수 있습니다. 이 기능은 데이터베이스의 정보 캐시를 제공하며 원본 데이터 변경 시 알림을 받아야 하는 응용 프로그램(예: 웹 응용 프로그램)에 특히 유용합니다.  
@@ -73,7 +73,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>DBPROPSET_SQLSERVERROWSET 속성 집합  
  OLE DB를 통해 쿼리 알림을 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client DBPROPSET_SQLSERVERROWSET 속성 집합을 다음과 같은 새 속성을 추가 합니다.  
   
-|이름|형식|Description|  
+|이름|형식|설명|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|쿼리 알림이 활성 상태로 유지되는 시간(초)입니다.<br /><br /> 기본값은 432000초(5일)입니다. 최소값은 1초이고 최대값은 2^31-1초입니다.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|알림의 메시지 메시지입니다. 사용자가 정의하며 미리 정의된 형식은 없습니다.<br /><br /> 기본값은 빈 문자열입니다. 1-2000자를 사용하여 메시지를 지정할 수 있습니다.|  
@@ -131,9 +131,9 @@ RECEIVE * FROM MyQueue
   
  일괄 처리 및 저장 프로시저에 대해 구독을 요청하면 일괄 처리 또는 저장 프로시저 내에서 실행되는 각 문에 대해 별도의 구독 요청이 수행됩니다. EXECUTE 문은 알림을 등록하지 않고 알림 요청을 실행된 명령으로 보냅니다. 일괄 처리인 경우 컨텍스트가 실행된 문에 적용되고 위에서 설명한 것과 같은 규칙이 적용됩니다.  
   
- 동일한 데이터베이스 컨텍스트에서 동일한 사용자가 제출했으며 템플릿, 매개 변수 값, 알림 ID 및 배달 위치가 기존 활성 구독과 같은 알림에 대해 쿼리를 제출하면 기존 구독이 갱신되고 새로 지정한 제한 시간이 다시 설정됩니다. 즉, 동일한 쿼리에 대해 알림을 요청하면 알림이 한 개만 전송됩니다. 이는 일괄 처리에서 중복된 쿼리나 여러 번 호출된 저장 프로시저의 쿼리에 적용됩니다.  
+ 동일한 템플릿, 동일한 매개 변수 값, 같은 알림 ID 및 배달 위치가 기존 활성 구독과와 동일한 데이터베이스 컨텍스트에서 동일한 사용자에 의해 전송 된 알림에 대 한 쿼리를 제출 기존 갱신 됩니다. 구독 제한 시간 지정 된 새 다시 설정 합니다. 즉,는, 동일한 쿼리에 대해 알림을 요청 하는 경우 알림이 한 개만 전송 됩니다. 이는 일괄 처리에서 중복된 쿼리나 여러 번 호출된 저장 프로시저의 쿼리에 적용됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 기능](sql-server-native-client-features.md)  
   
   

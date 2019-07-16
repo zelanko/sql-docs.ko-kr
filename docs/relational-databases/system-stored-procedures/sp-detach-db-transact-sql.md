@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: eec8b91bbb7d90483b627aebddb7088bc80cb1ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912891"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` 분리 되는 데이터베이스에 연결 된 전체 텍스트 인덱스 파일이 데이터베이스 중 삭제 되지 것입니다 지정 작업을 분리 합니다. *KeepFulltextIndexFile* 되는 **nvarchar(10)** 이며 기본값은 값 **true**합니다. 하는 경우 *KeepFulltextIndexFile* 됩니다 **false**, 데이터베이스와 연결 된 모든 전체 텍스트 인덱스 파일 및 전체 텍스트 인덱스의 메타 데이터 데이터베이스가 읽기 전용 아니면 삭제 됩니다. Null 인 경우 또는 **true**, 전체 텍스트 관련 메타 데이터가 유지 됩니다.  
   
 > [!IMPORTANT]
->  합니다**@keepfulltextindexfile** 매개 변수는 이후 버전의에서 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 매개 변수를 사용하지 말고 현재 이 매개 변수를 사용하는 응용 프로그램은 가능한 한 빨리 수정하십시오.  
+>  합니다 **@keepfulltextindexfile** 매개 변수는 이후 버전의에서 제거할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 매개 변수를 사용하지 말고 현재 이 매개 변수를 사용하는 응용 프로그램은 가능한 한 빨리 수정하십시오.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -63,7 +62,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스가 분리되면 모든 해당 메타데이터가 삭제됩니다. 모든 로그인 계정의 기본 데이터베이스 있었다면 **마스터** 해당 계정의 기본 데이터베이스가 됩니다.  
   
 > [!NOTE]  
@@ -111,7 +110,7 @@ GO
 ```  
   
 > [!NOTE]  
->  현재 사용자를 즉시 또는 지정된 시간(초) 내에 데이터베이스에서 강제로 연결을 끊으려면 ROLLBACK 옵션을 사용하십시오. ALTER DATABASE *database_name* SINGLE_USER WITH ROLLBACK 설정 *rollback_option*합니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
+>  현재 사용자가 데이터베이스를 즉시 적용 또는 지정 된 숫자로 시간 (초) 내에서 ROLLBACK 옵션을 사용할 수도 있습니다. ALTER DATABASE *database_name* SINGLE_USER WITH ROLLBACK 설정 *rollback_option*합니다. 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
 ## <a name="reattaching-a-database"></a>데이터베이스 다시 연결  
  분리된 파일은 그대로 남아 있으며 FOR ATTACH 또는 FOR ATTACH_REBUILD_LOG 옵션과 함께 CREATE DATABASE를 사용하여 다시 연결할 수 있습니다. 또한 파일을 다른 서버로 이동하거나 첨부할 수 있습니다.  

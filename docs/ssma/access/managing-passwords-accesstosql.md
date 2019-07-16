@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bfa7b7481589ccb636147b3842a15b92f1a59d43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d8886f28a30f264e0357af82724567e42e3bd5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907181"
 ---
 # <a name="managing-passwords-accesstosql"></a>암호 (AccessToSQL) 관리
 데이터베이스 암호와 가져오기 또는 서버에서 내보내야 하는 절차를 보호 하는 방법에 대 한이 섹션은:  
@@ -45,7 +44,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
             서버 정의 id 및 해당 하는 암호화 된 암호는 로컬 컴퓨터의 파일에 저장 됩니다.  
   
-            예 1:
+            예제 1:
             
                 Specify password
                 
@@ -55,7 +54,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
                 
                 Re-enter password for server_id 'XXX_1': xxxxxxx  
             
-            예 2:
+            예제 2:
             
                 C:\SSMA\SSMAforAccessConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 

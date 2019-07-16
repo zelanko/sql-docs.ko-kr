@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48b1f3794828af7f60c1d00313506fa9f9c522c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696640"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920904"
 ---
 # <a name="ado-objects-and-interfaces"></a>ADO 개체 및 인터페이스
 이러한 개체 간의 관계가에 표시 되는 [ADO 개체 모델](../../../ado/reference/ado-api/ado-object-model.md)합니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "66696640"
 |[매개 변수](../../../ado/reference/ado-api/parameter-object.md)|매개 변수 또는 연결 된 인수를 나타내는 **명령** 매개 변수가 있는 쿼리 또는 저장된 프로시저를 기반으로 개체입니다.<br /><br /> 합니다 **매개 변수** 개체가 스크립팅 작업에 안전 합니다.|  
 |[속성](../../../ado/reference/ado-api/property-object-ado.md)|공급자가 정의한 ADO 개체의 동적 특성을 나타냅니다.|  
 |[레코드](../../../ado/reference/ado-api/record-object-ado.md)|행을 나타냅니다는 **레코드 집합**, 디렉터리 또는 파일 시스템의 파일입니다. 합니다 **레코드** 개체가 스크립팅 작업에 안전 합니다.|  
-|[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|기본 테이블 또는 실행 된 명령의 결과에서 레코드 집합을 나타냅니다. 언제 든 지 합니다 **레코드 집합** 개체를 현재 레코드로 집합 내에서 단일 레코드만 가리킵니다.<br /><br /> 합니다 **레코드 집합** 개체가 스크립팅 작업에 안전 합니다.|  
+|[레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)|기본 테이블 또는 실행 된 명령의 결과에서 레코드 집합을 나타냅니다. 언제 든 지 합니다 **레코드 집합** 개체를 현재 레코드로 집합 내에서 단일 레코드만 가리킵니다.<br /><br /> 합니다 **레코드 집합** 개체가 스크립팅 작업에 안전 합니다.|  
 |[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|이진 데이터 스트림을 나타냅니다.<br /><br /> 합니다 **Stream** 개체가 스크립팅 작업에 안전 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

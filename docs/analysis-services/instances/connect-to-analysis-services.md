@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84a37af402d691ee7507fe923a6ae765b622631f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015930"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181883"
 ---
 # <a name="connect-to-analysis-services"></a>Analysis Services에 연결
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   이 섹션의 정보를 참조하여 연결 문자열 속성, 연결에 사용되는 클라이언트 라이브러리, Analysis Services에서 지원하는 인증 방법, 서버가 오프라인 상태가 되기 전에 연결을 설정 또는 해제하는 방법 등을 알아봅니다.  
 
-Azure Analysis Services에 연결 하는 방법에 대 한 자세한 내용은 [서버에 연결](https://docs.microsoft.com/azure/analysis-services/analysis-services-connect)합니다.
+Azure Analysis Services에 연결 하는 방법에 대 한 자세한 참조 [서버에 연결](https://docs.microsoft.com/azure/analysis-services/analysis-services-connect)합니다.
   
 ## <a name="analysis-services-connections"></a>Analysis Services 연결  
  Analysis Services는 TCP를 네트워크 프로토콜로 사용하고 XMLA(XML for Analysis)를 통신 프로토콜로 사용합니다. 가장 낮은 수준에서 Analysis Services와 함께 제공되는 모든 클라이언트 라이브러리는 XMLA-over-TCP를 구현합니다. 원시 XMLA를 기반으로 애플리케이션을 작성할 수 있지만 대부분의 애플리케이션과 애플리케이션 개발자는 클라이언트 라이브러리를 사용하여 개체 모델을 활용하고 개체 모델이 제공하는 코딩 효율성을 이용합니다. 클라이언트를 Analysis Services에 연결하려는 경우 스택 간에 TCP를 사용할 수 없으면 IIS를 중간 연결로 사용할 수 있습니다. IIS를 통해 HTTP 액세스를 사용할 때의 한 가지 이점은 연결 문자열에서 자격 증명을 전달하는 애플리케이션에서 연결할 수 있다는 것입니다.  
@@ -42,6 +42,6 @@ Azure Analysis Services에 연결 하는 방법에 대 한 자세한 내용은 [
   
 ## <a name="see-also"></a>관련 항목:  
  [설치 후 구성 & #40; Analysis Services & #41;](../../analysis-services/instances/post-install-configuration-analysis-services.md)   
- [Analysis Services에서 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
+ [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
   
   

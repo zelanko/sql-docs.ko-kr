@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 617fe93f27351d8524a29da93c077b96fd2f6639
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f2777eeb23e7a78a1df757a9054a04c7f6f9df2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966441"
 ---
 # <a name="definedsize-property-adox"></a>DefinedSize 속성(ADOX)
 열의 명시 된 최대 크기를 나타냅니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66718912"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환 된 **긴** 문자 데이터 값의 최대 길이 값.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  기본값은 영 (0).  
   
  이 속성은 읽기 전용 [열](../../../ado/reference/adox-api/column-object-adox.md) 컬렉션에 이미 추가 된 개체입니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 949a860d-6579-4218-882e-8c061688dd87
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: da22ba86ea49532f460b081b13e18d6b7d95211c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d41cd744d39113c556c4ee8bc17411b7992e596
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002145"
 ---
 # <a name="copying-descriptors"></a>설명자 복사
 합니다 **SQLCopyDesc** 함수가 호출 되어 다른 설명자에 하나의 설명자 필드를 복사 합니다. IRD 아니라 응용 프로그램 설명자를 또는 IPD 필드를 복사할 수 있습니다. 설명자의 모든 형식에서 필드를 복사할 수 있습니다. 원본 및 대상 모두 설명자에 대해 정의 된 필드에만 복사 됩니다. **SQLCopyDesc** 설명자의 할당 유형을 변경할 수 없으므로 SQL_DESC_ALLOC_TYPE 필드를 복사 하지 않습니다. 복사 된 필드는 기존 필드를 덮어씁니다.  

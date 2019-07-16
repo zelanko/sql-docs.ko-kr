@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6d2807b0-b861-4583-bcaf-fb0b82e0f2d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe9dc770f537b9b9f8b53461c30b890a4144a821
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 157e38c2c9c23ff8f7e92af40385b0962c6dcb70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918070"
 ---
 # <a name="moverecord-method-ado"></a>MoveRecord 메서드(ADO)
 이동 하 여 표시 되는 엔터티에 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 다른 위치에 있습니다.  
@@ -50,13 +49,13 @@ Record.MoveRecord (Source, Destination, UserName, Password, Options, Async)
  *옵션*  
  (선택 사항) A [MoveRecordOptionsEnum](../../../ado/reference/ado-api/moverecordoptionsenum.md) 값을 지정 합니다 **메서드의 동작**합니다. 이 메서드의 동작을 지정 합니다.  
   
- *Async*  
+ *비동기*  
  (선택 사항) A **부울** 값을 때 **True**, 지정이 작업은 비동기 여야 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  **문자열** 값입니다. 일반적으로 값 *대상* 반환 됩니다. 그러나 공급자에 따라 다릅니다는 정확한 값을 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  값 *원본* 하 고 *대상* 아니어야 고, 그렇지 않으면 동일 하면 런타임 오류가 발생 합니다. 최소한 서버, 경로 및 리소스 이름이 달라 야 합니다.  
   
  이 메서드를 인터넷 게시 공급자를 사용 하 여 파일에 대 한 모든 하이퍼텍스트 링크를 여 달리 지정 하지 않으면 이동 되는 파일을 업데이트 *옵션*합니다. 이 메서드가 실패 하는 경우 *대상* 하지 않으면 (예를 들어, 파일 또는 디렉터리), 기존 개체를 식별 **adMoveOverWrite** 지정 됩니다.  

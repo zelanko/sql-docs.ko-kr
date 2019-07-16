@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 715ad0a98adf1e3c219712699a6b31f2ba1467d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fedde638e343281c5d3810cc80c9ba8db820e839
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918458"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows 메서드 예제(VB)
 이 예제에서는 합니다 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) 지정된 된 수의 행을 검색 하는 메서드를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 결과 데이터를 사용 하 여 배열을 채우는 합니다. **GetRows** 메서드는 원하는 행 수보다 적은 두 가지 경우에 반환: 경우 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 에 도달한 경우 **GetRows** 했던 레코드를 검색 하려고 했습니다. 다른 사용자가 삭제 합니다. 함수 반환 **False** 두 번째 경우 발생 하는 경우에 합니다. GetRowsOK 함수는이 절차를 실행 하려면 필요 합니다.  

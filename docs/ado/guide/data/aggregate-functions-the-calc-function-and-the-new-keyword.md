@@ -15,36 +15,35 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0a72cf80f9fee9c887e7805f3a2a5bd542d7f47c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926004"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>집계 함수, CALC 함수 및 NEW 키워드
 데이터 모양 지정은 다음 함수를 지원 합니다. 작업을 수행할 열이 포함 된 장 할당 이름은 합니다 *장-별칭*합니다.  
   
  장-별칭을 정규화를 포함 하는 장 각 장 열 이름으로 이루어진 수는 *열 이름,* 마침표로 구분 된 모든 합니다. 예를 들어 chap1, 부모 장에서 자식 장에서 chap2, 포함 된 경우 amt amount 열도 포함 다음 정규화 된 이름이 chap1.chap2.amt 표시 됩니다.  
   
-|집계 함수|Description|  
+|집계 함수|설명|  
 |-------------------------|-----------------|  
 |SUM (*장-별칭*. *열 이름*)|지정 된 열의 모든 값의 합계를 계산합니다.|  
 |AVG (*장-별칭*. *열 이름*)|지정 된 열의 모든 값의 평균을 계산 합니다.|  
 |최대 (*장-별칭*. *열 이름*)|지정 된 열의 최대값을 계산합니다.|  
 |MIN (*장-별칭*. *열 이름*)|지정 된 열의 최소값을 계산합니다.|  
 |COUNT(*chapter-alias*[.*column-name*])|지정된 된 별칭의 행 수를 셉니다. 에 지정 된 개수에는 해당 열이 Null이 아닌 행만 포함 됩니다.|  
-|STDEV(*chapter-alias*.*column-name*)|지정 된 열의 표준 편차를 계산 합니다.|  
+|STDEV (*장-별칭*. *열 이름*)|지정 된 열의 표준 편차를 계산 합니다.|  
 |모든 (*장-별칭*. *열 이름*)|지정 된 열의 값입니다. 모든 열의 값이 챕터의 모든 행에 대해 동일 하 게 하는 경우에 예측 가능한 값이 있습니다.<br /><br /> **참고** 열 챕터에 행에 대해 동일한 값이 없는 경우 SHAPE 명령 하나를 임의로 반환 값과 모든 함수의 값입니다.|  
   
-|계산된 식|Description|  
+|계산된 식|설명|  
 |---------------------------|-----------------|  
-|CALC(*expression*)|행에만 임의의 식을 계산 합니다 **레코드 집합** CALC 함수를 포함 하 합니다. 이 사용 하 여 모든 식 [VBA 함수에 대 한 Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)|  
+|계산 (*식*)|행에만 임의의 식을 계산 합니다 **레코드 집합** CALC 함수를 포함 하 합니다. 이 사용 하 여 모든 식 [VBA 함수에 대 한 Visual Basic](../../../ado/guide/data/visual-basic-for-applications-functions.md)|  
   
-|새 키워드|Description|  
+|새 키워드|설명|  
 |-----------------|-----------------|  
-|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|지정 된 형식의 빈 열을 추가 합니다 **레코드 집합**합니다.|  
+|새 *필드 형식* [(*너비* &#124; *배율* &#124; *정밀도* &#124; *오류*[, *크기 조정* &#124; *오류*])]|지정 된 형식의 빈 열을 추가 합니다 **레코드 집합**합니다.|  
   
  합니다 *필드 형식* NEW 키워드를 사용 하 여 전달 된 다음 데이터 형식 중 하나가 될 수 있습니다.  
   

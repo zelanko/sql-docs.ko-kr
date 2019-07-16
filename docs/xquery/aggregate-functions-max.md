@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5ee625c0-044a-4cda-b210-02b64e619d65
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f40e89eef1a4480110a4b0b066d3e080732ac202
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: e47539a350a2918ef24c47e3c1eca270d4aeb72e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51292729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985957"
 ---
 # <a name="aggregate-functions---max"></a>집계 함수 - max
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
  *$arg*  
  최대값을 반환할 원자 값의 시퀀스입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  에 전달 되는 세분화 된 값의 유형도 **max ()** 동일한 기본 유형의 하위 유형 이어야 합니다. 기본 허용 되는 형식은 지 원하는 형식을 합니다 **gt** 작업 합니다. 이러한 유형에는 3가지 기본 제공 숫자 기본 유형, 날짜/시간 기본 유형, xs:string, xs:boolean 및 xdt:untypedAtomic이 포함됩니다. xdt:untypedAtomic 유형의 값이 xs:double로 캐스팅됩니다. 이러한 종류의 혼합 없거나 다른 형식의 다른 값을 전달 하는 경우 정적 오류가 발생 합니다.  
   
  결과인 **max ()** xdt: untypedatomic의 경우 xs: double 처럼 전달 된 유형의 기본 유형을 수신 합니다. 입력이 정적으로 비어 있으면 비어 있다는 것이 유추되어 정적 오류가 발생합니다.  
@@ -49,13 +48,13 @@ fn:max($arg as xdt:anyAtomicType*) as xdt:anyAtomicType?
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** 유형 열에는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다.  
   
-### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>1. max() XQuery 함수를 사용하여 제조 프로세스에서 근무 시간이 가장 많은 작업 센터 위치 찾기  
+### <a name="a-using-the-max-xquery-function-to-find-work-center-locations-in-the-manufacturing-process-that-have-the-most-labor-hours"></a>A. max() XQuery 함수를 사용하여 제조 프로세스에서 근무 시간이 가장 많은 작업 센터 위치 찾기  
  제공 된 쿼리 [min 함수 (XQuery)](../xquery/aggregate-functions-min.md) 사용 하도록 다시 작성할 수 있습니다 합니다 **max ()** 함수입니다.  
   
 ## <a name="implementation-limitations"></a>구현 시 제한 사항  
  제한 사항은 다음과 같습니다.  
   
--   합니다 **max (**) 함수는 모든 정수를 xs: decimal에 매핑합니다.  
+-   합니다 **max (** ) 함수는 모든 정수를 xs: decimal에 매핑합니다.  
   
 -   합니다 **max ()** xs: duration 유형의 값에는 함수가 지원 되지 않습니다.  
   

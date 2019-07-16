@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21177dba0c17ec2ba8bd7af73585b4ede5a7d7e8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015360"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209885"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft 클러스터링 알고리즘
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,11 +32,11 @@ ms.locfileid: "34015360"
 ## <a name="how-the-algorithm-works"></a>알고리즘 작동 방법  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 먼저 데이터 집합 내 관계를 식별하고 이러한 관계를 기반으로 일련의 클러스터를 생성합니다. 다음 다이어그램에서 볼 수 있는 것과 같이 알고리즘이 데이터를 그룹화하는 방법을 시각적으로 나타내는 데에는 산점도가 유용합니다. 산점도는 데이터 세트 내 모든 사례를 나타내며 각 사례는 그래프에서 하나의 점으로 표시됩니다. 클러스터는 그래프에 나타난 요소를 그룹화하고 이를 통해 알고리즘이 식별하는 관계를 보여 줍니다.  
   
- ![산 점도 데이터 집합 내에서 사례의](../../analysis-services/data-mining/media/clustering-plot.gif "데이터 집합 내에서 사례의 산 점도")  
+ ![데이터 집합에 있는 사례의 산 점도](../../analysis-services/data-mining/media/clustering-plot.gif "데이터 집합 내에서 사례의 산 점도")  
   
  클러스터를 정의한 다음 알고리즘은 클러스터가 요소의 그룹화를 얼마나 잘 나타내는지를 계산하고 그룹화를 다시 정의하여 데이터를 보다 잘 나타내는 클러스터를 만듭니다. 알고리즘은 클러스터를 다시 정의하여 결과를 더 이상 향상시킬 수 없을 때까지 이 과정을 반복합니다.  
   
- 클러스터링 기술을 지정하거나 최대 클러스터 수를 제한하거나 클러스터를 만드는 데 필요한 지지도를 변경하여 알고리즘 작동 방법을 사용자 지정할 수 있습니다. 자세한 내용은 [Microsoft 클러스터링 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)를 참조하세요. 이 알고리즘에는 널리 사용되는 두 가지 클러스터링 메서드인 K-means 클러스터링 및 Expectation Maximization 메서드가 있습니다.  
+ 클러스터링 기술을 지정하거나 최대 클러스터 수를 제한하거나 클러스터를 만드는 데 필요한 지지도를 변경하여 알고리즘 작동 방법을 사용자 지정할 수 있습니다. 자세한 내용은 [Microsoft 클러스터링 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)를 참조하세요. 이 알고리즘에는 두 가지 인기 있는 클러스터링 메서드에 포함 됩니다. K-means 클러스터링 및 Expectation Maximization 메서드가 있습니다.  
   
 ## <a name="data-required-for-clustering-models"></a>클러스터링 모델에 필요한 데이터  
  클러스터링 모델을 학습하는 데 사용할 데이터를 준비할 때는 필요한 데이터의 양과 사용법을 비롯한 특정 알고리즘의 요구 사항을 알고 있어야 합니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "34015360"
   
  데이터 마이닝 모델에 대한 쿼리를 만드는 방법에 대한 자세한 내용은 [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)를 참조하세요. 클러스터링 모델에서 쿼리를 사용하는 방법에 대한 예제는 [클러스터링 모델 쿼리 예제](../../analysis-services/data-mining/clustering-model-query-examples.md)를 참조하세요.  
   
-## <a name="remarks"></a>주의  
+## <a name="remarks"></a>Remarks  
   
 -   PMML(Predictive Model Markup Language)을 사용하여 마이닝 모델을 만들 수 있습니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "34015360"
   
 -   OLAP 마이닝 모델의 사용과 마이닝 모델 차원의 생성을 지원합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft 클러스터링 알고리즘 기술 참조](../../analysis-services/data-mining/microsoft-clustering-algorithm-technical-reference.md)   
  [클러스터링 모델 & #40;에 대 한 마이닝 모델 콘텐츠 Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)   

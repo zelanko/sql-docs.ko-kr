@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: edefb912-31c5-4d99-9aba-06629afd0171
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: be900d6b8295aae5871e9162c5e07ae5bed6516c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c19f9b99173ca04e6ce15862e22a25f8a2bf06e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528979"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002503"
 ---
 # <a name="sprefreshlogshippingmonitor-transact-sql"></a>sp_refresh_log_shipping_monitor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_refresh_log_shipping_monitor
   
  1 = 새로 고침(기본값)  
   
- 2 = delete  
+ 2 = 삭제  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -70,7 +69,7 @@ sp_refresh_log_shipping_monitor
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_refresh_log_shipping_monitor** 새로 고침 합니다 **log_shipping_monitor_primary**를 **log_shipping_monitor_secondary**, **log_shipping_monitor_history_detail** , 및 **log_shipping_monitor_error_detail** 아직 전송 되지 않은 세션 정보를 사용 하 여 테이블입니다. 이렇게 하면 잠시 동안 모니터가 동기화되지 않는 동안에도 모니터 서버를 주 서버 또는 보조 서버와 동기화할 수 있습니다. 또한 필요하면 모니터 서버에서 모니터 정보를 지울 수 있습니다.  
   
  **sp_refresh_log_shipping_monitor** 에서 실행 되어야 합니다는 **마스터** 기본 또는 보조 서버의 데이터베이스입니다.  

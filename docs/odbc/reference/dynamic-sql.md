@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbecd1d6db1d5ed77082253f6a6a57a96ceec4d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 131abdd4a401e336ccd78ca79fdf6666b1911fee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915453"
 ---
 # <a name="dynamic-sql"></a>동적 SQL
 정적 SQL 다양 한 상황에서 잘 작동 하지만 클래스는 데이터 액세스를 확인할 수 없는 사전에 응용 프로그램에 있습니다. 예를 들어 스프레드시트에는 사용자가 스프레드시트 보냅니다 dbms 데이터를 검색할 쿼리를 입력 하도록 허용 합니다. 이 쿼리의 내용은 분명히 알 수 없으므로 프로그래머에 게 스프레드시트 프로그램 기록 되는 경우.  

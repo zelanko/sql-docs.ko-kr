@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 101cb855ea4d73b5f537e8738ab3177b7f618fbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965431"
 ---
 # <a name="procedures-collection-adox"></a>Procedures 컬렉션(ADOX)
 모든 포함 [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md) 카탈로그의 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 [추가](../../../ado/reference/adox-api/append-method-adox-procedures.md) 에 대 한 메서드는 **프로시저** 컬렉션이 ADOX에 대 한 고유 합니다. 다음 작업을 수행할 수 있습니다.  
   
 -   새 프로시저를 사용 하 여 컬렉션에 추가 합니다 **Append** 메서드.  

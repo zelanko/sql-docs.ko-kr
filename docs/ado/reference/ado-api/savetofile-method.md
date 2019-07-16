@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a8594f2-422b-4d2e-94f8-7fe337445900
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1b3a94fddf1ac439096e2e0106fb2becb79249c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2e56178ad306d5b39c2445c391c3bbabe4fc424
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917031"
 ---
 # <a name="savetofile-method"></a>SaveToFile 메서드
 이진 내용을 저장 한 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 파일로.  
@@ -44,7 +43,7 @@ Stream.SaveToFile FileName, SaveOptions
 > [!NOTE]
 >  기존 파일을 덮어쓰면 (때 **adSaveCreateOverwrite** 설정), **SaveToFile** 새 따르는 원래 기존 파일의 모든 바이트를 자릅니다 [EOS](../../../ado/reference/ado-api/eos-property.md)합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **SaveToFile** 의 내용을 복사 하는 데는 **Stream** 로컬 파일에는 개체입니다. 내용이 나 속성의 변경 사항이 없는 합니다 **Stream** 개체입니다. 합니다 **Stream** 개체는 호출 하기 전에 열려 있어야 합니다. **SaveToFile**합니다.  
   
  이 메서드는 연결을 변경 하지는 **Stream** 기본 원본 개체입니다. **Stream** 개체는 원래 URL과 사용 하 여 연결 됩니다 또는 **레코드** 열 때 해당 원본 했습니다.  

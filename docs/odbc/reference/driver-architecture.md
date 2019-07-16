@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5003413-0cc1-4f41-b877-a64e2f5ab118
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b593c3bd8619f0fbba47357f312479c2cd14063b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd9bbb74d77a0b56b6b1f1aa5d8f1a6b5e97f5aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915471"
 ---
 # <a name="driver-architecture"></a>드라이버 아키텍처
 드라이버 아키텍처는 SQL 문 소프트웨어 프로세스에 따라 두 가지 범주로 나누어 집니다.  

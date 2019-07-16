@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d632b040a5124d73470ce825af91e254866a0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16f987415e59d145c4ff423b1c221bffe54bd13d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989564"
 ---
 # <a name="global-settings-logging-db2tosql"></a>전역 설정 (로깅) (DB2ToSQL)
 사용 된 **전역 설정** SSMA에 대 한 로깅 설정을 지정 하려면 대화 상자. 일반적으로 기술 지원 서비스를 사용 하는 경우에 이러한 설정을 변경할는 있습니다.  
@@ -26,7 +25,7 @@ ms.locfileid: "63299214"
 **메시지 수준**  
 다음 옵션을 사용할 수 있습니다 **메시지 수준**:  
   
-|옵션|Description|  
+|옵션|설명|  
 |----------|---------------|  
 |**[모든 범주]**|다음 옵션을 모두에 대 한 로깅 수준을 설정 하는 데 사용 합니다.|  
 |**수집기**|소스 스키마에 대 한 메타 데이터를 수집 하 고 프로젝트에 저장 합니다.|  
@@ -34,7 +33,7 @@ ms.locfileid: "63299214"
 |**데이터 migrator**|원본 데이터베이스에서 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |**포맷터**|에 대 한 스크립트를 생성 하는 변환기의 하위 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스키마입니다.|  
 |**그래픽 사용자 인터페이스**|SSMA 도구를 사용할 때 나타나는 메시지입니다.|  
-|**Linker**|SQL 식별자를 확인 하 고 다른 구성 요소에 대 한 정보를 제공 합니다.|  
+|**링커**|SQL 식별자를 확인 하 고 다른 구성 요소에 대 한 정보를 제공 합니다.|  
 |**기타**|다른 범주에 없는 모든 메시지입니다.|  
 |**파서**|소스 스키마를 구문 분석합니다.|  
 |**동기화**|로드에 대 한 데이터베이스 개체를 원본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  

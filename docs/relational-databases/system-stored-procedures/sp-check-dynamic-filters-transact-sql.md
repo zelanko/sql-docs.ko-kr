@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: dd7760db-a3a5-460f-bd97-b8d436015e19
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc961ef5f3c22d8da7a97f53b387cd1d0c09c679
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 59011e56766d46f768e579a21207dde2ecf84be5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905286"
 ---
 # <a name="spcheckdynamicfilters-transact-sql"></a>sp_check_dynamic_filters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|게시에 사전 계산된 파티션을 사용 하기 위한 사전는 여기서 **1** 사전 계산 파티션을 사용할 수 있습니다, 즉 및 **0** 는 사용할 수 없음을 의미 합니다.|  
 |**has_dynamic_filters**|**bit**|게시에서 하나 이상의 매개 변수가 있는 행 필터를 정의한 경우는 여기서 **1** 하나 이상의 매개 변수가 있는 행 필터가 존재 하는 방법 및 **0** 동적 필터가 있는 것을 의미 합니다.|  
@@ -65,7 +64,7 @@ sp_check_dynamic_filters [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_check_dynamic_filters** 병합 복제에 사용 됩니다.  
   
  게시에 사전 계산된 파티션을 사용 하도록 정의 된 경우 **sp_check_dynamic_filters** 사전 계산 파티션의 제한이 위반에 대 한 확인 합니다. 위반이 발견된 경우 오류가 반환됩니다. 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)를 참조하세요.  

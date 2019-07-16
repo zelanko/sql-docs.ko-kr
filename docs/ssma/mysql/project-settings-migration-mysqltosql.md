@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4a423404a8f5db4e20331c3b187365a889bea48a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63261815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908862"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>프로젝트 설정(마이그레이션)(MySQLToSQL)
 마이그레이션 페이지의 **프로젝트 설정** 대화 상자에 SSMA가 마이그레이션하는 방법을 데이터 MySQL에서 SQL Server에 사용자 지정 하는 설정이 포함 되어 있습니다.  

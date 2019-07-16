@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4bdb60a6d174ab82df7529b6e26d8d5b2c031107
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966846"
 ---
 # <a name="columns-collection-adox"></a>Columns 컬렉션(ADOX)
 모든 포함 [열](../../../ado/reference/adox-api/column-object-adox.md) 테이블, 인덱스 또는 키의 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 [추가](../../../ado/reference/adox-api/append-method-adox-columns.md) 에 대 한 메서드는 **열** 컬렉션이 ADOX에 대 한 고유 합니다. 다음 작업을 수행할 수 있습니다.  
   
 -   컬렉션에 새 열을 추가 합니다 **Append** 메서드.  

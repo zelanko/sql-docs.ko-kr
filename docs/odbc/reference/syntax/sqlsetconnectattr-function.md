@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 53ab6ddfb8253b1df877c6e20df43f8327f0f2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd4acd7ce6a33665ce3d32e42328c906aaec3049
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910381"
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 함수
 **규칙**  
@@ -81,7 +80,7 @@ SQLRETURN SQLSetConnectAttr(
   
  드라이버 옵션을 설정 하는 결과 대 한 정보를 제공 하는 SQL_SUCCESS_WITH_INFO를 반환할 수 있습니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01S02|옵션 값이 변경 됨|드라이버에서 지정 된 값을 지원 하지 않았습니다 *ValuePtr* 유사한 값을 대체 합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -181,7 +180,7 @@ SQLRETURN SQLSetConnectAttr(
 |SQL_ATTR_CONNECTION_DEAD<br /><br /> (ODBC 3.5)|읽기 전용 SQLUINTEGER 하는 값 연결의 상태를 나타냅니다. 경우 SQL_CD_TRUE를 연결이 끊어졌습니다. SQL_CD_FALSE를 연결 아직 활성 상태인 경우 합니다.|  
 |SQL_ATTR_CONNECTION_TIMEOUT (ODBC 3.0)|응용 프로그램에 반환 하기 전에 완료에 대 한 연결에서 모든 요청에 대 한 대기 시간 (초) 수에 해당 하는 SQLUINTEGER 값입니다. 드라이버는 SQLSTATE HYT00 반환할지 (제한 시간 만료 됨)는 쿼리 실행 또는 로그인을 사용 하 여 연결 되지 않은 상황에서 시간 초과 수는 언제 든 지 합니다.<br /><br /> 하는 경우 *ValuePtr* 은 0 (기본값) 일 제한 시간은 없습니다.|  
 |SQL_ATTR_CURRENT_CATALOG (ODBC 2.0)|데이터 원본에서 사용할 카탈로그의 이름을 포함 하는 문자열입니다. 예를 들어, SQL Server에서 카탈로그는 데이터베이스 드라이버 보냅니다를 **사용 하 여** _데이터베이스_ 문은 데이터 원본에 있는 *데이터베이스* 에 지정 된 데이터베이스 \* *ValuePtr*합니다. 단일 계층 드라이버의 경우 드라이버에서 지정한 디렉터리를 현재 디렉터리를 변경 하므로 카탈로그 디렉터리를 수 있습니다 **ValuePtr*합니다.|  
-|SQL_ATTR_DBC_INFO_TOKEN (ODBC 3.8|설정 하는 데 대 SQLPOINTER 값 다시는 dbc 입니다에 연결 정보 토큰 처리 시기 [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md)의 (\**pRating*) 매개 변수를 100와 같지 않습니다.<br /><br /> SQL_ATTR_DBC_INFO_TOKEN 집합 전용입니다. 사용 하는 것이 불가능 **SQLGetConnectAttr** 하거나 **SQLGetConnectOption** 이 값을 검색 합니다. 드라이버 관리자의 **SQLSetConnectAttr** 응용 프로그램은이 특성을 설정 하지 않아야 하므로 SQL_ATTR_DBC_INFO_TOKEN를 허용 하지 것입니다.<br /><br /> SQL_ATTR_DBC_INFO_TOKEN를 설정한 후 SQL_ERROR를 반환 하는 드라이버를 하는 경우 풀에서 방금 가져온 연결 해제 됩니다. 그런 다음 드라이버 관리자는 다른 연결 풀에서 가져올 하려고 합니다. 참조 [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md) 자세한 내용은 합니다.|  
+|(ODBC 3.8 SQL_ATTR_DBC_INFO_TOKEN|설정 하는 데 대 SQLPOINTER 값 다시는 dbc 입니다에 연결 정보 토큰 처리 시기 [SQLRateConnection](../../../odbc/reference/syntax/sqlrateconnection-function.md)의 (\**pRating*) 매개 변수를 100와 같지 않습니다.<br /><br /> SQL_ATTR_DBC_INFO_TOKEN 집합 전용입니다. 사용 하는 것이 불가능 **SQLGetConnectAttr** 하거나 **SQLGetConnectOption** 이 값을 검색 합니다. 드라이버 관리자의 **SQLSetConnectAttr** 응용 프로그램은이 특성을 설정 하지 않아야 하므로 SQL_ATTR_DBC_INFO_TOKEN를 허용 하지 것입니다.<br /><br /> SQL_ATTR_DBC_INFO_TOKEN를 설정한 후 SQL_ERROR를 반환 하는 드라이버를 하는 경우 풀에서 방금 가져온 연결 해제 됩니다. 그런 다음 드라이버 관리자는 다른 연결 풀에서 가져올 하려고 합니다. 참조 [ODBC 드라이버에서 연결 풀 인식 개발](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md) 자세한 내용은 합니다.|  
 |SQL_ATTR_ENLIST_IN_DTC (ODBC 3.0)|Microsoft 구성 요소 서비스에 의해 조정 된 분산 트랜잭션에서 ODBC 드라이버를 사용할지 여부를 지정 하는 대 SQLPOINTER 값입니다.<br /><br /> DTC OLE 트랜잭션 개체를 SQL Server, 또는 SQL_DTC_DONE DTC와 연결 종료에 내보낼 트랜잭션을 지정 하는 전달 합니다.<br /><br /> 클라이언트는 MS DTC 트랜잭션을 시작 하 여 트랜잭션을 나타내는 MS DTC 트랜잭션 개체를 만들 Microsoft Distributed Transaction Coordinator (MS DTC) OLE itransactiondispenser:: Begintransaction 메서드를 호출 합니다. 그러면 응용 프로그램이 ODBC 연결을 사용 하 여 트랜잭션 개체를 연결 하는 SQL_ATTR_ENLIST_IN_DTC 옵션을 사용 하 여 SQLSetConnectAttr를 호출 합니다. 관련된 모든 데이터베이스 작업은 MS DTC 트랜잭션의 보호 아래 수행됩니다. 응용 프로그램에 대 한 호출에서는 sql_dtc_done과 함께 SQLSetConnectAttr DTC와 연결을 종료 합니다. 자세한 내용은 MS DTC 설명서를 참조하십시오.|  
 |SQL_ATTR_LOGIN_TIMEOUT (ODBC 1.0)|로그인 요청을 응용 프로그램에 반환 하기 전에 완료 될 때까지 기다리는 시간 (초) 수에 해당 하는 SQLUINTEGER 값입니다. 기본값은 드라이버에 따라 다릅니다. 하는 경우 *ValuePtr* 이 0 이면의 제한 시간이 비활성화 되었는지 이며 연결 시도 무기한으로 대기 합니다.<br /><br /> 지정된 된 시간 제한 데이터 원본에서 최대 로그인 제한 시간을 초과 하면 드라이버 해당 값을 대체 하 고 SQLSTATE 01S02를 반환 합니다 (옵션 값이 변경 됨).|  
 |SQL_ATTR_METADATA_ID (ODBC 3.0)|카탈로그 함수의 문자열 인수를 처리 하는 방법을 결정 하는 SQLUINTEGER 값입니다.<br /><br /> 면 SQL_TRUE를 카탈로그 함수의 문자열 인수는 식별자로 처리 됩니다. 대/소문자는 중요 하지 않습니다. Nondelimited 문자열에 대 한 드라이버 후행 공백을 제거한 문자열을 대문자로 정리 됩니다. 구분 기호로 분리 된 문자열에 대 한 드라이버 선행 또는 후행 공백을 제거 하 고 무엇이 든 간에 구분 기호 문자 그대로 사용 합니다. 함수 반환 SQL_ERROR 및 SQLSTATE HY009 null 포인터로 설정 되어 이러한 인수 중 하나 (null 포인터를 잘못 사용).<br /><br /> 경우 SQL_FALSE를 카탈로그 함수의 문자열 인수를 사용 하는 식별자로 처리 되지 됩니다. 대/소문자는 중요 합니다. 포함할 수 있습니다 하거나 문자열 검색 패턴으로 인수에 따라.<br /><br /> 기본값은 SQL_FALSE입니다.<br /><br /> *TableType* 인수의 **SQLTables**,이 특성에 의해 영향을 받지 않습니다 값 목록을 사용 합니다.<br /><br /> SQL_ATTR_METADATA_ID 문 수준에서 설정할 수도 있습니다. (은 연결 특성 문 특성 이기도 합니다.)<br /><br /> 자세한 내용은 [카탈로그 함수의 인수](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)합니다.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8baa3c5a-cb40-42d0-b966-00e6d55368e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 301aecad91702c1b851488e70f4de77858439d3d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 802d2075a0146febc4521fb17b65f236533596bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907306"
 ---
 # <a name="mslogreaderagents-transact-sql"></a>MSlogreader_agents(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52823252"
 |**name**|**nvarchar(100)**|로그 판독기 에이전트의 이름입니다.|  
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
-|**게시**|**sysname**|게시의 이름입니다.|  
+|**publication**|**sysname**|게시의 이름입니다.|  
 |**local_job**|**bit**|로컬 배포자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 있는지 여부를 나타냅니다.|  
 |**job_id**|**binary(16)**|작업 ID입니다.|  
 |**profile_id**|**int**|구성 ID를 [MSagent_profiles](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) 테이블입니다.|  
@@ -47,7 +46,7 @@ ms.locfileid: "52823252"
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar(524)**||  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

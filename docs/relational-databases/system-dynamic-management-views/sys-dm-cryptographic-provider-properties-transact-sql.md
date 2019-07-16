@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 024b0095-6766-4189-a39a-d316c5ec2874
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f8f497019dea80bbe79903c60531f506d7950371
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc1e0915fb48b42429bb2821476f98154ac39451
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005107"
 ---
 # <a name="sysdmcryptographicproviderproperties-transact-sql"></a>sys.dm_cryptographic_provider_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62741987"
   등록된 암호화 공급자에 대한 정보를 반환합니다.  
   
  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |provider_id|**int**|암호화 공급자의 ID 번호입니다.|  
 |guid|**uniqueidentifier**|고유한 공급자 GUID입니다.|  
@@ -49,7 +48,7 @@ ms.locfileid: "62741987"
 |symmetric_key_import|**tinyint**|0(지원되지 않음)<br /><br /> 1(지원됨)|  
 |symmetric_key_persistance|**tinyint**|0(지원되지 않음)<br /><br /> 1(지원됨)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sys.dm_cryptographic_provider_properties 뷰는 누구든지 볼 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  

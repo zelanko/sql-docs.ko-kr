@@ -19,23 +19,22 @@ helpviewer_keywords:
 ms.assetid: c5150d18-e8b7-48a7-ada7-77c583af6e41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d2622328b29141e145a9877952b9d2a97c0994ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef7a5456f0bae470bcbf1f12f37843aa6c311d78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984915"
 ---
 # <a name="dbosysnotifications-transact-sql"></a>dbo.sysnotifications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   각 알림에 대해 한 행을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**alert_id**|**int**|경고의 ID입니다.|  
 |**operator_id**|**int**|알림을 전달하는 대상이 되는 운영자의 ID입니다.|  
-|**notification_method**|**tinyint**|알림 방법입니다.<br /><br /> **1** = 전자 메일<br /><br /> **2** = 호출기<br /><br /> **4** = **netsend**<br /><br /> **7** = All|  
+|**notification_method**|**tinyint**|알림 방법입니다.<br /><br /> **1** = 전자 메일<br /><br /> **2** = 호출기<br /><br /> **4** = **netsend**<br /><br /> **7** = all|  
   
   

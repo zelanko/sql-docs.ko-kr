@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7f9d9530-6c04-41d9-bbe7-d91820a30066
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2bbe1636db483ad24f7744fe4d9902c520e07dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d41fc2f01e2cfbc2b20c58ea9be640f2afd8ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006576"
 ---
 # <a name="edit-type-mapping-accesstosql"></a>형식 매핑 (AccessToSQL) 편집
 합니다 **형식 매핑 편집** 대화 상자를 사용 하면 원본 및 대상 데이터베이스 개체 간의 형식이 매핑되는 방법을 지정 합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "63138881"
   
 데이터 형식은 가변 길이의 경우 다음 필드를 아래의 나타납니다 **원본 유형**:  
   
-**보낸 사람**  
+**From**  
 이 매핑에 대 한 최소 길이 지정 합니다. 예를 들어 합니다 **텍스트** 데이터 형식에서 시작 하는 범위에 대 한이 매핑 임을 지정 하려면 10을 입력할 수 있습니다 **text(10)** 합니다.  
   
 **수행할 작업**  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fcc44037ac746621c044bca755fd9b957356dc38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965223"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions 메서드(ADOX)
 에 대 한 사용 권한을 지정 하는 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 또는 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 개체에 있습니다.  
@@ -55,7 +54,7 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  *ObjectTypeId*  
  (선택 사항) A **Variant** OLE DB 사양에 정의 되지 않은 공급자 개체 형식의 GUID를 지정 하는 값입니다. 이 매개 변수는 필요한 경우 *ObjectType* 로 설정 된 **adPermObjProviderSpecific**고, 그렇지 않으면 사용 되지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  공급자 그룹 또는 사용자에 대 한 액세스 권한 설정을 지원 하지 않는 경우 오류가 발생 합니다.  
   
 > [!NOTE]

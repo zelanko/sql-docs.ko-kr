@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 65ab4d5ebf1fbe64d3e85854df186d9ebe098e84
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: 041d6ade2363b4a33528bd44438a2fcb440d61ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928290"
 ---
 # <a name="select-from-ltstructuregtcases"></a>SELECT FROM &lt;구조&gt;합니다. 경우
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -40,23 +39,23 @@ SELECT [TOP n] <expression list> FROM <structure>.CASES
   
 ## <a name="arguments"></a>인수  
  *n*  
- 선택 사항입니다. 반환할 행의 수를 지정하는 정수입니다.  
+ (선택 사항) 반환할 행의 수를 지정하는 정수입니다.  
   
  *식 목록*  
  쉼표로 구분된 식 목록입니다.  
   
  식은 열 식별자, 사용자 정의 함수 및 VBA 함수를 포함할 수 있습니다.  
   
- *구조*  
+ *structure*  
  구조의 이름입니다.  
   
  *조건 식*  
  열 목록에서 반환되는 값을 제한하는 조건입니다.  
   
  *expression*  
- 선택 사항입니다. 스칼라 값을 반환하는 식입니다.  
+ (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  모델과 구조 모두에 드릴스루가 사용되도록 설정되어 있으면 마이닝 구조 및 모델에 대해 드릴스루 권한을 가지는 역할의 모든 멤버는 다음 구문을 사용하여 모델에 포함되지 않은 구조 열을 반환할 수 있습니다.  
   
 ```  
@@ -90,7 +89,7 @@ WHERE IsTestCase();
  학습 사례를 반환하려면 `IsTrainingCase()` 함수를 대체합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [선택 &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [선택 &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  

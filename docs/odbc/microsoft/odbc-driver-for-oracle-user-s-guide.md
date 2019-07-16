@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2ba2ef38d52ff1f8152145ce8c1c3290b426209
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ca4e8aa690aae9c8c3e30ed73745f2054dc396
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915795"
 ---
 # <a name="odbc-driver-for-oracle-user39s-guide"></a>Oracle 사용자에 대 한 ODBC 드라이버&#39;가이드
 > [!IMPORTANT]  
@@ -40,7 +39,7 @@ ms.locfileid: "62468833"
   
 -   [Oracle용 ODBC 드라이버 구성](../../odbc/microsoft/configuring-the-odbc-driver-for-oracle.md)  
   
--   [데이터 원본에 연결](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
+-   [데이터 소스에 연결](../../odbc/microsoft/connecting-to-a-data-source-odbc-driver-for-oracle.md)  
   
 -   [설치된 Oracle 구성 요소 확인](../../odbc/microsoft/determining-installed-oracle-components.md)  
   

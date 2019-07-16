@@ -1,5 +1,5 @@
 ---
-title: 편집 또는 삭제 (Analyisis Services-다차원) | Microsoft Docs
+title: (&#40;analysis Services-다차원) 파티션 편집 또는 삭제 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 739775890b324c89357ec4f1ba8f627277788087
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178222"
 ---
 # <a name="edit-or-delete-partitions-analyisis-services---multidimensional"></a>파티션 편집 또는 삭제(Analyisis Services - 다차원)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,11 +30,11 @@ ms.locfileid: "34024330"
 >  또는 파티션 빌드, 병합 및 삭제 태스크를 자동화하는 XMLA 스크립트를 사용할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 또는 예약된 태스크로 실행되는 사용자 지정 SSIS 패키지에서 XMLA 스크립트를 만들고 실행할 수 있습니다. 자세한 내용은 [SSIS를 사용하여 Analysis Services 관리 태스크 자동화](../../analysis-services/instances/automate-analysis-services-administrative-tasks-with-ssis.md)를 참조하세요.  
   
 ## <a name="partition-source"></a>파티션 원본  
- 파티션의 원본 테이블 또는 명명된 쿼리를 지정합니다. 원본 테이블을 변경하려면 셀을 클릭한 다음 찾아보기 (**...**) 단추를 클릭합니다.  
+ 파티션의 원본 테이블 또는 명명된 쿼리를 지정합니다. 원본 테이블을 변경하려면 셀을 클릭한 다음 찾아보기 ( **...** ) 단추를 클릭합니다.  
   
  ![파티션 창의 원본 열](../../analysis-services/multidimensional-models/media/ssas-partitionsource.png "파티션 창의 원본 열")  
   
- 파티션이 쿼리를 기반으로 하는 경우 찾아보기 (**...**) 단추를 클릭하여 쿼리를 편집합니다. 이렇게 하면 파티션의 **원본** 속성이 편집됩니다. 자세한 내용은 [다른 팩트 테이블을 사용하도록 파티션 원본 변경](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md)을 참조하세요.  
+ 파티션이 쿼리를 기반으로 하는 경우 찾아보기 ( **...** ) 단추를 클릭하여 쿼리를 편집합니다. 이렇게 하면 파티션의 **원본** 속성이 편집됩니다. 자세한 내용은 [다른 팩트 테이블을 사용하도록 파티션 원본 변경](../../analysis-services/multidimensional-models/change-a-partition-source-to-use-a-different-fact-table.md)을 참조하세요.  
   
  데이터가 검색되는 외부 데이터 원본의 원래 원본 테이블과 동일한 구조를 가진 데이터 원본 뷰의 테이블을 지정할 수 있습니다. 원본은 큐브 데이터베이스의 모든 데이터 원본 또는 데이터 원본 뷰에 있을 수 있습니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "34024330"
   
  큐브에 있는 각 측정값 그룹의 각 파티션에 대해 스토리지를 별도로 구성할 수 있습니다. 큐브 또는 측정값 그룹에 대한 기본 스토리지 설정을 구성할 수도 있습니다. 스토리지는 큐브 마법사의 **파티션** 탭에서 구성합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [만들기 및 관리 로컬 파티션에 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/create-and-manage-a-local-partition-analysis-services.md)   
  [집계 & #40; 디자인 Analysis Services-다차원 & #41;](../../analysis-services/multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)   
  [Analysis Services & #40;의 파티션 병합 SSAS-다차원 데이터 & #41;](../../analysis-services/multidimensional-models/merge-partitions-in-analysis-services-ssas-multidimensional.md)  

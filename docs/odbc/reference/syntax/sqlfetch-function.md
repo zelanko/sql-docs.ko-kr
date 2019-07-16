@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15074b31b1c147ef78a898dbb8624f3b40358d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f9b3171d496f54942e7ac1005acea1b3566ff76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003071"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 함수
 **규칙**  
@@ -54,7 +53,7 @@ SQLRETURN SQLFetch(
   
  다중 행 작업의 하나 또는 더 많은 전부는 아니지만, 행에 오류가 발생 하 고에서 오류가 발생할 경우 SQL_ERROR가 반환 하는 경우 모든 해당 SQLSTATEs SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR (제외 01xxx SQLSTATEs) 반환할 수 있는, sql_success_with_info가 반환 됩니다는 단일 행 작업입니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|공백이 아닌 문자 또는 NULL이 아닌 이진 데이터의 잘림 문자열 또는 이진 데이터 열에 대 한 반환 했습니다. 문자열 값이 오른쪽 잘림 이었습니다.|  
@@ -107,8 +106,8 @@ SQLRETURN SQLFetch(
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
 |시작 하기 전에|1|  
-|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
-|*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|종료 후|  
+|*CurrRowsetStart* \< =  *LastResultRow-RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* > *LastResultRow-RowsetSize*[1]|종료 후|  
 |종료 후|종료 후|  
   
  [1] 행 집합 크기 인출 간에 변경 되 면 이전 인출에 사용 된 행 집합 크기입니다.  
@@ -177,12 +176,12 @@ SQLRETURN SQLFetch(
   
  다음 값을 행 상태 배열이 반환 됩니다.  
   
-|행 상태 배열 값입니다.|Description|  
+|행 상태 배열 값입니다.|설명|  
 |----------------------------|-----------------|  
 |SQL_ROW_SUCCESS|행을 성공적으로 가져온 및이 결과 집합에서 마지막으로 인출 된 이후 변경 되지 않은 합니다.|  
 |SQL_ROW_SUCCESS_WITH_INFO|행을 성공적으로 가져온 및이 결과 집합에서 마지막으로 인출 된 이후 변경 되지 않은 합니다. 그러나 행에 대 한 경고가 반환 되었습니다.|  
 |SQL_ROW_ERROR|행을 인출 하는 동안 오류가 발생 했습니다.|  
-|SQL_ROW_UPDATED[1],[2], and [3]|행을 성공적으로 가져온 및이 결과 집합에서 마지막으로 인출 된 이후 변경 되었습니다. 행이 결과 집합에서 다시 인출 됩니다 아니면으로 새로 고쳐집니다 **SQLSetPos**, 행의 새 상태에는 상태가 변경 됩니다.|  
+|SQL_ROW_UPDATED [1], [2] 및 [3]|행을 성공적으로 가져온 및이 결과 집합에서 마지막으로 인출 된 이후 변경 되었습니다. 행이 결과 집합에서 다시 인출 됩니다 아니면으로 새로 고쳐집니다 **SQLSetPos**, 행의 새 상태에는 상태가 변경 됩니다.|  
 |SQL_ROW_DELETED[3]|행이 결과 집합에서 마지막으로 페치된 이후로 삭제 되었습니다.|  
 |SQL_ROW_ADDED[4]|행으로 삽입 된 **SQLBulkOperations**합니다. 행이 결과 집합에서 다시 인출 됩니다 아니면으로 새로 고쳐집니다 **SQLSetPos**, 상태가 SQL_ROW_SUCCESS입니다.|  
 |SQL_ROW_NOROW|행 집합 결과 집합의 끝을 중첩 하 고 행이 행 상태 배열이 요소에 해당 하는 반환 된 키를 누릅니다.|  

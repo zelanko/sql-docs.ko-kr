@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 30ec1817d4f22ff8ee23746f925943397981382f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a359251dbb2bd2a2685e5d9fb91d5c1603950c25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63046925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986308"
 ---
 # <a name="aggregate-functions---count"></a>집계 함수 - count
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +38,13 @@ fn:count($arg as item()*) as xs:integer
  *$arg*  
  수를 셀 항목입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  0을 반환 *$arg* 가 빈 시퀀스입니다.  
   
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>1\. count() XQuery 함수를 사용하여 제품 모델 제조의 작업 센터 위치 수 계산  
+### <a name="a-using-the-count-xquery-function-to-count-the-number-of-work-center-locations-in-the-manufacturing-of-a-product-model"></a>A. count() XQuery 함수를 사용하여 제품 모델 제조의 작업 센터 위치 수 계산  
  다음 쿼리에서는 제품 모델(ProductModelID=7)의 제조 프로세스에서 작업 센터 위치 수를 계산합니다.  
   
 ```  

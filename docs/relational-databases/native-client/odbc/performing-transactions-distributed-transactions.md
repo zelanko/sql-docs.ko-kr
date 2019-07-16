@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 179885276bdda206e4414bd22675e97449df9129
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: fc61ad955be287faad20289245ca4520efcd4bbd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913171"
 ---
 # <a name="create-a-distributed-transaction"></a>분산된 트랜잭션을 만들려면
 
@@ -79,6 +78,6 @@ MSDTC는 Azure SQL Database 또는 Azure SQL Data Warehouse에 대 한 지원 �
 - TRANSACT-SQL을 사용 하 여 연결 된 서버
 - JDBC 드라이버
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [트랜잭션 수행(ODBC)](performing-transactions-in-odbc.md)

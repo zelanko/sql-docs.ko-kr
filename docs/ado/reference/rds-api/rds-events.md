@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e03739e0-8169-46d6-9956-556b644a7645
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 209187c5620ed380b268eeb3eb5d34cd1c1da836
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23ef18b438f309ff8cf6ed641a3bdcb6b375a3cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963693"
 ---
 # <a name="rds-events"></a>RDS 이벤트
 > [!IMPORTANT]

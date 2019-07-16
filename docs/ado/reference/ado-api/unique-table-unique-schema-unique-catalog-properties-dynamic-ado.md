@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f653af8294002bf73b98bd4adc096fac8ba1658
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911673"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>고유 테이블, 고유 스키마, 고유 카탈로그 속성-동적 (ADO)
 특정 기본 테이블에 밀접 하 게 제어 수정 하면를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 여러 기본 테이블에서 조인 작업을 하 여 형성 하는 합니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "66710490"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 **문자열** 값 테이블, 스키마 또는 카탈로그의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  원하는 기본 테이블에는 해당 카탈로그, 스키마 및 테이블 이름으로 고유 하 게 식별 됩니다. 경우는 **고유 테이블** 속성을 설정의 값을 **고유한 스키마** 또는 **고유 카탈로그** 속성은 기본 테이블을 찾는 데. 의도 한 것 이지만 필수는 하나 또는 둘 다를 **고유한 스키마** 및 **고유 카탈로그** 하기 전에 속성을 설정할 수는 **고유 테이블** 속성을 설정 합니다.  
   
  기본 키를 **고유 테이블** 전체의 기본 키로 처리 됩니다 **Recordset**합니다. 기본 키에 필요한 모든 메서드에 사용 되는 키입니다.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7080c888-323b-4206-a1ab-e6c51f9e2579
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f8968661442adabe4c04608ca5a5bb5362341c4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f0a304020b972b29d521bd32da3f98b8d3fdfc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989997"
 ---
 # <a name="logshippingmonitorhistorydetail-transact-sql"></a>log_shipping_monitor_history_detail(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62719625"
   
  기록 및 모니터링과 연관된 테이블은 주 서버와 보조 서버에서도 사용됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**uniqueidentifier**|백업의 경우 주 ID, 복사나 복원의 경우 보조 ID입니다.|  
 |**agent_type**|**tinyint**|로그 전달 작업의 유형입니다.<br /><br /> 0 = 백업<br /><br /> 1 = 복사<br /><br /> 2 = 복원|  
@@ -43,7 +42,7 @@ ms.locfileid: "62719625"
 |**log_time_utc**|**datetime**|레코드가 생성된 날짜와 시간(UTC)입니다.|  
 |**message**|**nvarchar(max)**|메시지 내용입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 테이블에는 로그 전달 에이전트에 대한 기록 세부 정보가 포함됩니다. 에이전트 세션을 식별 하려면 열을 사용 **agent_id**하십시오 **agent_type**, 및 **session_id**합니다. 정렬할 에이전트 세션에 대 한 기록 세부 정보를 보려는 **log_time**합니다.  
   
  주 서버와 관련 된 정보에서 주 서버에 저장 됩니다 원격 모니터 서버에 저장 되는 것 외에도 해당 **log_shipping_monitor_history_detail** 테이블 및 보조 데이터베이스에 관련 된 정보 서버에서 보조 서버에도 저장 됩니다 해당 **log_shipping_monitor_history_detail** 테이블입니다.  

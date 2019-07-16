@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c90a8050-0ff4-4c83-9925-261f2f2ccfe9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9992b0f7e7281ec318f978ff487107fc832c961f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7cb94edab6b5422c315b71c2900662f85aa1e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963506"
 ---
 # <a name="refresh-method-rds"></a>Refresh 메서드(RDS)
 에 지정 된 데이터 원본 다시 쿼리 합니다 [Connect](../../../ado/reference/rds-api/connect-property-rds.md) 속성 및 쿼리 결과 업데이트 합니다.  

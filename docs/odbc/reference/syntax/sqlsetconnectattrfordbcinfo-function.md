@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a28fadb9-b998-472a-b252-709507e92005
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15366693f212690176620bd1b395dae856ff1302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f16cac6a715716dcef0a1c2b337716835c14b2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910369"
 ---
 # <a name="sqlsetconnectattrfordbcinfo-function"></a>SQLSetConnectAttrForDbcInfo 함수
 **규칙**  
@@ -69,7 +68,7 @@ SQLRETURN  SQLSetConnectAttrForDbcInfo(
 ## <a name="diagnostics"></a>진단  
  동일 [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)드라이버 관리자를 사용 한다는 점을 제외 하면는 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN의와 **처리할** 의 *hDbcInfoToken* .  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **SQLSetConnectAttrForDbcInfo** 같습니다 **SQLSetConnectAttr**, 하지만 연결 핸들에 연결 정보 토큰에 대 한 특성 대신 설정 합니다. 예를 들어 경우 **SQLSetConnectAttr** 특성을 인식 하지 못하는 **SQLSetConnectAttrForDbcInfo** 해당 특성에 대 한도 SQL_ERROR를 반환 해야 합니다.  
   
  드라이버 풀 ID를 계산 하려면이 특성을 무시 해야 드라이버가 SQL_ERROR 또는 SQL_INVALID_HANDLE 반환 될 때마다 또한 드라이버 관리자에서 진단 정보를 가져옵니다 *hDbcInfoToken*, 응용 프로그램에 SQL_SUCCESS_WITH_INFO를 반환 하 고 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 고 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md). 따라서 응용 프로그램 몇 가지 특성을 설정할 수 없습니다는 이유는 무엇에 대 한 정보를 검색할 수 있습니다.  

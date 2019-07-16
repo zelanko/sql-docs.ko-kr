@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 913cbb549632383c239d6f7049e448b5ba5de6f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bec9c19f406586136ce4181805cf5d1c4333fcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965467"
 ---
 # <a name="procedure-object-properties-methods-and-events"></a>프로시저 개체 속성, 메서드 및 이벤트
 ## <a name="properties"></a>속성  

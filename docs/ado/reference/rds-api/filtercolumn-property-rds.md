@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: eed6a3f1ad03ae9cfb09695cfc7152df726c8244
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e88cb6f8d563df66a8faaa84d5aeafaa9d359e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964089"
 ---
 # <a name="filtercolumn-property-rds"></a>FilterColumn 속성(RDS)
 필터 조건을 평가 하는 열을 나타냅니다.  

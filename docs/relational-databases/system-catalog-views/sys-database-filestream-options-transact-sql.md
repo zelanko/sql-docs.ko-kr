@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3383c607-0bbc-456a-ab37-7230f4cbf0e9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3038b27084dce6a84436e658c66b77dc61ead49e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 95d9c980927d565b907d666af1317e883126087e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915031"
 ---
 # <a name="sysdatabasefilestreamoptions-transact-sql"></a>sys.database_filestream_options(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "52543021"
  FileTables 기능에 대한 자세한 내용은 [FileTables &#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
   
   
-|Column|형식|Description|  
+|Column|type|설명|  
 |------------|----------|-----------------|  
 |**database_id**|**int**|데이터베이스의 ID입니다. 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유합니다.|  
 |**directory_name**|**nvarchar(255)**|모든 FileTable 네임스페이스에 대한 데이터베이스 수준 디렉터리입니다.|  

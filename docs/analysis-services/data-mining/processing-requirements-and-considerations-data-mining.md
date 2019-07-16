@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4228f5ae90f7fdd2510787b6fca6ad10f7302e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016150"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182473"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>처리 요구 사항 및 고려 사항(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34016150"
   
  모델을 처리할 때 모델은 데이터 원본에서 데이터를 다시 읽지 않고 대신 마이닝 구조에서 데이터의 요약을 가져옵니다. 캐시된 인덱스와 함께 만든 큐브를 사용하여 사례 데이터가 캐시되면 서버는 모델 학습을 위한 독립 스레드를 만듭니다.  
   
- 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 병렬 모델 처리를 지 원하는 참조 하십시오 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473)합니다.  
+ 버전에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 병렬 모델 처리를 지 원하는 참조 [SQL Server 2012 버전에서 지 원하는 기능](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473) 합니다.  
   
 ##  <a name="bkmk_ProcessStructures"></a> 마이닝 구조 처리  
  모든 종속 모델과 함께 또는 따로 마이닝 구조를 처리할 수 있습니다. 일부 모델이 처리하는 데 오랜 시간이 소요될 것으로 예상되어 해당 작업을 지연시키려는 경우 마이닝 구조를 모델과 따로 처리하는 것이 유용할 수 있습니다.  
@@ -58,13 +58,13 @@ ms.locfileid: "34016150"
   
  이러한 시나리오에서는 마이닝 모델도 처리됩니다.  
   
- **프로젝트 배포**: 프로젝트 설정 및 프로젝트의 현재 상태에 따라 프로젝트를 배포할 때 프로젝트의 마이닝 모델은 대개 전체적으로 처리됩니다.  
+ **프로젝트의 배포**: 프로젝트의 마이닝 모델 프로젝트 설정 및 프로젝트의 현재 상태에 따라 일반적으로 프로젝트를 배포할 때 전체에서 처리 됩니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서버에 이전에 처리한 버전이 있고 구조에 대한 이후 변경 내용이 없지 않으면 배포 시작 시 처리가 자동으로 시작됩니다. 드롭다운 목록에서 **솔루션 배포** 를 선택하거나 F5 키를 눌러 프로젝트를 배포할 수 있습니다. 다음을 수행할 수 있습니다.  
   
  마이닝 모델이 배포되는 방식을 제어하는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 배포 속성을 설정하는 방법은 [데이터 마이닝 솔루션 배포](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)를 참조하세요.  
   
- **마이닝 모델 이동**: EXPORT 명령을 사용하여 마이닝 모델을 이동하는 경우 모델에 데이터를 제공할 것으로 예상되는 마이닝 구조의 이름이 포함된 모델의 정의만 내보내집니다.  
+ **마이닝 모델 이동**: 내보내기 명령을 사용 하 여 마이닝 모델을 이동 하는 경우 모델의 정의 내보내집니다 해야 모델에 데이터를 제공 하는 마이닝 구조의 이름이 포함 된 합니다.  
   
  EXPORT 및 IMPORT 명령을 사용하는 다음 시나리오에 대한 다시 처리 요구 사항은 다음과 같습니다.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "34016150"
   
  자세한 내용은 [데이터 마이닝 개체 내보내기 및 가져오기](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [마이닝 구조 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  

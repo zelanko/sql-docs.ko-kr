@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6e8edfdc3c6888c34dd789c521bc42c6b919e1a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905641"
 ---
 # <a name="levels-mdx"></a>Levels(MDX)
 
@@ -42,7 +41,7 @@ Hierarchy_Expression.Levels( Level_Name )
  *Level_Name*  
  수준 이름을 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  수준 번호가 지정 된 경우는 **수준** 함수에 지정 된 0부터 시작 위치와 관련 된 수준을 반환 합니다.  
   
  수준 이름이 지정 되는 **수준** 함수는 지정 된 수준을 반환 합니다.  

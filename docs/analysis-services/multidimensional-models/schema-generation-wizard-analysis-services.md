@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 41e1c17aac763657a16327bb038c180f614fcf67
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022980"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165223"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>스키마 생성 마법사(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,16 +32,16 @@ ms.locfileid: "34022980"
   
  일반적으로, 스키마 생성 마법사가 원래 생성했던 개체에서 변경된 내용은 이후에 스키마 생성 마법사가 해당 개체를 다시 생성할 때 덮어쓰게 됩니다. 단, 스키마 생성 마법사가 생성한 테이블에 열을 추가하는 경우는 예외입니다. 이와 같은 경우에는 스키마 생성 마법사가 테이블에 추가된 열 및 해당 열의 데이터를 그대로 유지합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  다음 표에는 스키마 생성 마법사의 작업 방법을 설명하는 추가 항목이 나와 있습니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[스키마 생성 마법사 사용&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/use-the-schema-generation-wizard-analysis-services.md)|주제 영역 데이터베이스와 준비 영역 데이터베이스의 스키마를 생성하는 방법에 대해 설명합니다.|  
 |[데이터베이스 스키마 이해](../../analysis-services/multidimensional-models/understanding-the-database-schemas.md)|주제 영역 데이터베이스와 준비 영역 데이터베이스에 대해 생성되는 스키마에 대해 설명합니다.|  
 |[증분 생성 이해](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)|스키마 생성 마법사의 증분 생성 기능에 대해 설명합니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [다차원 모델의 데이터 원본](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
  [지원되는 데이터 원본&#40;SSAS - 다차원&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b3b8651-de51-46dc-af82-c86c45eac871
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3185da6f25f0e224240ad0891ad448267b26465c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2188cff20411fe90d4858763f65cff7f6fe9c9d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004646"
 ---
 # <a name="functions-on-string-values---substring"></a>문자열 값 함수 - substring
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ fn:substring($sourceString as xs:string?,
  *$length*  
  검색할 문자 개수입니다(옵션). 지정 된 위치에서 모든 문자를 지정 하지 않으면 반환 *$startingLoc* 문자열의 끝까지 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  함수에 3개의 인수를 지정하면 해당 위치 `$sourceString`이 따르는 `$p`의 문자가 반환됩니다.  
   
  `fn:round($startingLoc) <= $p < fn:round($startingLoc) + fn:round($length)`  
@@ -72,8 +71,8 @@ fn:substring($sourceString as xs:string?,
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** 유형 열에는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다.  
   
-### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>1. substring() XQuery 함수를 사용하여 부분 요약 제품 모델 설명 검색  
- 다음 쿼리는 제품 모델에 대해 기술하는 텍스트(문서의 <`Summary`> 요소)에서 처음 50개 문자를 검색합니다.  
+### <a name="a-using-the-substring-xquery-function-to-retrieve-partial-summary-product-model-descriptions"></a>A. substring() XQuery 함수를 사용하여 부분 요약 제품 모델 설명 검색  
+ 제품 모델을 설명 하는 텍스트의 처음 50 개 문자를 검색 하는 쿼리는 <`Summary`> 문서의 요소입니다.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -86,7 +85,7 @@ where CatalogDescription.exist('/pd:ProductDescription')  = 1;
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   합니다 **string ()** 의 문자열 값을 반환 하는 함수를 <`Summary`> 요소입니다. <`Summary`> 요소에 텍스트와 하위 요소(html 서식 지정 요소)가 모두 들어 있고, 이러한 요소를 건너뛰고 모든 텍스트를 검색할 것이기 때문에 이 함수가 사용됩니다.  
+-   합니다 **string ()** 의 문자열 값을 반환 하는 함수를 <`Summary`> 요소입니다. 때문에이 함수를 사용 합니다 <`Summary`> 텍스트와 하위 요소 (html 서식 지정 요소)를 포함 하는 요소 이므로 이러한 요소를 건너뛰고 모든 텍스트를 검색 합니다.  
   
 -   합니다 **substring ()** 함수에서 검색 된 문자열 값에서 처음 50 개 문자를 검색 합니다 **string ()** 합니다.  
   

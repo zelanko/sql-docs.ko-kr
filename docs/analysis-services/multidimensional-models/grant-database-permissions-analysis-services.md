@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f799b086833f0be7b08786aff08e65d202f29674
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177634"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>데이터베이스 권한 부여(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   관계형 데이터베이스의 백그라운드에서 Analysis Services 데이터베이스 관리를 수행하려는 경우 알아두어야 할 첫 번째 사항은 데이터 액세스의 측면에서 데이터베이스가 Analysis Services의 기본 보안 개체가 아니라는 점입니다.  
   
- Analysis Services의 기본 쿼리 구조는 해당 특정 개체에 대한 사용자 권한 집합을 포함하는 큐브(또는 테이블 형식 모델)입니다. 데이터베이스 로그인 및 사용자 권한(보통 **db_datareader**)이 데이터베이스 자체에 설정되는 관계형 데이터베이스 엔진과는 대조적으로 Analysis Services 데이터베이스는 일반적으로 데이터 모델에서 기본 쿼리 개체의 컨테이너입니다. 우선적인 목표가 큐브 또는 테이블 형식 모델의 데이터에 액세스하는 것이라면 일단 데이터베이스 사용 권한을 바이패스하고 [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) 항목으로 이동해도 됩니다.  
+ Analysis Services의 기본 쿼리 구조는 해당 특정 개체에 대한 사용자 권한 집합을 포함하는 큐브(또는 테이블 형식 모델)입니다. 데이터베이스 로그인 및 사용자 권한(보통 **db_datareader**)이 데이터베이스 자체에 설정되는 관계형 데이터베이스 엔진과는 대조적으로 Analysis Services 데이터베이스는 일반적으로 데이터 모델에서 기본 쿼리 개체의 컨테이너입니다. 우선적인 목표가 큐브 또는 테이블 형식 모델에 대 한 데이터 액세스를 사용 하도록 설정 하려면 경우에 이제 데이터베이스 사용 권한을 바이패스 하 고이 항목에서는 바로 이동할 수 있습니다. [큐브 또는 모델 권한 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)합니다.  
   
  Analysis Services의 데이터베이스 사용 권한은 데이터베이스의 모든 권한과 마찬가지로 관리 기능을 광범위하게 사용하도록 설정하거나 처리 작업을 위임한 경우에 더 세밀하게 설정할 수 있습니다. Analysis Services 데이터베이스의 사용 권한 수준이 다음 그림에 나와 있으며 아래에 설명된 대로 **역할 만들기** 대화 상자의 **일반** 창에서 지정합니다.  
   
  Analysis Services에는 로그인이 없습니다. **멤버 자격** 창에서 역할을 만들고 Windows 계정을 할당하기만 하면 됩니다. 관리자를 비롯하여 모든 사용자는 Windows 계정을 사용하여 Analysis Services에 연결합니다.  
   
- ![역할 만들기 대화 상자 보여 주는 데이터베이스 권한](../../analysis-services/multidimensional-models/media/ssas-permsdbrole.png "역할 대화 상자 표시 된 데이터베이스 사용 권한 만들기")  
+ ![역할 대화 상자 보여 주는 데이터베이스 만들기 권한이](../../analysis-services/multidimensional-models/media/ssas-permsdbrole.png "역할 대화 상자 보여 주는 데이터베이스 사용 권한 만들기")  
   
  데이터베이스 수준에서 지정한 세 가지 유형의 사용 권한이 있습니다.  
   
@@ -74,8 +74,8 @@ ms.locfileid: "34024640"
 ## <a name="read-definition"></a>Read Definition  
  **데이터베이스 처리**와 마찬가지로 데이터베이스 수준에서 **정의 읽기** 권한을 설정하면 데이터베이스 내 다른 개체에 연계 효과를 미칩니다. 정의 읽기 권한을 더욱 세밀한 수준으로 설정하려는 경우 일반 창에서 데이터베이스 속성인 정의 읽기 선택을 취소해야 합니다. 자세한 내용은 [개체 메타데이터에 대한 정의 읽기 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 인스턴스에 서버 관리 권한 부여](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [처리 권한 부여 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [처리 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

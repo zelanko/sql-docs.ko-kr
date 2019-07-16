@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ab8bed66cf459bcbf5cdc8f3a645eb25d4c01112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37fd7f3f9cd69dd3702a19bd390ee6601a75dd44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965005"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule 속성(ADOX)
 작업을 수행할 때 기본 나타냅니다 [키](../../../ado/reference/adox-api/key-object-adox.md) 업데이트 됩니다.  
@@ -33,7 +32,7 @@ ms.locfileid: "66705811"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환을 **긴** 값 중 하나일 수 있는 합니다 [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) 상수입니다. 기본값은 **adRINone**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 속성은 읽기 전용 [키](../../../ado/reference/adox-api/key-object-adox.md) 컬렉션에 이미 추가 된 개체입니다.  
   
 ## <a name="applies-to"></a>적용 대상  

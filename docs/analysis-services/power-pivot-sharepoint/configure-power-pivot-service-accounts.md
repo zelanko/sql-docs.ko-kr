@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 55eb472ef14e980f77a47a2c6989031cebec91e9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509548"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208302"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Power Pivot 서비스 계정 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -150,7 +150,7 @@ ms.locfileid: "52509548"
   
 11. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 풀에 사용되는 계정의 이름을 입력한 다음 **확인**을 클릭합니다.  
   
-##  <a name="expired"></a> 문제 해결: 중앙 관리 또는 SharePoint Foundation 웹 응용 프로그램 서비스의 암호 만료로 인해 발생한 HTTP 503 오류 해결  
+##  <a name="expired"></a> 문제 해결: 확인할 HTTP 503 오류 중앙 관리 또는 SharePoint Foundation에 대 한 암호 만료로 인해 웹 응용 프로그램 서비스  
  계정 재설정 또는 암호 만료로 인해 중앙 관리 서비스 또는 SharePoint Foundation 웹 애플리케이션 서비스가 작동을 중지한 경우 SharePoint 중앙 관리 또는 SharePoint 사이트를 열려고 하면 HTTP 503 "서비스를 사용할 수 없음" 오류 메시지가 표시됩니다. 서버를 다시 온라인으로 연결하려면 다음 단계를 따르십시오. 중앙 관리를 사용할 수 있는 경우 만료된 계정 정보를 업데이트할 수 있습니다.  
   
 1.  관리 도구에서 **인터넷 정보 서비스 관리자**를 클릭합니다.  

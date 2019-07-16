@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 80bb427800f57ddaa07e5e53f21b03df9e8317d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21bf98ac97c9a695b7b9576412d43c832011322d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62933687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004665"
 ---
 # <a name="functions-on-sequences---id"></a>시퀀스 함수 - id
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ fn:id($arg as xs:IDREF*) as element()*
  *$arg*  
  하나 이상의 xs:IDREF 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  함수 결과는 후보 xs:IDREF 목록에 있는 하나 이상의 xs:IDREF에 일치하는 xs:ID 값이 있는 문서 순서대로 된 XML 인스턴스의 요소 시퀀스입니다.  
   
  요소와 일치하는 xs:IDREF 값이 없으면 이 함수는 빈 시퀀스를 반환합니다.  
@@ -47,7 +46,7 @@ fn:id($arg as xs:IDREF*) as element()*
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** 유형 열에는 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다.  
   
-### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>1\. IDREF 특성 값을 기반으로 요소 검색  
+### <a name="a-retrieving-elements-based-on-the-idref-attribute-value"></a>A. IDREF 특성 값을 기반으로 요소 검색  
  다음 예에서는 fn: id를 사용 하 여 검색 하는 <`employee`> 요소에 IDREF 관리자 특성을 기반으로 합니다. 이 예에서 관리자 특성은 IDREF 유형 특성이고 eid 특성은 ID 유형 특성입니다.  
   
  특정 관리자 특성 값을 **id ()** 찾습니다 함수는 <`employee`> ID 유형 특성 값이 입력된 IDREF 값 일치 하는 요소. 즉, 특정 직원에 대 한 합니다 **합한 것** 함수는 직원 관리자를 반환 합니다.  

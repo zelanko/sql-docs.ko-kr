@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c762de42fd12509a56fcc22584b4afa57be2eaa5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee7a94a06aa574c84c01cb8b9d05ebfcdf327d44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917595"
 ---
 # <a name="prepared-property-ado"></a>준비된 속성(ADO)
 컴파일된 버전을 저장할지 여부를 나타냅니다는 [명령](../../../ado/reference/ado-api/command-object-ado.md) 실행 하기 전에 합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66703132"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환을 **부울** 값,로 **True**, 명령을 준비할는 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여는 **Prepared** 는 공급자가 준비 된 (또는 컴파일된) 버전에 지정 된 쿼리를 저장 하는 속성을 [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) 하기 전에 속성을 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체의 첫 번째 실행 합니다. 명령의 첫 번째 실행을 저하 될 수 있습니다이 있지만 공급자는 성능이 향상 됩니다. 후속 실행에 대 한 명령의 컴파일된 버전을 사용 공급자 명령을 컴파일한 후 합니다.  
   
  속성이 **False**, 공급자 실행될지를 **명령** 컴파일된 버전을 만들지 않고 직접 개체입니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ceb128aec3a4cbe5ef7180483eb2a033ae57138
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996247"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>부록 B: ODBC 상태 전환 테이블
 이 부록의 표에서 ODBC 함수 환경, 연결, 문 및 설명자 상태 전환을 발생 하는 방법을 보여줍니다. 환경, 연결, 문 또는 설명자의 상태는 일반적으로 핸들 (환경, 연결, 문 또는 설명자)의 해당 형식을 사용 하는 함수를 호출할 수 있습니다 지정 합니다. 환경, 연결, 문 및 설명자 상태는 다음 그림과에서 같이 거의 겹칩니다. 예를 들어, 연결의 정확한 중복 C5 내용과 C6 하 문을 S12 통해 S1을 데이터 원본에 종속 된 다른 데이터 원본에 서로 다른 시간에 트랜잭션 시작 후 D1i (암시적으로 할당 된 설명자) 설명자 상태에 따라 달라 집니다. 설명자와 관련 된 문의 상태를 상태 D1e (명시적으로 할당 된 설명자) 하는 동안에 문일의 상태와 무관 합니다. 각 상태에 대 한 참조 [환경 전환](../../../odbc/reference/appendixes/environment-transitions.md), [연결 전환](../../../odbc/reference/appendixes/connection-transitions.md)하십시오 [문 전환](../../../odbc/reference/appendixes/statement-transitions.md), 및 [설명자 전환 ](../../../odbc/reference/appendixes/descriptor-transitions.md)이 부록의 뒷부분에 나오는.  
@@ -80,7 +79,7 @@ ms.locfileid: "63026878"
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
  이 예제에서 환경 상태 전환의 행에 대 한 테이블 **SQLFreeHandle** 때 *HandleType* SQL_HANDLE_ENV는 다음과 같습니다.  
   
-|E0<br /><br /> 할당되지 않음|E1<br /><br /> 할당|E2<br /><br /> 연결|  
+|E0<br /><br /> 할당되지 않음|E1<br /><br /> Allocated|E2<br /><br /> 연결|  
 |------------------------|----------------------|-----------------------|  
 |(IH)|E0|(HY010)|  
   

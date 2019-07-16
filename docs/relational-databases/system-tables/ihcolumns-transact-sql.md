@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c5d05f2667b6f7196338b182f2b9cca1a84e7b6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990392"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62744175"
   
 ## <a name="definition"></a>정의  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|게시된 열을 식별합니다.|  
 |**publishercolumn_id**|**int**|게시 된 열에 저장 하는 열 메타 데이터를 사용 하 여 연결 합니다 [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) 시스템 테이블입니다.|  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 57fcb0eb-5d40-4ad4-996d-380732de8a3d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ae495950b4fb1b0596d879aba24d4dd76a67e50e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cd79f758d173a2060c21465b35284023942a15a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966611"
 ---
 # <a name="create-method-example-vc"></a>Create 메서드 예제(VC++)
 다음 코드에 사용 하 여 새 Microsoft Jet 데이터베이스를 만드는 방법을 보여 줍니다 합니다 [만들기](../../../ado/reference/adox-api/create-method-adox.md) 메서드.  

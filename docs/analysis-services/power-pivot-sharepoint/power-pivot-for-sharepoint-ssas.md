@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fcfce0a21e66e0ae1e5a440eda0fd32fd7d1964b
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40395323"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164297"
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>SharePoint용 파워 피벗(SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -78,12 +78,12 @@ ms.locfileid: "40395323"
   
  [파워 피벗 모드에서 Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
- [SharePoint용 Power Pivot에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
+ [SharePoint용 파워 피벗에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)  
   
  [SQL Server 2016 비즈니스 인텔리전스에 대한 예제 라이선스 토폴로지 및 비용](http://msdn.microsoft.com/library/682b8711-407a-48d1-9807-415d4c24dad6)  
   
 ## <a name="see-also"></a>관련 항목  
  [Power Pivot 계획 및 배포](http://go.microsoft.com/fwlink/?linkID=220972)   
- [SharePoint 용 파워 피벗 재해 복구](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [SharePoint용 파워 피벗 재해 복구](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

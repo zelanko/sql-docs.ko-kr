@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6e772783-1bc8-4ea7-94b2-7d7a52ea5c47
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7dcec7e665fec8ea1eb1e1dff8d08bb59ee92133
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db2c2dbe6af2a50fc2507a9ade92d83e0502f2ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966915"
 ---
 # <a name="column-object-adox"></a>열 개체(ADOX)
 테이블, 인덱스 또는 키에서 열을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 코드를 만듭니다 **열**:  
   
  `Dim obj As New Column`  

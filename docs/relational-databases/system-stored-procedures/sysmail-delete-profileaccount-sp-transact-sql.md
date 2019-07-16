@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4395114f266345cb7583c45285366c5bd2b7afff
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cf2e5f7e05286da23f4bccc94d1017f00cb7db70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909191"
 ---
 # <a name="sysmaildeleteprofileaccountsp-transact-sql"></a>sysmail_delete_profileaccount_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  지정된 계정과 프로필이 연관되어 있지 않으면 오류를 반환합니다.  
   
  계정은 지정되었으나 프로필이 지정되지 않은 경우 이 저장 프로시저는 모든 프로필에서 지정된 계정을 제거합니다. 예를 들어 기존 SMTP 서버를 종료하려는 경우 각 프로필에서 계정을 제거하는 대신 모든 프로필에서 SMTP 서버를 사용하는 해당 계정을 제거합니다.  

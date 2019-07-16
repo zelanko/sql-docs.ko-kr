@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc8cae9353ad780a0711c77e138246f0be0d7d15
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 4caa5d8ab850c06aec62b84088463dc21bb40ea2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997498"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,13 +47,13 @@ sp_helprole [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**RoleName**|**sysname**|현재 데이터베이스의 역할 이름입니다.|  
 |**RoleId**|**smallint**|ID **RoleName**합니다.|  
 |**IsAppRole**|**int**|0 = **RoleName** 는 응용 프로그램 역할이 아닙니다.<br /><br /> 1 = **RoleName** 응용 프로그램 역할입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  역할에 연결 된 사용 권한을 보려면 사용 하 여 **sp_helprotect**합니다. 데이터베이스 역할의 멤버를 보려면 사용 하 여 **sp_helprolemember**합니다.  
   
 ## <a name="permissions"></a>사용 권한  

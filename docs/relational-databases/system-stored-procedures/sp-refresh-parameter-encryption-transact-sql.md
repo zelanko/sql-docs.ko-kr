@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 00b44baf-fcf0-4095-aabe-49fa87e77316
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f483c6fe53ab980893ba8e1104b46e073336b027
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a5f699f21b1f28537da2e2f0033fe6b17908186a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002466"
 ---
 # <a name="sprefreshparameterencryption-transact-sql"></a>sp_refresh_parameter_encryption (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sys.sp_refresh_parameter_encryption [ @name = ] 'module_name'
 0(성공) 또는 0이 아닌 수(실패)
 
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 경우에 모듈의 매개 변수에 대 한 암호화 메타 데이터를 오래 커질 수 있습니다.   
 * 암호화 속성 테이블에 있는 열의 모듈에 대 한 참조를 업데이트 되었습니다. 예를 들어, 삭제 된 열 및 동일한 이름 이지만 다른 암호화 유형을, 암호화 키 또는 암호화 알고리즘을 사용 하 여 새 열이 추가 되었습니다.  

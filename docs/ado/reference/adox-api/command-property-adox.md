@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ee346a4f73a959f42b4b74967a6f08338775c144
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55f54ed42b121c347bc2640068fd5b4ef702aeb3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966685"
 ---
 # <a name="command-property-adox"></a>Command 속성(ADOX)
 ADO 지정 [명령](../../../ado/reference/ado-api/command-object-ado.md) 만들거나 프로시저를 실행 하는 데 사용할 수 있습니다.  
@@ -30,7 +29,7 @@ ADO 지정 [명령](../../../ado/reference/ado-api/command-object-ado.md) 만들
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 유효한 ADO **명령** 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  가져오기 및 공급자 명령 유지를 지원 하지 않는 경우이 속성을 설정 하는 경우 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  

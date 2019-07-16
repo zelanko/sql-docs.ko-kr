@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 09fec594-53f4-48a5-8edb-c50731c7adb2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cbfeeaa70544c5e2bb19251dfbbccc2e40c22af9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 050de12a1dc1ff91071ae3c81d3b30425f1a590e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912887"
 ---
 # <a name="spdroparticle-transact-sql"></a>sp_droparticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sp_droparticle [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_droparticle** 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
  행 필터링 된 아티클에 대 한 **sp_droparticle** 확인 합니다 **형식** 에서 아티클 열을 [sysarticles &#40;Transact SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블 삭제할지 여부를 뷰 또는 필터도 결정 합니다. 뷰 또는 필터가 자동으로 생성된 경우에는 아티클과 함께 삭제됩니다. 수동으로 만든 경우에는 삭제되지 않습니다.  

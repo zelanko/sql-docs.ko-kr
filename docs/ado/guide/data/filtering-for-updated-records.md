@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 4a798921-d7bb-47c9-a252-550fd9463ec9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 70f74c9c3782cb8da5a12f5b785e410356a2c088
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b5afe84664719da5a1dbc7777aef524be28c459
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925330"
 ---
 # <a name="filtering-for-updated-records"></a>업데이트된 레코드 필터링
 UpdateBatch을 호출 하기 전에 레코드 집합을 연 후 변경 된 레코드만 표시할 레코드 집합 필터 속성 또는 UpdateBatch 마지막 호출을 사용할 수 있습니다. 이렇게 하려면 필터를 그 다음 섹션의 코드 예제에 표시 된 대로 업데이트할 레코드 수를 확인 하려면 같음 설정 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 예제는 UpdateBatch 호출 직전 레코드 집합을 필터링 하 고 레코드를 변경 하는 사용자를 보여 주는 (CancelBatch 메서드 사용) 업데이트를 취소할 수 있도록 하 여 이전 UpdateBatch 예제를 확장 합니다.  
   
 ```  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 726e23868b8e2efe4c567e35af89b58b2716bb5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aaeac9e4b8d542b00df190b366d2c7b9d29f9183
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965794"
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
 유형을 지정 [키](../../../ado/reference/adox-api/key-object-adox.md): 기본, 외래, 또는 고유 합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adKeyPrimary**|1|기본. 키에는 기본 키가입니다.|  
 |**adKeyForeign**|2|키를 외래 키가입니다.|  

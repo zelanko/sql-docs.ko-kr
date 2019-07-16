@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 38477e91-d084-4df7-b1de-b930c5580189
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bb56b0fd04842ba006de99db9b5dcabdca3ee8a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 371f8e2bf9a5d67d68e9c1d48502bf3fa2f81db6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904573"
 ---
 # <a name="sysremotelogins-transact-sql"></a>sys.remote_logins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   원격 로그인 매핑당 한 개의 행을 반환합니다. 이 카탈로그 뷰는 해당 서버에서 들어오는 로컬 로그인을 실제 로컬 로그인으로 매핑하는 데 사용됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|서버의 ID **sys.servers**합니다. 이 이름은 "원격" 서버의 연결에 의해 제공됩니다.|  
 |**remote_name**|**sysname**|연결이 제공하는 매핑할 로그인 이름입니다. NULL인 경우에는 연결에서 지정된 로그인 이름이 사용됩니다.|  

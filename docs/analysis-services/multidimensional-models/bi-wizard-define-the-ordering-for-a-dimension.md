@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6f2e9dfce4abc66e9fa77a7d429c3cdd9a306c69
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209145"
 ---
-# <a name="bi-wizard---define-the-ordering-for-a-dimension"></a>BI 마법사-차원 순서 정의
+# <a name="bi-wizard---define-the-ordering-for-a-dimension"></a>BI 마법사 - 차원의 순서 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   큐브나 차원에 특성 순서 지정 기능을 추가하여 특성 멤버의 순서 지정 방식을 지정할 수 있습니다. 특성의 이름이나 키 또는 특성 관계를 기반으로 하는 다른 특성의 이름이나 키를 기준으로 멤버 순서를 지정할 수 있습니다. 기본적으로 멤버는 이름을 기준으로 순서가 지정됩니다. 이 기능은 차원의 특성에 대한 **OrderBy** 및 **OrderByAttributeID** 속성 설정을 변경합니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "34022250"
 ## <a name="specifying-ordering"></a>순서 지정  
  마법사의 두 번째 **특성 순서 지정** 페이지에서 차원에 있는 모든 특성의 순서를 지정하는 방식을 지정합니다.  
   
- **순서 특성** 열에서 순서 지정에 사용할 특성을 변경할 수 있습니다. 멤버 순서 지정에 사용 하려는 특성 목록에 없으면 목록 아래로 스크롤한 다음 선택  **\<새 특성... >** 열려는 **열 선택** 할 수 있는 대화 상자 차원 테이블의 열을 선택 합니다. **열 선택** 대화 상자에서 열을 선택하면 특성의 멤버 순서를 지정하는 추가 특성이 생성됩니다.  
+ **순서 특성** 열에서 순서 지정에 사용할 특성을 변경할 수 있습니다. 멤버 순서 지정에 사용 하려는 특성 목록에 없는 경우 목록을 아래로 스크롤한 다음 선택  **\<새 특성... >** 열려는 합니다 **열을 선택** 수행할 수 있는 대화 상자 차원 테이블의 열을 선택 합니다. **열 선택** 대화 상자에서 열을 선택하면 특성의 멤버 순서를 지정하는 추가 특성이 생성됩니다.  
   
  그런 다음 **조건** 열에서 **키** 또는 **이름**을 중에서 어떤 기준으로 특성 멤버의 순서를 지정할 것인지 선택합니다.  
   

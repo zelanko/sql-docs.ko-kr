@@ -17,28 +17,27 @@ helpviewer_keywords:
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 537af13edf943e27a634d3a8ba4f0f85c645251f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912399"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>날짜 및 시간 함수(Visual FoxPro ODBC 드라이버)
 다음 표에서 Visual FoxPro ODBC 드라이버;에서 지원 되는 ODBC 날짜 및 시간 함수 동일한 함수에 대 한 Visual FoxPro 문법 ODBC 구문을 다를 경우에 해당 Visual FoxPro 나열 됩니다.  
   
 |ODBC 문법|Visual FoxPro 문법|  
 |------------------|---------------------------|  
-|CURDATE *( )*|DATE *( )*|  
+|CURDATE *)*|날짜 *)*|  
 |CURTIME *( )*|TIME *( )*|  
 |DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH(*date_exp)*|DAY *( )*|  
+|DAYOFMONTH(*date_exp)*|일 *)*|  
 |HOUR *(time_exp)*||  
 |MINUTE *(time_exp)*||  
 |MONTH *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
-|NOW *( )*|DATETIME *( )*|  
+|이제 *)*|DATETIME *( )*|  
 |SECOND *(time_exp)*|SEC *(time_exp)*|  
 |WEEK *(date_exp)*||  
 |YEAR *(date_exp)*||  
@@ -49,7 +48,7 @@ ms.locfileid: "62632773"
   
  분기 *(date_exp)*  
   
- TIMESTAMPADD *(interval, integer_exp, timestamp_exp)*  
+ TIMESTAMPADD *(간격, integer_exp timestamp_exp)*  
   
  TIMESTAMPDIFF *(interval, timestamp_exp1, timestamp_exp2)*  
   
@@ -80,5 +79,5 @@ UPDATE alltypes
    WHERE KEY=111  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이스케이프 시퀀스에 대 한 자세한 내용은 참조 하세요. [ODBC의 이스케이프 시퀀스](../../odbc/reference/develop-app/escape-sequences-in-odbc.md) 에 *ODBC 프로그래머 참조*합니다.

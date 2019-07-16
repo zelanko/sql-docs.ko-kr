@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 43679897bf49e9a2505dad1540f3b494b66f180d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10f3add3cb243d54643c3294104ec2546e7737d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965165"
 ---
 # <a name="table-object-adox"></a>테이블 개체(ADOX)
 열, 인덱스 및 키를 포함 하 여 데이터베이스 테이블을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 코드를 만듭니다 **테이블**:  
   
 ```  

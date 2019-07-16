@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f67f074596bfcf93eb7017a7afe273285f721aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919078"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord 메서드(ADO)
 가 나타내는 엔터티를 삭제 한 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다.  
@@ -38,10 +37,10 @@ Record.DeleteRecord Source, Async
  *원본*  
  (선택 사항) A **문자열** 삭제할 엔터티 (예: 파일 또는 디렉터리)를 식별 하는 URL을 포함 하는 값입니다. 하는 경우 *소스* 생략 되거나 빈 문자열인 경우 현재 표시 된 엔터티를 지정 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 삭제 됩니다. 레코드 컬렉션 레코드인 경우 ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) 의 **adCollectionRecord**, 디렉터리와 같은) 모든 자식 (예를 들어, 하위 디렉터리)도 삭제 됩니다.  
   
- *Async*  
+ *비동기*  
  (선택 사항) A **부울** 값을 때 **True**, 비동기 삭제 작업 임을 지정 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 나타내는 개체에 대 한 작업 **레코드** 이 메서드가 완료 된 후 실패할 수 있습니다. 호출한 후 **DeleteRecord**, **레코드** 때문에 닫아야의 동작을 **레코드** 공급자를 업데이트 하는 시점에 예기치 않은 따라 될 수 있습니다는 **레코드** 데이터 소스를 사용 하 여 합니다.  
   
  이 경우 **레코드** 에서 가져온를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 다음이 작업의 결과 즉시 반영 되지 것입니다는 **레코드 집합**합니다. 새로 고침 합니다 **레코드 집합** 를 닫았다가 다시 열어서, 또는 실행 하 여는 **레코드 집합** [Requery](../../../ado/reference/ado-api/requery-method.md) 메서드를 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드를 또는 [Resync](../../../ado/reference/ado-api/resync-method.md) 메서드.  

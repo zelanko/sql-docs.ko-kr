@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8ef027ec-8512-48fe-8fe2-2ff7cd81e331
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 95117c82c213851d2e0600e65d8061ce532d9933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d35a282acf3b672113ec71b534b4087aa3549285
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905460"
 ---
 # <a name="sqlsetpos-desktop-database-drivers"></a>SQLSetPos(데스크톱 데이터베이스 드라이버)
 에 대 한 대량 모델 의미 체계 **SQLSetPos** 사용 하 여 호출 합니다 *irow* 0 인수 지원 됩니다.  

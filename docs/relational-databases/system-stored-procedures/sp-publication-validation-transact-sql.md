@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c7e6323c8a20aec7d464f7aa6f11a27fc24728d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896618"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,19 +41,19 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@publication=**] **'**_publication'_  
+ [ **@publication=** ] **'** _publication'_  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [**@rowcount_only=**] *rowcount_only*  
+ [ **@rowcount_only=** ] *rowcount_only*  
  테이블에 대해 행 개수만 반환할 것인지 여부입니다. *rowcount_only* 됩니다 **smallint** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬을 수행합니다.<br /><br /> 참고: 아티클이 행 필터링되면 체크섬 작업 대신 행 개수 작업이 수행됩니다.|  
+|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 호환 체크섬을 수행합니다.<br /><br /> 참고: 아티클을 행 필터링을 하는 경우 체크섬 작업 대신 행 개수 작업이 수행 됩니다.|  
 |**1** (기본값)|행 개수 검사만 수행합니다.|  
-|**2**|행 개수와 이진 체크섬을 수행합니다.<br /><br /> 참고: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0 구독자에 대해서는 행 개수 유효성 검사만 수행합니다.|  
+|**2**|행 개수와 이진 체크섬을 수행합니다.<br /><br /> 참고: 에 대 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 7.0 구독자에서 행 개수 유효성 검사만 수행 됩니다.|  
   
- [**@full_or_fast=**] *full_or_fast*  
+ [ **@full_or_fast=** ] *full_or_fast*  
  행 개수를 계산하는 데 사용하는 방법입니다. *full_or_fast* 됩니다 **tinyint** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
@@ -73,7 +72,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_publication_validation** 트랜잭션 복제에 사용 됩니다.  
   
  **sp_publication_validation** 게시와 연관 된 아티클이 활성화 된 후 언제 든 지 호출할 수 있습니다. 프로시저는 수동으로 한 번 실행하거나 데이터의 유효성을 검사하는 예정된 작업의 일부로 정기적으로 실행할 수 있습니다.  

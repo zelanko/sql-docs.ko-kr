@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63030b34e4b607b850f25a67357d62a7184467c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4bd75b2a1ffac44b14c9906e669421d55888c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003084"
 ---
 # <a name="sqlextendedfetch-function"></a>SQLExtendedFetch 함수
 **규칙**  
@@ -75,7 +74,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="diagnostics"></a>진단  
  때 **SQLExtendedFetch** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 연관된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLError**합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLExtendedFetch** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다. 단일 열에서 오류가 발생 하는 경우 **SQLGetDiagField** 호출할 수는 *DiagIdentifier* ;에서 오류가 발생 하는 열을 확인 하려면 SQL_DIAG_COLUMN_NUMBER의 및  **SQLGetDiagField** 호출할 수는 *DiagIdentifier* 열이 포함 된 행을 확인 하려면 SQL_DIAG_ROW_NUMBER입니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|공백이 아닌 문자 또는 NULL이 아닌 이진 데이터의 잘림 문자열 또는 이진 데이터 열에 대 한 반환 했습니다. 문자열 값이 오른쪽 잘림 이었습니다. 숫자 값이 숫자의 소수 부분이 잘렸습니다.  (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f5f58ff2f38ff80d90750901b8943efc00f389c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967157"
 ---
 # <a name="append-method-adox-views"></a>Append 메서드(ADOX 보기)
 새로 만듭니다 [뷰](../../../ado/reference/adox-api/view-object-adox.md) 개체를 추가 하는 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션입니다.  
@@ -41,7 +40,7 @@ Views.Append Name, Command
  *Command*  
  ADO [명령](../../../ado/reference/ado-api/command-object-ado.md) 만들 뷰를 나타내는 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이름 및 특성에 지정 된 데이터 원본에 새 뷰를 만듭니다는 **명령** 개체입니다.  
   
  사용자 지정 하는 명령 텍스트를 뷰가 아닌 프로시저를 나타내는 경우 동작은 공급자에 따라 달라 집니다. **추가** 공급자 명령 유지를 지원 하지 않는 경우 실패 합니다.  

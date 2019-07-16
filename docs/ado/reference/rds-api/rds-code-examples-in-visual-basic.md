@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d512759827820a69fcbff44fe69d9f7b9eb55b66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 292f963ef1534cb9eb70e1e5a73d5f86af264181
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963773"
 ---
 # <a name="rds-code-examples-in-visual-basic"></a>Visual Basic의 RDS 코드 예제
 > [!IMPORTANT]

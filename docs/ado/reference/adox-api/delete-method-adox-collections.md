@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 185c5cad38b19ca3f2aea83ec3a5216e83182fda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be2aa91cf27d7dc12d3cd0c1e0bf719bd43797ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966436"
 ---
 # <a name="delete-method-adox-collections"></a>Delete 메서드(ADOX 컬렉션)
 컬렉션에서 개체를 제거합니다.  
@@ -52,7 +51,7 @@ Collection.Delete Name
  *이름*  
  A **Variant** 이름 또는 삭제할 개체의 서 수 위치 (인덱스)를 지정 하는 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  오류가 발생 하는 경우는 *이름을* 컬렉션에 존재 하지 않습니다.  
   
  에 대 한 [테이블](../../../ado/reference/adox-api/tables-collection-adox.md) 하 고 [사용자](../../../ado/reference/adox-api/users-collection-adox.md) 컬렉션 공급자를 지원 하지 않는 경우 테이블 또는 사용자를 삭제 각각 오류가 발생 합니다. 에 대 한 [프로시저](../../../ado/reference/adox-api/procedures-collection-adox.md) 하 고 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 컬렉션 **삭제** 공급자 명령 유지를 지원 하지 않는 경우 실패 합니다.  

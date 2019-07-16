@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ee9cd360-07e5-4f8a-804b-ad95aecae3e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b38ff4066f7ff693d96f3ef239ef25948b2caf3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33aa08b86767b855b3c5cfc70ceaef785c419aef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002204"
 ---
 # <a name="constructing-sql-statements"></a>SQL 문 생성
 세 가지 방법 중 하나에 SQL 문을 생성할 수 있습니다: 개발, 런타임 시 생성 되거나 사용자가 직접 입력 하는 동안 하드 코딩 합니다.  

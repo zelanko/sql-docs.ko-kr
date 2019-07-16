@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c2f20cbad4a83d17ae4255962d613652e4fb3794
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0151b6388a19fc95227cbfa55a571e0a797d0acc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966577"
 ---
 # <a name="datecreated-property-adox"></a>DateCreated 속성(ADOX)
 개체를 만든 날짜를 나타냅니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66718938"
 ## <a name="return-values"></a>반환 값  
  반환 된 **Variant** 만든 날짜를 지정 하는 값입니다. Null 값이 있으면 **DateCreated** 공급자에서 지원 되지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **DateCreated** 속성이 새로 추가 된 개체에 대 한 null입니다. 새을 추가한 후 [뷰](../../../ado/reference/adox-api/view-object-adox.md) 또는 [프로시저](../../../ado/reference/adox-api/procedure-object-adox.md)를 호출 해야 합니다는 [새로 고침](../../../ado/reference/ado-api/refresh-method-ado.md) 메서드를 [뷰](../../../ado/reference/adox-api/views-collection-adox.md) 또는 [프로시저 ](../../../ado/reference/adox-api/procedures-collection-adox.md) 컬렉션에 대 한 값을 가져오려고 합니다 **DateCreated** 속성입니다.  
   
 ## <a name="applies-to"></a>적용 대상  

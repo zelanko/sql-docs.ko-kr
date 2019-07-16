@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b2afe6074f115c1d9770251c51e6288e9d92ee3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d91b8f41c344d45bfde646d24819e73c0cd8f283
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922220"
 ---
 # <a name="securing-rds-applications"></a>RDS 애플리케이션 보안
 이 항목에서는 rds.에 대 한 보안 정보를 제공합니다.  

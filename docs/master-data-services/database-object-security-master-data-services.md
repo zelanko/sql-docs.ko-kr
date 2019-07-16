@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dd5ba503-7607-45d9-ad0d-909faaade179
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: df262ea32662a160b0a0ebcadc26eb43676271b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65aa1f12870d47e61a0fa634f0281f8bde9c9462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906468"
 ---
 # <a name="database-object-security-master-data-services"></a>데이터베이스 개체 보안(Master Data Services)
 
@@ -46,7 +45,7 @@ ms.locfileid: "65487737"
 ##  <a name="Staging"></a> 데이터 준비  
  다음 표에서 각 보안 개체에는 이름의 일부로 "이름"이 있습니다. 이것은 엔터티를 만들 때 지정된 준비 테이블의 이름을 나타냅니다. 자세한 내용은 [ 개요: 테이블에서 데이터 가져오기&#40;Master Data Services&#41;](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   
-|작업|보안 개체|사용 권한|  
+|Action|보안 개체|사용 권한|  
 |------------|----------------|-----------------|  
 |리프 멤버 및 해당 특성을 만들고, 업데이트하고, 삭제합니다.|stg.name_Leaf|필수: INSERT<br /><br /> 선택 사항: SELECT 및 UPDATE|  
 |리프 준비 테이블의 데이터를 해당 MDS 데이터 집합 테이블에 로드합니다.|stg.udp_name_Leaf|CREATE 문을 실행하기 전에|  
@@ -60,7 +59,7 @@ ms.locfileid: "65487737"
   
 ##  <a name="rules"></a> 비즈니스 규칙에 대해 데이터 유효성 검사  
   
-|작업|보안 개체|사용 권한|  
+|Action|보안 개체|사용 권한|  
 |------------|---------------|-----------------|  
 |비즈니스 규칙에 대해 데이터 버전의 유효성을 검사합니다.|mdm.udpValidateModel|CREATE 문을 실행하기 전에|  
   
@@ -68,7 +67,7 @@ ms.locfileid: "65487737"
   
 ##  <a name="Versions"></a> 버전 삭제  
   
-|작업|보안 개체|사용 권한|  
+|Action|보안 개체|사용 권한|  
 |------------|----------------|-----------------|  
 |삭제할 버전의 ID 확인|mdm.viw_SYSTEM_SCHEMA_VERSION|SELECT|  
 |모델의 버전 삭제|mdm.udpVersionDelete|CREATE 문을 실행하기 전에|  
@@ -77,7 +76,7 @@ ms.locfileid: "65487737"
   
 ##  <a name="Hierarchy"></a> 계층 멤버 권한 즉시 적용  
   
-|작업|보안 개체|사용 권한|  
+|Action|보안 개체|사용 권한|  
 |------------|----------------|-----------------|  
 |멤버 권한 즉시 적용|mdm.udpSecurityMemberProcessRebuildModel|CREATE 문을 실행하기 전에|  
   

@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6898c7fbf326209e7b2071b4bdedf383cefc0642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966040"
 ---
 # <a name="indexes-collection-adox"></a>Indexes 컬렉션(ADOX)
 모든 포함 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 테이블의 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 [추가](../../../ado/reference/adox-api/append-method-adox-indexes.md) 에 대 한 메서드는 **인덱스** 컬렉션이 ADOX에 대 한 고유 합니다. 다음 작업을 수행할 수 있습니다.  
   
 -   새 인덱스를 사용 하 여 컬렉션에 추가 합니다 **Append** 메서드.  

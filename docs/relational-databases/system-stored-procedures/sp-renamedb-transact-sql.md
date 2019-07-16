@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd46309ebd44bdd16da132b9aef1c903ad1f4b78
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: eebf9be216d61163c018e0d43075e636cb383d28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006929"
 ---
 # <a name="sprenamedb-transact-sql"></a>sp_renamedb(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]

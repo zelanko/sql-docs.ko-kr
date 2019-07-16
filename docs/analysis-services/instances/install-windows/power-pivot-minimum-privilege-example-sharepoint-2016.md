@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eac736994b104ffbce855fa1ad6761d592fccad1
-ms.sourcegitcommit: 79d4dc820767f7836720ce26a61097ba5a5f23f2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "40392439"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209477"
 ---
 # <a name="power-pivot-minimum-privilege-example---sharepoint-2016"></a>Power Pivot 최소 권한 예제-SharePoint 2016
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   이 항목에서는 최소 권한을 사용하는 SharePoint 2016용 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 예제에 대해 설명합니다. 이 구성은 세 가지 구성 요소 각각에 대해 다른 계정을 사용하며 계정마다 취소 수준의 권한이 있습니다.  
   
 ## <a name="summary-of-accounts"></a>계정 요약  
- [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 다음의 SharePoint 2016용에서는 Analysis Services 서비스 계정에 네트워크 서비스 계정을 사용할 수 있습니다.: 네트워크 서비스 계정은 SharePoint 2010에서 지원하는 시나리오가 아닙니다. 서비스 계정에 대 한 자세한 내용은 참조 하세요. [Windows 서비스 계정 및 권한 구성](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx)합니다.  
+ [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 다음의 SharePoint 2016용에서는 Analysis Services 서비스 계정에 네트워크 서비스 계정을 사용할 수 있습니다.: 네트워크 서비스 계정은 SharePoint 2010에서 지원하는 시나리오가 아닙니다. 서비스 계정에 대 한 자세한 내용은 참조 하세요. [Windows 서비스 계정 및 권한 구성](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) (http://msdn.microsoft.com/library/ms143504.aspx) 합니다.  
   
  다음 표에는 최소 권한 구성에 대한 이 예에서 사용된 세 계정이 요약되어 있습니다.  
   

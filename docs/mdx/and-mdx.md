@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 30cb8be449c58e10da5c2e91ebec936b3547581d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 930fe19abe7b1d783b4c69ef54b9b2550a05d538
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63249877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017090"
 ---
 # <a name="and-mdx"></a>AND(MDX)
 
@@ -38,7 +37,7 @@ Expression1 AND Expression2
 ## <a name="return-value"></a>반환 값  
  두 매개 변수를 평가 하는 경우 true를 반환 하는 부울 값 **true**이 고, 그렇지 않으면 **false**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **AND** 연산자는 두 식이 모두 부울 값으로 처리 (0으로 **false**이 고, 그렇지 않으면 **true**) 연산자는 논리곱 연산을 수행 하기 전에 합니다. 다음 표에서 설명 하는 방법을 **AND** 연산자로 논리 결합을 수행 합니다.  
   
 |*Expression1*|*Expression2*|반환 값|  

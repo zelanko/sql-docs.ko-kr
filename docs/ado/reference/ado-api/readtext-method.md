@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e7f9a484ecb873a141f9b91a88c64f65ff25336
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6c174d2e6a659a3b9da8f89816b5bdf90342416
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917368"
 ---
 # <a name="readtext-method"></a>ReadText 메서드
 지정한 텍스트에서 문자 수를 읽습니다 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -41,7 +40,7 @@ String = Stream.ReadText ( NumChars)
 ## <a name="return-value"></a>반환 값  
  합니다 **ReadText** 메서드는 지정 된 개수의 문자나 전체 줄을에서 전체 스트림을 읽습니다를 **Stream** 개체를 결과 문자열을 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  하는 경우 *NumChar* 보다 많은 수의 문자 스트림을에 그대로, 남아 있는 문자만 반환 됩니다. 지정 된 길이 맞게 문자열 읽기은 채워지지 *NumChar*합니다. 읽을 문자가 없는 경우 값이 null 인 변형 반환 됩니다. **ReadText** 이전 버전과 읽는 데 사용할 수 없습니다.  
   
 > [!NOTE]

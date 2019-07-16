@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a93e503978779e56250ddf190c61b1b2411050b9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183274"
 ---
 # <a name="feature-selection-data-mining"></a>기능 선택(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34019190"
   
  기능 선택 과정에서 분석가 또는 모델링 도구 또는 알고리즘은 분석의 유용성을 기준으로 적극적으로 특성을 선택하거나 취소합니다.  기계 학습 알고리즘이 모델에서 일반적으로 열의 점수를 매기고 유효성을 검사하는 동안 분석가는 기능을 추가하고 기존 데이터를 제거하거나 수정하기 위해 기능 엔지니어링을 수행할 수 있습니다.  
   
- ![기능 선택 및 엔지니어링 프로세스](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "선택 및 엔지니어링 프로세스 기능")  
+ ![기능 선택 및 엔지니어링 프로세스](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "기능 선택 및 엔지니어링 프로세스")  
   
  즉, 기능 선택은 중요하지 않은 데이터가 너무 많거나, 매우 중요한 데이터가 너무 적은 두 가지 문제를 해결하는 데 도움이 됩니다. 기능 선택의 목표는 모델 작성에 있어 중요한 데이터 원본에서 최소 열 수를 확인하는 것입니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34019190"
 ### <a name="feature-selection-methods-per-algorithm"></a>알고리즘별 기능 선택 방법  
  다음 표에서는 기능 선택을 지원하는 알고리즘, 알고리즘에서 사용하는 기능 선택 방법 및 기능 선택 동작을 제어하기 위해 설정하는 매개 변수를 보여 줍니다.  
   
-|알고리즘|분석 방법|설명|  
+|알고리즘|분석 방법|주석|  
 |---------------|------------------------|--------------|  
 |Naive Bayes|Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|Microsoft Naïve Bayes 알고리즘은 불연속 특성 또는 불연속화된 특성을 허용하므로 흥미도 점수를 사용할 수 없습니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Naive Bayes Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)를 참조하십시오.|  
 |의사 결정 트리|흥미도 점수<br /><br /> Shannon Entropy<br /><br /> Bayesian with K2 Prior<br /><br /> Bayesian Dirichlet with uniform prior(기본값)|이진이 아닌 연속 값이 열에 포함되어 있는 경우 일관성을 보장하기 위해 모든 열에 흥미도 점수가 사용됩니다. 그렇지 않으면 기본 기능 선택 방법이 사용되거나 모델을 만들 때 지정한 방법이 사용됩니다.<br /><br /> 이 알고리즘에 대한 자세한 내용은 [Microsoft Decision Trees Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)를 참조하십시오.|  
@@ -120,7 +120,7 @@ ms.locfileid: "34019190"
   
  기능 선택에 대한 이러한 방법 외에도, 모델에 *모델링 플래그* 를 설정하거나 구조에 *분산 플래그* 를 설정함으로써 의미 있는 특성을 식별하거나 승격시키는 알고리즘 기능을 강화할 수 있습니다. 이러한 개념에 대한 자세한 내용은 [모델링 플래그&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md) 및 [열 배포&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 및 구조 사용자 지정](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   

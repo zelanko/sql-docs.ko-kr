@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d459bafe395a10af75f8c0a721f0a8a08f39b3c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509681"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208516"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Analysis Services 배포 마법사 실행
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52509681"
   
 -   클릭 **시작** > **Microsoft SQL Server** > **배포 마법사**합니다.  
   
-     -또는-  
+     또는  
   
 -   에 **프로젝트** 의 폴더를 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 두 번 클릭 합니다 \<프로젝트 이름 >.asdatabase 파일.
     > [!NOTE]  

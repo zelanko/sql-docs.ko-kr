@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926672"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Microsoft Active Directory 서비스용 Microsoft OLE DB 공급자
 서비스 인터페이스 ADSI (Active Directory) 공급자에는 ADO를 ADSI 통해 다른 유형의 디렉터리 서비스에 연결할 수 있습니다. 그러면 ADO 응용 프로그램 읽기 전용 액세스에는 Microsoft Windows NT 4.0 및 Microsoft Windows 2000 디렉터리 서비스, 모든 LDAP 호환 디렉터리 서비스 및 Novell Directory Services 외에도 있습니다. ADSI 자체는 다른 디렉터리에 새 공급자 제공 액세스의 경우 ADO 응용 프로그램에서 원활 하 게 액세스할 수 있게 됩니다. 공급자 모델에 기반 합니다. ADSI 공급자는 자유 스레드된 및 유니코드를 사용할 수 있습니다.  
@@ -60,9 +59,9 @@ ADSDSOObject
 "Root; Filter; Attributes[; Scope]"  
 ```  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|*Root*|나타냅니다 합니다 **ADsPath** 검색 (즉, 검색의 루트)를 시작 하는 개체입니다.|  
+|*루트*|나타냅니다 합니다 **ADsPath** 검색 (즉, 검색의 루트)를 시작 하는 개체입니다.|  
 |*Assert*|RFC 1960 형식의 검색 필터를 나타냅니다.|  
 |*특성*|쉼표로 구분 된 목록이 반환 될 특성을 나타냅니다.|  
 |*범위*|(선택 사항) A **문자열** 검색의 범위를 지정 하는 합니다. 다음 중 하나일 수 있습니다.<br /><br /> -기본-기본 개체 (검색의 루트)만 검색할 수 있습니다.<br />-OneLevel-수준이 하나만 검색 합니다.<br />-하위 트리-전체 하위 트리를 검색 합니다.|  
@@ -80,7 +79,7 @@ ADSDSOObject
 objectClass='user' AND objectCategory='Person'"  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  저장된 프로시저 호출 또는 간단한 테이블 이름을 공급자 허용 하지 않습니다 (예를 들어 합니다 [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md) 속성은 항상 **adCmdText**). 명령 텍스트 요소를 보다 정확 하 게에 대 한 Active Directory Service Interfaces 설명서를 참조 합니다.  
   
 ## <a name="recordset-behavior"></a>레코드 집합 동작  
@@ -121,21 +120,21 @@ objectClass='user' AND objectCategory='Person'"
 |[취소](../../../ado/reference/ado-api/cancel-method-ado.md)|아니요|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|아니요|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|아니요|  
-|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|사용자 계정 컨트롤|  
-|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|사용자 계정 컨트롤|  
+|[복제](../../../ado/reference/ado-api/clone-method-ado.md)|예|  
+|[닫기](../../../ado/reference/ado-api/close-method-ado.md)|예|  
 |[Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|아니요|  
-|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|사용자 계정 컨트롤|  
-|[이동](../../../ado/reference/ado-api/move-method-ado.md)|사용자 계정 컨트롤|  
-|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|  
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|  
-|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|  
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|사용자 계정 컨트롤|  
-|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|사용자 계정 컨트롤|  
-|[파일](../../../ado/reference/ado-api/open-method-ado-recordset.md)|사용자 계정 컨트롤|  
-|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|사용자 계정 컨트롤|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|사용자 계정 컨트롤|  
-|[지원](../../../ado/reference/ado-api/supports-method.md)|사용자 계정 컨트롤|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|아니요|  
+|[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|예|  
+|[이동](../../../ado/reference/ado-api/move-method-ado.md)|예|  
+|[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
+|[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|예|  
+|[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|예|  
+|[파일](../../../ado/reference/ado-api/open-method-ado-recordset.md)|예|  
+|[다시 쿼리](../../../ado/reference/ado-api/requery-method.md)|예|  
+|[다시 동기화](../../../ado/reference/ado-api/resync-method.md)|예|  
+|[지원](../../../ado/reference/ado-api/supports-method.md)|예|  
+|[Update 함수](../../../ado/reference/ado-api/update-method.md)|아니요|  
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|아니요|  
   
  ADSI 및 공급자의 세부 사항에 대 한 자세한 내용은 Active Directory Service Interfaces 설명서를 참조 하거나 ADSI 웹 페이지를 방문 하십시오.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e5f0d2ee-0453-4faf-b007-12978dd300a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5660cfe2f264e0971d30cd2eaf1aadf68581321e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d95226e9d895bf78e15176744f651b7e830a1a10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901340"
 ---
 # <a name="executing-a-statement"></a>명령문 실행
 컴파일되는 경우 데이터베이스 엔진 및 정의 하는 (준비)에 따라 문을 실행 하는 방법은 네 가지 있습니다.  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0b9d46e7-29d9-4ca1-a23a-056403106a71
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0c8b2730b1c90e289bf653e4c8c303ad67eddf5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 012e8d1dde25021aa0eb8c0bac740e9213596485
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965189"
 ---
 # <a name="sortorderenum"></a>SortOrderEnum
 인덱싱된 열에 대 한 정렬 순서를 지정합니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adSortAscending**|1|기본. 열에 대 한 정렬 순서는 오름차순입니다.|  
 |**adSortDescending**|2|열에 대 한 정렬 순서는 내림차순입니다.|  

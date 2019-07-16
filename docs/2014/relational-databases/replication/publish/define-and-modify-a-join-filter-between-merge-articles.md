@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf8b3b4f00ad2e8a3b9236292ee20948c852b6ef
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199552"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>병합 아티클 사이에서 조인 필터 정의 및 수정
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 병합 아티클 간의 조인 필터를 정의하고 수정하는 방법에 대해 설명합니다. 병합 복제는 조인 필터를 지원합니다. 조인 필터는 일반적으로 테이블 파티션을 다른 관련 테이블 아티클로 확장하기 위해 매개 변수가 있는 필터와 함께 사용됩니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "52752346"
   
 -   **다음을 사용하여 병합 아티클 간의 조인 필터를 정의하고 수정하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52752346"
   
     -   작성기 사용을 선택하면 표의 열(**결합**, **필터링된 테이블 열**, **연산자**및 **조인된 테이블 열**)을 사용하여 조인 문을 작성합니다.  
   
-         표의 각 열에는 드롭다운 콤보 상자가 들어 있습니다. 여기서 두 개의 열과 연산자 1개(**=**, **<>**, **<=**, **\<**, **>=**, **>** 및 **like**)를 선택할 수 있습니다. 결과는 **미리 보기** 텍스트 영역에 표시됩니다. 조인이 둘 이상의 열 쌍을 포함하면 **결합** 열에서 결합(AND 또는 OR)을 선택한 다음 두 개 이상의 열과 연산자를 입력합니다.  
+         표의 각 열에는 드롭다운 콤보 상자가 들어 있습니다. 여기서 두 개의 열과 연산자 1개( **=** , **<>** , **<=** , **\<** , **>=** , **>** 및 **like**)를 선택할 수 있습니다. 결과는 **미리 보기** 텍스트 영역에 표시됩니다. 조인이 둘 이상의 열 쌍을 포함하면 **결합** 열에서 결합(AND 또는 OR)을 선택한 다음 두 개 이상의 열과 연산자를 입력합니다.  
   
     -   수동으로 문 작성을 선택하면 **조인 문** 텍스트 영역에 조인 문을 작성합니다. **필터링된 테이블 열** 목록 상자 및 **조인된 테이블 열** 목록 상자를 사용하여 열을 **조인 문** 텍스트 영역에 끌어다 놓습니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "52752346"
   
 2.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하여 게시에 대한 하나 이상의 관련 아티클, 즉 자식 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_addmergefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)를 실행합니다. **@publication**을 지정하고 **@filtername**에 이 필터에 대한 고유한 이름을, **@article**에 2단계에서 만든 자식 아티클의 이름을, **@join_articlename**에 조인되는 부모 아티클의 이름을, **@join_unique_key**에 다음 값 중 하나를 지정합니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_addmergefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)를 실행합니다. **@publication** 을 지정하고 **@filtername** 에 이 필터에 대한 고유한 이름을, **@article** 에 2단계에서 만든 자식 아티클의 이름을, **@join_articlename** 에 조인되는 부모 아티클의 이름을, **@join_unique_key** 에 다음 값 중 하나를 지정합니다.  
   
     -   **0** - 부모 아티클과 자식 아티클 간의 다 대 일 또는 다 대 다 조인을 나타냅니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "52752346"
      이는 두 아티클 간의 조인 필터를 정의합니다.  
   
     > [!CAUTION]  
-    >  부모 아티클의 기반 테이블에 있는 조인 열에 고유성을 보장하는 제약 조건이 있는 경우에만 **@join_unique_key** 를 **1** 로 설정하세요. **@join_unique_key**를 **1**로 설정하면 데이터가 일치하지 않을 수 있습니다.  
+    >  부모 아티클의 기반 테이블에 있는 조인 열에 고유성을 보장하는 제약 조건이 있는 경우에만 **@join_unique_key** 를 **1** 로 설정하세요. **@join_unique_key** 를 **1**로 설정하면 데이터가 일치하지 않을 수 있습니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음 예에서는 정적 행 필터를 사용하여 자체 필터링되는 `SalesOrderDetail` 테이블에 대해 `SalesOrderHeader` 테이블 아티클을 필터링하는 병합 게시에 대한 아티클을 정의합니다. 자세한 내용은 [Define and Modify a Static Row Filter](define-and-modify-a-static-row-filter.md)을 참조하세요.  
@@ -134,7 +134,7 @@ ms.locfileid: "52752346"
   
  [!code-sql[HowTo#sp_MergeDynamicPub1](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepubdynamic1.sql#sp_mergedynamicpub1)]  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [조인 필터](../merge/join-filters.md)   
  [매개 변수가 있는 행 필터](../merge/parameterized-filters-parameterized-row-filters.md)   
  [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)   

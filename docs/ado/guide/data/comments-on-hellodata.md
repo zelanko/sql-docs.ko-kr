@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a2831d77-7040-4b73-bbae-fe0bf78107ed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 23ba7235ddd8ea05b7217c88bc76e7bfe50bbd98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c4897f82ff8562c031ec3522f47cddebfb56eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925803"
 ---
 # <a name="comments-on-hellodata"></a>HelloData에 대한 설명
 HelloData 응용 프로그램을 일반적인 ADO 응용 프로그램의 기본 작업을 통해 단계: 가져오기, 검사, 편집 및 데이터를 업데이트 합니다. 응용 프로그램을 시작 하면 첫 번째 단추를 클릭 **데이터 가져오기**합니다. 이렇게 하면 실행 합니다 **GetData** 서브루틴입니다.  

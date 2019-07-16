@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 693e6e28-a845-41b1-9622-5058b0d87229
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c2d78e26309d5ea7dc5e6eed5a04e84a1651b33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3746d9cea2ce5ffb7d03424d7cda4fa1889aabc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905378"
 ---
 # <a name="sqlsetscrolloptions-visual-foxpro-odbc-driver"></a>SQLSetScrollOptions(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
 >  이 항목에서는 Visual FoxPro ODBC 드라이버 관련 정보를 포함합니다. 이 함수에 대 한 일반 정보에서 해당 항목을 참조 하세요 [ODBC API 참조](../../odbc/reference/syntax/odbc-api-reference.md)합니다.  
   
- 지원: 부분  
+ 지원: Partial  
   
  ODBC API 규칙: 수준 2  
   

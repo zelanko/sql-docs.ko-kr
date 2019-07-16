@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aa1bf665-8dc0-4259-b36f-46ae67197a43
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d1dbbb57527fc2d362837e0340f35a241d764b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97425a6795889f72b329280ff70f9638378e7799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63473532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006564"
 ---
 # <a name="executing-the-ssma-console-accesstosql"></a>SSMA 콘솔 (AccessToSQL) 실행
 Microsoft는 강력한 파일 명령 스크립트 및 실행 하 고 SSMA 작업을 제어 하는 명령줄 옵션을 제공 합니다. 결과 섹션을 자세히 설명 동일 합니다.  
@@ -33,7 +32,7 @@ create-new-project: 새 SSMA 프로젝트를 만듭니다.
   
 -   `project-name` 프로젝트의 이름을 나타냅니다. {string}  
   
--   `overwrite-if-exists`선택적 특성 기존 프로젝트를 덮어써야 하는 경우를 나타냅니다. {boolean}  
+-   `overwrite-if-exists`선택적 특성 기존 프로젝트를 덮어써야 하는 경우를 나타냅니다. {부울}  
   
 -   `project-type` 선택적 특성이입니다.  다음 옵션은 프로젝트 형식에 대해 사용할 수 있습니다.  
   
@@ -149,7 +148,7 @@ connect-source-database
 ```  
 **Command**  
   
-load-access-database: Access 데이터베이스 파일을 로드 하는 데 사용  
+로드-액세스-데이터베이스: Access 데이터베이스 파일을 로드 하는 데 사용  
   
 **스크립트**  
   
@@ -394,7 +393,7 @@ convert-schema
 ```  
 **Command**  
   
-migrate-data  
+데이터 마이그레이션  
   
 1.  대상에 원본 데이터를 마이그레이션합니다.  
   
@@ -531,7 +530,7 @@ map-schema: 대상 스키마에 원본 데이터베이스의 스키마 매핑.
   
 **Command**  
   
-synchronize-target  
+동기화 대상  
   
 1.  대상 데이터베이스를 사용 하 여 대상 개체를 동기화합니다.  
   
@@ -596,7 +595,7 @@ synchronize-target
 ```  
 **Command**  
   
-refresh-from-database  
+데이터베이스에서 새로 고침  
   
 -   데이터베이스에서 원본 개체를 새로 고칩니다.  
   

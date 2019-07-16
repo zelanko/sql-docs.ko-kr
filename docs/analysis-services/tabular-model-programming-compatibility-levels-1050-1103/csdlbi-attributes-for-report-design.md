@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c7f4b1ef3b46e4564ffc4622b39e8326adf443a6
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407913"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163459"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>보고서 디자인의 CSDLBI 특성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "52407913"
 ## <a name="model-attributes"></a>Model Attributes  
  이러한 특성은 CSDL [EntityContainer](http://msdn.microsoft.com/library/bb399169.aspx) 요소의 하위 요소에 정의됩니다.  
   
-|특성 이름|데이터 형식|Description|  
+|특성 이름|데이터 형식|설명|  
 |--------------------|---------------|-----------------|  
 |Culture|텍스트 모드|통화 형식에 사용되는 culture를 나타냅니다. 생략하면 EN-US가 사용됩니다.|  
 |IsRightToLeft|Boolean|텍스트 필드 값을 기본적으로 오른쪽에서 왼쪽으로 읽어야 하는지 여부를 나타냅니다.|  
@@ -31,11 +31,11 @@ ms.locfileid: "52407913"
 ## <a name="entity-attributes"></a>엔터티 특성  
  이러한 특성은 CSDL EntitySet 또는 EntityType 요소의 하위 요소에 정의됩니다.  
   
-|특성 이름|데이터 형식|Description|  
+|특성 이름|데이터 형식|설명|  
 |--------------------|---------------|-----------------|  
 |**ReferenceName**|텍스트 모드|DAX 쿼리에서 이 엔터티를 참조하는 데 사용되는 식별자입니다. 생략하면 이름이 사용됩니다.|  
 |**캡션**|텍스트 모드|엔터티의 표시 이름입니다.|  
-|**설명서**|텍스트 모드|비즈니스 사용자가 데이터의 의미를 이해하는 데 도움을 주는 설명 텍스트입니다.|  
+|**문서**|텍스트 모드|비즈니스 사용자가 데이터의 의미를 이해하는 데 도움을 주는 설명 텍스트입니다.|  
 |**숨김**|Boolean|엔터티를 표시해야 하는지 여부를 나타냅니다. 기본값은 **false**입니다.|  
 |**CollectionCaption**|텍스트 모드|엔터티의 인스턴스 집합을 참조하기 위한 복수 이름입니다. 생략하면 Caption 특성이 사용됩니다.|  
 |**DisplayKey**|MemberRef[]|비즈니스 사용자가 엔터티 인스턴스를 식별하는 데 사용하는 필드의 정렬된 목록입니다. 참조는 인스턴스 속성 및 탐색 속성을 포함할 수 있습니다. 탐색 속성을 참조하면 대상 엔터티의 **DisplayKey** 가 표시됩니다. **DisplayKey** 값을 생략하면 키 필드가 사용됩니다.|  
@@ -48,11 +48,11 @@ ms.locfileid: "52407913"
 ## <a name="field-attributes"></a>필드 특성  
  이러한 특성은 CSDL 속성 또는 [NavigationProperty](http://msdn.microsoft.com/library/bb387104.aspx) 요소의 하위 요소에 정의됩니다.  
   
-|특성 이름|데이터 형식|Description|  
+|특성 이름|데이터 형식|설명|  
 |--------------------|---------------|-----------------|  
 |**ReferenceName**|텍스트 모드|DAX 쿼리에서 이 엔터티를 참조하는 데 사용되는 식별자입니다. 생략하면 필드 이름이 사용됩니다.|  
 |**캡션**|텍스트 모드|엔터티의 표시 이름입니다. 생략 하면 필드의 경우 **ReferenceName** 사용 됩니다.|  
-|**설명서**|텍스트 모드|비즈니스 사용자가 필드의 의미를 이해하는 데 도움을 주는 설명 텍스트입니다.|  
+|**문서**|텍스트 모드|비즈니스 사용자가 필드의 의미를 이해하는 데 도움을 주는 설명 텍스트입니다.|  
 |**숨김**|Boolean|필드를 표시해야 하는지 여부를 나타냅니다. 기본값은 **false**이며 필드가 표시됨을 의미합니다.|  
 |**DisplayFolder**|텍스트 모드|이 필드가 표시되는 폴더의 이름(전체 경로)입니다. 생략하면 필드가 모델 루트에 표시됩니다.|  
 |**ContextualNameRule**|Enum|속성 이름을 해당 이름이 사용되는 컨텍스트를 기반으로 수정할지 여부와 수정 방법을 나타내는 값입니다. 가능한 값은  **None**하십시오 **역할**, **병합**입니다.|  

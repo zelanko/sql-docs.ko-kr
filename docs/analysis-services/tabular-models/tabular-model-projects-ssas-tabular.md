@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26d7bf92a3720b802818fd5d5bacc8d5a9d7b819
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072050"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207449"
 ---
 # <a name="tabular-model-projects"></a>테이블 형식 모델 프로젝트 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "53072050"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[새 테이블 형식 모델 프로젝트 만들기&#40;Reporting Services&#41;](../../analysis-services/tabular-models/create-a-new-tabular-model-project-analysis-services.md)|이 문서에는 새로운 빈 테이블 형식 모델 프로젝트를 만드는 방법을 설명 합니다.|  
 |[Analysis Services에서 가져오기](../../analysis-services/tabular-models/import-from-analysis-services-ssas-tabular.md)|이 문서에서는 Analysis Services에 이미 있는 기존 모델을 기반으로 새 테이블 형식 모델 프로젝트를 만드는 방법을 설명 합니다. 기존 모델에서 메타데이터를 추출하여 새 모델을 만드는 데 사용할 수 있습니다.|  

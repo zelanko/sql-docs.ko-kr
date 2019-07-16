@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 88d3900417bfbdaec6d2408d503b1537b8dff2da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bce9917f144e8c63160f571a986263d8d7e97b21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925560"
 ---
 # <a name="detecting-and-resolving-conflicts"></a>충돌 감지 및 해결
 직접 실행 모드에서는 레코드 집합을 사용 하 여 처리 하는 경우 동시성 문제가 발생할 가능성이 낮아집니다 있습니다. 반면에 응용 프로그램 일괄 업데이트 모드를 사용 하는 경우 있을 잘 변경 동일한 레코드를 편집 하는 다른 사용자가 수행한 변경 내용을 저장 하기 전에 하나의 사용자 레코드를 변경 됩니다. 이러한 경우 응용 프로그램을 정상적으로 충돌을 처리 해야 합니다. 마지막으로 서버에 업데이트를 보내는 사용자 "알고리즘이 적용 됩니다." 내리 세요 수도 있습니다. 또는 가장 최근 사용자가 결정 업데이트 충돌 하는 두 값 중에서 선택 사항이 제공 하 여 보다 우선적으로 적용 해야 하는 것이 좋습니다.  
   
  경우에 든 ADO는 이러한 유형의 충돌을 처리 하는 필드 개체의 OriginalValue 및 UnderlyingValue 속성을 제공 합니다. Resync 메서드 및 레코드 집합의 속성 필터 조합 하 여 이러한 속성을 사용 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ADO에서 일괄 처리 업데이트를 사용 하는 동안 충돌이 발생을 하는 경우 경고를 오류 컬렉션에 추가 됩니다. 따라서 항상 확인 해야 오류에 대 한 직후 BatchUpdate, 호출 하 고, 경우 충돌이 발생 한 가정을 테스트를 시작 합니다. 첫 번째 단계에서 레코드 집합에 대 한 같음 adFilterConflictingRecords 필터 속성을 설정 하는 것입니다. 이 충돌 하는 레코드를 레코드 집합에서 보기를 제한 합니다. RecordCount 속성이이 단계를 수행한 후 0 인 경우 충돌이 아닌 오류 발생 알 수 있습니다.  
   
  BatchUpdate를 호출 하는 경우 ADO 및 공급자는 데이터 원본에서 업데이트를 수행 하는 SQL 문을 생성 합니다. 특정 데이터 원본 제한 사항은 열의 형식을 사용할 수는 WHERE 절에 있는 것을 기억 합니다.  

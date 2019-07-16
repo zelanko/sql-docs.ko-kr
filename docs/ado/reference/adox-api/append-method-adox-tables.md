@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 75a5405ef51ea8bfe2d365796b311cbaa36b2d0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c16ac4d18806b670c8b3e27dc09c9019d7ecdeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967240"
 ---
 # <a name="append-method-adox-tables"></a>Append 메서드(ADOX 테이블)
 새로 추가 [테이블](../../../ado/reference/adox-api/table-object-adox.md) 개체를 [테이블](../../../ado/reference/adox-api/tables-collection-adox.md) 컬렉션입니다.  
@@ -38,7 +37,7 @@ Tables.Append Table
  *테이블*  
  **Variant** 에 대 한 참조를 포함 하는 값을 **테이블** 추가할 또는 만들기 및 추가 테이블의 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  공급자는 테이블 만들기를 지원 하지 않는 경우 오류가 발생 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  

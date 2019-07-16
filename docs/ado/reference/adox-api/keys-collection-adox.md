@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4205a5f1a398d36669c3d383c663dd367e93d817
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a84932192fc7f51f21a7fd65c06c7417ef02da92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965850"
 ---
 # <a name="keys-collection-adox"></a>Keys 컬렉션(ADOX)
 모든 포함 [키](../../../ado/reference/adox-api/key-object-adox.md) 의 개체를 [테이블](../../../ado/reference/adox-api/table-object-adox.md)합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 [추가](../../../ado/reference/adox-api/append-method-adox-keys.md) 에 대 한 메서드는 [컬렉션 키](../../../ado/reference/adox-api/keys-collection-adox.md) ADOX에 대 한 고유 합니다. 다음 작업을 수행할 수 있습니다.  
   
 -   컬렉션에 새 키를 추가 합니다 [Append](../../../ado/reference/adox-api/append-method-adox-keys.md) 메서드.  

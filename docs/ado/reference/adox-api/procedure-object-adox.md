@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2c275322fbe65585e100907f25009d2d3e6e0d0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1681001dd42026c1a1fce04814b094047a475a0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965482"
 ---
 # <a name="procedure-object-adox"></a>프로시저 개체(ADOX)
 저장된 프로시저를 나타냅니다. ADO와 함께 사용 하는 경우 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체를 **프로시저** 개체 추가, 삭제 또는 수정 저장된 프로시저에 사용할 수 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **프로시저** 개체를 알고 있거나 공급자의 "CREATE PROCEDURE" 구문을 사용 하지 않고도 저장된 프로시저를 만들 수 있습니다.  
   
  속성을 사용 하 여는 **프로시저** 개체를 할 수 있습니다.  

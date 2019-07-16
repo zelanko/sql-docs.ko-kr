@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0ed8195-09af-42c8-99c7-038ecc8a5c9f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 36dd327ec4c35ed1d3c846b4052741dcfc21a21b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 378fecc379febf3daa6e17ebb2ccad748c40989f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967134"
 ---
 # <a name="attributes-property-example-vb"></a>Attributes 속성 예제(VB)
 이 예제에서는 합니다 [특성](../../../ado/reference/adox-api/attributes-property-adox.md) 의 속성을 [열](../../../ado/reference/adox-api/column-object-adox.md)합니다. 로 설정 **adColNullable** 의 값을 설정할 수 있습니다는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) [필드](../../../ado/reference/ado-api/field-object.md) 빈 문자열입니다. 이런 경우, 사용자 위치 데이터는 알 수 없는 레코드 및 레코드를 데이터에 적용 되지 않습니다 구별할 수 있습니다.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7b5b2cbfd141642cb5d36d0ec67958ec7ae14ae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015130"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210055"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>마이닝 모델에서 사례 데이터로 드릴스루
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34015130"
 |**Microsoft 시퀀스 클러스터링 뷰어**|**항목 집합** 탭|항목 집합을 포함하는 행을 클릭합니다.|  
   
 > [!NOTE]  
->  일부 모델에서는 드릴스루를 사용할 수 없습니다. 드릴스루를 사용할 수 있는지 여부는 모델을 만드는 데 사용된 알고리즘에 따라 달라집니다. 드릴스루를 지원하는 마이닝 모델 유형 목록은 [드릴스루 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)를 참조하세요.  
+>  일부 모델에서는 드릴스루를 사용할 수 없습니다. 드릴스루를 사용할 수 있는지 여부는 모델을 만드는 데 사용된 알고리즘에 따라 달라집니다. 드릴스루를 지원하는 마이닝 모델 유형 목록은 [드릴스루 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)로 설정하여 기존 마이닝 모델에 드릴스루 기능을 추가할 수 있습니다.  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>마이닝 모델에서 드릴스루 데이터를 보려면  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34015130"
   
 6.  데이터를 클립보드에 복사하려면 테이블에서 임의의 행을 마우스 오른쪽 단추로 클릭하고 **모두 복사**를 선택합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [드릴스루 쿼리 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+## <a name="see-also"></a>관련 항목  
+ [드릴스루 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

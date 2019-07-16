@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a5939ee2b8163e5e71899d5074b851dfda87484
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901392"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>추가 지원되는 ODBC SQL 문법
 ODBC 드라이버는 코어 및 ODBC 2.5 확장 문법에서 최소 ODBC 2.5 문법 및 다음 절 완전히 지원합니다. 이동 하 여 추가 정보를 표시할 수 있습니다 합니다 [ALTER TABLE 문을](../../odbc/microsoft/alter-table-statement.md)를 [상관 관계 이름을](../../odbc/microsoft/correlation-names.md), 및 [프로시저 호출](../../odbc/microsoft/procedure-invocation.md) 항목입니다.  

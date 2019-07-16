@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 53e9fdb135b46cedaad6e79fa4ff12c06a4c3ea8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: efea2f63d92e85afc8f77fde1d1226280714481c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901614"
 ---
 # <a name="microsoft-open-database-connectivity-odbc"></a>Microsoft ODBC(Open Database Connectivity)
 Microsoft ODBC Open Database Connectivity () 인터페이스는 C 프로그래밍 언어 인터페이스 응용 프로그램의 다양 한 Dbms (데이터베이스 관리 시스템)의 데이터에 액세스할 수 있도록 하는 합니다. ODBC는 관계형 데이터 저장소를 위해 특별히 설계 된 고성능 하위 수준 인터페이스입니다.  

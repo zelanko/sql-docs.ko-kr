@@ -4,18 +4,17 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 04/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1900a7156eaf98abb9a4c20bad5f7d1eafe365db
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 1d6a68ea3bc9954cbab62cee7579db6905a4632f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967518"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Always On 가용성 그룹이 linux
 
@@ -49,7 +48,7 @@ Pacemaker를 사용 하는 경우 올바르게 구성 해야를 실행 상태로
 
 클러스터 형식에 저장 됩니다는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 동적 관리 뷰 (DMV) `sys.availability_groups`, 열의 `cluster_type` 및 `cluster_type_desc`합니다.
 
-## <a name="requiredsynchronizedsecondariestocommit"></a>required\_synchronized\_secondaries\_to\_commit
+## <a name="requiredsynchronizedsecondariestocommit"></a>필요한\_동기화\_보조\_하려면\_커밋
 
 접하는 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] Ag 호출에서 사용 되는 설정은 `required_synchronized_secondaries_to_commit`합니다. 이렇게 하면 AG를 주 데이터베이스와 연장선 상에 해야 하는 보조 복제본의 수입니다. 자동 장애 조치 (경우에 클러스터 유형이 외부인 Pacemaker와 통합 됨) 등이 있으며 온라인 또는 오프 라인 적절 한 수의 보조 복제본 인 경우 주 가용성 등의 동작을 제어 합니다. 이 방식에 대해 자세히 알아보려면 [가용성 그룹 구성에 대 한 높은 가용성 및 데이터 보호](sql-server-linux-availability-group-ha.md)합니다. 합니다 `required_synchronized_secondaries_to_commit` 값이 기본적으로 설정 되 고 Pacemaker에서 유지 관리 / [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다. 수동으로이 값을 재정의할 수 있습니다.
 

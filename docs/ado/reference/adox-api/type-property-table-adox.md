@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b6e14bb-fb69-4d74-aaca-f5d380f4d887
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3f72b31ce4e6c43abf1f5e717f1f4a3c0c5c3e3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e1cab50c2aa784c77fbd4a51bc3d72daf115620c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965019"
 ---
 # <a name="type-property-table-adox"></a>Type 속성(테이블)(ADOX)
 테이블의 유형을 나타냅니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66705688"
 ## <a name="return-values"></a>반환 값  
  반환 된 **문자열** ; 예: "TABLE", "SYSTEM TABLE" 또는 "전역 임시"에 대 한 테이블의 형식을 지정 하는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 속성은 읽기 전용입니다.  
   
 ## <a name="applies-to"></a>적용 대상  

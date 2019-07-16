@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f01cbdd1dd595e9dd2637a2e9d0ebbe871aabe66
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748646"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212065"
 ---
 # <a name="specify-schema-options"></a>스키마 옵션 지정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 스키마 옵션을 지정하는 방법에 대해 설명합니다. 테이블 또는 뷰를 게시하는 경우 게시된 개체에 대해 복제되는 개체 작성 옵션을 제어할 수 있습니다. 아티클을 만들 때 이 옵션을 설정할 수 있으며 나중에 이 옵션을 변경할 수도 있습니다. 아티클에 대해 이 옵션을 명시적으로 지정하지 않으면 기본 옵션 집합이 정의됩니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "52748646"
   
 -   **스키마 옵션을 지정하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -82,15 +82,15 @@ ms.locfileid: "52748646"
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 아티클을 정의할 때 스키마 옵션을 지정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@publication**에 아티클이 속한 게시의 이름, **@article**에 아티클의 이름, **@source_object**에 게시되는 데이터베이스 개체, **@type**에 대한 데이터베이스 개체 유형 및 **@schema_option**에 하나 이상의 스키마 옵션에 대한 [|(비트 OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) 결과를 지정합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름, **@article** 에 아티클의 이름, **@source_object** 에 게시되는 데이터베이스 개체, **@type** 에 대한 데이터베이스 개체 유형 및 **@schema_option** 에 하나 이상의 스키마 옵션에 대한 [|(비트 OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) 결과를 지정합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-merge-publication"></a>병합 게시에 대한 아티클을 정의할 때 스키마 옵션을 지정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. **@publication**에 아티클이 속한 게시의 이름, **@article**에 아티클의 이름, **@source_object**에 게시되는 데이터베이스 개체, **@schema_option**에 하나 이상의 스키마 옵션에 대한 [|(비트 OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) 결과를 지정합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름, **@article** 에 아티클의 이름, **@source_object** 에 게시되는 데이터베이스 개체, **@schema_option** 에 하나 이상의 스키마 옵션에 대한 [|(비트 OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) 결과를 지정합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시의 기존 아티클에 대한 스키마 옵션을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)을 실행합니다. **@publication**에 아티클이 속한 게시의 이름을 지정하고 **@article**에 아티클의 이름을 지정합니다. 결과 집합에서 **schema_option** 열의 값을 확인합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름을 지정하고 **@article** 에 아티클의 이름을 지정합니다. 결과 집합에서 **schema_option** 열의 값을 확인합니다.  
   
 2.  옵션이 설정되었는지 판단하기 위해 1단계의 값과 원하는 스키마 옵션 값을 사용하여 [&(비트 AND)](/sql/t-sql/language-elements/bitwise-and-transact-sql) 연산을 실행합니다.  
   
@@ -100,13 +100,13 @@ ms.locfileid: "52748646"
   
 3.  옵션이 설정되지 않은 경우 1단계의 값과 원하는 스키마 옵션 값을 사용하여 [|(비트 OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) 연산을 실행합니다.  
   
-4.  게시 데이터베이스의 게시자에서 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)을 실행합니다. **@publication**에 아티클이 속한 게시의 이름, **@article**에 아티클의 이름, **@property**에 **schema_option**값, **@value**에 3단계의 16진수 결과를 지정합니다.  
+4.  게시 데이터베이스의 게시자에서 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름, **@article** 에 아티클의 이름, **@property** 에 **schema_option**값, **@value** 에 3단계의 16진수 결과를 지정합니다.  
   
 5.  스냅숏 에이전트를 실행하여 새 스냅숏을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>병합 게시의 기존 아티클에 대한 스키마 옵션을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)을 실행합니다. **@publication**에 아티클이 속한 게시의 이름을 지정하고 **@article**에 아티클의 이름을 지정합니다. 결과 집합에서 **schema_option** 열의 값을 확인합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름을 지정하고 **@article** 에 아티클의 이름을 지정합니다. 결과 집합에서 **schema_option** 열의 값을 확인합니다.  
   
 2.  옵션이 설정되었는지 판단하기 위해 1단계의 값과 원하는 스키마 옵션 값을 사용하여 [&(비트 AND)](/sql/t-sql/language-elements/bitwise-and-transact-sql) 연산을 실행합니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "52748646"
   
 3.  옵션이 설정되지 않은 경우 1단계의 값과 원하는 스키마 옵션 값을 사용하여 [|(비트 OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) 연산을 실행합니다.  
   
-4.  게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. **@publication**에 아티클이 속한 게시의 이름, **@article**에 아티클의 이름, **@property**에 **schema_option**값, **@value**에 3단계의 16진수 결과를 지정합니다.  
+4.  게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름, **@article** 에 아티클의 이름, **@property** 에 **schema_option**값, **@value** 에 3단계의 16진수 결과를 지정합니다.  
   
 5.  스냅숏 에이전트를 실행하여 새 스냅숏을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   

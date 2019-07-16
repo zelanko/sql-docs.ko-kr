@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b6b9740b58ef53fd4fcc2becda50f73609a1bf5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8281b8b480289dca2b4976cea61a6d6838fa2779
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967310"
 ---
 # <a name="append-method-adox-groups"></a>Append 메서드(ADOX 그룹)
 새로 추가 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 개체를 [그룹](../../../ado/reference/adox-api/groups-collection-adox.md) 컬렉션입니다.  
@@ -38,7 +37,7 @@ Groups.Append Group
  *그룹*  
  합니다 **그룹** 만들고 추가 하는 그룹의 이름 또는 추가할 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **그룹** 의 컬렉션을 [카탈로그](../../../ado/reference/adox-api/catalog-object-adox.md) 모든 카탈로그의 그룹 계정을 나타냅니다. 합니다 **그룹** 에 대 한 컬렉션을 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 사용자가 속한 그룹에만 나타냅니다.  
   
  공급자 그룹 만들기를 지원 하지 않는 경우 오류가 발생 합니다.  

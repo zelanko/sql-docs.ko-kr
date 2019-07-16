@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 442b08c5-ccc7-4192-a1cc-22f250867782
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6afd68ddf99799288939eeb0c6522275ec4d273f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d697fa5b411d9000c03a700f6b4fe0e4b39aa5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923519"
 ---
 # <a name="using-pages"></a>페이지 사용
 사용 합니다 **PageCount** 속성에서 데이터 페이지 수를 결정 합니다 **레코드 집합** 개체입니다. *페이지* 레코드 같은 크기의 그룹이 합니다 **PageSize** 속성을 설정 합니다. 보다 적은 레코드가 있기 때문에 마지막 페이지 완료 되지 않더라도 **PageSize** 에서 추가 페이지로 계산 값을 **PageCount** 값입니다. 경우는 **레코드 집합** 개체는이 속성을 지원 하지 **PageCount** 나타내는-1이 됩니다는 **PageCount** 확인할 아닙니다.  

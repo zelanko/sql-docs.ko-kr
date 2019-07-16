@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772285"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196671"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>UNIQUE 제약 조건 및 CHECK 제약 조건
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 데이터 무결성을 강제 적용하는 데 사용할 수 있는 두 가지 유형의 제약 조건으로 UNIQUE 제약 조건과 CHECK 제약 조건이 있습니다. 이들 키는 중요한 데이터베이스 개체입니다.  
   
- 이 항목에는 다음과 같은 섹션이 포함되어 있습니다.  
+ 이 항목에는 다음 섹션이 수록되어 있습니다.  
   
  [UNIQUE 제약 조건](#Unique)  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52772285"
   
  열 하나에 여러 개의 CHECK 제약 조건을 적용할 수 있습니다. 테이블 수준에서 CHECK 제약 조건을 만들어 여러 열에 적용할 수도 있습니다. 예를 들어 여러 열에 대한 CHECK 제약 조건을 사용하여 **country_region** 열 값이 **USA** 인 모든 행이 **state** 열에서 두 문자의 값을 갖도록 할 수 있습니다. 이렇게 한 위치에서 여러 조건을 검사할 수 있습니다.  
   
- CHECK 제약 조건은 열에 있는 값을 다룬다는 점에서는 FOREIGN KEY 제약 조건과 비슷합니다. 어떤 값이 유효한지 결정하는 방법은 서로 다릅니다. FOREIGN KEY 제약 조건은 다른 테이블로부터 유효한 값을 가져오는 반면 CHECK 제약 조건은 논리 식으로부터 유효한 값을 결정합니다.  
+ CHECK 제약 조건은 열에 있는 값을 다룬다는 점에서는 FOREIGN KEY 제약 조건과 비슷합니다. 차이점은 어떤 값이 유효한을 결정 하는 방법. FOREIGN KEY 제약 조건이 CHECK 제약 조건은 논리 식 으로부터 유효한 값을 결정 하는 동안 다른 테이블 로부터 유효한 값 목록을 가져옵니다.  
   
 > [!CAUTION]  
 >  제약 조건에 암시적 또는 명시적 데이터 형식 변환이 포함된 경우 특정 작업이 실패할 수 있습니다. 예를 들어 파티션 전환의 원본인 테이블에 정의된 이러한 제약 조건으로 인해 ALTER TABLE...SWITCH 작업이 실패할 수 있습니다. 제약 조건 정의에서 데이터 형식을 변환하지 마세요.  

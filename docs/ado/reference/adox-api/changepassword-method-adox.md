@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d187fbc6-5fac-4abb-803d-bf344dcf0302
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 981f2e5b801cd35b0aedb04e5f1aa11b741e4535
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de8baf504a76407037322fd6b799f6d63584eae7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967031"
 ---
 # <a name="changepassword-method-adox"></a>ChangePassword 메서드(ADOX)
 암호를 변경 된 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 계정.  
@@ -41,7 +40,7 @@ User.ChangePassword OldPassword, NewPassword
  *NewPassword*  
  A **문자열** 새 암호를 지정 하는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  보안상의 이유로 새 암호 외에도 이전 암호를 지정 해야 합니다.  
   
  공급자 트러스트를 받을 대상 속성의 관리를 지원 하지 않는 경우 오류가 발생 합니다.  

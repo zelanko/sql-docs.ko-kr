@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8b995a5b3fb89956e690598c786dc0a09474021
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019780"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210223"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>기존 마이닝 구조에 마이닝 모델 추가
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "34019780"
   
  **마이닝 모델** 탭에 새 마이닝 모델이 나타납니다. 모델에는 구조에 있는 기본 열이 사용됩니다. 열을 수정하는 방법은 [마이닝 모델의 속성 변경](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 태스크 및 방법](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

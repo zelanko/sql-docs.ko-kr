@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd25f6abf4c7cade7edbd35780cc191bce9c003d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aa425cd6035a51f7856cc27b5d53f3144854c5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926823"
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>원격 데이터 서비스에 대 한 인터넷 정보 서비스 오류 코드
 다음 표에서 원격 데이터 서비스 사용과 관련 된 Microsoft® 인터넷 정보 서비스 (IIS) 오류 코드를 나열 합니다. 낮은 2 바이트의 양의 10 진수 변환, 전체 오류 코드 및 16 진수 값은 음수 10 진수 변환 표시 됩니다.
 
-|인터넷 정보 서비스 오류|Number|Description|
+|인터넷 정보 서비스 오류|Number|설명|
 |------------------------------------------|------------|-----------------|
 |**IDS_IIS_AccessDenied**|8208 -2146820080 0x800A2010|인터넷 서버 오류: 액세스가 거부되었습니다.)가 나타납니다.|
 |**IDS_IIS_ObjectNotFound**|8209 -2146820079 0x800A2011|인터넷 서버 오류: 개체/모듈이 없습니다.|

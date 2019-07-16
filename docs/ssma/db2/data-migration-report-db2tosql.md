@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2305040ee7dc8541ff400f5f87c5c87fd85c118e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fb50ca8cab409e117becdc1335d956d05cb818b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989750"
 ---
 # <a name="data-migration-report-db2tosql"></a>데이터 마이그레이션 보고서 (DB2ToSQL)
 합니다 **데이터 마이그레이션 보고서** 대화 상자가 나타나면 데이터를 마이그레이션한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "63298943"
 **상태**  
 대상 데이터베이스에 원본에서 데이터 마이그레이션 상태를 보여 줍니다.  
   
-**보낸 사람**  
+**From**  
 원본 테이블입니다.  
   
 **수행할 작업**  

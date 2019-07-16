@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bd627a2d-dc64-47e9-9a71-2d0ad04b4962
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 30864765a61bfc0175fba06d54eebaea43b6baaf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0b989693c92bbecae3221f98a2ccc413700b994
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65483938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915971"
 ---
 # <a name="entity-sync-relationship-master-data-services"></a>엔터티 동기화 관계(Master Data Services)
 
