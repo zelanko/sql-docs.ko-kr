@@ -16,11 +16,11 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5cf1fa6ce0e0a02a52e6a27f693c152d1f97152
-ms.sourcegitcommit: b87c384e10d6621cf3a95ffc79d6f6fad34d420f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60153842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211532"
 ---
 # <a name="implementing-a-security-extension"></a>보안 확장 프로그램 구현
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 인증은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 보고서 보안을 위한 주 시스템입니다. 하지만 소속 조직에서 사용자 지정 보안을 충족하기 위해 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 보안 시스템을 확장해야 하는 경우도 있습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] API로 제공되는 개발 플랫폼을 사용하여 이 작업을 수행할 수 있습니다. 이 섹션에서는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 보안 확장 프로그램 개요를 제공합니다.  

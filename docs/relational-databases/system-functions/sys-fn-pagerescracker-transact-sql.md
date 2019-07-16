@@ -26,13 +26,13 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 2fc7136b60dba47813b9942316ee6fdfbc64f307
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58899709"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68215997"
 ---
-# <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact-SQL)
+# <a name="sysfnpagerescracker-transact-sql"></a>sys.fn_PageResCracker (Transact SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 반환 된 `db_id`, `file_id`, 및 `page_id` 에 대 한는 지정 `page_resource` 값. 
@@ -50,13 +50,13 @@ sys.fn_PageResCracker ( page_resource )
   
 ## <a name="tables-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |db_id|**int**|데이터베이스 ID|  
 |file_id|**int**|파일 ID|  
 |page_id|**int**|페이지 ID|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 `sys.fn_PageResCracker` 데이터베이스 ID, 파일 ID 및 페이지의 페이지 ID를 포함 하는 행 집합 데이터베이스 페이지의 8 바이트 16 진수 표현으로 변환 됩니다.   
 
 올바른 페이지 리소스를 가져올 수 있습니다는 `page_resource` 의 열을 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) 동적 관리 뷰 또는 [sys.sysprocesses &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) 시스템 뷰. 잘못 된 페이지 리소스를 사용 하는 경우 반환은 NULL입니다.  

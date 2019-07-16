@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f29be5e03a6cc9c1c91809db2b8ec7c686e90f11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898627"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -41,12 +40,12 @@ ms.locfileid: "63181418"
 |SQL_FLOAT|Double|  
 |SQL_INTEGER|정수|  
 |SQL_LONGVARBINARY|메모 (이진)|  
-|SQL_LONGVARCHAR|메모|  
+|SQL_LONGVARCHAR|Memo|  
 |SQL_NUMERIC|숫자 *, 통화, Float|  
 |SQL_REAL|Double|  
 |SQL_SMALLINT|정수|  
 |SQL_TIME|지원되지 않습니다. 방법이 없는 Visual FoxPro *시간* 형식입니다.|  
-|SQL_TIMESTAMP|DateTime|  
+|SQL_TIMESTAMP|Datetime|  
 |SQL_TINYINT|정수|  
 |SQL_VARBINARY|메모 (이진) *, 일반|  
 |SQL_VARCHAR|문자|  

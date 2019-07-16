@@ -16,11 +16,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ac064258da9ae55039c350f50d153d0c60323621
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778583"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211611"
 ---
 # <a name="wmi-provider-for-configuration-management-concepts"></a>구성 관리용 WMI 공급자 개념
   WMI 공급자가 사용 되는 게시 된 계층을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager에 대 한 스냅인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (MMC) 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager입니다. 이 계층은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 요청하는 레지스트리 작업을 관리하는 통합 API 호출 상호 작용 방법과 선택한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스에 대한 향상된 제어 및 조작을 제공합니다.  

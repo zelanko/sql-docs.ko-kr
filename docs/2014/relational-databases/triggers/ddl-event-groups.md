@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812755"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211723"
 ---
 # <a name="ddl-event-groups"></a>DDL 이벤트 그룹
   다음 표에서는 DDL 트리거 또는 이벤트 알림을 실행하는 데 사용할 수 있는 DDL 이벤트 그룹과 해당 그룹에서 처리하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 나열합니다. 이벤트 그룹 포함 특성에 유의하십시오. 예를 들어 FOR DDL_TABLE_EVENTS(10018)를 지정하는 DDL 트리거 또는 이벤트 알림은 CREATE TABLE, ALTER TABLE 및 DROP TABLE [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리합니다. FOR DDL_TABLE_VIEW_EVENTS(10017)를 지정하는 DDL 트리거 또는 이벤트 알림은 DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS 및 DDL_STATISTICS_EVENTS 유형 아래의 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 처리합니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "52812755"
   
 ||||  
 |-|-|-|  
-|parent_type|유형|NAME|  
+|parent_type|type|name|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  
@@ -315,7 +315,7 @@ FROM DirectReports
 ORDER BY sort;  
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [이벤트 알림](../service-broker/event-notifications.md)   
  [DDL 트리거](ddl-triggers.md)   
  [DDL 이벤트](ddl-events.md)  

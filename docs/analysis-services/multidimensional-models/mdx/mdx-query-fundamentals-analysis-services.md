@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 158b02c3589b3b20a90e59491372751d596d3c53
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68176472"
 ---
 # <a name="mdx-query-fundamentals-analysis-services"></a>MDX 쿼리 기본 사항(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "52983834"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[기본 MDX 쿼리 & #40; Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)|MDX SELECT 문의 기본 구문에 대한 정보를 제공합니다.|  
 |[쿼리 및 Slicer 축으로 쿼리 제한 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-and-slicer-axes-restricting-the-query.md)|쿼리 및 slicer 축의 의미 및 지정 방법을 설명합니다.|  

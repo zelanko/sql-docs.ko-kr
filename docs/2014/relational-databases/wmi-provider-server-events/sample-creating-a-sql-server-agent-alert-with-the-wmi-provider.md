@@ -15,17 +15,17 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a793c6ee6e1f6e168ca2a957b84b1ba4a1d2a453
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823447"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195832"
 ---
 # <a name="sample-creating-a-sql-server-agent-alert-by-using-the-wmi-provider-for-server-events"></a>예제: 서버 이벤트용 WMI 공급자를 사용하여 SQL Server 에이전트 경고 만들기
   WMI 이벤트 공급자를 사용하는 일반적인 방법 중 하나는 특정 이벤트에 응답하는 SQL Server 에이전트 경고를 만드는 것입니다. 다음 예제에서는 XML 교착 상태 그래프 이벤트를 나중에 분석할 수 있도록 테이블에 저장하는 간단한 경고를 보여 줍니다. SQL Server 에이전트는 WQL 요청을 전송하고 WMI 이벤트를 수신하고 이벤트에 대한 응답으로 작업을 실행합니다. 알림 메시지 처리와 관련된 Service Broker 개체가 여러 개 있지만 WMI 이벤트 공급자가 이러한 개체의 생성 및 관리 세부 정보를 처리합니다.  
   
 ## <a name="example"></a>예제  
- 먼저 교착 상태 그래프 이벤트를 저장할 `AdventureWorks` 데이터베이스에 테이블을 만듭니다. 이 테이블에는 두 개의 열, 즉 경고가 실행되는 시간을 저장하는 `AlertTime` 열과 교착 상태 그래프가 포함된 XML 문서가 들어 있는 `DeadlockGraph` 열이 있습니다.  
+ 먼저 교착 상태 그래프 이벤트를 저장할 `AdventureWorks` 데이터베이스에 테이블을 만듭니다. 두 개의 열을 있습니다. 합니다 `AlertTime` 열에는 경고를 실행 하는 시간을 저장 및 `DeadlockGraph` 열 교착 상태 그래프를 포함 하는 XML 문서를 포함 합니다.  
   
  그런 다음 경고를 만듭니다. 스크립트에서는 경고에서 실행할 작업을 만들어 작업에 작업 단계를 추가하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스를 작업의 대상으로 지정합니다. 그런 후 스크립트에서는 경고를 만듭니다.  
   
@@ -102,7 +102,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 두 번째 쿼리 탭에서 다음 스크립트를 실행합니다. 이 스크립트는 하나의 결과 집합을 생성한 후 `Production.Product`에 대한 잠금을 얻기 위해 기다리는 동안 차단됩니다.  
+ 두 번째 쿼리 탭에서 다음 스크립트를 실행 합니다. 이 스크립트는 하나의 결과 집합을 생성 하 고 다음 블록에 잠금을 획득 하려고 대기 `Production.Product`합니다.  
   
 ```  
 USE AdventureWorks ;  
@@ -118,7 +118,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 첫 번째 쿼리 탭에서 다음 스크립트를 실행합니다. 이 스크립트도 `Production.Location`에 대한 잠금을 얻기 위해 기다리는 동안 차단됩니다. 지정된 제한 시간이 초과되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 스크립트나 예제의 스크립트를 교착 상태로 처리한 후 트랜잭션을 종료합니다.  
+ 첫 번째 쿼리 탭에서 다음 스크립트를 실행 합니다. 이 스크립트 블록에서 잠금을 획득 하려고 대기 `Production.Location`합니다. 지정된 제한 시간이 초과되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 스크립트나 예제의 스크립트를 교착 상태로 처리한 후 트랜잭션을 종료합니다.  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  

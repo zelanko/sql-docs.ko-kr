@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f439a52c1f2d13ed3d3d7fc96030df9c6e020b2e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528438"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211649"
 ---
 # <a name="get-information-about-a-view"></a>뷰 정보 보기
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을(를) 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 뷰 정의 또는 속성에 대한 정보를 얻을 수 있습니다. 뷰 정의를 보면 어떻게 데이터가 원본 테이블에서 파생되었는지 알 수 있고 뷰에서 정의한 데이터를 볼 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "52528438"
   
 -   **뷰에 대한 정보를 얻으려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

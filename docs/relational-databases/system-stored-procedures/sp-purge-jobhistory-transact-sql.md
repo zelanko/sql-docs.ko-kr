@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab2f2fcb07fb181fd32d5a60f9fd2d8f25725f96
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3ce9b0972bc95a927729f55e10e329cddb2993c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896459"
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +58,7 @@ sp_purge_jobhistory
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  때 **sp_purge_jobhistory** 완료 되 면 메시지가 반환 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -71,7 +70,7 @@ sp_purge_jobhistory
   
 ## <a name="examples"></a>예  
   
-### <a name="a-remove-history-for-a-specific-job"></a>1. 특정 작업의 기록 제거  
+### <a name="a-remove-history-for-a-specific-job"></a>A. 특정 작업의 기록 제거  
  다음 예에서는 `NightlyBackups`이라는 작업의 기록을 제거합니다.  
   
 ```  
@@ -83,7 +82,7 @@ EXEC dbo.sp_purge_jobhistory
 GO  
 ```  
   
-### <a name="b-remove-history-for-all-jobs"></a>2. 모든 작업의 기록 제거  
+### <a name="b-remove-history-for-all-jobs"></a>2\. 모든 작업의 기록 제거  
   
 > [!NOTE]  
 >  구성원만 합니다 **sysadmin** 고정 서버 역할의 멤버 및 합니다 **SQLAgentOperatorRole** 모든 작업에 대 한 기록을 제거할 수 있습니다. 때 **sysadmin** 매개 변수 없이이 저장된 프로시저를 실행 하는 사용자, 모든 로컬 및 다중 서버 작업에 대 한 작업 기록을 제거 됩니다. 때 **SQLAgentOperatorRole** 매개 변수 없이이 저장된 프로시저를 실행 하는 사용자, 모든 로컬 작업에 대 한 작업 기록만 제거 됩니다.  

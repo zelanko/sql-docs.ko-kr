@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b82e56dd7998ca19ce9e401369cd8d2f52b58573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02577370218a799faf86a7f8986859c415962f5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897740"
 ---
 # <a name="developing-connection-pool-awareness-in-an-odbc-driver"></a>ODBC 드라이버에서 연결 풀 인식 개발
 이 항목에서는 드라이버 연결 풀링 서비스를 제공 해야 하는 방법에 대 한 정보를 포함 하는 ODBC 드라이버를 개발 하는 세부 정보를 설명 합니다.  
@@ -42,7 +41,7 @@ ms.locfileid: "62636242"
   
  또한 드라이버는 드라이버 인식 풀링을 사용할 수 있도록 다음 기존 함수를 구현 해야 합니다.  
   
-|기능|추가 기능|  
+|함수|추가 기능|  
 |--------------|-------------------------|  
 |[SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md)<br /><br /> [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md)<br /><br /> [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md)<br /><br /> [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md)|새 핸들 형식을 지원 합니다. SQL_HANDLE_DBC_INFO_TOKEN (아래 설명 참조).|  
 |[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|새로운 집합 전용 연결 특성을 지원 합니다. 연결 다시 설정 하기 위해 SQL_ATTR_DBC_INFO_TOKEN (아래 설명 참조).|  
@@ -139,12 +138,12 @@ ms.locfileid: "62636242"
 ## <a name="sequence-diagram"></a>시퀀스 다이어그램  
  이 시퀀스 다이어그램에는이 항목에서 설명한 기본 풀링 메커니즘을 보여 줍니다. 사용 표시 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 되지만 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 사례 비슷합니다.  
   
- ![Sequence Diagram](../../../odbc/reference/develop-driver/media/odbc_seq_dia.gif "odbc_seq_dia")  
+ ![시퀀스 다이어그램](../../../odbc/reference/develop-driver/media/odbc_seq_dia.gif "odbc_seq_dia")  
   
 ## <a name="state-diagram"></a>상태 다이어그램  
  이 상태 다이어그램 개체를 보여 줍니다 연결 정보 토큰을이 항목에서 설명 합니다. 다이어그램만 보여 줍니다 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) 되지만 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 사례 비슷합니다. 드라이버 관리자는 언제 든 지 오류를 처리 해야 할 수 있으므로, 드라이버 관리자를 호출할 수 있습니다 [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md) 상태입니다.  
   
- ![State Diagram](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
+ ![상태 다이어그램](../../../odbc/reference/develop-driver/media/odbc_state_diagram.gif "odbc_state_diagram")  
   
 ## <a name="see-also"></a>관련 항목  
  [드라이버 인식 연결 풀링](../../../odbc/reference/develop-app/driver-aware-connection-pooling.md)   

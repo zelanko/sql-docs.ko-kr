@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a96f96319c76c9c4d5a9b22a6e613ed8bf90cee
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52983974"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178825"
 ---
 # <a name="define-assignments-and-other-script-commands"></a>할당 및 기타 스크립트 명령 정의
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

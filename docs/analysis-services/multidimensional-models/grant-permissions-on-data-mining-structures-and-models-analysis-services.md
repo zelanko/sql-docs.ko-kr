@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91e805488ff5a90b4f358cb908fe2efa6fd8d04a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208839"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>데이터 마이닝 구조 및 모델에 대한 권한 부여(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34023060"
   
 ## <a name="set-permissions-to-access-a-mining-structure"></a>마이닝 구조에 대한 액세스 권한 설정  
   
-1.  SSMS에서 Analysis Services에 연결합니다. 단계에서 도움이 필요한 경우 [클라이언트 응용 프로그램에서 연결&#40;Analysis Services&#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)을 참조하세요.  
+1.  SSMS에서 Analysis Services에 연결합니다. 단계에서 도움이 필요한 경우 [클라이언트 애플리케이션에서 연결&#40;Analysis Services&#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md)을 참조하세요.  
   
 2.  **데이터베이스** 폴더를 열고 개체 탐색기에서 데이터베이스를 선택합니다.  
   
@@ -56,10 +56,10 @@ ms.locfileid: "34023060"
 > [!NOTE]  
 >  기본적으로 OPENROWSET을 사용하여 DMX 쿼리를 제출하는 기능이 해제되어 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 인스턴스에 서버 관리 권한 부여](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [큐브 또는 모델 사용 권한 & #40; 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [데이터 & #40; 차원에 대 한 사용자 지정 액세스 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
- [셀 데이터 & #40;에 대 한 사용자 지정 액세스 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
+ [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
+ [차원 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
+ [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   
   

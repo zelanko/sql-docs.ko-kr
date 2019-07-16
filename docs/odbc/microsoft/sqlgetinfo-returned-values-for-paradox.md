@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 543526fb-7c54-42f7-9371-926730ca5483
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3bdeddbd8e2b94fe28f3086c7d2f4a96318cc8ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8745580b1e478c2cfa9548887affb64e07322779
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898814"
 ---
 # <a name="sqlgetinfo-returned-values-for-paradox"></a>Paradox에 대한 SQLGetInfo 반환 값
 다음 표에 C 언어 #에 대 한 defines 합니다 *fInfoType* 인수 및 반환 하는 해당 값 **SQLGetInfo**합니다. 나열 된 C 언어를 전달 하 여이 정보를 검색할 수 있습니다 #defines **SQLGetInfo** 에 *fInfoType* 인수입니다. 반환 하는 값에 대 한 자세한 내용은 **SQLGetInfo**를 참조 합니다 *ODBC 프로그래머 참조*합니다.  

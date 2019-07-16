@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0451d2f9-0f4f-46ba-b252-670956a52183
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0a44320072f11a56b735502be3f1776f29cc1c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86f888955e6188cd7f90e54f39eeef3723dcfbe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897720"
 ---
 # <a name="sqlgetfunctions-function"></a>SQLGetFunctions 함수
 **규칙**  
@@ -68,7 +67,7 @@ SQLRETURN SQLGetFunctions(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetFunctions** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여는 *HandleType* 의 SQL_HANDLE_DBC와 *처리할* 의 *ConnectionHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLGetFunctions** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------|-----|-----------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버는 연결 된 데이터 원본 간의 통신 링크 하지 못했습니다.|  
@@ -85,7 +84,7 @@ SQLRETURN SQLGetFunctions(
   
  다음은 유효한 값 목록을 *FunctionId* ISO 92 표준을 준수 수준을를 준수 하는 함수에 대 한 합니다.  
   
-|FunctionId Value|FunctionId Value|  
+|FunctionId 값|FunctionId 값|  
 |----------|----------|  
 |SQL_API_SQLALLOCHANDLE|SQL_API_SQLGETDESCFIELD|  
 |SQL_API_SQLBINDCOL|SQL_API_SQLGETDESCREC|  
@@ -111,14 +110,14 @@ SQLRETURN SQLGetFunctions(
   
  다음은 유효한 값 목록을 *FunctionId* Open Group 표준 준수 수준을 준수 하는 함수에 대 한 합니다.  
   
-|FunctionId Value|FunctionId Value|  
+|FunctionId 값|FunctionId 값|  
 |-|-|  
 |SQL_API_SQLCOLUMNS|SQL_API_SQLSTATISTICS|  
 |SQL_API_SQLSPECIALCOLUMNS|SQL_API_SQLTABLES|  
   
  다음은 유효한 값 목록을 *FunctionId* ODBC 표준 준수 수준을 준수 하는 함수에 대 한 합니다.  
   
-|FunctionId Value|FunctionId Value|  
+|FunctionId 값|FunctionId 값|  
 |-|-|  
 |SQL_API_SQLBINDPARAMETER|SQL_API_SQLNATIVESQL|  
 |SQL_API_SQLBROWSECONNECT|SQL_API_SQLNUMPARAMS|  
@@ -133,7 +132,7 @@ SQLRETURN SQLGetFunctions(
   
  다음은 유효한 값 목록을 *FunctionId* ODBC 3.8 이상 도입 된 함수에 대 한 합니다.  
   
-|FunctionId Value|  
+|FunctionId 값|  
 |-|  
 |SQL_API_SQLCANCELHANDLE [2]|  
   

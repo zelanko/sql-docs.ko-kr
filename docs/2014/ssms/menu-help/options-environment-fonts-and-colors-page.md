@@ -1,5 +1,5 @@
 ---
-title: '옵션 (환경: 글꼴 및 색 페이지) | Microsoft Docs'
+title: '옵션(환경: 글꼴 및 색 페이지) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818755"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211252"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>옵션 (환경: 글꼴 및 색 페이지)
+# <a name="options-environment-fonts-and-colors-page"></a>옵션(환경: 글꼴 및 색 페이지)
   **옵션** 대화 상자를 통해 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 여러 사용자 인터페이스 요소에 사용되는 사용자 지정 글꼴 및 색 구성표를 설정할 수 있습니다. **도구** 메뉴에서 **옵션** 을 클릭하고 **환경** 폴더를 확장한 다음 **글꼴 및 색**을 선택합니다.  
   
  색 구성표 변경 내용은 설정을 변경하는 세션 동안에는 적용되지 않습니다. 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 인스턴스를 열고 변경 내용이 적용될 만한 상황을 만들어 색 변경 내용을 평가할 수 있습니다.  
@@ -29,8 +29,8 @@ ms.locfileid: "52818755"
 |용어|정의|  
 |----------|----------------|  
 |텍스트 편집기|텍스트 편집기에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 기본 텍스트 편집기에 표시되는 텍스트의 모양에 영향을 줍니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 외부의 텍스트 편집기에서 연 문서에는 이 설정이 적용되지 않습니다.|  
-|프린터|프린터에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 인쇄된 문서의 텍스트 모양에 영향을 줍니다.<br /><br /> 팁:  필요에 따라 텍스트 편집기에 사용되는 기본 글꼴과는 다른 글꼴을 인쇄 기본 글꼴로 선택할 수 있습니다. 이러한 설정은 싱글바이트 문자와 더블바이트 문자가 모두 포함되어 있는 코드를 인쇄하는 경우에 유용합니다.|  
-|[모든 텍스트 도구 창 **]**|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 출력 창이 표시되는 도구 창의 텍스트 모양에 영향을 줍니다. 예를 들어 출력 창, 텍스트 결과 창 등이 있습니다.<br /><br /> 참고: [모든 텍스트 도구 Windows] 항목의 텍스트 변경 수 있도록 세션 중 적용 되지 않습니다. 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스를 열어 이러한 변경 내용을 평가할 수 있습니다.|  
+|프린터|프린터에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 인쇄된 문서의 텍스트 모양에 영향을 줍니다.<br /><br /> 팁:  필요에 따라 텍스트 편집기에서 표시 되는 보다 인쇄에 대 한 다른 기본 글꼴을 선택할 수 있습니다. 이러한 설정은 싱글바이트 문자와 더블바이트 문자가 모두 포함되어 있는 코드를 인쇄하는 경우에 유용합니다.|  
+|[모든 텍스트 도구 창 **]**|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 출력 창이 표시되는 도구 창의 텍스트 모양에 영향을 줍니다. 예를 들어 출력 창, 텍스트 결과 창 등이 있습니다.<br /><br /> 참고: [모든 텍스트 도구 창] 항목에 대한 변경 내용은 설정을 변경하는 세션 동안에는 적용되지 않습니다. 다른 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]인스턴스를 열어 이러한 변경 내용을 평가할 수 있습니다.|  
 |찾기 결과 창|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 찾기 결과 창의 텍스트 모양에 영향을 줍니다.|  
 |출력 창|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 출력 창의 텍스트 모양에 영향을 줍니다.|  
 |표 형태 결과|이 항목에 대한 글꼴 스타일, 크기 및 색 표시 설정 변경 내용은 쿼리 창의 **표 형태 결과** 영역에 표시되는 텍스트 모양에 영향을 줍니다.|  
@@ -57,12 +57,12 @@ ms.locfileid: "52818755"
   
 -   표시기 여백: 코드 편집기 왼쪽에 중단점 아이콘과 책갈피 아이콘이 표시되는 여백입니다.  
   
--   축소 가능 텍스트: 블록 보기 편집기에서 보기로 또는 (XML만 해당) 내에서 전환할 수 있는 코드 또는 텍스트입니다.  
+-   축소 가능 텍스트: CodeEditor 내에서 보기로 또는 보기에서 전환할 수 있는 텍스트 또는 코드 블록입니다(XML만 해당).  
   
  **항목 전경**  
  **표시 항목**에서 선택한 항목의 전경색으로 사용할 수 있는 색을 나열합니다. 일부 항목은 서로 관련이 있기 때문에 표시 구성표의 일관성을 유지해야 합니다. 예를 들어 텍스트의 전경색을 변경하면 문자열과 같은 요소의 전경색도 변경됩니다.  
   
- **Custom**  
+ **사용자 지정**  
  **표시 항목** 목록에서 선택한 항목의 사용자 지정 색을 설정하는 **색** 대화 상자를 표시합니다.  
   
 > [!NOTE]  

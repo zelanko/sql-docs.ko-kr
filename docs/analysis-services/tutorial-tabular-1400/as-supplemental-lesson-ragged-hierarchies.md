@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 420b1ca4e6cdd72d86c715301957be1f14074fee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685401"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207116"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>추가 단원-비정형 계층 구조
 
@@ -27,7 +27,7 @@ ms.locfileid: "57685401"
 
 1400 호환성 수준의 테이블 형식 모델을 추가 했습니다 **멤버 숨기기** 계층에 대 한 속성입니다. 합니다 **기본** 설정은 모든 수준에 빈 멤버가 없다고 가정 합니다. 합니다 **빈 멤버 숨기기** 설정 피벗 테이블 또는 보고서에 추가 하는 경우 계층에서 빈 멤버를 제외 합니다.  
   
-이 단원에 소요되는 예상 시간: **20 분**  
+예상이 단원을 완료 시간: **20 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 이 추가 단원 문서는 테이블 형식 모델링 자습서의 일부입니다. 이 추가 단원의 작업을 수행 하기 전에 완료 해야 이전의 단원을 모두 완료 된 Adventure Works Internet Sales 샘플 모델 프로젝트가 또는 합니다. 
@@ -48,11 +48,11 @@ ms.locfileid: "57685401"
 
     | 표 1           | Column       | 필터 방향   | 표 2     | Column      | 활성 |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | Default            | FactOnlineSales     | Date        | 사용자 계정 컨트롤    |
-    | FactResellerSales | DueDate      | Default            | FactOnlineSales     | Date        | 아니요     |
-    | FactResellerSales | ShipDateKey  | Default            | FactOnlineSales     | Date        | 아니요     |
-    | FactResellerSales | ProductKey   | Default            | DimProduct  | ProductKey  | 사용자 계정 컨트롤    |
-    | FactResellerSales | EmployeeKey  | 두 테이블에 | DimEmployee | EmployeeKey | 사용자 계정 컨트롤    |
+    | FactResellerSales | OrderDateKey | 기본값            | FactOnlineSales     | Date        | 예    |
+    | FactResellerSales | DueDate      | 기본값            | FactOnlineSales     | Date        | 아니요     |
+    | FactResellerSales | ShipDateKey  | 기본값            | FactOnlineSales     | Date        | 아니요     |
+    | FactResellerSales | ProductKey   | 기본값            | DimProduct  | ProductKey  | 예    |
+    | FactResellerSales | EmployeeKey  | 두 테이블에 | DimEmployee | EmployeeKey | 예    |
 
 5. 에 **DimEmployee** 테이블에서 다음 항목을 만듭니다 [계산 된 열](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md): 
 

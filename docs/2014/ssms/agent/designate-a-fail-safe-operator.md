@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760755"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211420"
 ---
 # <a name="designate-a-fail-safe-operator"></a>유사 시 대기 운영자 지정
   유사 시 대기 운영자는 지정된 운영자에게 알릴 수 없을 경우 경고를 받는 사용자입니다. 이 항목에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 알림을 받을 유사 시 대기 운영자를 설정하는 방법에 대해 설명합니다.  
@@ -60,13 +60,13 @@ ms.locfileid: "52760755"
   
 2.  **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
 
-3.  에 **SQL Server 에이전트 속성-**_server_name_ 대화 상자의 **페이지 선택**를 선택 **경고 시스템**입니다.  
+3.  에 **SQL Server 에이전트 속성-** _server_name_ 대화 상자의 **페이지 선택**를 선택 **경고 시스템**입니다.  
  
 4.  **유사 시 대기 운영자**에서 **유사 시 대기 운영자 설정**을 선택합니다.  
   
 5.  **운영자** 목록에서 유사 시 대기 운영자로 설정할 운영자를 선택합니다.  
   
-6.  각 알림에 대한 알림 방법을 다음 확인란에서 선택합니다. **전자 메일**하십시오 **호출기**, 또는 **Net send**합니다.  
+6.  각 알림에 대한 알림 방법을 다음 확인란에서 선택합니다. **이메일**, **호출기** 또는 **Net 보내기**.  
   
 7.  완료되었으면 **확인**을 클릭합니다.  
   
