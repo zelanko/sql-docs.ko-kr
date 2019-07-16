@@ -2,19 +2,18 @@
 title: 원격 테이블 복사-병렬 데이터 웨어하우스 | Microsoft Docs
 description: 분석 플랫폼 시스템 Parallel Data Warehouse의 원격 테이블 복사본을 사용 하 여 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ed517a471368e4192ad7393a92274424d37f975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28bd5deda25650d36467281ccbffa7b666f4c695
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960201"
 ---
 # <a name="remote-table-copy"></a>원격 테이블 복사
 원격 테이블 복사 기능을 사용 하 여 원격 (비 어플라이언스) SMP SQL Server 데이터베이스에 SQL Server PDW 데이터베이스에서 테이블을 복사 하는 방법을 설명 합니다. SQL Server PDW에 대 한 허브 및 스포크 시나리오를 지원 하려면 원격 테이블 복사본을 사용 합니다.  

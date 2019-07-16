@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 2582d519893fac3a49ce997674980d2d58d5cf32
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: d53725e708a5aaf6fb8476ce2d7408ffcfa7f102
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962403"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>R 패키지 관리자를 사용 하 여 SQL Server에서 R 패키지를 설치 하려면
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,7 +70,7 @@ SQL Server, SQL Server 2016 R Services 및 SQL Server 2017 Machine Learning Serv
 
     모든 필수 패키지 인스턴스 라이브러리에 없는 및 압축 된 파일에서 찾을 수 없습니다, 대상 패키지의 설치가 실패 합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 + [새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)
 + [새 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)

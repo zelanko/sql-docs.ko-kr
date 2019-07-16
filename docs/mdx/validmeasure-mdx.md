@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ddcc65d93ebd9d1ea1e9465b40fe1e6027834e37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3bce4baf3dc3499621f67defd40a4579e9cd460
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63140241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037953"
 ---
 # <a name="validmeasure-mdx"></a>ValidMeasure(MDX)
 
@@ -32,7 +31,7 @@ ValidMeasure(Tuple_Expression)
  *Tuple_Expression*  
  튜플을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **ValidMeasure** 튜플의 값을 반환 하는 함수, 튜플을 반환 값을 갖는 측정값의 측정값 그룹과 아무 관계도 없는 특성을 무시 합니다. 특성은 다음 두 가지 이유로 측정값과 무관할 수 있습니다.  
   
 -   특성의 차원이 튜플에서 측정값의 측정값 그룹과 관계가 없습니다.  

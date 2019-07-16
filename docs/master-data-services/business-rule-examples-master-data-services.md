@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 5f2f1aa1dd763675d50ff9ea1961d6036c3ee73f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd74d5e22547cee0383ed2222c1a31d848402974
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047461"
 ---
 # <a name="business-rule-examples-master-data-services"></a>비즈니스 규칙의 예(Master Data Services)
 
@@ -28,7 +27,7 @@ ms.locfileid: "65485423"
   
   
 ## <a name="business-rule-examples"></a>비즈니스 규칙의 예  
-샘플 모델 |엔터티  |비즈니스 규칙 이름| Description  
+샘플 모델 |엔터티  |비즈니스 규칙 이름| 설명  
 ---------|---------|---------|-----------|  
 Customer    | Customer   | Person pmt terms| 고객에 대한 기본 지불 조건을 지정합니다.          
 다음 비즈니스 규칙에서 CustomerType 특성 값이 `is equal` [규칙 조건](../master-data-services/business-rule-conditions-master-data-services.md)을 충족하면 `defaults to` [규칙 작업](../master-data-services/business-rule-conditions-master-data-services.md) 이 PaymentTerms 특성에 적용됩니다. 충족하지 않으면 아무 작업도 수행되지 않습니다.  
@@ -43,7 +42,7 @@ Else
   
 **--------------------------------------------------**  
   
-샘플 모델  |엔터티  |비즈니스 규칙 이름|Description    
+샘플 모델  |엔터티  |비즈니스 규칙 이름|설명    
 ---------|---------|---------|---------------  
 Customer     | Customer    | Org pmt terms | 조직에 대한 기본 지불 조건을 지정합니다.         
 다음 비즈니스 규칙에서 CustomerType 특성 값이 `is equal` [규칙 조건](../master-data-services/business-rule-conditions-master-data-services.md)을 충족하면 `defaults to` [규칙 작업](../master-data-services/business-rule-actions-master-data-services.md) 이 PaymentTerms 특성에 적용됩니다. 충족하지 않으면 아무 작업도 수행되지 않습니다.  
@@ -59,7 +58,7 @@ Else
 **--------------------------------------------------**  
   
   
-샘플 모델  |엔터티  |비즈니스 규칙 이름| Description    
+샘플 모델  |엔터티  |비즈니스 규칙 이름| 설명    
 ---------|---------|---------|-----------  
 Product     |  Product       | DaysToManufacture |사내 제조에 대한 제조일의 범위를 지정합니다.          
 다음 비즈니스 규칙에서 InHouseManufacture 특성 값이 `is equal` [규칙 조건](../master-data-services/business-rule-conditions-master-data-services.md)을 충족하면 `must be between` [규칙 작업](../master-data-services/business-rule-actions-master-data-services.md) 이 DaysToManufacture 특성에 적용됩니다. 충족하지 않으면 아무 작업도 수행되지 않습니다.  
@@ -75,7 +74,7 @@ Else
 **--------------------------------------------------**  
   
   
-샘플 모델  |엔터티  |비즈니스 규칙 이름|Description    
+샘플 모델  |엔터티  |비즈니스 규칙 이름|설명    
 ---------|---------|---------|-------------  
 Product     |Product         |Required fields| 제품 엔터티 멤버에 대한 필수 특성을 지정합니다.           
 다음 비즈니스 규칙에서 모든 조건의 `is required` [유효성 검사 작업](../master-data-services/business-rule-actions-master-data-services.md) 은 지정한 특성에 대해 수행됩니다. 특성 값은 Null 또는 공백일 수 없습니다.  
@@ -100,7 +99,7 @@ Else
 **--------------------------------------------------**  
   
   
-샘플 모델  |엔터티  |비즈니스 규칙 이름|Description    
+샘플 모델  |엔터티  |비즈니스 규칙 이름|설명    
 ---------|---------|---------|-----------  
 Product     | Product        |  Std Cost| 표준 원가가 0보다 크도록 요구합니다.        
 다음 비즈니스 규칙에서 모든 조건의 `must be greater than` [규칙 작업](../master-data-services/business-rule-actions-master-data-services.md) 은 제품의 StandardCost 특성에 적용됩니다.  
@@ -116,7 +115,7 @@ Else
 **--------------------------------------------------**  
   
   
-샘플 모델  |엔터티  |비즈니스 규칙 이름|Description    
+샘플 모델  |엔터티  |비즈니스 규칙 이름|설명    
 ---------|---------|---------|------------  
 Product     | Product        | FG MSRP Cost|제품이 완제품인 경우 MSRP(제조업체 제시 소매 가격) 및 총판 원가가 0보다 크도록 지정합니다.           
   
@@ -134,7 +133,7 @@ Else
 **--------------------------------------------------**  
   
   
-샘플 모델  |엔터티  |비즈니스 규칙 이름|Description    
+샘플 모델  |엔터티  |비즈니스 규칙 이름|설명    
 ---------|---------|---------|------------  
 Product     | Product        |  Default Name| Color 및 Class 특성 값에 따라 기본 제품 이름을 지정합니다. Color 특성 값이 YLO가 아니고 Class 특성이 NA가 아니면 기본 이름은 Yellow NA입니다.         
 다음 비즈니스 규칙에서 Color 및 Class 특성이 `is equal` 규칙 조건을 충족하지 않으면 `defaults to` [규칙 작업](../master-data-services/business-rule-actions-master-data-services.md)이 Name 특성에 적용됩니다.  

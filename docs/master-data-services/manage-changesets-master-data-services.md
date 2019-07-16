@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cc74d46d-7566-45d8-9b51-2cfc262f6abe
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2edb8e994b43e5704d88417384e547e0cd0a183f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7f428189723987adbbf867facb819a987c502ab7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054483"
 ---
 # <a name="manage-changesets-master-data-services"></a>변경 집합 관리(Master Data Services)
 

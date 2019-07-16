@@ -20,27 +20,26 @@ helpviewer_keywords:
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b873a4d43d76fe27c7a807324c2fb60ce3d42fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053394"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 각 언어마다 하나의 행이 포함되어 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|고유한 언어 ID입니다.|  
 |dateformat|**nchar(3)**|날짜 순서입니다(예: DMY).|  
-|datefirst|**tinyint**|첫 번째 요일: 1은 월요일, 화요일, 7은 일요일까지 2입니다.|  
-|업그레이드|**int**|시스템에서 사용하도록 예약되었습니다.|  
-|NAME|**sysname**|예를 들어 Français 공식 언어 이름입니다.|  
+|datefirst|**tinyint**|첫 번째 요일을: 1은 월요일, 화요일, 7은 일요일까지 2입니다.|  
+|upgrade|**int**|시스템에서 사용하도록 예약됩니다.|  
+|name|**sysname**|예를 들어 Français 공식 언어 이름입니다.|  
 |alias|**sysname**|대체 언어 이름입니다(예: 프랑스어).|  
 |months|**nvarchar(372)**|1월에서 12월까지의 순서로 쉼표로 구분된 전체 길이의 월 이름 목록이며 각 이름은 20자까지 사용할 수 있습니다.|  
 |shortmonths|**nvarchar(132)**|1월에서 12월까지의 순서로 쉼표로 구분된 짧은 길이의 월 이름 목록이며 각 이름은 9자까지 사용할 수 있습니다.|  

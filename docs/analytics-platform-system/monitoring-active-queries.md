@@ -2,19 +2,18 @@
 title: 활성 쿼리-병렬 데이터 웨어하우스 모니터링 | Microsoft Docs
 description: Analytics Platform System에 대 한 활성 쿼리를 모니터링 하 고 관리자 콘솔 및 병렬 데이터 웨어하우스 시스템 뷰를 사용 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d2b1ee84b2ae738d7790e1238176331a221ac473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65d656b02ef0d726292a7d37aef565bf508d7662
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960491"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>활성 쿼리-병렬 데이터 웨어하우스를 모니터링합니다.
 이 문서에서는 관리 콘솔 및 SQL Server PDW 시스템 뷰를 사용 하 여 활성 쿼리를 모니터링 하는 방법을 보여 줍니다. 참조 [관리자 콘솔을 사용 하 여 어플라이언스 모니터링](monitor-the-appliance-by-using-the-admin-console.md) 하 고 [시스템 뷰](tsql-system-views.md) 이러한 도구에 대 한 정보에 대 한 합니다.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c69113e4bb5457cb997f832179e5c1aab2841d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4f336a7ebfaf5e76ac464944900231c452809f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020552"
 ---
 # <a name="retrieving-data-type-information-with-sqlgettypeinfo"></a>SQLGetTypeInfo를 사용하여 데이터 형식 정보 검색
 ODBC 형식 식별자로 SQL 데이터 형식에서 매핑을 대략적인 이기 때문에 ODBC 함수를 제공 하는 (**SQLGetTypeInfo**)는 드라이버 수 완전히를 통해 데이터 소스에서 각 SQL 데이터 형식에 설명 합니다. 이 함수는 각 행에는 단일 데이터 형식 이름, 형식 식별자, 전체 자릿수, 소수 자릿수 및 null 허용 여부 등의 특징을 설명 하는 결과 집합을 반환 합니다.  

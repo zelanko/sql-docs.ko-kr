@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dbafa8dd407269fa23ca37574f18a12be519c448
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c9f883b7eafc59a3d9d93541e07fe4c4db08b9c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950592"
 ---
 # <a name="spreplmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|동기화 세션의 단계를 나타내며 다음 중 하나일 수 있습니다.<br /><br /> **0** = 초기화 또는 요약 행<br /><br /> **1** = 업로드<br /><br /> **2** = 다운로드|  
 |**ArticleName**|**sysname**|동기화 중인 아티클의 이름입니다. **ArticleName** 문서 세부 정보를 나타내지 않는 결과 집합의 행에 대 한 요약 정보도 포함 합니다.|  
@@ -61,7 +60,7 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_replmonitorhelpmergesessiondetail** 병합 복제를 모니터링 하는 데 사용 됩니다.  
   
  구독자에서 실행 될 때 **sp_replmonitorhelpmergesessiondetail** 만 마지막 5 개 병합 에이전트 세션에 대 한 자세한 정보를 반환 합니다.  

@@ -1,5 +1,5 @@
 ---
-title: sp_who (Transact-SQL) | Microsoft Docs
+title: sp_who (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dbed86af1415f89a59b7de85061a6db1db324307
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5d758c7ca2d21183b9486030704c31b9d5f621d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950513"
 ---
 # <a name="spwho-transact-sql"></a>sp_who(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +55,11 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 ## <a name="result-sets"></a>결과 집합  
  **sp_who** 결과 다음 정보를 사용 하 여 집합을 반환 합니다.  
   
-|Column|데이터 형식|Description|  
+|Column|데이터 형식|설명|  
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|세션 ID입니다.|  
 |**ecid**|**smallint**|특정 세션 ID와 연결된 지정된 스레드의 실행 컨텍스트 ID입니다.<br /><br /> ECID = {0, 1, 2, 3,... *n*} 이며 여기서 0은 항상 주 또는 부모 스레드를 하 고 {1, 2, 3,... *n*} 의미 합니다.|  
-|**상태**|**nchar(30)**|프로세스 상태입니다. 가능한 값은 아래와 같습니다.<br /><br /> **유휴**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 세션을 다시 설정하고 있습니다.<br /><br /> **실행**합니다. 세션에서 일괄 처리를 하나 이상 실행하고 있습니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.<br /><br /> **background**. 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행하고 있습니다.<br /><br /> **롤백**합니다. 세션에서 트랜잭션 롤백을 진행하고 있습니다.<br /><br /> **보류 중인**합니다. 세션이 작업자 스레드를 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **실행 가능한**합니다. 세션의 태스크는 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop**합니다. 세션의 태스크가 spinlock을 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **일시 중단**합니다. 세션이 I/O와 같은 이벤트가 완료되기를 기다리고 있습니다.|  
+|**상태**|**nchar(30)**|프로세스 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **유휴**합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 세션을 다시 설정하고 있습니다.<br /><br /> **실행**합니다. 세션에서 일괄 처리를 하나 이상 실행하고 있습니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.<br /><br /> **백그라운드**합니다. 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행하고 있습니다.<br /><br /> **롤백**합니다. 세션에서 트랜잭션 롤백을 진행하고 있습니다.<br /><br /> **보류 중인**합니다. 세션이 작업자 스레드를 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **실행 가능한**합니다. 세션의 태스크는 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop**합니다. 세션의 태스크가 spinlock을 사용할 수 있을 때까지 기다리고 있습니다.<br /><br /> **일시 중단**합니다. 세션이 I/O와 같은 이벤트가 완료되기를 기다리고 있습니다.|  
 |**loginame**|**nchar(128)**|특정 프로세스와 연결된 로그인 이름입니다.|  
 |**hostname**|**nchar(128)**|각 프로세스의 호스트 또는 컴퓨터 이름입니다.|  
 |**blk**|**char(5)**|프로세스를 차단하기 위한 세션 ID입니다(존재하는 경우). 없는 경우 이 열은 0이 됩니다.<br /><br /> 분리된 분산 트랜잭션이 지정된 세션 ID와 연결된 트랜잭션을 차단하는 경우 이 열은 분리된 트랜잭션을 차단하기 위한 값으로 '-2'를 반환합니다.|  
@@ -70,7 +69,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
  병렬 처리의 경우 특정 세션 ID에 대해 하위 스레드가 생성됩니다. 주 스레드는 `spid = <xxx>` 및 `ecid =0`으로 표시됩니다. 다른 하위 스레드의 동일 `spid = <xxx>`, 하지만 **ecid** > 0입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  차단 프로세스(배타 잠금이 설정된 경우도 있음)는 다른 프로세스에 필요한 리소스를 보유하고 있는 프로세스입니다.  
   
  모든 분리된 분산 트랜잭션에는 세션 ID 값 '-2'가 할당됩니다. 분리된 분산 트랜잭션은 어떤 세션 ID와도 연결되지 않은 분산 트랜잭션입니다. 자세한 내용은 [표시된 트랜잭션을 사용하여 관련 데이터베이스를 일관되게 복구&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md)을 참조하세요.  
@@ -82,7 +81,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-all-current-processes"></a>1. 현재 프로세스 모두 나열  
+### <a name="a-listing-all-current-processes"></a>A. 현재 프로세스 모두 나열  
  다음 예에서는 매개 변수 없이 `sp_who`를 사용하여 현재 사용자를 모두 보고합니다.  
   
 ```  
@@ -92,7 +91,7 @@ EXEC sp_who;
 GO  
 ```  
   
-### <a name="b-listing-a-specific-users-process"></a>2. 특정 사용자의 프로세스 나열  
+### <a name="b-listing-a-specific-users-process"></a>2\. 특정 사용자의 프로세스 나열  
  다음 예에서는 로그인 이름으로 한 명의 현재 사용자에 대한 정보를 보는 방법을 보여 줍니다.  
   
 ```  
@@ -102,7 +101,7 @@ EXEC sp_who 'janetl';
 GO  
 ```  
   
-### <a name="c-displaying-all-active-processes"></a>3. 활성 프로세스 모두 표시  
+### <a name="c-displaying-all-active-processes"></a>3\. 활성 프로세스 모두 표시  
   
 ```  
 USE master;  
@@ -111,7 +110,7 @@ EXEC sp_who 'active';
 GO  
 ```  
   
-### <a name="d-displaying-a-specific-process-identified-by-a-session-id"></a>4. 세션 ID를 지정하여 특정 프로세스 표시  
+### <a name="d-displaying-a-specific-process-identified-by-a-session-id"></a>4\. 세션 ID를 지정하여 특정 프로세스 표시  
   
 ```  
 USE master;  

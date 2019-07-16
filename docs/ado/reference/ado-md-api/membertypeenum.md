@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 10d96f7c89198b2267654073570fdfdbac38257b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da396bd71e64925bcd8fb74f71f8e334bf7f1d7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949409"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
 설정을 지정 합니다는 [형식](../../../ado/reference/ado-md-api/type-property-ado-md.md) 의 속성을 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체입니다.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adMemberAll**|4|나타내는 합니다 **멤버** 개체 수준의 모든 멤버를 나타냅니다.|  
 |**adMemberFormula**|3|나타내는 합니다 **멤버** 개체 수식을 사용 하 여 계산 됩니다.|  

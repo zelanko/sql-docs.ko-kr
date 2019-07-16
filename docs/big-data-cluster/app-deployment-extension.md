@@ -5,17 +5,16 @@ description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 �
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1e5ab6364437432c803a364abd50ef5b1af4f8f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958919"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>VS Code를 사용 하 여 SQL Server 빅 데이터 클러스터에 응용 프로그램을 배포 하는 방법
 
@@ -132,7 +131,7 @@ VS Code는 적절 한 끝점, 사용자 이름 및 암호를 묻습니다. 앱 �
 
 클릭 하면 `Links`, 액세스할 수 있는지 표시 됩니다는 `swagger.json` 배포 된 앱의 앱을 호출 하는 고유한 클라이언트를 작성할 수 있도록 합니다.
 
-![Swagger](media/vs-extension/swagger.png)
+![swagger](media/vs-extension/swagger.png)
 
 참조 [빅 데이터 클러스터에 응용 프로그램을 사용](big-data-cluster-consume-apps.md) 자세한 내용은 합니다.
 

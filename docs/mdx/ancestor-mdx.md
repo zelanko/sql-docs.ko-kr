@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 464f8504850c6aa13f1cf040f9429be56f7181be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 385206d4a94362831e0949bafe5a11c1ce48d7bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017133"
 ---
 # <a name="ancestor-mdx"></a>Ancestor(MDX)
 
@@ -42,7 +41,7 @@ Ancestor(Member_Expression, Distance)
  *거리*  
  지정된 멤버와의 거리를 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여 합니다 **상위** 함수에 MDX 멤버 식을 사용 하 여 함수를 제공 하 다음 멤버의 상위 항목인 수준의 MDX 식 또는 위의 수준 수를 나타내는 숫자 식 제공 해당 멤버입니다. 이 정보를 사용 합니다 **상위** 함수 수준 상위 항목 멤버를 반환 합니다.  
   
 > [!NOTE]  

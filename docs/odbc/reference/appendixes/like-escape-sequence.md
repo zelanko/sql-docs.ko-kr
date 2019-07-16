@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 798d75ea-be9d-4bef-b297-318bc327f1ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 65447904f32b7e0457ed807f18e942b334ddc236
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 629ceaf666ae732d0838a216272c308dcb5b5658
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041716"
 ---
 # <a name="like-escape-sequence"></a>LIKE 이스케이프 시퀀스
 ODBC는 LIKE 절에 대 한 이스케이프 시퀀스를 사용합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  
@@ -29,7 +28,7 @@ ODBC는 LIKE 절에 대 한 이스케이프 시퀀스를 사용합니다. 이 �
 {'escape-character'}  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  BNF 표기법의 구문은 다음과 같습니다.  
   
  *ODBC-like-escape* ::=  
@@ -38,7 +37,7 @@ ODBC는 LIKE 절에 대 한 이스케이프 시퀀스를 사용합니다. 이 �
   
  *escape-character* ::= *character*  
   
- *ODBC-esc-initiator* ::= {  
+ *ODBC esc 시작자* :: = {  
   
  *ODBC esc 종결자* :: =}  
   

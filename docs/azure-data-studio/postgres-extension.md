@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: rachel-msft
 ms.author: raagyema
-manager: jroth
-ms.openlocfilehash: f21aaa210303e88fb0f08b362277a81c1f9a5515
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ecdd3cb918013a4ae26869679576bafd003756e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959482"
 ---
 # <a name="postgresql-extension-preview"></a>PostgreSQL 확장(미리 보기)
 

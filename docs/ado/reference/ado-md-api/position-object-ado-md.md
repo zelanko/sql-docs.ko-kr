@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 91eab784-3ce9-41d6-a840-9b0939ca0608
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 32f6cea0eb9cf28ee50276968eca996714b96698
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 299df229489a9000c1dc2e97f7d7c489c490aed4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949258"
 ---
 # <a name="position-object-ado-md"></a>Position 개체(ADO MD)
 축 따라 점을 정의 하는 하나 이상의 다른 차원 멤버의 집합을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  속성 및 컬렉션을 **위치** 개체는 다음을 수행할 수 있습니다.  
   
 -   사용 하 여는 **서 수** 의 서 수 위치를 반환 하는 속성을 **위치** 따라를 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md)합니다.  

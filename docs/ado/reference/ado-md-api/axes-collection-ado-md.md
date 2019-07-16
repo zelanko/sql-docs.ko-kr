@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 072fb21a-ec0f-4b02-9022-1cef3ad4bfff
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f30d7fed3748e954410272d8c1a019194c335ea1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c06faf6327d60be823ce9d99215655b5badf5e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947403"
 ---
 # <a name="axes-collection-ado-md"></a>Axes 컬렉션(ADO MD)
 포함 된 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md) 셀 집합을 정의 하는 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  A [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체에 포함 되어는 **축** 컬렉션입니다. 한 번 합니다 **Cellset** 는 열이 컬렉션은 하나 이상 포함 **축**합니다. 참조 된 [축](../../../ado/reference/ado-md-api/axis-object-ado-md.md) 개체를 사용 하는 방법에 대 한 자세한 설명은 **축** 개체입니다.  
   
 > [!NOTE]

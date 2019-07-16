@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 310e0f87-0044-4fdf-bd12-51a723a74ce6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8eb0d10f8be8c2e5d9f939dd7a631d22154d6608
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 350c8eeec6a88bf2fad3a3461675696ae75ab8e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47613684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054334"
 ---
 # <a name="sysextendedprocedures-transact-sql"></a>sys.extended_procedures(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47613684"
   확장된 저장된 프로시저를 사용 하 여 각 개체의 행을 포함 **sys.objects.type** = X입니다. 확장된 저장된 프로시저에 설치 되어 있으므로 **마스터** 데이터베이스는만 해당 데이터베이스 컨텍스트에서만에서 볼 수 있습니다. 선택 하 여 **sys.extended_procedures** 다른 데이터베이스 컨텍스트에서 보기에는 빈 결과 집합이 반환 됩니다.  
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**\<Sys.objects에서 상속 된 열 >**||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.|  
 |**dll_name**|**nvarchar(260)**|이 확장 저장 프로시저에 대한 DLL의 경로를 포함한 이름입니다.|  

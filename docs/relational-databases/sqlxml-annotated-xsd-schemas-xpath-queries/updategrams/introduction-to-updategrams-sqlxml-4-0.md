@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 884ed081e9d1ec445815802545da2160057e9f3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cf5835e513b1d03ac1065ae039c989c6f80a659f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018544"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Updategram 소개(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "56026884"
 >  이 설명서에서는 사용자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 템플릿 및 매핑 스키마 지원에 대해 잘 알고 있다고 가정합니다. 자세한 내용은 [주석이 추가 된 XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)합니다. XDR을 사용 하는 레거시 응용 프로그램에 대 한 참조 [주석이 추가 된 XDR 스키마 &#40;SQLXML 4.0에서 사용 되지 않음&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)합니다.  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Updategram의 필수 네임스페이스  
- Updategram에서 키워드와 같은  **\<동기화 >** 를  **\<전에 >**, 및  **\<후 >** 에 존재 합니다 **urn: 스키마-microsoft-com:xml-updategram** 네임 스페이스입니다. 임의의 네임스페이스 접두사를 사용합니다. 이 설명서에서는 합니다 **updg** 접두사를 나타냅니다 합니다 **updategram** 네임 스페이스입니다.  
+ Updategram에서 키워드와 같은  **\<동기화 >** 를  **\<전에 >** , 및  **\<후 >** 에 존재 합니다 **urn: 스키마-microsoft-com:xml-updategram** 네임 스페이스입니다. 임의의 네임스페이스 접두사를 사용합니다. 이 설명서에서는 합니다 **updg** 접두사를 나타냅니다 합니다 **updategram** 네임 스페이스입니다.  
   
 ## <a name="reviewing-syntax"></a>구문 검토  
- Updategram은 사용 하 여 템플릿  **\<동기화 >**,  **\<전에 >**, 및  **\<후 >** 블록의 구문을 구성 하는 updategram입니다. 다음 코드에서는 가장 간단한 형태의 updategram 구문을 보여 줍니다.  
+ Updategram은 사용 하 여 템플릿  **\<동기화 >** ,  **\<전에 >** , 및  **\<후 >** 블록의 구문을 구성 하는 updategram입니다. 다음 코드에서는 가장 간단한 형태의 updategram 구문을 보여 줍니다.  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

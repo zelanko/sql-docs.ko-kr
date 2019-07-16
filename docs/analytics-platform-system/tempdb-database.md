@@ -2,19 +2,18 @@
 title: Tempdb 데이터베이스-병렬 데이터 웨어하우스 | Microsoft Docs
 description: 병렬 데이터 웨어하우스에서 Tempdb 데이터베이스입니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7e11f4eff980358f4b4906f8a100cfc509d19dd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1790ae3bc63a379c1bcf143655f10829db60a339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960015"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 tempdb 데이터베이스
 **tempdb** 사용자 데이터베이스에 대 한 로컬 임시 테이블을 저장 하는 SQL Server PDW 시스템 데이터베이스입니다. 임시 테이블 쿼리 성능을 향상 시키기 위해 자주 사용 됩니다. 예를 들어, 스크립트 모듈화 임시 테이블을 사용 하 고 계산 된 데이터를 재사용할 수 있습니다.  
@@ -84,7 +83,7 @@ SQL Server PDW 별도로 명시 하지 않는 임시 테이블 및 영구 테이
   
 ## <a name="RelatedTasks"></a>관련된 태스크  
   
-|태스크|Description|  
+|태스크|설명|  
 |---------|---------------|  
 |테이블을 만들 **tempdb**합니다.|CREATE TABLE 및 CREATE TABLE AS SELECT 문을 사용 하 여 사용자 임시 테이블을 만들 수 있습니다. 자세한 내용은 [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md) 하 고 [CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)합니다.|  
 |기존 테이블의 목록을 보려면 **tempdb**합니다.|`SELECT * FROM tempdb.sys.tables;`|  

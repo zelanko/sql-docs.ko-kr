@@ -7,13 +7,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a3348058b03ff1441256cc8298ddc1b5b2216b0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac4c00830c9f678c467a75c1531b97fd3723c0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962718"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>SQL Server (In-database) 인스턴스의 실행을 위해 R 코드 변환
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -159,7 +158,7 @@ SQL Server에 R Studio 또는 다른 환경에서 R 코드를 이동할 때 가�
 
 + 응용 프로그램에서 직접 액세스 하기 위해 저장된 프로시저에서 예측 및 점수 매기기 함수를 래핑하십시오.
 
-### <a name="other-resources"></a>기타 리소스
+### <a name="other-resources"></a>다른 리소스
 
 SQL Server에서 R 솔루션을 배포할 수 있습니다 하는 방법의 예제를 보려면 다음이 샘플을 참조 합니다.
 

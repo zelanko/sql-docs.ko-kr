@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6eaa54af-7ba4-4fce-bf6c-6ac67cc1ac94
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c64e89fd5d965b98b59107d6047e6f43c0bcc9b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dffb53a2b6436725a2b7dc19dfb209a58b1134e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47716711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053117"
 ---
 # <a name="spdescribecursorcolumns-transact-sql"></a>sp_describe_cursor_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ sp_describe_cursor_columns
   
  다음 표에서는 sp_describe_cursor_columns를 사용할 때 반환되는 커서의 형식을 보여 줍니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |column_name|**sysname** (nullable)|결과 집합 열에 할당된 이름입니다. AS 절 없이 열이 지정된 경우에는 열이 NULL이 됩니다.|  
 |ordinal_position|**int**|결과 집합의 제일 왼쪽에 있는 열에 대한 상대 위치입니다. 첫 번째 열은 0번 위치에 있습니다.|  
@@ -83,14 +82,14 @@ sp_describe_cursor_columns
 |column_precision|**tinyint**|기준으로 열의 최대 전체 자릿수는 *bPrecision* OLE DB의 값입니다.|  
 |column_scale|**tinyint**|에 대 한 소수점 오른쪽 자릿수는 **숫자** 또는 **10 진수** 데이터 형식을 기준으로 합니다 *bScale* OLE DB의 값입니다.|  
 |order_position|**int**|열이 결과 집합의 순서 지정에 참여한 경우 제일 왼쪽 열을 기준으로 했을 때 순서 키에 있는 열의 위치입니다.|  
-|order_direction|**varchar(1)**(nullable)|A = 열이 순서 키에 있으며 오름차순입니다.<br /><br /> D = 열이 순서 키에 있으며 내림차순입니다.<br /><br /> NULL = 열이 순서 지정에 참여하지 않습니다.|  
+|order_direction|**varchar(1)** (nullable)|A = 열이 순서 키에 있으며 오름차순입니다.<br /><br /> D = 열이 순서 키에 있으며 내림차순입니다.<br /><br /> NULL = 열이 순서 지정에 참여하지 않습니다.|  
 |hidden_column|**smallint**|0 = 이 열이 선택 목록에 표시됩니다.<br /><br /> 1 = 나중에 사용하도록 예약되었습니다.|  
 |columnid|**int**|기본 열의 열 ID입니다. 결과 집합 열이 식에서 작성된 경우 columnid는 -1입니다.|  
 |objectid|**int**|열을 제공하는 개체 또는 주 테이블의 개체 ID입니다. 결과 집합 열이 식에서 작성된 경우 objectid는 -1입니다.|  
 |dbid|**int**|열을 제공하는 기본 테이블을 포함한 데이터베이스의 ID입니다. 결과 집합 열이 식에서 작성된 경우 dbid는 -1입니다.|  
 |dbname|**sysname**<br /><br /> (Null 허용)|열을 제공하는 기본 테이블을 포함한 데이터베이스의 이름입니다. 결과 집합 열이 식에서 작성된 경우 dbname은 NULL입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_describe_cursor_columns는 각 커서의 이름 및 데이터 형식 등 서버 커서의 결과 집합에 있는 열의 특성을 설명합니다. 서버 커서의 전역 특성을 설명을 보려면 sp_describe_cursor를 사용하십시오. 커서가 참조하는 기본 테이블의 보고서를 보려면 sp_describe_cursor_tables를 사용하십시오. 연결 시 표시될 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서의 보고서를 얻으려면 sp_cursor_list를 사용하십시오.  
   
 ## <a name="permissions"></a>사용 권한  

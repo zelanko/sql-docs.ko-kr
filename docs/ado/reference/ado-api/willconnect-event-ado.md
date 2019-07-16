@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: da561d58-eb58-446c-a4fd-1838c76073c0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01b5c20668f97c80ae5abdcbb213914c012c7359
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fc1ac74e7e3d521bae587957f5f95771e5a5268
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945854"
 ---
 # <a name="willconnect-event-ado"></a>WillConnect 이벤트(ADO)
 합니다 **WillConnect** 이벤트는 연결을 시작 하기 전에 호출 됩니다.  
@@ -59,7 +58,7 @@ WillConnect ConnectionString, UserID, Password, Options, adStatus, pConnection
  *pConnection*  
  합니다 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 이 이벤트 알림이 적용 되는 개체입니다. 매개 변수를 변경 합니다 **연결** 여는 **WillConnect** 이벤트 처리기 영향을 주지 것입니다를 **연결**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  때 **WillConnect** 호출 되는 *ConnectionString*를 *UserID*를 *암호*, 및 *옵션* 매개 변수 (보류 중 연결)이이 이벤트를 발생 시킨 이벤트를 반환 하기 전에 변경할 수 있습니다 하는 작업에 의해 설정 된 값으로 설정 됩니다. **WillConnect** 보류 중인 연결을 취소 함을 요청을 반환 합니다.  
   
  이 이벤트를 취소 **ConnectComplete** 호출 하는 데 해당 *adStatus* 매개 변수 설정 **adStatusErrorsOccurred**합니다.  

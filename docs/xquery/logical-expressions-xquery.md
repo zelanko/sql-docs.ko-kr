@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd6417c10be286164b9d56a0c2587dfd63a1de23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004500"
 ---
 # <a name="logical-expressions-xquery"></a>논리 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ expression1 or expression2
   
  논리적 **하 고** 하 고 **또는** 연산자는 표준 논리적 의미 체계가 있는 식의 결과 부울 값에 적용 됩니다.  
   
- 다음 쿼리는 제품 카탈로그에서 특정 제품 모델에 대해 전면 각도의 크기가 작은 사진인 <`Picture`> 요소를 검색합니다. 각 제품 설명 문서에 대해 카탈로그에 크기 및 각도와 같은 다른 특성을 가진 하나 이상의 제품 사진을 저장할 수 있습니다.  
+ 다음 쿼리는 제품 카탈로그에서 검색 전면 각도 크기가 작은 사진 인 합니다 <`Picture`>는 특정 제품 모델에 대 한 요소입니다. 각 제품 설명 문서에 대해 카탈로그에 크기 및 각도와 같은 다른 특성을 가진 하나 이상의 제품 사진을 저장할 수 있습니다.  
   
 ```  
 SELECT CatalogDescription.query('  

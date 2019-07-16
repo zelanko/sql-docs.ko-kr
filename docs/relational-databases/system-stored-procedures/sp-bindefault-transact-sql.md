@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 715387bcb15e27b0d53a7f000b0f97c2be5a4bbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 918f545dd0ea0ca30524a307f1ae6d30c3fafb61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046047"
 ---
 # <a name="spbindefault-transact-sql"></a>sp_bindefault(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_bindefault [ @defname = ] 'default' ,
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용할 수 있습니다 **sp_bindefault** 바인딩할 새 기본 열에 DEFAULT 제약 조건을 사용 하는 것이 좋습니다, 있지만 또는 별칭 데이터 형식에 기존 기본값의 바인딩을 해제 하지 않고도 합니다. 이전의 기본값은 무시됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식 또는 CLR 사용자 정의 형식에는 기본값을 바인딩할 수 없습니다. 기본값을 바인딩한 열과 기본값이 호환되지 않는 경우에는 바인딩할 때가 아니라 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]가 기본값을 삽입하려고 시도할 때 오류 메시지를 반환합니다.  
   
  별칭 데이터 형식의 기존 열에 직접 바인딩된 기본값이 하지 않는 한 새 기본값을 상속 하거나 *futureonly_flag* 으로 지정 됩니다 **futureonly**합니다. 별칭 데이터 형식의 새 열은 항상 기본값을 상속합니다.  
@@ -72,7 +71,7 @@ sp_bindefault [ @defname = ] 'default' ,
   
 ## <a name="examples"></a>예  
   
-### <a name="a-binding-a-default-to-a-column"></a>1\. 열에 기본값 바인딩  
+### <a name="a-binding-a-default-to-a-column"></a>A. 열에 기본값 바인딩  
  `today`라는 기본값이 CREATE DEFAULT에 의해 현재 데이터베이스에 정의되었으며, 다음 예에서는 이 기본값을 `HireDate` 테이블의 `Employee` 열에 바인딩합니다. `Employee` 열의 데이터가 제공되지 않은 채로 `HireDate` 테이블에 행이 추가될 때마다 열은 `today`라는 기본값을 할당받게 됩니다.  
   
 ```  

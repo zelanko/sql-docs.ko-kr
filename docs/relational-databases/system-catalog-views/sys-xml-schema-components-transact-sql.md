@@ -19,20 +19,19 @@ ms.assetid: 70142d3a-f8b5-4ee2-8287-3935f0f67aa2
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 7066592f665309cfbe476c3ff8f05ab57306deef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b9ab66e0a25067440a496c6c5eb04b5d8b61e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039282"
 ---
 # <a name="sysxmlschemacomponents-transact-sql"></a>sys.xml_schema_components(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   각 XML 스키마 구성 요소에 대해 행을 반환합니다. 쌍 (**collection_id**를 **namespace_id**) 포함 된 네임 스페이스에 복합 외래 키입니다. 명명 된 구성 요소에 대 한 값 **symbol_space**를 **이름**를 **scoping_xml_component_id**를 **is_qualified**,  **xml_namespace_id**하십시오 **xml_collection_id** 고유 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|데이터베이스에 있는 XML 스키마 구성 요소의 고유 ID입니다.|  
 |**xml_collection_id**|**int**|해당 구성 요소의 네임스페이스를 포함하는 XML 스키마 컬렉션의 ID입니다.|  

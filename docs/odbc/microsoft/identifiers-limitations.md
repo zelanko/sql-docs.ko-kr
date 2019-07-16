@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3466382-71cb-4f82-8318-092a8fcef3df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c781113124d456e1ba866546d6ada7a17371d71f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 251ae0e4e94cec903e2c4b5cf687ed9b8b41dfc8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952394"
 ---
 # <a name="identifiers-limitations"></a>식별자 제한 사항
 식별자는 공백이 나 특수 기호가 있으면 식별자 백 따옴표로 묶어야 합니다. 유효한 이름은는 첫 번째 문자 공백이 되지 않아야 하는 64 개 이상 문자의 문자열을 보여 줍니다. 유효한 이름은 제어 문자나 특수 문자를 포함할 수 없습니다. ' &#124; # *? [ ] . ! $ .  

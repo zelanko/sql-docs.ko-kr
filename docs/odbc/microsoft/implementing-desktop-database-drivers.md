@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8bf304b-eff1-447c-887c-dabdb5353a2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c8be5ffca0ad28793b1b5e22bbeabca05001e361
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb4f4c2b1e9658e1e0199ec6d856ef21db80cf07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952357"
 ---
 # <a name="implementing-desktop-database-drivers"></a>데스크톱 데이터베이스 드라이버 구현
 지침 및 기술 참고 사항 구현 및 Microsoft ODBC 데스크톱 데이터베이스 드라이버를 설정 하는 방법에 대 한 ODBC 데이터 원본 관리자 온라인 도움말에 있습니다. 드라이버 설치 루틴에서 하는 동안이 파일에 액세스할 수 합니다 [Microsoft ODBC 데이터 원본 관리자](../../odbc/admin/odbc-data-source-administrator.md)합니다.  

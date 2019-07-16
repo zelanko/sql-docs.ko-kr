@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c7a88381-3b2c-4af7-9cf7-3a930c1abdee
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 236596354139971c6fcceebff759a57f807cdefa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 725e43685f56c2a52c585acb7624064c85e01b4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047935"
 ---
 # <a name="add-a-group-master-data-services"></a>그룹 추가(Master Data Services)
 

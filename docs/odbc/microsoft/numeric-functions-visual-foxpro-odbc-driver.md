@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7caab48e-cbb5-4bbc-a09b-5cf902e5bc45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 73379b769da61fe14ba18815446337d0172c2805
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34d2ceb19bce2e466ff5cae7647125e94fdb7c03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044990"
 ---
 # <a name="numeric-functions-visual-foxpro-odbc-driver"></a>숫자 함수(Visual FoxPro ODBC 드라이버)
 다음 표에서 Visual FoxPro ODBC 드라이버;에서 지원 되는 ODBC 숫자 함수를 설명 합니다. 동일한 함수에 대 한 Visual FoxPro 문법 ODBC 구문을 다를 경우에 해당 Visual FoxPro 나열 됩니다.  
@@ -36,17 +35,17 @@ ms.locfileid: "63045488"
 |CEILING *(numeric_exp)*||  
 |COS *(float_exp)*||  
 |COT *(float_exp)*||  
-|DEGREES *(numeric_exp)*|RTOD *(numeric_exp)*|  
+|도 *(numeric_exp)*|RTOD *(numeric_exp)*|  
 |EXP *(float_exp)*||  
 |FLOOR *(numeric_exp)*||  
-|LOG *(float_exp)*||  
+|로그 *(float_exp)*||  
 |LOG10 *(float_exp)*||  
 |MOD *(integer_exp1, integer_exp2)*||  
 |PI *( )*||  
 |RADIANS *(numeric_exp)*|DTOR *(numeric_exp)*|  
 |RAND *([integer_exp])*||  
-|ROUND *(numeric_exp, integer_exp)*||  
-|SIGN *(numeric_exp)*||  
+|ROUND *(numeric_exp를 integer_exp)*||  
+|로그인 *(numeric_exp)*||  
 |SIN *(float_exp)*||  
 |SQRT *(float_exp)*||  
 |TAN *(float_exp)*||  
@@ -55,4 +54,4 @@ ms.locfileid: "63045488"
   
  전원 *(numeric_exp를 integer_exp)*  
   
- TRUNCATE *(numeric_exp, integer_exp)*
+ TRUNCATE *(numeric_exp를 integer_exp)*

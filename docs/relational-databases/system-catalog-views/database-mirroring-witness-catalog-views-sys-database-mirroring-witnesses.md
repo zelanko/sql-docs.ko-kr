@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0dd5b794-733b-4a3c-b5a4-62f9f1f0f22d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7542f7619a261a07349c5c55b01a10042ee16bc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 10fbd3ac410ee5b6944ffe7b32285008f8b11776
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033083"
 ---
 # <a name="database-mirroring-witness-catalog-views---sysdatabasemirroringwitnesses"></a>데이터베이스 미러링 모니터 카탈로그 뷰-sys.database_mirroring_witnesses
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47715651"
   
   데이터베이스 미러링 세션에서 자동 장애 조치(Failover)를 수행하려면 미러링 모니터 서버가 필요합니다. 이상적으로 미러링 모니터 서버는 주 서버 및 미러 서버와 다른 컴퓨터에 있어야 합니다. 미러링 모니터 서버는 데이터베이스 역할을 하지 않습니다. 대신 주 서버와 미러 서버의 상태를 모니터링합니다. 주 서버가 실패 하는 경우 미러링 모니터 서버는 미러 서버에 자동 장애 조치를 시작할 수 있습니다. 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_name**|**sysname**|데이터베이스 미러링 세션에 있는 두 개의 데이터베이스 사본의 이름입니다.|  
 |**principal_server_name**|**sysname**|현재 주 데이터베이스 역할을 하는 데이터베이스 사본을 가진 파트너 서버의 이름입니다.|  

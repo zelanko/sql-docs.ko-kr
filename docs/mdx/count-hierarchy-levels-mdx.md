@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 657ce658704b519c31dfaa2186429a7df4110308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17fe804de8bf2c20581ca5c00bee3a28dbce4d55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045213"
 ---
 # <a name="count-hierarchy-levels-mdx"></a>Count(계층 수준)(MDX)
 
@@ -32,7 +31,7 @@ Hierarchy_Expression.Levels.Count
  *Hierarchy_Expression*  
  계층을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  계층의 수준 수를 반환합니다. 해당되는 경우 `[All]` 수준이 포함됩니다.  
   
 > [!IMPORTANT]  

@@ -2,19 +2,18 @@
 title: Microsoft 업데이트-Analytics Platform System 다운로드 | Microsoft Docs
 description: 이 항목에서는 Server Update Services (WSUS (Windows)는 Microsoft 업데이트 카탈로그에서 업데이트를 다운로드 및 분석 플랫폼 시스템 어플라이언스 서버 해당 업데이트를 적용 하는 방법을 설명 합니다. Microsoft Update는 Windows 및 SQL Server에 대 한 모든 적용 가능한 업데이트를 설치 됩니다. WSUS는 어플라이언스의 VMM 가상 컴퓨터에 설치 됩니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78da7bd46282bb42bc3630c71c1cafd1ea0f11bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961044"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>다운로드 및 Analytics Platform System에 대 한 Microsoft 업데이트를 적용 합니다.
 이 항목에서는 Server Update Services (WSUS (Windows)는 Microsoft 업데이트 카탈로그에서 업데이트를 다운로드 및 분석 플랫폼 시스템 어플라이언스 서버 해당 업데이트를 적용 하는 방법을 설명 합니다. Microsoft Update는 Windows 및 SQL Server에 대 한 모든 적용 가능한 업데이트를 설치 됩니다. WSUS는 어플라이언스의 VMM 가상 컴퓨터에 설치 됩니다.  

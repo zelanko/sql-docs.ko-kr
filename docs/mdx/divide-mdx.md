@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 86b4d8c97996733396e3062e134b2e31d2819ec0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6184aa9d932355cd935a9131848ec27895faea5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049301"
 ---
 # <a name="divide-mdx"></a>나누기(MDX)
 
@@ -38,7 +37,7 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
  *alternateresult*  
  (선택 사항) 0으로 나누면 오류가 발생하는 경우 반환되는 값입니다. 제공되지 않으면 기본값은 BLANK()입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  0으로 나누기의 대체 결과는 상수여야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  

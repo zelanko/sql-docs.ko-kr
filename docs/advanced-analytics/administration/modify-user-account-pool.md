@@ -7,13 +7,12 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 9f32e51122df8d2d13d6eada726a1a5e9bea82f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b672ce067d5d1f10754f346c77967b4e3fbe34ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963163"
 ---
 # <a name="scale-concurrent-execution-of-external-scripts-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에 대 한 외부 스크립트의 동시 실행 크기 조정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -64,7 +63,7 @@ Windows 계정 그룹이 만들어집니다 [!INCLUDE[ssNoVersion](../../include
 
 Python 또는 R 스크립트에서 사용할 수 있는 리소스는 SQL Server에 의해 제어 됩니다. SQL Server DMV를 사용하여 리소스 사용을 모니터링하거나, 연결된 Windows 작업 개체에서 성능 카운터를 확인하고 이에 따라 서버 메모리 사용을 조정하는 것이 좋습니다. SQL Server Enterprise Edition을 사용 하는 경우 구성 하 여 외부 스크립트를 실행 하는 데 사용 되는 리소스를 할당할 수 있습니다는 [외부 리소스 풀](how-to-create-a-resource-pool.md)합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 용량을 구성 하는 방법에 대 한 자세한 내용은 다음이 문서를 참조 하세요.
 

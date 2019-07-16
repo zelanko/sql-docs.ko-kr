@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959384"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio에 대 한 릴리스 정보
 
@@ -118,7 +117,7 @@ ms.locfileid: "67826512"
 
 | 변경 | 설명 |
 | :----- | :------ |
-| 추가 [Azure Data Studio 용 PostgreSQL 확장](postgres-extension.md) | 지원 되는 기능: <br/>&bull; &nbsp; 연결 대화 상자 <br/>&bull; &nbsp; 개체 탐색기 <br/>&bull; &nbsp; Query Editor <br/>&bull; &nbsp; 차트 <br/>&bull; &nbsp; 대시보드 <br/>&bull; &nbsp; 코드 조각 <br/>&bull; &nbsp; Edit Data <br/>&bull; &nbsp; Notebooks |
+| 추가 [Azure Data Studio 용 PostgreSQL 확장](postgres-extension.md) | 지원 되는 기능: <br/>&bull; &nbsp; 연결 대화 상자 <br/>&bull; &nbsp; 개체 탐색기 <br/>&bull; &nbsp; 쿼리 편집기 <br/>&bull; &nbsp; 차트 <br/>&bull; &nbsp; 대시보드 <br/>&bull; &nbsp; 코드 조각 <br/>&bull; &nbsp; 데이터 편집 <br/>&bull; &nbsp; Notebook |
 | 추가 SQL Notebook | 기본 제공 전자 필기장 뷰어에 대 한 SQL 커널 지원이 추가 되었습니다. <br/>&bull; &nbsp; 지원 T-SQL <br/>&bull; &nbsp; PGSQL 지원 |
 | 추가 PowerShell 확장  | 통해 제공 합니다 [PowerShell 확장](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) VS Code에서 발생 합니다.  |
 | 추가 SQL Server dacpac 확장  | 새 확장으로 SQL Server 가져오기 확장에서 데이터 계층 응용 프로그램 마법사를 제거합니다.  |
@@ -149,7 +148,7 @@ ms.locfileid: "67826512"
 
 | 변경 | 설명 |
 | :----- | :------ |
-| 추가 **SQL Server 용 관리 팩** 확장 팩입니다. | 이 쉽게 SQL Server 관리자와 관련 된 확장을 설치 합니다. 다음을 포함합니다.<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
+| 추가 **SQL Server 용 관리 팩** 확장 팩입니다. | 이 쉽게 SQL Server 관리자와 관련 된 확장을 설치 합니다. 다음을 포함합니다.<br/>&bull; &nbsp; [SQL Server 에이전트](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server 가져오기](sql-server-import-extension.md?view=sql-server-2017) |
 | 추가 필터링 Profiler 확장에서 이벤트 지원을 확장 합니다. | &nbsp; |
 | 추가 T-SQL 결과 XML로 저장할 수 있는 XML 기능으로 저장 합니다. | &nbsp; |
 | 추가 된 데이터 계층 응용 프로그램 마법사 개선 사항입니다. | &bull; &nbsp; 추가 스크립트 생성 단추<br/>&bull; &nbsp; 배포 중 경고 데이터가 손실 될 수 있도록 추가 보기입니다. |

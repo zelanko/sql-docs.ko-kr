@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4a04380b-51dc-4aaf-8d25-123cdd589641
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56c1e6492cab9e89ded64a99a3d37939e5086ba0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c248139abfd136d5c79658592e0e49d5e10444aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949391"
 ---
 # <a name="name-property-ado-md"></a>Name 속성(ADO MD)
 개체의 이름을 나타냅니다.  
@@ -36,7 +35,7 @@ ms.locfileid: "66708906"
 ## <a name="return-values"></a>반환 값  
  반환 된 **문자열** 읽기 전용입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  검색할 수 있습니다 합니다 **이름을** 지나면 참조할 수 있습니다 개체 이름으로 직접 서 수 참조를 사용 하 여 개체의 속성입니다. 예를 들어 경우 `cdf.CubeDefs(0).Name` "Bobs 비디오 Store"를 생성 합니다.이를 참조할 수 있습니다 [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) 으로 `cdf.CubeDefs("Bobs Video Store")`입니다.  
   
 ## <a name="applies-to"></a>적용 대상  

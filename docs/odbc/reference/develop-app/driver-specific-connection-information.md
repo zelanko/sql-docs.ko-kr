@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3748758a-f16a-4f3b-9c40-06f2e300704e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3852e713e517828e83e74bf7fb291ef20865532
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69f2c98678739a8b7879e152e13546f2bf9b9cc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046935"
 ---
 # <a name="driver-specific-connection-information"></a>드라이버별 연결 정보
 **SQLConnect** 가정 하는 데이터 원본 이름, 사용자 ID 및 암호는 데이터 원본에 연결 하기에 충분 하 고 시스템에 다른 모든 연결 정보를 저장할 수 있습니다. 이 경우가 자주 있습니다. 예를 들어, DBMS에 로그온 할 때 서버 및 다른 사용자 ID 및 암호에 로그온 한 사용자 ID와 암호는 드라이버가 필요할 수 있습니다. 때문에 **SQLConnect** 단일 사용자 ID와 암호를 허용 합니다. 즉,는 다른 사용자 ID 및 암호를 저장 해야 시스템에서 데이터 원본 정보를 사용 하 여 **SQLConnect** 사용할 합니다. 잠재적인 보안 위반 하는 암호를 암호화 하지 않는 한 피해 야 합니다.  

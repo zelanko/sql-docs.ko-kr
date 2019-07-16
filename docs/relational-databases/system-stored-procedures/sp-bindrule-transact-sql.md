@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ebec67611b043d59eb73e9946b9fef020197fc3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76d1572e1f99162c8daebeafadb0c8d75a53a4d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62995670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046032"
 ---
 # <a name="spbindrule-transact-sql"></a>sp_bindrule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  (CHECK 제약 조건을 사용 하는 것이 좋습니다) 하지만 열에 새 규칙을 바인딩할 수 있습니다 또는 사용 하 여 별칭 데이터 형식 **sp_bindrule** 없이 기존 규칙을 바인딩 해제 합니다. 이 경우 이전 규칙은 무시됩니다. 기존의 CHECK 제약 조건으로 규칙이 열에 바인딩된 경우에는 모든 제한이 평가됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식에 규칙을 바인딩할 수 없습니다.  
   
  규칙은 바인딩 시점이 아니라 INSERT 문을 시도할 때 적용되며 열에 문자 규칙을 바인딩할 수 있습니다 **숫자** 삽입 작업이 유효 하지 않지만 데이터 형식이 있습니다.  
@@ -77,7 +76,7 @@ sp_bindrule [ @rulename = ] 'rule' ,
   
 ## <a name="examples"></a>예  
   
-### <a name="a-binding-a-rule-to-a-column"></a>1\. 열에 규칙 바인딩  
+### <a name="a-binding-a-rule-to-a-column"></a>A. 열에 규칙 바인딩  
  CREATE RULE 문을 사용하여 현재 데이터베이스에 `today`라는 규칙을 만들었다고 가정할 때 다음 예에서는 `HireDate` 테이블의 `Employee` 열에 이 규칙을 바인딩하는 방법을 보여 줍니다. 이제 `Employee`에 행을 추가하면 `HireDate` 열의 데이터가 `today` 규칙에 부합하는지 확인합니다.  
   
 ```  

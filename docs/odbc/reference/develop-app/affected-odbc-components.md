@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22eb60ce88c0d7d0a623a90c202c77a9828e3a34
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 08997f610b00f22d436a5c91d34beb2a8fc2cc1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944851"
 ---
 # <a name="affected-odbc-components"></a>영향을 받는 ODBC 구성 요소
 이전 버전과 호환성 드라이버 관리자의 새 버전을 도입 하 여 응용 프로그램, 드라이버 관리자 및 드라이버 영향을 설명 합니다. 이 응용 프로그램 및 드라이버 때 적용 하나 또는 둘 다 이전 버전에서 유지 됩니다. 가 따라서 세 가지 유형의 이전 버전과 호환성을 고려해 야 할 다음 표에 나와 있는 것 처럼 합니다.  

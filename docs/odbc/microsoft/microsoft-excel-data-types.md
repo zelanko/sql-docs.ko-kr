@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b44c8e5-0bc3-4912-8a5d-56f4d5562fe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10695dd9bf044e270bb1ce1d26de78e53a1dd85a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a8385c8efb1ab7dcee651e5acb52062292a0bcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045022"
 ---
 # <a name="microsoft-excel-data-types"></a>Microsoft Excel 데이터 형식
 다음 표에서 Microsoft Excel 드라이버 데이터 형식을 ODBC SQL 데이터 형식에 매핑되는 방법을 보여 줍니다. Microsoft Excel 드라이버는 이러한 데이터 형식 열에 데이터를 기반으로 하는 Microsoft Excel 테이블의 열에 할당 합니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "63026782"
   
  다음 표에서 Microsoft Excel 데이터 형식에 대해 제한 사항을 보여 줍니다.  
   
-|데이터 형식|Description|  
+|데이터 형식|설명|  
 |---------------|-----------------|  
 |암호화된 데이터|Microsoft Excel 드라이버는 암호화 된 데이터를 읽을 수 없습니다.|  
 |오류 문자열|Microsoft Excel 드라이버는 Microsoft Excel 오류 값에 대 한 문자열을 반환할 수 없습니다 (# n/A!, #VALUE!, #REF!, #DIV 0!, #NUM!, #NAME?, 및 #NULL!), 하지만 대신 NULL을 반환 합니다.|  

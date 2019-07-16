@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff6dbe9abcd1378370a17a053b69ea59c01fee75
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c4f0ceb580ddc7538dd1ea98b9e08a82cd8d35b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044490"
 ---
 # <a name="sysmailhelpprofileaccountsp-transact-sql"></a>sysmail_help_profileaccount_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,14 +59,14 @@ sysmail_help_profileaccount_sp
   
 ||||  
 |-|-|-|  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |**profile_id**|**int**|프로필의 ID입니다.|  
 |**profile_name**|**sysname**|프로필의 이름입니다.|  
 |**account_id**|**int**|계정의 ID입니다.|  
 |**account_name**|**sysname**|계정 이름입니다.|  
 |**sequence_number**|**int**|프로필 내 계정의 시퀀스 번호입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  없는 경우 *profile_id* 하거나 *profile_name* 을 지정 하면이 저장된 프로시저 인스턴스의 모든 프로필에 대 한 정보를 반환 합니다.  
   
  저장된 프로시저 **sysmail_help_profileaccount_sp** 에 **msdb** 데이터베이스 및 소유 하는 **dbo** 스키마입니다. 현재 데이터베이스에는 없는 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다 **msdb**합니다.  

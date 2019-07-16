@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 28a879a1-666e-4183-b731-d36b584d5d86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a26e7ecbae97fb5174004384efdf83b892502c82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ced117b492a366d69e72a5780f8091627ede7921
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041649"
 ---
 # <a name="guidelines-for-interval-and-numeric-data-types"></a>간격 및 숫자 데이터 형식에 대한 지침
 다음 섹션에서는 주소 간격 및 숫자 데이터 형식입니다.  

@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63bf65118f876a0677592bfe1dd8056b05397f71
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4fb51b33655756d9c3c65dfcb5de3bae380ee9a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52406680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951033"
 ---
 # <a name="sysdmfilestreamfileiorequests-transact-sql"></a>sys.dm_filestream_file_io_requests(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   지정된 시간에 NSO(네임스페이스 소유자)에 의해 처리 중인 I/O 요청의 목록을 표시합니다.  
   
-|Column|형식|Description|  
+|Column|type|설명|  
 |------------|----------|-----------------|  
 |**request_context_address**|**varbinary(8)**|드라이버의 I/O 요청이 포함된 NSO 메모리 블록의 내부 주소를 표시합니다. Null을 허용하지 않습니다.|  
 |**current_spid**|**smallint**|현재 SQL Server의 연결에 대 한 시스템 프로세스 id (SPID)를 보여 줍니다. Null을 허용하지 않습니다.|  

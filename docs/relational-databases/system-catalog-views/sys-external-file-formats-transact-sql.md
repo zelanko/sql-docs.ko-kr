@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b16deb7ed2bd43cc45966d27b79729897e76405c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048392"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>sys.external_file_formats (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -28,10 +27,10 @@ ms.locfileid: "52532364"
   
  각 외부 파일 형식에 대 한 서버에서 한 행을 포함 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|외부 파일 형식에 대 한 개체 ID입니다.||  
-|NAME|**sysname**|파일 형식의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], 데이터베이스에 대해 고유 합니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 서버에 대해 고유 합니다.||  
+|name|**sysname**|파일 형식의 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], 데이터베이스에 대해 고유 합니다. [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 서버에 대해 고유 합니다.||  
 |format_type|**tinyint**|파일 형식입니다.|DELIMITEDTEXT, RCFILE, ORC, PARQUET|  
 |field_terminator|**nvarchar(10)**|Format_type =, DELIMITEDTEXT 필드 종결자입니다.||  
 |string_delimiter|**nvarchar(10)**|Format_type = DELIMITEDTEXT, 문자열 구분 기호입니다.||  
@@ -45,7 +44,7 @@ ms.locfileid: "52532364"
 ## <a name="permissions"></a>사용 권한  
  사용자가 소유하고 있거나 사용 권한을 부여 받은 보안 개체에 대해서만 카탈로그 뷰의 메타데이터를 볼 수 있습니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.external_data_sources &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-data-sources-transact-sql.md)   
  [sys.external_tables &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-tables-transact-sql.md)   
  [CREATE EXTERNAL FILE FORMAT&#40;Transact-SQL&#41;](../../t-sql/statements/create-external-file-format-transact-sql.md)  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b40da961e3e659bf4cd3e3692b4674399bce47a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2f2bcd3fef2946e5b983c1bbdeee1efe4776512
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018922"
 ---
 # <a name="sqlsetconfigmode-function"></a>SQLSetConfigMode 함수
 **규칙**  
@@ -58,7 +57,7 @@ BOOL SQLSetConfigMode(
 ## <a name="diagnostics"></a>진단  
  때 **SQLSetConfigMode** 연결 된 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에서  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 이 함수의 컨텍스트에서 각각 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_INVALID_PARAM_SEQUENCE|잘못 된 매개 변수 순서|합니다 *wConfigMode* ODBC_USER_DSN, ODBC_SYSTEM_DSN, 또는 ODBC_BOTH_DSN 인수 포함 되지 않았습니다.|  
   

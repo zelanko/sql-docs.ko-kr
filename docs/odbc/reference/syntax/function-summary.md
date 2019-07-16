@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e7fc96e3-3f16-4799-b70f-49febed53a44
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 04da1deae2745efb3b40cecaf842a42dfcdc30de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb4a037e8ddf7d0cfa1b4075f5f67676667da0c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007158"
 ---
 # <a name="function-summary"></a>함수 요약
 사용 되는 함수를 요약 하는 다음 섹션에서는 ODBC 사용 응용 프로그램 및 관련된 소프트웨어입니다.  

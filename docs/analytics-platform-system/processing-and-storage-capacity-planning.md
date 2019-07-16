@@ -2,19 +2,18 @@
 title: 처리 및 저장소 용량-Analytics Platform System | Microsoft Docs
 description: 비즈니스 요구 사항을 Analytics Platform System (APS) 어플라이언스에서에 필요한 계산 노드의 디스크의 크기와 데이터 배율 단위의 수를 결정 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db2b68230e0e2a1fa9a5645ff40c25cc5146392c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960231"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Analytics Platform System의 처리 및 저장소 용량
 비즈니스 요구 사항을 Analytics Platform System (APS) 어플라이언스에서에 필요한 계산 노드의 디스크의 크기와 데이터 배율 단위의 수를 결정 합니다. 이러한 처리 및 저장소 계산을 사용 하 여 용량 구매 및 계획 결정을 안내 합니다.  
@@ -81,7 +80,7 @@ ms.locfileid: "62678553"
 ## <a name="section2"></a>저장소 용량 계획  
 이 테이블을 로드 하 고 최대 6 페타바이트 크기의 압축 되지 않은 데이터를 완벽 하 게 작성된 된 분석 플랫폼 시스템 어플라이언스를 저장할 수는 예상 합니다. 
   
-|공급 업체|드라이브 크기|실제 데이터 저장소 / 계산 노드|랙 당 최대 계산 노드|랙 당 최대 물리적 데이터 저장소|랙 당 최대 사용자 데이터 저장소를 예상합니다.|최대 랙|어플라이언스 당 최대 사용자 데이터 저장소를 예상합니다.|  
+|Vendor|드라이브 크기|실제 데이터 저장소 / 계산 노드|랙 당 최대 계산 노드|랙 당 최대 물리적 데이터 저장소|랙 당 최대 사용자 데이터 저장소를 예상합니다.|최대 랙|어플라이언스 당 최대 사용자 데이터 저장소를 예상합니다.|  
 |----------|--------------|------------------------------------------|----------------------------------|------------------------------------------|------------------------------------------------|-----------------|-----------------------------------------------------|  
 |HPE|1TB|16TB|8|128 TB|320 TB|7|2,240 TB|  
 |HPE|2TB|32TB|8|256TB|640 TB|7|4,480 TB|  

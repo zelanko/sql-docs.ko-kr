@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e04d464a-60ab-4b39-a710-c066025708e6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63a3ff2cdb075dc8ce48aaa6c6951458d12710b0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e77488a379543dd6f2749a07048fa67a92d530ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041035"
 ---
 # <a name="spresyncmergesubscription-transact-sql"></a>sp_resyncmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,12 +61,12 @@ sp_resyncmergesubscription [ [ @publisher = ] 'publisher' ]
 |**1**|마지막으로 성공한 유효성 검사 이후부터 동기화가 시작됩니다. 마지막으로 성공한 유효성 검사 이후에 시작된 모든 새로운 또는 완료되지 않은 생성은 구독자에 다시 적용됩니다.|  
 |**2**|지정한 날짜부터 동기화가 시작 됩니다 *resync_date_str*합니다. 이 날짜 이후에 시작된 모든 새로운 또는 완료되지 않은 생성은 구독자에 다시 적용됩니다.|  
   
-`[ @resync_date_str = ] resync_date_string` 에 다시 동기화가 시작 하는 경우 날짜를 정의 합니다. *resync_date_string* 됩니다 **nvarchar(30)**, 기본값은 NULL입니다. 이 매개 변수는 때를 *resync_type* 의 값인 **2**합니다. 지정한 날짜 표현으로 변환할 **날짜/시간** 값입니다.  
+`[ @resync_date_str = ] resync_date_string` 에 다시 동기화가 시작 하는 경우 날짜를 정의 합니다. *resync_date_string* 됩니다 **nvarchar(30)** , 기본값은 NULL입니다. 이 매개 변수는 때를 *resync_type* 의 값인 **2**합니다. 지정한 날짜 표현으로 변환할 **날짜/시간** 값입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_resyncmergesubscription** 병합 복제에 사용 됩니다.  
   
  값이 **0** 에 대 한 합니다 *resync_type* 초기 스냅숏 이후의 모든 변경 내용을 다시 적용을 하는 매개 변수 수 있지만 훨씬 덜 전체 다시 초기화 보다 리소스를 많이 사용 합니다. 예를 들어 초기 스냅숏이 한 달 전에 전달되었다면 이 값은 지난 달부터의 데이터를 다시 적용합니다. 초기 스냅숏이 1GB의 데이터를 가지고 있으나 지난 달부터의 변경 사항의 양은 2MB의 변경된 데이터를 가진다면 그 데이터를 다시 적용하는 것이 전체 1GB의 스냅숏을 다시 적용하는 것보다 효율적입니다.  

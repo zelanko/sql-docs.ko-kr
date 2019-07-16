@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39ebda5de5820cdfd7333ad1d0997593922e0a4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039895"
 ---
 # <a name="diagnostic-messages"></a>진단 메시지
 진단 메시지를 각 SQLSTATE를 사용 하 여 반환 됩니다. 동일한 SQLSTATE는 서로 다른 메시지의 수를 사용 하 여 자주 반환 됩니다. 예를 들어, SQLSTATE 42000 (구문 오류 또는 액세스 위반)는 SQL 구문에서 대부분의 오류에 대 한 반환 됩니다. 그러나 각 구문 오류는 다른 메시지를 설명할 수 가능성이 높습니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 71f729df-d340-4cf9-9a6d-305fcb39b009
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: dcd2e5bae2ec36658305f211a90a6e76513996de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d75b811ba670c72aa4ce1ed15041b0b628f3f529
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042878"
 ---
 # <a name="filestream-and-filetable-functions-transact-sql"></a>Filestream 및 FileTable 함수(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

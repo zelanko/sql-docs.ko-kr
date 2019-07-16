@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5d9afc542b8d743c3e4e0ae35bb87f10e2f0835f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 888739807a79163a8188f3b2f27b7f7860032bc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004678"
 ---
 # <a name="functions-on-sequences---empty"></a>시퀀스 함수 - empty
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +38,13 @@ fn:empty($arg as item()*) as xs:boolean
  *$arg*  
  항목의 시퀀스입니다. 시퀀스가 비어 있으면 함수에서 True를 반환합니다. 그렇지 않으면 함수에서 False를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **fn:exists()** 함수가 지원 되지 않습니다. 대신 합니다 **not ()** 함수를 사용할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>1. empty() XQuery 함수를 사용하여 특성이 있는지 확인  
+### <a name="a-using-the-empty-xquery-function-to-determine-if-an-attribute-is-present"></a>A. empty() XQuery 함수를 사용하여 특성이 있는지 확인  
  Product Model 7의 제조 프로세스에서이 쿼리는 반환 되지 않은 모든 작업 센터 위치를 **MachineHours** 특성입니다.  
   
 ```  

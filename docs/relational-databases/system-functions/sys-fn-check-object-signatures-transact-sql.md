@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc6d8bb4c3318f488c7969359c6aa8b18782b6cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046313"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -61,14 +60,14 @@ fn_ check_object_signatures (
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 표에서 열을 나열 하는 **fn_check_object_signatures** 반환 합니다.  
   
-|Column|형식|Description|  
+|Column|type|설명|  
 |------------|----------|-----------------|  
-|유형|**nvarchar(120)**|유형 설명 또는 어셈블리를 반환합니다.|  
+|type|**nvarchar(120)**|유형 설명 또는 어셈블리를 반환합니다.|  
 |entity_id|**int**|평가 중인 개체의 개체 ID를 반환합니다.|  
 |is_signed|**int**|개체가 제공된 지문으로 서명되지 않은 경우 0을 반환합니다. 개체가 제공된 지문으로 서명된 경우 1을 반환합니다.|  
 |is_signature_valid|**int**|is_signed 값이 1일 때 서명이 유효하지 않으면 0을 반환하고, 서명이 유효하면 1을 반환합니다.<br /><br /> is_signed 값이 0일 때는 항상 0을 반환합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여 **fn_check_object_signatures** 악의적인 사용자가 개체를 사용 하 여 훼손 되지 않았음을 확인 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

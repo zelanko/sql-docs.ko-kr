@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad9c944af33da86e0d4f85769288f4ab7b6c369f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33cc778d921b90a460dab6bda352fd7627d2cf7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054076"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource(Paradox 드라이버)
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "62665345"
   
  합니다 **SQLConfigDataSource** 함수를 추가 하는 데 사용 되는 수정 또는 데이터 원본 삭제 동적으로 다음과 같은 키워드를 사용 합니다.  
   
-|키워드|Description|  
+|키워드|설명|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|필드 정렬 되는 시퀀스입니다.<br /><br /> Paradox 드라이버를 사용 하는 시퀀스 될 수 있습니다 (기본값) ASCII 국제, 스웨덴어-핀란드어, 노르웨이어 덴마크어 합니다.<br /><br /> 동일한 옵션을 설정 **데이터 정렬 시퀀스** 설정 대화 상자에서.|  
 |DBQ|데이터베이스 파일의 이름입니다.<br /><br /> 동일한 옵션을 설정 **데이터베이스** 설정 대화 상자에서.|  

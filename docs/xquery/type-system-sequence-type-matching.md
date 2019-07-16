@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b6850f15718cb810b5428f75980983fc4a8a0a88
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946221"
 ---
 # <a name="type-system---sequence-type-matching"></a>형식 시스템 - 시퀀스 형식 일치
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,10 +38,10 @@ ms.locfileid: "54255248"
 ## <a name="comparing-the-atomic-value-type-returned-by-an-expression"></a>식에 의해 반환된 원자 값 유형 비교  
  식이 원자 값 시퀀스를 반환하는 경우 시퀀스에서 값의 유형을 찾아야 할 수도 있습니다. 다음 예에서는 시퀀스 유형 구문을 사용하여 식에 의해 반환된 원자 값 유형을 평가하는 방법을 보여 줍니다.  
   
-### <a name="example-determining-whether-a-sequence-is-empty"></a>예: 빈 시퀀스인지 여부 확인  
+### <a name="example-determining-whether-a-sequence-is-empty"></a>예: 빈 시퀀스 인지 여부를 결정 합니다.  
  합니다 **empty ()** 시퀀스 유형은 시퀀스 유형의 식에 지정 된 식이 반환 되는 시퀀스에 빈 시퀀스 인지 여부를 확인 합니다.  
   
- 다음 예에서 XML 스키마는 <`root`> 요소를 nillable로 만듭니다.  
+ 다음 예제에서는 XML 스키마를 통해 합니다 <`root`> 요소 nilled 수입니다.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -52,7 +51,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 이제 형식화된 XML 인스턴스가 <`root`> 요소에 대한 값을 지정하는 경우 `instance of empty()`는 False를 반환합니다.  
+ 이제 값을 지정 하는 형식화 된 XML 인스턴스는 <`root`> 요소를 `instance of empty()` False를 반환 합니다.  
   
 ```  
 DECLARE @var XML(SC1)  
@@ -62,7 +61,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
- <`root`> 요소가 인스턴스에서 nillable인 경우 해당 값은 빈 시퀀스이며 `instance of empty()`는 True를 반환합니다.  
+ 경우는 <`root`> 요소는 인스턴스의 nilled, 해당 값이 빈 시퀀스 및 `instance of empty()` True를 반환 합니다.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -71,7 +70,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
-### <a name="example-determining-the-type-of-an-attribute-value"></a>예: 특성 값의 유형 확인  
+### <a name="example-determining-the-type-of-an-attribute-value"></a>예: 특성 값의 유형 결정  
  일부 경우에는 처리 전에 식에 의해 반환된 시퀀스 유형을 평가해야 할 수 있습니다. 예를 들어 노드가 UNION 유형으로 정의된 XML 스키마가 있을 수 있습니다. 다음 예에서 컬렉션에 있는 XML 스키마는 값이 decimal이나 string 유형일 수 있는 특성 `a`를 UNION 유형으로 정의합니다.  
   
 ```  
@@ -113,7 +112,7 @@ GO
 ```  
   
 ### <a name="example-cardinality-in-sequence-expressions"></a>예: 시퀀스 식의 카디널리티  
- 이 예에서는 시퀀스 식의 카디널리티 효과를 보여 줍니다. 다음 XML 스키마는 바이트 유형이고 nillable인 <`root`> 요소를 정의합니다.  
+ 이 예에서는 시퀀스 식의 카디널리티 효과를 보여 줍니다. 다음 XML 스키마 정의 <`root`>는 바이트 유형이 고 nillable 인 요소입니다.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -132,7 +131,7 @@ SELECT @var.query('data(/root[1]) instance of  xs:byte ')
 GO  
 ```  
   
- <`root`> 요소를 nillable로 만들면 해당 값이 빈 시퀀스가 됩니다. 즉, `/root[1]` 식은 빈 시퀀스를 반환합니다. 따라서 `instance of xs:byte`는 False를 반환합니다. 이 경우의 기본 카디널리티는 1입니다.  
+ 경우는 <`root`> 요소 nil 값이 빈 시퀀스입니다. 즉, `/root[1]` 식은 빈 시퀀스를 반환합니다. 따라서 `instance of xs:byte`는 False를 반환합니다. 이 경우의 기본 카디널리티는 1입니다.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -160,7 +159,7 @@ GO
   
  두 값이 모두 True인 경우 `instance of` 식은 True를 반환합니다.  
   
-### <a name="example-querying-against-an-xml-type-column"></a>예: xml 유형 열에 대한 쿼리  
+### <a name="example-querying-against-an-xml-type-column"></a>예: Xml 유형 열에 대 한 쿼리  
  다음 예에서 쿼리는 Instructions 열에 대해 지정 됩니다 **xml** 에 입력 된 [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] 데이터베이스입니다. 이 열은 연결된 스키마가 포함되므로 형식화된 XML 열입니다. XML 스키마는 정수 유형의 `LocationID` 특성을 정의합니다. 따라서 시퀀스 식에에서는 `instance of xs:integer?` True를 반환 합니다.  
   
 ```  
@@ -199,14 +198,14 @@ SET @var = '<?xml-stylesheet href="someValue" type="text/xsl" ?>
 </root>'  
 ```  
   
- 첫 번째 쿼리에서 식은 <`a`> 요소의 형식화된 값을 반환합니다. 두 번째 쿼리에서 식은 <`a`> 요소를 반환합니다. 두 개 모두 항목입니다. 따라서 두 쿼리는 모두 True를 반환합니다.  
+ 첫 번째 쿼리에서 식은 반환 요소의 형식화 된 값 <`a`>. 두 번째 쿼리 식은 요소를 반환 합니다. <`a`>. 두 개 모두 항목입니다. 따라서 두 쿼리는 모두 True를 반환합니다.  
   
 ```  
 SELECT @var.query('data(/root[1]/a[1]) instance of item()')  
 SELECT @var.query('/root[1]/a[1] instance of item()')  
 ```  
   
- 다음 3개의 쿼리에 있는 모든 XQuery 식은 <`root`> 요소의 요소 노드 자식을 반환합니다. 따라서 시퀀스 유형의 식인 `instance of node()`는 True를 반환하고 다른 두 개의 식인 `instance of text()` 및 `instance of document-node()`는 False를 반환합니다.  
+ 다음 세 가지 쿼리에서 모든 XQuery 식은 요소 노드 자식 중 반환 된 <`root`> 요소입니다. 따라서 시퀀스 유형의 식인 `instance of node()`는 True를 반환하고 다른 두 개의 식인 `instance of text()` 및 `instance of document-node()`는 False를 반환합니다.  
   
 ```  
 SELECT @var.query('(/root/*)[1] instance of node()')  
@@ -214,7 +213,7 @@ SELECT @var.query('(/root/*)[1] instance of text()')
 SELECT @var.query('(/root/*)[1] instance of document-node()')   
 ```  
   
- 다음 쿼리에서 `instance of document-node()` 식은 <`root`> 요소의 부모가 문서 노드이기 때문에 True를 반환합니다.  
+ 다음 쿼리에서 `instance of document-node()` 식은 True를 반환 합니다의 부모를 <`root`> 요소는 문서 노드입니다.  
   
 ```  
 SELECT @var.query('(/root/..)[1] instance of document-node()') -- true  
@@ -256,7 +255,7 @@ element(*, ElementType?)
  다음 예에서는 요소 테스트 및 특성 테스트를 유용하게 사용할 수 있는 시나리오를 보여 줍니다.  
   
 ### <a name="example-a"></a>예 1  
- 다음 XML 스키마는 <`firstName`> 및 <`lastName`> 요소가 선택 사항인 `CustomerType` 복합 유형을 정의합니다. 지정된 XML 인스턴스에서 특정 고객의 이름이 있는지 여부를 확인해야 할 수 있습니다.  
+ 다음 XML 스키마 정의 `CustomerType` 복합 형식 여기서 <`firstName`> 및 <`lastName`> 요소는 선택 사항입니다. 지정된 XML 인스턴스에서 특정 고객의 이름이 있는지 여부를 확인해야 할 수 있습니다.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -280,7 +279,7 @@ SET @var = '<x:customer xmlns:x="myNS">
 </x:customer>'  
 ```  
   
- 다음 쿼리에서는 `instance of element (firstName)` 식을 사용하여 <`customer`>의 첫 번째 자식 요소가 이름이 <`firstName`>인 요소인지 여부를 확인합니다. 이 경우에는 True가 반환됩니다.  
+ 다음 쿼리에서 `instance of element (firstName)` 결정할 식 여부를 첫 번째 자식 요소 <`customer`> 요소 이름이 <`firstName`>. 이 경우에는 True가 반환됩니다.  
   
 ```  
 SELECT @var.query('declare namespace x="myNS";   
@@ -288,7 +287,7 @@ SELECT @var.query('declare namespace x="myNS";
 GO  
 ```  
   
- 인스턴스에서 <`firstName`> 요소를 제거하면 쿼리가 False를 반환합니다.  
+ 제거 하는 경우는 <`firstName`> 인스턴스에서 요소, 쿼리가 False를 반환 합니다.  
   
  다음 구문을 사용할 수도 있습니다.  
   
@@ -309,7 +308,7 @@ GO
 ### <a name="example-b"></a>예 2  
  다음 예에서는 식에 의해 반환된 노드가 특정 이름의 요소 노드인지 여부를 확인하는 방법을 보여 줍니다. 사용 된 **element()** 테스트 합니다.  
   
- 다음 예에서 XML 인스턴스에서 쿼리되는 두 개의 <`Customer`> 요소는 유형이 각각 `SpecialCustomerType` 및 `CustomerType`으로 서로 다릅니다. 식에 의해 반환된 <`Customer`> 요소의 유형을 확인해야 한다고 가정하십시오. 다음 XML 스키마 컬렉션은 `CustomerType` 및 `SpecialCustomerType` 유형을 정의합니다.  
+ 다음 예제에서는 두 <`Customer`> 쿼리 되는 XML 인스턴스 요소는 두 가지 형식의 `CustomerType` 고 `SpecialCustomerType`입니다. 형식의 알아야 한다고 가정 합니다 <`Customer`> 식에서 반환한 요소입니다. 다음 XML 스키마 컬렉션은 `CustomerType` 및 `SpecialCustomerType` 유형을 정의합니다.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -336,7 +335,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- 이 XML 스키마 컬렉션은 형식화 된 만드는 데 **xml** 변수입니다. 이 변수에 할당된 XML 인스턴스에는 서로 다른 유형의 <`customer`> 요소가 두 개 있습니다. 첫 번째 요소는 `CustomerType` 유형이며 두 번째 요소는 `SpecialCustomerType` 유형입니다.  
+ 이 XML 스키마 컬렉션은 형식화 된 만드는 데 **xml** 변수입니다. 이 변수에 할당 된 XML 인스턴스에 있는 두 개의 <`customer`> 라는 두 가지 종류의 요소입니다. 첫 번째 요소는 `CustomerType` 유형이며 두 번째 요소는 `SpecialCustomerType` 유형입니다.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -359,10 +358,10 @@ SELECT @var.query('declare namespace x="myNS";
     (/x:customer)[1] instance of element (*, x:SpecialCustomerType ?)')  
 ```  
   
- 이전 쿼리의 식을 바꾸고 두 번째 <`customer`> 요소(`instance of`)를 검색하면 `/x:customer)[2]`가 True를 반환합니다.  
+ 이전 쿼리의 식을 변경 하 고 두 번째를 검색 하는 경우 <`customer`> 요소 (`/x:customer)[2]`), `instance of` 는 True를 반환 합니다.  
   
 ### <a name="example-c"></a>예 3  
- 이 예에서는 특성 테스트가 사용됩니다. 다음 XML 스키마는 CustomerID 및 Age 특성이 포함된 CustomerType 복합 유형을 정의합니다. Age 특성은 선택 사항입니다. 특정 XML 인스턴스에 대해 <`customer`> 요소에 Age 특성을 제공할지 여부를 결정할 수 있습니다.  
+ 이 예에서는 특성 테스트가 사용됩니다. 다음 XML 스키마는 CustomerID 및 Age 특성이 포함된 CustomerType 복합 유형을 정의합니다. Age 특성은 선택 사항입니다. 특정 XML 인스턴스에 대해 Age 특성에 있는지 여부를 확인 하려는 합니다 <`customer`> 요소입니다.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -421,7 +420,7 @@ RETURN
 ### <a name="implementation-limitations"></a>구현 시 제한 사항  
  특정 제한 사항은 다음과 같습니다.  
   
--   요소 테스트에서 유형 이름 뒤에 야 발생 표시 하 여 (**?**).  
+-   요소 테스트에서 유형 이름 뒤에 야 발생 표시 하 여 ( **?** ).  
   
 -   **element (ElementName, TypeName)** 지원 되지 않습니다.  
   

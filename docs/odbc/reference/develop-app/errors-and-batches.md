@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6debd41d-9f4c-4f4c-a44b-2993da5306f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 97179574407dca56026f9d5216e4978069cffc1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6902b82c74e953d6009d7e5352608477d92122d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62942986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051135"
 ---
 # <a name="errors-and-batches"></a>오류 및 일괄 처리
 SQL 문의 일괄 처리를 실행 하는 동안 오류가 발생 하는 경우 다음 네 가지 결과 중 하나가 있을 수 있습니다. (각 가능한 결과 데이터 소스 관련 및 일괄 처리에 포함 된 문에서 따라 달라질 수 있습니다.)  

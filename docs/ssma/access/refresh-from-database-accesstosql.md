@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3b671f49-c4cc-44fd-801e-e738a8c79415
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 29dd391a094f37334008e98af60bcdc2396a997a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 209ed616f3993a0a93b802ddeca39a7065485afc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051536"
 ---
 # <a name="refresh-from-database-accesstosql"></a>데이터베이스 (AccessToSQL)에서 새로 고침
 합니다 **데이터베이스에서 새로 고침** 대화 상자에서는 Access 데이터베이스에서 새로 고칠 개체를 선택할 수 있습니다. 대화 상자에서 행은 색으로 구분 된 메타 데이터의 상태를 기반으로 합니다.  

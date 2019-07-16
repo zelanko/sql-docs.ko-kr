@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8bfd021414ab9e8078ec0df9c23c33828e36d0f9
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 27d30c4160571274339b5befba8f0b9a8cedb859
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053016"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_describe_undeclared_parameters
 ## <a name="result-sets"></a>결과 집합  
  **sp_describe_undeclared_parameters** 다음 결과 집합을 반환 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int NOT NULL**|결과 집합에서 매개 변수의 서수 위치를 포함합니다. 첫 번째 매개 변수의 위치가 1로 지정됩니다.|  
 |**name**|**sysname NOT NULL**|매개 변수의 이름을 포함합니다.|  
@@ -85,7 +84,7 @@ sp_describe_undeclared_parameters
 |**suggested_tds_type_id**|**int NOT NULL**|내부적으로만 사용할 수 있습니다.|  
 |**suggested_tds_length**|**int NOT NULL**|내부적으로만 사용할 수 있습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_describe_undeclared_parameters** 항상 반환 상태 0 반환 합니다.  
   
  응용 프로그램에 매개 변수를 포함할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 지정되고 응용 프로그램에서 이러한 문을 어떤 식으로든 처리해야 하는 경우에 가장 일반적으로 사용됩니다. 예로 사용자가 ODBC 매개 변수 구문 사용 하 여 쿼리를 제공 하는 위치 (예: odbctest RowsetViewer) 사용자에 대 한 인터페이스입니다. 응용 프로그램은 매개 변수 수를 동적으로 검색하여 해당 정보를 사용자에게 표시해야 합니다.  

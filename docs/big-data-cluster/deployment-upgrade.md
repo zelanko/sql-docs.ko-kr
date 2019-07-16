@@ -5,17 +5,16 @@ description: SQL Server 2019 빅 데이터 클러스터 (미리 보기)를 새 �
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8c8b8df4dc5643febdf3ddc808f215a9c34d24fe
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 67ca9b09db398538b4adeedc9008dcb2f14f258f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958401"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터를 업그레이드 하는 방법
 
@@ -54,7 +53,7 @@ ms.locfileid: "67728771"
    pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
-   **Linux:**
+   **Linux의 경우:**
 
    ```bash
    pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt --user

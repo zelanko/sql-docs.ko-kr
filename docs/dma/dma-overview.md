@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 2766005287a522a84d209d995be0de9a94e45c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9aaadf6f4226b2c9a457c7437412f35c1bbe20fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054716"
 ---
 # <a name="overview-of-data-migration-assistant"></a>Data Migration Assistant 개요
 Data Migration Assistant (DMA)를 사용 하면 새 버전의 SQL Server 또는 Azure SQL Database에서 데이터베이스 기능에 영향을 줄 수 있는 호환성 문제를 감지 하 여 최신 데이터 플랫폼으로 업그레이드 합니다. DMA는 성능 및 안정성 향상 대상 환경에 대 한 권장 하 고 대상 서버에 원본 서버에서 스키마, 데이터 및 포함 되지 않은 개체를 이동할 수 있습니다.
@@ -82,7 +81,7 @@ DMA는 모든 이전 버전의 SQL Server 업그레이드 관리자를 대체 �
 - Azure SQL 데이터베이스
 - Azure SQL Database Managed Instance
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 [SQL Server 마이그레이션 평가](../dma/dma-assesssqlonprem.md)     
 [Data Migration Assistant: 구성 설정](../dma/dma-configurationsettings.md)     
 [Data Migration Assistant를 사용 하 여 마이그레이션할 온-프레미스 SQL Server](../dma/dma-migrateonpremsql.md)     

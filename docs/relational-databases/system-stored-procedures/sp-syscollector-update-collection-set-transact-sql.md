@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2dccc3cd-0e93-4e3e-a4e5-8fe89b31bd63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7d77ec36f36260226a78136b46656b1e2e8187e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a351eaa746654d26d7f51536a41fc2677a2f67e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010555"
 ---
 # <a name="spsyscollectorupdatecollectionset-transact-sql"></a>sp_syscollector_update_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ sp_syscollector_update_collection_set
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_syscollector_update_collection_set은 msdb 시스템 데이터베이스의 컨텍스트 내에서 실행되어야 합니다.  
   
  어느 *collection_set_id* 또는 *이름* 해야 값, 둘 다 NULL 일 수 없습니다. 이러한 값을 확인하려면 syscollector_collection_sets 시스템 뷰를 쿼리합니다.  
@@ -137,7 +136,7 @@ sp_syscollector_update_collection_set
   
 ## <a name="examples"></a>예  
   
-### <a name="a-renaming-a-collection-set"></a>1\. 컬렉션 집합 이름 바꾸기  
+### <a name="a-renaming-a-collection-set"></a>A. 컬렉션 집합 이름 바꾸기  
  다음 예에서는 사용자 정의 컬렉션 집합의 이름을 바꿉니다.  
   
 ```  

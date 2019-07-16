@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 14b0b2dfd3e4578558e49cc305c37821e208c65d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83dc56056e6000a789c8944b38326c23d7632bb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62516032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049276"
 ---
 # <a name="drilldownlevelbottom-mdx"></a>DrilldownLevelBottom(MDX)
 
@@ -43,7 +42,7 @@ DrilldownLevelBottom(Set_Expression, Count [,[<Level_Expression>] [,[<Numeric_Ex
  *Include_Calc_Members*  
  (선택 사항) 계산 멤버를 드릴다운 결과에 추가하는 키워드입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  숫자 식이 지정 되는 **DrilldownLevelBottom** 오름차순으로 지정된 된 값에 따라 지정된 된 집합의 각 멤버의 자식을 자식 멤버 집합에 대해 계산 된 정렬 함수입니다. 숫자 식이 지정되지 않은 경우 이 함수는 쿼리 컨텍스트에서 확인된 대로 자식 구성원 집합이 나타내는 셀의 값에 따라 지정된 집합에 있는 각 구성원의 자식을 오름차순으로 정렬합니다. 이 동작은 구성원 집합을 정렬하지 않고 일반적인 순서로 반환하는 BottomCount 및 Tail(MDX) 함수와 비슷합니다.  
   
  정렬 후 합니다 **DrilldownLevelBottom** 함수에 지정 된 자식 멤버의 수 및 부모 멤버를 포함 하는 집합을 반환 *개수*, 가장 낮은 값을 사용 하 여 합니다.  

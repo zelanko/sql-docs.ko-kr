@@ -7,13 +7,12 @@ ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 3c5c27186969db01cc90fa43a6cf4ec2774ab051
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12659f7ea5df9ab364be44d98a8037c54b3ba2cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962862"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>인스턴스가 SQL Server 데이터베이스 내 분석의 누적 업데이트에 대 한 CAB 다운로드
 
@@ -133,7 +132,7 @@ SQL Server 2016 R Services에 대 한 초기 릴리스는 RTM 버전 또는 서�
 
 Microsoft R에 대 한 소스 코드를 보고 하려는 경우 다운로드할 수 있습니다.tar 형식에서으로: [R Server 설치 프로그램을 다운로드](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [인터넷 액세스 없이 컴퓨터에 누적 업데이트를 적용 합니다.](sql-ml-component-install-without-internet-access.md#apply-cu)
 

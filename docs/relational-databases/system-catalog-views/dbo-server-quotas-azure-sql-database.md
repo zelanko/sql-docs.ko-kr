@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 34423903-1aaa-4a55-88a6-8228315d84e7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 657376be08e4cd404ce53d78114604cdd11fbda2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90df7425c7265db141d393b774728a8fe2662061
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63005839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033044"
 ---
 # <a name="dboserverquotas-azure-sql-database"></a>dbo.server_quotas(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63005839"
   
  서버의 사용 가능한 데이터베이스 할당량 유형을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |quota_name|**nvarchar**|서버의 할당량 유형입니다. 형식 **Premium_database** 리소스 예약을 사용 하 여 데이터베이스에 해당 합니다.|  
 |quota_value|**int**|서버에서 허용되는 할당량 유형의 수입니다.|  

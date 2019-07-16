@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946208"
 ---
 # <a name="type-system-xquery"></a>유형 시스템(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ SELECT @x.query( '/a[1] instance of element()')
 > [!NOTE]  
 >  형식화된 XML 인스턴스를 쿼리 중이고 쿼리 식에 부모 축이 포함된 경우 결과 노드의 정적 유형 정보는 더 이상 사용할 수 없습니다. 하지만 동적 유형은 노드와 계속 연결되어 있습니다.  
   
-## <a name="typed-value-vs-string-value"></a>형식화된 값과 문자열 값 비교  
+## <a name="typed-value-vs-string-value"></a>형식화 된 값과 합니다. 문자열 값  
  모든 노드에는 형식화된 값과 문자열 값이 있습니다. 형식화된 XML 데이터의 경우 형식화된 값의 유형은 쿼리 중인 열 또는 변수와 연결된 XML 스키마 컬렉션에 의해 제공됩니다. 형식화 되지 않은 XML 데이터에 대 한 형식화 된 값의 형식이 **xdt: untypedatomic**합니다.  
   
  사용할 수는 **data ()** 하거나 **string ()** 노드의 값을 검색 하는 함수:  
@@ -106,7 +105,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   합니다 [string 함수 &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) 노드의 문자열 값을 반환 합니다.  
   
- 다음 XML 스키마 컬렉션에서는 정수 유형의 <`root`> 요소가 정의됩니다.  
+ 다음 XML 스키마 컬렉션에는 <`root`> 정수 형식의 요소를 정의 합니다.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  

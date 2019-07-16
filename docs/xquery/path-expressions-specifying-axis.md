@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f6c624427a8dc8c5a6c1828b9a48ff7f335cea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946487"
 ---
 # <a name="path-expressions---specifying-axis"></a>경로 식 - 축 지정
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "51670331"
 ## <a name="examples"></a>예  
  이 항목의 쿼리 예제에 대해 지정 된 **xml** 유형 열에는 **AdventureWorks** 데이터베이스입니다.  
   
-### <a name="a-specifying-a-child-axis"></a>1. child 축 지정  
+### <a name="a-specifying-a-child-axis"></a>A. child 축 지정  
  특정 제품 모델에 대해 다음 쿼리는 검색을 \<기능 > 요소 노드 자식을 합니다 \<ProductDescription >에 저장 된 제품 카탈로그 설명에서 요소 노드는 `Production.ProductModel` 테이블입니다.  
   
 ```  
@@ -77,7 +76,7 @@ WHERE ProductModelID=19
   
 -   경로 식의 단계는 모두 `child` 축과 노드 이름, `ProductDescription`과 `Features`를 노드 테스트로서 지정합니다. 노드 테스트에 대 한 정보를 참조 하세요 [경로 식 단계에서 노드 테스트 지정](../xquery/path-expressions-specifying-node-test.md)합니다.  
   
-### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>2. descendant 및 descendant-or-self 축 지정  
+### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>2\. descendant 및 descendant-or-self 축 지정  
  다음 예에서는 descendant 및 descendant-or-self 축을 사용합니다. 이 예의 쿼리는에 대해 지정 됩니다는 **xml** 형식 변수입니다. 생성되는 결과의 차이점을 쉽게 설명하기 위해 XML 인스턴스를 단순화하였습니다.  
   
 ```  
@@ -109,11 +108,11 @@ select @y
   
  이 식에서 경로 식  
   
- `/child::a/child::b/descendant::*`에 대해 descendant 축을 지정하면 <`b`> 요소 노드의 모든 하위 노드를 검색합니다.  
+ `/child::a/child::b/descendant::*`에서의 모든 하위 항목에 대 한 요청 하는 합니다 <`b`> 요소 노드.  
   
  노드 테스트에서 별표(*)는 노드 테스트로서 노드 이름을 나타냅니다. 따라서 descendant 축의 기본 노드 유형인 요소 노드에 따라 반환되는 노드 유형이 결정됩니다. 즉, 식이 모든 요소 노드를 반환합니다. 텍스트 노드는 반환되지 않습니다. 주 노드 유형과 노드 테스트와의 관계에 대 한 자세한 내용은 참조 하세요. [경로 식 단계에서 노드 테스트 지정](../xquery/path-expressions-specifying-node-test.md) 항목입니다.  
   
- 아래 결과에서 볼 수 있듯이 <`c`> 및 <`d`> 요소 노드가 반환됩니다.  
+ 요소 노드 <`c`> 및 <`d`> 다음 결과에 표시 된 것과 같이 반환 됩니다.  
   
 ```  
 <c>text2  
@@ -122,7 +121,7 @@ select @y
 <d>text3</d>  
 ```  
   
- descendant 축 대신 descendant-or-self 축을 지정하면 `/child::a/child::b/descendant-or-self::*`가 컨텍스트 노드, <`b`> 요소 및 그 하위 노드를 반환합니다.  
+ Descendant 축 대신를 하위 항목 또는 자체 축을 지정 하는 경우 `/child::a/child::b/descendant-or-self::*` 컨텍스트 노드를 반환 합니다. 요소 <`b`>, 및 해당 하위 항목입니다.  
   
  다음은 결과입니다.  
   
@@ -151,10 +150,10 @@ FROM  Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
-### <a name="c-specifying-a-parent-axis"></a>3. parent 축 지정  
- 다음 쿼리는 `Production.ProductModel` 테이블에 저장되어 있는 제품 카탈로그 XML 문서에서 <`ProductDescription`> 요소의 <`Summary`> 요소 자식을 반환합니다.  
+### <a name="c-specifying-a-parent-axis"></a>3\. parent 축 지정  
+ 다음 쿼리에서 반환은 <`Summary`> 요소 자식에는 <`ProductDescription`>에 저장 된 제품 카탈로그 XML 문서에서 요소를 `Production.ProductModel` 테이블입니다.  
   
- 이 예에서는 parent 축을 사용하여 <`Feature`> 요소의 부모로 돌아가 <`ProductDescription`> 요소의 <`Summary`> 요소 자식을 검색합니다.  
+ 이 예제에서는 parent 축을 사용 하 여 부모에 반환 합니다 <`Feature`> 요소 및 검색 하 고는 <`Summary`> 요소 자식에는 <`ProductDescription`> 요소.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -194,7 +193,7 @@ WHERE  ProductModelID=19
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- 각 `ProductModelID`> 요소에 대해 `<Feature`를 추가하기 위해 `parent` 축이 지정됩니다.  
+ 추가 하는 `ProductModelID` 각각에 대해 `<Feature`> 요소는 `parent` 축을 지정:  
   
 ```  
 SELECT CatalogDescription.query('  

@@ -2,19 +2,18 @@
 title: 오류 메시지-병렬 데이터 웨어하우스 | Microsoft Docs
 description: 오류를 보고 하는 병렬 데이터 웨어하우스 (PDW) 오류 메시지 및 PDW 구성 요소에서 발생 한 문제와 PDW를 통해 표시 되는 SQL Server 오류를 포함할 수도 있습니다. 이러한 오류 메시지는 정보를 제공 하는 것에 대 한 일관성 있는 구문을 사용 합니다. 이 구문을 이해 하면를 식별 하 여 문제를 해결 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3ffc7a097845f4652f56d82c572ecfab868d33f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c5cd8dab37ac9cb32de794861c68e6c8085747
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960966"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>병렬 데이터 웨어하우스에서 오류 메시지
 
@@ -27,7 +26,7 @@ ms.locfileid: "63042599"
   
 다음은 각 필드에 대 한 잠재적인 값입니다.  
   
-|필드|Description|예제|  
+|필드|설명|예제|  
 |---------|---------------|-----------|  
 |*Error_Indicator*|"오류" 단어 또는 문제가 사용자에 게 알리는 다른 텍스트입니다.|ERROR|  
 |*SQL_State_Code*|ODBC 사양에 따라 표시 되는 SQL 상태 코드입니다. 드라이버는 응용 프로그램에 메시지를 반환 하는 언제 든 지 적절 한 SQL 상태 코드를 생성 합니다. "Microsoft" 텍스트에는 오류 원인을 나타냅니다.|42000|  

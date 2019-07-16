@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 813641b7fa72405a0ba5a026e255f03feb94bd05
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: c6828b77af36b5dbbc50fbca0210961a7f2ed20c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041925"
 ---
 # <a name="predictsequence-dmx"></a>PredictSequence(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +32,7 @@ PredictSequence(\<table column reference, n-start, n-end>)
 ## <a name="return-type"></a>반환 형식  
  \<테이블 식 >.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경우는 *n* 매개 변수가 지정 된 다음 값을 반환 합니다.  
   
 -   하는 경우 *n* 가능성이 가장 높은 시퀀스 값 다음에 0 보다 크면 *n* 단계입니다.  

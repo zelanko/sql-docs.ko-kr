@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eeb8fae9c563e675499dec47839acdd0a003765a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020515"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>SQLGetData를 사용하여 출력 매개 변수 검색
 ODBC 3.8 하기 전에 응용 프로그램만 바인딩된 출력 버퍼를 사용 하 여 쿼리 출력 매개 변수를 검색할 수 있습니다. 그러나 매개 변수 값의 크기 (예: 큰 이미지) 매우 큰 경우 매우 큰 버퍼를 할당 하기 어렵습니다. ODBC 3.8 부분에서 출력 매개 변수를 검색 하는 새로운 방법을 소개 합니다. 이제 응용 프로그램이 호출할 수 있습니다 **SQLGetData** 작은 버퍼로 여러 번 큰 매개 변수 값을 검색 합니다. 큰 열 데이터를 검색 하는 것과 비슷합니다.  
@@ -30,7 +29,7 @@ ODBC 3.8 하기 전에 응용 프로그램만 바인딩된 출력 버퍼를 사�
  이 기능은 ODBC 3.8 응용 프로그램에서 사용할 수 컴파일되거나 ODBC 3.x 및 ODBC 2.x 응용 프로그램 및 이러한 응용 프로그램에 사용 하 여 검색 하는 동안 출력 매개 변수를 지 원하는 ODBC 3.8 드라이버가 있어야 **SQLGetData** 및 ODBC 3.8 드라이버 관리자입니다. 새 ODBC 기능을 사용 하려면 이전 응용 프로그램을 사용 하는 방법에 대 한 정보를 참조 하세요 [호환성 매트릭스](../../../odbc/reference/develop-app/compatibility-matrix.md)합니다.  
   
 ## <a name="usage-example"></a>사용 예  
- 예를 들어 저장된 프로시저를 실행 하는 것이 좋습니다 **{호출 sp_f(?,?)}**, 위치 매개 변수가 모두 SQL_PARAM_OUTPUT_STREAM와 바인딩되어 및 저장된 프로시저는 결과 집합이 반환 (이 항목의 뒷부분에 나오는 것 보다 복잡 한 시나리오):  
+ 예를 들어 저장된 프로시저를 실행 하는 것이 좋습니다 **{호출 sp_f(?,?)}** , 위치 매개 변수가 모두 SQL_PARAM_OUTPUT_STREAM와 바인딩되어 및 저장된 프로시저는 결과 집합이 반환 (이 항목의 뒷부분에 나오는 것 보다 복잡 한 시나리오):  
   
 1.  각 매개 변수에 대 한 호출 **SQLBindParameter** 사용 하 여 *InputOutputType* SQL_PARAM_OUTPUT_STREAM로 설정 하 고 *ParameterValuePtr* 매개 변수 번호와 같은 토큰 설정 에서 데이터에 대 한 포인터 또는 입력된 매개 변수를 바인딩하는 응용 프로그램 구조에 대 한 포인터입니다. 이 예제에서는 토큰으로 서 수 매개 변수를 사용 합니다.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 232b071c11d4a2a0bb2e42b6f9787d07f99e21e2
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 5ad42a174f558202544650fb1580574f290d4466
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946088"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery 및 정적 형식 지정
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "54226590"
   
  형식화되지 않은 XML 인스턴스의 경우 해당 데이터가 형식화되지 않았음을 나타내는 특수한 형식이 있습니다. 이 정보는 정적 형식을 확인하는 동안 특정한 암시적 캐스트를 수행하는 데 사용됩니다.  
   
- 형식화된 데이터의 입력 형식은 XML 데이터 유형 인스턴스를 제한하는 XML 스키마 컬렉션에서 유추됩니다. 예를 들어, 스키마 형식의 요소만 허용 하는 경우 **xs: integer**, 해당 요소를 사용 하는 경로 식의 결과 형식의 요소를 0 개 이상의 됩니다 **xs: integer**합니다. 현재와 같은 식을 사용 하 여 표현 됩니다 `element(age,xs:integer)*` 여기서 별표 (\*) 결과 형식의 카디널리티를 나타냅니다. 이 예제에서는 식 형식과 이름이 "age"의 0 개 이상의 요소에서 발생할 **xs: integer**합니다. 기타 카디널리티로 서는 정확히 하나 및 단독으로 형식 이름을 사용 하 여 표현 됩니다 0 개 이상의 매개 변수를 사용 하 여 표현 및 (**?**), 1 또는 더 많은 고 더하기 기호를 사용 하 여 표현 (**+**) .  
+ 형식화된 데이터의 입력 형식은 XML 데이터 유형 인스턴스를 제한하는 XML 스키마 컬렉션에서 유추됩니다. 예를 들어, 스키마 형식의 요소만 허용 하는 경우 **xs: integer**, 해당 요소를 사용 하는 경로 식의 결과 형식의 요소를 0 개 이상의 됩니다 **xs: integer**합니다. 현재와 같은 식을 사용 하 여 표현 됩니다 `element(age,xs:integer)*` 여기서 별표 (\*) 결과 형식의 카디널리티를 나타냅니다. 이 예제에서는 식 형식과 이름이 "age"의 0 개 이상의 요소에서 발생할 **xs: integer**합니다. 기타 카디널리티로 서는 정확히 하나 및 단독으로 형식 이름을 사용 하 여 표현 됩니다 0 개 이상의 매개 변수를 사용 하 여 표현 및 ( **?** ), 1 또는 더 많은 고 더하기 기호를 사용 하 여 표현 ( **+** ) .  
   
  때때로 정적 형식 유추를 통해 식이 항상 빈 시퀀스를 반환할 것이라고 유추할 수 있습니다. 예를 들어 경로 식의 형식화 된 XML 데이터 형식을 찾습니다는 \<이름 > 내 요소를 \<고객 > 요소 (/ 고객 이름), 하지만 스키마를 허용 하지 않습니다는 \<이름 > 내에서 \<고객 >, 정적 형식 유추는 결과 빈 됩니다 유추 합니다. 이 잘못 된 쿼리를 검색 하는 데 사용할 및 식 () 된 경우가 아니면 정적 오류로 보고 됩니다 또는 **데이터 (())** 합니다.  
   
@@ -73,8 +72,8 @@ ms.locfileid: "54226590"
 ## <a name="type-checking-of-union-types"></a>UNION 유형에 대한 유형 검사  
  UNION 유형은 유형 검사로 인해 조심스럽게 처리해야 합니다. 다음 예에서는 두 가지 문제에 대해 설명합니다.  
   
-### <a name="example-function-over-union-type"></a>예: UNION 유형에 대한 함수  
- UNION 유형의 <`r`>에 대한 요소 정의를 고려하십시오.  
+### <a name="example-function-over-union-type"></a>예: Union 유형에 대 한 함수  
+ 에 대 한 요소 정의 것이 좋습니다 <`r`> 공용 구조체 형식:  
   
 ```  
 <xs:element name="r">  
@@ -86,8 +85,8 @@ ms.locfileid: "54226590"
   
  "평균" 함수인 XQuery 컨텍스트 내에서 `fn:avg (//r)` XQuery 컴파일러는 서로 다른 형식의 값을 추가할 수 없습니다 때문에 정적 오류를 반환 합니다 (**xs: int**하십시오 **xs: float** 또는 **xs: 이중**)에 <`r`> 인수에는 요소 **fn:avg()** 합니다. 이 문제를 해결하려면 함수 호출을 `fn:avg(for $r in //r return $r cast as xs:double ?)`로 다시 작성합니다.  
   
-### <a name="example-operator-over-union-type"></a>예: UNION 유형에 대한 연산자  
- 더하기 연산('+')에는 정확한 유형의 피연산자가 필요합니다. 따라서 `(//r)[1] + 1` 식은 <`r`> 요소에 대해 앞에서 설명한 유형 정의가 있는 정적 오류를 반환합니다. 한 가지 해결 방법은 식을 `(//r)[1] cast as xs:int? +1`(여기서 "?"는 0번 또는 1번의 발생 횟수를 나타냄)로 다시 작성하는 것입니다. 모든 캐스트는 런타임 오류의 결과로 빈 시퀀스를 발생시킬 수 있기 때문에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 "cast as"와 "?"가 필요합니다.  
+### <a name="example-operator-over-union-type"></a>예: Union 유형에 대 한 연산자  
+ 더하기 연산('+')에는 정확한 유형의 피연산자가 필요합니다. 결과적으로 식 `(//r)[1] + 1` 요소에 대해 앞에서 설명한 유형 정의가 있는 정적 오류를 반환 합니다 <`r`>. 한 가지 해결 방법은 식을 `(//r)[1] cast as xs:int? +1`(여기서 "?"는 0번 또는 1번의 발생 횟수를 나타냄)로 다시 작성하는 것입니다. 모든 캐스트는 런타임 오류의 결과로 빈 시퀀스를 발생시킬 수 있기 때문에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에는 "cast as"와 "?"가 필요합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [XQuery 언어 참조&#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  

@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 805dd613c49351c0106231b9147a4af54ac8cf0d
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 88dcbbf3a336af38b80ab8c5aa4b49dbe17d9184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962819"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning Services의 알려진된 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,7 +122,7 @@ R 설치 파일의 올바른 버전을 포함 하는 제공 서비스 릴리스�
 
 이 문제는 릴리스 버전에서 해결 됩니다. 또한 R 구성 요소에는이 제한이 적용 되지 않습니다.
 
-**적용 대상:** SQL Server 2017 with Python
+**적용 대상:** Python 사용 하 여 SQL Server 2017
 
 ### <a name="bkmk_sqlbindr"></a> 에 연결할 때 이전 버전 SQL Server R Services의 클라이언트에서 사용 하 여 호환 되지 않는 버전 경고 [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
 
@@ -216,7 +215,7 @@ R 솔루션에 영향을 주는 기타 알려진된 문제에 대 한 참조를 
 
 와 같은 기본이 아닌 위치에 설치 된 SQL Server 인스턴스의 경우 외부는 `Program Files` 폴더, ACCESS_DENIED 패키지를 설치 하는 스크립트를 실행 하려고 할 때 발생 하는 경고입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
 
-> *In `normalizePath(path.expand(path), winslash, mustWork)` : path[2]="~ExternalLibraries/R/8/1": 액세스가 거부 되었습니다.*
+> *`normalizePath(path.expand(path), winslash, mustWork)` : 경로 [2] = "~ExternalLibraries/R/8/1": 액세스가 거부 되었습니다.*
 
 이유는 R 함수 경로 읽기를 시도 하 고 실패 built-in users 그룹 **SQLRUserGroup**, 읽기 액세스 하지 못합니다. 경고 발생 하는 현재 R 스크립트 실행을 차단 하지 않습니다 하지만 사용자가 다른 R 스크립트를 실행할 때마다 경고가 반복적으로 되풀이 될 수 있습니다.
 

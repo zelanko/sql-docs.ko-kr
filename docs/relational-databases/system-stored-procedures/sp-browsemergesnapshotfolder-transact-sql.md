@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e248642f-5fea-4ed7-be1a-36ff75abcfde
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f740a306d10305856ef35e47c6088db7c5ad2849
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92df93d1c14b10aa6587d0eaf13f4de81bc4d7f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046015"
 ---
 # <a name="spbrowsemergesnapshotfolder-transact-sql"></a>sp_browsemergesnapshotfolder(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,11 @@ sp_browsemergesnapshotfolder [@publication= ] 'publication'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**snapshot_folder**|**nvarchar(2000)**|스냅숏 디렉터리의 전체 경로입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_browsemergesnapshotfolder** 병합 복제에 사용 됩니다.  
   
  게시가 게시자 작업 디렉터리 및 게시자 스냅숏 폴더 모두에서 스냅숏 파일을 생성하도록 설정되면 결과 집합은 두 행을 포함하게 됩니다. 첫 번째 행은 게시 스냅숏 폴더를 포함하며 두 번째 행은 게시자 작업 디렉터리를 포함합니다.  

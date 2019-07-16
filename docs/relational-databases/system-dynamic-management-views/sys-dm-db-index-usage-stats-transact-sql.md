@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: d06a001f-0f72-4679-bc2f-66fff7958b86
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8d2096243b65573d7d54a372252794976c93d527
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c9f44724282761f071cd28d8cbe200855cb14f69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004856"
 ---
 # <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "62719313"
 > [!NOTE]  
 >  호출에서이 뷰를 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]를 사용 하 여 **sys.dm_pdw_nodes_db_index_usage_stats**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**smallint**|테이블 또는 뷰가 정의되어 있는 데이터베이스의 ID입니다.|  
 |**object_id**|**int**|인덱스가 정의되어 있는 테이블 또는 뷰의 ID입니다.|  
@@ -64,7 +63,7 @@ ms.locfileid: "62719313"
 |**last_system_update**|**datetime**|마지막 시스템 업데이트 시간입니다.|  
 |pdw_node_id|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  한 번의 쿼리 실행으로 지정된 인덱스에 대한 개별적인 검색(Seek), 검색(Scan), 조회 또는 업데이트를 수행하면 해당 인덱스를 사용하는 것으로 계산되어 이 뷰에서 해당 카운터를 증가시킵니다. 통계 수집을 위한 검색과 같이 내부적으로 생성된 쿼리에 의한 작업과 사용자 제공 쿼리에 의한 작업의 경우 모두 정보가 보고됩니다.  
   
  합니다 **user_updates** 카운터에서 삽입 된 인덱스 유지 관리의 수준을 나타내는, 업데이트 또는 삭제 작업을 기본 테이블 또는 보기에 있습니다. 이 뷰를 사용하여 어떤 인덱스가 사용자 응용 프로그램에서만 조금 사용되는지 또는 유지 관리 오버헤드를 유발하는지를 확인할 수 있습니다. 필요한 경우 유지 관리 오버헤드를 유발하지만 쿼리에 거의 사용되지 않거나 전혀 사용되지 않는 인덱스를 삭제할 수도 있습니다.  
@@ -77,7 +76,7 @@ ms.locfileid: "62719313"
   
 ## <a name="permissions"></a>사용 권한  
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.  
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.  
   
 ## <a name="see-also"></a>관련 항목  
 

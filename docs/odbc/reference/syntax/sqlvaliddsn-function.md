@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 991884e14f68cf279543b9194114c5ea1fc8d7dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbd8df72bcb0e76c8abcc3d738c2ff8da61a7bfe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039477"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 함수
 **규칙**  
@@ -52,7 +51,7 @@ BOOL SQLValidDSN(
 ## <a name="diagnostics"></a>진단  
  때 **SQLValidDSN** 연결 된 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 있습니다 **SQLInstallerError**합니다. A  *\*pfErrorCode* 반환 됩니다만 함수 호출이 실패 한 경우 데이터 원본 이름이 유효 하지 않으므로 FALSE를 반환 하는 경우에 없습니다. 다음 표에서  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 이 함수의 컨텍스트에서 각각 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생 했습니다에 대 한 특정 설치 관리자 오류가 없습니다.|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 관리자의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  

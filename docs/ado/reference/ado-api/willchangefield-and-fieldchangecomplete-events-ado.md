@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 35efd51d640943c4d5293956a0638fa85ac302f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945889"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField 및 FieldChangeComplete 이벤트(ADO)
 합니다 **WillChangeField** 이벤트는 보류 중인 작업을 하나 이상의 값을 변경 하기 전에 호출 됩니다 [필드](../../../ado/reference/ado-api/field-object.md) 개체를 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md)합니다. 합니다 **FieldChangeComplete** 이벤트 후 하나 이상의 값 이라고 **필드** 개체 변경 되었습니다.  
@@ -62,7 +61,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
  *pRecordset*  
  A **레코드 집합** 개체입니다. 합니다 **레코드 집합** 이 이벤트가 발생 한입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  A **WillChangeField** 또는 **FieldChangeComplete** 설정 하는 경우 이벤트가 발생할 수 있습니다를 [값](../../../ado/reference/ado-api/value-property-ado.md) 속성을 호출 합니다 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드 배열 매개 변수 필드 및 값을 사용 하 여입니다.  
   
 ## <a name="see-also"></a>관련 항목  

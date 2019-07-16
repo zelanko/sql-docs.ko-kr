@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a26fda3dc3edc1870b7a587d926d8e26d69f186e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946573"
 ---
 # <a name="numeric-values-functions---ceiling"></a>숫자 값 함수 - ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
  *$arg*  
  함수가 적용되는 번호입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경우 유형의 *$arg* 세 가지 숫자 기본 유형 중 하나인 **xs: float**를 **xs: double**, 또는 **xs: decimal**, 반환 형식은 동일 합니다 *$arg* 형식입니다.  
   
  경우 유형의 *$arg* 숫자 유형 중 하나에서 파생 된 형식인 반환 형식은 기본 숫자 형식입니다.  
@@ -51,7 +50,7 @@ fn:ceiling ( $arg as numeric?) as numeric?
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-ceiling-xquery-function"></a>1. ceiling() XQuery 함수 사용  
+### <a name="a-using-the-ceiling-xquery-function"></a>A. ceiling() XQuery 함수 사용  
  제품 모델 7에 대해 이 쿼리는 제품 모델의 제조 프로세스에 있는 작업 센터 위치 목록을 반환합니다. 각 작업 센터 위치에 대해 다음 쿼리는 문서화된 경우 위치 ID, 근무 시간 및 부지 크기를 반환합니다. 쿼리에서 사용 합니다 **ceiling** 형식의 값으로 근무 시간을 반환 하는 함수 **10 진수**합니다.  
   
 ```  

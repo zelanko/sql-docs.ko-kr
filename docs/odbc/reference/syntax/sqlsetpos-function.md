@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63bca42adcdfc83d1bdb96361680d0c70c9a031c
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: eb60350be75a6b4fae5e0c5c7c237d125ee3d3a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039687"
 ---
 # <a name="sqlsetpos-function"></a>SQLSetPos 함수
 **규칙**  
@@ -234,7 +233,7 @@ SQLRETURN SQLSetPos(
   
     -   모든 실행 시 데이터 열이 있는 경우 함수는 SQL_NEED_DATA를 반환 하 고 3 단계로 진행 됩니다.  
   
-3.  호출 **SQLParamData** 의 주소를 검색 합니다  *\*TargetValuePtr* 처리할 첫 번째 실행 시 데이터 열에 대 한 버퍼입니다. **SQLParamData** returns SQL_NEED_DATA. 응용 프로그램에서 응용 프로그램 정의 값을 검색 하는  *\*TargetValuePtr* 버퍼입니다.  
+3.  호출 **SQLParamData** 의 주소를 검색 합니다  *\*TargetValuePtr* 처리할 첫 번째 실행 시 데이터 열에 대 한 버퍼입니다. **SQLParamData** SQL_NEED_DATA를 반환 합니다. 응용 프로그램에서 응용 프로그램 정의 값을 검색 하는  *\*TargetValuePtr* 버퍼입니다.  
   
     > [!NOTE]  
     >  실행 시 데이터 매개 변수는 실행 시 데이터 열과 마찬가지로, 반환 값 **SQLParamData** 마다 다릅니다.  

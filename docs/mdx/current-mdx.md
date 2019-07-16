@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4e4962dfd9eba7d3a21710fef33aa39256dcfbfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 821d517419b90df44b7943a1e0edde12ef667b6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63249673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047125"
 ---
 # <a name="current-mdx"></a>Current(MDX)
 
@@ -32,7 +31,7 @@ Set_Expression.Current
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  반복 중 각 단계에서 수행되는 튜플은 현재 튜플입니다. 합니다 **현재** 함수는이 튜플을 반환 합니다. 이 함수는 집합에 대해 반복하는 동안에만 유효합니다.  
   
  집합에서 반복 하는 MDX 함수를 포함 합니다 [생성](../mdx/generate-mdx.md) 함수입니다.  

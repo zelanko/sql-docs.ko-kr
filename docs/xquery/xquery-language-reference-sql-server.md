@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c85930cf8296ac6589e0c7b768c28f298ee31296
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 87edbeaac26ca1c332efe981901cbf0bc57fed30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945963"
 ---
 # <a name="xquery-language-reference-sql-server"></a>XQuery 언어 참조(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ WHERE ProductModelID=7
   
  다음 표에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)]의 XQuery 구현 방식을 이해하는 데 도움이 될 수 있는 관련 항목들이 나열되어 있습니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[XML 데이터&#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)|에 대 한 지원에 설명 합니다 **xml**데이터 형식에 [!INCLUDE[ssDE](../includes/ssde-md.md)] 방법과이 데이터 형식에 대해 사용할 수 있습니다. 합니다 **xml** 데이터 forms 실행 되는 XQuery 식에는 입력된 XQuery 데이터 모델을 입력 합니다.|  
 |[XML 스키마 컬렉션&#40;SQL Server&#41;](../relational-databases/xml/xml-schema-collections-sql-server.md)|데이터베이스에 저장된 XML 인스턴스를 형식화하는 방법을 설명합니다. 즉, XML 스키마 컬렉션을 사용 하 여 연결할 수 있습니다 합니다 **xml** 유형 열입니다. 열에 저장된 모든 항목은 유효성이 검사되고 컬렉션에 있는 스키마에 대해 형식화되며 XQuery에 대한 유형 정보를 제공합니다.|  
@@ -70,7 +69,7 @@ WHERE ProductModelID=7
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[XQuery 기초](../xquery/xquery-basics.md)|XQuery 개념에 대한 기본 개여는 물론 식 평가(정적 및 동적 컨텍스트), 원자화, 효율적인 부울 값, XQuery 유형 시스템, 시퀀스 유형 일치 및 오류 처리 등을 제공합니다.|  
 |[XQuery 식](../xquery/xquery-expressions.md)|XQuery 기본 식, 경로 식, 시퀀스 식, 산술 비교 및 논리 식, XQuery 구성, FLWOR 식, 조건 및 한정 식, 시퀀스 유형의 여러 식에 대해 설명합니다.|  

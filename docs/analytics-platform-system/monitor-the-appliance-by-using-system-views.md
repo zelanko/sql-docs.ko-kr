@@ -2,19 +2,18 @@
 title: 시스템 뷰-Analytics Platform System을 사용 하 여 모니터 | Microsoft Docs
 description: 이 문서에서는 분석 플랫폼 시스템 어플라이언스 모니터링에 사용할 수 있는 시스템 뷰를 나열 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 363e18441d95884b025de2ec07f0fed276852eb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 954b65a1882e47ff931800854bdd5f273d4c3392
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639978"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960529"
 ---
 # <a name="monitor-the-appliance-with-system-views---analytics-platform-system"></a>시스템 뷰-Analytics Platform System을 사용 하 여 어플라이언스 모니터링
 이 문서에서는 SQL Server PDW 모니터링에 사용할 수 있는 시스템 뷰를 나열 합니다.  

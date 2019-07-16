@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 41e18b20-526b-45d2-9bd9-e3b7d7fbce4e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6c73d2be8550bd6ce3dad9e6c9e07e2403785f7b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7fa45029557cc217b89293fa7963bf29b39f373f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946303"
 ---
 # <a name="sequence-expressions-xquery"></a>시퀀스 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +131,7 @@ Page only in case of emergencies.
 ```  
   
 ## <a name="filtering-sequences"></a>시퀀스 필터링  
- 식에 조건자를 추가하여 식에 의해 반환된 시퀀스를 필터링할 수 있습니다. 자세한 내용은 [경로 식 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)합니다. 예를 들어 다음 쿼리는 3개의 <`a`> 요소 노드에 대한 하나의 시퀀스를 반환합니다.  
+ 식에 조건자를 추가하여 식에 의해 반환된 시퀀스를 필터링할 수 있습니다. 자세한 내용은 [경로 식 &#40;XQuery&#41;](../xquery/path-expressions-xquery.md)합니다. 다음 쿼리는 세 개의 시퀀스를 반환 하는 예를 들어 <`a`> 요소 노드:  
   
 ```  
 declare @x xml  
@@ -152,7 +151,7 @@ SELECT @x.query('/root/a')
 <a />  
 ```  
   
- 특성 attrA가 포함된 <`a`> 요소만 검색하려면 조건자에서 필터를 지정하면 됩니다. 결과 시퀀스에는 하나의 <`a`> 요소만 포함됩니다.  
+ 자식만 검색 <`a`> 요소의 특성 attra는 조건자에서 필터를 지정할 수 있습니다. 결과 시퀀스를 사용 해야 하나에 <`a`> 요소입니다.  
   
 ```  
 declare @x xml  
@@ -203,7 +202,7 @@ SELECT @x.query('
 <c>C under b</c>  
 ```  
   
- 다음 예에서는 조건자 필터가 적용됩니다. 이 식은 <`c`> 요소가 포함된 <`a`> 및 <`b`> 요소를 검색합니다.  
+ 다음 예에서는 조건자 필터가 적용됩니다. 식 요소를 찾습니다. <`a`> 및 <`b`> 요소가 포함 된 <`c`>.  
   
 ```  
 declare @x xml  

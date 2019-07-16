@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5a36be7a98a39cab8b9df428b8d4bd9a1d399a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8eece6a1347aa7fba41577f66493e35f92a69d6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039513"
 ---
 # <a name="sqlwritedsntoini-function"></a>SQLWriteDSNToIni 함수
 **규칙**  
@@ -56,7 +55,7 @@ BOOL SQLWriteDSNToIni(
 ## <a name="diagnostics"></a>진단  
  때 **SQLWriteDSNToIni** 연결 된 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에서  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 이 함수의 컨텍스트에서 각각 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생 했습니다에 대 한 특정 설치 관리자 오류가 없습니다.|  
 |ODBC_ERROR_INVALID_DSN|잘못 된 DSN|합니다 *lpszDSN* 인수 DSN에 대 한 잘못 된 문자열을 포함 합니다.|  

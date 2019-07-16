@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f860306c721bba75a9d5fc9af63ddbe0c6fc9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002656"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,13 +50,13 @@ sys.dm_db_missing_index_columns(index_handle)
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|열의 ID입니다.|  
 |**column_name**|**sysname**|테이블 열의 이름입니다.|  
-|**column_usage**|**varchar(20)**|열이 쿼리에 사용되는 방법입니다. 가능한 값 및 해당 설명을 다음과 같습니다.<br /><br /> 동등 열 표현 형식의 같음 조건자에 기여 합니다.: <br />                        *table.column* = *constant_value*<br /><br /> 같지 않음: 열이 기여 예를 들어 같지 않음을 표시 하는 조건자에 형식의 조건자: *테이블. 열* > *constant_value*합니다. "="가 아닌 모든 비교 연산자는 같지 않음을 표시합니다.<br /><br /> 포함: 열 조건자를 평가 하기 위해 사용 되지는 않지만 쿼리를 커버 하기 등으로 인해 사용 됩니다.|  
+|**column_usage**|**varchar(20)**|열이 쿼리에 사용되는 방법입니다. 가능한 값 및 해당 설명을 다음과 같습니다.<br /><br /> 같음: 열 형식으로 같음을 표시 하는 조건자에 적용 됩니다. <br />                        *table.column* = *constant_value*<br /><br /> 같지 않음: 예를 들어 같지 않음을 표시 하는 조건자에 기여 열 형식의 조건자: *테이블. 열* > *constant_value*합니다. "="가 아닌 모든 비교 연산자는 같지 않음을 표시합니다.<br /><br /> 다음과 같습니다. 열을 사용 하지 않고 조건자를 계산 있지만 쿼리를 처리 하기에 예를 들어, 또 다른 이유로 사용 됩니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  반환 된 정보 **sys.dm_db_missing_index_columns** 쿼리는 쿼리 최적화 프로그램이 쿼리 최적화 되 고 지속 되지 않습니다 때 업데이트 됩니다. 누락된 인덱스 정보는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작할 때까지만 유지됩니다. 서버 재활용 후에도 누락된 인덱스 정보를 유지하려면 데이터베이스 관리자가 정기적으로 누락된 인덱스 정보의 백업 복사본을 만들어야 합니다.  
   
 ## <a name="transaction-consistency"></a>트랜잭션 일관성  
@@ -87,7 +86,7 @@ GO
   
 ## <a name="see-also"></a>관련 항목  
  [sys.dm_db_missing_index_details &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-details-transact-sql.md)   
- [sys.dm_db_missing_index_groups &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
- [sys.dm_db_missing_index_group_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
+ [sys.dm_db_missing_index_groups &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-groups-transact-sql.md)   
+ [sys.dm_db_missing_index_group_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-missing-index-group-stats-transact-sql.md)  
   
   

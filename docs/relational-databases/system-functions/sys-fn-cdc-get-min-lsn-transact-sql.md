@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: bd49e28a-128b-4f6b-8545-6a2ec3f4afb3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7f1be9ff365412444f87ef0abcc3795301d98cf7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52c6b8d2db395560524c2a9fa46aca680ca9eea2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62948945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046405"
 ---
 # <a name="sysfncdcgetminlsn-transact-sql"></a>sys.fn_cdc_get_min_lsn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
 ## <a name="return-types"></a>반환 형식  
  **binary(10)**  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  캡처 인스턴스가 없거나 호출자가 캡처 인스턴스와 관련된 변경 데이터에 액세스할 권한이 없는 경우 0x00000000000000000000을 반환합니다.  
   
  이 함수는 일반적으로 캡처 인스턴스와 관련된 변경 데이터 캡처 시간대의 하위 엔드포인트를 식별하는 데 사용됩니다. 또한 이 함수를 사용하면 변경 데이터를 요청하기 전에 쿼리 범위의 엔드포인트가 캡처 인스턴스 시간대 내에 있는지 확인할 수 있습니다. 변경 테이블에서 정리가 수행될 때 캡처 인스턴스의 하위 엔드포인트가 변경되므로 이러한 확인을 거치는 것이 중요합니다. 변경 데이터 요청 사이의 시간이 긴 경우 이전 변경 데이터 요청의 상위 엔드포인트로 설정된 하위 엔드포인트가라도 현재 시간대를 벗어날 수 있습니다.  
@@ -59,7 +58,7 @@ sys.fn_cdc_get_min_lsn ( 'capture_instance_name' )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>1\. 지정된 캡처 인스턴스에 대한 최소 LSN 값 반환  
+### <a name="a-returning-the-minimum-lsn-value-for-a-specified-capture-instance"></a>A. 지정된 캡처 인스턴스에 대한 최소 LSN 값 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources_Employee` 캡처 인스턴스에 대한 최소 LSN 값을 반환합니다.  
   
 ```  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 06d480ca-9eb6-4570-a45d-a73539bddd32
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 87440d545d39bf1d260a20f38f230b493230cfed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c11bb74b62d54b1e2489cba5dd7cd35ee376a41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949154"
 ---
 # <a name="state-property-ado-md"></a>State 속성(ADO MD)
 셀 집합의 현재 상태를 나타냅니다.  
@@ -30,7 +29,7 @@ ms.locfileid: "66708662"
 ## <a name="return-values"></a>반환 값  
  반환을 **긴** 의 현재 상태를 나타내는 정수를 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 개체 및 읽기 전용입니다. 다음 값이 잘못 되었습니다: **adStateClosed** (0) 및 **adStateOpen** (1).  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여 [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) 상수 이름을 프로젝트에서 참조 ADO 형식 라이브러리에 있어야 합니다. 참조 [ADO MD를 사용 하 여 ADO를 사용 하 여](../../../ado/guide/multidimensional/using-ado-with-ado-md.md) 자세한 내용은 합니다.  
   
 ## <a name="applies-to"></a>적용 대상  

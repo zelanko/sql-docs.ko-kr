@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ae478cb2efc557acfd86e174d59a160fb8920c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3476ba45f7f563524cdfd9855e80f9c5dd96524
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054453"
 ---
 # <a name="managing-clr-integration-assemblies"></a>CLR 통합 어셈블리 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,10 +28,10 @@ ms.locfileid: "47686541"
   
  어셈블리 정보에 저장 됩니다는 **sys.assembly_files** 어셈블리가 설치 되어 있는 데이터베이스의 테이블입니다. 합니다 **sys.assembly_files** 테이블에는 다음 열을 포함 합니다.  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |assembly_id|어셈블리에 대해 정의되는 식별자입니다. 해당 어셈블리와 관련한 모든 개체에 이 번호가 할당됩니다.|  
-|NAME|개체 이름입니다.|  
+|name|개체 이름입니다.|  
 |file_id|연결 된 첫 번째 개체를 사용 하 여 각 개체를 식별 하는 번호를 지정 **assembly_id** 1의 값입니다. 여러 개체가 연결 되어 있는 경우 동일한 **assembly_id**, 한 다음 각 후속 **file_id** 값이 1 씩 증가 합니다.|  
 |content|어셈블리 또는 파일의 16진수 표현입니다.|  
   

@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: d852cc745578d852b2c8235ebcaf3614020a1bb8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6ffd4b13d5ab92187ac998fd983e8fa8416e4401
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962891"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>SQL Server machine learning 명령줄에서 R 및 Python 구성 요소 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "58511750"
 
 명령 프롬프트에서 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 /Q 매개 변수를 사용하는 완전 자동 모드 또는 /QS 매개 변수를 사용하는 단순 자동 모드를 지원합니다. /QS 스위치를 사용하면 진행률만 표시되고 입력이 허용되지 않으므로 오류가 발생해도 오류 메시지가 표시되지 않습니다. /QS 매개 변수는 /Action=install이 지정된 경우에만 지원됩니다.
 
-| 인수 | Description |
+| 인수 | 설명 |
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | 데이터베이스의 버전을 설치합니다. SQL Server 2017 Machine Learning Services (In-database) 또는 SQL Server 2016 R Services (In-database).  |
 | /FEATURES = SQL_INST_MR | SQL Server 2017만 적용 됩니다. AdvancedAnalytics를이 쌍으로 연결 합니다. Microsoft R Open 및 전용 R 패키지를 포함 하 여 (데이터베이스 내) R 기능을 설치 합니다. SQL Server 2016 R Services 기능은 R 전용 이므로 해당 릴리스에 대 한 매개 변수가 있습니다.|

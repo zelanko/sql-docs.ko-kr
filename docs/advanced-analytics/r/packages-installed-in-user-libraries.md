@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: bb354e1a0a7f7f22a39b690fdd0c0f4ae7778b8f
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: e1aea5bd9166386662fc090a7a6d41737a9eecb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962563"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>SQL Server에서 R 패키지를 사용 하기 위한 팁
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -75,7 +74,7 @@ library("c:/Users/<username>/R/win-library/packagename")
 
 + 패키지 라이브러리는 인스턴스와 관련 된 것입니다. 자세한 내용은 [SQL Server의 기본 R 및 Python 패키지](../package-management/default-packages.md)합니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 + [새 R 패키지 설치](install-additional-r-packages-on-sql-server.md)
 + [새 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)

@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 1fb3f83cd3bbd39e3af4936ce8dfb8f16bad82d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 484f238e53db21030b04cdf46b86271236509989
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962263"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>RxDataStep (RevoScaleR 및 SQL Server 자습서)를 사용 하 여 새 SQL Server 테이블 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -92,7 +91,7 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
         overwrite = TRUE )
     ```
   
-    매우 큰 테이블이 이와 같은 최종 상태 메시지가 표시 될 때까지 기다렸다가: *Rows Read: 처리 된 200000, total 행: 600000*.
+    매우 큰 테이블이 이와 같은 최종 상태 메시지가 표시 될 때까지 기다렸다가: *Rows Read: 처리 된 200000, total 행: 600000*합니다.
      
 ## <a name="load-data-from-a-sql-table"></a>SQL 테이블에서 데이터를 로드 합니다.
 

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3a141cb4-229d-4027-9349-615cb2995e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00daac655f0c435c1ee22239d3d4aafa23065997
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed99ab72e3d5112588a0b1c93df34b01aff7acdd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63217782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044925"
 ---
 # <a name="character-data-and-c-strings"></a>문자 데이터 및 C 문자열
 가변 길이 문자 데이터 (예: 열 이름, 동적 매개 변수 및 문자열 특성 값)를 참조 하는 입력된 매개 변수는 연결 된 길이 매개 변수를 갖습니다. 응용 프로그램이 종료 null 문자는 C에서 일반적으로 사용 하 여 문자열, 바이트 문자열 (null 종결자를 제외)의 길이 또는 SQL_NTS (Null-Terminated 문자열)를 인수로 제공 합니다. 음수가 아닌 길이 인수를 연결 된 문자열의 실제 길이 지정합니다. 길이 인수는 NULL 값을 길이가 0 인 문자열을 지정 하려면 0을 수 있습니다. SQL_NTS 음수 값을 null 종료 문자를 배치 하 여 문자열의 길이 확인 하는 드라이버를 전달 합니다.  

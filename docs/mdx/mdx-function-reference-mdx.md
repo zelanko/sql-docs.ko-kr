@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5e38d37eae107c713ced69857898c604a77af297
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff14718e09fa3732a40ea245430f33c599325eea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003505"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 함수 참조(MDX)
 
@@ -25,13 +24,13 @@ ms.locfileid: "63187610"
   
 ## <a name="array-functions"></a>배열 함수  
   
-|기능|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[SetToArray &#40;MDX&#41;](../mdx/settoarray-mdx.md)|사용자 정의 함수에서 사용하기 위해 하나 이상의 집합을 배열로 변환합니다.|  
   
 ## <a name="hierarchy-functions"></a>계층 함수  
   
-|기능|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[계층 &#40;MDX&#41;](../mdx/hierarchy-mdx.md)|지정한 멤버 또는 수준을 포함하고 있는 계층을 반환합니다.|  
 |[차원 &#40;MDX&#41;](../mdx/dimension-mdx.md)|지정한 멤버, 수준, 계층을 포함하고 있는 차원을 반환합니다.|  
@@ -39,14 +38,14 @@ ms.locfileid: "63187610"
   
 ## <a name="level-functions"></a>수준 함수  
   
-|기능|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[수준 &#40;MDX&#41;](../mdx/level-mdx.md)|멤버의 수준을 반환합니다.|  
 |[수준 &#40;MDX&#41;](../mdx/levels-mdx.md)|차원 또는 계층에서의 위치가 숫자 식에 의해 지정되거나 이름이 문자열 식에 의해 지정되는 수준을 반환합니다.|  
   
 ## <a name="logical-functions"></a>논리 함수  
   
-|기능|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[IsAncestor &#40;MDX&#41;](../mdx/isancestor-mdx.md)|지정한 멤버가 지정한 다른 멤버의 상위 항목인지 여부를 반환합니다.|  
 |[IsEmpty &#40;MDX&#41;](../mdx/isempty-mdx.md)|평가 식이 빈 셀 값인지 여부를 반환합니다.|  
@@ -56,7 +55,7 @@ ms.locfileid: "63187610"
   
 ## <a name="member-functions"></a>멤버 함수  
   
-|기능|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[상위 &#40;MDX&#41;](../mdx/ancestor-mdx.md)|지정한 수준 또는 거리에서 멤버의 상위 항목을 반환합니다.|  
 |[ClosingPeriod &#40;MDX&#41;](../mdx/closingperiod-mdx.md)|지정한 수준에서 멤버의 하위 항목 중 마지막 형제 항목을 반환합니다.|  
@@ -84,7 +83,7 @@ ms.locfileid: "63187610"
   
 ## <a name="numeric-functions"></a>숫자 함수  
   
-|기능|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[집계 &#40;MDX&#41;](../mdx/aggregate-mdx.md)|측정값 또는 지정한 집합의 튜플에 대해 선택적으로 지정한 숫자 식을 집계하여 계산한 스칼라 값을 반환합니다.|  
 |[Avg &#40;MDX&#41;](../mdx/avg-mdx.md)|지정한 집합에 대해 계산된 측정값의 평균값 또는 숫자 식(옵션)의 평균값을 반환합니다.|  
@@ -127,7 +126,7 @@ ms.locfileid: "63187610"
   
 ## <a name="set-functions"></a>집합 함수  
   
-|기능|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[AddCalculatedMembers &#40;MDX&#41;](../mdx/addcalculatedmembers-mdx.md)|계산 멤버를 지정한 집합에 추가하여 생성된 집합을 반환합니다.|  
 |[AllMembers &#40;MDX&#41;](../mdx/allmembers-mdx.md)|계산 멤버를 비롯하여 지정한 차원, 계층 또는 수준의 모든 멤버가 포함된 집합을 반환합니다.|  
@@ -183,7 +182,7 @@ ms.locfileid: "63187610"
   
 ## <a name="string-functions"></a>문자열 함수  
   
-|기능|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[CalculationPassValue&#40;MDX&#41;](../mdx/calculationpassvalue-mdx.md)|지정한 큐브의 계산 패스에 대해 계산된 MDX 식의 값을 반환합니다.|  
 |[CoalesceEmpty &#40;MDX&#41;](../mdx/coalesceempty-mdx.md)|빈 셀 값을 숫자 또는 문자열에 결합하고 결합된 값을 반환합니다.|  
@@ -200,14 +199,14 @@ ms.locfileid: "63187610"
   
 ## <a name="subcube-functions"></a>하위 큐브 함수  
   
-|기능|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[This&#40;MDX&#41;](../mdx/this-mdx.md)|현재 하위 큐브를 반환합니다.|  
 |[유지 &#40;MDX&#41;](../mdx/leaves-mdx.md)|지정한 차원, 멤버 또는 튜플의 리프 멤버 집합을 반환합니다.|  
   
 ## <a name="tuple-functions"></a>튜플 함수  
   
-|기능|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[현재 &#40;MDX&#41;](../mdx/current-mdx.md)|반복하는 동안 집합에서 현재 튜플을 반환합니다.|  
 |[항목 &#40;튜플&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)|집합에서 튜플을 반환합니다.|  
@@ -216,7 +215,7 @@ ms.locfileid: "63187610"
   
 ## <a name="other-functions"></a>기타 함수  
   
-|기능|Description|  
+|함수|설명|  
 |--------------|-----------------|  
 |[오류 &#40;MDX&#41;](../mdx/error-mdx.md)|오류를 발생시킵니다. 지정된 오류 메시지를 제공할 수도 있습니다.|  
   

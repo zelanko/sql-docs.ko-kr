@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4ddf1dec130e78b95132eb617a20614574486a89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98838772b53b5b650aa2d268049afde29443277e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63005809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033028"
 ---
 # <a name="endpoints-catalog-views-transact-sql"></a>엔드포인트 카탈로그 뷰(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

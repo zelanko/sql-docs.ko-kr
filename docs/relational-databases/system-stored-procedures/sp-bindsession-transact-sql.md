@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a24c219937341b7c1f9d44515bf52c4de220d4c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fac327d88aa8a6d74e153c1c7b2f3d637bf6f936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046017"
 ---
 # <a name="spbindsession-transact-sql"></a>sp_bindsession(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_bindsession { 'bind_token' | NULL }
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  바인딩된 두 세션은 트랜잭션과 잠금만 공유합니다. 각 세션은 고유한 격리 수준을 유지하며 한 세션에서 새 격리 수준을 설정해도 다른 세션의 격리 수준에는 영향을 주지 않습니다. 각 세션은 보안 계정으로 계속 식별할 수 있으며 해당 계정이 권한을 부여 받은 데이터베이스 리소스에만 액세스할 수 있습니다.  
   
  **sp_bindsession** 둘 이상의 기존 클라이언트 세션을 바인딩하는 바인딩 토큰을 사용 합니다. 이들 클라이언트 세션은 바인딩 토큰을 확보한 같은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 있어야 합니다. 세션은 명령을 실행하는 클라이언트입니다. 바인딩된 데이터베이스 세션은 트랜잭션 및 잠금 공간을 공유합니다.  

@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: 04cd7ffa-5402-4aba-90dd-8b562dd4b0bb
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8167857b3ee1653eac81067cc19efd198d7aa032
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea7cfd8940bdfbcda32d7a7338906db020b8c34a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051467"
 ---
 # <a name="troubleshooting-accesstosql"></a>문제 해결 (AccessToSQL)
 콘솔 스크립트 또는 명령을 실행 하는 마이그레이션 문제 중간 흔하게 것입니다.  
   
 수정 가능한 오류와 관련 될 수 있습니다.  
   
-1.  기능  
+1.  함수  
   
 2.  절차  
   

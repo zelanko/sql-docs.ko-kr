@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 045b1cb853603a2550110db18f5658453f19e6ce
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: d56f33a3a5d27ceaf95fe715675f16bd7825cfa9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032953"
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ sp_addarticle [ @publication = ] 'publication'
 |값|설명|  
 |-----------|-----------------|  
 |**NONE**|아무 작업도 수행 합니다.|  
-|**CALL sp_MSins_**<br /> **_table_**  (default)<br /><br /> 또는<br /><br /> **Custom_stored_procedure_name 호출**|구독자에서 실행할 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 *schema_option* 문서의 각 구독자의 대상 데이터베이스에서 지정된 된 저장된 프로시저를 만들거나 저장된 프로시저의 자동으로 만들도록 지정 합니다. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. <strong>sp_MSins_*테이블*</strong>  대신 대상 테이블의 이름을 포함 합니다 *(_t)* 매개 변수의 부분입니다. 때 *destination_owner* 를 지정 하면 대상 테이블 이름 앞에 추가 합니다. 예를 들어,를 **ProductCategory** 테이블을 소유 합니다 **프로덕션** 매개 변수는 일은 구독자에서 스키마를 `CALL sp_MSins_ProductionProductCategory`입니다. 피어 투 피어 복제 토폴로지에서 아티클의 *(_t)* GUID 값으로 추가 됩니다. 지정 *custom_stored_procedure* 업데이트 구독자가 지원 되지 않습니다.|  
+|**CALL sp_MSins_**<br /> **_테이블_**  (기본값)<br /><br /> 또는<br /><br /> **Custom_stored_procedure_name 호출**|구독자에서 실행할 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 *schema_option* 문서의 각 구독자의 대상 데이터베이스에서 지정된 된 저장된 프로시저를 만들거나 저장된 프로시저의 자동으로 만들도록 지정 합니다. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. <strong>sp_MSins_*테이블*</strong>  대신 대상 테이블의 이름을 포함 합니다 *(_t)* 매개 변수의 부분입니다. 때 *destination_owner* 를 지정 하면 대상 테이블 이름 앞에 추가 합니다. 예를 들어,를 **ProductCategory** 테이블을 소유 합니다 **프로덕션** 매개 변수는 일은 구독자에서 스키마를 `CALL sp_MSins_ProductionProductCategory`입니다. 피어 투 피어 복제 토폴로지에서 아티클의 *(_t)* GUID 값으로 추가 됩니다. 지정 *custom_stored_procedure* 업데이트 구독자가 지원 되지 않습니다.|  
 |**SQL** 또는 NULL|INSERT 문을 복제합니다. INSERT 문에는 아티클에 게시된 모든 열에 대한 값이 제공됩니다. 삽입에서 다음 명령이 복제됩니다.<br /><br /> `INSERT INTO <table name> VALUES (c1value, c2value, c3value, ..., cnvalue)`|  
   
  자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
@@ -124,7 +123,7 @@ sp_addarticle [ @publication = ] 'publication'
 |값|설명|  
 |-----------|-----------------|  
 |**NONE**|아무 작업도 수행 합니다.|  
-|**CALLsp_MSdel_**<br /> **_table_**  (default)<br /><br /> 또는<br /><br /> **Custom_stored_procedure_name 호출**|구독자에서 실행할 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 *schema_option* 문서의 각 구독자의 대상 데이터베이스에서 지정된 된 저장된 프로시저를 만들거나 저장된 프로시저의 자동으로 만들도록 지정 합니다. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. <strong>sp_MSdel_*테이블*</strong>  대신 대상 테이블의 이름을 포함 합니다 *(_t)* 매개 변수의 부분입니다. 때 *destination_owner* 를 지정 하면 대상 테이블 이름 앞에 추가 합니다. 예를 들어,를 **ProductCategory** 테이블을 소유 합니다 **프로덕션** 매개 변수는 일은 구독자에서 스키마를 `CALL sp_MSdel_ProductionProductCategory`입니다. 피어 투 피어 복제 토폴로지에서 아티클의 *(_t)* GUID 값으로 추가 됩니다. 지정 *custom_stored_procedure* 업데이트 구독자가 지원 되지 않습니다.|  
+|**CALLsp_MSdel_**<br /> **_테이블_**  (기본값)<br /><br /> 또는<br /><br /> **Custom_stored_procedure_name 호출**|구독자에서 실행할 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 *schema_option* 문서의 각 구독자의 대상 데이터베이스에서 지정된 된 저장된 프로시저를 만들거나 저장된 프로시저의 자동으로 만들도록 지정 합니다. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. <strong>sp_MSdel_*테이블*</strong>  대신 대상 테이블의 이름을 포함 합니다 *(_t)* 매개 변수의 부분입니다. 때 *destination_owner* 를 지정 하면 대상 테이블 이름 앞에 추가 합니다. 예를 들어,를 **ProductCategory** 테이블을 소유 합니다 **프로덕션** 매개 변수는 일은 구독자에서 스키마를 `CALL sp_MSdel_ProductionProductCategory`입니다. 피어 투 피어 복제 토폴로지에서 아티클의 *(_t)* GUID 값으로 추가 됩니다. 지정 *custom_stored_procedure* 업데이트 구독자가 지원 되지 않습니다.|  
 |**XCALL sp_MSdel_**<br /> **_table_**<br /><br /> 또는<br /><br /> **XCALL custom_stored_procedure_name**|XCALL 스타일 매개 변수를 사용하는 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 *schema_option* 문서의 각 구독자의 대상 데이터베이스에서 지정된 된 저장된 프로시저를 만들거나 저장된 프로시저의 자동으로 만들도록 지정 합니다. 구독자 업데이트의 경우 사용자가 만든 저장 프로시저를 지정할 수 없습니다.|  
 |**SQL** 또는 NULL|DELETE 문을 복제합니다. DELETE 문에는 모든 기본 키 열 값이 제공됩니다. 삭제에서 다음 명령이 복제됩니다.<br /><br /> `DELETE FROM <table name> WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
@@ -137,7 +136,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**NONE**|아무 작업도 수행 합니다.|  
 |**Sp_MSupd_ 호출**<br /> **_table_**<br /><br /> 또는<br /><br /> **Custom_stored_procedure_name 호출**|구독자에서 실행할 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 *schema_option* 문서의 각 구독자의 대상 데이터베이스에서 지정된 된 저장된 프로시저를 만들거나 저장된 프로시저의 자동으로 만들도록 지정 합니다.|  
 |**MCALL sp_MSupd_**<br /> **_table_**<br /><br /> 또는<br /><br /> **MCALL custom_stored_procedure_name**|MCALL 스타일 매개 변수를 사용하는 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 *schema_option* 문서의 각 구독자의 대상 데이터베이스에서 지정된 된 저장된 프로시저를 만들거나 저장된 프로시저의 자동으로 만들도록 지정 합니다. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. <strong>sp_MSupd_*테이블*</strong>  대신 대상 테이블의 이름을 포함 합니다 *(_t)* 매개 변수의 부분입니다. 때 *destination_owner* 를 지정 하면 대상 테이블 이름 앞에 추가 합니다. 예를 들어,를 **ProductCategory** 테이블을 소유 합니다 **프로덕션** 매개 변수는 일은 구독자에서 스키마를 `MCALL sp_MSupd_ProductionProductCategory`입니다. 피어 투 피어 복제 토폴로지에서 아티클의 *(_t)* GUID 값으로 추가 됩니다. 구독자 업데이트의 경우 사용자가 만든 저장 프로시저를 지정할 수 없습니다.|  
-|**SCALL sp_MSupd_**<br /> **_table_**  (default)<br /><br /> 또는<br /><br /> **SCALL custom_stored_procedure_name**|SCALL 스타일 매개 변수를 사용하는 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 *schema_option* 문서의 각 구독자의 대상 데이터베이스에서 지정된 된 저장된 프로시저를 만들거나 저장된 프로시저의 자동으로 만들도록 지정 합니다. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. <strong>sp_MSupd_*테이블*</strong>  대신 대상 테이블의 이름을 포함 합니다 *(_t)* 매개 변수의 부분입니다. 때 *destination_owner* 를 지정 하면 대상 테이블 이름 앞에 추가 합니다. 예를 들어,를 **ProductCategory** 테이블을 소유 합니다 **프로덕션** 매개 변수는 일은 구독자에서 스키마를 `SCALL sp_MSupd_ProductionProductCategory`입니다. 피어 투 피어 복제 토폴로지에서 아티클의 *(_t)* GUID 값으로 추가 됩니다. 구독자 업데이트의 경우 사용자가 만든 저장 프로시저를 지정할 수 없습니다.|  
+|**SCALL sp_MSupd_**<br /> **_테이블_**  (기본값)<br /><br /> 또는<br /><br /> **SCALL custom_stored_procedure_name**|SCALL 스타일 매개 변수를 사용하는 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 *schema_option* 문서의 각 구독자의 대상 데이터베이스에서 지정된 된 저장된 프로시저를 만들거나 저장된 프로시저의 자동으로 만들도록 지정 합니다. *custom_stored_procedure* 사용자가 만든 저장된 프로시저의 이름입니다. <strong>sp_MSupd_*테이블*</strong>  대신 대상 테이블의 이름을 포함 합니다 *(_t)* 매개 변수의 부분입니다. 때 *destination_owner* 를 지정 하면 대상 테이블 이름 앞에 추가 합니다. 예를 들어,를 **ProductCategory** 테이블을 소유 합니다 **프로덕션** 매개 변수는 일은 구독자에서 스키마를 `SCALL sp_MSupd_ProductionProductCategory`입니다. 피어 투 피어 복제 토폴로지에서 아티클의 *(_t)* GUID 값으로 추가 됩니다. 구독자 업데이트의 경우 사용자가 만든 저장 프로시저를 지정할 수 없습니다.|  
 |**XCALL sp_MSupd_**<br /> **_table_**<br /><br /> 또는<br /><br /> **XCALL custom_stored_procedure_name**|XCALL 스타일 매개 변수를 사용하는 저장 프로시저를 호출합니다. 이 방법의 복제를 사용 하려면 *schema_option* 문서의 각 구독자의 대상 데이터베이스에서 지정된 된 저장된 프로시저를 만들거나 저장된 프로시저의 자동으로 만들도록 지정 합니다. 구독자 업데이트의 경우 사용자가 만든 저장 프로시저를 지정할 수 없습니다.|  
 |**SQL** 또는 NULL|UPDATE 문을 복제합니다. UPDATE 문에는 모든 열 값 및 기본 키 열 값이 제공됩니다. 업데이트에서 다음 명령이 복제됩니다.<br /><br /> `UPDATE <table name> SET c1 = c1value, SET c2 = c2value, SET cn = cnvalue WHERE pkc1 = pkc1value AND pkc2 = pkc2value AND pkcn = pkcnvalue`|  
   
@@ -288,7 +287,7 @@ sp_addarticle [ @publication = ] 'publication'
 |값|설명|  
 |-----------|-----------------|  
 |**none**|복제에서 ID 범위 관리를 명시적으로 수행하지 않습니다. 이 옵션은 이전 버전 SQL Server와의 호환성을 위해서만 사용하는 것이 좋습니다. 피어 복제에 대해서는 허용되지 않습니다.|  
-|**manual**|수동 ID 범위 처리를 사용하려면 NOT FOR REPLICATION을 사용하여 ID 열을 표시합니다.|  
+|**수동**|수동 ID 범위 처리를 사용하려면 NOT FOR REPLICATION을 사용하여 ID 열을 표시합니다.|  
 |**auto**|ID 범위의 자동 관리를 지정합니다.|  
 |NULL(default)|기본값으로 **none** 때 변수의 *auto_identity_range* 아닙니다 **true**합니다. 기본값으로 **수동** 에 피어 투 피어 토폴로지 기본값 (*auto_identity_range* 무시 됩니다).|  
   
@@ -376,11 +375,11 @@ sp_addarticle [ @publication = ] 'publication'
 |**logbased manualfilter 인덱싱된 뷰**|모든 옵션|모든 옵션 이지만 **0x02**|  
 |**logbased manualview 인덱싱된 뷰**|모든 옵션|모든 옵션 이지만 **0x02**|  
 |**인덱싱된 뷰 밑 manualboth**|모든 옵션|모든 옵션 이지만 **0x02**|  
-|**proc exec**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|  
-|**serializable proc exec**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|  
-|**프로시저 스키마 전용**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|  
+|**proc exec**|**0x01**, **0x20**, **0x2000**를 **0x400000**, **0x800000**를 **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**하십시오 **0x40000000**, 및 **0x80000000**|**0x01**, **0x20**, **0x2000**를 **0x400000**, **0x800000**를 **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**하십시오 **0x40000000**, 및 **0x80000000**|  
+|**serializable proc exec**|**0x01**, **0x20**, **0x2000**를 **0x400000**, **0x800000**를 **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**하십시오 **0x40000000**, 및 **0x80000000**|**0x01**, **0x20**, **0x2000**를 **0x400000**, **0x800000**를 **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**하십시오 **0x40000000**, 및 **0x80000000**|  
+|**프로시저 스키마 전용**|**0x01**, **0x20**, **0x2000**를 **0x400000**, **0x800000**를 **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**하십시오 **0x40000000**, 및 **0x80000000**|**0x01**, **0x20**, **0x2000**를 **0x400000**, **0x800000**를 **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**하십시오 **0x40000000**, 및 **0x80000000**|  
 |**뷰 스키마 전용**|**0x01**, **0x010**, **0x020**를 **0x040**를 **0x0100**를 **0x2000**, **0x40000**, **0x100000**, **0x200000**합니다 **0x400000**, **0x800000**,  **0x2000000**하십시오 **0x8000000**를 **0x40000000**, 및 **0x80000000**|**0x01**, **0x010**, **0x020**를 **0x040**를 **0x0100**를 **0x2000**, **0x40000**, **0x100000**, **0x200000**합니다 **0x400000**, **0x800000**,  **0x2000000**하십시오 **0x8000000**를 **0x40000000**, 및 **0x80000000**|  
-|**func 스키마만**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|**0x01**, **0x20**, **0x2000**, **0x400000**, **0x800000**, **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**, **0x40000000**, and **0x80000000**|  
+|**func 스키마만**|**0x01**, **0x20**, **0x2000**를 **0x400000**, **0x800000**를 **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**하십시오 **0x40000000**, 및 **0x80000000**|**0x01**, **0x20**, **0x2000**를 **0x400000**, **0x800000**를 **0x2000000**, **0x8000000**, **0x10000000**, **0x20000000**하십시오 **0x40000000**, 및 **0x80000000**|  
 |**인덱싱된 뷰 스키마 전용**|**0x01**, **0x010**, **0x020**를 **0x040**를 **0x0100**를 **0x2000**, **0x40000**, **0x100000**, **0x200000**합니다 **0x400000**, **0x800000**,  **0x2000000**하십시오 **0x8000000**를 **0x40000000**, 및 **0x80000000**|**0x01**, **0x010**, **0x020**를 **0x040**를 **0x0100**를 **0x2000**, **0x40000**, **0x100000**, **0x200000**합니다 **0x400000**, **0x800000**,  **0x2000000**하십시오 **0x8000000**를 **0x40000000**, 및 **0x80000000**|  
   
 > [!NOTE]
