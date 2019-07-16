@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 98b10c951043416280c05fd6a0e5eeb5df92c104
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6be7de10c10c39e5e53cbe43ca7be46219e7d4cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023401"
 ---
 # <a name="datamember-mdx"></a>DataMember(MDX)
 
@@ -32,7 +31,7 @@ Member_Expression.DataMember
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수는 계층의 리프가 아닌 멤버에서 작동 하 고 사용할 수는 [UPDATE CUBE 문 (MDX)](../mdx/mdx-data-manipulation-update-cube.md) 리프 멤버의 하위 항목 대신 리프가 아닌 멤버에 직접 쓰기 저장 데이터에 명령 합니다.  
   
 > [!NOTE]  

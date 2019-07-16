@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 41f835a93e5976945281b6b04258c516b0322236
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: fa7df2782b8102e386c70d5e874a25f7868dbb1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34841306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071086"
 ---
 # <a name="cluster-dmx"></a>Cluster(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,15 +31,15 @@ Cluster()
  이 함수는 기본 데이터 마이닝 모델이 클러스터링을 지원할 때만 사용할 수 있습니다.  
   
 ## <a name="return-type"></a>반환 형식  
- **클러스터** 함수 매개 변수가 필요 하지 않습니다.  
+ 합니다 **클러스터** 함수 매개 변수가 필요 하지 않습니다.  
   
- **클러스터** 함수는 클러스터 이름의 스칼라 값을 반환 합니다. 그러나 다른 함수의 인수로 서이 함수를 사용 하는 경우 간주 해야로 \<클러스터 열 참조 > 합니다.  
+ 합니다 **클러스터** 함수는 클러스터 이름의 스칼라 값을 반환 합니다. 그러나 다른 함수의 인수로 서이 함수를 사용 하는 경우 간주 해야 합니다로 \<클러스터 열 참조 >.  
   
-## <a name="remarks"></a>Remarks  
- **클러스터** 으로 사용할 수는 `<`클러스터 열 참조`>` 에 대 한는 **PredictHistogram** 함수입니다.  
+## <a name="remarks"></a>설명  
+ **클러스터** 으로 사용할 수는 `<`클러스터 열 참조`>` 에 대 한를 **PredictHistogram** 함수입니다.  
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 단일 쿼리를 사용 하 여는 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) 클러스터 TM Clustering 마이닝 모델의 각 클러스터에서 개별 사례의 거리를 반환 하는 함수 및 확률은 개별 사례를 각 클러스터에 있는지입니다.  
+ 다음 예제에서는 사용 하 여 단일 쿼리를 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md) TM Clustering 마이닝 모델의 각 클러스터에서 개별 사례의 거리를 반환 하는 함수를 클러스터 및 개별 사례가 각 클러스터에 존재 하는 확률입니다.  
   
 ```  
 SELECT  

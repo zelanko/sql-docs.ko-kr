@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2852f4ba-f1c6-4c4c-86b2-b77e4abe70de
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c12df75b549ddb9455a902bbf3cd44ba02fef6f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0b318557535552d910981bdb43c31973f0c845b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091135"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +43,7 @@ HRESULT BCPColFmt(
       DBORDINAL idxServerCol);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **BCPColFmt** 메서드는 BCP 데이터 파일 필드와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 열 간의 바인딩을 만드는 데 사용됩니다. 열의 길이, 유형, 종결자 및 접두사 길이를 매개 변수로 사용하고 개별 필드에 대해 이러한 각 속성을 설정합니다.  
   
  사용자가 대화형 모드를 선택하면 이 메서드가 두 번 호출됩니다. 서버 열의 유형을 기반으로 하는 기본값에 따라 열 형식을 설정하기 위해 한 번 호출되고, 대화형 모드에서 각 열에 대해 선택된 클라이언트의 열 유형에 따라 형식을 설정하기 위해 한 번 호출됩니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ea55df3-2e99-4683-88ad-bde718288bc7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34bd2f98c00d6d481662235df9ba26016cc20468
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fd7a493a3126aecbf816d364e5b7497f2bf494d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084959"
 ---
 # <a name="sphelparticlecolumns-transact-sql"></a>sp_helparticlecolumns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**열 id**|**int**|열의 식별자입니다.|  
 |**column**|**sysname**|열의 이름입니다.|  
@@ -62,7 +61,7 @@ sp_helparticlecolumns [ @publication = ] 'publication'
 |**게시자 유형**|**sysname**|게시자에 있는 열의 데이터 형식입니다.|  
 |**구독자 유형**|**sysname**|구독자에 있는 열의 데이터 형식입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helparticlecolumns** 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
  **sp_helparticlecolumns** 는 수직 분할을 확인 하는 데 유용 합니다.  

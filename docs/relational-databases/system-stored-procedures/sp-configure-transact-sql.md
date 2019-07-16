@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8b36fffa5c1999033f0cc1902eda9c2cb4ba61d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061803"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -85,7 +84,7 @@ RECONFIGURE
 |**config_value**|**int**|에 구성 옵션을 사용 하 여 설정 된 값 **sp_configure** (값 **sys.configurations.value**). 이러한 옵션에 대 한 자세한 내용은 참조 하세요. [서버 구성 옵션 &#40;SQL Server&#41; ](../../database-engine/configure-windows/server-configuration-options-sql-server.md) 하 고 [sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md).|  
 |**run_value**|**int**|현재 구성 옵션의 값을 실행 (값 **sys.configurations.value_in_use**).<br /><br /> 자세한 내용은 [sys.configurations &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여 **sp_configure** 를 표시 하거나 서버 수준의 설정을 변경 합니다. 데이터베이스 수준의 설정을 변경하려면 ALTER DATABASE를 사용합니다. 현재 사용자 세션에만 적용되는 설정을 변경하려면 SET 문을 사용합니다.  
   
 ## <a name="updating-the-running-configuration-value"></a>실행 중인 구성 값 업데이트  
@@ -115,7 +114,7 @@ RECONFIGURE
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-the-advanced-configuration-options"></a>1. 고급 구성 옵션 나열  
+### <a name="a-listing-the-advanced-configuration-options"></a>A. 고급 구성 옵션 나열  
  다음 예에서는 모든 구성 옵션을 설정하고 나열하는 방법을 보여 줍니다. 먼저 `show advanced option`을 `1`로 설정하면 고급 구성 옵션이 표시됩니다. 이 옵션을 변경한 다음 매개 변수 없이 `sp_configure`를 실행하면 모든 구성 옵션이 표시됩니다.  
   
 ```  
@@ -124,7 +123,7 @@ GO
 EXEC sp_configure 'show advanced option', '1';  
 ```  
   
- 메시지는 다음과 같습니다. "구성 옵션 'show advanced options'이(가) 0에서 1(으)로 변경되었습니다. RECONFIGURE 문을 실행하여 설치하십시오."  
+ 메시지는 다음과 같습니다. "구성 옵션 'show advanced options' 1 0에서 변경 합니다. RECONFIGURE 문을 실행하여 설치하십시오."  
   
  `RECONFIGURE`를 실행하여 모든 구성 옵션을 표시합니다.  
   
@@ -133,7 +132,7 @@ RECONFIGURE;
 EXEC sp_configure;  
 ```  
   
-### <a name="b-changing-a-configuration-option"></a>2. 구성 옵션 변경  
+### <a name="b-changing-a-configuration-option"></a>2\. 구성 옵션 변경  
  다음 예에서는 시스템 `recovery interval`을 `3`분으로 설정합니다.  
   
 ```  
@@ -143,9 +142,9 @@ EXEC sp_configure 'recovery interval', '3';
 RECONFIGURE WITH OVERRIDE;  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-list-all-available-configuration-settings"></a>3. 모든 사용 가능한 구성 설정 나열  
+### <a name="c-list-all-available-configuration-settings"></a>3\. 모든 사용 가능한 구성 설정 나열  
  다음 예에서는 모든 구성 옵션을 나열하는 방법을 보여 줍니다.  
   
 ```  
@@ -154,13 +153,13 @@ EXEC sp_configure;
   
  결과로 옵션 이름과 그 뒤에 해당 옵션에 대한 최소 및 최대값이 반환됩니다. 합니다 **config_value** 값인는 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 재구성이 완료 되 면 사용 됩니다. **run_value** 는 현재 사용되는 값입니다. **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.  
   
-### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>4. 특정 구성 이름에 대한 구성 설정 나열  
+### <a name="d-list-the-configuration-settings-for-one-configuration-name"></a>4\. 특정 구성 이름에 대한 구성 설정 나열  
   
 ```  
 EXEC sp_configure @configname='hadoop connectivity';  
 ```  
   
-### <a name="e-set-hadoop-connectivity"></a>5. Hadoop 연결 설정  
+### <a name="e-set-hadoop-connectivity"></a>5\. Hadoop 연결 설정  
  Hadoop 연결 설정 sp_configure를 실행 하는 것 외에도 몇 단계가 더 필요 합니다. 전체 프로시저를 참조 하세요 [CREATE EXTERNAL DATA SOURCE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  

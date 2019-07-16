@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2c2301f44cbdac4505bef95d590ce206c8b6b509
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be687d5cbfd4fdbb706ef5c10778a4f3e3f93197
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037046"
 ---
 # <a name="root-mdx"></a>Root(MDX)
 
@@ -43,7 +42,7 @@ Root( Tuple_Expression )
  *Tuple_Expression*  
  튜플을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  차원 이름이 나 튜플 식이 지정 된 경우는 **루트** 함수에 포함 된 튜플을 반환 합니다 합니다 **모든** 멤버 (또는 기본 멤버 경우 합니다 **모든** 멤버가 존재 하지 않습니다)는 큐브의 각 특성 계층입니다. 튜플의 멤버 순서는 특성 계층이 큐브 내에서 정의된 순서에 따릅니다.  
   
  차원 이름이 지정 된 경우는 **루트** 함수에 포함 된 튜플을 반환 합니다 합니다 **모든** 멤버 (또는 기본 멤버 경우는 **모든** 멤버가 없는) 각 지정 된 차원의 현재 멤버의 컨텍스트를 기반으로 특성 계층입니다. 튜플의 멤버 순서는 특성 계층이 차원 내에서 정의된 순서에 따릅니다.  

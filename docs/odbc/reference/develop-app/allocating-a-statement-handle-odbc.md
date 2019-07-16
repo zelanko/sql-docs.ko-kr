@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4ce3b446-34ab-46dc-96e5-f40ec95c267e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9524f2e6b01d2a5827dcface3159b7c52a728c59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d50b0a31aed4935c805ca30620575ccff70d4a0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077211"
 ---
 # <a name="allocating-a-statement-handle-odbc"></a>명령문 핸들 ODBC 할당
 응용 프로그램에서 문을 실행 하려면, 먼저 다음과 같이 문 핸들을 할당 해야 합니다.  

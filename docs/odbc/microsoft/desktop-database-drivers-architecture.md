@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b4d13f7-ab37-40b4-a9c6-145e7385352f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7487d073b95190418ee7f6900390a2d60ce42e13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccd1f14b0cfbcbdbc675a142ebabf11932409832
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071916"
 ---
 # <a name="desktop-database-drivers-architecture"></a>데스크톱 데이터베이스 드라이버 아키텍처
 이러한 드라이버는 Microsoft Windows 95에 또는 나중에 사용 하 여 또는 Windows NT 4.0 및 Windows 2000에 대 한 설계 되었습니다. Windows 95 이상, 32 비트 응용 프로그램만 지원 됩니다. 16 비트 및 32 비트 응용 프로그램은 Windows NT 4.0 및 Windows 2000에서 지원 됩니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "62629060"
   
  Windows NT 4.0 및 Windows 2000에서 응용 프로그램/드라이버 아키텍처는 다음과 같습니다.  
   
- ![앱&#47;드라이버 아키텍처: NT 4.0 and Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
+ ![앱&#47;드라이버 아키텍처: NT 4.0 및 Windows 2000](../../odbc/microsoft/media/odbcjetarch2.gif "ODBCJetArch2")  
   
  데스크톱 데이터베이스 드라이버는 2 계층 드라이버입니다. 2 계층 구성에서 드라이버는 구문 분석, 유효성 검사, 최적화 및 쿼리를 실행 하는 과정을 수행 하지 않습니다. 대신, Microsoft Jet는 이러한 작업을 수행합니다. ODBC API 호출을 처리 하 고 SQL 엔진으로 작동 합니다. Microsoft Jet가 정수 계열, 불가분 한 것의 부분이 드라이버: 드라이버와 함께 제공 되 고 드라이버를 사용 하는 컴퓨터의 다른 응용 프로그램이 없는 경우에 있는 합니다.  
   

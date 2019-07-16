@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 51fd5471ac678a1d61986aaa9219eec923c38485
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c00bdd453bc4d1bf467b37aca3639eb43f55e022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085787"
 ---
 # <a name="spupdatestats-transact-sql"></a>sp_updatestats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_updatestats [ [ @resample = ] 'resample']
 ## <a name="arguments"></a>인수  
 `[ @resample = ] 'resample'` 지정 **sp_updatestats** RESAMPLE 옵션을 사용할지는 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) 문입니다. 하는 경우 **'resample'** 지정 하지 않으면 **sp_updatestats** 기본 샘플링을 사용 하 여 통계를 업데이트 합니다. **다시** 는 **varchar(8)** 번호의 기본값이  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_updatestats** 실행 `UPDATE STATISTICS`를 지정 하 여는 `ALL` 키워드, 데이터베이스의 모든 사용자 정의 및 내부 테이블입니다. sp_updatestats는 진행률을 나타내는 메시지를 표시 합니다. 업데이트가 완료되면 모든 테이블에 대해 통계가 업데이트되었다고 보고합니다.  
   
 sp_updatestats는 비활성화된 비클러스터형 인덱스에 대한 통계는 업데이트하며 비활성화된 클러스터형 인덱스에 대한 통계는 업데이트하지 않습니다.  

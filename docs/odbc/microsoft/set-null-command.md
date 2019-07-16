@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 410c5a6e-e957-4ecc-9e2d-e591cbc0bc4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6f0e23abd31661210282967fa35080376eaaaf3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f8addb9b4c7c200ee8f213bdd959067039ccfff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063667"
 ---
 # <a name="set-null-command"></a>SET NULL 명령
 결정 방법 null 값은 및 지원 되는 ALTER TABLE-SQL, CREATE TABLE-SQL INSERT-SQL 명령입니다.  
@@ -41,7 +40,7 @@ SET NULL ON | OFF
   
  또한는 INSERT-SQL는 빈 값에 삽입 INSERT-SQL VALUE 절에에서 포함 되지 않은 모든 열을 지정 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  NULL 설정에 영향을 줍니다만 어떻게 null 값은 ALTER TABLE, CREATE TABLE 및 INSERT-SQL에서 지원 됩니다. 다른 명령을 SET NULL 영향을 받지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  

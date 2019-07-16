@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a94a4c25e739b49b0e212e030f088c50ff818202
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 081bad36acaa8469e7a2ada7620cf9f4828a7b97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099460"
 ---
 # <a name="bcpreadfmt"></a>bcp_readfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,10 +50,10 @@ RETCODE bcp_readfmt (
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  한 후 **bcp_readfmt** 형식으로 값을 읽고을 적절 하 게 호출 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) 하 고 [bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)합니다. 형식 파일의 구문을 분석하여 이러한 호출을 수행할 필요가 없습니다.  
   
- 서식 파일을 저장 하려면 호출 [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)합니다. **bcp_readfmt** 를 호출할 때 저장된 서식을 참조할 수 있습니다. 자세한 내용은 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)합니다.  
+ 형식 파일을 저장하려면 [bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)를 호출합니다. **bcp_readfmt** 를 호출할 때 저장된 서식을 참조할 수 있습니다. 자세한 내용은 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)를 참조하십시오.  
   
  또는 대량 복사 유틸리티(**bcp**)로 사용자 정의 데이터 형식을 **bcp_readfmt**로 참조할 수 있는 파일에 저장할 수 있습니다. 에 대 한 자세한 내용은 **bcp** 의 구조 및 유틸리티 **bcp** 데이터 서식 파일을 참조 하십시오. [대량 데이터 가져오기 및 내보내기의 &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   

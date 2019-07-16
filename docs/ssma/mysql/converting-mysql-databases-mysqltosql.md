@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ac21850b-fb32-4704-9985-5759b7c688c7
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1211a1d5f22758b5c3732aa1b9843fe11ef8b3db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ad4cbbdf80422f87c850c44e47f82899de4c82a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63132298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103065"
 ---
 # <a name="converting-mysql-databases-mysqltosql"></a>MySQL 데이터베이스 변환(MySQLToSQL)
 MySQL에 연결한 후에 연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Azure 프로젝트 설정 및 데이터 매핑 옵션, MySQL 데이터베이스 개체를 변환할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 개체입니다.  

@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f629f7b5e25117fa85938c6b4fa9957559868027
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 297dd5ca109e7b35d8d74d5daf1f8b1c7fd06703
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126938"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +97,7 @@ HRESULT LocalDBCreateInstance(
  [LOCALDB_ERROR_INTERNAL_ERROR](../../relational-databases/express-localdb-error-messages/localdb-error-internal-error.md)  
  예기치 않은 오류가 발생했습니다. 자세한 내용은 이벤트 로그를 참조하십시오.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  지정한 이름으로 완전히 작동하는 LocalDB 인스턴스가 이미 있으며 버전이 요청한 것보다 높거나 같은 경우 결과는 S_OK입니다.  
   
  기존 인스턴스가 손상된 경우 **LocalDBCreateInstance** API 메서드에 대한 후속 요청이 실패합니다. 손상된 인스턴스를 다시 사용하려면 수동으로 수정하거나 명시적으로 삭제해야 합니다.  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 84eda6f42b674ebde8793605816f98e82af350d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0332b200a74044dcd4e7d8d308923cc4b759738
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63065046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097279"
 ---
 # <a name="unknownmember-mdx"></a>UnknownMember(MDX)
 
@@ -39,7 +38,7 @@ Hierarchy_Expression.UnknownMember
  *Hierarchy_Expression*  
  계층을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  Analysis Services 계층 구조를 알 수 없는 경우 팩트 테이블 데이터를 계층과 연결을 알 수 없는 멤버를 만듭니다. 알 수 없는 멤버는 다음 수준 중 하나에 있을 수 있습니다.  
   
 -   집계되지 않는 특성 계층의 최상위 수준  

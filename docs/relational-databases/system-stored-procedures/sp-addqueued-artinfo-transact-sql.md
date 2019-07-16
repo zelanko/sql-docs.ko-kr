@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e44891f5a16625cb6c3176fac8188fa568822add
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a0f94fbf686e9b9bd9fd1b6780b298c661ce42f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031014"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 `[ @dest_table = ] _'dest_table'` 대상 테이블의 이름이입니다. *dest_table* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [**@owner =** ] **'**_owner_**'**  
+ [ **@owner =** ] **'** _owner_ **'**  
  구독의 소유자입니다. *소유자* 됩니다 **sysname**, 기본값은 없습니다.  
   
 `[ @cft_table = ] 'cft_table'` 이 문서에 대 한 지연된 업데이트 충돌 테이블의 이름입니다. *cft_table*됩니다 **sysname**, 기본값은 없습니다.  
@@ -70,7 +69,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_addqueued_artinfo** 구독 초기화의 일부로 배포 에이전트에서 사용 됩니다. 일반적으로 사용자는 이 저장 프로시저를 실행하지 않습니다. 하지만 사용자가 구독을 수동으로 설정해야 하는 경우에는 유용할 수도 있습니다.  
   
  [sp_script_synctran_commands](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md) of **sp_addqueued_artinfo**합니다.  

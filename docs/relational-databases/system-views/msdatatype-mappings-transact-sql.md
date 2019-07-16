@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 13cdabb3-6e07-4e8d-ae80-4235022ccc7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5af1233e81c996e98287a637e01ad1d249671303
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: ee1a0cc83b55fc265ae2bb490fd9d5e11fd73f22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129619"
 ---
 # <a name="msdatatypemappings-transact-sql"></a>MSdatatype_mappings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSdatatype_mappings** 뷰를 SQL Server 데이터 형식을 SQL Server 이외 데이터베이스 관리 시스템 (DBMS)에서 사용 되는 데이터 형식에 매핑합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**dbms_name**|**nvarchar(128)**|DBMS의 이름이입니다. 가능한 값 및 해당 설명이 같습니다.<br /><br /> **MSSQLSERVER**: 대상은은 SQL Server 데이터베이스입니다.<br />**ORACLE**: 대상은 Oracle 데이터베이스입니다.<br />**DB2**: 대상은 IBM DB2 데이터베이스입니다.<br />**SYBASE**: 대상은 Sybase 데이터베이스입니다.|  
 |**sql_type**|**nvarchar(128)**|SQL Server 데이터 형식이입니다.|  
@@ -39,7 +38,7 @@ ms.locfileid: "52785095"
 |**dest_create_params**|**int**|내부적으로만 사용됩니다.|  
 |**dest_nullable**|**bit**|SQL Server 이외 데이터 형식의 NULL 값을 지원 하는 경우입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다른 유형의 데이터베이스 복제](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Oracle 게시자에 대 한 데이터 형식 매핑 지정](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

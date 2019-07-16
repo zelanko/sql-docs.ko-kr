@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: c72cd333-9294-4d41-84f2-1748bf20e3eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc104efc9700e5f45bae3a95d9ac412586feca86
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 95569262bc55da45390705486871a73f0eb5f5ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027114"
 ---
 # <a name="specifying-boolean-functions-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 부울 함수 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "67579637"
   
 ## <a name="examples"></a>예  
   
-## <a name="a-specify-the-not-boolean-function"></a>1\. not() 부울 함수 지정  
+## <a name="a-specify-the-not-boolean-function"></a>A. not() 부울 함수 지정  
  이 쿼리 모두 반환 합니다  **\<고객 >** 하지 않은 컨텍스트 노드의 자식 요소  **\<순서 >** 자식 요소:  
   
 ```  

@@ -24,14 +24,13 @@ ms.assetid: 0978301b-f068-46b6-82b9-dc555161f52e
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 083b38e51433adec98f153bd4340d8b5d7ff7723
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54b338e76e0bb26c2df23871ed24fabfa8aa6c6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067069"
 ---
 # <a name="hiding-elements-and-attributes-by-using-sqlhide"></a>sql:hide를 사용하여 요소 및 특성 숨기기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65980800"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-sqlhide-on-an-attribute"></a>1\. 특성에 sql:hide 지정  
+### <a name="a-specifying-sqlhide-on-an-attribute"></a>A. 특성에 sql:hide 지정  
  이루어져 있으며이 예에서 XSD 스키마는  **\<Person.Contact >** 요소를 사용 하 여 **ContactID**, **이름**, 및 **성** 속성입니다.  
   
  **\<Person.Contact >** 요소는 복합 형식이 고, 따라서 (기본 매핑) 같은 이름의 테이블에 매핑됩니다. 모든 특성의  **\<Person.Contact >** 요소는 단순 형식 및 AdventureWorks 데이터베이스에서 Person.Contacttable에 동일한 이름의 열에 매핑됩니다. 스키마에는 **sql:hide** 주석에서 지정 되는 **ContactID** 특성. 이 스키마에 대해 XPath 쿼리를 지정 하면 **ContactID** XML 문서에 반환 되지 않습니다.  

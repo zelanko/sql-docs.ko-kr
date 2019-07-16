@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 06ded0ca-7d21-4400-864a-b801e855b257
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14001680cd4cf92086ab797f77e2233222d36b67
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e6d3880c4be8925e6b85a20af1324537e3977ecc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103279"
 ---
 # <a name="parameters-transact-sql"></a>PARAMETERS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "53590717"
   
  이러한 뷰에서 정보를 검색할의 정규화 된 이름을 지정 **INFORMATION_SCHEMA.** _view_name_합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**SPECIFIC_CATALOG**|**nvarchar(** 128 **)**|매개 변수를 가지는 대상 루틴의 카탈로그 이름입니다.|  
 |**SPECIFIC_SCHEMA**|**nvarchar(** 128 **)**|매개 변수를 가지는 대상 루틴의 스키마 이름입니다.<br /><br /> <strong>\*\* 중요 \* \*</strong>  개체의 스키마를 확인 하려면 INFORMATION_SCHEMA 뷰를 사용 하지 마십시오. 개체의 스키마를 확인하는 신뢰할 수 있는 유일한 방법은 sys.objects 카탈로그 뷰를 쿼리하는 것입니다.|  

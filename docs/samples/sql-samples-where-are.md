@@ -9,13 +9,12 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d071a1d56808f7c634070e19707daf125d589396
-ms.sourcegitcommit: 97463ffe99915f3bbdf298e6e6b8d170e738ea7a
+ms.openlocfilehash: 05b611f55d30f177ecc6f44f472430203a739d68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49390865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104299"
 ---
 # <a name="sql-samples"></a>SQL 샘플
 
@@ -41,7 +40,7 @@ WideWorldImporters (WWI)는 현재 기능, 도구 및 디자인 기법을 사용
 
 - [WideWorldImporters 추가 정보 및 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers) github입니다.
 
-- [자습서: Azure SQL Data Warehouse로 WideWorldImportersDW를 로드](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
+- [자습서: Azure SQL Data Warehouse로 WideWorldImportersDW를 로드 합니다.](/azure/sql-data-warehouse/load-data-wideworldimportersdw)
 
 
 ## <a name="adventureworks-sample-database"></a>AdventureWorks 예제 데이터베이스

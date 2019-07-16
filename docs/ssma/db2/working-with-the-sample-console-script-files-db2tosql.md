@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: dc7976fae322dddc24eda7cf6ef84ef20a7a9e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca2a595eb57d01554aa8389b002fcd6f8422b9da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086168"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>샘플 콘솔 스크립트 파일 (DB2ToSQL) 작업
 사용자 참조 및 사용에 대 한 몇 가지 샘플 파일 제품와 함께 제공 되었습니다. 이 섹션에서는 최종 사용자 요구에 맞게 이러한 스크립트를 쉽게 사용자 지정 하는 방법은 설명 합니다.  
@@ -70,7 +69,7 @@ ms.locfileid: "63259008"
   
 5.  **ConversionAndDataMigrationSample.xml:** 이 샘플 사용 하면 데이터 마이그레이션 변환할은 종단 간 마이그레이션을 수행할 수 있습니다. 변경 해야 하는 필수 특성 값의 목록 아래에 나열 됩니다.  
   
-    |명령 이름|Description|attribute|  
+    |명령 이름|설명|attribute|  
     |----------------|---------------|-------------|  
     |`map-schema`|대상 스키마에 원본 데이터베이스의 스키마 매핑.|`source-schema:` 변환 하는 데 필요한 원본 데이터베이스를 지정 합니다.<br /><br />`sql-server-schema`: 로 마이그레이션해야 하는 대상 데이터베이스를 지정 합니다.|  
     |`convert-schema`|대상 스키마에 원본에서 스키마 변환을 수행합니다.<br /><br />사용자가 여러 개체를 평가 / 그 데이터베이스 여러 개 지정할 수 있습니다 `metabase-object` 에 설명 된 대로 노드는 `convert-schema` 샘플 콘솔 스크립트 파일의 예제 4 명령입니다.|`object-name`: 원본 데이터베이스 지정/이름 변환 하는 데 필요한 개체입니다. 해당 되도록 `object-type` 에 지정 된 개체의 형식에 따라 변경 되는 `object-name`|  

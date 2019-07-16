@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 16d4a380-0d83-456b-aeee-f10738944e86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 012e454d03a0eb4ad16095353351d67e50d9586a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 010d05990396c10836c0a2130e5d9f4392ae56ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069866"
 ---
 # <a name="fetching-a-row-of-data"></a>데이터 행 페치
 데이터 행을 인출 하는 응용 프로그램 호출 **SQLFetch**합니다. **SQLFetch** 어떤 유형의 커서를 사용 하 여 호출할 수 있지만 앞 으로만 이동 가능한 방향에서 행 집합 커서를 이동 합니다. **SQLFetch** 커서가 다음 행으로 이동 하 고 호출 하 여 바인딩된 열에 대 한 데이터를 반환 **SQLBindCol**합니다. 커서는 결과의 끝에 도달 하면 때 설정할 **SQLFetch** SQL_NO_DATA를 반환 합니다. 호출에 대 한 예제 **SQLFetch**를 참조 하십시오 [SQLBindCol 사용 하 여](../../../odbc/reference/develop-app/using-sqlbindcol.md)입니다.  

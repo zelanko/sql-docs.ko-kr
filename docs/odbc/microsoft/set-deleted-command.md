@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b5e0086-156d-471d-8e7f-6c5fa9686cd5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5efbd7e98b430128e52634f5c7d71597afc89ace
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54900f00e03e1f236baf0b6eef152081b1f384a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997740"
 ---
 # <a name="set-deleted-command"></a>SET DELETED 명령
 삭제 표시 된 레코드를 처리 하는 여부 및 다른 명령에서 사용할 수 있는지 여부를 지정 합니다.  
@@ -37,7 +36,7 @@ SET DELETED ON | OFF
  OFF  
  레코드 삭제는 레코드 (관련된 테이블의 레코드를 포함)에서 작동 하는 명령에 액세스할 수 있습니다에 대 한 표시 되도록 지정 된 범위를 사용 하 여 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  레코드의 상태를 테스트 하려면 삭제 ()를 사용 하 여 최적화할 수 있습니다. 테이블 삭제 ()에서 인덱싱된 경우 Visual FoxPro Rushmore 기술을 사용 하 여 쿼리 합니다.  
   
 > [!IMPORTANT]  

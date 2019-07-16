@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3f0fce34f57591d9c6c3f3a9c7382266d655f364
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 32cf59ea3ca8c7f153170881ac5eb970e50c90b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076400"
 ---
 # <a name="functions-dmx"></a>함수(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "37985450"
   
  대부분의 DMX 함수는 예측에 대한 지원과 같은 스칼라 값을 반환하지만 일부 함수는 테이블 형식 결과를 반환합니다. 예를 들어 PredictHistogram 함수는 지원 및 지정 된 예측 가능한 열의 각 상태에 대 한 확률을 포함 하는 테이블을 반환 합니다. 그 결과는 새 테이블 형식의 열로 표시됩니다.  
   
- **자세한 내용은** [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)하십시오 [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **참조 항목:** [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)하십시오 [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
 ## <a name="visual-basic-for-applications-vba-and-excel-functions"></a>VBA(Visual Basic for Applications) 및 Excel 함수  
  DMX 문에서는 DMX 함수 외에도 다양한 VBA 및 Excel 함수를 호출할 수 있습니다. 예를 들어 TM_Decision_Tree 모델 콘텐츠의 Attribute_Name 열이 표시 되는 방식을 수정 하려면 lCase 함수를 사용할 수 있습니다. 예를 들어 다음과 같은 코드 샘플을 사용할 수 있습니다.  
@@ -49,17 +48,17 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>저장 프로시저  
  공용 언어 런타임 프로그래밍 언어를 사용하여 DMX 기능을 확장하는 저장 프로시저를 만들 수 있습니다. 예를 들어, A, B, 등의 계수를 반환 하는 회귀 트리 마이닝 모델 및 회귀 수식을 설명 하는 등 하지만 모델 A + Bx 같은 수식 자체를 반환 하지 않는 = y입니다. 그러나 데이터 마이닝 모델 개체를 사용하여 내용 스키마를 탐색하고 회귀 수식을 출력으로 반환하는 저장 프로시저를 만들 수 있습니다. 즉 DMX 문에서는 회귀 수식 목록을 쿼리 결과의 일부로 반환할 수 있습니다.  
   
- **자세한 내용은** [다차원 모델 어셈블리 관리](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
+ **참조 항목:** [다차원 모델 어셈블리 관리](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [Data Mining Extensions &#40;DMX&#41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [구조 및 사용법 DMX 예측 쿼리](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [DMX 예측 쿼리의 구조 및 사용법](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8ca6b0c6-8d9c-4eee-b02f-51ddffab4492
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 66ec81fdc6ebdbecf83791c6fffa5735a37723bc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9e92b9ec98ee08579164c403fe1be6ff6ef47816
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104501"
 ---
 # <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_sequence_get_range [ @sequence_name = ] N'<sequence>'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sys에서 sp_sequence_get_rangeis 합니다. 스키마 sys.sp_sequence_get_range로 참조할 수 있습니다.  
   
 ### <a name="cycling-sequences"></a>순환 시퀀스  
@@ -106,7 +105,7 @@ CREATE SEQUENCE Test.RangeSeq
 ;  
 ```  
   
-### <a name="a-retrieving-a-range-of-sequence-values"></a>1. 시퀀스 값의 범위 검색  
+### <a name="a-retrieving-a-range-of-sequence-values"></a>A. 시퀀스 값의 범위 검색  
  다음 문은 Test.RangeSeq 시퀀스 개체에서 네 개의 시퀀스 번호를 가져오고 사용자에 게 숫자의 첫 번째를 반환 합니다.  
   
 ```  
@@ -122,7 +121,7 @@ SELECT @range_first_value_output AS FirstNumber ;
   
 ```  
   
-### <a name="b-returning-all-output-parameters"></a>2. 모든 출력 매개 변수 반환  
+### <a name="b-returning-all-output-parameters"></a>2\. 모든 출력 매개 변수 반환  
  다음 예제에서는 sp_sequence_get_range 프로시저에서 모든 출력 값을 반환 합니다.  
   
 ```  
@@ -157,7 +156,7 @@ SELECT
   
  `@range_size` 인수를 75와 같이 큰 수로 변경하면 시퀀스 개체가 순환합니다. `@range_cycle_count` 인수를 검사하여 시퀀스 개체 순환 여부와 순환 횟수를 확인하십시오.  
   
-### <a name="c-example-using-adonet"></a>3. ADO.NET 사용 예  
+### <a name="c-example-using-adonet"></a>3\. ADO.NET 사용 예  
  다음 예제에서는 ADO.NET을 사용 하 여는 Test.RangeSeq에서 범위를 가져옵니다.  
   
 ```  

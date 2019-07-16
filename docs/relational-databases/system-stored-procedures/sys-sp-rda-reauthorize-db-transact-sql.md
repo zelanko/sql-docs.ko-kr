@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f6f3e4b2-8c72-4d23-a5de-fe671ca5c5cd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8d700fd19999da3905a0ff69231a286a022d57e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c5150cc40fa8d2cecee02a9d3339eea0c1bf740
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083709"
 ---
 # <a name="syssprdareauthorizedb-transact-sql"></a>sys.sp_rda_reauthorize_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_rda_reauthorize_db @credential = @credential, @with_copy = @with_copy [ , @az
 ## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  실행할 때 [sys.sp_rda_reauthorize_db (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sys-sp-rda-reauthorize-db-transact-sql.md) 원격 Azure 데이터베이스에 다시 연결 하려면이 작업이 자동으로 다시 설정 쿼리 모드를 LOCAL_AND_REMOTE를에 Stretch Database 대 한 기본 동작입니다. 즉, 쿼리는 로컬 및 원격 데이터에서 결과 반환합니다.  
   
 ## <a name="example"></a>예제  

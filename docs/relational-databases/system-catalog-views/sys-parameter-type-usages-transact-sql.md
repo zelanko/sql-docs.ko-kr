@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: af0e167b-bffb-4525-84ec-3607f9268d3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 955dbe8aa7a69f82b6af3698e79b090594b97299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00372789f6e197e2fe9f2c4905cb58c32df3729e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125367"
 ---
 # <a name="sysparametertypeusages-transact-sql"></a>sys.parameter_type_usages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62998039"
 > [!NOTE]  
 >  이 뷰에서는 번호가 매겨진 프로시저의 매개 변수에 대한 행을 반환하지 않습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 매개 변수가 속한 개체의 ID입니다.|  
 |**parameter_id**|**int**|매개 변수의 ID입니다. 개체 내에서 고유합니다.|  

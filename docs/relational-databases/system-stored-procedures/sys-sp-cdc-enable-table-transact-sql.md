@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 26150c09-2dca-46ad-bb01-3cb3165bcc5d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 40b94782cf542800922b69291654ff7d46dcfde0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b846ff31d4acbc9d87f66a76a19f688384c88982
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106464"
 ---
 # <a name="sysspcdcenabletable-transact-sql"></a>sys.sp_cdc_enable_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ sys.sp_cdc_enable_table
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  테이블에서 변경 데이터 캡처를 사용할 수 있도록 설정하려면 먼저 데이터베이스에서 변경 데이터 캡처를 사용할 수 있도록 설정해야 합니다. 데이터베이스 변경 데이터 캡처가 설정 되어 있는지 확인, 쿼리를 **is_cdc_enabled** 열에는 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰. 데이터베이스를 사용 하도록 설정 하려면 사용 합니다 [sys.sp_cdc_enable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-db-transact-sql.md) 저장 프로시저입니다.  
   
  테이블에서 변경 데이터 캡처를 사용할 수 있으면 변경 테이블과 하나 또는 두 개의 쿼리 함수가 생성됩니다. 변경 테이블은 캡처 프로세스가 트랜잭션 로그에서 추출하는 원본 테이블 변경 내용의 리포지토리 역할을 합니다. 쿼리 함수는 변경 테이블에서 데이터를 추출하는 데 사용됩니다. 이러한 함수의 이름에서 파생 되는 *capture_instance* 다음과 같은 방법으로 매개 변수:  
@@ -125,7 +124,7 @@ sys.sp_cdc_enable_table
   
 ## <a name="examples"></a>예  
   
-### <a name="a-enabling-change-data-capture-by-specifying-only-required-parameters"></a>1. 필요한 매개 변수만 지정하여 변경 데이터 캡처 활성화  
+### <a name="a-enabling-change-data-capture-by-specifying-only-required-parameters"></a>A. 필요한 매개 변수만 지정하여 변경 데이터 캡처 활성화  
  다음 예에서는 `HumanResources.Employee` 테이블에 대해 변경 데이터 캡처를 활성화합니다. 필요한 매개 변수만 지정됩니다.  
   
 ```  
@@ -138,7 +137,7 @@ EXECUTE sys.sp_cdc_enable_table
 GO  
 ```  
   
-### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>2. 선택적 추가 매개 변수를 지정하여 변경 데이터 캡처 활성화  
+### <a name="b-enabling-change-data-capture-by-specifying-additional-optional-parameters"></a>2\. 선택적 추가 매개 변수를 지정하여 변경 데이터 캡처 활성화  
  다음 예에서는 `HumanResources.Department` 테이블에 대해 변경 데이터 캡처를 활성화합니다. `@allow_partition_switch`를 제외한 모든 매개 변수가 지정됩니다.  
   
 ```  
@@ -157,10 +156,10 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [sys.sp_cdc_disable_table &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
+ [sys.sp_cdc_disable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-table-transact-sql.md)   
  [sys.sp_cdc_help_change_data_capture &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md)   
  [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [sys.sp_cdc_help_jobs &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
+ [sys.sp_cdc_help_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)  
   
   

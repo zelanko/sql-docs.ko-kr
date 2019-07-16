@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_sys_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_pdw_sys_info (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 686976b4-2d5d-4d64-bf12-56eba1dc59b1
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 19f26a2f65a3b9c8484a62f79dc2995b47aca593
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0bc6c97f4d41023b822f42a6bbe4c5b193d42e45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088754"
 ---
 # <a name="sysdmpdwsysinfo-transact-sql"></a>sys.dm_pdw_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   어플라이언스에서 전체 작업을 반영 하는 어플라이언스 수준 카운터 집합을 제공 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |total_sessions|**int**|시스템에서 현재 세션의 수입니다.|0 ~ max_active_sessions (아래 참조)입니다.|  
 |idle_sessions|**int**|현재 유휴 세션 수입니다.||  

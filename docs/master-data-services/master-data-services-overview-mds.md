@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3514f15156de2856be6e13b0df29affa23e78303
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f45fb5484d5c8c2d34cde9042018a0eb0370d29a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062732"
 ---
 # <a name="master-data-services-overview-mds"></a>MDS(Master Data Services) 개요
 
@@ -57,7 +56,7 @@ ms.locfileid: "65489740"
 > [!NOTE]  
 >  테스트 환경에서 다음 태스크를 완료하고 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 설치할 때 제공된 샘플 데이터를 사용할 수 있습니다. 자세한 내용은 [모델 배포&#40;Master Data Services&#41;](../master-data-services/deploying-models-master-data-services.md)를 참조하세요.  
   
-|작업|설명|관련 항목|  
+|Action|설명|관련 항목|  
 |------------|-------------|--------------------|  
 |모델 만들기|모델을 만들면 VERSION_1로 간주됩니다.|[모델&#40;Master Data Services&#41;](../master-data-services/models-master-data-services.md)<br /><br /> [모델 만들기&#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)|  
 |엔터티 만들기|멤버를 포함하는 데 필요한 만큼 엔터티를 만듭니다.|[엔터티&#40;Master Data Services&#41;](../master-data-services/entities-master-data-services.md)<br /><br /> [엔터티 만들기&#40;Master Data Services&#41;](../master-data-services/create-an-entity-master-data-services.md)|  

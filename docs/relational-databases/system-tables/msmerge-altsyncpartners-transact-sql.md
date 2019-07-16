@@ -17,26 +17,25 @@ helpviewer_keywords:
 ms.assetid: da51b0f8-5ad0-4aeb-96ed-2b3672a2a6e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7190c2a800ffcf71f9969725a9e43bd31ad0af9e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d3bddc4642d13fe84d35782849a80d2737601763
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52794295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106401"
 ---
 # <a name="msmergealtsyncpartners-transact-sql"></a>MSmerge_altsyncpartners(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSmerge_altsyncpartners** 테이블의 현재 동기화 파트너는 게시자에 대 한 연결을 추적 합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**subid**|**uniqueidentifier**|원래 게시자에 대한 식별자입니다.|  
 |**alternate_subid**|**uniqueidentifier**|대체 동기화 파트너인 구독자에 대한 식별자입니다.|  
 |**description**|**nvarchar(255)**|대체 동기화 파트너에 대한 설명입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

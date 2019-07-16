@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 112afe8f7a8eaea87c860264c820c874788cbc7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a3551716ad6841a7ed14c92afd4ae96d3cc297b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140488"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep(Transact-SQL)
 
@@ -71,16 +70,16 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @step_name = ] 'step_name'` 단계의 이름입니다. *step_name* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @subsystem = ] 'subsystem'` 사용 하는 하위 시스템을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 실행 되도록 *명령*입니다. *하위 시스템* 됩니다 **nvarchar(40)**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @subsystem = ] 'subsystem'` 사용 하는 하위 시스템을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 실행 되도록 *명령*입니다. *하위 시스템* 됩니다 **nvarchar(40)** , 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |'**ACTIVESCRIPTING**'|액티브 스크립트<br /><br /> **\*\* 중요 \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|운영 체제 명령 또는 실행 프로그램|  
-|'**DISTRIBUTION**'|복제 배포 에이전트 작업|  
+|'**배포**'|복제 배포 에이전트 작업|  
 |'**SNAPSHOT**'|복제 스냅숏 에이전트 작업|  
 |'**LOGREADER**'|복제 로그 판독기 에이전트 작업|  
-|'**MERGE**'|복제 병합 에이전트 작업|  
+|'**병합**'|복제 병합 에이전트 작업|  
 |'**QueueReader**'|복제 큐 판독기 에이전트 작업|  
 |'**ANALYSISQUERY**'|Analysis Services 쿼리(MDX, DMX)|  
 |'**ANALYSISCOMMAND**'|Analysis Services 명령(XMLA)|  
@@ -88,7 +87,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**PowerShell**'|PowerShell 스크립트|  
 |'**TSQL**' (기본값)|[!INCLUDE[tsql](../../includes/tsql-md.md)] 문|  
   
-`[ @command = ] 'command'` 실행할 명령을 **SQLServerAgent** 서비스를 통해 *하위 시스템*입니다. *명령* 됩니다 **nvarchar (max)**, 기본값은 NULL입니다. SQL Server 에이전트에는 소프트웨어 프로그램 작성 시 변수를 사용하는 것과 같은 유연성을 제공하는 토큰 대체 기능이 있습니다.  
+`[ @command = ] 'command'` 실행할 명령을 **SQLServerAgent** 서비스를 통해 *하위 시스템*입니다. *명령* 됩니다 **nvarchar (max)** , 기본값은 NULL입니다. SQL Server 에이전트에는 소프트웨어 프로그램 작성 시 변수를 사용하는 것과 같은 유연성을 제공하는 토큰 대체 기능이 있습니다.  
   
 > [!IMPORTANT]  
 >  작업 단계에서 사용되는 모든 토큰에 이스케이프 매크로를 사용해야 하며 그렇지 않으면 작업 단계가 실패합니다. 또한 이제 토큰 이름을 괄호로 묶고 토큰 구문의 시작 부분에 달러 기호(`$`)를 사용해야 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
@@ -98,7 +97,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  이러한 토큰 및 새 토큰 구문을 사용 하 여 작업 단계 업데이트에 대 한 자세한 내용은 참조 하세요. [작업 단계에서 토큰을 사용 하 여](../../ssms/agent/use-tokens-in-job-steps.md)입니다.  
   
 > [!IMPORTANT]  
->  Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰은 다음과 같습니다. **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**. 및 **WMI(**_property_**)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
+>  Windows 이벤트 로그에 대한 쓰기 권한이 있는 모든 Windows 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 경고 또는 WMI 경고로 활성화되는 작업 단계에 액세스할 수 있습니다. 이러한 보안상 위험을 방지하기 위해 경고로 활성화되는 작업에 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 토큰은 기본적으로 해제됩니다. 이러한 토큰은 다음과 같습니다. **A-DBN**, **A-SVR**, **A-ERR**, **A-SEV**, **A-MSG**. 및 **WMI(** _property_ **)** 가 있습니다. 이번 릴리스에서는 모든 경고에 토큰을 사용할 수 있습니다.  
 >   
 >  이러한 토큰을 사용해야 하는 경우 먼저 Administrators 그룹과 같은 트러스트된 Windows 보안 그룹의 멤버만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 설치된 컴퓨터의 이벤트 로그에 대한 쓰기 권한이 있는지 확인합니다. 그런 다음 개체 탐색기에서 **SQL Server 에이전트** 를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택하고 **경고 시스템** 페이지에서 **경고에 대한 모든 응답 작업에 대해 토큰 바꾸기** 를 선택하여 이러한 토큰을 설정합니다.  
   
@@ -128,7 +127,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @on_fail_step_id = ] fail_step_id` 단계가 실패 하는 경우에 실행할이 작업 단계의 ID 및 *fail_action* 됩니다 **4**합니다. *fail_step_id* 됩니다 **int**, 기본값은 **0**합니다.  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *서버* 됩니다 **nvarchar(30)**, 기본값은 NULL입니다.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *서버* 됩니다 **nvarchar(30)** , 기본값은 NULL입니다.  
   
 `[ @database_name = ] 'database'` 실행할 데이터베이스의 이름을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계입니다. *데이터베이스* 는 **sysname**, 기본값은 NULL이 있는 경우를 사용 하 여를 **마스터** 데이터베이스가 사용 됩니다. 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. ActiveX 작업 단계의 합니다 *데이터베이스* 단계를 사용 하는 스크립트 언어의 이름입니다.  
   
@@ -140,11 +139,11 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 `[ @os_run_priority = ] run_priority` 예약 되어 있습니다.  
   
-`[ @output_file_name = ] 'file_name'` 이 단계의 출력이 저장 되는 파일의 이름입니다. *file_name* 됩니다 **nvarchar (200)**, 기본값은 NULL입니다. *file_name* 아래에 나열 된 토큰 중 하나 이상을 포함할 수 있습니다 *명령*입니다. 실행 명령에만이 매개 변수는 유효 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하위 시스템입니다.  
+`[ @output_file_name = ] 'file_name'` 이 단계의 출력이 저장 되는 파일의 이름입니다. *file_name* 됩니다 **nvarchar (200)** , 기본값은 NULL입니다. *file_name* 아래에 나열 된 토큰 중 하나 이상을 포함할 수 있습니다 *명령*입니다. 실행 명령에만이 매개 변수는 유효 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, **PowerShell**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 하위 시스템입니다.  
   
 `[ @flags = ] flags` 동작을 제어 하는 옵션이입니다. *플래그* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0** (기본값)|출력 파일을 덮어씁니다.|  
 |**2**|출력 파일에 추가합니다.|  
@@ -164,7 +163,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_add_jobstep** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
  SQL Server Management Studio는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데, 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  

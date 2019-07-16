@@ -1,5 +1,5 @@
 ---
-title: sp_executesql (Transact-SQL) | Microsoft Docs
+title: sp_executesql (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: a8d68d72-0f4d-4ecb-ae86-1235b962f646
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ef37233326597dc2a83f3089590e07f7b6efe51f
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: df7af5de2fa18875168c5528d27481dac016fea9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124437"
 ---
 # <a name="spexecutesql-transact-sql"></a>sp_executesql(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,14 +50,14 @@ sp_executesql [ @stmt = ] statement
   
 ## <a name="arguments"></a>인수  
  [ \@stmt= ] *statement*  
- 포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 합니다. \@stmt은 유니코드 상수 또는 유니코드 변수 여야 합니다. + 연산자로 두 문자열을 연결한 식처럼 더 복잡한 유니코드 식은 사용할 수 없습니다. 문자 상수도 사용할 수 없습니다. 유니코드 상수를 지정 하면이 접두사로 추가 해야 합니다는 **N**합니다. 예를 들어 유니코드 상수 **N'sp_who '** 유효 하지만 문자 상수 **'sp_who'** 아닙니다. 문자열의 크기는 사용 가능한 데이터베이스 서버 메모리의 용량에 따라서만 제한됩니다. 64 비트 서버의 문자열의 크기는 최대 크기인 2GB로 제한 됩니다 **nvarchar (max)** 합니다.  
+ 포함 하는 유니코드 문자열을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 합니다. \@stmt은 유니코드 상수 또는 유니코드 변수 여야 합니다. \+ 연산자로 두 문자열을 연결한 식처럼 더 복잡한 유니코드 식은 사용할 수 없습니다. 문자 상수도 사용할 수 없습니다. 유니코드 상수를 지정 하면이 접두사로 추가 해야 합니다는 **N**합니다. 예를 들어 유니코드 상수 **N'sp_who '** 유효 하지만 문자 상수 **'sp_who'** 아닙니다. 문자열의 크기는 사용 가능한 데이터베이스 서버 메모리의 용량에 따라서만 제한됩니다. 64 비트 서버의 문자열의 크기는 최대 크기인 2GB로 제한 됩니다 **nvarchar (max)** 합니다.  
   
 > [!NOTE]  
 >  \@stmt 매개 변수는 변수 이름과 동일한 형식의 예를 들어를 포함할 수 있습니다. `N'SELECT * FROM HumanResources.Employee WHERE EmployeeID = @IDParameter'`  
   
  에 포함 된 각 매개 변수에 \@stmt는 둘 다에 해당 하는 항목이 있어야 합니다 \@params 매개 변수 정의 목록과 매개 변수 값 목록입니다.  
   
- [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
+ [ \@params =] N'\@*parameter_name* *data_type* [,... *n* ] '  
  에 포함 된 모든 매개 변수의 정의 포함 하는 하나의 문자열 \@stmt 합니다. 문자열은 유니코드 상수 또는 유니코드 변수여야 합니다. 각 매개 변수의 정의는 매개 변수 이름과 데이터 형식으로 구성됩니다. *n* 추가 매개 변수 정의 나타내는 자리 표시자입니다. 에 지정 된 모든 매개 변수에 \@stmt에 정의 되어 있어야 \@매개 변수입니다. 경우는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리 \@stmt 매개 변수는 \@params가 필요 하지 않습니다. 이 매개 변수의 기본값은 NULL입니다.  
   
  [ \@param1= ] '*value1*'  
@@ -76,7 +75,7 @@ sp_executesql [ @stmt = ] statement
 ## <a name="result-sets"></a>결과 집합  
  작성된 모든 SQL 문에서 SQL 문자열로 결과 집합을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 항목 앞부분에서의 "구문" 섹션에 설명 된 대로 sp_executesql 매개 변수를 특정 순서로 입력 되어야 합니다. 매개 변수 순서가 잘못되면 오류 메시지가 나타납니다.  
   
  sp_executesql은 일괄 처리, 이름의 범위 및 데이터베이스 컨텍스트 면에서 EXECUTE와 동작이 동일합니다. 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리는 sp_executesql \@stmt 매개 변수는 sp_executesql 문이 실행 될 때까지 컴파일되지 않습니다. 내용을 \@stmt는 컴파일되고 sp_executesql 이라는 일괄 처리의 실행 계획과 별도로 실행 계획으로 실행 합니다. sp_executesql 일괄 처리는 sp_executesql을 호출하는 일괄 처리에서 선언된 변수를 참조할 수 없습니다. sp_executesql 일괄 처리의 로컬 커서 또는 변수는 sp_executesql을 호출하는 일괄 처리에 노출되지 않습니다. 데이터베이스 컨텍스트의 변경 내용은 sp_executesql 문이 종료될 때까지만 지속됩니다.  
@@ -140,7 +139,7 @@ SELECT @max_title;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-executing-a-simple-select-statement"></a>1. 단순 SELECT 문 실행  
+### <a name="a-executing-a-simple-select-statement"></a>A. 단순 SELECT 문 실행  
  다음은 `SELECT`이라는 포함 매개 변수를 포함한 단순 `@level` 문을 만들고 실행하는 예입니다.  
   
 ```  
@@ -151,7 +150,7 @@ EXECUTE sp_executesql
           @level = 109;  
 ```  
   
-### <a name="b-executing-a-dynamically-built-string"></a>2. 동적으로 작성된 문자열 실행  
+### <a name="b-executing-a-dynamically-built-string"></a>2\. 동적으로 작성된 문자열 실행  
  다음 예에서는 `sp_executesql`을 사용하여 동적으로 작성된 문자열 실행을 보여 줍니다. 예로 사용된 저장 프로시저는 1년 간의 판매 데이터를 분할하기 위해 사용하는 일련의 테이블에 데이터를 삽입하는 데 사용됩니다. 해당 연도의 각 달마다 다음과 같은 형식의 테이블이 하나씩 있습니다.  
   
 ```  
@@ -205,7 +204,7 @@ GO
   
  이 프로시저에서는 EXECUTE를 사용하는 것보다 sp_executesql을 사용하여 문자열을 실행하는 것이 효과적입니다. sp_executesql을 사용하는 경우 월별 테이블마다 하나씩 12개 버전의 INSERT 문자열만 작성됩니다. EXECUTE를 사용하면 매개 변수 값이 다르므로 각 INSERT 문자열이 고유합니다. 두 방법 모두 같은 수의 일괄 처리를 생성하지만 sp_executesql에 의해 생성된 INSERT 문자열이 서로 비슷하기 때문에 쿼리 최적화 프로그램이 실행 계획을 다시 사용하기 쉽습니다.  
   
-### <a name="c-using-the-output-parameter"></a>3. OUTPUT 매개 변수 사용  
+### <a name="c-using-the-output-parameter"></a>3\. OUTPUT 매개 변수 사용  
  다음 예제에서는 `OUTPUT` 매개 변수에서 생성 된 결과 집합을 저장 합니다 `SELECT` 문에서 `@SQLString` 매개 변수입니다. 두 개의 `SELECT` 문이 실행 됩니다의 값을 사용 하 여 `OUTPUT` 매개 변수입니다.  
   
 ```  
@@ -237,7 +236,7 @@ WHERE SalesOrderNumber = @SalesOrderNumber;
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-executing-a-simple-select-statement"></a>4. 단순 SELECT 문 실행  
+### <a name="d-executing-a-simple-select-statement"></a>4\. 단순 SELECT 문 실행  
  다음은 `SELECT`이라는 포함 매개 변수를 포함한 단순 `@level` 문을 만들고 실행하는 예입니다.  
   
 ```  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: aec09593-17d9-4ec2-ac56-3cd8851406fd
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b3cebc9bb82778390716212fd3b5ae1bf800d3d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c76b6b2e4e5295bf7db2d7857a73223fc6f8c7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028646"
 ---
 # <a name="removing-ssma-for-sybase-components-sybasetosql"></a>Sybase용 SSMA 구성 요소 제거(SybaseToSQL)
 완료 했을 때에서 Sybase 적응형 Server Enterprise (ASE)에 데이터베이스를 마이그레이션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA 구성 요소를 제거 하는 것이 좋습니다. 언제 든 지, 클라이언트 구성 요소를 제거할 수 있지만 확장 팩에서 제거 하면 안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 아니라면 마이그레이션된 데이터베이스의 함수는 더 이상 사용 해야 합니다 **ssma_syb** 는의스키마**sysdb** 데이터베이스입니다.  

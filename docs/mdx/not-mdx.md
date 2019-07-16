@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3b70068562ff24e8a1619b85fe091ab3e17da173
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4031b887eb0a42580d6ae8debf6c9177ff67efc3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088232"
 ---
 # <a name="not-mdx"></a>NOT(MDX)
 
@@ -35,7 +34,7 @@ NOT Expression1
 ## <a name="return-value"></a>반환 값  
  반환 하는 부울 값 **false** 인수가 계산 되는 경우 **true**이 고, 그렇지 않으면 **true**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **되지** 연산자는 식을 부울 값으로 처리 (0으로 **false**이 고, 그렇지 않으면 **true**) 연산자가 논리 부정을 수행 하기 전에 합니다. 다음 표에서 설명 하는 방법을 **되지** 연산자로 논리 부정을 수행 합니다.  
   
 |*Expression1*|반환 값|  

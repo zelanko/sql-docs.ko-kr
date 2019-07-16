@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3344ad65a2445a8d39451f6a048f057b7158d135
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096027"
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  다음 표에서는 옵션, 설명 및 해당 값을 나열합니다.  
   
-|옵션 이름|옵션 값|Description|  
+|옵션 이름|옵션 값|설명|  
 |-----------------|------------------|-----------------|  
 |TRACE_FILE_ROLLOVER|**2**|되도록 지정 합니다 *max_file_size* 에 도달 하면 현재 추적 파일이 닫히고 새 파일이 만들어집니다. 모든 새 기록은 새 파일에 기록합니다. 새 파일은 이전 파일과 같은 이름을 갖지만 정수를 붙여 시퀀스를 표시합니다. 예를 들어 원래 추적 파일 이름이 filename.trc이면, 다음 추적 파일 이름은 filename_1.trc이고 그 다음은 filename_2.trc의 식으로 명명됩니다.<br /><br /> 롤오버 추적 파일이 많이 생성될수록 파일 이름에 붙이는 정수 값도 순차적으로 증가합니다.<br /><br /> SQL Server의 기본 값을 사용 하 여 *max_file_size* (5MB) 값을 지정 하지 않고이 옵션을 지정 하는 경우 *max_file_size*합니다.|  
 |SHUTDOWN_ON_ERROR|**4**|어떤 이유에서건 추적을 파일에 쓸 수 없으면 SQL Server가 시스템을 종료하도록 지정합니다. 이 옵션은 보안 감사 추적을 수행할 때 유용합니다.|  
@@ -102,7 +101,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |14|잘못된 중지 시간입니다. 지정한 중지 시간이 이미 지난 경우 반환됩니다.|  
 |15|잘못된 매개 변수입니다. 사용자가 호환되지 않는 매개 변수를 제공하면 반환됩니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_trace_create** 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를 실행 하 던 작업의 대부분을 수행 **xp_trace_\***  확장 저장된 프로시저의 SQL Server 이전 버전에서 사용할 수 있습니다. 사용 하 여 **sp_trace_create** 대신:  
   
 -   **xp_trace_addnewqueue**  
@@ -128,7 +127,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 -   기본값 *file_size* 5MB는 다른 추적과 변경할 수 있습니다.  
   
--   파일 이름을 지정할 수 없습니다. 이 파일은 **N'%SQLDIR%\MSSQL\DATA\blackbox.trc'**  
+-   파일 이름을 지정할 수 없습니다. 파일으로 저장 됩니다. **N'%SQLDIR%\MSSQL\DATA\blackbox.trc'**  
   
 -   이 추적에는 다음과 같은 이벤트와 이러한 이벤트의 열만 포함됩니다.  
   

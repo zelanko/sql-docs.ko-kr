@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30c1db4f850e6f181757d974ae74bb475b0cc5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2512d277980b071523cfea6cbe132f2a3861b7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107295"
 ---
 # <a name="state-transitions"></a>상태 전환
 ODBC 정의 불연속 *상태* 각 환경, 각 연결 및 각 문에 대 한 합니다. 예를 들어, 환경에는 세 가지 가능한 상태에 있습니다. (환경이 할당 되는)에서 할당 되지 않은, 할당 된 (있는 환경에는 할당 되지만 연결 없이 할당 된) 및 연결 (있는 환경 및 하나 이상의 연결 된 할당 됨). 연결 있는 일곱 개의 가능한 상태입니다. 문에 13 가능한 상태 권한이 있습니다.  

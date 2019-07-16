@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7baa2959-9340-429b-ad53-3df03d8e13fc
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4df87a9fedffa701858fef9101c58db12c1c3bf2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cb30d81102c17f2c3ce04b31ac7ff2b9689343e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62934739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038946"
 ---
 # <a name="data-accessor-functions---string-xquery"></a>데이터 접근자 함수 - string(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ fn:string($arg as item()?) as xs:string
  *$arg*  
  노드 또는 원자 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 -   하는 경우 *$arg* 이 빈 시퀀스인 경우 길이가 0 인 문자열이 반환 됩니다.  
   
@@ -55,7 +54,7 @@ fn:string($arg as item()?) as xs:string
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-string-function"></a>1\. 문자열 함수 사용  
+### <a name="a-using-the-string-function"></a>A. 문자열 함수 사용  
  다음 검색 쿼리는 <`Features`> 자식 요소 노드는 <`ProductDescription`> 요소입니다.  
   
 ```  

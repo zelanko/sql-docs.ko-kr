@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 448b0f5e34a6b7421c23a1267dd9cd68bd93ca6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5d8087e7672dd331d0b078cea4930be7582a026
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093001"
 ---
 # <a name="sqlsetconnectinfo-function"></a>SQLSetConnectInfo 함수
 **규칙**  
@@ -69,7 +68,7 @@ SQLRETURN  SQLSetConnectInfo(
 ## <a name="diagnostics"></a>진단  
  동일 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 에 대 한 드라이버 관리자를 사용 한다는 점을 제외 하면 유효성 검사 오류를 입력 한 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN의와 **처리** 의*hDbcInfoToken*합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  드라이버는 SQL_ERROR 또는 SQL_INVALID_HANDLE 반환 될 때마다 응용 프로그램에 드라이버 관리자 오류를 반환 합니다 (에서 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 하거나 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  
   
  드라이버에서 SQL_SUCCESS_WITH_INFO를 반환할 때마다 드라이버 관리자에서 진단 정보를 가져옵니다 *hDbcInfoToken*, 응용 프로그램에 SQL_SUCCESS_WITH_INFO를 반환 하 고 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)하 고 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)합니다.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 231beede-cdfa-4e28-8b10-2760b983250f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c0ed819643e7ea818fc17c0fa317473afc8f5ca3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 827f6ddca12f15ce0bce1773b9cbe26fae5069dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106228"
 ---
 # <a name="binding-columns-for-use-with-block-cursors"></a>블록 커서와 함께 사용하기 위해 열 바인딩
 블록 커서 여러 행을 반환 하므로 사용 하는 응용 프로그램을 사용 하 여 변수 배열을 단일 변수 대신 각 열에 바인딩해야 합니다. 이러한 배열은 라고 통칭 합니다 *행 집합 버퍼*합니다. 다음은 바인딩의 두 가지 스타일입니다.  

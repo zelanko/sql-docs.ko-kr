@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083388"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Sybase에 연결(SybaseToSQL)
 사용 된 **Sybase에 연결** 마이그레이션하려는 Sybase 적응형 Server Enterprise (ASE) 인스턴스에 연결 대화 상자.  

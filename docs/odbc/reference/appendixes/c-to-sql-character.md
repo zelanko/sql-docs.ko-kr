@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0158da62ed360e926cdb5382b89b1491c0723550
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f30e0cf7622de5124cb151288417bb508354ce0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037722"
 ---
 # <a name="c-to-sql-character"></a>C에서 SQL로: 문자
 ODBC C 데이터 형식 문자에 대 한 식별자 다음과 같습니다.  

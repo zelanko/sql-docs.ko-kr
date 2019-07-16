@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4ef878879fb5c2896c45aedbf2a86f83557804c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bee68e3ba1863602d9a96635cdfa4c533a00c649
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073169"
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "62856102"
   
 -   master 데이터베이스의 컨텍스트에서 서버 수준 DLL 트리거  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |referencing_id|**int**|참조 엔터티의 ID입니다. Null을 허용하지 않습니다.|  
 |referencing_minor_id|**int**|참조 엔터티가 열인 경우 열 ID이며 그렇지 않은 경우 0입니다. Null을 허용하지 않습니다.|  
@@ -65,29 +64,29 @@ ms.locfileid: "62856102"
 |is_caller_dependent|**bit**|참조된 엔터티에 대한 스키마 바인딩이 런타임에 발생하므로 엔터티 ID 확인이 호출자의 스키마에 종속됨을 나타냅니다. 이는 참조된 엔터티가 저장 프로시저, 확장 저장 프로시저, 또는 EXECUTE 문에서 호출되는 비스키마 바운드 사용자 정의 함수인 경우에 발생합니다.<br /><br /> 1 = 참조된 엔터티가 호출자에 종속되고 런타임에 확인됩니다. 이 경우 referenced_id는 NULL입니다.<br /><br /> 0 = 참조된 엔터티 ID가 호출자에 종속되지 않습니다.<br /><br /> 스키마 이름을 명시적으로 지정하는 스키마 바운드 참조와 데이터베이스 간 및 서버 간 참조의 경우 항상 0입니다. 예를 들어 `EXEC MyDatabase.MySchema.MyProc` 형식의 엔터티에 대한 참조는 호출자에 종속되지 않습니다. 하지만 `EXEC MyDatabase..MyProc` 형식의 참조는 호출자에 종속됩니다.|  
 |is_ambiguous|**bit**|대 한 참조가 모호 하며 런타임에 사용자 정의 함수, 사용자 정의 형식 (UDT) 또는 형식의 열에 대 한 xquery 참조로 확인할 수 나타냅니다 **xml**합니다.<br /><br /> 예를 들어 `SELECT Sales.GetOrder() FROM Sales.MySales` 문이 저장 프로시저에 정의되어 있다고 가정해 보겠습니다. `Sales.GetOrder()`가 `Sales` 스키마의 사용자 정의 함수인지, 아니면 `Sales`라는 메서드가 있는 UDT 형식의 `GetOrder()` 열인지는 저장 프로시저가 실행될 때까지 알 수 없습니다.<br /><br /> 1 = 참조가 모호합니다.<br /><br /> 0 = 참조가 명확하거나 뷰를 호출할 때 엔터티를 바인딩할 수 있습니다.<br /><br /> 스키마 바운드 참조의 경우 항상 0입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서는 종속성 정보가 생성 및 유지되는 엔터티 유형을 보여 줍니다. 종속성 정보는 규칙, 기본값, 임시 테이블, 임시 저장 프로시저 또는 시스템 개체에 대해서는 생성 및 유지되지 않습니다.  
   
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
-|Table|예*|사용자 계정 컨트롤|  
-|보기|사용자 계정 컨트롤|사용자 계정 컨트롤|  
+|Table|예*|예|  
+|보기|예|예|  
 |필터링된 인덱스|예**|아니요|  
 |필터링된 통계|예**|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저***|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|CLR 저장 프로시저|아니요|사용자 계정 컨트롤|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|CLR 사용자 정의 함수|아니요|사용자 계정 컨트롤|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저***|예|예|  
+|CLR 저장 프로시저|아니요|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
+|CLR 사용자 정의 함수|아니요|예|  
 |CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|사용자 계정 컨트롤|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|사용자 계정 컨트롤|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|사용자 계정 컨트롤|아니요|  
-|확장 저장 프로시저|아니요|사용자 계정 컨트롤|  
-|큐|아니요|사용자 계정 컨트롤|  
-|동의어|아니요|사용자 계정 컨트롤|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니요|사용자 계정 컨트롤|  
-|XML 스키마 컬렉션|아니요|사용자 계정 컨트롤|  
-|파티션 함수|아니요|사용자 계정 컨트롤|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
+|확장 저장 프로시저|아니요|예|  
+|큐|아니요|예|  
+|동의어|아니요|예|  
+|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
+|XML 스키마 컬렉션|아니요|예|  
+|파티션 함수|아니요|예|  
   
  \* 테이블을 참조 하는 경우에 참조 엔터티로 추적을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "62856102"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-entities-that-are-referenced-by-another-entity"></a>1. 다른 엔터티에서 참조한 엔터티 반환  
+### <a name="a-returning-entities-that-are-referenced-by-another-entity"></a>A. 다른 엔터티에서 참조한 엔터티 반환  
  다음 예는 `Production.vProductAndDescription` 뷰에서 참조되는 테이블과 열을 반환합니다. 이 뷰는 `referenced_entity_name` 및 `referenced_column_name` 열에 반환된 엔터티(테이블 및 열)에 종속됩니다.  
   
 ```  
@@ -121,7 +120,7 @@ GO
   
 ```  
   
-### <a name="b-returning-entities-that-reference-another-entity"></a>2. 다른 엔터티를 참조하는 엔터티 반환  
+### <a name="b-returning-entities-that-reference-another-entity"></a>2\. 다른 엔터티를 참조하는 엔터티 반환  
  다음 예는 `Production.Product` 테이블을 참조하는 엔터티를 반환합니다. `referencing_entity_name` 열에 반환된 엔터티는 `Product` 테이블에 종속됩니다.  
   
 ```  
@@ -143,7 +142,7 @@ GO
   
 ```  
   
-### <a name="c-returning-cross-database-dependencies"></a>3. 데이터베이스 간 종속성 반환  
+### <a name="c-returning-cross-database-dependencies"></a>3\. 데이터베이스 간 종속성 반환  
  다음 예에서는 모든 데이터베이스 간 종속성을 반환합니다. 예에서는 먼저 `db1` 데이터베이스를 만들고 `db2` 및 `db3` 데이터베이스의 테이블을 참조하는 두 개의 저장 프로시저를 만듭니다. 그런 다음 `sys.sql_expression_dependencies` 테이블을 쿼리하여 프로시저와 테이블 사이의 데이터베이스 간 종속성을 보고합니다. 참조된 엔터티 `referenced_schema_name`에 대한 스키마 이름이 프로시저 정의에 지정되지 않았으므로 해당 엔터티에 대한 `t3` 열에서 NULL이 반환됩니다.  
   
 ```  

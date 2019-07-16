@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a3d63fd6-f360-4a2f-8a82-a0dc15f650b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10c46ac2ff35d73453976a91276246d3e810e425
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de035b4c8835b9de9ae81e8bd474c0cad6d100f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105008"
 ---
 # <a name="sparticleview-transact-sql"></a>sp_articleview(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ sp_articleview [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_articleview** 게시 된 아티클을 정의 하 고이 뷰의 ID를 삽입 하는 뷰를 만들고는 **sync_objid** 열의 합니다 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블을 마우스에 제한 절의 텍스트를 삽입 합니다 **filter_clause** 열입니다. 모든 열이 복제 되 고 없는 경우 없습니다 **filter_clause**의 **sync_objid** 에 [sysarticles &#40;Transact SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블의 ID로 설정 되어를 사용 하 여 기본 테이블 **sp_articleview** 필요 하지 않습니다.  
   
  열 필터링 된 테이블을 게시 하려면 (즉, 필터 열에) 처음 실행할 **sp_addarticle** 없이 *sync_object* 매개 변수를 실행 [sp_articlecolumn &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) (열 필터 정의)에 복제 하 고 실행 하려면 각 열에 한 번씩 **sp_articleview** 게시 된 아티클을 정의 하는 보기를 만듭니다.  

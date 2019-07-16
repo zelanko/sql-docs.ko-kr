@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd59aae098a91a47e1137bd55cd97cf1066b02bf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cb21731dd02fee4ec3779affed56f85e5dbc0e9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079235"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @type = ] type` 구독자의 유형이입니다. *형식* 됩니다 **tinyint**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0** (기본값)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자|  
 |**1**|ODBC 데이터 원본 서버|  
@@ -77,7 +76,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제에 지정 된 구독 단위로 실행할 때 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)합니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @password = ] 'password'` 에 대 한 암호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다. *암호* 됩니다 **nvarchar(524)**, 기본값은 NULL입니다.  
+`[ @password = ] 'password'` 에 대 한 암호 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다. *암호* 됩니다 **nvarchar(524)** , 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
 >  빈 암호를 사용하지 마세요. 강력한 암호를 사용하세요.  
@@ -116,7 +115,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제에 지정 된 구독 단위로 실행할 때 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)합니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
- [**@frequency_interval=** ] *frequency_interval*  
+ [ **@frequency_interval=** ] *frequency_interval*  
  설정 된 빈도에 적용 된 값인 *frequency_type*합니다. *frequency_interval* 됩니다 **int**, 기본값은 1입니다.  
   
 > [!NOTE]  
@@ -124,7 +123,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` 복제 에이전트의 날짜가입니다. 이 매개 변수를 사용 하면 *frequency_type* 로 설정 된 **32** (매월 상대적)입니다. *frequency_relative_interval* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**1** (기본값)|첫째|  
 |**2**|Second|  
@@ -177,7 +176,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다. 속성은 이제에 지정 된 구독 단위로 실행할 때 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)합니다. 값을 지정하면 해당 값은 이 구독자에서 구독을 만들 때 기본값으로 사용되며 경고 메시지가 반환됩니다.  
   
-`[ @description = ] 'description'` 구독자의 텍스트 설명이입니다. *설명* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @description = ] 'description'` 구독자의 텍스트 설명이입니다. *설명* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다.  
   
 `[ @security_mode = ] security_mode` 구현 된 보안 모드가입니다. *security_mode* 됩니다 **int**, 기본값은 1입니다. **0** 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다. **1** Windows 인증을 지정 합니다.  
   
@@ -194,7 +193,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_addsubscriber** 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
  **sp_addsubscriber** 구독자는 병합 게시에 대 한 익명 구독만 있으면 때는 필요 하지 않습니다.  

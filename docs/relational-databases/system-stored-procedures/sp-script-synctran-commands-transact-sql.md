@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9ee35eb4c5d67ff50f4f08c1cfa29596e27aec2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d7caca72f684dfb6428361a4550860b3bea3f273
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126408"
 ---
 # <a name="spscriptsynctrancommands-transact-sql"></a>sp_script_synctran_commands(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_script_synctran_commands [@publication = ] 'publication'
 ## <a name="results-set"></a>결과 집합  
  **sp_script_synctran_commands** 반환 된 결과 집합을 단일 이루어져 **nvarchar(4000)** 열입니다. 결과 집합 forms 전체 스크립트를 모두 만드는 데 필요한 합니다 **sp_addsynctrigger** 하 고 **sp_addqueued_artinfo** 구독자에서 적용에 대 한 호출 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_script_synctran_commands** 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
  **sp_addqueued_artinfo** 업데이트할 수 있는 큐에 대기 중인된 구독에 사용 됩니다.  

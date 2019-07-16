@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 77db403ee016283a565a6bc86d2f6857de0eff45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2486f23170ec19f16dca31672696c09815a2e83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036644"
 ---
 # <a name="this-mdx"></a>This(MDX)
 
@@ -28,7 +27,7 @@ ms.locfileid: "63259024"
 This   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **이** MDX 계산 스크립트의 현재 범위 내에 현재의 하위 큐브를 제공 하기 위해 하위 큐브 식 대신 함수를 사용할 수 있습니다. 합니다 **이** 할당의 왼쪽에 함수를 사용 해야 합니다.  
   
 ## <a name="examples"></a>예  

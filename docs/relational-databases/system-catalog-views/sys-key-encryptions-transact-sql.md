@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a8fb9b2103316219bcdac74c1b861ac0a2668cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61ad8e163eddb4875aad362c3090875bd450bc3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63003547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104590"
 ---
 # <a name="syskeyencryptions-transact-sql"></a>sys.key_encryptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "63003547"
   CREATE SYMMETRIC KEY 문의 ENCRYPTION BY 절을 사용하여 지정된 각 대칭 키 암호화에 대해 행을 반환합니다.  
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |------------------|----------------|-----------------|  
 |**key_id**|**int**|암호화된 키의 ID입니다.|  
 |**thumbprint**|**varbinary(32)**|키 암호화에 사용되는 인증서의 SHA-1 해시이거나 대칭 키의 GUID입니다.|  

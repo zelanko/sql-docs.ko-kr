@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 7bcf7ac382bb60e1a38b34ac6e3a26c2126e1e88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65836178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68200851"
 ---
 
 보관 파일 웹 페이지 세트에 이전 버전의 SQL Server에 대한 설명서를 누적하고 유지합니다. 보관 된 웹 페이지 Bing.com Google.com 등 검색 엔진에 의해 처리 되지 않습니다. 문서에서 이러한 보관 보시 _이전 버전 /_ 주소:

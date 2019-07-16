@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1de46c12b0e05b592489e557a80138996ad9767f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137767"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,10 +54,10 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="result-sets"></a>결과 집합  
  **sp_helpmergeconflictrows** 결과 기본 테이블 구조 및 이러한 추가 열으로 구성 된 집합을 반환 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**origin_datasource**|**varchar(255)**|충돌의 시작입니다.|  
-|**conflict_type**|**int**|충돌 유형을 표시하는 코드입니다.<br /><br /> **1** = 업데이트 충돌: 충돌이 행 수준에서 검색됩니다.<br /><br /> **2** = 열 업데이트 충돌: 충돌이 열 수준에서 검색됩니다.<br /><br /> **3** = 업데이트 / 삭제 충돌 합니다. 삭제가 충돌에서 적용됩니다.<br /><br /> **4** = 업데이트 / 삭제 충돌 합니다. 충돌에서 패한 삭제된 rowguid가 이 테이블에 기록됩니다.<br /><br /> **5** = 업로드 삽입 실패: 구독자에서의 삽입을 게시자에 적용할 수 없습니다.<br /><br /> **6** = 다운로드 삽입 실패: 게시자에서의 삽입을 구독자에 적용할 수 없습니다.<br /><br /> **7** = 업로드 삭제 실패: 구독자에서의 삭제를 게시자로 업로드할 수 없습니다.<br /><br /> **8** = 다운로드 삭제 실패: 게시자에서의 삭제를 구독자로 다운로드할 수 없습니다.<br /><br /> **9** = 업로드 업데이트 실패: 구독자에서의 업데이트를 게시자에 적용할 수 없습니다.<br /><br /> **10** = 다운로드 업데이트 실패: 게시자에서의 업데이트를 구독자에 적용할 수 없습니다.<br /><br /> **12** = 논리 레코드 업데이트/삭제 충돌 합니다. 충돌에서 적용하지 못한 삭제된 논리 레코드가 이 테이블에 기록됩니다.<br /><br /> **13** = 논리 레코드 삽입/업데이트 충돌: 논리 레코드 삽입이 업데이트와 충돌합니다.<br /><br /> **14** = 논리 레코드 삭제 / 업데이트 충돌: 충돌에서 적용하지 못한 업데이트된 논리 레코드가 이 테이블에 기록됩니다.|  
+|**conflict_type**|**int**|충돌 유형을 표시하는 코드입니다.<br /><br /> **1** = 업데이트 충돌: 충돌이 행 수준에서 검색 됩니다.<br /><br /> **2** = 열 업데이트 충돌: 충돌이 열 수준에서 검색 합니다.<br /><br /> **3** = 업데이트 / 삭제 충돌 합니다. 삭제가 충돌에서 승리 합니다.<br /><br /> **4** = 업데이트 / 삭제 충돌 합니다. 삭제 충돌이 손실 된 rowguid이이 테이블에 기록 됩니다.<br /><br /> **5** = 업로드 삽입 실패: 구독자에서의 삽입을 게시자에서 적용할 수 없습니다.<br /><br /> **6** = 다운로드 삽입 실패: 구독자에서 게시자에서의 삽입을 적용할 수 없습니다.<br /><br /> **7** = 업로드 삭제 실패: 게시자에 구독자에서의 삭제를 업로드할 수 없습니다.<br /><br /> **8** = 다운로드 삭제 실패: 게시자에서의 삭제를 구독자로 다운로드할 수 없습니다.<br /><br /> **9** = 업로드 업데이트 실패: 게시자의 구독자에서 업데이트를 적용할 수 없습니다.<br /><br /> **10** = 다운로드 업데이트 실패: 구독자에 게시자에서 업데이트를 적용할 수 없습니다.<br /><br /> **12** = 논리 레코드 업데이트/삭제 충돌 합니다. 삭제 충돌이 손실 된 논리 레코드가이 테이블에 기록 됩니다.<br /><br /> **13** = 논리 레코드 삽입/업데이트 충돌: 업데이트를 사용 하 여 충돌 하는 논리적 레코드를 삽입 합니다.<br /><br /> **14** = 논리 레코드 삭제 / 업데이트 충돌: 업데이트 충돌 손실 된 논리 레코드가이 테이블에 기록 됩니다.|  
 |**reason_code**|**int**|상황에 맞는 오류 코드입니다.|  
 |**reason_text**|**varchar(720)**|상황에 맞는 오류 설명입니다.|  
 |**pubid**|**uniqueidentifier**|게시 식별자입니다.|  
@@ -67,7 +66,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helpmergeconflictrows** 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

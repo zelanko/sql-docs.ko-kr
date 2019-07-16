@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 457385a43c9f5b2864e5596f2da33f4ed38e7756
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62854335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070988"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -62,7 +61,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  기본값: REPEATABLE(0)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  마이닝 구조 정의는 열 목록을 지정하고 필요에 따라 열 간의 계층 관계를 지정한 다음 역시 필요에 따라 마이닝 구조를 학습 및 테스트 데이터 집합으로 분할하는 작업으로 구성됩니다.  
   
  선택적인 SESSION 키워드는 구조가 현재 세션 기간에만 사용할 수 있는 임시 구조임을 나타냅니다. 세션이 종료될 때 구조 및 구조를 기반으로 하는 모든 모델이 삭제됩니다. 임시 마이닝 구조 및 모델을 만들려면 먼저 데이터베이스 속성인 AllowSessionMiningModels를 설정 해야 합니다. 자세한 내용은 [Data Mining Properties](../analysis-services/server-properties/data-mining-properties.md)을 참조하세요.  
@@ -137,7 +136,7 @@ WITH HOLDOUT (2000 CASES OR 20 PERCENT)
 ## <a name="examples"></a>예  
  다음 예에서는 DMX를 사용하여 홀드아웃이 있는 마이닝 구조를 만드는 방법을 보여 줍니다.  
   
-### <a name="example-1-adding-a-structure-with-no-training-set"></a>예 1: 없는 학습 집합을 사용 하 여 구조 추가  
+### <a name="example-1-adding-a-structure-with-no-training-set"></a>예제 1: 없는 학습 집합을 사용 하 여 구조 추가  
  다음 예에서는 연결된 마이닝 모델을 만들지 않고 홀드아웃 사용 없이 `New Mailing`이라는 새 마이닝 구조를 만듭니다. 구조에 마이닝 모델을 추가 하는 방법에 알아보려면 참조 [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md)합니다.  
   
 ```  
@@ -150,7 +149,7 @@ CREATE MINING STRUCTURE [New Mailing]
 )  
 ```  
   
-### <a name="example-2-specifying-holdout-percentage-and-seed"></a>예 2: 홀드 아웃 비율 및 초기값 지정  
+### <a name="example-2-specifying-holdout-percentage-and-seed"></a>예제 2: 홀드 아웃 비율 및 초기값 지정  
  다음 절은 열 정의 목록 이후에 추가되어 마이닝 구조와 관련된 모든 마이닝 모델을 테스트하는 데 사용할 수 있는 데이터 집합을 정의할 수 있습니다. 다음 문은 최대 사례 수에 제한 없이 전체 입력 사례의 25%에 해당하는 테스트 집합을 만듭니다. 파티션을 만드는 초기값으로 5000이 사용됩니다. 초기값을 지정하는 경우 기본 데이터가 변경되지 않으면 마이닝 구조를 처리할 때마다 테스트 집합에 대해 동일한 사례가 선택됩니다.  
   
 ```  

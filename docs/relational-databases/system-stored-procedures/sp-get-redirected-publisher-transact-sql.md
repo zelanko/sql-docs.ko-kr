@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3851e196da2e6497285559192d90cbb0e74fd217
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: a3972d2d92274c3454f8add9fb7b92a001dda359
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124054"
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +49,14 @@ sp_get_redirected_publisher
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**redirected_publisher**|**sysname**|리디렉션 후의 게시자 이름입니다.|  
 |**error_number**|**int**|유효성 검사 오류의 오류 번호입니다.|  
 |**error_severity**|**int**|유효성 검사 오류의 심각도입니다.|  
 |**error_message**|**nvarchar(4000)**|유효성 검사 오류 메시지의 텍스트입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  *redirected_publisher* 현재 게시자 이름을 반환 합니다. 게시자 및 게시 데이터베이스가 리디렉션되지 않은 사용 하는 경우 null을 반환 합니다 **sp_redirect_publisher**합니다.  
   
  유효성 검사는 요청 되지 않은 경우 또는 게시자와 게시 데이터베이스에 대 한 항목이 없는 경우 *error_number* 하 고 *error_severity* 0을 반환 하 고 *error_message* null을 반환합니다.  

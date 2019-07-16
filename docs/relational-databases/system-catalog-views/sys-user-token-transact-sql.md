@@ -1,5 +1,5 @@
 ---
-title: sys.user_token (Transact-SQL) | Microsoft Docs
+title: sys.user_token (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -23,25 +23,24 @@ helpviewer_keywords:
 ms.assetid: be018103-5e57-43a4-9160-9bf420892aa7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a120fe3802235ff0d5548693d9bf7f4638ef5e42
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 42214bc08d0d4eb24c3b51f3edd8010ba8bdb0e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095550"
 ---
 # <a name="sysusertoken-transact-sql"></a>sys.user_token(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 토큰을 구성하는 데이터베이스 보안 주체마다 한 행씩 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**principal_id**|**int**|보안 주체의 ID입니다. 이 값은 데이터베이스 내에서 고유합니다.|  
 |**sid**|**varbinary(85)**|보안 주체가 데이터베이스 외부에 정의되어 있는 경우 보안 주체의 보안 식별자입니다. 예를 들어 이 식별자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인, Windows 로그인, Windows 그룹 로그인 또는 인증서에 매핑된 로그인이 될 수 있습니다. 이외의 경우 이 값은 NULL입니다.|  
 |**name**|**nvarchar (128)**|보안 주체의 이름입니다. 이 값은 데이터베이스 내에서 고유합니다.|  
-|**type**|**nvarchar (128)**|보안 주체 유형에 대한 설명입니다. 모든 형식에 매핑됩니다 **sid**합니다. 이 값은<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
+|**type**|**nvarchar (128)**|보안 주체 유형에 대한 설명입니다. 모든 형식에 매핑됩니다 **sid**합니다. 값은 다음 중 하나일 수 있습니다.<br /><br /> SQL USER<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> ROLE<br /><br /> APPLICATION ROLE<br /><br /> DATABASE ROLE<br /><br /> USER MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
 |**usage**|**nvarchar (128)**|보안 주체가 GRANT 또는 DENY 권한 평가에 참여하도록 지정하거나 인증자의 역할을 하도록 지정합니다.<br /><br /> 이 값은 다음 중 하나일 수 있습니다.<br /><br /> GRANT 또는 DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>관련 항목  

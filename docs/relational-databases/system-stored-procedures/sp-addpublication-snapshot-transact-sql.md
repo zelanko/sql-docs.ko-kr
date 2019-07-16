@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 35b18161e9d0022e0f7df29498a94c40646a5055
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4fbba559eceae58483419c0f1e3826b9db79bef5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061829"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -118,7 +117,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  스크립트 파일에 인증 정보를 저장하지 않도록 합니다. 보안 향상을 위해 런타임에 로그인 이름과 암호를 제공하는 것이 좋습니다.  
   
-`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 계정에 대 한 로그인이입니다. Azure SQL Database Managed Instance, SQL Server 계정을 사용 합니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 NULL입니다. 이 계정은 배포자에 에이전트 연결에 대해 항상 사용 됩니다. 새 스냅숏 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다.  
+`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 계정에 대 한 로그인이입니다. Azure SQL Database Managed Instance, SQL Server 계정을 사용 합니다. *job_login* 됩니다 **nvarchar(257)** , 기본값은 NULL입니다. 이 계정은 배포자에 에이전트 연결에 대해 항상 사용 됩니다. 새 스냅숏 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다.  
   
 > [!NOTE]
 >  에 대 한 비 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 지정 된 동일한 로그인 이어야 합니다 [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)합니다.  
@@ -136,7 +135,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_addpublication_snapshot** 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
 ## <a name="example"></a>예제  

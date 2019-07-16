@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 67dd1925-d672-4986-a85f-bce4fe832ef7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f5c7ca551fed96fb9c7149a894ecf78a441592c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b091f515af926fb17cea424b4f8875baf0fa83a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068417"
 ---
-# <a name="context-connection"></a>컨텍스트 연결
+# <a name="context-connection"></a>Context Connection
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   내부 데이터 액세스 문제는 상당히 일반적인 시나리오입니다. 즉, CLR(공용 언어 런타임) 저장 프로시저 또는 함수가 실행 중인 서버에 액세스하려는 경우입니다. 옵션 중 하나를 사용 하 여 연결을 만들 때 **System.Data.SqlClient.SqlConnection**로컬 서버를 가리키는 연결 문자열을 지정 하 고 연결을 엽니다. 이렇게 하려면 로그인에 사용할 자격 증명을 지정해야 합니다. 연결이 저장 프로시저나 함수를 다른 데이터베이스 세션에서 이루어지거나, 다른 **설정** 옵션을 별도 트랜잭션에서 임시 테이블에 나타나지 않는 등입니다. 사용자의 관리 저장 프로시저 또는 함수 코드가 SQL Server 서버 프로세스에서 실행되는 경우 다른 사용자가 해당 서버에 연결하고 SQL 문을 실행하여 이를 호출했기 때문입니다. 원할 해당 트랜잭션, 함께 해당 연결의 컨텍스트에서 실행 함수나 저장된 프로시저 **설정** 옵션 및 등입니다. 이를 컨텍스트 연결이라고 합니다.  
   

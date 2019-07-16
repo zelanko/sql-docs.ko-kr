@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a12cbf-78a3-4052-8604-3b29d07573fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 565cc98059c056dbb4fc73f3e0734229754aad93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c15a36678bf0bd1ff5fc933eb79bff96b6780b60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108341"
 ---
 # <a name="spcycleerrorlog-transact-sql"></a>sp_cycle_errorlog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +44,8 @@ sp_cycle_errorlog
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
- 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작 하 고, 현재 오류 로그로 바뀌었습니다 **errorlog.1')**; **errorlog.1')** 됩니다 **errorlog.2**합니다 **errorlog.2** 됩니다 **errorlog.3**등입니다. **sp_cycle_errorlog** 중지 하 고 서버를 시작 하지 않고 오류 로그 파일을 순환 시킬 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시작 하 고, 현재 오류 로그로 바뀌었습니다 **errorlog.1')** ; **errorlog.1')** 됩니다 **errorlog.2**합니다 **errorlog.2** 됩니다 **errorlog.3**등입니다. **sp_cycle_errorlog** 중지 하 고 서버를 시작 하지 않고 오류 로그 파일을 순환 시킬 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  실행 권한은 **sp_cycle_errorlog** 의 멤버로 제한 되는 **sysadmin** 고정된 서버 역할입니다.  

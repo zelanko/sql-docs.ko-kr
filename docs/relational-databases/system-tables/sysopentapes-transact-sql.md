@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c066ca9b-9cfd-46b1-90a3-5c8dc9e7b6ae
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ebbaef020fe1bc45b625d255523769bb1c54a4a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 813592ffa5b67a4926dff611c2ba0e0faf36d273
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029801"
 ---
 # <a name="sysopentapes-transact-sql"></a>sysopentapes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47677841"
 >  삭제할 수 없습니다는 **sysopentapes** 보기.  
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**openTape**|**nvarchar(64)**|열려 있는 테이프 장치의 물리적 파일 이름입니다. 열고 테이프 장치를 해제 하는 방법에 대 한 자세한 내용은 참조 하세요. [백업 &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/backup-transact-sql.md) 하 고 [복원 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).|  
   

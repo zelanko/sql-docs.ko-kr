@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 60a93880-62f1-4eda-a886-f046706ba90c
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66ea403b5abc5b8c84ad9a1465cb30d2007ac500
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b0dab1ca5f21ced6a54192a4b0173ead68fd6f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089160"
 ---
 # <a name="syssysdatabases-transact-sql"></a>sys.sysdatabases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47852291"
 |**reserved**|**datetime**|나중에 사용하도록 예약되어 있습니다.|  
 |**category**|**int**|복제에 사용되는 정보의 비트맵을 포함합니다.<br /><br /> 1 = 스냅숏 또는 트랜잭션 복제용으로 게시됩니다.<br /><br /> 2 = 스냅숏 또는 트랜잭션 게시를 구독합니다.<br /><br /> 4 = 병합 복제용으로 게시됩니다.<br /><br /> 8 = 병합 게시를 구독합니다.<br /><br /> 16 = 배포 데이터베이스입니다.|  
 |**cmptlevel**|**tinyint**|데이터베이스의 호환성 수준입니다. 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.|  
-|**filename**|**nvarchar(260)**|데이터베이스 주 파일의 운영 체제 경로 및 이름입니다.<br /><br /> **filename** 에 표시 됩니다 **dbcreator**합니다 **sysadmin**, CREATE ANY DATABASE 권한 또는 다음 권한 중 하나가 있는 피부 여자는 데이터베이스 소유자: ALTER ANY DATABASE 모든 정의 보기, 모든 데이터베이스를 만듭니다. 쿼리 경로 파일 이름을 반환할 합니다 [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) 호환성 보기 또는 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 보기.|  
+|**filename**|**nvarchar(260)**|데이터베이스 주 파일의 운영 체제 경로 및 이름입니다.<br /><br /> **filename** 에 표시 됩니다 **dbcreator**합니다 **sysadmin**, CREATE ANY DATABASE 권한 또는 다음 권한 중 하나가 있는 피부 여자는 데이터베이스 소유자: ALTER ANY DATABASE, 모든 데이터베이스를 만들고 모든 정의 보기. 쿼리 경로 파일 이름을 반환할 합니다 [sys.sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md) 호환성 보기 또는 [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) 보기.|  
 |**version**|**smallint**|데이터베이스가 만들어진 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드의 내부 버전 번호입니다. [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
 ## <a name="see-also"></a>관련 항목  

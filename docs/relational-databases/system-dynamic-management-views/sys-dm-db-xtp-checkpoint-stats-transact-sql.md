@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43474055a9dd9d5f8b71a0c2ec008b02f4b847ed
-ms.sourcegitcommit: e2fa721b6f46c18f1825dd1b0d56c0a6da1b2be1
+ms.openlocfilehash: 84cbfafdba3bca9b06f250ed9996f0a87e71a18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54211084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026861"
 ---
 # <a name="sysdmdbxtpcheckpointstats-transact-sql"></a>sys.dm_db_xtp_checkpoint_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ## <a name="includesssql15includessssql15-mdmd-and-later"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상.  
  다음 표에서 열을 설명 `sys.dm_db_xtp_checkpoint_stats`부터 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |last_lsn_processed|**bigint**|컨트롤러에 의해 표시 된 마지막 LSN입니다.|  
 |end_of_log_lsn|**numeric(38)**|로그 끝 LSN입니다.|  
@@ -87,7 +86,7 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  다음 표에서 열을 설명 `sys.dm_db_xtp_checkpoint_stats`에 대 한 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |log_to_process_in_bytes|**bigint**|스레드의 현재 LSN(로그 시퀀스 번호) 및 로그 끝 사이의 로그 바이트 수입니다.|  
 |total_log_blocks_processed|**bigint**|서버 시작 후 처리된 총 로그 블록 수입니다.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f09f33f4f153f21cfe7a3c8c538c2f272b3df77b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c344948b5eab2de6c7987494a29fe1131c47f35a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108411"
 ---
 # <a name="spcursorprepexec-transact-sql"></a>sp_cursorprepexec(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,14 +61,14 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *options*  
  커서 결과 집합 열의 설명을 반환하는 선택적 매개 변수입니다. *옵션* 다음이 필요 합니다 **int** 값을 입력 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  스크롤 옵션입니다. *scrollopt* 다음 중 하나를 필요로 하는 선택적 매개 변수 **int** 값을 입력 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -91,7 +90,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *ccopt*  
  동시성 제어 옵션입니다. *ccopt* 다음 중 하나를 필요로 하는 선택적 매개 변수 **int** 값을 입력 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS(이전의 LOCKCC)|  

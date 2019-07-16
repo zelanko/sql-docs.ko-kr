@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 86cbd39f-6dac-409a-9ce1-7dd54403f84b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c64b1ea3ecc283cdea92a5722c7a1dad120ecb50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cc7b3dd309dfac9e35021ca3234ca66483181e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074101"
 ---
 # <a name="migrating-db2-data-into-sql-server-db2tosql"></a>DB2 데이터를 SQL Server (DB2ToSQL)로 마이그레이션
 사용 하 여 변환된 된 개체를 성공적으로 동기화 한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 DB2에서 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "63272782"
   
 **데이터를 마이그레이션**  
   
-1.  다음을 확인합니다.  
+1.  다음 사항을 확인합니다.  
   
     -   DB2 공급자 SSMA를 실행 하는 컴퓨터에 설치 됩니다.  
   

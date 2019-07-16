@@ -20,21 +20,20 @@ helpviewer_keywords:
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac66d9cd1e7585304aeab182ddf6ccabc8560bc0
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: d5b7eea64a807af96094767ef5aca00167d5946c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067962"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>sys.query_store_query (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   쿼리 및 해당 관련 된 전체 집계 된 런타임 실행 통계에 대 한 정보를 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**query_id**|**bigint**|기본 키입니다.|  
 |**query_text_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_store_query_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|  
@@ -43,7 +42,7 @@ ms.locfileid: "59542103"
 |**batch_sql_handle**|**varbinary(64)**|문 일괄 처리 쿼리 ID의 일부입니다. 임시 테이블 또는 테이블 변수 쿼리가 참조 하는 경우에 채워집니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 반환 *NULL*합니다.|  
 |**query_hash**|**binary(8)**|논리 쿼리 트리를 기반으로 개별 쿼리의 MD5 해시입니다. 최적화 프로그램 힌트를 포함합니다.|  
 |**is_internal_query**|**bit**|쿼리는 내부적으로 생성 되었습니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
-|**query_parameterization_type**|**tinyint**|매개 변수화의 종류:<br /><br /> 0-없음<br /><br /> 1-사용자<br /><br /> 2-간단한<br /><br /> 3-강제<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
+|**query_parameterization_type**|**tinyint**|매개 변수화의 종류:<br /><br /> 0 - 없음<br /><br /> 1-사용자<br /><br /> 2-간단한<br /><br /> 3-강제<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|매개 변수화 형식에 대 한 텍스트 설명입니다.<br/>**참고:** Azure SQL Data Warehouse는 항상 반환 *None*합니다.|  
 |**initial_compile_start_time**|**datetimeoffset**|시작 시간을 컴파일하십시오.|  
 |**last_compile_start_time**|**datetimeoffset**|시작 시간을 컴파일하십시오.|  

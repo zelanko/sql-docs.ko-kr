@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: e962507d6e437974708aa042919ea6fb7bd632d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6f941e269bb9948dd39ba52db0ea4d0961c029a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033847"
 ---
 # <a name="median-mdx"></a>Median(MDX)
 
@@ -35,7 +34,7 @@ Median(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  숫자 식이 지정된 경우 지정된 숫자 식이 집합에 대해 계산된 다음 해당 계산에서 얻은 중앙값이 반환됩니다. 숫자 식이 지정되지 않은 경우 지정된 집합은 해당 집합에 포함된 멤버의 현재 컨텍스트에서 계산된 다음 해당 계산에서 얻은 중앙값이 반환됩니다.  
   
  중앙값은 정렬된 번호 집합의 가운데 값입니다. 중앙 값은 집합의 번호 개수로 나눈 번호 집합의 합계인 Mean 값과는 다릅니다. 중앙값은 집합에서 적어도 절반 이상의 값이 선택된 값보다 크지 않은 최소 값을 선택하여 결정됩니다. 집합 내 값의 개수가 홀수인 경우 중앙값은 단일 값을 따릅니다. 집합 내 값의 개수가 짝수인 경우 중앙값은 두 개의 중간 값의 합계를 2로 나눈 값을 따릅니다.  

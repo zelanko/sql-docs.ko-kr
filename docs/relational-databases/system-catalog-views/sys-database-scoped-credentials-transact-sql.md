@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 68e8aa6b-bcdc-42aa-93d8-d498f724c188
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1deb05541e46ec1007d234dc622b14ea1e20eb3f
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: 03687ea50b04c96aa4dbafab9d02d2bbc33a14b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079417"
 ---
 # <a name="sysdatabasescopedcredentials-transact-sql"></a>sys.database_scoped_credentials (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   각 데이터베이스에 한 행씩 반환 범위 데이터베이스의 자격 증명.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|데이터베이스의 이름 범위 자격 증명. 데이터베이스에서 고유 합니다.|  
+|name|**sysname**|데이터베이스의 이름 범위 자격 증명. 데이터베이스에서 고유 합니다.|  
 |credential_id|**int**|데이터베이스 범위 자격 증명의 ID입니다. 데이터베이스에서 고유 합니다.|  
 |principal_id|**int**|이 키를 소유하는 데이터베이스 보안 주체의 ID입니다.|  
 |credential_identity|**nvarchar(4000)**|사용할 ID의 이름입니다. 일반적으로 Windows 사용자입니다. 고유 하지 않아도 됩니다.|  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5f07e71e5b8314320f76be4496744da5a9d9e81a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6cde1f60274d1437517d89e48b111e9e7298b9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097370"
 ---
 # <a name="tupletostr-mdx"></a>TupleToStr(MDX)
 
@@ -32,7 +31,7 @@ TupleToStr(Tuple_Expression)
  *Tuple_Expression*  
  튜플을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수를 사용하여 튜플의 문자열 표현을 구문 분석을 위해 외부 함수에 전송할 수 있습니다. 반환 되는 문자열은 중괄호로 {} , 튜플에 명시적으로 정의 된 둘 이상의 경우 각 멤버는 쉼표로 구분 하 고 있습니다.  
   
 ## <a name="examples"></a>예  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 58dbe99a-288d-4f1c-9cd5-704d6836c945
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 68905871b28eae34a3adf91111be60ec10d1fff8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f01d93394caf538931fc60e9d3484792e225a74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074448"
 ---
 # <a name="refreshing-data-mds-add-in-for-excel"></a>데이터 새로 고침(Excel용 MDS 추가 기능)
 

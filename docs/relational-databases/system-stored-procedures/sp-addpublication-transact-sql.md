@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14e35b85b594cadf90a467c5017ac31033bc464b
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: f676acf9b3ee91bb5a1fb46cae2f7c693dc66983
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061819"
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,9 +89,9 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@restricted = ] 'restricted'` 이전 버전과 호환 되지 않습니다. 사용 하 여 *default_access*합니다.  
   
-`[ \@sync_method = ] _'sync_method'` 동기화 모드가입니다. *sync_method* 됩니다 **nvarchar(13)**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ \@sync_method = ] _'sync_method'` 동기화 모드가입니다. *sync_method* 됩니다 **nvarchar(13)** , 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**native**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다. *Oracle 게시자에 대해서는 지원 되지 않습니다*합니다.|  
 |**character**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. _Oracle 게시자에 대 한_ **문자** _스냅숏 복제에 대해서만 유효_합니다.|  
@@ -102,41 +101,41 @@ sp_addpublication [ @publication = ] 'publication'
 |**데이터베이스 스냅숏 문자**|데이터베이스 스냅숏에서 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. 데이터베이스 스냅숏은의 모든 버전에서 사용할 수 없습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.|  
 |NULL(기본값)|기본값으로 **네이티브** 에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. 에 대 한 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 경우 기본값은 **문자** 때의 값 *repl_freq* 됩니다 **스냅숏** 하 고 **concurrent_c** 다른 모든 경우.|  
   
-`[ \@repl_freq = ] 'repl_freq'` 복제 빈도의 형식인 *repl_freq* 됩니다 **nvarchar(10)**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ \@repl_freq = ] 'repl_freq'` 복제 빈도의 형식인 *repl_freq* 됩니다 **nvarchar(10)** , 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**연속** (기본값)|게시자가 모든 로그 기반 트랜잭션의 출력을 제공합니다. 에 대 한 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는이 게시자 *sync_method* 로 설정 **concurrent_c**합니다.|  
 |**snapshot**|게시자가 예약된 동기화 이벤트만 생성합니다. 에 대 한 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는이 게시자 *sync_method* 로 설정 **문자**합니다.|  
   
-`[ \@description = ] 'description'` 게시에 대 한 선택적 설명이입니다. *설명* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ \@description = ] 'description'` 게시에 대 한 선택적 설명이입니다. *설명* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다.  
   
-`[ \@status = ] 'status'` 게시 데이터를 사용할 수 있는지를 지정 합니다. *상태* 됩니다 **nvarchar(8)**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ \@status = ] 'status'` 게시 데이터를 사용할 수 있는지를 지정 합니다. *상태* 됩니다 **nvarchar(8)** , 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**active**|구독자가 게시 데이터를 즉시 사용할 수 있습니다.|  
 |**비활성** (기본값)|게시가 처음 작성될 때 구독자가 게시 데이터를 사용할 수 없습니다. 구독할 수는 있으나 구독이 처리되지 않습니다.|  
   
  *Oracle 게시자에 대해서는 지원 되지 않습니다*합니다.  
   
-`[ \@independent_agent = ] 'independent_agent'` 이 게시에 대 한 독립 실행형 배포 에이전트가 있는지를 지정 합니다. *independent_agent* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. 하는 경우 **true**,이 게시에 대 한 독립 실행형 배포 에이전트가 있습니다. 하는 경우 **false**게시는 공유 배포 에이전트를 사용 하 고 각 게시자 데이터베이스/구독자 데이터베이스 쌍에는 하나의 공유 에이전트가 있습니다.  
+`[ \@independent_agent = ] 'independent_agent'` 이 게시에 대 한 독립 실행형 배포 에이전트가 있는지를 지정 합니다. *independent_agent* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. 하는 경우 **true**,이 게시에 대 한 독립 실행형 배포 에이전트가 있습니다. 하는 경우 **false**게시는 공유 배포 에이전트를 사용 하 고 각 게시자 데이터베이스/구독자 데이터베이스 쌍에는 하나의 공유 에이전트가 있습니다.  
   
-`[ \@immediate_sync = ] 'immediate_synchronization'` 게시용 동기화 파일이 경우 스냅숏 에이전트가 실행 될 때마다 생성 됩니다 지정 합니다. *immediate_synchronization* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. 하는 경우 **true**, 동기화 파일이 만들어지거나 스냅숏 에이전트가 실행 될 때마다 다시 생성 합니다. 구독을 만들기 전에 스냅숏 에이전트가 완료되면 구독자가 즉시 동기화 파일을 얻을 수 있습니다. 새 구독은 스냅숏 에이전트를 가장 최근에 실행하여 생성된 최신 동기화 파일을 가져옵니다. *independent_agent* 있어야 **true** 에 대 한 *immediate_synchronization* 되도록 **true**합니다. 하는 경우 **false**, 새 구독이 있는 경우에 동기화 파일이 생성 됩니다. 호출 해야 합니다 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 기존 게시에 새 아티클을 증분 방식으로 추가 하면 각 구독에 대 한 합니다. 구독자는 스냅숏 에이전트가 시작되어 완료될 때까지는 구독 이후에 동기화 파일을 받을 수 없습니다.  
+`[ \@immediate_sync = ] 'immediate_synchronization'` 게시용 동기화 파일이 경우 스냅숏 에이전트가 실행 될 때마다 생성 됩니다 지정 합니다. *immediate_synchronization* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. 하는 경우 **true**, 동기화 파일이 만들어지거나 스냅숏 에이전트가 실행 될 때마다 다시 생성 합니다. 구독을 만들기 전에 스냅숏 에이전트가 완료되면 구독자가 즉시 동기화 파일을 얻을 수 있습니다. 새 구독은 스냅숏 에이전트를 가장 최근에 실행하여 생성된 최신 동기화 파일을 가져옵니다. *independent_agent* 있어야 **true** 에 대 한 *immediate_synchronization* 되도록 **true**합니다. 하는 경우 **false**, 새 구독이 있는 경우에 동기화 파일이 생성 됩니다. 호출 해야 합니다 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 기존 게시에 새 아티클을 증분 방식으로 추가 하면 각 구독에 대 한 합니다. 구독자는 스냅숏 에이전트가 시작되어 완료될 때까지는 구독 이후에 동기화 파일을 받을 수 없습니다.  
   
-`[ \@enabled_for_internet = ] 'enabled_for_internet'` 게시 인터넷을 사용 하도록 설정 되 고 구독자에 스냅숏 파일을 전송할 파일 전송 프로토콜 (FTP)를 사용할 수 있는 경우 결정을 지정 합니다. *enabled_for_internet* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. 하는 경우 **true**, 게시용 동기화 파일은 C:\Program Files\Microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp 디렉터리에 저장 합니다. 사용자는 반드시 Ftp 디렉터리를 만들어야 합니다.  
+`[ \@enabled_for_internet = ] 'enabled_for_internet'` 게시 인터넷을 사용 하도록 설정 되 고 구독자에 스냅숏 파일을 전송할 파일 전송 프로토콜 (FTP)를 사용할 수 있는 경우 결정을 지정 합니다. *enabled_for_internet* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. 하는 경우 **true**, 게시용 동기화 파일은 C:\Program Files\Microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp 디렉터리에 저장 합니다. 사용자는 반드시 Ftp 디렉터리를 만들어야 합니다.  
   
-`[ \@allow_push = ] 'allow_push'` 지정된 된 게시에 대 한 밀어넣기 구독을 만들 수 있습니다 하는 경우를 지정 합니다. *allow_push* 됩니다 **nvarchar(5)**, 기본값은 TRUE 허용 하는 밀어넣기 구독에 게시 합니다.  
+`[ \@allow_push = ] 'allow_push'` 지정된 된 게시에 대 한 밀어넣기 구독을 만들 수 있습니다 하는 경우를 지정 합니다. *allow_push* 됩니다 **nvarchar(5)** , 기본값은 TRUE 허용 하는 밀어넣기 구독에 게시 합니다.  
   
-`[ \@allow_pull = ] 'allow_pull'` 지정된 된 게시에 대 한 끌어오기 구독을 만들 수 있는지를 지정 합니다. *allow_pull* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. 하는 경우 **false**, 게시에 끌어오기 구독이 허용 되지 않습니다.  
+`[ \@allow_pull = ] 'allow_pull'` 지정된 된 게시에 대 한 끌어오기 구독을 만들 수 있는지를 지정 합니다. *allow_pull* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. 하는 경우 **false**, 게시에 끌어오기 구독이 허용 되지 않습니다.  
   
-`[ \@allow_anonymous = ] 'allow_anonymous'` 지정된 된 게시에 대 한 익명 구독을 만들 수 있는지를 지정 합니다. *allow_anonymous* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. 하는 경우 **true**를 *immediate_synchronization* 로 설정 해야 **true**합니다. 하는 경우 **false**, 게시에서 익명 구독이 허용 되지 않습니다.  
+`[ \@allow_anonymous = ] 'allow_anonymous'` 지정된 된 게시에 대 한 익명 구독을 만들 수 있는지를 지정 합니다. *allow_anonymous* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. 하는 경우 **true**를 *immediate_synchronization* 로 설정 해야 **true**합니다. 하는 경우 **false**, 게시에서 익명 구독이 허용 되지 않습니다.  
   
-`[ \@allow_sync_tran = ] 'allow_sync_tran'` 게시에서 즉시 업데이트 구독이 허용 되는지 여부를 지정 합니다. *allow_sync_tran* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. **true 이면** 됩니다 *Oracle 게시자에 대 한 지원 되지 않습니다*합니다.  
+`[ \@allow_sync_tran = ] 'allow_sync_tran'` 게시에서 즉시 업데이트 구독이 허용 되는지 여부를 지정 합니다. *allow_sync_tran* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. **true 이면** 됩니다 *Oracle 게시자에 대 한 지원 되지 않습니다*합니다.  
   
-`[ \@autogen_sync_procs = ] 'autogen_sync_procs'` 구독 업데이트에 대 한 동기화 저장된 프로시저가 게시자에서 생성 된 경우를 지정 합니다. *autogen_sync_procs* 됩니다 **nvarchar(5)**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ \@autogen_sync_procs = ] 'autogen_sync_procs'` 구독 업데이트에 대 한 동기화 저장된 프로시저가 게시자에서 생성 된 경우를 지정 합니다. *autogen_sync_procs* 됩니다 **nvarchar(5)** , 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**true**|업데이트 구독이 사용될 때 자동으로 설정됩니다.|  
 |**false**|업데이트 구독이 사용되지 않을 때나 Oracle 게시자에 대해서 자동으로 설정됩니다.|  
@@ -155,15 +154,15 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@pre_snapshot_script = ] 'pre_snapshot_script'` 에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *pre_snapshot_script* 됩니다 **nvarchar(255),** 이며 기본값은 NULL입니다. 배포 에이전트는 구독자에서 스냅숏을 적용할 때 복제된 개체 스크립트를 실행하기 전에 프리 스냅숏 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 배포 에이전트에서 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다.  
   
-`[ \@post_snapshot_script = ] 'post_snapshot_script'` 에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *post_snapshot_script* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다. 배포 에이전트는 초기 동기화 중 복제된 다른 모든 개체 스크립트 및 데이터가 적용된 후 포스트 스냅숏 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 배포 에이전트에서 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다.  
+`[ \@post_snapshot_script = ] 'post_snapshot_script'` 에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *post_snapshot_script* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 배포 에이전트는 초기 동기화 중 복제된 다른 모든 개체 스크립트 및 데이터가 적용된 후 포스트 스냅숏 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 배포 에이전트에서 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다.  
   
-`[ \@compress_snapshot = ] 'compress_snapshot'` 지정에 기록 되는 스냅숏 합니다  **\@alt_snapshot_folder** 위치가로 압축할 수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식으로 합니다. *compress_snapshot* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. **false** 는 스냅숏이 압축 되지 않으면 지정 **true** 는 스냅숏이 압축 됩니다 지정 합니다. 2GB(기가바이트)를 넘는 스냅숏 파일은 압축할 수 없습니다. 압축된 스냅숏 파일은 배포 에이전트가 실행되는 위치에 풀립니다. 압축 파일이 구독자에 풀리도록 압축 스냅숏에는 일반적으로 끌어오기 구독이 사용됩니다. 기본 폴더에 있는 스냅숏은 압축할 수 없습니다.  
+`[ \@compress_snapshot = ] 'compress_snapshot'` 지정에 기록 되는 스냅숏 합니다  **\@alt_snapshot_folder** 위치가로 압축할 수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식으로 합니다. *compress_snapshot* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. **false** 는 스냅숏이 압축 되지 않으면 지정 **true** 는 스냅숏이 압축 됩니다 지정 합니다. 2GB(기가바이트)를 넘는 스냅숏 파일은 압축할 수 없습니다. 압축된 스냅숏 파일은 배포 에이전트가 실행되는 위치에 풀립니다. 압축 파일이 구독자에 풀리도록 압축 스냅숏에는 일반적으로 끌어오기 구독이 사용됩니다. 기본 폴더에 있는 스냅숏은 압축할 수 없습니다.  
   
 `[ \@ftp_address = ] 'ftp_address'` 배포자 용 FTP 서비스의 네트워크 주소가입니다. *ftp_address* 됩니다 **sysname**, 기본값은 NULL입니다. 선택할 구독자의 배포 에이전트 또는 병합 에이전트에 대한 게시 스냅숏 파일의 위치를 지정합니다. 이 속성은 각 게시에 저장 되므로 각 게시에는 서로 다른 *ftp_address*합니다. 게시는 FTP를 사용하여 스냅숏 전파를 지원해야 합니다.  
   
 `[ \@ftp_port = ] ftp_port` 배포자 용 FTP 서비스의 포트 번호가입니다. *ftp_port* 됩니다 **int**, 기본값은 21입니다. 선택할 구독자의 배포 에이전트 또는 병합 에이전트에 대한 게시 스냅숏 파일의 위치를 지정합니다. 이 속성은 각 게시에 저장 되므로 각 게시는 고유한 *ftp_port*합니다.  
   
-`[ \@ftp_subdirectory = ] 'ftp_subdirectory'` 배포 에이전트 또는 게시에서 FTP를 사용 하 여 스냅숏 전파를 지 원하는 경우 선택할 구독자의 병합 에이전트에 사용할 수 있는 스냅숏 파일 위치를 지정 합니다. *ftp_subdirectory* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다. 이 속성은 각 게시에 저장 되므로 각 게시는 고유한 *ftp_subdirctory* 또는 NULL 값으로 표시 된 하위 디렉터리를 선택 합니다.  
+`[ \@ftp_subdirectory = ] 'ftp_subdirectory'` 배포 에이전트 또는 게시에서 FTP를 사용 하 여 스냅숏 전파를 지 원하는 경우 선택할 구독자의 병합 에이전트에 사용할 수 있는 스냅숏 파일 위치를 지정 합니다. *ftp_subdirectory* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 이 속성은 각 게시에 저장 되므로 각 게시는 고유한 *ftp_subdirctory* 또는 NULL 값으로 표시 된 하위 디렉터리를 선택 합니다.  
   
 `[ \@ftp_login = ] 'ftp_login'` FTP 서비스에 연결할 사용자 이름을 사용 됩니다. *ftp_login* 됩니다 **sysname**, 기본값은 ANONYMOUS입니다.  
   
@@ -173,11 +172,11 @@ sp_addpublication [ @publication = ] 'publication'
   
  **true 이면** 됩니다 *Oracle 게시자에 대 한 지원 되지 않습니다*합니다.  
   
-`[ \@allow_subscription_copy = ] 'allow_subscription_copy'` 사용 하거나이 게시를 구독 하는 구독 데이터베이스를 복사 하는 기능을 사용 하지 않도록 설정 합니다. *allow_subscription_copy* 됩니다**nvarchar(5)**, 기본값은 FALSE입니다.  
+`[ \@allow_subscription_copy = ] 'allow_subscription_copy'` 사용 하거나이 게시를 구독 하는 구독 데이터베이스를 복사 하는 기능을 사용 하지 않도록 설정 합니다. *allow_subscription_copy* 됩니다**nvarchar(5)** , 기본값은 FALSE입니다.  
   
 `[ \@conflict_policy = ] 'conflict_policy'` 지연된 업데이트 구독자 옵션을 사용 하는 경우 뒤에 충돌 해결 정책을 지정 합니다. *conflict_policy* 됩니다 **nvarchar(100)** 이며 기본값은 NULL 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**pub wins**|충돌 시 게시자 내용을 적용합니다.|  
 |**sub reinit**|구독을 다시 초기화합니다.|  
@@ -186,13 +185,13 @@ sp_addpublication [ @publication = ] 'publication'
   
  *Oracle 게시자에 대해서는 지원 되지 않습니다*합니다.  
   
-`[ \@centralized_conflicts = ] 'centralized_conflicts'` 충돌 레코드가 게시자에 저장 된 경우를 지정 합니다. *centralized_conflicts* 됩니다 **nvarchar(5)**, 기본값은 TRUE입니다. 하는 경우 **true**에 충돌 레코드가 게시자에 저장 됩니다. 하는 경우 **false**에 충돌 레코드가 충돌을 일으킨 구독자 및 게시자 양쪽 모두에서 저장 됩니다. *Oracle 게시자에 대해서는 지원 되지 않습니다*합니다.  
+`[ \@centralized_conflicts = ] 'centralized_conflicts'` 충돌 레코드가 게시자에 저장 된 경우를 지정 합니다. *centralized_conflicts* 됩니다 **nvarchar(5)** , 기본값은 TRUE입니다. 하는 경우 **true**에 충돌 레코드가 게시자에 저장 됩니다. 하는 경우 **false**에 충돌 레코드가 충돌을 일으킨 구독자 및 게시자 양쪽 모두에서 저장 됩니다. *Oracle 게시자에 대해서는 지원 되지 않습니다*합니다.  
   
 `[ \@conflict_retention = ] conflict_retention` 충돌 보존 기간을 일 단위로 지정 합니다. 피어 투 피어 트랜잭션 복제 및 지연 업데이트 구독에 대해 충돌 메타데이터가 저장되는 기간입니다. *conflict_retention* 됩니다 **int**, 기본값은 14입니다. *Oracle 게시자에 대해서는 지원 되지 않습니다*합니다.  
   
-`[ \@queue_type = ] 'queue_type'` 사용할 큐의 유형을 지정 합니다. *queue_type* 됩니다 **nvarchar(10)**, 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
+`[ \@queue_type = ] 'queue_type'` 사용할 큐의 유형을 지정 합니다. *queue_type* 됩니다 **nvarchar(10)** , 기본값은 NULL 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**sql**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 트랜잭션을 저장합니다.|  
 |NULL(기본값)|기본값으로 **sql**를 사용 하도록 지정 하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 트랜잭션을 저장 합니다.|  
@@ -213,9 +212,9 @@ sp_addpublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  *게시자* 해서는 안에 게시를 추가 하는 경우는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
   
-`[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` 경우 구독자가 구독을 초기화할 수이 게시에는 초기 스냅숏이 아닌 백업 으로부터 나타냅니다. *allow_initialize_from_backup* 됩니다 **nvarchar(5)**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` 경우 구독자가 구독을 초기화할 수이 게시에는 초기 스냅숏이 아닌 백업 으로부터 나타냅니다. *allow_initialize_from_backup* 됩니다 **nvarchar(5)** , 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**true**|백업으로부터 초기화할 수 있습니다.|  
 |**false**|백업으로부터 초기화할 수 없습니다.|  
@@ -236,7 +235,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 -   DDL 문이 새 열을 추가 하면 sysarticlecolumns 새 열을 포함 하지 않습니다. DML 문은 새 열에 대해 데이터 복제를 시도하지 않습니다. DDL을 복제하거나 복제하지 않는 경우가 모두 허용되므로 매개 변수가 인식됩니다.  
   
-`[ \@enabled_for_p2p = ] 'enabled_for_p2p'` 게시를에 피어 투 피어 복제 토폴로지에서 사용할 수 있습니다. *enabled_for_p2p* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. **true** 게시에서 피어 투 피어 복제를 지원함을 나타냅니다. 설정 하는 경우 *enabled_for_p2p* 에 **true**, 다음 제한 사항이 적용 됩니다.  
+`[ \@enabled_for_p2p = ] 'enabled_for_p2p'` 게시를에 피어 투 피어 복제 토폴로지에서 사용할 수 있습니다. *enabled_for_p2p* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. **true** 게시에서 피어 투 피어 복제를 지원함을 나타냅니다. 설정 하는 경우 *enabled_for_p2p* 에 **true**, 다음 제한 사항이 적용 됩니다.  
   
 -   *allow_anonymous* 있어야 **false**합니다.  
   
@@ -317,7 +316,7 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_addpublication** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
  같은 데이터베이스 개체를 사용 하는 게시에 게시 하는 게시가 여러 개 있으면 한 *replicate_ddl* 의 값 **1** ALTER TABLE, ALTER VIEW, ALTER PROCEDURE, ALTER FUNCTION 복제 및 ALTER TRIGGER DDL 문입니다. 그러나 ALTER TABLE DROP COLUMN DDL 문은 삭제된 열을 게시하는 모든 게시에 의해 복제됩니다.  

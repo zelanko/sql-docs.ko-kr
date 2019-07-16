@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5153980cae143feeb1917c89da640723716c8ef1
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 06b6b0f982b5c8d864e5024c8544f1f8e9af75ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091703"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>SQLSetScrollOptions 매핑
 응용 프로그램을 호출할 때 **SQLSetScrollOptions** 는 ODBC를 통한 *3.x* 드라이버 및 드라이버 지원 하지 않습니다 **SQLSetScrollOptions**에 대 한 호출  

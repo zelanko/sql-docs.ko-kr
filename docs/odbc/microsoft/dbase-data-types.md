@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc4b4c7a5c1074a62bf0e84d265840109f65ea55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096447"
 ---
 # <a name="dbase-data-types"></a>dBASE 데이터 형식
 다음 표에서 dBASE 데이터 형식을 ODBC SQL 데이터 형식에 매핑되는 방법을 보여 줍니다. Note 일부 ODBC SQL 데이터 형식이 지원 됩니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "63126316"
 |---------------------|--------------------|  
 |CHAR|SQL_VARCHAR|  
 |DATE|SQL_DATE|  
-|FLOAT[1]|SQL_DOUBLE|  
+|FLOAT [1]|SQL_DOUBLE|  
 |논리|SQL_BIT|  
 |메모|SQL_LONGVARCHAR|  
 |숫자 (BCD)|SQL_DOUBLE|  
@@ -51,7 +50,7 @@ ms.locfileid: "63126316"
   
  다음 표에서 데이터 형식으로 하 dBASE에 한계를 보여 줍니다.  
   
-|데이터 형식|Description|  
+|데이터 형식|설명|  
 |---------------|-----------------|  
 |CHAR|0 CHAR 열을 만들 지정 되지 않은 길이 254 바이트 열을 실제로 반환 합니다.|  
 |암호화된 데이터|DBASE 드라이버는 암호화 된 dBASE 테이블을 지원 하지 않습니다.|  

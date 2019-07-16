@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 35415502-68d0-40f6-993c-180e50004f1e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8cf36a02d81b8732d80beb7c97d025a74138cd43
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: d4a4105496fff9cf9fa9674495ec44f62b16adba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072760"
 ---
 # <a name="spadddistributor-transact-sql"></a>sp_adddistributor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

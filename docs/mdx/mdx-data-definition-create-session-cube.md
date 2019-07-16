@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 09e093b46127090d232f023a7c7277c398ec349c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038364"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX 데이터 정의 - CREATE SESSION CUBE
 
@@ -111,7 +110,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  \<유형 수준 >  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  서버 및 로컬 큐브와 달리 세션 큐브는 세션 큐브를 만든 세션이 끝나면 지속되지 않습니다. 세션 큐브는 해당 세션 큐브를 정의하는 정의와 측정값으로 정의됩니다. 다음과 같은 두 가지 유형의 차원이 있습니다.  
   
 -   원본 차원 - 하나 이상 원본 큐브의 일부인 차원입니다.  

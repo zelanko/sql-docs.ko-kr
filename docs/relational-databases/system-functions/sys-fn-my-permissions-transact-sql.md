@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122630"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,18 +46,18 @@ fn_my_permissions ( securable , 'securable_class' )
  보안 개체의 이름입니다. 보안 개체가 서버 또는 데이터베이스인 경우 이 값은 NULL로 설정해야 합니다. *securable*은 **sysname** 형식의 스칼라 식입니다. *보안* 다중 부분 이름일 수 있습니다.  
   
  '*securable_class*'  
- 권한을 나열할 보안 개체의 클래스 이름입니다. *securable_class* 되는 **sysname**합니다. *securable_class* 다음 중 하나 여야 합니다: 응용 프로그램 역할, 어셈블리, 비대칭 키, 인증서, 계약, 데이터베이스, ENDPOINT, FULLTEXT CATALOG, 로그인, 메시지 유형, 개체, REMOTE SERVICE BINDING, 역할, 경로, 스키마, 서버, 서비스 대칭 키, 유형, 사용자, XML 스키마 컬렉션입니다.  
+ 권한을 나열할 보안 개체의 클래스 이름입니다. *securable_class* 되는 **sysname**합니다. *securable_class* 다음 중 하나 여야 합니다. 응용 프로그램 역할, 어셈블리, 비대칭 키, 인증서, 계약, 데이터베이스, ENDPOINT, FULLTEXT CATALOG, 로그인, 메시지 유형, 개체, 원격 서비스 바인딩, 역할, 경로, 스키마, 서버, 서비스, 대칭 키, 형식, 사용자, XML 스키마 컬렉션.  
   
 ## <a name="columns-returned"></a>반환되는 열  
  다음 표에서 열을 나열 하는 **fn_my_permissions** 반환 합니다. 반환되는 각 행은 해당 보안 개체에 대해 현재 보안 컨텍스트가 가지는 사용 권한을 설명합니다. 쿼리가 실패하는 경우 NULL을 반환합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|나열된 사용 권한이 유효하게 부여되는 보안 개체의 이름입니다.|  
 |subentity_name|**sysname**|보안 개체가 열인 경우 열 이름이며 그렇지 않은 경우에는 NULL입니다.|  
 |permission_name|**nvarchar**|사용 권한의 이름입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 테이블 반환 함수는 지정된 보안 개체에 대해 해당 보안 주체가 가진 유효 사용 권한의 목록을 반환합니다. 유효 사용 권한은 다음 중 하나입니다.  
   
 -   보안 주체에게 직접 부여되고 거부되지 않은 사용 권한  
@@ -85,7 +84,7 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-effective-permissions-on-the-server"></a>1. 서버에 대한 유효 사용 권한 나열  
+### <a name="a-listing-effective-permissions-on-the-server"></a>A. 서버에 대한 유효 사용 권한 나열  
  다음 예에서는 서버에 대한 호출자의 유효 사용 권한 목록을 반환합니다.  
   
 ```  
@@ -93,7 +92,7 @@ SELECT * FROM fn_my_permissions(NULL, 'SERVER');
 GO  
 ```  
   
-### <a name="b-listing-effective-permissions-on-the-database"></a>2. 데이터베이스에 대한 유효 사용 권한 나열  
+### <a name="b-listing-effective-permissions-on-the-database"></a>2\. 데이터베이스에 대한 유효 사용 권한 나열  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대한 호출자의 유효 사용 권한 목록을 반환합니다.  
   
 ```  
@@ -102,7 +101,7 @@ SELECT * FROM fn_my_permissions (NULL, 'DATABASE');
 GO  
 ```  
   
-### <a name="c-listing-effective-permissions-on-a-view"></a>3. 뷰에 대한 유효 사용 권한 나열  
+### <a name="c-listing-effective-permissions-on-a-view"></a>3\. 뷰에 대한 유효 사용 권한 나열  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `vIndividualCustomer` 스키마에 있는 `Sales` 뷰에 대한 호출자의 유효 사용 권한 목록을 반환합니다.  
   
 ```  
@@ -112,7 +111,7 @@ SELECT * FROM fn_my_permissions('Sales.vIndividualCustomer', 'OBJECT')
 GO   
 ```  
   
-### <a name="d-listing-effective-permissions-of-another-user"></a>4. 다른 사용자의 유효 사용 권한 나열  
+### <a name="d-listing-effective-permissions-of-another-user"></a>4\. 다른 사용자의 유효 사용 권한 나열  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `Wanida` 스키마에 있는 `Employee` 테이블에 대한 데이터베이스 사용자 `HumanResources`의 유효 사용 권한 목록을 반환합니다. 호출자는 사용자 `Wanida`에 대한 IMPERSONATE 사용 권한이 필요합니다.  
   
 ```  
@@ -123,7 +122,7 @@ REVERT;
 GO  
 ```  
   
-### <a name="e-listing-effective-permissions-on-a-certificate"></a>5. 인증서에 대한 유효 사용 권한 나열  
+### <a name="e-listing-effective-permissions-on-a-certificate"></a>5\. 인증서에 대한 유효 사용 권한 나열  
  다음 예에서는 현재 데이터베이스에서 이름이 `Shipping47`인 인증서에 대한 호출자의 유효 사용 권한 목록을 반환합니다.  
   
 ```  
@@ -131,7 +130,7 @@ SELECT * FROM fn_my_permissions('Shipping47', 'CERTIFICATE');
 GO  
 ```  
   
-### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>6. XML 스키마 컬렉션에 대한 유효 사용 권한 나열  
+### <a name="f-listing-effective-permissions-on-an-xml-schema-collection"></a>6\. XML 스키마 컬렉션에 대한 유효 사용 권한 나열  
  다음 예제에서는 명명 된 XML 스키마 컬렉션에 호출자의 유효 사용 권한 목록을 반환 `ProductDescriptionSchemaCollection` 에 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스입니다.  
   
 ```  
@@ -141,7 +140,7 @@ SELECT * FROM fn_my_permissions('ProductDescriptionSchemaCollection',
 GO  
 ```  
   
-### <a name="g-listing-effective-permissions-on-a-database-user"></a>7. 데이터베이스 사용자에 대한 유효 사용 권한 나열  
+### <a name="g-listing-effective-permissions-on-a-database-user"></a>7\. 데이터베이스 사용자에 대한 유효 사용 권한 나열  
  다음 예에서는 현재 데이터베이스에서 이름이 `MalikAr`인 사용자에 대한 호출자의 유효 사용 권한 목록을 반환합니다.  
   
 ```  
@@ -149,7 +148,7 @@ SELECT * FROM fn_my_permissions('MalikAr', 'USER');
 GO  
 ```  
   
-### <a name="h-listing-effective-permissions-of-another-login"></a>8. 다른 로그인의 유효 사용 권한 나열  
+### <a name="h-listing-effective-permissions-of-another-login"></a>8\. 다른 로그인의 유효 사용 권한 나열  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 `WanidaBenshoof` 스키마에 있는 `Employee` 테이블에 대한 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 로그인 `HumanResources`의 유효 사용 권한 목록을 반환합니다. 호출자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `WanidaBenshoof`에 대한 IMPERSONATE 사용 권한이 필요합니다.  
   
 ```  

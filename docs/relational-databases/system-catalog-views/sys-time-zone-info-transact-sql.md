@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 3f51a9a4-75f8-4a11-9552-8bf6118b68da
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 427eb765a5310eeded49981f497f07eea8d98e51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69bfcbb7e1eeaf6b456a2e10d1f3bfcc581c3d76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106699"
 ---
-# <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (Transact-SQL)
+# <a name="systimezoneinfo-transact-sql"></a>sys.time_zone_info (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   지원 되는 표준 시간대에 대 한 정보를 반환합니다. 컴퓨터에 설치 하는 모든 표준 시간대는 다음 레지스트리 하이브에 저장 됩니다.  
-`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`에서 분할된 테이블 또는 인덱스를 만들 수 있습니다.  
+`KEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Time Zones`항목을 참조하세요.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

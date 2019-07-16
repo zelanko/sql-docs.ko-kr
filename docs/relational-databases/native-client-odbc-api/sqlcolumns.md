@@ -1,5 +1,5 @@
 ---
-title: SQLColumns | Microsoft Docs
+title: SQLColumns | Microsoft 문서
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 69d3af44-8196-43ab-8037-cdd06207b171
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab3a864d9f93700fdb9aa646bba0d244d1ea17c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 717dbb55691529e22f333a639f2d835d60431b98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113553"
 ---
 # <a name="sqlcolumns"></a>SQLColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "63014615"
   
  다음 표에서는 결과 집합에서 반환되는 열을 나열합니다.  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |DATA_TYPE|SQL_VARCHAR, SQL_VARBINARY 또는 SQL_WVARCHAR를 반환 합니다 **varchar (max)** 데이터 형식입니다.|  
 |TYPE_NAME|에 대해 "varchar", "varbinary" 또는 "nvarchar"를 반환 합니다 **varchar (max)** 를 **varbinary (max)** , 및 **nvarchar (max)** 데이터 형식입니다.|  
@@ -81,10 +80,10 @@ ms.locfileid: "63014615"
 ## <a name="sqlcolumns-support-for-sparse-columns"></a>스파스 열에 대한 SQLColumns 지원  
  두 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 결과 SQLColumns에 대 한 집합에 특정 열이 추가 되었습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|SS_IS_SPARSE|**Smallint**|열이 스파스 열이면 SQL_TRUE이며 그렇지 않으면 SQL_FALSE입니다.|  
-|SS_IS_COLUMN_SET|**Smallint**|열이를 **column_set** 열 이면 SQL_TRUE 고, 그렇지 않으면 SQL_FALSE입니다.|  
+|SS_IS_SPARSE|**smallint**|열이 스파스 열이면 SQL_TRUE이며 그렇지 않으면 SQL_FALSE입니다.|  
+|SS_IS_COLUMN_SET|**smallint**|열이를 **column_set** 열 이면 SQL_TRUE 고, 그렇지 않으면 SQL_FALSE입니다.|  
   
  ODBC 사양에 따라 SS_IS_SPARSE 및 SS_IS_COLUMN_SET 표시에 추가 된 모든 드라이버별 열 앞 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전 보다 이전 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], 그리고 ODBC 자체에서 지정한 모든 열 뒤 합니다.  
   
