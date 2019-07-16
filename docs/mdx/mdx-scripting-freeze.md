@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: cd652a9f308bd7a564a61d165f9c47875a900737
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4738dab411fe55808034a6d9d81a16994089ea74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138293"
 ---
 # <a name="mdx-scripting---freeze"></a>MDX 스크립팅 - FREEZE
 
@@ -32,7 +31,7 @@ FREEZE Subcube_Expression
  *Subcube_Expression*  
  하위 큐브를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **FREEZE** 문은 지정 된 하위 큐브에서 셀 값을 잠가서 MDX의 이후 문이 방지 이후 계산에 해당 값을 변경에서 스크립트를 전달 합니다.  
   
  다음 예에서 A와 B는 MDX 계산 스크립트의 하위 큐브를 나타냅니다.  

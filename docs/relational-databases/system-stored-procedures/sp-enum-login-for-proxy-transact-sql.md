@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-manager: jroth
-ms.openlocfilehash: fd5b172b7029376d6f9641552315fc64e734cc8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124678"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy(Transact-SQL)
 
@@ -54,7 +53,7 @@ sp_enum_login_for_proxy
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|프록시 ID입니다.|  
 |**proxy_name**|**sysname**|프록시 이름입니다.|  
@@ -62,7 +61,7 @@ sp_enum_login_for_proxy
 |**flags**|**int**|보안 주체의 유형입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인<br /><br /> **1** = 고정된 시스템 역할<br /><br /> **2** 데이터베이스 역할에 = **msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  매개 변수 없이 제공 하는 경우 **sp_enum_login_for_proxy** 모든 프록시에 대 한 인스턴스의 모든 로그인에 대 한 정보를 나열 합니다.  
   
  프록시 id 또는 프록시 이름을 제공 하면 **sp_enum_login_for_proxy** 프록시에 대 한 액세스 권한이 있는 로그인을 나열 합니다. 로그인 이름을 제공 하면 **sp_enum_login_for_proxy** 로그인에는 프록시에 대 한 액세스는 목록입니다.  
@@ -76,7 +75,7 @@ sp_enum_login_for_proxy
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-all-associations"></a>1\. 모든 연결 나열  
+### <a name="a-listing-all-associations"></a>A. 모든 연결 나열  
  다음 예에서는 현재 인스턴스의 로그인과 프록시 간에 설정된 모든 사용 권한을 나열합니다.  
   
 ```sql

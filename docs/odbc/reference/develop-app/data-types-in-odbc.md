@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 96e9b93ef3ef52feeab61c9f7a62ce757f682634
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9cfcc3a6d692f814ecf87f3a299d01f56592b549
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077006"
 ---
 # <a name="data-types-in-odbc"></a>ODBC의 데이터 형식
 ODBC는 데이터 형식의 두 집합을 사용합니다. SQL 데이터 형식 및 C 데이터 형식입니다. SQL 데이터 형식은 데이터 원본에 사용 됩니다 하 고 응용 프로그램의 C 코드에서 C 데이터 형식은 사용 됩니다.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 86efa9f7951277e6effdae9f59669fb7101f6f67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095866"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,17 +43,17 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @objname = ] 'object_name'` 테이블 및 열 또는 별칭 데이터 형식이 있는 규칙은 바인딩된 이름이입니다. *object_name* 됩니다 **nvarchar(776)**, 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다. 별칭 데이터 형식에서 규칙을 바인딩 해제하는 경우 같은 규칙을 가진 데이터 형식의 열 또한 바인딩 해제됩니다. 규칙이 직접 바인딩된 이 데이터 형식의 열은 영향을 받지 않습니다.  
+`[ @objname = ] 'object_name'` 테이블 및 열 또는 별칭 데이터 형식이 있는 규칙은 바인딩된 이름이입니다. *object_name* 됩니다 **nvarchar(776)** , 기본값은 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 열 이름과 별칭 데이터 형식 순으로 두 부분의 식별자를 확인합니다. 별칭 데이터 형식에서 규칙을 바인딩 해제하는 경우 같은 규칙을 가진 데이터 형식의 열 또한 바인딩 해제됩니다. 규칙이 직접 바인딩된 이 데이터 형식의 열은 영향을 받지 않습니다.  
   
 > [!NOTE]  
 >  *object_name* 대괄호를 포함할 수 있습니다 **[]** 구분 식별자 문자로 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
-`[ @futureonly = ] 'futureonly_flag'` 별칭 데이터 형식에서 규칙 바인딩 해제 하는 경우에 사용 됩니다. *futureonly_flag* 됩니다 **varchar(15)**, 기본값은 NULL입니다. 때 *futureonly_flag* 됩니다 **futureonly**, 해당 데이터 형식의 기존 열에 지정 된 규칙을 손실 되지 않습니다.  
+`[ @futureonly = ] 'futureonly_flag'` 별칭 데이터 형식에서 규칙 바인딩 해제 하는 경우에 사용 됩니다. *futureonly_flag* 됩니다 **varchar(15)** , 기본값은 NULL입니다. 때 *futureonly_flag* 됩니다 **futureonly**, 해당 데이터 형식의 기존 열에 지정 된 규칙을 손실 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  규칙 텍스트를 표시하려면 규칙 이름을 매개 변수로 사용하여 **sp_helptext**를 실행하십시오.  
   
  규칙을 바인딩 해제 되는 바인딩에 대 한 정보에서 제거 됩니다는 **sys.columns** 테이블에서 열에 규칙이 바인딩 되었습니다 합니다 **sys.types** 테이블 별칭 데이터 형식에 규칙이 바인딩 되었습니다.  
@@ -66,28 +65,28 @@ sp_unbindrule [ @objname = ] 'object_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-unbinding-a-rule-from-a-column"></a>1. 열에서 규칙 바인딩 해제  
+### <a name="a-unbinding-a-rule-from-a-column"></a>A. 열에서 규칙 바인딩 해제  
  다음 예에서는 `startdate` 테이블의 `employees` 열에서 규칙을 바인딩 해제합니다.  
   
 ```  
 EXEC sp_unbindrule 'employees.startdate';  
 ```  
   
-### <a name="b-unbinding-a-rule-from-an-alias-data-type"></a>2. 별칭 데이터 형식에서 규칙 바인딩 해제  
+### <a name="b-unbinding-a-rule-from-an-alias-data-type"></a>2\. 별칭 데이터 형식에서 규칙 바인딩 해제  
  다음 예에서는 `ssn` 별칭 데이터 형식에서 규칙을 바인딩 해제합니다. 해당 형식의 기존 열 및 향후 열에서 규칙을 바인딩 해제합니다.  
   
 ```  
 EXEC sp_unbindrule ssn;  
 ```  
   
-### <a name="c-using-futureonlyflag"></a>3. futureonly_flag 사용  
+### <a name="c-using-futureonlyflag"></a>3\. futureonly_flag 사용  
  다음 예에서는 기존 `ssn` 열에 영향을 주지 않고 `ssn` 별칭 데이터 형식에서 규칙을 바인딩 해제합니다.  
   
 ```  
 EXEC sp_unbindrule 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>4. 구분 식별자 사용  
+### <a name="d-using-delimited-identifiers"></a>4\. 구분 식별자 사용  
  다음 예제에서는에서 구분된 식별자를 사용 하는 *object_name* 매개 변수입니다.  
   
 ```  

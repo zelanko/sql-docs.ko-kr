@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d18169eb-89f7-4079-be70-a85713030191
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 146d1cdbb62c54acd9669b803b9d85dddf259601
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c72c5e3c8176b878265dcaa4a7b27544ed8946b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073790"
 ---
 # <a name="setup-dll-function-summary"></a>설정 DLL 함수 요약
 다음 표에서 설치 DLL 함수에 설명 합니다. 구문 및 각 함수에 대 한 의미 체계에 대 한 자세한 내용은 참조 하세요. [설치 DLL API 참조](../../../odbc/reference/syntax/setup-dll-api-reference.md)합니다.  

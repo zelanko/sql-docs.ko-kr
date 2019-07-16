@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 895eeeea22b305236d263827156c6717b458a96a
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090266"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,9 +32,9 @@ ms.locfileid: "53785924"
   확장 이벤트 엔진에 등록된 패키지를 모두 나열합니다.  
   
  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(256)**|패키지의 이름입니다. 설명은 패키지 자체에서 표시됩니다. Null을 허용하지 않습니다.|  
+|name|**nvarchar(256)**|패키지의 이름입니다. 설명은 패키지 자체에서 표시됩니다. Null을 허용하지 않습니다.|  
 |guid|**uniqueidentifier**|패키지를 식별하는 GUID입니다. Null을 허용하지 않습니다.|  
 |description|**nvarchar(3072)**|패키지 설명입니다. descriptionis는 패키지 작성자가 설정한 이며 null을 허용 하지 않습니다.|  
 |capabilities|**int**|해당 패키지의 기능을 설명하는 비트맵입니다. Null을 허용합니다.|  
@@ -46,7 +45,7 @@ ms.locfileid: "53785924"
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  확장 이벤트 엔진에 등록된 패키지는 이벤트, 이벤트 발생 시 취할 수 있는 동작 및 이벤트 데이터의 동기/비동기 처리 대상을 표시합니다.  
   
  이 패키지는 프로세스 주소 공간에 동적으로 로드될 수 있습니다. 패키지는 로드될 때 해당 패키지가 표시하는 모든 개체를 확장 이벤트 엔진에 등록합니다.  
@@ -58,7 +57,7 @@ ms.locfileid: "53785924"
 |보낸 사람|수행할 작업|관계|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|다 대 일|  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

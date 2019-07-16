@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_health_components (Transact-SQL) | Microsoft Docs
+title: sys.pdw_health_components (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: d5c7589b-09b0-4f12-ab84-feb3ec3fbaaa
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 69e5d36db3d5ed69b0a0ecc062a0692955b84398
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5205c1ac6248f5aadee01410b4ba5e8f00332a73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127494"
 ---
 # <a name="syspdwhealthcomponents-transact-sql"></a>sys.pdw_health_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   모든 구성 요소 및 시스템에 존재 하는 장치에 대 한 정보를 저장 합니다. 여기에 하드웨어, 저장소 장치 및 네트워크 장치 포함 됩니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |component_id|**int**|구성 요소 또는 장치의 고유 식별자입니다.<br /><br /> 이 보기에 대 한 키입니다.|NOT NULL|  
 |group_id|**정수**|이 구성 요소가 속한 논리적 구성 요소 그룹입니다. 참조 [sys.pdw_health_components (병렬 데이터 웨어하우스)](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)합니다.|NOT NULL|  

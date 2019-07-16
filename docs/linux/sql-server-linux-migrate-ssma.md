@@ -3,18 +3,17 @@ title: Linux에서 SQL Server로 데이터베이스 마이그레이션을 자동
 description: ''
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 251bc3af-ebce-4d97-adec-afc0e7fab6cc
-ms.openlocfilehash: a5af1b21ac90bb0749f36ac18ebad34e36853fda
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 6120229f939fce8686e6414b5fa65141088396c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129338"
 ---
 # <a name="automate-database-migration-to-linux-with-the-sql-server-migration-assistant"></a>SQL Server Migration Assistant를 사용 하 여 Linux로 데이터베이스 마이그레이션 자동화
 

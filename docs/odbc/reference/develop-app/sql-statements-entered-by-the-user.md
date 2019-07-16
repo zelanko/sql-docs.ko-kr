@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 28256433802d686f4362b2b733fc2d2b13e65302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78a1653df60b21cde772cbe32a688b3fdef80a42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149144"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086071"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>사용자가 입력한 SQL 문
 일반적으로 임시 분석을 수행 하는 응용 프로그램 사용자가 SQL 문을 직접 입력할 수 있도록 허용 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  

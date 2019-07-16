@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14e532d76f70f6a2d4fa623d80fa02e6c756348a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62688364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096140"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |TABLE_QUALIFIER|**sysname**|테이블 한정자 이름입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 이 필드는 NULL이 될 수 있습니다.|  
 |TABLE_OWNER|**sysname**|테이블 소유자 이름입니다. 이 필드는 항상 값을 반환합니다.|  
@@ -72,7 +71,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 |PRIVILEGE|**sysname**|사용할 수 있는 테이블 사용 권한 중의 하나입니다. 테이블 사용 권한은 다음 값(또는 구현이 정의될 때 데이터 원본에 의해 지원되는 다른 값) 중 하나일 수 있습니다.<br /><br /> SELECT = GRANTEE는 하나 이상의 열에 대한 데이터를 검색할 수 있습니다.<br /><br /> INSERT = GRANTEE는 하나 이상의 열에 대한 새 행에 데이터를 제공할 수 있습니다.<br /><br /> UPDATE = GRANTEE는 하나 이상의 열에 대한 기존 데이터를 수정할 수 있습니다.<br /><br /> DELETE = GRANTEE는 테이블에서 행을 제거할 수 있습니다.<br /><br /> REFERENCES = GRANTEE는 기본 키/외래 키 관계에 있는 외래 테이블의 열을 참조할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 기본 키/외래 키 관계는 테이블 제약 조건에 의해 정의됩니다.<br /><br /> 지정된 테이블 권한으로 GRANTEE에 지정된 동작의 범위는 데이터 원본에 따라 결정됩니다. 예를 들어 UPDATE 권한은 GRANTEE가 한 데이터 원본 내 테이블의 모든 열 그리고 다른 데이터 원본에서 GRANTOR가 UPDATE 권한을 가진 열만을 업데이트하도록 허용할 수 있습니다.|  
 |IS_GRANTABLE|**sysname**|다른 사용자에게 권한을 부여하는 GRANTEE를 허용할 것인지 여부를 나타냅니다. "권한 부여 권한(grant with grant)"이라고도 부릅니다. YES, NO 또는 NULL이 될 수 있습니다. 알 수 없는 값(또는 NULL)은 "권한 부여 권한"을 적용할 수 없는 데이터 원본을 의미합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_table_privileges 저장 프로시저는 ODBC에서 SQLTablePrivileges와 같습니다. 반환된 결과는 TABLE_QUALIFIER, TABLE_OWNER, TABLE_NAME 및 PRIVILEGE 순으로 정렬됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

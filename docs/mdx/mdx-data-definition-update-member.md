@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 829aabfa7028814e20bcecd47a53495f6dc6bc6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73a2bf2973d8c4f8f9bf9ac886728fb45250343f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62694829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038141"
 ---
 # <a name="mdx-data-definition---update-member"></a>MDX 데이터 정의 - UPDATE MEMBER
 
@@ -47,7 +46,7 @@ UPDATE MEMBER Cube_Name.Member_Name
  *Property_Value*  
  계산 멤버의 속성 값을 지정하는 유효한 스칼라 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  UPDATE MEMBER 문은 다른 계산에 따라 이 멤버의 상대적 우선 순위는 보존하면서 기존 계산 멤버를 업데이트합니다. 따라서 UPDATE MEMBER 문을 사용하여 SOLVEORDER를 변경할 수 없습니다.  
   
  UPDATE MEMBER 문은 큐브의 MDX 스크립트에 지정할 수 없습니다.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120226"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_change_users_login [ @Action = ] 'action'
  [ @Action= ] '*action*'  
  프로시저로 수행할 동작에 대해 설명합니다. *동작* 됩니다 **varchar(10)** 합니다. *작업* 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**Auto_Fix**|현재 데이터베이스의 sys.database_principals 시스템 카탈로그 뷰에 있는 사용자 항목을 동일한 이름의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 연결합니다. 동일한 이름의 로그인이 없으면 자동으로 생성됩니다. 결과를 조사 합니다 **Auto_Fix** 문을 올바른 링크가 실제로 생성 되었는지 확인 합니다. 사용 하지 마세요 **Auto_Fix** 보안과 관련 된 경우에서.<br /><br /> 사용 하는 경우 **Auto_Fix**를 지정 해야 *사용자* 하 고 *암호* 로그인 아직 없는 경우 지정 해야 *사용자*있지만 *암호* 무시 됩니다. *로그인* NULL 이어야 합니다. *사용자* 현재 데이터베이스에서 유효한 사용자 여야 합니다. 로그인에는 다른 사용자가 매핑될 수 없습니다.|  
 |**보고서**|현재 데이터베이스에서 어떠한 로그인에도 연결되지 않은 사용자와 해당 SID(보안 식별자)를 나열합니다. *사용자*, *로그인*, 및 *암호* NULL 이거나 지정 되지 않았습니다.<br /><br /> 시스템 테이블을 사용 하 여 쿼리를 사용 하 여 보고서 옵션을 바꾸려면의 항목과 비교 **sys.server_prinicpals** 의 항목과 **sys.database_principals**합니다.|  
@@ -70,12 +69,12 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |UserName|**sysname**|데이터베이스 사용자 이름입니다.|  
 |UserSID|**varbinary(85)**|사용자의 보안 식별자입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_change_users_login을 사용하여 현재 데이터베이스의 데이터베이스 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인과 연결할 수 있습니다. 사용자에 대한 로그인이 변경된 경우 sp_change_users_login을 통해 사용자 권한을 그대로 유지한 채 새 로그인에 사용자를 연결할 수 있습니다. 새 *로그인* sa가 될 수 없습니다 하며 *사용자*dbo, guest 또는 INFORMATION_SCHEMA 사용자 일 수 없습니다.  
   
  sp_change_users_login은 데이터베이스 사용자를 Windows 수준 보안 주체, 인증서 또는 비대칭 키에 매핑하는 데 사용할 수 없습니다.  
@@ -89,7 +88,7 @@ sp_change_users_login [ @Action = ] 'action'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-showing-a-report-of-the-current-user-to-login-mappings"></a>1\. 현재 사용자와 로그인 간의 매핑에 대한 보고서 표시  
+### <a name="a-showing-a-report-of-the-current-user-to-login-mappings"></a>A. 현재 사용자와 로그인 간의 매핑에 대한 보고서 표시  
  다음 예에서는 현재 데이터베이스의 사용자 및 해당 사용자의 SID(보안 식별자)에 대한 보고서를 생성합니다.  
   
 ```  

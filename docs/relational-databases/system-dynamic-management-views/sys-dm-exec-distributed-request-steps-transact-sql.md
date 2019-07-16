@@ -21,21 +21,20 @@ helpviewer_keywords:
 ms.assetid: 1954541d-b716-4e03-8fcc-7022f428e01d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27df857e8863272f2b502c4950b4cc36ad936978
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b5c40ce6d1c7b7ef85f24fc8032559e000d89be1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097819"
 ---
 # <a name="sysdmexecdistributedrequeststeps-transact-sql"></a>sys.dm_exec_distributed_request_steps (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   지정 된 PolyBase 요청 또는 쿼리를 작성 하는 모든 단계에 대 한 정보를 보유 합니다. 쿼리 단계 마다 하나의 행을 나열합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**int**|execution_id 및 step_index이이 보기에 대 한 키를 구성 합니다. 요청과 연결 된 고유 숫자 id입니다.|ID를 참조 하세요 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)합니다.|  
 |step_index|**int**|요청을 구성 하는 단계의 순서에서이 단계의 위치입니다.|0 (n-1)를 n 단계를 사용 하 여 요청입니다.|  

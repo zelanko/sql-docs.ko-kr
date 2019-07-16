@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55d09344-6682-40f6-b634-036b134ff650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f7d21a1166868603f9389ab4ef5c5b3448b0312
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d0016a2849feb5656cb3cd6dd46eff444f37058
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118757"
 ---
 # <a name="bound-descriptor-records"></a>바인딩된 설명자 레코드
 Null 값을 더 이상 포함 되도록 설명자 레코드의 SQL_DESC_DATA_PTR 필드가 설정 하는 응용 프로그램, 레코드 라고 *바인딩된*합니다.  

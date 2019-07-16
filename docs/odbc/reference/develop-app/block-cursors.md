@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1a92b5d8-7c6e-4ce5-8c99-600a387026aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc62e7b5225c434bac33630f2f0cf8f39c72bfc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e0ea6ff655140c979f400f67a59cd7259bac9e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118815"
 ---
 # <a name="block-cursors"></a>블록 커서
 대부분의 응용 프로그램 네트워크를 통해 데이터를 가져오는 시간을 투입 합니다. 이 시간 부분 실제로 네트워크를 통해 데이터를 가져오는 데 소요 된 하 고 데이터 행을 요청 하려면 드라이버에 의해 수행 된 호출 등의 일부 네트워크 오버 헤드를 소비 됩니다. 응용 프로그램은 효율적으로 사용 하는 경우 두 번째 시간을 줄일 수 있습니다 *블록* 하거나 *fat* *커서* 한 번에 둘 이상의 행을 반환할 수 있는 합니다.  

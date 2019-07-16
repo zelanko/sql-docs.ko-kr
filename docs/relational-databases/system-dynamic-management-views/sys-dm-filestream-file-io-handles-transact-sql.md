@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25af20743a98ad674e24cf4ae028185b024697e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103305"
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   NSO(네임스페이스 소유자)가 인식하는 파일 핸들을 표시합니다. 클라이언트를 사용 하 여 가져온 Filestream 핸들 **OpenSqlFilestream** 이 뷰에 표시 됩니다.  
   
-|Column|형식|Description|  
+|Column|type|설명|  
 |------------|----------|-----------------|  
 |**handle_context_address**|**varbinary(8)**|클라이언트의 핸들과 연결 된 내부 NSO 구조의 주소를 보여 줍니다. Null을 허용합니다.|  
 |**creation_request_id**|**int**|이 핸들을 만드는 데 사용된 REQ_PRE_CREATE I/O 요청의 필드를 표시합니다. Null을 허용하지 않습니다.|  

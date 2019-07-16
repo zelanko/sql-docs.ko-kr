@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 247c834abfbc47485628702bf4cd87c7662c44a8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4aa4120db7b45cb0b3a7d7a10bb53931b8300d9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494275"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088486"
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_add_proxy
   
 `[ @enabled = ] is_enabled` 프록시 사용 되는지 여부를 지정 합니다. 합니다 *is_enabled* 플래그가 **tinyint**, 기본값은 1 사용 하 여 합니다. 때 *is_enabled* 됩니다 **0**, 프록시를 사용 하지 않는 및 작업 단계에서 사용할 수 없습니다.  
   
-`[ @description = ] 'description'` 프록시의 설명입니다. 설명이 **nvarchar(512)**, 기본값은 NULL입니다. 설명을 통해 프록시를 문서화할 수 있으며 그렇지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 사용되지 않습니다. 그러므로 이 인수는 선택 사항입니다.  
+`[ @description = ] 'description'` 프록시의 설명입니다. 설명이 **nvarchar(512)** , 기본값은 NULL입니다. 설명을 통해 프록시를 문서화할 수 있으며 그렇지 않을 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 사용되지 않습니다. 그러므로 이 인수는 선택 사항입니다.  
   
 `[ @credential_name = ] 'credential_name'` 프록시에 대 한 자격 증명의 이름입니다. 합니다 *credential_name* 됩니다 **sysname**, 기본값은 NULL 사용 하 여 합니다. 어느 *credential_name* 하거나 *credential_id* 지정 해야 합니다.  
   
@@ -65,7 +64,7 @@ sp_add_proxy
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 저장된 프로시저 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 하위 시스템 이외의 하위 시스템과 연관된 작업 단계의 보안을 관리합니다. 각 프록시는 보안 자격 증명에 해당됩니다. 프록시에서 원하는 수만큼의 하위 시스템에 액세스할 수 있습니다.  

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6bb24928-0f3e-4119-beda-cfd04a44a3eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79bd2fdf07b568706621823182776cf540320e06
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3828ebeff5740d066a55d85f5676ffdbf6e613af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107069"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>클라이언트에서 서버로 수행되는 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "47856071"
 |7|날짜가 현재 날짜로 설정됩니다.|  
 |8|시간이 UTC로 변환됩니다. 이 변환이 수행되는 동안 오류가 발생하면 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다.|  
 |9|문자열이 ISO 리터럴로 구문 분석되고 대상 형식으로 변환됩니다. 실패하면 문자열이 OLE 날짜 리터럴(여기에도 시간 구성 요소가 포함되어 있음)로 구문 분석되고 OLE 날짜(DBTYPE_DATE)에서 대상 형식으로 변환됩니다.<br /><br /> 대상 유형이 DBTIMESTAMP, **smalldatetime**, **datetime**또는 **datetime2**인 경우 문자열은 날짜, 시간 또는 **datetime2** 리터럴 구문 또는 OLE에서 인식할 수 있는 구문을 준수해야 합니다. 문자열이 날짜 리터럴인 경우 모든 시간 구성 요소는 0으로 설정됩니다. 문자열이 시간 리터럴인 경우 날짜는 현재 날짜로 설정됩니다.<br /><br /> 다른 모든 대상 유형의 경우 문자열은 대상 유형의 리터럴 구문을 준수해야 합니다.|  
-|10|데이터 손실을 유발하는 소수 자릿수 초 잘림이 발생하면 DBSTATUS_E_DATAOVERFLOW가 설정됩니다. 문자열 변환의 경우 문자열이 ISO 구문을 준수하는 경우에만 오버플로 검사가 가능합니다. 문자열이 OLE 날짜 리터럴인 경우에는 소수 자릿수 초가 반올림됩니다.<br /><br /> DBTIMESTAMP (datetime)에서 smalldatetime로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서는 DBSTATUS_E_DATAOVERFLOW 오류를 발생 시키는 대신 초 값을 자동으로 자릅니다.|  
+|10|데이터 손실을 유발하는 소수 자릿수 초 잘림이 발생하면 DBSTATUS_E_DATAOVERFLOW가 설정됩니다. 문자열 변환의 경우 문자열이 ISO 구문을 준수하는 경우에만 오버플로 검사가 가능합니다. 문자열이 OLE 날짜 리터럴인 경우에는 소수 자릿수 초가 반올림됩니다.<br /><br /> DBTIMESTAMP(datetime)에서 smalldatetime으로 변환하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서는 DBSTATUS_E_DATAOVERFLOW 오류를 발생시키는 대신 초 값을 자동으로 자릅니다.|  
 |11|소수 자릿수 초의 자릿수(소수 자릿수)는 아래 표를 기준으로 대상 열의 크기에 따라 결정됩니다. 테이블의 범위보다 열 크기가 큰 경우 소수 자릿수가 9인 것으로 간주됩니다. 이 변환은 소수 자릿수 초의 자릿수를 OLE DB에서 허용하는 최대값인 9자리까지 허용합니다.<br /><br /> 그러나 원본 형식이 DBTIMESTAMP이고 소수 자릿수 초가 0인 경우에는 소수 자릿수 초의 자릿수 또는 소수점이 생성되지 않습니다. 이 동작은 이전 OLE DB 공급자를 사용하여 개발된 애플리케이션과의 호환성을 보장합니다.<br /><br /> 열 크기가 ~0이면 OLE DB에 크기 제한이 없음을 나타냅니다(DBTIMESTAMP의 3자리 규칙이 적용되지 않는 경우 9자리).|  
 |12|DBTYPE_DATE에 대한 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. 소수 자릿수 초는 0으로 잘립니다.|  
 |13|DBTYPE_FILETIME에 대한 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전의 변환 의미가 유지됩니다. Windows FileTimeToSystemTime API를 사용하는 경우 소수 자릿수 초의 전체 자릿수는 1밀리초로 제한됩니다.|  

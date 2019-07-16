@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 302a0ea8c058eb3e69d89c2fc1e742af1965c4ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17bf8ff345e2869d6189491cbf09df49312e1f75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106665"
 ---
 # <a name="systraceevents-transact-sql"></a>sys.trace_events(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47628301"
  이러한 추적 이벤트에 대 한 자세한 내용은 참조 하세요. [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)합니다.  
   
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|이벤트의 고유 ID입니다. 이 열은 또한에 **sys.trace_event_bindings** 하 고 **sys.trace_subclass_values** 카탈로그 뷰.|  
 |**category_id**|**smallint**|이벤트의 범주 ID입니다. 이 열은 또한에 **sys.trace_categories** 카탈로그 뷰에 있습니다.|  
@@ -46,7 +45,7 @@ ms.locfileid: "47628301"
 ## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [개체 카탈로그 뷰 &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [sys.traces &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-traces-transact-sql.md)   
  [sys.trace_categories &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-trace-categories-transact-sql.md)   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c48b4303-6f39-4b5e-9134-1113cdef0e43
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aad19b3cb15c02e5db8e2635641a88f298c898c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca15d3946dffe67c28d285c95f62d8956b276fb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094148"
 ---
 # <a name="installation-and-configuration-components-reference"></a>설치 및 구성 구성 요소 참조
 > [!NOTE]  

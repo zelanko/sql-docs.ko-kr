@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3413cf3c0e316e25ad52cc35ba348cab1694ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cd31a45ed891a8dc95f4f23981d4b626a6095b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537412"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024544"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 함수
 **규칙**  
@@ -52,7 +51,7 @@ BOOL SQLRemoveDriverManager(
 ## <a name="diagnostics"></a>진단  
  때 **SQLRemoveDriverManager** 연결 된 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에서  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 이 함수의 컨텍스트에서 각각 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생 했습니다에 대 한 특정 설치 관리자 오류가 없습니다.|  
 |ODBC_ERROR_COMPONENT_NOT_FOUND|레지스트리에서 찾을 수 없습니다 하는 구성 요소|설치 관리자는 레지스트리에 없는 또는 레지스트리에서 찾을 수 없습니다 때문에 드라이버 관리자 정보를 제거 하지 못했습니다.|  
@@ -84,8 +83,8 @@ BOOL SQLRemoveDriverManager(
 |ODBC32DLL|ODBCCP32.DLL|  
 |ODBCCR32.DLL|ODBC16GT.DLL|  
 |ODBCCU32.DLL|ODBC32GT.DLL|  
-|ODBCINT.DLL|DS16GT.DLL|  
-|ODBCTRAC.DLL|DS32GT.DLL|  
+|ODBCINT 합니다. DLL|DS16GT.DLL|  
+|ODBCTRAC 합니다. DLL|DS32GT.DLL|  
 |MSVCRT40.DLL|ODBCAD32.EXE|  
 |ODBCCP32.CPL||  
   

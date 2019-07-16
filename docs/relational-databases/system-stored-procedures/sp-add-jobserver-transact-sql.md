@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6514f5378c04652ec62cbad0b4899f28a2ade672
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fecd704d5f6b6f0384ecb17787bd8423852356ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078197"
 ---
 # <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
-`[ @server_name = ] 'server'` 작업 대상으로 하는 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)**, (local)의 기본값을 사용 하 여 '. *서버* 일 수 있습니다 **(로컬)** 로컬 서버 또는 기존 대상 서버의 이름입니다.  
+`[ @server_name = ] 'server'` 작업 대상으로 하는 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)** , (local)의 기본값을 사용 하 여 '. *서버* 일 수 있습니다 **(로컬)** 로컬 서버 또는 기존 대상 서버의 이름입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -56,7 +55,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **@automatic_post** 에 존재 **sp_add_jobserver**, 인수 아래 나열 되지 않으면 있지만. **@automatic_post** 내부 용도로 예약 되어 있습니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
@@ -76,7 +75,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-assigning-a-job-to-the-local-server"></a>1. 로컬 서버에 작업 할당  
+### <a name="a-assigning-a-job-to-the-local-server"></a>A. 로컬 서버에 작업 할당  
  다음 예에서는 로컬 서버에서 실행할 `NightlyBackups` 작업을 할당합니다.  
   
 > [!NOTE]  
@@ -91,7 +90,7 @@ EXEC dbo.sp_add_jobserver
 GO  
 ```  
   
-### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>2. 다른 서버에서 실행할 작업 할당  
+### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>2\. 다른 서버에서 실행할 작업 할당  
  다음 예에서는 `Weekly Sales Backups` 다중 서버 작업을 `SEATTLE2` 서버에 할당합니다.  
   
 > [!NOTE]  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c8073b4e02e1eff910654bba635819b94b5cf5b2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fb556a464077092cacd7107a8c2b4b124c6db707
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124425"
 ---
 # <a name="spexpiredsubscriptioncleanup-transact-sql"></a>sp_expired_subscription_cleanup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_expired_subscription_cleanup** 모든 유형의 복제에 사용 됩니다.  
   
  **sp_expired_subscription_cleanup** 만료 된 구독 정리 작업을 검색 하 고 24 시간 마다 게시 데이터베이스에서 만료 된 구독을 제거 하 여 실행 됩니다. 구독이 최신이 아닌 경우 즉, 보존 기간 동안 게시자와 동기화하지 않은 경우 게시가 만료된 것으로 선언되며 게시자에서 구독의 추적이 정리됩니다. 자세한 내용은 [Subscription Expiration and Deactivation](../../relational-databases/replication/subscription-expiration-and-deactivation.md)을 참조하세요.  

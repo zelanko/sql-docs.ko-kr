@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4535b837d81db10f41f1445a7051678ce4fdd688
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b852564510c6b5918c781e0c75e84e3b30aecd44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088360"
 ---
 # <a name="nextmember-mdx"></a>NextMember(MDX)
 
@@ -32,7 +31,7 @@ Member_Expression.NextMember
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **NextMember** 함수는 지정 된 멤버를 포함 하는 동일한 수준에서 다음 멤버를 반환 합니다.  
   
 ## <a name="example"></a>예제  

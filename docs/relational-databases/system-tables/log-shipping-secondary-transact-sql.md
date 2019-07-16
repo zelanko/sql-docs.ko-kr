@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c65e57f65311a01a337594b702cc4dc19d35f321
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 687f9f7441b7d77ea191047ef22491728ba81047
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095819"
 ---
 # <a name="logshippingsecondary-transact-sql"></a>log_shipping_secondary(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   보조 ID 당 레코드 하나를 저장합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**secondary_id**|**uniqueidentifier**|로그 전달 구성의 보조 서버의 ID입니다.|  
 |**primary_server**|**sysname**|로그 전달 구성의 SQL Server 데이터베이스 엔진에 대한 주 인스턴스의 이름입니다.|  
@@ -45,7 +44,7 @@ ms.locfileid: "47815176"
 |**last_copied_file**|**nvarchar(500)**|보조 서버로 복사된 마지막 백업 파일의 파일 이름입니다.|  
 |**last_copied_date**|**datetime**|보조 서버에 수행된 마지막 복사 작업의 시간과 날짜입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  지정된 된 주 데이터베이스에 대 한 동일한 보조 서버의 여러 보조 데이터베이스에서 일부 설정을 공유 합니다 **log_shipping_secondary** 테이블입니다. 이러한 보조 데이터베이스 중 하나에서 공유된 설정이 변경되면 해당 설정은 모든 데이터베이스에서도 변경됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe641df85802baab70efa514179f5abbeaea8951
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f79f9f94d56c900d879fce06646b401f735e0bd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140576"
 ---
 # <a name="pathname-transact-sql"></a>PathName(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Always On 가용성 데이터베이스가 속하는 경우 그룹의 값 *use_replica_computer_name* 의 출력에 다음과 같은 영향을 합니다 **PathName** 함수:  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |지정 안 됨|함수가 경로에 VNN(가상 네트워크 이름)을 반환합니다.|  
 |0|함수가 경로에 VNN(가상 네트워크 이름)을 반환합니다.|  
@@ -73,14 +72,14 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
 ## <a name="return-value"></a>반환 값  
  반환되는 값은 BLOB의 정규화된 논리적 또는 NETBIOS 경로입니다. PathName은 IP 주소를 반환하지 않습니다. FILESTREAM BLOB가 만들어지지 않은 경우 NULL이 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ROWGUID 열은 PathName을 호출하는 모든 쿼리에 표시되어야 합니다.  
   
  FILESTREAM BLOB는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해서만 만들 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-reading-the-path-for-a-filestream-blob"></a>1. FILESTREAM BLOB의 경로 읽기  
+### <a name="a-reading-the-path-for-a-filestream-blob"></a>A. FILESTREAM BLOB의 경로 읽기  
  다음 예에서는 `PathName` 변수에 `nvarchar(max)`을 할당합니다.  
   
 ```sql  
@@ -92,7 +91,7 @@ SET @PathName = (
     );  
 ```  
   
-### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>2. 테이블에 FILESTREAM BLOB 경로 표시  
+### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>2\. 테이블에 FILESTREAM BLOB 경로 표시  
  다음 예에서는 3개의 FILESTREAM BLOB에 대한 경로를 만들고 표시합니다.  
   
 ```sql  

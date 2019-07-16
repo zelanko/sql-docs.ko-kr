@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9355fb1b-5cd4-49a2-839c-4b06057ea6c4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e452278606601fd0313bedad65d18597ed5f8500
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b92c8032ec26ba1c5992659714a4ef1f73052e08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62926954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075362"
 ---
 # <a name="global-settings-output-window-mysqltosql"></a>전역 설정 (출력 창) (MySQLToSQL)
 사용 된 **전역 설정** SSMA에 대 한 설정을 지정 하려면 대화 상자.  

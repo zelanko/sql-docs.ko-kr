@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b2fc4ce1-0a8e-44d2-b206-7dc7b258d8c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fff543b074936f8bf1d69d841a1e81e402e9b0ae
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f5a68160c8aee1bcb399513051e1f4cc35cea970
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085211"
 ---
 # <a name="sphelpschedule-transact-sql"></a>sp_help_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +57,13 @@ sp_help_schedule
 ## <a name="result-sets"></a>결과 집합  
  이 프로시저는 다음 결과 집합을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**schedule_id**|**int**|일정 ID입니다.|  
 |**schedule_uid**|**uniqueidentifier**|일정에 대한 식별자입니다.|  
 |**schedule_name**|**sysname**|일정 이름입니다.|  
 |**enabled**|**int**|일정을 사용할지 (**1**) 또는 사용 안 함 (**0**).|  
-|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = Once<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월을 기준으로 **freq_interval**<br /><br /> **64** = SQLServerAgent 서비스를 시작할 때 실행 합니다.|  
+|**freq_type**|**int**|작업을 실행할 때를 지정하는 값입니다.<br /><br /> **1** = 1<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월을 기준으로 **freq_interval**<br /><br /> **64** = SQLServerAgent 서비스를 시작할 때 실행 합니다.|  
 |**freq_interval**|**int**|작업이 실행되는 요일입니다. 값의 값에 따라 달라 집니다 **freq_type**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
 |**freq_subday_type**|**int**|에 대 한 단위 **freq_subday_interval**합니다. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
 |**freq_subday_interval**|**int**|수가 **freq_subday_type** 작업의 각 실행 간에 발생 하는 기간. 자세한 내용은 [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)합니다.|  
@@ -78,7 +77,7 @@ sp_help_schedule
 |**schedule_description**|**nvarchar(4000)**|일정에 관한 영어 설명입니다(요청된 경우에 한함).|  
 |**job_count**|**int**|이 일정을 참조하는 작업 수를 반환합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  매개 변수 없이 제공 하는 경우 **sp_help_schedule** 인스턴스의 모든 일정에 대 한 정보를 나열 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -96,7 +95,7 @@ sp_help_schedule
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-information-for-all-schedules-in-the-instance"></a>1. 인스턴스의 모든 일정에 대한 정보 나열  
+### <a name="a-listing-information-for-all-schedules-in-the-instance"></a>A. 인스턴스의 모든 일정에 대한 정보 나열  
  다음 예에서는 인스턴스에 있는 모든 일정에 대한 정보를 나열합니다.  
   
 ```  
@@ -107,7 +106,7 @@ EXEC dbo.sp_help_schedule ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-schedule"></a>2. 특정 일정에 대한 정보 나열  
+### <a name="b-listing-information-for-a-specific-schedule"></a>2\. 특정 일정에 대한 정보 나열  
  다음 예에서는 `NightlyJobs`라는 일정에 대한 정보를 나열합니다.  
   
 ```  

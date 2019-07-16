@@ -1,5 +1,5 @@
 ---
-title: 클라이언트 쪽 XPath와 서버 쪽 XML 서식 지정 (SQLXML 4.0) | Microsoft Docs
+title: 클라이언트 쪽 vs. 서버 쪽 XML 서식 지정 (SQLXML 4.0) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -18,16 +18,15 @@ helpviewer_keywords:
 ms.assetid: f807ab7a-c5f8-4e61-9b00-23aebfabc47e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cd9f76b11edf684c68658f040b4aa3e0f63727d4
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d02eeb0ad64a62343fda53a1907cec2b4bb9e850
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028834"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220359"
 ---
-# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 XPath와 서버 쪽 XML 서식 지정(SQLXML 4.0)
+# <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>클라이언트 쪽 vs. 서버 쪽 XML 서식 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 항목에서는 SQL XML의 클라이언트 쪽 XML 서식과 서버 쪽 XML 서식의 일반적인 차이점에 대해 설명합니다.  
   
@@ -45,7 +44,7 @@ ms.locfileid: "56028834"
   
  응용 프로그램 코드에서 이 템플릿을 실행할 수 있지만 클라이언트 쪽 XML 서식에서 여러 행 집합의 서식 설정을 지원하지 않기 때문에 오류가 반환됩니다. 두 쿼리를 지정 하는 경우 분리  **\<sql:query >** 블록, 원하는 결과 얻게 됩니다.  
   
-## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>클라이언트 쪽 서식과 서버 쪽 서식에서 서로 다르게 매핑되는 타임스탬프  
+## <a name="timestamp-maps-differently-in-client--vs-server-side-formatting"></a>타임 스탬프 클라이언트 vs에 다르게 지도입니다. 서버 쪽 서식  
  서버 쪽 xml 서식에서 데이터베이스 열 **타임 스탬프** 형식 (쿼리에 XMLDATA 옵션이 지정 되어) 하는 경우 i8 XDR 형식에 매핑됩니다.  
   
  클라이언트 쪽 xml 서식에서 데이터베이스 열 **타임 스탬프** 형식이 하나에 매핑되는 **uri** 또는 **bin.base64** XDR 형식 (여부에 따라 이진 base64 옵션은에 지정 된 쿼리). 합니다 **bin.base64** XDR 형식 되므로 updategram 및 bulkload 기능을 사용 하는 경우 유용한이 형식이 변환 되는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **타임 스탬프** 형식입니다. 이러한 변환 작업을 통해 삽입, 업데이트 또는 삭제 작업이 성공합니다.  
@@ -53,7 +52,7 @@ ms.locfileid: "56028834"
 ## <a name="deep-variants-are-used-in-server-side-formatting"></a>서버 쪽 서식에는 중첩이 많은 VARIANT가 사용됨  
  서버 쪽 XML 서식에는 중첩이 많은 VARIANT 형식이 사용됩니다. 클라이언트 쪽 XML 서식을 사용하는 경우 변형은 유니코드 문자열로 변환되고 VARIANT의 하위 유형은 사용되지 않습니다.  
   
-## <a name="nested-mode-vs-auto-mode"></a>NESTED 모드와 AUTO 모드  
+## <a name="nested-mode-vs-auto-mode"></a>중첩된 모드 vs입니다. AUTO 모드  
  클라이언트 쪽 FOR XML의 NESTED 모드는 서버 쪽 FOR XML의 AUTO 모드와 비슷합니다. 단, 다음 사항은 예외입니다.  
   
 ### <a name="when-you-query-views-using-auto-mode-on-the-server-side-the-view-name-is-returned-as-the-element-name-in-the-resulting-xml"></a>서버 쪽에서 AUTO 모드를 사용하여 뷰를 쿼리하면 뷰 이름이 결과 XML에 요소 이름으로 반환됩니다.  
@@ -78,7 +77,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- 템플릿을 실행하면 다음 XML이 반환됩니다. 여기에는 결과의 일부분만 나와 있습니다. 이 경우 요소 이름은 쿼리가 실행되는 뷰의 이름입니다.  
+ 템플릿을 실행하면 다음 XML이 반환됩니다. (일부 결과만 표시 됩니다.) 참고 요소 이름은 쿼리가 실행 되는 뷰의 이름이 지.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -134,7 +133,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>   
 ```  
   
- 클라이언트 쪽 FOR XML의 NESTED 모드를 사용하는 경우 테이블 이름이 결과 XML에 요소 이름으로 반환되고 쿼리에 지정된 테이블 별칭은 사용되지 않습니다. 예를 들어 다음 템플릿을 참조하십시오.  
+ 클라이언트 쪽 FOR XML의 NESTED 모드를 사용하는 경우 테이블 이름이 결과 XML에 요소 이름으로 반환되고 (쿼리에 지정 된 테이블 별칭은 사용 되지 않습니다.) 예를 들어 다음 템플릿을 참조하십시오.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -182,7 +181,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- XML 서식이 서버에서 수행 되는 경우 (**클라이언트 쪽 xml = "0"**), dbobject 쿼리는 실제 테이블 및 열 이름이 반환 됩니다 (있는 경우에 지정 된 별칭)을 반환 하는 열에 대 한 별칭을 사용할 수 있습니다. 예를 들어 다음 템플릿은 쿼리를 실행 하 고 XML 서식이 서버에서 수행 됩니다 (합니다 **클라이언트 쪽 xml** 옵션을 지정 하지 하며 **Run On Client** 에 대 한 옵션을 선택 하지 않으면 합니다 가상 루트)입니다. 또한 이 쿼리는 클라이언트 쪽 NESTED 모드가 아니라 AUTO 모드를 지정합니다.  
+ XML 서식이 서버에서 수행 되는 경우 (**클라이언트 쪽 xml = "0"** ), dbobject 쿼리는 실제 테이블 및 열 이름이 반환 됩니다 (있는 경우에 지정 된 별칭)을 반환 하는 열에 대 한 별칭을 사용할 수 있습니다. 예를 들어 다음 템플릿은 쿼리를 실행 하 고 XML 서식이 서버에서 수행 됩니다 (합니다 **클라이언트 쪽 xml** 옵션을 지정 하지 하며 **Run On Client** 에 대 한 옵션을 선택 하지 않으면 합니다 가상 루트)입니다. 또한 이 쿼리는 클라이언트 쪽 NESTED 모드가 아니라 AUTO 모드를 지정합니다.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -206,7 +205,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
-### <a name="client-side-vs-server-side-xpath"></a>클라이언트 쪽 XPath와 서버 쪽 XPath  
+### <a name="client-side-vs-server-side-xpath"></a>클라이언트 쪽 vs. 서버 쪽 XPath  
  클라이언트 쪽 XPath와 서버 쪽 XPath는 다음을 제외하고는 동일하게 작동합니다.  
   
 -   클라이언트 쪽 XPath 쿼리를 사용할 때 적용되는 데이터 변환은 서버 쪽 XPath 쿼리를 사용할 때 적용되는 데이터 변환과 다릅니다. 클라이언트 쪽 XPath에는 CONVERT 모드 126 대신 CAST가 사용됩니다.  

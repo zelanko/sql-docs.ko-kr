@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 168171de-ab7d-4b5b-af7f-6e2106adfcce
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3a3227556a3adfe63431f0cf10169a29d434495
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5afad2cc08910e036a571e3f32b144bc0b922dda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132600"
 ---
 # <a name="sqlcolumns-dbase-driver"></a>SQLColumns(dBASE 드라이버)
 > [!NOTE]  

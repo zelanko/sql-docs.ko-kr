@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e9d2baf65dedf1116a85f7271b1929e0ead4ca23
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104507"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +46,13 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` 변경할 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @property = ] 'property'` 지정 된 아티클 및 게시에 대 한 변경 하려면 속성이입니다. *속성* 됩니다 **nvarchar(30)**, 수 값 중 하나에 표시 되는 테이블입니다.  
+`[ @property = ] 'property'` 지정 된 아티클 및 게시에 대 한 변경 하려면 속성이입니다. *속성* 됩니다 **nvarchar(30)** , 수 값 중 하나에 표시 되는 테이블입니다.  
   
-`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값이입니다. *값* 됩니다 **nvarchar(1000)**, 수 값 중 하나에 표시 되는 테이블입니다.  
+`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값이입니다. *값* 됩니다 **nvarchar(1000)** , 수 값 중 하나에 표시 되는 테이블입니다.  
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|아티클에 대해 대화형 해결 프로그램을 사용합니다.|  
 ||**false**|아티클에 대해 대화형 해결 프로그램을 사용하지 않습니다.|  
@@ -62,7 +61,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x10**|구독자에서 작성된 INSERT 문이 게시자에 적용되기 전에 게시자에서 테이블 수준 권한을 확인합니다.|  
 ||**0x20**|구독자에서 작성된 UPDATE 문이 게시자에 적용되기 전에 게시자에서 테이블 수준 권한을 확인합니다.|  
 ||**0x40**|구독자에서 작성된 DELETE 문이 게시자에 적용되기 전에 게시자에서 테이블 수준 권한을 확인합니다.|  
-|**column_tracking**|**true**|열 수준 추적을 설정합니다. 테이블 아티클에만 적용됩니다.<br /><br /> 참고: 246개가 넘는 열이 포함된 테이블을 게시할 때는 열 수준 추적을 사용할 수 없습니다.|  
+|**column_tracking**|**true**|열 수준 추적을 설정합니다. 테이블 아티클에만 적용됩니다.<br /><br /> 참고: 246 개가 넘는 열이 있는 테이블을 게시할 때는 열 수준 추적을 사용할 수 없습니다.|  
 ||**false**|열 수준 추적을 해제하고 행 수준에서 충돌 감지를 유지합니다. 테이블 아티클에만 적용됩니다.|  
 |**compensate_for_errors**|**true**|동기화 중 오류가 발생하면 보정 동작을 수행합니다. 자세한 내용은 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)합니다.|  
 ||**false**|보정 동작을 수행하지 않습니다(기본 동작). 자세한 내용은 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)합니다.<br /><br /> **\*\* 중요 \* \***  영향을 받는 행의 데이터는 모든 오류를 해결 하는 즉시 일치 하지 않은 되도록 나타날 수 있습니다, 있지만 변경 내용을 적용할 수 있습니다 하 고 데이터 수렴 됩니다. 아티클의 원본 테이블은 이미 다른 게시의 값에 게시 된 경우 *compensate_for_errors* 두 아티클에 대해 동일 해야 합니다.|  
@@ -72,8 +71,8 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**description**||아티클에 대한 설명 항목입니다.|  
 |**destination_owner**||그렇지 않은 경우 구독 데이터베이스의 개체 소유자의 이름을 **dbo**합니다.|  
 |**identity_range**||**bigint** 문서에 있는 경우 새 id 값을 지정할 때 사용할 범위 크기를 지정 하는 **identityrangemanagementoption** 로 설정 **auto** 또는 **auto_identity_ 범위** 로 설정 **true**합니다. 테이블 아티클에만 적용됩니다. 자세한 내용은의 "병합 복제" 섹션을 참조 하세요 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)합니다.|  
-|**identityrangemanagementoption**|**manual**|자동 ID 범위 관리를 사용하지 않습니다. 수동 ID 범위 처리를 사용하려면 NOT FOR REPLICATION을 사용하여 ID 열을 표시합니다. 자세한 내용은 [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.|  
-||**없음**|모든 ID 범위 관리를 사용하지 않습니다.|  
+|**identityrangemanagementoption**|**수동**|자동 ID 범위 관리를 사용하지 않습니다. 수동 ID 범위 처리를 사용하려면 NOT FOR REPLICATION을 사용하여 ID 열을 표시합니다. 자세한 내용은 [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.|  
+||**none**|모든 ID 범위 관리를 사용하지 않습니다.|  
 |**logical_record_level_conflict_detection**|**true**|논리적 레코드에 변경 사항이 발생하면 충돌이 감지됩니다. 실행 하려면 **logical_record_level_conflict_resolution** 로 설정할 **true**합니다.|  
 ||**false**|기본 충돌 감지를 사용 하 여 지정 된 대로 **column_tracking**합니다.|  
 |**logical_record_level_conflict_resolution**|**true**|전체 적용되는 논리적 레코드가 무시되는 논리적 레코드를 덮어씁니다.|  
@@ -82,7 +81,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**1**|파티션이 겹치며 구독자에서 DML 업데이트를 수행해도 행이 속한 파티션이 변경되지 않습니다.|  
 ||**2**|아티클을 필터링하면 겹치지 않는 파티션이 생성되지만 여러 구독자가 동일한 파티션을 받을 수 있습니다.|  
 ||**3**|아티클을 필터링하면 각 구독에 고유한 겹치지 않는 파티션이 생성됩니다.<br /><br /> 참고: 값을 지정 하는 경우 **3** 에 대 한 **partition_options**, 구독이 하나만 각 파티션에 대 한 해당 문서의 데이터 있을 수 있습니다. 새 구독의 필터링 조건이 기존 구독과 동일한 파티션을 사용하도록 하여 두 번째 구독이 생성될 경우 기존 구독이 삭제됩니다.|  
-|**pre_creation_command**|**없음**|구독자에 이미 테이블이 존재하는 경우 아무런 동작이 발생하지 않습니다.|  
+|**pre_creation_command**|**none**|구독자에 이미 테이블이 존재하는 경우 아무런 동작이 발생하지 않습니다.|  
 ||**delete**|하위 집합 필터의 WHERE 절을 기반으로 하여 삭제를 실행합니다.|  
 ||**drop**|테이블을 다시 만들기 전에 삭제합니다.|  
 ||**truncate**|대상 테이블을 자릅니다.|  
@@ -90,7 +89,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**pub_identity_range**||**bigint** 문서에 있는 경우 서버 구독이 있는 구독자에 할당 된 범위 크기를 지정 하는 **identityrangemanagementoption** 로 설정 **auto** 또는 **auto_ identity_range** 로 설정 **true**합니다. 이 ID 범위는 재게시 구독자가 해당 구독자에게 할당하도록 예약됩니다. 테이블 아티클에만 적용됩니다. 자세한 내용은의 "병합 복제" 섹션을 참조 하세요 [Id 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)합니다.|  
 |**published_in_tran_pub**|**true**|아티클을 트랜잭션 게시에도 게시합니다.|  
 ||**false**|아티클을 트랜잭션 게시에 게시하지 않습니다.|  
-|**resolver_info**||사용자 지정 해결 프로그램에 필요한 추가 정보를 지정하는 데 사용합니다. 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 해결 프로그램에는 입력으로 제공되는 열이 필요합니다. **resolver_info** 됩니다 **nvarchar(255)**, 기본값은 NULL입니다. 자세한 내용은 [Microsoft COM 기반 해결 프로그램](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)을(를) 참조하세요.|  
+|**resolver_info**||사용자 지정 해결 프로그램에 필요한 추가 정보를 지정하는 데 사용합니다. 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 해결 프로그램에는 입력으로 제공되는 열이 필요합니다. **resolver_info** 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 자세한 내용은 [Microsoft COM 기반 해결 프로그램](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md)을(를) 참조하세요.|  
 |**schema_option** (비트맵)||자세한 내용은 이 항목의 뒷부분에 나오는 주의 섹션을 참조하십시오.|  
 ||**0x00**|제공 된 스크립트를 사용 하 여 스냅숏 에이전트로 스크립팅을 할 **creation_script**합니다.|  
 ||**0x01**|개체 만들기 스크립트(CREATE TABLE, CREATE PROCEDURE 등)를 생성합니다.|  
@@ -119,7 +118,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x4000000**|인덱스를 복제 **xml** 열입니다.|  
 ||**0x8000000**|구독자에 없는 스키마를 만듭니다.|  
 ||**0x10000000**|변환 **xml** 열을 **ntext** 구독자의 합니다.|  
-||**0x20000000**|변환 큰 개체 데이터 형식 (**nvarchar (max)** 하십시오 **varchar (max)**, 및 **varbinary (max)**)에서 도입 된 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 지원 되는 데이터 형식 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]합니다.|  
+||**0x20000000**|변환 큰 개체 데이터 형식 (**nvarchar (max)** 하십시오 **varchar (max)** , 및 **varbinary (max)** )에서 도입 된 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 지원 되는 데이터 형식 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]합니다.|  
 ||**0x40000000**|사용 권한을 복제합니다.|  
 ||**0x80000000**|게시의 일부가 아닌 개체에 대한 종속성을 삭제합니다.|  
 ||**0x100000000**|에 지정 된 경우 FILESTREAM 특성을 복제 하려면이 옵션을 사용 **varbinary (max)** 열입니다. 테이블을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자에 복제할 경우에는 이 옵션을 지정하지 마십시오. FILESTREAM 열이 있는 테이블을 복제 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이 스키마 옵션을 설정 하는 방법에 관계 없이 구독자 지원 되지 않습니다. 관련된 옵션을 참조 하세요 **0x800000000**합니다.|  
@@ -164,7 +163,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changemergearticle** 병합 복제에 사용 됩니다.  
   
  때문에 **sp_changemergearticle** 처음 사용 하 여 지정 된 아티클 속성을 변경 하는 데 사용 됩니다 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)를 참조 하세요 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 이러한 속성에 대 한 자세한 내용은 합니다.  
@@ -226,10 +225,10 @@ sp_changemergearticle [ @publication = ] 'publication'
 |아티클 유형|스키마 옵션 값|  
 |------------------|--------------------------|  
 |**func 스키마만**|**0x01** 고 **0x2000**|  
-|**인덱싱된 뷰 스키마 전용**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**, and **0x200000**|  
+|**인덱싱된 뷰 스키마 전용**|**0x01**, **0x040**, **0x0100**를 **0x2000**를 **0x40000**를 **0x1000000**, 및 **0x200000**|  
 |**프로시저 스키마 전용**|**0x01** 고 **0x2000**|  
 |**table**|모든 옵션|  
-|**뷰 스키마 전용**|**0x01**, **0x040**, **0x0100**, **0x2000**, **0x40000**, **0x1000000**, and **0x200000**|  
+|**뷰 스키마 전용**|**0x01**, **0x040**, **0x0100**를 **0x2000**를 **0x40000**를 **0x1000000**, 및 **0x200000**|  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_changemergearticle](../../relational-databases/replication/codesnippet/tsql/sp-changemergearticle-tr_1.sql)]  

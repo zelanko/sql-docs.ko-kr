@@ -3,18 +3,17 @@ title: 내보내기 및 Linux에서 데이터베이스 가져오기
 description: ''
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
-ms.openlocfilehash: 9f676cf8c4ed6c5659074e422b3e01a6019e592e
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: f99ff799ec91ea455cc37bd994c8555330a8ff0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105549"
 ---
 # <a name="export-and-import-a-database-on-linux-with-ssms-or-sqlpackageexe-on-windows"></a>SSMS 또는 Windows에서 SqlPackage.exe를 사용 하 여 Linux에서 데이터베이스 가져오기 및 내보내기
 

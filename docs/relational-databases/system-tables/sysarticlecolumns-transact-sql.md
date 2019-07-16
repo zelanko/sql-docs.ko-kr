@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 55918592-e05d-43b6-843b-7e4d82fa6275
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4d31293e6e6b562e8ccfbb624a9ea9e226205ef2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61e1329fe35ae032b5d35f94dd2e1ce5e8d08d38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130524"
 ---
 # <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **sysarticlecolumns** 스냅숏 또는 트랜잭션 게시에 게시 되 고 해당 문서에 각 열을 매핑하는 각 테이블 열당 하나의 행을 포함 하는 테이블입니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|아티클을 식별합니다.|  
 |**colid**|**smallint**|아티클의 열을 식별합니다.|  

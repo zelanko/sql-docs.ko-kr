@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1ab6c1408b9f9c2de2e4070ab35e34ea8a458df
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084883"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +69,9 @@ sp_update_jobstep
   
 `[ @step_name = ] 'step_name'` 단계의 새 이름이입니다. *step_name*됩니다 **sysname**, 기본값은 NULL입니다.  
   
-`[ @subsystem = ] 'subsystem'` Microsoft SQL Server 에이전트에서 실행 하는 데 하위 시스템 *명령*입니다. *하위 시스템* 됩니다 **nvarchar(40)**, 기본값은 NULL입니다.  
+`[ @subsystem = ] 'subsystem'` Microsoft SQL Server 에이전트에서 실행 하는 데 하위 시스템 *명령*입니다. *하위 시스템* 됩니다 **nvarchar(40)** , 기본값은 NULL입니다.  
   
-`[ @command = ] 'command'` 통해 실행할 명령 *하위 시스템*입니다. *명령* 됩니다 **nvarchar (max)**, 기본값은 NULL입니다.  
+`[ @command = ] 'command'` 통해 실행할 명령 *하위 시스템*입니다. *명령* 됩니다 **nvarchar (max)** , 기본값은 NULL입니다.  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -100,7 +99,7 @@ sp_update_jobstep
   
 `[ @on_fail_step_id = ] fail_step_id` 단계가 실패 하는 경우에 실행할이 작업 단계의 id 번호 및 *fail_action* 됩니다 **4**합니다. *fail_step_id* 됩니다 **int**, 기본값은 NULL입니다.  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *서버* 됩니다 **nvarchar (128)**, 기본값은 NULL입니다.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *서버* 됩니다 **nvarchar (128)** , 기본값은 NULL입니다.  
   
 `[ @database_name = ] 'database'` 실행할 데이터베이스의 이름을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 단계입니다. *데이터베이스*됩니다 **sysname**합니다. 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. 기본값은 NULL입니다.  
   
@@ -112,7 +111,7 @@ sp_update_jobstep
   
 `[ @os_run_priority = ] run_priority` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @output_file_name = ] 'file_name'` 이 단계의 출력이 저장 되는 파일의 이름입니다. *file_name* 됩니다 **nvarchar (200)**, 기본값은 NULL입니다. 이 매개 변수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CmdExec 하위 시스템에서 실행되는 명령과 함께 사용하는 경우에만 유효합니다.  
+`[ @output_file_name = ] 'file_name'` 이 단계의 출력이 저장 되는 파일의 이름입니다. *file_name* 됩니다 **nvarchar (200)** , 기본값은 NULL입니다. 이 매개 변수는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 CmdExec 하위 시스템에서 실행되는 명령과 함께 사용하는 경우에만 유효합니다.  
   
  Output_file_name을 다시 NULL로 설정 하려면 설정 해야 합니다 *output_file_name* 빈 문자열 (' ') 수 있지만 빈 문자의 문자열로 사용할 수 없습니다 또는 **CHAR(32)** 함수. 예를 들어 다음과 같이 이 인수를 빈 문자열로 설정합니다.  
   
@@ -120,7 +119,7 @@ sp_update_jobstep
   
 `[ @flags = ] flags` 동작을 제어 하는 옵션입니다. *플래그* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**0** (기본값)|출력 파일을 덮어씁니다.|  
 |**2**|출력 파일에 추가합니다.|  
@@ -135,7 +134,7 @@ sp_update_jobstep
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_update_jobstep** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
  작업 단계를 업데이트하면 작업 버전 번호가 증가합니다.  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9db9d184-b3a2-421e-a804-b18ebcb099b7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 74e3de1c32cb1ca1833121b4de1cef4db66f9e49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb9ab9e3cbf5948e5e832171c179d6daa2c0bc28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096281"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "66462659"
 > [!NOTE]  
 >  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_db_partition_stats**합니다. Azure SQL Data Warehouse에 대 한 sys.partitions 카탈로그 뷰의 partition_id에서 sys.dm_pdw_nodes_db_partition_stats에서 partition_id 서로 다릅니다.
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|파티션의 ID입니다. 데이터베이스 내에서 고유합니다. 이 동일한 값으로는 **partition_id** 에 **sys.partitions** 카탈로그 뷰를 제외 하 고 Azure SQL Data Warehouse.|  
 |**object_id**|**int**|파티션이 속한 테이블 또는 인덱싱된 뷰의 개체 ID입니다.|  
@@ -55,7 +54,7 @@ ms.locfileid: "66462659"
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
 |**distribution_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 배포와 관련 된 고유 숫자 id입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sys.dm_db_partition_stats** 행 내부, LOB 데이터와 데이터베이스의 모든 파티션에 대 한 행 오버플로 데이터가 저장 및 관리 하는 데 사용 된 공간에 대 한 정보를 표시 합니다. 파티션마다 행 하나가 표시됩니다.  
   
  출력의 기준이 되는 이 개수는 메모리에 캐시되거나 디스크에서 다양한 시스템 테이블에 저장됩니다.  
@@ -71,7 +70,7 @@ ms.locfileid: "66462659"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>1\. 데이터베이스에 있는 모든 인덱스와 힙의 모든 파티션에 대한 모든 개수 반환  
+### <a name="a-returning-all-counts-for-all-partitions-of-all-indexes-and-heaps-in-a-database"></a>A. 데이터베이스에 있는 모든 인덱스와 힙의 모든 파티션에 대한 모든 개수 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 모든 인덱스와 힙의 모든 파티션에 대한 모든 개수를 표시합니다.  
   
 ```  

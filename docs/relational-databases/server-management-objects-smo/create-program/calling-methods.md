@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c88d5c5f-9ff0-4f84-b2b6-24c6b90fa15e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 210ccac6528abd6427e9973d45c83836c67e619d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b9f90e22e024f541cd5ca73ec26ca39895b23576
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126745"
 ---
 # <a name="calling-methods"></a>메서드 호출
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47633291"
   
  메서드는 개체에 대해 작업을 수행하며 매개 변수를 사용할 수 있고 반환 값을 갖는 경우도 있습니다. 반환 값은 단순한 데이터 형식, 복잡한 개체 또는 여러 멤버가 포함된 구조일 수 있습니다.  
   
- 메서드가 성공적으로 실행되었는지 여부를 확인하려면 예외 처리를 사용합니다. 자세한 내용은 [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)합니다.  
+ 메서드가 성공적으로 실행되었는지 여부를 확인하려면 예외 처리를 사용합니다. 자세한 내용은 [Handling SMO Exceptions](../../../relational-databases/server-management-objects-smo/create-program/handling-smo-exceptions.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
@@ -69,7 +68,7 @@ db.Create();
  }  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-basic"></a>Visual Basic에서 매개 변수가 있는 SMO 메서드 사용  
- 합니다 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체 라는 메서드가 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>합니다. 이 메서드에는 **FillFactor**를 지정하는 숫자 매개 변수가 필요합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Table> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>라는 메서드가 있습니다. 이 메서드에는 **FillFactor**를 지정하는 숫자 매개 변수가 필요합니다.  
   
 ```VBNET
 Dim srv As Server  
@@ -80,7 +79,7 @@ tb.RebuildIndexes(70)
 ```  
   
 ## <a name="using-an-smo-method-with-a-parameter-in-visual-c"></a>Visual C#에서 매개 변수가 있는 SMO 메서드 사용  
- 합니다 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체 라는 메서드가 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>합니다. 이 메서드에는 `FillFactor`를 지정하는 숫자 매개 변수가 필요합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Table> 개체에는 <xref:Microsoft.SqlServer.Management.Smo.Table.RebuildIndexes%2A>라는 메서드가 있습니다. 이 메서드에는 `FillFactor`를 지정하는 숫자 매개 변수가 필요합니다.  
   
 ```csharp  
 {   
@@ -93,7 +92,7 @@ tb.RebuildIndexes(70);
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-basic"></a>Visual Basic에서 DataTable 개체를 반환하는 열거형 메서드 사용  
- 이 섹션에서는 열거형 메서드를 호출 하는 방법 및 반환 된 데이터를 처리 하는 방법을 설명 <xref:System.Data.DataTable> 개체입니다.  
+ 이 섹션에서는 열거형 메서드를 호출하는 방법 및 반환된 <xref:System.Data.DataTable> 개체의 데이터를 처리하는 방법에 대해 설명합니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 메서드는 <xref:System.Data.DataTable> 개체를 반환하며, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 모든 데이터 정렬 정보에 액세스하려면 이 개체를 추가적으로 탐색해야 합니다.  
   
@@ -117,9 +116,9 @@ Next
 ```  
   
 ## <a name="using-an-enumeration-method-that-returns-a-datatable-object-in-visual-c"></a>Visual C#에서 DataTable 개체를 반환하는 열거형 메서드 사용  
- 이 섹션에서는 열거형 메서드를 호출 하는 방법 및 반환 된 데이터를 처리 하는 방법을 설명 <xref:System.Data.DataTable> 개체입니다.  
+ 이 섹션에서는 열거형 메서드를 호출하는 방법 및 반환된 <xref:System.Data.DataTable> 개체의 데이터를 처리하는 방법에 대해 설명합니다.  
   
- 합니다 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 메서드가 반환 하는 시스템 <xref:System.Data.DataTable> 개체입니다. 합니다 <xref:System.Data.DataTable> 개체의 인스턴스에 대 한 모든 사용 가능한 데이터 정렬 정보에 액세스 하는 탐색 더 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.EnumCollations%2A> 메서드는 시스템 <xref:System.Data.DataTable> 개체를 반환합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 모든 데이터 정렬 정보에 액세스하려면 <xref:System.Data.DataTable> 개체를 추가적으로 탐색해야 합니다.  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   
@@ -180,7 +179,7 @@ Console.WriteLine(d.Name);
 ```  
   
 ## <a name="copying-an-smo-object-in-visual-basic"></a>Visual Basic에서 SMO 개체 복사  
- 이 코드 예제에서는 합니다 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 의 복사본을 만드는 메서드를 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체입니다. 합니다 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 인스턴스에 대 한 연결을 나타냅니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ 이 코드 예에서는 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 메서드를 사용하여 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 복사본을 만듭니다. <xref:Microsoft.SqlServer.Management.Smo.Server> 개체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 나타냅니다.  
   
 ```VBNET  
 'Connect to the local, default instance of SQL Server.
@@ -196,7 +195,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString)
 ```
   
 ## <a name="copying-an-smo-object-in-visual-c"></a>Visual C#에서 SMO 개체 복사  
- 이 코드 예제에서는 합니다 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 의 복사본을 만드는 메서드를 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체입니다. 합니다 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 인스턴스에 대 한 연결을 나타냅니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ 이 코드 예에서는 <xref:Microsoft.SqlServer.Management.Common.ServerConnection.Copy%2A> 메서드를 사용하여 <xref:Microsoft.SqlServer.Management.Smo.Server> 개체의 복사본을 만듭니다. <xref:Microsoft.SqlServer.Management.Smo.Server> 개체는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 나타냅니다.  
   
 ```csharp  
 {   
@@ -214,7 +213,7 @@ Console.WriteLine(srv2.ConnectionContext.ConnectTimeout.ToString);
 ```  
   
 ## <a name="monitoring-server-processes-in-visual-basic"></a>Visual Basic에서 서버 프로세스 모니터링  
- 인스턴스에 대 한 현재 상태 형식 정보를 가져올 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 열거형 메서드를 통해. 코드 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> 메서드를 사용하여 현재 프로세스에 대한 정보를 확인합니다. 또한 이 예에서는 반환된 <xref:System.Data.DataTable> 개체의 열과 행으로 작업하는 방법도 보여 줍니다.  
+ 열거형 메서드를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스에 대한 현재 상태 형식 정보를 얻을 수 있습니다. 코드 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> 메서드를 사용하여 현재 프로세스에 대한 정보를 확인합니다. 또한 이 예에서는 반환된 <xref:System.Data.DataTable> 개체의 열과 행으로 작업하는 방법도 보여 줍니다.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -236,7 +235,7 @@ Next
 ```
   
 ## <a name="monitoring-server-processes-in-visual-c"></a>Visual C#에서 서버 프로세스 모니터링  
- 인스턴스에 대 한 현재 상태 형식 정보를 가져올 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 열거형 메서드를 통해. 코드 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> 메서드를 사용하여 현재 프로세스에 대한 정보를 확인합니다. 또한 이 예에서는 반환된 <xref:System.Data.DataTable> 개체의 열과 행으로 작업하는 방법도 보여 줍니다.  
+ 열거형 메서드를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인스턴스에 대한 현재 상태 형식 정보를 얻을 수 있습니다. 코드 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Server.EnumProcesses%2A> 메서드를 사용하여 현재 프로세스에 대한 정보를 확인합니다. 또한 이 예에서는 반환된 <xref:System.Data.DataTable> 개체의 열과 행으로 작업하는 방법도 보여 줍니다.  
   
 ```csharp  
 //Connect to the local, default instance of SQL Server.   

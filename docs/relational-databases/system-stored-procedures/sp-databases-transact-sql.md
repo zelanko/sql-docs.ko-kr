@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2a83b92a-9ecc-43c4-8ff4-e91e3a940b5a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1be4fbfb6ce30443a979fb500954e7aa8fa9779a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c338fb8057c2d58727f18e0bb69e2fa825e71559
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108331"
 ---
 # <a name="spdatabases-transact-sql"></a>sp_databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ sp_databases
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**DATABASE_NAME**|**sysname**|데이터베이스의 이름입니다. 에 [!INCLUDE[ssDE](../../includes/ssde-md.md)],이 열에 저장 된 데이터베이스 이름을 나타냅니다는 **sys.databases** 카탈로그 뷰.|  
 |**DATABASE_SIZE**|**int**|데이터베이스 크기(KB)입니다.|  
 |**REMARKS**|**varchar(254)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]의 경우 이 필드는 항상 NULL을 반환합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  반환된 데이터베이스 이름은 현재 데이터베이스 컨텍스트를 변경하기 위해 USE 문에서 매개 변수로 사용할 수 있습니다.  
   
  **sp_databases** 에 해당 요소가에서 열린 데이터베이스 연결 (ODBC).  

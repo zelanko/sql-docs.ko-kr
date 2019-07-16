@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f1dc43ee81f1be386d0518625d36464f029dc0f
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ea97e3cd7a8fee3b3397524bf2c48c428d6a0be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076837"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>응용 프로그램을 선언&#39;s ODBC 버전
 응용 프로그램을 연결에서 할당 전에 SQL_ATTR_ODBC_VERSION 환경 특성을 설정 합니다. 이 특성 상태 응용 프로그램을 ODBC 따르는지 *2.x* 또는 ODBC *3.x* 사양에 다음 항목을 사용 하는 경우:  
   
--   **SQLSTATEs**. ODBC의 SQLSTATE 값이 많은 서로 *2.x* 및 ODBC *3.x*합니다.  
+-   **Sqlstate**합니다. ODBC의 SQLSTATE 값이 많은 서로 *2.x* 및 ODBC *3.x*합니다.  
   
 -   **날짜, 시간 및 타임 스탬프 형식 식별자**합니다. 다음 표에서 ODBC의 date, time 및 timestamp 데이터 형식 식별자를 보여 줍니다 *2.x* 및 ODBC *3.x*합니다.  
   

@@ -19,20 +19,19 @@ ms.assetid: 2d3c8828-e4b3-423d-bf11-990464c1341b
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 05291044ba7b5e5b79b507c33a1f5f5bf31afa28
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bab2cda409d5715e1f6b5519e1b760eb1cad9c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103367"
 ---
 # <a name="sysxmlschemacomponentplacements-transact-sql"></a>sys.xml_schema_component_placements(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   각 XML 스키마 구성 요소 배치에 대해 행을 반환합니다.  
    
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|이 배치를 소유한 XML 스키마 구성 요소의 ID입니다.|  
 |**placement_id**|**int**|배치의 ID입니다. 소유한 XML 스키마 구성 요소 내에서 고유합니다.|  

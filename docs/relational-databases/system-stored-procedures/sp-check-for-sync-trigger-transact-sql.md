@@ -1,5 +1,5 @@
 ---
-title: sp_check_for_sync_trigger (Transact-SQL) | Microsoft Docs
+title: sp_check_for_sync_trigger (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef51624f3d14ef12be1c37b17727b70f5f31df10
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b7d4d26374d7b582f2ba5ddad79dd317145cecd7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070436"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,15 +39,15 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@tabid =** ] '*tabid*'  
+ [ **@tabid =** ] '*tabid*'  
  즉시 업데이트 트리거의 발생 여부가 확인되는 테이블의 개체 ID입니다. *tabid* 됩니다 **int** 기본값은 없습니다.  
   
- [**@trigger_op =** ] '*trigger_output_parameters*' OUTPUT  
+ [ **@trigger_op =** ] '*trigger_output_parameters*' OUTPUT  
  출력 매개 변수에서 호출되고 있는 트리거 유형을 반환할지 여부를 지정합니다. *trigger_output_parameters* 됩니다 **char(10)** 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
-|**Ins**|INSERT 트리거|  
+|**기능**|INSERT 트리거|  
 |**Upd**|UPDATE 트리거|  
 |**Del**|DELETE 트리거|  
 |NULL(기본값)||  
@@ -56,9 +55,9 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 `[ @fonpublisher = ] fonpublisher` 저장된 프로시저가 실행 되는 위치를 지정 합니다. *fonpublisher* 됩니다 **비트**을 기본값인 0 사용 하 여 합니다. 값이 0인 경우 구독자에서 실행되며 값이 1인 경우 게시자에서 실행됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
- 0은 저장 프로시저가 즉시 트리거 업데이트의 컨텍스트 내에서 호출되지 않고 있음을 의미합니다. 즉시 업데이트 트리거의 컨텍스트 내에서 호출 되 고에서 반환 되는 트리거 유형의 1 나타냅니다 *@trigger_op*합니다.  
+ 0은 저장 프로시저가 즉시 트리거 업데이트의 컨텍스트 내에서 호출되지 않고 있음을 의미합니다. 즉시 업데이트 트리거의 컨텍스트 내에서 호출 되 고에서 반환 되는 트리거 유형의 1 나타냅니다 *@trigger_op* 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_check_for_sync_trigger** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
  **sp_check_for_sync_trigger** 복제 및 사용자 정의 트리거 사이 조정 하는 데 사용 됩니다. 이 저장 프로시저는 복제 트리거의 컨텍스트 내에서 호출되고 있는지 확인합니다. 예를 들어, 프로시저를 호출할 수 있습니다 **sp_check_for_sync_trigger** 사용자 정의 트리거 본문에서 합니다. 하는 경우 **sp_check_for_sync_trigger** 반환 **0**, 사용자 정의 트리거가 처리를 계속 합니다. 하는 경우 **sp_check_for_sync_trigger** 반환 **1**, 사용자 정의 트리거가 종료 됩니다. 따라서 복제 트리거에 의해 테이블이 업데이트될 때 사용자 정의 트리거가 실행되지 않습니다.  

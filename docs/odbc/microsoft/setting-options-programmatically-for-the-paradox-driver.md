@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: 7996d3f8-b5f5-4cac-8a66-fc96a42b603e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fd92344552371e2e052a958485340b70522cc121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 658d03469e2733b0c25513a4d4a89c6ab88b9852
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063509"
 ---
 # <a name="setting-options-programmatically-for-the-paradox-driver"></a>Paradox 드라이버에 프로그래밍 방식으로 옵션 설정
 
-|옵션|Description|메서드|  
+|옵션|설명|메서드|  
 |------------|-----------------|------------|  
 |디렉터리|대상된 디렉터리를 설정합니다.|이 옵션을 동적으로 설정 하려면 합니다 **DEFAULTDIR** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.|  
 |정렬 순서|필드 정렬 되는 시퀀스입니다.<br /><br /> 시퀀스는 ASCII (기본값) 일 수 있습니다 국제, 스웨덴어-핀란드어, 노르웨이어 덴마크어 합니다.|이 옵션을 동적으로 설정 하려면 합니다 **COLLATINGSEQUENCE** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.|  
-|Description|데이터 소스의 데이터에 대 한 설명 예를 들어, "고용 날짜, 급여 내역, 및 모든 직원의 현재 검토 합니다."|이 옵션을 동적으로 설정 하려면 합니다 **설명** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
+|설명|데이터 소스의 데이터에 대 한 설명 예를 들어, "고용 날짜, 급여 내역, 및 모든 직원의 현재 검토 합니다."|이 옵션을 동적으로 설정 하려면 합니다 **설명** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md).|  
 |전용|경우는 **배타적** 확인란을 선택 하면 데이터베이스에서 단독 모드로 열립니다 및 한 번에 한 명의 사용자만 액세스할 수 있습니다. 전용 모드에서 실행할 때 성능이 향상 됩니다.|이 옵션을 동적으로 설정 하려면를 **배타적** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.|  
 |Net 스타일|Paradox 데이터에 액세스할 때 사용할 네트워크 액세스 스타일: 하거나 "3.*x*" Paradox 3. *x* 또는 "4. *x*"Paradox 4에 대 한. *x* 5 또는. *x*합니다. "3 설정할 수 있습니다. *x*"또는" 4. *x*"버전이 4. *x* 5 또는. *x*같으면 버전이 Paradox 3. *x*, 스타일 이어야 합니다 "3. *x*"입니다.|이 옵션을 동적으로 설정 하려면 합니다 **PARADOXNETSTYLE** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.|  
 |페이지 시간 제한|1/10 초, 페이지 (사용 되지 않음) 하는 경우 제거 하기 전에 버퍼에 남아 있는 기간을 지정 합니다. 기본값은 600 초 (60 초)의 1/10 초입니다. 이 옵션은 ODBC 드라이버를 사용 하는 모든 데이터 원본에 적용 됩니다.<br /><br /> 페이지 시간 초과 내재 된 지연으로 인해 0 일 수 없습니다. 페이지 시간 제한은 해당 값 보다 작은 페이지 제한 시간 옵션을 설정한 경우에 고유한 지연 보다 작을 수 없습니다.|이 옵션을 동적으로 설정 하려면 합니다 **PAGETIMEOUT** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-paradox-driver.md)합니다.|  

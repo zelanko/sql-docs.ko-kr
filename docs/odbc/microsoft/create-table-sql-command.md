@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 195d226caed68da7131390eaf1985d4e05b2edf3
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 2f979ccb5a44ada8e86424e0f6134f39d28a021d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096598"
 ---
 # <a name="create-table---sql-command"></a>CREATE TABLE - SQL 명령
 지정 된 필드가 있는 테이블을 만듭니다.  
@@ -47,7 +46,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
 ```  
   
 ## <a name="arguments"></a>인수  
- CREATE TABLE &#124; DBF *TableName1*  
+ 테이블 만들기 &#124; DBF *TableName1*  
  만들 테이블의 이름을 지정 합니다. 테이블 및 DBF 옵션은 동일 합니다.  
   
  이름 *LongTableName*  
@@ -93,7 +92,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  기본 또는 후보 인덱스에 사용 되는 필드에 null 값과 중복 레코드가 허용 되지 않습니다. 그러나 Visual FoxPro null 값을 지 원하는 필드에 대 한 기본 또는 후보 인덱스를 만드는 경우 오류를 생성 하지 않습니다. Visual FoxPro 주 또는 후보 인덱스에 사용 되는 필드에 null 또는 중복 값을 입력 하려고 하면 오류가 발생 합니다.  
   
- REFERENCES *TableName2*[TAG *TagName1*]  
+ 참조 *TableName2*[태그 *TagName1*]  
  영구 관계가 설정 됩니다는 부모 테이블을 지정 합니다. 태그를 생략 *TagName1*, 부모 테이블의 기본 인덱스 키를 사용 하 여 관계가 성립 합니다. Visual FoxPro 부모 테이블에 기본 인덱스를 찾을 수 없는 경우 오류가 발생 합니다.  
   
  태그가 *TagName1* 부모 테이블에 대 한 기존 인덱스 태그에 따라 관계를 설정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다.  
@@ -125,7 +124,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  테이블에 대 한 여러 외부 인덱스를 만들 수 있지만 외래 인덱스 식을 테이블의 다른 필드를 지정 해야 합니다.  
   
- REFERENCES *TableName3*[TAG *TagName5*]  
+ 참조 *TableName3*[태그 *TagName5*]  
  영구 관계가 설정 됩니다는 부모 테이블을 지정 합니다. 태그가 *TagName5* 부모 테이블에는 인덱스 태그를 기반으로 하는 관계를 설정 합니다. 인덱스 태그 이름은 최대 10 개의 문자를 포함할 수 있습니다. 태그를 생략 하면 기본적으로 *TagName5,* 부모 테이블의 기본 인덱스 키를 사용 하 여 관계가 성립 합니다.  
   
  CHECK *eExpression2*[ERROR *cMessageText2*]  
@@ -134,7 +133,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  배열에서 *ArrayName*  
  기존 배열 내용이 이름, 형식, 전체 자릿수 및 테이블의 각 필드에 대 한 확장 이름을 지정 합니다. 배열의 내용을 정의할 수 있습니다 합니다 **AFIELDS**() 함수입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  새 테이블에는 가장 낮은 사용 가능한 작업 영역에서 열 및 해당 별칭으로 액세스할 수 있습니다. 새 테이블 전용 설정의 현재 설정에 관계 없이 단독으로 열려 있습니다.  
   
  데이터베이스가 열려 있는 경우 무료 절을 포함 하지 않으면 새 테이블 데이터베이스에 추가 됩니다. 데이터베이스의 테이블과 동일한 이름을 가진 새 테이블을 만들 수 없습니다.  
@@ -151,7 +150,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |ODBC 구문|Visual FoxPro 구문|  
 |-----------------|--------------------------|  
-|CREATE TABLE *기본 테이블 이름*<br /><br /> (*식별자 열 데이터 형식*<br /><br /> [NOT NULL]<br /><br /> [,*식별자 열 데이터 형식*<br /><br /> [NOT NULL] ...)|테이블을 만듭니다 *TableName1* [이름 *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NOT NULL])|  
+|CREATE TABLE *기본 테이블 이름*<br /><br /> (*식별자 열 데이터 형식*<br /><br /> [NOT NULL]<br /><br /> [,*식별자 열 데이터 형식*<br /><br /> [NOT NULL]...)|테이블을 만듭니다 *TableName1* [이름 *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NOT NULL])|  
   
  드라이버를 사용 하 여 테이블을 만들 때 드라이버는 다른 사용자가 테이블에 액세스할 수 있도록 만든 직후에 테이블을 닫습니다. 이 테이블을 만들 때만 열기 상태로 유지 하는 Visual FoxPro에서 서로 다릅니다. 그러나 CREATE TABLE 문이 포함 된 데이터 원본에서 저장된 프로시저를 실행 하는 경우 테이블은 열려 있게 됩니다.  
   

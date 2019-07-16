@@ -9,14 +9,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ead11248d0eebe198890884b427f864cfea756c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104293"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>WideWorldImportersDW 데이터베이스 카탈로그
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ WideWorldImportersDW의 데이터를 따라서 WideWorldImporters에서의 데�
 
 다양 한 유형의 테이블은 세 개의 스키마에서 구성 됩니다.
 
-|스키마|Description|
+|스키마|설명|
 |-----------------------------|---------------------|
 |차원|차원 테이블입니다.|
 |팩트|팩트 테이블입니다.|  
@@ -46,14 +45,14 @@ WideWorldImportersDW 차원 테이블에 있습니다. WideWorldImporters 데이
 
 |Table|원본 테이블|
 |-----------------------------|---------------------|
-|City|`Application.Cities`, `Application.StateProvinces` 및 `Application.Countries` 데이터 형식에 사용할 수 있습니다.|
-|Customer|`Sales.Customers`, `Sales.BuyingGroups` 및 `Sales.CustomerCategories` 데이터 형식에 사용할 수 있습니다.|
+|City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
+|Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
 |Date|회계 연도 포함 하 여 날짜에 대 한 정보를 사용 하 여 새 테이블 (11 월 1 일에 따라 회계 연도 대 한 시작)입니다.|
-|Employee|`Application.People` 을 참조하세요.|
-|StockItem|`Warehouse.StockItems`, `Warehouse.Colors` 및 `Warehouse.PackageType` 데이터 형식에 사용할 수 있습니다.|
+|Employee|`Application.People`.|
+|StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |공급자|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`에 적용되지 않습니다.|
-|PaymentMethod|`Application.PaymentMethods` 을 참조하세요.|
-|TransactionType|`Application.TransactionTypes` 을 참조하세요.|
+|PaymentMethod|`Application.PaymentMethods`.|
+|TransactionType|`Application.TransactionTypes`항목을 참조하세요.|
 
 ### <a name="fact-tables"></a>팩트 테이블
 
@@ -78,7 +77,7 @@ WideWorldImportersDW 다음 팩트 테이블에 있습니다. WideWorldImporters
 
 이러한 절차는 샘플 구성에 사용 됩니다. PolyBase는 추가 샘플의 스탠더드 버전에 적용 되는 enterprise edition 기능 및 ETL reseed 사용 됩니다.
 
-|프로시저|용도|
+|절차|용도|
 |-----------------------------|---------------------|
 |Configuration_ApplyPartitionedColumnstoreIndexing|팩트 테이블의 분할 및 columnstore 인덱스에 적용 됩니다.|
 |Configuration_ConfigureForEnterpriseEdition|분할 인덱싱 및 메모리 내 columnstore에 적용 됩니다.|

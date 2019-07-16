@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9aa68c8c0dbc702b7f0db3e3186c7ddb56266dbc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067828"
 ---
 # <a name="sysdmrepltraninfo-transact-sql"></a>sys.dm_repl_traninfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "51664976"
 |**artcache_table_address**|**varbinary(8)**|이 트랜잭션에 대해 마지막으로 사용된 캐시된 테이블 아티클 구조의 메모리 내 주소입니다.|  
 |**server**|**nvarchar(514)**|서버 이름입니다.|  
 |**server_len_in_bytes**|**smallint**|서버 이름의 문자 길이(바이트)입니다.|  
-|**데이터베이스**|**nvarchar(514)**|데이터베이스 이름입니다.|  
+|**database**|**nvarchar(514)**|데이터베이스 이름입니다.|  
 |**db_len_in_bytes**|**smallint**|데이터베이스 이름의 문자 길이(바이트)입니다.|  
 |**originator**|**nvarchar(514)**|트랜잭션이 시작된 서버의 이름입니다.|  
 |**originator_len_in_bytes**|**smallint**|트랜잭션이 시작된 서버의 문자 길이(바이트)입니다.|  
@@ -71,7 +70,7 @@ ms.locfileid: "51664976"
 ## <a name="permissions"></a>사용 권한  
  변경 데이터 캡처에 설정된 데이터베이스 또는 게시 데이터베이스에 대한 VIEW DATABASE STATE 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 아티클 캐시에 로드되어 있는 변경 데이터 캡처에 설정된 테이블이나 복제된 데이터베이스 개체에 대한 정보만 반환됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

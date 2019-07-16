@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b0eed101b1b336997b7f90c17b3f1471d4ea526b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.openlocfilehash: 52a89c0220bddde6944e759936dc22ad1f3e0ff2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126300"
 ---
 # <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -183,7 +182,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-sending-an-e-mail-message"></a>1. 전자 메일 메시지 보내기  
+### <a name="a-sending-an-e-mail-message"></a>1\. 전자 메일 메시지 보내기  
  이 예제에서는 전자 메일 주소를 사용 하 여 상대방에 게 전자 메일 메시지를 보냅니다 `myfriend@Adventure-Works.com`합니다. 메시지의 제목은 `Automated Success Message`입니다. 메시지의 본문에는 `'The stored procedure finished successfully'`라는 문장이 포함되어 있습니다.  
   
 ```  
@@ -194,7 +193,7 @@ EXEC msdb.dbo.sp_send_dbmail
     @subject = 'Automated Success Message' ;  
 ```  
   
-### <a name="b-sending-an-e-mail-message-with-the-results-of-a-query"></a>2. 쿼리 결과를 포함하여 전자 메일 메시지 보내기  
+### <a name="b-sending-an-e-mail-message-with-the-results-of-a-query"></a>2\. 쿼리 결과를 포함하여 전자 메일 메시지 보내기  
  이 예제에서는 전자 메일 주소를 사용 하 여 상대방에 게 전자 메일 메시지를 보냅니다 `yourfriend@Adventure-Works.com`합니다. 메시지의 제목은 `Work Order Count`이며 이 메시지는 `DueDate`가 2004년 4월 30일부터 2일 내인 작업 주문 번호를 보여 주는 쿼리를 실행합니다. 데이터베이스 메일은 결과를 텍스트 파일로 첨부합니다.  
   
 ```  
@@ -208,7 +207,7 @@ EXEC msdb.dbo.sp_send_dbmail
     @attach_query_result_as_file = 1 ;  
 ```  
   
-### <a name="c-sending-an-html-e-mail-message"></a>3. HTML 전자 메일 메시지 보내기  
+### <a name="c-sending-an-html-e-mail-message"></a>3\. HTML 전자 메일 메시지 보내기  
  이 예제에서는 전자 메일 주소를 사용 하 여 상대방에 게 전자 메일 메시지를 보냅니다 `yourfriend@Adventure-Works.com`합니다. 메시지의 제목은 `Work Order List`이며 이 메시지에는 `DueDate`가 2004년 4월 30일부터 2일 내인 작업 주문을 보여 주는 HTML 문서가 포함되어 있습니다. 데이터베이스 메일은 메시지를 HTML 형식으로 보냅니다.  
   
 ```  

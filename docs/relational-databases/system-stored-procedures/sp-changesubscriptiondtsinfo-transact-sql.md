@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f252d55a41def8e816e6e7843fb57574caacf385
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55f5597af15a264d85cd31175d570cc33ee47f63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081302"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id` 밀어넣기 구독에 대 한 배포 에이전트의 작업 ID입니다. *job_id* 됩니다 **varbinary(16)**, 기본값은 없습니다. 배포 작업 ID를 찾으려면 실행 **sp_helpsubscription** 하거나 **sp_helppullsubscription**합니다.  
+`[ @job_id = ] job_id` 밀어넣기 구독에 대 한 배포 에이전트의 작업 ID입니다. *job_id* 됩니다 **varbinary(16)** , 기본값은 없습니다. 배포 작업 ID를 찾으려면 실행 **sp_helpsubscription** 하거나 **sp_helppullsubscription**합니다.  
   
 `[ @dts_package_name = ] 'dts_package_name'` DTS 패키지의 이름을 지정합니다. *dts_package_name* 되는 **sysname**, 기본값은 NULL 사용 하 여 합니다. 예를 들어 라는 패키지를 지정 하려면 **DTSPub_Package**를 지정 하는 경우 `@dts_package_name = N'DTSPub_Package'`합니다.  
   
@@ -50,12 +49,12 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 > [!NOTE]  
 >  DTS 패키지에는 암호가 있어야 합니다.  
   
-`[ @dts_package_location = ] 'dts_package_location'` 패키지 위치를 지정합니다. *dts_package_location* 는 **nvarchar(12)**, 기본값은 NULL 사용 하 여 패키지 위치를 왼쪽 인지를 지정 하는 변경 되지 않습니다. 패키지의 위치를 변경할 수 있습니다 **배포자** 하거나 **구독자**합니다.  
+`[ @dts_package_location = ] 'dts_package_location'` 패키지 위치를 지정합니다. *dts_package_location* 는 **nvarchar(12)** , 기본값은 NULL 사용 하 여 패키지 위치를 왼쪽 인지를 지정 하는 변경 되지 않습니다. 패키지의 위치를 변경할 수 있습니다 **배포자** 하거나 **구독자**합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changesubscriptiondtsinfo** 스냅숏 복제 및 트랜잭션 복제는 밀어넣기 구독에만 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

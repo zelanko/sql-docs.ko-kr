@@ -22,21 +22,20 @@ ms.assetid: eb69fb8f-f6d9-446e-83c0-67afd05dfba0
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: affb9c997b340a61bd435125c80819a04cdec145
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88f4354a343e9748e1111d26c3ce8c248431b1be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133765"
 ---
 # <a name="sysfulltextstoplists-transact-sql"></a>sys.fulltext_stoplists(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   데이터베이스의 전체 텍스트 중지 목록당 한 개의 행을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|데이터베이스 내에서 고유한 중지 목록 ID입니다.|  
 |**name**|**sysname**|중지 목록의 이름입니다.|  

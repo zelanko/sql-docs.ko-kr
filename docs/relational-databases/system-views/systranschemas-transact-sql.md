@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 864c3966-cb61-4f2b-8939-ccda112de853
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3339cf1731c712cdfee7145390d5cc955c748a98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2a80729738986d69f2eb78b16d119072d6e9e11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094749"
 ---
 # <a name="systranschemas-transact-sql"></a>systranschemas(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **systranschemas** 테이블 트랜잭션 및 스냅숏 게시에 게시 된 아티클의 스키마 변경 내용 추적을 사용 합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**tabid**|**int**|스키마가 변경된 테이블 아티클을 식별합니다.|  
 |**startlsn**|**binary**|스키마 변경 시작 부분의 LSN 값입니다.|  

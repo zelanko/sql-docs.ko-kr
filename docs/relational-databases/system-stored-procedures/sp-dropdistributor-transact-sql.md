@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f1a1baec088af48cd18972c177463fbb3f574eb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9943e6f3d43ff1b543a86425b2644ee4c46a105c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081509"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_dropdistributor** 모든 유형의 복제에 사용 됩니다.  
   
  서버에서 다른 게시자 또는 배포 개체가 없으면 **sp_dropdistributor** 하지 않으면 실패 **@no_checks** 로 설정 되어 **1**합니다.  

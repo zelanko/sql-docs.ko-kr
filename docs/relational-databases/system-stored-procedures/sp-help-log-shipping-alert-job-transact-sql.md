@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9ca751ff6cf83b648e722a7577042adc0eb02681
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f97139337b117f1f84f41df56114ca7a35b61fc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090032"
 ---
 # <a name="sphelplogshippingalertjob-transact-sql"></a>sp_help_log_shipping_alert_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_help_log_shipping_alert_job
 ## <a name="result-sets"></a>결과 집합  
  이 저장 프로시저 반환 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달 경고 작업의 에이전트 작업 ID입니다. 로그 전달 경고 작업이 없으면 빈 결과 집합을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_help_log_shipping_alert_job** 에서 실행 해야 합니다 **마스터** 모니터 서버의 데이터베이스.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -20,20 +20,19 @@ helpviewer_keywords:
 ms.assetid: b376711d-444a-4b5e-b483-8df323b4e31f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 98ebc20d497165d4e2d80438bcd711490fd6bc8c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b921846b0fc27e59ff0874cdbf0827095bfc7db4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140655"
 ---
 # <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   지정된 기간 동안 확장 이벤트에서 보고한 집계된 오류 수의 행을 0개, 1개 또는 그 이상 포함하는 테이블을 반환합니다.  
   
- 이 함수는 스마트 관리 아래의 서비스 상태를 보고하는 데 사용됩니다.  현재 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]은 스마트 관리 아래에서 지원됩니다. 따라서 반환되는 오류는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]과 관련이 있습니다.  
+ 스마트 관리자에서 서비스의 상태를 보고 하는 함수는  현재 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 스마트 관리에서 지원 됩니다. 따라서 반환되는 오류는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]과 관련이 있습니다.  
   
  
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -53,7 +52,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |number_of_storage_connectivity_errors|ssNoversion|프로그램에서 Windows Azure 저장소 계정에 연결할 때의 연결 오류 수입니다.|  
 |number_of_sql_errors|ssNoversion|프로그램에서 SQL Server 엔진에 연결할 때 반환되는 오류 수입니다.|  

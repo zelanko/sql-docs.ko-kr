@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 1111cb5d-2bd9-4bdb-8de2-dc0e47452dd6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 543f0d0234c6f4bc2f34904bda0cd6b0019aaaa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e01c63fd0961755eefc0afb0493005d3b5c1c6c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62737422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027073"
 ---
 # <a name="specifying-explicit-conversion-functions-in-xpath-queries-sqlxml-40"></a>XPath 쿼리에 명시적 변환 함수 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "62737422"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-use-the-number-explicit-conversion-function"></a>1\. number() 명시적 변환 함수 사용  
+### <a name="a-use-the-number-explicit-conversion-function"></a>A. number() 명시적 변환 함수 사용  
  합니다 **number ()** 함수는 인수를 숫자로 변환 합니다.  
   
  값을 가정 **ContactID** 숫자가 다음 변환 쿼리 **ContactID** 숫자로 값 4와 비교 합니다. 다음 쿼리를 모두 반환 합니다  **\<직원 >** 인 컨텍스트 노드의 요소 자식을 합니다 **ContactID** 4의 숫자 값이 있는 특성:  

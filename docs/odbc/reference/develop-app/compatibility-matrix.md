@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e948b1e2fa5bb0877597e3fc3429f306afe991f2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 273633532b9b9247ea7aa12fe90bfcc3c6f6bb81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083272"
 ---
 # <a name="compatibility-matrix"></a>호환성 매트릭스
 다음 표에서 응용 프로그램 및 드라이버를이 단원의 이전에 정의 된 유형의의 호환성을 설명 합니다.  

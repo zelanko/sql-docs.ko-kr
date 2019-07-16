@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 528ba1cb776124c72fcb2d6f1d1e97c0b25ea2f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c219189fbd10ca91d91f3f5a527f88c1804d6d84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124368"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 > [!NOTE]  
 >  필요에 따라 전체 텍스트 카탈로그를 만들고 삭제하고 수정할 수 있습니다. 그러나 동시에 여러 카탈로그에서 스키마를 변경하지 마십시오. 사용 하 여 이러한 작업을 수행할 수 있습니다 합니다 **sp_fulltext_table** 저장 프로시저는 것이 좋습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**만들기**|파일 시스템에 빈 새 전체 텍스트 카탈로그를 만들고 연결된 된 행을 추가 **sysfulltextcatalogs** 사용 하 여 합니다 *fulltext_catalog_name* 하 고 *root_directory*, 있는 경우에 값입니다. *fulltext_catalog_name* 데이터베이스 내에서 고유 해야 합니다.|  
 |**Drop**|삭제 *fulltext_catalog_name* 파일 시스템에서 제거한에서 연결된 된 행을 삭제 하 여 **sysfulltextcatalogs**합니다. 해당 카탈로그에 한 개 이상의 테이블에 대한 인덱스가 있는 경우에는 이 동작이 실패합니다. **sp_fulltext_table** '*table_name*', 'drop' 카탈로그에서 테이블을 삭제 하려면 실행 해야 합니다.<br /><br /> 카탈로그가 없을 경우에는 오류가 표시됩니다.|  
@@ -74,7 +73,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **start_full** 작업에서 전체 텍스트 데이터의 전체 스냅숏을 만드는 데 사용 됩니다 *fulltext_catalog_name*합니다. 합니다 **start_incremental** 작업은 데이터베이스에서 변경된 된 행만 다시 인덱스를 사용 합니다. 증분 채우기는 테이블 형식의 열에 있는 경우에 적용할 수 있습니다 **타임 스탬프**합니다. 전체 텍스트 카탈로그에 테이블 형식의 열이 없으면 **타임 스탬프**, 테이블은 full 채우기를 수행 합니다.  
   
  전체 텍스트 카탈로그 및 인덱스 데이터는 전체 텍스트 카탈로그 디렉터리에서 만들어진 파일에 저장됩니다. 전체 텍스트 카탈로그 디렉터리에서 지정 된 디렉터리의 하위 디렉터리로 만들어집니다 **@path** 또는 서버 기본 전체 텍스트 카탈로그 디렉터리에 있는 경우 **@path** 아닙니다 지정 합니다. 전체 텍스트 카탈로그 디렉터리의 이름은 해당 서버에서 고유한 이름이 되도록 생성됩니다. 따라서 서버의 모든 전체 텍스트 카탈로그 디렉터리는 같은 경로를 공유할 수 있습니다.  
@@ -84,7 +83,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
   
 ## <a name="examples"></a>예  
   
-### <a name="a-create-a-full-text-catalog"></a>1\. 전체 텍스트 카탈로그 만들기  
+### <a name="a-create-a-full-text-catalog"></a>A. 전체 텍스트 카탈로그 만들기  
  이 예제에서는 빈 전체 텍스트 카탈로그를 만듭니다 **Cat_Desc**를 **AdventureWorks2012** 데이터베이스입니다.  
   
 ```  

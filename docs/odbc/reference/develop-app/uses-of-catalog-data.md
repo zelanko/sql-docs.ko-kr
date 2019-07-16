@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d5915d0c-eec3-4382-850e-bd863763c99a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9b75d59d8fc28e364f5826d95e7fc50cb6afda7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc8999c0a7189772145f553646b45eb1f1fbd695
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091610"
 ---
 # <a name="uses-of-catalog-data"></a>카탈로그 데이터의 용도
 응용 프로그램에서 다양 한 방법으로 카탈로그 데이터를 사용합니다. 몇 가지 일반적인 용도 다음과 같습니다.  

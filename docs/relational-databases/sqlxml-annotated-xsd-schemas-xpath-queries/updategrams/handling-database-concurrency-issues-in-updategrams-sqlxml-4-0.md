@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee4f532954092bd7e969e666fe05dcbeb320b42c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cb7981be5bcb3885003e0fdd7adc367b28c9690c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086860"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Updategram의 데이터베이스 동시성 문제 처리(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ ms.locfileid: "56023044"
   
 -   에 타임 스탬프 열 (있는 경우)를 지정 하면  **\<전에 >** 블록입니다.  
   
-     모든 레코드 열을 지정 하는 대신 합니다  **\<하기 전에**> 블록 지정 해도 타임 스탬프 열 (테이블에 하나) 하는 경우에 기본 키 열과 함께  **\<하기 전에 >** 블록입니다. 데이터베이스는 레코드가 업데이트될 때마다 타임스탬프 열을 고유한 값으로 업데이트합니다. 이 경우 updategram은 타임스탬프 값을 데이터베이스의 해당 값과 비교합니다. 타임스탬프 값은 데이터베이스에 이진 값으로 저장되므로 따라서 스키마에서 타임 스탬프 열 지정 해야 합니다 **dt:type="bin.hex"** 를 **dt:type="bin.base64"**, 또는 **sql: datatype = "타임 스탬프"** 합니다. (지정할 수 있습니다 합니다 **xml** 데이터 형식 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다.)  
+     모든 레코드 열을 지정 하는 대신 합니다  **\<하기 전에**> 블록 지정 해도 타임 스탬프 열 (테이블에 하나) 하는 경우에 기본 키 열과 함께  **\<하기 전에 >** 블록입니다. 데이터베이스는 레코드가 업데이트될 때마다 타임스탬프 열을 고유한 값으로 업데이트합니다. 이 경우 updategram은 타임스탬프 값을 데이터베이스의 해당 값과 비교합니다. 타임스탬프 값은 데이터베이스에 이진 값으로 저장되므로 따라서 스키마에서 타임 스탬프 열 지정 해야 합니다 **dt:type="bin.hex"** 를 **dt:type="bin.base64"** , 또는 **sql: datatype = "타임 스탬프"** 합니다. (지정할 수 있습니다 합니다 **xml** 데이터 형식 또는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식입니다.)  
   
 #### <a name="to-test-the-updategram"></a>Updategram을 테스트하려면  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a2259db8-feb7-4f0a-afc8-88e235d86be7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4f52e01375a142772f7514ea6bcf766a5a3225e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adcb9175913603a0d13fb2587e62d41b52939042
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094201"
 ---
 # <a name="default-subkey"></a>기본 하위 키
 레지스트리 기본 하위 키를 사용 하 여 기본 데이터 원본을 지정할 수 있습니다. 이 하위 키는 데이터 소스 사양 하위 키의 특별 한 경우 있고 다른 데이터 소스 사양 하위 키와 동일한 값입니다. 유일한 차이점은 ODBC 데이터 원본 하위 키 아래 값으로 나열 되지 됩니다.

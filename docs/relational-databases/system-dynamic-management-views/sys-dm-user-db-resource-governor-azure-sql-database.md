@@ -19,22 +19,21 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: d25c4d3cfe8628c01b44a99c6e26a96adf453050
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: eebc22fa4f17680b843f195777d7cc5f4b2835ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090456"
 ---
-# <a name="sysdmuserdbresourcegovernance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
+# <a name="sysdmuserdbresourcegovernance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact SQL)
 
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
 
 리소스 거 버 넌 스는 Azure SQL database에 대 한 구성 및 용량 설정을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|ssNoversion|Azure SQL Database 서버 내에서 고유한 데이터베이스의 ID입니다.|
 |**logical_database_guid**|uniqueidentifier|사용자 데이터베이스와 사용자 데이터베이스의 수명이 길어질수록 유지에 대 한 논리적 guid입니다.  이름을 변경 하거나 데이터베이스를 다른 설정 SLO 변경 되지 않습니다 GUID. |
@@ -68,7 +67,7 @@ ms.locfileid: "67413069"
 |**max_transaction_size**|BIGINT|최대 로그 공간 (kb)에서의 모든 트랜잭션을 사용 합니다.|
 |**checkpoint_rate_mbps**|ssNoversion|검사점 대역폭 (mbps)입니다.|
 |**checkpoint_rate_io**|ssNoversion|검사점 IO IOs의 초당 비율입니다.|
-|**last_updated_date_utc**|Datetime|날짜 및 시간 마지막 설정 변경 또는 재구성입니다.|
+|**last_updated_date_utc**|datetime|날짜 및 시간 마지막 설정 변경 또는 재구성입니다.|
 |**primary_group_id**|ssNoversion|기본 사용자 작업 그룹 id입니다.|
 |**primary_group_max_workers**|ssNoversion|기본 사용자 워크 로드 그룹 수준에서 작업자 제한입니다.|
 |**primary_min_log_rate**|BIGINT|기본 사용자 워크 로드 그룹 수준에서 최소 로그 속도 (초당 바이트)입니다.|
@@ -95,7 +94,7 @@ ms.locfileid: "67413069"
 
 이 뷰에는 VIEW DATABASE STATE 권한이 필요합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 사용자가 리소스 거 버 넌 스 구성에 대 한이 동적 관리 뷰 및 Azure SQL database에 대 한 용량 설정에 액세스할 수 있습니다. 
 
