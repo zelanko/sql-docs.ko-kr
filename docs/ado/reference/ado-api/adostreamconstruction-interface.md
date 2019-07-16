@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92f5a939-3e1a-4b14-a9dd-90e6ce2dec74
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4bc15042a0f8f1cf08abadb0ee4a5fe1d5f36631
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70a6dd02722a34159b345a83b32897aa8c38d0ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920782"
 ---
 # <a name="adostreamconstruction-interface"></a>ADOStreamConstruction 인터페이스
 합니다 **ADOStreamConstruction** 인터페이스는 ADO를 만드는 데 사용 됩니다 **Stream** OLE DB 개체 **IStream** 개체 c에서 /C++ 응용 프로그램입니다.  
@@ -38,7 +37,7 @@ ms.locfileid: "66696563"
 ## <a name="events"></a>이벤트  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  OLE DB를 제공 **IStream** 개체 (`pStream`), ADO 생성 **Stream** 개체 (`adoStr`) 다음 세 가지 기본 작업에 금액:  
   
 1.  ADO를 만듭니다 **Stream** 개체:  

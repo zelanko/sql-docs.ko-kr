@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2c18279e-6f35-4af0-b12e-8f1543d9ed20
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9217658a645d731645b0c85a419ecf759b1fd3bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1870d8cd8253e1b6de74ce093d51ca6e33c5c6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930931"
 ---
 # <a name="source-property-ado-record"></a>Source 속성(ADO 레코드)
 데이터 소스를 나타내는 개체를 나타내는 합니다 [레코드](../../../ado/reference/ado-api/record-object-ado.md)합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "66711110"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환을 **Variant** 가 나타내는 엔터티를 나타내는 값을 **레코드**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **원본** 속성에서 반환 합니다 *원본* 인수의 **레코드** 개체 [열기](../../../ado/reference/ado-api/open-method-ado-record.md) 메서드. 절대 또는 상대 URL 문자열을 포함할 수 있습니다. 절대 URL을 설정 하지 않고 사용할 수는 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) 속성을 직접 열을 **레코드** 개체입니다. 암시적인 **연결** 개체가 경우에 생성 됩니다.  
   
  합니다 **원본** 속성에 대 한 참조를 포함할 수도 있습니다 **레코드 집합**, 열리는 **레코드** 의 현재 행을 나타내는 개체를  **레코드 집합**합니다.  

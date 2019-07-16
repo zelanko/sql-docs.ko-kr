@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 644e691dcc0f6fcf024a8d56e8adf516c2c5a096
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 965ef1bc84961e3358c530180bfe4e99249b0bc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933174"
 ---
 # <a name="delete-method-ado-parameters-collection"></a>Delete 메서드(ADO 매개 변수 컬렉션)
 개체를 삭제 합니다 [매개 변수](../../../ado/reference/ado-api/parameters-collection-ado.md) 컬렉션입니다.  
@@ -38,7 +37,7 @@ Parameters.Delete Index
  *Index*  
  A **문자열** 컬렉션에서 삭제 하려는 개체 또는 개체의 서 수 위치 (인덱스)의 이름을 포함 하는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하는 **삭제** 컬렉션에 대해 메서드를 사용 하면 컬렉션의 개체 중 하나를 제거 합니다. 이 메서드는 에서만 사용할 수 있습니다 합니다 **매개 변수** 의 컬렉션을 [명령](../../../ado/reference/ado-api/command-object-ado.md) 개체입니다. 사용 해야 합니다는 [매개 변수](../../../ado/reference/ado-api/parameter-object.md) 개체의 [이름](../../../ado/reference/ado-api/name-property-ado.md) 속성 또는 호출 하는 경우 해당 컬렉션 인덱스는 **삭제** 메서드는 개체 변수는 유효한 인수가 아닙니다.  
   
 ## <a name="applies-to"></a>적용 대상  

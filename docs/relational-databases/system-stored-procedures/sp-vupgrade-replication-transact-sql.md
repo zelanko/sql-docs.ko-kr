@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 096674359a553eb886f5241f60f265c9961647d1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 66ee4819e8830fd718334d4a094ec22c01bf069d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527445"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927800"
 ---
 # <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_vupgrade_replication** 모든 유형의 복제를 업그레이드 하는 경우에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

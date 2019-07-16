@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6bd1e02bf406906cc8a893ccee66a408b38510f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce8679c0c7b20dfaa641918f0447a2f77bfd474a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702067"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925434"
 ---
 # <a name="editing-existing-records"></a>기존 레코드 편집
 기존 레코드를 편집 하려면 편집 하 고 변경 하려는 행으로 이동 합니다 **값** 변경할 필드의 속성입니다. 에 대 한 자세한 내용은 합니다 **필드** 개체의 **값** 속성을 참조 하세요 [데이터 검사](../../../ado/guide/data/examining-data.md)합니다. 커서 유형에 따라 사용할지 **업데이트** 하거나 **UpdateBatch** 변경 내용을 데이터 소스에 다시 보내도록 합니다. 자세한 내용은 [업데이트 및 데이터 유지](../../../ado/guide/data/updating-and-persisting-data.md)합니다.  

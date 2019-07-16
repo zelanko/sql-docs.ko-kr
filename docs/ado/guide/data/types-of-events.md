@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78505f010706a39e5278d50219dd4504e33dd67c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c02d8d115a4336470c0e0d32aebabea63c05ab0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923812"
 ---
-# <a name="types-of-events"></a>이벤트 형식
+# <a name="types-of-events"></a>이벤트 유형
 기본적인 두 가지 이벤트가 있습니다. "이벤트는" 작업이 시작 되기 전에 호출 됩니다, 일반적으로 "은"-이름에 예를 들어 포함 **WillChangeRecordset** 하거나 **WillConnect**합니다. 이벤트는 일반적으로 완료 된 후 호출 되는 이벤트 이름-에 예를 들어, "완료 됨"을 포함 **RecordChangeComplete** 하거나 **ConnectComplete**합니다. -같이 예외 존재 **InfoMessage** -연결된 된 작업이 완료 된 후 이러한 현상이 발생 하지만 합니다.  
   
 ## <a name="will-events"></a>이벤트는  

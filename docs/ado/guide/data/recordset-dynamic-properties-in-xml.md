@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b58a9463932e9761688fd744b972f50ad3286381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a058a2d0c5a808f29807744c6ba01f658bebc120
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924442"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>XML의 레코드 집합 동적 속성
 (Client Cursor Engine)에서 다음 레코드 집합 공급자별 속성을 XML 형식으로 현재 유지 됩니다.  

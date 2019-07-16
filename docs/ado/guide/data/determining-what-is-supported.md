@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c6af51d8d69f5897021733468ee93290e1b5e280
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc42e9128ccc1ccb43996f554ffe280916884307
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925528"
 ---
 # <a name="determining-what-is-supported"></a>지원되는 기능 확인
 합니다 **지원** 메서드는 지정 된 확인 데 **레코드 집합** 개체는 특정 종류의 기능을 지원 합니다. 다음 구문이 사용:  
@@ -29,7 +28,7 @@ ms.locfileid: "66702094"
 boolean = recordset.Supports(CursorOptions )  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **지원** 메서드 공급자의 모든 CursorOptions 인수에 의해 식별 된 기능을 지원 하는지 여부를 나타내는 부울 값을 반환 합니다. 사용할 수는 **지원** 기능의 유형을 확인 하는 방법을 **레코드 집합** 지원 개체입니다. 경우는 **레코드 집합** 개체에 있는 해당 상수는 기능을 지원 합니다 *CursorOptions*의 **지 원하는** 메서드가 반환 되는 **True**. 그렇지 **False**합니다.  
   
  사용 하 여는 **지원** 메서드의 기능에 대 한 확인할 수 있습니다 합니다 **레코드 집합** 책갈피를 사용 하 여 새 레코드를 추가, 사용 하 여 개체를 **찾을** 메서드를 사용 하 여 스크롤을 사용 합니다  **인덱스** 속성 및 일괄 처리 업데이트를 수행 합니다. 상수 및 해당 의미의 전체 목록은 참조 하세요 [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md)합니다.  

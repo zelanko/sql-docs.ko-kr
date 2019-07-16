@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d41d5a0239f11882c135c27fd4af8e817e83b799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926484"
 ---
 # <a name="using-ado-with-scripting-languages"></a>스크립트 언어로 ADO 사용
 스크립팅 환경 내에서 ADO를 사용 하면 서버 쪽 스크립트를 통해 데이터를 노출할 수 있습니다. 이 시나리오, ADO, OLE DB 공급자를 사용 하는 기본 및 지정 된 데이터를 참조 하는 데 필요한 기타 구성 요소 저장소는 인터넷 정보 서비스 (IIS)를 실행 하는 서버에 설치 됩니다. ASP Active Server Pages ()를 사용 하 여 ADO는 예를 들어 HTML을 생성할 수 있는 스크립트에서 참조 구성 요소입니다. 이 HTML 콘텐츠를 클라이언트 웹 브라우저에 HTTP를 통해 전달할 수 있습니다. 스크립트를 사용 하 여 웹 페이지를 업데이트, 트래버스 또는 특정 데이터를 볼 수 있도록 서버 쪽 스크립트를 다시 작업을 보낼 수 있습니다.  
@@ -28,26 +27,26 @@ ms.locfileid: "66702768"
   
 |Object|스크립팅에 안전한?|  
 |------------|-------------------------|  
-|ADO 연결|사용자 계정 컨트롤|  
+|ADO 연결|예|  
 |ADO 명령|아니요|  
 |ADO 매개 변수|아니요|  
-|ADO 레코드 집합|사용자 계정 컨트롤|  
-|ADO 레코드|사용자 계정 컨트롤|  
-|ADO Stream|사용자 계정 컨트롤|  
+|ADO 레코드 집합|예|  
+|ADO 레코드|예|  
+|ADO Stream|예|  
 |ADO 오류|아니요|  
 |ADOX 카탈로그|아니요|  
 |ADOX 셀 집합|아니요|  
-|RDS DataControl|사용자 계정 컨트롤|  
-|RDS DataSpace|사용자 계정 컨트롤|  
+|RDS DataControl|예|  
+|RDS DataSpace|예|  
 |RDS DataFactory|아니요|  
   
  다음 표에서 MDAC/Windows DAC를 사용 하 여 포함 된 공급자를 나열 하 고 안전한 지 여부를 나타냅니다.  
   
 |공급자|스크립팅에 안전한?|  
 |--------------|-------------------------|  
-|셰이프|사용자 계정 컨트롤|  
-|유지|사용자 계정 컨트롤|  
-|원격|사용자 계정 컨트롤|  
+|셰이프|예|  
+|유지|예|  
+|리모컨|예|  
 |OLE DB Provider for SQL Server (SQLOLEDB)|아니요|  
 |OLE DB Provider for ODBC (MSDASQL)|아니요|  
   

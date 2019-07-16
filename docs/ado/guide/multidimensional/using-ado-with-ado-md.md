@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cfae435e-2ac3-4312-8c1e-9ca4a74cd875
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2fd684e35c9cebf4a91a0b396e2c8b572e1ecf8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3c634ec056d42e97dcbea3422a0e19a33596d54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923142"
 ---
 # <a name="using-ado-with-ado-md"></a>ADO MD에서 ADO 사용
 ADO 및 ADO MD는 관련 하지만 별도 개체 모델입니다. ADO는 데이터 원본에 연결, 명령을 실행 하 고, 테이블 형식 데이터와 스키마 메타 데이터를 테이블 형식으로 검색 하 고 공급자 오류 정보 보기에 대 한 개체를 제공 합니다. ADO MD 다차원 데이터를 검색 하 고 다차원 스키마 메타 데이터 보기에 대 한 개체를 제공 합니다.  
@@ -27,7 +26,7 @@ ADO 및 ADO MD는 관련 하지만 별도 개체 모델입니다. ADO는 데이�
   
  다차원 데이터 집합 결합, 테이블 형식 뷰를 소비자에 대 한 자주 유용 합니다. ADO를 사용 하 여 이렇게 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체입니다. 소스를 지정 하 [셀 집합](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) 으로 ***원본*** 에 대 한 매개 변수를 [열기](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드의 **레코드 집합**, 아니라 원본 ADO MD **Cellset**합니다.  
   
- 개체의 계층 구조가 아닌 테이블 형식 뷰의 스키마 메타 데이터를 보는 데 유용할 수도 있습니다. ADO [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 메서드는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체에는 사용자가 열 수 있습니다를 **레코드 집합** 스키마 정보를 포함 하는 합니다. 합니다 ***QueryType*** 의 매개 변수를 **OpenSchema** 메서드가 여러 [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) 와 특히 관련 된 값입니다. 이러한 값은 다음과 같습니다.  
+ 개체의 계층 구조가 아닌 테이블 형식 뷰의 스키마 메타 데이터를 보는 데 유용할 수도 있습니다. ADO [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) 메서드는 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체에는 사용자가 열 수 있습니다를 **레코드 집합** 스키마 정보를 포함 하는 합니다. 합니다 ***QueryType*** 의 매개 변수를 **OpenSchema** 메서드가 여러 [SchemaEnum](../../../ado/reference/ado-api/schemaenum.md) 와 특히 관련 된 값입니다. 해당 값은 다음과 같습니다.  
   
 -   **adSchemaCubes**  
   

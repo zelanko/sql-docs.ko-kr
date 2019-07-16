@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: cdc4b2d3e948f0123eb15e38a6140e63009907bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b0766cb002960a96d702184ac9719abe7610afd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938028"
 ---
 # <a name="mdx-data-manipulation---clear-calculations"></a>MDX 데이터 조작 - CLEAR CALCULATIONS
 
@@ -32,7 +31,7 @@ CLEAR CALCULATIONS [FROMCube_Expression]
  *Cube_Expression*  
  유효한 MDX 큐브 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **FROM** 큐브의 컨텍스트가 알려진, MDX 스크립트와 같이 이러한 경우 절을 생략할 수 있습니다.  
   
 > [!NOTE]  

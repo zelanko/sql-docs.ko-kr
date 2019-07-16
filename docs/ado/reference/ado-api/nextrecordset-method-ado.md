@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 33cc979e0a3af9b684899cf7563573fd6ac8dadd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932031"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset 메서드(ADO)
 현재 지웁니다 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) 개체 및 다음을 반환 **레코드 집합** 일련의 명령을 통해 이동 하 여 합니다.  
@@ -45,7 +44,7 @@ Set recordset2 = recordset1.NextRecordset(RecordsAffected )
 > [!NOTE]
 >  이 매개 변수는 작업에서 영향을 받는 레코드 수를 반환 합니다만 생성 하는 데 사용 되는 select 문에서 레코드 수를 반환 하지 않는 합니다 **레코드 집합**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **NextRecordset** 여러 결과 반환 하는 저장된 프로시저 또는 다음 명령에 복합 명령문의 결과 반환 하는 방법입니다. 여는 경우는 **레코드 집합** 복합 명령문을 기반으로 개체 (예를 들어, "선택 \* table1;에서 선택 \* table2에서 ")를 사용 하 여는 [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) 메서드를 [명령](../../../ado/reference/ado-api/command-object-ado.md) 또는 [열기](../../../ado/reference/ado-api/open-method-ado-recordset.md) 메서드를를 **레코드 집합**, 만 첫 번째 명령은 실행 하 고 결과 반환 하는 ADO *레코드 집합*합니다. 호출 문에서 후속 명령의 결과 액세스 하려면 합니다 **NextRecordset** 메서드.  
   
  추가 결과가 있음을으로 및 **Recordset** 복합 문을 포함 하지 연결 되어 있지 않거나 프로세스 경계를 넘어 마샬링될 합니다 **NextRecordset** 메서드는 계속 반환 **레코드 집합** 개체입니다. 행을 반환 명령을 성공적으로 실행 하지만 반환된 된 없는 레코드를 반환 하는 경우 **레코드 집합** 개체는 열려 있지만 빈 됩니다. 있는지 확인 하 여이 사례에 대 한 테스트를 [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 하 고 [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) 속성은 모두 **True**합니다. 행 반환 하지 않는 명령이 반환 된 성공적으로 실행 하는 경우 **레코드 집합** 개체가 닫힙니다를 테스트 하 여 확인할 수 있음 합니다 [상태](../../../ado/reference/ado-api/state-property-ado.md) 속성에는 **레코드 집합**. 더 이상 결과가 있을 때 *recordset* 로 설정 됩니다 *Nothing*합니다.  

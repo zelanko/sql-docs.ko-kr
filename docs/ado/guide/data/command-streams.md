@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9d1322d872d5e05de4c7f142804fe2f1390b9859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd0c2273739a3651c7fdd4c424ce0cb47d39dd5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925840"
 ---
 # <a name="command-streams"></a>명령 스트림
 ADO를 문자열 형식으로 지정 하 여 명령 입력 지원 왔지만 합니다 **CommandText** 속성입니다. 대신 2.7 이상 ADO를 사용 하 여 사용할 수도 있습니다 정보 스트림을 명령 입력에 대 한이 스트림에 할당 하 여 합니다 **CommandStream** 속성입니다. ADO를 할당할 수 있습니다 **Stream** 개체나 COM을 지 원하는 모든 개체 **IStream** 인터페이스입니다.  

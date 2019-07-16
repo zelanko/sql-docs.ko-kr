@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bbb8a204-d0e4-4f0b-9709-271feb1f136e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2307a62c05503a231c3ee16b79efb25e964f55bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60140559f94cdeebea935b423fbbeef24bce7a08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929465"
 ---
 # <a name="project-settings-azure-sql-db-accesstosql"></a>프로젝트 설정 (Azure SQL DB) (AccessToSQL)
 SQL Azure 프로젝트 설정에는 SQL Azure 데이터베이스 접미사 연결 대화 상자에서 추가할 수 있으며 또한 SQL Azure 연결에 하트 비트 메커니즘을 구현 하도록 해를 구성할 수 있습니다.  

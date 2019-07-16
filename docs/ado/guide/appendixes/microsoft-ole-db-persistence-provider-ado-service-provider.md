@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1ae4f8cba9235700edf410904862d39ed4f7f64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bd341a3af2d1fdb076312b4c0993184fb4fae39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926763"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB 지 속성 공급자 개요
 Microsoft OLE DB 지 속성 공급자를 사용 하면 저장 하는 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 파일에 개체를 나중에 복원 하는 **레코드 집합** 파일에서 개체입니다. 스키마 정보, 데이터, 보류 중인 변경 내용이 유지 됩니다.
@@ -37,12 +36,12 @@ Microsoft OLE DB 지 속성 공급자를 사용 하면 저장 하는 [레코드 
 ## <a name="errors"></a>오류
  응용 프로그램에서이 공급자에서 발급 한 다음 오류를 검색할 수 있습니다.
 
-|상수|Description|
+|상수|설명|
 |--------------|-----------------|
 |E_BADSTREAM|열려 있는 파일에 올바른 형식이 없습니다 (즉, 형식이 ADTG 또는 XML).|
 |E_CANTPERSISTROWSET|합니다 **레코드 집합** 저장 하는 개체에 저장 되는 것을 방지 하는 특징이 있습니다.|
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
  Microsoft OLE DB 지 속성 공급자는 없는 동적 속성을 표시합니다.
 
  현재만 매개 변수화 계층적 **레코드 집합** 개체를 저장할 수 없습니다.

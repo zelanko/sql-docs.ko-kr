@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e1e268da5eb4c53b6270e474987c69b88383cd9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924140"
 ---
 # <a name="shape-compute-clause"></a>셰이프 COMPUTE 절
 셰이프 COMPUTE 절 생성 부모 **레코드 집합**, 열이 있는 자식에 대 한 참조를 이루어진 **레코드 집합**; 내용이 새 장에서 또는 계산된 열, 열 또는 자식 요소에서 집계 함수를 실행 한 결과 **Recordset** 이전 가공 **레코드 집합**; 및 자식에서 모든 열 **레코드 집합** 에 나열 된 절에서 선택 사항입니다.  
@@ -33,7 +32,7 @@ SHAPE child-command [AS] child-alias
    [BY grp-field-list]  
 ```  
   
-## <a name="description"></a>Description  
+## <a name="description"></a>설명  
  이 절의 일부는 다음과 같습니다.  
   
  *child-command*  
@@ -70,7 +69,7 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  방식에 관계 없이 부모 **Recordset** 형식이 장 열을 자식으로 연결 하는 데 사용 되는 계산을 사용 하 여, 추가 사용 하 여 포함 됩니다 **레코드 집합**합니다. 원한다 면 부모 **레코드 집합** 자식 행에 대해 집계 (SUM, MIN, MAX 및 등)를 포함 하는 열이 포함 될 수 있습니다. 부모와 자식 **레코드 집합** 행이 행에서 식을 포함 하는 열이 포함 될 합니다 **레코드 집합**뿐 아니라 새로운과 처음에 있는 열에서 빈 합니다.  
   
-## <a name="operation"></a>연산  
+## <a name="operation"></a>작업(Operation)  
  합니다 *하위 명령* 자식을 반환 하는 공급자에 게 발급 된 **레코드 집합**합니다.  
   
  COMPUTE 절에 지정 된 부모 열 **Recordset**, 자식에 대 한 참조를 일 수 있는 **레코드 집합**, 하나 이상의 집계, 계산 된 식 또는 새 열입니다. 부모 열 정의 추가 됩니다 BY 절에 있으면 **레코드 집합**합니다. BY 절을 지정 하는 방법의 자식 행 **레코드 집합** 그룹화 됩니다.  

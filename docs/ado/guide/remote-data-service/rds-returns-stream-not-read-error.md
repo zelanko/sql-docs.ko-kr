@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 598326335c32f18b5d7f5a764d387e5b5ea536f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c89756e86a702217d5d9d8495bf62b0d27f52321
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922460"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS 반환 &quot;읽지 않았습니다 Stream&quot; 오류
 "Stream 개체 읽을 수 없습니다, 비어 있거나 현재 위치는 Stream의 끝 때문에 있습니다. 비어 있지 않은 스트림용 Position 속성을 사용 하 여 현재 위치를 설정 합니다. Stream 비어 있는지를 확인 하려면 크기 속성을 확인 합니다. "  

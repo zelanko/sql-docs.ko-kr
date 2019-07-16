@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d50eb3cc-a822-486f-b80b-65bb50547ecd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c9ec47ffb89724e8a7991dae1d2296aa813e0c5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1de3710590cf49de30ff8e79a6ff829b124c42dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922802"
 ---
 # <a name="customization-file-connect-section"></a>사용자 지정 파일 연결 섹션
 처리기의 기본 동작은 모든 연결을 거부 합니다. 합니다 **연결** 섹션에서는 해당 동작에 대 한 예외를 지정 합니다. 예를 들어, 모든 경우는 **연결** 없거나 비어 있는 경우 섹션 된 다음 기본적으로 없습니다 연결을 만들 수 없습니다.  

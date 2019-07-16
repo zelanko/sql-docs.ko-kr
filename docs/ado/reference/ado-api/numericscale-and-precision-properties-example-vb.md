@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c1e2322-c225-49d1-a120-a343f23cea73
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c2251d9e51a6c483d07408e141a27657125a9187
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf9fc4f0e96a714c8d00d2ffa9e36dea73e55fe1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932059"
 ---
 # <a name="numericscale-and-precision-properties-example-vb"></a>NumericScale 및 Precision 속성 예제(VB)
 이 예에서는 [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) 및 [정밀도](../../../ado/reference/ado-api/precision-property-ado.md) 속성 필드의 전체 자릿수 및 소수 자릿수를 표시 하는 ***할인*** 목차는  ***Pubs*** 데이터베이스입니다.  

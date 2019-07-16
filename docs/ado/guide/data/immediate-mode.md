@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 37ad4cbc60ad4c08b65ff7f0db9b5c70245a96e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3952ef502bf79d6704cbaea80b9a825a3c70981b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925010"
 ---
 # <a name="immediate-mode"></a>직접 실행 모드
 직접 실행 모드에 적용 되는 경우는 **LockType** 속성이 **adLockOptimistic** 또는 **adLockPessimistic**합니다. 직접 실행 모드에서 레코드를 변경할은 데이터 원본에 즉시 전파를 호출 하 여 행에 대 한 작업 완료를 선언 합니다 **업데이트** 메서드.  

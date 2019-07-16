@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a368e264-865c-41ee-be00-d9097255c2ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d5d64dc151fbd54da17a65e2178b7f38eb6b2834
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14c5436478444e525c7a9753cf3e4e5cddb92f5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922780"
 ---
 # <a name="customization-file-logs-section"></a>사용자 지정 파일 로그 섹션
 합니다 **로그** 섹션의 작업 중 오류를 기록 하는 파일의 이름을 지정 하는 로그 파일 항목을 포함 합니다 **DataFactory**합니다.  

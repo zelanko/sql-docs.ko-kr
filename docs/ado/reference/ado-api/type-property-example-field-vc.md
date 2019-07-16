@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936653"
 ---
 # <a name="type-property-example-field-vc"></a>Type 속성 예제(필드)(VC++)
 이 예제에서는 합니다 [형식](../../../ado/reference/ado-api/type-property-ado.md) 속성의 값에 해당 하는 상수의 이름을 표시 하 여를 **형식** 모든 속성을 [필드](../../../ado/reference/ado-api/field-object.md) 개체를 ***직원*** 테이블입니다. FieldType 함수는이 절차를 실행 하려면 필요 합니다.  
@@ -155,7 +154,7 @@ void PrintComError(_com_error &e) {
 ```  
   
  **Employee 테이블의 필드:**  
- **Name: emp_id**  
+ **이름: emp_id, 즉**  
  **형식: adChar**  
  **이름: fname**  
  **형식: 집합이 있으므로 필요**  
@@ -170,7 +169,7 @@ void PrintComError(_com_error &e) {
  **이름: pub_id**  
  **형식: adChar**  
  **이름: hire_date**  
- **Type: adDBTimeStamp**   
+ **형식: adDBTimeStamp**   
 ## <a name="see-also"></a>관련 항목  
  [Field 개체](../../../ado/reference/ado-api/field-object.md)   
  [Type 속성(ADO)](../../../ado/reference/ado-api/type-property-ado.md)

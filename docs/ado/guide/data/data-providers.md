@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 30d1e1515ed3e84640fe1ca004cb7cbf4383ce97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40506ec971782c5e9108a34fd240faabcc2756b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925651"
 ---
 # <a name="data-providers"></a>데이터 공급자
 데이터 공급자는 다양 한 SQL 데이터베이스, 인덱싱된 순차 파일, 스프레드시트, 문서 저장소 및 메일 파일과 같은 데이터 원본을 나타냅니다. 공급자는 행 집합 이라고 하는 일반적인 추상화를 사용 하 여 균일 하 게 데이터를 표시 합니다.  

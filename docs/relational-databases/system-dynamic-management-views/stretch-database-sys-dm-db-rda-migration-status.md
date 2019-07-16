@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_rda_migration_status (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_rda_migration_status (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 257d83e522b398cce8358c1e30f4966dd951739e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937068"
 ---
 # <a name="stretch-database---sysdmdbrdamigrationstatus"></a>Stretch Database - sys.dm_db_rda_migration_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "65945458"
   
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], 출력 **sys.dm_db_rda_migration_status** 200 개 행으로 제한 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|행 마이그레이션된 테이블의 ID입니다.|  
 |**database_id**|**int**|행 마이그레이션된 데이터베이스의 ID입니다.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac78863fd2bad39675bfe3f486a8a88a8d026e37
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b29f3e348800c300698533fb8aad47066bd0b46a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941770"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +44,15 @@ sp_add_category
 ## <a name="arguments"></a>인수  
 `[ @class = ] 'class'` 추가할 범주의 클래스입니다. *클래스* 됩니다 **varchar(8)** 작업의 기본 값 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |JOB|작업 범주를 추가합니다.|  
 |경으십시오|경고 범주를 추가합니다.|  
 |OPERATOR|운영자 범주를 추가합니다.|  
   
-`[ @type = ] 'type'` 추가할 범주의 형식입니다. *형식* 됩니다 **varchar(12)**, 기본값은 **로컬**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @type = ] 'type'` 추가할 범주의 형식입니다. *형식* 됩니다 **varchar(12)** , 기본값은 **로컬**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |LOCAL|로컬 작업 범주|  
 |다중 서버|다중 서버 작업 범주|  
@@ -67,7 +66,7 @@ sp_add_category
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_add_category** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
 ## <a name="permissions"></a>사용 권한  

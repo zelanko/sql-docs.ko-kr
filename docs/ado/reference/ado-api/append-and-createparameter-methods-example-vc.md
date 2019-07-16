@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b57d144c-0a34-49c8-94cf-e5981edfcca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: feb3dd4a2e70b48c9f238e36d9cda417f21d29d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f0f23598ac53e1d4d4067721487744c46d819442
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920690"
 ---
 # <a name="append-and-createparameter-methods-example-vc"></a>추가 및 CreateParameter 메서드 예제 (VC + +)
 이 예제에서는 합니다 [Append](../../../ado/reference/ado-api/append-method-ado.md) 및 [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) 입력된 매개 변수를 사용 하 여 저장된 프로시저를 실행 하는 방법입니다.  

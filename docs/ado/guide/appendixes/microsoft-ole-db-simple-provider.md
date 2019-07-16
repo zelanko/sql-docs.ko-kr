@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bc17df7bad00205803b33cb4af17cb3c6ddaac56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926603"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Microsoft OLE DB 단순 공급자 개요
 Microsoft OLE DB 단순 공급자 (OSP)는 공급자에 기록 된 사용 하 여 모든 데이터에 액세스 하는 ADO를 허용 합니다 [OLE DB 단순 공급자 (OSP) 도구 키트](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6)합니다. 간단한 공급자는 메모리 내 배열 또는 XML 문서와 같은 기본만 OLE DB 지원 해야 하는 데이터 원본에 액세스 하기 위해서입니다.

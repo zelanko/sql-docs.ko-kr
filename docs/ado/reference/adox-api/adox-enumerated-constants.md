@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d71009c7e4f2c9b717a41f10ca4dc8b9f815ad30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ff18386cb9da4edbeaa8930d138ba9951965ee0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928551"
 ---
 # <a name="adox-enumerated-constants"></a>ADOX 열거 상수
 ADOX 열거 상수는 디버깅을 돕기 위해 각 상수에 대 한 값을 나열 합니다. 그러나이 값은 참고용 으로만 제공 되며 ADOX 릴리스마다에서 변경 될 수 있습니다. 코드는 실제 값이 아니라, 열거형된 상수 이름을 의존 합니다.  
   
  다음 열거 상수 정의 됩니다.  
   
-|열거형|Description|  
+|열거형|설명|  
 |-----------------|-----------------|  
 |[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|경우에 수행할 동작의 유형을 지정 **SetPermissions** 라고 합니다.|  
 |[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Null 값을 사용 하 여 레코드는 인덱싱되어 있는지 여부를 지정 합니다.|  

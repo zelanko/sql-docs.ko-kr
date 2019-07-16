@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: daa8319a-49aa-4c1c-9af6-0b01e9ab2f9d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7b777179ad83250d9707f7717b5833bbbff4fec7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dba8636f07b88f1c05d465b844376c6ef3e61240
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931653"
 ---
 # <a name="position-property-ado"></a>Position 속성(ADO)
 내 현재 위치를 나타내는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "66703406"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 **긴** 스트림의 현재 위치부터에서의 바이트 수에서 오프셋을 지정 하는 값입니다. 기본값은 스트림의 첫 번째 바이트를 나타내는 0입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 위치가 스트림의 맨 끝 뒤 지점으로 이동할 수 있습니다. 스트림의 끝을 넘어서 현재 위치를 지정 하는 경우는 [크기](../../../ado/reference/ado-api/size-property-ado-stream.md) 의 합니다 **Stream** 개체를 적절 하 게 증가 합니다. 이러한 방식으로 추가 된 새 바이트 null이 됩니다.  
   
 > [!NOTE]

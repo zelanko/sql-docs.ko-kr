@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44ab042814b95886faa9f632fb58d7a809c9e458
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930112"
 ---
 # <a name="functions-on-nodes---number"></a>노드 함수 - number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,8 +39,8 @@ fn:number($arg as node()?) as xs:double?
  *$arg*  
  값이 숫자로 반환되는 노드입니다.  
   
-## <a name="remarks"></a>Remarks  
- 하는 경우 *$arg* 은 지정 하지 않으면 double로 변환 하는 컨텍스트 노드의 숫자 값 반환 됩니다. SQL server에서 **fn:number()** 없이 상황별 조건자의 컨텍스트에서 인수로 사용할 수 있습니다. 특히 사용 시 대괄호([])로 묶어야 합니다. 예를 들어 다음 식은 <`ROOT`> 요소를 반환합니다.  
+## <a name="remarks"></a>설명  
+ 하는 경우 *$arg* 은 지정 하지 않으면 double로 변환 하는 컨텍스트 노드의 숫자 값 반환 됩니다. SQL server에서 **fn:number()** 없이 상황별 조건자의 컨텍스트에서 인수로 사용할 수 있습니다. 특히 사용 시 대괄호([])로 묶어야 합니다. 예를 들어 다음 식은 반환 된 <`ROOT`> 요소입니다.  
   
 ```  
 declare @x xml  
@@ -54,7 +53,7 @@ select @x.query('/ROOT[number()=111]')
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>1. number() XQuery 함수를 사용하여 특성의 숫자 값 검색  
+### <a name="a-using-the-number-xquery-function-to-retrieve-the-numeric-value-of-an-attribute"></a>A. number() XQuery 함수를 사용하여 특성의 숫자 값 검색  
  다음 쿼리는 제품 모델 7의 제조 과정에 있는 첫 번째 업무 센터 위치에서 부지 크기 특성의 숫자 값을 검색합니다.  
   
 ```  

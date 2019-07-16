@@ -13,20 +13,19 @@ helpviewer_keywords:
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7345f75d43d302c71db91aefa9097a4d34e72d94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22e63bad49586bbbc1a5616114055779cd3ea041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925542"
 ---
 # <a name="determining-edit-mode"></a>편집 모드 확인
 ADO는 현재 레코드와 연결 된 편집 버퍼를 유지 합니다. 합니다 **EditMode** 속성은이 버퍼에 변경 사항이 있는지 여부 또는 새 레코드를 만들어졌는지를 나타냅니다. 사용 하 여 **EditMode** 현재 레코드의 편집 상태를 확인 합니다. 편집 프로세스가 중단 된 보류 중인 변경 내용에 대 한 테스트를 사용 해야 하는지 여부를 확인 합니다 **업데이트** 또는 **CancelUpdate** 메서드.  
   
  **EditMode** 중 하나를 반환 합니다 **EditModeEnum** 다음 표에 나열 된 상수입니다.  
   
-|상수|Description|  
+|상수|설명|  
 |--------------|-----------------|  
 |**adEditNone**|편집 작업이 진행에서 중임을 나타냅니다.|  
 |**adEditInProgress**|현재 레코드의 데이터가 수정 되었지만 저장 되지 있는지를 나타냅니다.|  

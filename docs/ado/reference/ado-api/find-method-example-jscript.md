@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9fa46bba5f4842b277c4b70622165adf95817858
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b6a81b69fc16c587786685897c476c65937bb4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932631"
 ---
 # <a name="find-method-example-jscript"></a>Find 메서드 예제(JScript)
 이 예제에서는 합니다 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 개체의 [찾을](../../../ado/reference/ado-api/find-method-ado.md) 찾아 회사를 표시 하는 메서드를 ***Northwind*** 데이터베이스 이름이 G. 잘라내기 문자로 시작 하 고 붙여 넣습니다 다음 코드를 메모장 이나 다른 텍스트 편집기 및 저장 **붙여 넣고 FindJS.asp**합니다.  

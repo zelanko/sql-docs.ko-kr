@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3cdf27d1-a180-4cff-8e42-95dec5fb1b55
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e692e8853417abae386ac151eca4b49f11b12f02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a1d153d1433a377bb488366111b75a986365132
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919938"
 ---
 # <a name="close-method-ado"></a>Close 메서드(ADO)
 열려 있는 개체와 모든 종속 개체를 닫습니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "66698993"
 object.Close  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **닫습니다** 닫는 메서드를를 [연결](../../../ado/reference/ado-api/connection-object-ado.md), [레코드](../../../ado/reference/ado-api/record-object-ado.md), [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md), 또는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체 모든 연결 된 시스템 리소스를 해제 합니다. 개체 닫기지 않습니다 하지 메모리에서 제거 합니다. 해당 속성 설정을 변경 하 고 나중에 다시 열 수 있습니다. 메모리에서 개체를 완전히 제거 하려면 개체를 닫고 다음 개체 변수를 설정 합니다 *Nothing* (Visual Basic에서는).  
   
 ## <a name="connection"></a>연결  

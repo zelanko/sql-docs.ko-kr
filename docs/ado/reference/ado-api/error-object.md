@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bc9dc5f19dacfb6fbdab8c2e0dd8278cbc4b97b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5018dc921267663d64037024ef21c82ac6e3f7c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932969"
 ---
 # <a name="error-object"></a>Error 개체
 공급자와 관련 된 단일 작업에 관련 된 데이터 액세스 오류에 대 한 세부 정보를 포함 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ADO 개체와 관련 된 모든 작업이 하나 이상의 공급자 오류를 생성할 수 있습니다. 하나 이상의 오류가 발생할 때마다 **오류** 개체에 배치 됩니다 합니다 [오류](../../../ado/reference/ado-api/errors-collection-ado.md) 의 컬렉션을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 개체입니다. 다른 ADO 작업에서 오류를 생성 하는 경우는 **오류** 컬렉션의 선택을 취소 하 고 새 집합입니다 **오류** 개체에 배치 됩니다는 **오류** 컬렉션.  
   
 > [!NOTE]

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2912328aa61437b663a290952deaaea7b5c06bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925362"
 ---
 # <a name="event-parameters"></a>이벤트 매개 변수
 모든 이벤트 처리기에 이벤트 처리기를 제어 하는 상태 매개 변수입니다. 전체 이벤트의 경우이 매개 변수는 이벤트를 생성 하는 작업의 성공 여부를 나타내는 사용 됩니다. 가장 완전 이벤트 발생 하는 모든 오류 및 하나 이상의 개체 매개 변수는 작업을 수행 하는 데 ADO 개체를 참조 하는 방법에 대 한 정보를 제공 하는 오류 매개 변수를 수도 있습니다. 예를 들어 합니다 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) 이벤트에 대 한 개체 매개 변수를 포함 합니다 **명령**, **레코드 집합**, 및 **연결** 개체 이벤트와 연결 합니다. 다음 Microsoft® Visual Basic® 예에서 pCommand, pRecordset, 및 나타내는 pConnection 개체를 볼 수는 **명령**, **Recordset**, 및 **연결** 에서 사용 되는 개체를 **Execute** 메서드.  
@@ -44,7 +43,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 ## <a name="status-parameter"></a>상태 매개 변수  
  이벤트 처리기 루틴을 호출 되는 *상태* 매개 변수는 다음 값 중 하나로 설정 됩니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**adStatusOK**|완료 이벤트에 전달 합니다. 이 값을 사용 하는 작업 완료 이벤트를 발생 시킨 의미 합니다.|  
 |**adStatusErrorsOccurred**|전체 이벤트만 전달 합니다. 이 값은 이벤트를 발생 시킨 작업에 성공 하지는 이벤트 작업을 취소 있음을 의미 합니다. 확인 합니다 *오류* 매개 변수에 대 한 자세한 내용은 합니다.|  
@@ -54,7 +53,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
   
  에서 더 이상 이벤트를 처리 하려는 경우 설정할 수 없습니다 *상태* 하 **adStatusUnwantedEvent** 응용 프로그램에 해당 이벤트의 알림이 더 이상. 단, 일부 이벤트는 둘 이상의 이유로 발생할 수 있습니다. 이 경우 지정 해야 합니다 **adStatusUnwantedEvent** 각 원인에 대 한 합니다. 예를 들어 보류 중인 알림 수신을 중지할 **RecordChange** 설정한 이벤트는 *상태* 매개 변수를 **adStatusUnwantedEvent** 에 대 한  **adRsnAddNew**, **adRsnDelete**합니다 **adRsnUpdate**를 **adRsnUndoUpdate**를 **adRsnUndoAddNew**, **adRsnUndoDelete**, 및 **adRsnFirstChange** 발생 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**adStatusUnwantedEvent**|이 이벤트 처리기에 더 이상 알림을 받지는 요청입니다.|  
 |**adStatusCancel**|수행 된 작업의 취소를 요청 합니다.|  

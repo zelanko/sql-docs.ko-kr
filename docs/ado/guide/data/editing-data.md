@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 998fd4ee425f1a4356bdc675b53b23247d89c3f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e8fd90849b8e046a7f4fe5d158d4594e612c91f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925498"
 ---
 # <a name="editing-data"></a>데이터 편집
 가 설명한 어떻게 ADO를 사용 하 여 데이터 원본에 연결 명령을 실행, 결과 얻을를 **레코드 집합** 개체를 탐색할 합니다 **레코드 집합**합니다. 이 섹션에서는 다음 기본 ADO 작업에 중점을 둡니다: 데이터를 편집 합니다.  

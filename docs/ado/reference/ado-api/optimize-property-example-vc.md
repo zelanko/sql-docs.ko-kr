@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d602faed36d2348652aa8fd026f0c0810928b6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931833"
 ---
 # <a name="optimize-property-example-vc"></a>Optimize 속성 예제(VC++)
 이 예제에서는 합니다 [필드](../../../ado/reference/ado-api/field-object.md) 개체 동적 **최적화** 속성입니다. 합니다 **zip** 필드를 **작성자** 테이블에 **Pubs** 데이터베이스 인덱싱되지 않은 합니다. 설정 합니다 [최적화](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) 속성을 **True** 에 **zip** 필드의 성능을 향상 시키는 인덱스를 작성 하려면 ADO 권한을 부여는 [찾을](../../../ado/reference/ado-api/find-method-ado.md)메서드.  

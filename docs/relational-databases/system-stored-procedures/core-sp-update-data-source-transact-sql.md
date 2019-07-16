@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 66b95f96-6df7-4657-9b3c-86a58c788ca5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8bdbab374f7f6fa182ea344f442b23e2dec2a15b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a840c749222cc7c01fa1b1ff5a27489e0e9d322a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942464"
 ---
 # <a name="corespupdatedatasource-transact-sql"></a>core.sp_update_data_source(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  업로드 패키지에서 관리 데이터 웨어하우스로 데이터를 업로드하기 시작할 때마다 데이터 수집기 런타임 구성 요소에서 core.sp_update_data_source를 호출합니다. 마지막 업로드 이후에 다음과 같은 변경이 수행된 경우 core.source_info_internal 테이블이 업데이트됩니다.  
   
 -   새 컬렉션 집합이 추가된 경우  

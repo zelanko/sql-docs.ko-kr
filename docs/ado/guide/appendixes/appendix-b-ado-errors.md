@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0ce201c3-6657-4c87-ae81-0d7dc5b5a431
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea4af6a527ce7a45bb9c654676f1a27a16a09a85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52a1968250f58102089b353e35e93689db653240
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926953"
 ---
 # <a name="appendix-b-ado-error-codes"></a>부록 B: ADO 오류 코드
 특정 오류 메시지에 대 한 자세한 내용은 다음 항목을 참조 하세요.

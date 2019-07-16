@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b4571eae744998c287b7388bc6b098f11a4543bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b760bb8d74664e58552f19e321473bb139c3ad0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918245"
 ---
 # <a name="marshaloptions-property-example-vb"></a>MarshalOptions 속성 예제(VB)
 이 예제에서는 합니다 [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) 속성에 지정할 행 server-모든 행 또는 수정 된 행만 다시 전송 됩니다.  

@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: ded4f087-87b9-4efa-8026-bde53d3e9e8a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c3c085a09b800bb5dd6ce02ca3fa2d570b74190e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 738f4cece8cf2355c12c0de4ac42314152c6370a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921449"
 ---
 # <a name="adcpropautorecalcenum"></a>ADCPROP_AUTORECALC_ENUM
 시기를 지정 합니다 [MSDataShape](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 공급자는 계층적 레코드 집합의 집계 및 계산 열을 다시 계산 합니다.  
   
  이러한 상수에만 사용 합니다 **MSDataShape** 공급자 및 **레코드 집합** "**자동 다시 계산**"에서 참조 하는 동적 속성은 [ADO 동적 속성 인덱스](../../../ado/reference/ado-api/ado-dynamic-property-index.md) 문서화 하 고는 [OLE DB에 대 한 Microsoft 커서 서비스](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) 하거나 [OLE DB에 대 한 Microsoft Data Shaping Service](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) 설명서.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adRecalcAlways**|1|기본. 때마다 다시 계산 합니다 **MSDataShape** 공급자 계산된 열에 종속 된 값이 변경 되었는지 확인 합니다.|  
 |**adRecalcUpFront**|0|처음에 계층 구조를 작성 하는 경우에 계산 **레코드 집합**합니다.|  

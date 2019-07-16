@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56a695f742b2fb4ed324c7767a6191239378c6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87b2753c989ad2996dc7788bb0820d78b3b9b6ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931913"
 ---
 # <a name="open-and-close-methods-example-vbscript"></a>Open 및 Close 메서드 예제(VBScript)
 이 예제에서는 합니다 [열기](../../../ado/reference/ado-api/open-method-ado-recordset.md) 및 [닫기](../../../ado/reference/ado-api/close-method-ado.md) 둘 다에서 메서드 [레코드 집합](../../../ado/reference/ado-api/recordset-object-ado.md) 및 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 열려 있는 개체입니다.  

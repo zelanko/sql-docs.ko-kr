@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1969ef21c3c30c46a891fa84acfcd58d460b07c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 197a57b8a9b9ea2927a057733992a02c731a335a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923933"
 ---
 # <a name="the-fields-collection"></a>필드 컬렉션
 합니다 **필드** 컬렉션 ADO의 내장 컬렉션 중 하나입니다. 컬렉션은 하나의 단위로 참조할 수 있는 항목의 정렬된 된 집합입니다. ADO 컬렉션에 대 한 자세한 내용은 참조 하세요. [ADO 개체 모델](../../../ado/guide/data/ado-objects-and-collections.md)합니다.  

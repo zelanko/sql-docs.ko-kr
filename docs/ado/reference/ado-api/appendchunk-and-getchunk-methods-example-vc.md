@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 51aa99be-d5ca-46ac-8b3f-1b03ce4f0b2a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4adc655e670bd44e4c0e3aba32d21d3bdb4beae9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e68bbb558a3cc7fef9428fd63a4fecc4881c997d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920614"
 ---
 # <a name="appendchunk-and-getchunk-methods-example-vc"></a>AppendChunk 및 GetChunk 메서드 예제(VC++)
 이 예제에서는 합니다 [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) 하 고 [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) 이미지 필드를 다른 레코드의 데이터로 채우는 방법입니다.  

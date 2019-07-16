@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0af2421a0d1f80922560be556062c89074c21838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925344"
 ---
 # <a name="formal-shape-grammar"></a>공식적인 셰이프 문법
 다음은 모든 shape 명령 만들기에 대 한 정식 문법입니다.  
@@ -42,14 +41,14 @@ ms.locfileid: "66701994"
   
 |용어|정의|  
 |----------|----------------|  
-|\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
+|\<shape-command>|셰이프 [\<exp 테이블 > [[AS] \<별칭 >]] [\<셰이프 작업 >]|  
 |\<table-exp>|{\<공급자 명령 텍스트 >}&#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> 테이블 \<따옴표 붙은 이름 >&#124;<br /><br /> \<quoted-name>|  
-|\<shape-action>|추가 \<별칭이 지정 된 필드 목록 >&#124;<br /><br /> COMPUTE \<aliased-field-list> [BY \<field-list>]|  
+|\<shape-action>|추가 \<별칭이 지정 된 필드 목록 >&#124;<br /><br /> COMPUTE \<별칭이 지정 된 필드 목록 > [BY \<필드 목록 >]|  
 |\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
 |\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
 |\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<계산 exp >&#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
 |<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> RELATE \<relation-cond-list>|  
-|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
+|\<relation-cond-list>|\<관계 조건 > [, \<관계 조건 >...]|  
 |\<relation-cond>|\<field-name> TO \<child-ref>|  
 |\<child-ref>|\<필드 이름 >&#124;<br /><br /> 매개 변수 \<ref 매개 변수 >|  
 |\<param-ref>|\<number>|  

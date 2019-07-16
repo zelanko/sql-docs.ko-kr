@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1e443a2c131fc2338660c6ddfd0a09b285e1dba0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2606733b3efc5a9641f8de0f544b3cff7c7e9a31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923349"
 ---
 # <a name="xslt-transformations"></a>XSLT 변형
 다른 형식으로 변환할 생성 된 XML에 XSLT은 적용할 수 있습니다. ADO에 XML 형식으로 이해 하는 작업은 보다 친숙 한 형식으로 변환할 수 있는 XSLT 템플릿 개발에 도움이 됩니다.  
   
  예를 들어, 레코드 집합의 각 행 rs: 데이터 요소 내에서 z: 행 요소로 저장 되어 있음을 알 수 있습니다. 마찬가지로, 레코드 집합의 각 필드는이 요소에 대 한 특성-값 쌍으로 저장 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 XSLT 스크립트를 브라우저에 표시할 HTML 테이블로 변환 하는 이전 섹션에 나와 있는 XML에 적용할 수 있습니다.  
   
 ```  

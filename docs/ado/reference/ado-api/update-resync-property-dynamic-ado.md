@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a3bb608-66d7-4128-a3ef-84cb0556de0d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 57ff6e224537feebaf51eee1435ed64ab845025d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed0e3ad8027c31a351ddb4506d3b420aa3a1124d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938803"
 ---
 # <a name="update-resync-property-dynamic-ado"></a>Update Resync 속성 - 동적(ADO)
 지정 여부는 [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) 메서드 뒤에 암시적 [다시 동기화](../../../ado/reference/ado-api/resync-method.md) 메서드 작업 그렇다면 해당 작업의 범위.  
@@ -27,7 +26,7 @@ ms.locfileid: "66710521"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 하나를 반환 합니다 [ADCPROP_UPDATERESYNC_ENUM](../../../ado/reference/ado-api/adcprop-updateresync-enum.md) 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이미를 나머지 값의 조합을 나타내는 adResyncAll 제외 하 고 ADCPROP_UPDATERESYNC_ENUM의 값을 결합할 수 있습니다.  
   
  상수 **adResyncConflicts** 기본 값으로 다시 동기화 값을 저장 하지만 보류 중인 변경 내용이 재정의 하지 않습니다.  

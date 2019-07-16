@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 808661eb-0d7c-4e6d-8e40-9dc3bef3d77a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e821c98f5d390e0eb30dcada9a816c6e29d9d482
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc5b2e2bce410309656bad5591a3df90781cc8bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932224"
 ---
 # <a name="mode-property-ado"></a>Mode 속성(ADO)
 데이터 수정에 사용할 수 있는 권한을 나타냅니다는 [연결](../../../ado/reference/ado-api/connection-object-ado.md)를 [레코드](../../../ado/reference/ado-api/record-object-ado.md), 또는 [Stream](../../../ado/reference/ado-api/stream-object-ado.md) 개체입니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66707552"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하거나 반환 된 [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) 값입니다. 에 대 한 기본값을 **연결** 됩니다 **adModeUnknown**합니다. 에 대 한 기본값을 **레코드** 개체가 **adModeRead**합니다. 기본값을 **Stream** 원본에 연결 (원본으로 또는 기본적으로 URL을 사용 하 여 열린 **Stream** 의 **레코드**)는  **adModeRead**합니다. 에 대 한 기본값을 **Stream** 내부 연관 되지 않은 (메모리에서 시작) 하는 원본이 **adModeUnknown**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 된 **모드** 속성을 설정 하거나 현재 연결에서 공급자가 사용에 대 한 액세스 권한을 반환 합니다. 설정할 수 있습니다 합니다 **모드** 속성 경우에만 합니다 **연결** 개체가 닫혀 있습니다.  
   
  에 대 한는 **Stream** 개체를 사용 하 여 원본에서 상속 된 액세스 모드를 지정 하지 않으면 합니다 **Stream** 개체입니다. 예를 들어 경우는 **Stream** 에서 열리는 **레코드** 개체와 동일한 모드에서 열리는 기본적으로는 **레코드**합니다.  

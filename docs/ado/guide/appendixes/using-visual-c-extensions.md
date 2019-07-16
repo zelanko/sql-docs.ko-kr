@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f89b08d968b5f601c37f89b15196d6ef03db434
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926457"
 ---
 # <a name="visual-c-extensions"></a>Visual C++ 확장
 ## <a name="the-iadorecordbinding-interface"></a>IADORecordBinding 인터페이스
@@ -111,7 +110,7 @@ Update(CADORecordBinding *binding)
 ### <a name="end-binding-entries"></a>바인딩 항목 끝
  **END_ADO_BINDING**()
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |*클래스*|클래스는 바인딩 항목과 C /C++ 변수 정의 됩니다.|
 |*Ordinal*|하나에서 계산 되는 서 수를 **레코드 집합** 필드에 해당 하 여 C /C++ 변수.|
@@ -129,7 +128,7 @@ Update(CADORecordBinding *binding)
 
  데이터를 설정 하는 경우 *상태* 로 설정할 수 있습니다 **adFldNull** 나타내려면 합니다 **레코드 집합** 필드를 설정 해야 null로 합니다.
 
-|상수|값|Description|
+|상수|값|설명|
 |--------------|-----------|-----------------|
 |**adFldOK**|0|Null이 아닌 필드 값을 반환 했습니다.|
 |**adFldBadAccessor**|1|바인딩이 잘못 되었습니다.|

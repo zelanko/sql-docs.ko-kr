@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eb16724f-6fca-4873-b005-68626a8999b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bcf97f42e88cbbba98456efa1cacc60f26b22e2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e46b5b081529d57456d1f6e8a96b057a8fc9c774
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921119"
 ---
 # <a name="ado-code-examples"></a>ADO 코드 예제
 ADO 개체, 메서드, 속성 및 이벤트를 사용 하는 방법을 알아보려면 다음 코드 예제를 사용 합니다.  

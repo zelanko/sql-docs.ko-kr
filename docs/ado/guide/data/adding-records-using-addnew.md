@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cab4adff-f22f-4fb1-9217-f8138c795268
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0be4014809500c4d83b2019dc16bd083b8ed6452
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36f6bad9a8f0d74a81d02ce64c78d7a91ddc0fa8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701196"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926288"
 ---
 # <a name="adding-records-using-addnew-method"></a>AddNew 메서드를 사용 하 여 레코드를 추가 합니다.
 기본 구문은 합니다 **AddNew** 메서드:
@@ -48,5 +47,5 @@ End If
 'EndAddNew1.1
 ```
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
  이 코드는 연결이 끊긴 사용 하므로 **Recordset** 다시 연결 해야 일괄 처리 모드에서 클라이언트 쪽 커서를 **레코드 집합** 를 새 데이터 원본에 **연결** 호출 하기 전에 개체를 **UpdateBatch** 변경 내용이 데이터베이스에 게시 하는 방법입니다. 새 함수를 사용 하 여 쉽게 이렇게 **GetNewConnection**합니다.

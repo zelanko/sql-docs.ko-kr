@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a647051e7953d6f2977074feda94cf7e9f3d9d82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d90eff53ef998a009aecd4d82fc3b502a487c01d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930831"
 ---
 # <a name="status-property-ado-field"></a>Status 속성(ADO 필드)
 상태를 나타내는 [필드](../../../ado/reference/ado-api/field-object.md) 개체입니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66711020"
 ## <a name="return-value"></a>반환 값  
  반환 된 [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) 값입니다. 기본값은 **adFieldOK**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="record-field-status"></a>레코드 필드 상태  
  값으로 변경를 **필드** 의 필드 컬렉션의 개체를 [레코드](../../../ado/reference/ado-api/record-object-ado.md) 개체는 개체의 될 때까지 캐시 됩니다 [업데이트](../../../ado/reference/ado-api/update-method.md) 메서드가 호출 됩니다. 이 시점에서 오류가 발생 하는 필드의 값으로 변경, OLE DB 오류 발생 **DB_E_ERRORSOCCURRED** (2147749409). 상태 속성을 **필드** 개체를 **필드** 오류를 발생 시키는 컬렉션에서 값이 포함 됩니다는 [FieldStatusEnum](../../../ado/reference/ado-api/fieldstatusenum.md) 원인을 설명 하는 문제가 발생 합니다.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f083f62a67a2255b59fe9ca7cffc03e5aaf5f0a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926610"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Microsoft OLE DB Provider for SQL Server 개요
 Microsoft OLE DB Provider for SQL Server는 SQLOLEDB 통해 Microsoft SQL Server에 액세스 하는 ADO를 수 있습니다.
@@ -62,7 +61,7 @@ User ID=MyUserID;Password=MyPassword;"
 ## <a name="provider-specific-connection-parameters"></a>공급자별 연결 매개 변수
  공급자는 ADO를 정의한 것 외에도 여러 공급자별 연결 매개 변수를 지원 합니다. 으로 ADO 연결 속성을 이러한 공급자별 속성을 통해 설정할 수 있습니다 합니다 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 의 컬렉션을 [연결](../../../ado/reference/ado-api/connection-object-ado.md) 의 일부로 설정할 수 있습니다는 **ConnectionString**.
 
-|매개 변수|Description|
+|매개 변수|설명|
 |---------------|-----------------|
 |Trusted_Connection|사용자 인증 모드를 나타냅니다. 설정할 수 있습니다 **Yes** 또는 **No**합니다. 기본값은 **No**합니다. 이 속성 설정 된 경우 **예**, SQLOLEDB Microsoft Windows NT 인증 모드를 사용 하 여 지정한 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여 하는 **위치** 고 [데이터 원본 ](../../../ado/reference/ado-api/datasource-property-ado.md) 속성 값입니다. 이 속성 설정 된 경우 **No**, SQLOLEDB 혼합 모드를 사용 하 여 SQL Server 데이터베이스에 대 한 사용자 액세스 권한을 부여 합니다. 에 지정 된 SQL Server 로그인 및 암호를 **사용자 Id** 하 고 **암호** 속성입니다.|
 |Current Language|SQL Server 언어 이름을 나타냅니다. 시스템 메시지 선택 및 서식 지정에 사용되는 언어를 식별합니다. 언어를 SQL Server에 설치 해야이 고 그렇지 열기 연결이 실패 합니다.|
@@ -122,7 +121,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 
 -   일치 하지 않는 형식에서 여러 데이터 형식 강제 변환 됩니다. 예를 들어 강제 변환를 **sql_variant** 의 하위 형식을 사용 하 여 **GUID** 에 **DBTYPE_VARIANT** 의 하위 형식에 발생 합니다 **safearray**(바이트) . 이 형식으로 변환 된 **sql_variant** 의 새 하위 하면 **배열**(바이트).
 
--   **레코드 집합** 포함 된 필드 **sql_variant** 데이터를 원격으로 연결할 수 (마샬링) 또는 경우에만 유지 합니다 **sql_variant** 특정 하위 유형이 포함 합니다. 원격 지원 되지 않는 다음을 사용 하 여 데이터를 유지 하거나 하위 하면 런타임 오류가 발생 (지원 되지 않는 변환)에서 Microsoft 지 속성 공급자 (MSPersist): **VT_VARIANT**, **VT_RECORD**, **VT_ILLEGAL**, **VT_UNKNOWN**, **VT_BSTR**, and **VT_DISPATCH.**
+-   **레코드 집합** 포함 된 필드 **sql_variant** 데이터를 원격으로 연결할 수 (마샬링) 또는 경우에만 유지 합니다 **sql_variant** 특정 하위 유형이 포함 합니다. 원격 지원 되지 않는 다음을 사용 하 여 데이터를 유지 하거나 하위 하면 런타임 오류가 발생 (지원 되지 않는 변환)에서 Microsoft 지 속성 공급자 (MSPersist): **VT_VARIANT**, **VT_RECORD**를 **VT_ILLEGAL**를 **VT_UNKNOWN**를 **VT_BSTR**, 및 **VT_DISPATCH 합니다.**
 
 -   OLE DB Provider for SQL Server MDAC 2.7, MDAC 2.8 및 Windows DAC 6.0 속성이 동적 호출 **네이티브 변형을 허용** , 이름에서 알 수 있듯이 허용 하는 개발자가 액세스할 수 합니다 **sql_variant** 에서 와 반대로 해당 네이티브 형식에 **DBTYPE_VARIANT**합니다. 이 속성을 설정 하는 경우 **Recordset** Client Cursor Engine을 사용 하 여 열릴 (**adUseClient**), **Recordset.Open** 호출 하지 못합니다. 이 속성을 설정 하는 경우 **Recordset** 서버 커서를 사용 하 여 열릴 (**가 adUseServer**), **Recordset.Open** 호출이 성공 한다는 형식의열에액세스하지만**sql_variant** 오류가 생성 됩니다.
 
@@ -226,7 +225,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |IColumnsRowset|DBPROP_IColumnsRowset|
 |IConnectionPointContainer|DBPROP_IConnectionPointContainer|
 |IConvertType|DBPROP_IConvertType|
-|Immobile Rows|DBPROP_IMMOBILEROWS|
+|부동 행|DBPROP_IMMOBILEROWS|
 |IRowset|DBPROP_IRowset|
 |IRowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|
@@ -301,7 +300,7 @@ EXECUTE SalesByCategory 'Produce', '1995'
 |IColumnsRowset|DBPROP_IColumnsRowset|
 |IConnectionPointContainer|DBPROP_IConnectionPointContainer|
 |IConvertType|DBPROP_IConvertType|
-|Immobile Rows|DBPROP_IMMOBILEROWS|
+|부동 행|DBPROP_IMMOBILEROWS|
 |IRowset|DBPROP_IRowset|
 |IRowsetChange|DBPROP_IRowsetChange|
 |IRowsetIdentity|DBPROP_IRowsetIdentity|

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ddb58a35-ec3a-423c-a504-3c65e62c23d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c87862f97a1fc00d625542c177d85e11d0a7ad45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12b2e6c6f12fc06cb223551b55cb7f9a38df9ac3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921839"
 ---
 # <a name="absolutepage-property-ado"></a>AbsolutePage 속성(ADO)
 현재 레코드가 있는 페이지를 나타냅니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66699278"
   
  64 비트 코드를 64 비트 값의 저장소를 제공 하는 데이터 형식을 사용 합니다. 예를 들어 사용할 수 있습니다 **긴** 또는 다른 값 DBORDINAL와 같은 64 비트 길이 수 있습니다. 사용 하지 마세요 **PositionEnum** 32 비트 길이 제한 되므로 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 레코드에 있는 페이지 수를 확인 하려면이 속성을 사용할 수 있습니다. 사용 하 여는 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) 속성의 전체 행 집합 수를 논리적으로 분할 하는 **레코드 집합** 일련의 페이지에는 각각의 같은 레코드 수가 개체로 **PageSize** (마지막 페이지를 제외 하 고는 할 수도 더 적은 레코드). 공급자 사용 가능 하도록이 속성에 대 한 적절 한 기능을 지원 해야 합니다.  
   
 -   가져오거나 설정 합니다 **AbsolutePage** 속성을 사용 하 여 ADO 합니다 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) 속성 및 [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) 속성을 다음과 같이 함께:  

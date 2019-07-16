@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 23eba215622c423c69119308420a66bf60c4e2fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5636b5f4e49ff9a5bbe46937a8d7b972e61b4502
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938571"
 ---
 # <a name="description-property-ado-md"></a>Description 속성(ADO MD)
 현재 개체의 텍스트 설명을 반환 합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "66709298"
 ## <a name="return-values"></a>반환 값  
  반환 된 **문자열** 읽기 전용입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  에 대 한 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 개체를 **설명** 측정값 및 수식 멤버에만 적용 됩니다. **설명** 빈 문자열을 반환 합니다 ("") 다른 유형의 모든 멤버에 대 한 합니다. 다양 한 유형의 멤버에 대 한 자세한 내용은 참조는 [형식](../../../ado/reference/ado-md-api/type-property-ado-md.md) 속성입니다.  
   
  이 속성 에서만 지원 됩니다 **멤버** 에 속하는 개체를 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 개체입니다. 이 속성에서 참조 되는 동안 오류가 발생 **멤버** 에 속하는 개체를 [위치](../../../ado/reference/ado-md-api/position-object-ado-md.md) 개체입니다.  
