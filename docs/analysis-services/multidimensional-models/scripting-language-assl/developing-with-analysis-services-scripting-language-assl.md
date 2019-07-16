@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c113e07099ed96abdb0eb5f62c8517ee422d3cc7
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145808"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208481"
 ---
 # <a name="developing-with-analysis-services-scripting-language-assl"></a>ASSL(Analysis Services Scripting Language)을 사용하여 개발
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,6 +29,6 @@ ms.locfileid: "50145808"
 ## <a name="see-also"></a>관련 항목  
  [ASSL 개체 및 개체 특징](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)   
  [ASSL XML 표기 규칙](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-xml-conventions.md)   
- [데이터 원본 및 바인딩&#40;SSAS 다차원&#41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
+ [데이터 원본 및 바인딩 & #40; SSAS 다차원 & #41;](../../../analysis-services/multidimensional-models/data-sources-and-bindings-ssas-multidimensional.md)  
   
   

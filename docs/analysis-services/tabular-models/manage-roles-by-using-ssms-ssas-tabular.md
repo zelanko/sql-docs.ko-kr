@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 22fd8242de50f73eee634d1bc6bc3fcf5e887f0b
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072620"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162799"
 ---
 # <a name="manage-roles-by-using-ssms"></a>SSMS를 사용하여 역할 관리 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "53072620"
   
 4.  **이 역할에 대한 데이터베이스 권한 설정**에서 다음 사용 권한 옵션 중 하나를 선택합니다.  
   
-    |사용 권한|Description|  
+    |사용 권한|설명|  
     |----------------|-----------------|  
     |**모든 권한(관리자)**|멤버는 모델 스키마를 수정할 수 있으며 모든 데이터를 볼 수 있습니다.|  
     |**데이터베이스 처리**|멤버는 처리 및 모두 처리 작업을 실행할 수 있습니다. 모델 스키마를 수정할 수 없으며 데이터를 볼 수 없습니다.|  
@@ -81,7 +81,7 @@ ms.locfileid: "53072620"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 삭제할 역할을 포함하는 테이블 형식 model 데이터베이스와 **역할**을 차례로 확장하고 역할을 마우스 오른쪽 단추로 클릭한 다음 **삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
   
   

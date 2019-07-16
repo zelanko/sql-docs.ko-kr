@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6616f90f475da91f3f5c38c0f5922d16d72a5408
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210146"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>DMX를 사용하여 드릴스루 쿼리 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,8 +43,8 @@ WHERE [Model Region] = 'M200 Pacific'
   
  이 예에서는 별칭을 사용하여 구조 열의 이름을 바꾸었습니다. 구조 열에 별칭을 할당하지 않는 경우 열은 'Expression'이라는 이름으로 반환됩니다. 이 동작은 명명되지 않은 모든 열의 기본 동작입니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [드릴스루 쿼리 & #40; 데이터 마이닝 & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
- [마이닝 구조에서 드릴스루](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
+## <a name="see-also"></a>관련 항목  
+ [드릴스루 쿼리&#40;데이터 마이닝&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+ [마이닝 구조에 대한 드릴스루](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

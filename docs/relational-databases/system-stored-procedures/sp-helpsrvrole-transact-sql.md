@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c7f39f3-c261-4f70-8beb-08242d4ac242
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c0cd34d0a10fc8809280be0abcc0761cebd72ae
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a632e6923ab3127a363650c63533fa548d1acc12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006122"
 ---
 # <a name="sphelpsrvrole-transact-sql"></a>sp_helpsrvrole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
 ## <a name="arguments"></a>인수  
 `[ @srvrolename = ] 'role'` 고정된 서버 역할의 이름이입니다. *역할* 됩니다 **sysname**, 기본값은 NULL입니다. *역할* 다음 값 중 하나일 수 있습니다.  
   
-|고정 서버 역할|Description|  
+|고정 서버 역할|설명|  
 |-----------------------|-----------------|  
 |sysadmin|시스템 관리자입니다.|  
 |securityadmin|보안 관리자입니다.|  
@@ -58,12 +57,12 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |ServerRole|**sysname**|서버 역할의 이름입니다.|  
-|Description|**sysname**|서버 역할의 설명|  
+|설명|**sysname**|서버 역할의 설명|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  고정 서버 역할은 서버 수준에서 정의되며 서버 수준의 특정 관리 작업을 수행할 사용 권한을 갖습니다. 고정 서버 역할은 추가, 제거, 변경할 수 없습니다.  
   
  추가 하거나 서버 역할에서 제거 된 멤버를 참조 하십시오 [ALTER SERVER ROLE &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)합니다.  
@@ -77,21 +76,21 @@ sp_helpsrvrole [ [ @srvrolename = ] 'role' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-the-fixed-server-roles"></a>1. 고정 서버 역할 나열  
+### <a name="a-listing-the-fixed-server-roles"></a>A. 고정 서버 역할 나열  
  다음 쿼리는 고정 서버 역할 목록을 반환합니다.  
   
 ```  
 EXEC sp_helpsrvrole ;  
 ```  
   
-### <a name="b-listing-fixed-and-user-defined-server-roles"></a>2. 고정 및 사용자 정의 서버 역할 나열  
+### <a name="b-listing-fixed-and-user-defined-server-roles"></a>2\. 고정 및 사용자 정의 서버 역할 나열  
  다음 쿼리는 고정 및 사용자 정의 서버 역할 목록을 둘 다 반환합니다.  
   
 ```  
 SELECT * FROM sys.server_principals WHERE type = 'R' ;  
 ```  
   
-### <a name="c-returning-a-description-of-a-fixed-server-role"></a>3. 고정 서버 역할의 설명 반환  
+### <a name="c-returning-a-description-of-a-fixed-server-role"></a>3\. 고정 서버 역할의 설명 반환  
  다음 쿼리는 `diskadmin` 고정 서버 역할의 이름과 설명을 반환합니다.  
   
 ```  

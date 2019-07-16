@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af8f2d35-d1bf-495c-af25-630654542b7d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6ad253c2d0603846d6d1f795f6115e7bb727b3da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95392367b70af3eb820f0943af5dc668783a3fe5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046965"
 ---
 # <a name="driver-manager-diagnostic-example"></a>드라이버 관리자 진단 예제
 드라이버 관리자 진단 메시지를 생성할 수도 있습니다. 예를 들어, 응용 프로그램에 잘못 된 방향 옵션을 전달 하는 경우 **SQLDataSources**, 드라이버 관리자 형식과에서 같은 값을 반환할 수 있습니다 **SQLGetDiagRec**:  

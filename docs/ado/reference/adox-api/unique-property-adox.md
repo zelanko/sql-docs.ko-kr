@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d126bcd26a74c091193bcff14154a34188b4a5d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a4b3ab6c9b623544f1cc93f26394fa1905b6d3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964982"
 ---
 # <a name="unique-property-adox"></a>Unique 속성(ADOX)
 인덱스 키를 고유 해야 하는지 여부를 나타냅니다.  
@@ -31,7 +30,7 @@ ms.locfileid: "66705659"
 ## <a name="settings-and-return-values"></a>설정 및 반환 값  
  설정 하 고 반환 된 **부울** 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  기본값은 **False**입니다.  
   
  이 속성은 읽기 전용 [인덱스](../../../ado/reference/adox-api/index-object-adox.md) 컬렉션에 이미 추가 된 개체입니다.  
