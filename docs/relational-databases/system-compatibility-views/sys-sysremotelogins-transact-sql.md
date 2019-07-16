@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b7ffcfa6-aed8-41d4-8b70-845439ab813d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 599747887f48586509c35c635f3349fce5e215f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c51ccd657c8a7c5f07bdaf836ba3e279e81c590
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018127"
 ---
 # <a name="syssysremotelogins-transact-sql"></a>sys.sysremotelogins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47754571"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**remoteserverid**|**smallint**|원격 서버 ID입니다.|  
 |**remoteusername**|**sysname**|원격 서버상에서 사용자의 로그인 이름입니다.|  

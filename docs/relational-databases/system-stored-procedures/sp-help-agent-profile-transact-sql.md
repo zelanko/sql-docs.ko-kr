@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 35e0ace5f88e15ce4afc0da797d949039398e898
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a431b41119e919adfd62178ed32473a931b455b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055213"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,19 +52,19 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**profile_id**|**int**|프로필의 ID입니다.|  
 |**profile_name**|**sysname**|에이전트 유형에 대해 고유합니다.|  
 |**agent_type**|**int**|**1** = 스냅숏 에이전트<br /><br /> **2** = 로그 판독기 에이전트<br /><br /> **3** = 배포 에이전트<br /><br /> **4** = 병합 에이전트<br /><br /> **9** = 큐 판독기 에이전트|  
-|**형식**|**int**|**0** = System<br /><br /> **1** = 사용자 지정|  
+|**형식**|**int**|**0** = 시스템<br /><br /> **1** = 사용자 지정|  
 |**description**|**varchar(3000)**|프로필에 관한 설명입니다.|  
 |**def_profile**|**bit**|해당 프로필이 해당 에이전트 유형에 대한 기본값인지 여부를 지정합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_help_agent_profile** 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

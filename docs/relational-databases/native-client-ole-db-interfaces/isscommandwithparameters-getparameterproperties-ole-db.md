@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7f4cc5ea-d028-4fe5-9192-bd153ab3c26c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f8e13ede890599c7424c2bb181a966608b09b0b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d5e03e1ef1cd62dda40cd9b138c3d2ff3d7395ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050993"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>ISSCommandWithParameters::GetParameterProperties(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,7 +48,7 @@ HRESULT GetParameterProperties(
 ## <a name="return-code-values"></a>반환 코드 값  
  합니다 **GetParameterProperties** 메서드에서 핵심 OLE DB 동일한 오류 코드도 반환 **icommandproperties:: Getproperties** 메서드는 DB_S_ERRORSOCCURRED 및 db_e_errorsoccured가 될 수 없습니다 발생합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **Isscommandwithparameters:: Getparameterproperties** 기준으로 일관성 있게 동작 **GetParameterInfo**합니다. 하는 경우 [isscommandwithparameters:: Setparameterproperties](../../relational-databases/native-client-ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 하거나 **SetParameterInfo** 호출 하지 않았거나 cparams를 0으로 **GetParameterInfo**매개 변수 정보를 파생 하 고이 반환 합니다. 하는 경우 **isscommandwithparameters:: Setparameterproperties** 하거나 **SetParameterInfo** 하나 이상의 매개 변수에 대 한 호출 된 **isscommandwithparameters:: Getparameterproperties**  는 해당 매개 변수에 속성을 반환 **isscommandwithparameters:: Setparameterproperties** 가 호출 되었습니다. 하는 경우 **isscommandwithparameters:: Setparameterproperties** 후에 호출 됩니다 **isscommandwithparameters:: Getparameterproperties** 하거나 **GetParameterInfo**, 에 대 한 후속 호출 **isscommandwithparameters:: Getparameterproperties** 는 해당 매개 변수에 대 한 재정의 값을 반환 **isscommandwithparameters::** 가 호출 되었습니다.  
   
  SSPARAMPROPS 구조는 다음과 같이 정의됩니다.  
@@ -64,7 +63,7 @@ HRESULT GetParameterProperties(
   
  `};`  
   
-|멤버|Description|  
+|멤버|설명|  
 |------------|-----------------|  
 |*iOrdinal*|전달된 매개 변수의 서수입니다.|  
 |*cPropertySets*|*rgPropertySets*에 있는 DBPROPSET 구조의 개수입니다.|  

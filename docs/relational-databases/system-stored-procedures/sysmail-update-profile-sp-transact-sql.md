@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eaedf7ce-a8d5-4ab9-99e0-d77d5be19e90
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d2b1616fdf7b690d61c6a2605cc15da2508a3fb9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 36731206770b324bf4387143ef2c98b0532475ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902887"
 ---
 # <a name="sysmailupdateprofilesp-transact-sql"></a>sysmail_update_profile_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +44,12 @@ sysmail_update_profile_sp [ [ @profile_id = ] profile_id , ] [ [ @profile_name =
   
 `[ @profile_name = ] 'profile_name'` 업데이트할 프로필의 이름 또는 프로필에 대 한 새 이름입니다. *profile_name* 됩니다 **sysname**, 기본값은 NULL입니다. 하나 이상의 *profile_id* 하거나 *profile_name* 지정 해야 합니다. 둘 다 지정하면 프로시저에서 프로필의 이름을 변경합니다.  
   
-`[ @description = ] 'description'` 프로필에 대 한 새 설명입니다. *설명* 됩니다 **nvarchar(256)**, 기본값은 NULL입니다.  
+`[ @description = ] 'description'` 프로필에 대 한 새 설명입니다. *설명* 됩니다 **nvarchar(256)** , 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  프로필 ID와 프로필 이름을 둘 다 지정하면 프로시저가 프로필 이름을 제공된 이름으로 변경하고 프로필에 대한 설명을 업데이트합니다. 이 인수 중 하나만 제공할 경우 프로시저는 프로필에 대한 설명을 업데이트합니다.  
   
  저장된 프로시저 **sysmail_update_profile_sp** 에 **msdb** 데이터베이스 및 소유 하는 **dbo** 스키마입니다. 현재 데이터베이스에는 없는 경우 세 부분으로 된 이름을 사용 하 여 프로시저를 실행 해야 합니다 **msdb**합니다.  

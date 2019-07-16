@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63d1951cfe835cbfca23ab366db2216215aa92c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 569a83110d7d5a3cd25eed8f68753d13793f8b10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054103"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource(dBASE 드라이버)
 > [!NOTE]  
@@ -27,7 +26,7 @@ ms.locfileid: "62665355"
   
  합니다 **SQLConfigDataSource** 함수를 추가 하는 데 사용 되는 수정 또는 데이터 원본 삭제 동적으로 다음과 같은 키워드를 사용 합니다.  
   
-|키워드|Description|  
+|키워드|설명|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|필드 정렬 되는 시퀀스입니다.<br /><br /> 시퀀스 될 수 있습니다. ASCII (기본값) 또는 International입니다.<br /><br /> 동일한 옵션을 설정 **데이터 정렬 시퀀스** 설정 대화 상자에서.|  
 |DEFAULTDIR|디렉터리에 경로 지정 합니다.|  

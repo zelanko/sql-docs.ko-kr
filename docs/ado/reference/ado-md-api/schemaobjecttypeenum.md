@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31b4edac079f8b05868b1ed7b16a7c71fa7aa39c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfb208880586d0bda6bfe6bf956bbb544b48e69a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949182"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
 검색할 개체의 유형을 지정 합니다 [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md) 메서드.  
   
-|상수|값|Description|  
+|상수|값|설명|  
 |--------------|-----------|-----------------|  
 |**adObjectTypeDimension**|1|A [차원](../../../ado/reference/ado-md-api/dimension-object-ado-md.md) 개체입니다.|  
 |**adObjectTypeHierarchy**|2|A [계층](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) 개체입니다.|  

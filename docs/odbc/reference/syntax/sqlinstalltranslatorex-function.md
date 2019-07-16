@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57a2fb53226af9aeb6e546f6109a3e182ffc754f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43acc6708b5df71893c2c6b7658ca99bfb73f616
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019002"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 함수
 **규칙**  
@@ -88,7 +87,7 @@ BOOL SQLInstallTranslatorEx(
 ## <a name="diagnostics"></a>진단  
  때 **SQLInstallTranslatorEx** 연결 된 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에서  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 이 함수의 컨텍스트에서 각각 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생 했습니다에 대 한 특정 설치 관리자 오류가 없습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|합니다 *lpszPathOut* 인수가 출력 경로 포함 하기에 충분 합니다. 버퍼의 잘린된 경로 포함합니다.<br /><br /> 합니다 *cbPathOutMax* 인수가 0, 및 *문제점과* 인수가 ODBC_INSTALL_COMPLETE 합니다.|  

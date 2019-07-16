@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 982f09e5-8205-41b9-98b3-8f898e24743f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db5077b9df2673593b6eaec9622aafd1d2c77234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6682ae98f2da64f6936049bee96fe2fff2a84db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057063"
 ---
 # <a name="sql-92-cast-function"></a>SQL-92 CAST 함수
 **캐스트** SQL-92에 정의 된 함수는 동일 합니다 **변환** ODBC에 정의 된 함수입니다. 해당 함수의 구문은 다음과 같습니다.  

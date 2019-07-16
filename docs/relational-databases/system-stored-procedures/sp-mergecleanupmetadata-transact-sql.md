@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 892f8628-4cbe-4cc3-b959-ed45ffc24064
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 12e2dde3916392e2e106499bdfb9dd0d4fad5b0c
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: ebdc7b55cde31198007e05de1603df7134ed3bfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020005"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_update_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_mergecleanupmetadata** 버전을 실행 하는 서버가 포함 된 복제 토폴로지에서 사용 해야 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이전에 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 1입니다. [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 서비스 팩 1 이상 버전만 포함하는 토폴로지는 자동 보존 기반 메타데이터 정리를 사용해야 합니다. 이 저장 프로시저를 실행할 때는 저장 프로시저가 실행되는 컴퓨터에서 로그 파일이 크게 증가할 가능성이 있다는 점에 주의해야 합니다.  
   
 > [!CAUTION]

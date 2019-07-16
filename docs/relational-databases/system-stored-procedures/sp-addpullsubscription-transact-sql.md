@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dbdd156c20378eda748cef17ec58f6ecf7129cb9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ea87c5e83b5be3945469ddb0e32c9f8158a5e116
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022442"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,15 +50,15 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 `[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @independent_agent = ] 'independent_agent'` 이 게시에 대 한 독립 실행형 배포 에이전트가 있는지를 지정 합니다. *independent_agent* 됩니다 **nvarchar(5)**, 기본값은 TRUE입니다. 하는 경우 **true**,이 게시에 대 한 독립 실행형 배포 에이전트가 있습니다. 하는 경우 **false**, 된 각 게시자 데이터베이스/구독자 데이터베이스 쌍에 대해 하나의 배포 에이전트가 있습니다. *independent_agent* 게시의 속성 이며 동일한 값을 가져야 합니다 게시자와 같습니다.  
+`[ @independent_agent = ] 'independent_agent'` 이 게시에 대 한 독립 실행형 배포 에이전트가 있는지를 지정 합니다. *independent_agent* 됩니다 **nvarchar(5)** , 기본값은 TRUE입니다. 하는 경우 **true**,이 게시에 대 한 독립 실행형 배포 에이전트가 있습니다. 하는 경우 **false**, 된 각 게시자 데이터베이스/구독자 데이터베이스 쌍에 대해 하나의 배포 에이전트가 있습니다. *independent_agent* 게시의 속성 이며 동일한 값을 가져야 합니다 게시자와 같습니다.  
   
-`[ @subscription_type = ] 'subscription_type'` 구독의 유형이입니다. *subscription_type* 됩니다 **nvarchar(9)**, 기본값은 **익명**합니다. 값을 지정 해야 합니다 **끌어오기** 에 대 한 *subscription_type*게시자에서 구독을 등록 하지 않고 구독을 만들려는 경우가 아니면 합니다. 값을 지정 해야 하는 예에서 **익명**합니다. 구독 구성 중에 게시자에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 설정할 수 없는 경우 이 작업을 수행해야 합니다.  
+`[ @subscription_type = ] 'subscription_type'` 구독의 유형이입니다. *subscription_type* 됩니다 **nvarchar(9)** , 기본값은 **익명**합니다. 값을 지정 해야 합니다 **끌어오기** 에 대 한 *subscription_type*게시자에서 구독을 등록 하지 않고 구독을 만들려는 경우가 아니면 합니다. 값을 지정 해야 하는 예에서 **익명**합니다. 구독 구성 중에 게시자에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 설정할 수 없는 경우 이 작업을 수행해야 합니다.  
   
-`[ @description = ] 'description'` 게시의 설명이입니다. *설명* 됩니다 **nvarchar(100)**, 기본값은 NULL입니다.  
+`[ @description = ] 'description'` 게시의 설명이입니다. *설명* 됩니다 **nvarchar(100)** , 기본값은 NULL입니다.  
   
-`[ @update_mode = ] 'update_mode'` 업데이트의 유형이입니다. *update_mode* 됩니다 **nvarchar(30)**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @update_mode = ] 'update_mode'` 업데이트의 유형이입니다. *update_mode* 됩니다 **nvarchar(30)** , 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**읽기 전용** (기본값)|구독이 읽기 전용입니다. 구독자에서의 변경 내용이 게시자로 다시 전달되지 않습니다. 구독자에서 업데이트가 수행되지 않을 때 사용해야 합니다.|  
 |**synctran**|즉시 업데이트 구독에 대한 지원을 설정합니다.|  
@@ -72,7 +71,7 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_addpullsubscription** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
 > [!IMPORTANT]  

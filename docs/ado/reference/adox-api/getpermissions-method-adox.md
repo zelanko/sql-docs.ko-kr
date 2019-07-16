@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8bff406485266af99a1c2538a4df237fd5bf43bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f5b2a5170b499f5e88d4caac4822d2998691eea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966229"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions 메서드(ADOX)
 에 대 한 사용 권한을 반환 하는 [그룹](../../../ado/reference/adox-api/group-object-adox.md) 또는 [사용자](../../../ado/reference/adox-api/user-object-adox.md) 개체 또는 개체 컨테이너에 있습니다.  

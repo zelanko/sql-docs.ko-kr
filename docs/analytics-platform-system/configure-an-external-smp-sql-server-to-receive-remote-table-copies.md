@@ -2,19 +2,18 @@
 title: SQL Server 병렬 데이터 웨어하우스-원격 테이블 복사본을 받도록 구성 | Microsoft Docs
 description: 원격 테이블 복사본을 받도록 병렬 데이터 웨어하우스에서 외부 SMP SQL Server 인스턴스를 구성 하는 방법에 설명 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ae6799d468d57dec04046b443c613823c0a8cb8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ad1ee005f5d28e7477fab7c1abe7ed4074e233d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961299"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>병렬 데이터 웨어하우스-원격 테이블 복사본을 받도록 외부 SMP SQL 서버를 구성 합니다.
 원격 테이블 복사본을 받도록 병렬 데이터 웨어하우스에서 외부 SQL Server 인스턴스를 구성 하는 방법에 설명 합니다.  

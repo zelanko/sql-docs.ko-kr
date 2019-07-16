@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2ef0a07cde73b74ee459e7391f8f99c25e4dc11b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67950dbdf80dc18f798af798d53ab187facf86da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016893"
 ---
 # <a name="calculationcurrentpass-mdx"></a>CalculationCurrentPass(MDX)
 
@@ -28,7 +27,7 @@ ms.locfileid: "63181612"
 CalculationCurrentPass()  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **CalculationCurrentPass** 함수는 현재 쿼리 컨텍스트의 계산 패스의 인덱스를 반환 합니다. 이 함수는 자동 재귀 해결 거의 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  

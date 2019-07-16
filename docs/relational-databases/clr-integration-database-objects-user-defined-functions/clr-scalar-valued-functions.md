@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 20dcf802-c27d-4722-9cd3-206b1e77bee0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 41c8dad185ad310cda38521819fc46146fe57743
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ac063fa59d22308cb90206816555eea8474acca6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009779"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR 스칼라 반환 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -132,7 +131,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 >  `/t:library`는 실행 파일 대신 라이브러리를 생성해야 함을 나타냅니다. 실행 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 등록할 수 없습니다.  
   
 > [!NOTE]  
->  Visual c + + 데이터베이스 개체를 사용 하 여 컴파일할 **/clr: pure** 에서 실행에 대 한 지원 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 예를 들어 이러한 데이터베이스 개체에는 스칼라 반환 함수가 포함되어 있습니다.  
+>  Visual C++ 데이터베이스 개체를 사용 하 여 컴파일된 **/clr: pure** 에서 실행에 대 한 지원 되지 않습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 예를 들어 이러한 데이터베이스 개체에는 스칼라 반환 함수가 포함되어 있습니다.  
   
  어셈블리 및 UDF를 등록하는 예제 호출과 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리는 다음과 같습니다.  
   

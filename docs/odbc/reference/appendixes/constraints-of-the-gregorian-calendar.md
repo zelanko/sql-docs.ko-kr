@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 70667410-c582-4369-8e06-9d98e21cd2bf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30fbdd17e7ec5eb970948e1c7133020081222614
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f67d313f5a1261dba1f88e9ef3a70d30c1cd503
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019181"
 ---
 # <a name="constraints-of-the-gregorian-calendar"></a>일반 달력의 제약 조건
 Date 및 datetime 데이터 형식 및 간격 데이터 형식의 필드를 후행 일반 달력의 제약 조건에 맞아야 합니다. 이러한 제약 조건은 아래와 같습니다.  

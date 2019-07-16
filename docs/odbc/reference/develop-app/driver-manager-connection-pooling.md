@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 96a48d60cc0c127f41e6e1b79b9faf29ea4392cf
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
+ms.openlocfilehash: 92aab28274d3709047e46c55192b437449e252ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047015"
 ---
 # <a name="driver-manager-connection-pooling"></a>드라이버 관리자 연결 풀링
 연결 풀링은 응용 프로그램을 다시 사용할 때마다 설정할 필요가 없는 연결 풀에서 연결을 사용 합니다. 연결 생성 되었으며 풀에 배치 되 면 응용 프로그램 전체 연결 프로세스를 수행 하지 않고 해당 연결 다시 사용할 수 있습니다.  
@@ -44,7 +43,7 @@ ms.locfileid: "67533823"
   
  드라이버는이 옵션을 효율적으로 구현 해야 합니다 또는 성능 풀링 연결을 약화 됩니다. 특히,이 연결 특성을 가져오기 위한 호출 하면 서버에 왕복 합니다. 대신, 드라이버 연결의 마지막으로 알려진된 상태를 바로 반환 해야 합니다. 연결이 마지막 여정 서버로 실패 한 경우 중지 및 마지막 여정에 성공한 경우 소멸 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  연결이 끊어졌습니다 (SQL_ATTR_CONNECTION_DEAD를 통해 보고 됨), ODBC 드라이버 관리자는 SQLDisconnect 드라이버에서 호출 하 여 해당 연결을 삭제 됩니다. 새 연결 요청이 풀에서 사용 가능한 연결이 찾지 못할 수 있습니다. 결국 풀 비어 가정 하 고 새 연결을 드라이버 관리자 확인 될 수 있습니다.  
   
  연결 풀을 사용 하려면 응용 프로그램에는 다음 단계를 수행 합니다.  

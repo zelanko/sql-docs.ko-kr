@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 25a06221-0045-4fb6-a150-1245649768ab
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b1c9991c12cb35ed89217afc41d31c8b447c5de9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59d1d5f4da95b7f152a92a8d780af5ca9f3d3394
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051507"
 ---
 # <a name="shortcut-keys-accesstosql"></a>바로 가기 키 (AccessToSQL)
 SSMA 응용 프로그램을 탐색 하려면 바로 가기 키를 사용할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  

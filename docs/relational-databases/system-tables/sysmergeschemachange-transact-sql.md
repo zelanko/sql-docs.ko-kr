@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: ae9ce16e-6ee9-4c7c-8210-a9bf2c7efdf0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8cbe36230a513129ee8261dbf7fda1a592d1f732
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e7225fae192ab256c2c2660fcb1554cd01818907
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029824"
 ---
 # <a name="sysmergeschemachange-transact-sql"></a>sysmergeschemachange(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   스냅숏 에이전트가 생성한 게시된 아티클에 대한 정보를 포함합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**pubid**|**uniqueidentifier**|게시의 ID입니다.|  
 |**artid**|**uniqueidentifier**|아티클의 ID입니다.|  
@@ -41,7 +40,7 @@ ms.locfileid: "52786285"
 |**schemastatus**|**tinyint**|아티클에 대해 스키마 변경 내용이 보류 중인지 여부를 나타내며 값은 다음 중 하나입니다.<br /><br /> **0** = 비활성입니다.<br /><br /> **1** = 활성입니다.<br /><br /> 스키마 변경이 보류 중인 경우이 값으로 설정 됩니다 **1**합니다.|  
 |**schemasubtype**|**int**|스키마 변경의 하위 유형입니다.<br /><br /> **1** ADDCOLUMN =<br /><br /> **2** DROPCOLUMN =<br /><br /> **3** ALTERCOLUMN =<br /><br /> **4** ADDPRIMARYKEY =<br /><br /> **5** ADDUNIQUE =<br /><br /> **6** ADDREFERENCE =<br /><br /> **7** DROPCONSTRAINT =<br /><br /> **8** ADDDEFAULT =<br /><br /> **9** ADDCHECK =<br /><br /> **10** DISABLETRIGGER =<br /><br /> **11** ENABLETRIGGER =<br /><br /> **12** DISABLETRIGGER =<br /><br /> **13** ENABLETRIGGER =<br /><br /> **14** ENABLECONSTRAINT =<br /><br /> **15** DISABLECONSTRAINT =<br /><br /> **16** ENABLECONSTRAINT =<br /><br /> **17** DISABLECONSTRAINT =|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

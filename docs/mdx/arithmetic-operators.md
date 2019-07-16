@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c422df08152eaf9266a6ca3408bfce12e023c2a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1898f3e9807d2ea4f80f99e9a7ef27e672d58a18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017077"
 ---
 # <a name="arithmetic-operators"></a>산술 연산자
 
@@ -23,7 +22,7 @@ ms.locfileid: "63284517"
   
  MDX는 다음 테이블에 나열된 산술 연산자를 지원합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |[+(더하기)](../mdx/add-mdx.md)|두 숫자를 더합니다.|  
 |[/(나누기)](../mdx/divide-mdx-operator-reference.md)|한 수를 다른 수로 나눕니다.|  

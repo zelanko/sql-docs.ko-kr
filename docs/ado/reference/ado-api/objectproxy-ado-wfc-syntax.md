@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0b1a69ebbc96197a5bf8fc1cb617e7fde65c731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917951"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy(ADO - WFC 구문)
 **ObjectProxy** 개체는 서버를 나타내며에서 반환 되는 **createObject** 메서드를 [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) 개체입니다. ObjectProxy 클래스에 메서드 하나가 **호출**, 서버에서 메서드를 호출할 수 있으며 해당 호출의 결과 개체를 반환 합니다.  

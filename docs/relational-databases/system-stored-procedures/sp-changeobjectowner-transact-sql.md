@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8980ab1f968bcc842fdd17a6095a9945fcc26b42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f00b788ecf6b6e4c02d4b8343ba14fa2c345e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056583"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changeobjectowner** 개체에서 기존의 모든 사용 권한을 제거 합니다. 실행 한 후 유지 하려는 모든 사용 권한을 다시 적용 해야 합니다 **sp_changeobjectowner**합니다. 따라서 좋습니다 실행 하기 전에 기존 사용 권한을 스크립팅할 **sp_changeobjectowner**합니다. 개체의 소유권이 변경된 후 스크립트를 사용하여 사용 권한을 다시 적용할 수 있습니다. 실행 전에 사용 권한 스크립트 내의 개체 소유자를 변경해야 합니다.  
   
  보안 개체의 소유자를 변경하려면 ALTER AUTHORIZATION을 사용하십시오. 스키마를 변경하려면 ALTER SCHEMA를 사용하십시오.  

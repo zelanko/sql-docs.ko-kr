@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0913458d683d7641145b262552e147033dbfc054
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36e108fcc61b2390d5fd72ac4ad322778ccfb4b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057070"
 ---
 # <a name="scalar-function-escape-sequence"></a>스칼라 함수 이스케이프 시퀀스
 ODBC 스칼라 함수에 대 한 이스케이프 시퀀스를 사용합니다. 이 이스케이프 시퀀스의 구문은 다음과 같습니다.  
@@ -29,10 +28,10 @@ ODBC 스칼라 함수에 대 한 이스케이프 시퀀스를 사용합니다. �
 {fn scalar-function}  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  BNF 표기법의 구문은 다음과 같습니다.  
   
- *ODBC-scalar-function-escape* ::=  
+ *스칼라 함수 이스케이프 ODBC* :: =  
   
  *ODBC esc 시작자* fn *스칼라 함수 ODBC esc 종결자*  
   
@@ -40,7 +39,7 @@ ODBC 스칼라 함수에 대 한 이스케이프 시퀀스를 사용합니다. �
   
  (비 단말은에 대 한 정의 *함수 이름* 및 *함수 이름* (*인수 목록*)의 스칼라 함수 목록에서 파생 된 [ 부록 e: 스칼라 함수](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
   
- *ODBC-esc-initiator* ::= {  
+ *ODBC esc 시작자* :: = {  
   
  *ODBC esc 종결자* :: =}  
   

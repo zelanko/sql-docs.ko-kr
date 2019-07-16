@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: aaa80c3b66d7991414033c9c05c79b12681d4ef4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fdb279d47fd182d3196e760e19723715debbb7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017223"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>MDS(Master Data Services)의 새로운 기능
 

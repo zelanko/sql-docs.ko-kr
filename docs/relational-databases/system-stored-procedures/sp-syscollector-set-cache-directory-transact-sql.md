@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 300a59bb09fa28a626b117f51cfa6509b5ca883e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: affa8825053f1123c3fae5518f006e2172b9be39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010673"
 ---
 # <a name="spsyscollectorsetcachedirectory-transact-sql"></a>sp_syscollector_set_cache_directory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  캐시 디렉터리 구성을 변경하려면 먼저 데이터 수집기를 사용하지 않도록 설정해야 합니다. 데이터 수집기를 사용하면 이 저장 프로시저가 실패합니다. 자세한 내용은 [사용 또는 사용 데이터 컬렉션 사용 안 함](../../relational-databases/data-collection/enable-or-disable-data-collection.md), 및 [데이터 컬렉션 관리](../../relational-databases/data-collection/manage-data-collection.md)합니다.  
   
  sp_syscollector_set_cache_directory가 실행될 때는 지정된 디렉터리가 없어도 되지만 데이터를 성공적으로 캐시하고 업데이트하려면 이 디렉터리를 만들어야 합니다. 따라서 이 저장 프로시저를 실행하기 전에 지정된 디렉터리를 만드는 것이 좋습니다.  

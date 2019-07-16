@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 09441d52178090c9970fdcb41ffb8a387f395b93
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 00ba2f254d2ff676eab7c93bb6d0cca7c4ae0901
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053186"
 ---
 # <a name="spdenylogin-transact-sql"></a>sp_denylogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_denylogin [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_denylogin** 지정한 Windows 사용자 또는 Windows 그룹에 매핑된 서버 수준 보안 주체에 CONNECT SQL 권한을 거부 합니다. 서버 보안 주체가 없으면 새로 생성됩니다. 새로운 주 서버에 표시 됩니다는 [sys.server_principals &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 카탈로그 뷰.  
   
  **sp_denylogin** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  

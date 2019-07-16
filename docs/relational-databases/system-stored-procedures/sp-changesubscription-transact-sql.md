@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cddc14c14054ecfa81a963d15a7a604e8d71d085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016534"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +56,11 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'` 구독 데이터베이스의 이름이입니다. *destination_db* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @property = ] 'property'` 지정된 된 구독에 대 한 변경 하려면 속성이입니다. *속성* 됩니다 **nvarchar(30)**, 테이블의 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'` 지정된 된 구독에 대 한 변경 하려면 속성이입니다. *속성* 됩니다 **nvarchar(30)** , 테이블의 값 중 하나일 수 있습니다.  
   
-`[ @value = ] 'value'` 지정 된 새 값입니다 *속성*합니다. *값* 됩니다 **nvarchar(4000)**, 테이블의 값 중 하나일 수 있습니다.  
+`[ @value = ] 'value'` 지정 된 새 값입니다 *속성*합니다. *값* 됩니다 **nvarchar(4000)** , 테이블의 값 중 하나일 수 있습니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다.|  
 |**distrib_job_password**||에이전트가 실행되는 Windows 계정의 암호입니다.|  
@@ -87,7 +86,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changesubscription** 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
  **sp_changesubscription** 밀어넣기 구독의 속성을 수정 하 여 끌어오기 구독에 관련 된 지연 업데이트 트랜잭션 복제에만 사용할 수 있습니다. 끌어오기 구독에 다른 모든 유형의 속성을 변경 하려면 사용 하 여 [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)합니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 182f13347a1fdf4dc06e6d3276e481ce54f01e45
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3a043c3cb8087ef7515860adec34044da89997f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055286"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_help_agent_default** 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

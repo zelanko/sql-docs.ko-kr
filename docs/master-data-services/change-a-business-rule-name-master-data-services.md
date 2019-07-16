@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8669a087dd2cd4459c4bdb35c7a808d6d7b665d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59ecf00588ceeeb7d4ca0b9a4bd71675f2d74739
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047370"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>비즈니스 규칙 이름 변경(Master Data Services)
 

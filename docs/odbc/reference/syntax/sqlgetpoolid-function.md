@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 95a8666a-ad68-4d89-bf65-f2cc797f8820
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9fc6737530fdf151573a570eb83f777785ddb679
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7daef4785a77df294a831d69089108cbb1d88489
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061482"
 ---
 # <a name="sqlgetpoolid-function"></a>SQLGetPoolID 함수
 **규칙**  
@@ -49,7 +48,7 @@ SQLRETURN  SQLGetPoolID (
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetPoolID** 반환 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 드라이버 관리자를 사용 하 여를 **HandleType** SQL_HANDLE_DBC_INFO_TOKEN의와 **처리** 의*hDbcInfoToken*합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **SQLGetPoolID** 연결 정보 집합이 지정 된 풀 ID를 가져오는 데 사용 됩니다 (에서 **SQLSetConnectAttrForDbcInfo**하십시오 **SQLSetDriverConnectInfo**, 및  **SQLSetConnectInfo**). ID는 서로 교환해 서 사용할 수 있는 연결 집합을 식별 하는이 풀 (추가 재설정 필요할 수도 있음). 풀 ID 연결의 해당 그룹에 대 한 연결 풀 식별에 사용 됩니다.  
   
  드라이버는 SQL_ERROR 또는 SQL_INVALID_HANDLE 반환 될 때마다 응용 프로그램에 드라이버 관리자 오류를 반환 합니다 (에서 [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) 하거나 [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)).  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f47b8eec9642fa9553f6b2e25196b82b38b56a91
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072127"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162851"
 ---
 # <a name="delete-a-table"></a>테이블 삭제
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "53072127"
   
 -   해당 테이블을 사용하여 계산 열을 만든 경우 해당 테이블의 열도 삭제됩니다. 다른 테이블에서 삭제된 테이블의 열을 사용하는 계산 열에서는 오류가 표시됩니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [테이블 및 열](../../analysis-services/tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100668"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196721"
 ---
 # <a name="specify-default-values-for-columns"></a>열의 기본값 지정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 열에 입력되는 기본값을 지정할 수 있습니다. 기본값이 지정되지 않은 상태에서 사용자가 열을 빈 채로 두면 다음과 같은 결과가 발생합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "54100668"
   
 -   **기본값을 지정하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   

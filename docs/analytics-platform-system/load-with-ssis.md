@@ -2,19 +2,18 @@
 title: Integration Services-병렬 데이터 웨어하우스를 사용 하 여 로드 | Microsoft Docs
 description: SQL Server Integration Services (SSIS) 패키지를 사용 하 여 병렬 데이터 웨어하우스 (PDW)에 데이터를 로드 하는 것에 대 한 참조 및 배포 정보를 제공 합니다.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90d9f7422a3073df79a93949b3b7ed2e94208412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960676"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>병렬 데이터 웨어하우스를 Integration Services를 사용 하 여 데이터 로드
 SQL Server Integration Services (SSIS) 패키지를 사용 하 여 SQL Server Parallel Data Warehouse로 데이터를 로드 하는 것에 대 한 참조 및 배포 정보를 제공 합니다.  
@@ -84,7 +83,7 @@ Integration Services를 사용 하 여 SQL Server PDW 데이터베이스에 데�
 |NCHAR|DT_WSTR|  
 |NUMERIC|DT_DECIMAL, DT_I1, DT_I2, DT_I4, DT_I8, DT_NUMERIC, DT_UI1, DT_UI2, DT_UI4, DT_UI8|  
 |NVARCHAR|DT_WSTR, DT_STR|  
-|real|DT_R4|  
+|REAL|DT_R4|  
 |SMALLDATETIME|DT_DBTIMESTAMP2|  
 |SMALLINT|DT_I1, DT_I2, DT_UI1|  
 |SMALLMONEY|DT_R4|  
@@ -216,7 +215,7 @@ id,city,lastUpdateDate,orderDate
   
 4.  선택 **새 연결을 만들**합니다.  
   
-5.  어플라이언스에서 대 한 정보를 사용 하 여 서버, 사용자, 암호 및 대상 데이터베이스에 대 한 정보를 입력 합니다. (예제는 아래 참조). 마치면 **확인**을 클릭합니다.  
+5.  어플라이언스에서 대 한 정보를 사용 하 여 서버, 사용자, 암호 및 대상 데이터베이스에 대 한 정보를 입력 합니다. (예제는 아래 참조). 그런 다음 **확인**을 클릭합니다.  
   
     InfiniBand 연결용 **서버 이름**: 입력 < 어플라이언스-이름 >-SQLCTL01, 17001 합니다.  
   

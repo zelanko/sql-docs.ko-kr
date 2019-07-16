@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fa4ce8ad-9935-4195-90f9-3fdac587a4ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c5ce10a437ecba5e865ce1e2436ee5041839b7e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f987e03ad8dda27e436f22ef54fc3c2646579f4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051552"
 ---
 # <a name="save-metadata-accesstosql"></a>메타 데이터 (AccessToSQL)를 저장 합니다.
 합니다 **메타 데이터 저장** SSMA 프로젝트를 저장 하기 전에 메타 데이터를 로드 하 라는 대화 상자가 표시 됩니다. 오프 라인으로 사용 하 고 기술 지원 담당자와 같은 다른 사용자에 게 보낼 수 있는 전체 프로젝트 파일이이 있습니다.  

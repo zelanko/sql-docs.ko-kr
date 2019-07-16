@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 9ad4d1a23a05db35e0c4b55473903dbf7e4265da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: efeb55e9fb3a241978fd31944f662250b0f36d48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962444"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R 사용에 대 한 SQL Server 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

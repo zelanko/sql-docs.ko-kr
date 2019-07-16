@@ -1,5 +1,5 @@
 ---
-title: sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL) | Microsoft Docs
+title: sys.dm_resource_governor_resource_pools_history_ex (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 130c4f9c38e5eb7ee47d31377a224c5b602b5b35
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 7b40d9afe54137fb31088aa8aa8b5664c90b715d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053298"
 ---
 # <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (Transact-SQL)
 
@@ -34,7 +33,7 @@ ms.locfileid: "67412941"
 
 Azure SQL Database에 대 한 통계를 풀 하는 리소스의 마지막 30 분 15 초 간격으로 스냅숏을 반환 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|ssNoversion|리소스 풀의 ID입니다. Null을 허용하지 않습니다.
 |**name**|sysname|리소스 풀의 이름입니다. Null을 허용하지 않습니다.|
@@ -104,7 +103,7 @@ Azure SQL Database에 대 한 통계를 풀 하는 리소스의 마지막 30 분
 
 이 보기에는 VIEW SERVER STATE 권한이 필요합니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 사용자는 거의 실시간 리소스 사용량 사용자 워크 로드 풀 뿐만 아니라 Azure SQL Database 인스턴스의 시스템 내부 풀에 대 한 모니터링이 동적 관리 뷰를 액세스할 수 있습니다.
 

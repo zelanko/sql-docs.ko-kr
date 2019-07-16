@@ -19,24 +19,23 @@ helpviewer_keywords:
 ms.assetid: 71087a4c-e829-488e-aa7d-a9476e2b4779
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d0568403cb7f5bdf48d9be33e1b40f0be3fc1c33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03e888cc3d36b909035247d5f1c16dd1ab61e0d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061193"
 ---
 # <a name="dbosysdownloadlist-transact-sql"></a>dbo.sysdownloadlist(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   모든 대상 서버의 다운로드 명령 대기열을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|행의 자연 삽입 시퀀스를 제공하는 ID 열입니다.|  
 |**source_server**|**sysname**|원본 서버의 이름입니다.|  
-|**operation_code**|**tinyint**|작업의 운영 코드입니다.<br /><br /> **1** = INS (삽입)<br /><br /> **2** = UPD (UPDATE)<br /><br /> **3** = DEL (삭제)<br /><br /> **4** = START<br /><br /> **5** = STOP|  
+|**operation_code**|**tinyint**|작업의 운영 코드입니다.<br /><br /> **1** = INS (삽입)<br /><br /> **2** = UPD (업데이트)<br /><br /> **3** = DEL (삭제)<br /><br /> **4** = START<br /><br /> **5** = STOP|  
 |**object_type**|**tinyint**|개체 유형 코드입니다.|  
 |**object_id** <sup>1</sup>|**uniqueidentifier**|개체 ID입니다.|  
 |**target_server**|**sysname**|대상 서버의 이름입니다.|  

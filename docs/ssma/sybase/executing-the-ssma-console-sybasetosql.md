@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029149"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA 콘솔 실행(SybaseToSQL)
 Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 강력한 집합을 제공 합니다. 결과 섹션을 자세히 설명 동일 합니다.  
@@ -42,7 +41,7 @@ Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 
   
 -   `project-name` 프로젝트의 이름을 나타냅니다. {string}  
   
--   `overwrite-if-exists`선택적 특성 기존 프로젝트를 덮어쓸지 여부를 나타냅니다. {boolean}  
+-   `overwrite-if-exists`선택적 특성 기존 프로젝트를 덮어쓸지 여부를 나타냅니다. {부울}  
   
 -   `project-type:`선택적 특성입니다. "Sql server 2005" 또는 "sql server 2008" 프로젝트 또는 프로젝트 "sql server 2012" 또는 "sql server 2014" 프로젝트 프로젝트나 "sql azure" 프로젝트는 프로젝트 유형을 나타냅니다. 기본값은 "sql-서버-2008"입니다.  
   
@@ -312,7 +311,7 @@ SSMA 콘솔의 다양 한 작업의 성능에는 보고서를 생성 하는 보�
 </convert-schema>  
 ```  
   
-### <a name="migrate-data"></a>migrate-data  
+### <a name="migrate-data"></a>데이터 마이그레이션  
 이 명령은 대상에 원본 데이터를 마이그레이션합니다.  
   
 -   `object-name:` 마이그레이션에 대 한 것으로 간주 하는 원본 개체를 지정 합니다. 데이터 (지원 개별 개체 이름 또는 그룹 개체 이름).  
@@ -393,7 +392,7 @@ sql-server-schema="<target-schema>"/>
 > [!NOTE]  
 > 마이그레이션 명령에 대 한 설정 기본 콘솔 출력은 'Full' 출력 보고서와 자세한 오류 보고 하지 않습니다. 원본 개체 트리의 루트 노드에서 요약 합니다.  
   
-### <a name="synchronize-target"></a>synchronize-target  
+### <a name="synchronize-target"></a>동기화 대상  
 이 명령은 대상 데이터베이스를 사용 하 여 대상 개체를 동기화합니다.  
  
 이 명령은 원본 데이터베이스에 대해 실행 될 경우 오류가 발생 합니다.  
@@ -454,7 +453,7 @@ fail-script>" (optional)
 </synchronize-target>  
 ```  
   
-### <a name="refresh-from-database"></a>refresh-from-database  
+### <a name="refresh-from-database"></a>데이터베이스에서 새로 고침  
 이 명령은 원본 데이터베이스에서 개체를 새로 고칩니다.  
   
 이 명령은 대상 데이터베이스에 대해 실행 될 경우 오류가 생성 됩니다.  

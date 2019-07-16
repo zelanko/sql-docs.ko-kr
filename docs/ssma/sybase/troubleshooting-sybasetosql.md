@@ -11,20 +11,19 @@ helpviewer_keywords:
 ms.assetid: 8684ed23-c36b-46f6-9687-30ad7f47f876
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d2f8fa753623e9b7d978556c16c5c4bbeba6efe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ecbd6235e0ebec1850bb959aec2aa25832e857f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63069652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020883"
 ---
 # <a name="troubleshooting-sybasetosql"></a>문제 해결(SybaseToSQL)
 콘솔 스크립트 또는 명령을 실행 하는 마이그레이션 문제 중간 흔하게 것입니다.  
   
 수정 가능한 오류와 관련 될 수 있습니다.  
   
-1.  기능  
+1.  함수  
   
 2.  절차  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023480"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164967"
 ---
 # <a name="understanding-the-database-schemas"></a>데이터베이스 스키마 이해
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "34023480"
 > [!NOTE]  
 >  차원 테이블의 기반이 되는 차원에서 키 특성을 두 개 이상 지정하면 오류가 발생합니다.  
   
- 번역  
+ Translations  
  마법사는 번역 열이 필요한 특성에 대해 번역된 값을 보관할 별도의 테이블을 생성합니다. 또한 마법사는 필요한 각 언어에 대해 별도의 열을 만듭니다.  
   
 ## <a name="fact-tables"></a>팩트 테이블  
@@ -71,7 +71,7 @@ ms.locfileid: "34023480"
   
  참조 무결성을 강제 적용하는 경우에는 차원 테이블과 팩트 테이블 간에 참조 무결성 제약 조건이 생성됩니다(해당되는 경우).  
   
- 번역  
+ Translations  
  마법사는 측정값 그룹에서 번역 열이 필요한 속성에 대해 번역된 값을 보관할 별도의 테이블을 생성합니다. 또한 마법사는 필요한 각 언어에 대해 별도의 열을 만듭니다.  
   
 ## <a name="data-type-conversion-and-default-lengths"></a>데이터 형식 변환 및 기본 길이  
@@ -85,10 +85,10 @@ ms.locfileid: "34023480"
 |NameColumn|50|  
 |CustomRollupColumn|3000|  
 |CustomRollupPropertiesColumn|500|  
-|UnaryOperatorColumn|1.|  
+|UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [증분 생성 이해](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)   
- [데이터 원본 뷰 및 데이터 원본에 대 한 변경 관리](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
+ [데이터 원본 뷰 및 데이터 원본에 대한 변경 내용 관리](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)  
   
   

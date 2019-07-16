@@ -18,21 +18,20 @@ helpviewer_keywords:
 ms.assetid: 9bb6ef86-957b-4ca1-ad20-ca2f8460a86d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32ef1fff3b5309da587aacc2fca14099e6bf2cac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 052402d3a394e8da3e08828992127d3cd89b95ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900156"
 ---
-# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact-SQL)
+# <a name="sysdmoshostinfo-transact-sql"></a>sys.dm_os_host_info (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
 운영 체제 버전 정보를 표시 하는 행을 반환 합니다.  
   
-|열 이름 |데이터 형식 |Description |  
+|열 이름 |데이터 형식 |설명 |  
 |-----------------|---------------|-----------------|  
 |**host_platform** |**nvarchar(256)** |운영 체제의 유형: Windows 또는 Linux |
 |**host_distribution** |**nvarchar(256)** |운영 체제의 설명입니다. |
@@ -41,7 +40,7 @@ ms.locfileid: "63047238"
 |**host_sku**|**int**|Windows SKU(Stock Keeping Unit) ID입니다. SKU Id 및 설명의 목록을 참조 하세요 [GetProductInfo 함수](https://msdn.microsoft.com/library/ms724358.aspx)합니다. Null을 허용합니다. <br> Linux의 경우 NULL을 반환합니다. |  
 |**os_language_version**|**int**|운영 체제의 Windows LCID(로캘 ID)입니다. LCID 값 및 설명의 목록을 참조 하세요 [Microsoft에서 할당 한 로캘 Id](https://go.microsoft.com/fwlink/?LinkId=208080)합니다. null일 수 없습니다.|  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 이 보기는 비슷합니다 [sys.dm_os_windows_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-windows-info-transact-sql.md), Windows 및 Linux를 구분 하는 열을 추가 합니다.
   
 ## <a name="security"></a>보안  

@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: c12696a2-5939-402b-9866-8a837ca4c0a3
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7a86459f8ea20b2596068093a2e24cb87aa788cb
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: d3c19439a481b843edec8210f83a4a82e5dd27a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056442"
 ---
 # <a name="sppdwremovenetworkcredentials-sql-data-warehouse"></a>sp_pdw_remove_network_credentials (SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -61,7 +60,7 @@ sp_pdw_remove_network_credentials 'target_server_name'
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-remove-credentials-for-performing-a-database-backup"></a>1. 데이터베이스 백업을 수행 하기 위한 자격 증명 제거  
+### <a name="a-remove-credentials-for-performing-a-database-backup"></a>A. 데이터베이스 백업을 수행 하기 위한 자격 증명 제거  
  다음 예제에서는 10.192.147.63의 IP 주소가 대상 서버에 액세스 하기 위한 사용자 이름 및 암호 자격 증명을 제거 합니다.  
   
 ```  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 08820d88-e157-4d49-9401-38580dd7ec2d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e397bf4480dd7a9955fb8c7acbce0d11fd910893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 346fcd2ea7f83abcb9a5c23a22cb0eded76acc0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63215940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944685"
 ---
 # <a name="setting-project-options-mysqltosql"></a>프로젝트 옵션 설정(MySQLToSQL)
 각 SSMA 프로젝트에 대 한 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션에는 개체를 변환 하는 방법을, 데이터가 마이그레이션되는 방식 및 원본 데이터 형식을 대상 데이터 형식에 매핑하는 방법을 지정 합니다.  SQL Server 또는 SQL Azure 개체를 변환 하거나 SQL Server 또는 SQL Azure 데이터를 마이그레이션할 하기 전에 구성 옵션을 프로젝트에 적절 하 게 확인 합니다.  
@@ -31,7 +30,7 @@ SSMA는 프로젝트 설정의 5 개 집합에 있습니다.
   
 -   일반 (변환, 마이그레이션 및 SQL Azure)  
   
--   Synchronization  
+-   동기화  
   
 -   GUI  
   
@@ -78,7 +77,7 @@ SSMA에 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니�
   
     3.  사용자 지정 설정을 지정 하려면 선택 하거나 새 설정이 나 값을 입력 합니다.  
   
-3.  클릭 **확인** 설정을 저장 합니다.  
+3.  **확인**을 클릭하여 설정을 저장합니다.  
   
 현재 프로젝트에 대 한 설정을 사용자 지정할 수도 있습니다. 현재 프로젝트 파일에 설정은 저장 합니다.  
   
@@ -92,7 +91,7 @@ SSMA에 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니�
   
     2.  사용자 지정 모드를 지정 하려면 **사용자 지정** 에서 합니다 **모드** 드롭다운 목록 상자입니다. 선택한 후 적절 한 프로젝트 설정 합니다.  
   
-3.  클릭 **확인** 설정을 저장 합니다.  
+3.  **확인**을 클릭하여 설정을 저장합니다.  
   
 ## <a name="next-step"></a>다음 단계  
 다음 단계는 마이그레이션 프로젝트 요구 사항에 따라 달라 집니다.  

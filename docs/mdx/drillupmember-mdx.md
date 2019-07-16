@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 31981669d5d08e63a853b8daa530b886f9b7dfbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5dfdec16d20173639cc92a80b1ca546f44b70334
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049194"
 ---
 # <a name="drillupmember-mdx"></a>DrillupMember(MDX)
 
@@ -35,7 +34,7 @@ DrillupMember(Set_Expression1, Set_Expression2)
  *Set_Expression2*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **DrillupMember** 함수에는 두 번째 집합에서 멤버의 하위 항목에는 첫 번째 집합에 지정 된 멤버를 기준으로 하는 멤버 집합을 반환 합니다. 첫 번째 집합은 어떠한 차원도 될 수 있지만 두 번째 집합은 1차원 집합을 포함해야 합니다. 첫 번째 집합의 원래 멤버 간 순서는 유지됩니다. 이 함수는 첫 번째 집합의 멤버 중 두 번째 집합에 있는 멤버의 직계 하위 항목에 해당하는 멤버만 포함하여 집합을 구성합니다. 첫 번째 집합에 있는 멤버의 직계 상위 항목이 두 번째 집합에 없으면 이 함수에서 반환된 집합에는 첫 번째 집합의 멤버가 포함됩니다. 첫 번째 집합의 하위 항목 중 두 번째 집합의 상위 멤버보다 앞에 있는 하위 항목도 포함됩니다.  
   
  첫 번째 집합에는 멤버 대신 튜플이 포함될 수 있습니다. 튜플 드릴다운은 멤버 대신 튜플 집합을 반환하는 OLE DB의 확장 기능입니다.  
