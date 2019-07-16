@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46cfdd9075bd950b287bef399ca3a505a1261f5d
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181594"
 ---
-# <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>검사 목록: PowerShell을 사용 하 여 SharePoint 용 파워 피벗을 확인 하려면
+# <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>검사 목록: PowerShell을 사용하여 SharePoint용 파워 피벗 확인
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   서비스 및 데이터가 작동하는지 확인하는 견고한 확인 테스트에 성공하지 않으면 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 설치 또는 복구 작업이 완료되지 않습니다. 이 문서에서는 Windows PowerShell을 사용하여 이러한 단계를 수행하는 방법을 보여줍니다. 각 단계를 고유한 섹션에 포함하여 특정 태스크로 바로 이동할 수 있습니다. 예를 들어 유지 관리 또는 백업에 서비스 애플리케이션 및 콘텐츠 데이터베이스를 예약하려면 이 항목의 [데이터베이스](#bkmk_databases) 섹션에서 스크립트를 실행하여 이름을 확인합니다.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "55087832"
   
  **관리자 권한**으로 Powershell 창 또는 PowerShell ISE(통합 스크립팅 환경)를 엽니다. 명령을 실행할 때 관리자 권한이 없는 경우 다음과 유사한 오류 메시지가 표시됩니다.  
   
- Get-SPLogEvent: 컴퓨터를 가질 필요가 **관리자 권한** 이 cmdlet을 실행 합니다.  
+ Get-splogevent: 컴퓨터를 가질 필요가 **관리자 권한** 이 cmdlet을 실행 합니다.  
   
  **SharePoint 및 [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]** 모듈  
   
@@ -273,7 +273,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
   
  다음 명령은 SharePoint 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스 관련 이벤트의 Windows 이벤트 로그를 검색합니다. 이벤트 비활성화 또는 이벤트 수준 변경에 대 한 내용은 참조 하세요 [구성 및 보기 SharePoint 로그 파일과 진단 로깅 &#40;SharePoint 용 파워 피벗&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
  
- **서비스 이름:** MSOLAP$POWERPIVOT  
+ **서비스 이름:** MSOLAP$ POWERPIVOT  
   
  **Windows 서비스의 표시 이름:** SQL Server Analysis Services (POWERPIVOT)  
   

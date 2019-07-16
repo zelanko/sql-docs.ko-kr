@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347e8d170006cb289b421171851140b18e64f14b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f1c1c856cadbb4f005a99d5a5d49dc0c1280a8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843851"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898414"
 ---
 # <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_updateextendedproperty
  속성에 연결된 값입니다. *값* 됩니다 **sql_variant**, 기본값은 NULL입니다. 크기인 *값* 7,500 바이트 보다 되지 않을 수 있습니다.  
   
  [ @level0type=] {'*level0_object_type*'}  
- 사용자 또는 사용자 정의 형식입니다. *level0_object_type* 됩니다 **varchar(128)**, 기본값은 NULL입니다. 유효한 입력 어셈블리, 계약, EVENT NOTIFICATION, 파일 그룹, 메시지 유형, 파티션 함수, 파티션 구성표, 계획 지침, REMOTE SERVICE BINDING, 경로, 스키마, 서비스, 사용자, 트리거, 형식 및 NULL이 됩니다.  
+ 사용자 또는 사용자 정의 형식입니다. *level0_object_type* 됩니다 **varchar(128)** , 기본값은 NULL입니다. 유효한 입력 어셈블리, 계약, EVENT NOTIFICATION, 파일 그룹, 메시지 유형, 파티션 함수, 파티션 구성표, 계획 지침, REMOTE SERVICE BINDING, 경로, 스키마, 서비스, 사용자, 트리거, 형식 및 NULL이 됩니다.  
   
 > [!IMPORTANT]  
 >  수준 0 유형 USER와 TYPE은 나중 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거됩니다. 새 개발 작업에서는 이 기능을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. USER 대신 SCHEMA를 수준 0 유형으로 사용합니다. TYPE의 경우 수준 0 유형으로 SCHEMA를 사용하고 수준 1 유형으로 TYPE을 사용합니다.  
@@ -95,7 +94,7 @@ sp_updateextendedproperty
   
 ## <a name="examples"></a>예  
   
-### <a name="a-updating-an-extended-property-on-a-column"></a>1. 열의 확장 속성 업데이트  
+### <a name="a-updating-an-extended-property-on-a-column"></a>1\. 열의 확장 속성 업데이트  
  다음 예에서는 `Caption` 테이블의 `ID` 열에서 `T1` 속성의 값을 업데이트합니다.  
   
 ```  
@@ -120,7 +119,7 @@ EXEC sp_updateextendedproperty
 GO  
 ```  
   
-### <a name="b-updating-an-extended-property-on-a-database"></a>2. 데이터베이스의 확장 속성 업데이트  
+### <a name="b-updating-an-extended-property-on-a-database"></a>2\. 데이터베이스의 확장 속성 업데이트  
  다음 예에서는 먼저 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스에 확장 속성을 만든 다음 이 속성 값을 업데이트합니다.  
   
 ```  

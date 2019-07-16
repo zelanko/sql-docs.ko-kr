@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 302a4885833c6e26f9c4eaf6e3acf57d2b278845
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072260"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162735"
 ---
 # <a name="power-view---reporting-properties"></a>파워 뷰 - 보고 속성 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "53072260"
   
 ## <a name="related-tasks"></a>관련 작업  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[파워 뷰 보고서의 기본 필드 집합 구성](../../analysis-services/tabular-models/power-view-configure-default-field-set-for-reports.md)|보고서 필드 목록에서 테이블을 선택할 때 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고서 캔버스에 자동으로 추가되는 미리 정의된 열 및 측정값 목록인 기본 필드 집합을 구성하는 방법에 대해 설명합니다.|  
 |[파워 뷰 보고서의 테이블 동작 속성 구성](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)|정보 행을 자세히 표시하는 테이블 동작 속성을 구성하는 방법에 대해 설명합니다. 테이블 동작 속성을 설정하면 정보 행의 그룹화 동작이 변경되고 바둑판식 배열, 카드 및 차트 레이아웃의 식별 정보의 기본 배치가 향상됩니다.|  

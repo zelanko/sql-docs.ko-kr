@@ -10,18 +10,18 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ab4f304d865992a3269b4ee83c9e25f61069e8c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984695"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210264"
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services 이전 버전과 호환성 (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
 
 기능 가용성 및 현재 버전 및 이전 버전 간의 동작 변경 내용을 설명합니다.
 
-## <a name="deprecated-features"></a>사용 되지 않는 기능
+## <a name="deprecated-features"></a>사용되지 않는 기능
 A *사용 되지 않는 기능* 향후 릴리스에서 제품에서 중단 될 예정 이지만 여전히 지원 되 고 이전 버전과 호환성을 유지 하기 위해 현재 릴리스에서 포함 합니다. 신규 및 기존 프로젝트에서 사용 되지 않는 기능을 사용 하 여 향후 릴리스와도 호환을 유지 관리를 중단 하는 것이 좋습니다.
   
 다음 기능은이 릴리스에서 사용 되지 않습니다.
@@ -39,7 +39,7 @@ A *사용 되지 않는 기능* 향후 릴리스에서 제품에서 중단 될 �
 |테이블 형식|테이블 형식 모델 1100 및 1103 호환성 수준은 향후 릴리스에서 지원되지 않을 예정입니다. 대체 모델 호환성 수준 1200 이상 설정, 테이블 형식 메타 데이터를 모델 정의 변환 하는 것입니다. [Analysis services에서 테이블 형식 모델에 대한 호환성 수준](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)을 참조하세요.|  
 |Tools|추적 캡처용 SQL Server Profiler<br /><br /> SQL Server Management Studio에 포함된 확장 이벤트 프로파일러를 대신 사용할 수 있습니다.  <br /> [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)을 참조하세요.|  
 |Tools|추적 재생용 Server Profiler <br />대체 기능 대체 기능은 없습니다.|  
-|추적 관리 개체 및 추적 API|Analysis Services 추적 및 재생 개체용 API를 포함하는 Microsoft.AnalysisServices.Trace 개체. 다음과 같은 여러 부분을 대신 사용할 수 있습니다.<br /><br /> -추적 구성: Microsoft.SqlServer.Management.XEvent<br />-추적 읽기: Microsoft.SqlServer.XEvent.Linq<br />-   추적 재생: 없음|  
+|추적 관리 개체 및 추적 API|Analysis Services 추적 및 재생 개체용 API를 포함하는 Microsoft.AnalysisServices.Trace 개체. 다음과 같은 여러 부분을 대신 사용할 수 있습니다.<br /><br /> 추적 구성: Microsoft.SqlServer.Management.XEvent<br />추적 읽기: Microsoft.SqlServer.XEvent.Linq<br />추적 재생: 없음|  
   
 > [!NOTE]  
 >  이전에 사용이 중단된 기능에 대한 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 의 공지 사항은 계속 적용됩니다. 이러한 기능을 지원하는 코드는 아직 제품에서 삭제되지 않았으므로 이러한 기능 중 대부분은 이 릴리스에도 계속 포함되어 있습니다. 이전에 사용 되지 않는 기능 하는 동안 수는 여전히 것이 사용 되지 않으며 실제로 수에 액세스할 수에서 제거할 제품 언제 든 지 합니다.  

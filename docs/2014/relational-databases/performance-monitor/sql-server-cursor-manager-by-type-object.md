@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35fa15dc6651d8bfd9b6d32cafd00cd47698560b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52804255"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206976"
 ---
 # <a name="sql-server-cursor-manager-by-type-object"></a>SQL Server, Cursor Manager by Type 개체
   **SQLServer:Cursor Manager by Type** 개체는 커서 모니터링에 사용되는 카운터를 유형별로 그룹화하여 제공합니다.  
   
  다음 표에서는 SQL Server **Cursor Manager by Type** 카운터에 대해 설명합니다.  
   
-|Cursor Manager by Type 카운터|Description|  
+|Cursor Manager by Type 카운터|설명|  
 |-------------------------------------|-----------------|  
 |**Active cursors**|활성 커서 수입니다.|  
 |**Cache Hit Ratio**|캐시 적중 횟수와 조회 간 비율입니다.|  
@@ -38,7 +38,7 @@ ms.locfileid: "52804255"
   
  개체의 각 카운터는 다음 인스턴스를 포함합니다.  
   
-|Cursor Manager 인스턴스|Description|  
+|Cursor Manager 인스턴스|설명|  
 |-----------------------------|-----------------|  
 |**_Total**|모든 커서에 대한 정보입니다.|  
 |**API Cursor**|API 커서 정보만 해당됩니다.|  

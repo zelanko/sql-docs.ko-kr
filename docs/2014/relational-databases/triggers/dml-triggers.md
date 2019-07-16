@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797745"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196510"
 ---
 # <a name="dml-triggers"></a>DML 트리거
   DML 트리거는 트리거에 정의된 테이블 또는 뷰에 영향을 주는 DML(데이터 조작 언어) 이벤트가 실행될 때 자동으로 적용되는 특별한 유형의 저장 프로시저입니다. DML 이벤트에는 INSERT, UPDATE 또는 DELETE 문이 포함됩니다. DML 트리거를 사용하여 비즈니스 규칙과 데이터 무결성을 적용하고, 다른 테이블을 쿼리하고, 복잡한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함할 수 있습니다. 트리거 및 트리거를 시작하는 문은 트리거 내에서 롤백할 수 있는 단일 트랜잭션으로 처리됩니다. 디스크 공간 부족 등의 심각한 오류가 발견되면 전체 트랜잭션이 자동으로 롤백됩니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "52797745"
 |적용 대상|테이블|테이블 및 뷰|  
 |각 테이블이나 뷰에서 가능한 트리거 수|각 트리거 동작(UPDATE, DELETE 및 INSERT)에 대해 여러 개 사용 가능|각 트리거 동작(UPDATE, DELETE 및 INSERT)에 대해 한 개만 사용 가능|  
 |연계 참조|적용되는 제한 없음|연계 참조 무결성 제약 조건이 적용되는 테이블에는 INSTEAD OF UPDATE 트리거와 DELETE 트리거가 허용되지 않습니다.|  
-|실행|이후:<br /><br /> 제약 조건 처리<br />선언적 참조 동작<br />**inserted** 및 **deleted** 테이블 만들기<br />트리거 동작|이전: 제약 조건 처리<br /><br /> 다음 대신  트리거 동작<br /><br /> 이후:  **inserted** 및 **deleted** 테이블 만들기|  
+|실행|이후:<br /><br /> 제약 조건 처리<br />선언적 참조 동작<br />**inserted** 및 **deleted** 테이블 만들기<br />트리거 동작|이전: 제약 조건 처리<br /><br /> 대신에:  트리거 동작<br /><br /> 이후:  **inserted** 및 **deleted** 테이블 만들기|  
 |실행 순서|첫 실행과 마지막 실행을 지정할 수 있음|해당 사항 없음|  
 |`varchar(max)`를 `nvarchar(max)`, 및 `varbinary(max)` 열 참조 **삽입** 하 고 **삭제** 테이블|허용함|허용함|  
 |`text`를 `ntext`, 및 `image` 열 참조 **삽입** 하 고 **삭제** 테이블|허용 안 됨|허용함|  

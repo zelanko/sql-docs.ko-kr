@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 04eb5a41bec6e9abb62cfde516f2dad2ff820521
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024250"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165738"
 ---
 # <a name="measures-and-measure-groups"></a>측정값 및 측정값 그룹
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34024250"
   
  이 항목에서는 [Measures](#bkmk_measure) 및 [Measure Groups](#bkmk_mg)에 대해 설명합니다. 또한 측정값 및 측정값 그룹을 만들고 구성하는 절차 단계에 대한 링크가 들어 있는 다음 표도 제공됩니다.  
   
-|**링크**|**Description**|  
+|**링크**|**설명**|  
 |--------------|---------------------|  
 |[다차원 모델의 측정값 및 측정값 그룹 만들기](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|측정값과 측정값 그룹을 만들기 위한 몇 가지 접근 방식 중 하나를 선택합니다.|  
 |[측정값 속성 구성](../../analysis-services/multidimensional-models/configure-measure-properties.md)|큐브 마법사를 사용하여 큐브를 시작한 경우 집계 방법을 변경하고, 데이터 형식을 적용하며, 클라이언트 애플리케이션에서 측정값의 표시 유형을 설정하거나, 값이 집계되기 전에 데이터를 조작하기 위한 측정값 식을 추가해야 할 수 있습니다.|  
@@ -46,7 +46,7 @@ ms.locfileid: "34024250"
   
  측정값이 쿼리에 사용된 차원과 관련이 없는 경우 어떻게 될까요? 일반적으로 Analysis Services는 기본 측정값을 보여 주며, 값은 모든 멤버에 대해 동일합니다. 이 예제에서 고객이 온라인 카탈로그를 사용하여 발생한 직접 판매를 측정하는 **Internet Sales**는 판매 조직과 관계가 없습니다.  
   
- ![값을 측정 하는 반복을 보여 주는 피벗 테이블](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "값을 측정 하는 반복을 보여 주는 피벗 테이블")  
+ ![반복을 보여 주는 피벗 테이블 값을 측정](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "값을 측정 하는 반복을 보여 주는 피벗 테이블")  
   
  클라이언트 애플리케이션에서 이러한 동작이 발생할 확률을 최소화하기 위해 동일한 데이터베이스 내에 여러 큐브 또는 큐브 뷰를 만들어 각 큐브 또는 큐브 뷰가 관련 개체만 포함하도록 할 수 있습니다. 확인해야 할 관계는 측정값 그룹(팩트 테이블에 매핑됨)과 차원 간의 관계입니다.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "34024250"
   
  단순 <xref:Microsoft.AnalysisServices.MeasureGroup> 개체는 그룹 이름, 스토리지 모드 및 처리 모드와 같은 기본 정보로 구성됩니다. 또한 이러한 개체는 측정값 그룹의 구성을 형성하는 측정값, 차원 및 파티션과 같은 해당 구성 요소도 포함합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 큐브](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
  [다차원 모델의 측정값 및 측정값 그룹 만들기](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   

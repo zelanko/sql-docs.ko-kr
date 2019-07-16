@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 0649e167ebaa90267422594ccd193ba468838e6f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48182013"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68187295"
 ---
 # <a name="reading-the-data-in-a-table-tutorial"></a>테이블의 데이터 읽기(자습서)
   SELECT 문을 사용하여 테이블의 데이터를 읽을 수 있습니다. SELECT 문은 가장 중요한 [!INCLUDE[tsql](../includes/tsql-md.md)] 문 중 하나이며 구문은 다양하게 변형되어 사용됩니다. 이 자습서에서는 5개의 간단한 버전을 사용합니다.  
@@ -80,8 +80,8 @@ ms.locfileid: "48182013"
   
 |||  
 |-|-|  
-|[문자열 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[날짜 및 시간 데이터 형식 및 함수 &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
-|[수치 연산 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[텍스트 및 이미지 함수 &#40;TRANSACT-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
+|[문자열 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/string-functions-transact-sql)|[날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)|  
+|[수치 연산 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/mathematical-functions-transact-sql)|[텍스트 및 이미지 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/text-and-image-functions-textptr-transact-sql)|  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [요약: 데이터베이스 개체 만들기](lesson-1-5-summary-creating-database-objects.md)  

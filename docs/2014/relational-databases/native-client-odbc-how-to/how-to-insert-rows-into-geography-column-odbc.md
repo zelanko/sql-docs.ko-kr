@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753500"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206815"
 ---
 # <a name="how-to-insert-rows-into-geography-column-odbc"></a>방법: Geography 열에 행 삽입(ODBC)
-  이 예제는 두 개의 다른 바인딩(SQLCCHAR 및 SQLCBINARY)을 사용하는 WKB(WellKnownBinary)에서 가져온 두 개의 행을 geography 열이 포함된 테이블에 삽입합니다. 그런 다음 이 테이블에서 한 행을 선택하고 ::STAsText()를 사용하여 행을 표시합니다. WKB는 0x01010000000700ECFAD03A4C4001008000B5DF07C0이며 애플리케이션은 POINT(56.4595 -2.9842)라는 결과를 콘솔로 출력합니다.  
+  이 예제는 두 개의 다른 바인딩(SQLCCHAR 및 SQLCBINARY)을 사용하는 WKB(WellKnownBinary)에서 가져온 두 개의 행을 geography 열이 포함된 테이블에 삽입합니다. 이 테이블에서 하나의 행을 선택 하 고 사용 하 여:: stastext () 표시 합니다. WKB는 0x01010000000700ECFAD03A4C4001008000B5DF07C0 이며 응용 프로그램 콘솔에 출력 합니다. 점 (56.4595-2.9842)입니다.  
   
  이 예제는 ODBC 데이터 원본을 필요로 하지는 않지만 기본적으로 SQL Server의 로컬 인스턴스에서 실행됩니다.  
   

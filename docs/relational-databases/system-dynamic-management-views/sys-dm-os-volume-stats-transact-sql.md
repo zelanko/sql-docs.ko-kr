@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 954cb83176ea64be11bd37b44303091f15604dcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899716"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +40,10 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ##  <a name="Arguments"></a> 인수  
  *database_id*  
- 데이터베이스의 ID입니다. *database_id*는 **int**이며 기본값은 없습니다. NULL이 될 수 없습니다.  
+ 데이터베이스의 ID입니다. *database_id*는 **int**이며 기본값은 없습니다. NULL일 수 없습니다.  
   
  *file_id*  
- 파일의 ID입니다. *file_id* 됩니다 **int**, 기본값은 없습니다. NULL이 될 수 없습니다.  
+ 파일의 ID입니다. *file_id* 됩니다 **int**, 기본값은 없습니다. NULL일 수 없습니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -72,7 +71,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ## <a name="examples"></a>예  
   
-### <a name="a-return-total-space-and-available-space-for-all-database-files"></a>1\. 모든 데이터베이스 파일에 대해 전체 공간과 사용 가능한 공간 반환  
+### <a name="a-return-total-space-and-available-space-for-all-database-files"></a>A. 모든 데이터베이스 파일에 대해 전체 공간과 사용 가능한 공간 반환  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스 파일에 대해 전체 공간과 사용 가능한 공간(바이트)을 반환합니다.  
   
 ```sql  

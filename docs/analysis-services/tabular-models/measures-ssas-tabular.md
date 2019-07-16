@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 508558f4458496ab4d376ec8906544f6656a25a5
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072200"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207616"
 ---
 # <a name="measures"></a>측정값 그룹
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -56,7 +56,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
   
 -   측정값 표에서 빈 셀을 클릭하고 수식 입력줄에서 DAX 수식을 입력합니다. ENTER를 클릭하여 수식을 완성하면 측정값이 측정값 표의 셀에 나타납니다.  
   
--   열을 클릭하고 도구 모음에서 자동 합계 단추(∑)를 클릭한 다음 표준 집계 함수를 클릭하여 표준 집계 함수를 이용해 측정값을 만듭니다. 표준 집계: 자동 합계 단추를 사용하여 만든 Sum, Average, Count, DistinctCount, Max 및 Min 측정값은 항상 측정값 표의 해당 열 바로 아래에 나타납니다.  
+-   열을 클릭하고 도구 모음에서 자동 합계 단추(∑)를 클릭한 다음 표준 집계 함수를 클릭하여 표준 집계 함수를 이용해 측정값을 만듭니다. 표준 집계 됩니다. Sum, Average, Count, DistinctCount, Max, Min. 측정값은 항상 측정값 표의 해당 열 바로 아래에 나타납니다.  
   
  기본적으로 자동 합계를 사용하면 관련 열의 이름, 콜론, 수식이 차례로 연결된 형태로 측정값의 이름이 정의됩니다. 이 이름은 수식 입력줄 또는 속성 창의 **측정값 이름** 속성 설정에서 변경할 수 있습니다. 사용자 지정 수식을 사용하여 측정값을 만들 경우 수식 입력줄에 이름, 콜론, 수식을 차례로 입력하거나 속성 창의 **측정값 이름** 속성 설정에 이름을 입력할 수 있습니다.  
   
@@ -89,7 +89,7 @@ Sum of TotalProfit: =SUM([TotalProfit])
 |[측정값 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)|모델 디자이너의 측정값 표를 사용하여 측정값을 만들고 관리하는 방법에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
- [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [Kpi 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)   
  [계산 열](../../analysis-services/tabular-models/ssas-calculated-columns.md)  
   

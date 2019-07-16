@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ae17e727367b702967ec879ed8469973ab3b812
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072090"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207736"
 ---
 # <a name="create-and-manage-kpis"></a>Kpi 만들기 및 관리 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -70,8 +70,8 @@ ms.locfileid: "53072090"
 |설명|Alt+D|  
 |추세|Alt+T|  
   
-## <a name="see-also"></a>참고자료  
- [Kpi](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
+## <a name="see-also"></a>참조  
+ [KPIs](../../analysis-services/tabular-models/kpis-ssas-tabular.md)   
  [측정값 그룹](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [만들기 및 managemeasures](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md)  
   

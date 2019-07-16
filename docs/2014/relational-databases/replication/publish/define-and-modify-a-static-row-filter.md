@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2c2abc45712be58eabd4ed6ef4c9b276438e8afe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535725"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199482"
 ---
 # <a name="define-and-modify-a-static-row-filter"></a>정적 행 필터 정의 및 수정
   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "58535725"
   
 -   **다음을 사용하여 정적 행 필터를 정의하고 수정하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -109,15 +109,15 @@ ms.locfileid: "58535725"
   
 1.  필터링할 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)를 실행합니다. 이때 **@article**에 아티클 이름, **@publication**에 게시 이름, **@filter_name**에 필터 이름, **@filter_clause** 에 필터링 절( `WHERE`포함하지 않음)을 지정합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)를 실행합니다. 이때 **@article** 에 아티클 이름, **@publication** 에 게시 이름, **@filter_name** 에 필터 이름, **@filter_clause** 에 필터링 절( `WHERE`포함하지 않음)을 지정합니다.  
   
-3.  계속 열 필터를 정의하려면 [열 필터 정의 및 수정](define-and-modify-a-column-filter.md)을 참조하세요. 그러지 않으면 [sp_articleview&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)를 실행합니다. 이때 **@publication**에 게시 이름, **@article**에 필터링된 아티클 이름, **@filter_clause**에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 만들어집니다.  
+3.  계속 열 필터를 정의하려면 [열 필터 정의 및 수정](define-and-modify-a-column-filter.md)을 참조하세요. 그러지 않으면 [sp_articleview&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)를 실행합니다. 이때 **@publication** 에 게시 이름, **@article** 에 필터링된 아티클 이름, **@filter_clause** 에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 만들어집니다.  
   
 #### <a name="to-modify-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 정적 행 필터를 수정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)를 실행합니다. 이때 **@article**에 아티클 이름, **@publication**에 게시 이름, **@filter_name**에 새 필터 이름, **@filter_clause** 에 필터링 절( `WHERE`포함하지 않음)을 지정합니다. 이와 같이 변경하면 기존 구독의 데이터가 무효화되므로 **@force_reinit_subscription** 에 **@force_reinit_subscription**에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)를 실행합니다. 이때 **@article** 에 아티클 이름, **@publication** 에 게시 이름, **@filter_name** 에 새 필터 이름, **@filter_clause** 에 필터링 절( `WHERE`포함하지 않음)을 지정합니다. 이와 같이 변경하면 기존 구독의 데이터가 무효화되므로 **@force_reinit_subscription** 에 **@force_reinit_subscription** 에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_articleview&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)를 실행합니다. 이때 **@publication**에 게시 이름, **@article**에 필터링된 아티클 이름, **@filter_clause**에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다. 이렇게 하면 필터링된 아티클을 정의하는 뷰가 다시 만들어집니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_articleview&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)를 실행합니다. 이때 **@publication** 에 게시 이름, **@article** 에 필터링된 아티클 이름, **@filter_clause** 에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다. 이렇게 하면 필터링된 아티클을 정의하는 뷰가 다시 만들어집니다.  
   
 3.  게시에 대해 스냅숏 에이전트 작업을 다시 실행하여 업데이트된 스냅숏을 생성합니다. 자세한 내용은 [초기 스냅숏을 만들어서 적용하려면](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "58535725"
   
 #### <a name="to-delete-a-static-row-filter-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 정적 행 필터를 삭제하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)를 실행합니다. 이때 **@article**에 아티클 이름, **@publication**에 게시 이름, **@filter_name**에 NULL 값, **@filter_clause**에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다. 이와 같이 변경하면 기존 구독의 데이터가 무효화되므로 **@force_reinit_subscription** 에 **@force_reinit_subscription**에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_articlefilter&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlefilter-transact-sql)를 실행합니다. 이때 **@article** 에 아티클 이름, **@publication** 에 게시 이름, **@filter_name** 에 NULL 값, **@filter_clause** 에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다. 이와 같이 변경하면 기존 구독의 데이터가 무효화되므로 **@force_reinit_subscription** 에 **@force_reinit_subscription** 에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
   
 2.  게시에 대해 스냅숏 에이전트 작업을 다시 실행하여 업데이트된 스냅숏을 생성합니다. 자세한 내용은 [초기 스냅숏을 만들어서 적용하려면](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "58535725"
   
 #### <a name="to-modify-a-static-row-filter-for-a-merge-publication"></a>병합 게시에 대한 정적 행 필터를 수정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changemergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 이때 **@publication**에 게시 이름, **@article**에 필터링된 아티클 이름, **@property** 에 **@property**에 새 필터 이름, **@value** 에 필터링 절( `WHERE`포함하지 않음)을 지정합니다. 이와 같이 변경하면 기존 구독의 데이터가 무효화되므로 **@force_reinit_subscription**에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changemergearticle&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. 이때 **@publication** 에 게시 이름, **@article** 에 필터링된 아티클 이름, **@property** 에 **@property** 에 새 필터 이름, **@value** 에 필터링 절( `WHERE`포함하지 않음)을 지정합니다. 이와 같이 변경하면 기존 구독의 데이터가 무효화되므로 **@force_reinit_subscription** 에서 정적 행 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
   
 2.  게시에 대해 스냅숏 에이전트 작업을 다시 실행하여 업데이트된 스냅숏을 생성합니다. 자세한 내용은 [초기 스냅숏을 만들어서 적용하려면](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   

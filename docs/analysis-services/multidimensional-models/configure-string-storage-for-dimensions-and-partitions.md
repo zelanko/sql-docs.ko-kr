@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6a5aff8822d3fceb05d22433094dc952c6cb872
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023860"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209115"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>차원 및 파티션에 대한 문자열 스토리지 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34023860"
   
  이 속성에 유효한 값은 다음과 같습니다.  
   
-|Value|Description|  
+|값|Description|  
 |-----------|-----------------|  
 |**1050**|저장소당 최대 파일 크기가 4GB인 기본 문자열 스토리지 아키텍처를 지정합니다.|  
 |**1100**|저장소당 최대 40억 개의 고유 문자열을 지원하는 더 큰 문자열 스토리지를 지정합니다.|  
@@ -86,10 +86,10 @@ ms.locfileid: "34023860"
   
  새 문자열 저장소 아키텍처를 사용하는 각 개체에 대해 전체 처리 옵션을 사용해야 합니다. 처리하기 전에 차원에 대한 영향 분석을 실행하여 종속 개체에도 재처리가 필요한지 여부를 확인해야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [도구 및 처리 접근 방법&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
  [처리 옵션 및 설정 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [파티션 저장소 모드 및 처리](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
+ [파티션 스토리지 모드 및 처리](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [차원 저장소](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   
   

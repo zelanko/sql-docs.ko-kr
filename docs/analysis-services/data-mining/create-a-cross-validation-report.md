@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 88d3af205a1e92ac07a4c841c80f2abea463de9b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184111"
 ---
 # <a name="create-a-cross-validation-report"></a>교차 유효성 검사 보고서 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34014380"
   
 4.  열어 놓은 Excel 통합 문서에 선택한 부분을 붙여넣습니다. **붙여넣기** 옵션을 사용하면 보고서가 HTML로 Excel에 붙여넣어지며 행과 열 서식이 그대로 유지됩니다. 텍스트 또는 유니코드 텍스트에 대해 **선택하여 붙여넣기** 옵션을 사용하여 보고서를 붙여넣으면 보고서는 행으로 구분된 형식으로 붙여넣어집니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [교차 유효성 검사 보고서의 측정값](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

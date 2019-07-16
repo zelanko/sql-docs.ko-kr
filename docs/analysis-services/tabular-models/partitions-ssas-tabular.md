@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d26b1b1558ca546fb47660488b15dc777c5ad87
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405853"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162727"
 ---
 # <a name="partitions"></a>파티션
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -40,12 +40,12 @@ ms.locfileid: "54405853"
   
 ##  <a name="bkmk_related_tasks"></a> Related tasks  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[작업 영역 데이터베이스에서 파티션 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md)|만들고 SSDT에서 파티션 관리자를 사용 하 여 모델 작업 영역 데이터베이스에서 파티션을 관리 하는 방법을 설명 합니다.|  
 |[작업 영역 데이터베이스에서 파티션 처리](../../analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md)|모델 작업 영역 데이터베이스에서 파티션을 처리(새로 고침)하는 방법을 설명 합니다.|  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [데이터 처리](../../analysis-services/tabular-models/process-data-ssas-tabular.md)  
   

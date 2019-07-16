@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8d5aab960b1987a0c076504b4e2858403a2ecb99
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017600"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182736"
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>로지스틱 회귀 모델에 대한 모델 콘텐츠
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "34017600"
   
 |노드 유형 ID|Description|  
 |------------------|-----------------|  
-|1.|모델|  
+|1|모델|  
 |17|하위 네트워크의 구성 도우미 노드|  
 |18|입력 계층의 구성 도우미 노드|  
 |19|숨겨진 계층의 구성 도우미 노드. 숨겨진 계층은 비어 있습니다.|  
@@ -142,7 +142,7 @@ ms.locfileid: "34017600"
  로지스틱 회귀 모델의 경우 항상 0입니다.  
   
 > [!NOTE]  
->  이 모델 유형의 출력은 확률적이 아니므로 지지도 확률은 항상 0입니다. 이 알고리즘에 의미 있는 유일한 항목은 가중치이므로 이 알고리즘은 확률, 지지도 또는 분산을 계산하지 않습니다.  
+>  이 모델 유형의 출력은 확률적이 아니므로 지지도 확률은 항상 0입니다. 이 알고리즘에 의미 있는 유일한 항목은 가중치이므로 이 알고리즘은 확률, 지지도 또는 분산을 컴퓨팅하지 않습니다.  
   
  특정 값에 대한 학습 사례의 지지도에 관한 정보를 보려면 한계 통계 노드를 참조하세요.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "34017600"
   
  이러한 ID를 통해 출력 노드의 NODE_DISTRIBUTION 테이블을 보고 출력 특성과 특정 입력 계층 특성 간의 관계를 파악할 수 있습니다. 해당 테이블의 각 행에는 다시 특정 입력 특성 노드를 가리키는 ID가 들어 있습니다. NODE_DISTRIBUTION 테이블에는 해당 입력-출력 쌍에 대한 계수도 들어 있습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft 로지스틱 회귀 알고리즘](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
  [신경망 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [로지스틱 회귀 모델 쿼리 예제](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)   

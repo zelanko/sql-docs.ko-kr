@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 984a8b1d-f12c-420c-8be4-f555114c764b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 373f5e13712ef7b0864401ea3d2c204cb03ebb09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5521fb11cad064cf487d38562f4146fd32587993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898791"
 ---
 # <a name="sqlgetstmtoption-visual-foxpro-odbc-driver"></a>SQLGetStmtOption(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  
@@ -30,7 +29,7 @@ ms.locfileid: "63240260"
   
  문 옵션의 현재 설정을 반환합니다.  
   
-|*FOption*|반환 값|  
+|*fOption*|반환 값|  
 |---------------|-------------|  
 |SQL_GET_BOOKMARK|현재 레코드 수에 대 한 책갈피는 32 비트 정수 값을|  
 |SQL_ROW_NUMBER|결과 내에서 현재 행의 위치를 지정 하는 32 비트 정수 설정|  

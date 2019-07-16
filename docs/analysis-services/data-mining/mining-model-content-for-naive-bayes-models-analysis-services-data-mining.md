@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbfb701bf6c4a90cf285e4643377b38e51121dd3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019410"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182703"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes 모델에 대한 마이닝 모델 콘텐츠(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "34019410"
 > [!NOTE]  
 >  Naive Bayes 모델은 연속 데이터 형식을 허용하지 않으므로 입력 열의 모든 값은 불연속 또는 분할된 열로 처리됩니다. 값이 분할되는 방식은 사용자가 지정할 수 있습니다. 자세한 내용은 [마이닝 모델에서 열의 불연속화 변경](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)을 참조하세요.  
   
- ![naïve bayes에 대 한 모델 콘텐츠의 구조](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "한 naïve bayes에 대 한 모델 콘텐츠 구조")  
+ ![한 것은 순진한 bayes에 대 한 모델 콘텐츠 구조](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "한 것은 순진한 bayes에 대 한 모델 콘텐츠 구조")  
   
 ## <a name="model-content-for-a-naive-bayes-model"></a>Naive Bayes 모델에 대한 모델 콘텐츠  
  이 섹션에서는 Naive Bayes 모델과 특별히 관련된 마이닝 모델 콘텐츠 열에 대한 세부 정보 및 예만 제공합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "34019410"
  NODE_TYPE  
  Naive Bayes 모델이 출력하는 노드 유형은 다음과 같습니다.  
   
-|노드 유형 ID|Description|  
+|노드 유형 ID|설명|  
 |------------------|-----------------|  
 |26(NaiveBayesMarginalStatNode)|모델의 전체 학습 사례 집합을 설명하는 통계를 포함합니다.|  
 |9(예측 가능한 특성)|예측 가능한 특성의 이름을 포함합니다.|  
@@ -184,9 +184,9 @@ ms.locfileid: "34019410"
 |---------------|----------------------------|  
 |모델 루트(1)|항상 0입니다.|  
 |한계 통계 노드(26)|임의의 ID 값입니다.|  
-|예측 가능한 특성(9)|10000000으로 시작하는 16진수입니다.<br /><br /> 예제: 100000001, 10000000b|  
-|입력 특성(10)|두 부분으로 이루어진 16진수입니다. 첫 번째 부분은 항상 20000000이고, 두 번째 부분은 관련된 예측 가능한 특성의 16진수 식별자로 시작합니다.<br /><br /> 예제: 20000000b00000000<br /><br /> 이 경우 관련된 예측 가능한 특성은 10000000b입니다.|  
-|입력 특성 상태(11)|세 부분으로 이루어진 16진수입니다. 첫 번째 부분은 항상 30000000이고, 두 번째 부분은 관련된 예측 가능한 특성의 16진수 식별자로 시작하며, 세 번째 부분은 값의 식별자를 나타냅니다.<br /><br /> 예제: 30000000b00000000200000000<br /><br /> 이 경우 관련된 예측 가능한 특성은 10000000b입니다.|  
+|예측 가능한 특성(9)|10000000으로 시작하는 16진수입니다.<br /><br /> 예: 100000001, 10000000b|  
+|입력 특성(10)|두 부분으로 이루어진 16진수입니다. 첫 번째 부분은 항상 20000000이고, 두 번째 부분은 관련된 예측 가능한 특성의 16진수 식별자로 시작합니다.<br /><br /> 예: 20000000b00000000<br /><br /> 이 경우 관련된 예측 가능한 특성은 10000000b입니다.|  
+|입력 특성 상태(11)|세 부분으로 이루어진 16진수입니다. 첫 번째 부분은 항상 30000000이고, 두 번째 부분은 관련된 예측 가능한 특성의 16진수 식별자로 시작하며, 세 번째 부분은 값의 식별자를 나타냅니다.<br /><br /> 예: 30000000b00000000200000000<br /><br /> 이 경우 관련된 예측 가능한 특성은 10000000b입니다.|  
   
  ID를 사용하여 입력 특성 및 상태를 예측 가능한 특성과 연결할 수 있습니다. 예를 들어 다음 쿼리는 `TM_NaiveBayes`모델에 대한 입력 특성과 예측 가능한 특성의 가능한 조합을 나타내는 노드의 이름과 캡션을 반환합니다.  
   
@@ -252,11 +252,11 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  예상 결과:  
   
-|NODE_CAPTION|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1.|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
-|Bike Buyer -> Marital Status = S|Bike Buyer|1.|4216|0.527065883|4|  
+|Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
   
  이러한 결과에서 SUPPORT 열의 값은 자전거를 구매한 고객 수를 결혼 여부와 함께 알려 줍니다. PROBABILITY 열에는 이 노드에 대해서만 계산되는 각 특성 값의 확률이 포함됩니다. NODE_DISTRIBUTION 테이블에서 사용되는 용어의 일반적인 정의는 [마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)를 참조하세요.  
   
@@ -265,16 +265,16 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
 |ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
-|Bike Buyer|Missing|0|0|0|1.|  
+|Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
-|Bike Buyer|1.|8615|0.492736216|0|4|  
-|Marital Status|Missing|0|0|0|1.|  
+|Bike Buyer|1\.|8615|0.492736216|0|4|  
+|Marital Status|Missing|0|0|0|1|  
 |Marital Status|S|7999|0.457504004|0|4|  
 |Marital Status|M|9485|0.542495996|0|4|  
-|Total Children|Missing|0|0|0|1.|  
+|Total Children|Missing|0|0|0|1|  
 |Total Children|0|4865|0.278254404|0|4|  
 |Total Children|3|2093|0.119709449|0|4|  
-|Total Children|1.|3406|0.19480668|0|4|  
+|Total Children|1|3406|0.19480668|0|4|  
   
  한계 통계 노드는 항상 예측 가능한 특성 및 해당 특성의 가능한 값에 대한 설명을 포함하므로 [Bike Buyer] 열이 포함됩니다. 나열된 다른 모든 열은 입력 특성을 모델에 사용된 값과 함께 나타냅니다. 값은 Missing, Discrete 또는 Discretized만 될 수 있습니다.  
   
@@ -282,7 +282,7 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  **Missing** 값(VALUE_TYPE = 1)은 모든 입력 및 출력 특성에 추가되어 학습 데이터에 없었던 잠재적인 값을 나타냅니다. 문자열 "missing"과 기본 **Missing** 값을 주의해서 구별해야 합니다. 자세한 내용은 [누락 값&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)을 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [마이닝 모델 콘텐츠 & #40; Analysis Services-데이터 마이닝 & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [데이터 마이닝 모델 뷰어](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [데이터 마이닝 쿼리](../../analysis-services/data-mining/data-mining-queries.md)   

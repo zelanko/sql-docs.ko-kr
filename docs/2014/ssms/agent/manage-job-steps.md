@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768455"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189152"
 ---
 # <a name="manage-job-steps"></a>작업 단계 관리
   작업 단계는 데이터베이스나 서버에서 작업이 수행하는 동작입니다. 모든 작업에는 작업 단계가 하나 이상 있어야 합니다. 작업 단계가 될 수 있는 항목은 다음과 같습니다.  
@@ -75,7 +75,7 @@ ms.locfileid: "52768455"
   
 -   명령이 성공한 경우 반환되는 프로세스 종료 코드를 지정합니다.  
   
--   실행할 명령입니다. 운영 체제 명령을 실행하려면 명령 자체를 지정하면 되고 외부 프로그램을 실행하려면 프로그램 이름과 프로그램 인수를 지정합니다. 예를 들면 다음과 같습니다. **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe-e-q "sp_who"**  
+-   실행할 명령입니다. 운영 체제 명령을 실행하려면 명령 자체를 지정하면 되고 외부 프로그램을 실행하려면 프로그램 이름과 프로그램 인수를 지정합니다. 예를 들면 다음과 같습니다. **C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     >  실행 파일이 시스템 경로나 작업 단계가 실행되는 계정의 사용자 경로에 지정된 디렉터리에 있지 않은 경우 실행 파일의 전체 경로를 지정해야 합니다.  

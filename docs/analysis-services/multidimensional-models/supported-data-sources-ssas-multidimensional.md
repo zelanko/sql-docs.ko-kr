@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 907e6cc6deaa9617a4af93ab2080bfe495dacd0b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025380"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208465"
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>지원되는 데이터 원본(SSAS - 다차원)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34025380"
 |-|-|-|-|  
 |원본|버전|파일 유형|공급자*|  
 |Access 데이터베이스|Microsoft Access 2010, 2013, 2016|.accdb 또는 .mdb|Microsoft Jet 4.0 OLE DB Provider|  
-|SQL Server 관계형 데이터베이스*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016, [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], Azure SQL 데이터 웨어하우스, Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> 참고: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 자세한 내용은 [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856)을 참조하세요.<br /><br /> 참고: Analytics Platform System (APS)의 이전 명칭은 SQL Server 병렬 데이터 웨어하우스 (PDW). 원래는 PDW에서 Analysis Services에 연결하려면 특수한 데이터 공급자가 필요했습니다. 이 공급자는 SQL Server 2012에서 바뀌었습니다. SQL Server 2012부터는 PDW/APS에 대한 연결에 SQL Server Native Client가 사용됩니다. APS에 대한 자세한 내용은 [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx)웹 사이트를 참조하세요.|(해당 사항 없음)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 공급자<br /><br /> SQL Server Native 11.0 Client OLE DB 공급자<br /><br /> .NET Framework Data Provider for SQL Client|  
+|SQL Server 관계형 데이터베이스*|Microsoft SQL Server 2008, 2008 R2, 2012, 2014, 2016 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> 참고: 에 대 한 자세한 내용은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 대 [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856)합니다.<br /><br /> 참고: Analytics Platform System (APS) SQL Server 병렬 데이터 웨어하우스 (PDW) 명칭은 였습니다. 원래는 PDW에서 Analysis Services에 연결하려면 특수한 데이터 공급자가 필요했습니다. 이 공급자는 SQL Server 2012에서 바뀌었습니다. SQL Server 2012부터는 PDW/APS에 대한 연결에 SQL Server Native Client가 사용됩니다. APS에 대한 자세한 내용은 [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx)웹 사이트를 참조하세요.|(해당 사항 없음)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB 공급자<br /><br /> SQL Server Native 11.0 Client OLE DB 공급자<br /><br /> .NET Framework Data Provider for SQL Client|  
 |Oracle 관계형 데이터베이스|Oracle 9i, 10g, 11g, 12g|(해당 사항 없음)|Oracle OLE DB 공급자<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata 관계형 데이터베이스|Teradata V2R6, V12|(해당 사항 없음)|TDOLEDB OLE DB 공급자<br /><br /> .Net Data Provider for Teradata|  
 |Informix 관계형 데이터베이스|V11.10|(해당 사항 없음)|Informix OLE DB 공급자|  

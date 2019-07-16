@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4e8e6bea11794545a2b0ab9c340e85344ec23d33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685310"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162200"
 ---
 # <a name="deploy"></a>배포
 
@@ -23,11 +23,11 @@ ms.locfileid: "57685310"
 
 이 단원에서는 배포 속성 구성 배포 하는 서버 및 모델에 대 한 이름을 지정 합니다. 다음 서버에 모델을 배포 합니다. 모델을 배포한 후에 보고 클라이언트 응용 프로그램을 사용 하 여 사용자를 연결할 수 합니다. 자세한 내용은 참조 하세요 [Azure Analysis Services에 배포](https://docs.microsoft.com/azure/analysis-services/analysis-services-deploy) 하 고 [테이블 형식 모델 솔루션 배포](../tabular-models/tabular-model-solution-deployment-ssas-tabular.md)합니다.  
   
-이 단원에 소요되는 예상 시간: **5 분**  
+예상이 단원을 완료 시간: **5 분**  
   
 ## <a name="prerequisites"></a>사전 요구 사항  
 
-이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행하려면 이전 단원을 완료해야 합니다. [12 단원: Excel에서 분석](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)합니다.  
+이 문서는 순서 대로 완료 해야 하는 테이블 형식 모델링 자습서의 일부입니다. 이 단원의 태스크를 수행 하기 전에 이전 단원을 완료 해야 합니다. [12 단원: Excel에서 분석](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)합니다.  
 
 > [!IMPORTANT]  
 > Azure Analysis Services에 배포 하는 경우이 있어야 합니다 [관리자 권한](https://docs.microsoft.com/azure/analysis-services/analysis-services-server-admins) 는 serever에 있습니다.  

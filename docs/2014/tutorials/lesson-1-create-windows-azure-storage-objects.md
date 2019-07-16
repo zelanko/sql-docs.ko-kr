@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038344"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210974"
 ---
 # <a name="lesson-1-create-windows-azure-storage-objects"></a>1단원: Microsoft Azure Storage 개체 만들기
   클라우드 스토리지에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 백업을 만들려면 먼저 스토리지 계정을 만든 다음 blob 컨테이너를 만들어야 합니다. 1단원에서는 Windows Azure 관리 포털에 로그인하여 스토리지 계정과 blob 컨테이너를 만드는 과정을 단계별로 안내합니다.  

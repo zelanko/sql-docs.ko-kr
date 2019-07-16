@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 18c4af67230726d831c2c192a782135f9afe3743
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822687"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188317"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SQL Server 에이전트 마스터 작업에 단계를 추가하는 방법에 대해 설명합니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "52822687"
   
 -   **다음을 사용하여 SQL Server 에이전트 마스터 작업에 단계를 추가하려면:**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -56,7 +56,7 @@ ms.locfileid: "52822687"
   
 4.  단계를 추가하려는 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  **Job Properties -**_job_name_ 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다. 이 페이지에서 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [작업 속성: 새 작업 &#40;단계&#41;](../agent/job-properties-new-job-steps-page.md)합니다.  
+5.  **Job Properties -** _job_name_ 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다. 이 페이지에서 사용 가능한 옵션에 대 한 자세한 내용은 참조 하세요. [작업 속성: 새 작업 &#40;단계&#41;](../agent/job-properties-new-job-steps-page.md)합니다.  
 
 6.  완료되었으면 **확인**을 클릭합니다.  
   

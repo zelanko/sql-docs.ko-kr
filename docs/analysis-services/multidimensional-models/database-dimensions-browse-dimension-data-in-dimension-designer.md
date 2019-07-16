@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3692d8f7267531e00f0393149823198cc59bab7d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022870"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178918"
 ---
 # <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>데이터베이스 차원-차원 디자이너에서 차원 데이터 찾아보기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "34022870"
     > [!NOTE]  
     >  차원에는 선택한 언어에 대해 정의된 번역이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [차원 & #40; 소개 Analysis Services-다차원 데이터 & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
+## <a name="see-also"></a>관련 항목  
+ [차원 소개&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
  [다차원 모델의 차원](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

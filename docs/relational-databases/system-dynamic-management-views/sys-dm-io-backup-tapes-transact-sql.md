@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 2e27489e-cf69-4a89-9036-77723ac3de66
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 195c8dc2db7011801023e7e21e68ed1f5ed75a6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c58f34404119592308515f95934e23cfc94e1fc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900402"
 ---
 # <a name="sysdmiobackuptapes-transact-sql"></a>sys.dm_io_backup_tapes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   백업과 연관된 테이프 장치 목록 및 탑재 요청 상태를 반환합니다.   
  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**physical_device_name**|**nvarchar(520)**|백업을 수행할 수 있는 실제 물리적 장치의 이름입니다. Null을 허용하지 않습니다.|  
 |**logical_device_name**|**nvarchar(256)**|드라이브에 대 한 사용자 지정 이름 (에서 **sys.backup_devices**). 사용자가 지정한 이름이 없으면 NULL입니다. Null을 허용합니다.|  

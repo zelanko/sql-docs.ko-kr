@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28b1b0068f9ddd9bf47bc2fe93177db469c8b4f1
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057821"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181860"
 ---
 # <a name="create-analysis-services-scripts-in-management-studio"></a>Management Studio에서 Analysis Services 스크립트 만들기
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "38057821"
   
 2.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **백업**을 클릭합니다. 데이터베이스 백업 대화 상자가 열립니다. 백업 파일 이름을 지정하고 이 백업에 사용할 옵션을 선택합니다.  
   
-3.  대화 상자 맨 위에서 **스크립트** 를 클릭합니다. 스크립트 기능은 Management Studio에 있는 모든 태스크 기반 대화 상자의 일부입니다. 쿼리 편집기 창을 여는 **새 쿼리 창 동작 스크립팅** , XMLA 스크립트를 파일로 저장하는 **파일 동작 스크립팅** 또는 XMLA 스크립트를 클립보드로 저장하는 **클립보드 동작 스크립팅** 과 같은 옵션이 있습니다.  
+3.  대화 상자 맨 위에서 **스크립트** 를 클릭합니다. 스크립트 기능은 Management Studio에 있는 모든 태스크 기반 대화 상자의 일부입니다. 다음 옵션이 있습니다. **새 쿼리 창 동작 스크립팅** 쿼리 편집기 창을 열려면 **파일 동작 스크립팅** XMLA 스크립트를 파일로 저장 하려면 또는 **클립보드 동작 스크립팅** XMLA 스크립트를 저장 하는 클립보드 합니다.  
   
      Management Studio에서 스크립트 옵션으로 표시되는 **작업 동작 스크립팅** 옵션은 Analysis Services 스크립트에 대해서는 지원되지 않습니다.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "38057821"
   
 2.  개체 작성, 변경 또는 삭제 스크립트를 만들 개체를 찾습니다.  
   
-3.  개체를 마우스 오른쪽 단추로 클릭하고 **큐브 스크립팅**, **CREATE**, **ALTER**또는 **DELETE**를 차례로 가리킨 후 다음 옵션 중 하나를 클릭합니다. 쿼리 편집기 창을 열려면 **새 쿼리 편집기 창** , XMLA 스크립트를 파일에 저장하려면 **파일** , XMLA 스크립트를 클립보드에 저장하려면 **클립보드** 를 클릭합니다.  
+3.  개체를 마우스 오른쪽 **큐브 스크립팅**를 가리키고 **Create**, **Alter**, 또는 **Delete**, 중 하나를 클릭 하 고는 다음 옵션: **새 쿼리 편집기 창을** 쿼리 편집기 창을 열려면 **파일** XMLA 스크립트를 파일로 저장 하려면 또는 **클립보드** XMLA 스크립트를 클립보드에 저장 합니다.  
   
     > [!NOTE]  
     >  일반적으로 버전이 다른 파일을 여러 개 만들려면 **파일** 을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [XMLA 쿼리 편집기 &#40;Analysis Services-다차원 데이터&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
+ [XMLA 쿼리 편집기&#40;Analysis Services - 다차원 데이터&#41;](http://msdn.microsoft.com/library/14623019-7839-4038-9d12-2f8953d2ec04)  
   
   

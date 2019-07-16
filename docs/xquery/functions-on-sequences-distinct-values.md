@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f4c2bb53-2bec-4f1a-9c00-cf997fb7ae5b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 48b338416b7bd464a69c424354f4029c719fef33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2f856c9b351c776651f08e66f90c7f567a5dcfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62939096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223730"
 ---
 # <a name="functions-on-sequences---distinct-values"></a>시퀀스 함수 - distinct-values
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
  *$arg*  
  원자 값의 시퀀스입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  에 전달 되는 세분화 된 값의 유형도 **distinct-values ()** 동일한 기본 유형의 하위 유형 이어야 합니다. 기본 허용 되는 형식은 지 원하는 형식을 합니다 **eq** 작업 합니다. 이러한 유형에는 3가지 기본 제공 숫자 기본 유형, 날짜/시간 기본 유형, xs:string, xs:boolean 및 xdt:untypedAtomic이 포함됩니다. xdt:untypedAtomic 유형의 값은 xs:string으로 캐스팅됩니다. 이러한 유형이 혼합되어 있거나 다른 유형의 다른 값이 전달되면 정적 오류가 발생합니다.  
   
  결과인 **distinct-values ()** xdt: untypedatomic의 경우 xs: string 같은 하는 전달 된 유형의 기본 유형을 원래 카디널리티와 함께 수신 합니다. 입력이 정적으로 비어 있으면 비어 있다는 것이 유추되어 정적 오류가 발생합니다.  
@@ -49,7 +48,7 @@ fn:distinct-values($arg as xdt:anyAtomicType*) as xdt:anyAtomicType*
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>1\. distinct-values() 함수를 사용하여 시퀀스에서 중복 값 제거  
+### <a name="a-using-the-distinct-values-function-to-remove-duplicate-values-from-the-sequence"></a>A. distinct-values() 함수를 사용하여 시퀀스에서 중복 값 제거  
  이 예에서 전화 번호가 포함 된 XML 인스턴스에 할당 됩니다는 **xml** 형식 변수입니다. 이 변수는 지정 된 XQuery 합니다 **distinct-values ()** 함수의 중복을 포함 하지 않는 전화 번호 목록을 컴파일합니다.  
   
 ```  

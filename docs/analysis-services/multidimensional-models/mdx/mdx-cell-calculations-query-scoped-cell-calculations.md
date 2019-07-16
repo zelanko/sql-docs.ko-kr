@@ -1,5 +1,5 @@
 ---
-title: 쿼리 범위 셀 계산 만들기 (MDX) | Microsoft Docs
+title: 쿼리 범위 셀 계산 (MDX) 만들기 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c9cb6f083751b14ad3cd8f2ffaac692ef4e6eb86
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022840"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208778"
 ---
-# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>MDX 셀 계산-쿼리 범위 셀 계산 만들기
+# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>MDX 셀 계산-쿼리 범위 셀 계산
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   MDX에서 **WITH** 키워드를 사용하여 쿼리 컨텍스트 내의 계산 셀을 설명합니다. **WITH** 키워드는 다음 구문을 가집니다.  
   
@@ -26,7 +26,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  `CellCalc_Identifier` 값은 계산 셀의 이름입니다. `String_Expression` 값에는 직각의 단일 차원 MDX 집합 식 목록이 들어 있습니다. 이들 각각의 집합 식은 다음 테이블에 나열된 범주 중 하나로 확인되어야 합니다.  
   
-|범주|Description|  
+|범주|설명|  
 |--------------|-----------------|  
 |빈 집합|빈 집합으로 확인되는 MDX 집합 식입니다. 이 경우 계산 셀의 범위는 전체 큐브입니다.|  
 |단일 멤버 집합|단일 멤버로 확인되는 MDX 집합 식입니다.|  
@@ -50,7 +50,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  한편으로 MDX는 계산 셀 정의에 포함된 셀과 관련된 큐브에 대해 MDX 쿼리를 실행할 때마다 계산 수식을 처리합니다. 작성 범위에 상관없이 이렇게 처리됩니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [CELL CALCULATION 문 & #40; 만들기 Mdx& #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+## <a name="see-also"></a>관련 항목  
+ [CREATE CELL CALCULATION 문&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

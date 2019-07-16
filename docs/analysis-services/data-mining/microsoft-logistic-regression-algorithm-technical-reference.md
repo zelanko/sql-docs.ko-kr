@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0ae12ee7c40fe72e78bde2602177f741093a83c4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579573"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183050"
 ---
 # <a name="microsoft-logistic-regression-algorithm-technical-reference"></a>Microsoft 로지스틱 회귀 알고리즘 기술 참조
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -128,7 +128,7 @@ WHERE NODE_TYPE = 23
  마이닝 구조 열에 적용됩니다.  
   
  MODEL_EXISTENCE_ONLY  
- 열이 두 가지 가능한 상태인 **누락** 하 고 **기존**합니다. Null은 누락 값입니다.  
+ 열의 상태를 가진 것으로 간주 됩니다 것을 의미 합니다. **누락** 하 고 **기존**합니다. Null은 누락 값입니다.  
   
  마이닝 모델 열에 적용됩니다.  
   

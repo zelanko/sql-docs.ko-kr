@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b9bb77c5139b299a25fbd75bc30a58790ee0c30
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072360"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207953"
 ---
 # <a name="network-properties"></a>네트워크 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "53072360"
  **EnableCompression**  
  요청에 대해 압축이 설정되어 있는지 여부를 지정하는 부울 속성입니다.  
   
-## <a name="responses"></a>응답  
+## <a name="responses"></a>Responses  
  **CompressionLevel**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 지원 지침에 따라 변경하는 경우를 제외하고 고급 속성을 변경하면 안 됩니다.  
   

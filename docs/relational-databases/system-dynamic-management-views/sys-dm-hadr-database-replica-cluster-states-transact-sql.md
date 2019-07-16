@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 253959175db3519c00874db43466fa21c31cf5e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900667"
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  각 Always On 가용성 그룹에 Windows Server 장애 조치 클러스터링 (WSFC) 클러스터에서 Always On 가용성 그룹의 가용성 데이터베이스의 상태에 대 한 정보를 제공 하는 데 필요한 정보가 포함 된 행을 반환. 쿼리 **sys.dm_hadr_database_replica_states** 다음 질문에 답변할 수 있습니다.  
+  WSFC(Windows Server 장애 조치(Failover) 클러스터링) 클러스터의 각 Always On 가용성 그룹에 있는 Always On 가용성 그룹에서 가용성 데이터베이스의 상태를 파악하는 데 필요한 정보가 들어 있는 행을 반환합니다. 쿼리 **sys.dm_hadr_database_replica_states** 다음 질문에 답변할 수 있습니다.  
   
 -   가용성 그룹의 모든 데이터베이스에서 장애 조치(failover)를 수행할 준비가 되었습니까?  
   
@@ -39,9 +38,9 @@ ms.locfileid: "47636681"
   
 -   주 복제본을 현재 사용할 수 없는 경우 주 복제본으로 전환될 때 데이터 손실이 최소화되는 보조 복제본은 어느 것입니까?  
   
--   때의 값을 [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** 열이 가용성 그룹에 보조 복제본은 지정된 된 주 데이터베이스의 로그 잘림을 보유 중인 "AVAILABILITY_REPLICA" ?     
+-   때의 값을 [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** 열이 가용성 그룹에 보조 복제본은 지정된 된 주 데이터베이스의 로그 잘림을 보유 중인 "AVAILABILITY_REPLICA" ?  
    
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**replica_id**|**uniqueidentifier**|가용성 그룹 내 가용성 복제본의 식별자입니다.|  
 |**group_database_id**|**uniqueidentifier**|가용성 그룹 내 데이터베이스의 식별자입니다. 이 식별자는 이 데이터베이스가 조인되는 모든 복제본에서 동일합니다.|  

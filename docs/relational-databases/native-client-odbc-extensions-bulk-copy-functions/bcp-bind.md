@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0574683e2f77efe0654a8c3193bee2f499a9400b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c1c53d7fc6578f753e92cf3192c7cd7783590292
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135743"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895731"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -174,7 +173,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="returns"></a>반환 값  
  SUCCEED 또는 FAIL  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여 **bcp_bind** 의 테이블에 프로그램 변수에서 데이터를 복사할 빠르고 효율적인 방법을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
  호출 [bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md) 이 또는 다른 대량 복사 함수를 호출 하기 전에 합니다. 호출 **bcp_init** 설정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사의 대상 테이블입니다. 호출할 때 **bcp_init** 사용에 대 한 **bcp_bind** 하 고 [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)서 **bcp_init** _szDataFile_매개 변수를 데이터 파일을 나타내는 NULL로 설정 됩니다 합니다 **bcp_init**_eDirection_ 매개 변수가 DB_IN으로 설정 됩니다.  
@@ -189,7 +188,7 @@ bcp_bind(hdbc, szName, 0,
   
  하는 경우 *pData* 를 호출 하 여 해당 값을 제공 하기 때문에 열을 NULL로 설정 됩니다 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)를 사용 하 여 모든 후속 열 *eDataType* SQLTEXT, SQLNTEXT로 설정 SQLXML, SQLUDT, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, SQLNCHAR 또는 SQLIMAGE도 바인딩되어야 *pData* NULL로 설정 하 고 호출 하 여 해당 값도 제공 해야 **bcp_moretext**.  
   
- 새로운 큰 값 형식에 대 한와 같은 **(는) 트랜잭션**, **varbinary (max)**, 또는 **nvarchar(max)**, SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, 사용할 수와 형식 표시기로 SQLNCHAR는 *eDataType* 매개 변수입니다.  
+ 새로운 큰 값 형식에 대 한와 같은 **(는) 트랜잭션**, **varbinary (max)** , 또는 **nvarchar(max)** , SQLCHARACTER, SQLVARCHAR, SQLVARBINARY, SQLBINARY, 사용할 수와 형식 표시기로 SQLNCHAR는 *eDataType* 매개 변수입니다.  
   
  경우 *cbTerm* 가 0이 아닌 값 (1, 2, 4 또는 8)이 유효한 접두사 (*cbIndicator*). 이 상황에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 종단 장치를 검색, 종단 장치에 대 한 데이터 길이 계산 (*i*), 설정의 *cbData* i의 값과 작은 값을 접두사입니다.  
   

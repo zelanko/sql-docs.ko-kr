@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 뷰 (Analysis Services)에서 논리적 관계 정의 | Microsoft Docs
+title: Data Source View (Analysis Services)에서 논리적 관계 정의 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d59812b7e1a427dc00f26c2d583d8cbca45506d5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023660"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208996"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>데이터 원본 뷰에서 논리적 관계 정의(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "34023660"
   
 3.  수정하려는 관계를 마우스 오른쪽 단추로 클릭한 다음 **관계 편집**을 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [다차원 모델의 데이터 원본 뷰](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

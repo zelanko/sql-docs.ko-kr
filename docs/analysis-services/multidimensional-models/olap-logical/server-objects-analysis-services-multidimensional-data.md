@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 037921e43d5155422d4b0c4042f9af62aea095bf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026850"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208626"
 ---
 # <a name="server-objects-analysis-services---multidimensional-data"></a>서버 개체(Analysis Services - 다차원 데이터)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
     
 ## <a name="introducing-server-objects"></a>서버 개체 소개  
- <xref:Microsoft.AnalysisServices.Server> 서버와의 인스턴스 개체를 나타내는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 작업할 원하는 합니다.  
+ 합니다 <xref:Microsoft.AnalysisServices.Server> 서버 및 인스턴스의 개체를 나타내는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 사용 하려는.  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에 연결되면 다음이 표시됩니다.  
   

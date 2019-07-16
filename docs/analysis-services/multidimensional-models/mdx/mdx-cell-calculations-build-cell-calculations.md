@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2263ac667b65def1bd59745e3cfef711820b494
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021650"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208796"
 ---
 # <a name="mdx-cell-calculations---build-cell-calculations"></a>MDX 셀 계산-빌드 셀 계산
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -34,10 +34,10 @@ ms.locfileid: "34021650"
   
      CREATE CELL CALCULATION 또는 ALTER CUBE 문을 사용하여 세션에서 계산 셀을 만드는 방법에 대한 자세한 내용은 [세션 범위 계산 셀 만들기](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)를 참조하세요.  
   
-## <a name="see-also"></a>관련 항목:  
- [ALTER CUBE 문 & #40; Mdx& #41;](../../../mdx/mdx-data-definition-alter-cube.md)   
- [CELL CALCULATION 문 & #40; 만들기 Mdx& #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
- [쿼리 범위 셀 계산 만들기 & #40; 만들기 Mdx& #41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
- [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>관련 항목  
+ [ALTER CUBE 문&#40;MDX&#41;](../../../mdx/mdx-data-definition-alter-cube.md)   
+ [CREATE CELL CALCULATION 문&#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
+ [쿼리 범위 셀 계산 만들기&#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

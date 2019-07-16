@@ -20,11 +20,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlun
 ms.openlocfilehash: c6dde8b57112785bde5377d77cdb1d57f2767e3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624151"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68204953"
 ---
 # <a name="sysdmresourcegovernorexternalresourcepools-transact-sql"></a>sys.dm_resource_governor_external_resource_pools (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +33,10 @@ ms.locfileid: "47624151"
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-|열 이름      |데이터 형식      |Description|  
+|열 이름      |데이터 형식      |설명|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|리소스 풀의 ID입니다. Null을 허용하지 않습니다. |
-| NAME|**sysname**|리소스 풀의 이름입니다. Null을 허용하지 않습니다. 
+| name|**sysname**|리소스 풀의 이름입니다. Null을 허용하지 않습니다. 
 | pool_version|**int**|내부 버전 번호입니다.|
 | max_cpu_percent|**int**|CPU 충돌이 있을 때 리소스 풀의 모든 요청에 허용되는 최대 평균 CPU 대역폭에 대한 현재 구성입니다. Null을 허용하지 않습니다. |
 | max_processes|**int**|동시 외부 프로세스의 최대 수입니다. 기본값은 0이며 제한 없음을 지정합니다. Null을 허용하지 않습니다.|
@@ -52,7 +52,7 @@ ms.locfileid: "47624151"
  
 ## <a name="permissions"></a>사용 권한
 
-`VIEW SERVER STATE` 권한이 필요합니다.
+필요한 `VIEW SERVER STATE` 권한.
 
 ## <a name="see-also"></a>관련 항목  
  [sys.dm_resource_governor_external_resource_pool_affinity&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  

@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9dfe88f11cc26d4a9711b7f21caf4c4475ec954b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351318"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206742"
 ---
 # <a name="binding-parameters"></a>매개 변수 바인딩
   SQL 문을 실행하려면 먼저 SQL 문의 각 매개 변수 표식을 응용 프로그램의 변수에 연결하거나 바인딩해야 합니다. 이렇게 호출 하 여 해당 [SQLBindParameter](../native-client-odbc-api/sqlbindparameter.md) 함수입니다. **SQLBindParameter** 드라이버 프로그램 변수 (예: 주소, C 데이터 형식 및 등)를 설명 합니다. 또한 매개 변수 표식의 서수 값을 나타낸 후 해당 표식이 나타내는 SQL 개체의 특성(SQL 데이터 형식, 전체 자릿수 등)을 설명하여 매개 변수 표식을 식별합니다.  

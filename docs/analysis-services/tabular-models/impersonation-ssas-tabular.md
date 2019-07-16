@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 981b98523a53e0c828de5e9cdf8a6c35c6843805
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852908"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207656"
 ---
 # <a name="impersonation"></a>가장 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -56,9 +56,9 @@ ms.locfileid: "56852908"
   
 **테이블 형식 1400 이상 모델**
  
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
-|**계정 가장**|모델 사용을 가져오거나 데이터 소스에서 데이터를 처리 하도록 Windows 사용자 계정을 지정 합니다. 도메인 및 사용자 계정 이름에는 다음 형식을 사용 합니다.**\<도메인 이름 >\\< 사용자 계정 이름\>** 합니다.|  
+|**계정 가장**|모델 사용을 가져오거나 데이터 소스에서 데이터를 처리 하도록 Windows 사용자 계정을 지정 합니다. 도메인 및 사용자 계정 이름에는 다음 형식을 사용 합니다. **\<도메인 이름 >\\< 사용자 계정 이름\>** 합니다.|  
 |**현재 사용자 가장**|요청을 전송한 사용자의 id를 사용 하 여 데이터 원본에서 데이터에 액세스 해야 지정 합니다. 이 설정은 DirectQuery 모드에만 적용 됩니다.|  
 |**Id 가장**|데이터 원본에 액세스 하려면 사용자 이름을 지정 하지만 계정의 암호를 지정할 필요가 없습니다. 이 설정은 Kerberos 위임을 사용 하도록 설정할지 지정 S4U 인증을 사용 해야 하는 경우에 적용 됩니다.|  
 |**서비스 계정 가장**|모델을 관리 하는 Analysis Services 서비스 인스턴스와 연결 된 보안 자격 증명을 사용 하 여 모델을 지정 합니다.|  
@@ -70,9 +70,9 @@ ms.locfileid: "56852908"
 
 **테이블 형식 1200 모델**
  
-|옵션|Description|  
+|옵션|설명|  
 |------------|-----------------|  
-|**특정 Windows 사용자 이름 및 암호**|이 옵션 Windows 사용자 계정을 가져오거나 데이터 소스에서 데이터 처리에 모델 사용을 지정 합니다. 도메인 및 사용자 계정 이름에는 다음 형식을 사용 합니다.**\<도메인 이름 >\\< 사용자 계정 이름\>** 합니다. 테이블 가져오기 마법사를 사용 하 여 새 모델을 만들 때이 설정은 기본 옵션입니다.|  
+|**특정 Windows 사용자 이름 및 암호**|이 옵션 Windows 사용자 계정을 가져오거나 데이터 소스에서 데이터 처리에 모델 사용을 지정 합니다. 도메인 및 사용자 계정 이름에는 다음 형식을 사용 합니다. **\<도메인 이름 >\\< 사용자 계정 이름\>** 합니다. 테이블 가져오기 마법사를 사용 하 여 새 모델을 만들 때이 설정은 기본 옵션입니다.|  
 |**서비스 계정**|이 옵션은 모델에서 모델을 관리하는 Analysis Services 서비스 인스턴스와 연결된 보안 자격 증명을 사용하도록 지정합니다.|  
   
 ##  <a name="bkmk_impers_sec"></a> 보안  
@@ -83,7 +83,7 @@ ms.locfileid: "56852908"
   
 
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [DirectQuery 모드](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)   
  [테이블 형식 모델 솔루션 배포](../../analysis-services/tabular-models/tabular-model-solution-deployment-ssas-tabular.md)  
   

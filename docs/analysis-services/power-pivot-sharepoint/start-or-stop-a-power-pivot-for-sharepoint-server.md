@@ -1,5 +1,5 @@
 ---
-title: 시작 또는 Stop a Power Pivot for SharePoint 서버 | Microsoft Docs
+title: 시작 또는 Powerpivot for SharePoint 서버 중지 | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b53cc7730f962d790ebdb9a0373bf98e9bf32bf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037407"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208091"
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>SharePoint용 파워 피벗 서버 시작 또는 중지
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

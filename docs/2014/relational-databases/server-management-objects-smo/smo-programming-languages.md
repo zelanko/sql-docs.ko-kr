@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815055"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211923"
 ---
 # <a name="programming-languages"></a>프로그래밍 언어
-  이 섹션에서는 설명 프로그래밍 하는 방법 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic.NET [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.NET 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual c + +입니다.  
+  이 섹션에서는 설명 프로그래밍 하는 방법 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic.NET [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시각적 C# .NET, 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[Visual Basic .NET 시작](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Visual Basic.NET에서 SMO 프로그램 작성을 시작 하는 방법에 정보를 제공 합니다.|  
 |[Visual C에서 시작&#35; .NET](smo-programming-getting-started-in-visual-csharp-net.md)|Visual C#.NET에서 SMO 프로그램 작성을 시작 하는 방법에 정보를 제공 합니다.|  

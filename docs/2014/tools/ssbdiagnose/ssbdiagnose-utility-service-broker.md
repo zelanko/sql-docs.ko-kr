@@ -1,5 +1,5 @@
 ---
-title: ssbdiagnose 유틸리티 (Service Broker) | Microsoft Docs
+title: ssbdiagnose 유틸리티(Service Broker) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823687"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211003"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>ssbdiagnose 유틸리티(Service Broker)
   **ssbdiagnose** 유틸리티는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스 구성이나 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화의 문제를 보고합니다. 이때 두 서비스나 한 서비스에 대한 구성 검사를 수행할 수 있습니다. 오류는 명령 프롬프트 창에 사람이 읽을 수 있는 텍스트 또는 다른 응용 프로그램으로 리디렉션될 수 있는 서식이 설정된 XML로 보고됩니다.  
@@ -158,9 +158,9 @@ WHERE database_id = DB_ID();
   
  **ON**: 기본 설정입니다. 전체 대화 보안이 구성됩니다. 인증서가 대화의 양측에 배포되었고, 원격 서비스 바인딩이 있으며, 대상 서비스에 대한 GRANT SEND 문이 시작 사용자를 지정했습니다.  
   
- **해제**: 대화 보안이 구성되지 않습니다. 인증서가 배포되지 않았고, 원격 서비스 바인딩이 만들어지지 않았으며, 시작자 서비스에 대한 GRANT SEND가 **public** 역할을 지정했습니다.  
+ **OFF**: 대화 보안 없이 구성 됩니다. 인증서가 배포되지 않았고, 원격 서비스 바인딩이 만들어지지 않았으며, 시작자 서비스에 대한 GRANT SEND가 **public** 역할을 지정했습니다.  
   
- **익명**: 익명 대화 보안이 구성됩니다. 인증서 한 개가 배포되었고, 원격 서비스 바인딩이 익명 절을 지정했으며, 대상 서비스에 대한 GRANT SEND가 **public** 역할을 지정했습니다.  
+ **ANONYMOUS**: 익명 대화 보안이 구성 됩니다. 인증서 한 개가 배포되었고, 원격 서비스 바인딩이 익명 절을 지정했으며, 대상 서비스에 대한 GRANT SEND가 **public** 역할을 지정했습니다.  
   
  **RUNTIME**  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 대화에 대해 런타임 오류를 일으키는 문제에 대한 보고서를 요청합니다. **-NEW** 와 **-ID** 를 둘 다 지정하지 않을 경우 **ssbdiagnose** 가 연결 옵션에 지정된 모든 데이터베이스에 있는 대화를 모두 모니터링합니다. **-NEW** 또는 **-ID** 를 지정할 경우 **ssbdiagnose** 는 매개 변수에 지정된 ID 목록을 작성합니다.  
@@ -200,7 +200,7 @@ WHERE database_id = DB_ID();
  대화 Id에는 보고를 `conversation_id` 열의 합니다 **sys.conversation_endpoints** 카탈로그 뷰.  
   
  **-TIMEOUT** *timeout_interval*  
- **RUNTIME** 보고서를 실행할 시간(초)을 지정합니다. **-TIMEOUT** 을 지정하지 않을 경우 런타임 보고서가 무기한 실행됩니다. **-TIMEOUT** 은 **RUNTIME** 보고서에서만 사용됩니다. **CONFIGURATION** 보고서에서는 사용되지 않습니다. Ctrl+C를 사용하면 **-TIMEOUT** 을 지정하지 않은 경우 **ssbdiagnose** 를 종료하거나 제한 시간 간격이**-** 만료되기 전에 런타임 보고서를 종료할 수 있습니다. *timeout_interval* 은 1에서 2,147,483,647 사이의 숫자여야 합니다.  
+ **RUNTIME** 보고서를 실행할 시간(초)을 지정합니다. **-TIMEOUT** 을 지정하지 않을 경우 런타임 보고서가 무기한 실행됩니다. **-TIMEOUT** 은 **RUNTIME** 보고서에서만 사용됩니다. **CONFIGURATION** 보고서에서는 사용되지 않습니다. Ctrl+C를 사용하면 **-TIMEOUT** 을 지정하지 않은 경우 **ssbdiagnose** 를 종료하거나 제한 시간 간격이 **-** 만료되기 전에 런타임 보고서를 종료할 수 있습니다. *timeout_interval* 은 1에서 2,147,483,647 사이의 숫자여야 합니다.  
   
  **\<runtimeconnectionoptions>**  
  모니터링 중인 대화 요소와 연결된 서비스를 포함하는 데이터베이스에 대한 연결 정보를 지정합니다. 모든 서비스가 동일한 데이터베이스에 있으면 **CONNECT TO** 절을 하나만 지정하면 됩니다. 서비스가 서로 다른 데이터베이스에 있으면 각 데이터베이스에 대해 **CONNECT TO** 절을 제공해야 합니다. **runtimeconnectionoptions** 를 지정하지 않은 경우 **ssbdiagnose** 는 **baseconnectionoptions**의 연결 정보를 사용합니다.  
@@ -314,7 +314,7 @@ WHERE database_id = DB_ID();
 ## <a name="examples"></a>예  
  이 섹션에는 명령 프롬프트에서 **ssbdiagnose** 를 사용하는 예가 포함되어 있습니다.  
   
-### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>1. 동일한 데이터베이스에 있는 두 서비스의 구성 검사  
+### <a name="a-checking-the-configuration-of-two-services-in-the-same-database"></a>1\. 동일한 데이터베이스에 있는 두 서비스의 구성 검사  
  다음 예에서는 아래 조건에 해당하는 경우 구성 보고서를 요청하는 방법을 보여 줍니다.  
   
 -   시작자 서비스와 대상 서비스가 동일한 데이터베이스에 있습니다.  
@@ -329,14 +329,14 @@ WHERE database_id = DB_ID();
 ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator TO SERVICE /test/target  
 ```  
   
-### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>2. 별개의 컴퓨터에 있지만 동일한 로그인을 사용하는 두 서비스의 구성 검사  
+### <a name="b-checking-the-configuration-of-two-services-on-separate-computers-that-use-one-login"></a>2\. 별개의 컴퓨터에 있지만 동일한 로그인을 사용하는 두 서비스의 구성 검사  
  다음 예에서는 시작자 서비스와 대상 서비스가 서로 다른 컴퓨터에 있지만 동일한 Windows 인증 로그인을 사용하여 액세스할 수 있는 경우 구성 보고서를 요청하는 방법을 보여 줍니다.  
   
 ```  
 ssbdiagnose -E CONFIGURATION FROM SERVICE /text/initiator -S InitiatorComputer -d InitiatorDatabase TO SERVICE /test/target -S TargetComputer -d TargetDatabase ON CONTRACT TestContract  
 ```  
   
-### <a name="c-checking-the-configuration-of-two-services-on-separate-computers-that-use-separate-logins"></a>3. 별개의 컴퓨터에 있으며 서로 다른 로그인을 사용하는 두 서비스의 구성 검사  
+### <a name="c-checking-the-configuration-of-two-services-on-separate-computers-that-use-separate-logins"></a>3\. 별개의 컴퓨터에 있으며 서로 다른 로그인을 사용하는 두 서비스의 구성 검사  
  다음 예에서는 시작자 서비스와 대상 서비스가 서로 다른 컴퓨터에 있고 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 서로 다른 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인증 로그인이 필요한 경우 구성 보고서를 요청하는 방법을 보여 줍니다.  
   
 ```  
@@ -346,7 +346,7 @@ ssbdiagnose CONFIGURATION FROM SERVICE /text/initiator
 -U TargetLogin -p ER!49jiy -d TargetDatabase ON CONTRACT TestContract  
 ```  
   
-### <a name="d-checking-mirrored-service-configurations-on-separate-computers-with-anonymous-encryption"></a>4. 익명 암호화를 사용하는 서로 다른 컴퓨터에 있는 미러된 서비스 구성 검사  
+### <a name="d-checking-mirrored-service-configurations-on-separate-computers-with-anonymous-encryption"></a>4\. 익명 암호화를 사용하는 서로 다른 컴퓨터에 있는 미러된 서비스 구성 검사  
  다음 예에서는 시작자 서비스와 대상 서비스가 서로 다른 컴퓨터에 있고 시작자가 명명된 인스턴스에 미러된 경우 보고서를 요청하는 방법을 보여 줍니다. 보고서는 서비스가 익명 암호화를 사용하도록 구성되어 있는지도 확인합니다.  
   
 ```  
@@ -356,7 +356,7 @@ ssbdiagnose -E CONFIGURATION FROM SERVICE /text/initiator
 -S TargetComputer -d TargetDatabase ON CONTRACT TestContract ENCRYPTION ANONYMOUS  
 ```  
   
-### <a name="e-checking-the-configuration-of-two-contracts"></a>5. 두 계약의 구성 검사  
+### <a name="e-checking-the-configuration-of-two-contracts"></a>5\. 두 계약의 구성 검사  
  다음 예에서는 아래 조건에 해당하는 경우 구성 보고서를 요청하는 명령 파일을 작성하는 방법을 보여 줍니다.  
   
 -   시작자 서비스와 대상 서비스가 동일한 데이터베이스에 있습니다.  
@@ -374,14 +374,14 @@ ssbdiagnose -E -d MyDatabase CONFIGURATION FROM SERVICE /test/initiator
 TO SERVICE /test/target ON CONTRACT PromotionContract  
 ```  
   
-### <a name="f-monitor-the-status-of-a-specific-conversation-on-the-local-computer-with-a-time-out"></a>6. 제한 시간이 설정된 로컬 컴퓨터에 있는 특정 대화 상태 모니터링  
+### <a name="f-monitor-the-status-of-a-specific-conversation-on-the-local-computer-with-a-time-out"></a>6\. 제한 시간이 설정된 로컬 컴퓨터에 있는 특정 대화 상태 모니터링  
  다음 예에서는 시작자 서비스와 대상 서비스가 **ssbdiagnose**를 실행하고 있는 동일한 컴퓨터의 기본 인스턴스에 있는 동일한 데이터베이스에 있는 특정 대화를 모니터링하는 방법을 보여 줍니다. 제한 시간 간격은 20초로 설정됩니다.  
   
 ```  
 ssbdiagnose -E -d TestDatabase RUNTIME -ID D68D77A9-B1CF-41BF-A5CE-279ABCAB140D -TIMEOUT 20  
 ```  
   
-### <a name="g-monitor-the-status-of-a-conversation-that-spans-two-computers"></a>7. 두 컴퓨터를 연결하는 대화의 상태 모니터링  
+### <a name="g-monitor-the-status-of-a-conversation-that-spans-two-computers"></a>7\. 두 컴퓨터를 연결하는 대화의 상태 모니터링  
  다음 예에서는 시작자 서비스와 대상 서비스가 서로 다른 컴퓨터에 있는 특정 대화를 모니터링하는 방법을 보여 줍니다.  
   
 ```  
@@ -391,7 +391,7 @@ ssbdiagnose RUNTIME -ID D68D77A9-B1CF-41BF-A5CE-279ABCAB140D
 -d TargetDatabase  
 ```  
   
-### <a name="h-monitor-the-status-of-a-conversation-in-two-databases-in-the-same-instance"></a>8. 동일한 인스턴스의 두 데이터베이스에 있는 대화 상태 모니터링  
+### <a name="h-monitor-the-status-of-a-conversation-in-two-databases-in-the-same-instance"></a>8\. 동일한 인스턴스의 두 데이터베이스에 있는 대화 상태 모니터링  
  다음 예에서는 시작자 서비스와 대상 서비스가 동일한 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 서로 다른 데이터베이스에 있는 특정 대화를 모니터링하는 방법을 보여 줍니다. 이 예에서는 **baseconnectionoptions** 를 사용하여 인스턴스 및 로그인 정보를 지정하고 두 개의 CONNECT TO 절을 사용하여 데이터베이스를 지정합니다. -SHOWEVENTS는 모든 런타임 이벤트가 보고서 출력에 포함되도록 하기 위해 지정됩니다.  
   
 ```  
@@ -400,7 +400,7 @@ ssbdiagnose -E -S TestComputer/DevTestInstance RUNTIME -SHOWEVENTS
 -d InitiatorDatabase CONNECT TO -d TargetDatabase  
 ```  
   
-### <a name="i-monitor-the-status-of-two-conversations-between-two-databases"></a>9. 두 데이터베이스 간의 두 대화 상태 모니터링  
+### <a name="i-monitor-the-status-of-two-conversations-between-two-databases"></a>9\. 두 데이터베이스 간의 두 대화 상태 모니터링  
  다음 예에서는 시작자 서비스와 대상 서비스가 동일한 [!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스의 서로 다른 데이터베이스에 있는 두 대화를 모니터링하는 방법을 보여 줍니다. 이 예에서는 **baseconnectionoptions** 를 사용하여 인스턴스 및 로그인 정보를 지정하고 두 개의 CONNECT TO 절을 사용하여 데이터베이스를 지정합니다.  
   
 ```  

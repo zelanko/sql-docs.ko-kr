@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d87706d53190552734785b5310cba7ec81056a40
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535451"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206999"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>행 집합 및 SQL Server 커서
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 다음 두 가지 방법으로 결과 집합을 소비자에게 반환합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "52535451"
   
  특정 유형의 커서 모델을 사용하려면 커서 모델에 해당하는 열을 찾아 열에 값 'T'가 포함된 행 집합 속성을 모두 찾습니다. 특정 커서 모델을 사용하려면 이러한 행 집합 속성을 VARIANT_TRUE로 설정합니다. 값이 '-'인 행 집합 속성은 VARIANT_TRUE 또는 VARIANT_FALSE로 설정할 수 있습니다.  
   
-|행 집합 속성/커서 모델|Default<br /><br /> result<br /><br /> 집합<br /><br /> (RO)|빠름<br /><br /> 정방향<br /><br /> 전용<br /><br /> (RO)|정적<br /><br /> (RO)|Keyset<br /><br /> 집합<br /><br /> (RO)|  
+|행 집합 속성/커서 모델|기본값<br /><br /> result<br /><br /> 집합<br /><br /> (RO)|Fast<br /><br /> 정방향<br /><br /> 전용<br /><br /> (RO)|정적<br /><br /> (RO)|Keyset<br /><br /> 집합<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  

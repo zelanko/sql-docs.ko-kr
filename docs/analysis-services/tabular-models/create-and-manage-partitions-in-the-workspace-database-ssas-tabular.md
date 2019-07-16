@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40e87650a36f717aea1a333c134e7722383f4ec4
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207723"
 ---
 # <a name="create-and-manage-partitions-in-the-workspace-database"></a>작업 영역 데이터베이스에서 파티션 만들기 및 관리 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "54405833"
   
 2.  **파티션** 목록에서 삭제할 파티션을 선택한 다음 **삭제**를 클릭합니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [파티션](../../analysis-services/tabular-models/partitions-ssas-tabular.md)   
  [작업 영역 데이터베이스에서 파티션 처리](../../analysis-services/tabular-models/process-partitions-in-the-workspace-database-ssas-tabular.md)  
   

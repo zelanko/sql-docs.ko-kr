@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ce74bb210e3d5d3cd01120b0bd406672db6dd5ed
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207960"
 ---
 # <a name="server-properties-in-analysis-services"></a>Analysis Services의 서버 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -62,7 +62,7 @@ SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 �
   
  다음 항목에서는 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 속성에 대해 설명합니다.  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[일반 속성](../../analysis-services/server-properties/general-properties.md)|일반 속성에는 데이터 디렉터리, 백업 디렉터리 및 기타 서버 동작을 정의하는 속성을 비롯한 기본 및 고급 속성이 모두 포함됩니다.|  
 |[데이터 마이닝 속성](../../analysis-services/server-properties/data-mining-properties.md)|데이터 마이닝 속성은 설정 및 해제할 데이터 마이닝 알고리즘을 제어합니다. 기본적으로 모든 알고리즘이 설정됩니다.| 
@@ -78,7 +78,7 @@ SQL Server Management Studio의 속성 페이지에는 수정할 가능성이 �
 |[보안 속성](../../analysis-services/server-properties/security-properties.md)|보안 섹션에는 액세스 권한을 정의하는 기본 및 고급 속성이 모두 포함됩니다. 여기에는 관리자 및 사용자와 관련된 설정이 포함됩니다.|  
 |[스레드 풀 속성](../../analysis-services/server-properties/thread-pool-properties.md)|스레드 풀 속성은 서버에서 만드는 스레드 개수를 제어합니다. 이 속성은 주로 고급 속성입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Analysis Services 인스턴스 관리](../../analysis-services/instances/analysis-services-instance-management.md)   
  [솔루션 배포를 위한 구성 설정 지정](../../analysis-services/multidimensional-models/deployment-script-files-solution-deployment-config-settings.md)  
   

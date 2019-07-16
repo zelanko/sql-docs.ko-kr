@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 77aadc5cfc60df17b9553810b5dee2562717b8b3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147888"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208715"
 ---
 # <a name="subselects-in-queries"></a>쿼리의 하위 SELECT
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -202,7 +202,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|  
 ||Internet Sales Amount|Reseller Sales Amount|  
 |All Customers|$29,358,677.22|$80,450,596.98|  
-|United States|$9,389,789.51|$80,450,596.98|  
+|미국|$9,389,789.51|$80,450,596.98|  
 |Oregon|$1,170,991.54|$80,450,596.98|  
 |Portland|$110,649.54|$80,450,596.98|  
 |Washington|$2,467,248.34|$80,450,596.98|  
@@ -257,7 +257,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|-|-|-|-|  
 ||All Products|Accessory|구성 요소|Mountain|Road|Touring|  
 |All Customers|$29,358,677.22|$604,053.30|(null)|$10,251,183.52|$14,624,108.58|$3,879,331.82|  
-|United States|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
+|미국|$9,389,789.51|$217,168.79|(null)|$3,547,956.78|$4,322,438.41|$1,302,225.54|  
 |Oregon|$1,170,991.54|$30,513.17|(null)|$443,607.98|$565,372.10|$131,498.29|  
 |Portland|$110,649.54|$2,834.17|(null)|$47,099.91|$53,917.17|$6,798.29|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
@@ -282,7 +282,7 @@ SELECT { [Customer].[Customer Geography].[All Customers]
 |-|-|-|-|-|-|-|  
 ||All Products|Accessory|구성 요소|Mountain|Road|Touring|  
 |All Customers|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
-|United States|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
+|미국|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Washington|$2,467,248.34|$62,662.92|(null)|$945,219.38|$1,155,880.07|$303,485.97|  
 |Seattle|$75,164.86|$2,695.74|(null)|$19,914.53|$44,820.06|$7,734.54|  
   
@@ -305,7 +305,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||All Sales Territories|Australia|Canada|Central|Northwest|Southwest|  
+||All Sales Territories|Australia|캐나다|Central|Northwest|Southwest|  
 |All Products|$7,591,495.49|$1,281,059.99|$1,547,298.12|$600,205.79|$1,924,763.50|$2,238,168.08|  
 |Mountain-200 Silver, 38|$1,449,576.15|$248,702.93|$275,052.45|$141,103.65|$349,487.01|$435,230.12|  
 |Mountain-200 Black, 38|$1,722,896.50|$218,024.05|$418,726.43|$123,929.46|$486,694.63|$475,521.93|  
@@ -338,7 +338,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  두 집합의 결과가 다름을 확인할 수 있습니다. 첫 번째 쿼리는 상위 5개 판매 지역에서 잘 팔리는 제품이 무엇인가라는 질문에 답했고, 두 번째 쿼리는 상위 5개 판매 제품이 가장 많이 팔리는 지역이 어디인가라는 질문에 답변했습니다.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>설명  
  하위 SELECT에는 다음과 같은 제한이 있습니다.  
   
 -   WHERE 절은 하위 공간을 필터링하지 않습니다.  
