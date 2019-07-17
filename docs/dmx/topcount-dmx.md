@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0ec801da96735f15b6320c3f0372855c1ff3c2c8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 48621e242fae86b0b9fca689149ed1364cb7ff1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079843"
 ---
 # <a name="topcount-dmx"></a>TopCount(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ TopCount(<table expression>, <rank expression>, <count>)
 ## <a name="return-type"></a>반환 형식  
  \<테이블 식 >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  제공 하는 값을 \<식의 순위를 지정 > 인수에서 제공 되는 행의 내림차순이 결정을 \<테이블 식 > 인수와 합니다 에지정된맨위행의수\<개수 > 인수가 반환 됩니다.  
   
  TopCount 함수는 원래 연결 예측을 사용 하도록 설정 하려면 도입 되었으며 일반적으로 포함 하는 문으로 동일한 결과 생성 **SELECT TOP** 하 고 **ORDER BY** 절. 사용 하는 경우 연결 예측에 대 한 성능 향상을 받습니다 합니다 **예측 (DMX)** 함수는 많은 예측이 반환 되도록 지정할 사양을 지원 합니다.  
@@ -111,7 +110,7 @@ SELECT Predict ([Association].[v Assoc Seq Line Items], INCLUDE_STATISTICS, 3, $
   
  결과에는 지원 값으로 정렬된 최상위 3개 예측이 포함됩니다. $SUPPORT를 $PROBABILITY 또는 $ADJUSTED_PROBABILITY로 대체하여 확률 또는 조정된 확률로 등급이 지정된 예측을 반환할 수 있습니다. 자세한 내용은 **예측 (DMX)** 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)   

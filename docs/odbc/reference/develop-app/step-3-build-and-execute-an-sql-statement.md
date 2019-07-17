@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3427057e70ee27fe1108fde71c833f0c511836b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0e369b74ef629c5fd7136b9098f579b5ad2b1b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114257"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>3단계: SQL 문 작성 및 실행
 다음 그림에 나와 있는 것 처럼 빌드는 SQL 문을 실행 하는 세 번째 단계가입니다. 이 단계를 수행 하는 데 사용 방법이 크게 달라 집니다. 응용 프로그램 사용자 입력을 기반으로 하는 SQL 문을 작성, SQL 문을 입력 하 라는 메시지가 수도 하드 코딩 된 SQL 문을 사용 합니다. 자세한 내용은 [SQL 문을 생성](../../../odbc/reference/develop-app/constructing-sql-statements.md)합니다.  

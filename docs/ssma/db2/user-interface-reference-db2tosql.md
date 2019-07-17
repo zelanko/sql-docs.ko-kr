@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 094ceed90543e61bf0577131508612244393cead
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0332efca72c216ac6ecbb2f5f397fbf57e8b7cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63080674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059965"
 ---
 # <a name="user-interface-reference-db2tosql"></a>사용자 인터페이스 참조 (DB2ToSQL)
 이 섹션에 대 한 도움말 항목이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2입니다.  
@@ -25,7 +24,7 @@ ms.locfileid: "63080674"
   
 |||  
 |-|-|  
-|항목|Description|  
+|항목|설명|  
 |[고급 개체 선택 &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|사용 된 **고급 개체 선택** 대화 상자의 필터 조건을 사용 하 여 데이터베이스 개체를 찾으려면 다음 선택 하거나 해당 개체의 선택을 취소 합니다.|  
 |[평가 보고서 &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|평가 보고서를 사용 하 여 DB2 개체의 변환 결과 보려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문 및 예측 시간 및 복잡성에 마이그레이션의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |[DB2 데이터베이스에 연결 &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|사용 된 **DB2에 연결** 마이그레이션하려는 DB2 데이터베이스에 연결 대화 상자.|  

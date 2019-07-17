@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c9ad82b7-8dba-45b0-bdb9-f4668b37c0d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9f0c59324542793301965c7d3555cf35ad40f5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9b10037883ef9cfa4051195270e6477c5cc04ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091619"
 ---
 # <a name="updating-rows-by-bookmark-with-sqlbulkoperations"></a>SQLBulkOperations로 책갈피별로 행 업데이트
 책갈피에서 행을 업데이트할 때 **SQLBulkOperations** 데이터 원본에서 테이블의 하나 이상의 행을 업데이트 합니다. 행 바인딩된 책갈피 열에 책갈피를 통해 식별 됩니다. 행 (열에 대 한 길이/표시기 버퍼의 값이 SQL_COLUMN_IGNORE) 제외 바인딩된 각 열에 대 한 응용 프로그램 버퍼에 데이터를 사용 하 여 업데이트 됩니다. 바인딩되지 않은 열을 업데이트 되지 않습니다.  

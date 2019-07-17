@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb53d157c950ceeed796d729825b8a2838f9ad43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea0dcfa0975d80ac91b7c7472046d6c1d06275d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63003485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104605"
 ---
 # <a name="syskeyconstraints-transact-sql"></a>sys.key_constraints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   PRIMARY KEY 또는 UNIQUE 제약 조건인 각 개체당 한 개의 행을 포함합니다. 포함 **sys.objects.type** PK와 UQ.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**\<Sys.objects에서 상속 된 열 >**||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.|  
 |**unique_index_id**|**int**|이 제약 조건을 강제 적용하기 위해 생성된 부모 개체에 있는 고유 인덱스의 ID입니다.|  

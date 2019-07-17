@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8468957a-632a-4d7b-a3e1-66b34e7df639
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9578e5a1b894078b3dfdd33b81893780afc804b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ba7c1956bc03835131a440bfe9ad37469a7858e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112102"
 ---
 # <a name="deleting-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 원본 삭제
 ### <a name="to-delete-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 원본을 삭제 하려면  

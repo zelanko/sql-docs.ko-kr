@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54d96cf86b55a7c5a24917672bcae470a3bf7335
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: baecdca82d7edcb27196c7c43d9d071a82adf792
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084955"
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_update_alert
   
 `[ @delay_between_responses = ] delay_between_responses` 새로운 대기 기간에서 경고에 대 한 응답 간격 (초)입니다. *delay_between_responses* 됩니다 **int**, 기본값은 NULL입니다.  
   
-`[ @notification_message = ] 'notification_message'` 전자 메일의 일부로 운영자에 게 전송 하는 추가 메시지의 수정 된 텍스트 **net send**, 또는 호출기 알림의 합니다. *notification_message* 됩니다 **nvarchar(512)**, 기본값은 NULL입니다.  
+`[ @notification_message = ] 'notification_message'` 전자 메일의 일부로 운영자에 게 전송 하는 추가 메시지의 수정 된 텍스트 **net send**, 또는 호출기 알림의 합니다. *notification_message* 됩니다 **nvarchar(512)** , 기본값은 NULL입니다.  
   
 `[ @include_event_description_in = ] include_event_description_in` 지정 여부에 대 한 설명을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 응용 프로그램 로그에서 오류 알림 메시지에 포함 되어야 합니다. *include_event_description_in* 은 **tinyint**, 기본값은 NULL 이며 다음이 값 중 하나 이상의 수 있습니다.  
   
@@ -89,7 +88,7 @@ sp_update_alert
   
 `[ @database_name = ] 'database'` 오류는 경고가 발생 해야 하는 데이터베이스의 이름입니다. *데이터베이스* 는 **sysname 합니다.** 이름을 대괄호([ ])로 묶는 것은 허용되지 않습니다. 기본값은 NULL입니다.  
   
-`[ @event_description_keyword = ] 'event_description_keyword'` 오류 메시지 로그에서 오류의 설명을에서 발견 되어야 하는 문자 시퀀스입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 식 패턴 일치 문자를 사용할 수 있습니다. *event_description_keyword* 됩니다 **nvarchar(100)**, 기본값은 NULL입니다. 이 매개 변수는 개체 이름을 필터링 하는 데 (예를 들어 **%customer_table%**).  
+`[ @event_description_keyword = ] 'event_description_keyword'` 오류 메시지 로그에서 오류의 설명을에서 발견 되어야 하는 문자 시퀀스입니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] LIKE 식 패턴 일치 문자를 사용할 수 있습니다. *event_description_keyword* 됩니다 **nvarchar(100)** , 기본값은 NULL입니다. 이 매개 변수는 개체 이름을 필터링 하는 데 (예를 들어 **%customer_table%** ).  
   
 `[ @job_id = ] job_id` 작업 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 NULL입니다. 하는 경우 *job_id* 를 지정 하면 *job_name* 생략 해야 합니다.  
   
@@ -111,24 +110,24 @@ sp_update_alert
   
 `[ @raise_snmp_trap = ] raise_snmp_trap` 예약 되어 있습니다.  
   
-`[ @performance_condition = ] 'performance_condition'` 형식으로 표시 되는 값 **'***itemcomparatorvalue***'** 합니다. *performance_condition* 는 **nvarchar(512)**, 기본값은 NULL 이며 다음이 요소로 구성 됩니다.  
+`[ @performance_condition = ] 'performance_condition'` 형식으로 표시 되는 값 **'***itemcomparatorvalue***'** 합니다. *performance_condition* 는 **nvarchar(512)** , 기본값은 NULL 이며 다음이 요소로 구성 됩니다.  
   
 |형식 요소|Description|  
 |--------------------|-----------------|  
 |*항목*|성능 개체, 성능 카운터 또는 카운터의 명명된 인스턴스|  
-|*비교 연산자*|이러한 연산자 중 하나: **>** 하십시오 **<**, **=**|  
+|*비교 연산자*|이러한 연산자 중 하나: **>** 하십시오 **<** , **=**|  
 |*Value*|카운터의 숫자 값|  
   
 `[ @category_name = ] 'category'` 경고 범주의 이름입니다. *범주* 됩니다 **sysname** 이며 기본값은 NULL입니다.  
   
 `[ @wmi_namespace = ] 'wmi_namespace'` 이벤트에 대 한 쿼리는 WMI 네임 스페이스입니다. *wmi_namespace* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-`[ @wmi_query = ] 'wmi_query'` WMI 이벤트 경고를 지정 하는 쿼리. *wmi_query* 됩니다 **nvarchar(512)**, 기본값은 NULL입니다.  
+`[ @wmi_query = ] 'wmi_query'` WMI 이벤트 경고를 지정 하는 쿼리. *wmi_query* 됩니다 **nvarchar(512)** , 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  만 **sysmessages** 에 기록 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램 로그에 경고를 발생 시킬 수 있습니다.  
   
  **sp_update_alert** 매개 변수 값이 제공 된 경고 설정만 변경 합니다. 매개 변수가 생략되면 현재 설정이 보존됩니다.  

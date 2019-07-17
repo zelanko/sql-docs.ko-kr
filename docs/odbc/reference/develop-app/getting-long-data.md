@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d61f6e2d5c2999a1ff7cea86d497eb4f0fb13244
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49f0023f726dd4bb290ffba1018ce2608800dd90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216364"
 ---
 # <a name="getting-long-data"></a>Long 데이터 가져오기
 Dbms 정의할 *긴 데이터* 모든 문자 또는 이진 데이터 255 자 같은 특정 크기입니다. 이 데이터는 몇 천 문자의 일부 설명 등의 단일 버퍼에 저장할 수 있을 만큼 적습니다 수 있습니다. 그러나 긴 텍스트 문서 등 비트맵 메모리에 저장 하는 데 오랜 수 있습니다. 이러한 데이터는 단일 버퍼에 저장할 수 없으므로 사용 하 여 파트의 드라이버에서 검색할 **SQLGetData** 행의 다른 데이터를 가져온 후 합니다.  

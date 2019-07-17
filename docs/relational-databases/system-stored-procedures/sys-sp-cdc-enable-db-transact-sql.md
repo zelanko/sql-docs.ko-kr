@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9778d44f3a11bcea066aea3ef43d36489b5daded
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 87cb8f207d85220b88ef00d65fd4704b21becf63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106499"
 ---
 # <a name="sysspcdcenabledb-transact-sql"></a>sys.sp_cdc_enable_db(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sys.sp_cdc_enable_db
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  변경 데이터 캡처를 사용할 수 없습니다 [시스템 데이터베이스](../../relational-databases/databases/system-databases.md) 또는 배포 데이터베이스입니다.  
   
  sys.sp_cdc_enable_db는 메타데이터 테이블 및 DDL 트리거를 포함하여 데이터베이스 차원 범위의 변경 데이터 캡처 개체를 만듭니다. 또한 cdc 스키마 및 cdc 데이터베이스 사용자를 만들고 데이터베이스 항목의 is_cdc_enabled 열을 설정 합니다 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰를 1입니다.  

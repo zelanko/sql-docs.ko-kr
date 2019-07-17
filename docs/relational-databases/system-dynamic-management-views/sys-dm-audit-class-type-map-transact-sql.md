@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a110059cd635e2bc89a6e794082d706da1269179
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae1c39d5c3ddc36f4ca3007cf9e17c2543055b85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099198"
 ---
 # <a name="sysdmauditclasstypemap-transact-sql"></a>sys.dm_audit_class_type_map(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   감사 로그의 class_type 필드를 sys.dm_audit_actions의 class_desc 필드에 매핑하는 테이블을 반환합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 감사 참조 [SQL Server Audit &#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)합니다.  
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**class_type**|**char(2)**|감사된 엔터티의 클래스 형식입니다. 감사 로그에 기록 하 고 반환한 class_type에 매핑되는 **get_audit_file ()** 함수입니다. Null을 허용하지 않습니다.|  
 |**class_type_desc**|**nvarchar(120)**|감사 가능한 엔터티의 이름입니다. Null을 허용하지 않습니다.|  

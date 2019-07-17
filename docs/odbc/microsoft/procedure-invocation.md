@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b9ff2c3a-2003-4832-adbe-08dd0f5ad948
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7b33bc399646a6d274c875abd36d53219a2814e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc37ef6d268dba71f8270909ea9c5b938ef3ee75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070490"
 ---
 # <a name="procedure-invocation"></a>프로시저 호출
 프로시저를 사용 하 여 드라이버에서 호출할 수 Microsoft Access 드라이버를 사용 하는 경우는 **SQLExecDirect** 하거나 **SQLPrepare** 다음 구문 사용 하 여 함수: {호출 *프로시저 이름*  [(*매개 변수*[합니다*매개 변수*]...)]을 (를). 참고 식 호출된 된 프로시저에 매개 변수로 지원 되지 않습니다.  

@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068952"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access 인벤토리 스키마 (AccessToSQL)
 다음 섹션에 액세스 하는 스키마를 내보낼 때 SSMA에서 만든 테이블에 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -50,7 +49,7 @@ ms.locfileid: "62759700"
 ## <a name="databases"></a>데이터베이스  
 데이터베이스 메타 데이터를 내보낸 합니다 **SSMA_Access_InventoryDatabases** 테이블입니다. 이 테이블에는 다음 열을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|각 데이터베이스를 고유 하 게 식별 하는 GUID입니다. 이 열은 테이블에 대 한 기본 키 이기도합니다.|  
 |**DatabaseName**|**nvarchar(4000)**|Access 데이터베이스의 이름입니다.|  
@@ -75,7 +74,7 @@ ms.locfileid: "62759700"
 ## <a name="tables"></a>테이블  
 테이블 메타 데이터를 내보낸 합니다 **SSMA_Access_InventoryTables** 테이블입니다. 이 테이블에는 다음 열을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|이 테이블을 포함 하는 데이터베이스를 식별 합니다.|  
 |**TableId**|**uniqueidentifier**|테이블을 고유 하 게 식별 하는 GUID입니다. 이 열은 테이블에 대 한 기본 키 이기도합니다.|  
@@ -88,7 +87,7 @@ ms.locfileid: "62759700"
 ## <a name="columns"></a>열  
 열 메타 데이터를 내보낸 합니다 **SSMA_Access_InventoryColumns** 테이블입니다. 이 테이블에는 다음 열을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|이 열이 포함 된 데이터베이스를 식별 합니다.|  
 |**TableId**|**uniqueidentifier**|이 열이 포함 된 테이블을 식별 합니다.|  
@@ -104,7 +103,7 @@ ms.locfileid: "62759700"
 ## <a name="indexes"></a>인덱스  
 인덱스 메타 데이터를 내보낸 합니다 **SSMA_Access_InventoryIndexes** 테이블입니다. 이 테이블에는 다음 열을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|이 인덱스가 포함 된 데이터베이스를 식별 합니다.|  
 |**TableId**|**uniqueidentifier**|이 인덱스를 포함 하는 테이블을 식별 합니다.|  
@@ -118,7 +117,7 @@ ms.locfileid: "62759700"
 ## <a name="foreign-keys"></a>외래 키  
 외래 키 메타 데이터를 내보낸 합니다 **SSMA_Access_InventoryForeignKeys** 테이블입니다. 이 테이블에는 다음 열을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|이 외래 키를 포함 하는 데이터베이스를 식별 합니다.|  
 |**TableId**|**uniqueidentifier**|이 외래 키를 포함 하는 테이블을 식별 합니다.|  
@@ -134,7 +133,7 @@ ms.locfileid: "62759700"
 ## <a name="queries"></a>쿼리  
 쿼리 메타 데이터를 내보낸 합니다 **SSMA_Access_InventoryQueries** 테이블입니다. 이 테이블에는 다음 열을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|이 쿼리를 포함 하는 데이터베이스를 식별 합니다.|  
 |**QueryId**|**int**|쿼리를 식별 하는 증분 정수입니다. 이 열은 테이블에 대 한 기본 키.|  
@@ -147,7 +146,7 @@ ms.locfileid: "62759700"
 ## <a name="forms"></a>양식  
 형식 메타 데이터를 내보낸 합니다 **SSMA_Access_InventoryForms** 테이블입니다. 이 테이블에는 다음 열을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|이 양식을 포함 하는 데이터베이스를 식별 합니다.|  
 |**FormId**|**int**|폼을 식별 하는 증분 정수입니다. 이 열은 테이블에 대 한 기본 키.|  
@@ -156,7 +155,7 @@ ms.locfileid: "62759700"
 ## <a name="macros"></a>매크로  
 매크로 메타 데이터를 내보낸 합니다 **SSMA_Access_InventoryMacros** 테이블입니다. 이 테이블에는 다음 열을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|매크로 포함 하는 데이터베이스를 식별 합니다.|  
 |**MacroId**|**int**|매크로 식별 하는 증분 정수입니다. 이 열은 테이블에 대 한 기본 키.|  
@@ -165,7 +164,7 @@ ms.locfileid: "62759700"
 ## <a name="reports"></a>보고서  
 로 내보낸 보고서 메타 데이터를 **SSMA_Access_InventoryReports** 테이블입니다. 이 테이블에는 다음 열을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|보고서가 포함 된 데이터베이스를 식별 합니다.|  
 |**ReportId**|**int**|보고서를 식별 하는 증분 정수입니다. 이 열은 테이블에 대 한 기본 키.|  
@@ -174,7 +173,7 @@ ms.locfileid: "62759700"
 ## <a name="modules"></a>모듈  
 모듈 메타 데이터를 내보낸 합니다 **SSMA_Access_InventoryModules** 테이블입니다. 이 테이블에는 다음 열을 포함 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|모듈을 포함 하는 데이터베이스를 식별 합니다.|  
 |**ModuleId**|**int**|모듈을 식별 하는 증분 정수입니다. 이 열은 테이블에 대 한 기본 키.|  

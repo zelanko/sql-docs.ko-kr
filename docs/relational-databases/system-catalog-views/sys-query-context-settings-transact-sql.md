@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 3c1887df-6bd8-491e-82fc-d25ad9589faf
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c7ab77981c329c334b22d6fd9735188882b385c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7736c0001c8e22b6cc7c72b2e721e31519d035b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068062"
 ---
-# <a name="sysquerycontextsettings-transact-sql"></a>sys.query_context_settings (Transact-SQL)
+# <a name="sysquerycontextsettings-transact-sql"></a>sys.query_context_settings (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   쿼리와 관련 된 컨텍스트 설정에 영향을 주는 의미 체계에 대 한 정보를 포함 합니다. 사용할 수 있는 다양 한 상황에 맞는 설정 가지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (쿼리의 올바른 결과 정의) 쿼리 의미 체계에 영향을 하는 합니다. 다양 한 설정에서 컴파일된 동일한 쿼리 텍스트 (기본 데이터)에 따라 다른 결과 생성할 수 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**context_settings_id**|**bigint**|기본 키입니다. 이 값은 쿼리에 대 한 실행 계획 XML에 노출 됩니다.|  
 |**set_options**|**varbinary(8)**|여러 SET 옵션의 상태를 반영 하는 비트 마스크입니다. 자세한 내용은 [sys.dm_exec_plan_attributes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)합니다.|  

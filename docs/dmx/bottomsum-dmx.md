@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 9879f2b4ce405ac59568876cd22e381c0dfad2bd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 51ebd164ae5c184177367f59b5643712b14718a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071132"
 ---
 # <a name="bottomsum-dmx"></a>BottomSum(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ BottomSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>반환 형식  
  \<테이블 식 >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **BottomSum** 함수 오름차순에서 맨 아래 행을 반환 합니다. 순위 계산된 된 값에 기반 합니다 \<식의 순위를 지정 > 각 행에 대 한 인수는의 합계를 \<식의 순위를 지정 > 값으로 지정 된 지정한 합계 이상이 \<합계 > 인수. **BottomSum** 지정 된 합계 값에 맞추어 가능한 가장 작은 요소 수를 반환 합니다.  
   
 ## <a name="examples"></a>예  

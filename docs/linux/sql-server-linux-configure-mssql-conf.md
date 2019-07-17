@@ -3,18 +3,17 @@ title: Linux에서 SQL Server 설정 구성
 description: 이 문서에서는 Linux의 SQL Server 설정을 구성 하려면 mssql-conf 도구를 사용 하는 방법을 설명 합니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: ac1f88377b15bf8bd4a92a5dd705716db55deaaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077597"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql-conf 도구를 사용 하 여 Linux에서 SQL Server 구성
 
@@ -27,7 +26,7 @@ ms.locfileid: "67833998"
 
 |||
 |---|---|
-| [에이전트](#agent) | SQL Server 에이전트를 사용 하도록 설정 |
+| [에이전트](#agent) | SQL Server 에이전트를 사용 하도록 설정 합니다. |
 | [데이터 정렬](#collation) | Linux의 SQL Server에 대 한 새 데이터 정렬을 설정 합니다. |
 | [고객 의견](#customerfeedback) | SQL Server Microsoft에 피드백을 전송 여부를 선택 합니다. |
 | [데이터베이스 메일 프로필](#dbmail) | Linux의 SQL Server에 대 한 기본 데이터베이스 메일 프로필을 설정 합니다. |
@@ -680,7 +679,7 @@ sudo cat /var/opt/mssql/mssql.conf
 이 파일에 표시 되지 않은 모든 설정을 기본값으로 사용 하는 참고 합니다. 다음 섹션에서는 샘플을 제공 **mssql.conf** 파일입니다.
 
 
-## <a id="mssql-conf-format"></a> mssql.conf format
+## <a id="mssql-conf-format"></a> mssql.conf 형식
 
 다음 **/var/opt/mssql/mssql.conf** 파일은 각 설정에 대 한 예제를 제공 합니다. 이 형식을 사용 하 여 수동으로 변경 하는 **mssql.conf** 필요에 따라 파일입니다. 파일을 수동으로 변경한 수행 하는 경우 변경 내용을 적용 하기 전에 SQL Server를 다시 시작 해야 있습니다. 사용 하 여 **mssql.conf** 파일 Docker를 사용 하 여 Docker 있어야 [데이터를 유지](sql-server-linux-configure-docker.md)합니다. 먼저 전체를 추가 **mssql.conf** 호스트 디렉터리에 파일을 다음 컨테이너를 실행 합니다. 이러한 예제가 [의견](sql-server-linux-customer-feedback.md)합니다.
 

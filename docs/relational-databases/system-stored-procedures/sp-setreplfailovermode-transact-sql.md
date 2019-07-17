@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ae89e606633fc3555745dd56fc7703ef50685468
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a32c5eb0a7dcd18558b3d1a931d9a8c83cfeca0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63028644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104371"
 ---
 # <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
  [ **@failover_mode=** ] **'***failover_mode***'**  
  구독의 장애 조치(failover) 모드입니다. *failover_mode* 됩니다 **nvarchar(10)** 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**즉시** 또는 **동기화**|구독자에서 수행된 데이터 변경 내용을 즉시 게시자로 대량 복사합니다.|  
 |**queued**|데이터 수정에 저장 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 큐입니다.|  
@@ -64,7 +63,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_setreplfailovermode** 사용할지 트랜잭션 복제 또는 스냅숏 복제에는 구독을 사용 하거나 즉시 업데이트로 장애 조치를 사용 하 여 업데이트를 지연 하는 것에 대 한 장애 조치를 사용 하 여 즉시 업데이트를 큐에 대기 업데이트 중입니다.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 16de50e05bf139d590f90630e338fdb7cbb428e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9449c81e9f8e8de0c21d96062337e91b2f56398d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63278432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037187"
 ---
 # <a name="parent-mdx"></a>Parent(MDX)
 
@@ -32,7 +31,7 @@ Member_Expression.Parent
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **부모** 함수는 지정 된 멤버의 부모 멤버를 반환 합니다.  
   
 ## <a name="examples"></a>예  

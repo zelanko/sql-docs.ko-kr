@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085284"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,14 +65,14 @@ sp_help_proxy
 |Dts|SSIS 패키지 실행|  
 |PowerShell|PowerShell 스크립트|  
   
-`[ @name = ] 'name'` 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프록시를 나열할에 로그인 합니다. 이름은 **nvarchar(256)**, 기본값은 NULL입니다. 때 *이름을* 를 지정 하면 *subsystem_name* 도 지정 해야 합니다.  
+`[ @name = ] 'name'` 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프록시를 나열할에 로그인 합니다. 이름은 **nvarchar(256)** , 기본값은 NULL입니다. 때 *이름을* 를 지정 하면 *subsystem_name* 도 지정 해야 합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|프록시 ID입니다.|  
 |**name**|**sysname**|프록시 이름입니다.|  
@@ -84,7 +83,7 @@ sp_help_proxy
 |**credential_id**|**int**|이 프록시와 연관된 자격 증명의 식별자입니다.|  
 |**credential_identity_exists**|**int**|credential_identity가 있는지 여부입니다. { 0 = 없음, 1 = 있음 }|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  매개 변수 없이 제공 하는 경우 **sp_help_proxy** 인스턴스의 모든 프록시에 대 한 정보를 나열 합니다.  
   
  지정된 된 하위 시스템에 로그인 하는 프록시를 사용할 수를 확인 하려면 지정 *이름을* 하 고 *subsystem_name*합니다. 이러한 인수를 제공 하는 경우 **sp_help_proxy** 로그인 될 수 있습니다 하 고 액세스에 사용할 수 지정한 하위 시스템 지정 프록시를 나열 합니다.  
@@ -99,7 +98,7 @@ sp_help_proxy
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-information-for-all-proxies"></a>1. 모든 프록시에 대한 정보 나열  
+### <a name="a-listing-information-for-all-proxies"></a>A. 모든 프록시에 대한 정보 나열  
  다음 예에서는 인스턴스의 모든 프록시에 대한 정보를 나열합니다.  
   
 ```  
@@ -110,7 +109,7 @@ EXEC dbo.sp_help_proxy ;
 GO  
 ```  
   
-### <a name="b-listing-information-for-a-specific-proxy"></a>2. 특정 작업에 대한 정보 나열  
+### <a name="b-listing-information-for-a-specific-proxy"></a>2\. 특정 작업에 대한 정보 나열  
  다음 예에서는 `Catalog application proxy`라는 프록시에 대한 정보를 나열합니다.  
   
 ```  

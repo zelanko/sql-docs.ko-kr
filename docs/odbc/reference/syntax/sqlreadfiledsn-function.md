@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f32e23be700f17fee88cc6354f8652bb1333a12c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad1e3dc4901fc7251528e6040b9250469f8fef6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053660"
 ---
 # <a name="sqlreadfiledsn-function"></a>SQLReadFileDSN 함수
 **규칙**  
@@ -74,7 +73,7 @@ BOOL SQLReadFileDSN(
 ## <a name="diagnostics"></a>진단  
  때 **SQLReadFileDSN** 연결 된 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에서  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 이 함수의 컨텍스트에서 각각 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_GENERAL_ERR|일반 설치 관리자 오류|오류가 발생 했습니다에 대 한 특정 설치 관리자 오류가 없습니다.|  
 |ODBC_ERROR_INVALID_BUFF_LEN|잘못 된 버퍼 길이|합니다 *lpszString* 인수가 NULL입니다.<br /><br /> 합니다 *cbString* 인수가 0 보다 작습니다.|  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 72a292724a08917b18baedd6a3adbb8dfd00f739
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e78b5a8640918291fc68e5b4882448b94a1b9d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079520"
 ---
 # <a name="sysdatabaserecoverystatus-transact-sql"></a>sys.database_recovery_status(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47707351"
   
 -   CREATE DATABASE 권한이 있어야 합니다 **마스터** 데이터베이스입니다.    
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유한 데이터베이스 ID입니다.|  
 |**database_guid**|**uniqueidentifier**|데이터베이스의 모든 데이터베이스 파일을 함께 연결하는 데 사용됩니다. 데이터베이스를 제대로 시작하려면 모든 파일의 헤더 페이지에 이 GUID가 있어야 합니다. 현재까지는 하나의 데이터베이스에만 이 GUID가 있었습니다. 그러나 데이터베이스를 복사하고 연결하여 GUID를 중복하여 만들 수 있습니다. 아직 존재하지 않는 데이터베이스를 복원할 때 RESTORE는 항상 새 GUID를 생성합니다.<br /><br /> NULL= 데이터베이스가 오프라인이거나 데이터베이스를 시작할 수 없습니다.|  

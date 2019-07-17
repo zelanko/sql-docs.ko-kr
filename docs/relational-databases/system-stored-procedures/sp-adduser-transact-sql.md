@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 61a40eb4-573f-460c-9164-bd1bbfaf8b25
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 46b1548f1eb587aa62c0d0427661d97d97bf3cc7
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a2984479c8a1be35f8ccfa63d14b3250939f56c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117899"
 ---
 # <a name="spadduser-transact-sql"></a>sp_adduser(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_adduser [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_adduser** 사용자의 이름을 가진 스키마도 생성 됩니다.  
   
  사용자를 추가한 다음 GRANT, DENY 및 REVOKE 문을 통해 사용자의 작업을 제어하는 사용 권한을 정의합니다.  
@@ -79,21 +78,21 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-adding-a-database-user"></a>1. 데이터베이스 사용자 추가  
+### <a name="a-adding-a-database-user"></a>A. 데이터베이스 사용자 추가  
  다음 예에서는 `Vidur`라는 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 사용하여 `Recruiting` 데이터베이스 사용자를 현재 데이터베이스의 기존 `Vidur` 역할에 추가합니다.  
   
 ```  
 EXEC sp_adduser 'Vidur', 'Vidur', 'Recruiting';  
 ```  
   
-### <a name="b-adding-a-database-user-with-the-same-login-id"></a>2. 동일한 로그인 ID로 데이터베이스 사용자 추가  
+### <a name="b-adding-a-database-user-with-the-same-login-id"></a>2\. 동일한 로그인 ID로 데이터베이스 사용자 추가  
  다음 예에서는 `Arvind` 사용자를 `Arvind`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대한 현재 데이터베이스에 추가합니다. 이 사용자가 속한 기본값으로 **공용** 역할입니다.  
   
 ```  
 EXEC sp_adduser 'Arvind';  
 ```  
   
-### <a name="c-adding-a-database-user-with-a-different-name-than-its-server-level-login"></a>3. 서버 수준 로그인과는 다른 이름으로 데이터베이스 사용자 추가  
+### <a name="c-adding-a-database-user-with-a-different-name-than-its-server-level-login"></a>3\. 서버 수준 로그인과는 다른 이름으로 데이터베이스 사용자 추가  
  다음 예에서는 `BjornR`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 `Bjorn`이라는 사용자 이름의 현재 데이터베이스에 추가하고 `Bjorn` 데이터베이스 사용자를 `Production` 데이터베이스 역할에 추가합니다.  
   
 ```  

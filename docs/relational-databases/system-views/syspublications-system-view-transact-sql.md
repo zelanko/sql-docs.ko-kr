@@ -17,27 +17,26 @@ helpviewer_keywords:
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db146c450afdae024942d543ff5c9fa5d7c169e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1724f86f9bfc34e505b9ba6ecddae4104270cd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62694213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094776"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications(시스템 뷰)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **syspublications** 뷰는 게시 정보를 표시 합니다. 이 뷰는 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**description**|**nvarchar(255)**|게시에 대한 설명 항목입니다.|  
 |**name**|**sysname**|게시에 연결된 고유한 이름입니다.|  
 |**pubid**|**int**|게시에 고유한 ID를 제공하는 ID 열입니다.|  
 |**repl_freq**|**tinyint**|복제 빈도<br /><br /> **0** = 트랜잭션 기반 (트랜잭션).<br /><br /> **1** = 예약 된 테이블 새로 고침 (스냅숏).|  
 |**상태**|**tinyint**|게시 상태<br /><br /> **0** = 비활성입니다.<br /><br /> **1** = 활성입니다.|  
-|**sync_method**|**tinyint**|동기화 메서드<br /><br /> **0** = 네이티브 대량 복사 프로그램 유틸리티 (BCP).<br /><br /> **1** = Character BCP.<br /><br /> **3** = concurrent. native BCP를 사용 하지만 스냅숏 동안 테이블이 잠기지 않음을 의미 합니다.<br /><br /> **4** = Concurrent_c. character BCP를 사용 하지만 테이블 스냅숏 동안 잠겨 있지 않은 것을 의미 합니다.|  
+|**sync_method**|**tinyint**|동기화 메서드<br /><br /> **0** = 네이티브 대량 복사 프로그램 유틸리티 (BCP).<br /><br /> **1** = character BCP 합니다.<br /><br /> **3** = concurrent. native BCP를 사용 하지만 스냅숏 동안 테이블이 잠기지 않음을 의미 합니다.<br /><br /> **4** = Concurrent_c. character BCP를 사용 하지만 테이블 스냅숏 동안 잠겨 있지 않은 것을 의미 합니다.|  
 |**snapshot_jobid**|**binary(16)**|초기 스냅숏을 생성하기 위해 예약한 에이전트 작업을 식별합니다.|  
 |**independent_agent**|**bit**|해당 게시에 독립 실행형 배포 에이전트가 있는지 여부를 지정합니다.<br /><br /> **0** = 게시는 공유 배포 에이전트를 사용 하며 각 게시자 데이터베이스/구독자 데이터베이스 쌍에는 하나의 공유 에이전트가 있습니다.<br /><br /> **1** =이 게시에 대 한 독립 실행형 배포 에이전트가 있습니다.|  
 |**immediate_sync**|**bit**|동기화 파일이 생성 되거나 스냅숏 에이전트가 실행 될 때마다 다시 생성 여부를 나타내는 위치 **1** 에이전트가 실행 될 때마다 생성 됨을 의미 합니다.|  
@@ -64,8 +63,8 @@ ms.locfileid: "62694213"
 |**allow_subscription_copy**|**bit**|해당 게시를 구독하는 구독 데이터베이스를 복사하는 기능이 활성화되었는지 여부를 지정합니다. **1** 복사가 허용 됨을 의미 합니다.|  
 |**centralized_conflicts**|**bit**|게시자에 충돌 레코드를 저장하는지 여부를 지정합니다.<br /><br /> **0** = 충돌 레코드가 충돌을 일으킨 구독자 및 게시자 양쪽 모두에서 저장 됩니다.<br /><br /> **1** = 충돌 레코드가 게시자에 저장 됩니다.|  
 |**conflict_retention**|**int**|충돌 레코드 보존 기간을 일 수로 지정합니다.|  
-|**conflict_policy**|**int**|지연 업데이트 구독자 옵션을 사용할 때 수행하는 충돌 해결 정책을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = 게시자 wins 충돌 합니다.<br /><br /> **2** = 구독자 내용 적용 충돌 합니다.<br /><br /> **3** = 구독이 다시 초기화 됩니다.|  
-|**queue_type**|**int**|사용할 큐의 유형을 지정합니다. 다음 값 중 하나를 사용할 수 있습니다.<br /><br /> **1** = msmq [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐에 트랜잭션을 저장 합니다.<br /><br /> **2** =.sql [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 트랜잭션을 저장 합니다.<br /><br /> 참고: 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐가 사용 되지 않으며 더 이상 지원 되지.|  
+|**conflict_policy**|**int**|지연 업데이트 구독자 옵션을 사용할 때 수행하는 충돌 해결 정책을 지정합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **1** = 게시자 wins 충돌 합니다.<br /><br /> **2** = 구독자 내용 적용 충돌 합니다.<br /><br /> **3** = 구독이 다시 초기화 됩니다.|  
+|**queue_type**|**int**|사용할 큐의 유형을 지정합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **1** = msmq [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐에 트랜잭션을 저장 합니다.<br /><br /> **2** =.sql [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 트랜잭션을 저장 합니다.<br /><br /> 참고: 사용 하 여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐가 사용 되지 않으며 더 이상 지원 되지.|  
 |**ad_guidname**|**sysname**|게시를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory에 게시할지 여부를 지정합니다. 유효한 GUID(전역 고유 식별자)가 게시를 Active Directory에 게시하는지 여부를 지정하며 GUID는 Active Directory 게시 개체인 objectGUID에 해당합니다. NULL인 경우 게시는 Active Directory에 게시되지 않습니다.<br /><br /> 참고: Active Directory에 게시는 더 이상.|  
 |**backward_comp_level**|**int**|데이터베이스 호환성 수준으로 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**allow_initialize_from_backup**|**bit**|구독자가 초기 스냅숏이 아닌 백업으로부터 이 게시에 대한 구독을 초기화할 수 있는지 여부를 지정합니다. **1** 백업에서 구독을 초기화할 수 있음을 의미 하 고 **0** 즉 그렇게 할 수 없습니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.|  

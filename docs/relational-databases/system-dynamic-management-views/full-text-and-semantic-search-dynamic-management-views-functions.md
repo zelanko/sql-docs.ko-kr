@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 199dbd5a-29f6-4ef0-8e65-86e32c0aaa3a
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 62263adb604cc4a9f3c73dade3fc02d9132aa909
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff24122c1a551d6da1ce4ad1ddbb7771e2183c70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130765"
 ---
 # <a name="full-text-and-semantic-search-dynamic-management-views---functions"></a>전체 텍스트 및 의미 체계 검색 동적 관리 뷰-함수
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

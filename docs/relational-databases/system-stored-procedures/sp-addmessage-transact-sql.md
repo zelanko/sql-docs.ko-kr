@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63d206e6b6f32aeb12e2e04b9edc2ef1d84599b2
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 52d3db15c46af273e2f151e769a6b04be322ce5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061845"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  Windows 응용 프로그램 로그에 메시지가 기록된 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 로그 파일에도 기록됩니다.  
   
-`[ \@replace = ] 'replace'` 문자열로 지정 된 경우 *대체*, 기존의 오류 메시지는 새 메시지 텍스트와 심각도 수준으로 덮어씁니다. *바꿉니다* 됩니다 **varchar(7)** 이며 기본값은 NULL입니다. 하는 경우이 옵션을 지정 해야 *msg_id* 이미 있습니다. 영어(미국)로 작성된 모든 메시지는 다른 모든 언어의 영어 메시지 심각도 바뀝니다 *msg_id*합니다.  
+`[ \@replace = ] 'replace'` 문자열로 지정 된 경우 *대체*, 기존의 오류 메시지는 새 메시지 텍스트와 심각도 수준으로 덮어씁니다. *바꿉니다* 됩니다 **varchar(7)** 이며 기본값은 NULL입니다. 하는 경우이 옵션을 지정 해야 *msg_id* 이미 있습니다. 미국을 교체 하는 경우 모든 메시지는 다른 모든 언어의 영어 메시지 심각도 바뀝니다 *msg_id*합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -64,8 +63,8 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
- 영어 버전이 아닌 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 경우 영어(미국) 버전의 메시지가 이미 존재하고 있어야 다른 언어를 사용하여 메시지를 추가할 수 있습니다. 두 버전의 메시지에 대한 심각도는 일치해야 합니다.  
+## <a name="remarks"></a>설명  
+ 영어가 아닌 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 미국 다른 언어를 사용 하 여 메시지를 추가 하려면 먼저 영어 버전의 메시지가 이미 있어야 합니다. 두 버전의 메시지에 대한 심각도는 일치해야 합니다.  
   
  매개 변수를 포함한 메시지를 지역화하는 경우에는 원래 메시지의 매개 변수와 일치하는 매개 변수 번호를 사용하십시오. 각 매개 변수 번호 뒤에는 느낌표(!)를 삽입하십시오.  
   
@@ -80,7 +79,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 ## <a name="examples"></a>예  
   
-### <a name="a-defining-a-custom-message"></a>1. 사용자 지정 메시지 정의  
+### <a name="a-defining-a-custom-message"></a>A. 사용자 지정 메시지 정의  
  다음 예제에서는 사용자 지정 메시지를 추가 **sys.messages**합니다.  
   
 ```  
@@ -92,8 +91,8 @@ EXEC sp_addmessage 50001, 16,
 GO  
 ```  
   
-### <a name="b-adding-a-message-in-two-languages"></a>2. 두 언어로 작성된 메시지 추가  
- 다음 예에서는 영어(미국)로 된 메시지를 먼저 추가한 다음 동일한 메시지를 프랑스어로 추가합니다`.`  
+### <a name="b-adding-a-message-in-two-languages"></a>2\. 두 언어로 작성된 메시지 추가  
+ 다음 예제에서는 미국에 메시지를 먼저 추가 영어 및 프랑스어로 동일한 메시지에 추가한`.`  
   
 ```  
 USE master;  
@@ -108,8 +107,8 @@ EXEC sp_addmessage @msgnum = 60000, @severity = 16,
 GO  
 ```  
   
-### <a name="c-changing-the-order-of-parameters"></a>3. 매개 변수 순서 변경  
- 다음 예에서는 영어(미국)로 된 메시지를 먼저 추가한 다음 매개 변수 순서를 변경하여 해당 지역 언어로 된 메시지를 추가합니다.  
+### <a name="c-changing-the-order-of-parameters"></a>3\. 매개 변수 순서 변경  
+ 다음 예제에서는 미국에 메시지를 먼저 추가 영어를 사용 하 고 다음 매개 변수 순서를 변경 하는 지역화 된 메시지를 추가 합니다.  
   
 ```  
 USE master;  

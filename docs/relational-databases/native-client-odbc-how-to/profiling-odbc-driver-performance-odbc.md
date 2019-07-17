@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 0e6d7aed-28d2-419e-be6a-f60d3729bfd0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0687d63e9662b94d47341f8f371f1328ec5da0e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af0d53b7eac7302dcf492eb72cf7f731434790d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069635"
 ---
 # <a name="profiling-odbc-driver-performance-odbc"></a>ODBC 드라이버 성능 프로파일링(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "47820181"
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버에는 드라이버의 성능을 프로파일링하기 위한 두 개의 드라이버 관련 옵션이 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버 성능 통계를 파일에 기록할 수 있습니다. 이 로그 파일은 탭으로 구분된 파일이며, Microsoft Excel과 같은 탭으로 구분된 파일을 지원하는 스프레드시트에서 분석할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버에서는 성능 통계를 파일에 기록할 수 있습니다. 이 로그 파일은 탭으로 구분된 파일이며, Microsoft Excel과 같은 탭으로 구분된 파일을 지원하는 스프레드시트에서 분석할 수 있습니다.  
   
  또한 드라이버에서는 장기 실행 쿼리(지정된 시간 내에 서버로부터 응답을 받지 못한 쿼리)도 기록할 수 있습니다. 이러한 쿼리는 나중에 프로그래머와 데이터베이스 관리자가 분석할 수 있습니다.  
   

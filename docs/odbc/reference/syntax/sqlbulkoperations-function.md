@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7029d0da-b0f2-44e6-9114-50bd96f47196
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14e51f1d04012e22c198b7ed5f70d9b508933c5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 496148e51e56ebbeea239101660b37e45cfa7eba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036173"
 ---
 # <a name="sqlbulkoperations-function"></a>SQLBulkOperations 함수
 **규칙**  
@@ -62,7 +61,7 @@ SQLRETURN SQLBulkOperations(
   
  다중 행 작업의 하나 또는 더 많은 전부는 아니지만, 행에 오류가 발생 하 고에서 오류가 발생할 경우 SQL_ERROR가 반환 하는 경우 모든 해당 SQLSTATEs SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR (제외 01xxx SQLSTATEs) 반환할 수 있는, sql_success_with_info가 반환 됩니다는 단일 행 작업입니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|합니다 *작업* 인수가 SQL_FETCH_BY_BOOKMARK, 및의 공백이 아닌 문자 또는 NULL이 아닌 이진 데이터 잘림이 발생 하는 문자열 또는 이진 데이터를 SQL_C_CHAR 또는 SQL_C_BINARY 데이터 형식의 열 또는 열에 대해 반환 합니다.|  
@@ -236,7 +235,7 @@ SQLRETURN SQLBulkOperations(
   
 2.  때 **SQLBulkOperations** 실행 시 데이터 열, 함수는 SQL_NEED_DATA 반환 및 3 단계를 따라 진행 하는 경우 호출 됩니다. (실행 시 데이터 열이 없는 경우 프로세스 완료 되었습니다.)  
   
-3.  응용 프로그램 호출 **SQLParamData** 의 주소를 검색 합니다  *\*TargetValuePtr* 처리할 첫 번째 실행 시 데이터 열에 대 한 버퍼입니다. **SQLParamData** returns SQL_NEED_DATA. 응용 프로그램에서 응용 프로그램 정의 값을 검색 하는  *\*TargetValuePtr* 버퍼입니다.  
+3.  응용 프로그램 호출 **SQLParamData** 의 주소를 검색 합니다  *\*TargetValuePtr* 처리할 첫 번째 실행 시 데이터 열에 대 한 버퍼입니다. **SQLParamData** SQL_NEED_DATA를 반환 합니다. 응용 프로그램에서 응용 프로그램 정의 값을 검색 하는  *\*TargetValuePtr* 버퍼입니다.  
   
     > [!NOTE]  
     >  반환 되는 값 이지만 실행 시 데이터 매개 변수가 실행 시 데이터 열과 비슷한 **SQLParamData** 마다 다릅니다.  

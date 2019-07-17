@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 535217cb10e73db5325c29b5a7b8030dfd3011e6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: aab43b2f4f717a40268ded61c579e1ce3576d0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065388"
 ---
 # <a name="topsum-dmx"></a>TopSum(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ TopSum(<table expression>, <rank expression>, <sum>)
 ## <a name="return-type"></a>반환 형식  
  \<테이블 식 >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **TopSum** 함수는 계산된 된 값에 따라 차수의 내림차순 최상위 행을 반환 합니다.는 \<식의 순위를 지정 > 각 행에 대 한 인수는 합계는 \<식의 순위를 지정 > 값으로 지정 된 지정한 합계 이상이 \<합계 > 인수입니다. **TopSum** 지정 된 합계 값에 맞추어 가능한 가장 작은 요소 수를 반환 합니다.  
   
 ## <a name="examples"></a>예  

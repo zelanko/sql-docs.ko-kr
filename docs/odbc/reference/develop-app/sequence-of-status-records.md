@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17a88095611a5f551708f3950359063317368757
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67eac22a630305f32f141ea18861e5638445f19b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465922"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094356"
 ---
 # <a name="sequence-of-status-records"></a>상태 레코드의 시퀀스
 상태 레코드를 두 개 이상 반환 되는 경우 드라이버 관리자와 드라이버 순위 다음 규칙에 따라 합니다. 가장 높은 순위를 사용 하 여 레코드는 첫 번째 레코드입니다. 원본 레코드 (드라이버 관리자, 드라이버, 게이트웨이 및 등)의 간주 되지 않습니다 레코드 순위를 지정 합니다.  

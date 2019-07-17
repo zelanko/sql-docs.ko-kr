@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f38623c8-fdd4-4601-b1f0-97c593d31177
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b512ff83d0002ef4a7c79b48cd8829fc2dbb9ba3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5025bf5eee4b0b65342e7ce47cbbde4ae9ef6b7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106167"
 ---
 # <a name="descriptor-fields"></a>설명자 필드
 설명자 포함 *머리글* 하 고 *레코드* 완전히 열 또는 매개 변수를 설명 하는 필드.  

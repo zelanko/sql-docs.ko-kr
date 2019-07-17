@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1a03ecd9f41fe7d236f8c61f7059014a6ac07fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088215"
 ---
 # <a name="operators-mdx-syntax"></a>연산자(MDX 구문)
 
@@ -92,7 +91,7 @@ ms.locfileid: "63277598"
   
 |원본 형식|필요한 형식|변환|  
 |-------------------|-----------------|----------------|  
-|Level|Set|\<level>.members|  
+|Level|Set|\<수준 >.members|  
 |계층|멤버|\<hierarchy>.defaultmember|  
 |멤버|Tuple|(\<멤버 >)|  
 |Tuple|멤버|\<tuple>.item(0)|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 615625ca396e5f2ae094962457cc9e746730ddcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067409"
 ---
 # <a name="data-buffer-type"></a>데이터 버퍼 형식
 응용 프로그램에서 버퍼의 C 데이터 형식 지정 됩니다. 단일 변수를 사용 하 여이 경우 응용 프로그램 변수를 할당 합니다. 제네릭 메모리-,-void 형식의 포인터가 가리키는 메모리 경우가이 응용 프로그램 메모리를 특정 형식으로 캐스팅 합니다. 드라이버에는이 이와 같은 두 가지 방법으로 검색합니다.  

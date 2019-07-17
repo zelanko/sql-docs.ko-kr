@@ -4,18 +4,17 @@ titleSuffix: SQL Server
 description: Visual Studio Code 용 mssql 확장을 사용 하 여 편집 하 여 Linux에서 SQL Server에 대 한 TRANSACT-SQL 스크립트를 실행 합니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 12/18/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.openlocfilehash: fcda7a310e7a9dc77ea9464dd82dbed7260b0b39
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 207a542e07f271607e5d2266b8c32e313b1dff13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077316"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Visual Studio 코드를 사용 하 여 TRANSACT-SQL 스크립트 만들기 및 실행
 

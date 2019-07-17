@@ -25,14 +25,13 @@ helpviewer_keywords:
 ms.assetid: f0022a05-50dd-4620-961d-361b1681d375
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da2dacf6fcb34d5a5caba14ccb60cbb9eec43467
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9ed393edf79c3502bf3e054e23eb459d490ce998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075797"
 ---
 # <a name="sprefreshsqlmodule-transact-sql"></a>sp_refreshsqlmodule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -69,7 +68,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_refreshsqlmodule** 해당 정의 영향을 주는 모듈 내부 개체에 변경 될 때 실행 해야 합니다. 그렇지 않으면 모듈을 쿼리하거나 호출할 때 예기치 않은 결과가 발생할 수 있습니다. 뷰를 새로 고치려면 사용할 수 있습니다 **sp_refreshsqlmodule** 하거나 **sp_refreshview** 동일한 결과 사용 하 여 합니다.  
   
  **sp_refreshsqlmodule** 모든 권한, 확장된 속성 또는 개체와 연관 된 SET 옵션에 영향을 주지 않습니다.  
@@ -86,7 +85,7 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-refreshing-a-user-defined-function"></a>1. 사용자 정의 함수 새로 고침  
+### <a name="a-refreshing-a-user-defined-function"></a>A. 사용자 정의 함수 새로 고침  
  다음 예에서는 사용자 정의 함수를 새로 고칩니다. 이 예에서는 별칭 데이터 형식인 `mytype`과 `to_upper`을 사용하는 사용자 정의 함수 `mytype`를 만듭니다. 그런 다음 `mytype`의 이름을 `myoldtype`으로 바꾸고 다른 정의가 있는 새 `mytype`을 만듭니다. `dbo.to_upper` 함수를 새로 고치면 이전 항목 대신 새로 구현된 `mytype`이 참조됩니다.  
   
 ```  
@@ -144,7 +143,7 @@ SELECT dbo.to_upper('abcdefgh');
 GO  
 ```  
   
-### <a name="b-refreshing-a-database-level-ddl-trigger"></a>2. 데이터베이스 수준 DDL 트리거 새로 고침  
+### <a name="b-refreshing-a-database-level-ddl-trigger"></a>2\. 데이터베이스 수준 DDL 트리거 새로 고침  
  다음 예에서는 데이터베이스 수준 DDL 트리거를 새로 고칩니다.  
   
 ```  
@@ -154,7 +153,7 @@ EXEC sys.sp_refreshsqlmodule @name = 'ddlDatabaseTriggerLog' , @namespace = 'DAT
 GO  
 ```  
   
-### <a name="c-refreshing-a-server-level-ddl-trigger"></a>3. 서버 수준 DDL 트리거 새로 고침  
+### <a name="c-refreshing-a-server-level-ddl-trigger"></a>3\. 서버 수준 DDL 트리거 새로 고침  
  다음 예에서는 서버 수준 DDL 트리거를 새로 고칩니다.  
   
 ||  

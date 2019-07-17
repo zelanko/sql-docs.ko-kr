@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: be6820de-60bf-4ddd-ace7-4077893d630f
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 56e09dc849223832bbd65c09c16e1f6aeed09e17
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: d64f3e03db3eaf12755eb36d41814d4548a2ae52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079406"
 ---
 # <a name="sysdatabaseusage-azure-sql-database"></a>sys.database_usage(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "67716565"
 |열 이름|설명|  
 |-----------------|-----------------|  
 |Time|사용 이벤트가 발생한 날짜입니다.|  
-|sku|데이터베이스에 대 한 서비스 계층의 유형: **Web**, **Business**, **Basic**, **Standard**, **Premium**|  
+|sku|데이터베이스에 대 한 서비스 계층의 유형: **웹**, **비즈니스**, **Basic**를 **표준**, **Premium**|  
 |quantity|하루 동안 존재한 SKU 형식 데이터베이스의 최대 수입니다.|  
   
 ## <a name="permissions"></a>사용 권한  

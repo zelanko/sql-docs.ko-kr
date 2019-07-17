@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d83a8c2a-5aa8-4f19-947c-79a817167ee1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dfb57a6512245c9adb36a511ce48721dd901995c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0575c7ef7e380b1157640f9927e41192838c1ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313097"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091606"
 ---
 # <a name="updating-rows-in-the-rowset-with-sqlsetpos"></a>SQLSetPos를 사용하여 행 집합의 행 업데이트
 업데이트 작업과 **SQLSetPos** 데이터 원본에서 데이터를 사용 하는 응용 프로그램 버퍼에 바인딩된 각 열에 대 한 (길이/표시기 버퍼의 값 SQL_COLUMN_IGNORE 아닌) 테이블의 하나 이상의 선택한 행을 업데이트 합니다. 바인딩되지 않은 열을 업데이트 되지 않습니다.  

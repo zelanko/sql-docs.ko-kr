@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0e545cb4b41f1a0d60e471c15753a82079978ee5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c52c2641d21c20c91ec7548cafc969e506801b08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036996"
 ---
 # <a name="settoarray-mdx"></a>SetToArray(MDX)
 
@@ -38,7 +37,7 @@ SetToArray(Set_Expression1 [ ,Set_Expression2,...n ][ ,Numeric_Expression ] )
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **SetToArray** 함수 집합 하나 이상의 사용자 정의 함수에서 사용할 배열로 변환 합니다. 결과 배열의 차원 수는 지정된 집합의 수와 같습니다.  
   
  숫자 식(옵션)은 배열 셀에 값을 제공할 수 있습니다. 숫자 식이 지정되지 않은 경우 현재 컨텍스트에서 집합의 크로스 조인이 계산됩니다.  

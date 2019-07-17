@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: dd473cc6-f051-4aa0-ab14-3dd1b37fe99e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 909f9b3e7c8087add8eb66ca2f5c15253026304c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fb016ac7597617b119834e20ffd9e12bd648dc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076861"
 ---
 # <a name="default-data-source"></a>기본 데이터 원본
 드라이버는 기본 데이터 원본 특정 응용 프로그램 않습니다 하지 명시적으로 지정 하는 경우 하나에서 데이터 원본을 선택할 수 있습니다.  

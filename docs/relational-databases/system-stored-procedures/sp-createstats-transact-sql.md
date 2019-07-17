@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8204f6f2-5704-40a7-8d51-43fc832eeb54
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a32df85b1a2b7362a22c27d05f68c07cf32a3200
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0bb7d109323f4eb4a33181ab45b4b17d15faf54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108610"
 ---
 # <a name="spcreatestats-transact-sql"></a>sp_createstats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_createstats
 ## <a name="result-sets"></a>결과 집합  
  새로운 각 통계 개체는 해당 통계가 만들어진 열과 동일한 이름을 갖습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_createstats 만들거나 기존 통계 개체의 첫 번째 열이 있는 열에 대 한 통계를 업데이트 하지 않습니다.  인덱스, AUTO_CREATE_STATISTICS 옵션을 사용 하 여 생성 하는 단일 열 통계를 사용 하 여 열 및 CREATE STATISTICS 문을 통해 만들어진 통계의 첫 번째 열에 대해 만들어진 통계의 첫 번째 열 포함 됩니다. sp_createstats 통계를 만들지 않습니다 비활성화 된 인덱스의 첫 번째 열에 해당 열이 활성화 된 다른 인덱스에 사용 되지 않은 경우. sp_createstats는 비활성화 된 클러스터형된 인덱스가 있는 테이블에서 통계를 만들지 않습니다.  
   
  테이블에 열이 하나인 경우 sp_createstats는 스파스 열에 대한 통계를 만들지 않습니다. 열 집합 및 스파스 열에 대 한 자세한 내용은 참조 하세요. [열 집합 사용](../../relational-databases/tables/use-column-sets.md) 하 고 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)합니다.  
@@ -73,7 +72,7 @@ sp_createstats
   
 ## <a name="examples"></a>예  
   
-### <a name="a-create-single-column-statistics-on-all-eligible-columns"></a>1\. 적합한 모든 열에 대한 단일 열 통계 만들기  
+### <a name="a-create-single-column-statistics-on-all-eligible-columns"></a>A. 적합한 모든 열에 대한 단일 열 통계 만들기  
  다음 예에서는 현재 데이터베이스에 있는 적합한 모든 열에 대한 단일 열 통계를 만듭니다.  
   
 ```  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d75c374a7d9d57483dd56e34b51fcb6d89e1b52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05cf381ccbb8c0747db88259acfb4ba218d3e0ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135009"
 ---
 # <a name="level-1-interface-conformance"></a>수준 1 인터페이스 적합성
 수준 1 인터페이스 적합성 수준에는 핵심 인터페이스 적합성 수준 기능 및 OLTP 관계형 DBMS는 일반적으로 사용할 수 있는 트랜잭션과 같은 추가 기능을 포함 합니다. 수준 1 인터페이스와 호환 되는 드라이버는 핵심 인터페이스 적합성 수준에서 기능 외에 다음을 수행 하 여 응용 프로그램을 사용 수 있습니다.  

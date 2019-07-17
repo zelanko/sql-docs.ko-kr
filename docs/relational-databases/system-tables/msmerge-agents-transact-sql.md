@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1053b358a5854febe1147ceb5ec0a374468c5b69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 980ecd00a07e1119a64552a3f4c903434fd09029
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106440"
 ---
 # <a name="msmergeagents-transact-sql"></a>MSmerge_agents(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52785705"
 |**name**|**nvarchar(100)**|병합 에이전트의 이름입니다.|  
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  
-|**게시**|**sysname**|게시의 이름입니다.|  
+|**publication**|**sysname**|게시의 이름입니다.|  
 |**subscriber_id**|**smallint**|구독자의 ID입니다.|  
 |**subscriber_db**|**sysname**|구독 데이터베이스의 이름입니다.|  
 |**local_job**|**bit**|로컬 배포자에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업이 있는지 여부를 나타냅니다.|  

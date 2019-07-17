@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090849"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,9 +49,9 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @property = ] 'property'` 변경할 속성의 이름이입니다. *속성* 됩니다 **sysname**, 테이블의 값 중 하나일 수 있습니다.  
   
-`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값이입니다. *값*됩니다 **nvarchar(255)**, 테이블의 값 중 하나일 수 있습니다.  
+`[ @value = ] 'value'` 지정된 된 속성에 대 한 새 값이입니다. *값*됩니다 **nvarchar(255)** , 테이블의 값 중 하나일 수 있습니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||기본 위치가 아니거나 기본 위치에 추가된 위치일 경우 스냅숏 폴더가 저장되는 위치입니다.|  
 |**description**||해당 병합 끌어오기 구독에 관한 설명입니다.|  
@@ -82,7 +81,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**1**|게시자에 연결할 때 Windows 인증을 사용합니다.|  
 ||**2**|동기화 트리거는 정적을 사용 **sysservers** 원격 프로시저 호출 (RPC), 및 게시자 작업을 수행 하는 항목에 정의 되어 있어야 합니다 **sysservers** 테이블에서 원격 서버 또는 연결 된 서버입니다.|  
 |**sync_type**|**automatic**|게시된 테이블의 스키마 및 초기 데이터가 구독자에게 먼저 전송됩니다.|  
-||**없음**|구독자에 게시된 테이블에 대한 스키마 및 초기 데이터가 이미 있습니다. 시스템 테이블과 데이터는 항상 전송됩니다.|  
+||**none**|구독자에 게시된 테이블에 대한 스키마 및 초기 데이터가 이미 있습니다. 시스템 테이블과 데이터는 항상 전송됩니다.|  
 |**use_ftp**|**true**|스냅숏을 검색하는 일반적인 프로토콜 대신 FTP를 사용합니다.|  
 ||**false**|스냅숏을 검색하는 일반적인 프로토콜을 사용합니다.|  
 |**use_web_sync**|**true**|HTTP를 통해 구독을 동기화할 수 있습니다.|  
@@ -95,7 +94,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changemergepullsubscription** 병합 복제에 사용 됩니다.  
   
  현재 서버 및 현재 데이터베이스는 각각 구독자 및 구독자 데이터베이스로 간주됩니다.  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 780cffa17f6ee1af70d942545632c98c9d6dc1e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c934c2fe8357cb4d37484984998edfcb7219c649
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122660"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact SQL)
 
@@ -33,7 +32,7 @@ ms.locfileid: "63004378"
 **sys.index_resumable_operations** 모니터링 하 고 다시 시작 가능한 인덱스 다시 작성에 대 한 현재 실행 상태를 확인 하는 시스템 뷰입니다.  
 **적용 대상**: SQL Server 2017 및 Azure SQL Database
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 인덱스 (null 허용 안 함) 속한 개체의 ID입니다.|  
 |**index_id**|**int**|인덱스의 ID입니다 (null 허용 안 함)입니다. **index_id** 는 개체 내 에서만 고유 합니다.|

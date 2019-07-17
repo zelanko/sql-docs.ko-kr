@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54c572acac645146e3db18195a0dbe5b794effdc
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+ms.openlocfilehash: 7cc6b6b42f7e9fa743724a414aa5b53435d7b0ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086830"
 ---
 # <a name="sysdmexternalscriptrequests"></a>sys.dm_external_script_requests
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "50743191"
 >  
 > 이 동적 관리 뷰 (DMV)는 설치 하 고 외부 스크립트 실행을 지 원하는 기능을 사용 하도록 설정 하는 경우에 사용할 수 있습니다. 자세한 내용은 [SQL Server 2016에서 R Services](../../advanced-analytics/r/sql-server-r-services.md) 하 고 [Machine Learning 서비스 (R, Python) SQL Server 2017의](../../advanced-analytics/what-is-sql-server-machine-learning.md)합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |external_script_request_id|**고유 식별자**|외부 스크립트 요청을 전송한 프로세스 ID입니다. 받은 프로세스 ID에 해당 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]|  
 |language|**nvarchar**|지원되는 스크립트 언어를 나타내는 키워드입니다. |  
@@ -49,7 +48,7 @@ ms.locfileid: "50743191"
 >   
 >  외부 스크립트를 실행하는 사용자에게는 추가 권한 EXECUTE ANY EXTERNAL SCRIPT가 있어야 합니다. 하지만 이 DMV는 이 권한이 없는 관리자가 사용할 수 있습니다. 
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 
 이 뷰는 스크립트 언어 식별자를 사용하여 필터링할 수 있습니다.
 

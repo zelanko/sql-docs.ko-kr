@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a0a3ac1096ff14577ba72157118dcef4e1b03e70
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215942"
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,10 +47,10 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @publication=] '*게시*'  
  충돌 감지를 구성할 게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
- [ @action=] '*동작*'  
- 이 게시에 대해 충돌 검색을 사용할지 여부를 지정합니다. *동작* 됩니다 **nvarchar(5)**, 이며 다음 값 중 하나일 수 있습니다.  
+ [ @action= ] '*action*'  
+ 이 게시에 대해 충돌 검색을 사용할지 여부를 지정합니다. *동작* 됩니다 **nvarchar(5)** , 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**enable**|게시에 충돌 감지를 사용합니다.|  
 |**disable**|게시에 충돌 감지를 사용하지 않습니다.|  
@@ -78,7 +77,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_configure_peerconflictdetection은 피어 투 피어 트랜잭션 복제에 사용됩니다. 충돌 검색을 사용 하려면 모든 노드에서 실행 해야 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 또는 모든 노드에 대 한 이후 버전 및 검색을 설정 해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

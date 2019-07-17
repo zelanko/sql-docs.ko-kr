@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f30f026c-7e8d-4ef2-a2ee-877ce19dd6a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dbc6e6fe3c45a6395620e017decef285ae9dd51a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49461b354c466d6d681f4c35e332f02f04c3e2a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62672521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106246"
 ---
 # <a name="asynchronous-execution"></a>비동기 실행
 ODBC 문 및 연결 작업에 대 한 비동기 작업을 지원합니다. 비동기 작업이 완료 되 면 확인 하려면 두 가지가 있습니다.  

@@ -1,5 +1,5 @@
 ---
-title: cdc.lsn_time_mapping (Transact-SQL) | Microsoft Docs
+title: cdc.lsn_time_mapping (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1cb7aedc-48a4-486e-9b91-d30c4bd4084e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3118a814d18013a4360dd9afdcd1e09dcc483545
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e89e67b49498320e4500b99332fc5584d5f38d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066668"
 ---
 # <a name="cdclsntimemapping-transact-sql"></a>cdc.lsn_time_mapping(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62471122"
   
  시스템 테이블은 직접 쿼리하지 않는 것이 좋습니다. 대신 실행 합니다 [sys.fn_cdc_map_lsn_to_time &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md) 및 [sys.fn_cdc_map_time_to_lsn &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/sys-fn-cdc-map-time-to-lsn-transact-sql.md) 시스템 함수입니다.  
     
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**start_lsn**|**binary(10)**|커밋된 트랜잭션의 LSN입니다.|  
 |**tran_begin_time**|**datetime**|LSN과 연관된 트랜잭션이 시작된 시간입니다.|  

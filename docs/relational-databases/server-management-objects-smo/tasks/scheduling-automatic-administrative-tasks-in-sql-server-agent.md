@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4ab72d89bba748b272322783fb2f14afb8e08bf4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 64de081adef73e1480fd0bc4ca6b9bf3aacded7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030179"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server 에이전트에서 자동 관리 태스크 예약
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -167,7 +166,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-visual-c"></a>Visual C#에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  경고 알림을 위해 운영자가 필요합니다. 합니다 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 있으므로 대괄호로 묶어야 **연산자** 가 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드입니다.  
   
@@ -200,7 +199,7 @@ $jbsch.Create();
 ## <a name="creating-an-alert-in-powershell"></a>PowerShell에서 경고 만들기  
  이 코드 예제는 성능 조건에 따라 트리거되는 경고를 만듭니다. 다음과 같은 특정 형식으로 조건을 제공해야 합니다.  
   
- **ObjectName | CounterName | 인스턴스 | ComparisionOp | CompValue**  
+ **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
  경고 알림을 위해 운영자가 필요합니다. 합니다 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 있으므로 대괄호로 묶어야 **연산자** 가 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드입니다.  
   

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119327"
 ---
 # <a name="backupset-transact-sql"></a>backupset(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "52402858"
  이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|백업 세트를 식별하는 고유한 백업 세트 ID입니다. ID, 즉 기본 키입니다.|  
 |**backup_set_uuid**|**uniqueidentifier**|백업 세트를 식별하는 고유한 백업 세트 ID입니다.|  
@@ -100,9 +99,9 @@ ms.locfileid: "52402858"
 |**compressed_backup_size**|**Numeric(20,0)**|디스크에 저장된 백업의 총 바이트 수입니다.<br /><br /> 압축 비율을 계산 하려면 **backup_size** 하 고 **backup_size**합니다.<br /><br /> 중에 **msdb** 업그레이드,이 값을 NULL로 설정 됩니다. 백업이 압축되지 않았음을 나타냅니다.|  
 |**key_algorithm**|**nvarchar(32)**|백업을 암호화하는 데 사용되는 암호화 알고리즘입니다. NO_Encryption 값은 백업이 암호화되지 않았음을 나타냅니다.|  
 |**encryptor_thumbprint**|**varbinary(20)**|데이터베이스에서 인증서나 비대칭 키를 찾는 데 사용할 수 있는 암호기의 지문입니다. 백업이 암호화되지 않은 경우 이 값은 NULL입니다.|  
-|**encryptor_type**|**nvarchar(32)**|사용되는 암호기의 유형으로, 인증서 또는 비대칭 키를 반환합니다. . 백업이 암호화되지 않은 경우 이 값은 NULL입니다.|  
+|**encryptor_type**|**nvarchar(32)**|사용되는 암호기 유형으로 인증서 또는 비대칭 키를 반환합니다. 을 선택합니다. 백업이 암호화되지 않은 경우 이 값은 NULL입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY 채웁니다의 열에는 **backupmediaset** 미디어 세트 헤더의 적절 한 값이 있는 테이블입니다.  
   
  이 테이블에 다른 백업 및 기록 테이블의 행 수를 줄이려면 다음을 실행 합니다 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 저장 프로시저입니다.  

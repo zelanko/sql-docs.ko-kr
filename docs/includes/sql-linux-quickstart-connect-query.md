@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215634"
+---
 ## <a name="connect-locally"></a>로컬로 연결
 
 다음 단계에서는 **sqlcmd**를 사용하여 새 SQL Server 인스턴스에 로컬로 연결합니다.
@@ -44,7 +52,7 @@
    ```
 
 > [!TIP]
-> Transact-SQL 문 및 쿼리를 작성하는 방법에 대한 자세한 내용은 [자습서: TRANSACT-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)을 참조하세요.
+> TRANSACT-SQL 문 및 쿼리를 작성 하는 방법에 대 한 자세한 내용은를 참조 하세요. [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)을 참조하세요.
 
 ### <a name="insert-data"></a>데이터 삽입
 
@@ -109,8 +117,9 @@ SQL Server on Linux를 설치한 후 프로덕션 시나리오에 대 한 성능
 |||
 |---|---|
 | [Azure Data Studio](../azure-data-studio/index.md) | 크로스 플랫폼 GUI 데이터베이스 관리 유틸리티입니다. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | TRANSACT-SQL 명령을 실행 하기 위한 플랫폼 간 명령줄 인터페이스입니다. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Mssql 확장을 사용 하 여 TRANSACT-SQL 문을 실행 하는 크로스 플랫폼 GUI 코드 편집기입니다. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | 플랫폼 간 자동화 및 구성 도구 cmdlet를 기반으로 합니다. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | TRANSACT-SQL 명령을 실행 하기 위한 플랫폼 간 명령줄 인터페이스입니다. |
 
 ## <a name="connecting-from-windows"></a>Windows에서 연결
 
@@ -136,7 +145,7 @@ Windows에서 실행하지만 Linux의 SQL Server에 연결하는 다른 도구�
 | [오프라인 설치](../linux/sql-server-linux-setup.md#offline) | 오프라인 설치에 대한 패키지를 수동으로 다운로드하는 방법을 알아봅니다. |
 
 > [!TIP]
-> 자주 묻는 질문에 답변에 대 한 참조를 [의 SQL Server Linux FAQ](../linux/sql-server-linux-faq.md)합니다.
+> 자주 묻는 질문에 대한 답변은, [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

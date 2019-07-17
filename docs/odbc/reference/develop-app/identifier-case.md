@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee8a31aa-389d-4dd1-bfa9-547f6b50bc70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6445cffd5faa8b825c81ec729d7b28c90e14a7b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70728908f081ab89e08cad1265f04394f29b66ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138970"
 ---
 # <a name="identifier-case"></a>식별자 사례
 SQL 문 및 카탈로그 함수 인수 식별자와 따옴표 붙은 식별자 일 수 있습니다 대/소문자 구분 또는 그렇지 않은 응용 프로그램 호출 하 여 확인할 수 있는 **SQLGetInfo** SQL_QUOTED_ SQL_IDENTIFIER_CASE와 IDENTIFIER_CASE 옵션입니다.  

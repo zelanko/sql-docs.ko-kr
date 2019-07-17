@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c71967bd72f7f13a725d47517cb9e66eee7da87f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e625e01b9bf4771f18dd8e9807ab09100ca580c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107654"
 ---
 # <a name="binding-parameter-markers"></a>바인딩 매개 변수 표식
 응용 프로그램 매개 변수를 호출 하 여 바인딩합니다 **SQLBindParameter**합니다. **SQLBindParameter** 한 번에 하나의 매개 변수를 바인딩합니다. 사용 하 여 응용 프로그램이 다음을 지정합니다.  

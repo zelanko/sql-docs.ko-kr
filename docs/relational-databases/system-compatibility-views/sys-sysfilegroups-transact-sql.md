@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e567fa07-31cd-43cc-b8c7-ba6108baca80
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8c644e52b20347ac661806d9e33cad9530e9512f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5388533ed665548eaaac3c25976271750d1348c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649441"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053477"
 ---
 # <a name="syssysfilegroups-transact-sql"></a>sys.sysfilegroups(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47649441"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**groupid**|**smallint**|각 데이터베이스에 고유한 그룹 ID입니다.|  
 |**allocpolicy**|**smallint**|예약됨|  

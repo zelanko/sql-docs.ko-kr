@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45001fc9-2dbd-463c-af1d-aa8982d8c813
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a6786b8f26cd9040492bb03fff8ed18cd14be5ff
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f9cb198b8083a525c6416af17df774ecfe605bd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119384"
 ---
 # <a name="spvalidatereplicahostsaspublishers-transact-sql"></a>sp_validate_replica_hosts_as_publishers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ sp_validate_replica_hosts_as_publishers
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
- 게시자와 게시 데이터베이스에 대 한 항목이 없는 경우 **sp_validate_redirected_publisher** 출력 매개 변수에 대해 null을 반환 합니다 *@redirected_publisher*합니다. 그렇지 않고 게시자 및 게시 데이터베이스에 대한 항목이 있는 경우에는 성공 및 실패 모두에 대해 연결된 리디렉션된 게시자가 반환됩니다.  
+## <a name="remarks"></a>설명  
+ 게시자와 게시 데이터베이스에 대 한 항목이 없는 경우 **sp_validate_redirected_publisher** 출력 매개 변수에 대해 null을 반환 합니다 *@redirected_publisher* 합니다. 그렇지 않고 게시자 및 게시 데이터베이스에 대한 항목이 있는 경우에는 성공 및 실패 모두에 대해 연결된 리디렉션된 게시자가 반환됩니다.  
   
  유효성 검사에 성공 하면 **sp_validate_redirected_publisher** 성공 표시를 반환 합니다.  
   
@@ -65,7 +64,7 @@ sp_validate_replica_hosts_as_publishers
 >   
 >  메시지 21899, 수준 11, 상태 1, 프로시저 **sp_hadr_verify_subscribers_at_publisher**, 줄 109  
 >   
->  '976' 오류로 인해 리디렉션된 게시자 'MyReplicaHostName'에서 원래 게시자 'MyOriginalPublisher'의 구독자에 대한 sysserver 항목이 있는지 확인하기 위한 쿼리에 실패했습니다(오류 메시지 '오류 976, 수준 14, 상태 1, 메시지: 대상 데이터베이스 'MyPublishedDB'이(가) 가용성 그룹에 참여 중이며 현재 쿼리로 액세스할 수 없습니다. 데이터 이동이 일시 중지되었거나 가용성 복제본이 읽기 액세스로 설정되지 않았습니다. 이 데이터베이스 및 가용성 그룹 내 다른 데이터베이스에 읽기 전용 액세스를 허용하려면 그룹 내 하나 이상의 보조 가용성 복제본에 읽기 액세스를 설정하세요.  자세한 내용은 **온라인 설명서의** ALTER AVAILABILITY GROUP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문을 참조하세요.'.  
+>  원래 게시자 'MyOriginalPublisher'의 구독자에 대해 sysserver 항목이 있는지 확인하기 위한 리디렉션된 게시자 'MyReplicaHostName'의 쿼리가 실패하고 '976' 오류가 발생했습니다. 오류 메시지는 다음과 같습니다. '오류 976, 수준 14, 상태 1, 메시지: 대상 데이터베이스 'MyPublishedDB'가 가용성 그룹에 참여 중이며, 쿼리가 현재 이 대상 데이터베이스에 액세스할 수 없습니다. 데이터 이동이 일시 중지되었거나 가용성 복제본이 읽기 액세스로 설정되지 않았습니다. 이 데이터베이스 및 가용성 그룹 내 다른 데이터베이스에 읽기 전용 액세스를 허용하려면 그룹 내 하나 이상의 보조 가용성 복제본에 읽기 액세스를 설정하세요.  자세한 내용은 **온라인 설명서의** ALTER AVAILABILITY GROUP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문을 참조하세요.'.  
 >   
 >  복제본 호스트 'MyReplicaHostName'에 대해 하나 이상의 게시자 유효성 검사 오류가 발생했습니다.  
   

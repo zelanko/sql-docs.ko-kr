@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 143fb6409e430b8fcbda7c073b8614cd0ecfcbe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fd8aa240a72dacc67e7cd09cb058192cddee282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088385"
 ---
 # <a name="name-mdx"></a>Name(MDX)
 
@@ -51,7 +50,7 @@ Member_Expression.Name
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **이름을** 고유 이름이 아니라 개체의 이름을 반환 합니다.  
   
 ## <a name="examples"></a>예  

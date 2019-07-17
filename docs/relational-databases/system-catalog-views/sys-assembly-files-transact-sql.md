@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 1a384a2c-5556-4d12-a2ba-4da781363143
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0279d6c2850dff07b365e7543f387f6cf6e9f328
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7f4f6b017b1251b873f0e45ab7688d9fd2c6bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62516085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001156"
 ---
 # <a name="sysassemblyfiles-transact-sql"></a>sys.assembly_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   어셈블리를 구성하는 각 파일당 한 개의 행을 포함합니다.  
     
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|이 파일이 속한 어셈블리의 ID입니다.|  
 |**name**|**nvarchar(260)**|어셈블리 파일의 이름입니다.|  

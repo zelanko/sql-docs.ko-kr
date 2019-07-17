@@ -15,19 +15,18 @@ helpviewer_keywords:
 ms.assetid: 4ca7f7eb-6b3f-4c73-ac63-88afa8570b61
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cddbf8cdfaf1c9793479f2d9cbb1877b696e377d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 68b2dcc56e52ca35359e8af5f4c829a0be1ed6f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126727"
 ---
 # <a name="disconnecting-from-an-instance-of-sql-server"></a>SQL Server 인스턴스에서 연결 끊기
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  수동으로 닫고 연결을 끊을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO) 개체가 필요 하지 않습니다. 필요에 따라 연결이 열리고 닫힙니다.  
+  수동으로 SMO( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects) 개체를 닫고 연결을 끊을 필요는 없습니다. 필요에 따라 연결이 열리고 닫힙니다.  
   
 ## <a name="connection-pooling"></a>연결 풀링  
  경우는 [Connect](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.connect) 메서드가 호출 되 면 연결이 자동으로 해제 되지 않습니다. 합니다 [연결 끊기](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionmanager.disconnect) 연결 풀에 대 한 연결을 해제 하려면 메서드를 명시적으로 호출 해야 합니다. 풀링되지 않은 연결을 요청할 수도 있습니다. 설정 하 여이 작업을 수행 합니다 [NonPooledConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.connectionsettings.nonpooledconnection) 의 속성을 <xref:Microsoft.SqlServer.Management.Smo.Server.ConnectionContext%2A> 참조 하는 속성을 [ServerConnection](https://msdn.microsoft.com/library/microsoft.sqlserver.management.common.serverconnection.aspx) 개체입니다.  

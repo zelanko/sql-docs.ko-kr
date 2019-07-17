@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e36ad44360f34a7af383eaeaacb703607832cbdd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14e3534671cc36d8c2cac46f627d158056f985e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079249"
 ---
 # <a name="sysendpointwebmethods-transact-sql"></a>sys.endpoint_webmethods(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ ms.locfileid: "47689351"
   
  SOAP 기반 HTTP 엔드포인트에서 정의된 각 SOAP 메서드에 대한 행을 포함합니다. Endpoint_id 및 네임 스페이스 열 조합에는 고유 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|웹 메서드가 정의된 엔드포인트의 ID입니다.|  
-|네임스페이스|**nvarchar(384)**|웹 메서드의 네임스페이스입니다.|  
+|namespace|**nvarchar(384)**|웹 메서드의 네임스페이스입니다.|  
 |method_alias|**nvarchar(64)**|메서드의 별칭입니다.<br /><br /> 참고: [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자는 WSDL 메서드 이름에서 유효 하지 않은 문자를 허용 합니다.<br /><br /> 별칭은 엔드포인트의 WSDL 설명에 표시된 이름을 웹 메서드를 호출할 때 호출되는 실제 기본 [!INCLUDE[tsql](../../includes/tsql-md.md)] 실행 개체에 매핑하는 데 사용합니다.|  
 |object_name|**nvarchar(776)**|NAME = 옵션에 지정된 대로 웹 메서드가 리디렉션되는 개체 이름입니다. 이름 부분에 마침표 (.), 구분 되 고 대괄호를 사용 하 여 구분 된 `[``]`합니다.<br /><br /> 개체 이름은 WSDL 옵션에 지정된 대로 세 부분으로 구성되어야 합니다.|  
 |result_schema|**tinyint**|응답과 함께 다시 전송할 XSD를 결정하는 옵션입니다(있는 경우).<br /><br /> 0 = 없음<br /><br /> 1 = 표준<br /><br /> 2 = 기본값|  

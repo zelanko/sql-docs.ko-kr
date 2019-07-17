@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 41c84c97027c8bfae82d3ac457c454f6a4d497e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91a7278230a0e7201e78354a38af58f417ac26ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724033"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108161"
 ---
 # <a name="spdbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,15 +49,15 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**DbFixedRole**|**sysname**|고정 데이터베이스 역할의 이름입니다.|  
 |**사용 권한**|**nvarchar(70)**|연관 된 사용 권한을 **DbFixedRole**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  고정된 데이터베이스 역할의 목록을 표시할 실행 **sp_helpdbfixedrole**합니다. 다음 표에서는 고정 데이터베이스 역할을 보여 줍니다.  
   
-|고정 데이터베이스 역할|Description|  
+|고정 데이터베이스 역할|설명|  
 |-------------------------|-----------------|  
 |**db_owner**|데이터베이스 소유자입니다.|  
 |**db_accessadmin**|데이터베이스 액세스 관리자입니다.|  

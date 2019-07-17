@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: eb4cb410-3d00-4251-8c5e-a06f36c4dac7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db2871324f92ef6d84a8bf8313db105489100a96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a3156c3f71eb4b3f7b8319da5d5fec7514f08b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087963"
 ---
 # <a name="varchar-column-size-odbc-driver-for-oracle"></a>VARCHAR 열 크기(Oracle용 ODBC 드라이버)
 > [!IMPORTANT]  

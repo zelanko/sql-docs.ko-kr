@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4ed017d1b3571405127177bdb45857be7ccbf1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090668"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities(Transact-SQL)
 
@@ -78,7 +77,7 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |referencing_minor_id|**int**|참조 엔터티가 열인 경우 열 ID이며 그렇지 않은 경우 0입니다. Null을 허용하지 않습니다.|  
 |referenced_server_name|**sysname**|참조된 엔터티의 서버 이름입니다.<br /><br /> 이 열은 네 부분으로 된 올바른 이름을 지정하여 생성되는 서버 간 종속성에 대해 채워집니다. 다중 부분 이름에 대 한 정보를 참조 하세요 [TRANSACT-SQL 구문 표기 규칙 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)합니다.<br /><br /> 네 부분으로 된 이름 지정 없이 엔터티가 참조된 비스키마 바운드 종속성의 경우 NULL입니다.<br /><br /> 동일한 데이터베이스에 있어야 하며 따라서만 정의 될 수는 두 부분으로 구성을 사용 하 여 스키마 바운드 엔터티에 대 한 NULL (*schema.object*) 이름입니다.|  
@@ -115,29 +114,29 @@ sys.dm_sql_referenced_entities (
   
  열 종속성을 확인할 수 없으면 오류 2020을 반환합니다. 이 오류가 발생해도 쿼리는 개체 수준 종속성을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수는 데이터베이스 컨텍스트에서 실행되어 서버 수준 DDL 트리거를 참조하는 엔터티를 반환할 수 있습니다.  
   
  다음 표에서는 종속성 정보가 생성 및 유지되는 엔터티 유형을 보여 줍니다. 종속성 정보는 규칙, 기본값, 임시 테이블, 임시 저장 프로시저 또는 시스템 개체에 대해서는 생성 및 유지되지 않습니다.  
   
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
-|Table|예*|사용자 계정 컨트롤|  
-|보기|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|CLR 저장 프로시저|아니요|사용자 계정 컨트롤|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|CLR 사용자 정의 함수|아니요|사용자 계정 컨트롤|  
+|Table|예*|예|  
+|보기|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
+|CLR 저장 프로시저|아니요|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
+|CLR 사용자 정의 함수|아니요|예|  
 |CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|사용자 계정 컨트롤|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|사용자 계정 컨트롤|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|사용자 계정 컨트롤|아니요|  
-|확장 저장 프로시저|아니요|사용자 계정 컨트롤|  
-|큐|아니요|사용자 계정 컨트롤|  
-|동의어|아니요|사용자 계정 컨트롤|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니요|사용자 계정 컨트롤|  
-|XML 스키마 컬렉션|아니요|사용자 계정 컨트롤|  
-|파티션 함수|아니요|사용자 계정 컨트롤|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
+|확장 저장 프로시저|아니요|예|  
+|큐|아니요|예|  
+|동의어|아니요|예|  
+|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
+|XML 스키마 컬렉션|아니요|예|  
+|파티션 함수|아니요|예|  
 | &nbsp; | &nbsp; | &nbsp; |
 
  \* 테이블을 참조 하는 경우에 참조 엔터티로 추적을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
@@ -149,7 +148,7 @@ sys.dm_sql_referenced_entities (
   
 ## <a name="examples"></a>예  
   
-### <a name="a-return-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>1\. 데이터베이스 수준 DDL 트리거에 의해 참조 되는 엔터티 반환  
+### <a name="a-return-entities-that-are-referenced-by-a-database-level-ddl-trigger"></a>A. 데이터베이스 수준 DDL 트리거에 의해 참조 되는 엔터티 반환  
  다음 예에서는 데이터베이스 수준 DDL 트리거 `ddlDatabaseTriggerLog`에 의해 참조되는 엔터티(테이블 및 열)를 반환합니다.  
   
 ```sql  

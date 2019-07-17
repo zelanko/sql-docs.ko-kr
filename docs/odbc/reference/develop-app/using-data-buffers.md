@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edddcb07702a33e6c2ce5f11feaf1716fc59573b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b3128e0b8be8ec5bfaa2c4f0e7e64ce866b6295
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079580"
 ---
 # <a name="using-data-buffers"></a>데이터 버퍼 사용
 데이터 버퍼는 세 가지 정보로 설명 됩니다: 해당 유형, 주소 및 바이트 길이입니다. 이 정보 중 필요한 함수를 이미 알고 있지 않습니다 때마다 응용 프로그램 전달 된 인수가 있습니다.  

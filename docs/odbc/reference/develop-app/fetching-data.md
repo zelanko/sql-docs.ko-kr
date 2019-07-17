@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 04a1efc1-0a46-42f9-8c4e-9f063740dd8a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a548c521b7baa283a9cdf1572fbe8e42e1e6cf45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea322346b955fc8e252dc14b78b055d491d14f69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069851"
 ---
 # <a name="fetching-data"></a>데이터 페치
 결과 집합에서 행을 검색 하 고 응용 프로그램에 반환 하는 프로세스 라고 *페치*합니다. 이 섹션에서는 데이터를 인출 하는 방법을 설명 합니다.  

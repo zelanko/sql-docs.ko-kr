@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: be7d8a59-3c00-4f1b-b4b0-3dcd5572e002
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f2065fbb7c84adbfc521e5622e8826bedebf5a11
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c226b3c5daef98c9a34c7ac25934a94abc8baabc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132996"
 ---
 # <a name="sysservertriggerevents-transact-sql"></a>sys.server_trigger_events(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   서버 수준(동기) 트리거가 시작되는 이벤트마다 한 행이 포함됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**상속 된 열**||모든 열을 상속 [sys.server_events](../../relational-databases/system-catalog-views/sys-server-events-transact-sql.md)합니다.|  
 |**is_first**|**bit**|트리거가 해당 이벤트에 대해 처음 실행되도록 표시됩니다.|  

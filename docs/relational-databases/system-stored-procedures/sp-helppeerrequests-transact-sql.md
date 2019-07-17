@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a51015d8c1e6e6df7f23f32fc7febf7fe9e429f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5b9e2a370c9acc9c22dac7e5e60ceb10e08e46ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137621"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="arguments"></a>인수  
 `[ @publication = ] 'publication'` 상태 요청이 전송 된 피어 투 피어 토폴로지에서 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @description = ] 'description'` 개별 상태 요청을 호출할 때 제공 되는 정보를 정의 사용자를 기반으로 하는 반환 된 응답을 필터링 하는 데 사용할 수 있는 값 [sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)합니다. *설명을* 됩니다 **nvarchar(4000)**, 기본값은 **%** 합니다. 기본적으로 게시에 대한 모든 상태 요청이 반환됩니다. 이 매개 변수는 제공 된 값이 일치 하는 설명을 가진 상태 요청만 반환 하는 데 사용 됩니다 *설명을*사용 하 여 문자열에 일치 하는 경우는 [같은 &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)절.  
+`[ @description = ] 'description'` 개별 상태 요청을 호출할 때 제공 되는 정보를 정의 사용자를 기반으로 하는 반환 된 응답을 필터링 하는 데 사용할 수 있는 값 [sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)합니다. *설명을* 됩니다 **nvarchar(4000)** , 기본값은 **%** 합니다. 기본적으로 게시에 대한 모든 상태 요청이 반환됩니다. 이 매개 변수는 제공 된 값이 일치 하는 설명을 가진 상태 요청만 반환 하는 데 사용 됩니다 *설명을*사용 하 여 문자열에 일치 하는 경우는 [같은 &#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)절.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -55,7 +54,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helppeerrequests** 피어 투 피어 트랜잭션 복제에 사용 됩니다.  
   
  **sp_helppeerrequests** 피어 투 피어 토폴로지에 게시 된 데이터베이스를 복원 하는 경우에 사용 됩니다.  

@@ -4,18 +4,17 @@ description: 이 문서에서는 SQL Server 컨테이너에 대 한 고가용성
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: da4c702e8ec5e8c1d645af616df53edd287eae5a
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: aa54849c16ea9dfb821404b553b1e9183b61d66a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077485"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server 컨테이너에 대 한 고가용성
 

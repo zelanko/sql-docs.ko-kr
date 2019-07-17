@@ -19,14 +19,13 @@ ms.assetid: f3df9877-6672-4444-8245-2670063c9310
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a52ce206eee69fa585a72788e46f8f7174d936a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4d0ec8118fd7496c34d4107f0e824145ca6ae0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066990"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>targetNamespace 특성을 사용하여 대상 네임스페이스 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "65980823"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-a-target-namespace"></a>1\. 대상 네임스페이스 지정  
+### <a name="a-specifying-a-target-namespace"></a>A. 대상 네임스페이스 지정  
  다음 XSD 스키마를 사용 하 여 대상 네임 스페이스를 지정 합니다 **xsd: targetnamespace** 특성입니다. 스키마도 설정 합니다 **elementFormDefault** 하 고 **attributeFormDefault** 특성 값을 **"unqualified"** (이러한 특성에 대 한 기본값). 전역 선언 이며 모든 로컬 요소에 영향을 줍니다 ( **\<순서 >** 스키마에서) 및 특성 (**CustomerID**를 **ContactName**, 및  **OrderID** 스키마에서).  
   
 ```  

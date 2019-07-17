@@ -21,20 +21,19 @@ ms.assetid: 630d4caa-9bea-4cd3-a5b1-01098b0855fc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 89636150a5925d3f1d2c77d0462666d369492010
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87af4645a052001ddfc2d0540b6b40e75e3dbb20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067847"
 ---
 # <a name="sysregisteredsearchpropertylists-transact-sql"></a>sys.registered_search_property_lists(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스에 각 검색 속성 목록당 한 개의 행을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**property_list_id**|**int**|속성 목록의 ID입니다.|  
 |**name**|**sysname**|속성 목록의 이름입니다.|  
@@ -42,7 +41,7 @@ ms.locfileid: "64946499"
 |**modify_date**|**datetime**|ALTER 문을 사용하여 속성 목록을 마지막으로 수정한 날짜입니다.|  
 |**principal_id**|**int**|속성 목록의 소유자입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  자세한 내용은 [검색 속성 목록을 사용하여 문서 속성 검색](../../relational-databases/search/search-document-properties-with-search-property-lists.md)을 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  

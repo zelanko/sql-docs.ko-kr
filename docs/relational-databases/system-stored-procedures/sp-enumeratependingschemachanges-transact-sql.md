@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a3f0fa918d0247f5fd6dbe11c4a91a2376c52dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da5579c52d1ffe1400e3b4c8c01210ca5856597b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124578"
 ---
 # <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
   
 ## <a name="result-set"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**article_name**|**sysname**|스키마 변경이 적용 되는 아티클의 이름입니다. 또는 **publication-wide** 전체 게시에 적용 되는 스키마 변경에 대 한 합니다.|  
 |**schemaversion**|**int**|보류 중인 스키마 변경 수입니다.|  
@@ -57,7 +56,7 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_enumeratependingschemachanges** 병합 복제에 사용 됩니다.  
   
  **sp_enumeratependingschemachanges**함께 사용 [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)병합 복제의 지원 가능성에 대 한 것을 사용할 경우에만 다른 수정 동작으로 같은 다시 초기화 하지 못했습니다. 상황을 해결 합니다.  

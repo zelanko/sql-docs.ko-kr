@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f3d810e66249779b2d3706e92ea39f89a0f87cff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57685731bc5eb86381816d0cbb91a4942b5bfeff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063641"
 ---
 # <a name="set-path-command"></a>SET PATH 명령
 파일 검색에 대 한 경로 지정합니다. 드라이버 관련 정보에 대 한 설명을 참조 하세요.  
@@ -31,10 +30,10 @@ SET PATH TO [Path]
 ```  
   
 ## <a name="arguments"></a>인수  
- TO [ *Path*]  
+ 에 [ *경로*]  
  Visual FoxPro 검색 하려는 디렉터리를 지정 합니다. 디렉터리를 구분 하려면 쉼표 또는 세미콜론을 사용 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  설정 경로 사용 하면 저장된 프로시저 내에서 호출할 수 있는 기타 Visual FoxPro 프로그램에 대 한 검색 경로 지정할 수 있습니다. 경로 설정에 연결에 대해 지정한 데이터 원본의 경로 변경 되지 않습니다.  
   
  설정 경로를 발급 하지 않고 *경로* 기본 디렉터리 또는 폴더 경로 복원 합니다.  

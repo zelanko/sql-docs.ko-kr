@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4dee5e2e-d7e5-4fea-8037-a4c05c969b3a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 657d7b6cc21c573d2d9535d36392f9b7eb94200f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb4622b36901afc7ff04eacbfe840a9adda5b214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083732"
 ---
 # <a name="sysspcdcgetddlhistory-transact-sql"></a>sys.sp_cdc_get_ddl_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @capture_instance =] '*capture_instance*'  
+ [ @capture_instance = ] '*capture_instance*'  
  원본 테이블과 연결된 캡처 인스턴스의 이름입니다. *capture_instance* 됩니다 **sysname** NULL 일 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -52,7 +51,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|원본 테이블 스키마의 이름입니다.|  
 |source_table|**sysname**|원본 테이블의 이름입니다.|  
@@ -62,7 +61,7 @@ sys.sp_cdc_get_ddl_history [ @capture_instance = ] 'capture_instance'
 |ddl_lsn|**binary(10)**|DDL 변경과 관련된 LSN(로그 시퀀스 번호)입니다.|  
 |ddl_time|**datetime**|DDL 변경과 관련된 시간입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  원본 테이블 열 구조의 추가 열을 삭제 하거나 기존 열의 데이터 형식을 변경 등을 변경 하는 원본 테이블에 DDL 수정에서 유지 관리 합니다 [cdc.ddl_history](../../relational-databases/system-tables/cdc-ddl-history-transact-sql.md) 테이블입니다. 이러한 변경 내용은 이 저장 프로시저를 사용하여 보고할 수 있습니다. cdc.ddl_history의 항목은 캡처 프로세스에서 로그의 DDL 트랜잭션을 읽을 때 생성됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

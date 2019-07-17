@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 317213f4-0ebb-4bf8-a37a-4d6b1313823f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d643ccad0110796127524a10e82aef7c3339b163
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe489222c026c1499135b716f0485bb04f51bad9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069767"
 ---
 # <a name="freeing-descriptors"></a>설명자 해제
 명시적으로 할당 된 설명자 수 중 하나를 명시적으로 호출 하 여 해제할 **SQLFreeHandle** 사용 하 여 *HandleType* SQL_HANDLE_DESC, 또는 암시적으로 때 연결 핸들을 해제 됩니다. 명시적으로 할당 된 설명자를 해제 하는 경우, 모든 문 핸들을 자동으로 적용 해제 된 설명자에 암시적으로 할당 된 설명자를 되돌립니다.  

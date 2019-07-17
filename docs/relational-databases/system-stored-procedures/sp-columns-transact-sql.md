@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1155937c8634fe9859b13b84f2e42be6ceb825d0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070350"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,15 +45,15 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ \@table_name = ] object` 카탈로그 정보를 반환 하는 데 사용 되는 개체의 이름이입니다. *개체* 테이블, 뷰 또는 테이블 반환 함수 같은 열이 있는 다른 개체 일 수 있습니다. *개체* 됩니다 **nvarchar(384)**, 기본값은 없습니다. 와일드카드 패턴 일치가 지원됩니다.  
+`[ \@table_name = ] object` 카탈로그 정보를 반환 하는 데 사용 되는 개체의 이름이입니다. *개체* 테이블, 뷰 또는 테이블 반환 함수 같은 열이 있는 다른 개체 일 수 있습니다. *개체* 됩니다 **nvarchar(384)** , 기본값은 없습니다. 와일드카드 패턴 일치가 지원됩니다.  
   
-`[ \@table_owner = ] owner` 카탈로그 정보를 반환 하는 데 사용 되는 개체의 개체 소유자가입니다. *소유자* 됩니다 **nvarchar(384)**, 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 하는 경우 *소유자* 지정 하지 않으면 기본 DBMS의 기본 개체 표시 규칙이 적용 됩니다.  
+`[ \@table_owner = ] owner` 카탈로그 정보를 반환 하는 데 사용 되는 개체의 개체 소유자가입니다. *소유자* 됩니다 **nvarchar(384)** , 기본값은 NULL입니다. 와일드카드 패턴 일치가 지원됩니다. 하는 경우 *소유자* 지정 하지 않으면 기본 DBMS의 기본 개체 표시 규칙이 적용 됩니다.  
   
  현재 사용자가 지정된 이름의 개체를 소유한 경우 해당 개체의 열이 반환됩니다. 하는 경우 *소유자* 지정 하지 않으면 현재 사용자 지정 된 개체를 소유 하지 않는 한 *개체*합니다 **sp_columns** 지정 된 개체를 찾습니다  *개체* 데이터베이스 소유자가 소유 합니다. 개체가 있으면 개체의 열이 반환됩니다.  
   
-`[ \@table_qualifier = ] qualifier` 개체 한정자의 이름이입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 세 부분으로 구성 된 개체에 대 한 이름 (_한정자_**.** _소유자_**.** _이름을_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 개체 데이터베이스 환경의 서버 이름을 나타냅니다.  
+`[ \@table_qualifier = ] qualifier` 개체 한정자의 이름이입니다. *한정자* 됩니다 **sysname**, 기본값은 NULL입니다. 다양 한 DBMS 제품에서는 세 부분으로 구성 된 개체에 대 한 이름 (_한정자_ **.** _소유자_ **.** _이름을_). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이 열은 데이터베이스 이름을 나타냅니다. 일부 제품에서는 개체 데이터베이스 환경의 서버 이름을 나타냅니다.  
   
-`[ \@column_name = ] column` 단일 열 및 카탈로그 정보 중 한 열만 하고자 할 때 사용 됩니다. *열* 됩니다 **nvarchar(384)**, 기본값은 NULL입니다. 하는 경우 *열* 은 지정 하지 않으면 모든 열 반환 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *열* 에 나열 된 열 이름을 나타냅니다 합니다 **syscolumns** 테이블입니다. 와일드카드 패턴 일치가 지원됩니다. 상호 운용성을 극대화하려면 게이트웨이 클라이언트가 SQL-92 표준 패턴 일치(% 및 _ 와일드카드 문자)만을 사용해야 합니다.  
+`[ \@column_name = ] column` 단일 열 및 카탈로그 정보 중 한 열만 하고자 할 때 사용 됩니다. *열* 됩니다 **nvarchar(384)** , 기본값은 NULL입니다. 하는 경우 *열* 은 지정 하지 않으면 모든 열 반환 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *열* 에 나열 된 열 이름을 나타냅니다 합니다 **syscolumns** 테이블입니다. 와일드카드 패턴 일치가 지원됩니다. 상호 운용성을 극대화하려면 게이트웨이 클라이언트가 SQL-92 표준 패턴 일치(% 및 _ 와일드카드 문자)만을 사용해야 합니다.  
   
 `[ \@ODBCVer = ] ODBCVer` 사용 중인 ODBC의 버전이입니다. *ODBCVer* 됩니다 **int**, 기본값은 2입니다. 이 값은 ODBC 버전 2를 나타내며 유효한 값은 2 또는 3입니다. 버전 2와 3 간의 동작 차이점에 대 한 참조는 ODBC **SQLColumns** 사양입니다.  
   
@@ -64,7 +63,7 @@ sp_columns [ @table_name = ] object
 ## <a name="result-sets"></a>결과 집합  
  합니다 **sp_columns** 카탈로그 저장 프로시저는 같음 **SQLColumns** ODBC에서. 반환 된 결과 정렬할 **TABLE_QUALIFIER**를 **TABLE_OWNER**, 및 **TABLE_NAME**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|개체 한정자 이름입니다. 이 필드는 NULL이 될 수 있습니다.|  
 |**TABLE_OWNER**|**sysname**|개체 소유자 이름입니다. 이 필드는 항상 값을 반환합니다.|  
@@ -91,7 +90,7 @@ sp_columns [ @table_name = ] object
 ## <a name="permissions"></a>사용 권한  
  스키마에서 SELECT 및 VIEW DEFINITION 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_columns** 구분된 식별자에 대 한 요구 사항을 따릅니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  

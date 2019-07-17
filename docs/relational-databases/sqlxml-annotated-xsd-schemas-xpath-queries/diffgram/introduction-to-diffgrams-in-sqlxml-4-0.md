@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1902d67f-baf3-46e6-a36c-b24b5ba6f8ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c0213344f518139573f5f9b95e71704689a637c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 7b232b2a6f6458139236595b2cac29afb54c0099
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073389"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>SQLXML 4.0의 DiffGrams 소개
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "56016404"
  이 선택적 블록은 DiffGram 처리 논리에서 무시됩니다.  
   
 ## <a name="diffgram-annotations"></a>DiffGram 주석  
- 이러한 주석은 DiffGram 네임 스페이스에 정의 된 **"urn: 스키마-microsoft-com:xml-diffgram-01"**:  
+ 이러한 주석은 DiffGram 네임 스페이스에 정의 된 **"urn: 스키마-microsoft-com:xml-diffgram-01"** :  
   
  **id**  
  이 특성은 요소 쌍을 사용 합니다  **\<하기 전에 >** 및  **\<DataInstance >** 블록입니다.  
@@ -74,7 +73,7 @@ ms.locfileid: "56016404"
 ## <a name="understanding-the-diffgram-processing-logic"></a>DiffGram 처리 논리 이해  
  DiffGram 처리 논리는 특정 규칙에 따라 작업이 삽입, 업데이트 또는 삭제 작업인지를 결정합니다. 다음 표에서는 이러한 규칙에 대해 설명합니다.  
   
-|연산|Description|  
+|작업(Operation)|설명|  
 |---------------|-----------------|  
 |Insert|DiffGram에서 요소가 표시 되 면 삽입 작업을 나타냅니다 합니다  **\<DataInstance >** 블록 아니라 해당  **\<전에 >** 블록과 합니다 **diffgr: haschanges** 특성을 지정 (**diffgr: haschanges = inserted**) 요소에 있습니다. DiffGram에 지정 된 레코드 인스턴스를 삽입 하는 경우에  **\<DataInstance >** 데이터베이스로 블록입니다.<br /><br /> 경우는 **diffgr: haschanges** 특성이 지정 되지 않은, 요소 처리 논리에서 무시 되 고 없습니다 삽입이 수행 합니다. 작업 예제를 참조 하세요. [DiffGram 예 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.|  
 |Update|DiffGram에서 요소가 있으면 업데이트 작업을 나타냅니다 합니다 \<하기 전에 >의 해당 요소 블록 합니다  **\<DataInstance >** 블록 (즉, 두 요소 모두를 **diffgr: id** 특성과 동일한 값) 및 **diffgr: haschanges** 특성 값으로 지정 됩니다 **수정** 에서 요소를  **\<DataInstance >** 블록입니다.<br /><br /> 경우는 **diffgr: haschanges** 에서 요소 특성을 지정 하지 않으면 합니다  **\<DataInstance >** 블록 처리 논리에서 오류가 반환 됩니다. 작업 예제를 참조 하세요. [DiffGram 예 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md)합니다.<br /><br /> 경우 **diffgr: parentid** 에 지정 된 된  **\<하기 전에 >** 요소에서 지정 된 부모-자식 관계를 차단 **parentID** 레코드 업데이트 되는 순서가 결정 됩니다.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1188bb26c8c63267f30110bf890589d1670fdf8b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 27c10f9d5fa04ae449bdcca84891f0f28376eeb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531445"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075706"
 ---
 # <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +46,12 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'` 구독자 데이터베이스의 이름이입니다. *subscriber_db* 됩니다 **sysname**, 기본값은 **모든**합니다.  
   
-`[ @upload_first = ] 'upload_first'` 구독을 다시 초기화 하기 전에 구독자의 변경 내용을 업로드할지 여부입니다. *upload_first* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. 하는 경우 **true**, 구독을 다시 초기화 하기 전에 변경 내용을 업로드 합니다. 하는 경우 **false**, 변경 내용이 업로드 되지 않습니다.  
+`[ @upload_first = ] 'upload_first'` 구독을 다시 초기화 하기 전에 구독자의 변경 내용을 업로드할지 여부입니다. *upload_first* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. 하는 경우 **true**, 구독을 다시 초기화 하기 전에 변경 내용을 업로드 합니다. 하는 경우 **false**, 변경 내용이 업로드 되지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_reinitmergesubscription** 병합 복제에 사용 됩니다.  
   
  **sp_reinitmergesubscription** 병합 구독 다시 초기화 하려면 게시자에서 호출할 수 있습니다. 스냅숏 에이전트도 다시 실행하는 것이 좋습니다.  

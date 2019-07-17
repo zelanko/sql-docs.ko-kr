@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b94583225c842d52518087c0cbaf9f8acea2972a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: acbf543abeb8e35adb506e1fb381d2fa2018f113
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47603101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053454"
 ---
 # <a name="syssysforeignkeys-transact-sql"></a>sys.sysforeignkeys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47603101"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**constid**|**int**|FOREIGN KEY 제약 조건의 ID입니다.|  
 |**fkeyid**|**int**|FOREIGN KEY 제약 조건이 있는 테이블의 개체 ID입니다.|  

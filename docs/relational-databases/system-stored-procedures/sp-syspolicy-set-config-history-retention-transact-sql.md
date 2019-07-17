@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 2574898a-e724-4447-b96c-ff778471339d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 4f810cc775e79da6d01a2856afb04f80756be68a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 913a584c2bdd15a57596f4a51168a8b5c6f7e873
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63000816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035438"
 ---
 # <a name="spsyspolicysetconfighistoryretention-transact-sql"></a>sp_syspolicy_set_config_history_retention(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_syspolicy_set_config_history_retention [ @value = ] value
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_syspolicy_set_config_history_retention은 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
  하는 경우 *값* 설정할지를 0으로 기록을 자동으로 제거 되지 합니다.  

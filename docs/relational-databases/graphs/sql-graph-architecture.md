@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0124126556967800e37b296a73bd951a18d3936e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035980"
 ---
 # <a name="sql-graph-architecture"></a>SQL 그래프 아키텍처  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ SQL 그래프를 설계 하는 방법에 대해 알아봅니다. 기본 사항�
 ## <a name="edge-table"></a>Edge 테이블
 Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 항상 전송 하 고 두 노드를 연결 합니다. Edge 테이블을 그래프에서 다 대 다 관계를 모델링 하는 사용자를 수 있습니다. Edge 테이블을 수도 있습니다에 모든 사용자 정의 특성 없을 수 있습니다. 사용자 정의 특성을 함께 edge 테이블을 만들 때마다 edge 테이블의 세 가지 암시적 열이 생성 됩니다.
 
-|열 이름    |Description  |
+|열 이름    |설명  |
 |---   |---  |
 |`$edge_id`   |데이터베이스에 지정 된 가장자리를 고유 하 게 식별합니다. 생성된 된 열 이며 값은 내부적으로 생성 된 bigint 값을 edge 테이블의 object_id의 조합입니다. 그러나 경우는 `$edge_id` 열을 선택 하면 JSON 문자열의 형태로 계산 된 값이 표시 됩니다. `$edge_id` 16 진수 문자열을 사용 하 여 내부 이름에 매핑하는 의사 (pseudo) 열입니다. 선택 하면 `$edge_id` 테이블에서 열 이름으로 나타납니다 `$edge_id_\<hex_string>`합니다. 쿼리에서 의사 (pseudo) 열 이름을 사용 하 여 권장 되는 방법의 내부 쿼리 `$edge_id` 열 및 16 진수 문자열을 사용 하 여 내부 이름을 사용 하 여 피해 야 합니다. |
 |`$from_id`   |저장소는 `$node_id` 가장자리의 원본 위치에서 노드.  |
@@ -68,7 +67,7 @@ Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 
 ### <a name="systables"></a>sys.tables
 다음의 새로운, bit 형식, SYS에 열이 추가 됩니다. 테이블입니다. 하는 경우 `is_node` 테이블 노드 테이블 인지 여부를 나타내는 1로 설정 된 경우 `is_edge` 테이블이 지 테이블 인지 여부를 나타내는 1로 설정 됩니다.
  
-|열 이름 |데이터 형식 |Description |
+|열 이름 |데이터 형식 |설명 |
 |--- |---|--- |
 |is_node |bit |1 = 노드 테이블입니다. |
 |is_edge |bit |1 =는 edge 테이블 |
@@ -76,14 +75,14 @@ Edge 테이블에는 그래프에서 관계를 나타냅니다. 가장자리는 
 ### <a name="syscolumns"></a>sys.columns
 `sys.columns` 뷰에 추가 열 `graph_type` 및 `graph_type_desc`, 노드와 지 테이블의 열 형식을 나타내는입니다.
  
-|열 이름 |데이터 형식 |Description |
+|열 이름 |데이터 형식 |설명 |
 |--- |---|--- |
 |graph_type |ssNoversion |값 집합이 포함 된 내부 열입니다. 값은 1 ~ 8 그래프 열에 대 한 다른 사용자에 대 한 NULL 사이 하는 것입니다.  |
 |graph_type_desc |nvarchar(60)  |값 집합이 포함 된 내부 열 |
  
 다음 표에서 유효한 값은 `graph_type` 열
 
-|열 값  |Description  |
+|열 값  |설명  |
 |---   |---   |
 |1  |GRAPH_ID  |
 |2  |GRAPH_ID_COMPUTED  |
@@ -120,7 +119,7 @@ Edge 테이블에 암시적 열
 ### <a name="system-functions"></a>시스템 함수
 다음 기본 제공 함수를 추가 됩니다. 이러한 하면 사용자가 생성 된 열에서 정보를 추출 합니다. 이러한 메서드는 사용자 로부터 입력을 확인 하지 않습니다는 참고 합니다. 사용자 지정 유효 하지 않은 경우 `sys.node_id` 메서드는 적절 한 부분을 추출 하 고 반환 합니다. OBJECT_ID_FROM_NODE_ID 걸립니다 예를 들어를 `$node_id` 입력과 object_id를 반환 하는이 노드가 속한 테이블의 합니다. 
  
-|기본 제공   |Description  |
+|기본 제공   |설명  |
 |---  |---  |
 |OBJECT_ID_FROM_NODE_ID |Object_id에서 추출 된 `node_id`  |
 |GRAPH_ID_FROM_NODE_ID  |graph_id 추출를 `node_id`  |
@@ -150,7 +149,7 @@ Edge 테이블에 암시적 열
 |태스크   |관련된 문서  |참고
 |---  |---  |---  |
 |INSERT |[INSERT&#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|노드 테이블에 삽입 관계형 테이블에 삽입 하는 데 다르지 않습니다. 값 `$node_id` 열이 자동으로 생성 됩니다. 값을 삽입 하려고 `$node_id` 또는 `$edge_id` 열 오류가 발생 합니다. 사용자에 대 한 값을 제공 해야 합니다 `$from_id` 고 `$to_id` edge 테이블에 삽입 하는 동안 열입니다. `$from_id` 및 `$to_id` 되는 `$node_id` 지정 된 가장자리를 연결 하는 노드의 값입니다.  |
-|Delete | [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|노드 또는 지 테이블의 데이터를에서 관계형 테이블에서 삭제 되었으므로 동일한 방식으로 삭제할 수 있습니다. 그러나이 릴리스에서 제약 조건이 없는 없습니다 가장자리 삭제 된 노드를 가리키도록 하 고 가장자리 노드의 삭제 시 계단식된 삭제는 지원 되지 않습니다. 노드 삭제 될 때마다 해당 노드에 대 한 모든 연결 가장자리도를 삭제 했는지 그래프의 무결성을 유지 하는 것이 좋습니다.  |
+|DELETE | [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|노드 또는 지 테이블의 데이터를에서 관계형 테이블에서 삭제 되었으므로 동일한 방식으로 삭제할 수 있습니다. 그러나이 릴리스에서 제약 조건이 없는 없습니다 가장자리 삭제 된 노드를 가리키도록 하 고 가장자리 노드의 삭제 시 계단식된 삭제는 지원 되지 않습니다. 노드 삭제 될 때마다 해당 노드에 대 한 모든 연결 가장자리도를 삭제 했는지 그래프의 무결성을 유지 하는 것이 좋습니다.  |
 |UPDATE |[UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)  |UPDATE 문을 사용 하 여 사용자 정의 열에 값을 업데이트할 수 있습니다. 내부 그래프 열을 업데이트 `$node_id`, `$edge_id`하십시오 `$from_id` 및 `$to_id` 허용 되지 않습니다.  |
 |MERGE |[MERGE&#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)  |`MERGE` 노드 또는 지 테이블 문이 지원 됩니다.  |
 

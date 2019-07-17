@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0040f986e5ff3b6de025761b32d2f40e2e127d39
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe75ffcf1e8cdcc387acb48c882e247b21889c06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113818"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,11 +72,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @status = ] 'status'` 구독 상태를 **syssubscriptions** 테이블입니다. *상태* 됩니다 **sysname**이며 기본값은 없고 수 이러한 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**active**|구독자가 동기화되어 데이터를 받습니다.|  
 |**inactive**|구독이 없는 구독자 항목이 있습니다.|  
-|**subscribed**|구독자가 데이터를 요청하고 있으나 아직 동기화되지 않았습니다.|  
+|**구독**|구독자가 데이터를 요청하고 있으나 아직 동기화되지 않았습니다.|  
   
 `[ @previous_status = ] 'previous_status'` 구독의 이전 상태가입니다. *previous_status* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수를 사용 하면 현재 구독의 특정 집합에 그룹 함수를 허용 하므로, 해당 상태를 포함 하는 모든 구독을 변경할 수 있습니다 (예를 들어 모든 활성 프로세스 설정 구독을 다시 **구독**).  
   
@@ -120,9 +119,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @active_end_date = ] active_end_date` 배포 태스크가 중지 되 면 날짜 예약 된 형식은 YYYYMMDD입니다. *active_end_date* 됩니다 **int**, 기본값은 NULL입니다.  
   
-`[ @optional_command_line = ] 'optional_command_line'` 선택적 명령 프롬프트입니다. *optional_command_line* 됩니다 **nvarchar(4000)**, 기본값은 NULL입니다.  
+`[ @optional_command_line = ] 'optional_command_line'` 선택적 명령 프롬프트입니다. *optional_command_line* 됩니다 **nvarchar(4000)** , 기본값은 NULL입니다.  
   
-`[ @distribution_jobid = ] distribution_jobid` 비활성에서 활성 구독 상태를 변경 하는 경우 구독에 대해 배포자에서 배포 에이전트의 작업 ID입니다. 기타 경우에는 정의되지 않습니다. 이 저장 프로시저에 대한 단일 호출에 둘 이상의 배포 에이전트가 연관된 경우 결과는 정의되지 않습니다. *distribution_jobid* 됩니다 **binary(16)**, 기본값은 NULL입니다.  
+`[ @distribution_jobid = ] distribution_jobid` 비활성에서 활성 구독 상태를 변경 하는 경우 구독에 대해 배포자에서 배포 에이전트의 작업 ID입니다. 기타 경우에는 정의되지 않습니다. 이 저장 프로시저에 대한 단일 호출에 둘 이상의 배포 에이전트가 연관된 경우 결과는 정의되지 않습니다. *distribution_jobid* 됩니다 **binary(16)** , 기본값은 NULL입니다.  
   
 `[ @from_auto_sync = ] from_auto_sync` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -157,7 +156,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changesubstatus** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
  **sp_changesubstatus** 구독자의 상태를 변경 합니다 **syssubscriptions** 변경 된 상태를 사용 하 여 테이블입니다. 필요한 경우에서 문서 상태를 업데이트 합니다 **sysarticles** 활성 또는 비활성 테이블입니다. 필요한 경우 해당 복제 플래그 설정 또는 해제는 **sysobjects** 복제 된 테이블에 대 한 테이블입니다.  

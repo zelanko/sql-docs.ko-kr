@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 02c46d74a1e68af322aa50c7b0ac1c3d4f96ee49
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f180e2b3478ce136fa16d82084d46b79e6152957
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070420"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,15 +45,15 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @filtered_table = ] 'filtered_table'` 필터링된 된 테이블의 이름이입니다. *filtered_table* 됩니다 **nvarchar(400)**, 기본값은 없습니다.  
+`[ @filtered_table = ] 'filtered_table'` 필터링된 된 테이블의 이름이입니다. *filtered_table* 됩니다 **nvarchar(400)** , 기본값은 없습니다.  
   
-`[ @join_table = ] 'join_table'` 조인 되는 테이블의 이름인 *filtered_table*합니다. *join_table* 됩니다 **nvarchar(400)**, 기본값은 없습니다.  
+`[ @join_table = ] 'join_table'` 조인 되는 테이블의 이름인 *filtered_table*합니다. *join_table* 됩니다 **nvarchar(400)** , 기본값은 없습니다.  
   
-`[ @join_filterclause = ] 'join_filterclause'` 조인 필터 절을 테스트할 수 있습니다. *join_filterclause* 됩니다 **nvarchar(1000)**, 기본값은 없습니다.  
+`[ @join_filterclause = ] 'join_filterclause'` 조인 필터 절을 테스트할 수 있습니다. *join_filterclause* 됩니다 **nvarchar(1000)** , 기본값은 없습니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**can_use_partition_groups**|**bit**|사전 계산 파티션을 게시에 사전는 여기서 **1** 나타내고 파티션을 사용할 수 있음을 의미 하 고 **0** 는 사용할 수 없음을 의미 합니다.|  
 |**has_dynamic_filters**|**bit**|제공 된 필터 절에 매개 변수가 있는 필터링 함수가; 하나 이상 포함 되어 있는지 여부 여기서 **1** 하는 매개 변수가 있는 필터링 함수가 사용 됨을 의미 하 고 **0** 함수를 사용 하지 않음을 의미 합니다.|  
@@ -65,7 +64,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_check_join_filter** 병합 복제에 사용 됩니다.  
   
  **sp_check_join_filter** 게시 되지 않은 경우에 모든 관련된 테이블에 대해 실행할 수 있습니다. 이 저장 프로시저는 두 아티클 간의 조인 필터를 정의하기 전 조인 필터 절을 확인하는 데 사용될 수 있습니다.  

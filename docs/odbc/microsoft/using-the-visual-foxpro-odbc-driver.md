@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c50371a0-b1b2-406c-a4e5-d5191d519f5b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b7c433de56ff5e171a817e8a25b9d850c0ecefa0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b6c0aa518e1471e0b316dcf9ffd8e5a668851fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087989"
 ---
 # <a name="using-the-visual-foxpro-odbc-driver"></a>Visual FoxPro ODBC 드라이버 사용
 이 섹션에서는 다음 항목에는 Microsoft® Visual FoxPro® ODBC Driver를 사용 하는 방법을 설명 합니다.  

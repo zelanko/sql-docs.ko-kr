@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b4ff861015fc669defee69fece5c26ee45d66eaa
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8df629aa707e5c0f63ef5bdcb9c77d7f8f2e2aca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072678"
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,15 +46,15 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ## <a name="arguments"></a>인수  
 `[ @server = ] 'server'` 만들려는 연결 된 서버의 이름이입니다. *server* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @srvproduct = ] 'product_name'` 연결 된 서버로 추가할 OLE DB 데이터 원본의 제품 이름이입니다. *product_name* 됩니다 **nvarchar (** 128 **)**, 기본값은 NULL입니다. 하는 경우 **SQL Server**, *provider_name*를 *data_source*를 *위치*를 *provider_string*, 및 *카탈로그* 지정할 필요가 없습니다.  
+`[ @srvproduct = ] 'product_name'` 연결 된 서버로 추가할 OLE DB 데이터 원본의 제품 이름이입니다. *product_name* 됩니다 **nvarchar (** 128 **)** , 기본값은 NULL입니다. 하는 경우 **SQL Server**, *provider_name*를 *data_source*를 *위치*를 *provider_string*, 및 *카탈로그* 지정할 필요가 없습니다.  
   
-`[ @provider = ] 'provider_name'` 이 데이터 원본에 해당 하는 OLE DB 공급자의 고유 프로그래밍 방식 식별자 (PROGID)입니다. *provider_name* 현재 컴퓨터에 설치 된 지정된 된 OLE DB 공급자에 대해 고유 해야 합니다. *provider_name* 는 **nvarchar (** 128 **)**, 이며 기본값은 NULL입니다; 그러나 경우 *provider_name* 는 생략 하면 SQLNCLI가 사용 됩니다. SQLNCLI를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자로 리디렉션됩니다. OLE DB 공급자는 지정한 PROGID와 함께 레지스트리에 등록됩니다.  
+`[ @provider = ] 'provider_name'` 이 데이터 원본에 해당 하는 OLE DB 공급자의 고유 프로그래밍 방식 식별자 (PROGID)입니다. *provider_name* 현재 컴퓨터에 설치 된 지정된 된 OLE DB 공급자에 대해 고유 해야 합니다. *provider_name* 는 **nvarchar (** 128 **)** , 이며 기본값은 NULL입니다; 그러나 경우 *provider_name* 는 생략 하면 SQLNCLI가 사용 됩니다. SQLNCLI를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자로 리디렉션됩니다. OLE DB 공급자는 레지스트리에 지정된 된 PROGID를 사용 하 여 등록 해야 합니다.  
   
 `[ @datasrc = ] 'data_source'` OLE DB 공급자가 해석할 데이터 원본의 이름이입니다. *data_source* 됩니다 **nvarchar (** 4000 **)** 합니다. *data_source* OLE DB 공급자를 초기화 하는 DBPROP_INIT_DATASOURCE 속성으로 전달 됩니다.  
   
-`[ @location = ] 'location'` OLE DB 공급자가 해석할 데이터베이스 위치가입니다. *위치* 됩니다 **nvarchar (** 4000 **)**, 기본값은 NULL입니다. *위치* OLE DB 공급자를 초기화 DBPROP_INIT_LOCATION 속성으로 전달 됩니다.  
+`[ @location = ] 'location'` OLE DB 공급자가 해석할 데이터베이스 위치가입니다. *위치* 됩니다 **nvarchar (** 4000 **)** , 기본값은 NULL입니다. *위치* OLE DB 공급자를 초기화 DBPROP_INIT_LOCATION 속성으로 전달 됩니다.  
   
-`[ @provstr = ] 'provider_string'` 고유한 데이터 원본을 식별 하는 OLE DB 공급자별 연결 문자열이입니다. *provider_string* 됩니다 **nvarchar (** 4000 **)**, 기본값은 NULL입니다. *provstr* IDataInitialize 전달 되거나 DBPROP_INIT_PROVIDERSTRING 속성으로 설정 되어 OLE DB 공급자를 초기화 합니다.  
+`[ @provstr = ] 'provider_string'` 고유한 데이터 원본을 식별 하는 OLE DB 공급자별 연결 문자열이입니다. *provider_string* 됩니다 **nvarchar (** 4000 **)** , 기본값은 NULL입니다. *provstr* IDataInitialize 전달 되거나 DBPROP_INIT_PROVIDERSTRING 속성으로 설정 되어 OLE DB 공급자를 초기화 합니다.  
   
  에 대해 연결된 된 서버를 만들 때 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 인스턴스를 서버로 서버 키워드를 사용 하 여 지정할 수 있습니다 =*servername*\\*instancename*의 특정 인스턴스를 지정 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. *servername* 는 컴퓨터의 이름인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 중인지 및 *instancename* 특정 인스턴스의 이름 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 연결 수.  
   
@@ -70,7 +69,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서는 OLE DB를 통해 액세스할 수 있는 데이터 원본에 대해 연결된 서버를 설정하는 방법을 보여 줍니다. 특정 데이터 원본에 대해 여러 가지 방법을 사용하여 연결된 서버를 설정할 수 있습니다. 따라서 데이터 원본 유형에 대한 행이 여러 개 있을 수 있습니다. 이 테이블에도 표시 합니다 **sp_addlinkedserver** 연결된 된 서버 설정에 사용할 매개 변수 값입니다.  
   
 |원격 OLE DB 데이터 원본|OLE DB 공급자|product_name|provider_name|data_source|위치|provider_string|카탈로그|  
@@ -78,13 +77,13 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (기본값)||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자||**SQLNCLI**|기본 인스턴스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 네트워크 이름|||데이터베이스 이름(옵션)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자||**SQLNCLI**|*servername*\\*instancename* (특정 인스턴스의 경우)에 대 한|||데이터베이스 이름(옵션)|  
-|Oracle 버전 8 이상|Oracle Provider for OLE DB|임의의 값|**OraOLEDB.Oracle**|Oracle 데이터베이스의 별칭||||  
-|Access/Jet|Microsoft OLE DB Provider for Jet|임의의 값|**Microsoft.Jet.OLEDB.4.0**|Jet 데이터베이스 파일의 전체 경로||||  
-|ODBC 데이터 원본|ODBC용 Microsoft OLE DB 공급자|임의의 값|**MSDASQL**|ODBC 데이터 원본의 시스템 DSN||||  
-|ODBC 데이터 원본|ODBC용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 공급자|임의의 값|**MSDASQL**|||ODBC 연결 문자열||  
-|파일 시스템|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|임의의 값|**MSIDXS**|인덱싱 서비스 카탈로그 이름||||  
-|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 스프레드시트|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|임의의 값|**Microsoft.Jet.OLEDB.4.0**|Excel 파일의 전체 경로||Excel 5.0||  
-|IBM DB2 데이터베이스|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|임의의 값|**DB2OLEDB**|||참조 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2 설명서.|DB2 데이터베이스의 카탈로그 이름|  
+|Oracle 버전 8 이상|Oracle Provider for OLE DB|Any|**OraOLEDB.Oracle**|Oracle 데이터베이스의 별칭||||  
+|Access/Jet|Microsoft OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Jet 데이터베이스 파일의 전체 경로||||  
+|ODBC 데이터 원본|ODBC용 Microsoft OLE DB 공급자|Any|**MSDASQL**|ODBC 데이터 원본의 시스템 DSN||||  
+|ODBC 데이터 원본|ODBC용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB 공급자|Any|**MSDASQL**|||ODBC 연결 문자열||  
+|파일 시스템|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Indexing Service|Any|**MSIDXS**|인덱싱 서비스 카탈로그 이름||||  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel 스프레드시트|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Excel 파일의 전체 경로||Excel 5.0||  
+|IBM DB2 데이터베이스|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2|Any|**DB2OLEDB**|||참조 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for DB2 설명서.|DB2 데이터베이스의 카탈로그 이름|  
   
  <sup>1</sup> 이 방법으로 연결된 된 서버를 설정 하면 원격 인스턴스의 네트워크 이름으로 동일한 연결 된 서버의 이름을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다. 사용 하 여 *data_source* 서버를 지정 합니다.  
   
@@ -106,7 +105,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-microsoft-sql-server-native-client-ole-db-provider"></a>1. Microsoft SQL Server Native Client OLE DB 공급자 사용  
+### <a name="a-using-the-microsoft-sql-server-native-client-ole-db-provider"></a>A. Microsoft SQL Server Native Client OLE DB 공급자 사용  
  다음 예에서는 `SEATTLESales`라는 연결된 서버를 만듭니다. 제품 이름은 `SQL Server`이고 공급자 이름은 사용하지 않았습니다.  
   
 ```  
@@ -128,7 +127,7 @@ EXEC sp_addlinkedserver
    @datasrc=N'S1\instance1';  
 ```  
   
-### <a name="b-using-the-microsoft-ole-db-provider-for-microsoft-access"></a>2. Microsoft OLE DB Provider for Microsoft Access 사용  
+### <a name="b-using-the-microsoft-ole-db-provider-for-microsoft-access"></a>2\. Microsoft OLE DB Provider for Microsoft Access 사용  
  Microsoft.Jet.OLEDB.4.0 공급자는 2002-2003 형식을 사용하는 Microsoft Access 데이터베이스에 연결합니다. 다음 예에서는 `SEATTLE Mktg`라는 연결된 서버를 만듭니다.  
   
 > [!NOTE]  
@@ -157,7 +156,7 @@ EXEC sp_addlinkedserver
 GO  
 ```  
   
-### <a name="c-using-the-microsoft-ole-db-provider-for-odbc-with-the-datasource-parameter"></a>3. data_source 매개 변수와 함께 Microsoft OLE DB Provider for ODBC 사용  
+### <a name="c-using-the-microsoft-ole-db-provider-for-odbc-with-the-datasource-parameter"></a>3\. data_source 매개 변수와 함께 Microsoft OLE DB Provider for ODBC 사용  
  다음 예제에서는 라는 연결 된 서버를 만들고 `SEATTLE Payroll` 를 사용 하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC (`MSDASQL`) 및 *data_source* 매개 변수입니다.  
   
 > [!NOTE]  
@@ -172,7 +171,7 @@ EXEC sp_addlinkedserver
 GO  
 ```  
   
-### <a name="d-using-the-microsoft-ole-db-provider-for-excel-spreadsheet"></a>4. Excel 스프레드시트에서 Microsoft OLE DB 공급자 사용  
+### <a name="d-using-the-microsoft-ole-db-provider-for-excel-spreadsheet"></a>4\. Excel 스프레드시트에서 Microsoft OLE DB 공급자 사용  
  사용 하 여 연결 된 서버 정의 만들려면를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet 1997-2003 형식의 Excel 스프레드시트에 액세스할 만들기 먼저 선택할 Excel 워크시트의 행 및 열을 지정 하 여 명명된 된 범위를 Excel에서 합니다. 범위의 이름은 분산 쿼리에서 테이블 이름으로 참조할 수 있습니다.  
   
 ```  
@@ -214,7 +213,7 @@ EXEC sp_addlinkedserver @server = N'ExcelDataSource',
   
 ```  
   
-### <a name="e-using-the-microsoft-ole-db-provider-for-jet-to-access-a-text-file"></a>5. Microsoft OLE DB Provider for Jet을 사용하여 텍스트 파일 액세스  
+### <a name="e-using-the-microsoft-ole-db-provider-for-jet-to-access-a-text-file"></a>5\. Microsoft OLE DB Provider for Jet을 사용하여 텍스트 파일 액세스  
  다음 예에서는 Access.mdb 파일의 테이블에서처럼 파일을 연결하지 않고 직접 텍스트 파일에 액세스하기 위해 연결된 서버를 만듭니다. 공급자는 `Microsoft.Jet.OLEDB.4.0`이고 공급자 문자열은 `Text`입니다.  
   
  데이터 원본은 텍스트 파일을 포함하는 디렉터리의 전체 경로 이름입니다. 텍스트 파일의 구조를 정의하는 Schema.ini 파일은 반드시 텍스트 파일과 동일한 디렉터리에 있어야 합니다. Schema.ini 파일을 만드는 방법은 Jet Database Engine 설명서를 참조하십시오.  
@@ -242,7 +241,7 @@ SELECT *
 FROM txtsrv...[file1#txt];  
 ```  
   
-### <a name="f-using-the-microsoft-ole-db-provider-for-db2"></a>6. Microsoft OLE DB Provider for DB2 사용  
+### <a name="f-using-the-microsoft-ole-db-provider-for-db2"></a>6\. Microsoft OLE DB Provider for DB2 사용  
  다음 예에서는 `DB2`를 사용하는 `Microsoft OLE DB Provider for DB2`라는 연결된 서버를 만듭니다.  
   
 ```  
@@ -260,7 +259,7 @@ EXEC sp_addlinkedserver
        Default Schema=admin;';  
 ```  
   
-### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premise-databases"></a>7. 추가 된 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 클라우드 및 온-프레미스 데이터베이스에서 분산된 쿼리 사용에 대 한 연결 된 서버로  
+### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premise-databases"></a>7\. 추가 된 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 클라우드 및 온-프레미스 데이터베이스에서 분산된 쿼리 사용에 대 한 연결 된 서버로  
  추가할 수는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 연결 된 서버 및 사용 하 여 분산 쿼리는 온-프레미스 및 클라우드 데이터베이스입니다. 이것이 Windows Azure 클라우드 및 온-프레미스 회사 네트워크에 걸쳐 데이터베이스 하이브리드 솔루션에 대 한 구성 요소입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 박스 제품 로컬 데이터 원본에서 데이터 및 원격 원본에서 데이터를 결합 하는 쿼리를 작성할 수 있는 분산된 쿼리 기능을 포함 (비-에서 데이터를 포함 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 원본) 연결 된 서버로 정의 합니다. 모든 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 데이터베이스 응용 프로그램에서 직접 사용 된 다음 다른 데이터베이스 및 가상 master) (제외 개별 연결 된 서버로 추가할 수 있습니다.  

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21756cadbfb924e95edd261942f018fb6aef6a4c
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: dbee7422bdf58d753c31c7aa57a81bc4b29d2568
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226520"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096230"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>sys.dm\_db\_튜닝\_권장 사항 (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -58,12 +57,12 @@ ms.locfileid: "54226520"
 | **score** | **int** | 값/영향 0-100에이 권장 사항에 대 한 예상 크기 (클수록 좋습니다) |
 | **details** | **nvarchar(max)** | 권장 사항에 대 한 자세한 정보가 포함 된 JSON 문서입니다. 다음 필드는 사용할 수 있습니다.<br /><br />`planForceDetails`<br />-    `queryId` -쿼리\_이전 상태로 되돌아간된 쿼리의 id입니다.<br />-    `regressedPlanId` -재발 된 계획의 plan_id 합니다.<br />-   `regressedPlanExecutionCount` -수 회귀 전에 회귀 된 계획을 사용 하 여 쿼리가 실행 될 때 검색 됩니다.<br />-    `regressedPlanAbortedCount` -재발 된 계획을 실행 하는 동안 오류가 검색 되 면된의 수입니다.<br />-    `regressedPlanCpuTimeAverage` -평균 CPU 시간을 재발이 검색 전에 재발 된 쿼리에 사용 합니다.<br />-    `regressedPlanCpuTimeStddev` -회귀 전에 재발 된 쿼리에 사용 된 CPU 시간 표준 편차 검색 됩니다.<br />-    `recommendedPlanId` -plan_id의 계획을 강제 해야 합니다.<br />-   `recommendedPlanExecutionCount`-는 재발이 검색 전에 강제 해야 하는 계획을 사용 하 여 쿼리 실행 횟수입니다.<br />-    `recommendedPlanAbortedCount` -계획을 강제로 실행 하는 동안 오류가 검색 되 면된의 수입니다.<br />-    `recommendedPlanCpuTimeAverage` -(회귀를 검색 하기 전에 계산) 강제 해야 하는 계획을 사용 하 여 실행 한 쿼리에 의해 사용 평균 CPU 시간입니다.<br />-    `recommendedPlanCpuTimeStddev` 회귀 전에 재발 된 쿼리에 사용 된 CPU 시간에 대 한 표준 편차 검색 됩니다.<br /><br />`implementationDetails`<br />-  `method` -회귀를 해결 하려면 사용 해야 하는 메서드. 값은 항상 `TSql`합니다.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] 권장 되는 계획을 적용할 실행 되어야 하는 스크립트입니다. |
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  반환 된 정보 `sys.dm_db_tuning_recommendations` 데이터베이스 엔진 잠재적인 쿼리 성능 저하를 식별 하 고 유지 되지 않습니다 업데이트 됩니다. 권장 사항 까지만 유지 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다시 시작 됩니다. 정기적으로 데이터베이스 관리자는 서버 재활용 후 유지 하려는 경우 튜닝 권장 구성의 백업 복사본을 확인 해야 합니다. 
 
  `currentValue` 필드는 `state` 열 같은 값을 가질 수 있습니다.
  
- | 상태 | Description |
+ | 상태 | 설명 |
  |--------|-------------|
  | `Active` | 권장 사항 활성화 되어 아직 적용 되지 않음입니다. 사용자는 권장 구성 스크립트를 사용 하 고 수동으로 실행할 수 있습니다. |
  | `Verifying` | 권장 사항이 적용 됩니다 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 내부 확인 프로세스 회귀 된 계획을 사용 하 여 강제 계획의 성능을 비교 합니다. |
@@ -73,7 +72,7 @@ ms.locfileid: "54226520"
 
 JSON 문서에 `state` 열 현재 상태의 권장 된 이유를 설명 하는 이유를 포함 합니다. 이유 필드의 값 수 있습니다. 
 
-| 이유 | Description |
+| Reason | 설명 |
 |--------|-------------|
 | `SchemaChanged` | 권장 사항에는 참조 테이블의 스키마가 변경 하기 때문에 만료 되었습니다. |
 | `StatisticsChanged`| 권장 사항 참조 테이블에서 통계 변경으로 인해 만료 되었습니다. |

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3f63b1b4-e70e-44cd-96c6-6878d50d0117
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9207dde54a14e345e99d3c04d4cb66622d85972e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28fcf56293516937455afc387a8d478734f5b006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121377"
 ---
 # <a name="sqldatasources-function"></a>SQLDataSources 함수
 **규칙**  
@@ -88,7 +87,7 @@ SQLRETURN SQLDataSources(
 ## <a name="diagnostics"></a>진단  
  때 **SQLDataSources** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 연관된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 사용 하 여를 *HandleType*SQL_HANDLE_ENV의와 *처리할* 의 *EnvironmentHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLDataSources** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|(DM) 드라이버 관리자 별 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|(DM) 버퍼 \* *ServerName* 충분히 전체 데이터 원본 이름을 반환할 수 없습니다. 따라서 이름이 잘렸습니다. 전체 데이터 원본 이름의 길이가 반환 됩니다 \* *NameLength1Ptr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)<br /><br /> (DM) 버퍼 \* *설명을* 전체 드라이버 설명을 반환 하는 충분히 큰 수 없습니다. 따라서 설명을 잘렸습니다. 잘리지 않은 데이터 원본 설명의 길이에서 **NameLength2Ptr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  

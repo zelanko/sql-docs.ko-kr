@@ -1,5 +1,5 @@
 ---
-title: sys.sp_rda_set_query_mode (Transact-SQL) | Microsoft Docs
+title: sys.sp_rda_set_query_mode (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 65a0b390-cf87-4db7-972a-1fdf13456c88
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aa168f3bbac37e34730d5ee0ab348f5fd7d1743d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1450dc8304c2e8d3db5a6fa8b2153f951e70bde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083609"
 ---
 # <a name="syssprdasetquerymode-transact-sql"></a>sys.sp_rda_set_query_mode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
   
 -   **LOCAL_ONLY** 스트레치 사용 테이블에 대 한 쿼리 로컬 데이터만 반환 합니다.  
   
--   **LOCAL_AND_REMOTE** 스트레치 사용 테이블에 대 한 쿼리 로컬 및 원격 데이터를 반환 합니다. 이것이 기본 동작입니다.  
+-   **LOCAL_AND_REMOTE** 스트레치 사용 테이블에 대 한 쿼리 로컬 및 원격 데이터를 반환 합니다. 이는 기본 동작입니다.  
   
  [ @force = ]  *@force*  
  유효성 검사 없이 쿼리 모드를 변경 하려는 경우 1로 설정할 수 있는 선택적 비트 값이입니다.  
@@ -58,7 +57,7 @@ sp_rda_set_query_mode [ @mode = ] @mode
 ## <a name="permissions"></a>사용 권한  
  Db_owner 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 확장된 저장된 프로시저를 스트레치 사용 데이터베이스에 대 한 쿼리 모드를 설정할 수도 있습니다.  
   
 -   **sp_rda_deauthorize_db**  

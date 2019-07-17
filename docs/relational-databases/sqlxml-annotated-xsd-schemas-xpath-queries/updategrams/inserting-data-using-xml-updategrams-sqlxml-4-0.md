@@ -33,14 +33,13 @@ helpviewer_keywords:
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad4e43d04c16443323358f0b84e6f26a9f9ab6bf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d7526bd23d5b49160748eff653d0e2d9c1e07ce4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086844"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>XML Updategram을 사용하여 데이터 삽입(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ ms.locfileid: "56019014"
   
 -   대부분의 예에서는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 예제 데이터베이스를 사용합니다. 모든 업데이트는 이 데이터베이스의 테이블에 적용됩니다.  
   
-### <a name="a-inserting-a-record-by-using-an-updategram"></a>1. Updategram을 사용하여 단일 레코드 삽입  
+### <a name="a-inserting-a-record-by-using-an-updategram"></a>A. Updategram을 사용하여 단일 레코드 삽입  
  이 특성 중심 Updategram은 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] 데이터베이스의 HumanResources.Employee 테이블에 레코드를 삽입합니다.  
   
  이 예에서 Updategram은 매핑 스키마를 지정하지 않으므로 요소 이름은 테이블 이름에 매핑되고 특성 또는 자식 요소는 해당 테이블의 열에 매핑되는 기본 매핑을 사용합니다.  
@@ -159,7 +158,7 @@ ms.locfileid: "56019014"
 </ROOT>  
 ```  
   
-### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>2. Updategram을 사용하여 여러 레코드 삽입  
+### <a name="b-inserting-multiple-records-by-using-an-updategram"></a>2\. Updategram을 사용하여 여러 레코드 삽입  
  이 Updategram은 HumanResources.Shift 테이블에 새 근무조 레코드 두 개를 추가합니다. Updategram은 선택적 지정 하지 않습니다  **\<하기 전에 >** 블록입니다.  
   
 ```  
@@ -210,7 +209,7 @@ ms.locfileid: "56019014"
 </ROOT>  
 ```  
   
-### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>3. 유효한 XML이 아닌 유효한 SQL Server 문자 작업  
+### <a name="c-working-with-valid-sql-server-characters-that-are-not-valid-in-xml"></a>3\. 유효한 XML이 아닌 유효한 SQL Server 문자 작업  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 테이블 이름은 Northwind 데이터베이스의 Order Details 테이블과 같이 공백을 포함할 수 있습니다. 그러나이 올바르지 않습니다 유효한 XML 문자 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 식별자 이지만 유효 하지 않은 XML 식별자를 사용 하 여 인코딩할 수 ' __xHHHH\_\_' 여기서 hhhh는 4 자리 16 진수 ucs-2 코드에 대 한 인코딩 값으로 가장 중요 한 비트 우선 순서 문자입니다.  
   
 > [!NOTE]  
@@ -238,7 +237,7 @@ ms.locfileid: "56019014"
   
  Order Details 테이블의 UnitPrice 열은 **money** 형식입니다. 적절 한 형식 변환을 적용할 (에서 **문자열** 형식을 **money** 형식), 달러 기호 ($) 값의 일부로 추가 해야 합니다. Updategram은 매핑 스키마의 첫 번째 문자를 지정 하지 않은 경우는 **문자열** 값이 계산 됩니다. 첫 문자가 달러 기호($)이면 해당 변환이 적용됩니다.  
   
- Updategram은 열으로 적절 하 게 표시 됩니다는 여기서 매핑 스키마에 대해 지정 된 경우 **dt:type="fixed.14.4"** 하거나 **sql: datatype = "money"**, 달러 기호 ($) 필요 하지 않습니다. 및 매핑에 의해 변환이 처리 됩니다. 적절한 형식 변환을 수행하려는 이 방법을 사용하는 것이 좋습니다.  
+ Updategram은 열으로 적절 하 게 표시 됩니다는 여기서 매핑 스키마에 대해 지정 된 경우 **dt:type="fixed.14.4"** 하거나 **sql: datatype = "money"** , 달러 기호 ($) 필요 하지 않습니다. 및 매핑에 의해 변환이 처리 됩니다. 적절한 형식 변환을 수행하려는 이 방법을 사용하는 것이 좋습니다.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>스키마에 대해 예제 XPath 쿼리를 테스트하려면  
   
@@ -248,7 +247,7 @@ ms.locfileid: "56019014"
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>4. at-identity 특성을 사용하여 IDENTITY 유형 열에 삽입된 값 검색  
+### <a name="d-using-the-at-identity-attribute-to-retrieve-the-value-that-has-been-inserted-in-the-identity-type-column"></a>4\. at-identity 특성을 사용하여 IDENTITY 유형 열에 삽입된 값 검색  
  다음 Updategram은 두 개의 레코드를 삽입합니다. 하나는 Sales.SalesOrderHeader 테이블에 삽입하고 다른 하나는 Sales.SalesOrderDetail 테이블에 삽입합니다.  
   
  먼저 Updategram은 Sales.SalesOrderHeader 테이블에 레코드를 추가합니다. 이 테이블에서 SalesOrderID 열은 IDENTITY 유형 열입니다. 따라서 테이블에이 레코드를 추가 하면 updategram은 사용 합니다 **id에서** "x" (자리 표시자 값)으로 할당 된 SalesOrderID 값을 캡처하는 특성입니다. updategam 지정 되 고이 **id에서** SalesOrderID 특성 값으로 변수를 \<Sales.SalesOrderDetail > 요소입니다.  
@@ -328,7 +327,7 @@ ms.locfileid: "56019014"
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="e-using-the-updgguid-attribute-to-generate-a-unique-value"></a>5. updg:guid 특성을 사용하여 고유한 값 생성  
+### <a name="e-using-the-updgguid-attribute-to-generate-a-unique-value"></a>5\. updg:guid 특성을 사용하여 고유한 값 생성  
  이 예에서 Updategram은 Cust 및 CustOrder 테이블에 레코드를 삽입합니다. 또한이 updategram은 CustomerID 특성에 대 한 고유한 값을 사용 하 여 생성 된 **updg: guid** 특성입니다.  
   
 ```  
@@ -376,7 +375,7 @@ ms.locfileid: "56019014"
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="f-specifying-a-schema-in-an-updategram"></a>6. Updategram에 스키마 지정  
+### <a name="f-specifying-a-schema-in-an-updategram"></a>6\. Updategram에 스키마 지정  
  이 예의 Updategram은 다음 테이블에 레코드를 삽입합니다.  
   
 ```  
@@ -451,7 +450,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
 </Schema>  
 ```  
   
-### <a name="g-using-the-xsinil-attribute-to-insert-null-values-in-a-column"></a>7. xsi:nil 특성을 사용하여 열에 Null 값 삽입  
+### <a name="g-using-the-xsinil-attribute-to-insert-null-values-in-a-column"></a>7\. xsi:nil 특성을 사용하여 열에 Null 값 삽입  
  표의 해당 열에 null 값을 삽입 하려는 경우 지정할 수 있습니다 합니다 **xsi: nil** updategram의 요소에는 특성입니다. 해당 XSD 스키마에서 XSD **nillable** 특성도 지정 해야 합니다.  
   
  예를 들어 다음 XSD 스키마를 참조하십시오.  
@@ -529,7 +528,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="h-specifying-namespaces-in-an-updategram"></a>8. Updategram에 네임스페이스 지정  
+### <a name="h-specifying-namespaces-in-an-updategram"></a>8\. Updategram에 네임스페이스 지정  
  Updategram에는 Updategram의 동일한 요소에서 선언된 네임스페이스에 속하는 요소가 있을 수 있습니다. 이 경우 해당 스키마에서도 동일한 네임스페이스를 선언해야 하며 요소가 대상 네임스페이스에 속해야 합니다.  
   
  예를 들어 다음 updategram (Updategram-elementhavingnamespace.xml)에  **\<순서 >** 요소는 요소에서 선언 된 네임 스페이스에 속합니다.  
@@ -612,7 +611,7 @@ CustOrder(OrderID, EmployeeID, OrderType)
   
      자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
-### <a name="i-inserting-data-into-an-xml-data-type-column"></a>9. XML 데이터 형식 열에 데이터 삽입  
+### <a name="i-inserting-data-into-an-xml-data-type-column"></a>9\. XML 데이터 형식 열에 데이터 삽입  
  합니다 **xml** 데이터 형식에 도입 된 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]합니다. Updategram을 사용 하 여 삽입 및 업데이트에 저장 된 데이터를 **xml** 데이터 다음 프로 비전을 사용 하 여 열을 입력 합니다.  
   
 -   합니다 **xml** 열은 기존 행을 식별 하는 데 사용할 수 없습니다. 따라서에 포함할 수 없습니다는 **updg: 전에** updategram의 섹션입니다.  
