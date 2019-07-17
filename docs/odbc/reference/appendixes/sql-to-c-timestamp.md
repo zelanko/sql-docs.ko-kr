@@ -1,5 +1,5 @@
 ---
-title: 'SQL에서 C로: Timestamp | Microsoft Docs'
+title: 'SQL에서 C로: 타임 스탬프 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee3852c688f495d54eb07ca9c2866ac17a1f5a1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118839"
 ---
-# <a name="sql-to-c-timestamp"></a>SQL에서 C로: timestamp
+# <a name="sql-to-c-timestamp"></a>SQL에서 C로: 타임 스탬프
 
 Timestamp ODBC SQL 데이터 형식에 대 한 식별자는 다음과 같습니다.
 
@@ -32,9 +31,9 @@ Timestamp ODBC SQL 데이터 형식에 대 한 식별자는 다음과 같습니�
 
 |C 형식 식별자|테스트|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > 문자 바이트 길이<br /><br /> 20 < = *BufferLength* < = 문자 바이트 길이<br /><br /> *BufferLength* < 20|data<br /><br /> 잘린된 데이터 [b]<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > 문자 길이<br /><br /> 20 < = *BufferLength* < = 문자 길이<br /><br /> *BufferLength* < 20|data<br /><br /> 잘린된 데이터 [b]<br /><br /> 정의되지 않음|문자에서 데이터의 길이<br /><br /> 문자에서 데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
+|SQL_C_CHAR|*BufferLength* > 문자 바이트 길이<br /><br /> 20 < = *BufferLength* < = 문자 바이트 길이<br /><br /> *BufferLength* < 20|data<br /><br /> 잘린된 데이터 [b]<br /><br /> Undefined|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이<br /><br /> Undefined|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > 문자 길이<br /><br /> 20 < = *BufferLength* < = 문자 길이<br /><br /> *BufferLength* < 20|data<br /><br /> 잘린된 데이터 [b]<br /><br /> Undefined|문자에서 데이터의 길이<br /><br /> 문자에서 데이터의 길이<br /><br /> Undefined|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> Undefined|데이터의 바이트 길이<br /><br /> Undefined|n/a<br /><br /> 22003|  
 |SQL_C_TYPE_DATE|타임 스탬프의 시간 부분은 0 [a]<br /><br /> 타임 스탬프의 시간 부분은 0이 아닌 [a]|data<br /><br /> 잘린된 데이터 [c]|6[f]<br /><br /> 6[f]|n/a<br /><br /> 01S07|  
 |SQL_C_TYPE_TIME|타임 스탬프의 초 소수 부분이 0 [a]<br /><br /> 타임 스탬프 부분 소수 자릿수 초는 0이 아닌 [a]|데이터 [d]<br /><br /> 잘린된 데이터 [d], [e]|6[f]<br /><br /> 6[f]|n/a<br /><br /> 01S07|  
 |SQL_C_TYPE_TIMESTAMP|초 소수 부분 타임 스탬프는 잘리지 않습니다 [a]<br /><br /> 타임 스탬프의 초 소수 부분 잘립니다 [a]|데이터 [e]<br /><br /> 잘린된 데이터 [e]|16[f]<br /><br /> 16[f]|n/a<br /><br /> 01S07|  

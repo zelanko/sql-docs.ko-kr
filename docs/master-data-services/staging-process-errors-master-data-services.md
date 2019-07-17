@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 91e6ab46cb0171f3e0c16deb5a494ed1f644a660
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce64900270fd1092320a12a6cc58a744eaadae7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085635"
 ---
 # <a name="staging-process-errors-master-data-services"></a>준비 프로세스 오류(Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65488025"
 
   준비 프로세스가 완료되면 준비 테이블에 있는 처리된 모든 레코드의 ErrorCode 열에 값이 지정됩니다. 이러한 값에 대해서는 다음 표에서 설명합니다.  
   
-|코드|Error|발생하는 경우/세부 정보|적용 테이블|  
+|코드|오류|발생하는 경우/세부 정보|적용 테이블|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|동일한 멤버 코드가 준비 테이블에 여러 번 나옵니다.|준비 배치에 동일한 멤버 코드가 여러 번 나옵니다. 멤버가 생성 또는 업데이트되지 않았습니다.|리프<br /><br /> 통합<br /><br /> 관계|  
 |210003|특성 값이 존재하지 않거나 비활성인 멤버를 참조합니다.|도메인 기반 특성을 준비할 때는 이름이 아니라 코드를 사용해야 합니다. **ImportType0**, **1**및 **2**에 적용됩니다.|리프<br /><br /> 통합|  

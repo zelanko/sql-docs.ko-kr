@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04874761ce88069f35c75d5e2ac3b6354a5af5fe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a2f4b2e8dbcf8e8427f51388c7bead75263d95a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130635"
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 > [!NOTE]  
 >  어느 *job_id* 하거나 *job_name* 지정 해야 하며 둘 다 지정할 수 없습니다.  
   
-`[ @server_name = ] 'server'` 지정된 된 작업에서 제거할 대상 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)**, 기본값은 없습니다. *서버* 될 수 있습니다 **(로컬)** 또는 원격 대상 서버의 이름입니다.  
+`[ @server_name = ] 'server'` 지정된 된 작업에서 제거할 대상 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)** , 기본값은 없습니다. *서버* 될 수 있습니다 **(로컬)** 또는 원격 대상 서버의 이름입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

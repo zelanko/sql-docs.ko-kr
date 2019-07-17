@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ff99c2b63ad3f104b5bae4f6378af2e4fe0575bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2acff9f5d78549fe1e00397d566053ec19f628a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120237"
 ---
-# <a name="sysfnhadrdistributedagdatabasereplica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
+# <a name="sysfnhadrdistributedagdatabasereplica-transact-sql"></a>sys.fn_hadr_distributed_ag_database_replica (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   분산된 가용성 그룹에서 데이터베이스의 로컬 가용성 그룹에서 데이터베이스에 매핑하는 데 사용 합니다.  
@@ -51,7 +50,7 @@ sys.fn_hadr_distributed_ag_database_replica( lag_Id, database_id )
 ## <a name="tables-returned"></a>반환된 테이블  
  다음 정보를 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**group_database_id**|**uniqueidentifier**|로컬 가용성 그룹의 데이터베이스 ID입니다.|  
   

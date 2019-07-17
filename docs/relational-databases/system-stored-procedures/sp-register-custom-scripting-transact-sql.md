@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075756"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,14 +42,14 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>인수  
 `[ @type = ] 'type'` 사용자 지정 저장된 프로시저 또는 스크립트의 유형을 등록할 수 있습니다. *형식* 됩니다 **varchar(16)** 이며 기본값은 없고 수 있습니다 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**insert**|INSERT 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
 |**update**|UPDATE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
 |**delete**|DELETE 문이 복제될 때 실행되는 등록된 사용자 지정 저장 프로시저입니다.|  
 |**custom_script**|DDL(데이터 정의 언어) 트리거의 끝에 실행되는 스크립트입니다.|  
   
-`[ @value = ] 'value'` 저장된 프로시저 또는 이름과 정규화 된 경로 이름의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 등록 되는 스크립트 파일입니다. *값* 됩니다 **nvarchar(1024)**, 기본값은 없습니다.  
+`[ @value = ] 'value'` 저장된 프로시저 또는 이름과 정규화 된 경로 이름의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 등록 되는 스크립트 파일입니다. *값* 됩니다 **nvarchar(1024)** , 기본값은 없습니다.  
   
 > [!NOTE]  
 >  NULL을 지정 *값*매개 변수는 이전에 등록 된 스크립트를 실행 하는 것은 등록이 취소 됩니다 [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)합니다.  
@@ -64,7 +63,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_register_custom_scripting** 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
  이 저장 프로시저는 복제된 테이블에서 스키마 변경이 발생하기 전에 실행해야 합니다. 이 저장된 프로시저를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [다시 생성 사용자 지정 트랜잭션 프로시저 스키마 변경 반영을](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)입니다.  

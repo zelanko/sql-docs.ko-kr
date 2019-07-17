@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 511b5d7d-c679-4cb2-a3dd-170cc126f49d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6ac37c6d3a55be4f11a4ad925a950724d5d791d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7376c57f809fa97168b27b158678d931a696b5df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62934835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038973"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>데이터 접근자 함수 - data(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
  *$arg*  
  형식화된 값이 반환되는 항목의 시퀀스입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  형식화된 값에는 다음이 적용됩니다.  
   
 -   원자 값의 형식화된 값은 원자 값입니다.  
@@ -79,7 +78,7 @@ select @x.query('data(<SomeNode>value</SomeNode>)')
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>1\. data() XQuery 함수를 사용하여 노드의 형식화된 값 추출  
+### <a name="a-using-the-data-xquery-function-to-extract-typed-value-of-a-node"></a>A. data() XQuery 함수를 사용하여 노드의 형식화된 값 추출  
  다음 쿼리를 보여 줍니다 하는 방법을 **data ()** 함수를 사용 하는 특성, 요소 및 텍스트 노드는 값을 검색 합니다.  
   
 ```  

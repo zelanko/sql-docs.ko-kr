@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 57e74eb1c7db4aebdd01fde8fc48a425d7affa55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3965c3cc8ea2a2f2de292ca0c75e49c957e04f02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036973"
 ---
 # <a name="settostr-mdx"></a>SetToStr(MDX)
 
@@ -32,7 +31,7 @@ SetToStr(Set_Expression)
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수를 사용하여 집합의 문자열 표현을 구문 분석을 위해 외부 함수에 전송할 수 있습니다. 반환 되는 문자열은 중괄호로 {}, 쉼표로 구분 된 집합의 각 항목을 사용 하 여 합니다.  
   
 ## <a name="example"></a>예제  

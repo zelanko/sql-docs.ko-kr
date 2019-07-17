@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f4bfab3bc18958a51bb05c68e90c17a1359d046
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 201580b71086dfe39e669966070dae2dca72e3eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105297"
 ---
 # <a name="instr-mdx"></a>Instr (MDX)
 
@@ -54,7 +53,7 @@ InStr([start, ]searched_string, search_string[, compare])
 |String2를 찾을 수 없는 경우|영 (0)|  
 |start가 Len(String2)보다 큰 경우|영 (0)|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!WARNING]  
 >  **Instr** 항상 대/소문자 구분 비교를 수행 합니다.  

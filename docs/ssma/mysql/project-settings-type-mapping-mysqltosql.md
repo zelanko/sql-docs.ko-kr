@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 136fdf6d-657f-447b-af41-49bbc6e0e93e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e0a11a0b49589c3763b5af67623c9e819038c217
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: beb82f2fd894af71bb6f291dcc6f86a995f8dd85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63231825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138334"
 ---
 # <a name="project-settings-type-mapping-mysqltosql"></a>프로젝트 설정(형식 매핑)(MySQLToSQL)
 형식 매핑 프로젝트 설정 SSMA 프로젝트에 대 한 기본 형식 매핑을 설정할 수 있습니다.  
@@ -65,7 +64,7 @@ ms.locfileid: "63231825"
 |bit[41..48]|binary[6]|  
 |bit[49..56]|binary[7]|  
 |bit[57..64]|binary[8]|  
-|bit[9..16]|binary[2]|  
+|비트 [9..16]|binary[2]|  
 |blob|varbinary(max)|  
 |blob [0..1]|varbinary[1]|  
 |blob [2..8000]|varbinary[*]|  
@@ -76,30 +75,30 @@ ms.locfileid: "63231825"
 |char 바이트|binary[1]|  
 |바이트 [0..1] char|binary[1]|  
 |바이트 [2..255] char|binary[*]|  
-|char[0..1]|nchar[1]|  
+|char [0..1]|nchar[1]|  
 |char[2..255]|nchar[*]|  
 |character|nchar[1]|  
 |[0..1] 다양 한 문자|nvarchar[1]|  
 |다양 한 [2..255] 문자|NVARCHAR|  
-|character[0..1]|nchar[1]|  
-|character[2..255]|nchar[*]|  
+|문자 [0..1]|nchar[1]|  
+|문자 [2..255]|nchar[*]|  
 |date|date|  
-|Datetime|datetime2[0]|  
+|datetime|datetime2[0]|  
 |dec|Decimal|  
 |dec[*..65]|decimal[*][0]|  
 |dec[*..65][\*..30]|decimal[*][\*]|  
 |Decimal|Decimal|  
-|decimal[*..65]|decimal[*][0]|  
+|decimal [*... 65]|decimal[*][0]|  
 |decimal[*..65][\*..30]|decimal[*][\*]|  
 |double|float[53]|  
 |배정밀도|float[53]|  
 |배정밀도 [*... 255] [\*... 30]|numeric[*][\*]|  
-|double[*..255][\*..30]|numeric[*][\*]|  
+|double [*... 255] [\*... 30]|numeric[*][\*]|  
 |고정|NUMERIC|  
 |fixed[*..65][\*..30]|numeric[*][\*]|  
 |FLOAT|float[24]|  
 |float [*... 255] [\*... 30]|numeric[*][\*]|  
-|float[*..53]|float[53]|  
+|float [*... 53]|float[53]|  
 |ssNoversion|ssNoversion|  
 |int[*..255]|ssNoversion|  
 |integer|ssNoversion|  
@@ -108,7 +107,7 @@ ms.locfileid: "63231825"
 |longtext|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
 |mediumint|ssNoversion|  
-|mediumint[*..255]|ssNoversion|  
+|mediumint [*... 255]|ssNoversion|  
 |mediumtext|nvarchar(max)|  
 |national char|nchar[1]|  
 |national char [0..1]|nchar[1]|  
@@ -128,27 +127,27 @@ ms.locfileid: "63231825"
 |nchar varchar|nvarchar[1]|  
 |nchar varchar [0..1]|nvarchar[1]|  
 |nchar varchar [2..4000]|nvarchar[*]|  
-|nchar varchar[4001..*]|nvarchar(max)|  
-|nchar[0..1]|nchar[1]|  
+|nchar varchar [4001.. *]|nvarchar(max)|  
+|nchar [0..1]|nchar[1]|  
 |nchar[2..255]|nchar[*]|  
 |NUMERIC|NUMERIC|  
-|numeric[*..65]|numeric[*][0]|  
-|numeric[*..65][\*..30]|numeric[*][\*]|  
+|숫자 [*... 65]|numeric[*][0]|  
+|숫자 [*... 65] [\*... 30]|numeric[*][\*]|  
 |NVARCHAR|nvarchar[1]|  
-|nvarchar[0..1]|nvarchar[1]|  
+|nvarchar [0..1]|nvarchar[1]|  
 |nvarchar[2..4000]|nvarchar[*]|  
 |nvarchar[4001..*]|nvarchar(max)|  
 |REAL|float[53]|  
-|real[*..255][\*..30]|numeric[*][\*]|  
+|실제 [*... 255] [\*... 30]|numeric[*][\*]|  
 |직렬|BIGINT|  
 |SMALLINT|SMALLINT|  
 |smallint[*..255]|SMALLINT|  
 |text|nvarchar(max)|  
-|text[0..1]|nvarchar[1]|  
+|텍스트 [0..1]|nvarchar[1]|  
 |텍스트 [2..4000]|nvarchar[*]|  
 |text[4001..*]|nvarchar(max)|  
 |Time|Time|  
-|TIMESTAMP|Datetime|  
+|TIMESTAMP|datetime|  
 |tinyblob|varbinary[255]|  
 |TINYINT|SMALLINT|  
 |tinyint[*..255]|SMALLINT|  
@@ -166,11 +165,11 @@ ms.locfileid: "63231825"
 |배정밀도 서명 되지 않은 [*... 255] [\*... 30]|numeric[*][\*]|  
 |double 서명 되지 않은 [*... 255] [\*... 30]|numeric[*][\*]|  
 |서명 되지 않은 고정|NUMERIC|  
-|unsigned fixed[*..65][\*..30]|numeric[*][\*]|  
+|서명 되지 않은 고정 [*... 65] [\*... 30]|numeric[*][\*]|  
 |부호 없는 float|float[24]|  
 |부호 없는 float [*... 255] [\*... 30]|numeric[*][\*]|  
 |부호 없는 float [*... 53]|float[53]|  
-|부호 없는 정수|BIGINT|  
+|unsigned int|BIGINT|  
 |부호 없는 int [*... 255]|BIGINT|  
 |부호 없는 정수|BIGINT|  
 |부호 없는 정수 [*... 255]|BIGINT|  
@@ -188,11 +187,11 @@ ms.locfileid: "63231825"
 |varbinary [0..1]|varbinary[1]|  
 |varbinary [2..8000]|varbinary[*]|  
 |varbinary[8001..*]|varbinary(max)|  
-|varchar[0..1]|nvarchar[1]|  
+|varchar [0..1]|nvarchar[1]|  
 |varchar[2..4000]|nvarchar[*]|  
 |varchar[4001..*]|nvarchar(max)|  
 |year|SMALLINT|  
-|year[2..2]|SMALLINT|  
+|연도 [2..2]|SMALLINT|  
 |연도 [4..4]|SMALLINT|  
   
 ##### <a name="add"></a>추가  

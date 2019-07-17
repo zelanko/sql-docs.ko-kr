@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f572e9e76f77b0c535cd57ff4ed6cd091aec0f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 629ff63f6fd06aaccc1f60209231f5c937f4a67d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036128"
 ---
 # <a name="sqlcancelhandle-function"></a>SQLCancelHandle 함수
 **규칙**  
@@ -59,7 +58,7 @@ SQLRETURN SQLCancelHandle(
   
  다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLCancelHandle** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |HY000|일반 오류|오류가 없는 관련 SQLSTATE 했습니다는 및 없습니다 구현 별 SQLSTATE 정의 되었습니다. 반환 된 오류 메시지 [SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) 인수의  *\*MessageText* 버퍼 오류 및 해당 원인에 설명 합니다.|  

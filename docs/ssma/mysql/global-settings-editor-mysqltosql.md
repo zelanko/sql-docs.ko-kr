@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1ac003b5-493a-49a5-be2b-fedbc6e2cc11
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7cfe49aaade3a2854a62c8927102859a7f37ca9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8fd4998a491d17c493588acfa7df9092f66f6e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62926996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075407"
 ---
 # <a name="global-settings-editor-mysqltosql"></a>전역 설정(편집기)(MySQLToSQL)
 편집기 페이지를 사용 합니다 **전역 설정** 대화 상자에서 코드 편집기 창에 대 한 설정을 지정 합니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7e1be086b891d6888c6509b15adc6664b3022978
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb6f035b4d597e2b648134c195b698554dc78e12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072473"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>SSMA 프로젝트 작업(SybaseToSQL)
 Sybase 적응형 Server Enterprise (ASE) 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 처음 만들면 SSMA 프로젝트를 합니다. 마이그레이션하려는 ASE 데이터베이스에 대 한 메타 데이터가 포함 된 파일이 프로젝트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 대상 인스턴스에 대 한 메타 데이터 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 마이그레이션된 개체 및 데이터를 받을 SQL Azure 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 연결 정보 및 프로젝트 설정 합니다.  

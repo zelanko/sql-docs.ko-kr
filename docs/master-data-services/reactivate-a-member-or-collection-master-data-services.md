@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bb4884c0-3658-4763-92d1-636804278b1c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 210dd27a8f91077e7e022c19ec97f41c7908a38c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b07555b2c770cb1a4c9a6ad81348baac8f75114c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093108"
 ---
 # <a name="reactivate-a-member-or-collection-master-data-services"></a>멤버 또는 컬렉션 다시 활성화(Master Data Services)
 

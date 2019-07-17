@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd729956ee7bb1fccf7a8fceb7a435042df4df7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111189"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC 프로그래머&#39;참조
 합니다 *ODBC 프로그래머 참조* 다음 섹션이 포함 되어 있습니다.  
@@ -40,7 +39,7 @@ ms.locfileid: "63273038"
 -   [ODBC 부록](../../odbc/reference/appendixes/odbc-appendixes.md) 기술 세부 정보를 포함 하 고 ODBC 오류 코드, 데이터 형식 및 SQL 문법에 대 한 테이블을 참조 합니다.  
   
 ## <a name="working-with-the-odbc-documentation"></a>ODBC 설명서를 사용 하 여 작업  
- ODBC 인터페이스는 C 프로그래밍 언어를 사용 하 여 사용 하도록 설계 되었습니다. 세 가지 영역에 걸쳐 ODBC 인터페이스 사용: SQL 문, ODBC 함수 호출 및 C 프로그래밍 합니다. 이 설명서는 다음을 가정합니다.  
+ ODBC 인터페이스는 C 프로그래밍 언어와 함께 사용하도록 설계되었습니다. 세 가지 영역에 걸쳐 ODBC 인터페이스 사용: SQL 문, ODBC 함수 호출 및 C 프로그래밍 합니다. 이 설명서는 다음을 가정합니다.  
   
 -   C 프로그래밍 언어에 대해 잘 알고 있습니다.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "63273038"
   
 |형식|사용 대상|  
 |------------|--------------|  
-|SELECT * FROM|대문자는 SQL 문, 매크로 이름 및 운영 체제 명령 수준에서 사용 되는 용어를 나타냅니다.|  
+|선택 *에서|대문자는 SQL 문, 매크로 이름 및 운영 체제 명령 수준에서 사용 되는 용어를 나타냅니다.|  
 |`RETCODE SQLFetch(hdbc)`|고정 폭 글꼴 샘플 명령줄 및 프로그램 코드에 사용 됩니다.|  
 |*argument*|기울임꼴은은 프로그래밍 방식으로 인수, 사용자 또는 응용 프로그램을 제공 해야 합니다 또는 강조 단어는 정보를 나타냅니다.|  
 |**SQLEndTran**|굵은 나타냅니다 구문은 함수 이름을 포함 하 여 표시 된 대로 정확히 입력 해야 합니다.|  
@@ -68,7 +67,7 @@ ms.locfileid: "63273038"
   
 -   언어-무결성 향상 된 기능, ANSI, 1989 ANSI X3.135 1989를 사용 하 여 SQL 데이터베이스입니다.  
   
--   Database Language - SQL: X3H2 ANSI 및 ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
+-   언어-SQL 데이터베이스: X3H2 ANSI 및 ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
   
 -   Open Group 데이터 관리: 구조적된 쿼리 언어 (SQL), 버전 2 (Open Group, 1996).  
   

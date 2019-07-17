@@ -10,12 +10,12 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5258a95b713da0ec1fe526e94ce11c6e5e0b595c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138775"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259834"
 ---
 # <a name="creating-script-files-accesstosql"></a>스크립트 파일 (AccessToSQL) 만들기
 첫 번째 스크립트 파일을 만들 때 SSMA 콘솔 응용 프로그램을 시작 하기 전에 고 변수 값 파일을 만들고 서버 연결 파일에 필요한 경우 단계입니다.  
@@ -198,7 +198,7 @@ ms.locfileid: "63138775"
   
     -   덮어쓰기: 기존 개체 값을 덮어씁니다. 이 작업은 기본적으로 수행 됩니다.  
   
-    -   skip: 콘솔은 데이터베이스에 이미 존재 하는 개체를 건너뛰고  
+    -   건너뛰기: 콘솔은 데이터베이스에 이미 존재 하는 개체를 건너뛰고  
   
     -   요청 사용자: 입력 하 라는 ('예 '/' 아니요')  
   
@@ -249,7 +249,7 @@ ms.locfileid: "63138775"
   
     -   every-10%  
   
-    -   every-20%  
+    -   모든-20%  
   
     **예제:**  
   
@@ -292,7 +292,7 @@ ms.locfileid: "63138775"
   
     -   정보: 디버그 메시지를 제외한 모든 수준은 로깅됩니다.  
   
-    -   debug: 기록 된 메시지의 모든 수준입니다.  
+    -   디버그: 기록 된 메시지의 모든 수준입니다.  
   
     > [!NOTE]  
     > 모든 수준에서 필수 메시지가 기록 됩니다.  
@@ -393,6 +393,6 @@ ms.locfileid: "63138775"
 ## <a name="next-step"></a>다음 단계
 운영 콘솔에서 다음 단계 [변수 값 파일 만들기 &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)합니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
 [변수 값 파일 만들기 &#40;AccessToSQL&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

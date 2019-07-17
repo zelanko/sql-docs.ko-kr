@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3a2dd68c36887c373c7102b150ffc1032750eb52
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099836"
 ---
 # <a name="functions-on-string-values---concat"></a>문자열 값 함수 - concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ fn:concat ($string as xs:string?
  *$string*  
  연결하기 위한 문자열(옵션)입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  함수에는 최소한 둘 이상의 인수가 필요합니다. 인수가 빈 시퀀스인 경우 길이가 0인 문자열로 처리됩니다.  
   
 ## <a name="supplementary-characters-surrogate-pairs"></a>보조 문자(서로게이트 쌍)  
@@ -50,8 +49,8 @@ fn:concat ($string as xs:string?
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 예제 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>1. concat() XQuery 함수를 사용하여 문자열 연결  
- 이 쿼리는 특정한 제품 모델에 대한 보증 기간과 보증 설명을 연결하여 만든 문자열을 반환합니다. 카탈로그 설명 문서에서 <`Warranty`> 요소는 <`WarrantyPeriod`> 및 <`Description`> 자식 요소로 구성됩니다.  
+### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. concat() XQuery 함수를 사용하여 문자열 연결  
+ 이 쿼리는 특정한 제품 모델에 대한 보증 기간과 보증 설명을 연결하여 만든 문자열을 반환합니다. 카탈로그 설명 문서에는 <`Warranty`> 요소는 구성 <`WarrantyPeriod`> 및 <`Description`> 자식 요소입니다.  
   
 ```  
 WITH XMLNAMESPACES (  

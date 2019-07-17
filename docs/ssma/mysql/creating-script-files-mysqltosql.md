@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b4608fe7-c777-4ba5-b853-4402f02109e3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: da5b708c4dbf80a1faa7fa74f237b1cc750ea975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15c4ff470c78814745be6f3f4c8f898bf4b809ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63132315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103057"
 ---
 # <a name="creating-script-files-mysqltosql"></a>스크립트 파일 만들기(MySQLToSQL)
 첫 번째 스크립트 파일을 만들 때 SSMA 콘솔 응용 프로그램을 시작 하기 전에 고 변수 값 파일을 만들고 서버 연결 파일에 필요한 경우 단계입니다.  
@@ -203,7 +202,7 @@ ms.locfileid: "63132315"
   
     -   덮어쓰기: 기존 개체 값을 덮어씁니다. 이 작업은 기본적으로 수행 됩니다.  
   
-    -   skip: 콘솔은 데이터베이스에 이미 존재 하는 개체를 건너뛰고  
+    -   건너뛰기: 콘솔은 데이터베이스에 이미 존재 하는 개체를 건너뛰고  
   
     -   요청 사용자: 입력 하 라는 ('예 '/' 아니요')  
   
@@ -254,7 +253,7 @@ ms.locfileid: "63132315"
   
     -   every-10%  
   
-    -   every-20%  
+    -   모든-20%  
   
     **예제:**  
   
@@ -297,7 +296,7 @@ ms.locfileid: "63132315"
   
     -   정보: 디버그 메시지를 제외한 모든 수준은 로깅됩니다.  
   
-    -   debug: 기록 된 메시지의 모든 수준입니다.  
+    -   디버그: 기록 된 메시지의 모든 수준입니다.  
   
     > [!NOTE]  
     > 모든 수준에서 필수 메시지가 기록 됩니다.  

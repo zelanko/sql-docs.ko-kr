@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db8bcf70823401f60efc316caabe283f5be59f48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f4f82a24e594a25b0b1ec9bbeab2256624ae6e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036255"
 ---
 # <a name="sqlallochandle-function"></a>SQLAllocHandle 함수
 **규칙**  
@@ -86,7 +85,7 @@ SQLRETURN SQLAllocHandle(
 ## <a name="diagnostics"></a>진단  
  때 **SQLAllocHandle** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 적절 한 *HandleType* 하 고 *처리할* 의 값으로 설정 *InputHandle*합니다. SQL_SUCCESS_WITH_INFO (하지만 하지 SQL_ERROR)에 대해 반환 될 수는 *OutputHandle* 인수입니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLAllocHandle** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08003|연결이 열려 있지 않습니다.|(DM)는 *HandleType* 인수 호출 되었거나 SQL_HANDLE_DESC, 하지만 지정 된 연결을 *InputHandle* 인수를 열 수 없습니다. 연결 프로세스가 성공적으로 완료 해야 합니다 (및 연결이 열려 있어야 합니다.) 문 또는 설명자를 할당 하도록 드라이버에 대 한 처리 합니다.|  

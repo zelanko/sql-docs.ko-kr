@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 01144d6a82319b7853ae60f901a5fc0ad3c78d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07f94c3ed850af10120b1de7d95941bc5c90e826
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088217"
 ---
 # <a name="openingperiod-mdx"></a>OpeningPeriod(MDX)
 
@@ -35,7 +34,7 @@ OpeningPeriod( [ Level_Expression [ , Member_Expression ] ] )
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수는 주로 Time 차원에 대해 사용되지만 모든 차원에 대해 사용할 수도 있습니다.  
   
 -   수준 식이 지정 되는 **OpeningPeriod** 함수는 지정된 된 수준이 들어 지정된 된 수준에서 기본 멤버의 하위 항목 중 첫 번째 형제를 반환 하는 계층 구조를 사용 합니다.  

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b35c095b2c00b4293062086b9a79f92b1fb4e77b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a1f22edf81e5e5e8ac7e2d9b44ce26e6b1f8bad2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032508"
 ---
 # <a name="msreplbackuplsns-transact-sql"></a>MSrepl_backup_lsns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSrepl_backup_lsns** 테이블 배포 데이터베이스의 'sync with backup' 옵션을 지원 하기 위한 트랜잭션 LSN (로그 시퀀스 번호)을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|게시자 데이터베이스의 ID입니다.|  
 |**valid_xact_id**|**varbinary(16)**|로그를 잘라낼 지점을 표시하기 위해 게시자에게 보낼 트랜잭션의 ID입니다. 배포 데이터베이스가 'sync with backup' 모드인 경우에만 사용합니다. 백업된 배포 데이터베이스에 최근에 복제된 트랜잭션의 ID가 포함됩니다. 이 내용이 게시자에게 보내져 로그 판독기가 로그 트랜잭션을 잘라낼 지점을 표시하게 됩니다.|  

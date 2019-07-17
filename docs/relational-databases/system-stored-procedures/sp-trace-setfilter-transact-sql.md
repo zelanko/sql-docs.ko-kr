@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c296c668bf553569becb9b4cf2e30001021d47c1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095944"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |**0**|=(같음)|  
 |**1**|<> (같지 않음)|  
 |**2**|> (보다 큼)|  
-|**3**|< (보다 작음)|  
+|**3**|<(보다 작음)|  
 |**4**|> = (크거나 같음)|  
 |**5**|< = (작거나 같음)|  
 |**6**|LIKE|  
@@ -92,7 +91,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |13|메모리가 부족합니다. 지정한 동작을 수행할 메모리가 충분하지 않으면 반환됩니다.|  
 |16|함수가 이 추적에 유효하지 않습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_trace_setfilter** 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대부분의 이전 버전에서 사용할 수 있는 확장된 저장된 프로시저가 실행 하 던 작업을 수행 하는 프로시저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 사용 하 여 **sp_trace_setfilter** 대신 합니다 **xp_trace_set\*필터** 적용, 제거 또는 추적에 대 한 필터를 조작 합니다. 확장 저장된 프로시저를 만듭니다. 자세한 내용은 [추적 필터링](../../relational-databases/sql-trace/filter-a-trace.md)합니다.  
   
  한 번 실행에서 특정 열에 대 한 모든 필터를 함께 설정 되어야 합니다 **sp_trace_setfilter**합니다. 예를 들어 필터 두 개를 응용 프로그램 이름 열에, 그리고 필터 하나를 사용자 이름 열에 적용하려면 응용 프로그램 이름에 필터를 차례로 지정해야 합니다. 한 번의 저장 프로시저 호출에서 응용 프로그램 이름에 필터 하나를 지정한 다음 사용자 이름에 필터를 지정하고 응용 프로그램 이름에 나머지 필터 하나를 지정하려고 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류를 반환합니다.  

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1d179cbef19e652472714b8010edcaeb12ebcc6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f21873e8db662bc77bd1acbb5d48c6af49aba404
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032533"
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSqreader_history** 테이블은 로컬 배포자와 연결 된 큐 판독기 에이전트에 대 한 기록 행을 포함 합니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|큐 판독기 에이전트의 ID입니다.|  
 |**publication_id**|**int**|게시의 ID입니다.|  
@@ -50,7 +49,7 @@ ms.locfileid: "52779695"
 |**error_id**|**int**|0이 아닌 경우 숫자 나타내는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 메시지입니다.|  
 |**timestamp**|**timestamp**|테이블의 타임스탬프 열입니다.|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [복제 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 327b0bdc83588ef988a716ba44e859aa5d3f8659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2384d6fa7831c38ff68f495485555701f2a1f7ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085606"
 ---
 # <a name="system-settings-master-data-services"></a>시스템 설정(Master Data Services)
 
@@ -131,7 +130,7 @@ ms.locfileid: "65487990"
 
 ##  <a name="Performance"></a> 성능 설정  
 
-|구성 관리자 설정|시스템 설정|Description|  
+|구성 관리자 설정|시스템 설정|설명|  
 |-----------------------------------|--------------------|-----------------|  
 |**성능 개선 설정 사용**|**PerformanceImprovementEnable**|기본적으로 로드 권한 관련 페이지의 성능이 좋은 이 설정(**1로 설정**)을 사용하도록 설정했습니다. 그러나 이 상황에서 엔터티, 특성, 사용자 또는 그룹을 만들거나 수정하며 성능이 떨어집니다. 이를 방지하기 위해 이 설정을 비활성화할 수 있습니다(**0으로 설정**). 이 설정을 변경한 후 "**EXEC [mdm].[udpPerformanceToggleSwitch];** " 명령을 실행하여 보기와 데이터가 올바른지 확인해야 합니다.|  
   

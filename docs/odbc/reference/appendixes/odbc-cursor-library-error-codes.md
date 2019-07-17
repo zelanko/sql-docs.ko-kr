@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9713480e-8744-4f37-a630-20871590d4a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fb077261eda4b2e013abd6d87e894637a29216a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3fb86e1332e3b7e4d89003ccf6421151e5d9cec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100675"
 ---
 # <a name="odbc-cursor-library-error-codes"></a>ODBC 커서 라이브러리 오류 코드
 > [!IMPORTANT]  
@@ -31,7 +30,7 @@ ms.locfileid: "63181234"
 > [!NOTE]  
 >  커서 라이브러리 상태 레코드; 순서를 지정 하지 않습니다. 드라이버 관리자와 ODBC 3입니다. *x* 드라이버 상태 레코드를 정렬 하는 것에 대 한 책임이 있습니다.  
   
-|SQLSTATE|Description|반환 될 수 있습니다.|  
+|SQLSTATE|설명|반환 될 수 있습니다.|  
 |--------------|-----------------|--------------------------|  
 |01000|커서를 업데이트할 수 없습니다.|**SQLFetch**<br /><br /> **SQLFetchScroll**|  
 |01000|커서 라이브러리 사용 되지 않습니다. 로드 하지 못했습니다.|**SQLBrowseConnect**<br /><br /> **SQLConnect**<br /><br /> **SQLDriverConnect**|  

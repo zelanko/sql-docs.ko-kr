@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a042229e3149f97b72b6e86b485771966eb80c30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d9d4a7572131afeeb0017d3773b72d899052b32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087788"
 ---
 # <a name="types-of-descriptors"></a>설명자 형식
 설명자를 다음 중 하나를 설명 하기 위해 사용 됩니다.  

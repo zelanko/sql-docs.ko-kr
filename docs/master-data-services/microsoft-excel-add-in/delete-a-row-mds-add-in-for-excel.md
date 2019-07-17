@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7791fbdd-7fed-44be-b0bd-20c1eba7239e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 7c2eae25d729cf93206203da784185ed484c3b1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ea865049ecbcfa41390671880e0b5bbeae38cb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092407"
 ---
 # <a name="delete-a-row-mds-add-in-for-excel"></a>행 삭제(Excel용 MDS 추가 기능)
 

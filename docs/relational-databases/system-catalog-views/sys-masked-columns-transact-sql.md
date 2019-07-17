@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 671577e4-d757-4b8d-9aa9-0fc8d51ea9ca
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e5e90fb00a74324cce6267e372199153707ca7ee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e059265dc5f5e0d2e4bc4a3b1396d2401386d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102370"
 ---
 # <a name="sysmaskedcolumns-transact-sql"></a>sys.masked_columns (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,13 +33,13 @@ ms.locfileid: "47726111"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|이 열이 속한 개체의 ID입니다.|  
-|NAME|**sysname**|열의 이름입니다. 개체 내에서 고유합니다.|  
+|name|**sysname**|열의 이름입니다. 개체 내에서 고유합니다.|  
 |column_id|**int**|열의 ID입니다. 개체 내에서 고유합니다.<br /><br /> 열 ID는 순차적이지 않을 수 있습니다.|  
 |**sys.masked_columns** 에서 상속 하는 많은 많은 열을 반환 **sys.columns**합니다.|다양 한|참조 [sys.columns &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 더 많은 열 정의 대 한 합니다.|  
 |is_masked|**bit**|열이 마스킹 경우를 나타냅니다. 1 masked 나타냅니다.|  
 |masking_function|**nvarchar(4000)**|열에 대 한 마스킹 함수입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="permissions"></a>사용 권한  
  이 뷰는 사용자의 일종의 사용 권한 테이블 또는 사용자 VIEW ANY DEFINITION 권한이 있으면 테이블에 대 한 정보를 반환 합니다.  

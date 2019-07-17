@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 94d7a083-2dbc-4e3d-94dd-92b7ff9d0c2d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1191a29fa3988b85548578e8a38efc12d9fce41c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fcf6142a0df913c33782b4c65e8e95d4fcf91ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029383"
 ---
 # <a name="data-migration-settings-sybasetosql"></a>데이터 마이그레이션 설정(SybaseToSQL)
   

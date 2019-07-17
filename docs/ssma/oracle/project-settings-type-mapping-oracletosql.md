@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4bb8466e-2199-4f00-8513-b04e9586723d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 449f1ecc2fbcc2f9e18ea24cb5bd42323bbf5ddc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625887"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266579"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>프로젝트 설정(형식 매핑)(OracleToSQL)
 형식 매핑 페이지의 **프로젝트 설정** 대화 상자에는 SSMA Oracle 데이터 형식으로 변환 하는 방법을 사용자 지정 하는 설정이 포함 되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식입니다.  
@@ -135,7 +135,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
 |배정밀도|float[53]|  
 |FLOAT|float[53]|  
-|float[*..53]|float[*]|  
+|float [*... 53]|float[*]|  
 |float[54..*]|float[53]|  
 |ssNoversion|ssNoversion|  
 |integer|ssNoversion|  
@@ -144,7 +144,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |long raw [*... 8000]|varbinary[*]|  
 |long raw[8001..*]|varbinary(max)|  
 |long varchar|varchar(max)|  
-|long[*..8000]|varchar[*]|  
+|긴 [*... 8000]|varchar[*]|  
 |long[8001..*]|varchar(max)|  
 |national char|NCHAR|  
 |national char varying [*... \*]|nvarchar[*]|  
@@ -156,7 +156,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |nchar[*]|nchar[*]|  
 |nclob|nvarchar(max)|  
 |number|float[53]|  
-|number[*..\*]|numeric[*]|  
+|숫자 [*... \*]|numeric[*]|  
 |number[*..\*][\*..\*]|numeric[*][\*]|  
 |NUMERIC|NUMERIC|  
 |numeric[*..\*]|numeric[*]|  
@@ -191,7 +191,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |Boolean|bit|  
 |Char|char|  
 |다양 한 char [*... 8000]|varchar[*]|  
-|char varying[8001..*]|varchar(max)|  
+|다양 한 char [8001.. *]|varchar(max)|  
 |char [*... 8000]|char[*]|  
 |char[8001..*]|varchar(max)|  
 |문자|char|  
@@ -209,7 +209,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |decimal[*..\*][\*..\*]|decimal[*][\*]|  
 |배정밀도|float[53]|  
 |부동|float[53]|  
-|float[*..53]|float[*]|  
+|float [*... 53]|float[*]|  
 |float[54..*]|float[53]|  
 |Int|ssNoversion|  
 |정수|ssNoversion|  
@@ -235,7 +235,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |nchar 다양 한 [4001.. *]|nvarchar(max)|  
 |nclob|nvarchar(max)|  
 |Number|float[53]|  
-|number[*..\*]|numeric[*]|  
+|숫자 [*... \*]|numeric[*]|  
 |number[*..\*][\*..\*]|numeric[*][\*]|  
 |숫자|numeric[38][0]|  
 |numeric[*..\*]|numeric[*]|  
@@ -249,7 +249,7 @@ Oracle 용 SSMA, 인수, 열, 지역 변수 및 반환 값에 대 한 사용자 
 |Rowid|uniqueidentifier|  
 |signtype|SMALLINT|  
 |Smallint|SMALLINT|  
-|string[*..8000]|varchar[*]|  
+|문자열 [*... 8000]|varchar[*]|  
 |string[8001..*]|varchar(max)|  
 |TIMESTAMP|Datetime2|  
 |현지 표준 시간대를 사용 하 여 타임 스탬프|datetimeoffset|  

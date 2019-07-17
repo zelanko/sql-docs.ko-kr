@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 63b0fde7-95d7-4ad7-a219-a9feacf1bd89
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffdedf95865e2653ea434c30eb5c07f19ba8286f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3d08f031394522b0d9c9ab5f09bb6a79c4d5a01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097831"
 ---
 # <a name="sysdmexecdescribefirstresultsetforobject-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sys.dm_exec_describe_first_result_set_for_object
 ## <a name="table-returned"></a>반환된 테이블  
  이 공통 메타데이터는 결과 메타데이터의 각 열에 대한 하나의 행이 포함된 결과 집합으로 반환됩니다. 각 행은 다음 섹션에 설명된 형식으로 열의 유형과 Null 허용 여부를 설명합니다. 모든 제어 경로에 대해 첫 번째 문이 없을 경우 행이 0개인 결과 집합이 반환됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|해당 열이 정보 검색을 목적으로 추가되어 실제로 결과 집합에 나타나지 않는 별도의 열인지 여부를 지정합니다.|  
 |**column_ordinal**|**int**|결과 집합에서 열의 서수 위치를 포함합니다. 첫 번째 열의 위치가 1로 지정됩니다.|  
@@ -62,7 +61,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**system_type_id**|**int**|Sys.types에 지정 된 대로 열 데이터 형식의 system_type_id를 포함 합니다. CLR 형식의 경우 system_type_name 열에서 NULL을 반환해도 이 열은 값 240을 반환합니다.|  
 |**system_type_name**|**nvarchar(256)**|데이터 형식 이름을 포함합니다. 열의 데이터 형식에 지정된 인수(length, precision, scale 등)를 포함합니다. 데이터 형식이 사용자 정의 별칭 형식인 경우 기본 시스템 형식이 여기에 지정됩니다. 데이터 형식이 CLR 사용자 정의 형식인 경우 이 열에 NULL이 반환됩니다.|  
 |**max_length**|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)** , **nvarchar (max)** 하십시오 **varbinary (max)** , 또는 **xml**.<br /><br /> 에 대 한 **텍스트** 열을 **max_length** 값이 16 또는 값으로 설정 됩니다 **sp_tableoption 'text in row'** 합니다.|  
-|**전체 자릿수**|**tinyint**|숫자 기반일 경우 열의 전체 자릿수이고 그렇지 않으면 0을 반환합니다.|  
+|**precision**|**tinyint**|숫자 기반일 경우 열의 전체 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**scale**|**tinyint**|숫자 기반일 경우 열의 소수 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**collation_name**|**sysname**|문자 기반일 경우 열의 데이터 정렬 이름이고 그렇지 않으면 NULL을 반환합니다.|  
 |**user_type_id**|**int**|CLR 및 별칭 형식의 경우 sys.types에 지정된 대로 열 데이터 형식의 user_type_id를 포함합니다. 그렇지 않으면 NULL입니다.|  
@@ -97,12 +96,12 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type**|**int**|반환할 오류를 나타내는 정수를 포함합니다. error_type_desc에 매핑됩니다. 주의 아래의 목록을 참조하세요.|  
 |**error_type_desc**|**nvarchar(60)**|반환할 오류를 나타내는 간단한 대문자 문자열을 포함합니다. error_type에 매핑됩니다. 주의 아래의 목록을 참조하세요.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수와 동일한 알고리즘을 사용 하 여 **sp_describe_first_result_set**합니다. 자세한 내용은 [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)합니다.  
   
  다음 표에서는 오류 유형 및 설명을 나열합니다.  
   
-|error_type|error_type|Description|  
+|error_type|error_type|설명|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|설명하지 않은 모든 오류입니다.|  
 |2|SYNTAX|일괄 처리에 발생한 구문 오류입니다.|  
@@ -123,7 +122,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-metadata-with-and-without-browse-information"></a>1\. 찾아보기 정보가 있는 메타데이터와 찾아보기 정보가 없는 메타데이터 반환  
+### <a name="a-returning-metadata-with-and-without-browse-information"></a>A. 찾아보기 정보가 있는 메타데이터와 찾아보기 정보가 없는 메타데이터 반환  
  다음 예제에서는 두 개의 결과 집합을 반환 하는 TestProc2 라는 저장된 프로시저를 만듭니다. 다음 예제는 방법을 보여 줍니다 **sys.dm_exec_describe_first_result_set** 첫 번째 결과 찾아보기 정보가 없는 절차에서는 집합에 대 한 정보를 반환 합니다.  
   
 ```  

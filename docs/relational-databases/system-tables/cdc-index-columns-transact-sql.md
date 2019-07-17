@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 256ec8a5-3031-40a8-9fdb-99db42ea453d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d47de7882a6eeeca72ad0da8521ab298c7ea8364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69ed86e55cadf6c594ca764874bc1257c6d1a9a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035341"
 ---
 # <a name="cdcindexcolumns-transact-sql"></a>cdc.index_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "62471211"
  시스템 테이블은 직접 쿼리하지 않는 것이 좋습니다. 대신 실행 합니다 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) 저장 프로시저입니다.  
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|변경 테이블의 ID입니다.|  
 |**column_name**|**sysname**|인덱스 열의 이름입니다.|  

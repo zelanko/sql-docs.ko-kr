@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9333da96-3a1c-4adb-9a74-5dac9ce596df
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6fa6606d7daf4a1b61ff986d1d7c5675b5ae5f1f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e138a8845336c41a031bd6e25b92138ae03ed63b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099059"
 ---
 # <a name="spchangereplicationserverpasswords-transact-sql"></a>sp_changereplicationserverpasswords(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +44,9 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
  **1** = Windows 통합된 인증  
   
- **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication  
+ **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증  
   
-`[ @login = ] 'login'` Windows 계정 이름 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 되 고 로그인 합니다. *로그인* 됩니다 **nvarchar(257)**, 기본값은 없습니다  
+`[ @login = ] 'login'` Windows 계정 이름 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 되 고 로그인 합니다. *로그인* 됩니다 **nvarchar(257)** , 기본값은 없습니다  
   
 `[ @password = ] 'password'` 저장할 새 암호는 지정 된 *로그인*합니다. *암호* 됩니다 **sysname**, 기본값은 없습니다.  
   
@@ -56,7 +55,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
   
 `[ @server = ] 'server'` 저장된 된 암호는 변경할 서버 연결이입니다. *서버* 됩니다 **sysname**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**distributor**|배포자에 대한 모든 에이전트 연결입니다.|  
 |**publisher**|게시자에 대한 모든 에이전트 연결입니다.|  
@@ -66,7 +65,7 @@ sp_changereplicationserverpasswords [ @login_type = ] login_type
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changereplicationserverpasswords** 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

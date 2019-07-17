@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: fb34a560-bde9-4ad9-aa96-0d4baa4fc104
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8531f33f2d027eba14d4416e9138560b25ead20e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 735173b6812093293c1473ee9d4bc8a7378be2c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097720"
 ---
-# <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact-SQL)
+# <a name="sysdmexecinputbuffer-transact-sql"></a>sys.dm_exec_input_buffer (Transact SQL)
 [!INCLUDE[tsql-appliesto-2014sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2014sp2-asdb-xxxx-xxx-md.md)]
 
   인스턴스에 제출 된 문에 대 한 정보를 반환 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -54,7 +53,7 @@ request_id [sys.dm_exec_requests](../../relational-databases/system-dynamic-mana
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**event_type**|**nvarchar(256)**|지정 된 spid에 대 한 입력된 버퍼에서 이벤트의 형식입니다.|  
 |**parameters**|**smallint**|제공 된 문에 대 한 모든 매개 변수입니다.|  
@@ -65,7 +64,7 @@ request_id [sys.dm_exec_requests](../../relational-databases/system-dynamic-mana
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)], 사용자에서 실행 중인 모든 세션 참조는 사용자가 데이터베이스 소유자 인 경우는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]고, 그렇지 않으면 사용자는 현재 세션에만 표시 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  수행 하 여 sys.dm_exec_sessions 또는 sys.dm_exec_requests와 함께에서이 동적 관리 함수를 사용할 수 있습니다 **CROSS APPLY**합니다.  
   
 ## <a name="examples"></a>예  

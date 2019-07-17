@@ -28,14 +28,13 @@ ms.assetid: 7a5ebeb6-7322-4141-a307-ebcf95976146
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9d363d4e2efd5d288128d6d1a428ddcb00fa54c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4edb639a56e195bf57d4b34f8c1d399e1218b72f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067126"
 ---
 # <a name="explicit-mapping-xsd-elements-and-attributes-to-tables-and-columns"></a>테이블 및 열에 대한 XSD 요소 및 특성의 명시적 매핑
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "65980907"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>1\. sql:relation 및 sql:field 주석 지정  
+### <a name="a-specifying-the-sqlrelation-and-sqlfield-annotations"></a>A. sql:relation 및 sql:field 주석 지정  
  이 예에서 XSD 스키마의 구성를  **\<연락처 >** 사용 하 여 복합 유형의 요소  **\<FName >** 고  **\<LName >** 자식 요소 및 **ContactID** 특성입니다.  
   
  **sql: relation** 주석 maps는  **\<연락처 >** AdventureWorks 데이터베이스의 Person.Contact 테이블에는 요소입니다. **sql: field** 주석 맵 합니다  **\<FName >** FirstName 열에는 요소 및  **\<LName >** 성 요소 열입니다.  

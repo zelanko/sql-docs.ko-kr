@@ -20,29 +20,28 @@ helpviewer_keywords:
 ms.assetid: 24e2764b-c8e5-4322-97a4-7407d8b8a92b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33c87d4b784e46defac98823a5cf9d4dc9420aaa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8f91339990e5d12d1b2b674ea9fd124fc4161424
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125350"
 ---
 # <a name="sysparameters-transact-sql"></a>sys.parameters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   매개 변수를 받는 개체의 각 매개 변수당 하나의 행을 포함합니다. 개체가 스칼라 함수인 경우 반환 값을 설명하는 단일 행도 있으며 해당 행을 **parameter_id** 값이 0입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 매개 변수가 속한 개체의 ID입니다.|  
 |**name**|**sysname**|매개 변수의 이름입니다. 개체 내에서 고유합니다.<br /><br /> 개체가 스칼라 함수이면 매개 변수 이름은 반환 값을 나타내는 행에서 빈 문자열입니다.|  
 |**parameter_id**|**int**|매개 변수의 ID입니다. 개체 내에서 고유합니다.<br /><br /> 개체가 스칼라 함수인 경우 이면 **parameter_id** = 0 나타내는 값을 반환 합니다.|  
 |**system_type_id**|**tinyint**|매개 변수 시스템 유형의 ID입니다.|  
 |**user_type_id**|**int**|매개 변수의 유형에 대한 사용자 정의 ID입니다.<br /><br /> 연결할 형식의 이름을 반환할 합니다 [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) 카탈로그 뷰에이 열입니다.|  
-|**max_length**|**smallint**|매개 변수의 최대 길이(바이트)입니다.<br /><br /> 값-1 = 열 데이터 형식이 있는 경우 **varchar (max)**, **nvarchar (max)** 하십시오 **varbinary (max)**, 또는 **xml**합니다.|  
-|**전체 자릿수**|**tinyint**|숫자 기반일 경우 매개 변수의 전체 자릿수이고 그렇지 않으면 0입니다.|  
+|**max_length**|**smallint**|매개 변수의 최대 길이(바이트)입니다.<br /><br /> 값-1 = 열 데이터 형식이 있는 경우 **varchar (max)** , **nvarchar (max)** 하십시오 **varbinary (max)** , 또는 **xml**합니다.|  
+|**precision**|**tinyint**|숫자 기반일 경우 매개 변수의 전체 자릿수이고 그렇지 않으면 0입니다.|  
 |**scale**|**tinyint**|숫자 기반일 경우 매개 변수의 소수 자릿수이고 그렇지 않으면 0입니다.|  
 |**is_output**|**bit**|1 = 매개 변수가 출력 또는 반환 값인 경우, 그렇지 않으면 0입니다.|  
 |**is_cursor_ref**|**bit**|1 = 매개 변수가 커서 참조 매개 변수입니다.|  

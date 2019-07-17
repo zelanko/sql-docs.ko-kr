@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b71e79f28abb5932fc9a7a644bf466f848c1e6e7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1e6d3ed9c31307fb032d4ccc3cc950565c39c52c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534805"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095930"
 ---
 # <a name="sptracesetstatus-transact-sql"></a>sp_trace_setstatus(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  다음 표에서는 지정할 수 있는 상태를 보여 줍니다.  
   
-|상태|Description|  
+|상태|설명|  
 |------------|-----------------|  
 |**0**|지정한 추적을 중지합니다.|  
 |**1**|지정한 추적을 시작합니다.|  
@@ -61,7 +60,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 ## <a name="return-code-values"></a>반환 코드 값  
  아래 표에서는 저장 프로시저가 완료된 후 사용자가 얻을 수 있는 코드 값을 설명합니다.  
   
-|반환 코드|Description|  
+|반환 코드|설명|  
 |-----------------|-----------------|  
 |**0**|오류가 없습니다.|  
 |**1**|알 수 없는 오류입니다.|  
@@ -71,7 +70,7 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
  추적을 이미 지정한 상태에 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 돌아갑니다 **0**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  모든 SQL Trace 저장 프로시저(**sp_trace_xx**)의 매개 변수는 엄격하게 형식이 지정되어 있습니다. 이러한 매개 변수가 인수 설명에서 지정한대로 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 저장 프로시저는 오류를 반환합니다.  
   
  추적 저장 프로시저 사용에 대한 예는 [추적 만들기&#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)를 참조하세요.  

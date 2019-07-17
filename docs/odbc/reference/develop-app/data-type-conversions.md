@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d311fe1c-d882-4136-9fa5-220a4121e04c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84710ffd69ea377c979adf94af1394d8436ef10b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 590bd488ae87e8e871837c3055a3225794850d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077011"
 ---
 # <a name="data-type-conversions"></a>데이터 형식 변환
 데이터가 변환 될 수 형식에서 다른 네 번 중 하나: 데이터는 전송할 때 하나의 응용 프로그램 변수에서 다른 (C에 C,) (C)에서 SQL로 문 매개 변수에 응용 프로그램 변수에서 데이터를 보낼 때 결과 집합 열의 데이터에서 반환 될 때 응용 프로그램 변수 (SQL에서 C로) 및 데이터 원본 열에서 다른 SQL (to SQL)에서 데이터를 전송 하는 경우.  

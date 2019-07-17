@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3a6f3daadf8d26da15a5ef0d9a01cb7f491d974e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dc64c84a8d14ea86893d52044894e0af2b1a3bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103210"
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>SQL Server에 연결(MySQLToSQL)
 사용 된 **SQL Server에 연결** 의 인스턴스에 연결 하려면 대화 상자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 마이그레이션하려는 합니다. 액세스는 **SQL Server에 연결** 대화 상자의 합니다 **파일** 메뉴에서 클릭 **SQL Server에 연결**합니다.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1e7651c6df4a277d72a71c0cdb8a5910ae19ba76
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a064b49df3f45d9cbc4b148b8d78c3661f9a2bcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066732"
 ---
 # <a name="sysspcdcscan-transact-sql"></a>sys.sp_cdc_scan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sys.sp_cdc_scan [ [ @maxtrans = ] max_trans ]
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  변경 데이터 캡처에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 캡처 작업이 사용되면 sys.sp_cdc_scan이 sys.sp_MScdc_capture_job에 의해 내부적으로 호출됩니다. 변경 데이터 캡처 로그 검색 작업이 이미 활성화되어 있거나 데이터베이스에 트랜잭션 복제가 설정되어 있는 경우에는 이 프로시저를 명시적으로 실행할 수 없습니다. 이 저장 프로시저는 자동으로 구성되는 캡처 작업의 동작을 사용자 지정하려는 관리자만 사용해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

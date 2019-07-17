@@ -19,21 +19,20 @@ helpviewer_keywords:
 - sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e5c54d116f4d4d8a71ba3660a31b324d9952970
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf134f630e4112f0cef87b7138b92fc83959e230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097671"
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>sys.dm_exec_query_optimizer_memory_gateways (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 리소스 세마포에 동시 쿼리 최적화를 제한 하는 데의 현재 상태를 반환 합니다.
 
-|Column|형식|Description|  
+|Column|type|설명|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|리소스 관리자에서 리소스 풀 ID|  
 |**name**|**sysname**|게이트 이름 (소규모, 중간 게이트웨이 큰 게이트웨이) 컴파일|
@@ -51,14 +50,14 @@ SQL Server 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.
 Azure SQL Database에는 데이터베이스에는 VIEW DATABASE STATE 권한이 필요합니다.
 
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 SQL Server는 계층화 된 게이트웨이 방법을 사용 하 여 허용 된 동시 컴파일 수를 제한 합니다.  소, 포함 및 큰 세 개의 게이트웨이 사용 됩니다. 게이트웨이 도움말 큰 컴파일 메모리 필요한 소비자가 전체 메모리 리소스 소진을 방지 합니다.
 
 지연 된 컴파일 게이트웨이 결과에서 대기합니다. 컴파일에서 지연 하는 것 외에도 스로틀 된 요청 유형 누적 대기 하는 연결된 RESOURCE_SEMAPHORE_QUERY_COMPILE 해야 합니다. 쿼리 컴파일에 대 한 많은 양의 메모리를 사용 하는 및 메모리 부족 또는 또는 충분 한 사용 가능한 메모리가 전반적으로 RESOURCE_SEMAPHORE_QUERY_COMPILE 대기 유형을 나타낼 수 있지만 사용 가능한 특정 단위 게이트웨이 모두 사용 했습니다. 출력 **sys.dm_exec_query_optimizer_memory_gateways** 시나리오 문제 해결에 사용할 수 있었던 다음 쿼리 실행 계획을 컴파일하는 데 메모리가 부족 합니다.  
 
 ## <a name="examples"></a>예  
 
-### <a name="a-viewing-statistics-on-resource-semaphores"></a>1. 리소스 세마포에 통계 보기  
+### <a name="a-viewing-statistics-on-resource-semaphores"></a>A. 리소스 세마포에 통계 보기  
 SQL Server의이 인스턴스에 대 한 현재 최적화 프로그램 메모리 게이트웨이 통계 이란?
 
 ```  

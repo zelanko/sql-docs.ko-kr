@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6fb1bc0055748c711762d89ad2757a12d1161254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57ee0867373f67bfd0684734685ab39791bafc39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098398"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX 데이터 정의 - CREATE GLOBAL CUBE
 
@@ -114,7 +113,7 @@ FROM source_cube_name (<param list>)
  \<유형 수준 >  
  파생된 차원 정의에 대해서만 유효한 지정입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  로컬 큐브는 definedin 조건을 정의 하는 정의와 측정값입니다. 다음과 같은 두 가지 유형의 차원이 있습니다.  
   
 -   원본 차원 - 하나 이상 원본 큐브의 일부인 차원입니다.  

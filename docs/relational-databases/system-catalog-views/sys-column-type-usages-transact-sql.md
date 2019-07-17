@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 1ead375e-f662-4837-903f-8947496c51e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4b4cc317872d81572c4994d54459e3de55b8d25f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dc3ff14375d0e07a1235f0ba79ed36e3e084e58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139993"
 ---
 # <a name="syscolumntypeusages-transact-sql"></a>sys.column_type_usages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   사용자 정의 형식의 각 열당 하나의 행을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 열이 속한 개체의 ID입니다.|  
 |**column_id**|**int**|열의 ID입니다. 개체 내에서 고유합니다.|  

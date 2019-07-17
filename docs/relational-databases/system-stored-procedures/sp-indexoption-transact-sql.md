@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 75f836be-d322-4a53-a45d-25bee6b42a52
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 15e30a28a816b8105762e9f4cbfc4a0892cae1be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d1231b4411e11de65cfe99d209ed231db79b5db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62961061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030917"
 ---
 # <a name="spindexoption-transact-sql"></a>sp_indexoption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 `[ @OptionName = ] 'option_name'` 인덱스 옵션 이름이입니다. *option_name* 됩니다 **varchar(35)** , 기본값은 없습니다. *option_name* 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**AllowRowLocks**|TRUE인 경우 인덱스에 액세스할 때 행 잠금이 허용됩니다. 행 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다. FALSE로 설정된 경우 행 잠금을 사용하지 않습니다. 기본값은 TRUE입니다.|  
 |**AllowPageLocks**|TRUE인 경우 인덱스에 액세스할 때 페이지 잠금이 허용됩니다. 페이지 잠금을 사용하는 시점은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 결정합니다. FALSE로 설정된 경우 페이지 잠금을 사용하지 않습니다. 기본값은 TRUE입니다.|  
@@ -63,7 +62,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0 초과(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  XML 인덱스는 지원되지 않습니다. XML 인덱스가 지정된 경우, 그리고 테이블 이름이 인덱스 이름 없이 지정되고 테이블에 XML 인덱스가 있는 경우 문이 실패합니다. 이러한 옵션을 설정 하려면 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) 대신 합니다.  
   
  현재 행 및 페이지 잠금 속성을 표시 하려면 사용 하 여 [INDEXPROPERTY](../../t-sql/functions/indexproperty-transact-sql.md) 또는 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰에 있습니다.  
@@ -85,7 +84,7 @@ sp_indexoption [ @IndexNamePattern = ] 'table_or_index_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-setting-an-option-on-a-specific-index"></a>1\. 특정 인덱스에 대한 옵션 설정  
+### <a name="a-setting-an-option-on-a-specific-index"></a>A. 특정 인덱스에 대한 옵션 설정  
  다음 예제에서는 페이지 잠금을에서 허용 하지 않습니다 합니다 `IX_Customer_TerritoryID` 인덱스에 `Customer` 테이블입니다.  
   
 ```sql  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5c793405-487c-4f52-88b8-0091d529afb3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 98b59d3b5d3c0679ec8fb060b66afa44a38c1262
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 387d33930e59a9b5b934993b280060bc6efa5d40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134274"
 ---
 # <a name="performing-bulk-copy-operations-odbc"></a>대량 복사 작업 수행(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "63013929"
   
  최소 로깅 사용에 대 한 내용은 참조 하세요 [대량 가져오기의 최소 로깅을 위한 선행 조건](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md)합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전에서 bcp.exe를 사용하는 경우 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전에는 오류가 발생하지 않았던 상황에서 오류가 표시될 수도 있습니다. 이는 이후 버전에서 bcp.exe가 더 이상 암시적 데이터 형식 변환을 수행하지 않기 때문입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전에는 대상 테이블에 money 데이터 형식이 있을 경우 bcp.exe에서 숫자 데이터를 money 데이터 형식으로 변환했습니다. 하지만 이 경우 bcp.exe에서 단순히 추가 필드를 자르기만 했습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터는 파일과 대상 테이블의 데이터 형식이 일치하지 않을 경우 대상 테이블에 맞게 잘라야 하는 데이터가 있으면 bcp.exe에서 오류를 발생시킵니다. 이 오류를 해결하려면 대상 데이터 형식과 일치하도록 데이터를 수정합니다. 필요에 따라 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전 릴리스의 bcp.exe를 사용합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  

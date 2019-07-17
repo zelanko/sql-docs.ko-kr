@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1a0be7b1-8f31-4b4c-aadb-586c0e00ed04
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b6480c498914c4ec0bc02ba21552615bbdd28f6e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e3af6ff05b971e6b9a0dedc1ec2e14f4ba87e00c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090040"
 ---
 # <a name="sphelpjobsteplog-transact-sql"></a>sp_help_jobsteplog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|작업의 고유 식별자입니다.|  
 |**job_name**|**sysname**|작업의 이름입니다.|  
@@ -71,7 +70,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**log_size**|**float**|작업 단계 로그의 크기(MB)입니다.|  
 |**log**|**nvarchar(max)**|작업 단계 로그 출력입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_help_jobsteplog** 에 **msdb** 데이터베이스입니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -89,7 +88,7 @@ sp_help_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returns-job-step-log-information-for-all-steps-in-a-specific-job"></a>1. 특정 작업의 모든 단계에 대한 작업 단계 로그 정보 반환  
+### <a name="a-returns-job-step-log-information-for-all-steps-in-a-specific-job"></a>A. 특정 작업의 모든 단계에 대한 작업 단계 로그 정보 반환  
  다음 예에서는 `Weekly Sales Data Backup`이라는 작업에 관한 모든 작업 단계 로그 정보를 반환합니다.  
   
 ```  
@@ -101,7 +100,7 @@ EXEC dbo.sp_help_jobsteplog
 GO  
 ```  
   
-### <a name="b-return-job-step-log-information-about-a-specific-job-step"></a>2. 특정 작업 단계에 관한 작업 단계 로그 정보 반환  
+### <a name="b-return-job-step-log-information-about-a-specific-job-step"></a>2\. 특정 작업 단계에 관한 작업 단계 로그 정보 반환  
  다음 예에서는 `Weekly Sales Data Backup`이라는 첫 번째 작업 단계에 관한 작업 단계 로그 정보를 반환합니다.  
   
 ```  

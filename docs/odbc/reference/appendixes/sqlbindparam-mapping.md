@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15772c3bf74001084985d81d6560baf8accbaa3a
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ecec6116ee16f4affa615518a690d2c665648464
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091245"
 ---
 # <a name="sqlbindparam-mapping"></a>SQLBindParam 매핑
 **SQLBindParam** 진정으로 호출할 수 없습니다 사용 되지 않는 되지 않아 있습니다 odbc; 그러나 여전히 나타내므로 중복 된 기능-드라이버 관리자가 ISO 및 열린 그룹 호환 응용 프로그램은 사용 하기 때문에 내보내기 해야 합니다. 때문에 **SQLBindParameter** 의 모든 기능을 포함 **SQLBindParam**하십시오 **SQLBindParam** 위쪽에 매핑될 **SQLBindParameter** (기본 드라이버 경우 ODBC *3.x* 드라이버). ODBC *3.x* 드라이버를 구현할 필요가 없습니다 **SQLBindParam**합니다.  

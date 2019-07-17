@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d9666d0b-3446-480e-bf1a-10b01213e411
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32b1f1185dad9b173c12f3acb232c2426d5db411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1623779ba0fb47df1750e72b2e66ff7ad492a3e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135481"
 ---
 # <a name="sqlfreestmt"></a>SQLFreeStmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "63014471"
  일반적으로 삭제 하는 보다 새로 할당 문을 다시 사용 하려면 더 효율적입니다. 문을 다시 사용과 같은 일부 상황에서 SQLFreeStmt 계속 사용 해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQLFreeStmt Function](https://go.microsoft.com/fwlink/?LinkId=59346)   
+ [SQLFreeStmt 함수](https://go.microsoft.com/fwlink/?LinkId=59346)   
  [ODBC API 구현 정보](../../relational-databases/native-client-odbc-api/odbc-api-implementation-details.md)  
   
   

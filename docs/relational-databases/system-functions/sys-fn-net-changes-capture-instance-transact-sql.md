@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122565"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>sys.fn_net_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -94,14 +93,14 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|열 유형|Description|  
+|열 이름|열 유형|설명|  
 |-----------------|-----------------|-----------------|  
 |\<열에서 @column_list>|**달라 집니다.**|식별 되는 열을 **column_list** 는 sp_cdc_generate_wrapper_function 함수에 대 래퍼를 만드는 스크립트를 생성 하 라고 하는 경우에 인수입니다. 하는 경우 *column_list* 가 null 인 경우 결과 집합의 모든 추적 된 원본 열이 표시 됩니다.|  
 |__CDC_OPERATION|**nvarchar(2)**|행을 대상 환경에 적용하는 데 필요한 작업을 나타내는 작업 코드입니다. 작업 인수의 값에 따라 달라 집니다 *row_filter_option* 다음 호출에 제공 되는:<br /><br /> *row_filter_option* 'all', 'all with mask' =<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업<br /><br /> *row_filter_option* 'all with merge' =<br /><br /> 'D' - 삭제 작업<br /><br /> 'M' - 삭제 작업 또는 업데이트 작업|  
 |\<열에서 @update_flag_list>|**bit**|_uflag를 열 이름에 추가하여 이름을 지정한 비트 플래그입니다. Null이 아닌 값에 플래그는 경우에만 *row_filter_option* **'all with mask' =** 하 고 \__CDC_OPERATION **= ' u N '** 합니다. 쿼리 창 내에서 해당 열이 수정된 경우 이 플래그는 1로 설정됩니다. 그렇지 않으면 0입니다.|  
   
-## <a name="remarks"></a>Remarks  
- fn_net_changes_<capture_instance> 함수는 cdc.fn_cdc_get_net_changes_<capture_instance> 쿼리 함수의 래퍼 역할을 합니다. 래퍼를 만드는 스크립트를 생성하는 데에는 sys.sp_cdc_generate_wrapper 저장 프로시저가 사용됩니다.  
+## <a name="remarks"></a>설명  
+ < Capture_instance > fn_net_changes_ 함수 cdc.fn_cdc_get_net_changes_ < capture_instance > 쿼리 함수의 래퍼 역할도합니다. 래퍼를 만드는 스크립트를 생성하는 데에는 sys.sp_cdc_generate_wrapper 저장 프로시저가 사용됩니다.  
   
  래퍼 함수는 자동으로 만들어지지 않습니다. 래퍼 함수를 만들려면 다음 두 작업을 수행해야 합니다.  
   
@@ -119,7 +118,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  변경 데이터 캡처 구성 템플릿 ' Instantiate CDC Wrapper TVFs for 스키마 ' 모든 스키마의 정의 된 쿼리 함수의 래퍼 함수에 대 한 CREATE 스크립트를 가져오려면 sp_cdc_generate_wrapper_function 저장 프로시저를 사용 하는 방법을 보여 줍니다. 그런 다음 이 템플릿에서는 이러한 스크립트를 만듭니다. 템플릿에 대 한 자세한 내용은 참조 하세요. [템플릿 탐색기](../../ssms/template/template-explorer.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.sp_cdc_generate_wrapper_function &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
  [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   

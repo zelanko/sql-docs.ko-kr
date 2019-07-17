@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 479d1314-be37-4d19-ac9c-419fc9110e53
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c8297c02d66671ea41b8a2dae4462514d4ef2fe4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c6304b108d75d6fe9ba00ccccdae322bf7cedde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095838"
 ---
 # <a name="dbosystargetservers-transact-sql"></a>dbo.systargetservers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   해당 다중 서버 작업 도메인에 현재 참여하는 대상 서버를 기록합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|서버 ID입니다.|  
 |**server_name**|**sysname**|서버 이름입니다.|  

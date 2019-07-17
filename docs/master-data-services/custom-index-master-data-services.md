@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 88a2b55b64eb259a0befe32bb575fbb3ac0acbdd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 546e04385490e725adfa0bb2f256109da7a0d55d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094430"
 ---
 # <a name="custom-index-master-data-services"></a>사용자 지정 인덱스(Master Data Services)
 

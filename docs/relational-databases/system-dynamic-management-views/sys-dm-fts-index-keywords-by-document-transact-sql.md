@@ -1,5 +1,5 @@
 ---
-title: sys.dm_fts_index_keywords_by_document (Transact-SQL) | Microsoft Docs
+title: sys.dm_fts_index_keywords_by_document (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 793b978b-c8a1-428c-90c2-a3e49d81b5c9
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed1ebf610eafe5c882b2e19ed70129e0cac432fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86ab3a31f53f480713ae27a70bfe59d3817af017
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078557"
 ---
 # <a name="sysdmftsindexkeywordsbydocument-transact-sql"></a>sys.dm_fts_index_keywords_by_document(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -64,7 +63,7 @@ sys.dm_fts_index_keywords_by_document
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|Column|데이터 형식|Description|  
+|Column|데이터 형식|설명|  
 |------------|---------------|-----------------|  
 |키워드(keyword)|**nvarchar(4000)**|전체 텍스트 인덱스 내에 저장되는 키워드의 16진수 표현입니다.<br /><br /> 참고: OxFF는 파일 또는 데이터 집합의 끝을 나타내는 특수 문자를 나타냅니다.|  
 |display_term|**nvarchar(4000)**|사람이 인식할 수 있는 키워드 형식입니다. 이 형식은 전체 텍스트 인덱스에 저장되는 내부 형식에서 파생됩니다.<br /><br /> 참고: OxFF는 파일 또는 데이터 집합의 끝을 나타내는 특수 문자를 나타냅니다.|  
@@ -72,7 +71,7 @@ sys.dm_fts_index_keywords_by_document
 |document_id|**int**|현재 단어가 전체 텍스트 인덱싱된 문서 또는 행의 ID입니다. 이 ID는 해당 문서 또는 행의 전체 텍스트 키 값과 일치합니다.|  
 |occurrence_count|**int**|현재 문서 또는 행으로 표시 되는 키워드의 발생 횟수 **document_id**합니다. 때 '*search_property_name*'를 지정 하면 occurrence_count 문서나 행 내에서 지정 된 검색 속성에서 현재 단어의 발생 수만 표시 합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sys.dm_fts_index_keywords_by_document에서 반환하는 정보는 특히 다음을 확인하는 데 유용합니다.  
   
 -   전체 텍스트 인덱스에 포함된 총 키워드 수  
@@ -116,7 +115,7 @@ GO
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-full-text-index-content-at-the-document-level"></a>1\. 문서 수준의 전체 텍스트 인덱스 내용 표시  
+### <a name="a-displaying-full-text-index-content-at-the-document-level"></a>A. 문서 수준의 전체 텍스트 인덱스 내용 표시  
  다음 예에서는 `HumanResources.JobCandidate` 예제 데이터베이스의 `AdventureWorks2012` 테이블에 문서 수준의 전체 텍스트 인덱스 내용을 표시합니다.  
   
 > [!NOTE]  

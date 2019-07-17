@@ -21,14 +21,13 @@ ms.assetid: db192105-e8aa-4392-b812-9d727918c005
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea6f9b2cf97a8df4891f7342c9b3acbb6d4622bb
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: be710df7b54fa7019b5700a7789885ee10519d67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067188"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>데이터 형식 강제 변환 및 sql:datatype 주석(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,7 +99,7 @@ ms.locfileid: "67585136"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-xsdtype"></a>1\. xsd:type 지정  
+### <a name="a-specifying-xsdtype"></a>A. xsd:type 지정  
  이 예에서는 XSD **날짜** 사용 하 여 지정 된 형식에는 **xsd: type** 스키마의 특성 결과 XML 문서에 영향을 줍니다. 이 스키마에서는 AdventureWorks 데이터베이스에 Sales.SalesOrderHeader 테이블의 XML 뷰를 제공합니다.  
   
 ```  

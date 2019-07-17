@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 37a8b8ef757184e7467c3551148c8c149bb45097
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9eb05d633dcbe660c34793fa39c10d788574700
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63309102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098379"
 ---
 # <a name="mdx-data-definition---create-measure"></a>MDX 데이터 정의 - CREATE MEASURE
 
@@ -40,7 +39,7 @@ CREATE MEASURE Table_Name[Measure_Name] = DAX_Expression
  *DAX_Expression*  
  단일 스칼라 값을 반환하는 유효한 DAX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 *Measure_Name* 대괄호로 묶어야 합니다.  
   
  CREATE MEASURE 문은 MDX 스크립트 정의;만 사용할 수 있습니다. 참조 [MdxScript 요소 &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/mdxscript-element-assl)합니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e68fe0b9-5993-4880-917a-b0f661f8459b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: aad2574457285208b47af26d0729c725a22c05b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb8c38d24fbf6c96c61a7b2e83874d15218797c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092669"
 ---
 # <a name="spmarksubscriptionvalidation-transact-sql"></a>sp_marksubscriptionvalidation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_marksubscriptionvalidation [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_marksubscriptionvalidation** 트랜잭션 복제에 사용 됩니다.  
   
  **sp_marksubscriptionvalidation** 지원 하지 않습니다 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구독자입니다.  

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 07551472-87ee-4765-951f-1364ed32f0c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30c116878049c4f6a8f36e988731ab641e03c6d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b5cef56cec30e5ad09500135e05884bf55d5dde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076220"
 ---
 # <a name="sql-modules"></a>SQL 모듈
 모듈을 통해 DBMS SQL 문을 보내기 위한 두 번째 방법은 됩니다. 요약 하자면, 모듈 호스트 프로그래밍 언어에서에서 호출 되는 프로시저의 그룹으로 구성 됩니다. 각 프로시저에는 단일 SQL 문을 포함 하 고 데이터에는 프로시저에서 매개 변수를 통해 전달 됩니다.  

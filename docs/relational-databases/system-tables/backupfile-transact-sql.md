@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c12575ae2eb07b5984d1e4a383830ff6fb44573a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091860"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   데이터베이스의 각 데이터 또는 로그 파일마다 하나의 행을 포함합니다. 이 열은 백업 당시의 파일 구성을 설명합니다. 파일 백업에 포함 되는 여부에 따라 결정 됩니다 합니다 **is_present** 열입니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|백업 세트를 포함한 파일의 고유한 ID입니다. 참조 **backupset (backup_set_id)** 합니다.|  
 |**first_family_number**|**tinyint**|해당 백업 파일을 포함한 첫 번째 미디어의 패밀리 번호입니다. NULL일 수 있습니다.|  
@@ -46,7 +45,7 @@ ms.locfileid: "62645503"
 |**logical_name**|**nvarchar(128)**|백업된 파일의 논리적 이름입니다. NULL일 수 있습니다.|  
 |**physical_drive**|**nvarchar(260)**|물리적 드라이브 또는 파티션 이름입니다. NULL일 수 있습니다.|  
 |**physical_name**|**nvarchar(260)**|물리적(운영 체제) 파일 이름의 남은 부분입니다. NULL일 수 있습니다.|  
-|**state**|**tinyint**|파일 상태이며 다음 중 하나입니다.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = DROPPED<br /><br /> 참고: 데이터베이스 상태에 대 한 값에 해당 하는 이러한 값을 값 5는 건너뜁니다.|  
+|**state**|**tinyint**|파일 상태이며 다음 중 하나입니다.<br /><br /> 0 = ONLINE<br /><br /> 1 = RESTORING<br /><br /> 2 = RECOVERING<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = SUSPECT<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = 삭제<br /><br /> 참고: 데이터베이스 상태에 대 한 값에 해당 하는 이러한 값을 값 5는 건너뜁니다.|  
 |**state_desc**|**nvarchar(64)**|파일 상태에 대한 설명이며 다음 중 하나입니다.<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|파일이 생성된 시점의 로그 시퀀스 번호입니다.|  
 |**drop_lsn**|**numeric(25,0)**|파일이 삭제된 시점의 로그 시퀀스 번호입니다. NULL일 수 있습니다.<br /><br /> 파일이 아직 삭제되지 않은 경우 이 값은 NULL입니다.|  
@@ -60,7 +59,7 @@ ms.locfileid: "62645503"
 |**is_readonly**|**bit**|1 = 파일이 읽기 전용입니다.|  
 |**is_present**|**bit**|1 = 파일이 백업 세트에 포함되었습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY 채웁니다의 열을 **backupmediaset** 미디어 세트 헤더의 적절 한 값이 있는 테이블입니다.  
   
  이 테이블에 다른 백업 및 기록 테이블의 행 수를 줄이려면 다음을 실행 합니다 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 저장 프로시저입니다.  

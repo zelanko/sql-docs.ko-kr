@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: fa496c6c-2a54-4fda-a238-db490c6b3afd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 061636210c76bace7ae483e277c624bb291cdeb8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6a3c6522218702b52c075ef5ce8088057fc7662b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125014"
 ---
 # <a name="sysserverauditspecifications-transact-sql"></a>sys.server_audit_specifications(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52510005"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|서버 사양의 이름입니다.|  
+|**name**|**Sysname**|서버 사양의 이름입니다.|  
 |**server_specification_id**|**정수**|ID를 **server_specification**합니다.|  
 |**create_date**|**날짜/시간**|서버 감사 사양을 만든 날짜입니다.|  
 |**modified_date**|**날짜/시간**|서버 감사 사양을 마지막으로 수정한 날짜입니다.|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9f390afc-d8b8-4286-b559-98b3b8781f3d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40cd9973bfdce68b1ccbe63edd8c875519dbd22b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e475abb699c7fa7240ca6eb39b1b32f1730d33c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125742"
 ---
 # <a name="c-to-sql-data-conversion-examples"></a>C에서 SQL로 데이터 변환 예제
 다음 예제에서는 드라이버 C 데이터 SQL 데이터를 변환 하는 방법을 보여 줍니다.  
@@ -34,9 +33,9 @@ ms.locfileid: "63201585"
 |SQL_C_FLOAT|1234.56|SQL_FLOAT|n/a|1234.56|n/a|  
 |SQL_C_FLOAT|1234.56|SQL_INTEGER|n/a|1234|22001|  
 |SQL_C_FLOAT|1234.56|SQL_TINYINT|n/a|----|22003|  
-|SQL_C_TYPE_DATE|1992,12,31[c]|SQL_CHAR|10|1992-12-31|n/a|  
-|SQL_C_TYPE_DATE|1992,12,31[c]|SQL_CHAR|9|----|22003|  
-|SQL_C_TYPE_DATE|1992,12,31[c]|SQL_TIMESTAMP|n/a|1992-12-31 00:00:00.0|n/a|  
+|SQL_C_TYPE_DATE|1992,12,31 [c]|SQL_CHAR|10|1992-12-31|n/a|  
+|SQL_C_TYPE_DATE|1992,12,31 [c]|SQL_CHAR|9|----|22003|  
+|SQL_C_TYPE_DATE|1992,12,31 [c]|SQL_TIMESTAMP|n/a|1992-12-31 00:00:00.0|n/a|  
 |SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55, 120000000[d]|SQL_CHAR|22|1992-12-31 23:45:55.12|n/a|  
 |SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55, 120000000[d]|SQL_CHAR|21|1992-12-31 23:45:55.1|22001|  
 |SQL_C_TYPE_TIMESTAMP|1992,12,31, 23,45,55, 120000000[d]|SQL_CHAR|18|----|22003|  

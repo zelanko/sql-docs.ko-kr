@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: abc28718-e6d9-49fb-97ff-402d50c3c375
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 74de6c44aaf109a434f0cf76c6902abfba92efe1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 899924b5c0847d5f42e383a9e04c33298bb368b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087753"
 ---
 # <a name="unicode-data"></a>유니코드 데이터
 SQL 유니코드 데이터 형식은 유니코드에서 DBMS에 있는 데이터를 설명 하기 위해 제공 됩니다. C 유니코드 데이터 형식은 유니코드 버퍼에 데이터 바인딩 응용 프로그램을 허용 하도록 제공 됩니다. 드라이버 관리자 (SQL_C_WCHAR) 있도록 유니코드 C 형식에서 데이터를 변환할 수는 ANSI 드라이버를 사용 하 여 함수입니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0c637755741332800a1c3eca2b80c9c001b550d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ea4590e129812dd0acc68b6353fc4f379bb0b8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110889"
 ---
 # <a name="spchangedistributorproperty-transact-sql"></a>sp_changedistributor_property(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## <a name="arguments"></a>인수  
 `[ @property = ] 'property'` 지정된 된 배포자에 대 한 속성이입니다. *속성* 됩니다 **sysname**, 이며 다음이 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**heartbeat_interval**|진행률 메시지를 기록하지 않고 에이전트를 실행할 수 있는 최대 시간(분)입니다.|  
 |NULL(기본값)|사용 가능한 모든 *속성* 값이 출력 됩니다.|  
@@ -51,7 +50,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changedistributor_property** 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="example"></a>예제  

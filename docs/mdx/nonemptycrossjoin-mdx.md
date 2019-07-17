@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7da56ac658f57d6eb664762f9dd94351df39fe0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d152b51e0c1c996e0bb3309e554a70683937493
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63456572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088347"
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin(MDX)
 
@@ -38,7 +37,7 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  *개수*  
  반환할 집합 수를 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **NonEmptyCrossjoin** 빈 튜플과 기본 팩트 테이블이 제공 하는 데이터가 없는 튜플은 제외 집합으로 두 개 이상 집합의 교차곱을 반환 합니다. 방식 때문 **NonEmptyCrossjoin** 함수의 작동 모든 계산 멤버가 자동으로 제외 됩니다.  
   
  하는 경우 *개수* 지정 하지 않으면 함수 간 지정 된 모든 집합을 조인 하 고 결과 집합에서 빈 멤버를 제외 합니다. 집합 수가 지정된 경우 이 함수는 지정된 첫 번째 집합부터 시작하여 지정된 집합 수만큼 크로스 조인합니다. 합니다 **NonEmptyCrossjoin** 함수는 지정 된 다음 집합에서 지정 되어 있지만 조인 되지 않은 교차 멤버 크로스 조인된 집합에서 비어 있지 않은 것으로 간주 됩니다 확인 하려면 나머지 집합을 사용 합니다. **NonEmptyCrossjoin** 측면 함수는 **NON_EMPTY_BEHAVIOR** 계산 측정값을 설정 합니다.  

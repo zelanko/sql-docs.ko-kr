@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cb97ea71-da2f-441a-bbd2-db1f5f48ab49
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b68bace89b49ba11fe7744229a5f7b9500ec6cdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1855120dde6e6f4e9037a6f14832cd24f310d77b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079221"
 ---
 # <a name="cdcddlhistory-transact-sql"></a>cdc.ddl_history(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62471396"
   
  시스템 테이블은 직접 쿼리하지 않는 것이 좋습니다. 대신 실행 합니다 [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) 저장 프로시저입니다.  
    
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**source_object_id**|**int**|DDL 변경이 적용된 원본 테이블의 ID입니다.|  
 |**object_id**|**int**|원본 테이블에 대한 캡처 인스턴스와 관련된 변경 테이블의 ID입니다.|  

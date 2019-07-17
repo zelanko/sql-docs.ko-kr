@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1cad06ee-5940-4361-8d01-7d850db1dd66
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fd051d018cb6f53b8c08110e26bc66910e3ca4c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dbfb09a261d7499e07137b7ed830d5a5b92dc73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086009"
 ---
 # <a name="other-driver-architectures"></a>기타 드라이버 아키텍처
 일부 ODBC 드라이버 엄격 하 게 따르지 않으며 이전에 설명 된 아키텍처입니다. 드라이버 기존 ODBC 드라이버를 제외한 업무를 수행 하거나 일반적인 의미에서 드라이버가 아닌 때문일 수 있습니다.  

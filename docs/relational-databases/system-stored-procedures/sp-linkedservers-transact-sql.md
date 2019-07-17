@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f21e65fab4cdedb37b2971e037f9b24c3b29fcd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 675707453fbc79f3f9c578469ed5e78b73d2fbfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62957138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139826"
 ---
 # <a name="splinkedservers-transact-sql"></a>sp_linkedservers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_linkedservers
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**SRV_NAME**|**sysname**|연결된 서버의 이름입니다.|  
 |**SRV_PROVIDERNAME**|**nvarchar(** 128 **)**|지정되어 있는 연결된 서버에 대한 액세스를 관리하는 OLE DB 공급자의 이름입니다.|  

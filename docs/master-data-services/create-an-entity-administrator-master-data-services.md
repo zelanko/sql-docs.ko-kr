@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 717be1e8-488e-4219-8d1e-ca9084b864cd
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0b0907b41aeaa27868e434e4d63d7ea11069de32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34b96a107f00e93ed2dfd0f09451aac4f1f58354
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025072"
 ---
 # <a name="create-an-entity-administrator-master-data-services"></a>엔터티 관리자 만들기(Master Data Services)
 

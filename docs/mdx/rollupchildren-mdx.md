@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5df035ab7ae2949164869536c498c341327916c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89f7545af0d98de2a6bd97630a893057aac36b12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037051"
 ---
 # <a name="rollupchildren-mdx"></a>RollupChildren(MDX)
 
@@ -35,7 +34,7 @@ RollupChildren(Member_Expression, Unary_Operator)
  *Unary_Operator*  
  단항 연산자를 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **RollupChildren** 함수는 지정 된 단항 연산자를 사용 하 여 지정된 된 멤버의 자식 값을 롤업 합니다.  
   
  다음은 이 함수에 대해 유효한 단항 연산자입니다.  

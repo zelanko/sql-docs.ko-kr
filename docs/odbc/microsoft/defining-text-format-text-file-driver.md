@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3af46dad-52cc-4d5c-a27e-6315d65a74e6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00d20f8a6dd4d79b3100549d9286e7534bc8ce6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 500a81146397fa5c50bd8b74c600d04887ecc99c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096350"
 ---
 # <a name="defining-text-format-text-file-driver"></a>텍스트 형식 정의(텍스트 파일 드라이버)
 텍스트 드라이버를 사용 하는 경우 사용할 수 있습니다 합니다 **텍스트 형식으로 정의** 대화 상자에서 선택한 파일 열에 대 한 형식을 정의 합니다. 이 대화 상자를 사용 하면 각 데이터 테이블에 대 한 스키마를 지정할 수 있습니다. 이 정보는 데이터 소스 디렉터리에서 Schema.ini 파일에 기록 됩니다. 별도 Schema.ini 파일은 각 텍스트 데이터 원본 디렉터리에 대해 생성 됩니다.  

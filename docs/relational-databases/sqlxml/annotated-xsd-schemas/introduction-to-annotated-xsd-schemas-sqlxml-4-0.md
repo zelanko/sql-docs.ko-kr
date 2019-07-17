@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9b5b2356e7f244ec7fc07e28ea50dee9fd8e104
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 55452bb5b7444acef6fb37f21d9d2c39d59daf7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093226"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>주석이 추가된 XSD 스키마 소개(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "56013354"
 </xsd:schema>  
 ```  
   
- 합니다  **\<xsd: schema >** 요소에서 XML 스키마 네임 스페이스 사양에서 파생 됩니다 http://www.w3.org/2001/XMLSchema합니다.  
+ 합니다  **\<xsd: schema >** 요소에서 XML 스키마 네임 스페이스 사양에서 파생 됩니다 http://www.w3.org/2001/XMLSchema 합니다.  
   
 ## <a name="annotations-to-the-xsd-schema"></a>XSD 스키마에 주석 추가  
  데이터베이스에 대한 매핑을 설명하는 주석을 XSD 스키마에 추가하여 데이터베이스를 쿼리하고 결과를 XML 문서 형식으로 반환할 수 있습니다. 주석을 사용하여 XSD 스키마를 데이터베이스 테이블 및 열에 매핑할 수 있습니다. XSD 스키마로 생성된 XML 뷰에 대해 XPath 쿼리를 지정하여 데이터베이스를 쿼리하고 결과를 XML 형식으로 얻을 수 있습니다.  

@@ -1,5 +1,5 @@
 ---
-title: sp_stop_job (Transact-SQL) | Microsoft Docs
+title: sp_stop_job (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64b4cc75-99a0-421e-b418-94e37595bbb0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eda439b53c72e41154d4891495470fc271028aee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a0549d247078634feadced301570e00746d5ba7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032725"
 ---
 # <a name="spstopjob-transact-sql"></a>sp_stop_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_stop_job
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_stop_job** 데이터베이스에 중지 신호를 보냅니다. 일부 프로세스를 즉시 중지 될 수 있으며 안정적인 지점 (또는 코드 경로에 대 한 진입점)에 도달 해야 일부 중지 되기까지 수 있습니다. BACK, RESTORE 및 일부 DBCC 명령과 같은 일부 장기 실행 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 완료되려면 시간이 오래 걸릴 수 있습니다. 에서 실행 되는 작업을 취소 하기 전에 잠시를 걸릴 수 있습니다. 작업을 중지하면 작업 기록에 "취소된 작업" 항목이 기록됩니다.  
   
  작업 유형의 단계를 현재 실행 중인 경우 **CmdExec** 하거나 **PowerShell**, 실행 중인 프로세스 (예: MyProgram.exe)가 중간에 종료 해야 합니다. 예기치 않은 종료로 인해 프로세스가 보유하고 있던 파일이 열리는 등 예기치 않은 상황이 발생할 수 있습니다. 따라서 **sp_stop_job** 작업 유형의 단계가 포함 되어 있는 경우 극단적인 상황 에서만에서 사용 해야 **CmdExec** 하거나 **PowerShell**합니다.  
@@ -96,7 +95,7 @@ GO
  [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   
  [sp_start_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-start-job-transact-sql.md)   
- [sp_update_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
+ [sp_update_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-job-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

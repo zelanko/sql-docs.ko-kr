@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097680"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,11 +49,11 @@ sp_changemergepublication [ @publication= ] 'publication'
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|익명 구독을 허용합니다.|  
 ||**false**|익명 구독을 허용하지 않습니다.|  
-|**allow_partition_realignment**|**true**|더 이상 구독자의 파티션에 속하지 않는 데이터를 제거하여 파티션 변경 결과를 반영할 수 있도록 구독자로 삭제 내용을 보냅니다. 이것이 기본 동작입니다.|  
+|**allow_partition_realignment**|**true**|더 이상 구독자의 파티션에 속하지 않는 데이터를 제거하여 파티션 변경 결과를 반영할 수 있도록 구독자로 삭제 내용을 보냅니다. 이는 기본 동작입니다.|  
 ||**false**|이전 파티션의 데이터가 구독자에 남습니다. 게시자에서 이 데이터에 대해 변경한 내용은 구독자로 복제되지 않습니다. 대신 구독자에서 변경한 내용이 게시자로 복제됩니다. 기록 목적으로 이전 파티션의 데이터에 액세스해야 하는 경우 구독에 해당 데이터를 보존하기 위해 사용합니다.|  
 |**allow_pull**|**true**|지정된 게시에 대해 끌어오기 구독을 허용합니다.|  
 ||**false**|지정된 게시에 대해 끌어오기 구독을 허용하지 않습니다.|  
@@ -113,7 +112,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|게시에 대한 스냅숏을 사용할 수 없습니다.|  
 |**상태**|**active**|게시가 활성 상태입니다.|  
 ||**inactive**|게시가 비활성 상태입니다.|  
-|**sync_mode**|**네이티브** 또는<br /><br /> **bcp native**|초기 스냅숏에 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용합니다.|  
+|**sync_mode**|**네이티브** 또는<br /><br /> **네이티브 bcp**|초기 스냅숏에 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용합니다.|  
 ||**character**<br /><br /> 또는 **bcp 문자**|초기 스냅숏에 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자의 경우에 필요합니다.|  
 |**use_partition_groups**<br /><br /> 참고: 경우 partition_groups를 사용한 후로 되돌릴 수 있습니다 **setupbelongs**를 설정 하 고 **use_partition_groups = false** 에서 **changemergearticle**를 올바르게 아닐 수 있습니다 스냅숏을 생성 한 후를 반영 합니다. 스냅숏이 생성하는 트리거는 파티션 그룹과 호환됩니다.<br /><br /> 이 시나리오를 해결 하는 비활성 상태는 설정, 수정 하는 **use_partition_groups**, 활성 상태를 설정 합니다.|**true**|게시에서 사전 계산 파티션을 사용합니다.|  
 ||**false**|게시에서 사전 계산 파티션을 사용하지 않습니다.|  
@@ -140,7 +139,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changemergepublication** 병합 복제에 사용 됩니다.  
   
  다음 속성을 변경하려면 새 스냅숏을 생성해야 하며 값을 지정 해야 합니다 **1** 에 대 한 합니다 *force_invalidate_snapshot* 매개 변수입니다.  

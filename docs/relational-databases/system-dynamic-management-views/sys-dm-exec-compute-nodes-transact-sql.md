@@ -21,27 +21,26 @@ helpviewer_keywords:
 ms.assetid: 0de4b7a4-401f-4e2d-9ab0-c54587e05154
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f82087cc2549871147d0a85d6c36e9d8d211979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 429075f01018abbe39b13f46b79a30aa95c5c2db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097862"
 ---
-# <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact-SQL)
+# <a name="sysdmexeccomputenodes-transact-sql"></a>sys.dm_exec_compute_nodes (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   PolyBase 데이터 관리를 사용 하는 노드에 대 한 정보를 보유 합니다. 노드당 하나의 행을 나열합니다.  
   
  이 DMV를 사용 하 여 자신의 역할, 이름 및 IP 주소를 사용 하 여 확장 클러스터에서 모든 노드의 목록을 참조 하세요.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|노드와 연결 된 고유 숫자 id입니다. 이 보기에 대 한 키입니다.|형식에 관계 없이 확장 클러스터에서 고유 합니다.|  
-|유형|**nvarchar(32)**|노드의 형식입니다.|' 계산 ', 'HEAD'|  
-|NAME|**nvarchar(32)**|노드의 논리적 이름입니다.|적절 한 길이의 문자열입니다.|  
+|type|**nvarchar(32)**|노드의 형식입니다.|' 계산 ', 'HEAD'|  
+|name|**nvarchar(32)**|노드의 논리적 이름입니다.|적절 한 길이의 문자열입니다.|  
 |address|**nvarchar(32)**|이 노드의 P 주소입니다.|IP 주소 범위|  
   
 ## <a name="see-also"></a>관련 항목  

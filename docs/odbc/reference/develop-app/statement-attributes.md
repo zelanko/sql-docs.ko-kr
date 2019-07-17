@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c59cd8e-a713-4095-9065-20d5bdeafe43
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0e669f02eeb76ba529c75851ce8bf6ff9a7831a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c74f1a79ef79b682bc2900d671e07bbe34c4dbf5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149095"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107269"
 ---
 # <a name="statement-attributes"></a>문 특성
 문 특성은 문 특성입니다. 예를 들어 문의 결과 사용 하는 커서 및 사용 하 여 책갈피 어떤 종류의 설정 여부를 나타내는 경우 문 특성  

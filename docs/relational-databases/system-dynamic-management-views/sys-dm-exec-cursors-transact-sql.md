@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097839"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ dm_exec_cursors (session_id | 0 )
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|이 커서를 보유하는 세션의 ID입니다.|  
 |**cursor_id**|**int**|커서 개체의 ID입니다.|  
@@ -72,17 +71,17 @@ dm_exec_cursors (session_id | 0 )
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서는 커서 선언 인터페이스에 대한 정보를 제공하고 속성 열에 나올 수 있는 값을 보여 줍니다.  
   
-|속성|Description|  
+|속성|설명|  
 |--------------|-----------------|  
 |API|데이터 액세스 API(ODBC, OLEDB) 중 하나를 사용하여 커서가 선언되었습니다.|  
 |TSQL|Transact-SQL DECLARE CURSOR 구문을 사용하여 커서가 선언되었습니다.|  
   
  다음 표에서는 커서 유형에 대한 정보를 제공하고 속성 열에 나올 수 있는 값을 보여 줍니다.  
   
-|형식|Description|  
+|type|설명|  
 |----------|-----------------|  
 |Keyset|키 집합 커서로 선언되었습니다.|  
 |Dynamic|동적 커서로 선언되었습니다.|  
@@ -91,7 +90,7 @@ dm_exec_cursors (session_id | 0 )
   
  다음 표에서는 커서 동시성에 대한 정보를 제공하고 속성 열에 나올 수 있는 값을 보여 줍니다.  
   
-|동시성|Description|  
+|동시성|설명|  
 |-----------------|-----------------|  
 |읽기 전용|커서가 읽기 전용으로 선언되었습니다.|  
 |Scroll Locks|커서가 스크롤 잠금을 사용합니다.|  
@@ -99,14 +98,14 @@ dm_exec_cursors (session_id | 0 )
   
  다음 표에서는 커서 범위에 대한 정보를 제공하고 속성 열에 나올 수 있는 값을 보여 줍니다.  
   
-|범위|Description|  
+|Scope|설명|  
 |-----------|-----------------|  
 |로컬|커서 범위를 커서가 생성된 일괄 처리, 저장 프로시저, 트리거에 대해 로컬로 지정합니다.|  
 |Global|커서 범위를 연결에 대해 전역으로 지정합니다.|  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-detecting-old-cursors"></a>1\. 오래된 커서 검색  
+### <a name="a-detecting-old-cursors"></a>A. 오래된 커서 검색  
  다음 예에서는 지정한 36시간을 초과하여 서버에서 열려 있는 커서에 대한 정보를 반환합니다.  
   
 ```  

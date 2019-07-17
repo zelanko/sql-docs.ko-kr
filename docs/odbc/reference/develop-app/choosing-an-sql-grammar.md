@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 670ed0adbbd5ad993af0942d492ee19f75fa9628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f7bf7e77f892f10de17402b59e732523d58fbc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036552"
 ---
 # <a name="choosing-an-sql-grammar"></a>SQL 문법 선택
 SQL 문 생성 하는 경우 첫 번째 결정은 사용 하는 문법입니다. 문법, Open Group, ANSI 및 ISO와 같은 다양 한 표준 기관에서 제공 하는 것 외에도 거의 모든 DBMS 공급 업체는 표준에서 약간씩 다릅니다 각각 자체 문법을 정의 합니다.  

@@ -20,21 +20,20 @@ helpviewer_keywords:
 ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 206ac65ab9a3b533cc80858feff2ffdfa2671ecf
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: c76e22bc0041c69ffc8ab9d0632ff69f8518031b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067937"
 ---
-# <a name="sysquerystoreruntimestatsinterval-transact-sql"></a>sys.query_store_runtime_stats_interval (Transact-SQL)
+# <a name="sysquerystoreruntimestatsinterval-transact-sql"></a>sys.query_store_runtime_stats_interval (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   수집 쿼리에 대 한 실행 통계 정보는 런타임 동안 각 간격의 시작 시간과 종료 시간에 대 한 정보가 들어 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_interval_id**|**bigint**|기본 키입니다.|
 |**start_time**|**datetimeoffset**|시작 시간 간격입니다.|

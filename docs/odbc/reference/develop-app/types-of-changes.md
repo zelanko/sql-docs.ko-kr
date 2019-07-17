@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ca1b0fc2f7a1a74e1b9ab9a85baba945e4edf491
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 5f43dbf75754a16b3163bbb8e268400f34d372b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087816"
 ---
 # <a name="types-of-changes"></a>변경 형식
 ODBC의 세 가지 유형의 변경 내용이 *3.x* (및 ODBC의 모든 버전). 이러한 각 이전 버전과 호환성을 다르게 영향을 받으며 다른 방식으로 처리 됩니다. 이러한 변경 내용은 다음과에서 같습니다.  

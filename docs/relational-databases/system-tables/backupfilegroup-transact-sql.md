@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d26e8fbe-f5c5-4e10-b2bd-0d8e16ea21f9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1456ff13c32b8b1f0eb8185693000507ffa401e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122919"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "62645185"
 > [!NOTE]  
 >  합니다 **backupfilegroup** 테이블에는 백업 세트가 아닌 데이터베이스의 파일 그룹 구성을 보여 줍니다. 백업 세트에 있는 파일을 포함할지 여부를 식별 하려면 사용 합니다 **is_present** 열의 합니다 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) 테이블입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|이 파일 그룹이 포함된 백업 세트입니다.|  
 |**name**|**sysname**|파일 그룹의 이름입니다.|  
@@ -46,7 +45,7 @@ ms.locfileid: "62645185"
 |**is_readonly**|**bit**|1 = 읽기 전용 파일 그룹입니다.|  
 |**log_filegroup_guid**|**uniqueidentifier**|NULL일 수 있습니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 > [!IMPORTANT]  
 >  여러 데이터베이스에 같은 파일 그룹 이름이 나타날 수 있지만 각 파일 그룹에는 고유 GUID가 있습니다. 따라서 **(backup_set_id, filegroup_guid)** 에서 파일 그룹을 식별 하는 고유 키인 **backupfilegroup**합니다.  

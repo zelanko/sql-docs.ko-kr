@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db287e729678f54aaf637950c89c724724678f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f748e75f4e1579446b72b519356f2f649889fe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078963"
 ---
 # <a name="was-a-result-set-created"></a>결과 집합이 생성되었나요?
 대부분의 경우 응용 프로그램 프로그래머는 응용 프로그램을 실행는 문은 결과 집합을 생성 하는지 여부를 알고 있습니다. 이 경우 응용 프로그램 프로그래머가 작성 하드 코딩 된 SQL 문을 사용 하는 경우입니다. 이 일반적으로 응용 프로그램 런타임 시 SQL 문을 생성 하는 경우: 프로그래머가 플래그를 지정 하는 코드를 쉽게 포함할 수 있는지 여부를 **선택** 문 또는 **삽입** 문을 생성 되 고 합니다. 일부 경우에 프로그래머 알아낼 수는 없기 문이 결과 집합을 만듭니다 여부. 응용 프로그램 사용자가 입력 하 고 SQL 문을 실행 하는 방법을 제공 하는 경우에 그렇습니다. 응용 프로그램이 런타임에 프로시저를 실행 하는 문을 생성 하는 경우에 마찬가지입니다.  

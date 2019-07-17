@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ef9eb558c2f73c51c78f1464ed7951c743bc4ef0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4a29a8227fc7b0452f17d6da0c1f47d37738ed0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036816"
 ---
 # <a name="stripcalculatedmembers-mdx"></a>StripCalculatedMembers(MDX)
 
@@ -32,7 +31,7 @@ StripCalculatedMembers(Set_Expression)
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **StripCalculatedMembers** 함수 집합에서 계산된 멤버를 제거 합니다. 계산 멤버는 사용 하 여 집합을 추가할 수 있습니다 합니다 [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) 서버의 정의 된 계산된 멤버 또는 WITH를 사용 하 여 쿼리 자체 내에서 추가 된 계산된 멤버를 반환 하는 함수 멤버 구문입니다.  
   
 ## <a name="example"></a>예제  

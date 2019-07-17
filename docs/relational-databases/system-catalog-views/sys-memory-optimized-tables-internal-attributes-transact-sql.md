@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 78ef5807-0504-4de8-9a01-ede6c03c7ff1
 author: jodebrui
 ms.author: jodebrui
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4a85fedcd5eaddf5383f6f84360765bc60ad2556
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea116b0d4a70b647c6c3a719443f8e35f177169b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102378"
 ---
 # <a name="sysmemoryoptimizedtablesinternalattributes-transact-sql"></a>sys.memory_optimized_tables_internal_attributes(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "47829690"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-all-columns-that-are-stored-off-row"></a>1. 행 외부에서 저장된 모든 열 반환
+### <a name="a-returning-all-columns-that-are-stored-off-row"></a>1\. 행 외부에서 저장된 모든 열 반환
 
 다음 T-SQL 스크립트에서는 여러 큰 비-LOB 열과 단일 LOB 열이 있는 테이블을 보여 줍니다.
 
@@ -76,7 +75,7 @@ FROM sys.memory_optimized_tables_internal_attributes moa
 WHERE moa.type=5;
 ```
 
-### <a name="b-returning-memory-consumption-of-all-columns-that-are-stored-off-row"></a>2. 행 외부에서 저장된 모든 열의 메모리 사용량 반환
+### <a name="b-returning-memory-consumption-of-all-columns-that-are-stored-off-row"></a>2\. 행 외부에서 저장된 모든 열의 메모리 사용량 반환
 
 행 외부 열의 메모리 사용에 대한 자세한 정보를 얻으려면 행 외부 열을 저장하는 데 사용되는 모든 내부 테이블 및 인덱스의 메모리 사용량을 보여 주는 다음 쿼리를 사용할 수 있습니다.
 
@@ -96,7 +95,7 @@ FROM sys.memory_optimized_tables_internal_attributes moa
 WHERE moa.type=5;
 ```
 
-### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>3. 메모리 최적화 테이블에서 columnstore 인덱스의 메모리 사용량 반환
+### <a name="c-returning-memory-consumption-of-columnstore-indexes-on-memory-optimized-tables"></a>3\. 메모리 최적화 테이블에서 columnstore 인덱스의 메모리 사용량 반환
 
 다음 쿼리를 사용 하 여 메모리 최적화 테이블에서 columnstore 인덱스의 메모리 사용량을 보여 줍니다.
 

@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e944c740-4c8a-4bc1-b0ed-be57bc06dced
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8de9b27a58d277191a4d40da6b34dbcbbd43e497
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39df13a3cab2d842a313ca37fc4a98d0c331ba83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104208"
 ---
 # <a name="adding-and-removing-access-database-files-accesstosql"></a>Access 데이터베이스 파일 (AccessToSQL) 추가 및 제거
 로 Access 데이터를 마이그레이션하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure SSMA 프로젝트에 하나 이상의 Access 데이터베이스를 추가 해야 합니다. 이러한 데이터베이스는 Access 97 또는 이후 버전 이어야 합니다. 이전 버전의 Access에서 데이터베이스에 있는 경우 데이터베이스를 최신 버전으로 변환 해야 합니다. 열고 SSMA를 추가 하기 전에 Access 97 이상에서 데이터베이스를 저장 하 여이 작업을 수행 합니다.  

@@ -11,12 +11,12 @@ ms.assetid: d8506bda-66dd-45a4-bfc9-3a10fa665acc
 author: lrtoyou1223
 ms.author: lle
 manager: erikre
-ms.openlocfilehash: d08fd9bbb91a3783cf176f150fc966d1b44a2fc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5212af4f19cdf26f6c332a83877880c80bc3741
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485280"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267028"
 ---
 # <a name="deprecated-master-data-services-features"></a>사용되지 않는 Master Data Services 기능
 

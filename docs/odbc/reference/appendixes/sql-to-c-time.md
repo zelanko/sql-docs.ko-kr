@@ -1,5 +1,5 @@
 ---
-title: 'SQL에서 C로: Time | Microsoft Docs'
+title: 'SQL에서 C로: 시간 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6dc59973-7bb5-40f1-87c8-5bf68b3bf2ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e028502bd7bc6ac1a81006d340b6ce606a0ae337
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99f8219ef53f72b0d7ab1477bba5d24d441a3141
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065078"
 ---
 # <a name="sql-to-c-time"></a>SQL에서 C로: Time
 ODBC SQL 데이터 형식은 시간에 대 한 식별자.  
@@ -31,9 +30,9 @@ ODBC SQL 데이터 형식은 시간에 대 한 식별자.
   
 |C 형식 식별자|테스트|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > 문자 바이트 길이<br /><br /> *9* <= *BufferLength* < = 문자 바이트 길이<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 잘린된 데이터<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > 문자 길이<br /><br /> *9* <= *BufferLength* < = 문자 길이<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 잘린된 데이터<br /><br /> 정의되지 않음|문자에서 데이터의 길이<br /><br /> 문자에서 데이터의 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
+|SQL_C_CHAR|*BufferLength* > 문자 바이트 길이<br /><br /> *9* <= *BufferLength* < = 문자 바이트 길이<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 잘린된 데이터<br /><br /> Undefined|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이<br /><br /> Undefined|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > 문자 길이<br /><br /> *9* <= *BufferLength* < = 문자 길이<br /><br /> *BufferLength* < 9|data<br /><br /> [A] 잘린된 데이터<br /><br /> Undefined|문자에서 데이터의 길이<br /><br /> 문자에서 데이터의 길이<br /><br /> Undefined|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> Undefined|데이터의 바이트 길이<br /><br /> Undefined|n/a<br /><br /> 22003|  
 |SQL_C_TYPE_TIME|없음 [b]|data|6[d]|n/a|  
 |SQL_C_TYPE_TIMESTAMP|없음 [b]|데이터 [c]|16[d]|n/a|  
   

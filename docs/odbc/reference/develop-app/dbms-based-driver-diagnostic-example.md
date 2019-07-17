@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a80d54b0-43ff-4dfd-b6cb-f4694a5ed765
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0485ecf720cb84580c17c77b31fc6816de2e679a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef42fe2ab881a7e24d680e0dd941cbea0d95488f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641033"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076890"
 ---
 # <a name="dbms-based-driver-diagnostic-example"></a>DBMS 기반 드라이버 진단 예제
 DBMS 기반 드라이버는 DBMS에 요청을 보내고 및 드라이버 관리자를 통해 응용 프로그램에 정보를 반환 합니다. 형식 및에 대 한 인수를 반환 합니다. 드라이버가 드라이버 관리자와 인터페이스 하는 구성 요소 이므로 **SQLGetDiagRec**합니다.  

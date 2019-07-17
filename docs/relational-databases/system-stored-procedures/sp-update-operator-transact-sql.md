@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac1fb436ded0d829d9b6a9c8fe4e642f8de8cb16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084837"
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,10 +63,10 @@ sp_update_operator
  운영자의 현재 상태를 나타내는 숫자 (**1** 현재 사용할 수 있으면 **0** 그렇지 않은 경우). *사용 하도록 설정* 됩니다 **tinyint**, 기본값은 NULL입니다. 설정되어 있지 않으면 운영자는 경고 알림을 받을 수 없습니다.  
   
  [ @email_address=] '*email_address*'  
- 운영자의 전자 메일 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 됩니다 **nvarchar(100)**, 기본값은 NULL입니다.  
+ 운영자의 전자 메일 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 됩니다 **nvarchar(100)** , 기본값은 NULL입니다.  
   
  [ @pager_address=] '*pager_number*'  
- 운영자의 호출기 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *pager_number* 됩니다 **nvarchar(100)**, 기본값은 NULL입니다.  
+ 운영자의 호출기 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *pager_number* 됩니다 **nvarchar(100)** , 기본값은 NULL입니다.  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
  월요일부터 금요일까지 이 운영자에게 호출기 알림 전달을 시작할 수 있는 시간을 지정합니다. *weekday_pager_start_time*됩니다 **int**, 기본값은 NULL 사용 하 여 24 시간제를 사용 하 여 사용 하 여 HHMMSS 폼에 입력 해야 합니다.  
@@ -101,7 +100,7 @@ sp_update_operator
 |**64**|토요일|  
   
  [ @netsend_address=] '*netsend_address*'  
- 네트워크 메시지가 전송되는 운영자의 네트워크 주소입니다. *netsend_address*됩니다 **nvarchar(100)**, 기본값은 NULL입니다.  
+ 네트워크 메시지가 전송되는 운영자의 네트워크 주소입니다. *netsend_address*됩니다 **nvarchar(100)** , 기본값은 NULL입니다.  
   
  [ @category_name=] '*범주*'  
  이 경고에 대한 범주 이름입니다. *범주* 됩니다 **sysname**, 기본값은 NULL입니다.  
@@ -109,7 +108,7 @@ sp_update_operator
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_update_operator는 msdb 데이터베이스에서 실행되어야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

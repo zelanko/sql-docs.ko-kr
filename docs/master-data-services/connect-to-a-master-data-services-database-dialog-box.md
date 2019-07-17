@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: b2f8c9b9-c31e-4f0d-9095-978709423190
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ebfa31e2d40d4d041db83696496fe12d778e8982
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c728be0bd57d091b45349ac22bffab7c8ef1bd4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076309"
 ---
 # <a name="connect-to-a-master-data-services-database-dialog-box"></a>Master Data Services 데이터베이스에 연결 대화 상자
 

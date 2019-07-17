@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 577d84c1-9285-4580-b6f5-86fbc4827547
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 918a5b7d2d2c4b378172c60afab711a3334176d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a8c013a5fd87058a202e6d24f4b3148947b5319
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63046924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093205"
 ---
 # <a name="boolean-constructor-functions---false-xquery"></a>부울 생성자 함수 - false(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ fn:false() as xs:boolean
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-false-xquery-boolean-function"></a>1\. false() XQuery 부울 함수 사용  
+### <a name="a-using-the-false-xquery-boolean-function"></a>A. false() XQuery 부울 함수 사용  
  작업 샘플을 보려면 [함수를 true &#40;XQuery&#41;](../xquery/boolean-constructor-functions-true-xquery.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  

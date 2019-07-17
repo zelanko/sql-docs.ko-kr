@@ -31,13 +31,12 @@ helpviewer_keywords:
 ms.assetid: 27c4889b-c543-47a8-a630-ad06804f92df
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e203d8e8218478654c9b474eb49dbb99eea8623b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2078b11b44232b44e94191c07fca91998f2c1172
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028354"
 ---
 # <a name="clr-user-defined-types"></a>CLR 사용자 정의 형식
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

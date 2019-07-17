@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f64eda5ad640e50afd25db111de74141e41e652d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc79bb5d12b53938e3e2ef1c531fd03b0002ed78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093832"
 ---
 # <a name="setup-program"></a>설치 프로그램
 > **참고:** Windows XP 및 Windows Server 2003부터 **ODBC Windows 운영 체제에 포함 되어**입니다. 이전 버전의 Windows에서 ODBC를 명시적으로 설치 해야 합니다.  

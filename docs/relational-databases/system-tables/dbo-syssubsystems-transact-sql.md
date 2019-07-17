@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 114b3d55-1ad6-4777-b868-8ef0c86ba596
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d685f5e8837feebffeeeade95697f4f3bfea4c81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f06182f06e92ff581dd02c072b63fc10962921a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069080"
 ---
 # <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   모든 사용 가능한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 프록시 하위 시스템에 대한 정보를 포함합니다. 합니다 **syssubsystems** 테이블에 저장 되는 **msdb** 데이터베이스.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|하위 시스템의 ID입니다.|  
 |**subsystem**|**nvarchar(40)**|하위 시스템의 이름입니다.|  
@@ -44,7 +43,7 @@ ms.locfileid: "62470503"
 |**stop_entry_point**|**nvarchar(30)**|하위 시스템이 실행을 마칠 때 호출되는 함수입니다.|  
 |**max_worker_threads**|**int**|지정된 하위 시스템의 최대 동시 단계 수입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  멤버는 **sysadmin** 고정된 서버 역할이이 테이블에 액세스할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  

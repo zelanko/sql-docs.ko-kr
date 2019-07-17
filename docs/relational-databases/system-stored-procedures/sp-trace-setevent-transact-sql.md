@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b90fe62de358c226fba4b3b4a26f941c75ce5a47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095952"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -206,18 +205,18 @@ sp_trace_setevent [ @traceid = ] trace_id
 |177|Audit Server Principal Management Event|서버 보안 주체를 생성, 변경 또는 삭제하면 발생합니다.|  
 |178|Audit Database Operation Event|쿼리 알림 구독 또는 검사점 설정 같은 데이터베이스 작업이 수행되면 발생합니다.|  
 |180|Audit Database Object Access Event|스키마 같은 데이터베이스 개체에 액세스하면 발생합니다.|  
-|181|TM: Begin Tran starting|BEGIN TRANSACTION 요청이 시작되면 발생합니다.|  
-|182|TM: Begin Tran completed|BEGIN TRANSACTION 요청이 완료되면 발생합니다.|  
+|181|TM: Begin Tran 시작|BEGIN TRANSACTION 요청이 시작되면 발생합니다.|  
+|182|TM: Begin Tran 완료|BEGIN TRANSACTION 요청이 완료되면 발생합니다.|  
 |183|TM: Promote Tran starting|PROMOTE TRANSACTION 요청이 시작되면 발생합니다.|  
-|184|TM: Promote Tran completed|PROMOTE TRANSACTION 요청이 완료되면 발생합니다.|  
+|184|TM: Promote Tran 완료|PROMOTE TRANSACTION 요청이 완료되면 발생합니다.|  
 |185|TM: Commit Tran starting|COMMIT TRANSACTION 요청이 시작되면 발생합니다.|  
-|186|TM: Commit Tran completed|COMMIT TRANSACTION 요청이 완료되면 발생합니다.|  
-|187|TM: Rollback Tran starting|ROLLBACK TRANSACTION 요청이 시작되면 발생합니다.|  
-|188|TM: Rollback Tran completed|ROLLBACK TRANSACTION 요청이 완료되면 발생합니다.|  
+|186|TM: Commit Tran 완료|COMMIT TRANSACTION 요청이 완료되면 발생합니다.|  
+|187|TM: Rollback Tran 시작|ROLLBACK TRANSACTION 요청이 시작되면 발생합니다.|  
+|188|TM: Rollback Tran 완료|ROLLBACK TRANSACTION 요청이 완료되면 발생합니다.|  
 |189|Lock: Timeout (timeout > 0)|페이지 같은 리소스에 대한 잠금 요청 시간이 초과되면 발생합니다.|  
-|190|Progress Report: Online Index Operation|빌드 프로세스가 실행되는 동안 온라인 인덱스 작성 작업의 진행률을 보고합니다.|  
-|191|TM: Save Tran starting|SAVE TRANSACTION 요청이 시작되면 발생합니다.|  
-|192|TM: Save Tran completed|SAVE TRANSACTION 요청이 완료되면 발생합니다.|  
+|190|진행률 보고서: 온라인 인덱스 작업|빌드 프로세스가 실행되는 동안 온라인 인덱스 작성 작업의 진행률을 보고합니다.|  
+|191|TM: Save Tran 시작|SAVE TRANSACTION 요청이 시작되면 발생합니다.|  
+|192|TM: Save Tran 완료|SAVE TRANSACTION 요청이 완료되면 발생합니다.|  
 |193|Background Job Error|백그라운드 작업이 비정상적으로 종료되면 발생합니다.|  
 |194|OLEDB Provider Information|분산 쿼리가 실행되어 공급자 연결에 해당하는 정보를 수집하면 발생합니다.|  
 |195|Mount Tape|테이프 탑재 요청을 받으면 발생합니다.|  
@@ -315,7 +314,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  *on*이 **0**으로 설정되고 *column_id*가 NULL인 경우, 이벤트는 OFF로 설정되며 모든 열이 지워집니다. *column_id*가 null이 아니면, 열은 OFF로 설정됩니다.  
   
- 이 테이블 간의 상호 작용을 보여 줍니다**@on** 하 고 **@columnid**합니다.  
+ 이 테이블 간의 상호 작용을 보여 줍니다 **@on** 하 고 **@columnid** 합니다.  
   
 |@on|@columnid|결과|  
 |---------|---------------|------------|  
@@ -348,7 +347,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 -   **xp_trace_seteventclassrequired**  
   
- 사용자는 각 이벤트에 대해 추가된 각 열에 대해 **sp_trace_setevent**를 실행해야 합니다. 각각의 실행 중에 **@on**이 **1**로 설정된 경우 **sp_trace_setevent**는 지정된 이벤트를 추적 이벤트 목록에 추가합니다. **@on**이 **0**으로 설정된 경우 **sp_trace_setevent**는 지정된 이벤트를 목록에서 제거합니다.   
+ 사용자는 각 이벤트에 대해 추가된 각 열에 대해 **sp_trace_setevent**를 실행해야 합니다. 각각의 실행 중에 **@on** 이 **1**로 설정된 경우 **sp_trace_setevent**는 지정된 이벤트를 추적 이벤트 목록에 추가합니다. **@on** 이 **0**으로 설정된 경우 **sp_trace_setevent**는 지정된 이벤트를 목록에서 제거합니다.  
   
  모든 SQL Trace 저장 프로시저(**sp_trace_xx**)의 매개 변수는 엄격하게 형식이 지정되어 있습니다. 이러한 매개 변수가 인수 설명에서 지정한대로 정확한 입력 매개 변수 데이터 형식으로 호출되지 않으면 저장 프로시저는 오류를 반환합니다.  
   

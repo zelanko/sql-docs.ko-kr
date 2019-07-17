@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: cbde2ca1-5d4e-4444-a371-a72f3ac4d92a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 04bd9a37d87c91fe3f42cbb1fdf464660ba5a299
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e1a28e5c7ccf3c701e5f97440cd97ed843ab53dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063502"
 ---
 # <a name="setting-options-programmatically-for-the-text-file-driver"></a>텍스트 파일 드라이버에 프로그래밍 방식으로 옵션 설정
 
-|옵션|Description|메서드|  
+|옵션|설명|메서드|  
 |------------|-----------------|------------|  
 |Data Source Name|직원 급여 등, 데이터 소스를 식별 하는 이름입니다.|이 옵션을 동적으로 설정 하려면 합니다 **DSN** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)합니다.|  
 |형식 정의|표시 된 **텍스트 형식으로 정의** 대화 상자 및 데이터 소스 디렉터리에서 개별 테이블에 대 한 스키마를 지정할 수 있습니다.|호출 하 여이 옵션을 동적으로 설정할 수 없습니다 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)합니다.|  
-|Description|데이터 소스의 데이터에 대 한 설명 예를 들어, "고용 날짜, 급여 내역, 및 모든 직원의 현재 검토 합니다."|이 옵션을 동적으로 설정 하려면 합니다 **설명** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
+|설명|데이터 소스의 데이터에 대 한 설명 예를 들어, "고용 날짜, 급여 내역, 및 모든 직원의 현재 검토 합니다."|이 옵션을 동적으로 설정 하려면 합니다 **설명** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  
 |디렉터리|대상된 디렉터리를 선택합니다.|이 옵션을 동적으로 설정 하려면 합니다 **DEFAULTDIR** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)합니다.|  
 |확장 목록|데이터 원본에 있는 텍스트 파일의 파일 이름 확장명을 나열합니다. 텍스트 드라이버를 사용 하면 확장명이 없는 파일 확장명이 없는 이름으로는 CREATE TABLE 문이 실행 될 때 생성 됩니다. 다른 드라이버 없는 확장을 제공 하는 경우 기본 확장명을 가진 파일을 만듭니다. 확장명이.txt 인 파일을 만들려면 확장 이름에 포함 되어야 합니다. 확장명 없는 파일을 표시 하는 **텍스트 형식으로 정의** 대화 상자에서 "*." 확장 목록에 추가 되어야 합니다.|이 옵션을 동적으로 설정 하려면 합니다 **확장** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md)합니다.|  
 |읽기 전용|읽기 전용으로 데이터베이스를 지정합니다.|이 옵션을 동적으로 설정 하려면 합니다 **읽기 전용** 호출에서 키워드 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-text-file-driver.md).|  

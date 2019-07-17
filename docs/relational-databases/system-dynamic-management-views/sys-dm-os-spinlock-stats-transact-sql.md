@@ -22,12 +22,12 @@ author: bluefooted
 ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
-ms.openlocfilehash: e302eadaa559674482911904678cc8aa4cbd2577
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826605"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265695"
 ---
 # <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact SQL)
 

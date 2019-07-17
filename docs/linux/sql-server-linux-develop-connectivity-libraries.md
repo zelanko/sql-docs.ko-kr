@@ -3,18 +3,17 @@ title: 연결 라이브러리 및 프레임 워크
 description: 클라이언트 앱은 다양 한 언어에서 Microsoft SQL Server 온-프레미스 또는 클라우드, Linux, Windows 나 Docker 및 Azure SQL Database 및 Azure SQL Data Warehouse에 연결 하는 데 사용할 수 있는 연결 드라이버를 나열 합니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: 88b212d9a39f990184753382f433f1c002a4634d
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: dd2a70cefd0e094b53656dde99af81afca2894c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077466"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>연결 라이브러리 및 Microsoft SQL Server에 대 한 프레임 워크
 

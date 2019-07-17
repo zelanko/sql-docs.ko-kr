@@ -19,25 +19,24 @@ helpviewer_keywords:
 ms.assetid: d9920008-3387-4f9e-8f21-47473f2ba04f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b1c7a560abb6b92203753c16ba2d28df89072732
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 665e73b3cd072bfffc214c518d75d96af3591f94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108870"
 ---
 # <a name="syssystemcomponentssurfaceareaconfiguration-transact-sql"></a>sys.system_components_surface_area_configuration(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   노출 영역 구성 요소를 사용하여 설정하거나 해제할 수 있는 실행 가능한 각 시스템 개체에 대해 행을 반환합니다. 자세한 내용은 [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md)을 참조하세요.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**component_name**|**sysname**|구성 요소 이름입니다. 키워드 데이터 정렬 Latin1_General_CI_AS_KS_WS를 가집니다. NULL이 될 수 없습니다.|  
+|**component_name**|**sysname**|구성 요소 이름입니다. 키워드 데이터 정렬 Latin1_General_CI_AS_KS_WS를 가집니다. NULL일 수 없습니다.|  
 |**database_name**|**sysname**|개체를 포함하는 데이터베이스입니다. 키워드 데이터 정렬 Latin1_General_CI_AS_KS_WS를 가집니다. 다음 중 하나여야 합니다.<br /><br /> **master**<br /><br /> **msdb**<br /><br /> **mssqlsystemresource**|  
-|**schema_name**|**sysname**|개체를 포함하는 스키마입니다. 키워드 데이터 정렬 Latin1_General_CI_AS_KS_WS를 가집니다. NULL이 될 수 없습니다.|  
-|**object_name**|**sysname**|개체 이름입니다. 키워드 데이터 정렬 Latin1_General_CI_AS_KS_WS를 가집니다. NULL이 될 수 없습니다.|  
+|**schema_name**|**sysname**|개체를 포함하는 스키마입니다. 키워드 데이터 정렬 Latin1_General_CI_AS_KS_WS를 가집니다. NULL일 수 없습니다.|  
+|**object_name**|**sysname**|개체 이름입니다. 키워드 데이터 정렬 Latin1_General_CI_AS_KS_WS를 가집니다. NULL일 수 없습니다.|  
 |**state**|**tinyint**|0 = 사용 안 함<br /><br /> 1 = 사용|  
 |**type**|**char(2)**|개체 유형입니다. 다음 중 하나일 수 있습니다.<br /><br /> P = SQL_STORED_PROCEDURE<br /><br /> PC = CLR_STORED_PROCEDURE<br /><br /> FN = SQL_SCALAR_FUNCTION<br /><br /> FS = CLR_SCALAR_FUNCTION<br /><br /> FT = CLR_TABLE_VALUED_FUNCTION<br /><br /> IF = SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> TF = SQL_TABLE_VALUED_FUNCTION<br /><br /> X = EXTENDED_STORED_PROCEDURE|  
 |**type_desc**|**nvarchar(60)**|개체 유형에 대한 이름 설명입니다.|  

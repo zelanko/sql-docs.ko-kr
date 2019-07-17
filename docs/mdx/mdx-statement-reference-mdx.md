@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6155fa549918a9bb17d93c268681826d07581123
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2d8f37d37b0e895752934aa1b469e03d957c187
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033898"
 ---
 # <a name="mdx-statement-reference-mdx"></a>MDX 문 참조(MDX)
 
@@ -23,7 +22,7 @@ ms.locfileid: "63048497"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[MDX 스크립팅 문&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)|MDX 스크립트 내의 쿼리 컨텍스트, 범위 및 제어 흐름을 관리하는 MDX 스크립팅 문에 대한 정보가 포함됩니다.|  
 |[MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)|다차원 개체를 만들고, 삭제하고, 조작하는 MDX 데이터 정의 문에 대한 정보가 포함됩니다.|  

@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d2b4b47e6aa0426d09397844b291ee3636226fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15c3c9716adefbb95d24c9528dce8607678998c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096065"
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  사용자 정의 테이블의 옵션 값을 설정합니다. sp_tableoption을 사용 하 여 테이블의 행 내부 동작을 제어 하려면 사용할 수 **varchar (max)**, **nvarchar (max)** 하십시오 **varbinary (max)**, **xml**, **텍스트**합니다 **ntext**를 **이미지**, 또는 큰 사용자 정의 형식 열입니다.  
+  사용자 정의 테이블의 옵션 값을 설정합니다. sp_tableoption을 사용 하 여 테이블의 행 내부 동작을 제어 하려면 사용할 수 **varchar (max)** , **nvarchar (max)** 하십시오 **varbinary (max)** , **xml**, **텍스트**합니다 **ntext**를 **이미지**, 또는 큰 사용자 정의 형식 열입니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 text in row 기능이 제거됩니다. 큰 값 데이터를 저장 하려면을 사용 하는 권장 합니다 **varchar (max)**, **nvarchar (max)** 하 고 **varbinary (max)** 데이터 형식.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 text in row 기능이 제거됩니다. 큰 값 데이터를 저장 하려면을 사용 하는 권장 합니다 **varchar (max)** , **nvarchar (max)** 하 고 **varbinary (max)** 데이터 형식.  
   
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -48,28 +47,28 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 ## <a name="arguments"></a>인수  
  [ @TableNamePattern =] '*테이블*'  
- 사용자 정의 데이터베이스 테이블의 정규화 또는 비정규화된 이름입니다. 데이터베이스 이름을 포함한 정규화된 테이블 이름인 경우 데이터베이스 이름이 반드시 현재 데이터베이스의 이름이어야 합니다. 여러 테이블에 대한 테이블 옵션을 동시에 설정할 수 없습니다. *테이블* 됩니다 **nvarchar(776)**, 기본값은 없습니다.  
+ 사용자 정의 데이터베이스 테이블의 정규화 또는 비정규화된 이름입니다. 데이터베이스 이름을 포함한 정규화된 테이블 이름인 경우 데이터베이스 이름이 반드시 현재 데이터베이스의 이름이어야 합니다. 여러 테이블에 대한 테이블 옵션을 동시에 설정할 수 없습니다. *테이블* 됩니다 **nvarchar(776)** , 기본값은 없습니다.  
   
  [ @OptionName =] '*option_name*'  
- 테이블 옵션 이름입니다. *option_name* 됩니다 **varchar(35)**, NULL의 기본값은 없습니다. *option_name* 다음 값 중 하나일 수 있습니다.  
+ 테이블 옵션 이름입니다. *option_name* 됩니다 **varchar(35)** , NULL의 기본값은 없습니다. *option_name* 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |table lock on bulk load|기본값이 해제되면 사용자 정의 테이블에 대량 로드 처리를 수행하여 행 잠금을 얻습니다. 기본값이 설정되면 사용자 정의 테이블에 대량 로드 처리를 수행하여 대량 업데이트 잠금을 얻습니다.|  
 |insert row lock|더 이상 지원되지 않습니다.<br /><br /> 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 잠금 동작에 영향을 주지 않으며 기존 스크립트 및 프로시저와의 호환성을 위해 포함됩니다.|  
 |text in row|OFF 또는 0(해제, 기본값)이면 현재 동작을 바꾸지 않으며 행에 BLOB이 없습니다.<br /><br /> 지정 된 경우 및 @OptionValue 가 ON (설정) 또는 24에서 7000 새 까지의 정수 값 **텍스트**, **ntext**, 또는 **이미지** 문자열이 데이터 행에 직접 저장 됩니다. 기존의 모든 BLOB (이진 대형 개체: **텍스트**를 **ntext**, 또는 **이미지** 데이터)는 BLOB 값이 업데이트 될 때 text in row 형식으로 변경 됩니다. 자세한 내용은 설명 부분을 참조하세요.|  
-|large value types out of row|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)** 하십시오 **xml** 테이블의 큰 사용자 정의 형식 (UDT) 열에 저장 됩니다 와 함께 행 외부 루트에 대 한 16 바이트 포인터입니다.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)** 를 **varbinary (max)** 하십시오 **xml** 및 큰 UDT 값 한계까지 데이터 행에 직접 저장 됩니다 8000 바이트 한 정하는 값 레코드에 맞출 수 있습니다. 값이 레코드에 맞지 않으면 포인터는 행 내부에 저장되고 나머지는 행 외부 LOB 저장 공간에 저장됩니다. 0이 기본값입니다.<br /><br /> 큰 사용자 정의 형식 (UDT)에 적용 됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다. <br /><br /> Textimage_on 다음 옵션을 사용 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 큰 데이터 형식의 저장소 위치를 지정 합니다. |  
+|large value types out of row|1 = **varchar (max)** , **nvarchar (max)** , **varbinary (max)** 하십시오 **xml** 테이블의 큰 사용자 정의 형식 (UDT) 열에 저장 됩니다 와 함께 행 외부 루트에 대 한 16 바이트 포인터입니다.<br /><br /> 0 = **varchar (max)** , **nvarchar (max)** 를 **varbinary (max)** 하십시오 **xml** 및 큰 UDT 값 한계까지 데이터 행에 직접 저장 됩니다 8000 바이트 한 정하는 값 레코드에 맞출 수 있습니다. 값이 레코드에 맞지 않으면 포인터는 행 내부에 저장되고 나머지는 행 외부 LOB 저장 공간에 저장됩니다. 0이 기본값입니다.<br /><br /> 큰 사용자 정의 형식 (UDT)에 적용 됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다. <br /><br /> Textimage_on 다음 옵션을 사용 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 큰 데이터 형식의 저장소 위치를 지정 합니다. |  
 |vardecimal storage format|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> TRUE, ON 또는 1이면 지정된 테이블을 VarDecimal 저장소 형식에 사용할 수 있습니다. FALSE, OFF 또는 0이면 지정된 테이블을 VarDecimal 저장소 형식에 사용할 수 없습니다. Vardecimal 저장소 형식을 사용 하 여 데이터베이스에 vardecimal 저장소 형식을 지원 된 경우에 사용할 수 있습니다 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 **vardecimal** 저장소 형식이 사용 되지 않습니다. 대신 ROW 압축을 사용하세요. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요. 0이 기본값입니다.|  
   
  [ @OptionValue =] '*값*'  
- 가 있는지 여부를 합니다 *option_name* 사용 가능 (TRUE, ON 또는 1) 또는 해제 (FALSE, OFF 또는 0). *값* 됩니다 **varchar(12)**, 기본값은 없습니다. *값* 대/소문자를 구분 합니다.  
+ 가 있는지 여부를 합니다 *option_name* 사용 가능 (TRUE, ON 또는 1) 또는 해제 (FALSE, OFF 또는 0). *값* 됩니다 **varchar(12)** , 기본값은 없습니다. *값* 대/소문자를 구분 합니다.  
   
  유효한 text in row 옵션 값은 0, ON, OFF 또는 24에서 7000까지의 정수입니다. 때 *값* 가 ON 이면 기본 제한 256 바이트입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 오류 번호(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_tableoption은 사용자 정의 테이블의 옵션 값을 설정할 때만 사용합니다. 테이블 속성을 표시하려면 OBJECTPROPERTY를 사용하세요.  
   
  sp_tableoption의 text in row 옵션은 텍스트 열을 포함하는 테이블에서만 설정 또는 해제될 수 있습니다. 테이블에 텍스트 열이 없으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류가 발생합니다.  
@@ -86,7 +85,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
  BLOB 문자열이 데이터 행에 저장 된, 경우 읽기 및 쓰기를 **텍스트**를 **ntext**, 또는 **이미지** 문자열 읽기 또는 쓰기 문자와 이진 문자열과 빨리 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 BLOB 문자열을 읽거나 쓰기 위해 별도의 페이지에 액세스할 필요가 없습니다.  
   
- 경우는 **텍스트**를 **ntext**, 또는 **이미지** 문자열은 지정 된 제한 또는 행에서 사용 가능한 공간 보다 큰, 포인터 대신 행에 저장 됩니다. 하지만 이 경우에도 행에 BLOB 문자열을 저장하기 위한 조건이 적용됩니다. 포인터를 저장할 때도 데이터 행에 충분한 공간이 필요합니다.  
+ 경우는 **텍스트**를 **ntext**, 또는 **이미지** 문자열은 지정 된 제한 또는 행에서 사용 가능한 공간 보다 큰, 포인터 대신 행에 저장 됩니다. 그럼에도 불구 하 고 행에 BLOB 문자열을 저장 하기 위한 조건이 적용 됩니다. 포인터를 저장할 데이터 행에 충분 한 공간이 있어야 합니다.  
   
  테이블 행에 저장된 BLOB 문자열 및 포인터는 가변 길이 문자열과 비슷하게 취급됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 문자열 또는 포인터를 저장하는 데 필요한 바이트 수만 사용됩니다.  
   
@@ -109,7 +108,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-storing-xml-data-out-of-the-row"></a>1. xml 데이터를 행 외부에 저장  
+### <a name="a-storing-xml-data-out-of-the-row"></a>A. xml 데이터를 행 외부에 저장  
  다음 예제에서는 지정는 **xml** 에서 데이터를 `HumanResources.JobCandidate` 테이블 행 외부에 저장 됩니다.  
   
 ```sql  
@@ -118,7 +117,7 @@ GO
 EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row', 1;  
 ```  
   
-### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>2. 테이블에 VarDecimal 저장소 형식 사용  
+### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>2\. 테이블에 VarDecimal 저장소 형식 사용  
  다음 예제를 수정 합니다 `Production.WorkOrderRouting` 저장할 테이블을를 `decimal` 데이터 형식에 `vardecimal` 저장소 형식.  
 
 ```sql  

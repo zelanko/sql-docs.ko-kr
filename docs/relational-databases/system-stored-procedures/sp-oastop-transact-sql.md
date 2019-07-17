@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aa9eab66-c4f7-4ec7-9f0d-5d24d16da654
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db70245ce97811be77c102753b422c639531507b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ead1a768a89e9b43c02d7e80619dbf52165d2a38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097608"
 ---
 # <a name="spoastop-transact-sql"></a>sp_OAStop(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_OAStop
   
  HRESULT 반환 코드에 대 한 자세한 내용은 참조 하세요. [OLE 자동화 반환 코드 및 오류 정보](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  OLE Automation 저장 프로시저를 사용하는 모든 클라이언트는 하나의 실행 환경을 공유합니다. 클라이언트에서 호출 하는 경우 **sp_OAStop** 모든 클라이언트에 대해 공유 실행 환경이 중지 됩니다. 실행 환경을 중지 된 후 호출 하 여 **sp_OACreate** 실행 환경을 다시 시작 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

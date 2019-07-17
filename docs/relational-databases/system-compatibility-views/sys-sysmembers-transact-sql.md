@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ceb18341-f985-4849-ac83-21d67ab7b980
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5672c6b027e001e2aaf2a344c2710d2a28e62e9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 776c253b85f26e4808da7b3b1990be862546cbfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076565"
 ---
 # <a name="syssysmembers-transact-sql"></a>sys.sysmembers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63018643"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssnoteCompView](../../includes/ssnotecompview-md.md)]  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**memberuid**|**smallint**|역할 멤버의 사용자 ID입니다. 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.|  
 |**groupuid**|**smallint**|역할의 사용자 ID입니다. 사용자 및 역할 수가 32,767을 초과하는 경우 오버플로되거나 NULL을 반환합니다.|  

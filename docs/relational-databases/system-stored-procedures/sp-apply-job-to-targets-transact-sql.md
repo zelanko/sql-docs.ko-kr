@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4a3e9173-7e3c-4100-a9ac-2f5d2c60a8b0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f293e906d647d318bca5d730d0164b75cc88fc6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32e9f15dca77a7c99d7d4a9ae314e074876c6274
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117812"
 ---
 # <a name="spapplyjobtotargets-transact-sql"></a>sp_apply_job_to_targets(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_apply_job_to_targets { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_apply_job_to_targets** 여러 대상 서버에서 작업을 적용 (또는 제거) 하는 쉬운 방법을 제공 하며 호출 하는 대신 **sp_add_jobserver** (또는 **sp_delete_jobserver**) 필요한 각 대상 서버에 대해 한 번  
   
 ## <a name="permissions"></a>사용 권한  

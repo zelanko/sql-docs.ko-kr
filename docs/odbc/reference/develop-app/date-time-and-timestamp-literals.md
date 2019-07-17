@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2b42a52a-6353-494c-a179-3a7533cd729f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a13356aae88f332132bc6e8f6d6578971d2be99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6191995c9d1c488fc5af056248ba39dd3eb4607
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076977"
 ---
 # <a name="date-time-and-timestamp-literals"></a>날짜, 시간, 타임스탬프 리터럴
 날짜, 시간 및 타임 스탬프 리터럴에 대 한 이스케이프 시퀀스는  
@@ -31,7 +30,7 @@ ms.locfileid: "62641028"
 |---------------------|-------------|-----------------------|  
 |**d**|Date|*yyyy*-*mm*-*dd*|  
 |**t**|시간 *|*hh*:*mm*:*ss*[1]|  
-|**ts**|timestamp|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...* ][1]|  
+|**ts**|타임 스탬프|*yyyy*-*mm*-*dd* *hh*:*mm*:*ss*[.*f...* ][1]|  
   
  [SQL_DESC_PRECISION 설명자 필드에 포함 된 리터럴 초 구성 요소를 포함 하는 시간 또는 타임 스탬프 간격에서 소수점 오른쪽에 자릿수 1는 초 전체 자릿수에 따라 달라 집니다. (자세한 내용은 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md).)  
   

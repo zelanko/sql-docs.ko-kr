@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f48a3c7568a9db8b599f6d5a1997607fb16e6020
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069880"
 ---
 # <a name="features-to-watch-for"></a>주목할 기능
 이 섹션에서는 다양 한 응용 프로그램 개발자는 종종 부여에 대 한 사용 하는 기능을 설명 합니다. 사실 이러한 기능에 따라 크게 다릅니다 지원과 방식으로 Dbms; 지원 오류 코드를 상호 운용 가능한 응용 프로그램에서 문제가 발생할 가능성이 있습니다.  

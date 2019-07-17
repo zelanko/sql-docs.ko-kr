@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1446a999029b2c39bfbe4c6c43cf48ad3a09e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 620ccce9a035139482b2d9b4630bb2242f720af8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103773"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 함수(SQLGetDiagField Function)
 
@@ -213,7 +212,7 @@ SQLRETURN SQLGetDiagField(
 |*drop-view-statement*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
 |*grantstatement*|"권한 부여"|SQL_DIAG_GRANT|
 |*insert-statement*|"INSERT"|SQL_DIAG_INSERT|  
-|*ODBC-procedure-extension*|"CALL"|SQL_DIAG_ CALL|  
+|*ODBC 프로시저 확장*|"CALL"|SQL_DIAG_ CALL|  
 |*revoke-statement*|"REVOKE"|SQL_DIAG_REVOKE|  
 |*schema-definition*|"스키마 만들기"|SQL_DIAG_CREATE_SCHEMA|  
 |*translation-definition*|"번역을 작성 합니다."|SQL_DIAG_CREATE_TRANSLATION|  

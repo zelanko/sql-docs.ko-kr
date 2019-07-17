@@ -3,18 +3,18 @@ title: Linux의 SQL Server로 Oracle HR 스키마 마이그레이션 | Microsoft
 description: Linux의 SQL Server 샘플 Oracle 스키마 변환
 author: shamikg
 ms.author: shamikg
-manager: v-thobro
+manager: shamikg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629862"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266524"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Oracle 스키마를 SQL Server Migration Assistant를 사용 하 여 Linux에서 SQL Server 2017로 마이그레이션
 

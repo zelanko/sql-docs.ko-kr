@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 054786440afaf2b7ab458b4704bd5f8e2e26c135
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 232d1e94892165430867ec5217f8c87ccd625b48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63136168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036707"
 ---
 # <a name="strtotuple-mdx"></a>StrToTuple(MDX)
 
@@ -32,7 +31,7 @@ StrToTuple(Tuple_Specification [,CONSTRAINED] )
  *Tuple_Specification*  
  직접 또는 간접적으로 튜플을 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **StrToTuple** 함수는 지정 된 집합을 반환 합니다. 합니다 **StrToTuple** 함수는 일반적으로 돌아가려면는 튜플 사양에는 외부 함수의 MDX 문을 사용자 정의 함수와 함께 사용 됩니다.  
   
 -   CONSTRAINED 플래그를 사용할 경우 튜플 사양에는 정규화되거나 정규화되지 않은 멤버 이름을 포함해야 합니다. 이 플래그를 사용하면 지정한 문자열을 통한 삽입 공격 위험을 줄일 수 있습니다. 문자열을 지정 하는 경우 아닙니다 정규화 되거나 정규화 되지 않은으로 직접 확인할 수 멤버 이름이 다음과 같은 오류가 나타납니다. "CONSTRAINED 설정한 제한을 위반 했습니다 STRTOTUPLE 함수에서 플래그."  

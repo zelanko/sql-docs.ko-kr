@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 9aee483e-61f3-4613-bec6-f084161f45ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7e37ffc3054bac0233cae05601bb8a39dec84d8e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c071a09f7b70499b8d869f4763448572b20cfcd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102210"
 ---
 # <a name="syspartitionrangevalues-transact-sql"></a>sys.partition_range_values(Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   R 유형 파티션 함수의 각 범위 경계값당 한 개의 행을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|이 범위 경계 값에 대한 파티션 함수의 ID입니다.|  
 |**boundary_id**|**int**|경계 값 튜플의 ID(1부터 시작하는 서수)이며 맨 왼쪽 경계가 ID 1에서 시작합니다.|  

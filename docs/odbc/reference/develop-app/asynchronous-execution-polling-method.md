@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8cd21734-ef8e-4066-afd5-1f340e213f9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8ca0a5094e40f13aef4b4f87d5642e51e7a9b765
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97fe8af6f02e9797bc14578edda09c420f8f94e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63306296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077055"
 ---
 # <a name="asynchronous-execution-polling-method"></a>비동기 실행(폴링 메서드)
 ODBC 3.8 및 Windows 7 SDK 이전 비동기 작업이 된 문 함수에만 허용 됩니다. 자세한 내용은 참조는 **비동기적 문을 작업 실행**이 항목의 뒷부분에 나오는.  
@@ -212,7 +211,7 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  다음 예제에서는 사용 하는 방법을 보여 줍니다 **SQLSetConnectAttr** 연결 관련 함수에 대 한 비동기 실행을 사용 하도록 설정 합니다.  
   
 ### <a name="code"></a>코드  
@@ -266,7 +265,7 @@ BOOL AsyncConnect (SQLHANDLE hdbc)
   
 ## <a name="example"></a>예제  
   
-### <a name="description"></a>Description  
+### <a name="description"></a>설명  
  이 예제에서는 비동기 커밋 작업을 보여 줍니다. 롤백 작업 이러한 방식으로 수행할 수도 있습니다.  
   
 ### <a name="code"></a>코드  

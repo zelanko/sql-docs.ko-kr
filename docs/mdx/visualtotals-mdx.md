@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6e4732425d0e400ef7247ae133b5713949664e0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5becd3382f07a9adc89055a253235495a7e50a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125835"
 ---
 # <a name="visualtotals-mdx"></a>VisualTotals(MDX)
 
@@ -35,7 +34,7 @@ VisualTotals(Set_Expression[,Pattern])
  *Pattern*  
  부모 이름의 대체 문자로 별표(*)가 들어 있는 집합의 부모 멤버에 대한 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  지정된 집합 식은 단일 차원 내에 있는 모든 수준의 멤버(일반적으로 상위-하위 관계가 있는 멤버)가 들어 있는 집합을 지정할 수 있습니다. 합니다 **VisualTotals** 함수는 지정된 된 집합의 자식 멤버의 값 합계를 계산 하 고 하며, 결과 합계를 계산할 때 해당 집합에 없는 자식 멤버를 무시 합니다. 합계는 계층 순서로 정렬된 집합에 대해 보이는 값 합계로 계산됩니다. 집합의 멤버 순서가 계층과 맞지 않는 경우 결과는 보이는 값 합계가 아닙니다. 예를 들어 VisualTotals (USA, WA, CA, Seattle)는 WA를 Seattle로 반환하는 것이 아니라 WA, CA 및 Seattle에 대한 값을 반환한 다음 이러한 값의 합계를 USA의 보이는 값 합계로 계산하므로 Seattle의 판매량은 두 번 계산됩니다.  
   
 > [!NOTE]  

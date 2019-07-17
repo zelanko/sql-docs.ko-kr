@@ -4,17 +4,16 @@ description: 이 자습서에서는 SQL Server on Linux의 Pacemaker 클러스�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 12/11/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c6fdd3fe9111a20811ecb748a42273deafd2c41e
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: ee3b4aac2e1bcdcc37de17a569f080d3b9bc87cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077470"
 ---
 # <a name="deploy-a-pacemaker-cluster-for-sql-server-on-linux"></a>SQL Server on Linux의 Pacemaker 클러스터 배포
 

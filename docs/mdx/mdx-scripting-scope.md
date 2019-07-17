@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 497fdfb11ec186ffba56470f2b0ede2ed2f4221a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138280"
 ---
 # <a name="mdx-scripting---scope"></a>MDX 스크립팅 - SCOPE
 
@@ -73,7 +72,7 @@ Limited_Set ::=
  *single_tuple*  
  단일 튜플입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SCOPE 문은 하나 이상의 MDX 문을 실행하여 영향을 받는 하위 큐브를 결정합니다. MDX 문이 SCOPE 문 내로 제한되지 않는 이상 MDX 문의 암시적 범위는 전체 큐브입니다.  
   
 > [!NOTE]  

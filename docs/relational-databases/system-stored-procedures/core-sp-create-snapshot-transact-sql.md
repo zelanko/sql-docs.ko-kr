@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ff297bda-0ee2-4fda-91c8-7000377775e3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 271c8baf01825baa9ee88e7c8ee365019b6bca66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ef2bce1ff84172d01b1304a416f84865f1cb36bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078225"
 ---
 # <a name="corespcreatesnapshot-transact-sql"></a>core.sp_create_snapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  [ @collection_set_uid =] '*collection_set_uid*'  
  컬렉션 집합에 대한 GUID입니다. *collection_set_uid* 됩니다 **uniqueidentifier** 이며 기본값은 없습니다. GUID를 확인하려면 msdb 데이터베이스에서 dbo.syscollector_collection_sets 뷰를 쿼리합니다.  
   
- [ @collector_type_uid =] '*collector_type_uid*'  
+ [ @collector_type_uid = ] '*collector_type_uid*'  
  수집기 유형의 GUID입니다. *collector_type_uid* 됩니다 **uniqueidentifier** 이며 기본값은 없습니다. GUID를 확인하려면 msdb 데이터베이스에서 dbo.syscollector_collector_types 뷰를 쿼리합니다.  
   
  [ @machine_name= ] '*machine_name*'  
@@ -69,7 +68,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  업로드 패키지가 관리 데이터 웨어하우스로 데이터 업로드를 시작할 때마다 데이터 수집기 런타임 구성 요소는 core.sp_create_snapshot을 호출합니다.  
   
  이 프로시저는 다음을 확인합니다.  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 510907b6-e7a9-41bd-b892-d6d99a5118e1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0a72b776add3dc1fb31886711b3f812b65d1176c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7936eaf327f9df3cb0f3d8545d7bf557ef1471ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62943052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098044"
 ---
 # <a name="files-and-version-numbers"></a>파일 및 버전 번호
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62943052"
 > > 
 > > 이 때문에 수행 해야 합니다 **되지** 이러한 버전의 어셈블리를 전역 어셈블리 캐시 (GAC)에 설치 합니다. 이렇게 인해 다른 응용 프로그램과 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio에서 중단 합니다. 
   
-|파일|Description|  
+|파일|설명|  
 |-----------|-----------------|  
 |Microsoft.SqlServer.ConnectionInfo.dll|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결 지원을 포함합니다.|  
 |Microsoft.SqlServer.ServiceBrokerEnum.dll|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Service Broker 프로그래밍 지원을 포함합니다. 이 파일은 Service Broker에 액세스하는 프로그램에만 필요합니다.|  

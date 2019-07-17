@@ -20,21 +20,20 @@ helpviewer_keywords:
 ms.assetid: f16d987c-bd19-4668-9ef7-785b8fb9ff5b
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d44a600f2bdbb2022b75c9a4d603faca6fc864c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4332159765791addfdfcc32a9d19d29836f2460c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053537"
 ---
 # <a name="syssyscharsets-transact-sql"></a>sys.syscharsets(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 사용하기 위해 정의된 각 문자 집합 및 정렬 순서마다 한 행을 포함합니다. 정렬 순서 중 하나로 표시 됩니다 **sysconfigures** 기본 정렬 순서와 합니다. 이 정렬 순서만 실제로 사용됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**type**|**smallint**|이 행이 표시하는 엔터티의 유형입니다.<br /><br /> 1001 = 문자 집합<br /><br /> 2001 = 정렬 순서|  
 |**id**|**tinyint**|문자 집합 또는 정렬 순서의 고유 ID입니다. 정렬 순서 및 문자 집합은 같은 ID 번호를 공유할 수 없습니다. 1에서 240까지의 ID는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 사용하도록 예약되어 있습니다.|  

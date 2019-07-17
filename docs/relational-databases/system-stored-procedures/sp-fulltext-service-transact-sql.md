@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c43d969f56619109cfb6ebe09b8a416824f59638
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ede8b65cb3f11ed6640121031ea6a2fe5b57b83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124188"
 ---
 # <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_fulltext_service [ [@action=] 'action'
 > [!NOTE]  
 >  다음 작업의 이후 릴리스에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **clean_up**, **connect_timeout**하십시오 **data_timeout**, 및 **resource_ 사용 현황**합니다. 향후 개발 작업에서는 이러한 동작을 사용하지 않도록 하고 현재 이러한 동작을 사용하는 응용 프로그램은 수정하십시오.  
   
-|작업|데이터 형식|Description|  
+|Action|데이터 형식|설명|  
 |------------|---------------|-----------------|  
 |**clean_up**|**int**|이전 버전과의 호환성을 위해서만 지원됩니다. 값은 항상 0입니다.|  
 |**connect_timeout**|**int**|이전 버전과의 호환성을 위해서만 지원됩니다. 값은 항상 0입니다.|  
@@ -74,7 +73,7 @@ sp_fulltext_service [ [@action=] 'action'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-updating-the-list-of-registered-languages"></a>1\. 등록된 언어 목록 업데이트  
+### <a name="a-updating-the-list-of-registered-languages"></a>A. 등록된 언어 목록 업데이트  
  다음 예에서는 전체 텍스트 검색에 등록된 언어 목록을 업데이트합니다.  
   
 ```  
