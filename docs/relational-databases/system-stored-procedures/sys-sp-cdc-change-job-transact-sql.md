@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5f5973382b7a09080fa990b0807deb01660ce0d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106528"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  매개 변수를 생략 하면의 관련된 값을 [dbo.cdc_jobs](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md) 테이블이 업데이트 되지 않습니다. 명시적으로 NULL로 설정된 매개 변수는 매개 변수가 생략된 것으로 처리됩니다.  
   
  작업 유형에 잘못된 매개 변수를 지정할 경우 문이 실행되지 않습니다.  
@@ -98,7 +97,7 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-a-capture-job"></a>1. 캡처 작업 변경  
+### <a name="a-changing-a-capture-job"></a>A. 캡처 작업 변경  
  다음 예에서는 업데이트를 `@job_type`, `@maxscans`, 및 `@maxtrans` 에서 캡처 작업의 매개 변수는 `AdventureWorks2012` 데이터베이스입니다. 캡처 작업에 대한 다른 유효한 매개 변수인 `@continuous`와 `@pollinginterval`은 생략되며 해당 값은 수정되지 않습니다.  
   
 ```  
@@ -111,8 +110,8 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-### <a name="b-changing-a-cleanup-job"></a>2. 정리 작업 변경  
- 다음 예에서는 `AdventureWorks2012` 데이터베이스에서 정리 작업을 업데이트합니다. 이 유효한 모든 매개 변수를 제외한 형식 작업 **@threshold**에 지정 됩니다. 변수의 **@threshold** 수정 되지 않습니다.  
+### <a name="b-changing-a-cleanup-job"></a>2\. 정리 작업 변경  
+ 다음 예에서는 `AdventureWorks2012` 데이터베이스에서 정리 작업을 업데이트합니다. 이 유효한 모든 매개 변수를 제외한 형식 작업 **@threshold** 에 지정 됩니다. 변수의 **@threshold** 수정 되지 않습니다.  
   
 ```  
 USE AdventureWorks2012;  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c00e7c26a429836f0d350e60530d2dc1db8c2a61
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6875e745cc05735b9f116c2d4afa5e5218defb99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122387"
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**alternate_publisher**|**sysname**|대체 게시자의 이름입니다.|  
 |**alternate_publisher_db**|**sysname**|게시 데이터베이스의 이름입니다.|  
@@ -58,7 +57,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helpmergealternatepublisher** 병합 복제에 사용 됩니다.  
   
  모든 병합 세션 동안 시스템은 게시자와 구독자에서 대체 게시자의 각 목록을 쿼리합니다. 병합 프로세스는 구독자와 게시자 모두에 있는 대체 게시자 목록이 일치하도록 대체 게시자 목록의 항목을 추가하거나 삭제합니다.  

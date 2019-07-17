@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 61b9be77-e2f6-4da1-b2ae-a62cbe226145
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a6bba59d680a9f7ba1595808eed27762670aab97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e343e7e9657b69ebd06a147cb99fa19e3c36aab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120249"
 ---
 # <a name="sysfnhadrbackupispreferredreplica--transact-sql"></a>sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
 ## <a name="returns"></a>반환 값  
  현재 인스턴스의 데이터베이스가 기본 복제본에 있으면 1을 반환하고, 그렇지 않으면 0을 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  백업 스크립트에서 이 함수를 사용하여 현재 데이터베이스가 백업용 기본 복제본에 있는지 여부를 확인할 수 있습니다. 모든 가용성 복제본에서 스크립트를 실행할 수 있습니다. 이러한 각 작업은 동일한 데이터를 조사하여 실행해야 하는 작업을 확인하므로 예약된 작업 중 하나만이 실제로 백업 단계로 진행됩니다. 예제 코드는 다음과 비슷할 수 있습니다.  
   
 ```  
@@ -64,7 +63,7 @@ END
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-sysfnhadrbackupispreferredreplica"></a>1\. sys.fn_hadr_backup_is_preferred_replica 사용  
+### <a name="a-using-sysfnhadrbackupispreferredreplica"></a>A. sys.fn_hadr_backup_is_preferred_replica 사용  
  다음 예에서는 현재 데이터베이스가 기본 백업 복제본인 경우 1을 반환합니다.  
   
 ```  

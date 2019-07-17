@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d33b973a-2724-4d4b-aaf7-67675929c392
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 01e00d353f3585f7fd2568d5b8906e202263c212
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bfde3ee5d26557759bd881bce34a69b6ecf98dd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140570"
 ---
 # <a name="semantickeyphrasetable-transact-sql"></a>semantickeyphrasetable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ SEMANTICKEYPHRASETABLE
 ## <a name="table-returned"></a>반환된 테이블  
  다음 표에서는 이 행 집합 함수가 반환하는 키 구에 대해 설명합니다.  
   
-|Column_name|형식|Description|  
+|Column_name|type|설명|  
 |------------------|----------|-----------------|  
 |**column_id**|**int**|현재 키 구가 추출되고 인덱싱된 원본 열의 ID입니다.<br /><br /> column_id에서 열 이름을 검색하거나 열 이름에서 column_id를 검색하는 방법에 대한 자세한 내용은 COL_NAME 및 COLUMNPROPERTY 함수를 참조하십시오.|  
 |**document_key**|**\***<br /><br /> 이 키는 원본 테이블의 고유 키 유형과 일치합니다.|현재 키 구가 인덱싱된 문서 또는 행의 고유 키 값입니다.|  

@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 11a53bcd-a215-4d0b-9db8-233981d3ef5d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 70827c6dcf420c4e4aa21aa8085e33b20fa72760
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2e710bdbe8f026624ea71357afb6d204b333c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130490"
 ---
 # <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   즉시 업데이트 구독을 지원하는 각 아티클에 대해 한 행을 포함합니다. 이 테이블은 복제된 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|아티클에 대한 고유 ID를 제공하는 ID 열입니다.|  
 |**pubid**|**int**|아티클이 속한 게시의 ID입니다.|  

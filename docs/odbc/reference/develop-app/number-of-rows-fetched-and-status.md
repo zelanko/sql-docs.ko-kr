@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a069b979-5108-4905-932f-8ae8e7905ff2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab4830ddd56335959dd7049a1dabdcc3a0354213
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc1f556873221faa3f86c5272120a786f6f25025
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086330"
 ---
 # <a name="number-of-rows-fetched-and-status"></a>페치된 행 수 및 상태
 호출에 의해 인출 된 행 수를 반환 하는 버퍼 지정 SQL_ATTR_ROWS_FETCHED_PTR 문 특성에 설정한 경우 **SQLFetch** 하거나 **SQLFetchScroll**, 및 오류 행. (이 숫자는 SQL_ROW_NO_ROWS 상태에 있지 않은 모든 행의 수입니다.) 호출한 후 **SQLBulkOperations** 또는 **SQLSetPos**, 버퍼 함수에서 수행 하는 대량 작업에 의해 영향을 받는 행 수를 포함 합니다. SQL_ATTR_ROW_STATUS_PTR 문 특성에 설정한 경우 **SQLFetch** 또는 **SQLFetchScroll** 반환 된 *행 상태 배열* 각 상태를 제공 하는 반환 된 행입니다. 이러한 필드에서 가리키는 버퍼의 두 응용 프로그램에 의해 할당 되 고 드라이버에서 채워집니다. 응용 프로그램은 커서를 닫을 때까지 이러한 포인터 유효 하 고 있는지 확인 해야 합니다.  

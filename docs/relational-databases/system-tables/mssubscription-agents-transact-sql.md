@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 86ad5891-0bef-4963-9381-7d5b45245a0c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b1b8680343f233c35b704f3805b06ea9dc47c12
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3354f69f92cbbbaa9d60ae8ed6352a0b3be6ab52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139794"
 ---
 # <a name="mssubscriptionagents-transact-sql"></a>MSsubscription_agents(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "52808505"
 |**id**|**int**|행의 ID입니다.|  
 |**publisher**|**sysname**|게시자의 이름입니다.|  
 |**publisher_db**|**sysname**|게시 데이터베이스의 이름입니다.|  
-|**게시**|**sysname**|게시의 이름입니다.|  
+|**publication**|**sysname**|게시의 이름입니다.|  
 |**subscription_type**|**int**|구독 유형입니다.<br /><br /> 0 = 밀어넣기<br /><br /> 1 = 끌어오기<br /><br /> 2 = 익명 끌어오기|  
 |**queue_id**|**sysname**|ID를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 게시자에서 큐 메시지입니다. *queue_id* 로 설정 된 **SQL** 에 대 한 SQL 기반의 지연 업데이트 합니다.|  
 |**update_mode**|**tinyint**|업데이트의 유형입니다.<br /><br /> **0** = 읽기 전용입니다.<br /><br /> **1** = 즉시 업데이트 합니다.<br /><br /> **2** = 메시지 큐를 사용 하 여 지연 업데이트 합니다.<br /><br /> **3** = 즉시 메시지 큐를 사용 하 여 장애 조치로 지연된 업데이트를 사용 하 여 업데이트 합니다.<br /><br /> **4** = Sqlserver 큐를 사용 하 여 지연 업데이트 합니다.<br /><br /> **5** = Sqlserver 큐를 사용 하 여 지연된 업데이트 장애 조치를 사용 하 여 즉시 업데이트 합니다.|  

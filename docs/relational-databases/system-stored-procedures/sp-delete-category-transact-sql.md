@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63ea7d0d-a567-456e-a778-bee99e21d16c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c2574cdb06b82c6ebc89c54b70ade59694f5811e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9a6812e12366900dfc1c5808eaede727c05f958
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120045"
 ---
 # <a name="spdeletecategory-transact-sql"></a>sp_delete_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +42,11 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="arguments"></a>인수  
 `[ @class = ] 'class'` 범주의 클래스입니다. *클래스* 은 **varchar(8)** 해야 없고 기본적으로 사용 하 여 이러한 값 중 하나가 있어야 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**JOB**|작업 범주를 제거합니다.|  
 |**ALERT**|경고 범주를 제거합니다.|  
-|**OPERATOR**|연산자 범주를 제거합니다.|  
+|**연산자**|연산자 범주를 제거합니다.|  
   
 `[ @name = ] 'name'` 제거할 범주의 이름입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
   
@@ -57,7 +56,7 @@ sp_delete_category [ @class = ] 'class' , [ @name = ] 'name'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_delete_category** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
  범주를 제거하면 해당 범주의 모든 작업, 경고 또는 연산자를 해당 클래스의 기본 범주로 다시 범주화합니다.  
@@ -78,7 +77,7 @@ EXEC dbo.sp_delete_category
 GO   
 ```  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)   
  [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   

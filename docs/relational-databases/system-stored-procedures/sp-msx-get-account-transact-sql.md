@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b478049-e2d0-4bac-865a-b97fd1d8dfbc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 297dbbf13da14916d12fc1ef457279a1268bc991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3dab15a076200e464e82d0b01ef6a156447a537f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108041"
 ---
 # <a name="spmsxgetaccount-transact-sql"></a>sp_msx_get_account(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,14 +44,14 @@ sp_msx_get_account
 ## <a name="result-sets"></a>결과 집합  
  다음 결과 집합을 반환합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|type|설명|  
 |-----------------|----------|-----------------|  
 |msx_connection|**int**|마스터 서버 연결 번호입니다.|  
 |msx_credential_id|**int**|이 마스터 서버 연결에 사용된 자격 증명의 ID입니다.|  
 |msx_credential_name|**sysname**|이 마스터 서버 연결에 사용된 자격 증명의 이름입니다.|  
 |msx_login_name|**nvarchar(4000)**|자격 증명에 대한 Windows 사용자의 도메인 이름 및 사용자 이름입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 대상 서버에 대해 지정된 자격 증명이 없으면 빈 결과 집합을 반환합니다. 자격 증명을 설정하려면 sp_msx_set_account를 사용하십시오.  
   
 ## <a name="permissions"></a>사용 권한  

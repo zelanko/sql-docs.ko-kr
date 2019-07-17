@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ee5f55e9-fbef-401a-be18-a2e5873c8720
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5cba195d94a8a71050dcb0afedf5c048d0397c0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 50f7f8aacfc61b55e969ea0d57f82d58e50e093b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028122"
 ---
 # <a name="disallowed-types-and-members-in-systemdatadll"></a>System.Data.dll에 허용되지 않는 유형 및 멤버
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47647181"
 |System.Data.SqlClient.SqlDependency.Start()|ExternalThreading|  
 |System.Data.SqlClient.SqlDependency.Stop()|ExternalThreading|  
 |System.Data.TypedDataSetGenerator|SharedState, Synchronization|  
-|System.Xml.XmlDataDocument|Synchronization|  
+|System.Xml.XmlDataDocument|동기화|  
   
 ## <a name="see-also"></a>관련 항목  
  [호스트 보호 특성 및 CLR 통합 프로그래밍](../../relational-databases/clr-integration-security-host-protection-attributes/host-protection-attributes-and-clr-integration-programming.md)   

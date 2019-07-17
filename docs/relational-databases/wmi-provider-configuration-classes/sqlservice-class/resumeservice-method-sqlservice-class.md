@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0b0a5f08-b95e-4626-bf81-309da7a0aacd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e3adc4a41b9259d09d86fe450352c8f2d92c43cf
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d483cdd91ca349010c6b59b9003155d4166fb63b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119994"
 ---
 # <a name="resumeservice-method-sqlservice-class"></a>ResumeService 메서드(SqlService 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ object.ResumeService()
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  uint32 값으로, 0은는 **ResumeService** 요청이 수락 되었음을 1은 요청이 지원 되지 않는 경우 그 밖의 숫자는 오류를 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>관련 항목  
  [서비스 시작 및 중지](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

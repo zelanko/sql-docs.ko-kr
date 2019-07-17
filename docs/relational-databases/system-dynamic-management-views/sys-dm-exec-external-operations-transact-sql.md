@@ -21,26 +21,25 @@ helpviewer_keywords:
 ms.assetid: d268217a-85b8-4b7f-9cd1-87865eba2be1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3488a7137e03d3ffdec71f068697c96a151a1301
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d410afc256f0a1c12694f826bc73570cfee84172
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013249"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097763"
 ---
-# <a name="sysdmexecexternaloperations-transact-sql"></a>sys.dm_exec_external_operations (Transact-SQL)
+# <a name="sysdmexecexternaloperations-transact-sql"></a>sys.dm_exec_external_operations (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   외부 PolyBase 작업에 대 한 정보를 캡처합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|PolyBase 쿼리를 사용 하 여 연결 하는 고유 쿼리 식별자|ID를 참조 하세요 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|  
 |step_index|**int**|쿼리 단계의 인덱스|step_index를 참조 하세요 [sys.dm_exec_distributed_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md)|  
 |작업 유형|**nvarchar(128)**|Hadoop 작업 또는 다른 외부 작업에 설명합니다.|' 외부 Hadoop 작업 '|  
-|operation_ name|**nvarchar(4000)**|나타냅니다 어떻게 백분율 (크기는 사용 입력)에서 작업의 상태|0-1-인수 (완료) 100 곱한|  
+|작업 이름|**nvarchar(4000)**|나타냅니다 어떻게 백분율 (크기는 사용 입력)에서 작업의 상태|0-1-인수 (완료) 100 곱한|  
 |map_ 진행률|**float**|있는 경우 백분율에서을 reduce의 상태를 작업 하는 방법을 나타냅니다.|0-1-인수 (완료) 100 곱한|  
   
 ## <a name="see-also"></a>관련 항목  

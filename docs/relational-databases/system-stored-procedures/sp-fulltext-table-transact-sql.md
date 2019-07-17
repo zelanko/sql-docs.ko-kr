@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 870f12fa569eb0c6046377472a6122d69cd35d6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124139"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_fulltext_table
   
 `[ @action = ] 'action'` 수행할 동작이입니다. *작업* 됩니다 **nvarchar (50)** 이며 기본값은 없고 수 있습니다 이러한 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**만들기**|참조 하는 테이블에 대 한 전체 텍스트 인덱스에 대 한 메타 데이터를 만듭니다 *qualified_table_name* 하 고이 테이블에 대 한 전체 텍스트 인덱스 데이터에는 지정 *fulltext_catalog_name*합니다. 이 작업의 사용을 지정 합니다 *unique_index_name* 전체 텍스트 키 열으로 합니다. 이 고유한 인덱스는 반드시 이미 존재해야 하며, 테이블의 한 열에서 정의되어야 합니다.<br /><br /> 전체 텍스트 카탈로그가 채워질 때까지는 해당 테이블에 대해 전체 텍스트 검색을 수행할 수 없습니다.|  
 |**Drop**|에 대 한 전체 텍스트 인덱스에서 메타 데이터 삭제 *qualified_table_name*합니다. 전체 텍스트 인덱스가 활성화된 경우에는 삭제되기 전에 자동으로 비활성화됩니다. 전체 텍스트 인덱스를 삭제하기 전에 열을 제거할 필요는 없습니다.|  
@@ -79,7 +78,7 @@ sp_fulltext_table
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  기존 전체 텍스트 인덱스는 다음 전체 채우기; 일까 지 진행에서 됩니다 특정 테이블에 대 한 전체 텍스트 인덱스를 비활성화 되 면 그러나이 인덱스 하므로 사용 되지 않습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 비활성화 된 테이블에 대 한 쿼리를 차단 합니다.  
   
  테이블이 다시 활성화되고 인덱스가 다시 채워지지 않은 경우, 신규가 아닌 남아 있는 모든 전체 텍스트를 사용할 수 있는 열에 대해 쿼리할 때 여전히 이전 인덱스를 사용할 수 있습니다. 삭제된 열에서 가져온 데이터는 모든 전체 텍스트 열 검색을 지정하는 쿼리에서 짝을 찾습니다.  
@@ -93,7 +92,7 @@ sp_fulltext_table
   
 ## <a name="examples"></a>예  
   
-### <a name="a-enabling-a-table-for-full-text-indexing"></a>1\. 테이블을 전체 텍스트 인덱싱에 사용  
+### <a name="a-enabling-a-table-for-full-text-indexing"></a>A. 테이블을 전체 텍스트 인덱싱에 사용  
  다음 예에서는 `Document` 데이터베이스의 `AdventureWorks` 테이블에 대한 전체 텍스트 인덱스 메타데이터를 만듭니다. `Cat_Desc`는 전체 텍스트 카탈로그이고, `PK_Document_DocumentID`는 `Document`의 고유한 단일 열 인덱스입니다.  
   
 ```  

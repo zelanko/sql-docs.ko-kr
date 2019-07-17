@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7dbc0d6ccf753f8f11baee2f5c1c479895d0687
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107923"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_OAMethod objecttoken , methodname
  *methodname*  
  호출할 OLE 개체의 메서드 이름입니다.  
   
- _returnvalue_  **OUTPUT**  
+ _returnvalue_**출력**  
  OLE 개체 메서드의 반환 값입니다. 지정되는 경우 반드시 적절한 데이터 형식의 지역 변수이어야 합니다.  
   
  로컬 변수를 지정 하거나 단일 값을 반환 하는 메서드 *returnvalue*, 메서드를 반환 하는 로컬 변수에 값을 반환 하거나 지정 하지 마세요 *returnvalue*를 반환 하는 메서드는 단일 열 단일 행 결과 집합으로 클라이언트에 값을 반환 합니다.  
@@ -93,7 +92,7 @@ sp_OAMethod objecttoken , methodname
   
  하나의 열에 있는 모든 데이터 값이 같은 데이터 형식을 공유하는 경우에는 해당 데이터 형식이 전체 열에 대해 사용됩니다. 한 열의 데이터 값들이 여러 다른 데이터 형식을 가질 경우 전체 열의 데이터 형식이 다음 표를 기준으로 선택됩니다.  
   
-||ssNoversion|FLOAT|money|Datetime|varchar|NVARCHAR|  
+||ssNoversion|FLOAT|money|datetime|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -102,7 +101,7 @@ sp_OAMethod objecttoken , methodname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용할 수도 있습니다 **sp_OAMethod** 속성 값을 가져오려고 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -110,7 +109,7 @@ sp_OAMethod objecttoken , methodname
   
 ## <a name="examples"></a>예  
   
-### <a name="a-calling-a-method"></a>1\. 메서드 호출  
+### <a name="a-calling-a-method"></a>A. 메서드 호출  
  다음 예제에서는 합니다 `Connect` 이전에 만든된 메서드의 **SQLServer** 개체입니다.  
   
 ```  

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: dcf3231fbff0ec4c3ea32e94f7b974a62faf05e6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 29454fefde7850e5e45ca6a916540e7d38e2b286
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070904"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>DMX(Data Mining Extensions) 참조
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "38032729"
   
  이 사양에서는 데이터 마이닝의 기초를 데이터 마이닝 모델 가상 개체로 정의합니다. 데이터 마이닝 모델 개체에는 특정 마이닝 모델에 대해 알려진 모든 내용이 포함됩니다. 데이터 마이닝 모델 개체는 모델을 설명하는 열, 데이터 형식 및 메타 정보가 포함된 SQL 테이블과 같은 구조로 구성됩니다. 이 구조에서는 SQL의 확장 기능인 DMX 언어를 사용하여 모델을 만들고 사용할 수 있습니다.  
   
- **자세한 내용은** [마이닝 구조 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ **참조 항목:** [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
 ##  <a name="BKMK_DMXStatements"></a> DMX 문  
  DMX 문을 사용하여 데이터 마이닝 모델을 작성, 처리, 삭제, 복사, 검색 및 예측할 수 있습니다. DMX에는 두 가지 유형의 문인 데이터 정의 문과 데이터 조작 문이 있습니다. 이 두 가지 유형의 문을 사용하여 다양한 태스크를 수행할 수 있습니다.  
@@ -96,7 +95,7 @@ ms.locfileid: "38032729"
   
  DMX 함수를 사용하여 모델 학습 중에 발견한 정보를 가져오고 새 정보를 계산할 수 있습니다. 기본 데이터 또는 예측 정확성을 설명하는 통계를 반환하거나 예측에 대한 상세한 설명을 반환하는 등의 여러 가지 용도로 함수를 사용할 수 있습니다.  
   
- **자세한****정보:** [이해 DMX Select 문](../dmx/understanding-the-dmx-select-statement.md)를 [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)하십시오 [구조 및 사용법 DMX 예측 쿼리의](../dmx/structure-and-usage-of-dmx-prediction-queries.md)하십시오 [Data Mining Extensions &#40;DMX&#41; 함수 참조  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **자세한 내용은** **정보:**  [Select 문 이해 DMX](../dmx/understanding-the-dmx-select-statement.md), [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)에 [구조 및 사용법 DMX 예측 쿼리의](../dmx/structure-and-usage-of-dmx-prediction-queries.md)를 [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
  [DMX 문을 돌아가기](#BKMK_DMXStatements)  
   
@@ -107,7 +106,7 @@ ms.locfileid: "38032729"
  [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [구조 및 사용법 DMX 예측 쿼리](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [DMX 예측 쿼리의 구조 및 사용법](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  
   
   

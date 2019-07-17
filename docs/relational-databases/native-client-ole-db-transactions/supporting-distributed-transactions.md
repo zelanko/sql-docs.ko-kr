@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d250b43b-9260-4ea4-90cc-57d9a2f67ea7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cf8c6aa5fc5f18113e88d0f7eebec87fe538ec80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dcec86afd8187bc21ca6143656b2e7d6730f541
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069449"
 ---
 # <a name="supporting-distributed-transactions"></a>분산 트랜잭션 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47684901"
   
  분산 트랜잭션의 경우 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 구현 **itransactionjoin:: Jointransaction** 다음과 같은 매개 변수입니다.  
   
-|매개 변수|Description|  
+|매개 변수|설명|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC 트랜잭션 개체에 대한 포인터입니다.|  
 |*IsoLevel*|무시 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자입니다. MS DTC 통합 트랜잭션의 격리 수준은 소비자가 MS DTC로부터 트랜잭션 개체를 가져올 때 결정됩니다.|  
@@ -144,6 +143,6 @@ if (FAILED(pITransactionJoin->JoinTransaction(
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [의](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
+ [트랜잭션](../../relational-databases/native-client-ole-db-transactions/transactions.md)  
   
   

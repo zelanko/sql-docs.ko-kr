@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed585ea7-4d56-4df9-8dc3-53ca82382450
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b5dac8ae14f01dd464aab42eaed42480f1e715c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05b8f71d6f4c885c7dc64887dd92b1f600005ca7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138918"
 ---
 # <a name="inserting-rows-with-sqlbulkoperations"></a>SQLBulkOperations를 사용하여 행 삽입
 사용 하 여 데이터 삽입 **SQLBulkOperations** 사용 하 여 데이터를 업데이트 하는 것과 비슷합니다 **SQLBulkOperations** 바인딩된 응용 프로그램 버퍼에서 데이터를 사용 하기 때문에 있습니다.  

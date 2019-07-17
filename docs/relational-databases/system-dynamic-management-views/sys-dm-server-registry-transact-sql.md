@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e4e0b1069977c14216952e537d4bd12b28190529
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8b91540724b30ac42f0f8c4302e58b3d40ec066
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62684011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090718"
 ---
 # <a name="sysdmserverregistry-transact-sql"></a>sys.dm_server_registry(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스에 대한 Windows 레지스트리에 저장된 구성 및 설치 정보를 반환합니다. 각 레지스트리 키에 대해 행을 하나씩 반환합니다. 이 동적 관리 뷰를 사용하면 호스트 컴퓨터에서 사용 가능한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 네트워크 구성 값 같은 정보를 반환할 수 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|레지스트리 키 이름입니다. Null을 허용합니다.|  
 |value_name|**nvarchar(256)**|키 값 이름이며 에 표시 된 항목이이 **이름을** 레지스트리 편집기의 열입니다. Null을 허용합니다.|  
@@ -44,7 +43,7 @@ ms.locfileid: "62684011"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-display-the-sql-server-services"></a>1. SQL Server 서비스 표시  
+### <a name="a-display-the-sql-server-services"></a>A. SQL Server 서비스 표시  
  다음 예에서는 SQL Server의 현재 인스턴스에 대한 SQL Server 및 SQL Server 에이전트 서비스의 레지스트리 키 값을 반환합니다.  
   
 ```  
@@ -53,7 +52,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%ControlSet%';  
 ```  
   
-### <a name="b-display-the-sql-server-agent-registry-key-values"></a>2. SQL Server 에이전트 레지스트리 키 값 표시  
+### <a name="b-display-the-sql-server-agent-registry-key-values"></a>2\. SQL Server 에이전트 레지스트리 키 값 표시  
  다음 예에서는 SQL Server의 현재 인스턴스에 대한 SQL Server 에이전트 레지스트리 키 값을 반환합니다.  
   
 ```  
@@ -62,7 +61,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%SQLAgent%';  
 ```  
   
-### <a name="c-display-the-current-version-of-the-instance-of-sql-server"></a>3. SQL Server 인스턴스의 현재 버전 표시  
+### <a name="c-display-the-current-version-of-the-instance-of-sql-server"></a>3\. SQL Server 인스턴스의 현재 버전 표시  
  다음 예에서는 SQL Server의 현재 인스턴스 버전을 반환합니다.  
   
 ```  
@@ -71,7 +70,7 @@ FROM sys.dm_server_registry
 WHERE registry_key = N'CurrentVersion';  
 ```  
   
-### <a name="d-display-the-parameters-passed-to-the-instance-of-sql-server-during-startup"></a>4. 시작 시 SQL Server 인스턴스에 전달되는 매개 변수 표시  
+### <a name="d-display-the-parameters-passed-to-the-instance-of-sql-server-during-startup"></a>4\. 시작 시 SQL Server 인스턴스에 전달되는 매개 변수 표시  
  다음 예에서는 시작 시 SQL Server 인스턴스에 전달되는 매개 변수를 반환합니다.  
   
 ```  
@@ -80,7 +79,7 @@ FROM sys.dm_server_registry
 WHERE registry_key LIKE N'%Parameters';  
 ```  
   
-### <a name="e-return-network-configuration-information-for-the-instance-of-sql-server"></a>5. SQL Server 인스턴스의 네트워크 구성 정보 반환  
+### <a name="e-return-network-configuration-information-for-the-instance-of-sql-server"></a>5\. SQL Server 인스턴스의 네트워크 구성 정보 반환  
  다음 예에서는 SQL Server의 현재 인스턴스에 대한 네트워크 구성 값을 반환합니다.  
   
 ```  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: be12a1af53957ab0d8f3347a0464dd987152bca0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd352b95853cc5fe52857a080b6ca2e515f5c013
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63129829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097351"
 ---
 # <a name="union---mdx-operator-reference"></a>공용 구조체-MDX 연산자 참조
 
@@ -35,7 +34,7 @@ Set_Expression + Set_Expression
 ## <a name="return-value"></a>반환 값  
  지정된 두 집합의 멤버가 포함된 집합입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **+ (Union)** 연산자는 기능적으로 동일 합니다 [Union &#40;MDX&#41; ](../mdx/union-mdx.md) 함수입니다.  
   
 ## <a name="examples"></a>예  

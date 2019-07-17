@@ -20,23 +20,22 @@ helpviewer_keywords:
 ms.assetid: 796f3093-6a3e-4d67-8da6-b9810ae9ef5b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6a07324137ee2e37a10f13eebff47710e2b13f0a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: be062171c66cb870c26d210a2f93d76dd59b6321
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133183"
 ---
 # <a name="sysservereventsessions-transact-sql"></a>sys.server_event_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 있는 이벤트 세션 정의를 모두 나열합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |event_session_id|**int**|이벤트 세션의 고유한 ID입니다. Null을 허용하지 않습니다.|  
-|NAME|**sysname**|이벤트 세션을 식별하기 위한 사용자 정의 이름입니다. 이름은 고유 합니다. Null을 허용하지 않습니다.|  
+|name|**sysname**|이벤트 세션을 식별하기 위한 사용자 정의 이름입니다. 이름은 고유 합니다. Null을 허용하지 않습니다.|  
 |event_retention_mode|**nchar(1)**|이벤트 손실의 처리 방식을 결정합니다. 기본값은 S이며 Null을 허용하지 않습니다. 다음 중 하나일 수 있습니다.<br /><br /> S.는 Event_retention_mode_desc 매핑됩니다 = ALLOW_SINGLE_EVENT_LOSS<br /><br /> 13. Event_retention_mode_desc 매핑됩니다 = ALLOW_MULTIPLE_EVENT_LOSS<br /><br /> 14. Event_retention_mode_desc 매핑됩니다 = NO_EVENT_LOSS|  
 |event_retention_mode_desc|**sysname**|이벤트 손실의 처리 방식을 설명합니다. 기본값은 ALLOW_SINGLE_EVENT_LOSS이며 Null을 허용하지 않습니다. 다음 중 하나일 수 있습니다.<br /><br /> ALLOW_SINGLE_EVENT_LOSS. 여러 이벤트가 세션에서 손실될 수 있습니다. 모든 이벤트 버퍼가 가득 찬 경우에만 한 개의 이벤트가 삭제됩니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 허용되는 성능 특성으로, 처리된 이벤트 스트림에서 데이터가 손실되는 것을 최소화합니다.<br /><br /> ALLOW_MULTIPLE_EVENT_LOSS. 가득 찬 이벤트 버퍼가 세션에서 손실될 수 있습니다. 손실되는 이벤트 수는 세션에 할당된 메모리 크기, 메모리 분할 및 버퍼에 있는 이벤트의 크기에 따라 달라집니다. 이 옵션은 이벤트 버퍼가 빠른 속도로 채워질 때 서버에 미치는 영향을 최소화하지만 많은 수의 이벤트가 세션에서 손실될 수 있습니다.<br /><br /> NO_EVENT_LOSS. 이벤트 손실이 허용되지 않습니다. 이 옵션을 사용하면 발생한 모든 이벤트가 보존되며, 이벤트 버퍼에 사용 가능한 공간이 생길 때까지 이벤트를 발생시키는 모든 태스크가 대기합니다. 따라서 이벤트 세션이 활성 상태인 동안에는 성능이 저하될 수 있습니다.|  
 |max_dispatch_latency|**int**|이벤트가 세션 대상에 전달되기 전에 메모리에 버퍼링될 시간(밀리초)을 나타냅니다. 유효한 값은 -1과 1 - 2147483648 범위의 숫자입니다. 값 -1은 발송 대기 시간이 무한대임을 나타냅니다. Null을 허용합니다.|  

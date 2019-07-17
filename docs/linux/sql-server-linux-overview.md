@@ -3,18 +3,17 @@ title: Linux에서 SQL Server 개요
 description: 이 항목에서는 SQL 서버를 Linux에서 실행하는 방법 및 자세한 학습 방법에 대한 정보를 제공합니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9dcc6a90-0add-42c2-815b-862e4e2a21ac
-ms.openlocfilehash: 71b7c0d4d1a6a3198ecaa11fff12ed6074f0d8d9
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: e3bd50cba4bcab81e7dcf00db9394704c5486160
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105464"
 ---
 # <a name="sql-server-on-linux"></a>SQL Server on Linux
 

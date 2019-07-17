@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8c7d9f8e-06bb-476c-bbd2-15b61d5bba3c
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: c6b99dfd27655894456a1b0957c8c42f31819e1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: d8520224662c02d1ffbe9fd2fd6ef76f8b1e698a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62795743"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262918"
 ---
 # <a name="managing-passwords-oracletosql"></a>암호 관리(OracleToSQL)
 데이터베이스 암호와 가져오기 또는 서버에서 내보내야 하는 절차를 보호 하는 방법에 대 한이 섹션은:  
@@ -48,7 +48,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
             서버 정의 id 및 해당 하는 암호화 된 암호는 로컬 컴퓨터의 파일에 저장 됩니다.  
             
-            예 1:  
+            예제 1:  
             
                 Specify password
                 
@@ -58,7 +58,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
                 
                 Re-enter password for server_id 'XXX_1': xxxxxxx
             
-            예 2:
+            예제 2:
             
                 C:\SSMA\SSMAforOracleConsole.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for Oracle\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 

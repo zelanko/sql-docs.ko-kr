@@ -19,13 +19,12 @@ ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: bb20f646179ec147e4bbca43689812cc39c5bf97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ff85273a1e970b3bb891d1816a96019dd4f3ae5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135187"
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
  인덱스 sxi1에 해당하는 sys.selective_xml_index_paths에 새로운 두 행이 있습니다.  
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|XML 열이 포함된 테이블의 ID입니다.|  
 |**index_id**|**int**|선택적 XML 인덱스의 고유한 ID입니다.|  
@@ -62,7 +61,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**system_type_id**|**tinyint**|열의 시스템 유형 ID입니다.|  
 |**user_type_id**|**tinyint**|열의 사용자 유형 ID입니다.|  
 |**max_length**|**smallint**|유형의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 varchar(max), nvarchar(max), varbinary(max) 또는 xml입니다.|  
-|**전체 자릿수**|**tinyint**|숫자 기반 형식인 경우에는 형식의 최대 전체 자릿수이고 그렇지 않으면 0입니다.|  
+|**precision**|**tinyint**|숫자 기반 형식인 경우에는 형식의 최대 전체 자릿수이고 그렇지 않으면 0입니다.|  
 |**scale**|**tinyint**|숫자 기반 형식인 경우에는 형식의 최대 소수 자릿수이고 그렇지 않으면 0입니다.|  
 |**collation_name**|**sysname**|문자 기반인 경우에는 형식의 데이터 정렬 이름이고 그렇지 않으면 NULL입니다.|  
 |**is_singleton**|**bit**|0 = SINGLETON 힌트가 없음<br /><br /> 1 = SINGLETON 최적화 힌트가 적용됨|  

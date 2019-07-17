@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dafea3c43e8287b92665cbdc5c901ab2ba0116d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43f5e96a280614d3f69472c7d794489bf1a5ba58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029563"
 ---
 # <a name="system-base-tables"></a>시스템 기본 테이블
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47833631"
 |**sys.sysnsobjs**|모든 데이터베이스에 있습니다. 각 네임스페이스 범위의 엔터티에 대한 행을 포함합니다. 이 테이블은 XML 컬렉션 엔터티를 저장하는 데 사용됩니다.|  
 |**sys.syscolpars**|모든 데이터베이스에 있습니다. 테이블, 뷰 또는 테이블 반환 함수의 모든 열에 대한 행을 포함합니다. 이 테이블에는 프로시저 또는 함수의 모든 매개 변수에 대한 행도 포함됩니다.|  
 |**sys.systypedsubobjs**|모든 데이터베이스에 있습니다. 유형이 지정된 각 하위 엔터티에 대한 행을 포함합니다. 파티션 함수의 매개 변수만 이 범주에 해당합니다.|  
-|**sys.sysidxstats**|모든 데이터베이스에 있습니다. 테이블 및 인덱싱된 뷰의 각 인덱스 또는 통계에 대한 행을 포함합니다.<br /><br /> 참고: 힙 제외한 모든 인덱스는 인덱스와 동일한 이름을 가진 통계와 연결 합니다.|  
+|**sys.sysidxstats**|모든 데이터베이스에 있습니다. 테이블 및 인덱싱된 뷰의 각 인덱스 또는 통계에 대한 행을 포함합니다.<br /><br /> 참고: 힙 제외한 모든 인덱스는 인덱스와 동일한 이름을 가진 통계와 연결 됩니다.|  
 |**sys.sysiscols**|모든 데이터베이스에 있습니다. 각 지속형 인덱스 및 통계 열에 대한 행을 포함합니다.|  
 |**sys.sysscalartypes**|모든 데이터베이스에 있습니다. 각 사용자 정의 유형 또는 시스템 유형에 대한 행을 포함합니다.|  
 |**sys.sysdbreg**|에 존재 합니다 **마스터** 데이터베이스에 해당 합니다. 등록된 각 데이터베이스에 대한 행을 포함합니다.|  
@@ -61,7 +60,7 @@ ms.locfileid: "47833631"
 |**sys.sysxlgns**|에 존재 합니다 **마스터** 데이터베이스에 해당 합니다. 각 서버 보안 주체에 대한 행을 포함합니다.|  
 |**sys.sysdbfiles**|모든 데이터베이스에 있습니다. 경우 열 **dbid** 가 0 이면이 데이터베이스에 속하는 파일의 행을 나타냅니다. 에 **마스터** 데이터베이스에서 열 **dbid** 0이 아닐 수 있습니다. 이 경우 해당 행은 마스터 파일을 나타냅니다.|  
 |**sys.sysusermsg**|에 존재 합니다 **마스터** 데이터베이스에 해당 합니다. 각 행은 사용자 정의 오류 메시지를 나타냅니다.|  
-|**sys.sysprivs**|모든 데이터베이스에 있습니다. 각 데이터베이스 또는 서버 수준 사용 권한에 대한 행을 포함합니다.<br /><br /> 참고: 서버 수준 사용 권한을에 저장 되는 **마스터** 데이터베이스입니다.|  
+|**sys.sysprivs**|모든 데이터베이스에 있습니다. 각 데이터베이스 또는 서버 수준 사용 권한에 대한 행을 포함합니다.<br /><br /> 참고: 서버 수준 권한은에 저장 되어는 **마스터** 데이터베이스입니다.|  
 |**sys.sysowners**|모든 데이터베이스에 있습니다. 각 행은 데이터베이스 보안 주체를 나타냅니다.|  
 |**sys.sysobjkeycrypts**|모든 데이터베이스에 있습니다. 개체와 연결된 각 대칭 키, 암호화 또는 암호화 속성에 대한 행을 포함합니다.|  
 |**sys.syscerts**|모든 데이터베이스에 있습니다. 데이터베이스의 각 인증서에 대한 행을 포함합니다.|  

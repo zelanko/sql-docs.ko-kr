@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 039728bd18abcd1f3a660297fa0a1d937b7b1eb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 96d76d301e3f937cb0e3c21a43f1939d0149ec9b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288252"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264506"
 ---
 # <a name="command-line-options-in-ssma-console-oracletosql"></a>SSMA 콘솔의 명령줄 옵션(OracleToSQL)
 Microsoft를 실행 하 고 SSMA 작업을 제어 하려면 강력한 명령줄 옵션을 제공 합니다. 결과 섹션을 자세히 설명 동일 합니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ddf87e08b113d3512a8d824ff4abdf1359476e32
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 01155b1fb294660c92bfa975bc04de8f748b730f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137657"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**partition**|**int**|구독자 파티션을 식별합니다.|  
 |**host_name**|**sysname**|값으로 필터링 되에 구독에 대 한 파티션을 만들 때 사용 되는 값을 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 구독자는 함수입니다.|  
@@ -66,7 +65,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helpmergepartition** 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

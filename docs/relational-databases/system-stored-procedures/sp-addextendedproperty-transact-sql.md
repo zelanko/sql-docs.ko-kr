@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40437cd27af345aff91314f07888c66e2bdff2d0
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072695"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_addextendedproperty
  속성과 연결할 값입니다. *값* 됩니다 **sql_variant**, 기본값은 NULL입니다. *value* 의 크기는 7,500바이트보다 클 수 없습니다.  
   
  [ @level0type=] {'*level0_object_type*'}  
- 수준 0 개체의 유형입니다. *level0_object_type* 됩니다 **varchar(128)**, 기본값은 NULL입니다.  
+ 수준 0 개체의 유형입니다. *level0_object_type* 됩니다 **varchar(128)** , 기본값은 NULL입니다.  
   
  유효한 입력은 ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE 및 NULL입니다.  
   
@@ -72,12 +71,12 @@ sp_addextendedproperty
  지정된 수준 0 개체 유형의 이름입니다. *level0_object_name* 됩니다 **sysname** 이며 기본값은 NULL입니다.  
   
  [ @level1type=] {'*level1_object_type*'}  
- 수준 1 개체의 유형입니다. *level1_object_type* 됩니다 **varchar(128)**, 기본값은 NULL입니다. 유효한 입력에는 집계, 기본, 함수, LOGICAL FILE NAME, 프로시저, 큐, 규칙, 시퀀스, 동의어, 테이블, TABLE_TYPE, 형식, 뷰, XML SCHEMA COLLECTION 및 NULL은입니다.    
+ 수준 1 개체의 유형입니다. *level1_object_type* 됩니다 **varchar(128)** , 기본값은 NULL입니다. 유효한 입력에는 집계, 기본, 함수, LOGICAL FILE NAME, 프로시저, 큐, 규칙, 시퀀스, 동의어, 테이블, TABLE_TYPE, 형식, 뷰, XML SCHEMA COLLECTION 및 NULL은입니다.    
  [ @level1name=] {'*level1_object_name*'}  
  지정된 수준 1 개체 유형의 이름입니다. *level1_object_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
  [ @level2type=] {'*level2_object_type*'}  
- 수준 2 개체의 유형입니다. *level2_object_type* 됩니다 **varchar(128)**, 기본값은 NULL입니다. 유효한 입력은 COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER 및 NULL입니다.  
+ 수준 2 개체의 유형입니다. *level2_object_type* 됩니다 **varchar(128)** , 기본값은 NULL입니다. 유효한 입력은 COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER 및 NULL입니다.  
   
  [ @level2name=] {'*level2_object_name*'}  
  지정된 수준 2 개체 유형의 이름입니다. *level2_object_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
@@ -85,8 +84,8 @@ sp_addextendedproperty
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
- 확장 속성을 지정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 개체는 세 수준(0, 1, 2)으로 분류됩니다. 수준 0은 최고 수준이며 데이터베이스 범위에 포함된 개체로 정의됩니다. 수준 1 개체는 스키마나 USER 범위에 포함되어 있고 수준 2 개체는 수준 1 개체에 포함되어 있습니다. 모든 수준의 개체에 대해 확장 속성을 정의할 수 있습니다.  
+## <a name="remarks"></a>설명  
+ 개체의 확장된 속성을 지정 하는 데는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스는 세 가지 수준으로 분류 됩니다. 0, 1 및 2입니다. 수준 0은 최고 수준이며 데이터베이스 범위에 포함된 개체로 정의됩니다. 수준 1 개체는 스키마나 USER 범위에 포함되어 있고 수준 2 개체는 수준 1 개체에 포함되어 있습니다. 모든 수준의 개체에 대해 확장 속성을 정의할 수 있습니다.  
   
  한 수준에 있는 개체를 참조할 때는 해당 개체를 소유하거나 포함하는 더 높은 수준의 개체 이름을 지정해야 합니다. 예를 들어 확장 속성을 테이블 열(수준 2)에 추가할 때 열을 포함하는 테이블 이름(수준 1)과 테이블을 포함하는 스키마(수준 0)도 지정해야 합니다.  
   
@@ -109,7 +108,7 @@ sp_addextendedproperty
   
 ## <a name="examples"></a>예  
   
-### <a name="a-adding-an-extended-property-to-a-database"></a>1. 데이터베이스에 확장 속성 추가  
+### <a name="a-adding-an-extended-property-to-a-database"></a>1\. 데이터베이스에 확장 속성 추가  
  다음 예에서는 값이 `'Caption'` 인 `'AdventureWorks2012 Sample OLTP Database'` 속성 이름이 `AdventureWorks2012` 예제 데이터베이스에 추가됩니다.  
   
 ```  
@@ -121,7 +120,7 @@ EXEC sp_addextendedproperty
 @value = 'AdventureWorks2012 Sample OLTP Database';  
 ```  
   
-### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>2. 테이블의 열에 확장 속성 추가  
+### <a name="b-adding-an-extended-property-to-a-column-in-a-table"></a>2\. 테이블의 열에 확장 속성 추가  
  다음 예에서는 `PostalCode` 테이블의 `Address`열에 캡션 속성이 추가됩니다.  
   
 ```  
@@ -136,7 +135,7 @@ EXEC sp_addextendedproperty
 GO  
 ```  
   
-### <a name="c-adding-an-input-mask-property-to-a-column"></a>3. 열에 입력 마스크 속성 추가  
+### <a name="c-adding-an-input-mask-property-to-a-column"></a>3\. 열에 입력 마스크 속성 추가  
  다음 예에서는`99999 or 99999-9999 or #### ###`테이블의 `PostalCode` 열에 ' `Address`' 입력 마스크 속성을 추가합니다.  
   
 ```  
@@ -150,7 +149,7 @@ EXEC sp_addextendedproperty
 GO  
 ```  
   
-### <a name="d-adding-an-extended-property-to-a-filegroup"></a>4. 파일 그룹에 확장 속성 추가  
+### <a name="d-adding-an-extended-property-to-a-filegroup"></a>4\. 파일 그룹에 확장 속성 추가  
  다음 예에서는 `PRIMARY` 파일 그룹에 확장 속성을 추가합니다.  
   
 ```  
@@ -163,7 +162,7 @@ EXEC sys.sp_addextendedproperty
 GO  
 ```  
   
-### <a name="e-adding-an-extended-property-to-a-schema"></a>5. 스키마에 확장 속성 추가  
+### <a name="e-adding-an-extended-property-to-a-schema"></a>5\. 스키마에 확장 속성 추가  
  다음 예에서는 `HumanResources` 스키마에 확장 속성을 추가합니다.  
   
 ```  
@@ -176,7 +175,7 @@ EXECUTE sys.sp_addextendedproperty
 @level0name = 'HumanResources';  
 ```  
   
-### <a name="f-adding-an-extended-property-to-a-table"></a>6. 테이블에 확장 속성 추가  
+### <a name="f-adding-an-extended-property-to-a-table"></a>6\. 테이블에 확장 속성 추가  
  다음 예에서는 `Address` 스키마의 `Person` 테이블에 확장 속성을 추가합니다.  
   
 ```  
@@ -190,7 +189,7 @@ EXEC sys.sp_addextendedproperty
 GO  
 ```  
   
-### <a name="g-adding-an-extended-property-to-a-role"></a>7. 역할에 확장 속성 추가  
+### <a name="g-adding-an-extended-property-to-a-role"></a>7\. 역할에 확장 속성 추가  
  다음 예에서는 애플리케이션 역할을 만들고 해당 역할에 확장 속성을 추가합니다.  
   
 ```  
@@ -206,7 +205,7 @@ EXEC sys.sp_addextendedproperty
 @level0name = 'Buyers';  
 ```  
   
-### <a name="h-adding-an-extended-property-to-a-type"></a>8. 유형에 확장 속성 추가  
+### <a name="h-adding-an-extended-property-to-a-type"></a>8\. 유형에 확장 속성 추가  
  다음 예에서는 유형에 확장 속성을 추가합니다.  
   
 ```  
@@ -221,7 +220,7 @@ EXEC sys.sp_addextendedproperty
 @level1name = N'OrderNumber';  
 ```  
   
-### <a name="i-adding-an-extended-property-to-a-user"></a>9. 사용자에 확장 속성 추가  
+### <a name="i-adding-an-extended-property-to-a-user"></a>9\. 사용자에 확장 속성 추가  
  다음 예에서는 사용자를 만들고 해당 사용자에 확장 속성을 추가합니다.  
   
 ```  

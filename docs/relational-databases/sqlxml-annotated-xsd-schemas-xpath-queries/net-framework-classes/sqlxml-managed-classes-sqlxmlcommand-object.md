@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: c1f9e0bb-a89d-4d6a-a96e-289ef516a3a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5ac8e2b23988f09b21f21ed5cfded790871a25a9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9f6ad55aff8291e3c0f14e8f44085da71d2b594c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119515"
 ---
 # <a name="sqlxml-managed-classes---sqlxmlcommand-object"></a>SQLXML 관리되는 클래스 - SqlXmlCommand 개체
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ public SqlXmlCommand(string cnString)
  SqlXmlParameter CreateParameter()  
  SqlXmlParameter 개체를 만듭니다. 에 대 한 값을 설정할 수는 *이름을* 하 고 *값* 이 개체의 매개 변수입니다. 이 메서드는 명령에 매개 변수를 전달하려는 경우에 유용합니다. 작업 샘플을 보려면 [SQL 쿼리 실행 &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)합니다.  
   
- void ClearParameters()  
+ void clearparameters)  
  지정된 명령 개체에 대해 만든 매개 변수를 지웁니다. 이 메서드는 동일한 명령 개체에 여러 개의 쿼리를 실행하려는 경우에 유용합니다.  
   
 ## <a name="properties"></a>속성  
@@ -104,12 +103,12 @@ public SqlXmlCommand(string cnString)
  명령 텍스트입니다. 이 속성은 실행할 명령의 텍스트를 지정하는 데 사용됩니다. 작업 샘플을 보려면 [SQL 쿼리 실행 &#40;SQLXML Managed Classes&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-sql-queries-sqlxml-managed-classes.md)합니다.  
   
  CommandStream  
- 명령 스트림입니다. 이 속성은 파일(예: XML 템플릿)에서 명령을 실행하려는 경우에 유용합니다. 사용할 때 CommandStream에만 **"템플릿"**, **"UpdateGram"** 하 고 **"DiffGram" CommandType** 값이 지원 됩니다. 작업 샘플을 보려면 [CommandStream 속성을 사용 하 여 템플릿 파일 실행](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md)합니다.  
+ 명령 스트림입니다. 이 속성은 파일(예: XML 템플릿)에서 명령을 실행하려는 경우에 유용합니다. 사용할 때 CommandStream에만 **"템플릿"** , **"UpdateGram"** 하 고 **"DiffGram" CommandType** 값이 지원 됩니다. 작업 샘플을 보려면 [CommandStream 속성을 사용 하 여 템플릿 파일 실행](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandstream-property.md)합니다.  
   
  CommandType  
  명령의 형식을 식별합니다. 이 속성은 실행할 명령의 형식을 지정하는 데 사용됩니다. 명령 형식은 다음 표에 나와 있는 값에 따라 결정됩니다. 작업 샘플을 보려면 [.NET 환경에서 SQLXML 기능 액세스](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/accessing-sqlxml-functionality-in-the-net-environment.md)합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |SqlXmlCommandType.Sql|SQL 명령(예: `SELECT * FROM Employees FOR XML AUTO`)을 실행합니다.|  
 |SqlXmlCommandType.XPath|XPath 명령(예: `Employees[@EmployeeID=1]`)을 실행합니다.|  

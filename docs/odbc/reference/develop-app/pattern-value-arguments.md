@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53c091fd0b7a6cfdf390997fb5163fbc9d98e18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023347"
 ---
 # <a name="pattern-value-arguments"></a>패턴 값 인수
 와 같은 카탈로그에서 일부 인수 함수는 *TableName* 에서 인수 **SQLTables**, 검색 패턴을 허용 합니다. 이러한 인수는 검색 패턴 수락 SQL_ATTR_METADATA_ID 문 특성 SQL_FALSE;로 설정 된 경우 이들은이 특성이 SQL_TRUE로 설정 된 경우 검색 패턴을 허용 하지 않는 식별자 인수입니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "62861730"
   
  이스케이프 문자 SQL_SEARCH_PATTERN_ESCAPE 옵션을 사용 하 여 검색 **SQLGetInfo**합니다. 인수는 리터럴 문자를 포함할 검색 패턴을 허용 하는 모든 밑줄, 백분율 기호 또는 이스케이프 문자 야 합니다. 예제는 다음 표에 표시 됩니다.  
   
-|검색 패턴|Description|  
+|검색 패턴|설명|  
 |--------------------|-----------------|  
 |%A%|문자를 포함 하는 모든 식별자|  
 |ABC_|ABC로 시작 하는 모든 4 문자 식별자|  

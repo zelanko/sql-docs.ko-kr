@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3eb09513-03f1-42f8-9917-3a1f3a579bec
 ms.author: vanto
 author: VanMSFT
-manager: craigg
-ms.openlocfilehash: 285f1c5f2ab868bbf21db80e68ebbf5d71100f14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 184ebbde266ab21c0fa94ebff0e2be0aca61988b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123800"
 ---
 # <a name="spgrantdbaccess-transact-sql"></a>sp_grantdbaccess(Transact-SQL)
 
@@ -51,7 +50,7 @@ sp_grantdbaccess [ @loginame = ] 'login'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_grantdbaccess** 추가 옵션을 지 원하는 CREATE USER를 호출 합니다. 데이터베이스 사용자를 만드는 방법에 대 한 자세한 내용은 [사용자 만들기 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-user-transact-sql.md)합니다. 사용 하 여 데이터베이스에서 데이터베이스 사용자를 제거할 [DROP USER](../../t-sql/statements/drop-user-transact-sql.md)합니다.  
   
  **sp_grantdbaccess** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  

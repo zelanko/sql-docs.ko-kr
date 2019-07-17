@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 4fd1ec7f-b9dc-4ddb-ab3a-0d59ab05ad20
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 21f7299c42a5c339d65d21fee6aa0ce2eba9a756
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 99d1135fcf2229ca08e42a2afc45ad98f923ac95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139977"
 ---
 # <a name="syscolumnxmlschemacollectionusages-transact-sql"></a>sys.column_xml_schema_collection_usages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XML 스키마에서 유효성을 검사하는 각 열에 대해 하나의 행을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 열이 속해 있는 개체의 ID입니다.|  
 |**column_id**|**int**|열의 ID입니다. 개체 내에서 고유합니다.|  

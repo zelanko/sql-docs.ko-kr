@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: fc208cdb-7373-4f6b-8f6c-cdff9d3dcd02
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 537865967d0e43b7dd9501f9fbb7b9605f5b9367
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 79d3905c130e37c973a79a40369f97ae8f30ac5b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625802"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266555"
 ---
 # <a name="running-test-cases-oracletosql"></a>테스트 사례 실행(OracleToSQL)
 SSMA 테스터는 테스트 사례를 실행 하면 테스트를 위해 선택한 개체를 실행 하 고 확인 결과 대 한 보고서를 만듭니다. 결과 두 플랫폼 모두에서 동일한 경우 테스트에 성공 합니다. Oracle 간에 개체의 관계 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 현재 SSMA 프로젝트에 스키마 매핑 설정에 따라 결정 됩니다.  
@@ -43,29 +43,29 @@ SSMA 테스터는 테스트를 시작 하기 전에 테스트 실행에 대 한 
   
 ||||  
 |-|-|-|  
-|이름|형식|Description|  
+|이름|형식|설명|  
 |USER_TABLE$Trg|트리거|확인 된 테이블의 변경 내용을 감사 하는 트리거.|  
-|USER_TABLE$ AUD|테이블|테이블을 삭제 하 고 덮어쓸 행을 저장 합니다.|  
-|USER_TABLE$ AUDID|테이블|새로운 기능과 변경 된 행을 저장 하는 테이블입니다.|  
+|USER_TABLE$ AUD|table|테이블을 삭제 하 고 덮어쓸 행을 저장 합니다.|  
+|USER_TABLE$ AUDID|table|새로운 기능과 변경 된 행을 저장 하는 테이블입니다.|  
 |USER_TABLE|뷰|테이블 수정의 간소화 된 표현입니다.|  
 |새 USER_TABLE $|뷰|삽입 되거나 덮어쓸 행의 간소화 된 표현입니다.|  
-|USER_TABLE$NEW_ID|뷰|삽입 되거나 변경 된 행의 id입니다.|  
+|USER_TABLE$ NEW_ID|뷰|삽입 되거나 변경 된 행의 id입니다.|  
 |USER_TABLE$ 이전|뷰|행을 삭제 하 고 덮어쓸의 간소화 된 표현입니다.|  
   
 다음 개체에 확인 된 테이블의 스키마에 만들어집니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
 ||||  
 |-|-|-|  
-|이름|형식|Description|  
+|이름|형식|설명|  
 |USER_TABLE$Trg|트리거|확인 된 테이블의 변경 내용을 감사 하는 트리거.|  
   
 다음 개체에서 생성 되 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ssmatesterdb 데이터베이스에 있습니다.  
   
 ||||  
 |-|-|-|  
-|이름|형식|Description|  
-|USER_TABLE$Aud|테이블|테이블을 삭제 하 고 덮어쓸 행을 저장 합니다.|  
-|USER_TABLE$AudID|테이블|새로운 기능과 변경 된 행을 저장 하는 테이블입니다.|  
+|이름|형식|설명|  
+|USER_TABLE$Aud|table|테이블을 삭제 하 고 덮어쓸 행을 저장 합니다.|  
+|USER_TABLE$AudID|table|새로운 기능과 변경 된 행을 저장 하는 테이블입니다.|  
 |USER_TABLE|뷰|테이블 수정의 간소화 된 표현입니다.|  
 |USER_TABLE$new|뷰|삽입 되거나 덮어쓸 행의 간소화 된 표현입니다.|  
 |USER_TABLE$new_id|뷰|삽입 되거나 변경 된 행의 id입니다.|  

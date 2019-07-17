@@ -19,33 +19,32 @@ helpviewer_keywords:
 ms.assetid: 76e7fef2-d1a4-4272-a2bb-5f5dcd84aedc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fff57d41e522ae2e002809982bfeb084c28bbbba
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: c98acb87e180dce32a00e77ba6c1af9fbd48b6fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140010"
 ---
 # <a name="syscolumnstorerowgroups-transact-sql"></a>sys.column_store_row_groups(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   클러스터형 columnstore 인덱스 정보를 세그먼트 단위로 제공하므로 관리자가 시스템 관리 결정을 내리는 데 도움이 됩니다. **sys.column_store_row_groups** (삭제 된 것으로 표시 된 포함) 물리적으로 저장 된 행의 총 수에 대 한 열이 있고 삭제 됨으로 표시 된 행의 수에 대 한 열입니다. 사용 하 여 **sys.column_store_row_groups** 행을 확인 하려면 그룹 삭제 된 행의 비율이 높아 및 다시 작성 해야 합니다.  
    
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 인덱스가 정의되어 있는 테이블의 ID입니다.|  
 |**index_id**|**int**|이 columnstore 인덱스가 있는 테이블의 인덱스 ID입니다.|  
 |**partition_number**|**int**|row_group_id 행 그룹을 보유한 테이블 파티션의 ID입니다. partition_number를 사용하여 DMV를 sys.partitions에 조인할 수 있습니다.|  
 |**row_group_id**|**int**|이 행 그룹과 연결된 행 그룹 번호입니다. 이 번호는 파티션 내에서 고유합니다.<br /><br /> -1 = 메모리 내 테이블의 꼬리.|  
 |**delta_store_hobt_id**|**bigint**|델타 저장소에 열려 있는 행 그룹은 hobt_id 합니다.<br /><br /> 행 그룹 델타 저장소에 없는 경우 NULL입니다.<br /><br /> 메모리 내 테이블의 꼬리에 대 한 NULL입니다.|  
-|**state**|**tinyint**|state_description과 연결된 ID 번호입니다.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = 열기<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = 삭제 표시|  
+|**state**|**tinyint**|state_description과 연결된 ID 번호입니다.<br /><br /> 0 = INVISIBLE<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED <br /><br /> 4 = 삭제 표시|  
 |**state_description**|**nvarchar(60)**|행 그룹의 영구 상태 설명:<br /><br /> 보이지 않는-숨겨진된 압축 된 세그먼트를 델타 저장소의 데이터에서 만들어지고 있는 합니다. 읽기 작업은 표시되지 않은 압축된 세그먼트가 완료될 때까지 델타 저장소를 사용합니다. 그런 다음 새 세그먼트가 표시되고 원본 델타 저장소가 제거됩니다.<br /><br /> 열림-새 레코드를 수락 하는 읽기/쓰기 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> 닫힘-가득 차면 되었지만 아직 tuple mover 프로세스에 의해 압축 행 그룹입니다.<br /><br /> 압축-채워지고 압축 된 행 그룹.|  
 |**total_rows**|**bigint**|행 그룹에 물리적으로 저장된 총 행 수입니다. 일부는 삭제되었을 수도 있지만 그대로 저장되어 있습니다. 행 그룹의 최대 행 수는 1,048,576개(16진수 FFFFF)입니다.|  
 |**deleted_rows**|**bigint**|행 그룹에서 삭제된 것으로 표시된 총 행 수입니다. 델타 행 그룹에서는 항상 0입니다.|  
 |**size_in_bytes**|**bigint**|이 행 그룹에서 DELTA 및 COLUMNSTORE 행 그룹의 모든 데이터 크기(바이트 단위, 메타데이터 또는 공유 사전 제외)입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  클러스터형 또는 비클러스터형 columnstore 인덱스가 있는 각 테이블에 대해 columnstore 행 그룹당 한 행을 표시합니다.  
   
  사용 하 여 **sys.column_store_row_groups** 행 그룹과 행 그룹의 크기에 포함 된 행 수를 결정 합니다.  

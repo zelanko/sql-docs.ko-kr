@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: e1e85908-9f31-47cf-8af6-88c77e6f24c9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c79a3e34ea6ca1bbebfa35a77020b81618514133
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: f87a62e744bcd6032c58cdb3b327b747e5343d2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124013"
 ---
 # <a name="spgetapplock-transact-sql"></a>sp_getapplock(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 >  응용 프로그램 잠금을 획득한 후에는 처음 32자만 일반 텍스트로 검색되고 나머지는 해시됩니다.  
   
  [ @LockMode=] '*lock_mode*'  
- 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode*는 **nvarchar(32)** 이며 기본값은 없습니다. 값은 다음 중 하나일 수 있습니다. **공유**, **업데이트**를 **IntentShared**를 **IntentExclusive**, 또는 **단독**합니다.  
+ 특정 리소스에 대해 획득할 잠금 모드입니다. *lock_mode*는 **nvarchar(32)** 이며 기본값은 없습니다. 값 중 하나일 수 있습니다. **공유**, **업데이트**를 **IntentShared**를 **IntentExclusive**, 또는 **단독**합니다.  
   
  [ @LockOwner=] '*lock_owner*'  
  잠금의 소유자이며 잠금이 요청되었을 때의 *lock_owner* 값입니다. *lock_owner*은 **nvarchar(32)** 입니다. 값은 **Transaction**(기본값) 또는 **Session**일 수 있습니다. 경우는 *lock_owner* 값이 **트랜잭션**, 기본 또는 명시적으로 지정 sp_getapplock에서 실행 되어야 합니다 트랜잭션 내에서.  
@@ -79,8 +78,8 @@ sp_getapplock [ @Resource = ] 'resource_name' ,
 |-3|잠금 요청이 교착 상태에서 처리되지 않았습니다.|  
 |-999|매개 변수 유효성 검사 또는 다른 호출에서 오류가 발생하였음을 나타냅니다.|  
   
-## <a name="remarks"></a>Remarks  
- 리소스에 설정된 잠금은 현재 트랜잭션 또는 현재 세션과 연관됩니다. 현재 트랜잭션과 연관된 잠금은 트랜잭션이 커밋되거나 롤백될 때 해제됩니다. 세션과 연관된 잠금은 세션이 로그 아웃될 때 해제됩니다. 서버가 종료되면 모든 잠금이 해제됩니다.  
+## <a name="remarks"></a>설명  
+ 리소스에 설정된 잠금은 현재 트랜잭션 또는 현재 세션과 연관됩니다. 현재 트랜잭션과 연관된 잠금은 트랜잭션이 커밋되거나 롤백될 때 해제됩니다. 세션에 연관 된 잠금은 세션이 로그 아웃 하는 경우 해제 됩니다. 어떤 이유로 든 서버가 종료 되 면 모든 잠금이 해제 됩니다.  
   
  sp_getapplock에서 만든 잠금 리소스는 세션에 대한 현재 데이터베이스에서 만들어집니다. 각 잠금 리소스는 다음을 조합한 값으로 식별됩니다.  
   

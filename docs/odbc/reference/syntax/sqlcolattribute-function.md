@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e23b7dd9ce81f02a822bece3546bf1c604030df1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4577b97c827d527422fe2448656496d7c196c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118697"
 ---
 # <a name="sqlcolattribute-function"></a>SQLColAttribute 함수(SQLColAttribute Function)
 **규칙**  
@@ -95,7 +94,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="diagnostics"></a>진단  
  때 **SQLColAttribute** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 연관된 된 SQLSTATE 값을 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여를 *HandleType*호출의와 *처리할* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLColAttribute** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *CharacterAttributePtr* 작아서 전체 문자열 값을 반환 문자열 값이 잘렸습니다 하므로 수 없습니다. 잘리지 않은 문자열 값의 길이에서 **StringLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
@@ -146,7 +145,7 @@ SQLRETURN SQLColAttribute (
   
  다음 표에서 나열 하 여 반환 되는 설명자 형식 **SQLColAttribute**합니다. 형식은 *NumericAttributePtr* 값은 **SQLLEN \*** 합니다.  
   
-|*FieldIdentifier*|정보<br /><br /> 반환|Description|  
+|*FieldIdentifier*|정보<br /><br /> 반환|설명|  
 |-----------------------|---------------------------------|-----------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE (ODBC 1.0)|*NumericAttributePtr*|열이 자동 증가 열 이면 SQL_TRUE 합니다.<br /><br /> 열 자동 증가 열이 아닌 또는 숫자가 아닌 경우 SQL_FALSE입니다.<br /><br /> 이 필드는 숫자 데이터 형식 열에만 적합 합니다. 응용 프로그램 값을 자동 증분 열이 포함 된 행을 삽입할 수 있지만 일반적으로 열의 값을 업데이트할 수 없습니다.<br /><br /> Autoincrement 열에 삽입 수행 되 면 삽입 시 고유 값 열에 삽입 됩니다. Increment를 정의 하지 않은 이지만 데이터 소스 관련 있습니다. 응용 프로그램 특정 값으로 자동 증분 열을 증가 나 특정 지점에서 시작 하는 것을 가정 하지 않아야 합니다.|  
 |SQL_DESC_BASE_COLUMN_NAME (ODBC 3.0)|*CharacterAttributePtr*|기본 열 이름을 결과 집합 열입니다. 기본 열 이름 (예: 열을 식의 경우) 존재 하지 않는 경우이 변수는 빈 문자열을 포함 합니다.<br /><br /> 이 정보는 읽기 전용 필드인 IRD의 SQL_DESC_BASE_COLUMN_NAME 레코드 필드에서 반환 됩니다.|  
@@ -158,7 +157,7 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|열의 데이터를에서 표시 하는 데 필요한 문자의 최대 수입니다. 디스플레이 크기에 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
 |SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|Sql_true는 해당 열에 데이터 소스 관련 된 고정된 전체 자릿수 및 0이 아닌 확장 합니다.<br /><br /> 고정 전체 자릿수 및 0이 아닌 확장 데이터 원본 관련 된 열에 없는 경우 SQL_FALSE입니다.|  
 |SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|열 레이블 또는 제목입니다. 예를 들어 EmpName 라는 열 직원 이름 레이블을 지정할 수 있습니다 또는 별칭으로 레이블을 지정할 수 있습니다.<br /><br /> 열에는 레이블이 없는 경우 열 이름이 반환 됩니다. 레이블 열은 명명 되지 않은 경우, 빈 문자열이 반환 됩니다.|  
-|SQL_DESC_LENGTH  (ODBC 3.0)|*NumericAttributePtr*|숫자 값을 문자 문자열 또는 이진 데이터의 실제 또는 최대 문자 길이 입력 합니다. 고정 길이 데이터 형식에 대 한 최대 문자 길이 또는 가변 길이 데이터 형식에 대 한 실제 문자 길이입니다. 해당 값에는 항상 null 종료 바이트 문자열을 종료 하는 제외 됩니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_LENGTH 레코드 필드에서 반환 됩니다.<br /><br /> 길이 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
+|SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|숫자 값을 문자 문자열 또는 이진 데이터의 실제 또는 최대 문자 길이 입력 합니다. 고정 길이 데이터 형식에 대 한 최대 문자 길이 또는 가변 길이 데이터 형식에 대 한 실제 문자 길이입니다. 해당 값에는 항상 null 종료 바이트 문자열을 종료 하는 제외 됩니다.<br /><br /> 이 정보는 IRD의 SQL_DESC_LENGTH 레코드 필드에서 반환 됩니다.<br /><br /> 길이 대 한 자세한 내용은 참조 하세요. [열 크기, 십진수, 8 진수 길이 전송 및 표시 크기](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) 부록 d: 데이터 형식입니다.|  
 |SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|이 VARCHAR(128) 레코드 필드에는이 데이터 형식의 리터럴에 접두사로 드라이버 인식 하는 문자를 포함 합니다. 이 필드는 리터럴 접두사는 해당 데이터 형식에 대 한 빈 문자열을 포함 합니다. 자세한 내용은 [리터럴 접두사 및 접미사](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)합니다.|  
 |SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|이 VARCHAR(128) 레코드 필드에는이 데이터 형식의 리터럴에 접미사로 드라이버 인식 하는 문자를 포함 합니다. 이 필드는에 대 한 리터럴 접미사는 해당 데이터 형식에 대 한 빈 문자열을 포함 합니다. 자세한 내용은 [리터럴 접두사 및 접미사](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md)합니다.|  
 |SQL_DESC_LOCAL_TYPE_NAME (ODBC 3.0)|*CharacterAttributePtr*|이 VARCHAR(128) 레코드 필드에는 데이터 형식의 일반 이름과 다를 수 있는 데이터 형식에 대 한 모든 지역화 된 (native language) 이름을 포함 합니다. 지역화 된 이름이 없는 경우 빈 문자열이 반환 됩니다. 이 필드는 표시 용도로 됩니다. 문자열의 문자 집합을 로캘별 이며 일반적으로 서버의 기본 문자 집합입니다.|  

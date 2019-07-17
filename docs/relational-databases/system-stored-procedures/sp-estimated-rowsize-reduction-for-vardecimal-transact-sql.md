@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 0fe45983-f9f2-4c7f-938a-0fd96e1cbe8d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8ae16af1017d37afba6325d335ef24fd3b99a603
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 90de7b95febdf2f1a25a5e584b2ca77bb67f93d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124510"
 ---
 # <a name="spestimatedrowsizereductionforvardecimal-transact-sql"></a>sp_estimated_rowsize_reduction_for_vardecimal(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +54,13 @@ sp_estimated_rowsize_reduction_for_vardecimal [ [ @table_name = ] 'table'] [;]
 ## <a name="result-sets"></a>결과 집합  
  현재 테이블 크기 및 예상 테이블 크기 정보를 제공하는 다음 결과 집합이 반환됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**avg_rowlen_fixed_format**|**10 진수 (12, 2)**|고정 Decimal 저장소 형식으로 행의 길이를 나타냅니다.|  
 |**avg_rowlen_vardecimal_format**|**10 진수 (12, 2)**|VarDecimal 저장소 형식이 사용되는 경우 평균 행 크기를 나타냅니다.|  
 |**row_count**|**int**|테이블의 행 수입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여 **sp_estimated_rowsize_reduction_for_vardecimal** 테이블에 vardecimal 저장소 형식 사용 하는 경우 발생 하는 비용 절감을 예측 합니다. 예를 들어 평균 행 크기가 40% 줄어드는 경우 테이블 크기를 40% 줄일 수 있습니다. 채우기 비율과 행 크기에 따라 공간이 절약되지 않을 수도 있습니다. 예를 들어 8000바이트 길이의 행이 있고 행 크기를 40% 줄인 경우에도 여전히 데이터 페이지 하나에 행 하나만 넣을 수 있어 공간이 절약되지 않을 수 있습니다.  
   
  하는 경우의 결과 **sp_estimated_rowsize_reduction_for_vardecimal** 테이블이 확장 됨, 즉 테이블의 많은 행 사용할 작은 그리고 decimal 데이터 형식의 전체 자릿수를 거의 하 vardecimal 저장소 형식에 필요한 오버 헤드는 vardecimal 저장소 형식에서 공간 절약 보다 큽니다. 드물긴 하지만 이런 경우에는 VarDecimal 저장소 형식을 설정하지 마십시오.  

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4ef384ea-5f3e-4f70-ad7c-b62d7b0da628
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: ed7f16c6cee61281a8320b2b8874282fdfae6b24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: e6e06585ca99305d6825898a98a7dbab31b5b39b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288364"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266168"
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>SQL Server에 연결(OracleToSQL)
 사용 된 **SQL Server에 연결** 의 인스턴스에 연결 하려면 대화 상자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 마이그레이션하려는 합니다. 액세스는 **SQL Server에 연결** 대화 상자의 합니다 **파일** 메뉴에서 클릭 **SQL Server에 연결**합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "63288364"
 **서버 이름**  
 입력 하거나 연결할 SQL Server 인스턴스를 선택 합니다. 기본적으로 가장 최근에 연결 된 인스턴스가 표시 됩니다.  
   
--   로컬 컴퓨터의 기본 인스턴스에 연결 하는 경우 중 하나를 입력할 수 있습니다 **localhost** 또는 점 (**.**).  
+-   로컬 컴퓨터의 기본 인스턴스에 연결 하는 경우 중 하나를 입력할 수 있습니다 **localhost** 또는 점 ( **.** ).  
   
 -   다른 컴퓨터의 기본 인스턴스에 연결 하는 경우에 컴퓨터의 이름을 입력 합니다.  
   

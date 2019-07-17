@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: fa8edcf8af510a41affdcbcc9924edf69cf4c220
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0f607f3111c150bff3d5dc562c77901a381bedc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63228051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036605"
 ---
 # <a name="topcount-mdx"></a>TopCount(MDX)
 
@@ -38,7 +37,7 @@ TopCount(Set_Expression,Count [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  숫자 식이 지정 되는 **TopCount** 순서 지정에 대해 계산 된 숫자 식으로 지정 된 값에 따라 지정 된 집합에서 지정 된 집합의 튜플을 내림차순 정렬 함수 이 옵션을 설정 합니다. 집합을 정렬 합니다 **TopCount** 함수는 튜플 가장 높은 값을 사용 하 여 지정 된 수를 반환 합니다.  
   
 > [!IMPORTANT]  

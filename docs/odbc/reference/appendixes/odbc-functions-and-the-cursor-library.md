@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c609d0fb-787a-4b39-9673-332d411b3d63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 79911ddc901575571d791d2b31a7287ab1b2b915
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 877dda7f387c8574c8ea2e91281b10b7563037b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100660"
 ---
 # <a name="odbc-functions-and-the-cursor-library"></a>ODBC 함수 및 커서 라이브러리
 > [!IMPORTANT]  

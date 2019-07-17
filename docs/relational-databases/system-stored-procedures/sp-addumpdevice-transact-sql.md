@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8c1ee1b5bdf2796aa64159867389639496a4906
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117914"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 `[ @logicalname = ] 'logical_name'` 백업 및 복원 문에 사용 되는 백업 장치의 논리적 이름이입니다. *logical_name* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
-`[ @physicalname = ] 'physical_name'` 백업 장치의 물리적 이름이입니다. 물리적 이름은 운영 체제 파일 이름에 적용되는 규칙 또는 네트워크 장치에 적용되는 UNC(Universal Naming Convention)를 따라야 하며 전체 경로를 포함해야 합니다. *physical_name* 됩니다 **nvarchar(260)**, 기본값은 없습니다 값을 NULL 일 수 없습니다.  
+`[ @physicalname = ] 'physical_name'` 백업 장치의 물리적 이름이입니다. 물리적 이름은 운영 체제 파일 이름에 적용되는 규칙 또는 네트워크 장치에 적용되는 UNC(Universal Naming Convention)를 따라야 하며 전체 경로를 포함해야 합니다. *physical_name* 됩니다 **nvarchar(260)** , 기본값은 없습니다 값을 NULL 일 수 없습니다.  
   
  원격 네트워크 위치에서 백업 장치를 만드는 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작된 해당 이름이 원격 컴퓨터에 대해 적절한 쓰기 기능을 갖고 있어야 합니다.  
   
@@ -96,7 +95,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-adding-a-disk-dump-device"></a>1. 디스크 덤프 장치 추가  
+### <a name="a-adding-a-disk-dump-device"></a>1\. 디스크 덤프 장치 추가  
  다음 예에서는 `mydiskdump`이라는 물리적 이름으로 `c:\dump\dump1.bak`라는 디스크 백업 장치를 추가합니다.  
   
 ```  
@@ -105,7 +104,7 @@ GO
 EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak';  
 ```  
   
-### <a name="b-adding-a-network-disk-backup-device"></a>2. 네트워크 디스크 백업 장치 추가  
+### <a name="b-adding-a-network-disk-backup-device"></a>2\. 네트워크 디스크 백업 장치 추가  
  다음 예에서는 `networkdevice`라는 원격 디스크 백업 장치를 추가합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작되는 이름은 반드시 해당 원격 파일(`\\<servername>\<sharename>\<path>\<filename>.bak`)에 대한 사용 권한이 있어야 합니다.  
   
 ```  
@@ -115,7 +114,7 @@ EXEC sp_addumpdevice 'disk', 'networkdevice',
     '\\<servername>\<sharename>\<path>\<filename>.bak';  
 ```  
   
-### <a name="c-adding-a-tape-backup-device"></a>3. 테이프 백업 장치 추가  
+### <a name="c-adding-a-tape-backup-device"></a>3\. 테이프 백업 장치 추가  
  다음 예에서는 `tapedump1`이라는 물리적 이름으로 `\\.\tape0` 장치를 추가합니다.  
   
 ```  
@@ -124,7 +123,7 @@ GO
 EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0';  
 ```  
   
-### <a name="d-backing-up-to-a-logical-backup-device"></a>4. 논리적 백업 장치에 백업  
+### <a name="d-backing-up-to-a-logical-backup-device"></a>4\. 논리적 백업 장치에 백업  
  다음 예에서는 백업 디스크 파일에 대해 논리적 백업 장치인 `AdvWorksData`를 만듭니다. 그런 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 이 논리적 백업 장치에 백업합니다.  
   
 ```  

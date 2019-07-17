@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 18110444-d38d-4cff-90d2-d1fc6236668b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a30016240c6cfd34cd2e21d6987ea04a0bc27537
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cb5f684321a11d56a419ae73be0bfb2950fb9939
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124396"
 ---
 # <a name="spfkeys-transact-sql"></a>sp_fkeys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,7 +71,7 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |PKTABLE_QUALIFIER|**sysname**|기본 키가 있는 테이블의 한정자 이름입니다. 이 필드는 NULL이 될 수 있습니다.|  
 |PKTABLE_OWNER|**sysname**|기본 키가 있는 테이블의 소유자 이름입니다. 이 필드는 항상 값을 반환합니다.|  
@@ -83,14 +82,14 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
 |FKTABLE_NAME|**sysname**|외래 키가 있는 테이블의 이름입니다. 이 필드는 항상 값을 반환합니다.|  
 |FKCOLUMN_NAME|**sysname**|반환되는 TABLE_NAME의 각 열에 대한 외래 키 열의 이름입니다. 이 필드는 항상 값을 반환합니다.|  
 |KEY_SEQ|**smallint**|기본 키가 여러 열로 구성된 경우 열의 시퀀스 번호입니다. 이 필드는 항상 값을 반환합니다.|  
-|UPDATE_RULE|**smallint**|SQL 작업이 업데이트일 때 외래 키에 적용되는 동작입니다.  가능한 값은 다음과 같습니다.<br /> 0=CASCADE는 외래 키를 변경합니다.<br /> 1=NO ACTION은 외래 키가 있으면 변경합니다.<br />   2 = null 설정 <br /> 3 = 기본값 설정 |  
-|DELETE_RULE|**smallint**|SQL 작업이 삭제일 때 외래 키에 적용되는 동작입니다. 가능한 값은 다음과 같습니다.<br /> 0=CASCADE는 외래 키를 변경합니다.<br /> 1=NO ACTION은 외래 키가 있으면 변경합니다.<br />   2 = null 설정 <br /> 3 = 기본값 설정 |  
+|UPDATE_RULE|**smallint**|SQL 작업이 업데이트일 때 외래 키에 적용되는 동작입니다.  가능한 값:<br /> 0=CASCADE는 외래 키를 변경합니다.<br /> 1=NO ACTION은 외래 키가 있으면 변경합니다.<br />   2 = null 설정 <br /> 3 = 기본값 설정 |  
+|DELETE_RULE|**smallint**|SQL 작업이 삭제일 때 외래 키에 적용되는 동작입니다. 가능한 값:<br /> 0=CASCADE는 외래 키를 변경합니다.<br /> 1=NO ACTION은 외래 키가 있으면 변경합니다.<br />   2 = null 설정 <br /> 3 = 기본값 설정 |  
 |FK_NAME|**sysname**|외래 키 식별자입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 FOREIGN KEY 제약 조건 이름을 반환합니다.|  
 |PK_NAME|**sysname**|기본 키 식별자입니다. 데이터 원본에 적용할 수 없는 경우 NULL입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 PRIMARY KEY 제약 조건 이름을 반환합니다.|  
   
  반환 된 결과 FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME 및 KEY_SEQ로 정렬 됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  외래 키를 사용할 수 없는 테이블을 포함하는 응용 프로그램 코딩은 다음과 같은 방법으로 구현됩니다.  
   
 -   테이블에 관한 작업을 하는 동안 제약 조건 확인(ALTER TABLE NOCHECK 또는 CREATE TABLE NOT FOR REPLICATION)을 일시적으로 사용하지 못하게 한 다음 나중에 다시 사용할 수 있도록 합니다.  

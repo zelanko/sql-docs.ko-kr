@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c4d6202e3ac68a1c1d36e307b9073ce23f1efb6e
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: e4ad2d32c313919ed4446a5506f22e9048e09288
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119308"
 ---
 # <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc입니다. &lt;capture_instance&gt;_CT (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "67586382"
   
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**__$start_lsn**|**binary(10)**|변경에 대한 커밋 트랜잭션과 연관된 LSN(로그 시퀀스 번호)입니다.<br /><br /> 동일한 트랜잭션에서 커밋된 변경의 커밋 LSN은 모두 동일합니다. 예를 들어, 두 개의 행을 제거 하는 원본 테이블에서 삭제 작업을 하는 경우 변경 테이블은 포함 동일한 두 개의 행을 **__ $start_lsn** 값입니다.|  
 |**__$end_lsn**|**binary(10)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 이 열은 항상 NULL입니다.|  
@@ -44,7 +43,7 @@ ms.locfileid: "67586382"
 |*\<captured source table columns>*|다양함|변경 테이블의 나머지 열은 캡처 인스턴스가 생성될 때 캡처된 열로 식별된 원본 테이블의 열입니다. 캡처된 열 목록에 아무 열도 지정하지 않으면 원본 테이블의 모든 열이 이 테이블에 포함됩니다.|  
 |**__$command_id** |**int** |트랜잭션 내에서 작업 순서를 추적합니다. |  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 
 `__$command_id` 열이 열 2012부터 2016 버전에서 누적 업데이트에서 도입 되었습니다. 버전 및 다운로드 정보에 대 한 참조에서 기술 자료 문서 3030352 [수정: 변경 테이블은 올바르지 않게 정렬 되었기 올바르게 업데이트에 대 한 Microsoft SQL Server 데이터베이스에 대 한 변경 데이터를 사용 하도록 설정한 후 행 캡처](https://support.microsoft.com/help/3030352/fix-the-change-table-is-ordered-incorrectly-for-updated-rows-after-you)합니다.  자세한 내용은 [SQL Server 2012, 2014 및 2016에 대 한 최신 CU로 업그레이드 한 후 CDC 기능이 중단 될 수 있습니다](https://blogs.msdn.microsoft.com/sql_server_team/cdc-functionality-may-break-after-upgrading-to-the-latest-cu-for-sql-server-2012-2014-and-2016/)합니다.
 

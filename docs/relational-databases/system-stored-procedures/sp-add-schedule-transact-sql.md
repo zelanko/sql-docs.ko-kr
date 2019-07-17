@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16468053ee1e0d09b5be37c034800c122c1d16c9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 438fe71bcc32c63f97aea95c7105399c2ff8a479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088516"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,9 +76,9 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |---------------------------|--------------------------------|  
 |**1** (한 번)|*freq_interval* 사용 되지 않습니다.|  
 |**4** (매일)|모든 *freq_interval* 일입니다.|  
-|**8** (매주)|*freq_interval* (OR 논리 연산자와 결합) 다음 중 하나 이상입니다.<br /><br /> **1** = Sunday<br /><br /> **2** = Monday<br /><br /> **4** = 화요일<br /><br /> **8** = 수요일<br /><br /> **16** = 목요일<br /><br /> **32** = 금요일<br /><br /> **64** = 토요일|  
+|**8** (매주)|*freq_interval* (OR 논리 연산자와 결합) 다음 중 하나 이상입니다.<br /><br /> **1** = 일요일<br /><br /> **2** = 월요일<br /><br /> **4** = 화요일<br /><br /> **8** = 수요일<br /><br /> **16** = 목요일<br /><br /> **32** = 금요일<br /><br /> **64** = 토요일|  
 |**16** (매월)|에 *freq_interval* 월의 일입니다.|  
-|**32** (매월 상대적)|*freq_interval* 다음 중 하나입니다.<br /><br /> **1** = Sunday<br /><br /> **2** = Monday<br /><br /> **3** = 화요일<br /><br /> **4** = 수요일<br /><br /> **5** = 목요일<br /><br /> **6** = 금요일<br /><br /> **7** = 토요일<br /><br /> **8** = Day<br /><br /> **9** = 평일<br /><br /> **10** = 주말|  
+|**32** (매월 상대적)|*freq_interval* 다음 중 하나입니다.<br /><br /> **1** = 일요일<br /><br /> **2** = 월요일<br /><br /> **3** = 화요일<br /><br /> **4** = 수요일<br /><br /> **5** = 목요일<br /><br /> **6** = 금요일<br /><br /> **7** = 토요일<br /><br /> **8** = 일<br /><br /> **9** = 평일<br /><br /> **10** = 주말|  
 |**64** (SQLServerAgent 서비스를 시작할 때)|*freq_interval* 사용 되지 않습니다.|  
 |**128**|*freq_interval* 사용 되지 않습니다.|  
   
@@ -92,7 +91,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**0x4**|분|  
 |**0x8**|시간|  
   
-`[ @freq_subday_interval = ] freq_subday_interval` 수가 *freq_subday_type* 각 작업 실행 간에 발생 하는 기간. *freq_subday_interval* 됩니다 **int**, 기본값은 **0**합니다. 참고: 간격은 10초보다 길어야 합니다. *freq_subday_interval* 이러한 경우에는 무시 됩니다. 여기서 *freq_subday_type* 값과 같음 **1**합니다.  
+`[ @freq_subday_interval = ] freq_subday_interval` 수가 *freq_subday_type* 각 작업 실행 간에 발생 하는 기간. *freq_subday_interval* 됩니다 **int**, 기본값은 **0**합니다. 참고: 간격은 10 초 이상 이어야 합니다. *freq_subday_interval* 이러한 경우에는 무시 됩니다. 여기서 *freq_subday_type* 값과 같음 **1**합니다.  
   
 `[ @freq_relative_interval = ] freq_relative_interval` 작업의 발생 *freq_interval* 각 월의 경우 *freq_interval* 이 32 (매월 상대적)입니다. *freq_relative_interval* 됩니다 **int**, 기본값은 **0**, 이며 다음이 값 중 하나일 수 있습니다. *freq_relative_interval* 이러한 경우에는 무시 됩니다. 여기서 *freq_type* 32와 같지 않습니다.  
   
@@ -132,7 +131,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 작업 구조를 만들고 관리할 수 있는 바람직한 방법을 제공하는데 이는 그래픽을 사용하여 쉽게 작업을 관리할 수 있는 방법입니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -148,7 +147,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-schedule"></a>1. 일정 만들기  
+### <a name="a-creating-a-schedule"></a>A. 일정 만들기  
  다음 예에서는 `RunOnce`라는 일정을 만듭니다. 일정은 일정이 생성된 날짜의 `23:30`에 한 번 실행됩니다.  
   
 ```  
@@ -163,7 +162,7 @@ EXEC dbo.sp_add_schedule
 GO  
 ```  
   
-### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>2. 일정 만들기, 여러 작업에 일정 연결  
+### <a name="b-creating-a-schedule-attaching-the-schedule-to-multiple-jobs"></a>2\. 일정 만들기, 여러 작업에 일정 연결  
  다음 예에서는 `NightlyJobs`라는 일정을 만듭니다. 서버 시간이 `01:00`일 때 이 일정을 사용하는 작업이 매일 실행됩니다. 이 예에서는 `BackupDatabase` 작업과 `RunReports` 작업에 일정을 연결합니다.  
   
 > [!NOTE]  

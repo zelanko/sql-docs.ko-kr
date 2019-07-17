@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 14fa0cb949505ab2aeb15d1236add9acba9a1ab1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98430a626a628d4c8cc040b53a9cf24ad1752048
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62703722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028784"
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>프로젝트 설정(Azure SQL DB)(SybaseToSQL)
 Azure SQL DB 프로젝트 설정에는 Azure SQL DB 데이터베이스 접미사 연결 대화 상자에서 추가할 수 있으며 또한 Azure SQL DB 연결에서 하트 비트 메커니즘을 구현 하도록 해를 구성할 수 있습니다.  
@@ -35,7 +34,7 @@ Azure SQL DB 연결을 유지 하려면 하트 비트 메커니즘에 사용할 
   
 값을 지정할 수에서 저는: ss' 형식 (예를 들어 ' 4:45 ' 또는 ' 0:50 ').  
   
-**Azure SQL DB Server Suffix**  
+**Azure SQL DB 서버 접미사**  
   
 Azure SQL DB 서버 접미사를 지정합니다.  
   

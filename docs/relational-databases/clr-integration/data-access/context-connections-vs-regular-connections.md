@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a1dead02-be88-4b16-8cb2-db1284856764
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f4810a7a7d117c498ce74dbe978716900b25d19f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 69733cbf3357ba26dc9e9fdf818858dc4e747b99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138707"
 ---
 # <a name="context-connections-vs-regular-connections"></a>컨텍스트 연결 및 일반 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "52516779"
   
  동일한 서버에 대해 별도의 일반 연결을 열어야 하는 경우도 있습니다. 예를 들어에 설명 된 컨텍스트 연결을 사용 하 여 특정 제한 사항이 [일반 및 컨텍스트 연결에 대 한 제한](../../../relational-databases/clr-integration/data-access/context-connections-and-regular-connections-restrictions.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [컨텍스트 연결](../../../relational-databases/clr-integration/data-access/context-connection.md)  
   
   

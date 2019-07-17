@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5859d7e4c026375d5e9ade69628b9cf9e4a76ed0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8bfa9ff0683f67a1d38aeb17bccd0cfc1443d6d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117963"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent(Transact-SQL)
 
@@ -214,15 +213,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @active_end_date = ] active_end_date` 병합 에이전트가 중지 되 면 날짜 예약 된 형식은 YYYYMMDD입니다. *active_end_date* 됩니다 **int**, 기본값은 NULL입니다.  
   
-`[ @optional_command_line = ] 'optional_command_line'` 병합 에이전트에 제공 되는 선택적 명령 프롬프트입니다. *optional_command_line* 됩니다 **nvarchar(255)**, 기본값은 ' '입니다. 병합 에이전트에 추가 매개 변수를 제공하는 데 사용할 수 있으며 다음 예에서는 기본 쿼리 제한 시간을 `600`초로 늘립니다.  
+`[ @optional_command_line = ] 'optional_command_line'` 병합 에이전트에 제공 되는 선택적 명령 프롬프트입니다. *optional_command_line* 됩니다 **nvarchar(255)** , 기본값은 ' '입니다. 병합 에이전트에 추가 매개 변수를 제공하는 데 사용할 수 있으며 다음 예에서는 기본 쿼리 제한 시간을 `600`초로 늘립니다.  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
-`[ @merge_jobid = ] merge_jobid` 작업 id는 출력 매개 변수 *merge_jobid* 됩니다 **binary(16)**, 기본값은 NULL입니다.  
+`[ @merge_jobid = ] merge_jobid` 작업 id는 출력 매개 변수 *merge_jobid* 됩니다 **binary(16)** , 기본값은 NULL입니다.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Windows 동기화 관리자를 통해 구독을 동기화 할 경우를 지정 합니다. *enabled_for_syncmgr* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다. 하는 경우 **false**의 구독이 동기화 관리자에 등록 되지 않았습니다. 하는 경우 **true**, 구독이 동기화 관리자에 등록 및 시작 하지 않고 동기화 할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Windows 동기화 관리자를 통해 구독을 동기화 할 경우를 지정 합니다. *enabled_for_syncmgr* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. 하는 경우 **false**의 구독이 동기화 관리자에 등록 되지 않았습니다. 하는 경우 **true**, 구독이 동기화 관리자에 등록 및 시작 하지 않고 동기화 할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
   
 `[ @ftp_address = ] 'ftp_address'` 이전 버전과 호환성에 해당 합니다.  
   
@@ -232,15 +231,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @ftp_password = ] 'ftp_password'` 이전 버전과 호환성에 해당 합니다.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` 선택할 스냅숏 파일 위치를 지정 합니다. *alternate_snapshot_folder* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다. NULL인 경우 게시자가 지정한 기본 위치에 스냅숏이 선택됩니다.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` 선택할 스냅숏 파일 위치를 지정 합니다. *alternate_snapshot_folder* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. NULL인 경우 게시자가 지정한 기본 위치에 스냅숏이 선택됩니다.  
   
-`[ @working_directory = ] 'working_directory'` FTP 스냅숏 파일 전송에 사용 되는 경우 게시에 대 한 데이터 및 스키마 파일을 임시로 저장 하는 데 작업 디렉터리의 이름이입니다. *working_directory* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @working_directory = ] 'working_directory'` FTP 스냅숏 파일 전송에 사용 되는 경우 게시에 대 한 데이터 및 스키마 파일을 임시로 저장 하는 데 작업 디렉터리의 이름이입니다. *working_directory* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다.  
   
-`[ @use_ftp = ] 'use_ftp'` 스냅숏을 검색 하는 일반적인 프로토콜 대신 FTP 사용 하 여 지정 합니다. *use_ftp* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다.  
+`[ @use_ftp = ] 'use_ftp'` 스냅숏을 검색 하는 일반적인 프로토콜 대신 FTP 사용 하 여 지정 합니다. *use_ftp* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` 대화형 해결 프로그램을 사용 하 여 대화형 해결을 허용 하는 모든 아티클의 충돌을 해결할 수 있습니다. *use_interactive_resolver* 됩니다 **nvarchar(5)**, 기본값은 FALSE입니다.  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` 대화형 해결 프로그램을 사용 하 여 대화형 해결을 허용 하는 모든 아티클의 충돌을 해결할 수 있습니다. *use_interactive_resolver* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다.  
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
@@ -252,15 +251,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @job_name = ] 'job_name' ]` 기존 에이전트 작업의 이름이입니다. *job_name* 됩니다 **sysname**, 기본값은 NULL입니다. 이 매개 변수는 새로 만든 작업(기본값) 대신 기존 작업을 사용하여 구독이 동기화될 경우에만 지정됩니다. 구성원이 아닌 경우는 **sysadmin** 고정 서버 역할을 지정 해야 *job_login* 하 고 *job_password* 지정 하는 경우 *job_name*.  
   
-`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` 스냅숏 파일에서에서 읽힙니다 경우 필터링 된 데이터 스냅숏 폴더의 경로를 사용할 경우 *dynamic_snapshot_location* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` 스냅숏 파일에서에서 읽힙니다 경우 필터링 된 데이터 스냅숏 폴더의 경로를 사용할 경우 *dynamic_snapshot_location* 됩니다 **nvarchar(260)** , 기본값은 NULL입니다. 자세한 내용은 [매개 변수가 있는 행 필터](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)를 참조하십시오.  
   
 `[ @use_web_sync = ] use_web_sync` 웹 동기화를 사용 함을 나타냅니다. *use_web_sync* 됩니다 **비트**, 기본값은 0입니다. **1** HTTP를 사용해 인터넷으로 끌어오기 구독을 동기화 할 수 있음을 지정 합니다.  
   
-`[ @internet_url = ] 'internet_url'` 복제 수신기 (REPLISAPI의 위치. DLL) 웹 동기화에 대 한 합니다. *internet_url* 됩니다 **nvarchar(260)**, 기본값은 NULL입니다. *internet_url* 형식으로 정규화 된 URL은 `http://server.domain.com/directory/replisapi.dll`합니다. 서버가 포트 80 이외의 다른 포트에서 수신하도록 구성된 경우 포트 번호도 `http://server.domain.com:portnumber/directory/replisapi.dll` 형식으로 제공되어야 합니다. 여기서 `portnumber`는 포트를 나타냅니다.  
+`[ @internet_url = ] 'internet_url'` 복제 수신기 (REPLISAPI의 위치. DLL) 웹 동기화에 대 한 합니다. *internet_url* 됩니다 **nvarchar(260)** , 기본값은 NULL입니다. *internet_url* 형식으로 정규화 된 URL은 `http://server.domain.com/directory/replisapi.dll`합니다. 서버가 포트 80 이외의 다른 포트에서 수신하도록 구성된 경우 포트 번호도 `http://server.domain.com:portnumber/directory/replisapi.dll` 형식으로 제공되어야 합니다. 여기서 `portnumber`는 포트를 나타냅니다.  
   
 `[ @internet_login = ] 'internet_login'` 병합 에이전트가 웹 동기화를 호스팅하는 웹 서버에 연결할 때 사용 하는 로그인은 HTTP 기본 인증을 사용 합니다. *internet_login* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-`[ @internet_password = ] 'internet_password'` 병합 에이전트가 웹 동기화를 호스팅하는 웹 서버에 연결할 때 사용 하는 암호는 HTTP 기본 인증을 사용 합니다. *internet_password* 됩니다 **nvarchar(524)**, 기본값은 NULL입니다.  
+`[ @internet_password = ] 'internet_password'` 병합 에이전트가 웹 동기화를 호스팅하는 웹 서버에 연결할 때 사용 하는 암호는 HTTP 기본 인증을 사용 합니다. *internet_password* 됩니다 **nvarchar(524)** , 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
@@ -279,7 +278,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @hostname = ] 'hostname'` 이 함수는 매개 변수가 있는 필터의 WHERE 절에 사용 되는 경우 host_name ()의 값을 재정의 합니다. *호스트 이름* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 Windows 계정의 로그인이입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 없습니다. 이 Windows 계정은 Windows 통합 인증을 사용하는 경우 에이전트를 구독자에 연결하고 배포자 및 게시자에 연결할 때 항상 사용됩니다.  
+`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 Windows 계정의 로그인이입니다. *job_login* 됩니다 **nvarchar(257)** , 기본값은 없습니다. 이 Windows 계정은 Windows 통합 인증을 사용하는 경우 에이전트를 구독자에 연결하고 배포자 및 게시자에 연결할 때 항상 사용됩니다.  
   
 `[ @job_password = ] 'job_password'` 에이전트가 실행 되는 Windows 계정의 암호가입니다. *job_password* 됩니다 **sysname**, 기본값은 없습니다.  
   

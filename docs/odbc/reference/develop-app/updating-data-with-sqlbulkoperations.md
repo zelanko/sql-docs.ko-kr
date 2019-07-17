@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7645a704-341e-4267-adbe-061a9fda225b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 958514adc02452cdc75a05e7ad28cd31f4e8e0e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d1aa9b3300cba78f34e876a8501dbaaa421390a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091660"
 ---
 # <a name="updating-data-with-sqlbulkoperations"></a>SQLBulkOperations로 데이터 업데이트
 응용 프로그램에 대 한 호출을 사용 하 여 데이터 원본에서 기본 테이블에 대해 대량 업데이트, 삭제, fetch, 또는 삽입 작업을 수행할 수 있습니다 **SQLBulkOperations**합니다. 호출 **SQLBulkOperations** 작성 하 고 SQL 문을 실행 하는 편리한 대체 방법입니다. 데이터 원본 위치 지정된 된 SQL 문을 지원 하지 않는 하는 경우에 위치 지정된 업데이트를 지 원하는 ODBC 드라이버를 수 있습니다. 함수 호출을 사용 하 여 전체 데이터베이스 액세스를 달성 하는 패러다임의 일부입니다.  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 667a5e4a-6848-4973-a72d-1287f64718ac
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 09cfb2bb9d4d07f410ad901d3fcf0d2a458e00f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 25cd6eb9c811548e6300c944c65c5530185d46e8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63308427"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264498"
 ---
 # <a name="getting-started-with-ssma--for-oracle-console-oracletosql"></a>Oracle용 SSMA 콘솔 시작(OracleToSQL)
 이 섹션에서는 시작 하 고 Oracle 콘솔 응용 프로그램을 시작 하는 절차를 설명 합니다. 도 나열 여기에 규칙에에서 사용 됩니다 일반적인 SSMA 콘솔 출력 창.  
@@ -56,12 +56,12 @@ SSMA 스크립트 명령 및 옵션을 실행할 때 콘솔 프로그램 콘솔�
   
 다음 표에서 콘솔 출력의 색을 해석:  
   
-|색|Description|  
+|색|설명|  
 |---------|---------------|  
 |빨강|실행 하는 동안 오류가 발생 했습니다|  
 |회색|날짜 및 시간 스탬프를 사용자에 게 메시지|  
 |하얀|스크립트 파일 명령, 메시지 유형|  
-|노랑|경고|  
+|노랑|Warning|  
 |녹색|사용자 입력에 대 한 프롬프트|  
 |녹청|시작을 완료 하 고 작업의 결과|  
   

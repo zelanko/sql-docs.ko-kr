@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 75a4a040-72d5-4d29-8304-de0aa481ad4b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 505e75dfab9ea4e2ba44d8ef12f0ba5c7eecbde2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ff6abaef6fc19a1bc646aab7ff30e4fcf6e13380
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097662"
 ---
 # <a name="spdroplinkedsrvlogin-transact-sql"></a>sp_droplinkedsrvlogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  로컬 서버에 만든 기본 매핑을 사용 되는 경우는 기존에 대 한 매핑을 로그인을 삭제 합니다 **sp_addlinkedserver** 로그인 대신 연결된 된 서버에 연결 되 면 합니다. 기본 매핑을 변경 하려면 **sp_addlinkedsrvlogin**합니다.  
   
  기본 매핑을 삭제 하는 경우 명시적으로 지정 된 연결된 된 서버에 로그인 매핑을 사용 하 여 로그인만 **sp_addlinkedsrvlogin**, 연결 된 서버에 액세스할 수 있습니다.  
@@ -60,14 +59,14 @@ sp_droplinkedsrvlogin [ @rmtsrvname= ] 'rmtsrvname' ,
   
 ## <a name="examples"></a>예  
   
-### <a name="a-removing-the-login-mapping-for-an-existing-user"></a>1. 기존 사용자에 대한 로그인 매핑 제거  
+### <a name="a-removing-the-login-mapping-for-an-existing-user"></a>A. 기존 사용자에 대한 로그인 매핑 제거  
  다음 예에서는 연결된 서버 `Mary`에 대한 로컬 서버의 로그인 `Accounts`의 매핑을 제거합니다. 따라서 로그인 `Mary`가 기본 로그인 매핑을 사용합니다.  
   
 ```  
 EXEC sp_droplinkedsrvlogin 'Accounts', 'Mary';  
 ```  
   
-### <a name="b-removing-the-default-login-mapping"></a>2. 기본 로그인 매핑 제거  
+### <a name="b-removing-the-default-login-mapping"></a>2\. 기본 로그인 매핑 제거  
  다음 예에서는 원래 `sp_addlinkedserver`를 실행하여 연결된 서버 `Accounts`에 작성된 기본 로그인 매핑을 제거합니다.  
   
 ```  

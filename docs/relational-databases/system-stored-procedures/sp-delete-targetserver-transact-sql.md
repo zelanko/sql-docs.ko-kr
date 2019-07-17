@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cc438701-ad91-419d-9f23-ebc4c548c700
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 194395728e60f31c689293191be2cedca4d549f3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 487d88a7580432bf947893920d307e2f0adffd18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111987"
 ---
 # <a name="spdeletetargetserver-transact-sql"></a>sp_delete_targetserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @server_name = ] 'server'` 사용 가능한 대상 서버를 제거할 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)**, 기본값은 없습니다.  
+`[ @server_name = ] 'server'` 사용 가능한 대상 서버를 제거할 서버의 이름입니다. *서버* 됩니다 **nvarchar(30)** , 기본값은 없습니다.  
   
 `[ @clear_downloadlist = ] clear_downloadlist` 대상 서버의 다운로드 목록을 지울 것인지 지정 합니다. *clear_downloadlist* 형식인 **bit**, 기본값은 **1**합니다. 때 *clear_downloadlist* 됩니다 **1**, 프로시저는 서버를 삭제 하기 전에 서버의 다운로드 목록을 지웁니다. 때 *clear_downloadlist* 됩니다 **0**, 다운로드 목록이 지워지지 않습니다.  
   
@@ -54,7 +53,7 @@ sp_delete_targetserver [ @server_name = ] 'server'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  대상 서버를 삭제 하는 일반적인 방법은 호출 하는 것 **sp_msx_defect** 대상 서버에서. 사용 하 여 **sp_delete_targetserver** 은 수동으로 제거 해야 하는 데 필요한 경우에 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -72,7 +71,7 @@ EXEC dbo.sp_delete_targetserver
 GO  
 ```  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [sp_help_targetserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-targetserver-transact-sql.md)   
  [sp_msx_defect &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-msx-defect-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

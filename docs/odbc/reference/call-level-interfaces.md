@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 42257bb6-0bf1-4533-a4ef-4a6dd2aecb18
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99ec2d9a1995502a4bfd96dad02157ccc6574f6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6c37084ad91a931c4479ecf826c5cb554765412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135669"
 ---
 # <a name="call-level-interfaces"></a>호출 수준 인터페이스
 DBMS SQL 문을 보내기 위한 최종 기술을 호출 수준 인터페이스 (CLI)를 통해 이루어집니다. 호출 수준 인터페이스를 응용 프로그램에서 호출할 수 있는 DBMS 함수 라이브러리를 제공 합니다. 따라서 다른 프로그래밍 언어를 사용 하 여 SQL을 혼합 하는 대신 호출 수준 인터페이스를 비슷합니다 대부분의 프로그래머와 같은 문자열, I/O 또는 3. 포함 된 SQL을 지원 하는 Dbms의에서 수학 라이브러리 사용에 익숙한 일상적인 라이브러리 호출 하 여 프리에서 생성 되는 호출 수준 인터페이스를 이미 있습니다. 그러나 이러한 호출은 문서화 되지 않은 정보 및 통지 없이 변경 됩니다.  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3f0235f14366667dbce21af92cf0418bb6fa1e0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5364b32aeb69019f7438b2c6d0e8f5ab716e39f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077263"
 ---
 # <a name="distinctcount-mdx"></a>DistinctCount(MDX)
 
@@ -32,7 +31,7 @@ DistinctCount(Set_Expression)
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **DistinctCount** 함수는 동일 `Count(Distinct(Set_Expression), EXCLUDEEMPTY)`합니다.  
   
 ## <a name="examples"></a>예  

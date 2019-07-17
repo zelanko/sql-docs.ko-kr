@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 719a1259-2398-4fcb-ba05-aeabba7aec21
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7959611a7d8db134b58898debab9bd231d9d9553
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1ef2a7b5bdff79c3d12441f09ab2a05439f7a61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997967"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125377"
 ---
 # <a name="sysopenkeys-transact-sql"></a>sys.openkeys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   이 카탈로그 뷰는 현재 세션에서 열려 있는 암호화 키에 대한 정보를 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|키가 포함된 데이터베이스의 ID입니다.|  
 |**database_name**|**sysname**|키가 포함된 데이터베이스의 이름입니다.|  

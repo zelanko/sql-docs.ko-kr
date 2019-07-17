@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137650"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +62,10 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |id|**int**|결과 집합 목록 내 게시의 순차적 순서입니다.|  
-|NAME|**sysname**|게시의 이름입니다.|  
+|name|**sysname**|게시의 이름입니다.|  
 |description|**nvarchar(255)**|게시에 대한 설명입니다.|  
 |상태|**tinyint**|게시 데이터를 언제 사용할 수 있는지 나타냅니다.|  
 |retention|**int**|게시에 있는 아티클의 변경 내용에 대한 메타데이터를 저장하는 데 걸린 시간입니다. 이 기간의 단위는 일, 주, 월 또는 년으로 지정할 수 있습니다. 단위에 대한 자세한 내용은 retention_period_unit 열을 참조하십시오.|  
@@ -77,7 +76,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |centralized_conflicts|**int**|지정한 게시자에 충돌 레코드가 저장되는지 여부를 나타냅니다.<br /><br /> **0** = 충돌 레코드가 충돌을 일으킨 구독자 및 게시자 양쪽 모두에서 저장 됩니다.<br /><br /> **1** = 모든 충돌 레코드가 게시자에 저장 됩니다.|  
 |priority|**float(8)**|루프 백 구독의 우선 순위입니다.|  
 |snapshot_ready|**tinyint**|해당 게시의 스냅숏이 준비되었는지 여부를 나타냅니다.<br /><br /> **0** = 스냅숏을 사용할 준비가 되었습니다.<br /><br /> **1** = 스냅숏 사용에 대 한 준비 되지 않았습니다.|  
-|publication_type|**int**|게시 유형입니다.<br /><br /> **0** = Snapshot.<br /><br /> **1** = 트랜잭션.<br /><br /> **2** = 병합 합니다.|  
+|publication_type|**int**|게시 유형입니다.<br /><br /> **0** = 스냅숏.<br /><br /> **1** = 트랜잭션.<br /><br /> **2** = 병합 합니다.|  
 |pubid|**uniqueidentifier**|해당 게시의 고유 식별자입니다.|  
 |snapshot_jobid|**binary(16)**|스냅숏 에이전트의 작업 ID입니다. 스냅숏 작업에 대 한 항목을 가져오려고 합니다 [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) 시스템 테이블에이 16 진수 값을 변환 해야 **uniqueidentifier**합니다.|  
 |enabled_for_internet|**int**|인터넷에서 게시를 사용할 수 있는지 여부를 나타냅니다. 하는 경우 **1**, 게시용 동기화 파일이 `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` 디렉터리입니다. 사용자가 FTP(파일 전송 프로토콜) 디렉터리를 만들어야 합니다. 하는 경우 **0**를 인터넷 액세스용는 게시가 활성화 되지 않았습니다.|  
@@ -118,7 +117,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_helpmergepublication은 병합 복제에 사용됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

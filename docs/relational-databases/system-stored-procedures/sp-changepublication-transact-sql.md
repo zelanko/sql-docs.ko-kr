@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 45c61b33a7cc1669ae34f7888fda1450524b079b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f963aa920a1e783cfec5b467d1c57fdb2e805893
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124858"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +45,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
 `[ @property = ] 'property'` 변경할 게시 속성이입니다. *속성* 됩니다 **nvarchar(255)** 합니다.  
   
-`[ @value = ] 'value'` 새 속성 값이입니다. *값* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @value = ] 'value'` 새 속성 값이입니다. *값* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다.  
   
  이 표에서는 변경할 수 있는 게시의 속성 및 그 속성의 값에 대한 제한에 대해 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|지정된 된 게시에 대 한 익명 구독을 만들 수 있습니다 하 고 *immediate_sync* 수도 있어야 **true**합니다. 피어 투 피어 게시의 경우 변경할 수 없습니다.|  
 ||**false**|지정된 게시에 대해 익명 구독을 만들 수 없습니다. 피어 투 피어 게시의 경우 변경할 수 없습니다.|  
@@ -76,7 +75,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**description**||게시에 관해 설명하는 선택적인 항목입니다.|  
 |**enabled_for_het_sub**|**true**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원하도록 게시를 설정합니다. **enabled_for_het_sub** 게시에 구독이 있는 경우에 변경할 수 없습니다. 실행 해야 [복제 저장 프로시저 (TRANSACT-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) 설정 하기 전에 다음 요구 사항을 준수 하기 위해 **enabled_for_het_sub** true로 합니다.<br /> - **allow_queued_tran** 있어야 **false**합니다.<br /> - **allow_sync_tran** 있어야 **false**합니다.<br /> 변경 **enabled_for_het_sub** 하 **true** 기존 게시 설정이 변경 될 수 있습니다. 자세한 내용은 [Non-SQL Server Subscribers](../../relational-databases/replication/non-sql/non-sql-server-subscribers.md)을(를) 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
 ||**false**|게시는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자를 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
-|**enabled_for_internet**|**true**|인터넷에서 게시를 사용할 수 있으며 FTP(파일 전송 프로토콜)를 사용하여 구독자로 스냅숏 파일을 전송할 수 있습니다. 게시용 동기화 파일은 C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp 디렉터리에 저장됩니다. *ftp_address* NULL 일 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
+|**enabled_for_internet**|**true**|인터넷에서 게시를 사용할 수 있으며 FTP(파일 전송 프로토콜)를 사용하여 구독자로 스냅숏 파일을 전송할 수 있습니다. 게시의 동기화 파일은 다음 디렉터리에 저장 됩니다. C:\Program Files\Microsoft SQL server\mssql\repldata\ftp 디렉터리로 이동 됩니다. *ftp_address* NULL 일 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
 ||**false**|인터넷에서 게시를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
 |**enabled_for_p2p**|**true**|게시는 피어 투 피어 복제를 지원합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.<br /> 설정할 **enabled_for_p2p** 하 **true**, 다음과 같은 제한 사항이 적용:<br /> - **allow_anonymous** 있어야 **false**<br /> - **allow_dts** 있어야 **false**합니다.<br /> - **allow_initialize_from_backup** 있어야 **true**<br /> - **allow_queued_tran** 있어야 **false**합니다.<br /> - **allow_sync_tran** 있어야 **false**합니다.<br /> - **enabled_for_het_sub** 있어야 **false**합니다.<br /> - **independent_agent** 있어야 **true**합니다.<br /> - **repl_freq** 있어야 **연속**합니다.<br /> - **replicate_ddl** 있어야 **1**합니다.|  
 ||**false**|게시는 피어 투 피어 복제를 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 게시의 경우에는 이 속성을 변경할 수 없습니다.|  
@@ -121,7 +120,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **1** 은 아티클의 변경이 잘못 스냅숏을 무효화는 지정 합니다. 기존 구독에 새 스냅숏이 필요한 경우 이 값은 기존 스냅숏을 사용되지 않는 것으로 표시하고 새 스냅숏을 생성할 수 있는 권한을 부여합니다.   
 변경 시 새 스냅숏의 생성을 필요로 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
-[**@force_reinit_subscription =** ] *force_reinit_subscription*  
+[ **@force_reinit_subscription =** ] *force_reinit_subscription*  
  이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화해야 할 수도 있습니다. *force_reinit_subscription* 되는 **비트** 이며 기본값은 **0**합니다.  
   - **0** 문서를 변경으로 인해 구독이 다시 초기화 되지 않습니다 지정 합니다. 저장 프로시저가 기존 구독을 다시 초기화해야 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   - **1** 문서 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수에 대 한 사용 권한을 부여 합니다.  
@@ -134,7 +133,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changepublication** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
  다음과 같은 속성을 변경한 후 새 스냅숏을 생성 해야 하 고 값을 지정 해야 합니다 **1** 에 대 한 합니다 *force_invalidate_snapshot* 매개 변수입니다.  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0ea44e7c2d9ca4f56d401688aa496aa851e563fe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083750"
 ---
 # <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,12 +67,12 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|열 유형|Description|  
+|열 이름|열 유형|설명|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar(145)**|생성된 함수의 이름입니다.|  
 |**create_script**|**nvarchar(max)**|캡처 인스턴스 래퍼 함수를 만드는 스크립트입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  캡처 인스턴스에 대한 모든 변경 쿼리를 래핑하는 함수를 만드는 스크립트는 항상 생성됩니다. 캡처 인스턴스가 순 변경 쿼리를 지원하는 경우 이 쿼리에 대한 래퍼를 생성하는 스크립트도 생성됩니다.  
   
 ## <a name="examples"></a>예  

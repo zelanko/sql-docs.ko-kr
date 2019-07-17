@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 34daa922-7074-41d0-9077-042bb18c222a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 20a34f01908333650a4c5b566ccab2221a4e07c2
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 5e6736c73f7cda435d91e3ec9c9f523bdc08f1b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139278"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>구성 관리용 WMI 공급자 작업
 
@@ -70,7 +69,7 @@ where `instance_name` defaults to `MSSQLSERVER` in a default installation of [!I
 gwmi -ns 'root\Microsoft\SqlServer' __NAMESPACE | ? {$_.name -match 'ComputerManagement' } | select name
 ```
 
- **참고:** Windows 방화벽을 통해 연결하는 경우 컴퓨터가 올바르게 구성되었는지 확인해야 합니다. Windows Management Instrumentation 설명서에서 "Connecting Through Windows Firewall" 문서를 참조 하세요 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [웹 사이트](https://go.microsoft.com/fwlink/?linkid=15426)합니다.  
+ **참고:** Windows 방화벽을 통해 연결 하는 경우에 컴퓨터에 적절 하 게 구성 되어 있는지 확인 해야 합니다. Windows Management Instrumentation 설명서에서 "Connecting Through Windows Firewall" 문서를 참조 하세요 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [웹 사이트](https://go.microsoft.com/fwlink/?linkid=15426)합니다.  
   
 ## <a name="permissions-and-server-authentication"></a>권한과 서버 인증  
  구성 관리용 WMI 공급자에 액세스하려면 클라이언트 WMI 관리 스크립트가 대상 컴퓨터에서 관리자 컨텍스트로 실행되고 있어야 합니다. 관리할 컴퓨터에서 로컬 Windows Administrators 그룹의 멤버여야 합니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 394fe500-803d-463f-ae95-f8eb87b66bc8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72fe76d566a5b4a92899b0a8a30804201ab13109
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 930a062477fa1459413ea98073d3ca13a574a82e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139057"
 ---
 # <a name="getting-and-setting-descriptor-fields"></a>설명자 필드 가져오기 및 설정
 이 섹션에서는 응용 프로그램 검색 또는 설명자 필드 값을 설정 하 여 메서드를 설명 합니다.  

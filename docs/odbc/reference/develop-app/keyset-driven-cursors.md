@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 01769f43-1d9c-4685-84fa-15a6465335e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: be6dc5a164220befb534368eace4f51f4dbd84e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c40fe8c823115c3131a1719185bce8f1506df81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138835"
 ---
 # <a name="keyset-driven-cursors"></a>키 집합 커서
 키 집합 커서는 변경 내용을 검색 하는 능력에 정적 및 동적 커서 사이 존재 합니다. 정적 커서처럼 항상 결과 집합의 멤버 자격과 순서에 대한 변경 내용을 검색하지는 못합니다. 동적 커서와 같은 결과 (SQL_ATTR_TXN_ISOLATION 연결 특성에서 설정한 대로 트랜잭션 격리 수준)에 따라 집합의 행의 값이 변경 검색지 않습니다 하지.  

@@ -11,13 +11,12 @@ apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5073d7efcb2cb99e51fe0d9cd0382806501cfd0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085466"
 ---
 # <a name="odbc-api-reference"></a>ODBC API 참조
 이 섹션의에서 항목에서는 알파벳 순서로 각 ODBC 함수를 설명합니다. 각 함수는 프로그래밍 언어 함수를 C로 정의 됩니다. 설명은 다음과 같습니다.  

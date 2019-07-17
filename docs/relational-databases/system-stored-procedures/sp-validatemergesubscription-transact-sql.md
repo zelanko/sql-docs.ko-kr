@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a5463d23cca4f1fb9da549bb53706e8485ae439
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1a99c36f8e0e26210b7f9fd7d6c7687be0d0e5e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119356"
 ---
 # <a name="spvalidatemergesubscription-transact-sql"></a>sp_validatemergesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_validatemergesubscription [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@publication=**] **'***publication***'**  
+ [ **@publication=** ] **'***publication***'**  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
 `[ @subscriber = ] 'subscriber'` 구독자의 이름이입니다. *구독자* 됩니다 **sysname**, 기본값은 없습니다.  
@@ -50,7 +49,7 @@ sp_validatemergesubscription [@publication=] 'publication'
   
 `[ @level = ] level` 수행할 유효성 검사의 유형이입니다. *수준* 됩니다 **tinyint**, 기본값은 없습니다. 수준은 다음 값 중 하나일 수 있습니다.  
   
-|수준 값|Description|  
+|수준 값|설명|  
 |-----------------|-----------------|  
 |**1**|행 개수의 유효성만 검사합니다.|  
 |**2**|행 개수 및 체크섬의 유효성을 검사합니다.|  
@@ -59,7 +58,7 @@ sp_validatemergesubscription [@publication=] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_validatemergesubscription** 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3775af63181489b982778d40ddd69ebc12872271
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 486c68e1947bfad67bc0288751d03c6042cd7f3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047268"
 ---
 # <a name="count-tuple-mdx"></a>Count(튜플)(MDX)
 
@@ -32,7 +31,7 @@ Tuple_Expression.Count
  *Tuple_Expression*  
  튜플을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  튜플의 차원 수를 반환합니다.  
   
 ## <a name="example"></a>예제  

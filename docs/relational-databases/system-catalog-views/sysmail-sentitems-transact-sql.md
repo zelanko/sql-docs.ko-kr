@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 57fee409bbaa286f052c2fa11e15a956fcd7d540
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0a2cf94ed3575a6da1ec072e9cf19df0b467741
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086239"
 ---
 # <a name="sysmailsentitems-transact-sql"></a>sysmail_sentitems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47699231"
   
  데이터베이스 메일이 처리 하는 모든 메시지를 보려면 사용 하 여 [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)합니다. 실패 상태의 메시지만 보려면 [sysmail_faileditems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-faileditems-transact-sql.md)합니다. 보내지 않은을 보거나 사용 하 여 메시지를 다시 시도 [sysmail_unsentitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-unsentitems-transact-sql.md)합니다. 전자 메일 첨부 파일을 보려면 사용 하 여 [sysmail_mailattachments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|메일 큐의 메일 항목 식별자입니다.|  
 |**profile_id**|**int**|메시지를 보내는 데 사용되는 프로필의 식별자입니다.|  
@@ -40,7 +39,7 @@ ms.locfileid: "47699231"
 |**copy_recipients**|**varchar(max)**|메시지 복사본을 받는 사람의 전자 메일 주소입니다.|  
 |**blind_copy_recipients**|**varchar(max)**|메시지 복사본을 받지만 메시지 머리글에 이름이 표시되지 않는 사람의 전자 메일 주소입니다.|  
 |**subject**|**nvarchar(510)**|메시지의 제목 줄입니다.|  
-|**body**|**varchar(max)**|메시지의 본문입니다.|  
+|**body**|**varchar(max)**|메시지 본문입니다.|  
 |**body_format**|**varchar(20)**|메시지 본문의 형식입니다. 가능한 값은 **텍스트** 하 고 **HTML**합니다.|  
 |**importance**|**varchar(6)**|합니다 **중요도** 메시지의 매개 변수입니다.|  
 |**sensitivity**|**varchar(12)**|합니다 **민감도** 메시지의 매개 변수입니다.|  
@@ -62,7 +61,7 @@ ms.locfileid: "47699231"
 |**last_mod_date**|**datetime**|행을 마지막으로 수정한 날짜와 시간입니다.|  
 |**last_mod_user**|**sysname**|행을 마지막으로 수정한 사용자입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터베이스 메일 문제를 해결할 때는 이 뷰를 통해 성공적으로 보낸 메시지의 특성을 보고 문제의 근원을 확인할 수 있습니다. 데이터베이스 메일은 메시지가 SMTP 메일 서버로 성공적으로 제출되면 해당 메시지를 보낸 것으로 표시합니다. 보통 전자 메일은 몇 분 안에 도착하지만 SMTP 서버 문제로 인해 지연될 수 있습니다. 데이터베이스 메일은 SMTP 메일 서버에서 메시지를 수신하면 해당 메시지를 보낸 것으로 표시합니다. 배달할 수 없는 수신인 전자 메일 주소와 같이 SMTP 메일 서버에서 발생하는 전자 메일 오류는 데이터베이스 메일로 반환됩니다. 이러한 전자 메일은 배달되지 않아도 보낸 것으로 기록됩니다. 이러한 유형의 오류는 SMTP 서버에서 해결합니다. 또한 SMTP 메일 서버는 데이터베이스 메일 계정의 회신 전자 메일 주소로 배달할 수 없는 메시지 알림을 보냅니다.  
   
 ## <a name="permissions"></a>사용 권한  

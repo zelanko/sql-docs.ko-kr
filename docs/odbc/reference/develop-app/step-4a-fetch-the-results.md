@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77d30142-c774-473c-96fb-b364bb92ac60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cad33f1ccf798a08ef1f11667e59b4d5fb4888d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ab0bdabe8b2d66bf054f07ea51056a4044b4ae8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114194"
 ---
 # <a name="step-4a-fetch-the-results"></a>4a단계: 결과 페치
 다음 그림에 나와 있는 것 처럼 결과 인출 하는 다음 단계가입니다.  

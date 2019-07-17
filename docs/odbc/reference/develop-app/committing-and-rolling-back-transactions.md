@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 800f2c1a-6f79-4ed1-830b-aa1a62ff5165
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 194a90482946814995ca1963f7c8fc4bce48d223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7c028ca7e89378e959b11f59cad4119cef5086a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083314"
 ---
 # <a name="committing-and-rolling-back-transactions"></a>트랜잭션 커밋 및 롤백
 응용 프로그램이 호출에서는 커밋하거나 수동 커밋 모드에서 트랜잭션을 롤백하려면 **SQLEndTran**합니다. 실행 하 여이 함수를 구현 하는 트랜잭션을 지 원하는 일반적으로 Dbms 용 드라이버를 **커밋** 또는 **롤백** 문. 드라이버 관리자를 호출 하지 않습니다 **SQLEndTran** 연결이 자동 커밋 모드의 경우 단순히 반환 SQL_SUCCESS, 응용 프로그램에서 트랜잭션을 롤백합니다 하려고 하는 경우에 합니다. 구현 하거나 트랜잭션을 지원 하지 않는 Dbms에 대 한 드라이버가 자동 커밋 모드에서 항상 이기 때문에 가능 **SQLEndTran** 아무 작업도 수행 하지 않고 관계 없이 SQL_SUCCESS를 반환 하거나 전혀 구현 하지 않습니다.  

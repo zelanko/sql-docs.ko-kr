@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64f111fd-fb7d-4459-93f7-65f0f8dd7efe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 399fe5322cb8cb5c3d20a486aac3baa810439ce7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb9fdd324ba6275cd20f99a32f0a82aa112626b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62959706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117876"
 ---
 # <a name="spadjustpublisheridentityrange-transact-sql"></a>sp_adjustpublisheridentityrange(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_adjustpublisheridentityrange [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_adjustpublisheridentityrange** 모든 유형의 복제에 사용 됩니다.  
   
  자동 ID 범위를 사용할 수 있는 게시인 경우 배포 에이전트 또는 병합 에이전트는 해당 임계값에 기반하여 게시의 ID 범위를 자동으로 조정하는 역할을 합니다. 그러나 어떤 이유로 배포 에이전트 또는 병합 에이전트 실행 하지 않은 기간에 대 한 id 범위 리소스를 임계값 지점 많이 소비 될 경우 사용자가 호출할 수 있습니다 **sp_adjustpublisheridentityrange** 게시자에 대 한 새 범위의 값을 할당 합니다.  

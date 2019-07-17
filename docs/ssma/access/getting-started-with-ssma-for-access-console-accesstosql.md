@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 8585ec16-7e0a-483a-b250-adab9b9232a3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 44e89e7c6ab10df13927247222e1f8564500fb8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 899070b1405b031e919f50a6d16bc5d6df3adf3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759889"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68222225"
 ---
 # <a name="getting-started-with-ssma-for-access-console-accesstosql"></a>액세스 콘솔 (AccessToSQL) 용 SSMA 시작
 이 섹션에서는 시작 하 고 액세스 콘솔 응용 프로그램을 시작 하는 절차를 설명 합니다. 도 나열 여기에 규칙에에서 사용 됩니다 일반적인 SSMA 콘솔 출력 창.  
@@ -53,12 +52,12 @@ SSMA 스크립트 명령 및 옵션을 실행할 때 콘솔 프로그램 콘솔�
   
 다음 표에서 콘솔 출력의 색을 해석:  
   
-|색|Description|  
+|색|설명|  
 |---------|---------------|  
 |빨강|실행 하는 동안 오류가 발생 했습니다|  
 |회색|날짜 및 시간 스탬프를 사용자에 게 메시지|  
 |하얀|스크립트 파일 명령, 메시지 유형|  
-|노랑|경고|  
+|노랑|Warning|  
 |녹색|사용자 입력에 대 한 프롬프트|  
 |녹청|시작을 완료 하 고 작업의 결과|  
   

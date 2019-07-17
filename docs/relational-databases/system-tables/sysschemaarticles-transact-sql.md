@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 39444e0eaf9a44f48fc86b5d7f4595d63d1e9823
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 594c984be10d592246696730dd393efdfc48e259
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029605"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   트랜잭션 및 스냅숏 게시에 대한 스키마 전용 아티클을 추적합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|아티클 ID입니다.|  
 |**creation_script**|**nvarchar(255)**|대상 테이블을 만드는 데 사용하는 아티클 스키마 스크립트의 경로 및 이름입니다.|  

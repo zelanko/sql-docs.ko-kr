@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3a980816-675c-4fba-acc9-429297d85bbd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac311361cef53d2802b64bf90e972b6970b35757
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7264bcef75e13a25a6b4b7ef722e4e4bcfb07ea6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128532"
 ---
 # <a name="sessions"></a>세션
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -185,10 +184,10 @@ EXIT:
   
  연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자 세션 개체의 인스턴스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계속 해 서 만들고 세션 개체를 해제 하는 응용 프로그램에 대 한 상당한 오버 헤드를 생성할 수 있습니다. 관리 오버 헤드를 최소화할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자 세션 개체를 효율적으로 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자 응용 프로그램을 보관할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체의 하나 이상의 인터페이스에 대 한 참조를 유지 하 여 현재 세션 개체의 연결.  
   
- 예를 들어 명령 만들기 개체 참조 풀을 유지 관리하면 풀에 포함된 이러한 세션 개체에 대해 활성 연결이 유지됩니다. 풀 유지 관리 코드에서 올바른 전달 세션 개체는 필요에 따라 **IDBCreateCommand** 인터페이스 포인터를 세션이 필요한 응용 프로그램 메서드입니다. 응용 프로그램 메서드에 더 이상 세션이 필요하지 않으면 메서드에서 명령 만들기 개체에 대한 응용 프로그램 참조를 해제하는 대신 인터페이스 포인터를 다시 풀 유지 관리 코드로 반환합니다.  
+ 예를 들어 명령 만들기 개체 참조 풀을 유지 관리하면 풀에 포함된 이러한 세션 개체에 대해 활성 연결이 유지됩니다. 세션 개체가 필요하면 풀 유지 관리 코드에서 유효한 **IDBCreateCommand** 인터페이스 포인터를 세션이 필요한 애플리케이션 메서드로 전달합니다. 응용 프로그램 메서드에 더 이상 세션이 필요하지 않으면 메서드에서 명령 만들기 개체에 대한 응용 프로그램 참조를 해제하는 대신 인터페이스 포인터를 다시 풀 유지 관리 코드로 반환합니다.  
   
 > [!NOTE]  
->  앞의 예제에서는 **IDBCreateCommand** 인터페이스 사용 하기 때문에 **ICommand** 인터페이스 구현 하는 **GetDBSession** 메서드를 명령에서 하는 유일한 방법 또는 행 집합 범위 개체는 만들어진 세션을 확인할 수 있도록 합니다. 따라서 명령 개체를 사용해야만 응용 프로그램이 추가 세션을 만들 수 있는 데이터 원본 개체 포인터를 검색할 수 있습니다.  
+>  앞의 예에서는 **ICommand** 인터페이스가 **GetDBSession** 메서드를 구현하기 때문에 **IDBCreateCommand** 인터페이스가 사용됩니다. 이 메서드는 개체가 만들어진 세션을 확인할 수 있는 명령 또는 행 집합 범위 내의 유일한 메서드입니다. 따라서 명령 개체를 사용해야만 응용 프로그램이 추가 세션을 만들 수 있는 데이터 원본 개체 포인터를 검색할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 원본 개체 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  

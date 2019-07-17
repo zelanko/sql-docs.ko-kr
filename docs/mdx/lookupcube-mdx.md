@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8f8338a542bf9e15816205930704c45a536a5629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec18b600c369de872df5f6eadf06ef6c30c88efa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098510"
 ---
 # <a name="lookupcube-mdx"></a>LookupCube(MDX)
 
@@ -42,7 +41,7 @@ LookupCube(Cube_Name, String_Expression )
  *String_Expression*  
  문자열을 반환하는 셀 좌표의 유효한 문자열 식으로서, 일반적으로 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  숫자 식이 지정 되는 **LookupCube** 함수는 지정 된 큐브의 특정된 숫자 식을 계산 하 고 결과 숫자 값을 반환 합니다.  
   
  문자열 식이 지정 하는 경우는 **LookupCube** 함수는 지정 된 큐브의 지정 된 문자열 식을 계산 하 고 결과 문자열 값을 반환 합니다.  

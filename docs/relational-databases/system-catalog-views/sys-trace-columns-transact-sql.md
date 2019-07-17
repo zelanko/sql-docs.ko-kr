@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5c48eb09-9e9b-45dd-b151-ca39b026ece5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: beda27214f6ef805b84e9897e7f0dd48f424a79f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bda45d55505356594f23a8bb1ece2e95153206a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022648"
 ---
 # <a name="systracecolumns-transact-sql"></a>sys.trace_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47835481"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 대신 확장 이벤트 카탈로그 뷰를 사용하십시오.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**trace_column_id**|**smallint**|이 열의 고유 ID입니다.|  
 |**name**|**nvarchar(128)**|이 열의 고유 이름입니다. 이 매개 변수는 지역화되지 않았습니다.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fcb699741435bace786241ac01a57ad66dd5631d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63a3d9daa48bb98408c3f0d9b8282e8083849cf0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085069"
 ---
 # <a name="sphelptargetservergroup-transact-sql"></a>sp_help_targetservergroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_help_targetservergroup
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**servergroup_id**|**int**|서버 그룹의 ID 번호입니다.|  
 |**name**|**sysname**|서버 그룹의 이름입니다.|  
@@ -58,7 +57,7 @@ sp_help_targetservergroup
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-information-for-all-target-server-groups"></a>1\. 모든 대상 서버 그룹에 대한 정보 나열  
+### <a name="a-listing-information-for-all-target-server-groups"></a>A. 모든 대상 서버 그룹에 대한 정보 나열  
  다음 예에서는 모든 대상 서버 그룹에 대한 정보를 나열합니다.  
   
 ```  

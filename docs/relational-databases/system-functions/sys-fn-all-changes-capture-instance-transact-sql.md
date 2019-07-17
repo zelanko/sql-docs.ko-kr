@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 40bf73a1cdca0bc582ac3e6ed6a977980d2aa24f
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: de589bbe1fe5f590ef3d75c884aae70b5276804a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140529"
 ---
 # <a name="sysfnallchangesltcaptureinstancegt-transact-sql"></a>sys.fn_all_changes_&lt;capture_instance&gt; (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  이 인수에 값 NULL을 제공하면 쿼리 범위의 상위 엔드포인트가 캡처 인스턴스에 대해 유효한 범위의 상위 엔드포인트에 대응됩니다.  
   
- <row_filter_option> ::= { all | all update old }  
+ < row_filter_option >:: = {모든 | 모든 이전 업데이트}  
  결과 집합에 반환되는 메타데이터 열 및 행의 내용을 제어하는 옵션입니다.  
   
  다음 옵션 중 하나를 사용할 수 있습니다.  
@@ -84,15 +83,15 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|열 유형|Description|  
+|열 이름|열 유형|설명|  
 |-----------------|-----------------|-----------------|  
 |__CDC_STARTLSN|**binary(10)**|변경 내용과 관련된 트랜잭션의 커밋 LSN입니다. 동일한 트랜잭션에서 커밋된 모든 변경 내용은 같은 커밋 LSN을 공유합니다.|  
 |__CDC_SEQVAL|**binary(10)**|트랜잭션에서 행 변경 내용을 정렬하는 데 사용되는 시퀀스 값입니다.|  
-|\<열에서 @column_list>|**varies**|식별 되는 열을 *column_list* 대 sp_cdc_generate_wrapper_function 함수 래퍼 함수를 만드는 스크립트를 생성 하 라고 하는 경우에 대 한 인수입니다.|  
+|\<열에서 @column_list>|**달라 집니다.**|식별 되는 열을 *column_list* 대 sp_cdc_generate_wrapper_function 함수 래퍼 함수를 만드는 스크립트를 생성 하 라고 하는 경우에 대 한 인수입니다.|  
 |__CDC_OPERATION|**nvarchar(2)**|대상 환경에 행을 적용하는 데 필요한 작업을 나타내는 작업 코드입니다. 인수의 값에 따라 달라 집니다 *row_filter_option* 호출에 제공 합니다.<br /><br /> *row_filter_option* = 'all'<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> *row_filter_option* 'all update old' =<br /><br /> 'D' - 삭제 작업<br /><br /> 'I' - 삽입 작업<br /><br /> 'UN' - 업데이트 작업 새 값<br /><br /> 'UO' - 업데이트 작업 이전 값|  
 |\<열에서 @update_flag_list>|**bit**|_uflag를 열 이름에 추가하여 이름을 지정한 비트 플래그입니다. 플래그가 항상 NULL로 설정 됩니다 \__CDC_OPERATION 했습니다는 ', 'I', 'u O'입니다. 때 \__CDC_OPERATION은 ' u N '에 업데이트를 해당 열이 변경 되는 경우 1로 설정 됩니다. 그렇지 않으면 0입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  < Capture_instance > fn_all_changes_ 함수 cdc.fn_cdc_get_all_changes_ < capture_instance > 쿼리 함수의 래퍼 역할도합니다. 래퍼를 만드는 스크립트를 생성하는 데에는 sys.sp_cdc_generate_wrapper 저장 프로시저가 사용됩니다.  
   
  래퍼 함수는 자동으로 만들어지지 않습니다. 래퍼 함수를 만들려면 다음 두 작업을 수행해야 합니다.  

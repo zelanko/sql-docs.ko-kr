@@ -22,21 +22,20 @@ ms.assetid: 79787bb7-d729-448e-b56a-0a467bbb304f
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd799d99d92607363f0203c5c288cbd5a0da6838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa89a799711c354da1ba61b27653ad25c046200a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070448"
 ---
 # <a name="sysfulltextstopwords-transact-sql"></a>sys.fulltext_stopwords(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   데이터베이스의 모든 중지 목록에 속한 중지 단어당 한 개의 행을 포함합니다.  
  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**stoplist_id**|**int**|**stopword** 가 속한 중지 목록의 ID입니다. 이 ID는 데이터베이스 내에서 고유합니다.|  
 |**stopword**|**nvarchar(64)**|중지 단어 일치 항목으로 간주되는 용어입니다.|  
