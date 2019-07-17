@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f9a15108875c7e519948f0e73e0a87d08b70c975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63315292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098521"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX 데이터 정의 - ALTER CUBE
 
@@ -114,7 +113,7 @@ CELL CALCULATION Calculation_Name
  *Member_Name*  
  멤버 이름이나 멤버 키를 지정하는 유효한 문자열 식입니다.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>설명  
  WITH DESCENDANTS 절을 사용하지 않을 경우 삭제된 멤버의 자식은 삭제된 멤버의 부모의 자식이 됩니다. WITH DESCENDANTS 절을 사용하면 모든 하위 항목과 차원 테이블의 해당 행도 삭제됩니다.  
   
 > [!NOTE]  
@@ -130,7 +129,7 @@ CELL CALCULATION Calculation_Name
  *MDX_Expression*  
  단일 멤버를 반환하는 유효한 MDX 식입니다.  
   
-### <a name="remarks"></a>Remarks  
+### <a name="remarks"></a>설명  
  지정된 MDX 식은 정적이거나 동적일 수 있습니다.  
   
 ## <a name="moving-a-dimension-member"></a>차원 멤버 이동  

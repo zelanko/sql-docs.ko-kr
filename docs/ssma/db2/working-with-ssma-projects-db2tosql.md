@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d3ccc9fe24d770fa64b2bef86feabab0dd2e7fba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2c585764e5bb7fffa55624054aecc7a4c589bbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63244647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086186"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>SSMA 프로젝트 (DB2ToSQL) 작업
 DB2 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일:  
@@ -60,7 +59,7 @@ DB2 데이터베이스에서 데이터를 마이그레이션하도록 [!INCLUDE[
   
 **프로젝트를 만들려면**  
   
-1.  에 **파일** 메뉴에서 클릭 **새 프로젝트**합니다.  
+1.  **파일** 메뉴에서 **새 프로젝트**를 클릭합니다.  
   
     **새 프로젝트** 대화 상자가 나타납니다.  
   

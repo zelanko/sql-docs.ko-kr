@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8679bea49b63ffd5dc7164942b42ac9eed7e9ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086361"
 ---
 # <a name="multiple-results"></a>여러 결과
 A *결과* 항목이 반환 됩니다 데이터 원본에서 문을 실행 한 후입니다. ODBC에는 두 가지 유형의 결과: 결과 집합 및 행. *행* 업데이트에 의해 영향을 받는 행 수가 삭제 또는 삽입 됩니다. 일괄 처리에서 설명한 [SQL 문 일괄 처리](../../../odbc/reference/develop-app/batches-of-sql-statements.md), 여러 결과 생성할 수 있습니다.  

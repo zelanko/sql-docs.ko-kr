@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_log_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_log_info (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/24/2018
 ms.prod: sql
@@ -20,12 +20,12 @@ author: savjani
 ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50549b10793346331d2e5cb8668243db615a443b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719521"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262077"
 ---
 # <a name="sysdmdbloginfo-transact-sql"></a>sys.dm_db_log_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2016sp2-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-2016sp2-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ sys.dm_db_log_info ( database_id )
 
 ## <a name="table-returned"></a>반환된 테이블  
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |database_id|**int**|데이터베이스 ID입니다.|
 |file_id|**smallint**|트랜잭션 로그의 파일 id입니다.|  
@@ -62,7 +62,7 @@ sys.dm_db_log_info ( database_id )
 |vlf_create_lsn|**nvarchar(48)** |[LSN (로그 시퀀스 번호)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) 로그의 만든를 기록 합니다 [가상 로그 파일 (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)합니다.|
 |vlf_encryptor_thumbprint|**varbinary(20)**| **적용 대상:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> VLF를 사용 하 여 암호화 됩니다 VLF의 암호기의 손도장을 표시 [투명 한 데이터 암호화](../../relational-databases/security/encryption/transparent-data-encryption.md)이 고, 그렇지 않으면 NULL입니다. |
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 합니다 `sys.dm_db_log_info` 동적 관리 함수를 대체 합니다 `DBCC LOGINFO` 문입니다.    
  
 ## <a name="permissions"></a>사용 권한  
@@ -70,7 +70,7 @@ sys.dm_db_log_info ( database_id )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>1\. 많은 Vlf 사용 하 여 SQL Server 인스턴스에서 데이터베이스 확인
+### <a name="a-determing-databases-in-a-sql-server-instance-with-high-number-of-vlfs"></a>A. 많은 Vlf 사용 하 여 SQL Server 인스턴스에서 데이터베이스 확인
 다음 쿼리는 데이터베이스 시작, 복원 및 복구 시간에 영향을 줄 수 있는 로그 파일에 100 개가 넘는 Vlf 사용 하 여 데이터베이스를 결정 합니다.
 
 ```sql

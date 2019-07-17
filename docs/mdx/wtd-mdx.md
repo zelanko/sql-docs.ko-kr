@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 9a548f25d9114e9032f2462bbc97bda637abd6d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eee40829c72394bf95a1bc06540a434a1c74e166
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125809"
 ---
 # <a name="wtd-mdx"></a>Wtd(MDX)
 
@@ -32,7 +31,7 @@ Wtd( [ Member_Expression ] )
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  멤버 식을 지정 하지 않으면 기본값이 있으며 수준 유형이 인 첫 번째 계층의 현재 멤버 Time 유형의 첫 번째 차원의 주 (**Time.CurrentMember**) 측정값 그룹에 있습니다.  
   
  합니다 **Wtd** 함수는에 대 한 바로 가기 함수는 [PeriodsToDate](../mdx/periodstodate-mdx.md) 수준에 설정 되어 있는 함수 *주*합니다. 즉, `Wtd(Member_Expression)`은 `PeriodsToDate(Week_Level_Expression,Member_Expression)`과 동일합니다.  

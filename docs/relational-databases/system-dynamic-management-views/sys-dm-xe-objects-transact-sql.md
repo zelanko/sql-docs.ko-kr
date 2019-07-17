@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3132b45713b3493aa2e82a48123e5f3693e6e8dc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 023ee54178c5f303797c6db83cc646353304b051
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090268"
 ---
 # <a name="sysdmxeobjects-transact-sql"></a>sys.dm_xe_objects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,10 @@ ms.locfileid: "52543817"
   
 -   형식. 형식은 데이터를 해석하는 데 필요한 바이트 컬렉션의 길이와 특징을 캡슐화합니다.  
 
- |열 이름|데이터 형식|Description|  
+ |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(60)**|개체 이름입니다. 이름은 특정 개체 형식의 패키지 내에서 고유 합니다. Null을 허용하지 않습니다.|  
-|object_type|**nvarchar(60)**|개체의 유형. object_type은 다음 중 하나입니다.<br /><br /> 이벤트<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> 유형<br /><br /> Null을 허용하지 않습니다.|  
+|name|**nvarchar(60)**|개체 이름입니다. 이름은 특정 개체 형식의 패키지 내에서 고유 합니다. Null을 허용하지 않습니다.|  
+|object_type|**nvarchar(60)**|개체의 유형. object_type은 다음 중 하나입니다.<br /><br /> 이벤트<br /><br /> action<br /><br /> target<br /><br /> pred_source<br /><br /> pred_compare<br /><br /> type<br /><br /> Null을 허용하지 않습니다.|  
 |package_guid|**uniqueidentifier**|해당 동작을 표시하는 패키지의 GUID입니다. sys.dm_xe_packages.package_id와의 다 대 일 관계를 갖습니다. Null을 허용하지 않습니다.|  
 |description|**nvarchar(256)**|동작에 대한 설명입니다. 설명은 패키지 작성자가 설정 됩니다. Null을 허용하지 않습니다.|  
 |capabilities|**int**|개체의 기능을 설명하는 비트맵입니다. Null을 허용합니다.|  
@@ -63,7 +62,7 @@ ms.locfileid: "52543817"
 |----------|--------|------------------|  
 |sys.dm_xe_objects.package_guid|sys.dm_xe_packages.guid|다 대 일|  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

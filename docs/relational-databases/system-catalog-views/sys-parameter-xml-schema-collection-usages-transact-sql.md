@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: bffb91a3-492c-4375-bd2a-db8fc1a3ace4
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e9668ebdde9309fe6b2aabd253167e8d87f8b0cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d3d736c0877ff04a7a6d16819ebb9a861fe3369
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102234"
 ---
 # <a name="sysparameterxmlschemacollectionusages-transact-sql"></a>sys.parameter_xml_schema_collection_usages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   XML 스키마에서 유효성을 검사하는 각 매개 변수에 대해 하나의 행을 반환합니다.  
   
- |열 이름|데이터 형식|Description|  
+ |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 매개 변수가 속한 개체의 ID입니다.|  
 |**parameter_id**|**int**|매개 변수의 ID입니다.  개체 내에서 고유합니다.|  

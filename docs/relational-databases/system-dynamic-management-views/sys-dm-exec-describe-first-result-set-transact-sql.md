@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_describe_first_result_set (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_describe_first_result_set (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72244883d45245efcdcbcf8aba9e4db4c6e25a8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097809"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="table-returned"></a>반환된 테이블  
  이 공통 메타데이터가 결과 집합으로 반환됩니다. 결과 메타데이터에 있는 각 열의 행 하나가 가지는 열의 유형과 Null 허용 여부를 다음 표에 나타난 형식으로 설명합니다. 모든 제어 경로에 대해 첫 번째 문이 없을 경우 행이 0개인 결과 집합이 반환됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|해당 열이 검색 및 정보 제공 목적으로 추가되어 실제로 결과 집합에 나타나지 않는 별도의 열임을 지정합니다.|  
 |**column_ordinal**|**int**|결과 집합에서 열의 서수 위치를 포함합니다. 첫 번째 열의 위치가 1로 지정됩니다.|  
@@ -67,7 +66,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**system_type_id**|**int**|Sys.types에 지정 된 대로 열 데이터 형식의 system_type_id를 포함 합니다. CLR 형식의 경우 system_type_name 열에서 NULL을 반환해도 이 열은 값 240을 반환합니다.|  
 |**system_type_name**|**nvarchar(256)**|열의 데이터 형식에 지정한 이름 및 인수(length, precision, scale 등)를 포함합니다.<br /><br /> 데이터 형식이 사용자 정의 별칭 형식일 경우 기본 시스템 형식이 여기에 지정됩니다.<br /><br /> 데이터 형식이 CLR 사용자 정의 형식일 경우 이 열에 NULL이 반환됩니다.|  
 |**max_length**|**smallint**|열의 최대 길이(바이트)입니다.<br /><br /> -1 = 열 데이터 형식이 **varchar (max)** , **nvarchar (max)** 하십시오 **varbinary (max)** , 또는 **xml**.<br /><br /> 에 대 한 **텍스트** 열을 **max_length** 값이 16 또는 값으로 설정 됩니다 **sp_tableoption 'text in row'** 합니다.|  
-|**전체 자릿수**|**tinyint**|숫자 기반일 경우 열의 전체 자릿수이고 그렇지 않으면 0을 반환합니다.|  
+|**precision**|**tinyint**|숫자 기반일 경우 열의 전체 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**scale**|**tinyint**|숫자 기반일 경우 열의 소수 자릿수이고 그렇지 않으면 0을 반환합니다.|  
 |**collation_name**|**sysname**|문자 기반일 경우 열의 데이터 정렬 이름이고 그렇지 않으면 NULL을 반환합니다.|  
 |**user_type_id**|**int**|CLR 및 별칭 형식의 경우 sys.types에 지정된 대로 열 데이터 형식의 user_type_id를 포함합니다. 그렇지 않으면 NULL입니다.|  
@@ -102,12 +101,12 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |**error_type**|**int**|반환할 오류를 나타내는 정수를 포함합니다. error_type_desc에 매핑됩니다. 주의 아래의 목록을 참조하세요.|  
 |**error_type_desc**|**nvarchar(60)**|반환할 오류를 나타내는 간단한 대문자 문자열을 포함합니다. error_type에 매핑됩니다. 주의 아래의 목록을 참조하세요.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 함수와 동일한 알고리즘을 사용 하 여 **sp_describe_first_result_set**합니다. 자세한 내용은 [sp_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)합니다.  
   
  다음 표에서는 오류 유형 및 설명을 나열합니다.  
   
-|error_type|error_type|Description|  
+|error_type|error_type|설명|  
 |-----------------|-----------------|-----------------|  
 |1|MISC|설명하지 않은 모든 오류입니다.|  
 |2|SYNTAX|일괄 처리에 발생한 구문 오류입니다.|  
@@ -129,7 +128,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 ## <a name="examples"></a>예  
  항목의 추가 예제 [sp_describe_first_result_set &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) 사용 하 여 적용할 수 있습니다 **sys.dm_exec_describe_first_result_set**.  
   
-### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>1\. 단일 Transact-SQL 문에 대한 정보 반환  
+### <a name="a-returning-information-about-a-single-transact-sql-statement"></a>A. 단일 Transact-SQL 문에 대한 정보 반환  
  다음 코드에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 결과에 대한 정보를 반환합니다.  
   
 ```  

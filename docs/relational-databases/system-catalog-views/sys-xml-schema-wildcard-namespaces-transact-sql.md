@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: a3caa932-41c7-48a9-9b2d-ff090afbb66b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bbe2404c77844d635ff7078809b3eae0e3259649
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d1085968e76771539c0fa439bc35ed86540dcbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109460"
 ---
 # <a name="sysxmlschemawildcardnamespaces-transact-sql"></a>sys.xml_schema_wildcard_namespaces(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XML 스키마 와일드카드의 각 열거된 네임스페이스에 대해 행을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**xml_component_id**|**int**|이 문이 적용될 XML 스키마 구성 요소(와일드카드)의 ID입니다.|  
 |**namespace**|**nvarchar(4000)**|XML 와일드카드에서 사용하는 네임스페이스의 이름이나 URI입니다.|  

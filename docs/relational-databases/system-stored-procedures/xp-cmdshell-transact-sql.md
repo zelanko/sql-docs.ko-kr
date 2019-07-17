@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b01628e339e4a3ce1f824f27edd75e2e5aea2526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123765"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>인수  
  **'** *command_string* **'**  
- 운영 체제로 전달할 명령이 포함된 문자열입니다. *command_string* 됩니다 **varchar(8000)** 하거나 **nvarchar(4000)**, 기본값은 없습니다. *command_string* 큰따옴표 하나 이상의 집합을 포함할 수 없습니다. 단일 쌍의 따옴표가 필요한 경우 공백을 파일 경로에 있는 프로그램에서 참조 하는 이름이 나 *command_string*합니다. 포함 공백에 문제가 있으면 해결 방법으로 FAT  8.3  파일 이름을 사용하십시오.  
+ 운영 체제로 전달할 명령이 포함된 문자열입니다. *command_string* 됩니다 **varchar(8000)** 하거나 **nvarchar(4000)** , 기본값은 없습니다. *command_string* 큰따옴표 하나 이상의 집합을 포함할 수 없습니다. 단일 쌍의 따옴표가 필요한 경우 공백을 파일 경로에 있는 프로그램에서 참조 하는 이름이 나 *command_string*합니다. 포함 공백에 문제가 있으면 해결 방법으로 FAT  8.3  파일 이름을 사용하십시오.  
   
  **no_output**  
  출력이 클라이언트에 반환되지 않도록 지정하는 선택적 매개 변수입니다.  
@@ -63,7 +62,7 @@ GO
 The command(s) completed successfully.  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  Windows 프로세스에 의해 생성 된 **xp_cmdshell** 와 같은 보안 권한이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정입니다.  
   
  **xp_cmdshell** 동기적으로 작동 합니다. 명령 셸 명령이 완료되기 전에는 호출자에게 컨트롤이 반환되지 않습니다.  
@@ -121,14 +120,14 @@ REVERT ;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-a-list-of-executable-files"></a>1. 실행 파일의 목록 반환  
+### <a name="a-returning-a-list-of-executable-files"></a>A. 실행 파일의 목록 반환  
  다음 예에서는 디렉터리 명령을 실행하는 `xp_cmdshell` 확장 저장 프로시저를 보여 줍니다.  
   
 ```  
 EXEC master..xp_cmdshell 'dir *.exe''  
 ```  
   
-### <a name="b-returning-no-output"></a>2. 출력 반환 안 함  
+### <a name="b-returning-no-output"></a>2\. 출력 반환 안 함  
  다음 예에서는 `xp_cmdshell`을 사용하여 클라이언트에게 출력을 반환하지 않고 명령 문자열을 실행하는 것을 보여 줍니다.  
   
 ```  
@@ -139,7 +138,7 @@ EXEC xp_cmdshell 'copy c:\SQLbcks\AdvWorks.bck
 GO  
 ```  
   
-### <a name="c-using-return-status"></a>3. 반환 상태 사용  
+### <a name="c-using-return-status"></a>3\. 반환 상태 사용  
  다음 예제에서는 `xp_cmdshell` 확장된 저장된 프로시저도 반환 상태를 제안 합니다. 반환 코드 값은 `@result` 변수에 저장됩니다.  
   
 ```  
@@ -151,7 +150,7 @@ ELSE
    PRINT 'Failure';  
 ```  
   
-### <a name="d-writing-variable-contents-to-a-file"></a>4. 파일에 변수 내용 기록  
+### <a name="d-writing-variable-contents-to-a-file"></a>4\. 파일에 변수 내용 기록  
  다음 예에서는 `@var` 변수의 내용을 현재 서버 디렉터리에 있는 `var_out.txt`라는 파일에 기록합니다.  
   
 ```  
@@ -161,7 +160,7 @@ SET @cmd = 'echo ' + @var + ' > var_out.txt';
 EXEC master..xp_cmdshell @cmd;  
 ```  
   
-### <a name="e-capturing-the-result-of-a-command-to-a-file"></a>5. 명령 결과를 파일로 캡처  
+### <a name="e-capturing-the-result-of-a-command-to-a-file"></a>5\. 명령 결과를 파일로 캡처  
  다음 예에서는 현재 디렉터리의 내용을 현재 서버 디렉터리에 있는 `dir_out.txt`라는 파일에 기록합니다.  
   
 ```  

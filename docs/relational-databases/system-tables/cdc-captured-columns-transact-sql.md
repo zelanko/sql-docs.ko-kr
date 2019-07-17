@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7bb4d408-d764-4ef6-802c-f271c8d39c2a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb9bc8d8fe92a53eace426080221c224e229a80b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96927e2c0a773674cbc4b8dabee804870d6559e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119263"
 ---
 # <a name="cdccapturedcolumns-transact-sql"></a>cdc.captured_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47620041"
   
  좋습니다 있습니다 **쿼리하지 않는 시스템 테이블을 직접**입니다. 대신 실행 합니다 [sys.sp_cdc_get_source_columns](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-captured-columns-transact-sql.md) 저장 프로시저입니다.  
    
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|캡처된 열이 속해 있는 원본 테이블의 ID입니다.|  
 |**column_name**|**sysname**|캡처된 열의 이름입니다.|  

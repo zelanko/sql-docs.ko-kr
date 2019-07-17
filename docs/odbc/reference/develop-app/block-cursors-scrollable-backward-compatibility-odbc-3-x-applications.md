@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 49a7a1af0f4b487baddfffa3e4f14d2a148b7a1d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 7d12906f8dec0bfb12fc861c067e6e615e758a3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134986"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>ODBC 3.x 애플리케이션의 블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성
 둘 다의 존재 여부 **SQLFetchScroll** 하 고 **SQLExtendedFetch** ODBC 간에 응용 프로그램 프로그래밍 인터페이스 (API) 되는 함수의 집합의에서 첫 번째 일반 분할 나타냅니다는 호출 응용 프로그램 및 서비스 공급자 인터페이스 (SPI), 함수의 집합인 드라이버 구현 합니다. 이 분할은 ODBC에서 요구 사항을 균형을 유지 해야 *3.x*를 사용 하는 **SQLFetchScroll**하는 표준을 준수 하 고 ODBC와 호환 되도록 *2.x*를 사용 하는 **SQLExtendedFetch**합니다.  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 58cb48c467bbd3ca1c929da1fdff4881086d2e1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5740095752b482430cd718d0e2bff813449d92ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105219"
 ---
 # <a name="item-tuple-mdx"></a>Item(튜플)(MDX)
 
@@ -45,7 +44,7 @@ Set_Expression.Item(String_Expression1 [ ,String_Expression2,...n])
  *Index*  
  반환할 집합 내의 위치로 특정 튜플을 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **항목** 함수에 지정된 된 집합에서 튜플을 반환 합니다. 세 가지 가능한 방법으로 호출 하 여 **항목** 함수:  
   
 -   단일 문자열 식이 지정 하는 경우는 **항목** 함수에 지정 된 튜플을 반환 합니다. 예를 들면 "([2005].Q3, [Store05])"와 같습니다.  

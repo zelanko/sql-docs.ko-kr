@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e9ef4c99-abde-4038-b6a3-a25dcbaf0958
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f3a3140c154f5d4eb224259001333747ce410e67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5c1587b65df123400188ba062ef40e57f9a0a550
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085310"
 ---
 # <a name="spdeletejobsteplog-transact-sql"></a>sp_delete_jobsteplog(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_delete_jobsteplog** 에 **msdb** 데이터베이스입니다.  
   
  제외 하 고 인수가 없는 경우 **@job_id** 하거나 **@job_name** 지정 된 경우 지정된 된 된 작업에 대 한 모든 작업 단계 로그가 삭제 됩니다.  
@@ -86,7 +85,7 @@ sp_delete_jobsteplog { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="examples"></a>예  
   
-### <a name="a-removing-all-job-step-logs-from-a-job"></a>1. 작업에서 모든 작업 단계 로그 제거  
+### <a name="a-removing-all-job-step-logs-from-a-job"></a>A. 작업에서 모든 작업 단계 로그 제거  
  다음 예에서는 작업 `Weekly Sales Data Backup`에 대한 모든 작업 단계 로그를 제거합니다.  
   
 ```  
@@ -98,7 +97,7 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>2. 특정 작업 단계에 대한 작업 단계 로그 제거  
+### <a name="b-removing-the-job-step-log-for-a-particular-job-step"></a>2\. 특정 작업 단계에 대한 작업 단계 로그 제거  
  다음 예에서는 작업 `Weekly Sales Data Backup`의 2단계에 대한 작업 단계 로그를 제거합니다.  
   
 ```  
@@ -111,7 +110,7 @@ EXEC dbo.sp_delete_jobsteplog
 GO  
 ```  
   
-### <a name="c-removing-all-job-step-logs-based-on-age-and-size"></a>3. 만든 날짜와 크기를 기준으로 모든 작업 단계 로그 제거  
+### <a name="c-removing-all-job-step-logs-based-on-age-and-size"></a>3\. 만든 날짜와 크기를 기준으로 모든 작업 단계 로그 제거  
  다음 예에서는 2005년 10월 25일 정오 이전 항목이면서 100MB를 초과하는 모든 작업 단계 로그를 작업 `Weekly Sales Data Backup`에서 제거합니다.  
   
 ```  

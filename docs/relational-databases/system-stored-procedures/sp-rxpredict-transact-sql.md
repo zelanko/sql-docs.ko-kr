@@ -15,13 +15,12 @@ helpviewer_keywords:
 - sp_rxPredict procedure
 author: HeidiSteen
 ms.author: heidist
-manager: craigg
-ms.openlocfilehash: 0be8727541a74bc80ab19265b94cf2408330b1e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dadaa5f51f359d9a6803d504d6b3a0da64f39852
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126417"
 ---
 # <a name="sprxpredict"></a>sp_rxPredict  
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_rxPredict  ( @model, @input )
 입력된 데이터 원본에서 통과 열 뿐만 아니라 점수 열 반환 됩니다.
 추가 신뢰 구간 같은 열을 점수 매기기, 알고리즘은 이러한 값의 생성을 지원 하는 경우 반환 될 수 있습니다.
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 저장된 프로시저를 사용할 수 있도록, SQLCLR 인스턴스에서 활성화 되어야 합니다.
 

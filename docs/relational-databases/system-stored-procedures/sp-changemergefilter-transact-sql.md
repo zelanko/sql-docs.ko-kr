@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0c38af1089a1d59c9964e39aecca6b1773a8e22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124888"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  다음 표에서는 아티클의 속성 및 해당 속성의 값을 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|조인 필터입니다.<br /><br /> 이 옵션은 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자를 지원하는 데 필요합니다.|  
 ||**2**|논리적 레코드 관계입니다.|  
@@ -82,7 +81,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changemergefilter** 병합 복제에 사용 됩니다.  
   
  병합 아티클의 필터를 변경하려면 스냅숏이 하나 있는 경우 이를 다시 만들어야 합니다. 이 작업을 설정 하 여 수행 됩니다 합니다 **@force_invalidate_snapshot** 하려면 **1**합니다. 또한 이 아티클에 대한 구독이 있을 경우 구독을 다시 초기화해야 합니다. 설정 하 여 이렇게 합니다 **@force_reinit_subscription** 하 **1**.  
