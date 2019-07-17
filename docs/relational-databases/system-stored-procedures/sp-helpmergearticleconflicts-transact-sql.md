@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e02cbdeaaf754819b3a0efa15aa9515cc8515e62
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 85e75e1ce52866eb04b3c410f021db8de392239a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122334"
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'` 병합 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **%**, 충돌이 있는 데이터베이스의 모든 문서를 반환 하는 합니다.  
+`[ @publication = ] 'publication'` 병합 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 **%** , 충돌이 있는 데이터베이스의 모든 문서를 반환 하는 합니다.  
   
 `[ @publisher = ] 'publisher'` 게시자의 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
@@ -48,7 +47,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**article**|**sysname**|아티클의 이름입니다.|  
 |**source_owner**|**sysname**|원본 개체 소유자의 이름입니다.|  
@@ -62,7 +61,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helpmergearticleconflicts** 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d17f7b1f4d2f0d7674e59eb53948475ccde31ab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f326704a949e4e0703f6dcb732471edd8187729b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109957"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>테이블 반환 매개 변수 사용(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "53204862"
  테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md)합니다.  
   
 ## <a name="example"></a>예제  
- 첫 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용 하는 데이터베이스를 만듭니다.  
+ 첫 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 데이터베이스를 만듭니다.  
   
  두 번째 코드 목록을 stdafx.h라는 파일에 배치합니다.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "53204862"
   
  ole32.lib oleaut32.lib를 사용하여 컴파일하고 네 번째(C++) 코드 목록을 실행합니다. 이 애플리케이션은 컴퓨터의 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결됩니다. 일부 Windows 운영 체제에서는 (localhost) 또는 (local)을 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름으로 변경해야 합니다. 명명된 인스턴스에 연결하려면 연결 문자열을 L"(local)"에서 L"(local)\\\name"으로 변경합니다. 여기서 name은 명명된 인스턴스입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express는 명명된 인스턴스에 설치됩니다. INCLUDE 환경 변수에 sqlncli.h가 들어 있는 디렉터리를 포함해야 합니다.  
   
- 다섯 번째 ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용 하는 데이터베이스를 만듭니다.  
+ 다섯 번째([!INCLUDE[tsql](../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 데이터베이스를 만듭니다.  
   
 ```  
 create database testdb  

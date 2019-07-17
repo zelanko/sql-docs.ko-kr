@@ -20,12 +20,12 @@ ms.assetid: 5688bcf8-5da9-4ff9-960b-742b671d7096
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dd7d1ddf40805eb94ca71594c7e4f7f6dae6ca7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca3a6a8891e74bd795f15e9a374194650e70b197
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899952"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265749"
 ---
 # <a name="sysdmosmemoryobjects-transact-sql"></a>sys.dm_os_memory_objects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "67899952"
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
 
 ## <a name="remarks"></a>설명  
  메모리 개체는 힙으로, 메모리 클럭보다 세분화된 할당 기능을 제공합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소는 메모리 클럭 대신 메모리 개체를 사용합니다. 메모리 개체는 메모리 클럭의 페이지 할당자 인터페이스를 사용하여 페이지를 할당합니다. 메모리 개체는 가상 또는 공유 메모리 인터페이스를 사용하지 않습니다. 구성 요소는 할당 패턴에 따라 여러 다른 유형의 메모리 개체를 만들어 임의의 크기를 가진 영역을 할당할 수 있습니다.  

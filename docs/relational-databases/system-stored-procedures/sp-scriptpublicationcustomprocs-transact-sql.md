@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5270ff98483e31db3d9a034f01730c2424809099
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 89cd3991819bdba99d3a4b95c16e7b3247808031
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126382"
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ## <a name="result-sets"></a>결과 집합  
  반환 된 결과 집합을 단일 이루어져 **nvarchar(4000)** 열입니다. 결과 집합은 사용자 지정 저장 프로시저를 만드는 데 필요한 완전한 CREATE PROCEDURE 문을 이룹니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용자 지정 프로시저(0x2) 스키마 자동 생성 옵션을 사용하지 않으면 아티클에 대해 사용자 지정 프로시저가 스크립팅되지 않습니다.  
   
  사용 하는 절차 **sp_scriptpublicationcustomprocs** 구독자 프로시저를 만들 수 및 직접 실행할 수 없습니다.  

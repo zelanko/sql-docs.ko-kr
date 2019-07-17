@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 240eeeb9-6d8b-4930-b912-1d273ca0ab38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6611998b8aa22242693ec5d44bf842671a777c98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6efc0b620dcec300b5342ea5a0f63358fcdfadc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65449719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107885"
 ---
 # <a name="spoagetproperty-transact-sql"></a>sp_OAGetProperty(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +82,7 @@ sp_OAGetProperty objecttoken , propertyname
   
  하나의 열에 있는 모든 데이터 값이 같은 데이터 형식을 공유하는 경우에는 해당 데이터 형식이 전체 열에 대해 사용됩니다. 한 열의 데이터 값들이 여러 다른 데이터 형식을 가질 경우 전체 열의 데이터 형식이 다음 표를 기준으로 선택됩니다.  
   
-||ssNoversion|FLOAT|money|Datetime|varchar|NVARCHAR|  
+||ssNoversion|FLOAT|money|datetime|varchar|NVARCHAR|  
 |------|---------|-----------|-----------|--------------|-------------|--------------|  
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
@@ -92,7 +91,7 @@ sp_OAGetProperty objecttoken , propertyname
 |**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**varchar**|**nvarchar**|  
 |**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|**nvarchar**|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용할 수도 있습니다 **sp_OAMethod** 속성 값을 가져오려고 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -100,7 +99,7 @@ sp_OAGetProperty objecttoken , propertyname
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-a-local-variable"></a>1. 지역 변수 사용  
+### <a name="a-using-a-local-variable"></a>A. 지역 변수 사용  
  다음 예제에서는 합니다 `HostName` 속성 (이전에 생성 **SQLServer** 개체) 하 고 지역 변수에 저장 합니다.  
   
 ```  
@@ -114,7 +113,7 @@ END
 PRINT @property;  
 ```  
   
-### <a name="b-using-a-result-set"></a>2. 결과 집합 사용  
+### <a name="b-using-a-result-set"></a>2\. 결과 집합 사용  
  다음 예제에서는 합니다 `HostName` 속성 (이전에 만든 **SQLServer** 개체)이 클라이언트에는 결과 집합으로 반환 합니다.  
   
 ```  

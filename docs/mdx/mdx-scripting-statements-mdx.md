@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a79b52295ede211dcf7ceb6e3f23ab9e742b31d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4799cf21da7acec0e909f302a68a95b0eb23e2d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116232"
 ---
 # <a name="mdx-scripting-statements-mdx"></a>MDX 스크립팅 문(MDX)
 
@@ -23,7 +22,7 @@ ms.locfileid: "63267915"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[CALCULATE 문&#40;MDX&#41;](../mdx/mdx-scripting-calculate.md)|하위 큐브를 계산하고 선택적으로 하위 큐브 내에 포함된 차원의 해결 순서를 결정합니다.|  
 |[CASE 문&#40;MDX&#41;](../mdx/case-statement-mdx.md)|여러 비교에서 조건에 따라 특정 값을 반환할 수 있습니다.|  

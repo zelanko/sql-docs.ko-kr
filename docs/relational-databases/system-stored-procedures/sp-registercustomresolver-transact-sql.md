@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0187853dcf0fc16fe88feb7e2731414a69fdd183
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0d003cccfa6fdedd0610ea34f15acb6ee1833e5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075731"
 ---
 # <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,20 +41,20 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @article_resolver = ] 'article_resolver'` 등록할 사용자 지정 비즈니스 논리의 이름을 지정 합니다. *article_resolver* 됩니다 **nvarchar(255)**, 기본값은 없습니다.  
+`[ @article_resolver = ] 'article_resolver'` 등록할 사용자 지정 비즈니스 논리의 이름을 지정 합니다. *article_resolver* 됩니다 **nvarchar(255)** , 기본값은 없습니다.  
   
-`[ @resolver_clsid = ] 'resolver_clsid'` 등록할 COM 개체의 CLSID 값을 지정 합니다. 사용자 지정 비즈니스 논리 *resolver_clsid* 됩니다 **nvarchar (50)**, 기본값은 NULL입니다. 이 매개 변수는 유효한 CLSID로 설정하거나 비즈니스 논리 처리기 어셈블리를 등록할 때는 NULL로 설정해야 합니다.  
+`[ @resolver_clsid = ] 'resolver_clsid'` 등록할 COM 개체의 CLSID 값을 지정 합니다. 사용자 지정 비즈니스 논리 *resolver_clsid* 됩니다 **nvarchar (50)** , 기본값은 NULL입니다. 이 매개 변수는 유효한 CLSID로 설정하거나 비즈니스 논리 처리기 어셈블리를 등록할 때는 NULL로 설정해야 합니다.  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` 등록 되는 사용자 지정 비즈니스 논리의 유형을 지정 합니다. *is_dotnet_assembly* 됩니다 **nvarchar (50)**, 기본값은 FALSE입니다. **true** 등록할 사용자 지정 비즈니스 논리가 비즈니스 논리 처리기 어셈블리 임을 나타냅니다 **false** 은 COM 구성 요소임을 나타냅니다.  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` 등록 되는 사용자 지정 비즈니스 논리의 유형을 지정 합니다. *is_dotnet_assembly* 됩니다 **nvarchar (50)** , 기본값은 FALSE입니다. **true** 등록할 사용자 지정 비즈니스 논리가 비즈니스 논리 처리기 어셈블리 임을 나타냅니다 **false** 은 COM 구성 요소임을 나타냅니다.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` 비즈니스 논리 처리기를 구현 하는 어셈블리의 이름이입니다. *dotnet_assembly_name* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다. 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 응용 프로그램과 같은 디렉터리 또는 GAC(전역 어셈블리 캐시)에서 배포되지 않은 경우 어셈블리에 대한 전체 경로를 지정해야 합니다.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` 비즈니스 논리 처리기를 구현 하는 어셈블리의 이름이입니다. *dotnet_assembly_name* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 응용 프로그램과 같은 디렉터리 또는 GAC(전역 어셈블리 캐시)에서 배포되지 않은 경우 어셈블리에 대한 전체 경로를 지정해야 합니다.  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name'` 재정의 하는 클래스의 이름인 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 비즈니스 논리 처리기를 구현 합니다. 형식 이름을 지정 해야 **Namespace.Classname**합니다. *dotnet_class_name* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @dotnet_class_name = ] 'dotnet_class_name'` 재정의 하는 클래스의 이름인 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 비즈니스 논리 처리기를 구현 합니다. 형식 이름을 지정 해야 **Namespace.Classname**합니다. *dotnet_class_name* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_registercustomresolver** 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

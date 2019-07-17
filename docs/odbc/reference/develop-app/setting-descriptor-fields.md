@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d735dc64-370f-48ab-a59f-6cef9bc4e1e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 14724a5cc863074344cfbb02615f0ccff228f04c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34c4a6e3d98b6711c77fb50d7156207de148881a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094252"
 ---
 # <a name="setting-descriptor-fields"></a>설명자 필드 설정
 설명자 필드를 수정 하려면 응용 프로그램이 호출할 수 있습니다 **SQLSetDescField**합니다. 일부 필드는 읽기 전용 이며 설정할 수 없습니다. (참조를 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md) 함수 설명 합니다.)  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 47abab63-e605-40e8-a54e-2241e2e01afd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6011c1684301402edbe6ca96614901be6a8fe3da
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 63fa5b02e681309e36b0c42ec5b504d9f07228ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035375"
 ---
 # <a name="spsyspolicyunsubscribefrompolicycategory-transact-sql"></a>sp_syspolicy_unsubscribe_from_policy_category(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_syspolicy_unsubscribe_from_policy_category [ @policy_category = ] 'policy_cat
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_syspolicy_unsubscribe_from_policy_category는 정책 범주 구독을 제거할 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 802ac711-7e5d-4152-9698-db0cafcf6047
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 452ee7b5e2c9e38aaf0fb81969228f5c5e7b5559
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: f24a305c2f22ef4cfacbbe4bcbcf498eab648f1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064471"
 ---
 # <a name="sqlerror-mapping"></a>SQLError 매핑
 응용 프로그램을 호출할 때 **SQLError** 는 ODBC를 통한 *3.x* 드라이버에 대 한 호출  

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: a313ff3b-1fe9-421e-b94b-cea19c43b0e5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 446153c734b5f014ce55a1a8607c94f37e9248a0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 794c8834f429d84eea94ad331401e84253c28c93
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67900162"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265835"
 ---
 # <a name="sysdmoshosts-transact-sql"></a>sys.dm_os_hosts(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "67900162"
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
 
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일의 일부가 아닌 OLE DB 공급자와 같은 구성 요소가 메모리를 할당하고 비선점형 일정에 참여할 수 있습니다. 이러한 구성 요소는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 의해 호스팅되며 이러한 구성 요소에서 할당된 모든 리소스는 추적됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호스팅을 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행 파일의 외부 구성 요소에서 사용하는 리소스를 효과적으로 관리할 수 있습니다.  

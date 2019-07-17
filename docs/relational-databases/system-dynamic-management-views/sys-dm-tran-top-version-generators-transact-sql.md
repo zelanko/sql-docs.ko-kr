@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d141da7523501560fc4bd21752ced988c42a7f23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e8fb59e9cfe636f6cab775fa2cb000c60ba08ad2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755851"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262613"
 ---
 # <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +44,7 @@ sys.dm_tran_top_version_generators
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|데이터베이스 ID입니다.|  
 |**rowset_id**|**bigint**|행 집합 ID입니다.|  
@@ -55,9 +54,9 @@ sys.dm_tran_top_version_generators
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  때문에 **sys.dm_tran_top_version_generators** 실행 하는 전체 버전 저장소를 검색할 때 여러 페이지를 읽을 수 있을 **sys.dm_tran_top_version_generators** 시스템을 방해할 수 있습니다 성능을 제공 합니다.  
   
 ## <a name="examples"></a>예  

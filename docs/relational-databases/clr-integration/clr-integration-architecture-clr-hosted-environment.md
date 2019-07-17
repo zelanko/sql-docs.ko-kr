@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 455b7b8e5b12f330a970589b04844d3a62f983b8
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cdef6129f6cdc513382a747e82d84dd27fc433eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068486"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 통합 아키텍처 - CLR 호스팅 환경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,32 +113,32 @@ ms.locfileid: "51661302"
 ###### <a name="scalability-common-memory-management"></a>확장성: 일반적인 메모리 관리  
  CLR은 메모리를 할당하거나 할당을 취소하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 형식을 호출합니다. CLR에서 사용하는 메모리는 시스템의 총 메모리 사용량에 포함되기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 구성된 메모리 제한을 초과하지 않으면서 CLR과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 메모리를 차지하기 위해 서로 경쟁하지 않도록 할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 시스템 메모리가 제한되었을 때 CLR 메모리 요청을 거부할 수 있으며 다른 태스크에 메모리가 필요할 때 메모리 사용을 줄이도록 CLR에 요청할 수 있습니다.  
   
-###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>안정성: 응용 프로그램 도메인 및 복구할 수 없는 예외  
+###### <a name="reliability-application-domains-and-unrecoverable-exceptions"></a>안정성:  응용 프로그램 도메인 및 복구할 수 없는 예외  
  .NET Framework API의 관리 코드에서 메모리 부족 또는 스택 오버플로와 같은 중대한 예외가 발견되었을 때 이러한 오류를 복구하여 API 구현의 의미를 일관되고 올바르게 유지하지 못하는 경우도 있습니다. 이러한 API는 이와 같은 오류에 대한 응답으로 스레드 중단 예외를 발생시킵니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호스팅되는 경우 이러한 스레드 중단은 다음과 같이 처리됩니다. 즉, CLR이 응용 프로그램 도메인 내에서 스레드 중단이 발생한 모든 공유 상태를 검색합니다. CLR은 동기화 개체가 있는지 여부를 확인하여 이 작업을 수행합니다. 응용 프로그램 도메인에 공유 상태가 있으면 응용 프로그램 도메인 자체가 언로드됩니다. 응용 프로그램 도메인이 언로드되면 해당 응용 프로그램 도메인에서 현재 실행 중인 데이터베이스 트랜잭션이 중지됩니다. 공유 상태가 있는 경우 예외를 트리거한 세션 이외의 다른 사용자 세션도 이와 같은 중대한 예외의 영향을 받을 수 있기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 CLR은 공유 상태의 가능성을 줄이기 위한 조치를 취합니다. 자세한 내용은 .NET Framework 설명서를 참조하십시오.  
   
-###### <a name="security-permission-sets"></a>보안: 사용 권한 집합  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스에 배포되는 코드의 안정성 및 보안 요구 사항을 사용자가 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드 되 면 어셈블리의 작성자 하나를 지정할 수 세 가지 권한 집합이 해당 어셈블리에 대 한: SAFE, EXTERNAL_ACCESS 및 UNSAFE 합니다.  
+###### <a name="security-permission-sets"></a>보안: 권한 집합  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 데이터베이스에 배포되는 코드의 안정성 및 보안 요구 사항을 사용자가 지정할 수 있습니다. 어셈블리를 데이터베이스에 업로드 되 면 어셈블리의 작성자 하나를 지정할 수 세 가지 권한 집합이 해당 어셈블리에 대 한 합니다. SAFE, EXTERNAL_ACCESS 및 UNSAFE 합니다.  
   
 |||||  
 |-|-|-|-|  
 |권한 집합|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |코드 액세스 보안|실행 전용|실행 및 외부 리소스 액세스|제한 없음|  
-|프로그래밍 모델 제한 사항|예|예|제한 없음|  
+|프로그래밍 모델 제한|예|사용자 계정 컨트롤|제한 없음|  
 |안정성 요구 사항|예|예|아니요|  
-|네이티브 코드를 호출하는 기능|아니요|아니요|예|  
+|네이티브 코드 호출 기능|아니요|아니요|예|  
   
- SAFE는 가장 신뢰할 수 있고 안전한 모드로, 허용되는 프로그래밍 모델에 대한 제한이 있습니다. SAFE 어셈블리는 실행하고, 계산을 수행하고, 로컬 데이터베이스에 액세스할 수 있는 권한이 부여됩니다. SAFE 어셈블리는 확인할 수 있는 형식 안전 어셈블리여야 하며 비관리 코드를 호출할 수 없습니다.  
+ SAFE는 허용되는 프로그래밍 모델 측면에서 연결된 제한 사항이 있는 가장 안정적인 보안 모드입니다. SAFE 어셈블리에는 충분한 실행 권한이 제공되며, 계산을 수행하고, 로컬 데이터베이스에 액세스할 수 있습니다. SAFE 어셈블리는 형식이 안전해야 하며 비관리 코드를 호출할 수 없습니다.  
   
- UNSAFE는 데이터베이스 관리자만 만들 수 있는 신뢰 수준이 높은 코드용입니다. 이 신뢰되는 코드는 코드 액세스 보안 제한이 없으며 비관리(네이티브) 코드를 호출할 수 있습니다.  
+ UNSAFE는 데이터베이스 관리자만 만들 수 있는 고도로 신뢰할 수 있는 코드에 사용됩니다. 이 신뢰되는 코드는 코드 액세스 보안 제한이 없으며 비관리(네이티브) 코드를 호출할 수 있습니다.  
   
  EXTERNAL_ACCESS는 중급 보안 옵션을 제공하며 코드가 데이터베이스 외부의 리소스에 액세스하도록 허용하지만 여전히 SAFE 수준의 안정성과 보안을 갖습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 호스트 수준의 CAS 정책 계층을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그에 저장되어 있는 권한 집합에 기초하여 세 가지 권한 집합 중 하나를 부여하는 호스트 정책을 설정합니다. 데이터베이스 내부에서 실행되는 관리 코드에는 항상 이러한 코드 액세스 권한 집합 중 하나가 부여됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 호스트 수준의 CAS 정책 계층을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그에 저장되어 있는 권한 집합에 기초하여 세 가지 권한 집합 중 하나를 부여하는 호스트 정책을 설정합니다. 데이터베이스 내에서 실행되는 관리 코드는 항상 이러한 코드 액세스 권한 집합 중 하나를 가져옵니다.  
   
-### <a name="programming-model-restrictions"></a>프로그래밍 모델 제한 사항  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리 코드에 대한 프로그래밍 모델에서는 여러 호출에 걸쳐 유지되는 상태를 사용하거나 여러 사용자 세션에서 상태를 공유할 필요가 없는 함수, 프로시저 및 형식을 작성해야 합니다. 또한 앞서 설명한 것과 같이 공유된 상태가 있으면 해당 응용 프로그램의 확장성과 안정성에 영향을 주는 중대한 예외가 발생할 수 있습니다.  
+### <a name="programming-model-restrictions"></a>프로그래밍 모델 제한  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리 코드에 대한 프로그래밍 모델에서는 여러 호출에 걸쳐 유지되는 상태를 사용하거나 여러 사용자 세션에서 상태를 공유할 필요가 없는 함수, 프로시저 및 형식을 작성해야 합니다. 또한 앞에서 설명한 것처럼 공유 상태가 있을 경우 애플리케이션의 안정성 및 확장성에 영향을 주는 중대한 예외가 발생할 수 있습니다.  
   
  이러한 점을 고려하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 클래스의 정적 변수와 정적 데이터 멤버는 사용하지 않는 것이 좋습니다. SAFE 및 EXTERNAL_ACCESS 어셈블리의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CREATE ASSEMBLY 시간에 해당 어셈블리의 메타데이터를 검사하고 정적 데이터 멤버와 변수가 사용된 경우 어셈블리를 만드는 데 오류가 발생합니다.  
   

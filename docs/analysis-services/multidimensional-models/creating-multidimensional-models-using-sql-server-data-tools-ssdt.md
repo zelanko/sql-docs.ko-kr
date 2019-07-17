@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 41bc227d238534a7fc1c0bee0070e3b6c973b2d9
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579233"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68231862"
 ---
 # <a name="creating-multidimensional-models-using-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools)를 사용하여 다차원 모델 만들기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "57579233"
   
  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 의 비즈니스 인텔리전스 프로젝트 유형에는 다음 프로젝트가 포함되어 있습니다.  
   
-|프로젝트|Description|  
+|프로젝트|설명|  
 |-------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트|단일 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에 대한 개체 정의를 포함합니다. 만드는 방법에 대 한 자세한 정보에 대 한는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 참조 하십시오 [Analysis Services 프로젝트 만들기 &#40;SSDT&#41;](../../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)합니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 2008 데이터베이스 가져오기|기존 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스에서 개체 정의를 가져와서 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 프로젝트를 만드는 데 사용할 수 있는 마법사를 제공합니다.|  
@@ -40,7 +40,7 @@ ms.locfileid: "57579233"
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 에는 다음 표에 나와 있는 것처럼 다양한 쿼리나 스크립트에 중점을 둔 여러 프로젝트 유형이 포함되어 있습니다.  
   
-|프로젝트|Description|  
+|프로젝트|설명|  
 |-------------|-----------------|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 스크립트|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대한 DMX, MDX 및 XMLA 스크립트와 이러한 스크립트를 실행할 수 있는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 대한 연결을 포함합니다. 자세한 내용은 [SQL Server Management Studio의 Analysis Services 스크립트 프로젝트](../../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)를 참조하세요.|  
 |SQL Server Compact 스크립트|SQL Server Compact용 SQL 스크립트와 이러한 스크립트를 실행할 수 있는 SQL Server Compact 인스턴스에 대한 연결을 포함합니다.|  

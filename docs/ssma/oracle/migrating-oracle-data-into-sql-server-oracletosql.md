@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: ad944432b2a00acb923732863624a69dcbaf227f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: c37f9c8e39a8a9dd87eabecba445b5ce7cef9028
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209904"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264683"
 ---
 # <a name="migrating-oracle-data-into-sql-server-oracletosql"></a>Oracle 데이터를 SQL Server로 마이그레이션(OracleToSQL)
 사용 하 여 변환된 된 개체를 성공적으로 동기화 한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle에서 데이터를 마이그레이션할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "63209904"
   
 **데이터를 마이그레이션**  
   
-1.  다음을 확인합니다.  
+1.  다음 사항을 확인합니다.  
   
     -   Oracle 공급자 SSMA를 실행 하는 컴퓨터에 설치 됩니다.  
   

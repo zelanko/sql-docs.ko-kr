@@ -20,12 +20,12 @@ ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f6ce0fa8270a05d8c3385cbc7b5c25edeaa84bc5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7a45f2e392f0d3a6a82a93ba43746eb937fe6bb9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67899642"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262731"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -137,7 +137,7 @@ ms.locfileid: "67899642"
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
  
 ## <a name="example"></a>예제
 이 예제에서는 차단된 세션을 식별 합니다.  실행 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.

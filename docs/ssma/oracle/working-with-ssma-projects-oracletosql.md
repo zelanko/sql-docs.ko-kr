@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 3ec3a2f9bcdf43657649263d77eff3b31c9a57a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: b96aba990231225516a7ba8ccf1523b91cb56c86
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283557"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266358"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>SSMA 프로젝트 작업(OracleToSQL)
 Oracle 데이터베이스를 마이그레이션하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA 프로젝트를 만들어야 합니다. 프로젝트는 다음 정보를 포함 하는 파일:  
@@ -62,7 +62,7 @@ Oracle 데이터베이스에서 데이터를 마이그레이션하도록 [!INCLU
   
 **프로젝트를 만들려면**  
   
-1.  에 **파일** 메뉴에서 클릭 **새 프로젝트**합니다.  
+1.  **파일** 메뉴에서 **새 프로젝트**를 클릭합니다.  
   
     **새 프로젝트** 대화 상자가 나타납니다.  
   

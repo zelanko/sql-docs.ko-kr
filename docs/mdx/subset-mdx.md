@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 07d813587dc530924becbb187a970f78022e5476
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1f9a79c0e0ba6d578b82d7b1d072f3543888a1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63136087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036705"
 ---
 # <a name="subset-mdx"></a>Subset(MDX)
 
@@ -38,7 +37,7 @@ Subset(Set_Expression, Start [ ,Count ] )
  *개수*  
  반환할 튜플 수를 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  지정된 된 집합에서의 **하위 집합** 함수는 튜플, 지정 된 시작 위치부터 지정한 수를 포함 하는 하위 집합을 반환 합니다. 시작 위치는 인덱스(0부터 시작)를 기반으로 합니다. 즉, 0은 지정된 집합의 첫 번째 튜플에 해당하고 1은 두 번째 튜플에 해당합니다.  
   
  하는 경우 *개수* 지정 하지 않으면 함수에서 모든 튜플은 반환 *시작* 집합의 끝에 있습니다.  

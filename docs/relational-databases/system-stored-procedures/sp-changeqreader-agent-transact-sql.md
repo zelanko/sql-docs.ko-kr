@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d3fe79c5-31ef-4565-bf38-b476b5fb16f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 994ec0ee8fa6cd5424f808d884eb3355ffdc22ba
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b636eb929d74aec7b0f3555ce511372f6592c5b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099145"
 ---
 # <a name="spchangeqreaderagent-transact-sql"></a>sp_changeqreader_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_login = ] 'job_login'` 에 대 한 로그인을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에이전트가 실행 되는 Windows 계정입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 NULL입니다.  
+`[ @job_login = ] 'job_login'` 에 대 한 로그인을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에이전트가 실행 되는 Windows 계정입니다. *job_login* 됩니다 **nvarchar(257)** , 기본값은 NULL입니다.  
   
 `[ @job_password = ] 'job_password'` 에이전트가 실행 되는 Windows 계정의 암호가입니다. *job_password* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
@@ -49,7 +48,7 @@ sp_changeqreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changeqreader_agent** 트랜잭션 복제에 사용 됩니다.  
   
  **sp_changeqreader_agent** 큐 판독기 에이전트가 실행 되는 Windows 계정을 변경 하는 데 사용 됩니다. 기존 Windows 로그인의 암호를 변경하거나 새 Windows 로그인과 암호를 제공할 수 있습니다.  

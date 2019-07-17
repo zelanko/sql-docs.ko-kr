@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: 8bc452dff465ca872f094fa7aaaba98612beb135
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 36bf17e1667596582ed60fd6c35d6f74fc81a231
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287197"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264537"
 ---
 # <a name="advanced-object-selection--oracletosql"></a>고급 개체 선택(OracleToSQL)
 합니다 **고급 개체 섹션** 대화 상자를 사용 하면 개체 이름에 문자열 및 부분 문자열을 사용 하 여 데이터베이스 개체를 필터링 한 다음 선택 하거나 해당 개체의 선택을 취소 합니다. SSMA는 선택한 개체에 대 한 변환 및 마이그레이션 작업을 수행합니다.  

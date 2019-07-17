@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4478fb9657ef4577bcae8b5641f53154b2a0486c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ab2c866f201c53684c316282a143b4f672cb8e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105430"
 ---
 # <a name="hierarchize-mdx"></a>Hierarchize(MDX)
 
@@ -32,7 +31,7 @@ Hierarchize(Set_Expression [ , POST ] )
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **Hierarchize** 함수는 지정 된 집합의 멤버를 계층적 순서로 구성 합니다. 함수는 항상 중복 요소를 포함합니다.  
   
 -   하는 경우 **POST** 지정 하지 않으면 함수는 일반적인 방향의 순서로 수준의 멤버를 정렬 합니다. 일반적인 방향의 순서는 다른 정렬 조건이 지정되지 않은 경우 계층에서 멤버가 정렬되는 기본 순서입니다. 자식 멤버는 해당 부모 멤버 바로 다음에 옵니다.  

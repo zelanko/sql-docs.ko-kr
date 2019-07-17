@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: bdf003a65e6923acf2bbf5c17e93d412e2d194fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb4e9d55ef2228404dd9113170066e4a3612a0a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036668"
 ---
 # <a name="sum-mdx"></a>Sum(MDX)
 
@@ -35,7 +34,7 @@ Sum( Set_Expression [ , Numeric_Expression ] )
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  숫자 식이 지정된 경우 지정된 숫자 식이 집합에 대해 계산된 다음 합계가 계산됩니다. 숫자 식이 지정되지 않은 경우 지정된 집합은 해당 집합에 포함된 멤버의 현재 컨텍스트에서 계산된 다음 합계가 계산됩니다. SUM 함수를 숫자가 아닌 식에 적용하는 경우 결과가 정의되지 않습니다.  
   
 > [!NOTE]  

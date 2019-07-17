@@ -10,12 +10,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: fc8065bcfda3066fae31be982e25f054c07bca3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6a2bb7e10e487d65c0fa8dfd406a30f9acd557a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62650767"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265530"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>SSMA 콘솔 (AccessToSQL)의 명령줄 옵션
 Microsoft는 강력한 명령줄 옵션을 실행 하 고 제어 SSMA 작업 집합을 제공 합니다. 결과 섹션 추가 세부 정보를 제공합니다.  

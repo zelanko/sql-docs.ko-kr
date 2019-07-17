@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013211"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255349"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63013211"
 > [!NOTE]  
 >  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_exec_query_optimizer_info**합니다.  
   
-|이름|데이터 형식|Description|  
+|이름|데이터 형식|설명|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar(4000)**|최적화 프로그램 통계 이벤트의 이름입니다.|  
 |**occurrence**|**bigint**|이 카운터에 대한 최적화 이벤트의 발생 횟수입니다.|  
@@ -46,9 +45,9 @@ ms.locfileid: "63013211"
 ## <a name="permissions"></a>사용 권한  
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
     
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sys.dm_exec_query_optimizer_info** (카운터) 다음 속성을 포함 합니다. 모든 occurrence 값은 누적 값이며 시스템을 다시 시작할 때 0으로 설정됩니다. value 필드의 모든 값은 시스템을 다시 시작할 때 NULL로 설정됩니다. 평균을 지정하는 모든 값 열의 값은 평균 계산의 분모와 같은 행에서 얻은 occurrence 값을 사용합니다. 모든 쿼리 최적화 때 측정 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 변경 내용을 확인 **dm_exec_query_optimizer_info**, 사용자 및 시스템에서 생성 된 두 쿼리 모두를 포함 합니다. 이미 캐시 된 계획의 실행에 대 한 값을 변경 하지 **dm_exec_query_optimizer_info**, 최적화만 의미가 있습니다.  
   
 |카운터|발생 빈도|값|  
@@ -95,7 +94,7 @@ ms.locfileid: "63013211"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-viewing-statistics-on-optimizer-execution"></a>1\. 최적화 프로그램 실행 통계 보기  
+### <a name="a-viewing-statistics-on-optimizer-execution"></a>A. 최적화 프로그램 실행 통계 보기  
  이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 현재 최적화 프로그램 실행 통계를 확인할 수 있습니다.  
   
 ```  

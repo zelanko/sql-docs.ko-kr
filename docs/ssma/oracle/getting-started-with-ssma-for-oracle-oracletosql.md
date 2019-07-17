@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: df79664c-972e-4bef-865a-ce609789fee7
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 80fc86c4b3d9385dc056b0c0ea9633f9f5f26675
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: ef71a9355bc11c4d377f00a44b2b8cd2958f8656
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68220600"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264453"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Oracle용 SSMA 시작(OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) Oracle 사용 하면 신속 하 게에 대 한 Oracle 데이터베이스 스키마로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스키마의 경우 결과 스키마를 업로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Oracle에서 데이터를 마이그레이션하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  

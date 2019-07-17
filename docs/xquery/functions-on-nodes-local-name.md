@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93f289ed165742ae8fdf8d49732186161a4a8b5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62936521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038875"
 ---
 # <a name="functions-on-nodes---local-name"></a>노드 함수 - local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ fn:local-name($arg as node()?) as xs:string
  *$arg*  
  로컬 이름 부분이 검색될 노드 이름입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 -   SQL server에서 **fn:local-name()** 없이 상황별 조건자의 컨텍스트에서 인수로 사용할 수 있습니다. 특히 사용 시 대괄호(`[ ]`)로 묶어야 합니다.  
   
@@ -50,7 +49,7 @@ fn:local-name($arg as node()?) as xs:string
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-retrieve-local-name-of-a-specific-node"></a>1\. 특정 노드의 로컬 이름 검색  
+### <a name="a-retrieve-local-name-of-a-specific-node"></a>A. 특정 노드의 로컬 이름 검색  
  다음은 형식화되지 않은 XML 인스턴스에 대해 지정된 쿼리입니다. `local-name(/ROOT[1])` 쿼리 식은 지정한 노드의 로컬 이름 부분을 검색합니다.  
   
 ```  

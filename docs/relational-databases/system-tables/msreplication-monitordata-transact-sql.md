@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 898990152a86380ae9ba28e9766ae47675a39706
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 886240176188fdcea0c104ca366ec5451528312a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52775535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079139"
 ---
 # <a name="msreplicationmonitordata-transact-sql"></a>MSreplication_monitordata(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "52775535"
 |**publisher**|**sysname**|게시자의 이름입니다.|  
 |**publisher_srvid**|**int**|게시자의 서버 ID입니다.|  
 |**publisher_db**|**sysname**|게시 데이터베이스의 이름입니다.|  
-|**게시**|**sysname**|게시의 이름입니다.|  
+|**publication**|**sysname**|게시의 이름입니다.|  
 |**publication_type**|**int**|게시 유형으로 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 트랜잭션 게시<br /><br /> **1** = 스냅숏 게시<br /><br /> **2** = 병합 게시|  
 |**agent_type**|**int**|복제 에이전트 유형으로 다음 값 중 하나일 수 있습니다.<br /><br /> **1** = 스냅숏 에이전트<br /><br /> **2** = 로그 판독기 에이전트<br /><br /> **3** = 배포 에이전트<br /><br /> **4** = 병합 에이전트<br /><br /> **9** = 큐 판독기 에이전트|  
 |**agent_id**|**int**|복제 에이전트의 ID입니다.|  
@@ -46,7 +45,7 @@ ms.locfileid: "52775535"
 |**job_id**|**uniqueidentifier**|복제 에이전트 작업의 GUID입니다.|  
 |**상태**|**int**|복제 에이전트 상태로 다음 값 중 하나일 수 있습니다.<br /><br /> **1** = 시작<br /><br /> **2** = 성공<br /><br /> **3** = 진행 중<br /><br /> **4** = 유휴 상태<br /><br /> **5** = 다시 시도 중<br /><br /> **6** = 실패|  
 |**isagentrunningnow**|**bit**|경우 에이전트 작업은 현재 실행 값을 나타내는 플래그입니다 **1** 작업이 실행 되 고 있다는 것을 의미 합니다.|  
-|**경고**|**int**|구독에서 생성한 임계값 경고로 다음 값 중 하나 이상의 논리 OR 결과일 수 있습니다.<br /><br /> **1** = expiration-트랜잭션 게시에 구독 보존 기간의 백분율 허용 된 임계값 이상 보존 기간을 초과 했습니다.<br /><br /> **2** = latency-트랜잭션 게시자에서 구독자로 데이터를 복제 하는 데 걸린 시간 (초)에서의 임계값을 초과 합니다.<br /><br /> **4** = mergeexpiration-병합 게시에 대 한 구독 보존 기간의 백분율 허용 된 임계값 이상 보존 기간을 초과 했습니다. 8 = mergefastrunduration - 고속 네트워크 연결을 통해 병합 구독을 완전 동기화하는 데 소요된 시간이 임계값(초)을 초과합니다.<br /><br /> **16** = mergeslowrunduration-병합 구독을 완전 동기화 하는 데 걸린 시간 (초), 저속 또는 전화 접속 네트워크 연결을 통해, 임계값을 초과 합니다.<br /><br /> **32** = mergefastrunspeed-의 배달 속도가 임계 속도 초당 행 고속 네트워크 연결을 통해 유지 관리 못했습니다 병합 구독을 동기화 하는 동안 행.<br /><br /> **64** = mergeslowrunspeed-배달 속도 저속 또는 전화 접속 네트워크 연결을 통해 초당 행에서 임계 속도 유지 하기 위해 병합 구독을 동기화 하는 동안 행 실패 했습니다.|  
+|**warning**|**int**|구독에서 생성한 임계값 경고로 다음 값 중 하나 이상의 논리 OR 결과일 수 있습니다.<br /><br /> **1** = expiration-트랜잭션 게시에 구독 보존 기간의 백분율 허용 된 임계값 이상 보존 기간을 초과 했습니다.<br /><br /> **2** = latency-트랜잭션 게시자에서 구독자로 데이터를 복제 하는 데 걸린 시간 (초)에서의 임계값을 초과 합니다.<br /><br /> **4** = mergeexpiration-병합 게시에 대 한 구독 보존 기간의 백분율 허용 된 임계값 이상 보존 기간을 초과 했습니다. 8 = mergefastrunduration - 고속 네트워크 연결을 통해 병합 구독을 완전 동기화하는 데 소요된 시간이 임계값(초)을 초과합니다.<br /><br /> **16** = mergeslowrunduration-병합 구독을 완전 동기화 하는 데 걸린 시간 (초), 저속 또는 전화 접속 네트워크 연결을 통해, 임계값을 초과 합니다.<br /><br /> **32** = mergefastrunspeed-의 배달 속도가 임계 속도 초당 행 고속 네트워크 연결을 통해 유지 관리 못했습니다 병합 구독을 동기화 하는 동안 행.<br /><br /> **64** = mergeslowrunspeed-배달 속도 저속 또는 전화 접속 네트워크 연결을 통해 초당 행에서 임계 속도 유지 하기 위해 병합 구독을 동기화 하는 동안 행 실패 했습니다.|  
 |**last_distsync**|**datetime**|배포 에이전트를 마지막으로 실행한 날짜와 시간입니다.|  
 |**agentstoptime**|**datetime**|에이전트를 중지한 날짜와 시간입니다.|  
 |**distdb**|**sysname**|구독에 대한 배포 데이터베이스의 이름입니다.|  

@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 46b74f99-2e22-4dbd-872a-533fce0e239c
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f24ffbf39eb59a48ed2cf4fdd5fd0453121d7b4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b351139cb96ae58c114b57833d55ab97cce25a9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63003494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102219"
 ---
-# <a name="syspdwcolumndistributionproperties-transact-sql"></a>sys.pdw_column_distribution_properties (Transact-SQL)
+# <a name="syspdwcolumndistributionproperties-transact-sql"></a>sys.pdw_column_distribution_properties (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   열에 대 한 배포 정보를 보유합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |**object_id**|**int**|열이 속한 개체의 ID입니다.||  
 |**column_id**|**int**|열의 ID입니다.||  

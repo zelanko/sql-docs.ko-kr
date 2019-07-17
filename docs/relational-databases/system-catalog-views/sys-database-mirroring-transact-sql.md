@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 480de2b0-2c16-497d-a6a3-bf7f52a7c9a0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bea7712fd4efa1934117937a5168843d727d0dc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 515f3dad1f07535a5d0c8e590adadce0923180db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022752"
 ---
 # <a name="sysdatabasemirroring-transact-sql"></a>sys.database_mirroring(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "62693910"
 > [!NOTE]  
 >  데이터베이스가 미러링에 참여하지 않으면 접두사가 "mirroring_"인 모든 열이 NULL입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|데이터베이스의 ID입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유합니다.|  
 |**mirroring_guid**|**uniqueidentifier**|미러링 파트너 관계의 ID입니다.<br /><br /> NULL = 데이터베이스 가능 하지 않거나 미러되지 않습니다.<br /><br /> 참고: 데이터베이스 미러링에 참여 하지 않습니다, 경우 않으면 접두사가 "mirroring_" 인 모든 열은 NULL입니다.|  

@@ -19,12 +19,12 @@ ms.assetid: 462a731f-08f1-44e1-9eeb-4deac6d2f6c5
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 1168609d35a266f2ac5fe6641aee7ca131bc9d89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759908"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259922"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant for Access (AccessToSQL)를 사용 하 여 시작
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 액세스를 사용 하면 Access 데이터베이스 개체를 신속 하 게 변환할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 개체에 결과 개체를 업로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB에 대 한 액세스에서 데이터를 마이그레이션할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다. 필요에 따라 연결할 수 있습니다도 테이블에 액세스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL DB를 사용 하 여 기존 액세스 프런트 엔드 응용 프로그램을 사용 하 여 계속할 수 있도록 테이블 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다.  
@@ -105,7 +105,7 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
 #### <a name="the-migration-toolbar"></a>마이그레이션 도구 모음  
 마이그레이션 도구 모음에는 다음 명령도 포함 됩니다.  
   
-|단추|기능|  
+|단추|함수|  
 |----------|------------|  
 |**변환, 로드 및 마이그레이션**|Access 데이터베이스를 변환, 변환된 된 개체에 로드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 및 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 한 번에 모든 Azure SQL DB입니다.|  
 |**보고서 만들기**|선택한 액세스 스키마를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 구문을 다음 얼마나 성공적인 변환 된 보여 주는 보고서를 만듭니다.<br /><br />이 명령은 액세스 메타 데이터 탐색기에서 개체를 선택한 경우에 있습니다.|  
@@ -116,12 +116,12 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
 ### <a name="menus"></a>메뉴  
 SSMA는 다음과 같은 메뉴가 포함 되어 있습니다.  
   
-|메뉴|Description|  
+|메뉴|설명|  
 |--------|---------------|  
 |**최근에 사용한 파일**|마이그레이션 마법사, 프로젝트, 작업 및 추가 하 고, Access 데이터베이스 파일을 제거 하 고, 연결할 명령을 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다.|  
 |**편집**|찾기 및 텍스트 세부 정보 페이지를 복사 하는 등의 작업에 대 한 명령을 포함 [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL 세부 정보 창에서. 열려는 합니다 **책갈피 관리** 대화 상자에서 편집 메뉴에서 관리 하는 책갈피를 클릭 합니다. 대화 상자에서 기존 책갈피 목록으로 표시 됩니다. 책갈피를 관리 하는 대화 상자의 오른쪽에 단추를 사용할 수 있습니다.|  
 |**보기**|포함 된 **메타 데이터 탐색기 동기화** 명령입니다. 그러면 액세스 메타 데이터 탐색기 간에 개체를 동기화 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB 메타 데이터 탐색기입니다. 표시 하거나 숨기려면 명령도 포함 됩니다는 **출력** 및 **오류 목록** 창과 옵션 **레이아웃** 레이아웃을 사용 하 여 관리 합니다.|  
-|**Tools**|보고서 만들기, 데이터 내보내기, 개체 및 데이터 마이그레이션, 테이블을 연결 하는 명령을 포함 하 고 대화 상자 프로젝트 설정과 전역에 대 한 액세스를 제공 합니다.|  
+|**도구**|보고서 만들기, 데이터 내보내기, 개체 및 데이터 마이그레이션, 테이블을 연결 하는 명령을 포함 하 고 대화 상자 프로젝트 설정과 전역에 대 한 액세스를 제공 합니다.|  
 |**도움말**|SSMA 데 및에 대 한 액세스를 제공 합니다 **에 대 한** 대화 상자.|  
   
 ### <a name="output-pane-and-error-list-pane"></a>출력 창과 오류 목록 창  
@@ -131,6 +131,6 @@ SSMA는 다음과 같은 메뉴가 포함 되어 있습니다.
   
 -   오류 목록 창을 정렬할 수 있는 목록에서 오류, 경고 및 정보 메시지를 보여 줍니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0575fccd-4641-478d-a3cc-5a764e35bae2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: decb09098cee4b9ab6473e3c622b9917a89e9b09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23234a490f664c4be0811152b2b77ae7c0b73761
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069828"
 ---
 # <a name="file-based-driver-diagnostic-example"></a>파일 기반 드라이버 진단 예제
 파일 기반 드라이버는 ODBC 드라이버 및 데이터 원본으로 작동합니다. 생성할 수 있습니다 따라서 오류 및 경고를 모두 구성 요소로 데이터 원본 및 ODBC 연결에서 합니다. 이기 때문에 드라이버 관리자와 인터페이스 하는 구성 요소 형식 및 인수에 대 한 반환 **SQLGetDiagRec**합니다.  

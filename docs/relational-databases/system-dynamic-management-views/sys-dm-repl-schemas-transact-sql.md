@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 430f7d53baa507a86f4b9060a41ce513adeef904
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 152a8b7f4c933874d8190b95404cbbeb91bb098f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088578"
 ---
 # <a name="sysdmreplschemas-transact-sql"></a>sys.dm_repl_schemas(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "56031184"
   복제로 게시된 테이블 열에 대한 정보를 반환합니다.  
   
  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**artcache_schema_address**|**varbinary(8)**|게시된 테이블 아티클에 대한 캐시된 스키마 구조의 메모리 내 주소입니다.|  
 |**tabid**|**bigint**|복제된 테이블 ID입니다.|  
@@ -84,7 +83,7 @@ ms.locfileid: "56031184"
 ## <a name="permissions"></a>사용 권한  
  호출 하려면 게시 데이터베이스에 대 한 VIEW DATABASE STATE 권한이 필요 **dm_repl_schemas**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  현재 복제 아티클 캐시에 로드되어 있는 복제된 데이터베이스 개체에 대한 정보만 반환됩니다.  
   
 ## <a name="see-also"></a>관련 항목  

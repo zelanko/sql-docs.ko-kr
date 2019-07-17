@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5ad9e12c-2cdb-4dd2-8703-05a23242d19d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6121c75390e7493052a16b2e898eac69283e41ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1fbc3a8f74b21bd5a53bdd874b5c41ef522e29f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294566"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029014"
 ---
 # <a name="installing-ssma-components-on-sql-server-sybasetosql"></a>SQL Server에 SSMA 구성 요소 설치(SybaseToSQL)
 SSMA를 서버 쪽 데이터 마이그레이션에 사용할을 설치 하는 것 외에도 설치 해야 구성 요소가 실행 하는 컴퓨터의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 이러한 구성 요소에는 데이터 마이그레이션 및 Sybase 공급자 서버-투-서버 연결을 사용 하도록 지 원하는 SSMA 확장 팩을 포함 합니다.  

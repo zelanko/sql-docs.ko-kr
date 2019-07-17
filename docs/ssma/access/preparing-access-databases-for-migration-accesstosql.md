@@ -21,12 +21,12 @@ ms.assetid: 9b80a9e0-08e7-4b4d-b5ec-cc998d3f5114
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 9495ff7a58da124255cc6bf5674d92ebeef4c2b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58988d31687cacdce2954d8e4098d509a9dcbb2b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299475"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260219"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Access 데이터베이스 (AccessToSQL) 마이그레이션 준비
 Access 데이터베이스를 마이그레이션하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 마이그레이션하고 해당 데이터베이스 마이그레이션에 대 한 준비 되었는지 확인 하는 데이터베이스를 결정 해야 합니다.  
@@ -75,6 +75,6 @@ Access 데이터베이스를 백업 하는 **도구** 메뉴에서 **Database Ut
 ### <a name="documenting-databases"></a>데이터베이스 문서화  
 데이터베이스 개체, 파일 크기 및 사용 권한과 액세스 데이터베이스의 목록과 같은 속성을 문서화할 수도 있습니다. Access에서이 문서에서 생성 하는 **도구** 메뉴에서 **분석**를 클릭 하 고 **문서화**합니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [SQL Server에 대 한 액세스 응용 프로그램 연결](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

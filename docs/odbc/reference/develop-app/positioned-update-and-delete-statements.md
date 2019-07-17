@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b37bdfae5f97a453477768aca39b801c06c0701
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023287"
 ---
 # <a name="positioned-update-and-delete-statements"></a>현재 위치 업데이트 및 Delete 문
 응용 프로그램 업데이트 또는 현재 위치 업데이트를 사용 하 여 결과 집합의 현재 행을 삭제 하거나 delete 문 수 있습니다. 위치 지정 업데이트 및 삭제 문을 여 일부 데이터 원본의 경우에 지원 됩니다. 배치는 데이터 원본 지원 update 및 delete 문의 여부를 확인 하려면 응용 프로그램 호출 **SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ 특성을 1 또는 SQL_STATIC_CURSOR_ATTRIBUTES1 *정보 항목* (커서 유형)에 따라 다름. 배치에서 ODBC 커서 라이브러리를 시뮬레이션 하는 참고 update 및 delete 문의 합니다.  

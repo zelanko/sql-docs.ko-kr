@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 676fdf24-fb72-4ea0-a8d2-2b197da3c83f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f5df8d27f39918cb8ddac4dd46dd8b3ca4449c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e73790ed0684b4182021b9ff0c3c1264fe9368ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62704470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107050"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>서버에서 클라이언트로 수행되는 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62704470"
 |Date|1,7|확인|-|-|1|1,3|1,7|-|확인 (VT_BSTR)|확인|확인|4|4|  
 |Time|5,6,7|-|9|확인|6|3,6|5,6|-|확인 (VT_BSTR)|확인|확인|4|4|  
 |Smalldatetime|7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
-|DATETIME|5,7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
+|Datetime|5,7|8|9,10|10|확인|3|7|-|7(VT_DATE)|확인|확인|4|4|  
 |Datetime2|5,7|8|9,10|10|7|3|5,7|-|확인 (VT_BSTR)|확인|확인|4|4|  
 |Datetimeoffset|5,7,11|8,11|9,10,11|10,11|7,11|확인|5,7,11|-|확인 (VT_BSTR)|확인|확인|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12,9|12|12|12|7,13|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|  

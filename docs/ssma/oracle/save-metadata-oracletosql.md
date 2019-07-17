@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9e49c25f-9216-43f4-8e99-2eaab298e215
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: 8793e1ddd29d5327a02a2a4077daf4c643a8c316
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 7e45f85a26d2beaaba552707681e574bae4795cc
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625767"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266514"
 ---
 # <a name="save-metadata--oracletosql"></a>메타데이터 저장(OracleToSQL)
 합니다 **메타 데이터 저장** SSMA 프로젝트를 저장 하기 전에 메타 데이터를 로드 하 라는 대화 상자가 표시 됩니다. 오프 라인으로 사용 하 고 기술 지원 담당자와 같은 다른 사용자에 게 보낼 수 있는 전체 프로젝트 파일이이 있습니다.  

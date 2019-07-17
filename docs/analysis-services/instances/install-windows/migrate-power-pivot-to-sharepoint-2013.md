@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8df7cc04ea0682212f5a046ca4c614e83ebe9c86
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206822"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68231875"
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>SharePoint 2013으로 파워 피벗 마이그레이션
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53206822"
   
 1.  **데이터베이스를 읽기 전용으로 설정 합니다.** [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]데이터베이스 이름을 마우스 오른쪽 단추로 클릭 하 고 클릭 **속성**합니다. **옵션** 페이지에서 **데이터베이스 읽기 전용** 속성을 **True**로 설정합니다.  
   
-2.  **뒷받침하다:** SharePoint 2013 팜에 마이그레이션할 각 콘텐츠 데이터베이스 및 서비스 응용 프로그램 데이터베이스를 백업합니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 클릭한 다음 **백업**을 클릭합니다.  
+2.  **뒷받침하다:** 각 콘텐츠 데이터베이스 및 SharePoint 2013 팜에 마이그레이션할 하려는 서비스 응용 프로그램 데이터베이스를 백업 합니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 클릭한 다음 **백업**을 클릭합니다.  
   
 3.  원하는 대상 서버에 데이터베이스 백업 파일(.bak)을 복사합니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "53206822"
 5.  **데이터베이스를 읽기 / 쓰기로 설정:** 설정 합니다 **데이터베이스가 읽기 전용** 하 **False**합니다.  
   
 ##  <a name="bkmk_prepare_mount_databases"></a>웹 응용 프로그램 준비 및 콘텐츠 데이터베이스 탑재  
- 에 대 한 자세한 설명은 다음 절차를 참조 하세요 [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)합니다.  
+ 에 대 한 자세한 설명은 다음 절차를 참조 하세요 [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690) 합니다.  
   
 1.  **데이터베이스를 오프라인 상태로 만들기:**  
   
@@ -82,9 +82,9 @@ ms.locfileid: "53206822"
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     자세한 내용은 [연결 또는 콘텐츠 데이터베이스 (SharePoint Server 2010)을 분리](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx)합니다.  
+     자세한 내용은 [연결 또는 콘텐츠 데이터베이스 (SharePoint Server 2010)을 분리](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx) 합니다.  
   
-     **단계가 완료 된 상태:**  탑재 작업이 완료되면 사용자가 이전 콘텐츠 데이터베이스에 있는 파일을 볼 수 있습니다. 따라서 사용자는 문서 라이브러리에서 통합 문서를 보고 열 수 있습니다.  
+     **단계가 완료 된 상태:**  탑재 작업이 완료 되 면 사용자가 이전 콘텐츠 데이터베이스에 있는 파일을 볼 수 있습니다. 따라서 사용자는 문서 라이브러리에서 통합 문서를 보고 열 수 있습니다.  
   
     -   > [!TIP]  
         >  마이그레이션 프로세스의 이 시점에서 마이그레이션된 통합 문서에 대한 새 일정을 만들 수 있습니다. 하지만 일정은 새 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 서비스 애플리케이션 데이터베이스에서 만들어지고 기존 SharePoint 팜에서 복사한 데이터베이스에는 만들어지지 않습니다. 따라서 새 일정에는 기존 일정이 포함되지 않습니다. 다음 단계를 완료하여 기존 데이터베이스를 사용하고 기존 일정을 마이그레이션한 후에는 새 일정을 사용할 수 있습니다.  
@@ -92,7 +92,7 @@ ms.locfileid: "53206822"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>데이터베이스 탑재 시 발생하는 문제 해결  
  이 섹션에서는 데이터베이스를 탑재할 때 발생할 수 있는 문제를 요약합니다.  
   
-1.  **인증 오류:** 인증 관련 오류가 표시되면 소스 웹 응용 프로그램에서 사용하는 인증 모드를 검토합니다. 이 오류는 SharePoint 2013 웹 애플리케이션과 SharePoint 2010 웹 애플리케이션 간의 인증 불일치로 인해 발생할 수 있습니다. 자세한 내용은 [1) SharePoint 2013 팜 준비](#bkmk_prepare_sharepoint2013) 을(를) 참조하십시오.  
+1.  **인증 오류:** 인증에 관련 된 오류를 표시 되 면 소스 웹 응용 프로그램을 사용 하는 인증 모드를 검토 합니다. 이 오류는 SharePoint 2013 웹 애플리케이션과 SharePoint 2010 웹 애플리케이션 간의 인증 불일치로 인해 발생할 수 있습니다. 자세한 내용은 [1) SharePoint 2013 팜 준비](#bkmk_prepare_sharepoint2013) 을(를) 참조하십시오.  
   
 2.  **PowerPivot.Files 누락:** 누락 관련 오류가 표시 되 면 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 되 면 합니다 **spPowerPivot.msi** 설치 되지 않은 또는 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 구성 하려면 구성 도구를 사용 하지 않은 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]합니다.  
   
@@ -157,10 +157,10 @@ ms.locfileid: "53206822"
   
 -   [통합 문서 업그레이드 및 예약된 데이터 새로 고침&#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
--   [SharePoint 2013으로 업그레이드 프로세스 개요](http://go.microsoft.com/fwlink/p/?LinkId=256688) (http://go.microsoft.com/fwlink/p/?LinkId=256688)합니다.  
+-   [SharePoint 2013으로 업그레이드 프로세스 개요](http://go.microsoft.com/fwlink/p/?LinkId=256688) (http://go.microsoft.com/fwlink/p/?LinkId=256688) 합니다.  
   
--   [SharePoint 2013으로 업그레이드 하기 전에 정리 준비](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689)합니다.  
+-   [SharePoint 2013으로 업그레이드 하기 전에 정리 준비](http://go.microsoft.com/fwlink/p/?LinkId=256689) (http://go.microsoft.com/fwlink/p/?LinkId=256689) 합니다.  
   
--   [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690)합니다.  
+-   [SharePoint 2010에서 SharePoint 2013으로 데이터베이스 업그레이드](http://go.microsoft.com/fwlink/p/?LinkId=256690) (http://go.microsoft.com/fwlink/p/?LinkId=256690) 합니다.  
   
   

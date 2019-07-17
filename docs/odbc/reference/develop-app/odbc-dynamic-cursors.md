@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 628de07f90de47efb0546dff84c03f56efb0674c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086304"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 동적 커서
 동적 커서는: 동적입니다. 멤버 자격, 순서 및 커서가 열린 후에 결과 집합의 값에 대 한 변경 내용을 감지할 수 있습니다. 예를 들어 동적 커서가 두 행을 페치하고 다른 애플리케이션이 해당 행 중 하나를 업데이트하고 다른 행을 삭제한다고 가정합니다. 동적 커서 해당 행을 다시 인출 하려고 시도 삭제 된 행을 찾지 못합니다 있지만 업데이트 된 행에 대 한 새 값이 반환 됩니다.  

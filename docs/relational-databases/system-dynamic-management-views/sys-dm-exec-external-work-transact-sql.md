@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_external_work (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_external_work (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,29 +21,28 @@ helpviewer_keywords:
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a53a32f01dcf4646ee0bc12843c188b9b0e8e4c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 049bf084381adaa0bf7e817eb7ae3bdb24feb118
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097751"
 ---
-# <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact-SQL)
+# <a name="sysdmexecexternalwork-transact-sql"></a>sys.dm_exec_external_work (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
   각 compute 노드에 작업자 당 워크 로드에 대 한 정보를 반환합니다.  
   
  외부 데이터 원본 (예: Hadoop 또는 외부 SQL Server)와 통신 하는 작업을 식별 하는 쿼리 sys.dm_exec_external_work 스핀업 합니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|연결 된 PolyBase 쿼리에 대 한 고유 식별자입니다.|참조 *request_ID* 에 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |step_index|**int**|이 작업 자가 수행 하는 요청입니다.|참조 *step_index* 에 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md).|  
 |dms_step_index|**int**|이 작업 자가 실행 되는 DMS 계획의 단계입니다.|참조 [sys.dm_exec_dms_workers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)합니다.|  
 |compute_node_id|**int**|노드는 작업자에서 실행 됩니다.|참조 [sys.dm_exec_compute_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)합니다.|  
-|유형|**nvarchar(60)**|외부 작업의 형식입니다.|' 파일 분할 '|  
+|type|**nvarchar(60)**|외부 작업의 형식입니다.|' 파일 분할 '|  
 |work_id|**int**|실제 분할의 ID입니다.|보다 크거나 0입니다.|  
 |input_name|**nvarchar(4000)**|읽을 입력의 이름|Hadoop을 사용 하는 경우 파일 이름입니다.|  
 |read_location|**bigint**|오프셋 또는 위치를 읽습니다.|읽을 파일의 오프셋입니다.|  

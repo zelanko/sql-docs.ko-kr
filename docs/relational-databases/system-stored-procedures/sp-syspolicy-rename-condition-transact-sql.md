@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9f3f9b1-701b-4fce-9b42-c282656caf84
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0305e7bc2daa087483fce0472d32df0887271ba3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 077ec13d8a4cfa5fb42c0b728cd36842a6672e52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63000673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081489"
 ---
 # <a name="spsyspolicyrenamecondition-transact-sql"></a>sp_syspolicy_rename_condition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_syspolicy_rename_condition { [ @name = ] 'name' | [ @condition_id = ] conditi
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_syspolicy_rename_condition은 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
  에 대 한 값을 지정 해야 합니다 *이름을* 하거나 *condition_id*합니다. 둘 다 NULL일 수는 없습니다. 이러한 값을 가져오려면 msdb.dbo.syspolicy_conditions 시스템 뷰를 쿼리합니다.  

@@ -28,14 +28,13 @@ ms.assetid: 98820afa-74e1-4e62-b336-6111a3dede4c
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7f3bbe0b7ebe9d516ab23339632e96db184db1e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7a1d6dc5c678d4f0e523a757eabc89d18d85944
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066942"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>sql:relationship을 사용하여 관계 지정(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ ms.locfileid: "65980703"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>1\. 요소에 sql:relationship 주석 지정  
+### <a name="a-specifying-the-sqlrelationship-annotation-on-an-element"></a>A. 요소에 sql:relationship 주석 지정  
  다음과 같은 주석이 추가 된 XSD 스키마에 포함 되어 있습니다  **\<고객 >** 하 고  **\<순서 >** 요소입니다. **\<순서 >** 요소는 자식 요소를 **\<고객 >** 요소입니다.  
   
  스키마에는 **sql: relationship** 주석은에 지정 됩니다는  **\<순서 >** 자식 요소입니다. 에 정의 된 관계 자체를  **\<xsd: appinfo >** 요소입니다.  

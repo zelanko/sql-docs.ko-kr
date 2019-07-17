@@ -6,16 +6,15 @@ author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4cee4ca0edcc5a49a34b6c352ae0121bed3b40ca
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027344"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>SQL Server Linux 호스트는 Active Directory 도메인에 가입
 
@@ -141,13 +140,13 @@ SQL Server 호스트는 Active Directory 도메인에 가입 하려면 다음 �
 
 1. 사용 하 여 [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) AD 도메인에 호스트 컴퓨터를 가입 합니다. 둘 다를 먼저 설치 해야 합니다 **realmd** 및 Linux 배포판의 패키지 관리자를 사용 하 여 SQL Server 호스트 컴퓨터에서 Kerberos 클라이언트 패키지:
 
-   **RHEL:**
+   **RHEL의 경우:**
 
    ```base
    sudo yum install realmd krb5-workstation
    ```
 
-   **SUSE:**
+   **SUSE의 경우:**
 
    ```bash
    sudo zypper install realmd krb5-client

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 45897363-cfc2-44bb-817b-7561e60b7410
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 80b02e10fa148924e78159024969bad077392d99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: ae6a7bbeb70ae53280877a1f88a006743eea0655
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62864858"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264369"
 ---
 # <a name="initializing-test-cases-oracletosql"></a>테스트 사례 초기화(OracleToSQL)
 이 단계에서 새 테스트 사례에 대 한 초기 정보를 지정할 수 있습니다.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f8092182bff23580936e17923985739525309097
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038924"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>식 컨텍스트 및 쿼리 평가(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ ms.locfileid: "54256878"
   
 -   쿼리는 형식화 된 경우 **xml** 열 또는 변수와 연결 된 XML 스키마 컬렉션의 구성 요소는 정적 컨텍스트로 가져옵니다 열 또는 변수입니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
   
--   가져온 스키마에 있는 모든 원자 유형에 대해 정적 컨텍스트에서 캐스트 함수를 사용할 수도 있습니다. 다음 예에서 확인할 수 있습니다. 이 예제에서는 쿼리가 지정 되어 형식화 된에 대 한 **xml** 변수입니다. 이 변수와 연결된 XML 스키마 컬렉션은 원자 유형인 myType을 정의합니다. 이 형식의 캐스트 함수 **myType()**, 정적 분석 중에 제공 됩니다. 쿼리 식(`ns:myType(0)`)은 myType의 값을 반환합니다.  
+-   가져온 스키마에 있는 모든 원자 유형에 대해 정적 컨텍스트에서 캐스트 함수를 사용할 수도 있습니다. 다음 예에서 확인할 수 있습니다. 이 예제에서는 쿼리가 지정 되어 형식화 된에 대 한 **xml** 변수입니다. 이 변수와 연결된 XML 스키마 컬렉션은 원자 유형인 myType을 정의합니다. 이 형식의 캐스트 함수 **myType()** , 정적 분석 중에 제공 됩니다. 쿼리 식(`ns:myType(0)`)은 myType의 값을 반환합니다.  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  

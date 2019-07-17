@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d670c1dbfc94e80394cf34733b8a91aeb6cb056
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63005869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032698"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**PROCEDURE_QUALIFIER**|**sysname**|프로시저 한정자 이름입니다. 이 열은 NULL이 될 수 있습니다.|  
 |**PROCEDURE_OWNER**|**sysname**|프로시저 소유자 이름입니다. 이 열은 항상 값을 반환합니다.|  
@@ -79,7 +78,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**REMARKS**|**varchar(254)**|프로시저에 대한 설명입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이 열의 값을 반환하지 않습니다.|  
 |**PROCEDURE_TYPE**|**smallint**|프로시저 유형입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 항상 2.0을 반환합니다. 이 값은 다음 중 하나일 수 있습니다.<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  상호 운용성을 최대로 높이려면 게이트웨이 클라이언트가 퍼센트(%) 및 밑줄(_) 와일드카드 문자 등의 SQL 표준 패턴 일치만을 가정해야 합니다.  
   
  특정 저장 프로시저에 대한 현재 사용자의 실행 액세스에 관한 사용 권한 정보가 반드시 확인되는 것은 아니므로 액세스가 보장되지 않습니다. 세 부분으로 구성된 이름만 사용됩니다. 즉, 원격 저장 프로시저(네 부분으로 구성된 이름)와 로컬 저장 프로시저가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 실행되면 로컬 저장 프로시저만 반환되고 원격 저장 프로시저는 반환되지 않습니다. 결과 집합에서 서버 특성인 ACCESSIBLE_SPROC Y 인지 **sp_server_info**, 현재 사용자가 실행할 수 있는 저장된 프로시저만 반환 됩니다.  
@@ -91,7 +90,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-all-stored-procedures-in-the-current-database"></a>1\. 현재 데이터베이스의 모든 저장 프로시저 반환  
+### <a name="a-returning-all-stored-procedures-in-the-current-database"></a>A. 현재 데이터베이스의 모든 저장 프로시저 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 모든 저장 프로시저를 반환합니다.  
   
 ```  

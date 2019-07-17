@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4987701deb466148253c8418c88683d2dbfbc16b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74b718515fc03d0babbda36851f61d96f07e854a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074771"
 ---
 # <a name="import-dmx"></a>IMPORT(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +31,7 @@ IMPORT FROM <filename>
  *filename*  
  가져올 파일의 이름과 위치가 들어 있는 문자열입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  개체를 지정하지 않은 경우 .dmb 파일의 전체 내용이 로드됩니다. 서버에 없는 데이터베이스가 .dmb 파일에 포함된 경우 이 데이터베이스가 만들어집니다.  
   
  개체를 내보내거나 가져오려면 데이터베이스 관리자 또는 서버 관리자 권한이 필요합니다.  
@@ -48,7 +47,7 @@ IMPORT FROM 'C:\TEMP\Association_NEW.dmb'
  [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
- [내보내기 &AMP;#40;DMX&AMP;#41;](../dmx/export-dmx.md)   
+ [내보내기 &#40;DMX&#41;](../dmx/export-dmx.md)   
  [데이터 마이닝 개체 내보내기 및 가져오기](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 12ff1ea6-e2cc-40e6-910c-3126974a90b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79b4999db83063e8096abce8a8e1c4dcd5e3a6b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 718fc8b9a323ca6b1575021d748afde527dfb872
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062429"
 ---
 # <a name="sqlvariant-support-for-date-and-time-types"></a>날짜 및 시간 형식에 대한 sql_variant 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

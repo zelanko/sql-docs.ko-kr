@@ -21,14 +21,13 @@ ms.assetid: 1a5ad868-8602-45c4-913d-6fbb837eebb0
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fd87ee0f409a4775d2189b4947ca19eaf6b22386
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c88c55a6a846a0907664730b3c185707a30c2600
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067062"
 ---
 # <a name="identifying-key-columns-using-sqlkey-fields-sqlxml-40"></a>sql:key-fields(SQLXML 4.0)를 사용하여 키 열 식별
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "67583823"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>1\. 에 올바른 중첩 생성 될 때 \<sql: relationship > 충분 한 정보를 제공 하지 않습니다  
+### <a name="a-producing-the-appropriate-nesting-when-sqlrelationship-does-not-provide-sufficient-information"></a>A. 에 올바른 중첩 생성 될 때 \<sql: relationship > 충분 한 정보를 제공 하지 않습니다  
  이 예제에서는 위치를 보여 줍니다 **sql:-필드** 지정 해야 합니다.  
   
  다음과 같은 스키마를 살펴 보십시오. 스키마 간의 계층을 지정 합니다  **\<순서 >** 하 고  **\<고객 >** 요소가  **\<순서 >** 요소는 부모와  **\<고객 >** 는 자식 요소입니다.  

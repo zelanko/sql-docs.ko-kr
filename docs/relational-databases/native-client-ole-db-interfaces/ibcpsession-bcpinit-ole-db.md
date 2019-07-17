@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 583096d7-da34-49be-87fd-31210aac81aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66354375609cf9458a3b47f92026f68c8de76e04
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5d0ae31e4ff50521e34ddef9c7ddb839df3e18a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068131"
 ---
 # <a name="ibcpsessionbcpinit-ole-db"></a>IBCPSession::BCPInit(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ HRESULT BCPInit(
       int eDirection);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **BCPInit** 메서드는 다른 대량 복사 메서드를 호출하기 전에 호출해야 합니다. **BCPInit** 메서드는 워크스테이션과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 간의 데이터 대량 복사에 필요한 초기화를 수행합니다.  
   
  **BCPInit** 메서드는 데이터 파일이 아니라 데이터베이스 원본 또는 대상 테이블의 구조를 검사합니다. 또한 데이터베이스 테이블, 뷰 또는 SELECT 결과 집합에 있는 각 열을 기반으로 데이터 파일의 데이터 형식 값을 지정합니다. 이 지정에는 각 열의 데이터 형식, 데이터에 길이 또는 Null 표시자 및 종결자 바이트 문자열이 있는지 여부, 고정 길이 데이터 형식의 길이가 포함됩니다. **BCPInit** 메서드는 이러한 값을 다음과 같이 설정합니다.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34fa889c59a6413e5c72138abaa4089186befa46
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2749e964b33179d5bf87ee6d464d251c14ee82d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108144"
 ---
 # <a name="spdbmmonitorchangealert-transact-sql"></a>sp_dbmmonitorchangealert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -92,11 +91,11 @@ sp_dbmmonitorchangealert database_name
   
 |*alert_id*|성능 메트릭|경고 임계값|경고 사용 여부|  
 |-----------------|------------------------|-----------------------|-----------------------------|  
-|1|보내지 않은 가장 오래된 트랜잭션|30분|사용자 계정 컨트롤|  
-|2|보내지 않은 로그|10,000KB|사용자 계정 컨트롤|  
-|3|복원되지 않은 로그|10,000KB|사용자 계정 컨트롤|  
+|1|보내지 않은 가장 오래된 트랜잭션|30분|예|  
+|2|보내지 않은 로그|10,000KB|예|  
+|3|복원되지 않은 로그|10,000KB|예|  
 |4|미러 커밋 오버헤드|1,000밀리초|아니요|  
-|5|보존 기간|8시간|사용자 계정 컨트롤|  
+|5|보존 기간|8시간|예|  
   
 ```  
 EXEC sp_dbmmonitorchangealert AdventureWorks2012, 1, 30, 1 ;  

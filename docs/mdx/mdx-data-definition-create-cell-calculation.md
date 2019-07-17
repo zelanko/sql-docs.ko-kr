@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7e69aa9e3da29abe054aaf272c5fe3ed12172a4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 411ae301c2f0ce858b7273c6bb721269f709b5c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63309139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098483"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>MDX 데이터 정의 - CREATE CELL CALCULATION
 
@@ -68,7 +67,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
  *Scalar_Expression*  
  유효한 MDX 스칼라 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  클라이언트 응용 프로그램은 계산 셀을 사용하여 사용자 지정 롤업 수식 또는 계산 멤버의 경우에서와 같은 전체 셀 집합 대신 특정 셀 집합에 대한 롤업 값을 지정할 수 있습니다. 예를 들어 `{[Canada],[Time].[2000]}`에 의해 정의된 집합의 임의의 셀에 수식으로 정의된 값이 포함되도록 지정할 수 있습니다. 이 집합 내에 포함되지 않는 다른 셀은 일반적으로 계산됩니다.  
   
 > [!NOTE]  

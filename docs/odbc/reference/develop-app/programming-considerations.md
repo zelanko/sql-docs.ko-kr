@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6a1b7b7e-5d08-4df8-aa4a-688da7da1b30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f7c22eea63e00126eb674532736071ed39aa9a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c12a94abcc8f31071bb13639c6df1e9c1e2e264a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023261"
 ---
 # <a name="programming-considerations"></a>프로그래밍 고려 사항
 이 섹션에서는 ODBC 응용 프로그램 및 드라이버를 작성 하는 데 관련 된 항목의 수를 간략히 설명 합니다.  

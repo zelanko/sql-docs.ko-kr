@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_function_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_function_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 935b63a38cbef585c33d2241652f4951189b61b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e67a50287e0878a3dcc0779bb4a78dbcbbdd0260
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462549"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259251"
 ---
-# <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
+# <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   캐시 된 함수에 대 한 성능 통계를 집계 하는 반환 합니다. 각 함수 캐시 된 계획에 대 한 하나의 행을 반환 하는 뷰 및 행의 유효 기간은 함수 동안 캐시 합니다. 함수는 캐시에서 제거 되 면 해당 행이 뷰에서 제거 됩니다. 이때 Performance Statistics SQL 추적 이벤트를 발생 비슷합니다 **sys.dm_exec_query_stats**합니다. 메모리에서 함수 및 CLR 스칼라 함수를 비롯 한 스칼라 함수에 대 한 정보를 반환 합니다. 테이블 반환 함수에 대 한 정보를 반환 하지 않습니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "66462549"
 > 초기 쿼리 **sys.dm_exec_function_stats** 중인 서버에서 현재 실행 중인 작업이 있을 경우 부정확 한 결과 생성할 수 있습니다. 쿼리를 다시 실행하면 보다 정확한 결과를 확인할 수 있습니다.  
   
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|함수가 상주 하는 데이터베이스 ID입니다.|  
 |**object_id**|**int**|함수의 개체 id.|  
@@ -76,7 +75,7 @@ ms.locfileid: "66462549"
 ## <a name="permissions"></a>사용 권한  
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
   
 ## <a name="examples"></a>예  
  다음 예에서는 평균 경과 시간으로 식별 된 상위 10 개의 함수에 대 한 정보를 반환 합니다.  
@@ -92,10 +91,10 @@ ORDER BY [total_worker_time] DESC;
   
 ## <a name="see-also"></a>관련 항목  
  [실행 관련 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_query_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
- [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
- [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+ [sys.dm_exec_trigger_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+ [sys.dm_exec_procedure_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
   
   

@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: 7a88d7225d574794b4dc50ae30a9205b1cac08e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287467"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264249"
 ---
 # <a name="data-migration-report--oracletosql"></a>데이터 마이그레이션 보고서(OracleToSQL)
 합니다 **데이터 마이그레이션 보고서** 대화 상자가 나타나면 데이터를 마이그레이션한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "63287467"
 **상태**  
 대상 데이터베이스에 원본에서 데이터 마이그레이션 상태를 보여 줍니다.  
   
-**보낸 사람**  
+**From**  
 원본 테이블입니다.  
   
 **수행할 작업**  

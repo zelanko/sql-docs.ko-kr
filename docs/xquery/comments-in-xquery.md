@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4d977268-de9d-4bf0-b310-b63f6a0fb0db
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 32047da9a95190f0099d1a84bceef13540143223
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2c5adad052a33dc4d8b86b488ca1cc44737790e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039023"
 ---
 # <a name="comments-in-xquery"></a>XQuery의 주석
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

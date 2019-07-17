@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9727df6d-b0f5-464b-a349-d32b626cedef
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 90c6c1a75c975d8c4c79c87516ac628cfab15690
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: b1b77b5ac7562ffcf39e065fb99df9da5b1f6ca6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62991461"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266570"
 ---
 # <a name="project-settings-gui-oracletosql"></a>프로젝트 설정(GUI)(OracleToSQL)
 GUI 프로젝트 설정에 나타나는 데이터를 구성할 수는 **데이터** 여부 변환 후 평가 보고서를 표시 하려면 여부와 탭 합니다.  

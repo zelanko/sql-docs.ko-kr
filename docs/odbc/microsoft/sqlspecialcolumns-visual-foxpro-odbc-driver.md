@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b72a978d-6a60-475a-b7d9-c424d77bbe30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c4095448b8a9068dad3c4df1c28065e7cffbd67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b690cceecb6c9980f5d84e96bccb1b02f014c026
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62687511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093091"
 ---
 # <a name="sqlspecialcolumns-visual-foxpro-odbc-driver"></a>SQLSpecialColumns(Visual FoxPro ODBC 드라이버)
 > [!NOTE]  

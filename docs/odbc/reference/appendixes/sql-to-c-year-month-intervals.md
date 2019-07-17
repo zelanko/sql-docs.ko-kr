@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01af57739f23db586991f8a54d14b90b47f15933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c7412226dd0674022da022b0a0a63e5bf2063cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065040"
 ---
 # <a name="sql-to-c-year-month-intervals"></a>SQL에서 C로: 연-월 간격
 
@@ -35,11 +34,11 @@ ms.locfileid: "63259582"
 
 |C 형식 식별자|테스트|TargetValuePtr|StrLen_or_IndPtr|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_INTERVAL_MONTH[a]<br /><br /> SQL_C_INTERVAL_YEAR[a]<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH[a]|잘리지 후행 필드 부분<br /><br /> 잘린 후행 필드 부분<br /><br /> 원본에서 데이터를 저장할 만큼 충분히 크지 않습니다 대상의 전체 자릿수를 유도|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT[b]<br /><br /> SQL_C_UTINYINT[b]<br /><br /> SQL_C_USHORT[b]<br /><br /> SQL_C_SHORT[b]<br /><br /> SQL_C_SLONG[b]<br /><br /> SQL_C_ULONG[b]<br /><br /> SQL_C_NUMERIC[b]<br /><br /> SQL_C_BIGINT[b]|간격 정밀도 단일 필드 및 잘림 없이 데이터 변환 되었습니다.<br /><br /> 간격 정밀도 단일 필드 및 잘린 전체<br /><br /> 단일 필드 간격 정밀도가 없습니다.|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> 데이터의 바이트 길이<br /><br /> C 데이터 형식의 크기|n/a<br /><br /> 22003<br /><br /> 22015|  
-|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> 정의되지 않음|데이터의 바이트 길이<br /><br /> 정의되지 않음|n/a<br /><br /> 22003|  
-|SQL_C_CHAR|문자 바이트 길이 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 > = *BufferLength*|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|문자 길이 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 > = *BufferLength*|data<br /><br /> 잘린된 데이터<br /><br /> 정의되지 않음|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> 정의되지 않음|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_INTERVAL_MONTH[a]<br /><br /> SQL_C_INTERVAL_YEAR[a]<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH[a]|잘리지 후행 필드 부분<br /><br /> 잘린 후행 필드 부분<br /><br /> 원본에서 데이터를 저장할 만큼 충분히 크지 않습니다 대상의 전체 자릿수를 유도|data<br /><br /> 잘린된 데이터<br /><br /> Undefined|데이터의 바이트 길이<br /><br /> 데이터의 바이트 길이<br /><br /> Undefined|n/a<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT[b]<br /><br /> SQL_C_UTINYINT[b]<br /><br /> SQL_C_USHORT[b]<br /><br /> SQL_C_SHORT[b]<br /><br /> SQL_C_SLONG[b]<br /><br /> SQL_C_ULONG[b]<br /><br /> SQL_C_NUMERIC[b]<br /><br /> SQL_C_BIGINT[b]|간격 정밀도 단일 필드 및 잘림 없이 데이터 변환 되었습니다.<br /><br /> 간격 정밀도 단일 필드 및 잘린 전체<br /><br /> 단일 필드 간격 정밀도가 없습니다.|data<br /><br /> 잘린된 데이터<br /><br /> Undefined|C 데이터 형식의 크기<br /><br /> 데이터의 바이트 길이<br /><br /> C 데이터 형식의 크기|n/a<br /><br /> 22003<br /><br /> 22015|  
+|SQL_C_BINARY|데이터의 바이트 길이 < = *BufferLength*<br /><br /> 데이터의 바이트 길이 > *BufferLength*|data<br /><br /> Undefined|데이터의 바이트 길이<br /><br /> Undefined|n/a<br /><br /> 22003|  
+|SQL_C_CHAR|문자 바이트 길이 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 > = *BufferLength*|data<br /><br /> 잘린된 데이터<br /><br /> Undefined|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> Undefined|n/a<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|문자 길이 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 < *BufferLength*<br /><br /> (소수) 달리 전체 자릿수 > = *BufferLength*|data<br /><br /> 잘린된 데이터<br /><br /> Undefined|C 데이터 형식의 크기<br /><br /> C 데이터 형식의 크기<br /><br /> Undefined|n/a<br /><br /> 01004<br /><br /> 22003|  
   
  SQL 형식 [a]는 연도-월 간격 연도-월 간격 C 형식으로 변환할 수 있습니다.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fa80ff3359e3bbbed9e28044cce7514006c40f10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5f4b7101718ea8372c9635a064dc81e1d8f6c1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023388"
 ---
 # <a name="optimistic-concurrency"></a>낙관적 동시성
 *낙관적 동시성* 이라는 낙관적 가정에서 이름을 파생는 트랜잭션 간 충돌이 거의 발생; 충돌을 다른 트랜잭션이 업데이트 하거나 읽기 시간 사이 데이터의 행을 삭제 하는 경우 발생 라고 합니다. 현재 트랜잭션 시간을 업데이트 또는 삭제 됩니다. 반대입니다 *비관적 동시성* 잠금 또는 응용 프로그램 개발자가 이러한 충돌은 일반화는에 있습니다.  

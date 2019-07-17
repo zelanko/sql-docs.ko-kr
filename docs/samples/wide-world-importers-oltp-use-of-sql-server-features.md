@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 914ec6be6d73bf6411a700ab6fc9586743c40527
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: a2dfe7b9efa78d03a2233eedaa040e47d6f2b25c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067661"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>SQL Server 기능 및 기능 사용
 
@@ -43,7 +42,7 @@ WideWorldImporters는 다양 한 SQL Server 2016에 도입 된 최신 기능을 
 |전체 텍스트 인덱스|전체 텍스트 인덱스에는 사용자, 고객 및 StockItems 검색 향상 시킵니다. 전체 텍스트 인덱싱에 SQL Server 인스턴스에 설치 되어 있는 경우에 인덱스를 쿼리에 적용 됩니다. 비영구적 계산된 열이 전체 텍스트 인덱싱 StockItems 테이블에 데이터를 만들기 위해 사용 됩니다.<br/><br/>`CONCAT` 전체 텍스트 인덱스는 SearchData 만들려면 필드를 연결 하는 데 사용 됩니다.<br/>샘플의 전체 텍스트 인덱스의 사용을 사용 하려면 데이터베이스에 다음 문을 실행 합니다.<br/><br/>`EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>프로시저는 만듭니다 기본 전체 텍스트 카탈로그 하나 존재 하지 않는 한 다음 그 뷰의 전체 텍스트 버전을 사용 하 여 검색 뷰를 대체 하는 경우).<br/><br/>참고를 설치 하는 동안 전체 텍스트 옵션을 선택 하는 SQL Server에서 전체 텍스트 인덱스를 사용 해야 합니다. Azure SQL Database는 필요 하지 않습니다 및 전체 텍스트 인덱스를 사용 하도록 설정 하기 위한 특정 구성이 있습니다.|
 |지속형된 계산된 열 인덱싱|SupplierTransactions CustomerTransactions에 사용 되는 지속형된 계산된 열을 인덱스.|
 |CHECK 제약 조건|상대적으로 복잡 한 check 제약 조건에 `Sales.SpecialDeals`입니다. 이렇게 하면 하나 및 하나만 DiscountAmount, DiscountPercentage 하 고 UnitPrice 구성 됩니다.|
-|Unique 제약 조건|많은 생성 (및 unique 제약 조건)에 다는 설정 `Warehouse.StockItemStockGroups`합니다.|
+|UNIQUE 제약 조건|많은 생성 (및 unique 제약 조건)에 다는 설정 `Warehouse.StockItemStockGroups`합니다.|
 |테이블 분|(데이터베이스의 전체 버전) 테이블 `Sales.CustomerTransactions` 하 고 `Purchasing.SupplierTransactions` 파티션 함수를 사용 하 여 연도별로 분할 되 `PF_TransactionDate` 및 파티션 구성표 `PS_TransactionDate`합니다. 분할은 큰 테이블의 관리 효율성을 개선 하기 위해 사용 됩니다.|
 |목록 처리|예제 테이블 형식 `Website.OrderIDList` 제공 됩니다. 예제 프로시저를 사용 하 고 `Website.InvoiceCustomerOrders`입니다. 에 응용 프로그램에서 왕복을 최소화 하기 위해 단일 주문 것 보다는 주문 목록을 처리 기능을 보여 줍니다 공통 테이블 식 (Cte), TRY/CATCH, JSON_MODIFY, XACT_ABORT, NOCOUNT, THROW 및 XACT_STATE를 사용 하는 절차는 데이터베이스 엔진입니다.|
 |GZip 압축|에 `Warehouse.VehicleTemperature` 뷰에서 해당 테이블 전체 센서 데이터를 보유 합니다. 하지만이 데이터가 이전 몇 개월 경우 공간을 절약 하기 위해 압축 됩니다. COMPRESS 함수는 GZip 압축을 사용합니다.<br/><br/>뷰 `Website.VehicleTemperatures` 이전에 압축 된 데이터를 검색할 때 DECOMPRESS 함수를 사용 합니다.|

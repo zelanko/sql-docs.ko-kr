@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5067855-20c9-456f-8d63-f375b4297f2e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f5eab1c3bf6891f10c897966035dced2ffdc10ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db5d2cb8decde9828acd3005551717ac9f6cef32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096590"
 ---
 # <a name="create-table-statement-limitations"></a>CREATE TABLE 문 제한 사항
 Microsoft Access, Microsoft Excel 또는 Paradoxdriver를 사용 하면 지정 되지 않은 (또는 0으로 지정 된) 텍스트 또는 이진 열의 길이, 열 길이 255로 설정 됩니다.  

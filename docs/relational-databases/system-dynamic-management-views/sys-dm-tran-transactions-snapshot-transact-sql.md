@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 03f64883-07ad-4092-8be0-31973348c647
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d24ed8e2fdcf3a9475f999bf127eae3e8553dc86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b91ac554186c37b2e074dd3faded49a01259222e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704331"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262695"
 ---
 # <a name="sysdmtrantransactionssnapshot-transact-sql"></a>sys.dm_tran_transactions_snapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ dm_tran_transactions_snapshot
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**transaction_sequence_num**|**bigint**|스냅숏 트랜잭션의 XSN(트랜잭션 시퀀스 번호)입니다.|  
 |**snapshot_id**|**int**|행 버전 관리를 사용하여 커밋된 읽기 스냅숏으로 시작된 각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문의 스냅숏 ID입니다. 이 값은 행 버전 관리를 사용하여 커밋된 읽기로 실행되는 각 쿼리를 지원하는 트랜잭션이 일관된 데이터베이스 뷰를 생성하는 데 사용됩니다.|  
@@ -77,9 +76,9 @@ dm_tran_transactions_snapshot
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  스냅숏 트랜잭션이 시작될 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 해당 시점에 활성 상태인 모든 트랜잭션을 기록합니다. **sys.dm_tran_transactions_snapshot** 모든 현재 활성 스냅숏 트랜잭션에 대해이 정보를 보고 합니다.  
   
  각 트랜잭션은 트랜잭션이 시작될 때 할당된 트랜잭션 시퀀스 번호로 식별됩니다. 트랜잭션은 BEGIN TRANSACTION 또는 BEGIN WORK 문이 실행될 때 시작됩니다. 그러나 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 BEGIN TRANSACTION 또는 BEGIN WORK 문 이후 데이터에 액세스하는 첫 번째 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 때 트랜잭션 시퀀스 번호를 할당합니다. 트랜잭션 시퀀스 번호는 1씩 증가합니다.  

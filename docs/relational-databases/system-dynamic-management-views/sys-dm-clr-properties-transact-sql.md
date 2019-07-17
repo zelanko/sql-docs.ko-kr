@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 220d062f-d117-46e7-a448-06fe48db8163
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f7ff1fd534876d177288dad396276e95d78d681
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735711"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266060"
 ---
 # <a name="sysdmclrproperties-transact-sql"></a>sys.dm_clr_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47735711"
   
  합니다 **버전** 속성의.NET Framework 버전을 나타내는 및 서버에 호스팅된 CLR입니다.  
   
- **sys.dm_clr_properties** 동적 관리 뷰는 6 개의 서로 다른 값을 반환할 수 있습니다 합니다 **상태** 의 상태를 반영 하는 속성을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호스팅된 CLR. 반환할 수 있습니다.  
+ **sys.dm_clr_properties** 동적 관리 뷰는 6 개의 서로 다른 값을 반환할 수 있습니다 합니다 **상태** 의 상태를 반영 하는 속성을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 호스팅된 CLR. 구현되지 않은 것은 다음과 같습니다.  
   
 -   Mscoree is not loaded.  
   
@@ -69,13 +68,13 @@ ms.locfileid: "47735711"
   
  **CLR 중지 된 상태** 은 경우에 표시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 종료 중입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  속성 및 값이 뷰의 이후 버전에서 변경 될 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR 통합 기능의 향상 된 기능 때문입니다.  
   
 ## <a name="permissions"></a>사용 권한  
   
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
 
 ## <a name="examples"></a>예  
  다음 예에서는 호스팅된 CLR에 대한 정보를 검색합니다.  

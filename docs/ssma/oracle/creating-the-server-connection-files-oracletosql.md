@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 002f129e-0868-48ad-a4b4-c68b5007e12e
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 8f6eabe706197e8ab2bfb882510b6063bf4e884c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: d7316721cedc7a3546439fe27048126ad2805582
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287686"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266106"
 ---
 # <a name="creating-the-server-connection-files-oracletosql"></a>서버 연결 파일 만들기(OracleToSQL)
 스크립트 파일의 서버 섹션에서 또는 별도 서버 연결 파일에 서버 정보를 지정할 수 있습니다. 서버 연결 파일에 대 한 명령줄 매개 변수는 `-c <serverconnectionfile>`합니다. 동일한 서버 id가 스크립트 파일과 서버 연결 파일에 있는 스크립트 파일의 서버 정의 간주 됩니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "63287686"
   
 </sql-server>  
 ```  
-**예: 2**  
+**예제: 2**  
   
 ```  
 <!--Sample of server connection file commands -->  

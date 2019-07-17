@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e7972fb72607edca8c1599c2d028b073c184642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49552e7333d8cac2b55a9ae6e8dd7a41ff4c5955
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094328"
 ---
 # <a name="serializability"></a>직렬화 가능성
 트랜잭션 것 이상적 *serializable*합니다. 트랜잭션 같으면 트랜잭션이 동시에 실행 결과-순차적으로 실행의 결과로 직렬화 할 수 있다고 합니다. 즉, 다른 하나입니다. 중요 하지 않습니다 하는 트랜잭션 결과 트랜잭션의 모든 혼합을 반영 하지 않는 먼저 실행 합니다.  

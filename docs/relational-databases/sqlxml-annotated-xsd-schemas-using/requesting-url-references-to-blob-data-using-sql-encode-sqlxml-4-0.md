@@ -19,14 +19,13 @@ ms.assetid: 2f8cd93b-c636-462b-8291-167197233ee0
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b79a27759459e84b4b1d879914aca1665c1c0043
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 148eb98bb160557d4188941d293d96c0e5ac5ee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067018"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>sql:encode를 사용하여 BLOB 데이터에 대한 URL 참조 요청(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "65980771"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>1. sql:encode를 지정하여 BLOB 데이터에 대한 URL 참조 얻기  
+### <a name="a-specifying-sqlencode-to-obtain-a-url-reference-to-blob-data"></a>A. sql:encode를 지정하여 BLOB 데이터에 대한 URL 참조 얻기  
  이 예에서 매핑 스키마 지정 **sql: 인코딩** 에 **LargePhoto** (Base 64-에서 이진 데이터를 검색 하는 대신 특정 제품 사진에 대 한 URI 참조를 검색 하는 특성 인코딩된 형식)입니다.  
   
 ```  

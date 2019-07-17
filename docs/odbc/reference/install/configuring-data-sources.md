@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f11985c2-c054-4ab4-840e-aca4c585c9d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 865534b607e8f8de0f0058f712ed12a87c50804d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa845e44e2f8999ed4e103583acb0536e2aca096
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068624"
 ---
 # <a name="configuring-data-sources"></a>데이터 원본 구성
 데이터 원본에 대 한 정보를 시스템 레지스트리에 저장 됩니다. 사용자 관리 프로그램을 통해 데이터 원본 정보를 수정 합니다. ODBC 관리자, ODBC 제어판 장치 또는 응용 프로그램 또는 드라이버 개발자가 작성 하는 관리 프로그램을 수 있습니다.  

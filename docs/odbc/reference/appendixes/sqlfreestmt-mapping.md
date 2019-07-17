@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 267d95f2-4f0c-47ab-9411-5afe105215a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b12c5286522bd0f1f8fbb40f101302aaa481cb8
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: a92af35d8a1b1e98a484c69d7d2e66bf5bef3196
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086085"
 ---
 # <a name="sqlfreestmt-mapping"></a>SQLFreeStmt 매핑
 응용 프로그램을 호출할 때 **SQLFreeStmt** 사용 하 여는 *옵션* ODBC 통해 SQL_DROP 인수의 *3.x* 드라이버에 대 한 호출  

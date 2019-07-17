@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58d5b166-2578-4699-a560-1f1e6d86c49a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b366ddd7a665112e6b40b814b13037a517d623a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f3aad1537475e288cff06725b5dbd0fe2383924
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107239"
 ---
 # <a name="statement-parameters"></a>명령문 매개 변수
 A *매개 변수* SQL 문에서 변수입니다. 예를 들어 부품 테이블에는 PartID, 설명 및 가격 이라는 열에는 것으로 가정 합니다. 매개 변수 없이 부품을 추가 하는 필요와 같은 SQL 문 생성 합니다.  

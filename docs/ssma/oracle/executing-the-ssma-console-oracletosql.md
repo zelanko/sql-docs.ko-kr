@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 210f25b55c2cc2536d4c6f00f215b27eac5f7be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 5cb3ff58156d35a348a432e6d7edb7f794e59e6f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287225"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266088"
 ---
 # <a name="executing-the-ssma-console-oracletosql"></a>SSMA 콘솔 실행(OracleToSQL)
 Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 강력한 집합을 제공 합니다. 이 섹션에 열거로 특정 표준 스크립트 파일 명령을 사용 하는 콘솔 응용 프로그램 합니다.  
@@ -38,7 +38,7 @@ create-new-project
   
 -   `project-name` 프로젝트의 이름을 나타냅니다. {string}  
   
--   `overwrite-if-exists`선택적 특성 기존 프로젝트를 덮어써야 하는 경우를 나타냅니다. {boolean}  
+-   `overwrite-if-exists`선택적 특성 기존 프로젝트를 덮어써야 하는 경우를 나타냅니다. {부울}  
   
 -   `project-type:`선택적 특성입니다. 프로젝트 형식 즉, "sql server 2005" 프로젝트 또는 프로젝트 "sql server 2008" 또는 "sql server 2012" 또는 "sql server 2014" 프로젝트 프로젝트나 "sql azure" 나타냅니다. 기본값은 "sql server 2014"입니다.  
   
@@ -364,7 +364,7 @@ convert-schema
 ```  
 **Command**  
   
-migrate-data  
+데이터 마이그레이션  
   
 대상에 원본 데이터를 마이그레이션합니다.  
   
@@ -463,7 +463,7 @@ map-schema
   
 **Command**  
   
-synchronize-target  
+동기화 대상  
   
 -   대상 데이터베이스를 사용 하 여 대상 개체를 동기화합니다.  
   
@@ -528,7 +528,7 @@ synchronize-target
 ```  
 **Command**  
   
-refresh-from-database  
+데이터베이스에서 새로 고침  
   
 -   데이터베이스에서 원본 개체를 새로 고칩니다.  
   

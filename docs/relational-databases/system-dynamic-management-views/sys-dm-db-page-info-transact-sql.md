@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_page_info (Transact-SQL) | Microsoft Docs
+title: sys.dm_db_page_info (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -20,12 +20,12 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 71e32cbe889a6c8236bf536a83109b37e6845842
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 31b1a282e6d68bf9a31f26536926f9dccd4ff6de
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67832999"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263821"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
@@ -39,7 +39,7 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 ``` 
 
 ## <a name="arguments"></a>인수  
-*DatabaseId* | NULL | DEFAULT     
+*DatabaseId* | NULL | 기본     
 데이터베이스의 ID입니다. *DatabaseId* 됩니다 **smallint**합니다. 유효한 입력은 데이터베이스의 ID 번호. 하지만 기본값은 NULL,이 매개 변수에 대해 NULL 값을 오류가 발생 하면를 전송 합니다.
  
 *FileId* | NULL | 기본   
@@ -123,7 +123,7 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-all-the-properties-of-a-page"></a>1\. 페이지의 모든 속성 표시
+### <a name="a-displaying-all-the-properties-of-a-page"></a>A. 페이지의 모든 속성 표시
 모든 페이지 정보를 사용 하 여 하나의 행을 반환 하는 다음 쿼리는 주어진 `database_id`, `file_id`, `page_id` 기본 모드 ('제한')와 함께
 
 ```sql

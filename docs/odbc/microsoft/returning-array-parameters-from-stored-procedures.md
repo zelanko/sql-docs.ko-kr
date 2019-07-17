@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2018069b-da5d-4cee-a971-991897d4f7b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a154a8739438b76f12e311d0dec0e9d98d886457
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be89e4c9cc544048dada325c563ac1faa6cfd2d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987976"
 ---
 # <a name="returning-array-parameters-from-stored-procedures"></a>저장 프로시저에서 배열 매개 변수 반환
 > [!IMPORTANT]  

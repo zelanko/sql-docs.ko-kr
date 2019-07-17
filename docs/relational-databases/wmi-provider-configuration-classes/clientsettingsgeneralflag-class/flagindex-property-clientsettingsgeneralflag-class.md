@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1bf59a55-f4c4-491c-8385-17276c3fe14b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c9c10327b6187b0cd789bd41bb3c0916e04451d2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ccf6fdee46acc210b1a528c23523bcceac385d84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117735"
 ---
 # <a name="flagindex-property-clientsettingsgeneralflag-class"></a>FlagIndex 속성(ClientSettingsGeneralFlag 클래스)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ object.FlagIndex [= value]
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  U**int32** 플래그의 인덱스 값을 지정 하는 값입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="see-also"></a>관련 항목  
  [클라이언트 프로토콜 구성](https://technet.microsoft.com/library/ms181035.aspx)  

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 20aa5b27-4a2c-46e7-8356-beb0eebf4b7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15f53b8d70f912c799cc1a6eb21b36d662d31a2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91e832a0f2abdfea91a63f17414bf431e7275103
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128898"
 ---
 # <a name="logged-vs-unlogged-modifications"></a>기록되는 수정 및 기록되지 않는 수정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

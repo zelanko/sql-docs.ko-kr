@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 42b26160-354f-460c-a1e4-167017af3a0b
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: 293b599c8927115c8b82a75d783c222cbf53e8ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 660644dc59e0c787a4620d0b15341d1cc7eec0b0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62865092"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263009"
 ---
 # <a name="global-settings-output-window--oracletosql"></a>전역 설정(출력 창)(OracleToSQL)
 사용 된 **전역 설정** SSMA에 대 한 설정을 지정 하려면 대화 상자.  

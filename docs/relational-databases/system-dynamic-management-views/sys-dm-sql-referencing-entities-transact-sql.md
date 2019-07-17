@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf1f5b633b432d24ea143d857dcd7fbdf72968fd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b5bd5257e06b784418625616c71cfb7d3e5510a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090660"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "53204542"
   
 -   서버 수준 DDL 트리거  
   
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]합니다.  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -75,7 +74,7 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |referencing_schema_name|**sysname**|참조 엔터티가 속한 스키마입니다. Null을 허용합니다.<br /><br /> 데이터베이스 수준 및 서버 수준 DDL 트리거의 경우 NULL입니다.|  
 |referencing_entity_name|**sysname**|참조 엔터티의 이름입니다. Null을 허용하지 않습니다.|  
@@ -97,27 +96,27 @@ sys.dm_sql_referencing_entities (
   
  해당 참조된 엔터티가 번호가 매겨진 저장 프로시저인 경우 오류를 반환합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서는 종속성 정보가 생성 및 유지되는 엔터티 유형을 보여 줍니다. 종속성 정보는 규칙, 기본값, 임시 테이블, 임시 저장 프로시저 또는 시스템 개체에 대해서는 생성 및 유지되지 않습니다.  
   
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
-|Table|예*|사용자 계정 컨트롤|  
-|보기|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|CLR 저장 프로시저|아니요|사용자 계정 컨트롤|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|사용자 계정 컨트롤|사용자 계정 컨트롤|  
-|CLR 사용자 정의 함수|아니요|사용자 계정 컨트롤|  
+|Table|예*|예|  
+|보기|예|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저**|예|예|  
+|CLR 저장 프로시저|아니요|예|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수|예|예|  
+|CLR 사용자 정의 함수|아니요|예|  
 |CLR 트리거(DML 및 DDL)|아니요|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|사용자 계정 컨트롤|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|사용자 계정 컨트롤|아니요|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|사용자 계정 컨트롤|아니요|  
-|확장 저장 프로시저|아니요|사용자 계정 컨트롤|  
-|큐|아니요|사용자 계정 컨트롤|  
-|동의어|아니요|사용자 계정 컨트롤|  
-|형식(별칭 및 CLR 사용자 정의 형식)|아니요|사용자 계정 컨트롤|  
-|XML 스키마 컬렉션|아니요|사용자 계정 컨트롤|  
-|파티션 함수|아니요|사용자 계정 컨트롤|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] DML 트리거|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 데이터베이스 수준 DDL 트리거|예|아니요|  
+|[!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 수준 DDL 트리거|예|아니요|  
+|확장 저장 프로시저|아니요|예|  
+|큐|아니요|예|  
+|동의어|아니요|예|  
+|형식(별칭 및 CLR 사용자 정의 형식)|아니요|예|  
+|XML 스키마 컬렉션|아니요|예|  
+|파티션 함수|아니요|예|  
   
  \* 테이블을 참조 하는 경우에 참조 엔터티로 추적을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
   
@@ -143,7 +142,7 @@ sys.dm_sql_referencing_entities (
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>1. 지정된 엔터티를 참조하는 엔터티 반환  
+### <a name="a-returning-the-entities-that-refer-to-a-given-entity"></a>A. 지정된 엔터티를 참조하는 엔터티 반환  
  다음 예에서는 지정된 테이블을 참조하는 현재 데이터베이스의 엔터티를 반환합니다.  
   
 ```sql  
@@ -154,7 +153,7 @@ FROM sys.dm_sql_referencing_entities ('Production.Product', 'OBJECT');
 GO  
 ```  
   
-### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>2. 지정된 유형을 참조하는 엔터티 반환  
+### <a name="b-returning-the-entities-that-refer-to-a-given-type"></a>2\. 지정된 유형을 참조하는 엔터티 반환  
  다음 예에서는 `dbo.Flag` 별칭 유형을 참조하는 엔터티를 반환합니다. 결과 집합은 두 개의 저장 프로시저가 이 유형을 사용한다는 것을 보여 줍니다. 합니다 `dbo.Flag` 형식에서 여러 열의 정의에 사용 되는 `HumanResources.Employee` 테이블; 있지만 형식 정의 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건을 테이블에 없기 때문에 아무 행도 반환 합니다 에대한`HumanResources.Employee`테이블입니다.  
   
 ```sql  
@@ -175,7 +174,7 @@ GO
  (2 row(s) affected)`  
  ``` 
  
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [sys.dm_sql_referenced_entities&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.sql_expression_dependencies&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

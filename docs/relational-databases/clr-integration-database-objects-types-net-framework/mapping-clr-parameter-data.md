@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c4697d2dcbad80d1da0fd8ed6c81750ac90695b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 530db4d31d3db4773713816f1b68404990997512
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081308"
 ---
 # <a name="mapping-clr-parameter-data"></a>CLR 매개 변수 데이터 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "52534119"
 |**date**|**SqlDateTime**|**DateTime, Nullable\<DateTime>**|  
 |**datetime**|**SqlDateTime**|**DateTime, Nullable\<DateTime>**|  
 |**datetime2**|없음|**DateTime, Nullable\<DateTime>**|  
-|**DATETIMEOFFSET**|**없음**|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
+|**DATETIMEOFFSET**|**None**|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
 |**decimal**|**SqlDecimal**|**Decimal, Nullable\<10 진수 >**|  
 |**float**|**SqlDouble**|**Double, Nullable\<Double>**|  
 |**geography**|**SqlGeography**<br /><br /> **SqlGeography** SQL Server와 함께 설치 되 고에서 다운로드할 수 있는 Microsoft.SqlServer.Types.dll에 정의 된 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [기능 팩](https://www.microsoft.com/download/details.aspx?id=52676)합니다.|없음|  
@@ -111,11 +110,11 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**CLR 데이터 형식 (SQL Server)**|**SQL Server 데이터 형식**|  
-|**10 진수**|SMALLMONEY|  
+|**Decimal**|SMALLMONEY|  
 |**SqlMoney**|SMALLMONEY|  
-|**10 진수**|money|  
-|**DateTime**|smalldatetime|  
-|**SQLDateTime**|smalldatetime|  
+|**Decimal**|money|  
+|**DateTime**|Smalldatetime|  
+|**SQLDateTime**|Smalldatetime|  
   
 ## <a name="change-history"></a>변경 내역  
   

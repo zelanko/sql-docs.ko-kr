@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 832dcda1-e452-48e6-8adb-7fb33c4fb4ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec6ba27197f7a6021aff90d30884129128cb3614
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ddb695d996cdd40b7fde4087799e5c1ec84224c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081928"
 ---
 # <a name="create-index-statement-limitations"></a>CREATE INDEX 문 제한 사항
 Microsoft Excel 또는 텍스트 드라이버에 대 한 CREATE INDEX 문이 지원 되지 않습니다.  

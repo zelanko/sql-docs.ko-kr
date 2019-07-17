@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 84492f44-c368-4c75-954d-7307a2d2bbc0
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: decc6e25cc8480dfaf041a79baa0972bdd78e569
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: ba9a56c5fb47be4db081aebb3753db2c3e9ed6ad
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62625863"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266537"
 ---
 # <a name="refresh-from-database-oracletosql"></a>데이터베이스에서 새로 고침(OracleToSQL)
 합니다 **데이터베이스에서 새로 고침** 대화 상자를 사용 하면 Oracle 데이터베이스에서 새로 고칠 개체를 선택 합니다. 대화 상자에서 행은 색으로 구분 된 메타 데이터의 상태를 기반으로 합니다.  

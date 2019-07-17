@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1518e6e5-a6a8-4489-b779-064c5624df53
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e0b4937477c1dcf85c4a50aea0b4d26d373389d0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a3be7fae5660bc7f1f8f02de7b683d68ca607f7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030295"
 ---
 # <a name="metadata---parameter-and-result"></a>메타데이터 - 매개 변수 및 결과
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

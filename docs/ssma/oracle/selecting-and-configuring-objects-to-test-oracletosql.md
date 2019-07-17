@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 29fb6542-5c1f-4b14-a822-87700beb7623
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: d568d1749cd54796072a108e438e448bf2a74578
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: e0a8e7650534d50c5e5d7c3b02f2857764d9c2ca
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626208"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264638"
 ---
 # <a name="selecting-and-configuring-objects-to-test-oracletosql"></a>테스트할 개체 선택 및 구성(OracleToSQL)
 이 단계에서 테스트 하 고 프로시저 및 functions 출력 매개 변수 뿐만 아니라 함수의 반환 값을 비교 하기 위한 설정을 구성 하는 개체를 선택 합니다.  

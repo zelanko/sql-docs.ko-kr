@@ -20,27 +20,26 @@ helpviewer_keywords:
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dd25f70c7cf3d34a4411cc15802437d97f5f8190
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ba19045d0184e498b559da0b97b3cd4d95d30c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067939"
 ---
 # <a name="sysquerystoreruntimestats-transact-sql"></a>sys.query_store_runtime_stats (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   쿼리에 대 한 런타임 실행 통계 정보에 대 한 정보를 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**runtime_stats_id**|**bigint**|에 대 한 런타임 실행 통계를 나타내는 행의 식별자를 **plan_id**를 **execution_type** 하 고 **runtime_stats_interval_id**합니다. 이 지난 런타임 통계 간격 동안만 고유 합니다. 현재 활성 간격에 대 한 있을 수 있습니다 여러 행에서 참조 하는 계획에 대 한 런타임 통계를 나타내는 **plan_id**를 나타내는 실행 형식과 **execution_type**합니다. 일반적으로 행이 하나씩 나타냅니다 플러시되는 런타임 통계를 디스크에 다른 (s) 메모리 내 상태를 나타냅니다. 따라서 간격에 대 한 실제 상태를 가져오려는 해야 집계 메트릭을 그룹화 **plan_id**를 **execution_type** 하 고 **runtime_stats_interval_id**합니다.<br/>**참고:** Azure SQL Data Warehouse는 영 (0)를 항상 반환 됩니다.|
 |**plan_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_store_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)합니다.|  
 |**runtime_stats_interval_id**|**bigint**|외래 키입니다. 에 조인 [sys.query_store_runtime_stats_interval &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)합니다.|  
 |**execution_type**|**tinyint**|쿼리 실행의 유형을 결정 합니다.<br /><br /> 0-일반 실행 (완료)<br /><br /> 3-클라이언트에서 시작한 실행을 중단 했습니다.<br /><br /> 4-예외 실행이 중단 됨|  
-|**execution_type_desc**|**nvarchar(128)**|실행 형식 필드의 텍스트 설명:<br /><br /> 0-일반<br /><br /> 3-중단<br /><br /> 4 -  Exception|  
+|**execution_type_desc**|**nvarchar(128)**|실행 형식 필드의 텍스트 설명:<br /><br /> 0-일반<br /><br /> 3-중단<br /><br /> 4-예외|  
 |**first_execution_time**|**datetimeoffset**|집계 간격 내에서 쿼리 계획에 대 한 첫 번째 실행 시간입니다. 쿼리 실행의 종료 시간을 나타냅니다.|  
 |**last_execution_time**|**datetimeoffset**|집계 간격 내에서 쿼리에 대해 마지막 실행 시간을 계획 합니다. 쿼리 실행의 종료 시간을 나타냅니다.|  
 |**count_executions**|**bigint**|집계 간격 내에서 쿼리 계획에 대 한 실행의 총 수입니다.|  

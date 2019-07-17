@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e216fae50bf8f4bd37f294abcc14be98ad4f69ea
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 08abd0128a6fa2a478af0e9dc9c292ff973ace79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064496"
 ---
 # <a name="sqlcolattributes-mapping"></a>SQLColAttributes 매핑
 응용 프로그램을 호출할 때 **SQLColAttributes** 는 ODBC를 통한 *3.x* 드라이버, 호출 **SQLColAttributes** 매핑되 **SQLColAttribute** 다음과 같습니다.  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 154ad6ae-5455-4ed2-b014-e443abe2c6ee
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e2d3ef2e3428a45dce7e55761a16cc32cb3b425
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 138a44184276e1eecc524747ad801df7a8991482
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663159"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262684"
 ---
 # <a name="sysdmtranactivetransactions-transact-sql"></a>sys.dm_tran_active_transactions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "51663159"
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |transaction_id|**bigint**|데이터베이스 수준이 아닌 인스턴스 수준의 트랜잭션 ID입니다. 이 ID는 한 인스턴스 내의 모든 데이터베이스에서 고유하지만 모든 서버 인스턴스에서 고유하지는 않습니다.|  
-|NAME|**nvarchar(32)**|트랜잭션 이름입니다. 트랜잭션이 표시된 경우 표시된 이름이 트랜잭션 이름을 덮어쓰며 이를 대체합니다.|  
+|name|**nvarchar(32)**|트랜잭션 이름입니다. 트랜잭션이 표시된 경우 표시된 이름이 트랜잭션 이름을 덮어쓰며 이를 대체합니다.|  
 |transaction_begin_time|**datetime**|트랜잭션이 시작된 시간입니다.|  
 |transaction_type|**int**|트랜잭션 유형입니다.<br /><br /> 1 = 읽기/쓰기 트랜잭션<br /><br /> 2 = 읽기 전용 트랜잭션<br /><br /> 3 = 시스템 트랜잭션<br /><br /> 4 = 분산 트랜잭션|  
 |transaction_uow|**uniqueidentifier**|분산 트랜잭션의 트랜잭션 UOW(작업 단위) 식별자입니다. MS DTC에서는 UOW 식별자를 사용하여 분산 트랜잭션 작업을 수행합니다.|  
@@ -55,7 +54,7 @@ ms.locfileid: "51663159"
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
   
 ## <a name="see-also"></a>관련 항목  
  [sys.dm_tran_session_transactions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   

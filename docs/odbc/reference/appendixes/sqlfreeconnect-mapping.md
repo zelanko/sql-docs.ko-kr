@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a844538-93c0-4709-bab6-35c45e771d80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9b9a35275d95207fd8ceef296ecda4664a1c4e7f
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 062894547aca57ca01ca105f4060f2dcd39e942f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086438"
 ---
 # <a name="sqlfreeconnect-mapping"></a>SQLFreeConnect 매핑
 응용 프로그램을 호출할 때 **SQLFreeConnect** 는 ODBC를 통한 *3.x* 드라이버에 대 한 호출  

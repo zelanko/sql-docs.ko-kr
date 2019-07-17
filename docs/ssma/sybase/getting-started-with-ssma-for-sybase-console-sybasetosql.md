@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 608457b1732d2c1cc188b4b419903d20faa642c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bad08c06028a64a0423135b15641ebf6fa4e895e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029113"
 ---
 # <a name="getting-started-with-the-ssma-for-sybase-console-sybasetosql"></a>Sybase 콘솔 (SybaseToSQL) 용 SSMA 시작
 이 섹션에서는 시작 하 고 콘솔 응용 프로그램 Sybase 용 SSMA 시작 절차를 설명 합니다. 또한 여기에 나열 된 규칙에에서 사용 됩니다 일반적인 SSMA 콘솔 출력 창.  
@@ -57,14 +56,14 @@ SSMA 스크립트 명령 및 옵션을 실행할 때 콘솔 프로그램 콘솔�
   
 색을 해석 하는 콘솔 출력의 다음 표에 표시 됩니다.  
   
-|색|Description|  
+|색|설명|  
 |---------|---------------|  
 |빨강|실행 하는 동안 오류가 발생 했습니다|  
 |회색|날짜 및 시간 스탬프를 사용자에 게 메시지|  
 |하얀|스크립트 파일 명령, 메시지 유형|  
-|노랑|경고|  
+|노랑|Warning|  
 |녹색|사용자 입력에 대 한 프롬프트|  
 |녹청|시작, 완료 및 작업의 결과|  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
 [SAP ASE 용 SSMA 설치 &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-for-sybase-sybasetosql.md)  

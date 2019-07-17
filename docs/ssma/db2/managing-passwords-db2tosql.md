@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 92cff6191f9b606a5394edaac36706328ab52bc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 413fad6c982622eddb2a1341c63804da089dd8a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141018"
 ---
 # <a name="managing-passwords-db2tosql"></a>암호 (DB2ToSQL) 관리
 데이터베이스 암호와 가져오기 또는 서버에서 내보내야 하는 절차를 보호 하는 방법에 대 한이 섹션은:  
@@ -45,7 +44,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
   
             서버 정의 id 및 해당 하는 암호화 된 암호는 로컬 컴퓨터의 파일에 저장 됩니다.  
             
-            예 1:
+            예제 1:
             
                 Specify password
                 C:\SSMA\SSMAforDB2Console.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml"
@@ -54,7 +53,7 @@ SSMA를 사용 하면 데이터베이스의 암호를 보호할 수 있습니다
                 
                 Re-enter password for server_id 'XXX_1': xxxxxxx
             
-            예 2:
+            예제 2:
             
                 C:\SSMA\SSMAforDB2Console.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml" -o
                 

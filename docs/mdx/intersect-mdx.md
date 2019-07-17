@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b24049cb81982075fa9234c6fa792db273d404db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f253dad526c509edff5c837b61ae2faae07d5758
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105365"
 ---
 # <a name="intersect-mdx"></a>Intersect(MDX)
 
@@ -35,7 +34,7 @@ Intersect(Set_Expression1 , Set_Expression2 [ , ALL ] )
  *Set_Expression2*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **Intersect** 함수 두 집합의 교집합을 반환 합니다. 기본적으로 이 함수는 교집합을 구하기 전에 두 집합에서 중복 요소를 제거합니다. 지정된 두 집합에는 동일한 차원이 있어야 합니다.  
   
  선택적 **모든** 플래그에는 중복 요소가 유지 됩니다. 경우 **모든** 를 지정 합니다 **Intersect** 함수는 일반적으로 중복 요소를 교차 하 고 두 번째 집합에 일치 하는 중복 요소가 첫 번째 집합에서 각 중복입니다. 지정된 두 집합에는 동일한 차원이 있어야 합니다.  

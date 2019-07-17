@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: bb777a0de00596c99e22e514986cf3ec930ba0fd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2cf3cf85b0efb024d65744f6eea0f5eea47ead83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074850"
 ---
 # <a name="export-dmx"></a>EXPORT(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +37,7 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *filename*  
  문자열로 내보낼 파일의 이름과 위치입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  문에서 마이닝 모델을 지정하는 경우 결과 파일에는 연결된 마이닝 구조도 포함됩니다. 문을 지정 하는 경우 **WITH DEPENDENCIES**, 개체 (예를 들어, 데이터 원본 및 데이터 원본 뷰)를 처리 하는 데 필요한 모든 개체가.abf 파일에 포함 됩니다.  
   
  데이터베이스 이거나 가져오거나 내보내는 데 서버 관리자에서 개체를 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스입니다.  
@@ -61,7 +60,7 @@ EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES
  [Data Mining Extensions &#40;DMX&#41; 데이터 정의 문](../dmx/dmx-statements-data-definition.md)   
  [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
- [가져오기 &AMP;#40;DMX&AMP;#41;](../dmx/import-dmx.md)   
+ [가져오기 &#40;DMX&#41;](../dmx/import-dmx.md)   
  [데이터 마이닝 개체 내보내기 및 가져오기](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   

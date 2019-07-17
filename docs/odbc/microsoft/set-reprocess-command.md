@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0708757-b1d7-42f3-8988-787f2a806b8b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 41877986d5d0e8afdfb30841860df360efd26da0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16f87c52b4149d62a8d57884216890b7421e8ef6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063619"
 ---
 # <a name="set-reprocess-command"></a>SET REPROCESS 명령
 잠금 시도가 실패 한 파일이 나 레코드일 잠기도록 방법 또는 시간에 얼마나 많은 시간을 지정 합니다.  
@@ -53,5 +52,5 @@ SET REPROCESS TO nAttempts [SECONDS] | TO AUTOMATIC
  자동으로  
  Visual FoxPro 레코드를 잠그지 또는 무기한으로 파일을 시도 한다고 지정 합니다. (-2로 설정 다시 처리는 해당 하는 명령입니다.)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  첫 번째 레코드 또는 파일 잠금을 시도 하지 못한 항상 합니다. 자주, 레코드 또는 파일을 네트워크의 다른 사용자에 의해 잠겨 있습니다. 설정 다시 처리 Visual FoxPro 초기 시도가 성공할 경우 레코드 또는 파일 잠금 추가 하려고 하면 여부를 결정 합니다. 하거나 추가 시도 하거나 시도 기간에 대 한 내용이 몇 번 지정할 수 있습니다. ON ERROR 루틴을 어떻게 실패 한 잠금을 시도 처리 되는 영향을 줍니다.

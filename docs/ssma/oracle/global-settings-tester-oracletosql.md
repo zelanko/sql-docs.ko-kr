@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 0cbe66e8298053ef1682e25e97024fa0a96e9abb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: f7e421774d3a09622835b181d5c053c994e905ee
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62864904"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264409"
 ---
 # <a name="global-settings-tester-oracletosql"></a>전역 설정(테스터)(OracleToSQL)
 테스터 페이지를 사용 합니다 **전역 설정** SSMA 테스터를 위한 설정을 지정 하려면 대화 상자.  
@@ -28,7 +28,7 @@ ms.locfileid: "62864904"
   
 다음 옵션은이 설정을 사용할 수 있습니다.  
   
-1.  사용자 계정 컨트롤  
+1.  예  
   
 2.  아니요  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62864904"
   
 다음 옵션은이 설정을 사용할 수 있습니다.  
   
-1.  사용자 계정 컨트롤  
+1.  예  
   
 2.  아니요  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62864904"
   
 다음 옵션은이 설정을 사용할 수 있습니다.  
   
-1.  사용자 계정 컨트롤  
+1.  예  
   
 2.  아니요  
   
