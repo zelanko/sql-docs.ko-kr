@@ -58,9 +58,9 @@ sp_helpmergepartition [ @publication= ] 'publication'
 |**partition**|**int**|구독자 파티션을 식별합니다.|  
 |**host_name**|**sysname**|값으로 필터링 되에 구독에 대 한 파티션을 만들 때 사용 되는 값을 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 구독자는 함수입니다.|  
 |**suser_sname**|**sysname**|값으로 필터링 되에 구독에 대 한 파티션을 만들 때 사용 되는 값을 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 구독자는 함수입니다.|  
-|**dynamic_snapshot_location**|**nvarchar(255)**|구독자의 파티션에 대한 필터링된 데이터 스냅숏의 위치입니다.|  
-|**date_refreshed**|**datetime**|파티션에 대한 필터링된 데이터 스냅숏을 생성하기 위해 스냅숏 작업을 마지막으로 실행한 날짜입니다.|  
-|**dynamic_snapshot_jobid**|**uniqueidentifier**|파티션에 대한 필터링된 데이터 스냅숏을 만드는 작업을 식별합니다.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|구독자의 파티션에 대한 필터링된 데이터 스냅샷의 위치입니다.|  
+|**date_refreshed**|**datetime**|파티션에 대한 필터링된 데이터 스냅샷을 생성하기 위해 스냅샷 작업을 마지막으로 실행한 날짜입니다.|  
+|**dynamic_snapshot_jobid**|**uniqueidentifier**|파티션에 대한 필터링된 데이터 스냅샷을 만드는 작업을 식별합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

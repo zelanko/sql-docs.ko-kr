@@ -69,7 +69,7 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
 -   사용자 지정 저장된 프로시저는 자동으로 다시 생성 되지 *schema_change_script*이러한 저장된 프로시저를 다시 생성 데 사용할 수 있습니다 또는 저장 프로시저를 사용자 지정 사용자 정의 만듭니다.  
   
  [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
- 스냅숏 무효화 기능을 설정하거나 해제합니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **1**합니다.  
+ 스냅샷 무효화 기능을 설정하거나 해제합니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **1**합니다.  
   
  **1** 지정은 아티클의 변경이을 유효 하지 않게 스냅숏을 무효화 하는 경우, 값 및 **1** 새 스냅숏 발생에 대 한 사용 권한을 부여 합니다.  
   

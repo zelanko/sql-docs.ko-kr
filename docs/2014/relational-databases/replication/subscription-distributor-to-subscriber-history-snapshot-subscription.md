@@ -1,5 +1,5 @@
 ---
-title: 구독, 배포자에서 구독자로의 연결 기록(스냅숏 구독) | Microsoft 문서
+title: 구독, 배포자에서 구독자로의 연결 기록(스냅샷 구독) | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,7 +19,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62628778"
 ---
-# <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>구독, 배포자에서 구독자로의 연결 기록(스냅숏 구독)
+# <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>구독, 배포자에서 구독자로의 연결 기록(스냅샷 구독)
   **배포자에서 구독자로의 연결 기록** 탭은 상태, 기록, 정보 메시지, 모든 오류 메시지 등 배포 에이전트에 대한 자세한 정보를 표시합니다.  
   
 ## <a name="options"></a>변수  

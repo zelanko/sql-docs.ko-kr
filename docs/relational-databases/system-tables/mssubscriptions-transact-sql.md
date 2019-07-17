@@ -41,7 +41,7 @@ ms.locfileid: "68139706"
 |**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> **0** = 밀어넣기 합니다.<br /><br /> **1** = 끌어오기.<br /><br /> **2** = 익명입니다.|  
 |**sync_type**|**tinyint**|동기화 유형입니다.<br /><br /> **1** = automatic.<br /><br /> **2** = 동기화 없음.|  
 |**상태**|**tinyint**|구독 상태입니다.<br /><br /> **0** = 비활성입니다.<br /><br /> **1** = 구독 합니다.<br /><br /> **2** = 활성입니다.|  
-|**subscription_seqno**|**varbinary(16)**|스냅숏 트랜잭션 시퀀스 번호입니다.|  
+|**subscription_seqno**|**varbinary(16)**|스냅샷 트랜잭션 시퀀스 번호입니다.|  
 |**snapshot_seqno_flag**|**bit**|스냅숏 트랜잭션 시퀀스 번호의 소스를 나타냅니다. 여기서 값 **1** 즉 **subscription_seqno** 스냅숏 시퀀스 번호입니다.|  
 |**independent_agent**|**bit**|이 게시에 대한 독립 실행형 배포 에이전트가 있는지 여부를 나타냅니다.|  
 |**subscription_time**|**datetime**|내부적으로만 사용됩니다.|  
@@ -49,7 +49,7 @@ ms.locfileid: "68139706"
 |**agent_id**|**int**|에이전트의 ID입니다.|  
 |**update_mode**|**tinyint**|업데이트의 유형입니다.|  
 |**publisher_seqno**|**varbinary(16)**|이 구독에 대한 게시자에서의 트랜잭션 시퀀스 번호입니다.|  
-|**ss_cplt_seqno**|**varbinary(16)**|동시 스냅숏 처리의 완료를 표시하는 데 사용되는 시퀀스 번호입니다.|  
+|**ss_cplt_seqno**|**varbinary(16)**|동시 스냅샷 처리의 완료를 표시하는 데 사용되는 시퀀스 번호입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 테이블](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

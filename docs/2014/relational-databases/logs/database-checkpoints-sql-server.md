@@ -47,7 +47,7 @@ ms.locfileid: "68206102"
 |자동|EXEC sp_configure **'`recovery interval`',' *`seconds`* '**|제안 하는 상한 시간 제한에 맞게 백그라운드에서 자동으로 실행 된 `recovery interval` 서버 구성 옵션입니다. 자동 검사점은 완료될 때까지 실행됩니다.  자동 검사점은 진행 중인 쓰기 작업의 수와 쓰기 지연 시간이 20밀리초 이상으로 증가할 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 이를 감지하는지 여부에 따라 조절됩니다.<br /><br /> 자세한 내용은 [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md)을(를) 참조하세요.|  
 |간접|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS &#124; MINUTES }|지정된 데이터베이스의 사용자 지정 대상 복구 시간에 맞게 백그라운드에서 실행됩니다. 기본 대상 복구 시간은 0으로, 이 경우 데이터베이스에서 자동 검사점 추론이 사용됩니다. ALTER DATABASE을 사용하여 TARGET_RECOVERY_TIME을 0보다 크게 설정한 경우 서버 인스턴스에 대해 지정된 복구 간격 대신 이 값이 사용됩니다.<br /><br /> 자세한 내용은 [데이터베이스의 대상 복구 시간 변경&#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md)서버 구성 옵션을 구성하는 방법에 대해 설명합니다.|  
 |수동|CHECKPOINT [ *checkpoint_duration* ]|[!INCLUDE[tsql](../../includes/tsql-md.md)] CHECKPOINT 명령을 실행할 때 실행됩니다. 수동 검사점은 현재 연결된 데이터베이스에서 발생합니다. 기본적으로 수동 검사점은 완료될 때까지 실행됩니다. 또한 자동 검사점의 경우와 동일한 방식으로 조절됩니다.  필요한 경우 *checkpoint_duration* 매개 변수는 수동 검사점을 완료하는 데 필요한 시간(초)을 지정합니다.<br /><br /> 자세한 내용은 [CHECKPOINT&#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql)을(를) 참조하세요.|  
-|내부|없음|디스크 이미지가 현재 로그 상태와 일치하도록 하는 백업 및 데이터베이스 스냅숏 생성 등의 다양한 서버 작업에 의해 실행됩니다.|  
+|내부|없음|디스크 이미지가 현재 로그 상태와 일치하도록 하는 백업 및 데이터베이스 스냅샷 생성 등의 다양한 서버 작업에 의해 실행됩니다.|  
   
 > [!NOTE]  
 >  데이터베이스 관리자는 일부 유형의 검사점에 대해 `-k`[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 고급 설정 옵션을 사용하여 I/O 하위 시스템의 처리량에 따라 검사점 I/O 동작을 제한할 수 있습니다. `-k` 설치 옵션은 자동 검사점 및 모든 적용 됩니다. 그렇지 않으면 수동 및 내부 검사점 제한 되지 않는지 합니다.  
@@ -109,7 +109,7 @@ ms.locfileid: "68206102"
   
 -   데이터베이스를 백업한 경우  
   
--   DBCC CHECK를 위해 명시적으로 또는 내부적으로 데이터베이스 스냅숏이 생성된 경우  
+-   DBCC CHECK를 위해 명시적으로 또는 내부적으로 데이터베이스 스냅샷이 생성된 경우  
   
 -   데이터베이스를 종료해야 하는 작업을 수행한 경우. AUTO_CLOSE가 ON이고 데이터베이스에 대한 마지막 사용자 연결이 닫힌 경우 또는 데이터베이스를 다시 시작해야 하는 데이터베이스 옵션 변경을 수행한 경우를 예로 들 수 있습니다.  
   

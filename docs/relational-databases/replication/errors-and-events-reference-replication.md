@@ -62,12 +62,12 @@ ms.locfileid: "47827611"
 |[MSSQL_ENG020575](../../relational-databases/replication/mssql-eng020575.md)|게시 '%s'의 아티클 '%s'에 대한 구독자 '%s'의 구독이 데이터 유효성 검사를 통과했습니다.|  
 |[MSSQL_ENG020596](../../relational-databases/replication/mssql-eng020596.md)|'%s' 또는 db_owner의 멤버만 익명 에이전트를 삭제할 수 있습니다.|  
 |[MSSQL_ENG020598](../../relational-databases/replication/mssql-eng020598.md)|복제된 명령을 적용하는 동안 구독자에서 행을 찾을 수 없습니다.|  
-|[MSSQL_ENG021075](../../relational-databases/replication/mssql-eng021075.md)|게시 '%s'의 초기 스냅숏을 사용할 수 없습니다.|  
-|[MSSQL_ENG021076](../../relational-databases/replication/mssql-eng021076.md)|아티클 '%s'의 초기 스냅숏을 아직 사용할 수 없습니다.|  
+|[MSSQL_ENG021075](../../relational-databases/replication/mssql-eng021075.md)|게시 '%s'의 초기 스냅샷을 사용할 수 없습니다.|  
+|[MSSQL_ENG021076](../../relational-databases/replication/mssql-eng021076.md)|아티클 '%s'의 초기 스냅샷을 아직 사용할 수 없습니다.|  
 |[MSSQL_ENG021286](../../relational-databases/replication/mssql-eng021286.md)|충돌 테이블 '%s'이(가) 없습니다.|  
 |[MSSQL_ENG021330](../../relational-databases/replication/mssql-eng021330.md)|복제 작업 디렉터리(%ls)에 하위 디렉터리를 만들지 못했습니다.|  
 |[MSSQL_ENG021331](../../relational-databases/replication/mssql-eng021331.md)|사용자 스크립트 파일을 배포자(%ls)에 복사하지 못했습니다.|  
-|[MSSQL_ENG021385](../../relational-databases/replication/mssql-eng021385.md)|스냅숏이 게시 '%s'을(를) 처리하지 못했습니다. 활성 스키마 변경 작업 또는 추가 중인 새 아티클 때문인 것 같습니다.|  
+|[MSSQL_ENG021385](../../relational-databases/replication/mssql-eng021385.md)|스냅샷이 게시 '%s'을(를) 처리하지 못했습니다. 활성 스키마 변경 작업 또는 추가 중인 새 아티클 때문인 것 같습니다.|  
 |MSSQL_ENG021617. [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)을 참조하세요.|SQL*PLUS를 실행할 수 없습니다. 배포자에 최신 버전의 Oracle 클라이언트 코드가 설치되었는지 확인하십시오.|  
 |MSSQL_ENG021620. [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)을 참조하세요.|시스템 경로 변수로 액세스할 수 있는 SQL*PLUS 버전이 최신 버전이 아니어서 Oracle 게시를 지원할 수 없습니다. 배포자에 최신 버전의 Oracle 클라이언트 코드가 설치되었는지 확인하십시오.|  
 |MSSQL_ENG021624. [Troubleshooting Oracle Publishers](../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md)을 참조하세요.|배포자 '%s'에서 Oracle OLEDB 공급자 OraOLEDB.Oracle을 찾을 수 없습니다. 배포자에 최신 버전의 Oracle OLEDB 공급자가 설치 및 등록되었는지 확인하십시오.|  

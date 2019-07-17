@@ -289,7 +289,7 @@ sp_addsubscription [ @publication = ] 'publication'
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- sp_addsubscription은 스냅숏 복제 및 트랜잭션 복제에 사용됩니다.  
+ sp_addsubscription은 스냅샷 복제 및 트랜잭션 복제에 사용됩니다.  
   
  sysadmin 고정 서버 역할의 멤버가 밀어넣기 구독을 만들기 위해 sp_addsubscription을 실행할 경우 배포 에이전트 작업이 암시적으로 생성되어 SQL Server 에이전트 서비스 계정에서 실행됩니다. 실행 하는 것이 좋습니다 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) 계정의 다른 에이전트 특정 Windows에 대 한 자격 증명을 지정 하 고 @job_login 고 @job_password입니다. 자세한 내용은 [복제 에이전트 보안 모델](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하세요.  
   

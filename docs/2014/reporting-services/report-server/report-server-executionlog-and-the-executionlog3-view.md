@@ -322,7 +322,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|데이터 검색, 보고서 처리 및 보고서 렌더링에 걸린 시간(밀리초 단위)|  
 |TimeProcessing||  
 |TimeRendering||  
-|원본|보고서 실행 원본(1=라이브, 2=캐시, 3=스냅숏, 4=기록)|  
+|원본|보고서 실행 원본(1=라이브, 2=캐시, 3=스냅샷, 4=기록)|  
 |상태|상태(rsSuccess 또는 오류 코드: 여러 개의 오류가 발생하면 첫 번째 오류만 기록됨)|  
 |ByteCount|렌더링된 보고서 크기(바이트)|  
 |RowCount|쿼리에서 반환된 행 수|  

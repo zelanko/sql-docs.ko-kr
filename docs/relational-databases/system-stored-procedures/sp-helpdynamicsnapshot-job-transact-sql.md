@@ -31,7 +31,7 @@ ms.locfileid: "67902900"
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  필터링된 데이터 스냅숏을 생성하는 에이전트 작업에 대한 정보를 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
+  필터링된 데이터 스냅샷을 생성하는 에이전트 작업에 대한 정보를 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -59,12 +59,12 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|필터링된 데이터 스냅숏 작업을 식별합니다.|  
-|**job_name**|**sysname**|필터링된 데이터 스냅숏 작업의 이름입니다.|  
+|**id**|**int**|필터링된 데이터 스냅샷 작업을 식별합니다.|  
+|**job_name**|**sysname**|필터링된 데이터 스냅샷 작업의 이름입니다.|  
 |**job_id**|**uniqueidentifier**|식별 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포자에서 에이전트 작업입니다.|  
 |**dynamic_filter_login**|**sysname**|평가에 사용 되는 값을 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 게시용으로 정의 된 매개 변수가 있는 행 필터에는 함수입니다.|  
 |**dynamic_filter_hostname**|**sysname**|평가에 사용 되는 값을 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 게시용으로 정의 된 매개 변수가 있는 행 필터에는 함수입니다.|  
-|**dynamic_snapshot_location**|**nvarchar(255)**|매개 변수가 있는 행 필터를 사용하는 경우 스냅숏 파일을 읽을 폴더의 경로입니다.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|매개 변수가 있는 행 필터를 사용하는 경우 스냅샷 파일을 읽을 폴더의 경로입니다.|  
 |**frequency_type**|**int**|에이전트 실행이 예약되는 빈도로 다음 값 중 하나가 될 수 있습니다.<br /><br /> **1** = 한 번<br /><br /> **2** = 요청 시<br /><br /> **4** = 매일<br /><br /> **8** = 매주<br /><br /> **16** = 매월<br /><br /> **32** = 매월 상대적<br /><br /> **64** = 자동 시작<br /><br /> **128** = 되풀이|  
 |**frequency_interval**|**int**|에이전트가 실행되는 요일로 다음 값 중 하나가 될 수 있습니다.<br /><br /> **1** = 일요일<br /><br /> **2** = 월요일<br /><br /> **3** = 화요일<br /><br /> **4** = 수요일<br /><br /> **5** = 목요일<br /><br /> **6** = 금요일<br /><br /> **7** = 토요일<br /><br /> **8** = 일<br /><br /> **9** = 평일<br /><br /> **10** = 주말|  
 |**frequency_subday_type**|**int**|얼마나 자주 에이전트가 실행 되는 경우 정의 하는 형식인 *frequency_type* 됩니다 **4** (매일) 이며 다음이 값 중 하나일 수 있습니다.<br /><br /> **1** 지정 된 시간 =<br /><br /> **2** = 초<br /><br /> **4** = 분<br /><br /> **8** = 시간|  
@@ -82,7 +82,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="remarks"></a>설명  
  **sp_helpdynamicsnapshot_job** 병합 복제에 사용 됩니다.  
   
- 모든 기본 매개 변수 값이 사용되는 경우에는 전체 게시 데이터베이스에 대한 모든 분할 데이터 스냅숏 작업의 정보가 반환됩니다.  
+ 모든 기본 매개 변수 값이 사용되는 경우에는 전체 게시 데이터베이스에 대한 모든 분할 데이터 스냅샷 작업의 정보가 반환됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  멤버만 합니다 **sysadmin** 고정 서버 역할을 합니다 **db_owner** 게시 실행에 대 한 고정 데이터베이스 역할 및 게시 액세스 목록 **sp_helpdynamicsnapshot_job**.  

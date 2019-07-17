@@ -29,8 +29,8 @@ ms.locfileid: "62667308"
 |에이전트|성능 개체|카운터|Description|  
 |-----------|------------------------|-------------|-----------------|  
 |모든 에이전트|[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 에이전트|실행 중|현재 실행 중인 복제 에이전트 수입니다.|  
-|스냅숏 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 스냅숏|스냅숏: 배달 된 명령 수/초|배포자로 배달된 초당 명령 수입니다.|  
-|스냅숏 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 스냅숏|스냅숏: 배달 된 트랜잭션 수/초|배포자로 배달된 초당 트랜잭션 수입니다.|  
+|스냅샷 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 스냅샷|스냅숏: 배달 된 명령 수/초|배포자로 배달된 초당 명령 수입니다.|  
+|스냅샷 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 스냅샷|스냅숏: 배달 된 트랜잭션 수/초|배포자로 배달된 초당 트랜잭션 수입니다.|  
 |로그 판독기 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 로그 판독기|로그 판독기: 배달 된 명령 수/초|배포자로 배달된 초당 명령 수입니다.|  
 |로그 판독기 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 로그 판독기|로그 판독기: 배달 된 트랜잭션 수/초|배포자로 배달된 초당 트랜잭션 수입니다.|  
 |로그 판독기 에이전트|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: 복제 로그 판독기|로그 판독기: 배달 대기 시간|트랜잭션이 게시자에 적용되었다가 배포자로 배달되기까지 경과한 현재 시간(밀리초)입니다.|  

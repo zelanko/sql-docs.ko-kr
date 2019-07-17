@@ -85,7 +85,7 @@
           href: database-mirroring-and-log-shipping-sql-server.md
         - name: 데이터베이스 미러링 및 전체 텍스트 카탈로그
           href: database-mirroring-and-full-text-catalogs-sql-server.md
-        - name: 데이터베이스 미러링 및 데이터베이스 스냅숏
+        - name: 데이터베이스 미러링 및 데이터베이스 스냅샷
           href: database-mirroring-and-database-snapshots-sql-server.md
         - name: 데이터베이스 미러링 및 복제
           href: database-mirroring-and-replication-sql-server.md

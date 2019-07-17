@@ -98,13 +98,13 @@ ms.locfileid: "67860676"
   
 9. **즉시 스냅숏을 만들고 구독 초기화에 사용할 수 있도록 유지** 확인란을 선택하고 **다음**을 선택합니다.  
 
-   ![확인란이 선택된 "스냅숏 에이전트" 페이지](media/tutorial-replicating-data-between-continuously-connected-servers/snapshot.png)
+   ![확인란이 선택된 "스냅샷 에이전트" 페이지](media/tutorial-replicating-data-between-continuously-connected-servers/snapshot.png)
   
 10. **에이전트 보안** 페이지에서 **스냅숏 에이전트의 보안 설정 사용** 확인란을 선택 취소합니다.   
   
-    스냅숏 에이전트에 대한 **보안 설정**을 선택합니다. **프로세스 계정** 상자에 <*Publisher_Machine_Name*> **\repl_snapshot**을 입력하고, 이 계정에 대한 암호를 입력한 다음, **확인**을 선택합니다.  
+    스냅샷 에이전트에 대한 **보안 설정**을 선택합니다. **프로세스 계정** 상자에 <*Publisher_Machine_Name*> **\repl_snapshot**을 입력하고, 이 계정에 대한 암호를 입력한 다음, **확인**을 선택합니다.  
 
-    !["에이전트 보안" 페이지 및 "스냅숏 에이전트 보안" 대화 상자](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
+    !["에이전트 보안" 페이지 및 "스냅샷 에이전트 보안" 대화 상자](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
 12. 이전 단계를 반복하여 <*Publisher_Machine_Name*> **\repl_logreader**를 로그 판독기 에이전트에 대한 프로세스 계정으로 설정합니다. 그런 다음, **확인**을 선택합니다.  
 
@@ -119,25 +119,25 @@ ms.locfileid: "67860676"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-게시를 만들려고 할 때 SQL Server 에이전트가 실행되고 있지 않은 경우 다음과 같은 오류가 발생할 수 있습니다. 이 오류는 게시가 성공적으로 만들어졌지만 스냅숏 에이전트를 시작하지 못했음을 나타냅니다. 이러한 경우 SQL Server 에이전트를 시작한 다음, 스냅숏 에이전트를 수동으로 시작해야 합니다. 다음 섹션에서 지침을 제공합니다. 
+게시를 만들려고 할 때 SQL Server 에이전트가 실행되고 있지 않은 경우 다음과 같은 오류가 발생할 수 있습니다. 이 오류는 게시가 성공적으로 만들어졌지만 스냅샷 에이전트를 시작하지 못했음을 나타냅니다. 이러한 경우 SQL Server 에이전트를 시작한 다음, 스냅샷 에이전트를 수동으로 시작해야 합니다. 다음 섹션에서 지침을 제공합니다. 
 
-![스냅숏 에이전트가 시작하지 못했음을 나타내는 경고](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagenterror.png)
+![스냅샷 에이전트가 시작하지 못했음을 나타내는 경고](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagenterror.png)
     
   
-### <a name="view-the-status-of-snapshot-generation"></a>스냅숏 생성의 상태 보기  
+### <a name="view-the-status-of-snapshot-generation"></a>스냅샷 생성의 상태 보기  
   
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결하고 해당 서버 노드를 확장한 다음, **복제** 폴더를 확장합니다.  
   
 2. **로컬 게시** 폴더에서 **AdvWorksProductTrans**를 마우스 오른쪽 단추로 클릭한 다음, **스냅숏 에이전트 상태 보기**를 선택합니다.  
    ![스냅숏 에이전트 상태 보기를 위한 바로 가기 메뉴의 명령](media/tutorial-replicating-data-between-continuously-connected-servers/viewsnapshot.png)
   
-3. 게시에 대한 스냅숏 에이전트 작업의 현재 상태가 표시됩니다. 다음 섹션을 진행하기 전에 스냅숏 작업이 성공했는지 확인합니다.
+3. 게시에 대한 스냅샷 에이전트 작업의 현재 상태가 표시됩니다. 다음 섹션을 진행하기 전에 스냅샷 작업이 성공했는지 확인합니다.
           
-게시를 만들 때 SQL Server 에이전트가 실행되고 있지 않은 경우, 게시의 스냅숏 에이전트 상태를 확인하면 스냅숏 에이전트가 '실행되지 않음'으로 표시됩니다. 이 경우 **시작**을 선택하여 스냅숏 에이전트를 시작합니다. 
+게시를 만들 때 SQL Server 에이전트가 실행되고 있지 않은 경우, 게시의 스냅샷 에이전트 상태를 확인하면 스냅샷 에이전트가 '실행되지 않음'으로 표시됩니다. 이 경우 **시작**을 선택하여 스냅샷 에이전트를 시작합니다. 
 
-!["시작" 단추 및 스냅숏 에이전트가 실행되지 못했음을 표시하는 상태 메시지의 변경](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
+!["시작" 단추 및 스냅샷 에이전트가 실행되지 못했음을 표시하는 상태 메시지의 변경](media/tutorial-replicating-data-between-continuously-connected-servers/startsnapshotagent.png)
      
-여기에 오류가 표시되면 [스냅숏 에이전트 오류 해결](troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent)을 참조하세요.
+여기에 오류가 표시되면 [스냅샷 에이전트 오류 해결](troubleshoot-tran-repl-errors.md#find-errors-with-the-snapshot-agent)을 참조하세요.
 
 
   

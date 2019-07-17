@@ -59,7 +59,7 @@ ms.locfileid: "51672382"
   
      이 문자열의 옵션 대부분은 구성 중인 DB2 서버와만 관련이 있지만 `Process Binary as Character` 및 `Derive Parameters` 옵션은 항상 `False`로 설정해야 합니다. 구독 데이터베이스를 식별하려면 `Initial Catalog` 옵션 값을 지정해야 합니다. 연결 문자열은 구독을 만들 때 새 구독 마법사에서 입력합니다.  
   
-3.  스냅숏 또는 트랜잭션 게시를 만든 후[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 설정한 다음 구독자에 대한 밀어넣기 구독을 만듭니다. 자세한 내용은 [SQL Server 이외 구독자에 대한 구독 만들기](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)을 참조하세요.  
+3.  스냅샷 또는 트랜잭션 게시를 만든 후[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 설정한 다음 구독자에 대한 밀어넣기 구독을 만듭니다. 자세한 내용은 [SQL Server 이외 구독자에 대한 구독 만들기](../../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)을 참조하세요.  
   
 4.  필요에 따라 하나 이상의 아티클에 대해 사용자 지정 생성 스크립트를 지정할 수 있습니다. 테이블이 게시되면 해당 테이블에 대한 `CREATE TABLE` 스크립트가 생성됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자의 경우 이 스크립트는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 언어로 생성된 다음 구독자에서 적용되기 전에 배포 에이전트에서 보다 일반적인 SQL 언어로 번역됩니다. 사용자 지정 생성 스크립트를 지정하려면 기존 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 수정하거나 DB2 SQL 언어를 사용하는 완전한 스크립트를 만듭니다. DB2 스크립트를 만드는 경우에는 **bypass_translation** 지시어를 사용하여 배포 에이전트가 구독자에서 번역 과정 없이 스크립트를 적용하도록 합니다.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "51672382"
   
      **아티클 스크립트를 수정하고 사용자 지정 생성 스크립트로 제공하려면**  
   
-    1.  게시에 대해 스냅숏을 생성한 후 게시에 대한 스냅숏 폴더로 이동합니다.  
+    1.  게시에 대해 스냅샷을 생성한 후 게시에 대한 스냅샷 폴더로 이동합니다.  
   
     2.  `MyArticle.sch` 등 아티클과 같은 이름의 `.sch` 파일을 찾습니다.  
   
@@ -88,9 +88,9 @@ ms.locfileid: "51672382"
   
 -   복제된 각 테이블의 데이터 및 인덱스는 DB2 테이블스페이스에 할당됩니다. DB2 테이블스페이스의 페이지 크기는 테이블스페이스에 속하는 테이블의 최대 열 개수와 최대 행 크기를 제어합니다. 복제된 테이블과 연결된 테이블스페이스가 복제된 열의 개수 및 테이블의 최대 행 크기에 따라 적절한지 확인합니다.  
   
--   테이블에 있는 하나 이상의 기본 키 열이 DECIMAL(32-38, 0-38) 또는 NUMERIC(32-38, 0-38) 데이터 형식이면 트랜잭션 복제를 사용하여 테이블을 DB2 구독자로 게시해서는 안 됩니다. 트랜잭션 복제에서는 기본 키를 사용하여 행을 식별하는데 이 데이터 형식은 구독자에서 VARCHAR(41)로 매핑되므로 오류가 발생할 수 있습니다. 기본 키에서 이러한 데이터 형식을 사용하는 테이블은 스냅숏 복제를 사용하여 게시할 수 있습니다.  
+-   테이블에 있는 하나 이상의 기본 키 열이 DECIMAL(32-38, 0-38) 또는 NUMERIC(32-38, 0-38) 데이터 형식이면 트랜잭션 복제를 사용하여 테이블을 DB2 구독자로 게시해서는 안 됩니다. 트랜잭션 복제에서는 기본 키를 사용하여 행을 식별하는데 이 데이터 형식은 구독자에서 VARCHAR(41)로 매핑되므로 오류가 발생할 수 있습니다. 기본 키에서 이러한 데이터 형식을 사용하는 테이블은 스냅샷 복제를 사용하여 게시할 수 있습니다.  
   
--   복제에서 테이블을 만드는 대신 구독자에서 테이블을 미리 만들려면 replication support only 옵션을 사용합니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
+-   복제에서 테이블을 만드는 대신 구독자에서 테이블을 미리 만들려면 replication support only 옵션을 사용합니다. 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 DB2에서 지원되는 길이보다 긴 테이블 이름과 열 이름을 사용할 수 있습니다.  
   
@@ -155,7 +155,7 @@ ms.locfileid: "51672382"
   
      이렇게 하면 DB2의 페이지 크기를 최대 행 크기를 수용할 수 있을 정도로 늘릴 수 있는 한 생성된 테이블을 구독자에서 성공적으로 만들 수 있습니다. DB2 데이터베이스에 액세스하는 데 사용되는 로그인은 테이블을 DB2로 복제할 수 있는 충분한 크기의 테이블 공간에 액세스할 수 있어야 합니다.  
   
--   DB2는 최대 32KB의 VARCHAR 열을 지원할 수 있으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 일부 큰 개체 열을 DB2 VARCHAR 열로 적절하게 매핑할 수 있습니다. 그러나 복제에서 사용하는 DB2용 OLE DB 공급자에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 큰 개체를 DB2의 큰 개체로 매핑할 수 없습니다. 따라서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **varchar(max)**, **ntext**및 **nvarchar(max)** 열은 생성된 생성 스크립트에서 VARCHAR(0)에 매핑됩니다. 길이 값 0은 스크립트를 구독자에 적용하기 전에 적절한 값으로 바꾸어야 합니다. 데이터 형식의 길이를 변경하지 않으면 DB2 구독자에서 테이블을 만들려고 할 때 DB2에서 오류 604가 발생합니다. 오류 604는 데이터 형식의 전체 자릿수나 길이 특성이 유효하지 않음을 나타냅니다.  
+-   DB2는 최대 32KB의 VARCHAR 열을 지원할 수 있으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 일부 큰 개체 열을 DB2 VARCHAR 열로 적절하게 매핑할 수 있습니다. 그러나 복제에서 사용하는 DB2용 OLE DB 공급자에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 큰 개체를 DB2의 큰 개체로 매핑할 수 없습니다. 따라서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **text**, **varchar(max)** , **ntext**및 **nvarchar(max)** 열은 생성된 생성 스크립트에서 VARCHAR(0)에 매핑됩니다. 길이 값 0은 스크립트를 구독자에 적용하기 전에 적절한 값으로 바꾸어야 합니다. 데이터 형식의 길이를 변경하지 않으면 DB2 구독자에서 테이블을 만들려고 할 때 DB2에서 오류 604가 발생합니다. 오류 604는 데이터 형식의 전체 자릿수나 길이 특성이 유효하지 않음을 나타냅니다.  
   
      복제하는 원본 테이블에 대한 지식을 바탕으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 큰 개체를 가변 길이의 DB2 항목에 매핑하는 것이 적절한지 결정하고 사용자 지정 생성 스크립트에 적절한 최대 길이를 지정합니다. 사용자 지정 생성 스크립트 지정 방법은 이 항목의 "IBM DB2 구독자 구성" 섹션에서 5단계를 참조하십시오.  
   

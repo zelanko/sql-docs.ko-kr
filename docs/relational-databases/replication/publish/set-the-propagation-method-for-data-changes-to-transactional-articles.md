@@ -43,7 +43,7 @@ ms.locfileid: "67582883"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   복제에서 생성된 스냅숏 파일을 편집할 때는 주의해야 합니다. 사용자 지정 저장 프로시저의 사용자 지정 논리를 테스트하고 지원해야 합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 사용자 지정 논리에 대한 지원을 제공하지 않습니다.  
+-   복제에서 생성된 스냅샷 파일을 편집할 때는 주의해야 합니다. 사용자 지정 저장 프로시저의 사용자 지정 논리를 테스트하고 지원해야 합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 에서는 사용자 지정 논리에 대한 지원을 제공하지 않습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사와 **게시 속성 - \<게시>** 대화 상자에서 사용 가능한 **아티클 속성 - \<Article>** 대화 상자의 **속성** 탭에서 전파 방법을 지정합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
@@ -74,9 +74,9 @@ ms.locfileid: "67582883"
   
 4.  **게시 속성 - \<게시>** 대화 상자에 있는 경우 **확인**을 클릭하여 대화 상자를 저장하고 닫습니다.  
   
-5.  게시에 대한 스냅숏이 생성되면 이전 단계에서 지정한 프로시저가 포함됩니다. 이 프로시저는 지정한 CALL 구문을 사용하지만 복제에 사용되는 기본 논리를 포함합니다.  
+5.  게시에 대한 스냅샷이 생성되면 이전 단계에서 지정한 프로시저가 포함됩니다. 이 프로시저는 지정한 CALL 구문을 사용하지만 복제에 사용되는 기본 논리를 포함합니다.  
   
-     스냅숏이 생성된 후 이 아티클이 속해 있는 게시의 스냅숏 폴더로 이동하여 아티클과 동일한 이름을 가진 **.sch** 파일을 찾습니다. 메모장이나 다른 텍스트 편집기를 사용하여 이 파일을 열고 삽입, 업데이트 또는 삭제 저장 프로시저에 대한 CREATE PROCEDURE 명령을 찾은 후 프로시저 정의를 편집하여 데이터 변경 내용 전파에 대한 사용자 지정 논리를 제공합니다. 스냅숏이 다시 생성되면 사용자 지정 프로시저를 다시 만들어야 합니다.  
+     스냅샷이 생성된 후 이 아티클이 속해 있는 게시의 스냅샷 폴더로 이동하여 아티클과 동일한 이름을 가진 **.sch** 파일을 찾습니다. 메모장이나 다른 텍스트 편집기를 사용하여 이 파일을 열고 삽입, 업데이트 또는 삭제 저장 프로시저에 대한 CREATE PROCEDURE 명령을 찾은 후 프로시저 정의를 편집하여 데이터 변경 내용 전파에 대한 사용자 지정 논리를 제공합니다. 스냅샷이 다시 생성되면 사용자 지정 프로시저를 다시 만들어야 합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  트랜잭션 복제를 사용하면 게시자에서 구독자로 변경 내용을 전파하는 방법을 제어할 수 있습니다. 이 전파 방법은 아티클을 만들 때 프로그래밍 방식으로 설정될 수 있으며 나중에 복제 저장 프로시저에서 변경할 수도 있습니다.  
@@ -134,7 +134,7 @@ ms.locfileid: "67582883"
   
      자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
-2.  스냅숏이 생성된 후 이 아티클이 속해 있는 게시의 스냅숏 폴더로 이동하여 아티클과 동일한 이름을 가진 **.sch** 파일을 찾습니다. Notepad.exe를 사용하여 이 파일을 열고 삽입, 업데이트 또는 삭제 저장 프로시저에 대한 CREATE PROCEDURE 명령을 찾은 후 프로시저 정의를 편집하여 데이터 변경 내용 전파에 대한 사용자 지정 논리를 제공합니다. 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
+2.  스냅샷이 생성된 후 이 아티클이 속해 있는 게시의 스냅샷 폴더로 이동하여 아티클과 동일한 이름을 가진 **.sch** 파일을 찾습니다. Notepad.exe를 사용하여 이 파일을 열고 삽입, 업데이트 또는 삭제 저장 프로시저에 대한 CREATE PROCEDURE 명령을 찾은 후 프로시저 정의를 편집하여 데이터 변경 내용 전파에 대한 사용자 지정 논리를 제공합니다. 자세한 내용은 [트랜잭션 아티클에 대한 변경 내용을 전파하는 방법 지정](../../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)을 참조하세요.  
   
 #### <a name="to-create-an-article-with-custom-scripting-in-the-custom-stored-procedures-to-propagate-data-changes"></a>데이터 변경 내용을 전파하기 위해 사용자 지정 저장 프로시저의 사용자 지정 스크립팅을 포함하는 아티클을 만들려면  
   

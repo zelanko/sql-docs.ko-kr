@@ -51,7 +51,7 @@ ms.locfileid: "65575236"
   
 2.  보안 설명자는 스키마가 업데이트된 후 보고서 서버 데이터베이스를 처음 사용할 때 업그레이드됩니다.  
   
-3.  게시된 보고서 및 컴파일된 보고서 스냅숏은 처음 사용 시 업데이트됩니다. 자세한 내용은 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)을(를) 참조하세요.  
+3.  게시된 보고서 및 컴파일된 보고서 스냅샷은 처음 사용 시 업데이트됩니다. 자세한 내용은 [Upgrade Reports](../../reporting-services/install-windows/upgrade-reports.md)을(를) 참조하세요.  
   
  보고서 서버 데이터베이스 이외에도 보고서 서버는 임시 데이터베이스도 사용합니다. 임시 데이터베이스는 보고서 서버 데이터베이스를 업그레이드할 때 자동으로 업그레이드됩니다.  
   

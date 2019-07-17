@@ -13,7 +13,7 @@ ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 4612b0762d8a0d619a19b61b8bb10ef6a68d1ba0
 ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "66803078"
@@ -30,7 +30,7 @@ ms.locfileid: "66803078"
   
 |속성|설명|  
 |----------|-----------------|  
-|[TRANSACTION_SNAPSHOT](../../../connect/jdbc/reference/transaction-snapshot-field-sqlserverconnection.md)|스냅숏 트랜잭션 격리 수준을 지정하는 데 사용됩니다.|  
+|[TRANSACTION_SNAPSHOT](../../../connect/jdbc/reference/transaction-snapshot-field-sqlserverconnection.md)|스냅샷 트랜잭션 격리 수준을 지정하는 데 사용됩니다.|  
   
 ## <a name="inherited-fields"></a>상속된 필드  
   

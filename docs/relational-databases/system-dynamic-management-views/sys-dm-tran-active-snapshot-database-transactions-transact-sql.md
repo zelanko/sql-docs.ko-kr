@@ -34,7 +34,7 @@ ms.locfileid: "68262699"
   
 -   ALLOW_SNAPSHOT_ISOLATION 및 READ_COMMITTED_SNAPSHOT 데이터베이스 옵션 중 하나 또는 둘 다가 ON으로 설정된 경우  
   
-    -   스냅숏 격리 수준이나 행 버전 관리를 사용하는 커밋된 읽기 격리 수준에서 실행되는 각 트랜잭션에 대해 하나의 행이 있습니다.  
+    -   스냅샷 격리 수준이나 행 버전 관리를 사용하는 커밋된 읽기 격리 수준에서 실행되는 각 트랜잭션에 대해 하나의 행이 있습니다.  
   
     -   현재 데이터베이스에서 행 버전이 생성되게 하는 각 트랜잭션에 대해 하나의 행이 있습니다. 예를 들어 트랜잭션은 현재 데이터베이스에서 행을 업데이트하거나 삭제하여 행 버전을 생성합니다.  
   
@@ -61,11 +61,11 @@ sys.dm_tran_active_snapshot_database_transactions
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**transaction_id**|**bigint**|트랜잭션에 할당된 고유 ID입니다. 트랜잭션 ID는 주로 잠금 작업에서 트랜잭션을 식별하는 데 사용됩니다.|  
-|**transaction_sequence_num**|**bigint**|트랜잭션 시퀀스 번호입니다. 트랜잭션 시작 시 해당 트랜잭션에 할당되는 고유 시퀀스 번호인 트랜잭션 시퀀스 번호입니다. 버전 레코드를 생성하지 않고 스냅숏 검색을 사용하지 않는 트랜잭션에는 트랜잭션 시퀀스 번호가 지정되지 않습니다.|  
+|**transaction_sequence_num**|**bigint**|트랜잭션 시퀀스 번호입니다. 트랜잭션 시작 시 해당 트랜잭션에 할당되는 고유 시퀀스 번호인 트랜잭션 시퀀스 번호입니다. 버전 레코드를 생성하지 않고 스냅샷 검색을 사용하지 않는 트랜잭션에는 트랜잭션 시퀀스 번호가 지정되지 않습니다.|  
 |**commit_sequence_num**|**bigint**|트랜잭션이 완료(커밋 또는 중지)된 시기를 나타내는 시퀀스 번호입니다. 활성 트랜잭션의 경우 이 값은 NULL입니다.|  
-|**is_snapshot**|**int**|0 = 스냅숏 격리 트랜잭션이 아닙니다.<br /><br /> 1 = 스냅숏 격리 트랜잭션입니다.|  
+|**is_snapshot**|**int**|0 = 스냅샷 격리 트랜잭션이 아닙니다.<br /><br /> 1 = 스냅샷 격리 트랜잭션입니다.|  
 |**session_id**|**int**|트랜잭션을 시작한 세션의 ID입니다.|  
-|**first_snapshot_sequence_num**|**bigint**|스냅숏을 만들 때 활성 상태인 트랜잭션의 가장 낮은 트랜잭션 시퀀스 번호입니다. 실행 시 스냅숏 트랜잭션이 해당 시점에서 활성 상태인 모든 트랜잭션의 스냅숏을 만듭니다. 스냅숏 트랜잭션이 아닌 경우 이 열에 0이 표시됩니다.|  
+|**first_snapshot_sequence_num**|**bigint**|스냅샷을 만들 때 활성 상태인 트랜잭션의 가장 낮은 트랜잭션 시퀀스 번호입니다. 실행 시 스냅샷 트랜잭션이 해당 시점에서 활성 상태인 모든 트랜잭션의 스냅샷을 만듭니다. 스냅샷 트랜잭션이 아닌 경우 이 열에 0이 표시됩니다.|  
 |**max_version_chain_traversed**|**int**|트랜잭션 측면에서 일관된 버전을 찾기 위해 이동한 버전 체인의 최대 길이입니다.|  
 |**average_version_chain_traversed**|**real**|이동한 버전 체인의 평균 행 버전 수입니다.|  
 |**elapsed_time_seconds**|**bigint**|트랜잭션이 트랜잭션 시퀀스 번호를 받은 이후 경과된 시간입니다.|  
@@ -77,11 +77,11 @@ sys.dm_tran_active_snapshot_database_transactions
 온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
 
 ## <a name="remarks"></a>설명  
- **sys.dm_tran_active_snapshot_database_transactions** 는 XSN (트랜잭션 시퀀스 번호)에 할당 된 트랜잭션을 보고 합니다. 트랜잭션이 처음으로 버전 저장소에 액세스하면 XSN이 할당됩니다. 스냅숏 격리나 행 버전 관리를 사용하는 커밋된 읽기 격리가 설정된 데이터베이스에서 이 예는 XSN이 트랜잭션에 할당된 시기를 보여 줍니다.  
+ **sys.dm_tran_active_snapshot_database_transactions** 는 XSN (트랜잭션 시퀀스 번호)에 할당 된 트랜잭션을 보고 합니다. 트랜잭션이 처음으로 버전 저장소에 액세스하면 XSN이 할당됩니다. 스냅샷 격리나 행 버전 관리를 사용하는 커밋된 읽기 격리가 설정된 데이터베이스에서 이 예는 XSN이 트랜잭션에 할당된 시기를 보여 줍니다.  
   
 -   트랜잭션이 직렬화 가능 격리 수준에서 실행되는 경우 트랜잭션에서 행 버전이 생성되게 하는 UPDATE 작업 등의 문을 처음으로 실행할 때 XSN이 할당됩니다.  
   
--   트랜잭션이 스냅숏 격리에서 실행되는 경우 SELECT 작업 등의 DML(데이터 조작 언어) 문을 실행할 때 XSN이 할당됩니다.  
+-   트랜잭션이 스냅샷 격리에서 실행되는 경우 SELECT 작업 등의 DML(데이터 조작 언어) 문을 실행할 때 XSN이 할당됩니다.  
   
  트랜잭션 시퀀스 번호는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에서 시작된 트랜잭션마다 순차적으로 증가합니다.  
   
@@ -92,7 +92,7 @@ sys.dm_tran_active_snapshot_database_transactions
   
 -   XSN-58은 XSN-57과 같습니다.  
   
--   XSN-59는 스냅숏 격리에서 실행되는 SELECT 작업입니다.  
+-   XSN-59는 스냅샷 격리에서 실행되는 SELECT 작업입니다.  
   
 -   XSN-60은 XSN-59와 같습니다.  
   

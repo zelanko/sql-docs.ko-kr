@@ -36,7 +36,7 @@ ms.locfileid: "63207146"
   
 -   직렬화 가능(SQL_TXN_SERIALIZABLE)  
   
--   스냅숏(SQL_TXN_SS_SNAPSHOT)  
+-   스냅샷(SQL_TXN_SS_SNAPSHOT)  
   
  ODBC API 추가 트랜잭션 격리 수준을 지정 하지만에서 지원 되지 않습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버.  
   

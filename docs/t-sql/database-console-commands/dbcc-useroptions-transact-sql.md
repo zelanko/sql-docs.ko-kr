@@ -72,7 +72,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
  ```  
   
 ## <a name="remarks"></a>Remarks  
-데이터베이스 옵션 READ_COMMITTED_SNAPSHOT을 ON으로 설정하고 트랜잭션 격리 수준을 '커밋된 읽기'로 설정하면 DBCC USEROPTIONS가 커밋된 읽기 스냅숏의 격리 수준을 보고합니다. 그러나 실제 격리 수준은 커밋된 읽기입니다.
+데이터베이스 옵션 READ_COMMITTED_SNAPSHOT을 ON으로 설정하고 트랜잭션 격리 수준을 '커밋된 읽기'로 설정하면 DBCC USEROPTIONS가 커밋된 읽기 스냅샷의 격리 수준을 보고합니다. 그러나 실제 격리 수준은 커밋된 읽기입니다.
   
 ## <a name="permissions"></a>Permissions  
 **public** 역할의 멤버 자격이 필요합니다.

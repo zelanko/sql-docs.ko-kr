@@ -127,7 +127,7 @@ ms.locfileid: "62448345"
   
 2.  구독자 업데이트에 대한 충돌 발생을 방지하려면 구독자에서 ID 아티클 열에 범위를 할당합니다.  
   
-#### <a name="to-change-automatic-identity-range-management-settings-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시의 기존 아티클에 대한 자동 ID 범위 관리 설정을 변경하려면  
+#### <a name="to-change-automatic-identity-range-management-settings-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시의 기존 아티클에 대한 자동 ID 범위 관리 설정을 변경하려면  
   
 1.  게시 데이터베이스의 게시자에서 [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md) 을 실행하고 결과 집합에서 **identityrangemanagementoption** 의 값을 확인합니다. 이 값이 **0**이면 자동 ID 범위 관리가 설정되지 않은 것입니다.  
   

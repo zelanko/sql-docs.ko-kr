@@ -27,7 +27,7 @@ ms.locfileid: "68029824"
 # <a name="sysmergeschemachange-transact-sql"></a>sysmergeschemachange(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  스냅숏 에이전트가 생성한 게시된 아티클에 대한 정보를 포함합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
+  스냅샷 에이전트가 생성한 게시된 아티클에 대한 정보를 포함합니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  

@@ -77,18 +77,18 @@ ms.locfileid: "62751677"
   
 ## <a name="subscriber-options-for-all-subscriptions"></a>모든 구독에 대한 구독자 옵션  
  **스냅숏에서 게시된 데이터 초기화**  
- 구독을 스냅숏으로 초기화할 것인지(기본값), 아니면 다른 방법으로 초기화할 것인지를 결정합니다. 구독 초기화에 대한 자세한 내용은 [구독 초기화](../../relational-databases/replication/initialize-a-subscription.md)를 참조하세요.  
+ 구독을 스냅샷으로 초기화할 것인지(기본값), 아니면 다른 방법으로 초기화할 것인지를 결정합니다. 구독 초기화에 대한 자세한 내용은 [구독 초기화](../../relational-databases/replication/initialize-a-subscription.md)를 참조하세요.  
   
  **스냅숏 위치**  
- 초기화 또는 다시 초기화 중에 스냅숏 파일에 액세스하는 위치를 결정합니다. 다음 위치 값 중 하나가 표시됩니다.  
+ 초기화 또는 다시 초기화 중에 스냅샷 파일에 액세스하는 위치를 결정합니다. 다음 위치 값 중 하나가 표시됩니다.  
   
--   **기본 위치**: 배포자를 구성할 때 정의되는 기본 위치입니다. 자세한 내용은 [스냅숏 옵션 지정](../../relational-databases/replication/snapshot-options.md)을 참조하세요.  
+-   **기본 위치**: 배포자를 구성할 때 정의되는 기본 위치입니다. 자세한 내용은 [스냅샷 옵션 지정](../../relational-databases/replication/snapshot-options.md)을 참조하세요.  
   
--   **대체 폴더**: **게시 속성** 대화 상자에서 지정할 수 있는 대체 폴더입니다. 자세한 내용은 [스냅숏 옵션 지정](../../relational-databases/replication/snapshot-options.md)을 참조하세요.  
+-   **대체 폴더**: **게시 속성** 대화 상자에서 지정할 수 있는 대체 폴더입니다. 자세한 내용은 [스냅샷 옵션 지정](../../relational-databases/replication/snapshot-options.md)을 참조하세요.  
   
--   **동적 스냅숏 폴더**: 매개 변수가 있는 행 필터를 사용하는 병합 게시에 대한 스냅숏 위치입니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
+-   **동적 스냅숏 폴더**: 매개 변수가 있는 행 필터를 사용하는 병합 게시에 대한 스냅숏 위치입니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을(를) 참조하세요.  
   
--   **FTP 폴더**: FTP(파일 전송 프로토콜) 서버에 액세스할 수 있는 폴더입니다. 자세한 내용은 [FTP를 통해 스냅숏 배달](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
+-   **FTP 폴더**: FTP(파일 전송 프로토콜) 서버에 액세스할 수 있는 폴더입니다. 자세한 내용은 [FTP를 통해 스냅샷 배달](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
  **스냅숏 폴더**  
  **스냅숏 위치** 옵션에 대해 **기본 위치** 이외의 값을 선택하는 경우 스냅숏 폴더의 경로를 지정해야 합니다.  

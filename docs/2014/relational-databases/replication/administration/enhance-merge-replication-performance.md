@@ -118,11 +118,11 @@ ms.locfileid: "62805893"
   
     -   병합 에이전트의 경우 **-DownloadGenerationsPerBatch** 및 **-UploadGenerationsPerBatch** 매개 변수를 10 이하의 값으로 줄입니다. 이들 매개 변수의 기본값은 50입니다.  
   
-## <a name="snapshot-considerations"></a>스냅숏 고려 사항  
+## <a name="snapshot-considerations"></a>스냅샷 고려 사항  
   
--   초기 스냅숏을 생성하기 전에 대형 테이블에 ROWGUIDCOL 열을 만듭니다.  
+-   초기 스냅샷을 생성하기 전에 대형 테이블에 ROWGUIDCOL 열을 만듭니다.  
   
-     병합 복제에서 게시된 각 테이블은 ROWGUIDCOL 열을 가져야 합니다. 스냅숏 에이전트가 초기 스냅숏 파일을 만들기 전에 ROWGUIDCOL 열이 테이블에 없다면 에이전트는 우선 ROWGUIDCOL 열을 추가하고 채워야 합니다. 병합 복제 중 스냅숏을 생성할 때 성능을 향상시키려면 게시하기 전 각 테이블에 ROWGUIDCOL 열을 만듭니다. 이 열은 어떤 이름도 가질 수 있지만(기본적으로 스냅숏 에이전트는**rowguid** 를 사용) 다음 데이터 형식 특징이 있어야 합니다.  
+     병합 복제에서 게시된 각 테이블은 ROWGUIDCOL 열을 가져야 합니다. 스냅샷 에이전트가 초기 스냅샷 파일을 만들기 전에 ROWGUIDCOL 열이 테이블에 없다면 에이전트는 우선 ROWGUIDCOL 열을 추가하고 채워야 합니다. 병합 복제 중 스냅샷을 생성할 때 성능을 향상시키려면 게시하기 전 각 테이블에 ROWGUIDCOL 열을 만듭니다. 이 열은 어떤 이름도 가질 수 있지만(기본적으로 스냅샷 에이전트는**rowguid** 를 사용) 다음 데이터 형식 특징이 있어야 합니다.  
   
     -   UNIQUEIDENTIFIER 데이터 형식  
   
@@ -132,9 +132,9 @@ ms.locfileid: "62805893"
   
     -   열에 있는 고유 인덱스  
   
--   스냅숏을 미리 생성하거나 구독자가 처음 동기화될 때 스냅숏의 생성과 적용을 요청하도록 합니다.  
+-   스냅샷을 미리 생성하거나 구독자가 처음 동기화될 때 스냅샷의 생성과 적용을 요청하도록 합니다.  
   
-     이러한 옵션 중 하나 또는 둘 모두를 사용하여 매개 변수가 있는 필터를 사용하는 게시에 대한 스냅숏을 제공할 수 있습니다. 이러한 옵션을 하나도 지정하지 않으면 **bcp** 유틸리티를 사용하지 않고 일련의 SELECT 및 INSERT 문을 사용하여 구독을 초기화하게 되는데 이 경우 프로세스의 속도가 훨씬 느립니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)을 참조하세요.  
+     이러한 옵션 중 하나 또는 둘 모두를 사용하여 매개 변수가 있는 필터를 사용하는 게시에 대한 스냅샷을 제공할 수 있습니다. 이러한 옵션을 하나도 지정하지 않으면 **bcp** 유틸리티를 사용하지 않고 일련의 SELECT 및 INSERT 문을 사용하여 구독을 초기화하게 되는데 이 경우 프로세스의 속도가 훨씬 느립니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)을(를) 참조하세요.  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>유지 관리 및 모니터링 고려 사항  
   

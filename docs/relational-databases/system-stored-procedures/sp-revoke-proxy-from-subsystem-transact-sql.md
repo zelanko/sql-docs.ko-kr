@@ -53,7 +53,7 @@ sp_revoke_proxy_from_subsystem
 |-----------|-----------------|  
 |**2**|ActiveX 스크립트<br /><br /> **\*\* 중요 \* \***  ActiveX 스크립팅 하위 시스템에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이후 버전에서 에이전트 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
 |**3**|운영 체제(CmdExec)|  
-|**4**|복제 스냅숏 에이전트|  
+|**4**|Replication Snapshot Agent|  
 |**5**|복제 로그 판독기 에이전트|  
 |**6**|복제 배포 에이전트|  
 |**7**|Replication Merge Agent|  
@@ -69,7 +69,7 @@ sp_revoke_proxy_from_subsystem
 |-----------|-----------------|  
 |ActiveScripting|ActiveX 스크립트|  
 |CmdExec|운영 체제(CmdExec)|  
-|스냅숏|복제 스냅숏 에이전트|  
+|스냅샷|Replication Snapshot Agent|  
 |LogReader|복제 로그 판독기 에이전트|  
 |배포|복제 배포 에이전트|  
 |병합|Replication Merge Agent|  

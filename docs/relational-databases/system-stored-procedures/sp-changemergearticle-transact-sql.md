@@ -124,7 +124,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x100000000**|에 지정 된 경우 FILESTREAM 특성을 복제 하려면이 옵션을 사용 **varbinary (max)** 열입니다. 테이블을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자에 복제할 경우에는 이 옵션을 지정하지 마십시오. FILESTREAM 열이 있는 테이블을 복제 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이 스키마 옵션을 설정 하는 방법에 관계 없이 구독자 지원 되지 않습니다. 관련된 옵션을 참조 하세요 **0x800000000**합니다.|  
 ||**0x200000000**|날짜 및 시간 데이터 형식 변환 (**날짜**, **시간**합니다 **datetimeoffset**, 및 **datetime2**)는에 도입 된 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전 버전의 지원 되는 데이터 형식으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다.|  
 ||**0x400000000**|데이터 및 인덱스에 대한 압축 옵션을 복제합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.|  
-||**0x800000000**|FILESTREAM 데이터를 구독자에서 고유한 파일 그룹에 저장하려면 이 옵션을 설정합니다. 이 옵션을 설정하지 않으면 FILESTREAM 데이터는 기본 파일 그룹에 저장됩니다. 복제 기능에서는 파일 그룹을 만들지 않으므로 이 옵션을 설정할 경우 구독자에서 스냅숏을 적용하기 전에 파일 그룹을 만들어야 합니다. 스냅숏을 적용 하기 전에 개체를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [하기 전에 스크립트 실행 및 스냅숏 적용 전후](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)합니다.<br /><br /> 관련된 옵션을 참조 하세요 **0x100000000**합니다.|  
+||**0x800000000**|FILESTREAM 데이터를 구독자에서 고유한 파일 그룹에 저장하려면 이 옵션을 설정합니다. 이 옵션을 설정하지 않으면 FILESTREAM 데이터는 기본 파일 그룹에 저장됩니다. 복제 기능에서는 파일 그룹을 만들지 않으므로 이 옵션을 설정할 경우 구독자에서 스냅샷을 적용하기 전에 파일 그룹을 만들어야 합니다. 스냅숏을 적용 하기 전에 개체를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [하기 전에 스크립트 실행 및 스냅숏 적용 전후](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)합니다.<br /><br /> 관련된 옵션을 참조 하세요 **0x100000000**합니다.|  
 ||**0x1000000000**|공용 언어 런타임 (CLR) 사용자 정의 형식 (Udt) 변환 **varbinary (max)** 실행 하는 구독자에 게 UDT 형식의 열을 복제할 수 있도록 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]입니다.|  
 ||**0x2000000000**|변환 된 **hierarchyid** 데이터 형식입니다 **varbinary (max)** 있도록 형식의 열 **hierarchyid** 실행 하는 구독자에 복제할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. 사용 하는 방법에 대 한 자세한 내용은 **hierarchyid** 복제 된 테이블의 열 참조 [hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|테이블의 필터링된 인덱스를 복제합니다. 필터링 된 인덱스에 대 한 자세한 내용은 참조 하세요. [필터링 된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)합니다.|  
@@ -132,7 +132,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x10000000000**|형식의 열에 인덱스를 복제 **지리** 하 고 **기 하 도형**합니다.|  
 ||NULL|시스템에서 아티클에 대해 유효한 스키마 옵션을 자동으로 생성합니다.|  
 |**상태**|**active**|테이블 게시를 위한 초기 처리 스크립트가 실행됩니다.|  
-||**unsynced**|스냅숏 에이전트가 다음에 실행될 때 테이블 게시를 위한 초기 처리 스크립트가 실행됩니다.|  
+||**unsynced**|스냅샷 에이전트가 다음에 실행될 때 테이블 게시를 위한 초기 처리 스크립트가 실행됩니다.|  
 |**stream_blob_columns**|**true**|BLOB(Binary Large Object) 열을 복제할 때 데이터 스트림 최적화를 사용합니다. 그러나 논리적 레코드와 같은 특정 병합 복제 기능은 스트림 최적화를 사용할 수 없도록 합니다. *stream_blob_columns* FILESTREAM을 사용 하는 경우 true로 설정 됩니다. 그러면 FILESTREAM 데이터 복제가 최적의 방식으로 수행되고 메모리 활용률이 낮아집니다. FILESTREAM 테이블 아티클에서 blob 스트리밍을 사용 하지 않도록, 설정 *stream_blob_columns* 를 false로 합니다.<br /><br /> **\*\* 중요 \* \***  이 메모리 최적화를 설정 하면 동기화 중에 병합 에이전트의 성능이 저하 될 수 있습니다. MB 단위의 데이터가 포함된 열을 복제할 때만 이 옵션을 사용해야 합니다.|  
 ||**false**|BLOB 열을 복제할 때 최적화를 사용하지 않습니다.|  
 |**subscriber_upload_options**|**0**|클라이언트 구독이 있는 구독자에서 수행되는 업데이트에 제한이 없으며 변경 내용이 게시자로 업로드됩니다. 이 속성을 변경하려면 기존 구독자를 다시 초기화해야 합니다.|  
@@ -146,11 +146,11 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
   
- **0** 병합 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅숏을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
+ **0** 병합 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅샷을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
  **1** 의미 병합 아티클에 대 한 변경을 유효 하지 않게 스냅숏을 무효화 하는 새 스냅숏이 필요한 기존 구독이 있는 경우 제공 되지 않음으로 표시 될 기존 스냅숏과 하 고 새 스냅숏을 생성할 권한을 합니다.  
   
- 변경 시 새 스냅숏의 생성을 필요로 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
+ 변경 시 새 스냅샷의 생성을 필요로 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
 `[ @force_reinit_subscription = ] force_reinit_subscription` 이 저장된 프로시저가 수행한 동작 기존 구독을 다시 초기화에 필요할 수 있음을 승인 합니다. *force_reinit_subscription* 되는 **비트**, 기본값은 **0**합니다.  
   
@@ -206,7 +206,7 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 -   **logical_record_level_conflict_resolution**  
   
- 에 대 한 3의 값을 지정 하면 **partition_options**, 메타 데이터가 정리 됩니다 때마다 병합 에이전트가 실행 되 고 분할 된 스냅숏은 더 빨리 만료 됩니다. 이 옵션을 사용할 때는 구독자가 요청한 분할된 스냅숏을 활성화해야 합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
+ 에 대 한 3의 값을 지정 하면 **partition_options**, 메타 데이터가 정리 됩니다 때마다 병합 에이전트가 실행 되 고 분할 된 스냅숏은 더 빨리 만료 됩니다. 이 옵션을 사용할 때는 구독자가 요청한 분할된 스냅샷을 활성화해야 합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을(를) 참조하세요.  
   
  설정 하는 경우는 **column_tracking** 속성인 테이블이 이미 다른 병합 게시에 게시 하는 경우 열 추적은 동일 해야 하는이 테이블을 기반으로 하는 기존 아티클이 사용 하는 값으로. 이 매개 변수는 테이블 아티클에만 해당합니다.  
   

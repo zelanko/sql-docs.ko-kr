@@ -18,7 +18,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108145"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>새 일정: 일정 편집 페이지 (보고서 관리자)
-  새 일정/일정 편집 페이지를 사용하여 보고서에 대한 일정을 만들 수 있습니다. 일정은 캐시된 보고서를 새로 고치고 보고서 기록에 또는 독립 실행 항목으로 스냅숏을 만들기 위해 구독에서 사용됩니다.  
+  새 일정/일정 편집 페이지를 사용하여 보고서에 대한 일정을 만들 수 있습니다. 일정은 캐시된 보고서를 새로 고치고 보고서 기록에 또는 독립 실행 항목으로 스냅샷을 만들기 위해 구독에서 사용됩니다.  
   
 > [!NOTE]  
 >  이 기능은 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "66108145"
   
 4.  **실행** 탭을 선택합니다.  
   
-5.  **보고서 실행 스냅숏에서 이 보고서 렌더링**옵션을 선택합니다. 그런 다음 **다음 일정을 사용하여 스냅숏을 보고서 기록에 추가**, **보고서별 일정**을 차례로 선택한 후 **구성**을 클릭합니다.  
+5.  **보고서 실행 스냅숏에서 이 보고서 렌더링**옵션을 선택합니다. 그런 다음 **다음 일정을 사용하여 스냅샷을 보고서 기록에 추가**, **보고서별 일정**을 차례로 선택한 후 **구성**을 클릭합니다.  
   
 ### <a name="to-open-the-new-schedule-or-edit-schedule-page-from-the-history-properties-page-of-a-report"></a>보고서의 기록 속성 페이지에서 새 일정 또는 일정 편집 페이지를 열려면  
   

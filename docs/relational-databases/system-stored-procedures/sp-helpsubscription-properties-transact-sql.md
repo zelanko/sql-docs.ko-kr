@@ -51,7 +51,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |값|Description|  
 |-----------|-----------------|  
 |**0**|트랜잭션 게시|  
-|**1**|스냅숏 게시|  
+|**1**|스냅샷 게시|  
 |**2**|병합 게시|  
   
 ## <a name="result-sets"></a>결과 집합  
@@ -73,15 +73,15 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**ftp_port**|**int**|이전 버전과의 호환성을 위해서만 지원됩니다. 배포자용 FTP 서비스의 포트 번호입니다.|  
 |**ftp_login**|**sysname**|이전 버전과의 호환성을 위해서만 지원됩니다. FTP 서비스에 연결하는 데 필요한 사용자 이름입니다.|  
 |**ftp_password**|**nvarchar(524)**|이전 버전과의 호환성을 위해서만 지원됩니다. FTP 서비스에 연결하는 데 필요한 사용자 암호입니다.|  
-|**alt_snapshot_folder**|**nvarchar(255)**|스냅숏의 대체 폴더 위치를 지정합니다.|  
+|**alt_snapshot_folder**|**nvarchar(255)**|스냅샷의 대체 폴더 위치를 지정합니다.|  
 |**working_directory**|**nvarchar(255)**|데이터 및 스키마 파일을 저장하는 데 사용하는 작업 디렉터리의 이름입니다.|  
-|**use_ftp**|**bit**|일반 프로토콜 대신 FTP를 사용하여 스냅숏을 검색하도록 지정합니다. 하는 경우 **1**, FTP를 사용 합니다.|  
+|**use_ftp**|**bit**|일반 프로토콜 대신 FTP를 사용하여 스냅샷을 검색하도록 지정합니다. 하는 경우 **1**, FTP를 사용 합니다.|  
 |**dts_package_name**|**sysame**|DTS(데이터 변환 서비스) 패키지의 이름을 지정합니다.|  
 |**dts_package_password**|**nvarchar(524)**|패키지의 암호를 지정합니다.|  
 |**dts_package_location**|**int**|DTS 패키지가 저장된 위치입니다.<br /><br /> **0** =는 패키지 위치는 배포자입니다.<br /><br /> **1** =는 패키지 위치는 구독자의 합니다.|  
 |**offload_agent**|**bit**|에이전트를 원격으로 활성화할 수 있는지 지정합니다. 하는 경우 **0**, 에이전트를 원격으로 활성화할 수 없습니다.|  
 |**offload_server**|**sysname**|원격 활성화에 사용하는 서버의 네트워크 이름을 지정합니다.|  
-|**dynamic_snapshot_location**|**nvarchar(255)**|스냅숏 파일을 저장한 폴더의 경로를 지정합니다.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|스냅샷 파일을 저장한 폴더의 경로를 지정합니다.|  
 |**use_web_sync**|**bit**|여기서 값 HTTPS를 통해 구독을 동기화 할 경우를 지정 **1** 이 기능을 사용 하는 것을 의미 합니다.|  
 |**internet_url**|**nvarchar(260)**|웹 동기화를 위한 복제 수신기의 위치를 나타내는 URL입니다.|  
 |**internet_login**|**nvarchar(128)**|기본 인증을 사용하여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 병합 에이전트가 사용하는 로그인입니다.|  

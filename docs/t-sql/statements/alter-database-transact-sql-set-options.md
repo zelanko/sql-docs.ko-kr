@@ -54,7 +54,7 @@ ms.locfileid: "67313986"
 
 > |||||
 > |---|---|---|---|
-> |** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+> |** _\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -949,7 +949,7 @@ HONOR_BROKER_PRIORITY 옵션의 변경 내용은 전송 대기 중인 메시지�
 
 ALLOW_SNAPSHOT_ISOLATION { ON | OFF }         
 ON         
-데이터베이스 수준에서 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 트랜잭션에서 SNAPSHOT 트랜잭션 격리 수준을 지정할 수 있습니다. 트랜잭션이 SNAPSHOT 격리 수준에서 실행되면 모든 문에서 트랜잭션 시작 시점의 상태로 데이터 스냅숏을 봅니다. SNAPSHOT 격리 수준에서 실행되는 트랜잭션이 여러 데이터베이스의 데이터에 액세스할 경우 모든 데이터베이스에서 ALLOW_SNAPSHOT_ISOLATION이 ON으로 설정되어 있어야 합니다. 그렇지 않고 ALLOW_SNAPSHOT_ISOLATION이 OFF로 설정된 경우에는 트랜잭션 내의 각 문에서는 FROM 절의 참조에서 데이터베이스의 테이블에 대한 잠금 힌트를 사용해야 합니다.
+데이터베이스 수준에서 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅샷 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 트랜잭션에서 SNAPSHOT 트랜잭션 격리 수준을 지정할 수 있습니다. 트랜잭션이 SNAPSHOT 격리 수준에서 실행되면 모든 문에서 트랜잭션 시작 시점의 상태로 데이터 스냅샷을 봅니다. SNAPSHOT 격리 수준에서 실행되는 트랜잭션이 여러 데이터베이스의 데이터에 액세스할 경우 모든 데이터베이스에서 ALLOW_SNAPSHOT_ISOLATION이 ON으로 설정되어 있어야 합니다. 그렇지 않고 ALLOW_SNAPSHOT_ISOLATION이 OFF로 설정된 경우에는 트랜잭션 내의 각 문에서는 FROM 절의 참조에서 데이터베이스의 테이블에 대한 잠금 힌트를 사용해야 합니다.
 
 OFF         
 데이터베이스 수준에서 스냅샷 옵션을 해제합니다. 트랜잭션을 SNAPSHOT 트랜잭션 격리 수준으로 지정할 수 없습니다.
@@ -968,7 +968,7 @@ master 및 msdb 데이터베이스에 대해 이 옵션은 기본적으로 ON입
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }         
 ON         
-데이터베이스 수준에서 커밋된 읽기 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 커밋된 읽기 스냅숏 격리 수준을 지정하는 트랜잭션에서는 잠금 대신 행 버전 관리를 사용합니다. 트랜잭션이 커밋된 읽기 격리 수준에서 실행되면 모든 문에서는 해당 문이 시작되던 때의 상태로 데이터 스냅숏을 봅니다.
+데이터베이스 수준에서 커밋된 읽기 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅샷 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 커밋된 읽기 스냅숏 격리 수준을 지정하는 트랜잭션에서는 잠금 대신 행 버전 관리를 사용합니다. 트랜잭션이 커밋된 읽기 격리 수준에서 실행되면 모든 문에서는 해당 문이 시작되던 때의 상태로 데이터 스냅샷을 봅니다.
 
 OFF         
 데이터베이스 수준에서 커밋된 읽기 스냅샷 옵션을 해제합니다. READ COMMITTED 격리 수준을 지정하는 트랜잭션에서는 잠금을 사용합니다.
@@ -988,7 +988,7 @@ MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
 
 ON         
-트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 실행됩니다. 스냅숏보다 낮은 격리 수준의 예는 READ COMMITTED 또는 READ UNCOMMITTED입니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되는지에 관계없이 실행됩니다.
+트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 실행됩니다. 스냅샷보다 낮은 격리 수준의 예는 READ COMMITTED 또는 READ UNCOMMITTED입니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되는지에 관계없이 실행됩니다.
 
 OFF         
 메모리 최적화 테이블에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업에 대해 트랜잭션 격리 수준을 승격하지 않습니다.
@@ -1212,7 +1212,7 @@ NO_WAIT
 
 - 데이터베이스에서 AUTO_CLOSE 데이터베이스 옵션이 ON으로 설정되어 있습니다. 사용자 연결이 데이터베이스를 참조하거나 사용하지 않으면 백그라운드 작업에서 자동으로 데이터베이스를 닫고 종료하려고 합니다.
 - 기본 옵션이 있는 데이터베이스에 대해 여러 가지 쿼리를 실행합니다. 그러면 데이터베이스가 삭제됩니다.
-- 원본 데이터베이스에 대한 데이터베이스 스냅숏이 삭제됩니다.
+- 원본 데이터베이스에 대한 데이터베이스 스냅샷이 삭제됩니다.
 - 데이터베이스에 대한 트랜잭션 로그를 성공적으로 다시 작성합니다.
 - 데이터베이스 백업을 복원합니다.
 - 데이터베이스를 분리합니다.
@@ -1257,9 +1257,9 @@ GO
 
 ```
 
-### <a name="c-enabling-snapshot-isolation-on-a-database"></a>C. 데이터베이스에서 스냅숏 격리 활성화
+### <a name="c-enabling-snapshot-isolation-on-a-database"></a>C. 데이터베이스에서 스냅샷 격리 활성화
 
-다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 스냅숏 격리 프레임워크 옵션을 활성화합니다.
+다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 스냅샷 격리 프레임워크 옵션을 활성화합니다.
 
 ```sql
 USE AdventureWorks2012;
@@ -1278,7 +1278,7 @@ GO
 
 ```
 
-결과 집합은 스냅숏 격리 프레임워크가 활성화되었음을 보여 줍니다.
+결과 집합은 스냅샷 격리 프레임워크가 활성화되었음을 보여 줍니다.
 
 |NAME |snapshot_isolation_state |description|
 |-------------------- |------------------------|----------|
@@ -1397,7 +1397,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|** _\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_ **&nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|** _\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1843,7 +1843,7 @@ max_plans_per_query
 
 ALLOW_SNAPSHOT_ISOLATION { ON | OFF }         
 ON         
-데이터베이스 수준에서 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 트랜잭션에서 SNAPSHOT 트랜잭션 격리 수준을 지정할 수 있습니다. 트랜잭션이 SNAPSHOT 격리 수준에서 실행되면 모든 문에서 트랜잭션 시작 시점의 상태로 데이터 스냅숏을 봅니다. SNAPSHOT 격리 수준에서 실행되는 트랜잭션이 여러 데이터베이스의 데이터에 액세스할 경우 모든 데이터베이스에서 ALLOW_SNAPSHOT_ISOLATION이 ON으로 설정되어 있어야 합니다. 그렇지 않고 ALLOW_SNAPSHOT_ISOLATION이 OFF로 설정된 경우에는 트랜잭션 내의 각 문에서는 FROM 절의 참조에서 데이터베이스의 테이블에 대한 잠금 힌트를 사용해야 합니다.
+데이터베이스 수준에서 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅샷 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 트랜잭션에서 SNAPSHOT 트랜잭션 격리 수준을 지정할 수 있습니다. 트랜잭션이 SNAPSHOT 격리 수준에서 실행되면 모든 문에서 트랜잭션 시작 시점의 상태로 데이터 스냅샷을 봅니다. SNAPSHOT 격리 수준에서 실행되는 트랜잭션이 여러 데이터베이스의 데이터에 액세스할 경우 모든 데이터베이스에서 ALLOW_SNAPSHOT_ISOLATION이 ON으로 설정되어 있어야 합니다. 그렇지 않고 ALLOW_SNAPSHOT_ISOLATION이 OFF로 설정된 경우에는 트랜잭션 내의 각 문에서는 FROM 절의 참조에서 데이터베이스의 테이블에 대한 잠금 힌트를 사용해야 합니다.
 
 OFF         
 데이터베이스 수준에서 스냅샷 옵션을 해제합니다. 트랜잭션을 SNAPSHOT 트랜잭션 격리 수준으로 지정할 수 없습니다.
@@ -1862,7 +1862,7 @@ master 및 msdb 데이터베이스에 대해 이 옵션은 기본적으로 ON입
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }         
 ON         
-데이터베이스 수준에서 커밋된 읽기 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 커밋된 읽기 스냅숏 격리 수준을 지정하는 트랜잭션에서는 잠금 대신 행 버전 관리를 사용합니다. 트랜잭션이 커밋된 읽기 격리 수준에서 실행되면 모든 문에서는 해당 문이 시작되던 때의 상태로 데이터 스냅숏을 봅니다.
+데이터베이스 수준에서 커밋된 읽기 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅샷 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 커밋된 읽기 스냅숏 격리 수준을 지정하는 트랜잭션에서는 잠금 대신 행 버전 관리를 사용합니다. 트랜잭션이 커밋된 읽기 격리 수준에서 실행되면 모든 문에서는 해당 문이 시작되던 때의 상태로 데이터 스냅샷을 봅니다.
 
 OFF         
 데이터베이스 수준에서 커밋된 읽기 스냅샷 옵션을 해제합니다. READ COMMITTED 격리 수준을 지정하는 트랜잭션에서는 잠금을 사용합니다.
@@ -1880,7 +1880,7 @@ master, tempdb 또는 msdb 시스템 데이터베이스에 대해서는 READ_COM
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }         
 ON         
-트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 실행됩니다. 스냅숏보다 낮은 격리 수준의 예는 READ COMMITTED 또는 READ UNCOMMITTED입니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되는지에 관계없이 실행됩니다.
+트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 실행됩니다. 스냅샷보다 낮은 격리 수준의 예는 READ COMMITTED 또는 READ UNCOMMITTED입니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되는지에 관계없이 실행됩니다.
 
 OFF         
 메모리 최적화 테이블에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업에 대해 트랜잭션 격리 수준을 승격하지 않습니다.
@@ -2103,8 +2103,8 @@ GO
 
 ```
 
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>2\. 데이터베이스에서 스냅숏 격리 활성화
-다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 스냅숏 격리 프레임워크 옵션을 활성화합니다.
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>2\. 데이터베이스에서 스냅샷 격리 활성화
+다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 스냅샷 격리 프레임워크 옵션을 활성화합니다.
 
 ```sql
 USE AdventureWorks2012;
@@ -2122,7 +2122,7 @@ WHERE name = N'AdventureWorks2012';
 GO
 ```
 
-결과 집합은 스냅숏 격리 프레임워크가 활성화되었음을 보여 줍니다.
+결과 집합은 스냅샷 격리 프레임워크가 활성화되었음을 보여 줍니다.
 
 |NAME |snapshot_isolation_state |description|
 |-------------------- |------------------------|----------|
@@ -2188,7 +2188,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |** _\*SQL Database<br />관리되는 인스턴스\*_ ** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |** _\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2576,7 +2576,7 @@ max_plans_per_query
 
 ALLOW_SNAPSHOT_ISOLATION { ON | OFF }         
 ON         
-데이터베이스 수준에서 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 트랜잭션에서 SNAPSHOT 트랜잭션 격리 수준을 지정할 수 있습니다. 트랜잭션이 SNAPSHOT 격리 수준에서 실행되면 모든 문에서 트랜잭션 시작 시점의 상태로 데이터 스냅숏을 봅니다. SNAPSHOT 격리 수준에서 실행되는 트랜잭션이 여러 데이터베이스의 데이터에 액세스할 경우 모든 데이터베이스에서 ALLOW_SNAPSHOT_ISOLATION이 ON으로 설정되어 있어야 합니다. 그렇지 않고 ALLOW_SNAPSHOT_ISOLATION이 OFF로 설정된 경우에는 트랜잭션 내의 각 문에서는 FROM 절의 참조에서 데이터베이스의 테이블에 대한 잠금 힌트를 사용해야 합니다.
+데이터베이스 수준에서 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅샷 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 트랜잭션에서 SNAPSHOT 트랜잭션 격리 수준을 지정할 수 있습니다. 트랜잭션이 SNAPSHOT 격리 수준에서 실행되면 모든 문에서 트랜잭션 시작 시점의 상태로 데이터 스냅샷을 봅니다. SNAPSHOT 격리 수준에서 실행되는 트랜잭션이 여러 데이터베이스의 데이터에 액세스할 경우 모든 데이터베이스에서 ALLOW_SNAPSHOT_ISOLATION이 ON으로 설정되어 있어야 합니다. 그렇지 않고 ALLOW_SNAPSHOT_ISOLATION이 OFF로 설정된 경우에는 트랜잭션 내의 각 문에서는 FROM 절의 참조에서 데이터베이스의 테이블에 대한 잠금 힌트를 사용해야 합니다.
 
 OFF         
 데이터베이스 수준에서 스냅샷 옵션을 해제합니다. 트랜잭션을 SNAPSHOT 트랜잭션 격리 수준으로 지정할 수 없습니다.
@@ -2595,7 +2595,7 @@ master 및 msdb 데이터베이스에 대해 이 옵션은 기본적으로 ON입
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }         
 ON         
-데이터베이스 수준에서 커밋된 읽기 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅숏 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 커밋된 읽기 스냅숏 격리 수준을 지정하는 트랜잭션에서는 잠금 대신 행 버전 관리를 사용합니다. 트랜잭션이 커밋된 읽기 격리 수준에서 실행되면 모든 문에서는 해당 문이 시작되던 때의 상태로 데이터 스냅숏을 봅니다.
+데이터베이스 수준에서 커밋된 읽기 스냅샷 옵션을 사용하도록 설정합니다. 이 옵션을 사용하면 트랜잭션에서 스냅샷 격리를 사용하지 않는 경우에도 DML 문에서 행 버전을 생성하기 시작합니다. 이 옵션을 사용하도록 설정하면 커밋된 읽기 스냅숏 격리 수준을 지정하는 트랜잭션에서는 잠금 대신 행 버전 관리를 사용합니다. 트랜잭션이 커밋된 읽기 격리 수준에서 실행되면 모든 문에서는 해당 문이 시작되던 때의 상태로 데이터 스냅샷을 봅니다.
 
 OFF         
 데이터베이스 수준에서 커밋된 읽기 스냅샷 옵션을 해제합니다. READ COMMITTED 격리 수준을 지정하는 트랜잭션에서는 잠금을 사용합니다.
@@ -2613,7 +2613,7 @@ master, tempdb 또는 msdb 시스템 데이터베이스에 대해서는 READ_COM
 
 MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT { ON | OFF }         
 ON         
-트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 실행됩니다. 스냅숏보다 낮은 격리 수준의 예는 READ COMMITTED 또는 READ UNCOMMITTED입니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되는지에 관계없이 실행됩니다.
+트랜잭션 격리 수준이 SNAPSHOT보다 낮은 격리 수준으로 설정된 경우 메모리 최적화 테이블에 대한 해석된 모든 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업이 SNAPSHOT 격리로 실행됩니다. 스냅샷보다 낮은 격리 수준의 예는 READ COMMITTED 또는 READ UNCOMMITTED입니다. 이 작업은 세션 수준에서 트랜잭션 격리 수준이 명시적으로 설정되었거나 기본값이 암시적으로 사용되는지에 관계없이 실행됩니다.
 
 OFF         
 메모리 최적화 테이블에서 해석된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 작업에 대해 트랜잭션 격리 수준을 승격하지 않습니다.
@@ -2809,8 +2809,8 @@ GO
 
 ```
 
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>2\. 데이터베이스에서 스냅숏 격리 활성화
-다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 스냅숏 격리 프레임워크 옵션을 활성화합니다.
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>2\. 데이터베이스에서 스냅샷 격리 활성화
+다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 스냅샷 격리 프레임워크 옵션을 활성화합니다.
 
 ```sql
 USE AdventureWorks2012;
@@ -2828,7 +2828,7 @@ WHERE name = N'AdventureWorks2012';
 GO
 ```
 
-결과 집합은 스냅숏 격리 프레임워크가 활성화되었음을 보여 줍니다.
+결과 집합은 스냅샷 격리 프레임워크가 활성화되었음을 보여 줍니다.
 
 |NAME |snapshot_isolation_state |description|
 |-------------------- |------------------------|----------|
@@ -2892,7 +2892,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_ ** &nbsp;||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_** &nbsp;||||
 
 &nbsp;
 

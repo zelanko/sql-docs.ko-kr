@@ -44,7 +44,7 @@ ms.locfileid: "67583436"
   > Azure SQL Database 단일 데이터베이스와 탄력적 풀의 경우 master 데이터베이스 및 tempdb 데이터베이스만 적용됩니다. 자세한 내용은 [Azure SQL Database 서버란?](https://docs.microsoft.com/azure/sql-database/sql-database-servers-databases#what-is-an-azure-sql-database-server)을 참조하세요. Azure SQL Database 단일 데이터베이스와 탄력적 풀의 컨텍스트에서 tempdb의 설명은 [Azure SQL Database 단일 데이터베이스와 탄력적 풀의 tempdb 데이터베이스](#tempdb-database-in-sql-database)를 참조하세요. Azure SQL Database Managed Instance의 경우 모든 시스템 데이터베이스가 적용됩니다.
 
 - **버전 저장소**는 행 버전 관리를 사용하는 기능을 지원하는 데 필요한 데이터 행을 보관하는 데이터 페이지 모음입니다. 버전 저장소에는 일반 버전 저장소와 온라인 인덱스 작성 버전 저장소가 있습니다. 버전 저장소에는 다음 정보가 포함됩니다.
-  - 행 버전 관리 격리를 사용하여 커밋된 읽기 또는 스냅숏 격리 트랜잭션을 사용하는 데이터베이스의 데이터 수정 트랜잭션에서 생성된 행 버전  
+  - 행 버전 관리 격리를 사용하여 커밋된 읽기 또는 스냅샷 격리 트랜잭션을 사용하는 데이터베이스의 데이터 수정 트랜잭션에서 생성된 행 버전  
   - 온라인 인덱스 작업, MARS(Multiple Active Result Sets) 및 AFTER 트리거 같은 기능에 대한 데이터 수정 트랜잭션에서 생성된 행 버전  
   
 트랜잭션을 롤백할 수 있도록 **tempdb** 내의 작업은 최소한으로 로깅됩니다. 시스템이 항상 깨끗한 데이터베이스 복사본으로 시작되도록**를 시작할 때마다** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 생성됩니다. 연결이 끊길 때 임시 테이블 및 저장 프로시저는 자동으로 제거되고 시스템이 종료될 때 활성 상태인 연결이 없습니다. 따라서 **tempdb** 에 있는 어떠한 내용도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 한 세션에서 다른 세션으로 저장되지 않습니다. **tempdb**에서는 백업 및 복원 작업이 허용되지 않습니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "67583436"
 - 데이터베이스 백업 또는 복원
 - 데이터 정렬 변경. 기본 데이터 정렬은 서버 데이터 정렬임
 - 데이터베이스 소유자 변경. **tempdb**는 **sa**가 소유합니다.
-- 데이터베이스 스냅숏 만들기
+- 데이터베이스 스냅샷 만들기
 - 데이터베이스 삭제
 - 데이터베이스에서 **guest** 사용자 삭제
 - 변경 데이터 캡처 사용

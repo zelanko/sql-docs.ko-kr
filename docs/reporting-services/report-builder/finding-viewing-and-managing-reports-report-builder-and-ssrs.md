@@ -61,7 +61,7 @@ ms.locfileid: "67492863"
   
 -   보고서 구독을 작성, 변경 또는 삭제합니다.  
   
--   보고서 기록을 만들고 보고서 기록에 보관할 보고서 스냅숏 수를 지정합니다.  
+-   보고서 기록을 만들고 보고서 기록에 보관할 보고서 스냅샷 수를 지정합니다.  
   
 -   서버에 새 폴더를 만들어 보고서를 원하는 방식으로 구성합니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "67492863"
 |옵션|결과|  
 |------------|------------|  
 |브라우저 창의**새로 고침** 단추|세션 캐시에 저장된 보고서를 표시합니다. 세션 캐시는 사용자가 보고서를 열 때 생성됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서가 열려 있는 동안 일관된 보기 상태를 유지하기 위해 브라우저 세션을 사용합니다.|  
-|![보고서 도구 모음의 브라우저 새로 고침 단추](../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/browser-refresh-button-on-report-toolbar.png)|보고서 도구 모음에서 **새로 고침** 단추를 클릭하면 보고서 서버에서 쿼리가 다시 실행되며 보고서가 요청 시 실행되는 경우 보고서 데이터가 업데이트됩니다. 보고서가 캐시되었거나 스냅숏일 경우 **새고 고침** 단추를 클릭하면 보고서 서버 데이터베이스에 저장된 보고서가 표시됩니다.|  
+|![보고서 도구 모음의 브라우저 새로 고침 단추](../../reporting-services/report-builder/media/finding-viewing-and-managing-reports-report-builder-and-ssrs/browser-refresh-button-on-report-toolbar.png)|보고서 도구 모음에서 **새로 고침** 단추를 클릭하면 보고서 서버에서 쿼리가 다시 실행되며 보고서가 요청 시 실행되는 경우 보고서 데이터가 업데이트됩니다. 보고서가 캐시되었거나 스냅샷일 경우 **새고 고침** 단추를 클릭하면 보고서 서버 데이터베이스에 저장된 보고서가 표시됩니다.|  
 |Ctrl+F5 키 조합|보고서 도구 모음의 **새로 고침** 단추를 클릭할 때와 동일한 결과를 나타냅니다.|  
   
   

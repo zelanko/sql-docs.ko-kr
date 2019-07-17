@@ -21,7 +21,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960286"
 ---
 # <a name="secure-the-distributor"></a>배포자 보안 설정
-  배포자에 연결하는 병합 에이전트에는 로그 판독기 에이전트, 스냅숏 에이전트, 큐 판독기 에이전트, 배포 에이전트 및 병합 에이전트가 있습니다. 필요한 최소 권한만 부여하는 원칙을 따르고 모든 암호 스토리지를 보호하면서 이러한 에이전트에 적절한 로그인을 제공하는 것이 중요합니다.  
+  배포자에 연결하는 병합 에이전트에는 로그 판독기 에이전트, 스냅샷 에이전트, 큐 판독기 에이전트, 배포 에이전트 및 병합 에이전트가 있습니다. 필요한 최소 권한만 부여하는 원칙을 따르고 모든 암호 스토리지를 보호하면서 이러한 에이전트에 적절한 로그인을 제공하는 것이 중요합니다.  
   
 -   로그인 및 암호 관리에 대한 자세한 내용은 [복제의 로그인 및 암호 관리](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)를 참조하세요.  
   
@@ -41,8 +41,8 @@ ms.locfileid: "62960286"
 > [!NOTE]  
 >  **distributor_admin** 에 대한 암호를 수동으로 변경하지 마십시오. 암호를 변경할 때는 항상 **sp_changedistributor_password** 저장 프로시저 또는 **의** 배포자 속성 **이나** 복제 암호 업데이트 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]대화 상자를 사용하십시오. 그러면 암호 변경 내용이 로컬 게시에 자동으로 적용됩니다.  
   
-## <a name="snapshot-folder-security"></a>스냅숏 폴더 보안  
- 스냅숏 공유에 병합 에이전트(병합 게시의 경우)나 배포 에이전트(스냅숏 또는 트랜잭션 복제의 경우)가 실행되는 계정에 대한 읽기 권한이 있고 스냅숏 에이전트가 실행되는 계정에 대한 쓰기 권한이 있는지 확인합니다. 스냅숏 폴더에 대한 자세한 내용은 [스냅숏 폴더 보안 설정](secure-the-snapshot-folder.md)을 참조하세요.  
+## <a name="snapshot-folder-security"></a>스냅샷 폴더 보안  
+ 스냅샷 공유에 병합 에이전트(병합 게시의 경우)나 배포 에이전트(스냅샷 또는 트랜잭션 복제의 경우)가 실행되는 계정에 대한 읽기 권한이 있고 스냅샷 에이전트가 실행되는 계정에 대한 쓰기 권한이 있는지 확인합니다. 스냅샷 폴더에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](secure-the-snapshot-folder.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 보안 설정 보기 및 수정](view-and-modify-replication-security-settings.md)   

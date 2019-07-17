@@ -125,7 +125,7 @@ ms.locfileid: "68262621"
 |DATABASE.SHRINK|데이터베이스 축소 작업을 동기화합니다.|  
 |DATABASE.STARTUP|데이터베이스 시작 동기화에 사용합니다.|  
 |FILE.SHRINK|파일 축소 작업을 동기화합니다.|  
-|HOBT.BULK_OPERATION|힙 최적화 대량 로드 작업과 동시 검색을 동기화합니다. 이 작업은 행 버전 관리를 사용한 스냅숏, 커밋되지 않은 읽기 및 커밋된 읽기의 격리 수준에서 수행됩니다.|  
+|HOBT.BULK_OPERATION|힙 최적화 대량 로드 작업과 동시 검색을 동기화합니다. 이 작업은 행 버전 관리를 사용한 스냅샷, 커밋되지 않은 읽기 및 커밋된 읽기의 격리 수준에서 수행됩니다.|  
 |HOBT.INDEX_REORGANIZE|힙 또는 인덱스 재구성 작업을 동기화합니다.|  
 |OBJECT.COMPILE|저장 프로시저 컴파일을 동기화합니다.|  
 |OBJECT.INDEX_OPERATION|인덱스 작업을 동기화합니다.|  

@@ -59,7 +59,7 @@ core.sp_update_data_source [ @collection_set_uid = ] 'collection_set_uid'
 >  *named_instance* 되는 컴퓨터 이름과 인스턴스 이름 형식으로 이루어진 정규화 된 인스턴스 이름 이어야 합니다 *computername*\\*instancename*합니다.  
   
  [ @days_until_expiration =] *days_until_expiration*  
- 스냅숏 데이터 보존 기간 중 남은 일수입니다. *days_until_expiration* 됩니다 **smallint**합니다.  
+ 스냅샷 데이터 보존 기간 중 남은 일수입니다. *days_until_expiration* 됩니다 **smallint**합니다.  
   
  [ @source_id = ] *source_id*  
  업데이트 원본의 고유 식별자입니다. *source_id* 됩니다 **int** 이며 OUTPUT으로 반환 됩니다.  

@@ -31,14 +31,14 @@ ms.locfileid: "67907365"
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|필터링된 데이터 스냅숏 작업의 ID입니다.|  
-|**name**|**sysname**|필터링된 데이터 스냅숏 작업의 이름입니다.|  
+|**id**|**int**|필터링된 데이터 스냅샷 작업의 ID입니다.|  
+|**name**|**sysname**|필터링된 데이터 스냅샷 작업의 이름입니다.|  
 |**pubid**|**uniqueidentifier**|이 게시의 고유한 ID입니다.|  
 |**job_id**|**uniqueidentifier**|배포자에서 SQL Server 에이전트 작업의 ID입니다.|  
 |**agent_id**|**int**|SQL Server 에이전트의 ID입니다.|  
 |**dynamic_filter_login**|**sysname**|평가에 사용 된 값을 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) 게시용으로 정의 된 매개 변수가 있는 행 필터의 함수입니다.|  
 |**dynamic_filter_hostname**|**sysname**|평가에 사용 된 값을 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) 게시용으로 정의 된 매개 변수가 있는 행 필터의 함수입니다.|  
-|**dynamic_snapshot_location**|**nvarchar(255)**|필터링된 데이터 스냅숏을 사용하는 경우에 스냅숏 파일을 읽을 대상 폴더 경로입니다.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|필터링된 데이터 스냅샷을 사용하는 경우에 스냅샷 파일을 읽을 대상 폴더 경로입니다.|  
 |**partition_id**|**int**|작업이 속한 데이터 파티션의 ID입니다.|  
   
 ## <a name="see-also"></a>관련 항목  

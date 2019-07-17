@@ -147,7 +147,7 @@ FROM Employee
   
 -   기록 및 현재 데이터의 중요한 지표에 대한 추세  
   
--   과거의 지정 시간을 "기준으로" 전체 데이터의 정확한 스냅숏(어제, 한 달 전 등)  
+-   과거의 지정 시간을 "기준으로" 전체 데이터의 정확한 스냅샷(어제, 한 달 전 등)  
   
 -   관심 있는 두 지정 시간 간의 차이(예: 한 달 전 vs. 3개월 전)  
   
@@ -292,7 +292,7 @@ SELECT * FROM vw_GetProductInventoryHistory
   
  ![ProductHistoryOverTime](../../relational-databases/tables/media/producthistoryovertime.png "ProductHistoryOverTime")  
   
- 이 시나리오에서는 임시 테이블을 사용하여 과거의 지정 시간을 기준으로 인벤토리 상태를 다시 생성하거나 다른 시간에 속해 있는 스냅숏을 비교하는 작업과 같이 다른 형식의 시간 이동 분석을 수행합니다.  
+ 이 시나리오에서는 임시 테이블을 사용하여 과거의 지정 시간을 기준으로 인벤토리 상태를 다시 생성하거나 다른 시간에 속해 있는 스냅샷을 비교하는 작업과 같이 다른 형식의 시간 이동 분석을 수행합니다.  
   
  이 사용 시나리오의 경우 Product 및 Location 테이블을 확장하여 temporal 테이블로 설정할 수도 있습니다. 이렇게 하면 UnitPrice 및 NumberOfEmployee의 변경 기록을 나중에 분석할 수 있습니다.  
   

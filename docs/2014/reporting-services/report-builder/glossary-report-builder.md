@@ -277,9 +277,9 @@ ms.locfileid: "66107812"
 |렌더링 개체 모델(rendering object model)|렌더링 확장 프로그램에서 사용하는 보고서 개체 모델입니다.|  
 |보고서 정의(report definition)|보고서의 XML 정의이며 reportdefinition.xsd 스키마를 따르는 .rdl 파일입니다.|  
 |RDL(Report Definition Language)|보고서에 대한 레이아웃 및 쿼리 정보를 설명하는 일련의 지침입니다.|  
-|보고서 실행 스냅숏(report execution snapshot)|캐시되는 보고서 스냅숏입니다.|  
-|보고서 기록|시간이 지나면서 생성 및 저장되는 보고서 스냅숏 모음입니다.|  
-|보고서 기록 스냅숏(report history snapshot)|보고서 기록에 표시되는 보고서 스냅숏입니다.|  
+|보고서 실행 스냅샷(report execution snapshot)|캐시되는 보고서 스냅샷입니다.|  
+|보고서 기록|시간이 지나면서 생성 및 저장되는 보고서 스냅샷 모음입니다.|  
+|보고서 기록 스냅샷(report history snapshot)|보고서 기록에 표시되는 보고서 스냅샷입니다.|  
 |보고서 중간 형식(report intermediate format)|특정 시점에 캡처된 데이터가 들어 있는 정적 보고서 기록입니다.|  
 |보고서 항목(report item)|보고서 레이아웃에 있는 입력란, 그래픽 요소 또는 데이터 영역과 같은 모든 개체입니다.|  
 |보고서 레이아웃(report layout)|데이터 영역, 보고서 항목 및 보고서 내의 텍스트의 배치와 적용된 서식을 말합니다.|  
@@ -297,7 +297,7 @@ ms.locfileid: "66107812"
 |보고서 서버 폴더 네임스페이스(report server folder namespace)|미리 정의된 폴더 및 사용자 정의된 폴더를 포함하는 계층입니다. 네임스페이스는 보고서와 보고서 서버에 저장된 다른 항목을 고유하게 식별합니다. 또한 URL에 보고서를 지정하기 위한 주소 지정 스키마를 제공합니다.|  
 |보고서 서버 서비스|보고서 서버의 모든 처리 및 관리 기능이 포함된 Windows 서비스입니다.|  
 |보고서 서버 웹 서비스|보고서를 호스팅, 처리 및 배달하는 웹 서비스입니다.|  
-|보고서 스냅숏(report snapshot)|특정 시점에 캡처된 데이터가 들어 있는 정적 보고서입니다.|  
+|보고서 스냅샷(report snapshot)|특정 시점에 캡처된 데이터가 들어 있는 정적 보고서입니다.|  
 |보고서별 일정(report-specific schedule)|보고서와 인라인으로 정의되는 일정입니다.|  
 |ReportViewer 컨트롤(ReportViewer controls)|ASP.NET 및 Windows Forms 애플리케이션에서 하위 보고서 처리 기능을 제공하는 웹 서버 컨트롤 및 Windows Form 컨트롤입니다.|  
 |resource|보고서 서버 데이터베이스에서 보고서, 폴더 또는 공유 데이터 원본 항목이 아닌 모든 항목입니다.|  
@@ -332,7 +332,7 @@ ms.locfileid: "66107812"
 |조각(slice)|차원의 멤버를 기준으로 하나 이상의 차원을 제한하여 지정한 큐브의 데이터 하위 집합입니다.|  
 |스마트 태그(smart tag)|스마트 태그는 Visual Studio 2005에서 전반적인 디자인 타임 생산성을 향상시키기 위해 디자인 화면에 핵심 구성을 직접 표시합니다.|  
 |SMDL|다음 용어 참조: SMDL(Semantic Model Definition Language)|  
-|snapshot|다음 용어 참조: 보고서 스냅숏(report snapshot)|  
+|snapshot|다음 용어 참조: 보고서 스냅샷(report snapshot)|  
 |정렬 순서(sort order)|비교 연산에서 문자가 평가되는 방식과 문자 정렬 시퀀스를 정의하는 데이터 정렬의 규칙 집합입니다.|  
 |공간 데이터(spatial data)|평면 또는 곡면에서 개체의 위치를 지정하는 데이터입니다. 공간 데이터는 점, 선 또는 다각형이 될 수 있습니다.|  
 |공간 데이터 형식(spatial data types)|기하 도형(평면) 또는 지리(측지) 정보를 나타내는 데이터를 지정합니다.|  

@@ -25,13 +25,13 @@ ms.locfileid: "54133173"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]와 복제 모니터에 있는 **작업** 폴더 및 **복제** 폴더에서 에이전트를 시작하고 중지합니다. 다음 에이전트 및 작업을 시작하고 중지할 수 있습니다.  
   
--   스냅숏 에이전트 - 모든 게시에서 사용  
+-   스냅샷 에이전트 - 모든 게시에서 사용  
   
 -   로그 판독기 에이전트 - 모든 트랜잭션 게시에서 사용  
   
 -   큐 판독기 에이전트 - 지연 업데이트 구독이 활성화된 트랜잭션 게시에서 사용  
   
--   배포 에이전트 - 구독을 트랜잭션 및 스냅숏 게시와 동기화함  
+-   배포 에이전트 - 구독을 트랜잭션 및 스냅샷 게시와 동기화함  
   
 -   병합 에이전트 - 구독을 병합 게시와 동기화함  
   
@@ -41,7 +41,7 @@ ms.locfileid: "54133173"
   
  복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요.  
   
-### <a name="to-start-and-stop-a-snapshot-agent-or-log-reader-agent-from-management-studio"></a>Management Studio에서 스냅숏 에이전트 또는 로그 판독기 에이전트를 시작하고 중지하려면  
+### <a name="to-start-and-stop-a-snapshot-agent-or-log-reader-agent-from-management-studio"></a>Management Studio에서 스냅샷 에이전트 또는 로그 판독기 에이전트를 시작하고 중지하려면  
   
 1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서 게시자에 연결한 다음 해당 서버 노드 및 **복제** 폴더를 확장합니다.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54133173"
   
 3.  에이전트에 대한 작업을 마우스 오른쪽 단추로 클릭한 다음 **작업 시작** 또는 **작업 중지**를 클릭합니다. 큐 판독기 에이전트에 대한 작업 이름의 형식은 **[\<배포자>].\<정수>** 입니다.  
   
-### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>복제 모니터에서 스냅숏 에이전트, 로그 판독기 에이전트 또는 큐 판독기 에이전트를 시작하고 중지하려면  
+### <a name="to-start-and-stop-a-snapshot-agent-log-reader-agent-or-queue-reader-agent-from-replication-monitor"></a>복제 모니터에서 스냅샷 에이전트, 로그 판독기 에이전트 또는 큐 판독기 에이전트를 시작하고 중지하려면  
   
 1.  왼쪽 창에서 게시자 그룹을 확장하고 해당 게시자를 확장한 다음 해당 게시를 클릭합니다.  
   

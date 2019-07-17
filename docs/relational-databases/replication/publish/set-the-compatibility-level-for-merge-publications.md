@@ -35,10 +35,10 @@ ms.locfileid: "67582894"
      [Transact-SQL](#TsqlProcedure)  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 새 게시 마법사의 **구독자 유형** 페이지에서 호환성 수준을 설정합니다. 이 마법사에 액세스하는 방법은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)에서 병합 게시의 호환성 수준을 설정하는 방법에 대해 설명합니다. 게시 스냅숏이 생성된 후 호환성 수준을 증가시킬 수는 있지만 감소시킬 수는 없습니다. **게시 속성 - \<Publication>** 대화 상자의 **일반** 페이지에서 호환성 수준을 늘립니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 게시 호환성 수준을 증가시키면 이전 버전의 호환성 수준을 실행하는 서버에 있는 기존 구독은 더 이상 동기화할 수 없게 됩니다.  
+ 새 게시 마법사의 **구독자 유형** 페이지에서 호환성 수준을 설정합니다. 이 마법사에 액세스하는 방법은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)에서 병합 게시의 호환성 수준을 설정하는 방법에 대해 설명합니다. 게시 스냅샷이 생성된 후 호환성 수준을 증가시킬 수는 있지만 감소시킬 수는 없습니다. **게시 속성 - \<Publication>** 대화 상자의 **일반** 페이지에서 호환성 수준을 늘립니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요. 게시 호환성 수준을 증가시키면 이전 버전의 호환성 수준을 실행하는 서버에 있는 기존 구독은 더 이상 동기화할 수 없게 됩니다.  
   
 > [!NOTE]  
->  호환성 수준은 다른 게시 속성 및 유효한 아티클 속성을 결정하는 데에도 의미를 가지므로 대화 상자를 동일하게 사용할 때는 호환성 수준 및 다른 속성을 변경하지 마세요. 속성을 변경하면 게시를 위한 스냅숏을 다시 생성해야 합니다.  
+>  호환성 수준은 다른 게시 속성 및 유효한 아티클 속성을 결정하는 데에도 의미를 가지므로 대화 상자를 동일하게 사용할 때는 호환성 수준 및 다른 속성을 변경하지 마세요. 속성을 변경하면 게시를 위한 스냅샷을 다시 생성해야 합니다.  
   
 #### <a name="to-set-the-publication-compatibility-level"></a>게시 호환성 수준을 설정하려면  
   

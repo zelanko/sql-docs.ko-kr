@@ -93,7 +93,7 @@ WHERE DB_NAME(database_id) IN (SELECT DISTINCT database_name FROM sys.dm_hadr_da
 ORDER BY avg_io_stall_ms DESC;  
 ```  
   
- 이러한 다음 쿼리는 시스템에 보류 중인 I/O 요청의 지정 시간(누적이 아닌) 스냅숏을 제공합니다.  
+ 이러한 다음 쿼리는 시스템에 보류 중인 I/O 요청의 지정 시간(누적이 아닌) 스냅샷을 제공합니다.  
   
 ```sql  
 SELECT DB_NAME(mf.database_id) AS [Database] ,   

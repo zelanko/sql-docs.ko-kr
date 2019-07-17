@@ -59,11 +59,11 @@ ms.locfileid: "62519143"
 |--------------|-----------------|  
 |**언어**|보고서에서 사용된 언어입니다. 값은 IETF(Internet Engineering Task Force) RFC1766 사양에 정의된 언어 코드입니다. 첫 번째 부분은 기본 언어를 지정하며 2자로 구성되어 있습니다. 하이픈으로 구분된 두 번째 부분은 해당 언어의 변형 또는 방언을 지정합니다. 보고서 정의에서 `Style` 요소와 연관된 `Body` 요소에 값이 지정되지 않은 경우 기본값은 보고서 서버의 언어입니다.|  
 |`ReportProcessingTimeout`|개별 보고서에 대한 제한 시간(초)입니다. 이 값이 설정된 경우 지정된 시간이 경과하면 보고서 서버에서 보고서 처리를 중지합니다. 유효한 값은 `-1`부터 `2`,`147`,`483`,`647`까지입니다. 값이 `-1`이면 보고서 처리 중 시간 제한으로 인한 중지가 발생하지 않습니다. 값이 `null`, 시스템 속성의 값 `ReportProcessingTimeout` 보고서 처리 제한 시간에 사용 됩니다. 기본값은 `null`입니다. 자세한 내용은 [보고서 서버 시스템 속성](reporting-services-properties-report-server-system-properties.md)을 참조하세요.|  
-|**ExecutionDate**|보고서에 대해 마지막으로 보고서 스냅숏이 만들어진 날짜와 시간입니다.|  
+|**ExecutionDate**|보고서에 대해 마지막으로 보고서 스냅샷이 만들어진 날짜와 시간입니다.|  
 |**CanRunUnattended**|보고서를 일정에 따라 무인 모드로 실행할 수 있는지 여부를 나타내는 값입니다. 이 속성을 `true`로 설정하면 보고서 매개 변수에 대한 기본값이 정의되고 데이터 원본 자격 증명이 보고서에 저장되거나 자격 증명 검색 옵션이 `None`으로 설정됩니다. 이 속성을 `false`로 설정하면 보고서를 무인 모드로 실행하기 위한 선행 조건이 충족되지 않습니다. 자세한 내용은 [무인 실행 계정 구성&#40;SSRS 구성 관리자&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)을 참조하세요.|  
 |**HasParameterDefaultValues**|보고서에 모든 보고서 매개 변수에 대해 설정된 유효한 기본값이 있는지 여부를 나타내는 값입니다. 이 값은 보고서에 보고서 매개 변수가 없는 경우에도 `true`입니다. 이 속성을 `false`로 설정하면 보고서 매개 변수 하나 이상에 유효한 기본값이 없습니다.|  
 |**HasDataSourceCredentials**|보고서와 연관된 모든 데이터 원본에 대해 설정된 자격 증명 검색 옵션이 `None`인지 아니면 `Store`인지를 나타내는 값입니다. 이 속성을 `false`로 설정하면 보고서와 연관된 데이터 원본 중 하나에 대해 설정된 자격 증명 검색 옵션이 `Integrated` 또는 `Prompt`입니다.|  
-|**IsSnapshotExecution**|보고서가 스냅숏인지 여부를 나타내는 값입니다.|  
+|**IsSnapshotExecution**|보고서가 스냅샷인지 여부를 나타내는 값입니다.|  
 |**HasScheduleReadyDataSources**|보고서의 데이터 원본이 예약된 실행을 지원하도록 구성되었는지 여부를 나타내는 값입니다. 이 속성을 `false`로 설정하면 사용자가 보고서를 구독할 수 없습니다.|  
   
 ## <a name="resource-properties"></a>리소스 속성  

@@ -52,7 +52,7 @@ ms.locfileid: "62865033"
 > [!NOTE]  
 >  게시를 삭제해도 게시 데이터베이스의 게시된 개체 또는 구독 데이터베이스의 해당 개체는 제거되지 않습니다. 필요한 경우 `DROP <object>` 명령을 사용하여 이러한 개체를 수동으로 제거할 수 있습니다.  
   
-#### <a name="to-delete-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시를 삭제하려면  
+#### <a name="to-delete-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시를 삭제하려면  
   
 1.  다음 중 하나를 수행합니다.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "62865033"
 ##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 게시를 삭제할 수 있습니다. 게시를 제거하는 데 사용하는 RMO 클래스는 제거하는 게시 유형에 따라 달라집니다.  
   
-#### <a name="to-remove-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시를 제거하려면  
+#### <a name="to-remove-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시를 제거하려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   

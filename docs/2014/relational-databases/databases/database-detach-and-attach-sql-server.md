@@ -57,12 +57,12 @@ ms.locfileid: "62762415"
     > [!NOTE]  
     >  **sp_replicationdboption**을 사용할 수 없는 경우 [sp_removedbreplication](/sql/relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql)을 실행하여 복제를 제거할 수 있습니다.  
   
--   데이터베이스에 데이터베이스 스냅숏이 있는 경우  
+-   데이터베이스에 데이터베이스 스냅샷이 있는 경우  
   
-     데이터베이스를 분리하려면 먼저 해당 데이터베이스의 모든 스냅숏을 삭제해야 합니다. 자세한 내용은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)인스턴스나 다른 인스턴스에 다시 연결할 수 있습니다.  
+     데이터베이스를 분리하려면 먼저 해당 데이터베이스의 모든 스냅샷을 삭제해야 합니다. 자세한 내용은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)인스턴스나 다른 인스턴스에 다시 연결할 수 있습니다.  
   
     > [!NOTE]  
-    >  데이터베이스 스냅숏은 분리하거나 연결할 수 없습니다.  
+    >  데이터베이스 스냅샷은 분리하거나 연결할 수 없습니다.  
   
 -   데이터베이스가 데이터베이스 미러링 세션에서 미러되고 있는 경우.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "62762415"
 > [!NOTE]  
 >  연결되는 주 데이터 파일이 읽기 전용일 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 해당 데이터베이스를 읽기 전용으로 가정합니다.  
   
- 암호화 된 데이터베이스는 처음 연결 된 경우 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 데이터베이스 소유자는 다음 문을 실행 하 여 데이터베이스의 마스터 키를 열어야 합니다. OPEN MASTER KEY DECRYPTION BY PASSWORD = **'*`password`*'** 합니다. 다음 문을 실행 하 여 마스터 키 자동 암호 해독을 설정 하는 것이 좋습니다. 마스터 키 추가 ENCRYPTION BY SERVICE MASTER KEY를 변경 합니다. 자세한 내용은 [CREATE MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) 및 [ALTER MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)를 참조하세요.  
+ 암호화 된 데이터베이스는 처음 연결 된 경우 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 데이터베이스 소유자는 다음 문을 실행 하 여 데이터베이스의 마스터 키를 열어야 합니다. OPEN MASTER KEY DECRYPTION BY PASSWORD = **' *`password`* '** 합니다. 다음 문을 실행 하 여 마스터 키 자동 암호 해독을 설정 하는 것이 좋습니다. 마스터 키 추가 ENCRYPTION BY SERVICE MASTER KEY를 변경 합니다. 자세한 내용은 [CREATE MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) 및 [ALTER MASTER KEY&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql)를 참조하세요.  
   
  로그 파일 연결 요구 사항은 데이터베이스가 읽기/쓰기인지 아니면 읽기 전용인지에 따라 다음과 같이 달라집니다.  
   

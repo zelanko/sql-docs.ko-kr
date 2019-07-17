@@ -78,14 +78,14 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**ftp_port**|**int**|이전 버전과의 호환성을 위해서만 사용 가능합니다. 배포자용 FTP 서비스의 포트 번호입니다.|  
 |**ftp_login**|**sysname**|이전 버전과의 호환성을 위해서만 사용 가능합니다. FTP 서비스 연결에 사용되는 사용자 이름입니다.|  
 |**ftp_password**|**sysname**|이전 버전과의 호환성을 위해서만 사용 가능합니다. FTP 서비스에 연결할 때 사용되는 사용자 암호입니다.|  
-|**alt_snapshot_folder**|**nvarchar(255)**|기본 위치가 아니거나 기본 위치에 추가된 위치일 경우, 스냅숏 폴더가 저장되는 위치입니다.|  
-|**working_directory**|**nvarchar(255)**|해당 옵션이 지정된 경우 FTP를 사용하여 스냅숏 파일이 전송될 디렉터리의 정규화된 경로입니다.|  
+|**alt_snapshot_folder**|**nvarchar(255)**|기본 위치가 아니거나 기본 위치에 추가된 위치일 경우, 스냅샷 폴더가 저장되는 위치입니다.|  
+|**working_directory**|**nvarchar(255)**|해당 옵션이 지정된 경우 FTP를 사용하여 스냅샷 파일이 전송될 디렉터리의 정규화된 경로입니다.|  
 |**use_ftp**|**bit**|구독이 인터넷을 통해 게시를 구독하고 있으며 FTP 주소 속성이 구성되었습니다. 하는 경우 **0**, 구독은 FTP를 사용 하지 않습니다. 하는 경우 **1**, 구독은 FTP를 사용 합니다.|  
 |**offload_agent**|**bit**|에이전트가 활성화되어 원격으로 실행될 수 있는지 여부를 지정합니다. 하는 경우 **0**, 에이전트를 원격으로 활성화할 수 없습니다.|  
 |**offload_server**|**sysname**|원격 활성화에 필요한 서버의 이름입니다.|  
 |**use_interactive_resolver**|**int**|조정 상태 동안 대화형 해결 프로그램의 사용 여부를 반환합니다. 하는 경우 **0**, 대화형 해결 프로그램 사용 되지 않습니다.|  
 |**subid**|**uniqueidentifier**|구독자의 ID입니다.|  
-|**dynamic_snapshot_location**|**nvarchar(255)**|스냅숏 파일을 저장한 폴더의 경로입니다.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|스냅샷 파일을 저장한 폴더의 경로입니다.|  
 |**last_sync_status**|**int**|동기화 상태입니다.<br /><br /> **1** = 시작<br /><br /> **2** = 성공<br /><br /> **3** = 진행 중<br /><br /> **4** = 유휴 상태<br /><br /> **5** = 이전의 실패 후 다시 시도 중<br /><br /> **6** = 실패<br /><br /> **7** = 유효성 검사 실패<br /><br /> **8** = 유효성 검사 통과<br /><br /> **9** = 종료 요청|  
 |**last_sync_summary**|**sysname**|마지막 동기화 결과에 관한 설명입니다.|  
 |**use_web_sync**|**bit**|여기서 값 HTTPS를 통해 구독을 동기화 할 경우를 지정 **1** 이 기능을 사용 하는 것을 의미 합니다.|  

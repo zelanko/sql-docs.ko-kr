@@ -113,14 +113,14 @@ ms.locfileid: "54129313"
   
 -   구독을 만들려면 먼저 게시에 피어 투 피어 복제를 사용할 수 있도록 설정해야 합니다.  
   
--   백업이나 **'replication support only'** 옵션을 사용하여 구독을 초기화해야 합니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
+-   백업이나 **'replication support only'** 옵션을 사용하여 구독을 초기화해야 합니다. 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
 -   ID 열은 사용하지 않는 것이 좋습니다. ID를 사용하는 경우 참여하는 각 데이터베이스에서 테이블에 할당된 범위를 수동으로 관리해야 합니다. 자세한 내용은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md)에서 "ID 범위 수동 관리를 위한 범위 할당" 섹션을 참조하세요.  
   
 ### <a name="feature-restrictions"></a>기능 제한  
  피어 투 피어 복제는 트랜잭션 복제의 주요 기능을 지원하지만 다음 옵션은 지원하지 않습니다.  
   
--   스냅숏을 사용하여 초기화 및 다시 초기화  
+-   스냅샷을 사용하여 초기화 및 다시 초기화  
   
 -   행 및 열 필터  
   
@@ -140,7 +140,7 @@ ms.locfileid: "54129313"
   
 -   배포 에이전트 매개 변수 **-SubscriptionStreams** 및 로그 판독기 에이전트 매개 변수 **-MaxCmdsInTran**  
   
--   아티클 속성 **@destination_owner** 및 **@destination_table**라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다.
+-   아티클 속성 **@destination_owner** 및 **@destination_table** 라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다.
 
 -   피어 투 피어 트랜잭션 복제에서는 피어 투 피어 게시에 대한 단방향 트랜잭션 구독을 만들 수 없습니다.   
   
@@ -150,7 +150,7 @@ ms.locfileid: "54129313"
   
 -   아티클 속성 **@replicate_ddl** 의 값은 **true**여야 하고 **@identityrangemanagementoption** 의 값은 **manual**이어야 하며 **@status** 에서는 옵션 **24** 를 설정해야 합니다.  
   
--   아티클 속성 **@ins_cmd**, **@del_cmd**및 **@upd_cmd** 의 값은 **SQL**라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다.  
+-   아티클 속성 **@ins_cmd** , **@del_cmd** 및 **@upd_cmd** 의 값은 **SQL**라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다.  
   
 -   구독 속성 **@sync_type** 의 값은 **none** 또는 **automatic**라고도 하는 여러 서버 인스턴스에 걸쳐 데이터 복사본을 유지 관리함으로써 확장성 및 고가용성 솔루션을 제공합니다.  
   

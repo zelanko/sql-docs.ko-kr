@@ -55,7 +55,7 @@ ms.locfileid: "68199247"
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
--   게시가 생성되면 일부 속성 변경으로 인해 새 스냅숏이 필요합니다. 게시에 구독이 있는 경우에는 이러한 변경 내용으로 인해 모든 구독도 다시 초기화해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md) 및 [기존 게시에 대한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
+-   게시가 생성되면 일부 속성 변경으로 인해 새 스냅샷이 필요합니다. 게시에 구독이 있는 경우에는 이러한 변경 내용으로 인해 모든 구독도 다시 초기화해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md) 및 [기존 게시에 대한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 및 복제 모니터에서 사용할 수 있는 **게시 속성 - \<게시>** 대화 상자에서 아티클 속성을 보고 수정합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../monitor/start-the-replication-monitor.md)을 참조하세요.  
@@ -78,7 +78,7 @@ ms.locfileid: "68199247"
   
 -   **에이전트 보안** 페이지를 사용하여 모든 게시에 대한 스냅숏 에이전트, 모든 트랜잭션 게시에 대한 로그 판독기 에이전트, 지연 업데이트 구독을 허용하는 트랜잭션 게시에 대한 큐 판독기 에이전트 등 실행하고 복제 토폴로지의 컴퓨터에 이러한 에이전트를 연결하는 계정에 대한 설정에 액세스할 수 있습니다.  
   
--   **데이터 파티션** 페이지(SQL Server 2005 이후 버전을 실행하는 게시자의 병합 게시의 경우)를 사용하면 매개 변수가 있는 필터가 있는 게시에 대한 구독자가 스냅숏을 사용할 수 없는 경우 스냅숏을 요청할 수 있는지 여부를 지정할 수 있습니다. 또한 하나 이상의 파티션에 대해 스냅숏을 한 번 또는 되풀이되는 일정에 따라 생성할 수 있습니다.  
+-   **데이터 파티션** 페이지(SQL Server 2005 이후 버전을 실행하는 게시자의 병합 게시의 경우)를 사용하면 매개 변수가 있는 필터가 있는 게시에 대한 구독자가 스냅숏을 사용할 수 없는 경우 스냅숏을 요청할 수 있는지 여부를 지정할 수 있습니다. 또한 하나 이상의 파티션에 대해 스냅샷을 한 번 또는 되풀이되는 일정에 따라 생성할 수 있습니다.  
   
 #### <a name="to-view-and-modify-article-properties"></a>아티클 속성을 보고 수정하려면  
   
@@ -100,18 +100,18 @@ ms.locfileid: "68199247"
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  아티클은 수정할 수 있으며 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 해당 속성을 반환할 수 있습니다. 사용되는 저장 프로시저는 아티클이 속한 게시 유형에 따라 달라집니다.  
   
-#### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 속한 아티클의 속성을 보려면  
+#### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 속한 아티클의 속성을 보려면  
   
 1.  테이블 아티클에 대해 [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)을 실행하고 **@publication** 매개 변수에 게시의 이름을, **@article** 매개 변수에 아티클의 이름을 지정합니다. **@article** 을 지정하지 않으면 게시의 모든 아티클에 대한 정보가 반환됩니다.  
   
 2.  테이블 아티클에 대해 [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) 를 실행하여 기본 테이블에서 사용할 수 있는 모든 열을 나열합니다.  
   
-#### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 속한 아티클의 속성을 수정하려면  
+#### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 속한 아티클의 속성을 수정하려면  
   
 1.  테이블 아티클에 대해 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)을 실행하고 **@property** 매개 변수에 변경되는 아티클 속성을, **@value** 매개 변수에 아티클의 이름을 지정합니다.  
   
     > [!NOTE]  
-    >  변경으로 인해 새 스냅숏을 생성해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_invalidate_snapshot** 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_reinit_subscription** 를 참조하세요. 변경된 경우 새 스냅숏 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경으로 인해 새 스냅샷을 생성해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_invalidate_snapshot** 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_reinit_subscription** 를 참조하세요. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>병합 게시에 속한 아티클의 속성을 보려면  
   
@@ -124,7 +124,7 @@ ms.locfileid: "68199247"
 1.  테이블 아티클에 대해 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행하고 **@property** 매개 변수에 변경되는 아티클 속성을, **@value** 매개 변수에 아티클의 이름을 지정합니다.  
   
     > [!NOTE]  
-    >  변경으로 인해 새 스냅숏을 생성해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_invalidate_snapshot** 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_reinit_subscription** 를 참조하세요. 변경된 경우 새 스냅숏 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경으로 인해 새 스냅샷을 생성해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_invalidate_snapshot** 값을 지정해야 하며, 변경으로 인해 구독자를 다시 초기화해야 하는 경우 **@force_invalidate_snapshot** 에 **@force_reinit_subscription** 를 참조하세요. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 트랜잭션 복제 예에서는 게시된 아티클의 속성을 반환합니다.  
@@ -146,7 +146,7 @@ ms.locfileid: "68199247"
 ##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 아티클을 수정하고 해당 속성에 액세스할 수 있습니다. 아티클 속성을 보거나 수정하는 데 사용되는 RMO 클래스는 아티클이 속한 게시 유형에 따라 달라집니다.  
   
-#### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 속하는 아티클의 속성을 보거나 수정하려면  
+#### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 속하는 아티클의 속성을 보거나 수정하려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   

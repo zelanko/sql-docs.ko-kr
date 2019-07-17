@@ -25,12 +25,12 @@ ms.locfileid: "68072740"
 # <a name="spadddynamicsnapshotjob-transact-sql"></a>sp_adddynamicsnapshot_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  매개 변수가 있는 행 필터로 게시에 대한 필터링된 데이터 스냅숏을 생성하는 에이전트 작업을 만듭니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. 관리자가 이 저장 프로시저를 사용하여 구독자에 대한 필터링된 데이터 스냅숏 작업을 수동으로 만들 수 있습니다.  
+  매개 변수가 있는 행 필터로 게시에 대한 필터링된 데이터 스냅샷을 생성하는 에이전트 작업을 만듭니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. 관리자가 이 저장 프로시저를 사용하여 구독자에 대한 필터링된 데이터 스냅샷 작업을 수동으로 만들 수 있습니다.  
   
 > [!NOTE]  
->  필터링된 데이터 스냅숏 작업을 만들려면 게시에 대한 표준 스냅숏 작업이 있어야 합니다.  
+>  필터링된 데이터 스냅샷 작업을 만들려면 게시에 대한 표준 스냅샷 작업이 있어야 합니다.  
   
- 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
+ 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을(를) 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -69,7 +69,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 ```  
   
 > [!NOTE]  
->  동적 스냅숏 작업 이름을 생성할 때 표준 스냅숏 작업 이름을 잘라낼 수 있습니다.  
+>  동적 스냅샷 작업 이름을 생성할 때 표준 스냅샷 작업 이름을 잘라낼 수 있습니다.  
   
 `[ @dynamic_snapshot_jobid = ] 'dynamic_snapshot_jobid'` 만들어진 필터링 된 데이터 스냅숏 작업에 대 한 식별자가입니다. *dynamic_snapshot_jobid* 됩니다 **uniqueidentifier**, 기본값은 NULL이를 사용 하 여 선택적 출력 매개 변수 및 합니다.  
   
@@ -134,7 +134,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|필터링 된 데이터 스냅숏 작업을 식별 하는 [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) 시스템 테이블입니다.|  
-|**dynamic_snapshot_jobname**|**sysname**|필터링된 데이터 스냅숏 작업의 이름입니다.|  
+|**dynamic_snapshot_jobname**|**sysname**|필터링된 데이터 스냅샷 작업의 이름입니다.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|고유 하 게 식별 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 배포자에서 에이전트 작업입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  

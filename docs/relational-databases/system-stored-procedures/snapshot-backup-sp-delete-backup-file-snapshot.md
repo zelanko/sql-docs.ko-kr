@@ -22,7 +22,7 @@ ms.locfileid: "67941832"
 # <a name="spdeletebackupfilesnapshot-transact-sql"></a>sp_delete_backup_file_snapshot (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
-  지정된 된 데이터베이스에서 지정한 백업 스냅숏을 삭제합니다. 이 시스템 저장 프로시저와 함께에서 사용 합니다 **sys.fn_db_backup_file_snapshots** 분리 된 백업 스냅숏 시스템 함수를 식별 하 고 삭제 합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+  지정된 된 데이터베이스에서 지정한 백업 스냅숏을 삭제합니다. 이 시스템 저장 프로시저와 함께에서 사용 합니다 **sys.fn_db_backup_file_snapshots** 분리 된 백업 스냅숏 시스템 함수를 식별 하 고 삭제 합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
 
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  

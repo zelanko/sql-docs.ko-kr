@@ -42,7 +42,7 @@ ms.locfileid: "63020862"
 -   게시를 만들기 전에 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 Oracle 소프트웨어를 설치하고 Oracle 데이터베이스를 구성해야 합니다. 자세한 내용은 [Oracle 게시자 구성](../non-sql/configure-an-oracle-publisher.md)을 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 새 게시 마법사를 사용하여 Oracle 데이터베이스에서 스냅숏 또는 트랜잭션 게시를 만듭니다.  
+ 새 게시 마법사를 사용하여 Oracle 데이터베이스에서 스냅샷 또는 트랜잭션 게시를 만듭니다.  
   
  처음으로 Oracle 데이터베이스에서 게시를 만들 때는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 Oracle 게시자를 식별해야 합니다. 같은 데이터베이스의 후속 게시에 대해서는 이 작업을 수행할 필요가 없습니다. 새 게시 마법사나 **배포자 속성 - \<배포자>** 대화 상자에서 Oracle 게시자를 식별할 수 있습니다. 이 항목에서는 **배포자 속성 - \<배포자>** 대화 상자를 보여 줍니다.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "63020862"
   
 7.  **테이블 행 필터** 페이지에서 필요에 따라 필터를 적용하여 하나 이상의 테이블에서 데이터 하위 집합을 게시합니다.  
   
-8.  모든 개체를 만들고 필요한 모든 데이터를 구독 데이터베이스에 추가한 경우에만 **스냅숏 에이전트** 페이지에서 **즉시 스냅숏 만들기** 의 선택을 취소합니다.  
+8.  모든 개체를 만들고 필요한 모든 데이터를 구독 데이터베이스에 추가한 경우에만 **스냅샷 에이전트** 페이지에서 **즉시 스냅샷 만들기** 의 선택을 취소합니다.  
   
 9. **에이전트 보안** 페이지에서 스냅숏 에이전트(모든 게시의 경우) 및 로그 판독기 에이전트(트랜잭션 게시의 경우)에 대한 자격 증명을 지정합니다. 사용자가 지정한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Windows 계정의 컨텍스트를 사용하여 에이전트를 실행하고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 배포자에 연결합니다. 에이전트는 복제 관리 사용자 스키마로 지정한 계정의 컨텍스트를 사용하여 Oracle 데이터베이스에 연결합니다. 자세한 내용은 [Oracle 게시자 구성](../non-sql/configure-an-oracle-publisher.md)을 참조하세요.  
   
@@ -139,7 +139,7 @@ ms.locfileid: "63020862"
   
 5.  배포 데이터베이스의 배포자에서 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행하여 게시를 만듭니다. 자세한 내용은 [Create a Publication](create-a-publication.md)을 참조하세요.  
   
-6.  배포 데이터베이스의 배포자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. **@publication** 에 4단계에서 사용된 게시 이름을, **@job_name** 및 **@password** 에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 Oracle 표준 인증을 사용하려면 **@security_mode** 에 **@publisher_security_mode** 을 지정하고 **@publisher_login** 및 **@publisher_password** 의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다. 이렇게 하면 게시에 대해 스냅숏 에이전트 작업이 만들어집니다.  
+6.  배포 데이터베이스의 배포자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. **@publication** 에 4단계에서 사용된 게시 이름을, **@job_name** 및 **@password** 에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 Oracle 표준 인증을 사용하려면 **@security_mode** 에 **@publisher_security_mode** 을 지정하고 **@publisher_login** 및 **@publisher_password** 의 Oracle 데이터베이스에서 구독을 만드는 방법에 대해 설명합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Oracle 게시자 구성](../non-sql/configure-an-oracle-publisher.md)   

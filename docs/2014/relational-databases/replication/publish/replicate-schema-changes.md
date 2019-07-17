@@ -67,7 +67,7 @@ ms.locfileid: "68199326"
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 이러한 스키마 변경 내용을 복제할지 여부를 지정할 수 있습니다. 사용하는 저장 프로시저는 게시 유형에 따라 달라집니다.  
   
-#### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>스키마 변경 내용을 복제하지 않는 스냅숏 또는 트랜잭션 게시를 만들려면  
+#### <a name="to-create-a-snapshot-or-transactional-publication-that-does-not-replicate-schema-changes"></a>스키마 변경 내용을 복제하지 않는 스냅샷 또는 트랜잭션 게시를 만들려면  
   
 1.  게시 데이터베이스의 게시자에서 **@replicate_ddl** 에 **0** 값을 지정하여 [sp_addpublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68199326"
   
 1.  게시 데이터베이스의 게시자에서 **@replicate_ddl** 에 **0** 값을 지정하여 [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)을 실행합니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
   
-#### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대해 스키마 변경 내용 복제를 일시적으로 해제하려면  
+#### <a name="to-temporarily-disable-replicating-schema-changes-for-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대해 스키마 변경 내용 복제를 일시적으로 해제하려면  
   
 1.  스키마 변경 내용을 복제하는 게시에서 **@property** 에 **replicate_ddl** 값, **@value** 에 **0** 값을 지정하여 [sp_changepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다.  
   

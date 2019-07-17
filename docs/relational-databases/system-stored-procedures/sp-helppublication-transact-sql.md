@@ -60,27 +60,27 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |replication frequency|**tinyint**|복제 빈도의 유형입니다.<br /><br /> **0** = 트랜잭션<br /><br /> **1** = 스냅숏|  
 |synchronization method|**tinyint**|동기화 모드입니다.<br /><br /> **0** = native 대량 복사 프로그램 (**bcp** 유틸리티)<br /><br /> **1** = 문자 대량 복사<br /><br /> **3** = concurrent. 네이티브 대량 복사는 의미 (**bcp**유틸리티) 사용 하지만 스냅숏 동안 테이블이 잠기지<br /><br /> **4** = Concurrent_c. 문자 대량 복사를 사용 하지만 스냅숏 동안 테이블이 잠기지 않음을 의미 합니다.|  
 |description|**nvarchar(255)**|게시에 관한 선택적인 설명입니다.|  
-|immediate_sync|**bit**|스냅숏 에이전트가 실행될 때마다 동기화 파일이 생성 또는 다시 생성되는지 여부를 나타냅니다.|  
+|immediate_sync|**bit**|스냅샷 에이전트가 실행될 때마다 동기화 파일이 생성 또는 다시 생성되는지 여부를 나타냅니다.|  
 |enabled_for_internet|**bit**|게시에 관한 동기화 파일이 FTP(파일 전송 프로토콜) 및 기타 서비스를 통해 인터넷에 노출되는지 여부를 나타냅니다.|  
 |allow_push|**bit**|게시에서 밀어넣기 구독이 허용되는지 여부를 나타냅니다.|  
 |allow_pull|**bit**|게시에서 끌어오기 구독이 허용되는지 여부를 나타냅니다.|  
 |allow_anonymous|**bit**|게시에서 익명 구독이 허용되는지 여부를 나타냅니다.|  
 |independent_agent|**bit**|해당 게시에 대한 독립 실행형 배포 에이전트가 있는지 여부를 나타냅니다.|  
-|immediate_sync_ready|**bit**|스냅숏 에이전트가 새 구독에서 사용할 수 있는 스냅숏을 생성했는지 여부를 나타냅니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅숏을 사용할 수 있도록 설정된 경우에만 정의됩니다.|  
+|immediate_sync_ready|**bit**|스냅샷 에이전트가 새 구독에서 사용할 수 있는 스냅샷을 생성했는지 여부를 나타냅니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅샷을 사용할 수 있도록 설정된 경우에만 정의됩니다.|  
 |allow_sync_tran|**bit**|게시에서 즉시 업데이트 구독이 허용되는지 여부를 나타냅니다.|  
 |autogen_sync_procs|**bit**|즉시 업데이트 구독을 지원하는 저장 프로시저를 자동으로 생성하는지 여부를 나타냅니다.|  
 |snapshot_jobid|**binary(16)**|예약된 태스크 ID입니다.|  
 |retention|**int**|지정한 게시에 대해 저장할 변경 내용의 양을 시간으로 나타낸 것입니다.|  
 |has subscription|**bit**|게시에 활성 구독이 있는지 여부를 나타냅니다. **1** 게시에 활성 구독이 의미 하 고 **0** 게시에 구독이 없는 것을 의미 합니다.|  
 |allow_queued_tran|**bit**|활성화된 게시자에 변경 내용을 적용할 수 있을 때까지 구독자에서 변경 내용 지연을 비활성화할지 여부를 지정합니다. 하는 경우 **0**, 구독자의 변경 내용이 지연 되지 않습니다.|  
-|snapshot_in_defaultfolder|**bit**|스냅숏 파일을 기본 폴더에 저장할지 여부를 지정합니다. 하는 경우 **0**, 지정 된 대체 위치에 저장 된 스냅숏 파일 *alternate_snapshot_folder*합니다. 하는 경우 **1**, 스냅숏 파일이 기본 폴더에서 찾을 수 있습니다.|  
-|alt_snapshot_folder|**nvarchar(255)**|스냅숏의 대체 폴더 위치를 지정합니다.|  
-|pre_snapshot_script|**nvarchar(255)**|에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. 배포 에이전트는 구독자에서 스냅숏을 적용할 때 복제된 개체 스크립트를 실행하기 전에 프리 스냅숏 스크립트를 실행합니다.|  
-|post_snapshot_script|**nvarchar(255)**|에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. 배포 에이전트는 초기 동기화 중 복제된 다른 모든 개체 스크립트 및 데이터가 적용된 후 포스트 스냅숏 스크립트를 실행합니다.|  
+|snapshot_in_defaultfolder|**bit**|스냅샷 파일을 기본 폴더에 저장할지 여부를 지정합니다. 하는 경우 **0**, 지정 된 대체 위치에 저장 된 스냅숏 파일 *alternate_snapshot_folder*합니다. 하는 경우 **1**, 스냅숏 파일이 기본 폴더에서 찾을 수 있습니다.|  
+|alt_snapshot_folder|**nvarchar(255)**|스냅샷의 대체 폴더 위치를 지정합니다.|  
+|pre_snapshot_script|**nvarchar(255)**|에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. 배포 에이전트는 구독자에서 스냅샷을 적용할 때 복제된 개체 스크립트를 실행하기 전에 프리 스냅샷 스크립트를 실행합니다.|  
+|post_snapshot_script|**nvarchar(255)**|에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. 배포 에이전트는 초기 동기화 중 복제된 다른 모든 개체 스크립트 및 데이터가 적용된 후 포스트 스냅샷 스크립트를 실행합니다.|  
 |compress_snapshot|**bit**|지정에 기록 되는 스냅숏 합니다 *alt_snapshot_folder* 위치가로 압축할 수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식으로 합니다. **0** 스냅숏이 압축 되지 않도록 지정 합니다.|  
-|ftp_address|**sysname**|배포자용 FTP 서비스의 네트워크 주소입니다. 선택할 구독자의 배포 에이전트 또는 병합 에이전트에 대한 게시 스냅숏 파일의 위치를 지정합니다.|  
+|ftp_address|**sysname**|배포자용 FTP 서비스의 네트워크 주소입니다. 선택할 구독자의 배포 에이전트 또는 병합 에이전트에 대한 게시 스냅샷 파일의 위치를 지정합니다.|  
 |ftp_port|**int**|배포자용 FTP 서비스의 포트 번호입니다.|  
-|ftp_subdirectory|**nvarchar(255)**|게시에서 FTP를 사용하는 스냅숏 전파를 지원하는 경우 선택할 구독자의 배포 에이전트 또는 병합 에이전트에 사용 가능한 스냅숏 파일의 위치를 지정합니다.|  
+|ftp_subdirectory|**nvarchar(255)**|게시에서 FTP를 사용하는 스냅샷 전파를 지원하는 경우 선택할 구독자의 배포 에이전트 또는 병합 에이전트에 사용 가능한 스냅샷 파일의 위치를 지정합니다.|  
 |ftp_login|**sysname**|FTP 서비스에 연결하는 데 사용되는 사용자 이름입니다.|  
 |allow_dts|**bit**|게시에서 데이터 변환을 허용하도록 지정합니다. **0** DTS 변환이 허용 되지 않음을 지정 합니다.|  
 |allow_subscription_copy|**bit**|해당 게시를 구독하는 구독 데이터베이스를 복사하는 기능이 활성화되었는지 여부를 지정합니다. **0** 복사 허용 되지 않음을 의미 합니다.|  
@@ -90,7 +90,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |queue_type||사용할 큐의 유형을 지정합니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **msmq** = 사용 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 메시지 큐에 트랜잭션을 저장 합니다.<br /><br /> **sql** = 사용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 트랜잭션을 저장 합니다.<br /><br /> 참고: 메시지 큐에 대 한 지원이 더 이상 사용 되지 않습니다.|  
 |backward_comp_level||데이터베이스 호환성 수준으로서 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|게시에 게시 되어 있는지 여부를 지정 된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory??? 합니다. 값이 **1** 게시 됨을 나타냅니다. 값 **0** 게시 되지 않습니다 나타냅니다.|  
-|allow_initialize_from_backup|**bit**|구독자가 초기 스냅숏 대신 백업으로부터 이 게시에 대한 구독을 초기화할 수 있는지 여부를 나타냅니다. **1** 백업에서 구독을 초기화할 수 있음을 의미 하 고 **0** 즉 그렇게 할 수 없습니다. 자세한 내용은 [는 트랜잭션 구독이 스냅숏 없이 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) 스냅숏 없이 트랜잭션 구독자입니다.|  
+|allow_initialize_from_backup|**bit**|구독자가 초기 스냅샷 대신 백업으로부터 이 게시에 대한 구독을 초기화할 수 있는지 여부를 나타냅니다. **1** 백업에서 구독을 초기화할 수 있음을 의미 하 고 **0** 즉 그렇게 할 수 없습니다. 자세한 내용은 [는 트랜잭션 구독이 스냅숏 없이 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) 스냅숏 없이 트랜잭션 구독자입니다.|  
 |replicate_ddl|**int**|게시에 대해 스키마 복제가 지원되는지 여부를 나타냅니다. **1** 게시자에서 실행 하는 데이터 정의 언어 (DDL) 문이 복제 됩니다 및 **0** DDL 문이 복제 되지 않음을 나타냅니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.|  
 |enabled_for_p2p|**int**|피어 투 피어 복제 토폴로지에서 게시가 사용될 수 있는지 여부를 나타냅니다. **1** 게시에서 피어 투 피어 복제를 지원함을 나타냅니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.|  
 |publish_local_changes_only|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -105,7 +105,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- sp_helppublication은 스냅숏 및 트랜잭션 복제에 사용됩니다.  
+ sp_helppublication은 스냅샷 및 트랜잭션 복제에 사용됩니다.  
   
  sp_helppublication은 이 프로시저를 실행하는 사용자가 소유하는 모든 게시에 대한 정보를 반환합니다.  
   

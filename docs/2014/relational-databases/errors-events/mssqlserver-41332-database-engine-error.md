@@ -33,7 +33,7 @@ ms.locfileid: "62867897"
 |메시지 텍스트|TRANSACTION ISOLATION LEVEL 세션을 SNAPSHOT으로 설정하면 메모리 액세스에 최적화된 테이블과 고유하게 컴파일된 저장 프로시저에 액세스하거나 만들 수 없습니다.|  
   
 ## <a name="explanation"></a>설명  
- 트랜잭션이 스냅숏 격리 수준에서 시작된 다음 호환되지 않는 기능을 사용하려고 했습니다.  
+ 트랜잭션이 스냅샷 격리 수준에서 시작된 다음 호환되지 않는 기능을 사용하려고 했습니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  다른 격리 수준으로 트랜잭션을 시작합니다. 자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  

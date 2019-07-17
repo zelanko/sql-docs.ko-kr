@@ -77,7 +77,7 @@ ms.locfileid: "58306111"
 |현재 설치된 버전|원하는 작업|다운로드 및 설치할 파일|  
 |---|---|---|   
 |32비트 설치:|||  
-|32비트 버전의 SQL  Server  2012|32비트 버전의 SQL Server 2012 SP2로 업그레이드|**SQL Server 2012 SP2 다운로드 페이지**<arch>**-**<lang id>**에 있는** SQLServer2012SP2-KB2958429- [.exe](https://go.microsoft.com/fwlink/?LinkID=401006)|  
+|32비트 버전의 SQL  Server  2012|32비트 버전의 SQL Server 2012 SP2로 업그레이드|**SQL Server 2012 SP2 다운로드 페이지**<arch> **-** <lang id>**에 있는** SQLServer2012SP2-KB2958429- [.exe](https://go.microsoft.com/fwlink/?LinkID=401006)|  
 |32비트 버전의 SQL  Server  2012  RTM  Express|32비트 버전의 SQL Server 2012 Express SP2으로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPR_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |32비트 버전의 SQL  Server  2012  클라이언트 및 관리 도구(SQL  Server  2012  Management  Studio  포함)|32비트 버전의 SQL Server 2012 SP2로 클라이언트 및 관리 도구 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLEXPRWT_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
 |32비트 버전의 SQL  Server  2012  Management  Studio  Express|32비트 버전의 SQL Server 2012 SP2 Management Studio Express로 업그레이드|**SQL Server 2012 SP2 Express 다운로드 페이지**<arch>**에 있는**<lang>**SQLManagementStudio_** _ [.msi](https://go.microsoft.com/fwlink/?LinkID=401007)|  
@@ -112,7 +112,7 @@ ms.locfileid: "58306111"
 |SQL  Server  2012의 32비트 설치 없음|32비트 Server  2012(SP1  포함)  설치(SP1이 미리 설치된 새 인스턴스)|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x86-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x86-ENU.box|  
 |SQL  Server  2012  Management  Studio의 32비트 설치 없음|32비트 SQL  Server  2012  Management  Studio(SP1포함)  설치|[여기](https://go.microsoft.com/fwlink/p/?LinkId=267905)에 있는 SQLManagementStudio_x86_ENU.exe|  
 |32비트 버전의 SQL  Server  2012  RTM  Express  없음|32비트 SQL  Server  2012  Express(SP1포함)  설치|[여기](https://go.microsoft.com/fwlink/p/?LinkId=267905)에 있는 SQLEXPR32_x86_ENU.exe|  
-|**SQL Server 2008** 또는 **SQL Server 2008 R2**의 32비트 설치|32비트 SQL Server 2012(SP1 포함)로**전체 업그레이드** |**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x86-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x86-ENU.box|  
+|**SQL Server 2008** 또는 **SQL Server 2008 R2**의 32비트 설치|32비트 SQL Server 2012(SP1 포함)로**전체 업그레이드**|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x86-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x86-ENU.box|  
 |**64비트 설치:**|||  
 |64비트 버전의 SQL Server 2012|64비트 버전의 SQL Server 2012 SP1로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x64-ENU.exe|  
 |64비트 버전의 SQL Server 2012 RTM Express|64비트 버전의 SQL Server 2012 SP1로 업그레이드|[여기](https://go.microsoft.com/fwlink/p/?LinkID=268158)에 있는 SQLServer2012SP1-KB2674319-x64-ENU.exe|  
@@ -123,7 +123,7 @@ ms.locfileid: "58306111"
 |SQL Server 2012의 64비트 설치 없음|64비트 Server 2012(SP1 포함) 설치(SP1이 미리 설치된 새 인스턴스)|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x64-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x64-ENU.box|  
 |SQL Server 2012 Management Studio의 64비트 설치 없음|64비트 SQL Server 2012 Management Studio(SP1 포함) 설치|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLManagementStudio_x64_ENU.exe|  
 |64비트 버전의 SQL Server 2012 RTM  Express 없음|64비트 SQL Server 2012 Express(SP1포함) 설치|[여기](https://go.microsoft.com/fwlink/p/?LinkID=267905)에 있는 SQLEXPR_x64_ENU.exe|  
-|**SQL Server 2008** 또는 **SQL Server 2008 R2**64비트 설치|64비트 SQL Server 2012(SP1 포함)로**전체 업그레이드** |**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x64-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x64-ENU.box|  
+|**SQL Server 2008** 또는 **SQL Server 2008 R2**64비트 설치|64비트 SQL Server 2012(SP1 포함)로**전체 업그레이드**|**여기** 에 있는 SQLServer2012SP1-FullSlipstream-x64-ENU.exe [및](https://go.microsoft.com/fwlink/p/?LinkID=268158)SQLServer2012SP1-FullSlipstream-x64-ENU.box|  
 
 ### <a name="known-issues-fixed-in-this-service-pack"></a>이 서비스 팩에서 해결된 알려진 문제  
 이 서비스 팩에서 해결된 전체 버그 및 알려진 문제 목록은 [이 KB 문서](https://support.microsoft.com/kb/2674319)를 참조하세요.   
@@ -226,7 +226,7 @@ SQL Server 2012 SP1에는 높아진 성능과 효율성으로 XML 열 데이터�
   
 **SqlPackage.exe(DACFx 명령줄 도구) 업데이트**  
   
--   데이터가 있는 DACPAC 추출 – 데이터베이스 스키마와 함께 사용자 테이블의 데이터를 포함하는 라이브 SQL Server 또는 Microsoft Azure SQL Database부터 데이터베이스 스냅숏 파일(.dacpac)을 만듭니다. 이러한 패키지는 SqlPackage.exe 게시 작업을 사용하여 새로운 또는 기존의 SQL Server 또는 Microsoft Azure SQL 데이터베이스에 게시할 수 있습니다. 패키지에 포함된 데이터는 대상 데이터베이스의 기존 데이터를 대체합니다.  
+-   데이터가 있는 DACPAC 추출 – 데이터베이스 스키마와 함께 사용자 테이블의 데이터를 포함하는 라이브 SQL Server 또는 Microsoft Azure SQL Database부터 데이터베이스 스냅샷 파일(.dacpac)을 만듭니다. 이러한 패키지는 SqlPackage.exe 게시 작업을 사용하여 새로운 또는 기존의 SQL Server 또는 Microsoft Azure SQL 데이터베이스에 게시할 수 있습니다. 패키지에 포함된 데이터는 대상 데이터베이스의 기존 데이터를 대체합니다.  
   
 -   BACPAC 내보내기 - 온-프레미스 SQL Server의 데이터베이스를 Microsoft Azure SQL 데이터베이스로 마이그레이션하는 데 사용할 수 있는 데이터베이스 스키마 및 사용자 데이터를 포함하는 라이브 SQL Server 또는 Microsoft Azure SQL 데이터베이스의 논리적 백업 파일(.bacpac)을 만듭니다. Azure와 호환되는 데이터베이스를 내보낸 다음 나중에 지원되는 버전의 SQL  Server 간에 가져올 수 있습니다.  
   

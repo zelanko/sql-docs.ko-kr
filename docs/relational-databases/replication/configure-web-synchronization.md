@@ -73,7 +73,7 @@ ms.locfileid: "67860506"
   
 -   배포 데이터베이스의 사용자와 연결된 로그인에 매핑되어야 합니다.  
   
--   스냅숏 공유에 대한 읽기 권한을 가지고 있어야 합니다.  
+-   스냅샷 공유에 대한 읽기 권한을 가지고 있어야 합니다.  
   
  처음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제를 사용하는 경우에는 복제 에이전트에 대한 계정 및 로그인도 만들어야 합니다. 자세한 내용은 이 항목의 "게시 구성" 및 "구독 구성" 섹션을 참조하십시오.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "67860506"
   
  게시가 생성되면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]또는 RMO(복제 관리 개체) 방법 중 하나를 사용하여 웹 동기화를 허용하는 옵션을 활성화합니다. 웹 동기화를 사용하도록 설정하려면 구독자 연결에 대한 웹 서버 주소를 제공해야 합니다.  
   
- 게시자를 처음으로 사용하는 경우에는 배포자 및 스냅숏 공유도 구성해야 합니다. 각 구독자의 병합 에이전트에는 이 스냅숏 공유에 대한 읽기 권한이 있어야 합니다. 자세한 내용은 [배포 구성](../../relational-databases/replication/configure-distribution.md) 및 [스냅숏 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
+ 게시자를 처음으로 사용하는 경우에는 배포자 및 스냅샷 공유도 구성해야 합니다. 각 구독자의 병합 에이전트에는 이 스냅샷 공유에 대한 읽기 권한이 있어야 합니다. 자세한 내용은 [배포 구성](../../relational-databases/replication/configure-distribution.md) 및 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
  **gen** 은 websync xml 파일의 예약어입니다. 이름이 **gen**인 열을 포함하는 테이블은 게시하지 마십시오.  
   
@@ -154,17 +154,17 @@ ms.locfileid: "67860506"
     > [!NOTE]  
     >  기본 인증은 IIS로 자격 증명을 전달하는 방법입니다. 기본 인증은 IIS에 대해 설정한 연결에 Windows 도메인 계정을 지정하는 작업을 방지하지 않습니다.  
   
--   Windows 도메인 계정으로 스냅숏 에이전트를 실행 및 연결하도록 지정합니다. 이것이 기본 구성입니다. 구독자 컴퓨터를 사용하는 사용자의 도메인 계정으로 각 병합 에이전트를 실행 및 연결하도록 지정합니다.  
+-   Windows 도메인 계정으로 스냅샷 에이전트를 실행 및 연결하도록 지정합니다. 이것이 기본 구성입니다. 구독자 컴퓨터를 사용하는 사용자의 도메인 계정으로 각 병합 에이전트를 실행 및 연결하도록 지정합니다.  
   
      에이전트에 필요한 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)을 참조하십시오.  
   
--   새 구독 마법사의 **웹 서버 정보** 페이지에서 계정과 암호를 지정할 때 또는 **@internet_url** 및 **@internet_login** 및 [@internet_login](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 참조하십시오. 이 계정에는 스냅숏 공유에 대한 읽기 권한이 있어야 합니다.  
+-   새 구독 마법사의 **웹 서버 정보** 페이지에서 계정과 암호를 지정할 때 또는 **@internet_url** 및 **@internet_login** 및 [@internet_login](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)를 참조하십시오. 이 계정에는 스냅샷 공유에 대한 읽기 권한이 있어야 합니다.  
   
 -   각 게시는 IIS에 대해 서로 다른 가상 디렉터리를 사용해야 합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복제 수신기(Replisapi.dll)를 실행하는 계정은 동기화하는 동안 게시자 및 배포자에 연결되는 계정이기도 합니다. 계정은 게시자 및 배포자의 SQL 로그인 계정에 매핑되어야 합니다. 자세한 내용은 [웹 동기화를 위한 IIS 구성](../../relational-databases/replication/configure-iis-for-web-synchronization.md)에서 "SQL Server 복제 수신기에 대한 사용 권한 설정" 섹션을 참조하세요.  
   
--   FTP를 사용하여 게시자에 있는 스냅숏을 IIS를 실행하는 컴퓨터로 배달할 수 있습니다. 스냅숏은 항상 IIS를 실행하는 컴퓨터에서 HTTPS를 사용하여 구독자로 배달됩니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
+-   FTP를 사용하여 게시자에 있는 스냅샷을 IIS를 실행하는 컴퓨터로 배달할 수 있습니다. 스냅샷은 항상 IIS를 실행하는 컴퓨터에서 HTTPS를 사용하여 구독자로 배달됩니다. 자세한 내용은 [FTP를 통해 스냅샷 전송](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
 -   복제 토폴로지에 있는 서버에 방화벽이 설정되어 있는 경우 웹 동기화를 사용하기 위해 방화벽에서 포트를 열어야 할 수 있습니다.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "67860506"
   
     -   IIS를 실행하는 컴퓨터는 일반적으로 포트 1433(기본 인스턴스)을 사용하여 게시자나 배포자에 연결합니다. 다른 기본 인스턴스가 있는 서버에서 게시자나 배포자가 명명된 인스턴스인 경우 일반적으로 포트 1500을 사용하여 명명된 인스턴스에 연결합니다.  
   
-    -   IIS를 실행하는 컴퓨터가 방화벽에 의해 배포자와 분리되고 스냅숏 전달에 FTP 공유가 사용되는 경우 FTP에 사용되는 포트를 열어야 합니다. 자세한 내용은 [FTP를 통해 스냅숏 전송](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
+    -   IIS를 실행하는 컴퓨터가 방화벽에 의해 배포자와 분리되고 스냅샷 전달에 FTP 공유가 사용되는 경우 FTP에 사용되는 포트를 열어야 합니다. 자세한 내용은 [FTP를 통해 스냅샷 전송](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
 > [!IMPORTANT]  
 >  방화벽의 포트를 열면 서버가 악의적인 공격에 노출될 수 있습니다. 포트를 열기 전에 방화벽 시스템을 잘 이해해야 합니다. 자세한 내용은 [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)을 참조하세요.  

@@ -46,10 +46,10 @@ sys.dm_tran_current_transaction
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**transaction_id**|**bigint**|현재 스냅숏의 트랜잭션 ID입니다.|  
+|**transaction_id**|**bigint**|현재 스냅샷의 트랜잭션 ID입니다.|  
 |**transaction_sequence_num**|**bigint**|레코드 버전을 생성하는 트랜잭션 시퀀스 번호입니다.|  
-|**transaction_is_snapshot**|**bit**|스냅숏 격리 상태입니다. 트랜잭션이 스냅숏 격리 상태에서 시작된 경우 이 값은 1입니다. 그렇지 않으면 값이 0입니다.|  
-|**first_snapshot_sequence_num**|**bigint**|스냅숏을 만들 때 활성 상태인 트랜잭션의 가장 낮은 트랜잭션 시퀀스 번호입니다. 실행 시 스냅숏 트랜잭션이 해당 시점에서 활성 상태인 모든 트랜잭션의 스냅숏을 만듭니다. 스냅숏 트랜잭션이 아닌 경우 이 열에 0이 표시됩니다.|  
+|**transaction_is_snapshot**|**bit**|스냅샷 격리 상태입니다. 트랜잭션이 스냅샷 격리 상태에서 시작된 경우 이 값은 1입니다. 그렇지 않으면 값이 0입니다.|  
+|**first_snapshot_sequence_num**|**bigint**|스냅샷을 만들 때 활성 상태인 트랜잭션의 가장 낮은 트랜잭션 시퀀스 번호입니다. 실행 시 스냅샷 트랜잭션이 해당 시점에서 활성 상태인 모든 트랜잭션의 스냅샷을 만듭니다. 스냅샷 트랜잭션이 아닌 경우 이 열에 0이 표시됩니다.|  
 |**last_transaction_sequence_num**|**bigint**|전역 시퀀스 번호입니다. 이 값은 시스템에서 생성된 마지막 트랜잭션 시퀀스 번호를 나타냅니다.|  
 |**first_useful_sequence_num**|**bigint**|전역 시퀀스 번호입니다. 이 값은 버전 저장소에 보관해야 하는 행 버전이 있는 트랜잭션의 가장 오래된 트랜잭션 시퀀스 번호를 나타냅니다. 이전 트랜잭션에서 만든 행 버전을 제거할 수 있습니다.|  
 |**pdw_node_id**|**int**|**적용 대상**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> 이 배포에 있는 노드에 대 한 식별자입니다.|  
@@ -66,7 +66,7 @@ sys.dm_tran_current_transaction
   
 -   XSN-58은 XSN-57과 같습니다.  
   
--   XSN-59는 스냅숏 격리에서 실행되는 SELECT 작업입니다.  
+-   XSN-59는 스냅샷 격리에서 실행되는 SELECT 작업입니다.  
   
 -   XSN-60은 XSN-59와 같습니다.  
   
@@ -99,7 +99,7 @@ first_useful_sequence_num
 57  
 ```  
   
- 출력은 XSN-59가 XSN-59 시작 시 활성 상태였던 XSN-57을 첫 번째 트랜잭션으로 사용하는 스냅숏 트랜잭션임을 보여 줍니다. 즉, XSN-59는 XSN-57보다 낮은 트랜잭션 시퀀스 번호를 가진 트랜잭션이 커밋한 데이터를 읽습니다.  
+ 출력은 XSN-59가 XSN-59 시작 시 활성 상태였던 XSN-57을 첫 번째 트랜잭션으로 사용하는 스냅샷 트랜잭션임을 보여 줍니다. 즉, XSN-59는 XSN-57보다 낮은 트랜잭션 시퀀스 번호를 가진 트랜잭션이 커밋한 데이터를 읽습니다.  
   
  XSN-57의 결과는 다음과 같습니다.  
   
@@ -117,7 +117,7 @@ first_useful_sequence_num
 57  
 ```  
   
- XSN-57은 스냅숏 트랜잭션이 아니므로 `first_snapshot_sequence_num`은 `NULL`입니다.  
+ XSN-57은 스냅샷 트랜잭션이 아니므로 `first_snapshot_sequence_num`은 `NULL`입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

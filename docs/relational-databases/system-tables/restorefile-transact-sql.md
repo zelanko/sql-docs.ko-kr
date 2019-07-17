@@ -34,9 +34,9 @@ ms.locfileid: "67910197"
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**restore_history_id**|**int**|해당되는 복원 작업을 식별하는 고유 ID입니다. 참조 **restorehistory (restore_history_id)** 합니다.|  
-|**file_number**|**numeric(10,0)**|복원된 파일의 파일 ID입니다. 이 번호는 각 데이터베이스 내에서 고유해야 합니다. NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅숏으로 되돌릴 경우 이 값은 전체 복원과 같은 방식으로 채워집니다.|  
-|**destination_phys_drive**|**nvarchar(260)**|파일이 복원된 드라이브 또는 파티션입니다. NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅숏으로 되돌릴 경우 이 값은 전체 복원과 같은 방식으로 채워집니다.|  
-|**destination_phys_name**|**nvarchar(260)**|드라이브 또는 파티션 정보 없이 파일이 복원된 위치에 있는 파일의 이름입니다. NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅숏으로 되돌릴 경우 이 값은 전체 복원과 같은 방식으로 채워집니다.|  
+|**file_number**|**numeric(10,0)**|복원된 파일의 파일 ID입니다. 이 번호는 각 데이터베이스 내에서 고유해야 합니다. NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅샷으로 되돌릴 경우 이 값은 전체 복원과 같은 방식으로 채워집니다.|  
+|**destination_phys_drive**|**nvarchar(260)**|파일이 복원된 드라이브 또는 파티션입니다. NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅샷으로 되돌릴 경우 이 값은 전체 복원과 같은 방식으로 채워집니다.|  
+|**destination_phys_name**|**nvarchar(260)**|드라이브 또는 파티션 정보 없이 파일이 복원된 위치에 있는 파일의 이름입니다. NULL일 수 있습니다.<br /><br /> 데이터베이스를 데이터베이스 스냅샷으로 되돌릴 경우 이 값은 전체 복원과 같은 방식으로 채워집니다.|  
   
 ## <a name="remarks"></a>설명  
  이 테이블에 다른 백업 및 기록 테이블의 행 수를 줄이려면 다음을 실행 합니다 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 저장 프로시저입니다.  

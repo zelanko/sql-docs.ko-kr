@@ -147,7 +147,7 @@
           href: contained-databases-with-always-on-availability-groups-sql-server.md
         - name: 데이터베이스 미러링 또는 AlwaysOn 가용성 그룹에 대해 지원되지 않는 데이터베이스 간 트랜잭션
           href: transactions-always-on-availability-and-database-mirroring.md
-        - name: AlwaysOn 가용성 그룹이 있는 데이터베이스 스냅숏
+        - name: AlwaysOn 가용성 그룹이 있는 데이터베이스 스냅샷
           href: database-snapshots-with-always-on-availability-groups-sql-server.md
         - name: AlwaysOn 가용성 그룹이 있는 암호화된 데이터베이스
           href: encrypted-databases-with-always-on-availability-groups-sql-server.md

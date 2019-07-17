@@ -117,7 +117,7 @@ PAGE
  [ **,** ...*n* ]  
  여러 개의 파일 및 파일 그룹과 페이지를 쉼표로 구분된 목록에 지정할 수 있음을 나타내는 자리 표시자입니다. 사용할 수 있는 숫자에는 제한이 없습니다.  
   
-FROM { \<backup_device&gt; [ **,** ...*n* ]| \<database_snapshot&gt; } 일반적으로 백업을 복원할 백업 디바이스를 지정합니다. 또는 RESTORE DATABASE 문의 FROM 절에서 데이터베이스를 되돌릴 데이터베이스 스냅숏의 이름을 지정할 수도 있습니다. 이런 경우 WITH 절은 사용할 수 없습니다.  
+FROM { \<backup_device&gt; [ **,** ...*n* ]| \<database_snapshot&gt; } 일반적으로 백업을 복원할 백업 디바이스를 지정합니다. 또는 RESTORE DATABASE 문의 FROM 절에서 데이터베이스를 되돌릴 데이터베이스 스냅샷의 이름을 지정할 수도 있습니다. 이런 경우 WITH 절은 사용할 수 없습니다.  
   
  FROM 절을 생략하면 백업이 복원되지 않습니다. 대신 데이터베이스가 복원됩니다. 이렇게 하면 NORECOVERY 옵션으로 복원된 데이터베이스를 복구하거나 대기 중인 서버로 전환할 수 있습니다. FROM 절을 생략하면 WITH 절에서 NORECOVERY, RECOVERY 또는 STANDBY를 지정해야 합니다.  
   
@@ -155,9 +155,9 @@ FROM { \<backup_device&gt; [ **,** ...*n* ]| \<database_snapshot&gt; } 일반적
 **지원 요소:**  [데이터베이스 복원](../../t-sql/statements/restore-statements-transact-sql.md)  
   
 DATABASE_SNAPSHOT **=** _database\_snapshot\_name_  
- 데이터베이스를 *database_snapshot_name*으로 지정한 데이터베이스 스냅숏으로 되돌립니다. DATABASE_SNAPSHOT 옵션은 전체 데이터베이스 복원에만 사용할 수 있습니다. 되돌리기 작업에서는 데이터베이스 스냅숏이 전체 데이터베이스 백업을 대신합니다.  
+ 데이터베이스를 *database_snapshot_name*으로 지정한 데이터베이스 스냅샷으로 되돌립니다. DATABASE_SNAPSHOT 옵션은 전체 데이터베이스 복원에만 사용할 수 있습니다. 되돌리기 작업에서는 데이터베이스 스냅샷이 전체 데이터베이스 백업을 대신합니다.  
   
- 되돌리기 작업을 수행하려면 지정한 데이터베이스 스냅숏이 데이터베이스에서 유일한 스냅숏이어야 합니다. 되돌리기 작업 중에 데이터베이스 스냅숏과 대상 데이터베이스는 둘 다 `In restore`로 표시됩니다. 자세한 내용은 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)의 "주의" 섹션을 참조하세요.  
+ 되돌리기 작업을 수행하려면 지정한 데이터베이스 스냅샷이 데이터베이스에서 유일한 스냅샷이어야 합니다. 되돌리기 작업 중에 데이터베이스 스냅샷과 대상 데이터베이스는 둘 다 `In restore`로 표시됩니다. 자세한 내용은 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)의 "주의" 섹션을 참조하세요.  
   
 ### <a name="with-options"></a>WITH 옵션  
  복원 작업에서 사용할 옵션을 지정합니다. 각 옵션을 사용하는 문에 대한 간략한 설명은 이 항목의 뒷부분에 나오는 "WITH 옵션 지원에 대한 요약"을 참조하십시오.  
@@ -239,7 +239,7 @@ MOVE **'** _logical\_file\_name\_in\_backup_ **'** TO **'** _operating\_system\_
   
  RESTORE LOG와 함께 사용할 경우 MOVE 옵션은 복원할 로그에 포함된 기간 동안 추가된 파일의 위치를 다시 지정하는 데만 사용할 수 있습니다. 예를 들어 로그 백업에 `file23` 파일에 대한 파일 추가 작업이 포함되면 이 파일의 위치는 RESTORE LOG에서 MOVE 옵션을 사용하여 다시 지정할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 백업과 함께 사용할 경우, MOVE 옵션을 사용해서만 파일을 원본 blob와 동일한 스토리지 계정 내에서 Azure blob으로 이동할 수 있습니다. MOVE 옵션을 사용하여 스냅숏 백업을 로컬 파일 또는 다른 스토리지 계정으로 복원할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 백업과 함께 사용할 경우, MOVE 옵션을 사용해서만 파일을 원본 blob와 동일한 스토리지 계정 내에서 Azure blob으로 이동할 수 있습니다. MOVE 옵션을 사용하여 스냅샷 백업을 로컬 파일 또는 다른 스토리지 계정으로 복원할 수 없습니다.  
   
  동일한 서버에서 데이터베이스 위치를 다시 지정하거나 다른 서버에 데이터베이스를 복사하려는 경우 RESTORE VERIFYONLY 문을 사용하면 대상에 충분한 공간이 있는지 확인하고 기존 파일과의 충돌 가능성을 식별하는 데 MOVE 옵션이 필요할 수 있습니다.  
   

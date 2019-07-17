@@ -34,7 +34,7 @@ ms.locfileid: "62815753"
 |변경 내용 추적|[복제, 변경 내용 추적, 변경 데이터 캡처 및 AlwaysOn 가용성 그룹 &#40;SQL Server&#41;](replicate-track-change-data-capture-always-on-availability.md)|  
 |포함된 데이터베이스|[AlwaysOn 가용성 그룹 (SQL Server)를 사용 하 여 포함 된 데이터베이스](always-on-availability-groups-sql-server.md)|  
 |데이터베이스 암호화|[AlwaysOn 가용성 그룹을 사용 하 여 데이터베이스 암호화 &#40;SQL Server&#41;](encrypted-databases-with-always-on-availability-groups-sql-server.md)|  
-|데이터베이스 스냅숏|[AlwaysOn 가용성 그룹이 있는 데이터베이스 스냅숏 &#40;SQL Server&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  
+|데이터베이스 스냅샷|[AlwaysOn 가용성 그룹이 있는 데이터베이스 스냅숏 &#40;SQL Server&#41;](database-snapshots-with-always-on-availability-groups-sql-server.md)|  
 |FILESTREAM 및 FileTable|[FILESTREAM 및 FileTable AlwaysOn 가용성 그룹을 사용 하 여 &#40;SQL Server&#41;](filestream-and-filetable-with-always-on-availability-groups-sql-server.md)|  
 |전체 텍스트 검색|참고: 전체 텍스트 인덱스는 AlwaysOn 보조 데이터베이스와 동기화 됩니다.|  
 |로그 전달|[AlwaysOn 가용성 그룹에 로그 전달에서 마이그레이션에 대 한 필수 구성 요소 &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|  

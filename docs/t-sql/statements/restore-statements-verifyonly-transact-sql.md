@@ -106,10 +106,10 @@ FROM <backup_device> [ ,...n ]
 -   대상 장치에 충분한 공간이 있는지 확인합니다.  
   
 > [!NOTE]  
->  RESTORE VERIFYONLY는 데이터베이스 스냅숏에서는 작동하지 않습니다. 되돌리기 작업을 수행하기 전에 데이터베이스 스냅숏을 확인하려면 DBCC CHECKDB를 실행합니다.  
+>  RESTORE VERIFYONLY는 데이터베이스 스냅샷에서는 작동하지 않습니다. 되돌리기 작업을 수행하기 전에 데이터베이스 스냅샷을 확인하려면 DBCC CHECKDB를 실행합니다.  
   
 > [!NOTE]  
->  스냅숏 백업을 사용하여 RESTORE VERIFYONLY는 백업 파일에 지정된 위치에 스냅숏의 존재 여부를 확인합니다. 스냅숏 백업은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 새로운 기능입니다. 스냅숏 백업에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+>  스냅샷 백업을 사용하여 RESTORE VERIFYONLY는 백업 파일에 지정된 위치에 스냅샷의 존재 여부를 확인합니다. 스냅샷 백업은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 새로운 기능입니다. 스냅샷 백업에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 ## <a name="security"></a>보안  
  필요한 경우 백업 작업에서 미디어 세트, 백업 세트 또는 이 둘 모두에 대해 암호를 지정할 수 있습니다. 미디어 세트나 백업 세트에 암호가 정의되어 있는 경우 RESTORE 문에서 정확한 암호를 지정해야 합니다. 이러한 암호를 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 무단으로 복원 작업을 수행하거나 미디어에 백업 세트를 무단으로 추가하는 작업을 방지할 수 있습니다. 하지만 암호를 사용해도 BACKUP 문의 FORMAT 옵션을 사용하여 미디어를 덮어쓰는 작업은 수행됩니다.  

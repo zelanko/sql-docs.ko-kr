@@ -11,7 +11,7 @@ manager: kfile
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 51e926f730269f2c4f6202ecffca1936f49dbf85
 ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580556"
@@ -67,7 +67,7 @@ ms.locfileid: "65580556"
   
 -   *로컬 모드*: 로컬 모드에서는 Reporting Services 보고서 서버와 통합하지 않고도 SharePoint 문서 라이브러리에서 로컬로 보고서를 렌더링할 수 있습니다. SharePoint 제품용 Reporting Services 추가 기능이 필요하지만 Reporting Services 보고서 서버는 필요하지 않습니다. 추가 기능은 SharePoint 2010 제품 준비 도구를 비롯한 여러 가지 방법으로 설치할 수 있습니다. 로컬 모드에 대한 자세한 내용은 [보고서 뷰어의 로컬 모드 및 연결된 모드 보고서](../../reporting-services/report-server-sharepoint/local-mode-vs-connected-mode-reports-in-the-report-viewer.md) 및 [SharePoint 제품용 Reporting Services 추가 기능 검색 위치](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)를 참조하세요.  
   
--   *연결된 모드*: 연결된 모드는 SharePoint 중앙 관리에서 Reporting Services 보고서 서버를 SharePoint 팜에 통합하여 지원할 수 있습니다. 보고서 서버와의 통합을 통해 완전한 보고가 가능해질 뿐만 아니라 SharePoint 2010의 협업 기능과 구독, 스냅숏 및 서버 기반 처리와 같은 보고서 서버의 서버 기반 기능도 사용할 수 있습니다.  
+-   *연결된 모드*: 연결된 모드는 SharePoint 중앙 관리에서 Reporting Services 보고서 서버를 SharePoint 팜에 통합하여 지원할 수 있습니다. 보고서 서버와의 통합을 통해 완전한 보고가 가능해질 뿐만 아니라 SharePoint 2010의 협업 기능과 구독, 스냅샷 및 서버 기반 처리와 같은 보고서 서버의 서버 기반 기능도 사용할 수 있습니다.  
   
 ## <a name="unsupported-sharepoint-features"></a>지원되지 않는 SharePoint 기능
 

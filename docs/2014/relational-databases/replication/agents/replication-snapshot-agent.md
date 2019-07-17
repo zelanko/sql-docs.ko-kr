@@ -1,5 +1,5 @@
 ---
-title: 복제 스냅숏 에이전트 | Microsoft 문서
+title: 복제 스냅샷 에이전트 | Microsoft 문서
 ms.custom: ''
 ms.date: 10/29/2018
 ms.prod: sql-server-2014
@@ -22,8 +22,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250593"
 ---
-# <a name="replication-snapshot-agent"></a>복제 스냅숏 에이전트
-  복제 스냅숏 에이전트는 게시된 테이블과 데이터베이스 개체의 스키마 및 데이터를 포함하는 스냅숏 파일을 준비하여 스냅숏 폴더에 저장하고 배포 데이터베이스에 동기화 작업을 기록하는 실행 파일입니다.  
+# <a name="replication-snapshot-agent"></a>Replication Snapshot Agent
+  복제 스냅샷 에이전트는 게시된 테이블과 데이터베이스 개체의 스키마 및 데이터를 포함하는 스냅샷 파일을 준비하여 스냅샷 폴더에 저장하고 배포 데이터베이스에 동기화 작업을 기록하는 실행 파일입니다.  
   
 > [!NOTE]  
 >  매개 변수는 지정되는 순서에 제한을 받지 않습니다.  
@@ -82,7 +82,7 @@ ms.locfileid: "63250593"
  게시자의 이름입니다. 해당 서버에 있는 기본 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고, 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-Publication** _publication_  
- 게시의 이름입니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅숏을 사용할 수 있도록 설정된 경우에만 유효합니다.  
+ 게시의 이름입니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅샷을 사용할 수 있도록 설정된 경우에만 유효합니다.  
   
  **-70Subscribers**  
  구독자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전 7.0을 실행하는 경우에 사용해야 합니다.  
@@ -97,13 +97,13 @@ ms.locfileid: "63250593"
  배포자 이름입니다. 해당 서버에 있는 기본 *인스턴스에 대해* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고, 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-DistributorDeadlockPriority** [ **-1**|**0**|**1**]  
- 교착 상태가 발생할 경우 배포자에 대한 스냅숏 에이전트 연결의 우선 순위입니다. 이 매개 변수는 스냅숏을 생성하는 동안 스냅숏 에이전트와 사용자 애플리케이션 사이에서 발생할 수 있는 교착 상태를 해결하기 위해 지정됩니다.  
+ 교착 상태가 발생할 경우 배포자에 대한 스냅샷 에이전트 연결의 우선 순위입니다. 이 매개 변수는 스냅샷을 생성하는 동안 스냅샷 에이전트와 사용자 애플리케이션 사이에서 발생할 수 있는 교착 상태를 해결하기 위해 지정됩니다.  
   
 |DistributorDeadlockPriority 값|Description|  
 |---------------------------------------|-----------------|  
-|**-1**|배포자에서 교착 상태가 발생할 경우 스냅숏 에이전트 이외의 애플리케이션이 우선 순위를 갖습니다.|  
+|**-1**|배포자에서 교착 상태가 발생할 경우 스냅샷 에이전트 이외의 애플리케이션이 우선 순위를 갖습니다.|  
 |**0** (기본값)|우선 순위가 할당되지 않습니다.|  
-|**1**|배포자에서 교착 상태가 발생할 경우 스냅숏 에이전트가 우선 순위를 갖습니다.|  
+|**1**|배포자에서 교착 상태가 발생할 경우 스냅샷 에이전트가 우선 순위를 갖습니다.|  
   
  **-DistributorLogin** _distributor_login_  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하여 배포자에 연결할 때 사용되는 로그인입니다.  
@@ -118,13 +118,13 @@ ms.locfileid: "63250593"
  동적 스냅숏을 만들 때 필터링에서 [HOST_NAME&#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql) 값을 설정하는데 사용됩니다. 예를 들어 아티클에 대해 하위 집합 필터 절 `rep_id = HOST_NAME()` 이 지정된 경우 병합 에이전트를 호출하기 전에 **DynamicFilterHostName** 속성을 "FBJones"로 설정하면 **rep_id** 열에 "FBJones"가 있는 행만 복제됩니다.  
   
  **-DynamicFilterLogin** _dynamic_filter_login_  
- 동적 스냅숏을 만들 때 필터링에서 [SUSER_SNAME&#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql) 값을 설정하는 데 사용됩니다. 예를 들어 아티클에 대해 하위 집합 필터 절 `user_id = SUSER_SNAME()` 이 지정된 경우 **SQLSnapshot** 개체의 **Run** 메서드를 호출하기 전에 **DynamicFilterLogin** 속성을 "rsmith"로 설정하면 **user_id** 열에 "rsmith"가 있는 행만 스냅숏에 포함됩니다.  
+ 동적 스냅숏을 만들 때 필터링에서 [SUSER_SNAME&#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql) 값을 설정하는 데 사용됩니다. 예를 들어 아티클에 대해 하위 집합 필터 절 `user_id = SUSER_SNAME()` 이 지정된 경우 **SQLSnapshot** 개체의 **Run** 메서드를 호출하기 전에 **DynamicFilterLogin** 속성을 "rsmith"로 설정하면 **user_id** 열에 "rsmith"가 있는 행만 스냅샷에 포함됩니다.  
   
  **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
- 동적 스냅숏을 생성할 위치입니다.  
+ 동적 스냅샷을 생성할 위치입니다.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- 연결을 만들 때 스냅숏 에이전트에서 사용하는 SSL(Secure Sockets Layer) 암호화의 수준입니다.  
+ 연결을 만들 때 스냅샷 에이전트에서 사용하는 SSL(Secure Sockets Layer) 암호화의 수준입니다.  
   
 |EncryptionLevel 값|Description|  
 |---------------------------|-----------------|  
@@ -141,7 +141,7 @@ ms.locfileid: "63250593"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대량 복사 데이터 파일에서 필드 끝을 표시하는 문자 또는 문자 시퀀스입니다. 기본값은 \n\<x$3>\n입니다.  
   
  **-HistoryVerboseLevel** [ **1**| **2**| **3**]  
- 스냅숏 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 성능에서 기록 로깅의 영향을 최소화할 수 있습니다.  
+ 스냅샷 작업을 수행하는 동안 기록에 추가되는 양을 지정합니다. **1**을 선택하여 성능에서 기록 로깅의 영향을 최소화할 수 있습니다.  
   
 |HistoryVerboseLevel 값|Description|  
 |-------------------------------|-----------------|  
@@ -201,7 +201,7 @@ ms.locfileid: "63250593"
 |OutputVerboseLevel 값|Description|  
 |------------------------------|-----------------|  
 |**0**|SMO 구성 요소의 프리페치 메서드 호출을 사용할 수 없습니다.|  
-|**1**|스냅숏 에이전트가 프리페치 메서드를 호출하여 SMO를 사용하는 일부 테이블 속성을 캐시합니다.|  
+|**1**|스냅샷 에이전트가 프리페치 메서드를 호출하여 SMO를 사용하는 일부 테이블 속성을 캐시합니다.|  
   
  **-PacketSize** _packet_size_  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결할 때 스냅숏 에이전트에서 사용하는 패킷 크기(바이트)입니다. 기본값은 8192바이트입니다.  
@@ -216,13 +216,13 @@ ms.locfileid: "63250593"
  게시 데이터베이스의 이름입니다.  이 매개 변수는 Oracle 게시자에 대해서는 지원되지 않습니다.  
   
  **-PublisherDeadlockPriority** [ **-1**|**0**|**1**]  
- 교착 상태가 발생할 경우 게시자에 대한 스냅숏 에이전트 연결의 우선 순위입니다. 이 매개 변수는 스냅숏을 생성하는 동안 스냅숏 에이전트와 사용자 애플리케이션 사이에서 발생할 수 있는 교착 상태를 해결하기 위해 지정됩니다.  
+ 교착 상태가 발생할 경우 게시자에 대한 스냅샷 에이전트 연결의 우선 순위입니다. 이 매개 변수는 스냅샷을 생성하는 동안 스냅샷 에이전트와 사용자 애플리케이션 사이에서 발생할 수 있는 교착 상태를 해결하기 위해 지정됩니다.  
   
 |PublisherDeadlockPriority 값|Description|  
 |-------------------------------------|-----------------|  
-|**-1**|게시자에서 교착 상태가 발생할 경우 스냅숏 에이전트 이외의 애플리케이션이 우선 순위를 갖습니다.|  
+|**-1**|게시자에서 교착 상태가 발생할 경우 스냅샷 에이전트 이외의 애플리케이션이 우선 순위를 갖습니다.|  
 |**0** (기본값)|우선 순위가 할당되지 않습니다.|  
-|**1**|게시자에서 교착 상태가 발생할 경우 스냅숏 에이전트가 우선 순위를 갖습니다.|  
+|**1**|게시자에서 교착 상태가 발생할 경우 스냅샷 에이전트가 우선 순위를 갖습니다.|  
   
  **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  게시 데이터베이스와 함께 데이터베이스 미러링 세션에 참여하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 장애 조치 파트너 인스턴스를 지정합니다. 자세한 내용은 [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)을 참조하세요.  
@@ -246,7 +246,7 @@ ms.locfileid: "63250593"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대량 복사 데이터 파일에서 행 끝을 표시하는 문자 또는 문자 시퀀스입니다. 기본값은 \n\<,@g>\n입니다.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 동시에 실행 중인 동적 스냅숏 프로세스의 수가 [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)의 **@max_concurrent_dynamic_snapshots** 속성으로 설정된 제한에 도달할 때까지 스냅숏 에이전트에서 대기하는 최대 시간(초)입니다. 최대 시간(초)에 도달한 경우 스냅숏 에이전트가 계속 대기 중이면 해당 스냅숏 에이전트가 종료됩니다. 값 0은 에이전트가 취소될 경우에도 무기한 대기함을 의미합니다.  
+ 동시에 실행 중인 동적 스냅숏 프로세스의 수가 [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)의 **@max_concurrent_dynamic_snapshots** 속성으로 설정된 제한에 도달할 때까지 스냅숏 에이전트에서 대기하는 최대 시간(초)입니다. 최대 시간(초)에 도달한 경우 스냅샷 에이전트가 계속 대기 중이면 해당 스냅샷 에이전트가 종료됩니다. 값 0은 에이전트가 취소될 경우에도 무기한 대기함을 의미합니다.  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  이 매개 변수는 더 이상 사용되지 않으며 이전 버전과의 호환성을 위해서만 지원됩니다.  
@@ -256,7 +256,7 @@ ms.locfileid: "63250593"
 > [!IMPORTANT]  
 >  도메인 사용자 계정(기본값)이 아닌 로컬 시스템 계정에서 실행되도록 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트를 설치한 경우 해당 서비스에서는 로컬 컴퓨터에만 액세스할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트에서 실행되는 스냅숏 에이전트가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그인할 때 Windows 인증 모드를 사용하도록 구성된 경우 해당 스냅숏 에이전트가 실패합니다. 기본 설정은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증입니다.  
   
- 스냅숏 에이전트를 시작하려면 명령 프롬프트에서 **snapshot.exe** 를 실행합니다. 자세한 내용은 [복제 에이전트 실행 파일](../concepts/replication-agent-executables-concepts.md)을 참조하십시오.  
+ 스냅샷 에이전트를 시작하려면 명령 프롬프트에서 **snapshot.exe** 를 실행합니다. 자세한 내용은 [복제 에이전트 실행 파일](../concepts/replication-agent-executables-concepts.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 에이전트 관리](replication-agent-administration.md)  

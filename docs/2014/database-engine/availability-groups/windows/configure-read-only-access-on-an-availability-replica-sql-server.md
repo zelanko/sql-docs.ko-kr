@@ -222,13 +222,13 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
   
 -   [AlwaysOn: 읽기 가능한 보조 복제본을 설정했지만 내 쿼리가 차단됨](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
   
--   [AlwaysOn: 읽기 가능한 보조, 읽기 전용 데이터베이스 및 데이터베이스 스냅숏에서 최신 통계를 사용할 수 있도록 함](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [AlwaysOn: 읽기 가능한 보조, 읽기 전용 데이터베이스 및 데이터베이스 스냅샷에서 최신 통계를 사용할 수 있도록 함](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
   
--   [AlwaysOn: 읽기 전용 데이터베이스, 데이터베이스 스냅숏 및 보조 복제본에서 통계 사용 시 문제점](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [AlwaysOn: 읽기 전용 데이터베이스, 데이터베이스 스냅샷 및 보조 복제본에서 통계 사용 시 문제점](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
   
 -   [AlwaysOn: 보조 복제본에서 보고 작업을 실행할 때 주 작업에 미치는 영향](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
   
--   [AlwaysOn: 읽기 가능한 보조 복제본의 보고 작업을 스냅숏 격리로 매핑의 영향](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [AlwaysOn: 읽기 가능한 보조 복제본의 보고 작업을 스냅샷 격리로 매핑의 영향](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
   
 -   [AlwaysOn: 보조 복제본에서 보고 작업을 실행하는 경우 REDO 스레드 차단 최소화](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
   

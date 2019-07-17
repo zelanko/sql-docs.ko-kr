@@ -40,7 +40,7 @@ ms.locfileid: "62721595"
   
 -   복제 에이전트에서 설정한 연결에 사용할 로그인과 암호를 지정합니다.  
   
-    -   스냅숏 및 트랜잭션 게시에 대한 구독의 경우 **배포 에이전트 보안** 페이지에서 자격 증명을 지정합니다.  
+    -   스냅샷 및 트랜잭션 게시에 대한 구독의 경우 **배포 에이전트 보안** 페이지에서 자격 증명을 지정합니다.  
   
     -   병합 게시에 대한 구독의 경우 **병합 에이전트 보안** 페이지에서 자격 증명을 지정합니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62721595"
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  끌어오기 구독은 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 만들 수 있습니다. 사용되는 저장 프로시저는 구독이 속한 게시 유형에 따라 달라집니다.  
   
-#### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 끌어오기 구독을 만들려면  
+#### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 끌어오기 구독을 만들려면  
   
 1.  게시자에서 [sp_helppublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)을 실행하여 게시에서 끌어오기 구독을 지원하는지 확인합니다.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "62721595"
 ##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  끌어오기 구독을 만드는 데 사용되는 RMO 클래스는 구독이 속한 게시 유형에 따라 달라집니다.  
   
-#### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 끌어오기 구독을 만들려면  
+#### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 끌어오기 구독을 만들려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 구독자 및 게시자 모두에 대한 연결을 만듭니다.  
   

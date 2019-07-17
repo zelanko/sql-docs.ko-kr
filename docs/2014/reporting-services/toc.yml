@@ -64,7 +64,7 @@
           href: report-server/windows-application-log.md
         - name: 보고서 실행 확인
           href: report-server/verifying-a-report-run.md
-    - name: '성능, 스냅숏, 캐시(Reporting Services) +'
+    - name: '성능, 스냅샷, 캐시(Reporting Services) +'
       href: report-server/performance-snapshots-caching-reporting-services.md
     - name: 고가용성
       href: high-availability-reporting-services.md
@@ -249,7 +249,7 @@
       href: export-a-report-using-url-access.md
     - name: URL 액세스를 사용하여 보고서 검색
       href: search-a-report-using-url-access.md
-    - name: URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링
+    - name: URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링
       href: render-a-report-history-snapshot-using-url-access.md
 - name: 확장 프로그램
   href: extensions-ssrs.md

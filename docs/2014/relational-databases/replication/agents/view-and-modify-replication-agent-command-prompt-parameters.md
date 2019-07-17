@@ -31,8 +31,8 @@ ms.locfileid: "63192891"
   
 |에이전트|작업 이름|매개 변수 목록은 다음을 참조하세요.|  
 |-----------|--------------|------------------------------------|  
-|스냅숏 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
-|병합 게시 파티션에 대한 스냅숏 에이전트|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
+|스냅샷 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<integer>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
+|병합 게시 파티션에 대한 스냅샷 에이전트|**Dyn_\<Publisher>-\<PublicationDatabase>-\<Publication>-\<GUID>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
 |로그 판독기 에이전트|**\<Publisher>-\<PublicationDatabase>-\<integer>**|[복제 로그 판독기 에이전트](replication-log-reader-agent.md)|  
 |끌어오기 구독에 대한 병합 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<SubscriptionDatabase>-\<integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
 |밀어넣기 구독에 대한 병합 에이전트|**\<Publisher>-\<PublicationDatabase>-\<Publication>-\<Subscriber>-\<integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
@@ -79,7 +79,7 @@ ms.locfileid: "63192891"
   
 7.  두 대화 상자에서 **확인** 을 클릭합니다.  
   
-### <a name="to-view-and-modify-snapshot-agent-log-reader-agent-and-queue-reader-agent-command-line-parameters-from-replication-monitor"></a>복제 모니터에서 스냅숏 에이전트, 로그 판독기 에이전트 및 큐 판독기 에이전트 명령줄 매개 변수를 확인한 다음 수정하려면  
+### <a name="to-view-and-modify-snapshot-agent-log-reader-agent-and-queue-reader-agent-command-line-parameters-from-replication-monitor"></a>복제 모니터에서 스냅샷 에이전트, 로그 판독기 에이전트 및 큐 판독기 에이전트 명령줄 매개 변수를 확인한 다음 수정하려면  
   
 1.  복제 모니터에서 왼쪽 창의 게시자 그룹을 확장하고 해당 게시자를 확장한 다음 해당 게시를 클릭합니다.  
   

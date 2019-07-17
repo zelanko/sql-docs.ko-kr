@@ -144,7 +144,7 @@ ms.locfileid: "62510957"
  **붙여넣기**  
  클립보드의 내용을 붙여 넣습니다.  
   
-## <a name="options-for-replication-snapshot-job-steps"></a>복제 스냅숏 작업 단계 옵션  
+## <a name="options-for-replication-snapshot-job-steps"></a>복제 스냅샷 작업 단계 옵션  
  **모두 선택**  
  명령의 텍스트를 선택합니다.  
   

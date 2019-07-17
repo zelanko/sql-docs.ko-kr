@@ -94,7 +94,7 @@ WITH NO_INFOMSGS
 ## <a name="remarks"></a>Remarks  
 
 >[!NOTE]
-> 현재 Azure SQL Data Warehouse는 DBCC SHRINKDATABASE를 지원하지 않습니다. i/o 집약적인 작업이고 데이터 웨어하우스를 오프라인으로 사용할 수 있으므로 이 명령을 실행하지 않는 것이 좋습니다. 또한 이 명령을 실행한 후에 데이터 웨어하우스 스냅숏에 대한 비용 관련 사항이 발생합니다. 
+> 현재 Azure SQL Data Warehouse는 DBCC SHRINKDATABASE를 지원하지 않습니다. i/o 집약적인 작업이고 데이터 웨어하우스를 오프라인으로 사용할 수 있으므로 이 명령을 실행하지 않는 것이 좋습니다. 또한 이 명령을 실행한 후에 데이터 웨어하우스 스냅샷에 대한 비용 관련 사항이 발생합니다. 
 
 특정 데이터베이스의 모든 데이터와 로그 파일을 축소하려면 DBCC SHRINKDATABASE 명령을 실행합니다. 특정 데이터베이스의 한 데이터나 로그 파일을 동시에 축소하려면 [DBCC SHRINKFILE](../../t-sql/database-console-commands/dbcc-shrinkfile-transact-sql.md) 명령을 실행합니다.
   
@@ -145,7 +145,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-이 오류는 109보다 오래된 타임스탬프가 있는 스냅숏 트랜잭션이 축소 작업을 차단한다는 것을 의미합니다. 해당 트랜잭션은 축소 작업이 완료된 마지막 트랜잭션입니다. 또한 [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 동적 관리 뷰의 **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 열에 값 15가 있음을 나타냅니다. 뷰의 **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 열에 축소 작업(109)으로 완료된 마지막 트랜잭션보다 작은 숫자가 포함될 수 있습니다. 그렇다면, 축소 작업은 해당 트랜잭션이 완료될 때까지 대기합니다.
+이 오류는 109보다 오래된 타임스탬프가 있는 스냅샷 트랜잭션이 축소 작업을 차단한다는 것을 의미합니다. 해당 트랜잭션은 축소 작업이 완료된 마지막 트랜잭션입니다. 또한 [sys.dm_tran_active_snapshot_database_transactions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 동적 관리 뷰의 **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 열에 값 15가 있음을 나타냅니다. 뷰의 **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 열에 축소 작업(109)으로 완료된 마지막 트랜잭션보다 작은 숫자가 포함될 수 있습니다. 그렇다면, 축소 작업은 해당 트랜잭션이 완료될 때까지 대기합니다.
   
 문제를 해결하려면 다음 태스크 중 하나를 수행하십시오.
 -   축소 작업을 차단하는 트랜잭션을 종료합니다.  

@@ -44,7 +44,7 @@ ms.locfileid: "68079988"
 |**agent_id**|**binary(16)**|에이전트의 ID입니다.|  
 |**subscription_guid**|**binary(16)**|게시에 관한 구독 버전의 전역 식별자입니다.|  
 |**subid**|**binary(16)**|익명 구독에 관한 전역 식별자입니다.|  
-|**immediate_sync**|**bit**|스냅숏 에이전트가 실행될 때마다 동기화 파일을 만들거나 다시 만들지 여부를 나타냅니다.|  
+|**immediate_sync**|**bit**|스냅샷 에이전트가 실행될 때마다 동기화 파일을 만들거나 다시 만들지 여부를 나타냅니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

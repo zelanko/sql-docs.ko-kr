@@ -25,7 +25,7 @@ ms.locfileid: "68061819"
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  스냅숏 또는 트랜잭션 게시를 만듭니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
+  스냅샷 또는 트랜잭션 게시를 만듭니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -95,10 +95,10 @@ sp_addpublication [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**native**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다. *Oracle 게시자에 대해서는 지원 되지 않습니다*합니다.|  
 |**character**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. _Oracle 게시자에 대 한_ **문자** _스냅숏 복제에 대해서만 유효_합니다.|  
-|**concurrent**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성하지만 스냅숏을 실행하는 동안 테이블을 잠그지 않습니다. 트랜잭션 게시에 대해서만 지원됩니다. *Oracle 게시자에 대해서는 지원 되지 않습니다*합니다.|  
-|**concurrent_c**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성하지만 스냅숏을 실행하는 동안 테이블을 잠그지 않습니다. 트랜잭션 게시에 대해서만 지원됩니다.|  
-|**데이터베이스 스냅숏**|데이터베이스 스냅숏에서 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다. 데이터베이스 스냅숏은의 모든 버전에서 사용할 수 없습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.|  
-|**데이터베이스 스냅숏 문자**|데이터베이스 스냅숏에서 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. 데이터베이스 스냅숏은의 모든 버전에서 사용할 수 없습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.|  
+|**concurrent**|모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성하지만 스냅샷을 실행하는 동안 테이블을 잠그지 않습니다. 트랜잭션 게시에 대해서만 지원됩니다. *Oracle 게시자에 대해서는 지원 되지 않습니다*합니다.|  
+|**concurrent_c**|모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성하지만 스냅샷을 실행하는 동안 테이블을 잠그지 않습니다. 트랜잭션 게시에 대해서만 지원됩니다.|  
+|**데이터베이스 스냅숏**|데이터베이스 스냅샷에서 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 생성합니다. 데이터베이스 스냅숏은의 모든 버전에서 사용할 수 없습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.|  
+|**데이터베이스 스냅숏 문자**|데이터베이스 스냅샷에서 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 생성합니다. 데이터베이스 스냅숏은의 모든 버전에서 사용할 수 없습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.|  
 |NULL(기본값)|기본값으로 **네이티브** 에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. 에 대 한 비[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자의 경우 기본값은 **문자** 때의 값 *repl_freq* 됩니다 **스냅숏** 하 고 **concurrent_c** 다른 모든 경우.|  
   
 `[ \@repl_freq = ] 'repl_freq'` 복제 빈도의 형식인 *repl_freq* 됩니다 **nvarchar(10)** , 이며 다음 값 중 하나일 수 있습니다.  
@@ -121,7 +121,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@independent_agent = ] 'independent_agent'` 이 게시에 대 한 독립 실행형 배포 에이전트가 있는지를 지정 합니다. *independent_agent* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. 하는 경우 **true**,이 게시에 대 한 독립 실행형 배포 에이전트가 있습니다. 하는 경우 **false**게시는 공유 배포 에이전트를 사용 하 고 각 게시자 데이터베이스/구독자 데이터베이스 쌍에는 하나의 공유 에이전트가 있습니다.  
   
-`[ \@immediate_sync = ] 'immediate_synchronization'` 게시용 동기화 파일이 경우 스냅숏 에이전트가 실행 될 때마다 생성 됩니다 지정 합니다. *immediate_synchronization* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. 하는 경우 **true**, 동기화 파일이 만들어지거나 스냅숏 에이전트가 실행 될 때마다 다시 생성 합니다. 구독을 만들기 전에 스냅숏 에이전트가 완료되면 구독자가 즉시 동기화 파일을 얻을 수 있습니다. 새 구독은 스냅숏 에이전트를 가장 최근에 실행하여 생성된 최신 동기화 파일을 가져옵니다. *independent_agent* 있어야 **true** 에 대 한 *immediate_synchronization* 되도록 **true**합니다. 하는 경우 **false**, 새 구독이 있는 경우에 동기화 파일이 생성 됩니다. 호출 해야 합니다 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 기존 게시에 새 아티클을 증분 방식으로 추가 하면 각 구독에 대 한 합니다. 구독자는 스냅숏 에이전트가 시작되어 완료될 때까지는 구독 이후에 동기화 파일을 받을 수 없습니다.  
+`[ \@immediate_sync = ] 'immediate_synchronization'` 게시용 동기화 파일이 경우 스냅숏 에이전트가 실행 될 때마다 생성 됩니다 지정 합니다. *immediate_synchronization* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. 하는 경우 **true**, 동기화 파일이 만들어지거나 스냅숏 에이전트가 실행 될 때마다 다시 생성 합니다. 구독을 만들기 전에 스냅샷 에이전트가 완료되면 구독자가 즉시 동기화 파일을 얻을 수 있습니다. 새 구독은 스냅샷 에이전트를 가장 최근에 실행하여 생성된 최신 동기화 파일을 가져옵니다. *independent_agent* 있어야 **true** 에 대 한 *immediate_synchronization* 되도록 **true**합니다. 하는 경우 **false**, 새 구독이 있는 경우에 동기화 파일이 생성 됩니다. 호출 해야 합니다 [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 기존 게시에 새 아티클을 증분 방식으로 추가 하면 각 구독에 대 한 합니다. 구독자는 스냅샷 에이전트가 시작되어 완료될 때까지는 구독 이후에 동기화 파일을 받을 수 없습니다.  
   
 `[ \@enabled_for_internet = ] 'enabled_for_internet'` 게시 인터넷을 사용 하도록 설정 되 고 구독자에 스냅숏 파일을 전송할 파일 전송 프로토콜 (FTP)를 사용할 수 있는 경우 결정을 지정 합니다. *enabled_for_internet* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. 하는 경우 **true**, 게시용 동기화 파일은 C:\Program Files\Microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp 디렉터리에 저장 합니다. 사용자는 반드시 Ftp 디렉터리를 만들어야 합니다.  
   
@@ -148,19 +148,19 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@allow_queued_tran = ] 'allow_queued_updating'` 사용 하거나 게시자에서 적용할 수 있을 때까지 구독자에서 변경 내용의 지연을 사용 하지 않도록 설정 합니다. *allow_queued_updating* 됩니다 **nvarchar(5)** 이며 기본값은 FALSE입니다. 하는 경우 **false**, 구독자의 변경 내용이 지연 되지 않습니다. **true 이면** 됩니다 *Oracle 게시자에 대 한 지원 되지 않습니다*합니다.  
   
-`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'` 경우에 스냅숏 파일이 기본 폴더에 저장 됩니다 지정 합니다. *snapshot_in_default_folder* 됩니다 **nvarchar(5)** 이며 기본값은 TRUE입니다. 하는 경우 **true**, 스냅숏 파일이 기본 폴더에서 찾을 수 있습니다. 하는 경우 **false**, 지정 된 대체 위치에 저장 된 스냅숏 파일 *alternate_snapshot_folder*합니다. 대체 위치는 다른 서버, 네트워크 드라이브 또는 이동식 미디어(CD-ROM 또는 이동식 디스크 등)가 될 수 있습니다. 구독자가 나중에 검색할 수 있도록 스냅숏 파일을 FTP 사이트에 저장할 수도 있습니다. 이 매개 변수 true 될 수 있고의 위치를 아직 합니다  **\@alt_snapshot_folder** 매개 변수입니다. 이 조합은 스냅숏 파일이 기본 위치 및 대체 위치 양쪽 모두에 저장되도록 지정합니다.  
+`[ \@snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'` 경우에 스냅숏 파일이 기본 폴더에 저장 됩니다 지정 합니다. *snapshot_in_default_folder* 됩니다 **nvarchar(5)** 이며 기본값은 TRUE입니다. 하는 경우 **true**, 스냅숏 파일이 기본 폴더에서 찾을 수 있습니다. 하는 경우 **false**, 지정 된 대체 위치에 저장 된 스냅숏 파일 *alternate_snapshot_folder*합니다. 대체 위치는 다른 서버, 네트워크 드라이브 또는 이동식 미디어(CD-ROM 또는 이동식 디스크 등)가 될 수 있습니다. 구독자가 나중에 검색할 수 있도록 스냅샷 파일을 FTP 사이트에 저장할 수도 있습니다. 이 매개 변수 true 될 수 있고의 위치를 아직 합니다  **\@alt_snapshot_folder** 매개 변수입니다. 이 조합은 스냅샷 파일이 기본 위치 및 대체 위치 양쪽 모두에 저장되도록 지정합니다.  
   
 `[ \@alt_snapshot_folder = ] 'alternate_snapshot_folder'` 스냅숏의 대체 폴더의 위치를 지정 합니다. *alternate_snapshot_folder* 됩니다 **nvarchar(255)** 이며 기본값은 NULL입니다.  
   
-`[ \@pre_snapshot_script = ] 'pre_snapshot_script'` 에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *pre_snapshot_script* 됩니다 **nvarchar(255),** 이며 기본값은 NULL입니다. 배포 에이전트는 구독자에서 스냅숏을 적용할 때 복제된 개체 스크립트를 실행하기 전에 프리 스냅숏 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 배포 에이전트에서 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다.  
+`[ \@pre_snapshot_script = ] 'pre_snapshot_script'` 에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *pre_snapshot_script* 됩니다 **nvarchar(255),** 이며 기본값은 NULL입니다. 배포 에이전트는 구독자에서 스냅샷을 적용할 때 복제된 개체 스크립트를 실행하기 전에 프리 스냅샷 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 배포 에이전트에서 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다.  
   
-`[ \@post_snapshot_script = ] 'post_snapshot_script'` 에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *post_snapshot_script* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 배포 에이전트는 초기 동기화 중 복제된 다른 모든 개체 스크립트 및 데이터가 적용된 후 포스트 스냅숏 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 배포 에이전트에서 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다.  
+`[ \@post_snapshot_script = ] 'post_snapshot_script'` 에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *post_snapshot_script* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 배포 에이전트는 초기 동기화 중 복제된 다른 모든 개체 스크립트 및 데이터가 적용된 후 포스트 스냅샷 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 배포 에이전트에서 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다.  
   
-`[ \@compress_snapshot = ] 'compress_snapshot'` 지정에 기록 되는 스냅숏 합니다  **\@alt_snapshot_folder** 위치가로 압축할 수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식으로 합니다. *compress_snapshot* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. **false** 는 스냅숏이 압축 되지 않으면 지정 **true** 는 스냅숏이 압축 됩니다 지정 합니다. 2GB(기가바이트)를 넘는 스냅숏 파일은 압축할 수 없습니다. 압축된 스냅숏 파일은 배포 에이전트가 실행되는 위치에 풀립니다. 압축 파일이 구독자에 풀리도록 압축 스냅숏에는 일반적으로 끌어오기 구독이 사용됩니다. 기본 폴더에 있는 스냅숏은 압축할 수 없습니다.  
+`[ \@compress_snapshot = ] 'compress_snapshot'` 지정에 기록 되는 스냅숏 합니다  **\@alt_snapshot_folder** 위치가로 압축할 수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식으로 합니다. *compress_snapshot* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. **false** 는 스냅숏이 압축 되지 않으면 지정 **true** 는 스냅숏이 압축 됩니다 지정 합니다. 2GB(기가바이트)를 넘는 스냅샷 파일은 압축할 수 없습니다. 압축된 스냅샷 파일은 배포 에이전트가 실행되는 위치에 풀립니다. 압축 파일이 구독자에 풀리도록 압축 스냅샷에는 일반적으로 끌어오기 구독이 사용됩니다. 기본 폴더에 있는 스냅샷은 압축할 수 없습니다.  
   
-`[ \@ftp_address = ] 'ftp_address'` 배포자 용 FTP 서비스의 네트워크 주소가입니다. *ftp_address* 됩니다 **sysname**, 기본값은 NULL입니다. 선택할 구독자의 배포 에이전트 또는 병합 에이전트에 대한 게시 스냅숏 파일의 위치를 지정합니다. 이 속성은 각 게시에 저장 되므로 각 게시에는 서로 다른 *ftp_address*합니다. 게시는 FTP를 사용하여 스냅숏 전파를 지원해야 합니다.  
+`[ \@ftp_address = ] 'ftp_address'` 배포자 용 FTP 서비스의 네트워크 주소가입니다. *ftp_address* 됩니다 **sysname**, 기본값은 NULL입니다. 선택할 구독자의 배포 에이전트 또는 병합 에이전트에 대한 게시 스냅샷 파일의 위치를 지정합니다. 이 속성은 각 게시에 저장 되므로 각 게시에는 서로 다른 *ftp_address*합니다. 게시는 FTP를 사용하여 스냅샷 전파를 지원해야 합니다.  
   
-`[ \@ftp_port = ] ftp_port` 배포자 용 FTP 서비스의 포트 번호가입니다. *ftp_port* 됩니다 **int**, 기본값은 21입니다. 선택할 구독자의 배포 에이전트 또는 병합 에이전트에 대한 게시 스냅숏 파일의 위치를 지정합니다. 이 속성은 각 게시에 저장 되므로 각 게시는 고유한 *ftp_port*합니다.  
+`[ \@ftp_port = ] ftp_port` 배포자 용 FTP 서비스의 포트 번호가입니다. *ftp_port* 됩니다 **int**, 기본값은 21입니다. 선택할 구독자의 배포 에이전트 또는 병합 에이전트에 대한 게시 스냅샷 파일의 위치를 지정합니다. 이 속성은 각 게시에 저장 되므로 각 게시는 고유한 *ftp_port*합니다.  
   
 `[ \@ftp_subdirectory = ] 'ftp_subdirectory'` 배포 에이전트 또는 게시에서 FTP를 사용 하 여 스냅숏 전파를 지 원하는 경우 선택할 구독자의 병합 에이전트에 사용할 수 있는 스냅숏 파일 위치를 지정 합니다. *ftp_subdirectory* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 이 속성은 각 게시에 저장 되므로 각 게시는 고유한 *ftp_subdirctory* 또는 NULL 값으로 표시 된 하위 디렉터리를 선택 합니다.  
   
@@ -220,7 +220,7 @@ sp_addpublication [ @publication = ] 'publication'
 |**false**|백업으로부터 초기화할 수 없습니다.|  
 |NULL(기본값)|기본값으로 **true** 피어 투 피어 복제 토폴로지에서 게시에 대 한 및 **false** 다른 모든 게시에 대 한 합니다.|  
   
- 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
+ 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
 > [!WARNING]  
 >  구독자 데이터가 누락되는 것을 방지하려면 **에서** sp_addpublication `@allow_initialize_from_backup = N'true'`을 사용할 때 항상 `@immediate_sync = N'true'`를 사용하십시오.  

@@ -242,8 +242,8 @@ Insert select 문에서 Insert는 다중 스레드 형식이거나, 병렬 계�
 ### <a name="striped-backups-to-microsoft-azure-blob-storage"></a>Microsoft Azure Blob Storage에 대한 스트라이프 백업
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]에서 Microsoft Azure Blob Storage 서비스를 사용하는 URL에 SQL Server 백업 기능에서 12.8TB의 최대 백업 크기를 지원하는 블록 Blob을 사용하여 스트라이프 백업 세트를 지원합니다. 예를 보려면 [Code Examples](../relational-databases/backup-restore/sql-server-backup-to-url.md#Examples)를 참조하세요.
 
-### <a name="file-snapshot-backups-to-microsoft-azure-blob-storage"></a>Microsoft Azure Blob Storage에 대한 파일-스냅숏 백업
- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]의 URL에 대한 SQL Server 백업 기능에서는 이제 Azure 스냅숏을 사용하여 모든 데이터베이스 파일이 Microsoft Azure Blob Storage 서비스를 통해 저장되는 데이터베이스를 백업할 수 있습니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.
+### <a name="file-snapshot-backups-to-microsoft-azure-blob-storage"></a>Microsoft Azure Blob Storage에 대한 파일-스냅샷 백업
+ [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]의 URL에 대한 SQL Server 백업 기능에서는 이제 Azure 스냅숏을 사용하여 모든 데이터베이스 파일이 Microsoft Azure Blob Storage 서비스를 통해 저장되는 데이터베이스를 백업할 수 있습니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.
 
 ### <a name="managed-backup"></a>Managed Backup
 Microsoft Azure에 대한 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SQL Server Managed Backup에서는 백업 파일에 새 블록 Blob 스토리지를 사용합니다. Managed Backup에 대한 몇 가지 변경 내용과 향상된 기능도 있습니다.

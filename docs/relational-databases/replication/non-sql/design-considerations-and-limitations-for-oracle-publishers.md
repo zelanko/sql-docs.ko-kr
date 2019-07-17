@@ -24,7 +24,7 @@ ms.locfileid: "54125859"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Oracle 데이터베이스에서의 게시 작업은 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서의 게시 작업과 거의 동일합니다. 그러나 Oracle 데이터베이스에서의 게시 작업에 대한 다음과 같은 제한 사항 및 문제점을 알고 있어야 합니다.  
   
--   Oracle Gateway 옵션은 Oracle Complete 옵션을 사용할 때보다 더 나은 성능을 제공하지만 여러 트랜잭션 게시에서 동일한 테이블을 게시할 때는 사용할 수 없습니다. 트랜잭션 게시의 경우 특정 테이블이 한 번만 나타날 수 있지만 스냅숏 게시의 경우에는 이러한 제한이 없습니다. 여러 트랜잭션 게시에서 동일한 테이블을 게시해야 할 경우에는 Oracle Complete 옵션을 선택하십시오.  
+-   Oracle Gateway 옵션은 Oracle Complete 옵션을 사용할 때보다 더 나은 성능을 제공하지만 여러 트랜잭션 게시에서 동일한 테이블을 게시할 때는 사용할 수 없습니다. 트랜잭션 게시의 경우 특정 테이블이 한 번만 나타날 수 있지만 스냅샷 게시의 경우에는 이러한 제한이 없습니다. 여러 트랜잭션 게시에서 동일한 테이블을 게시해야 할 경우에는 Oracle Complete 옵션을 선택하십시오.  
   
 -   복제에서 테이블, 인덱스 및 구체화된 뷰를 게시할 수 있습니다. 다른 개체는 복제되지 않습니다.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "54125859"
  LOB에 대한 자세한 내용은 [Data Type Mapping for Oracle Publishers](../../../relational-databases/replication/non-sql/data-type-mapping-for-oracle-publishers.md)을 참조하십시오.  
   
 ### <a name="unique-indexes-and-constraints"></a>고유 인덱스 및 제약 조건  
- 스냅숏과 트랜잭션 복제에서 고유 인덱스 및 UNIQUE 제약 조건(PRIMARY KEY 제약 조건 포함)에 포함된 열이 특정 제한 사항을 따라야 합니다. 이러한 제한 사항을 따르지 않으면 제약 조건이나 인덱스가 복제되지 않습니다.  
+ 스냅샷과 트랜잭션 복제에서 고유 인덱스 및 UNIQUE 제약 조건(PRIMARY KEY 제약 조건 포함)에 포함된 열이 특정 제한 사항을 따라야 합니다. 이러한 제한 사항을 따르지 않으면 제약 조건이나 인덱스가 복제되지 않습니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 인덱스에서 허용된 최대 열 수는 16입니다.  
   
@@ -139,19 +139,19 @@ ms.locfileid: "54125859"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 이진 유효성 검사와 행 개수 유효성 검사를 지원합니다. Oracle 게시자에서는 행 개수 유효성 검사를 지원합니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-data-at-the-subscriber.md)를 참조하세요.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 네이티브 bcp 모드 스냅숏과 문자 모드 스냅숏을 제공합니다. Oracle 게시자에서는 문자 모드 스냅숏을 지원합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 네이티브 bcp 모드 스냅숏과 문자 모드 스냅숏을 제공합니다. Oracle 게시자에서는 문자 모드 스냅샷을 지원합니다.  
   
 -   게시된 Oracle 테이블의 스키마 변경은 지원되지 않습니다. 스키마를 변경하려면 먼저 게시를 삭제하고 스키마를 변경한 다음 게시 및 구독을 다시 만듭니다.  
   
     > [!NOTE]  
-    >  게시된 테이블에서 어떠한 동작도 발생하지 않을 때 스키마가 변경된 후 게시 및 구독의 삭제와 다시 생성 작업이 한 번에 수행되는 경우에는 해당 구독에 대해 'replication support only' 옵션을 지정할 수 있습니다. 이렇게 하면 각 구독자에 스냅숏을 복사하지 않고도 구독을 동기화할 수 있습니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)를 참조하세요.  
+    >  게시된 테이블에서 어떠한 동작도 발생하지 않을 때 스키마가 변경된 후 게시 및 구독의 삭제와 다시 생성 작업이 한 번에 수행되는 경우에는 해당 구독에 대해 'replication support only' 옵션을 지정할 수 있습니다. 이렇게 하면 각 구독자에 스냅샷을 복사하지 않고도 구독을 동기화할 수 있습니다. 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](../../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
 ### <a name="replication-security-model"></a>복제 보안 모델  
  Oracle 게시의 보안 모델은 표준 트랜잭션 복제의 보안 모델과 동일합니다. 단 다음과 같은 경우는 예외입니다.  
   
--   배포자에서 게시자로 스냅숏 에이전트와 로그 판독기 에이전트를 연결하는 계정은 다음 중 한 가지 방법으로 지정됩니다.  
+-   배포자에서 게시자로 스냅샷 에이전트와 로그 판독기 에이전트를 연결하는 계정은 다음 중 한 가지 방법으로 지정됩니다.  
   
-    -   [sp_adddistpublisher&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)의 **@security_mode** 매개 변수(Oracle 인증을 사용하는 경우 **@login** 및 **@password**에 대한 값도 지정)  
+    -   [sp_adddistpublisher&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)의 **@security_mode** 매개 변수(Oracle 인증을 사용하는 경우 **@login** 및 **@password** 에 대한 값도 지정)  
   
     -   **배포자에서 Oracle 게시자를 구성할 때 사용하는 SQL Server Management Studio의** 서버에 연결 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대화 상자에서 지정합니다.  
   

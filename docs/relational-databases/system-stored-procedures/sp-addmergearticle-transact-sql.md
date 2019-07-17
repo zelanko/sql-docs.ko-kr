@@ -150,7 +150,7 @@ sp_addmergearticle [ @publication = ] 'publication'
 |**0x100000000**|에 지정 된 경우 FILESTREAM 특성을 복제 하려면이 옵션을 사용 **varbinary (max)** 열입니다. 테이블을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자에 복제할 경우에는 이 옵션을 지정하지 마십시오. FILESTREAM 열이 있는 테이블을 복제 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이 스키마 옵션을 설정 하는 방법에 관계 없이 구독자 지원 되지 않습니다. 관련된 옵션을 참조 하세요 **0x800000000**합니다.|  
 |**0x200000000**|날짜 및 시간 데이터 형식 변환 (**날짜**를 **시간**를 **datetimeoffset**, 및 **datetime2**)에 도입 된 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 데이터 이전 버전의 지원 되는 형식을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |**0x400000000**|데이터 및 인덱스에 대한 압축 옵션을 복제합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.|  
-|**0x800000000**|FILESTREAM 데이터를 구독자에서 고유한 파일 그룹에 저장하려면 이 옵션을 설정합니다. 이 옵션을 설정하지 않으면 FILESTREAM 데이터는 기본 파일 그룹에 저장됩니다. 복제 기능에서는 파일 그룹을 만들지 않으므로 이 옵션을 설정할 경우 구독자에서 스냅숏을 적용하기 전에 파일 그룹을 만들어야 합니다. 스냅숏을 적용 하기 전에 개체를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [하기 전에 스크립트 실행 및 스냅숏 적용 전후](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)합니다.<br /><br /> 관련된 옵션을 참조 하세요 **0x100000000**합니다.|  
+|**0x800000000**|FILESTREAM 데이터를 구독자에서 고유한 파일 그룹에 저장하려면 이 옵션을 설정합니다. 이 옵션을 설정하지 않으면 FILESTREAM 데이터는 기본 파일 그룹에 저장됩니다. 복제 기능에서는 파일 그룹을 만들지 않으므로 이 옵션을 설정할 경우 구독자에서 스냅샷을 적용하기 전에 파일 그룹을 만들어야 합니다. 스냅숏을 적용 하기 전에 개체를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [하기 전에 스크립트 실행 및 스냅숏 적용 전후](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)합니다.<br /><br /> 관련된 옵션을 참조 하세요 **0x100000000**합니다.|  
 |**0x1000000000**|공용 언어 런타임 (CLR) 사용자 정의 형식 (Udt) 변환 **varbinary (max)** 실행 하는 구독자에 게 UDT 형식의 열을 복제할 수 있도록 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]입니다.|  
 |**0x2000000000**|변환 된 **hierarchyid** 데이터 형식입니다 **varbinary (max)** 있도록 형식의 열 **hierarchyid** 실행 하는 구독자에 복제할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. 사용 하는 방법에 대 한 자세한 내용은 **hierarchyid** 복제 된 테이블의 열 참조 [hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 |**0x4000000000**|테이블의 필터링된 인덱스를 복제합니다. 필터링 된 인덱스에 대 한 자세한 내용은 참조 하세요. [필터링 된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)합니다.|  
@@ -221,7 +221,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 0 사용 하 여 합니다.  
   
- **0** 아티클을 추가 유효 하지 않게 스냅숏이 무효화 되지 않습니다 지정 합니다. 저장 프로시저가 새 스냅숏을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
+ **0** 아티클을 추가 유효 하지 않게 스냅숏이 무효화 되지 않습니다 지정 합니다. 저장 프로시저가 새 스냅샷을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
  **1** 지정을 유효 하지 않게 스냅숏을 무효화 아티클을 추가 하는 새 스냅숏이 필요로 하는 기존 구독이 있는 경우 기존 스냅숏이 되지 않음으로 표시 하 고 새 스냅숏을 생성할 권한을 부여 합니다. *force_invalidate_snapshot* 로 설정 된 **1** 기존 스냅숏 사용 하 여 게시에 아티클을 추가 하는 경우.  
   
@@ -320,7 +320,7 @@ sp_addmergearticle [ @publication = ] 'publication'
   
  값을 지정 하는 경우 **3** 에 대 한 *partition_options*, 구독이 하나만 각 파티션에 대 한 해당 문서의 데이터 있을 수 있습니다. 새 구독의 필터링 조건이 기존 구독과 동일한 파티션을 사용하도록 하여 두 번째 구독이 생성될 경우 기존 구독이 삭제됩니다.  
   
- 에 대 한 3의 값을 지정 하면 *partition_options*, 메타 데이터 정리 되어 병합 에이전트가 실행 될 때마다 분할 된 스냅숏은 더 빨리 만료 됩니다. 이 옵션을 사용할 때는 구독자가 요청한 분할된 스냅숏을 활성화해야 합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
+ 에 대 한 3의 값을 지정 하면 *partition_options*, 메타 데이터 정리 되어 병합 에이전트가 실행 될 때마다 분할 된 스냅숏은 더 빨리 만료 됩니다. 이 옵션을 사용할 때는 구독자가 요청한 분할된 스냅샷을 활성화해야 합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을(를) 참조하세요.  
   
  정적 행 필터를 사용 하 여 아티클을 추가 사용 하 여 *subset_filterclause*를 매개 변수가 있는 필터는 아티클을 기존 게시에 구독을 다시 초기화 해야 합니다.  
   

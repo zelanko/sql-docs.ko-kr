@@ -56,7 +56,7 @@ ms.locfileid: "67412675"
 |**First Session Requests/Sec**|매 초마다 보고서 서버 캐시에서 시작된 새 사용자 세션 수입니다.|  
 |**Memory Cache Hits/Sec**|메모리 내 캐시에서 보고서가 검색된 초당 횟수입니다. *메모리 내 캐시* 는 캐시 중 CPU 메모리에 보고서를 저장하는 부분입니다. 메모리 내 캐시가 사용되면 보고서 서버는 캐시된 내용에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 쿼리하지 않습니다.|  
 |**Memory Cache Misses/Sec**|메모리 내 캐시에서 보고서를 검색하지 못한 초당 횟수입니다.|  
-|**Next Session Requests/Sec**|기존 세션에서 열려 있는 보고서(예: 세션 스냅숏에서 렌더링된 보고서)에 대한 초당 요청 수입니다.|  
+|**Next Session Requests/Sec**|기존 세션에서 열려 있는 보고서(예: 세션 스냅샷에서 렌더링된 보고서)에 대한 초당 요청 수입니다.|  
 |**Report Requests**|현재 활성 상태이며 보고서 서버에서 처리 중인 보고서 수입니다.|  
 |**Reports Executed/Sec**|초당 성공적으로 실행된 보고서 수입니다. 이 카운터는 보고서 볼륨에 대한 통계를 제공합니다. 캐시에서 반환할 수 있는 보고서 요청과 보고서 실행을 비교하기 위해 **Request/Sec** 카운터와 이 카운터를 함께 사용합니다.|  
 |**Requests/Sec**|보고서 서버에 대한 초당 요청 수입니다. 이 카운터는 보고서 서버에서 처리하는 모든 요청 종류를 추적합니다.|  
@@ -72,7 +72,7 @@ ms.locfileid: "67412675"
 |**Total Requests**|서비스 시작 이후 보고서 서버에 대한 총 요청 수입니다. 이 카운터는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.|  
   
 ##  <a name="bkmk_windowsservice"></a> MSRS 2011 Windows 서비스 SharePoint 모드 성능 카운터  
- **MSRS 2011 Windows Service SharePoint Mode** 성능 개체는 보고서 서버 Windows 서비스를 모니터링하는 데 사용됩니다. 이 성능 개체에는 예약된 작업을 통해 시작된 보고서 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 예약된 작업에는 구독 및 배달, 보고서 실행 스냅숏 및 보고서 기록이 포함될 수 있습니다. 이 카운터를 설정하면 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에 카운터를 적용하거나 특정 인스턴스를 선택할 수 있습니다.  
+ **MSRS 2011 Windows Service SharePoint Mode** 성능 개체는 보고서 서버 Windows 서비스를 모니터링하는 데 사용됩니다. 이 성능 개체에는 예약된 작업을 통해 시작된 보고서 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 예약된 작업에는 구독 및 배달, 보고서 실행 스냅샷 및 보고서 기록이 포함될 수 있습니다. 이 카운터를 설정하면 모든 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스에 카운터를 적용하거나 특정 인스턴스를 선택할 수 있습니다.  
   
  다음 표에서는 **MSRS 2011 Windows Service SharePoint mode** 성능 개체에 포함된 카운터를 나열합니다.  
   
@@ -97,11 +97,11 @@ ms.locfileid: "67412675"
 |**First Session Requests/Sec**|초당 만들어진 새 보고서 실행 세션 수입니다.|  
 |**Memory Cache Hits/Sec**|메모리 내 캐시에서 보고서가 검색된 초당 횟수입니다. *메모리 내 캐시* 는 캐시 중 CPU 메모리에 보고서를 저장하는 부분입니다. 메모리 내 캐시가 사용되면 보고서 서버는 캐시된 내용에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 쿼리하지 않습니다.|  
 |**Memory Cache Misses/Sec**|메모리 내 캐시에서 보고서를 검색하지 못한 초당 횟수입니다.|  
-|**Next Session Requests/Sec**|기존 세션에서 열려 있는 보고서(예: 세션 스냅숏에서 렌더링된 보고서)에 대한 초당 요청 수입니다.|  
+|**Next Session Requests/Sec**|기존 세션에서 열려 있는 보고서(예: 세션 스냅샷에서 렌더링된 보고서)에 대한 초당 요청 수입니다.|  
 |**Report Requests**|현재 활성 상태이며 보고서 서버에서 처리 중인 보고서 수입니다. 이 카운터는 캐싱 전략을 평가하는 데 사용합니다. 생성된 보고서보다 훨씬 더 많은 요청이 있을 수 있습니다.|  
 |**Reports Executed/Sec**|초당 성공적으로 생성된 보고서 수입니다.|  
 |**Requests/Sec**|보고서 서버 서비스가 초당 성공적으로 처리한 총 요청 수입니다.|  
-|**Snapshot Updates/Sec**|초당 총 보고서 실행 스냅숏 업데이트 수입니다.|  
+|**Snapshot Updates/Sec**|초당 총 보고서 실행 스냅샷 업데이트 수입니다.|  
 |**Total App Domain Recycles**|보고서 서버 Windows 서비스 시작 이후 애플리케이션 도메인의 총 재활용 횟수입니다.|  
 |**Total Cache Flushes**|서비스 시작 이후 보고서 서버 캐시의 총 업데이트 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Flushes/Sec**를 참조하세요.|  
 |**Total Cache Hits**|보고서 서버 Windows 서비스 시작 이후 캐시에서 직접 처리된 보고서에 대한 총 요청 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다. **Cache Hits/Sec**를 참조하세요.|  
@@ -116,7 +116,7 @@ ms.locfileid: "67412675"
 |**Total Rejected Threads**|비동기 처리에 대해 거부되고 이후에 동일한 스레드에서 동기 프로세스로 처리된 총 스레드 수입니다. 보통 또는 과도한 로드 상태에서 이 카운터는 계속 증가합니다.|  
 |**Total Reports Executed**|실행된 총 보고서 수입니다.|  
 |**Total Requests**|서비스 시작 이후 성공적으로 실행된 총 보고서 수입니다. 애플리케이션 도메인을 재활용하면 이 카운터가 다시 설정됩니다.|  
-|**Total Snapshot Updates**|총 보고서 실행 스냅숏 업데이트 수입니다.|  
+|**Total Snapshot Updates**|총 보고서 실행 스냅샷 업데이트 수입니다.|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell Cmdlet을 사용하여 목록 반환  
  ![PowerShell 관련 콘텐츠](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")다음 Windows PowerShell 스크립트는 CounterSetName이 "msr"로 시작되는 카운터 세트 반환  

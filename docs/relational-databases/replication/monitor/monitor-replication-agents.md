@@ -33,7 +33,7 @@ ms.locfileid: "54124004"
   
 -   다음 에이전트는 복제 모니터에서 게시와 연결됩니다.  
   
-    -   스냅숏 에이전트  
+    -   스냅샷 에이전트  
   
     -   로그 판독기 에이전트  
   
@@ -60,13 +60,13 @@ ms.locfileid: "54124004"
   
  복제 모니터는 각 에이전트에 대한 추가 정보를 제공하고 큐 판독기 에이전트 사용 시 해당 에이전트를 모니터링합니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.
   
-#### <a name="to-monitor-the-snapshot-agent-and-log-reader-agent"></a>스냅숏 에이전트 및 로그 판독기 에이전트를 모니터링하려면  
+#### <a name="to-monitor-the-snapshot-agent-and-log-reader-agent"></a>스냅샷 에이전트 및 로그 판독기 에이전트를 모니터링하려면  
   
 1.  [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.  
   
-3.  게시를 마우스 오른쪽 단추로 클릭한 다음 **로그 판독기 에이전트 상태 보기** 또는 **스냅숏 에이전트 상태 보기**를 클릭합니다.  
+3.  게시를 마우스 오른쪽 단추로 클릭한 다음 **로그 판독기 에이전트 상태 보기** 또는 **스냅샷 에이전트 상태 보기**를 클릭합니다.  
   
 4.  **로그 판독기 에이전트 상태 보기** 또는 **스냅숏 에이전트 상태 보기** 대화 상자에서 다음을 수행하십시오.  
   

@@ -23,7 +23,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63216006"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
-  복제 병합 에이전트는 데이터베이스 테이블에 저장된 초기 스냅숏 파일을 구독자에 적용하는 유틸리티 실행 파일입니다. 또한 이 에이전트는 초기 스냅숏이 만들어진 후 게시자에서 발생한 증분 데이터 변경 내용을 병합하고, 사용자가 구성한 규칙에 따라 또는 사용자가 만든 사용자 지정 해결 프로그램을 사용하여 충돌을 조정합니다.  
+  복제 병합 에이전트는 데이터베이스 테이블에 저장된 초기 스냅샷 파일을 구독자에 적용하는 유틸리티 실행 파일입니다. 또한 이 에이전트는 초기 스냅샷이 만들어진 후 게시자에서 발생한 증분 데이터 변경 내용을 병합하고, 사용자가 구성한 규칙에 따라 또는 사용자가 만든 사용자 지정 해결 프로그램을 사용하여 충돌을 조정합니다.  
   
 > [!NOTE]  
 >  매개 변수는 지정되는 순서에 제한을 받지 않습니다. 선택적 매개 변수가 지정되지 않은 경우 로컬 컴퓨터의 미리 정의된 레지스트리 설정 값이 사용됩니다.  
@@ -109,23 +109,23 @@ ms.locfileid: "63216006"
  **-?**  
  사용 가능한 모든 매개 변수를 출력합니다.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- 게시자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ 게시자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-PublisherDB** _publisher_database_  
  게시자 데이터베이스의 이름입니다.  
   
  **-Publication** _publication_  
- 게시의 이름입니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅숏을 사용할 수 있도록 설정된 경우에만 유효합니다.  
+ 게시의 이름입니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅샷을 사용할 수 있도록 설정된 경우에만 유효합니다.  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- 구독자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ 구독자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  
   
  **-SubscriberDB** _subscriber_database_  
  구독자 데이터베이스의 이름입니다.  
   
  **-AltSnapshotFolder** _alt_snapshot_folder_path_  
- 구독에 대한 초기 스냅숏이 들어 있는 폴더의 경로입니다.  
+ 구독에 대한 초기 스냅샷이 들어 있는 폴더의 경로입니다.  
   
  **-Continuous**  
  에이전트에서 복제된 트랜잭션의 폴링을 계속 시도할지 여부를 지정합니다. 이 인수가 지정된 경우 에이전트는 보류 중인 트랜잭션이 없는 경우에도 원본의 복제된 트랜잭션을 폴링 간격에 따라 폴링합니다.  
@@ -136,8 +136,8 @@ ms.locfileid: "63216006"
  **-DefinitionFile** _def_path_and_file_name_  
  에이전트 정의 파일의 경로입니다. 에이전트 정의 파일에는 에이전트의 명령 프롬프트 인수가 들어 있습니다. 파일 내용은 실행 파일로 구문 분석됩니다. 임의 문자가 있는 인수 값을 지정하려면 큰따옴표(")를 사용합니다.  
   
- **-Distributor** _server_name_[**\\**_instance_name_]  
- 배포자 이름입니다. 해당 서버에 있는 기본 *인스턴스에 대해* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고, 해당 서버에 있는 명명된 _server_name_**\\**_instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고, 배포자(밀어넣기) 배포의 경우에는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름이 기본 이름이 됩니다.  
+ **-Distributor** _server_name_[ **\\** _instance_name_]  
+ 배포자 이름입니다. 해당 서버에 있는 기본 *인스턴스에 대해* server_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정하고, 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고, 배포자(밀어넣기) 배포의 경우에는 로컬 컴퓨터에 있는 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름이 기본 이름이 됩니다.  
   
  **-DistributorLogin** _distributor_login_  
  배포자의 로그인 이름입니다.  
@@ -158,7 +158,7 @@ ms.locfileid: "63216006"
  게시자의 변경 내용을 구독자로 다운로드하는 동안 한 번의 일괄 처리에서 적용할 변경 내용 수입니다. 기본값은 100입니다.  
   
  **-DynamicSnapshotLocation** _dynamic_snapshot_location_  
- 게시에서 매개 변수가 있는 행 필터를 사용할 경우 필터링된 데이터 스냅숏 파일의 위치입니다.  
+ 게시에서 매개 변수가 있는 행 필터를 사용할 경우 필터링된 데이터 스냅샷 파일의 위치입니다.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
  연결을 만들 때 병합 에이전트에서 사용하는 SSL(Secure Sockets Layer) 암호화의 수준입니다.  
@@ -298,7 +298,7 @@ ms.locfileid: "63216006"
  **-ProfileName** _profile_name_  
  에이전트 매개 변수에 사용할 에이전트 프로필을 지정합니다. **ProfileName** 이 NULL이면 에이전트 프로필이 사용되지 않습니다. **ProfileName** 이 지정되지 않으면 에이전트 유형에 대한 기본 프로필이 사용됩니다. 자세한 내용은 [복제 에이전트 프로필](replication-agent-profiles.md)을 참조하세요.  
   
- **-PublisherFailoverPartner** _server_name_[**\\**_instance_name_]  
+ **-PublisherFailoverPartner** _server_name_[ **\\** _instance_name_]  
  게시 데이터베이스와 함께 데이터베이스 미러링 세션에 참여하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 장애 조치 파트너 인스턴스를 지정합니다. 자세한 내용은 [데이터베이스 미러링 및 복제&#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md)을 참조하세요.  
   
  **-PublisherLogin** _publisher_login_  
@@ -366,7 +366,7 @@ ms.locfileid: "63216006"
  구독자의 변경 내용을 게시자로 업로드하는 동안 한 번의 일괄 처리에서 적용할 변경 내용 수입니다. 기본값은 **100**입니다.  
   
  **-UseInprocLoader**  
- 병합 에이전트에서 구독자에 스냅숏 파일을 적용할 때 BULK INSERT 명령을 사용하도록 지정하여 초기 스냅숏의 성능을 향상시킵니다. 이 매개 변수는 XML 데이터 형식과 호환되지 않으므로 이후에는 지원되지 않습니다. XML 데이터를 복제하지 않을 계획이라면 이 매개 변수를 사용할 수 있습니다. 이 매개 변수는 문자 모드 스냅숏과 함께 사용할 수 없습니다. 이 매개 변수를 사용하려면 구독자의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 스냅숏 .bcp 데이터 파일이 있는 디렉터리에 대한 읽기 권한이 있어야 합니다. 이 매개 변수를 사용하지 않으면 에이전트에서 로드한 ODBC 드라이버가 파일 내용을 읽으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트가 사용되지 않습니다.  
+ 병합 에이전트에서 구독자에 스냅샷 파일을 적용할 때 BULK INSERT 명령을 사용하도록 지정하여 초기 스냅샷의 성능을 향상시킵니다. 이 매개 변수는 XML 데이터 형식과 호환되지 않으므로 이후에는 지원되지 않습니다. XML 데이터를 복제하지 않을 계획이라면 이 매개 변수를 사용할 수 있습니다. 이 매개 변수는 문자 모드 스냅샷과 함께 사용할 수 없습니다. 이 매개 변수를 사용하려면 구독자의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 스냅샷 .bcp 데이터 파일이 있는 디렉터리에 대한 읽기 권한이 있어야 합니다. 이 매개 변수를 사용하지 않으면 에이전트에서 로드한 ODBC 드라이버가 파일 내용을 읽으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트가 사용되지 않습니다.  
   
  **-Validate** [**0**|**1**|**2**|**3**]  
  병합 세션이 종료될 때 유효성 검사를 수행할지 여부와 수행할 유효성 검사 유형을 지정합니다. 값 **3** 이 권장 값입니다.  

@@ -89,13 +89,13 @@ ms.locfileid: "62721182"
   
 24. 게시를 만든 후 **닫기**를 클릭합니다.  
   
-### <a name="to-view-the-status-of-snapshot-generation"></a>스냅숏 생성의 상태를 보려면  
+### <a name="to-view-the-status-of-snapshot-generation"></a>스냅샷 생성의 상태를 보려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결하고 해당 서버 노드를 확장한 다음 **복제** 폴더를 확장합니다.  
   
-2.  로컬 게시 폴더에서 **AdvWorksSalesOrdersMerge**를 마우스 오른쪽 단추로 클릭한 다음 **스냅숏 에이전트 상태 보기**를 클릭합니다.  
+2.  로컬 게시 폴더에서 **AdvWorksSalesOrdersMerge**를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기**를 클릭합니다.  
   
-3.  게시에 대한 스냅숏 에이전트 작업의 현재 상태가 표시됩니다. 다음 단원을 진행하기 전에 스냅숏 작업이 성공했는지 확인합니다.  
+3.  게시에 대한 스냅샷 에이전트 작업의 현재 상태가 표시됩니다. 다음 단원을 진행하기 전에 스냅샷 작업이 성공했는지 확인합니다.  
   
 ### <a name="to-add-the-merge-agent-login-to-the-pal"></a>PAL에 병합 에이전트 로그인을 추가하려면  
   

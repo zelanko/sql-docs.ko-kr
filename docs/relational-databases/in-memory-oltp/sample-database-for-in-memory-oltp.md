@@ -34,7 +34,7 @@ ms.locfileid: "54226700"
   
  이 샘플에 대한 설명서는 다음과 같이 구성되어 있습니다.  
   
--   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#Prerequisites)   
+-   샘플을 설치하고 데모 워크로드를 실행하기 위한[필수 조건](#Prerequisites)  
   
 -   [AdventureWorks 기반의 메모리 내 OLTP 샘플 설치](#InstallingtheIn-MemoryOLTPsamplebasedonAdventureWorks)지침  
   
@@ -459,7 +459,7 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
- 데이터베이스를 만든 후의 스냅숏:  
+ 데이터베이스를 만든 후의 스냅샷:  
   
 ||||  
 |-|-|-|  

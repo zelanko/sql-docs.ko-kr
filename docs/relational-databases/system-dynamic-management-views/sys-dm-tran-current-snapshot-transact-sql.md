@@ -30,7 +30,7 @@ ms.locfileid: "68262651"
 # <a name="sysdmtrancurrentsnapshot-transact-sql"></a>sys.dm_tran_current_snapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  현재 스냅숏 트랜잭션이 시작될 때의 모든 활성 트랜잭션을 표시하는 가상 테이블을 반환합니다. 현재 트랜잭션이 스냅숏 트랜잭션이 아니면 이 함수는 행을 반환하지 않습니다. **sys.dm_tran_current_snapshot** 비슷합니다 **sys.dm_tran_transactions_snapshot**점을 제외 하 고 **sys.dm_tran_current_snapshot** 에 대 한 활성 트랜잭션만 반환 합니다 현재 스냅숏 트랜잭션이 있습니다.  
+  현재 스냅샷 트랜잭션이 시작될 때의 모든 활성 트랜잭션을 표시하는 가상 테이블을 반환합니다. 현재 트랜잭션이 스냅샷 트랜잭션이 아니면 이 함수는 행을 반환하지 않습니다. **sys.dm_tran_current_snapshot** 비슷합니다 **sys.dm_tran_transactions_snapshot**점을 제외 하 고 **sys.dm_tran_current_snapshot** 에 대 한 활성 트랜잭션만 반환 합니다 현재 스냅숏 트랜잭션이 있습니다.  
   
 > [!NOTE]  
 >  이를 호출 하 [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 나 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], 이름을 사용 하 여 **sys.dm_pdw_nodes_tran_current_snapshot**합니다.  
@@ -61,7 +61,7 @@ sys.dm_tran_current_snapshot
   
 -   XSN-58은 XSN-57과 같습니다.  
   
--   XSN-59는 스냅숏 격리에서 실행되는 SELECT 작업입니다.  
+-   XSN-59는 스냅샷 격리에서 실행되는 SELECT 작업입니다.  
   
 -   XSN-60은 XSN-59와 같습니다.  
   
@@ -82,7 +82,7 @@ transaction_sequence_num
 58  
 ```  
   
- 결과는 스냅숏 트랜잭션 XSN-59가 시작될 때 XSN-57과 XSN-58이 활성 상태였음을 보여 줍니다. XSN-57과 XSN-58이 커밋되거나 롤백된 후에도 스냅숏 트랜잭션이 완료될 때까지 동일한 결과가 지속됩니다.  
+ 결과는 스냅샷 트랜잭션 XSN-59가 시작될 때 XSN-57과 XSN-58이 활성 상태였음을 보여 줍니다. XSN-57과 XSN-58이 커밋되거나 롤백된 후에도 스냅샷 트랜잭션이 완료될 때까지 동일한 결과가 지속됩니다.  
   
  XSN-60 범위 내에서 동일한 쿼리를 실행합니다.  
   

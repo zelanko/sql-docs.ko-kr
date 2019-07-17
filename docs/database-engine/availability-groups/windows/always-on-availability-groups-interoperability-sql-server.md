@@ -36,7 +36,7 @@ ms.locfileid: "66761558"
 |변경 내용 추적|[복제, 변경 내용 추적, 변경 데이터 캡처 및 Always On 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/replicate-track-change-data-capture-always-on-availability.md)|
 |포함된 데이터베이스|[Always On 가용성 그룹에 포함된 데이터베이스&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/contained-databases-with-always-on-availability-groups-sql-server.md)|
 |데이터베이스 암호화|[Always On 가용성 그룹이 있는 암호화된 데이터베이스&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/encrypted-databases-with-always-on-availability-groups-sql-server.md)|
-|데이터베이스 스냅숏|[Always On 가용성 그룹이 있는 데이터베이스 스냅숏&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)|
+|데이터베이스 스냅샷|[Always On 가용성 그룹이 있는 데이터베이스 스냅숏&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)|
 |FILESTREAM 및 FileTable|[Always On 가용성 그룹의 FILESTREAM 및 FileTable&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md)|
 |전체 텍스트 검색|참고: 전체 텍스트 인덱스는 Always On 보조 데이터베이스와 동기화됩니다.|
 |로그 전달|[로그 전달에서 Always On 가용성 그룹으로 마이그레이션하기 위한 필수 조건&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)|

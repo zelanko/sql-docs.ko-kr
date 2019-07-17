@@ -52,14 +52,14 @@ ms.locfileid: "63250878"
   
  **스냅숏을 생성 하 고 스키마 조정**  
   
-1.  스냅숏 작업을 만들고 스냅숏을 생성합니다.  
+1.  스냅샷 작업을 만들고 스냅샷을 생성합니다.  
   
     ```  
     EXEC sp_addpublication_snapshot @publication = N'Publication1', @frequency_type = 1;  
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  스냅숏 폴더로 이동합니다. 기본 위치는 "C:\Program Files\Microsoft SQL Server\MSSQL12. \<인스턴스 > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\"입니다.  
+2.  스냅샷 폴더로 이동합니다. 기본 위치는 "C:\Program Files\Microsoft SQL Server\MSSQL12. \<인스턴스 > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\"입니다.  
   
 3.  찾을 **합니다. SCH** 테이블에 대 한 파일 및 Management Studio에서 엽니다. 아래 설명에 따라 테이블 스키마를 변경하고 저장 프로시저를 업데이트합니다.  
   
@@ -293,7 +293,7 @@ GO
   
  구독자에서 트랜잭션 복제와 관련된 테이블은 메모리 최적화 테이블로 구성할 수 있지만 구독자 테이블은 메모리 최적화 테이블의 요구 사항을 충족해야 합니다. 여기에는 다음과 같은 제한 사항이 필요합니다.  
   
--   트랜잭션 복제 구독자에서 메모리 최적화 테이블을 만들려면 메모리 최적화 테이블을 만드는 데 사용된 스냅숏 스키마 파일을 수동으로 수정해야 합니다. 자세한 내용은 [스키마 파일 수정](#Schema)합니다.  
+-   트랜잭션 복제 구독자에서 메모리 최적화 테이블을 만들려면 메모리 최적화 테이블을 만드는 데 사용된 스냅샷 스키마 파일을 수동으로 수정해야 합니다. 자세한 내용은 [스키마 파일 수정](#Schema)합니다.  
   
 -   구독자에서 메모리 최적화 테이블로 복제된 테이블은 메모리 최적화 테이블의 행당 8060바이트로 제한됩니다.  
   

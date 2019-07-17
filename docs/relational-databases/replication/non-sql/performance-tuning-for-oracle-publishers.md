@@ -31,7 +31,7 @@ ms.locfileid: "47595514"
 -   적절한 간격으로 게시자의 변경 내용을 처리하도록 트랜잭션 세트 작업 구성  
   
 ## <a name="specifying-the-appropriate-publishing-option"></a>적절한 게시 옵션 지정  
- Oracle Gateway 옵션은 Oracle Complete 옵션을 사용할 때보다 더 나은 성능을 제공하지만 여러 트랜잭션 게시에서 동일한 테이블을 게시할 때는 사용할 수 없습니다. 트랜잭션 게시의 경우 특정 테이블이 한 번만 나타날 수 있지만 스냅숏 게시의 경우에는 이러한 제한이 없습니다. 여러 트랜잭션 게시에서 동일한 테이블을 게시해야 할 경우에는 Oracle Complete 옵션을 선택하십시오. 이 옵션은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 Oracle 게시자를 식별할 때 지정할 수 있습니다. 자세한 내용은 [Create a Publication from an Oracle Database](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)을(를) 참조하세요.  
+ Oracle Gateway 옵션은 Oracle Complete 옵션을 사용할 때보다 더 나은 성능을 제공하지만 여러 트랜잭션 게시에서 동일한 테이블을 게시할 때는 사용할 수 없습니다. 트랜잭션 게시의 경우 특정 테이블이 한 번만 나타날 수 있지만 스냅샷 게시의 경우에는 이러한 제한이 없습니다. 여러 트랜잭션 게시에서 동일한 테이블을 게시해야 할 경우에는 Oracle Complete 옵션을 선택하십시오. 이 옵션은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 Oracle 게시자를 식별할 때 지정할 수 있습니다. 자세한 내용은 [Create a Publication from an Oracle Database](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)을(를) 참조하세요.  
   
 ## <a name="configuring-the-transaction-set-job"></a>트랜잭션 세트 작업 구성  
  게시된 Oracle 테이블에 대한 변경 내용은 트랜잭션 세트라는 그룹으로 처리됩니다. 트랜잭션 일관성을 유지하려면 각 트랜잭션 세트를 배포 데이터베이스에 단일 트랜잭션으로 커밋해야 합니다. 트랜잭션 세트가 너무 클 경우 단일 트랜잭션으로는 효율적으로 처리할 수 없습니다.  

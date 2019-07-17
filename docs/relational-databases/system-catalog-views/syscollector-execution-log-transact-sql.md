@@ -37,7 +37,7 @@ ms.locfileid: "68060347"
 |collection_set_id|**int**|이 로그 항목이 나타내는 컬렉션 집합 또는 패키지를 식별합니다. Null을 허용하지 않습니다.|  
 |collection_item_id|**int**|컬렉션 항목을 식별합니다. Null을 허용합니다.|  
 |start_time|**datetime**|컬렉션 집합 또는 패키지가 시작된 시간입니다. Null을 허용하지 않습니다.|  
-|last_iteration_time|**datetime**|패키지를 계속 실행하기 위해 패키지에서 마지막으로 스냅숏을 캡처한 시간입니다. Null을 허용합니다.|  
+|last_iteration_time|**datetime**|패키지를 계속 실행하기 위해 패키지에서 마지막으로 스냅샷을 캡처한 시간입니다. Null을 허용합니다.|  
 |finish_time|**datetime**|종료된 패키지 및 컬렉션 집합의 실행 완료 시간입니다. Null을 허용합니다.|  
 |runtime_execution_mode|**smallint**|컬렉션 집합 활동이 데이터 수집이었는지 데이터 업로드였는지를 나타냅니다. Null을 허용합니다.<br /><br /> 값은 다음과 같습니다.<br /><br /> 0 = 컬렉션<br /><br /> 1 = 업로드|  
 |상태|**smallint**|컬렉션 집합 또는 패키지의 현재 상태를 나타냅니다. Null을 허용하지 않습니다.<br /><br /> 값은 다음과 같습니다.<br /><br /> 0 = 실행 중<br /><br /> 1 = 완료<br /><br /> 2 = 실패|  

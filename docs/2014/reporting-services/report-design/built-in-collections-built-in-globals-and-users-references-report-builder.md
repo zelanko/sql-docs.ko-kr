@@ -85,7 +85,7 @@ ms.locfileid: "66106436"
 > [!NOTE]  
 >  보고서의 언어 설정을 변경할 수 있지만 이로 인한 표시 문제에 유의해야 합니다. 예를 들어 보고서의 로캘 설정을 변경하면 보고서의 날짜 형식을 변경할 수 있지만 통화 형식도 변경될 수 있습니다. 통화가 적절하게 변환되지 않으면 잘못된 통화 기호가 보고서에 표시될 수 있습니다. 이를 방지하려면 변경할 개별 항목에 대한 언어 정보를 설정하거나 통화 데이터가 있는 항목을 특정 언어로 설정합니다.  
   
-### <a name="identifying-userid-for-snapshot-or-history-reports"></a>스냅숏 또는 기록 보고서에 대한 UserID 식별  
+### <a name="identifying-userid-for-snapshot-or-history-reports"></a>스냅샷 또는 기록 보고서에 대한 UserID 식별  
  *User!UserID* 변수를 포함하는 보고서에서는 보고서를 보고 있는 현재 사용자와 관련된 보고서 데이터가 표시되지 않는 경우도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  

@@ -145,7 +145,7 @@ GO
 ```  
   
 ### <a name="b-retrieving-every-query-plan-from-the-plan-cache"></a>2\. 계획 캐시에서 모든 쿼리 계획 검색  
- 계획 캐시에 있는 모든 쿼리 계획의 스냅숏을 검색하려면 `sys.dm_exec_cached_plans` 동적 관리 뷰를 쿼리하여 캐시에 있는 모든 쿼리 계획의 계획 핸들을 검색합니다. 계획 핸들은 `plan_handle`의 `sys.dm_exec_cached_plans` 열에 저장됩니다. 그런 다음 CROSS APPLY 연산자를 사용하여 다음과 같이 계획 핸들을 `sys.dm_exec_text_query_plan`으로 전달합니다. 현재 계획 캐시에 있는 각 계획에 대 한 출력 Showplan은 `query_plan` 반환 되는 테이블의 열입니다.  
+ 계획 캐시에 있는 모든 쿼리 계획의 스냅샷을 검색하려면 `sys.dm_exec_cached_plans` 동적 관리 뷰를 쿼리하여 캐시에 있는 모든 쿼리 계획의 계획 핸들을 검색합니다. 계획 핸들은 `plan_handle`의 `sys.dm_exec_cached_plans` 열에 저장됩니다. 그런 다음 CROSS APPLY 연산자를 사용하여 다음과 같이 계획 핸들을 `sys.dm_exec_text_query_plan`으로 전달합니다. 현재 계획 캐시에 있는 각 계획에 대 한 출력 Showplan은 `query_plan` 반환 되는 테이블의 열입니다.  
   
 ```sql  
 USE master;  
@@ -157,7 +157,7 @@ GO
 ```  
   
 ### <a name="c-retrieving-every-query-plan-for-which-the-server-has-gathered-query-statistics-from-the-plan-cache"></a>3\. 서버가 계획 캐시에서 쿼리 통계를 수집한 모든 쿼리 계획 검색  
- 서버가 통계를 수집한 현재 계획 캐시에 있는 모든 쿼리 계획의 스냅숏을 검색하려면 `sys.dm_exec_query_stats` 동적 관리 뷰를 쿼리하여 캐시에서 이 계획의 계획 핸들을 검색합니다. 계획 핸들은 `plan_handle`의 `sys.dm_exec_query_stats` 열에 저장됩니다. 그런 다음 CROSS APPLY 연산자를 사용하여 다음과 같이 계획 핸들을 `sys.dm_exec_text_query_plan`으로 전달합니다. 각 계획의 실행 계획 출력은 반환된 테이블의 `query_plan` 열에 있습니다.  
+ 서버가 통계를 수집한 현재 계획 캐시에 있는 모든 쿼리 계획의 스냅샷을 검색하려면 `sys.dm_exec_query_stats` 동적 관리 뷰를 쿼리하여 캐시에서 이 계획의 계획 핸들을 검색합니다. 계획 핸들은 `plan_handle`의 `sys.dm_exec_query_stats` 열에 저장됩니다. 그런 다음 CROSS APPLY 연산자를 사용하여 다음과 같이 계획 핸들을 `sys.dm_exec_text_query_plan`으로 전달합니다. 각 계획의 실행 계획 출력은 반환된 테이블의 `query_plan` 열에 있습니다.  
   
 ```sql  
 USE master;  

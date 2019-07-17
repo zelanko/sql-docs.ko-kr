@@ -95,7 +95,7 @@ ms.locfileid: "66010148"
  현재 인덱싱된 뷰에는 FILESTREAM 열이나 FILESTREAM 열에 종속된 계산/지속형 계산 열이 포함될 수 없습니다. 이 동작은 FileTable에 정의된 뷰에도 그대로 적용됩니다.  
   
 ##  <a name="OtherSnapshots"></a> 스냅숏 격리와 FileTable  
- RCSI(커밋된 읽기 스냅숏 격리)와 SI(스냅숏 격리)는 데이터에 대한 업데이트 작업이 수행 중인 경우에도 판독기에서 데이터의 스냅숏을 사용할 수 있도록 하는 기능에 의존합니다. 그러나 FileTable을 사용하면 Filestream 데이터에 대한 비트랜잭션 쓰기 액세스가 허용됩니다. 따라서 FileTable이 포함된 데이터베이스에서 이러한 기능을 사용하는 경우에는 다음 제한 사항이 적용됩니다.  
+ RCSI(커밋된 읽기 스냅샷 격리)와 SI(스냅샷 격리)는 데이터에 대한 업데이트 작업이 수행 중인 경우에도 판독기에서 데이터의 스냅샷을 사용할 수 있도록 하는 기능에 의존합니다. 그러나 FileTable을 사용하면 Filestream 데이터에 대한 비트랜잭션 쓰기 액세스가 허용됩니다. 따라서 FileTable이 포함된 데이터베이스에서 이러한 기능을 사용하는 경우에는 다음 제한 사항이 적용됩니다.  
   
 -   FileTable이 포함된 데이터베이스를 변경하여 RCSI/SI를 사용하도록 설정할 수 있습니다.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "66010148"
     -   전체 텍스트 인덱싱은 데이터베이스 옵션이 READ_COMMITTED_SNAPSHOT이든 ALLOW_SNAPSHOT_ISOLATION이든 관계없이 항상 성공합니다.  
   
 ##  <a name="readsec"></a> 읽기 가능한 보조 데이터베이스  
- 읽기 가능한 보조 데이터베이스에는 이전 섹션인 [스냅숏 격리와 FileTable](#OtherSnapshots)에 설명된 것처럼 스냅숏과 동일한 고려 사항이 적용됩니다.  
+ 읽기 가능한 보조 데이터베이스에는 이전 섹션인 [스냅샷 격리와 FileTable](#OtherSnapshots)에 설명된 것처럼 스냅샷과 동일한 고려 사항이 적용됩니다.  
   
 ##  <a name="CDB"></a> 포함된 데이터베이스와 FileTable  
  FileTable 기능이 종속되는 FILESTREAM 기능을 사용하려면 데이터베이스 외부에서의 몇 가지 구성이 필요합니다. 따라서 FILESTREAM 또는 FileTable을 사용하는 데이터베이스는 완전히 포함되지 않습니다.  

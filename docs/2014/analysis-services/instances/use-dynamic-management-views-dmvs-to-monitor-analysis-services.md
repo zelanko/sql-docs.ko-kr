@@ -118,7 +118,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_JOBS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-jobs-rowset)|현재 작업에 대한 정보를 반환합니다.|  
 |[DISCOVER_KEYWORDS 행 집합&#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-keywords-rowset-xmla)|예약된 키워드 목록을 반환합니다.|  
 |[DISCOVER_LITERALS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-literals-rowset)|XMLA에서 지원되는 데이터 형식 및 값을 포함하여 리터럴 목록을 반환합니다.|  
-|[DISCOVER_LOCKS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-locks-rowset)|특정 시점에 사용된 잠금의 스냅숏을 반환합니다.|  
+|[DISCOVER_LOCKS 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-locks-rowset)|특정 시점에 사용된 잠금의 스냅샷을 반환합니다.|  
 |[DISCOVER_MEMORYGRANT 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memorygrant-rowset)|시작할 때 Analysis Services에서 할당한 메모리에 대한 정보를 반환합니다.|  
 |[DISCOVER_MEMORYUSAGE 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-memoryusage-rowset)|특정 개체별로 메모리 사용량을 보여 줍니다.|  
 |[DISCOVER_OBJECT_ACTIVITY 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-object-activity-rowset)|서비스를 마지막으로 시작한 이후의 개체 작업에 대해 보고합니다.|  

@@ -29,7 +29,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 2016 사용 자습서를
   
 Microsoft Azure Blob Storage 서비스에 대한 SQL Server 통합 지원은 SQL Server 2012 서비스 팩 1 CU2 향상된 기능으로 시작되었으며, SQL Server 2014 및 SQL Server 2016에서 더욱 개선되었습니다. 이 기능에 대한 개요 및 사용할 경우의 이점은 [Microsoft Azure의 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. 라이브 데모는 [지정 시간 복원 데모](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)를 참조하세요.  
 
-이 자습서에서는 여러 섹션을 통해 Microsoft Azure Blob Storage 서비스에서 SQL Server 데이터 파일을 사용하는 방법을 보여 줍니다. 각 섹션은 특정 작업을 중심으로 하며, 섹션을 순서대로 완료해야 합니다. 먼저 저장된 액세스 정책과 공유 액세스 서명을 사용하여 Blob Storage에 새 컨테이너를 만드는 방법을 알아봅니다. 그런 다음 SQL Server 자격 증명을 만들어 Azure Blob Storage에 SQL Server를 통합하는 방법을 살펴봅니다. 데이터베이스를 Blob 스토리지에 백업하고 Azure 가상 머신에 복원합니다. SQL Server 2016 파일-스냅숏 트랜잭션 로그 백업을 사용하여 특정 시점 및 새 데이터베이스로 복원합니다. 최종적으로, 이 자습서에서는 파일-스냅숏 백업 이해와 작업에 도움이 되도록 메타데이터 시스템 저장 프로시저 및 함수를 사용하는 방법을 보여 줍니다.
+이 자습서에서는 여러 섹션을 통해 Microsoft Azure Blob Storage 서비스에서 SQL Server 데이터 파일을 사용하는 방법을 보여 줍니다. 각 섹션은 특정 작업을 중심으로 하며, 섹션을 순서대로 완료해야 합니다. 먼저 저장된 액세스 정책과 공유 액세스 서명을 사용하여 Blob Storage에 새 컨테이너를 만드는 방법을 알아봅니다. 그런 다음 SQL Server 자격 증명을 만들어 Azure Blob Storage에 SQL Server를 통합하는 방법을 살펴봅니다. 데이터베이스를 Blob 스토리지에 백업하고 Azure 가상 머신에 복원합니다. SQL Server 2016 파일-스냅샷 트랜잭션 로그 백업을 사용하여 특정 시점 및 새 데이터베이스로 복원합니다. 최종적으로, 이 자습서에서는 파일-스냅샷 백업 이해와 작업에 도움이 되도록 메타데이터 시스템 저장 프로시저 및 함수를 사용하는 방법을 보여 줍니다.
   
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -247,15 +247,15 @@ Azure Blob 스토리지에서 Azure 가상 머신의 SQL Server 2016 인스턴�
   
    ![Azure의 컨테이너 내 데이터 파일](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/data-files-in-container.png)
 
-## <a name="5---backup-database-using-file-snapshot-backup"></a>5 - 파일-스냅숏 백업을 사용하여 데이터베이스 백업
+## <a name="5---backup-database-using-file-snapshot-backup"></a>5 - 파일-스냅샷 백업을 사용하여 데이터베이스 백업
 
-이 섹션에서는 Azure 스냅숏을 사용하여 거의 즉시 백업을 수행하기 위해 파일-스냅숏 백업을 사용하여 Azure 가상 머신에서 AdventureWorks2016 데이터베이스를 백업합니다. 파일-스냅숏 백업에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+이 섹션에서는 Azure 스냅샷을 사용하여 거의 즉시 백업을 수행하기 위해 파일-스냅샷 백업을 사용하여 Azure 가상 머신에서 AdventureWorks2016 데이터베이스를 백업합니다. 파일-스냅샷 백업에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
-파일-스냅숏 백업을 사용하여 AdventureWorks2016 데이터베이스를 백업하려면 다음 단계를 따르세요.  
+파일-스냅샷 백업을 사용하여 AdventureWorks2016 데이터베이스를 백업하려면 다음 단계를 따르세요.  
   
 1.  SQL Server Management Studio에 연결합니다.   
 2.  새 쿼리 창을 열고 Azure 가상 머신에 있는 데이터베이스 엔진의 SQL Server 2016 인스턴스에 연결합니다.  
-3.  다음 TRANSACT-SQL 스크립트를 복사하여 쿼리 창에 붙여넣고 실행합니다. 이 쿼리 창을 닫지 마세요. 5단계에서 이 스크립트를 다시 실행합니다. 이 시스템 저장 프로시저를 사용하면 지정된 데이터베이스를 구성하는 각 파일에 대한 기존 파일 스냅숏 백업을 볼 수 있습니다. 이 데이터베이스에 대한 파일 스냅숏 백업이 없는 것을 확인할 수 있습니다.  
+3.  다음 TRANSACT-SQL 스크립트를 복사하여 쿼리 창에 붙여넣고 실행합니다. 이 쿼리 창을 닫지 마세요. 5단계에서 이 스크립트를 다시 실행합니다. 이 시스템 저장 프로시저를 사용하면 지정된 데이터베이스를 구성하는 각 파일에 대한 기존 파일 스냅샷 백업을 볼 수 있습니다. 이 데이터베이스에 대한 파일 스냅샷 백업이 없는 것을 확인할 수 있습니다.  
   
     ```sql  
     -- Verify that no file snapshot backups exist  
@@ -271,7 +271,7 @@ Azure Blob 스토리지에서 Azure 가상 머신의 SQL Server 2016 인스턴�
        WITH FILE_SNAPSHOT;    
     ```  
   
-5.  4단계의 스크립트가 성공적으로 실행되었는지 확인한 후 다음 스크립트를 다시 실행합니다. 4단계의 파일-스냅숏 백업 작업은 데이터와 로그 파일 둘 다의 파일-스냅숏을 생성했습니다.  
+5.  4단계의 스크립트가 성공적으로 실행되었는지 확인한 후 다음 스크립트를 다시 실행합니다. 4단계의 파일-스냅샷 백업 작업은 데이터와 로그 파일 둘 다의 파일-스냅샷을 생성했습니다.  
   
     ```sql  
     -- Verify that two file-snapshot backups exist  
@@ -279,19 +279,19 @@ Azure Blob 스토리지에서 Azure 가상 머신의 SQL Server 2016 인스턴�
   
     ```  
   
-    ![스냅숏을 표시하는 fn_db_backup_file_snapshots의 결과](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-showing-snapshot.png) 
+    ![스냅샷을 표시하는 fn_db_backup_file_snapshots의 결과](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-showing-snapshot.png) 
   
 6.  개체 탐색기에서 Azure 가상 머신의 SQL Server 2016 인스턴스에 있는 데이터베이스 노드를 확장하고 AdventureWorks2016 데이터베이스가 이 인스턴스로 복원되었는지 확인합니다(필요에 따라 노드 새로 고침).  
 7.  개체 탐색기에서 Azure Storage에 연결합니다.   
 8.  컨테이너를 확장하고 섹션 1에서 만든 컨테이너를 확장한 다음, 위 4단계의 AdventureWorks2016_Azure.bak가 섹션 3의 백업 파일 및 섹션 4의 데이터베이스 파일과 함께 이 컨테이너에 표시되는지 확인합니다(필요에 따라 노드 새로 고침).  
   
-    ![Azure에서 스냅숏 백업](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG)
+    ![Azure에서 스냅샷 백업](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-backup-on-azure.PNG)
 
-## <a name="6----generate-activity-and-backup-log-using-file-snapshot-backup"></a>6 - 파일-스냅숏 백업을 사용하여 작업 및 백업 로그 생성
+## <a name="6----generate-activity-and-backup-log-using-file-snapshot-backup"></a>6 - 파일-스냅샷 백업을 사용하여 작업 및 백업 로그 생성
 
-이 섹션에서는 AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏 백업을 사용하여 정기적으로 트랜잭션 로그 백업을 만듭니다. 파일 스냅숏 백업 사용 방법에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+이 섹션에서는 AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅샷 백업을 사용하여 정기적으로 트랜잭션 로그 백업을 만듭니다. 파일 스냅샷 백업 사용 방법에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
-AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏 백업을 사용하여 정기적으로 트랜잭션 로그 백업을 만들려면 다음 단계를 따르세요.  
+AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅샷 백업을 사용하여 정기적으로 트랜잭션 로그 백업을 만들려면 다음 단계를 따르세요.  
   
 1.  SQL Server Management Studio에 연결합니다.   
 2.  두 개의 새 쿼리 창을 열고 Azure 가상 머신에 있는 데이터베이스 엔진의 SQL Server 2016 인스턴스에 각각 연결합니다.   
@@ -343,23 +343,23 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏
   
     ![행 수 29,939가 표시됨](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/29-thousand-rows.png)
   
-6.  두 번째 스크립트의 출력을 검토하여 BACKUP LOG 문을 실행할 때마다 두 개의 새 파일 스냅숏이 생성되는 것을 확인합니다.로그 파일의 파일 스냅숏 하나와 데이터 파일의 파일 스냅숏 하나 등 총 두 개의 파일 스냅숏이 각 데이터베이스 파일마다 생성됩니다. 두 번째 스크립트가 완료되면 각 데이터베이스 파일마다 8개씩, 총 16개의 파일 스냅샷이 있습니다. BACKUP DATABASE 문에서 하나가 생성되고 BACKUP LOG 문을 실행할 때마다 하나가 생성되었습니다.  
+6.  두 번째 스크립트의 출력을 검토하여 BACKUP LOG 문을 실행할 때마다 두 개의 새 파일 스냅샷이 생성되는 것을 확인합니다.로그 파일의 파일 스냅샷 하나와 데이터 파일의 파일 스냅샷 하나 등 총 두 개의 파일 스냅샷이 각 데이터베이스 파일마다 생성됩니다. 두 번째 스크립트가 완료되면 각 데이터베이스 파일마다 8개씩, 총 16개의 파일 스냅샷이 있습니다. BACKUP DATABASE 문에서 하나가 생성되고 BACKUP LOG 문을 실행할 때마다 하나가 생성되었습니다.  
   
-   ![스냅숏 결과 백업](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-back-results.png)
+   ![스냅샷 결과 백업](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/snapshot-back-results.png)
   
 7.  개체 탐색기에서 Azure Storage에 연결합니다.  
   
 8.  컨테이너를 확장하고 섹션 1에서 만든 컨테이너를 확장한 다음, 이전 섹션의 데이터 파일과 함께 7개의 새 백업 파일이 나타나는지 확인합니다(필요에 따라 노드 새로 고침).  
   
-    ![Azure 컨테이너 여러 스냅숏](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/tutorial-snapshots-in-container.png)
+    ![Azure 컨테이너 여러 스냅샷](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/tutorial-snapshots-in-container.png)
 
 ## <a name="7---restore-a-database-to-a-point-in-time"></a>7 - 데이터베이스를 지정 시간으로 복원
 
 이 섹션에서는 두 트랜잭션 로그 백업 사이의 특정 시점으로 AdventureWorks2016 데이터베이스를 복원합니다.  
   
-기존의 백업에서 특정 시점 복원을 수행하려면 전체 데이터베이스 백업, 차등 백업 및 복원하려는 시점 바로 다음까지의 모든 트랜잭션 로그 파일을 사용해야 합니다. 파일-스냅숏 백업을 사용할 경우 복원하려는 시간을 프레이밍하는 골대를 제공하는 두 개의 인접한 로그 백업 파일만 있으면 됩니다. 각 로그 백업이 각 데이터베이스 파일(각 데이터 파일 및 로그 파일)의 파일 스냅숏을 만들기 때문에 두 개의 로그 파일 스냅숏 백업 세트만 있으면 됩니다.  
+기존의 백업에서 특정 시점 복원을 수행하려면 전체 데이터베이스 백업, 차등 백업 및 복원하려는 시점 바로 다음까지의 모든 트랜잭션 로그 파일을 사용해야 합니다. 파일-스냅샷 백업을 사용할 경우 복원하려는 시간을 프레이밍하는 골대를 제공하는 두 개의 인접한 로그 백업 파일만 있으면 됩니다. 각 로그 백업이 각 데이터베이스 파일(각 데이터 파일 및 로그 파일)의 파일 스냅샷을 만들기 때문에 두 개의 로그 파일 스냅샷 백업 세트만 있으면 됩니다.  
   
-파일 스냅숏 백업 세트에서 지정한 특정 시점으로 데이터베이스를 복원하려면 다음 단계를 따르세요.  
+파일 스냅샷 백업 세트에서 지정한 특정 시점으로 데이터베이스를 복원하려면 다음 단계를 따르세요.  
   
 1.  SQL Server Management Studio에 연결합니다.  
 2.  새 쿼리 창을 열고 Azure 가상 머신에 있는 데이터베이스 엔진의 SQL Server 2016 인스턴스에 연결합니다.   
@@ -394,13 +394,13 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏
 
 ## <a name="8----restore-as-new-database-from-log-backup"></a>8 - 로그 백업에서 새 데이터베이스로 복원
 
-이 섹션에서는 파일-스냅숏 트랜잭션 로그 백업에서 AdventureWorks2016 데이터베이스를 새 데이터베이스로 복원합니다.  
+이 섹션에서는 파일-스냅샷 트랜잭션 로그 백업에서 AdventureWorks2016 데이터베이스를 새 데이터베이스로 복원합니다.  
   
 이 시나리오에서는 비즈니스 분석 및 보고를 위해 다른 가상 머신의 SQL Server 인스턴스로 복원을 수행합니다. 다른 가상 머신의 다른 인스턴스로 복원할 경우 이 목적을 위한 큰 전용 가상 머신에 작업이 오프로드되므로 트랜잭션 시스템의 리소스를 사용할 필요가 없습니다.  
   
-트랜잭션 로그 백업에서 파일-스냅숏 백업을 사용한 복원은 매우 빠르며, 기존의 스트리밍 백업보다 훨씬 더 빠릅니다. 기존의 스트리밍 백업의 경우 전체 데이터베이스 백업, 차등 백업 및 일부 또는 전체 트랜잭션 로그 백업(또는 새로운 전체 데이터베이스 백업)을 사용해야 합니다. 그러나 파일-스냅숏 로그 백업의 경우 가장 최근 로그 백업(또는 다른 로그 백업이나 두 로그 백업 시간 사이의 지점으로 특정 시점 복원을 위한 두 개의 인접한 로그 백업)만 있으면 됩니다. 즉, 각 파일-스냅숏 로그 백업이 각 데이터베이스 파일(각 데이터 파일 및 로그 파일)의 파일 스냅숏을 만들기 때문에 하나의 로그 파일-스냅숏 백업 세트만 있으면 됩니다.  
+트랜잭션 로그 백업에서 파일-스냅샷 백업을 사용한 복원은 매우 빠르며, 기존의 스트리밍 백업보다 훨씬 더 빠릅니다. 기존의 스트리밍 백업의 경우 전체 데이터베이스 백업, 차등 백업 및 일부 또는 전체 트랜잭션 로그 백업(또는 새로운 전체 데이터베이스 백업)을 사용해야 합니다. 그러나 파일-스냅샷 로그 백업의 경우 가장 최근 로그 백업(또는 다른 로그 백업이나 두 로그 백업 시간 사이의 지점으로 특정 시점 복원을 위한 두 개의 인접한 로그 백업)만 있으면 됩니다. 즉, 각 파일-스냅샷 로그 백업이 각 데이터베이스 파일(각 데이터 파일 및 로그 파일)의 파일 스냅샷을 만들기 때문에 하나의 로그 파일-스냅샷 백업 세트만 있으면 됩니다.  
   
-파일 스냅숏 백업을 사용하여 트랜잭션 로그 백업에서 새 데이터베이스로 데이터베이스를 복원하려면 다음 단계를 따르세요.  
+파일 스냅샷 백업을 사용하여 트랜잭션 로그 백업에서 새 데이터베이스로 데이터베이스를 복원하려면 다음 단계를 따르세요.  
   
 1.  SQL Server Management Studio에 연결합니다.   
 2.  새 쿼리 창을 열고 Azure 가상 머신에 있는 데이터베이스 엔진의 SQL Server 2016 인스턴스에 연결합니다.  
@@ -426,18 +426,18 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏
   
     ![새 데이터베이스에 대한 데이터 및 로그 파일을 보여 주는 Azure 컨테이너](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/new-db-in-azure-container.png)
 
-## <a name="9---manage-backup-sets-and-file-snapshot-backups"></a>9 - 백업 세트 및 파일-스냅숏 백업 관리
+## <a name="9---manage-backup-sets-and-file-snapshot-backups"></a>9 - 백업 세트 및 파일-스냅샷 백업 관리
 
-이 섹션에서는 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) 시스템 저장 프로시저를 사용하여 백업 세트를 삭제합니다. 이 시스템 저장 프로시저는 이 백업 세트와 연결된 각 데이터베이스 파일에서 백업 파일 및 파일 스냅숏을 삭제합니다.  
+이 섹션에서는 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) 시스템 저장 프로시저를 사용하여 백업 세트를 삭제합니다. 이 시스템 저장 프로시저는 이 백업 세트와 연결된 각 데이터베이스 파일에서 백업 파일 및 파일 스냅샷을 삭제합니다.  
   
 > [!NOTE]  
-> Azure Blob 컨테이너에서 백업 파일을 삭제하여 백업 세트를 삭제하려고 하면 백업 파일 자체만 삭제되고 연결된 파일 스냅숏은 유지됩니다. 이 시나리오에서는 [sys.fn_db_backup_file_snapshots&#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) 시스템 함수를 사용하여 분리된 파일 스냅숏의 URL을 확인하고 [sp_delete_backup_file_snapshot&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) 시스템 저장 프로시저를 사용하여 각 분리된 파일 스냅숏을 삭제합니다. 자세한 내용은  [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+> Azure Blob 컨테이너에서 백업 파일을 삭제하여 백업 세트를 삭제하려고 하면 백업 파일 자체만 삭제되고 연결된 파일 스냅샷은 유지됩니다. 이 시나리오에서는 [sys.fn_db_backup_file_snapshots&#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) 시스템 함수를 사용하여 분리된 파일 스냅숏의 URL을 확인하고 [sp_delete_backup_file_snapshot&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) 시스템 저장 프로시저를 사용하여 각 분리된 파일 스냅숏을 삭제합니다. 자세한 내용은  [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
-파일-스냅숏 백업 세트를 삭제하려면 다음 단계를 따르세요.  
+파일-스냅샷 백업 세트를 삭제하려면 다음 단계를 따르세요.  
   
 1.  SQL Server Management Studio에 연결합니다.  
 2.  새 쿼리 창을 열고 Azure 가상 머신에 있는 데이터베이스 엔진의 SQL Server 2016 인스턴스(또는 이 컨테이너에 대한 읽기 및 쓰기 권한이 있는 모든 SQL Server 2016 인스턴스)에 연결합니다.   
-3.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 연결된 파일 스냅숏과 함께 삭제할 로그 백업을 선택합니다. 섹션 1에서 지정한 컨테이너 및 스토리지 계정 이름에 맞게 URL을 수정하고 로그 백업 파일 이름을 제공한 다음, 이 스크립트를 실행합니다.  
+3.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣습니다. 연결된 파일 스냅샷과 함께 삭제할 로그 백업을 선택합니다. 섹션 1에서 지정한 컨테이너 및 스토리지 계정 이름에 맞게 URL을 수정하고 로그 백업 파일 이름을 제공한 다음, 이 스크립트를 실행합니다.  
   
   ```sql
   sys.sp_delete_backup 'https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>/tutorial-21764-20181003205236.bak';  
@@ -448,13 +448,13 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅숏
   
     ![로그 백업 Blob 삭제를 보여 주는 Azure 컨테이너](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/deleted-backup-snapshot.png)
   
-6.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣은 다음 실행하여 두 개의 파일 스냅숏이 삭제되었는지 확인합니다.  
+6.  다음 Transact-SQL 스크립트를 복사하여 쿼리 창에 붙여넣은 다음 실행하여 두 개의 파일 스냅샷이 삭제되었는지 확인합니다.  
   
     ```sql  
     -- verify that two file snapshots have been removed  
     SELECT * from sys.fn_db_backup_file_snapshots ('AdventureWorks2016');   
     ```  
-    ![2개의 파일 스냅숏이 삭제되었음을 보여 주는 결과 창](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png)
+    ![2개의 파일 스냅샷이 삭제되었음을 보여 주는 결과 창](media/tutorial-use-azure-blob-storage-service-with-sql-server-2016/results-of-two-deleted-snapshot-files.png)
 
 ## <a name="10---remove-resources"></a>10 - 리소스 제거
 

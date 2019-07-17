@@ -66,7 +66,7 @@ sys.dm_tran_top_version_generators
   
 -   XSN-58은 XSN-57과 같습니다.  
   
--   XSN-59는 스냅숏 격리에서 실행되는 SELECT 작업입니다.  
+-   XSN-59는 스냅샷 격리에서 실행되는 SELECT 작업입니다.  
   
 -   XSN-60은 XSN-59와 같습니다.  
   

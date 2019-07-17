@@ -85,7 +85,7 @@ ms.locfileid: "66108603"
  보고서, 보고서 서버 또는 보고서 디자이너에 대한 현재 RDL 스키마를 확인하려면 [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md)를 참조하세요.  
   
 ##  <a name="bkmk_publishedreports_and_snapshots"></a> 게시된 보고서 및 보고서 스냅숏  
- 처음 사용할 때 보고서 서버는 게시된 기존 보고서와 보고서 스냅숏을 새 보고서 정의 스키마로 업그레이드하려고 합니다. 이때 사용자는 특정 동작을 수행할 필요가 없습니다. 이러한 업그레이드 시도는 사용자가 보고서 또는 보고서 스냅숏을 보거나 보고서 서버에서 구독을 처리할 때 수행됩니다. 보고서 정의는 대체되지 않고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 보고서 서버의 원래 스키마에 계속 저장됩니다. 업그레이드할 수 없는 보고서는 이전 버전 호환 모드에서 실행됩니다.  
+ 처음 사용할 때 보고서 서버는 게시된 기존 보고서와 보고서 스냅샷을 새 보고서 정의 스키마로 업그레이드하려고 합니다. 이때 사용자는 특정 동작을 수행할 필요가 없습니다. 이러한 업그레이드 시도는 사용자가 보고서 또는 보고서 스냅샷을 보거나 보고서 서버에서 구독을 처리할 때 수행됩니다. 보고서 정의는 대체되지 않고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 보고서 서버의 원래 스키마에 계속 저장됩니다. 업그레이드할 수 없는 보고서는 이전 버전 호환 모드에서 실행됩니다.  
   
 ##  <a name="bkmk_backcompat"></a> 이전 버전 호환 모드  
  성공적으로 업그레이드된 보고서는 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 보고서 처리기를 사용하여 처리되고 업그레이드할 수 없는 보고서를 처리 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 처리기의 이전 버전과 호환성 모드입니다. 하나의 보고서를 이 두 보고서 처리기에서 모두 처리할 수는 없습니다. 처음 사용할 때 보고서는 업그레이드되거나 이전 버전 호환으로 표시됩니다.  

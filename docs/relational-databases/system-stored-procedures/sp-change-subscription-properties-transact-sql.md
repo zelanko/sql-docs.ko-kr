@@ -57,7 +57,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |값|게시 유형|  
 |-----------|----------------------|  
 |**0**|트랜잭션|  
-|**1**|스냅숏|  
+|**1**|스냅샷|  
 |**2**|병합|  
 |NULL(기본값)|복제가 게시 유형을 결정합니다. 저장 프로시저가 여러 테이블을 통해 검사하므로 이 옵션은 정확한 게시 유형을 제공하는 경우보다 느립니다.|  
   
@@ -65,17 +65,17 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 |속성|값|설명|  
 |--------------|-----------|-----------------|  
-|**alt_snapshot_folder**||스냅숏의 대체 폴더 위치를 지정합니다. NULL로 설정하면 게시자가 지정한 기본 위치에서 스냅숏 파일이 선택됩니다.|  
+|**alt_snapshot_folder**||스냅샷의 대체 폴더 위치를 지정합니다. NULL로 설정하면 게시자가 지정한 기본 위치에서 스냅샷 파일이 선택됩니다.|  
 |**distrib_job_login**||에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 로그인입니다.|  
 |**distrib_job_password**||에이전트가 실행되는 Windows 계정의 암호입니다.|  
 |**distributor_login**||배포자 로그인입니다.|  
 |**distributor_password**||배포자 암호입니다.|  
 |**distributor_security_mode**|**1**|배포자에 연결할 때 Windows 인증을 사용합니다.|  
 ||**0**|배포자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다.|  
-|**dts_package_name**||SQL Server 2000 DTS(데이터 변환 서비스) 패키지의 이름을 지정합니다. 이 값은 트랜잭션 또는 스냅숏 게시일 때만 지정할 수 있습니다.|  
-|**dts_package_password**||패키지 암호를 지정합니다. *dts_package_password* 됩니다 **sysname** 기본값은 NULL 사용 하 여 변경 되지 않은 상태로 남아 있을 암호 속성이 지정 합니다.<br /><br /> 참고: DTS 패키지에는 암호가 있어야 합니다.<br /><br /> 이 값은 트랜잭션 또는 스냅숏 게시일 때만 지정할 수 있습니다.|  
-|**dts_package_location**||DTS 패키지가 저장된 위치입니다. 이 값은 트랜잭션 또는 스냅숏 게시일 때만 지정할 수 있습니다.|  
-|**dynamic_snapshot_location**||스냅숏 파일을 저장한 폴더의 경로를 지정합니다. 이 값은 병합 게시일 때만 지정할 수 있습니다.|  
+|**dts_package_name**||SQL Server 2000 DTS(데이터 변환 서비스) 패키지의 이름을 지정합니다. 이 값은 트랜잭션 또는 스냅샷 게시일 때만 지정할 수 있습니다.|  
+|**dts_package_password**||패키지 암호를 지정합니다. *dts_package_password* 됩니다 **sysname** 기본값은 NULL 사용 하 여 변경 되지 않은 상태로 남아 있을 암호 속성이 지정 합니다.<br /><br /> 참고: DTS 패키지에는 암호가 있어야 합니다.<br /><br /> 이 값은 트랜잭션 또는 스냅샷 게시일 때만 지정할 수 있습니다.|  
+|**dts_package_location**||DTS 패키지가 저장된 위치입니다. 이 값은 트랜잭션 또는 스냅샷 게시일 때만 지정할 수 있습니다.|  
+|**dynamic_snapshot_location**||스냅샷 파일을 저장한 폴더의 경로를 지정합니다. 이 값은 병합 게시일 때만 지정할 수 있습니다.|  
 |**ftp_address**||이전 버전과의 호환성을 위해서만 지원됩니다.|  
 |**ftp_login**||이전 버전과의 호환성을 위해서만 지원됩니다.|  
 |**ftp_password**||이전 버전과의 호환성을 위해서만 지원됩니다.|  
@@ -93,11 +93,11 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**publisher_password**||게시자 암호입니다. 변경 *publisher_password* 병합 게시에 대 한 구독 에서만 지원 됩니다.|  
 |**publisher_security_mode**|**1**|게시자에 연결할 때 Windows 인증을 사용합니다. 변경 *publisher_security_mode* 병합 게시에 대 한 구독 에서만 지원 됩니다.|  
 ||**0**|게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다.|  
-|**use_ftp**|**true**|일반 프로토콜 대신 FTP를 사용하여 스냅숏을 검색합니다.|  
-||**false**|일반 프로토콜을 사용하여 스냅숏을 검색합니다.|  
+|**use_ftp**|**true**|일반 프로토콜 대신 FTP를 사용하여 스냅샷을 검색합니다.|  
+||**false**|일반 프로토콜을 사용하여 스냅샷을 검색합니다.|  
 |**use_web_sync**|**true**|웹 동기화를 사용합니다.|  
 ||**false**|웹 동기화를 사용하지 않습니다.|  
-|**working_directory**||FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 전송할 때 게시를 위해 데이터 및 스키마를 임시로 저장하는 데 사용하는 작업 디렉터리의 이름입니다.|  
+|**working_directory**||FTP(파일 전송 프로토콜)를 사용하여 스냅샷 파일을 전송할 때 게시를 위해 데이터 및 스키마를 임시로 저장하는 데 사용하는 작업 디렉터리의 이름입니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -31,7 +31,7 @@ ms.locfileid: "62722125"
  각 구독자의 이름입니다.  
   
  **배포자에 대한 연결**  
- 트랜잭션 및 스냅숏 복제에 대해 표시됩니다. 배포자에 대한 연결이 설정되는 컨텍스트입니다. 로컬 연결은 항상 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 컨텍스트를 사용하여 설정됩니다.  
+ 트랜잭션 및 스냅샷 복제에 대해 표시됩니다. 배포자에 대한 연결이 설정되는 컨텍스트입니다. 로컬 연결은 항상 에이전트가 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정의 컨텍스트를 사용하여 설정됩니다.  
   
 -   밀어넣기 구독의 경우 로컬 연결이 배포자에 연결 되므로이 필드는 항상 표시: 항상 푸시 구독에 대한 **Impersonate '\<Domain>\\<Login\>'** 또는 **Impersonate '\<Computer>\\<Login\>'** 을 표시합니다.  
   

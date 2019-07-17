@@ -25,7 +25,7 @@ ms.locfileid: "68137595"
 # <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  지정한 게시에 대한 스냅숏 에이전트의 정보를 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
+  지정한 게시에 대한 스냅샷 에이전트의 정보를 반환합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,8 +49,8 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
-|**id**|**int**|스냅숏 에이전트의 ID입니다.|  
-|**name**|**nvarchar(100)**|스냅숏 에이전트의 이름입니다.|  
+|**id**|**int**|스냅샷 에이전트의 ID입니다.|  
+|**name**|**nvarchar(100)**|스냅샷 에이전트의 이름입니다.|  
 |**publisher_security_mode**|**smallint**|에이전트가 게시자에 연결할 때 사용하는 보안 모드로서 다음 중 하나일 수 있습니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증입니다.|  
 |**publisher_login**|**sysname**|게시자에 연결할 때 사용하는 로그인입니다.|  
 |**publisher_password**|**nvarchar(524)**|값이 보안상의 이유로 **\* \* \* \* \* \* \* \* \* \*** 항상 반환 됩니다.|  

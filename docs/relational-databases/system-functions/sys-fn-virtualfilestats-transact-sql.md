@@ -64,7 +64,7 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |**IoStallWriteMS**|**bigint**|사용자가 파일에 대한 쓰기 I/O가 완료될 때까지 대기한 총 시간(밀리초)입니다.|  
 |**IoStallMS**|**bigint**|합계 **IoStallReadMS** 및 **IoStallWriteMS**.|  
 |**FileHandle**|**bigint**|파일 핸들의 값입니다.|  
-|**BytesOnDisk**|**bigint**|디스크에 있는 파일의 실제 크기(바이트)입니다.<br /><br /> 데이터베이스 파일에 대 한 동일한 값으로 이것이 **크기** 에서 **sys.database_files**, 하지만 페이지가 아닌 바이트 단위로 표현 됩니다.<br /><br /> 데이터베이스 스냅숏 스파스 파일의 경우 이 값은 운영 체제에서 파일에 사용 중인 공간입니다.|  
+|**BytesOnDisk**|**bigint**|디스크에 있는 파일의 실제 크기(바이트)입니다.<br /><br /> 데이터베이스 파일에 대 한 동일한 값으로 이것이 **크기** 에서 **sys.database_files**, 하지만 페이지가 아닌 바이트 단위로 표현 됩니다.<br /><br /> 데이터베이스 스냅샷 스파스 파일의 경우 이 값은 운영 체제에서 파일에 사용 중인 공간입니다.|  
   
 ## <a name="remarks"></a>설명  
  **fn_virtualfilestats** 는 I/o의 총 수와 같은 통계 정보를 제공 하는 테이블 반환 함수는 파일에서 수행 하는 시스템입니다. 이 함수는 사용자가 파일에 읽기/쓰기를 수행할 때 대기해야 하는 시간의 길이를 추적하는 데 사용됩니다. I/O 작업이 빈번하게 이루어지는 파일을 식별하는 데 사용되기도 합니다.  

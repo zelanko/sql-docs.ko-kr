@@ -68,7 +68,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
   
  이 프로시저는 지정된 옵션에 따라 특정 복제 시스템 테이블, 보안 계정 등을 만들거나 삭제합니다. 해당 범주는 비트를 설정 합니다 **master.sysdatabases** 시스템 테이블 및 필요한 시스템 테이블을 만듭니다.  
   
- 게시를 해제하려면 게시 데이터베이스가 온라인 상태여야 합니다. 게시 데이터베이스용으로 데이터베이스 스냅숏이 있으면 게시를 해제하기 전에 이 데이터베이스 스냅숏을 먼저 삭제해야 합니다. 데이터베이스 스냅숏은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅숏과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
+ 게시를 해제하려면 게시 데이터베이스가 온라인 상태여야 합니다. 게시 데이터베이스용으로 데이터베이스 스냅샷이 있으면 게시를 해제하기 전에 이 데이터베이스 스냅샷을 먼저 삭제해야 합니다. 데이터베이스 스냅샷은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅샷과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
   
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_replicationdboption**합니다.  

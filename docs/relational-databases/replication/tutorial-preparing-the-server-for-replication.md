@@ -33,7 +33,7 @@ ms.locfileid: "51672592"
 이 자습서에서는 다음 작업 방법을 배웁니다.
 > [!div class="checklist"]
 > * 복제용 Windows 계정을 만듭니다.
-> * 스냅숏 폴더를 준비합니다.
+> * 스냅샷 폴더를 준비합니다.
 > * 배포를 구성합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
@@ -64,7 +64,7 @@ ms.locfileid: "51672592"
   
 |에이전트|위치|계정 이름|  
 |---------|------------|----------------|  
-|스냅숏 에이전트|게시자|<*machine_name*>\repl_snapshot|  
+|스냅샷 에이전트|게시자|<*machine_name*>\repl_snapshot|  
 |로그 판독기 에이전트|게시자|<*machine_name*>\repl_logreader|  
 |배포 에이전트|게시자 및 구독자|<*machine_name*>\repl_distribution|  
 |병합 에이전트|게시자 및 구독자|<*machine_name*>\repl_merge|  
@@ -106,10 +106,10 @@ ms.locfileid: "51672592"
 
 자세한 내용은 [복제 에이전트 개요](../../relational-databases/replication/agents/replication-agents-overview.md)을 참조하세요.  
 
-## <a name="prepare-the-snapshot-folder"></a>스냅숏 폴더 준비
-이 섹션에서는 게시 스냅숏을 만들고 저장하는 데 사용되는 스냅숏 폴더를 구성합니다. 
+## <a name="prepare-the-snapshot-folder"></a>스냅샷 폴더 준비
+이 섹션에서는 게시 스냅샷을 만들고 저장하는 데 사용되는 스냅샷 폴더를 구성합니다. 
 
-### <a name="create-a-share-for-the-snapshot-folder-and-assign-permissions"></a>스냅숏 폴더에 대한 공유 만들기 및 사용 권한 할당  
+### <a name="create-a-share-for-the-snapshot-folder-and-assign-permissions"></a>스냅샷 폴더에 대한 공유 만들기 및 사용 권한 할당  
   
 1. 파일 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 폴더로 이동합니다. 기본 위치는 C:\Program Files\Microsoft SQL Server\MSSQL.X\MSSQL\Data입니다.  
   
@@ -117,17 +117,17 @@ ms.locfileid: "51672592"
   
 3. 이 폴더를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-   1. **repldata 속성** 대화 상자의 **공유** 탭에서 **고급 공유**를 선택합니다.  
+   1\. **repldata 속성** 대화 상자의 **공유** 탭에서 **고급 공유**를 선택합니다.  
   
-   2. **고급 공유** 대화 상자에서 **이 폴더 공유**를 선택한 다음, **권한**을 선택합니다.  
+   2\. **고급 공유** 대화 상자에서 **이 폴더 공유**를 선택한 다음, **권한**을 선택합니다.  
 
    ![Repldata 폴더를 공유하기 위한 선택 항목](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6. **repldata의 사용 권한** 대화 상자에서 **추가**를 선택합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 상자에서 이전에 만든 스냅숏 에이전트 계정 이름을 <*Publisher_Machine_Name>*>**\repl_snapshot**으로 입력합니다. **이름 확인**을 선택한 다음, **확인**을 선택합니다.  
+6. **repldata의 사용 권한** 대화 상자에서 **추가**를 선택합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 상자에서 이전에 만든 스냅숏 에이전트 계정 이름을 <*Publisher_Machine_Name>* > **\repl_snapshot**으로 입력합니다. **이름 확인**을 선택한 다음, **확인**을 선택합니다.  
 
    ![공유 권한 추가를 위한 선택 항목](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
-7. 6단계를 반복하여 이전에 생성된 다른 두 계정(<*Publisher_Machine_Name*>**\repl_merge** 및 <*Publisher_Machine_Name*>**\repl_distribution**)을 추가합니다.
+7. 6단계를 반복하여 이전에 생성된 다른 두 계정(<*Publisher_Machine_Name*> **\repl_merge** 및 <*Publisher_Machine_Name*> **\repl_distribution**)을 추가합니다.
 
 8. 3개의 계정을 추가한 후에 다음과 같은 권한을 할당합니다.      
    - repl_distribution: **읽기**  
@@ -142,12 +142,12 @@ ms.locfileid: "51672592"
 
     ![“보안” 탭에서 “편집” 단추](media/tutorial-preparing-the-server-for-replication/editsecurity.png)   
 
-11. **repldata의 사용 권한** 대화 상자에서 **추가**를 선택합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 상자에서 이전에 만든 스냅숏 에이전트 계정 이름을 <*Publisher_Machine_Name>*>**\repl_snapshot**으로 입력합니다. **이름 확인**을 선택한 다음, **확인**을 선택합니다.  
+11. **repldata의 사용 권한** 대화 상자에서 **추가**를 선택합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 상자에서 이전에 만든 스냅숏 에이전트 계정 이름을 <*Publisher_Machine_Name>* > **\repl_snapshot**으로 입력합니다. **이름 확인**을 선택한 다음, **확인**을 선택합니다.  
 
     ![보안 권한 추가를 위한 선택 항목](media/tutorial-preparing-the-server-for-replication/addsecuritypermissions.png)
 
   
-12. 이전 단계를 반복하여 배포 에이전트에 대한 사용 권한을 <*Publisher_Machine_Name*>**\repl_distribution**으로, 병합 에이전트에 대한 사용 권한을 <*Publisher_Machine_Name*>**\repl_merge**로 추가합니다.  
+12. 이전 단계를 반복하여 배포 에이전트에 대한 사용 권한을 <*Publisher_Machine_Name*> **\repl_distribution**으로, 병합 에이전트에 대한 사용 권한을 <*Publisher_Machine_Name*> **\repl_merge**로 추가합니다.  
     
   
 13. 다음 사용 권한이 허용되는지 확인합니다.  
@@ -158,13 +158,13 @@ ms.locfileid: "51672592"
  
     ![복제 데이터에 대한 사용자 권한](media/tutorial-preparing-the-server-for-replication/replpermissions.png) 
 
-14. **공유** 탭을 다시 선택하고 공유에 대한 **네트워크 경로**를 기록합니다. 이 경로는 나중에 스냅숏 폴더를 구성할 때 필요합니다.  
+14. **공유** 탭을 다시 선택하고 공유에 대한 **네트워크 경로**를 기록합니다. 이 경로는 나중에 스냅샷 폴더를 구성할 때 필요합니다.  
 
     !["공유" 탭에서 네트워크 경로](media/tutorial-replicating-data-between-continuously-connected-servers/networkpath.png)
 
 15. **확인**을 선택하여 **repldata 속성** 대화 상자를 닫습니다. 
  
-자세한 내용은 [스냅숏 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
+자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
 
 ## <a name="configure-distribution"></a>배포 구성
@@ -185,14 +185,14 @@ ms.locfileid: "51672592"
   
    배포 구성 마법사가 시작됩니다.  
   
-3. **배포자** 페이지에서 <*'ServerName'*> **을(를) 자체 배포자로 사용합니다. SQL Server에서 배포 데이터베이스와 로그를 만듭니다**를 선택합니다. 그런 후 **다음**을 선택합니다.  
+3. **배포자** 페이지에서 < *'ServerName'* > **을(를) 자체 배포자로 사용합니다. SQL Server에서 배포 데이터베이스와 로그를 만듭니다**를 선택합니다. 그런 후 **다음**을 선택합니다.  
 
    ![서버를 자체 배포자로 작동하게 하는 옵션](media/tutorial-preparing-the-server-for-replication/serverdistributor.png)
   
 4. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되고 있지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **에이전트 시작** 페이지에서 **예를 선택하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동으로 시작**되도록 구성합니다. **다음**을 선택합니다.  
 
      
-5. **스냅숏 폴더** 상자에 \\\\<*Publisher_Machine_Name*>**\repldata** 경로를 입력한 후, **다음**을 선택합니다. 이 경로는 공유 속성을 구성한 후 repldata 속성 폴더의 **네트워크 경로**에서 이전의 본 것과 일치해야 합니다. 
+5. **스냅숏 폴더** 상자에 \\\\<*Publisher_Machine_Name*> **\repldata** 경로를 입력한 후, **다음**을 선택합니다. 이 경로는 공유 속성을 구성한 후 repldata 속성 폴더의 **네트워크 경로**에서 이전의 본 것과 일치해야 합니다. 
 
    ![배포 구성 마법사 및 "repldata 속성" 대화 상자에서 네트워크 경로의 비교](media/tutorial-preparing-the-server-for-replication/repldatasnapshot.png)
   
@@ -219,7 +219,7 @@ SQL Server Management Studio 인스턴스를 관리자 권한으로 실행 중�
 
    ![바로 가기 메뉴에서 "새 로그인" 명령](media/tutorial-preparing-the-server-for-replication/newlogin.png)
   
-2. **일반** 페이지에서 **검색**을 선택합니다. **선택할 개체 이름 입력** 상자에 <*Publisher_Machine_Name*>**\repl_snapshot**을 입력한 후, **이름 확인**을 선택한 다음, **확인**을 선택합니다.  
+2. **일반** 페이지에서 **검색**을 선택합니다. **선택할 개체 이름 입력** 상자에 <*Publisher_Machine_Name*> **\repl_snapshot**을 입력한 후, **이름 확인**을 선택한 다음, **확인**을 선택합니다.  
 
    ![개체 이름 입력을 위한 선택 항목](media/tutorial-preparing-the-server-for-replication/addsnapshotlogin.png)
   

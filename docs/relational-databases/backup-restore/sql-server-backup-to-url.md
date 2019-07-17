@@ -80,7 +80,7 @@ ms.locfileid: "67860696"
   
  ![Azure Blob Storage](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
- **Azure 스냅숏:** 지정 시간에 생성된 Azure blob의 스냅숏입니다. 자세한 내용은 [Blob의 스냅숏 만들기](https://msdn.microsoft.com/library/azure/hh488361.aspx)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 Microsoft Azure Blob Storage 서비스에 저장된 데이터베이스 파일의 Azure 스냅샷 백업을 지원합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+ **Azure 스냅숏:** 지정 시간에 생성된 Azure blob의 스냅샷입니다. 자세한 내용은 [Blob의 스냅샷 만들기](https://msdn.microsoft.com/library/azure/hh488361.aspx)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 Microsoft Azure Blob Storage 서비스에 저장된 데이터베이스 파일의 Azure 스냅샷 백업을 지원합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
  **URL:** URL은 고유한 백업 파일에 대한 URI(Uniform Resource Identifier)를 지정합니다. URL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 파일의 위치와 이름을 제공하는 데 사용됩니다. URL은 컨테이너가 아닌 실제 Blob을 가리켜야 합니다. Blob이 없으면 만들어집니다. 기존 blob이 지정된 경우에는 “WITH FORMAT” 옵션을 지정하여 blob에서 기존 백업 파일을 덮어쓰지 않으면 BACKUP이 실패합니다.  
@@ -105,7 +105,7 @@ ms.locfileid: "67860696"
   
 -   논리적 디바이스 이름을 만들 수 없습니다. 따라서 SQL Server Management Studio나 sp_dumpdevice를 사용하여 URL을 백업 디바이스로 추가할 수 없습니다.  
   
--   기존 백업 Blob에 추가는 지원되지 않습니다. 기존 Blob으로 백업은 **WITH FORMAT** 옵션을 사용하여 덮어쓸 수만 있습니다. 그러나 파일-스냅숏 백업을 사용( **WITH FILE_SNAPSHOT** 인수 사용)할 때는 원래 파일-스냅숏 백업을 사용하여 만든 분리된 파일-스냅숏이 남아 있는 것을 방지하기 위해 **WITH FORMAT** 인수는 허용되지 않습니다.  
+-   기존 백업 Blob에 추가는 지원되지 않습니다. 기존 Blob으로 백업은 **WITH FORMAT** 옵션을 사용하여 덮어쓸 수만 있습니다. 그러나 파일-스냅샷 백업을 사용( **WITH FILE_SNAPSHOT** 인수 사용)할 때는 원래 파일-스냅샷 백업을 사용하여 만든 분리된 파일-스냅샷이 남아 있는 것을 방지하기 위해 **WITH FORMAT** 인수는 허용되지 않습니다.  
   
 -   단일 백업 작업에서 여러 blob에 대한 백업은 블록 blob을 사용하고 SQL 자격 증명에 대한 스토리지 계정 키 대신 SAS(공유 액세스 서명) 토큰을 사용하는 경우에만 지원됩니다.  
   
@@ -148,13 +148,13 @@ ms.locfileid: "67860696"
 |ENCRYPTION|Y||**WITH ENCRYPTION** 인수를 지정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅숏 백업은 백업을 가져오기 전에 먼저 전체 데이터베이스가 TDE 암호화되었는지 확인하며, 그런 경우 데이터베이스에서 TDE에 대해 지정된 알고리즘을 사용하여 파일-스냅숏 백업 파일 자체를 암호화합니다. 전체 데이터베이스의 일부 데이터가 암호화되지 않은 경우 백업이 실패합니다(예: 암호화 프로세스가 아직 완료되지 않은 경우).|  
 |DIFFERENTIAL|Y|||  
 |COPY_ONLY|Y|||  
-|COMPRESSION&#124;NO_COMPRESSION|Y|파일-스냅숏 백업에 지원되지 않습니다.||  
+|COMPRESSION&#124;NO_COMPRESSION|Y|파일-스냅샷 백업에 지원되지 않습니다.||  
 |DESCRIPTION|Y|||  
 |NAME|Y|||  
 |EXPIREDATE &#124; RETAINDAYS|-|||  
-|NOINIT &#124; INIT|-||Blob에 추가는 불가능합니다. 백업을 덮어쓰려면 **WITH FORMAT** 인수를 사용하세요. 그러나 파일-스냅숏 백업을 사용( **WITH FILE_SNAPSHOT** 인수 사용)할 때는 원래 백업을 사용하여 만든 분리된 파일-스냅숏이 남아 있는 것을 방지하기 위해 **WITH FORMAT** 인수는 허용되지 않습니다.|  
+|NOINIT &#124; INIT|-||Blob에 추가는 불가능합니다. 백업을 덮어쓰려면 **WITH FORMAT** 인수를 사용하세요. 그러나 파일-스냅샷 백업을 사용( **WITH FILE_SNAPSHOT** 인수 사용)할 때는 원래 백업을 사용하여 만든 분리된 파일-스냅샷이 남아 있는 것을 방지하기 위해 **WITH FORMAT** 인수는 허용되지 않습니다.|  
 |NOSKIP &#124; SKIP|-|||  
-|NOFORMAT &#124; FORMAT|Y||**WITH FORMAT** 을 지정하지 않으면 기존 blob으로 백업이 실패합니다. **WITH FORMAT** 을 지정하면 기존 blob을 덮어씁니다. 그러나 파일-스냅숏 백업을 사용( **WITH FILE_SNAPSHOT** 인수 사용)할 때는 원래 파일-스냅숏 백업을 사용하여 만든 분리된 파일-스냅숏이 남아 있는 것을 방지하기 위해 FORMAT 인수는 허용되지 않습니다. 그러나 파일-스냅숏 백업을 사용( **WITH FILE_SNAPSHOT** 인수 사용)할 때는 원래 백업을 사용하여 만든 분리된 파일-스냅숏이 남아 있는 것을 방지하기 위해 **WITH FORMAT** 인수는 허용되지 않습니다.|  
+|NOFORMAT &#124; FORMAT|Y||**WITH FORMAT** 을 지정하지 않으면 기존 blob으로 백업이 실패합니다. **WITH FORMAT** 을 지정하면 기존 blob을 덮어씁니다. 그러나 파일-스냅샷 백업을 사용( **WITH FILE_SNAPSHOT** 인수 사용)할 때는 원래 파일-스냅샷 백업을 사용하여 만든 분리된 파일-스냅샷이 남아 있는 것을 방지하기 위해 FORMAT 인수는 허용되지 않습니다. 그러나 파일-스냅샷 백업을 사용( **WITH FILE_SNAPSHOT** 인수 사용)할 때는 원래 백업을 사용하여 만든 분리된 파일-스냅샷이 남아 있는 것을 방지하기 위해 **WITH FORMAT** 인수는 허용되지 않습니다.|  
 |MEDIADESCRIPTION|Y|||  
 |MEDIANAME|Y|||  
 |BLOCKSIZE|Y|페이지 Blob에 대해서는 지원되지 않습니다. 블록 Blob에 대해서는 지원됩니다.| 블록 Blob에 허용된 50,000개의 블록 사용을 최적화하려면 BLOCKSIZE=65536을 사용하는 것이 좋습니다. |  
@@ -195,7 +195,7 @@ ms.locfileid: "67860696"
 |MAXTRANSFERSIZE|-|||  
 |CHECKSUM &#124; NO_CHECKSUM|Y|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|Y|||  
-|FILESTREAM|Y|스냅숏 백업에 지원되지 않습니다.||  
+|FILESTREAM|Y|스냅샷 백업에 지원되지 않습니다.||  
 |STATS|Y|||  
 |REWIND &#124; NOREWIND|-|||  
 |UNLOAD &#124; NOUNLOAD|-|||  
@@ -246,7 +246,7 @@ SQL Server 자격 증명을 사용하여 SQL Server Management Studio의 백업 
  이전에 설명한 백업 작업과 마찬가지로, SQL Server Management Studio의 유지 관리 계획 마법사는 대상 옵션 중 하나로 **URL** 을 포함하고 Microsoft Azure 스토리지로 백업하는 데 필요한 다른 지원 개체(예: SQL 자격 증명)를 포함합니다. 자세한 내용은 **Using Maintenance Plan Wizard** 의 [백업 작업 정의](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)섹션을 참조하세요.  
   
 > [!NOTE]  
->  공유 액세스 토큰을 사용하여 스트라이프 백업 집합, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅숏 백업 또는 SQL 자격 증명을 만들려면 유지 관리 계획 마법사의 백업 태스크 대신 TRANSACT-SQL, Powershell 또는 C#을 사용해야 합니다.  
+>  공유 액세스 토큰을 사용하여 스트라이프 백업 집합, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅샷 백업 또는 SQL 자격 증명을 을 만들려면 유지 관리 계획 마법사의 백업 작업 대신 TRANSACT-SQL, Powershell 또는 C#을 사용해야 합니다.  
   
 ##  <a name="RestoreSSMS"></a> SQL Server Management Studio를 사용하여 Microsoft Azure Storage에서 복원  
 데이터베이스 복원 태스크에는 **URL**이 복원할 원본 디바이스로 포함됩니다.  다음 단계에서는 복원 작업을 사용하여 Microsoft Azure Blob Storage 서비스에서 복원하는 방법을 설명합니다. 

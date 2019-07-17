@@ -25,7 +25,7 @@ ms.locfileid: "68032764"
 # <a name="spstartpublicationsnapshot-transact-sql"></a>sp_startpublication_snapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  게시를 위한 초기 스냅숏을 생성하는 스냅숏 에이전트 작업을 시작하는 데 사용됩니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
+  게시를 위한 초기 스냅샷을 생성하는 스냅샷 에이전트 작업을 시작하는 데 사용됩니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

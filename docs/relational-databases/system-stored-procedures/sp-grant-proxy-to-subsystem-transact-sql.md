@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 866aaa27-a1e0-453a-9b1b-af39431ad9c2
 author: VanMSFT
 ms.author: vanto
-manager: jroth
-ms.openlocfilehash: c31c10dc5c0917286e6621fedc91f08c8d385555
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96e044b94244492202058d6dc2b2f048a9c1db6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123818"
 ---
 # <a name="spgrantproxytosubsystem-transact-sql"></a>sp_grant_proxy_to_subsystem(Transact-SQL)
 
@@ -50,9 +49,9 @@ sp_grant_proxy_to_subsystem
   
 |값|Description|  
 |-----------|-----------------|  
-|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 스크립트<br /><br /> **\*\* 중요 \* \* ** ActiveX 스크립팅 하위 시스템에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이후 버전에서 에이전트 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
+|**2**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] ActiveX 스크립트<br /><br /> **\*\* 중요 \* \***  ActiveX 스크립팅 하위 시스템에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 이후 버전에서 에이전트 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
 |**3**|운영 체제(**CmdExec**)|  
-|**4**|복제 스냅숏 에이전트|  
+|**4**|Replication Snapshot Agent|  
 |**5**|복제 로그 판독기 에이전트|  
 |**6**|복제 배포 에이전트|  
 |**7**|Replication Merge Agent|  
@@ -69,7 +68,7 @@ sp_grant_proxy_to_subsystem
 |-----------|-----------------|  
 |**ActiveScripting**|ActiveX 스크립트|  
 |**CmdExec**|운영 체제(**CmdExec**)|  
-|**스냅숏**|복제 스냅숏 에이전트|  
+|**스냅숏**|Replication Snapshot Agent|  
 |**LogReader**|복제 로그 판독기 에이전트|  
 |**배포**|복제 배포 에이전트|  
 |**병합**|Replication Merge Agent|  
@@ -88,7 +87,7 @@ sp_grant_proxy_to_subsystem
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-access-to-a-subsystem-by-id"></a>1. 하위 시스템에 ID별로 액세스 권한 부여  
+### <a name="a-granting-access-to-a-subsystem-by-id"></a>1\. 하위 시스템에 ID별로 액세스 권한 부여  
  다음 예에서는 ActiveX 스크립팅 하위 시스템에 프록시 `Catalog application proxy` 액세스 권한을 부여합니다.  
   
 ```sql
@@ -101,7 +100,7 @@ EXEC dbo.sp_grant_proxy_to_subsystem
 GO  
 ```  
   
-### <a name="b-granting-access-to-a-subsystem-by-name"></a>2. 하위 시스템에 이름별로 액세스 권한 부여  
+### <a name="b-granting-access-to-a-subsystem-by-name"></a>2\. 하위 시스템에 이름별로 액세스 권한 부여  
  다음 예에서는 SSIS 패키지 실행 하위 시스템에 프록시 `Catalog application proxy` 액세스 권한을 부여합니다.  
   
 ```sql

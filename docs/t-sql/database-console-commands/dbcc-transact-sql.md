@@ -60,27 +60,27 @@ ms.locfileid: "57685720"
   
 DBCC 명령은 입력 매개 변수와 반환 값을 사용합니다. 모든 DBCC 명령 매개 변수는 유니코드와 DBCS 리터럴을 모두 사용할 수 있습니다.
   
-## <a name="dbcc-internal-database-snapshot-usage"></a>DBCC 내부 데이터베이스 스냅숏 사용법  
-다음 DBCC 명령은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 만든 내부 읽기 전용 데이터베이스 스냅숏에서 작동합니다. 이렇게 하면 이러한 명령이 실행될 때 차단 및 동시성 문제를 방지할 수 있습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.
+## <a name="dbcc-internal-database-snapshot-usage"></a>DBCC 내부 데이터베이스 스냅샷 사용법  
+다음 DBCC 명령은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 만든 내부 읽기 전용 데이터베이스 스냅샷에서 작동합니다. 이렇게 하면 이러한 명령이 실행될 때 차단 및 동시성 문제를 방지할 수 있습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.
 - DBCC CHECKALLOC
 - DBCC CHECKCATALOG
 - DBCC CHECKDB
 - DBCC CHECKFILEGROUP
 - DBCC CHECKTABLE
 
-이러한 DBCC 명령 중 하나를 실행할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 데이터베이스 스냅숏을 만들어 트랜잭션이 일관성 있는 상태가 되도록 합니다. 그런 다음 DBCC 명령은 이 스냅숏에 대한 검사를 실행합니다. DBCC 명령이 완료되면 이 스냅숏은 삭제됩니다.
+이러한 DBCC 명령 중 하나를 실행할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 데이터베이스 스냅샷을 만들어 트랜잭션이 일관성 있는 상태가 되도록 합니다. 그런 다음 DBCC 명령은 이 스냅샷에 대한 검사를 실행합니다. DBCC 명령이 완료되면 이 스냅샷은 삭제됩니다.
   
-내부 데이터베이스 스냅숏이 필요하지 않거나 생성되지 않는 경우도 있습니다. 이럴 경우 DBCC 명령은 실제 데이터베이스에 실행됩니다. 데이터베이스가 온라인 상태인 경우 DBCC 명령은 테이블 잠금을 사용하여 검사 중인 개체의 일관성을 유지하도록 합니다. 이 동작은 WITH TABLOCK 옵션이 지정된 경우와 동일합니다.
+내부 데이터베이스 스냅샷이 필요하지 않거나 생성되지 않는 경우도 있습니다. 이럴 경우 DBCC 명령은 실제 데이터베이스에 실행됩니다. 데이터베이스가 온라인 상태인 경우 DBCC 명령은 테이블 잠금을 사용하여 검사 중인 개체의 일관성을 유지하도록 합니다. 이 동작은 WITH TABLOCK 옵션이 지정된 경우와 동일합니다.
   
-다음과 같은 경우에 DBCC 명령이 실행되면 내부 데이터베이스 스냅숏이 생성되지 않습니다.
+다음과 같은 경우에 DBCC 명령이 실행되면 내부 데이터베이스 스냅샷이 생성되지 않습니다.
 -   **master**에 대해 실행되고, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 단일 사용자 모드로 실행 중인 경우  
 -   **master** 이외의 데이터베이스에 대해 실행되지만, 해당 데이터베이스가 ALTER DATABASE 문을 사용하여 단일 사용자 모드로 배치된 경우  
 -   읽기 전용 데이터베이스에 대해 실행된 경우  
 -   ALTER DATABASE 문을 사용하여 응급 모드로 설정된 데이터베이스에 대해 실행된 경우  
--   **tempdb**에 대해 실행된 경우. 이 경우 내부 제한 사항으로 인해 데이터베이스 스냅숏을 만들 수 없습니다.  
--   WITH TABLOCK 옵션을 사용하는 경우. 이 경우 DBCC는 데이터베이스 스냅숏을 만들지 않도록 요청하는 것으로 인식합니다.  
+-   **tempdb**에 대해 실행된 경우. 이 경우 내부 제한 사항으로 인해 데이터베이스 스냅샷을 만들 수 없습니다.  
+-   WITH TABLOCK 옵션을 사용하는 경우. 이 경우 DBCC는 데이터베이스 스냅샷을 만들지 않도록 요청하는 것으로 인식합니다.  
   
-DBCC 명령이 다음에 대해 실행될 때 이 명령은 내부 데이터베이스 스냅숏 대신 테이블 잠금을 사용합니다.
+DBCC 명령이 다음에 대해 실행될 때 이 명령은 내부 데이터베이스 스냅샷 대신 테이블 잠금을 사용합니다.
 -   읽기 전용 파일 그룹  
 -   FAT 파일 시스템  
 -   '명명된 스트림'을 지원하지 않는 볼륨  
@@ -90,7 +90,7 @@ DBCC 명령이 다음에 대해 실행될 때 이 명령은 내부 데이터베�
 >  WITH TABLOCK 옵션을 사용하여 DBCC CHECKALLOC 또는 DBCC CHECKDB의 동등한 부분을 실행하려면 데이터베이스 X 잠금이 필요합니다. 이 데이터베이스 잠금은 **tempdb** 또는 **master**에 설정할 수 없으며, 다른 모든 데이터베이스에서도 실패할 수 있습니다.  
   
 > [!NOTE]  
->  내부 데이터베이스 스냅숏을 만들 수 없는 경우 DBCC CHECKDB가 **master**에 대해 실행되면 실패합니다.  
+>  내부 데이터베이스 스냅샷을 만들 수 없는 경우 DBCC CHECKDB가 **master**에 대해 실행되면 실패합니다.  
   
 ## <a name="progress-reporting-for-dbcc-commands"></a>DBCC 명령에 대한 진행률 보고  
 **sys.dm_exec_requests** 카탈로그 뷰에는 DBCC CHECKDB, CHECKFILEGROUP 및 CHECKTABLE 명령의 현재 실행 단계와 진행률에 대한 정보가 포함되어 있습니다. **percent_complete** 열은 명령의 완료 비율을 표시하고, **command** 열은 해당 명령의 현재 실행 단계를 보고합니다.

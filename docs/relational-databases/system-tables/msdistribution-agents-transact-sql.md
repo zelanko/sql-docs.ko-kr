@@ -61,7 +61,7 @@ ms.locfileid: "67907410"
 |**subscriber_security_mode**|**smallint**|에이전트가 구독자에 연결할 때 사용하는 보안 모드로 다음 중 하나일 수 있습니다.<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 인증<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 인증입니다.|  
 |**subscriber_login**|**sysname**|구독자에 연결할 때 사용하는 로그인입니다.|  
 |**subscriber_password**|**nvarchar(524)**|구독자에 연결할 때 사용하는 암호의 암호화된 값입니다.|  
-|**reset_partial_snapshot_progress**|**bit**|스냅숏이 일부분만 다운로드된 경우 이를 삭제하여 전체 스냅숏 과정을 다시 시작하도록 할지 여부입니다.|  
+|**reset_partial_snapshot_progress**|**bit**|스냅샷이 일부분만 다운로드된 경우 이를 삭제하여 전체 스냅샷 과정을 다시 시작하도록 할지 여부입니다.|  
 |**job_step_uid**|**uniqueidentifier**|에이전트가 시작 되는 단계의 SQL Server 에이전트 작업의 고유 ID입니다.|  
 |**subscriptionstreams**|**tinyint**|변경 내용을 구독자에 병렬로 일괄 적용하기 위해 허용되는 배포 에이전트당 연결 수를 설정합니다. 1에서 64 사이의 값 범위가 지원됩니다.|  
 |**memory_optimized**|**bit**|1은 메모리 액세스에 최적화 된 테이블에 대 한 구독자를 사용할 수 있다는 것을 나타냅니다.|  

@@ -54,7 +54,7 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_reinitmergesubscription** 병합 복제에 사용 됩니다.  
   
- **sp_reinitmergesubscription** 병합 구독 다시 초기화 하려면 게시자에서 호출할 수 있습니다. 스냅숏 에이전트도 다시 실행하는 것이 좋습니다.  
+ **sp_reinitmergesubscription** 병합 구독 다시 초기화 하려면 게시자에서 호출할 수 있습니다. 스냅샷 에이전트도 다시 실행하는 것이 좋습니다.  
   
  매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.  
   

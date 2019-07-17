@@ -28,10 +28,10 @@ ms.locfileid: "68207106"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 반복 읽기 트랜잭션 격리를 직렬화 가능하도록 구현합니다.  
   
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에는 새로운 트랜잭션 격리 특성인 SQL_COPT_SS_TXN_ISOLATION이 지원됩니다. SQL_COPT_SS_TXN_ISOLATION을 SQL_TXN_SS_SNAPSHOT으로 설정하면 스냅숏 격리 수준에서 트랜잭션이 실행됩니다.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에는 새로운 트랜잭션 격리 특성인 SQL_COPT_SS_TXN_ISOLATION이 지원됩니다. SQL_COPT_SS_TXN_ISOLATION을 SQL_TXN_SS_SNAPSHOT으로 설정하면 스냅샷 격리 수준에서 트랜잭션이 실행됩니다.  
   
 > [!NOTE]  
->  SQL_ATTR_TXN_ISOLATION을 사용하면 SQL_TXN_SS_SNAPSHOT을 제외한 다른 모든 격리 수준을 설정할 수 있습니다. 스냅숏 격리를 사용하려면 SQL_COPT_SS_TXN_ISOLATION을 통해 SQL_TXN_SS_SNAPSHOT을 설정해야 합니다. 그러나 격리 수준을 검색할 때는 SQL_ATTR_TXN_ISOLATION이나 SQL_COPT_SS_TXN_ISOLATION을 모두 사용할 수 있습니다.  
+>  SQL_ATTR_TXN_ISOLATION을 사용하면 SQL_TXN_SS_SNAPSHOT을 제외한 다른 모든 격리 수준을 설정할 수 있습니다. 스냅샷 격리를 사용하려면 SQL_COPT_SS_TXN_ISOLATION을 통해 SQL_TXN_SS_SNAPSHOT을 설정해야 합니다. 그러나 격리 수준을 검색할 때는 SQL_ATTR_TXN_ISOLATION이나 SQL_COPT_SS_TXN_ISOLATION을 모두 사용할 수 있습니다.  
   
  ODBC 문 특성을 연결 특성으로 승격하면 예기치 않은 결과가 발생할 수 있습니다. 결과 집합 처리를 위해 서버 커서를 요청하는 문 특성은 연결로 승격할 수 있습니다. 예를 들어 ODBC 문 특성 SQL_ATTR_CONCURRENCY를 기본 SQL_CONCUR_READ_ONLY보다 더 제한적인 값으로 설정하면 드라이버는 연결을 통해 전송한 모든 문에 대해 동적 커서를 사용합니다. 연결을 통해 문에 ODBC 카탈로그 함수를 실행하면 SQL_SUCCESS_WITH_INFO 및 커서 동작이 읽기 전용으로 변경되었음을 나타내는 진단 레코드가 반환됩니다. 같은 연결에서 COMPUTE 절이 포함된 Transact-SQL SELECT 문을 실행하려고 하면 문 실행이 실패합니다.  
   
@@ -277,7 +277,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_TRUST_SERVER_CERTIFICATE_YES|인증서 확인 없는 암호화를 사용할 수 있습니다.|  
   
 ## <a name="sqlcoptsstxnisolation"></a>SQL_COPT_SS_TXN_ISOLATION  
- SQL_COPT_SS_TXN_ISOLATION은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]별 스냅숏 격리 특성을 설정합니다. 이 경우 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 따라 다르기 때문에 SQL_ATTR_TXN_ISOLATION을 사용하여 스냅숏 격리를 설정할 수 없습니다. 그러나 스냅숏 격리를 검색할 때는 SQL_ATTR_TXN_ISOLATION 또는 SQL_COPT_SS_TXN_ISOLATION을 사용할 수 있습니다.  
+ SQL_COPT_SS_TXN_ISOLATION은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]별 스냅샷 격리 특성을 설정합니다. 이 경우 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 따라 다르기 때문에 SQL_ATTR_TXN_ISOLATION을 사용하여 스냅샷 격리를 설정할 수 없습니다. 그러나 스냅숏 격리를 검색할 때는 SQL_ATTR_TXN_ISOLATION 또는 SQL_COPT_SS_TXN_ISOLATION을 사용할 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  

@@ -38,7 +38,7 @@ ms.locfileid: "68060362"
 |상태|**smallint**|컬렉션 집합 또는 패키지의 현재 상태를 나타냅니다. Null을 허용합니다.<br /><br /> 값은 다음과 같습니다.<br /><br /> 0 = 실행 중<br /><br /> 1 = 완료<br /><br /> 2 = 실패|  
 |runtime_execution_mode|**smallint**|컬렉션 집합 활동이 데이터 수집이었는지 데이터 업로드였는지를 나타냅니다. Null을 허용합니다.|  
 |start_time|**datetime**|컬렉션 집합 또는 패키지가 시작된 시간입니다. Null을 허용합니다.|  
-|last_iteration_time|**datetime**|패키지를 계속 실행하기 위해 패키지에서 마지막으로 스냅숏을 캡처한 시간입니다. Null을 허용합니다.|  
+|last_iteration_time|**datetime**|패키지를 계속 실행하기 위해 패키지에서 마지막으로 스냅샷을 캡처한 시간입니다. Null을 허용합니다.|  
 |finish_time|**datetime**|종료된 패키지 및 컬렉션 집합의 실행 완료 시간입니다. Null을 허용합니다.|  
 |duration|**int**|패키지 또는 컬렉션 집합이 시작된 이후부터의 실행 시간(초)입니다. Null을 허용합니다.|  
 |failure_message|**nvarchar(2048)**|컬렉션 집합 또는 패키지가 실패한 경우 해당 구성 요소에 대한 가장 최근의 오류 메시지입니다. Null을 허용합니다. 자세한 오류 정보를 가져오려면 합니다 [fn_syscollector_get_execution_details &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-functions/fn-syscollector-get-execution-details-transact-sql.md) 함수입니다.|  

@@ -39,7 +39,7 @@ ms.locfileid: "65727918"
 |ResetCdcState|이 작업은 현재 CDC 컨텍스트에 연결된 영구 CDC 상태를 다시 설정하는 데 사용됩니다. 이 작업을 실행하면 LSN 타임스탬프 `sys.fn_cdc_get_max_lsn` 테이블의 현재 최대 LSN이 다음 처리 범위의 시작 부분이 됩니다. 이 작업을 수행하려면 원본 데이터베이스에 대한 연결이 필요합니다.|  
 |MarkInitialLoadStart|이 작업은 초기 로드 패키지의 시작 부분에서 초기 로드 패키지가 원본 테이블을 읽기 시작하기 전에 현재 LSN을 원본 데이터베이스에 기록하기 위해 사용됩니다. 이 작업을 수행하려면 `sys.fn_cdc_get_max_lsn`을 호출하기 위해 원본 데이터베이스에 대한 연결이 필요합니다.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC(즉, Oracle이 아님)에서 작업할 때 MarkInitialLoadStart를 선택하는 경우 연결 관리자에 지정된 사용자는 db_owner 또는 sysadmin이어야 합니다.|  
 |MarkInitialLoadEnd|이 작업은 초기 로드 패키지의 끝 부분에서 초기 로드 패키지가 원본 테이블 읽기를 완료한 후 현재 LSN을 원본 데이터베이스에 기록하기 위해 사용됩니다. 이 LSN은 이 작업이 발생한 현재 시간을 기록한 후 CDC 데이터베이스에서 해당 시간 이후에 발생한 변경 내용을 조회하는 `cdc.lsn_time_`매핑 테이블을 쿼리하여 결정됩니다.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC(즉, Oracle이 아님)에서 작업할 때 MarkInitialLoadEnd를 선택하는 경우 연결 관리자에 지정된 사용자는 db_owner 또는 sysadmin이어야 합니다.|  
-|MarkCdcStart|이 작업은 스냅숏 데이터베이스에서 초기 로드가 생성될 때 사용됩니다. 이 경우 스냅숏 LSN 후에 변경 처리가 즉시 시작되어야 합니다. 사용자가 사용할 스냅숏 데이터베이스의 이름을 지정하면 CDC 제어 태스크가 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 스냅숏 LSN을 쿼리합니다. 사용자가 스냅숏 LSN을 직접 지정할 수도 있습니다.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC(즉, Oracle이 아님)에서 작업할 때 MarkCdcStart를 선택하는 경우 연결 관리자에 지정된 사용자는 db_owner 또는 sysadmin이어야 합니다.|  
+|MarkCdcStart|이 작업은 스냅샷 데이터베이스에서 초기 로드가 생성될 때 사용됩니다. 이 경우 스냅샷 LSN 후에 변경 처리가 즉시 시작되어야 합니다. 사용자가 사용할 스냅샷 데이터베이스의 이름을 지정하면 CDC 제어 태스크가 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에 스냅샷 LSN을 쿼리합니다. 사용자가 스냅샷 LSN을 직접 지정할 수도 있습니다.<br /><br /> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CDC(즉, Oracle이 아님)에서 작업할 때 MarkCdcStart를 선택하는 경우 연결 관리자에 지정된 사용자는 db_owner 또는 sysadmin이어야 합니다.|  
   
  처리 범위를 관리하는 데에는 다음과 같은 작업이 사용됩니다.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "65727918"
   
      **CDC(즉, Oracle이 아님)에서 작업할 때** 초기 로드 끝 표시 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 를 선택하는 경우 연결 관리자에 지정된 사용자는  **db_owner** 또는 **sysadmin**이어야 합니다.  
   
--   **CDC 시작 표시**: 이 작업은 스냅숏 데이터베이스 또는 정지 데이터베이스에서 초기 로드를 수행할 때 사용됩니다. 이 작업은 초기 로드 패키지 내의 어느 지점에서나 호출됩니다. 이 작업에는 스냅숏 LSN이거나 스냅숏 LSN이 자동으로 파생될 스냅숏 데이터베이스의 이름이거나 비워 둘 수 있는 매개 변수가 허용됩니다. 매개 변수를 비워둘 경우 현재 데이터베이스 LSN이 변경 내용 처리 패키지의 시작 LSN으로 사용됩니다.  
+-   **CDC 시작 표시**: 이 작업은 스냅샷 데이터베이스 또는 정지 데이터베이스에서 초기 로드를 수행할 때 사용됩니다. 이 작업은 초기 로드 패키지 내의 어느 지점에서나 호출됩니다. 이 작업에는 스냅샷 LSN이거나 스냅샷 LSN이 자동으로 파생될 스냅샷 데이터베이스의 이름이거나 비워 둘 수 있는 매개 변수가 허용됩니다. 매개 변수를 비워둘 경우 현재 데이터베이스 LSN이 변경 내용 처리 패키지의 시작 LSN으로 사용됩니다.  
   
      이 작업은 초기 로드 시작/끝 표시 작업 대신 사용됩니다.  
   
@@ -136,7 +136,7 @@ ms.locfileid: "65727918"
  상태 변수를 정의하는 방법에 대한 자세한 내용은 [상태 변수 정의](../../integration-services/data-flow/define-a-state-variable.md)를 참조하세요.  
   
  **CDC/스냅숏 이름을 시작하는 SQL Server LSN:**  
- CDC가 시작되는 위치를 결정하기 위해 초기 로드가 수행되는 스냅숏 데이터베이스의 이름 또는 현재 원본 데이터베이스 LSN을 입력합니다. 이 작업은 **CDC 제어 작업** 이 **CDC 시작 표시**로 설정되어 있는 경우에만 사용할 수 있습니다.  
+ CDC가 시작되는 위치를 결정하기 위해 초기 로드가 수행되는 스냅샷 데이터베이스의 이름 또는 현재 원본 데이터베이스 LSN을 입력합니다. 이 작업은 **CDC 제어 작업** 이 **CDC 시작 표시**로 설정되어 있는 경우에만 사용할 수 있습니다.  
   
  이러한 작업에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하세요.  
   

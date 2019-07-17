@@ -140,7 +140,7 @@ ms.locfileid: "63051816"
   
 |프로시저 이름|설명|  
 |--------------------|-----------------|  
-|[core.sp_create_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|관리 데이터 웨어하우스에 컬렉션 스냅숏을 만듭니다.|  
+|[core.sp_create_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-create-snapshot-transact-sql.md)|관리 데이터 웨어하우스에 컬렉션 스냅샷을 만듭니다.|  
 |[core.sp_update_data_source&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-update-data-source-transact-sql.md)|데이터 컬렉션의 데이터 원본을 업데이트합니다.|  
 |[core.sp_add_collector_type&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-add-collector-type-transact-sql.md)|관리 데이터 웨어하우스에 수집기 유형을 추가합니다.|  
 |[core.sp_remove_collector_type&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/core-sp-remove-collector-type-transact-sql.md)|관리 데이터 웨어하우스에서 수집기 유형을 제거합니다.|  

@@ -88,7 +88,7 @@ ms.locfileid: "67826500"
 |모든 권한|사이트 모음 수준에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 기능 통합 활성화<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리 라이브러리 만들기<br /><br /> 데이터 피드 라이브러리 만들기|  
 |참가|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 추가, 편집, 삭제 및 다운로드<br /><br /> 데이터 새로 고침 구성<br /><br /> SharePoint 사이트에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 기반으로 새 통합 문서 및 보고서 만들기<br /><br /> 데이터 피드 라이브러리에서 데이터 서비스 문서 만들기|  
 |읽기|액세스 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 있는 통합 문서의 URL을 명시적으로 (예: Excel의 데이터 연결 마법사)에 연결 대화 상자에서 입력, 외부 데이터 원본으로 통합 문서.|  
-|보기만|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 보기<br /><br /> 데이터 새로 고침 기록 보기<br /><br /> 로컬 통합 문서를 SharePoint 사이트의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 연결하여 해당 데이터를 다른 방식으로 용도 변경<br /><br /> 통합 문서의 스냅숏 다운로드. 스냅숏은 데이터의 정적 복사본이며 슬라이서, 필터, 수식 또는 데이터 연결을 포함하지 않습니다. 스냅숏의 콘텐츠는 브라우저 창에서 셀 값을 복사할 때와 비슷합니다.|  
+|보기만|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서 보기<br /><br /> 데이터 새로 고침 기록 보기<br /><br /> 로컬 통합 문서를 SharePoint 사이트의 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 연결하여 해당 데이터를 다른 방식으로 용도 변경<br /><br /> 통합 문서의 스냅샷 다운로드. 스냅샷은 데이터의 정적 복사본이며 슬라이서, 필터, 수식 또는 데이터 연결을 포함하지 않습니다. 스냅샷의 콘텐츠는 브라우저 창에서 셀 값을 복사할 때와 비슷합니다.|  
   
 ##  <a name="excel"></a> Excel 서비스 보안 고려 사항: Power Pivot 통합 문서  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서버 쪽 쿼리는 Excel Services와 매우 밀접하게 연관되어 있습니다. 제품 통합은 문서 수준에서 시작되며 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 포함하거나 참조하는 Excel 통합 문서 파일(.xlsx)입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서에 대해서는 별도의 파일 확장명이 없습니다.  

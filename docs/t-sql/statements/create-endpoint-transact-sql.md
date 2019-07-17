@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  다음 인수는 TCP 프로토콜 옵션에만 적용됩니다.  
   
- LISTENER_PORT **=**_listenerPort_  
+ LISTENER_PORT **=** _listenerPort_  
  Service Broker TCP/IP 프로토콜을 통한 연결을 수신하는 포트 번호를 지정합니다. 규칙에 따라 4022가 사용되지만 1024와 32767 사이의 모든 번호를 사용할 수 있습니다.  
   
- LISTENER_IP **=** ALL | **(**_4-part-ip_ **)** | **(** "*ip_address_v6*" **)**  
+ LISTENER_IP **=** ALL | **(** _4-part-ip_ **)**  |  **(** "*ip_address_v6*" **)**  
  엔드포인트가 수신하는 IP 주소를 지정합니다. 기본값은 ALL입니다. 이는 수신기가 모든 유효한 IP 주소에 대한 연결을 허용함을 의미합니다.  
   
  정규화된 도메인 이름(`ALTER DATABASE SET PARTNER = partner_IP_address` 또는 `ALTER DATABASE SET WITNESS = witness_IP_address`) 대신 IP 주소를 사용하여 데이터베이스 미러링을 구성하는 경우 미러링 엔드포인트를 만들 때 `LISTENER_IP =IP_address` 대신 `LISTENER_IP=ALL`를 지정해야 합니다.  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  다른 위치에 있는 서비스에 대한 메시지를 무시합니다. 기본값입니다.  
   
- MESSAGE_FORWARD_SIZE **=**_forward_size_  
+ MESSAGE_FORWARD_SIZE **=** _forward_size_  
  엔드포인트가 전달할 메시지를 저장할 때 사용할 수 있는 최대 저장 크기(MB)를 지정합니다.  
   
  **DATABASE_MIRRORING 옵션**  
@@ -258,7 +258,7 @@ FOR DATABASE_MIRRORING (
 >  DATABASE_MIRRORING에 대한 기본 포트는 없습니다.  
   
 ## <a name="remarks"></a>Remarks  
- ENDPOINT DDL 문은 사용자 트랜잭션 내에서 실행할 수 없습니다. 활성 스냅숏 격리 수준 트랜잭션이 변경되는 엔드포인트를 사용하는 경우에도 ENDPOINT DDL 문은 실패하지 않습니다.  
+ ENDPOINT DDL 문은 사용자 트랜잭션 내에서 실행할 수 없습니다. 활성 스냅샷 격리 수준 트랜잭션이 변경되는 엔드포인트를 사용하는 경우에도 ENDPOINT DDL 문은 실패하지 않습니다.  
   
  ENDPOINT에 대한 요청을 실행할 수 있는 사람은 다음과 같습니다.  
   

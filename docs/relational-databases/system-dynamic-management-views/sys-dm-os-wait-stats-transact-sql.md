@@ -187,7 +187,7 @@ GO
 |DIRTY_PAGE_POLL |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |DIRTY_PAGE_SYNC |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |DIRTY_PAGE_TABLE_LOCK |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|DISABLE_VERSIONING |SQL Server 버전 트랜잭션 관리자 가장 오래 된 활성 트랜잭션의 타임 스탬프 상태 변경 시작 될 때의 타임 스탬프 보다 이후 인지를 폴링할 때 발생 합니다. 이 경우 ALTER DATABASE 문이 실행되기 전에 시작된 모든 스냅숏 트랜잭션은 완료되었습니다. 이 대기 상태는 ALTER DATABASE 문을 사용 하 여 SQL Server 버전 관리를 해제 하는 경우에 사용 됩니다.| 
+|DISABLE_VERSIONING |SQL Server 버전 트랜잭션 관리자 가장 오래 된 활성 트랜잭션의 타임 스탬프 상태 변경 시작 될 때의 타임 스탬프 보다 이후 인지를 폴링할 때 발생 합니다. 이 경우 ALTER DATABASE 문이 실행되기 전에 시작된 모든 스냅샷 트랜잭션은 완료되었습니다. 이 대기 상태는 ALTER DATABASE 문을 사용 하 여 SQL Server 버전 관리를 해제 하는 경우에 사용 됩니다.| 
 |DISKIO_SUSPEND |외부 백업이 활성 상태일 때 태스크가 파일에 액세스하려고 대기하는 경우에 발생합니다. 대기 중인 모든 사용자 프로세스에 대해 보고됩니다. 사용자 프로세스당 값이 5보다 크면 외부 백업을 완료하는 데 걸리는 시간이 너무 긴 것일 수 있습니다.| 
 |DISPATCHER_PRIORITY_QUEUE_SEMAPHORE |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |DISPATCHER_QUEUE_SEMAPHORE |디스패처 풀의 스레드가 처리할 추가 작업을 기다리는 경우에 발생합니다. 이 대기 유형의 대기 시간은 디스패처가 유휴 상태일 때 증가됩니다.| 
@@ -231,8 +231,8 @@ GO
 |FABRIC_REPLICA_PUBLISHER_SUBSCRIBER_LIST |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |FABRIC_WAIT_FOR_BUILD_REPLICA_EVENT_PROCESSING |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |FAILPOINT |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|FCB_REPLICA_READ |스냅숏이나 DBCC에서 만든 임시 스냅숏 스파스 파일의 읽기가 동기화되는 경우에 발생합니다.| 
-|FCB_REPLICA_WRITE |스냅숏이나 DBCC에서 만든 임시 스냅숏 스파스 파일에 대한 페이지 밀어넣기 또는 끌어오기가 동기화되는 경우에 발생합니다.| 
+|FCB_REPLICA_READ |스냅샷이나 DBCC에서 만든 임시 스냅샷 스파스 파일의 읽기가 동기화되는 경우에 발생합니다.| 
+|FCB_REPLICA_WRITE |스냅샷이나 DBCC에서 만든 임시 스냅샷 스파스 파일에 대한 페이지 밀어넣기 또는 끌어오기가 동기화되는 경우에 발생합니다.| 
 |FEATURE_SWITCHES_UPDATE |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |FFT_NSO_DB_KILL_FLAG |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |FFT_NSO_DB_LIST |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
@@ -796,8 +796,8 @@ GO
 |REPL_TRANFSINFO_ACCESS |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |REPL_TRANHASHTABLE_ACCESS |내부적으로만 사용됩니다.| 
 |REPL_TRANTEXTINFO_ACCESS |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|REPLICA_WRITES |태스크가 데이터베이스 스냅숏 또는 DBCC 복제본에 대한 페이지 쓰기가 완료될 때까지 대기하는 동안 발생합니다.| 
-|REQUEST_DISPENSER_PAUSE |스냅숏 백업을 위해 파일 I/O를 고정할 수 있도록 태스크가 처리 중인 모든 I/O가 완료될 때까지 대기하는 경우에 발생합니다.| 
+|REPLICA_WRITES |태스크가 데이터베이스 스냅샷 또는 DBCC 복제본에 대한 페이지 쓰기가 완료될 때까지 대기하는 동안 발생합니다.| 
+|REQUEST_DISPENSER_PAUSE |스냅샷 백업을 위해 파일 I/O를 고정할 수 있도록 태스크가 처리 중인 모든 I/O가 완료될 때까지 대기하는 경우에 발생합니다.| 
 |REQUEST_FOR_DEADLOCK_SEARCH |교착 상태 모니터가 다음 교착 상태 검색을 시작하기 위해 대기하는 동안 발생합니다. 이 대기는 교착 상태 감지 사이에 발생하며 이 리소스에 대한 총 대기 시간이 길어도 문제가 있는 것은 아닙니다.| 
 |RESERVED_MEMORY_ALLOCATION_EXT |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |RESMGR_THROTTLED |새 쿼리가 GROUP_MAX_REQUESTS 설정에 따라 들어오고 정체되는 경우 발생합니다.| 

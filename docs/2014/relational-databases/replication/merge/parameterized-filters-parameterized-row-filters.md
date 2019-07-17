@@ -47,7 +47,7 @@ ms.locfileid: "68210705"
   
      구독자 또는 배포자 이름 대신 다른 값으로 이 함수를 재정의할 수도 있습니다. 일반적으로 애플리케이션에서는 판매 직원 이름 또는 판매 직원 ID와 같은 의미 있는 값으로 이 함수를 재정의합니다. 자세한 내용은 이 항목의 "HOST_NAME() 값 재정의"를 참조하십시오.  
   
- 시스템 함수에서 반환된 값을 사용자가 필터링하는 테이블에서 지정한 열과 비교한 다음 해당 데이터가 구독자로 다운로드됩니다. 구독이 초기화되어 초기 스냅숏에 해당 데이터만 들어 있을 경우와 구독이 동기화될 때마다 이 비교를 수행합니다. 기본적으로 게시자에서 발생한 변경으로 인해 행이 파티션에서 이동되는 경우 해당 행은 구독자에서 삭제됩니다. 이 동작은 [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)의 **@allow_partition_realignment** 매개 변수를 사용하여 제어할 수 있습니다.  
+ 시스템 함수에서 반환된 값을 사용자가 필터링하는 테이블에서 지정한 열과 비교한 다음 해당 데이터가 구독자로 다운로드됩니다. 구독이 초기화되어 초기 스냅샷에 해당 데이터만 들어 있을 경우와 구독이 동기화될 때마다 이 비교를 수행합니다. 기본적으로 게시자에서 발생한 변경으로 인해 행이 파티션에서 이동되는 경우 해당 행은 구독자에서 삭제됩니다. 이 동작은 [sp_addmergepublication&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)의 **@allow_partition_realignment** 매개 변수를 사용하여 제어할 수 있습니다.  
   
 > [!NOTE]  
 >  매개 변수가 있는 필터에 대해 비교가 수행될 경우 항상 데이터베이스 데이터 정렬을 사용합니다. 예를 들어 데이터베이스 데이터 정렬에서는 대/소문자를 구분하지 않지만 테이블 또는 열 데이터 정렬에서는 대/소문자를 구분할 경우 비교 시 대/소문자를 구분하지 않습니다.  
@@ -94,7 +94,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
  예를 들어 직원 Pamela Ansman-Wolfe에게 직원 ID로 280을 할당합니다. 이 직원에 대한 구독을 만들 때 HOST_NAME() 값에 직원 ID 값(이 경우 280)을 지정합니다. 병합 에이전트가 게시자로 연결하면 HOST_NAME()에서 반환된 값을 해당 테이블의 값과 비교한 다음 **EmployeeID** 열에 280이라는 값이 포함된 행만 다운로드합니다.  
   
 > [!IMPORTANT]
->  HOST_NAME() 함수는 `nchar` 값을 반환하므로 위의 예처럼 필터 절의 열이 숫자 데이터 형식인 경우 CONVERT를 사용해야 합니다. 성능상의 이유로 `CONVERT(nchar,EmployeeID) = HOST_NAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 대신 `EmployeeID = CONVERT(int,HOST_NAME())`예제에서 보여준 방식을 사용하는 것이 좋습니다. 이 절에 사용할 수 있습니다는 **@subset_filterclause** 의 매개 변수 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), 하지만 일반적으로 사용할 수 없습니다 새 게시 마법사에서 (마법사 실행 후의 유효성을 검사 하려면 필터 절 컴퓨터 이름을 변환할 수 없습니다 때문에 파일을 덮어쓰지는 `int`). 새 게시 마법사를 사용할 경우 게시에 대한 스냅숏을 만들기 전에 마법사에서 `CONVERT(nchar,EmployeeID) = HOST_NAME()` 을 지정한 다음 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 을 사용하여 해당 절을 `EmployeeID = CONVERT(int,HOST_NAME())` 로 변경하는 것이 좋습니다.  
+>  HOST_NAME() 함수는 `nchar` 값을 반환하므로 위의 예처럼 필터 절의 열이 숫자 데이터 형식인 경우 CONVERT를 사용해야 합니다. 성능상의 이유로 `CONVERT(nchar,EmployeeID) = HOST_NAME()`과 같은 매개 변수가 있는 행 필터 절의 열 이름에는 함수를 적용하지 않는 것이 좋습니다. 대신 `EmployeeID = CONVERT(int,HOST_NAME())`예제에서 보여준 방식을 사용하는 것이 좋습니다. 이 절에 사용할 수 있습니다는 **@subset_filterclause** 의 매개 변수 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), 하지만 일반적으로 사용할 수 없습니다 새 게시 마법사에서 (마법사 실행 후의 유효성을 검사 하려면 필터 절 컴퓨터 이름을 변환할 수 없습니다 때문에 파일을 덮어쓰지는 `int`). 새 게시 마법사를 사용할 경우 게시에 대한 스냅샷을 만들기 전에 마법사에서 `CONVERT(nchar,EmployeeID) = HOST_NAME()` 을 지정한 다음 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) 을 사용하여 해당 절을 `EmployeeID = CONVERT(int,HOST_NAME())` 로 변경하는 것이 좋습니다.  
   
  **HOST_NAME() 값을 재정의하려면**  
   
@@ -107,7 +107,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 -   병합 에이전트: 명령줄 또는 에이전트 프로필을 통해 **-Hostname** 매개 변수의 값을 지정합니다. 병합 에이전트에 대한 자세한 내용은 [Replication Merge Agent](../agents/replication-merge-agent.md)를 참조하십시오. 에이전트 프로필에 대한 자세한 내용은 [Replication Agent Profiles](../agents/replication-agent-profiles.md)을 참조하십시오.  
   
 ## <a name="initializing-a-subscription-to-a-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 게시에 대한 구독 초기화  
- 병합 게시에서 매개 변수가 있는 행 필터를 사용하면 복제 시 각 구독이 두 부분으로 구성된 스냅숏으로 초기화됩니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)을 참조하세요.  
+ 병합 게시에서 매개 변수가 있는 행 필터를 사용하면 복제 시 각 구독이 두 부분으로 구성된 스냅샷으로 초기화됩니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)을(를) 참조하세요.  
   
 ## <a name="using-the-appropriate-filtering-options"></a>적절한 필터링 옵션 사용  
  매개 변수가 있는 필터를 사용할 경우 사용자가 제어하는 두 가지 중요한 영역이 있습니다.  
@@ -172,7 +172,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   아티클은 하나의 게시에만 존재할 수 있으며 다시 게시할 수 없습니다.  
   
--   게시에서 구독자가 스냅숏 프로세스를 시작할 수 있어야 합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)을 참조하세요.  
+-   게시에서 구독자가 스냅샷 프로세스를 시작할 수 있어야 합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md)을(를) 참조하세요.  
   
 ##### <a name="additional-considerations-for-join-filters"></a>조인 필터에 대한 추가 고려 사항  
   

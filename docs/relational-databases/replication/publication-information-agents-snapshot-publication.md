@@ -1,5 +1,5 @@
 ---
-title: 게시 정보, 에이전트(스냅숏 게시) | Microsoft 문서
+title: 게시 정보, 에이전트(스냅샷 게시) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -20,12 +20,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 01/09/2019
 ms.locfileid: "54133373"
 ---
-# <a name="publication-information-agents-snapshot-publication"></a>게시 정보, 에이전트(스냅숏 게시)
+# <a name="publication-information-agents-snapshot-publication"></a>게시 정보, 에이전트(스냅샷 게시)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **에이전트** 탭은 선택한 게시에 대한 스냅숏 에이전트의 요약 정보를 표시합니다.  
   
 ## <a name="options"></a>옵션  
- 자세한 내용 및 스냅숏 에이전트와 관련된 태스크를 보려면 해당 에이전트에 대한 행을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 옵션을 클릭합니다. 표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
+ 자세한 내용 및 스냅샷 에이전트와 관련된 태스크를 보려면 해당 에이전트에 대한 행을 마우스 오른쪽 단추로 클릭한 다음 바로 가기 메뉴에서 옵션을 클릭합니다. 표에서 데이터를 표시하는 방식을 변경하려면 표를 마우스 오른쪽 단추로 클릭한 후 다음 옵션 중 하나를 클릭합니다.  
   
 -   **정렬**: **열 정렬** 대화 상자에서 한 개 이상의 열에 대해 정렬합니다.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "54133373"
  필터 설정은 각 표에 대해 지정됩니다. 열 선택 및 정렬은 각 게시자에 대한 게시 표와 같이 동일한 유형의 모든 표에 적용됩니다.  
   
  **상태**  
- 스냅숏 에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
+ 스냅샷 에이전트의 상태입니다. 다음 목록에서는 가능한 상태 값을 보여 줍니다.  
   
 -   Error  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54133373"
 -   완료  
   
  **에이전트**  
- 스냅숏 에이전트 이 에이전트는 스냅숏 게시와 연결된 유일한 에이전트입니다. 배포 에이전트는 이 게시에 대한 구독과 연결됩니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
+ 스냅샷 에이전트 이 에이전트는 스냅샷 게시와 연결된 유일한 에이전트입니다. 배포 에이전트는 이 게시에 대한 구독과 연결됩니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
  **마지막 시작 시간**  
  마지막으로 에이전트가 시작된 시간입니다.  

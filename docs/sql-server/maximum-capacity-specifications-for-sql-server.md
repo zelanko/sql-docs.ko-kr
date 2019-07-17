@@ -56,7 +56,7 @@ ms.locfileid: "57973812"
 |행당 바이트 수||8,060|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 가변 길이 열을 행 외부로 밀어 넣을 수 있는 행 오버플로 스토리지를 지원합니다. 행 외부로 밀어넣은 가변 길이 열의 주 레코드에는 24바이트의 루트만 저장됩니다. 이 때문에 유효 행 제한은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]보다 높습니다. 자세한 내용은 [대용량 행 지원](../relational-databases/pages-and-extents-architecture-guide.md#large-row-support)을 참조하세요.|  
 |메모리 최적화 테이블의 행당 바이트 수||8,060|[!INCLUDE[ssSQL15](../includes/sssql15-md.md)] 이상에서는 메모리 최적화 테이블이 행 외부 스토리지를 지원합니다. 테이블에 있는 모든 열의 최대 크기가 8060바이트를 초과할 경우 가변 길이 열이 행 외부로 푸시됩니다. 이는 컴파일 타임 결정입니다. 행 외부에 저장된 열의 경우 8바이트 참조만 행 내부에 저장됩니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)를 참조하세요.|  
 |저장 프로시저의 원본 텍스트의 바이트 수||일괄 처리 크기 또는 250MB 미만||  
-|**varchar(max)**, **varbinary(max)**, **xml**, **text**또는 **image** 열당 바이트 수||2^31-1||  
+|**varchar(max)** , **varbinary(max)** , **xml**, **text**또는 **image** 열당 바이트 수||2^31-1||  
 |**ntext** 또는 **nvarchar(max)** 열당 문자 수||2^30-1||  
 |테이블당 클러스터형 인덱스 수||1||  
 |GROUP BY, ORDER BY의 열 수||바이트 수로만 제한||  
@@ -119,7 +119,7 @@ ms.locfileid: "57973812"
 |데이터베이스당 로그 파일 수||1|  
 |컴퓨터당 볼륨 수||3|  
   
- * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에서 지원하는 관리되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 최대 개수는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)을 참조하세요.    
+ \* [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티에서 지원하는 관리되는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스의 최대 개수는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서는 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에서 지원하는 기능](https://msdn.microsoft.com/library/cc645993.aspx)을 참조하세요.    
   
 ##  <a name="DAC"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 계층 애플리케이션 개체  
  다음 표에는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC(데이터 계층 애플리케이션)에서 테스트된 다양한 개체의 최대 크기 및 개수가 나와 있습니다.  
@@ -137,12 +137,12 @@ ms.locfileid: "57973812"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Replication 개체||최대 크기/개수 SQL Server(64비트)|  
 |--------------------------------------------------|-|---------------------------------------------------|  
 |아티클 수(병합 게시)||2048|  
-|아티클 수(스냅숏 또는 트랜잭션 게시)||32,767|  
+|아티클 수(스냅샷 또는 트랜잭션 게시)||32,767|  
 |테이블의 열 수*(병합 게시)||246|  
-|테이블의 열 수**([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스냅숏 또는 트랜잭션 게시)||1,000|  
-|테이블의 열 수**(Oracle 스냅숏 또는 트랜잭션 게시)||995|  
+|테이블의 열 수**([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스냅샷 또는 트랜잭션 게시)||1,000|  
+|테이블의 열 수**(Oracle 스냅샷 또는 트랜잭션 게시)||995|  
 |행 필터에 사용되는 열의 바이트 수(병합 게시)||1,024|  
-|행 필터에 사용되는 열의 바이트 수(스냅숏 또는 트랜잭션 게시)||8,000|  
+|행 필터에 사용되는 열의 바이트 수(스냅샷 또는 트랜잭션 게시)||8,000|  
 
  *충돌 검색에 행 추적이 사용될 경우(기본값) 기본 테이블은 최대 1,024개의 열을 포함할 수 있지만 최대 246개의 열이 게시되도록 아티클에서 열을 필터링해야 합니다. 열 추적을 사용하면 기본 테이블은 최대 246개의 열을 포함할 수 있습니다.  
   

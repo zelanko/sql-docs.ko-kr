@@ -45,11 +45,11 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**pre_script_ignore_error_task_name**|**sysname**|스냅숏 데이터가 복사되기 전에 수행되는 프로그래밍 작업의 태스크 이름입니다. 스크립트 오류가 발생해도 프로그램 실행은 계속됩니다.|  
-|**pre_script_task_name**|**sysname**|스냅숏 데이터가 복사되기 전에 수행되는 프로그래밍 작업의 태스크 이름입니다. 오류가 발생하면 프로그램 실행을 중단합니다.|  
+|**pre_script_ignore_error_task_name**|**sysname**|스냅샷 데이터가 복사되기 전에 수행되는 프로그래밍 작업의 태스크 이름입니다. 스크립트 오류가 발생해도 프로그램 실행은 계속됩니다.|  
+|**pre_script_task_name**|**sysname**|스냅샷 데이터가 복사되기 전에 수행되는 프로그래밍 작업의 태스크 이름입니다. 오류가 발생하면 프로그램 실행을 중단합니다.|  
 |**transformation_task_name**|**sysname**|데이터 기반 쿼리 작업을 사용하는 경우 프로그래밍 작업의 태스크 이름입니다.|  
-|**post_script_ignore_error_task_name**|**sysname**|스냅숏 데이터가 복사된 후에 수행되는 프로그래밍 작업의 태스크 이름입니다. 스크립트 오류가 발생해도 프로그램 실행은 계속됩니다.|  
-|**post_script_task_name**|**sysname**|스냅숏 데이터가 복사된 후에 수행되는 프로그래밍 작업의 태스크 이름입니다. 오류가 발생하면 프로그램 실행을 중단합니다.|  
+|**post_script_ignore_error_task_name**|**sysname**|스냅샷 데이터가 복사된 후에 수행되는 프로그래밍 작업의 태스크 이름입니다. 스크립트 오류가 발생해도 프로그램 실행은 계속됩니다.|  
+|**post_script_task_name**|**sysname**|스냅샷 데이터가 복사된 후에 수행되는 프로그래밍 작업의 태스크 이름입니다. 오류가 발생하면 프로그램 실행을 중단합니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

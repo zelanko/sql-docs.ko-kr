@@ -65,24 +65,24 @@ DROP DATABASE database_name [;]
 *database_snapshot_name*
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
-제거할 데이터베이스 스냅숏의 이름을 지정합니다.
+제거할 데이터베이스 스냅샷의 이름을 지정합니다.
 
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
 데이터베이스는 오프라인, 읽기 전용 및 주의 대상과 같은 상태에 관계없이 삭제할 수 있습니다. 데이터베이스의 현재 상태를 표시하려면 **sys.databases** 카탈로그 뷰를 사용합니다.
 
-삭제된 데이터베이스는 백업 복원을 통해서만 다시 만들 수 있습니다. 데이터베이스 스냅숏은 백업할 수 없으므로 복원할 수 없습니다.
+삭제된 데이터베이스는 백업 복원을 통해서만 다시 만들 수 있습니다. 데이터베이스 스냅샷은 백업할 수 없으므로 복원할 수 없습니다.
 
 데이터베이스가 삭제될 때마다 [master database](../../relational-databases/databases/master-database.md)를 백업해야 합니다.
 
 데이터베이스를 삭제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스가 삭제되며 데이터베이스가 사용하는 물리적 디스크 파일도 삭제됩니다. 삭제 시 데이터베이스 또는 해당 데이터베이스의 파일 중 하나가 오프라인 상태이면 디스크 파일은 삭제되지 않습니다. 이 파일은 Windows 탐색기를 사용해 수동으로 삭제할 수 있습니다. 파일 시스템에서 파일을 삭제하지 않고 현재 서버에서 데이터베이스를 제거하려면 [sp_detach_db](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)를 사용합니다.
 
 > [!WARNING]
-> FILE_SNAPSHOT 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅숏이 있는 데이터베이스 파일은 해당 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)을 통한 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]입니다.
+> FILE_SNAPSHOT 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅샷이 있는 데이터베이스 파일은 해당 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)을 통한 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]입니다.
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-데이터베이스 스냅숏을 삭제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스 스냅숏이 삭제되고 스냅숏이 사용하는 물리적 NTFS 파일 시스템 스파스 파일도 삭제됩니다. 데이터베이스 스냅숏을 통한 스파스 파일 사용에 대한 자세한 내용은 [데이터베이스 스냅숏](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요. 데이터베이스 스냅숏을 삭제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 대한 계획 캐시가 삭제됩니다. 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "데이터베이스 유지 관리 또는 재구성 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
+데이터베이스 스냅샷을 삭제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터베이스 스냅샷이 삭제되고 스냅샷이 사용하는 물리적 NTFS 파일 시스템 스파스 파일도 삭제됩니다. 데이터베이스 스냅샷을 통한 스파스 파일 사용에 대한 자세한 내용은 [데이터베이스 스냅샷](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요. 데이터베이스 스냅샷을 삭제하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 대한 계획 캐시가 삭제됩니다. 계획 캐시를 삭제하면 모든 후속 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. 계획 캐시의 삭제된 각 캐시스토어에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "데이터베이스 유지 관리 또는 재구성 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
 
 ## <a name="interoperability"></a>상호 운용성
 
@@ -105,7 +105,7 @@ DROP DATABASE 문은 자동 커밋 모드로 실행되어야 하며 명시적이
 
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-데이터베이스를 삭제하려면 먼저 데이터베이스의 모든 데이터베이스 스냅숏을 삭제해야 합니다.
+데이터베이스를 삭제하려면 먼저 데이터베이스의 모든 데이터베이스 스냅샷을 삭제해야 합니다.
 
 Stretch Database에 대해 활성화된 데이터베이스를 삭제해도 원격 데이터가 제거되지는 않습니다. 원격 데이터를 삭제하려면 수동으로 제거해야 합니다.
 
@@ -137,7 +137,7 @@ DROP DATABASE 문은 SQL 일괄 처리에서 유일한 문이어야 하고 한 �
 
 ## <a name="examples"></a>예
 
-### <a name="a-dropping-a-single-database"></a>1. 단일 데이터베이스 삭제
+### <a name="a-dropping-a-single-database"></a>1\. 단일 데이터베이스 삭제
 
 다음 예에서는 `Sales` 데이터베이스를 제거합니다.
 
@@ -145,7 +145,7 @@ DROP DATABASE 문은 SQL 일괄 처리에서 유일한 문이어야 하고 한 �
 DROP DATABASE Sales;
 ```
 
-### <a name="b-dropping-multiple-databases"></a>2. 여러 데이터베이스 삭제
+### <a name="b-dropping-multiple-databases"></a>2\. 여러 데이터베이스 삭제
 
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
 
@@ -155,11 +155,11 @@ DROP DATABASE Sales;
 DROP DATABASE Sales, NewSales;
 ```
 
-### <a name="c-dropping-a-database-snapshot"></a>C. 데이터베이스 스냅숏 삭제
+### <a name="c-dropping-a-database-snapshot"></a>C. 데이터베이스 스냅샷 삭제
 
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
 
-다음 예에서는 원본 데이터베이스에 영향을 주지 않으면서 `sales_snapshot0600`이라는 이름의 데이터베이스 스냅숏을 삭제합니다.
+다음 예에서는 원본 데이터베이스에 영향을 주지 않으면서 `sales_snapshot0600`이라는 이름의 데이터베이스 스냅샷을 삭제합니다.
 
 ```sql
 DROP DATABASE sales_snapshot0600;

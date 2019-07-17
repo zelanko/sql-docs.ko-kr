@@ -29,7 +29,7 @@ ms.locfileid: "62960150"
   
 -   로그 판독기 에이전트  
   
--   스냅숏 에이전트  
+-   스냅샷 에이전트  
   
 -   큐 판독기 에이전트  
   
@@ -59,11 +59,11 @@ ms.locfileid: "62960150"
   
  PAL을 관리하려면 [게시 액세스 목록에서 로그인 관리](manage-logins-in-the-publication-access-list.md)를 참조하세요.  
   
-## <a name="snapshot-agent"></a>스냅숏 에이전트  
- 각 게시에 하나의 스냅숏 에이전트가 있습니다. 자세한 내용은 [Create a Publication](../publish/create-a-publication.md)를 참조하세요.  
+## <a name="snapshot-agent"></a>스냅샷 에이전트  
+ 각 게시에 하나의 스냅샷 에이전트가 있습니다. 자세한 내용은 [Create a Publication](../publish/create-a-publication.md)를 참조하세요.  
   
-## <a name="ftp-snapshot-delivery"></a>FTP 스냅숏 배달  
- UNC 공유가 아닌 FTP 공유를 통해서만 스냅숏을 사용할 수 있도록 지정한 경우 FTP 액세스를 구성할 때 로그인과 암호를 지정해야 합니다. 자세한 내용은 [FTP를 통해 스냅숏 배달](../publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
+## <a name="ftp-snapshot-delivery"></a>FTP 스냅샷 배달  
+ UNC 공유가 아닌 FTP 공유를 통해서만 스냅샷을 사용할 수 있도록 지정한 경우 FTP 액세스를 구성할 때 로그인과 암호를 지정해야 합니다. 자세한 내용은 [FTP를 통해 스냅샷 배달](../publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
 ## <a name="log-reader-agent"></a>로그 판독기 에이전트  
  트랜잭션 복제에 대해 게시된 각 데이터베이스에 하나의 로그 판독기 에이전트가 있습니다. 자세한 내용은 [Create a Publication](../publish/create-a-publication.md)를 참조하세요.  

@@ -101,7 +101,7 @@ REPAIR_ALLOW_DATA_LOSS
 > [!WARNING]
 > REPAIR_ALLOW_DATA_LOSS 옵션은 지원되는 기능이지만, 데이터베이스를 물리적으로 일관된 상태로 전환하는 것이 항상 가장 적합한 옵션인 것은 아닙니다. 성공할 경우 REPAIR_ALLOW_DATA_LOSS 옵션 때문에 일부 데이터가 손실될 수 있습니다. 실제로 사용자가 마지막으로 알려진 성공한 백업으로부터 데이터베이스를 복원했던 것보다 더 많은 데이터가 손실될 수 있습니다. 
 >
-> [!INCLUDE[msCoName](../../includes/msconame-md.md)] DBCC CHECKDB에서 보고된 오류로부터 복구하는 기본 방법으로, 마지막으로 알려진 성공한 백업으로부터의 사용자 복원을 항상 권장합니다. REPAIR_ALLOW_DATA_LOSS 옵션은 알려진 성공한 백업으로부터 복원하는 방법 대신 사용할 수 없습니다. 백업으로부터 복원할 수 없는 경우에만 사용하도록 권장되는 응급 "최후의 수단"으로 사용하는 옵션입니다.    
+> DBCC CHECKDB에서 보고된 오류로부터 복구하는 기본 방법으로, 마지막으로 알려진 성공한 백업으로부터의 사용자 복원을 항상 권장합니다. REPAIR_ALLOW_DATA_LOSS 옵션은 알려진 성공한 백업으로부터 복원하는 방법 대신 사용할 수 없습니다. 백업으로부터 복원할 수 없는 경우에만 사용하도록 권장되는 응급 "최후의 수단"으로 사용하는 옵션입니다.    
 >     
 > REPAIR_ALLOW_DATA_LOSS 옵션을 사용해야 복구할 수 있는 특정 오류에는 오류를 지우기 위한 행, 페이지 또는 일련의 페이지 할당 취소가 포함됩니다. 할당 취소된 모든 데이터는 사용자가 더 이상 액세스하거나 복구할 수 없고 할당 취소된 데이터의 정확한 내용을 확인할 수 없습니다. 따라서 행이나 페이지가 할당 취소되고 나면 외래 키 제약 조건이 복구 작업 일부로 확인되거나 유지 관리되지 않으므로 참조 무결성이 정확하지 않을 수 있습니다. REPAIR_ALLOW_DATA_LOSS 옵션을 사용하고 나서 사용자는 DBCC CHECKCONSTRAINTS를 사용하여 데이터베이스의 참조 무결성을 검사해야 합니다.    
 >     
@@ -132,7 +132,7 @@ NO_INFOMSGS
  모든 정보 메시지를 표시하지 않습니다.  
     
 TABLOCK  
- 내부 데이터베이스 스냅숏을 사용하는 대신 DBCC CHECKDB가 잠금을 가져오도록 합니다. 여기에는 데이터베이스에 대한 단기 배타(X) 잠금이 포함됩니다. TABLOCK을 사용하면 데이터베이스에 로드가 많은 상황에서 DBCC CHECKDB가 더 빠르게 실행됩니다. 그러나 DBCC CHECKDB가 실행되는 동안 데이터베이스의 동시 사용 가능성은 줄어듭니다.  
+ 내부 데이터베이스 스냅샷을 사용하는 대신 DBCC CHECKDB가 잠금을 가져오도록 합니다. 여기에는 데이터베이스에 대한 단기 배타(X) 잠금이 포함됩니다. TABLOCK을 사용하면 데이터베이스에 로드가 많은 상황에서 DBCC CHECKDB가 더 빠르게 실행됩니다. 그러나 DBCC CHECKDB가 실행되는 동안 데이터베이스의 동시 사용 가능성은 줄어듭니다.  
     
 > [!IMPORTANT] 
 > TABLOCK은 수행되는 검사를 제한합니다. 데이터베이스에 대해 DBCC CHECKCATALOG가 실행되지 않으며 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 데이터의 유효성이 검사되지 않습니다.
@@ -189,13 +189,13 @@ DBCC CHECKDB는 비활성화된 인덱스는 검사하지 않습니다. 비활�
 -   호환성 수준이 90 이하인 경우 DBCC CHECKDB는 `NOINDEX`가 지정되지 않으면 단일 테이블 또는 인덱싱된 뷰와 해당하는 모든 비클러스터형 인덱스 및 XML 인덱스에서 물리적 및 논리적 일관성 검사를 모두 수행합니다. 공간 인덱스는 지원되지 않습니다.  
 - SQL Server 2016 이상에서는 과다한 수식 평가를 방지하기 위해 지속되는 계산된 열, UDT 열, 필터링된 인덱스에 대한 추가 검사가 기본적으로 실행되지 않습니다. 이렇게 변경하면 이 개체가 포함된 데이터베이스에 대한 CHECKDB 시간이 크게 단축됩니다. 그러나 이러한 개체의 물리적 일관성 검사는 항상 완료됩니다. `EXTENDED_LOGICAL_CHECKS` 옵션을 지정하는 경우에만 `EXTENDED_LOGICAL_CHECKS` 옵션의 일부로 기존의 논리적 검사(인덱싱된 뷰, XML 인덱스, 공간 인덱스)와 함께 식 평가가 수행됩니다.   
     
-**데이터베이스의 호환성 수준에 대한 자세한 내용**
--   [데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
+데이터베이스의 호환성 수준에 대한 자세한 내용
+-   데이터베이스의 호환성 수준 보기 또는 변경    
     
-## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅숏    
-DBCC CHECKDB는 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 위해 내부 데이터베이스 스냅숏을 사용합니다. 이렇게 하면 이러한 명령이 실행될 때 차단 및 동시성 문제를 방지할 수 있습니다. 자세한 내용은 [데이터베이스 스냅숏의 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅숏 사용법" 섹션을 참조하세요. 스냅숏을 만들 수 없거나 TABLOCK이 지정되면 DBCC CHECKDB는 필요한 일관성을 확보하기 위해 잠금을 설정합니다. 이 경우 할당 검사를 위해서는 배타적 데이터베이스 잠금이 필요하며 테이블 검사를 위해서는 공유 테이블 잠금이 필요합니다.
-내부 데이터베이스 스냅숏을 생성할 수 없는 경우 마스터에 대한 DBCC CHECKDB 실행은 실패합니다.
-tempdb에 대해 DBCC CHECKDB를 실행할 경우 할당 또는 카탈로그 검사는 수행되지 않으며 테이블 검사를 수행하려면 공유 테이블 잠금을 설정해야 합니다. 이것은 성능상의 이유로 tempdb의 데이터베이스 스냅숏을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다.
+## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅샷    
+DBCC CHECKDB는 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 위해 내부 데이터베이스 스냅샷을 사용합니다. 이렇게 하면 이러한 명령이 실행될 때 차단 및 동시성 문제를 방지할 수 있습니다. 자세한 내용은 [데이터베이스 스냅숏의 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅숏 사용법" 섹션을 참조하세요. 스냅샷을 만들 수 없거나 TABLOCK이 지정되면 DBCC CHECKDB는 필요한 일관성을 확보하기 위해 잠금을 설정합니다. 이 경우 할당 검사를 위해서는 배타적 데이터베이스 잠금이 필요하며 테이블 검사를 위해서는 공유 테이블 잠금이 필요합니다.
+내부 데이터베이스 스냅샷을 생성할 수 없는 경우 마스터에 대한 DBCC CHECKDB 실행은 실패합니다.
+tempdb에 대해 DBCC CHECKDB를 실행할 경우 할당 또는 카탈로그 검사는 수행되지 않으며 테이블 검사를 수행하려면 공유 테이블 잠금을 설정해야 합니다. 이것은 성능상의 이유로 tempdb의 데이터베이스 스냅샷을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다.
 Microsoft SQL Server 2012 또는 그 전의 SQL Server 버전에서는 ReFS로 포맷된 볼륨에 파일이 있는 데이터베이스에 대해 DBCC CHECKDB 명령을 실행하면 오류 메시지가 발생할 수 있습니다. 자세한 내용은 기술 자료 문서 2974455: [SQL Server 데이터베이스가 ReFS 볼륨에 있는 경우 DBCC CHECKDB 동작](https://support.microsoft.com/kb/2974455)을 참조하세요.    
     
 ## <a name="checking-and-repairing-filestream-data"></a>FILESTREAM 데이터 검사 및 복구    
@@ -246,7 +246,7 @@ DBCC CHECKDB에 의해 오류가 보고되면 REPAIR 옵션 중 하나를 사용
 -   트랜잭션 로그 손상으로 인해 데이터베이스 복구가 실패하면 트랜잭션 로그가 다시 작성됩니다. 트랜잭션 로그를 다시 작성하면 트랜잭션 일관성을 유지할 수 없습니다.    
     
 > [!WARNING]
-> REPAIR_ALLOW_DATA_LOSS 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 지원되는 기능입니다. 그러나 데이터베이스를 물리적으로 일관된 상태로 전환하는 것이 항상 가장 적합한 옵션인 것은 아닙니다. 성공할 경우 REPAIR_ALLOW_DATA_LOSS 옵션 때문에 일부 데이터가 손실될 수 있습니다. 실제로 사용자가 마지막으로 알려진 성공한 백업으로부터 데이터베이스를 복원했던 것보다 더 많은 데이터가 손실될 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] DBCC CHECKDB에서 보고된 오류로부터 복구하는 기본 방법으로, 마지막으로 알려진 성공한 백업으로부터의 사용자 복원을 항상 권장합니다. REPAIR_ALLOW_DATA_LOSS 옵션은 알려진 성공한 백업으로부터 복원하는 방법 대신 사용할 수 **없습니다**. 백업으로부터 복원할 수 없는 경우에만 사용하도록 권장되는 응급 "최후의 수단"으로 사용하는 옵션입니다.    
+> REPAIR_ALLOW_DATA_LOSS 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 지원되는 기능입니다. 그러나 데이터베이스를 물리적으로 일관된 상태로 전환하는 것이 항상 가장 적합한 옵션인 것은 아닙니다. 성공할 경우 REPAIR_ALLOW_DATA_LOSS 옵션 때문에 일부 데이터가 손실될 수 있습니다. 실제로 사용자가 마지막으로 알려진 성공한 백업으로부터 데이터베이스를 복원했던 것보다 더 많은 데이터가 손실될 수 있습니다. DBCC CHECKDB에서 보고된 오류로부터 복구하는 기본 방법으로, 마지막으로 알려진 성공한 백업으로부터의 사용자 복원을 항상 권장합니다. REPAIR_ALLOW_DATA_LOSS 옵션은 알려진 성공한 백업으로부터 복원하는 방법 대신 사용할 수 **없습니다**. 백업으로부터 복원할 수 없는 경우에만 사용하도록 권장되는 응급 "최후의 수단"으로 사용하는 옵션입니다.    
 >     
 >  로그를 다시 작성하고 나면 전체 ACID가 보장되지 않습니다.    
 >     
@@ -370,7 +370,7 @@ sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이�
     
 ## <a name="examples"></a>예    
     
-### <a name="a-checking-both-the-current-and-another-database"></a>1. 현재 데이터베이스와 다른 데이터베이스 모두 검사    
+### <a name="a-checking-both-the-current-and-another-database"></a>1\. 현재 데이터베이스와 다른 데이터베이스 모두 검사    
 다음 예에서는 현재 데이터베이스 및 `DBCC CHECKDB` 데이터베이스에 대해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]를 실행합니다.
     
 ```sql    
@@ -382,7 +382,7 @@ DBCC CHECKDB (AdventureWorks2012, NOINDEX);
 GO    
 ```    
     
-### <a name="b-checking-the-current-database-suppressing-informational-messages"></a>2. 현재 데이터베이스 검사 후 정보 메시지를 표시하지 않음    
+### <a name="b-checking-the-current-database-suppressing-informational-messages"></a>2\. 현재 데이터베이스 검사 후 정보 메시지를 표시하지 않음    
 다음 예에서는 현재 데이터베이스를 검사하되 모든 정보 메시지를 표시하지 않습니다.
     
 ```sql    
@@ -391,8 +391,8 @@ GO
 ```    
     
 ## <a name="see-also"></a>참고 항목    
-[DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)  
-[데이터베이스 스냅숏 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
-[sp_helpdb&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)  
-[시스템 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
+DBCC&#40;Transact-SQL&#41;  
+데이터베이스 스냅숏 스파스 파일의 크기 보기&#40;Transact-SQL&#41;  
+sp_helpdb&#40;Transact-SQL&#41;  
+시스템 테이블&#40;Transact-SQL&#41;  
 

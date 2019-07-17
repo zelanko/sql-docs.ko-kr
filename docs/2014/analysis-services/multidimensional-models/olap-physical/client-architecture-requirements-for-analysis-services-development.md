@@ -58,7 +58,7 @@ ms.locfileid: "62699438"
  그러나 큐브 데이터를 통합 문서에 가져올 경우 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서는 기존 큐브에 저장된 데이터를 사용할 수 있습니다. SharePoint 사이트에 게시된 경우 다른 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서에서 데이터를 가져올 수도 있습니다.  
   
 > [!NOTE]  
->  큐브를 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서의 데이터 원본으로 사용할 경우 큐브에서 가져오는 데이터는 MDX 쿼리로 정의되지만, 결합된 스냅숏으로 데이터를 가져옵니다. 대화형으로 데이터를 사용하거나 큐브에서 데이터를 새로 고칠 수 없습니다.  
+>  큐브를 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서의 데이터 원본으로 사용할 경우 큐브에서 가져오는 데이터는 MDX 쿼리로 정의되지만, 결합된 스냅샷으로 데이터를 가져옵니다. 대화형으로 데이터를 사용하거나 큐브에서 데이터를 새로 고칠 수 없습니다.  
   
 ### <a name="interfaces-for-powerpivot-client"></a>PowerPivot 클라이언트 인터페이스  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] Analysis Services에 대 한 설정 된 인터페이스 및 언어를 사용 하 여 통합 문서 내 (VertiPaq) 저장소 엔진 xVelocity 메모리 내 분석 엔진을 사용 하 여 상호 작용 합니다. AMO 및 ADOMD.NET 및 MDX 및 XMLA입니다. 추가 기능 내에서 측정값은 Excel, DAX(Data Analysis Expressions)와 유사한 수식 언어를 사용하여 정의됩니다. DAX 식은 in-process 서버에 보낸 XMLA 메시지 내에 포함됩니다.  

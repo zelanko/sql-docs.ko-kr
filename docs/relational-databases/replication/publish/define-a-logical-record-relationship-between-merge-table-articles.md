@@ -49,7 +49,7 @@ ms.locfileid: "62661037"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   게시에 대한 구독이 초기화된 후 논리적 레코드를 추가, 수정 또는 삭제한 경우에는 변경 내용을 적용한 후에 새 스냅숏을 생성하고 모든 구독을 다시 초기화해야 합니다. 속성 변경 요구 사항에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
+-   게시에 대한 구독이 초기화된 후 논리적 레코드를 추가, 수정 또는 삭제한 경우에는 변경 내용을 적용한 후에 새 스냅샷을 생성하고 모든 구독을 다시 초기화해야 합니다. 속성 변경 요구 사항에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사 및 **게시 속성 - \<게시>** 대화 상자에서 사용할 수 있는 **조인 추가** 대화 상자에서 논리적 레코드를 정의합니다. 마법사 사용 및 대화 상자 액세스에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md) 및 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
@@ -98,7 +98,7 @@ ms.locfileid: "62661037"
         > [!NOTE]  
         >  게시에서 사전 계산 파티션을 지원하지 않으면 논리적 레코드를 사용할 수 없습니다. 자세한 내용은 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md) 항목에서 사전 계산 파티션을 사용하기 위한 요구 사항을 참조하세요.  
   
-    -   이 값이 NULL이면 스냅숏 에이전트를 실행하여 게시에 대한 초기 스냅숏을 생성해야 합니다.  
+    -   이 값이 NULL이면 스냅샷 에이전트를 실행하여 게시에 대한 초기 스냅샷을 생성해야 합니다.  
   
 2.  논리적 레코드를 구성하는 아티클이 없으면 게시 데이터베이스의 게시자에서 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 을 실행합니다. 논리적 레코드에 대해 다음 충돌 감지 및 해결 옵션 중 하나를 지정합니다.  
   

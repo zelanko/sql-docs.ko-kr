@@ -1,5 +1,5 @@
 ---
-title: 성능, 스냅숏, 캐시(Reporting Services) | Microsoft Docs
+title: 성능, 스냅샷, 캐시(Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -20,7 +20,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103596"
 ---
-# <a name="performance-snapshots-caching-reporting-services"></a>성능, 스냅숏, 캐시(Reporting Services)
+# <a name="performance-snapshots-caching-reporting-services"></a>성능, 스냅샷, 캐시(Reporting Services)
   보고서 서버 성능은 하드웨어, 보고서에 액세스하는 동시 사용자 수, 보고서의 데이터 양, 출력 형식 등을 비롯한 여러 요소 조합의 영향을 받습니다. 설치와 관련된 성능 요소를 이해하고 원하는 결과를 생성하는 해결 방법을 찾으려면 기준선 데이터를 얻고 테스트를 실행해야 합니다. 도구 및 지침에 대한 자세한 내용은 MSDN의 [Reporting Services 성능 최적화](https://blogs.msdn.com/b/sqlcat/archive/2013/10/30/reporting-services-performance-and-optimization.aspx) 하 고 [Visual Studio 2005를 사용 하 여 SQL Server 2005 Reporting Services 보고서 서버에 부하 테스트를 수행할](https://go.microsoft.com/fwlink/?LinkID=77519)합니다.  
   
  고려해야 할 일반 원칙은 다음과 같습니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "66103596"
   
 -   모든 보고서가 느리게 처리되는 경우 여러 보고서 서버 인스턴스가 단일 보고서 서버 데이터베이스를 지원하는 스케일 아웃 배포를 사용해 보세요. 최상의 결과를 얻으려면 부하 분산 소프트웨어를 사용하여 배포에 요청을 균등하게 분산합니다.  
   
--   단일 보고서가 느리게 처리되는 중이며 보고서를 요청 시 실행해야 하는 경우 보고서 데이터 세트 쿼리를 튜닝합니다. 또한 캐시할 수 있는 공유 데이터 세트를 사용하거나 보고서를 캐시하거나 보고서를 스냅숏으로 실행하는 것을 고려할 수도 있습니다.  
+-   단일 보고서가 느리게 처리되는 중이며 보고서를 요청 시 실행해야 하는 경우 보고서 데이터 세트 쿼리를 튜닝합니다. 또한 캐시할 수 있는 공유 데이터 세트를 사용하거나 보고서를 캐시하거나 보고서를 스냅샷으로 실행하는 것을 고려할 수도 있습니다.  
   
 -   PDF로 렌더링할 때처럼 모든 보고서가 특정 형식에서 느리게 처리되는 경우 파일 공유 배달을 사용하거나 메모리를 추가하거나 다른 형식을 선택해 보십시오.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66103596"
  서버의 처리 부하를 추적하는 데 사용할 수 있는 성능 개체에 대해 설명합니다.  
   
  [보고서 처리 속성 설정](set-report-processing-properties.md)  
- 보고서가 요청 시 실행되거나 캐시에서 실행되거나 일정에 따라 보고서 스냅숏으로 실행되도록 구성하는 방법에 대해 설명합니다.  
+ 보고서가 요청 시 실행되거나 캐시에서 실행되거나 일정에 따라 보고서 스냅샷으로 실행되도록 구성하는 방법에 대해 설명합니다.  
   
  [보고서 서버 응용 프로그램을 위한 사용 가능한 메모리 구성](../report-server/configure-available-memory-for-report-server-applications.md)  
  기본 메모리 관리 동작을 재정의하는 방법에 대해 설명합니다.  

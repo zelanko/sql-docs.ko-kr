@@ -22,7 +22,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "68199224"
 ---
 # <a name="reinitialize-a-subscription"></a>구독 다시 초기화
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 구독을 다시 초기화하는 방법에 대해 설명합니다. 각 게시를 다시 초기화하도록 표시하여 다음 동기화 중에 새 스냅숏을 적용할 수 있습니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 구독을 다시 초기화하는 방법에 대해 설명합니다. 각 게시를 다시 초기화하도록 표시하여 다음 동기화 중에 새 스냅샷을 적용할 수 있습니다.  
   
  **항목 내용**  
   
@@ -40,17 +40,17 @@ ms.locfileid: "68199224"
 1.  게시에 대한 단일 구독이나 모든 구독을 다시 초기화하도록 *표시* 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **로컬 게시** 폴더와 **로컬 구독** 폴더에서 사용할 수 있는 **구독 다시 초기화** 대화 상자에서 다시 초기화할 구독을 표시합니다. 또한 **모든 구독** 탭 및 복제 모니터의 게시 노드에서 구독을 표시할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](monitor/start-the-replication-monitor.md)을 참조하세요. 구독을 다시 초기화하도록 표시할 때는 다음과 같은 옵션을 선택할 수 있습니다.  
   
      **현재 스냅숏 사용**  
-     다음에 배포 에이전트 또는 병합 에이전트가 실행될 때 현재 스냅숏을 구독자에 적용하려면 이 옵션을 선택합니다. 유효한 스냅숏이 없으면 이 옵션을 선택할 수 없습니다.  
+     다음에 배포 에이전트 또는 병합 에이전트가 실행될 때 현재 스냅샷을 구독자에 적용하려면 이 옵션을 선택합니다. 유효한 스냅샷이 없으면 이 옵션을 선택할 수 없습니다.  
   
      **새 스냅숏 사용**  
-     새 스냅숏으로 구독을 다시 초기화하려면 이 옵션을 선택합니다. 스냅숏 에이전트에 의해 스냅숏이 생성된 후에만 스냅숏을 구독자에 적용할 수 있습니다. 스냅숏 에이전트가 예약 실행되도록 설정한 경우에는 예약된 다음 스냅숏 에이전트가 실행될 때까지 구독이 다시 초기화되지 않습니다. 스냅숏 에이전트를 바로 시작하려면 **지금 새 스냅숏 생성** 을 선택합니다.  
+     새 스냅샷으로 구독을 다시 초기화하려면 이 옵션을 선택합니다. 스냅샷 에이전트에 의해 스냅샷이 생성된 후에만 스냅샷을 구독자에 적용할 수 있습니다. 스냅샷 에이전트가 예약 실행되도록 설정한 경우에는 예약된 다음 스냅샷 에이전트가 실행될 때까지 구독이 다시 초기화되지 않습니다. 스냅샷 에이전트를 바로 시작하려면 **지금 새 스냅샷 생성** 을 선택합니다.  
   
      **다시 초기화하기 전에 동기화되지 않은 변경 내용 업로드**  
-     병합 복제에 대해서만 사용할 수 있습니다. 구독자의 데이터를 스냅숏으로 덮어쓰기 전에 보류 중인 구독 데이터베이스의 변경 내용을 업로드하려면 이 옵션을 선택합니다.  
+     병합 복제에 대해서만 사용할 수 있습니다. 구독자의 데이터를 스냅샷으로 덮어쓰기 전에 보류 중인 구독 데이터베이스의 변경 내용을 업로드하려면 이 옵션을 선택합니다.  
   
      매개 변수가 있는 필터를 추가, 삭제 또는 변경할 경우 다시 초기화를 진행하는 동안에는 보류 중인 구독자의 변경 내용을 게시자로 업로드할 수 없습니다. 보류 중인 변경 내용을 업로드하려면 필터를 변경하기 전에 모든 구독을 동기화하세요.  
   
-2.  구독이 다음에 동기화될 때 다시 초기화됩니다. 배포 에이전트(트랜잭션 복제의 경우) 또는 병합 에이전트(병합 복제의 경우)는 최신 스냅숏을 다시 초기화하도록 표시된 구독이 있는 각 구독자에 적용합니다. 구독 동기화 방법은 [Synchronize a Push Subscription](synchronize-a-push-subscription.md) 및 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)대화 상자에서 다시 초기화할 구독을 표시합니다.  
+2.  구독이 다음에 동기화될 때 다시 초기화됩니다. 배포 에이전트(트랜잭션 복제의 경우) 또는 병합 에이전트(병합 복제의 경우)는 최신 스냅샷을 다시 초기화하도록 표시된 구독이 있는 각 구독자에 적용합니다. 구독 동기화 방법은 [Synchronize a Push Subscription](synchronize-a-push-subscription.md) 및 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md)대화 상자에서 다시 초기화할 구독을 표시합니다.  
   
 #### <a name="to-mark-a-single-push-or-pull-subscription-for-reinitialization-in-management-studio-at-the-publisher"></a>Management Studio에서 단일 밀어넣기 또는 끌어오기 구독을 다시 초기화하도록 표시하려면(게시자)  
   
@@ -162,7 +162,7 @@ ms.locfileid: "68199224"
      자세한 내용은 [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 ##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
- 각 게시를 다시 초기화하도록 표시하여 다음 동기화 중에 새 스냅숏을 적용할 수 있습니다. RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 구독을 다시 초기화할 수 있습니다. 사용되는 클래스는 구독이 속한 게시의 유형과 구독의 유형(밀어넣기 또는 끌어오기 구독)에 따라 다릅니다.  
+ 각 게시를 다시 초기화하도록 표시하여 다음 동기화 중에 새 스냅샷을 적용할 수 있습니다. RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 구독을 다시 초기화할 수 있습니다. 사용되는 클래스는 구독이 속한 게시의 유형과 구독의 유형(밀어넣기 또는 끌어오기 구독)에 따라 다릅니다.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대한 끌어오기 구독을 다시 초기화하려면  
   

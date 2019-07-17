@@ -27,7 +27,7 @@ ms.locfileid: "68016534"
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  지연 업데이트 트랜잭션 복제와 관련된 스냅숏이나 트랜잭션 밀어넣기 구독 또는 끌어오기 구독의 속성을 변경합니다. 끌어오기 구독에 다른 모든 유형의 속성을 변경 하려면 사용 하 여 [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)합니다. **sp_changesubscription** 게시 데이터베이스의 게시자에서 실행 됩니다.  
+  지연 업데이트 트랜잭션 복제와 관련된 스냅샷이나 트랜잭션 밀어넣기 구독 또는 끌어오기 구독의 속성을 변경합니다. 끌어오기 구독에 다른 모든 유형의 속성을 변경 하려면 사용 하 여 [sp_change_subscription_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)합니다. **sp_changesubscription** 게시 데이터베이스의 게시자에서 실행 됩니다.  
   
 > [!IMPORTANT]  
 >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  

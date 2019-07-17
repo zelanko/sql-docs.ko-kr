@@ -25,7 +25,7 @@ ms.locfileid: "68120212"
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  트랜잭션 또는 스냅숏 게시에 있는 아티클의 속성을 변경합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
+  트랜잭션 또는 스냅샷 게시에 있는 아티클의 속성을 변경합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -62,8 +62,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_table**||새 대상 테이블입니다.|  
 |**destination_owner**||대상 개체 소유자의 이름입니다.|  
 |**filter**||테이블을 필터링(행 필터링)하는 데 사용할 새 저장 프로시저입니다. 기본값은 NULL입니다. 피어 투 피어 복제 내의 게시에 대해서는 변경할 수 없습니다.|  
-|**fire_triggers_on_snapshot**|**true**|초기 스냅숏을 적용할 때 복제된 사용자 트리거를 실행합니다.<br /><br /> 참고: 복제 된 트리거에 대 한 비트 마스크 값 *schema_option* 값이 있어야 **0x100**합니다.|  
-||**false**|초기 스냅숏을 적용할 때 복제된 사용자 트리거를 실행하지 않습니다.|  
+|**fire_triggers_on_snapshot**|**true**|초기 스냅샷을 적용할 때 복제된 사용자 트리거를 실행합니다.<br /><br /> 참고: 복제 된 트리거에 대 한 비트 마스크 값 *schema_option* 값이 있어야 **0x100**합니다.|  
+||**false**|초기 스냅샷을 적용할 때 복제된 사용자 트리거를 실행하지 않습니다.|  
 |**identity_range**||구독자에 할당된 ID 범위의 크기를 제어합니다. 피어 투 피어 복제의 경우에는 지원되지 않습니다.|  
 |**ins_cmd**||실행할 INSERT 문입니다. 그렇지 않은 경우에는 로그에서 만들어집니다.|  
 |**pre_creation_cmd**||동기화를 적용하기 전에 대상 테이블을 제거, 삭제 또는 자를 수 있는 사전 작성 명령입니다.|  
@@ -73,7 +73,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**truncate**|대상 테이블을 자릅니다.|  
 |**pub_identity_range**||구독자에 할당된 ID 범위의 크기를 제어합니다. 피어 투 피어 복제의 경우에는 지원되지 않습니다.|  
 |**schema_option**||지정한 아티클에 대한 스키마 생성 옵션의 비트맵을 지정합니다. *schema_option* 됩니다 **binary (8)** 합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 주의 섹션을 참조하십시오.|  
-||**0x00**|스냅숏 에이전트가 스크립팅을 사용하지 않습니다.|  
+||**0x00**|스냅샷 에이전트가 스크립팅을 사용하지 않습니다.|  
 ||**0x01**|개체를 만듭니다(CREATE TABLE, CREATE PROCEDURE 등).|  
 ||**0x02**|정의된 경우 아티클에 대한 변경 내용을 전파하는 저장 프로시저를 생성합니다.|  
 ||**0x04**|IDENTITY 속성을 사용하여 ID 열이 스크립팅됩니다.|  
@@ -109,7 +109,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x100000000**|에 지정 된 경우 FILESTREAM 특성을 복제 하려면이 옵션을 사용 **varbinary (max)** 열입니다. 테이블을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 구독자에 복제할 경우에는 이 옵션을 지정하지 마십시오. FILESTREAM 열이 있는 테이블을 복제 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 이 스키마 옵션을 설정 하는 방법에 관계 없이 구독자 지원 되지 않습니다.<br /><br /> 관련된 옵션을 참조 하세요 **0x800000000**합니다.|  
 ||**0x200000000**|날짜 및 시간 데이터 형식 변환 (**날짜**, **시간**합니다 **datetimeoffset**, 및 **datetime2**)에서 도입 된 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전 버전의 지원 되는 데이터 형식으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다.|  
 ||**0x400000000**|데이터 및 인덱스에 대한 압축 옵션을 복제합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.|  
-||**0x800000000**|FILESTREAM 데이터를 구독자에서 고유한 파일 그룹에 저장하려면 이 옵션을 설정합니다. 이 옵션을 설정하지 않으면 FILESTREAM 데이터는 기본 파일 그룹에 저장됩니다. 복제 기능에서는 파일 그룹을 만들지 않으므로 이 옵션을 설정할 경우 구독자에서 스냅숏을 적용하기 전에 파일 그룹을 만들어야 합니다. 스냅숏을 적용 하기 전에 개체를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [하기 전에 스크립트 실행 및 스냅숏 적용 전후](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)합니다.<br /><br /> 관련된 옵션을 참조 하세요 **0x100000000**합니다.|  
+||**0x800000000**|FILESTREAM 데이터를 구독자에서 고유한 파일 그룹에 저장하려면 이 옵션을 설정합니다. 이 옵션을 설정하지 않으면 FILESTREAM 데이터는 기본 파일 그룹에 저장됩니다. 복제 기능에서는 파일 그룹을 만들지 않으므로 이 옵션을 설정할 경우 구독자에서 스냅샷을 적용하기 전에 파일 그룹을 만들어야 합니다. 스냅숏을 적용 하기 전에 개체를 만드는 방법에 대 한 자세한 내용은 참조 하세요. [하기 전에 스크립트 실행 및 스냅숏 적용 전후](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)합니다.<br /><br /> 관련된 옵션을 참조 하세요 **0x100000000**합니다.|  
 ||**0x1000000000**|공용 언어 런타임 (CLR) 사용자 정의 형식 (Udt) 8000 바이트 보다 큰 변환 **varbinary (max)** 실행 하는 구독자에 게 UDT 형식의 열을 복제할 수 있도록 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]입니다.|  
 ||**0x2000000000**|변환 된 **hierarchyid** 데이터 형식입니다 **varbinary (max)** 있도록 형식의 열 **hierarchyid** 실행 하는 구독자에 복제할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. 사용 하는 방법에 대 한 자세한 내용은 **hierarchyid** 복제 된 테이블의 열 참조 [hierarchyid &#40;TRANSACT-SQL&#41;](../../t-sql/data-types/hierarchyid-data-type-method-reference.md).|  
 ||**0x4000000000**|테이블의 필터링된 인덱스를 복제합니다. 필터링 된 인덱스에 대 한 자세한 내용은 참조 하세요. [필터링 된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)합니다.|  
@@ -143,11 +143,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
   
- **0** 는 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅숏을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
+ **0** 는 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅샷을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
  **1** 은 아티클의 변경이 잘못 스냅숏이 무효화 될 수 있습니다 새 스냅숏이 필요한 기존 구독이 있는 경우 기존 스냅숏이 되지 않음으로 표시 하 고 새 스냅숏을 생성할 권한을 부여 되도록 지정 합니다.  
   
- 변경 시 새 스냅숏의 생성을 필요로 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
+ 변경 시 새 스냅샷의 생성을 필요로 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
 `[ @force_reinit_subscription = ]force_reinit_subscription_` 이 저장된 프로시저가 수행한 동작 기존 구독을 다시 초기화에 필요할 수 있음을 승인 합니다. *force_reinit_subscription* 되는 **비트** 이며 기본값은 **0**합니다.  
   
@@ -212,7 +212,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 |아티클 유형|복제 유형||  
 |------------------|----------------------|------|  
-||트랜잭션|스냅숏|  
+||트랜잭션|스냅샷|  
 |**logbased**|모든 옵션|모든 옵션 이지만 **0x02**|  
 |**logbased manualfilter**|모든 옵션|모든 옵션 이지만 **0x02**|  
 |**logbased manualview**|모든 옵션|모든 옵션 이지만 **0x02**|  

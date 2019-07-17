@@ -84,7 +84,7 @@ ms.locfileid: "62665378"
   
 -   구독 옵션  
   
--   스냅숏 옵션  
+-   스냅샷 옵션  
   
 -   에이전트 매개 변수  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62665378"
  트랜잭션 복제 및 병합 복제는 보존 기간을 사용하여 각각 트랜잭션이 배포 데이터베이스에 저장되는 기간과 구독이 동기화되어야 하는 빈도를 결정합니다. 설정을 조정해야 할지 여부를 판단하기 위해 토폴로지를 모니터링하는 경우에는 초기 기본 설정을 사용하는 것이 좋습니다. 예를 들어 병합 복제의 경우 게시 보존 기간(기본값: 14일)은 시스템 테이블에 메타데이터를 저장하는 기간을 결정합니다. 구독이 항상 5일 이내에 동기화되는 경우 설정을 낮게 조정하면 메타데이터가 줄어들고 성능이 향상될 수 있습니다. 자세한 내용은 [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)을(를) 참조하세요.  
   
 ## <a name="understand-how-to-modify-publications-if-application-requirements-change"></a>애플리케이션 요구 사항이 변경된 경우 게시 수정 방법 이해  
- 게시를 만든 후에 아티클을 추가 또는 삭제하거나 게시 및 아티클 속성을 변경해야 할 수 있습니다. 게시가 생성된 후에는 대부분의 변경이 허용되지만 일부 경우에 게시에 대한 스냅숏을 새로 생성하거나 게시에 대한 구독을 다시 초기화해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) 및 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
+ 게시를 만든 후에 아티클을 추가 또는 삭제하거나 게시 및 아티클 속성을 변경해야 할 수 있습니다. 게시가 생성된 후에는 대부분의 변경이 허용되지만 일부 경우에 게시에 대한 스냅샷을 새로 생성하거나 게시에 대한 구독을 다시 초기화해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) 및 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ## <a name="understand-how-to-make-schema-changes-if-application-requirements-change"></a>애플리케이션 요구 사항이 변경된 경우 스키마 변경 방법 이해  
  _대부분의 경우 애플리케이션을 제작한 후에 스키마를 변경해야 합니다. 복제 토폴로지에서는 이러한 변경 내용을 모든 구독자에 전파해야 하는 경우가 많습니다. 복제는 게시된 개체에 대한 다양한 스키마 변경을 지원합니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자에 게시된 개체에 대해 다음 스키마 변경을 수행하면 기본적으로 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 변경 내용이 전파됩니다.  

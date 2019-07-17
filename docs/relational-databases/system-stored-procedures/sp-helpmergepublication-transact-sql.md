@@ -75,21 +75,21 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_anonymous|**int**|지정된 게시에 대해 익명 구독을 만들 수 있는지 여부를 나타냅니다. **0** 익명 구독이 허용 되지 않음을 의미 합니다.|  
 |centralized_conflicts|**int**|지정한 게시자에 충돌 레코드가 저장되는지 여부를 나타냅니다.<br /><br /> **0** = 충돌 레코드가 충돌을 일으킨 구독자 및 게시자 양쪽 모두에서 저장 됩니다.<br /><br /> **1** = 모든 충돌 레코드가 게시자에 저장 됩니다.|  
 |priority|**float(8)**|루프 백 구독의 우선 순위입니다.|  
-|snapshot_ready|**tinyint**|해당 게시의 스냅숏이 준비되었는지 여부를 나타냅니다.<br /><br /> **0** = 스냅숏을 사용할 준비가 되었습니다.<br /><br /> **1** = 스냅숏 사용에 대 한 준비 되지 않았습니다.|  
+|snapshot_ready|**tinyint**|해당 게시의 스냅샷이 준비되었는지 여부를 나타냅니다.<br /><br /> **0** = 스냅숏을 사용할 준비가 되었습니다.<br /><br /> **1** = 스냅숏 사용에 대 한 준비 되지 않았습니다.|  
 |publication_type|**int**|게시 유형입니다.<br /><br /> **0** = 스냅숏.<br /><br /> **1** = 트랜잭션.<br /><br /> **2** = 병합 합니다.|  
 |pubid|**uniqueidentifier**|해당 게시의 고유 식별자입니다.|  
-|snapshot_jobid|**binary(16)**|스냅숏 에이전트의 작업 ID입니다. 스냅숏 작업에 대 한 항목을 가져오려고 합니다 [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) 시스템 테이블에이 16 진수 값을 변환 해야 **uniqueidentifier**합니다.|  
+|snapshot_jobid|**binary(16)**|스냅샷 에이전트의 작업 ID입니다. 스냅숏 작업에 대 한 항목을 가져오려고 합니다 [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) 시스템 테이블에이 16 진수 값을 변환 해야 **uniqueidentifier**합니다.|  
 |enabled_for_internet|**int**|인터넷에서 게시를 사용할 수 있는지 여부를 나타냅니다. 하는 경우 **1**, 게시용 동기화 파일이 `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` 디렉터리입니다. 사용자가 FTP(파일 전송 프로토콜) 디렉터리를 만들어야 합니다. 하는 경우 **0**를 인터넷 액세스용는 게시가 활성화 되지 않았습니다.|  
 |dynamic_filter|**int**|매개 변수가 있는 행 필터가 사용되는지 여부를 나타냅니다. **0** 의미 매개 변수가 있는 행 필터가 사용 되지 않습니다.|  
 |has_subscription|**bit**|게시에 구독이 있는지 여부를 나타냅니다. **0** 은 현재이 게시에 구독이 없음을 의미 합니다.|  
-|snapshot_in_default_folder|**bit**|스냅숏 파일을 기본 폴더에 저장하는지 여부를 지정합니다.<br /><br /> 하는 경우 **1**, 스냅숏 파일이 기본 폴더에서 찾을 수 있습니다.<br /><br /> 하는 경우 **0**, 스냅숏 파일에서 지정한 대체 위치에 저장 됩니다 **alt_snapshot_folder**합니다. 대체 위치는 다른 서버, 네트워크 드라이브 또는 이동식 미디어(예, CD-ROM 또는 이동식 디스크)가 될 수 있습니다. 또한 구독자가 나중에 검색할 수 있도록 FTP 사이트에 스냅숏 파일을 저장할 수도 있습니다.<br /><br /> 참고: 이 매개 변수를 true의 위치를 아직 합니다 **alt_snapshot_folder** 매개 변수입니다. 이 경우 스냅숏 파일은 기본 위치와 대체 위치에 모두 저장됩니다.|  
-|alt_snapshot_folder|**nvarchar(255)**|스냅숏의 대체 폴더 위치를 지정합니다.|  
+|snapshot_in_default_folder|**bit**|스냅샷 파일을 기본 폴더에 저장하는지 여부를 지정합니다.<br /><br /> 하는 경우 **1**, 스냅숏 파일이 기본 폴더에서 찾을 수 있습니다.<br /><br /> 하는 경우 **0**, 스냅숏 파일에서 지정한 대체 위치에 저장 됩니다 **alt_snapshot_folder**합니다. 대체 위치는 다른 서버, 네트워크 드라이브 또는 이동식 미디어(예, CD-ROM 또는 이동식 디스크)가 될 수 있습니다. 또한 구독자가 나중에 검색할 수 있도록 FTP 사이트에 스냅샷 파일을 저장할 수도 있습니다.<br /><br /> 참고: 이 매개 변수를 true의 위치를 아직 합니다 **alt_snapshot_folder** 매개 변수입니다. 이 경우 스냅샷 파일은 기본 위치와 대체 위치에 모두 저장됩니다.|  
+|alt_snapshot_folder|**nvarchar(255)**|스냅샷의 대체 폴더 위치를 지정합니다.|  
 |pre_snapshot_script|**nvarchar(255)**|에 대 한 포인터를 지정 합니다는 **.sql** 전에 복제 된 개체의 병합 에이전트가 실행 되는 파일을 구독자에서 스냅숏을 적용할 때 스크립트입니다.|  
 |post_snapshot_script|**nvarchar(255)**|에 대 한 포인터를 지정 된 **.sql** 병합 에이전트가 실행 하는 모든 다른 파일 복제 된 개체 스크립트 및 데이터는 초기 동기화 동안 적용 된 합니다.|  
 |compress_snapshot|**bit**|지정에 기록 되는 스냅숏 합니다 **alt_snapshot_folder** 위치에 압축을 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식으로.|  
-|ftp_address|**sysname**|배포자용 FTP 서비스의 네트워크 주소입니다. 병합 에이전트가 선택할 게시 스냅숏 파일의 위치를 지정합니다.|  
-|ftp_port|**int**|배포자용 FTP 서비스의 포트 번호입니다. **ftp_port** 의 기본값은 **21**합니다. 병합 에이전트가 선택할 게시 스냅숏 파일의 위치를 지정합니다.|  
-|ftp_subdirectory|**nvarchar(255)**|FTP를 사용하여 스냅숏을 배달할 때 배포 에이전트에서 스냅숏 파일을 선택할 수 있는 위치를 지정합니다.|  
+|ftp_address|**sysname**|배포자용 FTP 서비스의 네트워크 주소입니다. 병합 에이전트가 선택할 게시 스냅샷 파일의 위치를 지정합니다.|  
+|ftp_port|**int**|배포자용 FTP 서비스의 포트 번호입니다. **ftp_port** 의 기본값은 **21**합니다. 병합 에이전트가 선택할 게시 스냅샷 파일의 위치를 지정합니다.|  
+|ftp_subdirectory|**nvarchar(255)**|FTP를 사용하여 스냅샷을 배달할 때 배포 에이전트에서 스냅샷 파일을 선택할 수 있는 위치를 지정합니다.|  
 |ftp_login|**sysname**|FTP 서비스 연결에 사용되는 사용자 이름입니다.|  
 |conflict_retention|**int**|충돌을 보존할 보존 기간을 일 수로 지정합니다. 지정한 일 수가 지나면 충돌 행은 충돌 테이블에서 제거됩니다.|  
 |keep_partition_changes|**int**|해당 게시에 대해 동기화가 최적화되는지 여부를 지정합니다. **keep_partition_changes** 의 기본값은 **0**합니다. 값이 **0** 동기화가 최적화 되지 않으며 모든 구독자에 게 보낸 파티션은 파티션에서 데이터가 변경 될 때 확인 됩니다.<br /><br /> **1** 동기화가 최적화 하 고 변경 된 파티션에 행을 가진 구독자만 영향을 받는 함을 의미 합니다.<br /><br /> 참고: 병합 게시는 기본적으로이 옵션 보다 높은 수준의 최적화를 제공 하는 사전 계산된 파티션을 사용 합니다. 자세한 내용은 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) 하 고 [사전 계산 파티션으로 매개 변수가 있는 필터 성능 최적화](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)합니다.|  
@@ -99,12 +99,12 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |backward_comp_level|**int**|데이터베이스 호환성 수준으로서 다음 값 중 하나일 수 있습니다.<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP1<br /><br /> **90** = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] SP2<br /><br /> **100** = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_activedirectory|**bit**|게시 정보가 Active Directory에 게시되는지 여부를 지정합니다. 값이 **0** 게시 정보를 Active Directory에서 사용할 수 없는 것을 의미 합니다.<br /><br /> 이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해서만 지원됩니다. 더 이상 Active Directory에 게시 정보를 추가할 수 없습니다.|  
 |max_concurrent_merge|**int**|동시 병합 프로세스의 수입니다. 하는 경우 **0**, 지정된 된 시간에 실행 중인 동시 병합 프로세스 수에 대 한 제한은 없습니다.|  
-|max_concurrent_dynamic_snapshots|**int**|병합 게시에 대해 실행할 수 있는 필터링된 동시 데이터 스냅숏 세션의 최대 수입니다. 하는 경우 **0**, 언제 든 지 게시에 대해 동시에 실행할 수 있는 필터링 된 동시 데이터 스냅숏 세션의 최대 수에 대 한 제한은 없습니다.|  
+|max_concurrent_dynamic_snapshots|**int**|병합 게시에 대해 실행할 수 있는 필터링된 동시 데이터 스냅샷 세션의 최대 수입니다. 하는 경우 **0**, 언제 든 지 게시에 대해 동시에 실행할 수 있는 필터링 된 동시 데이터 스냅숏 세션의 최대 수에 대 한 제한은 없습니다.|  
 |use_partition_groups|**int**|사전 계산 파티션이 사용되는지 여부를 나타냅니다. 값이 **1** 즉 사전 계산 파티션이 사용 됩니다.|  
 |num_of_articles|**int**|게시의 아티클 수입니다.|  
 |replicate_ddl|**int**|게시된 테이블의 스키마 변경을 복제하는지 여부를 지정합니다. 값이 **1** 스키마 변경 복제를 의미 합니다.|  
 |publication_number|**smallint**|해당 게시에 할당된 번호입니다.|  
-|allow_subscriber_initiated_snapshot|**bit**|구독자가 필터링된 데이터 스냅숏 생성 프로세스를 시작할 수 있는지 여부를 나타냅니다. 값이 **1** 구독자가 스냅숏 프로세스를 시작할 수 있음을 의미 합니다.|  
+|allow_subscriber_initiated_snapshot|**bit**|구독자가 필터링된 데이터 스냅샷 생성 프로세스를 시작할 수 있는지 여부를 나타냅니다. 값이 **1** 구독자가 스냅숏 프로세스를 시작할 수 있음을 의미 합니다.|  
 |allow_web_synchronization|**bit**|웹 동기화에 게시를 사용할 수 있는지 여부를 나타냅니다. 값이 **1** 웹 동기화는 사용할 수 있음을 의미 합니다.|  
 |web_synchronization_url|**nvarchar(500)**|웹 동기화에 사용되는 인터넷 URL입니다.|  
 |allow_partition_realignment|**bit**|게시자에서 행을 수정하여 파티션이 변경되는 경우 구독자에 삭제 내용을 보낼지 여부를 나타냅니다. 값이 **1** 구독자로 삭제 보냄을 의미 합니다.  자세한 내용은 [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)합니다.|  

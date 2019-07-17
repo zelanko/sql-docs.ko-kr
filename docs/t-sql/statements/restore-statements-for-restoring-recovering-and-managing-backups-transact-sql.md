@@ -42,7 +42,7 @@ ms.locfileid: "65947119"
   
 |인수를 제거합니다.|설명|  
 |---------------|-----------------|  
-|[RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|BACKUP 명령을 사용하여 수행한 백업으로부터 데이터베이스를 복원 및 복구하는 데 사용되는 RESTORE DATABASE 및 RESTORE LOG Transact-SQL 문에 대해 설명합니다. RESTORE DATABASE는 모든 복구 모델에서 데이터베이스에 사용됩니다. RESTORE LOG는 전체 복구 모델 및 대량 로그 복구 모델에서만 사용됩니다. RESTORE DATABASE를 사용하여 데이터베이스를 데이터베이스 스냅숏으로 되돌릴 수도 있습니다.|  
+|[RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)|BACKUP 명령을 사용하여 수행한 백업으로부터 데이터베이스를 복원 및 복구하는 데 사용되는 RESTORE DATABASE 및 RESTORE LOG Transact-SQL 문에 대해 설명합니다. RESTORE DATABASE는 모든 복구 모델에서 데이터베이스에 사용됩니다. RESTORE LOG는 전체 복구 모델 및 대량 로그 복구 모델에서만 사용됩니다. RESTORE DATABASE를 사용하여 데이터베이스를 데이터베이스 스냅샷으로 되돌릴 수도 있습니다.|  
 |[RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)|RESTORE 문 및 연결된 보조 명령문 세트의 "Syntax" 섹션에 설명된 다음 인수를 문서화합니다. RESTORE FILELISTONLY, RESTORE HEADERONLY, RESTORE LABELONLY, RESTORE REWINDONLY 및 RESTORE VERIFYONLY. 대부분의 인수는 이러한 6개의 문에 사용되는 경우에만 지원됩니다. 각 인수에 대한 지원은 인수 설명에 나와 있습니다.|  
 |[RESTORE FILELISTONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)|RESTORE FILELISTONLY Transact-SQL 문에 대해 설명합니다. 이 문은 백업 세트에 포함된 데이터베이스와 로그 파일의 목록이 포함된 결과 집합을 반환하는 데 사용됩니다.|  
 |[RESTORE HEADERONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)|RESTORE HEADERONLY Transact-SQL 문에 대해 설명합니다. 이 문은 특정 백업 장치에서 모든 백업 세트에 대한 백업 헤더 정보가 모두 포함된 결과 집합을 반환하는 데 사용됩니다.|  

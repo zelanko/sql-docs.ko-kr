@@ -45,7 +45,7 @@ USE { database_name }
   
 ## <a name="arguments"></a>인수  
  *database_name*  
- 사용자 컨텍스트가 전환되는 데이터베이스 또는 데이터베이스 스냅숏의 이름입니다. 데이터베이스와 데이터베이스 스냅숏 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
+ 사용자 컨텍스트가 전환되는 데이터베이스 또는 데이터베이스 스냅샷의 이름입니다. 데이터베이스와 데이터베이스 스냅샷 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 데이터베이스 매개 변수는 현재 데이터베이스만 참조할 수 있습니다. 현재 데이터베이스가 아닌 데이터베이스를 제공할 경우 `USE` 문은 데이터베이스 사이를 전환하지 않으며 오류 코드 40508이 반환됩니다. 데이터베이스를 변경하려면 데이터베이스에 직접 연결해야 합니다. USE 문은 이 페이지 맨 위에 SQL Database에 해당하지 않는다고 표기되어 있습니다. 일괄 처리에 `USE` 문이 포함될 수는 있지만 아무 것도 수행되지 않습니다.
   

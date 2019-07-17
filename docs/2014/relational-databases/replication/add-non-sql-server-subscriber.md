@@ -20,7 +20,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676925"
 ---
 # <a name="add-non-sql-server-subscriber"></a>SQL Server 이외 구독자 추가
-  복제에서는 Oracle 및 IBM DB2 구독자의 스냅숏 및 트랜잭션 게시에 대한 밀어넣기 구독 생성을 지원합니다.  
+  복제에서는 Oracle 및 IBM DB2 구독자의 스냅샷 및 트랜잭션 게시에 대한 밀어넣기 구독 생성을 지원합니다.  
   
 ## <a name="options"></a>변수  
  **추가할 구독자 유형**  

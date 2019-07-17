@@ -58,9 +58,9 @@ ms.locfileid: "68088588"
 |**artgenupdcmd**|**nvarchar(510)**|사용한 호출 구문에 따라 기본 키, 업데이트된 열 또는 전체 열 목록을 포함할 수 있는 UPDATE 명령 템플릿입니다.|  
 |**artpartialupdcmd**|**nvarchar(510)**|기본 키와 업데이트된 열을 포함하는 부분 UPDATE 명령 템플릿입니다.|  
 |**artupdtxtcmd**|**nvarchar(510)**|기본 키와 업데이트된 열을 포함하는 UPDATETEXT 명령 텍스트입니다.|  
-|**artgenins2cmd**|**nvarchar(510)**|동시 스냅숏 처리 중 아티클을 조정하는 데 사용된 INSERT 명령 템플릿입니다.|  
-|**artgendel2cmd**|**nvarchar(510)**|동시 스냅숏 처리 중 아티클을 조정하는 데 사용된 DELETE 명령 템플릿입니다.|  
-|**fInReconcile**|**tinyint**|동시 스냅숏 처리 중 아티클이 현재 조정되고 있는지 여부를 나타냅니다.|  
+|**artgenins2cmd**|**nvarchar(510)**|동시 스냅샷 처리 중 아티클을 조정하는 데 사용된 INSERT 명령 템플릿입니다.|  
+|**artgendel2cmd**|**nvarchar(510)**|동시 스냅샷 처리 중 아티클을 조정하는 데 사용된 DELETE 명령 템플릿입니다.|  
+|**fInReconcile**|**tinyint**|동시 스냅샷 처리 중 아티클이 현재 조정되고 있는지 여부를 나타냅니다.|  
 |**fPubAllowUpdate**|**tinyint**|게시가 업데이트 구독을 허용하는지 여부를 나타냅니다.|  
 |**intPublicationOptions**|**bigint**|추가 게시 옵션을 지정하는 비트맵입니다. 이때 비트 옵션 값은 다음과 같습니다.<br /><br /> **0x1** -피어 투 피어 복제에 설정할 수 있습니다.<br /><br /> **0x2** -로컬 변경 내용만 게시 합니다.<br /><br /> **0x4** -사용에 대 한 SQL Server 이외 구독자입니다.|  
   

@@ -46,16 +46,16 @@ ms.locfileid: "68139719"
 |**ftp_port**|**int**|배포자용 FTP 서비스의 포트 번호입니다.|  
 |**ftp_login**|**sysname**|FTP 서비스에 연결하는 데 사용되는 사용자 이름입니다.|  
 |**ftp_password**|**nvarchar(524)**|FTP 서비스에 연결하는 데 사용되는 사용자 암호입니다.|  
-|**alt_snapshot_folder**|**nvarchar(255)**|스냅숏의 대체 폴더 위치를 지정합니다.|  
+|**alt_snapshot_folder**|**nvarchar(255)**|스냅샷의 대체 폴더 위치를 지정합니다.|  
 |**working_directory**|**nvarchar(255)**|데이터 및 스키마 파일을 저장하는 데 사용되는 작업 디렉터리의 이름입니다.|  
-|**use_ftp**|**bit**|일반 프로토콜 대신 FTP를 사용하여 스냅숏을 검색하도록 지정합니다. 하는 경우 **1**, FTP를 사용 합니다.|  
+|**use_ftp**|**bit**|일반 프로토콜 대신 FTP를 사용하여 스냅샷을 검색하도록 지정합니다. 하는 경우 **1**, FTP를 사용 합니다.|  
 |**dts_package_name**|**sysname**|DTS(데이터 변환 서비스) 패키지의 이름을 지정합니다.|  
 |**dts_package_password**|**nvarchar(524)**|패키지 암호를 지정합니다.|  
 |**dts_package_location**|**int**|DTS 패키지가 저장된 위치입니다.|  
 |**enabled_for_syncmgr**|**bit**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 동기화 관리자를 통해 구독을 동기화할 수 있는지 여부를 지정합니다.<br /><br /> **0** = 구독이 동기화 관리자에 등록 되지 않았습니다.<br /><br /> **1** = 구독이 동기화 관리자를 사용 하 여 등록 되며 및 시작 하지 않고 동기화 할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.|  
 |**offload_agent**|**bit**|에이전트를 원격으로 활성화할 수 있는지 여부를 지정합니다. 하는 경우 **0**, 에이전트를 원격으로 활성화할 수 없습니다.|  
 |**offload_server**|**sysname**|원격 활성화에 사용하는 서버의 네트워크 이름을 지정합니다.|  
-|**dynamic_snapshot_location**|**nvarchar(255)**|스냅숏 파일을 저장한 폴더의 경로를 지정합니다.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|스냅샷 파일을 저장한 폴더의 경로를 지정합니다.|  
 |**use_web_sync**|**bit**|HTTP를 통해 구독을 동기화할 수 있는지 여부를 지정합니다. 값이 **1** 이 기능을 사용 하는 것을 의미 합니다.|  
 |**internet_url**|**nvarchar(260)**|웹 동기화에 대한 복제 수신기의 위치를 나타내는 URL입니다.|  
 |**internet_login**|**sysname**|병합 에이전트가 사용 하 여 웹 동기화를 호스팅하는 웹 서버에 연결할 때 사용 하는 로그인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 합니다.|  

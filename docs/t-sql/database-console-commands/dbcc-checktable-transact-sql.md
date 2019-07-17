@@ -101,7 +101,7 @@ NO_INFOMSGS
  모든 정보 메시지를 표시하지 않습니다.  
     
 TABLOCK  
- DBCC CHECKTABLE이 내부 데이터베이스 스냅숏 대신 공유 테이블 잠금을 가져오도록 합니다. 테이블의 부하가 큰 상태에서 TABLOCK을 사용하면 DBCC CHECKTABLE의 실행 속도를 빠르게 할 수 있지만 DBCC CHECKTABLE이 실행되는 동안 테이블에서 사용할 수 있는 동시성은 줄어듭니다.  
+ DBCC CHECKTABLE이 내부 데이터베이스 스냅샷 대신 공유 테이블 잠금을 가져오도록 합니다. 테이블의 부하가 큰 상태에서 TABLOCK을 사용하면 DBCC CHECKTABLE의 실행 속도를 빠르게 할 수 있지만 DBCC CHECKTABLE이 실행되는 동안 테이블에서 사용할 수 있는 동시성은 줄어듭니다.  
     
 ESTIMATEONLY  
  DBCC CHECKTABLE 실행에 필요한 tempdb 공간의 예상 크기와 지정된 다른 옵션을 모두 표시합니다.  
@@ -160,12 +160,12 @@ DBCC CHECKTABLE은 지정한 테이블에 대해 다음 사항을 검사합니�
  **데이터베이스의 호환성 수준에 대한 자세한 내용**    
 [데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)    
     
-## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅숏    
-DBCC CHECKTABLE은 이러한 검사를 수행하기 위해 확보해야 하는 트랜잭션 일관성을 제공하기 위해 내부 데이터베이스 스냅숏을 사용합니다. 자세한 내용은 [데이터베이스 스냅숏의 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅숏 사용법" 섹션을 참조하세요.
-스냅숏을 만들 수 없거나 TABLOCK이 지정된 경우 DBCC CHECKTABLE은 공유 테이블 잠금을 획득하여 필요한 일관성을 확보합니다.
+## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅샷    
+DBCC CHECKTABLE은 이러한 검사를 수행하기 위해 확보해야 하는 트랜잭션 일관성을 제공하기 위해 내부 데이터베이스 스냅샷을 사용합니다. 자세한 내용은 [데이터베이스 스냅숏의 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅숏 사용법" 섹션을 참조하세요.
+스냅샷을 만들 수 없거나 TABLOCK이 지정된 경우 DBCC CHECKTABLE은 공유 테이블 잠금을 획득하여 필요한 일관성을 확보합니다.
     
 > [!NOTE]    
-> DBCC CHECKTABLE이 tempdb에 대해 실행되는 경우 공유 테이블 잠금을 반드시 획득해야 합니다. 이것은 성능상의 이유로 tempdb의 데이터베이스 스냅숏을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다.    
+> DBCC CHECKTABLE이 tempdb에 대해 실행되는 경우 공유 테이블 잠금을 반드시 획득해야 합니다. 이것은 성능상의 이유로 tempdb의 데이터베이스 스냅샷을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다.    
     
 ## <a name="checking-and-repairing-filestream-data"></a>FILESTREAM 데이터 검사 및 복구    
 데이터베이스 및 테이블에 대해 FILESTREAM을 사용하는 경우 선택적으로 파일 시스템에 **varbinary(max)** BLOB(Binary Large Object)를 저장할 수 있습니다. 파일 시스템에 BLOB을 저장하는 테이블에 대해 DBCC CHECKTABLE을 사용하면 DBCC는 파일 시스템과 데이터베이스 사이의 연결 수준 일관성을 검사합니다.
@@ -222,7 +222,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
     
 ## <a name="examples"></a>예    
     
-### <a name="a-checking-a-specific-table"></a>1. 특정 테이블 검사    
+### <a name="a-checking-a-specific-table"></a>1\. 특정 테이블 검사    
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Employee`테이블에 대한 데이터 페이지 무결성을 검사합니다.
     
 ```sql    
@@ -230,7 +230,7 @@ DBCC CHECKTABLE ('HumanResources.Employee');
 GO    
 ```    
     
-### <a name="b-performing-a-low-overhead-check-of-the-table"></a>2. 테이블에 오버헤드가 적은 검사 수행    
+### <a name="b-performing-a-low-overhead-check-of-the-table"></a>2\. 테이블에 오버헤드가 적은 검사 수행    
  다음 예에서는 `Employee` 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블에 오버헤드가 적은 검사를 수행합니다.    
     
 ```sql    

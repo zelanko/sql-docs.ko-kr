@@ -76,7 +76,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**operator_id_paged**|**int**|작업이 완료되었을 때 호출기를 통해 알림을 받는 운영자의 ID입니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 프로시저는 작업의 현재 상태에 대한 스냅숏을 제공합니다. 반환된 결과는 요청을 처리하는 당시의 정보를 나타냅니다.  
+ 이 프로시저는 작업의 현재 상태에 대한 스냅샷을 제공합니다. 반환된 결과는 요청을 처리하는 당시의 정보를 나타냅니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 에이전트 서비스가 시작될 때마다 세션 ID를 만듭니다. 세션 id를 테이블에 저장 됩니다 **msdb.dbo.syssessions**합니다.  
   

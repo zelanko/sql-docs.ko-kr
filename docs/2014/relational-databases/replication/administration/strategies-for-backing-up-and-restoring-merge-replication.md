@@ -63,11 +63,11 @@ ms.locfileid: "62688912"
 ### <a name="reinitializing-all-subscriptions"></a>모든 구독 다시 초기화  
  모든 구독을 다시 초기화하면 모든 구독자가 복원된 게시 데이터베이스와 일관된 상태로 변합니다. 이러한 접근 방법은 토폴로지 전체를 지정된 게시 데이터베이스 백업에 나타난 이전 상태로 되돌리려는 경우 사용합니다. 예를 들어 잘못 수행된 일괄 처리 작업을 복구하기 위한 메커니즘으로 게시 데이터베이스를 이전 시점으로 복원하는 경우 모든 구독을 다시 초기화할 수 있습니다.  
   
- 이 방법을 선택하는 경우 게시 데이터베이스를 복원한 다음 다시 초기화된 구독자로 배달할 새 스냅숏을 즉시 만듭니다.  
+ 이 방법을 선택하는 경우 게시 데이터베이스를 복원한 다음 다시 초기화된 구독자로 배달할 새 스냅샷을 즉시 만듭니다.  
   
  구독을 다시 초기화하려면 [구독 다시 초기화](../reinitialize-a-subscription.md)를 참조하십시오.  
   
- 스냅숏을 만들고 적용하려면 [Create 및 Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)및 [매개 변수가 있는 필터로 병합 게시에 대한 스냅숏 만들기](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)를 참조하십시오.  
+ 스냅샷을 만들고 적용하려면 [Create 및 Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)및 [Create a Snapshot for a Merge Publication with Parameterized Filters](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)를 참조하십시오.  
   
 ## <a name="backing-up-and-restoring-the-distribution-database"></a>배포 데이터베이스 백업 및 복원  
  병합 복제를 사용하는 경우에는 배포 데이터베이스를 정기적으로 백업해야 합니다. 사용하는 백업이 배포자를 사용하는 모든 게시의 최단 보존 기간을 넘기지 않은 한 특별 고려 사항 없이 배포 데이터베이스를 복원할 수 있습니다. 예를 들어 보존 기간이 10일, 20일, 30일인 3개의 게시가 있는 경우 데이터베이스 복원에 사용되는 백업은 10일보다 더 오래된 것이면 안 됩니다. 배포 데이터베이스는 병합 복제에서 제한된 역할을 가집니다. 즉, 변경 추적에 사용된 데이터를 저장하지 않으며 구독 데이터베이스로 전달될 병합 복제 변경 내용에 대해 트랜잭션 복제에서와 같이 임시 스토리지를 제공하지 않습니다.  

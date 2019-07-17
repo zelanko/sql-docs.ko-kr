@@ -80,12 +80,12 @@ sp_detach_db [ @dbname= ] 'database_name'
     > [!NOTE]  
     >  **sp_replicationdboption**을 사용할 수 없는 경우 [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 실행하여 복제를 제거할 수 있습니다.  
   
--   데이터베이스에 데이터베이스 스냅숏이 있는 경우  
+-   데이터베이스에 데이터베이스 스냅샷이 있는 경우  
   
-     데이터베이스를 분리하려면 먼저 해당 데이터베이스의 모든 스냅숏을 삭제해야 합니다. 자세한 내용은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)인스턴스나 다른 인스턴스에 다시 연결할 수 있습니다.  
+     데이터베이스를 분리하려면 먼저 해당 데이터베이스의 모든 스냅샷을 삭제해야 합니다. 자세한 내용은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)인스턴스나 다른 인스턴스에 다시 연결할 수 있습니다.  
   
     > [!NOTE]  
-    >  데이터베이스 스냅숏은 분리하거나 연결할 수 없습니다.  
+    >  데이터베이스 스냅샷은 분리하거나 연결할 수 없습니다.  
   
 -   데이터베이스가 미러링되고 있는 경우  
   

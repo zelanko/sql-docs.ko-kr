@@ -87,7 +87,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**identity_range**|**bigint**|문서에 있는 경우 구독자에서 id 범위 크기 범위 *identityrangemanagementoption* 로 설정 **자동** 하거나 **auto_identity_range** 로  **true**합니다.|  
 |**threshold**|**bigint**|배포 에이전트가 새로운 ID범위를 할당하는 시기를 나타내는 백분율 값입니다.|  
 |**identityrangemanagementoption**|**int**|아티클에 대해 처리되는 ID 범위 관리를 나타냅니다.|  
-|**fire_triggers_on_snapshot**|**bit**|복제된 사용자 트리거를 초기 스냅숏이 적용될 때 실행할지 여부입니다.<br /><br /> **1** = 사용자 트리거가 실행 됩니다.<br /><br /> **0** = 사용자 트리거가 실행 되지 않습니다.|  
+|**fire_triggers_on_snapshot**|**bit**|복제된 사용자 트리거를 초기 스냅샷이 적용될 때 실행할지 여부입니다.<br /><br /> **1** = 사용자 트리거가 실행 됩니다.<br /><br /> **0** = 사용자 트리거가 실행 되지 않습니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

@@ -40,7 +40,7 @@ ms.locfileid: "68055383"
 |max_column_id_used|**int**|이 테이블에 사용된 최대 열 ID입니다.|  
 |lock_on_bulk_load|**bit**|대량 로드 시 테이블이 잠깁니다. 자세한 내용은 [sp_tableoption&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하세요.|  
 |uses_ansi_nulls|**bit**|테이블이 SET ANSI_NULLS 데이터베이스 옵션을 ON으로 설정하여 생성되었습니다.|  
-|is_replicated|**bit**|1 = 테이블이 스냅숏 복제 또는 트랜잭션 복제를 사용하여 게시됩니다.|  
+|is_replicated|**bit**|1 = 테이블이 스냅샷 복제 또는 트랜잭션 복제를 사용하여 게시됩니다.|  
 |has_replication_filter|**bit**|1 = 테이블에 복제 필터가 있습니다.|  
 |is_merge_published|**bit**|1 = 테이블이 병합 복제를 사용하여 게시됩니다.|  
 |is_sync_tran_subscribed|**bit**|1 = 테이블이 즉시 업데이트 구독을 사용하여 구독됩니다.|  

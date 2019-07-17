@@ -29,7 +29,7 @@ ms.locfileid: "67580035"
 ---
 # <a name="delete-an-article"></a>아티클 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에서 아티클을 삭제하는 방법에 대해 설명합니다. 아티클을 삭제할 수 있는 조건 및 아티클 삭제로 인해 새 스냅숏 또는 구독 다시 초기화가 필요한지 여부에 대한 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 에서 아티클을 삭제하는 방법에 대해 설명합니다. 아티클을 삭제할 수 있는 조건 및 아티클 삭제로 인해 새 스냅샷 또는 구독 다시 초기화가 필요한지 여부에 대한 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
  **항목 내용**  
   
@@ -42,7 +42,7 @@ ms.locfileid: "67580035"
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  아티클은 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 삭제할 수 있습니다. 사용되는 저장 프로시저는 아티클이 속한 게시 유형에 따라 달라집니다.  
   
-#### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에서 아티클을 삭제하려면  
+#### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에서 아티클을 삭제하려면  
   
 1.  [sp_droparticle&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)을 실행하여 **@article** 로 지정된 아티클을 **@publication** 으로 지정된 게시에서 삭제합니다. **@force_invalidate_snapshot** 에 값 **1**을 지정합니다.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "67580035"
 2.  (옵션) 게시된 개체를 데이터베이스에서 완전히 제거하려면 게시 데이터베이스의 게시자에서 `DROP <objectname>` 명령을 실행합니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
- 다음 예에서는 트랜잭션 게시에서 아티클을 삭제합니다. 이로 인해 기존 스냅숏이 무효화되므로 **@force_invalidate_snapshot** 매개 변수 값이 **@force_invalidate_snapshot** 로 지정됩니다.  
+ 다음 예에서는 트랜잭션 게시에서 아티클을 삭제합니다. 이로 인해 기존 스냅샷이 무효화되므로 **@force_invalidate_snapshot** 매개 변수 값이 **@force_invalidate_snapshot** 로 지정됩니다.  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -74,7 +74,7 @@ EXEC sp_droparticle
 GO  
 ```  
   
- 다음 예에서는 병합 게시에서 두 개의 아티클을 삭제합니다. 이로 인해 기존 스냅숏이 무효화되므로 **@force_invalidate_snapshot** 매개 변수 값이 **@force_invalidate_snapshot** 로 지정됩니다.  
+ 다음 예에서는 병합 게시에서 두 개의 아티클을 삭제합니다. 이로 인해 기존 스냅샷이 무효화되므로 **@force_invalidate_snapshot** 매개 변수 값이 **@force_invalidate_snapshot** 로 지정됩니다.  
   
 ```  
 DECLARE @publication AS sysname;  
@@ -100,7 +100,7 @@ GO
 ##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 아티클을 삭제할 수 있습니다. 아티클을 삭제하는 데 사용하는 RMO 클래스는 아티클이 속한 게시 유형에 따라 달라집니다.  
   
-#### <a name="to-delete-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 속한 아티클을 삭제하려면  
+#### <a name="to-delete-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 속한 아티클을 삭제하려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   

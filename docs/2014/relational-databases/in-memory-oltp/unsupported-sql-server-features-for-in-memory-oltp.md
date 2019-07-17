@@ -96,7 +96,7 @@ ms.locfileid: "63157238"
 |커서|메모리 최적화 테이블에 액세스하는 쿼리의 키 집합 및 동적 커서. 이러한 쿼리는 정적 쿼리로 강등되어 읽기 전용이 됩니다.|  
 |TABLESTAMP|TABLESTAMP는 지원되지 않습니다. 자세한 내용은 [FROM&#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql)을 참조하세요.|  
 |AUTO_CLOSE|AUTO_CLOSE는 지원되지 않습니다. 자세한 내용은 [Set the AUTO_CLOSE Database Option to OFF](../policy-based-management/set-the-auto-close-database-option-to-off.md)을 참조하세요.|  
-|데이터베이스 스냅숏|데이터베이스 스냅숏은 지원되지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md)을 참조하세요.|  
+|데이터베이스 스냅샷|데이터베이스 스냅샷은 지원되지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md)을 참조하세요.|  
 |트랜잭션 DDL|트랜잭션 DDL은 메모리 내 OLTP에서 지원되지 않습니다.|  
 |이벤트 알림|이벤트 알림은 지원되지 않습니다. 자세한 내용은 [Event Notifications](../service-broker/event-notifications.md)을 참조하세요.|  
 |파이버 모드|파이버 모드는 메모리 내 OLTP에서 지원되지 않습니다.|  

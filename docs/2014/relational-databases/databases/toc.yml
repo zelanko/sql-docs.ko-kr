@@ -135,18 +135,18 @@
   href: view-or-change-the-compatibility-level-of-a-database.md
 - name: 사용자 정의 데이터 형식 별칭 만들기
   href: create-a-user-defined-data-type-alias.md
-- name: 데이터베이스 스냅숏
+- name: 데이터베이스 스냅샷
   href: database-snapshots-sql-server.md
   items:
-    - name: 데이터베이스 스냅숏 스파스 파일의 크기 보기(Transact-SQL)
+    - name: 데이터베이스 스냅샷 스파스 파일의 크기 보기(Transact-SQL)
       href: view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md
-    - name: 데이터베이스 스냅숏 만들기(Transact-SQL)
+    - name: Create a Database Snapshot (Transact-SQL)
       href: create-a-database-snapshot-transact-sql.md
-    - name: 데이터베이스 스냅숏 보기(SQL Server)
+    - name: 데이터베이스 스냅샷 보기(SQL Server)
       href: view-a-database-snapshot-sql-server.md
-    - name: 데이터베이스를 데이터베이스 스냅숏으로 되돌리기
+    - name: 데이터베이스를 데이터베이스 스냅샷으로 되돌리기
       href: revert-a-database-to-a-database-snapshot.md
-    - name: 데이터베이스 스냅숏 삭제(Transact-SQL)
+    - name: 데이터베이스 스냅샷 삭제(Transact-SQL)
       href: drop-a-database-snapshot-transact-sql.md
 - name: 데이터베이스 즉시 파일 초기화
   href: database-instant-file-initialization.md

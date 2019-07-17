@@ -73,7 +73,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON으로 설정된 READ COMMITTED 격리 수준  
   
--   SNAPSHOT 격리 수준 스냅숏 격리에 대한 자세한 내용은 [SQL Server에서의 스냅숏 격리](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server)를 참조하세요. 
+-   SNAPSHOT 격리 수준 스냅샷 격리에 대한 자세한 내용은 [SQL Server에서의 스냅샷 격리](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server)를 참조하세요. 
   
  READ COMMITTED  
  다른 트랜잭션에 의해 수정되었지만 커밋되지 않은 데이터를 문이 읽을 수 없도록 지정합니다. 이렇게 하면 더티 읽기를 방지할 수 있습니다. 현재 트랜잭션 내에 있는 개별 문 간에 다른 트랜잭션에서 데이터를 변경하면 반복할 수 없는 읽기가 발생하거나 가상 데이터가 될 수 있습니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본값입니다.  
@@ -82,13 +82,13 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
   
 -   READ_COMMITTED_SNAPSHOT이 OFF(SQL Server의 기본값)로 설정되어 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 공유 잠금을 사용하여 현재 트랜잭션이 읽기 작업을 실행하는 동안 다른 트랜잭션이 행을 수정하지 못하도록 합니다. 또한 공유 잠금은 다른 트랜잭션이 완료될 때까지 해당 트랜잭션이 수정한 행을 문이 읽을 수 없도록 합니다. 공유 잠금의 해제 시기는 공유 잠금 유형에 의해 결정됩니다. 행 잠금은 다음 행이 처리되기 전에 해제되고, 페이지 잠금은 다음 페이지를 읽을 때 해제되고 테이블 잠금은 명령문이 끝나면 해제됩니다.  
   
--   READ_COMMITTED_SNAPSHOT이 ON(SQL Azure Database의 기본값)으로 설정되어 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 행 버전 관리를 사용하여 명령문 시작 시와 트랜잭션별로 데이터의 일관성이 유지된 스냅숏을 각 명령문에 제공합니다. 다른 트랜잭션에 의한 데이터 업데이트 차단을 위해 잠금이 사용되지는 않습니다.
+-   READ_COMMITTED_SNAPSHOT이 ON(SQL Azure Database의 기본값)으로 설정되어 있으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 행 버전 관리를 사용하여 명령문 시작 시와 트랜잭션별로 데이터의 일관성이 유지된 스냅샷을 각 명령문에 제공합니다. 다른 트랜잭션에 의한 데이터 업데이트 차단을 위해 잠금이 사용되지는 않습니다.
 
 > [!IMPORTANT]  
 > 트랜잭션 격리 수준을 선택해도 데이터 수정 내용을 보호하기 위해 획득된 잠금에는 영향을 주지 않습니다. 설정된 격리 수준에 관계없이 트랜잭션은 항상 수정하는 데이터에 대해 배타적 잠금을 얻고 해당 트랜잭션이 완료될 때까지 이 잠금을 보유합니다. 또한 READ_COMMITTED 격리 수준에서 이루어진 업데이트는 선택된 데이터 행에 대한 업데이트 잠금을 사용하지만, SNAPSHOT 격리 수준에서 이루어진 업데이트는 행 버전을 사용하여 업데이트할 행을 선택합니다. 읽기 작업의 경우 트랜잭션 격리 수준은 대개 다른 트랜잭션에서 수정한 내용의 영향을 받지 않도록 보호 수준을 정의합니다. 자세한 내용은 [트랜잭션 잠금 및 행 버전 관리 지침](https://docs.microsoft.com/sql/relational-databases/sql-server-transaction-locking-and-row-versioning-guide)을 참조하세요.
 
 > [!NOTE]  
->  스냅숏 격리는 FILESTREAM 데이터를 지원합니다. 스냅숏 격리 모드에서는 트랜잭션의 문이 읽은 FILESTREAM 데이터가 트랜잭션 시작 시와 트랜잭션별로 데이터 버전의 일관성이 유지되도록 지정합니다.  
+>  스냅샷 격리는 FILESTREAM 데이터를 지원합니다. 스냅샷 격리 모드에서는 트랜잭션의 문이 읽은 FILESTREAM 데이터가 트랜잭션 시작 시와 트랜잭션별로 데이터 버전의 일관성이 유지되도록 지정합니다.  
   
  READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON인 경우 READCOMMITTEDLOCK 테이블 힌트를 사용하여 READ_COMMITTED 격리 수준에서 실행 중인 트랜잭션의 개별 문에 대해 행 버전 관리 대신 공유 잠금을 요청할 수 있습니다.  
   
@@ -101,7 +101,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  공유 잠금은 트랜잭션의 각 문이 읽은 모든 데이터에 적용되며 트랜잭션이 완료될 때까지 유지됩니다. 따라서 다른 트랜잭션은 현재 트랜잭션이 읽은 행을 수정할 수 없습니다. 다른 트랜잭션은 현재 트랜잭션이 실행한 문의 검색 조건과 일치하는 새 행을 삽입할 수 있습니다. 그런 다음 현재 트랜잭션이 문을 다시 시도하면 새 행이 검색되고 가상 읽기가 수행됩니다. 공유 잠금은 각 문이 끝날 때 해제되지 않고 트랜잭션이 끝날 때까지 유지되므로 동시성이 기본 READ COMMITTED 격리 수준보다 낮습니다. 이 옵션은 필요한 경우에만 사용하세요.  
   
  SNAPSHOT  
- 트랜잭션의 문이 읽은 데이터가 트랜잭션별로 트랜잭션을 시작할 때 존재한 데이터 버전과 일관성이 유지되도록 지정합니다. 트랜잭션은 시작되기 전에 커밋된 데이터 수정 내용만 인식할 수 있습니다. 현재 트랜잭션이 시작된 후 다른 트랜잭션에서 수정한 데이터는 현재 트랜잭션에서 실행되는 문에 표시되지 않습니다. 따라서 트랜잭션의 문이 트랜잭션 시작 당시 커밋된 데이터의 스냅숏을 가져오는 것처럼 보입니다.  
+ 트랜잭션의 문이 읽은 데이터가 트랜잭션별로 트랜잭션을 시작할 때 존재한 데이터 버전과 일관성이 유지되도록 지정합니다. 트랜잭션은 시작되기 전에 커밋된 데이터 수정 내용만 인식할 수 있습니다. 현재 트랜잭션이 시작된 후 다른 트랜잭션에서 수정한 데이터는 현재 트랜잭션에서 실행되는 문에 표시되지 않습니다. 따라서 트랜잭션의 문이 트랜잭션 시작 당시 커밋된 데이터의 스냅샷을 가져오는 것처럼 보입니다.  
   
  데이터베이스가 복구 중인 경우를 제외하면 SNAPSHOT 트랜잭션은 데이터를 읽는 동안 잠금을 요청하지 않습니다. 데이터를 읽는 SNAPSHOT 트랜잭션은 다른 트랜잭션의 데이터 쓰기를 차단하지 않으며 데이터를 쓰는 트랜잭션은 SNAPSHOT 트랜잭션의 데이터 읽기를 차단하지 않습니다.  
   
@@ -114,7 +114,7 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
  SNAPSHOT 격리 수준에서 실행 중인 트랜잭션은 해당 트랜잭션에서 변경한 내용을 볼 수 있습니다. 예를 들어 트랜잭션이 테이블에서 UPDATE를 수행한 다음 동일한 테이블에 대해 SELECT 문을 실행하면 수정된 데이터가 결과 집합에 포함됩니다.  
   
 > [!NOTE]  
->  스냅숏 격리 모드에서는 트랜잭션의 문이 읽은 FILESTREAM 데이터가 문 시작 시가 아니라 트랜잭션 시작 시와 트랜잭션별로 데이터 버전의 일관성이 유지되도록 지정합니다.  
+>  스냅샷 격리 모드에서는 트랜잭션의 문이 읽은 FILESTREAM 데이터가 문 시작 시가 아니라 트랜잭션 시작 시와 트랜잭션별로 데이터 버전의 일관성이 유지되도록 지정합니다.  
   
  SERIALIZABLE  
  다음을 지정합니다.  
@@ -163,8 +163,8 @@ SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 |커밋된 읽기|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |반복 읽기|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|지원되지 않음|  
 |직렬화 가능|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|지원되지 않음|  
-|커밋된 스냅숏 읽기|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
-|스냅숏|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|커밋된 스냅샷 읽기|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
+|스냅샷|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
   
 ## <a name="examples"></a>예  
  다음 예에서는 세션에 대한 `TRANSACTION ISOLATION LEVEL`을 설정합니다. 이어지는 각 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 트랜잭션이 종료될 때까지 모든 공유 잠금을 보유합니다.  

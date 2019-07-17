@@ -33,7 +33,7 @@ ms.locfileid: "68010704"
 > [!NOTE]  
 >  이 프로시저는 캐시되는 컬렉션 모드로 구성된 컬렉션 집합에 대해 실행하면 실패하게 됩니다.  
   
- 사용자는 sp_syscollector_run_collection_set을 사용하여 요청 시 데이터 스냅숏을 만들 수 있습니다.  
+ 사용자는 sp_syscollector_run_collection_set을 사용하여 요청 시 데이터 스냅샷을 만들 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

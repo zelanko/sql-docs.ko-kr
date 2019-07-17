@@ -77,7 +77,7 @@ DBCC CHECKFILEGROUP
  모든 정보 메시지를 표시하지 않습니다.  
   
  TABLOCK  
- 내부 데이터베이스 스냅숏을 사용하는 대신 DBCC CHECKFILEGROUP이 잠금을 획득하도록 합니다.  
+ 내부 데이터베이스 스냅샷을 사용하는 대신 DBCC CHECKFILEGROUP이 잠금을 획득하도록 합니다.  
   
  ESTIMATE ONLY  
  지정된 다른 모든 옵션과 함께 DBCC CHECKFILEGROUP을 실행하는 데 필요한 tempdb 공간의 예상 크기를 표시합니다.  
@@ -108,12 +108,12 @@ DBCC CHECKFILEGROUP은 다음과 같은 명령을 수행합니다.
   
 DBCC CHECKALLOC 또는 DBCC CHECKTABLE을 DBCC CHECKFILEGROUP과 별도로 실행할 필요는 없습니다.
   
-## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅숏  
-DBCC CHECKFILEGROUP은 내부 데이터베이스 스냅숏을 사용하여 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 유지합니다. 자세한 내용은 [데이터베이스 스냅숏의 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅숏 사용법" 섹션을 참조하세요.
-스냅숏을 만들 수 없거나 TABLOCK 옵션이 지정된 경우 DBCC CHECKFILEGROUP은 필요한 일관성을 얻기 위해 잠금을 획득합니다. 이 경우 할당 검사를 위해서는 배타적 데이터베이스 잠금이 필요하며 테이블 검사를 위해서는 공유 테이블 잠금이 필요합니다. TABLOCK을 사용하면 로드가 많은 데이터베이스에서 DBCC CHECKFILEGROUP이 더 빠르게 실행됩니다. 그러나 DBCC CHECKFILEGROUP이 실행되는 동안 데이터베이스에 대한 동시성은 줄어듭니다.
+## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅샷  
+DBCC CHECKFILEGROUP은 내부 데이터베이스 스냅샷을 사용하여 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 유지합니다. 자세한 내용은 [데이터베이스 스냅숏의 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅숏 사용법" 섹션을 참조하세요.
+스냅샷을 만들 수 없거나 TABLOCK 옵션이 지정된 경우 DBCC CHECKFILEGROUP은 필요한 일관성을 얻기 위해 잠금을 획득합니다. 이 경우 할당 검사를 위해서는 배타적 데이터베이스 잠금이 필요하며 테이블 검사를 위해서는 공유 테이블 잠금이 필요합니다. TABLOCK을 사용하면 로드가 많은 데이터베이스에서 DBCC CHECKFILEGROUP이 더 빠르게 실행됩니다. 그러나 DBCC CHECKFILEGROUP이 실행되는 동안 데이터베이스에 대한 동시성은 줄어듭니다.
   
 > [!NOTE]  
->  tempdb에 대해 DBCC CHECKFILEGROUP을 실행하면 할당 검사가 수행되지 않으며 테이블 검사를 수행하려면 공유 테이블 잠금을 획득해야 합니다. 이것은 성능상의 이유로 tempdb의 데이터베이스 스냅숏을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다.  
+>  tempdb에 대해 DBCC CHECKFILEGROUP을 실행하면 할당 검사가 수행되지 않으며 테이블 검사를 수행하려면 공유 테이블 잠금을 획득해야 합니다. 이것은 성능상의 이유로 tempdb의 데이터베이스 스냅샷을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다.  
   
 ## <a name="checking-objects-in-parallel"></a>병렬로 개체 검사  
 기본적으로 DBCC CHECKFILEGROUP은 개체의 병렬 검사를 수행합니다. 병렬 처리 수준은 쿼리 프로세서에 의해 자동으로 결정됩니다. 최대 병렬 처리 수준은 병렬 쿼리와 동일하게 구성됩니다. DBCC 검사에 사용할 수 있는 최대 프로세서 수를 제한하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.
@@ -197,7 +197,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
-### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>1. 데이터베이스의 PRIMARY 파일 그룹 검사  
+### <a name="a-checking-the-primary-filegroup-in-the-a-database"></a>1\. 데이터베이스의 PRIMARY 파일 그룹 검사  
 다음 예에서는 현재 데이터베이스의 주 파일 그룹을 검사합니다.
   
 ```sql  
@@ -206,7 +206,7 @@ DBCC CHECKFILEGROUP;
 GO  
 ```  
   
-### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>2. 비클러스터형 인덱스를 제외한 AdventureWorks PRIMARY 파일 그룹 검사  
+### <a name="b-checking-the-adventureworks-primary-filegroup-without-nonclustered-indexes"></a>2\. 비클러스터형 인덱스를 제외한 AdventureWorks PRIMARY 파일 그룹 검사  
 다음 예제에서는 PRIMARY 파일 그룹의 ID 번호 및 `NOINDEX`를 지정하여 `AdventureWorks2012` 데이터베이스의 PRIMARY 파일 그룹(비클러스터형 인덱스 제외)을 검사합니다.
   
 ```sql  

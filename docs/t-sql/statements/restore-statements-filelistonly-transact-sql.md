@@ -107,7 +107,7 @@ FROM <backup_device>
 |IsReadOnly|**bit**|**1** = 파일이 읽기 전용입니다.|  
 |IsPresent|**bit**|**1** = 파일이 백업에 있습니다.|  
 |TDEThumbprint|**varbinary(32)** NULL|데이터베이스 암호화 키의 지문을 표시합니다. 암호기 지문은 키 암호화에 사용되는 인증서의 SHA-1 해시입니다. 데이터 암호화에 대한 자세한 내용은 [투명한 데이터 암호화&#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md)를 참조하세요.|  
-|SnapshotURL|**nvarchar(360)** NULL|FILE_SNAPSHOT 백업에 포함된 데이터베이스 파일의 Azure 스냅숏에 대한 URL입니다. FILE_SNAPSHOT 백업이 없는 경우 NULL을 반환합니다.|  
+|SnapshotURL|**nvarchar(360)** NULL|FILE_SNAPSHOT 백업에 포함된 데이터베이스 파일의 Azure 스냅샷에 대한 URL입니다. FILE_SNAPSHOT 백업이 없는 경우 NULL을 반환합니다.|  
   
 ## <a name="security"></a>보안  
  필요한 경우 백업 작업에서 미디어 세트, 백업 세트 또는 이 둘 모두에 대해 암호를 지정할 수 있습니다. 미디어 세트나 백업 세트에 암호가 정의되어 있는 경우 RESTORE 문에서 정확한 암호를 지정해야 합니다. 이러한 암호를 지정하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 무단으로 복원 작업을 수행하거나 미디어에 백업 세트를 무단으로 추가하는 작업을 방지할 수 있습니다. 하지만 암호를 사용해도 BACKUP 문의 FORMAT 옵션을 사용하여 미디어를 덮어쓰는 작업은 수행됩니다.  

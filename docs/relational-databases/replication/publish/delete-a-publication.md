@@ -54,16 +54,16 @@ ms.locfileid: "47625171"
 > [!NOTE]  
 >  게시를 삭제해도 게시 데이터베이스의 게시된 개체 또는 구독 데이터베이스의 해당 개체는 제거되지 않습니다. 필요한 경우 `DROP <object>` 명령을 사용하여 이러한 개체를 수동으로 제거할 수 있습니다.  
   
-#### <a name="to-delete-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시를 삭제하려면  
+#### <a name="to-delete-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시를 삭제하려면  
   
 1.  다음 중 하나를 수행합니다.  
   
     -   단일 게시를 삭제하려면 게시 데이터베이스의 게시자에서 [sp_droppublication](../../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md) 을 실행합니다.  
   
-    -   모든 게시를 삭제하고 게시된 데이터베이스에서 모든 복제 개체를 제거하려면 게시자에서 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 을 실행합니다. **@type**에 **tran** 값을 지정합니다. (옵션) 배포자에 액세스할 수 없거나 데이터베이스의 상태가 주의 대상 또는 오프라인인 경우 **@force** @type **@force**폴더에서 게시를 삭제합니다. (옵션) 게시 데이터베이스에서 **@dbname** 이 실행되지 않은 경우 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 에 데이터베이스 이름을 지정합니다.  
+    -   모든 게시를 삭제하고 게시된 데이터베이스에서 모든 복제 개체를 제거하려면 게시자에서 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 을 실행합니다. **@type** 에 **tran** 값을 지정합니다. (옵션) 배포자에 액세스할 수 없거나 데이터베이스의 상태가 주의 대상 또는 오프라인인 경우 **@force** @type **@force** 폴더에서 게시를 삭제합니다. (옵션) 게시 데이터베이스에서 **@dbname** 이 실행되지 않은 경우 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 에 데이터베이스 이름을 지정합니다.  
   
         > [!NOTE]  
-        >  **@force**에 **1** 값을 지정하면 데이터베이스에 복제 관련 게시 개체가 남을 수 있습니다.  
+        >  **@force** 에 **1** 값을 지정하면 데이터베이스에 복제 관련 게시 개체가 남을 수 있습니다.  
   
 2.  (선택 사항) 이 데이터베이스에 다른 게시가 없으면 [sp_replicationdboption&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 실행하여 스냅숏 또는 트랜잭션 복제를 통해 현재 데이터베이스를 게시할 수 없도록 해제합니다.  
   
@@ -75,10 +75,10 @@ ms.locfileid: "47625171"
   
     -   단일 게시를 삭제하려면 게시 데이터베이스의 게시자에서 [sp_dropmergepublication&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepublication-transact-sql.md)을 실행합니다.  
   
-    -   모든 게시를 삭제하고 게시된 데이터베이스에서 모든 복제 개체를 제거하려면 게시자에서 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 을 실행합니다. **@type**에 **merge** 값을 지정합니다. (옵션) 배포자에 액세스할 수 없거나 데이터베이스의 상태가 주의 대상 또는 오프라인인 경우 **@force** @type **@force**폴더에서 게시를 삭제합니다. (옵션) 게시 데이터베이스에서 **@dbname** 이 실행되지 않은 경우 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 에 데이터베이스 이름을 지정합니다.  
+    -   모든 게시를 삭제하고 게시된 데이터베이스에서 모든 복제 개체를 제거하려면 게시자에서 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 을 실행합니다. **@type** 에 **merge** 값을 지정합니다. (옵션) 배포자에 액세스할 수 없거나 데이터베이스의 상태가 주의 대상 또는 오프라인인 경우 **@force** @type **@force** 폴더에서 게시를 삭제합니다. (옵션) 게시 데이터베이스에서 **@dbname** 이 실행되지 않은 경우 [sp_removedbreplication](../../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md) 에 데이터베이스 이름을 지정합니다.  
   
         > [!NOTE]  
-        >  **@force**에 **1** 값을 지정하면 데이터베이스에 복제 관련 게시 개체가 남을 수 있습니다.  
+        >  **@force** 에 **1** 값을 지정하면 데이터베이스에 복제 관련 게시 개체가 남을 수 있습니다.  
   
 2.  (선택 사항) 이 데이터베이스에 다른 게시가 없으면 [sp_replicationdboption&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 실행하여 병합 복제를 통해 현재 데이터베이스를 게시할 수 없도록 해제합니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "47625171"
 ##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 게시를 삭제할 수 있습니다. 게시를 제거하는 데 사용하는 RMO 클래스는 제거하는 게시 유형에 따라 달라집니다.  
   
-#### <a name="to-remove-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시를 제거하려면  
+#### <a name="to-remove-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시를 제거하려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   

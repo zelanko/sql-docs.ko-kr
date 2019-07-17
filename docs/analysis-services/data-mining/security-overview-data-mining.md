@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8cf7958cdde480bf48c26dfed7e3056385439a4d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016890"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209697"
 ---
 # <a name="security-overview-data-mining"></a>보안 개요(데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "34016890"
   
 -   [보안 속성](../../analysis-services/server-properties/security-properties.md)  
   
--   [서비스 계정 & #40; 구성 합니다. Analysis Services & #41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
+-   [서비스 계정 구성&#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
   
--   [개체 및 작업 & #40;에 대 한 권한 부여 액세스 Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> Analysis Services에 대한 로그온 계정 구성  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 대한 적절한 로그온 계정을 선택하고 해당 계정의 사용 권한을 지정해야 합니다. 이때 기본 데이터 원본에 대한 적절한 사용 권한과 필수 태스크를 수행하는 데 필요한 사용 권한만 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 로그온 계정에 지정합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "34016890"
   
  Integration Services 패키지를 사용하여 데이터를 정리하거나 마이닝 모델을 업데이트하거나 예측을 만드는 경우 Integration Services 서비스에 모델이 저장된 데이터베이스에 대한 적절한 사용 권한과 원본 데이터에 대한 적절한 사용 권한이 있어야 합니다.  
   
-## <a name="see-also"></a>관련 항목:  
- [역할 및 사용 권한 & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+## <a name="see-also"></a>관련 항목  
+ [역할 및 권한&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

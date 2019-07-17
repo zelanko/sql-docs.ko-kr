@@ -52,8 +52,8 @@ ms.locfileid: "62721895"
 > [!NOTE]  
 >  이 예에서는 가독성을 높이기 위해 줄 바꿈이 추가되었지만 배치 파일에서 명령은 단일 행으로 작성해야 합니다.  
   
-### <a name="running-the-snapshot-agent"></a>스냅숏 에이전트 실행  
- 이 예제 배치 파일은 명령 프롬프트에서 스냅숏 에이전트를 호출하여 **AdvWorksSalesOrdersMerge** 게시에 대한 스냅숏을 생성합니다.  
+### <a name="running-the-snapshot-agent"></a>스냅샷 에이전트 실행  
+ 이 예제 배치 파일은 명령 프롬프트에서 스냅샷 에이전트를 호출하여 **AdvWorksSalesOrdersMerge** 게시에 대한 스냅샷을 생성합니다.  
   
 ```  
 REM -- Declare variables  

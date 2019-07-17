@@ -25,7 +25,7 @@ ms.locfileid: "68056490"
 # <a name="spdropdynamicsnapshotjob-transact-sql"></a>sp_dropdynamicsnapshot_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  매개 변수가 있는 행 필터를 사용하여 게시에 대한 필터링된 데이터 스냅숏 작업을 제거합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. 작업이 삭제 되 면에서 삭제 됩니다 모든 관련된 데이터를 [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) 시스템 테이블입니다.  
+  매개 변수가 있는 행 필터를 사용하여 게시에 대한 필터링된 데이터 스냅샷 작업을 제거합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. 작업이 삭제 되 면에서 삭제 됩니다 모든 관련된 데이터를 [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) 시스템 테이블입니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -49,7 +49,7 @@ sp_dropdynamicsnapshot_job [ @publication = ] 'publication'
 > [!IMPORTANT]  
 >  만 *dynamic_snapshot_jobid*하거나 *dynamic_snapshot_jobname* 지정할 수 있습니다. 에 대 한 값을 제공 하지 않는 경우 *dynamic_snapshot_jobid*하거나 *dynamic_snapshot_jobname*, 게시에 대 한 모든 동적 스냅숏 작업이 제거 됩니다.  
   
-`[ @ignore_distributor = ] ignore_distributor` *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다. 이 매개 변수는 배포자에서 태스크를 정리하지 않고 동적 스냅숏 동작을 삭제하는 데 사용할 수 있습니다.  
+`[ @ignore_distributor = ] ignore_distributor` *ignore_distributor* 됩니다 **비트**, 기본값은 **0**합니다. 이 매개 변수는 배포자에서 태스크를 정리하지 않고 동적 스냅샷 동작을 삭제하는 데 사용할 수 있습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

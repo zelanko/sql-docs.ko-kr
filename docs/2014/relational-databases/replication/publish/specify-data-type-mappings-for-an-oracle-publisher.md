@@ -62,7 +62,7 @@ ms.locfileid: "68212079"
   
 4.  배포자에서 [sp_changearticlecolumndatatype](/sql/relational-databases/system-stored-procedures/sp-changearticlecolumndatatype-transact-sql)을 실행합니다. **@publisher** 에 Oracle 게시자 이름을 지정하고 **@publication** , **@article** 및 **@column** 을 지정하여 게시된 열을 정의합니다. **@type** 에 매핑할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식의 이름을 지정하고 해당되는 경우 **@length** , **@precision** 및 **@scale** 을 지정합니다.  
   
-5.  배포자에서 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)를 실행합니다. 이렇게 하면 Oracle 게시에서 스냅숏을 생성하는 데 사용되는 뷰가 만들어집니다.  
+5.  배포자에서 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)를 실행합니다. 이렇게 하면 Oracle 게시에서 스냅샷을 생성하는 데 사용되는 뷰가 만들어집니다.  
   
 #### <a name="to-specify-a-mapping-as-the-default-mapping-for-a-data-type"></a>매핑을 데이터 형식에 대한 기본 매핑으로 지정하려면  
   

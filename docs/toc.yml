@@ -385,7 +385,7 @@
                   href: relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md
                 - name: URL에 백업 모범 사례
                   href: relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md
-                - name: 파일-스냅숏 백업
+                - name: 파일-스냅샷 백업
                   href: relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md
             - name: 백업
               href: relational-databases/backup-restore/backup-overview-sql-server.md
@@ -687,7 +687,7 @@
                       href: database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md
                 - name: 포함된 데이터베이스
                   href: database-engine/availability-groups/windows/contained-databases-with-always-on-availability-groups-sql-server.md
-                - name: 데이터베이스 스냅숏
+                - name: 데이터베이스 스냅샷
                   href: database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md
                 - name: 분산 트랜잭션
                   href: database-engine/availability-groups/windows/transactions-always-on-availability-and-database-mirroring.md
@@ -992,7 +992,7 @@
                   href: database-engine/database-mirroring/database-mirroring-and-log-shipping-sql-server.md
                 - name: 전체 텍스트 카탈로그
                   href: database-engine/database-mirroring/database-mirroring-and-full-text-catalogs-sql-server.md
-                - name: 데이터베이스 스냅숏
+                - name: 데이터베이스 스냅샷
                   href: database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md
                 - name: 복제
                   href: database-engine/database-mirroring/database-mirroring-and-replication-sql-server.md
@@ -1181,13 +1181,13 @@
                   href: relational-databases/databases/estimate-the-size-of-a-nonclustered-index.md
                 - name: 힙
                   href: relational-databases/databases/estimate-the-size-of-a-heap.md
-            - name: 데이터베이스 스냅숏
+            - name: 데이터베이스 스냅샷
               items:
                 - name: 만들기
                   href: relational-databases/databases/create-a-database-snapshot-transact-sql.md
                 - name: 보기
                   href: relational-databases/databases/view-a-database-snapshot-sql-server.md
-                - name: 스냅숏으로 되돌리기
+                - name: 스냅샷으로 되돌리기
                   href: relational-databases/databases/revert-a-database-to-a-database-snapshot.md
                 - name: Drop
                   href: relational-databases/databases/drop-a-database-snapshot-transact-sql.md
@@ -1213,7 +1213,7 @@
                   href: relational-databases/databases/file-states.md
                 - name: 식별자
                   href: relational-databases/databases/database-identifiers.md
-                - name: 데이터베이스 스냅숏
+                - name: 데이터베이스 스냅샷
                   href: relational-databases/databases/database-snapshots-sql-server.md
                 - name: 즉시 파일 초기화
                   href: relational-databases/databases/database-instant-file-initialization.md
@@ -2435,7 +2435,7 @@
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: Java jar 파일 만들기
               href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
-    - name: 'SQL Server Native Client '
+    - name: SQL Server Native Client
       href: relational-databases/native-client/sql-server-native-client.md
       items:
         - name: 개요
@@ -2495,7 +2495,7 @@
               href: relational-databases/native-client/features/utf-16-support-in-sql-server-native-client-11-0.md
             - name: 쿼리 알림 작업
               href: relational-databases/native-client/features/working-with-query-notifications.md
-            - name: 스냅숏 격리 작업
+            - name: 스냅샷 격리 작업
               href: relational-databases/native-client/features/working-with-snapshot-isolation.md
         - name: 애플리케이션
           href: relational-databases/native-client/applications/building-applications-with-sql-server-native-client.md
@@ -4701,11 +4701,11 @@
                       href: relational-databases/replication/publish/create-a-publication.md
                     - name: 속성 보기 및 수정
                       href: relational-databases/replication/publish/view-and-modify-publication-properties.md
-                    - name: 스냅숏 속성 구성
+                    - name: 스냅샷 속성 구성
                       href: relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md
                     - name: 게시 유지 관리
                       href: relational-databases/replication/publish/maintain-publications.md
-                    - name: FTP를 통해 스냅숏 배달
+                    - name: FTP를 통해 스냅샷 배달
                       href: relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md
                     - name: 게시 삭제
                       href: relational-databases/replication/publish/delete-a-publication.md
@@ -4781,11 +4781,11 @@
                           href: relational-databases/replication/initialize-a-subscription-manually.md
                         - name: 초기 스냅숏 만들기 및 적용
                           href: relational-databases/replication/create-and-apply-the-initial-snapshot.md
-                        - name: 스냅숏 옵션 수정
+                        - name: 스냅샷 옵션 수정
                           href: relational-databases/replication/snapshot-options.md
-                        - name: 스냅숏 없이 트랜잭션 구독 초기화
+                        - name: 스냅샷 없이 트랜잭션 구독 초기화
                           href: relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md
-                        - name: 스냅숏으로 구독 초기화
+                        - name: 스냅샷으로 구독 초기화
                           href: relational-databases/replication/initialize-a-subscription-with-a-snapshot.md
                         - name: 매개 변수가 있는 필터를 사용한 병합 게시
                           href: relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md
@@ -4904,7 +4904,7 @@
                   href: relational-databases/replication/security/secure-the-publisher.md
                 - name: 구독자
                   href: relational-databases/replication/security/secure-the-subscriber.md
-                - name: 스냅숏 폴더
+                - name: 스냅샷 폴더
                   href: relational-databases/replication/security/secure-the-snapshot-folder.md
                 - name: 인터넷을 통해
                   href: relational-databases/replication/security/securing-replication-over-the-internet.md
@@ -5037,7 +5037,7 @@
                   href: relational-databases/replication/web-synchronization-for-merge-replication.md
                 - name: 웹 동기화를 위한 토폴로지
                   href: relational-databases/replication/topologies-for-web-synchronization.md
-                - name: 스냅숏 복제
+                - name: Snapshot Replication
                   href: relational-databases/replication/snapshot-replication.md
                 - name: 병합 복제
                   href: relational-databases/replication/merge/merge-replication.md
@@ -5082,7 +5082,7 @@
                   href: relational-databases/replication/agents/replication-merge-agent.md
                 - name: 큐 판독기 에이전트
                   href: relational-databases/replication/agents/replication-queue-reader-agent.md
-                - name: 스냅숏 에이전트
+                - name: 스냅샷 에이전트
                   href: relational-databases/replication/agents/replication-snapshot-agent.md
                 - name: 에이전트 프로필
                   href: relational-databases/replication/agents/replication-agent-profiles.md
@@ -5179,7 +5179,7 @@
                   href: relational-databases/replication/filter-settings.md
                 - name: 로그 판독기 에이전트
                   href: relational-databases/replication/log-reader-agent.md
-                - name: 스냅숏 에이전트
+                - name: 스냅샷 에이전트
                   href: relational-databases/replication/snapshot-agent.md
                 - name: 큐 판독기 에이전트
                   href: relational-databases/replication/queue-reader-agent.md
@@ -5234,7 +5234,7 @@
                       href: relational-databases/replication/publication-information-agents-merge-publication.md
                     - name: 동기화 기록
                       href: relational-databases/replication/subscription-synchronization-history.md
-                - name: 스냅숏 복제
+                - name: 스냅샷 복제
                   items:
                     - name: 구독 조사 목록
                       href: relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md
@@ -5251,7 +5251,7 @@
               items:
                 - name: 배포자
                   href: relational-databases/replication/distributor.md
-                - name: 스냅숏 폴더
+                - name: 스냅샷 폴더
                   href: relational-databases/replication/snapshot-folder.md
                 - name: 배포 데이터베이스
                   href: relational-databases/replication/distribution-database.md
@@ -5286,7 +5286,7 @@
                   href: relational-databases/replication/add-or-edit-join.md
                 - name: 필터 생성
                   href: relational-databases/replication/generate-filters.md
-                - name: 스냅숏 에이전트
+                - name: 스냅샷 에이전트
                   href: relational-databases/replication/snapshot-agent-new-publication-wizard.md
             - name: 새 구독 마법사
               href: relational-databases/replication/new-subscription-wizard-ui-reference.md
@@ -5338,7 +5338,7 @@
             - name: 복제 대화 상자
               href: relational-databases/replication/sql-server-management-studio-replication-dialog-boxes.md
               items:
-                - name: 스냅숏 에이전트 보안
+                - name: 스냅샷 에이전트 보안
                   href: relational-databases/replication/snapshot-agent-security.md
                 - name: 로그 판독기 에이전트 보안
                   href: relational-databases/replication/log-reader-agent-security.md
@@ -8610,7 +8610,7 @@
               href: ssdt/how-to-use-microsoft-sql-server-2012-objects-in-your-project.md
             - name: '방법: CLR 데이터베이스 개체 작업'
               href: ssdt/how-to-work-with-clr-database-objects.md
-            - name: '방법: 프로젝트의 스냅숏 만들기'
+            - name: '방법: 프로젝트의 스냅샷 만들기'
               href: ssdt/how-to-create-a-snapshot-of-a-project.md
             - name: '방법: 대상 플랫폼 변경 및 데이터베이스 프로젝트 게시'
               href: ssdt/how-to-change-target-platform-and-publish-a-database-project.md
@@ -10328,7 +10328,7 @@
                       href: linux/sql-server-linux-availability-group-cluster-sles.md
                     - name: Ubuntu에서 구성
                       href: linux/sql-server-linux-availability-group-cluster-ubuntu.md
-                    - name: '장애 조치 '
+                    - name: 장애 조치
                       href: linux/sql-server-linux-availability-group-failover-ha.md
                     - name: 운영
                       href: linux/sql-server-linux-availability-group-operate-ha.md
@@ -10376,7 +10376,7 @@
           items:
             - name: 구성
               href: linux/sql-server-linux-replication-configure.md
-            - name: 스냅숏 폴더
+            - name: 스냅샷 폴더
               href: linux/sql-server-linux-replication-snapshot-shares.md
             - name: 기본이 아닌 포트
               href: linux/sql-server-linux-replication-non-default-ports.md
@@ -14402,7 +14402,7 @@
               href: relational-databases/system-stored-procedures/sp-validatelogins-transact-sql.md
             - name: sp_xp_cmdshell_proxy_account
               href: relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md
-        - name: 스냅숏 백업
+        - name: 스냅샷 백업
           items:
             - name: sp_delete_backup_file_snapshot
               href: relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md

@@ -51,7 +51,7 @@ ms.locfileid: "65090133"
 **고급** 단추를 클릭하여 액세스할 수 있는 **고급 게시 설정** 대화 상자에서 추가 게시 구성을 사용할 수 있습니다.  
   
 ## <a name="extract-data-tier-application"></a>데이터 계층 응용 프로그램 추출  
-데이터베이스에서 .dacpac를 추출할 수 있습니다. 추출을 수행하면 데이터베이스 스키마와 함께 사용자 테이블의 데이터가 포함되어 있을 수 있는 라이브 SQL Server 또는 Microsoft Azure SQL Database에서 데이터베이스 스냅숏 파일(.dacpac)이 만들어집니다.  
+데이터베이스에서 .dacpac를 추출할 수 있습니다. 추출을 수행하면 데이터베이스 스키마와 함께 사용자 테이블의 데이터가 포함되어 있을 수 있는 라이브 SQL Server 또는 Microsoft Azure SQL Database에서 데이터베이스 스냅샷 파일(.dacpac)이 만들어집니다.  
   
 만들 .dacpac 파일을 지정합니다. **DAC 속성** 단추를 누르면 .dacpac 파일의 속성을 지정할 수 있는 **DAC 속성** 대화 상자가 표시됩니다.  
   

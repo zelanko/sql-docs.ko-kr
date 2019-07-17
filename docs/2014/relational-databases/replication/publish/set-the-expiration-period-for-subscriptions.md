@@ -61,7 +61,7 @@ ms.locfileid: "68212082"
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 게시를 만들 때 이 값을 설정하거나 나중에 이 값을 수정할 수 있습니다.  
   
-#### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 구독 만료 기간을 설정하려면  
+#### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 구독 만료 기간을 설정하려면  
   
 1.  게시자에서 [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)을 실행합니다. 이때 **@retention** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다. 기본 만료 기간은 336시간입니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68212082"
   
      기본 만료 기간은 14일입니다. 자세한 내용은 [Create a Publication](create-a-publication.md)를 참조하세요.  
   
-#### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 구독 만료 기간을 변경하려면  
+#### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 구독 만료 기간을 변경하려면  
   
 1.  게시자에서 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)을 실행합니다. 이때 **@property** 에 **@property** , **@value** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다.  
   

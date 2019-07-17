@@ -55,7 +55,7 @@ sp_help_proxy
 |-----------|-----------------|  
 |ActiveScripting|ActiveX 스크립트|  
 |CmdExec|운영 체제(CmdExec)|  
-|스냅숏|복제 스냅숏 에이전트|  
+|스냅샷|Replication Snapshot Agent|  
 |LogReader|복제 로그 판독기 에이전트|  
 |배포|복제 배포 에이전트|  
 |병합|Replication Merge Agent|  

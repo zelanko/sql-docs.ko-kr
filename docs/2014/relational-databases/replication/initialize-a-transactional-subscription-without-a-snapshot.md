@@ -1,5 +1,5 @@
 ---
-title: 스냅숏 없이 트랜잭션 구독 초기화 | Microsoft 문서
+title: 스냅샷 없이 트랜잭션 구독 초기화 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
@@ -21,8 +21,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721146"
 ---
-# <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>스냅숏 없이 트랜잭션 구독 초기화
-  기본적으로 트랜잭션 게시에 대한 구독은 스냅숏 에이전트가 생성하고 배포 에이전트가 적용하는 스냅숏으로 초기화됩니다. 큰 초기 데이터 세트를 다루는 시나리오와 같은 일부 시나리오에서는 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 구독자를 초기화하는 다른 방법은 다음과 같습니다.  
+# <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>스냅샷 없이 트랜잭션 구독 초기화
+  기본적으로 트랜잭션 게시에 대한 구독은 스냅샷 에이전트가 생성하고 배포 에이전트가 적용하는 스냅샷으로 초기화됩니다. 큰 초기 데이터 세트를 다루는 시나리오와 같은 일부 시나리오에서는 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 구독자를 초기화하는 다른 방법은 다음과 같습니다.  
   
 -   백업을 지정하고 이 백업을 구독자에서 복원하면 배포 에이전트가 필요한 복제 메타데이터와 시스템 프로시저를 복사합니다. 게시를 백업으로 초기화할 수 있도록 설정한 다음 생성된 백업 중 어떤 최근 백업이든 사용할 수 있으므로 백업으로 초기화는 방법은 데이터를 구독자에 배달하는 가장 빠르고도 편리한 방법입니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62721146"
 -   복제 Transact-SQL 프로그래밍: [백업에서 트랜잭션 구독 초기화&#40;복제 Transact-SQL 프로그래밍&#41;](initialize-a-transactional-subscription-from-a-backup.md)  
   
 > [!NOTE]  
->  스냅숏을 사용하지 않고 구독을 초기화할 경우 게시자에서 SQL Server 서비스를 실행하는 계정에는 배포자의 스냅숏 폴더에 대한 쓰기 권한이 있어야 합니다. 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](security/replication-agent-security-model.md)을 참조하십시오.  
+>  스냅샷을 사용하지 않고 구독을 초기화할 경우 게시자에서 SQL Server 서비스를 실행하는 계정에는 배포자의 스냅샷 폴더에 대한 쓰기 권한이 있어야 합니다. 사용 권한에 대한 자세한 내용은 [Replication Agent Security Model](security/replication-agent-security-model.md)을 참조하십시오.  
   
 ### <a name="ensuring-the-suitability-of-a-backup"></a>백업의 적합성 확인  
  백업 이후에 발생하는 트랜잭션이 모두 배포자에 저장되는 경우 백업이 구독자를 초기화하는 데 적합합니다. 백업이 적합하지 않으면 복제에서 오류 메시지를 표시합니다.  

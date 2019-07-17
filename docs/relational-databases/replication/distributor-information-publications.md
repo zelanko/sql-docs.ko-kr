@@ -38,15 +38,15 @@ ms.locfileid: "54135398"
 ### <a name="merge-replication"></a>병합 복제
   병합 게시 구독 정보는 게시자 이름을 포함합니다. 그 밖에 이 대화 상자에 제공되는 기능 및 정보는 게시자 뷰와 동일합니다. 이 대화 상자를 사용하는 방법은 [게시자 정보, 구독 조사 목록&#40;병합 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-merge-publication.md)을 참조하세요.  
 
-### <a name="snapshot-replication"></a>스냅숏 복제 
-  스냅숏 게시 구독 정보는 게시자 이름을 포함합니다. 그 밖에 이 대화 상자에 제공되는 기능 및 정보는 게시자 뷰와 동일합니다. 이 대화 상자를 사용하는 방법은 [게시자 정보, 구독 조사 목록&#40;스냅숏 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md)을 참조하세요.  
+### <a name="snapshot-replication"></a>스냅샷 복제 
+  스냅샷 게시 구독 정보는 게시자 이름을 포함합니다. 그 밖에 이 대화 상자에 제공되는 기능 및 정보는 게시자 뷰와 동일합니다. 이 대화 상자를 사용하는 방법은 [게시자 정보, 구독 조사 목록&#40;스냅숏 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md)을 참조하세요.  
 
 ## <a name="agents"></a>에이전트
 **에이전트** 탭에는 게시자 및 구독자와 연결된 에이전트 및 유지 관리 작업에 대한 정보가 표시됩니다.  
   
  배포자 뷰의 배포자에 대한 **에이전트** 탭에서 사용할 수 있는 에이전트에는 게시자에 대한 **에이전트** 탭에서 사용할 수 있는 모든 에이전트가 포함됩니다. 그러나 배포자 뷰의 배포자에 대한 **에이전트** 탭에는 배포자 에이전트와 병합 에이전트도 포함됩니다.  
   
- 스냅숏, 로그 판독기 및 큐 판독기 에이전트와 유지 관리 작업에 대한 자세한 내용은 [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md)를 참조하십시오. 배포자에 대한 **에이전트** 탭에 있는 에이전트 정보를 표시하면 스냅숏 및 로그 판독기 에이전트에 대한 게시자 정보가 제공됩니다. 그러나 배포자 뷰의 배포자에 대한 **에이전트** 탭에서는 **배포자 에이전트** 및 **병합 에이전트**를 선택할 수도 있습니다.  
+ 스냅샷, 로그 판독기 및 큐 판독기 에이전트와 유지 관리 작업에 대한 자세한 내용은 [Publisher Information, Agents](../../relational-databases/replication/publisher-information-agents.md)를 참조하십시오. 배포자에 대한 **에이전트** 탭에 있는 에이전트 정보를 표시하면 스냅샷 및 로그 판독기 에이전트에 대한 게시자 정보가 제공됩니다. 그러나 배포자 뷰의 배포자에 대한 **에이전트** 탭에서는 **배포자 에이전트** 및 **병합 에이전트**를 선택할 수도 있습니다.  
   
 ### <a name="options"></a>옵션  
  다음 섹션에서는 이 탭에서 배포자 에이전트 및 병합 에이전트에 대해 표시되는 데이터를 설명합니다.  

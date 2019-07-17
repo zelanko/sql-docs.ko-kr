@@ -18,7 +18,7 @@ ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: c3bb95de560e0e4ec6b5e01fda8623858a73aaf4
 ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "66803807"
@@ -64,7 +64,7 @@ ms.locfileid: "66803807"
 |DBPROP_IStream|이 인터페이스는 하지 SQL Server 용 OLE DB 드라이버에서 구현 됩니다. 이 속성을 읽거나 쓰려고 하면 오류가 생성됩니다.|  
 |DBPROP_IMMOBILEROWS|R/w: 읽기/쓰기<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명: 이 속성은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 키 집합 커서에 대해서만 VARIANT_TRUE이며 다른 모든 커서에 대해서는 VARIANT_FALSE입니다.<br /><br /> VARIANT_TRUE: 행 집합은 삽입 또는 업데이트된 행을 다시 정렬하지 않습니다. **IRowsetChange::InsertRow**의 경우 행은 행 집합 끝에 표시됩니다. **IRowsetChange::SetData**의 경우 행 집합이 정렬되지 않으면 업데이트된 행의 위치는 바뀌지 않습니다. 행 집합이 정렬되고 **IRowsetChange::SetData**가 행 집합을 정렬하는 데 사용되는 열을 변경하는 경우 행은 이동하지 않습니다. 행 집합이 키 열 집합을 기반으로 만들어진 경우(일반적으로 DBPROP_OTHERUPDATEDELETE가 VARIANT_TRUE이지만 DBPROP_OTHERINSERT는 VARIANT_FALSE인 행 집합) 키 열 값을 변경하는 것은 대개 현재 행을 삭제하고 새 행을 삽입하는 것과 동일합니다. 따라서 DBPROP_OWNINSERT가 VARIANT_FALSE이면 DBPROP_IMMOBILEROWS 속성이 VARIANT_TRUE이더라도 행은 행 집합에서 이동하거나 사라진 것처럼 보일 수 있습니다.<br /><br /> VARIANT_FALSE: 행 집합이 정렬되는 경우 삽입된 행은 행 집합의 올바른 순서에 따라 표시됩니다. 행 집합이 정렬되지 않는 경우 삽입된 행은 끝에 표시됩니다. **IRowsetChange::SetData**가 행 집합을 정렬하는 데 사용되는 열을 변경하는 경우 행은 이동합니다. 행 집합이 정렬되지 않는 경우 행의 위치는 변경되지 않습니다.|  
 |DBPROP_LITERALIDENTITY|R/w: 읽기 전용<br /><br /> 기본값: VARIANT_TRUE<br /><br /> 설명: 이 속성은 항상 VARIANT_TRUE입니다.|  
-|DBPROP_LOCKMODE|R/w: 읽기/쓰기<br /><br /> 기본값: DBPROPVAL_LM_NONE<br /><br /> 설명: 행 집합에 의해 수행되는 잠금의 수준입니다(DBPROPVAL_LM_NONE, DBPROPVAL_LM_SINGLEROW).<br /><br /> 참고: 트랜잭션에서 스냅숏 격리를 사용 중이면 키 집합 또는 동적 서버 커서를 사용하여 행 집합을 열고 잠금 모드가 DBPROPVAL_LM_SINGLEROW로 설정된 경우, 트랜잭션이 시작된 이후 다른 사용자가 행을 업데이트하면 해당 행을 인출할 때 오류가 발생합니다. 다른 커서 유형 및 잠금 모드의 경우 트랜잭션이 시작된 이후 다른 사용자가 행을 업데이트해도 사용자가 행을 업데이트하려고 시도할 때까지 오류는 발생하지 않습니다. 두 경우 모두 이러한 오류는 서버에서 일으킵니다.|  
+|DBPROP_LOCKMODE|R/w: 읽기/쓰기<br /><br /> 기본값: DBPROPVAL_LM_NONE<br /><br /> 설명: 행 집합에 의해 수행되는 잠금의 수준입니다(DBPROPVAL_LM_NONE, DBPROPVAL_LM_SINGLEROW).<br /><br /> 참고: 트랜잭션에서 스냅샷 격리를 사용 중이면 키 집합 또는 동적 서버 커서를 사용하여 행 집합을 열고 잠금 모드가 DBPROPVAL_LM_SINGLEROW로 설정된 경우, 트랜잭션이 시작된 이후 다른 사용자가 행을 업데이트하면 해당 행을 인출할 때 오류가 발생합니다. 다른 커서 유형 및 잠금 모드의 경우 트랜잭션이 시작된 이후 다른 사용자가 행을 업데이트해도 사용자가 행을 업데이트하려고 시도할 때까지 오류는 발생하지 않습니다. 두 경우 모두 이러한 오류는 서버에서 일으킵니다.|  
 |DBPROP_MAXOPENROWS|R/w: 읽기 전용<br /><br /> 기본값: 0<br /><br /> 설명: OLE DB 드라이버 SQL Server에 대 한 행 집합에서 활성화 될 수 있는 행의 수를 제한 하지 않습니다.|  
 |DBPROP_MAXPENDINGROWS|R/w: 읽기 전용<br /><br /> 기본값: 0<br /><br /> 설명: OLE DB 드라이버 SQL Server에 대 한 보류 중인 변경 내용 사용 하 여 행 집합 행 수를 제한 하지 않습니다.|  
 |DBPROP_MAXROWS|R/w: 읽기/쓰기<br /><br /> 기본값: 0<br /><br /> 설명: 기본적으로 OLE DB Driver for SQL Server 제한 하지 않습니다 행 집합의 행 수 없습니다. 소비자가 DBPROP_MAXROWS를 설정하는 경우 SQL Server용 OLE DB 드라이버는 SET ROWCOUNT 문을 사용하여 행 집합의 행 수를 제한합니다.<br /><br /> SET ROWCOUNT는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문 실행에 의도하지 않은 결과를 유발할 수 있습니다. 자세한 내용은 [SET ROWCOUNT](../../../t-sql/statements/set-rowcount-transact-sql.md)를 참조하세요.|  

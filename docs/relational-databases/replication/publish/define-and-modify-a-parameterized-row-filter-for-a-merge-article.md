@@ -48,7 +48,7 @@ ms.locfileid: "62507757"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   게시에 대한 구독이 초기화된 후 매개 변수가 있는 행 필터를 추가, 수정 또는 삭제한 경우에는 변경 내용을 적용한 후에 새 스냅숏을 생성하고 모든 구독을 다시 초기화해야 합니다. 속성 변경 요구 사항에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
+-   게시에 대한 구독이 초기화된 후 매개 변수가 있는 행 필터를 추가, 수정 또는 삭제한 경우에는 변경 내용을 적용한 후에 새 스냅샷을 생성하고 모든 구독을 다시 초기화해야 합니다. 속성 변경 요구 사항에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
 ###  <a name="Recommendations"></a> 권장 사항  
   

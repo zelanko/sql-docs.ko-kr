@@ -25,7 +25,7 @@ ms.locfileid: "68108699"
 # <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  지정된 된 게시의 스냅숏 폴더에 나열 된 폴더에 복사 합니다 **@destination_folder** 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. 이 저장 프로시저는 스냅숏을 CD-ROM과 같은 이동식 미디어에 복사할 경우 유용합니다.  
+  지정된 된 게시의 스냅숏 폴더에 나열 된 폴더에 복사 합니다 **@destination_folder** 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. 이 저장 프로시저는 스냅샷을 CD-ROM과 같은 이동식 미디어에 복사할 경우 유용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

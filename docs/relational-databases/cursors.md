@@ -84,7 +84,7 @@ API 커서는 OLE DB와 ODBC의 API 커서 함수를 지원합니다. API 서버
 > 정적 커서의 결과 세트는 **tempdb**의 작업 테이블에 저장되므로 결과 세트의 행 크기가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블의 최대 행 크기를 초과할 수 없습니다.  
 > 자세한 내용은 [쿼리 처리 아키텍처의 작업 테이블 가이드](../relational-databases/query-processing-architecture-guide.md#worktables)를 참조하세요. 자세한 내용은 [SQL Server의 최대 용량 사양](../sql-server/maximum-capacity-specifications-for-sql-server.md#Engine)을 참조하세요.  
   
-[!INCLUDE[tsql](../includes/tsql-md.md)] 에서는 정적 커서와 무관한 용어를 사용합니다. 일부 데이터베이스 API에서는 정적 커서를 스냅숏 커서로 식별합니다.  
+[!INCLUDE[tsql](../includes/tsql-md.md)] 에서는 정적 커서와 무관한 용어를 사용합니다. 일부 데이터베이스 API에서는 정적 커서를 스냅샷 커서로 식별합니다.  
   
 ### <a name="keyset"></a>Keyset  
 키 집합 커서의 멤버 자격과 행 순서는 커서가 열릴 때 고정됩니다. 키 집합 커서는 키 집합이라는 고유 식별자 집합으로 제어되며 키는 결과 집합에서 행을 고유하게 식별하는 열 집합으로 작성됩니다. 키 세트는 커서가 열려 있을 때 `SELECT` 문의 조건에 맞는 모든 행의 키 값 세트입니다. 키 집합 커서의 키 집합은 커서가 열려 있을 때 **tempdb** 에 작성됩니다.  

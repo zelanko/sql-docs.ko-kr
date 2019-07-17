@@ -71,7 +71,7 @@ ms.locfileid: "66506586"
   
 - 자동 닫기는 MEMORY_OPTIMIZED_DATA 파일 그룹이 포함된 데이터베이스에서 지원되지 않습니다.  
   
-- 데이터베이스 스냅숏은 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 데이터베이스에 대해 지원되지 않습니다.  
+- 데이터베이스 스냅샷은 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 데이터베이스에 대해 지원되지 않습니다.  
   
 - 메모리 내 OLTP 개체에 대한 CREATE/ALTER/DROP과 같은 트랜잭션 DDL은 사용자 트랜잭션 내에서 지원되지 않습니다.  
   

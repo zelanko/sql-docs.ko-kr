@@ -62,7 +62,7 @@ ms.locfileid: "66070878"
 |![GMNI_PowerPivotGalleryIcon_Truncated](../media/gmni-powerpivotgalleryicon-truncated.gif "GMNI_PowerPivotGalleryIcon_Truncated")|통합 문서 또는 보고서의 페이지 수가 PowerPivot 갤러리에 표시할 수 있는 것보다 많으면 페이지 아이콘이 나타납니다. 모든 페이지를 표시하려면 클라이언트 애플리케이션을 사용해야 합니다.|  
 |![GMNI_PowerPivotGalleryIcon_Error](../media/gmni-powerpivotgalleryicon-error.gif "GMNI_PowerPivotGalleryIcon_Error")|문서의 축소판 이미지를 렌더링할 수 없으면 오류 아이콘이 나타납니다. 문서는 라이브러리에 게시되기는 하지만 사용자 지정 PowerPivot 갤러리 보기에서 렌더링할 수는 없습니다. PowerPivot for Excel 추가 기능 등의 클라이언트 애플리케이션에서 문서를 볼 수 있습니다.|  
 |![GMNI_PowerPivotGalleryIcon_badtype](../media/gmni-powerpivotgalleryicon-badtype.gif "GMNI_PowerPivotGalleryIcon_badtype")|업로드한 문서를 PowerPivot 갤러리에서 렌더링할 수 없으면 콘텐츠 사용할 수 없음 아이콘이 나타납니다. 지원되는 문서 유형에는 SQL Server 2008 R2 Reporting Services 보고서 작성기에서 만든 PowerPivot 통합 문서 및 보고서가 포함됩니다.<br /><br /> 휴지통에서 문서를 재활용하는 경우에도 이 아이콘이 표시됩니다.<br /><br /> 이전에는 유효한 미리 보기 이미지를 제공했던 문서에 이 아이콘이 표시되게 하려는 경우 문서 속성을 편집하고 변경 사항을 저장하여 이미지를 새로 고칠 수 있습니다.|  
-|![GMNI_PowerPivotGalleryIcon_Locked](../media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|이 문서에 대해 축소판 이미지를 의도적으로 사용할 수 없도록 설정한 경우 콘텐츠 잠김 아이콘이 나타납니다. PowerPivot 갤러리는 PowerPivot 데이터가 없는 Excel 통합 문서나 스냅숏 생성 요구 사항을 충족하지 않는 PowerPivot 통합 문서 또는 Reporting Services 보고서에 대한 축소판 이미지를 생성하지 않습니다. 자세한 내용은 이 항목의 사전 요구 사항 섹션을 참조하세요.|  
+|![GMNI_PowerPivotGalleryIcon_Locked](../media/gmni-powerpivotgalleryicon-locked.gif "GMNI_PowerPivotGalleryIcon_Locked")|이 문서에 대해 축소판 이미지를 의도적으로 사용할 수 없도록 설정한 경우 콘텐츠 잠김 아이콘이 나타납니다. PowerPivot 갤러리는 PowerPivot 데이터가 없는 Excel 통합 문서나 스냅샷 생성 요구 사항을 충족하지 않는 PowerPivot 통합 문서 또는 Reporting Services 보고서에 대한 축소판 이미지를 생성하지 않습니다. 자세한 내용은 이 항목의 사전 요구 사항 섹션을 참조하세요.|  
   
 ##  <a name="add"></a> PowerPivot 갤러리에 Excel 통합 문서 저장  
  Excel 2010에서 제공하는 모든 공유 기술을 사용하여 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 라이브러리에 게시할 수 있습니다. 예를 들어 Excel 2010에서 다른 이름으로 저장을 사용하여 라이브러리에 대한 전체 또는 부분 SharePoint 경로를 지정할 수 있습니다.  
@@ -147,7 +147,7 @@ ms.locfileid: "66070878"
   
 3.  오른쪽에 있는 아래쪽 화살표를 클릭한 다음 **속성 편집**을 선택합니다.  
   
-4.  **저장**을 클릭합니다. 문서를 저장하면 스냅숏 서비스에서 미리 보기 이미지를 다시 생성합니다.  
+4.  **저장**을 클릭합니다. 문서를 저장하면 스냅샷 서비스에서 미리 보기 이미지를 다시 생성합니다.  
   
 ##  <a name="bkmk_known_issues"></a> 알려진 문제  
   

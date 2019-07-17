@@ -77,7 +77,7 @@ sp_add_jobstep [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 |'**ACTIVESCRIPTING**'|액티브 스크립트<br /><br /> **\*\* 중요 \*\*** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |'**CMDEXEC**'|운영 체제 명령 또는 실행 프로그램|  
 |'**배포**'|복제 배포 에이전트 작업|  
-|'**SNAPSHOT**'|복제 스냅숏 에이전트 작업|  
+|'**SNAPSHOT**'|복제 스냅샷 에이전트 작업|  
 |'**LOGREADER**'|복제 로그 판독기 에이전트 작업|  
 |'**병합**'|복제 병합 에이전트 작업|  
 |'**QueueReader**'|복제 큐 판독기 에이전트 작업|  

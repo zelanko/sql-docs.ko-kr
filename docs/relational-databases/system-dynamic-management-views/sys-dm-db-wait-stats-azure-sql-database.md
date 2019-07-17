@@ -136,7 +136,7 @@ ms.locfileid: "68090872"
 |DEADLOCK_ENUM_MUTEX|교착 상태 모니터와 sys.dm_os_waiting_tasks가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 동시에 여러 개의 교착 상태 검색을 실행하고 있지 않도록 하려고 하는 경우에 발생합니다.|  
 |DEADLOCK_TASK_SEARCH|이 리소스의 대기 시간이 길면 서버가 sys.dm_os_waiting_tasks 위에서 쿼리를 실행하고 있으며 이러한 쿼리가 교착 상태 모니터의 교착 상태 검색을 차단하고 있음을 나타냅니다. 이 대기 유형은 교착 상태 모니터에만 사용됩니다. sys.dm_os_waiting_tasks 위의 쿼리는 DEADLOCK_ENUM_MUTEX를 사용합니다.|  
 |DEBUG|내부 동기화에 대한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 CLR 디버깅 작업 중에 발생합니다.|  
-|DISABLE_VERSIONING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가장 오래된 활성 트랜잭션의 타임스탬프가 상태 변경이 시작될 때의 타임스탬프보다 나중인지 확인하기 위해 버전 트랜잭션 관리자를 폴링하는 경우에 발생합니다. 이 경우 ALTER DATABASE 문이 실행되기 전에 시작된 모든 스냅숏 트랜잭션은 완료되었습니다. 이 대기 상태는 ALTER DATABASE 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 버전 관리를 해제하는 경우에 사용됩니다.|  
+|DISABLE_VERSIONING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가장 오래된 활성 트랜잭션의 타임스탬프가 상태 변경이 시작될 때의 타임스탬프보다 나중인지 확인하기 위해 버전 트랜잭션 관리자를 폴링하는 경우에 발생합니다. 이 경우 ALTER DATABASE 문이 실행되기 전에 시작된 모든 스냅샷 트랜잭션은 완료되었습니다. 이 대기 상태는 ALTER DATABASE 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 버전 관리를 해제하는 경우에 사용됩니다.|  
 |DISKIO_SUSPEND|외부 백업이 활성 상태일 때 태스크가 파일에 액세스하려고 대기하는 경우에 발생합니다. 대기 중인 모든 사용자 프로세스에 대해 보고됩니다. 사용자 프로세스당 값이 5보다 크면 외부 백업을 완료하는 데 걸리는 시간이 너무 긴 것일 수 있습니다.|  
 |DISPATCHER_QUEUE_SEMAPHORE|디스패처 풀의 스레드가 처리할 추가 작업을 기다리는 경우에 발생합니다. 이 대기 유형의 대기 시간은 디스패처가 유휴 상태일 때 증가됩니다.|  
 |DLL_LOADING_MUTEX|XML 파서 DLL이 로드될 때까지 대기하는 동안 한 번 발생합니다.|  
@@ -152,14 +152,14 @@ ms.locfileid: "68090872"
 |EC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |EE_PMOLOCK|문 실행 중 특정 유형의 메모리 할당을 동기화하는 경우에 발생합니다.|  
 |EE_SPECPROC_MAP_INIT|내부 프로시저 해시 테이블 생성을 동기화하는 경우에 발생합니다. 이 대기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작된 후 해시 테이블에 처음 액세스하는 경우에만 발생합니다.|  
-|ENABLE_VERSIONING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스를 스냅숏 격리 허용 상태로 전환할 준비가 되었다고 선언하기 전에 이 데이터베이스의 모든 업데이트 트랜잭션이 완료될 때까지 대기하는 경우에 발생합니다. 이 상태는 ALTER DATABASE 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 스냅숏 격리를 설정하는 경우에 사용됩니다.|  
+|ENABLE_VERSIONING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스를 스냅숏 격리 허용 상태로 전환할 준비가 되었다고 선언하기 전에 이 데이터베이스의 모든 업데이트 트랜잭션이 완료될 때까지 대기하는 경우에 발생합니다. 이 상태는 ALTER DATABASE 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 스냅샷 격리를 설정하는 경우에 사용됩니다.|  
 |ERROR_REPORTING_MANAGER|여러 개의 동시 오류 로그 초기화를 동기화하는 경우에 발생합니다.|  
 |EXCHANGE|병렬 쿼리 중 쿼리 프로세서 교환 반복기에서 동기화 중에 발생합니다.|  
 |EXECSYNC|병렬 쿼리 중 쿼리 프로세서 교환 반복기와 관련되지 않은 영역에서 동기화 중에 발생합니다. 이러한 영역의 예에는 비트맵, LOB(Large Binary Object) 및 스풀 반복기가 있습니다. LOB는 이 대기 상태를 자주 사용할 수 있습니다.|  
 |EXECUTION_PIPE_EVENT_INTERNAL|연결 컨텍스트를 통해 전송되는 일괄 처리 실행의 제작자 부분과 소비자 부분 동기화 중에 발생합니다.|  
 |FAILPOINT|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FCB_REPLICA_READ|스냅숏이나 DBCC에서 만든 임시 스냅숏 스파스 파일의 읽기가 동기화되는 경우에 발생합니다.|  
-|FCB_REPLICA_WRITE|스냅숏이나 DBCC에서 만든 임시 스냅숏 스파스 파일에 대한 페이지 밀어넣기 또는 끌어오기가 동기화되는 경우에 발생합니다.|  
+|FCB_REPLICA_READ|스냅샷이나 DBCC에서 만든 임시 스냅샷 스파스 파일의 읽기가 동기화되는 경우에 발생합니다.|  
+|FCB_REPLICA_WRITE|스냅샷이나 DBCC에서 만든 임시 스냅샷 스파스 파일에 대한 페이지 밀어넣기 또는 끌어오기가 동기화되는 경우에 발생합니다.|  
 |FS_FC_RWLOCK|다음 중 하나를 수행하기 위해 FILESTREAM 가비지 수집기가 대기하는 경우에 발생합니다.<br /><br /> 백업 및 복원에 사용되는 가비지 수집 사용 안 함<br /><br /> FILESTREAM 가비지 수집기의 한 주기 실행|  
 |FS_GARBAGE_COLLECTOR_SHUTDOWN|FILESTREAM 가비지 수집기가 정리 태스크 완료를 기다리는 경우에 발생합니다.|  
 |FS_HEADER_RWLOCK|FILESTREAM 헤더 파일(Filestream.hdr)에서 내용을 읽거나 업데이트하기 위해 FILESTREAM 데이터 컨테이너의 FILESTREAM 헤더에 대한 액세스를 얻으려고 대기하는 경우에 발생합니다.|  
@@ -282,8 +282,8 @@ ms.locfileid: "68090872"
 |RECOVER_CHANGEDB|웜 대기 데이터베이스의 데이터베이스 상태 동기화 중에 발생합니다.|  
 |REPL_CACHE_ACCESS|복제 아티클 캐시 동기화 중에 발생합니다. 이 대기 중에는 복제 로그 판독기가 정지되고 게시된 테이블에 대한 DDL(데이터 정의 언어) 문이 차단됩니다.|  
 |REPL_SCHEMA_ACCESS|복제 스키마 버전 정보 동기화 중에 발생합니다. 복제된 개체에 대해 DDL 문을 실행하고 로그 판독기가 DDL 발생을 기반으로 버전이 지정된 스키마를 작성하거나 사용할 때 이 상태가 됩니다.|  
-|REPLICA_WRITES|태스크가 데이터베이스 스냅숏 또는 DBCC 복제본에 대한 페이지 쓰기가 완료될 때까지 대기하는 동안 발생합니다.|  
-|REQUEST_DISPENSER_PAUSE|스냅숏 백업을 위해 파일 I/O를 고정할 수 있도록 태스크가 처리 중인 모든 I/O가 완료될 때까지 대기하는 경우에 발생합니다.|  
+|REPLICA_WRITES|태스크가 데이터베이스 스냅샷 또는 DBCC 복제본에 대한 페이지 쓰기가 완료될 때까지 대기하는 동안 발생합니다.|  
+|REQUEST_DISPENSER_PAUSE|스냅샷 백업을 위해 파일 I/O를 고정할 수 있도록 태스크가 처리 중인 모든 I/O가 완료될 때까지 대기하는 경우에 발생합니다.|  
 |REQUEST_FOR_DEADLOCK_SEARCH|교착 상태 모니터가 다음 교착 상태 검색을 시작하기 위해 대기하는 동안 발생합니다. 이 대기는 교착 상태 감지 사이에 발생하며 이 리소스에 대한 총 대기 시간이 길어도 문제가 있는 것은 아닙니다.|  
 |RESMGR_THROTTLED|새 쿼리가 GROUP_MAX_REQUESTS 설정에 따라 들어오고 정체되는 경우 발생합니다.|  
 |RESOURCE_QUEUE|다양한 내부 리소스 큐 동기화 중에 발생합니다.|  

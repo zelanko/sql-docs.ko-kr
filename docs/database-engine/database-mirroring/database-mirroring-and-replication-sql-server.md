@@ -60,7 +60,7 @@ ms.locfileid: "66774808"
   
     1.  원격 배포자를 사용하는 것이 좋습니다. 배포 구성에 대한 자세한 내용은 [배포 구성](../../relational-databases/replication/configure-distribution.md)을 참조하세요.  
   
-    2.  스냅숏용 데이터베이스와 트랜잭션 게시 및/또는 병합 게시를 설정할 수 있습니다. 하나 이상의 게시 유형이 포함되는 미러된 데이터베이스의 경우에는 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 사용하여 동일 노드에서 두 유형 모두에 대해 데이터베이스를 설정해야 합니다. 예를 들어 주 서버에서 다음 저장 프로시저 호출을 실행할 수 있습니다.  
+    2.  스냅샷용 데이터베이스와 트랜잭션 게시 및/또는 병합 게시를 설정할 수 있습니다. 하나 이상의 게시 유형이 포함되는 미러된 데이터베이스의 경우에는 [sp_replicationdboption](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 사용하여 동일 노드에서 두 유형 모두에 대해 데이터베이스를 설정해야 합니다. 예를 들어 주 서버에서 다음 저장 프로시저 호출을 실행할 수 있습니다.  
   
         ```  
         exec sp_replicationdboption @dbname='<PublicationDatabase>', @optname='publish', @value=true;  
@@ -71,7 +71,7 @@ ms.locfileid: "66774808"
   
 2.  데이터베이스 미러링을 구성합니다. 자세한 내용은 [Windows 인증을 사용하여 데이터베이스 미러링 세션 구성&#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md) 및 [데이터베이스 미러링 설정&#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)을 참조하세요.  
   
-3.  미러 서버에 대한 배포를 구성합니다. 게시자로 미러 이름을 지정하고 주 서버에서 사용되는 것과 같은 배포자 및 스냅숏 폴더를 지정합니다. 예를 들어 저장 프로시저로 복제를 구성하는 경우 배포자에서 [sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) 를 실행한 다음 미러에서 [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) 를 실행합니다. **sp_adddistpublisher**의 경우 다음과 같이 합니다.  
+3.  미러 서버에 대한 배포를 구성합니다. 게시자로 미러 이름을 지정하고 주 서버에서 사용되는 것과 같은 배포자 및 스냅샷 폴더를 지정합니다. 예를 들어 저장 프로시저로 복제를 구성하는 경우 배포자에서 [sp_adddistpublisher](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) 를 실행한 다음 미러에서 [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) 를 실행합니다. **sp_adddistpublisher**의 경우 다음과 같이 합니다.  
   
     -   **@publisher** 매개 변수의 값을 미러 서버의 네트워크 이름으로 설정합니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66774808"
   
 4.  **–PublisherFailoverPartner** 에이전트 매개 변수에 대한 미러 이름을 지정합니다. 이 에이전트 매개 변수는 다음 에이전트에서 장애 조치 후 미러 서버를 식별하는 데 필요합니다.  
   
-    -   모든 게시에 대한 스냅숏 에이전트  
+    -   모든 게시에 대한 스냅샷 에이전트  
   
     -   모든 트랜잭션 게시에 대한 로그 판독기 에이전트  
   

@@ -74,7 +74,7 @@ ms.locfileid: "67936901"
 |ansi_padding|**bit**|세션에 대한 ANSI_PADDING 설정입니다. Null을 허용하지 않습니다.|  
 |ansi_nulls|**bit**|세션에 대한 ANSI_NULLS 설정입니다. Null을 허용하지 않습니다.|  
 |concat_null_yields_null|**bit**|세션에 대한 CONCAT_NULL_YIELDS_NULL 설정입니다. Null을 허용하지 않습니다.|  
-|transaction_isolation_level|**smallint**|세션의 트랜잭션 격리 수준입니다.<br /><br /> 0 = 지정되지 않음<br /><br /> 1 = 커밋되지 않은 읽기<br /><br /> 2 = 커밋된 읽기<br /><br /> 3 = 반복 읽기<br /><br /> 4 = 직렬화 가능<br /><br /> 5 = 스냅숏<br /><br /> Null을 허용하지 않습니다.|  
+|transaction_isolation_level|**smallint**|세션의 트랜잭션 격리 수준입니다.<br /><br /> 0 = 지정되지 않음<br /><br /> 1 = 커밋되지 않은 읽기<br /><br /> 2 = 커밋된 읽기<br /><br /> 3 = 반복 읽기<br /><br /> 4 = 직렬화 가능<br /><br /> 5 = 스냅샷<br /><br /> Null을 허용하지 않습니다.|  
 |lock_timeout|**int**|세션에 대한 LOCK_TIMEOUT 설정입니다. 값은 밀리초 단위입니다. Null을 허용하지 않습니다.|  
 |deadlock_priority|**int**|세션에 대한 DEADLOCK_PRIORITY 설정입니다. Null을 허용하지 않습니다.|  
 |row_count|**bigint**|세션에서 지금까지 반환된 행 수입니다. Null을 허용하지 않습니다.|  

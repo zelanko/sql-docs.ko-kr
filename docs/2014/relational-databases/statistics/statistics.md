@@ -185,7 +185,7 @@ GO
   
 -   CREATE STATISTICS 문을 사용하여 누락된 통계를 작성합니다.  
   
- 읽기 전용 데이터베이스 또는 읽기 전용 스냅숏에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]은 `tempdb`에서 임시 통계를 만들어 유지 관리합니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서 임시 통계를 만드는 경우 통계 이름에는 접미사 _readonly_database_statistic이 추가되므로 영구적 통계와 임시 통계를 구별할 수 있습니다. 접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 읽기/쓰기 데이터베이스에서 임시 통계에 대한 스크립트를 만들어 재현할 수 있습니다. 스크립팅된 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 통계 이름의 접미사를 _readonly_database_statistic에서 _readonly_database_statistic_scripted로 변경합니다.  
+ 읽기 전용 데이터베이스 또는 읽기 전용 스냅샷에 대한 통계가 없거나 유효하지 않을 경우 [!INCLUDE[ssDE](../../../includes/ssde-md.md)]은 `tempdb`에서 임시 통계를 만들어 유지 관리합니다. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] 에서 임시 통계를 만드는 경우 통계 이름에는 접미사 _readonly_database_statistic이 추가되므로 영구적 통계와 임시 통계를 구별할 수 있습니다. 접미사 _readonly_database_statistic은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 생성하는 통계용으로 예약되어 있습니다. 읽기/쓰기 데이터베이스에서 임시 통계에 대한 스크립트를 만들어 재현할 수 있습니다. 스크립팅된 경우 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 에서는 통계 이름의 접미사를 _readonly_database_statistic에서 _readonly_database_statistic_scripted로 변경합니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서만 임시 통계를 만들고 업데이트할 수 있습니다. 그러나 임시 통계를 삭제하고 통계 속성을 모니터링하는 데는 영구적 통계에 사용하는 것과 동일한 도구를 사용할 수 있습니다.  
   

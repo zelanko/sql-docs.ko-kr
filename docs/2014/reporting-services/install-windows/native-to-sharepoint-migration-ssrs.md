@@ -51,7 +51,7 @@ ms.locfileid: "66108759"
 |보고서 파트||마이그레이션 후 보고서 파트에 대한 경로를 확인하거나 업데이트합니다.|  
 |일정|사용자 계정 컨트롤|ListSchedules 메서드 [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md)를 참조하세요.|  
 |구독|예|List Subscriptions 메서드를 참조 하세요 [Subscription and Delivery Methods](../report-server-web-service/methods/subscription-and-delivery-methods.md) 와 ChangeSubscriptionOwner 메서드 <xref:ReportService2010.ReportingService2010.ChangeSubscriptionOwner%2A>|  
-|스냅숏|||  
+|스냅샷|||  
 ||||  
   
   

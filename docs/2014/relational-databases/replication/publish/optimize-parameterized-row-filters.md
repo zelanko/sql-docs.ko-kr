@@ -105,7 +105,7 @@ ms.locfileid: "63046237"
   
     -   게시가 사전 계산 파티션의 요구 사항을 충족시키지 못합니다.  
   
-    -   게시에 대한 스냅숏이 아직 생성되지 않았습니다. 이 경우 해당 옵션은 **스냅숏 생성 시기 자동 설정**의 값을 표시합니다.  
+    -   게시에 대한 스냅샷이 아직 생성되지 않았습니다. 이 경우 해당 옵션은 **스냅샷 생성 시기 자동 설정**의 값을 표시합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -126,7 +126,7 @@ ms.locfileid: "63046237"
   
     -   **@keep_partition_changes** - 사전 계산 파티션을 사용할 수 없는 경우에는 이 최적화를 사용하십시오.  
   
-2.  게시에 대한 스냅숏 작업을 추가합니다. 자세한 내용은 [게시 만들기](create-a-publication.md)를 참조하세요.  
+2.  게시에 대한 스냅샷 작업을 추가합니다. 자세한 내용은 [게시 만들기](create-a-publication.md)를 참조하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행하고 다음 매개 변수를 지정합니다.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "63046237"
   
 4.  필요에 따라 게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. **@property** 에 **partition_options** 값을 지정하고 **@value** 에는 적절한 값을 지정합니다. 이러한 필터링 옵션의 정의는 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) 을 참조하십시오.  
   
-5.  필요에 따라 스냅숏 에이전트를 시작하여 스냅숏을 다시 생성합니다. 새 스냅숏을 생성해야 하는 변경에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
+5.  필요에 따라 스냅샷 에이전트를 시작하여 스냅샷을 다시 생성합니다. 새 스냅샷을 생성해야 하는 변경에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [병합 아티클 간의 조인 필터 집합 자동 생성&#40;SQL Server Management Studio&#41;](automatically-generate-join-filters-between-merge-articles.md)   

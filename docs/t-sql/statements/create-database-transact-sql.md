@@ -70,7 +70,7 @@ ms.locfileid: "67351686"
 
 ## <a name="overview"></a>개요
 
-SQL Server에서 이 문은 새 데이터베이스 및 사용되는 파일과 해당 파일 그룹을 만듭니다. 또한 데이터베이스 스냅숏을 만드는 데 사용하거나, 데이터베이스 파일을 첨부하여 다른 데이터베이스의 분리된 파일에서 데이터베이스를 만드는 데 사용할 수도 있습니다.
+SQL Server에서 이 문은 새 데이터베이스 및 사용되는 파일과 해당 파일 그룹을 만듭니다. 또한 데이터베이스 스냅샷을 만드는 데 사용하거나, 데이터베이스 파일을 첨부하여 다른 데이터베이스의 분리된 파일에서 데이터베이스를 만드는 데 사용할 수도 있습니다.
 
 ## <a name="syntax"></a>구문
 
@@ -150,7 +150,7 @@ CREATE DATABASE database_name
 }
 ```
 
-데이터베이스 스냅숏 만들기
+데이터베이스 스냅샷 만들기
 
 ```
 CREATE DATABASE database_snapshot_name
@@ -188,10 +188,10 @@ PRIMARY를 지정하지 않으면 CREATE DATABASE 문에 나열된 첫 번째 �
 LOG ON     
 데이터베이스 로그를 저장하는 데 사용하는 디스크 파일인 로그 파일을 명시적으로 정의하도록 지정합니다. LOG ON 다음에는 로그 파일을 정의하는 쉼표로 구분된 \<filespec> 항목의 목록이 옵니다. LOG ON을 지정하지 않은 경우에는 데이터베이스의 모든 데이터 파일 크기를 합한 값의 25% 또는 512KB 중에서 더 큰 값을 갖는 로그 파일 하나가 자동으로 만들어집니다. 이 파일은 기본 로그 파일 위치에 저장됩니다. 이 위치에 대한 자세한 내용은 [데이터 및 로그 파일의 기본 위치 보기 또는 변경 - SSMS](../../database-engine/configure-windows/view-or-change-the-default-locations-for-data-and-log-files.md)를 참조하세요.
 
-데이터베이스 스냅숏에는 LOG ON을 지정할 수 없습니다.
+데이터베이스 스냅샷에는 LOG ON을 지정할 수 없습니다.
 
 COLLATE *collation_name*     
-데이터베이스의 기본 데이터 정렬을 지정합니다. 데이터 정렬 이름으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 이 인수를 지정하지 않으면 데이터베이스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 데이터 정렬이 할당됩니다. 데이터베이스 스냅숏에는 데이터 정렬 이름을 지정할 수 없습니다.
+데이터베이스의 기본 데이터 정렬을 지정합니다. 데이터 정렬 이름으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. 이 인수를 지정하지 않으면 데이터베이스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 기본 데이터 정렬이 할당됩니다. 데이터베이스 스냅샷에는 데이터 정렬 이름을 지정할 수 없습니다.
 
 FOR ATTACH 또는 FOR ATTACH_REBUILD_LOG 절을 사용하여 데이터 정렬 이름을 지정할 수 없습니다. 연결된 데이터베이스의 데이터 정렬을 변경하는 방법은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?linkid=16419&kbid=325335)를 참조하세요.
 
@@ -290,7 +290,7 @@ FOR ATTACH를 사용하려면 다음과 같은 조건을 충족해야 합니다.
 
 "Directory name"이 있는 FILESTREAM 옵션을 포함하는 데이터베이스를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 Database_Directory 이름이 고유한지 확인하라는 메시지가 표시됩니다. 고유하지 않으면 연결 작업이 실패하고 "FILESTREAM Database_Directory 이름 \<name>이(가) 이 SQL Server 인스턴스에서 고유하지 않습니다"와 같은 오류 메시지가 표시됩니다. 이 오류를 방지하려면 선택적 매개 변수 *directory_name*이 이 작업에 전달되어야 합니다.
 
-데이터베이스 스냅숏에는 FOR ATTACH를 지정할 수 없습니다.
+데이터베이스 스냅샷에는 FOR ATTACH를 지정할 수 없습니다.
 
 FOR ATTACH에 RESTRICTED_USER 옵션을 지정할 수 있습니다. RESTRICTED_USER는 db_owner 고정 데이터베이스 역할 및 dbcreator와 sysadmin 고정 서버 역할의 멤버만 데이터베이스로의 연결을 허용하지만 연결되는 수는 제한하지 않습니다. 자격이 없는 사용자의 연결 시도는 거부됩니다.
 
@@ -341,7 +341,7 @@ FOR ATTACH_REBUILD_LOG를 사용하려면 다음과 같은 조건을 충족해�
 
 일반적으로 FOR ATTACH_REBUILD_LOG는 로그 크기가 큰 읽기/쓰기 데이터베이스를 복사본이 주로 읽기 작업에만 사용되어 원본 데이터베이스에 비해 로그 공간이 덜 필요한 다른 서버에 복사할 때 사용됩니다.
 
-데이터베이스 스냅숏에는 FOR ATTACH_REBUILD_LOG를 지정할 수 없습니다.
+데이터베이스 스냅샷에는 FOR ATTACH_REBUILD_LOG를 지정할 수 없습니다.
 
 데이터베이스를 연결 및 분리하는 방법은 [데이터베이스 분리 및 연결](../../relational-databases/databases/database-detach-and-attach-sql-server.md)을 참조하세요.
 
@@ -416,7 +416,7 @@ FILEGROWTH를 지정하지 않은 경우 기본값은 다음과 같습니다.
 |[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이전|데이터는 10%입니다. 로그 파일은 10%입니다.|
 
 \<filegroup>     
-파일 그룹 속성을 제어합니다. 데이터베이스 스냅숏에는 파일 그룹을 지정할 수 없습니다.
+파일 그룹 속성을 제어합니다. 데이터베이스 스냅샷에는 파일 그룹을 지정할 수 없습니다.
 
 FILEGROUP *filegroup_name*     
 파일 그룹의 논리적 이름입니다.
@@ -437,19 +437,19 @@ DEFAULT
 명명한 파일 그룹이 데이터베이스의 기본 파일 그룹임을 지정합니다.
 
 *database_snapshot_name*    
-새 데이터베이스 스냅숏의 이름입니다. 데이터베이스 스냅숏 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하며 식별자에 대한 규칙을 따라야 합니다. *database_snapshot_name*은 최대 128자까지 가능합니다.
+새 데이터베이스 스냅샷의 이름입니다. 데이터베이스 스냅샷 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하며 식별자에 대한 규칙을 따라야 합니다. *database_snapshot_name*은 최대 128자까지 가능합니다.
 
 ON **(** NAME **=** _logical\_file\_name_ **,** FILENAME **='** _os\_file\_name_ **')** [ **,** ... *n* ]    
-데이터베이스 스냅숏을 만들기 위해 원본 데이터베이스의 파일 목록을 지정합니다. 스냅숏이 동작하려면 모든 데이터 파일을 개별적으로 지정해야 합니다. 그러나 데이터베이스 스냅숏에는 로그 파일이 허용되지 않습니다. FILESTREAM 파일 그룹은 데이터베이스 스냅숏에서 지원되지 않습니다. FILESTREAM 데이터 파일이 CREATE DATABASE ON 절에 포함되어 있으면 문이 실패하고 오류가 발생합니다.
+데이터베이스 스냅샷을 만들기 위해 원본 데이터베이스의 파일 목록을 지정합니다. 스냅샷이 동작하려면 모든 데이터 파일을 개별적으로 지정해야 합니다. 그러나 데이터베이스 스냅샷에는 로그 파일이 허용되지 않습니다. FILESTREAM 파일 그룹은 데이터베이스 스냅샷에서 지원되지 않습니다. FILESTREAM 데이터 파일이 CREATE DATABASE ON 절에 포함되어 있으면 문이 실패하고 오류가 발생합니다.
 
 NAME, FILENAME 및 각 값에 대한 내용은 해당하는 \<filespec> 값의 설명을 참조하십시오.
 
 > [!NOTE]
 > 데이터베이스 스냅숏을 만들 때는 다른 \<filespec> 옵션 및 PRIMARY 키워드를 사용할 수 없습니다.
 
-AS SNAPSHOT OF *source_database_name* 만들고 있는 데이터베이스를 *source_database_name*에 지정된 원본 데이터베이스의 데이터베이스 스냅숏으로 지정합니다. 스냅숏 및 원본 데이터베이스는 같은 인스턴스에 있어야 합니다.
+AS SNAPSHOT OF *source_database_name* 만들고 있는 데이터베이스를 *source_database_name*에 지정된 원본 데이터베이스의 데이터베이스 스냅샷으로 지정합니다. 스냅샷 및 원본 데이터베이스는 같은 인스턴스에 있어야 합니다.
 
-자세한 내용은 주의 사항 섹션의 [데이터베이스 스냅숏](#database-snapshots)을 참조하세요.
+자세한 내용은 주의 사항 섹션의 [데이터베이스 스냅샷](#database-snapshots)을 참조하세요.
 
 ## <a name="remarks"></a>Remarks
 
@@ -472,7 +472,7 @@ AS SNAPSHOT OF *source_database_name* 만들고 있는 데이터베이스를 *so
 - DBCC CHECKDB
 - FileStream
 - VSS 및 파일 스냅샷을 이용한 온라인 백업
-- 데이터베이스 스냅숏 생성
+- 데이터베이스 스냅샷 생성
 - 메모리 최적화 데이터 파일 그룹
 
 ## <a name="database-files-and-filegroups"></a>데이터베이스 파일 및 파일 그룹
@@ -482,17 +482,17 @@ AS SNAPSHOT OF *source_database_name* 만들고 있는 데이터베이스를 *so
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 성능과 안정성을 최적화하는 구성을 위해 SAN(스토리지 영역 네트워크), iSCSI 기반 네트워크 또는 로컬로 연결된 디스크에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 파일을 스토리지하는 것이 좋습니다.
 
-## <a name="database-snapshots"></a>데이터베이스 스냅숏
-`CREATE DATABASE` 문을 사용하여 *원본 데이터베이스*의 읽기 전용 정적 뷰인 *데이터베이스 스냅숏*을 만들 수 있습니다. 데이터베이스 스냅숏은 스냅숏을 만들었을 당시의 원본 데이터베이스와 트랜잭션 측면에서 일관성을 가집니다. 원본 데이터베이스 하나에 스냅숏이 여러 개 있을 수 있습니다.
+## <a name="database-snapshots"></a>데이터베이스 스냅샷
+`CREATE DATABASE` 문을 사용하여 *원본 데이터베이스*의 읽기 전용 정적 뷰인 *데이터베이스 스냅숏*을 만들 수 있습니다. 데이터베이스 스냅샷은 스냅샷을 만들었을 당시의 원본 데이터베이스와 트랜잭션 측면에서 일관성을 가집니다. 원본 데이터베이스 하나에 스냅샷이 여러 개 있을 수 있습니다.
 
 > [!NOTE]
-> 데이터베이스 스냅숏을 만드는 경우 `CREATE DATABASE` 문은 로그 파일, 오프라인 파일, 복원 파일 및 존재하지 않는 파일을 참조할 수 없습니다.
+> 데이터베이스 스냅샷을 만드는 경우 `CREATE DATABASE` 문은 로그 파일, 오프라인 파일, 복원 파일 및 존재하지 않는 파일을 참조할 수 없습니다.
 
-데이터베이스 스냅숏 만들기에 실패한 경우 해당 스냅숏은 주의 대상이 되며 삭제해야 합니다. 자세한 내용은 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)를 참조하세요.
+데이터베이스 스냅샷 만들기에 실패한 경우 해당 스냅샷은 주의 대상이 되며 삭제해야 합니다. 자세한 내용은 [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)를 참조하세요.
 
-각 스냅숏은 `DROP DATABASE`를 사용하여 삭제할 때까지 그대로 유지됩니다.
+각 스냅샷은 `DROP DATABASE`를 사용하여 삭제할 때까지 그대로 유지됩니다.
 
-자세한 내용은 [데이터베이스 스냅숏](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.
+자세한 내용은 [데이터베이스 스냅샷](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.
 
 ## <a name="database-options"></a>데이터베이스 옵션
 데이터베이스를 만들 때마다 몇 가지 데이터베이스 옵션이 자동으로 설정됩니다. 이러한 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
@@ -683,8 +683,8 @@ CREATE DATABASE Archive
 GO
 ```
 
-### <a name="f-creating-a-database-snapshot"></a>F. 데이터베이스 스냅숏 만들기
-다음 예에서는 `sales_snapshot0600` 데이터베이스 스냅숏을 만듭니다. 데이터베이스 스냅숏은 읽기 전용이므로 로그 파일을 지정할 수 없습니다. 구문에 맞게 원본 데이터베이스의 모든 파일을 지정하며 파일 그룹은 지정하지 않습니다.
+### <a name="f-creating-a-database-snapshot"></a>F. 데이터베이스 스냅샷 만들기
+다음 예에서는 `sales_snapshot0600` 데이터베이스 스냅샷을 만듭니다. 데이터베이스 스냅샷은 읽기 전용이므로 로그 파일을 지정할 수 없습니다. 구문에 맞게 원본 데이터베이스의 모든 파일을 지정하며 파일 그룹은 지정하지 않습니다.
 
 이 예의 원본 데이터베이스는 예 4에서 만든 `Sales` 데이터베이스입니다.
 

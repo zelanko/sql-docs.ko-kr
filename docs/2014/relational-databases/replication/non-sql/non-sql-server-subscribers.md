@@ -28,7 +28,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022243"
 ---
 # <a name="non-sql-server-subscribers"></a>Non-SQL Server Subscribers
-  다음[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자는 밀어넣기 구독을 사용하여 스냅숏 및 트랜잭션 게시를 구독할 수 있습니다. 구독은 나열된 OLE DB 공급자의 최신 버전을 사용하는 나열된 각 데이터베이스의 가장 최신 버전 두 개에 대해 지원됩니다.  
+  다음[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자는 밀어넣기 구독을 사용하여 스냅샷 및 트랜잭션 게시를 구독할 수 있습니다. 구독은 나열된 OLE DB 공급자의 최신 버전을 사용하는 나열된 각 데이터베이스의 가장 최신 버전 두 개에 대해 지원됩니다.  
   
  SQL Server 이외의 구독자에 대한 다른 유형의 복제는 지원되지 않습니다. Oracle 게시는 지원되지 않습니다. 데이터를 이동하려면 변경 데이터 캡처 및 [!INCLUDE[ssIS](../../../includes/ssis-md.md)]를 사용하여 솔루션을 만듭니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63022243"
   
 -   게시에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자와[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자가 있는 경우[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자에 대한 구독을 만들기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에서 게시를 사용할 수 있도록 설정해야 합니다.  
   
--   기본적으로[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 스냅숏 에이전트에 의해 생성된 스크립트는 CREATE TABLE 구문에 따옴표가 붙지 않은 식별자를 사용합니다. 따라서 이름이 'test'인 게시된 테이블이 'TEST'로 복제됩니다. 게시 데이터베이스에 있는 테이블에서와 똑같이 대/소문자를 맞추려면 배포 에이전트에 대해 **-QuotedIdentifier** 매개 변수를 사용합니다. 게시된 개체 이름(테이블, 열 및 제약 조건)에 **이외 구독자의 데이터베이스 버전에서 예약된 단어나 공백이 포함되어 있으면** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 매개 변수도 사용해야 합니다. 이 매개 변수에 대한 자세한 내용은 [Replication Distribution Agent](../agents/replication-distribution-agent.md)를 참조하십시오.  
+-   기본적으로[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자에 대해 스냅샷 에이전트에 의해 생성된 스크립트는 CREATE TABLE 구문에 따옴표가 붙지 않은 식별자를 사용합니다. 따라서 이름이 'test'인 게시된 테이블이 'TEST'로 복제됩니다. 게시 데이터베이스에 있는 테이블에서와 똑같이 대/소문자를 맞추려면 배포 에이전트에 대해 **-QuotedIdentifier** 매개 변수를 사용합니다. 게시된 개체 이름(테이블, 열 및 제약 조건)에 **이외 구독자의 데이터베이스 버전에서 예약된 단어나 공백이 포함되어 있으면** -QuotedIdentifier[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 매개 변수도 사용해야 합니다. 이 매개 변수에 대한 자세한 내용은 [Replication Distribution Agent](../agents/replication-distribution-agent.md)를 참조하십시오.  
   
 -   배포 에이전트를 실행하는 계정에는 OLE DB 공급자의 설치 디렉터리에 대해 읽기 권한이 있어야 합니다.  
   

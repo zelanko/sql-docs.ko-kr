@@ -86,7 +86,7 @@ sys.dm_pdw_nodes_io_virtual_file_stats
 |**num_of_bytes_written**|**bigint**|파일에 대해 실행된 쓰기의 총 바이트 수입니다.|  
 |**io_stall_write_ms**|**bigint**|사용자가 파일에 대한 쓰기가 완료될 때까지 대기한 총 시간(밀리초)입니다.|  
 |**io_stall**|**bigint**|사용자가 파일에 대한 I/O가 완료될 때까지 대기한 총 시간(밀리초)입니다.|  
-|**size_on_disk_bytes**|**bigint**|이 파일에 대해 디스크에서 사용된 바이트 수입니다. 스파스 파일의 경우 데이터베이스 스냅숏에 사용된 디스크의 실제 바이트 수입니다.|  
+|**size_on_disk_bytes**|**bigint**|이 파일에 대해 디스크에서 사용된 바이트 수입니다. 스파스 파일의 경우 데이터베이스 스냅샷에 사용된 디스크의 실제 바이트 수입니다.|  
 |**file_handle**|**varbinary**|이 파일에 대한 Windows 파일 핸들입니다.|  
 |**io_stall_queued_read_ms**|**bigint**|**에 적용 되지 않습니다:** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]합니다.<br /><br /> 읽기용 IO 리소스 관리에서 사용하는 총 IO 대시 시간입니다. Null을 허용하지 않습니다. 자세한 내용은 [sys.dm_resource_governor_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md)합니다.|  
 |**io_stall_queued_write_ms**|**bigint**|**에 적용 되지 않습니다:** : [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)]합니다.<br /><br />  쓰기용 IO 리소스 관리에서 사용하는 총 IO 대시 시간입니다. Null을 허용하지 않습니다.|

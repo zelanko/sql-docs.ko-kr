@@ -24,7 +24,7 @@
       href: features/using-large-value-types.md
     - name: 프로그래밍 방식으로 암호 변경
       href: features/changing-passwords-programmatically.md
-    - name: 스냅숏 격리 작업
+    - name: 스냅샷 격리 작업
       href: features/working-with-snapshot-isolation.md
     - name: 쿼리 알림 작업
       href: features/working-with-query-notifications.md

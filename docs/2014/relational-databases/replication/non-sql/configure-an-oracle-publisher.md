@@ -20,7 +20,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022598"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle 게시자 구성
-  Oracle 게시자에서의 게시는 일반 스냅숏 및 트랜잭션 게시가 만들어지는 것과 같은 방식으로 만들어지지만 Oracle 게시자에서 게시를 만들려면 먼저 다음 단계(1, 3, 4단계는 이 항목에서 자세히 설명)를 수행해야 합니다.  
+  Oracle 게시자에서의 게시는 일반 스냅샷 및 트랜잭션 게시가 만들어지는 것과 같은 방식으로 만들어지지만 Oracle 게시자에서 게시를 만들려면 먼저 다음 단계(1, 3, 4단계는 이 항목에서 자세히 설명)를 수행해야 합니다.  
   
 1.  제공된 스크립트를 사용하여 Oracle 데이터베이스 내에 복제 관리 사용자를 만듭니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "63022598"
   
  또한 사용자에게 다음 사용 권한을 역할을 사용하지 않고 직접 부여해야 합니다.  
   
--   CREATE ANY TRIGGER. 스냅숏 및 트랜잭션 복제에만 필요합니다.  
+-   CREATE ANY TRIGGER. 스냅샷 및 트랜잭션 복제에만 필요합니다.  
   
 -   CREATE TABLE  
   
@@ -122,7 +122,7 @@ ms.locfileid: "63022598"
 > [!NOTE]  
 >  Oracle 게시자는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자 또는 동일한 배포자를 사용하는 모든 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 게시자와 같은 이름을 가질 수 없습니다.  
   
- 게시자로 Oracle 데이터베이스를 식별 하는 경우 Oracle 게시 옵션인을 선택 해야 합니다. 전체 또는 Oracle Gateway입니다. 게시자를 식별한 다음에 이 옵션을 변경하려면 해당 게시자를 삭제하고 다시 구성해야 합니다. Oracle Complete 옵션은 Oracle 게시에 대해 지원되는 전체 기능 집합과 함께 스냅숏 및 트랜잭션 게시를 제공하도록 디자인되었습니다. Oracle Gateway 옵션은 복제가 시스템 간 게이트웨이 역할을 하는 경우 성능을 향상시킬 수 있도록 특정 디자인 최적화를 제공합니다.  
+ 게시자로 Oracle 데이터베이스를 식별 하는 경우 Oracle 게시 옵션인을 선택 해야 합니다. 전체 또는 Oracle Gateway입니다. 게시자를 식별한 다음에 이 옵션을 변경하려면 해당 게시자를 삭제하고 다시 구성해야 합니다. Oracle Complete 옵션은 Oracle 게시에 대해 지원되는 전체 기능 집합과 함께 스냅샷 및 트랜잭션 게시를 제공하도록 디자인되었습니다. Oracle Gateway 옵션은 복제가 시스템 간 게이트웨이 역할을 하는 경우 성능을 향상시킬 수 있도록 특정 디자인 최적화를 제공합니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에서 Oracle 게시자를 식별한 다음 복제는 Oracle 데이터베이스의 TNS 서비스 이름과 같은 이름으로 연결된 서버를 만듭니다. 이 연결된 서버는 복제에서만 사용할 수 있습니다. 연결된 서버 연결을 통해 Oracle 게시자에 연결하려면 다른 TNS 서비스 이름을 만든 다음 이 이름을 사용하여 [sp_addlinkedserver&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)를 호출합니다.  
   

@@ -37,7 +37,7 @@ Linux의 SQL Server 인스턴스에서 모든 유형의 복제에 참여할 수 
 
 * 트랜잭션
 * 병합
-* 스냅숏
+* 스냅샷
 
 복제에 대 한 자세한 내용은 [SQL Server 복제 설명서](../relational-databases/replication/sql-server-replication.md)합니다.
 
@@ -45,7 +45,7 @@ Linux의 SQL Server 인스턴스에서 모든 유형의 복제에 참여할 수 
 
 에 대 한 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 다음 복제 기능이 지원 됩니다.
 
-* 스냅숏 복제
+* 스냅샷 복제
 * 트랜잭션 복제
 * 병합 복제
 * 피어 투 피어 복제

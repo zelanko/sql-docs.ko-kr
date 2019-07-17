@@ -64,10 +64,10 @@ ms.locfileid: "54131903"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-     다음에 구독이 동기화되면 기본적으로 새 스냅숏이 구독 데이터베이스에 적용됩니다. 자세한 내용은 [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
+     다음에 구독이 동기화되면 기본적으로 새 스냅샷이 구독 데이터베이스에 적용됩니다. 자세한 내용은 [구독 다시 초기화](../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
 > [!NOTE]  
->  병합 복제를 사용하면 스냅숏이 적용되기 전에 처리 중인 변경 내용이 게시자로 업로드되지만 동기화 관리자에서는 이 옵션을 사용할 수 없습니다. 변경 내용을 업로드하려면 구독을 다시 초기화하기 전에 동기화합니다.  
+>  병합 복제를 사용하면 스냅샷이 적용되기 전에 처리 중인 변경 내용이 게시자로 업로드되지만 동기화 관리자에서는 이 옵션을 사용할 수 없습니다. 변경 내용을 업로드하려면 구독을 다시 초기화하기 전에 동기화합니다.  
   
 ### <a name="to-set-properties-for-a-pull-subscription-in-synchronization-manager"></a>동기화 관리자에서 끌어오기 구독에 대한 속성을 설정하려면  
   

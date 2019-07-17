@@ -132,7 +132,7 @@ ms.locfileid: "68188824"
 |복제 배포자|복제 배포 에이전트를 활성화하는 작업 단계를 실행합니다.|  
 |복제 병합|복제 병합 에이전트를 활성화하는 작업 단계를 실행합니다.|  
 |복제 큐 판독기|복제 큐 판독기 에이전트를 활성화하는 작업 단계를 실행합니다.|  
-|복제 스냅숏|복제 스냅숏 에이전트를 활성화하는 작업 단계를 실행합니다.|  
+|복제 스냅샷|복제 스냅샷 에이전트를 활성화하는 작업 단계를 실행합니다.|  
 |복제 트랜잭션 로그 판독기|복제 로그 판독기 에이전트를 활성화하는 작업 단계를 실행합니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 명령|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 명령을 실행합니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Query|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 쿼리를 실행합니다.|  

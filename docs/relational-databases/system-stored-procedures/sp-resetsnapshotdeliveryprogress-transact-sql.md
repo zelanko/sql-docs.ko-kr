@@ -25,7 +25,7 @@ ms.locfileid: "68129646"
 # <a name="spresetsnapshotdeliveryprogress-transact-sql"></a>sp_resetsnapshotdeliveryprogress(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  스냅숏 배달을 다시 시작할 수 있도록 끌어오기 구독에 대한 스냅숏 배달 프로세스를 다시 설정합니다. 구독 데이터베이스의 구독자에서 실행됩니다.  
+  스냅샷 배달을 다시 시작할 수 있도록 끌어오기 구독에 대한 스냅샷 배달 프로세스를 다시 설정합니다. 구독 데이터베이스의 구독자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +46,7 @@ sp_resetsnapshotdeliveryprogress [ [ @verbose_level = ] verbose_level ]
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_resetsnapshotdeliveryprogress** 의 모든 행을 제거 합니다 **MSsnapshotdeliveryprogress** 테이블입니다. 결과적으로 스냅숏 배달 프로세스의 이전 과정에 의해 구독 데이터베이스에 남겨진 모든 메타데이터도 함께 제거됩니다.  
+ **sp_resetsnapshotdeliveryprogress** 의 모든 행을 제거 합니다 **MSsnapshotdeliveryprogress** 테이블입니다. 결과적으로 스냅샷 배달 프로세스의 이전 과정에 의해 구독 데이터베이스에 남겨진 모든 메타데이터도 함께 제거됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_resetsnapshotdeliveryprogress**합니다.  

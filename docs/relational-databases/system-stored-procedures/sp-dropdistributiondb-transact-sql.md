@@ -49,7 +49,7 @@ sp_dropdistributiondb [ @database= ] 'database'
   
  **sp_dropdistributiondb** 있으면 배포 데이터베이스에 대 한 큐 판독기 에이전트 작업을 제거 합니다.  
   
- 배포를 사용하지 않으려면 배포 데이터베이스가 온라인 상태여야 합니다. 배포 데이터베이스에 대해 배포 스냅숏이 있으면 배포를 사용하지 않도록 설정하기 전에 이 스냅숏을 먼저 삭제해야 합니다. 데이터베이스 스냅숏은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅숏과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
+ 배포를 사용하지 않으려면 배포 데이터베이스가 온라인 상태여야 합니다. 배포 데이터베이스에 대해 데이터베이스 스냅샷이 있으면 배포를 사용하지 않도록 설정하기 전에 이 스냅샷을 먼저 삭제해야 합니다. 데이터베이스 스냅샷은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅샷과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistributiondb-tr_1.sql)]  

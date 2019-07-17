@@ -21,7 +21,7 @@ ms.locfileid: "65101966"
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>dbSqlPackage 공급자와 함께 MSDeploy 사용
 **DbSqlPackage**는 SQL Server/SQL Azure 데이터베이스와 상호 작용할 수 있는 **MSDeploy** 공급자입니다. **DbSqlPackage**에서는 다음 작업을 지원합니다.  
   
--   **추출**: 라이브 SQL Server 또는 SQL Azure 데이터베이스에서 데이터베이스 스냅숏(.dacpac) 파일을 만듭니다.  
+-   **추출**: 라이브 SQL Server 또는 SQL Azure 데이터베이스에서 데이터베이스 스냅샷(.dacpac) 파일을 만듭니다.  
   
 -   **게시**: 원본 .dacpac 파일의 스키마와 일치하도록 데이터베이스 스키마를 증분식으로 업데이트합니다.  
   
@@ -57,7 +57,7 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
 |---------|-----------|---------------|  
 |**-source:dbSqlPackage=** {*input*}|**해당 사항 없음**|*input*은 유효한 SQL Server 또는 SQL Azure 연결 문자열 또는 디스크의 .dacpac 파일에 대한 경로입니다.<br /><br />**참고:** 연결 문자열을 입력 원본으로 사용할 때 지원되는 연결 문자열 속성은 *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* 및 *ConnectionTimeout*뿐입니다.|  
   
-입력 원본이 라이브 SQL Server/SQL Azure 데이터베이스에 대한 연결 문자열인 경우 **dbSqlPackage** 라이브 SQL Server/SQL Azure 데이터베이스에서 데이터베이스 스냅숏(.dacpac 파일 형식)을 추출합니다.  
+입력 원본이 라이브 SQL Server/SQL Azure 데이터베이스에 대한 연결 문자열인 경우 **dbSqlPackage** 라이브 SQL Server/SQL Azure 데이터베이스에서 데이터베이스 스냅샷(.dacpac 파일 형식)을 추출합니다.  
   
 **원본** 매개 변수는 다음과 같습니다.  
   
@@ -99,13 +99,13 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
 |**DisableAndReenableDdlTriggers={True &#124; False}**|**True**|게시 프로세스가 시작할 때 DDL(데이터 정의 언어) 트리거를 사용하지 않고 게시 작업이 끝날 때 다시 사용할지 여부를 지정합니다.|  
 |**DoNotAlterChangeDataCaptureObjects={ True &#124; False}**|**True**|**True**인 경우 변경 데이터 캡처 개체가 수정되지 않습니다.|  
 |**DoNotAlterReplicatedObjects=( True &#124; False}**|**True**|복제된 개체를 확인 중에 식별할지 여부를 지정합니다.|  
-|**DropConstraintsNotInSource= {True &#124; False}**|**True**|데이터베이스에 게시할 때 게시 작업에서 데이터베이스 스냅숏(.dacpac)에 없는 제약 조건을 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
-|**DropDmlTriggersNotInSource= {True &#124; False}**|**True**|데이터베이스에 게시할 때 게시 작업에서 데이터베이스 스냅숏(.dacpac)에 없는 DML(데이터 조작 언어) 트리거를 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
-|**DropExtendedPropertiesNotInSource= {True &#124; False}**|**True**|데이터베이스에 게시할 때 게시 작업에서 데이터베이스 스냅숏(.dacpac)에 없는 확장 속성을 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
-|**DropIndexesNotInSource= {True &#124; False}**|**True**|데이터베이스에 게시할 때 게시 작업에서 데이터베이스 스냅숏(.dacpac)에 없는 인덱스를 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
-|**DropObjectsNotInSource= {True &#124; False}**|**False**|데이터베이스에 게시할 때 데이터베이스 스냅숏(.dacpac) 파일에 없는 개체를 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
-|**DropPermissionsNotInSource= {True &#124; False}**|**False**|데이터베이스에 게시할 때 게시 작업에서 데이터베이스 스냅숏(.dacpac)에 없는 사용 권한을 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
-|**DropRoleMembersNotInSource= {True &#124; False}**|**False**|데이터베이스에 게시할 때 게시 작업에서 데이터베이스 스냅숏(.dacpac)에 없는 역할 멤버를 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
+|**DropConstraintsNotInSource= {True &#124; False}**|**True**|데이터베이스에 게시할 때 게시 작업에서 데이터베이스 스냅샷(.dacpac)에 없는 제약 조건을 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
+|**DropDmlTriggersNotInSource= {True &#124; False}**|**True**|데이터베이스에 게시할 때 게시 작업에서 데이터베이스 스냅샷(.dacpac)에 없는 DML(데이터 조작 언어) 트리거를 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
+|**DropExtendedPropertiesNotInSource= {True &#124; False}**|**True**|데이터베이스에 게시할 때 게시 작업에서 데이터베이스 스냅샷(.dacpac)에 없는 확장 속성을 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
+|**DropIndexesNotInSource= {True &#124; False}**|**True**|데이터베이스에 게시할 때 게시 작업에서 데이터베이스 스냅샷(.dacpac)에 없는 인덱스를 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
+|**DropObjectsNotInSource= {True &#124; False}**|**False**|데이터베이스에 게시할 때 데이터베이스 스냅샷(.dacpac) 파일에 없는 개체를 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
+|**DropPermissionsNotInSource= {True &#124; False}**|**False**|데이터베이스에 게시할 때 게시 작업에서 데이터베이스 스냅샷(.dacpac)에 없는 사용 권한을 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
+|**DropRoleMembersNotInSource= {True &#124; False}**|**False**|데이터베이스에 게시할 때 게시 작업에서 데이터베이스 스냅샷(.dacpac)에 없는 역할 멤버를 대상 데이터베이스에서 삭제할지 여부를 지정합니다.|  
 |**GenerateSmartDefaults={True &#124; False}**|**False**|**SqlPackage.exe**에서 데이터가 들어 있는 테이블을 Null 값을 허용하지 않는 열로 업데이트할 때 자동으로 기본값을 제공할지 여부를 지정합니다.|  
 |**IgnoreAnsiNulls= {True &#124; False}**|**False**|데이터베이스에 게시할 때 **ANSI NULLS** 설정의 차이를 무시 또는 업데이트할지 여부를 지정합니다.|  
 |**IgnoreAuthorizer= {True &#124; False}**|**False**|데이터베이스에 게시할 때 권한 부여자의 차이를 무시 또는 업데이트할지 여부를 지정합니다.|  

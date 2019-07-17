@@ -213,7 +213,7 @@ REBUILD PARTITION = ALL WITH (
 ## <a name="how-compression-affects-replication"></a>압축이 복제에 주는 영향  
  데이터 압축과 복제를 함께 사용할 때는 다음 사항을 고려해야 합니다.  
   
--   스냅숏 에이전트에서 초기 스키마 스크립트를 생성할 때 새 스키마는 테이블과 해당 인덱스 모두에 대해 동일한 압축 설정을 사용합니다. 압축을 인덱스에 사용하지 않고 테이블에만 사용할 수는 없습니다.  
+-   스냅샷 에이전트에서 초기 스키마 스크립트를 생성할 때 새 스키마는 테이블과 해당 인덱스 모두에 대해 동일한 압축 설정을 사용합니다. 압축을 인덱스에 사용하지 않고 테이블에만 사용할 수는 없습니다.  
   
 -   트랜잭션 복제의 경우 아티클 스키마 옵션에 따라 스크립팅할 종속 개체 및 속성이 결정됩니다. 자세한 내용은 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 참조하세요.  
   

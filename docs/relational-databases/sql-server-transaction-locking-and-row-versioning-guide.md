@@ -286,12 +286,12 @@ GO
 |반복 읽기|[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 트랜잭션이 끝날 때까지 일부 데이터에서 획득되는 읽기 잠금 및 쓰기 잠금이 유지됩니다. 그러나 범위 잠금이 관리되지 않으므로 가상 읽기가 발생할 수 있습니다.|  
 |직렬화 가능|트랜잭션이 서로 완전히 격리되는 최상위 수준입니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 일부 데이터에서 획득되는 읽기 잠금 및 쓰기 잠금이 유지되고 트랜잭션이 끝날 때 해제됩니다. 범위 잠금은 SELECT 작업에서 특히 가상 읽기를 방지하기 위해 범위가 지정된 WHERE 절을 사용할 때 필요합니다.<br /><br /> **참고:** 직렬화 가능 격리 수준이 요청된 경우 복제된 테이블에 대한 DDL 작업 및 트랜잭션이 실패할 수 있는데 이는 복제 쿼리가 직렬화 가능 격리 수준과 호환되지 않을 수 있는 힌트를 사용하기 때문입니다.|  
   
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 행 버전 관리를 사용하는 두 개의 추가 트랜잭션 격리 수준을 지원합니다. 하나는 커밋된 읽기 격리를 구현한 것이고 다른 하나는 트랜잭션 격리 수준인 스냅숏입니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 행 버전 관리를 사용하는 두 개의 추가 트랜잭션 격리 수준을 지원합니다. 하나는 커밋된 읽기 격리를 구현한 것이고 다른 하나는 트랜잭션 격리 수준인 스냅샷입니다.  
   
 |행 버전 관리 기반 격리|정의|  
 |------------------------------------|----------------|  
-|커밋된 스냅숏 읽기|READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 ON으로 설정하면 커밋된 읽기 격리가 행 버전 관리를 통해 문 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 수준 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 즉, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 행 버전 관리를 사용하여 문 시작 시와 트랜잭션별로 데이터의 일관성이 유지된 스냅숏을 각 문에 제공합니다. 다른 트랜잭션에 의한 데이터 업데이트 차단을 위해 잠금이 사용되지는 않습니다. 사용자 정의 함수는 UDF를 포함하는 구문 시간이 시작된 후에 커밋된 데이터를 반환할 수 있습니다.<br /><br /> `READ_COMMITTED_SNAPSHOT` 데이터베이스 옵션을 기본값인 OFF로 설정하면 커밋된 격리 읽기는 공유 잠금을 사용하여 현재 트랜잭션이 읽기 작업을 실행하는 동안 다른 트랜잭션이 행을 수정하지 못하도록 합니다. 또한 공유 잠금은 다른 트랜잭션이 완료될 때까지 해당 트랜잭션이 수정한 행을 문이 읽을 수 없도록 합니다. 두 구현 모두 커밋된 읽기 격리에 대한 ISO 정의를 충족합니다.|  
-|스냅숏|스냅숏 격리 수준은 행 버전 관리를 통해 트랜잭션 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 다른 트랜잭션에서 수정한 행을 읽을 때 트랜잭션 시작 당시의 행 버전을 검색합니다. `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에 대해 스냅숏 격리만 사용할 수 있습니다. 기본적으로 사용자 데이터베이스에 대해서는 이 옵션이 OFF로 설정되어 있습니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메타데이터의 버전 관리를 지원하지 않습니다. 따라서 스냅숏 격리에서 실행하는 명시적 트랜잭션에서 수행할 수 있는 DDL 작업에 대한 제한 사항이 있습니다. ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 CLR(공용 언어 런타임) DDL 문과 같은 DDL 문은 BEGIN TRANSACTION 문 다음에 스냅샷 격리에서 허용되지 않습니다. 이러한 문은 암시적 트랜잭션 내에서 스냅숏 격리를 사용할 때 허용됩니다. 기본적으로 암시적 트랜잭션은 DDL 문에서도 스냅숏 격리의 의미 체계를 적용할 수 있게 하는 단일 문입니다. 이 원칙을 위반하면 오류 3961이 발생할 수 있습니다. `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
+|커밋된 스냅샷 읽기|READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 ON으로 설정하면 커밋된 읽기 격리가 행 버전 관리를 통해 문 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 수준 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 즉, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 행 버전 관리를 사용하여 문 시작 시와 트랜잭션별로 데이터의 일관성이 유지된 스냅샷을 각 문에 제공합니다. 다른 트랜잭션에 의한 데이터 업데이트 차단을 위해 잠금이 사용되지는 않습니다. 사용자 정의 함수는 UDF를 포함하는 구문 시간이 시작된 후에 커밋된 데이터를 반환할 수 있습니다.<br /><br /> `READ_COMMITTED_SNAPSHOT` 데이터베이스 옵션을 기본값인 OFF로 설정하면 커밋된 격리 읽기는 공유 잠금을 사용하여 현재 트랜잭션이 읽기 작업을 실행하는 동안 다른 트랜잭션이 행을 수정하지 못하도록 합니다. 또한 공유 잠금은 다른 트랜잭션이 완료될 때까지 해당 트랜잭션이 수정한 행을 문이 읽을 수 없도록 합니다. 두 구현 모두 커밋된 읽기 격리에 대한 ISO 정의를 충족합니다.|  
+|스냅샷|스냅샷 격리 수준은 행 버전 관리를 통해 트랜잭션 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 다른 트랜잭션에서 수정한 행을 읽을 때 트랜잭션 시작 당시의 행 버전을 검색합니다. `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에 대해 스냅숏 격리만 사용할 수 있습니다. 기본적으로 사용자 데이터베이스에 대해서는 이 옵션이 OFF로 설정되어 있습니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메타데이터의 버전 관리를 지원하지 않습니다. 따라서 스냅샷 격리에서 실행하는 명시적 트랜잭션에서 수행할 수 있는 DDL 작업에 대한 제한 사항이 있습니다. ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 CLR(공용 언어 런타임) DDL 문과 같은 DDL 문은 BEGIN TRANSACTION 문 다음에 스냅샷 격리에서 허용되지 않습니다. 이러한 문은 암시적 트랜잭션 내에서 스냅샷 격리를 사용할 때 허용됩니다. 기본적으로 암시적 트랜잭션은 DDL 문에서도 스냅샷 격리의 의미 체계를 적용할 수 있게 하는 단일 문입니다. 이 원칙을 위반하면 오류 3961이 발생할 수 있습니다. `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
  다음 표에서는 각 격리 수준에서 사용되는 동시성 부작용을 보여 줍니다.  
   
@@ -323,7 +323,7 @@ GO
  **ODBC**  
  ODBC 애플리케이션은 *Attribute*를 SQL_ATTR_TXN_ISOLATION으로 설정하고 *ValuePtr*을 SQL_TXN_READ_UNCOMMITTED, SQL_TXN_READ_COMMITTED, SQL_TXN_REPEATABLE_READ 또는 SQL_TXN_SERIALIZABLE로 설정하고 `SQLSetConnectAttr`을 호출합니다.  
   
- 스냅숏 트랜잭션의 경우 애플리케이션은 Attribute를 SQL_COPT_SS_TXN_ISOLATION으로, ValuePtr을 SQL_TXN_SS_SNAPSHOT으로 설정하고 `SQLSetConnectAttr`을 호출합니다. SQL_COPT_SS_TXN_ISOLATION이나 SQL_ATTR_TXN_ISOLATION을 사용하여 스냅숏 트랜잭션을 검색할 수 있습니다.  
+ 스냅샷 트랜잭션의 경우 애플리케이션은 Attribute를 SQL_COPT_SS_TXN_ISOLATION으로, ValuePtr을 SQL_TXN_SS_SNAPSHOT으로 설정하고 `SQLSetConnectAttr`을 호출합니다. SQL_COPT_SS_TXN_ISOLATION이나 SQL_ATTR_TXN_ISOLATION을 사용하여 스냅샷 트랜잭션을 검색할 수 있습니다.  
   
 ##  <a name="Lock_Engine"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 잠금  
  잠금은 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 사용하는 메커니즘으로 동시에 여러 사용자가 동일한 데이터에 액세스하는 것을 동기화합니다.  
@@ -912,7 +912,7 @@ SQL 프로필러 교착 상태 그래프를 실행하는 방법에 대한 자세
 -   낮은 격리 수준을 사용합니다.  
 -   행 버전 관리 기반의 격리 수준을 사용합니다.  
     -   READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 ON으로 설정하여 커밋된 읽기 트랜잭션이 행 버전 관리를 사용할 수 있도록 합니다.  
-    -   스냅숏 격리를 사용합니다.  
+    -   스냅샷 격리를 사용합니다.  
 -   바인딩된 연결을 사용합니다.  
   
 ##### <a name="access-objects-in-the-same-order"></a>같은 순서로 개체에 액세스합니다.  
@@ -937,7 +937,7 @@ SQL 프로필러 교착 상태 그래프를 실행하는 방법에 대한 자세
 > [!NOTE]  
 > 일부 응용 프로그램은 커밋된 읽기 격리의 잠금과 차단에 의존합니다. 이러한 응용 프로그램의 경우 이 옵션을 설정하기 전에 몇 가지 사항을 변경해야 합니다.  
   
- 스냅숏 격리에서도 읽기 작업 중 공유 잠금을 사용하지 않는 행 버전 관리를 사용합니다. 스냅숏 격리 상태에서 트랜잭션을 실행하려면 먼저 `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정해야 합니다.  
+ 스냅샷 격리에서도 읽기 작업 중 공유 잠금을 사용하지 않는 행 버전 관리를 사용합니다. 스냅샷 격리 상태에서 트랜잭션을 실행하려면 먼저 `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정해야 합니다.  
   
  읽기 작업과 쓰기 작업 간에 발생할 수 있는 교착 상태를 최소화하려면 이러한 격리 수준을 구현합니다.  
   
@@ -1066,11 +1066,11 @@ BEGIN TRANSACTION
 -   ONLINE 옵션을 지정하는 인덱스 작업 지원  
 -   행 버전 관리 기반 트랜잭션 격리 수준 지원  
     -   행 버전 관리를 사용하여 문 수준의 읽기 일관성을 유지하는 새로운 커밋된 읽기 격리 수준 구현  
-    -   트랜잭션 수준의 읽기 일관성을 유지하는 새로운 스냅숏 격리 수준  
+    -   트랜잭션 수준의 읽기 일관성을 유지하는 새로운 스냅샷 격리 수준  
   
  `tempdb` 데이터베이스에는 버전 저장소로 사용할 공간이 충분해야 합니다. `tempdb`이 꽉 차면 업데이트 작업이 버전 생성을 중단하고 계속 진행되지만 필요한 특정 행 버전이 더 이상 존재하지 않으므로 읽기 작업이 실패할 수 있습니다. 이것은 트리거, MARS 및 온라인 인덱싱 등의 작업에 영향을 줍니다.  
   
- 커밋된 읽기 및 스냅숏 트랜잭션에 행 버전 관리를 사용하는 과정은 다음 두 단계로 이루어집니다.  
+ 커밋된 읽기 및 스냅샷 트랜잭션에 행 버전 관리를 사용하는 과정은 다음 두 단계로 이루어집니다.  
   
 1.  `READ_COMMITTED_SNAPSHOT`과 `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션 중 하나 또는 모두를 ON에 설정합니다.  
 2.  응용 프로그램에서 적절한 트랜잭션 격리 수준을 설정합니다.  
@@ -1095,19 +1095,19 @@ BEGIN TRANSACTION
 > 짧게 실행되는 트랜잭션의 경우 수정된 행의 버전이 `tempdb` 데이터베이스의 디스크 파일에 작성되지 않고 버퍼 풀에 캐시될 수 있습니다. 버전이 지정된 행이 일시적으로 필요한 경우에는 버퍼 풀에서 삭제되며 이것이 반드시 I/O 오버헤드를 유발하는 것은 아닐 수도 있습니다.  
   
 ### <a name="behavior-when-reading-data"></a>데이터를 읽는 경우의 동작  
- 행 버전 관리 기반 격리 데이터 읽기 수준으로 트랜잭션이 실행되는 경우에는 읽기 작업에서 읽고 있는 데이터에 대한 공유(S) 잠금을 획득하지 못하므로 데이터를 수정하는 트랜잭션을 차단하지 못합니다. 또한 획득한 잠금 수가 감소함에 따라 리소스 잠금으로 인한 오버헤드가 최소화됩니다. 행 버전 관리를 사용하는 커밋된 읽기 격리 및 스냅숏 격리는 버전이 지정된 데이터에 대해 문 수준 또는 트랜잭션 수준의 읽기 일관성을 유지하도록 디자인되었습니다.  
+ 행 버전 관리 기반 격리 데이터 읽기 수준으로 트랜잭션이 실행되는 경우에는 읽기 작업에서 읽고 있는 데이터에 대한 공유(S) 잠금을 획득하지 못하므로 데이터를 수정하는 트랜잭션을 차단하지 못합니다. 또한 획득한 잠금 수가 감소함에 따라 리소스 잠금으로 인한 오버헤드가 최소화됩니다. 행 버전 관리를 사용하는 커밋된 읽기 격리 및 스냅샷 격리는 버전이 지정된 데이터에 대해 문 수준 또는 트랜잭션 수준의 읽기 일관성을 유지하도록 디자인되었습니다.  
   
  행 버전 관리 기반 격리 수준에서 실행되는 트랜잭션을 포함하여 모든 쿼리는 컴파일 및 실행 중에 Sch-S(스키마 안정성) 잠금을 획득합니다. 이 때문에 동시 트랜잭션이 테이블에 대해 Sch-M(스키마 수정) 잠금을 유지하면 쿼리가 차단됩니다. 예를 들어 DDL(데이터 정의 언어) 작업은 테이블의 스키마 정보를 수정하기 전에 Sch-M 잠금을 획득합니다. 행 버전 관리 기반 격리 수준에서 실행되는 쿼리 트랜잭션을 포함하여 Sch-S 잠금을 획득하려고 시도하는 쿼리 트랜잭션은 차단됩니다. 반대로 Sch-S 잠금을 유지하는 쿼리는 Sch-M 잠금을 획득하려고 시도하는 동시 트랜잭션을 차단합니다.  
   
- 스냅숏 격리 수준을 사용하는 트랜잭션이 시작되면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에서 현재 활성화된 모든 트랜잭션을 기록합니다. 스냅숏 트랜잭션에서 버전 체인이 있는 행을 읽으면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]이 체인을 추적하여 다음과 같은 트랜잭션 시퀀스 번호가 있는 행을 검색합니다.  
+ 스냅샷 격리 수준을 사용하는 트랜잭션이 시작되면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에서 현재 활성화된 모든 트랜잭션을 기록합니다. 스냅샷 트랜잭션에서 버전 체인이 있는 행을 읽으면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]이 체인을 추적하여 다음과 같은 트랜잭션 시퀀스 번호가 있는 행을 검색합니다.  
   
--   행을 읽는 스냅숏 트랜잭션의 시퀀스 번호보다 낮으면서 가장 근사한 번호  
+-   행을 읽는 스냅샷 트랜잭션의 시퀀스 번호보다 낮으면서 가장 근사한 번호  
   
--   스냅숏 트랜잭션이 시작되었을 때 활성화된 트랜잭션의 목록에 없는 번호  
+-   스냅샷 트랜잭션이 시작되었을 때 활성화된 트랜잭션의 목록에 없는 번호  
   
- 스냅숏 트랜잭션에 따라 수행된 읽기 작업에서는 스냅숏 트랜잭션이 시작되었을 때 커밋된 각 행의 마지막 버전을 검색합니다. 따라서 트랜잭션의 시작 부분에 데이터가 위치하게 되므로 데이터의 스냅숏 트랜잭션이 일관되게 유지됩니다.  
+ 스냅샷 트랜잭션에 따라 수행된 읽기 작업에서는 스냅샷 트랜잭션이 시작되었을 때 커밋된 각 행의 마지막 버전을 검색합니다. 따라서 트랜잭션의 시작 부분에 데이터가 위치하게 되므로 데이터의 스냅샷 트랜잭션이 일관되게 유지됩니다.  
   
- 행 버전 관리가 사용된 커밋된 읽기 트랜잭션도 이와 비슷한 방식으로 작동합니다. 다만 커밋된 읽기 트랜잭션에서는 행 버전을 선택할 때 고유한 트랜잭션 시퀀스 번호가 사용되지 않는다는 점이 다릅니다. 문이 시작될 때마다 커밋된 읽기 트랜잭션에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에 대해 생성된 가장 최근의 트랜잭션 시퀀스 번호를 읽습니다. 이 트랜잭션 시퀀스 번호는 해당 문에 대해 올바른 행 버전을 선택하는 데 사용됩니다. 이러한 방법으로 커밋된 읽기 트랜잭션에서 각 문의 시작 부분에 있는 데이터의 스냅숏을 확인할 수 있습니다.  
+ 행 버전 관리가 사용된 커밋된 읽기 트랜잭션도 이와 비슷한 방식으로 작동합니다. 다만 커밋된 읽기 트랜잭션에서는 행 버전을 선택할 때 고유한 트랜잭션 시퀀스 번호가 사용되지 않는다는 점이 다릅니다. 문이 시작될 때마다 커밋된 읽기 트랜잭션에서는 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스에 대해 생성된 가장 최근의 트랜잭션 시퀀스 번호를 읽습니다. 이 트랜잭션 시퀀스 번호는 해당 문에 대해 올바른 행 버전을 선택하는 데 사용됩니다. 이러한 방법으로 커밋된 읽기 트랜잭션에서 각 문의 시작 부분에 있는 데이터의 스냅샷을 확인할 수 있습니다.  
   
 > [!NOTE]  
 > 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션은 문 수준에서 트랜잭션이 일관된 데이터 뷰를 제공하지만 이 유형의 트랜잭션에서 생성하거나 액세스한 행 버전은 해당 트랜잭션이 완료될 때까지 유지됩니다.  
@@ -1115,10 +1115,10 @@ BEGIN TRANSACTION
 ### <a name="behavior-when-modifying-data"></a>데이터를 수정하는 경우의 동작  
  행 버전 관리가 사용되는 커밋된 읽기 트랜잭션에서는 데이터 값을 읽을 때 데이터 행에 업데이트(U) 잠금이 적용되는 차단 검색을 사용하여 업데이트할 행을 선택합니다. 이것은 행 버전 관리를 사용하지 않는 커밋된 읽기 트랜잭션과 동일합니다. 데이터 행이 업데이트 조건에 맞지 않으면 해당 행의 업데이트 잠금이 해제되고 그 다음 행이 잠겨 검색됩니다.  
   
- 스냅숏 격리 수준으로 실행되는 트랜잭션은 제약 조건을 적용하기 위해 수정 내용을 수행하기 전에 데이터에 대한 잠금을 획득하는 낙관적 데이터 수정 방법을 사용합니다. 그렇지 않으면 데이터가 수정될 때까지 데이터에 대한 잠금도 획득되지 않습니다. 스냅숏 트랜잭션은 데이터 행이 업데이트 조건에 맞으면 이 스냅숏 트랜잭션이 시작된 후 커밋된 동시 트랜잭션에 의해 해당 데이터 행이 수정되지 않았는지 확인합니다. 스냅숏 트랜잭션이 아닌 다른 트랜잭션에 의해 데이터 행이 수정된 경우에는 업데이트 충돌이 발생하고 스냅숏 트랜잭션이 종료됩니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 업데이트 충돌을 처리합니다. 업데이트 충돌 검색 기능은 해제할 수 없습니다.  
+ 스냅샷 격리 수준으로 실행되는 트랜잭션은 제약 조건을 적용하기 위해 수정 내용을 수행하기 전에 데이터에 대한 잠금을 획득하는 낙관적 데이터 수정 방법을 사용합니다. 그렇지 않으면 데이터가 수정될 때까지 데이터에 대한 잠금도 획득되지 않습니다. 스냅샷 트랜잭션은 데이터 행이 업데이트 조건에 맞으면 이 스냅샷 트랜잭션이 시작된 후 커밋된 동시 트랜잭션에 의해 해당 데이터 행이 수정되지 않았는지 확인합니다. 스냅샷 트랜잭션이 아닌 다른 트랜잭션에 의해 데이터 행이 수정된 경우에는 업데이트 충돌이 발생하고 스냅샷 트랜잭션이 종료됩니다. [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 업데이트 충돌을 처리합니다. 업데이트 충돌 검색 기능은 해제할 수 없습니다.  
   
 > [!NOTE]  
-> 내부적으로 스냅숏 격리 수준으로 실행되는 업데이트 작업은 스냅숏 트랜잭션이 다음 항목에 액세스할 때는 커밋된 읽기 격리 수준으로 실행됩니다.  
+> 내부적으로 스냅샷 격리 수준으로 실행되는 업데이트 작업은 스냅샷 트랜잭션이 다음 항목에 액세스할 때는 커밋된 읽기 격리 수준으로 실행됩니다.  
 >  
 > FOREIGN KEY 제약 조건이 있는 테이블  
 >  
@@ -1126,17 +1126,17 @@ BEGIN TRANSACTION
 >  
 > 둘 이상의 테이블을 참조하는 인덱싱된 뷰  
 >  
-> 그러나 이러한 조건에서도 업데이트 작업은 다른 트랜잭션에 의해 데이터가 수정되지 않았는지 확인합니다. 다른 트랜잭션에 의해 데이터가 수정된 경우 스냅숏 트랜잭션에서 업데이트 충돌이 발생하고 종료됩니다.  
+> 그러나 이러한 조건에서도 업데이트 작업은 다른 트랜잭션에 의해 데이터가 수정되지 않았는지 확인합니다. 다른 트랜잭션에 의해 데이터가 수정된 경우 스냅샷 트랜잭션에서 업데이트 충돌이 발생하고 종료됩니다.  
   
 ### <a name="behavior-in-summary"></a>동작 요약  
- 다음 표에서는 행 버전 관리를 사용하는 스냅숏 격리와 커밋된 읽기 격리의 차이점을 요약합니다.  
+ 다음 표에서는 행 버전 관리를 사용하는 스냅샷 격리와 커밋된 읽기 격리의 차이점을 요약합니다.  
   
-|속성|행 버전 관리를 사용하는 커밋된 읽기 격리 수준|스냅숏 격리 수준|  
+|속성|행 버전 관리를 사용하는 커밋된 읽기 격리 수준|스냅샷 격리 수준|  
 |--------------|----------------------------------------------------------|------------------------------|  
 |지원 요구 사항에 따라 ON으로 설정되어야 하는 데이터베이스 옵션|READ_COMMITTED_SNAPSHOT|ALLOW_SNAPSHOT_ISOLATION|  
 |세션에서 특정한 유형의 행 버전 관리를 요청하는 방법|기본 커밋된 읽기 격리 수준을 사용하거나 SET TRANSACTION ISOLATION LEVEL 문을 실행하여 READ COMMITTED 격리 수준을 지정합니다. 이 작업은 트랜잭션이 시작된 후에 수행할 수 있습니다.|트랜잭션이 시작되기 전에 SET TRANSACTION ISOLATION LEVEL 문을 실행하여 SNAPSHOT 격리 수준을 지정해야 합니다.|  
 |문에서 읽는 데이터의 버전|각 문이 시작되기 전에 커밋된 모든 데이터|각 트랜잭션이 시작되기 전에 커밋된 모든 데이터|  
-|업데이트 처리 방법|행 버전을 실제 데이터로 변환하여 업데이트할 행을 선택하고 선택한 데이터 행에 업데이트 잠금을 사용합니다. 수정할 실제 데이터 행에 대해 배타적 잠금을 획득합니다. 업데이트 충돌 검색은 사용되지 않습니다.|행 버전을 사용하여 업데이트할 행을 선택합니다. 수정할 실제 데이터 행에 대해 배타적 잠금을 획득하려고 시도합니다. 데이터가 다른 트랜잭션에 의해 이미 수정된 경우에는 업데이트 충돌이 발생하며 스냅숏 트랜잭션이 종료됩니다.|  
+|업데이트 처리 방법|행 버전을 실제 데이터로 변환하여 업데이트할 행을 선택하고 선택한 데이터 행에 업데이트 잠금을 사용합니다. 수정할 실제 데이터 행에 대해 배타적 잠금을 획득합니다. 업데이트 충돌 검색은 사용되지 않습니다.|행 버전을 사용하여 업데이트할 행을 선택합니다. 수정할 실제 데이터 행에 대해 배타적 잠금을 획득하려고 시도합니다. 데이터가 다른 트랜잭션에 의해 이미 수정된 경우에는 업데이트 충돌이 발생하며 스냅샷 트랜잭션이 종료됩니다.|  
 |업데이트 충돌 검색|없음|통합 지원되며 해제할 수 없습니다.|  
   
 ### <a name="row-versioning-resource-usage"></a>행 버전 관리 리소스 사용  
@@ -1207,7 +1207,7 @@ BEGIN TRANSACTION
  이 요구 사항을 충족하는 충분한 디스크 공간을 할당해야 합니다.  
   
 #### <a name="monitoring-row-versioning-and-the-version-store"></a>행 버전 관리 및 버전 저장소 모니터링  
- 행 버전 관리, 버전 저장소 및 스냅숏 격리 프로세스의 성능과 문제를 모니터링하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 DMV(동적 관리 뷰) 및 Windows 시스템 모니터의 성능 카운터 형태로 도구를 제공합니다.  
+ 행 버전 관리, 버전 저장소 및 스냅샷 격리 프로세스의 성능과 문제를 모니터링하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 DMV(동적 관리 뷰) 및 Windows 시스템 모니터의 성능 카운터 형태로 도구를 제공합니다.  
   
 ##### <a name="dmvs"></a>DMV  
  다음 DMV는 tempdb와 버전 저장소 및 행 버전 관리를 사용하는 트랜잭션의 현재 상태에 대한 정보를 제공합니다.  
@@ -1230,16 +1230,16 @@ BEGIN TRANSACTION
   
  sys.dm_tran_active_snapshot_database_transactions. 행 버전 관리를 사용하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 내의 모든 데이터베이스에 있는 전체 활성 트랜잭션에 대한 가상 테이블을 반환합니다. 시스템 트랜잭션은 이 DMV에 나타나지 않습니다. 자세한 내용은 [sys.dm_tran_active_snapshot_database_transactions&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)을 참조하세요.  
   
- sys.dm_tran_transactions_snapshot. 각 트랜잭션에서 사용한 스냅숏을 표시하는 가상 테이블을 반환합니다. 스냅숏에는 행 버전 관리를 사용하는 활성 트랜잭션의 시퀀스 번호가 포함됩니다. 자세한 내용은 [sys.dm_tran_transactions_snapshot&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-transactions-snapshot-transact-sql.md)을 참조하세요.  
+ sys.dm_tran_transactions_snapshot. 각 트랜잭션에서 사용한 스냅샷을 표시하는 가상 테이블을 반환합니다. 스냅샷에는 행 버전 관리를 사용하는 활성 트랜잭션의 시퀀스 번호가 포함됩니다. 자세한 내용은 [sys.dm_tran_transactions_snapshot&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-transactions-snapshot-transact-sql.md)을 참조하세요.  
   
  sys.dm_tran_current_transaction. 현재 세션에 있는 트랜잭션의 행 버전 관리 관련 상태 정보를 표시하는 단일 행을 반환합니다. 자세한 내용은 [sys.dm_tran_current_transaction&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-current-transaction-transact-sql.md)을 참조하세요.  
   
- sys.dm_tran_current_snapshot. 현재 스냅숏 격리 트랜잭션이 시작될 때의 모든 활성 트랜잭션을 표시하는 가상 테이블을 반환합니다. 현재 트랜잭션에서 스냅숏 격리를 사용중인 경우 이 함수는 행을 반환하지 않습니다. sys.dm_tran_current_snapshot이 현재 스냅숏에 대한 활성 트랜잭션만 반환한다는 점을 제외하고 sys.dm_tran_transactions_snapshot과 비슷합니다. 자세한 내용은 [sys.dm_tran_current_snapshot&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-current-snapshot-transact-sql.md)을 참조하세요.  
+ sys.dm_tran_current_snapshot. 현재 스냅샷 격리 트랜잭션이 시작될 때의 모든 활성 트랜잭션을 표시하는 가상 테이블을 반환합니다. 현재 트랜잭션에서 스냅샷 격리를 사용중인 경우 이 함수는 행을 반환하지 않습니다. sys.dm_tran_current_snapshot이 현재 스냅샷에 대한 활성 트랜잭션만 반환한다는 점을 제외하고 sys.dm_tran_transactions_snapshot과 비슷합니다. 자세한 내용은 [sys.dm_tran_current_snapshot&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-tran-current-snapshot-transact-sql.md)을 참조하세요.  
   
 ##### <a name="performance-counters"></a>성능 카운터  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 성능 카운터는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스의 영향을 받는 시스템 성능에 대한 정보를 제공합니다. 다음 성능 카운터는 tempdb와 버전 저장소 및 행 버전 관리를 사용하는 트랜잭션을 모니터링합니다. 이러한 성능 카운터는 SQLServer:Transactions 성능 개체에 포함되어 있습니다.  
   
- **Free Space in tempdb (KB)** . tempdb 데이터베이스의 사용 가능한 공간(KB)을 모니터링합니다. tempdb에는 스냅숏 격리를 지원하는 버전 저장소를 처리하기에 충분한 공간이 있어야 합니다.  
+ **Free Space in tempdb (KB)** . tempdb 데이터베이스의 사용 가능한 공간(KB)을 모니터링합니다. tempdb에는 스냅샷 격리를 지원하는 버전 저장소를 처리하기에 충분한 공간이 있어야 합니다.  
   
  다음 공식을 사용하여 버전 저장소의 예상 크기를 대략적으로 계산할 수 있습니다. 장기 실행 트랜잭션의 경우 생성 및 정리 속도를 모니터링하여 버전 저장소의 예상 최대 크기를 결정하면 유용합니다.  
   
@@ -1262,26 +1262,26 @@ BEGIN TRANSACTION
   
  **Version Store unit truncation**. 인스턴스가 시작된 이후 잘린 버전 저장소 단위의 총 수를 모니터링합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 버전 저장소 단위에 저장된 버전 행이 활성 트랜잭션을 실행하는 데 불필요하다고 결정하면 버전 저장소 단위가 잘립니다.  
   
- **Update conflict ratio**. 총 업데이트 스냅숏 트랜잭션 중 업데이트 충돌이 있는 업데이트 스냅숏 트랜잭션의 비율을 모니터링합니다.  
+ **Update conflict ratio**. 총 업데이트 스냅샷 트랜잭션 중 업데이트 충돌이 있는 업데이트 스냅샷 트랜잭션의 비율을 모니터링합니다.  
   
  **Longest Transaction Running Time**. 행 버전 관리를 사용하는 트랜잭션의 가장 긴 실행 시간(초)을 모니터링합니다. 이 정보를 사용하면 특별한 이유 없이 오래 실행되는 트랜잭션이 있는지를 확인할 수 있습니다.  
   
  **트랜잭션**. 활성 트랜잭션의 총 수를 모니터링합니다. 시스템 트랜잭션은 포함되지 않습니다.  
   
- `Snapshot Transactions`입니다. 활성 스냅숏 트랜잭션의 총 수를 모니터링합니다.  
+ `Snapshot Transactions`입니다. 활성 스냅샷 트랜잭션의 총 수를 모니터링합니다.  
   
- `Update Snapshot Transactions`입니다. 업데이트 작업을 수행하는 활성 스냅숏 트랜잭션의 총 수를 모니터링합니다.  
+ `Update Snapshot Transactions`입니다. 업데이트 작업을 수행하는 활성 스냅샷 트랜잭션의 총 수를 모니터링합니다.  
   
- `NonSnapshot Version Transactions`입니다. 버전 레코드를 생성하는 활성 비스냅숏 트랜잭션의 총 수를 모니터링합니다.  
+ `NonSnapshot Version Transactions`입니다. 버전 레코드를 생성하는 활성 비스냅샷 트랜잭션의 총 수를 모니터링합니다.  
   
 > [!NOTE]  
-> Update Snapshot Transactions와 NonSnapshot Version Transactions의 합은 버전 생성에 참여하는 트랜잭션의 총 수를 나타냅니다. Snapshot Transactions와 Update Snapshot Transactions 값의 차이를 보고 읽기 전용 스냅숏 트랜잭션의 수를 알 수 있습니다.  
+> Update Snapshot Transactions와 NonSnapshot Version Transactions의 합은 버전 생성에 참여하는 트랜잭션의 총 수를 나타냅니다. Snapshot Transactions와 Update Snapshot Transactions 값의 차이를 보고 읽기 전용 스냅샷 트랜잭션의 수를 알 수 있습니다.  
   
 ### <a name="row-versioning-based-isolation-level-example"></a>행 버전 관리 기반 격리 수준 예  
- 다음 예에서는 스냅숏 격리 트랜잭션과 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션 동작의 차이를 보여 줍니다.  
+ 다음 예에서는 스냅샷 격리 트랜잭션과 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션 동작의 차이를 보여 줍니다.  
   
-#### <a name="a-working-with-snapshot-isolation"></a>1\. 스냅숏 격리 작업  
- 이 예에서는 스냅숏 격리에서 실행되는 트랜잭션이 다른 트랜잭션에서 수정한 데이터를 읽습니다. 스냅숏 트랜잭션은 다른 트랜잭션에서 실행하는 업데이트 작업을 차단하지 않으며 데이터 수정을 무시하고 계속 버전이 지정된 행에서 데이터를 읽습니다. 그러나 스냅숏 트랜잭션이 다른 트랜잭션에서 이미 수정한 데이터를 수정할 경우 스냅숏 트랜잭션은 오류를 생성하고 종료됩니다.  
+#### <a name="a-working-with-snapshot-isolation"></a>1\. 스냅샷 격리 작업  
+ 이 예에서는 스냅샷 격리에서 실행되는 트랜잭션이 다른 트랜잭션에서 수정한 데이터를 읽습니다. 스냅샷 트랜잭션은 다른 트랜잭션에서 실행하는 업데이트 작업을 차단하지 않으며 데이터 수정을 무시하고 계속 버전이 지정된 행에서 데이터를 읽습니다. 그러나 스냅샷 트랜잭션이 다른 트랜잭션에서 이미 수정한 데이터를 수정할 경우 스냅샷 트랜잭션은 오류를 생성하고 종료됩니다.  
   
  세션 1:  
   
@@ -1377,10 +1377,10 @@ GO
 ```  
   
 #### <a name="b-working-with-read-committed-using-row-versioning"></a>2\. 행 버전 관리를 사용한 커밋된 읽기 작업  
- 이 예에서 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션은 다른 트랜잭션과 동시에 실행됩니다. 커밋된 읽기 트랜잭션은 스냅숏 트랜잭션과 다르게 동작합니다. 스냅숏 트랜잭션과 마찬가지로 커밋된 읽기 트랜잭션도 다른 트랜잭션이 데이터를 수정한 이후에 버전이 지정된 행을 읽습니다. 그러나 커밋된 읽기 트랜잭션은 스냅숏 트랜잭션과 달리 다음 작업을 수행합니다.  
+ 이 예에서 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션은 다른 트랜잭션과 동시에 실행됩니다. 커밋된 읽기 트랜잭션은 스냅샷 트랜잭션과 다르게 동작합니다. 스냅샷 트랜잭션과 마찬가지로 커밋된 읽기 트랜잭션도 다른 트랜잭션이 데이터를 수정한 이후에 버전이 지정된 행을 읽습니다. 그러나 커밋된 읽기 트랜잭션은 스냅샷 트랜잭션과 달리 다음 작업을 수행합니다.  
   
 -   다른 트랜잭션이 데이터 변경 내용을 커밋한 이후에 수정한 데이터를 읽습니다.  
--   스냅숏 트랜잭션과 달리 다른 트랜잭션에서 수정한 데이터를 업데이트할 수 있습니다.  
+-   스냅샷 트랜잭션과 달리 다른 트랜잭션에서 수정한 데이터를 업데이트할 수 있습니다.  
   
  세션 1:  
   
@@ -1487,7 +1487,7 @@ ALTER DATABASE AdventureWorks2016
     SET READ_COMMITTED_SNAPSHOT ON;  
 ```  
   
- `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에서 데이터를 수정한 모든 활성 트랜잭션이 완료될 때까지 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스가 수정된 데이터에 대해 행 버전을 생성하지 않습니다. 활성 수정 트랜잭션이 있으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 이 옵션의 상태를 `PENDING_ON`로 설정합니다. 모든 수정 트랜잭션이 완료된 후에는 이 옵션의 상태가 ON으로 변경됩니다. 사용자는 이 옵션이 완전히 ON으로 설정되기 전까지는 해당 데이터베이스에서 스냅숏 트랜잭션을 시작할 수 없습니다. 데이터베이스 관리자가 `ALLOW_SNAPSHOT_ISOLATION` 옵션을 OFF로 설정하면 데이터베이스의 상태가 먼저 PENDING_OFF가 된 후 OFF로 변경됩니다.  
+ `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에서 데이터를 수정한 모든 활성 트랜잭션이 완료될 때까지 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 인스턴스가 수정된 데이터에 대해 행 버전을 생성하지 않습니다. 활성 수정 트랜잭션이 있으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 이 옵션의 상태를 `PENDING_ON`로 설정합니다. 모든 수정 트랜잭션이 완료된 후에는 이 옵션의 상태가 ON으로 변경됩니다. 사용자는 이 옵션이 완전히 ON으로 설정되기 전까지는 해당 데이터베이스에서 스냅샷 트랜잭션을 시작할 수 없습니다. 데이터베이스 관리자가 `ALLOW_SNAPSHOT_ISOLATION` 옵션을 OFF로 설정하면 데이터베이스의 상태가 먼저 PENDING_OFF가 된 후 OFF로 변경됩니다.  
   
  다음 [!INCLUDE[tsql](../includes/tsql-md.md)] 문은 ALLOW_SNAPSHOT_ISOLATION을 설정합니다.  
   
@@ -1498,12 +1498,12 @@ ALTER DATABASE AdventureWorks2016
   
  다음 표에서는 ALLOW_SNAPSHOT_ISOLATION 옵션을 나열하고 각각의 상태에 대해 설명합니다. ALTER DATABASE에 ALLOW_SNAPSHOT_ISOLATION 옵션을 사용할 경우 현재 데이터베이스 데이터에 액세스하고 있는 사용자는 차단되지 않습니다.  
   
-|현재 데이터베이스에 대한 스냅숏 격리 프레임워크의 상태|설명|  
+|현재 데이터베이스에 대한 스냅샷 격리 프레임워크의 상태|설명|  
 |----------------------------------------------------------------|-----------------|  
-|OFF|스냅숏 격리 트랜잭션에 대한 지원이 활성화되지 않았습니다. 스냅숏 격리 트랜잭션이 허용되지 않습니다.|  
-|PENDING_ON|스냅숏 격리 트랜잭션에 대한 지원이 OFF에서 ON으로 전환되는 중입니다. 열린 트랜잭션을 완료해야 합니다.<br /><br /> 스냅숏 격리 트랜잭션이 허용되지 않습니다.|  
-|ON|스냅숏 격리 트랜잭션에 대한 지원이 활성화되었습니다.<br /><br /> 스냅숏 트랜잭션이 허용됩니다.|  
-|PENDING_OFF|스냅숏 격리 트랜잭션에 대한 지원이 ON에서 OFF로 전환되는 중입니다.<br /><br /> 이 시점 이후에 시작된 스냅숏 트랜잭션은 이 데이터베이스에 액세스할 수 없습니다. 업데이트 트랜잭션은 이 데이터베이스에서 계속해서 버전 관리를 수행합니다. 기존 스냅숏 트랜잭션은 문제 없이 이 데이터베이스에 액세스할 수 있습니다. 데이터베이스 스냅숏 격리 상태가 ON이었을 때 활성화되어 있던 스냅숏 트랜잭션이 모두 완료되어야 PENDING_OFF 상태가 OFF로 변경됩니다.|  
+|OFF|스냅샷 격리 트랜잭션에 대한 지원이 활성화되지 않았습니다. 스냅샷 격리 트랜잭션이 허용되지 않습니다.|  
+|PENDING_ON|스냅샷 격리 트랜잭션에 대한 지원이 OFF에서 ON으로 전환되는 중입니다. 열린 트랜잭션을 완료해야 합니다.<br /><br /> 스냅샷 격리 트랜잭션이 허용되지 않습니다.|  
+|ON|스냅샷 격리 트랜잭션에 대한 지원이 활성화되었습니다.<br /><br /> 스냅샷 트랜잭션이 허용됩니다.|  
+|PENDING_OFF|스냅샷 격리 트랜잭션에 대한 지원이 ON에서 OFF로 전환되는 중입니다.<br /><br /> 이 시점 이후에 시작된 스냅샷 트랜잭션은 이 데이터베이스에 액세스할 수 없습니다. 업데이트 트랜잭션은 이 데이터베이스에서 계속해서 버전 관리를 수행합니다. 기존 스냅샷 트랜잭션은 문제 없이 이 데이터베이스에 액세스할 수 있습니다. 데이터베이스 스냅샷 격리 상태가 ON이었을 때 활성화되어 있던 스냅샷 트랜잭션이 모두 완료되어야 PENDING_OFF 상태가 OFF로 변경됩니다.|  
   
  두 행 버전 관리 데이터베이스 옵션의 상태를 확인하려면 `sys.databases` 카탈로그 뷰를 사용합니다.  
   
@@ -1527,14 +1527,14 @@ ALTER DATABASE AdventureWorks2016
   
      데이터베이스에 `READ_COMMITTED_SNAPSHOT`을 설정하면 커밋된 읽기 격리 수준으로 실행되는 모든 쿼리에 행 버전 관리가 사용됩니다. 즉, 읽기 작업 시 업데이트 작업이 차단되지 않습니다.  
   
--   다음 코드 예에서는 `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 `ON`으로 설정하여 스냅숏 격리를 보여 줍니다.  
+-   다음 코드 예에서는 `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 `ON`으로 설정하여 스냅샷 격리를 보여 줍니다.  
   
     ```sql  
     ALTER DATABASE AdventureWorks2016  
         SET ALLOW_SNAPSHOT_ISOLATION ON;  
     ```  
   
-     스냅숏 격리로 실행되는 트랜잭션은 스냅숏이 설정된 데이터베이스의 테이블에 액세스할 수 있습니다. 스냅숏이 설정되지 않은 테이블에 액세스하려면 격리 수준을 변경해야 합니다. 예를 들어 다음 코드 예제에서는 스냅숏 트랜잭션으로 실행되는 동안 두 테이블을 조인하는 `SELECT` 문을 보여 줍니다. 한 테이블은 스냅숏 격리가 설정되지 않은 데이터베이스에 속합니다. 스냅숏 격리에서 `SELECT` 문을 실행하면 실행이 실패합니다.  
+     스냅샷 격리로 실행되는 트랜잭션은 스냅샷이 설정된 데이터베이스의 테이블에 액세스할 수 있습니다. 스냅샷이 설정되지 않은 테이블에 액세스하려면 격리 수준을 변경해야 합니다. 예를 들어 다음 코드 예제에서는 스냅샷 트랜잭션으로 실행되는 동안 두 테이블을 조인하는 `SELECT` 문을 보여 줍니다. 한 테이블은 스냅샷 격리가 설정되지 않은 데이터베이스에 속합니다. 스냅샷 격리에서 `SELECT` 문을 실행하면 실행이 실패합니다.  
   
     ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT;  
@@ -1561,14 +1561,14 @@ ALTER DATABASE AdventureWorks2016
  행 버전 관리 기반 격리 수준을 사용할 때 다음 제한 사항을 고려하십시오.  
   
 -   tempdb, msdb 또는 master에는 `READ_COMMITTED_SNAPSHOT`을 설정할 수 없습니다.  
--   전역 임시 테이블은 tempdb에 저장됩니다. 스냅숏 트랜잭션 내의 전역 임시 테이블에 액세스할 때 다음 중 하나를 수행해야 합니다.  
+-   전역 임시 테이블은 tempdb에 저장됩니다. 스냅샷 트랜잭션 내의 전역 임시 테이블에 액세스할 때 다음 중 하나를 수행해야 합니다.  
     -   tempdb에서 `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정합니다.  
     -   격리 힌트를 사용하여 문에 대한 격리 수준을 변경합니다.  
--   다음과 같은 경우 스냅숏 트랜잭션이 실패합니다.  
-    -   스냅숏 트랜잭션이 시작된 후 데이터베이스에 액세스하기 전에 데이터베이스가 읽기 전용으로 설정됩니다.  
-    -   여러 데이터베이스의 개체에 액세스하는 경우 스냅숏 트랜잭션이 시작된 후 데이터베이스에 액세스하기 전에 데이터베이스 복구를 수반하는 방식으로 데이터베이스 상태가 변경됩니다. 예를 들어 데이터베이스가 OFFLINE으로 설정되었다가 ONLINE으로 설정되거나 데이터베이스가 자동으로 닫히고 열리거나 데이터베이스가 분리되고 연결됩니다.  
--   분산 분할된 데이터베이스의 쿼리를 포함하여 분산 트랜잭션은 스냅숏 격리로 지원되지 않습니다.  
--   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 여러 버전의 시스템 메타데이터를 보관하지 않습니다. 테이블의 DDL(데이터 정의 언어) 문이나 기타 데이터베이스 개체(인덱스, 뷰, 데이터 형식, 저장 프로시저 및 공용 언어 런타임 함수)는 메타데이터를 변경합니다. DDL 문이 개체를 수정하면 스냅숏 격리의 개체에 대한 동시 참조로 인해 스냅숏 트랜잭션이 실패합니다. READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON이면 커밋된 읽기 트랜잭션에 이러한 제한 사항이 없습니다.  
+-   다음과 같은 경우 스냅샷 트랜잭션이 실패합니다.  
+    -   스냅샷 트랜잭션이 시작된 후 데이터베이스에 액세스하기 전에 데이터베이스가 읽기 전용으로 설정됩니다.  
+    -   여러 데이터베이스의 개체에 액세스하는 경우 스냅샷 트랜잭션이 시작된 후 데이터베이스에 액세스하기 전에 데이터베이스 복구를 수반하는 방식으로 데이터베이스 상태가 변경됩니다. 예를 들어 데이터베이스가 OFFLINE으로 설정되었다가 ONLINE으로 설정되거나 데이터베이스가 자동으로 닫히고 열리거나 데이터베이스가 분리되고 연결됩니다.  
+-   분산 분할된 데이터베이스의 쿼리를 포함하여 분산 트랜잭션은 스냅샷 격리로 지원되지 않습니다.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 여러 버전의 시스템 메타데이터를 보관하지 않습니다. 테이블의 DDL(데이터 정의 언어) 문이나 기타 데이터베이스 개체(인덱스, 뷰, 데이터 형식, 저장 프로시저 및 공용 언어 런타임 함수)는 메타데이터를 변경합니다. DDL 문이 개체를 수정하면 스냅샷 격리의 개체에 대한 동시 참조로 인해 스냅샷 트랜잭션이 실패합니다. READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON이면 커밋된 읽기 트랜잭션에 이러한 제한 사항이 없습니다.  
   
      예를 들어 데이터베이스 관리자가 다음 `ALTER INDEX` 문을 실행합니다.  
   
@@ -1583,7 +1583,7 @@ ALTER DATABASE AdventureWorks2016
      `ALTER INDEX` 문이 실행된 후 `HumanResources.Employee` 테이블을 참조하려고 하면 `ALTER INDEX` 문 실행 시 활성 상태인 모든 스냅숏 트랜잭션에 오류가 발생합니다. 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션은 영향을 받지 않습니다.  
   
     > [!NOTE]  
-    > BULK INSERT 작업을 수행할 때 대상 테이블 메타데이터가 변경될 수 있습니다. 제약 조건 검사를 해제한 경우를 예로 들 수 있습니다. 이렇게 대상 테이블 메타데이터가 변경되면 동시 스냅숏 격리 트랜잭션이 대량 삽입된 테이블에 액세스할 수 없습니다.  
+    > BULK INSERT 작업을 수행할 때 대상 테이블 메타데이터가 변경될 수 있습니다. 제약 조건 검사를 해제한 경우를 예로 들 수 있습니다. 이렇게 대상 테이블 메타데이터가 변경되면 동시 스냅샷 격리 트랜잭션이 대량 삽입된 테이블에 액세스할 수 없습니다.  
   
    
 ## <a name="customizing-locking-and-row-versioning"></a>잠금 및 행 버전 관리 사용자 지정  
@@ -1835,7 +1835,7 @@ GO
 #### <a name="avoiding-concurrency-and-resource-problems"></a>동시성 문제 및 리소스 문제 방지  
  동시성 문제와 리소스 문제를 방지하려면 암시적 트랜잭션을 신중하게 관리합니다. 암시적 트랜잭션을 사용할 때는 `COMMIT` 또는 `ROLLBACK` 다음의 [!INCLUDE[tsql](../includes/tsql-md.md)] 문이 자동으로 새 트랜잭션을 시작합니다. 이로 인해 응용 프로그램에서 데이터를 찾아보는 동안이나 사용자 입력이 필요할 때 새 트랜잭션이 열릴 수 있습니다. 데이터 수정을 보호하는 데 필요한 마지막 트랜잭션을 완료한 다음 데이터 수정을 보호하기 위해 트랜잭션이 다시 한 번 필요할 때까지 암시적 트랜잭션을 해제합니다. 이렇게 하면 응용 프로그램에서 데이터를 찾아보고 사용자로부터 입력을 받는 동안 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]이 자동 커밋 모드를 사용할 수 있습니다.  
   
- 또한 스냅숏 격리 수준을 사용하면 새 트랜잭션이 잠금을 확보하지 않더라도 장기 실행 트랜잭션이 `tempdb`에서 이전 버전이 제거되지 않도록 방지합니다.  
+ 또한 스냅샷 격리 수준을 사용하면 새 트랜잭션이 잠금을 확보하지 않더라도 장기 실행 트랜잭션이 `tempdb`에서 이전 버전이 제거되지 않도록 방지합니다.  
   
 ### <a name="managing-long-running-transactions"></a>장기 실행 트랜잭션 관리  
  *장기 실행 트랜잭션*은 제때에 커밋되거나 롤백되지 않은 활성 트랜잭션입니다. 예를 들어 트랜잭션의 시작과 끝을 사용자가 제어하는 경우에는 대개 사용자가 트랜잭션을 시작한 후 트랜잭션에서 사용자의 응답을 기다리는 동안 자리를 비울 때 장기 실행 트랜잭션이 발생합니다.  

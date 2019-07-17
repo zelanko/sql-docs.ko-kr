@@ -231,7 +231,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @ftp_password = ] 'ftp_password'` 이전 버전과 호환성에 해당 합니다.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` 선택할 스냅숏 파일 위치를 지정 합니다. *alternate_snapshot_folder* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. NULL인 경우 게시자가 지정한 기본 위치에 스냅숏이 선택됩니다.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` 선택할 스냅숏 파일 위치를 지정 합니다. *alternate_snapshot_folder* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. NULL인 경우 게시자가 지정한 기본 위치에 스냅샷이 선택됩니다.  
   
 `[ @working_directory = ] 'working_directory'` FTP 스냅숏 파일 전송에 사용 되는 경우 게시에 대 한 데이터 및 스키마 파일을 임시로 저장 하는 데 작업 디렉터리의 이름이입니다. *working_directory* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다.  
   

@@ -103,7 +103,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 ```
   
 ### <a name="use-data-collector-to-collect-sampling-data"></a>데이터 수집기를 사용하여 샘플링 데이터 수집  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 수집기를 사용하면 모든 테이블 또는 동적 관리 뷰에서 데이터에 대한 스냅숏을 수집하고 성능 데이터 웨어하우스를 구축할 수 있습니다. 데이터베이스에 변경 데이터 캡처가 설정된 경우 나중에 분석할 수 있도록 sys.dm_cdc_log_scan_sessions 뷰 및 sys.dm_cdc_errors 뷰의 스냅숏을 정기적으로 수집하는 것이 좋습니다. 다음 절차에서는 sys.dm_cdc_log_scan_sessions 관리 뷰에서 샘플 데이터를 수집하도록 데이터 수집기를 설정합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 수집기를 사용하면 모든 테이블 또는 동적 관리 뷰에서 데이터에 대한 스냅숏을 수집하고 성능 데이터 웨어하우스를 구축할 수 있습니다. 데이터베이스에 변경 데이터 캡처가 설정된 경우 나중에 분석할 수 있도록 sys.dm_cdc_log_scan_sessions 뷰 및 sys.dm_cdc_errors 뷰의 스냅샷을 정기적으로 수집하는 것이 좋습니다. 다음 절차에서는 sys.dm_cdc_log_scan_sessions 관리 뷰에서 샘플 데이터를 수집하도록 데이터 수집기를 설정합니다.  
   
  **데이터 컬렉션 구성**  
   
@@ -157,7 +157,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
   
 3.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **관리**, **데이터 컬렉션**을 차례로 확장합니다. **CDC Performance Data Collector**를 마우스 오른쪽 단추로 클릭한 다음 **데이터 컬렉션 집합을 시작합니다**를 클릭합니다.  
   
-4.  1단계에서 구성한 데이터 웨어하우스에서 custom_snapshots.cdc_log_scan_data 테이블을 찾습니다. 이 테이블은 로그 검색 세션의 데이터 스냅숏 기록을 제공합니다. 이 데이터를 사용하여 시간에 따른 대기 시간, 처리량 및 기타 성능 측정값을 분석할 수 있습니다.  
+4.  1단계에서 구성한 데이터 웨어하우스에서 custom_snapshots.cdc_log_scan_data 테이블을 찾습니다. 이 테이블은 로그 검색 세션의 데이터 스냅샷 기록을 제공합니다. 이 데이터를 사용하여 시간에 따른 대기 시간, 처리량 및 기타 성능 측정값을 분석할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목:  
  [데이터 변경 내용 추적&#40;SQL Server&#41;](track-data-changes-sql-server.md)   

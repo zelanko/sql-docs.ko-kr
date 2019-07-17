@@ -32,8 +32,8 @@ ms.locfileid: "67894940"
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|병합 파티션의 ID입니다.|  
-|**dynamic_snapshot_location**|**nvarchar(255)**|파티션에 대한 필터링된 데이터 스냅숏의 위치입니다.|  
-|**last_updated**|**datetime**|필터링된 데이터 스냅숏을 새로 고친 날짜입니다.|  
+|**dynamic_snapshot_location**|**nvarchar(255)**|파티션에 대한 필터링된 데이터 스냅샷의 위치입니다.|  
+|**last_updated**|**datetime**|필터링된 데이터 스냅샷을 새로 고친 날짜입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

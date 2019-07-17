@@ -28,32 +28,32 @@ ms.locfileid: "54135363"
 ## <a name="configuring-replication"></a>복제 구성  
   
 ### <a name="does-activity-need-to-be-stopped-on-a-database-when-it-is-published"></a>작업을 게시할 때 데이터베이스에서 해당 작업을 중지해야 합니까?  
- 아니요. 게시를 만드는 동안에도 데이터베이스에서 작업을 계속할 수 있습니다. 스냅숏을 생성하는 작업에는 리소스가 많이 사용될 수 있으므로 데이터베이스에 작업량이 적은 시간을 이용하여 스냅숏을 생성하는 것이 가장 좋습니다. 기본적으로 스냅숏은 새 게시 마법사를 완료하면 생성됩니다.  
+ 아니요. 게시를 만드는 동안에도 데이터베이스에서 작업을 계속할 수 있습니다. 스냅샷을 생성하는 작업에는 리소스가 많이 사용될 수 있으므로 데이터베이스에 작업량이 적은 시간을 이용하여 스냅샷을 생성하는 것이 가장 좋습니다. 기본적으로 스냅샷은 새 게시 마법사를 완료하면 생성됩니다.  
   
-### <a name="are-tables-locked-during-snapshot-generation"></a>스냅숏 생성 중에 테이블이 잠깁니까?  
+### <a name="are-tables-locked-during-snapshot-generation"></a>스냅샷 생성 중에 테이블이 잠깁니까?  
  사용하는 복제 유형에 따라 잠금이 수행되는 기간이 달라집니다.  
   
--   병합 게시의 경우 스냅숏 에이전트는 잠금을 수행하지 않습니다.  
+-   병합 게시의 경우 스냅샷 에이전트는 잠금을 수행하지 않습니다.  
   
--   트랜잭션 게시의 경우 기본적으로 스냅숏 에이전트는 스냅숏 생성의 초기 단계에서만 잠금을 수행합니다.  
+-   트랜잭션 게시의 경우 기본적으로 스냅샷 에이전트는 스냅샷 생성의 초기 단계에서만 잠금을 수행합니다.  
   
--   스냅숏 게시의 경우 스냅숏 에이전트는 전체 스냅숏 생성 프로세스 동안 잠금을 수행합니다.  
+-   스냅샷 게시의 경우 스냅샷 에이전트는 전체 스냅샷 생성 프로세스 동안 잠금을 수행합니다.  
   
- 잠금을 수행하면 다른 사용자가 테이블을 업데이트할 수 없기 때문에 특히 스냅숏 게시의 경우 데이터베이스에 작업량이 적을 때 스냅숏 에이전트가 실행되도록 예약해야 합니다.  
+ 잠금을 수행하면 다른 사용자가 테이블을 업데이트할 수 없기 때문에 특히 스냅샷 게시의 경우 데이터베이스에 작업량이 적을 때 스냅샷 에이전트가 실행되도록 예약해야 합니다.  
   
 ### <a name="when-is-a-subscription-available-when-can-the-subscription-database-be-used"></a>언제 구독을 사용할 수 있습니까? 구독 데이터베이스는 언제 사용할 수 있습니까?  
- 스냅숏이 구독 데이터베이스에 적용된 다음에 구독을 사용할 수 있습니다. 그 전에도 구독 데이터베이스에 액세스할 수 있지만 스냅숏이 적용될 때까지 데이터베이스를 사용하면 안 됩니다. 다음과 같이 복제 모니터를 사용하여 스냅숏 생성 및 적용 상태를 확인합니다.  
+ 스냅샷이 구독 데이터베이스에 적용된 다음에 구독을 사용할 수 있습니다. 그 전에도 구독 데이터베이스에 액세스할 수 있지만 스냅샷이 적용될 때까지 데이터베이스를 사용하면 안 됩니다. 다음과 같이 복제 모니터를 사용하여 스냅샷 생성 및 적용 상태를 확인합니다.  
   
--   스냅숏 에이전트에서 스냅숏을 생성한 다음 복제 모니터의 게시에 대한 **에이전트** 탭에서 스냅숏 생성 상태를 봅니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
+-   스냅샷 에이전트에서 스냅샷을 생성한 다음 복제 모니터의 게시에 대한 **에이전트** 탭에서 스냅샷 생성 상태를 봅니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
--   배포 에이전트 또는 병합 에이전트에서 스냅숏을 적용한 다음 복제 모니터의 **배포 에이전트** 또는 **병합 에이전트** 페이지에서 스냅숏 적용 상태를 봅니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
+-   배포 에이전트 또는 병합 에이전트에서 스냅샷을 적용한 다음 복제 모니터의 **배포 에이전트** 또는 **병합 에이전트** 페이지에서 스냅샷 적용 상태를 봅니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
-### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>배포 에이전트나 병합 에이전트가 시작할 때 스냅숏 에이전트가 완료되지 않은 경우 문제가 발생합니까?  
- 배포 에이전트나 병합 에이전트가 스냅숏 에이전트와 동시에 실행되면 오류가 발생하지 않습니다. 그러나 다음과 같은 사항에 유의하십시오.  
+### <a name="what-happens-if-the-snapshot-agent-has-not-completed-when-the-distribution-or-merge-agent-starts"></a>배포 에이전트나 병합 에이전트가 시작할 때 스냅샷 에이전트가 완료되지 않은 경우 문제가 발생합니까?  
+ 배포 에이전트나 병합 에이전트가 스냅샷 에이전트와 동시에 실행되면 오류가 발생하지 않습니다. 그러나 다음과 같은 사항에 유의하십시오.  
   
--   배포 에이전트나 병합 에이전트가 계속 실행되도록 구성된 경우 해당 에이전트는 스냅숏 에이전트가 완료된 다음 자동으로 스냅숏을 적용합니다.  
+-   배포 에이전트나 병합 에이전트가 계속 실행되도록 구성된 경우 해당 에이전트는 스냅샷 에이전트가 완료된 다음 자동으로 스냅샷을 적용합니다.  
   
--   배포 에이전트나 병합 에이전트가 일정대로 또는 요청 시 실행되도록 구성된 경우 해당 에이전트가 실행될 때 사용 가능한 스냅숏이 없으면 아직 사용할 수 있는 스냅숏이 없다는 메시지와 함께 에이전트가 종료됩니다. 이 경우 스냅숏 에이전트가 완료된 다음 에이전트를 다시 실행하여 스냅숏을 적용해야 합니다. 에이전트 실행에 대한 자세한 내용은 [밀어넣기 구독 동기화](../../../relational-databases/replication/synchronize-a-push-subscription.md), [끌어오기 구독 동기화](../../../relational-databases/replication/synchronize-a-pull-subscription.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하세요.  
+-   배포 에이전트나 병합 에이전트가 일정대로 또는 요청 시 실행되도록 구성된 경우 해당 에이전트가 실행될 때 사용 가능한 스냅샷이 없으면 아직 사용할 수 있는 스냅샷이 없다는 메시지와 함께 에이전트가 종료됩니다. 이 경우 스냅샷 에이전트가 완료된 다음 에이전트를 다시 실행하여 스냅샷을 적용해야 합니다. 에이전트 실행에 대한 자세한 내용은 [밀어넣기 구독 동기화](../../../relational-databases/replication/synchronize-a-push-subscription.md), [끌어오기 구독 동기화](../../../relational-databases/replication/synchronize-a-pull-subscription.md) 및 [복제 에이전트 실행 파일 개념](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)을 참조하세요.  
   
 ### <a name="should-i-script-my-replication-configuration"></a>복제 구성을 스크립팅해야 합니까?  
  예 복제 구성 스크립팅은 복제 토폴로지에 대한 모든 재해 복구 계획의 핵심입니다. 스크립링에 대한 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하십시오.  
@@ -73,7 +73,7 @@ ms.locfileid: "54135363"
 ### <a name="how-do-i-manage-constraints-on-published-tables"></a>게시된 테이블에서 제약 조건을 어떻게 관리합니까?  
  게시된 테이블의 제약 조건에 대해 다음과 같은 사항에 유의하십시오.  
   
--   트랜잭션 복제에는 게시된 각 테이블에 대해 PRIMARY KEY 제약 조건이 필요합니다. 병합 복제에는 기본 키가 필요하지 않지만 있는 경우 복제되어야 합니다. 스냅숏 복제에는 기본 키가 필요하지 않습니다.  
+-   트랜잭션 복제에는 게시된 각 테이블에 대해 PRIMARY KEY 제약 조건이 필요합니다. 병합 복제에는 기본 키가 필요하지 않지만 있는 경우 복제되어야 합니다. 스냅샷 복제에는 기본 키가 필요하지 않습니다.  
   
 -   기본적으로 PRIMARY KEY 제약 조건, 인덱스 및 CHECK 제약 조건은 구독자로 복제됩니다.  
   
@@ -127,13 +127,13 @@ ms.locfileid: "54135363"
   
 -   복제는 새 게시 마법사에서 스키마 및 개체 소유권에 대해 기본적으로 다음과 같이 작동합니다.  
   
--   호환성 수준이 90 이상인 병합 게시, 스냅숏 게시, 트랜잭션 게시의 아티클에 대해 기본적으로 구독자의 개체 소유자는 게시자에 있는 해당 개체의 소유자와 동일합니다. 개체를 소유한 스키마가 구독자에 없으면 자동으로 생성됩니다.  
+-   호환성 수준이 90 이상인 병합 게시, 스냅샷 게시, 트랜잭션 게시의 아티클에 대해 기본적으로 구독자의 개체 소유자는 게시자에 있는 해당 개체의 소유자와 동일합니다. 개체를 소유한 스키마가 구독자에 없으면 자동으로 생성됩니다.  
   
 -   호환성 수준이 90 이하인 병합 게시의 아티클에 대해 기본적으로 소유자는 빈 상태였다가 구독자에서 개체를 생성하는 중에 **dbo** 로 지정됩니다.  
   
 -   Oracle 게시의 아티클에 대해 기본적으로 소유자는 **dbo**로 지정됩니다.  
   
--   문자 모드 스냅숏([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자 및 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 구독자에 사용됨)을 사용하는 게시의 아티클에 대해 기본적으로 소유자는 빈 상태입니다. 소유자는 기본적으로 배포 에이전트 또는 병합 에이전트를 구독자에 연결하는 데 사용하는 계정과 연결된 소유자입니다.  
+-   문자 모드 스냅샷([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자 및 [!INCLUDE[ssEW](../../../includes/ssew-md.md)] 구독자에 사용됨)을 사용하는 게시의 아티클에 대해 기본적으로 소유자는 빈 상태입니다. 소유자는 기본적으로 배포 에이전트 또는 병합 에이전트를 구독자에 연결하는 데 사용하는 계정과 연결된 소유자입니다.  
   
  개체 소유자는 **아티클 속성 - \<***Article***>** 대화 상자와 **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle** 및 **sp_changemergearticle** 저장 프로시저를 통해 변경할 수 있습니다. 자세한 내용은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md) 및 [아티클 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-article-properties.md)을 참조하세요.  
   
@@ -142,7 +142,7 @@ ms.locfileid: "54135363"
   
 -   구독 데이터베이스에서 직접 GRANT 문을 실행합니다.  
   
--   포스트 스냅숏 스크립트를 사용하여 해당 문을 실행합니다. 자세한 내용은 [스냅숏 적용 전후에 스크립트 실행](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)을 참조하세요.  
+-   포스트 스냅샷 스크립트를 사용하여 해당 문을 실행합니다. 자세한 내용은 [스냅샷 적용 전후에 스크립트 실행](../../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)을 참조하세요.  
 
  
 -   [sp_addscriptexec](../../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) 저장 프로시저를 사용하여 해당 문을 실행합니다.  
@@ -170,9 +170,9 @@ ms.locfileid: "54135363"
  예 복제에 관련된 데이터베이스에 대해 특별히 고려해야 할 사항이 많이 있습니다. 자세한 내용은 [복제된 데이터베이스 백업 및 복원](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)을 참조하세요.  
   
 ### <a name="does-replication-affect-the-size-of-the-transaction-log"></a>복제가 트랜잭션 로그의 크기에 영향을 미칩니까?  
- 병합 복제 및 스냅숏 복제는 트랜잭션 로그 크기에 영향을 주지 않지만 트랜잭션 복제는 영향을 줄 수 있습니다. 데이터베이스에 하나 이상의 트랜잭션 게시를 포함하는 경우 로그는 게시와 관련된 모든 트랜잭션이 배포 데이터베이스에 배달될 때까지 잘리지 않습니다. 로그 판독기 에이전트가 일정에 따라 실행되는 경우 트랜잭션 로그가 너무 방대해지면 일정 실행 간격을 좁히거나 일정이 연속 모드에서 실행되도록 설정하십시오. 연속 모드에서 실행되도록 설정(기본값)한 경우 로그 판독기 에이전트가 실행되고 있는지 확인하십시오. 로그 판독기 에이전트 상태에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
+ 병합 복제 및 스냅샷 복제는 트랜잭션 로그 크기에 영향을 주지 않지만 트랜잭션 복제는 영향을 줄 수 있습니다. 데이터베이스에 하나 이상의 트랜잭션 게시를 포함하는 경우 로그는 게시와 관련된 모든 트랜잭션이 배포 데이터베이스에 배달될 때까지 잘리지 않습니다. 로그 판독기 에이전트가 일정에 따라 실행되는 경우 트랜잭션 로그가 너무 방대해지면 일정 실행 간격을 좁히거나 일정이 연속 모드에서 실행되도록 설정하십시오. 연속 모드에서 실행되도록 설정(기본값)한 경우 로그 판독기 에이전트가 실행되고 있는지 확인하십시오. 로그 판독기 에이전트 상태에 대한 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
- 또한 게시 데이터베이스나 배포 데이터베이스에서 'sync with backup' 옵션을 설정한 경우 트랜잭션이 모두 백업될 때까지 트랜잭션 로그가 잘리지 않습니다. 이 옵션을 설정한 경우 트랜잭션 로그가 너무 방대해지면 트랜잭션 로그 백업 간격을 좁히십시오. 백업 및 트랜잭션 복제와 관련된 데이터베이스 복원에 대한 자세한 내용은 [스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)을 참조하세요.  
+ 또한 게시 데이터베이스나 배포 데이터베이스에서 'sync with backup' 옵션을 설정한 경우 트랜잭션이 모두 백업될 때까지 트랜잭션 로그가 잘리지 않습니다. 이 옵션을 설정한 경우 트랜잭션 로그가 너무 방대해지면 트랜잭션 로그 백업 간격을 좁히십시오. 백업 및 트랜잭션 복제와 관련된 데이터베이스 복원에 대한 자세한 내용은 [스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)을 참조하세요.  
   
 ### <a name="how-do-i-rebuild-indexes-or-tables-in-replicated-databases"></a>복제된 데이터베이스에서 인덱스나 테이블을 어떻게 다시 작성합니까?  
  인덱스를 다시 작성하는 메커니즘은 다양합니다. 이러한 메커니즘은 복제에 대한 특별한 고려 사항 없이 모두 사용 가능합니다. 한 가지 예외는 트랜잭션 게시의 테이블에는 기본 키가 필요하므로 이러한 테이블에서는 기본 키를 삭제하고 다시 만들 수 없다는 것입니다.  
@@ -184,7 +184,7 @@ ms.locfileid: "54135363"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서는 데이터베이스 파일을 이동하거나 이름을 바꾸려면 해당 데이터베이스를 분리하고 다시 연결해야 했습니다. 그러나 복제된 데이터베이스는 분리할 수 없으므로 먼저 이러한 데이터베이스에서 복제를 제거해야 했습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 데이터베이스를 분리하거나 다시 연결하지 않고도 복제에 아무런 영향을 미치지 않으면서 파일을 이동하거나 이름을 바꿀 수 있습니다. 파일을 이동하고 이름을 바꾸는 방법은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>복제 중인 테이블을 어떻게 삭제합니까?  
- 먼저 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 또는 **게시 속성 - \<게시>** 대화 상자를 사용하여 게시에서 아티클을 삭제한 다음 `DROP <Object>`를 사용하여 데이터베이스에서 아티클을 삭제합니다. 구독이 추가된 후에는 스냅숏 또는 트랜잭션 게시에서 아티클을 삭제할 수 없습니다. 따라서 먼저 구독을 삭제해야 합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
+ 먼저 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 또는 **게시 속성 - \<게시>** 대화 상자를 사용하여 게시에서 아티클을 삭제한 다음 `DROP <Object>`를 사용하여 데이터베이스에서 아티클을 삭제합니다. 구독이 추가된 후에는 스냅샷 또는 트랜잭션 게시에서 아티클을 삭제할 수 없습니다. 따라서 먼저 구독을 삭제해야 합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>게시된 테이블에서 열을 어떻게 추가하고 삭제합니까?  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 열 추가 및 삭제를 비롯하여 게시된 개체에 대한 다양한 스키마 변경을 수행할 수 있습니다. 예를 들어 게시자에서 ALTER TABLE ... DROP COLUMN을 실행하면 해당 문이 구독자로 복제된 다음 실행되어 해당 열을 삭제합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이전 버전의 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 를 실행하는 구독자는 [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) 및 [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)저장 프로시저를 통해 열을 추가 및 삭제할 수 있습니다. 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
@@ -198,13 +198,13 @@ ms.locfileid: "54135363"
  테이블이나 다른 개체를 추가하기 위해 게시 또는 구독 데이터베이스의 작업을 중지하지 않아도 됩니다. **게시 속성 - \<Publication>** 대화 상자나 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 및 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 저장 프로시저를 통해 게시에 테이블을 추가합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>게시에서 테이블을 어떻게 제거합니까?  
- 먼저 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 또는 **게시 속성 - \<게시>** 대화 상자를 사용하여 게시에서 테이블을 제거합니다. 구독이 추가된 후에는 스냅숏 또는 트랜잭션 게시에서 아티클을 삭제할 수 없습니다. 따라서 먼저 구독을 삭제해야 합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
+ 먼저 [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) 또는 **게시 속성 - \<게시>** 대화 상자를 사용하여 게시에서 테이블을 제거합니다. 구독이 추가된 후에는 스냅샷 또는 트랜잭션 게시에서 아티클을 삭제할 수 없습니다. 따라서 먼저 구독을 삭제해야 합니다. 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>구독을 다시 초기화해야 하는 동작에는 어떤 것이 있습니까?  
  일부 아티클 및 게시를 변경하면 구독을 다시 초기화해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
-### <a name="what-actions-cause-snapshots-to-be-invalidated"></a>스냅숏을 무효화하는 동작에는 어떤 것이 있습니까?  
- 일부 아티클 및 게시를 변경하면 스냅숏이 무효화되어 새 스냅숏을 생성해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
+### <a name="what-actions-cause-snapshots-to-be-invalidated"></a>스냅샷을 무효화하는 동작에는 어떤 것이 있습니까?  
+ 일부 아티클 및 게시를 변경하면 스냅샷이 무효화되어 새 스냅샷을 생성해야 합니다. 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
 ### <a name="how-do-i-remove-replication"></a>복제를 어떻게 제거합니까?  
  데이터베이스에서 복제를 제거하는 데 필요한 동작은 데이터베이스가 게시 데이터베이스 역할을 하는지 구독 데이터베이스 역할을 하는지 아니면 두 역할을 다 하는지에 따라 달라집니다.  
@@ -219,7 +219,7 @@ ms.locfileid: "54135363"
   
 -   선택한 구독자에 배달되지 않은 배포 데이터베이스의 명령 수. 명령은 하나의 Transact-SQL DML(데이터 조작 언어) 문이나 하나의 DDL(데이터 정의 언어) 문으로 구성됩니다.  
   
--   명령을 구독자에 배달하는 데 걸리는 예상 시간. 이 값이 스냅숏을 생성하여 구독자에 적용하는 데 필요한 시간 값보다 더 큰 경우 구독자를 다시 초기화하십시오. 자세한 내용은 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
+-   명령을 구독자에 배달하는 데 걸리는 예상 시간. 이 값이 스냅샷을 생성하여 구독자에 적용하는 데 필요한 시간 값보다 더 큰 경우 구독자를 다시 초기화하십시오. 자세한 내용은 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
  자세한 내용은 [sp_replmonitorsubscriptionpendingcmds&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md) 및 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   

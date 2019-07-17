@@ -46,7 +46,7 @@ ms.locfileid: "68212065"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   게시가 만들어진 후 스키마 옵션을 변경하면 새 스냅숏을 생성해야 합니다.  
+-   게시가 만들어진 후 스키마 옵션을 변경하면 새 스냅샷을 생성해야 합니다.  
   
 ###  <a name="Recommendations"></a> 권장 사항  
   
@@ -80,7 +80,7 @@ ms.locfileid: "68212065"
 > [!NOTE]  
 >  비트 연산을 수행하기 전에 스키마 옵션 값을 **binary** 에서 **int** 로 변환해야 합니다. 자세한 내용은 [CAST 및 CONVERT&#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)를 참조하세요.  
   
-#### <a name="to-specify-schema-options-when-defining-an-article-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 아티클을 정의할 때 스키마 옵션을 지정하려면  
+#### <a name="to-specify-schema-options-when-defining-an-article-for-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 아티클을 정의할 때 스키마 옵션을 지정하려면  
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름, **@article** 에 아티클의 이름, **@source_object** 에 게시되는 데이터베이스 개체, **@type** 에 대한 데이터베이스 개체 유형 및 **@schema_option** 에 하나 이상의 스키마 옵션에 대한 [|(비트 OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) 결과를 지정합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "68212065"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름, **@article** 에 아티클의 이름, **@source_object** 에 게시되는 데이터베이스 개체, **@schema_option** 에 하나 이상의 스키마 옵션에 대한 [|(비트 OR)](/sql/t-sql/language-elements/bitwise-or-transact-sql) 결과를 지정합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
-#### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시의 기존 아티클에 대한 스키마 옵션을 변경하려면  
+#### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시의 기존 아티클에 대한 스키마 옵션을 변경하려면  
   
 1.  게시 데이터베이스의 게시자에서 [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름을 지정하고 **@article** 에 아티클의 이름을 지정합니다. 결과 집합에서 **schema_option** 열의 값을 확인합니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "68212065"
   
 4.  게시 데이터베이스의 게시자에서 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름, **@article** 에 아티클의 이름, **@property** 에 **schema_option**값, **@value** 에 3단계의 16진수 결과를 지정합니다.  
   
-5.  스냅숏 에이전트를 실행하여 새 스냅숏을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
+5.  스냅샷 에이전트를 실행하여 새 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>병합 게시의 기존 아티클에 대한 스키마 옵션을 변경하려면  
   
@@ -118,7 +118,7 @@ ms.locfileid: "68212065"
   
 4.  게시 데이터베이스의 게시자에서 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름, **@article** 에 아티클의 이름, **@property** 에 **schema_option**값, **@value** 에 3단계의 16진수 결과를 지정합니다.  
   
-5.  스냅숏 에이전트를 실행하여 새 스냅숏을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
+5.  스냅샷 에이전트를 실행하여 새 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 및 데이터베이스 개체 게시](publish-data-and-database-objects.md)   

@@ -37,7 +37,7 @@ ms.locfileid: "63284657"
 |[보고서 매개 변수 메서드](../../../reporting-services/report-server-web-service/methods/report-parameters-methods.md)|보고서의 매개 변수를 설정하고 검색하는 데 사용할 수 있는 메서드를 설명합니다.|  
 |[모델 메서드 - 보고서 서버 웹 서비스](../../../reporting-services/report-server-web-service/methods/model-methods-report-server-web-service.md)|모델을 관리하는 데 사용할 수 있는 메서드를 설명합니다.|  
 |[렌더링 및 실행 메서드](../../../reporting-services/report-server-web-service/methods/rendering-and-execution-methods.md)|보고서 실행, 렌더링 및 캐싱을 관리하는 데 사용할 수 있는 메서드를 설명합니다.|  
-|[보고서 기록 메서드](../../../reporting-services/report-server-web-service/methods/report-history-methods.md)|보고서 기록 스냅숏을 만들고 관리하는 데 사용할 수 있는 메서드를 설명합니다.|  
+|[보고서 기록 메서드](../../../reporting-services/report-server-web-service/methods/report-history-methods.md)|보고서 기록 스냅샷을 만들고 관리하는 데 사용할 수 있는 메서드를 설명합니다.|  
 |[일정 예약 메서드](../../../reporting-services/report-server-web-service/methods/scheduling-methods.md)|보고서 서버에서 사용되는 공유 일정 및 캐시 새로 고침 계획을 만들고 관리하는 데 사용할 수 있는 메서드를 설명합니다.|  
 |[구독 및 배달 메서드](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|구독 및 보고서 배달을 만들고 관리하는 데 사용할 수 있는 메서드를 설명합니다.|  
 |[링크된 보고서 메서드](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|링크된 보고서를 만들고 관리하는 데 사용할 수 있는 메서드를 설명합니다.|  

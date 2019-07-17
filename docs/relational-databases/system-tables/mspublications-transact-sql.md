@@ -38,7 +38,7 @@ ms.locfileid: "67939018"
 |**publication_type**|**int**|게시의 유형입니다.<br /><br /> **0** = 트랜잭션.<br /><br /> **1** = 스냅숏.<br /><br /> **2** = 병합 합니다.|  
 |**thirdparty_flag**|**bit**|게시 되는지 여부를 나타냅니다는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스:<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **1** 이외의 데이터 원본 = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |**independent_agent**|**bit**|이 게시에 대한 독립 실행형 배포 에이전트가 있는지 여부를 나타냅니다.|  
-|**immediate_sync**|**bit**|스냅숏 에이전트가 실행될 때마다 동기화 파일을 만들거나 다시 만들지 여부를 나타냅니다.|  
+|**immediate_sync**|**bit**|스냅샷 에이전트가 실행될 때마다 동기화 파일을 만들거나 다시 만들지 여부를 나타냅니다.|  
 |**allow_push**|**bit**|지정된 게시에 대해 밀어넣기 구독을 만들 수 있는지 여부를 나타냅니다.|  
 |**allow_pull**|**bit**|지정된 게시에 대해 끌어오기 구독을 만들 수 있는지 여부를 나타냅니다.|  
 |**allow_anonymous**|**bit**|지정된 게시에 대해 익명 구독을 만들 수 있는지 여부를 나타냅니다.|  

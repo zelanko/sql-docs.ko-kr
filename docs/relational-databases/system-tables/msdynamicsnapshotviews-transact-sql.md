@@ -31,7 +31,7 @@ ms.locfileid: "67907318"
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**dynamic_snapshot_view_name**|**sysname**|필터링된 임시 데이터 스냅숏 뷰의 이름입니다.|  
+|**dynamic_snapshot_view_name**|**sysname**|필터링된 임시 데이터 스냅샷 뷰의 이름입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 테이블&#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  

@@ -24,7 +24,7 @@ ms.locfileid: "63047284"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   복제에서는 다음과 같은 게시 유형을 제공합니다.  
   
--   스냅숏 게시  
+-   스냅샷 게시  
   
 -   트랜잭션 게시  
   

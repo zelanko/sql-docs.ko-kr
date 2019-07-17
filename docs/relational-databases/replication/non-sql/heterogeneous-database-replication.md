@@ -54,7 +54,7 @@ ms.locfileid: "58072197"
  자세한 내용은 [Oracle 게시 개요](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)를 참조하세요.  
   
 ## <a name="publishing-data-to-non-sql-server-subscribers"></a>SQL Server 이외 구독자에 데이터 게시  
- 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 데이터베이스는 스냅숏 및 트랜잭션 게시의 구독자로 지원됩니다.  
+ 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 데이터베이스는 스냅샷 및 트랜잭션 게시의 구독자로 지원됩니다.  
   
 -   Oracle에서 지원하는 모든 플랫폼용 Oracle 제품  
   

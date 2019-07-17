@@ -162,7 +162,7 @@ transaction with timestamp 15 and other snapshot transactions linked to
 timestamp 15 or with timestamps older than 109 to finish.  
 ```  
   
-이 메시지는 축소 작업이 완료된 마지막 트랜잭션인 109보다 오래된 타임스탬프가 있는 스냅숏 트랜잭션이 축소 작업을 차단하고 있음을 의미합니다. 또한 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 동적 관리 뷰의 **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 열에 15인 값이 포함되어 있음을 나타냅니다. **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 뷰 열에 축소 작업의 마지막으로 완료된 트랜잭션(109)보다 작은 숫자가 포함되면 축소 작업은 해당 트랜잭션이 완료될 때까지 기다립니다.
+이 메시지는 축소 작업이 완료된 마지막 트랜잭션인 109보다 오래된 타임스탬프가 있는 스냅샷 트랜잭션이 축소 작업을 차단하고 있음을 의미합니다. 또한 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) 동적 관리 뷰의 **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 열에 15인 값이 포함되어 있음을 나타냅니다. **transaction_sequence_num** 또는 **first_snapshot_sequence_num** 뷰 열에 축소 작업의 마지막으로 완료된 트랜잭션(109)보다 작은 숫자가 포함되면 축소 작업은 해당 트랜잭션이 완료될 때까지 기다립니다.
   
 문제를 해결하려면 다음 태스크 중 하나를 수행하십시오.
 -   축소 작업을 차단하는 트랜잭션을 종료합니다.

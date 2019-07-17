@@ -25,7 +25,7 @@ ms.locfileid: "62665510"
 ---
 # <a name="replication-distribution-agent"></a>복제 배포 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  복제 배포 에이전트는 스냅숏(스냅숏 복제 및 트랜잭션 복제의 경우) 및 배포 데이터베이스 테이블에 저장된 트랜잭션(트랜잭션 배포의 경우)을 구독자의 대상 테이블로 이동하는 실행 파일입니다.  
+  복제 배포 에이전트는 스냅샷(스냅샷 복제 및 트랜잭션 복제의 경우) 및 배포 데이터베이스 테이블에 저장된 트랜잭션(트랜잭션 배포의 경우)을 구독자의 대상 테이블로 이동하는 실행 파일입니다.  
   
 > [!NOTE]  
 >  매개 변수는 지정되는 순서에 제한을 받지 않습니다. 선택적 매개 변수가 지정되지 않은 경우 로컬 컴퓨터의 미리 정의된 레지스트리 설정 값이 사용됩니다.  
@@ -105,7 +105,7 @@ distrib [-?]
  구독자 데이터베이스의 이름입니다.  
   
  **-AltSnapshotFolder** _alt_snapshot_folder_path_  
- 구독에 대한 초기 스냅숏이 들어 있는 폴더의 경로입니다.  
+ 구독에 대한 초기 스냅샷이 들어 있는 폴더의 경로입니다.  
   
  **-BcpBatchSize** _bcp_batch_size_  
  대량 복사 작업에서 보낼 행 수입니다. **bcp in** 작업을 수행하는 경우 일괄 처리 크기는 한 번의 트랜잭션으로 서버에 보낼 행 수이며 배포 에이전트가 **bcp** 진행 메시지를 기록하기 전에 보내야 하는 행 수이기도 합니다. **bcp out** 작업을 수행하는 경우 고정 일괄 처리 크기로 **1000** 이 사용됩니다.  
@@ -189,7 +189,7 @@ distrib [-?]
  로그인 시간이 초과될 때까지 걸리는 시간(초)입니다. 기본값은 **15** 초입니다.  
   
  **-MaxBcpThreads** _number_of_threads_  
- 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다. 동시에 존재하는 스레드 및 ODBC 연결의 최대 개수는 **MaxBcpThreads** 와 배포 데이터베이스의 동기화 트랜잭션에 나타나는 대량 복사 요청 수 중 더 작은 값입니다. **MaxBcpThreads** 값은 **0** 보다 크고 하드 코딩된 상한값이 없어야 합니다. 기본값은 최대값이 **8** 인 프로세서 수의 **2**배입니다. 게시자에서 동시 스냅숏 옵션을 사용하여 생성된 스냅숏을 적용할 경우 **MaxBcpThreads**에 지정한 숫자에 관계없이 하나의 스레드가 사용됩니다.  
+ 병렬로 수행할 수 있는 대량 복사 작업 수를 지정합니다. 동시에 존재하는 스레드 및 ODBC 연결의 최대 개수는 **MaxBcpThreads** 와 배포 데이터베이스의 동기화 트랜잭션에 나타나는 대량 복사 요청 수 중 더 작은 값입니다. **MaxBcpThreads** 값은 **0** 보다 크고 하드 코딩된 상한값이 없어야 합니다. 기본값은 최대값이 **8** 인 프로세서 수의 **2**배입니다. 게시자에서 동시 스냅샷 옵션을 사용하여 생성된 스냅샷을 적용할 경우 **MaxBcpThreads**에 지정한 숫자에 관계없이 하나의 스레드가 사용됩니다.  
   
  **-MaxDeliveredTransactions** _number_of_transactions_  
  한 번의 동기화에서 구독자에 적용되는 밀어넣기 또는 끌어오기 트랜잭션의 최대 개수입니다. 값 **0** 은 최대값이 무한개의 트랜잭션임을 나타냅니다. 다른 값은 구독자가 게시자에서 끌어오는 동기화의 기간을 줄이는 데 사용할 수 있습니다.  
@@ -225,7 +225,7 @@ distrib [-?]
  에이전트 매개 변수에 사용할 에이전트 프로필을 지정합니다. **ProfileName** 이 NULL이면 에이전트 프로필이 사용되지 않습니다. **ProfileName** 이 지정되지 않으면 에이전트 유형에 대한 기본 프로필이 사용됩니다. 자세한 내용은 [복제 에이전트 프로필](../../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하세요.  
   
  **-Publication**  _publication_  
- 게시의 이름입니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅숏을 사용할 수 있도록 설정된 경우에만 유효합니다.  
+ 게시의 이름입니다. 이 매개 변수는 게시가 새 구독이나 다시 초기화된 구독에 대해 항상 스냅샷을 사용할 수 있도록 설정된 경우에만 유효합니다.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
  쿼리 시간이 초과될 때까지 걸리는 시간(초)입니다. 기본값은 1800초입니다.  
@@ -282,7 +282,7 @@ distrib [-?]
  데이터 변환을 허용하는 게시의 매개 변수로 지정해야 합니다.  
   
  **-UseInprocLoader**  
- 배포 에이전트에서 구독자에 스냅숏 파일을 적용할 때 BULK INSERT 명령을 사용하도록 지정하여 초기 스냅숏의 성능을 향상시킵니다. 이 매개 변수는 XML 데이터 형식과 호환되지 않으므로 이후에는 지원되지 않습니다. XML 데이터를 복제하지 않을 계획이라면 이 매개 변수를 사용할 수 있습니다. 이 매개 변수는 문자 모드 스냅숏 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자와 함께 사용할 수 없습니다. 이 매개 변수를 사용하려면 구독자의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 스냅숏 .bcp 데이터 파일이 있는 디렉터리에 대한 읽기 권한이 있어야 합니다. 이 매개 변수를 사용하지 않으면 에이전트([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자의 경우) 또는 에이전트에서 로드한 ODBC 드라이버([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자의 경우)가 파일 내용을 읽으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트가 사용되지 않습니다.  
+ 배포 에이전트에서 구독자에 스냅샷 파일을 적용할 때 BULK INSERT 명령을 사용하도록 지정하여 초기 스냅샷의 성능을 향상시킵니다. 이 매개 변수는 XML 데이터 형식과 호환되지 않으므로 이후에는 지원되지 않습니다. XML 데이터를 복제하지 않을 계획이라면 이 매개 변수를 사용할 수 있습니다. 이 매개 변수는 문자 모드 스냅샷 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자와 함께 사용할 수 없습니다. 이 매개 변수를 사용하려면 구독자의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정에 스냅샷 .bcp 데이터 파일이 있는 디렉터리에 대한 읽기 권한이 있어야 합니다. 이 매개 변수를 사용하지 않으면 에이전트([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자의 경우) 또는 에이전트에서 로드한 ODBC 드라이버([!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구독자의 경우)가 파일 내용을 읽으므로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정의 보안 컨텍스트가 사용되지 않습니다.  
   
  **-UseOledbStreaming**  
  이 인수를 지정하면 BLOB(Binary Large Object) 데이터를 스트림으로 바인딩할 수 있습니다. 크기(바이트)가 얼마 이상일 때 스트림을 사용할지를 지정하려면 **-OledbStreamThreshold** 를 사용합니다. **UseOledbStreaming** 은 기본적으로 사용하도록 설정됩니다. **UseOledbStreaming**은 **C:\Program Files\Microsoft SQL Server\\<version\>\COM** 폴더에 데이터를 씁니다.  

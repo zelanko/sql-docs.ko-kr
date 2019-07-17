@@ -27,7 +27,7 @@ ms.locfileid: "59516489"
   
 ## <a name="using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 사용
   
-1.  **게시자 속성 - \<Publisher>** 대화 상자의 **게시 데이터베이스** 페이지에서 복제할 각 데이터베이스에 대해 **트랜잭션** 및/또는 **병합** 확인란을 선택합니다. 데이터베이스에서 스냅숏 복제를 설정하려면 **트랜잭션** 을 선택합니다.  
+1.  **게시자 속성 - \<Publisher>** 대화 상자의 **게시 데이터베이스** 페이지에서 복제할 각 데이터베이스에 대해 **트랜잭션** 및/또는 **병합** 확인란을 선택합니다. 데이터베이스에서 스냅샷 복제를 설정하려면 **트랜잭션** 을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

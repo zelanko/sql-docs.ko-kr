@@ -74,7 +74,7 @@ ms.locfileid: "66109349"
 #### <a name="sql-server-2005-and-earlier-custom-report-items"></a>SQL Server 2005 및 이전 사용자 지정 보고서 항목  
  사용자 지정 보고서 항목 (CRI) 용으로 컴파일된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 및 이전 버전은 사용 되지 않습니다.  
   
-#### <a name="reporting-services-snapshots-2005-and-earlier"></a>Reporting Services 스냅숏 2005 및 이전 버전  
+#### <a name="reporting-services-snapshots-2005-and-earlier"></a>Reporting Services 스냅샷 2005 및 이전 버전  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 스냅숏을 사용 하 여 렌더링 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 및 이전 버전은 사용 되지 않습니다.  
   
 #### <a name="report-models"></a>보고서 모델  
@@ -144,7 +144,7 @@ ms.locfileid: "66109349"
 ### <a name="sql-server-2005-and-earlier-custom-report-items"></a>SQL Server 2005 및 이전 사용자 지정 보고서 항목  
  사용자 지정 보고서 항목 (CRI) 용으로 컴파일된 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 및 이전 버전은 사용 되지 않습니다.  
   
-### <a name="reporting-services-snapshots-2005-and-earlier"></a>Reporting Services 스냅숏 2005 및 이전 버전  
+### <a name="reporting-services-snapshots-2005-and-earlier"></a>Reporting Services 스냅샷 2005 및 이전 버전  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 스냅숏을 사용 하 여 렌더링 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2005 및 이전 버전은 사용 되지 않습니다.  
   
 ### <a name="report-models"></a>보고서 모델  

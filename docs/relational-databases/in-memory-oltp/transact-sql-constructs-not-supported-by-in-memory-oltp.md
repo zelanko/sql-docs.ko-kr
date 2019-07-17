@@ -43,7 +43,7 @@ ms.locfileid: "53590767"
 |----------|----------|----------------|  
 |옵션|AUTO_CLOSE|데이터베이스 옵션 AUTO_CLOSE=ON은 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 데이터베이스에서 지원되지 않습니다.|  
 |옵션|ATTACH_REBUILD_LOG|CREATE 데이터베이스 옵션 ATTACH_REBUILD_LOG는 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 데이터베이스에서 지원되지 않습니다.|  
-|기능|DATABASE SNAPSHOT|데이터베이스 스냅숏 만들기는 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 데이터베이스에서 지원되지 않습니다.|  
+|기능|DATABASE SNAPSHOT|데이터베이스 스냅샷 만들기는 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 데이터베이스에서 지원되지 않습니다.|  
 |기능|sync_method 'database snapshot' 또는 'database snapshot character'를 사용한 복제|sync_method 'database snapshot' 또는 'database snapshot character'를 사용한 복제는 MEMORY_OPTIMIZED_DATA 파일 그룹이 있는 데이터베이스에서 지원되지 않습니다.|  
 |기능|DBCC CHECKDB<br /><br /> DBCC CHECKTABLE|DBCC CHECKDB는 데이터베이스에서 메모리 최적화 테이블을 건너뜁니다.<br /><br /> 메모리 최적화 테이블에 대한 DBCC CHECKTABLE은 실패합니다.|  
   

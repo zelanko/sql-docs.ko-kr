@@ -110,14 +110,14 @@ ms.locfileid: "67793920"
   
 -   구독을 만들려면 먼저 게시에 피어 투 피어 복제를 사용할 수 있도록 설정해야 합니다.  
   
--   백업이나 **'replication support only'** 옵션을 사용하여 구독을 초기화해야 합니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
+-   백업이나 **'replication support only'** 옵션을 사용하여 구독을 초기화해야 합니다. 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](../initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
 -   ID 열은 사용하지 않는 것이 좋습니다. ID를 사용하는 경우 참여하는 각 데이터베이스에서 테이블에 할당된 범위를 수동으로 관리해야 합니다. 자세한 내용은 [ID 열 복제](../publish/replicate-identity-columns.md)에서 "ID 범위 수동 관리를 위한 범위 할당" 섹션을 참조하세요.  
   
 ### <a name="feature-restrictions"></a>기능 제한  
  피어 투 피어 복제는 트랜잭션 복제의 주요 기능을 지원하지만 다음 옵션은 지원하지 않습니다.  
   
--   스냅숏을 사용하여 초기화 및 다시 초기화  
+-   스냅샷을 사용하여 초기화 및 다시 초기화  
   
 -   행 및 열 필터  
   

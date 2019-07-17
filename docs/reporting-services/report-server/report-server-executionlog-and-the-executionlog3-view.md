@@ -121,7 +121,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|데이터를 검색하는 데 걸린 시간(밀리초)|  
 |TimeProcessing|보고서를 처리하는 데 걸린 시간(밀리초)|  
 |TimeRendering|보고서를 렌더링하는 데 걸린 시간(밀리초)|  
-|원본|보고서 실행의 원본입니다. 가능한 값은 다음과 같습니다.<br /><br /> 라이브<br /><br /> 캐시: 예를 들어 라이브로 실행되지 않은 데이터 세트 쿼리와 같이 캐시된 실행을 나타냅니다.<br /><br /> 스냅숏<br /><br /> 기록<br /><br /> AdHoc: 동적으로 생성된 보고서 모델 기반 드릴스루 보고서 또는 처리 및 렌더링을 위해 보고서 서버를 활용하는 클라이언트에서 미리 본 보고서 작성기 보고서를 나타냅니다.<br /><br /> 세션: 이미 설정된 세션 안의 후속 보고서를 나타냅니다.  예를 들어 초기 요청은 1페이지를 보는 것이고 후속 요청은 현재 세션 상태로 Excel로 내보내는 것입니다.<br /><br /> Rdce: RDCE(Report Definition Customization Extension)를 나타냅니다. RDCE 사용자 지정 확장 프로그램에서는 보고서 실행 시 보고서 정의가 처리 엔진에 전달되기 전에 보고서 정의를 동적으로 사용자 지정할 수 있습니다.|  
+|원본|보고서 실행의 원본입니다. 가능한 값은 다음과 같습니다.<br /><br /> 라이브<br /><br /> 캐시: 예를 들어 라이브로 실행되지 않은 데이터 세트 쿼리와 같이 캐시된 실행을 나타냅니다.<br /><br /> 스냅샷<br /><br /> 기록<br /><br /> AdHoc: 동적으로 생성된 보고서 모델 기반 드릴스루 보고서 또는 처리 및 렌더링을 위해 보고서 서버를 활용하는 클라이언트에서 미리 본 보고서 작성기 보고서를 나타냅니다.<br /><br /> 세션: 이미 설정된 세션 안의 후속 보고서를 나타냅니다.  예를 들어 초기 요청은 1페이지를 보는 것이고 후속 요청은 현재 세션 상태로 Excel로 내보내는 것입니다.<br /><br /> Rdce: RDCE(Report Definition Customization Extension)를 나타냅니다. RDCE 사용자 지정 확장 프로그램에서는 보고서 실행 시 보고서 정의가 처리 엔진에 전달되기 전에 보고서 정의를 동적으로 사용자 지정할 수 있습니다.|  
 |상태|상태(rsSuccess 또는 오류 코드: 여러 개의 오류가 발생하면 첫 번째 오류만 기록됨)|  
 |ByteCount|렌더링된 보고서 크기(바이트)|  
 |RowCount|쿼리에서 반환된 행 수|  
@@ -332,7 +332,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|데이터 검색, 보고서 처리 및 보고서 렌더링에 걸린 시간(밀리초 단위)|  
 |TimeProcessing||  
 |TimeRendering||  
-|원본|보고서 실행 원본(1=라이브, 2=캐시, 3=스냅숏, 4=기록)|  
+|원본|보고서 실행 원본(1=라이브, 2=캐시, 3=스냅샷, 4=기록)|  
 |상태|상태(rsSuccess 또는 오류 코드: 여러 개의 오류가 발생하면 첫 번째 오류만 기록됨)|  
 |ByteCount|렌더링된 보고서 크기(바이트)|  
 |RowCount|쿼리에서 반환된 행 수|  
@@ -362,7 +362,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|데이터 검색, 보고서 처리 및 보고서 렌더링에 걸린 시간(밀리초 단위)|  
 |TimeProcessing||  
 |TimeRendering||  
-|원본|보고서 실행의 원본입니다. 가능한 값: 1=라이브, 2=캐시, 3=스냅숏, 4=기록, 5=임시, 6=세션, 7=RDCE입니다.|  
+|원본|보고서 실행의 원본입니다. 가능한 값: 1=라이브, 2=캐시, 3=스냅샷, 4=기록, 5=임시, 6=세션, 7=RDCE입니다.|  
 |상태|가능한 값: rsSuccess, rsProcessingAborted 또는 오류 코드입니다. 여러 오류가 발생한 경우 첫 번째 오류만 기록됩니다.|  
 |ByteCount|렌더링된 보고서 크기(바이트)|  
 |RowCount|쿼리에서 반환된 행 수|  

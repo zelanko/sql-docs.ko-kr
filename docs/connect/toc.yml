@@ -4990,7 +4990,7 @@
           href: ../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md
         - name: 쿼리 알림 작업
           href: ../connect/oledb/features/working-with-query-notifications.md
-        - name: 스냅숏 격리 작업
+        - name: 스냅샷 격리 작업
           href: ../connect/oledb/features/working-with-snapshot-isolation.md
     - name: 애플리케이션
       href: ../connect/oledb/applications/building-applications-with-oledb-driver-for-sql-server.md

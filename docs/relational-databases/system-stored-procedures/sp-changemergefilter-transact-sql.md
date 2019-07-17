@@ -68,7 +68,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값 **0**합니다.  
   
- **0** 병합 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅숏을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
+ **0** 병합 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅샷을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
  **1** 의미 병합 아티클에 대 한 변경을 유효 하지 않게 스냅숏을 무효화 하는 새 스냅숏이 필요한 기존 구독이 있는 경우 제공 되지 않음으로 표시 될 기존 스냅숏과 하 고 새 스냅숏을 생성할 권한을 합니다.  
   
@@ -84,7 +84,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_changemergefilter** 병합 복제에 사용 됩니다.  
   
- 병합 아티클의 필터를 변경하려면 스냅숏이 하나 있는 경우 이를 다시 만들어야 합니다. 이 작업을 설정 하 여 수행 됩니다 합니다 **@force_invalidate_snapshot** 하려면 **1**합니다. 또한 이 아티클에 대한 구독이 있을 경우 구독을 다시 초기화해야 합니다. 설정 하 여 이렇게 합니다 **@force_reinit_subscription** 하 **1**.  
+ 병합 아티클의 필터를 변경하려면 스냅샷이 하나 있는 경우 이를 다시 만들어야 합니다. 이 작업을 설정 하 여 수행 됩니다 합니다 **@force_invalidate_snapshot** 하려면 **1**합니다. 또한 이 아티클에 대한 구독이 있을 경우 구독을 다시 초기화해야 합니다. 설정 하 여 이렇게 합니다 **@force_reinit_subscription** 하 **1**.  
   
  논리적 레코드를 사용하려면 게시 및 아티클이 여러 가지 요구 사항을 만족해야 합니다. 자세한 내용은 [논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md)를 참조하세요.  
   

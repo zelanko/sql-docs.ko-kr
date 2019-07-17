@@ -35,7 +35,7 @@ ms.locfileid: "66098727"
   
 -   카탈로그 항목의 XML 정의 검색  
   
--   특정 보고서 기록 스냅숏 렌더링  
+-   특정 보고서 기록 스냅샷 렌더링  
   
 -   보고서 세션 관리  
   
@@ -116,7 +116,7 @@ http://myspsite/subsite/AdventureWorks 2008R2/Employee_Sales_Summary_2008R2.rdl
 |보고서 렌더링 방식을 사용자 지정하는 렌더링 확장자별 설정 보내기|[URL에 디바이스 정보 설정 지정](specify-device-information-settings-in-a-url.md)|  
 |보고서를 브라우저에서 보지 않고 파일 형식으로 직접 내보내기|[URL 액세스를 사용하여 보고서 내보내기](export-a-report-using-url-access.md)|  
 |보고서를 열고 문자열 위치로 직접 이동|[URL 액세스를 사용하여 보고서 검색](search-a-report-using-url-access.md)|  
-|특정 보고서 기록 스냅숏 렌더링|[URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링](render-a-report-history-snapshot-using-url-access.md)|  
+|특정 보고서 기록 스냅샷 렌더링|[URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링](render-a-report-history-snapshot-using-url-access.md)|  
   
 ## <a name="see-also"></a>관련 항목  
  [Pass a Report Parameter Within a URL](pass-a-report-parameter-within-a-url.md)   

@@ -106,23 +106,23 @@ sp_addmergepublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  이 매개 변수를 직접 지정하기보다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 매개 변수가 있는 행 필터를 사용할지 여부를 자동으로 결정할 수 있도록 허용해야 합니다. 값을 지정 하는 경우 **true** 에 대 한 *dynamic_filters*, 문서에 대 한 매개 변수가 있는 행 필터를 정의 해야 합니다. 자세한 내용은 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하세요.  
   
-`[ @snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'` 경우에 스냅숏 파일이 기본 폴더에 저장 됩니다 지정 합니다. *snapshot_in_default_folder* 됩니다 **nvarchar(5)** , 기본값은 TRUE입니다. 하는 경우 **true**, 스냅숏 파일이 기본 폴더에서 찾을 수 있습니다. 하는 경우 **false**, 스냅숏 파일에서 지정한 대체 위치에 저장 됩니다 *alternate_snapshot_folder*합니다. 대체 위치는 다른 서버, 네트워크 드라이브 또는 이동식 미디어(예, CD-ROM 또는 이동식 디스크)가 될 수 있습니다. 또한 구독자가 나중에 검색할 수 있도록 FTP(파일 전송 프로토콜) 사이트에 스냅숏 파일을 저장할 수도 있습니다. 이 매개 변수 수 true 일을 하 여 지정 된 위치에 아직 *alt_snapshot_folder*합니다. 이 조합은 스냅숏 파일이 기본 위치 및 대체 위치 양쪽 모두에 저장되도록 지정합니다.  
+`[ @snapshot_in_defaultfolder = ] 'snapshot_in_default_folder'` 경우에 스냅숏 파일이 기본 폴더에 저장 됩니다 지정 합니다. *snapshot_in_default_folder* 됩니다 **nvarchar(5)** , 기본값은 TRUE입니다. 하는 경우 **true**, 스냅숏 파일이 기본 폴더에서 찾을 수 있습니다. 하는 경우 **false**, 스냅숏 파일에서 지정한 대체 위치에 저장 됩니다 *alternate_snapshot_folder*합니다. 대체 위치는 다른 서버, 네트워크 드라이브 또는 이동식 미디어(예, CD-ROM 또는 이동식 디스크)가 될 수 있습니다. 또한 구독자가 나중에 검색할 수 있도록 FTP(파일 전송 프로토콜) 사이트에 스냅샷 파일을 저장할 수도 있습니다. 이 매개 변수 수 true 일을 하 여 지정 된 위치에 아직 *alt_snapshot_folder*합니다. 이 조합은 스냅샷 파일이 기본 위치 및 대체 위치 양쪽 모두에 저장되도록 지정합니다.  
   
 `[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` 스냅숏의 대체 폴더의 위치를 지정 합니다. *alternate_snapshot_folder* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다.  
   
-`[ @pre_snapshot_script = ] 'pre_snapshot_script'` 에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *pre_snapshot_script* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 병합 에이전트는 스냅숏을 구독자에 적용할 때 복제된 임의의 개체 스크립트를 실행하기 전에 프리 스냅숏 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 병합 에이전트에 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다. 프리 스냅숏 스크립트에서 실행 되지 않으므로 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자입니다.  
+`[ @pre_snapshot_script = ] 'pre_snapshot_script'` 에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *pre_snapshot_script* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 병합 에이전트는 스냅샷을 구독자에 적용할 때 복제된 임의의 개체 스크립트를 실행하기 전에 프리 스냅샷 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 병합 에이전트에 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다. 프리 스냅숏 스크립트에서 실행 되지 않으므로 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자입니다.  
   
-`[ @post_snapshot_script = ] 'post_snapshot_script'` 에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *post_snapshot_script* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 병합 에이전트는 초기 동기화 동안 복제된 다른 모든 개체 스크립트와 데이터를 적용한 후에 포스트 스냅숏 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 병합 에이전트에 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다. 포스트 스냅숏 스크립트에서 실행 되지 않으므로 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자입니다.  
+`[ @post_snapshot_script = ] 'post_snapshot_script'` 에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. *post_snapshot_script* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 병합 에이전트는 초기 동기화 동안 복제된 다른 모든 개체 스크립트와 데이터를 적용한 후에 포스트 스냅샷 스크립트를 실행합니다. 구독 데이터베이스에 연결할 때 병합 에이전트에 사용되는 보안 컨텍스트에서 스크립트가 실행됩니다. 포스트 스냅숏 스크립트에서 실행 되지 않으므로 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자입니다.  
   
-`[ @compress_snapshot = ] 'compress_snapshot'` 에 작성 한 스냅숏을 지정 합니다 **@alt_snapshot_folder** 위치가로 압축할 수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식으로 합니다. *compress_snapshot* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. **false** 는 스냅숏이 압축 되지 않으면 지정 **true** 는 스냅숏이 압축 되도록 지정 합니다. 2GB 이상의 스냅숏 파일은 압축할 수 없습니다. 압축된 스냅숏 파일은 병합 에이전트가 실행되는 위치에 풀립니다. 압축 스냅숏은 구독자에서 압축 파일을 풀 수 있도록 일반적으로 끌어오기 구독과 함께 사용됩니다. 기본 폴더에 있는 스냅숏은 압축할 수 없습니다. 지원 하기 위해 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 를 지정 해야 구독자 **false**합니다.  
+`[ @compress_snapshot = ] 'compress_snapshot'` 에 작성 한 스냅숏을 지정 합니다 **@alt_snapshot_folder** 위치가로 압축할 수는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 형식으로 합니다. *compress_snapshot* 됩니다 **nvarchar(5)** , 기본값은 FALSE입니다. **false** 는 스냅숏이 압축 되지 않으면 지정 **true** 는 스냅숏이 압축 되도록 지정 합니다. 2GB 이상의 스냅샷 파일은 압축할 수 없습니다. 압축된 스냅샷 파일은 병합 에이전트가 실행되는 위치에 풀립니다. 압축 스냅샷은 구독자에서 압축 파일을 풀 수 있도록 일반적으로 끌어오기 구독과 함께 사용됩니다. 기본 폴더에 있는 스냅샷은 압축할 수 없습니다. 지원 하기 위해 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 를 지정 해야 구독자 **false**합니다.  
   
-`[ @ftp_address = ] 'ftp_address'` 배포자 용 FTP 서비스의 네트워크 주소가입니다. *ftp_address* 됩니다 **sysname**, 기본값은 NULL입니다. 구독자의 병합 에이전트가 선택할 게시 스냅숏 파일의 위치를 지정합니다. 이 속성은 각 게시에 저장 되므로 각 게시에는 서로 다른 *ftp_address*합니다. 게시는 FTP를 사용하여 스냅숏 전파를 지원해야 합니다.  
+`[ @ftp_address = ] 'ftp_address'` 배포자 용 FTP 서비스의 네트워크 주소가입니다. *ftp_address* 됩니다 **sysname**, 기본값은 NULL입니다. 구독자의 병합 에이전트가 선택할 게시 스냅샷 파일의 위치를 지정합니다. 이 속성은 각 게시에 저장 되므로 각 게시에는 서로 다른 *ftp_address*합니다. 게시는 FTP를 사용하여 스냅샷 전파를 지원해야 합니다.  
   
-`[ @ftp_port = ] ftp_port` 배포자 용 FTP 서비스의 포트 번호가입니다. *ftp_port* 됩니다 **int**, 기본값은 21입니다. 구독자의 병합 에이전트가 선택할 게시 스냅숏 파일의 위치를 지정합니다. 이 속성은 각 게시에 저장 되므로 각 게시는 고유한 *ftp_port*합니다.  
+`[ @ftp_port = ] ftp_port` 배포자 용 FTP 서비스의 포트 번호가입니다. *ftp_port* 됩니다 **int**, 기본값은 21입니다. 구독자의 병합 에이전트가 선택할 게시 스냅샷 파일의 위치를 지정합니다. 이 속성은 각 게시에 저장 되므로 각 게시는 고유한 *ftp_port*합니다.  
   
 `[ @ftp_subdirectory = ] 'ftp_subdirectory'` 게시에서 FTP를 사용 하 여 스냅숏 전파를 지 원하는 경우 선택할 구독자의 병합 에이전트에 사용할 수 있는 스냅숏 파일 위치를 지정 합니다. *ftp_subdirectory* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 이 속성은 각 게시에 저장 되므로 각 게시는 고유한 *ftp_subdirctory* 또는 NULL 값으로 표시 된 하위 디렉터리를 선택 합니다.  
   
- 매개 변수가 있는 필터를 이용해 게시에 대한 스냅숏을 미리 생성할 때 각 구독자 파티션에 대한 데이터 스냅숏은 자체 폴더 내에 있어야 합니다. FTP를 사용하여 미리 생성된 스냅숏에 대한 디렉터리 구조는 다음 구조를 따라야 합니다.  
+ 매개 변수가 있는 필터를 이용해 게시에 대한 스냅샷을 미리 생성할 때 각 구독자 파티션에 대한 데이터 스냅샷은 자체 폴더 내에 있어야 합니다. FTP를 사용하여 미리 생성된 스냅샷에 대한 디렉터리 구조는 다음 구조를 따라야 합니다.  
   
  *alternate_snapshot_folder*\ftp\\*publisher_publicationDB_publication*\\*partitionID*.  
   
@@ -158,7 +158,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @max_concurrent_merge = ] maximum_concurrent_merge` 동시 병합 프로세스의 최대 수입니다. *maximum_concurrent_merge* 됩니다 **int** 이며 기본값은 0입니다. 값이 **0** 에이 속성의 지정된 된 시간에 실행 중인 동시 병합 프로세스 수 제한이 있다는 것을 의미 합니다. 이 속성은 병합 게시에 대해 한 시점에 실행할 수 있는 동시 병합 프로세스의 수 제한을 설정합니다. 실행 허용된 값보다 많은 병합 프로세스가 동시에 계획되면 초과 작업은 큐로 이동하여 현재 실행 중인 병합 프로세스가 끝날 때까지 대기합니다.  
   
-`[ @max_concurrent_dynamic_snapshots = ] max_concurrent_dynamic_snapshots` 구독자 파티션 위한 필터링 된 데이터 스냅숏을 생성 하기 위해 동시에 실행할 수 있는 스냅숏 에이전트 세션의 최대 수입니다. *maximum_concurrent_dynamic_snapshots* 됩니다 **int** 이며 기본값은 0입니다. 하는 경우 **0**, 스냅숏 세션의 수에 대 한 제한은 없습니다. 실행하도록 허용된 값보다 많은 스냅숏 프로세스를 동시에 실행하도록 예약할 경우 초과 작업은 큐에 두고 현재 실행 중인 스냅숏 프로세스가 완료될 때까지 기다립니다.  
+`[ @max_concurrent_dynamic_snapshots = ] max_concurrent_dynamic_snapshots` 구독자 파티션 위한 필터링 된 데이터 스냅숏을 생성 하기 위해 동시에 실행할 수 있는 스냅숏 에이전트 세션의 최대 수입니다. *maximum_concurrent_dynamic_snapshots* 됩니다 **int** 이며 기본값은 0입니다. 하는 경우 **0**, 스냅숏 세션의 수에 대 한 제한은 없습니다. 실행하도록 허용된 값보다 많은 스냅샷 프로세스를 동시에 실행하도록 예약할 경우 초과 작업은 큐에 두고 현재 실행 중인 스냅샷 프로세스가 완료될 때까지 기다립니다.  
   
 `[ @use_partition_groups = ] 'use_partition_groups'` 지정 하는 사전 계산 파티션을 동기화 프로세스를 최적화 하기 위해 사용 해야 합니다. *use_partition_groups* 됩니다 **nvarchar(5)** , 이며 다음이 값 중 하나일 수 있습니다.  
   

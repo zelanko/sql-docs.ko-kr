@@ -110,21 +110,21 @@ ms.locfileid: "54130723"
   
 10. **테이블 행 필터링** 페이지에서 **Employee(Human Resources)** 를 선택하고 **추가**를 선택한 다음, **선택한 필터 확장을 위해 조인 추가**를 선택합니다.  
   
-    1. **조인 추가** 대화 상자의 **조인된 테이블**에서 **Sales.SalesOrderHeader**를 선택합니다. **수동으로 조인 문 작성**을 선택하고, 다음과 같이 조인 문을 완성합니다.  
+    1\. **조인 추가** 대화 상자의 **조인된 테이블**에서 **Sales.SalesOrderHeader**를 선택합니다. **수동으로 조인 문 작성**을 선택하고, 다음과 같이 조인 문을 완성합니다.  
   
     ```sql  
     ON [Employee].[BusinessEntityID] =  [SalesOrderHeader].[SalesPersonID] 
     ```  
   
-    2. **조인 옵션 지정**에서 **고유 키**를 선택한 다음, **확인**을 선택합니다.
+    2\. **조인 옵션 지정**에서 **고유 키**를 선택한 다음, **확인**을 선택합니다.
 
     ![필터에 조인을 추가하기 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/mergeaddjoin.png)
 
   
 13. **테이블 행 필터링** 페이지에서 **SalesOrderHeader**를 선택하고 **추가**를 선택한 다음, **선택한 필터 확장을 위해 조인 추가**를 선택합니다.  
   
-    1. **조인 추가** 대화 상자의 **조인된 테이블** 에서 **Sales.SalesOrderDetail**을 선택합니다.    
-    2. **작성기를 사용하여 명령문 만들기**를 선택합니다.  
+    1\. **조인 추가** 대화 상자의 **조인된 테이블** 에서 **Sales.SalesOrderDetail**을 선택합니다.    
+    2\. **작성기를 사용하여 명령문 만들기**를 선택합니다.  
     c. **미리 보기** 상자에서 조인 문이 다음과 같은지 확인합니다.  
   
     ```sql  
@@ -137,11 +137,11 @@ ms.locfileid: "54130723"
   
 21. **즉시 스냅숏 만들기**를 선택하고 **스냅숏 에이전트 실행 시간 예약**을 선택 취소한 후 **다음**을 선택합니다.  
 
-    ![즉시 스냅숏 만들기에 대한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
+    ![즉시 스냅샷 만들기에 대한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
-22. **에이전트 보안** 페이지에서 **보안 설정**을 선택합니다. **프로세스 계정** 상자에 <*Publisher_Machine_Name*>**\repl_snapshot**을 입력하고, 이 계정에 대한 암호를 입력한 다음, **확인**을 선택합니다. **다음**을 선택합니다.  
+22. **에이전트 보안** 페이지에서 **보안 설정**을 선택합니다. **프로세스 계정** 상자에 <*Publisher_Machine_Name*> **\repl_snapshot**을 입력하고, 이 계정에 대한 암호를 입력한 다음, **확인**을 선택합니다. **다음**을 선택합니다.  
 
-    ![스냅숏 에이전트 보안 설정을 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
+    ![스냅샷 에이전트 보안 설정을 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/snapshotagentsecurity.png)
   
 23. **마법사 완료** 페이지에서 **게시 이름** 상자에 **AdvWorksSalesOrdersMerge**를 입력하고 **마침**을 선택합니다.  
 
@@ -149,15 +149,15 @@ ms.locfileid: "54130723"
   
 24. 게시를 만든 후 **닫기**를 선택합니다. **개체 탐색기**의 **복제** 노드에서 **로컬 게시** 및 **새로 고침**을 마우스 오른쪽 단추로 선택하여 새 병합 복제를 봅니다.  
   
-### <a name="view-the-status-of-snapshot-generation"></a>스냅숏 생성의 상태 보기  
+### <a name="view-the-status-of-snapshot-generation"></a>스냅샷 생성의 상태 보기  
   
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결하고 해당 서버 노드를 확장한 다음, **복제** 폴더를 확장합니다.  
   
 2. **로컬 게시** 폴더에서 **AdvWorksSalesOrdersMerge**를 마우스 오른쪽 단추로 클릭한 다음, **스냅숏 에이전트 상태 보기**를 선택합니다.  
 
-   ![스냅숏 에이전트 상태를 보기 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/viewsnapshotagentstatus.png)
+   ![스냅샷 에이전트 상태를 보기 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/viewsnapshotagentstatus.png)
   
-3. 게시에 대한 스냅숏 에이전트 작업의 현재 상태가 표시됩니다. 다음 단원을 진행하기 전에 스냅숏 작업이 성공했는지 확인합니다.  
+3. 게시에 대한 스냅샷 에이전트 작업의 현재 상태가 표시됩니다. 다음 단원을 진행하기 전에 스냅샷 작업이 성공했는지 확인합니다.  
   
 ### <a name="add-the-merge-agent-login-to-the-pal"></a>PAL에 병합 에이전트 로그인 추가  
   
@@ -165,9 +165,9 @@ ms.locfileid: "54130723"
   
 2. **로컬 게시** 폴더에서 **AdvWorksSalesOrdersMerge**를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다.  
   
-   1. **게시 액세스 목록** 페이지를 선택하고 **추가**를 선택합니다. 
+   1\. **게시 액세스 목록** 페이지를 선택하고 **추가**를 선택합니다. 
   
-   2. **게시 액세스 추가** 대화 상자에서 <*Publisher_Machine_Name*>**\repl_merge**를 선택하고 **확인**을 선택합니다. 다시 **확인**을 선택합니다. 
+   2\. **게시 액세스 추가** 대화 상자에서 <*Publisher_Machine_Name*> **\repl_merge**를 선택하고 **확인**을 선택합니다. 다시 **확인**을 선택합니다. 
 
    ![병합 에이전트 로그인 추가를 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/mergepal.png) 
 
@@ -179,7 +179,7 @@ ms.locfileid: "54130723"
   
   
 ## <a name="create-a-subscription-to-the-merge-publication"></a>병합 게시에 대한 구독 만들기
-이 섹션에서는 이전에 만든 병합 게시에 구독을 추가합니다. 이 자습서에서는 원격 구독자(NODE2\SQL2016)를 사용합니다. 그런 다음, 구독 데이터베이스에 대한 사용 권한을 설정하고 새 구독에 대한 필터링된 데이터 스냅숏을 수동으로 생성합니다.   
+이 섹션에서는 이전에 만든 병합 게시에 구독을 추가합니다. 이 자습서에서는 원격 구독자(NODE2\SQL2016)를 사용합니다. 그런 다음, 구독 데이터베이스에 대한 사용 권한을 설정하고 새 구독에 대한 필터링된 데이터 스냅샷을 수동으로 생성합니다.   
   
 ### <a name="add-a-subscriber-for-merge-publication"></a>병합 게시를 위한 구독자 추가
   
@@ -205,7 +205,7 @@ ms.locfileid: "54130723"
 
    ![구독자에 데이터베이스를 추가하기 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/addsubdb.png)
   
-8. **병합 에이전트 보안** 페이지에서 줄임표(**...**) 단추를 선택합니다. **프로세스 계정** 상자에 <*Subscriber_Machine_Name*>**\repl_merge**를 입력하고 이 계정에 대한 암호를 제공합니다. **확인**을 선택하고 **다음**을 선택한 다음, 다시 **다음**을 선택합니다.  
+8. **병합 에이전트 보안** 페이지에서 줄임표( **...** ) 단추를 선택합니다. **프로세스 계정** 상자에 <*Subscriber_Machine_Name*> **\repl_merge**를 입력하고 이 계정에 대한 암호를 제공합니다. **확인**을 선택하고 **다음**을 선택한 다음, 다시 **다음**을 선택합니다.  
 
    ![병합 에이전트 보안을 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/mergeagentsecurity.png)
 
@@ -227,7 +227,7 @@ ms.locfileid: "54130723"
   
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 구독자에 연결합니다. **보안**을 확장하고, **로그인**을 마우스 오른쪽 단추로 클릭한 다음, **새 로그인**을 선택합니다.  
   
-   **일반** 페이지에서 **검색**을 선택한 다음, **개체 이름 입력** 필드에서 <*Subscriber_Machine_Name*>**\repl_merge**를 입력합니다. **이름 확인**을 선택한 다음, **확인**을 선택합니다. 
+   **일반** 페이지에서 **검색**을 선택한 다음, **개체 이름 입력** 필드에서 <*Subscriber_Machine_Name*> **\repl_merge**를 입력합니다. **이름 확인**을 선택한 다음, **확인**을 선택합니다. 
     
    ![로그인 설정을 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/sublogin.png)
   
@@ -235,15 +235,15 @@ ms.locfileid: "54130723"
 
    !["사용자 매핑" 및 "보안 개체" 페이지](media/tutorial-replicating-data-with-mobile-clients/setdbo.png)
   
-### <a name="create-the-filtered-data-snapshot-for-the-subscription"></a>구독에 대한 필터링된 데이터 스냅숏 만들기  
+### <a name="create-the-filtered-data-snapshot-for-the-subscription"></a>구독에 대한 필터링된 데이터 스냅샷 만들기  
   
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결하고 해당 서버 노드를 확장한 다음, **복제** 폴더를 확장합니다.  
   
 2. **로컬 게시** 폴더에서 **AdvWorksSalesOrdersMerge** 게시를 마우스 오른쪽 단추로 클릭한 다음, **속성**을 선택합니다.  
    
-   1. **데이터 파티션** 페이지를 선택한 다음, **추가**를 선택합니다.   
-   2. **데이터 파티션 추가** 대화 상자의 **HOST_NAME 값** 상자에 **adventure-works\pamela0**를 입력한 다음, **확인**을 선택합니다.  
-   c. 새로 추가된 파티션을 선택하고 **선택한 스냅숏 지금 생성**을 선택한 다음, **확인**을 선택합니다. 
+   1\. **데이터 파티션** 페이지를 선택한 다음, **추가**를 선택합니다.   
+   2\. **데이터 파티션 추가** 대화 상자의 **HOST_NAME 값** 상자에 **adventure-works\pamela0**를 입력한 다음, **확인**을 선택합니다.  
+   c. 새로 추가된 파티션을 선택하고 **선택한 스냅샷 지금 생성**을 선택한 다음, **확인**을 선택합니다. 
 
    ![파티션 추가를 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/partition.png)
   

@@ -40,7 +40,7 @@ ms.locfileid: "53208250"
   
 -   복제 에이전트에서 설정한 연결에 사용할 로그인과 암호를 지정합니다.  
   
-    -   스냅숏 및 트랜잭션 게시에 대한 구독의 경우 **배포 에이전트 보안** 페이지에서 자격 증명을 지정합니다.  
+    -   스냅샷 및 트랜잭션 게시에 대한 구독의 경우 **배포 에이전트 보안** 페이지에서 자격 증명을 지정합니다.  
   
     -   병합 게시에 대한 구독의 경우 **병합 에이전트 보안** 페이지에서 자격 증명을 지정합니다.  
   
@@ -85,25 +85,25 @@ ms.locfileid: "53208250"
   
 > **중요!** 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
-#### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 밀어넣기 구독을 만들려면  
+#### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 밀어넣기 구독을 만들려면  
   
 1.  게시 데이터베이스의 게시자에서 [sp_helppublication](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)을 실행하여 게시에서 밀어넣기 구독을 지원하는지 확인합니다.  
   
     -   **allow_push** 의 값이 **1**이면 게시에서 밀어넣기 구독을 지원합니다.  
   
-    -   **allow_push**의 값이 **0**이면 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행하고 **@property**에 **allow_push**, **@value**에 **true**를 지정합니다.  
+    -   **allow_push**의 값이 **0**이면 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행하고 **@property** 에 **allow_push**, **@value** 에 **true**를 지정합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행합니다. **@publication**, **@subscriber** 및 **@destination_db**을 지정합니다. **@subscription_type**에 **push** 값을 지정합니다. 구독 업데이트 방법은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행합니다. **@publication** , **@subscriber** 및 **@destination_db** 을 지정합니다. **@subscription_type** 에 **push** 값을 지정합니다. 구독 업데이트 방법은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)를 실행합니다. 다음을 지정합니다.  
   
-    -   배포자의 배포 에이전트가 **@subscriber**또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db**및 **@publication** 매개 변수  
+    -   배포자의 배포 에이전트가 **@subscriber** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db** 및 **@publication** 매개 변수  
   
-    -   배포자의 배포 에이전트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** 를 지정하고 **@job_password**를 참조하세요.  
+    -   배포자의 배포 에이전트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** 를 지정하고 **@job_password** 를 참조하세요.  
   
-        > **참고:** Windows 통합 인증을 사용하여 만든 연결은 항상 **@job_login** 을 지정하고 **@job_password**를 참조하세요. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
+        > **참고:** Windows 통합 인증을 사용하여 만든 연결은 항상 **@job_login** 을 지정하고 **@job_password** 를 참조하세요. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
   
-    -   (옵션) **0** 에 **@subscriber_security_mode** 값 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@subscriber_login** 를 지정하고 **@subscriber_password**를 참조하세요. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 매개 변수를 지정합니다.  
+    -   (옵션) **0** 에 **@subscriber_security_mode** 값 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@subscriber_login** 를 지정하고 **@subscriber_password** 를 참조하세요. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 매개 변수를 지정합니다.  
   
     -   이 구독에 대한 배포 에이전트 작업 일정. 자세한 내용은 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요.  
   
@@ -115,29 +115,29 @@ ms.locfileid: "53208250"
   
     -   **allow_push** 값이 **1**이면 게시에서 밀어넣기 구독을 지원합니다.  
   
-    -   **allow_push**의 값이 **1**이 아니면 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행하고 **@property**에 **allow_push**, **@value**에 **true**를 지정합니다.  
+    -   **allow_push**의 값이 **1**이 아니면 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행하고 **@property** 에 **allow_push**, **@value** 에 **true**를 지정합니다.  
   
 2.  게시 데이터베이스의 게시자에서 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)을 실행하고 다음 매개 변수를 지정합니다.  
   
-    -   **@publication**를 참조하세요. 게시의 이름입니다.  
+    -   **@publication** 를 참조하세요. 게시의 이름입니다.  
   
-    -   **@subscriber_type**를 참조하세요. 클라이언트 구독에 **local** 을 지정하고 서버 구독에 **global**을 지정합니다.  
+    -   **@subscriber_type** 를 참조하세요. 클라이언트 구독에 **local** 을 지정하고 서버 구독에 **global**을 지정합니다.  
   
-    -   **@subscription_priority**를 참조하세요. 서버 구독에 대해 구독의 우선 순위를 지정합니다(**0.00** ~ **99.99**).  
+    -   **@subscription_priority** 를 참조하세요. 서버 구독에 대해 구독의 우선 순위를 지정합니다(**0.00** ~ **99.99**).  
   
          자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)를 실행합니다. 다음을 지정합니다.  
   
-    -   구독자에서 배포 에이전트가 실행되는 **@subscriber**또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db**및 **@publication** 매개 변수  
+    -   구독자에서 배포 에이전트가 실행되는 **@subscriber** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db** 및 **@publication** 매개 변수  
   
-    -   **@job_login** 및 **@job_password**에 대해 배포자의 병합 에이전트를 실행하는 데 사용되는 Windows 자격 증명  
+    -   **@job_login** 및 **@job_password** 에 대해 배포자의 병합 에이전트를 실행하는 데 사용되는 Windows 자격 증명  
   
-        > **참고:**  Windows 통합 인증을 사용하여 만든 연결은 항상 **@job_login** 을 지정하고 **@job_password**를 참조하세요. 병합 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 로컬로 연결합니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
+        > **참고:**  Windows 통합 인증을 사용하여 만든 연결은 항상 **@job_login** 을 지정하고 **@job_password** 를 참조하세요. 병합 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 로컬로 연결합니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
   
-    -   (옵션) **0** 에 **@subscriber_security_mode** 값 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@subscriber_login** 를 지정하고 **@subscriber_password**를 참조하세요. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 매개 변수를 지정합니다.  
+    -   (옵션) **0** 에 **@subscriber_security_mode** 값 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@subscriber_login** 를 지정하고 **@subscriber_password** 를 참조하세요. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 매개 변수를 지정합니다.  
   
-    -   (옵션) **0** 에 **@publisher_security_mode** 값 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@publisher_login** 를 지정하고 **@publisher_password**를 참조하세요. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 값을 지정합니다.  
+    -   (옵션) **0** 에 **@publisher_security_mode** 값 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@publisher_login** 를 지정하고 **@publisher_password** 를 참조하세요. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 값을 지정합니다.  
   
     -   이 구독에 대한 병합 에이전트 작업 일정. 자세한 내용은 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요.  
   
@@ -157,7 +157,7 @@ ms.locfileid: "53208250"
   
 > **중요!** 가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 저장해야 하는 경우 [Windows .NET Framework에서 제공하는](https://go.microsoft.com/fwlink/?LinkId=34733) 암호화 서비스 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 를 사용합니다.  
   
-#### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 밀어넣기 구독을 만들려면  
+#### <a name="to-create-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 밀어넣기 구독을 만들려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "53208250"
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 지정한 속성이 올바르지 않거나 서버에 게시가 없습니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 사이에서 비트 논리 AND(Visual C#의 **&** 및 Visual Basic의 **And**)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 와**|** 속성과 **Or** 및 Visual Basic의 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>를 참조하세요. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 밀어넣기 구독을 설정합니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 사이에서 비트 논리 AND(Visual C#의 **&** 및 Visual Basic의 **And**)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 와 **|** 속성과 **Or** 및 Visual Basic의 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>를 참조하세요. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 밀어넣기 구독을 설정합니다.  
   
 5.  구독 데이터베이스가 없는 경우 <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스를 사용하여 만듭니다. 자세한 내용은 [데이터베이스 생성, 변경 및 제거](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)를 참조하세요.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "53208250"
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출합니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 지정한 속성이 올바르지 않거나 서버에 게시가 없습니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 사이에서 비트 논리 AND(Visual C#의 **&** 및 Visual Basic의 **And**)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 와**|** 속성과 **Or** 및 Visual Basic의 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>를 참조하세요. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 밀어넣기 구독을 설정합니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 속성과 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> 사이에서 비트 논리 AND(Visual C#의 **&** 및 Visual Basic의 **And**)를 수행합니다. 결과가 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>이면 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 와 **|** 속성과 **Or** 및 Visual Basic의 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> 를 지정하고 <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>를 참조하세요. 그런 다음 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> 를 호출하여 밀어넣기 구독을 설정합니다.  
   
 5.  구독 데이터베이스가 없는 경우 <xref:Microsoft.SqlServer.Management.Smo.Database> 클래스를 사용하여 만듭니다. 자세한 내용은 [데이터베이스 생성, 변경 및 제거](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)를 참조하세요.  
   

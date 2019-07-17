@@ -128,14 +128,14 @@ SSDT에서 관리하는 .dacpac 파일을 사용하여 데이터베이스를 현
 다음 하위 섹션에서는 더 중요한 지원되지 않는 기능 중 일부를 강조합니다.
 
 
-### <a name="b1-snapshot-of-a-database"></a>B.1 데이터베이스의 스냅숏
+### <a name="b1-snapshot-of-a-database"></a>B.1 데이터베이스의 스냅샷
 
-지정된 데이터베이스에서 처음으로 메모리 최적화 테이블 또는 모듈이 만들어진 후에는 데이터베이스의 [스냅숏](../../relational-databases/databases/database-snapshots-sql-server.md) 을 생성할 수 없습니다. 구체적인 이유는 다음과 같습니다.
+지정된 데이터베이스에서 처음으로 메모리 최적화 테이블 또는 모듈이 만들어진 후에는 데이터베이스의 [스냅샷](../../relational-databases/databases/database-snapshots-sql-server.md) 을 생성할 수 없습니다. 구체적인 이유는 다음과 같습니다.
 
 - 첫 번째 메모리 최적화 항목은 메모리 최적화 FILEGROUP에서 마지막 파일을 삭제할 수 없게 만듭니다.
-- 메모리 최적화 FILEGROUP에 파일이 있는 데이터베이스는 스냅숏을 지원할 수 없습니다.
+- 메모리 최적화 FILEGROUP에 파일이 있는 데이터베이스는 스냅샷을 지원할 수 없습니다.
 
-일반적으로 스냅숏은 빠른 테스트 반복에 유용할 수 있습니다.
+일반적으로 스냅샷은 빠른 테스트 반복에 유용할 수 있습니다.
 
 
 ### <a name="b2-cross-database-queries"></a>B.2 데이터베이스 간 쿼리

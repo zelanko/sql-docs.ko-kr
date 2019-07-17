@@ -18,7 +18,7 @@ ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 0a7e06fe0888767d653f40148efb324f89456460
 ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/07/2019
 ms.locfileid: "66766220"
@@ -41,7 +41,7 @@ ms.locfileid: "66766220"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 사용하면 커밋되지 않은 읽기 격리 수준에서 읽기 전용으로 액세스할 수 있습니다. 이외의 다른 모든 수준은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 개체에 잠금을 적용하므로 동시성을 제한합니다. 클라이언트에 더 높은 동시성 수준이 필요한 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 데이터 동시 액세스에 대해 더 높은 수준의 제한을 적용합니다. 최고 수준의 데이터 동시 액세스를 유지하려면 SQL Server용 OLE DB 드라이버 소비자가 특정 동시성 수준에 대한 요청을 지능적으로 제어해야 합니다.  
   
 > [!NOTE]  
->  스냅숏 격리 수준은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입되었습니다. 자세한 내용은 [스냅숏 격리 사용](../../oledb/features/working-with-snapshot-isolation.md)을 참조하세요.  
+>  스냅숏 격리 수준은 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입되었습니다. 자세한 내용은 [Working with Snapshot Isolation](../../oledb/features/working-with-snapshot-isolation.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [트랜잭션](../../oledb/ole-db-transactions/transactions.md)  

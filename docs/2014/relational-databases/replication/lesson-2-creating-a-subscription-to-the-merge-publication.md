@@ -20,7 +20,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721033"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>2단원: 병합 게시에 대 한 구독 만들기
-  이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 구독을 만듭니다. 그런 다음 구독 데이터베이스에 대한 사용 권한을 설정하고 새 구독에 대한 필터링된 데이터 스냅숏을 수동으로 생성합니다. 이 단원에서는 이전 단원을 완료 해야 [1 단원: 병합 복제를 사용 하 여 데이터 게시](lesson-1-publishing-data-using-merge-replication.md)합니다.  
+  이 단원에서는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 구독을 만듭니다. 그런 다음 구독 데이터베이스에 대한 사용 권한을 설정하고 새 구독에 대한 필터링된 데이터 스냅샷을 수동으로 생성합니다. 이 단원에서는 이전 단원을 완료 해야 [1 단원: 병합 복제를 사용 하 여 데이터 게시](lesson-1-publishing-data-using-merge-replication.md)합니다.  
   
 ### <a name="to-create-the-subscription"></a>구독을 만들려면  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62721033"
   
 3.  **데이터베이스 역할 멤버 자격**에서 **db_owner**를 선택한 다음 **확인** 을 클릭하여 사용자를 만듭니다.  
   
-### <a name="to-create-the-filtered-data-snapshot-for-the-subscription"></a>구독에 대한 필터링된 데이터 스냅숏을 만들려면  
+### <a name="to-create-the-filtered-data-snapshot-for-the-subscription"></a>구독에 대한 필터링된 데이터 스냅샷을 만들려면  
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결하고 해당 서버 노드를 확장한 다음 **복제** 폴더를 확장합니다.  
   
@@ -68,10 +68,10 @@ ms.locfileid: "62721033"
   
 4.  에 **데이터 파티션 추가** 대화 상자에서 `adventure-works\pamela0` 에 **HOST_NAME 값** 상자를 선택한 다음 클릭 **확인**합니다.  
   
-5.  새로 추가된 파티션을 선택하고 **선택한 스냅숏 지금 생성**을 클릭한 다음 **확인**을 클릭합니다.  
+5.  새로 추가된 파티션을 선택하고 **선택한 스냅샷 지금 생성**을 클릭한 다음 **확인**을 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 구독이 초기화되면 사용할 수 있도록 병합 게시에 대한 구독을 만들고 새 구독의 데이터 파티션에 대한 필터링된 스냅숏을 생성했습니다. 다음 단원에서는 병합 에이전트에 구독 데이터베이스에 대한 권한을 부여하고 병합 에이전트를 실행하여 동기화를 시작하고 구독을 초기화합니다. [3단원: 병합 게시에 구독 동기화](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md)합니다.  
+ 구독이 초기화되면 사용할 수 있도록 병합 게시에 대한 구독을 만들고 새 구독의 데이터 파티션에 대한 필터링된 스냅샷을 생성했습니다. 다음 단원에서는 병합 에이전트에 구독 데이터베이스에 대한 권한을 부여하고 병합 에이전트를 실행하여 동기화를 시작하고 구독을 초기화합니다. [3단원: 병합 게시에 구독 동기화](lesson-3-synchronizing-the-subscription-to-the-merge-publication.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [게시 구독](subscribe-to-publications.md)   

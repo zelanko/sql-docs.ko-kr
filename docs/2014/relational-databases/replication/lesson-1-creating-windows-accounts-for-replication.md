@@ -25,7 +25,7 @@ ms.locfileid: "62721163"
   
 |에이전트|위치|계정 이름|  
 |-----------|--------------|------------------|  
-|스냅숏 에이전트|게시자|\<*machine_name*>\repl_snapshot|  
+|스냅샷 에이전트|게시자|\<*machine_name*>\repl_snapshot|  
 |로그 판독기 에이전트|게시자|\<*machine_name*>\repl_logreader|  
 |배포 에이전트|게시자 및 구독자|\<*machine_name*>\repl_distribution|  
 |병합 에이전트|게시자 및 구독자|\<*machine_name*>\repl_merge|  
@@ -62,7 +62,7 @@ ms.locfileid: "62721163"
 6.  **닫기**를 클릭합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 복제 에이전트에 대한 Windows 계정을 성공적으로 만들었습니다. 다음 단원에서는 스냅숏 폴더를 구성합니다. [2단원: 스냅숏 폴더 준비](lesson-2-preparing-the-snapshot-folder.md)합니다.  
+ 복제 에이전트에 대한 Windows 계정을 성공적으로 만들었습니다. 다음 단원에서는 스냅샷 폴더를 구성합니다. [2단원: 스냅숏 폴더 준비](lesson-2-preparing-the-snapshot-folder.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 에이전트 개요](agents/replication-agents-overview.md)  

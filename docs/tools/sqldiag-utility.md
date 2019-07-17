@@ -32,7 +32,7 @@ ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 7c46fbea6a02a089b07ad359bc3c53bc5022f3e3
 ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/10/2019
 ms.locfileid: "67728108"
@@ -218,7 +218,7 @@ sqldiag
  **/L** 은 서비스 모드를 나타내는 인수가 아닙니다. **SQLdiag** 를 서비스로 실행할 때 **/L** 을 사용하려면 해당 서비스를 등록할 때 명령줄에서 /L을 지정해야 합니다.  
   
  **/X**  
- 스냅숏 모드에서 **SQLdiag** 를 실행합니다. **SQLdiag** 는 구성된 모든 진단 정보에 대해 스냅숏을 만들고 자동으로 종료됩니다.  
+ 스냅샷 모드에서 **SQLdiag** 를 실행합니다. **SQLdiag** 는 구성된 모든 진단 정보에 대해 스냅숏을 만들고 자동으로 종료됩니다.  
   
  **START** | **STOP** | **STOP_ABORT**  
  **SQLdiag** 서비스를 시작하거나 중지합니다. **STOP_ABORT** 는 현재 수행하고 있는 진단 정보 수집을 완료하지 않고 가능한 빨리 서비스를 강제 종료합니다.  
@@ -321,7 +321,7 @@ sqldiag /B +01:00:00 /E 08:30:00
 sqldiag /B 03:00:00 /E 05:00:00 /L  
 ```  
   
- 다음 예에서는 연속 모드에서 **SQLdiag** 를 실행하여 03:00:00에 진단 데이터 스냅숏을 만든 후 자동으로 다시 시작하도록 지정합니다.  
+ 다음 예에서는 연속 모드에서 **SQLdiag** 를 실행하여 03:00:00에 진단 데이터 스냅샷을 만든 후 자동으로 다시 시작하도록 지정합니다.  
   
 ```  
 sqldiag /B 03:00:00 /X /L  

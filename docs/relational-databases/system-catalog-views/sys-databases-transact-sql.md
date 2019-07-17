@@ -38,7 +38,7 @@ ms.locfileid: "68079396"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버 내에서 고유한 데이터베이스 이름입니다.|  
 |**database_id**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 서버 내에서 고유한 데이터베이스 ID입니다.|  
-|**source_database_id**|**int**|NULL이 아닌 경우 = 이 데이터베이스 스냅숏의 원본 데이터베이스 ID입니다.<br /> NULL = 데이터베이스 스냅숏이 아닙니다.|  
+|**source_database_id**|**int**|NULL이 아닌 경우 = 이 데이터베이스 스냅샷의 원본 데이터베이스 ID입니다.<br /> NULL = 데이터베이스 스냅샷이 아닙니다.|  
 |**owner_sid**|**varbinary(85)**|서버에 등록된 데이터베이스 외부 소유자의 SID(보안 ID)입니다. 데이터베이스를 소유할 수 있는 사용자에 대 한 내용은 참조는 **데이터베이스에 대 한 ALTER AUTHORIZATION** 부분 [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)합니다.|  
 |**create_date**|**datetime**|데이터베이스가 작성되었거나 이름이 변경된 날짜입니다. 에 대 한 **tempdb**, 서버 다시 시작 될 때마다이 값을 변경 합니다.|  
 |**compatibility_level**|**tinyint**|동작이 호환되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전에 해당하는 정수입니다.<br /> **값** &#124; **에 적용 됩니다**<br /> 70 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 80 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 90 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /> 100 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 을 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 110 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 을 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 120 &#124; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 을 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 130 &#124; [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 140 &#124; [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] <br /> 150&#124; [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]  |  
@@ -53,9 +53,9 @@ ms.locfileid: "68079396"
 |**is_in_standby**|**bit**|데이터베이스가 로그 복원을 위해 읽기 전용 상태임을 나타냅니다.|  
 |**is_cleanly_shutdown**|**bit**|1 = 데이터베이스가 올바르게 종료되었으므로 시작할 때 복구가 필요하지 않습니다.<br /> 0 = 데이터베이스가 올바르게 종료되지 않았으므로 시작할 때 복구가 필요합니다.|  
 |**is_supplemental_logging_enabled**|**bit**|1 = SUPPLEMENTAL_LOGGING이 ON입니다.<br /> 0 = SUPPLEMENTAL_LOGGING이 OFF입니다.|  
-|**snapshot_isolation_state**|**tinyint**|ALLOW_SNAPSHOT_ISOLATION 옵션으로 설정되는 허용된 스냅숏 격리 트랜잭션의 상태입니다.<br /> 0 = 스냅숏 격리 상태가 OFF입니다(기본값). 스냅숏 격리가 허용되지 않습니다.<br /> 1 = 스냅숏 격리 상태가 ON입니다. 스냅숏 격리가 허용됩니다.<br /> 2 = 스냅숏 격리 상태가 OFF로 전환 중입니다. 모든 트랜잭션에는 수정 사항이 버전별로 관리됩니다. 스냅숏 격리를 사용해 새 트랜잭션을 시작할 수 없습니다. ALTER DATABASE가 실행되었을 때 활성 상태인 모든 트랜잭션이 완료될 때까지 데이터베이스는 OFF로 전환 중인 상태를 유지합니다.<br /> 3 = 스냅숏 격리 상태가 ON으로 전환 중입니다. 새 트랜잭션에는 수정 사항이 버전별로 관리됩니다. 스냅숏 격리 상태가 1(ON)이 될 때까지 트랜잭션은 스냅숏 격리를 사용할 수 없습니다. ALTER DATABASE가 실행되었을 때 활성 상태인 모든 업데이트 트랜잭션이 완료될 때까지 데이터베이스는 ON으로 전환 중인 상태를 유지합니다.|  
-|**snapshot_isolation_state_desc**|**nvarchar(60)**|ALLOW_SNAPSHOT_ISOLATION 옵션으로 설정되는 허용된 스냅숏 격리 트랜잭션의 상태에 대한 설명입니다.|  
-|**is_read_committed_snapshot_on**|**bit**|1 = READ_COMMITTED_SNAPSHOT 옵션은 ON입니다. READ COMMITTED 격리 수준에서의 읽기 작업은 스냅숏 검색을 기반으로 하며 잠금을 획득하지 않습니다.<br /> 0 = READ_COMMITTED_SNAPSHOT 옵션은 OFF(기본값)입니다. READ COMMITTED 격리 수준에서의 읽기 작업은 공유 잠금을 사용합니다.|  
+|**snapshot_isolation_state**|**tinyint**|ALLOW_SNAPSHOT_ISOLATION 옵션으로 설정되는 허용된 스냅샷 격리 트랜잭션의 상태입니다.<br /> 0 = 스냅샷 격리 상태가 OFF입니다(기본값). 스냅샷 격리가 허용되지 않습니다.<br /> 1 = 스냅샷 격리 상태가 ON입니다. 스냅샷 격리가 허용됩니다.<br /> 2 = 스냅샷 격리 상태가 OFF로 전환 중입니다. 모든 트랜잭션에는 수정 사항이 버전별로 관리됩니다. 스냅샷 격리를 사용해 새 트랜잭션을 시작할 수 없습니다. ALTER DATABASE가 실행되었을 때 활성 상태인 모든 트랜잭션이 완료될 때까지 데이터베이스는 OFF로 전환 중인 상태를 유지합니다.<br /> 3 = 스냅샷 격리 상태가 ON으로 전환 중입니다. 새 트랜잭션에는 수정 사항이 버전별로 관리됩니다. 스냅샷 격리 상태가 1(ON)이 될 때까지 트랜잭션은 스냅샷 격리를 사용할 수 없습니다. ALTER DATABASE가 실행되었을 때 활성 상태인 모든 업데이트 트랜잭션이 완료될 때까지 데이터베이스는 ON으로 전환 중인 상태를 유지합니다.|  
+|**snapshot_isolation_state_desc**|**nvarchar(60)**|ALLOW_SNAPSHOT_ISOLATION 옵션으로 설정되는 허용된 스냅샷 격리 트랜잭션의 상태에 대한 설명입니다.|  
+|**is_read_committed_snapshot_on**|**bit**|1 = READ_COMMITTED_SNAPSHOT 옵션은 ON입니다. READ COMMITTED 격리 수준에서의 읽기 작업은 스냅샷 검색을 기반으로 하며 잠금을 획득하지 않습니다.<br /> 0 = READ_COMMITTED_SNAPSHOT 옵션은 OFF(기본값)입니다. READ COMMITTED 격리 수준에서의 읽기 작업은 공유 잠금을 사용합니다.|  
 |**recovery_model**|**tinyint**|선택된 복구 모델입니다.<br /> 1 = FULL<br /> 2 = BULK_LOGGED<br /> 3 = SIMPLE|  
 |**recovery_model_desc**|**nvarchar(60)**|선택된 복구 모델에 대한 설명입니다.|  
 |**page_verify_option**|**tinyint**|PAGE_VERIFY 옵션 설정입니다.<br /> 0 = 없음<br /> 1 = TORN_PAGE_DETECTION<br /> 2 = CHECKSUM|  
@@ -81,7 +81,7 @@ ms.locfileid: "68079396"
 |**is_parameterization_forced**|**bit**|1 = 매개 변수화가 FORCED로 설정되어 있습니다.<br /> 0 = 매개 변수화가 SIMPLE로 설정되어 있습니다.|  
 |**is_master_key_encrypted_by_server**|**bit**|1 = 데이터베이스에 암호화된 마스터 키가 있습니다.<br /> 0 = 데이터베이스에 암호화된 마스터 키가 없습니다.|  
 |**is_query_store_on**|**bit**|1 = 쿼리 저장소는이 데이터베이스에 대해 사용 하도록 설정 합니다. 확인할 [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md) 쿼리 저장소 상태를 볼 수 있습니다.<br /> 0 = 쿼리 저장소가 비활성화 되어<br /> **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).|  
-|**is_published**|**bit**|1 = 데이터베이스가 트랜잭션 또는 스냅숏 복제 토폴로지에서 게시 데이터베이스입니다.<br /> 0 = 게시 데이터베이스가 아닙니다.|  
+|**is_published**|**bit**|1 = 데이터베이스가 트랜잭션 또는 스냅샷 복제 토폴로지에서 게시 데이터베이스입니다.<br /> 0 = 게시 데이터베이스가 아닙니다.|  
 |**is_subscribed**|**bit**|이 열은 사용되지 않으며, 데이터베이스의 구독자 상태에 관계없이 항상 0을 반환합니다.|  
 |**is_merge_published**|**bit**|1 = 데이터베이스가 병합 복제 토폴로지에서 게시 데이터베이스입니다.<br /> 0 = 병합 복제 토폴로지에서 게시 데이터베이스가 아닙니다.|  
 |**is_distributor**|**bit**|1 = 데이터베이스가 복제 토폴로지용 배포 데이터베이스입니다.<br /> 0 = 복제 토폴로지용 배포 데이터베이스가 아닙니다.|  

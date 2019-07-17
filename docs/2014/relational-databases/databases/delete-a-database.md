@@ -55,7 +55,7 @@ ms.locfileid: "62871925"
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   
--   데이터베이스에 있는 모든 데이터베이스 스냅숏을 삭제합니다. 자세한 내용은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)를 참조하세요.  
+-   데이터베이스에 있는 모든 데이터베이스 스냅샷을 삭제합니다. 자세한 내용은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)를 참조하세요.  
   
 -   데이터베이스가 로그 전달과 관련되어 있으면 로그 전달을 제거합니다.  
   

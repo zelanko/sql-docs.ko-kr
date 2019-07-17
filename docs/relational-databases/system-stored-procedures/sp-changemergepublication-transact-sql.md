@@ -59,21 +59,21 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|지정된 게시에 대해 끌어오기 구독을 허용하지 않습니다.|  
 |**allow_push**|**true**|지정된 게시에 대해 밀어넣기 구독을 허용합니다.|  
 ||**false**|지정된 게시에 대해 밀어넣기 구독을 허용하지 않습니다.|  
-|**allow_subscriber_initiated_snapshot**|**true**|구독자가 스냅숏 프로세스를 시작할 수 있습니다.|  
-||**false**|구독자가 스냅숏 프로세스를 시작할 수 없습니다.|  
+|**allow_subscriber_initiated_snapshot**|**true**|구독자가 스냅샷 프로세스를 시작할 수 있습니다.|  
+||**false**|구독자가 스냅샷 프로세스를 시작할 수 없습니다.|  
 |**allow_subscription_copy**|**true**|이 게시를 구독하는 구독 데이터베이스를 복사할 수 있습니다.|  
 ||**false**|이 게시를 구독하는 구독 데이터베이스를 복사할 수 없습니다.|  
 |**allow_synctoalternate**|**true**|이 게시자와 동기화할 수 있는 대체 동기화 파트너를 허용합니다.|  
 ||**false**|이 게시자와 동기화할 수 있는 대체 동기화 파트너를 허용하지 않습니다.|  
 |**allow_web_synchronization**|**true**|HTTPS를 통해 구독을 동기화할 수 있습니다.|  
 ||**false**|HTTPS를 통해 구독을 동기화할 수 없습니다.|  
-|**alt_snapshot_folder**||스냅숏의 대체 폴더 위치를 지정합니다.|  
+|**alt_snapshot_folder**||스냅샷의 대체 폴더 위치를 지정합니다.|  
 |**automatic_reinitialization_policy**|**1**|구독을 다시 초기화하기 전에 구독자에서 변경 내용을 업로드합니다.|  
 ||**0**|변경 내용을 업로드하지 않고 구독을 다시 초기화합니다.|  
 |**centralized_conflicts**|**true**|모든 충돌 레코드가 게시자에 저장됩니다. 이 속성을 변경할 경우 기존 구독자를 다시 초기화해야 합니다.|  
 ||**false**|충돌 레코드가 충돌 해결 중인 서버에 저장됩니다. 이 속성을 변경할 경우 기존 구독자를 다시 초기화해야 합니다.|  
-|**compress_snapshot**|**true**|대체 스냅숏 폴더의 스냅숏을 CAB 형식으로 압축합니다. 기본 스냅숏 폴더의 스냅숏은 압축할 수 없습니다. 이 속성을 변경하려면 새 스냅숏이 필요합니다.|  
-||**false**|기본적으로 스냅숏은 압축되지 않습니다. 이 속성을 변경하려면 새 스냅숏이 필요합니다.|  
+|**compress_snapshot**|**true**|대체 스냅샷 폴더의 스냅샷을 CAB 형식으로 압축합니다. 기본 스냅샷 폴더의 스냅샷은 압축할 수 없습니다. 이 속성을 변경하려면 새 스냅샷이 필요합니다.|  
+||**false**|기본적으로 스냅샷은 압축되지 않습니다. 이 속성을 변경하려면 새 스냅샷이 필요합니다.|  
 |**conflict_logging**|**publisher**|충돌 레코드가 게시자에 저장됩니다.|  
 ||**subscriber**|충돌 레코드가 충돌을 발생시킨 구독자에 저장됩니다. 에 지원 되지 않습니다 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 구독자*합니다.*|  
 ||**both**|충돌 레코드가 게시자와 구독자 둘 다에 저장됩니다.|  
@@ -81,20 +81,20 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**description**||게시에 대한 설명입니다.|  
 |**dynamic_filters**|**true**|동적 절에 따라 게시를 필터링합니다.|  
 ||**false**|게시를 동적으로 필터링하지 않습니다.|  
-|**enabled_for_internet**|**true**|인터넷에서 게시를 사용할 수 있습니다. FTP(파일 전송 프로토콜)를 사용하여 구독자로 스냅숏을 전송할 수 있습니다. _게시에 대한 동기화 파일은 C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp 디렉터리에 저장됩니다.|  
+|**enabled_for_internet**|**true**|인터넷에서 게시를 사용할 수 있습니다. FTP(파일 전송 프로토콜)를 사용하여 구독자로 스냅샷을 전송할 수 있습니다. _게시에 대한 동기화 파일은 C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp 디렉터리에 저장됩니다.|  
 ||**false**|인터넷에서 게시를 사용할 수 없습니다.|  
-|**ftp_address**||배포자용 FTP 서비스의 네트워크 주소입니다. 게시 스냅숏 파일이 저장될 위치를 지정합니다.|  
+|**ftp_address**||배포자용 FTP 서비스의 네트워크 주소입니다. 게시 스냅샷 파일이 저장될 위치를 지정합니다.|  
 |**ftp_login**||FTP 서비스에 연결하는 데 사용되는 사용자 이름입니다.|  
 |**ftp_password**||FTP 서비스에 연결하는 데 사용되는 사용자 암호입니다.|  
-|**ftp_port**||배포자용 FTP 서비스의 포트 번호입니다. 게시 스냅숏 파일이 저장될 FTP 사이트의 TCP 포트 번호를 지정합니다.|  
-|**ftp_subdirectory**||게시가 FTP를 사용하여 스냅숏 전파를 지원하는 경우 스냅숏 파일이 생성되는 위치를 지정합니다.|  
+|**ftp_port**||배포자용 FTP 서비스의 포트 번호입니다. 게시 스냅샷 파일이 저장될 FTP 사이트의 TCP 포트 번호를 지정합니다.|  
+|**ftp_subdirectory**||게시가 FTP를 사용하여 스냅샷 전파를 지원하는 경우 스냅샷 파일이 생성되는 위치를 지정합니다.|  
 |**generation_leveling_threshold**|**int**|하나의 생성에 포함되는 변경 내용 수를 지정합니다. 생성은 게시자 또는 구독자에 배달되는 변경 내용 모음입니다.|  
-|**keep_partition_changes**|**true**|동기화가 최적화됩니다. 변경된 파티션에 행이 있는 구독자만 영향을 받습니다. 이 속성을 변경하려면 새 스냅숏이 필요합니다.|  
-||**false**|동기화가 최적화되지 않습니다. 구독자로 보낸 파티션은 파티션에서 데이터가 변경될 때 확인됩니다. 이 속성을 변경하려면 새 스냅숏이 필요합니다.|  
+|**keep_partition_changes**|**true**|동기화가 최적화됩니다. 변경된 파티션에 행이 있는 구독자만 영향을 받습니다. 이 속성을 변경하려면 새 스냅샷이 필요합니다.|  
+||**false**|동기화가 최적화되지 않습니다. 구독자로 보낸 파티션은 파티션에서 데이터가 변경될 때 확인됩니다. 이 속성을 변경하려면 새 스냅샷이 필요합니다.|  
 |**max_concurrent_merge**||이 **int** 게시에 대해 실행할 수 있는 동시 병합 프로세스의 최대 수를 나타내는입니다. 0이면 제한이 없습니다. 동시에 실행하도록 예약된 병합 프로세스 수가 이 값보다 클 경우 초과 작업은 currentlmerge 프로세스가 완료될 때까지 큐에서 기다립니다.|  
-|**max_concurrent_dynamic_snapshots**||이 **int** 매개 변수가 있는 행 필터를 나타내는 필터링 된 데이터를 생성 하려면 스냅숏 세션의 최대 스냅숏를 사용 하는 병합 게시에 대해 동시에 실행할 수 있는 하 합니다. 하는 경우 **0**에 제한이 없습니다. 동시에 실행되도록 예약된 스냅숏 프로세스 수가 이 값보다 클 경우 초과 작업은 현재 병합 프로세스가 완료될 때까지 큐에서 기다립니다.|  
-|**post_snapshot_script**||에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. 배포 에이전트 또는 병합 에이전트는 초기 동기화 동안 다른 복제된 개체 스크립트 및 데이터를 모두 적용한 후에 포스트 스냅숏 스크립트를 실행합니다. 이 속성을 변경하려면 새 스냅숏이 필요합니다.|  
-|**pre_snapshot_script**||에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. 병합 에이전트는 구독자에서 스냅숏을 적용할 때 복제된 개체 스크립트를 실행하기 전에 프리 스냅숏 스크립트를 실행합니다. 이 속성을 변경하려면 새 스냅숏이 필요합니다.|  
+|**max_concurrent_dynamic_snapshots**||이 **int** 매개 변수가 있는 행 필터를 나타내는 필터링 된 데이터를 생성 하려면 스냅숏 세션의 최대 스냅숏를 사용 하는 병합 게시에 대해 동시에 실행할 수 있는 하 합니다. 하는 경우 **0**에 제한이 없습니다. 동시에 실행되도록 예약된 스냅샷 프로세스 수가 이 값보다 클 경우 초과 작업은 현재 병합 프로세스가 완료될 때까지 큐에서 기다립니다.|  
+|**post_snapshot_script**||에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. 배포 에이전트 또는 병합 에이전트는 초기 동기화 동안 다른 복제된 개체 스크립트 및 데이터를 모두 적용한 후에 포스트 스냅샷 스크립트를 실행합니다. 이 속성을 변경하려면 새 스냅샷이 필요합니다.|  
+|**pre_snapshot_script**||에 대 한 포인터를 지정 된 **.sql** 파일 위치입니다. 병합 에이전트는 구독자에서 스냅샷을 적용할 때 복제된 개체 스크립트를 실행하기 전에 프리 스냅샷 스크립트를 실행합니다. 이 속성을 변경하려면 새 스냅샷이 필요합니다.|  
 |**publication_compatibility_level**|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 ||**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**publish_to_activedirectory**|**true**|이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해서만 지원됩니다. 더 이상 Active Directory에 게시 정보를 추가할 수 없습니다.|  
@@ -106,15 +106,15 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**week**|보존 기간(주)을 지정합니다.|  
 ||**month**|보존 기간(월)을 지정합니다.|  
 ||**year**|보존 기간(년)을 지정합니다.|  
-|**snapshot_in_defaultfolder**|**true**|스냅숏 파일이 기본 스냅숏 폴더에 저장됩니다.|  
-||**false**|스냅숏 파일에 지정 된 대체 위치에 저장 됩니다 *alt_snapshot_folder*합니다. 이 조합은 스냅숏 파일이 기본 위치 및 대체 위치 양쪽 모두에 저장되도록 지정할 수 있습니다.|  
-|**snapshot_ready**|**true**|게시에 대한 스냅숏을 사용할 수 있습니다.|  
-||**false**|게시에 대한 스냅숏을 사용할 수 없습니다.|  
+|**snapshot_in_defaultfolder**|**true**|스냅샷 파일이 기본 스냅샷 폴더에 저장됩니다.|  
+||**false**|스냅숏 파일에 지정 된 대체 위치에 저장 됩니다 *alt_snapshot_folder*합니다. 이 조합은 스냅샷 파일이 기본 위치 및 대체 위치 양쪽 모두에 저장되도록 지정할 수 있습니다.|  
+|**snapshot_ready**|**true**|게시에 대한 스냅샷을 사용할 수 있습니다.|  
+||**false**|게시에 대한 스냅샷을 사용할 수 없습니다.|  
 |**상태**|**active**|게시가 활성 상태입니다.|  
 ||**inactive**|게시가 비활성 상태입니다.|  
-|**sync_mode**|**네이티브** 또는<br /><br /> **네이티브 bcp**|초기 스냅숏에 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용합니다.|  
-||**character**<br /><br /> 또는 **bcp 문자**|초기 스냅숏에 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자의 경우에 필요합니다.|  
-|**use_partition_groups**<br /><br /> 참고: 경우 partition_groups를 사용한 후로 되돌릴 수 있습니다 **setupbelongs**를 설정 하 고 **use_partition_groups = false** 에서 **changemergearticle**를 올바르게 아닐 수 있습니다 스냅숏을 생성 한 후를 반영 합니다. 스냅숏이 생성하는 트리거는 파티션 그룹과 호환됩니다.<br /><br /> 이 시나리오를 해결 하는 비활성 상태는 설정, 수정 하는 **use_partition_groups**, 활성 상태를 설정 합니다.|**true**|게시에서 사전 계산 파티션을 사용합니다.|  
+|**sync_mode**|**네이티브** 또는<br /><br /> **네이티브 bcp**|초기 스냅샷에 모든 테이블의 기본 모드 대량 복사 프로그램 출력을 사용합니다.|  
+||**character**<br /><br /> 또는 **bcp 문자**|초기 스냅샷에 모든 테이블의 문자 모드 대량 복사 프로그램 출력을 사용합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자의 경우에 필요합니다.|  
+|**use_partition_groups**<br /><br /> 참고: 경우 partition_groups를 사용한 후로 되돌릴 수 있습니다 **setupbelongs**를 설정 하 고 **use_partition_groups = false** 에서 **changemergearticle**를 올바르게 아닐 수 있습니다 스냅숏을 생성 한 후를 반영 합니다. 스냅샷이 생성하는 트리거는 파티션 그룹과 호환됩니다.<br /><br /> 이 시나리오를 해결 하는 비활성 상태는 설정, 수정 하는 **use_partition_groups**, 활성 상태를 설정 합니다.|**true**|게시에서 사전 계산 파티션을 사용합니다.|  
 ||**false**|게시에서 사전 계산 파티션을 사용하지 않습니다.|  
 |**validate_subscriber_info**||구독자 정보를 검색하는 데 사용할 함수를 나열하고 구독자가 정보가 일관성 있게 분할되는지 확인하기 위해 사용하는 동적 필터링 조건의 유효성을 검사합니다.|  
 |**web_synchronization_url**||웹 동기화에 사용되는 인터넷 URL의 기본값입니다.|  
@@ -122,11 +122,11 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
   
- **0** 변경 게시 스냅숏을 무효화 하지 않습니다 지정 합니다. 저장 프로시저가 새 스냅숏을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
+ **0** 변경 게시 스냅숏을 무효화 하지 않습니다 지정 합니다. 저장 프로시저가 새 스냅샷을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
- **1** 게시를 변경 하면 스냅숏이 무효화 될 지정 합니다. 기존 구독에 새 스냅숏이 필요한 경우 이 값은 기존 스냅숏을 사용되지 않는 것으로 표시하고 새 스냅숏을 생성할 수 있는 권한을 부여합니다.  
+ **1** 게시를 변경 하면 스냅숏이 무효화 될 지정 합니다. 기존 구독에 새 스냅샷이 필요한 경우 이 값은 기존 스냅샷을 사용되지 않는 것으로 표시하고 새 스냅샷을 생성할 수 있는 권한을 부여합니다.  
   
- 변경 시 새 스냅숏을 생성해야 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
+ 변경 시 새 스냅샷을 생성해야 하는 속성에 대해서는 주의 섹션을 참조하십시오.  
   
 `[ @force_reinit_subscription = ] force_reinit_subscription` 이 저장된 프로시저가 수행한 동작 기존 구독을 다시 초기화 해야 할 수 있습니다를 승인 합니다. *force_reinit_subscription* 되는 **비트** 이며 기본값은 **0**합니다.  
   
@@ -142,7 +142,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="remarks"></a>설명  
  **sp_changemergepublication** 병합 복제에 사용 됩니다.  
   
- 다음 속성을 변경하려면 새 스냅숏을 생성해야 하며 값을 지정 해야 합니다 **1** 에 대 한 합니다 *force_invalidate_snapshot* 매개 변수입니다.  
+ 다음 속성을 변경하려면 새 스냅샷을 생성해야 하며 값을 지정 해야 합니다 **1** 에 대 한 합니다 *force_invalidate_snapshot* 매개 변수입니다.  
   
 -   **alt_snapshot_folder**  
   

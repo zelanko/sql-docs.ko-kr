@@ -99,7 +99,7 @@ ms.locfileid: "62639403"
   
 -   논리적 레코드에 포함된 아티클에 대해서는 비즈니스 논리 처리기 또는 사용자 지정 해결 프로그램을 사용하는 사용자 지정 충돌 해결이 지원되지 않습니다.  
   
--   매개 변수가 있는 필터를 포함하는 게시에서 논리적 레코드를 사용하는 경우에는 각 구독자를 해당 파티션에 대한 스냅숏으로 초기화해야 합니다. 다른 방법으로 구독자를 초기화하면 병합 에이전트는 실패합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
+-   매개 변수가 있는 필터를 포함하는 게시에서 논리적 레코드를 사용하는 경우에는 각 구독자를 해당 파티션에 대한 스냅샷으로 초기화해야 합니다. 다른 방법으로 구독자를 초기화하면 병합 에이전트는 실패합니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을(를) 참조하세요.  
   
 -   논리적 레코드와 관련된 충돌은 충돌 뷰어에 표시되지 않습니다. 이러한 충돌에 대한 정보를 보려면 복제 저장 프로시저를 사용합니다. 자세한 내용은 [병합 게시에 대한 충돌 정보 보기&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/view-conflict-information-for-merge-publications.md)을 참조하세요.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "62639403"
   
 -   게시의 호환성 수준은 90RTM 이상이어야 합니다. 자세한 내용은 [복제의 이전 버전과의 호환성](../../../relational-databases/replication/replication-backward-compatibility.md)의 "게시 호환성 수준" 섹션을 참조하세요.  
   
--   게시는 기본 스냅숏 모드를 사용해야 합니다. 논리적 레코드를 지원하지 않는 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]에 복제하지 않는 한 기본 스냅숏 모드가 기본값입니다.  
+-   게시는 기본 스냅샷 모드를 사용해야 합니다. 논리적 레코드를 지원하지 않는 [!INCLUDE[ssEW](../../../includes/ssew-md.md)]에 복제하지 않는 한 기본 스냅숏 모드가 기본값입니다.  
   
 -   게시는 웹 동기화를 허용할 수 없습니다. 웹 동기화에 대한 자세한 내용은 [Web Synchronization for Merge Replication](../../../relational-databases/replication/web-synchronization-for-merge-replication.md)를 참조하십시오.  
   

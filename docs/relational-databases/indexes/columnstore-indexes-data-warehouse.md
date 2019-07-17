@@ -36,7 +36,7 @@ ms.locfileid: "65581310"
 -   이제 창 집계가 데이터베이스 호환성 수준 130 이상에서 일괄 처리 모드로 실행됩니다.  
 -   효율적인 집계 처리를 위한 집계 푸시다운입니다. 이는 모든 데이터베이스 호환성 수준에서 지원됩니다.  
 -   효율적인 문자열 조건자 처리를 위한 문자열 조건자 푸시다운입니다. 이는 모든 데이터베이스 호환성 수준에서 지원됩니다.  
--   데이터베이스 호환성 수준 130 이상에 대한 스냅숏 격리.  
+-   데이터베이스 호환성 수준 130 이상에 대한 스냅샷 격리.  
   
 ## <a name="improve-performance-by-combining-nonclustered-and-columnstore-indexes"></a>비클러스터형과 columnstore 인덱스를 결합하여 성능 향상  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 클러스터형 columnstore 인덱스에 대해 비클러스터형 인덱스를 정의할 수 있습니다.   
@@ -124,8 +124,8 @@ BEGIN TRAN
 END TRAN  
 ```  
   
-### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>스냅숏 격리 및 커밋된 읽기 스냅숏 격리  
- 트랜잭션 일관성을 보장하려면 스냅숏 격리(SI)를 사용하고 columnstore 인덱스에 대한 쿼리의 문 수준 일관성을 보장하려면 커밋된 읽기 스냅숏 격리(RCSI)를 사용합니다. 이렇게 하면 데이터 기록기를 차단하지 않고 쿼리를 실행할 수 있습니다. 이 비차단 동작 덕분에 복잡한 트랜잭션에 대한 교착 상태의 가능성이 크게 줄어듭니다. 자세한 내용은 MSDN의 [SQL Server에서의 스냅숏 격리](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 를 참조하세요.  
+### <a name="snapshot-isolation-and-read-committed-snapshot-isolations"></a>스냅샷 격리 및 커밋된 읽기 스냅샷 격리  
+ 트랜잭션 일관성을 보장하려면 스냅샷 격리(SI)를 사용하고 columnstore 인덱스에 대한 쿼리의 문 수준 일관성을 보장하려면 커밋된 읽기 스냅샷 격리(RCSI)를 사용합니다. 이렇게 하면 데이터 기록기를 차단하지 않고 쿼리를 실행할 수 있습니다. 이 비차단 동작 덕분에 복잡한 트랜잭션에 대한 교착 상태의 가능성이 크게 줄어듭니다. 자세한 내용은 MSDN의 [SQL Server에서의 스냅샷 격리](https://msdn.microsoft.com/library/tcbchxcb\(v=vs.110\).aspx) 를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Columnstore 인덱스 디자인 지침](../../relational-databases/indexes/columnstore-indexes-design-guidance.md)   

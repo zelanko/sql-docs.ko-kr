@@ -43,7 +43,7 @@ ms.locfileid: "62508262"
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
--   일부 열은 필터링할 수 없습니다. 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요. 구독을 초기화한 후 열 필터를 수정할 경우 새 스냅숏을 만들고 변경 내용을 적용한 후 모든 구독을 다시 초기화해야 합니다. 속성 변경 요구 사항에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
+-   일부 열은 필터링할 수 없습니다. 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요. 구독을 초기화한 후 열 필터를 수정할 경우 새 스냅샷을 만들고 변경 내용을 적용한 후 모든 구독을 다시 초기화해야 합니다. 속성 변경 요구 사항에 대한 자세한 내용은 [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  새 게시 마법사의 **아티클** 페이지에서 열 필터를 정의합니다. 새 게시 마법사 사용 방법에 대한 자세한 내용은 [게시 만들기](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
@@ -70,35 +70,35 @@ ms.locfileid: "62508262"
 > [!NOTE]  
 >  다음 절차에서는 기본 테이블이 변경되지 않은 것으로 가정합니다. DDL(데이터 정의 언어) 변경 내용을 게시된 테이블에 복제하는 방법에 대한 자세한 내용은 [게시 데이터베이스의 스키마 변경](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)을 참조하세요.  
   
-#### <a name="to-define-a-column-filter-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 게시된 아티클에 대한 열 필터를 정의하려면  
+#### <a name="to-define-a-column-filter-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 게시된 아티클에 대한 열 필터를 정의하려면  
   
 1.  필터링할 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](../../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 2.  게시 데이터베이스의 게시자에서 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)을 실행합니다. 이렇게 하면 아티클에 포함할 열 또는 아티클에서 제거할 열이 정의됩니다.  
   
-    -   많은 열을 포함한 테이블에서 몇 개의 열만 게시하는 경우 추가할 각 열에 대해 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 을 한 번씩 실행합니다. **@column**에 열 이름을, **@operation**에 **add** 값을 지정합니다.  
+    -   많은 열을 포함한 테이블에서 몇 개의 열만 게시하는 경우 추가할 각 열에 대해 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 을 한 번씩 실행합니다. **@column** 에 열 이름을, **@operation** 에 **add** 값을 지정합니다.  
   
-    -   많은 열을 포함한 테이블에서 대부분의 열을 게시하는 경우 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)에 **null** 에 대한 **@column** 에 대한 열 이름 및 **@operation** 에 대한 **@operation** 을 실행하여 모든 열을 추가합니다. 그런 다음 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)에 **drop** 에 대한 **@operation** 에 제외되는 열 이름을 지정하고 제외할 각 열에 대해 **@column**에서 열 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
+    -   많은 열을 포함한 테이블에서 대부분의 열을 게시하는 경우 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)에 **null** 에 대한 **@column** 에 대한 열 이름 및 **@operation** 에 대한 **@operation** 을 실행하여 모든 열을 추가합니다. 그런 다음 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)에 **drop** 에 대한 **@operation** 에 제외되는 열 이름을 지정하고 제외할 각 열에 대해 **@column** 에서 열 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
   
-3.  게시 데이터베이스의 게시자에서 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 실행합니다. **@publication**에 게시 이름을, **@article**에 필터링된 아티클의 이름을 지정합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 만들어집니다.  
+3.  게시 데이터베이스의 게시자에서 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 실행합니다. **@publication** 에 게시 이름을, **@article** 에 필터링된 아티클의 이름을 지정합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 만들어집니다.  
   
-#### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 게시된 아티클에 대한 추가 열을 포함하도록 열 필터를 변경하려면  
+#### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 게시된 아티클에 대한 추가 열을 포함하도록 열 필터를 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 추가할 각 열에 대해 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 을 한 번씩 실행합니다. **@column**에 열 이름을, **@operation**에 **add** 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 추가할 각 열에 대해 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 을 한 번씩 실행합니다. **@column** 에 열 이름을, **@operation** 에 **add** 값을 지정합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 실행합니다. **@publication**에 게시 이름을, **@article**에 필터링된 아티클의 이름을 지정합니다. 게시에 기존 구독이 있는 경우 **@change_active** 에 대한 **@change_active**에서 열 필터를 정의하고 수정하는 방법에 대해 설명합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 다시 만들어집니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 실행합니다. **@publication** 에 게시 이름을, **@article** 에 필터링된 아티클의 이름을 지정합니다. 게시에 기존 구독이 있는 경우 **@change_active** 에 대한 **@change_active** 에서 열 필터를 정의하고 수정하는 방법에 대해 설명합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 다시 만들어집니다.  
   
-3.  게시에 대해 스냅숏 에이전트 작업을 다시 실행하여 업데이트된 스냅숏을 생성합니다.  
+3.  게시에 대해 스냅샷 에이전트 작업을 다시 실행하여 업데이트된 스냅샷을 생성합니다.  
   
 4.  구독을 다시 초기화합니다. 자세한 내용은 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
-#### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 게시된 아티클에 대한 열을 제거하도록 열 필터를 변경하려면  
+#### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 게시된 아티클에 대한 열을 제거하도록 열 필터를 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 제거할 각 열에 대해 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 을 한 번씩 실행합니다. **@column**에 열 이름을, **@operation**에 **drop** 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 제거할 각 열에 대해 [sp_articlecolumn](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md) 을 한 번씩 실행합니다. **@column** 에 열 이름을, **@operation** 에 **drop** 값을 지정합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 실행합니다. **@publication**에 게시 이름을, **@article**에 필터링된 아티클의 이름을 지정합니다. 게시에 기존 구독이 있는 경우 **@change_active** 에 대한 **@change_active**에서 열 필터를 정의하고 수정하는 방법에 대해 설명합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 다시 만들어집니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)를 실행합니다. **@publication** 에 게시 이름을, **@article** 에 필터링된 아티클의 이름을 지정합니다. 게시에 기존 구독이 있는 경우 **@change_active** 에 대한 **@change_active** 에서 열 필터를 정의하고 수정하는 방법에 대해 설명합니다. 이렇게 하면 필터링된 아티클에 대한 동기화 개체가 다시 만들어집니다.  
   
-3.  게시에 대해 스냅숏 에이전트 작업을 다시 실행하여 업데이트된 스냅숏을 생성합니다.  
+3.  게시에 대해 스냅샷 에이전트 작업을 다시 실행하여 업데이트된 스냅샷을 생성합니다.  
   
 4.  구독을 다시 초기화합니다. 자세한 내용은 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
@@ -108,23 +108,23 @@ ms.locfileid: "62508262"
   
 2.  게시 데이터베이스의 게시자에서 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)을 실행합니다. 이렇게 하면 아티클에 포함할 열 또는 아티클에서 제거할 열이 정의됩니다.  
   
-    -   많은 열을 포함한 테이블에서 몇 개의 열만 게시하는 경우 추가할 각 열에서 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 을 한 번씩 실행합니다. **@column**에 열 이름을, **@operation**에 **add** 값을 지정합니다.  
+    -   많은 열을 포함한 테이블에서 몇 개의 열만 게시하는 경우 추가할 각 열에서 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 을 한 번씩 실행합니다. **@column** 에 열 이름을, **@operation** 에 **add** 값을 지정합니다.  
   
-    -   많은 열을 포함한 테이블에서 대부분의 열을 게시하는 경우 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)에 **null** 에 대한 **@column** 에 대한 열 이름 및 **@operation** 에 대한 **@operation** 을 실행하여 모든 열을 추가합니다. 그런 다음 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)에 **drop** 에 대한 **@operation** 에 제외되는 열 이름을 지정하고 제외할 각 열에 대해 **@column**에서 열 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
+    -   많은 열을 포함한 테이블에서 대부분의 열을 게시하는 경우 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)에 **null** 에 대한 **@column** 에 대한 열 이름 및 **@operation** 에 대한 **@operation** 을 실행하여 모든 열을 추가합니다. 그런 다음 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md)에 **drop** 에 대한 **@operation** 에 제외되는 열 이름을 지정하고 제외할 각 열에 대해 **@column** 에서 열 필터를 정의하고 수정하는 방법에 대해 설명합니다.  
   
 #### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-merge-publication"></a>병합 게시에 게시된 아티클에 대한 추가 열을 포함하도록 열 필터를 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 추가할 각 열에 대해 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 을 한 번씩 실행합니다. **@column**에 열 이름을, **@operation**에 **add** 값을, **@force_invalidate_snapshot** 및 **@force_reinit_subscription** 둘 다에 **1** 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 추가할 각 열에 대해 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 을 한 번씩 실행합니다. **@column** 에 열 이름을, **@operation** 에 **add** 값을, **@force_invalidate_snapshot** 및 **@force_reinit_subscription** 둘 다에 **1** 값을 지정합니다.  
   
-2.  게시에 대해 스냅숏 에이전트 작업을 다시 실행하여 업데이트된 스냅숏을 생성합니다.  
+2.  게시에 대해 스냅샷 에이전트 작업을 다시 실행하여 업데이트된 스냅샷을 생성합니다.  
   
 3.  구독을 다시 초기화합니다. 자세한 내용은 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   
 #### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-merge-publication"></a>병합 게시에 게시된 아티클에 대한 열을 제거하도록 열 필터를 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 제거할 각 열에 대해 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 을 한 번씩 실행합니다. **@column**에 열 이름을, **@operation**에 **drop** 값을, **@force_invalidate_snapshot** 및 **@force_reinit_subscription** 둘 다에 **1** 값을 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 제거할 각 열에 대해 [sp_mergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql.md) 을 한 번씩 실행합니다. **@column** 에 열 이름을, **@operation** 에 **drop** 값을, **@force_invalidate_snapshot** 및 **@force_reinit_subscription** 둘 다에 **1** 값을 지정합니다.  
   
-2.  게시에 대해 스냅숏 에이전트 작업을 다시 실행하여 업데이트된 스냅숏을 생성합니다.  
+2.  게시에 대해 스냅샷 에이전트 작업을 다시 실행하여 업데이트된 스냅샷을 생성합니다.  
   
 3.  구독을 다시 초기화합니다. 자세한 내용은 [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)를 참조하세요.  
   

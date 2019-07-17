@@ -43,7 +43,7 @@ ms.locfileid: "54136073"
   
 -   LOB(Large Object) 데이터 형식을 포함하는 테이블을 너무 많이 정규화한 경우를 고려해 보십시오.  
   
-     동기화가 발생할 때 병합 에이전트는 게시자 또는 구독자에서 전체 데이터 행을 읽고 전송해야 합니다. 이 행에 LOB를 사용하는 열이 있다면 추가 메모리 할당이 필요하고 이러한 열이 업데이트되지 않았어도 성능에 부정적 영향을 미칠 수 있습니다. 이렇게 성능에 미칠 영향을 줄이려면 나머지 행 데이터에 대해 일 대 일 관계를 사용하여 LOB 열을 별개의 테이블에 두도록 합니다. **text**, **ntext**및 **image** 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 를 각각 사용하는 것이 좋습니다.  
+     동기화가 발생할 때 병합 에이전트는 게시자 또는 구독자에서 전체 데이터 행을 읽고 전송해야 합니다. 이 행에 LOB를 사용하는 열이 있다면 추가 메모리 할당이 필요하고 이러한 열이 업데이트되지 않았어도 성능에 부정적 영향을 미칠 수 있습니다. 이렇게 성능에 미칠 영향을 줄이려면 나머지 행 데이터에 대해 일 대 일 관계를 사용하여 LOB 열을 별개의 테이블에 두도록 합니다. **text**, **ntext**및 **image** 데이터 형식은 사용되지 않습니다. LOB를 포함시킬 경우 데이터 형식 **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 를 각각 사용하는 것이 좋습니다.  
   
 ## <a name="publication-design"></a>게시 디자인  
   
@@ -120,11 +120,11 @@ ms.locfileid: "54136073"
   
     -   병합 에이전트의 경우 **-DownloadGenerationsPerBatch** 및 **-UploadGenerationsPerBatch** 매개 변수를 10 이하의 값으로 줄입니다. 이들 매개 변수의 기본값은 50입니다.  
   
-## <a name="snapshot-considerations"></a>스냅숏 고려 사항  
+## <a name="snapshot-considerations"></a>스냅샷 고려 사항  
   
--   초기 스냅숏을 생성하기 전에 대형 테이블에 ROWGUIDCOL 열을 만듭니다.  
+-   초기 스냅샷을 생성하기 전에 대형 테이블에 ROWGUIDCOL 열을 만듭니다.  
   
-     병합 복제에서 게시된 각 테이블은 ROWGUIDCOL 열을 가져야 합니다. 스냅숏 에이전트가 초기 스냅숏 파일을 만들기 전에 ROWGUIDCOL 열이 테이블에 없다면 에이전트는 우선 ROWGUIDCOL 열을 추가하고 채워야 합니다. 병합 복제 중 스냅숏을 생성할 때 성능을 향상시키려면 게시하기 전 각 테이블에 ROWGUIDCOL 열을 만듭니다. 이 열은 어떤 이름도 가질 수 있지만(기본적으로 스냅숏 에이전트는**rowguid** 를 사용) 다음 데이터 형식 특징이 있어야 합니다.  
+     병합 복제에서 게시된 각 테이블은 ROWGUIDCOL 열을 가져야 합니다. 스냅샷 에이전트가 초기 스냅샷 파일을 만들기 전에 ROWGUIDCOL 열이 테이블에 없다면 에이전트는 우선 ROWGUIDCOL 열을 추가하고 채워야 합니다. 병합 복제 중 스냅샷을 생성할 때 성능을 향상시키려면 게시하기 전 각 테이블에 ROWGUIDCOL 열을 만듭니다. 이 열은 어떤 이름도 가질 수 있지만(기본적으로 스냅샷 에이전트는**rowguid** 를 사용) 다음 데이터 형식 특징이 있어야 합니다.  
   
     -   UNIQUEIDENTIFIER 데이터 형식  
   
@@ -134,9 +134,9 @@ ms.locfileid: "54136073"
   
     -   열에 있는 고유 인덱스  
   
--   스냅숏을 미리 생성하거나 구독자가 처음 동기화될 때 스냅숏의 생성과 적용을 요청하도록 합니다.  
+-   스냅샷을 미리 생성하거나 구독자가 처음 동기화될 때 스냅샷의 생성과 적용을 요청하도록 합니다.  
   
-     이러한 옵션 중 하나 또는 둘 모두를 사용하여 매개 변수가 있는 필터를 사용하는 게시에 대한 스냅숏을 제공할 수 있습니다. 이러한 옵션을 하나도 지정하지 않으면 **bcp** 유틸리티를 사용하지 않고 일련의 SELECT 및 INSERT 문을 사용하여 구독을 초기화하게 되는데 이 경우 프로세스의 속도가 훨씬 느립니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요.  
+     이러한 옵션 중 하나 또는 둘 모두를 사용하여 매개 변수가 있는 필터를 사용하는 게시에 대한 스냅샷을 제공할 수 있습니다. 이러한 옵션을 하나도 지정하지 않으면 **bcp** 유틸리티를 사용하지 않고 일련의 SELECT 및 INSERT 문을 사용하여 구독을 초기화하게 되는데 이 경우 프로세스의 속도가 훨씬 느립니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을(를) 참조하세요.  
   
 ## <a name="maintenance-and-monitoring-considerations"></a>유지 관리 및 모니터링 고려 사항  
   

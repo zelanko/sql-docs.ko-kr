@@ -26,7 +26,7 @@ ms.locfileid: "63186236"
   
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
- 구독은 배포 에이전트(스냅숏 및 트랜잭션 복제의 경우) 또는 병합 에이전트(병합 복제의 경우)에 의해 동기화됩니다. 에이전트는 지속적으로 실행하거나 수요에 따라 실행하거나 일정에 따라 실행할 수 있습니다. 동기화 일정을 설정하는 방법은 [동기화 일정 지정](specify-synchronization-schedules.md)을 참조하세요.  
+ 구독은 배포 에이전트(스냅샷 및 트랜잭션 복제의 경우) 또는 병합 에이전트(병합 복제의 경우)에 의해 동기화됩니다. 에이전트는 지속적으로 실행하거나 수요에 따라 실행하거나 일정에 따라 실행할 수 있습니다. 동기화 일정을 설정하는 방법은 [동기화 일정 지정](specify-synchronization-schedules.md)을 참조하세요.  
   
  **의** 로컬 구독 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]폴더에서 요청 시 구독을 동기화합니다.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "63186236"
 > [!NOTE]  
 >  동기화가 애플리케이션에 영향을 미치지 않고 자율적으로 실행하도록 하려면 에이전트를 비동기적으로 시작합니다. 그러나 진행률 표시줄을 표기하기 위해 동기화 프로세스 동안 동기화 결과를 모니터링하고 에이전트에서 콜백을 받으려면 에이전트를 동기적으로 시작해야 합니다. For [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)] 구독자의 경우 에이전트를 동기적으로 시작해야 합니다.  
   
-#### <a name="to-synchronize-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 끌어오기 구독을 동기화하려면  
+#### <a name="to-synchronize-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 끌어오기 구독을 동기화하려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 구독자 연결을 만듭니다.  
   

@@ -25,7 +25,7 @@ ms.locfileid: "68022442"
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  스냅숏 또는 트랜잭션 게시에 끌어오기 구독을 추가합니다. 이 저장 프로시저는 끌어오기 구독을 만들 구독자의 데이터베이스에서 실행됩니다.  
+  스냅샷 또는 트랜잭션 게시에 끌어오기 구독을 추가합니다. 이 저장 프로시저는 끌어오기 구독을 만들 구독자의 데이터베이스에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

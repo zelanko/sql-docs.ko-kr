@@ -61,7 +61,7 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 ## <a name="remarks"></a>Remarks  
  BEGIN DISTRIBUTED TRANSACTION 문을 실행하는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스는 트랜잭션 주관자로서 트랜잭션의 수행을 제어합니다. 이후 세션에 대해 COMMIT TRANSACTION 또는 ROLLBACK TRANSACTION 문을 실행하면 제어 인스턴스는 포함된 모든 인스턴스 간의 분산 트랜잭션 완료를 MS DTC에서 관리하도록 요청합니다.  
   
- 트랜잭션 수준의 스냅숏 격리는 분산 트랜잭션을 지원하지 않습니다.  
+ 트랜잭션 수준의 스냅샷 격리는 분산 트랜잭션을 지원하지 않습니다.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 원격 인스턴스가 분산 트랜잭션에 참여하는 기본적인 방법은 이미 분산 트랜잭션에 참여한 세션이 연결된 서버를 참조하는 분산 쿼리를 실행할 때 참여하는 것입니다.  
   

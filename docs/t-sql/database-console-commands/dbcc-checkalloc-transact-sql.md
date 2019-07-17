@@ -105,11 +105,11 @@ NO_INFOMSGS가 지정되지 않은 경우 DBCC CHECKALLOC은 데이터베이스�
 > [!NOTE]  
 > DBCC CHECKALLOC 기능은 [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) 및 [DBCC CHECKFILEGROUP](../../t-sql/database-console-commands/dbcc-checkfilegroup-transact-sql.md)에 포함되어 있습니다. 따라서 이러한 문과 별도로 DBCC CHECKALLOC을 실행할 필요가 없습니다.   DBCC CHECKALLOC은 FILESTREAM 데이터를 검사하지 않습니다. FILESTREAM은 파일 시스템에 BLOB(Binary Large Object)을 저장합니다.  
   
-## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅숏  
-DBCC CHECKALLOC은 내부 데이터베이스 스냅숏을 사용하여 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 지원합니다. 스냅숏을 만들 수 없거나 TABLOCK이 지정되어 있는 경우 DBCC CHECKALLOC은 데이터베이스에 대한 배타(X) 잠금을 얻어 필요한 일관성을 확보하려고 합니다.
+## <a name="internal-database-snapshot"></a>내부 데이터베이스 스냅샷  
+DBCC CHECKALLOC은 내부 데이터베이스 스냅샷을 사용하여 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 지원합니다. 스냅샷을 만들 수 없거나 TABLOCK이 지정되어 있는 경우 DBCC CHECKALLOC은 데이터베이스에 대한 배타(X) 잠금을 얻어 필요한 일관성을 확보하려고 합니다.
   
 > [!NOTE]  
-> tempdb에 대해 DBCC CHECKALLOC을 실행하면 모든 검사가 수행되지 않습니다. 이것은 성능상의 이유로 tempdb의 데이터베이스 스냅숏을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다. tempdb 할당 문제를 해결하려면 MSSQLSERVER 서비스를 중지한 후 시작합니다. 이 동작을 수행하면 tempdb 데이터베이스가 삭제되고 다시 생성됩니다.  
+> tempdb에 대해 DBCC CHECKALLOC을 실행하면 모든 검사가 수행되지 않습니다. 이것은 성능상의 이유로 tempdb의 데이터베이스 스냅샷을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다. tempdb 할당 문제를 해결하려면 MSSQLSERVER 서비스를 중지한 후 시작합니다. 이 동작을 수행하면 tempdb 데이터베이스가 삭제되고 다시 생성됩니다.  
   
 ## <a name="understanding-dbcc-error-messages"></a>DBCC 오류 메시지 이해  
 DBCC CHECKALLOC 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 메시지가 기록됩니다. DBCC 명령이 성공적으로 실행되면 메시지에 실행 완료 및 명령이 실행된 소요 시간이 표시됩니다. 오류로 인해 DBCC 명령이 검사를 완료하기 전에 중지되면 메시지에 명령 종료, 상태 값 및 명령이 실행된 소요 시간이 표시됩니다. 다음 표에서는 메시지에 포함될 수 있는 상태 값을 나열하고 설명합니다.
@@ -151,7 +151,7 @@ DBCC CHECKALLOC이 오류를 보고하면 복구를 실행하는 대신 데이�
 |Partition ID|내부적으로만 사용됩니다.|  
 |Alloc unit ID|내부적으로만 사용됩니다.|  
 |행 내부 데이터|페이지에 인덱스 또는 힙 데이터가 포함됩니다.|  
-|LOB 데이터|페이지에 **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext**, **xml** 및 **image** 데이터가 포함됩니다.|  
+|LOB 데이터|페이지에 **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext**, **xml** 및 **image** 데이터가 포함됩니다.|  
 |행 오버플로 데이터|페이지에 행 외부로 밀어넣은 가변 길이 열 데이터가 포함됩니다.|  
   
 DBCC CHECKALLOC은 ESTIMATEONLY 또는 NO_INFOMSGS가 지정된 경우를 제외하고 다음 결과 집합(값은 변화 가능)을 반환합니다.

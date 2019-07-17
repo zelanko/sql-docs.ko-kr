@@ -55,7 +55,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |값|Description|  
 |-----------|-----------------|  
 |**0**|트랜잭션 게시|  
-|**1**|스냅숏 게시|  
+|**1**|스냅샷 게시|  
 |**2**|병합 게시|  
 |NULL(기본값)|복제가 게시 유형을 확인하려고 합니다.|  
   

@@ -67,7 +67,7 @@ ms.locfileid: "66107248"
 |보고서 프로젝트의 공유 데이터 원본(.rds) 파일을 추가하고 연결합니다.|보고서 디자이너|[공유 데이터 원본 만들기, 수정 및 삭제&#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |사용자가 런타임에 선택할 수 있는 미리 정의된 데이터 원본 목록을 만듭니다. 사용자가 보고서를 요청하면 보고서는 데이터 원본 목록을 제공합니다. 사용자는 보고서를 실행하기 전에 사용할 데이터 원본을 선택해야 합니다. 보고서에 데이터 원본 선택 목록을 추가하려면 식을 사용합니다.<br /><br /> 이를 동적 데이터 원본 연결이라고 합니다.|보고서 디자이너|[보고서 서비스의 데이터 연결, 데이터 원본 및 연결 문자열](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |보고서 서버에 공유 데이터 원본 항목을 만듭니다.|보고서 관리자|[공유 데이터 원본 만들기, 삭제 또는 수정&#40;보고서 관리자&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
-|자격 증명을 구독 또는 보고서 스냅숏을 만들기 위한 선행 조건으로 저장합니다.|보고서 관리자|[Reporting Services 데이터 원본에 자격 증명 저장](store-credentials-in-a-reporting-services-data-source.md)|  
+|자격 증명을 구독 또는 보고서 스냅샷을 만들기 위한 선행 조건으로 저장합니다.|보고서 관리자|[Reporting Services 데이터 원본에 자격 증명 저장](store-credentials-in-a-reporting-services-data-source.md)|  
 |게시된 보고서의 데이터 원본 연결 속성을 편집합니다.|보고서 관리자|[보고서의 데이터 원본 속성 구성&#40;보고서 관리자&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
 |보고서 서버에 공유 데이터 원본 항목을 만듭니다.|SharePoint 사이트|[공유 데이터 원본 만들기 및 관리&#40;SharePoint 통합 모드의 Reporting Services&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
 |보고서에 기존 .odc 연결 정보를 사용합니다.|SharePoint 사이트|[보고서에 Office 데이터 연결&#40;.odc&#41; 사용&#40;SharePoint 통합 모드의 Reporting Services&#41;](use-an-office-data-connection-odc-with-reports.md)|  

@@ -83,7 +83,7 @@ core.sp_create_snapshot [ @collection_set_uid = ] 'collection_set_uid'
  멤버 자격이 필요 합니다 **mdw_writer** (사용 하 여 EXECUTE 권한 있음) 고정된 데이터베이스 역할.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 디스크 사용 컬렉션 집합의 스냅숏을 만들어 관리 데이터 웨어하우스에 추가한 다음 스냅숏 식별자를 반환합니다. 이 예에서는 기본 인스턴스가 사용됩니다.  
+ 다음 예에서는 디스크 사용 컬렉션 집합의 스냅샷을 만들어 관리 데이터 웨어하우스에 추가한 다음 스냅샷 식별자를 반환합니다. 이 예에서는 기본 인스턴스가 사용됩니다.  
   
 ```  
 USE <management_data_warehouse>;  

@@ -30,7 +30,7 @@ ms.locfileid: "63261769"
 > [!NOTE]  
 >  테이블, 뷰 및 저장 프로시저 아티클을 정의하는 경우 스키마 전용 지정은 개체 정의만 복제됨을 나타냅니다.  
   
-### <a name="to-publish-a-table-article-in-a-transactional-or-snapshot-publication"></a>트랜잭션 또는 스냅숏 게시에 테이블 아티클을 게시하려면  
+### <a name="to-publish-a-table-article-in-a-transactional-or-snapshot-publication"></a>트랜잭션 또는 스냅샷 게시에 테이블 아티클을 게시하려면  
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@type** 에 다음 값 중 하나를 지정하여 아티클 유형을 정의합니다.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "63261769"
   
 3.  **logbased manualboth**, **logbased manualview**및 **logbased manualfilter** 아티클의 경우 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 를 실행하여 열 필터링된 아티클을 정의하는 뷰를 생성합니다. 자세한 내용은 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)을 참조하세요.  
   
-### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>트랜잭션 또는 스냅숏 게시에 뷰 또는 인덱싱된 뷰 아티클을 게시하려면  
+### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>트랜잭션 또는 스냅샷 게시에 뷰 또는 인덱싱된 뷰 아티클을 게시하려면  
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@type** 에 다음 값 중 하나를 지정하여 아티클 유형을 정의합니다.  
   
@@ -70,7 +70,7 @@ ms.locfileid: "63261769"
   
 3.  **logbased manualboth**, **logbased manualview**및 **logbased manualfilter** 아티클의 경우 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql) 를 실행하여 열 필터링된 아티클을 정의하는 뷰를 생성합니다. 자세한 내용은 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)을 참조하세요.  
   
-### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>저장 프로시저, 저장 프로시저 실행 또는 사용자 정의 함수 아티클을 트랜잭션 또는 스냅숏 게시에 게시하려면  
+### <a name="to-publish-a-stored-procedure-stored-procedure-execution-or-user-defined-function-article-in-a-transactional-or-snapshot-publication"></a>저장 프로시저, 저장 프로시저 실행 또는 사용자 정의 함수 아티클을 트랜잭션 또는 스냅샷 게시에 게시하려면  
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql)을 실행합니다. **@type** 에 다음 값 중 하나를 지정하여 아티클 유형을 정의합니다.  
   

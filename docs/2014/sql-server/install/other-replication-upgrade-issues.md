@@ -49,7 +49,7 @@ ms.locfileid: "66093640"
   
 -   모든 ActiveX 컨트롤은 스크립팅 및 초기화에 안전하지 않은 것으로 표시됩니다.  
   
--   스냅숏 ActiveX 컨트롤은 삭제되었습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하거나 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 스냅숏을 만들고 관리할 수 있습니다. 자세한 내용은 항목을 참조 하세요. "방법: 만들기 및 Apply the Initial Snapshot ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) "및" 방법: 초기 스냅숏 (복제 TRANSACT-SQL 프로그래밍) 만들기 "에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인입니다.  
+-   스냅샷 ActiveX 컨트롤은 삭제되었습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하거나 복제 저장 프로시저를 사용하여 프로그래밍 방식으로 스냅숏을 만들고 관리할 수 있습니다. 자세한 내용은 항목을 참조 하세요. "방법: 만들기 및 Apply the Initial Snapshot ([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) "및" 방법: 초기 스냅숏 (복제 TRANSACT-SQL 프로그래밍) 만들기 "에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인입니다.  
   
 -   분산 ActiveX 컨트롤 및 병합 ActiveX 컨트롤은 이후에는 지원되지 않습니다. RMO(복제 관리 개체)를 사용한 관리 코드 응용 프로그램에 비슷한 기능이 제공됩니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "구독 동기화(RMO 프로그래밍)"를 참조하십시오.  
   

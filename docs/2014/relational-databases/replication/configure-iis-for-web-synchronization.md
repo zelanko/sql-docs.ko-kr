@@ -36,7 +36,7 @@ ms.locfileid: "62722373"
 >  애플리케이션에서 [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] 이상 버전을 사용해야 하며, 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 IIS 서버에 설치되어 있으면 안 됩니다. 이전 버전의 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 가 있으면 오류가 발생할 수 있습니다. 여기에는 다음과 같은 옵션이 포함됩니다. "웹 동기화 중 메시지 형식이 잘못 되었습니다. 합니다. 웹 서버에서 복제 구성 요소가 올바르게 구성되었는지 확인하십시오."  
   
 > [!CAUTION]  
->  WebSync 및 대체 스냅숏 폴더 위치를 동시에 사용하지 마십시오.  
+>  WebSync 및 대체 스냅샷 폴더 위치를 동시에 사용하지 마십시오.  
   
  웹 동기화를 사용하려면 다음 단계를 완료하여 IIS를 구성해야 합니다. 이 항목에서는 각 단계를 자세히 설명합니다.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "62722373"
   
     1.  **추가**를 클릭한 다음 **사용자 또는 그룹 선택** 대화 상자에서 구독자가 IIS 연결에 사용할 계정을 추가합니다. These are the accounts that you will specify on the **Web Server Information** page of the New Subscription Wizard or as the value for the [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) *@internet_login* parameter.  
   
-9. **스냅숏 공유 액세스** 페이지에서 스냅숏 공유를 입력합니다. 구독자가 스냅숏 파일에 액세스할 수 있도록 이 공유에는 적절한 사용 권한이 설정되어 있습니다. 공유 사용 권한에 대한 자세한 내용은 [스냅숏 폴더 보안 설정](security/secure-the-snapshot-folder.md)을 참조하세요.  
+9. **스냅숏 공유 액세스** 페이지에서 스냅숏 공유를 입력합니다. 구독자가 스냅샷 파일에 액세스할 수 있도록 이 공유에는 적절한 사용 권한이 설정되어 있습니다. 공유 사용 권한에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](security/secure-the-snapshot-folder.md)을 참조하세요.  
   
 10. **마법사 완료** 페이지에서 **마침**을 클릭합니다.  
   

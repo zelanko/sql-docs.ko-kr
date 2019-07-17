@@ -27,7 +27,7 @@ ms.locfileid: "63022141"
 |HREPL_ArticleNlog_V|Table|게시된 테이블에 변경 내용이 적용될 때 정보를 저장하는 데 사용되는 변경 내용 추적 테이블입니다. 변경 내용 추적 테이블은 게시된 각 테이블에 대해 생성됩니다.|  
 |HREPL_Changes|Table|트랜잭션 집합에 할당되기 위해 대기 중인 변경 내용 수를 확인하기 위해 Xactset 작업에서 내부적으로 사용되는 테이블입니다. 이 작업에 대한 자세한 내용은 [Oracle 게시자를 위한 성능 튜닝](performance-tuning-for-oracle-publishers.md)을 참조하세요.|  
 |HREPL_Distributor|Table|Oracle 게시자와 연결된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에 대한 정보를 유지 관리하는 데 사용되는 배포자 상태 테이블입니다.|  
-|HREPL_Event|Table|스냅숏과 행 개수 요청을 동기화하는 데 사용되는 이벤트 테이블입니다.|  
+|HREPL_Event|Table|스냅샷과 행 개수 요청을 동기화하는 데 사용되는 이벤트 테이블입니다.|  
 |HREPL_Mutex|Table|Oracle 패키지 프로시저인 PopulatePollTable이 로그 판독기 에이전트와 데이터베이스 작업 모두에 의해 동시에 실행되지 않도록 하는 데 사용되는 테이블입니다.|  
 |HREPL_Poll|Table|게시된 테이블에 대한 변경 내용 집합과 연결된 로그 테이블 항목을 식별하는 데 사용되는 테이블입니다.|  
 |HREPL_PublishedTables|Table|트랜잭션 게시의 각 아티클에 대한 항목을 포함하는 테이블입니다.|  

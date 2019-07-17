@@ -749,7 +749,7 @@ FROM sys.dm_exec_requests AS d
 
   다음 유형의 게시를 만듭니다.
   - 트랜잭션
-  - 스냅숏
+  - 스냅샷
   - 병합
 
   복제 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 구성하거나 [복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)를 만듭니다.

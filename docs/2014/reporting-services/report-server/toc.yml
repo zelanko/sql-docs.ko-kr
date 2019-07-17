@@ -53,7 +53,7 @@
       href: administer-a-report-server-database-ssrs-native-mode.md
     - name: 다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드)
       href: moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md
-- name: '성능, 스냅숏, 캐시(Reporting Services)'
+- name: '성능, 스냅샷, 캐시(Reporting Services)'
   href: performance-snapshots-caching-reporting-services.md
   items:
     - name: 보고서 서버 성능 모니터링
@@ -72,7 +72,7 @@
       href: setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md
     - name: 큰 보고서 처리
       href: process-large-reports.md
-    - name: 보고서 및 스냅숏 크기 제한
+    - name: 보고서 및 스냅샷 크기 제한
       href: report-and-snapshot-size-limits.md
     - name: 보고서 캐시(SSRS)
       href: caching-reports-ssrs.md
@@ -84,9 +84,9 @@
       href: cache-a-shared-dataset.md
     - name: 보고서 캐시(보고서 관리자)
       href: cache-a-report-report-manager.md
-    - name: '보고서 기록에서 스냅숏 만들기, 수정 및 삭제'
+    - name: '보고서 기록에서 스냅샷 만들기, 수정 및 삭제'
       href: create-modify-and-delete-snapshots-in-report-history.md
-    - name: 보고서 기록에 스냅숏 추가
+    - name: 보고서 기록에 스냅샷 추가
       href: add-a-snapshot-to-report-history-report-manager.md
     - name: 보고서 기록 만들기
       href: create-report-history-reporting-services-in-sharepoint-integrated-mode.md

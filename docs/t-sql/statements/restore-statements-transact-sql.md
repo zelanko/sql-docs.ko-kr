@@ -64,7 +64,7 @@ BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합�
 
 ||||
 |-|-|-|
-|** _\* SQL Server \*_ ** &nbsp;|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|** _\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -78,7 +78,7 @@ BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합�
 - 특정 파일 또는 파일 그룹을 데이터베이스로 복원합니다(파일 복원).
 - 특정 페이지를 데이터베이스로 복원합니다(페이지 복원).
 - 트랜잭션 로그를 데이터베이스로 복원합니다(트랜잭션 로그 복원).
-- 데이터베이스 스냅숏에서 캡처한 지점으로 데이터베이스를 되돌립니다.
+- 데이터베이스 스냅샷에서 캡처한 지점으로 데이터베이스를 되돌립니다.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복원 시나리오에 대한 자세한 내용은 [복원 및 복구 개요](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)를 참조하세요. 인수 설명에 대한 자세한 내용은 [RESTORE 인수](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요. 다른 인스턴스에서 데이터베이스를 복원할 때 [다른 서버 인스턴스에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리(SQL Server)](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)의 정보를 참조하세요.
 
@@ -408,23 +408,23 @@ REPLACE 옵션은 복원 작업 중 일반적으로 수행하는 몇 가지 중�
 
 복원 시퀀스를 중단하고 영향을 받는 파일의 전체 내용을 복원하여 다시 시작할 수 있습니다.
 
-## <a name="reverting-a-database-to-a-database-snapshot"></a>데이터베이스를 데이터베이스 스냅숏으로 되돌리기
+## <a name="reverting-a-database-to-a-database-snapshot"></a>데이터베이스를 데이터베이스 스냅샷으로 되돌리기
 
-DATABASE_SNAPSHOT 옵션을 사용하여 지정한 *데이터베이스 되돌리기 작업*은 전체 원본 데이터베이스를 데이터베이스 스냅숏 시점으로 되돌려 지정한 데이터베이스 스냅숏에 유지 관리된 시점의 데이터로 원본 데이터베이스를 덮어씁니다. 현재 되돌리는 스냅숏만 있을 수 있습니다. 그런 다음 되돌리기 작업은 로그를 다시 작성하므로 되돌린 데이터베이스를 사용자 오류 발생 지점으로 나중에 롤포워드할 수 없습니다.
+DATABASE_SNAPSHOT 옵션을 사용하여 지정한 *데이터베이스 되돌리기 작업*은 전체 원본 데이터베이스를 데이터베이스 스냅샷 시점으로 되돌려 지정한 데이터베이스 스냅샷에 유지 관리된 시점의 데이터로 원본 데이터베이스를 덮어씁니다. 현재 되돌리는 스냅샷만 있을 수 있습니다. 그런 다음 되돌리기 작업은 로그를 다시 작성하므로 되돌린 데이터베이스를 사용자 오류 발생 지점으로 나중에 롤포워드할 수 없습니다.
 
-데이터 손실은 스냅숏 생성 이후의 데이터베이스 업데이트로 제한됩니다. 되돌린 데이터베이스의 메타데이터는 스냅숏 생성 시의 메타데이터와 동일합니다. 그러나 스냅숏으로 되돌리면 전체 텍스트 카탈로그가 모두 삭제됩니다.
+데이터 손실은 스냅샷 생성 이후의 데이터베이스 업데이트로 제한됩니다. 되돌린 데이터베이스의 메타데이터는 스냅샷 생성 시의 메타데이터와 동일합니다. 그러나 스냅샷으로 되돌리면 전체 텍스트 카탈로그가 모두 삭제됩니다.
 
-데이터베이스 스냅숏에서 되돌리기는 미디어 복구용으로 사용할 수 없습니다. 일반 백업 세트와는 달리 데이터베이스 스냅숏은 데이터베이스 파일의 불완전한 복사본입니다. 데이터베이스나 데이터베이스 스냅숏이 손상된 경우 스냅숏에서 되돌릴 수 없는 경우가 많습니다. 되돌릴 수 있는 경우에도 손상 문제가 해결될 가능성은 거의 없습니다.
+데이터베이스 스냅샷에서 되돌리기는 미디어 복구용으로 사용할 수 없습니다. 일반 백업 세트와는 달리 데이터베이스 스냅샷은 데이터베이스 파일의 불완전한 복사본입니다. 데이터베이스나 데이터베이스 스냅샷이 손상된 경우 스냅샷에서 되돌릴 수 없는 경우가 많습니다. 되돌릴 수 있는 경우에도 손상 문제가 해결될 가능성은 거의 없습니다.
 
 ### <a name="restrictions-on-reverting"></a>되돌리기 제한 사항
 
 다음과 같은 경우에는 되돌리기가 지원되지 않습니다.
 
 - 원본 데이터베이스에는 읽기 전용 파일 그룹이나 압축 파일 그룹이 포함되어 있는 경우
-- 스냅숏이 만들어질 때 온라인 상태였던 파일이 오프라인 상태인 경우
-- 현재 데이터베이스에 대한 스냅숏이 여러 개 있는 경우
+- 스냅샷이 만들어질 때 온라인 상태였던 파일이 오프라인 상태인 경우
+- 현재 데이터베이스에 대한 스냅샷이 여러 개 있는 경우
 
-자세한 내용은 [데이터베이스를 데이터베이스 스냅숏으로 되돌리기](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)를 참조하세요.
+자세한 내용은 [데이터베이스를 데이터베이스 스냅샷으로 되돌리기](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)를 참조하세요.
 
 ## <a name="security"></a>보안
 
@@ -663,12 +663,12 @@ GO
 
 [&#91;주요 예제&#93;](#examples)
 
-### <a name="reverting_from_db_snapshot"></a> J. 데이터베이스 스냅숏으로 되돌리기
+### <a name="reverting_from_db_snapshot"></a> J. 데이터베이스 스냅샷으로 되돌리기
 
-다음 예에서는 데이터베이스를 데이터베이스 스냅숏으로 되돌립니다. 이 예에서는 현재 하나의 스냅숏만 데이터베이스에 있는 것으로 가정합니다. 이 데이터베이스 스냅숏을 만드는 방법의 예는 [데이터베이스 스냅숏 만들기](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)를 참조하세요.
+다음 예에서는 데이터베이스를 데이터베이스 스냅샷으로 되돌립니다. 이 예에서는 현재 하나의 스냅샷만 데이터베이스에 있는 것으로 가정합니다. 이 데이터베이스 스냅샷을 만드는 방법의 예는 [데이터베이스 스냅샷 만들기](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)를 참조하세요.
 
 > [!NOTE]
-> 스냅숏으로 되돌리면 전체 텍스트 카탈로그가 모두 삭제됩니다.
+> 스냅샷으로 되돌리면 전체 텍스트 카탈로그가 모두 삭제됩니다.
 
 ```sql
 USE master;
@@ -676,7 +676,7 @@ RESTORE DATABASE AdventureWorks2012 FROM DATABASE_SNAPSHOT = 'AdventureWorks_dbs
 GO
 ```
 
-자세한 내용은 [데이터베이스를 데이터베이스 스냅숏으로 되돌리기](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)를 참조하세요.
+자세한 내용은 [데이터베이스를 데이터베이스 스냅샷으로 되돌리기](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)를 참조하세요.
 
 [&#91;주요 예제&#93;](#examples)
 
@@ -736,7 +736,7 @@ RESTORE DATABASE Sales
 
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|** _\*SQL Database<br />관리되는 인스턴스\*_ **|[Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|** _\*SQL Database<br />관리되는 인스턴스\*_**|[Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -877,7 +877,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System(PDW) \*_ **
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System(PDW) \*_**
 
 &nbsp;
 

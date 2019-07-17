@@ -69,11 +69,11 @@ DBCC CATALOG 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnov
 |4|어설션 또는 액세스 위반이 감지되었습니다.|  
 |5|알 수 없는 오류가 발생하여 DBCC 명령이 종료되었습니다.|  
   
-DBCC CHECKCATALOG는 시스템 메타데이터 테이블 간에 다양한 일관성 검사를 수행합니다. DBCC CHECKCATALOG는 내부 데이터베이스 스냅숏을 사용하여 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 유지합니다. 자세한 내용은 [데이터베이스 스냅숏의 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅숏 사용법" 섹션을 참조하세요.
-스냅숏을 만들 수 없는 경우 DBCC CHECKCATALOG는 필요한 일관성을 얻기 위해 배타적 데이터베이스 잠금을 획득합니다. 불일치가 감지되는 경우 복구가 불가능하며 데이터베이스를 백업에서 복원해야 합니다.
+DBCC CHECKCATALOG는 시스템 메타데이터 테이블 간에 다양한 일관성 검사를 수행합니다. DBCC CHECKCATALOG는 내부 데이터베이스 스냅샷을 사용하여 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 유지합니다. 자세한 내용은 [데이터베이스 스냅숏의 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅숏 사용법" 섹션을 참조하세요.
+스냅샷을 만들 수 없는 경우 DBCC CHECKCATALOG는 필요한 일관성을 얻기 위해 배타적 데이터베이스 잠금을 획득합니다. 불일치가 감지되는 경우 복구가 불가능하며 데이터베이스를 백업에서 복원해야 합니다.
   
 > [!NOTE]  
-> **tempdb**에 대해 DBCC CHECKCATALOG를 실행하면 검사가 수행되지 않습니다. 이것은 성능상의 이유로 **tempdb**에 대해 데이터베이스 스냅숏을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다. 서버를 재활용하여 **tempdb** 메타데이터 문제를 해결하십시오.  
+> **tempdb**에 대해 DBCC CHECKCATALOG를 실행하면 검사가 수행되지 않습니다. 이것은 성능상의 이유로 **tempdb**에 대해 데이터베이스 스냅샷을 사용할 수 없기 때문입니다. 즉, 필요한 트랜잭션 일관성을 얻을 수 없음을 의미합니다. 서버를 재활용하여 **tempdb** 메타데이터 문제를 해결하십시오.  
   
 > [!NOTE]  
 > DBCC CHECKCATALOG는 FILESTREAM 데이터를 검사하지 않습니다. FILESTREAM은 파일 시스템에 BLOB(Binary Large Object)을 저장합니다.  

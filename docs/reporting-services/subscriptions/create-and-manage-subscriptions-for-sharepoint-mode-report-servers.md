@@ -84,7 +84,7 @@ ms.locfileid: "65578344"
   
 8.  **덮어쓰기 옵션**에서 이후 배달 시 파일을 덮어쓸지 여부를 결정하는 옵션을 지정합니다. 이전 배달을 유지하려면 **고유 이름으로 파일 만들기**를 선택합니다. 그러면 새 파일에 번호가 추가되어 고유한 파일 이름이 생성됩니다.  
   
-9. **배달 이벤트**에서 구독이 실행되도록 하는 일정이나 이벤트를 지정합니다. 사용자 지정 일정을 만들거나, 사용 가능한 경우 공유 일정을 선택하거나, 스냅숏 데이터를 사용하여 실행되는 보고서에 대해 데이터가 새로 고쳐질 때마다 구독을 실행할 수 있습니다. 일정 및 데이터 처리에 대한 자세한 내용은 [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)를 참조하세요.  
+9. **배달 이벤트**에서 구독이 실행되도록 하는 일정이나 이벤트를 지정합니다. 사용자 지정 일정을 만들거나, 사용 가능한 경우 공유 일정을 선택하거나, 스냅샷 데이터를 사용하여 실행되는 보고서에 대해 데이터가 새로 고쳐질 때마다 구독을 실행할 수 있습니다. 일정 및 데이터 처리에 대한 자세한 내용은 [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)를 참조하세요.  
   
 10. 매개 변수가 있는 보고서에 대한 구독을 만드는 경우 **매개 변수**에서 구독 처리 시 보고서에 사용할 값을 지정합니다. 선택한 보고서에 매개 변수가 없는 경우 매개 변수 섹션이 이 페이지에 표시되지 않습니다. 매개 변수에 대한 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "65578344"
   
 10. **사용자 이름** 및 **암호**에 공유 폴더에 대한 쓰기 권한이 있는 자격 증명을 입력합니다.  
   
-11. **배달 이벤트**에서 구독이 실행되도록 하는 일정이나 이벤트를 지정합니다. 사용자 지정 일정을 만들거나, 사용 가능한 경우 공유 일정을 선택하거나, 스냅숏 데이터를 사용하여 실행되는 보고서에 대해 데이터가 새로 고쳐질 때마다 구독을 실행할 수 있습니다. 일정 및 데이터 처리에 대한 자세한 내용은 [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)를 참조하세요.  
+11. **배달 이벤트**에서 구독이 실행되도록 하는 일정이나 이벤트를 지정합니다. 사용자 지정 일정을 만들거나, 사용 가능한 경우 공유 일정을 선택하거나, 스냅샷 데이터를 사용하여 실행되는 보고서에 대해 데이터가 새로 고쳐질 때마다 구독을 실행할 수 있습니다. 일정 및 데이터 처리에 대한 자세한 내용은 [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)를 참조하세요.  
   
 12. 매개 변수가 있는 보고서에 대한 구독을 만드는 경우 **매개 변수**에서 구독 처리 시 보고서에 사용할 값을 지정합니다. 매개 변수에 대한 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "65578344"
   
      렌더링 형식과 브라우저에 따라 보고서가 포함될지 또는 첨부될지가 결정됩니다. 브라우저에서 HTML 4.0 및 MHTML을 지원하고 웹 보관 파일 렌더링 형식을 선택한 경우 보고서는 메시지의 일부로 포함됩니다. CSV, PDF를 비롯한 다른 렌더링 형식은 모두 보고서를 첨부 파일로 배달합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서를 보내기 전에 첨부 파일 또는 메시지의 크기를 확인하지 않습니다. 첨부 파일 또는 메시지가 메일 서버에서 허용하는 최대 제한을 초과할 경우 보고서가 배달되지 않습니다. 큰 보고서의 경우 URL이나 알림과 같은 다른 배달 옵션 중 하나를 선택하십시오.  
   
-9. **배달 이벤트**에서 구독이 실행되도록 하는 일정이나 이벤트를 지정합니다. 사용자 지정 일정을 만들거나, 사용 가능한 경우 공유 일정을 선택하거나, 스냅숏 데이터를 사용하여 실행되는 보고서에 대해 데이터가 새로 고쳐질 때마다 구독을 실행할 수 있습니다. 일정 및 데이터 처리에 대한 자세한 내용은 [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)를 참조하세요.  
+9. **배달 이벤트**에서 구독이 실행되도록 하는 일정이나 이벤트를 지정합니다. 사용자 지정 일정을 만들거나, 사용 가능한 경우 공유 일정을 선택하거나, 스냅샷 데이터를 사용하여 실행되는 보고서에 대해 데이터가 새로 고쳐질 때마다 구독을 실행할 수 있습니다. 일정 및 데이터 처리에 대한 자세한 내용은 [처리 옵션 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)를 참조하세요.  
   
 10. 매개 변수가 있는 보고서에 대한 구독을 만드는 경우 **매개 변수**에서 구독 처리 시 보고서에 사용할 값을 지정합니다. 매개 변수에 대한 자세한 내용은 [게시된 보고서에 매개 변수 설정&#40;SharePoint 통합 모드의 Reporting Services&#41;](../../reporting-services/report-design/set-parameters-on-a-published-report-sharepoint-integrated-mode.md)을 참조하세요.  
   

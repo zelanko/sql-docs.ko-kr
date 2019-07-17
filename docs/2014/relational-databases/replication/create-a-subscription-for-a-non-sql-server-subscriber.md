@@ -22,7 +22,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721675"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자에 대한 구독 만들기
-  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다. 트랜잭션 복제와 스냅숏 복제는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자로의 데이터 게시를 지원합니다. 지원되는 구독자 플랫폼에 대한 자세한 내용은 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다. 트랜잭션 복제와 스냅샷 복제는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자로의 데이터 게시를 지원합니다. 지원되는 구독자 플랫폼에 대한 자세한 내용은 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md)에서 SQL Server 이외 구독자에 대한 구독을 만드는 방법에 대해 설명합니다.  
   
  **항목 내용**  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62721675"
   
     -   **스냅숏 에이전트** 페이지에서 **즉시 스냅숏 만들기**의 선택을 취소합니다.  
   
-         스냅숏 에이전트에서[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 적합한 스냅숏 및 초기화 스크립트를 생성하려면[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대한 게시를 설정한 다음 스냅숏을 만듭니다.  
+         스냅샷 에이전트에서[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 적합한 스냅샷 및 초기화 스크립트를 생성하려면[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대한 게시를 설정한 다음 스냅샷을 만듭니다.  
   
 3.  **게시 속성 - \<PublicationName>** 대화 상자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대한 게시를 사용하도록 설정합니다. 이 단계에 대한 자세한 내용은 [Publication Properties, Subscription Options](publication-properties-subscription-options.md) 을 참조하세요.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62721675"
   
 5.  (옵션) **pre_creation_cmd** 아티클 속성을 변경하여 구독자에서 테이블을 유지합니다. 이 항목에는 이 단계에 대한 자세한 정보를 제공합니다.  
   
-6.  게시에 대한 스냅숏을 생성합니다. 이 항목에는 이 단계에 대한 자세한 정보를 제공합니다.  
+6.  게시에 대한 스냅샷을 생성합니다. 이 항목에는 이 단계에 대한 자세한 정보를 제공합니다.  
   
 7.  구독을 동기화합니다. 자세한 내용은 [밀어넣기 구독 동기화](synchronize-a-push-subscription.md)을 참조하세요.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62721675"
   
     -   **프로세스 계정**, **암호**및 **암호 확인** 필드에서 배포 에이전트가 실행되고 배포자에 로컬로 연결될 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 계정과 암호를 입력합니다.  
   
-         계정에는 최소 사용 권한인 배포 데이터베이스에서의 **db_owner** 고정 데이터베이스 역할의 멤버, PAL(게시 액세스 목록)의 멤버, 스냅숏 공유에 대한 읽기 권한 및 OLE DB 공급자의 설치 디렉터리에 대한 읽기 권한이 필요합니다. PAL에 대한 자세한 내용은 [게시자 보안 설정](security/secure-the-publisher.md)을 참조하세요.  
+         계정에는 최소 사용 권한인 배포 데이터베이스에서의 **db_owner** 고정 데이터베이스 역할의 멤버, PAL(게시 액세스 목록)의 멤버, 스냅샷 공유에 대한 읽기 권한 및 OLE DB 공급자의 설치 디렉터리에 대한 읽기 권한이 필요합니다. PAL에 대한 자세한 내용은 [게시자 보안 설정](security/secure-the-publisher.md)을 참조하세요.  
   
     -   **구독자에 연결**의 **로그인**, **암호**및 **암호 확인** 필드에서 구독자 연결에 사용할 로그인과 암호를 입력합니다. 이 로그인은 이미 구성되어 있어야 하며 구독 데이터베이스에서 개체를 만들 수 있는 충분한 권한을 갖고 있어야 합니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "62721675"
   
     -   개체를 모두 만들고 구독 데이터베이스에 필요한 데이터를 모두 추가한 경우에만 **초기화** 의 선택을 취소합니다.  
   
-    -   이 마법사가 완료된 다음 배포 에이전트가 스냅숏 파일을 구독자에게 전송하게 하려면 **초기화 시기** 열의 드롭다운 목록에서 **즉시** 를 선택합니다. 에이전트가 다음 실행 일정에 파일을 전송하게 하려면 **첫 번째 동기화 시** 를 선택합니다.  
+    -   이 마법사가 완료된 다음 배포 에이전트가 스냅샷 파일을 구독자에게 전송하게 하려면 **초기화 시기** 열의 드롭다운 목록에서 **즉시** 를 선택합니다. 에이전트가 다음 실행 일정에 파일을 전송하게 하려면 **첫 번째 동기화 시** 를 선택합니다.  
   
 12. **마법사 동작** 페이지에서 필요에 따라 구독을 스크립팅합니다. 자세한 내용은 [Scripting Replication](scripting-replication.md)을 참조하세요.  
   
@@ -131,15 +131,15 @@ ms.locfileid: "62721675"
   
 -   기본적으로[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대해 게시를 설정하면 **pre_creation_cmd** 아티클 속성 값이 'drop'으로 설정됩니다. 이 설정은 구독자의 테이블이 아티클의 테이블 이름과 일치하는 경우 복제가 구독자의 테이블을 삭제하도록 지정합니다. 구독자에서 기존 테이블을 계속 유지하려는 경우 각 아티클에 대해 [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) 저장 프로시저를 사용하고 **pre_creation_cmd**에 'none' 값을 지정합니다. `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`입니다.  
   
-#### <a name="to-generate-a-snapshot-for-the-publication"></a>게시에 대한 스냅숏을 생성하려면  
+#### <a name="to-generate-a-snapshot-for-the-publication"></a>게시에 대한 스냅샷을 생성하려면  
   
 1.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.  
   
-2.  게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅숏 에이전트 상태 보기**를 클릭합니다.  
+2.  게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기**를 클릭합니다.  
   
 3.  **스냅숏 에이전트 상태 보기 - \<게시>** 대화 상자에서 **시작**을 클릭합니다.  
   
- 스냅숏 에이전트에서 스냅숏 생성을 마치면 "[100%] 17개 아티클의 스냅숏이 생성되었습니다"라는 메시지가 표시됩니다.  
+ 스냅샷 에이전트에서 스냅샷 생성을 마치면 "[100%] 17개 아티클의 스냅샷이 생성되었습니다"라는 메시지가 표시됩니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 프로그래밍 방식으로[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자로의 밀어넣기 구독을 만들 수 있습니다.  
@@ -147,7 +147,7 @@ ms.locfileid: "62721675"
 > [!IMPORTANT]  
 >  가능한 경우 런타임 시 사용자에게 보안 자격 증명을 입력하라는 메시지가 표시됩니다. 자격 증명을 스크립트 파일에 저장해야 하는 경우에는 파일에 무단으로 액세스하지 못하도록 보안을 설정해야 합니다.  
   
-#### <a name="to-create-a-push-subscription-for-a-transactional-or-snapshot-publication-to-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자로의 트랜잭션 또는 스냅숏 게시에 대한 밀어넣기 구독을 만들려면  
+#### <a name="to-create-a-push-subscription-for-a-transactional-or-snapshot-publication-to-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자로의 트랜잭션 또는 스냅샷 게시에 대한 밀어넣기 구독을 만들려면  
   
 1.  게시자와 배포자 모두에[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대한 최신 OLE DB 공급자를 설치합니다. OLE DB 공급자에 대한 복제 요구 사항은 [Non-SQL Server Subscribers](non-sql/non-sql-server-subscribers.md), [Oracle Subscribers](non-sql/oracle-subscribers.md)및 [IBM DB2 Subscribers](non-sql/ibm-db2-subscribers.md)를 참조하세요.  
   

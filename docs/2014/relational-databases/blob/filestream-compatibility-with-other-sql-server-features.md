@@ -59,9 +59,9 @@ ms.locfileid: "66010189"
 ##  <a name="DatabaseSnapshot"></a> 데이터베이스 스냅숏  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 FILESTREAM 파일 그룹에 대해 [데이터베이스 스냅숏](../databases/database-snapshots-sql-server.md) 을 지원하지 않습니다. FILESTREAM 파일 그룹이 CREATE DATABASE ON 절에 들어 있으면 이 문이 실패하고 오류가 발생합니다.  
   
- FILESTREAM을 사용할 경우 FILESTREAM이 아닌 표준 파일 그룹의 데이터베이스 스냅숏을 만들 수 있습니다. FILESTREAM 파일 그룹은 이러한 데이터베이스 스냅숏에 대해 오프라인으로 표시됩니다.  
+ FILESTREAM을 사용할 경우 FILESTREAM이 아닌 표준 파일 그룹의 데이터베이스 스냅샷을 만들 수 있습니다. FILESTREAM 파일 그룹은 이러한 데이터베이스 스냅샷에 대해 오프라인으로 표시됩니다.  
   
- 데이터베이스 스냅숏의 FILESTREAM 테이블에서 실행되는 SELECT 문에는 FILESTREAM 열이 포함되지 않아야 합니다. 이 열이 포함되면 다음 오류 메시지가 반환됩니다.  
+ 데이터베이스 스냅샷의 FILESTREAM 테이블에서 실행되는 SELECT 문에는 FILESTREAM 열이 포함되지 않아야 합니다. 이 열이 포함되면 다음 오류 메시지가 반환됩니다.  
   
  `Could not continue scan with NOLOCK due to data movement.`  
   

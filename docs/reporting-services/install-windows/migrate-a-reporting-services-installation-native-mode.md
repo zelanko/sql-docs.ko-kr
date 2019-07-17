@@ -9,7 +9,7 @@ manager: kfile
 ms.date: 11/06/2018
 ms.openlocfilehash: fe461a189bcf7a123db40674a5cd035621151999
 ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570721"
@@ -90,7 +90,7 @@ ms.locfileid: "65570721"
   
 * WMI 공급자를 호출하여 데이터베이스 간에 데이터를 복사하는 코드를 작성합니다. 이 접근 방법은 [Reporting Services WMI 공급자 액세스](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md)를 참조하세요.  
   
-* 항목 수가 적은 경우 보고서 디자이너, 모델 디자이너 및 보고서 작성기에서 새 보고서 서버로 보고서 및 공유 데이터 원본을 다시 게시할 수 있습니다. 이 경우 역할 할당, 구독, 공유 일정, 보고서 스냅숏 일정, 보고서 또는 기타 항목에서 설정한 사용자 지정 속성, 모델 항목 보안 및 보고서 서버에서 설정한 속성을 다시 만듭니다. 이 작업을 따르면 보고서 기록과 보고서 실행 로그 데이터 손실에 대비해야 합니다.
+* 항목 수가 적은 경우 보고서 디자이너, 모델 디자이너 및 보고서 작성기에서 새 보고서 서버로 보고서 및 공유 데이터 원본을 다시 게시할 수 있습니다. 이 경우 역할 할당, 구독, 공유 일정, 보고서 스냅샷 일정, 보고서 또는 기타 항목에서 설정한 사용자 지정 속성, 모델 항목 보안 및 보고서 서버에서 설정한 속성을 다시 만듭니다. 이 작업을 따르면 보고서 기록과 보고서 실행 로그 데이터 손실에 대비해야 합니다.
   
 ## <a name="bkmk_before_you_start"></a> 시작하기 전에
 

@@ -52,7 +52,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |값|Description|  
 |-----------|-----------------|  
 |**0**|트랜잭션 게시|  
-|**1**|스냅숏 게시|  
+|**1**|스냅샷 게시|  
 |**2**|병합 게시|  
 |NULL(기본값)|복제에서 게시 유형을 확인하려고 합니다.|  
   
@@ -77,7 +77,7 @@ sp_replmonitorhelppublication [ @publisher = ] 'publisher'
 |**agentnotrunningthreshold**|**int**|에이전트를 실행하지 않을 가장 긴 시간에 대해 설정된 임계값입니다.|  
 |**subscriptioncount**|**int**|게시에 대한 구독 수입니다.|  
 |**runningdistagentcount**|**int**|게시에 대해 실행되는 배포 에이전트 수입니다.|  
-|**snapshot_agentname**|**sysname**|게시에 대한 스냅숏 에이전트 작업의 이름입니다.|  
+|**snapshot_agentname**|**sysname**|게시에 대한 스냅샷 에이전트 작업의 이름입니다.|  
 |**logreader_agentname**|**sysname**|트랜잭션 게시에 대한 로그 판독기 에이전트 작업의 이름입니다.|  
 |**qreader_agentname**|**sysname**|지연 업데이트를 지원하는 트랜잭션 게시에 대한 큐 판독기 에이전트 작업의 이름입니다.|  
 |**worst_runspeedPerf**|**int**|병합 게시에 대한 가장 긴 동기화 시간입니다.|  

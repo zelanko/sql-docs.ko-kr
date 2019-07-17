@@ -137,7 +137,7 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 -   재귀 공통 테이블 식을 포함한 뷰를 사용하여 데이터를 업데이트할 수 없습니다.  
   
--   CTE를 사용하여 쿼리에 커서를 정의할 수 있습니다. CTE는 커서의 결과 집합을 정의하는 *select_statement* 인수입니다. 재귀 CTE에는 빠른 정방향 전용 커서 및 정적(스냅숏) 커서만 사용할 수 있습니다. 재귀 CTE에 또 다른 커서 유형을 지정하는 경우 해당 커서 유형이 정적으로 변환됩니다.  
+-   CTE를 사용하여 쿼리에 커서를 정의할 수 있습니다. CTE는 커서의 결과 집합을 정의하는 *select_statement* 인수입니다. 재귀 CTE에는 빠른 정방향 전용 커서 및 정적(스냅샷) 커서만 사용할 수 있습니다. 재귀 CTE에 또 다른 커서 유형을 지정하는 경우 해당 커서 유형이 정적으로 변환됩니다.  
   
 -   CTE에서 원격 서버 상의 테이블을 참조할 수 있습니다. CTE의 재귀 멤버에서 원격 서버를 참조하는 경우 로컬에서 반복적으로 테이블에 액세스할 수 있도록 각 원격 테이블을 위한 스풀이 생성됩니다. CTE 쿼리인 경우 쿼리 계획에 Index Spool/Lazy Spool이 표시되며 추가 `WITH STACK` 조건자를 가집니다. 이는 재귀를 올바르게 수행하는 한 가지 방법입니다.  
   
@@ -176,7 +176,7 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-simple-common-table-expression"></a>1. 간단한 공통 테이블 식 만들기  
+### <a name="a-creating-a-simple-common-table-expression"></a>1\. 간단한 공통 테이블 식 만들기  
  다음 예에서는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]에서 각 판매 담당자의 연간 총 판매 주문 수를 보여 줍니다.  
   
 ```sql   
@@ -196,7 +196,7 @@ GROUP BY SalesYear, SalesPersonID
 ORDER BY SalesPersonID, SalesYear;  
 ```  
   
-### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>2. 공통 테이블 식을 사용한 수 제한 및 평균 보고  
+### <a name="b-using-a-common-table-expression-to-limit-counts-and-report-averages"></a>2\. 공통 테이블 식을 사용한 수 제한 및 평균 보고  
  다음 예에서는 판매 담당자의 모든 연도에 대한 평균 판매 주문 수를 보여 줍니다.  
   
 ```sql  
@@ -433,7 +433,7 @@ FROM Parts AS p
 ORDER BY ComponentLevel, AssemblyID, ComponentID;  
 ```  
   
-### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>9. UPDATE 문에서 재귀 CTE 사용  
+### <a name="i-using-a-recursive-cte-in-an-update-statement"></a>9\. UPDATE 문에서 재귀 CTE 사용  
  다음 예에서는 제품 'Road-550-W Yellow, 44' `(ProductAssemblyID``800`를 제작하는 데 사용되는 모든 부품의 `PerAssemblyQty` 값을 업데이트합니다). 공통 테이블 식은 `ProductAssemblyID 800`을 제작하는 데 사용되는 부품 및 해당 부품을 만드는 데 사용되는 구성 요소 등의 계층적 목록을 반환합니다. 이렇게 공통 테이블 식이 반환한 행만 수정됩니다.  
   
 ```sql  

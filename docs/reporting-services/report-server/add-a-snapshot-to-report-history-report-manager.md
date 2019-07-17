@@ -11,18 +11,18 @@ ms.custom: ''
 ms.date: 06/26/2019
 ms.openlocfilehash: e7244e66ec8f6aabd7684bbcd5c22e8d2604d1cb
 ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/01/2019
 ms.locfileid: "67492840"
 ---
-# <a name="add-a-snapshot-to-report-history"></a>보고서 기록에 스냅숏 추가
+# <a name="add-a-snapshot-to-report-history"></a>보고서 기록에 스냅샷 추가
 
-보고서 기록은 시간에 따라 만든 보고서 스냅숏의 모음입니다. 보고서 스냅숏은 레이아웃 정보 및 특정 시점에 검색된 쿼리 결과가 들어 있는 보고서입니다. 보고서를 선택할 때 최신 쿼리 결과를 얻을 수 있는 요청 시 실행 보고서와 달리 보고서 스냅숏은 예약된 시간에 처리되고 보고서 서버에 저장됩니다. 표시할 보고서 스냅숏을 선택하면 보고서 서버가 보고서 서버 데이터베이스에서 저장된 보고서를 검색하고 스냅숏이 만들어진 시점에 따른 보고서의 현재 데이터 및 레이아웃을 표시합니다.  
+보고서 기록은 시간에 따라 만든 보고서 스냅샷의 모음입니다. 보고서 스냅샷은 레이아웃 정보 및 특정 시점에 검색된 쿼리 결과가 들어 있는 보고서입니다. 보고서를 선택할 때 최신 쿼리 결과를 얻을 수 있는 요청 시 실행 보고서와 달리 보고서 스냅샷은 예약된 시간에 처리되고 보고서 서버에 저장됩니다. 표시할 보고서 스냅샷을 선택하면 보고서 서버가 보고서 서버 데이터베이스에서 저장된 보고서를 검색하고 스냅샷이 만들어진 시점에 따른 보고서의 현재 데이터 및 레이아웃을 표시합니다.  
   
-보고서 스냅숏은 특정 렌더링 형식으로 저장되지 않으며 사용자나 애플리케이션이 보고서 스냅숏을 요청할 때만 HTML과 같은 최종 보기 형식으로 렌더링됩니다. 지연된 렌더링은 스냅숏을 이동 가능하게 만듭니다. 요청 디바이스나 웹 브라우저에 적합한 형식으로 보고서를 렌더링할 수 있습니다.  
+보고서 스냅샷은 특정 렌더링 형식으로 저장되지 않으며 사용자나 애플리케이션이 보고서 스냅샷을 요청할 때만 HTML과 같은 최종 보기 형식으로 렌더링됩니다. 지연된 렌더링은 스냅샷을 이동 가능하게 만듭니다. 요청 디바이스나 웹 브라우저에 적합한 형식으로 보고서를 렌더링할 수 있습니다.  
   
-## <a name="to-manually-add-snapshots-to-report-history"></a>보고서 기록에 스냅숏을 수동으로 추가하려면
+## <a name="to-manually-add-snapshots-to-report-history"></a>보고서 기록에 스냅샷을 수동으로 추가하려면
   
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
@@ -36,9 +36,9 @@ ms.locfileid: "67492840"
 
 4. **적용**을 클릭합니다.
   
-## <a name="to-automatically-add-all-snapshots-to-report-history"></a>보고서 기록에 모든 스냅숏을 자동으로 추가하려면  
+## <a name="to-automatically-add-all-snapshots-to-report-history"></a>보고서 기록에 모든 스냅샷을 자동으로 추가하려면  
   
-1. 보고서 실행 스냅숏으로 실행하도록 구성된 보고서의 경우 스냅숏이 새로 고쳐질 때마다 보고서 기록에 스냅숏 복사본을 저장하도록 추가 속성을 설정할 수 있습니다.  
+1. 보고서 실행 스냅샷으로 실행하도록 구성된 보고서의 경우 스냅샷이 새로 고쳐질 때마다 보고서 기록에 스냅샷 복사본을 저장하도록 추가 속성을 설정할 수 있습니다.  
   
 2. 보고서 관리자에서 **내용** 페이지로 이동하고 기록을 보려는 항목을 마우스로 가리킨 다음 드롭다운 화살표를 클릭합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "67492840"
   
 6. **적용**을 클릭합니다.  
   
-## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>일정에 따라 보고서 기록에 스냅숏을 자동으로 추가하려면  
+## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>일정에 따라 보고서 기록에 스냅샷을 자동으로 추가하려면  
   
 1. 보고서 관리자에서 **내용** 페이지로 이동하고 기록을 보려는 항목을 마우스로 가리킨 다음 드롭다운 화살표를 클릭합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "67492840"
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
-## <a name="to-manually-add-snapshots-to-report-history"></a>보고서 기록에 스냅숏을 수동으로 추가하려면
+## <a name="to-manually-add-snapshots-to-report-history"></a>보고서 기록에 스냅샷을 수동으로 추가하려면
   
 1. 웹 포털에서의 기록을 보려면 마우스 오른쪽 단추로 클릭 하려는 항목으로 이동 합니다.  
   
@@ -115,9 +115,9 @@ ms.locfileid: "67492840"
 
 9.  **적용**을 클릭합니다.
 
-## <a name="to-automatically-add-all-snapshots-to-report-history"></a>보고서 기록에 모든 스냅숏을 자동으로 추가하려면  
+## <a name="to-automatically-add-all-snapshots-to-report-history"></a>보고서 기록에 모든 스냅샷을 자동으로 추가하려면  
   
-1. 보고서 실행 스냅숏으로 실행하도록 구성된 보고서의 경우 스냅숏이 새로 고쳐질 때마다 보고서 기록에 스냅숏 복사본을 저장하도록 추가 속성을 설정할 수 있습니다.  
+1. 보고서 실행 스냅샷으로 실행하도록 구성된 보고서의 경우 스냅샷이 새로 고쳐질 때마다 보고서 기록에 스냅샷 복사본을 저장하도록 추가 속성을 설정할 수 있습니다.  
   
 2. 웹 포털에서의 기록을 보려면 마우스 오른쪽 단추로 클릭 하려는 항목으로 이동 합니다.  
   
@@ -137,7 +137,7 @@ ms.locfileid: "67492840"
   
 9. **적용**을 선택하여 설정을 저장합니다.  
   
-## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>일정에 따라 보고서 기록에 스냅숏을 자동으로 추가하려면  
+## <a name="to-automatically-add-snapshots-to-report-history-based-on-a-schedule"></a>일정에 따라 보고서 기록에 스냅샷을 자동으로 추가하려면  
   
 1. 웹 포털에서의 기록을 보려면 마우스 오른쪽 단추로 클릭 하려는 항목으로 이동 합니다.  
   

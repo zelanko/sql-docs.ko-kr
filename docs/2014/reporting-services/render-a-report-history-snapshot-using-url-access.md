@@ -1,5 +1,5 @@
 ---
-title: URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링 | Microsoft Docs
+title: URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -23,13 +23,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107976"
 ---
-# <a name="render-a-report-history-snapshot-using-url-access"></a>URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링
+# <a name="render-a-report-history-snapshot-using-url-access"></a>URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링
   *rs:Snapshot* 매개 변수를 제공하고 이 값을 유효한 스냅숏 ID로 설정하여 보고서 기록 스냅숏을 기반으로 한 보고서를 렌더링할 수 있습니다. 매개 변수 값은 ISO(국제 표준화 기구) 8601 표준을 기반으로 하여 YYYY-MM-DDTHH:MM:SS 형식으로 사용합니다.  
   
  이 매개 변수를 생략할 경우 보고서는 보고서 서버의 보고서 실행 및 캐시 관리 옵션 설정에 따라 렌더링됩니다. 보고서 실행에 대한 자세한 내용은 [보고서 처리 속성 설정](report-server/set-report-processing-properties.md)을 참조하세요.  
   
 ## <a name="example"></a>예제  
- 다음 예는 보고서 기록 스냅숏을 검색하는 URL을 보여 줍니다.  
+ 다음 예는 보고서 기록 스냅샷을 검색하는 URL을 보여 줍니다.  
   
 ```  
 http://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  

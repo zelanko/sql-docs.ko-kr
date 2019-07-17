@@ -564,7 +564,7 @@ SELECT type
 FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'  
 ```  
   
- 데이터베이스를 만든 후의 스냅숏:  
+ 데이터베이스를 만든 후의 스냅샷:  
   
 ||||  
 |-|-|-|  

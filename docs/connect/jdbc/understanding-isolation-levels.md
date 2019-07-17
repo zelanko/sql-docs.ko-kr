@@ -13,7 +13,7 @@ ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 432da51055d0a9f250c342338770103fbe8fe4b0
 ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
-ms.translationtype: MTE75
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 06/07/2019
 ms.locfileid: "66800172"
@@ -51,7 +51,7 @@ ms.locfileid: "66800172"
 | 커밋되지 않은 읽기 | 예        | 예                 | 예     |
 | 커밋된 읽기   | 아니오         | 예                 | 예     |
 | 반복 읽기  | 아니오         | 아니오                  | 예     |
-| 스냅숏         | 아니오         | 아니오                  | 아니오      |
+| 스냅샷         | 아니오         | 아니오                  | 아니오      |
 | 직렬화 가능     | 아니오         | 아니오                  | 아니오      |
   
 두 트랜잭션이 각기 동일한 행을 검색할 때 발생할 수 있는 업데이트 손실을 방지하려면 반복 읽기 이상의 격리 수준에서 트랜잭션을 실행해야 합니다. 그런 다음 원래 검색된 값에 따라 행을 업데이트하십시오. 두 트랜잭션이 한 개의 UPDATE 문을 사용하여 행을 업데이트하더라도 업데이트가 이전에 검색된 값에 따라 수행되지 않을 경우 기본 격리 수준인 커밋된 읽기에서는 업데이트 손실이 발생하지 않습니다.  

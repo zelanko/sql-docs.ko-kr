@@ -89,7 +89,7 @@ ms.locfileid: "67860614"
   
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-#### <a name="to-change-security-settings-for-the-snapshot-agent"></a>스냅숏 에이전트의 보안 설정을 변경하려면  
+#### <a name="to-change-security-settings-for-the-snapshot-agent"></a>스냅샷 에이전트의 보안 설정을 변경하려면  
   
 1.  **게시 속성 - \<게시>** 대화 상자의 **에이전트 보안** 페이지에서 **스냅숏 에이전트** 입력란 옆에 있는 **보안 설정** 단추를 클릭합니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "67860614"
     > [!NOTE]  
     >  게시된 각 데이터베이스에 대해 하나의 로그 판독기 에이전트가 있습니다. 하나의 게시에 있는 에이전트의 보안 설정을 변경하면 게시 데이터베이스에 있는 모든 게시의 설정에 영향을 미치게 됩니다.  
   
-#### <a name="to-change-the-context-under-which-the-snapshot-agent-and-log-reader-agent-for-an-oracle-publication-make-connections-to-the-publisher"></a>Oracle 게시에 대한 게시자에 스냅숏 에이전트 및 로그 판독기 에이전트를 연결하는 컨텍스트를 변경하려면  
+#### <a name="to-change-the-context-under-which-the-snapshot-agent-and-log-reader-agent-for-an-oracle-publication-make-connections-to-the-publisher"></a>Oracle 게시에 대한 게시자에 스냅샷 에이전트 및 로그 판독기 에이전트를 연결하는 컨텍스트를 변경하려면  
   
 1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 게시자 옆에 있는 속성 단추( **...** )를 클릭합니다.  
   
@@ -262,9 +262,9 @@ ms.locfileid: "67860614"
     > [!NOTE]  
     >  복제 암호를 변경한 후 해당 암호를 사용하는 각 에이전트를 중지한 다음 다시 시작해야 에이전트에 변경 내용이 적용됩니다.  
   
-#### <a name="to-change-security-settings-for-the-snapshot-agent"></a>스냅숏 에이전트의 보안 설정을 변경하려면  
+#### <a name="to-change-security-settings-for-the-snapshot-agent"></a>스냅샷 에이전트의 보안 설정을 변경하려면  
   
-1.  게시자에서 [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)을 실행하고 **@publication** 를 참조하세요. 이렇게 하면 스냅숏 에이전트에 대한 현재 보안 설정이 반환됩니다.  
+1.  게시자에서 [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)을 실행하고 **@publication** 를 참조하세요. 이렇게 하면 스냅샷 에이전트에 대한 현재 보안 설정이 반환됩니다.  
   
 2.  게시자에서 [sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)을 실행하고 **@publication** 및 다음 중 변경할 보안 설정을 하나 이상 지정합니다.  
   
@@ -377,7 +377,7 @@ ms.locfileid: "67860614"
     > [!NOTE]  
     >  에이전트 로그인 또는 암호를 변경한 후 에이전트를 중지하고 다시 시작해야 변경 내용이 적용됩니다.  
   
-#### <a name="to-change-security-settings-for-the-snapshot-agent-to-generate-a-filtered-snapshot-for-a-subscriber"></a>구독자에 대한 필터링된 스냅숏을 생성하도록 스냅숏 에이전트의 보안 설정을 변경하려면  
+#### <a name="to-change-security-settings-for-the-snapshot-agent-to-generate-a-filtered-snapshot-for-a-subscriber"></a>구독자에 대한 필터링된 스냅샷을 생성하도록 스냅샷 에이전트의 보안 설정을 변경하려면  
   
 1.  게시자에서 [sp_helpdynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)을 실행하고 **@publication** 를 참조하세요. 결과 집합에서 변경할 구독자 파티션의 **job_name** 값을 확인합니다.  
   

@@ -90,7 +90,7 @@ sys.dm_db_index_operational_stats (
 |**leaf_insert_count**|**bigint**|리프 수준 삽입의 누적 횟수입니다.|    
 |**leaf_delete_count**|**bigint**|리프 수준 삭제의 누적 횟수입니다. 삭제 된 레코드를 먼저 삭제할 변수로 표시 되지 않는 leaf_delete_count만 증가 됩니다. 먼저 고스팅는 삭제 된 레코드에 대 한 **leaf_ghost_count** 대신 증분됩니다.|    
 |**leaf_update_count**|**bigint**|리프 수준 업데이트의 누적 횟수입니다.|    
-|**leaf_ghost_count**|**bigint**|삭제하도록 표시되어 있지만 아직 제거되지 않은 리프 수준 행의 누적 개수입니다. 이 개수 유령으로 표시 하지 않아도 즉시 삭제 된 레코드를 포함 하지 않습니다. 이러한 행은 지정된 간격을 두고 정리 스레드를 통해 제거됩니다. 처리 중인 스냅숏 격리 트랜잭션으로 인해 보유된 행은 이 값에 포함되지 않습니다.|    
+|**leaf_ghost_count**|**bigint**|삭제하도록 표시되어 있지만 아직 제거되지 않은 리프 수준 행의 누적 개수입니다. 이 개수 유령으로 표시 하지 않아도 즉시 삭제 된 레코드를 포함 하지 않습니다. 이러한 행은 지정된 간격을 두고 정리 스레드를 통해 제거됩니다. 처리 중인 스냅샷 격리 트랜잭션으로 인해 보유된 행은 이 값에 포함되지 않습니다.|    
 |**nonleaf_insert_count**|**bigint**|리프 수준 위에서 발생한 삽입의 누적 횟수입니다.<br /><br /> 0 = 힙 또는 columnstore|    
 |**nonleaf_delete_count**|**bigint**|리프 수준 위에서 발생한 삭제의 누적 횟수입니다.<br /><br /> 0 = 힙 또는 columnstore|    
 |**nonleaf_update_count**|**bigint**|리프 수준 위에서 발생한 업데이트의 누적 횟수입니다.<br /><br /> 0 = 힙 또는 columnstore|    

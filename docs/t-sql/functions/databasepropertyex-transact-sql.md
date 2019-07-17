@@ -79,7 +79,7 @@ DATABASEPROPERTYEX ( database , property )
 |IsNumericRoundAbortEnabled|식의 전체 자릿수에서 일부가 손실되면 오류가 발생합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsParameterizationForced|PARAMETERIZATION 데이터베이스 SET 옵션이 FORCED입니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력|  
 |IsQuotedIdentifiersEnabled|식별자에 큰따옴표를 사용할 수 있습니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
-|IsPublished|복제가 설치된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 테이블을 스냅숏 또는 트랜잭션 복제용으로 게시하도록 지원합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
+|IsPublished|복제가 설치된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 테이블을 스냅샷 또는 트랜잭션 복제용으로 게시하도록 지원합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsRecursiveTriggersEnabled|트리거를 재귀적으로 실행하도록 설정합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsSubscribed|데이터베이스가 게시를 구독합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  
 |IsSyncWithBackup|데이터베이스는 게시된 데이터베이스이거나 배포 데이터베이스이며, 트랜잭션 복제를 중단하지 않는 복원을 지원합니다.|1: TRUE<br /><br /> 0: FALSE<br /><br /> NULL: 잘못된 입력<br /><br /> 기본 데이터 형식: **int**|  

@@ -47,13 +47,13 @@ ms.locfileid: "67910111"
 |**sync_objid**|**int**|아티클 정의를 나타내는 테이블 또는 뷰의 ID입니다.|  
 |**type**|**tinyint**|아티클의 유형입니다.<br /><br /> **1** = 로그 기반 아티클입니다.<br /><br /> **3** = 수동 필터가 있는 로그 기반 아티클입니다.<br /><br /> **5** = 수동 뷰가 있는 로그 기반 아티클입니다.<br /><br /> **7** = 수동 필터 및 수동 뷰가 있는 로그 기반 아티클입니다.|  
 |**upd_cmd**|**nvarchar(255)**|UPDATE 시 실행할 명령입니다. 그렇지 않으면 로그에서 만들어집니다.|  
-|**schema_option**|**binary**|스냅숏에 스크립팅할 게시된 개체의 속성을 나타냅니다. 지원 되는 스키마 옵션의 목록을 참조 하세요 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)합니다.|  
+|**schema_option**|**binary**|스냅샷에 스크립팅할 게시된 개체의 속성을 나타냅니다. 지원 되는 스키마 옵션의 목록을 참조 하세요 [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)합니다.|  
 |**dest_owner**|**nvarchar(128)**|대상 데이터베이스에 있는 테이블의 소유자입니다.|  
 |**ins_scripting_proc**|**int**|INSERT 문이 복제될 때 실행되는 사용자 지정 저장 프로시저 또는 스크립트의 개체 식별자입니다.|  
 |**del_scripting_proc**|**int**|DELETE 문이 복제될 때 실행되는 사용자 지정 저장 프로시저 또는 스크립트의 개체 식별자입니다.|  
 |**upd_scripting_proc**|**int**|UPDATE 문이 복제될 때 실행되는 사용자 지정 저장 프로시저 또는 스크립트의 개체 식별자입니다.|  
 |**custom_script**|**int**|DDD 트리거 완료 시 실행되는 사용자 지정 스크립트 또는 프로시저의 개체 식별자입니다.|  
-|**fire_triggers_on_snapshot**|**int**|복제된 트리거가 스냅숏이 적용될 때 실행될지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 트리거가 실행 되지 않습니다.<br /><br /> **1** = 트리거가 실행 됩니다.|  
+|**fire_triggers_on_snapshot**|**int**|복제된 트리거가 스냅샷이 적용될 때 실행될지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 트리거가 실행 되지 않습니다.<br /><br /> **1** = 트리거가 실행 됩니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 테이블 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

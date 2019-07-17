@@ -241,7 +241,7 @@
       href: ../reporting-services/work-with-shared-datasets-web-portal.md
     - name: 페이지를 매긴 보고서 작업
       href: ../reporting-services/working-with-paginated-reports-web-portal.md
-    - name: 스냅숏 작업
+    - name: 스냅샷 작업
       href: ../reporting-services/working-with-snapshots-web-portal.md
     - name: 구독 작업
       href: ../reporting-services/working-with-subscriptions-web-portal.md
@@ -335,7 +335,7 @@
           href: ../reporting-services/report-server/windows-application-log.md
         - name: 보고서 실행 확인
           href: ../reporting-services/report-server/verifying-a-report-run.md
-    - name: '성능, 스냅숏, 캐시(Reporting Services)'
+    - name: '성능, 스냅샷, 캐시(Reporting Services)'
       href: ../reporting-services/report-server/performance-snapshots-caching-reporting-services.md
       items:
         - name: 보고서 서버 성능 모니터링
@@ -355,7 +355,7 @@
           href: ../reporting-services/report-server/setting-time-out-values-for-report-and-shared-dataset-processing-ssrs.md
         - name: 큰 보고서 처리
           href: ../reporting-services/report-server/process-large-reports.md
-        - name: 보고서 및 스냅숏 크기 제한
+        - name: 보고서 및 스냅샷 크기 제한
           href: ../reporting-services/report-server/report-and-snapshot-size-limits.md
         - name: 보고서 캐시(SSRS)
           href: ../reporting-services/report-server/caching-reports-ssrs.md
@@ -367,9 +367,9 @@
           href: ../reporting-services/report-server/cache-a-shared-dataset.md
         - name: 보고서 캐시(보고서 관리자)
           href: ../reporting-services/report-server/cache-a-report-report-manager.md
-        - name: '보고서 기록에서 스냅숏 만들기, 수정 및 삭제'
+        - name: '보고서 기록에서 스냅샷 만들기, 수정 및 삭제'
           href: ../reporting-services/report-server/create-modify-and-delete-snapshots-in-report-history.md
-        - name: 보고서 기록에 스냅숏 추가
+        - name: 보고서 기록에 스냅샷 추가
           href: ../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md
         - name: 보고서 기록 만들기
           href: ../reporting-services/report-server/create-report-history-reporting-services-in-sharepoint-integrated-mode.md
@@ -1452,7 +1452,7 @@
       href: ../reporting-services/export-a-report-using-url-access.md
     - name: URL 액세스를 사용하여 보고서 검색
       href: ../reporting-services/search-a-report-using-url-access.md
-    - name: URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링
+    - name: URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링
       href: ../reporting-services/render-a-report-history-snapshot-using-url-access.md
 - name: 관계형 데이터베이스
   items:

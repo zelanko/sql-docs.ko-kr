@@ -47,11 +47,11 @@ ms.locfileid: "68097999"
   
 -   SOAP 요청을 관리하기 위한 HTTP 엔드포인트. 자세한 내용은 [Implementing Endpoints](../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)를 참조하세요.  
   
--   동시성 향상을 위한 스냅숏 격리 및 행 수준 버전 관리. 자세한 내용은 [스냅숏 격리 사용](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)을 참조하세요.  
+-   동시성 향상을 위한 스냅샷 격리 및 행 수준 버전 관리. 자세한 내용은 [Working with Snapshot Isolation](../../relational-databases/native-client/features/working-with-snapshot-isolation.md)을 참조하세요.  
   
 -   XML 스키마 컬렉션, XML 인덱스 및 XML 데이터 형식으로 XML 데이터의 유효성 검사와 스토리지 기능 제공. 자세한 내용은 [XML 스키마 컬렉션 &#40;SQL Server&#41; ](../../relational-databases/xml/xml-schema-collections-sql-server.md) 하 고 [Using XML Schemas](../../relational-databases/server-management-objects-smo/tasks/using-xml-schemas.md).  
   
--   데이터베이스의 읽기 전용 복사본을 만들기 위한 스냅숏 데이터베이스  
+-   데이터베이스의 읽기 전용 복사본을 만들기 위한 스냅샷 데이터베이스  
   
 -   [!INCLUDE[ssSB](../../includes/sssb-md.md)]의 메시지 기반 통신 지원. 자세한 내용은 [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)을 참조하세요.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "68097999"
   
  **스냅숏 격리/행 수준 버전 관리**  
   
- 스냅숏 격리(행 수준 버전 관리)는 새로운 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 속성으로 표현됩니다.  
+ 스냅샷 격리(행 수준 버전 관리)는 새로운 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체 속성으로 표현됩니다.  
   
  **XML 스키마 Namespace, XML 인덱스 및 XML 데이터 형식**  
   
@@ -162,7 +162,7 @@ ms.locfileid: "68097999"
   
  **스냅숏 데이터베이스**  
   
- 스냅숏 데이터베이스는 특정 시점에 대한 지정된 데이터베이스의 읽기 전용 복사본입니다. <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성을 사용하여 스냅숏 데이터베이스를 지정할 수 있습니다.  
+ 스냅샷 데이터베이스는 특정 시점에 대한 지정된 데이터베이스의 읽기 전용 복사본입니다. <xref:Microsoft.SqlServer.Management.Smo.Database.IsDatabaseSnapshot%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Database> 속성을 사용하여 스냅숏 데이터베이스를 지정할 수 있습니다.  
   
  **Service Broker**  
   

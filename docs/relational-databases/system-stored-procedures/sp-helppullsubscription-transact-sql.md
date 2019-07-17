@@ -67,7 +67,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**enabled_for_synmgr**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] 동기화 관리자를 통해 구독을 동기화할 수 있는지 여부입니다.|  
 |**구독 guid**|**binary(16)**|게시에 대한 구독 버전의 전역 식별자입니다.|  
 |**subid**|**binary(16)**|익명 구독의 전역 식별자입니다.|  
-|**immediate_sync**|**bit**|스냅숏 에이전트가 실행될 때마다 동기화 파일이 생성 또는 다시 생성되는지 여부를 나타냅니다.|  
+|**immediate_sync**|**bit**|스냅샷 에이전트가 실행될 때마다 동기화 파일이 생성 또는 다시 생성되는지 여부를 나타냅니다.|  
 |**게시자 로그인**|**sysname**|게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 로그인 ID입니다.|  
 |**게시자 암호**|**nvarchar(524)**|게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증에 사용되는 암호입니다.|  
 |**게시자 security_mode**|**int**|게시자에서 구현된 보안 모드입니다.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증<br /><br /> **1** = Windows 인증<br /><br /> **2** = 동기화 트리거를 사용 하는 정적 **sysservers** 항목을 원격 프로시저 호출 (RPC), 및 *게시자* 정의 해야 합니다는 **sysservers**테이블에서 원격 서버 또는 연결 된 서버입니다.|  
@@ -79,8 +79,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**ftp_port**|**int**|이전 버전과의 호환성을 위해서만 지원됩니다.|  
 |**ftp_login**|**sysname**|이전 버전과의 호환성을 위해서만 지원됩니다.|  
 |**ftp_password**|**nvarchar(524)**|이전 버전과의 호환성을 위해서만 지원됩니다.|  
-|**alt_snapshot_folder**|**nvarchar(255)**|기본 위치가 아니거나 기본 위치에 추가된 위치일 경우, 스냅숏 폴더가 저장되는 위치입니다.|  
-|**working_directory**|**nvarchar(255)**|해당 옵션이 지정된 경우에 스냅숏 파일이 FTP(파일 전송 프로토콜)를 사용하여 전송되는 디렉터리의 정규화된 경로입니다.|  
+|**alt_snapshot_folder**|**nvarchar(255)**|기본 위치가 아니거나 기본 위치에 추가된 위치일 경우, 스냅샷 폴더가 저장되는 위치입니다.|  
+|**working_directory**|**nvarchar(255)**|해당 옵션이 지정된 경우에 스냅샷 파일이 FTP(파일 전송 프로토콜)를 사용하여 전송되는 디렉터리의 정규화된 경로입니다.|  
 |**use_ftp**|**bit**|구독이 인터넷을 통해 게시를 구독하고 있으며 FTP 주소 속성이 구성되었습니다. 하는 경우 **0**, 구독은 FTP를 사용 하지 않습니다. 하는 경우 **1**, 구독은 FTP를 사용 합니다.|  
 |**publication_type**|**int**|다음과 같은 게시의 복제 유형을 지정합니다.<br /><br /> **0** = 트랜잭션 복제<br /><br /> **1** = 스냅숏 복제<br /><br /> **2** = 병합 복제|  
 |**dts_package_name**|**sysname**|DTS(데이터 변환 서비스) 패키지의 이름을 지정합니다.|  

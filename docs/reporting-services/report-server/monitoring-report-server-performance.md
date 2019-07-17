@@ -61,7 +61,7 @@ SQL Server 2016 Reporting Services 또는 이후 (SSRS) 같은 성능 개체가 
   
 -   보고서 서버 성능을 모니터링하기 위한**MSRS 2011 Web Service** 및 **MSRS 2011 SharePoint Mode Web Service** . 이러한 성능 개체에는 일반적으로 대화형 보고서 보기 작업을 통해 시작된 보고서 서버 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 이러한 카운터는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 이 보고서 서버 웹 서비스를 중지할 때마다 다시 설정됩니다.  
   
--   예약된 작업 및 보고서 배달을 모니터링하기 위한**MSRS 2011 Windows Service** 및 **MSRS 2011 Windows Service SharePoint Mode** to monitor scheduled operations 및 report delivery. 이러한 성능 개체에는 예약된 작업을 통해 시작된 보고서 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 예약된 작업에는 구독 및 배달, 보고서 실행 스냅숏 및 보고서 기록이 포함됩니다.  
+-   예약된 작업 및 보고서 배달을 모니터링하기 위한**MSRS 2011 Windows Service** 및 **MSRS 2011 Windows Service SharePoint Mode** to monitor scheduled operations 및 report delivery. 이러한 성능 개체에는 예약된 작업을 통해 시작된 보고서 처리를 추적하는 데 사용되는 카운터 모음이 들어 있습니다. 예약된 작업에는 구독 및 배달, 보고서 실행 스냅샷 및 보고서 기록이 포함됩니다.  
   
 -   HTTP 관련 이벤트 및 메모리 관리를 모니터링하기 위한**ReportServer:Service** 및 **ReportServerSharePoint:Service**. 이러한 카운터는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 한정되며 요청, 연결 및 로그인 시도와 같은 보고서 서버에 대한 HTTP 관련 이벤트를 추적합니다. 이 성능 개체에는 메모리 관리 관련 카운터도 들어 있습니다.  
   

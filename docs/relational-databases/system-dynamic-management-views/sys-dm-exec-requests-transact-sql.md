@@ -77,7 +77,7 @@ ms.locfileid: "67936952"
 |ansi_padding|**bit**|1 = ANSI_PADDING 설정이 요청에 대해 ON입니다.<br /><br /> 그렇지 않으면 0입니다.<br /><br /> Null을 허용하지 않습니다.|  
 |ansi_nulls|**bit**|1 = ANSI_NULLS 설정이 요청에 대해 ON입니다. 그렇지 않으면 0입니다.<br /><br /> Null을 허용하지 않습니다.|  
 |concat_null_yields_null|**bit**|1 = CONCAT_NULL_YIELDS_NULL 설정이 요청에 대해 ON입니다. 그렇지 않으면 0입니다.<br /><br /> Null을 허용하지 않습니다.|  
-|transaction_isolation_level|**smallint**|이 요청이 만들어진 트랜잭션의 격리 수준을 나타냅니다. Null을 허용하지 않습니다.<br /><br /> 0 = 지정되지 않음<br /><br /> 1 = 커밋되지 않은 읽기<br /><br /> 2 = 커밋된 읽기<br /><br /> 3 = 반복 읽기<br /><br /> 4 = 직렬화 가능<br /><br /> 5 = 스냅숏|  
+|transaction_isolation_level|**smallint**|이 요청이 만들어진 트랜잭션의 격리 수준을 나타냅니다. Null을 허용하지 않습니다.<br /><br /> 0 = 지정되지 않음<br /><br /> 1 = 커밋되지 않은 읽기<br /><br /> 2 = 커밋된 읽기<br /><br /> 3 = 반복 읽기<br /><br /> 4 = 직렬화 가능<br /><br /> 5 = 스냅샷|  
 |lock_timeout|**int**|이 요청에 대한 잠금 제한 시간(밀리초)입니다. Null을 허용하지 않습니다.|  
 |deadlock_priority|**int**|요청에 대한 DEADLOCK_PRIORITY 설정입니다. Null을 허용하지 않습니다.|  
 |row_count|**bigint**|이 요청에서 클라이언트에 반환된 행 수입니다. Null을 허용하지 않습니다.|  

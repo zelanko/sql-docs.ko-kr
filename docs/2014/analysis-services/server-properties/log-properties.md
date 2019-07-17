@@ -158,12 +158,12 @@ ms.locfileid: "66068915"
  비행 레코더가 롤오버된 빈도(초)를 정의하는 부호 있는 32비트 정수 속성입니다.  
   
  **FlightRecorder\SnapshotDefinitionFile**  
- 스냅숏을 사용할 때 서버에 실행된 검색 명령을 포함하여 스냅숏 정의 파일의 이름을 정의하는 문자열 속성입니다.  
+ 스냅샷을 사용할 때 서버에 실행된 검색 명령을 포함하여 스냅샷 정의 파일의 이름을 정의하는 문자열 속성입니다.  
   
  이 속성의 기본값은 빈 문자열이며 이후 파일 이름 FlightRecorderSnapshotDef.xml이 기본값이 됩니다.  
   
  **FlightRecorder\SnapshotFrequencySec**  
- 스냅숏 빈도(초)를 정의하는 부호 있는 32비트 정수 속성입니다.  
+ 스냅샷 빈도(초)를 정의하는 부호 있는 32비트 정수 속성입니다.  
   
  **FlightRecorder\TraceDefinitionFile**  
  비행 레코더 추적 정의 파일의 이름을 지정하는 문자열 속성입니다.  
