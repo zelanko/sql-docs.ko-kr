@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 411b2e71-4421-4ef5-900d-5af068750899
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d5e62117f620a93d61d9216ad46383c116c930ac
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cace39108f3f99d5c165f42b4337e837e1fb7c5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121034"
 ---
 # <a name="sysdmcontinuouscopystatus-azure-sql-database"></a>sys.dm_continuous_copy_status(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -35,14 +34,14 @@ ms.locfileid: "56023884"
 SQL Database V12를 사용 하는 경우 사용 해야 [sys.dm_geo_replication_link_status](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md) (있으므로 *sys.dm_continuous_copy_status* V11에만 적용 됩니다).
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**copy_guid**|**uniqueidentifier**|복제본 데이터베이스의 고유 ID입니다.|  
 |**partner_server**|**sysname**|연결된 SQL Database 서버의 이름입니다.|  
 |**partner_database**|**sysname**|연결된 SQL Database 서버의 연결된 데이터베이스 이름입니다.|  
 |**last_replication**|**datetimeoffset**|마지막으로 적용된 복제된 트랜잭션의 타임스탬프입니다.|  
 |**replication_lag_sec**|**int**|현재 시간과 활성 보조 데이터베이스에서 승인되지 않은 주 데이터베이스에서 성공적으로 커밋된 마지막 트랜잭션의 타임스탬프 간의 시간 차이(초)입니다.|  
-|**replication_state**|**tinyint**|이 데이터베이스에 대 한 연속 복사 복제의 상태입니다. 가능한 값 및 해당 설명을 보려면은 다음과 같습니다.<br /><br /> 1: 시드 중. 복제 대상이 시드되고 있고 트랜잭션 측면에서 일관되지 않은 상태입니다. 시드가 완료될 때까지 활성 보조 데이터베이스에 연결할 수 없습니다. <br />2: 따라잡는 중. 활성 보조 데이터베이스가 주 데이터베이스를 현재 따라잡고 있고 트랜잭션 측면에서 일관된 상태입니다.<br />3: 다시 시드하는 중. 활성 보조 데이터베이스가 복구할 수 없는 복제 오류로 인해 자동으로 다시 시드되고 있습니다.<br />4: 일시 중지 상태입니다. 이는 활성 연속 복사 관계가 아닙니다. 일반적으로 이 상태는 상호 링크에 사용할 수 있는 대역폭이 주 데이터베이스의 트랜잭션 작업 수준에 충분하지 않음을 나타냅니다. 그러나 연속 복사 관계는 그대로 유지됩니다.|  
+|**replication_state**|**tinyint**|이 데이터베이스에 대 한 연속 복사 복제의 상태입니다. 가능한 값 및 해당 설명을 보려면은 다음과 같습니다.<br /><br /> 1: 시드입니다. 복제 대상이 시드되고 있고 트랜잭션 측면에서 일관되지 않은 상태입니다. 시드가 완료될 때까지 활성 보조 데이터베이스에 연결할 수 없습니다. <br />2: 따라 잡는 중. 활성 보조 데이터베이스가 주 데이터베이스를 현재 따라잡고 있고 트랜잭션 측면에서 일관된 상태입니다.<br />3: 다시 시드해야 합니다. 활성 보조 데이터베이스가 복구할 수 없는 복제 오류로 인해 자동으로 다시 시드되고 있습니다.<br />4: 일시 중지 상태입니다. 이는 활성 연속 복사 관계가 아닙니다. 일반적으로 이 상태는 상호 링크에 사용할 수 있는 대역폭이 주 데이터베이스의 트랜잭션 작업 수준에 충분하지 않음을 나타냅니다. 그러나 연속 복사 관계는 그대로 유지됩니다.|  
 |**replication_state_desc**|**nvarchar(256)**|replication_state에 대한 설명으로, 다음 중 하나입니다.<br /><br /> SEEDING<br /><br /> CATCH_UP<br /><br /> RE_SEEDING<br /><br /> SUSPENDED|  
 |**is_rpo_limit_reached**|**bit**|이 값은 항상 0으로 설정됩니다.|  
 |**is_target_role**|**bit**|0 = 복사 관계의 원본<br /><br /> 1 = 복사 관계의 대상|  
@@ -51,7 +50,7 @@ SQL Database V12를 사용 하는 경우 사용 해야 [sys.dm_geo_replication_l
 ## <a name="permissions"></a>사용 권한  
  데이터를 검색 하려면의 멤버 자격이 필요 합니다 **db_owner** 데이터베이스 역할. 멤버, dbo 사용자는 **dbmanager** 데이터베이스 역할 및 sa 로그인을 모두 쿼리할 수이 보기도 있습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sys.dm_continuous_copy_status** 보기가 만들어집니다 합니다 **리소스** 데이터베이스 및 논리 마스터를 포함 한 모든 데이터베이스에 표시 됩니다. 그러나 논리 master에서 이 뷰를 쿼리하면 빈 집합이 반환됩니다.  
   
  데이터베이스에서 해당 데이터베이스에 대 한 행에서 연속 복사 관계 종료 되는 경우는 **sys.dm_continuous_copy_status** 뷰가 사라집니다.  

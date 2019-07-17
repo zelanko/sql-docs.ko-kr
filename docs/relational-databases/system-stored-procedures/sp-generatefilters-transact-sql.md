@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0aeb5b7a-89d1-4bd5-a371-c27fa924360a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 077adede972aa0873efc92b250a3f79f96774c70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 410bdf157cc4194191649e6a6e6ab6d92ea033b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124146"
 ---
 # <a name="spgeneratefilters-transact-sql"></a>sp_generatefilters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_generatefilters [ @publication =] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_generatefilters** 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

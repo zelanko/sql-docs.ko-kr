@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3af78971a17035091ab8a72bf0c9a8fe90250dd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2960c42690a9528763321bc882bb788b437cb66a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036206"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 함수
 **규칙**  
@@ -75,7 +74,7 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="diagnostics"></a>진단  
  때 **SQLBrowseConnect** SQL_ERROR, SQL_SUCCESS_WITH_INFO 또는 SQL_NEED_DATA 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여를 *HandleType* 호출의와 *ConnectionHandle 핸들*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLBrowseConnect** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *OutConnectionString* 충분히 잘렸습니다 하므로 전체 검색 결과 문자열을 반환할 수 없습니다. 버퍼 **StringLength2Ptr* 잘리지 않은 찾아보기 결과 문자열의 길이 포함 합니다. (함수는 SQL_NEED_DATA를 반환합니다.)|  

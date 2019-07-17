@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab1ed7614ff315986f38d497f00687784785790b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4e15f0755cac41f0f262582417e0e22ead39f9be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124558"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_estimate_data_compression_savings
 ## <a name="result-sets"></a>결과 집합  
  테이블, 인덱스 또는 파티션의 현재 크기 및 예상 크기를 제공하는 다음 결과 집합이 반환됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|테이블 또는 인덱싱된 뷰의 이름입니다.|  
 |schema_name|**sysname**|테이블 또는 인덱싱된 뷰의 스키마입니다.|  
@@ -91,7 +90,7 @@ sp_estimate_data_compression_savings
 |sample_size_with_current_compression_setting (KB)|**bigint**|현재 압축 설정을 사용하는 샘플의 크기입니다. 여기에는 조각화가 포함됩니다.|  
 |sample_size_with_requested_compression_setting (KB)|**bigint**|요청된 압축 설정을 사용하여 만든 샘플의 크기이며, 해당되는 경우 조각화가 없는 것으로 가정하고 기존 채우기 비율을 사용합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  테이블 또는 파티션 행, 페이지, columnstore 또는 columnstore 보관 압축을 사용 하는 경우 발생할 수 있는 비용 절감을 예측 하려면 sp_estimate_data_compression_savings를 사용 합니다. 예를 들어 평균 행 크기가 40% 줄어드는 경우 개체 크기를 40% 줄일 수 있습니다. 공간 크기는 채우기 비율과 행 크기에 따라 달라지므로 공간이 절약되지 않을 수도 있습니다. 예를 들어 8000바이트 길이의 행이 있고 행 크기를 40% 줄인 경우에도 여전히 데이터 페이지 하나에 행 하나만 넣을 수 있습니다. 이 경우에는 공간이 절약되지 않습니다.  
   
  sp_estimate_data_compression_savings 실행 결과에서 테이블이 확장됨을 나타내는 경우 테이블의 많은 행이 데이터 형식의 전체 자릿수를 거의 모두 사용하며 압축된 형식에 필요한 작은 오버헤드 추가분이 압축으로 얻을 수 있는 공간 절약보다 큰 것입니다. 드물지만 이러한 경우에는 압축을 사용하지 마십시오.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a01132d30a293bca084669a733834c7d034048e4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6fe9798b6a9f560621eba9806e25081f72e316c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122543"
 ---
 # <a name="sphelpfilegroup-transact-sql"></a>sp_helpfilegroup(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**groupname**|**sysname**|파일 그룹의 이름입니다.|  
 |**groupid**|**smallint**|파일 그룹의 숫자 ID입니다.|  
@@ -55,7 +54,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
  하는 경우 *이름을* 는 지정 하면 각 파일에 한 행씩 반환 됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**file_in_group**|**sysname**|파일 그룹에 있는 파일의 논리적 이름입니다.|  
 |**fileid**|**smallint**|파일의 숫자 ID입니다.|  
@@ -69,7 +68,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-all-filegroups-in-a-database"></a>1. 데이터베이스에 있는 모든 파일 그룹 반환  
+### <a name="a-returning-all-filegroups-in-a-database"></a>A. 데이터베이스에 있는 모든 파일 그룹 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스에 있는 파일 그룹에 대한 정보를 반환합니다.  
   
 ```sql  
@@ -79,7 +78,7 @@ EXEC sp_helpfilegroup;
 GO  
 ```  
   
-### <a name="b-returning-all-files-in-a-filegroup"></a>2. 파일 그룹에 있는 모든 파일 반환  
+### <a name="b-returning-all-files-in-a-filegroup"></a>2\. 파일 그룹에 있는 모든 파일 반환  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스의 `PRIMARY` 파일 그룹에 있는 모든 파일에 대한 정보를 반환합니다.  
   
 ```sql  

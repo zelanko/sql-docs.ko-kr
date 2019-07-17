@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 41595e6aeee31c5503531f2eb13e9e50c13430b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf121a37bf0229ba3366e18c149530f316fcdc56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098280"
 ---
 # <a name="setting-properties---smo"></a>속성 설정 - SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47790861"
  속성에 읽기/쓰기 권한 또는 읽기 전용 권한이 있는지에 따라 속성 값을 수정하거나 검색할 수 있습니다. 또한 특정 속성을 설정해야 개체를 만들 수 있습니다. 자세한 내용은 특정 개체에 대한 SMO 참조를 참조하십시오.  
   
 > [!NOTE]  
->  자식 개체의 컬렉션은 개체의 속성으로 나타납니다. 예를 들어 **Tables** 컬렉션은 **Server** 개체의 속성입니다. 자세한 내용은 [를 사용 하 여 컬렉션](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)합니다.  
+>  자식 개체의 컬렉션은 개체의 속성으로 나타납니다. 예를 들어 **Tables** 컬렉션은 **Server** 개체의 속성입니다. 자세한 내용은 [Using Collections](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md)을 참조하세요.  
   
  개체의 속성은 속성 컬렉션의 멤버입니다. 속성 컬렉션을 사용하여 개체의 모든 속성을 반복할 수 있습니다.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "47790861"
   
 -   이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 새로운 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능을 나타내는 속성에 액세스하려는 경우와 같이 서버 버전에서 속성을 지원하지 않습니다.  
   
--   서버 데이터를 제공 하지 않습니다 속성의 경우와 같이 액세스 하려는 나타내는 속성을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 되지 않은 구성 요소입니다.  
+-   설치되지 않은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 요소를 나타내는 속성에 액세스하려는 경우와 같이 서버에서 속성 데이터를 제공하지 않습니다.  
   
  <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> 및 <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException> SMO 실행을 catch하여 이러한 문제를 처리할 수 있습니다.  
   
@@ -52,11 +51,11 @@ ms.locfileid: "47790861"
   
 2.  전체 로드됨. 아무 속성이나 참조하면 나머지 속성이 신속하게 로드되어 초기화되고 사용할 수 있게 됩니다.  
   
-3.  많은 메모리를 사용하는 속성. 사용할 수 없는 나머지 속성은 많은 메모리를 사용 하며를 <xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A> 속성 값이 true (같은 <xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A>). 이러한 속성은 구체적으로 참조될 때만 로드됩니다.  
+3.  많은 메모리를 사용하는 속성. 사용할 수 없는 나머지 속성은 많은 메모리를 사용하며 <xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A> 속성 값이 true입니다(예: <xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A>). 이러한 속성은 구체적으로 참조될 때만 로드됩니다.  
   
- 애플리케이션이 부분적으로 로드됨 상태에서 제공되는 속성 이외의 추가 속성을 인출하는 경우 쿼리를 제출하여 이러한 추가 속성을 검색하고 전체 로드됨 상태로 확장됩니다. 이로 인해 클라이언트와 서버 간에 불필요한 트래픽이 발생할 수 있습니다. 호출 하 여 더 많은 최적화를 수행할 수 있습니다는 <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드. <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드를 사용하면 개체를 초기화할 때 로드되는 속성을 지정할 수 있습니다.  
+ 애플리케이션이 부분적으로 로드됨 상태에서 제공되는 속성 이외의 추가 속성을 인출하는 경우 쿼리를 제출하여 이러한 추가 속성을 검색하고 전체 로드됨 상태로 확장됩니다. 이로 인해 클라이언트와 서버 간에 불필요한 트래픽이 발생할 수 있습니다. <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드를 호출하여 보다 최적화할 수 있습니다. <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드를 사용하면 개체를 초기화할 때 로드되는 속성을 지정할 수 있습니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드는 다시 설정될 때까지 또는 나머지 응용 프로그램에 대해 속성 로드 동작을 설정합니다. 사용 하 여 원래 동작을 저장할 수 있습니다는 <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> 메서드 및 필요에 따라 복원 합니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드는 다시 설정될 때까지 또는 나머지 응용 프로그램에 대해 속성 로드 동작을 설정합니다. <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> 메서드를 사용하여 원래 동작을 저장하고 필요한 경우 복원할 수 있습니다.  
   
 ## <a name="examples"></a>예  
 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
@@ -91,7 +90,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql;
 ```  
   
 ## <a name="setting-various-properties-before-an-object-is-created-in-visual-basic"></a>Visual Basic에서 개체를 만들기 전에 다양한 속성 설정  
- 직접 설정 하는 방법을 보여 주는 코드 예제는 <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> 의 속성을 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체 및 만들고를 만들기 전에 열을 추가 하는 방법을 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체.  
+ 이 코드 예제에서는 <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Table> 속성을 직접 설정하는 방법과 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체를 만들기 전에 열을 만들고 추가하는 방법을 보여 줍니다.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -122,7 +121,7 @@ tb.Create()
 ```
   
 ## <a name="setting-various-properties-before-an-object-is-created-in-visual-c"></a>Visual C#에서 개체를 만들기 전에 다양한 속성 설정  
- 직접 설정 하는 방법을 보여 주는 코드 예제는 <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> 의 속성을 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체 및 만들고를 만들기 전에 열을 추가 하는 방법을 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체.  
+ 이 코드 예제에서는 <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> 개체의 <xref:Microsoft.SqlServer.Management.Smo.Table> 속성을 직접 설정하는 방법과 <xref:Microsoft.SqlServer.Management.Smo.Table> 개체를 만들기 전에 열을 만들고 추가하는 방법을 보여 줍니다.  
   
 ```csharp  
 {   
@@ -157,7 +156,7 @@ tb.Create();
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Visual Basic에서 개체의 모든 속성 반복  
  이 코드 예제에서는 반복를 **속성** 의 컬렉션을 <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> 개체 및에 표시 합니다는 [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] 출력 화면.  
   
- 예에서는 <xref:Microsoft.SqlServer.Management.Smo.Property> 개체 이기도 하므로 대괄호로에 넣 었을 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 키워드입니다.  
+ 이 예에서 <xref:Microsoft.SqlServer.Management.Smo.Property> 개체는 [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] 키워드이기도 하기 때문에 대괄호 안에 있습니다.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -202,7 +201,7 @@ sp.QuotedIdentifierStatus = false;
 ```  
   
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>Visual Basic에서 기본 초기화 필드 설정  
- 이 코드 예제에서는 SMO 프로그램에서 초기화되는 개체 속성 수를 최소화하는 방법을 보여 줍니다. 포함 해야 합니다 `using System.Collections.Specialized`; 문을 사용 하는 <xref:System.Collections.Specialized.StringCollection> 개체입니다.  
+ 이 코드 예제에서는 SMO 프로그램에서 초기화되는 개체 속성 수를 최소화하는 방법을 보여 줍니다. <xref:System.Collections.Specialized.StringCollection> 개체를 사용하려면 `using System.Collections.Specialized` 문을 포함해야 합니다.  
   
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스로 전송되는 문 수와 이 최적화를 비교할 수 있습니다.  
   
@@ -234,7 +233,7 @@ srv.SetDefaultInitFields(typ, sc)
 ```
   
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>Visual C#에서 기본 초기화 필드 설정  
- 이 코드 예제에서는 SMO 프로그램에서 초기화되는 개체 속성 수를 최소화하는 방법을 보여 줍니다. 포함 해야 합니다 `using System.Collections.Specialized`; 문을 사용 하는 <xref:System.Collections.Specialized.StringCollection> 개체입니다.  
+ 이 코드 예제에서는 SMO 프로그램에서 초기화되는 개체 속성 수를 최소화하는 방법을 보여 줍니다. <xref:System.Collections.Specialized.StringCollection> 개체를 사용하려면 `using System.Collections.Specialized` 문을 포함해야 합니다.  
   
  [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스로 전송되는 문 수와 이 최적화를 비교할 수 있습니다.  
   

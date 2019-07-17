@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: f96fc1ae-b798-4b05-82a7-564ae6ef23b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bc3e113ab9ace64cac0d41cb34bdec1c44355e48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e49d5ed290d95453c376713cabb914a495dfca8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032988"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139719"
 ---
 # <a name="mssubscriptionproperties-transact-sql"></a>MSsubscription_properties(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSsubscription_properties** 테이블이 구독자에 복제 에이전트를 실행 하는 데 필요한 매개 변수 정보에 대 한 행을 포함 합니다. 이 테이블은 끌어오기 구독의 경우 구독자의 구독 데이터베이스에 저장되고 밀어넣기 구독의 경우 배포자의 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**publisher**|**sysname**|게시자의 이름입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  

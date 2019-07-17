@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dfd404aa-c455-41b5-b69d-b6739575033c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eacb57e4db5d312d04fdcd1e3b06b446f62635cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15765d0aaf10c268a0aed864dc497c8a000eedc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082030"
 ---
 # <a name="connecting-to-a-visual-foxpro-data-source"></a>Visual FoxPro 데이터 원본에 연결
 Microsoft Office 응용 프로그램을 사용 하 여 또는 SQL API를 사용 하 여 Visual FoxPro 데이터 원본에 연결할 수 있습니다.  

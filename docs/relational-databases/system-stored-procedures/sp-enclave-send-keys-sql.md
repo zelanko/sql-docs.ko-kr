@@ -18,14 +18,13 @@ helpviewer_keywords:
 - sp_enclave_send_keys
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 6540cdd36cccba4f5a7ccb3beddf31ce00cd9107
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: b3d5ed50ac407beebfb54370cf91f0f3b8ba3101
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124690"
 ---
 # <a name="spenclavesendkeys----transact-sql"></a>sp_enclave_send_keys    (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -51,7 +50,7 @@ sp_enclave_send_keys
 
 이 저장된 프로시저에 결과 집합이 없습니다.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 **sp_enclave_send_keys** 다음 조건이 모두 충족 되 면 enclave 사용 열 암호화 키가 enclave를 보냅니다.
 
@@ -68,7 +67,7 @@ sp_enclave_send_keys
 EXEC sp_enclave_send_keys;  
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
  [보안 enclaves와 함께 always Encrypted &#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
  [자습서: 임의 암호화를 만들고 사용 하 여 enclave 사용 열에서 인덱스를 사용 하 여](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   

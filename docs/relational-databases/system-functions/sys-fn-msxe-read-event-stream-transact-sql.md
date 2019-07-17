@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 587180830491c10b6dc09a2af8d28718bf612e87
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 886b874aeee47f71eb8b50dba27fdfdf8ea45c62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752201"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082687"
 ---
 # <a name="sysfnmsxereadeventstream-transact-sql"></a>sys.fn_MSxe_read_event_stream(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -55,9 +54,9 @@ sys.fn_MSxe_read_event_stream ( session_name)
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|유형|**정수 (4)**|이벤트 유형입니다. Null을 허용하지 않습니다.|  
+|type|**정수 (4)**|이벤트 유형입니다. Null을 허용하지 않습니다.|  
 |data|**이미지 (16)**|이벤트 이미지 데이터로, Null을 허용합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d96004357962ee822df7458a30d740fc836de658
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42628ab49e30a4c6dada2eafb505435b8b389de6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62723884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124719"
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_dropuser [ @name_in_db = ] 'user'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_dropuser** 실행 **sp_revokedbaccess** 현재 데이터베이스에서 사용자를 제거 합니다.  
   
  사용 하 여 **sp_helpuser** 현재 데이터베이스에서 제거할 수 있는 사용자 이름의 목록을 표시 합니다.  

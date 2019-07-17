@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 44e7b670ef5f16b6df861e939f9b8b2d9ace8dd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104422"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole(Transact-SQL)
 
@@ -88,7 +87,7 @@ sp_setapprole [ @rolename = ] 'role',
   
 ## <a name="examples"></a>예  
   
-### <a name="a-activating-an-application-role-without-the-encrypt-option"></a>1. 암호화 옵션을 사용하지 않고 응용 프로그램 역할 활성화
+### <a name="a-activating-an-application-role-without-the-encrypt-option"></a>1\. 암호화 옵션을 사용하지 않고 응용 프로그램 역할 활성화
 
  다음 예에서는 현재 사용자가 사용하는 응용 프로그램에 대해 특별히 지정한 사용 권한을 부여하도록 만든 일반 텍스트 암호인 `SalesAppRole`를 사용하여 `AsDeF00MbXX`이라는 응용 프로그램 역할을 활성화합니다.
 
@@ -97,7 +96,7 @@ EXEC sys.sp_setapprole 'SalesApprole', 'AsDeF00MbXX';
 GO
 ```
 
-### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>2. 쿠키를 사용하여 응용 프로그램 역할을 활성화한 다음 원래 컨텍스트로 되돌리기
+### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>2\. 쿠키를 사용하여 응용 프로그램 역할을 활성화한 다음 원래 컨텍스트로 되돌리기
 
  다음 예에서는 `Sales11` 암호로 `fdsd896#gfdbfdkjgh700mM` 응용 프로그램 역할을 활성화하고 쿠키를 만듭니다. 다음 예에서는 현재 사용자의 이름을 반환한 다음 `sp_unsetapprole`을 실행하여 원래 컨텍스트로 되돌아갑니다.  
 

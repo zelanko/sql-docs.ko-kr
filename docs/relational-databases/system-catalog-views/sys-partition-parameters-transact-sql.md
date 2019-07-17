@@ -19,27 +19,26 @@ helpviewer_keywords:
 ms.assetid: 2012ed9d-3ea3-4c29-9b78-dfa54a392dce
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 464fc14c2dbb192fb5c06aee7c718cfec5806d54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32fe257f14c1e085a43b4150ee933888a83d5d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125338"
 ---
 # <a name="syspartitionparameters-transact-sql"></a>sys.partition_parameters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   파티션 함수의 각 매개 변수당 하나의 행을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**function_id**|**int**|이 매개 변수가 속한 파티션 함수의 ID입니다.|  
 |**parameter_id**|**int**|매개 변수의 ID입니다. 파티션 함수 내에서 고유하며 1로 시작됩니다.|  
 |**system_type_id**|**tinyint**|매개 변수 시스템 유형의 ID입니다. 에 해당 하는 **system_type_id** 열을 **sys.types** 카탈로그 뷰.|  
 |**max_length**|**smallint**|매개 변수의 최대 길이(바이트)입니다.|  
-|**전체 자릿수**|**tinyint**|숫자 기반일 경우 매개 변수의 전체 자릿수이고 그렇지 않으면 0입니다.|  
+|**precision**|**tinyint**|숫자 기반일 경우 매개 변수의 전체 자릿수이고 그렇지 않으면 0입니다.|  
 |**scale**|**tinyint**|숫자 기반일 경우 매개 변수의 소수 자릿수이고 그렇지 않으면 0입니다.|  
 |**collation_name**|**sysname**|문자 기반일 경우 매개 변수의 데이터 정렬 이름이고 그렇지 않으면 NULL입니다.|  
 |**user_type_id**|**int**|유형 ID입니다. 데이터베이스 내에서 고유합니다. 시스템 데이터 형식에 대 한 **user_type_id** = **system_type_id**합니다.|  

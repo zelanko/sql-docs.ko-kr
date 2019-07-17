@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 16462ede-4393-4293-a598-ca88c48ca70b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7410371f7d96f9770536a129de3a916b5f297a74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5127d041817a41dcf2d6fb4ed65070c87d05dd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108479"
 ---
 # <a name="spcursoropen-transact-sql"></a>sp_cursoropen(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *scrollopt*  
  스크롤 옵션입니다. *scrollopt* 다음 중 하나를 필요로 하는 선택적 매개 변수 **int** 값을 입력 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -75,7 +74,7 @@ sp_cursoropen cursor OUTPUT, stmt
  *ccopt*  
  동시성 제어 옵션입니다. *ccopt* 다음 중 하나를 필요로 하는 선택적 매개 변수 **int** 값을 입력 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS(이전의 LOCKCC)|  
@@ -148,7 +147,7 @@ sp_cursoropen cursor OUTPUT, stmt
 > [!NOTE]  
 >  RPC 반환 매개 변수 및 결과 TDS 열 형식 정보를 사용 하 여 집합을 sp_cursoropen 프로시저가 성공적으로 실행 하는 경우 (0xa0 및 0xa1 메시지) 전송 됩니다. 프로시저가 실패하면 하나 이상의 RPC 오류 메시지가 전송됩니다. 두 경우 모두 행 데이터가 반환 됩니다 및 *수행* 메시지 수는 0이 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이전 버전을 사용 중인 경우 0xa0, 0xa1(SELECT 문의 표준 항목)이 0xa5 및 0xa4 토큰 스트림과 함께 반환됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 버전을 사용 중인 경우에는 0x81(SELECT 문의 표준 항목)이 0xa5 및 0xa4 토큰 스트림과 함께 반환됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="stmt-parameter"></a>stmt 매개 변수  
  하는 경우 *stmt* 실행을 지정 저장된 프로시저의 입력된 매개 변수는 하거나 것으로 정의의 일부로 상수를 *stmt* 문자열을 읽거나로 지정 된 *boundparam* 인수입니다. 이 방법을 사용하면 선언된 변수를 바인딩된 매개 변수로 전달할 수 있습니다.  

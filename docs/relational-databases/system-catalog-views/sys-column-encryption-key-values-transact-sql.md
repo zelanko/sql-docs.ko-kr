@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 440875ab-b0e9-4966-8c16-01503558fedd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e2c80afe1636243baefa944fb1d38f1f077bddb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2c4a9f214ca9a947e8f488dd347f69b487b963e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47782212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140116"
 ---
 # <a name="syscolumnencryptionkeyvalues-transact-sql"></a>sys.column_encryption_key_values (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   암호화 키 (CEKs)을 사용 하 여 만들 열 암호화 된 값에 대 한 정보를 반환 하면 [열 암호화 키 만들기](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 또는 [열 암호화 키 변경 &#40;Transact SQL&#41; ](../../t-sql/statements/alter-column-encryption-key-transact-sql.md)문. 각 행의 열 (CMK) 마스터 키로 암호화 하 여 CEK 값을 나타냅니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**column_encryption_key_id**|**int**|데이터베이스에 CEK의 ID입니다.|  
 |**column_master_key_id**|**int**|CEK 값을 암호화 하는 데 사용 된 열 마스터 키의 ID입니다.|  

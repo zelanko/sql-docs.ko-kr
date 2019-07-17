@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 302d807b70e4cceb7cf25bffd0af637df7c4ad8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120162"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  
  다음 표에서는 게시자의 속성 및 해당 속성 값을 설명합니다.  
   
-|속성|값|Description|  
+|속성|값|설명|  
 |--------------|------------|-----------------|  
 |**active**|**true**|게시자를 활성화합니다.|  
 ||**false**|게시자를 비활성화합니다.|  
@@ -70,7 +69,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changedistpublisher** 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

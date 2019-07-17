@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1fd069336a52b0a27ae927880f749c02d2c1d43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0dbddc71b0d647246d10dad16ad72d533df16de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023351"
 ---
 # <a name="parameter-binding-offsets"></a>매개 변수 바인딩 오프셋
 응용 프로그램에서 오프셋은 바인딩된 매개 변수 버퍼 주소 및 해당 길이/표시기를 추가 지정할 수 있습니다 때 버퍼 주소 **SQLExecDirect** 또는 **SQLExecute** 라고 합니다. 이러한 추가 하면 이러한 작업에 사용 되는 주소를 결정 합니다.  

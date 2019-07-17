@@ -18,20 +18,19 @@ helpviewer_keywords:
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 41ae978e31db70f0cc49469d5ec14ae6f075ab7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1d232d602f2496fff03ed050a8faf11b53e718b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124920"
 ---
 # <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   컬렉션 항목의 수집기 유형에 대한 정보를 제공합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**collector_type_uid**|**uniqueidentifer**|컬렉션 형식의 GUID입니다. Null을 허용하지 않습니다.|  
 |**name**|**sysname**|컬렉션 형식의 이름입니다. Null을 허용하지 않습니다.|  

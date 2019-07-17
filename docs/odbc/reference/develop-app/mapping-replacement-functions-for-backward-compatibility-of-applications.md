@@ -18,26 +18,25 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 099fd0ff318a77f1f1916395fbd13087ab8ba18b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 45cec32e818eab1ec5586196eadef998b8f988ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036394"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>애플리케이션의 이전 버전과의 호환성을 위한 대체 함수 매핑
 ODBC *3.x* ODBC를 통해 작업 응용 프로그램 *3.x* ODBC에 대 한 드라이버 관리자가 작동 *2.x* 드라이버 없는 새 기능을 사용 하기만 합니다. 그러나 모두 중복 기능 및 변경 된 동작 방식에 영향 그렇게 하는 ODBC *3.x* ODBC 응용 프로그램 작동 *2.x* 드라이버입니다. ODBC를 사용 하 여 작업 하는 경우 *2.x* 드라이버를 드라이버 관리자 매핑됩니다 다음 ODBC *3.x* 함수를 하나 이상의 ODBC 바뀐 *2.x* 함수에는 해당 ODBC *2.x* 함수입니다.  
   
 |ODBC *3.x* 함수|ODBC *2.x* 함수|  
 |-------------------------|-------------------------|  
-|**SQLAllocHandle**|**SQLAllocEnv**, **SQLAllocConnect**, or **SQLAllocStmt**|  
+|**SQLAllocHandle**|**SQLAllocEnv**하십시오 **SQLAllocConnect**, 또는 **SQLAllocStmt**|  
 |**SQLBulkOperations**|**SQLSetPos**|  
 |**SQLColAttribute**|**SQLColAttributes**|  
 |**SQLEndTran**|**SQLTransact**|  
 |**SQLFetch**|**SQLExtendedFetch**|  
 |**SQLFetchScroll**|**SQLExtendedFetch**|  
-|**SQLFreeHandle**|**SQLFreeEnv**, **SQLFreeConnect**, or **SQLFreeStmt**|  
+|**SQLFreeHandle**|**SQLFreeEnv**하십시오 **SQLFreeConnect**, 또는 **SQLFreeStmt**|  
 |**SQLGetConnectAttr**|**SQLGetConnectOption**|  
 |**SQLGetDiagRec**|**SQLError**|  
 |**SQLGetStmtAttr**|**SQLGetStmtOption**[1]|  

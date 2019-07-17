@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4d08d886-6d8b-40fd-8544-13032f4bf6c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c8a5b88f3fdca03be7740ba086e7ff61edbf684
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 203ad92dd6abfc71b0fdeddc466752612e666cee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100449"
 ---
 # <a name="length-of-the-product-cycle"></a>제품 주기의 길이
 상호 운용성에 대 한 마지막 질문 시간입니다. 일반적으로 상호 운용 가능한 응용 프로그램을 개발 noninteroperable 단일 개발 보다 더 오래 걸립니다. 이유는 응용 프로그램 DBMS 기능을 확인, 다양 한 Dbms에 대 한 동일한 작업을 다르게 수행, 다른 것 이지만 일부 Dbms에서 지 원하는 기능을 해결 하며 등입니다.  

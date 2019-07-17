@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: bbca796a-9bb5-4a62-9ca8-1d255984553d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0cc6153993ffd5febbc9fdaa7a06b477ea3aad1f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+ms.openlocfilehash: c05aa2d1543cfc3ebd1cbab6c199cd2992febfe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070469"
 ---
 # <a name="sysasymmetrickeys-transact-sql"></a>sys.asymmetric_keys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,8 +39,8 @@ ms.locfileid: "47683261"
 |**asymmetric_key_id**|**int**|키 ID입니다. 데이터베이스 내에서 고유합니다.|  
 |**pvt_key_encryption_type**|**char(2)**|키가 암호화된 방법입니다.<br /><br /> NA = 암호화되지 않음<br /><br /> MK = 마스터 키로 암호화됨<br /><br /> PW = 사용자 정의 암호로 암호화됨<br /><br /> SK = 서비스 마스터 키로 암호화됨|  
 |**pvt_key_encryption_type_desc**|**nvarchar(60)**|프라이빗 키를 암호화하는 방법에 대한 설명입니다.<br /><br /> NO_PRIVATE_KEY<br /><br /> ENCRYPTED_BY_MASTER_KEY<br /><br /> ENCRYPTED_BY_PASSWORD<br /><br /> ENCRYPTED_BY_SERVICE_MASTER_KEY|  
-|**지문**|**varbinary(32)**|키의 SHA-1 해시입니다. 해시는 전역적으로 고유합니다.|  
-|**알고리즘**|**char(2)**|키에 사용된 알고리즘입니다.<br /><br /> 1R = 512비트 RSA<br /><br /> 2R = 1024비트 RSA<br /><br /> 3R = 2048비트 RSA|  
+|**thumbprint**|**varbinary(32)**|키의 SHA-1 해시입니다. 해시는 전역적으로 고유합니다.|  
+|**algorithm**|**char(2)**|키에 사용된 알고리즘입니다.<br /><br /> 1R = 512비트 RSA<br /><br /> 2R = 1024비트 RSA<br /><br /> 3R = 2048비트 RSA|  
 |**algorithm_desc**|**nvarchar(60)**|키에 사용된 알고리즘에 대한 설명입니다.<br /><br /> RSA_512<br /><br /> RSA_1024<br /><br /> RSA_2048|  
 |**key_length**|**int**|키의 비트 길이입니다.|  
 |**sid**|**varbinary(85)**|이 키의 로그인 SID입니다. EKM(Extensible Key Management) 키의 경우 이 값은 NULL입니다.|  

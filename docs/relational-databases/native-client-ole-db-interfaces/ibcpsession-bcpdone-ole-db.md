@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eda345764ef6f8b917f1496e05c8cb73471c9624
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cec04c6cd1fac02dd2ef128fe556fe4e011e2b0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091065"
 ---
 # <a name="ibcpsessionbcpdone-ole-db"></a>IBCPSession::BCPDone(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47638051"
 HRESULT BCPDone(void);  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **BCPDone** 메서드를 호출한 후에는 [IBCPSession](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-ole-db.md) 인터페이스에 대해 다른 작업을 호출할 수 없습니다. [IBCPSession::BCPInit](../../relational-databases/native-client-ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) 메서드를 호출하여 새 대량 복사 작업을 시작하는 것만 가능합니다. 이 동작은 [IRowsetFastLoad::Commit](../../relational-databases/native-client-ole-db-interfaces/irowsetfastload-commit-ole-db.md) 메서드를 호출하는 것과 유사합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -50,7 +49,7 @@ HRESULT BCPDone(void);
 ## <a name="example"></a>예제  
  이 예제에서는 **IBCPSession** 인터페이스를 사용하는 방법을 보여 줍니다.  
   
- 이 예제를 실행하기 전에 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 실행해야 합니다.  
+ 이 예제를 실행하기 전에 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 실행해야 합니다.  
   
 ```  
 create table fltest(col1 int, col2 int, col3 image)  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4cd2fa6f-9c76-4b7a-ae18-d4e5fd2f03f5
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 887380136c96cb9cb1dbcd8d9d04b486daaf6659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a06c23b5e6860886f98c3505f711f76a12cfbb15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486102"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102604"
 ---
 # <a name="transactions-master-data-services"></a>트랜잭션(Master Data Services)
 
@@ -55,7 +54,7 @@ ms.locfileid: "65486102"
   
  다음 저장 프로시저를 호출하여 트랜잭션 로그를 정리할 수도 있습니다.  
   
-|저장 프로시저|Description|  
+|저장 프로시저|설명|  
 |----------------------|-----------------|  
 |mdm.udpTransactionsCleanup|트랜잭션 기록을 정리합니다.|  
 |mdm.udpValidationsCleanup|유효성 검사 기록을 정리합니다.|  

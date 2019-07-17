@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf9a01b2-14bf-458c-a73c-2a58ddef32d8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5af98bd8f16d7278b932ad89f1c81c58ddb1fb54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d32e4dc27568b37f273ef654ebd45d26ca23e555
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997769"
 ---
 # <a name="set-ansi-command"></a>SET ANSI 명령
 길이가 다른 문자열을 비교 하는 방법을 사용 하 여 결정 됩니다는 = Visual FoxPro SQL 명령에는 연산자입니다.  
@@ -51,7 +50,7 @@ SET ANSI ON | OFF
   
  결과 True (합니다. T.)의 경우 ANSI 설정 꺼져 있으므로 비교를 'Tom' 후 중지 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  ANSI 설정 여부를 두 문자열 중 짧은 공백으로 SQL 문자열 비교를 수행 하는 경우를 결정 합니다. ANSI 설정에 없는 영향을 주지는 = = 연산자; 사용 하는 경우는 = = 연산자, 더 짧은 문자열에는 항상 비교에 사용할 만큼 공백으로 채워집니다.  
   
 ## <a name="string-order"></a>문자열 순서  

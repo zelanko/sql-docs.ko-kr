@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc08b69d-a38d-4f27-a356-5bce29e6248c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 28e8334aa0dfb9c35abbb915ece778961abd84ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b92b93148d7baf1782820ccff6b033983bc6de5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047326"
 ---
 # <a name="change-a-version-flag-name-master-data-services"></a>버전 플래그 이름 변경(Master Data Services)
 

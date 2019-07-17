@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: be2fc3e82e1da18a12af4bc4756811225e85a280
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 241ab17847a040e33c1fdb5e116e39fbc535d16d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62707257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073095"
 ---
 # <a name="---comment-dmx-summary"></a>-(주석) (DMX) 요약
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62707257"
  *Comment_Text*  
  주석 텍스트를 포함하는 문자열입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 연산자는 한 줄로 된 주석 또는 중첩된 주석에 사용합니다. --를 사용하여 입력한 주석은 줄 바꿈 문자로 구분됩니다.  
   
  주석의 길이에는 제한이 없습니다.  

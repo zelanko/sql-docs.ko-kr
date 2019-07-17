@@ -10,12 +10,12 @@ ms.assetid: 7633f631-ffad-469a-8441-8831a6a9f932
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 89c8ab8693ae814e9b471fe8212f8a1961d09873
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 986b151c12abcc12036bc653b7e41c6833e04f26
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267897"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259878"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>DB2 용 SQL Server Migration Assistant (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for DB2는 DB2 데이터베이스 마이그레이션 도구 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 및 Linux (2017 미리 보기) 또는 Azure SQL DB입니다. DB2 용 SSMA DB2 데이터베이스 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 개체에서 이러한 개체를 만듭니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 DB2에서 데이터를 마이그레이션합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL DB입니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "63267897"
   
 ## <a name="contents"></a>내용  
   
-|섹션|Description|  
+|섹션|설명|  
 |-----------|---------------|  
 |[DB2용 SSMA의 새로운 기능](https://msdn.microsoft.com/1cc38f85-3caa-42d0-8c76-a380c1d15c67)|이 버전의 DB2 용 SSMA의 새로운 기능|  
 |[클라이언트가 DB2 용 SSMA 설치 &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|필수 구성 요소 및 실행 하는 컴퓨터의 DB2 클라이언트 및 필수 구성 요소에 대 한 SSMA를 설치 하기 위한 지침을 제공 하는 항목이 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  

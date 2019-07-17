@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 77a0e3f1795545e553347ae699e719af2ad506b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27ebcdf656effb97529bea42972be96f9a993cfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62959641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139910"
 ---
 # <a name="spivindexhasnullcols-transact-sql"></a>sp_ivindexhasnullcols(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_ivindexhasnullcols** 트랜잭션 복제에 사용 됩니다.  
   
  기본적으로 게시에 있는 인덱싱된 뷰 아티클은 구독자에서 테이블로 만들어집니다. 단, 인덱싱된 열에서 NULL 값을 허용하는 경우 인덱싱된 뷰는 구독자에서 테이블 대신 인덱싱된 뷰로 만들어집니다. 이 저장 프로시저를 실행하면 현재 인덱싱된 뷰에 이 문제가 있는지 여부를 사용자에게 경고할 수 있습니다.  

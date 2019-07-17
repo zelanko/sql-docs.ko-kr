@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4563ec53f3ed12081e91b5010ae00a71b6c2feb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d48a374d7d84c1137f082eb12dec638557b14e5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62677334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036666"
 ---
 # <a name="tail-mdx"></a>Tail(MDX)
 
@@ -35,7 +34,7 @@ Tail(Set_Expression [ ,Count ] )
  *개수*  
  반환할 튜플 수를 지정하는 유효한 숫자 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **비상** 함수는 지정된 된 집합의 끝에서 지정 된 튜플 수가 반환 합니다. 요소의 순서는 유지됩니다. 기본값인 *개수* 1입니다. 지정된 튜플 수가 1보다 작은 경우 이 함수는 빈 집합을 반환합니다. 지정된 튜플 수가 집합의 튜플 수를 초과할 경우에는 원래 집합을 반환합니다.  
   
 ## <a name="example"></a>예제  

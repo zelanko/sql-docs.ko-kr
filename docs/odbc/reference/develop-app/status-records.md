@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4a987f69-158f-4cc4-a31b-2b7dd8dcbb87
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 986cd3c48104bfe822934eb415b854b8e976f242
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6ed360c39b87efe851bcbbb5c60762288ea1719
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114278"
 ---
 # <a name="status-records"></a>상태 레코드
 상태 레코드의 필드를 사용 하면 특정 오류 또는 SQLSTATE, 원시 오류 번호, 진단 메시지, 열 번호 및 행 번호를 포함 하 여 드라이버 관리자, 드라이버 또는 데이터 원본에 의해 반환 된 경고에 대 한 정보가 있습니다. 함수 SQL_ERROR, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_NEED_DATA 또는 SQL_STILL_EXECUTING을 반환 하는 경우에 상태 레코드를 만들 수 있습니다. 상태 레코드의 필드의 전체 목록은 참조 합니다 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 함수 설명 합니다.  

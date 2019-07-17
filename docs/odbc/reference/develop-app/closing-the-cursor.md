@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f19bf5e-6d8c-40ae-a975-cfd62a0790ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 632a922abb544a379892dfa168f55efd605304c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de22797bdcf4ff526a8c17aee313567da3114b60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125439"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036537"
 ---
 # <a name="closing-the-cursor"></a>커서 닫기
 호출 응용 프로그램이 커서를 사용 하 여 완료 되 면 **SQLCloseCursor** 를 커서를 닫습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  

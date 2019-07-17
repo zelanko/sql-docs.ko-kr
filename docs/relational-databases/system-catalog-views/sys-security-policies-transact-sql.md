@@ -20,28 +20,27 @@ helpviewer_keywords:
 ms.assetid: 35362f5b-e601-4049-9e1d-c5307e823831
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b93943109267db79b1c8475eb3e1875950f9970a
-ms.sourcegitcommit: 11ab8a241a6d884b113b3cf475b2b9ed61ff00e3
+ms.openlocfilehash: d6eec5c523e2bdd321af145f19d0b5e7e7cba39b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135308"
 ---
 # <a name="syssecuritypolicies-transact-sql"></a>sys.security_policies (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
   데이터베이스의 각 보안 정책에 대 한 행을 반환 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|데이터베이스 내에서 고유한 보안 정책의 이름입니다.|  
+|name|**sysname**|데이터베이스 내에서 고유한 보안 정책의 이름입니다.|  
 |object_id|**int**|보안 정책의 ID입니다.|  
 |principal_id|**int**|데이터베이스에 등록된 보안 정책 소유자의 ID입니다. 소유자가 스키마를 통해 결정되는 경우 NULL입니다.|  
 |schema_id|**int**|개체가 상주하는 스키마의 ID입니다.|  
 |parent_object_id|**int**|정책이 속하는 개체의 ID입니다. 0이어야 합니다.|  
-|유형|**vachar(2)**|여야 **SP**합니다.|  
+|type|**vachar(2)**|여야 **SP**합니다.|  
 |type_desc|**nvarchar(60)**|**SECURITY_POLICY**.|  
 |create_date|**datetime**|보안 정책이 만들어진 UTC 날짜입니다.|  
 |modify_date|**datetime**|보안 정책이 마지막으로 수정된 UTC 날짜입니다.|  

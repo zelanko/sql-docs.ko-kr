@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25505e0b96c627feb51fd59abfe587851520b724
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8cb78229ea20d5b4c1b01b17c9fef1d85ca83b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106317"
 ---
 # <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSmerge_settingshistory** 병합 복제 토폴로지에서 각 변경에 대 한 하나의 행이 병합 복제의 경우 아티클 및 게시 속성에 대 한 변경 내용의 기록을 유지 관리 테이블을 사용 합니다. 또한 이 테이블에는 초기 속성 설정이 이루어진 시간에 대한 정보도 저장됩니다. 이 테이블은 게시 및 구독 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**eventtime**|**datetime**|이벤트가 발생한 datetime입니다.|  
 |**pubid**|**uniqueidentifier**|지정된 게시의 고유 ID입니다.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c0edeee-d43a-4466-a177-bf2d2435707a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3c5ad31437cf2639d6b8478d173c7522fa3e9fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec94f3e02b720617e8f7369b12a916c2bbbe7b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63272939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093806"
 ---
 # <a name="translator-specification-subkeys"></a>변환기 사양 서브 키
 ODBC 변환기 하위 키에 나열 된 각 translator 자체의 하위 키를 있습니다. 이 하위 키는 ODBC 변환기 하위 키 아래에서 해당 값으로 동일한 이름이 있습니다. 이 하위 키 아래의 값 변환기 및 변환기 설치 Dll 사용 횟수의 전체 경로 나열합니다. 값의 형식은 다음 표에 나와 있는 것 처럼입니다.  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdf0984f172657ad45ee6da0a09de5e0e457b003
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032743"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +66,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**TABLE_QUALIFIER**|**sysname**|테이블 한정자 이름입니다. 이 열은 NULL이 될 수 있습니다.|  
 |**TABLE_OWNER**|**sysname**|테이블 소유자 이름입니다. 이 열은 항상 값을 반환합니다.|  
@@ -79,14 +78,14 @@ sp_statistics [ @table_name = ] 'table_name'
 |**SEQ_IN_INDEX**|**smallint**|인덱스 내의 열 위치입니다.|  
 |**COLUMN_NAME**|**sysname**|각 열에 대 한 열 이름 합니다 **TABLE_NAME** 반환 합니다. 이 열은 항상 값을 반환합니다.|  
 |**COLLATION**|**char(1)**|데이터 정렬에 사용되는 순서입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> A = 오름차순<br /><br /> D = 내림차순<br /><br /> NULL = 해당 사항 없음|  
-|**CARDINALITY**|**int**|테이블의 행 수 또는 인덱스의 고유한 값입니다.|  
-|**PAGES**|**int**|인덱스 또는 테이블을 저장할 페이지의 번호입니다.|  
+|**카디널리티**|**int**|테이블의 행 수 또는 인덱스의 고유한 값입니다.|  
+|**페이지**|**int**|인덱스 또는 테이블을 저장할 페이지의 번호입니다.|  
 |**FILTER_CONDITION**|**varchar(128)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 값을 반환하지 않습니다.|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  결과 집합의 인덱스는 열을 기준으로 오름차순 나타나지 **NON_UNIQUE**를 **형식**를 **INDEX_NAME**, 및 **SEQ_IN_INDEX**합니다.  
   
  클러스터형 인덱스 유형은 테이블 데이터가 그 안에서 인덱스 순서로 저장된 인덱스를 의미합니다. 이에 해당 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클러스터형 인덱스입니다.  

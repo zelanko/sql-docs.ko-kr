@@ -3,18 +3,17 @@ title: 만들기 및 Linux에서 SQL Server에 대 한 작업 실행
 description: 이 자습서에서는 Linux의 SQL Server 에이전트 작업을 실행 하는 방법을 보여줍니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1d93d95e-9c89-4274-9b3f-fa2608ec2792
-ms.openlocfilehash: 436d7af77557863c647b172062149d26a01ae326
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 5abd2db590a89350f45497d7f94b81940a0ec5bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065148"
 ---
 # <a name="create-and-run-sql-server-agent-jobs-on-linux"></a>만들기 및 Linux에서 SQL Server 에이전트 작업 실행
 

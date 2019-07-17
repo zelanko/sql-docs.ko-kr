@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d6fe956591b6bde0c5e6b074115fec8724995a59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38ac7a3f4c966f9496f5ff9a0855960da8a38fb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135877"
 ---
 # <a name="currentordinal-mdx"></a>CurrentOrdinal(MDX)
 
@@ -32,7 +31,7 @@ Set_Expression.CurrentOrdinal
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  와 같은 집합을 통해 반복 하는 경우는 [Filter (MDX)](../mdx/filter-mdx.md) 또는 [Generate (MDX)](../mdx/generate-mdx.md) 함수를 **CurrentOrdinal** 함수의 반복 수를 반환 합니다.  
   
 ## <a name="examples"></a>예  

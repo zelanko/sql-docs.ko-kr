@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: df7698d222c2c2f0f68138eaa5f6289106b97659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8d476e2f21693254eac5fc4712d53ac854e74ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62799874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139997"
 ---
 # <a name="syscolumnstoresegments-transact-sql"></a>sys.column_store_segments(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
 Columnstore 인덱스의 각 열 세그먼트에 대 한 하나의 행을 반환 합니다. 그룹당 열당 하나의 열 세그먼트가 있습니다. 예를 들어 10 개의 rowgroup 34 열과 테이블 340 행을 반환합니다. 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**partition_id**|**bigint**|파티션 ID를 나타냅니다. 데이터베이스 내에서 고유합니다.|  
 |**hobt_id**|**bigint**|이 Columnstore 인덱스를 가진 테이블의 B-트리 인덱스(hobt) 또는 힙의 ID입니다.|  
@@ -51,7 +50,7 @@ Columnstore 인덱스의 각 열 세그먼트에 대 한 하나의 행을 반환
 |**null_value**|**bigint**|Null을 나타내는 데 사용되는 값입니다.|  
 |**on_disk_size**|**bigint**|세그먼트의 크기(바이트)입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 쿼리는 columnstore 인덱스의 세그먼트에 대한 정보를 반환합니다.  
   
 ```sql  

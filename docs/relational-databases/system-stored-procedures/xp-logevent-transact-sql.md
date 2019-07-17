@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b379ad0-5b12-4d2e-9c52-62465df1fdbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3c8604413718e8b318b67cf63562531e869a79ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77275ee539a6367d7e2e04d03354155a5eff721d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116638"
 ---
 # <a name="xplogevent-transact-sql"></a>xp_logevent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
  최대 2048자의 문자열입니다.  
   
  **'** *심각도* **'**  
- 세 문자열 중 하나입니다: 정보, 경고 또는 오류입니다. *심각도* 는 선택적 이며 기본값은 INFORMATIONAL입니다.  
+ 세 문자열 중 하나입니다. 정보, 경고 또는 오류입니다. *심각도* 는 선택적 이며 기본값은 INFORMATIONAL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -57,7 +56,7 @@ xp_logevent { error_number , 'message' } [ , 'severity' ]
   
  `The command(s) completed successfully.`  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  메시지를 보낼 때 [!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저, 트리거, 일괄 처리 및 등과 xp_logevent 대신 RAISERROR 문을 사용 합니다. xp_logevent는 클라이언트의 메시지 처리기를 호출 하거나 설정 하지 않습니다@ERROR합니다. Windows 이벤트 뷰어와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그 파일에 메시지를 기록하려면 RAISERROR 문을 실행하십시오.  
   
 ## <a name="permissions"></a>사용 권한  

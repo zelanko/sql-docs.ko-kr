@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ea326db0d0e093e4d6371d0dda10a4b9faccc572
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 35cfa3aeda8e296cd1a85a0e8a098aaddac90954
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084860"
 ---
 # <a name="spupdatenotification-transact-sql"></a>sp_update_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_update_notification
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_update_notification** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
  사용 하 여 필요한 주소 정보가 없는 운영자에 대 한 알림을 업데이트할 수 있습니다 *notification_method*합니다. 전자 메일 메시지 또는 호출기 알림을 보내는 중에 실패하면 Microsoft SQL Server 에이전트 오류 로그에 실패가 보고됩니다.  

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 895c28f0989debb899c1e01c80a18483d3cda5a1
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
-ms.translationtype: HT
+ms.openlocfilehash: 1079fbb02026e2043767082d5def7fac37322ef2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077728"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;원본 데이터 쿼리와&gt; -OPENQUERY
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +34,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  *쿼리 구문*  
  행 집합을 반환하는 쿼리 구문입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **OPENQUERY** 데이터 원본 권한을 지원 하 여 외부 데이터에 액세스 하는 더 안전한 방법을 제공 합니다. 연결 문자열은 데이터 원본에 저장되어 있으므로 관리자는 데이터 원본의 속성을 사용하여 데이터에 대한 액세스를 관리할 수 있습니다. 데이터 원본에 대 한 자세한 내용은 참조 하세요. [지원 되는 데이터 원본 &#40;&AMP;#40;SSAS-다차원&#41;](../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)합니다.  
   
  쿼리하여 서버에서 사용할 수 있는 데이터 원본 목록을 가져올 수 있습니다 합니다 **MDSCHEMA_INPUT_DATASOURCES** 스키마 행 집합입니다. 사용에 대 한 자세한 내용은 **MDSCHEMA_INPUT_DATASOURCES**를 참조 하십시오 [MDSCHEMA_INPUT_DATASOURCES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)합니다.  

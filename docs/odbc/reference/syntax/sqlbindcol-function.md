@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17b907be3e2641fe1dcbbb8fbd96586132e054ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3860243580981d995e6581d883e12afe3f033d3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036223"
 ---
 # <a name="sqlbindcol-function"></a>SQLBindCol 함수
 **규칙**  
@@ -114,7 +113,7 @@ SQLRETURN SQLBindCol(
 ## <a name="diagnostics"></a>진단  
  때 **SQLBindCol** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여는 *HandleType* SQL_의 HANDLE_STMT와 *처리할* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLBindCol** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07006|제한 된 데이터 형식 특성을 위반 했습니다.|(DM)는 *ColumnNumber* 인수가 0, 및 *TargetType* 인수 SQL_C_BOOKMARK 또는 SQL_C_VARBOOKMARK 없습니다.|  
@@ -236,7 +235,7 @@ SQLRETURN SQLBindCol(
   
  여기서는 다음 표에 설명 된 대로 수식의 변수에 정의 됩니다.  
   
-|변수|Description|  
+|변수|설명|  
 |--------------|-----------------|  
 |*바인딩된 주소*|데이터 버퍼 주소를 사용 하 여 지정 된 *TargetValuePtr* 에서 인수 **SQLBindCol**합니다.<br /><br /> 길이/표시기 버퍼 주소를 사용 하 여 지정 된 *StrLen_or_IndPtr* 에서 인수 **SQLBindCol**합니다. 자세한 내용은 "추가 주석을" "설명자 및 SQLBindCol" 섹션에서을 참조 하세요.<br /><br /> 바인딩된 주소를이 0 인 경우 데이터 값이 없는 이전 수식에서 계산 된 대로 주소 0이 아닌 경우에 반환 됩니다.|  
 |*바인딩 오프셋*|행 단위 바인딩을 사용 하는 경우 SQL_ATTR_ROW_BIND_OFFSET_PTR 문 특성을 사용 하 여 주소에서 저장 된 값을 지정 합니다.<br /><br /> 열 단위 바인딩을 사용 하는 경우 또는 SQL_ATTR_ROW_BIND_OFFSET_PTR 문 특성의 값이 null 포인터인 경우 *바인딩 오프셋* 은 0입니다.|  

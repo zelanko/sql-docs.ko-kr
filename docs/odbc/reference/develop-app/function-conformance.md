@@ -15,79 +15,78 @@ helpviewer_keywords:
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6cb2f56113487922866573caf3b5f8b67fff7c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45eb427b660496430334633b5d43ee8989211c0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069750"
 ---
 # <a name="function-conformance"></a>함수 적합성
 다음 표에서이 방법이 잘 정의 된 규칙 수준은 각 ODBC 함수를 나타냅니다.  
   
-|기능|적합성 수준|  
+|함수|적합성 수준|  
 |--------------|-----------------------|  
-|**SQLAllocHandle**|핵심|  
-|**SQLBindCol**|핵심|  
+|**SQLAllocHandle**|Core|  
+|**SQLBindCol**|Core|  
 |**SQLBindParameter**|Core [1]|  
 |**SQLBrowseConnect**|수준 1|  
 |**SQLBulkOperations**|수준 1|  
 |**SQLCancel**|Core [1]|  
-|**SQLCloseCursor**|핵심|  
+|**SQLCloseCursor**|Core|  
 |**SQLColAttribute**|Core [1]|  
 |**SQLColumnPrivileges**|수준 2|  
-|**SQLColumns**|핵심|  
-|**SQLConnect**|핵심|  
-|**SQLCopyDesc**|핵심|  
-|**SQLDataSources**|핵심|  
+|**SQLColumns**|Core|  
+|**SQLConnect**|Core|  
+|**SQLCopyDesc**|Core|  
+|**SQLDataSources**|Core|  
 |**SQLDescribeCol**|Core [1]|  
 |**SQLDescribeParam**|수준 2|  
-|**SQLDisconnect**|핵심|  
-|**SQLDriverConnect**|핵심|  
-|**SQLDrivers**|핵심|  
+|**SQLDisconnect**|Core|  
+|**SQLDriverConnect**|Core|  
+|**SQLDrivers**|Core|  
 |**SQLEndTran**|Core [1]|  
-|**SQLExecDirect**|핵심|  
-|**SQLExecute**|핵심|  
-|**SQLFetch**|핵심|  
+|**SQLExecDirect**|Core|  
+|**SQLExecute**|Core|  
+|**SQLFetch**|Core|  
 |**SQLFetchScroll**|Core [1]|  
 |**SQLForeignKeys**|수준 2|  
-|**SQLFreeHandle**|핵심|  
-|**SQLFreeStmt**|핵심|  
-|**SQLGetConnectAttr**|핵심|  
-|**SQLGetCursorName**|핵심|  
-|**SQLGetData**|핵심|  
-|**SQLGetDescField**|핵심|  
-|**SQLGetDescRec**|핵심|  
-|**SQLGetDiagField**|핵심|  
-|**SQLGetDiagRec**|핵심|  
-|**SQLGetEnvAttr**|핵심|  
-|**SQLGetFunctions**|핵심|  
-|**SQLGetInfo**|핵심|  
-|**SQLGetStmtAttr**|핵심|  
-|**SQLGetTypeInfo**|핵심|  
+|**SQLFreeHandle**|Core|  
+|**SQLFreeStmt**|Core|  
+|**SQLGetConnectAttr**|Core|  
+|**SQLGetCursorName**|Core|  
+|**SQLGetData**|Core|  
+|**SQLGetDescField**|Core|  
+|**SQLGetDescRec**|Core|  
+|**SQLGetDiagField**|Core|  
+|**SQLGetDiagRec**|Core|  
+|**SQLGetEnvAttr**|Core|  
+|**SQLGetFunctions**|Core|  
+|**SQLGetInfo**|Core|  
+|**SQLGetStmtAttr**|Core|  
+|**SQLGetTypeInfo**|Core|  
 |**SQLMoreResults**|수준 1|  
-|**SQLNativeSql**|핵심|  
-|**SQLNumParams**|핵심|  
-|**SQLNumResultCols**|핵심|  
-|**SQLParamData**|핵심|  
-|**SQLPrepare**|핵심|  
+|**SQLNativeSql**|Core|  
+|**SQLNumParams**|Core|  
+|**SQLNumResultCols**|Core|  
+|**SQLParamData**|Core|  
+|**SQLPrepare**|Core|  
 |**SQLPrimaryKeys**|수준 1|  
 |**SQLProcedureColumns**|수준 1|  
 |**SQLProcedures**|수준 1|  
-|**SQLPutData**|핵심|  
-|**SQLRowCount**|핵심|  
+|**SQLPutData**|Core|  
+|**SQLRowCount**|Core|  
 |**SQLSetConnectAttr**|Core [2]|  
-|**SQLSetCursorName**|핵심|  
+|**SQLSetCursorName**|Core|  
 |**SQLSetDescField**|Core [1]|  
-|**SQLSetDescRec**|핵심|  
+|**SQLSetDescRec**|Core|  
 |**SQLSetEnvAttr**|Core [2]|  
 |**SQLSetPos**|수준 1 [1]|  
 |**SQLSetStmtAttr**|Core [2]|  
 |**SQLSpecialColumns**|Core [1]|  
-|**SQLStatistics**|핵심|  
+|**SQLStatistics**|Core|  
 |**SQLTablePrivileges**|수준 2|  
-|**SQLTables**|핵심|  
+|**SQLTables**|Core|  
   
  [이 함수의 1] 중요 한 기능은 더 높은 적합성 수준 에서만 제공 됩니다.  
   

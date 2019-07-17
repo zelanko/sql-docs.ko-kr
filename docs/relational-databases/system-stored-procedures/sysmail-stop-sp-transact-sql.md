@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 045ee36f-5bf0-4626-b5ee-e84db06ce16f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 254d2f0338361287fd603c3562c3585b30d7ed7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 753375d139a03d5c0cec20dc994d83399e04f094
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037405"
 ---
 # <a name="sysmailstopsp-transact-sql"></a>sysmail_stop_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sysmail_stop_sp
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 저장된 프로시저에는 **msdb** 데이터베이스입니다.  
   
  이 저장 프로시저는 보내는 메시지 요청이 있는 데이터베이스 메일 큐를 중지하고 외부 프로그램에 대한 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 활성화를 해제합니다.  

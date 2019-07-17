@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 9b53932676cae30e4b1111c785a6a78c992a3685
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 781c03283c39ab5ec100ba7f7d83b3cbe19a7c19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690854"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139179"
 ---
 # <a name="exists-mdx"></a>Exists(MDX)
 
@@ -40,7 +39,7 @@ Exists( Set_Expression1 , Set_Expression2 [, MeasureGroupName] )
  *MeasureGroupName*  
  측정값 그룹 이름을 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 1.  Null 값을 포함 하는 측정값을 사용 하 여 측정값 그룹 행에 기여 **Exists** MeasureGroupName 인수가 지정 된 경우. Exists의이 폼과 Nonempty 함수 간의 차이입니다:이 측정값의 NullProcessing 속성이 Preserve로이 경우 측정값; 큐브의 해당 부분에 대해 쿼리를 실행할 때 Null 값이 표시 됩니다 비어 있지 않은 MeasureGroupName 인수를 사용 하는 Exists 측정 값이 null 인 경우에 연관 된 측정값 그룹 행이 있는 튜플을 필터링 하지 것입니다 하지만 Null 측정값이 있는 집합에서 튜플을 제거 항상 됩니다.  
   

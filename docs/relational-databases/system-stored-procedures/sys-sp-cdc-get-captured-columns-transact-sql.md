@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: d9e680be-ab9b-4e0c-b63a-90658f241df8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2cffffa064bbfc5d5d1b106a06fb5429d6ca2c72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf7c7ff03ec1318b1fe2fca8454f8ff39cd336a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083745"
 ---
 # <a name="sysspcdcgetcapturedcolumns-transact-sql"></a>sys.sp_cdc_get_captured_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sys.sp_cdc_get_captured_columns
 ```  
   
 ## <a name="arguments"></a>인수  
- [ @capture_instance =] '*capture_instance*'  
+ [ @capture_instance = ] '*capture_instance*'  
  원본 테이블과 연결된 캡처 인스턴스의 이름입니다. *capture_instance* 됩니다 **sysname** NULL 일 수 없습니다.  
   
  테이블에 대 한 캡처 인스턴스에서 보고서를 실행 합니다 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) 저장 프로시저입니다.  
@@ -55,7 +54,7 @@ sys.sp_cdc_get_captured_columns
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |source_schema|**sysname**|원본 테이블 스키마의 이름입니다.|  
 |source_table|**sysname**|원본 테이블의 이름입니다.|  
@@ -70,7 +69,7 @@ sys.sp_cdc_get_captured_columns
 |numeric_scale|**int**|숫자 기반일 경우에는 열의 소수 자릿수이고, 그렇지 않으면 NULL입니다.|  
 |datetime_precision|**smallint**|datetime 기반일 경우에는 열의 전체 자릿수이고, 그렇지 않으면 NULL입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  Sys.sp_cdc_get_captured_columns를 사용 하 여 캡처 인스턴스 쿼리 함수를 쿼리하여 반환 된 캡처된 열에 대 한 열 정보를 얻을 [cdc.fn_cdc_get_all_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md) 또는[cdc.fn_cdc_get_net_changes_ < capture_instance >](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)합니다. 열 이름, ID 및 위치는 캡처 인스턴스의 수명 동안 일정하게 유지됩니다. 추적된 테이블에서 기본 원본 열의 데이터 형식이 변경될 경우에만 열 데이터 형식이 변경됩니다. 열에 추가 되거나 원본 테이블에서 삭제 되는 기존 캡처 인스턴스의 캡처된 열에 영향이 없습니다.  
   
  사용 하 여 [sys.sp_cdc_get_ddl_history](../../relational-databases/system-stored-procedures/sys-sp-cdc-get-ddl-history-transact-sql.md) 정보를 가져올 데이터 정의 언어 (DDL) 문을 원본 테이블에 적용 합니다. 추적되는 원본 열의 구조를 수정하는 모든 DDL 변경이 결과 집합에 반환됩니다.  

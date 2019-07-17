@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 67df625611f2451c3442d5d59b56c76dfc14a74a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e3fcd823dea5d651cd7be9295fa4c6bba25380c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63295157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125758"
 ---
 # <a name="ytd-mdx"></a>Ytd(MDX)
 
@@ -32,7 +31,7 @@ Ytd( [ Member_Expression ] )
  *Member_Expression*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  멤버 식을 지정 하지 않으면 기본값이 있으며 수준 유형이 인 첫 번째 계층의 현재 멤버 *년* 형식의 첫 번째 차원의 *시간* 측정값 그룹에 있습니다.  
   
  합니다 **Ytd** 함수는에 대 한 바로 가기 함수는 [PeriodsToDate](../mdx/periodstodate-mdx.md) 수준을 기준으로 하는 특성 계층의 Type 속성에 설정 되어 있는 함수 *년*합니다. 즉, `Ytd(Member_Expression)`은 `PeriodsToDate(Year_Level_Expression,Member_Expression)`과 동일합니다. 형식 속성 설정 된 경우이 함수가 작동 하는 참고 *FiscalYears*합니다.  

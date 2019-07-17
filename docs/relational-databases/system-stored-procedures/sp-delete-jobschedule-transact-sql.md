@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 82fbb48b-603a-4016-a7fb-1ce17fb76919
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 12058e9c599428b6f0ba6c3014b8aab8b9ae5f61
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: a1641685bfe017ab7bc3adfda5c667684a70b786
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130646"
 ---
 # <a name="spdeletejobschedule-transact-sql"></a>sp_delete_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "54100868"
  **sp_delete_jobschedule** 이전 버전과 호환성만 제공 됩니다.  
   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이제 작업 일정을 작업과 독립적으로 관리할 수 있습니다. 작업에서 일정을 제거 하려면 **sp_detach_schedule**합니다. 일정을 삭제 하려면 사용 하 여 **sp_delete_schedule**합니다.  
   
 > **참고: sp_delete_jobschedule** 여러 작업에 연결 된 일정을 지원 하지 않습니다. 기존 스크립트를 호출 하는 경우 **sp_delete_jobschedule** 프로시저 둘 이상의 작업에 연결 된 일정을 제거 하는 오류를 반환 합니다.  

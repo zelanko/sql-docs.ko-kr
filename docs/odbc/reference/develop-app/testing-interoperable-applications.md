@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 509dd17efeeb982c51938d7a18fad99a2e84ba5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59f6f5a37e65c802c8d51a1f56a40380f054e39b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114094"
 ---
 # <a name="testing-interoperable-applications"></a>상호 운용 가능한 애플리케이션 테스트
 상호 운용 가능한 응용 프로그램 테스트는 시간이 오래 걸리는 가장 좋은 비즈니스 및 새 드라이버 시장에서 지속적으로 표시 되므로 최악의 불가능 합니다. 단, 적정 수준의 테스트 가능 합니다. 지원 보장 되 해당 드라이버에 대 한 제한 또는 낮은 상호 운용성을 사용 하 여 응용 프로그램을 테스트만 필요 합니다. 그러나 이러한 완벽 하 게 테스트 해야 이러한 드라이버에 대 한 합니다.  

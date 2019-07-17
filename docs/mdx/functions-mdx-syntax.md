@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ed7e1770323a9691c2fe63c0df88df77198153ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 126cfdf6ef690a48d0b9ff17a6963ba37d3ade82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084131"
 ---
 # <a name="functions-mdx-syntax"></a>함수(MDX 구문)
 
@@ -24,7 +23,7 @@ ms.locfileid: "62690173"
 > [!NOTE]  
 >  개별 함수에 대 한 자세한 내용은 참조 하세요. [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)합니다.  
   
-|함수 범주|Description|  
+|함수 범주|설명|  
 |-----------------------|-----------------|  
 |배열 함수|저장 프로시저에서 사용할 배열을 제공합니다.<br /><br /> 자세한 내용은 [저장 프로시저를 사용 하 여 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)합니다.|  
 |차원 함수|계층, 수준 또는 멤버에서 차원으로 참조를 반환합니다.<br /><br /> 자세한 내용은 [를 사용 하 여 차원, 계층 및 수준 함수](../mdx/using-dimension-hierarchy-and-level-functions.md)합니다.|  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: aded187be089b3c1af004bd6f7e88d75780b9f22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c026da3551448faf7cf204dbdde1e794d5b12967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033913"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 연산자 참조(MDX)
 
@@ -23,7 +22,7 @@ ms.locfileid: "63187603"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
-|항목|Description|  
+|항목|설명|  
 |-----------|-----------------|  
 |[--&#40;설명&#41;&#40;MDX&#41;](../mdx/comment-mdx-operator-reference.md)|사용자가 제공한 주석 텍스트를 나타냅니다.|  
 |[- &#40;제외한&#41; &#40;MDX&#41;](../mdx/except-mdx-operator.md)|중복된 멤버를 제거하고 두 집합 간의 차집합을 반환하는 집합 연산을 수행합니다.|  

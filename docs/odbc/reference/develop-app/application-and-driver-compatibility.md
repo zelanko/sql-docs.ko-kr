@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 23ed7f5e-e945-4c36-9dbc-e0f93b6d23c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f4e6d2b82fedca6f36536a2ea06db5ea8614319
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e31d9f93423db572d2759857b11d3f79af56583b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077079"
 ---
 # <a name="application-and-driver-compatibility"></a>애플리케이션 및 드라이버 호환성
 ODBC 응용 프로그램 및 드라이버는 여러 버전에 해당 하는 것 외에도 범주에 속합니다. 일부 드라이버; 호환 되지 않는 일부 응용이 프로그램 다른 경우에 응용 프로그램 또는 드라이버의 형식 간의 이전 버전과 호환성 문제에는 아무 관계가 있을 수 있습니다.  

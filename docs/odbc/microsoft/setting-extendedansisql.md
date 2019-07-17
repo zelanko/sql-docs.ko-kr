@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c9b8999e229e8a6ed4804b2f06a4072d139ae93a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 330b55ef2d4fee090c453990d3fe75e6e2dacb6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063605"
 ---
 # <a name="setting-extendedansisql"></a>ExtendedAnsiSQL 설정
 Extendedansisql을 특성을 추가 하 여 연결 문자열에서 특성을 제어할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |Extendedansisql을 = 0 (기본값)|이 설정은 새 기능을 사용 하지 않습니다.|  
 |ExtendedAnsiSQL=1|이 설정은 새 기능을 제공 합니다.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ddc4833f-27bf-4610-b739-d257961d17ac
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2604fa585bc7b27fc385336e1af71079efb68404
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2ff4537f5db246dd9bcdc114b02005402f8745f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029604"
 ---
 # <a name="sysssispackagefolders-transact-sql"></a>sysssispackagefolders(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "65489783"
  이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**folderid**|**uniqueidentifier**|폴더의 GUID입니다.|  
 |**parentfolderid**|**uniqueidentifier**|부모 폴더의 GUID입니다.|  

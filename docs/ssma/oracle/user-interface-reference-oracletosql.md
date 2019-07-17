@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 160d4784-d108-4705-932d-763558912804
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 2acf2dca7b383d6ab579f46e33b10c10e541b88c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 1cd74d2e3c5825618a6c893551cc8ae7298d00d8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209913"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266404"
 ---
 # <a name="user-interface-reference-oracletosql"></a>사용자 인터페이스 참조(OracleToSQL)
 이 섹션에 대 한 도움말 항목이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle입니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "63209913"
   
 |||  
 |-|-|  
-|항목|Description|  
+|항목|설명|  
 |[고급 개체 선택 &#40;OracleToSQL&#41;](../../ssma/oracle/advanced-object-selection-oracletosql.md)|사용 된 **고급 개체 선택** 대화 상자의 필터 조건을 사용 하 여 데이터베이스 개체를 찾으려면 다음 선택 하거나 해당 개체의 선택을 취소 합니다.|  
 |[평가 보고서 &#40;OracleToSQL&#41;](../../ssma/oracle/assessment-report-oracletosql.md)|평가 보고서를 사용 하 여 Oracle 개체의 변환 결과 보려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문 및 예측 시간 및 복잡성에 마이그레이션의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |[Oracle에 연결 &#40;OracleToSQL&#41;](../../ssma/oracle/connect-to-oracle-oracletosql.md)|사용 된 **Connect to Oracle** 마이그레이션하려는 Oracle 데이터베이스에 연결 대화 상자.|  

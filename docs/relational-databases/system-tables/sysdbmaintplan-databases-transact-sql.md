@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8413a44-8fcc-4899-84f2-b4afe0f8ec08
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fcca0cf0b8653edfab9cec993c04e36987d0e010
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bd1622e898d6554d5eb9fbc66fae729f5a8e973
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47765491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130483"
 ---
 # <a name="sysdbmaintplandatabases-transact-sql"></a>sysdbmaintplan_databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47765491"
   
  [!INCLUDE[ssNoteDepNextAvoid](../../includes/ssnotedepnextavoid-md.md)]  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**plan_id**|**고유 식별자**|유지 관리 계획 ID입니다.|  
 |**database_name**|**sysname**|데이터베이스 유지 관리 계획과 연관된 데이터베이스의 이름입니다.|  

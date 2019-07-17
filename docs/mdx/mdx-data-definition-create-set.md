@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4d1e58d016649c3c21a056a82315bd0d0fb3564f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91b040a1c625387ed25855d3c3eb26955088f5c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038334"
 ---
 # <a name="mdx-data-definition---create-set"></a>MDX 데이터 정의 - CREATE SET
 
@@ -47,7 +46,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
  *Property_Value*  
  집합 속성의 값을 정의하는 유효한 스칼라 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  명명된 집합은 다시 사용할 수 있도록 만드는 일련의 차원 멤버(또는 집합을 정의하는 식)입니다. 예를 들어 명명된 집합을 사용하면 판매량 기준으로 상위 10개의 판매점 집합으로 구성되는 차원 멤버 집합을 정의할 수 있습니다. 정적으로 또는 같은 함수를 사용 하 여이 집합을 정의할 수 있습니다 [TopCount](../mdx/topcount-mdx.md)합니다. 그런 다음에는 상위 10개의 판매점이 필요할 때마다 이 명명된 집합을 사용할 수 있습니다.  
   
  CREATE SET 문은 세션을 통해 사용할 수 있는 상태로 유지되는 명명된 집합을 만들기 때문에 세션의 여러 쿼리에서 사용될 수 있습니다. 자세한 내용은 [세션 범위 계산 멤버 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-calculated-members-session-scoped-calculated-members.md)합니다.  
@@ -58,7 +57,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
   
  현재 연결된 큐브가 아닌 다른 큐브를 지정하면 오류가 발생합니다. 따라서 큐브 이름에서 CURRENTCUBE를 사용하여 현재 큐브를 표시해야 합니다.  
   
-## <a name="scope"></a>범위  
+## <a name="scope"></a>Scope  
  사용자 정의 집합은 다음 표에 나열된 범위 중 하나에서 발생할 수 있습니다.  
   
  쿼리 범위  

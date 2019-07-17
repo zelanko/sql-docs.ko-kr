@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6580599ed5c4c810a8b77369f850e9def2e90756
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 46ce9f82f06d2e6ba15f7e5f6583aa36c498f30c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065369"
 ---
 # <a name="toppercent-dmx"></a>TopPercent(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ TopPercent(<table expression>, <rank expression>, <percent>)
 ## <a name="return-type"></a>반환 형식  
  \<테이블 식 >  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **TopPercent** 함수는 계산된 된 값에 따라 차수의 내림차순 최상위 행을 반환 합니다.는 \<식의 순위를 지정 > 각 행에 대 한 인수는 합계는 \<식의 순위를 지정 > 값은 최소한으로 지정 된 백분율을 지정 합니다 \<% > 인수입니다. **TopPercent** 지정된 된 백분율 값에 맞추어 가능한 가장 작은 요소 수를 반환 합니다.  
   
 ## <a name="examples"></a>예  
@@ -103,7 +102,7 @@ NATURAL PREDICTION JOIN
 > [!WARNING]  
 >  TOPPERCENT 및 BOTTOMPERCENT에 대한 MDX 함수는 백분율 계산에 사용되는 값에 음수가 포함될 경우 예기치 않은 결과를 생성할 수 있습니다. 이 동작은 DMX 함수에는 영향을 주지 않습니다. 자세한 내용은 [BottomPercent &#40;MDX&#41;](../mdx/bottompercent-mdx.md)합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 61a8db19-6571-47dd-84e8-fcc97cb60b45
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5b949e97d39ea5f0e3e1a27d708ead062fbb7d3a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c61d02defdd99d508ae1acfff2cda656c20e68c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076659"
 ---
 # <a name="processing-results-odbc"></a>결과 처리(ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +70,7 @@ ms.locfileid: "51662512"
   
 -   [결과 집합의 특징을 확인 &#40;ODBC&#41;](../../relational-databases/native-client-odbc-results/determining-the-characteristics-of-a-result-set-odbc.md)  
   
--   [저장소 할당](../../relational-databases/native-client-odbc-results/assigning-storage.md)  
+-   [스토리지 할당](../../relational-databases/native-client-odbc-results/assigning-storage.md)  
   
 -   [결과 데이터 페치](../../relational-databases/native-client-odbc-results/fetching-result-data.md)  
   

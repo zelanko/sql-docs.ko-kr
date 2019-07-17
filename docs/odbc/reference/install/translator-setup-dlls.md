@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b3ca79e9-01b9-4541-81de-bbbad24ca736
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20453b792ed00b388977fefe3064fd8dfca86147
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6c99dffc94f2675efdbbc3d5c1d142a5ae9b7e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093844"
 ---
 # <a name="translator-setup-dlls"></a>변환기 설정 DLL
 > [!NOTE]  

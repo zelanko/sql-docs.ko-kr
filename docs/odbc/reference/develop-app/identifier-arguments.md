@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 156dfaf5c6a6a4ec06a0c96b5f726383cba32ba6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93cf744cf105762fb90a92049d6698e67a19d58c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139003"
 ---
 # <a name="identifier-arguments"></a>식별자 인수
 식별자 인수에서는 문자열은 따옴표로 묶을 경우 드라이버는 선행 및 후행 공백을 제거 하 고 따옴표 안의 문자열 리터럴로 처리. 문자열에 따옴표가 사용 되지 경우 드라이버 제거 후행 공백 및 접기 문자열을 대문자로 합니다. SQL_ERROR 및 SQLSTATE HY009 반환 식별자 인수를 null 포인터로 설정 (잘못 된 null 포인터)를 사용 하는 경우가 아니면 인수 카탈로그 이름은 카탈로그는 지원 되지 않습니다.  

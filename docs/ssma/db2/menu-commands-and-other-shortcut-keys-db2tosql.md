@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 9879a065db11bb8e8b8ddff9c57376faf36fe151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074156"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>메뉴 명령 및 기타 바로 가기 키 (DB2ToSQL)
 다음 섹션에서는 메뉴 명령 및 DB2 응용 프로그램에 대 한 SSMA의 다양 한 대화 상자에서 사용 되는 기타 바로 가기 키에 액세스 하는 바로 가기 키를 설명 합니다.  

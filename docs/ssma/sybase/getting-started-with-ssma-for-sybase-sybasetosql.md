@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029118"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SAP ASE (SybaseToSQL) 용 SSMA 시작
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA)의 SAP ASE 사용 하면 신속 하 게 하려면 SAP 적응형 Server Enterprise (ASE) 데이터베이스 스키마로 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Azure SQL Database 스키마 결과 스키마를 업로드 하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database에서 데이터를 마이그레이션하고 SAP ASE [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database.  
@@ -83,7 +82,7 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
 #### <a name="the-migration-toolbar"></a>마이그레이션 도구 모음  
 마이그레이션 도구 모음에는 다음 명령도 포함 됩니다.  
   
-|단추|기능|  
+|단추|함수|  
 |----------|------------|  
 |**보고서 만들기**|선택한 SAP ASE 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구문을 다음 얼마나 성공적인 변환 된 보여 주는 보고서를 만듭니다.<br /><br />이 명령은 Sybase 메타 데이터 탐색기에서 개체를 선택한 경우에 있습니다.|  
 |**스키마 변환**|선택한 SAP ASE 개체를 변환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database 개체입니다.<br /><br />이 명령은 Sybase 메타 데이터 탐색기에서 개체를 선택한 경우에 있습니다.|  
@@ -93,12 +92,12 @@ SSMA는 두 개의 도구 모음: 프로젝트 도구 모음 및 마이그레이
 ### <a name="menus"></a>메뉴  
 SSMA는 다음과 같은 메뉴가 포함 되어 있습니다.  
   
-|메뉴|Description|  
+|메뉴|설명|  
 |--------|---------------|  
 |**최근에 사용한 파일**|프로젝트, SAP ASE에 연결 및 작업에 연결 하기 위한 명령을 포함 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 Azure SQL Database.|  
 |**편집**|찾기 및 텍스트 세부 정보 페이지를 복사 하는 등의 작업에 대 한 명령을 포함 [!INCLUDE[tsql](../../includes/tsql-md.md)] SQL 세부 정보 창에서. 도 포함 합니다 **책갈피 관리** 기존의 책갈피의 목록을 볼 수 있는 옵션을 합니다. 책갈피를 관리 하는 대화 상자의 오른쪽에 단추를 사용할 수 있습니다.|  
 |**보기**|포함 된 **메타 데이터 탐색기 동기화** 명령입니다. 이 메타 데이터 탐색기 Sybase 간에 개체를 동기화 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 메타 데이터 탐색기입니다. 표시 하거나 숨기려면 명령도 포함 됩니다는 **출력** 및 **오류 목록** 창과 옵션 **레이아웃** 레이아웃을 관리 합니다.|  
-|**Tools**|보고서 만들기, 데이터를 내보내고, 개체 및 데이터를 마이그레이션하는 명령을 포함 합니다. 또한에 대 한 액세스를 제공 합니다 **전역 설정** 하 고 **프로젝트 설정** 대화 상자.|  
+|**도구**|보고서 만들기, 데이터를 내보내고, 개체 및 데이터를 마이그레이션하는 명령을 포함 합니다. 또한에 대 한 액세스를 제공 합니다 **전역 설정** 하 고 **프로젝트 설정** 대화 상자.|  
 |**테스터**|테스트 사례, 테스트 결과 보면 및 데이터베이스 백업 관리에 대 한 명령을 만드는 명령을 포함 합니다.|  
 |**도움말**|SSMA 데 및에 대 한 액세스를 제공 합니다 **에 대 한** 대화 상자.|  
   
@@ -109,6 +108,6 @@ SSMA는 다음과 같은 메뉴가 포함 되어 있습니다.
   
 -   오류 목록 창을 정렬할 수 있는 목록에서 오류, 경고 및 정보 메시지를 보여 줍니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
 [SQL Server-Azure SQL Database로 SAP ASE 데이터베이스 마이그레이션 &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [사용자 인터페이스 참조 &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  

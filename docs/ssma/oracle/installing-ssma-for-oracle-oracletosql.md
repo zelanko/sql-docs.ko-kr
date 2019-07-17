@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9211013a-ab24-4c52-9b26-87994b35e502
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 6d615ad3d0642d2e738359089f2ea51159e7f1b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 0b146c1585bdcddcf2d45c6b9efbd24f7e90d718
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63223482"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263018"
 ---
 # <a name="installing-ssma--for-oracle-oracletosql"></a>Oracle용 SSMA 설치(OracleToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle이 Oracle에서 마이그레이션을 수행 하는 데 사용 하는 클라이언트 응용 프로그램의 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 Azure SQL DB입니다. 마이그레이션된 데이터베이스의 데이터 마이그레이션 및 Oracle 시스템 함수의 사용을 지 원하는 확장 팩을 포함 합니다.  
@@ -27,7 +27,7 @@ Oracle 용 SSMA의 이후 버전으로 업그레이드 하려는 경우 먼저 �
   
 ## <a name="contents"></a>내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[Oracle 클라이언트 용 SSMA 설치 &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)|에 대 한 정보와 SSMA 클라이언트 설치에 대 한 지침을 제공 합니다.|  
 |[SQL Server에 SSMA 구성 요소를 설치 &#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)|인스턴스에서 확장 팩을 설치 하기 위한 지침과에 대 한 정보를 제공 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  

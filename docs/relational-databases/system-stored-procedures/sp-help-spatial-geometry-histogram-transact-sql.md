@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 036aaf61-df3e-40f7-aa4e-62983c5a37bd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 914c68d313d77d1cb363f44daee2935976161418
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 640d292dfbef7adae9fc99b53cb3b450f698b651
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085122"
 ---
 # <a name="sphelpspatialgeometryhistogram-transact-sql"></a>sp_help_spatial_geometry_histogram(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="property-valuereturn-value"></a>속성 값/반환 값  
  테이블 값이 반환됩니다. 다음 표에서는 테이블의 열 내용에 대해 설명합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|각 셀의 고유한 ID를 나타내며 1부터 셉니다.|  
 |**cell**|**geometry**|각 셀을 나타내는 사각의 다각형입니다. 셀 셰이프는 공간 인덱싱에 사용된 셀 셰이프와 동일합니다.|  
@@ -75,7 +74,7 @@ sp_help_spatial_geometry_histogram [ @tabname =] 'tabname'
 ## <a name="permissions"></a>사용 권한  
  사용자의 구성원 이어야 합니다 **공용** 역할입니다. 서버 및 개체에 대한 READ ACCESS 권한이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SSMS 공간 탭은 결과를 그래픽으로 나타냅니다. 공간 창에서 결과를 쿼리하여 결과 항목의 대략적인 개수를 가져올 수 있습니다. 테이블의 개체가 셀 한 개를 넘어갈 수 있으므로 셀 합계는 실제 개체의 개수보다 클 수 있습니다.  
   
  경계 상자를 벗어나거나 경계 상자 테두리에 접해 있는 개체의 수가 포함된 결과 집합에 행이 추가로 삽입될 수 있습니다. 합니다 **cellid** 이 행은 0 및 **셀** 포함는 **LineString** 경계 상자를 나타내는입니다. 이 행은 경계 상자 밖의 전체 공간을 나타냅니다.  

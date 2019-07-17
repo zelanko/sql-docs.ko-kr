@@ -21,19 +21,19 @@ author: pelopes
 ms.author: pelopes
 manager: ajayj
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b1ff6dee668cd6bc93d9a3c74ae4b3e25cbe99be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 000dd995427f8eafec759688db1ab76a6546b789
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013151"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263267"
 ---
-# <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (Transact-SQL)
+# <a name="sysdmexecqueryparallelworkers-transact-sql"></a>sys.dm_exec_query_parallel_workers (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
 
   노드당 반환 작업자 가용성 정보입니다.  
   
-|이름|데이터 형식|Description|  
+|이름|데이터 형식|설명|  
 |----------|---------------|-----------------|  
 |**node_id**|**int**|NUMA 노드 id입니다.|  
 |**scheduler_count**|**int**|이 노드의 스케줄러 수입니다.|  
@@ -45,11 +45,11 @@ ms.locfileid: "63013151"
 ## <a name="permissions"></a>사용 권한  
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
  
 ## <a name="examples"></a>예  
   
-### <a name="a-viewing-current-parallel-worker-availability"></a>1\. 현재 병렬 작업자 가용성 확인  
+### <a name="a-viewing-current-parallel-worker-availability"></a>A. 현재 병렬 작업자 가용성 확인  
 
 ```sql 
 SELECT * FROM sys.dm_exec_query_parallel_workers;  

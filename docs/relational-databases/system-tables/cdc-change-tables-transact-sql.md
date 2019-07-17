@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47265c1a4e541481edfef8029faf32e5cee3798a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4432d4c45bdecc6f5e1804427770d005adde0cd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47750347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081284"
 ---
 # <a name="cdcchangetables-transact-sql"></a>cdc.change_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   데이터베이스 내의 각 변경 테이블에 대해 한 개의 행을 반환합니다. 변경 테이블은 원본 테이블에서 변경 데이터 캡처를 사용하도록 설정할 때 생성됩니다. 시스템 테이블은 직접 쿼리하지 않는 것이 좋습니다. 대신 실행 합니다 [sys.sp_cdc_help_change_data_capture](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-change-data-capture-transact-sql.md) 저장 프로시저입니다.  
-  |열 이름|데이터 형식|Description|  
+  |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|변경 테이블의 ID입니다. 데이터베이스 내에서 고유합니다.|  
 |**version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]의 경우 이 열은 항상 0을 반환합니다.|  

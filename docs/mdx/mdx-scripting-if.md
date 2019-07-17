@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4975c455b942f053287b344a956a0083c8ca4e1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41bd34fbd3d296f4aa38877e6d26e25eba9ae726
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138687"
 ---
 # <a name="mdx-scripting---if"></a>MDX 스크립팅 - IF
 
@@ -35,7 +34,7 @@ IF expression THEN assignment END IF
  *assignment*  
  하위 큐브 또는 계산 속성에 값을 할당하는 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  과 달리 제어 흐름에 IF 문을 사용 합니다 [IIf &#40;MDX&#41; ](../mdx/iif-mdx.md) 함수 및 [CASE 문 &#40;MDX&#41; ](../mdx/case-statement-mdx.md) 는 수만 데 사용할 값 이나 개체를 반환 합니다.  
   
 ## <a name="examples"></a>예  

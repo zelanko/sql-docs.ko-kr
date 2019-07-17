@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 27d0f3f85117812719a642c947fda71b71c4e32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba0152d37b1a050c1e46594ab8a5820606b116c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085610"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>구독 뷰 형식(Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65488008"
   
 ## <a name="subscription-view-formats"></a>구독 뷰 형식  
   
-|이름|Description|  
+|이름|설명|  
 |----------|-----------------|  
 |**리프 멤버**|리프 멤버 및 해당 특성 값을 포함합니다.|  
 |**리프 멤버 기록**|리프 멤버 기록 데이터 및 관련 특성 값을 포함합니다. 보기 형식은 느린 변경 차원 유형 4 스타일입니다.|  

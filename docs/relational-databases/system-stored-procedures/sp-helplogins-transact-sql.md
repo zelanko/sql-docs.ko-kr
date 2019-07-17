@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3461d6f80bb1ac693cca78954e5165fb7f012436
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122447"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 ## <a name="result-sets"></a>결과 집합  
  다음 표에서 볼 수 있듯이 첫 번째 보고서에는 지정한 각 로그인에 관한 정보가 포함되어 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|로그인 이름입니다.|  
 |**SID**|**varbinary(85)**|로그인 SID(보안 ID)입니다.|  
@@ -59,14 +58,14 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
   
  두 번째 보고서에는 다음 표와 같이 각 로그인에 매핑된 사용자와 해당 로그인의 역할 멤버 자격에 관한 정보가 포함되어 있습니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|로그인 이름입니다.|  
 |**DBName**|**sysname**|기본 데이터베이스 **LoginName** 인스턴스에 연결할 때 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다.|  
 |**UserName**|**sysname**|사용자 계정이 **LoginName** 에 매핑되 **DBName**, 및 역할을 하는 **LoginName** 의 멤버인 **DBName**합니다.|  
 |**UserOrAlias**|**char(8)**|MemberOf = **UserName** 는 역할입니다.<br /><br /> 사용자 = **UserName** 사용자 계정입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  로그인을 제거 하기 전에 사용 하 여 **sp_helplogins** 로그인에 매핑되는 사용자 계정을 식별할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  

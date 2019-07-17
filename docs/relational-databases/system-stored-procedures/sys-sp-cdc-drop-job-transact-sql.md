@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7e40326bca324b72d71ba72c68242c0af2b0b59f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0318322442aae5a72b25b2eb011e03a82fe84525
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066769"
 ---
 # <a name="sysspcdcdropjob-transact-sql"></a>sys.sp_cdc_drop_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sys.sp_cdc_drop_job [ [ @job_type = ] 'job_type' ]
 ## <a name="result-sets"></a>결과 집합  
  Nones  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_cdc_drop_job 내부적으로 호출 됩니다 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)합니다.  
   
 ## <a name="permissions"></a>사용 권한  

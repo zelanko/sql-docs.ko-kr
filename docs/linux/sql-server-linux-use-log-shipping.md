@@ -3,17 +3,16 @@ title: Linux의 SQL Server의 로그 전달을 구성 합니다.
 description: 이 자습서에서는 Linux에서 SQL Server 인스턴스를 사용 하 여 로그 전달 보조 인스턴스에 복제 하는 방법의 기본적인 예를 보여 줍니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 04/19/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 0bbe4e8076578afd3addb9521a60bc72b5be9a06
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834621"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032204"
 ---
 # <a name="get-started-with-log-shipping-on-linux"></a>Linux에서 로그 전달을 사용 시작
 

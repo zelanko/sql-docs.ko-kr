@@ -8,14 +8,13 @@ ms.topic: conceptual
 ms.assetid: 6eff30b4-b261-4f1f-b93c-1f69d754298d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d74211c9c5052adc9fa49f47b55b9c379c33f01c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 111986a771b9cfb156c0d37688565b39401411f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037233"
 ---
 # <a name="sysspcleanuptemporalhistory-transact-sql"></a>sys.sp_cleanup_temporal_history (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_cleanup_temporal_history [@schema_name = ] schema_name, [@table_name = ] tabl
 
 삭제 된 행 수를 반환 하는 출력 매개 변수입니다. 이 매개 변수를 반환 됩니다 경우 기록 테이블에 클러스터형 columnstore 인덱스 있음, 항상 0입니다.
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 이 저장된 프로시저는 한정 된 재방문 주기 기간 지정한 temporal 테이블 함께만 사용할 수 있습니다.
 즉시 기록 테이블에서 오래 된 모든 행을 제거 해야 하는 경우에이 저장된 프로시저를 사용 합니다. 동일한 트랜잭션 내의 모든 적격 행을 삭제 하는 대로 데이터베이스 로그 및 I/O 하위 시스템에 상당한 영향 있을 수 있음을 알아야 합니다. 
 
@@ -60,6 +59,6 @@ EXEC sys.sp_cleanup_temporal_history 'dbo', 'Department', @rowcnt output
 select @rowcnt
 ```
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 [임시 테이블 보존 정책](https://docs.microsoft.com/azure/sql-database/sql-database-temporal-tables-retention-policy)

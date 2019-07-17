@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: df1608fd078aa4c95bd50249eef59d4650a4889f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68aaaf9db4b2376a1c950bc4c2b463bd2b7b6391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029328"
 ---
 # <a name="customizing-calls-order-sybasetosql"></a>호출 순서 사용자 지정(SybaseToSQL)
 이 단계에서 테스트 하려면 개체는 호출 순서를 선택할 수 있습니다.  

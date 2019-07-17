@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7aa84474-16e5-49bd-a703-c8d1408ef107
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7e8e2af3150b6c0e8663c28a1342b68be57e043d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 1c7bb6e33dfd2ee6640e9588011d3686a72a0188
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140665"
 ---
 # <a name="managedbackupfnavailablebackups-transact-sql"></a>managed_backup.fn_available_backups (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ managed_backup.fn_available_backups ([@database_name = ] 'database name')
 데이터베이스가 삭제된 다음 다시 생성된 경우에는 모든 데이터베이스에 대한 백업 집합이 반환됩니다. 출력은 각 데이터베이스를 고유하게 식별하는 database_guid 순서로 지정됩니다.   
 LSN에 로그 체인이 끊어졌음을 의미하는 간격이 있으면 테이블에 누락된 각 LSN 세그먼트에 대한 특수 행이 포함됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |Backup_path|NVARCHAR(260) COLLATE Latin1_General_CI_AS_KS_WS|백업 파일의 URL입니다.|  
 |backup_type|NVARCHAR(6)|데이터베이스에 대 한 ' DB' 백업 'LOG' 로그 백업|  
@@ -83,7 +82,7 @@ FROM managed_backup.fn_available_backups ('MyDB')
   
 ```  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [Microsoft Azure에 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)   
  [Microsoft Azure에 저장된 백업에서 복원](../../relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md)  
   

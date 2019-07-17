@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1fc61908-e003-4587-b91a-32f40569fb99
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4d00fcff0b2fa1948f6b2f6f66b863501e12d97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee8f9b9879a3533e8196bbc89f8ae0b0a132293a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036092"
 ---
 # <a name="sqlcleanupconnectionpoolid-function"></a>SQLCleanupConnectionPoolID 함수
 **규칙**  
@@ -51,7 +50,7 @@ SQLRETURN  SQLCleanupConnectionPoolID (
   
  응용 프로그램 드라이버에 의해 반환 되는 오류 메시지를 받을 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **SQLCleanupConnectionPoolID** 언제 든 지 호출할 수 있지만 드라이버 관리자는 다른 스레드에서 동시에 호출 하는 보장 **SQLGetPoolID** 하며 다른 스레드에서 동시에 호출  **SQLRateConnection** 하 고 **SQLPoolConnect** 풀 ID를 사용 하 여 할당 된 연결 정보 토큰을 사용 하 여 따라서 드라이버는이 함수는 스레드로부터 안전 하 고 있는지 확인 해야 합니다.  
   
  드라이버 풀 ID와 사용 하 여 연결 된 리소스를 정리할 수 있습니다.  

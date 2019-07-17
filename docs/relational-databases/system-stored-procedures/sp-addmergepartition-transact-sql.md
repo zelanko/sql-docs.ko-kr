@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 02a5f46b-e5ff-4932-a3ff-7f0fd82d0981
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5599370f892d174336411573883e2feffa27b886
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ef5b51944cae5b3a5b9af3c342ae66fe41548f65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092715"
 ---
 # <a name="spaddmergepartition-transact-sql"></a>sp_addmergepartition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_addmergepartition [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_addmergepartition** 병합 복제에 사용 됩니다.  
   
 ## <a name="example"></a>예제  

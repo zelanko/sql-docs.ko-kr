@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7de783ae116a61aaa4c8801ca132127352020161
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0567e38d34b9400dcaf6b170d821aa0e5fd0e263
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240275"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079007"
 ---
 # <a name="determining-installed-oracle-components"></a>설치된 Oracle 구성 요소 확인
 > [!IMPORTANT]  

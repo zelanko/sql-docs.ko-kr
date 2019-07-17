@@ -4,19 +4,18 @@ description: 이 문서에서는 Linux의 SQL Server 복제를 설명 합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 10/17/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a083a5fe3710ca9682c9d9df9ba0f6a0eceaad6c
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: b049866d9752485cb1b9eb609404a3bd86f28a41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065190"
 ---
 # <a name="sql-server-replication-on-linux"></a>Linux에서 SQL Server 복제
 

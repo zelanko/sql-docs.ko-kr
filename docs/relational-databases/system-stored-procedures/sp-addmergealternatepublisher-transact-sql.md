@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: de46e0b1-d946-4021-bff6-2d8e3187656d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: efbf4195294ce8bc279a2ed995ce09a5f384a82c
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0e34ad32ed5fb2ae54c5a32b715ee6eb417023b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58491977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118078"
 ---
 # <a name="spaddmergealternatepublisher-transact-sql"></a>sp_addmergealternatepublisher(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,14 +59,14 @@ sp_addmergealternatepublisher [ @publisher= ] 'publisher'
   
 `[ @alternate_distributor = ] 'alternate_distributor'` 대체 동기화 파트너에 대 한 배포자의 이름이입니다. *alternate_distributor* 됩니다 **sysname**, 기본값은 없습니다.  
   
-`[ @friendly_name = ] 'friendly_name'` 게시자, 게시 및 대체 동기화 파트너를 구성 하는 배포자의 연결을 식별할 수 있는 표시 이름이입니다. *friendly_name* 됩니다 **nvarchar(255)**, 기본값은 NULL입니다.  
+`[ @friendly_name = ] 'friendly_name'` 게시자, 게시 및 대체 동기화 파트너를 구성 하는 배포자의 연결을 식별할 수 있는 표시 이름이입니다. *friendly_name* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_addmergealternatepublisher** 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

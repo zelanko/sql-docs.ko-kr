@@ -21,14 +21,13 @@ ms.assetid: c34b8625-e53c-4281-ace6-d46230d5cb84
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c695997906aeb5c3d5181cc8683f8401adb5df17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c139a45df1031ac47750d995780f8e13ea64f2c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133810"
 ---
 # <a name="sysfulltextindexcolumns-transact-sql"></a>sys.fulltext_index_columns(Transact SQL)
 
@@ -36,7 +35,7 @@ ms.locfileid: "66822938"
 
   전체 텍스트 인덱스의 일부인 각 열에 대한 행을 포함합니다.    
  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 열이 속한 개체의 ID입니다.|  
 |**column_id**|**int**|전체 텍스트 인덱스의 일부인 열의 ID입니다.|  

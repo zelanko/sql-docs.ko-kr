@@ -20,21 +20,20 @@ ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef59338f86601316a71ae4f97004dc9beceb015f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0aa04b9a4b90b470ca3cc6df4a8f5cf62134027c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220501"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   이 카탈로그 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 단어 분리기가 등록된 언어당 한 개의 행을 포함합니다. 각 행에는 LCID 및 언어의 이름을 표시합니다. 언어, 다른 언어 리소스 형태소 분석기, 의미 없는 단어 (중지 단어) 및 동의어 사전 파일 수에 대 한 단어 분리기가 등록 하는 경우 전체 텍스트 인덱싱/쿼리 작업에 사용할 수 있습니다. 변수의 **이름을** 또는 **lcid** 전체 텍스트 쿼리 및 전체 텍스트 인덱스를 지정할 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다.  
    
-|Column|데이터 형식|Description|  
+|Column|데이터 형식|설명|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|해당 언어의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows LCID(로캘 ID)입니다.|  
 |**name**|**sysname**|별칭 값 이거나 [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 의 값에 해당 하 **lcid** 또는 숫자로 된 LCID의 문자열 표현입니다.|  
@@ -98,7 +97,7 @@ ms.locfileid: "64945631"
 |우르두어|1056|  
 |베트남어|1066|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  전체 텍스트 검색에 등록 된 언어 목록을 업데이트 하려면 사용 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**'.  
   
 ## <a name="permissions"></a>사용 권한  

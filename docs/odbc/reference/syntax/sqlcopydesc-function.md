@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 601c0cdab47c338b903514f2e2e47547551ef678
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bacf438180dd6fe2823660e8275e48a2316e9efa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121435"
 ---
 # <a name="sqlcopydesc-function"></a>SQLCopyDesc 함수
 **규칙**  
@@ -60,7 +59,7 @@ SQLRETURN SQLCopyDesc(
   
  때문에 **SQLCopyDesc** 를 호출 하 여 구현 될 수 있습니다 **SQLGetDescField** 하 고 **SQLSetDescField**를 **SQLCopyDesc** 반환할 수 있습니다 반환 된 Sqlstate **SQLGetDescField** 하거나 **SQLSetDescField**합니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |08S01|통신 연결 오류|함수가 완료 되었습니다. 처리 하기 전에 드라이버 및 드라이버는 연결 된 데이터 원본 간의 통신 링크 하지 못했습니다.|  

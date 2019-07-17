@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 07f3d1fc-b4ee-4693-b342-330b2231b6d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f7b9a69941364b32e6b43d79f2d092511fd61f22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e58551ae3c6edda3cd865817223fd8052d03ec5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130046"
 ---
 # <a name="decimal-digits"></a>십진수
 합니다 *진수* decimal 및 numeric 데이터 형식 소수점의 오른쪽 또는 데이터의 소수 자릿수의 최대 수로 정의 됩니다. 근사 부동 소수점 숫자 열 또는 매개 변수의 경우에 대 한 확장 정의 되지 않습니다 소수점 오른쪽 자릿수 수가 고정 되어 있지 않으므로. 초 구성 요소를 포함 하는 datetime 또는 간격 데이터에 대 한 10 진수 숫자 데이터의 초 구성 요소에서 소수점 오른쪽 자릿수도 정의 됩니다.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106541"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,12 +84,12 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  정리 작업은 데이터베이스의 첫 번째 테이블에 변경 데이터 캡처가 활성화된 경우 기본값을 사용하여 만들어집니다. 캡처 작업은 데이터베이스의 첫 번째 테이블에 변경 데이터 캡처가 활성화되고 데이터베이스에 대한 트랜잭션 게시가 없는 경우 기본값을 사용하여 만들어집니다. 트랜잭션 게시가 있는 경우 트랜잭션 로그 판독기를 사용하여 캡처 메커니즘을 구동하므로 별개의 캡처 작업이 필요 없고 허용되지도 않습니다.  
   
  정리 및 캡처 작업은 기본적으로 만들어지므로 이 저장 프로시저는 작업이 명시적으로 삭제되어 다시 만들어야 하는 경우에만 필요합니다.  
   
- 작업의 이름은 **cdc.**  _\<데이터베이스\_이름\>_**\_정리** 나 **cdc.**  _\<데이터베이스\_이름\>_**\_캡처**여기서 *< database_name >* 이름 현재 데이터베이스입니다. 동일한 이름 가진 작업이 이미 있는 이름을 마침표를 사용 하 여 추가 됩니다 (**합니다.**) 뒤에 고유 식별자, 예를 들어: **cdc. AdventureWorks_capture 합니다. A1ACBDED-13FC-428C-8302-10100EF74F52**합니다.  
+ 작업의 이름은 **cdc.**  _\<데이터베이스\_이름\>_ **\_정리** 나 **cdc.**  _\<데이터베이스\_이름\>_ **\_캡처**여기서 *< database_name >* 이름 현재 데이터베이스입니다. 동일한 이름 가진 작업이 이미 있는 이름을 마침표를 사용 하 여 추가 됩니다 (**합니다.** ) 뒤에 고유 식별자, 예를 들어: **cdc. AdventureWorks_capture 합니다. A1ACBDED-13FC-428C-8302-10100EF74F52**합니다.  
   
  정리 또는 캡처 작업의 현재 구성을 보려면 사용 하 여 [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)합니다. 작업의 구성을 변경 하려면 사용 하 여 [하면 sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)합니다.  
   
@@ -99,7 +98,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-capture-job"></a>1. 캡처 작업 만들기  
+### <a name="a-creating-a-capture-job"></a>A. 캡처 작업 만들기  
  다음 예에서는 캡처 작업을 만듭니다. 이 예에서는 기존 정리 작업이 명시적으로 삭제되어 다시 만들어야 한다고 가정합니다. 작업은 기본값을 사용하여 만들어집니다.  
   
 ```  
@@ -109,7 +108,7 @@ EXEC sys.sp_cdc_add_job @job_type = N'capture';
 GO  
 ```  
   
-### <a name="b-creating-a-cleanup-job"></a>2. 정리 작업 만들기  
+### <a name="b-creating-a-cleanup-job"></a>2\. 정리 작업 만들기  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 정리 작업을 만듭니다. 매개 변수 `@start_job`은 0으로, `@retention`은 5760분(96시간)으로 설정됩니다. 이 예에서는 기존 정리 작업이 명시적으로 삭제되어 다시 만들어야 한다고 가정합니다.  
   
 ```  

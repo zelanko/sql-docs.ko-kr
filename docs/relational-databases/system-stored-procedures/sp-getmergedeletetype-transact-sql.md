@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64450e4d-844d-4176-874e-f3845536f7d2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3056c5c298fc1987e7c6f25e4a28220d3e033115
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 478d483da545a6b149a0fb2b03c41f106a73da60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123982"
 ---
 # <a name="spgetmergedeletetype-transact-sql"></a>sp_getmergedeletetype(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @source_object = ] 'source_object'` 원본 개체의 이름이입니다. *source_object* 됩니다 **nvarchar(386)**, 기본값은 없습니다.  
+`[ @source_object = ] 'source_object'` 원본 개체의 이름이입니다. *source_object* 됩니다 **nvarchar(386)** , 기본값은 없습니다.  
   
 `[ @rowguid = ] 'rowguid'` 삭제 유형에 대 한 행 식별자가입니다. *rowguid* 됩니다 **uniqueidentifier**, 기본값은 없습니다.  
   
@@ -50,7 +49,7 @@ sp_getmergedeletetype [ @source_object = ] 'source_object', [ @rowguid =] 'rowgu
 |**5**|부분 삭제|  
 |**6**|시스템 삭제|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_getmergedeletetype** 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

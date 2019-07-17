@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 03d9b5140eb0cbf9d868e43c65213efe917994a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d53a88ce78eb5a1b106cefb0832ca1023f67c000
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077259"
 ---
 # <a name="except-mdx-function"></a>Except (MDX) 함수
 
@@ -35,7 +34,7 @@ Except(Set_Expression1, Set_Expression2 [, ALL ] )
  *Set_Expression2*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  하는 경우 **모든** 는 지정 된 함수는 첫 번째 집합에서 발견 된 중복 요소를 유지; 두 번째 집합에서 발견 된 중복 요소 제거 됩니다. 멤버는 첫 번째 집합에 나타나는 순서대로 반환됩니다.  
   
 ## <a name="examples"></a>예  

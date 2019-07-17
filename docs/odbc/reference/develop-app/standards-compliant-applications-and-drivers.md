@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a1145c4c-3094-4f3f-8cc2-e6bb1a930ab1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1283cd0b41eff971a1014b213bda5e44f1912039
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 4980cfe64a5a8e8404c6b5b0bdc8b1aba484f0c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792779"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107327"
 ---
 # <a name="standards-compliant-applications-and-drivers"></a>표준 준수 애플리케이션 및 드라이버
 표준 호환 응용 프로그램 또는 드라이버 하나인 Open 그룹 CAE 사양을 준수 하는 "데이터 관리: SQL 호출 수준 인터페이스 (CLI)"및 9075 ISO/IEC-3:1995 (E) 호출 수준 인터페이스 (SQL/CLI).  

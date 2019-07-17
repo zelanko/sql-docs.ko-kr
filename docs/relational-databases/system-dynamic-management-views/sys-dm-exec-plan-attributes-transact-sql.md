@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013221"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255606"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |attribute|**varchar(128)**|이 계획과 연결된 특성의 이름입니다. 이 바로 아래 표에서 가능한 특성, 해당 데이터 형식 및 해당 설명을 나열합니다.|  
 |value|**sql_variant**|이 계획과 연결된 특성의 값입니다.|  
@@ -53,7 +52,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 위의 테이블에서 **특성** 다음 값을 가질 수 있습니다.
 
-|attribute|데이터 형식|Description|  
+|attribute|데이터 형식|설명|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|계획을 컴파일할 때 사용하는 옵션 값을 나타냅니다.|  
 |objectid|**int**|캐시에서 개체를 찾는 데 사용되는 기본 키 중 하나입니다. ID에 저장 하는 개체 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 데이터베이스 개체 (프로시저, 뷰, 트리거 및 등)에 대 한 합니다. 계획 유형이 "임시" 또는 "준비됨"일 경우 일괄 처리 텍스트의 내부 해시입니다.|  
@@ -82,9 +81,9 @@ sys.dm_exec_plan_attributes ( plan_handle )
 ## <a name="permissions"></a>사용 권한  
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="set-options"></a>SET 옵션  
  동일한 컴파일된 계획의 복사본 수의 값에 의해서만 달라 지는 **set_options** 열입니다. 이는 동일한 쿼리에 대해 서로 다른 연결이 서로 다른 SET 옵션 집합을 사용하고 있음을 나타냅니다. 캐시에 있는 계획의 여러 복사본으로 인해 추가 컴파일 작업이 발생하고 계획 재사용 횟수가 줄어들며 계획 캐시 인플레이션이 발생할 수 있으므로 일반적으로 서로 다른 옵션 집합은 사용하지 않는 것이 좋습니다.  
@@ -141,7 +140,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-the-attributes-for-a-specific-plan"></a>1\. 특정 계획에 대한 특성 반환  
+### <a name="a-returning-the-attributes-for-a-specific-plan"></a>A. 특정 계획에 대한 특성 반환  
  다음 예에서는 지정된 계획에 대한 모든 계획 특성을 반환합니다. 지정된 계획에 대한 계획 핸들을 얻기 위해 먼저 `sys.dm_exec_cached_plans` 동적 관리 뷰가 쿼리됩니다. 두 번째 쿼리에서는 `<plan_handle>`을 첫 번째 쿼리의 계획 핸들 값으로 대체합니다.  
   
 ```sql  

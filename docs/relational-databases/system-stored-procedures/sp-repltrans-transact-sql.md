@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 738e2322-335b-44fa-820e-f31c02743978
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a98ac1b5c0a5ee51865a6b18d63efff55e12907
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5b1bdcdcd0f2128a08546e8b322449ec0b28cc29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129778"
 ---
 # <a name="sprepltrans-transact-sql"></a>sp_repltrans(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_repltrans
 ## <a name="result-sets"></a>결과 집합  
  **sp_repltrans** 올 실행 현재 배포 되지 않은 트랜잭션을 볼 수 있도록 게시 데이터베이스에 대 한 정보를 반환 합니다 (트랜잭션을 보내지 않은 트랜잭션 로그에 남아 합니다 배포자)입니다. 결과 집합에는 각 트랜잭션에 대한 처음 및 마지막 레코드의 로그 시퀀스 번호가 표시됩니다. **sp_repltrans** 비슷합니다 [sp_replcmds &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md) 트랜잭션 명령을 반환 하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_repltrans** 트랜잭션 복제에 사용 됩니다.  
   
  **sp_repltrans** 지원 되지 않습니다 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  

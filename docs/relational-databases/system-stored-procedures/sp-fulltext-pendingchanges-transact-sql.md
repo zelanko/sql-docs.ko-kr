@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef93287acb610e813f20f213e8fb6a325058116d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124224"
 ---
 # <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_fulltext_pendingchanges table_id
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**Key**|*|지정한 테이블의 전체 텍스트 키 값입니다.|  
 |**DocId**|**bigint**|키 값에 해당하는 내부 문서 ID(DocId) 열입니다.|  
@@ -58,7 +57,7 @@ sp_fulltext_pendingchanges table_id
 ## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  처리할 변경 내용이 없으면 빈 행 집합이 반환됩니다.  
   
  전체 텍스트 검색 쿼리 사용 하 여 행을 반환 하지는 **상태** 값이 0입니다. 이는 이러한 행이 기본 테이블에서 삭제되었고 전체 텍스트 인덱스에서도 삭제 대기 중이기 때문입니다.  

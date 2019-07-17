@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: 40e967d5-2e8d-45af-bf5e-5251493cf7cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b206a8e1a4290a9ac4a2db6b88b8e326ed44b42d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f3b2172e48ec787c37fd9b3daab6cafb5c49f88f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47822831"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078635"
 ---
 # <a name="sysspatialindexes-transact-sql"></a>sys.spatial_indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   공간 인덱스의 주요 인덱스 정보를 나타냅니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |\<열을 상속 >||열을 상속 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)합니다.|  
 |spatial_index_type|**tinyint**|공간 인덱스 유형:<br /><br /> 1 = 기하학적 공간 인덱스<br /><br /> 2 = 지리적 인덱스|  

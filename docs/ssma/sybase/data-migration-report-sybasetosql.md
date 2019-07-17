@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3d70a2546a925474e0b80bb1d7cee4ee7ab2c266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029405"
 ---
 # <a name="data-migration-report-sybasetosql"></a>데이터 마이그레이션 보고서(SybaseToSQL)
 합니다 **데이터 마이그레이션 보고서** 대화 상자가 나타나면 데이터를 마이그레이션한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -24,7 +23,7 @@ ms.locfileid: "63298533"
 **상태**  
 대상 데이터베이스에 원본에서 데이터 마이그레이션 상태를 보여 줍니다.  
   
-**보낸 사람**  
+**From**  
 원본 테이블입니다.  
   
 **수행할 작업**  

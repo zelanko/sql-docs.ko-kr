@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bc14a072-8949-4ee0-a4b4-ada55fe8df5c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0bc3c92067d1fd8240cc17db03de7dac409a0123
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d96be29aa74d3903e47f20ec6841b4a20135727
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141083"
 ---
 # <a name="connect-to-sql-server-db2tosql"></a>SQL Server (DB2ToSQL)에 연결
 사용 된 **SQL Server에 연결** 의 인스턴스에 연결 하려면 대화 상자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 마이그레이션하려는 합니다. 액세스는 **SQL Server에 연결** 대화 상자의 합니다 **파일** 메뉴에서 클릭 **SQL Server에 연결**합니다.  

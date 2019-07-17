@@ -19,16 +19,15 @@ helpviewer_keywords:
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ce26cd3d4e42d6d94e32a3454318a0ee841c486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124493"
 ---
-# <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
+# <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (TRANSACT-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
@@ -102,7 +101,7 @@ sp_execute_external_script
   
 `[ @parameter1 = 'value1' [ OUT | OUTPUT ] [ ,...n ] ]` 목록에서 외부 스크립트를 사용 하는 입력된 매개 변수의 값입니다.  
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
 > [!IMPORTANT]
 > 쿼리 트리를 통해 제어 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 쿼리에 대 한 임의 작업을 수행할 수 없습니다. 
@@ -182,7 +181,7 @@ Float 값 (예를 들어 `+Inf`, `-Inf`를 `NaN`)에서 지원 되지 않습니�
 
 사용 하 여 R 또는 Python 스크립트를 실행 하려면이 저장된 프로시저를 사용할 수 있는 방법을의 예제를 포함 하는이 섹션에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)]합니다.
 
-### <a name="a-return-an-r-data-set-to-sql-server"></a>1. SQL Server에 R 데이터 집합을 반환  
+### <a name="a-return-an-r-data-set-to-sql-server"></a>A. SQL Server에 R 데이터 집합을 반환  
 
 다음 예제를 사용 하는 저장된 프로시저를 만듭니다 **sp_execute_external_script** R에 포함 된 Iris 데이터 집합을 반환할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
 
@@ -205,7 +204,7 @@ END;
 GO
 ```
 
-### <a name="b-generate-an-r-model-based-on-data-from-sql-server"></a>2. SQL Server에서 데이터를 기반으로 R 모델을 생성 합니다.  
+### <a name="b-generate-an-r-model-based-on-data-from-sql-server"></a>2\. SQL Server에서 데이터를 기반으로 R 모델을 생성 합니다.  
 
 다음 예제를 사용 하는 저장된 프로시저를 만듭니다 **sp_execute_external_script** 아이리스 모델을 생성 하 고 모델을 반환 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
 
@@ -235,7 +234,7 @@ GO
 
 Python을 사용하여 비슷한 모델을 생성하려면 언어 식별자를 `@language=N'R'`에서 `@language = N'Python'`으로 변경하고 `@script` 인수를 필요한 대로 수정합니다. 그렇지 않으면 모든 매개 변수가 R과 똑같이 작동합니다.
 
-### <a name="c-create-a-python-model-and-generate-scores-from-it"></a>3. Python 모델을 만들고 여기에서 점수를 생성 합니다.
+### <a name="c-create-a-python-model-and-generate-scores-from-it"></a>3\. Python 모델을 만들고 여기에서 점수를 생성 합니다.
 
 이 예제에서는 sp\_execute\_external\_script를 사용하여 간단한 Python 모델에서 점수를 생성하는 방법을 보여줍니다. 
 
@@ -273,7 +272,7 @@ Python 코드에 열 머리글이 없는 SQL server에 대 한 출력 따라서 
 
 점수 매기기의 경우 네이티브 [PREDICT](../../t-sql/queries/predict-transact-sql.md) 함수를 사용할 수도 있으며, 이 함수는 Python 또는 R 런타임 호출을 방지하기 때문에 일반적으로 더 빠릅니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Python 라이브러리 및 데이터 형식](../../advanced-analytics/python/python-libraries-and-data-types.md)  

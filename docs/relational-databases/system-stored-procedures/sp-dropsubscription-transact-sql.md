@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 30640cac3b2d8d39ec06d5a05f49c38665b39683
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 923f3cd5d94bbae8cc9c0eac9361eada0cd73194
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62706459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124773"
 ---
 # <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_dropsubscription** 스냅숏 및 트랜잭션 복제에 사용 됩니다.  
   
  즉시 동기화 게시에서 아티클에 관한 구독을 삭제한 경우에는 게시에서 모든 아티클에 대한 구독을 삭제한 다음, 모두 한꺼번에 다시 추가하지 않는 한 다시 추가할 수 없습니다.  

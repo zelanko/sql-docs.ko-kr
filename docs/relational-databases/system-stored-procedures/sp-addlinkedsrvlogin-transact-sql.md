@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542193"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072675"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  로그인 매핑이 적용되는 연결된 서버의 이름입니다. *rmtsrvname* 됩니다 **sysname**, 기본값은 없습니다.  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
- 에 연결할지 여부를 결정 *rmtsrvname* 로컬 로그인을 가장 또는 명시적으로 로그인 및 암호를 제출 합니다. 데이터 형식이 **varchar (** 8 **)**, 기본값은 TRUE입니다.  
+ 에 연결할지 여부를 결정 *rmtsrvname* 로컬 로그인을 가장 또는 명시적으로 로그인 및 암호를 제출 합니다. 데이터 형식이 **varchar (** 8 **)** , 기본값은 TRUE입니다.  
   
  값이 true 이면 지정 로그인 자격 증명 자체를 사용 하 여 연결할 *rmtsrvname*를 사용 하 여는 *rmtuser* 및 *rmtpassword* 인수를 무시 합니다. FALSE를 지정 하는 *rmtuser* 하 고 *rmtpassword* 인수에 연결할 때 사용 됩니다 *rmtsrvname* 지정 된 *locallogin* . 하는 경우 *rmtuser* 하 고 *rmtpassword* 또한에 NULL, 로그인 또는 암호로 연결된 된 서버에 연결할 때 사용 됩니다.  
   
@@ -63,7 +62,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용자가 로컬 서버에 로그온하여 연결된 서버의 테이블에 액세스하는 분산 쿼리를 실행하는 경우 로컬 서버는 반드시 해당 테이블에 액세스하는 사용자를 대신하여 연결된 서버에 로그온해야 합니다. 로컬 서버가 연결된 서버에 로그온할 때 사용할 로그인 자격 증명을 지정하려면 sp_addlinkedsrvlogin을 사용합니다.  
   
 > [!NOTE]  
@@ -91,7 +90,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-connecting-all-local-logins-to-the-linked-server-by-using-their-own-user-credentials"></a>1. 자체 사용자 자격 증명을 사용하여 연결된 서버에 모든 로컬 로그인 연결  
+### <a name="a-connecting-all-local-logins-to-the-linked-server-by-using-their-own-user-credentials"></a>A. 자체 사용자 자격 증명을 사용하여 연결된 서버에 모든 로컬 로그인 연결  
  다음 예에서는 로컬 서버의 모든 로그인이 자체 사용자 자격 증명을 사용하여 `Accounts` 연결된 서버에 연결되도록 하는 매핑을 만듭니다.  
   
 ```  
@@ -107,7 +106,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'true';
 > [!NOTE]  
 >  개별 로그인에 대해 생성된 명시적 매핑이 있는 경우 이 매핑은 해당 연결된 서버에 존재할 수 있는 모든 전역 매핑보다 우선합니다.  
   
-### <a name="b-connecting-a-specific-login-to-the-linked-server-by-using-different-user-credentials"></a>2. 다른 사용자 자격 증명을 사용하여 연결된 서버에 특정 로그인 연결  
+### <a name="b-connecting-a-specific-login-to-the-linked-server-by-using-different-user-credentials"></a>2\. 다른 사용자 자격 증명을 사용하여 연결된 서버에 특정 로그인 연결  
  다음 예에서는 `Domain\Mary` Windows 사용자가 `Accounts` 로그인과 `MaryP` 암호를 사용하여 `d89q3w4u` 연결된 서버로 연결되도록 하는 매핑을 만듭니다.  
   
 ```  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0678aee9-8256-463c-89dd-77b1a0dfdd60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edf9976dd3e5d890b46919808e896a8e81a0cd93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093787"
 ---
 # <a name="usage-counting"></a>사용량 계산
 > [!NOTE]  

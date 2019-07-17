@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5127dacf628231199c5ce5ac49fdb2377c82f270
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2be0d498da026f386c3a89002cca621b19a2a15d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133993"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -33,16 +32,16 @@ ms.locfileid: "62631631"
   
  `sys.firewall_rules` 뷰는 다음 열을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |id|**INT**|서버 수준 방화벽 설정의 식별자입니다.|  
-|NAME|**NVARCHAR(128)**|서버 수준 방화벽 설정을 설명하고 구분하기 위해 선택한 이름입니다.|  
+|name|**NVARCHAR(128)**|서버 수준 방화벽 설정을 설명하고 구분하기 위해 선택한 이름입니다.|  
 |start_ip_address|**VARCHAR(45)**|서버 수준 방화벽 설정 범위에서 가장 낮은 IP 주소입니다. 이 값보다 크거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 연결을 시도할 수 있습니다. 가능한 가장 낮은 IP 주소는 `0.0.0.0`입니다.|  
 |end_ip_address|**VARCHAR(45)**|서버 수준 방화벽 설정 범위에서 가장 높은 IP 주소입니다. 이 값보다 작거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 연결을 시도할 수 있습니다. 가능한 가장 높은 IP 주소는 `255.255.255.255`입니다.<br /><br /> 참고: Windows Azure 연결을 시도할 수 있습니다이 필드와 **start_ip_address** equals 필드 `0.0.0.0`합니다.|  
 |create_date|**DATETIME**|서버 수준 방화벽 설정이 만들어진 UTC 날짜 및 시간입니다.<br /><br /> 참고: UTC는 Coordinated Universal time 머리 글자어입니다.|  
 |modify_date|**DATETIME**|서버 수준 방화벽 설정이 마지막 수정된 UTC 날짜 및 시간입니다.|  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
  에 연결 된 Microsoft Azure SQL Database와 사용 하 여 데이터베이스 수준 방화벽 설정에 대 한 정보를 반환 합니다. [sys.database_firewall_rules &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-database-firewall-rules-azure-sql-database.md)합니다.  
   

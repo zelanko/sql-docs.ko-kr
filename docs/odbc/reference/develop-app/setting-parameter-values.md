@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 13e5da79-b60c-48d0-b467-773f481ef2a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66811d2364db546c3bddd787c1e0794f936f97c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bb1115290f53c19fae1aacb0a976cfcef63e086
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094231"
 ---
 # <a name="setting-parameter-values"></a>매개 변수 값 설정
 매개 변수의 값을 설정 하려면 응용 프로그램 매개 변수를 바인딩할 변수의 값을 간단히 설정 합니다. 이 중요 하지 않습니다이 값을 설정 하면 문이 실행 되기 전에 설정 됩니다. 응용 프로그램 변수 바인딩 전후 값을 설정할 수 및 원하는 횟수 만큼 값을 변경할 수 있습니다. 문이 실행 될 경우 드라이버는 단순히 변수의 현재 값을 검색 합니다. 준비 된 문을 한 번 이상 실행 될 때 특히 유용 응용 프로그램 새 값 설정 변수의 일부 또는 전부에 대 한 문이 실행 될 때마다 합니다. 이 예제를 보려면 [실행 준비](../../../odbc/reference/develop-app/prepared-execution-odbc.md)이 섹션의 앞부분에 나오는.  
@@ -35,13 +34,13 @@ ms.locfileid: "62445955"
   
  다음 표에서 바인딩된 변수 및 매개 변수 값의 다양 한 응용 프로그램을 설정 하는 길이/표시기 버퍼의 값을 보여 줍니다.  
   
-|매개 변수<br /><br /> value|매개 변수<br /><br /> (SQL)<br /><br /> 데이터 형식|Variable (C)<br /><br /> 데이터 형식|값<br /><br /> 바인딩됨<br /><br /> 변수|값<br /><br /> 길이/표시기<br /><br /> buffer[d]|  
+|매개 변수<br /><br /> value|매개 변수<br /><br /> (SQL)<br /><br /> 데이터 형식|Variable (C)<br /><br /> 데이터 형식|값<br /><br /> 바인딩됨<br /><br /> 변수|값<br /><br /> 길이/표시기<br /><br /> 버퍼 [d]|  
 |-------------------------|-----------------------------------------|----------------------------------|-------------------------------------|----------------------------------------------------|  
 |"ABC"|SQL_CHAR|SQL_C_CHAR|ABC\0[a]|SQL_NTS 또는 3|  
 |10|SQL_INTEGER|SQL_C_SLONG|10|--|  
 |10|SQL_INTEGER|SQL_C_CHAR|10\0[a]|SQL_NTS 또는 2|  
-|1 P.M.|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0[b]|--|  
-|1 P.M.|SQL_TYPE_TIME|SQL_C_CHAR|{t '13:00:00'}\0[a], [c]|SQL_NTS 또는 14|  
+|오후 1 시|SQL_TYPE_TIME|SQL_C_TYPE_TIME|13,0,0[b]|--|  
+|오후 1 시|SQL_TYPE_TIME|SQL_C_CHAR|{t '13:00:00'}\0[a], [c]|SQL_NTS 또는 14|  
 |NULL|SQL_SMALLINT|SQL_C_SSHORT|--|SQL_NULL_DATA|  
   
  [a] "\0" null 종료 문자를 나타냅니다. Null 종료 문자는 길이/표시기 버퍼의 값은 SQL_NTS 하는 경우에 필요 합니다.  

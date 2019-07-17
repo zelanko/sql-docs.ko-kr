@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1f5b63c4-2f3e-44da-b155-876405302281
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e810d2e7ff3f69faea5fdcbccbb7f7ba276df48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 337ed5808b8eb3cf964977fcba70307984d1b2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104711"
 ---
 # <a name="sqldescribeparam-function"></a>SQLDescribeParam 함수(SQLDescribeParam Function)
 **규칙**  
@@ -84,7 +83,7 @@ SQLRETURN SQLDescribeParam(
 ## <a name="diagnostics"></a>진단  
  때 **SQLDescribeParam** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여는 *HandleType* 의 호출 및 *처리할* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLDescribeParam** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07009|잘못 된 설명자 인덱스입니다.|인수에 지정 된 값 (DM) *상태로* 가 1 미만입니다.<br /><br /> 인수에 지정 된 값 *상태로* 연결된 된 SQL 문 매개 변수 개수 보다 큽니다.<br /><br /> 매개 변수 표식에서 비 DML 문의 일부입니다.<br /><br /> 매개 변수 표식 된 부분을 **선택** 목록입니다.|  

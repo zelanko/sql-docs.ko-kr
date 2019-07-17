@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13f4c879f94118a2e2302a2032991e85551be0f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65f6145f0cbfbd59fffb71e030f6427ea1f551c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036209"
 ---
 # <a name="sqlbindparameter-function"></a>SQLBindParameter 함수
 
@@ -100,7 +99,7 @@ SQLRETURN SQLBindParameter(
 
  때 **SQLBindParameter** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 연관된 된 SQLSTATE 값 반환을 호출 하 여 얻을 수 있습니다 **SQLGetDiagRec** 사용 하 여는 *HandleType* 의 호출 및 *처리할* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLBindParameter** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
 
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |07006|제한 된 데이터 형식 특성을 위반 했습니다.|으로 식별 되는 데이터 형식 합니다 *ValueType* 인수에서 식별 되는 데이터 형식으로 변환할 수 없습니다는 *ParameterType* 인수입니다. 이 오류를 반환할 수 있습니다는 **SQLExecDirect**, **SQLExecute**, 또는 **SQLPutData** 여는 대신 실행 시 **SQLBindParameter**.|  
@@ -243,7 +242,7 @@ SQLRETURN SQLBindParameter(
 > [!NOTE]  
 >  **SQLSetParam**응용 프로그램의 길이 지정 하는 방식으로 **ParameterValuePtr* 드라이버 문자 또는 이진 데이터 및 응용 프로그램 전송 하는 방식으로 반환할 수 있도록 버퍼를 배열 문자 또는 이진 매개 변수 값이 드라이버는 드라이버 정의 합니다.  
   
-## <a name="strlenorindptr-argument"></a>StrLen_or_IndPtr Argument
+## <a name="strlenorindptr-argument"></a>StrLen_or_IndPtr 인수
 
  합니다 *StrLen_or_IndPtr* 인수는 버퍼를 가리키는 하는 경우 **SQLExecute** 또는 **SQLExecDirect** 호출 되 면 다음 중 하나를 포함 합니다. (이 인수는 응용 프로그램 매개 변수에 대 한 포인터의 SQL_DESC_INDICATOR_PTR 및 SQL_DESC_OCTET_LENGTH_PTR 레코드 필드를 설정합니다.)  
   
@@ -290,7 +289,7 @@ SQLRETURN SQLBindParameter(
   
     -   모든 실행 시 데이터 매개 변수가 있는 경우 sql_need_data가 반환 됩니다.  
   
-4.  호출 **SQLParamData** 에 지정 된 응용 프로그램 정의 값을 검색 하는 *ParameterValuePtr* 인수의 **SQLBindParameter** 첫 번째 처리할 실행 시 데이터 매개 변수입니다. **SQLParamData** returns SQL_NEED_DATA.  
+4.  호출 **SQLParamData** 에 지정 된 응용 프로그램 정의 값을 검색 하는 *ParameterValuePtr* 인수의 **SQLBindParameter** 첫 번째 처리할 실행 시 데이터 매개 변수입니다. **SQLParamData** SQL_NEED_DATA를 반환 합니다.  
   
     > [!NOTE]  
     >  반환 되는 값 이지만 실행 시 데이터 매개 변수가 실행 시 데이터 열과 비슷한 **SQLParamData** 마다 다릅니다. 실행 시 데이터 매개 변수는 매개 변수는 데이터를 보낼 사용 하 여 SQL 문에서 **SQLPutData** 문을 사용 하 여 실행 될 때 **SQLExecDirect** 또는 **SQLExecute**. 사용 하 여 바인딩된 **SQLBindParameter**합니다. 반환 된 값 **SQLParamData** 에 전달 하는 포인터 값 **SQLBindParameter** 에 *ParameterValuePtr* 인수입니다. 실행 시 데이터 열이 있는 데이터를 보낼 사용 하 여 행 집합의 열 **SQLPutData** 행이 업데이트 되거나 추가 된 경우 **SQLBulkOperations** 사용 하 여 업데이트 또는 **SQLSetPos**. 사용 하 여 바인딩된 **SQLBindCol**합니다. 반환 된 값 **SQLParamData** 에 있는 행의 주소는 **TargetValuePtr* 버퍼 (를 호출 하 여 설정 **SQLBindCol**) 처리 되는 합니다.  

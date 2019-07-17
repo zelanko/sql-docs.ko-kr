@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1d4191a53db7c4921f026e4b6e6f8406b2ce5c24
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 17e43f9739b0306a42c4c454cf93fdf92b255177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122525"
 ---
 # <a name="sphelpindex-transact-sql"></a>sp_helpindex(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,14 +40,14 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @objname = ] 'name'` 사용자 정의 테이블 또는 뷰의 정규화 되거나 정규화 되지 않은 이름이입니다. 정규화된 테이블 또는 뷰 이름이 지정된 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *이름* 는 **nvarchar(776)**, 기본값은 없음입니다.  
+`[ @objname = ] 'name'` 사용자 정의 테이블 또는 뷰의 정규화 되거나 정규화 되지 않은 이름이입니다. 정규화된 테이블 또는 뷰 이름이 지정된 경우에만 따옴표가 필요합니다. 데이터베이스 이름을 포함한 정규화된 이름인 경우 반드시 현재 데이터베이스의 이름을 사용해야 합니다. *이름* 는 **nvarchar(776)** , 기본값은 없음입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**index_name**|**sysname**|인덱스 이름입니다.|  
 |**index_description**|**varchar(210)**|인덱스가 있는 파일 그룹을 포함하는 인덱스 설명입니다.|  
@@ -56,7 +55,7 @@ sp_helpindex [ @objname = ] 'name'
   
  내림차순으로 인덱스가 만들어진 열은 이름 옆에 빼기 표시(-)를 한 상태로 결과 집합에 나열됩니다. 기본값인 오름차순으로 인덱스가 만들어진 열은 이름만 나열됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  UPDATE STATISTICS의 NORECOMPUTE 옵션을 사용 하 여 인덱스를 설정한 경우에 해당 정보에 포함 됩니다는 **index_description** 열입니다.  
   
  **sp_helpindex** 는 정렬 가능한 인덱스 열만 표시 되므로, XML 인덱스 또는 공간 인덱스에 대 한 정보를 표시 하지 않습니다.  

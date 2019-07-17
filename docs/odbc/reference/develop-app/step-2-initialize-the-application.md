@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23a7a230-ae2c-4a5e-9760-d2e17f92c389
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0d25173dc8dc14aa1ed41a4a88496ef654e2ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41030015645bda11242a703a163f26104e66dba0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114245"
 ---
 # <a name="step-2-initialize-the-application"></a>2단계: 애플리케이션 초기화
 다음 그림에 나와 있는 것 처럼 응용 프로그램을 초기화 하는 두 번째 단계가입니다. 정확 하 게 수행 되는 다음 응용 프로그램을 사용 하 여 달라 집니다.  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec1d0e23019f3e5b68ad38711c1f041b160ceb31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 168b7b5ef6f8b88a39dbbb0942cf1520adf261e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086027"
 ---
 # <a name="translation-dlls"></a>변환 DLL
 응용 프로그램 및 데이터 원본 종종 서로 다른 문자 집합에 데이터를 저장 합니다. ODBC 드라이버에서 하나의 문자를 다른 집합의 데이터를 변환 하는 일반 메커니즘을 제공 합니다. 변환 함수를 구현 하는 DLL로 구성 됩니다 **SQLDriverToDataSource** 하 고 **SQLDataSourceToDriver**, 데이터 원본 간에 흐르는 모든 데이터를 변환 하는 드라이버에 의해 호출 됩니다 및 드라이버입니다. 이 DLL에는 드라이버 개발자는 응용 프로그램 개발자가 작성할 수 있습니다 또는 제 3 자입니다.  

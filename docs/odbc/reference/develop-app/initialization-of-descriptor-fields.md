@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d988099cad357254f04a79a8a6cccbbe4eb2768c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c78162bcf0421fee609abe5fcacf9613e0f8020b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138937"
 ---
 # <a name="initialization-of-descriptor-fields"></a>설명자 필드 초기화
 응용 프로그램 행 설명자를 할당 하는 경우 해당 필드에 표시 된 대로 초기 값을 수신 하는 [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)합니다. SQL_DESC_TYPE 필드의 초기 값은 SQL_DEFAULT 합니다. 이 프레젠테이션 응용 프로그램에 대 한 데이터베이스 데이터의 표준 처리를 제공합니다. 응용 프로그램 설명자 레코드의 필드를 설정 하 여 데이터의 다른 처리를 지정할 수 있습니다.  

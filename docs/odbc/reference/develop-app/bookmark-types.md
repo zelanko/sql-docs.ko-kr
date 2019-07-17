@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb2e7443-0260-4d1a-930f-0154db447979
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9aca006623d9ddb8292147d8a28c93f912fd25d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: fb8f5848ef9fdffab8592215fdcc5406b24319c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118778"
 ---
 # <a name="bookmark-types"></a>책갈피 형식
 ODBC에서 모든 책갈피 *3.x* 가변 길이 책갈피 됩니다. 이 기본 키 또는 책갈피로 사용할 테이블과 연결 된 고유 인덱스를 허용 합니다. 책갈피 수도 있습니다는 32 비트 값 ODBC에서 사용 된 *2.x*합니다. 책갈피는 ODBC 커서에 사용 됨을 지정 하려면 *3.x* SQL_UB_VARIABLE를 SQL_ATTR_USE_BOOKMARK 문 특성을 설정 하는 응용 프로그램입니다. 가변 길이 책갈피 자동으로 사용 됩니다.  

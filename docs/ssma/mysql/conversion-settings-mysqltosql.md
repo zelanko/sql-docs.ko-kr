@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fee221caf91d5d70f291f9351d05a00352e7cc00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: debdd549dc010f7be6b9d9b37a4caf649d4e106a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103119"
 ---
 # <a name="conversion-settings-mysqltosql"></a>변환 설정(MySQLToSQL)
 합니다 **'설정'** 탭 노드 수준 설정을 설정할 수 있습니다. 탭은 다음 메타 베이스 노드에서 사용할 수 있습니다.  
@@ -65,13 +64,13 @@ ms.locfileid: "63253256"
   
         -   프로젝트 설정 [상속]에 따라 변환  
   
-        -   사용자 계정 컨트롤  
+        -   예  
   
         -   아니요  
   
         -   프로젝트 설정에 따라 변환  
   
-    2.  하는 경우 **'예'**,이 설정은 ROWID 보조 열 작성 대상 테이블 만들기를 금지 합니다.  
+    2.  하는 경우 **'예'** ,이 설정은 ROWID 보조 열 작성 대상 테이블 만들기를 금지 합니다.  
   
     3.  사용자가 변경한 설정을 클릭 하 여 종속 연결 된 기본 설정 파일에 저장 됩니다 **적용** 단추입니다.  
   

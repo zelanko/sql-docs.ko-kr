@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4c95d86b64c28bbf78b111f21de7afd58b44616f
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038898"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR 문 및 반복(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "51858668"
   
 -   `return` 식입니다. `return` 절의 식은 FLWOR 문의 결과를 구성합니다.  
   
- 예를 들어 다음 쿼리는 첫 번째 제조 위치의 <`Step`> 요소를 통해 반복되는데 <`Step`>노드의 문자열 값을 반환합니다.  
+ 예를 들어 다음 쿼리는 반복은 <`Step`> 첫 번째 제조 위치의 요소의 문자열 값을 반환 하 고는 <`Step`> 노드:  
   
 ```sql
 declare @x xml  
@@ -80,7 +79,7 @@ SELECT @x.query('
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
 ```  
   
- 다음 쿼리는 ProductModel 테이블의 형식화된 xml 열인 Instructions 열에 대해 지정된다는 점을 제외하고 이전 쿼리와 유사합니다. 쿼리는 특정 제품에 대한 첫 번째 작업 센터 위치의 모든 제조 단계인 <`step`> 요소를 통해 반복됩니다.  
+ 다음 쿼리는 ProductModel 테이블의 형식화된 xml 열인 Instructions 열에 대해 지정된다는 점을 제외하고 이전 쿼리와 유사합니다. 쿼리는 제조 단계를 반복 <`step`> 특정 제품에 대 한 첫 번째 작업 센터 위치의 요소입니다.  
   
 ```sql
 SELECT Instructions.query('  
@@ -97,11 +96,11 @@ where ProductModelID=7
   
 -   `$Step`은 반복기 변수입니다.  
   
--   합니다 [경로 식](../xquery/path-expressions-xquery.md), `//AWMI:root/AWMI:Location[1]/AWMI:step`, 입력된 시퀀스를 생성 합니다. 이 시퀀스는 첫 번째 <`Location`> 요소 노드의 <`step`> 요소 노드 자식에 대한 시퀀스입니다.  
+-   합니다 [경로 식](../xquery/path-expressions-xquery.md), `//AWMI:root/AWMI:Location[1]/AWMI:step`, 입력된 시퀀스를 생성 합니다. 이 시퀀스는 시퀀스는 <`step`> 요소 노드 자식을 첫 번째 <`Location`> 요소 노드.  
   
 -   조건부 절 `where`(옵션)는 사용되지 않습니다.  
   
--   `return` 식은 <`step`> 요소의 문자열 값을 반환합니다.  
+-   합니다 `return` 식에서 문자열 값을 반환 합니다 <`step`> 요소입니다.  
   
  합니다 [string 함수 (XQuery)](../xquery/data-accessor-functions-string-xquery.md) 문자열 값을 검색 하는 데 사용 되는 <`step`> 노드.  
   
@@ -156,7 +155,7 @@ SELECT @x.query('
 ...  
 ```  
   
- 다음 쿼리는 작업 센터 위치 특성이 자식 요소로 반환되고 <`Location`> 요소가 있는 새 XML을 생성합니다.  
+ 다음 쿼리는 생성 된 새 XML을 <`Location`> 요소는 작업 센터 위치 특성이 자식 요소로 반환 합니다.  
   
 ```xml
 <Location>  
@@ -188,7 +187,7 @@ where ProductModelID=7
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   FLWOR 문은 특정 제품에 대한 <`Location`> 요소의 시퀀스를 검색합니다.  
+-   FLWOR 문 시퀀스를 검색 합니다. <`Location`> 특정 제품에 대 한 요소입니다.  
   
 -   합니다 [data 함수 (XQuery)](../xquery/data-accessor-functions-data-xquery.md) 없으므로 특성으로 대신 텍스트 노드로 결과 XML에 추가할 수는 각 특성의 값을 추출 하는 데 사용 됩니다.  
   
@@ -229,7 +228,7 @@ where ProductModelID=7
 ## <a name="using-the-where-clause"></a>Where 절 사용  
  사용할 수는 `where` 절 반복의 결과를 필터링 합니다. 다음 예에서 이를 확인할 수 있습니다.  
   
- 자전거를 제조할 경우 제조 과정은 여러 위치의 작업 센터를 통해 진행됩니다. 각 작업 센터 위치는 제조 단계 시퀀스를 정의합니다. 다음 쿼리는 자전거 모델을 제조하고 제조 단계가 3개 미만인 작업 센터 위치만 검색합니다. 즉 이러한 작업 센터 위치에는 <`step`> 요소가 3개 미만입니다.  
+ 자전거를 제조할 경우 제조 과정은 여러 위치의 작업 센터를 통해 진행됩니다. 각 작업 센터 위치는 제조 단계 시퀀스를 정의합니다. 다음 쿼리는 자전거 모델을 제조하고 제조 단계가 3개 미만인 작업 센터 위치만 검색합니다. 즉, 이러한 3 개 미만 <`step`> 요소입니다.  
   
 ```sql
 SELECT Instructions.query('  
@@ -268,7 +267,7 @@ where ProductModelID=7
 4.  그 밖의 경우에는 정적 오류가 발생합니다.  
   
 ## <a name="multiple-variable-binding-in-flwor"></a>FLWOR의 복수 변수 바인딩  
- 여러 개의 변수를 입력 시퀀스에 바인딩하는 FLWOR 식을 하나만 사용할 수 있습니다. 다음 예에서는 형식화되지 않은 xml 변수에 대해 쿼리가 지정됩니다. FLOWR 식은 각 <`Location`> 요소에 있는 첫 번째<`Step`> 요소 자식을 반환합니다.  
+ 여러 개의 변수를 입력 시퀀스에 바인딩하는 FLWOR 식을 하나만 사용할 수 있습니다. 다음 예에서는 형식화되지 않은 xml 변수에 대해 쿼리가 지정됩니다. FLOWR 식은 첫 번째 개체가 반환 <`Step`>의 각 요소 자식이 <`Location`> 요소입니다.  
   
 ```sql
 declare @x xml  
@@ -298,7 +297,7 @@ SELECT @x.query('
   
 -   `two`의 값이 `/ManuInstructions/Location`의 값에 종속되는 경우 `$FirstStep in $Loc/Step[1]` 식, `$FirstStep`과 `$Loc`은 상호 관련됩니다.  
   
--   `$Loc`와 관련된 식은 <`Location`> 요소의 시퀀스를 생성합니다. 각 <`Location`> 요소마다 `$FirstStep`은 하나의 <`Step`> 요소, 즉 단일 시퀀스를 생성합니다.  
+-   연결 된 식 `$Loc` 시퀀스를 생성 <`Location`> 요소입니다. 각 <`Location`> 요소의 `$FirstStep` 하나의 시퀀스를 생성 <`Step`> 요소, 즉 단일 합니다.  
   
 -   `$Loc`은 `$FirstStep` 변수와 관련된 식에서 지정됩니다.  
   
@@ -407,7 +406,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- 특성 값을 기준으로 정렬할 수도 있습니다. 예를 들어 다음 쿼리는 새로 만든 <`Location`> 요소를 검색하는데 이 요소에는 LaborHours 특성을 기준으로 내림차순으로 LocationID 및 LaborHours 특성이 정렬되어 있습니다. 따라서 노동 시간이 가장 많은 작업 센터 위치가 가장 먼저 반환됩니다.  
+ 특성 값을 기준으로 정렬할 수도 있습니다. 예를 들어 다음 쿼리는 새로 만든 검색 <`Location`> 내림차순 LaborHours 특성을 정렬할 LocationID 및 LaborHours 특성이 있는 요소입니다. 따라서 노동 시간이 가장 많은 작업 센터 위치가 가장 먼저 반환됩니다.  
   
 ```sql
 SELECT Instructions.query('  
@@ -435,7 +434,7 @@ WHERE ProductModelID=7;
 <Location LocationID="45" LaborHours=".5"/>  
 ```  
   
- 다음 쿼리에서 결과는 요소 이름을 기준으로 정렬됩니다. 쿼리는 제품 카탈로그에서 특정 제품의 사양을 검색합니다. 사양은 <`Specifications`> 요소의 자식입니다.  
+ 다음 쿼리에서 결과는 요소 이름을 기준으로 정렬됩니다. 쿼리는 제품 카탈로그에서 특정 제품의 사양을 검색합니다. 사양은 자식의 합니다 <`Specifications`> 요소입니다.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -451,7 +450,7 @@ where ProductModelID=19;
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   `/p1:ProductDescription/p1:Specifications/*` 식은 <`Specifications`>의 요소 자식을 반환합니다.  
+-   합니다 `/p1:ProductDescription/p1:Specifications/*` 식의 요소 자식을 반환 <`Specifications`>.  
   
 -   `order by (local-name($a))` 식은 요소 이름의 로컬 부분을 기준으로 시퀀스를 정렬합니다.  
   
@@ -490,7 +489,7 @@ select @x.query('
 <Person Name="B" />  
 ```  
   
- 다음 예에서 볼 수 있듯이 여러 정렬 기준을 지정할 수 있습니다. 이 예의 쿼리는 <`Employee`> 요소를 먼저 Title 특성 값을 기준으로 정렬한 다음 Administrator 특성 값을 기준으로 정렬합니다.  
+ 다음 예에서 볼 수 있듯이 여러 정렬 기준을 지정할 수 있습니다. 이 예의 쿼리 정렬 <`Employee`> 요소를 먼저 Title 후 관리자가 특성 값입니다.  
   
 ```sql
 declare @x xml  
@@ -533,7 +532,7 @@ order by $e/@Title ascending, $e/@Gender descending
   
 -   `order by`에서는 빈 최소값, 빈 최대값 및 데이터 정렬 키워드가 지원되지 않습니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [XQuery 식](../xquery/xquery-expressions.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0134448-bc17-4f2f-bd81-619351ce56ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ccdc8529bb62e4e1db15f0a5ea85a64c5b679abf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63916a86757877dc6ae601c798ba7a987256580c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62521014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124124"
 ---
 # <a name="spgetdistributor-transact-sql"></a>sp_get_distributor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +38,15 @@ sp_get_distributor
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**installed**|**int**|**0** = 아니요. **1** = 예|  
-|**distribution server**|**sysname**|배포자 서버의 이름입니다.|  
+|**배포 서버**|**sysname**|배포자 서버의 이름입니다.|  
 |**배포 db가 설치 됨**|**int**|**0** = 아니요. **1** = 예|  
 |**배포 게시자**|**int**|**0** = 아니요. **1** = 예|  
 |**원격 배포 게시자가 있음**|**int**|**0** = 아니요. **1** = 예|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_get_distributor** 는 주로 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 스냅숏, 트랜잭션 및 병합 복제에 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  

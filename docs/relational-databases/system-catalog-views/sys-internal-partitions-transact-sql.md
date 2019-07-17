@@ -12,21 +12,20 @@ dev_langs:
 ms.assetid: 0262df2b-5ba7-4715-b17b-3d9ce470a38e
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5795ec9feaef483dd3ee9b5f3e31dbb619a89331
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ca65e1a4e7af69bc1259b856a76c729b5210cc4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122637"
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
+# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   디스크 기반 테이블의 columnstore 인덱스에 대 한 내부 데이터를 추적 하는 각 행 집합에 대해 하나의 행을 반환 합니다. 이러한 행 집합은 columnstore 인덱스의 내부 및 삭제 하는 추적 행, 행 그룹 매핑 및 델타 rowgroup을 저장 합니다. 각 테이블 파티션이;에 대해 각 데이터 추적 모든 테이블에는 하나 이상의 파티션이 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] columnstore 인덱스를 다시 작성 될 때마다 행 집합을 다시 만듭니다.   
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |partition_id|**bigint**|이 파티션에 대 한 파티션 ID입니다. 데이터베이스 내에서 고유합니다.|  
 |object_id|**int**|파티션이 포함 된 테이블에 대 한 개체 ID입니다.|  
@@ -49,7 +48,7 @@ ms.locfileid: "67388335"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>1\. 모든 테이블에 대 한 내부 행 집합 보기  
+### <a name="a-view-all-of-the-internal-rowsets-for-a-table"></a>A. 모든 테이블에 대 한 내부 행 집합 보기  
  이 예제에서는 모든 테이블에 대 한 내부 columnstore 행 집합을 반환합니다. 특정 행 집합에 대 한 자세한 내용을 보려면 hobt_id를 이용할 수 있습니다.  
   
 ```  

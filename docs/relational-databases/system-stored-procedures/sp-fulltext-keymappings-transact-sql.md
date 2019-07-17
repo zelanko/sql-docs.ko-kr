@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: be861ae0e27bccb682bd4beb89db2c0dd791b04b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef8bd6cfbcc10fa0625b4925da618ab275331a32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124239"
 ---
 # <a name="spfulltextkeymappings-transact-sql"></a>sp_fulltext_keymappings(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -60,7 +59,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |DocId|**bigint**|키 값에 해당하는 내부 문서 ID(DocId) 열입니다.|  
 |Key|*|지정한 테이블의 전체 텍스트 키 값입니다.<br /><br /> 매핑 테이블에 전체 텍스트 키가 없으면 빈 행 집합이 반환됩니다.|  
@@ -70,7 +69,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 ## <a name="permissions"></a>사용 권한  
  이 함수는 공개 함수이며 특별한 사용 권한이 필요하지 않습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 표에서는 한 개, 두 개 또는 세 개의 매개 변수를 사용한 결과에 대해 설명합니다.  
   
 |이 매개 변수 목록|이 결과가 하는 중...|  
@@ -92,7 +91,7 @@ sp_fulltext_keymappings { table_id | table_id, docid | table_id, NULL, key }
 > [!NOTE]  
 >  이 섹션의 예에서는 `Production.ProductReview` 예제 데이터베이스의 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 테이블을 사용합니다. 제공 하는 예제를 실행 하 여이 인덱스를 만들 수 있습니다 합니다 `ProductReview` 테이블의 [CREATE FULLTEXT INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)합니다.  
   
-### <a name="a-obtaining-all-the-key-and-docid-values"></a>1\. 모든 Key 및 DocId 값 가져오기  
+### <a name="a-obtaining-all-the-key-and-docid-values"></a>A. 모든 Key 및 DocId 값 가져오기  
  다음 예제에서는 [DECLARE](../../t-sql/language-elements/declare-local-variable-transact-sql.md) 지역 변수를 만들고 문을 `@table_id` 의 ID를 할당할 수는 `ProductReview` 테이블로 해당 값입니다. 이 예제를 실행 **sp_fulltext_keymappings** 지정 `@table_id` 에 대 한 합니다 *table_id* 매개 변수입니다.  
   
 > [!NOTE]  

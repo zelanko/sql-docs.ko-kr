@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137693"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_helpmergefilter [ @publication= ] 'publication'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|조인 필터 ID입니다.|  
 |**filtername**|**sysname**|필터의 이름입니다.|  
@@ -60,12 +59,12 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |**조인 테이블 소유자**|**sysname**|기본 테이블에 조인되는 테이블 소유자의 이름입니다.|  
 |**조인 테이블 이름**|**sysname**|기본 테이블에 조인되는 테이블의 이름입니다.|  
 |**문서 이름**|**sysname**|기본 테이블에 조인되는 테이블 아티클의 이름입니다.|  
-|**filter_type**|**tinyint**|병합 필터의 유형으로 다음 중 하나일 수 있습니다.<br /><br /> **1** = 조인 필터만<br /><br /> **2** = 논리적 레코드 관계<br /><br /> **3** = both|  
+|**filter_type**|**tinyint**|병합 필터의 유형으로 다음 중 하나일 수 있습니다.<br /><br /> **1** = 조인 필터만<br /><br /> **2** = 논리적 레코드 관계<br /><br /> **3** = 모두|  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helpmergefilter** 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

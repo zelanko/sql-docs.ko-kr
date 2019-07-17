@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2157462ca1f9509034f33208cce7aed2983ae4f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62644797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091916"
 ---
 # <a name="xpsqlmaint-transact-sql"></a>xp_sqlmaint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ xp_sqlmaint 'switch_string'
 ## <a name="return-code-values"></a>반환 코드 값  
  없음 오류를 반환 합니다 **sqlmaint** 유틸리티 실패 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  SQL Server 인증을 사용 하 여 로그온 사용자가이 프로시저를 호출 합니다 **-U "***login_id***"** 하 고 **-P "***암호***"** 스위치 앞에 추가 됩니다 *switch_string* 실행 하기 전에 합니다. 사용자가 Windows 인증을 사용 하 여 로그온 *switch_string* 를 변경 하지 않고 전달 됩니다 **sqlmaint**합니다.  
   
 ## <a name="permissions"></a>사용 권한  

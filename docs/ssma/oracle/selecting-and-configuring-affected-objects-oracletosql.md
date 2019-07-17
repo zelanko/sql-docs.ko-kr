@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: fbd151b0fa8682865e44615c22a9fdd7577014ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62626527"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266500"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>영향을 받는 개체 선택 및 구성(OracleToSQL)
 이 페이지에서 테이블을 선택할 수 있습니다 하 고 SSMA 이전 단계에서 선택한 개체에 대 한 실행 결과 확인 하는 경우 외래 키에는 변경 내용 비교 해야 합니다. 또한 확인 매개 변수를 사용자 지정할 수 있습니다.  

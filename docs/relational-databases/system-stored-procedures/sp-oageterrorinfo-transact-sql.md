@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2f4ab09693234d72890524628f4def5afcf447ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107909"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_OAGetErrorInfo [ objecttoken ]
  _helpfile_ **OUTPUT**  
  OLE 개체의 도움말 파일입니다. 를 지정 하는 경우 로컬 이어야 합니다 **char**, **nchar**합니다 **varchar**, 또는 **nvarchar** 변수입니다. 필요한 경우 반환 값을 잘라내어 지역 변수에 맞춥니다.  
   
- _helpid_ **OUTPUT**  
+ _helpid_ **출력**  
  도움말 파일 컨텍스트 ID입니다. 를 지정 하는 경우 로컬 이어야 합니다 **int** 변수입니다.  
   
 > [!NOTE]  
@@ -70,7 +69,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 ## <a name="result-sets"></a>결과 집합  
  출력 매개 변수가 지정되지 않으면 오류 정보는 클라이언트에 결과 집합으로 반환됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |------------------|---------------|-----------------|  
 |**오류**|**binary(4)**|오류 번호의 이진 표시입니다.|  
 |**원본**|**nvarchar(nn)**|오류의 원본입니다.|  
@@ -78,7 +77,7 @@ sp_OAGetErrorInfo [ objecttoken ]
 |**Helpfile**|**nvarchar(nn)**|원본에 대한 도움말 파일입니다.|  
 |**HelpID**|**int**|도움말 원본 파일에 있는 도움말 컨텍스트 ID입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  각 호출 OLE automation 저장 프로시저 (제외한 **sp_OAGetErrorInfo**) 오류 정보를 다시 설정 하므로 **sp_OAGetErrorInfo** 가장 최근 OLE에 대해서만 오류 정보 Automation 저장 프로시저를 호출 합니다. 되므로 **sp_OAGetErrorInfo** 오류 정보를 다시 설정 하지 않습니다 동일한 오류 정보를 가져오려면 여러 번 호출 될 수 있습니다.  
   
  다음은 OLE Automation 오류 및 일반적 원인을 나열한 표입니다.  

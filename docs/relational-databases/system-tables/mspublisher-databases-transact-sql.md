@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 59b0166e-a64c-46b8-befc-c222fa1ccce2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5c9ceb08b4757af09cfc5eba8c4d9f26da3cf931
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: da208c7fb83053c1817693bb16d16c3488fe90c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032614"
 ---
 # <a name="mspublisherdatabases-transact-sql"></a>MSpublisher_databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   합니다 **MSpublisher_databases** 로컬 배포자 각 게시자/게시자 데이터베이스 쌍에 대해 하나의 행을 포함 하는 테이블입니다. 이 테이블은 배포 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|게시자의 ID입니다.|  
 |**publisher_db**|**sysname**|게시자 데이터베이스의 이름입니다.|  

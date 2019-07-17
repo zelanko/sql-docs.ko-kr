@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d3671c96b73fa1fb8138a7085748704c7a38d76
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cfa7196c0ad197a3eb7cb1a31fbdb58e74a78968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110821"
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 계정에 대 한 로그인이입니다. *job_login* 됩니다 **nvarchar(257)**, 기본값은 NULL입니다. Azure SQL Database Managed Instance, SQL Server 계정을 사용 합니다. *이외에 대 한 변경할 수 없습니다* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자입니다.*  
+`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 계정에 대 한 로그인이입니다. *job_login* 됩니다 **nvarchar(257)** , 기본값은 NULL입니다. Azure SQL Database Managed Instance, SQL Server 계정을 사용 합니다. *이외에 대 한 변경할 수 없습니다* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자입니다.*  
   
 `[ @job_password = ] 'job_password'` 에이전트가 실행 되는 계정의 암호가입니다. *job_password* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
@@ -68,7 +67,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changelogreader_agent** 트랜잭션 복제에 사용 됩니다.  
   
  **sp_changelogreader_agent** 로그 판독기 에이전트가 실행 되는 Windows 계정을 변경 하는 데 사용 됩니다. 기존 Windows 로그인의 암호를 변경하거나 새 Windows 로그인과 암호를 제공할 수 있습니다.  

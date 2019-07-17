@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 508c686d-2bd4-41ba-8602-48ebca266659
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 96bd1aa87dba90963588db74935294c0dcdd8f0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f6ffcb7a43fbfc2a840cbbbeb95de4bbb875cbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108216"
 ---
 # <a name="spdbcmptlevel-transact-sql"></a>sp_dbcmptlevel(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_dbcmptlevel [ [ @dbname = ] name ]
   
  하는 경우 *이름을* 없이 지정 된 *버전*는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 지정한 데이터베이스의 현재 호환성 수준을 표시 하는 메시지를 반환 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  호환성 수준에 대 한 참조 [ALTER DATABASE 호환성 수준 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)합니다.  
   
 ## <a name="permissions"></a>사용 권한  

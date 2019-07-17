@@ -17,26 +17,25 @@ helpviewer_keywords:
 ms.assetid: 106c1707-e0e0-49b4-ba50-25380c40fab2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b7375dff31cb9cd0f092315b9a53e57e2f0ecd1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a067c02b9ec9b8f662dab2ada0de537243fe0a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029576"
 ---
 # <a name="syssubscriptions-transact-sql"></a>syssubscriptions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   데이터베이스 내의 각 구독당 하나의 행을 포함합니다. 이 테이블은 게시 데이터베이스에 저장됩니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**artid**|**int**|아티클의 고유한 ID입니다.|  
 |**srvid**|**smallint**|구독자의 서버 ID입니다.|  
 |**dest_db**|**sysname**|대상 데이터베이스의 이름입니다.|  
 |**상태**|**tinyint**|구독 상태입니다.<br /><br /> **0** = 비활성입니다.<br /><br /> **1** = 구독 합니다.<br /><br /> **2** = 활성입니다.|  
-|**sync_type**|**tinyint**|초기 동기화의 유형입니다.<br /><br /> **1** = Automatic.<br /><br /> **2** = 없음|  
+|**sync_type**|**tinyint**|초기 동기화의 유형입니다.<br /><br /> **1** = automatic.<br /><br /> **2** = 없음|  
 |**login_name**|**sysname**|구독을 추가할 때 사용하는 로그인 이름입니다.|  
 |**subscription_type**|**int**|구독 유형은 다음과 같습니다.<br /><br /> 0 = 밀어넣기 - 배포 에이전트가 배포자에서 실행됩니다.<br /><br /> 1 = 끌어오기 - 배포 에이전트가 구독자에서 실행됩니다.|  
 |**distribution_jobid**|**binary(16)**|배포 에이전트의 작업 ID입니다.|  

@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8e061269ebf864a93d6dde50455627cf8e2ea780
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12eddedce5d00c1bbc9e71995c2c9ceab34386d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074720"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +40,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
 ## <a name="return-type"></a>반환 형식  
  0에서 1 사이의 배정밀도 부동 소수점 숫자입니다. 1에 가까울수록 이 모델에 사례가 나타날 확률이 높음을 나타내고 0에 가까울수록 이 모델에 사례가 나타날 가능성이 낮음을 나타냅니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  기본적으로 결과 **PredictCaseLikelihood** 함수 정규화 됩니다. 일반적으로 정규화된 값은 사례 증가에 있는 특성 수와 두 사례의 원시 확률 간 차이가 작을수록 더 유용합니다.  
   
  다음 수식은 x와 y가 제공될 경우 정규화된 값을 계산하는 데 사용됩니다.  

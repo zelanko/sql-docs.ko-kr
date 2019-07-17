@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e20d30b63a1cc387c6b997c8a8a11bab835e21f8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fb19fc3dc6b97e6381e9839c22a05ee71a93bfb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078195"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="arguments"></a>인수  
 `[ @job_id = ] job_id` 작업 일정을 추가한 작업의 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 없습니다.  
   
-`[ @job_name = ] 'job_name'` 일정을 추가할 작업의 이름입니다. *job_name* 됩니다 **nvarchar (128)**, 기본값은 없습니다.  
+`[ @job_name = ] 'job_name'` 일정을 추가할 작업의 이름입니다. *job_name* 됩니다 **nvarchar (128)** , 기본값은 없습니다.  
   
 > [!NOTE]  
 >  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
   
-`[ @name = ] 'name'` 일정의 이름입니다. *이름을* 됩니다 **nvarchar (128)**, 기본값은 없습니다.  
+`[ @name = ] 'name'` 일정의 이름입니다. *이름을* 됩니다 **nvarchar (128)** , 기본값은 없습니다.  
   
 `[ @enabled = ] enabled_flag` 일정의 현재 상태를 나타냅니다. *enabled_flag* 됩니다 **tinyint**, 기본값은 **1** (사용). 하는 경우 **0**, 일정은 사용할 수 없습니다. 일정을 사용하지 않으면 작업이 실행되지 않습니다.  
   
@@ -133,7 +132,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이제 작업 일정을 작업과 독립적으로 관리할 수 있습니다. 작업에 일정을 추가 하려면 사용 **sp_add_schedule** 일정을 만들 및 **sp_attach_schedule** 작업에 일정을 연결 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

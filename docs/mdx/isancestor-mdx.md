@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8aacd6825a81ff172d8fdf79373f5b251d6e18b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cc8352b0d087b54a623cce892a05dfed29258b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105258"
 ---
 # <a name="isancestor-mdx"></a>IsAncestor(MDX)
 
@@ -35,7 +34,7 @@ IsAncestor(Member_Expression1, Member_Expression2)
  *Member_Expression2*  
  멤버를 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **IsAncestor** 함수에서 반환 **true** 지정 된 첫 번째 멤버가 지정 된 두 번째 멤버의 상위 항목이 면 합니다. 반환이 고, 그렇지 **false**합니다.  
   
 ## <a name="example"></a>예제  

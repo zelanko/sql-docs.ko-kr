@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: df58b5c7f6da05700f00b4ec5fd46b81926dd3bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ad0b92a970c3618584365d9ad6e99420daef05d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037016"
 ---
 # <a name="set-operators"></a>집합 연산자
 
@@ -23,7 +22,7 @@ ms.locfileid: "63150166"
   
  MDX는 다음 표에 나열된 집합 연산자를 지원합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
 |[-(제외)](../mdx/except-mdx-operator.md)|두 집합 사이의 차이를 반환하여 중복 멤버를 제거합니다.<br /><br /> 이 연산자는 기능적으로 동일 합니다 [제외한](../mdx/except-mdx-function.md) 함수입니다.|  
 |[*(크로스 조인)](../mdx/crossjoin-mdx-operator-reference.md)|두 집합의 교차곱을 반환합니다.<br /><br /> 이 연산자는 기능적으로 동일 합니다 [Crossjoin](../mdx/crossjoin-mdx.md) 함수입니다.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1945ed24-f9f1-4af6-94ca-16d8e864706e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 94d074985848bb510c15907f6b17dc492904f5c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17c1c2a5ccb7ef9e7c4a3d843f63edde1f134016
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139903"
 ---
 # <a name="splinkpublication-transact-sql"></a>sp_link_publication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ sp_link_publication [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_link_publication** 트랜잭션 복제에서 즉시 업데이트 구독에서 사용 됩니다.  
   
  **sp_link_publication** 모두 밀어넣기 및 끌어오기 구독에 사용할 수 있습니다. 구독을 만들기 전이나 후에 호출할 수 있습니다. 항목이 삽입 또는 업데이트 합니다 [MSsubscription_properties &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md) 시스템 테이블입니다.  

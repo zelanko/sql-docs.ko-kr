@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac4e617b7abb220dd2a8767a334ddbdf1c685d2c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039036"
 ---
 # <a name="comparison-expressions-xquery"></a>비교 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -221,9 +220,9 @@ ProductModelID       Result
   
  이러한 연산자는 문서 순서를 기준으로 생성된 비교 연산자입니다.  
   
--   `<<` : **Operand 1** 앞에 야 **피연산자 2** 문서 순서에서.  
+-   `<<` : 않습니다 **operand 1** 앞에 야 **피연산자 2** 문서 순서에서.  
   
--   `>>` : **Operand 1** 따릅니다 **피연산자 2** 문서 순서에서.  
+-   `>>` : 않습니다 **operand 1** 따릅니다 **피연산자 2** 문서 순서에서.  
   
  다음 쿼리는 제품 카탈로그 설명에 있는 경우 True를 반환 합니다는 \<보증 > 앞에 나타나는 요소는 \<유지 관리 > 특정 제품에 대 한 문서 순서로 요소입니다.  
   

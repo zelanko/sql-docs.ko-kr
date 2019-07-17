@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8c468b71b4c4126386d75c02b368cba9965fe1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d51d92ae02084ea46c2a8bd2d73a27f0154e1a95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083140"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>데이터 원본 또는 드라이버에 연결
 응용 프로그램은 임의 개수의 드라이버 및 데이터 원본에 연결할 수 있습니다. 다양 한 드라이버 및 데이터 원본, 동일한 드라이버 및 다양 한 데이터 원본 또는 데이터 원본 및 동일한 드라이버에도 여러 연결 수 있습니다.  

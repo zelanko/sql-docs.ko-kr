@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0f76455-d072-4bae-bee7-452277dfa479
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6070d7a9d9a7d2eafa35b87c94d6cfd320f916ae
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ef89943f95a6492614972c3e89fe2129becc1aa5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086419"
 ---
 # <a name="sqlfreeenv-mapping"></a>SQLFreeEnv 매핑
 응용 프로그램을 호출할 때 **SQLFreeEnv** 는 ODBC를 통한 *3.x* 드라이버에 대 한 호출  

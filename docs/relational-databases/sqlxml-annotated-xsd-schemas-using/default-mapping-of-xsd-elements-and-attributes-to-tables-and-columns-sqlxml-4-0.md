@@ -26,14 +26,13 @@ ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d07235635f4858d1690170b9112b2ffa3c4fa0a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74823924864d15324b6e4f2183609fa6e761d6f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067181"
 ---
 # <a name="default-mapping-of-xsd-elements-and-attributes-to-tables-and-columns-sqlxml-40"></a>테이블 및 열에 대한 XSD 요소 및 특성의 기본 매핑(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65980995"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-default-mapping"></a>1\. 기본 매핑 지정  
+### <a name="a-specifying-default-mapping"></a>A. 기본 매핑 지정  
  이 예에서는 XSD 스키마에 주석이 지정되지 않습니다. 합니다  **\<Person.Contact >** 요소는 복합 유형 및, 따라서 기본적으로 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑합니다. 모든 특성 (ContactID, FirstName, LastName)은  **\<Person.Contact >** 요소는 단순 유형 및 기본적으로 Person.Contact 테이블에 있는 같은 이름의 열에 매핑합니다.  
   
 ```  

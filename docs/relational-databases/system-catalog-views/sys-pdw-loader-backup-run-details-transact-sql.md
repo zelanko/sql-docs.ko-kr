@@ -11,21 +11,20 @@ dev_langs:
 ms.assetid: 04fc004f-ee15-4d7a-be08-78357aa99b55
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 328d949afc548b179f26ba83f06348ccb72cbe1f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: dead5962987f7fb132f21bb4e3517f7cc9249601
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127652"
 ---
-# <a name="syspdwloaderbackuprundetails-transact-sql"></a>sys.pdw_loader_backup_run_details (Transact-SQL)
+# <a name="syspdwloaderbackuprundetails-transact-sql"></a>sys.pdw_loader_backup_run_details (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   정보 외의 자세한 정보를 포함 [sys.pdw_loader_backup_runs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md), 진행 중인 및 완료 된 백업 및 복원 작업에 대 한 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 지속적인 백업, 복원 및 로드 작업에서 완료 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]합니다. 이 정보는 시스템을 다시 시작해도 유지됩니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |run_id|**int**|특정 백업 또는 복원을 실행에 대 한 고유 식별자입니다.<br /><br /> run_id 및 pdw_node_id이이 보기에 대 한 키를 구성합니다.||  
 |pdw_node_id|**int**|이 레코드는에 대 한 세부 정보를 포함 하는 어플라이언스 노드의 고유 식별자입니다.<br /><br /> run_id 및 pdw_node_id이이 보기에 대 한 키를 구성합니다.|에 대 한 node_id를 참조 하세요 [sys.dm_pdw_nodes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)합니다.|  

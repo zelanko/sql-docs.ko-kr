@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 69e9ff0f-c409-43fc-89f6-40c3974e972c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: be818ed92a3c5a7f9522a6142f5acc815077bd10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e859ed97afdc3dfbb4e39a93b8691d044ceca37d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032643"
 ---
 # <a name="spsyscollectorcreatecollectionset-transact-sql"></a>sp_syscollector_create_collection_set(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ sp_syscollector_create_collection_set
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_syscollector_create_collection_set은 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -121,7 +120,7 @@ sp_syscollector_create_collection_set
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-collection-set-by-using-default-values"></a>1. 기본값을 사용하여 컬렉션 집합 만들기  
+### <a name="a-creating-a-collection-set-by-using-default-values"></a>A. 기본값을 사용하여 컬렉션 집합 만들기  
  다음 예에서는 필수 매개 변수만 지정하여 컬렉션 집합을 만듭니다. `@collection_mode`는 필수 사항은 아니지만 기본 컬렉션 모드(캐시된 모드)를 사용하려면 일정 ID 또는 일정 이름을 지정해야 합니다.  
   
 ```  
@@ -136,7 +135,7 @@ EXECUTE dbo.sp_syscollector_create_collection_set
 GO  
 ```  
   
-### <a name="b-creating-a-collection-set-by-using-specified-values"></a>2. 지정된 값을 사용하여 컬렉션 집합 만들기  
+### <a name="b-creating-a-collection-set-by-using-specified-values"></a>2\. 지정된 값을 사용하여 컬렉션 집합 만들기  
  다음 예에서는 여러 매개 변수에 값을 지정하는 방식으로 컬렉션 집합을 만듭니다.  
   
 ```  

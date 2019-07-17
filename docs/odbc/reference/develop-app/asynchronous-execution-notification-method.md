@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e509dad9-5263-4a10-9a4e-03b84b66b6b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66b806b698164b306eee4dc7d4c48fbe7835adae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077060"
 ---
 # <a name="asynchronous-execution-notification-method"></a>비동기 실행(알림 방법)
 ODBC 연결 및 문 작업의 비동기 실행을 허용 합니다. 응용 프로그램 스레드는 비동기 모드에서는 ODBC 함수를 호출할 수 있습니다 하 고 함수는 작업이 완료 되 면 다른 작업을 수행 하는 응용 프로그램 스레드를 허용 하기 전에 반환할 수 있습니다. Windows 7 SDK 비동기 문이나 연결 작업에 대 한 응용 프로그램 비동기 작업 폴링 메서드를 사용 하 여 완료 되었는지 결정 합니다. 자세한 내용은 [비동기 실행 (폴링 메서드)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)합니다. Windows 8 SDK부터 비동기 작업 알림 방법을 사용 하 여 완료 되었음을 확인할 수 있습니다.  
@@ -43,8 +42,8 @@ ODBC 연결 및 문 작업의 비동기 실행을 허용 합니다. 응용 프�
 |ODBC 응용 프로그램 버전|드라이버 관리자 버전|드라이버 버전|동작|  
 |------------------------------|----------------------------|--------------------|--------------|  
 |ODBC 버전의 새 응용 프로그램|ODBC 3.81|3\.80 ODBC 드라이버|응용 프로그램 드라이버에서이 기능을 지 원하는 경우이 기능을 사용할 수, 그렇지 않으면 드라이버 관리자는 오류가 발생 합니다.|  
-|ODBC 버전의 새 응용 프로그램|ODBC 3.81|Pre-ODBC 3.80 Driver|드라이버 관리자는 드라이버는이 기능을 지원 하지 않는 경우 오류가 출력 됩니다.|  
-|ODBC 버전의 새 응용 프로그램|Pre-ODBC 3.81|임의의 값|이 기능을 사용 하는 응용 프로그램을 이전 드라이버 관리자는 드라이버별 특성으로 새 특성을 생각 하 고 드라이버에 오류가 발생 합니다. 새 드라이버 관리자를 드라이버에 이러한 특성을 전달 합니다.|  
+|ODBC 버전의 새 응용 프로그램|ODBC 3.81|이전 버전 3.80 ODBC 드라이버|드라이버 관리자는 드라이버는이 기능을 지원 하지 않는 경우 오류가 출력 됩니다.|  
+|ODBC 버전의 새 응용 프로그램|Pre-ODBC 3.81|Any|이 기능을 사용 하는 응용 프로그램을 이전 드라이버 관리자는 드라이버별 특성으로 새 특성을 생각 하 고 드라이버에 오류가 발생 합니다. 새 드라이버 관리자를 드라이버에 이러한 특성을 전달 합니다.|  
   
  응용 프로그램에는이 기능을 사용 하기 전에 드라이버 관리자 버전을 확인 해야 합니다. 그렇지 않으면 잘못 작성 된 드라이버 오류 하지 않으며 드라이버 관리자 버전은 이전 ODBC 3.81, 하는 경우 동작이 정의 되지 않습니다.  
   

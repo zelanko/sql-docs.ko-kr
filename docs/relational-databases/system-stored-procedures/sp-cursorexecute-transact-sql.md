@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a204229-0a53-4617-a57e-93d4afbb71ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fcc62c09d42adb10f8984a8f48d8b70e2f5c78de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d0979ba7df97ebc9fc5b79d8fd0cbd34b6a59a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62723998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108529"
 ---
 # <a name="spcursorexecute-transact-sql"></a>sp_cursorexecute(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +84,7 @@ sp_cursorexecute prepared_handle, cursor
 |-1|행 수를 알 수 없습니다.|  
 |-n|비동기 채우기가 적용됩니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="scrollopt-and-ccopt-parameters"></a>scrollopt 및 ccopt 매개 변수  
  *scrollopt* 하 고 *ccopt* 즉 문을 식별 하는 준비 된 핸들을 컴파일해야 하는 서버 캐시에 대 한 캐시 된 계획 선점 될 경우에 유용 합니다. 합니다 *scrollopt* 하 고 *ccopt* 매개 변수 값에 포함 되어 sp_cursorprepare로 원래 요청에서 보낸 값과 일치 해야 합니다.  

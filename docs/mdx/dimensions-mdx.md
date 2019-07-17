@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: b2703122b67debf0749abcd2ea01114fb6ecaa06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84d5ab0caa22c6f35f3e7b790dbfb3348df8ceb1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999970"
 ---
 # <a name="dimensions-mdx"></a>Dimensions(MDX)
 
@@ -39,7 +38,7 @@ Dimensions(Hierarchy_Name)
  *Hierarchy_Name*  
  계층 이름을 지정하는 유효한 문자열 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  계층 번호가 지정 된 경우는 **차원** 함수 계층 큐브 내에서 0부터 시작 위치가 지정 된 계층 번호를 반환 합니다.  
   
  계층 이름이 지정 되는 **차원** 함수는 지정 된 계층을 반환 합니다. 일반적으로이 문자열 버전을 사용 합니다 **차원** 사용자 정의 함수를 사용 하 여 함수입니다.  

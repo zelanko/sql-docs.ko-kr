@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c7bd6bc8281dd6bdc3bcfbd437380b2d5269ee43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2107ca1eeecc6fad24311c5bce629784ae4ceff0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023286"
 ---
 # <a name="prepared-execution-odbc"></a>준비된 실행 ODBC
 준비 된 실행은 문을 두 번 이상 실행 하는 효율적인 방법입니다. 문은 먼저 컴파일 또는 *준비* 액세스 계획으로 합니다. 액세스 계획이 하나를 실행 하거나 나중에 더 많은 시간입니다. 액세스 계획에 대 한 자세한 내용은 참조 하세요. [SQL 문 처리](../../../odbc/reference/processing-a-sql-statement.md)합니다.  

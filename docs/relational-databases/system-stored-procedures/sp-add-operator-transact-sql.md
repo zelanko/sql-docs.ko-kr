@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1a6a9e45b1640a82cd15074373f162a97d9a0a6
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 49d7ac030eb8e391f083311fc0248b0f0752e72a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121022"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +52,20 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @name = ] 'name'` 운영자 (알림 수신자)의 이름입니다. 이 이름은 고유 해야 하며 퍼센트를 포함할 수 없습니다 (**%**) 문자입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @name = ] 'name'` 운영자 (알림 수신자)의 이름입니다. 이 이름은 고유 해야 하며 퍼센트를 포함할 수 없습니다 ( **%** ) 문자입니다. *이름을* 됩니다 **sysname**, 기본값은 없습니다.  
   
 `[ @enabled = ] enabled` 연산자의 현재 상태를 나타냅니다. *사용 하도록 설정* 됩니다 **tinyint**, 기본값은 **1** (사용). 하는 경우 **0**, 연산자 사용 되지 않으며 알림을 수신 하지 않습니다.  
   
-`[ @email_address = ] 'email_address'` 운영자의 전자 메일 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 됩니다 **nvarchar(100)**, 기본값은 NULL입니다.  
+`[ @email_address = ] 'email_address'` 운영자의 전자 메일 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 됩니다 **nvarchar(100)** , 기본값은 NULL입니다.  
   
  실제 전자 메일 주소 또는 별칭을 지정할 수 있습니다 *email_address*합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
   
- '**jdoe**'또는'**jdoe@xyz.com**'  
+ '**jdoe**'또는' **jdoe@xyz.com** '  
   
 > [!NOTE]  
 >  데이터베이스 메일에서는 전자 메일 주소를 사용해야 합니다.  
   
-`[ @pager_address = ] 'pager_address'` 운영자의 호출기 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *pager_address* 됩니다 **narchar(100)**, 기본값은 NULL입니다.  
+`[ @pager_address = ] 'pager_address'` 운영자의 호출기 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *pager_address* 됩니다 **narchar(100)** , 기본값은 NULL입니다.  
   
 `[ @weekday_pager_start_time = ] weekday_pager_start_time` 시간 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에 호출기 알림을 보내는 지정 된 운영자에 게 평일에 월요일부터 금요일까지. *weekday_pager_start_time*됩니다 **int**, 기본값은 **090000**, 오전 9 시를 나타내는 이때 시간은 HHMMSS 형식으로 입력해야 합니다.  
   
@@ -92,7 +91,7 @@ sp_add_operator [ @name = ] 'name'
 |**32**|금요일|  
 |**64**|토요일|  
   
-`[ @netsend_address = ] 'netsend_address'` 네트워크 메시지를 받을 운영자의 네트워크 주소입니다. *netsend_address*됩니다 **nvarchar(100)**, 기본값은 NULL입니다.  
+`[ @netsend_address = ] 'netsend_address'` 네트워크 메시지를 받을 운영자의 네트워크 주소입니다. *netsend_address*됩니다 **nvarchar(100)** , 기본값은 NULL입니다.  
   
 `[ @category_name = ] 'category'` 이 연산자에 대 한 범주 이름입니다. *범주* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
@@ -102,7 +101,7 @@ sp_add_operator [ @name = ] 'name'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_add_operator** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
  호출은 전자 메일 시스템에 의해 지원되므로 호출 기능을 사용하려면 전자 메일에서 호출기로 전달되는 시스템이 있어야 합니다.  
@@ -113,7 +112,7 @@ sp_add_operator [ @name = ] 'name'
  멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_add_operator**합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `danwi`에 대한 운영자 정보를 설정합니다. 운영자가 설정되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 월요일부터 금요일, 오전 8시부터 오후 5시까지 호출기 알림을 보냅니다.  
+ 다음 예에서는 `danwi`에 대한 운영자 정보를 설정합니다. 운영자가 설정되어 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 월요일부터 금요일, 오전 8시부터 오후 5시까지 호출기 알림을 to 5 P.M.  
   
 ```  
 USE msdb ;  

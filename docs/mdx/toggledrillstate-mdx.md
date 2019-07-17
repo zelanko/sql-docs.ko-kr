@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 58acac77e4826855997791476b0602699452b7b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d027a76a82de3fd82b6c0c81c54ace08167039b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63228075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036615"
 ---
 # <a name="toggledrillstate-mdx"></a>ToggleDrillState(MDX)
 
@@ -41,7 +40,7 @@ ToggleDrillState(Set_Expression1,Set_Expression2 [, [RECURSIVE] [,INCLUDE_CALC_M
  *Include_calc_members*  
  (선택 사항) 드릴다운 수준에서 계산된 구성원 포함 여부(존재하는 경우)를 나타내는 플래그입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **ToggleDrillState** 함수는 첫 번째 집합에 있는 두 번째 집합의 각 멤버의 드릴 상태를 토글합니다. 첫 번째 집합에는 모든 차원의 튜플이 포함될 수 있지만 두 번째 집합에는 단일 차원의 멤버만 포함되어야 합니다. **ToggleDrillState** 함수는 조합 합니다 **DrillupMember** 및 **DrilldownMember** 함수입니다. 경우는 멤버 *m*, 두 번째 집합은 첫 번째 집합에 나타나는 및 해당 멤버는 드릴 다운 (바로 다음에 하위 항목이 있는,), 다음 `DrillupMember(Set_Expression1, {m})` 멤버나 첫 번째 집합의 튜플에 적용 됩니다. 있는지 *m* 멤버가 드릴업 (즉, 방법이의 하위 항목이 없는 *m* 바로 다음에 오는 *m*), `DrilldownMember(Set_Expression1, {m}[, RECURSIVE])` 첫 번째 집합에 적용 됩니다.  
   
  경우 선택적 **재귀** 플래그를 사용, 드릴업 및 드릴 다운이 재귀적으로 적용된 됩니다. 재귀 플래그에 대 한 자세한 내용은 참조는 [DrillupMember](../mdx/drillupmember-mdx.md) 하 고 [DrilldownMember](../mdx/drilldownmember-mdx.md) 함수입니다.  

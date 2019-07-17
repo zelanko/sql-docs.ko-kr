@@ -16,12 +16,12 @@ ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: b15ecd732acf373dbc5cee817983305c1d792fe4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 959af9bcb1879dc19d2bfb99253b4c40d637fd1e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453593"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260239"
 ---
 # <a name="migrating-access-databases-to-sql-server---azure-sql-db-accesstosql"></a>SQL Server-Azure SQL DB (AccessToSQL) 액세스 데이터베이스 마이그레이션
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA)는 Access 데이터베이스를 신속 하 게 마이그레이션할 수 있도록 하는 통합 환경을 제공 하는 도구 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure입니다. SSMA를 사용 하 여 액세스를 검토할 수 있습니다 하 고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터베이스 개체, 마이그레이션에 대 한 Access 데이터베이스 평가, Access 데이터베이스 개체를 변환 및 로드에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 SQL Azure 데이터를 마이그레이션해야 합니다.  
@@ -58,6 +58,6 @@ ms.locfileid: "63453593"
   
 또한이 과정을 안내 하는 마이그레이션 마법사를 사용할 수 있습니다. 자세한 내용은 [마이그레이션 마법사](migration-wizard-accesstosql.md)합니다.  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
 [액세스에 대 한 SQL Server Migration Assistant 시작](getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Access 데이터베이스 마이그레이션 준비](preparing-access-databases-for-migration-accesstosql.md)

@@ -13,19 +13,19 @@ ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: d35db315cebcc6292ca11b1e31f81015238fbcb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 479c22747f640a9ccfff43534571dabfcd2717a6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299433"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266958"
 ---
 # <a name="user-interface-reference-accesstosql"></a>사용자 인터페이스 참조 (AccessToSQL)
 이 섹션에 대 한 도움말 항목이 포함 되어 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) 액세스에 대 한 합니다.  
   
 ## <a name="in-this-section"></a>단원 내용  
   
-|항목|Description|  
+|항목|설명|  
 |---------|---------------|  
 |[고급 개체 선택 &#40;AccessToSQL&#41;](../../ssma/access/advanced-object-selection-accesstosql.md)|사용 된 **고급 개체 선택** 대화 상자의 필터 조건을 사용 하 여 데이터베이스 개체를 찾으려면 다음 선택 하거나 해당 개체의 선택을 취소 합니다.|  
 |[평가 보고서 &#40;AccessToSQL&#41;](../../ssma/access/assessment-report-accesstosql.md)|사용 된 **평가 보고서** Access 데이터베이스 개체를 변환 하는 분석 하 고 마이그레이션 소요 될 예상 대화 상자.|  
@@ -50,7 +50,7 @@ ms.locfileid: "63299433"
 |[프로젝트 설정 (SQL Azure)](https://msdn.microsoft.com/bbb8a204-d0e4-4f0b-9709-271feb1f136e)|SQL Azure 페이지를 사용 합니다 **프로젝트 설정** 데이터베이스 접미사 및 하트 비트 제한 시간 간격을 지정 하려면 대화 상자.|  
 |[메타 데이터 저장 &#40;AccessToSQL&#41;](../../ssma/access/save-metadata-accesstosql.md)|합니다 **메타 데이터 저장** 메타 데이터 누락 된 프로젝트를 저장 하는 경우 대화 상자가 나타납니다.|  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
 [액세스에 대 한 SQL Server Migration Assistant를 사용 하 여 시작 &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)  
 [Access 데이터베이스 마이그레이션 준비](preparing-access-databases-for-migration-accesstosql.md)  
 [SQL Server에 대 한 액세스 데이터베이스 마이그레이션](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

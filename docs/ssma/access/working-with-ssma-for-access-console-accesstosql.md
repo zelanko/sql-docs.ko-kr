@@ -10,12 +10,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 021458a2c47f9c57f641da575b346ab09c66fee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299025"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259779"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Ssma 액세스 콘솔 (AccessToSQL)에 대 한 작업
 Microsoft SQL Server Migration Assistant (SSMA) 액세스를 위한 명령줄에서 콘솔 응용 프로그램을 통해 액세스할 수 있는 되었습니다. 스크립트 파일의 명령을 실행 하는 것에 대 한 응용 프로그램에 대 한 입력을 형성 합니다. 콘솔 응용 프로그램의 경우 SSMA 스크립트 수준 인터페이스를 사용 하도록 설정, 마이그레이션 주기를 줄이고 마이그레이션 작업의 크기를 조정 합니다.  
@@ -38,6 +38,6 @@ SSMA 콘솔 응용 프로그램을 사용 하 여 Access 데이터베이스를 �
 |[보고서 생성 &#40;AccessToSQL&#41;](../../ssma/access/generating-reports-accesstosql.md)|보고서를 생성 하는 명령을 나열 합니다.|  
 |[문제 해결 &#40;AccessToSQL&#41;](../../ssma/access/troubleshooting-accesstosql.md)|마이그레이션 문제를 해결 하는 방법에 대 한 간략 한 정보를 제공 합니다.|  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
 [SSMA 콘솔 액세스에 대 한 시작](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

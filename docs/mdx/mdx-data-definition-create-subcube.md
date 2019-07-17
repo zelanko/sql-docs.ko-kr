@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2b505de916ba274ebb69137aa3f61fe384386829
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9726d654427d394a5a43712ce70dc4c98a5548f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038271"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX 데이터 정의 - CREATE SUBCUBE
 
@@ -38,15 +37,15 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  참조 [SELECT 문의 &#40;MDX&#41; ](../mdx/mdx-data-manipulation-select.md) Select 문에 대 한 자세한 구문 설명을 보려면에 대 한 하며 **NON VISUAL** 절.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  하위 큐브의 정의에서 기본 멤버가 제외되는 경우 그에 따라 좌표도 변경됩니다. 집계될 수 있는 특성에 대해서는 기본 멤버가 [All] 멤버로 이동합니다. 집계될 수 없는 특성에 대해서는 기본 멤버가 하위 큐브에 있는 멤버로 이동합니다. 다음 표에는 하위 큐브 예와 기본 멤버 조합이 포함됩니다.  
   
 |원래 기본 멤버|집계 가능|하위 SELECT|수정된 기본 멤버|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
-|Time.Year.All|사용자 계정 컨트롤|{Time.Year.2003}|변경 안 함|  
-|Time.Year 합니다. [1997]|사용자 계정 컨트롤|{Time.Year.2003}|Time.Year.All|  
+|Time.Year.All|예|{Time.Year.2003}|변경 안 함|  
+|Time.Year 합니다. [1997]|예|{Time.Year.2003}|Time.Year.All|  
 |Time.Year 합니다. [1997]|아니요|{Time.Year.2003}|Time.Year 합니다. [2003]|  
-|Time.Year 합니다. [1997]|사용자 계정 컨트롤|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
+|Time.Year 합니다. [1997]|예|{Time.Year.2003, Time.Year.2004}|Time.Year.All|  
 |Time.Year 합니다. [1997]|아니요|{Time.Year.2003, Time.Year.2004}|Time.Year.[2003] 또는<br /><br /> Time.Year.[2004]|  
   
  [All] 멤버는 항상 하위 큐브에 존재합니다.  

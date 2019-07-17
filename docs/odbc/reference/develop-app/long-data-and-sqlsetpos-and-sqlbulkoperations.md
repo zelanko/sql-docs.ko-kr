@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2fdf842-5e4c-46ca-bb21-4625c3324f28
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b1d1a55d3b417ff7a0a673bda8d289a72d7c1cb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 578c85331a65c15cb25b5d9b75b7156ab509e910
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036414"
 ---
 # <a name="long-data-and-sqlsetpos-and-sqlbulkoperations"></a>Long 데이터 및 SQLSetPos 및 SQLBulkOperations
 사용 하 여 행을 업데이트 하는 경우 긴 데이터를 보낼 수 SQL 문에서 매개 변수를 사용 하 여 대/소문자 그대로 **SQLBulkOperations** 하거나 **SQLSetPos** 사용 하 여 행을 삽입할 때 또는 **SQLBulkOperations**. 데이터에 대 한 여러 호출을 사용 하 여 부분으로 보내지는 **SQLPutData**합니다. 실행 시 데이터는 전송 하는 열 이라고 *실행 시 데이터 열*합니다.  

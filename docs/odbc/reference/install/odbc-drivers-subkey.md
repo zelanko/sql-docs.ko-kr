@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43be1c5e75998903ff4e64fc5f4230818a873ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb54ba7becad42d8d9d2c2870c02db37a3c7d89f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63281133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093977"
 ---
 # <a name="odbc-drivers-subkey"></a>ODBC 드라이버 하위 키
 ODBC 드라이버 하위 키 아래에서 값을 설치 된 드라이버를 나열합니다. 이러한 값의 형식은 다음 표에 표시 됩니다.  

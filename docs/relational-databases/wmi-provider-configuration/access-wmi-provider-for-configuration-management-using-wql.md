@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26499530-d93b-452b-bbe4-217ef1d11e68
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 21a18dc77a8ab1b714676cc299d26797ba0d41bd
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 2daaea77ecc69a6c3a011ce0ffdfd862f296b22a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139434"
 ---
 # <a name="access-wmi-provider-for-configuration-management-using-wql"></a>WQL을 사용하여 구성 관리용 WMI 공급자 액세스
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "51215488"
   
 3.  첫 번째 텍스트 필드에 컴퓨터 관리용 WMI 공급자 네임스페이스인 root\Microsoft\SqlServer\ComputerManagement11을 입력합니다. **연결**을 클릭합니다.  
   
-4.  클릭 **쿼리**합니다. 로컬 컴퓨터에서 실행 되는 현재 서비스를 반환 하는 쿼리를 입력 합니다. **선택 \* 에서 SqlService 합니다.** **적용**을 클릭합니다.  
+4.  클릭 **쿼리**합니다. 로컬 컴퓨터에서 실행 되는 현재 서비스를 반환 하는 쿼리를 입력 합니다. **선택 \* FROM SqlService 합니다.** **적용**을 클릭합니다.  
   
 5.  추가 하 여 쿼리를 구체화 **여기서 ServiceName = "MSSQLSERVER"** 합니다.  
   

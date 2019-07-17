@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 00efbcd4-fea8-4061-86a5-82de413cb753
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a7701edd4c1902399f1d040ae9027365bdf04ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997744"
 ---
 # <a name="set-collate-command"></a>SET COLLATE 명령
 후속 인덱싱 및 정렬 작업에서 문자 필드에 대 한 데이터 정렬 순서를 지정합니다.  
@@ -69,7 +68,7 @@ SET COLLATE TO "SWEFIN"
 SET COLLATE TO cSequenceName  
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  데이터 정렬 설정 하면 지원 되는 언어에 대 한 악센트 부호가 있는 문자를 포함 하는 주문 테이블. 데이터 정렬 설정의 설정 변경 이전에 열린된 인덱스의 정렬 순서에 영향을 주지 않습니다. Visual FoxPro 자동으로 기존 인덱스 유지 다양 한 유형의 동일한 필드에 대해서도 인덱스를 만드는 유연성을 제공 합니다.  
   
  예를 들어 일반으로 설정 하는 데이터 정렬 설정으로 인덱스를 만들 경우 스페인어로 설정 하는 한 부씩 인쇄 설정을 나중에 변경 인덱스의 일반적인 데이터 정렬 순서를 유지 합니다.  

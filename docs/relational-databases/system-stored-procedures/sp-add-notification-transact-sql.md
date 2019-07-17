@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0525e0a2-ed0b-4e69-8a4c-a9e3e3622fbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7c6e4531597faf9cacb883cf3ea3432b6e8ff9f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 60bb289f0fd6d7b7dd1034630929998d32cc59d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115057"
 ---
 # <a name="spaddnotification-transact-sql"></a>sp_add_notification(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_add_notification** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 그래픽 방식으로 전체 경고 시스템을 간편하게 관리할 수 있도록 해 줍니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하면 경고 인프라를 쉽게 구성할 수 있습니다.  
@@ -74,7 +73,7 @@ sp_add_notification [ @alert_name = ] 'alert' ,
 ## <a name="examples"></a>예  
  다음 예에서는 지정된 경고(`Test Alert`)에 전자 메일 알림을 추가합니다.  
   
-> **참고:** 이 예에서는 `Test Alert`가 이미 존재하고 있으며 `François Ajenstat`가 유효한 운영자 이름이라고 가정합니다.  
+> **참고:** 이 예에서는 가정 `Test Alert` 이미 있고 `François Ajenstat` 유효한 연산자 이름입니다.  
   
 ```  
 USE msdb ;  
@@ -87,7 +86,7 @@ EXEC dbo.sp_add_notification
 GO  
 ```  
   
-## <a name="see-also"></a>참고자료  
+## <a name="see-also"></a>참조  
  [sp_delete_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_help_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-notification-transact-sql.md)   
  [sp_update_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

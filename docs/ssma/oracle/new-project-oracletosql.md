@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 16849cfd-050c-4ac7-bd3d-a929aebb5010
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: acfc9cc5593001e3a9a918abe788494b1b7fd405
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 02d1d499cb9030b737028e59219fd779bde295c6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209839"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264669"
 ---
 # <a name="new-project-oracletosql"></a>새 프로젝트(OracleToSQL)
 사용 된 **새 프로젝트** 대화 상자의 새 SSMA 프로젝트를 만듭니다. 액세스 하는 **새 프로젝트** 대화 상자의 합니다 **파일** 메뉴에서 클릭 **새 프로젝트**.  
@@ -24,7 +24,7 @@ ms.locfileid: "63209839"
 **이름**  
 프로젝트의 이름을 입력 합니다. SSMA는 파일 확장명이 추가 됩니다.  
   
-**위치**  
+**Location**:  
 입력 하거나 폴더 또는 프로젝트를 저장할 네트워크 위치를 찾습니다.  
   
 **로 마이그레이션**  

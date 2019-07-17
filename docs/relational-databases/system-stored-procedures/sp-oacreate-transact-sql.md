@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb84c0f1-26dd-48f9-9368-13ee4a30a27c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ad8059466ac520b6f9f793af7670cbd73b96b38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107929"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
  HRESULT 반환 코드에 대 한 자세한 내용은 참조 하세요. [OLE 자동화 반환 코드 및 오류 정보](../../relational-databases/stored-procedures/ole-automation-return-codes-and-error-information.md)합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  OLE automation procedures가 설정 되어, 경우에 대 한 호출 **sp_OACreate** OLE Automation 공유 실행 환경이 시작 됩니다. OLE automation을 사용 하도록 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [Ole Automation Procedures 서버 구성 옵션](../../database-engine/configure-windows/ole-automation-procedures-server-configuration-option.md)합니다.  
   
  만들어진 OLE 개체는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 일괄 처리의 끝 부분에서 자동으로 삭제됩니다.  
@@ -88,7 +87,7 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-progid"></a>1\. ProgID 사용  
+### <a name="a-using-progid"></a>A. ProgID 사용  
  다음 예제에서는 SQL-DMO **SQLServer** ProgID를 사용 하 여 개체입니다.  
   
 ```  

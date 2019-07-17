@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: 45010ff2-219f-4086-9ea4-016a6c17cddd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7845ef36347d9131ed6991674b4e09b23ee34155
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5159b72cb91cfdcf21129c6216cab4cf0e8d4dea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120266"
 ---
 # <a name="sysfndbbackupfilesnapshots-transact-sql"></a>sys.fn_db_backup_file_snapshots (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sys.fn_db_backup_file_snapshots
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |file_id|**int**|데이터베이스에 대 한 파일 ID입니다. Null을 허용하지 않습니다.|  
 |snapshot_time|**nvarchar(260)**|REST API를 그대로 스냅숏의 타임 스탬프를 반환 합니다. 스냅숏이 없습니다 있으면 NULL을 반환 합니다.|  

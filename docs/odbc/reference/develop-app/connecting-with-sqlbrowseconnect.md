@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6c2e9f76-b766-48df-b109-246bb05ae45d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec1cd42e6704bc5168b1eb20841100fc279a66ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04df089b97bf385925c87a98b3f89cdac3ef21e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083130"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>SQLBrowseConnect로 연결
 **SQLBrowseConnect**과 같이 **SQLDriverConnect**, 연결 문자열을 사용 합니다. 그러나 **SQLBrowseConnect**, 응용 프로그램 런타임 시 전체 연결 문자열을 생성할 수 있습니다. 이를 통해 응용 프로그램에서는 다음 두 가지 작업이 가능해집니다.  

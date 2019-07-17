@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: b15759f9cee25c214ba67c09590f46093d41f22f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f86951b58fa99f9e9d3973c2c7b188dbd488a641
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084657"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>DB2 용 SSMA의 새로운 GUI 기능 (DB2ToSQL)
 SSMA 사용자 인터페이스의 새로운 기능을 설명합니다이.  

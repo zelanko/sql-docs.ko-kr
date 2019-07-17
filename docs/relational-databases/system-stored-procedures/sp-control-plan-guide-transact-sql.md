@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5801a38e22a0c638e9daee1e448158941499b19f
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 808d6e9482d293e957a0dc483df128d08b74133c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108758"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,21 +57,21 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  지정 된 계획 지침을 삭제 *plan_guide_name*합니다. 계획 지침이 삭제된 후 이전에 이 계획 지침에 맞춘 쿼리를  실행할 경우 이 계획 지침의 영향을 받지 않습니다.  
   
  DROP ALL  
- 현재 데이터베이스에 있는 모든 계획 지침을 삭제합니다. **N'**_plan_guide_name_ DROP ALL 지정 된 경우에 지정할 수 없습니다.  
+ 현재 데이터베이스에 있는 모든 계획 지침을 삭제합니다. **N'** _plan_guide_name_ DROP ALL 지정 된 경우에 지정할 수 없습니다.  
   
  DISABLE  
  지정 된 계획 지침을 사용 하지 않도록 설정 *plan_guide_name*합니다. 계획 지침이 비활성화된 후 이전에 이 계획 지침에 맞춘 쿼리를 실행할 경우 이 계획 지침의 영향을 받지 않습니다.  
   
  DISABLE ALL  
- 현재 데이터베이스에 있는 모든 계획 지침을 비활성화합니다. **N'**_plan_guide_name_ 모두 사용 안 함 지정 된 경우에 지정할 수 없습니다.  
+ 현재 데이터베이스에 있는 모든 계획 지침을 비활성화합니다. **N'** _plan_guide_name_ 모두 사용 안 함 지정 된 경우에 지정할 수 없습니다.  
   
  ENABLE  
  지정 된 계획 지침을 사용 하도록 설정 *plan_guide_name*합니다. 계획 지침을 활성화하면 적합한 쿼리에 맞출 수 있습니다. 기본적으로 계획 지침은 만들어질 때 활성화됩니다.  
   
  ENABLE ALL  
- 현재 데이터베이스에 있는 모든 계획 지침을 활성화합니다. **N'**_plan_guide_name_**'** ENABLE ALL 지정 된 경우에 지정할 수 없습니다.  
+ 현재 데이터베이스에 있는 모든 계획 지침을 활성화합니다. **N'** _plan_guide_name_ **'** ENABLE ALL 지정 된 경우에 지정할 수 없습니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  활성화 여부에 관계없이 계획 지침에서 참조하는 함수, 저장 프로시저 또는 DML 트리거를 삭제하거나 수정하려고 하면 오류가 발생합니다.  
   
  비활성화된 계획 지침을 비활성화하거나 활성화된 계획 지침을 활성화하면 아무런 영향을 미치지 않고 오류 없이 실행됩니다.  
@@ -84,7 +83,7 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-enabling-disabling-and-dropping-a-plan-guide"></a>1. 계획 지침 활성화, 비활성화 및 삭제  
+### <a name="a-enabling-disabling-and-dropping-a-plan-guide"></a>A. 계획 지침 활성화, 비활성화 및 삭제  
  다음 예에서는 계획 지침을 만들고 비활성화하고 활성화하고 삭제합니다.  
   
 ```  
@@ -125,7 +124,7 @@ GO
 EXEC sp_control_plan_guide N'DROP', N'Guide3';  
 ```  
   
-### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>2. 현재 데이터베이스에 있는 모든 계획 지침 비활성화  
+### <a name="b-disabling-all-plan-guides-in-the-current-database"></a>2\. 현재 데이터베이스에 있는 모든 계획 지침 비활성화  
  다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 모든 계획 지침을 비활성화합니다.  
   
 ```  

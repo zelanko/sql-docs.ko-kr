@@ -19,28 +19,27 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85ba57ba9e3559a790ae983025356510987c1eae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133127"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   파일 감사 유형에 대 한 확장된 정보를 포함 한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 인스턴스에서 감사 합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|감사의 ID입니다.|  
-|NAME|**sysname**|감사의 이름입니다.|  
+|name|**sysname**|감사의 이름입니다.|  
 |audit_guid|**uniqueidentifier**|감사의 GUID입니다.|  
 |create_date|**datetime**|파일 감사를 만든 UTC 날짜입니다.|  
 |modify_date|**datatime**|파일 감사를 마지막으로 수정한 UTC 날짜입니다.|  
 |principal_id|**int**|서버에 등록된 감사 소유자의 ID입니다.|  
-|유형|**char(2)**|감사 유형:<br /><br /> 0 = NT 보안 이벤트 로그<br /><br /> 1 = NT 응용 프로그램 이벤트 로그<br /><br /> 2 = 파일 시스템의 파일|  
+|type|**char(2)**|감사 유형:<br /><br /> 0 = NT 보안 이벤트 로그<br /><br /> 1 = NT 응용 프로그램 이벤트 로그<br /><br /> 2 = 파일 시스템의 파일|  
 |type_desc|**nvarchar(60)**|감사 유형 설명입니다.|  
 |on_failure|**tinyint**|조건이 실패한 경우:<br /><br /> 0 = 계속<br /><br /> 1 = 서버 인스턴스 종료<br /><br /> 2 = 작업 실패|  
 |on_failure_desc|**nvarchar(60)**|동작 항목을 쓰지 못한 경우:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  

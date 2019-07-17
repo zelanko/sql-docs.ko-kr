@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8a01041f-3572-46f9-8213-b817f3cf929c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5cf669883ce81528adbe1fbd8faeff2ed716218
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2082a97b24284afcc879048bb08e86a7b2bb3ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070108"
 ---
 # <a name="sqltransact-mapping"></a>SQLTransact 매핑
 **SQLTransact** 이제 바뀝니다 **SQLEndTran**합니다. 두 함수 간의 주요 차이점은 **SQLEndTran** 인수로 포함 *HandleType*를 수행 해야 하는 작업의 범위를 지정 하는 합니다. 합니다 *HandleType* 인수 환경 또는 연결 핸들을 지정할 수 있습니다. 다음에 호출할 **SQLTransact**:  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135017"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>MDX 및 DAX의 VBA 함수
 
@@ -63,12 +62,12 @@ ms.locfileid: "67500049"
 |DoEvents|지원되지 않음||  
 |Environ|지원되지 않음||  
 |EOF|지원되지 않음||  
-|Error|지원되지 않음||  
+|오류|지원되지 않음||  
 |Exp|DAX, MDX||  
 |FileAttr|지원되지 않음||  
 |FileDateTime|지원되지 않음||  
 |FileLen|지원되지 않음||  
-|Assert|지원되지 않음|**경고** 동일한 이름의 다른 함수를 구현 하는 MDX; FILTER (Set_Expression, Logical_Expression) 함수는 지정 된 인수의 검색 조건에 따라 지정 된 집합을 필터링 한 결과 집합을 반환 합니다<br /><br /> **경고** 같은 다른 함수를 구현 하는 DAX 이름, 필터 (\<테이블 >,\<필터 >) 함수는 다른 테이블 또는 지정된 된 인수에서 식의 하위 집합을 나타내는 테이블 반환|  
+|Filter|지원되지 않음|**경고** 동일한 이름의 다른 함수를 구현 하는 MDX; FILTER (Set_Expression, Logical_Expression) 함수는 지정 된 인수의 검색 조건에 따라 지정 된 집합을 필터링 한 결과 집합을 반환 합니다<br /><br /> **경고** 같은 다른 함수를 구현 하는 DAX 이름, 필터 (\<테이블 >,\<필터 >) 함수는 다른 테이블 또는 지정된 된 인수에서 식의 하위 집합을 나타내는 테이블 반환|  
 |Fix|MDX만||  
 |Format(Visual Basic for Applications)|DAX, MDX||  
 |FormatCurrency|지원되지 않음||  
@@ -146,7 +145,7 @@ ms.locfileid: "67500049"
 |Str|MDX만||  
 |StrComp|MDX만||  
 |StrConv|MDX만||  
-|문자열|MDX만||  
+|String|MDX만||  
 |StrReverse|지원되지 않음||  
 |스위치|MDX만||  
 |SYD|MDX만||  

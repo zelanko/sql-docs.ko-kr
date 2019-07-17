@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c0857066ba5f8f57a5a6d088a4f37d69315225ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a71c4d61ec920b51146cc3d3111adefc09f23b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124228"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file(Transact-SQL)
 
@@ -59,7 +58,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  동의어 사전 파일은 해당 동의어 사전을 사용하는 전체 텍스트 쿼리에 의해 자동으로 로드됩니다. 전체 텍스트 쿼리에 미치는이 첫 번째 성능 영향을 방지 하려면를 실행 하는 권장 **sp_fulltext_load_thesaurus_file**합니다.  
   
  사용 하 여 [sp_fulltext_service](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)'**update_languages**' 전체 텍스트 검색에 등록 된 언어 목록을 업데이트 합니다.  
@@ -71,7 +70,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>1\. 이미 로드되어 있더라도 동의어 사전 파일 로드  
+### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>A. 이미 로드되어 있더라도 동의어 사전 파일 로드  
  다음 예에서는 영어 동의어 사전 파일을 구문 분석하고 로드합니다.  
   
 ```sql

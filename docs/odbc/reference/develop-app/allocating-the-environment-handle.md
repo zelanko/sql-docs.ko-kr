@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a8eefe5bc6678462099afda8381d6b16bd076dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823ea02a2acb6a28f56c58bb40fe684a2589bd24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077179"
 ---
 # <a name="allocating-the-environment-handle"></a>환경 핸들 할당
 ODBC 응용 프로그램에 대 한 첫 번째 작업은 부하 드라이버 관리자입니다. 이 과정은 운영 체제 따라 다릅니다. 예를 들어, Microsoft® Windows NT® Server/Windows 2000 Server, Windows NT 워크스테이션/Windows 2000 Professional 또는 Microsoft Windows® 95/98을 실행 중인 컴퓨터에 응용 프로그램이 하거나 연결 드라이버 관리자 라이브러리나 호출  **LoadLibrary** 드라이버 관리자 DLL을 로드할 수 있습니다.  

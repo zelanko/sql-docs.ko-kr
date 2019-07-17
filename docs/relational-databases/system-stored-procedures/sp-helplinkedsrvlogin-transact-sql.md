@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2b1eba0-bf71-47e7-a4c7-9f55feec82a3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 32d7d0098c5548666b1d2fc77e11f82c2c3fd5fe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f1728b3e5d4cd3189a8d9a01a8b72ecedaf7cb6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122457"
 ---
 # <a name="sphelplinkedsrvlogin-transact-sql"></a>sp_helplinkedsrvlogin(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +49,14 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**연결 된 서버**|**sysname**|연결된 서버 이름입니다.|  
 |**로컬 로그인**|**sysname**|매핑이 적용되는 로컬 로그인입니다.|  
 |**자체 매핑이**|**smallint**|0 = **로컬 로그인** 매핑됩니다 **Remote Login** 에 연결할 때 **연결 된 서버**합니다.<br /><br /> 1 = **local Login** 에 연결할 때 동일한 로그인 및 암호에 매핑됩니다 **연결 된 서버**합니다.|  
 |**원격 로그인**|**sysname**|로그인 이름 **LinkedServer** 에 매핑된 **LocalLogin** 때 **IsSelfMapping** 은 0입니다. 하는 경우 **IsSelfMapping** 가 1 이면 **RemoteLogin** NULL입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  사용 하 여 로그인 매핑을 삭제 하기 전에 **sp_helplinkedsrvlogin** 관련 된 연결 된 서버를 확인 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -65,7 +64,7 @@ sp_helplinkedsrvlogin [ [ @rmtsrvname = ] 'rmtsrvname' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-all-login-mappings-for-all-linked-servers"></a>1. 모든 연결된 서버에 관한 모든 로그인 매핑 표시  
+### <a name="a-displaying-all-login-mappings-for-all-linked-servers"></a>A. 모든 연결된 서버에 관한 모든 로그인 매핑 표시  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 실행하고 있는 로컬 컴퓨터에서 정의된 모든 연결된 서버에 관한 로그인 매핑을 모두 표시합니다.  
   
 ```  
@@ -86,7 +85,7 @@ Marketing        NULL          1               NULL
 (4 row(s) affected)  
 ```  
   
-### <a name="b-displaying-all-login-mappings-for-a-linked-server"></a>2. 연결된 서버에 관한 모든 로그인 매핑 표시  
+### <a name="b-displaying-all-login-mappings-for-a-linked-server"></a>2\. 연결된 서버에 관한 모든 로그인 매핑 표시  
  다음 예에서는 `Sales`라는 연결된 서버에 대해 로컬로 정의된 모든 로그인 매핑을 표시합니다.  
   
 ```  
@@ -105,7 +104,7 @@ Sales            Mary          0               sa
 (2 row(s) affected)  
 ```  
   
-### <a name="c-displaying-all-login-mappings-for-a-local-login"></a>3. 로컬 로그인에 관한 모든 로그인 매핑 표시  
+### <a name="c-displaying-all-login-mappings-for-a-local-login"></a>3\. 로컬 로그인에 관한 모든 로그인 매핑 표시  
  다음 예에서는 `Mary`라는 로그인에 대해 로컬로 정의된 모든 로그인 매핑을 표시합니다.  
   
 ```  

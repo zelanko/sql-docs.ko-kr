@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c6b9190a22d89e98a683361ba9460d2fd68a9dde
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 02d46b5df95335920dca9ef9cf80e9fa6dabb94f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124795"
 ---
 # <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_dropsubscriber** 모든 유형의 복제에 사용 됩니다.  
   
  서버를 제거 하는이 저장된 프로시저 **sub** 옵션을 시스템 관리자의 원격 로그인 매핑을 제거 **repl_subscriber**합니다.  

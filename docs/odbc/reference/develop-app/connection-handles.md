@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 12222653-f04d-46d6-bdee-61348f5d550f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77fdb63f346ada40346544a53c3ff69db0a8a9a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab8b94835fb9a6103436026a669c86f2401d57b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036434"
 ---
 # <a name="connection-handles"></a>연결 핸들
 A *연결* 드라이버 및 데이터 원본으로 구성 됩니다. 연결 핸들을 각 연결을 식별합니다. 연결 핸들을 사용 하는 드라이버 뿐만 아니라 해당 드라이버를 사용 하는 데이터 원본을 정의 합니다. ODBC (드라이버 관리자 또는 드라이버)를 구현 하는 코드의 세그먼트를 내 연결 핸들을 다음과 같은 연결 정보를 포함 하는 구조를 식별 합니다.  

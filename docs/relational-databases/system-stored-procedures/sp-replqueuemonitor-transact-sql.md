@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6909a3f1-43a2-4df5-a6a5-9e6f347ac841
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f174940b27adbaba75efd6660f09140c403bf8b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d8c931f4ec38fe6099afa6b098445dcdbc52b0be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090005"
 ---
 # <a name="spreplqueuemonitor-transact-sql"></a>sp_replqueuemonitor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
   
 `[ @tranid = ] 'tranid' ]` 트랜잭션 ID입니다. *tranid*됩니다 **sysname**, 기본값은 NULL입니다. 모든 트랜잭션에 대해 NULL입니다.  
   
- [**@queuetype=** ] **'***queuetype***'** ]  
+ [ **@queuetype=** ] **'***queuetype***'** ]  
  트랜잭션을 저장하는 큐의 유형입니다. *queuetype* 됩니다 **tinyint** 이며 기본값은 **0**, 이며 다음이 값 중 하나일 수 있습니다.  
   
 |값|Description|  
@@ -62,7 +61,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_replqueuemonitor** 지연된 업데이트 구독이 있는 트랜잭션 복제 또는 스냅숏 복제에 사용 됩니다. SQL 명령을 포함하지 않거나 영향을 미치는 SQL 명령의 일부인 큐 메시지는 표시되지 않습니다.  
   
 ## <a name="permissions"></a>사용 권한  
