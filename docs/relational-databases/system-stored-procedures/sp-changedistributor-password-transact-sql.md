@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 38ef611dd7dd181b164bd0eec459d68c49c6b5df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29974fc7a60f675dc9921f527fd8348beb4f2134
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120079"
 ---
 # <a name="spchangedistributorpassword-transact-sql"></a>sp_changedistributor_password(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_changedistributor_password** 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="example"></a>예제  

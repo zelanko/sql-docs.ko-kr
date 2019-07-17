@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbd39099-caf6-4c4c-9ad8-f6c63c1bd5e4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8035eed9e0aaff1f914f386b6d4bc9f2d65f9a0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cd3cebfcf20df2f8a3a786ea66fd28dd76307c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119706"
 ---
 # <a name="like-predicate-limitations"></a>LIKE 조건자 제한 사항
 데이터 열에 255 자 보다 긴 경우에서는 처음 255 자만 에서만 LIKE 비교에 따라 달라 집니다.  

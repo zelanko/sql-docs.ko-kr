@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 306632f544f144aa4b21e150543c2d4ca5a37d0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad13379552e3a5a576b0aa5cc8720ca6ca1688a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63008023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118738"
 ---
 # <a name="buffers"></a>버퍼
 버퍼는 응용 프로그램 및 드라이버 간에 데이터를 전달 하는 데 사용 되는 응용 프로그램 메모리의 일부입니다. 예를 들어, 응용 프로그램 버퍼에 연결할 수 있는, 또는 *바인딩된* 결과 집합 열 **SQLBindCol**합니다. 각 행은 인출 하는 대로 이러한 버퍼의 각 열에 대 한 데이터가 반환 됩니다. *입력 버퍼* 드라이버; 응용 프로그램에서 데이터를 전달 하는 데 *출력 버퍼* 드라이버에서 응용 프로그램에 데이터를 반환 하는 데 사용 됩니다.  
