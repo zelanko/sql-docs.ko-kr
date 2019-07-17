@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 096e3659-edeb-4440-a016-f847acd6166b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c52f9b211c6cb6b7df8404ba462f51e898841911
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 816f5c563713eaa59337d765a7ccadafbd5c73a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079378"
 ---
 # <a name="sysdefaultconstraints-transact-sql"></a>sys.default_constraints(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   (CREATE TABLE 또는 ALTER TABLE 문 만들 기본 문 대신의 일환으로 만들어진) 기본 정의 된 각 개체에 대 한 행을 포함 **sys.objects.type** = D  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**\<Sys.objects에서 상속 된 열 >**||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.|  
 |**parent_column_id**|**int**|열 ID **parent_object_id** 속한이 기본값입니다.|  

@@ -4,19 +4,18 @@ titleSuffix: SQL Server
 description: 설치, 업데이트 및 Linux에서 SQL Server를 제거 합니다. 이 문서는 온라인과 오프 라인 무인 시나리오를 다룹니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: c4e58111fd6a584344b4f73e6986774040aa6211
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 7f4b2aa37b20cceaa3269527c95bfa97a2daa311
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032438"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 설치 지침
 

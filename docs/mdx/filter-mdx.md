@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d740148052712a69a39e0de314496733b3b26a8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a70bceed4cdccf6a22f0cfea4e5093634f88f1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63154634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132687"
 ---
 # <a name="filter-mdx"></a>Filter(MDX)
 
@@ -35,7 +34,7 @@ Filter(Set_Expression, Logical_Expression )
  *Logical_Expression*  
  true나 false가 되는 유효한 MDX 논리 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **필터** 함수는 지정 된 집합의 각 튜플에 대해 지정 된 논리 식을 계산 합니다. 논리 식으로 계산 되는 위치 지정된 된 집합의 각 튜플로 구성 된 집합을 반환 **true**합니다. 경우 튜플이 **true**, 빈 집합이 반환 됩니다.  
   
  합니다 **필터** 함수는 유사한 방식으로 작동 합니다 [IIf](../mdx/iif-mdx.md) 함수입니다. **IIf** 두 가지 옵션 중 하나만 반환 하는 동안 MDX 논리 식의 평가 따라 합니다 **필터** 함수에 지정 된 검색 조건을 충족 하는 튜플 집합을 반환 합니다. 실제로 **필터** 함수를 실행 `IIf(Logical_Expression, Set_Expression.Current, NULL)` 반환 고 집합의 각 튜플에에서 해당 결과 집합입니다.  

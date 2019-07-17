@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 62a061632b5f598932fe29499519d7eb897c78a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039011"
 ---
 # <a name="conditional-expressions-xquery"></a>조건 식(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ else
   
 -   합니다 **다른** 식이 필요 합니다. 필요 없으면 이 항목의 예에 나오는 대로 " ( ) "을 반환할 수 있습니다.  
   
- 대해 다음 쿼리를 지정 하는 예를 들어 합니다 **xml** 형식 변수입니다. **하는 경우** SQL 변수 값을 테스트 하는 조건 (@v)를 사용 하 여 XQuery 식 안에 [sql: variable 함수](../xquery/xquery-extension-functions-sql-variable.md) 확장 함수입니다. 변수 값이 "FirstName"이면 <`FirstName`> 요소를 반환합니다. 그렇지 않으면 <`LastName`> 요소를 반환합니다.  
+ 대해 다음 쿼리를 지정 하는 예를 들어 합니다 **xml** 형식 변수입니다. **하는 경우** SQL 변수 값을 테스트 하는 조건 (@v)를 사용 하 여 XQuery 식 안에 [sql: variable 함수](../xquery/xquery-extension-functions-sql-variable.md) 확장 함수입니다. 반환 하는 경우 변수 값이 "FirstName" 이면 합니다 <`FirstName`> 요소입니다. 그러지 않으면 반환 된 <`LastName`> 요소입니다.  
   
 ```  
 declare @x xml  
@@ -81,7 +80,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- 다음 쿼리는 특정 제품 모델의 제품 카탈로그 설명에서 처음 두 개의 기능 설명을 검색합니다. 문서에 기능이 더 있을 경우 내용이 비어 있는 <`there-is-more`> 요소를 추가합니다.  
+ 다음 쿼리는 특정 제품 모델의 제품 카탈로그 설명에서 처음 두 개의 기능 설명을 검색합니다. 추가 경우 더 많은 기능 문서에는 <`there-is-more`> 내용이 비어 있는 요소입니다.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -123,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- 다음 쿼리에서는 업무 센터 위치에서 설치 시간을 지정하지 않은 경우 LocationID 특성을 가진 <`Location`> 요소가 반환됩니다.  
+ 다음 쿼리에서 <`Location`> LocationID 특성을 가진 요소는 작업 센터 위치에서 설치 시간을 지정 하지 않으면 반환 됩니다.  
   
 ```  
 SELECT Instructions.query('  

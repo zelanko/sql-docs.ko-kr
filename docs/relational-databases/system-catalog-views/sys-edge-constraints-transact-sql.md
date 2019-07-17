@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4068b127bdf4563e18cb459781f8a9a98ced6230
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dc2e47c49dc9d639489426fceab0b848c9def3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079321"
 ---
 # <a name="sysedgeconstraints-transact-sql"></a>sys.edge_constraints (Transact SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 각 개체는에 지 제약 조건에 대해 하나의 행을 포함 합니다. 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**\<Sys.objects에서 상속 된 열 >**||이 뷰가 상속 하는 열 목록은 참조 하세요 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)합니다.|  
 |**is_disabled**|**bit**|1 = edge 제약 조건을 사용할 수는 있습니다.<br /><br /> 0 = edge 제약 조건이 활성화 됩니다.|  

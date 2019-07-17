@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2e8ce5aeeb94a4f7a33b22054adc8067e0654ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7862b2e3a86c6d98a51c73ecb470d59bcfe29dc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107518"
 ---
 # <a name="sql-conformance-levels"></a>SQL 적합성 수준
 드라이버에서 지 원하는 SQL-92 문법의 수준에 대 한 호출에서 반환한 값으로 표시 됩니다 **SQLGetInfo** SQL_SQL_CONFORMANCE 정보 형식을 사용 하 여 합니다. SQL-92에 정의 된 항목, FIPS 전환, 중간 또는 전체 수준으로 드라이버를 준수 하는지 여부를 나타냅니다.  

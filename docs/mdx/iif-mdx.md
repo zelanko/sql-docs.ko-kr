@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105331"
 ---
 # <a name="iif-mdx"></a>IIf(MDX)
 
@@ -34,13 +33,13 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  *Logical_Expression*  
  평가 하는 조건을 **true** (1) 또는 **false** (0). 유효한 MDX(Multidimensional Expressions) 논리식이어야 합니다.  
   
- *Expression1 Hint [Eager|Strict|Lazy]]*  
+ *Expression1 힌트 [즉시 | 엄격한 | 지연]]*  
  논리 식으로 평가 되 면 사용할 **true**합니다. Expression1은 유효한 MDX(Multidimensional Expressions) 식이어야 합니다.  
   
  *Expression2 Hint [Eager|Strict|Lazy]]*  
  논리 식으로 평가 되 면 사용할 **false**합니다. Expression2는 유효한 MDX(Multidimensional Expressions) 식이어야 합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  논리 식으로 지정 된 조건이 **false** 이 식의 값이 0입니다. 다른 값으로 계산 되 **true**합니다.  
   
  조건이 **true**서 **IIf** 함수는 첫 번째 식을 반환 합니다. 그렇지 않은 경우 이 함수는 두 번째 식을 반환합니다.  

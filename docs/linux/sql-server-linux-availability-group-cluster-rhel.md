@@ -5,18 +5,17 @@ description: Red Hat Enterprise Linux (RHEL)를 실행 하는 경우 가용성 �
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 2ceefd4ce2fa643a66a289e3c3ab3e0d169b5ff8
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 086138fc1df6245de33b348c529e56e606c3ddc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027318"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대 한 RHEL 클러스터 구성
 

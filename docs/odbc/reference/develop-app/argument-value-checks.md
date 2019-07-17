@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3dfee0dd00e30f6446430156617ba45a5a39b994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 013c8f80a672ed691e7519b318206c406171cfbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077111"
 ---
 # <a name="argument-value-checks"></a>인수 값 검사
 드라이버 관리자는 다음과 같은 유형의 인수를 확인합니다. 다른 언급이 없는 경우 드라이버 관리자 오류 인수 값에 대 한 SQL_ERROR를 반환 합니다.  

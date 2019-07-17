@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 29d6cd36-535d-4765-bca8-62f9d9886ff5
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bacf8f0c891e595a775a5e279c5341f3ca0944b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd443a8e03663eb3fb46e75e09d852c797f6d427
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101378"
 ---
 # <a name="sphelpconstraint-transact-sql"></a>sp_helpconstraint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_helpconstraint [ @objname = ] 'table'
 ## <a name="result-sets"></a>결과 집합  
  **sp_helpconstraint** 기본 키에 참여 하는 경우 내림차순으로 인덱싱된 열이 표시 됩니다. 내림차순으로 인덱싱된 열은 이름 다음에 빼기 기호(-)를 포함한 상태로 결과 집합에 나열됩니다. 기본값에 따라 오름차순으로 인덱싱된 열은 이름만 나열됩니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  실행 **sp_help**_테이블_ 지정된 된 테이블에 대 한 모든 정보를 보고 합니다. 제약 조건 정보만 보려면 **sp_helpconstraint**합니다.  
   
 ## <a name="permissions"></a>사용 권한  

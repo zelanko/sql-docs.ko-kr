@@ -22,14 +22,13 @@ ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 818457ae809b6dec653d6d546fc36b75a27fbf6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 295d924422410bbf247d9b96d27b705fdfe3b5d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133816"
 ---
 # <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "64945549"
   라고 하는 내부 테이블을 사용 하 여 전체 텍스트 인덱스 *전체 텍스트 인덱스 조각* 반전 된 인덱스 데이터를 저장 합니다. 이 뷰를 사용하면 이러한 조각에 대한 메타데이터를 쿼리할 수 있습니다. 이 뷰에는 전체 텍스트 인덱스를 포함하는 모든 테이블의 각 전체 인덱스 조각에 대한 행이 들어 있습니다.  
  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |table_id|**int**|전체 텍스트 인덱스 조각을 포함하는 테이블의 개체 ID입니다.|  
 |fragment_object_id|**int**|조각과 연결된 내부 테이블의 개체 ID입니다.|  
@@ -47,7 +46,7 @@ ms.locfileid: "64945549"
 |row_count|**int**|조각의 개별 행 수입니다.|  
 |상태|**int**|조각의 상태로, 다음 중 하나입니다.<br /><br /> 0 = 새로 만들었지만 아직 사용하지 않음<br /><br /> 1 = 전체 텍스트 인덱스 채우기 또는 병합 동안 삽입에 사용됨<br /><br /> 4 = 닫힘 쿼리를 준비함<br /><br /> 6 = 병합 입력에 사용되며 쿼리를 준비함<br /><br /> 8 = 삭제용으로 표시되며 쿼리 및 병합 원본에 사용되지 않음<br /><br /> 상태 4 또는 6은 조각이 논리적 전체 텍스트 인덱스의 일부 이며 쿼리할 수 있습니다. 즉, 한 *쿼리 가능한* 조각.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sys.fulltext_index_fragments 카탈로그 뷰를 사용하면 전체 텍스트 인덱스를 구성하는 조각 수를 쿼리할 수 있습니다. 느린 전체 텍스트 쿼리 성능을 경험하는 경우 다음과 같이 sys.fulltext_index_fragments를 사용하여 전체 텍스트 인덱스에서 쿼리 가능 조각(상태 = 4 또는 6) 수를 쿼리할 수 있습니다.  
   
 ```  

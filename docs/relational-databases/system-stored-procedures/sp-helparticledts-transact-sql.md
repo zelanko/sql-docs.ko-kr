@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd1aed60-e056-4ff3-86ee-62b19433d890
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cac631425a43870395fa0adceb0bb041d70e1932
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 153b7736f126a09765eaac4c364b322fffc96c48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62797266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084943"
 ---
 # <a name="sphelparticledts-transact-sql"></a>sp_helparticledts(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**pre_script_ignore_error_task_name**|**sysname**|스냅숏 데이터가 복사되기 전에 수행되는 프로그래밍 작업의 태스크 이름입니다. 스크립트 오류가 발생해도 프로그램 실행은 계속됩니다.|  
 |**pre_script_task_name**|**sysname**|스냅숏 데이터가 복사되기 전에 수행되는 프로그래밍 작업의 태스크 이름입니다. 오류가 발생하면 프로그램 실행을 중단합니다.|  
@@ -55,7 +54,7 @@ sp_helparticledts [ @publication = ] 'publication', [ @article = ] 'article'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helparticledts** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
  복제 DTS(데이터 변환 서비스) 프로그램에서 태스크를 명명할 때 복제 에이전트가 요구하는 명명 규칙을 따라야 합니다. Execute SQL 작업 등 사용자 지정 태스크의 경우 이름은 아티클 이름, 접두사 및 선택적 부분으로 이루어진 연결 문자열입니다. 코드를 쓰는 경우 사용할 작업 이름이 확실치 않으면 결과 집합이 지정하는 태스크 이름을 사용해야 합니다.  

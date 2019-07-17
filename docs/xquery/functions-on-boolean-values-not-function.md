@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a39312142a2d81761320c1e5f75cefe2a85b9d7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673492"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038908"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>부울 값 함수 - not 함수 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +43,8 @@ fn:not($arg as item()*) as xs:boolean
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>1. Not () XQuery 함수를 사용 하 여 제품 모델 카탈로그 설명 찾기에 포함 되지 않습니다는 \<사양 > 요소입니다.  
- 다음 쿼리는 카탈로그 설명에 <`Specifications`> 요소가 포함되지 않은 제품 모델에 대한 제품 모델 ID가 포함되는 XML을 생성합니다.  
+### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Not () XQuery 함수를 사용 하 여 제품 모델 카탈로그 설명 찾기에 포함 되지 않습니다는 \<사양 > 요소입니다.  
+ 다음 쿼리는 카탈로그 설명 포함 되지 않은 제품 모델에 대 한 제품 모델 Id를 포함 하는 XML을 생성 합니다 <`Specifications`> 요소입니다.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -70,7 +69,7 @@ WHERE CatalogDescription.exist('
   
  각 제품 모델 카탈로그 설명에 포함 되어 있으므로이 결과 집합은 비어 있는 경우는 \<사양 > 요소입니다.  
   
-### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>2. not() XQuery 함수를 사용하여 MachineHours 특성이 없는 작업 센터 위치 검색  
+### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>2\. not() XQuery 함수를 사용하여 MachineHours 특성이 없는 작업 센터 위치 검색  
  다음 쿼리는 Instructions 열에 대해 지정되었습니다. 이 열에는 제품 모델에 대한 제조 지침이 저장됩니다.  
   
  특정 제품 모델에 대해 이 쿼리는 MachineHours를 지정하지 않는 작업 센터 위치를 검색합니다. 즉, 특성 **MachineHours** 지정 하지 않으면는 \<위치 > 요소입니다.  

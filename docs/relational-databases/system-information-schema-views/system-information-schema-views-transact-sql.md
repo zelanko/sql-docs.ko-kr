@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d29ac26486c68bcce5b7876732ec398c995e9ee6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2d9216686cca6ed35d089130098026d5d958638a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078455"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>시스템 정보 스키마 뷰 (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "51667312"
 |데이터베이스|Catalog|  
 |스키마|스키마|  
 |Object|Object|  
-|사용자 정의 데이터 형식|도메인|  
+|사용자 정의 데이터 형식|Domain|  
   
  이 이름 매핑 규칙은 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ISO 호환 뷰에 적용됩니다.  
   

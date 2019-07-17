@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a63a88e24f62ba9d8a4a70107663ab2d585f4640
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061787"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -69,10 +68,10 @@ EXECUTE sys.sp_rda_test_connection
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |link_state|ssNoversion|값에 해당 하는 다음 값 중 하나 **link_state_desc**합니다.<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
-|link_state_desc|varchar(32)|에 대 한 값 앞에 해당 하는 다음 값 중 하나 **link_state**합니다.<br /><br /> -   HEALTHY<br />     SQL Server와 원격 Azure 서버는 정상입니다.<br />-   ERROR_AZURE_FIREWALL<br />     Azure 방화벽이 SQL Server와 원격 Azure 서버 간의 링크 수 없습니다.<br />-   ERROR_NO_CONNECTION<br />     SQL Server 원격 Azure 서버에 연결할 수 없습니다.<br />-   ERROR_AUTH_FAILURE<br />     인증 오류가 SQL Server와 원격 Azure 서버 간의 연결이 되지 않습니다.<br />-   ERROR<br />     인증 문제, 연결 문제 또는 방화벽 문제가 되지 않는 오류로 인해 SQL Server와 원격 Azure 서버 간의 링크입니다.|  
+|link_state_desc|varchar(32)|에 대 한 값 앞에 해당 하는 다음 값 중 하나 **link_state**합니다.<br /><br /> -정상<br />     SQL Server와 원격 Azure 서버는 정상입니다.<br />-   ERROR_AZURE_FIREWALL<br />     Azure 방화벽이 SQL Server와 원격 Azure 서버 간의 링크 수 없습니다.<br />-   ERROR_NO_CONNECTION<br />     SQL Server 원격 Azure 서버에 연결할 수 없습니다.<br />-   ERROR_AUTH_FAILURE<br />     인증 오류가 SQL Server와 원격 Azure 서버 간의 연결이 되지 않습니다.<br />-   ERROR<br />     인증 문제, 연결 문제 또는 방화벽 문제가 되지 않는 오류로 인해 SQL Server와 원격 Azure 서버 간의 링크입니다.|  
 |error_number|ssNoversion|오류 수입니다. 오류가 없는 경우이 필드는 NULL입니다.|  
 |error_message|nvarchar(1024)|오류 메시지. 오류가 없는 경우이 필드는 NULL입니다.|  
   

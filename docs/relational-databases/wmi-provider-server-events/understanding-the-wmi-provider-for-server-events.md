@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8fd7bd18-76d0-4b28-8fee-8ad861441ab2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 812c99f830505918da506f94ce4fe70ce3b48a89
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 56cacefdcc0afd1ff2b17986658b27d7f4eddb07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51669522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139218"
 ---
 # <a name="understanding-the-wmi-provider-for-server-events"></a>서버 이벤트용 WMI 공급자 이해
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ GO
   
  공급자 DLL인 Sqlwep.dll은 서버에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 수에 관계없이 서버 운영 체제의 WMI 호스트 서비스에 한 번만 로드됩니다.  
   
- 서버 이벤트용 WMI 공급자를 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 관리 애플리케이션에 대한 예는 [예제: 서버 이벤트용 WMI 공급자를 사용하여 SQL Server 에이전트 경고 만들기](https://technet.microsoft.com/library/ms186385.aspx)를 참조하십시오. 관리 코드에서 서버 이벤트용 WMI 공급자를 사용하는 관리 애플리케이션에 대한 예는 [예제: 관리 코드에서 WMI 이벤트 공급자 사용](https://technet.microsoft.com/library/ms179315.aspx)을 참조하십시오. WMI에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK에서도 참조할 수 있습니다.  
+ 예는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 이벤트 용 WMI 공급자를 사용 하는 에이전트 관리 응용 프로그램 [샘플: 서버 이벤트 용 WMI 공급자를 사용 하 여 SQL Server 에이전트 경고 만들기](https://technet.microsoft.com/library/ms186385.aspx)합니다. 관리 코드에서 서버 이벤트 용 WMI 공급자를 사용 하는 관리 응용 프로그램 예제를 참조 하세요. [샘플: 관리 코드에서 WMI 이벤트 공급자를 사용 하 여](https://technet.microsoft.com/library/ms179315.aspx)입니다. WMI에 대한 자세한 내용은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK에서도 참조할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [서버 이벤트용 WMI 공급자 개념](https://technet.microsoft.com/library/ms180560.aspx)  

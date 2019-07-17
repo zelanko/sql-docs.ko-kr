@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 611d23ad84df3087a259cbaf60870129b841715b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56f2dde1899340f036024253405379e094de59a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039038"
 ---
 # <a name="boolean-constructor-functions---true-xquery"></a>부울 생성자 함수 - true(XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ fn:true() as xs:boolean
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-true-xquery-boolean-function"></a>1\. true() XQuery 부울 함수 사용  
+### <a name="a-using-the-true-xquery-boolean-function"></a>A. true() XQuery 부울 함수 사용  
  다음 예제 쿼리는 형식화 되지 않은 **xml** 변수입니다. 식의 **value ()** 메서드는 부울 값을 반환 **true ()** "aaa"가 특성 값인 경우. 합니다 **value ()** 메서드는 **xml** 데이터 형식이 부울 값을 비트로 변환 하 고 반환 합니다.  
   
 ```  

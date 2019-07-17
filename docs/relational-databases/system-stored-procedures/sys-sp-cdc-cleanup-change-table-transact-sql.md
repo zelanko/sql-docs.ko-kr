@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7bbcc576ab0ff38adde9042a713e0dfd0c7d54be
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: dcf68e23652eb81e163722f69d9645c7502af5b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106521"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sys.sp_cdc_cleanup_change_table
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sys.sp_cdc_cleanup_change_table은 다음 작업을 수행합니다.  
   
 1.  경우는 @low_water_mark 매개 변수가 NULL 이면의 start_lsn 값을 설정 합니다 *캡처 인스턴스에* 새 *하위 워터 마크*합니다.  

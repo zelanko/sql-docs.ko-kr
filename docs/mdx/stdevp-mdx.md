@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 14117ed4a3e3e7afc0152c5e659d1c7f040957e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4560ecbecd5db2e0f93e6910239fde27d54c028
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036873"
 ---
 # <a name="stdevp-mdx"></a>StdevP(MDX)
 
@@ -35,7 +34,7 @@ StdevP(Set_Expression [ ,Numeric_Expression ] )
  *Numeric_Expression*  
  숫자를 반환하는 셀 좌표의 유효한 숫자 식으로서, 일반적으로 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **StdevP** 함수는 편향된 모집단을 사용 하는 동안 수식 합니다 [Stdev](../mdx/stdev-mdx.md) 함수는 비편향된 모집단 수식을 사용 합니다.  
   
 ## <a name="example"></a>예제  

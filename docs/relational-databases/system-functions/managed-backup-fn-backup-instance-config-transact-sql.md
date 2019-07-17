@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2382a547-c0c9-4e1d-87c9-d8526192eb5a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2be102c3d1b967d4376385b2bc20f61e16ecbde7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 41c689d03ebae3afe16dc51d8a47c54e923d3a82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067757"
 ---
 # <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +48,14 @@ managed_backup.fn_backup_db_config ()
   
 ## <a name="table-returned"></a>반환된 테이블  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |is_smart_backup_enabled|INT|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 설정되었으면 1을 표시하고, [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 해제되었으면 0을 표시합니다.|  
 |credential_name|SYSNAME|저장소 계정 인증에 사용되는 기본 SQL 자격 증명입니다.|  
 |retention_days|INT|인스턴스 수준에서 설정된 기본 보존 기간입니다.|  
 |storage_url|NVARCHAR(1024)|인스턴스 수준에서 설정된 기본 저장소 계정 URL입니다.|  
 |encryption_algorithm|SYSNAME|암호화 알고리즘의 이름입니다. 암호화가 지정되지 않은 경우 NULL로 설정됩니다.|  
-|encryptor_type|NVARCHAR(32)|사용한 암호기 유형: 인증서 또는 비대칭 키입니다. 암호기가 지정되지 않은 경우 NULL로 설정됩니다.|  
+|encryptor_type|NVARCHAR(32)|사용되는 암호기 유형으로 인증서 또는 비대칭 키를 반환합니다. 암호기가 지정되지 않은 경우 NULL로 설정됩니다.|  
 |encryptor_name|SYSNAME|인증서 또는 비대칭 키의 이름입니다. 이름이 지정되지 않은 경우 NULL로 설정됩니다.|  
   
 ## <a name="security"></a>보안  

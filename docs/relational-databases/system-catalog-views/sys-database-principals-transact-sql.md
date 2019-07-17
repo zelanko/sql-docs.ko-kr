@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c369bfe81a86af7a11a370a4d827440cd4544a9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022681"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,13 +44,13 @@ ms.locfileid: "62632692"
 |**owning_principal_id**|**int**|이 보안 주체를 소유하는 보안 주체의 ID입니다. 데이터베이스 역할을 제외한 모든 보안 주체를 소유 해야 합니다 **dbo**합니다.|  
 |**sid**|**varbinary(85)**|보안 주체의 SID(보안 식별자)입니다.  SYS 및 INFORMATION SCHEMAS의 경우 NULL입니다.|  
 |**is_fixed_role**|**bit**|1 인 경우이 행은 고정된 데이터베이스 역할 중 하나에 대 한 항목을 나타냅니다: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter 합니다.|  
-|**authentication_type**|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 인증 유형을 나타냅니다. 가능한 값 및 해당 설명을 보려면은 다음과 같습니다.<br /><br /> 0 : 인증 안 함<br />1 : 인스턴스 인증<br />2 : 데이터베이스 인증<br />3 : Windows 인증|  
+|**authentication_type**|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 인증 유형을 나타냅니다. 가능한 값 및 해당 설명을 보려면은 다음과 같습니다.<br /><br /> 0: 인증 안 함<br />1: 인스턴스 인증<br />2: 데이터베이스 인증<br />3: Windows 인증|  
 |**authentication_type_desc**|**nvarchar(60)**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 인증 유형에 대한 설명입니다. 가능한 값 및 해당 설명을 보려면은 다음과 같습니다.<br /><br /> NONE: 인증 안 함<br />인스턴스: 인스턴스 인증<br />데이터베이스: 데이터베이스 인증<br />WINDOWS: Windows 인증|  
 |**default_language_name**|**sysname**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 이 보안 주체의 기본 언어를 나타냅니다.|  
 |**default_language_lcid**|**int**|**적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 이 보안 주체의 기본 LCID를 나타냅니다.|  
 |**allow_encrypted_value_modifications**|**bit**|**적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]까지<br /><br /> 대량 복사 작업에서 서버에 대한 암호화 메타데이터 검사를 표시하지 않습니다. 이 통해 데이터를 대량 복사를 사용 하 여 상시 암호화, 테이블 또는 데이터베이스 간에 데이터를 해독 하지 않고 암호화 된 사용자입니다. 기본값은 OFF입니다. |      
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 *PasswordLastSetTime* 속성은 SQL Server의 지원 되는 모든 구성에서 사용할 수 있지만 Windows Server 2003 이상 모두 CHECK_POLICY 및 CHECK_ SQL Server를 실행 하는 경우에 다른 속성을 사용할 수 있습니다만 만료를 사용할 수 있습니다. 참조 [암호 정책](../../relational-databases/security/password-policy.md) 자세한 내용은 합니다.  
   
 ## <a name="permissions"></a>사용 권한  

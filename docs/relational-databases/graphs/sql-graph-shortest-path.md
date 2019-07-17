@@ -17,14 +17,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: b4e07c8aa0c7911b02f7df5386c03b1860df38c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035884"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -86,7 +85,7 @@ STRING_AGG 함수 식과 인수로 구분 기호를 사용 하 고 문자열을 
 ### <a name="lastvalue"></a>LAST_VALUE
 프로젝트를 마지막 노드 경로 트래버스 LAST_VALUE 집계 함수를에서 특성을 사용할 수 있습니다. 노드 테이블 이름에만이 함수에 대 한 입력으로에 지 테이블 별칭을 제공 하면 오류가 발생 하거나 별칭을 사용할 수 있습니다.
 
-**노드의 마지막**: 마지막 노드 일치 조건자에서 화살표의 방향에 관계 없이 이동 된 경로에 마지막 표시 되는 노드를 가리킵니다. 예를 들어 `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`을 참조하십시오. 다음 경로에 마지막 노드 마지막 방문한 P 노드가 됩니다. 
+**노드의 마지막**: 마지막 노드 일치 조건자에서 화살표의 방향에 관계 없이 이동 된 경로에 마지막 표시 되는 노드를 가리킵니다. 예: `MATCH(SHORTEST_PATH(n(-(e)->p)+) )`. 다음 경로에 마지막 노드 마지막 방문한 P 노드가 됩니다. 
 
 반면, 마지막 노드는이 패턴의 출력 그래프 경로에 마지막 n 번째 노드입니다. `MATCH(SHORTEST_PATH((n<-(e)-)+p))`    
 
@@ -108,7 +107,7 @@ STRING_AGG 함수 식과 인수로 구분 기호를 사용 하 고 문자열을 
 ### <a name="max"></a>MAX
 제공 된 노드/가장자리 특성 값 또는 트래버스된 경로에 표시 되는 식에서 최대값을 반환 합니다.
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 shortest_path 함수 일치 내 에서만 사용 될 수 있습니다.     
 LAST_NODE는 shortest_path 내 에서만 지원 됩니다.     
 가중치가 적용 된 최단 경로, 모든 경로 또는 모든 최단 경로 찾을 수 없습니다.         
@@ -118,7 +117,7 @@ LAST_NODE는 shortest_path 내 에서만 지원 됩니다.
 ## <a name="examples"></a>예 
 Ot 하겠습니다는 여기에 나와 있는 예제 쿼리 노드를 사용 하 고 edge 테이블에서 생성 한 [SQL 그래프 샘플](./sql-graph-sample.md)
 
-### <a name="a--find-shortest-path-between-2-people"></a>1\.  2 간의 가장 짧은 경로 찾으려면
+### <a name="a--find-shortest-path-between-2-people"></a>A.  2 간의 가장 짧은 경로 찾으려면
  다음 예제에서는 Jacob과 Alice 사이의 최단 경로 알게 됩니다. Person 노드 및 FriendOf edge 그래프 샘플 스크립트에서 생성 해야 합니다. 
 
  ```

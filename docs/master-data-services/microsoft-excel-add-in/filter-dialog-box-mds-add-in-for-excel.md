@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 879ee3d55a178e2ef5fc7feca3f6ef475e683a8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57b24ed1096078529e4e46a094737c8b37bf7020
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092262"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>필터 대화 상자(Excel용 MDS 추가 기능)
 

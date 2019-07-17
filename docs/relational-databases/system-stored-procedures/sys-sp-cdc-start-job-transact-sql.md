@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cf77af877a0598481cdbda2ac9938b6787aa1ba2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5f38224cdd1f2ade609d5b10ba2a6b46f913639d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066710"
 ---
 # <a name="sysspcdcstartjob-transact-sql"></a>sys.sp_cdc_start_job(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sys.sp_cdc_start_job을 사용하면 관리자가 캡처 작업이나 정리 작업을 명시적으로 시작할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -58,7 +57,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-starting-a-capture-job"></a>1. 캡처 작업 시작  
+### <a name="a-starting-a-capture-job"></a>A. 캡처 작업 시작  
  다음 예에서는 `AdventureWorks2012` 데이터베이스의 캡처 작업을 시작합니다. 값을 지정 *job_type* 필요 하지 않은 기본 작업 유형이 **캡처**합니다.  
   
 ```  
@@ -68,7 +67,7 @@ EXEC sys.sp_cdc_start_job;
 GO  
 ```  
   
-### <a name="b-starting-a-cleanup-job"></a>2. 정리 작업 시작  
+### <a name="b-starting-a-cleanup-job"></a>2\. 정리 작업 시작  
  다음 예에서는 `AdventureWorks2012` 데이터베이스의 정리 작업을 시작합니다.  
   
 ```  

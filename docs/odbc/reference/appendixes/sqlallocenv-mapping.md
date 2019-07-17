@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4bb51845-ee91-4b97-9dd4-2fab977f2aec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 841310d1e51084ae6a61c629b8782a8b84c665f8
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: afbd1404cb40408166ecfc59993db7b183ae5ed2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065013"
 ---
 # <a name="sqlallocenv-mapping"></a>SQLAllocEnv 매핑
 응용 프로그램을 호출할 때 **SQLAllocEnv** 는 ODBC를 통한 *3.x* 드라이버, 호출 **SQLAllocEnv**(*phenv*) 매핑되**SQLAllocHandle** 다음과 같습니다.  

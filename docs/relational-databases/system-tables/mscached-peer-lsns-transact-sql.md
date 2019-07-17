@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 406715f59a3a45184b9700d72331688911bc83e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2134429ae9d14e00e99c88f1596b1216170e5b66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078151"
 ---
 # <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62817019"
   
 ## <a name="definition"></a>정의  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**agent_id**|**int**|배포 에이전트의 ID입니다.|  
 |**originator**|**sysname**|원래 게시자의 이름입니다.|  
@@ -41,7 +40,7 @@ ms.locfileid: "62817019"
 |**originator_db_version**|**int**|원래 데이터베이스의 버전 번호를 식별합니다.|  
 |**originator_lsn**|**varbinary(16)**|원래 트랜잭션의 LSN입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  LSN 값은 삽입 직후에만 사용되고 그 의미가 시스템에서 유지되지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  

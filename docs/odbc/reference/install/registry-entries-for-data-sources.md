@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5f5f865c0b50ea75548bb3a409caef8acf64b51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b9d101395a3276f92f3ccf49e36effc65420f7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63281917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093885"
 ---
 # <a name="registry-entries-for-data-sources"></a>데이터 원본에 대한 레지스트리 항목
 > [!NOTE]  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15fa1de65ada904ecf4b93947e1e9e9f818fd0d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108672"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
   
  NULL이 지정되거나 문 오프셋이 지정되지 않으면 지정한 계획 핸들에 대한 쿼리 계획을 사용하여 일괄 처리에서 각 문에 대해 계획 지침이 만들어집니다. 결과 계획 지침은 특정 계획을 강제로 사용하게 하는 USE PLAN 쿼리를 사용하는 계획 지침과 동일합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  계획 지침은 일부 문 유형에 대해 만들 수 없습니다. 일괄 처리의 문에 대해 계획 지침을 만들 수 없으면 저장 프로시저가 문을 무시하고 일괄 처리의 다음 문을 계속 수행합니다. 문이 같은 일괄 처리로 여러 번 수행되면 마지막 수행을 위한 계획이 활성화되고 문에 대한 이전 계획이 비활성화됩니다. 일괄 처리의 문은 계획 지침에 사용할 수 없습니다. 오류 10532이 발생하고 문이 실패합니다. 이 오류의 발생을 방지하려면 항상 sys.dm_exec_query_stats 동적 관리 뷰에서 계획 핸들을 가져오는 것이 좋습니다.  
   
 > [!IMPORTANT]  
@@ -78,7 +77,7 @@ CROSS APPLY sys.dm_exec_sql_text(sql_handle) AS st;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>1\. 계획 캐시의 쿼리 계획에서 계획 지침 만들기  
+### <a name="a-creating-a-plan-guide-from-a-query-plan-in-the-plan-cache"></a>A. 계획 캐시의 쿼리 계획에서 계획 지침 만들기  
  다음 예에서는 계획 캐시에서 쿼리 계획을 지정하여 단일 SELECT 문에 대한 계획 지침을 만듭니다. 이 예에서는 계획 지침이 만들어지는 간단한 `SELECT` 문을 실행하여 시작합니다. 이 쿼리의 계획은 `sys.dm_exec_sql_text` 및 `sys.dm_exec_text_query_plan` 동적 관리 뷰를 사용하여 검사됩니다. 그런 다음 쿼리와 관련된 계획 캐시에서 쿼리 계획을 지정하여 쿼리에 대한 계획 지침을 만듭니다. 이 예에서 마지막 문은 계획 지침의 존재를 확인합니다.  
   
 ```sql  
@@ -126,8 +125,8 @@ GO
  [sys.dm_exec_query_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [계획 지침](../../relational-databases/performance/plan-guides.md)   
  [sp_create_plan_guide&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
- [sys.dm_exec_text_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_text_query_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
  [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

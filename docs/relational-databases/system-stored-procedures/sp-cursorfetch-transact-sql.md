@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108507"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_cursorfetch cursor
  *fetchtype*  
  인출할 커서 버퍼를 지정합니다. *fetchtype* 다음 정수 입력된 값 중 하나 필요로 하는 선택적 매개 변수입니다.  
   
-|값|이름|Description|  
+|값|이름|설명|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|첫 번째 버퍼를 인출 *nrows* 행. 하는 경우 *nrows* 0 커서는 결과 집합 앞에 배치 하 고 아무 행도 반환 합니다.|  
 |0x0002|NEXT|다음 버퍼를 인출 *nrows* 행.|  
@@ -97,7 +96,7 @@ sp_cursorfetch cursor
 |KEYSET 및 STATIC 커서의 경우|일반적으로는 현재 키 집합 크기입니다.<br /><br /> **-m** 커서가 비동기 만들기 상태에 있는 경우 *m* 이 지점에 있는 행이 있습니다.|  
 |DYNAMIC 커서의 경우|-1|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
   
 ## <a name="cursor-parameter"></a>cursor 매개 변수  
  인출 작업이 수행되기 전까지 커서의 기본 위치는 결과 집합의 첫 번째 행 앞입니다.  
@@ -143,7 +142,7 @@ sp_cursorfetch cursor
   
  행이 일반적인 결과 집합, 즉 열 형식(0x2a), 행(0xd1), 완료(0xfd) 순으로 반환됩니다. 메타 데이터 토큰 즉, sp_cursoropen에 대해 지정 된 대로 동일한 형식으로 전송 됩니다. 0x81, 0xa5 및 0xa4 SQL Server 7.0 사용자 등에 대 한 합니다. 행 상태 표시기는 BROWSE 모드와 비슷하게 각 행 끝에 숨겨진 열로 전송됩니다. 열 이름은 rowstat이고 데이터 형식은 INT4입니다. 이 rowstat 열은 다음 표에 있는 값 중 하나를 포함할 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|FETCH_SUCCEEDED|  
 |0x0002|FETCH_MISSING|  
@@ -156,7 +155,7 @@ sp_cursorfetch cursor
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-prev-to-change-a-cursor-position"></a>1\. PREV를 사용하여 커서 위치 변경  
+### <a name="a-using-prev-to-change-a-cursor-position"></a>A. PREV를 사용하여 커서 위치 변경  
  h2 커서가 다음과 같은 내용의 결과 집합을 생성하며 현재 위치는 아래와 같다고 가정해 봅니다.  
   
 ```  

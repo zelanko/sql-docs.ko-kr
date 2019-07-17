@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: b82665be-8cb1-4ad3-ac15-2e590bdc1815
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0f816c6207b6f94d918f2e1d3d8329b51caad14
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd0d9cf214833497734ed7dee8fdddbc227d4b13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030301"
 ---
 # <a name="metadata---catalog"></a>메타데이터 - 카탈로그
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "62738860"
 
   이 항목에서 반환 된 열 메타 데이터를 설명 **SQLColumns** 및 **SQLProcedureColumns**, 장소와 데이터 형식을 메타 데이터에서 반환 된 **SQLGetTypeInfo**.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음과 같은 열 값으로 날짜/시간 형식에 대 한 반환 됩니다 **SQLColumns** 및 **SQLProcedureColumns**.  
   
 |매개 변수 유형|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  

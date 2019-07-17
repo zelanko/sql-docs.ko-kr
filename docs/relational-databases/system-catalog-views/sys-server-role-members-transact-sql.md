@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: efa20414-2c6b-45a2-a7a9-60110a24da18
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4107e6c1f675f7fae78ca384c082ef12c2fa309b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11f39b29817716799ec693d6161135010c35a233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62743945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133032"
 ---
 # <a name="sysserverrolemembers-transact-sql"></a>sys.server_role_members(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   각 고정 및 사용자 정의 서버 역할의 각 멤버에 대해 행을 반환합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**role_principal_id**|**int**|역할의 서버 보안 주체 ID입니다.|  
 |**member_principal_id**|**int**|멤버의 서버 보안 주체 ID입니다.|  

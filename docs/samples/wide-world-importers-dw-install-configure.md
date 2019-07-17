@@ -9,14 +9,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a1335b430346cf64d143ce3e07887d78f65a451
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ed3c5f1a4f2168196a651aea64c9c88311a197b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104247"
 ---
 # <a name="wideworldimportersdw-installation-and-configuration"></a>WideWorldImportersDW 설치 및 구성
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ Bacpac를 다운로드 샘플 WideWorldImportersDW 데이터베이스 백업/해
 
 [wide-world-importers-source](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-dw-database-scripts)
 
-## <a name="install"></a>설치
+## <a name="install"></a>Install
 
 
 ### <a name="sql-server"></a>SQL Server

@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: bdaa40d5-1c63-4aee-94fb-7b2edd0bdc47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e59323b682370befd6782c2999af8ac0d15013c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b0f093559c463b22df0444e740eb4c314f062e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086291"
 ---
 # <a name="odbc-fundamentals"></a>ODBC 기본 사항
 이 섹션에서는 다음 항목을 다룹니다.  
   
--   [핸들](../../../odbc/reference/develop-app/handles.md)  
+-   [Handles](../../../odbc/reference/develop-app/handles.md)  
   
 -   [버퍼](../../../odbc/reference/develop-app/buffers.md)  
   

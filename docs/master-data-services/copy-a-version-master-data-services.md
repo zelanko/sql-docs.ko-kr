@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cc92e04a39fce48c25362a5db61d004420f4e959
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e34aad020117fffe598d9134276c280a05f549f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079741"
 ---
 # <a name="copy-a-version-master-data-services"></a>버전 복사(Master Data Services)
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e3e9f7e4-0619-4861-a202-3d5d39953b26
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 761cb5368c0b586b63f92952f3938d8708daaf86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d309a1d0bbdf21c94458771e38aa67fd3eb3fe4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102991"
 ---
 # <a name="executing-the-ssma-console-mysqltosql"></a>SSMA 콘솔 실행(MySQLToSQL)
 Microsoft 파일 명령을 실행 하 고 제어 SSMA 활동을 스크립트의 강력한 집합을 제공 합니다.  
@@ -44,7 +43,7 @@ create-new-project:
   
 2.  `project-name` 프로젝트의 이름을 나타냅니다. {string}  
   
-3.  `overwrite-if-exists`선택적 특성 기존 프로젝트를 덮어써야 하는 경우를 나타냅니다. {boolean}  
+3.  `overwrite-if-exists`선택적 특성 기존 프로젝트를 덮어써야 하는 경우를 나타냅니다. {부울}  
   
 4.  `project-type:`선택적 특성입니다. 프로젝트 형식 즉, "sql server 2005" 프로젝트 또는 프로젝트 "sql server 2008" 또는 "sql server 2012" 또는 "sql server 2014" 프로젝트 또는 "azure sql" 프로젝트를 나타냅니다. 기본값은 "sql server 2008"입니다.  
   
@@ -377,7 +376,7 @@ convert-schema
 ```  
 **Command**  
   
-migrate-data  
+데이터 마이그레이션  
   
 1.  대상에 원본 데이터를 마이그레이션합니다.  
   
@@ -467,7 +466,7 @@ map-schema
   
 **Command**  
   
-synchronize-target  
+동기화 대상  
   
 1.  대상 데이터베이스를 사용 하 여 대상 개체를 동기화합니다.  
   
@@ -532,7 +531,7 @@ synchronize-target
 ```  
 **Command**  
   
-refresh-from-database  
+데이터베이스에서 새로 고침  
   
 1.  데이터베이스에서 원본 개체를 새로 고칩니다.  
   

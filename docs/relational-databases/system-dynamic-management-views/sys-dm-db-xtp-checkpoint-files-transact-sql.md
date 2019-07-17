@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2c7f7f4296b3cbed025303f58cf07717db06c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fb3aa62880de7013cf503e61eb2d86a3454c2350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026915"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "52510875"
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이상  
  다음 표에서 열에 대 한 설명 `sys.dm_db_xtp_checkpoint_files`부터 **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** 합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|데이터 또는 델타 파일이 속한 컨테이너(sys.database_files에서 FILESTREAM 형식의 파일로 표현됨)의 ID입니다. file_id와 조인 [sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)합니다.|  
 |container_guid|**uniqueidentifier**|컨테이너의 일부인 루트, 데이터 또는 델타 파일의 GUID입니다. Sys.database_files 표에 file_guid와 조인합니다.|  
@@ -65,19 +64,19 @@ ms.locfileid: "52510875"
 |end_checkpoint_id|**bigint**|최종 검사점의 ID입니다.|  
 |last_updated_checkpoint_id|**bigint**|이 파일을 업데이트 하는 마지막 검사점의 ID입니다.|  
 |encryption_status|**smallint**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; 1 키로 암호화<br /><br /> 2 = &GT; 키 2 사용 하 여 암호화 합니다. 활성 파일에 대해서만 유효 합니다.|  
+|encryption_status_desc|**nvarchar(60)**|0 = > UNENCRTPTED<br /><br /> 1 = > 1 키로 암호화<br /><br /> 2 = > 키 2 사용 하 여 암호화 합니다. 활성 파일에 대해서만 유효 합니다.|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
  다음 표에서 열에 대 한 설명 `sys.dm_db_xtp_checkpoint_files`에 대 한 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** 합니다.  
   
-|열 이름|형식|Description|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|데이터 또는 델타 파일이 속한 컨테이너(sys.database_files에서 FILESTREAM 형식의 파일로 표현됨)의 ID입니다. file_id와 조인 [sys.database_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)합니다.|  
 |container_guid|**uniqueidentifier**|데이터 또는 델타 파일이 속한 컨테이너의 GUID입니다.|  
 |checkpoint_file_id|**GUID**|데이터 또는 델타 파일의 ID입니다.|  
 |relative_file_path|**nvarchar(256)**|컨테이너 위치에 상대적인 데이터 또는 델타 파일의 경로입니다.|  
 |file_type|**tinyint**|데이터 파일의 경우 0이고,<br /><br /> 델타 파일의 경우 1입니다.<br /><br /> 상태 열이 7로 설정된 경우 NULL입니다.|  
-|file_type_desc|**nvarchar(60)**|파일의 형식으로, DATA_FILE, DELTA_FILE 또는 상태 열이 7로 설정된 경우 NULL입니다.|  
+|file_type_desc|**nvarchar(60)**|유형 파일입니다. DATA_FILE, DELTA_FILE 또는 상태 열이 7로 설정 하는 경우 NULL입니다.|  
 |internal_storage_slot|**int**|내부 저장소 배열에 있는 파일의 인덱스입니다. 상태 열이 2 또는 3이 아닌 경우 NULL입니다.|  
 |checkpoint_pair_file_id|**uniqueidentifier**|해당하는 데이터 또는 델타 파일입니다.|  
 |file_size_in_bytes|**bigint**|사용되는 파일의 크기입니다. 상태 열이 5, 6 또는 7로 설정된 경우 NULL입니다.|  

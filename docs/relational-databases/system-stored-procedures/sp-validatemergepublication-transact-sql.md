@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5a862f1a-2be1-4758-9954-4cdc8c77d149
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5706ea4c1fab79735afe9f9ec4873f112c9114cd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f14b74786b70a280f4b3576537ab89041e0eb6a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119367"
 ---
 # <a name="spvalidatemergepublication-transact-sql"></a>s sp_validatemergepublication(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,12 +38,12 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
- [**@publication=**] **'***publication***'**  
+ [ **@publication=** ] **'***publication***'**  
  게시의 이름입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
   
 `[ @level = ] level` 수행할 유효성 검사의 유형이입니다. *수준* 됩니다 **tinyint**, 기본값은 없습니다. 수준은 다음 값 중 하나일 수 있습니다.  
   
-|수준 값|Description|  
+|수준 값|설명|  
 |-----------------|-----------------|  
 |**1**|행 개수의 유효성만 검사합니다.|  
 |**2**|행 개수 및 체크섬의 유효성을 검사합니다. 에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]구독자의 경우이 자동으로 설정 됩니다 **3**합니다.|  
@@ -53,7 +52,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_validatemergepublication** 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

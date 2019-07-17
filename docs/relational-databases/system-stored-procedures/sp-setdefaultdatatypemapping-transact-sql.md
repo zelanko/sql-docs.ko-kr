@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e7d3ee86844f2b120c69e2cc2ddef55644cce8f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f0dfadc3b2b990d999df1d66069c4b68df9e6cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104411"
 ---
 # <a name="spsetdefaultdatatypemapping-transact-sql"></a>sp_setdefaultdatatypemapping(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 `[ @source_dbms = ] 'source_dbms'` 데이터 형식이 매핑된 DBMS의 이름이입니다. *source_dbms* 됩니다 **sysname**, 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|원본은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|원본은 Oracle 데이터베이스입니다.|  
@@ -87,7 +86,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
   
 `[ @destination_dbms = ] 'destination_dbms'` 대상 DBMS의 이름이입니다. *destination_dbms* 됩니다 **sysname**, 이며 다음 값 중 하나일 수 있습니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |**MSSQLSERVER**|대상은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.|  
 |**ORACLE**|대상은 Oracle 데이터베이스입니다.|  
@@ -110,7 +109,7 @@ sp_setdefaultdatatypemapping [ [ @mapping_id = ] mapping_id ]
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_setdefaultdatatypemapping** 간 복제의 모든 형식에 사용 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] DBMS 합니다.  
   
  기본 데이터 형식 매핑은 지정된 DBMS를 포함하는 모든 복제 토폴로지에 적용됩니다.  

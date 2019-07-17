@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45f55646-4bf1-4493-9f72-d1363c9a9ac6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 76f71a4920e2980161032c519eb1fb3dacd12da3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f91e4ee829c502eb00c79cea216f74e8d20fc4a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028165"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Microsoft.VisualBasic.dll에 허용되지 않는 유형 및 멤버
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,14 +64,14 @@ ms.locfileid: "47844421"
 |Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|Synchronization|  
-|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|Synchronization|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Dispose()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Flush()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.GetSupportedAttributes()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceData()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.TraceEvent()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.Write()|동기화|  
+|Microsoft.VisualBasic.Logging.FileLogTraceListener.WriteLine()|동기화|  
 |Microsoft.VisualBasic.Logging.Log|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.ClipboardProxy|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.MyServices.FileSystemProxy|ExternalProcessMgmt|  

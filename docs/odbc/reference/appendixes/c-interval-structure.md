@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52b42b56-50aa-4ce6-8d79-0963c7a71437
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bbd920b77fd44eaf4765f0983d7d16feb31a4d91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3387b4fa48eb1a04102daadcc08f971765d7ca2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037784"
 ---
 # <a name="c-interval-structure"></a>C 간격 구조
 에 나열 된 각 C 간격 데이터 형식 합니다 [C 데이터 형식](../../../odbc/reference/appendixes/c-data-types.md) 섹션 간격 데이터를 포함 하도록 동일한 구조를 사용 합니다. 때 **SQLFetch**를 **SQLFetchScroll**, 또는 **SQLGetData** 는, 드라이버 SQL_INTERVAL_STRUCT 구조로 데이터를 반환 합니다.를 호출 하 여 지정 된 값을 사용 합니다 C 데이터 형식에 대 한 응용 프로그램 (에 대 한 호출에서 **SQLBindCol**를 **SQLGetData**, 또는 **SQLBindParameter**) SQL_INTERVAL_STRUCT의 내용을 해석 하려면 을 채웁니다 합니다 *interval_type* 구조체의 필드를 *열거형* C 형식에 해당 하는 값입니다. 드라이버 읽지 않는지 확인 합니다 *interval_type* 간격의 형식을 확인 하려면 필드; SQL_DESC_CONCISE_TYPE 설명자 필드의 값을 검색 합니다. 매개 변수 데이터 구조를 사용 하면 드라이버를 사용 하 여 APD의 SQL_DESC_CONCISE_TYPE 필드에서 응용 프로그램에서 지정 된 값, SQL_INTERVAL_STRUCT의 내용을 해석 응용 프로그램의 값을 설정 하는 경우에는  *interval_type* 필드 값을 다른 값입니다.  

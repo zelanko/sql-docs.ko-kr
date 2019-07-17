@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 199f5a74-e08e-4d02-a33c-b8ab0db20f44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e73b67cce73005b7a992c09a436dbda1db5c4e52
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7769c4e648cf3ed3898409cbdc3f0787dcb6d837
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113118"
 ---
 # <a name="spreplshowcmds-transact-sql"></a>sp_replshowcmds(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 ## <a name="result-sets"></a>결과 집합  
  **sp_replshowcmds** 가 실행 되는 게시 데이터베이스에 대 한 정보를 반환 하는 진단 프로시저입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**xact_seqno**|**binary(10)**|명령의 시퀀스 번호입니다.|  
 |**originator_id**|**int**|항상 명령 보낸 사람의 ID **0**합니다.|  
@@ -52,7 +51,7 @@ sp_replshowcmds [ @maxtrans = ] maxtrans
 |**type**|**int**|명령의 유형입니다.|  
 |**명령**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 명령입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_replshowcmds** 트랜잭션 복제에 사용 됩니다.  
   
  사용 하 여 **sp_replshowcmds**를 볼 수 있습니다 하는 트랜잭션은 현재 (트랜잭션 트랜잭션 로그에 남아 있는 배포자에 전송 되지 않은) 배포 되지 합니다.  

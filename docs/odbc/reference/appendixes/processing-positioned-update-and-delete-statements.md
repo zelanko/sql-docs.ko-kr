@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d898fcc7d1b35230173afa0443219d59c54720ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41b4fe248f815e63c48a8da70edc88a1cc173667
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028432"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>위치 지정 업데이트 및 Delete 문 처리
 > [!IMPORTANT]  

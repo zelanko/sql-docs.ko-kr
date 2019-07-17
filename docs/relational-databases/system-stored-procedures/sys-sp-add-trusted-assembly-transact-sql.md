@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6c7cbcd065f2cb86522d057246226570ba3dad66
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c9e7fad6c73cd5dd32673db6fc1ab841eb20994
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106547"
 ---
 # <a name="sysspaddtrustedassembly-transact-sql"></a>sys.sp_add_trusted_assembly (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_add_trusted_assembly
     [ , [ @description = ] 'description' ]
 ```  
 
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
 
 어셈블리를 추가 하는이 절차 [sys.trusted_assemblies](../../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)합니다.
 

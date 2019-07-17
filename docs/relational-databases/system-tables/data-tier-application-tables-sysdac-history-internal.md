@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084759"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>데이터 계층 애플리케이션 테이블 - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +34,11 @@ ms.locfileid: "62471142"
 |**action_id**|**int**|동작의 식별자입니다.|  
 |**sequence_id**|**int**|동작 내의 단계를 식별합니다.|  
 |**instance_id**|**uniqueidentifier**|DAC 인스턴스의 식별자입니다. 이 열에서 조인할 수는 **instance_id** 열에서 [dbo.sysdac_instances &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md).|  
-|**action_type**|**tinyint**|동작 유형의 식별자입니다.<br /><br /> **0** = deploy<br /><br /> **1** = create<br /><br /> **2** = rename<br /><br /> **3** = detach<br /><br /> **4** = delete|  
+|**action_type**|**tinyint**|동작 유형의 식별자입니다.<br /><br /> **0** = deploy<br /><br /> **1** = create<br /><br /> **2** = 이름 바꾸기<br /><br /> **3** = 분리<br /><br /> **4** = delete|  
 |**action_type_name**|**varchar(19)**|동작 유형의 이름입니다.<br /><br /> **deploy**<br /><br /> **create**<br /><br /> **rename**<br /><br /> **detach**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|동작의 영향을 받는 개체의 유형에 대한 식별자입니다.<br /><br /> **0** = dacpac<br /><br /> **1** = 로그인<br /><br /> **2** = database|  
 |**dac_object_type_name**|**varchar(8)**|동작의 영향을 받는 개체의 유형에 대한 이름입니다.<br /><br /> **dacpac** = DAC 인스턴스<br /><br /> **login**<br /><br /> **데이터베이스**|  
-|**action_status**|**tinyint**|동작의 현재 상태를 식별하는 코드입니다.<br /><br /> **0** = pending<br /><br /> **1** = success<br /><br /> **2** = fail|  
+|**action_status**|**tinyint**|동작의 현재 상태를 식별하는 코드입니다.<br /><br /> **0** = 보류 중<br /><br /> **1** = 성공<br /><br /> **2** = fail|  
 |**action_status_name**|**varchar(11)**|동작의 현재 상태입니다.<br /><br /> **pending**<br /><br /> **success**<br /><br /> **fail**|  
 |**필수**|**bit**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 DAC 작업을 롤백할 때 사용됩니다.|  
 |**dac_object_name_pretran**|**sysname**|동작이 포함된 트랜잭션이 커밋되기 전의 개체 이름입니다. 데이터베이스 및 로그인에만 사용됩니다.|  

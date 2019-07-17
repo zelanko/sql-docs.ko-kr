@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_background_job_queue (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_background_job_queue (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2016
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 142329f80b55a18eb6724449f3e1ad68dfb72acb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.openlocfilehash: 0722716466caf2c38007890c10df519b1246dfa7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097916"
 ---
 # <a name="sysdmexecbackgroundjobqueue-transact-sql"></a>sys.dm_exec_background_job_queue(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "63013582"
   
 > **참고!** 이를 호출 하 **[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]** 하거나 **[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]** 에 이름을 사용 하 여 **sys.dm_pdw_nodes_exec_background_job_queue**합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**time_queued**|**datetime**|작업이 큐에 추가된 시간입니다.|  
 |**job_id**|**int**|작업 식별자입니다.|  
@@ -54,14 +53,14 @@ ms.locfileid: "63013582"
 ## <a name="permissions"></a>사용 권한
 
 온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], 필요를 `VIEW DATABASE STATE` 데이터베이스의 권한.   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다.   
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 뷰는 비동기 업데이트 통계 작업에 대해서만 정보를 반환합니다. 비동기 업데이트 통계에 대 한 자세한 내용은 참조 하십시오 [통계](../../relational-databases/statistics/statistics.md)합니다.  
   
  값 **object_id1** 를 통해 **object_id4** 작업 요청 유형에 따라 달라 집니다. 다음 표에서는 작업 유형별로 이러한 열의 의미를 요약하여 보여 줍니다.  
   
-|요청 유형|object_id1|object_id2|object_id3|object_id4|  
+|요청 형식|object_id1|object_id2|object_id3|object_id4|  
 |------------------|-----------------|-----------------|-----------------|-----------------|  
 |비동기 업데이트 통계|테이블 또는 뷰 ID|통계 ID|사용되지 않음|사용되지 않음|  
   

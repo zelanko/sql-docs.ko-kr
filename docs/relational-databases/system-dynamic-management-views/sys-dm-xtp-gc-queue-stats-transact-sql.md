@@ -1,5 +1,5 @@
 ---
-title: sys.dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_xtp_gc_queue_stats (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/02/2016
 ms.prod: sql
@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: cb8173ed92dd50c640435b14f4b9096d46ee4471
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090206"
 ---
 # <a name="sysdmxtpgcqueuestats-transact-sql"></a>sys.dm_xtp_gc_queue_stats(Transact-SQL)
 
@@ -40,7 +39,7 @@ ms.locfileid: "67388709"
  자세한 내용은 [메모리 내 OLTP&#40;메모리 내 최적화&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)를 참조하세요.  
   
 
-|열 이름|형식|Description|  
+|열 이름|형식|설명|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|큐의 고유 식별자입니다.|  
 |total_enqueues|**bigint**|서버 시작 후 이 큐에 배치된 가비지 수집 작업 항목의 총 수입니다.|  

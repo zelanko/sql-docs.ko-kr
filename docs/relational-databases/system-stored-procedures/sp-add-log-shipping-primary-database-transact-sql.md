@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 854edf82c32058c45df4ab4f71803933f59f2582
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140453"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +57,9 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ## <a name="arguments"></a>인수  
 `[ @database = ] 'database'` 로그 전달 주 데이터베이스의 이름이입니다. *데이터베이스* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
-`[ @backup_directory = ] 'backup_directory'` 주 서버의 백업 폴더 경로가입니다. *backup_directory* 됩니다 **nvarchar(500)**, 기본값은 없고 NULL 일 수 없습니다.  
+`[ @backup_directory = ] 'backup_directory'` 주 서버의 백업 폴더 경로가입니다. *backup_directory* 됩니다 **nvarchar(500)** , 기본값은 없고 NULL 일 수 없습니다.  
   
-`[ @backup_share = ] 'backup_share'` 주 서버의 백업 디렉터리에 네트워크 경로가입니다. *backup_share* 됩니다 **nvarchar(500)**, 기본값은 없고 NULL 일 수 없습니다.  
+`[ @backup_share = ] 'backup_share'` 주 서버의 백업 디렉터리에 네트워크 경로가입니다. *backup_share* 됩니다 **nvarchar(500)** , 기본값은 없고 NULL 일 수 없습니다.  
   
 `[ @backup_job_name = ] 'backup_job_name'` 백업 폴더에 백업을 복사 하는 주 서버에서 SQL Server 에이전트 작업의 이름이입니다. *backup_job_name* 됩니다 **sysname** NULL 일 수 없습니다.  
   
@@ -104,7 +103,7 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_add_log_shipping_primary_database** 에서 실행 해야 합니다 **마스터** 주 서버의 데이터베이스입니다. 이 저장 프로시저는 다음 기능을 수행합니다.  
   
 1.  주 ID를 생성 하 고 테이블의 주 데이터베이스에 대 한 항목을 추가 **log_shipping_primary_databases** 제공된 된 인수를 사용 하 여 합니다.  

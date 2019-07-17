@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5913abfa-d280-43e4-a2f1-05a924388bf9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c1423d7bcc0f0b943b490fdcf8f931efb6b533c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d73282cde4d0598d7e6a35ac6273935626b96969
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001375"
 ---
 # <a name="escape-sequences"></a>이스케이프 시퀀스
 날짜, 시간, 타임 스탬프 및 날짜/시간 간격 리터럴 스칼라 함수 호출에 대 한 표준 문법을 포함 하는 이스케이프 시퀀스를 정의 하는 ODBC **같은** 조건자 이스케이프 문자, 외부 조인 및 프로시저 호출 합니다. 상호 운용 가능한 응용 프로그램 가능 하면 이러한 시퀀스를 사용 해야 합니다.  

@@ -22,14 +22,13 @@ ms.assetid: 7d2649dd-0038-4a2c-b16d-f80f7c306966
 author: MightyPen
 ms.author: genemi
 ms.reviewer: ''
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49fc599529b62426aaa0156c22cb65665a1a974e
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7e92b8b90793a82df9c38b819630070373e6e8ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067133"
 ---
 # <a name="excluding-schema-elements-from-the-xml-document-using-sqlmapped"></a>sql:mapped를 사용하여 XML 문서에서 스키마 요소 제외
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "67585125"
 ## <a name="examples"></a>예  
  다음 예를 사용하여 작업 예제를 만들려면 특정 요구 사항이 충족되어야 합니다. 자세한 내용은 [SQLXML 예 실행에 대 한 요구 사항](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md)합니다.  
   
-### <a name="a-specifying-the-sqlmapped-annotation"></a>1\. sql:mapped 주석 지정  
+### <a name="a-specifying-the-sqlmapped-annotation"></a>A. sql:mapped 주석 지정  
  다른 원본의 XSD 스키마가 있고, 이 XSD 스키마 구성를  **\<Person.Contact >** 사용 하 여 요소 **ContactID**를 **FirstName**를 **LastName**, 및 **HomeAddress** 특성입니다.  
   
  이 XSD 스키마는 AdventureWorks 데이터베이스의 Person.Contact 테이블에 매핑할 **sql: 매핑된** 에 지정 합니다 **HomeAddress** Employees 테이블 홈을 저장 하지 않으므로 특성 직원의 주소입니다. 따라서 매핑 스키마에 대해 XPath 쿼리를 지정할 경우 이 특성은 데이터베이스에 매핑되지 않으며 결과 XML 문서에 반환되지 않습니다.  

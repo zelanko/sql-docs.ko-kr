@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 31e048329fde26d947b7d7978ee2d364d4901b34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aac2f72cc8cd91e1964fd7734b858be8215cfdd8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047287"
 ---
 # <a name="count-set-mdx"></a>Count(집합)(MDX)
 
@@ -36,7 +35,7 @@ Set_Expression.Count
  *Set_Expression*  
  집합을 반환하는 유효한 MDX 식입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **Count (집합)** 함수를 포함 또는 사용 된 구문에 따라 빈 셀을 제외 합니다. 표준 구문이 사용 된 경우 빈 셀 수 포함 하거나 제외할 수를 사용 하 여 합니다 **EXCLUDEEMPTY** 또는 **INCLUDEEMPTY** 플래그입니다. 대체 구문이 사용된 경우 이 함수는 항상 빈 셀을 포함시킵니다.  
   
  집합 카운트에서 빈 셀을 제외 하려면 표준 구문과 선택적을 사용 하 여 **EXCLUDEEMPTY** 플래그입니다.  

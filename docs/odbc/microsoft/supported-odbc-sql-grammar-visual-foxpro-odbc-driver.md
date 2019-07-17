@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f41a38c2-e22e-4c65-a32e-9a6777435160
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10df35f4f29de4ac3899efa0e86e48af861f1e65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 535f2feaf17d2060c1c65e7aba17951bb3339a5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080066"
 ---
 # <a name="supported-odbc-sql-grammar-visual-foxpro-odbc-driver"></a>지원되는 ODBC SQL 문법(Visual FoxPro ODBC 드라이버)
 Microsoft Visual FoxPro ODBC 드라이버는 다음을 지원합니다.  
@@ -39,7 +38,7 @@ Microsoft Visual FoxPro ODBC 드라이버는 다음을 지원합니다.
 |-----------|--------------|----------|  
 |최소|DDL(데이터 정의 언어)|CREATE TABLE 및 DROP TABLE|  
 ||DML(데이터 조작 언어)|선택, 삽입, 업데이트 및 삭제|  
-||식|단순 (예: A > B + C)|  
+||표현식|단순 (예: A > B + C)|  
 ||데이터 형식|CHAR, VARCHAR, 또는 LONG VARCHAR|  
   
  Visual FoxPro ODBC 드라이버는 지원 되는 ODBC SQL 문법, 외에도 다음 Visual FoxPro 명령에 대 한 완전 한 네이티브 Visual FoxPro 언어 구문을 지원합니다.  

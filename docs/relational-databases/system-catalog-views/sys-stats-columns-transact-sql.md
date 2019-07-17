@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 93414d07-97e9-4501-8577-f35b8d68fbe9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f173a21db91f5566caea01114865a228d0f34ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6abf636a371047f344861f09affaa1dd9f7d82de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62854793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108970"
 ---
 # <a name="sysstatscolumns-transact-sql"></a>sys.stats_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   한 행에 포함 된 각 열에 대 한 **sys.stats** 통계.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 열이 속한 개체의 ID입니다.|  
 |**stats_id**|**int**|이 열이 속한 통계의 ID입니다.<br /><br />통계가 인덱스에 대응 하는 경우는 *stats_id* 값이 동일 합니다 *index_id* 값을 [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) 카탈로그 뷰.|  

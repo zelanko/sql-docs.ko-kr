@@ -1,5 +1,5 @@
 ---
-title: sys.partition_schemes (Transact-SQL) | Microsoft Docs
+title: sys.partition_schemes (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: ed557fd5-12b0-4cef-9e4f-440b02e99d1f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e200b3bc2cd20ef54b9cd0385a93b876fae1945
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18d8a456673088f63f6733e9837e81deeec1d224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125363"
 ---
 # <a name="syspartitionschemes-transact-sql"></a>sys.partition_schemes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   각 데이터 공간당 파티션 구성표를 사용 하 여 행을 하나씩 포함 **형식** 구성표인  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**\<열을 상속 >**||열을 상속 [sys.data_spaces &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)합니다.|  
 |**function_id**|**int**|구성표에서 사용되는 파티션 함수의 ID입니다.|  

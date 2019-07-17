@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f2865543-7fff-44fa-9a6a-968bec33acdc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80a86ef188796883e76c6d5f6149a3e40afd341b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88f11adcab09dbe6964bfd67a944912fc185bccb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031124"
 ---
 # <a name="enabling-new-data-types-by-setting-extendedansisql"></a>ExtendedAnsiSQL을 설정하여 새 데이터 형식을 사용하도록 설정
 Extendedansisql을 플래그를 켤 때 두 개의 새 데이터 형식을 Jet 4.0 데이터베이스에서 사용할 수 있습니다. SQL_DECIMAL 및 SQL_NUMERIC 합니다. 기본 전체 자릿수 및 확장은 각각 18과 0입니다. SQL_DECIMAL 또는 SQL_NUMERIC로 형식화 된 ODBC를 통해 액세스 되는 데이터는 통화 하는 대신 Microsoft Jet Decimal에 매핑됩니다.  

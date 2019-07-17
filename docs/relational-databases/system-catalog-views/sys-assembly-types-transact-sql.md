@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 35f0384f-7a6d-41b1-9461-f1406d68f317
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f62185fc99512a966789f1b878b23f90264fba9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a5358b75da914919cb4db567dc7eae6ad8617f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118106"
 ---
 # <a name="sysassemblytypes-transact-sql"></a>sys.assembly_types(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   CLR 어셈블리에 의해 정의되는 각 사용자 정의 형식당 한 개의 행을 포함합니다. 다음 **sys.assembly_types** 상속 된 열 목록에 나타납니다 (참조 [sys.types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)) 한 후 **rule_object_id**.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**assembly_id**|**int**|이 유형이 생성된 어셈블리의 ID입니다.|  
 |**assembly_class**|**sysname**|이 유형을 정의하는 어셈블리 내의 클래스 이름입니다.|  

@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: d4aaea30-1d0d-4436-bcdc-5c101d27b1c1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d45c83b0a8c7ce0884809c394ea35d21dbc42c75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7030f26cb95b78a3cd2dde8520876f13acc4bc46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091200"
 ---
 # <a name="localdbgetversioninfo-function"></a>LocalDBGetVersionInfo 함수
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -98,7 +97,7 @@ LocalDBVersionInfo(L"11.0", &vi, sizeof(LocalDBVersionInfo));
   
 ```  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  LocalDB API를 사용하는 코드 샘플은 [SQL Server Express LocalDB Reference](../../relational-databases/sql-server-express-localdb-reference.md)를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  

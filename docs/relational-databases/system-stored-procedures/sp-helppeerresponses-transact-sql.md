@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4e29ebcc2ecb1811a9465c63464219cb93f427a5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a3ce46249670f9c290a07418b78c7c3296d7855b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137619"
 ---
 # <a name="sphelppeerresponses-transact-sql"></a>sp_helppeerresponses(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_helppeerresponses [ @request_id = ] request_id
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**request_id**|**int**|상태 요청의 ID입니다.|  
 |**peer**|**sysname**|응답을 생성한 피어의 이름입니다.|  
@@ -52,7 +51,7 @@ sp_helppeerresponses [ @request_id = ] request_id
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_helppeerresponses** 피어 투 피어 트랜잭션 복제에 사용 됩니다.  
   
  **sp_helppeerresponses** 절차 피어 투 피어 토폴로지에 게시 된 데이터베이스를 복원할 때 사용 됩니다.  

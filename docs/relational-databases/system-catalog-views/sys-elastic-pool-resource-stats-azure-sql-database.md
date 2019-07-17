@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d7fff3c65aaf6a5670be2d457440f4384f7c5fdd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ec3fae7d4e2a649ea05c48d400728e229607d92f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079268"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "56011994"
 |-|  
 |**적용 대상**:  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] V12입니다.|  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**start_time**|**datetime2**|15 초 보고 간격의 시작을 나타내는 UTC 시간입니다.|  
 |**end_time**|**datetime2**|15 초 보고 간격의 끝을 나타내는 UTC 시간입니다.|  
@@ -47,9 +46,9 @@ ms.locfileid: "56011994"
 |**max_session_percent**|**decimal(5,2)**|풀 한도에 따른 백분율로 최대 동시 세션|  
 |**elastic_pool_dtu_limit**|**int**|현재 최대 탄력적 풀 DTU 설정이 탄력적 풀에 대 한 간격입니다.|  
 |**elastic_pool_storage_limit_mb**|**bigint**|현재 최대 탄력적 풀 저장소 용량 한도이 간격 동안 메가바이트에서이 탄력적 풀에 대 한 설정입니다.|
-|**avg_allocated_storage_percent**|**decimal(5,2)**|탄력적 풀에 있는 모든 데이터베이스에 의해 할당 되는 데이터 공간의 비율입니다.  이 탄력적 풀의 최대 크기 데이터에 할당 하는 데이터 공간의 비율입니다.  자세한 내용은 다음을 참조하십시오. [SQL db에서 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
+|**avg_allocated_storage_percent**|**decimal(5,2)**|탄력적 풀에 있는 모든 데이터베이스에 의해 할당 되는 데이터 공간의 비율입니다.  이 탄력적 풀의 최대 크기 데이터에 할당 하는 데이터 공간의 비율입니다.  자세한 내용은 참조 하십시오. [SQL db에서 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>설명
 
  이 보기는 SQL Database 서버의 마스터 데이터베이스에 있습니다. 쿼리를 master 데이터베이스에 연결 해야 **sys.elastic_pool_resource_stats**합니다.  
   

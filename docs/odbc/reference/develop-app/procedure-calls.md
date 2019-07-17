@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 145130cc-40e7-4722-8417-dff131084752
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 926ee91fae207d50248df4c82d1b82bb6424e239
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023249"
 ---
 # <a name="procedure-calls"></a>프로시저 호출
 A *프로시저* 는 데이터 원본에 저장 된 실행 개체입니다. 일반적으로 미리 컴파일된 하나 이상의 SQL 문을 것입니다. 프로시저 호출에 대 한 이스케이프 시퀀스는  

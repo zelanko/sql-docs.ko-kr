@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7e88a07-e6ab-4258-a45d-1ca21234fbec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad210f91d00f9e692c8ee20fef01a808a01501c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fae642b46b4c652583622ec4832b3217d0b1681c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068558"
 ---
 # <a name="data-source-specification-subkeys"></a>데이터 소스 사양 하위 키
 ODBC 데이터 원본 하위 키에 나열 된 각 데이터 원본에는 자체의 하위 키를 있습니다. 이 하위 키는 ODBC 데이터 원본 하위 키 아래에서 해당 값으로 동일한 이름이 있습니다. 이 하위 키 아래의 값 드라이버 DLL을 나열 해야 및 데이터 원본에 대 한 설명을 나열할 수 있습니다. 드라이버에서 번역을 지 원하는 경우 값을 기본 변환기, DLL, 기본 변환 및 기본 변환 옵션 이름을 나열할 수 있습니다. 값은 드라이버에서 데이터 원본에 연결 하는 데 필요한 기타 정보를 나열할 수도 있습니다. 예를 들어, 서버 이름, 데이터베이스 이름 또는 스키마 이름 드라이버가 필요할 수 있습니다.  
@@ -29,7 +28,7 @@ ODBC 데이터 원본 하위 키에 나열 된 각 데이터 원본에는 자체
   
 |이름|데이터 형식|data|  
 |----------|---------------|----------|  
-|Description|REG_SZ|*description*|  
+|설명|REG_SZ|*description*|  
 |드라이버|REG_SZ|*driver-DLL-path*|  
 |TranslationDLL|REG_SZ|*translator-DLL-path*|  
 |TranslationName|REG_SZ|*translator-name*|  

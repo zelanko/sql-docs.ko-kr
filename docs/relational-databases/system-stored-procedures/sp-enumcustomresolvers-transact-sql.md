@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4e07931ebbecafdede044582ca06c2636ab195d8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 361a0d8e47372612eddf40cdf1663df2e70da0a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124626"
 ---
 # <a name="spenumcustomresolvers-transact-sql"></a>sp_enumcustomresolvers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**article_resolver**|**nvarchar(255)**|비즈니스 논리 처리기 또는 충돌 해결 프로그램의 이름입니다.|  
 |**resolver_clsid**|**nvarchar(50)**|COM 기반 해결 프로그램의 CLSID(클래스 ID)입니다. 이 열은 비즈니스 논리 처리기에 대해 CLSID 값 0을 반환합니다.|  
@@ -53,7 +52,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_enumcustomresolvers** 병합 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  

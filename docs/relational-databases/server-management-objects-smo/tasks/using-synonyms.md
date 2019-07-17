@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: db0a9022-9549-43e5-b6b3-deb236f05fb8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9a25a6a288d8d345f36e73814bdf8fdf71a28af5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 183c5c002165565c1042df5d4523d9e25a027cee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47662001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030017"
 ---
 # <a name="using-synonyms"></a>동의어 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  동의어는 스키마 범위 개체의 다른 이름입니다. SMO에서 동의어는으로 표시 됩니다는 <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체입니다. <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 자식입니다. 이는 동의어가 정의된 데이터베이스 범위 내에서만 유효함을 의미합니다. 그러나 동의어가 다른 데이터베이스 또는 원격 인스턴스의 개체를 참조할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  동의어는 스키마 범위 개체의 다른 이름입니다. SMO에서 동의어는 <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체로 표시됩니다. <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체는 <xref:Microsoft.SqlServer.Management.Smo.Database> 개체의 자식입니다. 이는 동의어가 정의된 데이터베이스 범위 내에서만 유효함을 의미합니다. 그러나 동의어가 다른 데이터베이스 또는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 원격 인스턴스의 개체를 참조할 수 있습니다.  
   
  대체 이름이 주어지는 개체를 기준 개체라고 합니다. <xref:Microsoft.SqlServer.Management.Smo.Synonym> 개체의 이름 속성이 기준 개체에 부여되는 대체 이름입니다.  
   

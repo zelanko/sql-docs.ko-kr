@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 86647601dfc0223dd6fa4f0ffcc0e5db695868b5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: e07bf71f0d622ad9095974cd7020001625edf1f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793209"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037710"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>SQLSetPos를 호출하여 데이터 삽입
 때 ODBC *2.x* ODBC를 사용 하는 응용 프로그램 *3.x* 드라이버 호출 **SQLSetPos** 사용 하 여는 *작업* SQL_ADD, 인수는 드라이버 관리자에이 호출으로 매핑되지 **SQLBulkOperations**합니다. 경우 ODBC *3.x* 드라이버를 호출 하는 응용 프로그램과 함께 작동 해야 **SQLSetPos** 드라이버 SQL_ADD를 사용 하 여 해당 작업을 지원 해야 합니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 139e834f-1988-4b4d-ac81-db1f89ea90e8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad7521eed3cd25d067e3ea253ff2a4362350c889
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62500430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123936"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,14 +51,14 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
 ## <a name="result-sets"></a>결과 집합  
  구독된 테이블에 대해 현재 지연 트랜잭션이 적어도 하나 이상 있는 행을 모두 표시합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**동작**|**nvarchar(10)**|동기화가 일어날 때 수행할 동작의 유형입니다.<br /><br /> INS= 삽입<br /><br /> DEL = 삭제<br /><br /> UPD = 업데이트|  
 |**tranid**|**nvarchar(70)**|명령이 실행되는 트랜잭션 ID입니다.|  
 |**테이블 열 1... n**||지정한 테이블의 각 열에 값 *tablename*합니다.|  
 |**msrepl_tran_version**|**uniqueidentifier**|이 열을 사용하여 복제된 데이터의 변경 사항을 추적하고 게시자에서 충돌 감지를 수행합니다. 이 열은 테이블에 자동으로 추가됩니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_getqueuedrows** 지연 업데이트에 참여 중인 구독자에 사용 됩니다.  
   
  **sp_getqueuedrows** 구독에서 지정된 된 테이블의 행을 데이터베이스를 찾습니다는 지연된 업데이트에 참여 하지만 현재 해결 되지 않았습니다 큐 판독기 에이전트에 의해 합니다.  

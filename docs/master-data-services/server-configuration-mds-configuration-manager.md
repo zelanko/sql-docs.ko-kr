@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c5a6c797-4ac9-4ab0-89c0-25ded2e3db4a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2b17e400d71df77fb52d20c157c8394c61673b2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91386e4464f02b3ce03f6c09c4cba01ade6260ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085666"
 ---
 # <a name="server-configuration-mds-configuration-manager"></a>서버 구성(MDS Configuration Manager)
 
@@ -28,7 +27,7 @@ ms.locfileid: "65488192"
   
 ## <a name="server-configuration"></a>서버 구성  
   
-|컨트롤 이름|Description|  
+|컨트롤 이름|설명|  
 |------------------|-----------------|  
 |**인터넷 정보 서비스**|로컬 컴퓨터에 설치된 인터넷 정보 서비스(IIS) 버전을 표시합니다. Master Data Services 구성 마법사를 사용하려면 IIS 버전 7.0 이상이 필요합니다.|  
 |**MDS 제품 버전**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]의 제품 버전을 표시합니다.|  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f9115fc1e226e05c788206706d59a5435bfd1c5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1657d9e58a0ae729a67e179602cd9a886ae923b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125787"
 ---
 # <a name="xor-mdx"></a>XOR(MDX)
 
@@ -39,7 +38,7 @@ Expression1 XOR Expression2
 ## <a name="return-value"></a>반환 값  
  반환 하는 부울 값 **true** 로 평가 되 면 하나의 인수 **true**이 고, 그렇지 않으면 **false**합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 **XOR** 연산자는 매개 변수가 모두 부울 값으로 처리 (0으로 **false**이 고, 그렇지 않으면 **true**) 연산자는 논리 제외 연산을 수행 하기 전에 합니다. 다음 표에서 설명 하는 방법을 **XOR** 연산자로 논리 제외를 수행 합니다.  
   
 |*Expression1*|*Expression2*|반환 값|  

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 49c9658d-fb51-4c77-94a0-fba699b0102d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7ce68f5f576754c8f84a5b4ac81aeef162f53c0c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ca403b5ad56386252d789ddede007a7293e59a40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47763061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079245"
 ---
 # <a name="syssysprotects-transact-sql"></a>sys.sysprotects(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

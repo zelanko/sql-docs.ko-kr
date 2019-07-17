@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42d2535dedb1161a78362f17a1ad7c79ca49bb87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62683977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096120"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +80,7 @@ sp_table_validation [ @table = ] 'table'
   
  테이블의 수와 같으면 행 개수 유효성 검사를 수행 하는 예상된 행 수가 **sp_table_validation** 테이블 행 개수 유효성 검사를 통과 하는 메시지를 반환 합니다. 그렇지 않은 경우에는 테이블이 동기화되지 않았다는 메시지를 반환하며 예상 행 개수 및 실제 행 개수의 차이를 보고합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_table_validation** 모든 유형의 복제에 사용 됩니다. **sp_table_validation** Oracle 게시자에 대해서는 지원 되지 않습니다.  
   
  체크섬은 페이지의 전체 행 이미지에 대한 32 비트 순환 중복 검사(CRC)를 계산합니다. 체크섬은 열을 선택적으로 검사하지 않으며 테이블의 뷰 또는 열 일부에 대해서는 계산할 수 없습니다. 또한 체크섬의 콘텐츠를 건너뜁니다 **텍스트** 하 고 **이미지** 열으로 (디자인).  

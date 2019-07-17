@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b52f71577bed8a0433c8d516cdc9cbd877066e4
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085803"
 ---
 # <a name="spprepare-transact-sql"></a>sp_prepare(Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -52,12 +51,12 @@ sp_prepare handle OUTPUT, params, stmt, options
  *options*  
  커서 결과 집합 열의 설명을 반환하는 선택적 매개 변수입니다. *옵션* 다음 int 입력된 값이 필요 합니다.  
   
-|값|Description|  
+|값|설명|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
 ## <a name="examples"></a>예  
-1. 다음 예제에서는 간단한 문을 준비하고 실행합니다.  
+A. 다음 예제에서는 간단한 문을 준비하고 실행합니다.  
   
 ```sql  
 DECLARE @P1 int;  
@@ -68,7 +67,7 @@ EXEC sp_execute @P1, N'tempdb', N'ONLINE';
 EXEC sp_unprepare @P1;  
 ```
 
-2. 다음 예제에서는 AdventureWorks2016 데이터베이스의 문을 준비 하 고 나중에 핸들을 사용 하 여를 실행 합니다.
+2\. 다음 예제에서는 AdventureWorks2016 데이터베이스의 문을 준비 하 고 나중에 핸들을 사용 하 여를 실행 합니다.
 
 ```sql
 -- Prepare query

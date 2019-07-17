@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b08de0ce5acde863d8f2683b9bc8d6f38c2fa4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108628"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -100,7 +99,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  NULL  
  쿼리의 OPTION 절에 지정된 기존 힌트는 쿼리에 적용되지 않음을 나타냅니다. 자세한 내용은 [OPTION 절 &#40;TRANSACT-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_create_plan_guide 인수는 표시된 순서대로 제공해야 합니다. **sp_create_plan_guide**매개 변수 값을 제공하는 경우 모든 매개 변수 이름을 명시적으로 지정하거나 모두 지정하지 않아야 합니다. 예를 들어 경우  **\@이름 =** 을 지정한 경우  **\@stmt =** 를  **\@유형 =** , 등도 지정 해야 합니다. 마찬가지로, 하는 경우  **\@이름 =** 을 생략 하 고 유일한 매개 변수 값을 제공한 경우 나머지 매개 변수 이름도 생략 해야, 하 고 해당 값만 제공 합니다. 인수 이름은 구문 이해를 위한 설명 용도로만 사용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지정된 매개 변수 이름과 해당 이름이 사용된 위치의 매개 변수 이름이 일치하는지 확인하지 않습니다.  
   
  같은 쿼리 및 일괄 처리나 모듈에 대해 두 개 이상의 OBJECT 또는 SQL 계획 지침을 만들 수 있습니다. 그러나 지정된 시간에 한 개의 계획 지침만 사용할 수 있습니다.  
@@ -147,7 +146,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-plan-guide-of-type-object-for-a-query-in-a-stored-procedure"></a>1\. 저장 프로시저에 있는 쿼리에 대해 OBJECT 유형의 계획 지침 만들기  
+### <a name="a-creating-a-plan-guide-of-type-object-for-a-query-in-a-stored-procedure"></a>A. 저장 프로시저에 있는 쿼리에 대해 OBJECT 유형의 계획 지침 만들기  
  다음 예에서는 응용 프로그램 기반 저장 프로시저의 컨텍스트에서 실행된 쿼리와 일치하는 계획 지침을 만들고 해당 쿼리에 대해 `OPTIMIZE FOR` 힌트를 적용합니다.  
   
  저장 프로시저는 다음과 같습니다.  
@@ -332,7 +331,7 @@ GO
  [sys.plan_guides&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [데이터베이스 엔진 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_cached_plans &#40;Transact SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   

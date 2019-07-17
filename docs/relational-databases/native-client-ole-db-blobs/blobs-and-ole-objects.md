@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48cb02feac227ad224ffed05fe60c1e78c97406c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d6f2a73f44d762a2d17eccc8cf82570b07933426
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128890"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOB 및 OLE 개체
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **ISequentialStream** 소비자에 대 한 액세스를 지원 하기 위해 인터페이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**를 **텍스트**, **이미지**, **varchar (max)** 를 **nvarchar (max)** 하십시오 **varbinary (max)**, 및 xml 데이터 형식을 Blob (binary large object ). **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
+  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **ISequentialStream** 소비자에 대 한 액세스를 지원 하기 위해 인터페이스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**를 **텍스트**, **이미지**, **varchar (max)** 를 **nvarchar (max)** 하십시오 **varbinary (max)** , 및 xml 데이터 형식을 Blob (binary large object ). **ISequentialStream**에서 **Read** 메서드를 사용하면 소비자가 많은 양의 데이터를 관리하기 쉬운 청크로 가져올 수 있습니다.  
   
  이 기능을 보여 주는 샘플을 참조 하세요 [큰 데이터 집합 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-how-to/set-large-data-ole-db.md)합니다.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "47742301"
   
  큰 값 데이터 형식에 대 한 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 형식 크기 가정을 확인 **IRowset** 및 DDL 인터페이스입니다. 열 **varchar**를 **nvarchar**, 및 **varbinary** 무제한으로 설정 하는 최대 크기를 사용 하 여 데이터 형식이 스키마 행 집합 및 인터페이스를 통해 ISLONG으로 표현 열 데이터 형식을 반환 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **varchar (max)**, **varbinary (max)** 하 고 **nvarchar (max)** DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_ 형식 WSTR 각각.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자가 노출 하는 **varchar (max)** , **varbinary (max)** 하 고 **nvarchar (max)** DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_ 형식 WSTR 각각.  
   
  응용 프로그램에서 이러한 형식을 사용하기 위해 처리하는 방법은 다음과 같습니다.  
   

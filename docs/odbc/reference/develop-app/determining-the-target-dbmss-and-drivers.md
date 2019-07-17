@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 92da788205213394edc75257d8266752a2a9d8df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7065aa88d60a508df9946d38d0dded220c4bb7a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106145"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>대상 DBMS 및 드라이버 확인
 고려해 야 할 다음 질문을 응용 프로그램의 경우 대상 Dbms는 무엇 이며, 해당 Dbms를 지 원하는 어떤 드라이버를 사용할 수 있습니까? 일반 응용 프로그램 상호 운용성이 매우 경향이, 대상 Dbms에 대 한 문제 이므로 사용자 지정 및 세로 응용 프로그램에 가장 적합 합니다. 그러나 대상 드라이버에 대 한 문제 드라이버 속도, 품질, 기능 지원 및 가용성에 있어 매우 다양 하기 때문에 모든 응용 프로그램에 적용 됩니다. 또한 드라이버 응용 프로그램을 사용 하 여 다시 배포 될 경우의 비용 및 라이선스 계획의 가용성을 고려해 야 할 합니다.  

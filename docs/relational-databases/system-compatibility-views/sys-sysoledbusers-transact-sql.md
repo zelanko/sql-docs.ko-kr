@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe924c17-9cad-4b2b-8124-1e0fd82931e3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 71d04ef07053eb893a98d654424eb49b61f0c7e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7c8b97a04e8b9898a9d49a412c5c6e5a2aa910c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47809141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076531"
 ---
 # <a name="syssysoledbusers-transact-sql"></a>sys.sysoledbusers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47809141"
   
  지정되어 있는 연결된 서버에 대한 각 사용자 및 암호 매핑마다 한 행을 포함합니다. **sysoledbusers** 에 저장 되는 **마스터** 데이터베이스입니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**rmtsrvid**|**smallint**|서버의 SID(보안 ID 번호)입니다.|  
 |**rmtloginame**|**nvarchar(** 128 **)**|원격 로그인의 이름입니다 **loginsid** 연결에 대 한 매핑됩니다 **rmtservid**합니다.|  

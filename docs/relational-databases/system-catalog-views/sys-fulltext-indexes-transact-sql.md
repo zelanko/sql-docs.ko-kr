@@ -20,21 +20,20 @@ ms.assetid: 7fc10fdc-370f-4927-bba0-b76108a7508e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d6f7aafe405b29db5457f470a99efac2e23e92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b240c74abde034f5008416994ca9cb497e6e64f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133797"
 ---
 # <a name="sysfulltextindexes-transact-sql"></a>sys.fulltext_indexes(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   테이블 형식 개체의 각 전체 텍스트 인덱스당 한 개의 행을 포함합니다.  
 
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|이 전체 텍스트 인덱스가 속한 개체의 ID입니다.|  
 |**unique_index_id**|**int**|전체 텍스트 인덱스를 행에 연결하는 데 사용되는 고유하고 전체 텍스트가 아닌 해당 인덱스의 ID입니다.|  

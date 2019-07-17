@@ -19,21 +19,20 @@ helpviewer_keywords:
 ms.assetid: 7247f065-5441-4bcf-9f25-c84a03290dc6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f45b4be7f62b58bd69f427e37da2243ad4665264
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad5bd8f5391e5903a6f9fd10e0cfb340cf4952b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133976"
 ---
 # <a name="sysforeignkeycolumns-transact-sql"></a>sys.foreign_key_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   외래 키를 구성하는 각 열 또는 열 집합당 한 개의 행을 포함합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**constraint_object_id**|**int**|FOREIGN KEY 제약 조건의 ID입니다.|  
 |**constraint_column_id**|**int**|열 또는 외래 키를 구성 하는 열 집합의 ID (*1..n* 여기서 n = 열 수)입니다.|  

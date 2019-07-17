@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 9997ffed-a4c1-428f-8bac-3b9e4b16d7cf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f45c634b2a5ab057fd9c2ae878e544a6b7d84f7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 396d2e1c2d0387e716123ce6f87ea5cef4ecbbe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090655"
 ---
 # <a name="sysdmtcplistenerstates-transact-sql"></a>sys.dm_tcp_listener_states(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62960028"
 > [!NOTE]
 > 가용성 그룹 수신기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 수신기와 동일한 포트를 수신할 수 있습니다. 이 경우 수신기는 별도로 나열되며 Service Broker 수신기의 경우와 동일합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**listener_id**|**int**|수신기의 내부 id입니다. Null을 허용하지 않습니다.<br /><br /> 기본 키입니다.|  
 |**ip_address**|**nvarchar(48)**|온라인 상태이고 현재 수신 중인 수신기 IP 주소입니다. IPv4 및 IPv6가 허용됩니다. 수신기에서 두 주소 유형을 모두 처리하는 경우 별도로 나열됩니다. IPv4 와일드 카드 이며 "0.0.0.0"으로 표시 됩니다. 으로 표시 되는 IPv6 와일드 카드 ":".<br /><br /> Null을 허용하지 않습니다.|  

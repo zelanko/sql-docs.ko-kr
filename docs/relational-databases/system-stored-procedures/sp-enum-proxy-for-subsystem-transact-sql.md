@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 580cc3be-1068-4a96-8d15-78ca3a5bb719
 ms.author: vanto
 author: VanMSFT
-manager: craigg
-ms.openlocfilehash: d521a16fa7c18e67e1929cb0e38aecf862d6c18a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93a55b28325bd9b04af569120ad34baeb689e8f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124657"
 ---
 # <a name="spenumproxyforsubsystem-transact-sql"></a>sp_enum_proxy_for_subsystem(Transact-SQL)
 
@@ -57,7 +56,7 @@ sp_enum_proxy_for_subsystem
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**subsystem_id**|**int**|하위 시스템의 ID입니다.|  
 |**subsystem_name**|**sysname**|하위 시스템의 이름입니다.|  
@@ -65,7 +64,7 @@ sp_enum_proxy_for_subsystem
 |**proxy_name**|**sysname**|프록시 이름입니다.|  
 | &nbsp; | &nbsp; | &nbsp; |
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  매개 변수 없이 제공 하는 경우 **sp_enum_proxy_for_subsystem** 모든 하위 시스템에 대 한 인스턴스의 모든 프록시에 대 한 정보를 나열 합니다.  
   
  프록시 id 또는 프록시 이름을 제공 하면 **sp_enum_proxy_for_subsystem** 에 대 한 액세스를 프록시 하는 하위 시스템을 나열 합니다. 하위 시스템 id 또는 하위 시스템 이름을 제공 하면 **sp_enum_proxy_for_subsystem** 해당 하위 시스템에 액세스할 수 있는 프록시를 나열 합니다.  
@@ -79,7 +78,7 @@ sp_enum_proxy_for_subsystem
   
 ## <a name="examples"></a>예  
   
-### <a name="a-listing-all-associations"></a>1\. 모든 연결 나열  
+### <a name="a-listing-all-associations"></a>A. 모든 연결 나열  
  다음 예에서는 현재 인스턴스의 프록시와 하위 시스템 간에 설정된 모든 사용 권한을 나열합니다.  
   
 ```sql

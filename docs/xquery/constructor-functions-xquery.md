@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b426d7f4f5056c76e7ccc6807785366f0f12287f
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038996"
 ---
 # <a name="constructor-functions-xquery"></a>생성자 함수(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  *TYP*  
  기본 제공 XSD 유형입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  생성자는 기본 및 파생 원자 XSD 유형에 대해 지원됩니다. 그러나 하위 **xs: duration**를 포함 하는 **xdt: yearmonthduration and xdt: daytimeduration**, 및 **xs: qname**, **xs:nmtoken**, 및 **xs: notation** 지원 되지 않습니다. 연결된 스키마 컬렉션에서 사용할 수 있는 사용자 정의 원자 유형도 다음 유형으로부터 직접 또는 간접으로 파생될 수 있는 경우 사용할 수 있습니다.  
   
 #### <a name="supported-base-types"></a>지원되는 기본 유형  
@@ -138,8 +137,8 @@ TYP($atomicvalue as xdt:anyAtomicType?
 ## <a name="examples"></a>예  
  이 항목에서는 다양 한 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 **xml** AdventureWorks 데이터베이스의 열을 입력 합니다.  
   
-### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>1. dateTime() XQuery 함수를 사용하여 이전 제품 설명 검색  
- 이 예제에서는 샘플 XML 문서를 먼저 할당 됩니다는 **xml** 형식 변수입니다. 이 문서에는 3개의 예제 <`ProductDescription`> 요소가 포함되며 각 요소에는 <`DateCreated`> 자식 요소가 포함됩니다.  
+### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. dateTime() XQuery 함수를 사용하여 이전 제품 설명 검색  
+ 이 예제에서는 샘플 XML 문서를 먼저 할당 됩니다는 **xml** 형식 변수입니다. 이 문서에는 세 가지 예제가 포함 되어 있습니다. <`ProductDescription`> 요소를 포함 하는 각각을 <`DateCreated`> 자식 요소입니다.  
   
  그런 다음 변수를 쿼리하여 특정 날짜 이전에 생성된 제품 설명만 검색합니다. 비교를 위해 쿼리에서 사용 합니다 **xs:dateTime()** 생성자 함수는 날짜를 입력 합니다.  
   
@@ -174,7 +173,7 @@ select @x.query('
   
  이전 쿼리에서 다음을 유의하세요.  
   
--   FOR ... WHERE 루프 구조 검색 되는 \<ProductDescription > WHERE 절에 지정 된 조건을 충족 하는 요소입니다.  
+-   FOR... WHERE 루프 구조 검색 되는 \<ProductDescription > WHERE 절에 지정 된 조건을 충족 하는 요소입니다.  
   
 -   합니다 **datetime ()** 생성자 함수는 생성 하는 데 사용 됩니다 **dateTime** 적절 하 게 비교할 수 있도록 값을 입력 합니다.  
   

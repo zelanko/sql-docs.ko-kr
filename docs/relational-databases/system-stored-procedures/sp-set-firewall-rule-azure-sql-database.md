@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a096814c7d037fe517614e2701d5a821edcaa053
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 436396ed0982b12fffd5b894cb4c2a4006484ab0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104425"
 ---
 # <a name="spsetfirewallrule-azure-sql-database"></a>sp_set_firewall_rule(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -45,13 +44,13 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="arguments"></a>인수  
  다음 표에서 지원 되는 인수를 보여 줍니다. 및 옵션 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]합니다.  
   
-|이름|데이터 형식|Description|  
+|이름|데이터 형식|설명|  
 |----------|--------------|-----------------|  
 |[@name =] 'name'|**NVARCHAR(128)**|서버 수준의 방화벽 설정을 설명하고 구분하는 데 사용된 이름입니다.|  
 |[@start_ip_address =] 'start_ip_address'|**VARCHAR(50)**|서버 수준 방화벽 설정 범위에서 가장 낮은 IP 주소입니다. 이 값보다 크거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 연결을 시도할 수 있습니다. 가능한 가장 낮은 IP 주소는 `0.0.0.0`입니다.|  
 |[@end_ip_address =] 'end_ip_address'|**VARCHAR(50)**|서버 수준 방화벽 설정 범위에서 가장 높은 IP 주소입니다. 이 값보다 작거나 같은 IP 주소는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 서버에 연결을 시도할 수 있습니다. 가능한 가장 높은 IP 주소는 `255.255.255.255`입니다.<br /><br /> 참고: Azure 연결을 시도할 수 있습니다이 필드와 *start_ip_address* equals 필드 `0.0.0.0`합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  서버 수준 방화벽 설정 이름은 고유해야 합니다. 저장 프로시저에 대해 제공된 설정 이름이 해당 방화벽 설정 테이블에 이미 있습니다. 시작 및 끝 IP 주소가 업데이트됩니다. 그렇지 않으면, 새 서버 수준 방화벽 설정이 만들어집니다.  
   
  시작 및 끝 IP 주소에 일치 하는 서버 수준 방화벽 설정을 추가 하는 경우 `0.0.0.0`에 대 한 액세스를 사용 하도록 설정 하면 여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] Azure에서 서버. 값을 제공 합니다 *이름을* 도움이 되는 매개 변수는 서버 수준 방화벽 설정을 기억할에 대 한 합니다.  

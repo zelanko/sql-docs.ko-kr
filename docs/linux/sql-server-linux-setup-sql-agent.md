@@ -3,18 +3,17 @@ title: Linux에서 SQL Server 에이전트를 설치 합니다.
 description: 이 문서에서는 Linux의 SQL Server 에이전트를 설치 하는 방법을 설명 합니다.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
-ms.openlocfilehash: 09751465dded818a51ca36df5a4328623b0b0a0a
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: c27a31a5e6b9ed771df82e942087d7be88270038
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032474"
 ---
 # <a name="install-sql-server-agent-on-linux"></a>Linux에서 SQL Server 에이전트를 설치 합니다.
 
@@ -92,7 +91,7 @@ sudo systemctl restart mssql-server
 
 다음 단계를 사용 하 여 설치 합니다 **mssql server 에이전트** SUSE Linux Enterprise server입니다. 
 
-Install **mssql-server-agent** 
+설치 **mssql server 에이전트** 
 
 ```bash
 sudo zypper install mssql-server-agent

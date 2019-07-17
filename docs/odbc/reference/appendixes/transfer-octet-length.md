@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d8f64172685c42a5dde8de9027c8c7e621ddd9f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff187d5d2b67c5fc3d40a80a136ff9f0c65b2ed2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735069"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070041"
 ---
 # <a name="transfer-octet-length"></a>8진수 길이 전송
 전송 8 진수 길이 열의 데이터는 기본 C 데이터 형식으로 전송 될 때 응용 프로그램에 반환 된 바이트의 최대입니다. 문자 데이터에 대 한 전송 8 진수 길이 null 종료 문자에 대 한 공간이 포함 되지 않습니다. 열의 전송 8 진수 길이 데이터 원본에서 데이터를 저장 하는 데 필요한 바이트의 수보다 달라질 수 있습니다.  

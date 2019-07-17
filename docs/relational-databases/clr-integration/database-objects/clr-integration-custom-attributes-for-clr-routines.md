@@ -21,20 +21,19 @@ helpviewer_keywords:
 ms.assetid: 95069d22-b05d-4670-b053-15ee2a664e33
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c59df39f3d4d0df423f48df092e49e53dba1861c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1c1105579dc5da82a66fb101e559e1fb96feac1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138625"
 ---
 # <a name="clr-integration-custom-attributes-for-clr-routines"></a>CLR 루틴용 CLR 통합 사용자 지정 특성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   공용 언어 런타임 (CLR) 루틴, 사용자 정의 형식에 등록 된 사용자 정의 집계를 나열 된 특성을 적용할 수 있습니다 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 특성이 적용되지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 기본값을 사용합니다. 나열 된 특성에 정의 된 합니다 **Microsoft.SqlServer.Server** 네임 스페이스입니다.  
   
 ## <a name="the-sqluserdefinedaggregate-attribute"></a>SqlUserDefinedAggregate 특성  
- 합니다 **SqlUserDefinedAggregate** 특성 메서드는 사용자 정의 집계로 등록 해야 함을 나타냅니다. 모든 사용자 정의 집계에는 이 특성이 주석으로 첨부되어야 합니다.  
+ 합니다 **SqlUserDefinedAggregate** 특성 메서드는 사용자 정의 집계로 등록 해야 함을 나타냅니다. 이 특성을 사용 하 여 모든 사용자 정의 집계를 주석 처리 해야 합니다.  
   
  자세한 내용은 [SqlUserDefinedAggregateAttribute](https://go.microsoft.com/fwlink/?LinkId=124626)합니다.  
   

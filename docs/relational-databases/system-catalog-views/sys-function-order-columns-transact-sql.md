@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 29287973-3125-4d35-8ca9-92cb45828854
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43ce8d82bc286e7005d57d5a829e09814ffdd240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2a51cc56b37325d760ca77f014594496c8ab6b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122752"
 ---
 # <a name="sysfunctionordercolumns-transact-sql"></a>sys.function_order_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "63004727"
   일부인 열 하나당 하나의 행을 반환 합니다는 **순서** 식 공용 언어 런타임 (CLR) 테이블 반환 함수입니다.  
 
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|순서가 정의된 개체(CLR 테이블 반환 함수)의 ID입니다.|  
 |**order_column_id**|**int**|순서 열의 ID입니다. **order_column_id** 내 에서만 고유 **object_id**합니다.<br /><br /> **order_column_id는 정렬** 순서에서이 열의 위치를 나타냅니다.|  

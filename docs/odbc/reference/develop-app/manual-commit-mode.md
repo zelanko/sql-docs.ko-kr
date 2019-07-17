@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1952d4185c80a3b49b7742a9dba1f3d8d41a6ca6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7189a0586ba4f62091d5eb209a56931627bc6f7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036404"
 ---
 # <a name="manual-commit-mode"></a>수동 커밋 모드
 *수동 커밋 모드로* 응용 프로그램에 명시적으로 호출 하 여 트랜잭션을 완료 해야 합니다 **SQLEndTran** 커밋하거나 롤백할 합니다. 대부분의 관계형 데이터베이스에 대 한 기본 트랜잭션 모드입니다.  

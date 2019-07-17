@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: c2c4a000-1127-46a8-b1e9-947fd1136e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1cf8e911f8b8e871cf7389bf40d6a84bc455bffa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0a00f6843a0ef379c12aa1d1d00df9380efbd139
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124998"
 ---
 # <a name="sysserveraudits-transact-sql"></a>sys.server_audits(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   서버 인스턴스에 있는 각 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit에 대해 하나의 행을 포함합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|감사의 ID입니다.|  
 |**name**|**sysname**|감사의 이름입니다.|  
@@ -46,7 +45,7 @@ ms.locfileid: "52506361"
 |**on_failure_desc**|**nvarchar(60)**|동작 항목을 쓰지 못한 경우:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL_OPERATION|  
 |**is_state_enabled**|**tinyint**|0-사용 안 함<br /><br /> 1 - 사용|  
 |**queue_delay**|**int**|디스크에 쓸 때까지 대기할 최대 시간(밀리초)입니다. 0인 경우 이벤트가 계속될 수 있도록 감사에 의해 쓰기가 보장됩니다.|  
-|**조건자**|**nvarchar(3000)**|이벤트에 적용되는 조건자 식입니다.|  
+|**predicate**|**nvarchar(3000)**|이벤트에 적용되는 조건자 식입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  사용 하 여 보안 주체를 **ALTER ANY SERVER AUDIT** 또는 **VIEW ANY DEFINITION** 권한이이 카탈로그 뷰에 액세스할 수 있습니다. 또한 보안 주체 거부 하지 말아야 **VIEW ANY DEFINITION** 권한.  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f417efd4-8c71-4f81-bc9c-af13bb4b88ad
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb3351abb75827c3eac7f48687823ffeed76986c
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: 625c6134c91a9b452b8df2b7e235b78126c1354e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026923"
 ---
 # <a name="sysdmdbuncontainedentities-transact-sql"></a>sys.dm_db_uncontained_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "54405613"
 |*statement_ offset_begin*|**int**|클래스가 모듈인 경우 포함되지 않은 용도의 시작 위치(0으로 시작되는 바이트)를 나타냅니다. 그렇지 않으면 반환 값이 Null입니다.|  
 |*statement_ offset_end*|**int**|클래스가 모듈인 경우 포함되지 않은 용도의 끝 위치(0으로 시작되는 바이트)를 나타냅니다. 값이 -1인 경우 모듈의 끝을 나타냅니다. 그렇지 않으면 반환 값이 Null입니다.|  
 |*statement_type*|**nvarchar(512)**|문의 유형입니다.|  
-|*feature_ name*|**nvarchar(256)**|개체의 외부 이름을 반환합니다.|  
+|*feature_ 이름*|**nvarchar(256)**|개체의 외부 이름을 반환합니다.|  
 |*feature_type_name*|**nvarchar(256)**|기능의 유형을 반환합니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sys.dm_db_uncontained_entities는 잠재적으로 데이터베이스 경계를 넘을 수 있는 엔터티를 표시 합니다. 즉, 데이터베이스 외부 개체를 사용할 가능성이 있는 사용자 엔터티를 반환합니다.  
   
  다음 기능 유형이 보고됩니다.  

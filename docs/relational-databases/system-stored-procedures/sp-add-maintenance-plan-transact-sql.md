@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 01ab1834-6260-47cb-a1b7-20722217b062
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dea1ce298f9c032b785ced601a0d50d52fbb6f96
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: aa33e418b81cb2f77a39f20d36bba7a25caffb4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104579"
 ---
 # <a name="spaddmaintenanceplan-transact-sql"></a>sp_add_maintenance_plan(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_add_maintenance_plan [ @plan_name = ] 'plan_name' ,
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_add_maintenance_plan** 에서 실행 되어야 합니다는 **msdb** 데이터베이스 및 새롭 지만 빈, 유지 관리 계획을 만듭니다. 하나 이상의 데이터베이스를 추가 하 고 작업 또는 작업을 연결 하려면 다음을 실행 **sp_add_maintenance_plan_db** 하 고 **sp_add_maintenance_plan_job**합니다.  
   
 ## <a name="permissions"></a>사용 권한  

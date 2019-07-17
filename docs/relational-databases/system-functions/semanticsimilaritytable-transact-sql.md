@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b49d40ab-7552-438b-ad67-6237dcccb75b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0398f6d17e5825c68f26be00c5365f240d441307
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24193b3474b1088a87acb5bdd15a5c5c4459f44d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140554"
 ---
 # <a name="semanticsimilaritytable-transact-sql"></a>semanticsimilaritytable(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ SEMANTICSIMILARITYTABLE
   
  결과가 둘 이상의 열에서 요청된 경우에는 열 단위로 대응 문서가 반환됩니다.  
   
-|Column_name|형식|Description|  
+|Column_name|type|설명|  
 |------------------|----------|-----------------|  
 |**source_column_id**|**int**|유사한 문서를 찾는 데 사용된 원본 문서의 열 ID입니다.<br /><br /> column_id에서 열 이름을 검색하거나 열 이름에서 column_id를 검색하는 방법에 대한 자세한 내용은 COL_NAME 및 COLUMNPROPERTY 함수를 참조하십시오.|  
 |**matched_column_id**|**int**|유사한 문서를 찾은 열의 ID입니다.<br /><br /> column_id에서 열 이름을 검색하거나 열 이름에서 column_id를 검색하는 방법에 대한 자세한 내용은 COL_NAME 및 COLUMNPROPERTY 함수를 참조하십시오.|  

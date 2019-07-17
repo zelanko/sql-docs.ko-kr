@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 240aaad1-d65d-4dea-b60b-315cb1ac733d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0cb332040b7d5e145639bc55feb41ecf62084478
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7687b678e755f508f363fa1b327950232038c04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090838"
 ---
 # <a name="working-with-ssma-for-mysql-console-mysqltosql"></a>MySQL용 SSMA 콘솔 작업(MySQLToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이제 migration Assistant (SSMA) for MySQL은 명령줄에서 콘솔 응용 프로그램을 통해 액세스할 수 합니다. 스크립트 파일의 명령을 실행 하는 것에 대 한 응용 프로그램에 대 한 입력을 형성 합니다. 콘솔 응용 프로그램의 경우 SSMA 스크립트 수준 인터페이스를 사용 하도록 설정, 마이그레이션 주기를 줄이고 마이그레이션 작업의 크기를 조정 합니다.  

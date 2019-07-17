@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_health_component_status_mappings (Transact-SQL) | Microsoft Docs
+title: sys.pdw_health_component_status_mappings (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -9,21 +9,20 @@ ms.topic: conceptual
 ms.assetid: 4272cfad-5ad7-493d-9edd-d9111619bda0
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 02771656dfdb0b7396e62a5bde364b0eea324aa0
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ec631e9008cc37a7b4f91ed3f530e5388bdf9c0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127496"
 ---
 # <a name="syspdwhealthcomponentstatusmappings-transact-sql"></a>sys.pdw_health_component_status_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
   간의 매핑을 정의 합니다 [!INCLUDE[ssDW](../../includes/ssdw-md.md)] 구성 요소 상태 및 구성 요소 제조업체 정의 이름입니다.  
   
-|열 이름|데이터 형식|Description|범위|  
+|열 이름|데이터 형식|설명|범위|  
 |-----------------|---------------|-----------------|-----------|  
 |property_id|**int**|속성의 고유 식별자입니다.<br /><br /> id, component_id와 physical_name이이 보기에 대 한 키를 형성합니다.|NOT NULL|  
 |component_id|**int**|ID 구성 요소입니다. 참조 [sys.pdw_health_components &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)합니다.<br /><br /> id, component_id와 physical_name이이 보기에 대 한 키를 형성합니다.|NOT NULL|  

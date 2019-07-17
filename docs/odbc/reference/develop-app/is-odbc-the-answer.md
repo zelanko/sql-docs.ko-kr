@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f90f2395eac5dce76848d7bc309f1a3d5ce289f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e325793a7b703c445be836f6f427645acda3370
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63179897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138845"
 ---
 # <a name="is-odbc-the-answer"></a>ODBC가 응답입니까?
 상호 운용성에 대 한 문제를 살펴보기 전에 다음과 같은 질문을 고려 합니다. 응용 프로그램 사용 해야 ODBC 전혀? ODBC에 대 한 지침에는 이상한 질문 울 수 있지만 이지만, 사실 합법적인 합니다. ODBC Api를 기본 데이터베이스를 완전히 대체 하도록 설계 되지 않았습니다도 모든 상황에서 데이터베이스에 액세스할 수 있도록 설계 되었습니다. 데이터베이스에 공통 인터페이스를 제공 하도록 설계 되었습니다 하 고 응용 프로그램 프로그래머는 알아보기 및 여러 데이터베이스에 대 한 링크를 유지 관리할 필요가 없는 하려던 합니다.  

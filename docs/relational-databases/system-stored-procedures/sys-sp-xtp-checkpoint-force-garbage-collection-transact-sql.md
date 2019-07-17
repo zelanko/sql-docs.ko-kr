@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9142800590230126da882031b70e9c59f4670c3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b230fb659b41f16541fd841f1ff8b6f03d19cee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120043"
 ---
 # <a name="sysspxtpcheckpointforcegarbagecollection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 ## <a name="result-set"></a>결과 집합  
  반환된 행에는 다음 정보가 포함되어 있습니다.  
   
-|Column|Description|  
+|Column|설명|  
 |------------|-----------------|  
 |num_collected_items|Filestream 가비지 수집으로 이동한 파일 수를 나타냅니다. 이러한 파일의 LSN(로그 시퀀스 번호)은 로그 잘림 지점의 LSN보다 작습니다.|  
 |num_marked_for_collection_items|LSN이 로그 끝 LSN의 로그 blockID로 업데이트된 데이터/델타 파일 수를 나타냅니다.|  

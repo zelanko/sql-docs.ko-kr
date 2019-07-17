@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5faad4f4e0de6f9c56115bff59933360f551ab55
-ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
+ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67866267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090047"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**retry_interval**|**int**|재시도 간격(분)입니다.|  
 |**os_run_priority**|**int**|예약되어 있습니다.|  
 |**output_file_name**|**nvarchar(200)**|출력 기록 되어야 하는 명령 파일 ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, 및 **PowerShell** 단계에 적용).|  
-|**last_run_outcome**|**int**|단계가 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **2** = Retry<br /><br /> **3** = 취소<br /><br /> **5** = 알 수 없음|  
+|**last_run_outcome**|**int**|단계가 마지막으로 실행되었을 때의 결과입니다.<br /><br /> **0** = 실패<br /><br /> **1** = 성공<br /><br /> **2** = 다시 시도<br /><br /> **3** = 취소<br /><br /> **5** = 알 수 없음|  
 |**last_run_duration**|**int**|단계가 마지막으로 실행되었을 때의 시간(hhmmss)입니다.|  
 |**last_run_retries**|**int**|단계를 마지막으로 실행했을 때 명령을 재시도할 횟수입니다.|  
 |**last_run_date**|**int**|단계가 마지막으로 실행을 시작했을 때의 날짜입니다.|  
@@ -105,7 +104,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
   
 ## <a name="examples"></a>예  
   
-### <a name="a-return-information-for-all-steps-in-a-specific-job"></a>1\. 특정 작업의 모든 단계에 관한 정보 반환  
+### <a name="a-return-information-for-all-steps-in-a-specific-job"></a>A. 특정 작업의 모든 단계에 관한 정보 반환  
  다음 예에서는 `Weekly Sales Data Backup`이라는 작업의 모든 작업 단계를 반환합니다.  
   
 ```  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0d4d19f7b32297401ff036e61806308b54e44c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124076"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_get_query_template
  @parameters  
  형식의 출력 매개 변수 **nvarchar (max)** 에 매개 변수가 있는 매개 변수 이름과 데이터 형식의 문자열 리터럴로 표시 된 대로 제공 @templatetext합니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  다음 경우 sp_get_query_template은 오류를 반환합니다.  
   
 -   모든 상수 리터럴 값 매개 변수가 없는 *query_text*합니다.  

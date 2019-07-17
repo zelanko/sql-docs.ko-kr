@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb281923e5b6d48a23cb6aa3f60bf36bbe9764da
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8af56ae768ca883e22d7c9e18150e75025086d63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085257"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**Loginname**|**nvarchar(256)**|실제 로그인 이름입니다.|  
 |**isntname**|**int**|**0** = 로그인이 Windows 사용자입니다.<br /><br /> **1** = 로그인이 Windows 사용자입니다.|  
@@ -64,7 +63,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_help_publication_access** 모든 유형의 복제에 사용 됩니다.  
   
  때 둘 다 **Isntname** 및 **Isntgroup** 집합에 결과 **0**, 로그인 임을 가정를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 합니다.  

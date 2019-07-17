@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5aac3e1471f969ea324008c03f97b9b26c05c4ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 963cbcea93091eb48b8c73214ee3bc509f118e67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124669"
 ---
 # <a name="spenumsqlagentsubsystems-transact-sql"></a>sp_enum_sqlagent_subsystems(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_enum_sqlagent_subsystems
   
 ## <a name="result-sets"></a>결과 집합  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**subsystem**|**nvarchar(40)**|하위 시스템의 이름입니다.|  
 |**description**|**nvarchar(512)**|하위 시스템에 대한 설명입니다.|  
@@ -59,7 +58,7 @@ sp_enum_sqlagent_subsystems
 |**max_worker_threads**|**int**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 이 하위 시스템에 대해 시작할 최대 스레드 수입니다.|  
 |**subsystem_id**|**int**|하위 시스템에 대한 식별자입니다.|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  이 프로시저는 인스턴스에 사용할 수 있는 하위 시스템을 나열합니다.  
   
 ## <a name="permissions"></a>사용 권한  

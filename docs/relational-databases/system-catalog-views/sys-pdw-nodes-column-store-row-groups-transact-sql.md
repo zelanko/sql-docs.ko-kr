@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_nodes_column_store_row_groups (Transact-SQL) | Microsoft Docs
+title: sys.pdw_nodes_column_store_row_groups (TRANSACT-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -11,28 +11,27 @@ dev_langs:
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 8604cdc89c755dcd1564e842963f3afa311f1786
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e89405e04a06e8171c69b81066be743ee99d4534
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106716"
 ---
-# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact-SQL)
+# <a name="syspdwnodescolumnstorerowgroups-transact-sql"></a>sys.pdw_nodes_column_store_row_groups (Transact SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
   관리자가 시스템 관리 의사 결정을 확인 하는 데는 세그먼트 단위 기반의 방식으로 클러스터형된 columnstore 인덱스 정보를 제공 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]합니다. **sys.pdw_nodes_column_store_row_groups** (삭제 된 것으로 표시 된 포함) 물리적으로 저장 된 행의 총 수에 대 한 열이 있고 삭제 됨으로 표시 된 행의 수에 대 한 열입니다. 사용 하 여 **sys.pdw_nodes_column_store_row_groups** 행을 확인 하려면 그룹 삭제 된 행의 비율이 높아 및 다시 작성 해야 합니다.  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|기본 테이블의 ID입니다. 제어 노드에 논리 테이블의 object_id 하지 계산 노드에서 실제 테이블입니다. 예를 들어 object_id sys.tables의 object_id를 사용 하 여 일치 하지 않습니다.<br /><br /> Sys.tables를 사용 하 여 sys.pdw_index_mappings를 사용 합니다.|  
 |**index_id**|**int**|클러스터형된 columnstore 인덱스의 ID *object_id* 테이블입니다.|  
 |**partition_number**|**int**|행 그룹을 포함 하는 테이블 파티션의 ID입니다 *row_group_id*합니다. 사용할 수 있습니다 *partition_number* 이 DMV를 sys.partitions에 조인할 합니다.|  
 |**row_group_id**|**int**|이 행 그룹의 ID입니다. 이 번호는 파티션 내에서 고유합니다.|  
 |**dellta_store_hobt_id**|**bigint**|델타 행 그룹은 hobt_id, 행 그룹 유형이 델타가 아니면 NULL입니다. 델타 행 그룹이란 새 레코드를 수락하는 읽기/쓰기 행 그룹입니다. 델타 행 그룹에는 **열고** 상태입니다. 델타 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.|  
-|**state**|**tinyint**|state_description과 연결된 ID 번호입니다.<br /><br /> 1 = 열기<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
+|**state**|**tinyint**|state_description과 연결된 ID 번호입니다.<br /><br /> 1 = OPEN<br /><br /> 2 = CLOSED<br /><br /> 3 = COMPRESSED|  
 |**state_desccription**|**nvarchar(60)**|행 그룹의 영구 상태 설명:<br /><br /> 열림-새 레코드를 수락 하는 읽기/쓰기 행 그룹입니다. 열린 행 그룹은 columnstore 형식으로 압축되지 않았고 여전히 rowstore 형식입니다.<br /><br /> 닫힘-가득 차면 되었지만 아직 tuple mover 프로세스에 의해 압축 행 그룹입니다.<br /><br /> 압축-채워지고 압축 된 행 그룹.|  
 |**total_rows**|**bigint**|행 그룹에 물리적으로 저장된 총 행 수입니다. 일부는 삭제되었을 수도 있지만 그대로 저장되어 있습니다. 행 그룹의 최대 행 수는 1,048,576개(16진수 FFFFF)입니다.|  
 |**deleted_rows**|**bigint**|삭제 표시 된 행 그룹에 물리적으로 저장 하는 행 수입니다.<br /><br /> 항상 0을 델타 행 그룹입니다.|  
@@ -40,7 +39,7 @@ ms.locfileid: "56031974"
 |**pdw_node_id**|**int**|고유 id를 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 노드.|  
 |**distribution_id**|**int**|분포의 고유 id입니다.|
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  클러스터형 또는 비클러스터형 columnstore 인덱스가 있는 각 테이블에 대해 columnstore 행 그룹당 한 행을 표시합니다.  
   
  사용 하 여 **sys.pdw_nodes_column_store_row_groups** 행 그룹과 행 그룹의 크기에 포함 된 행 수를 결정 합니다.  
@@ -106,9 +105,9 @@ ORDER BY 1, 2
 ```
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Data Warehouse 및 병렬 데이터 웨어하우스 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [SQL Data Warehouse 및 병렬 Data Warehouse 카탈로그 뷰](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [COLUMNSTORE 인덱스를 만들 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_segments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+ [sys.pdw_nodes_column_store_dictionaries &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
   

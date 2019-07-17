@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6b33383b-5949-488a-a911-59299a270f46
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0c0969aec1ba6e429c5b3a79d6ff0f5d638cd8f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95053570a7ded118d2a298b417b361dd8d3dd2be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63003428"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035434"
 ---
 # <a name="spsyspolicysetlogonsuccess-transact-sql"></a>sp_syspolicy_set_log_on_success(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_syspolicy_set_log_on_success [ @value = ] value
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_syspolicy_set_log_on_success는 msdb 시스템 데이터베이스의 컨텍스트에서 실행해야 합니다.  
   
  때 *값* 전용인 'false' 또는 0으로 설정 하지 못했습니다 정책 평가가 로깅됩니다.  

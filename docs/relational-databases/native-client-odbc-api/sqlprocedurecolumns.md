@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 6671e180-0072-4de5-90f5-314306d2ba9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 73a6ae0a7209eaef4438aee865f8e887af4ed176
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 743423e3f38d30440c355c05aa084e2b54ea0908
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131239"
 ---
 # <a name="sqlprocedurecolumns"></a>SQLProcedureColumns
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,13 +27,13 @@ ms.locfileid: "63014295"
 
   **SQLProcedureColumns** 모든 반환 값 특성을 보고 한 행을 반환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를.  
   
- **SQLProcedureColumns** 값이 존재 하는지 여부에 관계 없이 SQL_SUCCESS를 반환 *CatalogName*를 *SchemaName*를 *ProcName*, 또는 * ColumnName* 매개 변수입니다. **SQLFetch** 이러한 매개 변수에 잘못 된 값을 사용할 때에 SQL_NO_DATA를 반환 합니다.  
+ **SQLProcedureColumns** 값이 존재 하는지 여부에 관계 없이 SQL_SUCCESS를 반환 *CatalogName*를 *SchemaName*를 *ProcName*, 또는  *ColumnName* 매개 변수입니다. **SQLFetch** 이러한 매개 변수에 잘못 된 값을 사용할 때에 SQL_NO_DATA를 반환 합니다.  
   
  **SQLProcedureColumns** 정적 서버 커서에서 실행할 수 있습니다. 실행 하려고 **SQLProcedureColumns** 업데이트 가능한 (동적 또는 키 집합) 커서에서 커서 유형이 변경 되었음을 나타내는 sql_success_with_info가 반환 됩니다.  
   
  다음 표에서 결과 집합을 처리 하기 위해 확장 된 방법에 의해 반환 되는 열은 **udt** 및 **xml** 데이터 형식을 통해의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 클라이언트 ODBC 드라이버:  
   
-|열 이름|Description|  
+|열 이름|설명|  
 |-----------------|-----------------|  
 |SS_UDT_CATALOG_NAME|UDT(사용자 정의 형식)를 포함하는 카탈로그의 이름을 반환합니다.|  
 |SS_UDT_SCHEMA_NAME|UDT가 포함된 스키마의 이름을 반환합니다.|  

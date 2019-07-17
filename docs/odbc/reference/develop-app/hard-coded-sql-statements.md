@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e355f5f1-4f1a-4933-8c74-ee73e90d2d19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 383a81aea121882b334bbfdab806408ac0513893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b0205208a28238f4fbccb5ae2fd96639b664bd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139148"
 ---
 # <a name="hard-coded-sql-statements"></a>하드 코딩된 SQL 문
 일반적으로 고정 된 작업을 수행 하는 응용 프로그램에 하드 코딩 된 SQL 문을 포함 합니다. 예를 들어 주문 입력 시스템을 열고 판매 주문 목록 다음 호출을 사용할 수 있습니다.  

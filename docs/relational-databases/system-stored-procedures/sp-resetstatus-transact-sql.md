@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b892727f-ea3b-4b94-88d9-f2386ad4962c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f64909bbb56f3a1bae683f5dafbaf2924b163aa7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1a9f4346116e94957cce16307d70c69a13942b5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610631"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129628"
 ---
 # <a name="spresetstatus-transact-sql"></a>sp_resetstatus(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_resetstatus [ @dbname = ] 'database'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  sp_resetstatus는 데이터베이스에서 주의 대상 플래그를 해제합니다. 이 프로시저는 sys.databases에서 명명된 데이터베이스의 모드 및 상태 열을 업데이트합니다. 이 프로시저를 실행하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 대해 문의하여 모든 문제점을 해결해야 합니다. sp_resetstatus를 실행한 후에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 중지한 후 다시 시작합니다.  
   
  데이터베이스는 여러 가지 이유로 주의 대상이 됩니다. 운영 시스템에 의해 데이터베이스 리소스에 대한 액세스가 거부되거나 하나 이상의 데이터베이스 파일이 사용 불가능하거나 손상되어 주의 대상이 될 수 있습니다.  

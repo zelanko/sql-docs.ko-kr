@@ -22,21 +22,20 @@ helpviewer_keywords:
 ms.assetid: c05fd873-aff2-4a89-9936-a54c2ea09996
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac4898bb75623842f129e19e2e506a551f7f1f37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1c31a2c72666229dbe214c07e31102e647b372d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078590"
 ---
 # <a name="systabletypes-transact-sql"></a>sys.table_types(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자 정의 테이블 형식의 속성을 표시합니다. 테이블 형식은 테이블 변수 또는 테이블 반환 매개 변수를 선언하는 데 사용할 수 있는 형식입니다. 각 테이블 형식에는 **type_table_object_id** 외래 키로는 합니다 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 카탈로그 뷰. ID 열이를 사용 하 여 유사한 방식으로 다양 한 카탈로그 뷰를 쿼리 하는 **object_id** 해당 열 및 제약 조건과 같은 테이블 형식의 구조를 검색 하는 일반 테이블의 열입니다.    
  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |*\<열을 상속 >*||열이이 뷰를 상속 하는 목록이 참조 [sys.types &#40;Transact SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md).|  
 |**type_table_object_id**|**int**|개체 ID입니다. 데이터베이스 내에서 고유합니다.|  

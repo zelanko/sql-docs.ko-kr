@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6cf3dd279f33ea0c157743d4b4c11248267a0a62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215623"
+---
 3. 모든 클러스터 노드에서 Pacemaker 방화벽 포트를 엽니다. `firewalld`를 사용하여 이러한 포트를 열려면 다음 명령을 실행합니다.
 
    ```bash

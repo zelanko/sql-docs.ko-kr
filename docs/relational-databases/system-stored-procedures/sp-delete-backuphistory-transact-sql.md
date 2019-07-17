@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 44db86eef5231fde337a9521cb76ca5e03f28db9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c538a217c5d86f2b59f079f8629a6f4cbe9fea3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120060"
 ---
 # <a name="spdeletebackuphistory-transact-sql"></a>sp_delete_backuphistory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ## <a name="result-sets"></a>결과 집합  
  없음  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_delete_backuphistory** 에서 실행 해야 합니다 **msdb** 데이터베이스에 있으며 다음 테이블에 영향을 줍니다.  
   
 -   [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md)  

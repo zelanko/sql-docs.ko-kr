@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0573851ee93bda4aa33e8645148cf2ee66200bee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8333000c9bb806116244ac6d4f654fa195205868
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107457"
 ---
 # <a name="sql-statements-constructed-at-run-time"></a>런타임 시 생성된 SQL 문
 일반적으로 임시 분석을 수행 하는 응용 프로그램 런타임 시 SQL 문을 작성 합니다. 예를 들어, 스프레드시트 사용자 데이터를 검색할 열을 선택할 수 있습니다.  

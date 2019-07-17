@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 7d392ee6791c120243b304ab24b2f8268499617d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215574"
+---
 ## <a name="prerequisites"></a>필수 구성 요소
 
 가용성 그룹을 만들려면 먼저 다음을 수행해야 합니다.
@@ -83,7 +91,7 @@ GO
 
 Linux의 SQL Server 서비스는 인증서를 사용하여 미러링 엔드포인트 간의 통신을 인증합니다. 
 
-다음 Transact-SQL 스크립트는 마스터 키와 인증서를 만듭니다. 그런 다음, 인증서를 백업하고 개인 키로 파일을 보호합니다. 강력한 암호로 스크립트를 업데이트합니다. 기본 SQL Server 인스턴스에 연결 합니다. 인증서를 만들려면 다음 TRANSACT-SQL 스크립트를 실행 합니다.
+다음 Transact-SQL 스크립트는 마스터 키와 인증서를 만듭니다. 그런 다음, 인증서를 백업하고 프라이빗 키로 파일을 보호합니다. 강력한 암호로 스크립트를 업데이트합니다. 기본 SQL Server 인스턴스에 연결 합니다. 인증서를 만들려면 다음 TRANSACT-SQL 스크립트를 실행 합니다.
 
 ```SQL
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -96,7 +104,7 @@ BACKUP CERTIFICATE dbm_certificate
        );
 ```
 
-이제 기본 SQL Server 복제본은 `/var/opt/mssql/data/dbm_certificate.cer`에 인증서, `var/opt/mssql/data/dbm_certificate.pvk`에 개인 키가 있습니다. 이러한 두 파일을 가용성 복제본을 호스트할 모든 서버의 동일한 위치로 복사합니다. Mssql 사용자를 사용 하거나 이러한 파일에 액세스 하려면 mssql 사용자에 게 권한을 부여 합니다. 
+이제 기본 SQL Server 복제본은 `/var/opt/mssql/data/dbm_certificate.cer`에 인증서, `var/opt/mssql/data/dbm_certificate.pvk`에 프라이빗 키가 있습니다. 이러한 두 파일을 가용성 복제본을 호스트할 모든 서버의 동일한 위치로 복사합니다. Mssql 사용자를 사용 하거나 이러한 파일에 액세스 하려면 mssql 사용자에 게 권한을 부여 합니다. 
 
 예를 들어 원본 서버에서 다음 명령을 대상 컴퓨터에 파일을 복사합니다. 대체는 `**<node2>**` 복제본을 호스트 하는 SQL Server 인스턴스의 이름 가진 값입니다. 
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8e41bcab4680d1e3bbaf08e2fbab112799fd5976
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3b8c1b95d8d04e2b11982af14971e43e83db146f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533155"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075769"
 ---
 # <a name="sprefreshview-transact-sql"></a>sp_refreshview(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 0이 아닌 수(실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  Schemabinding을 사용 하 여 뷰를 만들지 않은 경우 **sp_refreshview** 뷰의 정의 영향을 주는 뷰의 기반이 개체에 변경 될 때 실행 해야 합니다. 그렇지 않으면 뷰를 쿼리할 때 예기치 않은 결과가 발생할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
@@ -53,7 +52,7 @@ sp_refreshview [ @viewname = ] 'viewname'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-updating-the-metadata-of-a-view"></a>1. 뷰의 메타데이터 업데이트  
+### <a name="a-updating-the-metadata-of-a-view"></a>A. 뷰의 메타데이터 업데이트  
  다음 예에서는 `Sales.vIndividualCustomer` 뷰의 메타데이터를 새로 고칩니다.  
   
 ```  
@@ -62,7 +61,7 @@ GO
 EXECUTE sp_refreshview N'Sales.vIndividualCustomer';  
 ```  
   
-### <a name="b-creating-a-script-that-updates-all-views-that-have-dependencies-on-a-changed-object"></a>2. 변경한 개체에 대해 종속성이 있는 뷰를 모두 업데이트하는 스크립트 만들기  
+### <a name="b-creating-a-script-that-updates-all-views-that-have-dependencies-on-a-changed-object"></a>2\. 변경한 개체에 대해 종속성이 있는 뷰를 모두 업데이트하는 스크립트 만들기  
  `Person.Person` 테이블이 해당 테이블에서 생성된 모든 뷰의 정의에 영향을 주는 방식으로 변경되었다고 가정합니다. 다음 예에서는 `Person.Person` 테이블에 대해 종속성이 있는 모든 뷰의 메타데이터를 새로 고치는 스크립트를 만듭니다.  
   
 ```  

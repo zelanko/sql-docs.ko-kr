@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f325a606-97ac-48bc-b344-b55f5e086a48
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 16bf79c185a23399d48d141b5d773e2e0d41dc3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d384433e5a2653291fac4d990bb3660b31c13855
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060027"
 ---
 # <a name="setting-project-options-db2tosql"></a>프로젝트 옵션 설정 (DB2ToSQL)
 각 SSMA 프로젝트에 대 한 프로젝트 수준 옵션을 설정할 수 있습니다. 이러한 옵션에는 변환 개체, 개체 로드, 사용자 인터페이스 및 데이터 마이그레이션 설정을 지정합니다. 개체를 변환 하기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 마이그레이션하거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 구성 옵션을 프로젝트에 적절 한지 확인 합니다.  
@@ -29,7 +28,7 @@ SSMA는 프로젝트 설정의 5 개 집합에 있습니다.
   
 -   일반 (변환, 마이그레이션, 개체 로드)  
   
--   Synchronization  
+-   동기화  
   
 -   GUI  
   
@@ -74,7 +73,7 @@ SSMA에 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니�
   
     -   사용자 지정 설정을 지정 하려면 선택 하거나 새 설정이 나 값을 입력 합니다.  
   
-3.  클릭 **확인** 설정을 저장 합니다.  
+3.  **확인**을 클릭하여 설정을 저장합니다.  
   
 현재 프로젝트에 대 한 설정을 사용자 지정할 수도 있습니다. 이러한 설정은 현재 프로젝트 파일에 저장 됩니다.  
   
@@ -88,7 +87,7 @@ SSMA에 모든 프로젝트에 대 한 기본 설정을 구성할 수 있습니�
   
     -   사용자 지정 모드를 지정 하는 **모드** 상자에서 **사용자 지정**를 선택한 다음 적절 한 프로젝트 설정 합니다.  
   
-3.  클릭 **확인** 설정을 저장 합니다.  
+3.  **확인**을 클릭하여 설정을 저장합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
 다음 단계는 마이그레이션 프로젝트 요구 사항에 따라 달라 집니다.  
