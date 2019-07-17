@@ -1,10 +1,10 @@
 ---
 title: SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결 및 쿼리
-description: SQL Server Management Studio를 사용하고 기본 T-SQL 쿼리를 실행하여 SQL Server 인스턴스에 연결하는 방법에 대한 빠른 시작 자습서입니다.
+description: SQL Server Management Studio를 사용하고 기본 T-SQL 쿼리를 실행하여 SQL Server 인스턴스에 연결하는 방법에 대한 자습서입니다.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ms.reviewer: sstein
 ms.topic: quickstart
 ms.prod_service: sql-tools
@@ -12,16 +12,16 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 62646a7e2b09c4a733dde0ddff9d078cb0a3c958
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 4f3e1b5e03f70aa0d552e89d3ebdd254909d7b2a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469228"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834960"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>자습서: SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결 및 쿼리 
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>자습서: SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결 및 쿼리
 
-이 자습서에서는 SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결하고 몇 가지 기본 T-SQL(Transact-SQL) 명령을 실행하는 방법을 설명합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다.
+이 자습서에서는 SSMS(SQL Server Management Studio)를 사용하여 SQL Server 인스턴스에 연결하고 몇 가지 기본 T-SQL(Transact-SQL) 명령을 실행하는 방법을 설명합니다. 이 문서에서는 아래 단계를 수행하는 방법을 보여줍니다.
 
 > [!div class="checklist"]
 > * SQL Server 인스턴스에 연결
@@ -54,9 +54,9 @@ SQL Server 인스턴스에 대한 액세스 권한이 없는 경우 다음 링�
     * **서버 형식**에서 **데이터베이스 엔진**(일반적으로 기본 옵션)을 선택합니다.
     * **서버 이름**에서 SQL Server 인스턴스의 이름을 입력합니다. (이 아티클에서는 호스트 이름 NODE5[NODE5\SQL2016ST]에서 인스턴스 이름 SQL2016ST를 사용합니다.) SQL Server 인스턴스 이름을 확인하는 방법을 잘 모르는 경우 [SSMS를 사용하는 추가 팁과 요령](ssms-tricks.md#determine-sql-server-name)을 참조하세요.
 
-    ![SQL Server 인스턴스를 사용하는 옵션을 포함한 "서버 이름" 필드](media/connect-query-sql-server/connection2.png)
-
     * **인증**에서 **Windows 인증**을 선택합니다. 이 아티클에서는 Windows 인증을 사용하지만 SQL Server 로그인도 지원합니다. **SQL 로그인**을 선택하는 경우 사용자 이름 및 암호를 묻는 메시지가 표시됩니다. 인증 형식에 대한 자세한 내용은 [서버에 연결(데이터베이스 엔진)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)을 참조하세요.
+
+    ![SQL Server 인스턴스를 사용하는 옵션을 포함한 "서버 이름" 필드](media/connect-query-sql-server/connection2.png)
 
     **옵션**을 선택하여 추가 연결 옵션을 수정할 수도 있습니다. 연결 옵션의 예제는 연결하려는 데이터베이스, 연결 제한 시간 값 및 네트워크 프로토콜입니다. 이 아티클에서는 모든 옵션에 기본값을 사용합니다.
 
@@ -188,7 +188,7 @@ SQL Server 연결에 성공했는지 확인하려면 **개체 탐색기** 내에
 
 1. 쿼리 창을 마우스 오른쪽 단추로 클릭한 다음, **연결** > **연결 변경**을 선택합니다. **서버에 연결** 창이 다시 열립니다.
 
-2. 쿼리가 사용하는 서버를 변경합니다. 
+2. 쿼리가 사용하는 서버를 변경합니다.
 
    ![연결 변경 명령](media/connect-query-sql-server/changeconnection.png)
 
@@ -197,8 +197,9 @@ SQL Server 연결에 성공했는지 확인하려면 **개체 탐색기** 내에
 
 ## <a name="next-steps"></a>다음 단계
 
-다음 문서에서는 SQL Server Management Studio 내에서 다양한 개체를 스크립팅하는 방법을 설명합니다.
+실습을 통해 SSMS에 익숙해지는 것이 가장 좋습니다. 이러한 문서에서는 SSMS 내에서 사용할 수 있는 다양한 기능에 관해 도움을 얻을 수 있습니다.  이러한 문서에서는 SSMS의 구성 요소를 관리하는 방법과 정기적으로 사용하는 기능을 찾는 방법을 알아봅니다.
 
-자세히 알아보려면 다음 문서로 이동합니다.
-> [!div class="nextstepaction"]
-> [다음 단계](scripting-ssms.md)
+* [스크립팅](scripting-ssms.md)
+* [SSMS에서 템플릿 사용](../template/templates-ssms.md)
+* [SSMS 구성](ssms-configuration.md)
+* [SSMS 사용을 위한 추가 팁과 요령](ssms-tricks.md)

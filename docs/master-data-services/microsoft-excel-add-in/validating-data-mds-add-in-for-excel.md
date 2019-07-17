@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 71eda98f-01a4-4fff-8246-be3133782523
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 67a91feab955f0e62e1f6837a00030833d581b19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48124bf61c39a24f07ede4a184db70a85b040b02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074395"
 ---
 # <a name="validating-data-mds-add-in-for-excel"></a>데이터 유효성 검사(Excel용 MDS 추가 기능)
 
@@ -40,7 +39,7 @@ ms.locfileid: "65484549"
   
  추가 상태에 대한 자세한 내용은 [유효성 검사 상태&#40;Master Data Services&#41;](../../master-data-services/validation-statuses-master-data-services.md)를 참조하세요.  
   
-|상태|Description|  
+|상태|설명|  
 |------------|-----------------|  
 |유효성 검사 실패|행에 있는 하나 이상의 값이 MDS 관리자가 정의한 비즈니스 규칙에 대한 유효성 검사에 실패했습니다.|  
 |유효성 검사 성공|행의 모든 값이 비즈니스 규칙에 대한 유효성 검사에 통과했습니다.|  
@@ -48,9 +47,9 @@ ms.locfileid: "65484549"
 ## <a name="input-statuses"></a>입력 상태  
  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)]에서 입력 상태는 다음과 같습니다.  
   
-|상태|Description|  
+|상태|설명|  
 |------------|-----------------|  
-|Error|행에 있는 하나 이상의 값이 길이 또는 데이터 형식 같은 시스템 요구 사항을 충족하지 않습니다. MDS 저장소에서 값이 업데이트되지 않습니다.|  
+|오류|행에 있는 하나 이상의 값이 길이 또는 데이터 형식 같은 시스템 요구 사항을 충족하지 않습니다. MDS 저장소에서 값이 업데이트되지 않습니다.|  
 |새 행|행의 값이 아직 MDS 저장소에 게시되지 않았습니다.|  
 |읽기 전용|로그인한 사용자에게 행에 있는 하나 이상의 값에 대한 읽기 전용 권한이 있으며 값을 업데이트할 수 없습니다.|  
 |Unchanged|워크시트에서 행의 어떤 값도 변경되지 않았습니다. 저장소에서 값이 변경되지 않았다는 의미는 아닙니다. 시트의 최신 데이터를 가져오려면 **연결 및 로드** 그룹에서 **로드 또는 새로 고침**을 클릭합니다.<br /><br /> 이는 각 행의 기본 설정입니다.|  

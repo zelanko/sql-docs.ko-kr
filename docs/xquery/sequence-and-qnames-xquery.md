@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3593ac26-dd78-4bf0-bb87-64fbcac5f026
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 0e7c73e33a1f19acb2158ced848c220b2b7af447
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: fbb20c9e14c4e76b8862a23e8d758fcbba94da7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946344"
 ---
 # <a name="sequence-and-qnames-xquery"></a>시퀀스 및 QName(XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -147,7 +146,7 @@ WHERE ProductModelID=7;
  사용자가 만드는 모든 데이터베이스를 **sys** XML 스키마 컬렉션입니다. 이 컬렉션은 사용자가 만든 XML 스키마 컬렉션에서 액세스할 수 있도록 이러한 스키마를 준비해 둡니다.  
   
 > [!NOTE]  
->  이 구현이 지원 하지 않는 합니다 `local` XQuery 사양에 설명 된 대로 접두사 http://www.w3.org/2004/07/xquery-local-functions합니다.  
+>  이 구현이 지원 하지 않는 합니다 `local` XQuery 사양에 설명 된 대로 접두사 http://www.w3.org/2004/07/xquery-local-functions 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [XQuery 기초](../xquery/xquery-basics.md)  

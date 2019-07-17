@@ -11,12 +11,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
-ms.openlocfilehash: 4813ca33bca9f03d94fe6f926a7af612b217fd90
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab4e56eb51a03d9c1bdbc8e0c4f87f98ddfbf57d
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795030"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826534"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005-2008-or-2008r2"></a>SQL Server 2005, 2008 또는 2008R2에서 업그레이드하나요?
 
@@ -32,20 +32,21 @@ ms.locfileid: "66795030"
 >  SQL Server 2005에 대해 연장된 지원은 2016년 4월 12일에 종료되었습니다. 2016년 4월 12일 이후에도 SQL Server 2005를 실행하고 있으면 더 이상 보안 업데이트를 받을 수 없습니다.  
 
 > [!IMPORTANT]  
->  SQL Server 2008 및 2008r2에 대한 지원 연장이 2019년 7월 9일에 끝납니다. 2019년 7월 9일 후에도 SQL Server 2008 또는 2008R2를 실행하는 경우 더 이상 보안 업데이트를 수신할 수 없습니다. 자세한 내용은 [SQL Server 2008에 대한 새 옵션 발표](https://azure.microsoft.com/blog/announcing-new-options-for-sql-server-2008-and-windows-server-2008-end-of-support/) 블로그에서 찾을 수 있습니다.  
+>  SQL Server 2008 및 2008r2에 대한 지원 연장이 2019년 7월 9일에 끝났습니다. 2019년 7월 9일 후에도 SQL Server 2008 또는 2008R2를 실행하는 경우 더 이상 보안 업데이트를 수신할 수 없습니다. 자세한 내용은 [SQL Server 2008에 대한 새 옵션 발표](https://azure.microsoft.com/blog/announcing-new-options-for-sql-server-2008-and-windows-server-2008-end-of-support/) 블로그에서 찾을 수 있습니다. 지원을 연장하여 체험하려면 SQL Server를 Azure VM으로 마이그레이션할 수 있습니다. 자세한 내용은 [Extend support for SQL Server 2008 and 2008 R2 with Azure](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)(Azure를 사용하여 SQL Server 2008 및 2008 R2에 대한 지원 연장)를 참조하세요.  
   
 ## <a name="choose-your-upgrade-option"></a>업그레이드 옵션 선택  
 관계형 데이터베이스를 이전 버전의 SQL Server에서 업그레이드하는 경우 Microsoft 플랫폼의 관계형 스토리지에 대한 옵션은 다음과 같습니다.  
   
-이러한 옵션에 대한 보다 포괄적인 분석을 보려면 [여기를 클릭](https://sql05upgrade.azurewebsites.net/)하세요.  
+이러한 옵션에 대한 보다 포괄적인 분석을 보려면 [PaaS vs IaaS](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)(PaaS 및 IaaS)를 참조하세요.  
   
 |관계형 스토리지 옵션|이점|고려할 기타 요소|  
 |-------------------------------|--------------|-------------------------------|  
+|**Azure 가상 컴퓨터에 호스트된 SQL Server**<br /><br /> 다음 이점을 원하는 경우 이 옵션을 선택하는 것이 좋습니다.<br /><br /> 호스트된 환경으로 마이그레이션하는 경우의 이점<br /><br /> 운영 환경에 대한 제어<br /><br /> 익숙한 SQL Server 기능 집합|**최대 3년간 SQL Server 2008 및 2008 R2에 대한 [지원을 연장](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-2008-eos-extend-support)하여 체험할 수 있습니다.** <br /><br /> 가상 머신 이미지의 라이브러리에서 신속하게 배포할 수 있습니다.<br /><br /> 전체 SQL Server 기능 집합을 사용할 수 있습니다.<br /><br /> 하드웨어와 서버 소프트웨어의 비용을 절감합니다. 시간 단위 사용량에 대한 요금만 지불합니다.|SQL Server와 운영 체제 소프트웨어를 모두 관리해야 합니다.<br /><br /> <br /><br /> 자세한 내용은 [Azure 가상 컴퓨터의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)를 참조하십시오.<br /><br /> 마이그레이션에 대한 정보는 [Azure VM의 SQL Server로 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)을 참조하세요.|  
+|**Azure SQL Database Managed Instance(PaaS)** <br /><br /> 유지 관리가 적게 필요한 저렴한 비용의 솔루션을 원하는 경우 이 옵션을 고려합니다.<br /><br /> 관리형 인스턴스는 Microsoft SQL Server 데이터베이스 엔진의 인스턴스와 유사하며, 데이터베이스 및 인스턴스 범위 추가 기능에 필요한 공유 리소스를 제공합니다. <br /><br />관리형 인스턴스에서는 데이터베이스 변경 없이 또는 최소한의 변경으로 온-프레미스에서 데이터베이스를 마이그레이션할 수 있습니다.|CLR 및 SQL 작업을 지원할 뿐 아니라 같은 관리형 인스턴스 내에서 데이터베이스 간 쿼리를 활용할 수 있습니다. <br /><br /> 99.995%의 가용성을 보장합니다.<br /><br /> 서비스 비용에는 스토리지뿐 아니라 고가용성, 패치 및 자동 백업도 포함됩니다.|Azure SQL Database Managed Instance 및 SQL Server 온-프레미스 간에는 몇 가지 Transact-SQL (T-SQL) 차이점이 있습니다. 자세한 내용은 [Azure SQL Database managed instance T-SQL information](/azure/sql-database/sql-database-managed-instance-transact-sql-information)(Azure SQL Database Managed Instance T-SQL 정보)을 참조하세요.<br /><br /> SQL Database Managed Instance에 대한 자세한 내용은 [Azure SQL Database managed instance overview](/azure/sql-database/sql-database-managed-instance-index)(Azure SQL Database Managed Instance 개요) 및 [Azure SQL Database managed instance capabilities](/azure/sql-database/sql-database-managed-instance)(Azure SQL Database Managed Instance 기능)를 참조하세요.<br /><br /> 마이그레이션에 대한 자세한 내용은 [Migrating a SQL Server to Azure SQL Database managed instance](/azure/sql-database/sql-database-managed-instance-migrate)(Azure SQL Database Managed Instance로 SQL Server 마이그레이션)를 참조하세요.|  
+|**Azure SQL Database 단일 데이터베이스 또는 탄력적 풀(PaaS)** <br /><br /> 유지 관리가 적게 필요한 저렴한 비용의 솔루션을 원하는 경우 이 옵션을 고려합니다.<br /><br /> 이 옵션은 개발자 생산성과 새 솔루션의 빠른 출시가 중요하거나 외부 액세스를 제공해야 하는 클라우드용 애플리케이션에 특히 적합합니다. <br /><br />흔히 사용되는 SQL Server 기능을 사용할 수 있지만 Azure SQL Database Managed Instance의 경우에는 그리 많지 않습니다. |신속하게 배포하고 쉽게 확장할 수 있습니다.<br /><br /> 99.995%의 가용성을 보장합니다.<br /><br /> 초 또는 시간 단위로 사용 요금을 지불할 수 있습니다. <br /><br /> 서비스 비용에는 스토리지뿐 아니라 고가용성, 패치 및 자동 백업도 포함됩니다.|Azure SQL Database 및 SQL Server 온-프레미스 간에는 몇 가지 Transact-SQL (T-SQL) 차이점이 있습니다. 자세한 내용은 [Azure SQL 데이터베이스 Transact-SQL 정보](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)를 참조하세요.<br /><br /> Azure SQL Database의 최대 데이터베이스 크기는 100TB인 반면 SQL Server의 경우에는 524PB입니다. 자세한 내용은 [단일 데이터베이스에 대한 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)을 참조하세요.<br /><br /> SQL Database에 대한 자세한 내용은 [Azure SQL Database 개요](https://azure.microsoft.com/services/sql-database/) 및 [Azure SQL Database 설명서](/azure/sql-database/sql-database-technical-overview)를 참조하세요.<br /><br /> 마이그레이션에 대한 자세한 내용은 [Azure SQL 데이터베이스로 SQL Server 데이터베이스 마이그레이션](/azure/sql-database/sql-database-single-database-migrate)을 참조하세요.|  
 |**온-프레미스 SQL Server**<br /><br /> 트랜잭션 시스템에서 데이터 웨어하우스에 이르는 모든 종류의 데이터베이스 애플리케이션의 경우 이 옵션을 고려합니다.|하드웨어와 소프트웨어를 모두 관리하기 때문에 기능과 확장성을 최대한으로 제어할 수 있습니다.<br /><br /> SQL Server의 이전 인스턴스에서 업그레이드하는 경우 이 환경이 가장 유사합니다.|하드웨어와 소프트웨어를 직접 구입하고 유지 및 관리해야 하므로 사전 투자 비용이 가장 크고 최대한의 지속적 관리를 제공해야 합니다.<br /><br /> 자세한 내용은 [SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)를 참조하세요.|  
-|**Azure 가상 컴퓨터에 호스트된 SQL Server**<br /><br /> 다음 이점을 원하는 경우 이 옵션을 선택하는 것이 좋습니다.<br /><br /> 호스트된 환경으로 마이그레이션하는 경우의 이점<br /><br /> 운영 환경에 대한 제어<br /><br /> 익숙한 SQL Server 기능 집합|가상 머신 이미지의 라이브러리에서 신속하게 배포할 수 있습니다.<br /><br /> 전체 SQL Server 기능 집합을 사용할 수 있습니다.<br /><br /> 하드웨어와 서버 소프트웨어의 비용을 절감합니다. 시간 단위 사용량에 대한 요금만 지불합니다.|SQL Server와 운영 체제 소프트웨어를 모두 구성하고 관리해야 합니다.<br /><br /> <br /><br /> 자세한 내용은 [Azure 가상 컴퓨터의 SQL Server 개요](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)를 참조하세요.<br /><br /> 마이그레이션에 대한 정보는 [Azure VM의 SQL Server로 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/virtual-machines-migrate-onpremises-database/)을 참조하세요.|  
-|**Azure SQL 데이터베이스에서 호스트된 데이터베이스 서비스**<br /><br /> 유지 관리가 적게 필요한 저렴한 비용의 솔루션을 원하는 경우 이 옵션을 고려합니다.<br /><br /> 이 옵션은 필요한 용량이 시기에 따라 일정하지 않거나 외부 액세스를 제공해야 하는 앱의 경우 특히 적합합니다.|신속하게 배포하고 쉽게 확장할 수 있습니다.<br /><br /> 시간 단위 사용량에 대한 요금만 지불합니다.<br /><br /> 서비스의 비용에는 스토리지뿐 아니라 고가용성 및 자동화된 백업도 포함됩니다.|Azure SQL Database에는 호스트된 클라우드 환경에서 적용할 수 없는 일부 SQL Server 기능이 없습니다. 자세한 내용은 [Azure SQL 데이터베이스 Transact-SQL 정보](https://azure.microsoft.com/documentation/articles/sql-database-transact-sql-information/)를 참조하세요.<br /><br /> Azure SQL Database의 최대 데이터베이스 크기는 4TB인 반면 SQL Server의 경우에는 524PB입니다. 자세한 내용은 [단일 데이터베이스에 대한 리소스 제한](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-single-databases)을 참조하세요.<br /><br /> SQL Database에 대한 자세한 내용은 [Azure SQL Database 개요](https://azure.microsoft.com/services/sql-database/) 및 [Azure SQL Database 설명서](https://docs.microsoft.com/azure/sql-database/)를 참조하세요.<br /><br /> 마이그레이션에 대한 자세한 내용은 [Azure SQL 데이터베이스로 SQL Server 데이터베이스 마이그레이션](https://azure.microsoft.com/documentation/articles/sql-database-cloud-migrate/)을 참조하세요.|  
-  
- 특정 데이터 및 애플리케이션의 경우 비관계형 또는 NoSQL 솔루션을 고려할 수도 있습니다.  
+
+특정 데이터 및 애플리케이션의 경우 비관계형 또는 NoSQL 솔루션을 고려할 수도 있습니다.  
   
 |비관계형 솔루션|이점|  
 |------------------------------|--------------|  

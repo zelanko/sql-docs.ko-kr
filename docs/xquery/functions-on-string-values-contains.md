@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c108689f2b06fca884978de68c106c2c8f28f741
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899027"
 ---
 # <a name="functions-on-string-values---contains"></a>문자열 값 함수 - contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  *$arg2*  
  검색할 하위 문자열입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  경우 값 *$arg2* 는 길이가 0 인 문자열 반환 **True**합니다. 경우 값 *$arg1* 길이가 0 인 문자열 및 값은 *$arg2* 길이가 0 인 문자열이 아닙니다, 함수 반환 **False**합니다.  
   
  경우 값 *$arg1* 하거나 *$arg2* 이 빈 시퀀스인 경우 인수는 길이가 0 인 문자열로 취급 됩니다.  
@@ -59,8 +58,8 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
 ## <a name="examples"></a>예  
  이 항목에서는 AdventureWorks 데이터베이스의 다양 한 xml 형식 열에 저장 된 XML 인스턴스에 대 한 XQuery 예를 제공 합니다.  
   
-### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>1. contains() XQuery 함수를 사용하여 특정 문자열 검색  
- 다음 쿼리는 요약 설명에 Aerodynamic이라는 단어가 포함된 제품을 검색합니다. 이 쿼리는 이러한 제품에 대한 ProductID와 <`Summary`> 요소를 반환합니다.  
+### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. contains() XQuery 함수를 사용하여 특정 문자열 검색  
+ 다음 쿼리는 요약 설명에 Aerodynamic이라는 단어가 포함된 제품을 검색합니다. 쿼리에서 반환 된 ProductID와 <`Summary`> 이러한 제품에 대 한 요소입니다.  
   
 ```  
 --The product model description document uses  

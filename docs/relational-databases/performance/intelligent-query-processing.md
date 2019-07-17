@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f548fff9a7634e0c105fc8ce09fa39d2aa4100c7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3ae6d0d35da353a9307832989f562f3282af19e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580747"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860711"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 데이터베이스의 지능형 쿼리 처리
 
@@ -44,7 +44,7 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 | [인터리브 실행](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 SQL Server 2017부터|고정 추측 대신 첫 번째 컴파일에서 발생한 다중 명령문 테이블 값 함수의 실제 카디널리티를 사용합니다.|
 | [메모리 부여 피드백(일괄 처리 모드)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 SQL Server 2017부터|일괄 처리 모드 쿼리에 디스크로 분산되는 작업이 있는 경우 연속 실행을 위한 메모리를 더 추가합니다. 쿼리가 50%가 넘는 할당된 메모리를 낭비하는 경우 연속 실행을 위한 메모리 부여 측면을 줄입니다.|
 | [메모리 부여 피드백(행 모드)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|행 모드 쿼리에 디스크로 분산되는 작업이 있는 경우 연속 실행을 위한 메모리를 더 추가합니다. 쿼리가 50%가 넘는 할당된 메모리를 낭비하는 경우 연속 실행을 위한 메모리 부여 측면을 줄입니다.|
-| [스칼라 UDF 인라인 처리](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 아니오 | 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.1부터, 공개 미리 보기|스칼라 UDF는 호출 쿼리로 ?인라인?되는 해당 관계형 식으로 변환되어 성능이 크게 향상됩니다.|
+| [스칼라 UDF 인라인 처리](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 아니오 | 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.1부터, 공개 미리 보기|스칼라 UDF는 호출 쿼리로 “인라인”되는 해당 관계형 식으로 변환되어 성능이 크게 향상됩니다.|
 | [테이블 변수 지연 컴파일](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|고정 추측 대신 첫 번째 컴파일에서 발생한 테이블의 변수의 실제 카디널리티를 사용합니다.|
 
 ## <a name="batch-mode-adaptive-joins"></a>일괄 처리 모드 적응 조인
@@ -130,7 +130,7 @@ WHERE [fo].[Quantity] = 361;
 적응 조인이 중첩된 루프 작업으로 전환하는 경우 해시 조인 빌드에서 이미 읽은 행이 사용됩니다. 연산자는 외부 참조 행을 다시 읽지 **않습니다**.
 
 ### <a name="adaptive-threshold-rows"></a>적응 임계값 행
-다음 차트에서는 해시 조인 비용과 중첩된 루프 조인 대안 비용 간의 교차 예를 보여줍니다.? 이 교차 지점에서 결정되는 임계값에 따라 다시 조인 작업에 사용되는 실제 알고리즘이 결정됩니다.
+다음 차트에서는 해시 조인 비용과 중첩된 루프 조인 대안 비용 간의 교차 예를 보여줍니다. 이 교차 지점에서 결정되는 임계값에 따라 다시 조인 작업에 사용되는 실제 알고리즘이 결정됩니다.
 
 ![조인 임계값](./media/6_AQPJoinThreshold.png)
 

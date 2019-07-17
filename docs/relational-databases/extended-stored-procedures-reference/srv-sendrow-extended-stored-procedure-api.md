@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a08f608a-10e6-4bff-9b48-0d02e8026cdb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d1ed05a99d46f523f2e7d119f097c5f5161d4ba2
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 47bfaa2ceb0885379bd5633f0160d2a9b24cf3c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036029"
 ---
 # <a name="srvsendrow-extended-stored-procedure-api"></a>srv_sendrow(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +53,13 @@ srvproc
 ## <a name="remarks"></a>Remarks  
  클라이언트로 보내는 각 행에 대해 한 번씩 **srv_sendrow** 함수를 호출합니다. **srv_sendmsg**, **srv_status**또는 **srv_senddone**을 사용하여 각각 메시지, 상태 값 또는 완료 상태를 보내기 전에 모든 행을 클라이언트로 보내야 합니다.  
   
- **srv_describe** 를 사용하여 정의되지 않은 열이 포함된 행을 보내면 확장 저장 프로시저 API 응용 프로그램에서 정보 오류 메시지를 발생시키고 클라이언트에 FAIL을 반환합니다. 이 경우 행이 전송되지 않습니다.  
+ **srv_describe** 를 사용하여 정의되지 않은 열이 포함된 행을 보내면 확장 저장 프로시저 API 애플리케이션에서 정보 오류 메시지를 발생시키고 클라이언트에 FAIL을 반환합니다. 이 경우 행이 전송되지 않습니다.  
   
 > [!NOTE]  
 >  확장 저장 프로시저 API를 통해서는 컴퓨팅 행을 클라이언트로 보낼 수 없습니다. 또한 **ntext**, **text**또는 **image** 데이터가 있는 행을 클라이언트로 보내는 경우 텍스트 포인터와 텍스트 타임스탬프는 제외됩니다.  
   
 > [!IMPORTANT]  
->  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  
+>  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [srv_describe &#40;확장 저장 프로시저 API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  

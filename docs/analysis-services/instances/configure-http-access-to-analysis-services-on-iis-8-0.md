@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079469"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182045"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0에서 Analysis Services에 대 한 HTTP 액세스 구성
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "56079469"
   
  IIS와 Analysis Services 간 원격 연결을 위해서는 IIS를 실행하는 Windows 서버에 Analysis Services OLE DB 공급자(MSOLAP)를 설치해야 합니다.  
   
-1.   [SQL Server 2014 기능 팩](http://www.microsoft.com/download/details.aspx?id=42295)에 대한 다운로드 페이지로 이동합니다.  
+1.  [SQL Server 2014 기능 팩](http://www.microsoft.com/download/details.aspx?id=42295)에 대한 다운로드 페이지로 이동합니다.  
   
 2.  빨간색 다운로드 단추를 클릭합니다.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "56079469"
   
  드라이브는 NTFS 파일 시스템용으로 포맷되어야 합니다. 사용자가 만든 폴더의 경로에 공백을 포함해서는 안 됩니다.  
   
-1.  다음 파일을 복사 \<드라이브 >: SQL Server \Program Files\Microsoft\\< 인스턴스\>\OLAP\bin\isapi: MSMDPUMP.DLL, MSMDPUMP.INI 및 Resources 폴더가 있는지 확인합니다.  
+1.  다음 파일을 복사 \<드라이브 >: SQL Server \Program Files\Microsoft\\< 인스턴스\>\OLAP\bin\isapi: MSMDPUMP 합니다. DLL에서 MSMDPUMP입니다. INI, 파일과 Resources 폴더입니다.  
   
      ![MSMDPUMP 파일의 폴더 구조](../../analysis-services/instances/media/ssas-httpaccess-msmdpumpfilecopy.PNG "MSMDPUMP 파일의 폴더 구조")  
   
@@ -104,7 +104,7 @@ ms.locfileid: "56079469"
   
 3.  이전에 복사한 파일을 이 새 폴더에 붙여 넣습니다.  
   
-4.  웹 서버의 \inetpub\wwwroot\OLAP 폴더에 MSMDPUMP.DLL, MSMDPUMP.INI 및 Resources 폴더가 있는지 확인합니다. 폴더 구조는 다음과 같이 표시됩니다.  
+4.  웹 서버의 \inetpub\wwwroot\OLAP 폴더에 다음을 확인 합니다. MSMDPUMP 합니다. DLL에서 MSMDPUMP입니다. INI, 파일과 Resources 폴더입니다. 폴더 구조는 다음과 같이 표시됩니다.  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
@@ -167,7 +167,7 @@ ms.locfileid: "56079469"
   
  **익명 인증** 은 구성의 용이성 때문에 Analysis Services에 대한 HTTP 연결의 유효성을 신속하게 검사할 수 있어 주로 초기 테스트 중에 사용됩니다. 몇 가지 단계만으로 고유 사용자 계정을 ID로 할당하고 Analysis Services에서 해당 계정 권한을 부여하고 계정을 사용하여 클라이언트 애플리케이션의 데이터 액세스를 확인한 다음 테스트가 완료되면 익명 인증을 사용하지 않도록 설정할 수 있습니다.  
   
- 사용자가 Windows 사용자 계정을 가지고 있지 않은 경우 프로덕션 환경에서 익명 인증을 사용할 수도 있지만 [익명 인증 (IIS 7)을 사용 하도록 설정](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)합니다. 계정 액세스 수준을 더 줄이려면 상위 웹 사이트가 아닌 가상 디렉터리에 인증을 설정해야 합니다.  
+ 또한 사용자가 Windows 사용자 계정에 필요는 없지만이 문서에 명시 된 대로 호스트 시스템에서 권한을 잠그는에서 모범 사례를 준수 하는 경우 프로덕션 환경에서 익명 인증을 사용할 수 있습니다. [익명 인증 (IIS 7)을 사용 하도록 설정](http://technet.microsoft.com/library/cc731244\(v=ws.10\).aspx)합니다. 계정 액세스 수준을 더 줄이려면 상위 웹 사이트가 아닌 가상 디렉터리에 인증을 설정해야 합니다.  
   
  익명을 사용하도록 설정되어 있으면 HTTP 엔드포인트에 대한 사용자 연결이 익명 사용자로 연결하도록 허용됩니다. 사용자 id를 사용 하 여 모델에서 데이터를 선택 하거나 개별 사용자 연결을 감사할 수 없습니다. 익명을 사용하면 모델 디자인에서 데이터 새로 고침 및 액세스에 이르기까지 모든 요소에 영향을 줍니다. 그러나 사용자가 시작할 수 있는 Windows 사용자 로그인을 가지고 있지 않으면 익명 계정을 사용할 수밖에 없습니다.  
   

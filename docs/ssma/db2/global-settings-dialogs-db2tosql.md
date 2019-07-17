@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c0ac65e0973ac9e862a73dd9c04a916156c8a314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de6df03f894d43819cf9d27be3fd35a977631f29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989633"
 ---
 # <a name="global-settings-dialogs-db2tosql"></a>전역 설정 (대화 상자) (DB2ToSQL)
 대화 상자 페이지를 사용 합니다 **전역 설정** SSMA에 대 한 경고 설정을 확인 하 고 기본 사용자 동작을 지정 하려면 대화 상자.  

@@ -19,12 +19,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 88c74779b60ae25ea381a2814b06a11b4fdd2e22
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 471b4fac245dcdb1aec537ccd3e8345d99039871
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343853"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624372"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON(Transact-SQL)
 
@@ -239,7 +239,10 @@ OPENJSON 함수가 반환하는 열은 WITH 옵션에 따라 달라집니다.
   
      첫 번째 수준 속성만 반환됩니다. JSON 텍스트의 형식이 올바르지 않으면 문이 실패합니다.  
 
-2. OPENJSON을 호출하고 WITH 절에 명시적 스키마를 지정하면, 함수는 WITH 절에 정의한 스키마가 있는 테이블을 반환합니다.  
+2. OPENJSON을 호출하고 WITH 절에 명시적 스키마를 지정하면, 함수는 WITH 절에 정의한 스키마가 있는 테이블을 반환합니다.
+
+> [!NOTE]  
+> **키**, **값** 및 **형식** 열은 OPENJSON을 기본 스키마와 함께 사용하는 경우에만 반환되며 명시적 스키마와 함께 사용할 수는 없습니다.
 
 ## <a name="remarks"></a>Remarks  
 

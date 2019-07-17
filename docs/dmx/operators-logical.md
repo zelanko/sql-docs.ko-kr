@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 254215318a79971e384ab8e08e3e7a17959b58d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 947e9a26f697a4b6a62d2153afc882c68c3066dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008152"
 ---
 # <a name="operators---logical"></a>연산자 - 논리
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,11 +22,11 @@ ms.locfileid: "62502585"
   
  다음 표에서는 DMX에서 지원하는 논리 연산자를 설명합니다.  
   
-|연산자|Description|  
+|연산자|설명|  
 |--------------|-----------------|  
-|[및 &AMP;#40;DMX&AMP;#41;](../dmx/and-dmx.md)|두 숫자 식에 논리 결합을 수행합니다.|  
-|[되지 &AMP;#40;DMX&AMP;#41;](../dmx/not-dmx.md)|숫자 식에 논리 부정을 수행합니다.|  
-|[또는 &AMP;#40;DMX&AMP;#41;](../dmx/or-dmx.md)|두 숫자 식에 논리 분리를 수행합니다.|  
+|[및 &#40;DMX&#41;](../dmx/and-dmx.md)|두 숫자 식에 논리 결합을 수행합니다.|  
+|[되지 &#40;DMX&#41;](../dmx/not-dmx.md)|숫자 식에 논리 부정을 수행합니다.|  
+|[또는 &#40;DMX&#41;](../dmx/or-dmx.md)|두 숫자 식에 논리 분리를 수행합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   

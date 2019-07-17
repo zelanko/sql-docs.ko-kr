@@ -23,12 +23,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 03f63929d54039399a292e086315c0b8d660f206
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.openlocfilehash: 88eb2923a9037ad0e4ad07f2f560b85b45260cd2
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079459"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866249"
 ---
 # <a name="time-transact-sql"></a>time(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "56079459"
   
 |ISO 8601|참고|  
 |--------------|-----------|  
-|hh:mm:ss<br /><br /> hh:mm[:ss][.fractional seconds]|hh는 0에서 14 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 시간(시간)을 나타냅니다.<br /><br /> mm은 0에서 59 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 추가 시간(분)을 나타냅니다.|  
+|hh:mm:ss<br /><br /> hh:mm[:ss][.fractional seconds]|hh는 0에서 23 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 시간(시간)을 나타냅니다.<br /><br /> mm은 0에서 59 사이에 속하는 두 자리 숫자로, 표준 시간대 오프셋의 추가 시간(분)을 나타냅니다.|  
   
 |ODBC|참고|  
 |----------|-----------|  
@@ -217,7 +217,7 @@ SELECT @datetime2 AS '@datetime2', @time AS '@time';
   
 ## <a name="examples"></a>예  
   
-### <a name="a-comparing-date-and-time-data-types"></a>1. 날짜 및 시간 데이터 형식 비교  
+### <a name="a-comparing-date-and-time-data-types"></a>1\. 날짜 및 시간 데이터 형식 비교  
  다음 예에서는 문자열을 각 **date** 및 **time** 데이터 형식으로 캐스팅하는 결과를 비교합니다.  
   
 ```  

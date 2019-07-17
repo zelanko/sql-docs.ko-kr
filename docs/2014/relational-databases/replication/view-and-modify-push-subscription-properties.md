@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5dc55cc688f4e40d188492636c3653556f88b1c6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127263"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212013"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>밀어넣기 구독 속성 보기 및 수정
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 밀어넣기 구독 속성을 보고 수정하는 방법에 대해 설명합니다.  
@@ -31,7 +31,7 @@ ms.locfileid: "54127263"
   
 -   **다음을 사용하여 밀어넣기 구독 속성을 보고 수정하려면**  
   
-     다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
+     [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "54127263"
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  다음 위치에서 게시자의 밀어넣기 구독 속성을 보고 수정합니다.  
   
--   합니다 **구독 속성- \<게시자 >: \<PublicationDatabase >** 대화 상자에서 사용할 수 있는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다.  
+-   **구독 속성 - \<Publisher>: [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 사용할 수 있는 \<PublicationDatabase>** 대화 상자.  
   
 -   **모든 구독** 탭 - 복제 모니터에서 사용 가능합니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](monitor/start-the-replication-monitor.md)을 참조하세요.  
   
@@ -69,17 +69,17 @@ ms.locfileid: "54127263"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 밀어넣기 구독의 속성을 보려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)을 실행합니다. 이때 **@publication**또는 RMO(복제 관리 개체)를 사용하여 **@subscriber**를 지정하고 **@article** 에 값 **@article**에서 사용 가능합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)을 실행합니다. 이때 **@publication** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber** 를 지정하고 **@article** 에 값 **@article** 에서 사용 가능합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)를 실행하고 **@subscriber**에서 사용 가능합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)를 실행하고 **@subscriber** 에서 사용 가능합니다.  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 밀어넣기 구독의 속성을 변경하려면  
   
 1.  게시 데이터베이스의 게시자에서 [sp_changesubscriber](/sql/relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql)를 실행하고 **@subscriber** 를 지정하며 변경할 구독자 속성의 매개 변수를 지정합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql)을 실행합니다. 이때 **@publication**또는 RMO(복제 관리 개체)를 사용하여 **@subscriber**또는 RMO(복제 관리 개체)를 사용하여 **@destination_db**를 지정하고 **@article** 에 값 **@article**값을, **@property**에 변경할 구독 속성을, **@value**에서 사용 가능합니다. 이렇게 하면 밀어넣기 구독의 보안 설정이 변경됩니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_changesubscription](/sql/relational-databases/system-stored-procedures/sp-changesubscription-transact-sql)을 실행합니다. 이때 **@publication** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber** 또는 RMO(복제 관리 개체)를 사용하여 **@destination_db** 를 지정하고 **@article** 에 값 **@article** 값을, **@property** 에 변경할 구독 속성을, **@value** 에서 사용 가능합니다. 이렇게 하면 밀어넣기 구독의 보안 설정이 변경됩니다.  
   
-3.  (옵션) 구독의 DTS(데이터 변환 서비스) 패키지 속성을 변경하려면 구독 데이터베이스의 구독자에서 [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql) 를 실행합니다. **@jobid**에 배포 에이전트 작업의 ID를 지정하고 다음과 같은 DTS 패키지 속성을 지정합니다.  
+3.  (옵션) 구독의 DTS(데이터 변환 서비스) 패키지 속성을 변경하려면 구독 데이터베이스의 구독자에서 [sp_changesubscriptiondtsinfo](/sql/relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql) 를 실행합니다. **@jobid** 에 배포 에이전트 작업의 ID를 지정하고 다음과 같은 DTS 패키지 속성을 지정합니다.  
   
     -   **@dts_package_name**  
   
@@ -94,13 +94,13 @@ ms.locfileid: "54127263"
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독의 속성을 보려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql)을 실행합니다. 이때 **@publication** 및 **@subscriber**에서 사용 가능합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql)을 실행합니다. 이때 **@publication** 및 **@subscriber** 에서 사용 가능합니다.  
   
-2.  게시자에서 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)를 실행하고 **@subscriber**에서 사용 가능합니다.  
+2.  게시자에서 [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)를 실행하고 **@subscriber** 에서 사용 가능합니다.  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어넣기 구독의 속성을 변경하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql)을 실행합니다. 이때 **@publication**또는 RMO(복제 관리 개체)를 사용하여 **@subscriber**또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db**값을, **@property**에 변경할 구독 속성을, **@value**에서 사용 가능합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql)을 실행합니다. 이때 **@publication** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db** 값을, **@property** 에 변경할 구독 속성을, **@value** 에서 사용 가능합니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
   
@@ -140,7 +140,7 @@ ms.locfileid: "54127263"
 7.  (옵션) 새 설정을 보려면 <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> 메서드를 호출하여 구독에 대한 속성을 다시 로드합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [정보 및 복제 모니터를 사용 하 여 수행할 작업 보기](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [복제 모니터를 사용하여 정보 보기 및 태스크 수행](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [게시 구독](subscribe-to-publications.md)  
   

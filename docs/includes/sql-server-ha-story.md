@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bac867f5f3532f931d2708c46979659e2851645f
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212249"
 ---
 이 문서에서는 SQL Server의 고가용성 및 재해 복구를 위한 비즈니스 연속성 솔루션에 대한 개요를 제공합니다. 
 

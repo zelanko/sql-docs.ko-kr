@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 호환성 수준(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccc7241c6d549985df4a838ebcc8cbb2120d3eb0
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 151e6573ebeb5497f2de001d57272af647f5e737
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469203"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860688"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 
@@ -91,7 +91,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 두 호환성 수준 간의 가장 중요한 쿼리의 성능 차이를 평가하는 방법에 대한 내용은 [Azure SQL Database에서 호환성 수준 130으로 향상된 쿼리 성능](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)을 참조하세요. 이 문서에서는 호환성 수준 130 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 참조하지만, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 140으로 이동하는 경우에도 같은 방법론이 적용됩니다.
 
-연결된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버전을 확인하려면 다음 쿼리를 실행합니다.
+연결된 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 버전을 확인하려면 다음 쿼리를 실행합니다.
 
 ```sql
 SELECT SERVERPROPERTY('ProductVersion');
@@ -165,7 +165,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > - 시스템 개체의 변경된 열 이름입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 sys.dm_os_sys_info의 *single_pages_kb* 열 이름은 *pages_kb*로 변경되었습니다. 호환성 수준에 관계 없이 쿼리 `SELECT single_pages_kb FROM sys.dm_os_sys_info`는 오류 207(잘못된 열 이름)을 생성합니다.
 > - 제거된 시스템 개체입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 `sp_dboption`이 제거되었습니다. 호환성 수준에 관계 없이 `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` 문은 오류 2812(저장된 프로시저 'sp_dboption'을 찾을 수 없음)를 생성합니다.
 >
-> 주요 변경 내용에 대한 자세한 내용은 [SQL Server 2017에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [SQL Server 2016에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [SQL Server 2014에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014), [SQL Server 2012에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali) 및 [SQL Server 2008에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#KJKatmai)을 참조하세요.
+> 주요 변경 내용에 대한 자세한 내용은 [SQL Server 2017에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md), [SQL Server 2016에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md), [SQL Server 2014에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014) 및 [SQL Server 2012에서 데이터베이스 엔진 기능에 대한 주요 변경 내용](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)을 참조하세요.
 
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>데이터베이스 호환성 수준 업그레이드 모범 사례
 
@@ -197,7 +197,7 @@ SELECT name, compatibility_level FROM sys.databases;
 
 |호환성 수준 설정 130 이하|호환성 수준 설정 140|
 |--------------------------------------------------|-----------------------------------------|
-|다중 문 테이블 반환 함수를 참조하는 명령문에 대한 카디널리티 예상치는 고정된 행 추측을 사용합니다.|다중 문 테이블 반환 함수를 참조하는 적절한 명령문에 대한 카디널리티 예상치는 함수 출력의 실제 카디널리티를 사용합니다. 다중 문 테이블 반환 함수에 대한 **인터리브 실행**을 통해 활성화됩니다.|
+|다중 문 테이블 반환 함수를 참조하는 문에 대한 카디널리티 예상치는 고정된 행 추측을 사용합니다.|다중 문 테이블 반환 함수를 참조하는 적절한 명령문에 대한 카디널리티 예상치는 함수 출력의 실제 카디널리티를 사용합니다. 다중 문 테이블 반환 함수에 대한 **인터리브 실행**을 통해 활성화됩니다.|
 |디스크에 대한 분산이 발생하는 부족한 메모리 부여 크기를 요청하는 일괄 처리 모드 쿼리는 연속 실행에 대한 문제가 지속될 수 있습니다.|디스크에 대한 분산이 발생하는 부족한 메모리 부여 크기를 요청하는 일괄 처리 모드 쿼리는 연속 실행에 대한 성능을 향상시킬 수 있습니다. 일괄 처리 모드 연산자에 대해 분산이 발생한 경우 캐시 계획의 메모리 부여 크기를 업데이트하는 **일괄 처리 모드 메모리 부여 피드백**을 통해 활성화됩니다. |
 |동시성 문제가 발생하는 과도한 메모리 부여 크기를 요청하는 일괄 처리 모드 쿼리는 연속 실행에 대한 문제가 지속될 수 있습니다.|동시성 문제가 발생하는 과도한 메모리 부여 크기를 요청하는 일괄 처리 모드 쿼리는 연속 실행에 대한 동시성을 향상시킬 수 있습니다. 과도한 양이 요청된 경우 캐시 계획의 메모리 부여 크기를 업데이트하는 **일괄 처리 모드 메모리 부여 피드백**을 통해 활성화됩니다.|
 |조인 연산자를 포함하는 일괄 처리 모드 쿼리는 중첩된 루프, 해시 조인 및 병합 조인을 포함하는 세 개의 물리적 조인 알고리즘에 적합합니다. 카디널리티 예측치가 조인 입력에 대해 잘못된 경우 부적절한 조인 알고리즘이 선택될 수 있습니다. 이 문제가 발생하는 경우 성능이 저하되고 부적절한 조인 알고리즘이 캐시 계획이 다시 컴파일될 때까지 사용 중으로 남아 있습니다.|**적응형 조인**이라는 추가 조인 연산자가 있습니다. 카디널리티 예측치가 외부 빌드 조인 입력에 대해 잘못된 경우 부적절한 조인 알고리즘이 선택될 수 있습니다. 이 문제가 발생하고 명령문이 적응형 조인에 대해 적합한 경우 더 작은 조인 입력에 중첩된 루프가 사용되고 다시 컴파일할 필요 없이 더 큰 조인 입력에 해시 조인이 동적으로 사용됩니다. |

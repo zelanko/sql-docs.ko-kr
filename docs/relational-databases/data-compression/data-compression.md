@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2370c428d063958079e749c792a60de3b7379ee3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 217ed3b61b3e4da943103f992340210ef8295bb0
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210532"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832938"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,10 +76,10 @@ columnstore 테이블 및 인덱스의 경우 모든 columnstore 테이블 및 �
 -   분할된 테이블에서 파티션의 압축 상태를 확인하려면 sys.partitions 카탈로그 뷰의 data_compression 열을 쿼리합니다.  
 -   인덱스를 압축하는 경우 리프 수준 페이지는 행 압축과 페이지 압축을 모두 사용하여 압축될 수 있습니다. 리프 수준이 아닌 페이지는 페이지 압축을 받지 않습니다.  
 -   큰 값 데이터 형식은 해당 크기 때문에 일반 행 데이터와 별도로 특수 용도 페이지에 저장되기도 합니다. 별도로 저장되는 데이터에는 데이터 압축을 사용할 수 없습니다.  
--   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 vardecimal 저장소 형식을 구현한 테이블을 업그레이드해도 해당 설정은 유지됩니다. vardecimal 스토리지 형식의 테이블에 행 압축을 적용할 수 있습니다. 그러나 행 압축이 vardecimal 스토리지 형식의 상위 집합이므로 vardecimal 스토리지 형식을 유지할 필요가 없습니다. vardecimal 스토리지 형식과 행 압축을 함께 사용해도 10진수 값이 추가로 압축되지 않습니다. vardecimal 스토리지 형식의 테이블에 페이지 압축을 적용할 수 있지만 vardecimal 스토리지 형식 열이 추가로 압축되지는 않습니다.  
+-   [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 vardecimal 스토리지 형식을 구현한 테이블을 업그레이드해도 해당 설정은 유지됩니다. vardecimal 스토리지 형식의 테이블에 행 압축을 적용할 수 있습니다. 그러나 행 압축이 vardecimal 스토리지 형식의 상위 집합이므로 vardecimal 스토리지 형식을 유지할 필요가 없습니다. vardecimal 스토리지 형식과 행 압축을 함께 사용해도 10진수 값이 추가로 압축되지 않습니다. vardecimal 스토리지 형식의 테이블에 페이지 압축을 적용할 수 있지만 vardecimal 스토리지 형식 열이 추가로 압축되지는 않습니다.  
   
     > [!NOTE]  
-    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 vardecimal 저장소 형식을 지원하지만 행 수준 압축으로 동일한 결과를 얻을 수 있으므로 vardecimal 저장소 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 vardecimal 스토리지 형식을 지원하지만 행 수준 압축으로 동일한 결과를 얻을 수 있으므로 vardecimal 스토리지 형식은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>Columnstore 및 Columnstore 보관 압축 사용  
   
@@ -139,7 +139,7 @@ REBUILD PARTITION = ALL WITH (
 -   [sys.indexes&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) - **type**과 **type_desc** 열에는 CLUSTERED COLUMNSTORE 및 NONCLUSTERED COLUMNSTORE가 포함됩니다.  
 -   [sys.partitions&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md) – **data_compression**과 **data_compression_desc** 열에는 COLUMNSTORE 및 COLUMNSTORE_ARCHIVE가 포함됩니다.  
   
-[sp_estimate_data_compression_savings&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 프로시저는 columnstore 인덱스에 적용되지 않습니다.  
+[sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) 프로시저는 columnstore 인덱스에도 적용할 수 있습니다.  
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>압축이 분할된 테이블 및 인덱스에 주는 영향  
  분할된 테이블 및 인덱스에서 데이터 압축을 사용할 때는 다음 사항을 고려해야 합니다.  
@@ -187,9 +187,9 @@ REBUILD PARTITION = ALL WITH (
 |게시자에서 모든 파티션이 압축된 경우 구독자에서 테이블을 압축하지만 파티션 구성표를 복제하지 않음|False|True|모든 파티션에서 압축을 사용할 수 있는지 확인합니다.<br /><br /> 테이블 수준에서 압축을 스크립팅합니다.|  
   
 ## <a name="how-compression-affects-other-sql-server-components"></a>압축이 다른 SQL Server 구성 요소에 주는 영향 
-**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
- 압축은 스토리지 엔진에서 발생하므로 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다른 구성 요소 대부분에 압축되지 않은 상태로 제공됩니다. 따라서 압축이 다른 구성 요소에 주는 영향은 다음으로 제한됩니다.  
+ 압축은 저장소 엔진에서 발생하므로 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다른 구성 요소 대부분에 압축되지 않은 상태로 제공됩니다. 따라서 압축이 다른 구성 요소에 주는 영향은 다음으로 제한됩니다.  
 -   대량 가져오기 및 내보내기 작업  
      데이터를 내보낼 때는 네이티브 형식으로 내보내더라도 데이터가 압축되지 않는 행 형식으로 출력됩니다. 따라서 내보낸 데이터 파일의 크기가 원본 데이터보다 훨씬 커질 수 있습니다.  
      데이터를 가져올 때는 대상 테이블이 압축을 사용하도록 설정된 경우 스토리지 엔진에서 데이터를 압축된 행 형식으로 변환합니다. 이로 인해 데이터를 압축되지 않은 테이블로 가져올 때보다 CPU 사용량이 증가할 수 있습니다.  

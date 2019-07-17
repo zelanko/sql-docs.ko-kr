@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 17879dc4c932ff127b858657a9af0aca340029b5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586175"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860516"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>전체 텍스트 검색에 사용할 동의어 사전 파일 구성 및 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "67586175"
 
 -   분음 부호 설정  
   
-     지정된 동의어 사전에 대해 모든 검색 패턴은 물결표( **~** ), 양음 악센트 표시( **?** ) 또는 움라우트( **?** ) 등의 분음 부호를 구분하거나 구분하지 않습니다(즉, *악센트 구분* 또는 *악센트 구분 안 함*). 예를 들어, 패턴 "caf?"를 전체 텍스트 쿼리에서 다른 패턴으로 바꾸도록 지정할 수 있습니다. 동의어 사전이 악센트를 구분하지 않으면 전체 텍스트 검색 시 "caf?" 및 "cafe" 패턴이 바뀝니다. 동의어 사전이 악센트를 구분하면 전체 텍스트 검색 시 "caf?" 패턴만 바뀝니다. 기본적으로 동의어 사전은 악센트를 구분하지 않습니다.  
+     지정된 동의어 사전에 대해 모든 검색 패턴은 물결표( **~** ), 양음 악센트 표시( **&acute;** ) 또는 움라우트( **&uml;** ) 등의 분음 부호를 구분하거나 구분하지 않습니다(즉, *악센트 구분* 또는 *악센트 구분 안 함*). 예를 들어 전체 텍스트 쿼리에서 “caf&eacute;” 패턴을 다른 패턴으로 바꾸도록 지정한다고 가정해 보겠습니다. 동의어 사전이 악센트를 구분하지 않으면 전체 텍스트 검색 시 “caf&eacute;” 및 “cafe” 패턴이 바뀝니다. 동의어 사전이 악센트를 구분하면 전체 텍스트 검색 시 “caf&eacute;” 패턴만 바뀝니다. 기본적으로 동의어 사전은 악센트를 구분하지 않습니다.  
   
 ##  <a name="initial_thesaurus_files"></a> 기본 동의어 사전 파일
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 지원되는 각 언어당 하나의 XML 동의어 사전 파일을 제공합니다. 이러한 파일은 기본적으로 비어 있습니다. 파일에는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 동의어 사전에 공통적인 최상위 XML 구조와 주석 처리된 예제 동의어 사전만 포함되어 있습니다.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 513f071a-d5e6-4ed5-acca-269bf76323c5
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d6daf0e74ff8c7a7c65441bc98afc9c47964ef0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cd8dfbd7aa4205424c45861f6ada1113f76d344e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029175"
 ---
 # <a name="edit-type-mapping-sybasetosql"></a>형식 매핑 편집(SybaseToSQL)
 합니다 **형식 매핑 편집** 대화 상자를 사용 하면 원본 및 대상 데이터베이스 개체 간의 형식이 매핑되는 방법을 지정 합니다.  
@@ -34,7 +33,7 @@ ms.locfileid: "62633028"
   
 데이터 형식은 가변 길이의 경우 다음 필드를 아래의 나타납니다 **원본 유형**:  
   
-**보낸 사람**  
+**From**  
 이 매핑에 대 한 최소 길이 지정 합니다. 예를 들어 합니다 **nchar** 데이터 형식에서 시작 하는 범위에 대 한이 매핑 임을 지정 하려면 10을 입력할 수 있습니다 **nchar(10)** 합니다.  
   
 **수행할 작업**  

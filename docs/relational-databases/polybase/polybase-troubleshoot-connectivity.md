@@ -2,22 +2,21 @@
 title: PolyBase Kerberos 연결 문제 해결 | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: craigg
 ms.technology: polybase
-ms.custom: ''
 ms.devlang: ''
 ms.topic: conceptual
 ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 626d188dca3a013cba246f54523aa4fe9532815d
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 58725a5f0ebf3038bd95be410ae6b1db8de01845
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581223"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860563"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos 연결 문제 해결
 
@@ -106,7 +105,7 @@ PolyBase에는 Hadoop 클러스터의 속성이 포함된 다음과 같은 구�
 | Name Node Port  | 이름 노드의 포트입니다. CREATE EXTERNAL DATA SOURCE T-SQL의 "LOCATION" 인수를 가리킵니다. 예: 8020 |
 | Service Principal  | KDC의 관리 서비스 사용자입니다. `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "IDENTITY" 인수와 일치합니다.|
 | Service Password  | 암호를 콘솔에 입력하는 대신 파일에 저장하고 여기에 파일 경로를 전달합니다. 파일의 내용이 `CREATE DATABASE SCOPED CREDENTIAL` T-SQL에서 "SECRET" 인수로 사용하는 내용과 일치해야 합니다. |
-| *원격 HDFS 파일 경로(선택 사항) * | 액세스할 기존 파일의 경로입니다. 지정하지 않으면 루트 “/”가 사용됩니다. |
+| *원격 HDFS 파일 경로(선택 사항)* | 액세스할 기존 파일의 경로입니다. 지정하지 않으면 루트 “/”가 사용됩니다. |
 
 ## <a name="example"></a>예제
 

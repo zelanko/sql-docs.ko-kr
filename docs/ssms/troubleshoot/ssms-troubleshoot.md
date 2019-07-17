@@ -11,18 +11,20 @@ ms.author: maghan
 manager: jroth
 ms.custom: ''
 ms.date: 07/01/2019
-ms.openlocfilehash: 424b0863da9d0d2cfb56676bed5c368efc4d9349
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 41f140a00669e1b5809b83b369f86ba8b277a37e
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67501190"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716765"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>SSMS(SQL Server Management Studio) 충돌이 발생한 후 진단 데이터 가져오기
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)
 
-## <a name="get-full-memory-dump-of-sql-server-management-studio-ssms-when-it-hangs-or-crashes"></a>중단되거나 충돌할 때 SSMS(SQL Server Management Studio)의 전체 메모리 덤프 가져오기
+## <a name="get-full-memory-dump-after-a-hang-or-crash"></a>중단 또는 충돌 후 전체 메모리 덤프 가져오기
+
+중단되거나 충돌할 때 SSMS(SQL Server Management Studio)의 전체 메모리 덤프를 가져옵니다.
 
 SSMS의 충돌 또는 중단 문제를 해결하기 위한 진단 정보를 캡처하려면 아래 단계를 따르세요.
 
@@ -53,7 +55,9 @@ SSMS의 충돌 또는 중단 문제를 해결하기 위한 진단 정보를 캡�
 
 9. Zip up the folder
 
-## Get full memory dump of SSMS when it throws an OutOfMemoryException
+## Get full memory dump for an OutOfMemoryException
+
+Get a full memory dump of SSMS when it throws an OutOfMemoryException.
 
 You can get a full memory dump with any managed exception.
 

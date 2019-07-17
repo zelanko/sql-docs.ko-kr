@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Management Studio
 - source controls [SQL Server Management Studio], tutorials
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 30b40d10ec7a4da7df0bfc9e4ba1f3aa6bb68ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a634a106704cebd91ce74910de17166c85c6c4de
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822945"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866266"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>SQL Server Management Studio에서 템플릿 사용
 
@@ -35,8 +35,9 @@ ms.locfileid: "66822945"
 
 이 자습서를 완료하려면 SQL Server Management Studio 및 SQL Server에 대한 액세스 권한이 필요합니다.
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
-- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
+* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
+
+* [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
 
 ## <a name="use-template-browser"></a>템플릿 탐색기 사용
 
@@ -108,15 +109,17 @@ ms.locfileid: "66822945"
 
 5. 만든 템플릿을 마우스 오른쪽 단추로 클릭한 다음, **편집**을 선택합니다. 새 쿼리 창이 열립니다.
 
-6. 저장하려는 T-SQL 텍스트를 입력합니다. 
+6. 저장하려는 T-SQL 텍스트를 입력합니다.
 
 7. **파일** 메뉴에서 **저장**을 선택합니다.
 
-8. 기존 쿼리 창을 닫은 다음, 새 사용자 지정 템플릿을 엽니다. 
+8. 기존 쿼리 창을 닫은 다음, 새 사용자 지정 템플릿을 엽니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-다음 아티클에서는 SQL Server Management Studio를 사용하기 위한 추가 팁과 요령을 제공합니다. 
+실습을 통해 SSMS에 익숙해지는 것이 가장 좋습니다. 이러한 *자습서* 및 *방법* 문서에서는 SSMS 내에서 사용할 수 있는 다양한 기능에 관해 도움을 얻을 수 있습니다.  이러한 문서에서는 SSMS의 구성 요소를 관리하는 방법과 정기적으로 사용하는 기능을 찾는 방법을 알아봅니다.
 
-> [!div class="nextstepaction"]
-> [SSMS 사용을 위한 추가 팁과 요령](../tutorials/ssms-tricks.md)
+* [인스턴스에 연결 및 쿼리](../tutorials/connect-query-sql-server.md)
+* [스크립팅](../tutorials/scripting-ssms.md)
+* [SSMS 구성](../tutorials/ssms-configuration.md)
+* [SSMS 사용을 위한 추가 팁과 요령](../tutorials/ssms-tricks.md)

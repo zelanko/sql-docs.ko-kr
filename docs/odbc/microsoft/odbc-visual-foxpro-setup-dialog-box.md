@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35e9da17a9c3980470cfd3dcbb22b4069afec640
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9aa8954cd42ac715b3e6e67e0b0add69d07a570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915659"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>ODBC Visual FoxPro 설치 대화 상자
 합니다 **ODBC Visual FoxPro 설치** 대화 상자에서는 추가 하거나 Visual FoxPro 데이터 원본을 변경할 수 있습니다.  
@@ -56,7 +55,7 @@ ms.locfileid: "63233584"
  **정렬 순서**  
  필드 정렬 되는 시퀀스입니다. 기본 순서는 운영 체제의 언어 버전에서 지원 되는 시퀀스를 반영 합니다. 지원 되는 데이터 정렬 시퀀스의 목록을 참조 하세요 [COLLATE 설정](../../odbc/microsoft/set-collate-command.md)합니다.  
   
- **단독**  
+ **전용**  
  이 확인란을 선택 하면 드라이버는 데이터 소스를 사용 하 여 데이터를 액세스 하는 경우에 Visual FoxPro 데이터베이스를 엽니다. 다른 사용자 데이터베이스는 단독으로 열려 있는 동안 데이터베이스 또는 데이터베이스의 테이블을 액세스할 수 없습니다. 단독으로 열려 데이터베이스 내의 테이블이 SHARED로 열립니다. 닫도록 테이블을 사용 합니다 [전용 설정](../../odbc/microsoft/set-exclusive-command.md) 명령입니다. 이 확인란이 비활성화 되어 때 **데이터베이스 유형** 로 설정 된 **무료 테이블 디렉터리**합니다.  
   
  **Null**  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975164"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178508"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>배포 유틸리티를 사용하여 모델 솔루션 배포
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -59,7 +59,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  **/d** 인수는 출력 모드에서만 사용됩니다. 응답 모드나 자동 모드에서는 이 인수를 지정해도 무시됩니다. 모드에 대한 자세한 내용은 이 항목 뒷부분에 나오는 [모드](#Modes)섹션을 참조하십시오.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **Microsoft.AnalysisServices.Deployment** 유틸리티에서는 개체 정의, 배포 대상, 배포 옵션 및 구성 설정을 제공하는 일련의 파일을 사용하며 지정된 배포 옵션 및 구성 설정을 사용하여 지정된 배포 대상으로 개체 정의를 배포하려고 시도합니다. 이 유틸리티는 응답 파일이나 출력 모드에서 호출될 경우 사용자 인터페이스를 제공할 수 있습니다. 이 유틸리티에 제공된 사용자 인터페이스를 사용하여 응답 파일을 만드는 방법은 [배포 마법사를 사용하여 모델 솔루션 배포](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md)를 참조하세요.  
   
  유틸리티는 \Program files (x86) \Microsoft SQL Server\140\Binn\ManagementStudio 폴더에 있습니다.  
@@ -67,7 +67,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ##  <a name="Modes"></a> 모드  
  다음 표에 나열된 모드에서 유틸리티를 실행할 수 있습니다.  
   
-|모드|Description|  
+|모드|설명|  
 |----------|-----------------|  
 |자동 모드|사용자 인터페이스는 표시되지 않으며 배포에 필요한 모든 정보는 입력 파일에서 제공됩니다. 자동 모드에서 실행되는 유틸리티는 진행률을 표시하지 않습니다. 대신 나중에 검토할 수 있도록 로그 파일(옵션)을 사용하여 진행률 및 오류 정보를 캡처할 수 있습니다.|  
 |응답 모드|배포 마법사 사용자 인터페이스가 표시되며 사용자 응답은 나중에 배포할 때 사용할 수 있도록 지정된 입력 파일에 저장됩니다. 응답 모드에서는 배포가 이루어지지 않습니다. 응답 모드는 사용자 응답 캡처 전용 모드입니다.|  

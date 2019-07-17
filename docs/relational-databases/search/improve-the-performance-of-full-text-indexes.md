@@ -18,12 +18,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a38cad4af807d5d9d7a64e6ca45a4fdfa0df77c7
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6d3abb2fe6d16b89ce80b50c5e33d397d1c38403
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973582"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652817"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,11 +133,11 @@ ms.locfileid: "57973582"
   
 |플랫폼|fdhost.exe에 필요한 예상 메모리(MB) - *F*^1|max server memory 계산 수식 - *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *탐색 범위 수* * 50|*M* =minimum(*T*, 2000) - F - 500|  
-|x64|*F* = *탐색 범위 수* * 10 * 8|*M* = *T* - *F* - 500|  
+|x86|*F* = *탐색 범위 수* \* 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = *탐색 범위 수* \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **수식 관련 참고 사항**
-1.  여러 전체 채우기가 진행 중인 경우 *F1*, *F2*와 같이 각 채우기 작업에 대한 fdhost.exe 메모리 요구 사항을 개별적으로 계산합니다. 그런 다음, *M*을 _T_**-** sigma **(**_F_i **)** 로 계산합니다.  
+1.  여러 전체 채우기가 진행 중인 경우 *F1*, *F2*와 같이 각 채우기 작업에 대한 fdhost.exe 메모리 요구 사항을 개별적으로 계산합니다. 그런 다음, *M*을 _T_ **-** sigma **(** _F_i **)** 로 계산합니다.  
 2.  500MB는 시스템의 다른 프로세스에 필요한 예상 메모리 양입니다. 시스템이 추가 작업을 수행 중인 경우 그에 따라 이 값을 늘리십시오.  
 3.  를 참조하세요.*ism_size* 는 x64 플랫폼의 경우 8MB로 가정합니다.  
   

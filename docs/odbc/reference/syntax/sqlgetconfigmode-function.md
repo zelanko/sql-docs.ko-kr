@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7d9065d48e8b4af686e1ff64272fbe902e066cb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14fb43015db9113262320f78f0bae53f8a168f95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044547"
 ---
 # <a name="sqlgetconfigmode-function"></a>SQLGetConfigMode 함수
 **규칙**  
@@ -58,7 +57,7 @@ BOOL SQLGetConfigMode(
 ## <a name="diagnostics"></a>진단  
  때 **SQLGetConfigMode** 연결 된 FALSE를 반환  *\*pfErrorCode* 호출 하 여 값을 얻을 수 있습니다 **SQLInstallerError**합니다. 다음 표에서  *\*pfErrorCode* 에서 반환 될 수 있는 값 **SQLInstallerError** 이 함수의 컨텍스트에서 각각 설명 합니다.  
   
-|*\*pfErrorCode*|Error|Description|  
+|*\*pfErrorCode*|오류|설명|  
 |---------------------|-----------|-----------------|  
 |ODBC_ERROR_OUT_OF_MEM|메모리가 부족합니다.|설치 관리자의 메모리 부족으로 인해 함수를 수행할 수 있습니다.|  
   

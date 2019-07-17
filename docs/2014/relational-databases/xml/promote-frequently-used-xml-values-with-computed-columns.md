@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5b2d167ca9bb2f5a39802bacceb3dd0eb3c96d5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533315"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195578"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>계산 열을 사용하여 자주 사용되는 XML 값 승격
   쿼리가 주로 적은 수의 요소 및 특성 값으로 작성된 경우 이러한 수량을 관계형 열로 승격시킬 수 있습니다. 이 방식은 전체 XML 인스턴스를 검색하는 동안 XML 데이터의 일부에 대해서 쿼리가 실행된 경우에 유용합니다. XML 열에 XML 인덱스를 만들 필요는 없습니다. 대신 승격된 열을 인덱싱할 수 있습니다. 승격된 열을 사용하도록 쿼리를 작성해야 합니다. 즉, 쿼리 최적화 프로그램은 XML 열에 있는 쿼리를 승격된 열로 다시 대상화하지 않습니다.  
@@ -78,7 +78,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   속성 테이블을 유지 관리하기 위해 XML 열에 트리거를 만듭니다. 트리거 내에서 다음 중 하나를 수행합니다.  
   
-    -   사용 하 여 `xml` 와 같은 데이터 형식 메서드를 **nodes ()** 하 고 **value ()**, 삽입 하 고 속성 테이블의 행을 삭제 합니다.  
+    -   사용 하 여 `xml` 와 같은 데이터 형식 메서드를 **nodes ()** 하 고 **value ()** , 삽입 하 고 속성 테이블의 행을 삭제 합니다.  
   
     -   속성 테이블의 행을 삽입 및 삭제하기 위해 CLR(공용 언어 런타임)에 스트리밍 테이블 반환 함수를 만듭니다.  
   

@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bc244667df41f625084c9d436d30652491e4b3dc
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503069"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210181"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Microsoft 연결 규칙 뷰어를 사용하여 모델 찾아보기
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 규칙 뷰어에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘을 사용하여 작성된 마이닝 모델이 표시됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 장바구니 분석에 사용할 수 있는 데이터 마이닝 모델을 만드는 데 사용하는 연결 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)를 참조하십시오.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 연결 규칙 뷰어에는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘을 사용하여 작성된 마이닝 모델이 표시됩니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘은 장바구니 분석에 사용할 수 있는 데이터 마이닝 모델을 만드는 데 사용하는 연결 알고리즘입니다. 이 알고리즘에 대한 자세한 내용은 [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)를 참조하십시오.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 연결 알고리즘을 사용하는 주된 이유는 다음과 같습니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "52503069"
  각 탭에는 **긴 이름 표시** 확인란이 있으며 이 확인란을 사용하여 규칙 또는 항목 집합에서 항목 집합이 만들어진 테이블을 표시 또는 숨길 수 있습니다.  
   
 ###  <a name="BKMK_Itemsets"></a> 항목 집합  
- **항목 집합** 탭에서는 함께 자주 발견되는 항목 집합 목록을 표시합니다. 이 탭에는 **지원**하십시오 **크기**, 및 **항목 집합**합니다. 지원에 대한 자세한 내용은 [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)을 참조하십시오. **크기** 열에서는 항목 집합에 있는 항목 수를 표시합니다. **항목 집합** 열에서는 모델이 검색한 실제 항목 집합을 표시합니다. **표시** 목록에서 다음 옵션을 설정하여 항목 집합의 형식을 제어할 수 있습니다.  
+ **항목 집합** 탭에서는 함께 자주 발견되는 항목 집합 목록을 표시합니다. 다음 열이 있는 표를 표시 하는 탭 합니다. **지원**하십시오 **크기**, 및 **항목 집합**합니다. 지원에 대한 자세한 내용은 [Microsoft Association Algorithm](../../analysis-services/data-mining/microsoft-association-algorithm.md)을 참조하십시오. **크기** 열에서는 항목 집합에 있는 항목 수를 표시합니다. **항목 집합** 열에서는 모델이 검색한 실제 항목 집합을 표시합니다. **표시** 목록에서 다음 옵션을 설정하여 항목 집합의 형식을 제어할 수 있습니다.  
   
 -   **특성 이름 및 값 표시**  
   

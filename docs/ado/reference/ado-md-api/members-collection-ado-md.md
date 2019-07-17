@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e7f2221f511d48acc68c379dce72e7708819b1aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79394abee5b12bb10f34a34e882d2ac0562722fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709040"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949439"
 ---
 # <a name="members-collection-ado-md"></a>Members 컬렉션(ADO MD)
 포함 된 [멤버](../../../ado/reference/ado-md-api/member-object-ado-md.md) 수준 또는 축 따라 위치에서 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  A **멤버** 컬렉션은 다음 형식의 멤버도 포함 됩니다.  
   
 -   큐브의 수준을 구성 하는 멤버입니다. 에 포함 된 이러한 합니다 **멤버** 의 컬렉션을 [수준](../../../ado/reference/ado-md-api/level-object-ado-md.md) 개체입니다. 예를 들어, 샘플을 사용 하 여 [다차원 스키마의 개요 및 데이터](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md), 캐나다, 미국, 영국 및 독일 국가 수준의 네 가지 멤버 됩니다.  

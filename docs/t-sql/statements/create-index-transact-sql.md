@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6ca14f18b89093db5ad3c6b86a381eebcd2fad5
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 195f7d0f298d191845a65864e752ab9a4dea5d06
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500236"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652790"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 
@@ -734,7 +734,7 @@ DROP_EXISTING 절을 사용하여 인덱스 다시 작성, 열 추가 또는 삭
 - 온라인 인덱스 생성은 `RESUMABLE = ON` 옵션을 사용하여 resumable로 지정됩니다.
 - RESUMABLE 옵션은 지정된 인덱스에 대해 메타데이터에서 지속되며 현재 DDL 문의 기간에만 적용됩니다. 그러므로 다시 시작이 가능하도록 하려면 `RESUMABLE = ON` 절을 명시적으로 지정해야 합니다.
 - MAX_DURATION 옵션은 `RESUMABLE = ON` 옵션에만 지원됩니다.
-- RESUMABLE에 대한 MAX_DURATION은 인덱스 작성 시간 간격을 지정합니다. 이 시간이 사용된 후 인덱스 다시 작성이 일시 중지되거나 실행이 완료됩니다. 사용자는 일시 중지된 인덱스의 작성을 다시 시작할 시간을 결정합니다. MAX_DURATION에 대한 분 단위의 **시간**은 0분보다 크거나 1주일(7 * 24 * 60 = 10080분) 이하여야 합니다. 원래 인덱스와 새로 만든 인덱스 두 인덱스가 모두 디스크 공간을 필요로 하고 DML 작업 중에 업데이트되어야 하므로, 인덱스 작업을 오랫동안 일시 중지하면 특정 테이블에 대한 DML 성능 및 데이터베이스 디스크 용량에 영향을 미칠 수 있습니다. MAX_DURATION 옵션을 생략하면 인덱스 작업은 완료될 때까지 또는 실패가 발생할 때까지 계속됩니다.
+- RESUMABLE에 대한 MAX_DURATION은 인덱스 작성 시간 간격을 지정합니다. 이 시간이 사용된 후 인덱스 다시 작성이 일시 중지되거나 실행이 완료됩니다. 사용자는 일시 중지된 인덱스의 작성을 다시 시작할 시간을 결정합니다. MAX_DURATION에 대한 분 단위의 **시간**은 0분보다 크거나 1주일(7 \* 24 \* 60 = 10080분) 이하여야 합니다. 원래 인덱스와 새로 만든 인덱스 두 인덱스가 모두 디스크 공간을 필요로 하고 DML 작업 중에 업데이트되어야 하므로, 인덱스 작업을 오랫동안 일시 중지하면 특정 테이블에 대한 DML 성능 및 데이터베이스 디스크 용량에 영향을 미칠 수 있습니다. MAX_DURATION 옵션을 생략하면 인덱스 작업은 완료될 때까지 또는 실패가 발생할 때까지 계속됩니다.
 - 인덱스 작업을 즉시 일시 중지하려면 진행 중인 명령을 중지하거나(Ctrl-C) [ALTER INDEX](alter-index-transact-sql.md) PAUSE 명령을 실행하거나 `KILL <session_id>` 명령을 실행합니다. 명령이 일시 중지되면 [ALTER INDEX](alter-index-transact-sql.md) 명령을 사용하여 다시 시작할 수 있습니다.
 - 다시 시작 가능한 인덱스의 원래 CREATE INDEX 문을 다시 실행하면 일시 중지된 인덱스 작성 작업이 자동으로 다시 시작됩니다.
 - 다시 시작 가능한 인덱스의 경우 `SORT_IN_TEMPDB = ON` 옵션이 지원되지 않습니다.

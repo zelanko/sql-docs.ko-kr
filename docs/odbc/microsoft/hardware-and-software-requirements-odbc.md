@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6df2e9cd-de10-4629-97bd-32f2782616c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b3f40621645aad2d1e52cb0a89baa8ff29b01446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c09ddcac1409da08fedeaf946ac7fb9f6ef668e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952449"
 ---
 # <a name="hardware-and-software-requirements-odbc"></a>하드웨어 및 소프트웨어 요구 사항(ODBC)
 이 항목에서는 ODBC 데스크톱 데이터베이스 드라이버를 사용 하 여 요구 사항을 나열 합니다.  

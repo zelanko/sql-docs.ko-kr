@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 674a785d0e5d3dd6b847c8f26701ad0ce48e2d20
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c5af94179548923fa29344e3861f91dd0e201b79
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582517"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860506"
 ---
 # <a name="configure-web-synchronization"></a>웹 동기화 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,7 +138,7 @@ ms.locfileid: "67582517"
   
 -   많은 양의 데이터를 복제하는 경우 병합 에이전트 일괄 처리 크기를 조정해야 합니다.  
   
- 병합 복제를 위한 일괄 처리 크기는 아티클 단위의 변경 내용 컬렉션인 *세대*로 측정됩니다. 일괄 처리에 포함되는 세대의 수는 병합 에이전트의 ?**DownloadGenerationsPerBatch** 및 ?**UploadGenerationsPerBatch** 매개 변수를 사용하여 지정됩니다. 자세한 내용은 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)을(를) 참조하세요.  
+ 병합 복제를 위한 일괄 처리 크기는 아티클 단위의 변경 내용 컬렉션인 *세대*로 측정됩니다. 일괄 처리에 포함되는 세대의 수는 병합 에이전트의 -**DownloadGenerationsPerBatch** 및 -**UploadGenerationsPerBatch** 매개 변수를 사용하여 지정됩니다. 자세한 내용은 [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md)을(를) 참조하세요.  
   
  데이터의 양이 많은 경우 각 일괄 처리 매개 변수에 작은 수를 지정하십시오. 10부터 시작한 다음 애플리케이션 요구 사항과 성능에 따라 조정하는 것이 좋습니다. 일반적으로 이러한 매개 변수는 에이전트 프로필에 지정됩니다. 프로필에 대한 자세한 내용은 [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md)을 참조하십시오.  
   

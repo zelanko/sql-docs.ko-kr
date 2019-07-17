@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7bfabe4d-9f4c-4bc9-b998-93bd2b50ee8a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 717b2171b535405cc0bc075ceafd50107fb68bed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e3787429a4652e1893f56e0a8a4f33d9e72ba84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62943119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097957"
 ---
 # <a name="smo-object-model-namespaces"></a>SMO 개체 모델 네임스페이스
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "62943119"
 ## <a name="namespaces"></a>네임스페이스  
  SMO 네임스페이스는 다음과 같습니다.  
   
-|클래스|기능|  
+|클래스|함수|  
 |-----------|--------------|  
 |<xref:Microsoft.SqlServer.Management.Smo>|인스턴스 클래스, 유틸리티 클래스 및 프로그래밍 방식으로 조작 하는 데 사용 되는 열거형을 포함 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.|  
 |<xref:Microsoft.SqlServer.Management.Common>|연결 클래스와 같이 RMO(복제 관리 개체)와 SMO에 공통되는 클래스를 포함합니다.|  

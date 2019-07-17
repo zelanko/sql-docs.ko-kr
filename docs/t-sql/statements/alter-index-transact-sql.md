@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 758c6524e124557083fc61af234283b567633a7b
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: af5142fe96cc26bd18f71f8a67a7856950b966b4
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388849"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652706"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -728,7 +728,7 @@ ALLOW_ROW_LOCKS = OFF이고 ALLOW_PAGE_LOCK = OFF이면 인덱스에 액세스�
 온라인 인덱스 다시 작성은 RESUMABLE=ON 옵션을 사용하여 다시 시작 가능한 것으로 지정됩니다. 
 -  RESUMABLE 옵션은 지정된 인덱스에 대해 메타데이터에서 지속되며 현재 DDL 문의 기간에만 적용됩니다. 그러므로 다시 시작이 가능하도록 하려면 RESUMABLE=ON 절을 명시적으로 지정해야 합니다.
 -  MAX_DURATION 옵션은 RESUMABLE = ON 옵션 또는 **low_priority_lock_wait** 인수 옵션에 대해 지원됩니다. 
-   -  RESUMABLE에 대한 MAX_DURATION은 다시 작성하는 인덱스의 시간 간격을 지정합니다. 이 시간이 사용된 후 인덱스 다시 작성이 일시 중지되거나 그 실행이 완료됩니다. 사용자는 일시 중지된 인덱스에 대한 다시 작성이 다시 시작될 수 있는 시기를 결정합니다. MAX_DURATION에 대한 분 단위의 **시간**은 0분보다 크거나 1주일(7 * 24 * 60 = 10080분) 이하여야 합니다. 원래 인덱스와 새로 만든 인덱스 두 인덱스가 모두 디스크 공간을 필요로 하고 DML 작업 중에 업데이트되어야 하므로, 인덱스 작업을 오랫동안 일시 중지하면 특정 테이블에 대한 DML 성능 및 데이터베이스 디스크 용량에 영향을 미칠 수 있습니다. MAX_DURATION 옵션을 생략하면 인덱스 작업은 완료될 때까지 또는 실패가 발생할 때까지 계속됩니다. 
+   -  RESUMABLE에 대한 MAX_DURATION은 다시 작성하는 인덱스의 시간 간격을 지정합니다. 이 시간이 사용된 후 인덱스 다시 작성이 일시 중지되거나 그 실행이 완료됩니다. 사용자는 일시 중지된 인덱스에 대한 다시 작성이 다시 시작될 수 있는 시기를 결정합니다. MAX_DURATION에 대한 분 단위의 **시간**은 0분보다 크거나 1주일(7 \* 24 \* 60 = 10080분) 이하여야 합니다. 원래 인덱스와 새로 만든 인덱스 두 인덱스가 모두 디스크 공간을 필요로 하고 DML 작업 중에 업데이트되어야 하므로, 인덱스 작업을 오랫동안 일시 중지하면 특정 테이블에 대한 DML 성능 및 데이터베이스 디스크 용량에 영향을 미칠 수 있습니다. MAX_DURATION 옵션을 생략하면 인덱스 작업은 완료될 때까지 또는 실패가 발생할 때까지 계속됩니다. 
    -  \<low_priority_lock_wait> 인수 옵션을 사용하면 인덱스 작업이 SCH-M 잠금에 대해 차단될 경우 계속할 수 있는 방법을 결정할 수 있습니다.
  
 -  같은 매개 변수를 지정하고 원본 ALTER INDEX REBUILD 문을 다시 실행하면 일시 중지된 인덱스 다시 작성 작업이 다시 시작됩니다. 또한 ALTER INDEX RESUME 문을 실행하여 일시 중지된 인덱스 다시 작성 작업을 다시 시작할 수도 있습니다.

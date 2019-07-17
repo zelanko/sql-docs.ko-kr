@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio를 사용하기 위한 추가 팁과 요령
-description: SSMS 사용에 대한 추가 팁과 요령을 다루는 자습서입니다.
+title: SSMS(SQL Server Management Studio)를 사용하기 위한 팁과 요령
+description: 코드를 주석 처리하거나 주석 처리를 제거하고, 텍스트를 들여쓰고, 개체 탐색기에서 개체를 필터링하고, SQL Server 오류 로그에 액세스하고, SQL Server Management Studio를 사용하여 SQL Server 인스턴스 이름을 찾는 방법을 알아봅니다.
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -8,7 +8,7 @@ ms.prod_service: sql-tools
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
 - Help [SQL Server], SQL Server Management Studio
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 4c6585e8e2c467c6e0a4a288107fd59cae64f84b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c31c8243ef74b69a5fe050e5487911138db76741
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499417"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860653"
 ---
-# <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>자습서: SSMS 사용을 위한 추가 팁과 요령
+# <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하기 위한 팁과 요령
 
-이 자습서에서는 SSMS(SQL Server Management Studio)를 사용하기 위한 몇 가지 추가 요령을 제공합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다. 
+이 문서에서는 SSMS(SQL Server Management Studio)를 사용하기 위한 몇 가지 팁과 요령을 제공합니다. 이 아티클에서는 다음을 수행하는 방법을 보여줍니다. 
 
 > [!div class="checklist"]
 > * T-SQL(Transact-SQL) 텍스트 주석 처리/주석 처리 제거
@@ -40,7 +40,7 @@ ms.locfileid: "66499417"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 자습서를 완료하려면 SQL Server Management Studio, SQL Server에 대한 액세스 및 AdventureWorks 데이터베이스가 필요합니다. 
+이 문서에 제공된 단계를 테스트하려면 SQL Server Management Studio, SQL Server 액세스 및 AdventureWorks 데이터베이스가 필요합니다. 
 
 * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 설치합니다.
 * [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads)을 설치합니다.
@@ -267,7 +267,7 @@ SQL Server에 연결된 경우 세 개의 위치에서 서버 이름을 찾을 �
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>별칭 또는 가용성 그룹 수신기에 연결된 경우
 
-별칭 또는 가용성 그룹 수신기에 연결된 경우 해당 정보가 개체 탐색기 및 속성에 표시됩니다. 이 경우에 SQL Server 이름을 즉시 확인할 수 없으며 쿼리해야 합니다. 
+별칭 또는 가용성 그룹 수신기에 연결된 경우 해당 정보가 개체 탐색기 및 속성에 표시됩니다. 이 경우에 SQL Server 이름을 즉시 확인할 수 없으며 쿼리해야 합니다.
 
 1. SQL Server에 연결합니다.
 
@@ -282,3 +282,12 @@ SQL Server에 연결된 경우 세 개의 위치에서 서버 이름을 찾을 �
 4. 연결된 SQL Server 인스턴스의 이름을 식별하려면 쿼리의 결과를 봅니다. 
 
     ![SQL Server 이름 쿼리](media/ssms-tricks/queryservername.png)
+
+## <a name="next-steps"></a>다음 단계
+
+실습을 통해 SSMS에 익숙해지는 것이 가장 좋습니다. 이러한 *자습서* 및 *방법* 문서에서는 SSMS 내에서 사용할 수 있는 다양한 기능에 관해 도움을 얻을 수 있습니다.  이러한 문서에서는 SSMS의 구성 요소를 관리하는 방법과 정기적으로 사용하는 기능을 찾는 방법을 알아봅니다.
+
+* [인스턴스에 연결 및 쿼리](connect-query-sql-server.md)
+* [스크립팅](scripting-ssms.md)
+* [SSMS에서 템플릿 사용](../template/templates-ssms.md)
+* [SSMS 구성](ssms-configuration.md)

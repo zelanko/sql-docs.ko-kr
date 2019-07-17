@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5e8fbbfe1aaf7c97a5739768413cdc04644be6a6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072650"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162506"
 ---
 # <a name="tabular-model-partitions"></a>테이블 형식 모델 파티션 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -74,7 +74,7 @@ Analysis Services 처리 성능이 향상 두 개 이상의 파티션이 있는 
 ##  <a name="bkmk_process_partitions"></a> 파티션 처리  
  **의** 파티션 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 대화 상자 또는 스크립트를 사용하여 파티션을 다른 파티션과 별개로 처리(새로 고침)할 수 있습니다. 처리 옵션은 다음과 같습니다.  
   
-|모드|Description|  
+|모드|설명|  
 |----------|-----------------|  
 |기본값 처리|파티션 개체의 처리 상태를 검색하고 필요한 처리를 수행하여 처리되지 않거나 부분적으로 처리된 파티션 개체를 완전히 처리된 상태로 전달합니다. 빈 테이블 및 파티션에 대한 데이터를 로드하고 계층, 계산 열 및 관계를 작성 또는 다시 작성합니다.|  
 |전체 처리|파티션 개체와 여기에 포함된 모든 개체를 처리합니다. 이미 처리된 개체에 대해 전체 처리를 실행하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 개체의 모든 데이터를 삭제한 다음 개체를 처리합니다. 개체에 구조적 변경이 발생한 경우 이러한 종류의 처리가 필요합니다.|  
@@ -82,9 +82,9 @@ Analysis Services 처리 성능이 향상 두 개 이상의 파티션이 있는 
 |지우기 처리|파티션에서 모든 데이터를 제거합니다.|  
 |증분 처리|새 데이터로 파티션을 증분 업데이트합니다.|  
   
-##  <a name="bkmk_related_tasks"></a> 관련 작업  
+##  <a name="bkmk_related_tasks"></a> 관련 태스크  
   
-|태스크|Description|  
+|태스크|설명|  
 |----------|-----------------|  
 |[테이블 형식 모델 파티션 만들기 및 관리](../../analysis-services/tabular-models/create-and-manage-tabular-model-partitions-ssas-tabular.md)|배포된 테이블 형식 모델에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 파티션을 만들고 관리하는 방법에 대해 설명합니다.|  
 |[테이블 형식 모델 파티션 처리](../../analysis-services/tabular-models/process-tabular-model-partitions-ssas-tabular.md)|배포된 테이블 형식 모델에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 파티션을 처리하는 방법에 대해 설명합니다.|  

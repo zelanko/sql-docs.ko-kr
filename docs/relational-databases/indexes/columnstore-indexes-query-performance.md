@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8cd9f4e066096bcffa5181e112710fb1c4e2d17
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: f3dca7f9498ae10d67fd804d6ce0e4a33f99584e
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583215"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860715"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore 인덱스 쿼리 성능
 
@@ -92,7 +92,7 @@ ms.locfileid: "67583215"
     
  일부 쿼리 실행 연산자는 일괄 처리 모드에서 실행할 수 없습니다. 예를 들어 Insert, Delete 또는 Update와 같은 DML 작업은 한 번에 행에서 실행됩니다. 일괄 처리 모드 연산자는 쿼리 성능 속도 향상을 위해 Scan, Join, Aggregate, Sort 등과 같은 연산자를 대상으로 합니다. Columnstore 인덱스는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서 처음으로 사용되었으므로 일괄 처리 모드로 실행할 수 있는 연산자를 지속적으로 확장하려고 노력합니다. 다음 표에서 제품 버전에 따라 일괄 처리 모드로 실행되는 연산자를 보여 줍니다.    
     
-|일괄 처리 모드 연산자|언제 사용하나요?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]란?|주석|    
+|일괄 처리 모드 연산자|언제 사용하나요?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|주석|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML 작업(insert, delete, update, merge)||아니요|아니요|아니요|DML 병렬이 아니므로 일괄 처리 모드 작업이 아닙니다. 직렬 모드 일괄 처리를 사용하도록 설정하더라도 DML을 일괄 처리 모드로 처리함으로써 크게 향상되는 것은 없습니다.|    
 |Columnstore 인덱스 검색|SCAN|NA|예|예|Columnstore 인덱스에서 조건자를 SCAN 노드로 푸시할 수 있습니다.|    
@@ -111,7 +111,7 @@ ms.locfileid: "67583215"
 |위쪽 정렬||아니요|아니요|예||    
 |창 집계||NA|NA|예|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 새 연산자.|    
     
- ?[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층, 표준 계층 - S3 이상 및 모든 vCore 계층 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 적용    
+<sup>1</sup>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층, 표준 계층 - S3 이상 및 모든 vCore 계층 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 적용    
     
 ### <a name="aggregate-pushdown"></a>집계 푸시 다운    
  SCAN 노드에서 조건에 맞는 행을 가져와 일괄 처리 모드에서 값을 집계하는 집계 계산을 위한 일반 실행 경로입니다. 이러한 실행으로 좋은 성능이 제공되긴 하지만 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 집계 작업은 SCAN 노드로 푸시되어 다음 조건이 충족되면 일괄 처리 모드 실행 시 크기 순서대로 정렬되므로 집계 계산 성능을 향상시킬 수 있습니다. 
@@ -146,7 +146,7 @@ FROM FactResellerSalesXL_CCI
     
 예를 들어 팩트는 특정 지역에서 특정 제품의 판매를 나타내는 레코드일 수 있으며, 차원은 지역, 제품 등의 집합을 나타냅니다. 팩트 테이블과 차원 테이블은 기본/외래 키 관계를 통해 연결됩니다. 가장 일반적으로 사용되는 분석 쿼리는 하나 이상의 차원 테이블을 팩트 테이블에 조인하는 것입니다.    
     
-`Products` 차원 테이블이 있다고 가정해 봅시다. 일반적인 기본 키는 주로 string 데이터 형식으로 표현되는 `ProductCode`가 됩니다. 쿼리 성능을 위해 일반적으로 정수 열인 대리 키를 만들어 팩트 테이블에서 차원 테이블의 행을 참조하는 것이 가장 좋습니다. ? ?
+`Products` 차원 테이블이 있다고 가정해 봅시다. 일반적인 기본 키는 주로 string 데이터 형식으로 표현되는 `ProductCode`가 됩니다. 쿼리 성능을 위해 일반적으로 정수 열인 대리 키를 만들어 팩트 테이블에서 차원 테이블의 행을 참조하는 것이 가장 좋습니다. 
     
 columnstore 인덱스는 숫자 또는 정수를 기반으로 하는 키가 포함된 조인/조건자를 사용하여 분석 쿼리를 매우 효율적으로 실행합니다. 그러나 많은 고객 작업에서 팩트/차원 테이블을 연결하는 문자열 기반 열이 사용되고 있고 그 결과 columnstore 인덱스를 사용하는 쿼리 성능은 직접 수행할 때와는 다릅니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]는 문자열 열이 있는 조건자를 SCAN 노드로 푸시다운하여 문자열 기반의 열을 사용하는 분석 쿼리의 성능을 크게 향상시켰습니다.    
     

@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2d01beffb328c26bdd0faf18ac22e73adb4dbcbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964774"
 ---
 # <a name="views-collection-adox"></a>Views 컬렉션(ADOX)
 모든 포함 [보기](../../../ado/reference/adox-api/view-object-adox.md) 카탈로그의 개체입니다.  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  합니다 [추가](../../../ado/reference/adox-api/append-method-adox-views.md) 에 대 한 메서드는 **뷰** 컬렉션이 ADOX에 대 한 고유 합니다. 다음 작업을 수행할 수 있습니다.  
   
 -   새 뷰를 사용 하 여 컬렉션에 추가 합니다 **Append** 메서드.  

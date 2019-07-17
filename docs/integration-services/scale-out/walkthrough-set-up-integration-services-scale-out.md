@@ -8,15 +8,15 @@ ms.prod_service: integration-services
 ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
-author: haoqian
+author: HaoQian-MS
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: e566c31f03284660456f7a96f2d19adc32bf4404
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 001172611503dbff0275448833d05b06aa22512e
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012942"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826633"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>연습: Integration Services(SSIS) Scale Out 설정
 
@@ -160,7 +160,7 @@ Scale Out 마스터 컴퓨터의 Windows 방화벽에서 Scale Out 마스터 설
 
 설치하는 동안 서비스의 시작 유형을 **자동**으로 설정하지 않은 경우 다음과 같은 서비스를 시작합니다.
 
--   SQL Server Integration Services Scale Out 마스터 14.0(SSISScaleOutMaster140S) 구성
+-   SQL Server Integration Services Scale Out 마스터 14.0(SSISScaleOutMaster140)
 
 -   SQL Server Integration Services Scale Out 작업자 14.0(SSISScaleOutWorker140) 구성
 

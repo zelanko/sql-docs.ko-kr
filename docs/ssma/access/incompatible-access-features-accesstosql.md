@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 29b5225f95c6b2cb04f42c0e67c504ac2cb20e53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cc48fa530730beec07aaca4bfb933c9ff8fb2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986350"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>호환 되지 않는 Access 기능 (AccessToSQL)
 모든 액세스 데이터베이스 기능을 사용 하 여 호환 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 액세스 예약 된 키워드 집합은 및입니다. 문제에 성공적인 마이그레이션을 방해할 수 있습니다 이러한 같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 가능한 마이그레이션 문제 및 수행할 수 있는 정보에 대해 자세히 알아보려면 다음 표를 사용 합니다.  

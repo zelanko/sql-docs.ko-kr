@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c4f0b21bba9e56cad076ae08f5a561cc972d2ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b4d14cc65b31a0641149ace931efe46c914ad1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088161"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>32비트 드라이버와 32비트 애플리케이션 사용
 32 비트 드라이버를 사용 하 여 32 비트 응용 프로그램을 실행할 수 있습니다. 32 비트 응용 프로그램 및 32 비트 드라이버 Win32® API를 사용합니다.  

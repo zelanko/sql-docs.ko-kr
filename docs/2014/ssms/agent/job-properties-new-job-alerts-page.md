@@ -13,13 +13,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797615"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189276"
 ---
-# <a name="job-properties-new-job-alerts-page"></a>작업 속성: 새 작업 (경고 페이지)
+# <a name="job-properties-new-job-alerts-page"></a>작업 속성: 새 작업(경고 페이지)
   이 페이지를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업에 대한 경고를 확인하고 구성할 수 있습니다.  
   
 ## <a name="options"></a>변수  

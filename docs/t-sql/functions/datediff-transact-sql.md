@@ -32,12 +32,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fa470b663a28a69014a7884b30fb384fe62276a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 837cf72fd303259a4fb2a9fd23c6cac925f054ca
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943649"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793636"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +89,7 @@ DATEDIFF ( datepart , startdate , enddate )
 *startdate*를 참조하세요.
   
 ## <a name="return-type"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="return-value"></a>반환 값  
   
@@ -99,7 +99,7 @@ DATEDIFF ( datepart , startdate , enddate )
   
 *startdate* 및 *enddate* 모두에 시간 값만 할당되고 *datepart*가 시간 *datepart*가 아니면 `DATEDIFF`는 0을 반환합니다.
   
-`DATEDIFF`은 반환 값을 계산하기 위해 *startdate* 또는 *enddate*의 표준 시간대 오프셋 구성 요소를 사용하지 않습니다.
+`DATEDIFF`는 반환 값을 계산하기 위해 *startdate* 또는 *enddate*의 표준 시간대 오프셋 구성 요소를 사용합니다.
   
 [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)은 분 단위까지만 정확하므로 *startdate* 또는 *enddate*에 **smalldatetime** 값이 있는 경우 반환 값에서 초와 밀리초는 항상 0으로 설정됩니다.
   

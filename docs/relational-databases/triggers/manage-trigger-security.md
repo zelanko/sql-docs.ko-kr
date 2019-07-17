@@ -13,12 +13,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e400ada65efa69dd1b3e5ccc7dbdc21f67e3674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edc81e7f148a2d0c2572da4902a90499baf9db7e
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690791"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866286"
 ---
 # <a name="manage-trigger-security"></a>트리거 보안 관리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,14 +41,31 @@ ms.locfileid: "47690791"
 ## <a name="trigger-security-best-practices"></a>트리거 보안을 위한 가장 적절한 방법  
  다음 방법을 사용하여 트리거 코드가 에스컬레이션된 권한으로 실행되는 것을 방지할 수 있습니다.  
   
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+
 -   [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 및 [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) 카탈로그 뷰를 쿼리하여 데이터베이스 및 서버 인스턴스에 있는 DML 및 DDL 트리거를 확인합니다. 다음 쿼리는 현재 데이터베이스에 모든 DML 및 데이터베이스 수준 DDL 트리거를 반환하고 서버 인스턴스에 모든 서버 수준 DDL 트리거를 반환합니다.  
   
-    ```  
+    ```sql
     SELECT type, name, parent_class_desc FROM sys.triggers  
     UNION  
     SELECT type, name, parent_class_desc FROM sys.server_triggers ;  
     ```  
+
+   > [!NOTE]
+   > Managed Instance를 사용하지 않는 경우 Azure SQL Database에 **sys.triggers**만 사용할 수 있습니다.
+
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+-   [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) 카탈로그 뷰를 쿼리하여 데이터베이스에 있는 DML 및 DDL 트리거를 확인합니다. 다음 쿼리는 현재 데이터베이스에서 모든 DML 및 데이터베이스 수준 DDL 트리거를 반환합니다.  
   
+    ```sql
+    SELECT type, name, parent_class_desc FROM sys.triggers ; 
+    ```  
+  
+::: moniker-end
+
 -   [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) 를 사용하여 트리거가 에스컬레이션된 권한으로 실행되는 경우 데이터베이스나 서버의 무결성에 손상을 줄 수 있는 트리거를 비활성화할 수 있습니다. 다음 문은 현재 데이터베이스에서 모든 데이터베이스 수준 DDL 트리거를 비활성화합니다.  
   
     ```  

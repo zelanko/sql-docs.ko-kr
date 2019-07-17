@@ -29,12 +29,12 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: ab639417592966f1c591116743d2d38bfacc837f
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: d580ed70608dc68fbd86b31177a568e7b74e3796
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342899"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866230"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ NOTRUNCATE
   
 파일 끝의 여유 공간이 운영 체제로 반환되지 않고, 파일의 실제 크기가 변경되지 않습니다. 따라서 NOTRUNCATE를 지정할 때 데이터베이스는 축소되지 않는 것으로 나타납니다.  
   
-NOTRUNCATE는 데이터 파일에만 적용되며 NONTRUNCATE는 로그 파일에 영향을 주지 않습니다.  
+NOTRUNCATE는 데이터 파일에만 적용되며 NOTRUNCATE는 로그 파일에 영향을 주지 않습니다.  
   
 TRUNCATEONLY  
 파일 끝의 모든 여유 공간을 운영 체제로 릴리스합니다. 파일 내의 어떤 페이지도 이동하지 않습니다. 데이터 파일은 마지막으로 할당된 익스텐트까지 축소됩니다. TRUNCATEONLY로 지정된 경우 _대상\_백분율_은 무시됩니다. Azure SQL Data Warehouse는 이 옵션을 지원하지 않습니다.
@@ -157,7 +157,7 @@ timestamp 15 or with timestamps older than 109 to finish.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>1. 데이터베이스 축소 및 여유 공간의 백분율 지정  
+### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>1\. 데이터베이스 축소 및 여유 공간의 백분율 지정  
 다음 예제에서는 `UserDB` 사용자 데이터베이스의 데이터 및 로그 파일 크기를 줄여서 데이터베이스에 10%의 여유 공간을 허용합니다.  
   
 ```sql  
@@ -165,7 +165,7 @@ DBCC SHRINKDATABASE (UserDB, 10);
 GO  
 ```  
   
-### <a name="b-truncating-a-database"></a>2. 데이터베이스 자름  
+### <a name="b-truncating-a-database"></a>2\. 데이터베이스 자름  
 다음 예제에서는 `AdventureWorks` 샘플 데이터베이스의 데이터 및 로그 파일을 마지막으로 할당된 익스텐트까지 축소합니다.  
   
 ```sql  
