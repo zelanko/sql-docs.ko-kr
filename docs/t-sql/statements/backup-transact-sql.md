@@ -285,7 +285,7 @@ Microsoft Azure Blob Storage 서비스에 대한 백업을 만들 때에만 사�
 
 FILE_SNAPSHOT **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
-Azure Blob 스토리지 서비스를 사용하여 모든 SQL Server 데이터베이스 파일을 저장할 때 데이터베이스 파일의 Azure 스냅숏을 만드는 데 사용됩니다. 자세한 내용은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 백업은 일관된 상태에서 데이터베이스 파일(데이터 및 로그 파일)의 Azure 스냅숏을 사용합니다. 일관된 Azure 스냅숏 집합이 백업을 구성하고 백업 파일에 기록됩니다. `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT`과 `BACKUP LOG TO URL WITH FILE_SNAPSHOT`의 유일한 차이점은 후자는 트랜잭션 로그를 자르지만 전자는 그렇지 않다는 점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server 스냅숏 백업에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 체인을 설정하는 데 필요한 초기 전체 백업 이후에 트랜잭션 로그 백업 시점으로 데이터베이스를 복원하려면 단일 트랜잭션 로그 백업만 필요합니다. 또한 두 건의 트랜잭션 로그 백업 시간 사이의 특정 시점으로 데이터베이스를 복원하려면 트랜잭션 로그 백업이 두 개만 필요합니다.
+Azure Blob 스토리지 서비스를 사용하여 모든 SQL Server 데이터베이스 파일을 저장할 때 데이터베이스 파일의 Azure 스냅샷을 만드는 데 사용됩니다. 자세한 내용은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 백업은 일관된 상태에서 데이터베이스 파일(데이터 및 로그 파일)의 Azure 스냅숏을 사용합니다. 일관된 Azure 스냅샷 집합이 백업을 구성하고 백업 파일에 기록됩니다. `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT`과 `BACKUP LOG TO URL WITH FILE_SNAPSHOT`의 유일한 차이점은 후자는 트랜잭션 로그를 자르지만 전자는 그렇지 않다는 점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server 스냅숏 백업에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 체인을 설정하는 데 필요한 초기 전체 백업 이후에 트랜잭션 로그 백업 시점으로 데이터베이스를 복원하려면 단일 트랜잭션 로그 백업만 필요합니다. 또한 두 건의 트랜잭션 로그 백업 시간 사이의 특정 시점으로 데이터베이스를 복원하려면 트랜잭션 로그 백업이 두 개만 필요합니다.
 
 DIFFERENTIAL
 
@@ -937,7 +937,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 ## <a name="azure-sql-database-managed-instance"></a>Azure SQL Database 관리되는 인스턴스
 
-Azure SQL Database 관리되는 인스턴스에 배치/호스트되는 SQL 데이터베이스를 백업합니다. SQL Database [관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)를 사용하면 자동으로 백업되고 사용자가 전체 데이터베이스 `COPY_ONLY` 백업을 만들 수 있습니다. 차등, 로그 및 파일 스냅숏 백업은 지원되지 않습니다.
+Azure SQL Database 관리되는 인스턴스에 배치/호스트되는 SQL 데이터베이스를 백업합니다. SQL Database [관리되는 인스턴스](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)를 사용하면 자동으로 백업되고 사용자가 전체 데이터베이스 `COPY_ONLY` 백업을 만들 수 있습니다. 차등, 로그 및 파일 스냅샷 백업은 지원되지 않습니다.
 
 ## <a name="syntax"></a>구문
 

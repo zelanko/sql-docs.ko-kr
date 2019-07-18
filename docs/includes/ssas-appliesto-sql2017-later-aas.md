@@ -1,9 +1,14 @@
 ---
-ms.openlocfilehash: 457fce336190313f3f3e10a08df9597d695d86aa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+author: minewiskan
+ms.service: analysis-services
+ms.topic: include
+ms.date: 06/14/2019
+ms.author: owend
+ms.openlocfilehash: fd555df3171f85f71595daf030cb3e8837de2cdc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63768826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68162124"
 ---
-**적용 대상:** ![yes](media/yes.png)(2017부터 시작) 하는 SQL Server Analysis Services ![예](media/yes.png)Azure Analysis Services
+**적용 대상:** ![예](media/yes.png)SQL Server 2017 Analysis Services이상 ![예](media/yes.png)Azure Analysis Services ![아니요](media/no.png)Power BI Premium

@@ -71,7 +71,7 @@ ms.locfileid: "47620138"
   
     2.  **별칭**에 **SQLReplication**를 입력합니다.  
   
-    3.  **실제 경로**에서 **\<드라이브>:\Inetpub\SQLReplication\\**을 입력하고 **확인**을 클릭합니다.  
+    3.  **실제 경로**에서 **\<드라이브>:\Inetpub\SQLReplication\\** 을 입력하고 **확인**을 클릭합니다.  
   
 7.  replisapi.dll이 실행될 수 있도록 IIS를 구성합니다.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "47620138"
   
 ###### <a name="to-test-the-certificate"></a>인증서를 테스트하려면  
   
-1.   **ternet formation Services (IIS) Manager**에서 **기본 웹 사이트.**  
+1.  **ternet formation Services (IIS) Manager**에서 **기본 웹 사이트.**  
   
 2.  **동작** 창에서 **\**:443(https) 찾아보기**를 클릭합니다.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "47620138"
   
 -   배포 데이터베이스의 사용자와 연결된 로그인에 매핑되어야 합니다.  
   
--   스냅숏 공유에 대한 읽기 권한을 가지고 있어야 합니다.  
+-   스냅샷 공유에 대한 읽기 권한을 가지고 있어야 합니다.  
   
 #### <a name="to-configure-the-account-and-permissions"></a>계정 및 사용 권한을 구성하려면  
   

@@ -55,7 +55,7 @@ ms.locfileid: "66071531"
 -   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 기반으로 하는 Reporting Services 보고서를 만들거나 보려면 통합 문서와 보고서가 모두 같은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에 있어야 합니다. 이 보고서는 포함된 데이터가 들어 있는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 사용해야 합니다. 또는 통합 문서에 최대 하나의 외부 데이터 원본( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서)이 들어 있어야 합니다.  
   
 ##  <a name="overview"></a> 개요  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 SharePoint  서버에 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 를 설치한 경우 제공되는 라이브러리 템플릿입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에는 파일 내용의 정확한 미리 보기와 문서 출처 관련 정보가 함께 포함되어 있습니다. 문서 작성자와 마지막으로 수정한 날짜를 즉시 확인할 수 있습니다. 미리 보기 이미지를 만들기 위해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 PowerPivot  데이터를 포함하는 Reporting  Services  보고서 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 읽을 수 있는 스냅숏 서비스를 사용합니다. 스냅숏 서비스가 읽을 수 없는 파일을 게시하면 해당 파일에 대한 미리 보기 이미지가 제공되지 않습니다.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 SharePoint  서버에 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] 를 설치한 경우 제공되는 라이브러리 템플릿입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리에는 파일 내용의 정확한 미리 보기와 문서 출처 관련 정보가 함께 포함되어 있습니다. 문서 작성자와 마지막으로 수정한 날짜를 즉시 확인할 수 있습니다. 미리 보기 이미지를 만들기 위해 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리는 PowerPivot  데이터를 포함하는 Reporting  Services  보고서 및 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서를 읽을 수 있는 스냅샷 서비스를 사용합니다. 스냅샷 서비스가 읽을 수 없는 파일을 게시하면 해당 파일에 대한 미리 보기 이미지가 제공되지 않습니다.  
   
  미리 보기 이미지는 Excel 서비스가 통합 문서를 렌더링하는 방식을 기반으로 합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리의 표현은 브라우저에 표시되는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서의 모양과 동일해야 합니다. 하지만 미리 보기의 화면 영역은 제한되어 있습니다. 따라서 사용 가능한 공간에 맞도록 통합 문서 또는 보고서의 일부가 잘릴 수 있습니다. 이 경우 통합 문서 또는 보고서를 열어 전체 문서를 봐야 할 수 있습니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66071531"
   
  정렬 순서 및 필터를 수정하여 통합 문서가 목록에 표시되는 위치를 변경할 수 있습니다. 기본적으로 문서는 추가된 순서로 나열되고, 게시된 마지막 문서가 목록 맨 아래에 표시됩니다. 문서가 게시되면 이 문서는 목록에서 해당 위치를 유지합니다. 문서를 업데이트하고 다시 게시하면 목록에서 해당 위치가 업데이트됩니다.  
   
- 특정 문서에 대한 미리 보기를 활성화하거나 비활성화할 수 없습니다. 스냅숏 서비스는 모든 PowerPivot 통합 문서 및 같은 라이브러리에 저장되어 있는 PowerPivot 통합 문서를 기반으로 하는 Reporting Services 리포트에 대해 미리 보기 이미지를 생성합니다. 이러한 이미지는 문서에 대한 보기 권한이 있는 모든 사용자가 볼 수 있습니다.  
+ 특정 문서에 대한 미리 보기를 활성화하거나 비활성화할 수 없습니다. 스냅샷 서비스는 모든 PowerPivot 통합 문서 및 같은 라이브러리에 저장되어 있는 PowerPivot 통합 문서를 기반으로 하는 Reporting Services 리포트에 대해 미리 보기 이미지를 생성합니다. 이러한 이미지는 문서에 대한 보기 권한이 있는 모든 사용자가 볼 수 있습니다.  
   
  다른 문서 유형에 대한 미리 보기를 제공하도록 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 갤러리를 확장할 수 없습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 포함하는 SQL  Server  2008  R2  Reporting  Services  보고서 또는 Excel  2010  통합 문서에 대해서만 미리 보기가 지원됩니다.  
   

@@ -42,7 +42,7 @@ ms.locfileid: "68199452"
 > [!IMPORTANT]  
 >  테이블에 대한 스키마 변경은 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 또는 SMO( [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects)를 사용하여 수행해야 합니다. [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]에서 스키마를 변경하면 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 에서는 해당 테이블을 삭제하고 다시 만들려고 합니다. 그러나 게시된 개체는 삭제할 수 없으므로 스키마 변경에 실패합니다.  
   
- 트랜잭션 복제 및 병합 복제의 경우 배포 에이전트 또는 병합 에이전트가 실행될 때 스키마 변경이 증분 방식으로 전파됩니다. 스냅숏 복제의 경우 새 스냅숏을 구독자에서 적용할 때 스키마 변경이 전파됩니다. 스냅숏 복제에서 스키마의 새 복사본은 동기화가 발생할 때마다 구독자로 전달됩니다. 그러므로 이전에 게시된 개체에 대한 모든 스키마 변경(위에서 나열한 것 이외의 스키마 변경도 포함)이 동기화를 수행할 때마다 자동으로 전파됩니다.  
+ 트랜잭션 복제 및 병합 복제의 경우 배포 에이전트 또는 병합 에이전트가 실행될 때 스키마 변경이 증분 방식으로 전파됩니다. 스냅샷 복제의 경우 새 스냅샷을 구독자에서 적용할 때 스키마 변경이 전파됩니다. 스냅샷 복제에서 스키마의 새 복사본은 동기화가 발생할 때마다 구독자로 전달됩니다. 그러므로 이전에 게시된 개체에 대한 모든 스키마 변경(위에서 나열한 것 이외의 스키마 변경도 포함)이 동기화를 수행할 때마다 자동으로 전파됩니다.  
   
  게시에서 아티클을 추가 및 제거하는 방법에 대한 자세한 내용은 [기존 게시에 대한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-existing-publications.md)를 참조하세요.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68199452"
   
 -   스키마 변경에는 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 설정한 제한 사항이 적용됩니다. 예를 들어 ALTER TABLE을 사용하여 기본 키 열을 변경할 수 없습니다.  
   
--   데이터 형식 매핑은 초기 스냅숏에 대해서만 수행됩니다. 스키마 변경은 이전 버전의 데이터 형식으로 매핑되지 않습니다. 예를 들어 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 `ALTER TABLE ADD datetime2 column` 문을 사용하는 경우 데이터 형식이 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 구독자에 대한 `nvarchar`로 변환되지 않습니다. 게시자에서 스키마 변경이 차단되는 경우도 있습니다.  
+-   데이터 형식 매핑은 초기 스냅샷에 대해서만 수행됩니다. 스키마 변경은 이전 버전의 데이터 형식으로 매핑되지 않습니다. 예를 들어 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]에서 `ALTER TABLE ADD datetime2 column` 문을 사용하는 경우 데이터 형식이 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 구독자에 대한 `nvarchar`로 변환되지 않습니다. 게시자에서 스키마 변경이 차단되는 경우도 있습니다.  
   
 -   게시에서 스키마 변경을 전파할 수 있도록 설정하면 게시의 아티클에 대해 관련 스키마 옵션이 어떻게 설정되었는지에 상관없이 스키마 변경이 전파됩니다. 예를 들어 테이블 아티클에 대해 FOREIGN KEY 제약 조건을 복제하지 않도록 선택하고 게시자의 테이블에 외래 키를 추가하는 ALTER TABLE 명령을 실행하면 구독자의 테이블에 외래 키가 추가됩니다. 이를 방지하려면 ALTER TABLE 명령을 실행하기 전에 스키마 변경 전파를 해제합니다.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "68199452"
   
 -   제약 조건의 이름을 명시적으로 지정하는 것이 좋습니다. 제약 조건의 이름을 명시적으로 지정하지 않은 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 제약 조건에 이름을 생성하며 이러한 이름은 게시자와 각 구독자에서 다르게 됩니다. 이로 인해 스키마 변경 복제 시 문제가 발생할 수 있습니다. 예를 들어 게시자에서 열을 삭제하여 종속 제약 조건이 삭제된 경우 복제에서 구독자의 제약 조건을 삭제하려고 시도하지만 제약 조건의 이름이 다르기 때문에 구독자에서의 삭제 작업은 실패하게 됩니다. 제약 조건 명명 문제로 인해 동기화가 실패할 경우 구독자에서 수동으로 제약 조건을 삭제하고 병합 에이전트를 다시 실행하십시오.  
   
--   테이블을 복제용으로 게시하면 게시 스냅숏이 이미 생성되어 있는 경우 해당 테이블의 열을 XML 데이터 형식으로 변경할 수 없습니다. 열을 변경하려면 먼저 복제를 제거해야 합니다.  
+-   테이블을 복제용으로 게시하면 게시 스냅샷이 이미 생성되어 있는 경우 해당 테이블의 열을 XML 데이터 형식으로 변경할 수 없습니다. 열을 변경하려면 먼저 복제를 제거해야 합니다.  
   
 -   커밋되지 않은 읽기는 게시된 테이블에서 DDL을 수행할 때 지원되는 격리 수준이 아닙니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68199452"
   
 -   열을 기존 게시에서는 삭제하지만 게시자의 테이블에서는 유지하려면 [sp_articlecolumn&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) 또는 **게시 속성 - \<게시>** 대화 상자를 사용합니다.  
   
-     자세한 내용은 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)을 참조하세요. 이 작업을 수행하려면 새 스냅숏을 생성해야 합니다.  
+     자세한 내용은 [Define and Modify a Column Filter](define-and-modify-a-column-filter.md)을 참조하세요. 이 작업을 수행하려면 새 스냅샷을 생성해야 합니다.  
   
 -   삭제할 열은 데이터베이스에 있는 모든 게시 아티클의 필터 절에 사용할 수 없습니다.  
   
@@ -135,13 +135,13 @@ ms.locfileid: "68199452"
   
 ### <a name="merge-replication"></a>병합 복제  
   
--   병합 복제에서 스키마 변경을 처리하는 방법은 게시 호환성 수준 및 스냅숏이 기본 모드(기본값) 또는 문자 모드로 설정되었는지에 의해 결정됩니다.  
+-   병합 복제에서 스키마 변경을 처리하는 방법은 게시 호환성 수준 및 스냅샷이 기본 모드(기본값) 또는 문자 모드로 설정되었는지에 의해 결정됩니다.  
   
     -   스키마 변경을 복제하려면 게시의 호환성 수준이 적어도 90RTM 이상이어야 합니다. 구독자에서 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행하거나 호환성 수준이 90RTM 이하인 경우에도 [sp_repladdcolumn&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql) 및 [sp_repldropcolumn&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql)을 사용하여 열을 추가 및 삭제할 수 있습니다. 그러나 이러한 프로시저는 더 이상 사용되지 않습니다.  
   
     -   [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]에서 도입된 데이터 형식의 열을 기존 아티클에 추가하려는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 다음과 같이 동작합니다.  
   
-        ||100RTM, 기본 스냅숏|100RTM, 문자 스냅숏|다른 모든 호환성 수준|  
+        ||100RTM, 기본 스냅샷|100RTM, 문자 스냅샷|다른 모든 호환성 수준|  
         |-|-----------------------------|--------------------------------|------------------------------------|  
         |`hierarchyid`|변경 허용|변경 차단|변경 차단|  
         |`geography` 및 `geometry`|변경 허용|변경 허용<sup>1</sup>|변경 차단|  
@@ -152,7 +152,7 @@ ms.locfileid: "68199452"
   
 -   스키마 변경을 적용할 때 오류(예: 구독자에서 사용할 수 없는 테이블을 참조하는 외래 키를 추가할 때 발생하는 오류)가 발생하면 동기화가 실패하므로 구독을 다시 초기화해야 합니다.  
   
--   조인 필터 또는 매개 변수가 있는 필터와 관련된 열에 스키마 변경을 수행하면 모든 구독을 다시 초기화하고 스냅숏을 다시 생성해야 합니다.  
+-   조인 필터 또는 매개 변수가 있는 필터와 관련된 열에 스키마 변경을 수행하면 모든 구독을 다시 초기화하고 스냅샷을 다시 생성해야 합니다.  
   
 -   병합 복제에서는 문제를 해결하는 동안 스키마 변경을 건너뛸 수 있는 저장 프로시저를 제공합니다. 자세한 내용은 [sp_markpendingschemachange&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql) 및 [sp_enumeratependingschemachanges&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql)를 참조하세요.  
   

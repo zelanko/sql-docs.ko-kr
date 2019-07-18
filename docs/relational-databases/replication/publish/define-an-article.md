@@ -72,7 +72,7 @@ ms.locfileid: "67585829"
 
     -   서버에 배포가 구성되어 있지 않은 경우 배포자를 지정합니다. 배포 구성에 대한 자세한 내용은 [게시 및 배포 구성](../../../relational-databases/replication/configure-publishing-and-distribution.md)을 참조하세요.  
   
-         **배포자** 페이지에서 게시자 서버가 자신의 고유 배포자(로컬 배포자) 역할을 하는 것으로 지정했지만 서버가 배포자로 구성되어 있지 않은 경우 새 게시 마법사가 서버를 구성합니다. **스냅숏 폴더** 페이지에서 배포자에 대해 기본 스냅숏 폴더를 지정하게 됩니다. 스냅숏 폴더는 공유하도록 지정된 디렉터리일 뿐이며 이 폴더에 읽기/쓰기 작업을 수행하려면 에이전트에게 충분한 액세스 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅숏 폴더 보안 설정](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
+         **배포자** 페이지에서 게시자 서버가 자신의 고유 배포자(로컬 배포자) 역할을 하는 것으로 지정했지만 서버가 배포자로 구성되어 있지 않은 경우 새 게시 마법사가 서버를 구성합니다. **스냅숏 폴더** 페이지에서 배포자에 대해 기본 스냅숏 폴더를 지정하게 됩니다. 스냅샷 폴더는 공유하도록 지정된 디렉터리일 뿐이며 이 폴더에 읽기/쓰기 작업을 수행하려면 에이전트에게 충분한 액세스 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
          다른 서버가 배포자의 역할을 하도록 지정한 경우 게시자에서 배포자로 연결할 때 사용할 암호를 **관리 암호** 페이지에 입력해야 합니다. 이 암호는 원격 배포자에서 게시자를 설정할 때 지정한 암호와 일치해야 합니다.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "67585829"
   
     -   필요에 따라 테이블 아티클에서 행을 필터링합니다. 자세한 내용은 [게시된 데이터 필터링](../../../relational-databases/replication/publish/filter-published-data.md)을 참조하세요.  
   
-    -   스냅숏 에이전트 일정을 설정합니다.  
+    -   스냅샷 에이전트 일정을 설정합니다.  
   
     -   다음 복제 에이전트를 실행 및 연결하는 자격 증명을 지정합니다.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "67585829"
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  게시를 만든 후에 복제 저장 프로시저를 사용하여 아티클을 프로그래밍 방식으로 만들 수 있습니다. 아티클을 만드는 데 사용되는 저장 프로시저는 정의하려는 아티클의 게시 유형에 따라 달라집니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)을 참조하세요.  
   
-#### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시에 대한 아티클을 정의하려면  
+#### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 아티클을 정의하려면  
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **@publication** 에 아티클이 속한 게시의 이름을, **@article** 에 아티클 이름을, **@source_object** 에 게시되는 데이터베이스 개체를 지정하고, 그 밖의 선택적 매개 변수를 지정합니다. **dbo**가 아닌 경우 **@source_owner** 를 사용하여 개체의 스키마 소유권을 지정합니다. 로그 기반 테이블 아티클이 아닌 경우 **@type** 에 아티클 유형을 지정합니다. 자세한 내용은 [아티클 유형 지정&#40;복제 Transact-SQL 프로그래밍&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)을 참조하세요.  
   
@@ -117,10 +117,10 @@ ms.locfileid: "67585829"
   
 5.  게시에 기존 구독이 있고 [sp_helppublication](../../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md) 이 **immediate_sync** 열에 값 **0** 을 반환하면 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) 을 호출하여 각각의 기존 구독에 아티클을 추가해야 합니다.  
   
-6.  게시에 기존 끌어오기 구독이 있으면 게시자에서 [sp_refreshsubscriptions](../../../relational-databases/system-stored-procedures/sp-refreshsubscriptions-transact-sql.md) 를 실행하여 새 아티클을 포함하는, 기존 끌어오기 구독에 대한 새 스냅숏을 만듭니다.  
+6.  게시에 기존 끌어오기 구독이 있으면 게시자에서 [sp_refreshsubscriptions](../../../relational-databases/system-stored-procedures/sp-refreshsubscriptions-transact-sql.md) 를 실행하여 새 아티클을 포함하는, 기존 끌어오기 구독에 대한 새 스냅샷을 만듭니다.  
   
     > [!NOTE]  
-    >  스냅숏을 사용하여 초기화되지 않은 구독에 대해서는 [sp_refreshsubscriptions](../../../relational-databases/system-stored-procedures/sp-refreshsubscriptions-transact-sql.md) 를 실행하지 않아도 됩니다. 이 절차는 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)에 의해 실행됩니다.  
+    >  스냅샷을 사용하여 초기화되지 않은 구독에 대해서는 [sp_refreshsubscriptions](../../../relational-databases/system-stored-procedures/sp-refreshsubscriptions-transact-sql.md) 를 실행하지 않아도 됩니다. 이 절차는 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)에 의해 실행됩니다.  
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>병합 게시에 대한 아티클을 정의하려면  
   

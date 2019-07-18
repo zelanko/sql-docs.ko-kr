@@ -20,9 +20,9 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721016"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>2단원: 스냅숏 폴더 준비
-  이 단원에서는 게시 스냅숏을 만들고 저장하는 데 사용되는 스냅숏 폴더를 구성하는 방법을 배웁니다.  
+  이 단원에서는 게시 스냅샷을 만들고 저장하는 데 사용되는 스냅샷 폴더를 구성하는 방법을 배웁니다.  
   
-### <a name="to-create-a-share-for-the-snapshot-folder-and-assign-permissions"></a>스냅숏 폴더에 대한 공유를 만들고 사용 권한을 할당하려면  
+### <a name="to-create-a-share-for-the-snapshot-folder-and-assign-permissions"></a>스냅샷 폴더에 대한 공유를 만들고 사용 권한을 할당하려면  
   
 1.  Windows 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 폴더로 이동합니다. 기본 위치는 C:\Program Files\Microsoft SQL Server\MSSQL.X\MSSQL\Data입니다.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62721016"
 10. **확인** 을 클릭하여 **repldata 속성** 대화 상자를 닫고 repldata 공유를 만듭니다.  
   
 ## <a name="next-steps"></a>다음 단계  
- 스냅숏 폴더에 대한 공유를 성공적으로 구성했습니다. 다음 단원에서는 배포를 구성합니다. [3단원: 배포 구성](lesson-3-configuring-distribution.md)합니다.  
+ 스냅샷 폴더에 대한 공유를 성공적으로 구성했습니다. 다음 단원에서는 배포를 구성합니다. [3단원: 배포 구성](lesson-3-configuring-distribution.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [스냅숏 폴더 보안 설정](security/secure-the-snapshot-folder.md)  

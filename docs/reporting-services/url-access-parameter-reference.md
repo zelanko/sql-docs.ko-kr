@@ -247,9 +247,9 @@ ms.locfileid: "65620589"
     https://myrshost/Reportserver?/SampleReports/Product+Line+Sales&rs:Command=Render&StartDate=4/10/2008&EndDate=11/10/2008&rs:ParameterLanguage=de-DE  
     ```  
   
--   *Snapshot* : 보고서 기록 스냅숏을 기반으로 보고서를 렌더링합니다. 자세한 내용은 [URL 액세스를 사용하여 보고서 기록 스냅숏 렌더링](../reporting-services/render-a-report-history-snapshot-using-url-access.md)을 참조하세요.  
+-   *Snapshot* : 보고서 기록 스냅숏을 기반으로 보고서를 렌더링합니다. 자세한 내용은 [URL 액세스를 사용하여 보고서 기록 스냅샷 렌더링](../reporting-services/render-a-report-history-snapshot-using-url-access.md)을 참조하세요.  
   
-     타임스탬프가 13:40:02인 2003-04-07 날짜의 보고서 기록 스냅숏을 검색하는 **Native** 모드의 예제입니다.  
+     타임스탬프가 13:40:02인 2003-04-07 날짜의 보고서 기록 스냅샷을 검색하는 **Native** 모드의 예제입니다.  
   
     ```  
     https://myrshost/reportserver?/SampleReports/Company Sales&rs:Snapshot=2003-04-07T13:40:02  

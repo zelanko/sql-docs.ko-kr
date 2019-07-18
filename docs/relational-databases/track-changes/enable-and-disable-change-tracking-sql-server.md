@@ -39,7 +39,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
   
  변경 내용 추적을 설정할 때 CHANGE_RETENTION 및 AUTO_CLEANUP 옵션을 지정할 수 있으며, 변경 내용 추적을 설정한 후 언제든지 이 값을 변경할 수 있습니다.  
   
@@ -51,7 +51,7 @@ SET CHANGE_TRACKING = ON
   
 -   변경 내용 추적을 사용하려면 데이터베이스 호환성 수준이 90 이상으로 설정되어야 합니다. 데이터베이스 호환성 수준이 90 미만인 경우에도 변경 내용 추적을 구성할 수 있지만 변경 내용 추적 정보를 얻기 위해 사용되는 CHANGETABLE 함수에서 오류를 반환합니다.  
   
--   스냅숏 격리를 사용하는 것은 모든 변경 내용 추적 정보가 일관되도록 보장하는 가장 쉬운 방법입니다. 이러한 이유로 데이터베이스에 대해 스냅숏 격리를 ON으로 설정하는 것이 가장 좋습니다. 자세한 내용은 [변경 내용 추적 사용&#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)을 참조하세요.  
+-   스냅샷 격리를 사용하는 것은 모든 변경 내용 추적 정보가 일관되도록 보장하는 가장 쉬운 방법입니다. 이러한 이유로 데이터베이스에 대해 스냅샷 격리를 ON으로 설정하는 것이 가장 좋습니다. 자세한 내용은 [변경 내용 추적 사용&#40;SQL Server&#41;](../../relational-databases/track-changes/work-with-change-tracking-sql-server.md)을 참조하세요.  
   
 ## <a name="enable-change-tracking-for-a-table"></a>테이블에 변경 내용 추적을 사용하도록 설정  
  추적하려는 테이블마다 변경 내용 추적을 설정해야 합니다. 변경 내용 추적이 설정되면 DML 작업에 의해 영향을 받는 테이블의 모든 행에 대해 변경 내용 추적 정보가 유지 관리됩니다.  
@@ -64,7 +64,7 @@ ENABLE CHANGE_TRACKING
 WITH (TRACK_COLUMNS_UPDATED = ON)  
 ```  
   
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
   
  TRACK_COLUMNS_UPDATED 옵션이 ON으로 설정되면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 내부 변경 내용 추적 테이블에 업데이트된 열에 대한 추가 정보를 저장합니다. 열 추적을 사용하면 애플리케이션이 업데이트된 열만 동기화하도록 설정할 수 있습니다. 이로 인해 효율성과 성능이 향상될 수 있습니다. 그러나 열 추적 정보 유지 관리로 인해 스토리지 오버헤드가 추가되기 때문에 이 옵션은 기본적으로 OFF로 설정됩니다.  
   

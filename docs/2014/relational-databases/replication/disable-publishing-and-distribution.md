@@ -54,14 +54,14 @@ ms.locfileid: "62721452"
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   
--   게시 및 배포를 해제하려면 모든 배포 및 게시 데이터베이스가 온라인 상태여야 합니다. 배포 또는 게시 데이터베이스에 대한 *데이터베이스 스냅숏* 이 있는 경우 이 스냅숏을 먼저 삭제한 다음 게시 및 배포를 해제해야 합니다. 데이터베이스 스냅숏은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅숏과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md)을 참조하세요.  
+-   게시 및 배포를 해제하려면 모든 배포 및 게시 데이터베이스가 온라인 상태여야 합니다. 배포 또는 게시 데이터베이스에 대한 *데이터베이스 스냅샷* 이 있는 경우 이 스냅샷을 먼저 삭제한 다음 게시 및 배포를 해제해야 합니다. 데이터베이스 스냅샷은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅샷과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../databases/database-snapshots-sql-server.md)을 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  게시 및 배포 해제 마법사를 사용하여 게시 및 배포를 해제합니다.  
   
 #### <a name="to-disable-publishing-and-distribution"></a>게시 및 배포를 해제하려면  
   
-1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 해제할 게시자나 배포자에 연결한 다음 해당 서버 노드를 확장합니다.  
+1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 해제할 게시자나 배포자에 연결한 다음 해당 서버 노드를 확장합니다.  
   
 2.  **복제** 폴더를 마우스 오른쪽 단추로 클릭한 다음, **게시 및 배포 해제**를 클릭합니다.  
   

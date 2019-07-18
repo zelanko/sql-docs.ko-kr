@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 6f608fc4fa1aea15a35e24273fdab3154672f71d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.openlocfilehash: f5c29caffadeb96b2bcf4ea380c491f2a0c12f11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220513"
 ---
-<Token>**적용 대상:** ![yes](media/yes.png)(2016부터 시작) 하는 SQL Server ![없음](media/no.png)Azure SQL Database ![예](media/yes.png)Azure SQL Data Warehouse ![없음](media/no.png) 병렬 데이터 웨어하우스 </Token>
+<Token>**적용 대상:** ![예](media/yes.png)SQL Server ![아니요](media/no.png)Azure SQL Database ![예](media/yes.png)Azure SQL Data Warehouse ![아니요](media/no.png)병렬 데이터 웨어하우스 </Token>
 

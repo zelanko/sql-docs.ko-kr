@@ -65,7 +65,7 @@ ms.locfileid: "63022501"
   
     -   서버에 배포가 구성되어 있지 않은 경우 배포자를 지정합니다. 배포 구성에 대한 자세한 내용은 [게시 및 배포 구성](../configure-publishing-and-distribution.md)을 참조하세요.  
   
-         **배포자** 페이지에서 게시자 서버가 자신의 고유 배포자(로컬 배포자) 역할을 하는 것으로 지정했지만 서버가 배포자로 구성되어 있지 않은 경우 새 게시 마법사가 서버를 구성합니다. **스냅숏 폴더** 페이지에서 배포자에 대해 기본 스냅숏 폴더를 지정하게 됩니다. 스냅숏 폴더는 공유하도록 지정된 디렉터리일 뿐이며 이 폴더에 읽기/쓰기 작업을 수행하려면 에이전트에게 충분한 액세스 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅숏 폴더 보안 설정](../security/secure-the-snapshot-folder.md)을 참조하세요.  
+         **배포자** 페이지에서 게시자 서버가 자신의 고유 배포자(로컬 배포자) 역할을 하는 것으로 지정했지만 서버가 배포자로 구성되어 있지 않은 경우 새 게시 마법사가 서버를 구성합니다. **스냅숏 폴더** 페이지에서 배포자에 대해 기본 스냅숏 폴더를 지정하게 됩니다. 스냅샷 폴더는 공유하도록 지정된 디렉터리일 뿐이며 이 폴더에 읽기/쓰기 작업을 수행하려면 에이전트에게 충분한 액세스 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../security/secure-the-snapshot-folder.md)을 참조하세요.  
   
          다른 서버가 배포자의 역할을 하도록 지정한 경우 게시자에서 배포자로 연결할 때 사용할 암호를 **관리 암호** 페이지에 입력해야 합니다. 이 암호는 원격 배포자에서 게시자를 설정할 때 지정한 암호와 일치해야 합니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "63022501"
   
     -   필요에 따라 테이블 아티클에서 행을 필터링합니다. 자세한 내용은 [게시된 데이터 필터링](filter-published-data.md)을 참조하세요.  
   
-    -   스냅숏 에이전트 일정을 설정합니다.  
+    -   스냅샷 에이전트 일정을 설정합니다.  
   
     -   다음 복제 에이전트를 실행 및 연결하는 자격 증명을 지정합니다.  
   
@@ -98,11 +98,11 @@ ms.locfileid: "63022501"
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  복제 저장 프로시저를 사용하여 프로그래밍 방식으로 게시를 만들 수 있습니다. 사용되는 저장 프로시저는 만들려는 게시의 유형에 따라 달라집니다.  
   
-#### <a name="to-create-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시를 만들려면  
+#### <a name="to-create-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시를 만들려면  
   
 1.  게시 데이터베이스의 게시자에서 [sp_replicationdboption&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql)을 실행하여 스냅숏 또는 트랜잭션 복제를 사용하여 현재 데이터베이스를 게시할 수 있도록 설정합니다.  
   
-2.  트랜잭션 게시의 경우 게시 데이터베이스에 대한 로그 판독기 에이전트 작업이 존재하는지 여부를 확인합니다. 스냅숏 게시의 경우에는 이 단계가 필요하지 않습니다.  
+2.  트랜잭션 게시의 경우 게시 데이터베이스에 대한 로그 판독기 에이전트 작업이 존재하는지 여부를 확인합니다. 스냅샷 게시의 경우에는 이 단계가 필요하지 않습니다.  
   
     -   게시 데이터베이스에 대한 로그 판독기 에이전트 작업이 존재하면 3단계를 실행합니다.  
   
@@ -117,14 +117,14 @@ ms.locfileid: "63022501"
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-4.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. **@publication** 에 3단계에서 사용된 게시 이름을, **@snapshot_job_name** 및 **@password** 에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** 을 지정하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 **@publisher_login** @password **@publisher_password** 에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다. 이렇게 하면 게시에 대해 스냅숏 에이전트 작업이 만들어집니다.  
+4.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. **@publication** 에 3단계에서 사용된 게시 이름을, **@snapshot_job_name** 및 **@password** 에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** 을 지정하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 **@publisher_login** @password **@publisher_password** 에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
   
     > [!IMPORTANT]  
     >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
 5.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
-6.  스냅숏 에이전트 작업을 시작하여 이 게시에 대한 초기 스냅숏을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
+6.  스냅샷 에이전트 작업을 시작하여 이 게시에 대한 초기 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
 #### <a name="to-create-a-merge-publication"></a>병합 게시를 만들려면  
   
@@ -137,28 +137,28 @@ ms.locfileid: "63022501"
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-3.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. **@publication** 에 2단계에서 사용된 게시 이름을, **@snapshot_job_name** 및 **@password** 에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** 을 지정하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 **@publisher_login** @password **@publisher_password** 에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다. 이렇게 하면 게시에 대해 스냅숏 에이전트 작업이 만들어집니다.  
+3.  게시자에서 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql)을 실행합니다. **@publication** 에 2단계에서 사용된 게시 이름을, **@snapshot_job_name** 및 **@password** 에 스냅숏 에이전트를 실행하는 데 사용되는 Windows 자격 증명을 지정합니다. 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** 을 지정하고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 및 **@publisher_login** @password **@publisher_password** 에서 트랜잭션 게시에 대해 구독 업데이트를 설정하는 방법에 대해 설명합니다. 이렇게 하면 게시에 대해 스냅샷 에이전트 작업이 만들어집니다.  
   
     > [!IMPORTANT]  
     >  게시자를 원격 배포자로 구성할 경우 *job_login* 및 *job_password*를 비롯한 모든 매개 변수에 제공된 값이 일반 텍스트로 배포자에게 전송됩니다. 이 저장 프로시저를 실행하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
 4.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](define-an-article.md)을 참조하세요.  
   
-5.  스냅숏 에이전트 작업을 시작하여 이 게시에 대한 초기 스냅숏을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
+5.  스냅샷 에이전트 작업을 시작하여 이 게시에 대한 초기 스냅샷을 생성합니다. 자세한 내용은 [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
- 다음 예에서는 트랜잭션 게시를 만듭니다. 스크립팅 변수는 스냅숏 에이전트 및 로그 판독기 에이전트에 대한 작업을 만드는 데 필요한 Windows 자격 증명을 전달하는 데 사용됩니다.  
+ 다음 예에서는 트랜잭션 게시를 만듭니다. 스크립팅 변수는 스냅샷 에이전트 및 로그 판독기 에이전트에 대한 작업을 만드는 데 필요한 Windows 자격 증명을 전달하는 데 사용됩니다.  
   
  [!code-sql[HowTo#sp_AddTranPub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranpub)]  
   
- 다음 예에서는 병합 게시를 만듭니다. 스크립팅 변수는 스냅숏 에이전트에 대한 작업을 만드는 데 필요한 Windows 자격 증명을 전달하는 데 사용됩니다.  
+ 다음 예에서는 병합 게시를 만듭니다. 스크립팅 변수는 스냅샷 에이전트에 대한 작업을 만드는 데 필요한 Windows 자격 증명을 전달하는 데 사용됩니다.  
   
  [!code-sql[HowTo#sp_AddMergePub](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergepub)]  
   
 ##  <a name="RMOProcedure"></a> RMO(복제 관리 개체) 사용  
  RMO(복제 관리 개체)를 사용하여 프로그래밍 방식으로 게시를 만들 수 있습니다. 게시를 만드는 데 사용하는 RMO 클래스는 만드는 게시 유형에 따라 달라집니다.  
   
-#### <a name="to-create-a-snapshot-or-transactional-publication"></a>스냅숏 또는 트랜잭션 게시를 만들려면  
+#### <a name="to-create-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시를 만들려면  
   
 1.  <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 클래스를 사용하여 게시자 연결을 만듭니다.  
   
@@ -187,7 +187,7 @@ ms.locfileid: "63022501"
   
     -   <xref:Microsoft.SqlServer.Replication.PublicationType> 또는 <xref:Microsoft.SqlServer.Replication.PublicationType.Transactional> 의 <xref:Microsoft.SqlServer.Replication.PublicationType.Snapshot>  
   
-    -   스냅숏 에이전트가 실행되는 Windows 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드. 이 계정은 스냅숏 에이전트에서 로컬 배포자에 연결할 때 사용되며, Windows 인증이 사용되는 경우에는 모든 원격 연결에도 사용됩니다.  
+    -   스냅샷 에이전트가 실행되는 Windows 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드. 이 계정은 스냅샷 에이전트에서 로컬 배포자에 연결할 때 사용되며, Windows 인증이 사용되는 경우에는 모든 원격 연결에도 사용됩니다.  
   
         > [!NOTE]  
         >  `sysadmin` 고정 서버 역할의 멤버가 게시를 만들 경우에는 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>를 설정하지 않아도 됩니다. 이 경우 에이전트는 SQL Server 에이전트 계정을 가장합니다. 자세한 내용은 [복제 에이전트 보안 모델](../security/replication-agent-security-model.md)을 참조하세요.  
@@ -221,7 +221,7 @@ ms.locfileid: "63022501"
   
     -   <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>에 대한 게시의 이름  
   
-    -   스냅숏 에이전트가 실행되는 Windows 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 및 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> 필드. 이 계정은 스냅숏 에이전트에서 로컬 배포자에 연결할 때 사용되며, Windows 인증이 사용되는 경우에는 모든 원격 연결에도 사용됩니다.  
+    -   스냅샷 에이전트가 실행되는 Windows 계정에 대한 자격 증명을 제공하기 위한 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>의 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> 및 <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> 필드. 이 계정은 스냅샷 에이전트에서 로컬 배포자에 연결할 때 사용되며, Windows 인증이 사용되는 경우에는 모든 원격 연결에도 사용됩니다.  
   
         > [!NOTE]  
         >  `sysadmin` 고정 서버 역할의 멤버가 게시를 만들 경우에는 <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>를 설정하지 않아도 됩니다. 자세한 내용은 [복제 에이전트 보안 모델](../security/replication-agent-security-model.md)을 참조하세요.  
@@ -236,13 +236,13 @@ ms.locfileid: "63022501"
 6.  <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> 메서드를 호출하여 게시에 대한 스냅숏 에이전트 작업을 만듭니다.  
   
 ###  <a name="PShellExample"></a> 예(RMO)  
- 이 예에서는 AdventureWorks 데이터베이스에서 트랜잭션 게시를 사용할 수 있도록 설정하고 로그 판독기 에이전트 작업을 정의하며 AdvWorksProductTran 게시를 만듭니다. 이 게시에 대한 아티클을 정의해야 합니다. 로그 판독기 에이전트 작업 및 스냅숏 에이전트 작업을 만드는 데 필요한 Windows 계정 자격 증명은 런타임에 전달됩니다. RMO를 사용하여 스냅숏 및 트랜잭션 아티클을 정의하는 방법은 [Define an Article](define-an-article.md)를 참조하세요.  
+ 이 예에서는 AdventureWorks 데이터베이스에서 트랜잭션 게시를 사용할 수 있도록 설정하고 로그 판독기 에이전트 작업을 정의하며 AdvWorksProductTran 게시를 만듭니다. 이 게시에 대한 아티클을 정의해야 합니다. 로그 판독기 에이전트 작업 및 스냅샷 에이전트 작업을 만드는 데 필요한 Windows 계정 자격 증명은 런타임에 전달됩니다. RMO를 사용하여 스냅샷 및 트랜잭션 아티클을 정의하는 방법은 [Define an Article](define-an-article.md)를 참조하세요.  
   
  [!code-csharp[HowTo#rmo_CreateTranPub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranpub)]  
   
  [!code-vb[HowTo#rmo_vb_CreateTranPub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createtranpub)]  
   
- 이 예에서는 AdventureWorks 데이터베이스에서 병합 게시를 사용할 수 있도록 설정하고 AdvWorksSalesOrdersMerge 게시를 만듭니다. 이 게시에 대한 아티클을 정의해야 합니다. 스냅숏 에이전트 작업을 만드는 데 필요한 Windows 계정 자격 증명은 런타임에 전달됩니다. RMO를 사용하여 병합 아티클을 정의하는 방법은 [Define an Article](define-an-article.md)를 참조하세요.  
+ 이 예에서는 AdventureWorks 데이터베이스에서 병합 게시를 사용할 수 있도록 설정하고 AdvWorksSalesOrdersMerge 게시를 만듭니다. 이 게시에 대한 아티클을 정의해야 합니다. 스냅샷 에이전트 작업을 만드는 데 필요한 Windows 계정 자격 증명은 런타임에 전달됩니다. RMO를 사용하여 병합 아티클을 정의하는 방법은 [Define an Article](define-an-article.md)를 참조하세요.  
   
  [!code-csharp[HowTo#rmo_CreateMergePub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createmergepub)]  
   

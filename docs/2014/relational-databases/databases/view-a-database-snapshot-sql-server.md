@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 스냅숏 보기(SQL Server) | Microsoft 문서
+title: 데이터베이스 스냅샷 보기(SQL Server) | Microsoft 문서
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,11 +21,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871190"
 ---
-# <a name="view-a-database-snapshot-sql-server"></a>데이터베이스 스냅숏 보기(SQL Server)
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]데이터베이스 스냅숏을 표시하는 방법에 대해 설명합니다.  
+# <a name="view-a-database-snapshot-sql-server"></a>데이터베이스 스냅샷 보기(SQL Server)
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]데이터베이스 스냅샷을 표시하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
->  데이터베이스 스냅숏을 만들거나, 되돌리거나, 삭제하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해야 합니다.  
+>  데이터베이스 스냅샷을 만들거나, 되돌리거나, 삭제하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해야 합니다.  
   
  **항목 내용**  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62871190"
   
 1.  개체 탐색기에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
-2.   **데이터베이스**를 확장합니다.  
+2.  **데이터베이스**를 확장합니다.  
   
 3.  **데이터베이스 스냅숏**을 확장한 후 표시할 스냅숏을 선택합니다.  
   

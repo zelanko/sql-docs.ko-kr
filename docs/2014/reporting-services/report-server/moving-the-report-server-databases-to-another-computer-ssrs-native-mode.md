@@ -18,7 +18,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103714"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>다른 컴퓨터로 보고서 서버 데이터베이스 이동(SSRS 기본 모드)
-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치에 사용되는 보고서 서버 데이터베이스를 다른 컴퓨터에 있는 인스턴스로 이동할 수 있습니다. reportserver 데이터베이스와 reportservertempdb 데이터베이스를 모두 이동하거나 함께 복사해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하려면 두 데이터베이스가 모두 필요합니다. reportservertempdb 데이터베이스는 이동하는 주 reportserver 데이터베이스와 이름으로 관련되어야 합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 설치에 사용되는 보고서 서버 데이터베이스를 다른 컴퓨터에 있는 인스턴스로 이동할 수 있습니다. reportserver 데이터베이스와 reportservertempdb 데이터베이스를 모두 이동하거나 함께 복사해야 합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 를 설치하려면 두 데이터베이스가 모두 필요합니다. reportservertempdb 데이터베이스는 이동하는 주 reportserver 데이터베이스와 이름으로 관련되어야 합니다.  
   
  **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드입니다.  
   
@@ -28,7 +28,7 @@ ms.locfileid: "66103714"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 작업은 새 데이터베이스 인스턴스에서 다시 만들어집니다. 해당 작업을 새 컴퓨터로 이동하지 않아도 되지만 더 이상 사용되지 않을 컴퓨터 작업은 삭제할 수 있습니다.  
   
--   구독, 캐시된 보고서 및 스냅숏은 이동된 데이터베이스에 그대로 유지됩니다. 데이터베이스를 이동한 후 스냅숏이 새로 고친 데이터를 가져오지 않은 경우 보고서 관리자에서 스냅숏 옵션의 선택을 취소하고 **적용** 을 클릭하여 변경 내용을 저장합니다. 그런 다음 일정을 다시 만들고 **적용** 을 클릭하여 변경 내용을 저장합니다.  
+-   구독, 캐시된 보고서 및 스냅샷은 이동된 데이터베이스에 그대로 유지됩니다. 데이터베이스를 이동한 후 스냅샷이 새로 고친 데이터를 가져오지 않은 경우 보고서 관리자에서 스냅샷 옵션의 선택을 취소하고 **적용** 을 클릭하여 변경 내용을 저장합니다. 그런 다음 일정을 다시 만들고 **적용** 을 클릭하여 변경 내용을 저장합니다.  
   
 -   reportservertempdb에 저장된 임시 보고서 및 사용자 세션 데이터는 해당 데이터베이스를 이동해도 그대로 유지됩니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66103714"
   
 2.  보고서 서버 서비스를 중지합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 도구를 사용하여 서비스를 중지할 수 있습니다.  
   
-3.   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 엽니다.  
+3.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 시작하고 보고서 서버 데이터베이스를 호스팅하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 엽니다.  
   
 4.  보고서 서버 데이터베이스를 마우스 오른쪽 단추로 클릭하고 태스크를 가리킨 다음 **분리**를 클릭합니다. 보고서 서버 임시 데이터베이스에 대해 이 단계를 반복합니다.  
   

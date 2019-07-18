@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f1c684aff9c4b31049a04add04e8def642dca1d2
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
-ms.translationtype: HT
+ms.openlocfilehash: e79dd0bce559259863128de1d2490f0fd9197cf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961694"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R 모델을 배포 하 고 사용 하 여 SQL server (연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -73,7 +72,7 @@ ms.locfileid: "58510600"
 
     + SELECT 문을 사용하여 SQL 테이블에 저장된 모델을 호출합니다. 모델 테이블에서 검색 됩니다 **varbinary (max)** SQL 변수에 저장 된 데이터를  _\@lmodel2_를 매개 변수로 전달 하 고 *mod* 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)합니다.
 
-    + SQL 쿼리로 정의 되 고 SQL 변수에서를 문자열로 저장 점수 매기기에 대 한 입력으로 사용 되는 데이터  _\@입력_합니다. 이라는 데이터 프레임에 저장 된 데이터가 데이터베이스에서 검색 된 대로 *InputDataSet*, 입력된 데이터에 대 한 기본 이름 뿐입니다 합니다 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저를 정의할 수 있습니다 매개 변수를 사용 하 여 필요한 경우 다른 변수 이름을   *_\@input_data_1_name_* 합니다.
+    + SQL 쿼리로 정의 되 고 SQL 변수에서를 문자열로 저장 점수 매기기에 대 한 입력으로 사용 되는 데이터  _\@입력_합니다. 이라는 데이터 프레임에 저장 된 데이터가 데이터베이스에서 검색 된 대로 *InputDataSet*, 입력된 데이터에 대 한 기본 이름 뿐입니다 합니다 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저를 정의할 수 있습니다 매개 변수를 사용 하 여 필요한 경우 다른 변수 이름을 * _\@input_data_1_name_* 합니다.
 
     + 점수를 생성 하려면 저장된 프로시저에서 rxPredict 함수를 호출 합니다 **RevoScaleR** 라이브러리입니다.
 

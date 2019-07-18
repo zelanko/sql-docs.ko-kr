@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 스냅숏 보기(SQL Server) | Microsoft 문서
+title: 데이터베이스 스냅샷 보기(SQL Server) | Microsoft 문서
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,12 +22,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/05/2019
 ms.locfileid: "67583416"
 ---
-# <a name="view-a-database-snapshot-sql-server"></a>데이터베이스 스냅숏 보기(SQL Server)
+# <a name="view-a-database-snapshot-sql-server"></a>데이터베이스 스냅샷 보기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]데이터베이스 스냅숏을 표시하는 방법에 대해 설명합니다.  
+  이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]데이터베이스 스냅샷을 표시하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
->  데이터베이스 스냅숏을 만들거나, 되돌리거나, 삭제하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해야 합니다.  
+>  데이터베이스 스냅샷을 만들거나, 되돌리거나, 삭제하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해야 합니다.  
   
  **항목 내용**  
   

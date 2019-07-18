@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 37fb86b9-8819-4387-bcdc-9616968e15ad
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1aed9ac46d81e57a47f1026e599a5e50818190a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e135e6706454fe1f03b4c7ab762e5234e1b7d35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064210"
 ---
 # <a name="data-types-extended-stored-procedure-api"></a>데이터 형식(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "62742191"
 |SRVIMAGE|**image**|**image** 데이터 형식입니다.|  
 |SRVINT1|**tinyint**|1바이트 **tinyint** 데이터 형식입니다.|  
 |SRVINT2|**smallint**|2바이트 **smallint** 데이터 형식입니다.|  
-|SRVINT4|**ssNoversion**|4바이트 **int** 데이터 형식입니다.|  
+|SRVINT4|**int**|4바이트 **int** 데이터 형식입니다.|  
 |SRVINTN|**tinyint** &#124; **smallint** &#124; **int null**|**tinyint**, **smallint** 또는 **int** 데이터 형식으로 null 값이 허용됩니다.|  
 |SRVMONEY4|**smallmoney**|4바이트 **smallmoney** 데이터 형식입니다.|  
 |SRVMONEY|**money**|8바이트 **money** 데이터 형식입니다.|  

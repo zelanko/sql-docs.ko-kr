@@ -1,5 +1,5 @@
 ---
-title: 스냅숏 및 트랜잭션 복제의 백업 및 복원 전략 | Microsoft 문서
+title: 스냅샷 및 트랜잭션 복제의 백업 및 복원 전략 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -27,8 +27,8 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "68210777"
 ---
-# <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략
-  스냅숏 및 트랜잭션 복제에 대한 백업 및 복원 전략을 설계할 때 다음 세 가지 영역을 고려해야 합니다.  
+# <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략
+  스냅샷 및 트랜잭션 복제에 대한 백업 및 복원 전략을 설계할 때 다음 세 가지 영역을 고려해야 합니다.  
   
 -   백업할 데이터베이스  
   
@@ -39,7 +39,7 @@ ms.locfileid: "68210777"
  이 항목에서는 다음 3개의 섹션에서 각 영역을 설명합니다. Oracle 게시에 대한 백업 및 복원에 대한 자세한 내용은 [Oracle 게시자 백업 및 복원](../non-sql/backup-and-restore-for-oracle-publishers.md)을 참조하세요.  
   
 ## <a name="backing-up-databases"></a>데이터베이스 백업  
- 스냅숏 및 트랜잭션 복제의 경우 다음 데이터베이스를 정기적으로 백업해야 합니다.  
+ 스냅샷 및 트랜잭션 복제의 경우 다음 데이터베이스를 정기적으로 백업해야 합니다.  
   
 -   게시자의 게시 데이터베이스  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68210777"
 ### <a name="publisher"></a>게시자  
  다음과 같은 복제 유형에 대한 복원 단계가 제공됩니다.  
   
--   스냅숏 복제  
+-   스냅샷 복제  
   
 -   읽기 전용 트랜잭션 복제  
   
@@ -91,7 +91,7 @@ ms.locfileid: "68210777"
   
  이 4가지 복제에 대한 **msdb** 데이터베이스 및 **master** 데이터베이스(이 섹션에서 함께 설명됨)의 복원은 모두 동일합니다.  
   
-#### <a name="publication-database-snapshot-replication"></a>게시 데이터베이스: 스냅숏 복제  
+#### <a name="publication-database-snapshot-replication"></a>게시 데이터베이스: Snapshot Replication  
   
 1.  게시 데이터베이스의 최신 백업을 복원합니다. 2단계로 이동합니다.  
   
