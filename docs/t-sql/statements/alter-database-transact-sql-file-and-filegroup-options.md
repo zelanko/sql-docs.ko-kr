@@ -64,7 +64,7 @@ ms.locfileid: "63201716"
 
 |||
 |-|-|-|
-|** _\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -684,7 +684,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _\* SQL Database<br />관리되는 인스턴스 \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* SQL Database<br />관리되는 인스턴스 \*_**<br />&nbsp;|
 
 &nbsp;
 
