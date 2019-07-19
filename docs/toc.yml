@@ -4779,7 +4779,7 @@
                       items:
                         - name: 수동으로 초기화
                           href: relational-databases/replication/initialize-a-subscription-manually.md
-                        - name: 초기 스냅숏 만들기 및 적용
+                        - name: 초기 스냅샷 만들기 및 적용
                           href: relational-databases/replication/create-and-apply-the-initial-snapshot.md
                         - name: 스냅샷 옵션 수정
                           href: relational-databases/replication/snapshot-options.md
@@ -4816,7 +4816,7 @@
             - name: 백업 및 복원
               href: relational-databases/replication/administration/back-up-and-restore-replicated-databases.md
               items:
-                - name: 스냅숏 및 트랜잭션 복제
+                - name: 스냅샷 및 트랜잭션 복제
                   href: relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md
                 - name: 병합 복제
                   href: relational-databases/replication/administration/strategies-for-backing-up-and-restoring-merge-replication.md
@@ -7396,6 +7396,8 @@
       items:
         - name: 연결된 서버 만들기
           href: relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+        - name: 연결된 서버 공급자 만들기
+          href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
     - name: 전체 텍스트 검색
       href: relational-databases/search/full-text-search.md
       items:
