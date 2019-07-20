@@ -1,6 +1,6 @@
 ---
-title: 만들기, 학습 및 R-SQL Server Machine Learning Services의에서 파티션 기반 모델을 점수 매기기에 대 한 자습서
-description: 모델을 학습, SQL Server machine learning의 파티션 기반 모델링 기능을 사용 하 여 때 동적으로 생성 되는 분할 된 데이터를 사용 하는 방법에 알아봅니다.
+title: R에서 파티션 기반 모델 만들기, 학습 및 점수 매기기에 대 한 자습서
+description: SQL Server machine learning의 파티션 기반 모델링 기능을 사용 하는 경우 동적으로 생성 된 분할 된 데이터를 모델링, 학습 및 사용 하는 방법에 대해 알아봅니다.
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
@@ -9,45 +9,45 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e2cbffcab6fd34d08e8338522e8dcc97ac50f4c5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8ceba61f4bdc22b4049453ed27245f09efe080b1
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961978"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345952"
 ---
-# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>자습서: SQL Server의 R에서 파티션 기반 모델 만들기
+# <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>자습서: SQL Server에서 R로 파티션 기반 모델 만들기
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-SQL Server 2019 파티션 기반 모델링에서는 분할 데이터 모델을 학습 하는 기능입니다. 지역, 날짜 및 시간, 나가 또는 성별-같은 지정된 분류 구성표-에 자연스럽 게 세그먼트는 계층화 된 데이터에 대 한 스크립트 실행할 수 있습니다. 있습니다 전체 데이터 집합에 대해 모델링, 학습 및 점수를 그대로 유지 하는 파티션에서 수 이러한 모든 작업입니다. 
+SQL Server 2019에서 파티션 기반 모델링은 분할 된 데이터에 대해 모델을 만들고 학습 하는 기능입니다. 지리적 지역, 날짜 및 시간, 연령 또는 성별 등의 지정 된 분류 스키마로 자연스럽 게 분할 된 층 화 데이터의 경우 변경 되지 않은 상태로 유지 되는 파티션을 모델링, 학습 및 점수를 매기는 기능을 사용 하 여 전체 데이터 집합에 대해 스크립트를 실행할 수 있습니다. 모든 작업을 수행 합니다. 
 
-두 개의 새 매개 변수를 통해 파티션 기반 모델링 설정할지 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql):
+파티션 기반 모델링은 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)에서 두 개의 새 매개 변수를 통해 사용 하도록 설정 됩니다.
 
-+ **input_data_1_partition_by_columns**, 파티션에 열을 지정 하는 합니다.
-+ **input_data_1_order_by_columns** 정렬 기준 열을 지정 합니다. 
++ **input_data_1_partition_by_columns**는 분할할 열을 지정 합니다.
++ **input_data_1_order_by_columns** 는 정렬 기준으로 사용할 열을 지정 합니다. 
 
-이 자습서에서는 클래식 NYC 택시 샘플 데이터 및 R 스크립트를 사용 하 여 파티션 기반 모델링에 알아봅니다. 파티션 열에는 지불 방법입니다.
+이 자습서에서는 클래식 NYC taxi 샘플 데이터 및 R 스크립트를 사용 하 여 파티션 기반 모델링에 대해 알아봅니다. 파티션 열은 지불 방법입니다.
 
 > [!div class="checklist"]
-> * 파티션에 지불 유형은 (5)를 기반으로 합니다.
-> * 각 파티션에 모델을 학습 만들고 데이터베이스에서 개체를 저장 합니다.
-> * 해당 목적을 위해 예약 하는 샘플 데이터를 사용 하 여 각 파티션 모델을 통해 팁 결과의 확률을 예측 합니다.
+> * 파티션은 지불 유형 (5)을 기반으로 합니다.
+> * 각 파티션에서 모델을 만들고 학습 하 고 데이터베이스에 개체를 저장 합니다.
+> * 해당 목적으로 예약 된 샘플 데이터를 사용 하 여 각 파티션 모델에 대 한 팁 결과의 확률을 예측 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
  
-이 자습서를 완료 하려면 다음이 필요 합니다.
+이 자습서를 완료 하려면 다음이 있어야 합니다.
 
-+ 시스템 리소스가 충분 합니다. 데이터 집합이 크면 및 학습 작업은 리소스를 많이 사용 합니다. 가능 하면 최소 8GB RAM 포함 된 시스템을 사용 합니다. 또는 리소스 제약 조건을 해결 하려면 더 작은 데이터 집합을 사용할 수 있습니다. 데이터 집합을 줄이기 위한 지침은 인라인입니다. 
++ 충분 한 시스템 리소스. 데이터 집합은 크고 학습 작업은 리소스를 많이 사용 합니다. 가능 하면 8gb 이상의 RAM이 있는 시스템을 사용 합니다. 또는 더 작은 데이터 집합을 사용 하 여 리소스 제약 조건을 해결할 수 있습니다. 데이터 집합을 줄이기 위한 지침은 인라인으로 설명 되어 있습니다. 
 
-+ 쿼리 실행, 같은 T-SQL에 대 한 도구 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)합니다.
++ [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)와 같은 t-sql 쿼리 실행을 위한 도구입니다.
 
-+ [NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)를 할 수 있습니다 [다운로드 하 고 복원](demo-data-nyctaxi-in-sql.md) 로컬 데이터베이스 엔진 인스턴스로. 파일 크기는 약 90입니다.
++ [NYCTaxi_Sample](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)는 로컬 데이터베이스 엔진 인스턴스로 [다운로드 하 고 복원할](demo-data-nyctaxi-in-sql.md) 수 있습니다. 파일 크기는 약 90 MB입니다.
 
-+ SQL Server 2019 미리 보기 데이터베이스 엔진 인스턴스, Machine Learning Services 및 R 통합 합니다.
++ SQL Server 2019 Machine Learning Services 및 R 통합을 포함 하는 데이터베이스 엔진 인스턴스를 미리 봅니다.
 
-실행 하 여 버전을 확인 **`SELECT @@Version`** 쿼리 도구에서 T-SQL 쿼리로 합니다. 출력 해야 "Microsoft SQL Server (CTP 2.4)-2019 15.0.x"입니다.
+쿼리 도구에서 t-sql **`SELECT @@Version`** 쿼리로를 실행 하 여 버전을 확인 합니다. 출력은 "Microsoft SQL Server 2019 (CTP 2.4)-15.0" 여야 합니다.
 
-데이터베이스 엔진 인스턴스를 사용 하 여 현재 설치 된 모든 R 패키지의 잘못 된 목록을 반환 하 여 R 패키지의 가용성을 확인:
+현재 데이터베이스 엔진 인스턴스와 함께 설치 된 모든 R 패키지의 잘 포맷 된 목록을 반환 하 여 R 패키지의 가용성을 확인 합니다.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -63,13 +63,13 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 
 ## <a name="connect-to-the-database"></a>데이터베이스에 연결
 
-Management Studio를 시작 하 고 데이터베이스 엔진 인스턴스에 연결 합니다. 개체 탐색기에서 확인 합니다 [NYCTaxi_Sample 데이터베이스](demo-data-nyctaxi-in-sql.md) 존재 합니다. 
+Management Studio를 시작 하 고 데이터베이스 엔진 인스턴스에 연결 합니다. 개체 탐색기에서 [NYCTaxi_Sample 데이터베이스가](demo-data-nyctaxi-in-sql.md) 있는지 확인 합니다. 
 
 ## <a name="create-calculatedistance"></a>CalculateDistance 만들기
 
-테이블 반환 함수를 사용 하 여 계산 거리 하지만 더 나은 저장된 프로시저 작동에 대 한 스칼라 함수를 사용 하 여 데모 데이터베이스 제공 됩니다. 만들려면 다음 스크립트를 실행 합니다 **CalculateDistance** 에서 사용 되는 함수는 [교육 단계](#training-step) 나중에 합니다.
+데모 데이터베이스는 거리를 계산 하기 위한 스칼라 함수와 함께 제공 되지만 저장 프로시저는 테이블 반환 함수를 사용 하 여 더 효율적으로 작동 합니다. 다음 스크립트를 실행 하 여 나중에 [학습 단계](#training-step) 에 사용 되는 **CalculateDistance** 함수를 만듭니다.
 
-함수가 생성 된를 확인 하려면 아래 \Programmability\Functions\Table-valued 함수를 확인 합니다 **NYCTaxi_Sample** 개체 탐색기에서 데이터베이스입니다.
+함수가 생성 되었는지 확인 하려면 개체 탐색기 **NYCTaxi_Sample** 데이터베이스에서 \Programmability\Functions\Table-valued 함수를 확인 합니다.
 
 ```sql
 USE NYCTaxi_sample
@@ -99,15 +99,15 @@ FROM (
 GO
  ```
 
-## <a name="define-a-procedure-for-creating-and-training-per-partition-models"></a>만들기 및 파티션 별 모델을 학습 하는 절차를 정의 합니다.
+## <a name="define-a-procedure-for-creating-and-training-per-partition-models"></a>파티션당 모델을 만들고 학습 하는 프로시저를 정의 합니다.
 
-이 자습서는 저장된 프로시저에서 R 스크립트를 래핑합니다. 이 단계에서는 R을 사용 하 여 입력된 데이터 집합 만들기, 팁의 결과 예측 하는 것에 대 한 분류 모델을 빌드 및 모델 데이터베이스에 저장 하는 저장된 프로시저를 만듭니다.
+이 자습서에서는 저장 프로시저에서 R 스크립트를 래핑합니다. 이 단계에서는 R을 사용 하 여 입력 데이터 집합을 만들고, 팁 결과를 예측 하는 분류 모델을 작성 하 고, 데이터베이스에 모델을 저장 하는 저장 프로시저를 만듭니다.
 
-이 스크립트에서 사용 하는 매개 변수 입력 간에 표시 **input_data_1_partition_by_columns** 하 고 **input_data_1_order_by_columns**합니다. 메커니즘은 분할 모델링 이러한 매개 변수는 회수가 발생 합니다. 매개 변수 입력으로 전달 됩니다 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 를 사용 하 여 외부 스크립트를 실행 하는 한 번 모든 파티션에 대 한 파티션 처리 합니다. 
+이 스크립트에서 사용 하는 매개 변수 입력 중에 **input_data_1_partition_by_columns** 및 **input_data_1_order_by_columns**이 표시 됩니다. 이러한 매개 변수는 분할 된 모델링에서 발생 하는 메커니즘입니다. 매개 변수는 모든 파티션에 대해 한 번씩 실행 되는 외부 스크립트를 사용 하 여 파티션을 처리 하기 위해 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 에 대 한 입력으로 전달 됩니다. 
 
-이 저장 프로시저 [병렬 처리를 사용 하 여](#parallel) 빠르게 완료 시간에 대 한 합니다.
+이 저장 프로시저의 경우 완료 하는 데 걸리는 시간을 단축 하기 위해 [병렬 처리를 사용](#parallel) 합니다.
 
-이 스크립트를 실행 한 후 표시 **train_rxLogIt_per_partition** \Programmability\Stored 절차 아래에 **NYCTaxi_Sample** 개체 탐색기에서 데이터베이스입니다. 모델을 저장 하는 데 사용 되는 새 테이블을 볼 수 있어야 합니다. **dbo.nyctaxi_models**합니다.
+이 스크립트를 실행 한 후에는 개체 탐색기의 **NYCTaxi_Sample** 데이터베이스 아래에 **train_rxLogIt_per_partition** \Programmability\Stored 프로시저에 표시 되어야 합니다. 모델을 저장 하는 데 사용 되는 새 테이블 ( **nyctaxi_models**)도 표시 됩니다.
 
 ```sql
 USE NYCTaxi_Sample
@@ -167,20 +167,20 @@ GO
 
 ### <a name="parallel-execution"></a>병렬 실행
 
-다음에 유의 합니다 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 입력을 포함  **@parallel= 1**병렬 처리를 사용 하도록 설정 하는 데 사용 합니다. SQL Server 2019, 설정의 이전 릴리스와 달리  **@parallel= 1** 가능성이 훨씬 더 결과 병렬 실행을 수행 하는 쿼리 최적화 프로그램 강력한 힌트를 제공 합니다.
+[Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 입력에는 병렬 처리를 사용 하도록 설정 하는 데 사용 되는  **@parallel= 1**이 포함 됩니다. 이전 릴리스와 달리 2019  **@parallelSQL Server 설정 하** 는 경우 쿼리 최적화 프로그램에 더 강력한 힌트를 제공 하 여 병렬 실행을 훨씬 더 높은 결과를 제공 합니다.
 
-기본적으로 쿼리 최적화 프로그램에서 작동 경향이  **@parallel= 1** 처리 하면이 명시적으로 설정 하 여 있지만 256 개 이상의 행이 있는 테이블의  **@parallel= 1** 이 표시 된 것과 같이 스크립트입니다.
+기본적으로 쿼리 최적화 프로그램은 256 개 이상의 행이 있는 테이블에서  **@parallel= 1** 미만으로 작업 하는 경향이 있지만이 스크립트에 표시 된 대로  **@parallel= 1** 을 설정 하 여이를 명시적으로 처리할 수 있습니다.
 
 > [!Tip]
-> 교육 workoads 사용할 수 있습니다 **@parallel** 모든 임의 학습 스크립트를 사용 하 여 비 Microsoft rx 알고리즘을 사용 하는 것에 합니다. 일반적으로 (rx 접두사로) RevoScaleR 알고리즘만 SQL Server의 교육 시나리오에서 병렬 처리를 제공합니다. 하지만 새 매개 변수를 사용 하 여 해당 기능을 사용 하 여 특별히 엔지니어링 된 오픈 소스 R 함수를 비롯 한 함수를 호출 하는 스크립트를 병렬 처리할 수 있습니다. 파티션의 때문에 선호도를 특정 스레드에 지정 된 스레드에 대해 파티션 별 기준으로 스크립트에서 호출 하는 모든 작업 실행이 작동 합니다.
+> 교육 회사의 경우 Microsoft rx 알고리즘이 아닌 다른 **@parallel** 모든 학습 스크립트를 사용할 수 있습니다. 일반적으로 RevoScaleR 알고리즘 (rx 접두사 포함)만 SQL Server의 학습 시나리오에서 병렬 처리를 제공 합니다. 그러나 새 매개 변수를 사용 하면 특정 기능을 사용 하 여 특별히 엔지니어링 되지 않은 오픈 소스 R 함수를 포함 하 여 함수를 호출 하는 스크립트를 병렬화 할 수 있습니다. 이는 파티션에 특정 스레드에 대 한 선호도가 있기 때문에 작동 하므로 스크립트에서 호출 되는 모든 작업은 지정 된 스레드에서 파티션 별로 실행 됩니다.
 
 <a name="training-step"></a>
 
 ## <a name="run-the-procedure-and-train-the-model"></a>프로시저를 실행 하 고 모델 학습
 
-이 섹션에서는 스크립트를 만들고 이전 단계에서 저장 하는 모델을 학습 합니다. 아래 예제에서는 모델을 학습 하는 것에 대 한 두 가지 방법을 보여 줍니다: 데이터 집합을 전체 또는 부분 데이터를 사용 하 여 합니다. 
+이 섹션에서 스크립트는 이전 단계에서 만들고 저장 한 모델을 학습 합니다. 아래 예제에서는 전체 데이터 집합 또는 부분 데이터를 사용 하 여 모델을 학습 하는 두 가지 방법을 보여 줍니다. 
 
-이 단계에 시간이 조금 걸릴를 기대 합니다. 교육 기법은 완료 하려면 몇 분 걸리는 아닙니다. 시스템 리소스, 특히 메모리 로드에 충분 하지 않은 경우 데이터의 하위 집합을 사용 합니다. 두 번째 예제는 구문을 제공 합니다.
+이 단계는 시간이 오래 걸릴 것으로 간주 됩니다. 학습은 계산 집약적 이며 완료 하는 데 몇 분이 걸립니다. 시스템 리소스, 특히 메모리가 로드에 충분 하지 않은 경우 데이터의 하위 집합을 사용 합니다. 두 번째 예에서는 구문을 제공 합니다.
 
 ```sql
 --Example 1: train on entire dataset
@@ -202,22 +202,22 @@ GO
 ```
 
 > [!NOTE]
-> 추가할 수 있습니다 다른 워크 로드를 실행 하는 경우 `OPTION(MAXDOP 2)` SELECT 문에 바로 2 개의 코어를 쿼리 처리를 제한 하려는 경우.
+> 다른 워크 로드를 실행 하는 경우 쿼리 처리 `OPTION(MAXDOP 2)` 를 2 개 코어로만 제한 하려면 SELECT 문에를 추가할 수 있습니다.
 
 ## <a name="check-results"></a>결과 확인
 
-모델 테이블의 결과는 5 개의 파티션을 5 지불 형식에서 분할을 기반으로 5 개의 서로 다른 모델 이어야 합니다. 모델에는 **ml_models** 데이터 원본입니다.
+모델 테이블의 결과는 5 개의 지불 형식으로 분할 된 5 개의 파티션을 기반으로 하는 5 개의 서로 다른 모델 이어야 합니다. 모델은 **ml_models** 데이터 원본에 있습니다.
 
 ```sql
 SELECT *
 FROM ml_models
 ```
  
-## <a name="define-a-procedure-for-predicting-outcomes"></a>결과 예측 하는 절차를 정의 합니다.
+## <a name="define-a-procedure-for-predicting-outcomes"></a>결과를 예측 하는 프로시저 정의
 
-점수 매기기에 동일한 매개 변수를 사용할 수 있습니다. 다음 샘플에는 현재 처리 하는 파티션에 대 한 올바른 모델을 사용 하 여 점수를 매기는 R 스크립트를 포함 합니다.
+점수 매기기에 동일한 매개 변수를 사용할 수 있습니다. 다음 샘플에는 현재 처리 중인 파티션에 대해 올바른 모델을 사용 하 여 점수를 매기는 R 스크립트가 포함 되어 있습니다.
 
-이전과 마찬가지로 R 코드를 래핑할 저장된 프로시저를 만듭니다.
+이전 처럼 R 코드를 래핑하는 저장 프로시저를 만듭니다.
 
 ```sql
 USE NYCTaxi_Sample
@@ -292,7 +292,7 @@ END;
 GO
 ```
 
-## <a name="create-a-table-to-store-predictions"></a>예측을 저장 하는 테이블 만들기
+## <a name="create-a-table-to-store-predictions"></a>예측을 저장할 테이블 만들기
 
 ```sql
 CREATE TABLE prediction_results (
@@ -325,9 +325,9 @@ EXECUTE [predict_per_partition]
 GO
 ```
 
-## <a name="view-predictions"></a>보기 예측
+## <a name="view-predictions"></a>예측 보기
 
-예측 저장 되므로 결과 집합을 반환 하는 간단한 쿼리를 실행할 수 있습니다.
+예측이 저장 되기 때문에 간단한 쿼리를 실행 하 여 결과 집합을 반환할 수 있습니다.
 
 ```sql
 SELECT *
@@ -336,7 +336,7 @@ FROM prediction_results;
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서 사용한 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 분할 된 데이터에 대해 작업을 반복 합니다. 더 자세히 검토할에 대 한 저장된 프로시저의 외부 스크립트를 호출 살펴보고 다음 자습서를 계속 RevoScaleR 함수를 사용 합니다.
+이 자습서에서는 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) 를 사용 하 여 분할 된 데이터에 대해 작업을 반복 합니다. 저장 프로시저에서 외부 스크립트를 호출 하 고 RevoScaleR 함수를 사용 하는 방법을 자세히 살펴보려면 다음 자습서를 계속 진행 하세요.
 
 > [!div class="nextstepaction"]
 > [R 및 SQL Server에 대 한 연습](walkthrough-data-science-end-to-end-walkthrough.md)

@@ -1,23 +1,23 @@
 ---
-title: R 언어-SQL Server Machine Learning을 사용 하 여 데이터 과학자를 위한 자습서
-description: 데이터베이스 내 분석에 대 한 종단 간 R 솔루션을 만드는 방법을 보여 주는 자습서입니다.
+title: R 언어를 사용 하 여 데이터 과학자에 대 한 자습서
+description: 데이터베이스 내 분석을 위한 종단 간 R 솔루션을 만드는 방법을 보여 주는 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 45d587b4d62c33e944b15c6b951fa1323620c50e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 45a1352b60574304a124af88226cc2a9d7f1a804
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961708"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345796"
 ---
-# <a name="tutorial-sql-development-for-r-data-scientists"></a>자습서: R 데이터 과학자를 위한 SQL 개발
+# <a name="tutorial-sql-development-for-r-data-scientists"></a>자습서: R 데이터 과학자 SQL 개발
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-데이터 과학자를 위한이 자습서에서는 SQL Server 2016 또는 SQL Server 2017의 R 기능 지원에 기반 하는 예측 모델링에 대 한 종단 간 솔루션을 빌드하는 방법에 알아봅니다. 이 자습서에서는 한 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) SQL Server 데이터베이스에 있습니다. 
+데이터 과학자에 대 한이 자습서에서는 SQL Server 2016 또는 SQL Server 2017에서 R 기능 지원을 기반으로 예측 모델링을 위한 종단 간 솔루션을 빌드하는 방법에 대해 알아봅니다. 이 자습서에서는 SQL Server에서 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) 데이터베이스를 사용 합니다. 
 
 R 코드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL Server 데이터, 사용자 지정 SQL 함수를 사용하여 분류 모델을 작성하고 이를 통해 택시 운전사가 팁을 얻을 수 있는지 그 가능성을 예측합니다. 또한 R 모델을 SQL Server에 배포하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서버 데이터를 사용해서 해당 모델에 기반을 둔 점수(score)를 생성합니다.
 
@@ -27,19 +27,19 @@ R 코드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL Server �
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-+ [R 통합을 사용 하 여 SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md#verify-installation) 또는 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
++ [SQL Server 2017 r 통합](../install/sql-machine-learning-services-windows-install.md#verify-installation) 또는 [SQL Server 2016 r 서비스](../install/sql-r-services-windows-install.md) Machine Learning Services
 
-+ [데이터베이스 사용 권한을](../security/user-permission.md) 및 SQL Server 데이터베이스 사용자 로그인
++ [데이터베이스 사용 권한](../security/user-permission.md) 및 SQL Server 데이터베이스 사용자 로그인
 
 + [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
-+ [NYC Taxi 데모 데이터베이스](demo-data-nyctaxi-in-sql.md)
++ [NYC Taxi demo 데이터베이스](demo-data-nyctaxi-in-sql.md)
 
-+ RStudio 등 R IDE 또는 R에 포함 된 기본 제공 RGUI 도구
++ RStudio와 같은 R IDE 또는 R에 포함 된 기본 제공 RSTUDIO 도구
 
-클라이언트 워크스테이션에서이 연습을 수행 하는 것이 좋습니다. 에 연결 하기 위해, 동일한 네트워크에 있어야는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 SQL Server와 R 언어를 사용 합니다. 워크스테이션 구성에 대 한 지침을 참조 하세요 [R 개발에 대 한 데이터 과학 클라이언트 설정](../r/set-up-a-data-science-client.md)합니다.
+클라이언트 워크스테이션에서이 연습을 수행 하는 것이 좋습니다. SQL Server와 R 언어가 사용 하도록 설정 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에 동일한 네트워크에서 연결할 수 있어야 합니다. 워크스테이션 구성에 대 한 지침은 [R 개발용 데이터 과학 클라이언트 설정](../r/set-up-a-data-science-client.md)을 참조 하세요.
 
-이 연습에서는 둘 다 포함 된 컴퓨터에서 실행할 수 있습니다 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 R 개발 환경 했지만 프로덕션 환경에 대 한이 구성을 권장 하지 않습니다. 동일한 컴퓨터에 클라이언트 및 서버를 배치 해야 할 경우에 두 번째 집합이 "원격" 클라이언트에서 R 스크립트를 보내기 위한 Microsoft R 라이브러리를 설치 해야 합니다. SQL Server 인스턴스의 프로그램 파일에 설치 된 R 라이브러리를 사용 하지 마세요. 특히, 한 컴퓨터를 사용 하는 경우 클라이언트 및 서버 작업을 지원 하기 위해 이러한 위치 중에서 RevoScaleR 라이브러리를 해야 합니다.
+또는 및 R 개발 환경이 둘 다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 포함 된 컴퓨터에서이 연습을 실행할 수도 있지만 프로덕션 환경에서는이 구성을 권장 하지 않습니다. 클라이언트와 서버를 동일한 컴퓨터에 배치 해야 하는 경우에는 "원격" 클라이언트에서 R 스크립트를 전송 하기 위한 두 번째 Microsoft R 라이브러리 집합을 설치 해야 합니다. SQL Server 인스턴스의 프로그램 파일에 설치 된 R 라이브러리는 사용 하지 마십시오. 특히 컴퓨터 하나를 사용 하는 경우 클라이언트 및 서버 작업을 지원 하기 위해 두 위치 모두에 RevoScaleR 라이브러리가 필요 합니다.
 
 + C:\Program Files\Microsoft\R Client\R_SERVER\library\RevoScaleR 
 + C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\RevoScaleR
@@ -48,11 +48,11 @@ R 코드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL Server �
 
 ## <a name="additional-r-packages"></a>추가 R 패키지
 
-이 연습에는 기본적으로의 일부로 설치 되지 않은 여러 R 라이브러리가 필요 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]합니다. 솔루션을 개발하는 클라이언트와 솔루션을 배포하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 양쪽 모두에 패키지를 설치해야 합니다.
+이 연습을 수행 하려면의 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]일부로 기본적으로 설치 되지 않는 몇 가지 R 라이브러리가 필요 합니다. 솔루션을 개발하는 클라이언트와 솔루션을 배포하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터 양쪽 모두에 패키지를 설치해야 합니다.
 
-### <a name="on-a-client-workstation"></a>클라이언트 워크스테이션에서
+### <a name="on-a-client-workstation"></a>클라이언트 워크스테이션
 
-R 환경에서 다음 줄을 복사 하 고 Rgui 등의 IDE 콘솔 창에서 코드를 실행 합니다. 일부 패키지는 필요한 패키지도 설치합니다. 모두 32 개 정도의 패키지가 설치 됩니다. 이 단계를 완료 하려면 인터넷 연결이 있어야 합니다.
+R 환경에서 다음 줄을 복사 하 고 콘솔 창 (Rgui 또는 IDE)에서 코드를 실행 합니다. 일부 패키지는 필요한 패키지도 설치합니다. 모든에서 32 패키지가 설치 됩니다. 이 단계를 완료 하려면 인터넷에 연결 되어 있어야 합니다.
     
   ```R
   # Install required R libraries, if they are not already installed.
@@ -64,12 +64,12 @@ R 환경에서 다음 줄을 복사 하 고 Rgui 등의 IDE 콘솔 창에서 코
 
 ### <a name="on-the-server"></a>서버에서
 
-SQL Server에 패키지를 설치 하기 위한 몇 가지 옵션이 있습니다. 예를 들어, SQL Server 제공 [R 패키지 관리](../r/install-additional-r-packages-on-sql-server.md) 데이터베이스 관리자가 패키지 리포지토리 만들기 및 사용자가 자신의 패키지를 설치 하려면 권한을 할당할 수 있는 기능입니다. 그런데 컴퓨터 관리자의 경우 R을 사용해서 새로운 패키지를 설치할 수도 있습니다.
+SQL Server에서 패키지를 설치 하는 몇 가지 옵션이 있습니다. 예를 들어 SQL Server는 데이터베이스 관리자가 패키지 리포지토리를 만들고 사용자에 게 고유한 패키지를 설치할 수 있는 권한을 할당할 수 있는 [R 패키지 관리](../r/install-additional-r-packages-on-sql-server.md) 기능을 제공 합니다. 그런데 컴퓨터 관리자의 경우 R을 사용해서 새로운 패키지를 설치할 수도 있습니다.
 
 > [!NOTE]
-> 서버에서 메시지가 표시되더라도 사용자 라이브러리에 설치 **하지 마** 십시오. 사용자 라이브러리에 설치하면 SQL Server 인스턴스가 해당 패키지를 찾거나 실행할 수 없습니다. 자세한 내용은 [SQL Server에 새 R 패키지 설치](../r/install-additional-r-packages-on-sql-server.md)합니다.
+> 서버에서 메시지가 표시되더라도 사용자 라이브러리에 설치 **하지 마** 십시오. 사용자 라이브러리에 설치하면 SQL Server 인스턴스가 해당 패키지를 찾거나 실행할 수 없습니다. 자세한 내용은 [SQL Server에 새 R 패키지 설치](../r/install-additional-r-packages-on-sql-server.md)를 참조 하세요.
 
-1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에서 RGui.exe를 **관리자 권한으로** 엽니다.  기본값을 사용 하 여 SQL Server R Services를 설치한 경우 Rgui.exe는 C:\Program Files\Microsoft SQL Server\MSSQL13에서 찾을 수 있습니다. MSSQLSERVER\R_SERVICES\bin\x64)입니다.
+1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 컴퓨터에서 RGui.exe를 **관리자 권한으로** 엽니다.  기본값을 사용 하 여 SQL Server R Services를 설치한 경우에는 C:\Program Files\Microsoft SQL Server\MSSQL13.에서 Rgui를 찾을 수 있습니다. MSSQLSERVER\R_SERVICES\bin\x64).
 
 2. R 프롬프트에서 다음 R 명령을 실행합니다.
   
@@ -79,11 +79,11 @@ SQL Server에 패키지를 설치 하기 위한 몇 가지 옵션이 있습니�
   install.packages("ROCR", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   ```
-  이 예제에서는 R grep 함수를 사용 하 여 사용 가능한 경로의 벡터를 검색 하 고 "Program Files"를 포함 하는 경로 찾을. 자세한 내용은 [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)를 참조하세요.
+  이 예제에서는 R grep 함수를 사용 하 여 사용 가능한 경로의 벡터를 검색 하 고 "Program Files"를 포함 하는 경로를 찾습니다. 자세한 내용은 [https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)를 참조하세요.
 
   패키지가 이미 설치되었다고 생각되면 `installed.packages()` 를 실행하여 설치된 패키지 목록을 확인하십시오.
 
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
-> [탐색 하 고 데이터 요약](walkthrough-view-and-summarize-data-using-r.md)
+> [데이터 탐색 및 요약](walkthrough-view-and-summarize-data-using-r.md)

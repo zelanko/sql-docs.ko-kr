@@ -1,20 +1,20 @@
 ---
-title: R 및 T-SQL 함수-SQL Server Machine Learning을 사용 하 여 2 단원 만들기 데이터 기능
-description: Machine learning R 모델에서 사용 하기 위해 저장된 프로시저에 계산을 추가 하는 방법을 보여주는 자습서입니다.
+title: 2 단원 R 및 T-sql 함수를 사용 하 여 데이터 기능 만들기
+description: R 기계 학습 모델에서 사용 하기 위해 저장 프로시저에 계산을 추가 하는 방법을 보여 주는 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5d304bdf03eaea53ede0cf4b2f8d82f64c3d1021
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7570c6769a780c5a6d98bdfc762092524bf5000c
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961928"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345921"
 ---
-# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>2단원: R 및 T-SQL을 사용 하 여 데이터 기능 만들기
+# <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>2단원: R 및 T-sql을 사용 하 여 데이터 기능 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서는 SQL Server에서 R을 사용 하는 방법에 대 한 SQL 개발자를 위한 자습서의 일부입니다.
@@ -29,9 +29,9 @@ ms.locfileid: "67961928"
 
 사용자 지정 T-SQL 함수 _fnCalculateDistance_를 사용하여 Haversine 수식을 통해 거리를 컴퓨팅하고 두 번째 사용자 지정 T-SQL 함수 _fnEngineerFeatures_를 사용하여 모든 기능이 포함된 테이블을 만듭니다.
 
-전체 프로세스는 다음과 같습니다.
+전반적인 프로세스는 다음과 같습니다.
 
-- 계산을 수행 하는 T-SQL 함수 만들기
+- 계산을 수행 하는 T-sql 함수를 만듭니다.
 
 - 특성 데이터를 생성하는 함수를 호출합니다
 
@@ -122,8 +122,8 @@ ms.locfileid: "67961928"
 
 ## <a name="next-lesson"></a>다음 단원
 
-[3단원: 학습 및 T-SQL을 사용 하는 모델 저장](sqldev-train-and-save-a-model-using-t-sql.md)
+[3단원: T-sql을 사용 하 여 모델 학습 및 저장](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>이전 단원
 
-[1단원: R 및 저장된 프로시저를 사용 하 여 데이터 탐색 및 시각화](sqldev-explore-and-visualize-the-data.md)
+[1단원: R 및 저장 프로시저를 사용 하 여 데이터 탐색 및 시각화](sqldev-explore-and-visualize-the-data.md)

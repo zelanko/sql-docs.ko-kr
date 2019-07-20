@@ -1,41 +1,41 @@
 ---
-title: Python – SQL Server Machine Learning에서에서 데이터 구조를 사용 하 여 작업에 대 한 빠른 시작
-description: 이 빠른 시작에서는 SQL Server에서 Python 스크립트에 알아봅니다에 대 한는 데이터 구조를 어떻게 sp_execute_external_script 시스템 저장 프로시저를 사용 하 여 사용 합니다.
+title: Python에서 데이터 구조 작업에 대 한 빠른 시작
+description: SQL Server의 Python 스크립트에 대 한이 빠른 시작에서 sp_execute_external_script 시스템 저장 프로시저를 사용 하 여 데이터 구조를 사용 하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ffbbd39c08221db4afa6427626ca618e04617166
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d841314bd2bf167c4c40f5786a116b7bc8f73c0
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962084"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344555"
 ---
 # <a name="quickstart-python-data-structures-in-sql-server"></a>빠른 시작: SQL Server의 Python 데이터 구조
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 빠른 시작이에서는 Python을 사용 하 여 SQL Server Machine Learning Services의 경우 데이터 구조를 사용 하는 방법을 보여 줍니다.
+이 빠른 시작에서는 SQL Server Machine Learning Services에서 Python을 사용 하는 경우 데이터 구조를 사용 하는 방법을 보여 줍니다.
 
-SQL Server Python 의존 **pandas** 패키지는 테이블 형식 데이터로 작업 하는 데 매우 유용 합니다. 그러나 Python에서 SQL Server 스칼라 전달할 수 없으며 "작업만" 예상. 이 빠른 시작에서는 Python과 SQL Server 간 테이블 형식 데이터를 전달 하는 경우에서 실행 될 수 있는 추가 문제에 대 한 작업을 준비 하려면 일부 기본 데이터 형식 정의 살펴보겠습니다.
+SQL Server는 Python **pandas** 패키지를 사용 하 여 테이블 형식 데이터로 작업 하는 데 유용 합니다. 그러나 Python에서 SQL Server로 스칼라를 전달 하 고 "단지 작동" 하는 것으로 예측할 수는 없습니다. 이 빠른 시작에서는 몇 가지 기본 데이터 형식 정의를 검토 하 여 Python과 SQL Server 간에 테이블 형식 데이터를 전달할 때 실행할 수 있는 추가 문제를 준비 합니다.
 
-+ 데이터 프레임을 사용 하 여 테이블인 _여러_ 열입니다.
-+ 데이터 프레임의 단일 열에는 일련의 호출 목록 같은 개체입니다.
-+ 단일 값이 데이터 프레임의 셀을 인덱스로 호출 되어야 합니다.
++ 데이터 프레임은 _여러_ 열이 있는 테이블입니다.
++ 데이터 프레임의 단일 열은 계열 이라는 목록 형식의 개체입니다.
++ 단일 값은 데이터 프레임의 셀 이며 인덱스에 의해 호출 되어야 합니다.
 
-어떻게는 노출 하 여 계산을 데이터 프레임으로 단일 결과 data.frame 테이블 형식 구조를 요구 하는 경우? 하나의 대답이 데이터 프레임으로 쉽게 변환 되는 계열으로 단일 스칼라 값을 나타낼 수 합니다. 
+데이터 프레임에 테이블 형식 구조가 필요한 경우 계산의 단일 결과를 데이터 프레임으로 노출 하는 방법 한 가지 대답은 단일 스칼라 값을 데이터 프레임으로 쉽게 변환 되는 계열로 나타내는 것입니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이전 빠른 시작에서는 [SQL Server에 있는지 확인 하는 Python](quickstart-python-verify.md), 정보를 제공 하 고이 빠른 시작에 필요한 Python 환경을 설정 하는 것에 대 한 링크입니다.
+이전 퀵 스타트 인 [SQL Server에 python이 있는지 확인](quickstart-python-verify.md)하 고,이 빠른 시작에 필요한 python 환경을 설정 하기 위한 정보 및 링크를 제공 합니다.
 
-## <a name="scalar-value-as-a-series"></a>일련의 스칼라 값
+## <a name="scalar-value-as-a-series"></a>스칼라 값 (계열)
 
-이 예제에서는 몇 가지 간단한 수학 않으며 계열로 스칼라를 변환 합니다.
+이 예에서는 몇 가지 간단한 수학 연산을 수행 하 고 스칼라를 계열로 변환 합니다.
 
-1. 계열 여기에 표시 된 대로 수동으로 또는 프로그래밍 방식으로 할당할 수 있는 인덱스에 필요 합니다.
+1. 계열에는 여기에 나와 있는 것 처럼 수동으로 할당 하거나 프로그래밍 방식으로 할당할 수 있는 인덱스가 필요 합니다.
 
     ```sql
     execute sp_execute_external_script 
@@ -50,7 +50,7 @@ SQL Server Python 의존 **pandas** 패키지는 테이블 형식 데이터로 �
     '
     ```
 
-2. 계열 data.frame로 변환 되지 않은 메시지 창에 반환 되므로 값 하지만 더 테이블 형식으로 결과 볼 수 있습니다.
+2. 계열은 데이터 프레임으로 변환 되지 않았기 때문에 메시지 창에 값이 반환 되지만 결과의 테이블 형식이 더 많을 수 있습니다.
 
     **결과**
 
@@ -61,7 +61,7 @@ SQL Server Python 의존 **pandas** 패키지는 테이블 형식 데이터로 �
     dtype: float64
     ```
 
-3. 시리즈의 길이 늘리려면 배열을 사용 하 여 새 값을 추가할 수 있습니다. 
+3. 계열의 길이를 늘리려면 배열을 사용 하 여 새 값을 추가할 수 있습니다. 
 
     ```sql
     execute sp_execute_external_script 
@@ -76,7 +76,7 @@ SQL Server Python 의존 **pandas** 패키지는 테이블 형식 데이터로 �
     '
     ```
 
-    인덱스를 지정 하지 않으면 인덱스는 0부터 시작 하 고 배열의 길이 사용 하 여 종료 값이 있는 생성 됩니다.
+    인덱스를 지정 하지 않으면 0으로 시작 하 여 배열의 길이로 끝나는 값을 포함 하는 인덱스가 생성 됩니다.
 
     **결과**
 
@@ -87,7 +87,7 @@ SQL Server Python 의존 **pandas** 패키지는 테이블 형식 데이터로 �
     dtype: float64
     ```
 
-4. 수를 늘리면 **인덱스** 값을 새로 추가 하지 않지만 **데이터** 값 시리즈를 채울 데이터 값이 반복 됩니다.
+4. **인덱스** 값의 수를 늘리고 새 **데이터** 값을 추가 하지 않으면 데이터 값이 반복 되어 계열을 채웁니다.
 
     ```sql
     execute sp_execute_external_script 
@@ -111,11 +111,11 @@ SQL Server Python 의존 **pandas** 패키지는 테이블 형식 데이터로 �
     dtype: float64
     ```
 
-## <a name="convert-series-to-data-frame"></a>시계열 데이터 프레임으로 변환
+## <a name="convert-series-to-data-frame"></a>계열을 데이터 프레임으로 변환
 
-스칼라 수학 결과 테이블 형식 구조로 변환 하지를 계속 해야 SQL Server에서 처리할 수 있는 형식으로 변환 합니다. 
+스칼라 수학 결과를 테이블 형식 구조체로 변환 했으므로이를 SQL Server 처리할 수 있는 형식으로 변환 해야 합니다. 
 
-1. 계열 data.frame로 변환 하려면 호출을 pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) 메서드.
+1. 계열을 데이터 프레임으로 변환 하려면 pandas [데이터 프레임](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) 메서드를 호출 합니다.
 
     ```sql
     execute sp_execute_external_script 
@@ -134,7 +134,7 @@ SQL Server Python 의존 **pandas** 패키지는 테이블 형식 데이터로 �
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-2. 결과 다음과 같습니다. Data.frame에서 특정 값을 가져오려면 인덱스를 사용 하는 경우에 인덱스 값에는 출력의 일부가 아닙니다.
+2. 결과는 다음과 같습니다. 인덱스를 사용 하 여 데이터 프레임에서 특정 값을 가져오는 경우에도 인덱스 값은 출력에 포함 되지 않습니다.
 
     **결과**
 
@@ -143,11 +143,11 @@ SQL Server Python 의존 **pandas** 패키지는 테이블 형식 데이터로 �
     |0.5|
     |2|
 
-## <a name="output-values-into-dataframe"></a>Data.frame에 출력 값
+## <a name="output-values-into-dataframe"></a>데이터를 데이터 프레임에 출력 합니다.
 
-간단한 수학 연산의 결과 포함 하는 두 계열이 있는 data.frame로 변환 작동 하는 방법을 살펴보겠습니다. 첫 번째 Python에서 생성 된 순차 값의 인덱스를 갖습니다. 두 번째는 임의의 문자열 값의 인덱스를 사용합니다.
+데이터를 변환 하는 방법을 살펴보겠습니다. 프레임은 간단한 수학 연산의 결과를 포함 하는 두 개의 계열과 함께 작동 합니다. 첫 번째에는 Python에 의해 생성 된 순차 값의 인덱스가 있습니다. 두 번째는 임의의 문자열 값 인덱스를 사용 합니다.
 
-1. 이 예제에서는 정수 인덱스를 사용 하 여 계열에서 값을 가져옵니다.
+1. 이 예에서는 정수 인덱스를 사용 하는 계열에서 값을 가져옵니다.
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -166,9 +166,9 @@ SQL Server Python 의존 **pandas** 패키지는 테이블 형식 데이터로 �
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-    자동으로 생성 된 인덱스는 0부터 시작 하 해야 합니다. 범위 인덱스 값을 사용 하 고 어떻게 되는지 확인 합니다.
+    자동 생성 된 인덱스는 0에서 시작 합니다. 범위를 벗어난 인덱스 값을 사용 하 여 결과를 확인 하세요.
 
-2. 이제 문자열 인덱스에 있는 다른 데이터 프레임에서 단일 값을 살펴보겠습니다. 
+2. 이제 문자열 인덱스를 사용 하는 다른 데이터 프레임에서 단일 값을 가져옵니다. 
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -192,11 +192,11 @@ SQL Server Python 의존 **pandas** 패키지는 테이블 형식 데이터로 �
     |------|
     |0.5|
 
-    이 시리즈에서 값 가져오기 숫자 인덱스를 사용 하려고 하면 오류가 발생 합니다.
+    숫자 인덱스를 사용 하 여이 계열에서 값을 가져오는 경우 오류가 발생 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-다음으로, SQL Server에서 Python을 사용 하 여 예측 모델을 빌드합니다.
+다음으로 SQL Server에서 Python을 사용 하 여 예측 모델을 작성 합니다.
 
 > [!div class="nextstepaction"]
-> [만들기, 학습 및 Python 모델을 사용 하 여 SQL Server에서 저장된 프로시저를 사용 하 여](quickstart-python-train-score-in-tsql.md)
+> [SQL Server에서 저장 프로시저를 사용 하 여 Python 모델 만들기, 학습 및 사용](quickstart-python-train-score-in-tsql.md)

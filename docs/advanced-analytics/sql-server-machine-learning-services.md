@@ -1,5 +1,5 @@
 ---
-title: R 및 Python machine learning 설명서-SQL Server Machine Learning 서비스
+title: R 및 Python machine learning 설명서
 description: 대규모 엔터프라이즈 데이터 분석을 위한 기본 제공 데이터 과학 모델링 및 Machine Learning 알고리즘이 포함된 SQL Server의 R 및 Python
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,23 +8,23 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16bf39172144b17b3ecb03969244f31ac4715400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8eb391ac4b64c93de255214d748c77f44dccb1b3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962303"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344744"
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning 서비스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>SQL Server Machine Learning 서비스 (R 및 Python) 설명서
+## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>SQL Server Machine Learning Services (R 및 Python) 설명서
 
-빠른 시작, 자습서 및 방법 문서를 사용하여 상주하는 관계형 데이터에 R 및 Python 외부 라이브러리와 언어를 사용하는 방법을 알아봅니다. R 및 Python 라이브러리 [SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md) 기본 배포, 데이터 과학 모델, 기계 학습 알고리즘 및 하지 않고도 대규모 고성능 분석을 수행 하기 위한 함수를 포함 합니다. 네트워크를 통해 데이터를 전송 합니다.
+빠른 시작, 자습서 및 방법 문서를 사용하여 상주하는 관계형 데이터에 R 및 Python 외부 라이브러리와 언어를 사용하는 방법을 알아봅니다. [SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md) 의 R 및 Python 라이브러리에는 기본 배포, 데이터 과학 모델, 기계 학습 알고리즘 및 대규모로 고성능 분석을 수행 하기 위한 기능이 포함 되어 있습니다. network.
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> Java에 대 한 설명서를 참조 하세요. 합니다 [SQL Server 언어 확장 설명서](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)합니다.
+> Java에 대 한 설명서는 [SQL Server 언어 확장 설명서](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)를 참조 하세요.
 ::: moniker-end
 
 |   |   |
@@ -41,7 +41,7 @@ ms.locfileid: "67962303"
 
 ## <a name="step-by-step-tutorials"></a>단계별 자습서
 
-- [SQL server Machine Learning 서비스를 설치 하는 방법](install/sql-machine-learning-services-windows-install.md)
+- [SQL Server에 Machine Learning Services를 설치 하는 방법](install/sql-machine-learning-services-windows-install.md)
 
 - [T-SQL 및 저장 프로시저에서 R을 실행하는 방법](tutorials/sqldev-in-database-r-for-sql-developers.md)
 

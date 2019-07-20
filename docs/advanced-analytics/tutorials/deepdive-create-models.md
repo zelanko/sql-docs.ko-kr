@@ -1,25 +1,25 @@
 ---
-title: R 모델 RevoScaleR 자습서-SQL Server Machine Learning 만들기
-description: SQL Server에서 R 언어를 사용 하 여 모델을 작성 하는 방법에 대 한 연습 자습서입니다.
+title: R 모델 만들기 RevoScaleR 자습서
+description: SQL Server에서 R 언어를 사용 하 여 모델을 작성 하는 방법에 대 한 자습서 연습입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4d7fc66f844b1a0aac48b520257ed8f18e0696de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7df044c641da5d8605e5bb25fafed9ea02af77f4
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962270"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344694"
 ---
-# <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>R 모델 (SQL Server 및 RevoScaleR 자습서) 만들기
+# <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>R 모델 만들기 (SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 단원에서는의 일부인를 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 사용 하는 방법에 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server를 사용 하 여 합니다.
+이 단원에서는 SQL Server [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 를 사용 하는 방법에 대 한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 의 일부입니다.
 
-이제 학습 데이터를 보강할 수 회귀 모델링을 사용 하 여 데이터를 분석 하는 시간입니다. 선형 모델은 예측 분석 분야의 중요 한 도구와 **RevoScaleR** 패키지에 병렬로 실행 하 고 워크 로드를 세분화할 수 있는 회귀 알고리즘을 포함 합니다.
+학습 데이터를 보강 이제 회귀 모델링을 사용 하 여 데이터를 분석할 시간입니다. 선형 모델은 예측 분석 분야에서 중요 한 도구 이며, **RevoScaleR** 패키지에는 워크 로드를 세분화 하 여 병렬로 실행할 수 있는 회귀 알고리즘이 포함 되어 있습니다.
 
 > [!div class="checklist"]
 > * 선형 회귀 모델 만들기
@@ -27,7 +27,7 @@ ms.locfileid: "67962270"
 
 ## <a name="create-a-linear-regression-model"></a>선형 회귀 모델 만들기
 
-이 단계에서는 값을 독립 변수로 사용 하는 고객의 신용 카드 잔액을 추정 하는 간단한 선형 모델을 만들고 합니다 *성별* 하 고 *creditLine* 열입니다.
+이 단계에서는 *성별* 및 *creditLine* 열의 값을 독립 변수로 사용 하는 고객에 대 한 신용 카드 잔액을 추정 하는 간단한 선형 모델을 만듭니다.
   
 원격 계산 환경을 지원하는 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) 함수를 사용해 진행하게 됩니다.
   
@@ -37,7 +37,7 @@ ms.locfileid: "67962270"
     linModObj <- rxLinMod(balance ~ gender + creditLine,  data = sqlFraudDS)
     ```
   
-2. 표준 R 호출 결과의 요약을 보려면 **요약** 모델 개체에는 함수입니다.
+2. 결과 요약을 보려면 모델 개체에서 표준 R **요약** 함수를 호출 합니다.
   
      ```R
      summary(linModObj)
@@ -75,7 +75,7 @@ Condition number: 1.0184
 
 다음으로 특정 고객이 사기 위험 인지 여부를 나타내는 로지스틱 회귀 모델을 만듭니다. 이번에는 원격 계산 환경에 맞는 로지스틱 회귀 모델을 지원하는 **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit) 함수를 사용합니다.
 
-계산 환경은 그대로 유지합니다. 동일한 데이터 원본을 사용 하려면 계속 수도 있습니다.
+계산 환경은 그대로 유지합니다. 동일한 데이터 원본도 계속 사용 합니다.
 
 1. **rxLogit** 함수를 호출하고 모델을 정의하는 데 필요한 수식을 전달합니다.
 

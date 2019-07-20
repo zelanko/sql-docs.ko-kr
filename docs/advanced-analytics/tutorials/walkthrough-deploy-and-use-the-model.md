@@ -1,39 +1,39 @@
 ---
-title: SQL Server-SQL Server Machine Learning에 대 한 예측에 대 한 R 모델 배포
-description: 데이터베이스 내 분석에 대 한 SQL Server에서 R 모델을 배포 하는 방법을 보여주는 자습서입니다.
+title: SQL Server에서 예측을 위해 R 모델 배포
+description: 데이터베이스 내 분석을 위해 SQL Server에 R 모델을 배포 하는 방법을 보여 주는 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e79dd0bce559259863128de1d2490f0fd9197cf1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2cb6bf28fa849e2015d111c564bb0af84f103d19
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961694"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345853"
 ---
-# <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R 모델을 배포 하 고 사용 하 여 SQL server (연습)
+# <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R 모델을 배포 하 고 SQL Server에 사용 (연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 단원에서는 저장된 프로시저에서 학습 된 모델을 호출 하 여 프로덕션 환경에서 R 모델을 배포 하는 방법에 알아봅니다. R 또는 지 원하는 모든 응용 프로그램 프로그래밍 언어에서 저장된 프로시저를 호출할 수 있습니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] (같은 C#, Java, Python 등) 새 관찰에 대 한 예측 모델을 사용 하 고 있습니다.
+이 단원에서는 저장 프로시저에서 학습 된 모델을 호출 하 여 프로덕션 환경에서 R 모델을 배포 하는 방법에 대해 알아봅니다. R에서 저장 프로시저를 호출 하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] C#, (예:, Java, Python 등)를 지 원하는 응용 프로그램 프로그래밍 언어를 호출 하 고, 모델을 사용 하 여 새 관찰에 대 한 예측을 만들 수 있습니다.
 
-이 문서에는 점수 매기기에 모델을 사용 하도록 두 가장 일반적인 방법을 보여 줍니다.
+이 문서에서는 점수 매기기에서 모델을 사용 하는 가장 일반적인 두 가지 방법을 보여 줍니다.
 
 > [!div class="checklist"]
-> * **일괄 처리 점수 매기기 모드** 여러 예측을 생성
-> * **개별 점수 매기기 모드** 한 번에 하나씩 예측을 생성
+> * **일괄 처리 점수 매기기 모드** 는 여러 예측을 생성 합니다.
+> * **개별 점수 매기기 모드** 는 한 번에 하나씩 예측을 생성 합니다.
 
 ## <a name="batch-scoring"></a>일괄 처리 채점
 
-저장된 프로시저를 만듭니다 *PredictTipBatchMode*, SQL 쿼리 또는 테이블을 입력으로 전달 하는 여러 예측을 생성 합니다. 결과 테이블이 반환되면 테이블에 직접 입력하거나 파일에 쓸 수 있습니다.
+SQL 쿼리 또는 테이블을 입력으로 전달 하 여 여러 예측을 생성 하는 저장 프로시저 *PredictTipBatchMode*를 만듭니다. 결과 테이블이 반환되면 테이블에 직접 입력하거나 파일에 쓸 수 있습니다.
 
 - 입력 데이터 집합을 SQL 쿼리로 가져오기
 - 이전 단원에서 저장한 학습된 로지스틱 회귀 모델 호출
 - 운전자가 팁을 받을 확률 예측.
 
-1. Management studio에서 새 쿼리 창을 열고 PredictTipBatchMode 저장 프로시저를 만들려면 다음 T-SQL 스크립트를 실행 합니다.
+1. Management Studio에서 새 쿼리 창을 열고 다음 T-sql 스크립트를 실행 하 여 PredictTipBatchMode 저장 프로시저를 만듭니다.
   
     ```sql
     USE [NYCTaxi_Sample]
@@ -70,15 +70,15 @@ ms.locfileid: "67961694"
     END
     ```
 
-    + SELECT 문을 사용하여 SQL 테이블에 저장된 모델을 호출합니다. 모델 테이블에서 검색 됩니다 **varbinary (max)** SQL 변수에 저장 된 데이터를  _\@lmodel2_를 매개 변수로 전달 하 고 *mod* 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)합니다.
+    + SELECT 문을 사용하여 SQL 테이블에 저장된 모델을 호출합니다. 모델은 테이블에서 **varbinary (max)** 데이터로 검색 되어 SQL 변수  _\@lmodel2_에 저장 되 고, 시스템 저장 프로시저 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에 매개 변수 *mod* 로 전달 됩니다.
 
-    + SQL 쿼리로 정의 되 고 SQL 변수에서를 문자열로 저장 점수 매기기에 대 한 입력으로 사용 되는 데이터  _\@입력_합니다. 이라는 데이터 프레임에 저장 된 데이터가 데이터베이스에서 검색 된 대로 *InputDataSet*, 입력된 데이터에 대 한 기본 이름 뿐입니다 합니다 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저를 정의할 수 있습니다 매개 변수를 사용 하 여 필요한 경우 다른 변수 이름을 * _\@input_data_1_name_* 합니다.
+    + 점수 매기기를 위한 입력으로 사용 되는 데이터는 sql 쿼리로 정의 되며 sql 변수  _\@입력_에 문자열로 저장 됩니다. 데이터는 데이터베이스에서 검색 될 때 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 프로시저에 대 한 입력 데이터의 기본 이름인 *inputdataset*이라는 데이터 프레임에 저장 됩니다.  *_\@input_data_1_name_* 매개 변수를 사용 하 여 필요한 경우 다른 변수 이름을 정의할 수 있습니다.
 
-    + 점수를 생성 하려면 저장된 프로시저에서 rxPredict 함수를 호출 합니다 **RevoScaleR** 라이브러리입니다.
+    + 점수를 생성 하기 위해 저장 프로시저가 **RevoScaleR** 라이브러리에서 rxPredict 함수를 호출 합니다.
 
     + 반환 값 *Score*는 주어진 모델에서 운전자가 팁을 얻는 확률입니다. 선택 사항으로 반환 값을 “팁”과 “팁 없음” 그룹으로 분류하도록 일종의 필터를 쉽게 적용할 수 있습니다.  예를 들어 0.5미만의 확률은 팁이 거의 없음을 의미합니다.
   
-2.  일괄 처리 모드로 저장 프로시저를 호출하기 위해 저장 프로시저 입력으로 필요한 쿼리를 아래와 같이 정의합니다. 작동 하는지 확인 하려면 SSMS에서 실행할 수 있는 SQL 쿼리는 다음과 같습니다.
+2.  일괄 처리 모드로 저장 프로시저를 호출하기 위해 저장 프로시저 입력으로 필요한 쿼리를 아래와 같이 정의합니다. 다음은 SSMS에서 실행 하 여 작동 하는지 확인할 수 있는 SQL 쿼리입니다.
 
     ```sql
     SELECT TOP 10
@@ -112,19 +112,19 @@ ms.locfileid: "67961694"
     sqlQuery (conn, q);
     ```
 
-    ODBC 오류가 발생 하는 경우 구문 오류 및 따옴표의 적절 한 수 있는지 확인 합니다. 
+    ODBC 오류가 발생 하는 경우 구문 오류와 적절 한 수의 따옴표가 있는지 여부를 확인 합니다. 
     
     사용 권한 오류가 난다면 해당 로그인이 저장 프로시저를 실행할 수 있는 권한이 있는지 확인합니다.
 
 ## <a name="single-row-scoring"></a>단일 행 채점
 
-개별 점수 매기기 모드 생성 개별 값 집합을 입력으로 저장된 프로시저에 전달 한 번에 하나씩 예측 합니다. 그 값들은 모델에서 예측을 만드는 데 사용하는 특성이나 또 다른 결과를 생성하기 위한 확률 값 같은 것에 해당합니다. 그런 다음 그 값을 응용 프로그램이나 사용자에게 반환할 수 있습니다.
+개별 점수 매기기 모드는 개별 값 집합을 저장 프로시저에 입력으로 전달 하 여 한 번에 하나씩 예측을 생성 합니다. 그 값들은 모델에서 예측을 만드는 데 사용하는 특성이나 또 다른 결과를 생성하기 위한 확률 값 같은 것에 해당합니다. 그런 다음 그 값을 응용 프로그램이나 사용자에게 반환할 수 있습니다.
 
 행별로 예측 모델을 호출할 때 각 개별 사례의 특성을 나타내는 값 집합을 전달합니다. 그런 다음 저장 프로시저에서 단일 예측이나 확률을 반환합니다. 
 
 저장 프로시저 *PredictTipSingleMode* 가 이러한 접근 방법을 보여줍니다. 여러 개의 입력 매개변수로 특성 값(예: 승객 수와 여행 거리)을 받아서 저장된 R 모델을 사용하여 그러한 특성을 채점하고 팁 확률을 반환합니다.
 
-1. 저장된 프로시저를 만들려면 다음 TRANSACT-SQL 문을 실행 합니다.
+1. 다음 Transact-sql 문을 실행 하 여 저장 프로시저를 만듭니다.
 
     ```sql
     USE [NYCTaxi_Sample]
@@ -214,7 +214,7 @@ ms.locfileid: "67961694"
     ```
 
     >[!TIP]
-    > SQL Server 및 R을 모두 사용 하 여 유용한 통합을 제공 하는 Visual Studio (RTVS) 용 R 도구 SQL Server 연결을 사용 하 여 RODBC를 사용 하 여 더 많은 예제에 대 한이 문서를 참조 하세요. [SQL Server 및 R 사용](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
+    > RTVS (Visual Studio용 R 도구)는 SQL Server 및 R과의 통합을 제공 합니다. SQL Server 연결에서 RODBC를 사용 하는 방법에 대 한 추가 예제는이 문서를 참조 하세요. [SQL Server 및 R 사용](https://docs.microsoft.com/visualstudio/rtvs/sql-server)
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -223,9 +223,9 @@ ms.locfileid: "67961694"
 + 팁 금액을 예측하는 회귀 모델
 + 팁이 많은지 보통인지 적은지 예측하는 다중 클래스 분류 모델
 
-이러한 추가 샘플 및 리소스를 탐색할 수도 있습니다.
+이러한 추가 샘플과 리소스를 살펴볼 수도 있습니다.
 
 + [데이터 과학 시나리오 및 솔루션 템플릿](data-science-scenarios-and-solution-templates.md)
 + [데이터베이스 내 고급 분석](sqldev-in-database-r-for-sql-developers.md)
 + [Machine Learning Server 방법 가이드](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
-+ [Machine Learning Server에 대 한 추가 리소스](https://docs.microsoft.com//machine-learning-server/resources-more)
++ [추가 리소스 Machine Learning Server](https://docs.microsoft.com//machine-learning-server/resources-more)

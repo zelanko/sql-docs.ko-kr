@@ -1,25 +1,25 @@
 ---
-title: T-SQL 함수 및 Python-SQL Server Machine Learning을 사용 하 여 데이터 기능 만들기
-description: Python 기계 학습 모델에서 사용 하기 위해 저장된 프로시저에 계산을 추가 하는 방법을 보여 주는 자습서입니다.
+title: T-sql 함수 및 Python을 사용 하 여 데이터 기능 만들기
+description: Python 기계 학습 모델에서 사용 하기 위해 저장 프로시저에 계산을 추가 하는 방법을 보여 주는 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a7c17af9ab7302e2856130be58759b56430e1341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d421d4fc3ed28276b950f797529f089f94aaf6a
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961883"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345911"
 ---
-# <a name="create-data-features-using-t-sql"></a>T-SQL을 사용 하 여 데이터 기능 만들기
+# <a name="create-data-features-using-t-sql"></a>T-sql을 사용 하 여 데이터 기능 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-데이터 탐색 후 데이터의 몇 가지 정보를 수집 하 고이 이동할 준비가 *기능 엔지니어링*합니다. 원시 데이터에서 기능을 만드는이 프로세스는 고급 모델링 분석에서 중요 한 단계를 수 있습니다.
+데이터 탐색 후 데이터에서 일부 정보를 수집 하 고 *기능 엔지니어링*으로 이동할 준비가 되었습니다. 원시 데이터에서 기능을 만드는이 프로세스는 고급 분석 모델링의 중요 한 단계 일 수 있습니다.
 
-이 문서는 자습서에 일부 [SQL 개발자를 위한 데이터베이스 내 Python 분석](sqldev-in-database-python-for-sql-developers.md)합니다. 
+이 문서는 [SQL 개발자를 위한 데이터베이스 내 Python 분석](sqldev-in-database-python-for-sql-developers.md)자습서의 일부입니다. 
 
 이 단계에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용하여 원시 데이터에서 특성을 만드는 방법을 알아봅니다. 그런 다음 저장 프로시저에서 해당 함수를 호출하여 기능 값이 포함된 테이블을 만듭니다.
 
@@ -66,7 +66,7 @@ ms.locfileid: "67961883"
 
 모델 학습에 사용할 수 있는 테이블에 계산 값을 추가하려면 다른 함수 _fnEngineerFeatures_를 사용합니다.
 
-### <a name="save-the-features-using-fnengineerfeatures"></a>사용 하 여 기능을 저장 _fnEngineerFeatures_
+### <a name="save-the-features-using-fnengineerfeatures"></a>_FnEngineerFeatures_ 를 사용 하 여 기능 저장
 
 1.  잠시 시간을 내어 이 연습을 준비하는 과정에서 작성해야 하는 사용자 정의 T-SQL 함수인 _fnEngineerFeatures_ 에 대한 코드를 검토하십시오.
   
@@ -106,13 +106,13 @@ ms.locfileid: "67961883"
         ORDER BY trip_time_in_secs DESC
     ```
   
-    확인한 것처럼 미터에서 보고된 거리가 항상 지리적 거리와 일치하는 것은 아닙니다. 이 때문에 기능 엔지니어링이 중요 합니다.
+    확인한 것처럼 미터에서 보고된 거리가 항상 지리적 거리와 일치하는 것은 아닙니다. 이것은 기능 엔지니어링이 중요 한 이유입니다.
 
-다음 단계에서는 이러한 데이터 기능을 사용 하 여 Python을 사용 하 여 기계 학습 모델을 학습 하는 방법에 알아봅니다.
+다음 단계에서는 이러한 데이터 기능을 사용 하 여 Python을 사용 하 여 기계 학습 모델을 만들고 학습 하는 방법에 대해 알아봅니다.
 
 ## <a name="next-step"></a>다음 단계
 
-[학습 및 T-SQL을 사용 하 여 Python 모델을 저장 합니다.](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+[T-sql을 사용 하 여 Python 모델 학습 및 저장](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-step"></a>이전 단계
 

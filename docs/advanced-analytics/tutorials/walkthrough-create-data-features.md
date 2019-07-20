@@ -1,40 +1,40 @@
 ---
-title: R 및 SQL Server 함수-SQL Server Machine Learning을 사용 하 여 데이터 기능 만들기
-description: 데이터베이스 내 분석에 대 한 SQL Server 함수를 사용 하 여 데이터 기능을 만드는 방법을 보여 주는 자습서입니다.
+title: R 및 SQL Server 함수를 사용 하 여 데이터 기능 만들기
+description: 데이터베이스 내 분석을 위해 SQL Server 함수를 사용 하 여 데이터 기능을 만드는 방법을 보여 주는 자습서입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5a17eb0c39e45080de83e39d002d8f6693131688
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a7d62004745f8b77bbc26b4d924e2e3948cf2f9e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961793"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345837"
 ---
-# <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R 및 SQL Server (연습)를 사용 하 여 데이터 기능 만들기
+# <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R 및 SQL Server를 사용 하 여 데이터 기능 만들기 (연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 데이터 엔지니어링은 기계 학습(Machine Learning)의 중요한 부분입니다. 데이터는 가끔 예측 모델링에 사용하기 위해 사전 변환이 필요하기도 합니다. 기존 데이터에서 필요한 특성이 없는 경우 기존 값에서 가공해낼 수도 있습니다.
 
 이번 모델링 작업에서는 승차와 하차 위치에 대한 위도와 경도 값을 사용하는 대신 두 위치 간의 거리(마일)를 사용하는 것이 더 좋을 수 있습니다. 이 특성을 만들려면 [haversine 수식](https://en.wikipedia.org/wiki/Haversine_formula)을 사용하여 두 점 간의 직선 거리를 계산합니다.
 
-이 단계에서는 데이터에서 기능을 만들기 위한 두 가지 방법을 알아봅니다.
+이 단계에서는 데이터에서 기능을 만드는 두 가지 방법에 대해 알아봅니다.
 
 > [!div class="checklist"]
 > * 사용자 지정 R 함수 사용하기
-> * 사용자 지정 T-SQL 함수를 사용 하 여 [!INCLUDE[tsql](../../includes/tsql-md.md)]
+> * 에서 사용자 지정 T-sql 함수 사용[!INCLUDE[tsql](../../includes/tsql-md.md)]
 
 목표는 원본 열과 더불어 새로운 numeric 특성인  *direct_distance*를 포함하는 새로운[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 집합을 만드는 것입니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 단계에서는이 연습의 이전 단계에 따라 진행 중인 R 세션을 가정 합니다. 이러한 단계에서 만든 연결 문자열 및 데이터 원본 개체를 사용 합니다. 스크립트를 실행 하려면 다음 도구 및 패키지 사용 됩니다.
+이 단계에서는이 연습의 이전 단계를 기반으로 진행 중인 R 세션이 있다고 가정 합니다. 이러한 단계에서 만든 연결 문자열 및 데이터 원본 개체를 사용 합니다. 스크립트를 실행 하는 데 사용 되는 도구 및 패키지는 다음과 같습니다.
 
-+ Rgui.exe R 명령을 실행 하려면
-+ T-SQL을 실행 하기 위해 management Studio
++ Rgui .exe를 실행 하 여 R 명령 실행
++ T-sql을 실행 Management Studio
 
 ## <a name="featurization-using-r"></a>R을 사용한 새 특성 추가(Featurization)
 
@@ -107,7 +107,7 @@ R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있�
     print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, Elapsed Time=", round(used.time[3],2), " seconds to generate features.", sep=""));
     ```
 
-    + RxDataStep 함수는 데이터를 현재 위치에서 수정하는 다양한 방법을 지원합니다. 자세한 내용은이 문서를 참조 하세요.  [Microsft R에서 데이터를 변환 및 일부 하는 방법](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
+    + RxDataStep 함수는 데이터를 현재 위치에서 수정하는 다양한 방법을 지원합니다. 자세한 내용은 다음 문서를 참조 하세요.  [마이크로 Sft R에서 데이터를 변환 하 고 하위 집합 하는 방법](https://docs.microsoft.com/r-server/r/how-to-revoscaler-data-transform)
     
     그러나 rxDataStep과 관련된 몇 가지 주목할만한 포인트가 있습니다. 
     
@@ -123,13 +123,13 @@ R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있�
 
 ## <a name="featurization-using-transact-sql"></a>Transact-SQL을 사용한 새 특성 추가(featurzation)
 
-이 연습에서는 사용자 지정 R 함수 대신 SQL 함수를 사용 하 여 동일한 작업을 수행 하는 방법에 알아봅니다. 
+이 연습에서는 사용자 지정 R 함수 대신 SQL 함수를 사용 하 여 동일한 작업을 수행 하는 방법에 대해 알아봅니다. 
 
-전환할 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 또는 T-SQL 스크립트를 실행 하려면 다른 쿼리 편집기.
+[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 또는 다른 쿼리 편집기로 전환 하 여 t-sql 스크립트를 실행 합니다.
 
-1. 명명 된 SQL 함수를 사용 하 여 *fnCalculateDistance*합니다. 함수는 NYCTaxi_Sample 데이터베이스에 이미 존재 해야 합니다. 개체 탐색기에서이 경로 이동 하 여 함수가 존재를 확인 합니다. 데이터베이스 > NYCTaxi_Sample > 프로그래밍 기능 > 함수 > 스칼라 반환 함수 > dbo.fnCalculateDistance 합니다.
+1. *FnCalculateDistance*라는 SQL 함수를 사용 합니다. 함수는 NYCTaxi_Sample 데이터베이스에 이미 있어야 합니다. 개체 탐색기에서이 경로를 탐색 하 여 함수가 있는지 확인 합니다. 데이터베이스 > NYCTaxi_Sample > 프로그래밍 기능 > 함수 > 스칼라 반환 함수 > fnCalculateDistance.
 
-    함수가 없으면 NYCTaxi_Sample 데이터베이스에 함수를 생성 하려면 SQL Server Management Studio를 사용 합니다.
+    함수가 존재 하지 않는 경우 SQL Server Management Studio를 사용 하 여 NYCTaxi_Sample 데이터베이스에 함수를 생성 합니다.
 
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
@@ -154,7 +154,7 @@ R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있�
     END
     ```
 
-2. Management studio에서 새 쿼리 창에서 다음을 실행 합니다 [!INCLUDE[tsql](../../includes/tsql-md.md)] 지 원하는 응용 프로그램에서 문을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수의 작동 방식을 확인 합니다.
+2. Management Studio의 새 쿼리 창에서를 지 원하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] 모든 응용 프로그램에서 다음 문을 실행 하 여 함수의 작동 방식을 확인 합니다.
 
     ```sql
     USE nyctaxi_sample
@@ -164,7 +164,7 @@ R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있�
     dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude, dropoff_longitude) as direct_distance, pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude 
     FROM nyctaxi_sample
     ```
-3. (먼저 만들어야 있는) 새 테이블에 직접 값을 삽입할 추가할 수 있습니다는 **INTO** 절 테이블 이름을 지정 합니다.
+3. 새 테이블에 직접 값을 삽입 하려면 (먼저 만들어야 하는 경우) 테이블 이름을 지정 하 여 **into** 절을 추가할 수 있습니다.
 
     ```sql
     USE nyctaxi_sample
@@ -176,7 +176,7 @@ R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있�
     FROM nyctaxi_sample
     ```
 
-4. 또한 R 코드에서 SQL 함수를 호출할 수 있습니다. Rgui로 다시 전환 하 고 R 변수에 SQL 기능화 (featurization) 쿼리를 저장 합니다.
+4. R 코드에서 SQL 함수를 호출할 수도 있습니다. Rgui로 다시 전환 하 고 SQL 기능화 쿼리를 R 변수에 저장 합니다.
 
     ```R
     featureEngineeringQuery = "SELECT tipped, fare_amount, passenger_count,
@@ -225,10 +225,10 @@ R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있�
     ```
 
     > [!NOTE]
-    > 경우에 따라 다음과 같은 오류가 발생할 수 있습니다. *'FnCalculateDistance' 개체에 EXECUTE 권한이 거부 되었습니다* 그렇다면 사용 중인 로그인에 스크립트를 실행 하 고 인스턴스에서 뿐 아니라 데이터베이스에서 개체를 만들 권한이 있는지 확인 합니다.
+    > 경우에 따라 다음과 같은 오류가 발생할 수 있습니다. *' FnCalculateDistance ' 개체에 대 한 EXECUTE 권한이 거부 되었습니다* . 이 경우 사용 중인 로그인에 스크립트를 실행 하 고 인스턴스가 아닌 데이터베이스에서 개체를 만들 수 있는 권한이 있는지 확인 합니다.
     > FnCalculateDistance 개체에 대한 스키마를 확인합니다. 만일 개체가 데이터베이스 소유자에 의해 생성되었고, 로그인이 db_datareader 역할에 속한다면 스크립트를 실행하기 위해서 명시적으로 사용 권한을 부여해야 합니다.
 
-## <a name="comparing-r-functions-and-sql-functions"></a>R 함수와 SQL 함수 비교
+## <a name="comparing-r-functions-and-sql-functions"></a>R 함수 및 SQL 함수 비교
 
 R 코드의 시간을 재는 데 사용된 코드 조각을 기억하십니까?
 
@@ -244,7 +244,7 @@ print(paste("It takes CPU Time=", round(used.time[1]+used.time[2],2)," seconds, 
 네트워크 속도와 하드웨어 구성 등에 따라서 시간이 크게 차이날 수 있습니다. 우리가 시험한 구성에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수 방식이 사용자 지정 R 함수보다 더 빨랐음으로 이후 단계에서는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수를 사용합니다.
 
 > [!TIP]
-> 자주, 사용한 기능 엔지니어링 [!INCLUDE[tsql](../../includes/tsql-md.md)] R. 보다 향상 되는 T-SQL 창 빠른 작업 및 연속 이동 평균와 같은 일반적인 데이터 과학 계산을 적용할 수 있는 순위 함수를 포함 하는 예를 들어, 및 *n*-타일입니다. 해당 데이터와 태스크에 따라 가장 효율적인 방법을 선택합니다.
+> 을 사용한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 기능 엔지니어링은 R 보다 빠른 경우가 많습니다. 예를 들어 T-sql은 롤링 이동 평균 및 *n*-타일과 같은 일반적인 데이터 과학 계산에 적용 될 수 있는 빠른 창 및 순위 함수를 포함 합니다. 해당 데이터와 태스크에 따라 가장 효율적인 방법을 선택합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

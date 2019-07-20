@@ -1,37 +1,37 @@
 ---
-title: Python SQL 데이터 형식 변환-SQL Server Machine Learning
-description: 데이터 과학 및 기계 학습 솔루션에 Python과 SQL Server 간 암시적 및 명시적 데이터 형식 converstions를 검토 합니다.
+title: Python-SQL 데이터 형식 변환
+description: Python과 데이터 과학 및 기계 학습 솔루션의 SQL Server 간 암시적 및 명시적 데이터 형식 converstions을 검토 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 652824e4b038e629cf9b998dd6fae64465426d0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 043a27cc53c2dca955eb0bea1ed07433bc9183b8
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962764"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345510"
 ---
-# <a name="data-type-mappings-between-python-and-sql-server"></a>Python과 SQL Server 간 데이터 형식 매핑
+# <a name="data-type-mappings-between-python-and-sql-server"></a>Python과 SQL Server 간의 데이터 형식 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server Machine Learning Services의 Python 통합 기능은에서 실행 되는 Python 솔루션에 대 한 지원 되지 않는 데이터 형식 및 Python과 SQL Server 간에 데이터를 전달 하는 경우 암시적으로 수행할 수 있는 데이터 형식 변환의 목록을 검토 합니다.
+SQL Server Machine Learning Services의 Python 통합 기능에서 실행 되는 Python 솔루션의 경우 지원 되지 않는 데이터 형식 목록과 Python과 SQL Server 간에 데이터가 전달 될 때 암시적으로 수행 될 수 있는 데이터 형식 변환의 목록을 검토 합니다.
 
 ## <a name="python-version"></a>Python Version
 
-SQL Server 2017 Anaconda 4.2 배포 및 Python 3.6입니다.
+SQL Server 2017 Anaconda 4.2 배포 및 Python 3.6.
 
-RevoScaleR 기능의 하위 집합 (rxLinMod를 rxLogit rxPredict, rxDTrees, rxBTrees, 아마도 몇몇 다른) 새 Python 패키지를 사용 하 여 Python Api를 사용 하 여 제공 됩니다 **revoscalepy**합니다. Pandas 데이터 프레임, XDF 파일 또는 SQL 데이터 쿼리를 사용 하 여 데이터를 사용 하려면이 패키지를 사용할 수 있습니다.
+새 Python 패키지 **revoscalepy**를 사용 하 여 python api를 통해 RevoScaleR 기능 (RxLinMod, rxLogit, rxPredict, RxDTrees, rxBTrees)의 하위 집합을 제공 합니다. 이 패키지를 사용 하 여 Pandas 데이터 프레임, XDF 파일 또는 SQL 데이터 쿼리를 사용 하 여 데이터 작업을 수행할 수 있습니다.
 
-자세한 내용은 [SQL Server에서 revoscalepy 모듈](ref-py-revoscalepy.md) 하 고 [revoscalepy 함수 참조](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
+자세한 내용은 SQL Server 및 [revoscalepy 함수 참조](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) [의 revoscalepy 모듈](ref-py-revoscalepy.md) 을 참조 하세요.
 
-Python은 SQL Server에 비해 데이터 형식의 제한 된 수를 지원합니다. 결과적으로, Python 스크립트에서 SQL Server에서 데이터를 사용할 때마다 데이터 변환 될 수 있습니다 암시적으로 호환 되는 데이터 형식입니다. 그러나는 정확한 변환을 자동으로 수행할 수 없는 경우가 많습니다 하 고 오류가 반환 됩니다.
+Python은 SQL Server 비교 하 여 제한 된 수의 데이터 형식을 지원 합니다. 결과적으로 Python 스크립트에서 SQL Server 데이터를 사용할 때마다 데이터를 호환 되는 데이터 형식으로 암시적으로 변환할 수 있습니다. 그러나 종종 정확한 변환은 자동으로 수행 될 수 없으며 오류가 반환 됩니다.
 
 ## <a name="python-and-sql-data-types"></a>Python 및 SQL 데이터 형식
 
-이 표에서 제공 되는 암시적 변환을 보여 줍니다. 다른 데이터 형식은 지원 되지 않습니다.
+다음 표에서는 제공 되는 암시적 변환을 보여 줍니다. 다른 데이터 형식은 지원 되지 않습니다.
 
 |SQLtype|Python 형식|
 |-------|-----------|

@@ -1,37 +1,37 @@
 ---
-title: SQL을 R 데이터 형식 변환-SQL Server Machine Learning 서비스
-description: 데이터 과학 및 기계 학습 솔루션에서 R 및 SQL Server 간에 명시적 및 암시적 데이터 형식 converstions를 검토 합니다.
+title: R-SQL 데이터 형식 변환
+description: 데이터 과학 및 machine learning 솔루션에서 R과 SQL Server 사이의 암시적 및 명시적 데이터 형식 converstions을 검토 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 93a0e15d8fdca31971cd16d187ae88a180fb481f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 255342113a17b0fb2af58eb6bc173cb6c50aac6d
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962539"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344929"
 ---
-# <a name="data-type-mappings-between-r-and-sql-server"></a>R 및 SQL Server 간의 데이터 형식 매핑
+# <a name="data-type-mappings-between-r-and-sql-server"></a>R과 SQL Server 간의 데이터 형식 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server Machine Learning Services에서 R 통합 기능에서 실행 되는 R 솔루션의 경우 지원 되지 않는 데이터 형식 및 R 라이브러리 및 SQL Server 간에 데이터를 전달 하는 경우 암시적으로 수행할 수 있는 데이터 형식 변환의 목록을 검토 합니다.
+SQL Server Machine Learning Services의 R 통합 기능에서 실행 되는 R 솔루션의 경우 지원 되지 않는 데이터 형식 및 R 라이브러리와 SQL Server 간에 데이터가 전달 될 때 암시적으로 수행 될 수 있는 데이터 형식 변환의 목록을 검토 합니다.
 
 ## <a name="base-r-version"></a>기본 R 버전
 
-SQL Server 2016 R Services 및 R 사용 하 여 SQL Server 2017 Machine Learning Services는 특정 버전의 Microsoft R Open을 사용 하 여 정렬 됩니다. 예를 들어 최신 릴리스의 SQL Server 2017 Machine Learning Services는 기반으로 Microsoft R Open 3.3.3 합니다.
+SQL Server 2016 R 서비스 및 SQL Server 2017 Machine Learning Services R은 Microsoft R Open의 특정 릴리스에 맞춰져 있습니다. 예를 들어 SQL Server 2017 Machine Learning Services 최신 릴리스는 Microsoft R Open 3.3.3을 기반으로 합니다.
 
-SQL Server의 특정 인스턴스와 연결 된 R 버전을 보려면 엽니다 **RGui**합니다. 기본 인스턴스에 대 한 경로 다음과 같을 수 됩니다. `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
+SQL Server의 특정 인스턴스와 연결 된 R 버전을 보려면 **Rgui**를 엽니다. 기본 인스턴스의 경우 경로는 다음과 같습니다.`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 
-이 도구는 기본 R 및 다른 라이브러리를 로드합니다. 패키지 버전 정보는 세션 시작 시 로드 되는 각 패키지에 대 한 알림이 제공 됩니다. 
+도구는 기본 R 및 기타 라이브러리를 로드 합니다. 패키지 버전 정보는 세션을 시작할 때 로드 되는 각 패키지에 대 한 알림에서 제공 됩니다. 
 
 ## <a name="r-and-sql-data-types"></a>R 및 SQL 데이터 형식
 
-반면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 여러 여러 데이터 형식을 지 원하는 R에는 스칼라 데이터 형식의 제한 된 수 (숫자, 정수, 복소수, 논리, 문자, 날짜/시간 및 원시). 결과적으로, 데이터를 사용할 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] R 스크립트에서 데이터 변환 될 수 있습니다 암시적으로 호환 되는 데이터 형식입니다. 그러나는 정확한 변환을 자동으로 수행할 수 없는 경우가 많습니다 및 "처리 되지 않은 SQL 데이터 형식"와 같은 오류가 반환 됩니다.
+에서 수십 개의 데이터 형식을 지원하지만R에는제한된수의스칼라데이터형식(숫자,정수,복합,논리적,문자,날짜/시간및원시)이포함됩니다.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 따라서 R 스크립트에서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 사용할 때마다 데이터를 호환 되는 데이터 형식으로 암시적으로 변환할 수 있습니다. 그러나 종종 정확한 변환을 수행할 수 없으며 "처리 되지 않은 SQL 데이터 형식"과 같은 오류가 반환 됩니다.
 
-이 섹션에 제공 되 고 지원 되지 않는 데이터 형식을 나열 하는 암시적 변환을 나열 됩니다. R 및 SQL Server 간에 데이터 형식을 매핑하기 위한 지침이 제공 됩니다.
+이 섹션에서는 제공 된 암시적 변환을 나열 하 고 지원 되지 않는 데이터 형식을 나열 합니다. R과 SQL Server 간에 데이터 형식을 매핑하기 위한 몇 가지 지침이 제공 됩니다.
 
 ## <a name="implicit-data-type-conversions-between-r-and-sql-server"></a>R과 SQL Server 간 암시적 데이터 형식 변환
 
@@ -65,7 +65,7 @@ SQL Server의 특정 인스턴스와 연결 된 R 버전을 보려면 엽니다 
 
 [SQL Server 형식 시스템](../../t-sql/data-types/data-types-transact-sql.md)에서 지원되는 데이터 형식의 범주 중에서 다음 형식은 R 코드에 전달될 때 문제를 일으킬 수 있습니다.
 
-+ 에 나열 된 데이터 형식 합니다 **다른** SQL 유형 시스템 문서의 섹션: **커서**에 **타임 스탬프**를 **hierarchyid**,  **uniqueidentifier**하십시오 **sql_variant**를 **xml**, **테이블**
++ SQL 유형 시스템 아티클의 **다른** 섹션에 나열 된 데이터 형식: **cursor**, **timestamp**, **hierarchyid**, **uniqueidentifier**, **sql_variant**, **xml**, **테이블**
 + 모든 공간 형식
 + **image**
 
@@ -92,7 +92,7 @@ Microsoft SQL Server 2016 및 Microsoft Azure SQL Database의 데이터 형식 �
 
 일반적으로 특정 데이터 형식 또는 데이터 구조가 R에서 어떻게 사용되는지 잘 모를 경우  `str()` 함수를 사용하여 R개체의 내부 구조와 형식을 가져옵니다. 함수 결과는 R 콘솔에 인쇄되며 **의** 메시지 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]탭에서 쿼리 결과로도 확인할 수 있습니다. 
 
-GUID (uniqueidentifier)), 타임 스탬프 및 감사에 사용 되는 다른 열과 같은 분석 또는 계보 유용 하지 않은 열 뿐만 아니라 R에서 사용할 수 없는 열 항상 제거 해야에 R 코드에서 사용 하기 위해 데이터베이스에서 데이터를 검색할 때 ETL 프로세스에서 만들어진 정보입니다. 
+R 코드에서 사용할 데이터베이스에서 데이터를 검색할 때는 항상 R에서 사용할 수 없는 열을 제거 하 고, 분석에 유용 하지 않은 열 (예: GUID (uniqueidentifier), 감사에 사용 되는 타임 스탬프 및 기타 열)을 제거 해야 합니다. ETL 프로세스에 의해 생성 된 정보입니다. 
 
 불필요한 열을 포함하면, 특히 카디널리티가 높은 열이 요소로 사용될 경우 R 코드의 성능이 크게 저하될 수 있습니다. 따라서 SQL Server 시스템 저장 프로시저 및 정보 뷰를 사용하여 지정된 테이블에 대한 데이터 형식을 미리 가져오고 호환되지 않는 열을 제거하거나 변환하는 것이 좋습니다. 자세한 내용은 [시스템 정보 스키마 뷰(TRANSACT-SQL)](../../relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)를 참조하세요.
 
@@ -108,7 +108,7 @@ R에서 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이�
 
 다음 예제에서는 SQL Server와 R 간에 왕복을 수행할 때 데이터를 변환하는 방법을 보여 줍니다.
 
-쿼리를 일련의 값을 가져옵니다를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블 및 저장된 프로시저를 사용 하 여 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) R 런타임을 사용 하 여 값을 출력 합니다.
+이 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에서 일련의 값을 가져오며 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 저장 프로시저를 사용 하 여 R 런타임을 사용 하 여 값을 출력 합니다.
 
 ```sql
 CREATE TABLE MyTable (    

@@ -1,25 +1,25 @@
 ---
-title: R 및 SQL 데이터 형식 및 개체-SQL Server Machine Learning에 대 한 빠른 시작
-description: 이 빠른 시작에서는 데이터 형식 및 R과 SQL Server에서 데이터 개체를 사용 하는 방법에 알아봅니다.
+title: R 및 SQL 데이터 형식 및 개체에 대 한 빠른 시작
+description: 이 빠른 시작에서는 R 및 SQL Server에서 데이터 형식 및 데이터 개체를 사용 하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: baa7a378c85668ac87ff8dc28422d4a6bbbcd225
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8c8ccd60417d4c1d492d53041280ab0c8e318af
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962021"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345429"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>빠른 시작: 데이터 형식 및 SQL Server에서 R을 사용 하 여 개체를 처리 합니다.
+# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>빠른 시작: SQL Server에서 R을 사용 하 여 데이터 형식 및 개체를 처리 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 빠른 시작에서는 SQL Server와 R 간에 데이터를 이동할 때 발생 하는 일반적인 문제에 대 한 실습 소개를 가져옵니다. 이 연습을 통해 얻게 환경을 사용자 지정 스크립트에서 데이터로 작업할 때 필수 배경을 제공 합니다.
+이 빠른 시작에서는 R과 SQL Server 간에 데이터를 이동할 때 발생 하는 일반적인 문제에 대 한 실습 소개를 제공 합니다. 이 연습을 통해 제공 되는 경험을 통해 사용자 고유의 스크립트에서 데이터를 사용할 때 필요한 배경이 제공 됩니다.
 
-알아야 하는 일반적인 문제는 다음과 같습니다.
+앞에서 알아야 하는 일반적인 문제는 다음과 같습니다.
 
 + 데이터 형식이 일치하지 않는 경우가 있음
 + 암시적 변환이 일어날 수 있음
@@ -28,13 +28,13 @@ ms.locfileid: "67962021"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이전 빠른 시작에서는 [SQL Server에 있는지 확인 하는 R](quickstart-r-verify.md), 정보를 제공 하 고이 빠른 시작에 필요한 R 환경 설정에 대 한 링크입니다.
+이전 퀵 스타트 인 [r이 SQL Server에 있는지 확인](quickstart-r-verify.md)하 고,이 빠른 시작에 필요한 r 환경을 설정 하기 위한 정보 및 링크를 제공 합니다.
 
-## <a name="always-return-a-data-frame"></a>항상 데이터 프레임을 반환
+## <a name="always-return-a-data-frame"></a>항상 데이터 프레임 반환
 
-스크립트가 R에서 SQL Server로 결과를 반환할 경우 데이터를 **data.frame**으로 반환해야 합니다. 다른 유형의 개체가 든 관계 목록, 요소, 벡터 또는 이진 데이터--스크립트에서 생성 하는 저장된 프로시저 결과의 일부로 출력 하려면 데이터 프레임으로 변환할 수 있어야 합니다. 다행히도 기타 개체를 데이터 프레임으로 변경하는 기능을 지원하는 여러 R 함수가 있습니다. 이진 모델 또한 직렬화해서 데이터 프레임으로 반환할 수 있으며, 이 자습서의 뒷부분에서 수행할 것입니다.
+스크립트가 R에서 SQL Server로 결과를 반환할 경우 데이터를 **data.frame**으로 반환해야 합니다. 스크립트에서 생성 하는 다른 모든 유형의 개체 (목록, 인수, 벡터 또는 이진 데이터)를 저장 프로시저 결과의 일부로 출력 하려면 데이터 프레임으로 변환 해야 합니다. 다행히도 기타 개체를 데이터 프레임으로 변경하는 기능을 지원하는 여러 R 함수가 있습니다. 이진 모델 또한 직렬화해서 데이터 프레임으로 반환할 수 있으며, 이 자습서의 뒷부분에서 수행할 것입니다.
 
-첫째, 일부 R 기본 R 개체인 벡터, 행렬 및 목록-를 사용 하 여 실험 하 고 데이터 프레임으로 변환 SQL Server로 전달 되는 출력이 어떻게 변경 되는지 확인 하겠습니다.
+먼저, 몇 가지 R 기본 R 개체 (벡터, 행렬 및 목록)를 실험 하 고 데이터 프레임으로 변환 하 여 SQL Server에 전달 된 출력을 변경 하는 방법을 살펴봅니다.
 
 R에서 다음 두 "Hello World" 스크립트를 비교하세요. 스크립트는 거의 동일 하지만 첫 번째는 세 개의 값을 단일 열로 반환하는 반면, 두 번째는 각각 단일 값을 가진 3개의 열을 반환합니다.
 
@@ -65,7 +65,7 @@ EXECUTE sp_execute_external_script
 
 예제 1 및 예제 2의 결과가 다른 이유를 확인하려면 다음과 같이 각 문에서 _@script_ 변수 정의의 끝 부분에 `str(OutputDataSet)` 줄을 삽입합니다.
 
-**추가 str 함수를 사용 하 여 예제 1**
+**Str 함수가 추가 된 예 1**
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -77,7 +77,7 @@ EXECUTE sp_execute_external_script
 ;
 ```
 
-**추가 str 함수를 사용 하 여 예제 2**
+**Str 함수가 추가 된 예 2**
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -107,18 +107,18 @@ $ X...      : Factor w/ 1 level " ": 1
 $ c..world..: Factor w/ 1 level "world": 1
 ```
 
-확인한 것처럼 R 구문을 약간 변경한 것이 결과의 스키마에 큰 영향을 미쳤습니다. 이유, 않겠습니다 있지만 R 데이터 형식에서 차이점의 세부 정보에 설명 되어는 *데이터 구조* 단원의 [Hadley wickham "Advanced R"](http://adv-r.had.co.nz).
+확인한 것처럼 R 구문을 약간 변경한 것이 결과의 스키마에 큰 영향을 미쳤습니다. 그 이유는 다루지 않지만 R 데이터 형식의 차이점에 대해서는 [Hadley Wickham의 "고급 r"](http://adv-r.had.co.nz)의 *데이터 구조* 섹션에서 자세히 설명 합니다.
 
 현재로서는 R 개체를 데이터 프레임으로 강제 변환할 때 예상되는 결과를 확인해야 합니다.
 
 > [!TIP]
-> R id 함수를 같은 이용할 수 있습니다 `is.matrix`, `is.vector`, 내부 데이터 구조에 대 한 정보를 반환 합니다.
+> `is.matrix` ,`is.vector`와 같은 R id 함수를 사용 하 여 내부 데이터 구조에 대 한 정보를 반환할 수도 있습니다.
 
 ## <a name="implicit-conversion-of-data-objects"></a>데이터 개체의 암시적 변환
 
 각 R 데이터 개체에는 두 개의 데이터 개체가 같은 수의 차원을 가지거나 데이터 개체에 다른 데이터 형식이 포함될 경우 다른 데이터 개체와 결합될 때 값을 처리하는 방법에 대한 자체 규칙이 있습니다.
 
-예를 들어, R을 사용 하는 행렬 곱셈을 수행 하려면 다음 문을 실행 하면 세 개의 값을 사용 하 여 단일 열 행렬 배열을 네 가지 값으로 곱합니다 하는 결과로 4x3 행렬을 예상 합니다.
+예를 들어 다음 문을 실행 하 여 R을 사용 하 여 행렬 곱셈을 수행 한다고 가정 합니다. 단일 열 행렬에 4 개의 값이 있는 배열을 사용 하 여 세 개의 값을 곱하고 그 결과로 4x3 매트릭스가 있다고 간주 합니다.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -166,7 +166,7 @@ execute sp_execute_external_script
 
 > [!TIP]
 > 
-> 오류가 발생 했습니까? 이 예제는 **RTestData** 테이블을 필요로 합니다. 테스트 데이터 테이블에 만들지 않은 경우 테이블을 만들려면이 항목으로 다시 이동 합니다. [입 / 출력 처리](../tutorials/rtsql-working-with-inputs-and-outputs.md)합니다.
+> 오류가 발생 했습니까? 이 예제는 **RTestData** 테이블을 필요로 합니다. 테스트 데이터 테이블을 만들지 않은 경우이 항목으로 돌아가서 테이블을 만듭니다. [입력 및 출력을 처리](../tutorials/rtsql-working-with-inputs-and-outputs.md)합니다.
 > 
 > 테이블이 만들어져도 여전히 오류가 발생한다면, 해당 테이블을 포함한 데이터베이스 내에서 저장 프로시저를 실행하고 있는지 **master** 혹은 다른 데이터베이스가 아닌지 확인해 보세요.
 > 
@@ -213,7 +213,7 @@ R 과 SQL Server는 같은 데이터 형식을 사용하지 않으므로, SQL Se
 - 데이터베이스 엔진은 보안 설정된 내부 연결을 통해 데이터를 SQL Server로 반환하고 SQL Server 데이터 형식을 기준으로 데이터를 제공합니다.
 - SQL 쿼리를 실행하고 테이블 형식 데이터 집합을 처리할 수 있는 클라이언트 또는 네트워크 라이브러리를 사용하여 SQL Server에 연결하는 방식으로 데이터를 가져옵니다. 이 클라이언트 애플리케이션은 다른 방식으로 데이터에 영향을 미칠 수 있습니다.
 
-이 과정을 보려면에서이 이와 같은 쿼리를 실행 합니다 [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) 데이터 웨어하우스. 이 뷰는 예측 생성에 사용된 매출 데이터를 반환합니다.
+이 기능이 어떻게 작동 하는지 확인 하려면 [AdventureWorksDW](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) 데이터 웨어하우스에서 다음과 같은 쿼리를 실행 합니다. 이 뷰는 예측 생성에 사용된 매출 데이터를 반환합니다.
 
 ```sql
 USE AdventureWorksDW
@@ -279,7 +279,7 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 
 ## <a name="next-step"></a>다음 단계
 
-다음 빠른 시작에서 SQL Server 데이터에 R 함수를 적용 하는 방법에 알아봅니다.
+다음 빠른 시작에서 R 함수를 적용 하 여 데이터를 SQL Server 하는 방법을 알아봅니다.
 
 > [!div class="nextstepaction"]
-> [빠른 시작: SQL Server 데이터를 사용 하 여 R 함수를 사용 합니다.](quickstart-r-functions.md)
+> [빠른 시작: SQL Server 데이터에 R 함수 사용](quickstart-r-functions.md)

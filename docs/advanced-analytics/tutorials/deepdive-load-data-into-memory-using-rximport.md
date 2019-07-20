@@ -1,31 +1,31 @@
 ---
-title: RevoScaleR rxImport-SQL Server Machine Learning을 사용 하 여 메모리에 데이터 로드
-description: SQL Server에서 R 언어를 사용 하 여 데이터를 로드 하는 방법에 대 한 연습 자습서입니다.
+title: RevoScaleR rxImport를 사용 하 여 메모리에 데이터 로드
+description: SQL Server에서 R 언어를 사용 하 여 데이터를 로드 하는 방법에 대 한 자습서 연습입니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 53d13c0771fd06ae8e91f4ad69fe4646a01fc770
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fb98887d9cfd3f1997ce82620eeff5df98ba6b1e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962220"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344665"
 ---
-# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>RxImport (RevoScaleR 및 SQL Server 자습서)를 사용 하 여 메모리에 데이터 로드
+# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>RxImport를 사용 하 여 메모리에 데이터 로드 (SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 단원에서는의 일부인를 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 사용 하는 방법에 [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) SQL Server를 사용 하 여 합니다.
+이 단원에서는 SQL Server [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 를 사용 하는 방법에 대 한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 의 일부입니다.
 
-합니다 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 세션 메모리의 데이터 프레임 또는 XDF 파일로 디스크에 데이터 원본에서 데이터를 이동 하는 함수를 사용할 수 있습니다. 파일을 대상으로 지정하지 않으면 데이터는 메모리에 데이터 프레임으로 저장됩니다.
+[Rximport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 함수를 사용 하 여 데이터 원본에서 세션 메모리의 데이터 프레임으로 데이터를 이동 하거나 디스크의 xdf 파일로 데이터를 이동할 수 있습니다. 파일을 대상으로 지정하지 않으면 데이터는 메모리에 데이터 프레임으로 저장됩니다.
 
-이 단계에서는 데이터를 가져오는 방법을 배웁니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용 하 여 합니다 **rxImport** 관심 있는 데이터를 로컬 파일에 저장 합니다. 이렇게 하면 데이터베이스를 다시 쿼리하지 않고도 로컬 컴퓨팅 컨텍스트에서 반복하여 데이터를 분석할 수 있습니다.
+이 단계에서는에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]데이터를 가져온 다음 **rximport** 함수를 사용 하 여 대상 데이터를 로컬 파일에 저장 하는 방법에 대해 알아봅니다. 이렇게 하면 데이터베이스를 다시 쿼리하지 않고도 로컬 컴퓨팅 컨텍스트에서 반복하여 데이터를 분석할 수 있습니다.
 
-## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>로컬 메모리에 SQL Server에서 데이터 하위 집합 추출
+## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>SQL Server에서 로컬 메모리로 데이터의 하위 집합 추출
 
-자세히 위험 개인만 검사 하려는 결정 하면 됩니다. 원본 테이블에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 크기 때문에 위험 고객에 대 한 정보를 가져오려는 합니다. 그런 다음 로컬 워크스테이션의 메모리에 데이터 프레임에 해당 데이터를 로드 합니다.
+위험도가 높은 개인만 자세히 검토 하기로 결정 했습니다. 의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 원본 테이블은 크므로 높은 위험 수준 고객에 대 한 정보를 가져올 수 있습니다. 그런 다음 해당 데이터를 로컬 워크스테이션의 메모리에 있는 데이터 프레임에 로드 합니다.
 
 1. 컴퓨팅 컨텍스트를 로컬 워크스테이션으로 다시 설정합니다.
 
@@ -42,15 +42,15 @@ ms.locfileid: "67962220"
         connectionString = sqlConnString)
     ```
 
-3. 함수 호출 [rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 로컬 R 세션에서 데이터를 데이터 프레임으로 읽습니다.
+3. [Rximport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport) 함수를 호출 하 여 로컬 R 세션의 데이터 프레임으로 데이터를 읽습니다.
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    작업이 성공 하면 다음과 같은 상태 메시지가 표시 됩니다. "읽은 행: 처리 된 총 행 35: 35, total Chunk Time: 0.036 seconds "
+    작업에 성공 하면 다음과 같은 상태 메시지가 표시 됩니다. "읽은 행: 35, 총 처리 된 행: 35, 총 청크 시간: 0.036 초 "
 
-4. 메모리 내 데이터 프레임에 고 위험 관찰 인 했으므로 데이터 프레임을 조작 하려면 다양 한 R 함수를 사용할 수 있습니다. 예를 들어,의 위험 점수를 기준으로 고객 순서를 매긴 다음 가장 위험도 가장 높은 고객의 목록을 인쇄 합니다.
+4. 이제 높은 위험 수준의 관찰이 메모리 내 데이터 프레임에 있으므로 다양 한 R 함수를 사용 하 여 데이터 프레임을 조작할 수 있습니다. 예를 들어 고객의 위험 점수를 기준으로 고객의 순서를 지정할 수 있으며 가장 높은 위험을 야기 하는 고객의 목록을 인쇄할 수 있습니다.
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -74,7 +74,7 @@ ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans credit
 
 **rxImport** 를 사용하여 데이터 이동은 물론 데이터를 읽는 동안 데이터를 변환할 수도 있습니다. 예를 들어 고정 너비 열에 대해 문자 수를 지정하고, 변수에 대한 설명을 제공하고, 요소 열에 대한 수준을 설정하고, 가져온 후 사용할 새로운 수준을 만들 수 있습니다.
 
-합니다 **rxImport** 함수 가져오기 프로세스 동안 열에 변수 이름을 할당 하지만 사용 하 여 새 변수 이름을 지정할 수 있습니다 합니다 *colInfo* 매개 변수 또는 합니다 를사용하여데이터형식을변경할*colClasses* 매개 변수입니다.
+**Rximport** 함수는 가져오기 프로세스 동안 열에 변수 이름을 할당 하지만, *colInfo* 매개 변수를 사용 하 여 새 변수 이름을 지정 하거나 colclasses 매개 변수를 사용 하 여  데이터 형식을 변경할 수 있습니다.
 
 *transforms* 매개 변수에서 추가 작업을 지정하여 읽은 각 데이터 청크에 대한 기본 처리를 수행할 수 있습니다.
 

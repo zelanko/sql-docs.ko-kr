@@ -1,38 +1,38 @@
 ---
-title: "\"Hello World\" 기본 R 코드 실행을 T-SQL-SQL Server Machine Learning에에서 대 한 빠른 시작"
-description: SQL Server에서 R 스크립트에 대 한 빠른 시작입니다. Sp_execute_external_script 시스템 저장 프로시저를 사용 하 여 hello world 연습에서 R 스크립트를 호출 하는 기본 사항을 알아봅니다.
+title: T-sql에서 "Hello World" 기본 R 코드 실행에 대 한 빠른 시작
+description: SQL Server의 R 스크립트에 대 한 빠른 시작입니다. Hello 세계의 sp_execute_external_script 시스템 저장 프로시저를 사용 하 여 R 스크립트를 호출 하는 기본 사항에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 331184f49918dbb17b7b97590b3155cbc8eb89ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61b1959b9b3b0769e080a2a4a44b1d4d10ef2b61
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961983"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345977"
 ---
-# <a name="quickstart-hello-world-r-script-in-sql-server"></a>빠른 시작: SQL Server에서 R 스크립트의 "hello world" 
+# <a name="quickstart-hello-world-r-script-in-sql-server"></a>빠른 시작: SQL Server에서 "Hello 세계" R 스크립트 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 빠른 시작에 알아봅니다 "Hello World" R을 실행 하 여 주요 개념 소개를 사용 하 여 inT SQL 스크립트를 **sp_execute_external_script** 시스템 저장 프로시저입니다. 
+이 빠른 시작에서는 **sp_execute_external_script** 시스템 저장 프로시저를 소개 하 고 "Hello World" R 스크립트 INT-SQL을 실행 하 여 주요 개념에 대해 알아봅니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이전 빠른 시작에서는 [SQL Server에 있는지 확인 하는 R](quickstart-r-verify.md), 정보를 제공 하 고이 빠른 시작에 필요한 R 환경 설정에 대 한 링크입니다.
+이전 퀵 스타트 인 [r이 SQL Server에 있는지 확인](quickstart-r-verify.md)하 고,이 빠른 시작에 필요한 r 환경을 설정 하기 위한 정보 및 링크를 제공 합니다.
 
 ## <a name="basic-r-interaction"></a>기본 R 상호 작용
 
-두 가지 방법으로 SQL Database에서 R 코드를 실행할 수 있습니다.
+SQL Database에서 R 코드를 실행 하는 방법에는 두 가지가 있습니다.
 
-+ 시스템 저장 프로시저의 인수로 R 스크립트를 추가 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)합니다.
-+ [원격 R 클라이언트](https://docs.microsoft.com/sql/advanced-analytics/r/set-up-a-data-science-client)SQL 데이터베이스에 연결한 후 SQL Database를 사용 하 여 계산 컨텍스트로 코드를 실행 합니다.
++ [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)시스템 저장 프로시저의 인수로 R 스크립트를 추가 합니다.
++ [원격 R 클라이언트](https://docs.microsoft.com/sql/advanced-analytics/r/set-up-a-data-science-client)에서 SQL database에 연결 하 고 SQL Database를 계산 컨텍스트로 사용 하 여 코드를 실행 합니다.
 
-다음 연습에서는 첫 번째 상호 작용 모델에 포커스가: 저장된 프로시저에 R 코드를 전달 하는 방법입니다.
+다음 연습은 첫 번째 상호 작용 모델에 초점을 맞추고 있습니다. 저장 프로시저에 R 코드를 전달 하는 방법입니다.
 
-1. SQL database에서 R 스크립트를 실행 하는 방법을 참조 하세요. 간단한 스크립트를 실행 합니다.
+1. 간단한 스크립트를 실행 하 여 SQL 데이터베이스에서 R 스크립트를 실행 하는 방법을 확인 합니다.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -46,7 +46,7 @@ ms.locfileid: "67961983"
     '
     ```
 
-2. 있다고 간주 되며 올바른 결과 올바르게 설정 하는 모든 계산 및 R `print` 함수는 결과 반환 합니다 **메시지** 창입니다.
+2. 모든 것이 올바르게 설정 되었다고 가정 하면 올바른 결과가 계산 되며 R `print` 함수는 결과를 **메시지** 창에 반환 합니다.
 
     **결과**
 
@@ -55,13 +55,13 @@ ms.locfileid: "67961983"
     0.5 2
     ```
 
-    가져오는 동안 **stdout** 메시지 코드를 테스트할 때 유용 합니다 더 자주 해야 응용 프로그램에서 사용 하거나 테이블에 쓸 수 있도록 테이블 형식으로 결과 반환 합니다. 참조 [빠른 시작: 핸들 입력 및 SQL Server에서 R을 사용 하 여 출력](rtsql-working-with-inputs-and-outputs.md) 자세한 내용은 합니다.
+    **Stdout** 메시지를 가져오는 것은 코드를 테스트할 때 유용 하지만, 응용 프로그램에서 사용 하거나 테이블에 쓸 수 있도록 결과를 테이블 형식으로 반환 해야 하는 경우가 더 많습니다. [빠른 시작: 자세한 내용은 SQL Server](rtsql-working-with-inputs-and-outputs.md) 에서 R을 사용 하 여 입력 및 출력을 처리 합니다.
 
-내부의 모든 항목이 기억 합니다 `@script` 인수에 유효한 R 코드 여야 합니다.
+`@script` 인수 내의 모든 항목은 유효한 R 코드 여야 합니다.
 
-## <a name="run-a-hello-world-script"></a>Hello World 스크립트를 실행 합니다.
+## <a name="run-a-hello-world-script"></a>Hello World 스크립트 실행
 
-다음 연습에서는 다른 간단한 R 스크립트를 실행합니다.
+다음 연습은 또 다른 간단한 R 스크립트를 실행 합니다.
 
 ```sql
 EXEC sp_execute_external_script
@@ -72,12 +72,12 @@ EXEC sp_execute_external_script
 GO
 ```
 
-이 저장된 프로시저에 대 한 입력은 다음과 같습니다.
+이 저장 프로시저에 대 한 입력은 다음과 같습니다.
 
-+ *@language* 이 경우 R.를 호출 하려면 언어 확장을 정의 하는 매개 변수
-+ *@script* 매개 변수를 R 런타임에 전달할 명령을 정의 합니다. 전체 R 스크립트는 이 인수에 유니코드 텍스트로 포함되어야 합니다. **nvarchar** 형식의 변수에 텍스트를 추가한 다음 변수를 호출할 수도 있습니다.
-+ *@input_data_1* 데이터를 SQL Server 데이터 프레임으로 데이터를 반환 하는 R 런타임에 전달할 쿼리에 의해 반환 됩니다.
-+ WITH RESULT SETS 절 열 이름으로 "Hello World"를 추가 하 고 SQL Server에 대해 반환된 된 데이터 테이블의 스키마를 정의 **int** 데이터 형식에 대 한 합니다.
++ *@language* 매개 변수는 호출할 언어 확장 (이 경우 R)을 정의 합니다.
++ *@script* 매개 변수는 R 런타임으로 전달 되는 명령을 정의 합니다. 전체 R 스크립트는 이 인수에 유니코드 텍스트로 포함되어야 합니다. **nvarchar** 형식의 변수에 텍스트를 추가한 다음 변수를 호출할 수도 있습니다.
++ *@input_data_1* 쿼리에서 반환 되는 데이터로, R 런타임으로 전달 되며 SQL Server 데이터를 데이터 프레임으로 반환 합니다.
++ WITH RESULT SETS 절은 SQL Server에 대해 반환 된 데이터 테이블의 스키마를 정의 하 고 데이터 형식 **에 대해 열** 이름으로 "Hello World"를 추가 합니다.
 
 **결과**
 
@@ -87,7 +87,7 @@ GO
 
 ## <a name="next-steps"></a>다음 단계
 
-몇 가지 간단한 R 스크립트를 실행 하면 이제는 살펴볼에서 입력 및 출력을 구성 합니다.
+몇 가지 간단한 R 스크립트를 실행 했으므로 입력 및 출력 구조를 좀 더 자세히 살펴보겠습니다.
 
 > [!div class="nextstepaction"]
-> [빠른 시작: 입 / 출력 처리](quickstart-r-inputs-and-outputs.md)
+> [빠른 시작: 입력 및 출력 처리](quickstart-r-inputs-and-outputs.md)

@@ -1,26 +1,26 @@
 ---
-title: R 및 Python 프로세스-SQL Server Machine Learning Services 모니터링을 위한 확장된 이벤트
+title: R 및 Python 프로세스 모니터링에 대 한 확장 이벤트
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ce4aae5c9725768a9c4c85fc7aaeaf4884dfba0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 359ed7abfb8afd9fea38b96f9d822d379d69a91e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962669"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345618"
 ---
-# <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에 대 한 확장된 이벤트
+# <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에 대 한 확장 이벤트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server와 관련 된 작업 문제 해결에 사용할 확장된 이벤트의 집합을 제공 합니다 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], Python 또는 R 작업을 전송 하는 것은 물론 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.
+SQL Server는에 관련 된 작업을 수행 하는 데 사용할 수 있는 확장 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]이벤트 집합 뿐만 아니라로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]전송 되는 Python 또는 R 작업도 제공 합니다.
 
-**적용 대상:**  SQL Server 2016 R Services, SQL Server 2017 Machine Learning 서비스
+**적용 대상:**  SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 
-## <a name="sql-server-events-for-machine-learning"></a>Machine learning 위한 SQL Server 이벤트
+## <a name="sql-server-events-for-machine-learning"></a>Machine learning에 대 한 SQL Server 이벤트
 
 SQL Server 관련 이벤트 목록을 보려면, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 다음 쿼리를 실행합니다.
 
@@ -33,18 +33,18 @@ WHERE o.object_type = 'event'
 AND p.name = 'SQLSatellite';
 ```
 
-확장된 이벤트 사용에 대 한 일반적인 정보를 참조 하세요 [확장 이벤트 도구](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)합니다.
+확장 이벤트를 사용 하는 방법에 대 한 일반적인 내용은 [확장 이벤트 도구](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)를 참조 하세요.
 
 > [!TIP]
-> SQL Server에서 생성 하는 확장된 이벤트에 대 한 새 시도 [SSMS XEvent profiler](https://docs.microsoft.com/sql/relational-databases/extended-events/use-the-ssms-xe-profiler)합니다. Management Studio에서이 새로운 기능, 확장된 이벤트에 대 한 라이브 뷰어를 표시 및 유사한 Profiler 추적 보다 SQL Server 개입 수준이 낮습니다.
+> SQL Server에서 생성 된 확장 이벤트의 경우 새 [SSMS XEvent 프로파일러](https://docs.microsoft.com/sql/relational-databases/extended-events/use-the-ssms-xe-profiler)를 사용해 보세요. Management Studio의이 새로운 기능은 확장 이벤트에 대 한 라이브 뷰어를 표시 하며, 유사한 프로파일러 추적 보다 SQL Server의 개입 수준이 낮습니다.
 
-## <a name="additional-events-specific-to-machine-learning-components"></a>기계 학습 구성 요소에는 추가 이벤트
+## <a name="additional-events-specific-to-machine-learning-components"></a>Machine learning 구성 요소와 관련 한 추가 이벤트
 
-추가 확장된 이벤트와 관련 된 및와 같은 SQL Server Machine Learning Services에서 사용 되는 구성 요소에 사용할 수는 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], bxlserver, 위성 프로세스는 R 런타임을 시작입니다. 이러한 추가 확장 이벤트는 외부 프로세스에서 발생 하는 및 따라서 캡처해야 하는 외부 유틸리티를 사용 하 여 합니다.
+추가 확장 이벤트는 R 런타임을 시작 하는 위성 프로세스, [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)], bxlserver와 같은 SQL Server Machine Learning Services와 관련 되 고 사용 되는 구성 요소에 사용할 수 있습니다. 이러한 추가 확장 이벤트는 외부 프로세스에서 발생 하므로 외부 유틸리티를 사용 하 여 캡처해야 합니다.
 
-이 작업을 수행 하는 방법에 대 한 자세한 내용은 섹션을 참조 하세요 [외부 프로세스에서 이벤트를 수집](#bkmk_externalevents)합니다.
+이 작업을 수행 하는 방법에 대 한 자세한 내용은 [외부 프로세스에서 이벤트 수집](#bkmk_externalevents)섹션을 참조 하세요.
 
-##  <a name="bkmk_xeventtable"></a> 확장된 이벤트 테이블
+##  <a name="bkmk_xeventtable"></a>확장 이벤트 표
 
 |이벤트|설명|참고|  
 |-----------|-----------------|---------|  
@@ -59,7 +59,7 @@ AND p.name = 'SQLSatellite';
 |satellite_data_chunk_sent|위성 연결이 단일 데이터 청크 보내기를 마칠 때 실행됩니다.|이 이벤트는 전송된 행 수, 열 수, 사용된 SNI 패킷 수, 청크를 전송하는 동안 경과된 시간(밀리초)을 보고합니다. 이 정보는 각 유형의 데이터를 전달하는 데 소비된 시간 및 사용된 패킷 수를 파악하는 데 도움이 됩니다.|  
 |satellite_data_receive_completion|위성 연결을 통해 쿼리에 필요한 모든 데이터를 수신한 경우에 실행됩니다.|외부 프로세스를 통해서만 실행됩니다. 외부 프로세스 이벤트 수집에 대한 지침을 참조하십시오.|  
 |satellite_data_send_completion|위성 연결을 통해 세션에 필요한 모든 데이터를 보낸 경우에 실행됩니다.||  
-|satellite_data_send_start|데이터 전송이 시작 될 때 발생 합니다.| 데이터 전송에 첫 번째 데이터 청크를 보내기 바로 전에 시작 됩니다.|  
+|satellite_data_send_start|데이터 전송이 시작 될 때 발생 합니다.| 첫 번째 데이터 청크를 보내기 직전에 데이터 전송이 시작 됩니다.|  
 |satellite_error|SQL 위성 오류를 추적하는 데 사용됩니다.||  
 |satellite_invalid_sized_message|메시지의 크기가 유효하지 않습니다.||  
 |satellite_message_coalesced|네트워킹 계층의 메시지 결합을 추적하는 데 사용됩니다.||  
@@ -79,25 +79,25 @@ AND p.name = 'SQLSatellite';
 |satellite_data_chunk_sent|위성 연결이 단일 데이터 청크 보내기를 마칠 때 실행됩니다.|열의 수, 행의 수, 패킷 수, 청크를 보내면서 경과한 시간에 대한 정보를 포함합니다.|  
 |satellite_sessionId_mismatch|메시지의 세션 ID가 예상한 것과 다릅니다.||  
   
-###  <a name="bkmk_externalevents"></a> 외부 프로세스에서 이벤트를 수집합니다.
+###  <a name="bkmk_externalevents"></a>외부 프로세스에서 이벤트 수집
 
-SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실행 되는 일부 서비스를 시작 합니다. 이러한 외부 프로세스에 관련 된 이벤트를 캡처하려면 이벤트 추적 구성 파일을 만들고 프로세스의 실행 파일과 동일한 디렉터리에 파일을 배치 합니다.  
+Machine Learning Services SQL Server SQL Server 프로세스 외부에서 실행 되는 일부 서비스를 시작 합니다. 이러한 외부 프로세스와 관련 된 이벤트를 캡처하려면 이벤트 추적 구성 파일을 만들고 프로세스의 실행 파일과 동일한 디렉터리에 파일을 저장 해야 합니다.  
   
 + **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**   
   
-    실행 패드 관련 이벤트를 캡처하려면, SQL Server 인스턴스의 Binn 디렉터리에 *.config* 파일을 배치합니다.  기본 설치에서이 됩니다.
+    실행 패드 관련 이벤트를 캡처하려면, SQL Server 인스턴스의 Binn 디렉터리에 *.config* 파일을 배치합니다.  기본 설치의 경우 다음과 같습니다.
 
     `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\MSSQL\Binn`.  
   
-+ **BXLServer** 는 Python 또는 R 등의 외부 스크립트 언어를 사용 하 여 SQL 확장성을 지 원하는 위성 프로세스입니다. 외부 언어 인스턴스마다 BxlServer의 개별 인스턴스가 시작 됩니다.
++ **Bxlserver** 는 R 또는 Python과 같은 외부 스크립트 언어로 SQL 확장성을 지 원하는 위성 프로세스입니다. 각 외부 언어 인스턴스에 대해 BxlServer의 개별 인스턴스가 시작 됩니다.
   
-    BXLServer 관련 이벤트를 캡처하려면 다음을 배치 합니다 *.config* R 또는 Python 설치 디렉터리의 파일입니다.  기본 설치에서이 됩니다.
+    BXLServer 관련 이벤트를 캡처하려면 R 또는 Python 설치 디렉터리에 *.config* 파일을 저장 합니다.  기본 설치의 경우 다음과 같습니다.
      
-    **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`합니다.  
+    **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
     **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
 
-구성 파일의 이름은 "[name].xevents.xml" 형식을 사용 하 여 실행 파일을 동일 합니다. 즉, 파일 이름을 다음과 같이 지정해야 합니다.
+구성 파일은 "[name]. xevent" 형식을 사용 하 여 실행 파일과 동일 하 게 이름이 지정 되어야 합니다. 즉, 파일 이름을 다음과 같이 지정해야 합니다.
 
 + `Launchpad.xevents.xml`
 + `bxlserver.xevents.xml`
@@ -120,12 +120,12 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
 </event_sessions>  
 ```
 
-+ 추적을 구성 하려면 편집 합니다 *세션 이름* 자리 표시자, 파일 이름에 대 한 자리 표시자 (`[SessionName].xel`), 이벤트를 캡처, 예를 들어 이름과 `[XEvent Name 1]`, `[XEvent Name 1]`).  
-+ 이벤트 패키지 태그 개수에 관계 없이 나타날 수 있습니다 하 고 name 특성은 올바른으로 수집 됩니다.
++ 추적을 구성 하려면 *세션 이름* 자리 표시자, 파일 이름에 대 한 자리 표시자 (`[SessionName].xel`) 및 캡처할 이벤트의 이름 (예: `[XEvent Name 1]` `[XEvent Name 1]`)을 편집 합니다.  
++ 이벤트 패키지 태그는 개수에 관계 없이 나타날 수 있으며 이름 특성이 올바르면 수집 됩니다.
 
 ### <a name="example-capturing-launchpad-events"></a>예: 실행 패드 이벤트 캡처
 
-다음 예제에서는 실행 패드 서비스에 대 한 이벤트 추적의 정의 보여 줍니다.
+다음 예에서는 실행 패드 서비스에 대 한 이벤트 추적의 정의를 보여 줍니다.
 
 ```xml
 \<?xml version="1.0" encoding="utf-8"?>  
@@ -144,7 +144,7 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
 ```
 
 + SQL Server 인스턴스의 Binn 디렉터리에 *.config* 파일을 배치합니다.
-+ 이 파일의 이름은 `Launchpad.xevents.xml`합니다.
++ 이 파일의 이름은로 `Launchpad.xevents.xml`지정 해야 합니다.
 
 ### <a name="example-capturing-bxlserver-events"></a>예: BXLServer 이벤트 캡처  
 
@@ -174,8 +174,8 @@ SQL Server Machine Learning Services는 SQL Server 프로세스 외부에서 실
 ```
 
 + BXLServer 실행 파일과 같은 디렉터리에 *.config* 파일을 배치합니다.
-+ 이 파일의 이름은 `bxlserver.xevents.xml`합니다.
++ 이 파일의 이름은로 `bxlserver.xevents.xml`지정 해야 합니다.
 
 ## <a name="see-also"></a>참조
 
-[Machine Learning 서비스에 대 한 사용자 지정 Management Studio 보고서](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)
+[Machine Learning Services에 대 한 사용자 지정 Management Studio 보고서](../../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md)
