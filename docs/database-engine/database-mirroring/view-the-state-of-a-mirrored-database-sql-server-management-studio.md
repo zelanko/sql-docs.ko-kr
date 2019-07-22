@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 544f4194-253e-4c57-96ca-31c16301434f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 48772a8870945c6c069e285985905e4c2e8c3542
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ef1c67955944277c7a8b6dd7ec1289fb8a2d280
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050588"
 ---
 # <a name="view-the-state-of-a-mirrored-database-sql-server-management-studio"></a>미러된 데이터베이스의 상태 보기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "66795087"
     |일시 중지됨|주 데이터베이스가 실행되고 있지만 미러 서버로 로그를 보내지 않습니다. 데이터베이스의 미러 복사본을 사용할 수 없습니다.|  
     |연결 없음|주 서버 인스턴스는 해당 파트너나 미러링 모니터 서버 인스턴스(있는 경우)에 연결할 수 없습니다.|  
     |동기화 중|미러 데이터베이스의 내용이 주 데이터베이스의 내용보다 오래된 것입니다. 주 서버 인스턴스에서 로그 레코드를 미러 서버 인스턴스로 보내면 미러 서버 인스턴스에서 변경 사항을 미러 데이터베이스에 적용하여 롤포워드합니다.<br /><br /> 데이터베이스 미러링 세션을 시작할 때는 미러 데이터베이스와 주 데이터베이스가 동기화하는 중입니다.|  
-    |장애 조치 |주 서버 인스턴스에서 수동 장애 조치(역할 교체)가 시작되었지만 미러 서버 인스턴스에서 아직 수락하지 않았습니다.|  
+    |장애 조치|주 서버 인스턴스에서 수동 장애 조치(역할 교체)가 시작되었지만 미러 서버 인스턴스에서 아직 수락하지 않았습니다.|  
     |동기화됨|미러 데이터베이스에 주 데이터베이스와 동일한 데이터가 들어 있습니다. 수동 장애 조치와 자동 장애 조치는 동기화 *상태에서만* 가능합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

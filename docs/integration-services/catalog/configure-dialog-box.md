@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dbf1fba077d693b45cd20c0e9f683cda64bc03dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a410379960afa6c20d09fa78ff45304a9f6fe5ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070596"
 ---
 # <a name="configure-dialog-box"></a>구성 대화 상자
 

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7428ea1901f23e5357b12ec4adcc95beac57c06a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a25a41600aca4d350c7434662de4c25dd51888c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098787"
 ---
 # <a name="trim-transact-sql"></a>TRIM(Transact-SQL)
 
@@ -60,7 +59,7 @@ TRIM ( string )
 
 ## <a name="examples"></a>예
 
-### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>1.  문자열의 양쪽에서 공백 문자를 제거합니다.
+### <a name="a--removes-the-space-character-from-both-sides-of-string"></a>1\.  문자열의 양쪽에서 공백 문자를 제거합니다.
 
 다음 예에서는 단어 `test`의 앞과 뒤에서 공백을 제거합니다.
 
@@ -72,7 +71,7 @@ SELECT TRIM( '     test    ') AS Result;
 
 `test`
 
-### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>2.  문자열의 양쪽에서 지정된 문자를 제거합니다.
+### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>2\.  문자열의 양쪽에서 지정된 문자를 제거합니다.
 
 다음 예에서는 후행 마침표와 후행 공백을 제거합니다.
 
