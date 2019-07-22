@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: a33d5db9-aed1-4c96-85bf-9d3b5051c635
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: f17f39af2923ff04510b1df2151f8c707a8ef7a3
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: a9a7aea8309549f67e203ee2b6fc4141462995dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025681"
 ---
 # <a name="ogc-methods-on-geography-instances"></a>geography 인스턴스의 OGC 메서드
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

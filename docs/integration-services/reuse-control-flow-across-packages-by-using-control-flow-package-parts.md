@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 1edc91d9-1fab-4fe5-aed3-6f581fe32c18
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 15ba5f56b5a23b77fae66d8e4032e91a67f6a1f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 977f68acf532ffdb7e691010534b33d50d4d54f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65719568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121480"
 ---
 # <a name="reuse-control-flow-across-packages-by-using-control-flow-package-parts"></a>제어 흐름 패키지 파트를 사용하여 패키지에 대해 제어 흐름 재사용
 

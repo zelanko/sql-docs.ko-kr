@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 97e6792bcd9ed9ea106e93e65c1c8bbdef70ec88
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebe60252bc1f0b950ff2f5b4342c30d99c5bd6c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058540"
 ---
 # <a name="round-transact-sql"></a>ROUND(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,9 +55,9 @@ ROUND ( numeric_expression , length [ ,function ] )
   
 |식 결과|반환 형식|  
 |-----------------------|-----------------|  
-|**tinyint**|**ssNoversion**|  
-|**smallint**|**ssNoversion**|  
-|**ssNoversion**|**ssNoversion**|  
+|**tinyint**|**int**|  
+|**smallint**|**int**|  
+|**int**|**int**|  
 |**bigint**|**bigint**|  
 |**decimal** 및 **numeric** 범주(p, s)|**decimal(p, s)**|  
 |**money** 및 **smallmoney** 범주|**money**|  
@@ -77,7 +76,7 @@ ROUND ( numeric_expression , length [ ,function ] )
 |--------------|------------|  
 |ROUND(748.58, -1)|750.00|  
 |ROUND(748.58, -2)|700.00|  
-|ROUND(748.58, -3)|748\.58은 기본적으로 10진수(5,2)로 1000.00을 반환할 수 없기 때문에 산술 오버플로가 발행합니다.|  
+|ROUND(748.58, -3)|748.58은 기본적으로 10진수(5,2)로 1000.00을 반환할 수 없기 때문에 산술 오버플로가 발행합니다.|  
 |4자릿수까지 반올림하려면 입력 데이터 형식을 변경합니다. 예를 들어<br /><br /> `SELECT ROUND(CAST (748.58 AS decimal (6,2)),-3);`|1000.00|  
   
 ## <a name="examples"></a>예  

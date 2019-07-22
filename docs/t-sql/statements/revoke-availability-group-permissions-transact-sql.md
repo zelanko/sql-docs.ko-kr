@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 02c77378-a36d-4286-9235-d8867a2b92ad
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 201e7de473a344d0d41269b259c503dc34f2a78c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: adbceb87d5191cd279130ca53209265cdc1c14d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082348"
 ---
 # <a name="revoke-availability-group-permissions-transact-sql"></a>가용성 그룹 사용 권한 취소(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,8 +52,8 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  가용성 그룹에 대해 취소할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- 사용 권한을 취소할 가용성 그룹을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ 사용 권한을 취소할 가용성 그룹을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  { FROM | TO } \<server_principal>사용 권한을 취소할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다.  
   
@@ -100,12 +99,12 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  가용성 그룹에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY AVAILABILITY GROUP 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>1. 가용성 그룹에 대한 VIEW DEFINITION 권한 취소  
+### <a name="a-revoking-view-definition-permission-on-an-availability-group"></a>1\. 가용성 그룹에 대한 VIEW DEFINITION 권한 취소  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 대해 가용성 그룹 `MyAg`에 대한 `ZArifin` 권한을 취소합니다.  
   
 ```  
@@ -114,7 +113,7 @@ REVOKE VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;
 GO  
 ```  
   
-### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>2. CASCADE를 지정하여 TAKE OWNERSHIP 권한 취소  
+### <a name="b-revoking-take-ownership-permission-with-the-cascade"></a>2\. CASCADE를 지정하여 TAKE OWNERSHIP 권한 취소  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `TAKE OWNERSHIP`에 대해 `MyAg`가 MyAg에 대한 TAKE OWNERSHIP을 부여한 모든 보안 주체로부터 가용성 그룹 `PKomosinski`에 대한 `PKomosinski` 권한을 취소합니다.  
   
 ```  
@@ -124,7 +123,7 @@ REVOKE TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski
 GO  
 ```  
   
-### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>3. 이전에 부여한 WITH GRANT OPTION 절 취소  
+### <a name="c-revoking-a-previously-granted-with-grant-option-clause"></a>C. 이전에 부여한 WITH GRANT OPTION 절 취소  
  WITH GRANT OPTION을 사용하여 권한을 부여한 경우 REVOKE GRANT OPTION FOR …를 사용하여 WITH GRANT OPTION을 제거합니다. 다음 예에서는 권한을 부여하고 권한의 WITH GRANT 부분을 제거합니다.  
   
 ```  

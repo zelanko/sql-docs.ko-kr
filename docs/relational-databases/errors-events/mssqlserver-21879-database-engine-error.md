@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: fcfab735-05ca-423a-89f1-fdee7e2ed8c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ce03b7b19973d4f5c48e8cb48aa615e107fdd8c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7068229bcfcf63bb08fe46272cf308cee60be022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056713"
 ---
 # <a name="mssqlserver21879"></a>MSSQLSERVER_21879
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47634351"
 |메시지 텍스트|%d 오류로 인해 원래 게시자 '%s' 및 게시자 데이터베이스 '%s'의 리디렉션된 서버 '%s'을(를) 쿼리하여 원격 서버 이름을 확인할 수 없습니다(오류 메시지 '%s').|  
   
 ## <a name="explanation"></a>설명  
-**sp_validate_redirected_publisher**는 원격 서버의 이름을 검색하기 위해 자체적으로 만든 임시 연결된 서버를 사용하여 리디렉션된 게시자에 연결합니다. 오류 21879는 연결된 서버 쿼리에 실패한 경우에 반환됩니다. 원격 서버 이름 요청을 위한 호출은 일반적으로 임시 연결된 서버를 처음 사용할 때 이루어지므로 연결 문제가 있을 경우 가장 먼저 이 호출에서 연결 문제가 나타날 가능성이 높습니다. 이 원격 호출은 원격 서버에서 **@@servername**을 선택하여 실행합니다.  
+**sp_validate_redirected_publisher**는 원격 서버의 이름을 검색하기 위해 자체적으로 만든 임시 연결된 서버를 사용하여 리디렉션된 게시자에 연결합니다. 오류 21879는 연결된 서버 쿼리에 실패한 경우에 반환됩니다. 원격 서버 이름 요청을 위한 호출은 일반적으로 임시 연결된 서버를 처음 사용할 때 이루어지므로 연결 문제가 있을 경우 가장 먼저 이 호출에서 연결 문제가 나타날 가능성이 높습니다. 이 원격 호출은 원격 서버에서 **@@servername** 을 선택하여 실행합니다.  
   
 리디렉션된 게시자를 쿼리하는 데 사용된 연결된 서버는 원래 게시자에 대해 **sp_adddistpublisher**가 호출될 때 제공된 보안 모드, 로그인 및 암호를 사용합니다.  
   

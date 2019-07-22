@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 786c65a1-2b3f-4e4b-82b6-4940d62f3801
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 22fb6e0af90ff6319c98a533dc08f4be08716f47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aab429b0d3705d6ba7867f146fa43aca486cbb02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098999"
 ---
 # <a name="timefromparts-transact-sql"></a>TIMEFROMPARTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -67,7 +66,7 @@ TIMEFROMPARTS ( hour, minute, seconds, fractions, precision )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-example-without-fractions-of-a-second"></a>1. 소수 단위 초를 사용하지 않는 간단한 예  
+### <a name="a-simple-example-without-fractions-of-a-second"></a>1\. 소수 단위 초를 사용하지 않는 간단한 예  
   
 ```  
 SELECT TIMEFROMPARTS ( 23, 59, 59, 0, 0 ) AS Result;  
@@ -83,7 +82,7 @@ Result
 (1 row(s) affected)  
 ```  
   
-### <a name="b-example-with-fractions-of-a-second"></a>2. 소수 단위 초를 사용하는 예  
+### <a name="b-example-with-fractions-of-a-second"></a>2\. 소수 단위 초를 사용하는 예  
  다음 예에서는 *fractions* 및 *precision* 매개 변수의 사용 방법을 설명합니다.  
   
 1.  *fractions*의 값이 5이고 *precision*의 값이 1이면, *fractions*의 값은 1초의 5/10를 나타냅니다.  

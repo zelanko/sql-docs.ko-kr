@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e6529f06-e442-437e-a7bf-41790bc092c5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 0ce241446bdcb928b0edc976117731e78dca7f9a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cabd08fa2e4ba8797d5fe7fc5e4f623f24cda856
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984309"
 ---
 # <a name="disable-trigger-transact-sql"></a>DISABLE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
   
  **ALTER TRIGGER** 문을 사용하여 트리거를 변경하면 해당 트리거를 사용할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  DML 트리거를 비활성화하려면 사용자에게 최소한 트리거를 만든 테이블 또는 뷰에 대한 ALTER 권한이 필요합니다.  
   
  서버 범위(ON ALL SERVER)의 DDL 트리거 또는 로그온 트리거를 비활성화하려면 서버에 대한 CONTROL SERVER 권한이 필요합니다. 데이터베이스 범위(ON DATABASE)에서 DDL 트리거를 비활성화하려면 사용자에게 최소한 현재 데이터베이스에서 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다.  
@@ -85,7 +84,7 @@ ON { object_name | DATABASE | ALL SERVER } [ ; ]
 ## <a name="examples"></a>예  
 다음 샘플은 AdventureWorks2012 데이터베이스에서 설명됩니다.
   
-### <a name="a-disabling-a-dml-trigger-on-a-table"></a>1. 테이블에 대한 DML 트리거 비활성화  
+### <a name="a-disabling-a-dml-trigger-on-a-table"></a>1\. 테이블에 대한 DML 트리거 비활성화  
  다음 예에서는 `uAddress` 테이블에 만들어진 `Address` 트리거를 비활성화합니다.  
   
 ```  
@@ -93,7 +92,7 @@ DISABLE TRIGGER Person.uAddress ON Person.Address;
 GO  
 ```  
   
-### <a name="b-disabling-a-ddl-trigger"></a>2. DDL 트리거 비활성화  
+### <a name="b-disabling-a-ddl-trigger"></a>2\. DDL 트리거 비활성화  
  다음 예에서는 데이터베이스 범위에서 DDL 트리거 `safety`를 만든 후 비활성화합니다.  
   
 ```  
@@ -108,7 +107,7 @@ DISABLE TRIGGER safety ON DATABASE;
 GO  
 ```  
   
-### <a name="c-disabling-all-triggers-that-were-defined-with-the-same-scope"></a>3. 같은 범위에서 정의된 모든 트리거 비활성화  
+### <a name="c-disabling-all-triggers-that-were-defined-with-the-same-scope"></a>C. 같은 범위에서 정의된 모든 트리거 비활성화  
  다음 예에서는 서버 범위에서 만든 모든 DDL 트리거를 비활성화합니다.  
   
 ```  

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 7aa816de-529a-4f6c-a99f-4d5a9ef599eb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a823574180cb7bddd23b9e4118253d0d7024f007
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4771c6d611292157caf8247288f36648c8ad5179
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65949216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109396"
 ---
 # <a name="isnumeric-transact-sql"></a>ISNUMERIC(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +48,7 @@ ISNUMERIC ( expression )
  평가해야 하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  ISNUMERIC은 입력 식이 올바른 숫자 데이터 형식으로 평가되면 1을 반환하고 그렇지 않으면 0을 반환합니다. 올바른 [숫자 데이터 형식](../../t-sql/data-types/numeric-types.md)은 다음과 같습니다.  

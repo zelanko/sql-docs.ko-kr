@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b2599cd81950f20b8f1771e5508318955fd8eb80
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b7bb0f690305320f5ae0f5d4ecdeb8f59b33cb01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114845"
 ---
 # <a name="deny-endpoint-permissions-transact-sql"></a>DENY 엔드포인트 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  엔드포인트에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- ON ENDPOINT **::**_endpoint_name_  
- 사용 권한을 거부할 엔드포인트를 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ ON ENDPOINT **::** _endpoint_name_  
+ 사용 권한을 거부할 엔드포인트를 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  TO \<server_principal>  
  사용 권한을 거부할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다.  
@@ -91,12 +90,12 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  엔드포인트에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY ENDPOINT 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>1. 엔드포인트에 대한 VIEW DEFINITION 권한 거부  
+### <a name="a-denying-view-definition-permission-on-an-endpoint"></a>1\. 엔드포인트에 대한 VIEW DEFINITION 권한 거부  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인`ZArifin`에 대해 `VIEW DEFINITION`엔드포인트에 대한 권한`Mirror7`을 거부합니다.  
   
 ```  
@@ -105,7 +104,7 @@ DENY VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;
 GO  
 ```  
   
-### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>2. CASCADE 옵션을 지정하여 TAKE OWNERSHIP 권한 거부  
+### <a name="b-denying-take-ownership-permission-with-cascade-option"></a>2\. CASCADE 옵션을 지정하여 TAKE OWNERSHIP 권한 거부  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `TAKE OWNERSHIP` 및 `Shipping83`가 `PKomosinski`을 부여한 보안 주체에 대해 엔드포인트 `PKomosinski`에 대한 `TAKE OWNERSHIP` 권한을 거부합니다.  
   
 ```  
@@ -116,8 +115,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [GRANT 엔드포인트 사용 권한 &#40;Transact-SQL &#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
- [REVOKE 엔드포인트 권한&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
+ [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)   
+ [REVOKE 엔드포인트 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [엔드포인트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
