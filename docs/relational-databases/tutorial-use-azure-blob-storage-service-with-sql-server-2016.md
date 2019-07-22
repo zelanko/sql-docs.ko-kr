@@ -14,13 +14,12 @@ applies_to:
 ms.assetid: e69be67d-da1c-41ae-8c9a-6b12c8c2fb61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 38e4aa10089bcd96f0285d2e18cf763f31f45d7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 246f450a1782a6f00e32ce725c244915dc95054c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64478781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138364"
 ---
 # <a name="tutorial-use-azure-blob-storage-service-with-sql-server-2016"></a>자습서: SQL Server 2016에서 Azure Blob 스토리지 서비스 사용
 
@@ -431,7 +430,7 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅샷
 이 섹션에서는 [sp_delete_backup &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md) 시스템 저장 프로시저를 사용하여 백업 세트를 삭제합니다. 이 시스템 저장 프로시저는 이 백업 세트와 연결된 각 데이터베이스 파일에서 백업 파일 및 파일 스냅샷을 삭제합니다.  
   
 > [!NOTE]  
-> Azure Blob 컨테이너에서 백업 파일을 삭제하여 백업 세트를 삭제하려고 하면 백업 파일 자체만 삭제되고 연결된 파일 스냅샷은 유지됩니다. 이 시나리오에서는 [sys.fn_db_backup_file_snapshots&#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) 시스템 함수를 사용하여 분리된 파일 스냅숏의 URL을 확인하고 [sp_delete_backup_file_snapshot&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) 시스템 저장 프로시저를 사용하여 각 분리된 파일 스냅숏을 삭제합니다. 자세한 내용은  [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+> Azure Blob 컨테이너에서 백업 파일을 삭제하여 백업 세트를 삭제하려고 하면 백업 파일 자체만 삭제되고 연결된 파일 스냅샷은 유지됩니다. 이 시나리오에서는 [sys.fn_db_backup_file_snapshots &amp;#40;Transact-SQL&amp;#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md) 시스템 함수를 사용하여 분리된 파일 스냅샷의 URL을 확인하고 [sp_delete_backup_file_snapshot &amp;#40;Transact-SQL&amp;#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) 시스템 저장 프로시저를 사용하여 각 분리된 파일 스냅샷을 삭제합니다. 자세한 내용은  [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 파일-스냅샷 백업 세트를 삭제하려면 다음 단계를 따르세요.  
   
@@ -484,7 +483,7 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅샷
 ## <a name="see-also"></a>참고 항목
 
 [Microsoft Azure의 SQL Server 데이터 파일](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)  
-[Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
 [URL에 SQL Server 백업](../relational-databases/backup-restore/sql-server-backup-to-url.md) 
 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)  
 [컨테이너 만들기](https://msdn.microsoft.com/library/azure/dd179468.aspx)  
@@ -495,4 +494,4 @@ AdventureWorks2016 데이터베이스에 작업을 생성하고 파일-스냅샷
 [sys.credentials&#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-credentials-transact-sql.md)  
 [sp_delete_backup&#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup.md)  
 [sys.fn_db_backup_file_snapshots&#40;Transact-SQL&#41;](../relational-databases/system-functions/sys-fn-db-backup-file-snapshots-transact-sql.md)  
-[sp_delete_backup_file_snapshot &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md) [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  
+[sp_delete_backup_file_snapshot &amp;#40;Transact-SQL&amp;#41;](../relational-databases/system-stored-procedures/snapshot-backup-sp-delete-backup-file-snapshot.md)[Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 68cefc68-7c4f-4326-80c1-300f90cf19db
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65ad272ed3b5b3bc83e9d6035d693342482dcf05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59c4f13d53a8ffa296a685883bd4797d59403c55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130156"
 ---
 # <a name="nchar-transact-sql"></a>NCHAR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

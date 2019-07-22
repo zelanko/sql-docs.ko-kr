@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99872c4f-40ce-4405-8fd4-44052d3bd827
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e06cc6312c88139be3d4225ddd4e92fe432f4bb3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3d39fcd8df1f62bd089361a9a32ef7a59aa113a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126193"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907695"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>FTP를 통해 스냅샷 배달
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,11 +51,11 @@ ms.locfileid: "54126193"
   
 #### <a name="to-specify-ftp-information"></a>FTP 정보를 지정하려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 다음 두 페이지 중 하나에서 **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 다운로드하도록 허용**을 선택합니다.  
+1.  **게시 속성 - \<게시&gt;** 대화 상자의 다음 두 페이지 중 하나에서 **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅샷 파일을 다운로드하도록 허용**을 선택합니다.  
   
-    -   **FTP 스냅숏** 페이지 - [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]이전 버전을 실행하는 구독자에 대한 병합 게시와 스냅숏 및 트랜잭션 게시의 경우  
+    -   **FTP 스냅샷** 페이지 - [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]이전 버전을 실행하는 구독자에 대한 병합 게시와 스냅샷 및 트랜잭션 게시의 경우  
   
-    -   **FTP 스냅숏 및 인터넷** 페이지 - [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후 버전을 실행하는 게시자의 병합 게시의 경우  
+    -   **FTP 스냅샷 및 인터넷** 페이지 - [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 이후 버전을 실행하는 게시자의 병합 게시의 경우  
   
 2.  **FTP 서버 이름**, **포트 번호**, **FTP 루트 폴더에서의 경로**, **로그인**및 **암호**에 대한 값을 지정합니다.  
   
@@ -79,7 +78,7 @@ ms.locfileid: "54126193"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. **@publication** 을 지정하고 **@enabled_for_internet** 에 **true** 값을, 다음 매개 변수에 적절한 값을 지정합니다.  
   
-    -   **@ftp_address** - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
+    -   **@ftp_address** - 스냅샷을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
   
     -   (옵션) **@ftp_port** - FTP 서버에서 사용되는 포트입니다.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "54126193"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. **@publication** 을 지정하고 **@enabled_for_internet** 에 **true** 값을, 다음 매개 변수에 적절한 값을 지정합니다.  
   
-    -   **@ftp_address** - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
+    -   **@ftp_address** - 스냅샷을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
   
     -   (옵션) **@ftp_port** - FTP 서버에서 사용되는 포트입니다.  
   
@@ -127,11 +126,11 @@ ms.locfileid: "54126193"
   
 1.  게시 데이터베이스의 게시자에서 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. **@property** 에 다음 중 한 가지 값을 지정하고, 이 설정의 새 값을 **@value** 에 지정합니다.  
   
-    -   **ftp_address** - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
+    -   **ftp_address** - 스냅샷을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
   
     -   **ftp_port** - FTP 서버에서 사용되는 포트입니다.  
   
-    -   **ftp_subdirectory** - FTP 스냅숏에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
+    -   **ftp_subdirectory** - FTP 스냅샷에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
   
     -   **ftp_login** - FTP 서버에 연결하는 데 사용되는 로그인입니다.  
   
@@ -145,11 +144,11 @@ ms.locfileid: "54126193"
   
 1.  게시 데이터베이스의 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. **@property** 에 다음 중 한 가지 값을 지정하고, 이 설정의 새 값을 **@value** 에 지정합니다.  
   
-    -   **ftp_address** - 스냅숏을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
+    -   **ftp_address** - 스냅샷을 배달하는 데 사용되는 FTP 서버의 주소입니다.  
   
     -   **ftp_port** - FTP 서버에서 사용되는 포트입니다.  
   
-    -   **ftp_subdirectory** - FTP 스냅숏에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
+    -   **ftp_subdirectory** - FTP 스냅샷에 사용되는 기본 FTP 디렉터리의 하위 디렉터리입니다.  
   
     -   **ftp_login** - FTP 서버에 연결하는 데 사용되는 로그인입니다.  
   
@@ -173,6 +172,6 @@ ms.locfileid: "54126193"
 ## <a name="see-also"></a>참고 항목  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [게시 및 아티클 속성 변경](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
- [스냅숏으로 구독 초기화](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
+ [스냅샷으로 구독 초기화](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
   
   

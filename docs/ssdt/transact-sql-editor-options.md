@@ -27,13 +27,12 @@ f1_keywords:
 ms.assetid: fa9a250f-7feb-433e-91bd-a09779d74c8b
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5de3a6bef68955611290cce77b95989b7ff72c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110629"
 ---
 # <a name="transact-sql-editor-options"></a>Transact-SQL 편집기 옵션
 이 항목에서는 Transact-SQL 편집기의 일부 옵션에 대한 정보를 제공합니다. 이러한 옵션을 설정하려면 **옵션** 대화 상자에서 **도구\옵션** 메뉴로 이동합니다.  
@@ -68,7 +67,7 @@ ms.locfileid: "65102062"
 |**SET CURSOR_CLOSE_ON_COMMIT**|트랜잭션을 커밋할 때 커서를 닫을 것인지를 제어합니다. 자세한 내용은 [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754)을 참조하세요.|  
 |**SET ANSI_PADDING**|열이 정의된 열 크기보다 짧은 값을 저장하는 방법과 **char**, **varchar**, **binary**및 **varbinary** 데이터에 후행 공백이 있는 값을 저장하는 방법을 제어합니다. 자세한 내용은 [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755)을 참조하세요.|  
 |**SET ANSI_WARNINGS**|여러 오류 조건에 대한 SQL-92 표준 동작을 지정합니다. 자세한 내용은 [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758)를 참조하세요.|  
-|**SET ANSI_NULLS**|Null 값과 함께 사용될 경우 Equals( **=** )와 Not Equal To( **<>** ) 비교 연산자의 SQL-92 호환 동작을 지정합니다. 자세한 내용은 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)를 참조하세요.|  
+|**SET ANSI_NULLS**|Null 값과 함께 사용될 경우 Equals(**=**)와 Not Equal To(**<>**) 비교 연산자의 SQL-92 호환 동작을 지정합니다. 자세한 내용은 [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759)를 참조하세요.|  
   
 ## <a name="QueryResults"></a>쿼리 결과  
   

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 50228f2f-6949-4d2e-8e43-fad11bf973ab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 26378959de917f5eed5cddaafc5cb168cc71f3b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a5df90640dc9ebdd2d59593c4b2a82a0f7daa00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094650"
 ---
 # <a name="errorseverity-transact-sql"></a>ERROR_SEVERITY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +43,7 @@ ERROR_SEVERITY ( )
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="return-value"></a>반환 값  
 오류가 발생하는 CATCH 블록에서 호출되는 경우 `ERROR_SEVERITY`는 `CATCH` 블록이 실행되도록 한 오류의 심각도 값을 반환합니다.  
@@ -60,7 +59,7 @@ ERROR_SEVERITY ( )
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-using-errorseverity-in-a-catch-block"></a>1\. CATCH 블록에서 ERROR_SEVERITY 사용  
+### <a name="a-using-errorseverity-in-a-catch-block"></a>1. CATCH 블록에서 ERROR_SEVERITY 사용  
 이 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. `ERROR_SEVERITY`는 해당 오류의 심각도 값을 반환합니다.  
 ```sql  
 BEGIN TRY  
@@ -86,7 +85,7 @@ ErrorSeverity
 
 ```  
   
-### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>2\. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_SEVERITY 사용  
+### <a name="b-using-errorseverity-in-a-catch-block-with-other-error-handling-tools"></a>2. CATCH 블록에서 다른 오류 처리 도구와 함께 ERROR_SEVERITY 사용  
 이 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 저장된 프로시저는 오류에 대한 정보를 반환합니다.  
 
 ```sql  

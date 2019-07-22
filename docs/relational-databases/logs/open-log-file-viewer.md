@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a86b89cb-0432-4648-895a-05ecc5450e45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6fa028e20cfb0355fc14cc28a4b2ee08fbf9dcb2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9e76c7eb85306f63e9be230c76159efbab25444a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083979"
 ---
 # <a name="open-log-file-viewer"></a>로그 파일 뷰어 열기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

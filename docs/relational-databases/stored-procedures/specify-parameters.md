@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 079a54bdbf107ec9f83e1078fedba1be84374c5b
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 2997665339c2326b1fd99f8d2e09ba48089b9f2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136650"
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,10 +64,10 @@ GO
  매개 변수 이름을 명시적으로 지정하고 프로시저 호출 시 적절한 값을 각 매개 변수에 할당하면 매개 변수를 임의의 순서로 제공할 수 있습니다. 예를 들어, 프로시저 **my_proc**에서 **\@first**, **\@second** 및 **\@third**라는 세 개의 매개 변수를 사용하는 경우 `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`과 같이 프로시저에 전달된 값을 매개 변수 이름에 할당할 수 있습니다.  
   
 > [!NOTE]  
->  **\@parameter =**_value_ 형식에 하나의 매개 변수 값이 입력되는 경우 모든 후속 매개 변수도 이러한 방식으로 입력되어야 합니다. **\@parameter =**_value_ 형식에 매개 변수 값이 전달되지 않은 경우 해당 값은 CREATE PROCEDURE 문에 나열된 매개 변수를 따라 동일한 순서(왼쪽에서 오른쪽)로 제공되어야 합니다.  
+>  **\@parameter =** _value_ 형식에 하나의 매개 변수 값이 입력되는 경우 모든 후속 매개 변수도 이러한 방식으로 입력되어야 합니다. **\@parameter =** _value_ 형식에 매개 변수 값이 전달되지 않은 경우 해당 값은 CREATE PROCEDURE 문에 나열된 매개 변수를 따라 동일한 순서(왼쪽에서 오른쪽)로 제공되어야 합니다.  
   
 > [!WARNING]  
->  철자가 잘못 입력된 매개 변수와 함께 **\@parameter =**_value_ 형식으로 매개 변수가 전달될 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류가 발생하여 프로시저 실행을 방해할 수 있습니다.  
+>  철자가 잘못 입력된 매개 변수와 함께 **\@parameter =** _value_ 형식으로 매개 변수가 전달될 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 오류가 발생하여 프로시저 실행을 방해할 수 있습니다.  
   
 ## <a name="specifying-parameter-data-types"></a>매개 변수 데이터 형식 지정  
  CREATE PROCEDURE 문에서 매개 변수가 선언될 때에는 데이터 형식이 함께 정의되어야 합니다. 프로시저가 호출될 때 매개 변수의 데이터 형식에 따라 매개 변수에 허용되는 값의 형식과 범위가 결정됩니다. 예를 들어 **tinyint** 데이터 형식으로 매개 변수를 정의하면 해당 매개 변수로는 0에서 255까지의 숫자 값만 전달될 수 있습니다. 데이터 형식과 맞지 않는 값으로 프로시저를 실행하면 오류가 반환됩니다.  
@@ -128,7 +127,7 @@ EXEC Sales.uspGetSalesYTD N'Blythe';
 GO  
 ```  
   
- 기본값이 있는 매개 변수는 생략될 수 있지만 실제로는 매개 변수의 목록이 잘리는 것뿐입니다. 예를 들어 한 프로시저가 다섯 개의 매개 변수를 갖는 경우 4번째, 5번째 매개 변수는 생략될 수 있습니다. 하지만 매개 변수가 **\@parameter =**_value_ 형식으로 입력되지 않는 한 5번째 매개 변수가 있는 경우 4번째 매개 변수는 생략할 수 없습니다.  
+ 기본값이 있는 매개 변수는 생략될 수 있지만 실제로는 매개 변수의 목록이 잘리는 것뿐입니다. 예를 들어 한 프로시저가 다섯 개의 매개 변수를 갖는 경우 4번째, 5번째 매개 변수는 생략될 수 있습니다. 하지만 매개 변수가 **\@parameter =** _value_ 형식으로 입력되지 않는 한 5번째 매개 변수가 있는 경우 4번째 매개 변수는 생략할 수 없습니다.  
   
 ## <a name="specifying-parameter-direction"></a>매개 변수 방향 지정  
  매개 변수의 방향은 프로시저 본문으로 전달되는 값을 의미하는 입력 또는 프로시저가 호출 프로그램에 값을 반환함을 의미하는 출력입니다. 기본값은 입력 매개 변수입니다.  

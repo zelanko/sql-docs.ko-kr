@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 22fc66d9f579305a4160b2de0ee6ad047e560ea3
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: b4b322231f546871d5581de470fdc894ed4fe41e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099265"
 ---
 # <a name="delete-a-workload-group"></a>작업 그룹 삭제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "55689846"
   
 -   **작업 그룹을 삭제하려면 다음을 사용합니다.**  [개체 탐색기](#DelWGObjEx), [Resource Governor 속성](#DelWGRGProp), [Transact-SQL](#DelWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  활성 세션이 들어 있는 작업 그룹은 삭제할 수 없습니다.  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
@@ -40,7 +39,7 @@ ms.locfileid: "55689846"
   
 -   서버를 다시 시작합니다. 다시 시작 프로세스가 완료되면 삭제한 그룹은 생성되지 않고 이동한 그룹은 새 리소스 풀 할당을 사용합니다.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  작업 그룹을 삭제하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="DelWGObjEx"></a> 개체 탐색기를 사용하여 작업 그룹 삭제  

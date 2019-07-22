@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2068636-6e53-486a-a6fc-c12de2a38424
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 5f9be8fb680fcc3ccb0138318c21bb3072035338
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 7f4d77bba168f84b42aab0884369cf834af3779d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099236"
 ---
 # <a name="move-a-workload-group"></a>작업 그룹 이동
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,13 +29,13 @@ ms.locfileid: "55689876"
   
 -   **작업 그룹을 이동하려면 다음을 사용합니다.**  [SQL Server Management Studio](#MoveWGSSMS), [Transact-SQL](#MoveWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  보류 중인 리소스 관리자 구성 작업이 있으면 작업 그룹을 이동할 수 없습니다.  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  보류 중인 리소스 관리자 구성 작업이 있으면 작업 그룹을 이동할 수 없습니다. [sys.dm_resource_governor_configuration&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) 동적 관리 뷰를 쿼리해 is_configuration_pending의 현재 상태를 가져와서 보류 중인 구성이 있는지 여부를 확인할 수 있습니다.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  작업 그룹을 이동하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="MoveWGSSMS"></a> SQL Server Management Studio를 사용하여 작업 그룹 이동  

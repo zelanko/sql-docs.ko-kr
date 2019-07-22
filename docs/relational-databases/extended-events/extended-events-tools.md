@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: d312a9ff-50ba-4721-baef-50bfd3169d38
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 055abcc3e4b6f76b1bb6105f81dfe406d1349c57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8daf9891191b79a2b5c37a37671fa8e38813cdeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021873"
 ---
 # <a name="extended-events-tools"></a>확장 이벤트 도구
 

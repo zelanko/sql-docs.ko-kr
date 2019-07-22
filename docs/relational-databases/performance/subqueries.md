@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: bfc97432-c14c-4768-9dc5-a9c512f6b2bd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 07d8b7936051b202c73b7457c87e7533e1d46192
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: c2d4bb708142d4471381a1579baa943d11357823
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113280"
 ---
 # <a name="subqueries-sql-server"></a>하위 쿼리(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -522,7 +521,7 @@ GO
 ### <a name="comparison"></a> 비교 연산자가 있는 하위 쿼리
 하위 쿼리는 다음 비교 연산자 중 하나로 시작할 수 있습니다. (=, < >, >, > =, <, ! >, ! < 또는 < =).   
 
-수정되지 않은 비교 연산자(뒤에 `ANY` 또는 `ALL`이 나오지 않는 비교 연산자)로 시작하는 하위 쿼리는 `IN`으로 시작하는 하위 쿼리처럼 값 목록이 아닌 단일 값을 반환해야 합니다. 이러한 하위 쿼리가 둘 이상의 값을 반환하면 SQL Server는 오류 메시지를 표시합니다.    
+수정되지 않은 비교 연산자(뒤에 `ANY` 또는 `ALL`이 나오지 않는 비교 연산자)로 시작하는 하위 쿼리는 `IN`으로 시작하는 하위 쿼리처럼 값 목록이 아닌 단일 값을 반환해야 합니다.  이러한 하위 쿼리가 둘 이상의 값을 반환하면 SQL Server는 오류 메시지를 표시합니다.    
 
 수정되지 않은 비교 연산자로 시작하는 하위 쿼리를 사용하려면 하위 쿼리가 정확히 하나의 값만 반환한다는 것을 알 수 있도록 데이터와 문제의 특성을 충분히 이해해야 합니다.     
 

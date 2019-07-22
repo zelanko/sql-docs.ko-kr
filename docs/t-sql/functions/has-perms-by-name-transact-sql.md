@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e1bc60e0d3f171e57eeb202c022378b4b7f7bde1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b7657c1840bf204bb2f22de59a33548a6abc400
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019728"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 sub-securable_class 인수는 securable_class 인수가 **OBJECT**로 설정된 경우에만 유효합니다. securable_class 인수가 **OBJECT**로 설정된 경우 sub-securable_class 인수는 **COLUMN**으로 설정해야 합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
  쿼리가 실패하면 NULL을 반환합니다.  
   

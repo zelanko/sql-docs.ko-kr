@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f1a0ee6-49ff-4080-94ca-d661daeff2a6
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5d0516d5c6c4d5eab7496d4e89bd55da9e517c1b
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: bd49e6963d838980314a7119f4c9ab8a3260316a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67688770"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68251460"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -63,13 +62,13 @@ ms.locfileid: "67688770"
   
 4.  단계를 수정하려는 작업을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
-5.  **작업 속성 –** _job\_name_ 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다.  
+5.  **작업 속성 –**_job\_name_ 대화 상자의 **페이지 선택**에서 **단계**를 선택합니다.  
   
-6.  **편집**을 클릭하여 **작업 단계 속성 –** _job\_step\_name_ 대화 상자를 엽니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [작업 단계 속성 - 새 작업 단계&#40;일반 페이지&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) 및 [작업 단계 속성 - 새 작업 단계&#40;고급 페이지&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)를 참조하세요.  
+6.  **편집**을 클릭하여 **작업 단계 속성 –**_job\_step\_name_ 대화 상자를 엽니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [작업 단계 속성 - 새 작업 단계&#40;일반 페이지&#41;](../../ssms/agent/job-step-properties-new-job-step-general-page.md) 및 [작업 단계 속성 - 새 작업 단계&#40;고급 페이지&#41;](../../ssms/agent/job-step-properties-new-job-step-advanced-page.md)를 참조하세요.  
   
 7.  완료되었으면 **확인**을 클릭합니다.  
   
-8.  **작업 속성 –** _job\_name_ 대화 상자에서 **확인**을 클릭합니다.  
+8.  **작업 속성 –**_job\_name_ 대화 상자에서 **확인**을 클릭합니다.  
   
 ## <a name="TsqlProcedure"></a>Transact-SQL 사용  
   

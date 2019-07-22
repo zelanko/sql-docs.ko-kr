@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: fb0aef082375ebc3c278e982232b7a69fe41d187
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083945"
 ---
 # <a name="the-transaction-log-sql-server"></a>트랜잭션 로그(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -144,7 +143,7 @@ ms.locfileid: "52711594"
 -   [WRITETEXT](../../t-sql/queries/writetext-transact-sql.md) 및 [UPDATETEXT](../../t-sql/queries/updatetext-transact-sql.md) 삽입 또는 새 데이터를 추가할 때 문은 **텍스트**, **ntext**, 및 **이미지** 데이터 형식 열입니다. 기존 값이 업데이트되는 경우 최소 로깅이 사용되지 않습니다.  
   
     > [!WARNING]
-    > `WRITETEXT` 및 `UPDATETEXT` 문은 **사용되지 않으므로** 새 응용 프로그램에 사용하지 마세요.  
+    > `WRITETEXT` 및 `UPDATETEXT` 문은 **사용되지 않으므로** 새 애플리케이션에 사용하지 마세요.  
   
 -   데이터베이스가 단순 또는 대량 로그 복구 모델로 설정되면 작업이 오프라인으로 실행되든 온라인으로 실행되든 관계없이 일부 인덱스 DDL 작업이 최소 로깅됩니다. 최소한으로 로깅되는 인덱스 작업은 다음과 같습니다.  
   
@@ -153,7 +152,7 @@ ms.locfileid: "52711594"
     -   [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) REBUILD 또는 DBCC DBREINDEX 작업  
   
         > [!WARNING]
-        > `DBCC DBREINDEX` 문은 **사용되지 않으므로** 새 응용 프로그램에 사용하지 마세요.  
+        > `DBCC DBREINDEX` 문은 **사용되지 않으므로** 새 애플리케이션에 사용하지 마세요.  
   
     -   [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md) 새 힙 다시 빌드(해당 사항이 있을 경우) `DROP INDEX` 작업 중의 인덱스 페이지 할당 취소는 **항상** 모두 로깅됩니다.
   

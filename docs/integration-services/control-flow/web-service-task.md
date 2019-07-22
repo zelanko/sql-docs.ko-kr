@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5c7206f1-7d6a-4923-8dff-3c4912da4157
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2aa9ecc0364accdd9050cae303afb545faf394ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c3c18f666c4e7b7e5f1d161fb78535e8005f1a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045615"
 ---
 # <a name="web-service-task"></a>웹 서비스 태스크
 
@@ -88,7 +87,7 @@ ms.locfileid: "65727333"
   
 ### <a name="options"></a>옵션  
  **HTTPConnection**  
- 목록에서 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
+ 목록에서 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
 > [!IMPORTANT]  
 >  HTTP 연결 관리자는 익명 인증과 기본 인증만 지원하며 Windows 인증은 지원하지 않습니다.  
@@ -174,13 +173,13 @@ ms.locfileid: "65727333"
   
 #### <a name="outputtype--file-connection"></a>OutputType = 파일 연결  
  **최근에 사용한 파일**  
- 목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
+ 목록에서 파일 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목:** [파일 연결 관리자](../../integration-services/connection-manager/file-connection-manager.md), [파일 연결 관리자 편집기](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="outputtype--variable"></a>OutputType = 변수  
  **변수**  
- 목록에서 변수를 선택하거나 \<**새 변수...** >를 클릭하여 새 변수를 만듭니다.  
+ 목록에서 변수를 선택하거나 \<**새 변수...**>를 클릭하여 새 변수를 만듭니다.  
   
  **관련 항목:**  [Integration Services&#40;SSIS&#41; 변수](../../integration-services/integration-services-ssis-variables.md), [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

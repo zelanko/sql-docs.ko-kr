@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d191a506f688b1c1f79751f4aa652a719000a564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2532e7c2a173441cf804cdc5bdcd9be8e69bb135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988466"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 가용성 그룹을 사용하여 복제 구성
 

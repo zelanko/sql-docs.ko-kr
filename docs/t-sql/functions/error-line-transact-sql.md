@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3e6562b656695963868e849a063796ea70c3d097
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 569486f5806ac6f0d62f32fa9ac17efc1d43a85a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904361"
 ---
 # <a name="errorline-transact-sql"></a>ERROR_LINE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ERROR_LINE ( )
 ```  
   
 ## <a name="return-type"></a>반환 형식  
-**ssNoversion**  
+**int**  
   
 ## <a name="return-value"></a>반환 값  
 CATCH 블록에서 호출된 경우 `ERROR_LINE`은 다음을 반환합니다.  
@@ -62,7 +61,7 @@ CATCH 블록에서 호출된 경우 `ERROR_LINE`은 다음을 반환합니다.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-errorline-in-a-catch-block"></a>1\. CATCH 블록에서 ERROR_LINE 사용  
+### <a name="a-using-errorline-in-a-catch-block"></a>1. CATCH 블록에서 ERROR_LINE 사용  
 이 코드 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. `ERROR_LINE`은 오류가 발생한 줄 번호를 반환합니다.  
   
 ```  
@@ -90,7 +89,7 @@ ErrorLine
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-errorline-in-a-catch-block-with-a-stored-procedure"></a>2\. 저장 프로시저의 오류 줄 번호 반환을 위해 CATCH 블록에서 ERROR_LINE 사용  
+### <a name="b-using-errorline-in-a-catch-block-with-a-stored-procedure"></a>2. 저장 프로시저의 오류 줄 번호 반환을 위해 CATCH 블록에서 ERROR_LINE 사용  
 이 예에서는 0으로 나누기 오류를 생성하는 저장 프로시저를 보여 줍니다. `ERROR_LINE`은 오류가 발생한 줄 번호를 반환합니다.  
   
 ```  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35d066a88955d3d47bb8e9e552dde689bee3ae47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53b447b2a13c68c2c87536bc3c1f14f9efd74cfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132094"
 ---
 # <a name="connectionproperty-transact-sql"></a>CONNECTIONPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ CONNECTIONPROPERTY ( property )
 |protocol_type|**nvarchar(40)**|페이로드 프로토콜 형식을 반환합니다. 현재 TDS(TSQL)와 SOAP을 구분합니다. Null을 허용합니다.|  
 |auth_scheme|**nvarchar(40)**|연결 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 체계를 반환합니다. 인증 체계는 Windows 인증(NTLM, KERBEROS, DIGEST, BASIC, NEGOTIATE) 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증입니다. Null을 허용하지 않습니다.|  
 |local_net_address|**varchar(48)**|이 특정 연결이 대상으로 하는 서버의 IP 주소를 반환합니다. TCP 전송 공급자를 사용하는 연결의 경우에만 지원됩니다. Null을 허용합니다.|  
-|local_tcp_port|**ssNoversion**|TCP 전송을 사용하는 연결인 경우 이 연결이 대상으로 하는 서버 TCP 포트를 반환합니다. Null을 허용합니다.|  
+|local_tcp_port|**int**|TCP 전송을 사용하는 연결인 경우 이 연결이 대상으로 하는 서버 TCP 포트를 반환합니다. Null을 허용합니다.|  
 |client_net_address|**varchar(48)**|이 서버에 연결하려는 클라이언트의 주소를 요청합니다. Null을 허용합니다.|  
 |physical_net_transport|**nvarchar(40)**|이 연결에서 사용하는 물리적 전송 프로토콜을 반환합니다. 연결에 MARS(Multiple Active Result Sets)가 설정된 경우 정확합니다.|  
 |\<다른 문자열>||잘못된 입력에 NULL을 반환합니다.|  

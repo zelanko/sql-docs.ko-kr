@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: da4c25f5-d04c-4951-a3db-409e71a1b468
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 115d9dde071579c196b115cbe93779145c20a43e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dcd67a89ea5605647d6736d9d28a6e070a483c16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027618"
 ---
 # <a name="server-trigger-recursion-server-configuration-option"></a>server trigger recursion 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

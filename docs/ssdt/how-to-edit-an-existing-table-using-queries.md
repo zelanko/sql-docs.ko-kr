@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c988efd63982b2dc5ebd8e73f2291a19b3b9b76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69a3486c837959cf4a92a7ee663225df16918928
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929603"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>방법: 쿼리를 사용하여 기존 테이블 편집
 Transact\-SQL 쿼리를 작성하여 테이블 또는 테이블 데이터의 정의를 편집할 수 있습니다. 테이블의 데이터를 보거나 비주얼 환경에서 입력하려면 [연결된 데이터베이스 개발](../ssdt/connected-database-development.md)에 설명된 대로 데이터 편집기를 사용합니다.  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 740a5e5843966a6f4891f195453ffd01ec6ea048
-ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
+ms.openlocfilehash: 0240c3e4f9f58bfb453e2537695631d8be3aa793
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67517853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073710"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>2단원: 다른 컴퓨터에서 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "67517853"
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장한 다음 ** _<InstanceName>_ 에 대한 프로토콜**을 클릭합니다.  
+2.  **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 확장한 다음 **_<InstanceName>_ 에 대한 프로토콜**을 클릭합니다.  
   
     기본 인스턴스(명명되지 않은 인스턴스)는 **MSSQLSERVER**로 나열됩니다. 명명된 인스턴스를 설치한 경우 제공한 이름이 나열됩니다. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] 는 설치하는 동안 이름을 변경하지 않는 한 **SQLEXPRESS**로 설치됩니다.  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 36e6c524a03aef1a55f95d174fff71421d5abe50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5a53c0ac886185e2d6723a5a01c055c1c828fe51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121263"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>트랜잭션 아티클 - 변경 내용을 전파하는 방법 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "47683051"
   
 -   게시된 테이블에 대해 스키마 변경을 적용하면 사용자 지정 프로시저를 다시 생성해야 합니다. 자세한 내용은 [스키마 변경 내용을 반영하기 위해 사용자 지정 트랜잭션 프로시저 다시 생성](../../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)을 참조하세요.  
   
--   배포 에이전트의 **-SubscriptionStreams** 매개 변수에 1보다 큰 값을 사용할 경우 기본 키 열에 대한 업데이트가 성공했는지 확인해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+-   배포 에이전트의 **-SubscriptionStreams** 매개 변수에 1보다 큰 값을 사용할 경우 기본 키 열에 대한 업데이트가 성공했는지 확인해야 합니다. 예를 들어  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  
