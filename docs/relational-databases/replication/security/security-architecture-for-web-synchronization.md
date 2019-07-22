@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 787e3c18581339de78a5f4fcd653967566f85ece
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: da88119ea55f758d6c56a72a2acd8ac5807bf714
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051856"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>웹 동기화를 위한 보안 아키텍처
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "54124663"
 |-   Windows 인증|병합 에이전트(A)에 대해 지정된 Windows 사용자의 컨텍스트에서 병합 에이전트가 연결을 설정합니다.|  
 |다음이 지정된 경우에만[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증이 사용됩니다.<br /><br /> -   RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberSecurityMode%2A>에 대한 <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard>의 값<br />-   병합 에이전트 명령줄: **SubscriberSecurityMode**에 대해 값 **0**|RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberLogin%2A> 및 <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.SubscriberPassword%2A><br /><br /> 병합 에이전트 명령줄: **-SubscriberLogin** 및 **-SubscriberLogin**|  
   
-## <a name="c-connection-to-an-outgoing-proxy-server"></a>3\. 보내는 프록시 서버 연결  
+## <a name="c-connection-to-an-outgoing-proxy-server"></a>C. 보내는 프록시 서버 연결  
  구독자의 내부 네트워크에 대한 액세스를 제한하는 보내는 프록시 서버가 있는 경우에만 이 연결에 대해 Windows 사용자를 지정합니다.  
   
 |인증 유형|인증 지정 위치|  

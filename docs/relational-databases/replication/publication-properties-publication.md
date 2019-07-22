@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 66e845e9-1308-4288-9110-ad2f22f1fc58
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: da86b20dba26536626010d14c1f81a1bbd852156
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a7478f259dce1654584e3a9b50b081be0ea07f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908073"
 ---
 # <a name="sql-server-replication-publication-properties--dialog-box"></a>SQL Server 복제 '게시 속성' 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,8 +138,8 @@ ms.locfileid: "65620374"
 -   HTTPS(Secure Hypertext Transfer Protocol)를 통해 구독을 동기화하도록 허용하는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전의 병합 복제에 대한 웹 동기화 속성을 설정합니다. 웹 동기화를 사용하려면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 인터넷 정보 서비스(IIS) 서버를 구성해야 합니다. 자세한 내용은 [Web Synchronization for Merge Replication](../../relational-databases/replication/web-synchronization-for-merge-replication.md)를 참조하세요.  
   
 ### <a name="options"></a>옵션  
- **FTP를 통해 스냅숏 파일 액세스**  
- **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅숏 파일을 다운로드하도록 허용**을 선택하고 **FTP 서버 이름**, **포트 번호**, **FTP 루트 폴더에서의 경로**, **로그인**및 **암호**를 지정하여 구독자가 스냅숏 배달에 FTP를 사용할 수 있도록 허용합니다.  
+ **FTP를 통해 스냅샷 파일 액세스**  
+ **구독자가 FTP(파일 전송 프로토콜)를 사용하여 스냅샷 파일을 다운로드하도록 허용**을 선택하고 **FTP 서버 이름**, **포트 번호**, **FTP 루트 폴더에서의 경로**, **로그인**및 **암호**를 지정하여 구독자가 스냅샷 배달에 FTP를 사용할 수 있도록 허용합니다.  
   
  이 옵션을 사용하면 구독자는 FTP를 사용하여 스냅샷 파일을 검색할 수 있지만 반드시 그럴 필요는 없습니다. 이 옵션을 선택하면 새 구독 마법사는 구독자가 FTP를 통해 스냅샷 파일을 검색하는 것을 기본값으로 설정합니다. 설정을 변경하려면 **구독 속성** 대화 상자를 사용합니다. 구독자가 FTP를 통해 스냅샷 파일에 액세스할 수 있도록 허용하는 경우 **게시 속성** 대화 상자의 **스냅샷** 페이지에서 FTP 폴더를 스냅샷 파일의 위치로 지정합니다. 이렇게 하면 새 스냅샷이 생성될 때 스냅샷 에이전트가 FTP 폴더의 파일을 자동으로 업데이트합니다. 위치가 FTP 폴더로 설정되어 있지 않으면 새 스냅샷을 생성할 때 파일을 수동으로 업데이트해야 합니다. 자세한 내용은 [FTP를 통해 스냅샷 배달](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
@@ -170,7 +169,7 @@ ms.locfileid: "65620374"
   
 ### <a name="options"></a>옵션  
  **추가**  
- 파티션을 정의하려면 **추가** 를 클릭합니다. **데이터 파티션 추가** 대화 상자에서 **HOST_NAME()** 및/또는 **SUSER_SNAME()** 에 대한 값을 지정하고 스냅숏을 새로 고칠 일정을 정의합니다.  
+ 파티션을 정의하려면 **추가** 를 클릭합니다. **데이터 파티션 추가** 대화 상자에서 **HOST_NAME()** 및/또는 **SUSER_SNAME()** 에 대한 값을 지정하고 스냅샷을 새로 고칠 일정을 정의합니다.  
   
  **편집**  
  표에서 기존 파티션을 선택하고 **편집** 을 클릭하여 파티션을 편집합니다.  
@@ -178,42 +177,42 @@ ms.locfileid: "65620374"
  **Delete**  
  표에서 기존 파티션을 선택하고 **삭제** 를 클릭하여 파티션을 삭제합니다.  
   
- **선택한 스냅숏 지금 생성**  
+ **선택한 스냅샷 지금 생성**  
  표에서 하나 이상의 파티션을 선택하고 **선택한 스냅샷 지금 생성** 을 클릭하여 이러한 파티션에 대한 스냅샷을 생성합니다.  
   
- **기존 스냅숏 정리**  
+ **기존 스냅샷 정리**  
  표에서 하나 이상의 파티션을 선택하고 **기존 스냅샷 정리** 를 클릭하여 이러한 파티션에 대한 스냅샷을 정리합니다.  
   
- **새 구독자가 동기화할 때 필요한 경우 자동으로 파티션 정의 및 스냅숏 생성**  
+ **새 구독자가 동기화할 때 필요한 경우 자동으로 파티션 정의 및 스냅샷 생성**  
  구독자가 스냅샷 생성 및 적용을 요청할 수 있도록 할 경우 이 옵션을 선택합니다. 구독자가 처음 동기화할 때 파티션에 사용할 수 있는 스냅샷을 가지고 있지 않은 경우 이 옵션이 필요할 수 있습니다.  
 
 ## <a name="snapshot"></a>스냅샷
 스냅샷  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
-  **게시 속성** 대화 상자의 **스냅숏** 페이지를 사용하여 스냅숏 형식, 스냅숏 폴더 위치 및 스냅숏 적용 전후 실행할 스크립트를 설정할 수 있습니다. 스냅샷 폴더를 공유로 지정해야 하며 파일을 읽고 폴더에 쓰는 에이전트에 대한 충분한 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
+  **게시 속성** 대화 상자의 **스냅샷** 페이지를 사용하여 스냅샷 형식, 스냅샷 폴더 위치 및 스냅샷 적용 전후 실행할 스크립트를 설정할 수 있습니다. 스냅샷 폴더를 공유로 지정해야 하며 파일을 읽고 폴더에 쓰는 에이전트에 대한 충분한 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
 > [!NOTE]  
 >  게시 속성을 변경하려면 게시에 대한 새 스냅샷이 필요합니다. 자세한 내용은 [게시 및 아티클 속성 변경](../../relational-databases/replication/publish/change-publication-and-article-properties.md)을 참조하세요.  
   
 ### <a name="options"></a>옵션  
- **스냅숏 형식**  
+ **스냅샷 형식**  
  스냅샷 형식에 대해 네이티브 모드 또는 문자 모드를 선택합니다.  
   
 -   모든 구독자가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 아닌 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] 인스턴스인 경우 **네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다** 를 선택합니다. 네이티브 스냅샷 형식을 사용할 때 최상의 성능을 제공합니다.    
 -   구독자가 **에서 실행되고 있거나** 이외 구독자인 경우 [!INCLUDE[ssEW](../../includes/ssew-md.md)] 문자 - 게시자 또는 구독자가 SQL Server를 실행하지 않는 경우 필요합니다[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 선택합니다.    
- **스냅숏 파일 위치**  
+ **스냅샷 파일 위치**  
  스냅샷 파일을 저장할 위치를 선택합니다. 파일을 기본 위치에 저장할 수 있으며 기본 위치 대신 대체 위치에 저장할 수도 있습니다. 대체 위치에 저장된 파일을 압축할 수 있습니다.  
   
 -   게시자에 대해 기본 스냅샷 폴더를 사용하려면 **기본 폴더에 파일 보관** 을 선택합니다. 스냅샷 폴더 위치는 **배포자 속성** 대화 상자에서 게시자에 대해서만 변경할 수 있으므로 이 대화 상자에서는 읽기 전용입니다. 자세한 내용은 [스냅샷 속성 수정](../../relational-databases/replication/snapshot-options.md)을 참조하세요.    
 -   기본 위치 대신 대체 위치를 지정하려면 **다음 폴더에 파일 보관** 을 선택합니다. 입력란에 경로를 입력하거나 **찾아보기** 를 클릭하고 위치를 탐색합니다. 대체 스냅샷 위치의 파일을 압축하려면 **이 폴더에 있는 스냅샷 파일 압축** 을 선택합니다. 대체 위치는 다른 서버, 네트워크 드라이브 또는 이동식 미디어(CD-ROM 또는 이동식 디스크 등)가 될 수 있습니다. 자세한 내용은 [스냅샷 속성 수정](../../relational-databases/replication/snapshot-options.md)을 참조하세요.  
   
  **추가 스크립트 실행**  
- 구독자에 스냅샷 적용 전후에 실행할 스크립트를 지정합니다. **스냅숏 형식** 이 **문자**인 경우에는 스크립트를 지정할 수 없습니다.  
+ 구독자에 스냅샷 적용 전후에 실행할 스크립트를 지정합니다. **스냅샷 형식** 이 **문자**인 경우에는 스크립트를 지정할 수 없습니다.  
   
  스크립트는 선택 사항이지만 명령을 실행하고 구독자에 관리 변경 내용을 적용하는 편리한 방법을 제공합니다. 스크립트 실행에 대한 자세한 내용은 [스냅샷 적용 전후에 스크립트 실행](../../relational-databases/replication/snapshot-options.md#execute-scripts-before-and-after-snapshot-is-applied)을 참조하세요.  
   
--   **스냅숏 적용 전 다음 스크립트 실행** 입력란에 경로를 입력하거나 **찾아보기** 를 클릭하여 스크립트의 위치를 지정합니다.    
--   **스냅숏 적용 후 다음 스크립트 실행** 입력란에 경로를 입력하거나 **찾아보기** 를 클릭하여 스크립트의 위치를 지정합니다. 
+-   **스냅샷 적용 전 다음 스크립트 실행** 입력란에 경로를 입력하거나 **찾아보기** 를 클릭하여 스크립트의 위치를 지정합니다.    
+-   **스냅샷 적용 후 다음 스크립트 실행** 입력란에 경로를 입력하거나 **찾아보기** 를 클릭하여 스크립트의 위치를 지정합니다. 
   
 ## <a name="see-also"></a>참고 항목  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b7f9207027f8d5b94c631b4406903dae77694371
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00175ce9c9c9c0f6f83b7661b685063f97ef8c44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950354"
 ---
 # <a name="case-transact-sql"></a>CASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -138,7 +137,7 @@ FROM Data ;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>1. SELECT 문에 단순 CASE 식 사용  
+### <a name="a-using-a-select-statement-with-a-simple-case-expression"></a>1\. SELECT 문에 단순 CASE 식 사용  
  `SELECT` 문 내에서 단순 `CASE` 식은 동등성만 검사하고 다른 비교 작업은 수행할 수 없습니다. 다음 예에서는 `CASE` 식을 사용하여 제품 라인 범주 표시를 이해하기 쉽게 변경합니다.  
   
 ```  
@@ -159,7 +158,7 @@ GO
   
 ```  
   
-### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>2. SELECT 문에 검색된 CASE 식 사용  
+### <a name="b-using-a-select-statement-with-a-searched-case-expression"></a>2\. SELECT 문에 검색된 CASE 식 사용  
  `SELECT` 문 내에서 검색된 `CASE` 식은 비교 값에 따라 결과 집합의 값이 바뀌도록 합니다. 다음 예에서는 제품의 가격 범위에 따라 가격을 텍스트 설명으로 표시합니다.  
   
 ```  

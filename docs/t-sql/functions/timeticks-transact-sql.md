@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 9d036633-837f-4309-9c45-3d9600258018
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6af920fc7264e6d75096c1c108be4c44c2f14409
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a797e6ccd507a1d7dda259bccb5adb5171ad4596
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65949039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098988"
 ---
 # <a name="x40x40timeticks-transact-sql"></a>&#x40;&#x40;TIMETICKS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

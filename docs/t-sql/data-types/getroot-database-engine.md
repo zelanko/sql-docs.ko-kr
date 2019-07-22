@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7f6a820b9f19d1102ed5cf16b469401acf5449d3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 58f5389953c2257c7478ad54665cfdeeb0a805c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077927"
 ---
 # <a name="getroot-database-engine"></a>GetRoot(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ static SqlHierarchyId GetRoot ( )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-transact-sql-example"></a>1. Transact-SQL 예  
+### <a name="a-transact-sql-example"></a>1\. Transact-SQL 예  
 다음 예에서는 계층 트리의 루트를 반환합니다.
   
 ```sql
@@ -61,7 +60,7 @@ FROM HumanResources.EmployeeDemo
 WHERE OrgNode = hierarchyid::GetRoot()  
 ```  
   
-### <a name="b-clr-example"></a>2. CLR 예  
+### <a name="b-clr-example"></a>2\. CLR 예  
 다음 코드 조각은 GetRoot() 메서드를 호출합니다.
   
 ```sql

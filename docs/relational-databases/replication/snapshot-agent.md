@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: b715e621-2cd5-4a15-8f58-a341aa8ef5e4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a6efca71c246eaa08b237cd551c0cfae022463fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8a40fc2dfb444ea82a00f2438ea65d53bb6e4058
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123854"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051653"
 ---
 # <a name="snapshot-agent"></a>스냅샷 에이전트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **스냅숏 에이전트** 대화 상자는 상태, 기록, 정보 메시지, 모든 오류 메시지 등 스냅숏 에이전트에 대한 자세한 정보를 표시합니다.  
+  **스냅샷 에이전트** 대화 상자는 상태, 기록, 정보 메시지, 모든 오류 메시지 등 스냅샷 에이전트에 대한 자세한 정보를 표시합니다.  
   
 ## <a name="options"></a>옵션  
- **보기** 메뉴에서 보려는 스냅숏 에이전트 세션을 선택한 다음 **스냅숏 에이전트의 세션**표에서 특정 세션을 선택합니다. **선택한 세션의 동작**표에 이 세션에 대한 자세한 정보가 표시됩니다. 선택한 세션이 오류로 인해 종료될 경우 **선택한 세션에 대한 오류 정보 또는 메시지** 라는 텍스트 영역 또한 표시됩니다.  
+ **보기** 메뉴에서 보려는 스냅샷 에이전트 세션을 선택한 다음 **스냅샷 에이전트의 세션**표에서 특정 세션을 선택합니다. **선택한 세션의 동작**표에 이 세션에 대한 자세한 정보가 표시됩니다. 선택한 세션이 오류로 인해 종료될 경우 **선택한 세션에 대한 오류 정보 또는 메시지** 라는 텍스트 영역 또한 표시됩니다.  
   
  **보기**  
  확인할 스냅샷 에이전트 세션을 선택합니다.  

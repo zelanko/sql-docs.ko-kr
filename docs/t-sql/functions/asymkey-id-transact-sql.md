@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: d697daf8-2106-4ebb-b09a-ca0be465d747
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 48bb97bdf073026ffdc7cde48eac1b295a06bd75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1dc7454ecd042f06654f8a269332f8ae7f305ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040255"
 ---
 # <a name="asymkeyid-transact-sql"></a>ASYMKEY_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ASYMKEY_ID ( 'Asym_Key_Name' )
 데이터베이스에 있는 비대칭 키의 이름입니다.
   
 ## <a name="return-types"></a>반환 형식
- **ssNoversion**  
+ **int**  
   
 ## <a name="permissions"></a>사용 권한  
 비대칭 키에 대한 적절한 사용 권한이 필요하며 비대칭 키에 대한 호출자의 VIEW 권한이 거부되지 않아야 합니다. 비대칭 키 권한에 대한 자세한 내용은 [CREATE ASYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)를 참조하세요.

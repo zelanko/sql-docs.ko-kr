@@ -7,14 +7,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3187c312683713253ec60431f8892fdf0185c933
-ms.sourcegitcommit: 5683044d87f16200888eda2c2c4dee38ff87793f
+ms.openlocfilehash: 12758c3d340590cedecc2d9f4f149ad82d6987e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58221964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136427"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 도움말 및 피드백
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e455c56de9231bfd9f750a45eb96eeb10945c8aa
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: ef6b65623f5070f665a7d6bf3ea8973a34541eda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944812"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>SQL Server 데이터베이스를 지정 시간으로 복원(전체 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: f767dba6c45c3bdc0d91b29ab561cb5f5de74844
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b98f52d7c8e23530c13da6ad44d90090998ac09e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212744"
 ---
 # <a name="certificate-management-sql-server-configuration-manager"></a>인증서 관리(SQL Server 구성 관리자)
 

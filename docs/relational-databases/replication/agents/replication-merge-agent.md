@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c7262d2ed909729d03563ca0f5aa17f8781ab843
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 27de402dfe659be7c6adc28504f4d17ddc1e4620
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085950"
 ---
 # <a name="replication-merge-agent"></a>Replication Merge Agent
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -315,7 +314,7 @@ replmerg [-?]
  게시자의 보안 모드를 지정합니다. 값 **0** 은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증(기본값)을 나타내며 값 **1** 은 Windows 인증 모드를 나타냅니다.  
   
  **-QueryTimeOut** _query_time_out_seconds_  
- 쿼리 시간이 초과될 때까지 걸리는 시간(초)입니다. 기본값은 300초입니다. **QueryTimeout** 값이 1800보다 클 경우 병합 에이전트에서는 이 값을 사용하여 분할된 스냅숏이 생성되기를 기다릴 시간을 결정하기도 합니다.  
+ 쿼리 시간이 초과될 때까지 걸리는 시간(초)입니다. 기본값은 300초입니다. **QueryTimeout** 값이 1800보다 클 경우 병합 에이전트에서는 이 값을 사용하여 분할된 스냅샷이 생성되기를 기다릴 시간을 결정하기도 합니다.  
   
  **-SrcThreads** _number_of_source_threads_  
  병합 에이전트에서 원본의 변경 내용을 열거하는 데 사용하는 원본 스레드의 개수를 지정합니다. 업로드 중에는 구독자가 원본이 되고 다운로드 중에는 게시자가 원본이 됩니다. 기본값은 **3**입니다.  

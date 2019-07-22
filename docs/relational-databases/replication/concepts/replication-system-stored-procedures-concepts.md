@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d88faa3a4e7477fdb63ce3a6933197fd160e4e96
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.openlocfilehash: 344b2abfafe5f2e69c6e758744e2cd63fa663603
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54298490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903286"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "54298490"
   
 -   복제 마법사에 제공되는 스크립트 생성 기능을 사용하거나  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]을 참조하세요. 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]입니다. 자세한 내용은 [Scripting Replication](../../../relational-databases/replication/scripting-replication.md)을 참조하세요.  
   
 -   RMO(복제 관리 개체)를 사용하여 RMO 개체를 만드는 스크립트를 프로그래밍 방식으로 생성합니다.  
   

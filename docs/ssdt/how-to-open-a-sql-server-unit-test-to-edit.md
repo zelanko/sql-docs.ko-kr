@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c6af1b12-54cd-42f9-b2ef-7164f8078323
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d464ba2cd7b3b5b3cb2ac687f9f9e1b3ae8023b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52818b0d76ae5201fb9bf53376696fab54180cb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035148"
 ---
 # <a name="how-to-open-a-sql-server-unit-test-to-edit"></a>방법: 편집할 SQL Server 단위 테스트 열기
 SQL Server 단위 테스트를 만든 후에는 **SQL Server 단위 테스트 디자이너**를 사용하여 Transact\-SQL 문과 테스트 조건을 추가합니다. 디자이너를 사용하여 만든 테스트는 Visual C# 또는 Visual Basic 코드를 생성합니다. 이 코드는 테스트를 실행할 때 실행됩니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 908bf2ac-fc84-4af8-a869-1cb43573d2df
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 86fdc72c811fd82140e9414a3b425a6d8ca6dcb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7bedf8fae82dce46ed1ce297de0f0862746dba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896220"
 ---
 # <a name="developing-a-user-interface-for-a-custom-connection-manager"></a>사용자 지정 연결 관리자의 사용자 인터페이스 개발
 

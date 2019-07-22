@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ad76799c-4486-4b98-9705-005433041321
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a4bebb60c7d40ab7d1a98bbb6c8b28ff64ea7b09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9be51c4a919549ac356813f3b6ae185b7c5b5c58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033250"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>논리적 레코드를 사용하여 관련된 행의 변경 내용 그룹화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

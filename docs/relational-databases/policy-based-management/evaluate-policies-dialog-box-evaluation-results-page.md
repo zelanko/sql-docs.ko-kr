@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 203091e2-043f-4adb-a9de-fd071492c693
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ff79f1ad81a492452404324d20e92c2251b2d4f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e6d5c9d558b65e091dfb9ef0901d15ffb0ac282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137796"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>정책 평가 대화 상자, 평가 결과 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -10,13 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-manager: craigg
-ms.openlocfilehash: 2e832343dfd54dd08a71c2724eed4cb7b156c758
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42250d8edbd646f9bd89f3663f2591b3404fe05f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007944"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>자습서: Azure에 SSIS(SQL Server Integration Services) 패키지 배포 및 실행
 

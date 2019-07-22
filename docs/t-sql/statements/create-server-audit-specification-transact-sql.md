@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: db77fa77-fedb-40ac-83e6-06343063e518
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 07b16209f335dae6f2439b790898ebe4aa609c65
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a02bda17b1da0be95c0aea68720f8747ad6e672f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326144"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117174"
 ---
 # <a name="create-server-audit-specification-transact-sql"></a>CREATE SERVER AUDIT SPECIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ FOR SERVER AUDIT audit_name
 ## <a name="remarks"></a>Remarks  
  감사가 있어야 이에 대한 서버 감사 사양을 만들 수 있습니다. 서버 감사 사양을 처음 만들 때는 사용할 수 없는 상태입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ALTER ANY SERVER AUDIT 권한이 있는 사용자는 서버 감사 사양을 만들어 모든 감사에 바인딩할 수 있습니다.  
   
  만든 서버 감사 사양은 CONTROL SERVER 또는 ALTER ANY SERVER AUDIT 권한이 있는 보안 주체, sysadmin 계정 또는 감사에 대한 명시적인 액세스가 있는 보안 주체가 볼 수 있습니다.  

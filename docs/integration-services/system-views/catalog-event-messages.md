@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: a31a654f-31e9-4da1-aabf-182b07848e36
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4367b4e4ae9c315bd8462b72cbac020294fecdcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03245a13f270990ff8a1307a10bad797fc155289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017479"
 ---
 # <a name="catalogeventmessages"></a>catalog.event_messages 
 
@@ -43,8 +42,8 @@ ms.locfileid: "65715204"
 |Subcomponent_name|nvarchar(4000)|메시지의 원본인 데이터 흐름 구성 요소입니다.<br /><br /> [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 엔진에서 메시지를 반환하면 이 열에 SSIS.Pipeline이 표시됩니다.|  
 |Package_path|nvarchar(max)|패키지 내 구성 요소의 고유 경로입니다.|  
 |Execution_path|nvarchar(max)|부모 패키지에서 구성 요소가 실행되는 지점까지의 전체 경로입니다.<br /><br /> 이 경로도 구성 요소의 반복을 캡처합니다.|  
-|threadID|ssNoversion|메시지가 기록될 때 실행 중인 스레드의 ID입니다.|  
-|Message_code|ssNoversion|메시지에 연결된 코드입니다.|  
+|threadID|int|메시지가 기록될 때 실행 중인 스레드의 ID입니다.|  
+|Message_code|int|메시지에 연결된 코드입니다.|  
   
 ## <a name="remarks"></a>Remarks  
  이 뷰는 다음과 같은 메시지 원본 유형을 표시합니다.  

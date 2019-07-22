@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 754a1070-59bc-438d-998b-97fdd77d45ca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e47b99fef642ab0760a177d426db4e3353da2e21
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a9e62710d28b9b7e0ad66ff157b841f939d6dfaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041096"
 ---
 # <a name="peer-to-peer---conflict-detection-in-peer-to-peer-replication"></a>피어 투 피어 - 피어 투 피어 복제에서 충돌 검색
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

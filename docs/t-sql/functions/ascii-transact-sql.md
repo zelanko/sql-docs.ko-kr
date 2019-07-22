@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f77ef33c6974d7189078e3610f272d376480b814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a629e38a978d435cb1c3fa4b023e3b489c33a497
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019761"
 ---
 # <a name="ascii-transact-sql"></a>ASCII(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +46,7 @@ ASCII ( character_expression )
 **char** 또는 **varchar** 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다.
   
 ## <a name="return-types"></a>반환 형식
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks
 ASCII는 **A**merican **S**tandard **C**ode for **I**nformation **I**nterchange를 나타냅니다. 최신 컴퓨터에 대한 문자 인코딩 표준으로 사용합니다. ASCII 문자 목록은 [ASCII](https://www.wikipedia.org/wiki/ASCII)의 **인쇄 가능 문자** 섹션을 참조하세요.

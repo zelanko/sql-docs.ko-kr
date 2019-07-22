@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23169fd3625c2501e295645201da89667731f0b6
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 9c0a47062d50f4306af3ffb92e9e575317a014f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895387"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>자습서: 두 개의 완전히 연결된 서버 간 복제 구성(트랜잭션)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,11 +95,11 @@ ms.locfileid: "67860676"
   
 8. **확인**선택하고 **다음**을 선택합니다.  
   
-9. **즉시 스냅숏을 만들고 구독 초기화에 사용할 수 있도록 유지** 확인란을 선택하고 **다음**을 선택합니다.  
+9. **즉시 스냅샷을 만들고 구독 초기화에 사용할 수 있도록 유지** 확인란을 선택하고 **다음**을 선택합니다.  
 
    ![확인란이 선택된 "스냅샷 에이전트" 페이지](media/tutorial-replicating-data-between-continuously-connected-servers/snapshot.png)
   
-10. **에이전트 보안** 페이지에서 **스냅숏 에이전트의 보안 설정 사용** 확인란을 선택 취소합니다.   
+10. **에이전트 보안** 페이지에서 **스냅샷 에이전트의 보안 설정 사용** 확인란을 선택 취소합니다.   
   
     스냅샷 에이전트에 대한 **보안 설정**을 선택합니다. **프로세스 계정** 상자에 <*Publisher_Machine_Name*> **\repl_snapshot**을 입력하고, 이 계정에 대한 암호를 입력한 다음, **확인**을 선택합니다.  
 
@@ -128,8 +127,8 @@ ms.locfileid: "67860676"
   
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결하고 해당 서버 노드를 확장한 다음, **복제** 폴더를 확장합니다.  
   
-2. **로컬 게시** 폴더에서 **AdvWorksProductTrans**를 마우스 오른쪽 단추로 클릭한 다음, **스냅숏 에이전트 상태 보기**를 선택합니다.  
-   ![스냅숏 에이전트 상태 보기를 위한 바로 가기 메뉴의 명령](media/tutorial-replicating-data-between-continuously-connected-servers/viewsnapshot.png)
+2. **로컬 게시** 폴더에서 **AdvWorksProductTrans**를 마우스 오른쪽 단추로 클릭한 다음, **스냅샷 에이전트 상태 보기**를 선택합니다.  
+   ![스냅샷 에이전트 상태 보기를 위한 바로 가기 메뉴의 명령](media/tutorial-replicating-data-between-continuously-connected-servers/viewsnapshot.png)
   
 3. 게시에 대한 스냅샷 에이전트 작업의 현재 상태가 표시됩니다. 다음 섹션을 진행하기 전에 스냅샷 작업이 성공했는지 확인합니다.
           
@@ -213,7 +212,7 @@ ms.locfileid: "67860676"
 3. **AdvWorksProductTrans**에 해당 구독이 표시되지 않으면 F5 키를 선택하여 목록을 새로 고칩니다.  
   
 참조 항목:  
-- [스냅숏으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
+- [스냅샷으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [밀어넣기 구독 만들기](../../relational-databases/replication/create-a-push-subscription.md)  
 - [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)  
 

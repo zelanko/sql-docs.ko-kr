@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2dbc4e48-1cae-4d83-b371-3265da9687cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0889de0a7525e0e5a7ea91ba169011aaf4e341a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2373da54981ad8d3cc743214c7110bb0d49723bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943148"
 ---
 # <a name="generate-elements-for-null-values-with-the-xsinil-parameter"></a>XSINIL 매개 변수를 사용하여 NULL 값 요소 생성
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: b120156f0bfc7a69112697869e2efbbbd83af63c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 8c10e17fd9da739eecc07536b40be3964705abef
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690360"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263766"
 ---
 # <a name="create-and-update-database-tables"></a>데이터베이스 테이블 생성 및 업데이트
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

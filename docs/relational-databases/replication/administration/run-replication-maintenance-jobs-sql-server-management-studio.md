@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0dc485a0-5a50-41eb-a29d-f2b2fb920174
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2a00c9b3bf9e9f7180ea13f6e707e50d9e32e72e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7fd59027adfba54b9c3937d5d3a23fc556838f36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939072"
 ---
 # <a name="run-replication-maintenance-jobs-sql-server-management-studio"></a>복제 유지 관리 작업 실행(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

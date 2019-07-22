@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 74aa7ccc-8575-4018-80cf-14aeca379687
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a8c6728692e27a1af301e28f58c9f3640d5eb48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49de5981e2245e5efd831da05abe0b20ded99b45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927413"
 ---
 # <a name="year-transact-sql"></a>YEAR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +50,7 @@ YEAR ( date )
  **time**, **date**, **smalldatetime**, **datetime**, **datetime2** 또는 **datetimeoffset** 값으로 확인할 수 있는 식입니다. *date* 인수는 식, 열 식, 사용자 정의 변수 또는 문자열 리터럴일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="return-value"></a>반환 값  
  YEAR는 [DATEPART](../../t-sql/functions/datepart-transact-sql.md)(**year**, *date*)와 같은 값을 반환합니다.  

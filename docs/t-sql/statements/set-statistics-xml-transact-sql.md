@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2b6d4c5a-a7f5-4dd1-b10a-7632265b1af7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d69e7f5e7e6a97405a81df189893dfb89601cc3e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 015ba90a6f2cad79483e52d5caa23ad06784c055
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56015414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004718"
 ---
 # <a name="set-statistics-xml-transact-sql"></a>SET STATISTICS XML(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ SET STATISTICS XML { ON | OFF }
 > [!NOTE]  
 >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **실제 실행 계획 포함**을 선택하면 이 SET 옵션에서 XML 실행 계획 출력을 생성하지 않습니다. 이 SET 옵션을 사용하기 전에 **실제 실행 계획 포함** 단추의 선택을 취소하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  SET STATISTICS XML을 사용하여 출력을 보려면 다음 권한이 있어야 합니다.  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있는 적절한 권한  

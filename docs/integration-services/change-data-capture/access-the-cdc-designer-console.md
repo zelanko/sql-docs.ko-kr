@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: b168c64e-c1b5-42d4-a92a-84de1dd0324e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 57e8a0986fda07fb0850172497f27af2618dd962
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae840ae1dd1f1e80e3e6f5f252d78faf5586afe8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098593"
 ---
 # <a name="access-the-cdc-designer-console"></a>CDC Designer 콘솔 액세스
 

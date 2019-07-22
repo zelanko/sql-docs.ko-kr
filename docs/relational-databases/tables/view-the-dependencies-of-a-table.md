@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1b47a38cd1fc5cc4d95b611dbafbf8d30b22878
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4575c9cbc20faf6afa03201645b736a13325e66b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140297"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>테이블의 종속성 보기
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -41,11 +40,11 @@ ms.locfileid: "52407471"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  데이터베이스에 대한 VIEW DEFINITION 권한과 데이터베이스의 sys.sql_expression_dependencies에 대한 SELECT 권한이 필요합니다. 기본적으로 SELECT 권한은 db_owner 고정 데이터베이스 역할의 멤버에게만 부여됩니다. SELECT와 VIEW DEFINITION 권한을 다른 사용자에게 부여하면 피부여자는 데이터베이스의 모든 종속성을 볼 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -56,7 +55,7 @@ ms.locfileid: "52407471"
   
 2.  테이블을 마우스 오른쪽 단추로 클릭한 다음 **종속성 보기**를 클릭합니다.  
   
-3.  **개체 종속성**_\<개체 이름\>_ 대화 상자에서 _\<개체 이름\>_**에 종속된 개체** 또는 _\<개체 이름\>_**이(가) 종속된** **개체**를 선택합니다.  
+3.  **개체 종속성** _\<개체 이름\>_ 대화 상자에서 _\<개체 이름\>_ **에 종속된 개체** 또는 _\<개체 이름\>_ **이(가) 종속된** **개체**를 선택합니다.  
   
 4.  **종속성** 표에서 개체를 선택합니다. 개체 유형(예: "트리거" 또는 "저장 프로시저")이 **유형** 상자에 표시됩니다.  
   

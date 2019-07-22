@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2dc11b61-d065-4126-8e00-acf40390f9fb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: ea3ef8aa6e667935ea65c619221bfbbd10199e99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d18b51a3868534089c88dc1c951148711e0d0c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998040"
 ---
 # <a name="lightweight-pooling-server-configuration-option"></a>경량 풀링 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

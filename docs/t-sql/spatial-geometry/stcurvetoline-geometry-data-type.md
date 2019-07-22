@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: abc80b32-4152-4e10-b816-798b901e0ac5
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: b60bdcb684fdb79fa15febb71d88def7573e04cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bc1bdb1ece65113422af1e9a8ebe09de0db1fa1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930304"
 ---
 # <a name="stcurvetoline-geometry-data-type"></a>STCurveToLine(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "65939022"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>1\. 초기화되지 않은 Geometry 변수 및 빈 인스턴스 사용  
+### <a name="a-using-an-uninitialized-geometry-variable-and-empty-instance"></a>1. 초기화되지 않은 Geometry 변수 및 빈 인스턴스 사용  
  다음 예제에서는 첫 번째 **SELECT** 문이 초기화되지 않은 **geometry** 인스턴스를 사용하여 `STCurveToLine` 메서드를 호출하고 두 번째 **SELECT** 문이 빈 **geometry** 인스턴스를 사용합니다. 따라서 메서드는 첫 번째 문에 **NULL**을 반환하고 두 번째 문에 **GeometryCollection** 컬렉션을 반환합니다.  
   
 ```
@@ -65,7 +64,7 @@ ms.locfileid: "65939022"
  SELECT @g.STGeometryType();
  ```  
   
-### <a name="b-using-a-linestring-instance"></a>2\. LineString 인스턴스 사용  
+### <a name="b-using-a-linestring-instance"></a>2. LineString 인스턴스 사용  
  다음 예의 **SELECT** 문은 **LineString** 인스턴스를 사용하여 STCurveToLine 메서드를 호출합니다. 따라서 메서드는 **LineString** 인스턴스를 반환합니다.  
   
 ```

@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 737f337369b04c59d34bb8ab4335a2491e843927
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 900d91223aea28d0809c3d3aab9acd574c3d2df2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130125"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -409,7 +408,7 @@ INSTEAD OF 트리거 내부에 중첩된 첫 번째 AFTER 트리거는 **중첩�
 ### <a name="deferred-name-resolution"></a>지연된 이름 확인  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저, 트리거 및 일괄 처리에서는 컴파일 시간에 존재하지 않는 테이블을 참조할 수 있습니다. 이 기능을 지연된 이름 확인이라고 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 DML 트리거를 만들려면 트리거를 만들 테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
   
 서버 범위(ON ALL SERVER)의 DDL 트리거 또는 LOGON 트리거를 만들려면 해당 서버에 대한 CONTROL SERVER 권한이 필요합니다. 데이터베이스 범위(ON DATABASE)의 DDL 트리거를 만들려면 현재 데이터베이스에 대한 ALTER ANY DATABASE DDL TRIGGER 권한이 필요합니다.  

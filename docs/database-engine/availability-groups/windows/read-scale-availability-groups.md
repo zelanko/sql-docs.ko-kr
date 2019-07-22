@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 3e7c367acff65aa61e43f2ea00cde98a54d5cc94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edf98113b435cafd9f6552643e6a8a1ba4316982
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67131820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014463"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 읽기-배율 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

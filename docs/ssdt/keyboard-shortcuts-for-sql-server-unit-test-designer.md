@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b1c61454-242f-4948-a9ca-e2cd5df26102
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 757eebf28764c3332b54143424d525a0f2de9ae8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 424d36ea56d2c47886cd0b1cfc169bee93fb9f7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037225"
 ---
 # <a name="keyboard-shortcuts-for-sql-server-unit-test-designer"></a>SQL Server 단위 테스트 디자이너의 바로 가기 키
 다음 바로 가기 키를 사용하여 SQL Server 단위 테스트 디자이너 내에서 탐색할 수 있습니다.  

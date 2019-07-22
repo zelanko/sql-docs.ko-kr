@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fde3c95b-2f68-483d-a197-0f7161b72fa3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1c68ace0ccbd49b63404aaf52419a06dda297f8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bcaea309d3399d7986ab793ecaf2085180a4c0a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119825"
 ---
 # <a name="interpreting-sql-server-unit-test-results"></a>SQL Server 단위 테스트 결과 해석
 SQL Server 단위 테스트를 실행하면 테스트 결과가 자동으로 생성되어 디스크에 저장되고 **테스트 결과** 창에 요약됩니다. 테스트 실행을 시작하는 즉시 **테스트 결과** 창이 나타나고 테스트 실행 진행률이 표시됩니다. 여기에는 실행 중인 테스트 및 완료된 테스트가 포함됩니다.  

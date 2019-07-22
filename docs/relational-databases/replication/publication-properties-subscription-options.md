@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 31abd605-b273-419d-86df-d0ecf539a507
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a204ee5d34e37736ddd433636cf0e86564718b77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7693be4e72ac074c5b482e894793a38ef4925b12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908037"
 ---
 # <a name="publication-properties-subscription-options"></a>게시 속성, 구독 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "63047517"
  **독립 배포 에이전트**  
  이 데이터베이스의 다른 게시에 대해 독립적인 에이전트의 사용 여부를 결정합니다. 이 옵션은 읽기 전용입니다. 새 게시 마법사를 사용하여 만든 게시에 대해 이 옵션은 기본적으로 **True** 로 설정되어 있으며 게시를 만든 후에는 이를 변경할 수 없습니다. 자세한 내용은 [복제 에이전트 관리](../../relational-databases/replication/agents/replication-agent-administration.md)를 참조하세요.  
   
- **스냅숏을 항상 사용할 수 있음**  
+ **스냅샷을 항상 사용할 수 있음**  
  스냅샷 에이전트를 실행할 때마다 스냅샷 파일을 만들지 여부를 결정합니다( **독립 배포 에이전트**필요). 이 옵션은 읽기 전용입니다. 새 게시 마법사의 **스냅샷 에이전트** 페이지에서 **즉시 스냅샷을 만들고 구독 초기화에 사용할 수 있도록 유지합니다** (기본값)를 선택하면 이 옵션이 **True** 로 설정됩니다. 자세한 내용은 [스냅샷 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요.  
   
  **백업 파일로 초기화 허용**  

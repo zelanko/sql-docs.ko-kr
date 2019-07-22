@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 06fb23f63b65d06be6e05569ecd31387830522ae
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: a3703082dedc3d6c5933904e07e8e8724a04d20d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033724"
 ---
 # <a name="online-restore-sql-server"></a>온라인 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "67581066"
 >  서버에 연결된 여러 디바이스로 백업을 수행한 경우에는 온라인 복원 중에 같은 수의 디바이스를 사용할 수 있어야 합니다.  
   
 > [!CAUTION]  
->  스냅샷 백업을 사용하여 **Online Restore**을 수행할 수 없습니다. **스냅숏 백업**에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅숏 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+>  스냅샷 백업을 사용하여 **Online Restore**을 수행할 수 없습니다. **스냅샷 백업**에 대한 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 ## <a name="log-backups-for-online-restore"></a>온라인 복원용 로그 백업  
  온라인 복원에서 복구 지점은 복원되는 데이터가 오프라인 상태로 된 지점이거나 마지막으로 읽기 전용으로 된 지점입니다. 이 복구 지점을 포함하여 이 지점까지의 트랜잭션 로그 백업은 모두 사용할 수 있어야 합니다. 일반적으로 로그 백업은 파일을 복구한 후에 필요합니다. 단, 해당 데이터가 읽기 전용이 된 후에 수행된 데이터 백업에서 읽기 전용 데이터의 온라인 복원을 수행하는 중인 경우에는 로그 백업이 필요하지 않습니다.  

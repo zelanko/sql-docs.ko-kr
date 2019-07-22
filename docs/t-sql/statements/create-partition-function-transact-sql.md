@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 52e2d08a629a2e7272a409f0e84ab9b79299649b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912612"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  파티션 함수의 이름입니다. 파티션 함수의 이름은 데이터베이스 내에서 고유해야 하며 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
   
  *input_parameter_type*  
- 분할에 사용되는 열의 데이터 형식입니다. **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, 별칭 데이터 형식 또는 CLR 사용자 정의 데이터 형식을 제외한 모든 데이터 형식은 분할 열로 사용할 수 있습니다.  
+ 분할에 사용되는 열의 데이터 형식입니다. **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , 별칭 데이터 형식 또는 CLR 사용자 정의 데이터 형식을 제외한 모든 데이터 형식은 분할 열로 사용할 수 있습니다.  
   
  분할 열이라고 하는 실제 열은 CREATE TABLE 또는 CREATE INDEX 문에 지정됩니다.  
   
@@ -74,14 +73,14 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  *boundary_value*에 제공된 값 개수가 14,999개를 초과하지 않도록 지정합니다. 생성되는 파티션 수는 *n* + 1개입니다. 값은 순서대로 나열되지 않아도 됩니다. 값이 순서대로 나열되지 않은 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 값을 정렬하여 함수를 만들고 값이 순서대로 제공되지 않았다는 경고를 반환합니다. *n*에 중복 값이 있는 경우 데이터베이스 엔진에서 오류를 반환합니다.  
   
  **LEFT** | RIGHT  
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 간격 값을 왼쪽에서 오른쪽으로 오름차순으로 정렬할 때 *boundary_value* [ **,**_...n_ ]이 각 경계 값 간격의 왼쪽과 오른쪽 중 어느 쪽에 속하는지 지정합니다. 지정하지 않은 경우 LEFT가 기본값입니다.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 간격 값을 왼쪽에서 오른쪽으로 오름차순으로 정렬할 때 *boundary_value* [ **,** _...n_ ]이 각 경계 값 간격의 왼쪽과 오른쪽 중 어느 쪽에 속하는지 지정합니다. 지정하지 않은 경우 LEFT가 기본값입니다.  
   
 ## <a name="remarks"></a>Remarks  
  파티션 함수의 범위는 함수가 생성된 데이터베이스로 제한됩니다. 해당 데이터베이스 내에서 파티션 함수는 다른 함수와 서로 다른 네임스페이스에 있습니다.  
   
  해당 분할 열에 Null 값이 있는 모든 행은 맨 왼쪽 파티션에 위치합니다. 단, NULL이 경계 값으로 지정되고 RIGHT가 지정된 경우에는 맨 왼쪽 파티션은 빈 파티션이 되고 NULL 값은 다음 파티션에 위치하게 됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  다음 사용 권한 중 하나를 사용하여 CREATE PARTITION FUNCTION을 실행할 수 있습니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  
@@ -92,7 +91,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
   
 ##  <a name="BKMK_examples"></a> 예  
   
-### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>1. int 열에 RANGE LEFT 파티션 함수 만들기  
+### <a name="a-creating-a-range-left-partition-function-on-an-int-column"></a>1\. int 열에 RANGE LEFT 파티션 함수 만들기  
  다음 파티션 함수는 테이블이나 인덱스를 4개의 파티션으로 분할합니다.  
   
 ```sql  
@@ -106,8 +105,8 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |---------------|-------|-------|-------|-------|  
 |**값**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
-### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>2. int 열에 RANGE RIGHT 파티션 함수 만들기  
- 다음 파티션 함수는 RANGE RIGHT를 지정한다는 점을 제외하고 *boundary_value* [ **,**_...n_ ]에 위 예와 동일한 값을 사용합니다.  
+### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>2\. int 열에 RANGE RIGHT 파티션 함수 만들기  
+ 다음 파티션 함수는 RANGE RIGHT를 지정한다는 점을 제외하고 *boundary_value* [ **,** _...n_ ]에 위 예와 동일한 값을 사용합니다.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  
@@ -120,7 +119,7 @@ AS RANGE RIGHT FOR VALUES (1, 100, 1000);
 |---------------|-------|-------|-------|-------|  
 |**값**|**col1** \< `1`|**col1** >= `1` AND **col1** \< `100`|**col1** >= `100` AND **col1** \< `1000`|**col1** >= `1000`| 
   
-### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>3. datetime 열에 RANGE RIGHT 파티션 함수 만들기  
+### <a name="c-creating-a-range-right-partition-function-on-a-datetime-column"></a>C. datetime 열에 RANGE RIGHT 파티션 함수 만들기  
  다음 파티션 함수는 테이블이나 인덱스를 12개 파티션으로 분할합니다. 즉, 일년의 값을 분할하여 **datetime** 열에 각 달에 대한 하나의 파티션을 만듭니다.  
   
 ```sql  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e26977c-758c-46d6-acf1-4fd9238f0950
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 27b5fd7de403e252967d0d2a9b8073eafbe0c959
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87d4cb0c16df80b23414644b550be8cb8c4ec3f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941271"
 ---
 # <a name="map-query-parameters-to-variables-in-a-data-flow-component"></a>쿼리 매개 변수를 데이터 흐름 구성 요소의 변수에 매핑
 

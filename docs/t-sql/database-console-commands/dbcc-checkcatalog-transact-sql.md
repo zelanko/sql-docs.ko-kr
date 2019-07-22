@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8076eb4e-f049-44bf-9a35-45cdd6ef0105
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: cf9e1aec04b5a91b097c8bc533290473c4197b3d
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: d75739e2a8594bbd049a7d9b1c2a6908b1c0e29c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102197"
 ---
 # <a name="dbcc-checkcatalog-transact-sql"></a>DBCC CHECKCATALOG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ DBCC CATALOG 명령이 완료된 후 [!INCLUDE[ssNoVersion](../../includes/ssnov
 |4|어설션 또는 액세스 위반이 감지되었습니다.|  
 |5|알 수 없는 오류가 발생하여 DBCC 명령이 종료되었습니다.|  
   
-DBCC CHECKCATALOG는 시스템 메타데이터 테이블 간에 다양한 일관성 검사를 수행합니다. DBCC CHECKCATALOG는 내부 데이터베이스 스냅샷을 사용하여 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 유지합니다. 자세한 내용은 [데이터베이스 스냅숏의 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅숏 사용법" 섹션을 참조하세요.
+DBCC CHECKCATALOG는 시스템 메타데이터 테이블 간에 다양한 일관성 검사를 수행합니다. DBCC CHECKCATALOG는 내부 데이터베이스 스냅샷을 사용하여 이러한 검사를 수행하는 데 필요한 트랜잭션 일관성을 유지합니다. 자세한 내용은 [데이터베이스 스냅샷의 스파스 파일의 크기 보기&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md) 및 [DBCC&amp;#40;Transact-SQL&amp;#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)의 "DBCC 내부 데이터베이스 스냅샷 사용법" 섹션을 참조하세요.
 스냅샷을 만들 수 없는 경우 DBCC CHECKCATALOG는 필요한 일관성을 얻기 위해 배타적 데이터베이스 잠금을 획득합니다. 불일치가 감지되는 경우 복구가 불가능하며 데이터베이스를 백업에서 복원해야 합니다.
   
 > [!NOTE]  
@@ -93,7 +92,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  

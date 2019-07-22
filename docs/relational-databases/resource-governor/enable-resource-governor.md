@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4d17af53-cf11-4ce4-aab4-deda94a49836
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 282316013dad44d73e165984167f9cff224c41a6
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 23ff55d4fcb9e9cf398e732376a01ab5495b2a4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099255"
 ---
 # <a name="enable-resource-governor"></a>리소스 관리자 사용
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "55689826"
   
 -   **Resource Governor를 사용하도록 설정하려면 다음을 사용합니다.**  [개체 탐색기](#RGOnObjEx), [Resource Governor 속성](#RGOnProp) 또는 [Transact-SQL](#RGOnTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
  리소스 관리자를 사용하도록 설정하면 다음과 같은 결과가 나타납니다.  
   
 -   작업 그룹에 해당 작업을 할당할 수 있도록 새 연결에 대해 분류자 함수가 실행됩니다.  
@@ -39,7 +38,7 @@ ms.locfileid: "55689826"
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  사용자 트랜잭션에 있을 때에는 **ALTER RESOURCE GOVERNOR** 문을 사용하여 리소스 관리자를 사용하도록 설정할 수 없습니다.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  리소스 관리자를 사용하도록 설정하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="RGOnObjEx"></a> 개체 탐색기를 사용하여 리소스 관리자를 사용하도록 설정  

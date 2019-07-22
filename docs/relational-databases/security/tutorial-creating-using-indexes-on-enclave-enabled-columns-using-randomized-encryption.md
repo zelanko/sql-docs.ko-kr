@@ -11,14 +11,13 @@ ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 0c22fb10e6264420c95149bb77c2318fdf89a715
-ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
+ms.openlocfilehash: 9865be1d006e10271295ae4dda731eb33331dbda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67556972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126802"
 ---
 # <a name="tutorial-creating-and-using-indexes-on-enclave-enabled-columns-using-randomized-encryption"></a>자습서: 임의 암호화를 사용하는 Enclave 사용 열에 인덱스 만들기 및 사용
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]

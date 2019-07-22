@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 27b2070ec6b8c4ccc71e0e1f05fc0faefae29384
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d40d7111bf7beac4c8a34f91481368b94f62c519
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025463"
 ---
 # <a name="server-properties---filestream-page"></a>서버 속성 - FILESTREAM 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

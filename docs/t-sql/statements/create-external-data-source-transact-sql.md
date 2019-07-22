@@ -18,14 +18,13 @@ helpviewer_keywords:
 - PolyBase, create data source
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4aa152883c8d6571f446bee5c783e96b88cbba64
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 621a122ae3464f207797b6e51a21674192e2a758
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902724"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 
@@ -43,7 +42,7 @@ SQL Server, SQL Database, SQL Data Warehouse 또는 Analytics Platform System(�
 
 ||||||
 |---|---|---|---|---|
-|** _\* SQL Server \*_ ** &nbsp;|[SQL 데이터베이스](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|**_\* SQL Server \*_** &nbsp;|[SQL 데이터베이스](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -378,7 +377,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|** _\* SQL Database \*_ ** &nbsp;|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -605,7 +604,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL 데이터베이스](create-external-data-source-transact-sql.md?view=azuresqldb-current)|** _\* SQL Data<br />Warehouse \*_ ** &nbsp;|[Analytics Platform<br />System(PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL 데이터베이스](create-external-data-source-transact-sql.md?view=azuresqldb-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System(PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -826,7 +825,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL 데이터베이스](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System(PDW) \*_ ** &nbsp;|
+|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL 데이터베이스](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System(PDW) \*_** &nbsp;|
 ||||||
 
 &nbsp;

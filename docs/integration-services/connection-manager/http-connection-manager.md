@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 26b2b3e1-d02c-46ca-8d31-7aef2bbc3c53
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6076c2e0cf877a150a2b66a5b9f4728e2cdd25c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f12d6b633433cb01b19a57c969be8ac3f8f913d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904713"
 ---
 # <a name="http-connection-manager"></a>HTTP 연결 관리자
 

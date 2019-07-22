@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c4f01db5d1d27c57b863c3421e6abee894975b85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a83f693905eb5a8b963875ea0e23e46d4e3eb55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988572"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Always On 가용성 그룹의 복제본에 대한 메타데이터를 관리하는 클러스터 변경
 

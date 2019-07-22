@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: dff99404-a002-48ee-910e-f37f013d946d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 78d7a7168f37a95cf3aac6446fa5ff9f1e263e0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0fb23fc110efff256c8ba03cc08be8de8399c488
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035745"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>XML 문서 대량 가져오기 및 내보내기 예(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

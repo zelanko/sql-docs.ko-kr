@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 02c9c35d8609a0afd150be7a645a614250755aaa
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: e6bdd627d0ce40ca44ef42c263d04beb6104edd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040562"
 ---
 # <a name="dbcc-tracestatus-transact-sql"></a>DBCC TRACESTATUS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ DBCC TRACESTATUS는 추적 플래그 번호에 대한 열과 상태에 대한 �
 ## <a name="remarks"></a>Remarks  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 세션 및 전역이라는 두 가지 유형의 추적 플래그가 있습니다. 세션 추적 플래그는 특정 연결에 대해 설정되며 해당 연결에서만 볼 수 있습니다. 전역 추적 플래그는 서버 수준에서 설정되며 서버의 모든 연결에서 볼 수 있습니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **public** 역할의 멤버 자격이 필요합니다.
   
 ## <a name="examples"></a>예  

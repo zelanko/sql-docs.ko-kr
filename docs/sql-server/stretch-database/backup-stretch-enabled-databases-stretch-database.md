@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: 18f0dff0-d8ce-4bee-a935-76ed6dfb3208
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7e7fb7bc85c3dbe56ed0ba4e694c04e0abea66c1
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 9755cb5c732ce1d3b6cd71d1ff9a540f3a4a9639
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136298"
 ---
 # <a name="backup-stretch-enabled-databases-stretch-database"></a>스트레치 사용 데이터베이스 백업(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

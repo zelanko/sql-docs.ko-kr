@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 1d8c5358-9384-47a8-b7cb-7b0650384119
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ee44d80d0600f402c317c2432fc7c9eb5105015e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 428092c62ef49b3a9f6f543afd9c68a7b7b5237b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908619"
 ---
 # <a name="raising-and-defining-events-in-a-data-flow-component"></a>데이터 흐름 구성 요소에서 이벤트 발생 및 정의
 

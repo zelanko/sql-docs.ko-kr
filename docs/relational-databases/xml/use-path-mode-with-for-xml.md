@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a685a9ad-3d28-4596-aa72-119202df3976
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 886eabf4ea67ebc8e4b850d7871d16a6ca5eab0c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: dff9b54963eb88bb29172d270c092c33d0be4127
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039168"
 ---
 # <a name="use-path-mode-with-for-xml"></a>FOR XML에서 PATH 모드 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 7c6de71b-865c-41db-9413-ad9b3562e579
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b97c44ae954886058f771ad0ae6571ebe611927d
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 346044530087c40c468abe9d304231ce06220845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984428"
 ---
 # <a name="deny-service-broker-permissions-transact-sql"></a>DENY Service Broker 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -155,7 +154,7 @@ CASCADE
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 계약, 메시지 유형, 원격 서비스 바인딩, 경로 또는 서비스에 대한 CONTROL 권한이 필요합니다. AS 절을 사용하는 경우 지정된 보안 주체가 사용 권한을 거부할 보안 개체를 소유해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  

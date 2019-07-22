@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 08a6f084-8f73-4f2a-bae4-3c7513dc99b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 9052c8192f7ea9e8fb7155a027344742a443a1b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad3852f0bb935371fd141cc4ceb98f90c7aa9c19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904350"
 ---
 # <a name="select---for-clause-transact-sql"></a>SELECT - FOR 절(Transact-SQL)
 

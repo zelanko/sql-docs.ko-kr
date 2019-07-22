@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a70e2ee6-59b0-4543-b883-e9cbae6199be
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e4e2eafc126a092a3507e49b5eb7e1ca92a25e43
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f128cbf86d30cabe0aa00ce7033b7cd5b04c93e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065599"
 ---
 # <a name="grant-asymmetric-key-permissions-transact-sql"></a>GRANT 비대칭 키 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ GRANT { permission  [ ,...n ] }
  *permission*  
  비대칭 키에 부여할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
+ ON ASYMMETRIC KEY **::** _asymmetric_key_name_  
  사용 권한을 부여할 비대칭 키를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  
@@ -87,7 +86,7 @@ AS *granting_principal*
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다.  
   
  AS 옵션을 사용하는 경우 다음과 같은 추가 요구 사항이 적용됩니다.  

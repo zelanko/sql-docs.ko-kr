@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7c4e0f0e-cadc-4c99-98f4-69799b9b356b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 461877e2c0a40833ea32780b19c77e5b9d120d09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a77f0405c9e5df1e1e49f426f065df4c7c1619c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47706671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903070"
 ---
 # <a name="control-behavior-of-triggers-and-constraints-in-synchronization"></a>동기화 시 트리거 및 제약 조건의 동작 제어
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

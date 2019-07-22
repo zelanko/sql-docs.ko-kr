@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 19043cd42f89c16dbbab88264bf5710c50d14067
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: a77c321f5ba63e7c6db3d1aac47b6ad4b0c2027a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020035"
 ---
 # <a name="configure-an-oracle-publisher"></a>Oracle 게시자 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "67586452"
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 트랜잭션 및 스냅숏 복제에 대해 다음과 같이 다른 유형의 시나리오를 지원합니다.  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 트랜잭션 및 스냅샷 복제에 대해 다음과 같이 다른 유형의 시나리오를 지원합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자로 데이터 게시  
 
@@ -59,7 +58,7 @@ ms.locfileid: "67586452"
 > [!NOTE]  
 >  **CASCADE** 옵션으로 **MSSQLSERVERDISTRIBUTOR** 공용 동의어와 구성된 Oracle 복제 사용자를 삭제하면 Oracle 게시자에서 모든 복제 개체가 제거됩니다.  
   
- Oracle 복제 사용자 스키마의 설치를 도와 주는 예제 스크립트가 제공됩니다. 이 스크립트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 후 *\<드라이브>* :\\\Program Files\Microsoft SQL Server\\ *\<InstanceName>* \MSSQL\Install\oracleadmin.sql 디렉터리에서 사용할 수 있습니다. 이 스크립트에 대한 내용은 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)항목에도 포함되어 있습니다.  
+ Oracle 복제 사용자 스키마의 설치를 도와 주는 예제 스크립트가 제공됩니다. 이 스크립트는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 후 *\<드라이브>*:\\\Program Files\Microsoft SQL Server\\*\<InstanceName>* \MSSQL\Install\oracleadmin.sql 디렉터리에서 사용할 수 있습니다. 이 스크립트에 대한 내용은 [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md)항목에도 포함되어 있습니다.  
   
  DBA 권한이 있는 계정을 사용하여 Oracle 데이터베이스에 연결하고 해당 스크립트를 실행합니다. 이 스크립트는 개체를 만들 기본 테이블스페이스(이 테이블스페이스는 이미 Oracle 데이터베이스에 있어야 함)를 비롯하여 복제 관리 사용자 스키마에 대한 사용자 이름 및 암호를 묻는 메시지를 표시합니다. 개체에 대해 다른 테이블스페이스를 지정하는 방법은 [Oracle 테이블스페이스 관리](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md)를 참조하세요. 원하는 사용자 이름과 강력한 암호를 선택한 다음 이를 기록해 둡니다. 나중에 Oracle 데이터베이스를 게시자로 구성할 때 이러한 정보를 제공해야 합니다. 복제에 필요한 개체에 대해서만 스키마를 사용하는 것이 좋습니다. 이 스키마에 게시될 테이블은 만들지 마십시오.  
   

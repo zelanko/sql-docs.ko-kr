@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9bf87691-efd8-4c53-bd2f-eefe0acd19ca
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: d47e5a70a784ba7946b7f6548dee1e8a6ccfff26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34f63ee6609c93dd9435930bfe347a0fa610ce33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65935757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120756"
 ---
 # <a name="stunion-geography-data-type"></a>STUnion(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "65935757"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-computing-the-union-of-two-polygons"></a>1. 두 Polygon의 통합 계산  
+### <a name="a-computing-the-union-of-two-polygons"></a>1\. 두 Polygon의 통합 계산  
  다음 예에서는 `STUnion()`을 사용하여 두 `Polygon` 인스턴스의 통합을 계산합니다.  
   
 ```  
@@ -71,7 +70,7 @@ SET @h = geography::STGeomFromText('POLYGON((-122.351 47.656, -122.341 47.656, -
 SELECT @g.STUnion(@h).ToString();  
 ```  
   
-### <a name="b-producing-a-fullglobe-result"></a>2. FullGlobe 결과 생성  
+### <a name="b-producing-a-fullglobe-result"></a>2\. FullGlobe 결과 생성  
  다음 예에서는 `FullGlobe`이 두 개의 `STUnion()` 인스턴스를 조합할 때 `Polygon`를 생성합니다.  
   
 ```

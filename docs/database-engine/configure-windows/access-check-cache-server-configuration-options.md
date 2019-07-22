@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0a992ea8-3ec6-4a4d-97b5-460ae7326247
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: cc290a3fbde8426c1728a03b4ec9ddeaf4d5144f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74b4e43ba9b973f83263ad36aabc859211926ef6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013317"
 ---
 # <a name="access-check-cache-server-configuration-options"></a>access check cache 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -16,14 +16,13 @@ ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 717eee6067ae024465b68fd2e4a0d8a174e77d10
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 9c474a387002070534fe228b67e4ef1152fdbd64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093309"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

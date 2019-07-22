@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ae937ebb-24ff-4a33-be3c-8f85328dfc75
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c52205e56d6040cc4a240d32bbf33a0dc8994c16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7d8945b0e37185f5ec0433a9780aa876d4be526c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033756"
 ---
 # <a name="migrate-sql-server-2014-managed-backup-settings-to-sql-server-2016"></a>SQL Server 2014 Managed Backup 설정을 SQL Server 2016으로 마이그레이션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47718321"
 |**네임스페이스:**|smart_admin|managed_backup|  
 |**시스템 저장 프로시저:**|sp_set_db_backup<br /><br /> sp_set_instance_backup|[managed_backup.sp_backup_config_basic(Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)<br /><br /> [sp_backup_config_advanced](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)<br /><br /> [sp_backup_config_schedule](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-schedule-transact-sql.md)|  
 |**보안:**|Microsoft Azure 스토리지 계정 및 액세스 키를 사용하는 SQL 자격 증명|Microsoft Azure SAS(공유 액세스 서명) 토큰을 사용하는 SQL 자격 증명|  
-|**기본 저장소:**|페이지 Blob을 사용하는 Microsoft Azure Storage|블록 Blob을 사용하는 Microsoft Azure Storage|  
+|**기본 스토리지:**|페이지 Blob을 사용하는 Microsoft Azure Storage|블록 Blob을 사용하는 Microsoft Azure Storage|  
   
 ## <a name="benefits"></a>이점  
  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 새로운 기능을 사용하는 경우 다음과 같은 여러 이점이 제공됩니다.  

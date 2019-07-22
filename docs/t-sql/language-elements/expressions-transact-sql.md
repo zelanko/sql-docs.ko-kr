@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 241da55ac2e4a0f0bf144bd0360767265f3258fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c1a4e90dfaa5f513e3d197619afd26e8ec0898d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075219"
 ---
 # <a name="expressions-transact-sql"></a>식(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +85,7 @@ ms.locfileid: "65982337"
 |----------|----------------|  
 |*constant*|특정한 단일 데이터 값을 나타내는 기호입니다. 자세한 내용은 [상수&#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md)을 참조하세요.|  
 |*scalar_function*|특정 서비스를 제공하고 단일 값을 반환하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문의 단위입니다. *scalar_function*은 SUM, GETDATE 또는 CAST 함수 또는 스칼라 사용자 정의 함수와 같은 기본 제공 스칼라 함수가 될 수 있습니다.|  
-|[ _table_name_ **.** ]|테이블의 이름 또는 별칭입니다.|  
+|[ _table_name_**.** ]|테이블의 이름 또는 별칭입니다.|  
 |*column*|열의 이름입니다. 식에는 열 이름만 사용할 수 있습니다.|  
 |*variable*|변수 또는 매개 변수의 이름입니다. 자세한 내용은 [DECLARE @local_variable&#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md)을 참조하세요.|  
 |**(** _expression_  **)**|이 항목에서 정의된 바와 같이 유효한 식입니다. 괄호는 안에 있는 식의 모든 연산자를 평가한 후에 그 결과를 다른 식과 결합하는 그룹 연산자입니다.|  

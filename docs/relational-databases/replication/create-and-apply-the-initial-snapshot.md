@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48a3bfbca1b133be9c8be9b05fef3f4e2dd9ae14
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: d8b343055ca8c307299ba375b276036c0b1954c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037434"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Create and Apply the Initial Snapshot
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "67860741"
 
 기본 스냅샷 폴더 위치를 보거나 수정하려면 다음을 참조하십시오.  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [스냅숏 옵션 수정](../../relational-databases/replication/snapshot-options.md)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [스냅샷 옵션 수정](../../relational-databases/replication/snapshot-options.md)  
   
 -   복제 프로그래밍 및 RMO 프로그래밍: [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)  
 
@@ -50,13 +49,13 @@ ms.locfileid: "67860741"
 
  배포 구성 마법사의 **스냅샷 폴더** 페이지에서 기본 스냅샷 위치를 지정합니다. 이 마법사 사용에 대한 자세한 내용은 [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)을 참조하세요. 배포자로 구성되어 있지 않은 서버에서 게시를 만드는 경우 새 게시 마법사의 **스냅샷 폴더** 페이지에서 기본 스냅샷 위치를 지정합니다. 이 마법사를 사용하는 방법에 대한 자세한 내용은 [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
- **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅숏 위치를 수정합니다. 자세한 내용은 [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요. **게시 속성 - \<게시>** 대화 상자에서 각 게시에 대한 스냅숏 폴더를 설정합니다. 자세한 내용은 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ **배포자 속성 - \<Distributor&gt;** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 수정합니다. 자세한 내용은 [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요. **게시 속성 - \<게시&gt;** 대화 상자에서 각 게시에 대한 스냅샷 폴더를 설정합니다. 자세한 내용은 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 ### <a name="modify-the-default-snapshot-location"></a>기본 스냅샷 위치 수정  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅숏 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.  
+1.  **배포자 속성 - \<Distributor&gt;** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.  
   
-2.  **게시자 속성 - \<Publisher>** 대화 상자에서 **기본 스냅숏 폴더** 속성에 대한 값을 입력합니다.  
+2.  **게시자 속성 - \<Publisher&gt;** 대화 상자에서 **기본 스냅샷 폴더** 속성에 대한 값을 입력합니다.  
   
     > [!NOTE]  
     >  스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
@@ -73,14 +72,14 @@ ms.locfileid: "67860741"
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 게시자에 연결한 다음 해당 서버 노드를 확장합니다.    
 2.  **복제** 폴더를 확장한 다음 **로컬 게시** 폴더를 확장합니다.    
 3.  스냅샷을 생성할 게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기**를 클릭합니다.    
-4.  **스냅숏 에이전트 상태 보기 - \<게시>** 대화 상자에서 **시작**을 클릭합니다.    
+4.  **스냅샷 에이전트 상태 보기 - \<게시&gt;** 대화 상자에서 **시작**을 클릭합니다.    
  스냅샷 에이전트에서 스냅샷 생성을 마치면 "[100%] 17개 아티클의 스냅샷이 생성되었습니다"라는 메시지가 표시됩니다.  
   
 ### <a name="in-replication-monitor"></a>복제 모니터에서  
   
 1.  복제 모니터에서 왼쪽 창의 게시자 그룹을 확장한 다음 게시자를 확장합니다.    
 2.  스냅샷을 생성할 게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 생성**을 클릭합니다.    
-3.  스냅샷 에이전트 상태를 보려면 **에이전트** 탭을 클릭합니다. 자세한 내용을 보려면 표에서 스냅숏 에이전트를 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.  
+3.  스냅샷 에이전트 상태를 보려면 **에이전트** 탭을 클릭합니다. 자세한 내용을 보려면 표에서 스냅샷 에이전트를 마우스 오른쪽 단추로 클릭한 다음 **자세히 보기**를 클릭합니다.  
 
 ## <a name="using-transact-sql"></a>Transact-SQL 사용
 초기 스냅샷은 스냅샷 에이전트 작업을 만들고 실행하거나 배치 파일에서 스냅샷 에이전트 실행 파일을 실행하여 프로그래밍 방식으로 작성할 수 있습니다. 초기 스냅샷이 생성되면 구독이 처음으로 동기화될 때 구독자로 전송되고 적용됩니다. 명령 프롬프트 또는 배치 파일에서 스냅샷 에이전트를 실행하는 경우 기존 스냅샷이 무효화될 때마다 에이전트를 다시 실행해야 합니다.  
@@ -92,7 +91,7 @@ ms.locfileid: "67860741"
   
 2.  [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. 이때 **@publication** 및 다음 매개 변수를 지정합니다.  
   
-    -   배포자에서 스냅숏 에이전트를 실행하는 Windows 인증 자격 증명을 지정하는 **@job_login** .  
+    -   배포자에서 스냅샷 에이전트를 실행하는 Windows 인증 자격 증명을 지정하는 **@job_login** .  
   
     -   제공된 Windows 자격 증명의 암호인 **@job_password** .  
   
@@ -183,9 +182,9 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 **false**이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅숏 에이전트 작업을 만듭니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 **false**이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅샷 에이전트 작업을 만듭니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅숏을 생성하는 에이전트 작업을 시작합니다.  
+5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅샷을 생성하는 에이전트 작업을 시작합니다.  
   
 6.  (옵션) <xref:Microsoft.SqlServer.Replication.TransPublication.SnapshotAvailable%2A> 의 값이 **true**이면 구독자에서 스냅샷을 사용할 수 있습니다.  
   
@@ -217,9 +216,9 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> 메서드를 호출하여 개체의 나머지 속성을 로드합니다. 이 메서드가 **false**를 반환하는 경우 2단계에서 게시 속성이 올바르게 정의되지 않았거나 게시가 없습니다.  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 **false**이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅숏 에이전트 작업을 만듭니다.  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.SnapshotAgentExists%2A>의 값이 **false**이면 <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>를 호출하여 이 게시에 대한 스냅샷 에이전트 작업을 만듭니다.  
   
-5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅숏을 생성하는 에이전트 작업을 시작합니다.  
+5.  <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> 메서드를 호출하여 이 게시에 대한 스냅샷을 생성하는 에이전트 작업을 시작합니다.  
   
 6.  (옵션) <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> 의 값이 **true**이면 구독자에서 스냅샷을 사용할 수 있습니다.  
   
@@ -261,7 +260,7 @@ REM --Start the Snapshot Agent to generate the snapshot for AdvWorksSalesOrdersM
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)   
- [스냅숏으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
+ [스냅샷으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   

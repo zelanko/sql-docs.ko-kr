@@ -8,13 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d1a3a27bfce0a62aa70d047e221f54ccc33c0c6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e88c2e118baabc2c6f8bc80c12ff00f0ff7b399
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068867"
 ---
 # <a name="run-an-ssis-package-from-the-command-prompt-with-dtexecexe"></a>명령 프롬프트에서 DTExec.exe를 사용하여 SSIS 패키지 실행
 

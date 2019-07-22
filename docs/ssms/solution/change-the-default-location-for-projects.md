@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3b8af28d-3095-40aa-b7db-636f2852d483
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 9910f5ced7a3adf4801a7723753ac4981fe0c93b
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 00afc835c8d604fe303e57ef03d70ff6999fc72c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689913"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263576"
 ---
 # <a name="change-the-default-location-for-projects"></a>프로젝트 기본 위치 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

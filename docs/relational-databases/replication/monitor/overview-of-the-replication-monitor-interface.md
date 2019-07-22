@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 078f0e34-7153-45c4-8725-778b5bef88da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4c6df1fe4c6954539afe8043ffb36c89e5f428fc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e3681d88f0cd91ce955919ad24f0e95b0600c5e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061454"
 ---
 # <a name="overview-of-the-replication-monitor-interface"></a>복제 모니터 인터페이스 개요
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -202,7 +201,7 @@ ms.locfileid: "54128553"
   
      이 탭에는 게시에 대한 로그 판독기 에이전트 정보가 표시됩니다. 이 탭은 로그 판독기 에이전트 세부 정보 창과 동일합니다.  
   
--   **배포자에서 구독자로의 연결 기록** 탭(스냅숏 복제 및 트랜잭션 복제)  
+-   **배포자에서 구독자로의 연결 기록** 탭(스냅샷 복제 및 트랜잭션 복제)  
   
      이 탭에는 구독에 대한 배포 에이전트 정보가 표시됩니다.  
   

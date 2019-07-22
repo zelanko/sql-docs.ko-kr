@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: d4b073c4-4238-41fc-a258-4e114216e185
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ee831e325d7291548e9d6e4ae266cabcb2607a46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69bfdefda7d28425ddee9add8963ee19f093cc04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718251"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896120"
 ---
 # <a name="access-control-for-sensitive-data-in-packages"></a>패키지의 중요한 데이터에 대한 액세스 제어
 
@@ -77,7 +76,7 @@ ms.locfileid: "65718251"
  프로젝트(.ispac 파일)를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 서버에서 파일 시스템으로 내보내는 경우 보호 수준이 **EncryptSensitiveWithUserKey**로 자동으로 변경됩니다. **에서** Integration Services 프로젝트 가져오기 마법사 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 프로젝트를 가져오는 경우 **속성** 창의 **ProtectionLevel** 속성은 **EncryptSensitiveWithUserKey**값을 표시합니다.  
   
 ## <a name="protection-level-setting-based-on-package-life-cycle"></a>패키지 수명 주기 기반의 보호 수준 설정  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 보호 수준은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지 개발을 시작할 때 처음 설정할 수 있습니다. 나중에 패키지를 배포하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]로 패키지를 가져오거나 또는 내보낼 때 그리고 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템으로 복사할 때 패키지 보호 수준을 업데이트할 수 있습니다. 예를 들어 사용자 키 보호 수준 옵션 중 하나를 사용하여 사용자 컴퓨터에 패키지를 만들고 저장한 경우 해당 패키지를 다른 사용자에게 전달하기 전에 보호 수준을 변경해야 합니다. 그렇지 않으면 패키지를 열 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 보호 수준은 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 패키지 개발을 시작할 때 처음 설정할 수 있습니다. 나중에 패키지를 배포하거나 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]로 패키지를 가져오거나 또는 내보낼 때 그리고 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssIS](../../includes/ssis-md.md)] 패키지 저장소 또는 파일 시스템으로 복사할 때 패키지 보호 수준을 업데이트할 수 있습니다. 예를 들어 사용자 키 보호 수준 옵션 중 하나를 사용하여 사용자 컴퓨터에 패키지를 만들고 저장한 경우 해당 패키지를 다른 사용자에게 전달하기 전에 보호 수준을 변경해야 합니다. 그렇지 않으면 패키지를 열 수 없습니다.  
   
  다음은 일반적으로 보호 수준을 변경하는 단계를 순서대로 나열한 것입니다.  
   

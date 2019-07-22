@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 6d493629c8b0564467155c3eae6ac05e25c5105c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 573ddefa33c1e021c16359f0164f0eda49d329fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012108"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>시스템 관리자가 잠겨 있는 경우 SQL Server에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5f4b664b-3d3d-4d07-a0e7-791d78743504
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 74754bbd3b4af014febc532e5fb522e7c8a0b82a
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: c515625ca08555065cd33ecfe1b83de08773260f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690518"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264334"
 ---
 # <a name="create-queries-with-unnamed-parameters-visual-database-tools"></a>명명되지 않은 매개 변수를 사용하여 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

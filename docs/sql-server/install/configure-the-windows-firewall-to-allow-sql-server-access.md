@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48b1e9b9b7c2b48736a54e255649c409d3b4bfd2
-ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
+ms.openlocfilehash: ba7459c97a64422023bed0cffd292c418933ce43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67624584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126196"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

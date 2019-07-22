@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f530f609c4c5ebc83d74d2e8ea376efe978dea89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3cf335242bd0f0e33939c0a72c19390d90252103
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941844"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

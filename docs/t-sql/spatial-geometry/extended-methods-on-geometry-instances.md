@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6472c5e1-d37f-4919-a903-177e90cbfe1b
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: e97fa36ff362889e45c12b50aa011bc6dac45dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81b74eec0ea22cd6c88cc896af6537fa893ed925
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081170"
 ---
 # <a name="extended-methods-on-geometry-instances"></a>geometry 인스턴스의 확장 메서드
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

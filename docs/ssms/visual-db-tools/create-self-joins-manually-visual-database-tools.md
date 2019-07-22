@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 910ed516-cb84-481b-95d0-cba3e89afdba
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: faf8abf07ba1bbdb58cb452fb5c4d40b66ca55b9
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 5ef290600a71b502df47dc873ef68c941ee833bd
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690501"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264285"
 ---
 # <a name="create-self-joins-manually-visual-database-tools"></a>수동으로 자체 조인 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

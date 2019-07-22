@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ddc31964a018bec7dc0829d21e85283db5f069e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a36cfa888b5a00e8f69404db3989cf9852f0d47e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110752"
 ---
 # <a name="running-sql-server-unit-tests"></a>SQL Server 단위 테스트 실행
 코드 품질을 향상하고 유지 관리하기 위해 데이터베이스 개체의 동작을 확인하는 SQL Server 단위 테스트를 만들어 실행한 후 해당 테스트를 버전 제어에 체크 인할 수 있습니다. 사용자 본인이나 팀의 멤버가 데이터베이스 스키마를 변경하는 경우 SQL Server 단위 테스트와 소프트웨어 단위 테스트를 모두 실행하여 변경 내용으로 인해 기존 기능이 손상되지 않았는지 확인해야 합니다. 개별 테스트를 실행하거나 테스트 목록이라고 하는 테스트 그룹을 실행할 수 있습니다. 자세한 내용은 [테스트 목록 사용(Visual Studio 2010)](https://msdn.microsoft.com/library/ms182461(VS.100).aspx)을 참조하세요.  

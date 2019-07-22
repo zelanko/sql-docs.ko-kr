@@ -12,14 +12,13 @@ ms.assetid: f8a98486-5438-44a8-b454-9e6ecbc74f83
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5798c0048d10e074f0aa64c3d50ce14027865e4a
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: cd0efece05be169ce220d6e16a4bebf10b5ca36d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082929"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>전체 텍스트 인덱스 만들기 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -166,7 +165,7 @@ GO
  이 예에서는 Document 테이블의 고유 키 열 이름인 DocumentID가 포함된 단일 행을 표시하는 `Unique Key Column`라는 결과 집합 열을 반환합니다. 이 쿼리에 잘못된 인덱스 이름이 포함되어 있거나, 인덱스 이름이 테이블과 일치하지 않거나, 테이블이 존재하지 않는 경우에는 NULL이 반환됩니다.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>varbinary(max) 및 xml 열 인덱싱  
- **varbinary(max)**, **varbinary**또는 **xml** 열이 전체 텍스트 인덱싱된 경우 다른 전체 텍스트 인덱싱된 열과 마찬가지로 전체 텍스트 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE)를 사용하여 이러한 열을 쿼리할 수 있습니다.
+ **varbinary(max)** , **varbinary**또는 **xml** 열이 전체 텍스트 인덱싱된 경우 다른 전체 텍스트 인덱싱된 열과 마찬가지로 전체 텍스트 조건자(CONTAINS 및 FREETEXT) 및 함수(CONTAINSTABLE 및 FREETEXTTABLE)를 사용하여 이러한 열을 쿼리할 수 있습니다.
    
 ### <a name="index-varbinarymax-or-varbinary-data"></a>varbinary(max) 또는 varbinary 데이터 인덱싱  
  단일 **varbinary(max)** 또는 **varbinary** 열에 많은 문서 유형을 저장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 필터가 설치되어 있고 운영 체제에서 사용할 수 있는 문서 유형을 지원합니다. 각 문서의 문서 유형은 문서의 파일 확장명으로 식별됩니다. 예를 들어 .doc 파일 확장명의 경우 전체 텍스트 검색은 Microsoft Word 문서를 지원하는 필터를 사용합니다. 사용 가능한 문서 유형의 목록을 보려면 [sys.fulltext_document_types](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) 카탈로그 뷰를 쿼리하세요.  

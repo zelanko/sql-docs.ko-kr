@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 70c609c6ace0eb56d3afc703d89e2dea25191210
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: fbb66e9d7aec693b0a0382b4845ec3f21c06e2da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67579408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037418"
 ---
 # <a name="delete-a-push-subscription"></a>밀어넣기 구독 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,15 +68,15 @@ ms.locfileid: "67579408"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 밀어넣기 구독을 삭제하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_dropsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)을 실행합니다. 이때 **@publication** 및 **@subscriber** 에서 사용 가능합니다. **@article** 에 **all** 값을 지정합니다. (옵션) 배포자에 액세스할 수 없으면 **@ignore_distributor** 에 **@ignore_distributor** 을 지정하여 배포자에서 관련 개체를 제거하지 않고 구독을 삭제합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_dropsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)을 실행합니다. 이때 **@publication** 및 **@subscriber**에서 사용 가능합니다. **@article**에 **all** 값을 지정합니다. (옵션) 배포자에 액세스할 수 없으면 **@ignore_distributor** 에 **@ignore_distributor** 을 지정하여 배포자에서 관련 개체를 제거하지 않고 구독을 삭제합니다.  
   
 2.  구독 데이터베이스의 구독자에서 [sp_subscription_cleanup&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md)을 실행하여 구독 데이터베이스에 있는 복제 메타데이터를 제거합니다.  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>병합 게시에 대한 밀어내기 구독을 삭제하려면  
   
-1.  게시자에서 **@publication** , **@subscriber** 및 **@subscriber_db** 를 지정하여 [sp_dropmergesubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)을 실행합니다. (옵션) 배포자에 액세스할 수 없으면 **@ignore_distributor** 에 **@ignore_distributor** 을 지정하여 배포자에서 관련 개체를 제거하지 않고 구독을 삭제합니다.  
+1.  게시자에서 **@publication**, **@subscriber** 및 **@subscriber_db**를 지정하여 [sp_dropmergesubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)을 실행합니다. (옵션) 배포자에 액세스할 수 없으면 **@ignore_distributor** 에 **@ignore_distributor** 을 지정하여 배포자에서 관련 개체를 제거하지 않고 구독을 삭제합니다.  
   
-2.  구독 데이터베이스의 구독자에서 [sp_mergesubscription_cleanup&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)을 실행합니다. **@publisher** , **@publisher_db** 및 **@publication** 을 지정합니다. 이렇게 하면 구독 데이터베이스에서 병합 메타데이터가 제거됩니다.  
+2.  구독 데이터베이스의 구독자에서 [sp_mergesubscription_cleanup&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md)을 실행합니다. **@publisher**, **@publisher_db** 및 **@publication**을 지정합니다. 이렇게 하면 구독 데이터베이스에서 병합 메타데이터가 제거됩니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예에서는 트랜잭션 게시에 대한 밀어넣기 구독을 삭제합니다.  

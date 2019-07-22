@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: eef38310-4498-4ccc-bb77-5bbd1c7cc477
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: d6c6ecfab62ed35394bbd1802e06adc4ad3807c2
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: c2526d2facc494dc102ac6674ac01ab851b0a40c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689131"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262461"
 ---
 # <a name="xml-indexes-dialog-box-visual-database-tools"></a>XML 인덱스 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

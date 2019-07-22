@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9531588c-e7ec-4049-9f9c-ee000c49c5de
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 68e76bc218016f5c759e77a5cf91f403b066d8d3
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: f0dc393db0da76d48c3d64a04a0ba57cda580ad8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690264"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252050"
 ---
 # <a name="open-with-new-file"></a>연결 프로그램(새 파일)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

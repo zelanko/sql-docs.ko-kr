@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bb9fe0d3-e432-42d3-b324-64dc908b544a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e3909bfa91ac91b871c35d7e5a05093a578dad01
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 21e642feba6a2726aa4d5615f6ae508fa33c1694
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934659"
 ---
 # <a name="encode-and-decode-sql-server-identifiers"></a>SQL Server 식별자 인코딩 및 디코딩
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

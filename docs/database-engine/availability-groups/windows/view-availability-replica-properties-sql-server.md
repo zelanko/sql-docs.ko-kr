@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14fed3c4-8ecc-4e1c-931d-a7ec1e9f9e90
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 2608097cb5b0ca626c8776c6a7312552a181342d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f569074893a5894c0823f1a1af7864bacceb9eda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013374"
 ---
 # <a name="view-availability-replica-properties-sql-server"></a>가용성 복제본 속성 보기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

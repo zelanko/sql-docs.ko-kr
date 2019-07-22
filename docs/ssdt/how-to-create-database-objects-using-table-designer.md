@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6c48efccdb4d32d9b471aae758e31084c7b87a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897172"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>방법: 테이블 디자이너를 사용하여 데이터베이스 개체 만들기
 **SQL Server 개체 탐색기**의 새 **SQL Server** 노드는 시각적으로 SSMS와 매우 비슷할 뿐만 아니라 SSMS와 비슷하게 동작하는 상황에 맞는 메뉴를 사용하여 새 개체를 만들 수도 있습니다.  
@@ -63,18 +62,18 @@ ms.locfileid: "65098154"
   
     |속성|데이터 형식|**Null 허용**|  
     |--------|-------------|-------------------|  
-    |Id|ssNoversion|선택 취소|  
+    |Id|int|선택 취소|  
     |속성|nvarchar(128)|선택 취소|  
   
 7.  **Products**라는 테이블을 하나 이상 만듭니다. 열 표를 사용하여 Products 테이블에 다음 열을 추가 합니다. 그런 다음, 테이블의 이름이 `[dbo].[Products]`가 되도록 스크립트를 변경해야 합니다.  
   
     |속성|데이터 형식|**Null 허용**|  
     |--------|-------------|-------------------|  
-    |Id|ssNoversion|선택 취소|  
+    |Id|int|선택 취소|  
     |속성|nvarchar(128)|선택 취소|  
-    |ShelfLife|ssNoversion|선택|  
-    |SupplierId|ssNoversion|선택|  
-    |CustomerId|ssNoversion|선택|  
+    |ShelfLife|int|선택|  
+    |SupplierId|int|선택|  
+    |CustomerId|int|선택|  
   
 ### <a name="to-create-a-new-check-constraint-using-the-table-designer"></a>테이블 디자이너를 사용하여 새 CHECK 제약 조건을 만들려면  
   

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 18885245-5f55-4831-8f0b-7f2a3e82e246
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8f60995e7741dd0ed7f420a07c7cd2aa2199ed3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a08dbc63f765b436d9f6bb56be6456f197217db8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075276"
 ---
 # <a name="-equals-transact-sql"></a>=(같음)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +62,7 @@ expression = expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using--in-a-simple-query"></a>1\. 간단한 쿼리에서 = 사용  
+### <a name="a-using--in-a-simple-query"></a>1. 간단한 쿼리에서 = 사용  
  다음 예에서는 Equals 연산자(=)를 사용하여 `HumanResources.Department` 열의 값이 'Manufacturing' 단어와 같은 `GroupName` 테이블의 모든 행을 반환합니다.  
   
 ```  
@@ -88,7 +87,7 @@ DepartmentID Name
   
 ```  
   
-### <a name="b-comparing-null-and-non-null-values"></a>2\. NULL 값과 NULL이 아닌 값 비교  
+### <a name="b-comparing-null-and-non-null-values"></a>2. NULL 값과 NULL이 아닌 값 비교  
  다음 예에서는 Equals(`=`)와 Not Equal To(`<>`) 비교 연산자를 사용하여 테이블의 `NULL` 및 Null이 아닌 값에 비교를 수행합니다. 또한 `IS NULL`이 `SET ANSI_NULLS` 설정의 영향을 받지 않는다는 것을 보여 줍니다.  
   
 ```  

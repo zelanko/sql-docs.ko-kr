@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 1c92ec7e-ae53-4498-8bfd-c66a42a24d54
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 56a01d375136cced6b096522b97c956500b2a6a6
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 1da6aaf1f3befc09ccf26d4405a6d5853de5441d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058044"
 ---
 # <a name="enable-and-disable-change-tracking-sql-server"></a>변경 내용 추적 설정 및 해제(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ SET CHANGE_TRACKING = ON
 (CHANGE_RETENTION = 2 DAYS, AUTO_CLEANUP = ON)  
 ```  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
   
  변경 내용 추적을 설정할 때 CHANGE_RETENTION 및 AUTO_CLEANUP 옵션을 지정할 수 있으며, 변경 내용 추적을 설정한 후 언제든지 이 값을 변경할 수 있습니다.  
   
@@ -64,7 +63,7 @@ ENABLE CHANGE_TRACKING
 WITH (TRACK_COLUMNS_UPDATED = ON)  
 ```  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 속성&#40;변경 내용 추적 페이지&#41; [Database Properties &#40;ChangeTracking Page&#41;](../../relational-databases/databases/database-properties-changetracking-page.md) 에 변경 내용을 설정할 수도 있습니다.  
   
  TRACK_COLUMNS_UPDATED 옵션이 ON으로 설정되면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 에서는 내부 변경 내용 추적 테이블에 업데이트된 열에 대한 추가 정보를 저장합니다. 열 추적을 사용하면 애플리케이션이 업데이트된 열만 동기화하도록 설정할 수 있습니다. 이로 인해 효율성과 성능이 향상될 수 있습니다. 그러나 열 추적 정보 유지 관리로 인해 스토리지 오버헤드가 추가되기 때문에 이 옵션은 기본적으로 OFF로 설정됩니다.  
   

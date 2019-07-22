@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 10f25703-49a2-4d45-abab-6b4da2a57ba5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0140a11c9b9b4c161deb01d4439e9fb52eda63af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71cbdada940bcb252f7e90b40ce645a35972f076
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941568"
 ---
 # <a name="extract-data-by-using-the-odbc-source"></a>ODBC 원본을 사용하여 데이터 추출
 

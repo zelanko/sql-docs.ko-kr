@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: faace8a3-daa9-4208-a2cd-4249eb32175c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3e6e67c4be74332bb9faf25eeac62f811ad86526
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f0bb90a3dd13ffd245c1cac5a9ee1610055aae55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929281"
 ---
 # <a name="drop-server-audit--transact-sql"></a>DROP SERVER AUDIT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ DROP SERVER AUDIT audit_name
   
  DROP SERVER AUDIT는 연결된 서버 또는 데이터베이스 감사 사양을 삭제하지 않습니다. 이러한 사양은 수동으로 삭제하거나 분리하여 나중에 새 서버 감사에 매핑해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버 감사 보안 주체를 생성, 변경 또는 삭제하려면 ALTER ANY SERVER AUDIT 또는 CONTROL SERVER 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

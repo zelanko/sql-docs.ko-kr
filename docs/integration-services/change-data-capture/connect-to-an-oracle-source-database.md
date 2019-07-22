@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 76b35434fd3d9a171478394967ef13cca6411c32
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4766cac774707ffc9f9d74d38682a420b0e08403
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099806"
 ---
 # <a name="connect-to-an-oracle-source-database"></a>Oracle 원본 데이터베이스에 연결
 

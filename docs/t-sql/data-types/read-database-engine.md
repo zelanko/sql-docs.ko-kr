@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f2b8207c-b69f-4327-a874-100b3a1f27d8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7aa7978fb568eafc62060130c4e8220f4d5612dd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9fb69a5c4e9d303ab0e3a7a3e2edeeeeed228391
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56037524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000606"
 ---
 # <a name="read-database-engine"></a>Read(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

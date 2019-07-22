@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: e64f7695-2f23-4adb-b83d-52f147cc1a2f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 26e6efb9126789a33dbaf69a3c43a1169d687875
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0849a7180f6ababe9fa1311473ebcfd994d13b4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911221"
 ---
 # <a name="security-audit-event-category-sql-server-profiler"></a>Security Audit 이벤트 범주(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "47820141"
 |[Audit Database Operation 이벤트 클래스](../../relational-databases/event-classes/audit-database-operation-event-class.md)|검사점 또는 구독 쿼리 알림과 같은 여러 작업이 발생했음을 나타냅니다.|  
 |[Audit Database Principal Impersonation 이벤트 클래스](../../relational-databases/event-classes/audit-database-principal-impersonation-event-class.md)|데이터베이스 범위에서 가장이 발생했음을 나타냅니다.|  
 |[Audit Database Principal Management 이벤트 클래스](../../relational-databases/event-classes/audit-database-principal-management-event-class.md)|데이터베이스에서 보안 주체가 생성, 변경 또는 삭제되었음을 나타냅니다.|  
-|[Audit Database Scope GDR 이벤트 클래스](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)| [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자에 의해 문 사용 권한에 대한 GRANT, REVOKE 또는 DENY 명령이 실행되었음을 나타냅니다.|  
+|[Audit Database Scope GDR 이벤트 클래스](../../relational-databases/event-classes/audit-database-scope-gdr-event-class.md)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자에 의해 문 사용 권한에 대한 GRANT, REVOKE 또는 DENY 명령이 실행되었음을 나타냅니다.|  
 |[Audit DBCC 이벤트 클래스](../../relational-databases/event-classes/audit-dbcc-event-class.md)|DBCC 명령이 실행되었음을 나타냅니다.|  
 |[Audit Fulltext 이벤트 클래스](../../relational-databases/event-classes/audit-fulltext-event-class.md)|전체 텍스트 이벤트가 발생했음을 나타냅니다.|  
 |[Audit Login Change Password 이벤트 클래스](../../relational-databases/event-classes/audit-login-change-password-event-class.md)|사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 암호를 변경했음을 나타냅니다.|  

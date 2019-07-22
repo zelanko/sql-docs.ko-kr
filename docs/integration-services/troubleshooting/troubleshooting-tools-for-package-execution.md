@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f18d6ff6-e881-444c-a399-730b52130e7c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a43ee9007ab396357e2390841384e61101fa4ec4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 418ba74914226b422417af78aa18fcc1ce5cba9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945473"
 ---
 # <a name="troubleshooting-tools-for-package-execution"></a>패키지 실행 문제 해결 도구
 

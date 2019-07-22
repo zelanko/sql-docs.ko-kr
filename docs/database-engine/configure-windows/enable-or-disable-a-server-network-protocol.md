@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ec5ccb69-61c9-4576-8843-014b976fd46e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 55b104222d746e3d10641ecf61b7059e519f0717
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 914250b46e7608f3b0977a2b5c4d7218032989f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011824"
 ---
 # <a name="enable-or-disable-a-server-network-protocol"></a>서버 네트워크 프로토콜 설정 또는 해제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

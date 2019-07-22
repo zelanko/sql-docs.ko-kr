@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 99b43a72-0722-4a7b-a493-bdee1c74c7b9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bf3b9c4dfd1216cccadb3a82e949168626206a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4255caf93e7076745bfe798c0b200c981d4651bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019754"
 ---
 # <a name="hasdbaccess-transact-sql"></a>HAS_DBACCESS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -51,7 +50,7 @@ HAS_DBACCESS ( 'database_name' )
  사용자가 액세스 정보를 얻으려고 하는 데이터베이스의 이름입니다. *database_name*은 **sysname**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  HAS_DBACCESS는 사용자가 데이터베이스에 액세스할 수 있으면 1을 반환하고 사용자가 데이터베이스에 액세스할 수 없으면 0을 반환하며 데이터베이스 이름이 잘못되었으면 NULL을 반환합니다.  

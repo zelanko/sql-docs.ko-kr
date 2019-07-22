@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 7ee7a789-db36-4be9-8a0e-0362a1e152dd
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15a9659ce024aceb016d0140893e401500e0fe6d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: f445e54cf20edb107a50bef27857588b98e0895f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127276"
 ---
 # <a name="view-a-list-of-databases-on-an-instance-of-sql-server"></a>SQL Server 인스턴스에서 데이터베이스의 목록 보기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ ms.locfileid: "51557880"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  **sys.databases** 의 호출자가 데이터베이스의 소유자가 아니고 데이터베이스가 **master** 또는 **tempdb**가 아닐 경우 해당 행을 보려면 최소한 서버 수준의 ALTER ANY DATABASE 또는 VIEW ANY DATABASE 권한이 있거나 **master** 데이터베이스에서 CREATE DATABASE 권한이 있어야 합니다. 호출자가 연결된 데이터베이스는 항상 **sys.databases**에서 볼 수 있습니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

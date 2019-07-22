@@ -10,7 +10,6 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: jroth
 helpviewer_keywords:
 - projects [SQL Server Management Studio], tutorials
 - source controls [SQL Server Management Studio], tutorials
@@ -20,12 +19,12 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: 982f463911c0d0ff2d7ac52be0616e50b5ecd4eb
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d4bf028163905763ae87f04e03c0a95ddf4abcaf
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834509"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263359"
 ---
 # <a name="script-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 개체 스크립팅
 
@@ -136,9 +135,9 @@ SSMS에서 GUI를 사용하여 작업을 완료할 때마다 작업에 연결된
 
 5. **다음** 선택하여 **스크립팅 옵션 설정** 페이지를 엽니다. 여기에서 스크립트 및 일부 추가 고급 옵션을 저장하는 위치를 구성할 수 있습니다. 
 
-    1\. **새 쿼리 창에 저장**을 선택합니다.
+    1. **새 쿼리 창에 저장**을 선택합니다.
 
-    2\. **고급**을 선택하여 다음 옵션의 설정을 확인합니다.
+    2. **고급**을 선택하여 다음 옵션의 설정을 확인합니다.
 
       * *통계 스크립팅*으로 설정된 **통계 스크립팅**입니다.
       * *스키마 전용*으로 설정된 **스크립팅할 데이터 형식**입니다.

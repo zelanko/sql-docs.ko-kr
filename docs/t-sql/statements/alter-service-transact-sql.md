@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 82c14fd14460f3b134441931493357a33a2cacf4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cade91c9c654b9cfae83c1dbf8a7684c2f7dba81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070244"
 ---
 # <a name="alter-service-transact-sql"></a>ALTER SERVICE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ALTER SERVICE service_name
  *service_name*  
  변경할 서비스의 이름입니다. 서버, 데이터베이스 및 스키마 이름은 지정될 수 없습니다.  
   
- ON QUEUE [ _schema_name_**.** ] *queue_name*  
+ ON QUEUE [ _schema_name_ **.** ] *queue_name*  
  이 서비스의 새 큐를 지정합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 이 서비스에 대한 모든 메시지를 현재 큐에서 새 큐로 이동합니다.  
   
  ADD CONTRACT *contract_name*  
@@ -66,12 +65,12 @@ ALTER SERVICE service_name
   
  서비스에 대한 AUTHORIZATION을 변경하려면 ALTER AUTHORIZATION 문을 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서비스 변경 권한은 기본적으로 서비스 소유자, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-queue-for-a-service"></a>1. 서비스 큐 변경  
+### <a name="a-changing-the-queue-for-a-service"></a>1\. 서비스 큐 변경  
  다음 예에서는 `//Adventure-Works.com/Expenses` 큐를 사용하도록 `NewQueue` 서비스를 변경합니다.  
   
 ```  
@@ -79,7 +78,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
     ON QUEUE NewQueue ;  
 ```  
   
-### <a name="b-adding-a-new-contract-to-the-service"></a>2. 서비스에 새 계약 추가  
+### <a name="b-adding-a-new-contract-to-the-service"></a>2\. 서비스에 새 계약 추가  
  다음 예에서는 `//Adventure-Works.com/Expenses` 계약에 관한 대화를 허용하도록 `//Adventure-Works.com/Expenses` 서비스를 변경합니다.  
   
 ```  
@@ -87,7 +86,7 @@ ALTER SERVICE [//Adventure-Works.com/Expenses]
     (ADD CONTRACT [//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-### <a name="c-adding-a-new-contract-to-the-service-dropping-existing-contract"></a>3. 서비스에 새 계약 추가 및 기존 계약 삭제  
+### <a name="c-adding-a-new-contract-to-the-service-dropping-existing-contract"></a>C. 서비스에 새 계약 추가 및 기존 계약 삭제  
  다음 예에서는 `//Adventure-Works.com/Expenses` 계약에 관한 대화를 허용하고 `//Adventure-Works.com/Expenses/ExpenseProcessing` 계약에 관한 대화를 허용하지 않도록 `//Adventure-Works.com/Expenses/ExpenseSubmission` 서비스를 변경합니다.  
   
 ```  

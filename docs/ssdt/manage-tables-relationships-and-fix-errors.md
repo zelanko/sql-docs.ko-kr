@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 729e5866-aa6f-4c7d-9c75-aa2ae5ab9269
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2ca364ce0b1c1d90c153538d9a622b8a56b275ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0ba15dc6224811630bcdfaa5f754b9823cf5dcd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000631"
 ---
 # <a name="manage-tables-relationships-and-fix-errors"></a>테이블 및 관계 관리, 오류 해결
 이 섹션의 항목은 테이블 디자이너를 사용하여 테이블을 디자인하고 테이블 관계를 관리하는 방법에 대해 설명합니다. 추가 항목은 일반적인 구문 또는 의미 오류를 해결하는 방법에 대해 설명합니다.  

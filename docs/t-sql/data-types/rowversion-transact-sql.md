@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 65c9cf0e-3e8a-45f8-87b3-3460d96afb0b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 876e498a84ea3b6066647b47ea7ba27b5fc2a91d
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: b08c5653243bce5852bab54bee267a43cc3b16e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000588"
 ---
 # <a name="rowversion-transact-sql"></a>rowversion(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

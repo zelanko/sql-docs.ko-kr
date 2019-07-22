@@ -9,14 +9,13 @@ ms.technology: data-movement
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f32224d4056b321e49091a90d2f62da3e6d3061
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab41b5497e95b454db07926c55dd926df1c86135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031064"
 ---
 # <a name="import-data-from-excel-to-sql-server-or-azure-sql-database"></a>Excel에서 SQL Server 또는 Azure SQL Database로 데이터 가져오기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

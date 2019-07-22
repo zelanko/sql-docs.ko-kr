@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5bc778a2f0b1126925003ebb13df0f5a0dd1ec0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f00e060bf477d6e43f2ddd42e0fd4bbbf6515898
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943342"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>FOR XML 쿼리와 중첩 FOR XML 쿼리 비교
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

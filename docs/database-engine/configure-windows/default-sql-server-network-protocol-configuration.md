@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 635ea361-a797-4971-bd05-e3415862bc5c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 7775c1b66567cc72892b4f8ba5e4d0cf00f1ed52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 218389eaf76336e33d866f16c6b79ef54661be0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011953"
 ---
 # <a name="default-sql-server-network-protocol-configuration"></a>기본 SQL Server 네트워크 프로토콜 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

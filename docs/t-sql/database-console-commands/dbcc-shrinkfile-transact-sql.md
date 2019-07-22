@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: e02b2318-bee9-4d84-a61f-2fddcf268c9f
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: eb1f7d9efbbf260395cff607d5f8aa3209c677c4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ac274000ffdb1bcd29ebad2a2e0d0395b8daba0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930323"
 ---
 # <a name="dbcc-shrinkfile-transact-sql"></a>DBCC SHRINKFILE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

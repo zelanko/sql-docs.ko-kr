@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a40083b3-4f7b-4a25-a5a3-6ef67bdff440
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 216387f82df57f8f3485ba95566fecf36c0ca897
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 69daa9fd9420298bb69439ae629fb6391d0f0c10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073481"
 ---
 # <a name="specify-a-merge-article-resolver"></a>병합 아티클 해결 프로그램 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

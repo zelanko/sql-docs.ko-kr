@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: a887d956-4cd0-400a-aa96-00d7abd7c44b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24d7780efc65e967d917fd375d36cdba6dc1a378
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e18fcc3eda85fb30f816f9010b29f6818237b20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136807"
 ---
 # <a name="ole-automation-objects-in-transact-sql"></a>Transact-SQL의 OLE 자동화 개체
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,13 +32,13 @@ ms.locfileid: "47643471"
   
  개체의 인스턴스가 생성된 후에는 다음과 같은 저장 프로시저를 호출하여 개체의 속성, 메서드 및 개체 관련 오류 정보에 대한 작업을 수행합니다.  
   
--   속성 값을 가져오는**sp_OAGetProperty**   
+-   속성 값을 가져오는**sp_OAGetProperty**  
   
--   속성 값을 설정하는**sp_OASetProperty**   
+-   속성 값을 설정하는**sp_OASetProperty**  
   
--   메서드를 호출하는**sp_OAMethod**   
+-   메서드를 호출하는**sp_OAMethod**  
   
--   최신 오류 정보를 가져오는**sp_OAGetErrorInfo**   
+-   최신 오류 정보를 가져오는**sp_OAGetErrorInfo**  
   
  개체가 더 이상 필요하지 않을 때는 **sp_OADestroy** 를 호출하여 **sp_OACreate**로 생성된 개체의 인스턴스를 할당 취소합니다.  
   

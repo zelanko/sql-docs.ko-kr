@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 07eb130323be8fe507e574d5cca85f5105091e1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a96f4e48c56be6558ecb6523ebd687e50d9f82a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65949178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059737"
 ---
 # <a name="logical-functions---choose-transact-sql"></a>논리 함수 - CHOOSE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ CHOOSE ( index, val_1, val_2 [, val_n ] )
   
 ## <a name="examples"></a>예  
 
-### <a name="a-simple-choose-example"></a>1. 간단한 CHOOSE 예제
+### <a name="a-simple-choose-example"></a>1\. 간단한 CHOOSE 예제
 
  다음 예에서는 제공된 값 목록에서 세 번째 항목을 반환합니다.  
  
@@ -74,7 +73,7 @@ Developer
 (1 row(s) affected)  
 ```  
 
-### <a name="b-simple-choose-example-based-on-column"></a>2. 열을 기반으로 하는 간단한 CHOOSE 예제
+### <a name="b-simple-choose-example-based-on-column"></a>2\. 열을 기반으로 하는 간단한 CHOOSE 예제
 
  다음 예제에서는 `ProductCategoryID` 열의 값에 따라 간단한 문자열을 반환합니다.  
   

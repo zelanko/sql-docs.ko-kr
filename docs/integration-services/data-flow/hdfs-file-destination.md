@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4338ce9f-c077-4301-aca5-47ed070ec94d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 418921c7ce0f37cbbf7953f6b8023a717f8ae54b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ae333cce365fb9bede046fcea911b633a0f2311
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941477"
 ---
 # <a name="hdfs-file-destination"></a>HDFS 파일 대상
 

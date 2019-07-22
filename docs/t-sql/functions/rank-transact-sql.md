@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2d96f6d2-5db7-4b3c-a63e-213c58e4af55
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6ef9e31744be1cbb6a5f1ac84fdf4d8c315f97e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 224063dba6895ccd2c6734b7c316c9b030e634aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943310"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910640"
 ---
 # <a name="rank-transact-sql"></a>RANK(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

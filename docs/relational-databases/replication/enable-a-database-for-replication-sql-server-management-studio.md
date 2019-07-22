@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8092faa3-9cff-4f81-926c-6a0070d1ce2c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac332e77226d5de33a4ef7fc77a0c34f6b234a3b
-ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
+ms.openlocfilehash: b70b52951bd5da8abe16d3276d8608ff37f4924e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59516489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128267"
 ---
 # <a name="enable-a-database-for-replication-sql-server-management-studio"></a>데이터베이스 복제 설정(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

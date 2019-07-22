@@ -16,14 +16,13 @@ ms.assetid: 7624ba76-594b-4be5-ac10-c3ac4a3529bd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5712de8eb79039213aa82383653c1ee99cc2b32d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fbc89d21deb7fab0662623634fb965a2f88640f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053567"
 ---
 # <a name="query-with-full-text-search"></a>Query with Full-Text Search
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

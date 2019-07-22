@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: a4121927-f2ce-4926-aa2c-9b1519dac048
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc5f75e1ee5ed661fc0c5a5558edb265b619bb7c
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: a3b2d2ff81fddaae0b0ae68da9d4477819a61073
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101929"
 ---
 # <a name="dbcc-dropcleanbuffers-transact-sql"></a>DBCC DROPCLEANBUFFERS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -73,7 +72,7 @@ DBCC DROPCLEANBUFFERS를 사용하면 서버를 종료하고 다시 시작하지
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 
 적용 대상: SQL Server, 병렬 데이터 웨어하우스 
 

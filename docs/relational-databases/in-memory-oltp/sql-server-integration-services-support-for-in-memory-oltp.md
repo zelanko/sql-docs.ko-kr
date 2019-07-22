@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: ea82a9b9-e9ed-4d6f-b3fd-917f6c687ae3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c56202600415e44087f0716fb9f084d831b72c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9dfaedb283f7b1dd6af08405f5229c994b8987a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111688"
 ---
 # <a name="sql-server-integration-services-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server Integration Services 지원
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 073d0a9a3600144eac7edd2e10a73c744ee6bd50
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 207bb036ad89e135a7bdcbeaba7e5fb29bd41571
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094984"
 ---
 # <a name="create-a-database-schema"></a>데이터베이스 스키마 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

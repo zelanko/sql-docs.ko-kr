@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 16590771-9867-463e-a973-36a5c145ac16
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5b11a1206e691e834c3ed44d7ab83c73ffc002ec
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a24d9a25409290288afa8a0b23b49c5f55fba217
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111057"
 ---
 # <a name="view-publication-and-subscription-status-in-replication-monitor"></a>복제 모니터에서 게시 및 구독 상태 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

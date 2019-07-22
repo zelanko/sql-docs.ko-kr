@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: de40cc21-2e58-4464-9be7-b5b90c925e9b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f13f8769a5f97bab03b9466974c649dd2c5e7129
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5c8971810d7122bad77142d61d36820092e39a6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128354"
 ---
 # <a name="distribution-agent-security"></a>배포 에이전트 보안
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 81625a56-b160-4424-91c5-1ce8b259a8e6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 62b1c5c80e48ad4633b8ce1a5affb43bd36a6257
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d0fbe116eb10d89d52e1ec5ebdf7ada16ef53dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914350"
 ---
 # <a name="permissions-transact-sql"></a>PERMISSIONS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
  사용 권한 정보를 반환할 열의 선택적 이름입니다. 이 열은 *objectid*로 지정한 테이블에서 유효한 열 이름이어야 합니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  PERMISSIONS는 현재 사용자가 문을 실행하거나 다른 사용자에게 사용 권한을 부여할 수 있는 권한이 있는지 여부를 확인하는 데 사용할 수 있습니다.  
@@ -113,7 +112,7 @@ PERMISSIONS ( [ objectid [ , 'column' ] ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-permissions-function-with-statement-permissions"></a>1. 문 사용 권한과 함께 PERMISSIONS 함수 사용  
+### <a name="a-using-the-permissions-function-with-statement-permissions"></a>1\. 문 사용 권한과 함께 PERMISSIONS 함수 사용  
  다음 예는 현재 사용자가 `CREATE TABLE` 문을 실행할 수 있는지 여부를 확인합니다.  
   
 ```  
@@ -123,7 +122,7 @@ ELSE
    PRINT 'ERROR: The current user cannot create a table.';  
 ```  
   
-### <a name="b-using-the-permissions-function-with-object-permissions"></a>2. 개체 사용 권한과 함께 PERMISSIONS 함수 사용  
+### <a name="b-using-the-permissions-function-with-object-permissions"></a>2\. 개체 사용 권한과 함께 PERMISSIONS 함수 사용  
  다음 예에서는 현재 사용자가 `Address` 데이터베이스의 `AdventureWorks2012` 테이블에 데이터 행을 삽입할 수 있는지 여부를 확인합니다.  
   
 ```  

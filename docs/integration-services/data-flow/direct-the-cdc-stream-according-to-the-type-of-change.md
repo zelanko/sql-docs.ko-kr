@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3afa531e-f425-40a4-a1bf-1c3e1727287e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7fa50ac8dda0575eb752f0111a597d4b337fe88d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b713b90d0eb647b2c4ff8632a00ae7c4986e8fd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941607"
 ---
 # <a name="direct-the-cdc-stream-according-to-the-type-of-change"></a>변경 유형에 따라 CDC 스트림 전송
 

@@ -13,25 +13,24 @@ helpviewer_keywords:
 ms.assetid: 759fab42-66c7-4541-a7a3-bb6fb868493c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 526f97ab2427aa6834614c9b31201b780ae25e9e
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 0d2bb3d96d1fa5b6d8b3b8239d36e4212cd45889
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907635"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>SQL 복제에 대한 스냅샷 초기화 옵션 수정 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[스냅숏으로 구독을 초기화](initialize-a-subscription-with-a-snapshot.md)할 때 지정할 수 있는 여러 옵션이 있습니다.
+[스냅샷으로 구독을 초기화](initialize-a-subscription-with-a-snapshot.md)할 때 지정할 수 있는 여러 옵션이 있습니다.
 
 ## <a name="specify-snapshot-format-sql-server-management-studio"></a>스냅샷 형식 지정(SQL Server Management Studio)
-  **게시 속성 - \<게시>** 대화 상자의 **스냅숏** 페이지에서 스냅숏 형식을 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 스냅샷 형식을 지정합니다. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 ### <a name="to-specify-snapshot-format"></a>스냅샷 형식을 지정하려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **스냅숏** 페이지에서 **네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다** 또는 **문자 - 게시자 또는 구독자가 SQL Server를 실행하지 않는 경우 필요합니다**를 선택합니다.  
+1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 **네이티브 SQL Server - 모든 구독자는 SQL Server를 실행하는 서버여야 합니다** 또는 **문자 - 게시자 또는 구독자가 SQL Server를 실행하지 않는 경우 필요합니다**를 선택합니다.  
   
     > [!NOTE]  
     >  이 게시가 SQL Server Compact 데이터베이스 또는 SQL Server 이외의 데이터베이스에 대한 구독을 지원해야 하는 경우가 아니면 네이티브 형식을 선택하는 것이 좋습니다.  
@@ -45,12 +44,12 @@ ms.locfileid: "67860543"
 ### <a name="default-snapshot-location"></a>기본 스냅샷 위치
 배포 구성 마법사의 **스냅샷 폴더** 페이지에서 기본 스냅샷 위치를 지정합니다. 이 마법사 사용에 대한 자세한 내용은 [게시 및 배포 구성](../../relational-databases/replication/configure-publishing-and-distribution.md)을 참조하세요. 배포자로 구성되어 있지 않은 서버에서 게시를 만드는 경우 새 게시 마법사의 **스냅샷 폴더** 페이지에서 기본 스냅샷 위치를 지정합니다. 이 마법사를 사용하는 방법에 대한 자세한 내용은 [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
- **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅숏 위치를 수정합니다. 자세한 내용은 [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요. **게시 속성 - \<게시>** 대화 상자에서 각 게시에 대한 스냅숏 폴더를 설정합니다. 자세한 내용은 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
+ **배포자 속성 - \<Distributor&gt;** 대화 상자의 **게시자** 페이지에서 기본 스냅샷 위치를 수정합니다. 자세한 내용은 [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)을 참조하세요. **게시 속성 - \<게시&gt;** 대화 상자에서 각 게시에 대한 스냅샷 폴더를 설정합니다. 자세한 내용은 [View and Modify Publication Properties](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   
 ### <a name="to-modify-the-default-snapshot-location"></a>기본 스냅샷 위치를 수정하려면  
   
 1.  **배포자 속성 - \<Distributor>** 대화 상자의 **게시자** 페이지에서 기본 스냅숏 위치를 변경하려는 게시자의 속성 단추( **...** )를 클릭합니다.    
-2.  **게시자 속성 - \<Publisher>** 대화 상자에서 **기본 스냅숏 폴더** 속성에 대한 값을 입력합니다.  
+2.  **게시자 속성 - \<Publisher&gt;** 대화 상자에서 **기본 스냅샷 폴더** 속성에 대한 값을 입력합니다.  
   
     > [!NOTE]  
     >  스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.    
@@ -65,15 +64,15 @@ ms.locfileid: "67860543"
 대체 스냅샷 폴더 위치를 지정하거나 스냅샷 파일을 압축하려면 초기 스냅샷을 즉시 만들지 말고 게시를 만들어 스냅샷 위치에 대한 게시 속성을 설정한 다음 해당 게시에 대해 스냅샷 에이전트를 실행합니다. 초기 스냅샷을 만든 다음 대체 위치를 변경할 경우 게시에 대해 생성된 스냅샷의 위치는 새 대체 위치로 다시 지정할 수 없습니다. 이 경우 게시 설정에 따라 병합 에이전트나 배포 에이전트가 새 대체 위치에서 스냅샷 파일을 찾지 못할 수 있습니다.  
   
 > [!NOTE]  
->  대체 위치를 기본 스냅숏 폴더 위치와 동일하게 지정하지 마세요. 대체 위치는 **게시 속성** 대화 상자나 [sp_changepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 사용하여 지정할 수 있습니다.  
+>  대체 위치를 기본 스냅샷 폴더 위치와 동일하게 지정하지 마세요. 대체 위치는 **게시 속성** 대화 상자나 [sp_changepublication&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 사용하여 지정할 수 있습니다.  
   
 > [!CAUTION]  
 >  WebSync 및 대체 스냅샷 폴더 위치를 동시에 사용하지 마십시오.  
   
 #### <a name="use-sql-server-management-studio"></a>SQL Server Management Studio 사용
-1.  **게시 속성 - \<게시>** 대화 상자의 **스냅숏** 페이지에서 다음을 수행합니다.  
+1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 다음을 수행합니다.  
   
-    1.  **다음 폴더에 파일 보관**을 선택한 다음 **찾아보기** 를 클릭하여 디렉터리로 이동하거나 스냅숏 파일을 저장할 디렉터리 경로를 입력합니다.  
+    1.  **다음 폴더에 파일 보관**을 선택한 다음 **찾아보기** 를 클릭하여 디렉터리로 이동하거나 스냅샷 파일을 저장할 디렉터리 경로를 입력합니다.  
   
         > [!NOTE]  
         >  스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
@@ -86,7 +85,7 @@ ms.locfileid: "67860543"
   
 #### <a name="use-transact-sql"></a>Transact-SQL 사용 
 
-[스냅숏 속성 구성&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md) 시 **snapshot_in_defaultfolder**의 값을 false로 지정합니다. 
+[스냅샷 속성 구성&amp;#40;복제 Transact-SQL 프로그래밍&amp;#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md) 시 **snapshot_in_defaultfolder**의 값을 false로 지정합니다. 
 
 ## <a name="compressed-snapshots"></a>압축 스냅샷
   스냅샷을 느린 네트워크를 통해 전송하거나 이동식 미디어에 저장할 때 압축하지 않은 스냅샷이 너무 커서 해당 미디어에 모두 저장할 수 없는 경우 스냅샷 파일을 압축하는 것이 좋습니다. 위와 같은 상황에서는 스냅샷 파일을 압축하는 것이 유용하지만 압축으로 인해 스냅샷 생성과 적용에 더 많은 시간이 걸립니다.  
@@ -99,9 +98,9 @@ ms.locfileid: "67860543"
 >  스냅샷을 압축하면 네트워크에서의 스냅샷 파일 전송 성능이 향상되는 경우도 있습니다. 그러나 스냅샷 에이전트에서 스냅샷 파일을 생성하는 경우와 배포 에이전트 또는 병합 에이전트에서 스냅샷 파일을 적용하는 경우에 스냅샷 파일을 압축하려면 추가 처리 작업이 필요합니다. 이 경우 스냅샷 생성 속도가 느려지거나 스냅샷 적용 시간이 늘어날 수 있습니다. 또한 네트워크 오류가 발생하면 압축 스냅샷은 재개할 수 없으므로 불안정한 네트워크에서는 압축 스냅샷이 적합하지 않습니다. 네트워크에서 압축 스냅샷을 사용하는 경우 이러한 장단점을 신중하게 고려하여 균형을 맞추는 것이 좋습니다.  
   
 ### <a name="use-sql-server-management-studio"></a>SQL Server Management Studio 사용
-1.  **게시 속성 - \<게시>** 대화 상자의 **스냅숏** 페이지에서 다음을 수행합니다.  
+1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 다음을 수행합니다.  
   
-    1.  **다음 폴더에 파일 보관**을 선택한 다음 **찾아보기** 를 클릭하여 디렉터리로 이동하거나 스냅숏 파일을 저장할 디렉터리 경로를 입력합니다.  
+    1.  **다음 폴더에 파일 보관**을 선택한 다음 **찾아보기** 를 클릭하여 디렉터리로 이동하거나 스냅샷 파일을 저장할 디렉터리 경로를 입력합니다.  
   
         > [!NOTE]  
         >  스냅샷 에이전트는 지정한 디렉터리에 대해 쓰기 권한이 있어야 하며 배포 에이전트 또는 병합 에이전트는 읽기 권한이 있어야 합니다. 끌어오기 구독을 사용하는 경우 공유 디렉터리를 \\\computername\snapshot과 같이 UNC(범용 명명 규칙) 경로로 지정해야 합니다. 자세한 내용은 [스냅샷 폴더 보안 설정](security/secure-the-snapshot-folder.md)을 참조하세요.  
@@ -111,12 +110,12 @@ ms.locfileid: "67860543"
         > [!NOTE]  
         >  이 확인란을 선택하면 기본 폴더에 저장된 파일은 압축되지 않습니다. 압축 파일은 이전 단계에서 지정한 대체 위치에만 저장할 수 있습니다.  
   
-2.  **이 폴더에 있는 스냅숏 파일 압축**을 선택합니다.    
+2.  **이 폴더에 있는 스냅샷 파일 압축**을 선택합니다.    
 3.  **확인**을 선택합니다.   
 
 ### <a name="use-transact-sql"></a>Transact-SQL 사용
 
-[스냅숏 속성 구성](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md) 시 **compress_snapshot** 값을 **True**로 지정합니다. 
+[스냅샷 속성 구성](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md) 시 **compress_snapshot** 값을 **True**로 지정합니다. 
 
 ## <a name="execute-scripts-before-and-after-snapshot-is-applied"></a>스냅샷 적용 전후에 스크립트 실행
 스냅샷 적용 전후에 구독자에서 스크립트가 실행되도록 지정할 수 있습니다. 각 구독자에서 로그인과 스키마(개체 소유자)를 만드는 작업 등 다양한 작업에 스크립트를 사용할 수 있습니다.  
@@ -129,7 +128,7 @@ ms.locfileid: "67860543"
 
 ### <a name="execute-a-script"></a>스크립트 실행 
 
-1.  **게시 속성 - \<게시>** 대화 상자의 **스냅숏** 페이지에서 다음을 수행합니다.    
+1.  **게시 속성 - \<게시&gt;** 대화 상자의 **스냅샷** 페이지에서 다음을 수행합니다.    
     -   스냅샷이 적용되기 전에 실행할 스크립트를 지정하려면 **찾아보기** 를 클릭하여 스크립트로 이동하거나 **스냅샷 적용 전 다음 스크립트 실행** 입력란에 스크립트의 경로를 입력합니다.  
   
         > [!NOTE]  
@@ -141,8 +140,8 @@ ms.locfileid: "67860543"
 
 
 ## <a name="see-also"></a>참고 항목  
- [스냅숏으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
- [FTP를 통해 스냅숏 전송](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)   
- [스냅숏 속성 구성&#40;복제 Transact-SQL 프로그래밍&#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)     
+ [스냅샷으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
+ [FTP를 통해 스냅샷 전송](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)   
+ [스냅샷 속성 구성&amp;#40;복제 Transact-SQL 프로그래밍&amp;#41;](../../relational-databases/replication/publish/configure-snapshot-properties-replication-transact-sql-programming.md)     
   
   

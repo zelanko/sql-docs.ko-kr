@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3b67961b62e3d6629aaa23b485a96d855fe72a9c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4ed6e67bbf6f3fcda872650c2d3394d6311802b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914223"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE Service Broker 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,19 +62,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 보안 개체에 대해 취소할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  사용 권한을 취소할 계약을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  사용 권한을 취소할 메시지 유형을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  사용 권한을 취소할 원격 서비스 바인딩을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  사용 권한을 취소할 경로를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- SERVICE **::**_message_type_name_  
+ SERVICE **::** _message_type_name_  
  사용 권한을 취소할 서비스를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  
@@ -177,7 +176,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |ALTER|CONTROL|ALTER ANY SERVICE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssSB](../../includes/sssb-md.md)] 계약, 메시지 유형, 원격 서비스 바인딩, 경로 또는 서비스에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -10,13 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: 434edd3a2fb48e6566deeac246b941f9ef7f2eb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 309ef92b105ae022cfc543ce0e73107af6870331
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054238"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

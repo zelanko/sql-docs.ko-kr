@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be78157b91a1eebfc207be5f5ec5c28cb7346891
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 2e454850de56674a594b23585aaf1f5af1f3549a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002688"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>매개 변수가 있는 필터로 병합 게시에 대한 파티션 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "67585812"
   
 3.  선택적으로 스냅샷을 새로 고칠 일정을 지정합니다.  
   
-    1.  **이 파티션에 대한 스냅숏 에이전트의 실행 시간을 다음 시간으로 예약**을 선택합니다.  
+    1.  **이 파티션에 대한 스냅샷 에이전트의 실행 시간을 다음 시간으로 예약**을 선택합니다.  
   
     2.  기본으로 제공되는 스냅샷 새로 고침 일정을 그대로 적용하거나 **변경** 을 클릭하여 다른 일정을 지정합니다.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "67585812"
   
 #### <a name="to-allow-subscribers-to-initiate-snapshot-generation-and-delivery"></a>구독자가 스냅샷 생성 및 배달을 시작하도록 허용하려면  
   
-1.  **데이터 파티션** 페이지에서 **새 구독자가 동기화할 때 필요한 경우 자동으로 파티션 정의 및 스냅숏 생성**을 선택합니다.  
+1.  **데이터 파티션** 페이지에서 **새 구독자가 동기화할 때 필요한 경우 자동으로 파티션 정의 및 스냅샷 생성**을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -83,13 +82,13 @@ ms.locfileid: "67585812"
   
 1.  **데이터 파티션** 페이지의 표에서 파티션을 선택합니다.  
   
-2.  **선택한 스냅숏 지금 생성**을 클릭합니다.  
+2.  **선택한 스냅샷 지금 생성**을 클릭합니다.  
   
 #### <a name="to-clean-up-a-snapshot-for-a-partition"></a>파티션에 대한 스냅샷을 정리하려면  
   
 1.  **데이터 파티션** 페이지의 표에서 파티션을 선택합니다.  
   
-2.  **기존 스냅숏 정리**를 클릭합니다.  
+2.  **기존 스냅샷 정리**를 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
  매개 변수가 있는 필터를 사용하여 게시를 보다 잘 관리하려면 복제 저장 프로시저를 사용하여 기존 파티션을 프로그래밍 방식으로 열거합니다. 파티션을 만들거나 기존 파티션을 삭제할 수도 있습니다. 기존 파티션의 다음 정보를 가져올 수 있습니다.  
@@ -165,6 +164,6 @@ ms.locfileid: "67585812"
   
 ## <a name="see-also"></a>참고 항목  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
- [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+ [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅샷](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
   

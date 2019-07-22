@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ff79e19d-afca-42a4-81b0-62d759380d11
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4c957089cf73ba9992c04d56162b1a0cb9901f29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad4fd039aa163a8fce8bc4cd56259774f861e8c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011453"
 ---
 # <a name="error-handling"></a>오류 처리
 

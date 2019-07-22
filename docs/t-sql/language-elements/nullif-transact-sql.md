@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d72036caa89cb64b57c59c9ec84c09c6090623ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8876fe591eadb0946b3f54cdf52644b39c040089
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121978"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +57,7 @@ NULLIF ( expression , expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-returning-budget-amounts-that-have-not-changed"></a>1. 변경되지 않은 예산 반환  
+### <a name="a-returning-budget-amounts-that-have-not-changed"></a>1\. 변경되지 않은 예산 반환  
  다음 예에서는 부서(`budgets`), 금년도 예산(`dept`) 및 전년도 예산(`current_year`)을 보여 주는 `previous_year` 테이블을 만듭니다. 금년 예산이 전년도 예산에서 변하지 않은 부서에는 `NULL`이 예산이 아직 결정되지 않은 부서에는 `0`이 사용됩니다. 예산이 결정된 부서만의 평균을 계산하고 이전 연도의 예산 값(`previous_year` 값 사용. 여기서 `current_year`는 `NULL`임)을 포함하려면 `NULLIF` 함수와 `COALESCE` 함수를 결합합니다.  
   
 ```sql  
@@ -90,7 +89,7 @@ GO
  (1 row(s) affected)
  ```  
   
-### <a name="b-comparing-nullif-and-case"></a>2. NULLIF 및 CASE 비교  
+### <a name="b-comparing-nullif-and-case"></a>2\. NULLIF 및 CASE 비교  
  `NULLIF`와 `CASE`의 유사점을 보여 주기 위해 다음 쿼리는 `MakeFlag` 및 `FinishedGoodsFlag` 열의 값이 같은지 여부를 평가합니다. 첫 번째 쿼리에서는 `NULLIF`를 사용합니다. 두 번째 쿼리에서는 `CASE` 식을 사용합니다.  
   
 ```sql  

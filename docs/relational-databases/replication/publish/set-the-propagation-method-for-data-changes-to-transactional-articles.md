@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0a291582-f034-42da-a1a3-29535b607b74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4bb0fb9bc3403ca35c6b4fef986e68f8aff14dac
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 969012ebc2cb804fe67cfb04810d653eb8041f52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582883"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073488"
 ---
 # <a name="set-the-propagation-method-for-data-changes-to-transactional-articles"></a>트랜잭션 아티클의 데이터 변경 내용을 전파하는 방법 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

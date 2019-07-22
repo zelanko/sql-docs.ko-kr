@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 072bc4b8-363a-4131-87c3-240338e2fa5c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7d1688210ac2813ec48ff5c6ceddde853e07b2c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9212c92f05926a3ecb2f3fb8eb02b381e2bb2e47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103989"
 ---
 # <a name="extending-the-data-flow-with-the-script-component"></a>스크립트 구성 요소를 사용하여 데이터 흐름 확장
 

@@ -8,13 +8,12 @@ ms.date: 09/17/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-manager: craigg
-ms.openlocfilehash: 327f59adb36b4a08f2d50b7845694fc2f3b7cf7c
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 10b44f803da7b02ba95f8d6739a5bab9b85eba50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132827"
 ---
 # <a name="sql-server-high-availability-and-disaster-recovery-partners"></a>SQL Server 고가용성 및 재해 복구 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

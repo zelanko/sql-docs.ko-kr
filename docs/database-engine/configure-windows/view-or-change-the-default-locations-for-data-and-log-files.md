@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 70a57fda-fcfe-490f-9cf6-5df620e32b2a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 9c0f2f964b926deb799f496d2247ec7480ad641b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 933d15e789e0d069822f657ff09cff0e2b4aaf8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66775174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945752"
 ---
 # <a name="view-or-change-the-default-locations-for-data-and-log-files"></a>데이터 및 로그 파일의 기본 위치 보기 또는 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

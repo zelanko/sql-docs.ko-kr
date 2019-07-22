@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: d16917d5b22189be5ffcbe48260fd7cc9b68c42e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f026decc6463e477f95fe86bdda234c1d5d09c2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014106"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>일부 가용성 복제본에서 데이터 동기화가 수행되지 않음
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

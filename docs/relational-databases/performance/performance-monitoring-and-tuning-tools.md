@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 31529dfe-68e7-49f7-b3c2-39fcecf33a95
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 03d8b1fd3b76452a0a1027075f9569a746a30edf
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 42d3d78b68f84b5ab44658114094bde77cc1f844
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113524"
 ---
 # <a name="performance-monitoring-and-tuning-tools"></a>성능 모니터링 및 튜닝 도구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "54241444"
 ## <a name="choosing-a-monitoring-tool"></a>모니터링 도구 선택  
  모니터링 도구 선택은 모니터링할 이벤트나 작업에 따라 결정됩니다.  
   
-|이벤트/작업|확장 이벤트|SQL Server 프로파일러|Distributed Replay|시스템 모니터|작업 모니터|Transact-SQL|오류 로그|성능 대시보드|  
+|이벤트/작업|확장 이벤트|SQL Server Profiler|Distributed Replay|시스템 모니터|작업 모니터|Transact-SQL|오류 로그|성능 대시보드|  
 |-----------------------|-----------------------|-------------------------|------------------------|--------------------|----------------------|-------------------|----------------|----------------|   
 |추세 분석|예|예||예|||||  
 |캡처한 이벤트 재생||예(단일 컴퓨터에서)|예(여러 컴퓨터에서)||||||  

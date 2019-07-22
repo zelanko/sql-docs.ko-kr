@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e21dfa4b-6144-4be7-9cbf-ca2709b2bd9f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 798c4a40fe5a6e28b0c24324ac28b1ff188ee64e
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 8ac643b3c0c095dee143c3feca878bd4072273bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901106"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Oracle 게시를 위한 용어 설명
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "58478248"
  고유 번호를 생성하는 데 사용되는 데이터베이스 개체입니다. 복제는 시퀀스를 사용하여 게시된 테이블에 대한 변경 내용의 적용 순서를 지정합니다.  
   
 #### <a name="sqlplus"></a>SQL\*Plus  
- Oracle 데이터베이스에 액세스하고 쿼리하는 데 사용되는 애플리케이션으로  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**와 유사합니다.  
+ Oracle 데이터베이스에 액세스하고 쿼리하는 데 사용되는 애플리케이션으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **sqlcmd**와 유사합니다.  
   
 #### <a name="synonym"></a>동의어  
  개체에 대한 별칭입니다. **MSSQLSERVERDISTRIBUTOR** 특수 공용 동의어는 Oracle 게시자를 구성할 때 자동으로 생성됩니다. 동의어는 **HREPL_Distributor** 테이블을 참조하고 게시자에 서비스를 제공하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 배포자에게 논리 포인터를 제공합니다.  

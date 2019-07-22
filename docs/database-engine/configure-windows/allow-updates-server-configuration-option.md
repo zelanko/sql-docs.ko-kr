@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3967c3ed-280a-4de8-a2ce-393e82745a7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 2be9a6eb16bf2b4f481faf6409b28da11eb39eb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3cccccebcbbd9054752aa8aa4e65f3f2bc17b342
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799569"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013156"
 ---
 # <a name="allow-updates-server-configuration-option"></a>allow updates 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

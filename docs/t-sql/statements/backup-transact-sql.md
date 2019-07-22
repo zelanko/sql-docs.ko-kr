@@ -45,14 +45,13 @@ helpviewer_keywords:
 ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: a22f789aa967f7a6dcb9582083bf22c5698e99e7
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: 84bc446438a5b8938ee84b1e741c2768636d45b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141216"
 ---
 # <a name="backup-transact-sql"></a>BACKUP(Transact-SQL)
 
@@ -70,7 +69,7 @@ SQL 데이터베이스를 백업합니다.
 
 ||||
 |---|---|---|
-|** _\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -285,7 +284,7 @@ Microsoft Azure Blob Storage 서비스에 대한 백업을 만들 때에만 사�
 
 FILE_SNAPSHOT **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
-Azure Blob 스토리지 서비스를 사용하여 모든 SQL Server 데이터베이스 파일을 저장할 때 데이터베이스 파일의 Azure 스냅샷을 만드는 데 사용됩니다. 자세한 내용은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 백업은 일관된 상태에서 데이터베이스 파일(데이터 및 로그 파일)의 Azure 스냅숏을 사용합니다. 일관된 Azure 스냅샷 집합이 백업을 구성하고 백업 파일에 기록됩니다. `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT`과 `BACKUP LOG TO URL WITH FILE_SNAPSHOT`의 유일한 차이점은 후자는 트랜잭션 로그를 자르지만 전자는 그렇지 않다는 점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server 스냅숏 백업에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 체인을 설정하는 데 필요한 초기 전체 백업 이후에 트랜잭션 로그 백업 시점으로 데이터베이스를 복원하려면 단일 트랜잭션 로그 백업만 필요합니다. 또한 두 건의 트랜잭션 로그 백업 시간 사이의 특정 시점으로 데이터베이스를 복원하려면 트랜잭션 로그 백업이 두 개만 필요합니다.
+Azure Blob 스토리지 서비스를 사용하여 모든 SQL Server 데이터베이스 파일을 저장할 때 데이터베이스 파일의 Azure 스냅샷을 만드는 데 사용됩니다. 자세한 내용은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅샷 백업은 일관된 상태에서 데이터베이스 파일(데이터 및 로그 파일)의 Azure 스냅샷을 사용합니다. 일관된 Azure 스냅샷 집합이 백업을 구성하고 백업 파일에 기록됩니다. `BACKUP DATABASE TO URL WITH FILE_SNAPSHOT`과 `BACKUP LOG TO URL WITH FILE_SNAPSHOT`의 유일한 차이점은 후자는 트랜잭션 로그를 자르지만 전자는 그렇지 않다는 점입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server 스냅샷 백업에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 체인을 설정하는 데 필요한 초기 전체 백업 이후에 트랜잭션 로그 백업 시점으로 데이터베이스를 복원하려면 단일 트랜잭션 로그 백업만 필요합니다. 또한 두 건의 트랜잭션 로그 백업 시간 사이의 특정 시점으로 데이터베이스를 복원하려면 트랜잭션 로그 백업이 두 개만 필요합니다.
 
 DIFFERENTIAL
 
@@ -435,7 +434,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } 백업 작�
 > [!NOTE]
 > `BUFFERCOUNT` 옵션을 사용하는 방법은 [잘못된 BufferCount 데이터 전송 옵션을 사용하면 OOM 상태가 발생할 수 있음](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) 블로그를 참조하세요.
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 백업 미디어 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다. 가능한 값은 최대 4194304바이트(4MB)까지 65536바이트(64KB)의 배수입니다.
+MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 백업 미디어 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다. 가능한 값은 최대 4194304바이트(4MB)까지 65536바이트(64KB)의 배수입니다.
 
 > [!NOTE]
 > SQL 기록기 서비스를 사용하여 백업을 만들 때 데이터베이스에서 [FILESTREAM](../../relational-databases/blob/filestream-sql-server.md)이 구성되었거나 [메모리 최적화 파일 그룹](../../relational-databases/in-memory-oltp/the-memory-optimized-filegroup.md)이 포함된 경우 복원 시 `MAXTRANSFERSIZE`가 백업을 만들 때 사용된 `MAXTRANSFERSIZE`보다 커야 합니다.
@@ -931,7 +930,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;|[Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;|[Analytics Platform<br />System(PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -1045,7 +1044,7 @@ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ } 백업 작�
 > [!NOTE]
 > `BUFFERCOUNT` 옵션을 사용하는 방법은 [잘못된 BufferCount 데이터 전송 옵션을 사용하면 OOM 상태가 발생할 수 있음](https://blogs.msdn.com/b/sqlserverfaq/archive/2010/05/06/incorrect-buffercount-data-transfer-option-can-lead-to-oom-condition.aspx) 블로그를 참조하세요.
 
-MAXTRANSFERSIZE **=** { *maxtransfersize* | _ **@** maxtransfersize\_variable_ } [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 백업 미디어 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다. 가능한 값은 최대 4194304바이트(4MB)까지 65536바이트(64KB)의 배수입니다.
+MAXTRANSFERSIZE **=** { *maxtransfersize* |  _**@** maxtransfersize\_variable_ } [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 백업 미디어 간에 사용되는 가장 큰 전송 단위(바이트)를 지정합니다. 가능한 값은 최대 4194304바이트(4MB)까지 65536바이트(64KB)의 배수입니다.
 
 > [!NOTE]
 > 단일 데이터 파일이 있는 [TDE(투명한 데이터 암호화)](../../relational-databases/security/encryption/transparent-data-encryption.md) 가능 데이터베이스의 경우 기본 `MAXTRANSFERSIZE`는 65536(64 KB)입니다. 비-TDE 암호화된 데이터베이스의 경우 디스크 백업을 사용할 때 기본 `MAXTRANSFERSIZE`는 1048576(1MB)이고 VDI 또는 TAPE를 사용하는 경우에는 65536(64KB)입니다.
@@ -1116,7 +1115,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System(PDW) \*_** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />관리되는 인스턴스](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System(PDW) \*_** &nbsp;|
 
 &nbsp;
 

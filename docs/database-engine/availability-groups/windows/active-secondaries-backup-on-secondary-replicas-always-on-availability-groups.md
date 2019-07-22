@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 5b74fc36a3a6e53e0b7f00438f013218b0d76344
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccaf0091472ed0b7c87dbb790228024d0224e91a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991686"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>가용성 그룹의 보조 복제본으로 지원되는 백업 오프로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e17a9ca9-dd96-4f84-a85d-60f590da96ad
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 35ff790595dbcb6a3864b2d1414149374119d907
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8eef8241d5c8413f3722f11854074d415399165b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787992"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014345"
 ---
 # <a name="replication-change-tracking--change-data-capture---always-on-availability-groups"></a>복제, 변경 내용 추적 및 변경 데이터 캡처 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -211,7 +210,7 @@ Always On 가용성 그룹의 일부인 데이터베이스에서 변경 데이�
 |**트랜잭션**|예<br /><br /> 참고: 양방향 및 상호 트랜잭션 복제에 대한 지원을 포함하지 않습니다.|예|예| 
 |**P2P**|아니오|아니오|아니오|  
 |**병합**|예|아니오|아니오|  
-|**스냅숏**|예|아니오|예|
+|**스냅샷**|예|아니오|예|
   
  **배포자 데이터베이스는 데이터베이스 미러링과 함께 사용할 수 없습니다.  
   

@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 16ef8191-7587-45a3-9ee9-7d99b7088de3
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: e06c94a421076278bcd784e43aeb7924f1bb0e3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fbebdf4b35b10e584c023e0d34eb8a652d15c1cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117323"
 ---
 # <a name="create-remote-table-as-select-parallel-data-warehouse"></a>CREATE REMOTE TABLE AS SELECT(병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]

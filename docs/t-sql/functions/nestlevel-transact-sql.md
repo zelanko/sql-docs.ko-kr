@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd01697d833b2db08f24b1f35d3d71ba649887c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d9b391d58d8a55b7486cda447d13246df16093b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130152"
 ---
 # <a name="x40x40nestlevel-transact-sql"></a>&#x40;&#x40;NESTLEVEL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "65944204"
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  저장 프로시저가 다른 저장 프로시저를 호출하거나 CLR(공용 언어 런타임) 루틴, 유형 또는 집계를 참조하여 관리 코드를 실행할 때마다 중첩 수준이 증가합니다. 최대값 32를 초과하면 트랜잭션이 종료됩니다.  

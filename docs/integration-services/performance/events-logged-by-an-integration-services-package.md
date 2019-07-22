@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6f258f39bac4f26546f9283bce9cfcff5b5420f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bebbaeb547039af49cff158939741c35164e0df1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65719617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913672"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>통합 서비스 패키지에 의해 기록된 이벤트
 

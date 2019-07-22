@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 06184565c25288a2b280ab6ae67d2f59b03eef7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db3c0311bc45c0969e1b6f34882b0b5fc61021a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013916"
 ---
 # <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>Always On 보조 데이터베이스에서 데이터 이동 시작(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

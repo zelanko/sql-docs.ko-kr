@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8925e71fb7ed3ea6d53f29b438602cae65820fa6
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: cd783ac6f5f6d8c7a9e561614dbe2c06053f758a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050673"
 ---
 # <a name="grant-system-object-permissions-transact-sql"></a>GRANT 시스템 개체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,12 +70,12 @@ SELECT * FROM master.sys.database_permissions AS dp
 GO  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-select-permission-on-a-view"></a>1. 뷰에 대한 SELECT 권한 부여  
+### <a name="a-granting-select-permission-on-a-view"></a>1\. 뷰에 대한 SELECT 권한 부여  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 나열된 뷰를 선택할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `Sylvester1` 권한을 부여합니다. 그런 다음 이 사용자가 소유하지 않은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대한 메타데이터를 보는 데 필요한 추가 사용 권한을 부여합니다.  
   
 ```  
@@ -86,7 +85,7 @@ GRANT VIEW SERVER STATE to Sylvester1;
 GO  
 ```  
   
-### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>2. 확장 저장 프로시저에 대한 EXECUTE 권한 부여  
+### <a name="b-granting-execute-permission-on-an-extended-stored-procedure"></a>2\. 확장 저장 프로시저에 대한 EXECUTE 권한 부여  
  다음 예에서는 `EXECUTE`에 대한 `xp_readmail` 권한을 `Sylvester1`에 부여합니다.  
   
 ```  

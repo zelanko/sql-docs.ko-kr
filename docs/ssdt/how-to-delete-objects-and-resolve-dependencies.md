@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cd4b8ab01b2b9f16938e9493d5e762cae59a6446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae25dbc584e564130348507e5aef657823502923
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026616"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>방법: 개체 삭제 및 종속성 해결
 **SQL Server 개체 탐색기**에서 개체의 이름을 바꾸거나 개체를 삭제하면 SQL Server Data Tools에서는 모든 종속성 개체를 자동으로 검색하고, 필요한 경우 종속성 개체의 이름을 바꾸거나 삭제할 ALTER 스크립트를 준비합니다.  

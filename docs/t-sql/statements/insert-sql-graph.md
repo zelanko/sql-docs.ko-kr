@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc6b596f6cd55fbd0642768a3323fddb611033ba
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 8c4cfba19dc16e043ba6325fb6c9acb1665a597f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071168"
 ---
 # <a name="insert-sql-graph"></a>INSERT(SQL Graph)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ INTO
 에지 테이블에 대량 삽입을 수행하기 전에 노드 테이블을 가져와야 합니다. 그런 다음, `$from_id` 및 `$to_id`에 대한 값을 노드 테이블의 `$node_id` 열에서 추출하여 에지로 삽입할 수 있습니다. 
 
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
 대상 테이블에 대해 INSERT 권한이 필요합니다.  
   
 **sysadmin** 고정 서버 역할, **db_owner** 및 **db_datawriter** 고정 데이터베이스 역할의 멤버 및 테이블 소유자에게는 기본적으로 INSERT 권한이 부여됩니다. **sysadmin**, **db_owner** 및 **db_securityadmin** 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 위임할 수 있습니다.  
@@ -137,7 +136,7 @@ OPENROWSET 함수에 BULK 옵션을 사용하여 INSERT를 실행하려면 **sys
 
 ## <a name="examples"></a>예  
   
-#### <a name="a--insert-into-node-table"></a>1.  노드 테이블에 삽입  
+#### <a name="a--insert-into-node-table"></a>1\.  노드 테이블에 삽입  
 다음 예제에서는 Person 노드 테이블을 만들고 두 개의 행을 해당 테이블에 삽입합니다.
 
 ```sql
@@ -149,7 +148,7 @@ INSERT INTO dbo.Person VALUES (1, 'Alice');
 INSERT INTO dbo.Person VALUES (2,'John');
 ```
   
-#### <a name="b--insert-into-edge-table"></a>2.  에지 테이블에 삽입  
+#### <a name="b--insert-into-edge-table"></a>2\.  에지 테이블에 삽입  
 다음 예에서는 친구 에지 테이블을 만든 후 에지를 테이블에 삽입합니다.
 
 ```sql

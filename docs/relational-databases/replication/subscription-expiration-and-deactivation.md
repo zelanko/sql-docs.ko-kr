@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 4d03f5ab-e721-4f56-aebc-60f6a56c1e07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30636d3dca44e93b67d67d330dbabd04d6feb4ae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90163caba595936f5c9ef9854b8e1f0af2890673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129837"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>구독 만료 및 비활성화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "47820391"
      밀어넣기 구독이 만료되면 완전히 제거되지만 끌어오기 구독은 그렇지 않습니다. 끌어오기 구독은 구독자에서 정리해야 합니다. 자세한 내용은 [Delete a Pull Subscription](../../relational-databases/replication/delete-a-pull-subscription.md)을(를) 참조하세요.  
   
 ## <a name="merge-replication"></a>병합 복제  
- 병합 복제는 게시 보존 기간([sp_addmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 **@retention** 및 **@retention_period_unit** 매개 변수)을 사용합니다. 구독이 만료되면 구독에 대한 메타데이터가 제거되므로 구독을 다시 초기화해야 합니다. 다시 초기화되지 않은 구독은 게시자에서 실행되는 **만료된 구독 정리** 작업에 의해 삭제됩니다. 기본적으로 이 작업은 매일 실행됩니다. 이 작업을 통해 게시 보존 기간의 2배에 해당하는 기간 동안 동기화되지 않은 모든 밀어넣기 구독이 제거됩니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 병합 복제는 게시 보존 기간([sp_addmergepublication&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)의 **@retention** 및 **@retention_period_unit** 매개 변수)을 사용합니다. 구독이 만료되면 구독에 대한 메타데이터가 제거되므로 구독을 다시 초기화해야 합니다. 다시 초기화되지 않은 구독은 게시자에서 실행되는 **만료된 구독 정리** 작업에 의해 삭제됩니다. 기본적으로 이 작업은 매일 실행됩니다. 이 작업을 통해 게시 보존 기간의 2배에 해당하는 기간 동안 동기화되지 않은 모든 밀어넣기 구독이 제거됩니다. 예를 들어  
   
 -   게시의 보존 기간이 14일이면 14일 이내에 동기화되지 않은 구독은 만료될 수 있습니다.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "47820391"
   
     -   보존 기간에 도달하기 전까지는 복제 작업을 통해 게시 및 구독 데이터베이스의 메타데이터를 정리할 수 없습니다. 보존 기간을 너무 길게 설정하면 복제 성능이 저하될 수 있으므로 주의해야 합니다. 보존 기간 내에 모든 구독자가 정기적으로 동기화될 가능성이 있으면 보존 기간을 낮은 값으로 설정하는 것이 좋습니다.  
   
-    -   **@retention**에 값 0을 지정하여 구독이 만료되지 않도록 지정할 수 있지만 이 경우 메타데이터를 정리할 수 없으므로 이 값은 사용하지 않도록 합니다.  
+    -   **@retention** 에 값 0을 지정하여 구독이 만료되지 않도록 지정할 수 있지만 이 경우 메타데이터를 정리할 수 없으므로 이 값은 사용하지 않도록 합니다.  
   
 -   재게시자의 보존 기간은 원래 게시자에 설정한 보존 기간과 동일하거나 더 낮은 값으로 설정해야 합니다. 또한 모든 게시자와 대체 동기화 파트너에 대해 동일한 게시 보존 값을 사용해야 합니다. 다른 보존 값을 사용하면 데이터가 일치하지 않을 수 있습니다. 게시 보존 값을 변경해야 하는 경우 데이터 일치성을 유지하도록 구독자를 다시 초기화합니다.  
   

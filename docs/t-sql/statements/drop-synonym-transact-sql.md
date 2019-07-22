@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f44ba9c4d2b882e97b397fdf959c41d7a9b35fbf
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 59c26a7e490edb120d8819d8e2b16158b5b41e76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072135"
 ---
 # <a name="drop-synonym-transact-sql"></a>DROP SYNONYM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ DROP SYNONYM [ IF EXISTS ] [ schema. ] synonym_name
   
  동의어는 동적 SQL에서 생성, 삭제 및 참조할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  동의어를 삭제하려면 사용자가 적어도 다음 조건 중 하나를 충족시켜야 합니다.  
   
 -   동의어의 현재 사용자  

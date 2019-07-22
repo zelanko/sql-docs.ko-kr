@@ -7,13 +7,12 @@ ms.topic: conceptual
 ms.assetid: cebc1f6d-d5ea-460d-ae60-d047d29c2723
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 479d632b8d5413de9517f92f604c44383012acab
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 169d1d2dfe2ab36d5ae7541ee33912ea162f372f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136100"
 ---
 # <a name="restore-stretch-enabled-databases-stretch-database"></a>스트레치 사용 데이터베이스 복원(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

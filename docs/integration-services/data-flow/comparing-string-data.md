@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 93aeb5bd-e208-46b7-8979-dea2dcd37d4c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 578ff14516eb40aa32e401f06bad9c747e1f24bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca45017c7afe4b8e877018d0a121211e4eb9700e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045338"
 ---
 # <a name="comparing-string-data"></a>문자열 데이터 비교
 

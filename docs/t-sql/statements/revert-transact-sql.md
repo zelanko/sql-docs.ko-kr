@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 4688b17a-dfd1-4f03-8db4-273a401f879f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b2106d2683a47e31c2f9c76535ee059a7f151883
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a73d1f7109e31daa34f5fd25381f011905833be8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082404"
 ---
 # <a name="revert-transact-sql"></a>REVERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ REVERT
   
 ## <a name="arguments"></a>인수  
  WITH COOKIE = @*varbinary_variable*  
- 해당되는 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 독립 실행형 문에 생성된 쿠키를 지정합니다. *@varbinary_variable*은 **varbinary(100)** 입니다.  
+ 해당되는 [EXECUTE AS](../../t-sql/statements/execute-as-transact-sql.md) 독립 실행형 문에 생성된 쿠키를 지정합니다. *@varbinary_variable* 은 **varbinary(100)** 입니다.  
   
 ## <a name="remarks"></a>Remarks  
  REVERT는 저장 프로시저 또는 사용자 정의 함수 같은 모듈 내에서 지정하거나 독립 실행형 문으로 지정할 수 있습니다. 모듈 내에서 지정하면 REVERT는 모듈에 정의된 EXECUTE AS 문에만 적용할 수 있습니다. 예를 들어 다음 저장 프로시저는 `EXECUTE AS` 문과 `REVERT` 문을 차례로 실행합니다.  
@@ -80,14 +79,14 @@ EXECUTE dbo.usp_myproc;
 ## <a name="using-revert-with-cookie"></a>REVERT WITH COOKIE 사용  
  세션의 실행 컨텍스트를 설정하는 데 사용되는 EXECUTE AS 문에는 선택적 절인 WITH NO REVERT COOKIE = @*varbinary_variable*이 포함됩니다. 이 문이 실행되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 쿠키를 @*varbinary_variable*에 전달합니다. 호출하는 REVERT WITH COOKIE = @*varbinary_variable* 문에 올바른 *@varbinary_variable* 값이 포함되어 있는 경우에만 해당 명령문으로 설정된 실행 컨텍스트를 이전 컨텍스트로 되돌릴 수 있습니다.  
   
- 이 메커니즘은 연결 풀링을 사용하는 환경에 유용합니다. 연결 풀링은 여러 일반 사용자가 응용 프로그램에서 다시 사용할 수 있도록 데이터베이스 연결 그룹을 유지 관리하는 것입니다. *@varbinary_variable*에 전달된 값이 EXECUTE AS 문의 호출자(이 경우 애플리케이션)에게만 알려지므로 호출자는 자신이 설정한 실행 컨텍스트를 애플리케이션을 호출하는 일반 사용자가 변경할 수 없도록 할 수 있습니다. 실행 컨텍스트가 되돌려지면 응용 프로그램에서 컨텍스트를 다른 보안 주체로 전환할 수 있습니다.  
+ 이 메커니즘은 연결 풀링을 사용하는 환경에 유용합니다. 연결 풀링은 여러 일반 사용자가 응용 프로그램에서 다시 사용할 수 있도록 데이터베이스 연결 그룹을 유지 관리하는 것입니다. *@varbinary_variable* 에 전달된 값이 EXECUTE AS 문의 호출자(이 경우 애플리케이션)에게만 알려지므로 호출자는 자신이 설정한 실행 컨텍스트를 애플리케이션을 호출하는 일반 사용자가 변경할 수 없도록 할 수 있습니다. 실행 컨텍스트가 되돌려지면 응용 프로그램에서 컨텍스트를 다른 보안 주체로 전환할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한이 필요 없습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-execute-as-and-revert-to-switch-context"></a>1. EXECUTE AS 및 REVERT를 사용하여 컨텍스트 전환  
+### <a name="a-using-execute-as-and-revert-to-switch-context"></a>1\. EXECUTE AS 및 REVERT를 사용하여 컨텍스트 전환  
  다음 예에서는 여러 보안 주체를 사용하여 컨텍스트 실행 스택을 만듭니다. 그런 다음 REVERT 문을 사용하여 실행 컨텍스트를 이전 호출자로 다시 설정합니다. REVERT 문은 실행 컨텍스트가 원래 호출자로 설정될 때까지 스택 위로 이동하면서 여러 번 실행됩니다.  
   
 ```  
@@ -131,7 +130,7 @@ DROP USER user2;
 GO  
 ```  
   
-### <a name="b-using-the-with-cookie-clause"></a>2. WITH COOKIE 절 사용  
+### <a name="b-using-the-with-cookie-clause"></a>2\. WITH COOKIE 절 사용  
  다음 예에서는 세션 실행 컨텍스트를 지정한 사용자로 설정하고 WITH NO REVERT COOKIE = @*varbinary_variable* 절을 지정합니다. 컨텍스트를 호출자로 되돌리려면 `REVERT` 문에 `@cookie` 문의 `EXECUTE AS` 변수로 전달되는 값을 지정해야 합니다. 이 예를 실행하려면 예 1에서 생성된 `login1` 로그인 및 `user1` 사용자가 있어야 합니다.  
   
 ```  

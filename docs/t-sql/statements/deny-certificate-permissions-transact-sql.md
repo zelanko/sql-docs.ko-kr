@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: af316bd77056bb08d37551ba5cd2a812bda4ad04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b9314935f347fb4c8768cfaa192c5df0c18d1ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62664497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114927"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY 인증서 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ DENY permission  [ ,...n ]
  *permission*  
  인증서에 대해 거부할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON CERTIFICATE **::** _certificate_name_  
+ ON CERTIFICATE **::**_certificate_name_  
  사용 권한을 거부할 인증서를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 313ddaf6-ec54-4a81-a104-7ffa9533ca58
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 47876b387c06c1ba65e6a1a04fcbcee616097166
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: f069a36982a624dceee4f2be38633ec6998f1eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241854"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041344"
 ---
 # <a name="tail-log-backups-sql-server"></a>비상 로그 백업(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

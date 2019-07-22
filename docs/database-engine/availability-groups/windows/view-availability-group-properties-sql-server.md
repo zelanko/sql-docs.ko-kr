@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 61243c87-bd62-4510-863f-2a8f347caf1f
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 1f3b3b75b659603499c88ec533c5b1a1b8f5962d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fb3f29746df1e88b1d0ae8bdae4e163b654e3df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013357"
 ---
 # <a name="view-availability-group-properties-sql-server"></a>가용성 그룹 속성 보기(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

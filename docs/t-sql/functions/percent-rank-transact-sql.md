@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: e361c2d4-c01f-4da4-8e89-1ddc724a2629
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a71b6b5cd3f62fd3c51121bd6ef705911ffc76d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6e1144572288b2bc56fd434278ecda6cdc56f8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914391"
 ---
 # <a name="percentrank-transact-sql"></a>PERCENT_RANK(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]

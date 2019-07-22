@@ -34,14 +34,13 @@ helpviewer_keywords:
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f1ff55b99e722a1132114c400688cbc184b1bb04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caba5466432356cf6997b26a0a3b8c732b3179ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65942897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040174"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST 및 CONVERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +64,7 @@ SELECT 9.5 AS Original,
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-|Original   |ssNoversion    |Decimal |  
+|Original   |int    |Decimal |  
 |----|----|----|  
 |9.5 |9 |9.5000 |  
 
@@ -144,7 +143,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 
 <sup>6</sup> 문자 데이터를 **datetime** 또는 **smalldatetime**으로 캐스팅하는 경우에만 지원됩니다. 날짜 또는 시간 구성 요소만 나타내는 문자 데이터를 **datetime** 또는 **smalldatetime** 데이터 형식으로 캐스팅하면 지정되지 않은 시간 구성 요소는 00:00:00.000으로 설정되고 지정되지 않은 날짜 구성 요소는 1900-01-01로 설정됩니다.
   
-<sup>7</sup> 선택적 표준 시간대 표시기 **Z**를 사용하면 표준 시간대 정보가 있는 XML **datetime** 값을 표준 시간대가 없는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 값에 쉽게 매핑할 수 있습니다. Z는 UTC-0 시간대를 나타냅니다. \+ 또는 - 방향의 HH:MM 오프셋으로 다른 시간대를 나타냅니다. 예를 들어 `2006-12-12T23:45:12-08:00`을 참조하십시오.
+<sup>7</sup> 선택적 표준 시간대 표시기 **Z**를 사용하면 표준 시간대 정보가 있는 XML **datetime** 값을 표준 시간대가 없는[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **datetime** 값에 쉽게 매핑할 수 있습니다. Z는 UTC-0 시간대를 나타냅니다. + 또는 - 방향의 HH:MM 오프셋으로 다른 시간대를 나타냅니다. 예를 들어 `2006-12-12T23:45:12-08:00`을 참조하십시오.
   
 **smalldatetime**을 문자 데이터로 변환할 때는 초나 밀리초가 포함된 스타일이 해당 위치에 0으로 표시됩니다. **datetime** 또는 **smalldatetime** 값을 변환할 때는 적합한 **char** 또는 **varchar** 데이터 형식 길이를 사용하여 불필요한 날짜 부분을 자를 수 있습니다.
   
@@ -182,7 +181,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
 |**3**|불필요한 공백을 유지하고 제한된 내부 DTD 하위 집합 처리를 설정합니다.|  
   
 ## <a name="binary-styles"></a>이진 스타일
-**binary(n)** , **char(n)** , **varbinary(n)** 또는 **varchar(n)** *expression* 식인 경우 *스타일*은 다음 표에 있는 값 중 하나일 수 있습니다. 여기에 없는 스타일 값은 오류를 반환합니다.
+**binary(n)**, **char(n)**, **varbinary(n)** 또는 **varchar(n)** *expression* 식인 경우 *스타일*은 다음 표에 있는 값 중 하나일 수 있습니다. 여기에 없는 스타일 값은 오류를 반환합니다.
   
 |값|출력|  
 |---|---|
@@ -201,7 +200,7 @@ CONVERT 함수가 *식*을 변환하는 방법을 지정하는 정수 식입니�
   
 > [!NOTE]  
 >  
->  유니코드 데이터는 항상 짝수 바이트를 사용하므로 **binary** 또는 **varbinary**와 유니코드 지원 데이터 형식을 서로 변환할 때는 주의해야 합니다. 예를 들어 다음과 같은 변환은 16진수 값 41이 아니라 4100의 16 진수 값을 반환합니다(`SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`).  
+>  유니코드 데이터는 항상 짝수 바이트를 사용하므로 **binary** 또는 **varbinary**와 유니코드 지원 데이터 형식을 서로 변환할 때는 주의해야 합니다. 예를 들어 다음과 같은 변환은 16진수 값 41이 아니라 4100의 16 진수 값을 반환합니다(`SELECT CAST(CAST(0x41 AS nvarchar) AS varbinary)`).   
   
 ## <a name="large-value-data-types"></a>큰 값 데이터 형식
 큰 값 데이터 형식은 작은 데이터 형식, 특히 **nvarchar**, **varbinary** 및 **varchar** 데이터 형식과 같은 암시적 및 명시적 변환 동작을 보입니다. 그러나 다음 지침을 고려합니다.
@@ -285,14 +284,14 @@ Gail        Erickson      Ms.    *
 |보낸 사람|수행할 작업|동작|  
 |---|---|---|
 |**numeric**|**numeric**|반올림|  
-|**numeric**|**ssNoversion**|잘라내기|  
+|**numeric**|**int**|잘라내기|  
 |**numeric**|**money**|반올림|  
-|**money**|**ssNoversion**|반올림|  
+|**money**|**int**|반올림|  
 |**money**|**numeric**|반올림|  
-|**float**|**ssNoversion**|잘라내기|  
+|**float**|**int**|잘라내기|  
 |**float**|**numeric**|반올림<br /><br /> 과학적 표기법을 사용하는 **float** 값을 **decimal** 또는 **numerci**로 변환할 경우 전체 자릿수 값이 17자리로 제한됩니다. 17자리를 넘는 값은 0으로 반올림됩니다.|  
 |**float**|**datetime**|반올림|  
-|**datetime**|**ssNoversion**|반올림|  
+|**datetime**|**int**|반올림|  
   
 예를 들어 10.6496 및 -10.6496을 **int** 또는 **numeric** 형식으로 변환할 경우 잘리거나 반올림될 수 있습니다.
   
@@ -346,7 +345,7 @@ SC 데이터 정렬을 사용할 경우 `CONVERT`의 동작은 `CAST`의 동작�
   
 ## <a name="BKMK_examples"></a> 예  
   
-### <a name="a-using-both-cast-and-convert"></a>1\. CAST 및 CONVERT 모두 사용  
+### <a name="a-using-both-cast-and-convert"></a>1. CAST 및 CONVERT 모두 사용  
 각 예에서는 제품 가격 첫 자리에 `3`이 있는 제품의 이름을 검색하고 `ListPrice` 값을 `int`로 변환합니다.
   
 ```sql
@@ -367,7 +366,7 @@ WHERE CONVERT(int, ListPrice) LIKE '3%';
 GO  
 ```  
   
-### <a name="b-using-cast-with-arithmetic-operators"></a>2\. CAST에 산술 연산자 사용  
+### <a name="b-using-cast-with-arithmetic-operators"></a>2. CAST에 산술 연산자 사용  
 이 예에서는 총 연간 매출(`Computed`)을 커미션 비율(`SalesYTD`)로 나누어 한 열을 계산(`CommissionPCT`)합니다. 이 값은 가장 근사한 정수로 반올림된 다음, `int` 데이터 형식으로 CAST 연산이 수행됩니다.
   
 ```sql
@@ -612,7 +611,7 @@ Style 2, character to binary
 (1 row(s) affected)  
 ```  
   
-### <a name="i-converting-date-and-time-data-types"></a>9\. 날짜 및 시간 데이터 형식 변환  
+### <a name="i-converting-date-and-time-data-types"></a>9. 날짜 및 시간 데이터 형식 변환  
 이 예는 date, time 및 datetime 데이터 형식의 변환을 보여 줍니다.
   
 ```sql
@@ -650,7 +649,7 @@ FROM dbo.DimProduct
 WHERE CONVERT(int, ListPrice) LIKE '3%';  
 ```  
   
-### <a name="k-using-cast-with-arithmetic-operators"></a>11\. CAST에 산술 연산자 사용  
+### <a name="k-using-cast-with-arithmetic-operators"></a>11. CAST에 산술 연산자 사용  
 이 예에서는 제품 단가(`UnitPrice`)를 할인율(`UnitPriceDiscountPct`)로 나누어 한 열 값을 계산합니다. 그런 다음, 이 결과를 가장 가까운 정수로 반올림한 후 `int` 데이터 형식으로 변환합니다. 이 예에서는 AdventureWorksDW 데이터베이스를 사용합니다.
   
 ```sql
@@ -673,7 +672,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 216         18.5043    0.05                  1  
 ```  
   
-### <a name="l-using-cast-with-the-like-clause"></a>12\. CAST에 LIKE 절 사용  
+### <a name="l-using-cast-with-the-like-clause"></a>12. CAST에 LIKE 절 사용  
 이 예에서는 **money** 열 `ListPrice`를 **int** 형식으로 변환한 다음, LIKE 절에 사용할 수 있도록 **char(20)** 형식으로 변환합니다. 이 예에서는 AdventureWorksDW 데이터베이스를 사용합니다.  
   
 ```sql
@@ -682,7 +681,7 @@ FROM dbo.DimProduct
 WHERE CAST(CAST(ListPrice AS int) AS char(20)) LIKE '2%';  
 ```  
   
-### <a name="m-using-cast-and-convert-with-datetime-data"></a>13\. datetime 데이터와 함께 CAST 및 CONVERT 사용  
+### <a name="m-using-cast-and-convert-with-datetime-data"></a>13. datetime 데이터와 함께 CAST 및 CONVERT 사용  
 이 예에서는 현재 날짜와 시간을 표시하고, CAST를 사용하여 현재 날짜와 시간을 문자 데이터 형식으로 변환한 다음, CONVERT를 사용하여 날짜와 시간을 ISO 8601 형식으로 표시합니다. 이 예에서는 AdventureWorksDW 데이터베이스를 사용합니다.
   
 ```sql

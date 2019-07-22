@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9ffb6546-9973-4574-aaa0-8fe0017e3601
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c8e44747c3c59a76fe5bd9947eec0bb569926d7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9200883cb64877d8b4fc2c35e6f19b28df4715c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62661825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908010"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>VPN을 사용하여 인터넷을 통해 데이터 게시
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

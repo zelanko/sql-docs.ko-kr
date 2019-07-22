@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6c5cb6c1-2921-4ba1-8100-0bf8074f9103
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: b0b366e4b154daa8d1422e25c6abb170323bfb58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 408589a38ae9b01777110bbab1fb3b20c380a6c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029343"
 ---
 # <a name="auto-mode-heuristics-in-shaping-returned-xml"></a>반환된 XML 모양 지정에서 AUTO 모드 추론
 

@@ -10,14 +10,13 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bfaaca6a0f3c35814264d404ceaae9daebc34d4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903445"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server 확장 이벤트에 대한 시스템 뷰의 SELECT 및 JOIN
 
@@ -35,7 +34,7 @@ ms.locfileid: "58788030"
 
 
 
-## <a name="a-foundational-information"></a>1. 기본 정보
+## <a name="a-foundational-information"></a>1\. 기본 정보
 
 
 확장 이벤트에 대한 다음 두 가지 시스템 뷰 집합이 있습니다.
@@ -75,7 +74,7 @@ ms.locfileid: "58788030"
 
 <a name="section_B_catalog_views"></a>
 
-## <a name="b-catalog-views"></a>2. 카탈로그 뷰
+## <a name="b-catalog-views"></a>2\. 카탈로그 뷰
 
 
 이 섹션에서는 동일하게 정의된 이벤트 세션에 대한 세 가지 기술적 관점을 일치 및 상호 연결합니다. 세션이 정의되었으며 SQL Server Management Studio(SSMS.exe)의 **개체 탐색기** 에 표시되지만 세션이 현재 실행되고 있지 않습니다.

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0d8f6e4f-bc71-4fa3-8615-74249c8e072d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06847b9eeb2c01ae7b3e5d512a01f87adafdeb42
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0db1834114a8bb2ea21d9fb566f2201dd933803c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088462"
 ---
 # <a name="delete-columns-from-a-table"></a>테이블에서 열 삭제
 

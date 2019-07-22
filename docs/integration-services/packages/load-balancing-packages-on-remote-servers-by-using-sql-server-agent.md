@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9281c5f8-8da3-4ae8-8142-53c5919a4cfe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 36b28f90047bb7d116fffc1564eaecf43858822c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07d486b580cb09f9f6fcb0f9462edfffb2520581
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65719810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051149"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>SQL Server 에이전트를 사용하여 원격 서버의 패키지 로드 균형 조정
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 73b6109c-2ad0-4915-b11b-d40d5a0fdc25
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: c2addb0ed4dea6114b1abaa5e7474d6de6912f75
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 5389413091f57a5a0dfdad887edad675ee68ff64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136928"
 ---
 # <a name="change-workload-group-settings"></a>작업 그룹 설정 변경
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "55689816"
   
  인덱스를 만들 때 처음에 부여된 것 이상의 메모리 작업 영역을 사용하여 성능을 높일 수 있습니다. 이 특수 처리는 리소스 관리자에서 지원되지만 초기 부여 및 추가 메모리 부여는 작업 그룹 및 리소스 풀 설정에 따라 제한됩니다.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  작업 그룹 설정을 변경하려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="ChgWGProp"></a> SQL Server Management Studio를 사용하여 작업 그룹 설정 변경  

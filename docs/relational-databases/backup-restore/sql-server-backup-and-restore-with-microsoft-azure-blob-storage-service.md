@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 625eccb976c500dcacaa5612ca41bac8b638fbed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 169e437c141d379401b7a3294f0ae852d756374f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62516244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041373"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62516244"
     > [!NOTE]  
     >  SQL Server 2012 SP1 CU2 이전의 SQL Server 버전의 경우 Microsoft Azure 도구의 추가 기능인 SQL Server 백업을 사용하여 Microsoft Azure Storage에 백업을 쉽고 빠르게 만들 수 있습니다. 자세한 내용은 [다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=324399)를 참조하십시오.  
   
--   **Azure Blob Storage의 데이터베이스 파일에 대한 파일-스냅숏 백업** : Azure 스냅숏을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅숏 백업은 Azure Blob Storage 서비스를 사용하여 저장된 데이터베이스 파일에 대해 거의 즉각적인 백업 및 복원을 제공합니다. 이 기능으로 백업 및 복원 정책을 간소화할 수 있으며 특정 시점 복원을 지원합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요. 이 기능은 SQL Server 2016 이상에서 사용할 수 있습니다.  
+-   **Azure Blob Storage의 데이터베이스 파일에 대한 파일-스냅샷 백업** : Azure 스냅샷을 사용하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅샷 백업은 Azure Blob Storage 서비스를 사용하여 저장된 데이터베이스 파일에 대해 거의 즉각적인 백업 및 복원을 제공합니다. 이 기능으로 백업 및 복원 정책을 간소화할 수 있으며 특정 시점 복원을 지원합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요. 이 기능은 SQL Server 2016 이상에서 사용할 수 있습니다.  
   
 -   **SQL Server에서 Microsoft Azure에 대한 백업을 관리하도록 구성:** 백업 전략을 관리하고 단일 데이터베이스나 여러 데이터베이스에 대한 백업을 예약하도록 SQL Server를 구성하거나 인스턴스 수준에서 기본값을 설정합니다. 이 기능을 **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** 이라고 합니다. 자세한 내용은 [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요. 이 기능은 SQL Server 2014 이상에서 사용할 수 있습니다.  
   

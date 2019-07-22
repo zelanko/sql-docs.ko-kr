@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 060eb839-666a-4046-9e1d-5edc9ea75a11
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 70a595b13bde3f013e07af02d0599b240a7bdbfc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 15f7c220cbf167c91e052c18d61b2c0c579ea63e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065556"
 ---
 # <a name="grant-availability-group-permissions-transact-sql"></a>가용성 그룹 사용 권한 부여(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
  *permission*  
  가용성 그룹에 부여할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- ON AVAILABILITY GROUP **::**_availability_group_name_  
- 사용 권한을 부여할 가용성 그룹을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ ON AVAILABILITY GROUP **::** _availability_group_name_  
+ 사용 권한을 부여할 가용성 그룹을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  TO \<server_principal>  
  사용 권한을 부여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다.  
@@ -93,12 +92,12 @@ GRANT permission  [ ,...n ] ON AVAILABILITY GROUP :: availability_group_name
   
  모든 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 권한에 대한 차트를 보려면 [데이터베이스 엔진 사용 권한 포스터](https://aka.ms/sql-permissions-poster)를 참조하십시오.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  가용성 그룹에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY AVAILABILITY GROUP 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>1. 가용성 그룹에 대한 VIEW DEFINITION 권한 부여  
+### <a name="a-granting-view-definition-permission-on-an-availability-group"></a>1\. 가용성 그룹에 대한 VIEW DEFINITION 권한 부여  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 가용성 그룹 `MyAg`에 대한 `ZArifin` 권한을 부여합니다.  
   
 ```  
@@ -107,7 +106,7 @@ GRANT VIEW DEFINITION ON AVAILABILITY GROUP::MyAg TO ZArifin;
 GO  
 ```  
   
-### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>2. GRANT OPTION을 지정하여 TAKE OWNERSHIP 권한 부여  
+### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>2\. GRANT OPTION을 지정하여 TAKE OWNERSHIP 권한 부여  
  다음 예에서는 `TAKE OWNERSHIP`으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `MyAg`에 가용성 그룹 `PKomosinski`에 대한 `GRANT OPTION` 권한을 부여합니다.  
   
 ```  
@@ -117,7 +116,7 @@ GRANT TAKE OWNERSHIP ON AVAILABILITY GROUP::MyAg TO PKomosinski
 GO  
 ```  
   
-### <a name="c-granting-control-permission-on-an-availability-group"></a>3. 가용성 그룹에 대한 CONTROL 권한 부여  
+### <a name="c-granting-control-permission-on-an-availability-group"></a>C. 가용성 그룹에 대한 CONTROL 권한 부여  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `CONTROL`에 가용성 그룹 `MyAg`에 대한 `PKomosinski` 권한을 부여합니다. CONTROL 권한이 있으면 가용성 그룹의 소유자가 아니더라도 가용성 그룹에 대한 완벽한 로그인 제어를 할 수 있습니다. 소유권을 변경하려면 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md) 을 참조하세요.  
   
 ```  

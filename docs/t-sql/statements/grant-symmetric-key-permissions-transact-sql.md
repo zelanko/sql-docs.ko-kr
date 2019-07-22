@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5c61557f-67ae-4e55-b86d-713575b27cea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d105d91926c123670f63102d4b7dbb31a4b2ecc7
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a7c592af7f2971cc637c9049b8ca06a92a2f3c05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050772"
 ---
 # <a name="grant-symmetric-key-permissions-transact-sql"></a>GRANT 대칭 키 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ GRANT permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다.  
   
  AS 옵션을 사용하는 경우 다음과 같은 추가 요구 사항이 적용됩니다.  

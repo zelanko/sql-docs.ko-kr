@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 56be2b8913002d681a4478eff80448acd2e71089
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 485ef972b86795a2127dba5fc3e86bdf98354c7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117072"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

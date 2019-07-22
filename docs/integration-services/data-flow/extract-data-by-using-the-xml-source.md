@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5d5be54c-2b7e-4957-9193-c5ea5c5d6d15
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 45e24864ad54d8b54dbf32c71e675e995217a18d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8308a8449dd41d1eef7ad6784dffc8d8939f64f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941530"
 ---
 # <a name="extract-data-by-using-the-xml-source"></a>XML 원본을 사용하여 데이터 추출
 

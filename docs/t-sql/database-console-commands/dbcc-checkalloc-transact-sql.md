@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 4e0bdec7737c98b8b28267344dd9b8e2acb86f1c
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102131"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -80,11 +79,11 @@ DBCC CHECKALLOC
  이전 버전과의 호환성을 위해서만 구문이 유지됩니다. 복구 동작은 수행되지 않습니다.
 
  REPAIR_REBUILD  
- 이 오류에는 이 작업을 적용할 수 없습니다.  
+ 해당 사항 없음  
  REPAIR 옵션은 최후의 수단으로만 사용하십시오. 오류를 복구하려면 백업에서 복원하는 것이 좋습니다. 복구 작업이 수행될 경우 테이블 자체나 테이블 간에 존재할 수 있는 제약 조건이 고려되지 않습니다. 지정된 테이블이 하나 이상의 제약 조건에 관련되면 복구 작업 후에 DBCC CHECKCONSTRAINTS를 실행하는 것이 좋습니다. REPAIR를 사용해야 하는 경우 복구 옵션 없이 DBCC CHECKDB를 실행하여 사용할 복구 수준을 확인합니다. REPAIR_ALLOW_DATA_LOSS 수준을 사용하는 경우 이 옵션으로 DBCC CHECKDB를 실행하기 전에 데이터베이스를 백업하는 것이 좋습니다.
 
  의 모든 멘션을  
- 지정할 옵션을 활성화합니다.
+ 지정할 옵션을 설정합니다.
 
  ALL_ERRORMSGS  
  모든 오류 메시지를 표시합니다. 기본적으로 모든 오류 메시지가 표시됩니다. 이 옵션을 지정하거나 생략하더라도 아무런 영향을 미치지 않습니다.
@@ -228,7 +227,7 @@ Estimated TEMPDB space needed for CHECKALLOC (KB)
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  

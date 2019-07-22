@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e99b9c4fbfa9b0d20a78a9d76e4730ce46966d3b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078035"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML 쿼리의 TYPE 지시어
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>xml 유형 변수에 FOR XML 쿼리 결과 할당  
- 다음 예에서는 FOR XML 결과가 **xml** 유형 변수 `@x`에 할당됩니다. 쿼리는 `BusinessEntityID`xml `FirstName`의 `LastName`열에서 `AdditionalContactInfo` , **,**`TYPE`및 추가 전화 번호와 같은 연락처 정보를 검색합니다. `FOR XML` 절은 `TYPE` 지시어를 지정하므로 XML은 **xml** 유형으로 반환되며 변수에 할당됩니다.  
+ 다음 예에서는 FOR XML 결과가 **xml** 유형 변수 `@x`에 할당됩니다. 쿼리는 `BusinessEntityID`xml `FirstName`의 `LastName`열에서 `AdditionalContactInfo` , **,** `TYPE`및 추가 전화 번호와 같은 연락처 정보를 검색합니다. `FOR XML` 절은 `TYPE` 지시어를 지정하므로 XML은 **xml** 유형으로 반환되며 변수에 할당됩니다.  
   
 ```  
 USE AdventureWorks2012;  

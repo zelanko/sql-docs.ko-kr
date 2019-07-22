@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8932a3413923016783f50c3084658fa992e6c984
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdd652c18af72c73566afac978c4dc00e2867a8a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66270165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065855"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -487,7 +486,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_RESUMABLE = WHEN_SUPPORTED ;
 ```
 
-### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>11\. 계획 캐시에서 쿼리 계획 지우기
+### <a name="k-clear-a-query-plan-from-the-plan-cache"></a>11. 계획 캐시에서 쿼리 계획 지우기
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 이 예에서는 프로시저 캐시에서 특정 계획을 지웁니다. 

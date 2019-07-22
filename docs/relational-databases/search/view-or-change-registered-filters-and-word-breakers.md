@@ -14,14 +14,13 @@ ms.assetid: f88c54df-b1aa-4701-807f-dc92c32363fd
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4652aeb556ae18f3a04434167c76093057fa4124
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 158fbe67e52fefbe96bd1d45df68bc2d1e72b663
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095211"
 ---
 # <a name="view-or-change-registered-filters-and-word-breakers"></a>등록된 필터와 단어 분리기 보기 및 변경
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

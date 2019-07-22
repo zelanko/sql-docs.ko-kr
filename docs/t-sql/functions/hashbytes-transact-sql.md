@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 0ea6a4d1-313e-4f70-b939-dd2cd570f6d6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 400078e666f3854383cbd430cf8fd719ea720929
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
+ms.openlocfilehash: e3eef3752a362dcc6709d7c7461cd35fdc5c1892
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077786"
 ---
 # <a name="hashbytes-transact-sql"></a>HASHBYTES(Transact-SQL)
 

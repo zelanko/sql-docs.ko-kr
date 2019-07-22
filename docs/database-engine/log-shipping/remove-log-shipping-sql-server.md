@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 859373db-c744-4a4b-8479-45163f61e8cb
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: e7b2f03c4d8aa7b0b5f34f0390656afbceb16f89
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 817bfeccb29de6b1531b83a48da4d78f8397b4ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058253"
 ---
 # <a name="remove-log-shipping-sql-server"></a>로그 전달 제거(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

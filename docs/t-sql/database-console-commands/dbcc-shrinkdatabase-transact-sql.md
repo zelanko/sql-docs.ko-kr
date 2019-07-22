@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: fc976afd-1edb-4341-bf41-c4a42a69772b
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: d580ed70608dc68fbd86b31177a568e7b74e3796
-ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
+ms.openlocfilehash: 1bda4ebd946bfd8adf31190c36125075d50dc28d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67866230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073158"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -157,7 +156,7 @@ timestamp 15 or with timestamps older than 109 to finish.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>1\. 데이터베이스 축소 및 여유 공간의 백분율 지정  
+### <a name="a-shrinking-a-database-and-specifying-a-percentage-of-free-space"></a>1. 데이터베이스 축소 및 여유 공간의 백분율 지정  
 다음 예제에서는 `UserDB` 사용자 데이터베이스의 데이터 및 로그 파일 크기를 줄여서 데이터베이스에 10%의 여유 공간을 허용합니다.  
   
 ```sql  
@@ -165,7 +164,7 @@ DBCC SHRINKDATABASE (UserDB, 10);
 GO  
 ```  
   
-### <a name="b-truncating-a-database"></a>2\. 데이터베이스 자름  
+### <a name="b-truncating-a-database"></a>2. 데이터베이스 자름  
 다음 예제에서는 `AdventureWorks` 샘플 데이터베이스의 데이터 및 로그 파일을 마지막으로 할당된 익스텐트까지 축소합니다.  
   
 ```sql  

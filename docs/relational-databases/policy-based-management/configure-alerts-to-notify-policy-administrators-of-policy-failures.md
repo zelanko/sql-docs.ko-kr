@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e8e60159-d5b0-49d5-91f3-af8e9cb994c1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 36c9972d6e0376f344abc290bd4fa0df42245601
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: ef46a36296da926f2cb62599b41774b1d29f5ba1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109825"
 ---
 # <a name="configure-alerts-to-notify-policy-administrators-of-policy-failures"></a>정책 관리자에서 정책 실패를 알리도록 경고 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "51512688"
   
 -   [운영자에게 경고 할당](../../ssms/agent/assign-alerts-to-an-operator.md)  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  정책이 요청 시 평가되면 사용자의 보안 컨텍스트에서 실행됩니다. 오류 로그에 작성하려면 사용자가 ALTER TRACE 권한을 가지고 있거나 sysadmin 고정 서버 역할의 멤버여야 합니다. 적은 권한의 사용자가 평가하는 정책은 이벤트 로그에 작성되지 않고 경고를 발생시키지 않습니다.  
   
  자동화된 실행 모드는 sysadmin 역할의 멤버로 실행합니다. 그러면 정책에서 오류 로그 기록 및 경고 발생을 수행할 수 있습니다.  

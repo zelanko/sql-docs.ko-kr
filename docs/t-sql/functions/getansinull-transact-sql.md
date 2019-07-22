@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 189399e4-428d-4902-b3a8-94f07fdefc6a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cb776fcd58d77bcba803e4c461ce3433ee5e66f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8343a24f892c5b0058f1bd1a7c001221c8ff65f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940113"
 ---
 # <a name="getansinull-transact-sql"></a>GETANSINULL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ GETANSINULL ( [ 'database' ] )
  Null 허용 여부 정보를 반환할 데이터베이스의 이름입니다. *database는 **char** 또는 **nchar**입니다. **char**인 경우, *데이터베이스*는 암시적으로 **nchar**으로 변환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
 데이터베이스의 Null 허용 여부가 Null 값을 허용하는 경우 GETANSINULL은 1을 반환합니다. 이 반환 값을 사용하려면 열 또는 데이터 형식 Null 허용 여부가 명시적으로 정의되지 않아야 합니다. ANSI NULL 기본값은 1입니다. 

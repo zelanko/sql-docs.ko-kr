@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
-manager: jroth
-ms.openlocfilehash: 5fd3ec3c17e20980b695fbcdd2364e49065732e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5216b324477f1af7fb727af3462ccce8d64e6a64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012104"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>확장된 보호를 사용하여 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

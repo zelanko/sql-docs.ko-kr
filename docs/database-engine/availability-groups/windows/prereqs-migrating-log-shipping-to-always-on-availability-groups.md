@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 7261b155c8dffa1d39a9e4354e03fb0cc7a8d1ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73cd348f9cb1f22eca30c28cee97ce8e81a20b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014508"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>로그 전달을 Always On 가용성 그룹으로 변환하기 위한 필수 구성 요소
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e218363f-faec-46d5-9904-a537fbcc994d
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 79510a86159d771d6ff51a98ba9d1a988a312bc7
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 0daf02b46d784645b7a76a854e566c7a950f55c0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690302"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263747"
 ---
 # <a name="draw-reflexive-relationships-visual-database-tools"></a>반사 관계 그리기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

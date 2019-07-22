@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 49e61e85-8abf-4ca7-8c70-7e9f8f1078bd
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 7b505c949c0e40150f992d024bb790bf06d9724e
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 691f6280414dafd12839a8d55b13299b6b1ece56
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690488"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264268"
 ---
 # <a name="create-table-aliases-visual-database-tools"></a>테이블 별칭 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

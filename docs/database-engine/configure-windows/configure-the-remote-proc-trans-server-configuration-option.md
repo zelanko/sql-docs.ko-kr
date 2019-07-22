@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cfbc6158-ab96-44b4-87eb-ea278c1b0c6b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 373cf5287228ba39d97235e4de23503c07024dd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a372bf572373d0c3557ec4e40a32ba937d57d88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012309"
 ---
 # <a name="configure-the-remote-proc-trans-server-configuration-option"></a>remote proc trans 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b9ea9d63d2303a66e56ab38774845cee73c125a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c933da5a54e5f5f447679862d52c0a641a3cde52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060826"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 변경 데이터베이스 만들기
 

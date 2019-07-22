@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 157ef8e4-fd23-4f81-8194-eebf74e9fd86
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5988f27997ae67842d7812275c9ffa8a6353c7e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1de8d4676a5e288bcbc832b61136ac488de3fa56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003717"
 ---
 # <a name="column-null-ratio-profile-request-options-data-profiling-task"></a>열 Null 비율 프로필 요청 옵션(데이터 프로파일링 태스크)
 

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 413a368e-fd2b-4e1f-b370-002cdbc85bab
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e7156808f0b13d095f32adaf7cf12f96795cfb47
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: f6e370ce717190b6f7a14b6eaf354c7c5321a011
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115773"
 ---
 # <a name="job-activity-monitor-refresh"></a>작업 활동 모니터 새로 고침
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "51217111"
   
  이 대화 상자를 열려면 작업 활동 모니터에서 **상태**섹션의 **새로 고침 설정 보기** 를 클릭합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **자동 새로 고침 간격**  
  작업 모니터 정보의 자동 새로 고침을 시작하려면 선택합니다. 이 옵션은 기본적으로 해제되어 있습니다.  
   

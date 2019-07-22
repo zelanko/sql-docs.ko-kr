@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 029168d7-085e-4b13-9b86-5644b67c6e24
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 658e2df7a42492e71d12631a68aa38a669aa60cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83f1489e79bee300ce6a5265d35975f4a6017766
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031665"
 ---
 # <a name="disable-foreign-key-constraints-with-insert-and-update-statements"></a>NSERT 및 UPDATE 문에서 FOREIGN KEY 제약 조건 사용 안 함
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47739481"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

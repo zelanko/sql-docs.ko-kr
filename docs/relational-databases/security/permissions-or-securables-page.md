@@ -16,14 +16,13 @@ f1_keywords:
 ms.assetid: b3bf077a-bec2-4161-ac0c-460586199906
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f97e848e1a55d05f1528d17a21a08b2fa00e20e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 949e3c3cfc14082ef2093dfdd11baa01218ccb2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076617"
 ---
 # <a name="permissions-or-securables-page"></a>사용 권한 또는 보안 개체 페이지
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

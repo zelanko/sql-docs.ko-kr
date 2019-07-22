@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f7df51ef-c088-4efc-b247-f91fb2c6ff32
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d0e5b67288e9cc9d0491f30dc98b3edf9c01c0f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 362861dcc90222d32ccd816fb419fa99fc4de65a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62662806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907948"
 ---
 # <a name="change-publication-and-article-properties"></a>게시 및 아티클 속성 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,7 +95,7 @@ ms.locfileid: "62662806"
   
 ## <a name="see-also"></a>참고 항목  
  [복제 관리 FAQ](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
- [스냅숏 만들기 및 적용](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
+ [스냅샷 만들기 및 적용](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
  [구독 다시 초기화](../../../relational-databases/replication/reinitialize-subscriptions.md)   
  [sp_addmergefilter&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_articlecolumn&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

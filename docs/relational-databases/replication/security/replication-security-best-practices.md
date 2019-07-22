@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ab2635d-0992-4c99-b17d-041d02ec9a7c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cbda6137d9b844b13485c63488fad9efa85366c7
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: a282ed4ce04df00a062fb1b910318125e23b1634
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078777"
 ---
 # <a name="replication-security-best-practices"></a>복제 보안을 위한 최선의 구현 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "54131563"
   
     -   지정된 에이전트(예: 구독에 대한 배포 에이전트)가 각 컴퓨터에서 동일한 계정으로 연결하는지 확인합니다.  
   
-    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증이 필요한 환경에서는 UNC 스냅숏 공유에 액세스할 수 없는 경우가 많습니다. 예를 들어 방화벽에서 액세스를 차단할 수 있습니다. 이 경우 FTP(파일 전송 프로토콜)를 통해 스냅샷을 구독자에게 전송할 수 있습니다. 자세한 내용은 [FTP를 통해 스냅샷 전송](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
+    -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증이 필요한 환경에서는 UNC 스냅샷 공유에 액세스할 수 없는 경우가 많습니다. 예를 들어 방화벽에서 액세스를 차단할 수 있습니다. 이 경우 FTP(파일 전송 프로토콜)를 통해 스냅샷을 구독자에게 전송할 수 있습니다. 자세한 내용은 [FTP를 통해 스냅샷 전송](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)   

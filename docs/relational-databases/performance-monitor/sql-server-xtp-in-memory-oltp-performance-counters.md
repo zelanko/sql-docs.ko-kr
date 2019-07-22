@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe3cbaf4-65f4-44c5-acc6-7b735cda0c5d
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 62f5c67db29c95b9d3e5ff15739b4c7a5286023e
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 2ed90197774cb7be9d8229aa6b5e79ae811fbd88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379344"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915249"
 ---
 # <a name="sql-server-xtp-in-memory-oltp-performance-counters"></a>SQL Server XTP(메모리 내 OLTP) 성능 카운터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "53379344"
 |[SQL Server XTP 가비지 수집](../../relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md)|SQL Server XTP 가비지 수집 성능 개체에는 메모리 내 OLTP 엔진의 가비지 수집기와 관련된 카운터가 포함됩니다.|  
 |[SQL Server 2016 XTP IO 관리자](../../relational-databases/performance-monitor/sql-server-xtp-io-governor.md)|SQL Server XTP IO 관리자 성능 개체에는 메모리 내 OLTP IO 속도 관리자와 관련된 카운터가 포함되어 있습니다.|
 |[SQL Server XTP 가상 프로세서](../../relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md)|SQL Server XTP 가상 프로세서 성능 개체에는 메모리 내 OLTP 엔진의 가상 처리 하위 시스템과 관련된 카운터가 포함됩니다. 이 구성 요소는 SERIALIZABLE 격리 수준에서 실행되는 트랜잭션에서 가상 행을 검색합니다.|  
-|[SQL Server XTP 저장소](../../relational-databases/performance-monitor/sql-server-xtp-storage.md)|SQL Server XTP 스토리지 성능 개체에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 메모리 내 OLTP 스토리지 관련 카운터가 포함됩니다.|  
+|[SQL Server XTP 스토리지](../../relational-databases/performance-monitor/sql-server-xtp-storage.md)|SQL Server XTP 스토리지 성능 개체에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 메모리 내 OLTP 스토리지 관련 카운터가 포함됩니다.|  
 |[SQL Server XTP 트랜잭션 로그](../../relational-databases/performance-monitor/sql-server-xtp-transaction-log.md)|SQL Server XTP 트랜잭션 로그 성능 개체에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 메모리 내 OLTP 트랜잭션 로깅과 관련된 카운터가 포함됩니다.|  
 |[SQL Server XTP 트랜잭션](../../relational-databases/performance-monitor/sql-server-xtp-transactions.md)|SQL Server XTP 트랜잭션 성능 개체에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 메모리 내 OLTP 엔진 트랜잭션과 관련된 카운터가 포함됩니다.|  
   

@@ -10,14 +10,13 @@ dev_langs:
 - TSQL
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3a40717a472970a0e2d463e958330e2d46473ab1
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: d2cf30f4f01a30d8171e58cce3052e45fefa6179
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930312"
 ---
 # <a name="dbcc-shrinklog-parallel-data-warehouse"></a>DBCC SHRINKLOG(병렬 데이터 웨어하우스)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -37,21 +36,21 @@ DBCC SHRINKLOG
   
 ## <a name="arguments"></a>인수  
 SIZE = { *target_size* [ MB | **GB** | TB ]  } | **DEFAULT**.  
-*target_size*는 DBCC SHRINKLOG 완료 후 모든 계산 노드에 있는 트랜잭션 로그에 대해 원하는 크기입니다. 0보다 큰 정수여야 합니다.  
+*target_size*는 DBCC SHRINKLOG 완료 후 모든 컴퓨팅 노드에 있는 트랜잭션 로그에 대해 원하는 크기입니다. 0보다 큰 정수여야 합니다.  
 로그 크기는 MB(메가바이트), GB(기가바이트) 또는 TB(테라바이트) 단위로 측정됩니다. 모든 컴퓨팅 노드의 트랜잭션 노드에 대한 결합된 크기입니다.  
 기본적으로 DBCC SHRINKLOG는 트랜잭션 로그를 데이터베이스에 대한 메타데이터에 저장된 로그 크기로 줄입니다. 메타데이터의 로그 크기는 [CREATE DATABASE&#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/create-database-azure-sql-data-warehouse.md) 또는 [ALTER DATABASE&#40;Azure SQL Data Warehouse&#41;](../../t-sql/statements/alter-database-azure-sql-data-warehouse.md)의 LOG_SIZE 매개 변수에 따라 결정됩니다. `SIZE=DEFAULT`가 지정되거나 `SIZE` 절이 생략된 경우, DBCC SHRINKLOG는 트랜잭션 로그 크기를 기본 크기로 줄입니다.
   
 WITH NO_INFOMSGS  
 정보 메시지는 DBCC SHRINKLOG 결과에 표시되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 ALTER SERVER STATE 권한이 필요합니다.
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
 DBCC SHRINKLOG는 데이터베이스에 대한 메타데이터에 저장된 로그 크기를 변경하지 않습니다. 메타데이터는 CREATE DATABASE 또는 ALTER DATABASE 문에 지정된 LOG_SIZE 매개 변수를 계속 포함합니다.
   
 ## <a name="examples"></a>예 
-### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>1. CREATE DATABASE로 지정된 원래 크기로 트랜잭션 로그를 축소합니다.  
+### <a name="a-shrink-the-transaction-log-to-the-original-size-specified-by-create-database"></a>1\. CREATE DATABASE로 지정된 원래 크기로 트랜잭션 로그를 축소합니다.  
 트랜잭션 로그에 대해 주소 데이터베이스를 만들 때 주소 데이터베이스를 100MB로 설정했다고 가정합니다. 즉, 주소에 대한 CREATE DATABASE 문이 LOG_SIZE = 100MB입니다. 이제, 로그가 150MB로 증가했으며 다시 100MB로 축소하려고 합니다.
   
 다음 명령문들은 각각 주소 데이터베이스에 대한 트랜잭션 로그를 100MB의 기본 크기로 축소하려고 합니다. 로그를 100MB로 축소하여 데이터가 손실될 경우, DBCC SHRINKLOG는 데이터 손실 없이 로그를 100MB 이하의 가능한 가장 작은 크기로 축소합니다.

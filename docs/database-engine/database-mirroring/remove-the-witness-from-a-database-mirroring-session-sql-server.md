@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: a951fa18e10a5472f03ff9d37d63499e539584a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 75a0363d376a16a19fa0c4a07dd0ed2ad0e71fd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025274"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>데이터베이스 미러링 세션에서 미러링 모니터 서버 제거(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

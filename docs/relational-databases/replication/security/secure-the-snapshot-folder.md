@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3cd877d1-ffb8-48fd-a72b-98eb948aad27
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a73ae886682890c68c34ac90af33438d7f7b9644
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30e0f800477af8305f64b617aa3af543e789bdc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62644764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051888"
 ---
 # <a name="secure-the-snapshot-folder"></a>스냅샷 폴더 보안 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ ms.locfileid: "62644764"
  FTP를 통해 스냅샷에 액세스하는 데 필요한 암호를 설정하고 변경하는 방법은 [Secure the Publisher](../../../relational-databases/replication/security/secure-the-publisher.md)항목의 "FTP 스냅샷 배달" 섹션을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [스냅숏 옵션 수정](../../../relational-databases/replication/snapshot-options.md)   
- [스냅숏으로 구독 초기화](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
+ [스냅샷 옵션 수정](../../../relational-databases/replication/snapshot-options.md)   
+ [스냅샷으로 구독 초기화](../../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)   
  [Replication Security Best Practices](../../../relational-databases/replication/security/replication-security-best-practices.md)   
  [복제 보안 설정 보기 및 수정](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [FTP를 통해 스냅숏 전송](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)  
+ [FTP를 통해 스냅샷 전송](../../../relational-databases/replication//publish/deliver-a-snapshot-through-ftp.md)  
   
   

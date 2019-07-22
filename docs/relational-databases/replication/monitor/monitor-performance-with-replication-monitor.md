@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f212397d-1bfd-496b-a246-668952891d09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0881bb74dbd5018d194464d6a8ce58161062a901
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 784bfc96edf7e3ed589dbafe6359529214a0c6c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111680"
 ---
 # <a name="monitor-performance-with-replication-monitor"></a>복제 모니터로 성능 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dce1e027-f859-4967-bdda-16a95ae460d0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a173858ed438cf1b865b887d16e4811cd131347e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2f375de9db1cce966206402b99d3e54724cbf2bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065615"
 ---
 # <a name="grant-assembly-permissions-transact-sql"></a>GRANT 어셈블리 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
  *permission*  
  어셈블리에 대해 부여할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON ASSEMBLY **::**_assembly_name_  
+ ON ASSEMBLY **::** _assembly_name_  
  사용 권한을 부여할 어셈블리를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  
@@ -85,7 +84,7 @@ AS *granting_principal*
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다.  
   
  AS 옵션을 사용하는 경우 다음과 같은 추가 요구 사항이 적용됩니다.  

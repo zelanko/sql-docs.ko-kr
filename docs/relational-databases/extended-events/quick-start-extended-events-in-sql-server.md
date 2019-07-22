@@ -10,14 +10,13 @@ ms.topic: quickstart
 ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dc8a06380e54e49f188813f29fe6c0f4ee68346f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a378daeb4307b9f99e055edafd5cb21d95c30977
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009411"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
 

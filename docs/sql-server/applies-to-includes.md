@@ -7,15 +7,14 @@ ms.reviewer: ''
 ms.technology: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ms.topic: conceptual
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3c947da650b7ba5d5e968464cc022839ca908ef0
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 5d9b834d94469adf8394dc12f3b812a0dfd1fbbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067579"
 ---
 # <a name="sql-server-include-files-for-versioning-and-applies-to"></a>SQL Server에 버전 관리 및 적용 대상 파일이 포함되어 있는 경우
 

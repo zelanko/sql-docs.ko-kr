@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: babb02e4-3521-4b75-b5df-e09205594375
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 8f4e4af185f92d831be52bb714e05a848505ff2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31846c79d4de12b771000bb5628bcadf9021f225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011904"
 ---
 # <a name="determine-whether-the-database-engine-is-installed-and-started"></a>데이터베이스 엔진이 설치 및 시작되었는지 확인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

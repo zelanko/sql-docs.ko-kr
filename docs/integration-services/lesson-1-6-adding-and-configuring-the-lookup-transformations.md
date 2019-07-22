@@ -8,14 +8,13 @@ ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
 author: janinezhang
 ms.author: janinez
-manager: craigg
 ms.reviewer: ''
-ms.openlocfilehash: c605d2f0e42f34a8f1b4c7a01ea7ffce43d23f9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 581c664b32fae7a79d4eaa49a872ca6b33f1351b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902628"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>1-6단원: 조회 변환 추가 및 구성
 

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8cb534e6306d590c6a1c407ef92fdcd2ae729415
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c84ac5751d4d2046d3ac392f526bae8dc79f1022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929816"
 ---
 # <a name="loop-through-excel-files-and-tables-by-using-a-foreach-loop-container"></a>Foreach 루프 컨테이너를 사용하여 Excel 파일 및 테이블 루핑
 

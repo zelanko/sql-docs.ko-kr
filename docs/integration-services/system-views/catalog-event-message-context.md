@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 273a54f8-b107-4f36-9461-2b475644760d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d230b60b204d775e4a5329392960917c28b7c32d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb5add10328aaa4e7c3d1d49b7ac4ebdd8f2e658
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65715124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038374"
 ---
 # <a name="catalogeventmessagecontext"></a>catalog.event_message_context 
 
@@ -31,7 +30,7 @@ ms.locfileid: "65715124"
 |-----------------|---------------|-----------------|  
 |Context_id|BIGINT|오류 컨텍스트의 고유 ID입니다.|  
 |Event_message_id|BIGINT|컨텍스트와 관련된 메시지의 고유 ID입니다.|  
-|Context_depth|ssNoversion|수준이 증가함에 따라 컨텍스트가 오류에서 더 멀어집니다. 오류가 발생하면 컨텍스트 수준이 1에서 시작합니다. 값 0은 실행이 시작되기 전의 패키지 상태를 나타냅니다.|  
+|Context_depth|int|수준이 증가함에 따라 컨텍스트가 오류에서 더 멀어집니다. 오류가 발생하면 컨텍스트 수준이 1에서 시작합니다. 값 0은 실행이 시작되기 전의 패키지 상태를 나타냅니다.|  
 |Package_path|Nvarchar(max)|컨텍스트 원본의 패키지 경로입니다.|  
 |Context_type|SMALLINT|컨텍스트의 원본인 개체의 유형입니다. 컨텍스트 유형 목록은 **주의** 섹션을 참조하십시오.|  
 |Context_source_name|Nvarchar(4000)|컨텍스트의 원본인 개체의 이름입니다.|  

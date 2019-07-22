@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 339ec0a8-922e-48c0-97b3-fc5ee34f95e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7e0ea4b800a4e48959782bfb70d834db93a323d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71852015f9595e51c61f0840ebcec6e41431a660
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941417"
 ---
 # <a name="load-data-by-using-the-odbc-destination"></a>ODBC 대상을 사용하여 데이터 로드
 

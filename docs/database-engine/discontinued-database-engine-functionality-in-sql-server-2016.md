@@ -33,13 +33,12 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: d9649b6c969a0b60b6d23ae3e44dc8c76bc37463
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 500171e9aeb9efc66c1e4ba6e5a65c2431306e5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050547"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

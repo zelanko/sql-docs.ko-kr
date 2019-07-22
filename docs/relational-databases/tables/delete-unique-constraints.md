@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 71e563fc-f5d7-4c2e-a42f-f0695a831f32
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2c61ba41037065c49e4a6e49a5cd0adc3b760a10
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e6790d66ad3a5f80a0964ada3c68311ef3d83b25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016445"
 ---
 # <a name="delete-unique-constraints"></a>UNIQUE 제약 조건 삭제
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ ms.locfileid: "53589597"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

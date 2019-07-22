@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 404ecab7-7698-447b-93d6-dd256beb11ff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 69bf16c82c3a7ee13f75de4f954f35bb11979c08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a85214d54b533918a2328aab74c16fc18fcb3cd8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052179"
 ---
 # <a name="connecting-data-flow-components-programmatically"></a>프로그래밍 방식으로 데이터 흐름 구성 요소 연결
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 13f26adb51da59357eb3ede282c7761516087da3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e31e6b619e652f0802258f5bad6f2c6e7e1c8a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100874"
 ---
 # <a name="how-to-create-the-sql-server-change-database-instance"></a>SQL Server 변경 데이터베이스 인스턴스를 만드는 방법
 

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8ead516a-1334-4f40-84b2-509d0a8ffa45
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 48881cbff003b37e0a58dd7d6eb3c11c220ed268
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34e976dca163289450c3aa481d1f72bb46712046
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137403"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>데이터베이스에 데이터 또는 로그 파일 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c05116da2b0949a5f54fc5bbc4812f4cacd9d78d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68231471"
+---
 ##  <a name="info-tippngmediainfo-tippng-get-help"></a>![info-tip.png](media/info-tip.png) 도움말 보기
 
 - [UserVoice - SQL Server 개선을 위한 제안](https://feedback.azure.com/forums/908035-sql-server)

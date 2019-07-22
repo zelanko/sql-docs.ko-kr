@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 85b7d512-0ea7-47f5-8937-b1af6592b5b5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 358780e6a25e6f39459e90eaba7f7d6e4b3e7ac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 640979be225a435c8b6cbafe96990d0f6b88d321
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074005"
 ---
 # <a name="delete-packages"></a>패키지 삭제
 

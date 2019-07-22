@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 97c19716-6447-4c1c-b277-cc2e6c1e6a6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9272628b44c0f8d9e660e1577bd4485c040d9423
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20ad93d4ccb103dfcd8dc37807161f0c9874cd8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062959"
 ---
 # <a name="persisting-custom-objects"></a>사용자 지정 개체 지속
 

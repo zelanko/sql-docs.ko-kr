@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: d564e8c19522e61975df7c8071f40d517eba2b06
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: cc9716cbd1e27c6589b964c3c3d6208105f4863c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101956"
 ---
 # <a name="dbcc-dllname-free-transact-sql"></a>DBCC dllname(FREE)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  

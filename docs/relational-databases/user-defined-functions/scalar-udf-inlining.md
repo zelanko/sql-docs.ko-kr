@@ -14,14 +14,13 @@ helpviewer_keywords: ''
 ms.assetid: ''
 author: s-r-k
 ms.author: karam
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 8dba65eb4ca0aa97ca747567a6337e68fb7c2f29
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: fc60a102a56aa5cb8c749db93290d20ec4b7f30e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126249"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 34fe2d1e-d47b-4808-af56-8cc0fdae6518
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b838503365dde968f938efb46c940f3a66ce4357
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d17120b0c13ab1910d4636a376963f5ec74813eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035022"
 ---
 # <a name="how-to-run-sql-server-unit-tests"></a>방법: SQL Server 단위 테스트 실행
 다양한 창 및 명령 프롬프트 창을 사용하는 등 여러 방법 중 하나로 SQL Server 단위 테스트를 실행할 수 있습니다.  

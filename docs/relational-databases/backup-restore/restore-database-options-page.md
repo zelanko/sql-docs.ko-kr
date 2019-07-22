@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 9a75d48b-c25f-40f3-8ea1-32cfa8211754
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bbeeb28aced36cf1d80b2a6c4efeba3c614385c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5fb68197b4347c3b3c2e9c6c7186d28c9c79efa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62501840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041549"
 ---
 # <a name="restore-database-options-page"></a>데이터베이스 복원(옵션 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

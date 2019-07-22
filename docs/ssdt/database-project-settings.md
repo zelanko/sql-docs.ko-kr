@@ -40,13 +40,12 @@ f1_keywords:
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1c3899fc603da55d03ae7acd1e11c7f485637f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4921df6e1602d4cfc98aa6da3733452d6b5d33d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912849"
 ---
 # <a name="database-project-settings"></a>데이터베이스 프로젝트 설정
 데이터베이스 프로젝트 설정을 사용하여 데이터베이스, 디버깅 및 빌드 구성의 여러 측면을 제어할 수 있습니다. 이러한 설정은 다음 범주로 구분됩니다.  

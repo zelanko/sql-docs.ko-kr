@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d4557c8b7c47904267b7bd4d203e3b4641baee2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 910402b059f602d68428f5348ce35921942d918e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128258"
 ---
 # <a name="distributor"></a>배포자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47843431"
   
  배포자로 선택된 서버는 복제 및 해당 서버의 다른 작업을 지원하기 위해 충분한 디스크 공간과 처리 성능이 있어야 합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **'\<ServerName>'을 자체 배포자로 사용합니다. SQL Server에서 배포 데이터베이스와 로그를 만듭니다.**  
  연결된 서버를 배포자로 구성하려면 이 옵션을 선택합니다.  
   

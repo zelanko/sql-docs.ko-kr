@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c4e95970acd0228c44e493c7fffd98c0d5abc908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d32b782c8508952a85f0a9a22b55d32dab096d6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017621"
 ---
 # <a name="how-to-clone-an-existing-database"></a>방법: 기존 데이터베이스 복제
 이 작업에서는 이전 절차에서 배운 단계 중 일부를 사용하여 새 데이터베이스를 만들고 기존 데이터를 이식합니다. 또한 [방법: 스키마 비교를 사용하여 서로 다른 데이터베이스 정의 비교](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)에 설명된 단계를 사용하여 소스 및 프로젝트 데이터베이스의 스키마를 동기화합니다.  

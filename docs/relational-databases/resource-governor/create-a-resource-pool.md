@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 44dd0567-a4c8-4c72-89ff-e76f6ddef344
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 4fa512ba301aa1fc0c1783b96717545eca2790db
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 07c1743107d3edce7012740a3f1600d2157bf001
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136894"
 ---
 # <a name="create-a-resource-pool"></a>리소스 풀 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -29,14 +28,14 @@ ms.locfileid: "55689766"
   
 -   **리소스 풀을 만들려면 다음을 사용합니다.**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="LimitationsRestrictions"></a> 제한 사항  
  최대 CPU 비율은 최소 CPU 비율보다 크거나 같아야 합니다. 최대 메모리 비율은 최소 메모리 비율보다 크거나 같아야 합니다.  
   
  모든 리소스 풀에 대한 최대 CPU 비율과 최소 CPU 비율의 합은 100을 초과할 수 없습니다.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  리소스 풀을 만들려면 CONTROL SERVER 권한이 필요합니다.  
   
 ##  <a name="CreRPProp"></a> SQL Server Management Studio를 사용하여 리소스 풀 만들기  

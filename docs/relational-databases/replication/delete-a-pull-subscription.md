@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55b31126c7c0a64ab394f39328d0e821886b84af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 813a0da699fe098f6086208a93e87aeab940a486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063046"
 ---
 # <a name="delete-a-pull-subscription"></a>끌어오기 구독 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

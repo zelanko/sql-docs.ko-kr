@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2243845c-4880-4aa0-9ee8-0a97a128996b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7bbb2bda32081afff414f33a107381bfa46bc571
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a507bd5425686e7a33a8bbf49e6c8669effed031
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084092"
 ---
 # <a name="log-file-viewer-f1-help"></a>로그 파일 뷰어 F1 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "47595093"
   
  감사 로그에 대해 표시되는 행 수는 **도구/옵션** 대화 상자의 **SQL Server 개체 탐색기/명령** 페이지에서 구성할 수 있습니다. 감사 로그에 대해 표시되는 열에 대한 설명은 [sys.fn_get_audit_file&#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-get-audit-file-transact-sql.md)을 참조하세요.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **로그 로드**  
  로드할 로그 파일을 지정할 수 있는 대화 상자를 엽니다.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "47595093"
  **로그 원본**  
  이벤트가 캡처되는 원본 로그에 대한 설명을 표시합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  온라인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 로그 파일에 액세스하려면 securityadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
  오프라인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 로그 파일에 액세스하려면 **Root\Microsoft\SqlServer\ComputerManagement10** WMI 네임스페이스 및 로그 파일이 저장된 폴더 모두에 대한 읽기 권한이 있어야 합니다. 자세한 내용은 [오프라인 로그 파일 보기](../../relational-databases/logs/view-offline-log-files.md)항목의 보안 섹션을 참조하세요.  

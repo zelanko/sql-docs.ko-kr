@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a0da6df-57ff-4f3f-aae9-2fbc4897508c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 96473ebbee3a0cd946c1ecbe3ebaae2b05ce4b3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4864bd6c5f1f34843c9e44c3cf3c2e72777f13b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109758"
 ---
 # <a name="correct-affinity-mask-and-affinity-input-and-output-mask-overlap"></a>올바른 선호도 마스크 및 선호도 입/출력 마스크 겹침
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

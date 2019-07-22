@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 20b99363-0490-4aa3-9a3d-262f827d81e8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 914947a72035b5df2247eb01358253938f6eded6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ab490b9c392f10abf4314dd70d760695d13a70f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62682381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126157"
 ---
 # <a name="local-language-versions-in-sql-server"></a>SQL Server의 로컬 언어 버전
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

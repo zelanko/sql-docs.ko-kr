@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3669107fb439baee685939e9ed3846a5a788376f
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: a66a95a1b2f0561d7598c5a6e400641833e5a221
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115169"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>병합 복제에 대한 충돌 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "67860594"
   
     -   상단 표에서 하나 이상의 행을 선택한 다음 **제거**를 클릭합니다. 이것은 **적용되는 내용 전송** 단추를 클릭하는 것과 같으며 데이터는 변경되지 않습니다.  
   
-    -   속성 단추( **...** )를 클릭하여 충돌과 관련된 열에 대한 자세한 정보를 확인합니다.  
+    -   속성 단추(**...**)를 클릭하여 충돌과 관련된 열에 대한 자세한 정보를 확인합니다.  
   
     -   데이터를 전송하기 전에 **충돌 시 적용되는 내용** 또는 **충돌 시 변경 내용 무시** 열의 데이터를 편집합니다. 열이 회색인 경우 데이터는 읽기 전용입니다.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "67860594"
   
     -   **무시되는 내용 전송** 을 클릭하면 해결을 재정의하고 충돌 시 무시되도록 지정한 값을 토폴로지의 모든 노드로 전파합니다.  
   
-    -   **이 충돌 정보 기록** 을 선택하여 충돌 데이터를 파일에 기록합니다. 파일의 위치를 지정하려면 **보기** 메뉴를 가리킨 다음 **옵션**을 클릭합니다. 값을 입력하거나 찾아보기 단추 ( **...** )를 클릭한 다음 해당 파일을 검색합니다. **확인** 을 클릭하여 **옵션** 대화 상자를 종료합니다.  
+    -   **이 충돌 정보 기록** 을 선택하여 충돌 데이터를 파일에 기록합니다. 파일의 위치를 지정하려면 **보기** 메뉴를 가리킨 다음 **옵션**을 클릭합니다. 값을 입력하거나 찾아보기 단추 (**...**)를 클릭한 다음 해당 파일을 검색합니다. **확인** 을 클릭하여 **옵션** 대화 상자를 종료합니다.  
   
 6.  복제 충돌 뷰어를 닫습니다.  
 
@@ -88,7 +87,7 @@ ms.locfileid: "67860594"
         > [!NOTE]  
         >  병합 게시의 충돌 로깅 방식은 **@conflict_logging** 의 [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을(를) 참조하세요. **@centralized_conflicts** 매개 변수는 사용되지 않습니다.  
   
-     다음 표에서는 **@conflict_logging** 을(를) 참조하세요.  
+     다음 표에서는 **@conflict_logging**을(를) 참조하세요.  
   
     |@conflict_logging 값|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
@@ -100,9 +99,9 @@ ms.locfileid: "67860594"
   
 3.  필요에 따라 특정 아티클의 충돌 행을 검토합니다. 1단계에서 확인한 **centralized_conflicts** 및 **decentralized_conflicts** 값에 따라 다음 중 한 가지를 수행합니다.  
   
-    -   게시 데이터베이스의 게시자에서 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)를 실행합니다. **@conflict_table** 에 아티클에 대한 충돌 테이블(1단계에서 확인)을 지정합니다. 필요에 따라 **@publication** 의 값을 지정하여 반환되는 충돌 정보를 특정 게시로 제한합니다. 이렇게 하면 무시되는 행에 대한 행 데이터 및 기타 정보가 반환됩니다.  
+    -   게시 데이터베이스의 게시자에서 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)를 실행합니다. **@conflict_table**에 아티클에 대한 충돌 테이블(1단계에서 확인)을 지정합니다. 필요에 따라 **@publication** 의 값을 지정하여 반환되는 충돌 정보를 특정 게시로 제한합니다. 이렇게 하면 무시되는 행에 대한 행 데이터 및 기타 정보가 반환됩니다.  
   
-    -   구독 데이터베이스의 구독자에서 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)를 실행합니다. **@conflict_table** 에 아티클에 대한 충돌 테이블(1단계에서 확인)을 지정합니다. 이렇게 하면 무시되는 행에 대한 행 데이터 및 기타 정보가 반환됩니다.  
+    -   구독 데이터베이스의 구독자에서 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)를 실행합니다. **@conflict_table**에 아티클에 대한 충돌 테이블(1단계에서 확인)을 지정합니다. 이렇게 하면 무시되는 행에 대한 행 데이터 및 기타 정보가 반환됩니다.  
   
 ## <a name="conflict-where-delete-failed"></a>삭제가 실패한 충돌   
   
@@ -119,9 +118,9 @@ ms.locfileid: "67860594"
   
 3.  필요에 따라 삭제 충돌에 대한 충돌 정보를 검토합니다. 1단계에서 확인한 **centralized_conflicts** 및 **decentralized_conflicts** 값에 따라 다음 중 한 가지를 수행합니다.  
   
-    -   게시 데이터베이스의 게시자에서 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)를 실행합니다. **@source_object** 에는 충돌이 발생한 원본 테이블의 이름(1단계에서 확인)을 지정합니다. 필요에 따라 **@publication** 의 값을 지정하여 반환되는 충돌 정보를 특정 게시로 제한합니다. 이렇게 하면 게시자에 저장된 삭제 충돌 정보가 반환됩니다.  
+    -   게시 데이터베이스의 게시자에서 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)를 실행합니다. **@source_object**에는 충돌이 발생한 원본 테이블의 이름(1단계에서 확인)을 지정합니다. 필요에 따라 **@publication** 의 값을 지정하여 반환되는 충돌 정보를 특정 게시로 제한합니다. 이렇게 하면 게시자에 저장된 삭제 충돌 정보가 반환됩니다.  
   
-    -   구독 데이터베이스의 구독자에서 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)를 실행합니다. **@source_object** 에는 충돌이 발생한 원본 테이블의 이름(1단계에서 확인)을 지정합니다. 필요에 따라 **@publication** 의 값을 지정하여 반환되는 충돌 정보를 특정 게시로 제한합니다. 이렇게 하면 구독자에 저장된 삭제 충돌 정보가 반환됩니다.  
+    -   구독 데이터베이스의 구독자에서 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)를 실행합니다. **@source_object**에는 충돌이 발생한 원본 테이블의 이름(1단계에서 확인)을 지정합니다. 필요에 따라 **@publication** 의 값을 지정하여 반환되는 충돌 정보를 특정 게시로 제한합니다. 이렇게 하면 구독자에 저장된 삭제 충돌 정보가 반환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

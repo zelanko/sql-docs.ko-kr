@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8aec17fc676ef975a1655be1b7af0e70eb5ee599
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: b4be2767bd0ae3a2486e598678e7654a50b1dc93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361523"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984421"
 ---
 # <a name="deny-symmetric-key-permissions-transact-sql"></a>DENY 대칭 키 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ DENY permission [ ,...n ]
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대칭 키에 대한 CONTROL 권한 또는 데이터베이스에 대한 ALTER ANY SYMMETRIC KEY 권한이 필요합니다. AS 옵션을 사용하는 경우 지정한 보안 주체가 대칭 키를 소유해야 합니다.  
   
 ## <a name="examples"></a>예  

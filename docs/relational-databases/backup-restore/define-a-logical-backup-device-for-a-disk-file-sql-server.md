@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86331d43-c738-4523-ae3d-7d6700348ed1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4766fc9d680bc90a6017424162aa72a50b516c43
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c82c06e2d519b5ae51a08312ae69e97b873ed532
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075975"
 ---
 # <a name="define-a-logical-backup-device-for-a-disk-file-sql-server"></a>Define a Logical Backup Device for a Disk File (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47797421"
   
      [보안](#Security)  
   
--   **다음을 사용하여 디스크 파일에 대해 논리적 백업 장치를 정의합니다.**  
+-   **다음을 사용하여 디스크 파일에 대해 논리적 백업 디바이스를 정의합니다.**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -56,7 +55,7 @@ ms.locfileid: "47797421"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  **diskadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
  디스크에 대한 쓰기 권한이 필요합니다.  
@@ -67,9 +66,9 @@ ms.locfileid: "47797421"
   
 1.   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 해당 인스턴스에 연결한 다음 개체 탐색기에서 서버 이름을 클릭하여 서버 트리를 확장합니다.  
   
-2.  **서버 개체**를 확장한 다음 **백업 장치**를 마우스 오른쪽 단추로 클릭합니다.  
+2.  **서버 개체**를 확장한 다음 **백업 디바이스**를 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  **새 백업 장치**를 클릭합니다. **백업 장치** 대화 상자가 열립니다.  
+3.  **새 백업 디바이스**를 클릭합니다. **백업 디바이스** 대화 상자가 열립니다.  
   
 4.  디바이스 이름을 입력합니다.  
   
@@ -87,7 +86,7 @@ ms.locfileid: "47797421"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) 를 사용하여 디스크 파일의 논리적 백업 디바이스를 정의하는 방법을 보여 줍니다. 이 예에서는 `mydiskdump` `c:\dump\dump1.bak`라는 디스크 백업 장치를 추가합니다.  
+3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다. 이 예에서는 [sp_addumpdevice](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md) 를 사용하여 디스크 파일의 논리적 백업 디바이스를 정의하는 방법을 보여 줍니다. 이 예에서는 `mydiskdump``c:\dump\dump1.bak`라는 디스크 백업 디바이스를 추가합니다.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -98,11 +97,11 @@ GO
   
 ## <a name="see-also"></a>참고 항목  
  [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
- [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [sys.backup_devices&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [sp_addumpdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_dropdevice&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
- [테이프 드라이브에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
- [논리적 백업 장치의 속성 및 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
+ [테이프 드라이브에 대한 논리적 백업 디바이스 정의&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [논리적 백업 디바이스의 속성 및 내용 보기&#40;SQL Server&#41;](../../relational-databases/backup-restore/view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
   

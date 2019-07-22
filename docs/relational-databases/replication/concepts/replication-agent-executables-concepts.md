@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f02932eff39003f318d2324cce85e51e54a4a77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1fb6290ab9945ae259c5ef184ee625dfb888a57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903382"
 ---
 # <a name="replication-agent-executables-concepts"></a>복제 에이전트 실행 파일 개념
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

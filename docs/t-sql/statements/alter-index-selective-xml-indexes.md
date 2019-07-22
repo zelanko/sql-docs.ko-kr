@@ -12,13 +12,12 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b3f15837f71e920c7b604e95039c94fd3383b0f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7883a99a223af67f536a0991bb0ba48f30211bc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65504030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071362"
 ---
 # <a name="alter-index-selective-xml-indexes"></a>ALTER INDEX(선택적 XML 인덱스)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

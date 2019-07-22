@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3a70e606-303f-47a8-96d4-2456a18d4297
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3322acb510ffa57582b27a8a0b2efc728459bf53
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: ff886f2eea70b010a2e64513cd561cf7f78d8dee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084026"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>트랜잭션 로그 파일의 크기 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

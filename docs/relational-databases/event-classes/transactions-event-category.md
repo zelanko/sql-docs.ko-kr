@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: bfc75c5b-7115-49d8-9148-a0c84ee66a9a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a51de2deaa8251b60c6c6eb25cffb6a5ba3173d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5de24851562858eced26c7189fca5e786f395b94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069649"
 ---
 # <a name="transactions-event-category"></a>Transactions 이벤트 범주
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

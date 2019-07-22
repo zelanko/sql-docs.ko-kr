@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c835ea8b1610256f41ee9d0d0787e84b7afcda3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe629bc5d165489f733d0250b0f60bea8a3a677a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141283"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -165,11 +164,11 @@ ms.locfileid: "65503673"
 |**conversation_handle**|**uniqueidentifier**|이 메시지가 속하는 대화의 핸들입니다.|  
 |**message_sequence_number**|**bigint**|대화 내의 메시지 시퀀스 번호입니다.|  
 |**service_name**|**nvarchar(512)**|대화와 연관된 서비스의 이름입니다.|  
-|**service_id**|**ssNoversion**|대화와 연관된 서비스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
+|**service_id**|**int**|대화와 연관된 서비스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |**service_contract_name**|**nvarchar(256)**|대화에서 준수하는 계약의 이름입니다.|  
-|**service_contract_id**|**ssNoversion**|대화에서 준수하는 계약의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
+|**service_contract_id**|**int**|대화에서 준수하는 계약의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |**message_type_name**|**nvarchar(256)**|메시지 형식을 설명하는 메시지 유형의 이름입니다. 메시지는 응용 프로그램 메시지 유형이거나 Broker 시스템 메시지일 수 있습니다.|  
-|**message_type_id**|**ssNoversion**|메시지를 설명하는 메시지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
+|**message_type_id**|**int**|메시지를 설명하는 메시지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |**validation**|**nchar(2)**|메시지에 사용된 유효성 검사입니다.<br /><br /> **E**=Empty**N**=None**X**=XML|  
 |**message_body**|**varbinary(MAX)**|메시지 내용입니다.|  
   
@@ -178,14 +177,14 @@ ms.locfileid: "65503673"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>1\. 대화 그룹의 모든 메시지에 대한 모든 열 받기  
+### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>1. 대화 그룹의 모든 메시지에 대한 모든 열 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 결과 집합으로 메시지를 반환합니다.  
   
 ```  
 RECEIVE * FROM ExpenseQueue ;  
 ```  
   
-### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>2\. 대화 그룹의 모든 메시지에 대해 지정된 열 받기  
+### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>2. 대화 그룹의 모든 메시지에 대해 지정된 열 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 `conversation_handle`, `message_type_name` 및 `message_body` 열을 포함하는 결과 집합으로 메시지를 반환합니다.  
   
 ```  
@@ -278,7 +277,7 @@ WAITFOR (
 TIMEOUT 60000 ;  
 ```  
   
-### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>9\. 메시지 받기, 열의 유형 수정  
+### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>9. 메시지 받기, 열의 유형 수정  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 메시지 유형이 메시지에 XML 문서가 포함되어 있음을 나타내면 문은 메시지 본문을 XML로 변환합니다.  
   
 ```  

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 8dfb7b16-3dac-4e1e-8c97-adf2aad07830
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 304e5ec2722f8556c2d9c873f4ff5c3cfab4b7d2
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 1e05ad220147e7f46bfaa66127fcc492aaeae6a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927180"
 ---
 # <a name="alter-route-transact-sql"></a>ALTER ROUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -60,12 +59,12 @@ WITH
  의 모든 멘션을  
  변경되는 경로를 정의하는 절을 지정합니다.  
   
- SERVICE_NAME **=‘**_service\_name_**’**  
+ SERVICE_NAME **=‘** _service\_name_ **’**  
  이 경로가 가리키는 원격 서비스 이름을 지정합니다. *service_name*은 원격 서비스에서 사용되는 이름과 정확히 일치해야 합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 바이트 단위로 비교하여 일치하는 *service_name*을 찾습니다. 즉, 비교 시 대/소문자가 구분되고 현재 데이터 정렬은 고려되지 않습니다. 서비스 이름이 **‘SQL/ServiceBroker/BrokerConfiguration’** 인 경로는 Broker Configuration Notice 서비스에 대한 경로입니다. 이 서비스에 대한 경로에서 broker 인스턴스를 지정하지 않을 수 있습니다.  
   
  SERVICE_NAME 절이 생략되면 경로의 서비스 이름이 변경되지 않습니다.  
   
- BROKER_INSTANCE **=‘**_broker\_instance_**’**  
+ BROKER_INSTANCE **=‘** _broker\_instance_ **’**  
  대상 서비스를 호스팅하는 데이터베이스를 지정합니다. *broker_instance* 매개 변수는 선택한 데이터베이스에서 다음 쿼리를 실행하여 가져올 수 있는 원격 데이터베이스의 Broker 인스턴스 식별자여야 합니다.  
   
 ```  
@@ -79,10 +78,10 @@ WHERE database_id = DB_ID();
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
- LIFETIME **=**_route\_lifetime_  
+ LIFETIME **=** _route\_lifetime_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 라우팅 테이블에 경로를 유지하는 시간(초)을 지정합니다. 수명이 다되어 경로가 만료되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 새 대화를 위한 경로를 선택할 때 더 이상 해당 경로를 고려하지 않습니다. 이 절이 생략되면 경로의 수명이 변경되지 않습니다.  
   
- ADDRESS **=‘**_next\_hop\_address_’  
+ ADDRESS **=‘** _next\_hop\_address_’  
 
  Azure SQL Database 관리되는 인스턴스의 경우 `ADDRESS`는 로컬이어야 합니다.
 
@@ -109,10 +108,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
- MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
+ MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  주 서버가 *next_hop_address*에 있는 미러링된 쌍의 미러 서버에 대해 네트워크 주소를 지정합니다. *next_hop_mirror_address*는 다음과 같은 형식으로 TCP/IP 주소를 지정합니다.  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
@@ -140,12 +139,12 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  서비스에 대한 AUTHORIZATION을 변경하려면 ALTER AUTHORIZATION 문을 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  경로 변경 권한은 기본적으로 경로 소유자, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-service-for-a-route"></a>1. 경로에 대한 서비스 변경  
+### <a name="a-changing-the-service-for-a-route"></a>1\. 경로에 대한 서비스 변경  
  다음 예에서는 `ExpenseRoute` 원격 서비스를 가리키도록 `//Adventure-Works.com/Expenses` 경로를 수정합니다.  
   
 ```  
@@ -154,7 +153,7 @@ ALTER ROUTE ExpenseRoute
      SERVICE_NAME = '//Adventure-Works.com/Expenses';  
 ```  
   
-### <a name="b-changing-the-target-database-for-a-route"></a>2. 경로의 대상 데이터베이스 변경  
+### <a name="b-changing-the-target-database-for-a-route"></a>2\. 경로의 대상 데이터베이스 변경  
  다음 예에서는 `ExpenseRoute` 경로의 대상 데이터베이스를 `D8D4D268-00A3-4C62-8F91-634B89B1E317.` 고유 식별자로 식별되는 데이터베이스로 변경합니다.  
   
 ```  

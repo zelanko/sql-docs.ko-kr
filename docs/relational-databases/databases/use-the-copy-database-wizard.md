@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 67aad831c3e5a98817af9ecd34b17501089a1609
-ms.sourcegitcommit: 189a28785075cd7018c98e9625c69225a7ae0777
+ms.openlocfilehash: 67488a92a14a2533c9ba6ef14941b11b8bcbb8c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53030647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127122"
 ---
 # <a name="use-the-copy-database-wizard"></a>데이터베이스 복사 마법사 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ ms.locfileid: "53030647"
   
 
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> 사용 권한  
  원본 서버와 대상 서버 모두에서 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
 ##  <a name="Overview"></a> 데이터베이스 복사 마법사 페이지 

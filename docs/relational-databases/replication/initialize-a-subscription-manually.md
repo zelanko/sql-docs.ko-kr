@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aec4d6268d2cd94e3dc5bf429ce7a6745a9b538a
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 60f803cffb48e556e0f95be92155b0ca3dcbcc6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127852"
 ---
 # <a name="initialize-a-subscription-manually"></a>수동 구독 초기화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ ms.locfileid: "67583047"
 4.  병합 에이전트를 시작하여 복제 개체를 전송하고 게시자에서 최신 변경 내용을 다운로드합니다. 자세한 내용은 [밀어넣기 구독 동기화](../../relational-databases/replication/synchronize-a-push-subscription.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [스냅숏 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)   
+ [스냅샷 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)   
  [복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
  [복제 보안을 위한 최선의 구현 방법](../../relational-databases/replication/security/replication-security-best-practices.md)  
   

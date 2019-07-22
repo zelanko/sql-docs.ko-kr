@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ef0b60e-a64c-4e97-847b-67930e3973ef
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 816f1983723b119d7092013fad6296668621fe75
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: e431b51db33f889acd9bcce5e93222b451ad3237
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000468"
 ---
 # <a name="table-transact-sql"></a>table(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -141,7 +140,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = OFF;
 ALTER DATABASE SCOPED CONFIGURATION SET DEFERRED_COMPILATION_TV = ON;
 ```
 
-DISABLE_DEFERRED_COMPILATION_TV를 USE HINT 쿼리 힌트로 할당하여 특정 쿼리에 대한 테이블 변수 지연 컴파일을 사용하지 않도록 설정할 수도 있습니다.  예를 들어 다음과 같이 사용할 수 있습니다.
+DISABLE_DEFERRED_COMPILATION_TV를 USE HINT 쿼리 힌트로 할당하여 특정 쿼리에 대한 테이블 변수 지연 컴파일을 사용하지 않도록 설정할 수도 있습니다.  예를 들어
 
 ```sql
 DECLARE @LINEITEMS TABLE 
@@ -169,7 +168,7 @@ OPTION (USE HINT('DISABLE_DEFERRED_COMPILATION_TV'));
   
 ## <a name="examples"></a>예  
   
-### <a name="a-declaring-a-variable-of-type-table"></a>1\. 테이블 형식의 변수 선언  
+### <a name="a-declaring-a-variable-of-type-table"></a>1. 테이블 형식의 변수 선언  
 다음 예에서는 UPDATE 문의 OUTPUT 절에서 지정된 값을 저장하는 `table` 변수를 만듭니다. 각각 `SELECT`의 값과 `@MyTableVar` 테이블의 업데이트 작업 결과를 반환하는 두 개의 `Employee` 문이 이어집니다. `INSERTED.ModifiedDate` 열의 결과 값은 `Employee` 테이블의 `ModifiedDate` 열 값과 다릅니다. 이 차이는 `AFTER UPDATE` 값을 현재 날짜로 업데이트하는 `ModifiedDate` 트리거가 `Employee` 테이블에 정의되어 있기 때문에 나타납니다. 그러나 `OUTPUT`에서 반환된 열은 트리거가 실행되기 전의 데이터를 반영합니다. 자세한 내용은 [OUTPUT Clause&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)를 참조하세요.
   
 ```sql
@@ -199,7 +198,7 @@ FROM HumanResources.Employee;
 GO  
 ```  
   
-### <a name="b-creating-an-inline-table-valued-function"></a>2\. 인라인 테이블 반환 함수 만들기  
+### <a name="b-creating-an-inline-table-valued-function"></a>2. 인라인 테이블 반환 함수 만들기  
 다음 예에서는 인라인 테이블 반환 함수를 반환합니다. `ProductID` 열, `Name` 열, 그리고 대리점에 판매된 각 제품에 대한 대리점별 총 연간 매출의 집계를 `YTD Total` 열로 반환합니다.
   
 ```sql

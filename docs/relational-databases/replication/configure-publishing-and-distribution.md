@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ec133a404b7485edff3e63e3c8c495ef2bc4a542
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 66287e1ca8ad24a864cdccfb5524402df5a484ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586235"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903126"
 ---
 # <a name="configure-publishing-and-distribution"></a>게시 및 배포 구성
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "67586235"
 
   - 결과 집합의 `distribution db installed` 값이 `0`인 경우 master 데이터베이스의 배포자에서 [sp_adddistributiondb&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)를 실행합니다. 이때 `@database`에 배포 데이터베이스의 이름을 지정합니다. 필요에 따라 `@max_distretention`에 최대 트랜잭션 보존 기간을 지정하고 `@history_retention`에 기록 보존 기간을 지정할 수 있습니다. 새 데이터베이스를 만드는 경우 원하는 데이터베이스 속성 매개 변수를 지정합니다.
 
-2. 게시자이기도 한 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)를 실행하여 `@working_directory`에 기본 스냅숏 폴더로 사용할 UNC 공유를 지정합니다.
+2. 게시자이기도 한 배포자에서 [sp_adddistpublisher&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)를 실행하여 `@working_directory`에 기본 스냅샷 폴더로 사용할 UNC 공유를 지정합니다.
 
    SQL Database Managed Instance의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 스토리지 액세스 키를 사용합니다. 
 
@@ -79,7 +78,7 @@ ms.locfileid: "67586235"
 
    - 결과 집합의 `distribution db installed` 값이 `0`인 경우 master 데이터베이스의 배포자에서 [sp_adddistributiondb&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)를 실행합니다. 이때 `@database`에 배포 데이터베이스의 이름을 지정합니다. 필요에 따라 `@max_distretention`에 최대 트랜잭션 보존 기간을 지정하고 `@history_retention`에 기록 보존 기간을 지정할 수 있습니다. 새 데이터베이스를 만드는 경우 원하는 데이터베이스 속성 매개 변수를 지정합니다.
 
-2. 배포자에서 [sp_adddistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)를 실행하여 `@working_directory`에 기본 스냅숏 폴더로 사용할 UNC 공유를 지정합니다. 게시자에 연결할 때 배포자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 `@security_mode`에 `0` 값을 지정하고 `@login` 및 `@password`에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 정보를 지정해야 합니다.
+2. 배포자에서 [sp_adddistpublisher&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)를 실행하여 `@working_directory`에 기본 스냅샷 폴더로 사용할 UNC 공유를 지정합니다. 게시자에 연결할 때 배포자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하면 `@security_mode`에 `0` 값을 지정하고 `@login` 및 `@password`에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 정보를 지정해야 합니다.
 
    SQL Database Managed Instance의 배포자에는 `@working_directory`에 대한 Azure storage 계정 및 `@storage_connection_string`에 대한 스토리지 액세스 키를 사용합니다. 
 
@@ -116,7 +115,7 @@ ms.locfileid: "67586235"
 
   - <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 5단계에서 만든 데이터베이스 이름
 
-  - <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 스냅숏 파일에 액세스하는 데 사용되는 공유
+  - <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 스냅샷 파일에 액세스하는 데 사용되는 공유
 
   - <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 게시자에 연결할 때 사용되는 보안 모드입니다. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 을 사용하는 것이 좋습니다.
 
@@ -146,7 +145,7 @@ ms.locfileid: "67586235"
 
   - <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> - 5단계에서 만든 데이터베이스 이름
 
-  - <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 스냅숏 파일에 액세스하는 데 사용되는 공유
+  - <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> - 스냅샷 파일에 액세스하는 데 사용되는 공유
 
   - <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> - 게시자에 연결할 때 사용되는 보안 모드입니다. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> 을 사용하는 것이 좋습니다.
 

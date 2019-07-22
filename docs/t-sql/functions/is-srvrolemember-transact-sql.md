@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3ddd94836db559fe56cf6b7443b7dac69643a5a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68a3a2b030ef5b731fa437b8c9f4b57f3eedaa4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65942803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132809"
 ---
 # <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
  점검할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인의 이름입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 값을 지정하지 않으면 현재의 실행 컨텍스트에 따른 결과를 얻게 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 |반환 값|설명|  
 |------------------|-----------------|  

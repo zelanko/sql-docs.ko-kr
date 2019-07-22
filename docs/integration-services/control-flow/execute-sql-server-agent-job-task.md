@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3aa3bc0e-1a1c-452e-81b8-b4e3422ea053
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a6cdbfec852a8aaf8eb81f77c0e5f7aadba140db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec6fc06bdcb7a7e622590b66698257b671b4dd98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988351"
 ---
 # <a name="execute-sql-server-agent-job-task"></a>SQL Server 에이전트 작업 실행 태스크
 

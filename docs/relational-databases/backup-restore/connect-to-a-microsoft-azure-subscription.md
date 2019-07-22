@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: cca5a270-643f-4677-8802-98464f19f82a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0b5840b99b75507bda45a0a456ba6e68612c9d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 765763ae01183d0907e5371cf1420205cd5737b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076129"
 ---
 # <a name="connect-to-a-microsoft-azure-subscription"></a>Microsoft Azure 구독에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,14 +23,14 @@ ms.locfileid: "47656161"
 ## <a name="limitation"></a>제한 사항
 **Microsoft 구독에 연결** 은 서비스 관리(클래식) 배포 모델을 통해 생성된 Azure Storage 계정에서만 작동합니다.  Azure 배포 모델에 대한 자세한 내용은 [Azure Resource Manager 및 클래식 배포](https://azure.microsoft.com/documentation/articles/resource-manager-deployment-model/)를 참조하세요.
 
-## <a name="options"></a>Options
+## <a name="options"></a>옵션
 **로그인**     
 적절한 Azure 계정으로 로그인합니다.
 
 **사용할 구독 선택**      
 드롭다운 목록에서 원하는 구독을 선택합니다.
 
-**저장소 계정 선택**  
+**스토리지 계정 선택**  
 드롭다운 목록에서 원하는 스토리지 계정을 선택합니다.
 
 **Blob 컨테이너 선택**   

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 6059af00-83fe-409f-ab7c-daad111bc671
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2510f10db545b2733cb780d903f662b12b30abc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 694017e60682d191bd1d02cdc231b7185c3b8c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094611"
 ---
 # <a name="errorstate-transact-sql"></a>ERROR_STATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ ERROR_STATE ( )
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="return-value"></a>반환 값  
  CATCH 블록 내에서 호출된 경우 CATCH 블록을 실행하도록 만든 오류 메시지의 상태 번호를 반환합니다.  

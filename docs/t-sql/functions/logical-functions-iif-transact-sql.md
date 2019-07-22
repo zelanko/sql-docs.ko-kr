@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bde171c85ece35f0d2bddc0780f2fb0137c9ec0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92dd195322e03f8b3eb776269cd6a8636fffd150
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65949162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059745"
 ---
 # <a name="logical-functions---iif-transact-sql"></a>논리 함수 - IIF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ IIF ( boolean_expression, true_value, false_value )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-iif-example"></a>1\. 간단한 IIF 예  
+### <a name="a-simple-iif-example"></a>1. 간단한 IIF 예  
   
 ```  
 DECLARE @a int = 45, @b int = 40;  
@@ -78,7 +77,7 @@ TRUE
 (1 row(s) affected)  
 ```  
   
-### <a name="b-iif-with-null-constants"></a>2\. NULL 상수가 있는 IIF  
+### <a name="b-iif-with-null-constants"></a>2. NULL 상수가 있는 IIF  
   
 ```  
 SELECT IIF ( 45 > 30, NULL, NULL ) AS Result;  

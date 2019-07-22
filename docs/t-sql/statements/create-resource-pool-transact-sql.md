@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 82712505-c6f9-4a65-a469-f029b5a2d6cd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2f33399282eb92cd2fbdb2a0a57befcf362379d1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 42e114c1d3f884c40ce47edca84261c2582d8576
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117327"
 ---
 # <a name="create-resource-pool-transact-sql"></a>CREATE RESOURCE POOL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

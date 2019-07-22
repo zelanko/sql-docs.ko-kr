@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: df6e9aa77744039a6d0fbd00e26e8090b15e4284
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: d21b2d74a455ed2967abb6fb102015d42054a706
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903276"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 가용성 그룹에서 복제 배포 데이터베이스 설정
 
@@ -166,7 +165,7 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
    RESTORE DATABASE distribution WITH RECOVERY, KEEP_REPLICATION
    ```
 
-1. `distribution` 데이터베이스를 삭제하고 스냅숏 디렉터리를 유지하려면 다음을 실행합니다. 
+1. `distribution` 데이터베이스를 삭제하고 스냅샷 디렉터리를 유지하려면 다음을 실행합니다. 
 
    ```sql
    sp_dropdistributiondb 'distribution' , @former_ag_secondary=1

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 327a4f93774bd3ea4e40c6b75fe10921e20b38d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 753c7c08164de1583dd8de1aa1720fcad6a98dff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62671785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093636"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server 에이전트, JobSteps 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "62671785"
 |**병합**|**Merge** 하위 시스템을 사용하는 작업 단계에 대한 정보입니다.|  
 |**PowerShell**|**PowerShell** 하위 시스템을 사용하는 작업 단계에 대한 정보입니다.|  
 |**QueueReader**|**QueueReader** 하위 시스템을 사용하는 작업 단계에 대한 정보입니다.|  
-|**스냅숏**|**Snapshot** 하위 시스템을 사용하는 작업 단계에 대한 정보입니다.|  
+|**스냅샷**|**Snapshot** 하위 시스템을 사용하는 작업 단계에 대한 정보입니다.|  
 |**TSQL**|[!INCLUDE[tsql](../../includes/tsql-md.md)]을 실행하는 작업 단계에 대한 정보입니다.|  
   
 ## <a name="see-also"></a>참고 항목  

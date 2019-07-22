@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b74bd9d4-758e-4b94-89a0-76dcda6d8c42
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3c386191c9e6dc9d8cf1836381e50f3a9d607c25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70df8f06eb1561dd186d5be643a5863ffab5981a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026455"
 ---
 # <a name="cryptgenrandom-transact-sql"></a>CRYPT_GEN_RANDOM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ CRYPT_GEN_RANDOM ( length [ , seed ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-generating-a-random-number"></a>1\. 난수 생성  
+### <a name="a-generating-a-random-number"></a>1. 난수 생성  
 이 함수는 길이 50바이트인 임의의 수를 생성합니다.
   
 ```sql

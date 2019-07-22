@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dd704b4c72e454534cba627c5730dff5867dfc61
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 98178c2b99d35b0964723533d6dfe5e0efb886f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903334"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "67583101"
  이 섹션의 항목에서는 프로그래밍 방식으로 복제 토폴로지를 모니터링하는 방법을 보여 줍니다.  
   
 ## <a name="introduction-to-rmo-programming"></a>RMO 프로그래밍 소개  
- RMO는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제의 모든 측면을 프로그래밍하기 위해 디자인되었습니다. RMO 네임스페이스는 <xref:Microsoft.SqlServer.Replication>이며 이 네임스페이스는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 어셈블리인 Microsoft.SqlServer.Rmo.dll을 통해 구현됩니다. <xref:Microsoft.SqlServer.Replication> 네임스페이스에 속하는 Microsoft.SqlServer.Replication.dll 어셈블리는 다양한 복제 에이전트(스냅숏 에이전트, 배포 에이전트 및 병합 에이전트)를 프로그래밍하는 데 필요한 관리되는 코드 인터페이스를 구현합니다. 이 어셈블리의 클래스는 RMO에서 액세스하여 구독을 동기화하는 데 사용될 수 있습니다. Microsoft.SqlServer.Replication.BusinessLogicSupport.dll 어셈블리를 통해 구현되는 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 네임스페이스의 클래스는 병합 복제에 대한 사용자 지정 비즈니스 논리를 만드는 데 사용됩니다. 이 어셈블리는 RMO에 종속되지 않습니다.  
+ RMO는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 복제의 모든 측면을 프로그래밍하기 위해 디자인되었습니다. RMO 네임스페이스는 <xref:Microsoft.SqlServer.Replication>이며 이 네임스페이스는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 어셈블리인 Microsoft.SqlServer.Rmo.dll을 통해 구현됩니다. <xref:Microsoft.SqlServer.Replication> 네임스페이스에 속하는 Microsoft.SqlServer.Replication.dll 어셈블리는 다양한 복제 에이전트(스냅샷 에이전트, 배포 에이전트 및 병합 에이전트)를 프로그래밍하는 데 필요한 관리되는 코드 인터페이스를 구현합니다. 이 어셈블리의 클래스는 RMO에서 액세스하여 구독을 동기화하는 데 사용될 수 있습니다. Microsoft.SqlServer.Replication.BusinessLogicSupport.dll 어셈블리를 통해 구현되는 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 네임스페이스의 클래스는 병합 복제에 대한 사용자 지정 비즈니스 논리를 만드는 데 사용됩니다. 이 어셈블리는 RMO에 종속되지 않습니다.  
   
 ## <a name="deploying-applications-based-on-rmo"></a>RMO를 기초로 애플리케이션 배포  
  RMO는 SQL Server Compact를 제외한 모든 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 포함된 복제 구성 요소와 클라이언트 연결 구성 요소를 필요로 하기 때문에 RMO를 기초로 애플리케이션을 배포하려면 복제 구성 요소와 클라이언트 연결 구성 요소가 포함된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전을 애플리케이션을 실행할 컴퓨터에 설치해야 합니다.  

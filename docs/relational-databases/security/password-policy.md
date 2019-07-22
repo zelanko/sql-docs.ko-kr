@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: c0040c0a-a18f-45b9-9c40-0625685649b1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 4d8b1196eb1292532320c77559cd4578532957ac
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: aa626cb69e22e56e1769d45b2cbfd652c51bc3b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010817"
 ---
 # <a name="password-policy"></a>암호 정책
 
