@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 32dfe254-6df7-4437-bfd6-ca7d37557b0a
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d1c06397b74ecab0f29cb293d7efa591b36fa1ac
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: 24668748b97c44e825baee2dee95d9442aa1e11f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073141"
 ---
 # <a name="create-external-table-as-select-transact-sql"></a>CREATE EXTERNAL TABLE AS SELECT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -120,7 +119,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
  SELECT \<select_criteria> 새 테이블을 SELECT 문의 결과로 채웁니다. *select_criteria*는 새 테이블에 복사할 데이터를 결정하는 SELECT 문의 본문입니다. SELECT 문에 대한 자세한 내용은 [SELECT&#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)을 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 명령을 실행하려면 **데이터베이스 사용자**는 다음 권한 또는 멤버 자격이 모두 필요합니다.  
   
 -   **db_ddladmin** 고정 데이터베이스 역할에 새 테이블 또는 멤버 자격을 포함할 로컬 스키마에 대한 **ALTER SCHEMA** 권한.  
@@ -192,7 +191,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
   
 ##  <a name="Examples"></a> 예  
   
-### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>1. CREATE EXTERNAL TABLE AS SELECT(CETAS)를 사용하여 Hadoop 테이블 만들기  
+### <a name="a-create-a-hadoop-table-using-create-external-table-as-select-cetas"></a>1\. CREATE EXTERNAL TABLE AS SELECT(CETAS)를 사용하여 Hadoop 테이블 만들기  
  다음 예제에서는 원본 테이블 `dimCustomer`의 열 정의 및 데이터를 사용하여 `hdfsCustomer`라는 새 외부 테이블을 만듭니다.  
   
  테이블 정의는 데이터베이스에 저장되며 SELECT 문의 결과를 Hadoop 외부 데이터 원본 *customer_ds*의 '/pdwdata/customer.tbl' 파일로 내보냅니다. 파일은 외부 파일 형식 *customer_ff*에 따라 서식 지정됩니다.  
@@ -217,7 +216,7 @@ WITH (
 ) AS SELECT * FROM dimCustomer;  
 ```  
   
-### <a name="b-use-a-query-hint-with-create-external-table-as-select-cetas"></a>2. CREATE EXTERNAL TABLE AS SELECT(CETAS)와 함께 쿼리 힌트 사용  
+### <a name="b-use-a-query-hint-with-create-external-table-as-select-cetas"></a>2\. CREATE EXTERNAL TABLE AS SELECT(CETAS)와 함께 쿼리 힌트 사용  
  이 쿼리는 CETAS 문에 쿼리 조인 힌트를 사용하는 기본 구문을 보여줍니다. 쿼리가 제출된 후 데이터베이스는 해시 조인 방법을 사용하여 쿼리 계획을 생성합니다. 조인 힌트 및 OPTION 절을 사용하는 방법에 대한 자세한 내용은 [OPTION 절&#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md)을 참조하세요.  
   
 > [!NOTE]  

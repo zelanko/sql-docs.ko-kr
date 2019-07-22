@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23b50f306dd9096082170d5d3606e0ff46310895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27f94d21a4fcc773c30d2a43d2502eb1f4c5225b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021233"
 ---
 # <a name="reinitialize-a-subscription"></a>구독 다시 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,10 +40,10 @@ ms.locfileid: "47655321"
   
 1.  게시에 대한 단일 구독이나 모든 구독을 다시 초기화하도록 *표시* 합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 **로컬 게시** 폴더와 **로컬 구독** 폴더에서 사용할 수 있는 **구독 다시 초기화** 대화 상자에서 다시 초기화할 구독을 표시합니다. 또한 **모든 구독** 탭 및 복제 모니터의 게시 노드에서 구독을 표시할 수 있습니다. 복제 모니터를 시작하는 방법은 [복제 모니터 시작](../../relational-databases/replication/monitor/start-the-replication-monitor.md)을 참조하세요. 구독을 다시 초기화하도록 표시할 때는 다음과 같은 옵션을 선택할 수 있습니다.  
   
-     **현재 스냅숏 사용**  
+     **현재 스냅샷 사용**  
      다음에 배포 에이전트 또는 병합 에이전트가 실행될 때 현재 스냅샷을 구독자에 적용하려면 이 옵션을 선택합니다. 유효한 스냅샷이 없으면 이 옵션을 선택할 수 없습니다.  
   
-     **새 스냅숏 사용**  
+     **새 스냅샷 사용**  
      새 스냅샷으로 구독을 다시 초기화하려면 이 옵션을 선택합니다. 스냅샷 에이전트에 의해 스냅샷이 생성된 후에만 스냅샷을 구독자에 적용할 수 있습니다. 스냅샷 에이전트가 예약 실행되도록 설정한 경우에는 예약된 다음 스냅샷 에이전트가 실행될 때까지 구독이 다시 초기화되지 않습니다. 스냅샷 에이전트를 바로 시작하려면 **지금 새 스냅샷 생성** 을 선택합니다.  
   
      **다시 초기화하기 전에 동기화되지 않은 변경 내용 업로드**  

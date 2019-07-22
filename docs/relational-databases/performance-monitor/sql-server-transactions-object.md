@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 85240267-78fd-476a-9ef6-010d6cf32dd8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 07b4c7d08816d84f3e1273f3fcdcf5324602cfc0
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 80c62c0048f40ba945d3204c414180be9f8e0d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995649"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transactions 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +40,12 @@ ms.locfileid: "53380554"
 |**Update conflict ratio**|마지막 1초 동안 업데이트 충돌이 발생하였고 스냅샷 격리 수준을 사용하는 트랜잭션의 비율입니다. 스냅샷 격리 수준 트랜잭션이 시작될 때 커밋되지 않은 다른 트랜잭션이 마지막으로 수정한 행을 스냅샷 격리 수준 트랜잭션에서 수정하려고 하면 업데이트 충돌이 발생합니다.|  
 |**Update conflict ratio base**|내부용으로만 사용할 수 있습니다.|
 |**Update Snapshot Transactions**|스냅샷 격리 수준을 사용하고 수정된 데이터가 있는 현재 활성 트랜잭션의 수입니다.|  
-|**Version Cleanup rate (KB/s)**|**tempdb**의 스냅숏 격리 버전 저장소에서 행 버전이 제거되는 비율(KB/초)입니다.|  
-|**Version Generation rate (KB/s)**|**tempdb**의 스냅숏 격리 버전 저장소에 새로운 행 버전이 추가되는 비율(KB/초)입니다.|  
+|**Version Cleanup rate (KB/s)**|**tempdb**의 스냅샷 격리 버전 저장소에서 행 버전이 제거되는 비율(KB/초)입니다.|  
+|**Version Generation rate (KB/s)**|**tempdb**의 스냅샷 격리 버전 저장소에 새로운 행 버전이 추가되는 비율(KB/초)입니다.|  
 |**Version Store Size (KB)**|스냅샷 격리 수준 행 버전을 저장하는 데 사용되는 **tempdb**의 공간(KB)입니다.|  
-|**Version Store unit count**|**tempdb**의 스냅숏 격리 버전 저장소에 있는 활성 할당 단위 수입니다.|  
-|**Version Store unit creation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 시작 이후 스냅숏 격리 저장소에 만들어진 할당 단위 수입니다.|  
-|**Version Store unit truncation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 시작 이후 스냅숏 격리 저장소에서 제거된 할당 단위 수입니다.|  
+|**Version Store unit count**|**tempdb**의 스냅샷 격리 버전 저장소에 있는 활성 할당 단위 수입니다.|  
+|**Version Store unit creation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 시작 이후 스냅샷 격리 저장소에 만들어진 할당 단위 수입니다.|  
+|**Version Store unit truncation**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스 시작 이후 스냅샷 격리 저장소에서 제거된 할당 단위 수입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [리소스 사용 모니터링&#40;시스템 모니터&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

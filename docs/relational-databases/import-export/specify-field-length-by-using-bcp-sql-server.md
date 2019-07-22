@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 240f33ca-ef4a-413a-a4de-831885cb505b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f2dc3cd6f52d0c43903cb663ec6e6aa6d8bd60f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cbb165d6c0b56626849a74eed191402b65623de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062531"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>bcp를 사용하여 필드 길이 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +73,7 @@ ms.locfileid: "64946149"
 |**smalldatetime**|24|  
 |**float**|30|  
 |**real**|30|  
-|**ssNoversion**|12|  
+|**int**|12|  
 |**bigint**|19|  
 |**smallint**|7|  
 |**tinyint**|5|  
@@ -108,7 +107,7 @@ ms.locfileid: "64946149"
 |**smalldatetime**|4|  
 |**float**|8|  
 |**real**|4|  
-|**ssNoversion**|4|  
+|**int**|4|  
 |**bigint**|8|  
 |**smallint**|2|  
 |**tinyint**|1|  

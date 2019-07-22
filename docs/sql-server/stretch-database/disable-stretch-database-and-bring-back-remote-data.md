@@ -10,13 +10,12 @@ helpviewer_keywords:
 ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c2b7547f569b9b645fd81766ad4c98510d8d9c8
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: e4010930a669caf5b74b1c38c88c78f6b94e80b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136274"
 ---
 # <a name="disable-stretch-database-and-bring-back-remote-data"></a>Stretch Database 비활성화 및 원격 데이터 다시 가져오기
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

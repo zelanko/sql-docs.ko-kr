@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: ac844c8155202270dc9661c256259dd67d5f60ab
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: a8114722ac95c1404a45d8c85bf1736e541fa0ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093598"
 ---
 # <a name="sql-server-databases-object"></a>SQL Server, Databases 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

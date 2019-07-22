@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: abc865d0-57a8-49da-8821-29457c808d2a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b296737ecc7d9988365a9ad7abed8b2ee7abf61c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aa388dd079de10f18abbb39d240f3d57d1e2efd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914384"
 ---
 # <a name="partition-transact-sql"></a>$PARTITION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "65943556"
  데이터 형식이 해당 분할 열의 데이터 형식과 일치하거나 이 데이터 형식으로의 암시적 변환이 가능해야 하는 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *식*은 현재 *partition_function_name*에 참여하는 분할 열의 이름일 수도 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  $PARTITION은 1과 파티션 함수의 파티션 개수 사이에 속하는 **int** 값을 반환합니다.  

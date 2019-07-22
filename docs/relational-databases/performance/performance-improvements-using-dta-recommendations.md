@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: a0f114c9e2783c8989a2bb4682d488eaea087814
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 700deff13eba1ce6320a49f997c20a9b40769eee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915199"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>DTA 권장 사항을 사용하여 성능 향상
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +30,8 @@ SQL Server 2016부터 DTA(데이터베이스 엔진 튜닝 관리자)는 지정�
 작업 성능에 대한 DTA 권장 사항의 이점을 설명하기 위해 몇몇 실제 고객 작업에서 실험했습니다. 각 고객 작업에서 DTA가 쿼리의 전체 작업뿐만 아니라 개별 쿼리를 분석하도록 합니다. 다음 세 가지 대안을 고려해 보겠습니다.
   
   1. **Columnstore 전용**: DTA를 사용하지 않고 모든 테이블에 대해 columnstore 인덱스만 빌드합니다. 
-  2. **DTA(rowstore 전용)**: rowstore 인덱스에만 권장되는 옵션을 사용하여 DTA를 실행합니다.
-  3. **DTA(rowstore + columnstore)**: rowstore 인덱스와 columnstore 인덱스에 모두 권장되는 옵션을 사용하여 DTA를 실행합니다.  
+  2. **DTA(rowstore 전용)** : rowstore 인덱스에만 권장되는 옵션을 사용하여 DTA를 실행합니다.
+  3. **DTA(rowstore + columnstore)** : rowstore 인덱스와 columnstore 인덱스에 모두 권장되는 옵션을 사용하여 DTA를 실행합니다.  
    
 각각의 경우에 권장 인덱스를 구현했습니다. 쿼리 또는 작업을 여러 번 실행 시 평균 CPU 시간(밀리초)을 보고합니다. 아래 그림은 두 개의 서로 다른 고객 데이터베이스 작업의 CPU 시간(밀리초)을 나타냅니다. y-축(CPU 시간)은 로그 눈금 간격을 사용합니다.   
 

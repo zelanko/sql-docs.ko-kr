@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a176ec66-ec39-4c99-99d1-c1afa8450e1e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03d045cddeb2da31a3a9c3e4e3cef9f17d10d0f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1274b263bc546a917f9a46d6adaa5c61f7cd49d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726058"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944335"
 ---
 # <a name="historical-attribute-options-slowly-changing-dimension-wizard"></a>기록 특성 옵션(느린 변경 차원 마법사)
 

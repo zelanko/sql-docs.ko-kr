@@ -10,13 +10,12 @@ helpviewer_keywords:
 - failover clustering [SQL Server], upgrading
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8825d0d4c8ff0ac6d83b152b8606be6d9fd0cc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904967"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Windows Server 2008/2008 R2/2012 클러스터에서 실행 중인 SQL Server 인스턴스 업그레이드
 
@@ -261,7 +260,7 @@ SQL FCI 인스턴스만 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnovers
 
     배포자와 게시자 간의 관계는 새 컴퓨터로 올바르게 확인되는, 둘을 호스팅하는 컴퓨터의 VNN에만 좌우됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업도 시스템 테이블과 함께 올바르게 마이그레이션되므로 다양한 복제 에이전트가 계속 평상시처럼 실행될 수 있습니다. 마이그레이션을 수행하기 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 자체나 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 작업을 실행 중인 Windows 계정은 대상 환경에서 동일한 권한을 가져야 합니다. 게시자와 구독자와의 통신은 평상시처럼 실행됩니다.
 
--   **스냅숏 폴더**
+-   **Snapshot folder**
 
     마이그레이션 전에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 기능이 사용하는 모든 네트워크 공유는 대상 환경의 컴퓨터가 원본 환경과 동일한 권한으로 액세스할 수 있어야 합니다. 마이그레이션 전에 이 사실을 확인해야 합니다.
 

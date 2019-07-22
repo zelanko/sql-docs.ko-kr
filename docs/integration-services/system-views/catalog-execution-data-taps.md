@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 54226c01-5b8f-4730-8a5f-1da2613f9689
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fe54f3560c0c4584dcf7c9f84864a3552ed23172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7db0723ed403340b0e24136ac6bac7217943d401
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065238"
 ---
 # <a name="catalogexecutiondatataps"></a>catalog.execution_data_taps 
 
@@ -34,7 +33,7 @@ ms.locfileid: "65714780"
 |package_path|**nvarchar(max)**|데이터 탭이 수행되는 데이터 흐름 태스크의 패키지 경로입니다.|  
 |dataflow_path_id_string|**nvarchar(4000)**|데이터 흐름 경로의 ID 문자열입니다.|  
 |dataflow_task_guid|**uniqueidentifier**|데이터 흐름 태스크의 고유 ID입니다.|  
-|max_rows|**ssNoversion**|캡처할 행의 수입니다. 이 값을 지정하지 않으면 모든 행이 캡처됩니다.|  
+|max_rows|**int**|캡처할 행의 수입니다. 이 값을 지정하지 않으면 모든 행이 캡처됩니다.|  
 |filename|**nvarchar(4000)**|데이터 덤프 파일의 이름입니다. 자세한 내용은 [패키지 실행을 위한 덤프 파일 생성](../../integration-services/troubleshooting/generating-dump-files-for-package-execution.md)을 참조하세요.|  
   
 ## <a name="permissions"></a>사용 권한  

@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: 0617fca6-1bc1-4ad2-9986-fab94ea0a6f0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c1d388657efd74dc8cceb1ecc82d152a109d7939
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0344b658cabeb82fd2e179293cb8bef1134e84a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099841"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity-f1-help"></a>Attunity Oracle CDC Service F1 도움말
 

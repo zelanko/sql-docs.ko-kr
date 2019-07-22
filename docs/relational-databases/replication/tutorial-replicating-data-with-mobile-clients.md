@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: af673514-30c7-403a-9d18-d01e1a095115
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f967453ff629a7827d47b25085edd4aa304b1aa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7e7a186efb5da3ef509f3ada02e301d0777ffd2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895365"
 ---
 # <a name="tutorial-configure-replication-between-a-server-and-mobile-clients-merge"></a>자습서: 서버와 모바일 클라이언트 간의 복제 구성(병합)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -135,7 +134,7 @@ ms.locfileid: "54130723"
 
     ![판매 주문에 대한 다른 조인을 추가하기 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/joinsalestables.png)
   
-21. **즉시 스냅숏 만들기**를 선택하고 **스냅숏 에이전트 실행 시간 예약**을 선택 취소한 후 **다음**을 선택합니다.  
+21. **즉시 스냅샷 만들기**를 선택하고 **스냅샷 에이전트 실행 시간 예약**을 선택 취소한 후 **다음**을 선택합니다.  
 
     ![즉시 스냅샷 만들기에 대한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/snapshotagent.png)
   
@@ -153,7 +152,7 @@ ms.locfileid: "54130723"
   
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 게시자에 연결하고 해당 서버 노드를 확장한 다음, **복제** 폴더를 확장합니다.  
   
-2. **로컬 게시** 폴더에서 **AdvWorksSalesOrdersMerge**를 마우스 오른쪽 단추로 클릭한 다음, **스냅숏 에이전트 상태 보기**를 선택합니다.  
+2. **로컬 게시** 폴더에서 **AdvWorksSalesOrdersMerge**를 마우스 오른쪽 단추로 클릭한 다음, **스냅샷 에이전트 상태 보기**를 선택합니다.  
 
    ![스냅샷 에이전트 상태를 보기 위한 선택 항목](media/tutorial-replicating-data-with-mobile-clients/viewsnapshotagentstatus.png)
   
@@ -251,7 +250,7 @@ ms.locfileid: "54130723"
 참조 항목:  
 - [게시 구독](../../relational-databases/replication/subscribe-to-publications.md)  
 - [끌어오기 구독 만들기](../../relational-databases/replication/create-a-pull-subscription.md)  
-- [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅숏](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+- [매개 변수가 있는 필터를 사용하는 병합 게시의 스냅샷](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
 
 ## <a name="synchronize-the-subscription-to-the-merge-publication"></a>병합 게시에 구독 동기화
 
@@ -278,7 +277,7 @@ ms.locfileid: "54130723"
 3. 복제된 변경 내용을 보려면 다른 서버에 **SalesOrderHeader** 또는 **SalesOrderDetail** 테이블을 쿼리합니다.  
   
 참조 항목:   
-- [스냅숏으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
+- [스냅샷으로 구독 초기화](../../relational-databases/replication/initialize-a-subscription-with-a-snapshot.md)  
 - [데이터 동기화](../../relational-databases/replication/synchronize-data.md)  
 - [끌어오기 구독 동기화](../../relational-databases/replication/synchronize-a-pull-subscription.md)  
   

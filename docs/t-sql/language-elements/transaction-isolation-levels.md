@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 1634e8bbb524744e637d1b9d0b5f7ef213ca62f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28a8de0654fe6e083b52e83d85653a0d9856d351
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072200"
 ---
 # <a name="transaction-isolation-levels"></a>트랜잭션 격리 수준
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 86415302-1383-4d36-9fc7-f780831a2d37
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 981ea3dd0f9b1b73f22293043f548ba9b990b0b7
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 04c8689780ce03a634d81c9951b3f12c96de5723
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898238"
 ---
 # <a name="drop-column-encryption-key-transact-sql"></a>DROP COLUMN ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,12 +48,12 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
 ## <a name="remarks"></a>Remarks  
  데이터베이스의 모든 열을 암호화 하는 데 사용되는 경우 열 암호화 키는 삭제할 수 없습니다. 열 암호화 키를 사용하여 모든 열을 먼저 삭제해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 **ALTER ANY COLUMN ENCRYPTION KEY** 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-a-column-encryption-key"></a>1. 열 암호화 키 제거  
+### <a name="a-dropping-a-column-encryption-key"></a>1\. 열 암호화 키 제거  
  다음 예에서는 `MyCEK`이라고 하는 열 암호화 키를 삭제합니다.  
   
 ```  

@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d5d185a55423bd0dbdeae792c180ba78f9c89cf
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 2763a57a55a65d049be595d2286343eb5ba323ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109717"
 ---
 # <a name="databases"></a>데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 데이터베이스는 구조화된 데이터의 특정 집합이 저장되는 테이블 모음으로 구성됩니다. 테이블에는 행과 열의 모음이 들어 있습니다. 행은 레코드나 튜플이라고도 하고 열은 특성이라고도 합니다. 테이블의 각 열에는 날짜, 이름, 달러 금액 및 숫자와 같은 특정 유형의 정보가 저장됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터베이스는 구조화된 데이터의 특정 집합이 저장되는 테이블 모음으로 구성됩니다. 테이블에는 행과 열의 모음이 들어 있습니다. 행은 레코드나 튜플이라고도 하고 열은 특성이라고도 합니다. 테이블의 각 열에는 날짜, 이름, 달러 금액 및 숫자와 같은 특정 유형의 정보가 저장됩니다.  
   
 ## <a name="basic-information-about-databases"></a>데이터베이스에 대한 기본 정보  
  컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스가 하나 이상 설치될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 각 인스턴스는 하나 이상의 데이터베이스를 포함할 수 있습니다.  데이터베이스 내에 스키마라는 하나 이상의 개체 소유권 그룹이 있습니다. 각 스키마에는 테이블, 뷰, 저장 프로시저와 같은 데이터베이스 개체가 있습니다. 인증서 및 비대칭 키와 같은 일부 개체는 데이터베이스에는 포함되지만 스키마에는 포함되지 않습니다. 테이블을 만드는 방법은 [Tables](../../relational-databases/tables/tables.md)을 참조하십시오.  
@@ -55,7 +54,7 @@ ms.locfileid: "51558550"
 |[데이터베이스에 데이터 또는 로그 파일 추가](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)|[데이터베이스의 호환성 수준 보기 또는 변경](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)|  
 |[데이터베이스 메일의 구성 설정 변경](../../relational-databases/databases/change-the-configuration-settings-for-a-database.md)|[유지 관리 계획 마법사 사용](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |[데이터베이스 만들기](../../relational-databases/databases/create-a-database.md)|[사용자 정의 데이터 형식 별칭 만들기](../../relational-databases/databases/create-a-user-defined-data-type-alias.md)|  
-|[데이터베이스 삭제](../../relational-databases/databases/delete-a-database.md)|[데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)|  
+|[데이터베이스 삭제](../../relational-databases/databases/delete-a-database.md)|[데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>관련 내용  
  [인덱스](../../relational-databases/indexes/indexes.md)  

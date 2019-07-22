@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0d550361063bd051e146b8fc350ae63b0b57c399
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4643942e18927d9feb3929ccdb96d591575487d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086659"
 ---
 # <a name="select-oracle-tables-and-columns"></a>Oracle 테이블 및 열 선택
 

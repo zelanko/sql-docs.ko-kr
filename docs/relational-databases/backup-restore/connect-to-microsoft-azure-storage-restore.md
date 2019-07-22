@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: c0b7d7c8-b878-4b7f-8120-d0c6917b583f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2e8a6d88387fb0674cd8d39f44a30358009e44f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 84dfb4e9f5027650ae3a35146b13f70fd0f84a2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076160"
 ---
 # <a name="connect-to-microsoft-azure-storage-restore"></a>Microsoft Azure 스토리지에 연결(복원)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   대화 상자를 사용하면 Windows Azure 스토리지 계정에서 파일 스토리지를 검색하기 위해 Windows Azure 스토리지 계정 정보에 대한 연결을 지정할 수 있습니다. 필요한 정보를 지정한 후 **연결** 을 클릭하여 Windows Azure Storage에 대한 연결을 설정합니다.  
   
 ## <a name="windows-azure-storage-account"></a>Windows Azure 스토리지 계정  
- **저장소 계정**  
+ **스토리지 계정**  
  사용할 Windows Azure Storage 계정 이름을 선택, 입력 또는 붙여 넣습니다. 드롭다운 상자에 이전에 사용한 계정이 나열됩니다.  
   
  **계정 키**  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8088b114-7d01-435a-8e0d-b81abacc86d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac5e76c2d6e93bb8eb2fe334f38a22325e74d37f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9dacd09604661f9880533fcdcafd2fb7ab9ab12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914592"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|문서 노드의 고유 ID입니다.<br /><br /> 루트 요소의 ID 값은 0입니다. 음수 ID 값은 예약된 값입니다.|  
 |**parentid**|**bigint**|노드의 부모를 나타냅니다. 이 ID가 나타내는 부모가 반드시 부모 요소일 필요는 없지만 해당 노드는 이 ID가 나타내는 부모 노드의 NodeType에 종속됩니다. 예를 들어 노드가 텍스트 노드인 경우 해당 부모는 특성 노드일 수 있습니다.<br /><br /> 노드가 XML 문서의 최상위 수준에 있으면 해당 **ParentID** 는 NULL입니다.|  
-|**nodetype**|**ssNoversion**|노드 유형을 나타냅니다. XML DOM 노드 유형 번호에 해당하는 정수입니다.<br /><br /> 노드 유형은 다음과 같습니다.<br /><br /> 1 = 요소 노드<br /><br /> 2 = 특성 노드<br /><br /> 3 = 텍스트 노드|  
+|**nodetype**|**int**|노드 유형을 나타냅니다. XML DOM 노드 유형 번호에 해당하는 정수입니다.<br /><br /> 노드 유형은 다음과 같습니다.<br /><br /> 1 = 요소 노드<br /><br /> 2 = 특성 노드<br /><br /> 3 = 텍스트 노드|  
 |**localname**|**nvarchar**|요소 또는 특성의 로컬 이름을 지정합니다. DOM 개체에 이름이 없는 경우에는 NULL입니다.|  
 |**prefix**|**nvarchar**|노드 이름의 네임스페이스 접두사입니다.|  
 |**namespaceuri**|**nvarchar**|노드의 네임스페이스 URI입니다. 값이 NULL이면 네임스페이스가 없는 것입니다.|  

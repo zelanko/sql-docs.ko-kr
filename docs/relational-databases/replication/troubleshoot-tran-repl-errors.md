@@ -10,13 +10,12 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7547ce03478e810eac4725b8b543afd9862f9ca2
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 03ffb9e8259e463c261838ffc79cf0b9c5908b39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895537"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>문제 해결사: SQL Server 트랜잭션 복제를 사용하여 오류 찾기 
 복제 오류를 해결하는 것은 트랜잭션 복제 작동 방법에 대한 기본적인 이해 없이는 불편을 느낄 수 있습니다. 게시를 만드는 첫 번째 단계는 스냅샷 에이전트가 스냅샷을 만들어 스냅샷 폴더에 저장하게 하는 것입니다. 다음으로 배포 에이전트가 스냅샷을 구독자에게 적용합니다. 
@@ -66,7 +65,7 @@ ms.locfileid: "67581348"
 
     1\. 개체 탐색기에서 **SQL Server 에이전트**를 확장하고 작업 활동 모니터를 엽니다. 
 
-    2\. **범주**로 정렬하고 **REPL-스냅숏** 범주로 스냅숏 에이전트를 식별합니다.
+    2\. **범주**로 정렬하고 **REPL-스냅샷** 범주로 스냅샷 에이전트를 식별합니다.
 
     c. 스냅샷 에이전트를 오른쪽 단추로 클릭한 다음, **기록 보기**를 선택합니다. 
 

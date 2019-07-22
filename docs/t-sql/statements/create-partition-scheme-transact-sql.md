@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 83017a49354eb3da8220ae2fa4536961d1fed420
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6ee0ca48835d87c379008c1894ed63596d23ac9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048154"
 ---
 # <a name="create-partition-scheme-transact-sql"></a>CREATE PARTITION SCHEME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,18 +64,18 @@ AS PARTITION partition_function_name
  ALL  
  모든 파티션이 *file_group_name*에서 제공한 파일 그룹에 매핑되거나 또는 **[** PRIMARY **]** 가 지정된 경우 주 파일 그룹에 매핑되도록 지정합니다. ALL을 지정하면 하나의 *file_group_name*만 지정할 수 있습니다.  
   
- *file_group_name* | **[** PRIMARY **]** [ **,**_...n_]  
+ *file_group_name* |  **[** PRIMARY **]** [ **,** _...n_]  
  *partition_function_name*에 지정된 파티션을 보유할 파일 그룹의 이름을 지정합니다. *file_group_name*은 데이터베이스에 이미 있어야 합니다.  
   
- **[** PRIMARY **]** 를 지정하면 파티션은 주 파일 그룹에 저장됩니다. ALL을 지정하면 하나의 *file_group_name*만 지정할 수 있습니다. [**,**_...n_]에 나열된 파일 그룹의 순서대로 1번 파티션부터 시작하여 파티션을 파일 그룹에 할당합니다. [**,**_...n_]에서 같은 *file_group_name*을 두 번 이상 지정할 수 있습니다. *n*이 *partition_function_name*에서 지정된 만큼의 파티션 수를 보유하기에 부족한 경우 CREATE PARTITION SCHEME은 오류가 발생하고 실패합니다.  
+ **[** PRIMARY **]** 를 지정하면 파티션은 주 파일 그룹에 저장됩니다. ALL을 지정하면 하나의 *file_group_name*만 지정할 수 있습니다. [ **,** _...n_]에 나열된 파일 그룹의 순서대로 1번 파티션부터 시작하여 파티션을 파일 그룹에 할당합니다. [ **,** _...n_]에서 같은 *file_group_name*을 두 번 이상 지정할 수 있습니다. *n*이 *partition_function_name*에서 지정된 만큼의 파티션 수를 보유하기에 부족한 경우 CREATE PARTITION SCHEME은 오류가 발생하고 실패합니다.  
   
  *partition_function_name*이 파일 그룹보다 적은 파티션을 생성한 경우 할당되지 않은 첫 번째 파일 그룹이 NEXT USED로 표시되고 정보 메시지가 NEXT USED 파일 그룹에 표시됩니다. ALL을 지정하면 하나의 *file_group_name*만이 해당 *partition_function_name*의 NEXT USED 속성을 유지합니다. ALTER PARTITION FUNCTION 문에서 파티션을 생성한 경우 NEXT USED 파일 그룹이 추가 파티션을 받습니다. 할당되지 않은 파일 그룹을 추가로 만들어 새 파티션을 보유하려면 ALTER PARTITION SCHEME을 사용하십시오.  
   
- *file_group_name* [ 1 **,**_...n_]에서 주 파일 그룹을 지정하면 PRIMARY는 키워드이므로 **[** PRIMARY **]** 와 같이 구분해야 합니다.  
+ *file_group_name* [ 1 **,** _...n_]에서 주 파일 그룹을 지정하면 PRIMARY는 키워드이므로 **[** PRIMARY **]** 와 같이 구분해야 합니다.  
   
  [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에는 PRIMARY만 사용할 수 있습니다. 아래 예제 E를 참조하세요. 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CREATE PARTITION SCHEME을 실행하는 데 필요한 권한은 다음과 같습니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  
@@ -87,7 +86,7 @@ AS PARTITION partition_function_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>1. 각 파티션을 다른 파일 그룹에 매핑하는 파티션 구성표 만들기  
+### <a name="a-creating-a-partition-scheme-that-maps-each-partition-to-a-different-filegroup"></a>1\. 각 파티션을 다른 파일 그룹에 매핑하는 파티션 구성표 만들기  
  다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수를 만듭니다. 4개의 파티션 각각을 보유하도록 파일 그룹을 지정하는 파티션 구성표를 만듭니다. 이 예에서는 데이터베이스에 이미 파일 그룹이 있다고 가정합니다.  
   
 ```  
@@ -107,7 +106,7 @@ TO (test1fg, test2fg, test3fg, test4fg);
 |**파티션**|1|2|3|4|  
 |**값**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
-### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>2. 여러 파티션을 같은 파일 그룹에 매핑하는 파티션 구성표 만들기  
+### <a name="b-creating-a-partition-scheme-that-maps-multiple-partitions-to-the-same-filegroup"></a>2\. 여러 파티션을 같은 파일 그룹에 매핑하는 파티션 구성표 만들기  
  모든 파티션을 같은 파일 그룹에 매핑하는 경우 ALL 키워드를 사용하십시오. 그러나 모든 파티션이 아니라 여러 개의 일부 파티션을 같은 파일 그룹에 매핑하는 경우 다음 예와 같이 파일 그룹 이름을 반복해야 합니다.  
   
 ```  
@@ -127,7 +126,7 @@ TO ( test1fg, test1fg, test1fg, test2fg );
 |**파티션**|1|2|3|4|  
 |**값**|**col1** <= `1`|**col1** > 1 AND **col1** <= `100`|**col1** > `100` AND **col1** <= `1000`|**col1** > `1000`|  
   
-### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>3. 모든 파티션을 같은 파일 그룹에 매핑하는 파티션 구성표 만들기  
+### <a name="c-creating-a-partition-scheme-that-maps-all-partitions-to-the-same-filegroup"></a>C. 모든 파티션을 같은 파일 그룹에 매핑하는 파티션 구성표 만들기  
  다음 예에서는 앞의 예와 같은 파티션 함수를 만들고 모든 파티션을 같은 파일 그룹에 매핑하는 파티션 구성표를 만드는 방법을 보여 줍니다.  
   
 ```  

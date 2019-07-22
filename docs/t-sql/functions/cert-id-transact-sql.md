@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 59cc06f5-272e-4936-8afe-afba7aba8eea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e90d32ca718990c6b75f796e8df32bf45797b8f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10f97749970337435b14ff0d1dc14df42ad48daf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040132"
 ---
 # <a name="certid-transact-sql"></a>CERT_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ Cert_ID ( 'cert_name' )
 데이터베이스의 인증서 이름입니다.
   
 ## <a name="return-types"></a>반환 형식
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
 [sys.certificates](../../relational-databases/system-catalog-views/sys-certificates-transact-sql.md) 카탈로그 뷰는 인증서 이름을 보여 줍니다.
