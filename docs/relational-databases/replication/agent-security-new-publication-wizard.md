@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c14af686e33a84ef82c9d568448e44e0242234
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 02ae52aa310f760b06c51f003bd417f26486a5f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027845"
 ---
 # <a name="agent-security-new-publication-wizard"></a>에이전트 보안(새 게시 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +32,8 @@ ms.locfileid: "54130423"
  에이전트에 필요한 사용 권한 및 복제 보안을 위한 최선의 구현 방법은 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md) 및 [Replication Security Best Practices](../../relational-databases/replication/security/replication-security-best-practices.md)을 참조하십시오.  
   
 ## <a name="options"></a>옵션  
- **스냅숏 에이전트**  
- 모든 게시에 대해 표시됩니다. **보안 설정** 을 클릭하여 **스냅숏 에이전트 보안** 대화 상자에서 보안 설정을 지정할 수 있습니다.  
+ **스냅샷 에이전트**  
+ 모든 게시에 대해 표시됩니다. **보안 설정** 을 클릭하여 **스냅샷 에이전트 보안** 대화 상자에서 보안 설정을 지정할 수 있습니다.  
   
  스냅샷 에이전트에서 사용하는 계정에 필요한 사용 권한을 보려면 **스냅샷 에이전트 보안** 대화 상자에서 **도움말** 을 클릭합니다.  
   

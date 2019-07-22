@@ -22,19 +22,18 @@ helpviewer_keywords:
 ms.assetid: 1f05474c-0377-48cb-b567-9d85d0c40479
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: eb46b7fceb46185fdfd03874854649f67ef30c76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5209f679888833a532849a694f0683c6d1283b13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122243"
 ---
 # <a name="lt-less-than-or-equal-to-transact-sql"></a>&lt;=(작거나 같음)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  두 식을 비교합니다(비교 연산자).   Null  이 아닌 식을 비교하는 경우 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 작거나 같으면 결과는 TRUE이고 그렇지 않으면 결과는 FALSE입니다.  
+  두 식을 비교합니다(비교 연산자). Null  이 아닌 식을 비교하는 경우 왼쪽 피연산자의 값이 오른쪽 피연산자의 값보다 작거나 같으면 결과는 TRUE이고 그렇지 않으면 결과는 FALSE입니다.  
   
  =(등가) 비교 연산자와 달리 두 NULL 값에 대한 >= 비교의 결과는 ANSI_NULLS 설정에 따라 달라지지 않습니다.  
   
@@ -55,7 +54,7 @@ expression <= expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using--in-a-simple-query"></a>1. 간단한 쿼리에서 <= 사용  
+### <a name="a-using--in-a-simple-query"></a>1\. 간단한 쿼리에서 <= 사용  
  다음 예에서는 `HumanResources.Department` 테이블에서 `DepartmentID`의 값이 3보다 작거나 같은 모든 행을 반환합니다.  
   
 ```  

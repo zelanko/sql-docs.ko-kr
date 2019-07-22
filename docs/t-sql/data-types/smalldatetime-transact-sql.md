@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 68b74610-d54c-4c8e-b4b2-7e3747546ee0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d44e6621e4d5f9535752cf8b6f74c4dbcd404d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f4f4e7ae4f7ba11add01a0612fe9607fcb42104c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000556"
 ---
 # <a name="smalldatetime-transact-sql"></a>smalldatetime(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -148,7 +147,7 @@ SELECT @smalldatetime AS '@smalldatetime', @datetime2 AS ' datetime2(4)';
   
 ## <a name="examples"></a>예  
   
-### <a name="a-casting-string-literals-with-seconds-to-smalldatetime"></a>1. 초를 포함한 문자열 리터럴을 smalldatetime으로 캐스팅  
+### <a name="a-casting-string-literals-with-seconds-to-smalldatetime"></a>1\. 초를 포함한 문자열 리터럴을 smalldatetime으로 캐스팅  
 다음 예에서는 문자열 리터럴의 초를 `smalldatetime`으로 변환한 결과를 비교합니다.
   
 ```sql
@@ -164,7 +163,7 @@ SELECT
 |2007-05-08 12:35:30|2007-05-08 12:36:00|  
 |2007-05-08 12:59:59.998|2007-05-08 13:00:00|  
   
-### <a name="b-comparing-date-and-time-data-types"></a>2. 날짜 및 시간 데이터 형식 비교  
+### <a name="b-comparing-date-and-time-data-types"></a>2\. 날짜 및 시간 데이터 형식 비교  
 다음 예에서는 문자열을 각 날짜 및 시간 데이터 형식으로 캐스팅하는 결과를 비교합니다.
   
 ```sql

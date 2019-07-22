@@ -29,14 +29,13 @@ helpviewer_keywords:
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 10b29bcce89adb35b4650b5501fea9a460f18d50
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
+ms.openlocfilehash: 30cab7ddfe6c0c6b88f1fb6e619cb84866c3efbf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67313986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065717"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -54,7 +53,7 @@ ms.locfileid: "67313986"
 
 > |||||
 > |---|---|---|---|
-> |** _\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
 
 &nbsp;
 
@@ -954,7 +953,7 @@ ON
 OFF         
 데이터베이스 수준에서 스냅샷 옵션을 해제합니다. 트랜잭션을 SNAPSHOT 트랜잭션 격리 수준으로 지정할 수 없습니다.
 
-ALLOW_SNAPSHOT_ISOLATION을 새 상태로 설정하는 경우(ON에서 OFF로 또는 OFF에서 ON으로) ALTER DATABASE는 데이터베이스 내의 기존 트랜잭션이 모두 커밋될 때까지 호출자에게 제어권을 반환하지 않습니다. 데이터베이스가 이미 ALTER DATABASE 문에 지정된 상태인 경우 제어권은 호출자에게 즉시 반환됩니다. ALTER DATABASE 문이 제어권을 빨리 반환하지 않는 경우 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)를 사용하여 장기 트랜잭션이 있는지 여부를 확인합니다. ALTER DATABASE 문을 취소하면 데이터베이스는 ALTER DATABASE가 시작된 시점의 상태로 남게 됩니다. [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰는 데이터베이스에 있는 스냅숏 격리 트랜잭션의 상태를 나타냅니다. **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON인 경우 ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION을 OFF로 설정하는 작업은 6초간 일시 중지된 다음, 다시 시도됩니다.
+ALLOW_SNAPSHOT_ISOLATION을 새 상태로 설정하는 경우(ON에서 OFF로 또는 OFF에서 ON으로) ALTER DATABASE는 데이터베이스 내의 기존 트랜잭션이 모두 커밋될 때까지 호출자에게 제어권을 반환하지 않습니다. 데이터베이스가 이미 ALTER DATABASE 문에 지정된 상태인 경우 제어권은 호출자에게 즉시 반환됩니다. ALTER DATABASE 문이 제어권을 빨리 반환하지 않는 경우 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)를 사용하여 장기 트랜잭션이 있는지 여부를 확인합니다. ALTER DATABASE 문을 취소하면 데이터베이스는 ALTER DATABASE가 시작된 시점의 상태로 남게 됩니다. [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰는 데이터베이스에 있는 스냅샷 격리 트랜잭션의 상태를 나타냅니다. **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON인 경우 ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION을 OFF로 설정하는 작업은 6초간 일시 중지된 다음, 다시 시도됩니다.
 
 데이터베이스가 OFFLINE인 경우 ALLOW_SNAPSHOT_ISOLATION의 상태를 변경할 수 없습니다.
 
@@ -1397,7 +1396,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|** _\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1848,7 +1847,7 @@ ON
 OFF         
 데이터베이스 수준에서 스냅샷 옵션을 해제합니다. 트랜잭션을 SNAPSHOT 트랜잭션 격리 수준으로 지정할 수 없습니다.
 
-ALLOW_SNAPSHOT_ISOLATION을 새 상태로 설정하는 경우(ON에서 OFF로 또는 OFF에서 ON으로) ALTER DATABASE는 데이터베이스 내의 기존 트랜잭션이 모두 커밋될 때까지 호출자에게 제어권을 반환하지 않습니다. 데이터베이스가 이미 ALTER DATABASE 문에 지정된 상태인 경우 제어권은 호출자에게 즉시 반환됩니다. ALTER DATABASE 문이 제어권을 빨리 반환하지 않는 경우 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)를 사용하여 장기 트랜잭션이 있는지 여부를 확인합니다. ALTER DATABASE 문을 취소하면 데이터베이스는 ALTER DATABASE가 시작된 시점의 상태로 남게 됩니다. [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰는 데이터베이스에 있는 스냅숏 격리 트랜잭션의 상태를 나타냅니다. **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON인 경우 ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION을 OFF로 설정하는 작업은 6초간 일시 중지된 다음, 다시 시도됩니다.
+ALLOW_SNAPSHOT_ISOLATION을 새 상태로 설정하는 경우(ON에서 OFF로 또는 OFF에서 ON으로) ALTER DATABASE는 데이터베이스 내의 기존 트랜잭션이 모두 커밋될 때까지 호출자에게 제어권을 반환하지 않습니다. 데이터베이스가 이미 ALTER DATABASE 문에 지정된 상태인 경우 제어권은 호출자에게 즉시 반환됩니다. ALTER DATABASE 문이 제어권을 빨리 반환하지 않는 경우 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)를 사용하여 장기 트랜잭션이 있는지 여부를 확인합니다. ALTER DATABASE 문을 취소하면 데이터베이스는 ALTER DATABASE가 시작된 시점의 상태로 남게 됩니다. [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰는 데이터베이스에 있는 스냅샷 격리 트랜잭션의 상태를 나타냅니다. **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON인 경우 ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION을 OFF로 설정하는 작업은 6초간 일시 중지된 다음, 다시 시도됩니다.
 
 데이터베이스가 OFFLINE인 경우 ALLOW_SNAPSHOT_ISOLATION의 상태를 변경할 수 없습니다.
 
@@ -2188,7 +2187,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |** _\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\*SQL Database<br />관리되는 인스턴스\*_** &nbsp;||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -2581,7 +2580,7 @@ ON
 OFF         
 데이터베이스 수준에서 스냅샷 옵션을 해제합니다. 트랜잭션을 SNAPSHOT 트랜잭션 격리 수준으로 지정할 수 없습니다.
 
-ALLOW_SNAPSHOT_ISOLATION을 새 상태로 설정하는 경우(ON에서 OFF로 또는 OFF에서 ON으로) ALTER DATABASE는 데이터베이스 내의 기존 트랜잭션이 모두 커밋될 때까지 호출자에게 제어권을 반환하지 않습니다. 데이터베이스가 이미 ALTER DATABASE 문에 지정된 상태인 경우 제어권은 호출자에게 즉시 반환됩니다. ALTER DATABASE 문이 제어권을 빨리 반환하지 않는 경우 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)를 사용하여 장기 트랜잭션이 있는지 여부를 확인합니다. ALTER DATABASE 문을 취소하면 데이터베이스는 ALTER DATABASE가 시작된 시점의 상태로 남게 됩니다. [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰는 데이터베이스에 있는 스냅숏 격리 트랜잭션의 상태를 나타냅니다. **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON인 경우 ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION을 OFF로 설정하는 작업은 6초간 일시 중지된 다음, 다시 시도됩니다.
+ALLOW_SNAPSHOT_ISOLATION을 새 상태로 설정하는 경우(ON에서 OFF로 또는 OFF에서 ON으로) ALTER DATABASE는 데이터베이스 내의 기존 트랜잭션이 모두 커밋될 때까지 호출자에게 제어권을 반환하지 않습니다. 데이터베이스가 이미 ALTER DATABASE 문에 지정된 상태인 경우 제어권은 호출자에게 즉시 반환됩니다. ALTER DATABASE 문이 제어권을 빨리 반환하지 않는 경우 [sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md)를 사용하여 장기 트랜잭션이 있는지 여부를 확인합니다. ALTER DATABASE 문을 취소하면 데이터베이스는 ALTER DATABASE가 시작된 시점의 상태로 남게 됩니다. [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰는 데이터베이스에 있는 스냅샷 격리 트랜잭션의 상태를 나타냅니다. **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON인 경우 ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION을 OFF로 설정하는 작업은 6초간 일시 중지된 다음, 다시 시도됩니다.
 
 데이터베이스가 OFFLINE인 경우 ALLOW_SNAPSHOT_ISOLATION의 상태를 변경할 수 없습니다.
 
@@ -2892,7 +2891,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_** &nbsp;||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />단일 데이터베이스/탄력적 풀](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;||||
 
 &nbsp;
 

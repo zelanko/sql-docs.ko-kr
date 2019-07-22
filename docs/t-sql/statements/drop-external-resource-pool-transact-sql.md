@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e2fa01bd-96ff-4ea9-bb08-6cb6b6adf68c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7e4137d61fcb223f4fa4fc943314ecaa50965c51
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a7311828e42ffbd73e53e82ab3f87fb6e7b0925d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086685"
 ---
 # <a name="drop-external-resource-pool-transact-sql"></a>DROP EXTERNAL RESOURCE POOL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ DROP EXTERNAL RESOURCE POOL pool_name
   
  DDL 문을 실행할 경우 리소스 관리자 상태에 대해 잘 알고 있는 것이 좋습니다. 자세한 내용은 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  `CONTROL SERVER` 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 683e52e5-1c7e-49ab-9ffe-6a450a1c5776
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 40884a52395aee9bb45338f5c56d2709f3d4d956
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d490cf8907859e85eef12aef54d29be01e0fb9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019538"
 ---
 # <a name="lesson-1-5---testing-the-updated-packages"></a>1-5단원 - 업데이트된 패키지 테스트
 

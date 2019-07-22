@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9646f61d6cb8d9a277f08711dc8326f34064c5ad
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7a926e4735c29d92f9faaec69e06171e134360aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005429"
 ---
 # <a name="replication-monitor"></a>복제 모니터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "54124603"
   
 -   [게시자 정보, 구독 조사 목록&#40;병합 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-merge-publication.md)  
   
--   [게시자 정보, 구독 조사 목록&#40;스냅숏 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md)  
+-   [게시자 정보, 구독 조사 목록&amp;#40;스냅샷 게시, SQL Server 2005 이상&amp;#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md)  
   
 -   [게시자 정보, 에이전트](../../relational-databases/replication/publisher-information-agents.md)  
   
@@ -50,18 +49,18 @@ ms.locfileid: "54124603"
   
 -   [게시 정보, 모든 구독&#40;병합 게시&#41;](../../relational-databases/replication/publication-information-all-subscriptions-merge-publication.md)  
   
--   [게시 정보, 모든 구독&#40;스냅숏 게시&#41;](../../relational-databases/replication/publication-information-all-subscriptions-snapshot-publication.md)  
+-   [게시 정보, 모든 구독&amp;#40;스냅샷 게시&amp;#41;](../../relational-databases/replication/publication-information-all-subscriptions-snapshot-publication.md)  
   
 -   [게시 정보, 경고&#40;트랜잭션 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publication-information-warnings-transactional-publication.md)  
   
 -   [게시 정보, 경고&#40;병합 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publication-information-warnings-merge-publication-sql-server-2005-and-later.md)  
   
--   [게시 정보, 경고&#40;스냅숏 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md)  
+-   [게시 정보, 경고&amp;#40;스냅샷 게시, SQL Server 2005 이상&amp;#41;](../../relational-databases/replication/publication-information-warnings-snapshot-publication-sql-server-2005-and-later.md)  
   
 -   [게시 정보, 에이전트&#40;트랜잭션 게시&#41;](../../relational-databases/replication/publication-information-agents-transactional-publication.md)  
   
 -   [게시 정보, 에이전트&#40;병합 게시&#41;](../../relational-databases/replication/publication-information-agents-merge-publication.md)    
--   [게시 정보, 에이전트&#40;스냅숏 게시&#41;](../../relational-databases/replication/publication-information-agents-snapshot-publication.md)  
+-   [게시 정보, 에이전트&amp;#40;스냅샷 게시&amp;#41;](../../relational-databases/replication/publication-information-agents-snapshot-publication.md)  
   
 -   [게시 정보, 추적 프로그램 토큰&#40;트랜잭션 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publication-information-tracer-tokens-sql-server-2005-and-later.md)  
   
@@ -73,13 +72,13 @@ ms.locfileid: "54124603"
   
 -   [구독, 동기화 기록&#40;병합 구독, SQL Server 2005 이상&#41;](../../relational-databases/replication/subscription-synchronization-history.md)  
   
--   [구독, 배포자에서 구독자로의 연결 기록&#40;스냅숏 구독&#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
+-   [구독, 배포자에서 구독자로의 연결 기록&amp;#40;스냅샷 구독&amp;#41;](../../relational-databases/replication/subscription-distributor-to-subscriber-history-snapshot-subscription.md)  
   
 -   [로그 판독기 에이전트](../../relational-databases/replication/log-reader-agent.md)  
   
 -   [큐 판독기 에이전트](../../relational-databases/replication/queue-reader-agent.md)  
   
--   [스냅숏 에이전트](../../relational-databases/replication/snapshot-agent.md)  
+-   [스냅샷 에이전트](../../relational-databases/replication/snapshot-agent.md)  
   
 -   [필터 설정](../../relational-databases/replication/filter-settings.md)  
   

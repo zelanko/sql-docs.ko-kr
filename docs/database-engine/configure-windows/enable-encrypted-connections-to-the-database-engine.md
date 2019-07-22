@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-manager: jroth
-ms.openlocfilehash: 210572e30dc1115fa52cfab4da293533a051d634
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7469a69c108dd71be6b624af9795d7a589bcffde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011834"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>데이터베이스 엔진에 암호화된 연결 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "66767426"
  클라이언트가 서버에 사용되는 인증서의 소유권을 확인할 수 있어야 합니다. 클라이언트에 서버 인증서를 서명한 인증 기관의 공개 키 인증서가 있으면 추가 구성은 필요 없습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에는 많은 인증 기관의 공개 키 인증서가 포함되어 있습니다. 클라이언트에 퍼블릭 키 인증서가 없는 퍼블릭 또는 프라이빗 인증 기관에서 서버 인증서를 서명한 경우 서버 인증서를 서명한 인증 기관의 퍼블릭 키 인증서를 설치해야 합니다.  
   
 > [!NOTE]  
-> 장애 조치(Failover) 클러스터에 암호화를 사용하려면 장애 조치 클러스터의 모든 노드에 있는 가상 서버의 정규화된 DNS 이름으로 서버 인증서를 설치해야 합니다. 예를 들어 노드의 이름이 test1.*\<회사>*.com 및 test2.*\<회사>*.com인 두 노드 클러스터와 virtsql이라는 가상 서버가 있는 경우 virtsql.*\<회사>*.com에 대한 인증서를 두 노드에 모두 설치해야 합니다. **ForceEncryption** 옵션 값을 **예**로 설정할 수 있습니다.
+> 장애 조치(Failover) 클러스터에 암호화를 사용하려면 장애 조치 클러스터의 모든 노드에 있는 가상 서버의 정규화된 DNS 이름으로 서버 인증서를 설치해야 합니다. 예를 들어 노드의 이름이 test1. *\<회사>* .com 및 test2. *\<회사>* .com인 두 노드 클러스터와 virtsql이라는 가상 서버가 있는 경우 virtsql. *\<회사>* .com에 대한 인증서를 두 노드에 모두 설치해야 합니다. **ForceEncryption** 옵션 값을 **예**로 설정할 수 있습니다.
 
 > [!NOTE]
 > Azure VM에서 Azure Search 인덱서로부터 SQL Server로의 암호화된 연결을 만드는 경우 [Azure VM에서 Azure Search 인덱서로부터 SQL Server로의 연결 구성](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/)을 참조하세요. 
@@ -95,9 +94,9 @@ SQL Server에서 SSL 인증서를 로드하도록 하려면 인증서가 다음 
   
 ## <a name="to-configure-the-server-to-force-encrypted-connections"></a>암호화된 연결을 강제하도록 서버를 구성하려면  
   
-1. **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 펼치고 _\<서버 인스턴스>_**에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+1. **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 펼치고 _\<서버 인스턴스>_ **에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-2. _\<인스턴스 이름>_**에 대한 프로토콜** **속성** 대화 상자에서 **인증서** 탭의 **인증서** 상자에 대한 드롭다운에서 원하는 인증서를 선택한 다음 **확인**을 클릭합니다.  
+2. _\<인스턴스 이름>_ **에 대한 프로토콜** **속성** 대화 상자에서 **인증서** 탭의 **인증서** 상자에 대한 드롭다운에서 원하는 인증서를 선택한 다음 **확인**을 클릭합니다.  
   
 3. **플래그** 탭의 **ForceEncryption** 상자에서 **예**를 선택한 다음 **확인** 을 클릭하여 대화 상자를 닫습니다.  
   

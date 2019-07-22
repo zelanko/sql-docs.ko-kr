@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 2351bba7-0f2a-4cda-b3b2-6a88b8747c53
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fe420a2f1a39165a94500f52d016b111bf43be20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a66af1aafad411a70b707165b96c546cbababa0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929259"
 ---
 # <a name="drop-service-transact-sql"></a>DROP SERVICE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ DROP SERVICE service_name
   
  서비스를 삭제하면 해당 서비스가 사용하는 큐에서 서비스에 대한 모든 메시지가 삭제됩니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 해당 서비스를 사용하는 진행 중인 대화의 원격 대화 상대에게 오류를 보냅니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서비스 삭제 권한은 기본적으로 서비스 소유자, db_ddladmin 또는 db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  

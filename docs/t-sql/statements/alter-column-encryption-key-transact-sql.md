@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: c79a220d-e178-4091-a330-c924cc0f0ae0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ec90c3ca632a917bd0905063d2fee94f4c0dfa32
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: cbfc9ffa9ba188506e887201ca17ef630f1d04ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065944"
 ---
 # <a name="alter-column-encryption-key-transact-sql"></a>ALTER COLUMN ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -73,12 +72,12 @@ ALTER COLUMN ENCRYPTION KEY key_name
 
 열 암호화 키에 대한 정보를 보려면 [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md), [sys.column_encryption_key_values&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)를 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 **ALTER ANY COLUMN ENCRYPTION KEY** 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-adding-a-column-encryption-key-value"></a>1. 열 암호화 키 값 추가  
+### <a name="a-adding-a-column-encryption-key-value"></a>1\. 열 암호화 키 값 추가  
  다음 예에서는 `MyCEK`이라고 하는 열 암호화 키를 수정합니다.  
   
 ```  
@@ -93,7 +92,7 @@ GO
   
 ```  
   
-### <a name="b-dropping-a-column-encryption-key-value"></a>2. 열 암호화 키 값 삭제  
+### <a name="b-dropping-a-column-encryption-key-value"></a>2\. 열 암호화 키 값 삭제  
  다음 예에서는 값을 삭제하여 `MyCEK`이라고 하는 열 암호화 키를 수정합니다.  
   
 ```  

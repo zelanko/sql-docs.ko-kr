@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 56683b05b940ce9c11ba41d05659fb94bf26a921
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ccf2da9a32cb932dc206d702d6303ffa85e0664
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65949202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109345"
 ---
 # <a name="keyid-transact-sql"></a>KEY_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ Key_ID ( 'Key_Name' )
  데이터베이스에 있는 대칭 키의 이름입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  임시 키의 이름은 숫자 기호(#)로 시작해야 합니다.  

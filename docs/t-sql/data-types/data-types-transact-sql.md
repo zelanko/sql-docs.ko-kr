@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: a54f7373-b247-4d61-8fb8-7f2ec7a8d0a4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4d1f3ca61710f1e55d95b8942adc86fea736910
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a03da24fe18f0d910f5054d8cfb321c42d633db8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113737"
 ---
 # <a name="data-types-transact-sql"></a>Data types(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,8 +49,8 @@ ms.locfileid: "56802240"
 |문자열||  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 일부 데이터 형식은 저장 특징에 따라 다음 그룹에 속하도록 지정됩니다.
--   Large value 데이터 형식: **varchar(max)**, **nvarchar(max)**  
--   Large object 데이터 형식: **text**, **ntext**, **image**, **varbinary(max)**, **xml**  
+-   Large value 데이터 형식: **varchar(max)** , **nvarchar(max)**  
+-   Large object 데이터 형식: **text**, **ntext**, **image**, **varbinary(max)** , **xml**  
   
     > [!NOTE]  
     >  sp_help는 큰 값 및 **xml** 데이터 형식의 길이로 -1을 반환합니다.  

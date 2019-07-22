@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: 1054c76e-0fd5-4131-8c07-a6c5d024af50
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7db64289b031851629c0627bd324eba752fd8554
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e67b6e058304cf898d2818ab5a6ea2675e0c9825
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071120"
 ---
 # <a name="insert-transact-sql"></a>INSERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -428,7 +427,7 @@ SELECT를 ORDER BY와 함께 사용하여 행을 채우는 INSERT 쿼리는 ID �
 ###  <a name="BasicSyntax"></a> 기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 INSERT 문의 기본 기능을 보여 줍니다.  
   
-#### <a name="a-inserting-a-single-row-of-data"></a>1. 단일 데이터 행 삽입  
+#### <a name="a-inserting-a-single-row-of-data"></a>1\. 단일 데이터 행 삽입  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Production.UnitMeasure` 테이블에 한 행을 삽입합니다. 이 테이블의 열은 `UnitMeasureCode`, `Name` 및 `ModifiedDate`입니다. 모든 열에 대한 값이 제공되고 테이블 내의 열과 같은 순서로 나열되어 있기 때문에 열 목록에 열 이름을 지정할 필요가 없습니다 *.*  
   
 ```sql
@@ -436,7 +435,7 @@ INSERT INTO Production.UnitMeasure
 VALUES (N'FT', N'Feet', '20080414');  
 ```  
   
-#### <a name="b-inserting-multiple-rows-of-data"></a>2. 여러 데이터 행 삽입  
+#### <a name="b-inserting-multiple-rows-of-data"></a>2\. 여러 데이터 행 삽입  
  다음 예에서는 [테이블 값 생성자](../../t-sql/queries/table-value-constructor-transact-sql.md)를 사용하여 단일 INSERT 문으로 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Production.UnitMeasure` 테이블에 세 개의 행을 삽입합니다. 모든 열에 대한 값이 제공되어 있고 값이 테이블 내의 열과 같은 순서로 나열되어 있기 때문에 열 목록에 열 이름을 지정할 필요가 없습니다.  
   
 ```sql
@@ -588,7 +587,7 @@ SELECT DataSource,BusinessEntityID,LastName,SalesDollars
 FROM dbo.EmployeeSales;  
 ```  
   
-#### <a name="i-using-with-common-table-expression-to-define-the-data-inserted"></a>9. WITH 공통 테이블 식을 사용하여 삽입할 데이터 정의  
+#### <a name="i-using-with-common-table-expression-to-define-the-data-inserted"></a>9\. WITH 공통 테이블 식을 사용하여 삽입할 데이터 정의  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 `NewEmployee` 테이블을 만듭니다. 공통 테이블 식(`EmployeeTemp`)은 하나 이상의 테이블에서 `NewEmployee` 테이블에 삽입할 행을 정의합니다. INSERT 문은 공통 테이블 식의 열을 참조합니다.  
   
 ```sql

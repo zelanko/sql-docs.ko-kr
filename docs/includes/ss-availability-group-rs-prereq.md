@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 336162ea06533901107c83dd47f062fc94fdd869
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213314"
+---
 ## <a name="prerequisites"></a>사전 요구 사항
 
 가용성 그룹을 만들려면 먼저 다음을 수행해야 합니다.
@@ -52,7 +60,7 @@ CREATE USER dbm_user FOR LOGIN dbm_login;
 
 SQL 인증으로 인증을 요구하는 보조 복제본을 사용하는 경우 미러링 엔드포인트 간의 인증을 위한 인증서를 사용합니다.
 
-다음 Transact-SQL 스크립트는 마스터 키와 인증서를 만듭니다. 그런 다음, 인증서를 백업하고 개인 키로 파일을 보호합니다. 강력한 암호로 스크립트를 업데이트합니다. 기본 SQL Server 인스턴스에서 스크립트를 실행하여 인증서를 만듭니다.
+다음 Transact-SQL 스크립트는 마스터 키와 인증서를 만듭니다. 그런 다음, 인증서를 백업하고 프라이빗 키로 파일을 보호합니다. 강력한 암호로 스크립트를 업데이트합니다. 기본 SQL Server 인스턴스에서 스크립트를 실행하여 인증서를 만듭니다.
 
 ```sql
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
@@ -65,7 +73,7 @@ BACKUP CERTIFICATE dbm_certificate
        );
 ```
 
-이제 기본 SQL Server 복제본은 `c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.cer`에 인증서, `c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk`에 개인 키가 있습니다. 이러한 두 파일을 가용성 복제본을 호스트할 모든 서버의 동일한 위치로 복사합니다.
+이제 기본 SQL Server 복제본은 `c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.cer`에 인증서, `c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk`에 프라이빗 키가 있습니다. 이러한 두 파일을 가용성 복제본을 호스트할 모든 서버의 동일한 위치로 복사합니다.
 
 각 보조 복제본에서 SQL Server에 대한 서비스 계정에 인증서에 액세스할 권한이 있는지 확인합니다.
 
@@ -77,9 +85,9 @@ BACKUP CERTIFICATE dbm_certificate
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate
     AUTHORIZATION dbm_user
-    FROM FILE = '/var/opt/mssql/data/dbm_certificate.cer'
+    FROM FILE = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.cer'
     WITH PRIVATE KEY (
-    FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
+    FILE = 'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk',
     DECRYPTION BY PASSWORD = '**<Private_Key_Password>**'
             );
 ```

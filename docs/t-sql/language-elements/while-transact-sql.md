@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1bb6c94452194b75260c531a043c3e00c1bcc93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 322cba3f1eede4e5443afd888f6d4bfff2b1d703
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086120"
 ---
 # <a name="while-transact-sql"></a>WHILE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -74,7 +73,7 @@ WHILE Boolean_expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-break-and-continue-with-nested-ifelse-and-while"></a>1. 중첩된 IF...ELSE 및 WHILE에서 BREAK 및 CONTINUE 사용  
+### <a name="a-using-break-and-continue-with-nested-ifelse-and-while"></a>1\. 중첩된 IF...ELSE 및 WHILE에서 BREAK 및 CONTINUE 사용  
  다음 예에서는 제품의 평균 정가가 `$300` 미만인 경우 `WHILE` 루프가 가격을 두 배로 한 다음 최대 가격을 선택합니다. 최대 가격이 `$500` 이하인 경우 `WHILE` 루프가 다시 시작되어 가격을 다시 두 배로 만듭니다. 이 루프는 최대 가격이 `$500`를 초과할 때까지 가격을 계속 두 배로 만든 다음 `WHILE` 루프를 종료하고 메시지를 출력합니다.  
   
 ```  
@@ -93,7 +92,7 @@ END
 PRINT 'Too much for the market to bear';  
 ```  
   
-### <a name="b-using-while-in-a-cursor"></a>2. 커서에 WHILE 사용  
+### <a name="b-using-while-in-a-cursor"></a>2\. 커서에 WHILE 사용  
  다음 예에서는 `@@FETCH_STATUS`를 사용하여 `WHILE` 루프에서 커서 작업을 제어합니다.  
   
 ```  
