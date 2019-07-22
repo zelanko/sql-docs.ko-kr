@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc092d095835caa5422f01c2f9a9b3a85ec94d55
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: b858cc4930cdfe9792e08c991c3ebdf8f319d0f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948228"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +98,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
   
  **text** 열을 NULL로 초기화하려면 WRITETEXT를 사용합니다. UPDATETEXT는 **text** 열을 빈 문자열로 초기화합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  지정된 테이블에 대해 UPDATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 17a81fcd-8dbd-458d-a9c7-2b5209062f45
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f189af664a634d362485e97044ba6d19cae8275b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aed634232901aa116fddf361d3c3347d1e462eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66015051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086278"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅숏 백업에서는 Azure 스냅숏을 사용하여 Azure Blob 스토리지 서비스를 통해 저장된 데이터베이스 파일을 거의 즉시 백업하고 더욱 신속하게 복원합니다. 이 기능을 사용하면 백업 및 복원 정책을 간소화할 수 있습니다. 라이브 데모는 [지정 시간 복원 데모](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)를 참조하세요. Azure 블로그 스토리지 서비스를 사용하여 데이터베이스 파일을 저장하는 자세한 방법은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅샷 백업에서는 Azure 스냅샷을 사용하여 Azure Blob 스토리지 서비스를 통해 저장된 데이터베이스 파일을 거의 즉시 백업하고 더욱 신속하게 복원합니다. 이 기능을 사용하면 백업 및 복원 정책을 간소화할 수 있습니다. 라이브 데모는 [지정 시간 복원 데모](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo)를 참조하세요. Azure 블로그 스토리지 서비스를 사용하여 데이터베이스 파일을 저장하는 자세한 방법은 [Microsoft Azure의 SQL Server 데이터 파일](../../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md)을 참조하세요.  
   
- ![스냅숏 백업 아키텍처 다이어그램](../../relational-databases/backup-restore/media/snapshotbackups.PNG "snapshot backup architectural diagram")  
+ ![스냅샷 백업 아키텍처 다이어그램](../../relational-databases/backup-restore/media/snapshotbackups.PNG "snapshot backup architectural diagram")  
   
  **다운로드**  
   
@@ -32,10 +31,10 @@ ms.locfileid: "66015051"
   
 ## <a name="using-azure-snapshots-to-back-up-database-files-stored-in-azure"></a>Azure 스냅샷을 사용하여 Azure에 저장된 데이터베이스 파일 백업  
   
-### <a name="what-is-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅숏 백업이란?  
+### <a name="what-is-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅샷 백업이란?  
  파일-스냅샷 백업은 데이터베이스 파일을 포함하는 blo 및 이러한 파일-스냅샷에 대한 포인터를 포함하는 백업 파일의 Azure 스냅샷 집합으로 구성됩니다. 각 파일-스냅샷은 기본 blob과 함께 컨테이너에 저장됩니다. 백업 파일 자체가 URL, 디스크 또는 테이프에 기록되도록 지정할 수 있습니다. URL에 백업하는 것이 좋습니다. 백업에 대한 자세한 내용은 [BACKUP&#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)을 참조하고, URL에 백업하는 방법은 [URL에 대한 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md)을 참조하세요.  
   
- ![스냅숏 기능의 아키텍처](../../relational-databases/backup-restore/media/snapshotbackups-flat.png "architecture of snapshot feature")  
+ ![스냅샷 기능의 아키텍처](../../relational-databases/backup-restore/media/snapshotbackups-flat.png "architecture of snapshot feature")  
   
  기본 blob을 삭제하면 백업 집합이 무효화되고, 모든 파일-스냅샷과 함께 blob을 삭제하도록 명시적으로 선택하지 않는 한 파일-스냅샷이 포함된 blob을 삭제할 수 없습니다. 또한 데이터베이스 또는 데이터 파일을 삭제할 경우 기본 blob 또는 해당 파일-스냅샷은 삭제되지 않으며, 백업 파일을 삭제할 경우 백업 집합의 파일-스냅샷은 삭제되지 않습니다. 파일-스냅샷 백업 집합을 삭제하려면 **sys.sp_delete_backup** 시스템 저장 프로시저를 사용하세요.  
   
@@ -112,7 +111,7 @@ BACKUP LOG AdventureWorks2016
 GO  
 ```  
   
-## <a name="restoring-from-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅숏 백업에서 복원  
+## <a name="restoring-from-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅샷 백업에서 복원  
  다음 예제에서는 트랜잭션 로그 파일-스냅샷 백업 집합을 사용하여 AdventureWorks2016 데이터베이스를 복원하고 복구 작업을 보여 줍니다. 단일 트랜잭션 로그 파일-스냅샷 백업 집합에서 데이터베이스를 복원할 수 있습니다.  
   
 ```  
@@ -121,7 +120,7 @@ WITH RECOVERY, REPLACE;
 GO  
 ```  
   
-## <a name="restoring-from-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup-to-a-point-in-time"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅숏 백업에서 지정 시간으로 복원  
+## <a name="restoring-from-a-includessnoversionincludesssnoversion-mdmd-file-snapshot-backup-to-a-point-in-time"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅샷 백업에서 지정 시간으로 복원  
  다음 예제에서는 트랜잭션 로그 파일-스냅샷 백업 집합을 사용하여 지정된 시간의 상태로 AdventureWorks2016 데이터베이스를 복원하고 복구 작업을 보여 줍니다.  
   
 ```  

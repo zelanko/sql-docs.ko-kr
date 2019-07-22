@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 9bfaf500-2d1e-4c02-b041-b8761a9e695b
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df1fe03ce3d0bf0397222ab3ef0834fac1cf6e33
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 16daf2968b80b5ca93ba117e850999a89411fb59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049877"
 ---
 # <a name="extensible-key-management-ekm"></a>EKM(확장 가능 키 관리)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ GO
  기능을 사용하지 않으려면 값을 **0**으로 설정합니다. 서버 옵션을 설정하는 방법은 [sp_configure&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 참조하세요.  
   
 ## <a name="how-to-use-ekm"></a>EKM 사용 방법  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 가능 키 관리를 사용하면 데이터베이스 파일을 보호하는 암호화 키를 스마트 카드, USB 장치 또는 EKM/HSM 모듈과 같은 외부 장치에 저장할 수 있을 뿐 아니라 데이터베이스 관리자(sysadmin 그룹의 멤버 제외)로부터 데이터를 보호할 수도 있습니다. 즉, 외부 EKM/HSM 모듈에서 데이터베이스 사용자만 액세스할 수 있는 암호화 키를 사용하여 데이터를 암호화할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 확장 가능 키 관리를 사용하면 데이터베이스 파일을 보호하는 암호화 키를 스마트 카드, USB 디바이스 또는 EKM/HSM 모듈과 같은 외부 디바이스에 저장할 수 있을 뿐 아니라 데이터베이스 관리자(sysadmin 그룹의 멤버 제외)로부터 데이터를 보호할 수도 있습니다. 즉, 외부 EKM/HSM 모듈에서 데이터베이스 사용자만 액세스할 수 있는 암호화 키를 사용하여 데이터를 암호화할 수 있습니다.  
   
  또한 확장 가능 키 관리는 다음과 같은 이점을 제공합니다.  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7acfac5c-9ad6-4226-b874-7add36c4ea43
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 153d7027f0c87cf81a5958e4aaf930932fa9b5d1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 66830b3000d749ab17a5800c3450c5880c5d1aba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076442"
 ---
 # <a name="setuser-transact-sql"></a>SETUSER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ SETUSER [ 'username' [ WITH NORESET ] ]
 > [!NOTE]  
 >  SETUSER WITH NORESET을 사용한 경우, 데이터베이스 소유자 또는 시스템 관리자는 로그오프한 후 다시 로그인해야 원래의 권한을 다시 얻을 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버이거나 데이터베이스의 소유자여야 합니다. **db_owner** 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

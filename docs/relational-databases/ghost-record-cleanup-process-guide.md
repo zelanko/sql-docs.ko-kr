@@ -13,13 +13,12 @@ helpviewer_keywords:
 - ghost clean up process
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b01e6cc26d2dfbcf897a49e971d429961144321f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1b4075a577991909ac129ce51c7625ae44ad1aa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035964"
 ---
 # <a name="ghost-cleanup-process-guide"></a>고스트 정리 프로세스 가이드
 

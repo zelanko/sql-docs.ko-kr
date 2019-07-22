@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1568ed6a-022c-4839-b73e-4eb49558bbc2
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fcd7c0cf972a6744cf35ace20fb21dcbf7deb7f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d15beadf6ee7dcc765afa4dee182a6d05e1ce43c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034333"
 ---
 # <a name="recordset-destination-custom-properties"></a>레코드 집합 대상 사용자 지정 속성
 

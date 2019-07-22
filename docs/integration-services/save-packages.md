@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 48d6db7b2c68fac233dbc585ddbcf4ffb795ca8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2184475ac3da6629a70b5013277686636a6fc8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897070"
 ---
 # <a name="save-packages"></a>패키지 저장
 

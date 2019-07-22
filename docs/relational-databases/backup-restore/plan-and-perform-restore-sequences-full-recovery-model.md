@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9cbefaf8-d2b6-41c9-83fc-b3807a841fe2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca126d0d8708e28af73c0faf6ddb9bc3d2ee280d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d402848978592ab98ae54445f60d46304addaa0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033677"
 ---
 # <a name="plan-and-perform-restore-sequences-full-recovery-model"></a>복원 시퀀스 계획 및 수행(전체 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47726221"
   
 3.  수행하려는 복원 유형을 결정합니다. 자세한 내용은 [복원 및 복구 개요&#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)을 참조하세요.  
   
-4.  필요한 백업을 확인하고 필요한 미디어 세트와 백업 디바이스를 사용할 수 있는지 확인합니다. 자세한 내용은 [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md) 및 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)를 참조하세요.  
+4.  필요한 백업을 확인하고 필요한 미디어 세트와 백업 디바이스를 사용할 수 있는지 확인합니다. 자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md) 및 [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)를 참조하세요.  
   
 ## <a name="to-perform-a-restore-sequence"></a>복원 시퀀스를 수행하려면  
  복원 시퀀스를 수행하려면 다음 단계를 따르십시오.  

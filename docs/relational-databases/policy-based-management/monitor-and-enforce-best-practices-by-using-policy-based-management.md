@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 46788407-187e-4b0b-bfe4-529af8d77c60
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 6d46e82343f0f145536c38cf7ac457ad39b813d5
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d261f84f23131ab9bce11081e1c9d6d1c8dda8d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087093"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>정책 기반 관리를 사용하여 최선의 방법 모니터링 및 적용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "51672082"
 |정책 이름|최선의 방법 규칙|  
 |-----------------|------------------------|  
 |비대칭 키 암호화 알고리즘|[비대칭 키 암호화의 강도](../../relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md)|  
-|백업 및 데이터 파일 위치|[백업 파일을 데이터베이스 파일과 별개의 장치에 두어야 함](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
+|백업 및 데이터 파일 위치|[백업 파일을 데이터베이스 파일과 별개의 디바이스에 두어야 함](https://msdn.microsoft.com/library/7039bebb-1f25-4cf3-81f1-393dfb78da12)|  
 |데이터 및 로그 파일 위치|[데이터와 로그 파일을 별개의 드라이브에 배치](../../relational-databases/policy-based-management/place-data-and-log-files-on-separate-drives.md)|  
 |데이터베이스 자동 닫기|[AUTO_CLOSE 데이터베이스 옵션을 OFF로 설정](../../relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md)|  
 |데이터베이스 자동 축소|[AUTO_SHRINK 데이터베이스 옵션을 OFF로 설정](../../relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md)|  
@@ -59,13 +58,13 @@ ms.locfileid: "51672082"
 |시스템 데이터베이스용 대칭 키|[시스템 데이터베이스의 대칭 키](../../relational-databases/policy-based-management/symmetric-keys-on-system-databases.md)|  
 |Trustworthy 데이터베이스|[신뢰할 수 있는 비트](../../relational-databases/policy-based-management/trustworthy-bit.md)|  
 |Windows 이벤트 로그 클러스터 디스크 리소스 손상 오류|[SCSI 호스트 어댑터 문제 검색](../../relational-databases/policy-based-management/detect-scsi-host-adapter-issues.md)|  
-|Windows 이벤트 로그 디바이스 드라이버 컨트롤 오류|[장치 드라이버 컨트롤 오류](../../relational-databases/policy-based-management/device-driver-control-error.md)|  
-|Windows 이벤트 로그 디바이스 준비 안 됨 오류|[장치 준비 안 됨 오류](../../relational-databases/policy-based-management/device-not-ready-error.md)|  
+|Windows 이벤트 로그 디바이스 드라이버 컨트롤 오류|[디바이스 드라이버 컨트롤 오류](../../relational-databases/policy-based-management/device-driver-control-error.md)|  
+|Windows 이벤트 로그 디바이스 준비 안 됨 오류|[디바이스 준비 안 됨 오류](../../relational-databases/policy-based-management/device-not-ready-error.md)|  
 |Windows 이벤트 로그 I/O 요청 실패 오류|[Detect Failed Input and Output Requests](../../relational-databases/policy-based-management/detect-failed-input-and-output-requests.md)|  
 |Windows 이벤트 로그 I/O 지연 경고|[디스크 입/출력 하위 시스템에서 IO 지연 문제 확인](../../relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
 |Windows 이벤트 로그 하드 페이지 폴트 중 I/O 오류 발생 오류|[Input and Output Error During Hard Page Fault](../../relational-databases/policy-based-management/input-and-output-error-during-hard-page-fault.md)|  
 |Windows 이벤트 로그 읽기 다시 시도 오류|[읽기 다시 시도 문제에 대한 디스크 입력-출력 하위 시스템 검사](../../relational-databases/policy-based-management/check-disk-input-output-subsystem-for-read-retry-problems.md)|  
-|Windows 이벤트 로그 스토리지 시스템 I/O 제한 시간 오류|[저장소 시스템 입/출력 시간 초과](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
+|Windows 이벤트 로그 스토리지 시스템 I/O 제한 시간 오류|[스토리지 시스템 입/출력 시간 초과](../../relational-databases/policy-based-management/storage-system-input-output-time-out.md)|  
 |Windows 이벤트 로그 시스템 실패 오류|[예기치 않은 시스템 오류](../../relational-databases/policy-based-management/unexpected-system-failures.md)|  
   
 ## <a name="see-also"></a>참고 항목  

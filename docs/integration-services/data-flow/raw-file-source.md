@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5b4daea5-7f76-4674-aa77-0a79f9f97f7d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0420f900a12ee100a8558cacec3c904d7450da68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c65fe330869f5059fdce928bd529141505f4298
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034347"
 ---
 # <a name="raw-file-source"></a>원시 파일 원본
 

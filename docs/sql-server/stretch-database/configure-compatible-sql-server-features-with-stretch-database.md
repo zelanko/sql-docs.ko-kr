@@ -7,13 +7,12 @@ ms.topic: conceptual
 ms.assetid: c8121ede-1aec-459b-b7b0-1408bb3e62fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3e9b286a114e3f748c6b87789cbbc8b171377463
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: e7ff4a816d7255f667ece0a4984f464d152280ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136287"
 ---
 # <a name="configure-compatible-sql-server-features-with-stretch-database"></a>Stretch Database와 호환 가능한 SQL Server 기능 구성
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,8 +20,8 @@ ms.locfileid: "56240757"
 
 간단한 단계를 수행하여 Stretch Database와 작동하는 다음 SQL Server 기능을 구성합니다.
 -   Always On
--   항상 암호화
--   투명한 데이터 암호화
+-   Always Encrypted
+-   TDE(투명한 데이터 암호화)
 -   임시 테이블
 
 ## <a name="configure-always-on-with-stretch-database"></a>Stretch Database를 사용하여 Always On 구성

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3f715b95-7074-4f5c-8ae2-246998052e78
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 89c9c00cf559f3b804c88e75b97f32157a2d0c24
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70e61b8dbf28e513839a8d08ed067e10bd2f65c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062969"
 ---
 # <a name="developing-a-custom-log-provider"></a>사용자 지정 로그 공급자 개발
 

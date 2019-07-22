@@ -1,5 +1,5 @@
 ---
-title: 추적 테이블 (SQL Server Profiler) | Microsoft Docs
+title: 추적 테이블 열기 (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8f7cc6b9-c717-4995-9af9-cacc6501aee2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 25973a65cc275d85f0d72ec3707d1763d9f38551
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 03e7d69d4011caf60d733ab6f0bb17b680fcb4de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911668"
 ---
 # <a name="open-a-trace-table-sql-server-profiler"></a>추적 테이블 열기(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

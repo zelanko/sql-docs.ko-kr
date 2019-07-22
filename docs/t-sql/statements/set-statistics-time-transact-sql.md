@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2be43a9ed439d3f4fb72c26683973ca4c18b263f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 90eb59652bf64e6e3be4edaa3cce2f0bf3c02df7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897996"
 ---
 # <a name="set-statistics-time-transact-sql"></a>SET STATISTICS TIME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ SET STATISTICS TIME { ON | OFF }
   
  ON과 OFF 설정은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]의 Process Info View for Current Activity에 있는 CPU 열에도 영향을 줍니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  SET STATISTICS TIME을 사용하려면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행할 수 있는 적절한 권한이 있어야 합니다. SHOWPLAN 권한이 필요하지 않습니다.  
   
 ## <a name="examples"></a>예  

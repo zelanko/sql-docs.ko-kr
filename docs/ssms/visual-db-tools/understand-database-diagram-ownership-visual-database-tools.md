@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4a27a48e-c4ef-4017-82b8-0cac4d0bbcac
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: fc700ead64d2522a505728d3cc81290c01c77126
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: c331fb3e1b189d4362f91c9559f1ec6e28960c97
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689498"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263139"
 ---
 # <a name="understand-database-diagram-ownership-visual-database-tools"></a>데이터베이스 다이어그램 소유권 이해(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

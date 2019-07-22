@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 13c62636-ce8a-410f-9af9-c0a78959fb49
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b907c0560162ec387c125654a42ca5284003f2a1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f336b68b53f95d839eede56fac206ebd390f9e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908347"
 ---
 # <a name="query-notifications-event-category"></a>Query Notifications 이벤트 범주
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

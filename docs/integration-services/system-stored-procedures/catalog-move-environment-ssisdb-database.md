@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: b3fb5242-3c4c-4a87-b3e5-beb22fbab053
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 04ced3ce325755f465aaf203f08ed08e38d99f62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a6d69ef7cc1a10b31cdb03f2dd43e20687a3f96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007817"
 ---
 # <a name="catalogmoveenvironment-ssisdb-database"></a>catalog.move_environment(SSISDB 데이터베이스)
 

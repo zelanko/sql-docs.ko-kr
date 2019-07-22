@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 9159da3f-c9ca-4015-9e85-3bf4373a1349
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5d6b035f0ca428f6c31492f940a9964982f04f66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 697bc007072642209979347b2404adfa4e850b62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121485"
 ---
 # <a name="lesson-3-3---testing-the-deployed-packages"></a>3-3단원 - 배포된 패키지 테스트
 

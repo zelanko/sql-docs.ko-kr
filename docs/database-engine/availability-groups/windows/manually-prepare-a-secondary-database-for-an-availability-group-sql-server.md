@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: cd2f8de0af5078816d4034dc9ba23bcc7ab647b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19d9171278bac69eb8b092d6bc7ec69dcbcb71ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023713"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 보조 데이터베이스 준비
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

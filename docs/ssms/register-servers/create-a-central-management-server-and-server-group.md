@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: da265482-3953-440a-ac23-0ab7e42a55eb
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: d9615fbb295ec6499c1743438b086abfc57b6bee
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: f3247e98b4ae2894d80e42bfd824aea44eb0127f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681390"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267776"
 ---
 # <a name="create-a-central-management-server-and-server-group"></a>중앙 관리 서버 및 서버 그룹 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

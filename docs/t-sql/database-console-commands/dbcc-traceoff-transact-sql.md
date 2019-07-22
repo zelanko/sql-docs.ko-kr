@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1379afba-6480-454b-9c65-5e64cb4f3415
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: b66d02c4f2b480f4238b87e190d63ee2682e86a7
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 27524b92157657779e49ff8facaf235e5a524065
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040615"
 ---
 # <a name="dbcc-traceoff-transact-sql"></a>DBCC TRACEOFF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ DBCC TRACEOFF는 다음을 반환합니다.
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.
   
 ## <a name="examples"></a>예  

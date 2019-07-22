@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0f70973e-34af-4805-aa27-5493673842e5
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: debf72aa5a1804c7d214f5e945fe500f44cff157
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: ff6a7d2d0dd2df14e2cfd10b3449751c64d20d10
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683900"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266038"
 ---
 # <a name="view-registered-servers-in-sql-server-management-studio"></a>SQL Server Management Studio에서 등록된 서버 보기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

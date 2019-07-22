@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: d9a2bfae-fcc8-46be-b588-4a9db03f7e45
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4a4ade06f7275007c17834fbee3d69e2d5583d7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 302d529f062b31eed4c4cbda583c06b86d1a8c1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729189"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070571"
 ---
 # <a name="folder-properties-dialog-box"></a>폴더 속성 대화 상자
 

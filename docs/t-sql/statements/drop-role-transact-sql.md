@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 1f6f13ae-56a2-4ef1-93f5-8e6151b83e1d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 45ad478b02f5abfeea07024a74af90b02ecc808a
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 3b3227fa8aa15b2254e6f4a38caa0e5ac60163a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043922"
 ---
 # <a name="drop-role-transact-sql"></a>DROP ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -75,7 +74,7 @@ DROP ROLE role_name
   
  서버 역할을 제거하려면 [DROP SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-role-transact-sql.md)를 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 **ALTER ANY ROLE** 권한 또는 역할에 대한 **CONTROL** 권한 또는 **db_securityadmin**의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  

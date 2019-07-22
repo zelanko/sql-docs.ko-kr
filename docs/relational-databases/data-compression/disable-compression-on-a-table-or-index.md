@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: bda1e452-397b-4757-82a4-181217361589
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 75fb776049d55c18c2983e558df32072f28209e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 523b082be7b61991db13d588a7203ad4ce5597ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62720064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055434"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>테이블 또는 인덱스에서 압축 해제
 

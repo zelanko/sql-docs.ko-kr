@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ceff114e-a738-46ad-9785-b6647a2247f9
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 413d6ad71b70cc4ddca8205589d25e224bbcad76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ae4fe656cbd299d46960ec9b711de4c51d30a51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064790"
 ---
 # <a name="overview-of-connection-strings-and-permissions"></a>연결 문자열 및 사용 권한 개요
 SQL Server 단위 테스트를 실행하려면 한 개 또는 두 개의 특정 연결 문자열을 사용하여 데이터베이스 서버에 연결해야 합니다. 각 연결 문자열은 테스트의 일환으로 특정 스크립트의 태스크나 태스크 집합을 수행하기 위해 필요한 특정 사용 권한이 있는 계정을 나타냅니다. **SQL Server 테스트 구성** 대화 상자에서 또는 테스트 프로젝트의 app.config 파일을 수동으로 편집하여 이러한 문자열을 지정할 수 있습니다.  

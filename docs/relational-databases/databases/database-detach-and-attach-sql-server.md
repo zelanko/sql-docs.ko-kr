@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: d0de0639-bc54-464e-98b1-6af22a27eb86
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 42370a6b088cb9f9fbb605790f701e2efa6dbdec
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3b6ee22299c854193d15e5fe4d1e2daabf7250bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037579"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>데이터베이스 분리 및 연결(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "52402958"
   
 -   데이터베이스에 데이터베이스 스냅샷이 있는 경우  
   
-    데이터베이스를 분리하려면 먼저 해당 데이터베이스의 모든 스냅샷을 삭제해야 합니다. 자세한 내용은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)인스턴스나 다른 인스턴스에 다시 연결할 수 있습니다.  
+    데이터베이스를 분리하려면 먼저 해당 데이터베이스의 모든 스냅샷을 삭제해야 합니다. 자세한 내용은 [Drop a Database Snapshot &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
     > [!NOTE]  
     > 데이터베이스 스냅샷은 분리하거나 연결할 수 없습니다.  
@@ -145,9 +144,9 @@ ms.locfileid: "52402958"
   
 -   [분리 및 연결을 사용하여 데이터베이스 이동&#40;Transact-SQL&#41;](../../relational-databases/databases/move-a-database-using-detach-and-attach-transact-sql.md)  
   
-**데이터베이스 스냅숏을 삭제하려면**  
+**데이터베이스 스냅샷을 삭제하려면**  
   
--   [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 삭제&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터베이스 파일 및 파일 그룹](../../relational-databases/databases/database-files-and-filegroups.md)  

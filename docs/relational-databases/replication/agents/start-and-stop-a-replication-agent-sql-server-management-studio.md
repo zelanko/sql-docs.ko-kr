@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 97977c4a-8c7c-4a22-9480-69aa812bd1e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 75b5a13a30b9808971107c0ba463fdccbd1ccb89
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 67261d22212a2c3c865e44b0160830e2d11cf5f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085920"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>복제 에이전트 시작 및 중지(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "54133173"
   
 2.  **로컬 게시** 폴더를 확장한 다음 게시를 마우스 오른쪽 단추로 클릭합니다.  
   
-3.  **스냅숏 에이전트 상태 보기** 또는 **로그 판독기 에이전트 상태 보기**를 클릭합니다.  
+3.  **스냅샷 에이전트 상태 보기** 또는 **로그 판독기 에이전트 상태 보기**를 클릭합니다.  
   
 4.  **시작** 또는 **중지**를 클릭합니다.  
   

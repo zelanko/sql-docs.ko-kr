@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb7
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 069480b8a2afc1e88f5edbdd11775e4988e3f9f4
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 352aa27fd759c14677ed2b674045c55e2b9c0896
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585775"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072999"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>트랜잭션 잠금 및 행 버전 관리 지침
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -291,7 +290,7 @@ GO
 |행 버전 관리 기반 격리|정의|  
 |------------------------------------|----------------|  
 |커밋된 스냅샷 읽기|READ_COMMITTED_SNAPSHOT 데이터베이스 옵션을 ON으로 설정하면 커밋된 읽기 격리가 행 버전 관리를 통해 문 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 수준 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 즉, [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]은 행 버전 관리를 사용하여 문 시작 시와 트랜잭션별로 데이터의 일관성이 유지된 스냅샷을 각 문에 제공합니다. 다른 트랜잭션에 의한 데이터 업데이트 차단을 위해 잠금이 사용되지는 않습니다. 사용자 정의 함수는 UDF를 포함하는 구문 시간이 시작된 후에 커밋된 데이터를 반환할 수 있습니다.<br /><br /> `READ_COMMITTED_SNAPSHOT` 데이터베이스 옵션을 기본값인 OFF로 설정하면 커밋된 격리 읽기는 공유 잠금을 사용하여 현재 트랜잭션이 읽기 작업을 실행하는 동안 다른 트랜잭션이 행을 수정하지 못하도록 합니다. 또한 공유 잠금은 다른 트랜잭션이 완료될 때까지 해당 트랜잭션이 수정한 행을 문이 읽을 수 없도록 합니다. 두 구현 모두 커밋된 읽기 격리에 대한 ISO 정의를 충족합니다.|  
-|스냅샷|스냅샷 격리 수준은 행 버전 관리를 통해 트랜잭션 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 다른 트랜잭션에서 수정한 행을 읽을 때 트랜잭션 시작 당시의 행 버전을 검색합니다. `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에 대해 스냅숏 격리만 사용할 수 있습니다. 기본적으로 사용자 데이터베이스에 대해서는 이 옵션이 OFF로 설정되어 있습니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메타데이터의 버전 관리를 지원하지 않습니다. 따라서 스냅샷 격리에서 실행하는 명시적 트랜잭션에서 수행할 수 있는 DDL 작업에 대한 제한 사항이 있습니다. ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 CLR(공용 언어 런타임) DDL 문과 같은 DDL 문은 BEGIN TRANSACTION 문 다음에 스냅샷 격리에서 허용되지 않습니다. 이러한 문은 암시적 트랜잭션 내에서 스냅샷 격리를 사용할 때 허용됩니다. 기본적으로 암시적 트랜잭션은 DDL 문에서도 스냅샷 격리의 의미 체계를 적용할 수 있게 하는 단일 문입니다. 이 원칙을 위반하면 오류 3961이 발생할 수 있습니다. `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
+|스냅샷|스냅샷 격리 수준은 행 버전 관리를 통해 트랜잭션 수준의 읽기 일관성을 제공합니다. 읽기 작업에 SCH-S 테이블 잠금만 필요하고 페이지 또는 행 잠금은 필요하지 않습니다. 다른 트랜잭션에서 수정한 행을 읽을 때 트랜잭션 시작 당시의 행 버전을 검색합니다. `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 데이터베이스에 대해 스냅샷 격리만 사용할 수 있습니다. 기본적으로 사용자 데이터베이스에 대해서는 이 옵션이 OFF로 설정되어 있습니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 메타데이터의 버전 관리를 지원하지 않습니다. 따라서 스냅샷 격리에서 실행하는 명시적 트랜잭션에서 수행할 수 있는 DDL 작업에 대한 제한 사항이 있습니다. ALTER TABLE, CREATE INDEX, CREATE XML INDEX, ALTER INDEX, DROP INDEX, DBCC REINDEX, ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 CLR(공용 언어 런타임) DDL 문과 같은 DDL 문은 BEGIN TRANSACTION 문 다음에 스냅샷 격리에서 허용되지 않습니다. 이러한 문은 암시적 트랜잭션 내에서 스냅샷 격리를 사용할 때 허용됩니다. 기본적으로 암시적 트랜잭션은 DDL 문에서도 스냅샷 격리의 의미 체계를 적용할 수 있게 하는 단일 문입니다. 이 원칙을 위반하면 오류 3961이 발생할 수 있습니다. `Snapshot isolation transaction failed in database '%.*ls' because the object accessed by the statement has been modified by a DDL statement in another concurrent transaction since the start of this transaction. It is not allowed because the metadata is not versioned. A concurrent update to metadata could lead to inconsistency if mixed with snapshot isolation.`|  
   
  다음 표에서는 각 격리 수준에서 사용되는 동시성 부작용을 보여 줍니다.  
   
@@ -300,7 +299,7 @@ GO
 |**READ UNCOMMITTED**|예|예|예|  
 |**READ COMMITTED**|아니오|예|예|  
 |**REPEATABLE READ**|아니오|아니오|예|  
-|**스냅숏**|아니오|아니오|아니오|  
+|**스냅샷**|아니오|아니오|아니오|  
 |**직렬화 가능**|아니오|아니오|아니오|  
   
  각 트랜잭션 격리 수준에서 제어하는 특정 종류의 잠금 또는 행 버전 관리에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하십시오.  
@@ -1057,7 +1056,7 @@ BEGIN TRANSACTION
 ```   
   
 ##  <a name="Row_versioning"></a> [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 행 버전 관리 기반 격리 수준 사용.  
- [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 기존 격리 수준을 구현한 커밋된 읽기를 제공하여 행 버전 관리를 사용하는 문 수준 스냅숏을 제공합니다. 또한 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 트랜잭션 격리 수준인 스냅숏이 도입되어 행 버전 관리를 사용하는 트랜잭션 수준 스냅숏을 제공합니다.  
+ [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]부터 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 기존 격리 수준을 구현한 커밋된 읽기를 제공하여 행 버전 관리를 사용하는 문 수준 스냅샷을 제공합니다. 또한 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서는 트랜잭션 격리 수준인 스냅샷이 도입되어 행 버전 관리를 사용하는 트랜잭션 수준 스냅샷을 제공합니다.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 행 버전 관리는 행을 수정하거나 삭제할 때 쓰기 시 복사 메커니즘을 호출하는 일반적인 방법입니다. 이렇게 하려면 트랜잭션을 실행하는 동안 트랜잭션의 일관성 있는 이전 상태가 요구되는 트랜잭션에서 이전 기존 행 버전을 사용할 수 있어야 합니다. 행 버전 관리는 다음 용도로 사용됩니다.  
   
@@ -1078,7 +1077,7 @@ BEGIN TRANSACTION
 [!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   `READ_COMMITTED_SNAPSHOT` 데이터베이스 옵션을 ON으로 설정하면 커밋된 읽기 격리 수준을 설정하는 트랜잭션에 행 버전 관리가 사용됩니다.  
-    -   `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 트랜잭션에서 스냅숏 격리 수준을 설정할 수 있습니다.  
+    -   `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 트랜잭션에서 스냅샷 격리 수준을 설정할 수 있습니다.  
   
  `READ_COMMITTED_SNAPSHOT` 또는 `ALLOW_SNAPSHOT_ISOLATION` 데이터베이스 옵션을 ON으로 설정하면 [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]에서 행 버전 관리를 사용하여 데이터를 조작하는 각 트랜잭션에 XSN(트랜잭션 시퀀스 번호)을 할당합니다. 트랜잭션은 `BEGIN TRANSACTION` 문이 실행될 때 시작합니다. 그러나 트랜잭션 시퀀스 번호는 BEGIN TRANSACTION 문 이후 첫 번째 읽기 또는 쓰기 작업이 실행될 때 시작합니다. 트랜잭션 시퀀스 번호는 할당될 때마다 1씩 증가합니다.  
   
@@ -1580,7 +1579,7 @@ ALTER DATABASE AdventureWorks2016
     GO  
     ```  
   
-     `ALTER INDEX` 문이 실행된 후 `HumanResources.Employee` 테이블을 참조하려고 하면 `ALTER INDEX` 문 실행 시 활성 상태인 모든 스냅숏 트랜잭션에 오류가 발생합니다. 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션은 영향을 받지 않습니다.  
+     `ALTER INDEX` 문이 실행된 후 `HumanResources.Employee` 테이블을 참조하려고 하면 `ALTER INDEX` 문 실행 시 활성 상태인 모든 스냅샷 트랜잭션에 오류가 발생합니다. 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션은 영향을 받지 않습니다.  
   
     > [!NOTE]  
     > BULK INSERT 작업을 수행할 때 대상 테이블 메타데이터가 변경될 수 있습니다. 제약 조건 검사를 해제한 경우를 예로 들 수 있습니다. 이렇게 대상 테이블 메타데이터가 변경되면 동시 스냅샷 격리 트랜잭션이 대량 삽입된 테이블에 액세스할 수 없습니다.  

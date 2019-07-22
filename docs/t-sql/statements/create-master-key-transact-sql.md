@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 1710a305-1a4f-48ec-836c-11ffd0356d76
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04d4881d79996a7795435cbaad12c8dc7259fdf9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: fb8915aa3c47225e2c4fe881388327e5758c4163
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117383"
 ---
 # <a name="create-master-key-transact-sql"></a>CREATE MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +74,7 @@ SQL Server 및 Parallel Data Warehouse의 경우 마스터 키는 일반적으�
   
  SMK(서비스 마스터 키)와 DMK(데이터베이스 마스터 키)는 AES-256 알고리즘을 사용하여 보호됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

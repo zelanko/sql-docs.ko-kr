@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddffd56aae2f1ee2e9e6a550cf3436df1c014be7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 506f3f0e79501b16ea5455ab1ff4d4ee83a7abff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65942820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040214"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -55,7 +54,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 모든 형식의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. BINARY_CHECKSUM은 계산에서 비교할 수 없는 데이터 형식의 식을 무시합니다.
 
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**
+ **int**
   
 ## <a name="remarks"></a>Remarks  
 테이블의 행에 대해 계산한 `BINARY_CHECKSUM(*)`은 나중에 행을 수정하지 않은 경우 같은 값을 반환합니다. `BINARY_CHECKSUM`은 해시 함수의 속성을 충족합니다. 식의 두 목록에 대해 적용되는 경우 두 목록의 해당 요소가 유형이 동일하고 등호(=) 연산자를 사용하여 비교할 때 동일한 경우 같은 값을 반환합니다. 이러한 정의에서는 지정된 유형의 Null 값은 동일한 값으로 비교됩니다. 식 목록에 있는 값 중 하나 이상이 변경되면 식 체크섬도 변경될 수 있습니다. 그러나 이 변경은 보장되지 않으므로, 값이 변경되었는지 여부를 검색하려면 애플리케이션에서 가끔 누락된 변경을 허용할 수 있는 경우에만 `BINARY_CHECKSUM`을 사용하는 것이 좋습니다. 그렇지 않으면 `HASHBYTES`를 대신 사용하는 것이 좋습니다. 지정된 MD5 해시 알고리즘을 사용하면 `HASHBYTES`에서 두 개의 다른 입력에 대해 같은 결과를 반환할 가능성이 `BINARY_CHECKSUM`보다 훨씬 더 낮습니다.

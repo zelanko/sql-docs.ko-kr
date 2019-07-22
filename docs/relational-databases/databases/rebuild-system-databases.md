@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: af457ecd-523e-4809-9652-bdf2e81bd876
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b8b28e23bd9f795b9c8530b0c267589bd2525fe5
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: abec4388ccc56d2d643794cc354167359efa15f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127301"
 ---
 # <a name="rebuild-system-databases"></a>시스템 데이터베이스 다시 작성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "56590418"
   
      [다시 작성 오류 문제 해결](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  master, model, msdb 및 tempdb 시스템 데이터베이스를 다시 작성하면 해당 데이터베이스가 삭제된 후 원래 위치에 다시 만들어집니다. REBUILD 문에 새로운 데이터 정렬이 지정되면 해당 데이터 정렬 설정을 사용하여 시스템 데이터베이스가 만들어집니다. 이러한 데이터베이스에 사용자들이 변경한 내용은 손실됩니다. 예를 들어, master 데이터베이스에 사용자 정의 개체가 있거나, msdb에 예약된 작업이 있거나 model 데이터베이스에서 기본 데이터베이스 설정을 변경했을 수 있습니다.  

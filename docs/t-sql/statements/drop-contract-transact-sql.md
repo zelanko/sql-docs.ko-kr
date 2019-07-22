@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fdd0f81e-3c22-4cdf-9416-b4977a6ac3b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2d43c52920c3b868c06d2369f718a0b0fa5fd4e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 479d00aec0cbd4c9cd81359a0a1f633e80bce521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898265"
 ---
 # <a name="drop-contract-transact-sql"></a>DROP CONTRACT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ DROP CONTRACT contract_name
   
  계약을 삭제하면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서 오류로 인해 이 계약을 사용하는 기존 대화가 종료됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  계약 삭제 권한은 기본적으로 계약 소유자, db_ddladmin 또는 db_owner 고정 데이터베이스 역할의 멤버 및 sysadmin 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  

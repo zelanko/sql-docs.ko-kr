@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: da54f2ab1795fabf8e6df5504ee89f74d6a17252
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6eae33bebd834a79a62bd94c5dbe75f4c431b0ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014822"
 ---
 # <a name="always-on-availability-groups-a-high-availability-and-disaster-recovery-solution"></a>Always On 가용성 그룹: 고가용성 및 재해 복구 솔루션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -129,7 +128,7 @@ ms.locfileid: "66796964"
   
 -   [데이터베이스 암호화](../../../relational-databases/security/encryption/transparent-data-encryption.md)  
   
--   [데이터베이스 스냅숏](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)  
+-   [데이터베이스 스냅샷](../../../database-engine/availability-groups/windows/database-snapshots-with-always-on-availability-groups-sql-server.md)  
   
 -   [FILESTREAM](../../../relational-databases/blob/filestream-sql-server.md)  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9a5a33cc382fabf5a77c97b0b4d68a34f83cb907
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 818b3265e72a1e7a311ea031b0583f68d30f4f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113916"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>아티클 유형 정의(복제 Transact-SQL 프로그래밍)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "67582646"
   
 1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **@type** 에 다음 값 중 하나를 지정하여 아티클 유형을 정의합니다.  
   
-    -   **logbased** - 로그 기반 테이블 아티클로, 트랜잭션 및 스냅숏 복제에 대해 기본값입니다. 행 필터링에 사용되는 저장 프로시저와 열 필터링된 아티클을 정의하는 뷰가 자동으로 생성됩니다.  
+    -   **logbased** - 로그 기반 테이블 아티클로, 트랜잭션 및 스냅샷 복제에 대해 기본값입니다. 행 필터링에 사용되는 저장 프로시저와 열 필터링된 아티클을 정의하는 뷰가 자동으로 생성됩니다.  
   
     -   **logbased manualfilter** - 행 필터링에 사용되는 저장 프로시저를 사용자가 수동으로 작성 및 정의하고 **@filter** 을 실행합니다. 자세한 내용은 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)을 참조하세요.  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b5a121a1-b87c-441b-a42c-2cec628dc81c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 7e2e94cea311db6f1d9627405947df55aec64739
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f565fd8dd6af6582898ed729e6dcb54fe395c0c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024661"
 ---
 # <a name="design-time-methods-of-a-data-flow-component"></a>데이터 흐름 구성 요소의 디자인 타임 메서드
 

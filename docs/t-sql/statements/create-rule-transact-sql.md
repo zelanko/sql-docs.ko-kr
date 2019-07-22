@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 50360a46d7eaba31ad60a94e3e624a641ec1c6ea
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 0e0a46138b9e6c4ccaff09c1ab5261f739deb6b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006501"
 ---
 # <a name="create-rule-transact-sql"></a>CREATE RULE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ AS condition_expression
  *condition_expression*  
  규칙을 정의하는 하나 이상의 조건입니다. 규칙은 WHERE 절에서 임의의 유효한 식이 될 수 있으며 산술 연산자, 관계형 연산자 및 조건자(예: IN, LIKE, BETWEEN) 같은 요소를 포함할 수도 있습니다. 규칙은 열 또는 기타 데이터베이스 개체를 참조할 수 없습니다. 데이터베이스 개체를 참조하지 않는 기본 제공 함수는 포함할 수 있습니다. 사용자 정의 함수는 사용할 수 없습니다.  
   
- *condition_expression*에는 하나의 변수가 포함됩니다. 각 지역 변수 앞에는 at 기호(**@**)가 붙습니다. 식은 UPDATE 또는 INSERT 문과 함께 입력된 값을 참조합니다. 규칙을 만들 때는 모든 이름 또는 기호를 사용하여 값을 나타낼 수 있으나 첫 번째 문자는 반드시 at 기호(**@**)를 사용해야 합니다.  
+ *condition_expression*에는 하나의 변수가 포함됩니다. 각 지역 변수 앞에는 at 기호( **@** )가 붙습니다. 식은 UPDATE 또는 INSERT 문과 함께 입력된 값을 참조합니다. 규칙을 만들 때는 모든 이름 또는 기호를 사용하여 값을 나타낼 수 있으나 첫 번째 문자는 반드시 at 기호( **@** )를 사용해야 합니다.  
   
 > [!NOTE]  
 >  별칭 데이터 형식을 사용하는 식에는 규칙을 만들지 않습니다. 별칭 데이터 형식을 사용하는 식에 규칙을 만들 수 있더라도 열이나 별칭 데이터 형식에 규칙을 바인딩하면 식이 참조될 때 컴파일되지 않습니다.  
@@ -76,7 +75,7 @@ AS condition_expression
 ## <a name="remarks"></a>Remarks  
  CREATE RULE을 다른 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문과 함께 하나의 일괄 처리에서 사용할 수 없습니다. 규칙은 규칙이 작성되는 시점에 이미 데이터베이스에 있는 데이터에는 적용되지 않으며 시스템 데이터 형식에 바인딩할 수 없습니다.  
   
- 규칙은 현재 데이터베이스에서만 만들 수 있습니다. 규칙을 만든 다음, **sp_bindrule**을 실행하여 열 또는 별칭 데이터 형식에 규칙을 바인딩합니다. 규칙은 반드시 열 데이터 형식과 호환되어야 합니다. 예를 들어 "\@value LIKE A%"는 숫자 열에 대한 규칙으로 사용할 수 없습니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
+ 규칙은 현재 데이터베이스에서만 만들 수 있습니다. 규칙을 만든 다음, **sp_bindrule**을 실행하여 열 또는 별칭 데이터 형식에 규칙을 바인딩합니다. 규칙은 반드시 열 데이터 형식과 호환되어야 합니다. 예를 들어 "\@value LIKE A%"는 숫자 열에 대한 규칙으로 사용할 수 없습니다. 규칙은 **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, CLR 사용자 정의 형식 또는 **timestamp** 열에 바인딩할 수 없습니다. 계산 열에 규칙을 바인딩할 수 없습니다.  
   
  문자 및 날짜 상수는 작은따옴표(')로 묶고 이진 상수는 앞에 0x를 붙여야 합니다. 바인딩된 열과 해당 규칙이 호환되지 않는 경우에는 규칙을 바인딩할 때가 아니라 값을 삽입할 때 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에서 오류 메시지를 반환합니다.  
   
@@ -95,12 +94,12 @@ AS condition_expression
   
  열에 기본값과 연결된 규칙이 모두 있는 경우에는 해당 기본값이 규칙에 의해 정의된 도메인 내에 있어야 합니다. 규칙과 충돌하는 기본값은 삽입할 수 없습니다. SQL Server 데이터베이스 엔진에서는 이러한 기본값을 삽입하려고 할 때마다 오류 메시지를 생성합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CREATE RULE을 실행하려면 최소한 사용자는 현재 데이터베이스의 CREATE RULE 권한 및 규칙이 생성되는 스키마에 대한 ALTER 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-rule-with-a-range"></a>1. 범위가 있는 규칙 만들기  
+### <a name="a-creating-a-rule-with-a-range"></a>1\. 범위가 있는 규칙 만들기  
  다음 예에서는 규칙이 바인딩된 열에 삽입되는 정수의 범위를 제한하는 규칙을 만듭니다.  
   
 ```  
@@ -109,7 +108,7 @@ AS
 @range>= $1000 AND @range <$20000;  
 ```  
   
-### <a name="b-creating-a-rule-with-a-list"></a>2. 목록이 있는 규칙 만들기  
+### <a name="b-creating-a-rule-with-a-list"></a>2\. 목록이 있는 규칙 만들기  
  다음 예에서는 해당 규칙이 바인딩된 열에 입력하는 실제 값을 규칙에 나열된 값으로 제한하는 규칙을 만듭니다.  
   
 ```  
@@ -118,7 +117,7 @@ AS
 @list IN ('1389', '0736', '0877');  
 ```  
   
-### <a name="c-creating-a-rule-with-a-pattern"></a>3. 패턴이 있는 규칙 만들기  
+### <a name="c-creating-a-rule-with-a-pattern"></a>C. 패턴이 있는 규칙 만들기  
  다음 예에서는 하이픈(`-`) 다음에 임의의 두 문자, 임의의 문자 수(또는 0개 문자) 및 `0`부터 `9`까지의 정수로 끝나는 패턴의 규칙을 만듭니다.  
   
 ```  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f47f8e25-08ef-498b-84f4-a317aca1f358
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4bca90e100baf2a7509636966ee1391645827bb9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 3d8b691febc1f52074451a777c7e163be8e10f80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077959"
 ---
 # <a name="getreparentedvalue-database-engine"></a>GetReparentedValue(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ _oldRoot_에서 _newRoot_로 노드를 이동하여 트리를 수정하는 데 �
   
 ## <a name="examples"></a>예  
   
-### <a name="a-comparing-two-node-locations"></a>1. 두 노드 위치 비교  
+### <a name="a-comparing-two-node-locations"></a>1\. 두 노드 위치 비교  
 다음 예에서는 노드의 현재 hierarchyid를 보여 줍니다. 또한 **@NewParent** 노드의 하위 항목이 되도록 노드를 이동하는 경우 노드의 **hierarchyid**가 어떻게 달라지는지 보여 줍니다. 이 예에서는 `ToString()` 메서드를 사용하여 계층 관계를 보여 줍니다.
   
 ```sql
@@ -81,7 +80,7 @@ WHERE OrgNode = @SubjectEmployee ;
 GO  
 ```  
   
-### <a name="b-updating-a-node-to-a-new-location"></a>2. 새 위치로 노드 업데이트  
+### <a name="b-updating-a-node-to-a-new-location"></a>2\. 새 위치로 노드 업데이트  
 다음 예에서는 UPDATE 문의 `GetReparentedValue()`를 사용하여 계층에서 노드를 이전 위치에서 새 위치로 이동합니다.
   
 ```sql
