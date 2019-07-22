@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8fa82822-ac99-48ef-a18d-f4f3a77105b4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c9942407693caaf1a8c0c2ef3222c20a237774c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad6efe1291adffd73769f8f6f4defa28abe8fbef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968296"
 ---
 # <a name="cdc-instance-deployment-script"></a>CDC 인스턴스 배포 스크립트
 

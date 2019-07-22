@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f151c3e8-3811-457d-a3d3-6158ca65a646
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 38c0854947ee9b853d8638593aea1e60d40941ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb252810f2136cfd478bf7ce02690d1ba84dc8d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049376"
 ---
 # <a name="datareader-destination-custom-properties"></a>DataReader 대상 사용자 지정 속성
 

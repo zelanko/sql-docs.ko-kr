@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 442c54bf-a0a6-4108-ad20-db910ffa6e3c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 7c3b106d89db436ebf2a2d60abe7f5eee5fca2f1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 710604102132d3b50b328c80f12cf41cd66a1219
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927217"
 ---
 # <a name="alter-resource-governor-transact-sql"></a>ALTER RESOURCE GOVERNOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ ALTER RESOURCE GOVERNOR
 > [!IMPORTANT]  
 >  구성 변경 내용을 적용하려면 ALTER RESOURCE GOVERNOR RECONFIGURE를 실행해야 합니다.  
   
- CLASSIFIER_FUNCTION = { _schema_name_**.**_function_name_ | NULL }  
+ CLASSIFIER_FUNCTION = { _schema_name_ **.** _function_name_ | NULL }  
  *schema_name.function_name*으로 지정한 분류 함수를 등록합니다. 이 함수는 모든 새 세션을 분류하고 세션 요청 및 쿼리를 작업 그룹에 할당합니다. NULL이 사용되면 새 세션이 기본 작업 그룹에 자동으로 할당됩니다.  
   
  RESET STATISTICS  
@@ -106,19 +105,19 @@ ALTER RESOURCE GOVERNOR
   
  DDL 문을 실행하기 전에 리소스 관리자 상태에 대해 잘 알고 있는 것이 좋습니다. 자세한 내용은 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-starting-the-resource-governor"></a>1. 리소스 관리자 시작  
+### <a name="a-starting-the-resource-governor"></a>1\. 리소스 관리자 시작  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 처음 설치하면 리소스 관리자를 사용할 수 없습니다. 다음 예에서는 리소스 관리자를 시작합니다. 이 문이 실행된 후에 리소스 관리자가 실행되면 미리 정의된 작업 그룹과 리소스 풀을 사용할 수 있습니다.  
   
 ```  
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 ```  
   
-### <a name="b-assigning-new-sessions-to-the-default-group"></a>2. 기본 그룹에 새 세션 할당  
+### <a name="b-assigning-new-sessions-to-the-default-group"></a>2\. 기본 그룹에 새 세션 할당  
  다음 예에서는 리소스 관리자 구성에서 기존 분류자 함수를 제거하여 기본 작업 그룹에 모든 새 세션을 할당합니다. 분류자 함수로 지정된 함수가 없으면 모든 새 세션이 기본 작업 그룹에 할당됩니다. 이 변경 내용은 새 세션에만 적용되고 기존 세션에는 적용되지 않습니다.  
   
 ```  
@@ -127,7 +126,7 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;  
 ```  
   
-### <a name="c-creating-and-registering-a-classifier-function"></a>3. 분류자 함수 작성 및 등록  
+### <a name="c-creating-and-registering-a-classifier-function"></a>C. 분류자 함수 작성 및 등록  
  다음 예에서는 `dbo.rgclassifier_v1`이라는 분류자 함수를 만듭니다. 이 함수는 사용자 이름이나 응용 프로그램 이름을 기반으로 모든 새 세션을 분류하고 특정 작업 그룹에 세션 요청과 쿼리를 할당합니다. 지정한 사용자 또는 응용 프로그램으로 매핑되지 않는 세션은 기본 작업 그룹에 할당됩니다. 그런 다음 분류자 함수가 등록되고 구성 변경 내용이 적용됩니다.  
   
 ```  
@@ -172,14 +171,14 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
   
-### <a name="d-resetting-statistics"></a>4. 통계 다시 설정  
+### <a name="d-resetting-statistics"></a>D. 통계 다시 설정  
  다음 예에서는 모든 작업 그룹 및 리소스 풀 통계를 다시 설정합니다.  
   
 ```  
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
-### <a name="e-setting-the-maxoutstandingiopervolume-option"></a>5. MAX_OUTSTANDING_IO_PER_VOLUME 옵션 설정  
+### <a name="e-setting-the-maxoutstandingiopervolume-option"></a>E. MAX_OUTSTANDING_IO_PER_VOLUME 옵션 설정  
  다음 예에서는 MAX_OUTSTANDING_IO_PER_VOLUME 옵션을 20으로 설정합니다.  
   
 ```  

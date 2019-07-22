@@ -5,16 +5,15 @@ ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
 ms.reviewer: ''
 ms.custom: SSDT
 ms.date: 02/09/2017
-ms.openlocfilehash: b8ce668d62cc26c6d5e6a62cb43a3c02e4b660fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8ff16ab27f47cd283c81606a4db9b580db523d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984702"
 ---
 # <a name="add-database-reference-dialog-box"></a>데이터베이스 참조 추가 대화 상자
 이 항목에서는 **데이터베이스 참조 추가** 대화 상자에서 수행할 수 있는 절차에 대해 설명합니다.  

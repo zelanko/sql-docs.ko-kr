@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 32b9fbb1967c3d98ccc6dbb149bea40da735c887
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e2a9ede7817eb504a5926ee1a7bb6be2019f0b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65089051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041227"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>Transact-SQL을 사용하여 FILESTREAM 데이터 액세스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

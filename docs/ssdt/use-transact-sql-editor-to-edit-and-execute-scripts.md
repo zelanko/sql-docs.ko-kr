@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e348fba8c391b438c0429c8a32e167fd810b53d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c2b84cb9f75987995e9e0cdbf92165fa28f61a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006037"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>Transact-SQL 편집기를 사용하여 스크립트 편집 및 실행
 Transact\-SQL 편집기에서는 스크립트 작업에 사용할 수 있는 다양한 기능의 편집 및 디버깅 환경을 제공합니다. 이 편집기는 **코드 보기** 상황에 맞는 메뉴를 사용하여 연결된 데이터베이스 또는 프로젝트의 데이터베이스 엔터티를 열 때 호출됩니다. SQL Server 개체 탐색기의 **새 쿼리** 상황에 맞는 메뉴를 사용하거나 데이터베이스 프로젝트에 새 스크립트 개체를 추가하는 경우에도 이 편집기가 자동으로 열립니다.  

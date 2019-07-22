@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 763ca67ef43b9e154f7a595c7b2b4c8bfcbe5ece
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 176a5d39efc5e0501d425100e458235a971d87da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914794"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -159,7 +158,7 @@ OBJECTPROPERTY ( id , property )
 |TableTemporalType|Table|**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블의 형식을 지정합니다.<br /><br /> 0 = 비임시 테이블<br /><br /> 1 = 시스템 버전 테이블에 대한 기록 테이블<br /><br /> 2 = 시스템 버전 임시 테이블|  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="exceptions"></a>예외  
  오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  

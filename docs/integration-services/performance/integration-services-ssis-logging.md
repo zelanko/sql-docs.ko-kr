@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2782537178c00055e1db7cb7c653fb863ead8724
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65719590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913628"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
 

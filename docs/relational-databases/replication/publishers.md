@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 116cd6a5-32ac-4273-81a2-d184408e0f07
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e8370c989cb442de305c57e239beaff827bef37f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1813cb8f1790fc7383b4eb2fac747cb3efdcb290
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021285"
 ---
 # <a name="publishers"></a>배포자 속성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +25,9 @@ ms.locfileid: "47701171"
   
  게시자로 선택한 서버는 이 마법사의 **배포 데이터베이스** 페이지에서 지정한 배포 데이터베이스를 사용합니다. 다른 배포 데이터베이스를 사용하려면 이때 게시자를 설정하지 마십시오. 대신 배포 구성 마법사를 완료한 후 **배포자 속성** 대화 상자를 사용하여 게시자를 추가합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **게시자**  
- 이 배포자를 사용하도록 허용할 서버를 선택합니다. 게시자 옆의 속성 단추 (**...**)를 클릭하여 추가 속성을 보고 설정할 수 있습니다.  
+ 이 배포자를 사용하도록 허용할 서버를 선택합니다. 게시자 옆의 속성 단추 ( **...** )를 클릭하여 추가 속성을 보고 설정할 수 있습니다.  
   
  **추가**  
  허용할 서버가 나열되지 않으면 **추가** 를 클릭하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자 또는 Oracle 게시자를 사용 가능한 게시자 목록에 추가합니다.  

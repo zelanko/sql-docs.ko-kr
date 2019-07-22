@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3dddd702582cdc8b2baea11838b0ad7e0ccd8cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 612ed6750946dfa5e77970bf6e3a4859cbb0045b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911868"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>방법: 로컬 데이터베이스 빌드 및 배포
 Microsoft SQL Server 2012에서는 SQL Server 데이터베이스 프로젝트를 디버그할 때 활성화되는 SQL Server Express 로컬 데이터베이스 런타임이라는 로컬 주문형 서버 인스턴스를 제공합니다. 이 로컬 서버 인스턴스를 프로젝트를 빌드, 테스트 및 디버깅하기 위한 샌드박스로 사용할 수 있습니다. 로컬 서버 인스턴스는 설치된 SQL Server 인스턴스로부터 독립적이며, SSDT(SQL Server Data Tools) 외부에서는 액세스할 수 없습니다. 이러한 방식은 프로덕션 데이터베이스에 액세스할 수 없거나 액세스가 제한되었지만 권한이 있는 사용자가 프로젝트를 프로덕션에 배포하기 전에 로컬로 프로젝트를 테스트하려는 개발자에게 유용합니다. 또한 SQL Azure용 데이터베이스 솔루션을 개발할 때 이 로컬 서버에서 제공하는 편리한 기능을 사용하여 데이터베이스 프로젝트를 개발하고 클라우드에 배포하기 전에 테스트할 수 있습니다.  

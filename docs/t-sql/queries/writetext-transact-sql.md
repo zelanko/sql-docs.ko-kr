@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5dd029115c99ae4826bf1070a7556c7fbdcb8c55
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948108"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ WRITETEXT [BULK]
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **text**, **ntext** 또는 **image** 데이터에 대한 행 내부 텍스트 포인터가 있어도 유효하지 않을 수 있습니다. 행의 텍스트 옵션에 대한 자세한 내용은 [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)을 참조하세요. 텍스트 포인터를 무효화하는 방법은 [sp_invalidate_textptr&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-invalidate-textptr-transact-sql.md)를 참조하십시오.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  지정된 테이블에 대해 UPDATE 권한이 필요합니다. UPDATE 권한이 부여되면 이를 위임할 수 있습니다.  
   
 ## <a name="examples"></a>예  

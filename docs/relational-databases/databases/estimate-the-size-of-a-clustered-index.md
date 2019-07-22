@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: b94f389814ff0d0fc9a4adcb26b33431286d1119
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 8c785e98a06e31448c22422f85f3be34efcffa6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559360"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051114"
 ---
 # <a name="estimate-the-size-of-a-clustered-index"></a>클러스터형 인덱스의 크기 예측
 
@@ -216,7 +215,7 @@ ms.locfileid: "51559360"
   
 -   LOB(Large Object) 값  
   
-     LOB 데이터 형식 **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**및 **image** 값을 저장하는 데 사용될 공간을 정확하게 측정하는 알고리즘은 복잡합니다. 예상되는 LOB 값의 평균 크기를 더하고 ***Num_Rows***를 곱한 후 해당 값을 총 클러스터형 인덱스 크기에 더하는 것만으로도 충분합니다.  
+     LOB 데이터 형식 **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml**및 **image** 값을 저장하는 데 사용될 공간을 정확하게 측정하는 알고리즘은 복잡합니다. 예상되는 LOB 값의 평균 크기를 더하고 ***Num_Rows***를 곱한 후 해당 값을 총 클러스터형 인덱스 크기에 더하는 것만으로도 충분합니다.  
   
 -   압축  
   

@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: e1be1e90-98cc-47a3-addd-59d4aeca6547
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 817f77f3f9ca47df17af0e6a9a71ba790d768863
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23ce9be8428799a963addda5510e3528f94fb86b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115860"
 ---
 # <a name="oledb-call-event-class"></a>OLEDB Call 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,13 +35,13 @@ ms.locfileid: "63017038"
 |DatabaseName|**nvarchar**|사용자 문이 실행되는 데이터베이스의 이름입니다.|35|예|  
 |Duration|**Bigint**|OLE DB Call 이벤트를 완료하는 데 소요되는 시간입니다.|13|아니오|  
 |EndTime|**날짜/시간**|이벤트가 종료된 시간입니다.|15|예|  
-|Error|**ssNoversion**|지정된 이벤트의 오류 번호입니다. 종종 sys.messages 카탈로그 뷰에 저장된 오류 번호를 나타냅니다.|31|예|  
+|Error|**int**|지정된 이벤트의 오류 번호입니다. 종종 sys.messages 카탈로그 뷰에 저장된 오류 번호를 나타냅니다.|31|예|  
 |EventClass|**정수**|이벤트 유형 = 119|27|아니오|  
 |EventSequence|**정수**|일괄 처리 내의 OLE DB 이벤트 클래스 시퀀스입니다.|51|아니오|  
 |EventSubClass|**정수**|0=시작<br /><br /> 1=완료|21|아니오|  
-|GroupID|**ssNoversion**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
+|GroupID|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|**nvarchar**|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
-|IsSystem|**ssNoversion**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|예|  
+|IsSystem|**int**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|예|  
 |LinkedServerName|**nvarchar**|연결된 서버의 이름입니다.|45|예|  
 |LoginName|**nvarchar**|사용자 로그인 이름(DOMAIN\Username 형식의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 로그인 자격 증명 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 보안 로그인)입니다.|11|예|  
 |LoginSid|**이미지**|로그인한 사용자의 SID(보안 ID)입니다. 이 정보는 sys.server_principals 카탈로그 뷰에 있습니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|예|  

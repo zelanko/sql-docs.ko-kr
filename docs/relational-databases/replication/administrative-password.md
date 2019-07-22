@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd2f09e9fec2ecd0ac31a0d8ef3b9425a2aaeffb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4964789fb69af676a84f049183a88df183d6e82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948643"
 ---
 # <a name="administrative-password"></a>관리 암호
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 마법사의 **배포자** 페이지에서 이 게시자에 대한 원격 배포자를 선택한 경우 복제에서 **distributor_admin** 로그인을 사용하여 게시자와 배포자 간에 설정한 연결에 대한 암호를 입력해야 합니다. 입력하는 암호는 배포 구성 마법사의 **배포자 암호** 페이지 또는 **배포자 속성** 대화 상자의 **게시자** 페이지에서 지정한 암호와 일치해야 합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **암호**  
  게시자와 원격 배포자 간의 연결에 대한 암호를 입력합니다.  
   

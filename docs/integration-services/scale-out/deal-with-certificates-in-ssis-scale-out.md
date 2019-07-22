@@ -10,13 +10,12 @@ ms.custom: performance
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-manager: craigg
-ms.openlocfilehash: 12f67e7a17ba253ab49b1e61fe3de33a45e0cb55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718728"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896959"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>SQL Server Integration Services Scale Out의 인증서 관리
 
@@ -89,9 +88,9 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Scale Out 작업자를 Scale Out 마스터에 다시 연결
 각 Scale Out 작업자에 대해 작업자를 삭제한 다음 [Scale Out 관리자](integration-services-ssis-scale-out-manager.md)를 사용하여 다시 추가하거나 다음을 수행합니다.
 
-1.  작업자 노드에서 로컬 컴퓨터의 루트 저장소에 클라이언트 SSL 인증서를 설치합니다.
+1\.  작업자 노드에서 로컬 컴퓨터의 루트 저장소에 클라이언트 SSL 인증서를 설치합니다.
 
-2.  Scale Out 작업자 서비스 구성 파일을 업데이트합니다.
+2\.  Scale Out 작업자 서비스 구성 파일을 업데이트합니다.
 
 작업자 노드에서 Scale Out 작업자 서비스 구성 파일인 `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`를 업데이트합니다. **MasterHttpsCertThumbprint**를 새 SSL 인증서의 지문으로 업데이트합니다.
 

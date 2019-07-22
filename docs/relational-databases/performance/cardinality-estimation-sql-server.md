@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: baa8a304-5713-4cfe-a699-345e819ce6df
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b95caa318df620d91e6508d3ca0811942063fcd
-ms.sourcegitcommit: b2a29f9659f627116d0a92c03529aafc60e1b85a
+ms.openlocfilehash: 0f9e7ef2d1503088cba081b931e09f1fb3536b56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59516459"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946992"
 ---
 # <a name="cardinality-estimation-sql-server"></a>카디널리티 추정(SQL Server)
 

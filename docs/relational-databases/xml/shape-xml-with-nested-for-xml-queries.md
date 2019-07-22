@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc12f5bc259f834dddfac5c1e2bb4597880b9a16
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 22522a2bfabc3406e8e3e1331a0518a38b930c8a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000669"
 ---
 # <a name="shape-xml-with-nested-for-xml-queries"></a>중첩 FOR XML 쿼리로 XML 구체화
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
