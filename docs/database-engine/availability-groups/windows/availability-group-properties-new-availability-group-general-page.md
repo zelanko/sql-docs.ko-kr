@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 9af5379f-91b8-4729-9f75-4a80242a30e9
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 1a3fe37e1cae0e7be61d6244307eb7589ca6d5f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0f5e7c7ad7fe916b2203b2d1815e50602d30e2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934874"
 ---
 # <a name="availability-group-properties-new-availability-group-general-page"></a>가용성 그룹 속성: 새 가용성 그룹(일반 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

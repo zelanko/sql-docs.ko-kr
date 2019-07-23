@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: fa1beab7acbdb4eb2b522596b8854e4bc714c640
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d39c2d0975f7be8a7e5481b9c91266528ae9ee2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006354"
 ---
 # <a name="database-mirroring-operating-modes"></a>데이터베이스 미러링 운영 모드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

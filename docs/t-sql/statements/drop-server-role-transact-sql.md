@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: a2a1e6e6-e40c-4d6a-81be-d197b80bf226
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f1a93bf22d1f96745aed7c71dd1f3ee231a7d22
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f55027afe2452acd6b9eb3f0dd39f4212fe08081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929246"
 ---
 # <a name="drop-server-role-transact-sql"></a>DROP SERVER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -55,12 +54,12 @@ DROP SERVER ROLE role_name
   
  [sys.server_role_members](../../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md) 카탈로그 뷰를 쿼리하여 역할 멤버 자격에 대한 정보를 볼 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버 역할에 대한 CONTROL 권한 또는 ALTER ANY SERVER ROLE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-to-drop-a-server-role"></a>1. 서버 역할 삭제  
+### <a name="a-to-drop-a-server-role"></a>1\. 서버 역할 삭제  
  다음 예에서는 서버 역할 `purchasing`을 삭제합니다.  
   
 ```  
@@ -68,7 +67,7 @@ DROP SERVER ROLE purchasing;
 GO  
 ```  
   
-### <a name="b-to-view-role-membership"></a>2. 역할 멤버 자격 보기  
+### <a name="b-to-view-role-membership"></a>2\. 역할 멤버 자격 보기  
  역할 멤버 자격을 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **서버 역할(멤버**) 페이지를 사용하거나 다음 쿼리를 실행합니다.  
   
 ```  
@@ -82,7 +81,7 @@ JOIN sys.server_principals AS SP2
 ORDER BY  SP.name,  SP2.name  
 ```  
   
-### <a name="c-to-view-role-membership"></a>3. 역할 멤버 자격 보기  
+### <a name="c-to-view-role-membership"></a>C. 역할 멤버 자격 보기  
  서버 역할이 다른 서버 역할을 소유하는지 여부를 확인하려면 다음 쿼리를 실행하십시오.  
   
 ```  

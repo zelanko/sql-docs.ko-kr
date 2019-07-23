@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 032761b0-6358-42e4-b05c-dbfd663ac881
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d90637fb98635c16029be7fb81bb384e08edd34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f70b6a1c80273b64f7db33c57304630bd864d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62684488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909401"
 ---
 # <a name="format-nested-json-output-with-path-mode-sql-server"></a>PATH 모드로 중첩 JSON 출력 서식 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

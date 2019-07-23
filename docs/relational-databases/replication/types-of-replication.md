@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: c1655e8d-d14c-455a-a7f9-9d2f43e88ab4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c0575c9997455c90ae4639b0ab3df6989ebbafec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5ac8f243b559efcbee8f27b201469d7bf562b076
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895314"
 ---
 # <a name="types-of-replication"></a>복제 유형
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 분산 응용 프로그램에서 사용할 수 있는 다음 유형의 복제를 제공합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 분산 애플리케이션에서 사용할 수 있는 다음 유형의 복제를 제공합니다.  
   
 -   트랜잭션 복제. 자세한 내용은 [트랜잭션 복제](../../relational-databases/replication/transactional/transactional-replication.md)를 참조하세요.  
   

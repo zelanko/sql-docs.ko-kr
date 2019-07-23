@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: f7fbe155-5b68-4777-bc71-a47637471f32
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6f70f65bcd2fad16e1f7268406acc9981d8eafd5
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: fae6e419838ef4de06e778665c98df023e7eb707
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67685713"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267514"
 ---
 # <a name="monitor-and-respond-to-events"></a>이벤트 모니터링 및 응답
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

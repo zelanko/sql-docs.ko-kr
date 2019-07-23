@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: d5cf52f5-1fe2-438a-98a3-fe117360acf8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 60284ac8c7c1f99bac6b5eae20748b2d7f5308ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f792df0fbfd7f78e82f0ce049dc1ef205576ae38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007965"
 ---
 # <a name="project-properties-dialog-box"></a>프로젝트 속성 대화 상자
 

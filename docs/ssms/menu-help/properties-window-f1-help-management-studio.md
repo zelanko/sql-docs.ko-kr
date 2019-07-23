@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: f682ff0d-0161-4b42-a689-26eeb077d9e9
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 0ca79e92632ab958734ae310bda82a1636ea8021
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 19a7cd6251165db2843a7afb691ad23ccf75fbda
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682656"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257062"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>속성 창 F1 도움말(Management Studio)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

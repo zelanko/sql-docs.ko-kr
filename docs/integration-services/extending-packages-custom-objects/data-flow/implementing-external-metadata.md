@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 8f5bd3ed-3e79-43a4-b6c1-435e4c2cc8cc
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 925db41997def8591c9304e3116f23271ed77581
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73da7a9cf4a8eddc1f2bdf947306e2b59cd11793
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724675"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908683"
 ---
 # <a name="implementing-external-metadata"></a>외부 메타데이터 구현
 

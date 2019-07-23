@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ceef33cc9f2b463d9d6db18ef8b8a8982d52bf95
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: b02d7c93ad2858c1463e3283135f1a3e2cc841b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909587"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>인덱스 다시 구성 및 다시 작성
 

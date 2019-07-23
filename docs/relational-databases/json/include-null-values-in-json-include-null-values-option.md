@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: 06873768-3778-4ed8-a1db-61758726bda0
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1763e4088f6d2e5a0685abf86f1f11a92c9736e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 9b6abe1bbad1f1c6e5c1f2e200c58e4ae865c1e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909298"
 ---
 # <a name="include-null-values-in-json---includenullvalues-option"></a>JSON에 Null 값 포함 - INCLUDE_NULL_VALUES 옵션
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

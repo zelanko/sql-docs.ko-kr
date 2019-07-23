@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1b0a6421-fbd4-4bb4-87ca-657f4782c433
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 3db09682a58b80d4f0d2d88ad6f65e3d458b36ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 556a0442a64caa5bcbcab98933650da93b4e410b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780145"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013469"
 ---
 # <a name="use-the-new-availability-group-dialog-box-sql-server-management-studio"></a>새 가용성 그룹 대화 상자 사용(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

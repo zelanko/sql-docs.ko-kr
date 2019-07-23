@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 72e2c259728ab2414889efc9d7445c50282adf30
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 5033bbb939c2c6237e82683fba4e32defef69281
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902798"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION(Transact-SQL)
 

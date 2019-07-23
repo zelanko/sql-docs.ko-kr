@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a634e94d-f492-4dfd-9611-a35f545106a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a82624d43f63ff8e774c61198021e29cd080366e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a921aaeebc57ab72f75c980b0877a9fa0723fdca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714508"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997850"
 ---
 # <a name="catalogpackages-ssisdb-database"></a>catalog.packages(SSISDB 데이터베이스)
 
@@ -36,10 +35,10 @@ ms.locfileid: "65714508"
 |NAME|**nvarchar(256)**|패키지의 고유 이름입니다.|  
 |package_guid|**uniqueidentifier**|패키지를 식별하는 GUID(Globally Unique Identifier)입니다.|  
 |description|**nvarchar(1024)**|패키지에 대한 설명(옵션)입니다.|  
-|package_format_version|**ssNoversion**|패키지를 개발하는 데 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다.|  
-|version_major|**ssNoversion**|패키지의 주 버전입니다.|  
-|version_minor|**ssNoversion**|패키지의 부 버전입니다.|  
-|version_build|**ssNoversion**|패키지의 빌드 버전입니다.|  
+|package_format_version|**int**|패키지를 개발하는 데 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다.|  
+|version_major|**int**|패키지의 주 버전입니다.|  
+|version_minor|**int**|패키지의 부 버전입니다.|  
+|version_build|**int**|패키지의 빌드 버전입니다.|  
 |version_comments|**nvarchar(1024)**|패키지 버전에 대한 설명(옵션)입니다.|  
 |version_guid|**uniqueidentifier**|패키지 버전을 고유하게 식별하는 GUID입니다.|  
 |project_id|**bigint**|프로젝트의 고유 ID입니다.|  

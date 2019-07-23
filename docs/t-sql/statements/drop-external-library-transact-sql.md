@@ -1,7 +1,7 @@
 ---
 title: DROP EXTERNAL LIBRARY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 07/09/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: t-sql
@@ -16,21 +16,24 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2702be0133925e8c7069c8abb11e82c8c4773743
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
+ms.openlocfilehash: 8429e10dfc25b487cc0d86dd504fc3ce77a0b672
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583336"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252707"
 ---
 # <a name="drop-external-library-transact-sql"></a>DROP EXTERNAL LIBRARY(Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 기존 패키지 라이브러리를 삭제합니다. 패키지 라이브러리는 지원되는 외부 런타임(예: R, Python 또는 Java)에서 사용합니다.
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
 > SQL Server 2017에서는 R 언어 및 Windows 플랫폼이 지원됩니다. Windows 및 Linux 플랫폼의 R, Python 및 Java는 SQL Server 2019 CTP 2.4에서 지원됩니다. 
+::: moniker-end
 
 ## <a name="syntax"></a>구문
 
@@ -67,6 +70,7 @@ SQL Server의 `DROP` 문과 달리 이 명령문은 옵션 인증 절 지정을 
 
 ## <a name="examples"></a>예
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 데이터베이스에 사용자 지정 R 패키지 `customPackage`를 추가합니다.
 
 ```sql
@@ -75,6 +79,7 @@ FROM (CONTENT = 'C:\temp\customPackage_v1.1.zip')
 WITH (LANGUAGE = 'R');
 GO
 ```
+::: moniker-end
 
 `customPackage` 라이브러리를 삭제합니다.
 
@@ -88,4 +93,3 @@ DROP EXTERNAL LIBRARY customPackage;
 [ALTER EXTERNAL LIBRARY(Transact-SQL)](alter-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md)  
-

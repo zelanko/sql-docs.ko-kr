@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f10691cf1bfe8802612324a11927c661f7ffce81
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: d653db8d1fcc6b2344763ed6f3988a33a297fd69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021554"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>정책 범주에 데이터베이스 구독 또는 구독 취소
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "51512458"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  db_owner 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

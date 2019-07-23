@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8e4a1f0a-8a42-4733-be8d-e21d6dbddb33
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 12b658fec91df0473feb2888e4edf55ede5f4c97
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 630cfd91df0d999d8866260eaee5152f2b4e91a5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67682495"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264355"
 ---
 # <a name="create-queries-using-something-besides-a-table-visual-database-tools"></a>테이블 외의 항목을 사용하여 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

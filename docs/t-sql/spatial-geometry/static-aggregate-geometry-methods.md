@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e19f582-ef8f-40f7-8ad1-4f08591cdd1a
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 510a62bb5d4727f549f446daec020ed10de645af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a6684022b1231c1de2ee4ff21f933dacb63ecee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939098"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930189"
 ---
 # <a name="static-aggregate-geometry-methods"></a>정적 기하 도형 집계 메서드
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

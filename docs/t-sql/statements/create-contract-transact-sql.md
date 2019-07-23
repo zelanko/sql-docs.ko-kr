@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 494cbfa6-8e93-4161-a64d-90d681915211
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 64ea4a6f152ebeaa5898de35e386fbde8d09aab6
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: eaee3cdadacf57e410e27dc1f3e92f2c917f43ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51703281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902877"
 ---
 # <a name="create-contract-transact-sql"></a>CREATE CONTRACT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ CREATE CONTRACT contract_name
   
  계약은 임시 개체가 아닐 수 있습니다. #로 시작하는 계약 이름은 허용되지만 영구 개체입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  기본적으로 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할 및 **sysadmin** 고정 서버 역할의 멤버가 계약을 만들 수 있습니다.  
   
  기본적으로 계약의 소유자, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버에게는 계약에 대한 REFERENCES 권한이 있습니다.  

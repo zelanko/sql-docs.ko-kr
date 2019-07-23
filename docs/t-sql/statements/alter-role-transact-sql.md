@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 535a64f7ab8ca820149313d9b5add1de65239675
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 3d49f852c69af4335d3243fb84c921e11268669f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927208"
 ---
 # <a name="alter-role-transact-sql"></a>ALTER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +94,7 @@ WITH NAME = *new_name*
   
  데이터베이스 역할의 이름을 변경하더라도 역할의 ID 번호, 소유자 또는 사용 권한은 변경되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  이 명령을 실행하려면 다음 권한이나 멤버 자격 중 하나 이상이 필요합니다.  
   
 -   역할에 대한 **ALTER** 권한  
@@ -118,7 +117,7 @@ WITH NAME = *new_name*
   
 ## <a name="examples"></a>예  
   
-### <a name="a-change-the-name-of-a-database-role"></a>1. 데이터베이스 역할의 이름 변경  
+### <a name="a-change-the-name-of-a-database-role"></a>1\. 데이터베이스 역할의 이름 변경  
  **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2008부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  다음 예에서는 `buyers` 역할의 이름을 `purchasing`으로 변경합니다.   이 예제에서는 [AdventureWorks](https://msftdbprodsamples.codeplex.com/) 예제 데이터베이스에서 실행할 수 있습니다.
@@ -127,7 +126,7 @@ WITH NAME = *new_name*
 ALTER ROLE buyers WITH NAME = purchasing;  
 ```  
   
-### <a name="b-add-or-remove-role-members"></a>2. 역할 멤버 추가 또는 제거  
+### <a name="b-add-or-remove-role-members"></a>2\. 역할 멤버 추가 또는 제거  
  **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](2012부터), [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
   
  다음 예에서는 `Sales`라는 데이터베이스 역할을 만듭니다. Barry라는 데이터베이스 사용자를 멤버 자격에 추가한 다음, Barry라는 멤버를 제거하는 방법을 보여줍니다.   이 예제에서는 [AdventureWorks](https://msftdbprodsamples.codeplex.com/) 예제 데이터베이스에서 실행할 수 있습니다.

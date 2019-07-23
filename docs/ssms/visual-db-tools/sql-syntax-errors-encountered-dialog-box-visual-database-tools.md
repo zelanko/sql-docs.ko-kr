@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: bc9e5784-227e-4c5d-8084-24274fa6c14a
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 5e27f93e18adfdfcbcd675022ae089aeb4e1c8c3
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 1f12b8efc54d55d3377665b0f80ec3f77e1f2ed3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689733"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265626"
 ---
 # <a name="sql-syntax-errors-encountered-dialog-box-visual-database-tools"></a>SQL 구문 오류 발생 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fc7ed4f2-ad3d-47fc-a3ef-51e5bb069ef0
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 3eb48799616509a2f5873ac6687ab06246e59769
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 8b4eee47ea3e15b869909e66818bddf655f63ea3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687396"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266243"
 ---
 # <a name="reconcile-changes-made-by-multiple-users-visual-database-tools"></a>여러 사용자가 변경한 내용 조정(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

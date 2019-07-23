@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64adf1a1-3a41-41fb-b7d1-44390c3e4ea9
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 0b496ecde35917702f1bb976df390c8f5832ac77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b9e958085af5f70d4dedb1f9a44866c04918343
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65939015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930139"
 ---
 # <a name="stcurven-geometry-data-type"></a>STCurveN(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "65939015"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-stcurven-on-a-circularstring-instance"></a>1. CircularString 인스턴스에 STCurveN() 사용  
+### <a name="a-using-stcurven-on-a-circularstring-instance"></a>1\. CircularString 인스턴스에 STCurveN() 사용  
  다음 예에서는 `CircularString` 인스턴스에 두 번째 곡선을 반환합니다.  
   
 ```
@@ -71,7 +70,7 @@ ms.locfileid: "65939015"
   
  `CIRCULARSTRING (3 6.3246, 0 7, -3 6.3246)`  
   
-### <a name="b-using-stcurven-on-a-compoundcurve-instance-with-one-circularstring-instance"></a>2. CircularString 인스턴스 하나와 함께 CompoundCurve 인스턴스에 STCurveN() 사용  
+### <a name="b-using-stcurven-on-a-compoundcurve-instance-with-one-circularstring-instance"></a>2\. CircularString 인스턴스 하나와 함께 CompoundCurve 인스턴스에 STCurveN() 사용  
  다음 예에서는 `CompoundCurve` 인스턴스에 두 번째 곡선을 반환합니다.  
   
 ```

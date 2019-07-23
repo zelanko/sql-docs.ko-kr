@@ -16,14 +16,13 @@ ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6d3abb2fe6d16b89ce80b50c5e33d397d1c38403
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: a755ba9aa8915734768c56c096ea917a6e0c5564
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021224"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>전체 텍스트 인덱스 성능 향상
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

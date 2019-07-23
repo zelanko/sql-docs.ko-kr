@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 20a0d9ac-3393-4ab3-a296-862926b9b5e3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 070d0e47ae356e479c227e04fa2d4478788fa1bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dde3637c5307fdfbd40a5ade78ebd7de077d0e73
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968253"
 ---
 # <a name="change-data-capture-designer-for-oracle-by-attunity"></a>Change Data Capture Designer for Oracle by Attunity
 

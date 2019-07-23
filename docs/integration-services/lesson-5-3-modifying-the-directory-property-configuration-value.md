@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: ba2a091f-361c-4331-afe2-53b465164c36
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 09d4279501110d15eab2ca339e33ddb9ab0cee3f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f169daa1a885024366e0d2f5aae4df3d245ff75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911498"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>5-3단원: Directory 속성 구성 값 수정
 
@@ -30,7 +29,7 @@ ms.locfileid: "65721210"
   
 1.  메모장이나 다른 텍스트 편집기에서 패키지 구성 마법사를 사용하여 이전 작업에서 만든 **SSISTutorial.dtsConfig** 구성 파일을 찾아 엽니다.  
   
-2.  **ConfiguredValue** 요소의 값을 변경하여 이전 태스크에서 만든 **New Sample Data** 폴더 경로와 일치시킵니다. 경로를 따옴표로 묶지 마십시오. **New Sample Data** 폴더가 드라이브의 루트 수준(예: **C:\\**)에 있는 경우 업데이트된 XML은 다음 샘플과 비슷해야 합니다.  
+2.  **ConfiguredValue** 요소의 값을 변경하여 이전 태스크에서 만든 **New Sample Data** 폴더 경로와 일치시킵니다. 경로를 따옴표로 묶지 마십시오. **New Sample Data** 폴더가 드라이브의 루트 수준(예: **C:\\** )에 있는 경우 업데이트된 XML은 다음 샘플과 비슷해야 합니다.  
   
     ```
     <?xml version="1.0"?>

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 82f3ba72-3d72-4fb1-8179-2a953a782787
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 47c5dae600ce9d4896a88923ce69e9ed5cbc9bc4
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: c68c09e7162103cd027657beb81482803a1589a3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686662"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264657"
 ---
 # <a name="add-columns-to-queries-visual-database-tools"></a>쿼리에 열 추가(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

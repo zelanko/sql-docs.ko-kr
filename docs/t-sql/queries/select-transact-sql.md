@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: dc85caea-54d1-49af-b166-f3aa2f3a93d0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6b92d260901efdec91add2d785774bfd826c8b46
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 160d2e384dec5a0c0f3cc5ff40bcf62e3941d096
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334690"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948281"
 ---
 # <a name="select-transact-sql"></a>SELECT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -141,13 +140,13 @@ SELECT <select_criteria>
 >
 > 예를 들어 뷰에 클라스터형 인덱스가 있고 이 뷰가 일부 테이블 행을 제외하며 이 뷰의 SELECT 열 목록에서 *varchar* 데이터 형식을 *정수*로 바꾸는 CONVERT를 사용한다고 가정해 봅니다. 이런 상황에서 CONVERT는 WHERE 문이 실행되기 전에 실행될 수 있습니다. 물론 일반적이지 않습니다. 필요한 상황에서 다른 순서를 방지하기 위해 뷰를 수정하는 방법이 있는 경우가 종종 있습니다. 
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터를 선택하려면 테이블이나 뷰에 대한 **SELECT** 권한이 있어야 합니다. 이 권한은 스키마에 대한 **SELECT** 권한이나 테이블에 대한 **CONTROL** 권한과 같은 상위 범위에서 상속할 수 있습니다. 또는 **db_datareader** 또는 **db_owner** 고정 데이터베이스 역할이거나 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다. **SELECTINTO**를 사용하여 새 테이블을 만들려면 **CREATETABLE** 권한과 새 테이블을 소유하는 스키마에 대한 **ALTERSCHEMA** 권한이 둘 다 있어야 합니다.  
   
 ## <a name="examples"></a>예:   
 다음 예에서는 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스를 사용합니다.
   
-### <a name="a-using-select-to-retrieve-rows-and-columns"></a>1. SELECT를 사용하여 행 및 열 검색  
+### <a name="a-using-select-to-retrieve-rows-and-columns"></a>1\. SELECT를 사용하여 행 및 열 검색  
  이 섹션에서는 세 가지 코드 예를 보여 줍니다. 첫 번째 코드 예에서는 `DimEmployee` 테이블에서 모든 행(WHERE 절이 지정되지 않음) 및 모든 열(`*` 사용)을 반환합니다.  
   
 ```sql  
@@ -182,7 +181,7 @@ AND MaritalStatus = 'M'
 ORDER BY LastName;  
 ```  
   
-### <a name="b-using-select-with-column-headings-and-calculations"></a>2. SELECT에 열 머리글 및 계산 사용  
+### <a name="b-using-select-with-column-headings-and-calculations"></a>2\. SELECT에 열 머리글 및 계산 사용  
  다음 예제에서는 `DimEmployee` 테이블의 모든 행을 반환하며 `BaseRate` 및 40시간 근무 주를 기준으로 각 직원의 총 급여를 계산합니다.  
   
 ```sql  
@@ -253,7 +252,7 @@ GROUP BY OrderDateKey
 ORDER BY OrderDateKey;  
 ```  
   
-### <a name="i-using-the-having-clause"></a>9. HAVING 절 사용  
+### <a name="i-using-the-having-clause"></a>9\. HAVING 절 사용  
  이 쿼리에서는 `HAVING` 절을 사용하여 결과를 제한합니다.  
   
 ```sql  

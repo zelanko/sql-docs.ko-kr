@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c5af94179548923fa29344e3861f91dd0e201b79
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 25357798ed5a0340b46e787ad041ae6d9f19d7ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903096"
 ---
 # <a name="configure-web-synchronization"></a>웹 동기화 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

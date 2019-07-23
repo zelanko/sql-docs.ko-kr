@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d4859be5-ff5b-48b2-a101-ad40c6dbcc68
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: abee94fda58ce46f9c9e34906928003d7e6293d5
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 5575530a70eecfc030e457d20596ebc76040cd01
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686188"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260427"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>조건 창의 검색 조건 결합 규칙(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

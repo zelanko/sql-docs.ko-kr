@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: 08a160a6-33be-46b5-bc7b-d53180d8bdf1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: be6dac20a6ebc019cfd616860651a10a57aae325
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 2cb88a880db13fa8b7582e917d4b599b13709069
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940435"
 ---
 # <a name="non-sql-server-publishers"></a>SQL Server 이외 게시자  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 원본의 데이터를 게시하면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 데이터를 통합할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 Oracle 데이터베이스에서 게시된 스냅숏 또는 트랜잭션 데이터를 구독할 수 있습니다. Oracle에서 게시에 대한 자세한 내용은 [Oracle 게시 개요](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)를 참조하세요.  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 원본의 데이터를 게시하면 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 데이터를 통합할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는 Oracle 데이터베이스에서 게시된 스냅샷 또는 트랜잭션 데이터를 구독할 수 있습니다. Oracle에서 게시에 대한 자세한 내용은 [Oracle 게시 개요](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)를 참조하세요.  
   
-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 트랜잭션 및 스냅숏 복제에 대해 다음과 같이 다른 유형의 시나리오를 지원합니다.  
+[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 트랜잭션 및 스냅샷 복제에 대해 다음과 같이 다른 유형의 시나리오를 지원합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이외 구독자로 데이터 게시  
 

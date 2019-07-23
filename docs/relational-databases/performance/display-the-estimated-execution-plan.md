@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: e94aa576-4c0c-4c54-ad05-6c3432cc615b
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5f10a0a0fb1ce80ad8d6bc5018362669e7f26b
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4d0d5930734bb48c0914300a735f81e3ca2ced38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53373005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946864"
 ---
 # <a name="display-the-estimated-execution-plan"></a>예상 실행 계획 표시
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

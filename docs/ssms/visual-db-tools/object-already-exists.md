@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: f80735dd-06aa-4d69-b226-32dc57e3223f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 0859fdcd2ae5564e05427fda2bc2c2b09dcdda00
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: f3540ff97d0782aaf2d97760742848adfdcd1c93
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687582"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262289"
 ---
 # <a name="object-already-exists"></a>이미 존재하는 개체
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

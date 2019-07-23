@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 683e916810766430d9fe1c26f5473b709bb82d0b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 406b27b21d5c212815cd171ceff0ab308fb48aa9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907839"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

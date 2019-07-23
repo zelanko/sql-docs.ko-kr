@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d7b83d68999d18e368459f0e3623b4f40ab2b5d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: aded700366aa9109195efd7e0456b22bef51c680
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67679680"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262846"
 ---
 # <a name="step-through-transact-sql-code"></a>Transact-SQL 코드 단계별 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

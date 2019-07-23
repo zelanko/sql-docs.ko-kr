@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c0414147-7ffe-4f9a-908c-71c1b5201584
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: daf9cf035d526c3f4c40cdcec351db426dcb9dde
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 74682ee2b73d60f59e6da08895619494eaa73746
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939312"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>미리 정의된 복제 경고 구성(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

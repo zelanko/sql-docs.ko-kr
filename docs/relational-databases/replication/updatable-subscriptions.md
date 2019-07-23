@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8e9a13a0-6b24-47c6-9d83-3cbaf08f673d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d11def4fcc53c656c7b04679d4f3373e5eb2557b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d89c8a18804722a3d7727b56833c2513ec994518
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895254"
 ---
 # <a name="updatable-subscriptions"></a>업데이트할 수 있는 구독
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "47781071"
 |즉시 업데이트|구독자에서 데이터를 업데이트하기 위해 게시자 및 구독자를 연결해야 합니다.|  
 |지연 업데이트|구독자에서 데이터를 업데이트하기 위해 게시자 및 구독자를 연결할 필요가 없습니다. 오프라인 상태에서 업데이트한 다음 나중에 게시자와 구독자 간에 동기화할 수 있습니다.|  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **구독자 변경 내용 복제**  
  업데이트할 수 있어야 하는 각 구독자에 대한 **복제** 열에서 확인란을 선택합니다. **게시자에서 커밋** 열의 드롭다운 목록 상자에서 업데이트할 수 있는 구독자에 대한 적절한 옵션을 선택합니다.  
   

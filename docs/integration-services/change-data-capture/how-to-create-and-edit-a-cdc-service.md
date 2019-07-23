@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1b3d47a5-dc89-482d-bbc7-fff04f194c43
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 96e3ff941d431deb423cdd474d36846e8596798b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65fcfef4cbb28d8c07190dbd71819c89d269477e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011366"
 ---
 # <a name="how-to-create-and-edit-a-cdc-service"></a>CDC Service를 만들고 편집하는 방법
 

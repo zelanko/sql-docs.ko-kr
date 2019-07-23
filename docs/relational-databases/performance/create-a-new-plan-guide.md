@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e1ad78bb-4857-40ea-a0c6-dcf5c28aef2f
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 0bcd57b8f3a2c9d136968fd2903a7e591cc777e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f37f0189df126054626fdd4820368911b1fa5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946963"
 ---
 # <a name="create-a-new-plan-guide"></a>새 계획 지침 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
