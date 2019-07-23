@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6efbc87c-1c92-4e43-96a7-e0f30f1db185
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cd96a77a90086c894024a2d46f3497f2ae7f14ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 709ba2af4cc06f1a1ff2314115f163032bd4227e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044022"
 ---
 # <a name="drop-partition-scheme-transact-sql"></a>DROP PARTITION SCHEME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,12 +44,12 @@ DROP PARTITION SCHEME partition_scheme_name [ ; ]
   
 ## <a name="arguments"></a>인수  
  *partition_scheme_name*  
- 삭제할 파티션 스키마의 이름입니다.   
+ 삭제할 파티션 스키마의 이름입니다.  
   
 ## <a name="remarks"></a>Remarks  
  현재 파티션 스키마를 사용하는 테이블이나 인덱스가 없는 경우에만 파티션 스키마를 삭제할 수 있습니다. 파티션 스키마를 사용하는 테이블이나 인덱스가 있는 경우 DROP PARTITION SCHEME에서 오류를 반환합니다. DROP PARTITION SCHEME이 파일 그룹 자체를 제거하는 것은 아닙니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  DROP PARTITION SCHEME을 실행하는 데 다음 권한을 사용할 수 있습니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  

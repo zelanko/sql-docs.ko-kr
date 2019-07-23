@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15540837-c4bf-4d18-b380-13ae31f3226f
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: bdb9ed030baaaac3f414d5b3079844c09785b6cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e1600c9cf6ea4dbd540137ac53b9d34b65ea125
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101257"
 ---
 # <a name="hasm-geometry-datatype"></a>HasM(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

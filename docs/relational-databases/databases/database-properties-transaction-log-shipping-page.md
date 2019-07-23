@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 72c4e539-fe11-4d57-b977-65b418d5916f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c6f0113072c99872236273e4e0fde5e368b48b26
-ms.sourcegitcommit: 96b2355d54dfad259826e88bdff91cc9344e16f2
+ms.openlocfilehash: 8155524f6e5d8172092630c04dbb0540514b56ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51350457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099576"
 ---
 # <a name="database-properties-transaction-log-shipping-page"></a>데이터베이스 속성(트랜잭션 로그 전달 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "51350457"
   
  로그 전달 개념에 대한 설명은 [로그 전달 정보&#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)를 참조하세요.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **이 데이터베이스를 로그 전달 구성의 주 데이터베이스로 사용**  
  이 데이터베이스를 로그 전달 주 데이터베이스로 사용합니다. 이 옵션을 선택한 다음 페이지의 나머지 옵션을 구성합니다. 이 확인란의 선택을 취소하면 이 데이터베이스의 로그 전달 구성이 삭제됩니다.  
   

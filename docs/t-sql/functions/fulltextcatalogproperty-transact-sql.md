@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f841dc79-2044-4863-aff0-56b8bb61f250
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d337e1eb7d67da892d3588d6ffafd28205565b19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f5a83635d9c608d779631b61859082a6dccadc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940217"
 ---
 # <a name="fulltextcatalogproperty-transact-sql"></a>FULLTEXTCATALOGPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ _property_
 |**ImportStatus**|전체 텍스트 카탈로그를 가져올 것인지 여부를 나타냅니다.<br /><br /> 0 = 전체 텍스트 카탈로그를 가져오지 않습니다.<br /><br /> 1 = 전체 텍스트 카탈로그를 가져옵니다.|  
   
 ## <a name="return-types"></a>반환 형식  
-**ssNoversion**  
+**int**  
   
 ## <a name="exceptions"></a>예외  
 오류가 발생하거나 호출자에게 개체를 볼 수 있는 권한이 없으면 NULL을 반환합니다.  

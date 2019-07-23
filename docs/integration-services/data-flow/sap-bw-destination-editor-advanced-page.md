@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 862957db-bbc6-4dda-bc0e-591457f1baa7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 25dd99666eba44868859aed7a54e7c5b42cc8f7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3cbcc62403230787c6f57c2e8fa8a22ecbaa654
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034258"
 ---
 # <a name="sap-bw-destination-editor-advanced-page"></a>SAP BW 대상 편집기(고급 페이지)
 

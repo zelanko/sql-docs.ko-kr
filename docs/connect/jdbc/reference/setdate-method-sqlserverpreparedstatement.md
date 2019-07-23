@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f81e5203-71eb-407e-b71f-1bdc722887a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4181b6326d022de8fb224f9836450e4dbf601354
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc64a807ac219e5f726ec414ad13c9f7c83daca1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974390"
 ---
 # <a name="setdate-method-sqlserverpreparedstatement"></a>setDate 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

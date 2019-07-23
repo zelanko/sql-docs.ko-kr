@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 29bfd1c6-3f9a-43c4-924a-53d438e442f4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8fe6c479332a417a52c3d46084f0f221e345375c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 9354bf1c1539a7ba83f1af1eafdb27ed99041d76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000699"
 ---
 # <a name="specify-metaproperties-in-openxml"></a>OPENXML에 메타 속성 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ms.locfileid: "58511140"
 ## <a name="examples"></a>예  
  다음 예에서는 OPENXML을 사용하여 여러 행 집합 뷰를 만드는 방법을 보여 줍니다.  
   
-### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>1. OPENXML 행 집합 열을 메타 속성에 매핑  
+### <a name="a-mapping-the-openxml-rowset-columns-to-the-metaproperties"></a>1\. OPENXML 행 집합 열을 메타 속성에 매핑  
  이 예에서는 OPENXML을 사용하여 예제 XML 문서의 행 집합 뷰를 만듭니다. 특히 OPENXML 문에서 *ColPattern* 매개 변수를 사용하여 여러 가지 메타 속성 특성을 행 집합 열에 매핑할 수 있는 방법을 보여 줍니다.  
   
  OPENXML 문에서는 다음을 보여 줍니다.  
@@ -115,7 +114,7 @@ id   oid         date                amount    parentIDNo  parentLocalName
 25   O4    1996-01-20 00:00:00.000     10000.0     15       Customer  
 ```  
   
-### <a name="b-retrieving-the-whole-xml-document"></a>2. 전체 XML 문서 검색  
+### <a name="b-retrieving-the-whole-xml-document"></a>2\. 전체 XML 문서 검색  
  이 예에서는 OPENXML을 사용하여 예제 XML 문서를 하나의 열로 된 행 집합 뷰로 만듭니다. 이 열 **Col1**은 **xmltext** 메타 속성에 매핑되며 오버플로 열이 됩니다. 그 결과 열이 소비되지 않은 데이터를 수신합니다. 이 경우에는 전체 문서입니다.  
   
  그런 다음 SELECT 문은 완전한 행 집합을 반환합니다.  

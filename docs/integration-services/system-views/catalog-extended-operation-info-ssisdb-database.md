@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: db299b45-557d-4c62-8e14-355cdb051f63
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e77a6574bafaf743ebcc77721ac7e1b812fec974
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc3d2f043eb6aebcb9a7a60a80f7665eb98cd18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032486"
 ---
 # <a name="catalogextendedoperationinfo-ssisdb-database"></a>catalog.extended_operation_info(SSISDB 데이터베이스)
 
@@ -34,7 +33,7 @@ ms.locfileid: "65714607"
 |object_name|**nvarchar(260)**|개체 이름입니다.|  
 |object_type|**smallint**|작업의 영향을 받는 개체의 유형입니다. 개체는 폴더(`10`), 프로젝트(`20`), 패키지(`30`), 환경(`40`) 또는 실행 인스턴스(`50`)일 수 있습니다.|  
 |reference_id|**bigint**|작업에 사용된 참조의 고유 ID입니다.|  
-|상태|**ssNoversion**|작업의 상태입니다. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
+|상태|**int**|작업의 상태입니다. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
 |start_time|**datetimeoffset(7)**|작업이 시작된 날짜 및 시간입니다.|  
 |end_time|**datetimeoffset(7)**|작업이 종료된 날짜 및 시간입니다.|  
   

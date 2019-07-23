@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9e59dea663e0a18dd9a6b7505d3c4491f0e7128c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08be945b7703902e72fc92acd2a5462dbbe38fe3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049522"
 ---
 # <a name="data-flow"></a>데이터 흐름
 
@@ -175,7 +174,7 @@ ms.locfileid: "65727068"
  여러 데이터 흐름 구성 요소는 데이터 원본에 연결되며, 구성 요소를 제대로 구성하려면 구성 요소에 필요한 연결 관리자를 패키지에 추가해야 합니다. 연결 관리자는 데이터 흐름을 구성할 때나 데이터 흐름 구성을 시작하기 전에 추가할 수 있습니다. 자세한 내용은 [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md) 및 [연결 관리자 만들기](https://msdn.microsoft.com/library/6ca317b8-0061-4d9d-b830-ee8c21268345)를 참조하세요.  
   
 ## <a name="external-metadata"></a>외부 메타데이터  
- [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하여 패키지에 데이터 흐름을 만드는 경우 원본 및 대상의 메타데이터는 원본 및 대상의 외부 열로 복사되어 스키마에 대한 스냅숏으로 사용됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 패키지에 대한 유효성을 검사할 때 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 이 스냅숏을 원본 또는 대상의 스키마와 비교하고 변경된 내용에 따라 오류 및 경고를 게시합니다.  
+ [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너를 사용하여 패키지에 데이터 흐름을 만드는 경우 원본 및 대상의 메타데이터는 원본 및 대상의 외부 열로 복사되어 스키마에 대한 스냅샷으로 사용됩니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에서 패키지에 대한 유효성을 검사할 때 [!INCLUDE[ssIS](../../includes/ssis-md.md)] 디자이너는 이 스냅샷을 원본 또는 대상의 스키마와 비교하고 변경된 내용에 따라 오류 및 경고를 게시합니다.  
   
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 프로젝트는 오프라인 모드를 제공합니다. 오프라인에서 작업할 때는 패키지에 사용되는 원본 또는 대상에 대한 연결이 구성되지 않으며 외부 열에 대한 메타데이터가 업데이트되지 않습니다.  
   

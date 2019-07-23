@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: f2e3601f-487e-4917-bb01-47b1047908cd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 04ab74218fcea53d3f51a386d1d2637c346eded5
-ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
+ms.openlocfilehash: 23a3dd70b96aef4c24f3aa405ce428db5c7b2321
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67556993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026511"
 ---
 # <a name="countbig-transact-sql"></a>COUNT_BIG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

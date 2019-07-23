@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7ec1d24d-f732-44f3-9608-734ce2df4489
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d22f6c235650abb5c1f8893a97353adbea2b7ac8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 051ed3bd89ee2addae12460101221443b7ff54d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973672"
 ---
 # <a name="setnclob-method-sqlserverpreparedstatement"></a>setNClob 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

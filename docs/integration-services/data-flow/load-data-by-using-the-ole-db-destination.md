@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 78899498-725e-4300-a7af-f983f4ea384b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8f7a5a5258e1ff90568ce90a34e67b01bd22d4cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 190108f859280fa3656a4bc68c91ed48e5f22262
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941393"
 ---
 # <a name="load-data-by-using-the-ole-db-destination"></a>OLE DB 대상을 사용하여 데이터 로드
 

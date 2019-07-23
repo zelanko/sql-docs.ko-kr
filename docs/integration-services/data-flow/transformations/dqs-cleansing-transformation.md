@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d2ec1b1a-c745-4741-b57c-6fdb524a154c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9253eca362352a86baeac943eaf524b4b3f4c04f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b2435f1d3ca162e98eca8842ff66af23068cef9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726148"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112544"
 ---
 # <a name="dqs-cleansing-transformation"></a>DQS 정리 변환
 

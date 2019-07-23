@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ad49b2e0-a5e3-49d2-80fd-9f4eaa3652cb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 149fc4781c0a93db423a863c98f7eeaf0afcf2da
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 39183d699bfa27430a35012d353b8f3bc70d6be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034778"
 ---
 # <a name="lesson-1-basic-navigation-in-database-engine-tuning-advisor"></a>1단원: 데이터베이스 엔진 튜닝 관리자 기본 탐색
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,25 +35,25 @@ ms.locfileid: "67727612"
 SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)을 참조하세요.
 
   >[!NOTE]
-  > 이 자습서는 기본적인 데이터베이스 관리 작업 및 SQL Server Management Studio를 사용 하 여 친숙 한 사용자에 대 한 것입니다. 
+  > 이 자습서는 SQL Server Management Studio 및 기본적인 데이터베이스 관리 작업을 사용 하는 데 익숙한 사용자를 위한 것입니다. 
   
 
 ## <a name="launch-database-tuning-advisor"></a>데이터베이스 튜닝 관리자 시작 
 시작하려면 DTA(데이터베이스 엔진 튜닝 관리자) GUI(그래픽 사용자 인터페이스)를 엽니다. 처음 사용할 때는 **sysadmin** 고정 서버 역할의 멤버가 데이터베이스 엔진 튜닝 관리자를 시작하여 애플리케이션을 초기화해야 합니다. 초기화 후에는 **db_owner** 고정 데이터베이스 역할의 멤버가 데이터베이스 엔진 튜닝 관리자를 사용하여 자신이 소유한 데이터베이스를 튜닝할 수 있습니다. 데이터베이스 엔진 튜닝 관리자를 초기화하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)을 참조하세요.  
   
-1. SSMS(SQL Server Management Studio)를 시작합니다. Windows에서 **시작 메뉴**, 가리킨 **프로그램도** 찾아서 **SQL Server Management Studio**. 
-2. SSMS 열기를 선택 합니다 **도구** 선택한 메뉴 **데이터베이스 튜닝**합니다. 
+1. SSMS(SQL Server Management Studio)를 시작합니다. Windows **시작 메뉴**에서 **모든 프로그램** 을 가리키고 **SQL Server Management Studio**를 찾습니다. 
+2. SSMS가 열리면 **도구** 메뉴를 선택 하 고 **데이터베이스 튜닝 관리자**를 선택 합니다. 
 
-  ![SSMS에서 DTA를 실행 합니다.](media/dta-tutorials/launch-dta.png)
+  ![SSMS에서 DTA 시작](media/dta-tutorials/launch-dta.png)
 
-3. 데이터베이스 튜닝 관리자 시작 하 고 엽니다는 **서버에 연결** 대화 상자. 기본 설정을 확인 하 고 선택한 **Connect** SQL Server에 연결 합니다.  
+3. 데이터베이스 튜닝 관리자가 시작 되 고 **서버에 연결** 대화 상자가 열립니다. 기본 설정을 확인 한 다음 **연결** 을 선택 하 여 SQL Server에 연결 합니다.  
   
 기본적으로 데이터베이스 엔진 튜닝 관리자는 다음 그림에 있는 구성으로 열립니다.  
   
 ![데이터베이스 엔진 튜닝 관리자 기본 창](media/dta-tutorials/dta-default-gui.png)
   
 > [!NOTE]  
-> 합니다 **세션 모니터** 탭에는 연결 된 사용자 및 현재 데이터의 이름인 세션 이름을 표시 합니다. 
+> **세션 모니터** 탭에는 연결 된 사용자 및 현재 데이터의 이름인 세션 이름이 표시 됩니다. 
   
 데이터베이스 엔진 튜닝 관리자 GUI를 처음 열면 두 개의 주 창이 표시됩니다.  
   
@@ -65,7 +64,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
 > [!NOTE]
 > [!INCLUDE[tsql](../../includes/tsql-md.md)] 쿼리 편집기에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 스크립트를 가져올 때 데이터베이스 엔진 튜닝 관리자에서 XML 파일을 입력으로 사용할 수 있습니다. 자세한 내용은 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 데이터베이스 엔진 튜닝 관리자 시작 및 사용 [의](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md)쿼리 편집기에서 데이터베이스 엔진 튜닝 관리자 시작에 대한 섹션을 참조하세요.  
   
-## <a name="configure-tool-options-and-layout"></a>도구 옵션 및 레이아웃을 구성 합니다. 
+## <a name="configure-tool-options-and-layout"></a>도구 옵션 및 레이아웃 구성 
 
 1.  **도구** 메뉴에서 **옵션**을 클릭합니다.  
 

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5aec22ce-ae6f-4048-8a45-59ed05f04dc5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 333e4f7eb3177529f55a9be18aa1e042b10737c8
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 8348f5d0f77006697abec72b084b36cb7b24e1b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057939"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>변경 내용 추적 사용(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -266,7 +265,7 @@ BEGIN TRAN
 COMMIT TRAN  
 ```  
   
- 스냅숏 트랜잭션에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
+ 스냅샷 트랜잭션에 대한 자세한 내용은 [SET TRANSACTION ISOLATION LEVEL&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)을 참조하세요.  
   
 #### <a name="alternatives-to-using-snapshot-isolation"></a>스냅샷 격리 사용의 대체 방법  
  스냅샷 격리 사용의 대체 방법이 있지만 이 경우 모든 애플리케이션 요구 사항이 충족되려면 더 많은 작업이 필요합니다. *last_synchronization_version* 의 유효성을 유지하며 변경 내용을 가져오기 전에 정리 프로세스로 인해 데이터가 제거되지 않도록 하려면 다음을 수행합니다.  

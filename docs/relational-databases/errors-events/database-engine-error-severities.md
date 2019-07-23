@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3e7f5925-6edd-42e1-bf17-f7deb03993a7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7e1b6f54763bd4c454dfebb61bf8e8ef3d0c7b63
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 436945f79d862f50443455de1b74dcd927852e78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127041"
 ---
 # <a name="database-engine-error-severities"></a>데이터베이스 엔진 오류 심각도
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52511906"
 |심각도|설명|  
 |--------------------|-----------------|  
 |0-9|상태 정보를 반환하거나 심각하지 않은 오류를 보고하는 정보 메시지입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 심각도가 0 ~ 9인 경우 시스템 오류를 발생시키지 않습니다.|  
-|10|상태 정보를 반환하거나 심각하지 않은 오류를 보고하는 정보 메시지입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 호환성을 위해 오류 정보를 호출 응용 프로그램으로 반환하기 전에 심각도 10을 심각도 0으로 변환합니다.|  
+|10|상태 정보를 반환하거나 심각하지 않은 오류를 보고하는 정보 메시지입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서는 호환성을 위해 오류 정보를 호출 애플리케이션으로 반환하기 전에 심각도 10을 심각도 0으로 변환합니다.|  
 |11-16|사용자가 해결할 수 있는 오류를 나타냅니다.|  
 |11|지정한 개체 또는 엔터티가 없음을 나타냅니다.|  
 |12|특수한 쿼리 힌트로 인해 잠금을 사용하지 않는 쿼리에 대한 특수 심각도입니다. 일관성을 유지하는 기능인 잠금을 사용하지 않는 이러한 문으로 읽기 작업을 수행하면 데이터 일관성이 손상될 수 있습니다.|  

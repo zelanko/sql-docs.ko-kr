@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d2c145dc-d49a-4f5b-91e6-89a2b0adb4f3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6e2b2f9e434e1e88d893478c558078c8139e1bb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd160a4149e69a28f27f72876121a9a0552abdd6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085360"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>FILESTREAM과 기타 SQL Server 기능 간 호환성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "65094257"
   
 -   [암호화](#encryption)  
   
--   [데이터베이스 스냅숏](#DatabaseSnapshot)  
+-   [데이터베이스 스냅샷](#DatabaseSnapshot)  
   
 -   [복제](#Replication)  
   
@@ -58,8 +57,8 @@ ms.locfileid: "65094257"
 ##  <a name="encryption"></a> 암호화  
  투명한 데이터 암호화를 사용하는 경우에도 FILESTREAM 데이터는 암호화되지 않습니다.  
   
-##  <a name="DatabaseSnapshot"></a> 데이터베이스 스냅숏  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 FILESTREAM 파일 그룹에 대해 [데이터베이스 스냅숏](../../relational-databases/databases/database-snapshots-sql-server.md) 을 지원하지 않습니다. FILESTREAM 파일 그룹이 CREATE DATABASE ON 절에 들어 있으면 이 문이 실패하고 오류가 발생합니다.  
+##  <a name="DatabaseSnapshot"></a> 데이터베이스 스냅샷  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 FILESTREAM 파일 그룹에 대해 [데이터베이스 스냅샷](../../relational-databases/databases/database-snapshots-sql-server.md) 을 지원하지 않습니다. FILESTREAM 파일 그룹이 CREATE DATABASE ON 절에 들어 있으면 이 문이 실패하고 오류가 발생합니다.  
   
  FILESTREAM을 사용할 경우 FILESTREAM이 아닌 표준 파일 그룹의 데이터베이스 스냅샷을 만들 수 있습니다. FILESTREAM 파일 그룹은 이러한 데이터베이스 스냅샷에 대해 오프라인으로 표시됩니다.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3b278f5147cad9fbd86a5f1d241ea77b9b15017a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: da6d7934951b683976a1a55f116def120bc515a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000437"
 ---
 # <a name="tostring-database-engine"></a>ToString(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ string ToString  ( )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-transact-sql-example-in-a-table"></a>1. 테이블의 Transact-SQL 예  
+### <a name="a-transact-sql-example-in-a-table"></a>1\. 테이블의 Transact-SQL 예  
 다음 예에서는 `OrgNode` 열을 **hierarchyid** 데이터 형식 및 보다 읽기 쉬운 문자열 형식으로 모두 반환합니다.
   
 ```sql
@@ -88,7 +87,7 @@ OrgNode   Node
 ...  
 ```  
   
-### <a name="b-converting-transact-sql-values-without-a-table"></a>2. 테이블이 없는 Transact-SQL 값 변환  
+### <a name="b-converting-transact-sql-values-without-a-table"></a>2\. 테이블이 없는 Transact-SQL 값 변환  
 다음 코드 예에서는 `ToString`을 사용하여 **hierarchyid** 값을 문자열로 변환하고 `Parse`를 사용하여 문자열 값을 **hierarchyid**로 변환합니다.
   
 ```sql

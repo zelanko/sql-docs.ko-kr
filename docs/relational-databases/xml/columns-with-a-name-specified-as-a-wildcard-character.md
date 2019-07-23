@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d9551df1-5bb4-4c0b-880a-5bb049834884
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 261c58fd5849ea47109643ce80f4420e01ebe7f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f49fdac97f1a580a24bc50840ec58fc6efe0d65a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113059"
 ---
 # <a name="columns-with-a-name-specified-as-a-wildcard-character"></a>이름이 와일드카드 문자로 지정된 열
 

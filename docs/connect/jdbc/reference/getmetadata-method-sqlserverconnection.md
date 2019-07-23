@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 86223cb5-3bf4-489a-8c82-669a91764f2b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 21da83dd2ca7c5c85c2d98fe8d69061f0b3abc11
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4fdf49c68acd2ef1b1544ad02efcb4079ceeac67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981875"
 ---
 # <a name="getmetadata-method-sqlserverconnection"></a>getMetaData 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.sql.DatabaseMetaData getMetaData()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getMetaData 메서드는 java.sql.Connection 인터페이스의 getMetaData 메서드에 의해 지정 됩니다.  
+ 이 getMetaData 메서드는 getMetaData 인터페이스의 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 70f35566-30cf-47c6-8394-dfe5d71629d3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a7f6c4caca64f53dd08b4f13a46dd94b266f5df7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b07cc17344e27d82155ceaae8e55494deb0bd57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065677"
 ---
 # <a name="alter-endpoint-transact-sql"></a>ALTER ENDPOINT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47840091"
 -   엔드포인트 속성 변경  
   
 > [!NOTE]  
->  이 항목에서는 ALTER ENDPOINT의 구문과 인수에 대해 설명합니다. CREATE ENDPOINT와 ALTER ENDPOINT의 공통 인수에 대한 설명은 [CREATE ENDPOINT &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.  
+>  이 항목에서는 ALTER ENDPOINT의 구문과 인수에 대해 설명합니다. CREATE ENDPOINT와 ALTER ENDPOINT의 공통 인수에 대한 설명은 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.  
   
  네이티브 XML 웹 서비스(SOAP/HTTP 엔드포인트)는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터는 더 이상 사용되지 않습니다.  
   
@@ -100,7 +99,7 @@ FOR DATABASE_MIRRORING (
 ## <a name="arguments"></a>인수  
   
 > [!NOTE]  
->  다음은 ALTER ENDPOINT 관련 인수입니다. 나머지 인수에 대한 설명은 [CREATE ENDPOINT &amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.  
+>  다음은 ALTER ENDPOINT 관련 인수입니다. 나머지 인수에 대한 설명은 [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)를 참조하세요.  
   
  **AS** { **TCP** }  
  **ALTER ENDPOINT**를 사용하여 전송 프로프콜은 변경할 수 없습니다.  
@@ -123,12 +122,12 @@ FOR DATABASE_MIRRORING (
 >   
 >  RC4는 비교적 약한 알고리즘이고 AES는 비교적 강력한 알고리즘입니다. 그러나 AES는 RC4보다 속도가 훨씬 느립니다. 속도보다 보안의 우선 순위가 높은 경우 AES를 사용하는 것이 좋습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 엔드포인트 소유자이거나 ALTER ANY ENDPOINT 권한을 부여받아야 합니다.  
   
  기존 엔드포인트의 소유권을 변경하려면 ALTER AUTHORIZATION 문을 사용해야 합니다. 자세한 내용은 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)을 참조하세요.  
   
- 자세한 내용은 [GRANT 엔드포인트 사용 권한&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
+ 자세한 내용은 [GRANT 엔드포인트 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [DROP ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/drop-endpoint-transact-sql.md)   

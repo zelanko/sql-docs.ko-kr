@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 966b75b5-ca87-4203-8bf9-95c4e00cb0b5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 0e9ac1c3e0ff2298acf3b155d5b99189a80e30f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4fc71583bf972b2def20d78a69001f00d14966d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065831"
 ---
 # <a name="alter-database-scoped-credential-transact-sql"></a>ALTER DATABASE SCOPED CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +64,7 @@ ALTER DATABASE SCOPED CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>1. 데이터베이스 범위 자격 증명의 암호 변경  
+### <a name="a-changing-the-password-of-a-database-scoped-credential"></a>1\. 데이터베이스 범위 자격 증명의 암호 변경  
  다음 예에서는 `Saddles`라는 데이터베이스 범위 자격 증명에 저장된 암호를 변경합니다. 데이터베이스 범위 자격 증명에는 `RettigB` Windows 로그인과 해당 암호가 들어 있습니다. 새 암호는 SECRET 절을 사용하여 데이터베이스 범위 자격 증명에 추가됩니다.  
   
 ```  
@@ -74,7 +73,7 @@ ALTER DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'RettigB',
 GO  
 ```  
   
-### <a name="b-removing-the-password-from-a-credential"></a>2. 자격 증명에서 암호 제거  
+### <a name="b-removing-the-password-from-a-credential"></a>2\. 자격 증명에서 암호 제거  
  다음 예에서는 `Frames`라는 데이터베이스 범위 자격 증명에서 암호를 제거합니다. 데이터베이스 범위 자격 증명에는 `Aboulrus8` Windows 로그인과 해당 암호가 들어 있습니다. SECRET 옵션이 지정되지 않았기 때문에 문이 실행된 후에는 데이터베이스 범위 자격 증명 암호가 NULL이 됩니다.  
   
 ```  
