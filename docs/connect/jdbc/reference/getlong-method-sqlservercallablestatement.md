@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d6c1a8a4-5647-439f-87b8-310b6e9b778a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1173c54adc5a86a963d424f64a9ea7df35c30c33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd79beffea0558c68208c43a9f10633f9bb4c591
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66792965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982414"
 ---
 # <a name="getlong-method-sqlservercallablestatement"></a>getLong 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
