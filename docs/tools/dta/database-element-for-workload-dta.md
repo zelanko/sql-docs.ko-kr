@@ -1,5 +1,5 @@
 ---
-title: Database 요소 (DTA) 워크 로드에 대 한 | Microsoft Docs
+title: 작업 (DTA)의 Database 요소 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 112fca2a-37e5-4162-b2e7-b56eb8ab0c6f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b4b2192515fa9996761696c4450e2a9b08f12452
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: d34a50490c41d9d5611c2b9aaf157e4351d49858
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116920"
 ---
 # <a name="database-element-for-workload-dta"></a>Workload의 Database 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cda48c7e-9ce1-42c4-8fba-f6641cecb093
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 96b2f76ef208a92c014fe86c79914d659aff3d7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f072040dc4be3fd92af01e32232ee90bb0b52ad0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975745"
 ---
 # <a name="rollback-method-sqlserverconnection"></a>rollback 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

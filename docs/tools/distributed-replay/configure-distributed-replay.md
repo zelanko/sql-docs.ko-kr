@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4255b78991e557ab36d7d0f97ab9be0fed5194a3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023774"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,20 +164,20 @@ ms.locfileid: "67732108"
 </Options>  
 ```  
 
-### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>모드를 시퀀싱 하는 동기화를 사용 하 여 실행 하는 경우 가능한 문제
- 재생 기능을 표시 되는 "정지" 또는 재생 이벤트에 매우 느리게 진행 하는 문제가 발생할 수 있습니다. 재생 중인 추적 데이터 및/또는 복원된 대상 데이터베이스에 존재 하지 않는 이벤트에 의존 하는 경우이 현상이 발생할 수 있습니다. 
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>동기화 시퀀싱 모드로 실행 하는 경우 발생할 수 있는 문제
+ 재생 기능이 "정지"로 표시 되거나 이벤트를 매우 느리게 재생 하는 증상이 발생할 수 있습니다. 재생 중인 추적이 복원 된 대상 데이터베이스에 존재 하지 않는 데이터 및/또는 이벤트에 의존 하는 경우 이러한 현상이 발생할 수 있습니다. 
  
- 한 가지 예는 Service Broker 수신 WAITFOR 문에서 같이 WAITFOR를 사용 하는 캡처된 작업 합니다. 동기화 시퀀스 모드를 사용할 때 일괄 처리는 순차적으로 재생 됩니다. WAITFOR의 전체 기간 대기 데이터베이스 백업 후 원본 데이터베이스에 대해 발생 하는 삽입 하지만 추적 캡처를 재생 하기 전에 시작 될 경우 할 수도 있습니다 재생 중에 발급 된 WAITFOR 수신 합니다. WAITFOR 수신 중지 됩니다 후 재생할 수로 설정 하는 이벤트입니다. 이 WAITFOR 완료 될 때까지 Batch Requests/sec 성능 모니터 카운터를 0으로 재생 데이터베이스 대상 삭제 될 수 있습니다. 
+ 한 가지 예는 Service Broker의 WAITFOR RECEIVE 문에서와 같이 WAITFOR를 사용 하는 캡처된 워크 로드입니다. 동기화 시퀀싱 모드를 사용 하는 경우 일괄 처리는 순차적으로 재생 됩니다. 데이터베이스 백업 후에 원본 데이터베이스에 대 한 삽입이 발생 하지만 재생 캡처 추적이 시작 되기 전에 재생 중에 실행 된 WAITFOR RECEIVE는 WAITFOR의 전체 지속 시간을 기다려야 할 수 있습니다. WAITFOR 수신이 중단 될 때 재생 되도록 설정 되는 이벤트입니다. 그러면 WAITFOR가 완료 될 때까지 재생 데이터베이스 대상에 대 한 일괄 처리 요청/초 성능 모니터 카운터가 0으로 삭제 될 수 있습니다. 
  
- 이 문제를 방지 하려면 동기화 모드를 사용 하는 경우 다음을 수행 해야 합니다.
+ 이 동작을 방지 하려면 동기화 모드를 사용 해야 하는 경우 다음을 수행 해야 합니다.
  
-1.  정지 재생 대상으로 사용 하는 데이터베이스입니다.
+1.  재생 대상으로 사용할 데이터베이스를 정지 합니다.
 
-2.  완료 활동이 보류 중인 모든을 허용 합니다.
+2.  보류 중인 모든 작업이 완료 될 수 있도록 허용 합니다.
 
-3.  데이터베이스를 백업 하 고 백업이 완료를 허용 합니다.
+3.  데이터베이스를 백업 하 고 백업을 완료할 수 있도록 합니다.
 
-4.  Distributed replay 추적 캡처를 시작 하 고 일반 워크 로드를 다시 시작 합니다. 
+4.  Distributed replay 추적 캡처를 시작 하 고 일반 작업을 다시 시작 합니다. 
  
  
 ## <a name="see-also"></a>참고 항목  

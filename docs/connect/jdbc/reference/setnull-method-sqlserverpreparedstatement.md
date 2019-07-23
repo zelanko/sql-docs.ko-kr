@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 90dcd2f1-ad58-440c-8bf2-0f146fa727a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 04b4d49bcf877a827979685d346da990004e131f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bcfa1d8b17cf663130e617304ac0bdda46d9cac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973491"
 ---
 # <a name="setnull-method-sqlserverpreparedstatement"></a>setNull 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

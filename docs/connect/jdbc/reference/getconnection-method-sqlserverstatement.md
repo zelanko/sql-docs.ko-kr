@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6f341d0b-265a-415e-abe5-8f408fedbb21
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2792ce874ef039c570b0ba933f31ebba0c8b9478
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 62b60d2f35e1149f7f809f486f5a64e8bb99f45a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952681"
 ---
 # <a name="getconnection-method-sqlserverstatement"></a>getConnection 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final java.sql.Connection getConnection()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getConnection 메서드는 java.sql.Statement 인터페이스의 getConnection 메서드에 의해 지정 됩니다.  
+ 이 getConnection 메서드는 java. Statement 인터페이스의 getConnection 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

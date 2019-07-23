@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 546d77e2-723a-42ac-ba3f-fabf2395d376
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9681ddf0946627306a64c099d2df1c242d95bcbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0a76052ccf05927ebd598e2baa37fbf0229bf54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981389"
 ---
 # <a name="getnstring-method-javalangstring-sqlserverresultset"></a>getNString 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public java.lang.String getNString(java.lang.String columnLabel)
 ## <a name="remarks"></a>Remarks  
  이 getNString 메서드는 java.sql.SQLServerResultSet 인터페이스의 getNString 메서드에 의해 지정됩니다.  
   
- 값을 검색 하려면이 메서드를 사용할 수는 **nvarchar**를 **nchar**를 **nvarchar (max)** 를 **ntext**, 또는 **xml** 이 현재 행에서 열 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다. 이 메서드를 사용하여 다른 데이터 형식의 값을 검색하려고 하면 예외가 발생합니다.  
+ 이 메서드는이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 **nvarchar**, **nchar**, **nvarchar (max)** , **ntext**또는 **xml** 열의 값을 검색 하는 데 사용할 수 있습니다. 이 메서드를 사용하여 다른 데이터 형식의 값을 검색하려고 하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getNString 메서드 &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getnstring-method-sqlserverresultset.md)   

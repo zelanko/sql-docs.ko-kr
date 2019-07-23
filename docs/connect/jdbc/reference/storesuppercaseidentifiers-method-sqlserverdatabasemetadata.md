@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a622b748-d10b-4f02-afe3-fba4a5bca17b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50c77c8af4e71a41ce20565ebbb5081b796a7bdb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 17b42f50fe28ba9d727ea6c897280dcd36034038
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969881"
 ---
 # <a name="storesuppercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesUpperCaseIdentifiers 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean storesUpperCaseIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 storesUpperCaseIdentifiers 메서드는 java.sql.DatabaseMetaData 인터페이스의 storesUpperCaseIdentifiers 메서드에 의해 지정 됩니다.  
+ 이 storesUpperCaseIdentifiers 메서드는 storesUpperCaseIdentifiers 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

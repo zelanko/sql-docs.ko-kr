@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 240983e8-bd59-4bb1-a37a-5ba71f85fb72
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 63cee88e2cce4c9c704164deebfc5c36c442f6d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae69ea0bcbd77d509e541d34594560863af0475e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996923"
 ---
 # <a name="updatebyte-method-sqlserverresultset"></a>updateByte 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

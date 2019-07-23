@@ -1,5 +1,5 @@
 ---
-title: SQL 이스케이프 시퀀스를 사용 하 여 | Microsoft Docs
+title: SQL 이스케이프 시퀀스 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d029bf6b0a1e50bec104879a64d9411774ffeda5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005929"
 ---
 # <a name="using-sql-escape-sequences"></a>SQL 이스케이프 시퀀스 사용
 
@@ -112,7 +111,7 @@ JDBC 드라이버는 반환 매개 변수를 처리해야 하는지 여부에 �
 
 여기서 `procedure-name`은 저장 프로시저의 이름을 지정하고 `parameter`는 저장 프로시저 매개 변수를 지정합니다.  
   
-사용에 대 한 자세한 내용은 합니다 `call` 이스케이프 시퀀스 저장된 프로시저를 참조 하십시오 [저장 프로시저를 사용 하 여 문을 사용 하 여](../../connect/jdbc/using-statements-with-stored-procedures.md)입니다.  
+저장 프로시저에서 이스케이프 시퀀스를 `call` 사용 하는 방법에 대 한 자세한 내용은 [저장 프로시저와 함께 문 사용](../../connect/jdbc/using-statements-with-stored-procedures.md)을 참조 하세요.  
 
 ## <a name="outer-joins"></a>외부 조인
 

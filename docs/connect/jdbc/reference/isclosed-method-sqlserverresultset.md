@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6081aa34-fc88-4dd0-9a3f-05e8488219dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 935deba631fdebd5d118c399e498a30fe8c64144
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa1f768e79da36ce681b4096c64e5d46e21f5461
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977747"
 ---
 # <a name="isclosed-method-sqlserverresultset"></a>isClosed 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

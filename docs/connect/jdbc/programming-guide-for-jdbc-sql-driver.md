@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 99f0db69-ce1a-49cf-9c24-0b9abfa4e0c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 89a1a05011a641f233b637ace2ff02e33a74c6f4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db6b49afc2d7a152a2cc24d3b44f0754d043d177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956196"
 ---
 # <a name="programming-guide-for-jdbc-sql-driver"></a>JDBC SQL 드라이버 프로그래밍 가이드
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

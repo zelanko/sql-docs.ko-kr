@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993672"
 ---
 # <a name="default-php-data-types"></a>기본 PHP 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,7 +46,7 @@ PDO_SQLSRV 드라이버를 사용하여 데이터가 반환되는 경우 데이�
 |geography|스트림|이진<sup>3</sup>|  
 |geometry|스트림|이진<sup>3</sup>|  
 |image<sup>5</sup>|스트림<sup>2</sup>|이진<sup>3</sup>|  
-|ssNoversion|정수|8비트 문자<sup>1</sup>|  
+|int|정수|8비트 문자<sup>1</sup>|  
 |money|String|8비트 문자<sup>1</sup>|  
 |NCHAR|String|8비트 문자<sup>1</sup>|  
 |NUMERIC|String|8비트 문자<sup>1</sup>|  
@@ -84,7 +83,7 @@ PDO_SQLSRV 드라이버를 사용하여 데이터가 반환되는 경우 데이�
 
 6. nvarchar(max) 형식에 매핑되는 레거시 형식입니다.
 
-7.  sql_variant은 양방향 또는 출력 매개 변수에서 지원 되지 않습니다.
+7.  sql_variant는 양방향 또는 출력 매개 변수에서 지원 되지 않습니다.
 
 8.  varchar(max) 형식에 매핑되는 레거시 형식입니다.  
   

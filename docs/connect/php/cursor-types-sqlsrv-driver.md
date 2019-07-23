@@ -10,50 +10,49 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6452fc506814cdfdeee4f61085ec9a1ee0cededa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac090ad8831397bf31c0911ab8a8db21486528db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015108"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>커서 형식(SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-SQLSRV 드라이버를 사용하면 커서 유형에 따라 어떤 순서로든지 액세스할 수 있는 행이 있는 결과 집합을 만들 수 있습니다.  이 항목에서는 클라이언트 쪽 (버퍼 됨) 및 (버퍼링) 하는 서버 쪽 하겠습니다 커서입니다.  
+SQLSRV 드라이버를 사용하면 커서 유형에 따라 어떤 순서로든지 액세스할 수 있는 행이 있는 결과 집합을 만들 수 있습니다.  이 항목에서는 클라이언트 쪽 (버퍼링 된) 및 서버 쪽 (버퍼링 되지 않은) 커서에 대해 설명 합니다.  
   
 ## <a name="cursor-types"></a>커서 유형  
-결과 집합을 만들면 [sqlsrv_query](../../connect/php/sqlsrv-query.md) 또는 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md), 커서 유형을 지정할 수 있습니다. 기본적으로 결과 집합을 결과 집합의 끝에 도달할 때까지 첫 번째 행에서 시작 하는 한 번에 하나의 행을 이동할 수는 정방향 전용 커서 사용 됩니다.  
+[Sqlsrv_query](../../connect/php/sqlsrv-query.md) 또는 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md)를 사용 하 여 결과 집합을 만들 때 커서 유형을 지정할 수 있습니다. 기본적으로 앞 으로만 이동 가능한 커서가 사용 되므로 결과 집합의 끝에 도달할 때까지 한 번에 한 행씩 결과 집합의 첫 번째 행부터 이동할 수 있습니다.  
   
-순서에 관계 없이 결과 집합의 모든 행에 액세스할 수 있는 스크롤 가능한 커서를 설정 하는 결과 만들 수 있습니다. 다음 표에서에 전달 될 수 있는 값을 **Scrollable** sqlsrv_query sqlsrv_prepare의 옵션입니다.  
+스크롤 가능한 커서를 사용 하 여 결과 집합을 만들어 임의의 순서로 결과 집합의 모든 행에 액세스할 수 있습니다. 다음 표에서는 sqlsrv_query 또는 sqlsrv_prepare의 **스크롤할** 수 있는 옵션에 전달할 수 있는 값을 나열 합니다.  
   
 |옵션|설명|  
 |----------|---------------|  
-|SQLSRV_CURSOR_FORWARD|결과 집합을 결과 집합의 끝에 도달할 때까지 첫 번째 행에서 시작 하는 한 번에 하나의 행을 이동할 수 있습니다.<br /><br />기본 커서 형식입니다.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) 이 커서 유형과 함께 만들어진 결과 집합에 대 한 오류를 반환 합니다.<br /><br />**앞으로** 은 SQLSRV_CURSOR_FORWARD의 약식된 형태입니다.|  
-|SQLSRV_CURSOR_STATIC|있습니다 순서에 관계 없이 행에 액세스 해도 데이터베이스에 변경 내용이 반영 되지 것입니다.<br /><br />**정적** 은 SQLSRV_CURSOR_STATIC의 약식된 형태입니다.|  
-|SQLSRV_CURSOR_DYNAMIC|있습니다 순서에 관계 없이 행에 액세스 하 고 데이터베이스에 변경 내용이 반영 됩니다.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) 이 커서 유형과 함께 만들어진 결과 집합에 대 한 오류를 반환 합니다.<br /><br />**동적** 은 SQLSRV_CURSOR_DYNAMIC의 약식된 형태입니다.|  
-|SQLSRV_CURSOR_KEYSET|있습니다 순서에 관계 없이 행에 액세스할 수 있습니다. 그러나 행이 테이블에서 삭제되는 경우(값이 없는 삭제된 행은 반환됨) 키 집합 커서가 행 개수를 업데이트하지 않습니다.<br /><br />**키 집합** 은 SQLSRV_CURSOR_KEYSET의 약식된 형태입니다.|  
-|SQLSRV_CURSOR_CLIENT_BUFFERED|있습니다 순서에 관계 없이 행에 액세스할 수 있습니다. 클라이언트 쪽 커서 쿼리를 만듭니다.<br /><br />**버퍼링** 은 SQLSRV_CURSOR_CLIENT_BUFFERED의 약식된 형태입니다.|  
+|SQLSRV_CURSOR_FORWARD|결과 집합의 끝에 도달할 때까지 결과 집합의 첫 번째 행부터 시작 하 여 한 번에 한 행씩 이동할 수 있습니다.<br /><br />이는 기본 커서 유형입니다.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) 는이 커서 유형을 사용 하 여 만든 결과 집합에 대 한 오류를 반환 합니다.<br /><br />**forward** 는 SQLSRV_CURSOR_FORWARD의 축약 된 형태입니다.|  
+|SQLSRV_CURSOR_STATIC|를 사용 하면 순서에 관계 없이 행에 액세스할 수 있지만 데이터베이스의 변경 내용은 반영 되지 않습니다.<br /><br />**static** 은 SQLSRV_CURSOR_STATIC의 축약 된 형태입니다.|  
+|SQLSRV_CURSOR_DYNAMIC|모든 순서로 행에 액세스할 수 있으며 데이터베이스의 변경 내용을 반영 합니다.<br /><br />[sqlsrv_num_rows](../../connect/php/sqlsrv-num-rows.md) 는이 커서 유형을 사용 하 여 만든 결과 집합에 대 한 오류를 반환 합니다.<br /><br />**dynamic** 은 SQLSRV_CURSOR_DYNAMIC의 축약 된 형태입니다.|  
+|SQLSRV_CURSOR_KEYSET|순서에 관계 없이 행에 액세스할 수 있습니다. 그러나 행이 테이블에서 삭제되는 경우(값이 없는 삭제된 행은 반환됨) 키 집합 커서가 행 개수를 업데이트하지 않습니다.<br /><br />**키 집합** 은 SQLSRV_CURSOR_KEYSET의 축약 된 형태입니다.|  
+|SQLSRV_CURSOR_CLIENT_BUFFERED|순서에 관계 없이 행에 액세스할 수 있습니다. 클라이언트 쪽 커서 쿼리를 만듭니다.<br /><br />**버퍼링** 된 SQLSRV_CURSOR_CLIENT_BUFFERED의 축약 된 형태입니다.|  
   
-쿼리는 여러 결과 집합을 생성 하는 경우는 **Scrollable** 옵션은 모든 결과 집합에 적용 됩니다.  
+쿼리가 여러 결과 집합을 생성 하는 경우 **스크롤 가능한** 옵션이 모든 결과 집합에 적용 됩니다.  
   
-## <a name="selecting-rows-in-a-result-set"></a>결과 집합의 행 선택  
-결과 집합을 만든 후 사용할 수 있습니다 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md)를 [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md), 또는 [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) 행을 지정 합니다.  
+## <a name="selecting-rows-in-a-result-set"></a>결과 집합에서 행 선택  
+결과 집합을 만든 후에는 [sqlsrv_fetch](../../connect/php/sqlsrv-fetch.md), [sqlsrv_fetch_array](../../connect/php/sqlsrv-fetch-array.md)또는 [sqlsrv_fetch_object](../../connect/php/sqlsrv-fetch-object.md) 를 사용 하 여 행을 지정할 수 있습니다.  
   
-다음 표에서 값을 지정할 수 있습니다 합니다 *행* 매개 변수입니다.  
+다음 표에서는 *row* 매개 변수에 지정할 수 있는 값에 대해 설명 합니다.  
   
 |매개 변수|설명|  
 |-------------|---------------|  
-|SQLSRV_SCROLL_NEXT|다음 행을 지정합니다. 이 경우 기본 값을 지정 하지 않으면 합니다 *행* 스크롤 가능한 결과 집합에 대 한 매개 변수입니다.|  
-|SQLSRV_SCROLL_PRIOR|현재 행 앞에 있는 행을 지정합니다.|  
+|SQLSRV_SCROLL_NEXT|다음 행을 지정 합니다. 스크롤할 수 있는 결과 집합의 *행* 매개 변수를 지정 하지 않는 경우이 값이 기본값입니다.|  
+|SQLSRV_SCROLL_PRIOR|현재 행 앞의 행을 지정 합니다.|  
 |SQLSRV_SCROLL_FIRST|결과 집합에서 첫 번째 행을 지정합니다.|  
 |SQLSRV_SCROLL_LAST|결과 집합에서 마지막 행을 지정합니다.|  
-|SQLSRV_SCROLL_ABSOLUTE|지정 된 행을 지정 합니다 *오프셋* 매개 변수입니다.|  
-|SQLSRV_SCROLL_RELATIVE|지정 된 행을 지정 합니다 *오프셋* 현재 행에서 매개 변수입니다.|  
+|SQLSRV_SCROLL_ABSOLUTE|*Offset* 매개 변수를 사용 하 여 지정 된 행을 지정 합니다.|  
+|SQLSRV_SCROLL_RELATIVE|현재 행의 *offset* 매개 변수를 사용 하 여 지정 된 행을 지정 합니다.|  
   
 ## <a name="server-side-cursors-and-the-sqlsrv-driver"></a>서버 쪽 커서 및 SQLSRV 드라이버  
-다음 예제에서는 다양 한 커서의 결과 보여 줍니다. 이 예제에서는 줄 33 다른 커서를 지정 하는 세 가지 쿼리 문 처음을 볼 수 있습니다.  두 쿼리 문을 주석 처리 합니다. 프로그램을 실행할 때마다 47 줄에서 데이터베이스 업데이트의 효과 확인 하려면 다른 커서 유형을 사용 합니다.  
+다음 예에서는 다양 한 커서의 영향을 보여 줍니다. 예제의 33 줄에는 서로 다른 커서를 지정 하는 세 개의 쿼리 문 중 첫 번째가 표시 됩니다.  쿼리 문 중 두 개를 주석으로 처리 합니다. 프로그램을 실행할 때마다 다른 커서 유형을 사용 하 여 47 줄에 있는 데이터베이스 업데이트의 결과를 확인 합니다.  
   
 ```  
 <?php  
@@ -120,19 +119,19 @@ sqlsrv_close( $conn );
 ```  
   
 ## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>클라이언트 쪽 커서 및 SQLSRV 드라이버  
-클라이언트 쪽 커서는 버전 3.0에에서 추가 된 기능을 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 메모리에 설정 하는 전체 결과 캐시할 수 있습니다. 행 개수는 클라이언트 쪽 커서를 사용 하는 경우 쿼리를 실행 한 후 사용할 수 있습니다.  
+클라이언트 쪽 커서는 전체 결과 집합을 메모리에 캐시할 수 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 있는의 버전 3.0에 추가 된 기능입니다. 클라이언트 쪽 커서를 사용할 때 쿼리를 실행 한 후 행 수를 사용할 수 있습니다.  
   
-클라이언트 쪽 커서는 중소 규모의 결과 집합에 사용해야 합니다. 큰 결과 집합에 대 한 서버 쪽 커서를 사용 합니다.  
+클라이언트 쪽 커서는 중소 규모의 결과 집합에 사용해야 합니다. 많은 결과 집합에 대해 서버 쪽 커서를 사용 합니다.  
   
-쿼리는 버퍼를 전체 결과 집합을 보유 하기에 충분할 수 없으면 false를 반환 합니다. PHP 메모리 한도까지 버퍼 크기를 늘릴 수 있습니다.  
+버퍼가 전체 결과 집합을 저장할 수 있을 정도로 크지 않은 경우 쿼리는 false를 반환 합니다. PHP 메모리 한도까지 버퍼 크기를 늘릴 수 있습니다.  
   
-SQLSRV 드라이버를 사용 하 여 결과와 ClientBufferMaxKBSize 설정 집합을 보유 하는 버퍼의 크기를 구성할 수 있습니다 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)합니다. [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) ClientBufferMaxKBSize의 값을 반환 합니다. 또한 sqlsrv 사용 하 여 php.ini 파일에서 최대 버퍼 크기를 설정할 수 있습니다. ClientBufferMaxKBSize (예를 들어 sqlsrv 합니다. ClientBufferMaxKBSize = 1024)입니다.  
+SQLSRV 드라이버를 사용 하 여 [sqlsrv_configure](../../connect/php/sqlsrv-configure.md)에 대 한 ClientBufferMaxKBSize 설정을 사용 하 여 결과 집합을 보유 하는 버퍼의 크기를 구성할 수 있습니다. [sqlsrv_get_config](../../connect/php/sqlsrv-get-config.md) 는 ClientBufferMaxKBSize의 값을 반환 합니다. 또한 sqlsrv를 사용 하 여 php .ini 파일의 최대 버퍼 크기를 설정할 수 있습니다. ClientBufferMaxKBSize (예: sqlsrv) ClientBufferMaxKBSize = 1024).  
   
-다음 샘플을 보여 줍니다.  
+다음 샘플에서는 다음을 보여 줍니다.  
   
--   행 개수는 항상 클라이언트 쪽 커서를 사용할 수 있습니다.  
+-   클라이언트 쪽 커서에는 항상 행 수를 사용할 수 있습니다.  
   
--   클라이언트 쪽 커서 및 일괄 처리 문을 사용 합니다.  
+-   클라이언트 쪽 커서 및 일괄 처리 문 사용.  
   
 ```  
 <?php  
@@ -190,7 +189,7 @@ echo "Employee ID = $EmployeeID \n";
 ?>  
 ```  
   
-다음 샘플에서는 사용 하 여 클라이언트 쪽 커서 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 와 다른 클라이언트 버퍼 크기입니다.
+다음 샘플에서는 [sqlsrv_prepare](../../connect/php/sqlsrv-prepare.md) 를 사용 하는 클라이언트 쪽 커서와 다른 클라이언트 버퍼 크기를 보여 줍니다.
   
 ```  
 <?php  

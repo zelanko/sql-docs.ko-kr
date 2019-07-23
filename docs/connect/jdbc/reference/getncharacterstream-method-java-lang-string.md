@@ -1,5 +1,5 @@
 ---
-title: getNCharacterStream 메서드 (java.lang.String) | Microsoft Docs
+title: getNCharacterStream 메서드 () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 45d2695b-0727-419d-8921-a51d6feef0aa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f46093aa08e6fcdbc769d76b11ca998744eed2e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc5e5e72c4b1aedcc9e10ef74ff2946f2fb2d588
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981625"
 ---
 # <a name="getncharacterstream-method-javalangstring"></a>getNCharacterStream 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,15 +35,15 @@ public final java.io.Reader getNCharacterStream(java.lang.String columnLabel)
  열 레이블이 포함된 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- AReaderobject 합니다.  
+ AReaderobject입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 에 액세스할 때이 메서드를 사용할지 **NCHAR**, **NVARCHAR** 하 고 **LONGNVARCHAR** 매개 변수입니다.  
+ **NCHAR**, **NVARCHAR** 및 **LONGNVARCHAR** 매개 변수에 액세스할 때이 메서드를 사용 해야 합니다.  
   
- 이 getNCharacterStream 메서드는 java.sql.CallableStatement 인터페이스의 getNCharacterStream 메서드에 의해 지정 됩니다.  
+ 이 getNCharacterStream 메서드는 getNCharacterStream 메서드를 통해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getNCharacterStream 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)   

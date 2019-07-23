@@ -1,5 +1,5 @@
 ---
-title: setAsciiStream 메서드 입력 스트림의 바이트-int를 | Microsoft Docs
+title: 스트림 바이트를 입력 하는 setAsciiStream 메서드-int | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6ea23386-201f-41af-8232-225de3476765
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2da554800f8700cf6b35e43db215f2bfa32149c0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f4ebed9ebad158ea445e726e8d0dbe0b60f57930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765178"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975502"
 ---
 # <a name="setasciistream-method--javalangstring-javaioinputstream-int"></a>setAsciiStream 메서드(java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public void setAsciiStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setAsciiStream 메서드는 java.sql.CallableStatement 인터페이스의 setAsciiStream 메서드에 의해 지정 됩니다.  
+ 이 setAsciiStream 메서드는 setAsciiStream 메서드를 통해 지정 됩니다.  
   
  스트림의 길이가 *length* 매개 변수에 지정된 길이와 다르면 행이 업데이트되거나 삽입될 때 JDBC 드라이버에서 예외가 발생합니다.  
   

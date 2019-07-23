@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2d286046f40ea96863302b97d2c1d8289985dab2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3a2d4faf6f66942cb8f1053bd7323a77795229d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916619"
 ---
 # <a name="understanding-row-locking"></a>행 잠금에 대한 개요
 

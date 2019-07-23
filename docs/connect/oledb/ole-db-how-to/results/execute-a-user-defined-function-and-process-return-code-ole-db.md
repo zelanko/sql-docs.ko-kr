@@ -1,6 +1,6 @@
 ---
 title: 사용자 정의 함수 실행 및 반환 코드 처리(OLE DB) | Microsoft Docs
-description: 사용자 정의 함수 및 프로세스 반환 코드를 SQL Server 용 OLE DB 드라이버를 사용 하 여 실행
+description: SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 사용자 정의 함수를 실행 하 고 반환 코드를 처리 합니다.
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - user-defined functions [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6ba52aeb855abd7e5d6325dd6de743f28f402993
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8964bb97acef2a26f65740522f5f5a05aa7a9810
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994747"
 ---
 # <a name="execute-a-user-defined-function-and-process-return-code-ole-db"></a>사용자 정의 함수 실행 및 반환 코드 처리(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

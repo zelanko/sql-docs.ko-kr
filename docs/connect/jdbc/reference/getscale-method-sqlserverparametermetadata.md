@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7b8d8d9c-74aa-4e6e-88f1-2fc5c74004ae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2526d43416382f5cf46cb9b0be1d745487a67848
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 29c2da8d8b6645ec9d5186f79db80b03626b2978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980198"
 ---
 # <a name="getscale-method-sqlserverparametermetadata"></a>getScale 메서드(SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getScale(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getScale 메서드는 java.sql.ParameterMetaData 인터페이스의 getScale 메서드에 의해 지정 됩니다.  
+ 이 getScale 메서드는 java. ParameterMetaData 인터페이스의 getScale 메서드에 의해 지정 됩니다.  
   
  이 메서드는 열의 소수점 이하 자릿수를 가져옵니다. 소수점이 없는 형식의 경우 이 메서드는 "0"을 반환합니다.  
   
