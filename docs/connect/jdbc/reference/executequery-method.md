@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1d90407f-16df-4ba2-b4a5-47d5751e1d7c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9d5374aeef43632fe82ac85b021e6a2a473a5d5d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1f80cceb8807fc643e197d06ae737ee7347e1be1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954768"
 ---
 # <a name="executequery-method-"></a>executeQuery 메서드()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 21b22c1c3f26112cf6232eb314eeb8f8c330ee03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e113ccb9b94c6bae953cb330072c8a6f7bfea9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912798"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>.dacpac 파일 추출, 게시 및 등록
 이 항목에서는 SQL Server 개체 탐색기에서 연결된 데이터베이스를 마우스 오른쪽 단추로 클릭하여 수행할 수 있는 네 가지 절차에 대해 설명합니다.  

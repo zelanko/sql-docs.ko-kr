@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 04588807-21e7-4bbe-9727-b72f692cffa7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b583be423e6f70fa23ae105082fe0b39f221072f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53691231f08e9ac9fe97807d062c7fed39746a7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939415"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>복제된 데이터베이스 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "62665105"
 ## <a name="backup-and-restore-strategies"></a>백업 및 복원 전략  
  복제 토폴로지의 각 노드를 백업하고 복원하는 전략은 사용하는 복제 유형에 따라 달라집니다. 각 복제 유형의 백업 및 복원 전략에 대한 자세한 내용은 다음 항목을 참조하십시오.  
   
--   [스냅숏 및 트랜잭션 복제의 백업 및 복원을 위한 전략](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
+-   [스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md)  
   
 -   [병합 복제 백업 및 복원 전략](../../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-merge-replication.md)  
   

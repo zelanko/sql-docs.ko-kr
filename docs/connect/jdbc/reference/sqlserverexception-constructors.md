@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8d0173778acb15fe9588eb5959b7fd03c5391767
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 963eb40a05206125fe6d941af4af6b4fade2197e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971037"
 ---
 # <a name="sqlserverexception-constructors"></a>SQLServerException 생성자
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  새 인스턴스를 초기화 합니다 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스입니다.
+  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스의 새 인스턴스를 초기화 합니다.
 
-  멤버에 대 한 자세한 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)를 참조 하십시오 [SQLServerException 멤버](../../../connect/jdbc/reference/sqlserverexception-members.md)합니다.  
+  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)의 멤버에 대 한 자세한 내용은 [SQLServerException members](../../../connect/jdbc/reference/sqlserverexception-members.md)를 참조 하십시오.  
   
   

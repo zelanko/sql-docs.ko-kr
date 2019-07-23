@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 1f7c970293a68e1ecf4df19ac70bb0e7e1ba303a
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.openlocfilehash: 8d2ea60a1babc5cc0869586db13a7dfcb39c6277
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67232551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117349"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -153,11 +152,11 @@ CREATE QUEUE <object>
 |conversation_handle|**uniqueidentifier**|이 메시지가 속하는 대화의 핸들입니다.|  
 |message_sequence_number|**bigint**|대화 내의 메시지 시퀀스 번호입니다.|  
 |service_name|**nvarchar(512)**|대화와 연관된 서비스의 이름입니다.|  
-|service_id|**ssNoversion**|대화와 연관된 서비스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
+|service_id|**int**|대화와 연관된 서비스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |service_contract_name|**nvarchar(256)**|대화에서 준수하는 계약의 이름입니다.|  
-|service_contract_id|**ssNoversion**|대화에서 준수하는 계약의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
+|service_contract_id|**int**|대화에서 준수하는 계약의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |message_type_name|**nvarchar(256)**|메시지를 설명하는 메시지 유형의 이름입니다.|  
-|message_type_id|**ssNoversion**|메시지를 설명하는 메시지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
+|message_type_id|**int**|메시지를 설명하는 메시지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |validation|**nchar(2)**|메시지에 사용된 유효성 검사입니다.<br /><br /> E=비어 있음<br /><br /> N=없음<br /><br /> X=XML|  
 |message_body|**varbinary(max)**|메시지 내용입니다.|  
 |message_id|**uniqueidentifier**|메시지의 고유 식별자입니다.|  

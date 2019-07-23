@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: b3fd6813d68dd1562a001206d759ebd09f34ef12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 384647c51e738bf96335ac481fcc250476748ae2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025604"
 ---
 # <a name="server-memory-server-configuration-options"></a>서버 메모리 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "66771914"
 **max server memory** 에 지정할 수 있는 최소 메모리 양은 128MB입니다.
   
 > [!IMPORTANT]  
-> **max server memory** 값을 너무 높게 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 단일 인스턴스가 동일한 호스트에서 호스팅되는 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 메모리를 경쟁해야 할 수 있습니다. 그러나 이 값을 너무 낮게 설정하면 메모리 부족 및 성능 문제가 발생할 수 있습니다. **max server memory** 를 최소값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작하지 못할 수도 있습니다. 이 옵션을 변경한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작할 수 없으면 ** _–f_** 시작 옵션을 사용하여 시작하고 **최대 서버 메모리**를 이전 값으로 다시 설정합니다. 자세한 내용은 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)을(를) 참조하세요.  
+> **max server memory** 값을 너무 높게 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 단일 인스턴스가 동일한 호스트에서 호스팅되는 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 메모리를 경쟁해야 할 수 있습니다. 그러나 이 값을 너무 낮게 설정하면 메모리 부족 및 성능 문제가 발생할 수 있습니다. **max server memory** 를 최소값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작하지 못할 수도 있습니다. 이 옵션을 변경한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작할 수 없으면 **_–f_** 시작 옵션을 사용하여 시작하고 **최대 서버 메모리**를 이전 값으로 다시 설정합니다. 자세한 내용은 [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md)을(를) 참조하세요.  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리를 동적으로 사용할 수 있지만 메모리 옵션을 수동으로 설정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 액세스할 수 있는 메모리 양을 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 메모리 양을 설정하기 전에 OS, max_server_memory setting에 의해 제어되지 않는 메모리 할당, 기타 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(컴퓨터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 전용이 아닌 경우 다른 시스템 사용)에 필요한 메모리를 총 실제 메모리에서 빼서 적합한 메모리 설정을 결정합니다. 이러한 차이 값이 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 할당할 수 있는 최대 메모리 양입니다.  
  
@@ -56,7 +55,7 @@ ms.locfileid: "66771914"
   
 <a name="max_server_memory"></a> OS가 유해 메모리 압력을 겪지 않도록 **max_server_memory**를 사용합니다. 최대 서버 메모리 구성을 설정하려면 메모리 요구 사항을 결정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 전체 소비량을 모니터링합니다. 단일 인스턴스에 대해 이러한 계산을 통해보다 정확한 결과를 얻으려면
  -  전체 OS 메모리에서 1GB-4GB를 OS에 예약합니다.
- -  그런 다음,  **_스택 크기 <sup>1</sup> \* 계산된 최대 작업자 스레드 수 <sup>2</sup> + -g 시작 매개 변수 <sup>3</sup>_ **(또는 *-g*가 설정되지 않은 경우 기본적으로 256MB)으로 구성된 **최대 서버 메모리** 컨트롤 외부의 잠재적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 할당량을 뺍니다. 남은 일은 단일 인스턴스 설정을 위한 max_server_memory를 설정하는 것입니다.
+ -  그런 다음,  **_스택 크기 <sup>1</sup> \* 계산된 최대 작업자 스레드 수 <sup>2</sup> + -g 시작 매개 변수 <sup>3</sup>_** (또는 *-g*가 설정되지 않은 경우 기본적으로 256MB)으로 구성된 **최대 서버 메모리** 컨트롤 외부의 잠재적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 할당량을 뺍니다. 남은 일은 단일 인스턴스 설정을 위한 max_server_memory를 설정하는 것입니다.
  
 <sup>1</sup> 아키텍처당 스레드 스택 크기에 대한 내용은 [ 메모리 관리 아키텍처 가이드 ](../../relational-databases/memory-management-architecture-guide.md#stacksizes)를 참조하세요.
 

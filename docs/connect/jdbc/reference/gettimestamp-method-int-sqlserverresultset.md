@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ad538a76-983f-4175-9481-9e7fa9480c71
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a404b80c855fa866f55114431dbb0e8fc2bb476e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 61f978432deffbddbee3e0413aeba54b9c1c4635
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978865"
 ---
 # <a name="gettimestamp-method-int-sqlserverresultset"></a>getTimestamp 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Timestamp getTimestamp(int columnIndex)
  열 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 타임 스탬프 개체입니다.  
+ Timestamp 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

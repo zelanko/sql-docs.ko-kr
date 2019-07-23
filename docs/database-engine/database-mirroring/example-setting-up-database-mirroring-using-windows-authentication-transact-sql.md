@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 42f706ed9b7975c73f6c24b3f7e828ab077c8776
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b30804974d472f06dc2ab5971d4d3f7674c61e16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997883"
 ---
 # <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>예: Windows 인증을 사용하여 데이터베이스 미러링 설정(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

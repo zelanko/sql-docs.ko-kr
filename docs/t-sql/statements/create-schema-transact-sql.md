@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: df74fc36-20da-4efa-b412-c4e191786695
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d9b2fad9fc09736a335e8fc5797cda836f907191
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 365abc8df7c64650e3be6c79bcd00725149ec25d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117297"
 ---
 # <a name="create-schema-transact-sql"></a>CREATE SCHEMA(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -130,7 +129,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ## <a name="deprecation-notice"></a>사용 중단 고지 사항  
  스키마 이름을 지정하지 않는 CREATE SCHEMA 문은 이전 버전과의 호환성을 위해 현재 지원됩니다. 이 문은 데이터베이스 내부에 실제로 스키마를 만들지는 않지만 테이블과 뷰를 만들고 사용 권한을 부여합니다. 스키마가 생성되지 않기 때문에 보안 주체에게는 이러한 이전 형식의 CREATE SCHEMA를 실행하는 데 CREATE SCHEMA 권한이 필요하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음번 릴리스에서는 이 기능이 제거될 예정입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CREATE SCHEMA 권한이 필요합니다.  
   
  CREATE SCHEMA 문 내에서 지정한 개체를 만들려면 사용자에게 해당 CREATE 권한이 있어야 합니다.  
@@ -142,7 +141,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-schema-and-granting-permissions"></a>1. 스키마 만들기 및 사용 권한 부여  
+### <a name="a-creating-a-schema-and-granting-permissions"></a>1\. 스키마 만들기 및 사용 권한 부여  
  다음 예에서는 `Sprockets`가 소유하고 `Annik` 테이블을 포함하는 `NineProngs` 스키마를 만듭니다. 이 문에서는 `SELECT`에게 `Mandar` 권한을 부여하고 `SELECT`에게는 `Prasanna` 권한을 거부합니다. `Sprockets` 및 `NineProngs`는 단일 문으로 생성됩니다.  
   
 ```  
@@ -157,7 +156,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>2. 스키마 및 스키마에 테이블 만들기  
+### <a name="b-creating-a-schema-and-a-table-in-the-schema"></a>2\. 스키마 및 스키마에 테이블 만들기  
  다음 예에서는 `Sales` 스키마를 만든 다음, 해당 스키마에 `Sales.Region` 테이블을 만듭니다.  
   
 ```  
@@ -171,7 +170,7 @@ WITH (DISTRIBUTION = REPLICATE);
 GO  
 ```  
   
-### <a name="c-setting-the-owner-of-a-schema"></a>3. 스키마 소유자 설정  
+### <a name="c-setting-the-owner-of-a-schema"></a>C. 스키마 소유자 설정  
  다음 예에서는 `Mary`가 소유한 `Production` 스키마를 만듭니다.  
   
 ```  

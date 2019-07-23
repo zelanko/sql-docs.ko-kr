@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8851faa6-e6df-4ea5-a6ea-2a3471680fa3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7dadf635e055a06a8f86349c73d4921c124f7f4c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7875347d1bc002f32721c00ac1ad470b5ec75281
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018721"
 ---
 # <a name="optimize-merge-replication-performance-with-download-only-articles"></a>다운로드 전용 아티클로 병합 복제 성능 최적화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

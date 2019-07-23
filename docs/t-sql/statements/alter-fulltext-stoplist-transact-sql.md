@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: f6ad87d5-6a34-435a-8456-8244947c5c83
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: fb0a6c02a3211c029c311f07a91da9b26842fc4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 692f62c6a5b9d6268a27de350a860c0cb58c74bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067550"
 ---
 # <a name="alter-fulltext-stoplist-transact-sql"></a>ALTER FULLTEXT STOPLIST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
 |------------|-----------------|  
 |String|*language_term*은 [sys.syslanguages (Transact-SQL)](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) 호환성 뷰의 **alias** 열 값에 해당합니다. 문자열은 **'***language_term***'** 과 같이 작은따옴표로 묶어야 합니다.|  
 |정수|*language_term*은 언어의 LCID입니다.|  
-|Hexadecimal|*language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 선행 0을 포함하여 8자리 수를 초과할 수 없습니다. 값이 DBCS(더블바이트 문자 집합) 형식인 경우 SQL Server에서는 값을 유니코드로 변환합니다.|  
+|Hexadecimal|*language_term*은 0x로 시작하는 16진수 LCID 값입니다. 16진수 값은 앞에 오는 0을 포함하여 8자리 수를 초과할 수 없습니다. 값이 DBCS(더블바이트 문자 집합) 형식인 경우 SQL Server에서는 값을 유니코드로 변환합니다.|  
   
  ADD **'***stopword***'** LANGUAGE *language_term*  
  LANGUAGE *language_term*으로 지정된 언어의 중지 목록에 중지 단어를 추가합니다.  
@@ -90,7 +89,7 @@ ALTER FULLTEXT STOPLIST stoplist_name
 ## <a name="remarks"></a>Remarks  
  CREATE FULLTEXT STOPLIST는 호환성 수준 100 이상에만 지원됩니다. 호환성 수준 80 및 90의 경우 시스템 중지 목록이 항상 데이터베이스에 할당됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  중지 목록을 데이터베이스의 기본 중지 목록으로 지정하려면 ALTER DATABASE 사용 권한이 필요합니다. 그렇지 않고 중지 목록을 변경하려면 중지 목록의 소유자이거나 **db_owner** 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버 자격이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

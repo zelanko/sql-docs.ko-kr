@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 926c88d7-a844-402f-bcb9-db49e5013b69
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c82c9913b75ca363d4ace1413c0c4413989c116a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: db839c3afa5b3188a7a37f0575f23d3f9ebadce7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47605371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081730"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>게시 데이터베이스의 스키마 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -109,7 +108,7 @@ ms.locfileid: "47605371"
   
 -   삭제할 열은 데이터베이스에 있는 모든 게시 아티클의 필터 절에 사용할 수 없습니다.  
   
--   다음과 같이 게시된 아티클에서 열을 삭제할 때는 데이터베이스에 영향을 줄 수 있는 열의 제약 조건, 인덱스 또는 속성을 예를 들어 다음과 같이 사용할 수 있습니다.  
+-   다음과 같이 게시된 아티클에서 열을 삭제할 때는 데이터베이스에 영향을 줄 수 있는 열의 제약 조건, 인덱스 또는 속성을 예를 들어  
   
     -   트랜잭션 게시 아티클에서 기본 키에 사용되는 열은 복제에 사용되므로 삭제할 수 없습니다.  
   

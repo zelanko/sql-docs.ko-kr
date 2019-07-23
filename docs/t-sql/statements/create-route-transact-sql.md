@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 7e695364-1a98-4cfd-8ebd-137ac5a425b3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a8c027df69ca11c88c82195c2d621ecd33f470d6
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: b70035a1fc54d4b59978a3256b2ed3040ba4e8f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421151"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006512"
 ---
 # <a name="create-route-transact-sql"></a>CREATE ROUTE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -67,10 +66,10 @@ WITH
  의 모든 멘션을  
  생성할 경로를 정의하는 절을 보여 줍니다.  
   
- SERVICE_NAME = **'**_service\_name_**'**  
+ SERVICE_NAME = **'** _service\_name_ **'**  
  이 경로가 가리키는 원격 서비스 이름을 지정합니다. *service_name*은 원격 서비스에서 사용되는 이름과 정확히 일치해야 합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 바이트 단위로 비교하여 일치하는 *service_name*을 찾습니다. 즉, 비교 시 대/소문자가 구분되고 현재 데이터 정렬은 고려되지 않습니다. SERVICE_NAME을 생략하면 이 경로는 서비스 이름과 일치하지만 SERVICE_NAME을 지정하는 경로보다 일치에 대한 우선 순위가 낮습니다. 서비스 이름이 **‘SQL/ServiceBroker/BrokerConfiguration’** 인 경로는 Broker Configuration Notice 서비스에 대한 경로입니다. 이 서비스에 대한 경로에서 broker 인스턴스를 지정하지 않을 수 있습니다.  
   
- BROKER_INSTANCE = **'**_broker\_instance\_identifier_**'**  
+ BROKER_INSTANCE = **'** _broker\_instance\_identifier_ **'**  
  대상 서비스를 호스팅하는 데이터베이스를 지정합니다. *broker_instance_identifier* 매개 변수는 선택한 데이터베이스에서 다음 쿼리를 실행하여 가져올 수 있는 원격 데이터베이스의 Broker 인스턴스 식별자여야 합니다.  
   
 ```  
@@ -81,15 +80,15 @@ WHERE database_id = DB_ID()
   
  BROKER_INSTANCE 절을 생략하면 이 경로는 Broker 인스턴스와 일치합니다. Broker 인스턴스와 일치하는 경로는 대화에서 Broker 인스턴스를 지정하지 않는 경우 명시적 Broker 인스턴스를 갖는 경로보다 일치에 대한 우선 순위가 높습니다. Broker 인스턴스를 지정하는 대화의 경우 Broker 인스턴스가 있는 경로는 Broker 인스턴스와 일치하는 경로보다 우선 순위가 높습니다.  
   
- LIFETIME **=**_route\_lifetime_  
+ LIFETIME **=** _route\_lifetime_  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 라우팅 테이블에 경로를 유지하는 시간(초)을 지정합니다. 수명이 다되어 경로가 만료되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 새 대화를 위한 경로를 선택할 때 더 이상 해당 경로를 고려하지 않습니다. 이 절을 생략하면 *route_lifetime*은 NULL이고 경로는 만료되지 않습니다.  
   
- ADDRESS **='**_next\_hop\_address_**'**  
+ ADDRESS **='** _next\_hop\_address_ **'**  
 SQL Database 관리되는 인스턴스의 경우 `ADDRESS`는 로컬이어야 합니다. 
 
 이 경로에 대한 네트워크 주소를 지정합니다. *next_hop_address*는 다음과 같은 형식으로 TCP/IP 주소를 지정합니다.  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:**_port\_number_  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** _port\_number_  
   
  지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
@@ -107,10 +106,10 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  경로에 *next_hop_address*가 **‘TRANSPORT’** 로 지정되어 있으면 네트워크 주소는 서비스 이름의 네트워크 주소를 기준으로 결정됩니다. **‘TRANSPORT’** 를 지정하는 경로는 서비스 이름이나 broker 인스턴스를 지정하지 않을 수 있습니다.  
   
- MIRROR_ADDRESS **='**_next\_hop\_mirror\_address_**'**  
+ MIRROR_ADDRESS **='** _next\_hop\_mirror\_address_ **'**  
  *next_hop_address*에서 호스팅되는 미러된 데이터베이스 하나로 미러된 데이터베이스의 네트워크 주소를 지정합니다. *next_hop_mirror_address*는 다음과 같은 형식으로 TCP/IP 주소를 지정합니다.  
   
- **TCP://**{ *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
+ **TCP://** { *dns_name* | *netbios_name* | *ip_address* } **:** *port_number*  
   
  지정된 *port_number*는 지정된 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 엔드포인트의 포트 번호와 일치해야 합니다. 선택한 데이터베이스에서 다음 쿼리를 실행하여 얻을 수 있습니다.  
   
@@ -137,12 +136,12 @@ WHERE ssbe.name = N'MyServiceBrokerEndpoint';
   
  경로는 임시 개체가 아닐 수 있습니다. 경로 이름은 **#** 으로 시작할 수 있지만 영구 개체입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  경로 생성 권한은 기본적으로 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할 및 **sysadmin** 고정 서버 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>1. DNS 이름을 사용하여 TCP/IP 경로 만들기  
+### <a name="a-creating-a-tcpip-route-by-using-a-dns-name"></a>1\. DNS 이름을 사용하여 TCP/IP 경로 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 서비스에 대한 경로를 만듭니다. 경로는 이 서비스에 대한 메시지가 TCP를 통해 DNS 이름 `1234`으로 식별되는 호스트의 포트 `www.Adventure-Works.com`로 이동되도록 지정합니다. 메시지 도착 시 대상 서버는 고유 식별자 `D8D4D268-00A3-4C62-8F91-634B89C1E315`로 식별되는 Broker 인스턴스로 메시지를 배달합니다.  
   
 ```  
@@ -153,7 +152,7 @@ CREATE ROUTE ExpenseRoute
     ADDRESS = 'TCP://www.Adventure-Works.com:1234' ;  
 ```  
   
-### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>2. NetBIOS 이름을 사용하여 TCP/IP 경로 만들기  
+### <a name="b-creating-a-tcpip-route-by-using-a-netbios-name"></a>2\. NetBIOS 이름을 사용하여 TCP/IP 경로 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 서비스에 대한 경로를 만듭니다. 경로는 이 서비스에 대한 메시지가 TCP를 통해 NetBIOS 이름 `1234`로 식별되는 호스트의 포트 `SERVER02`로 이동되도록 지정합니다. 메시지 도착 시 대상 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 고유 식별자 `D8D4D268-00A3-4C62-8F91-634B89C1E315`로 식별되는 데이터베이스 인스턴스로 메시지를 배달합니다.  
   
 ```  

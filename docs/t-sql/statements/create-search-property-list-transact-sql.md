@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c4ac1a0066e91580e18cfb0646961d33cd0761d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e838729d064a6101d4efb8fc57c7cd7b9910ad8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117277"
 ---
 # <a name="create-search-property-list-transact-sql"></a>CREATE SEARCH PROPERTY LIST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
 -   [DROP SEARCH PROPERTY LIST&#40;Transact-SQL&#41;](../../t-sql/statements/drop-search-property-list-transact-sql.md)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
  현재 데이터베이스에서 CREATE FULLTEXT CATALOG 권한이 필요하고 원본 속성 목록을 복사하는 데이터베이스에 대한 REFERENCES 권한이 필요합니다.  
   
 > [!NOTE]  
@@ -96,7 +95,7 @@ CREATE SEARCH PROPERTY LIST new_list_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>1. 빈 속성 목록을 만들고 인덱스와 연결  
+### <a name="a-creating-an-empty-property-list-and-associating-it-with-an-index"></a>1\. 빈 속성 목록을 만들고 인덱스와 연결  
  다음 예에서는 `DocumentPropertyList`라는 새 검색 속성 목록을 만듭니다. 그런 다음, 이 예에서는 채우기를 시작하지 않고 [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md) 문을 사용하여 새 속성 목록을 `AdventureWorks` 데이터베이스에 있는 `Production.Document` 테이블의 전체 텍스트 인덱스와 연결합니다.  
   
 > [!NOTE]  
@@ -112,7 +111,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO   
 ```  
   
-### <a name="b-creating-a-property-list-from-an-existing-one"></a>2. 기존 속성 목록을 사용하여 속성 목록 만들기  
+### <a name="b-creating-a-property-list-from-an-existing-one"></a>2\. 기존 속성 목록을 사용하여 속성 목록 만들기  
  다음 예에서는 예 1에서 만든 목록 `JobCandidateProperties`로 새 검색 속성 목록 `DocumentPropertyList`를 만듭니다. 기존 목록은 `AdventureWorks2012` 데이터베이스에서 전체 텍스트 인덱스와 연결되어 있습니다. 그런 다음 이 예에서는 ALTER FULLTEXT INDEX 문을 사용하여 새 속성 목록을 `HumanResources.JobCandidate` 데이터베이스에 있는 `AdventureWorks2012` 테이블의 전체 텍스트 인덱스와 연결합니다. 이 ALTER FULLTEXT INDEX 문이 전체 채우기를 시작합니다. 전체 채우기는 SET SEARCH PROPERTY LIST 절의 기본 동작입니다.  
   
 ```  

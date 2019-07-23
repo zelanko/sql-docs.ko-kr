@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuL-Preview
 ms.author: xiaoyul
-manager: craigg
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 9a6d45a5307c98add48d35feab3db2dfb981fa4b
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: 59946e45bbb14fb68e2fc28bcc81c2cf2d534758
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67566545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930641"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED(Transact-SQL)
 

@@ -10,13 +10,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: jroth
-ms.openlocfilehash: a7ad0d94985871e422146a531b3084127d58e7e7
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 68a99d74d96fc4d54c7c97bad8049447761f67c8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834520"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267085"
 ---
 # <a name="sql-server-management-studio-components-and-configuration"></a>SQL Server Management Studio 구성 요소 및 구성
 

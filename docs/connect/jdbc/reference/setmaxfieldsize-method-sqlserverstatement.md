@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 38f7fc1d-acad-4d10-9fc8-3c0669d93b07
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 373af1b789843ca698bde40c4b4603eb7dbc500f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8958ffe76adbea75959dd15f87db58f28f0893b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66768773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974001"
 ---
 # <a name="setmaxfieldsize-method-sqlserverstatement"></a>setMaxFieldSize 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setMaxFieldSize(int max)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setMaxFieldSize 메서드는 java.sql.Statement 인터페이스의 setMaxFieldSize 메서드에 의해 지정 됩니다.  
+ 이 setMaxFieldSize 메서드는 node.js 인터페이스의 setMaxFieldSize 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

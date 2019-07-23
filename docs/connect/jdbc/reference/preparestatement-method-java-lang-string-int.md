@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e825765c-eb55-4800-951b-f3495da36641
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4fd42fccc0e6e3e15feb3d866ccb8d40531a1d4f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c91b965498c0b617a02c7707e369a2ba61c0065
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976148"
 ---
 # <a name="preparestatement-method-javalangstring"></a>prepareStatement 메서드(java.lang.String)
 
@@ -39,13 +38,13 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql)
 SQL 문이 포함된 **String**입니다.
 
 ## <a name="return-value"></a>반환 값
-PreparedStatement 개체입니다.
+Java.sql.preparedstatement 개체입니다.
 
 ## <a name="exceptions"></a>예외  
 [SQLServerException](./sqlserverexception-class.md)
 
 ## <a name="remarks"></a>Remarks
-이 prepareStatement 메서드는 java.sql.Connection 인터페이스의 prepareStatement 메서드에 의해 지정 됩니다.
+이 prepareStatement 메서드는 java. .sql. Connection 인터페이스의 prepareStatement 메서드에 의해 지정 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

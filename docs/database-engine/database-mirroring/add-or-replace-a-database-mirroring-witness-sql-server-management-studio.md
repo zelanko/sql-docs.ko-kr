@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 9ed4ea2aa5c11e8e764f3ff821122b4290d110ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74bbb2b7b066d106aa82f36669de6b4704537e72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947969"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>데이터베이스 미러링 모니터 서버 추가 또는 바꾸기(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

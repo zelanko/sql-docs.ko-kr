@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 57e24465-cd43-45cf-bb52-eea0b49867f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9af978588bddb51668acc8757eed9a6bd99e0bd9
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 5dbd2c35b360d3b3e1e9f6dabe7d011c20795bc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018295"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071191"
 ---
 # <a name="grant-xml-schema-collection-permissions-transact-sql"></a>GRANT XML 스키마 컬렉션 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +105,7 @@ GRANT permission  [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다.  
   
  AS 옵션을 사용하는 경우 다음과 같은 추가 요구 사항이 적용됩니다.  

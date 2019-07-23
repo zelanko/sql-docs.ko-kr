@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 366c57cf-352f-4202-8074-6ddce44880d1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9c472f5c15be78a35291487e433e0f81a5d7aa60
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 74d64aa0a5a93587997bc66d064d0c5c47ffb132
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993376"
 ---
 # <a name="how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support"></a>기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터를 보내고 검색하는 방법
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

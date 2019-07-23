@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: dbafe110-b480-48f3-b45f-31d71ca68f62
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9c2bf8fe0f0cefb0557fb17160bcfffab957dda1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edcd0b961f6a3955ea633c84b275bfa1a687cc92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997828"
 ---
 # <a name="catalogvalidations-ssisdb-database"></a>catalog.validations(SSISDB 데이터베이스)
 
@@ -43,10 +42,10 @@ ms.locfileid: "65714132"
 |object_id|**bigint**|작업의 영향을 받는 개체의 ID입니다.|  
 |start_time|**datetimeoffset(7)**|작업이 시작된 시간입니다.|  
 |end_time|**datetimeoffsset(7)**|작업이 종료된 시간입니다.|  
-|상태|**ssNoversion**|작업의 상태입니다. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
+|상태|**int**|작업의 상태입니다. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
 |caller_sid|**varbinary(85)**|Windows 인증을 사용하여 로그온한 사용자의 보안 ID(SID)입니다.|  
 |caller_name|**nvarchar(128)**|작업을 수행한 계정의 이름입니다.|  
-|process_id|**ssNoversion**|외부 프로세스의 프로세스 ID입니다(해당되는 경우).|  
+|process_id|**int**|외부 프로세스의 프로세스 ID입니다(해당되는 경우).|  
 |stopped_by_sid|**varbinary(85)**|작업을 중지한 사용자의 SID입니다.|  
 |stopped_by_name|**nvarchar(128)**|작업을 중지한 사용자의 이름입니다.|  
 |server_name|**nvarchar(128)**|Windows 서버 및 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 인스턴스 정보입니다.|  

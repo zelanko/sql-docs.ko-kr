@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 95a9dd888224720874e57bc74d39bec441190e6b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73cbbaf8d1a3b3e6bc5e5ba7cd4b43df01c0f7f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66766180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969598"
 ---
 # <a name="supportscoresqlgrammar-method-sqlserverdatabasemetadata"></a>supportsCoreSQLGrammar 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsCoreSQLGrammar()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsCoreSQLGrammer 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsCoreSQLGrammer 메서드에 의해 지정 됩니다.  
+ 이 supportsCoreSQLGrammer 메서드는 supportsCoreSQLGrammer 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

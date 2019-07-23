@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 10cf78a39c49f608950dbcad174bbe78ced2fcfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da34edca55f4f21c3323e621eecf2aa6983cbf79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014020"
 ---
 # <a name="specify-availability-group-options-page-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 가용성 그룹 옵션 지정 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

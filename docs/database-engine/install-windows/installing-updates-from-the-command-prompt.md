@@ -10,13 +10,12 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: fdf35fa6ad124784f44391e5ad6b7d42cd1064a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 933d8ae26522800326c88a8ba28dbd99c5688fc2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990907"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>명령 프롬프트에서 업데이트 설치
 

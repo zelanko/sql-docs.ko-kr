@@ -1,5 +1,5 @@
 ---
-title: 데이터 정의 문 Force 트랜잭션 커밋지 않습니다. | Microsoft Docs
+title: 데이터 정의 문은 강제로 트랜잭션 커밋을 수행 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bf04fa73-b9f1-4403-b6a0-e53d0d27c671
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 15c99e0ba9c94306029e67080f7cb6a26b44b9ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5c1b6732f5cb22126ad9a102322a88df95606be7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772829"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955213"
 ---
 # <a name="datadefinitioncausestransactioncommit-method-sqlserverdatabasemetadata"></a>dataDefinitionCausesTransactionCommit 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean dataDefinitionCausesTransactionCommit()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 dataDefinitionCausesTransactionCommit 메서드는 java.sql.DatabaseMetaData 인터페이스의 dataDefinitionCausesTransactionCommit 메서드에 의해 지정 됩니다.  
+ 이 dataDefinitionCausesTransactionCommit 메서드는 dataDefinitionCausesTransactionCommit 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

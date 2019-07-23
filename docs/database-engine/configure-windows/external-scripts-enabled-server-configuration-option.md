@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d0ce165-8719-4007-9ae8-00f85cab3a0d
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 8fbffdfde71435a8d7204db3535464bbbe29f18c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 424268eb32eb3430e2e4eb8450abfb3471f51701
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011762"
 ---
 # <a name="external-scripts-enabled-server-configuration-option"></a>External Scripts Enabled 서버 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

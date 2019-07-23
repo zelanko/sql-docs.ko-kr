@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 275e1b6c-fbd0-4408-af77-35903f90657c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d5fb32bd0d82b8031bfb77d94751793736a8aa75
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: cc59fb8f6771f2fc11eb940b98396edd09ad6e26
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690108"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264179"
 ---
 # <a name="search-documents-using-results-lists"></a>결과 목록을 사용하여 문서 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

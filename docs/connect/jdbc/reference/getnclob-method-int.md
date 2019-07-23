@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 10dfa251-9408-469e-ae2a-1acf3917cf47
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ff8d01b6f8d4350a2782e9660baab3d043d83582
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63dbc19502ef0d22362008c67a17448bfa48d7f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981525"
 ---
 # <a name="getnclob-method-int"></a>getNClob 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.sql.NClob getNClob(int parameterIndex)
  매개 변수 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- ANClobobject 합니다.  
+ ANClobobject.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -44,7 +43,7 @@ public java.sql.NClob getNClob(int parameterIndex)
 ## <a name="remarks"></a>Remarks  
  이 getNClob 메서드는 java.sql.CallableStatement 인터페이스의 getNClob 메서드에 의해 지정됩니다.  
   
- 이 메서드는 검색만 지원 **NCHAR**, **NVARCHAR**하십시오 **NTEXT**, 및 **XML** 매개 변수. 다른 데이터 형식 매개 변수에서 이러한 메서드를 호출하면 예외가 발생합니다.  
+ 이 메서드는 **NCHAR**, **NVARCHAR**, **NTEXT**및 **XML** 매개 변수만 검색 하는 것을 지원 합니다. 다른 데이터 형식 매개 변수에서 이러한 메서드를 호출하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getNClob 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)   

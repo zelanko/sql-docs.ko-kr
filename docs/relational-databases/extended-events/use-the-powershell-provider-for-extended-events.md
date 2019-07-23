@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 11bf0c61a676b697254571785f1e581480464728
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 01ce9869db83cd620ebade613f2582ff2adb9b19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009321"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>확장 이벤트에 PowerShell 공급자 사용
 

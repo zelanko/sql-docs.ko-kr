@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 71a413ed-64f1-4ab9-9c52-c5959a77d00f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a16bc57713ef1a9acda4b83f5a80b85818ceb325
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddc661b856767c140091e662118f3d5198318266
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072450"
 ---
 # <a name="gt-not-greater-than-transact-sql"></a>!&gt; (보다 크지 않음)(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

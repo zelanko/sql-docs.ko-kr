@@ -18,13 +18,12 @@ f1_keywords:
 ms.assetid: 7fe886ff-1ea5-48d5-9d20-d5da36dd1cd7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b19b574a61ad5667d6617b68b8472589a2328bb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d969db282002919775fa9e77198686e4ee1ef3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068917"
 ---
 # <a name="ssis-package-upgrade-wizard-f1-help"></a>SSIS 패키지 업그레이드 마법사 F1 도움말
 

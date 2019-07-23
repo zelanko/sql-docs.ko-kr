@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c072fc97536259b16938cc36dcbc21dbbbb97b57
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943381"
 ---
 # <a name="examples-using-openxml"></a>예: OPENXML 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "58511270"
   
  *flags* 값은 기본 매핑을 제공합니다. *ColPattern* 이 *SchemaDeclaration*에 지정되지 않은 경우 *flags* 에 지정된 매핑이 간주됩니다. *ColPattern* 이 *SchemaDeclaration* 에 지정된 경우에는 *flags*값이 무시됩니다. 지정된 *ColPattern* 은 매핑(특성 중심 또는 요소 중심)은 물론, 오버플로와 소비되지 않은 데이터를 처리할 때의 동작도 결정합니다.  
   
-### <a name="a-executing-a-simple-select-statement-with-openxml"></a>1. OPENXML에서 단순 SELECT 문 실행  
+### <a name="a-executing-a-simple-select-statement-with-openxml"></a>1\. OPENXML에서 단순 SELECT 문 실행  
  이 예의 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다. OPENXML 문은 XML 문서로부터 두 열(**CustomerID** 및 **ContactName**)로 구성된 행 집합의 고객 정보를 검색합니다.  
   
  먼저 **sp_xml_preparedocument** 저장 프로시저가 문서 핸들을 얻기 위해 호출됩니다. 이 문서 핸들은 OPENXML에 전달됩니다.  
@@ -142,7 +141,7 @@ LILAS      Carlos Gonzlez
   
  **sp_xml_preparedocument** 에 의해 반환되는 문서 핸들은 세션이 아닌 일괄 처리 기간 동안 유효합니다.  
   
-### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>2. 행 집합 열과 XML 특성 및 요소 간의 매핑을 위해 ColPattern 지정  
+### <a name="b-specifying-colpattern-for-mapping-between-rowset-columns-and-the-xml-attributes-and-elements"></a>2\. 행 집합 열과 XML 특성 및 요소 간의 매핑을 위해 ColPattern 지정  
  이 예제에서는 행 집합 열과 XML 특성 및 요소 간에 매핑을 제공하기 위해 선택 사항인 *ColPattern* 매개 변수에 XPath 패턴을 지정하는 방법을 보여 줍니다.  
   
  이 예의 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다. OPENXML 문은 고객과 주문 정보를 XML 문서로부터 행 집합(**CustomerID**, **OrderDate**, **ProdID** 및 **Qty**)으로 검색합니다.  
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
  WITH 절에 있는 *SchemaDeclaration* 에서는 *ColPattern* 도 *ColName* 및 *ColType* 매개 변수로 지정됩니다. 선택 사항인 *ColPattern* 은 다음을 나타내기 위해 지정된 XPath 패턴입니다.  
   
--   행 집합의 **ProdID** 열에 대해 *ColPattern*으로 지정된 XPath 패턴(**.**)은 컨텍스트 노드인 현재 노드를 식별합니다. 지정된 *rowpattern*에 따른 <`OrderDetail`> 요소의 **ProductID** 특성입니다.  
+-   행 집합의 **ProdID** 열에 대해 *ColPattern*으로 지정된 XPath 패턴( **.** )은 컨텍스트 노드인 현재 노드를 식별합니다. 지정된 *rowpattern*에 따른 <`OrderDetail`> 요소의 **ProductID** 특성입니다.  
   
 -   행 집합에 있는 **Qty** 열에 대해 지정된 *ColPattern*, **../\@Quantity**는 컨텍스트 노드 \<ProductID>의 노드인 부모 <`OrderDetail`>의 **Quantity** 특성을 식별합니다.  
   
@@ -544,7 +543,7 @@ EXEC sp_xml_removedocument @h
   
  SELECT 문은 **TaU** 가 아닌 **T**를 결과로 반환합니다.  
   
-### <a name="i-specifying-the-xml-data-type-in-the-with-clause"></a>9. WITH 절에서 xml 데이터 형식 지정  
+### <a name="i-specifying-the-xml-data-type-in-the-with-clause"></a>9\. WITH 절에서 xml 데이터 형식 지정  
  WITH 절에서 형식화된 열 및 형식화되지 않은 열을 모두 포함하여 **xml** 데이터 형식 열로 매핑된 열 패턴은 빈 시퀀스나 요소 시퀀스, 처리 명령, 텍스트 노드 및 주석을 반환해야 합니다. 데이터는 **xml** 데이터 형식으로 캐스팅됩니다.  
   
  다음 예에서 WITH 절에 있는 테이블 스키마 선언에는 **xml** 유형의 열이 포함됩니다.  

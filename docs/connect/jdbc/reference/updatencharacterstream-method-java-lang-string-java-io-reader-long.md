@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: db0a96a8-248f-4664-9c13-f480f309ab91
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7285f091a933ebbcfa4796da338e34c6795105fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee869c9d9bdcc707456f1cb04b5dcacdacee89a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998684"
 ---
 # <a name="updatencharacterstream-method-javalangstring-javaioreader-long"></a>updateNCharacterStream 메서드(java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,9 +48,9 @@ public void updateNCharacterStream(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 updateNCharacterStream 메서드는 java.sql.ResultSet 인터페이스의 updateNCharacterStream 메서드에 의해 지정 됩니다.  
+ 이 updateNCharacterStream 메서드는 updateNCharacterStream 인터페이스의 메서드에 의해 지정 됩니다.  
   
- 이 메서드는 선택한 판독기 개체에서 유니코드 문자를 전달 **nchar**를 **nvarchar (max)** 를 **ntext**, 및 **xml** 열입니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
+ 이 메서드는 판독기 개체의 유니코드 문자를 선택 된 **nchar**, **nvarchar (max)** , **ntext**및 **xml** 열로 전달 합니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
   
  스트림의 길이가 *length* 매개 변수에 지정된 길이와 다르면 행이 업데이트되거나 삽입될 때 JDBC 드라이버에서 예외가 발생합니다.  
   

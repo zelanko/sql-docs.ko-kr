@@ -5,15 +5,15 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.assetid: 38fc34a6-aae7-4dde-9ad2-f1eee0c42a9f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 26c28f65737fe989b416078e609f7742cfcf07b1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 1025ea1de1e349e640b285174ffab694f791fd21
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221641"
 ---
 # <a name="configure-e-mail-for-a-reporting-services-service-application"></a>Reporting Services 서비스 애플리케이션에 대한 전자 메일 구성
 
@@ -28,11 +28,11 @@ ms.locfileid: "52410370"
   
 1.  SharePoint 중앙 관리에서 **애플리케이션 관리**를 클릭합니다.  
   
-2.  **서비스 응용 프로그램** 그룹에서 **서비스 응용 프로그램 관리**를 클릭합니다.  
+2.  **서비스 애플리케이션** 그룹에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-3.  **이름** 목록에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 이름을 클릭합니다.  
+3.  **이름** 목록에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 이름을 클릭합니다.  
   
-4.  **Reporting Services 응용 프로그램 관리** 페이지에서 **메일 설정** 을 클릭합니다.  
+4.  **Reporting Services 애플리케이션 관리** 페이지에서 **메일 설정** 을 클릭합니다.  
   
 5.  **SMTP 서버 사용**을 선택합니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "52410370"
   
      이 주소는 모든 경고 전자 메일 메시지의 받는 사람입니다.  
   
-     **보낸 사람 주소** 에 지정한 사용자 계정은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 응용 프로그램 풀을 구성할 때 지정한 관리 계정이어야 합니다. 권한이 있는 경우 SharePoint 중앙 관리의 서비스 계정 페이지에서 기존 관리 계정 목록을 볼 수 있습니다.  
+     **보낸 사람 주소** 에 지정한 사용자 계정은 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 애플리케이션 풀을 구성할 때 지정한 관리 계정이어야 합니다. 권한이 있는 경우 SharePoint 중앙 관리의 서비스 계정 페이지에서 기존 관리 계정 목록을 볼 수 있습니다.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

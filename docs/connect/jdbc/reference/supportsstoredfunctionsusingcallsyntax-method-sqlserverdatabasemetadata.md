@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0e5c0579-84b5-4717-b128-0bcd512f6022
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 053dab7055969b502a79e2e2d0250cdd98749fbe
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cd5c761a44af410a39136942490d4f4ab6241b5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968772"
 ---
 # <a name="supportsstoredfunctionsusingcallsyntax-method-sqlserverdatabasemetadata"></a>supportsStoredFunctionsUsingCallSyntax 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -31,13 +30,13 @@ public boolean supportsStoredFunctionsUsingCallSyntax()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsStoredFunctionsUsingCallSyntax 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsStoredFunctionsUsingCallSyntax 메서드에 의해 지정 됩니다.  
+ 이 supportsStoredFunctionsUsingCallSyntax 메서드는 supportsStoredFunctionsUsingCallSyntax 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

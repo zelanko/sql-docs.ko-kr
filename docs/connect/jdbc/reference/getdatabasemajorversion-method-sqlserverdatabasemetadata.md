@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 30860c07-e84b-428a-922a-ba63c070cd9c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 26bef53cbfa004ce0284aae5f0f4e1fb495fc3b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 783247bda92e4a7dd3d89c6276be6457487f0bd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762979"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984195"
 ---
 # <a name="getdatabasemajorversion-method-sqlserverdatabasemetadata"></a>getDatabaseMajorVersion 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getDatabaseMajorVersion()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getDatabaseMajorVersion 메서드는 java.sql.DatabaseMetaData 인터페이스의 getDatabaseMajorVersion 메서드에 의해 지정 됩니다.  
+ 이 getDatabaseMajorVersion 메서드는 java .sql. DatabaseMetaData 인터페이스의 getDatabaseMajorVersion 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

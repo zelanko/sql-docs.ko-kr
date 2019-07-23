@@ -15,13 +15,12 @@ f1_keywords:
 ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: def9df7e03f596cf519eebebd7b2ca83a912fe98
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: aa39a4752952a3d214d7dea8eaeb236c75d9f5d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021322"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>SQL Server 복제 게시자 속성 대화 상자 |
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,14 +53,14 @@ ms.locfileid: "67580018"
 -   스냅샷 에이전트 및 로그 판독기 에이전트의 **게시 속성** 대화 상자  
   
  **기타**  
- **게시자 유형** 및 **배포 데이터베이스 이름** 속성은 읽기 전용입니다. **기본 스냅숏 폴더** 속성은 변경할 수 있습니다. 스냅샷 폴더에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
+ **게시자 유형** 및 **배포 데이터베이스 이름** 속성은 읽기 전용입니다. **기본 스냅샷 폴더** 속성은 변경할 수 있습니다. 스냅샷 폴더에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
 
 ## <a name="publication-databases"></a>게시 데이터베이스
   **게시자 속성** 대화 상자의 **게시 데이터베이스** 페이지를 사용하여 **sysadmin** 고정 서버 역할의 사용자가 복제용 데이터베이스를 설정할 수 있습니다. 데이터베이스를 설정한다고 해서 그 데이터베이스가 게시되는 것은 아닙니다. 데이터베이스를 설정하면 설정된 데이터베이스에 대한 **db_owner** 고정 데이터베이스 역할의 사용자가 그 데이터베이스에 하나 이상의 게시를 만들 수 있습니다.  
   
 ## <a name="options"></a>옵션  
  **트랜잭션**  
- **db_owner** 고정 데이터베이스 역할의 사용자가 데이터베이스에 스냅숏 게시 또는 트랜잭션 게시를 만들 수 있게 하려면 이 확인란을 선택합니다. 
+ **db_owner** 고정 데이터베이스 역할의 사용자가 데이터베이스에 스냅샷 게시 또는 트랜잭션 게시를 만들 수 있게 하려면 이 확인란을 선택합니다. 
   
  **병합**  
  **db_owner** 고정 데이터베이스 역할의 사용자가 데이터베이스에 병합 게시를 만들 수 있게 하려면 이 확인란을 선택합니다.  

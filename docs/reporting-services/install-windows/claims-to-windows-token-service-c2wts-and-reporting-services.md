@@ -2,17 +2,16 @@
 title: c2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services | Microsoft Docs
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: 8d53445544c360250ed35c322e2fc4078559bbbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ed9c2a5070a1034970f2f34f5e7bf88a77e8533
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454567"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264997"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>C2WTS(Windows 토큰 서비스에 대한 클레임) 및 Reporting Services
 

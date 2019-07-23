@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 756840e3-aa09-45cd-9951-1a17af4b5925
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6301066549a8008512bef934f9d887349a6b765b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 854a6ed0f2ef688643cb7b452696daf6257df89b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003652"
 ---
 # <a name="data-profiling-task-and-viewer"></a>데이터 프로파일링 태스크 및 뷰어
 

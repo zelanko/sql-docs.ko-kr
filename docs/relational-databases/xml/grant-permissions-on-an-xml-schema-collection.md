@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 556c4cb0a5b51adcd87f4308e296459650eeadc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3beb9b01beafcb247372c49d9219550c95fd1b03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986440"
 ---
 # <a name="grant-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 부여
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 18176517-2fb3-4266-924d-0f01253083d2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a23f058eea5512181bdbea277c4bccc6d1ff2616
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 995f3f0f63728d397cf51013bd5429943e9cac0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974401"
 ---
 # <a name="setfetchdirection-method-sqlserverstatement"></a>setFetchDirection 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public final void setFetchDirection(int nDir)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setFetchDirection 메서드는 java.sql.Statement 인터페이스의 setFetchDirection 메서드로 지정 됩니다.  
+ 이 setFetchDirection 메서드는 java. Statement 인터페이스의 setFetchDirection 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
