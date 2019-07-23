@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: e6c46c6b-2d61-4571-bc8e-a831cd6e6302
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: f143dd2bfc757d9792bb5427a8dd8f2775176588
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 05850194442e14e033c5f3c8979a78bca44c87eb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833209"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267369"
 ---
 # <a name="create-an-activex-script-job-step"></a>Create an ActiveX Script Job Step
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

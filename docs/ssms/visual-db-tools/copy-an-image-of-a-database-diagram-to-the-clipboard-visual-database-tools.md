@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7fa6b709-e023-49c8-8f0d-b4476402cd73
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 55d011af649c57e84ab5d4ed97717edb52f0ad49
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: cd152de06a182efcd5536c78f1e8490171476947
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686171"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266999"
 ---
 # <a name="copy-an-image-of-a-database-diagram-to-the-clipboard-visual-database-tools"></a>데이터베이스 다이어그램의 이미지를 클립보드로 복사(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

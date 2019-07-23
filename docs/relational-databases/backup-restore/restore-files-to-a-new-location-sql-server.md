@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b4f4791d-646e-4632-9980-baae9cb1aade
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7a70a330864b19513c3a2465917dd89adaea51bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d3d3ddc6d14414344e847249cb337e9f6a0d5c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041525"
 ---
 # <a name="restore-files-to-a-new-location-sql-server"></a>새 위치로 파일 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ ms.locfileid: "62502647"
     |**복원**|확인란이 선택되어 있으면 백업 세트가 복원됩니다.|  
     |**이름**|백업 세트의 이름입니다.|  
     |**파일 유형**|백업의 데이터 형식인 **데이터**, **로그** 또는 **Filestream 데이터**를 지정합니다. 테이블에 포함된 데이터는 **데이터** 파일에 있고, 트랜잭션 로그 데이터는 **로그** 파일에 있으며, 파일 시스템에 저장되는 BLOB(Binary Large Object) 데이터는 **Filestream 데이터** 파일에 있습니다.|  
-    |**형식**|수행된 백업 유형입니다. **전체**, **차등** 또는 **트랜잭션 로그**가 될 수 있습니다.|  
+    |**형식**|수행된 백업 유형: **전체**, **차등** 또는 **트랜잭션 로그**가 될 수 있습니다.|  
     |**Server**|백업 작업을 수행한 데이터베이스 엔진 인스턴스의 이름입니다.|  
     |**논리적 파일 이름**|파일의 논리적 이름입니다.|  
     |**데이터베이스 백업**|백업 작업과 관련된 데이터베이스의 이름입니다.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 62526fb80056ea9074f562d304e5d511e898953e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c3dfad17abfe2113807bf8eb9a1570ed0a2f7a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129458"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

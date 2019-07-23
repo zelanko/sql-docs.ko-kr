@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e609b336-d40e-4d89-9130-6db7e6853541
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 227410034d112166097bfa312ed578999b7aa701
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61a6eeb405018c2b9eebc01039b0b49a14e6d910
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953581"
 ---
 # <a name="getblob-method-sqlservercallablestatement"></a>getBlob 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

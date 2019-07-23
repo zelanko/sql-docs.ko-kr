@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 24866ea9-804a-442f-94e2-475c11dd8b9f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48a790565735a08c50453188c7f0447064fb27c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14a9a0fb47c56427564629bf82ca22d8d7e8bdee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975069"
 ---
 # <a name="setbinarystream-sqlservercallablestatement"></a>setBinaryStream(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

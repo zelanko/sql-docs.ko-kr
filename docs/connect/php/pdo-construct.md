@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: __construct | Microsoft Docs'
+title: 'PDO:: __construct | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2822c0f80aa342881e820b2edce2f99388efdc68
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a5a181d6e8b9a3ffbf9d65dc74cae967d6a1f40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936254"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +36,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
   
 *$password*: 선택 사항입니다. 사용자의 암호를 포함하는 문자열입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하여 연결하려면 암호를 지정합니다. Windows 인증을 사용하여 연결하려면 `""`를 지정합니다.  
   
-*$driver_options*: 선택 사항입니다. PDO 드라이버 관리자 특성 및 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 관련 드라이버 특성(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY)을 지정할 수 있습니다. 잘못된 특성은 예외를 생성하지 않습니다. [PDO::setAttribute](../../connect/php/pdo-setattribute.md)로 지정되면 잘못된 특성이 예외를 생성합니다.  
+*$driver 옵션 (_e)* : 선택 사항입니다. PDO 드라이버 관리자 특성 및 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] 관련 드라이버 특성(PDO::SQLSRV_ATTR_ENCODING, PDO::SQLSRV_ATTR_DIRECT_QUERY)을 지정할 수 있습니다. 잘못된 특성은 예외를 생성하지 않습니다. [PDO::setAttribute](../../connect/php/pdo-setattribute.md)로 지정되면 잘못된 특성이 예외를 생성합니다.  
   
 ## <a name="return-value"></a>반환 값  
 PDO 개체를 반환합니다. 실패하는 경우 PDOException 개체를 반환합니다.  
@@ -48,7 +47,7 @@ PDOException
 ## <a name="remarks"></a>Remarks  
 인스턴스를 null로 설정하여 연결 개체를 닫을 수 있습니다.  
   
-연결 되 면 pdo:: errorcode는 00000 대신 01000을 표시합니다.  
+연결 후 PDO:: errorCode는 00000 대신 01000을 표시 합니다.  
   
 어떤 이유로 PDO::__construct가 실패하는 경우 예외가 throw됩니다. PDO::ATTR_ERRMODE가 PDO::ERRMODE_SILENT로 설정된 경우에도 마찬가지입니다.  
   

@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: a4d798ee-4c18-40d4-b6af-63d17503738c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 3f298e45488e281ad56a90f4bd4be2dc40204920
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: a427b41e5f1269a4f59fd69257f54bdbd61a3050
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67688280"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265369"
 ---
 # <a name="sql-server-agent-properties-advanced-page"></a>SQL Server 에이전트 속성(고급 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

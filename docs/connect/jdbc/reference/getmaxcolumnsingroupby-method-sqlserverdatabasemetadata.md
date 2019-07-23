@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a59cfe98-c0f4-46ad-9243-62aa56855f1a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1d4c45f9d7f1ac3b8e5397b48563723fe910dee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d745712e5a8c4b59ea85c1a9b19c2e247c166be3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66792763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982309"
 ---
 # <a name="getmaxcolumnsingroupby-method-sqlserverdatabasemetadata"></a>getMaxColumnsInGroupBy 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxColumnsInGroupBy()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getMaxColumnsInGroupBy 메서드는 java.sql.DatabaseMetaData 인터페이스의 getMaxColumnsInGroupBy 메서드에 의해 지정 됩니다.  
+ 이 getMaxColumnsInGroupBy 메서드는 java. DatabaseMetaData 인터페이스의 getMaxColumnsInGroupBy 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

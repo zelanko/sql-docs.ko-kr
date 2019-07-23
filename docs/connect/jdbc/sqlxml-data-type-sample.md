@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76b7aea17e3dcee07a7472a2a830ca4fb5212bf6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4d5e616fa1a510633caf4e5e2e0b20266a1eb771
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004380"
 ---
 # <a name="sqlxml-data-type-sample"></a>SQLXML 데이터 형식 샘플
 
@@ -39,7 +38,7 @@ DOM(문서 개체 모델)은 XML 문서, 조각, 노드 또는 노드 집합의 
 
 ## <a name="requirements"></a>요구 사항
 
-이 샘플 응용 프로그램을 실행하려면 sqljdbc4.jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 클래스 경로에 sqljdbc4.jar에 대한 항목이 없으면 샘플 응용 프로그램에서 "클래스를 찾을 수 없습니다." 예외가 발생합니다. 클래스 경로 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [JDBC 드라이버를 사용 하 여](../../connect/jdbc/using-the-jdbc-driver.md)입니다.
+이 샘플 응용 프로그램을 실행하려면 sqljdbc4.jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 클래스 경로에 sqljdbc4.jar에 대한 항목이 없으면 샘플 응용 프로그램에서 "클래스를 찾을 수 없습니다." 예외가 발생합니다. 클래스 경로를 설정 하는 방법에 대 한 자세한 내용은 [JDBC 드라이버 사용](../../connect/jdbc/using-the-jdbc-driver.md)을 참조 하세요.
 
 또한 이 샘플 애플리케이션을 실행하려면 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대한 액세스 권한이 필요합니다.
 

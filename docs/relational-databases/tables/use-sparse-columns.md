@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ea7ddb87-f50b-46b6-9f5a-acab222a2ede
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa1e912b6a0ec2cce562e6ed6506acfb74a3a17e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 12bcff24be2bf0a722375fa6f7c06444ba818e9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140363"
 ---
 # <a name="use-sparse-columns"></a>스파스 열 사용
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "52520974"
 ## <a name="properties-of-sparse-columns"></a>스파스 열 속성  
  스파스 열에는 다음과 같은 특징이 있습니다.  
   
--   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 열 정의에 SPARSE 키워드를 사용하여 해당 열의 값 저장을 최적화할 수 있습니다. 따라서 테이블에 있는 행에 대해 열 값이 NULL인 경우 값을 스토리지할 필요가 없습니다.  
+-   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 열 정의에 SPARSE 키워드를 사용하여 해당 열의 값 스토리지를 최적화할 수 있습니다. 따라서 테이블에 있는 행에 대해 열 값이 NULL인 경우 값을 스토리지할 필요가 없습니다.  
   
 -   스파스 열을 포함하는 테이블에 대한 카탈로그 뷰는 일반적인 테이블에 대한 카탈로그 뷰와 동일합니다. sys.columns 카탈로그 뷰는 테이블의 각 열에 대한 행을 포함하고 열 집합(정의된 경우)을 포함합니다.  
   

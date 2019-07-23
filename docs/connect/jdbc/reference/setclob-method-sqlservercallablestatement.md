@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 222ea248-1185-4c33-ae10-5158bf3f6430
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7d3650a7e0919346dead4f22f623b75ac0c25dea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c3c6e2b0331f00e5d9fe5d7212a1a48bff8e2c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974522"
 ---
 # <a name="setclob-method-sqlservercallablestatement"></a>setClob 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

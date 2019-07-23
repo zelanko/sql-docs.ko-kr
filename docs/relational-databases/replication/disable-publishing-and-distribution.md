@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 08813aa3faad6738bb023a0c04c92f331bf5a457
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 59afdb8126f6c2156cd9a4e9ca9a4ca5ee6694ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581156"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128374"
 ---
 # <a name="disable-publishing-and-distribution"></a>게시 및 배포 해제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "67581156"
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   
--   게시 및 배포를 해제하려면 모든 배포 및 게시 데이터베이스가 온라인 상태여야 합니다. 배포 또는 게시 데이터베이스에 대한 *데이터베이스 스냅샷* 이 있는 경우 이 스냅샷을 먼저 삭제한 다음 게시 및 배포를 해제해야 합니다. 데이터베이스 스냅샷은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅샷과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
+-   게시 및 배포를 해제하려면 모든 배포 및 게시 데이터베이스가 온라인 상태여야 합니다. 배포 또는 게시 데이터베이스에 대한 *데이터베이스 스냅샷* 이 있는 경우 이 스냅샷을 먼저 삭제한 다음 게시 및 배포를 해제해야 합니다. 데이터베이스 스냅샷은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅샷과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
  게시 및 배포 해제 마법사를 사용하여 게시 및 배포를 해제합니다.  

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6aa09b38956e1eafec844d30e767a986df454283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71e719d816e1afb9457d99049fa69c4749c18c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946908"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098739"
 ---
 # <a name="typeid-transact-sql"></a>TYPE_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -47,7 +46,7 @@ TYPE_ID ( [ schema_name ] type_name )
  데이터 형식의 이름입니다. *type_name*은 **nvarchar** 형식입니다. *type_name*은 시스템 또는 사용자 정의 데이터 형식일 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="exceptions"></a>예외  
  오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  

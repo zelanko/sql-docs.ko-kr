@@ -5,16 +5,15 @@ ms.prod_service: reporting-services-native
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ''
 ms.custom: seodec18
 ms.date: 04/26/2019
-ms.openlocfilehash: 6aecb763ccfe8743942ddb41a7eeb826e2ec5088
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86f3d1834212ff17125abc9a124eb10d3f7e9be5
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64568375"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264977"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>보고서 서버 데이터베이스 연결 구성(SSRS 구성 관리자)
 

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: fb4edf3c-71b6-4645-b1d1-ddfdd69f0d7b
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: e57ce8ee145720b4434a39d16aa41d727bb04d7a
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 528c9e96e8615224b6d081a4d953e95874fec766
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680417"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266929"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>메뉴 및 바로 가기 키 사용자 지정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

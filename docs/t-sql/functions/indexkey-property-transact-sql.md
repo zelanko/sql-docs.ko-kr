@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 87c0c385-6b2d-4716-ac8c-a3ce6e8d89e9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 36471a1e20a150e39dedc866130d3373448573bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: edaa3069bece2d6acf7f28ab32da5f5639f49be4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024273"
 ---
 # <a name="indexkeyproperty-transact-sql"></a>INDEXKEY_PROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )
 |**IsDescending**|인덱스 열이 저장되는 순서<br /><br /> 1 = 내림차순 0 = 오름차순|  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="exceptions"></a>예외  
  오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  

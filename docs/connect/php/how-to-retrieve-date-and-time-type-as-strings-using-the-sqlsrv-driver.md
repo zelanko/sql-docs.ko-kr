@@ -12,26 +12,25 @@ helpviewer_keywords:
 ms.assetid: 58a974ea-4daf-4e3b-98ed-9731b9c9250f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11fa40f3cdeb93463f3e5f66975e83e5d12dd6d4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a8c3fbd475d5f7038d36ba17a9578713c3ed1b53
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993535"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-strings-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 문자열로 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-SQLSRV 드라이버를 사용 하는 경우는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], 날짜 및 시간 형식을 검색할 수 있습니다 (**smalldatetime**, **datetime**를 **날짜**, **시간**하십시오 **datetime2**, 및 **datetimeoffset**) 연결 문자열 또는 문 수준에서 다음 옵션을 지정 하 여 문자열로:
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에 대해 SQLSRV 드라이버를 사용 하는 경우 다음을 지정 하 여 날짜 및 시간 형식 (**smalldatetime**, **datetime**, **date**, **time**, **datetime2**및 **datetimeoffset**)을 문자열로 검색할 수 있습니다. 옵션은 연결 문자열 또는 문 수준에서 옵션입니다.
 
 ```
 'ReturnDatesAsStrings'=>true
 ```
 
-기본값은 **false**이며 **smalldatetime**, **datetime**, **date**, **time**, **datetime2** 및 **datetimeoffset** 형식이 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체로 반환됩니다. 이 옵션을 문 수준에서 설정 하는 경우에 연결 수준 설정 보다 우선 합니다.
+기본값은 **false**이며 **smalldatetime**, **datetime**, **date**, **time**, **datetime2** 및 **datetimeoffset** 형식이 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체로 반환됩니다. 이 옵션이 문 수준에서 설정 된 경우 연결 수준 설정을 재정의 합니다.
 
-PDO_SQLSRV 드라이버 기본적으로 날짜 및 시간 형식 문자열로 반환합니다. PHP DateTime 개체로 검색, 참조 [방법: 검색 날짜 및 시간 형식을 PHP Datetime 개체를 사용 하 여 PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)
+PDO_SQLSRV 드라이버는 기본적으로 날짜 및 시간 형식을 문자열로 반환 합니다. PHP DateTime 개체로 검색 하려면 [방법: PDO_SQLSRV를 사용 하 여 날짜 및 시간 형식을 Php Datetime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md) 을 참조 하세요.
 
 ## <a name="example"></a>예제
 다음 예제에서는 날짜 및 시간 형식을 문자열로 검색하기 위해 지정하는 구문을 보여 줍니다.
@@ -162,7 +161,7 @@ sqlsrv_close($conn);
 ```
 
 ## <a name="example"></a>예제
-문 수준에서 ReturnDatesAsStrings 옵션에 해당 하는 연결 옵션을 재정의합니다.
+문 수준에서에서 returndatesasstrings 옵션은 해당 하는 연결 옵션을 재정의 합니다.
 
 ```php
 <?php

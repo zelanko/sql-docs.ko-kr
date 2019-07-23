@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 5a3b7424-408e-4cb0-8957-667ebf4596fc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dda1ea78f8a3c795562faa52478d736f9525a252
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e26d8a84a93c5164fa10894bc444cfbac999a22f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129374"
 ---
 # <a name="permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse"></a>사용 권한: GRANT, DENY, REVOKE(Azure SQL Data Warehouse, 병렬 Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -78,7 +77,7 @@ REVOKE
 ```  
   
 ## <a name="arguments"></a>인수  
- \<permission>[ **,**...*n* ]  
+ \<permission>[ **,** ...*n* ]  
  부여, 거부 또는 취소할 수있는 하나 이상의 사용 권한.  
   
  ON [ \<class_type> :: ] *securable* **ON** 절은 사용 권한을 부여, 거부 또는 취소하는 보안 개체 매개 변수를 설명합니다.  
@@ -88,10 +87,10 @@ REVOKE
  *securable*  
  사용 권한을 부여, 거부 또는 취소 할 로그인, 데이터베이스, 테이블, 뷰, 스키마, 프로시저, 역할 또는 사용자의 이름입니다. 개체 이름은 [Transact-SQL 구문 규칙&#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)에서 설명된 세 부분 명명 규칙을 사용하여 지정할 수 있습니다.  
   
- TO *principal* [ **,**...*n* ]  
+ TO *principal* [ **,** ...*n* ]  
  사용 권한이 부여, 거부 또는 취소된 하나 이상의 보안 주체입니다. 보안 주체는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다.  
   
- FROM *principal* [ **,**...*n* ]  
+ FROM *principal* [ **,** ...*n* ]  
  사용 권한을 해지할 하나 이상의 보안 주체입니다.  보안 주체는 로그인, 데이터베이스 사용자 또는 데이터베이스 역할의 이름입니다. **FROM**은 오직 **REVOKE** 문과 함께 사용할 수 있습니다. **TO**는 **GRANT**, **DENY** 또한 **REVOKE**와 함께 사용할 수 있습니다.  
   
  WITH GRANT OPTION  
@@ -106,7 +105,7 @@ REVOKE
 > [!IMPORTANT]  
 >  보안 주체에 **GRANT** 옵션 없이 지정된 사용 권한이 있는 경우 사용 권한 자체가 취소됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 부여하려면 grantor는 **WITH GRANT OPTION**이 갖춰진 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다.  개체 소유자는 소유하고 있는 개체에 대한 사용 권한을 부여할 수 있습니다. 보안 개체에 대한 **CONTROL** 사용 권한을 가진 보안 주체는 해당 보안 개체에 대한 사용 권한을 부여할 수 있습니다.  **db_owner** 및 **db_ddlowner** 고정 데이터베이스 역할의 멤버는 데이터베이스에서 어떤 사용 권한도 부여할 수 있습니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
@@ -244,7 +243,7 @@ REVOKE
   
  ![APS 보안 권한 포스터](../../t-sql/statements/media/aps-security-perms-poster.png "APS 보안 권한 포스터")  
   
- 이 포스터를 전체 크기로 다운로드하려면 APS Yammer 사이트의 파일 섹션에 있는 [SQL Server PDW 권한](https://go.microsoft.com/fwlink/?LinkId=244249)을 참조하거나 또는 **apsdoc@microsoft.com**에 이메일로 요청합니다.  
+ 이 포스터를 전체 크기로 다운로드하려면 APS Yammer 사이트의 파일 섹션에 있는 [SQL Server PDW 권한](https://go.microsoft.com/fwlink/?LinkId=244249)을 참조하거나 또는 **apsdoc@microsoft.com** 에 이메일로 요청합니다.  
   
 ## <a name="default-permissions"></a>기본 사용 권한  
  다음 목록에서는 기본 사용 권한을 설명합니다.  
@@ -265,7 +264,7 @@ REVOKE
   
 ##  <a name="Examples"></a> 예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-granting-a-server-level-permission-to-a-login"></a>1. 로그인에 서버 수준 사용 권한 부여  
+### <a name="a-granting-a-server-level-permission-to-a-login"></a>1\. 로그인에 서버 수준 사용 권한 부여  
  다음 두 문은 로그인에 서버 수준 사용 권한을 부여합니다.  
   
 ```  
@@ -276,14 +275,14 @@ GRANT CONTROL SERVER TO [Ted];
 GRANT ALTER ANY DATABASE TO Mary;  
 ```  
   
-### <a name="b-granting-a-server-level-permission-to-a-login"></a>2. 로그인에 서버 수준 사용 권한 부여  
+### <a name="b-granting-a-server-level-permission-to-a-login"></a>2\. 로그인에 서버 수준 사용 권한 부여  
  다음 예에서는 서버 보안 주체(다른 로그인)에 하는 로그인에 서버 수준 사용 권한을 부여합니다.  
   
 ```  
 GRANT  VIEW DEFINITION ON LOGIN::Ted TO Mary;  
 ```  
   
-### <a name="c-granting-a-database-level-permission-to-a-user"></a>3. 사용자에게 데이터베이스 수준 사용 권한 부여  
+### <a name="c-granting-a-database-level-permission-to-a-user"></a>C. 사용자에게 데이터베이스 수준 사용 권한 부여  
  다음 예에서는 데이터베이스 보안 주체(다른 사용자)의 사용자에게 데이터베이스 수준 사용 권한을 부여합니다.  
   
 ```  

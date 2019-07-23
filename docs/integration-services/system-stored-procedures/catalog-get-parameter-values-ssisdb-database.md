@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 5b1aeaf7-c938-4aef-bafc-e4d7a82eb578
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 391a47edc45145bac21ce351e36c613f2a76addd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04007a8f8bd6b8cc98e8d2d83330f4925be137f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007768"
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values(SSISDB 데이터베이스)
 

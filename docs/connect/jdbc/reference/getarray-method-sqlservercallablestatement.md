@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c21cb48c-a45f-491c-a7cd-4e82d1e178d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e676a79007962c33954d0e2130a6510ac250f558
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ee0f7814bc1290e4a985e5fd4f7b32e4b29b138
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954354"
 ---
 # <a name="getarray-method-sqlservercallablestatement"></a>getArray 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

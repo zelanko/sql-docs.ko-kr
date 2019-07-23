@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b93e9701-72a0-408e-958c-dc196872c040
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07cf3d71690dd7f7b493970b62ac0130a8530b16
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 4593a57ab3d6b0c4b5cfff067c0f34b87f50796c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558560"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137320"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>백업 및 복원으로 데이터베이스 복사
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ ms.locfileid: "51558560"
  오류 및 의도하지 않은 결과를 방지하려면 복원 작업 전에 [backupfile](../../relational-databases/system-tables/backupfile-transact-sql.md) 기록 테이블을 통해 복원하려는 백업에서 데이터베이스 및 로그 파일을 찾을 수 있습니다.  
   
 ## <a name="moving-the-database-files"></a>데이터베이스 파일 이동  
- 데이터베이스 백업 내의 파일을 대상 컴퓨터에 복원할 수 없으면 복원 도중에 이 파일을 새 위치로 이동해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 데이터베이스 백업 내의 파일을 대상 컴퓨터에 복원할 수 없으면 복원 도중에 이 파일을 새 위치로 이동해야 합니다. 예를 들어  
   
 -   이전 버전의 기본 위치에 만든 백업에서 데이터베이스를 복원하려는 경우  
   

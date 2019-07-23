@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a22becfe-0f07-4a15-8d11-06d4054b2369
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ef2a0cdaef33ef1797133d9da2bd858eb8d18d66
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6a4aada79019aad4ae01729de8e018edd728b473
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66767114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983319"
 ---
 # <a name="getextranamecharacters-method-sqlserverdatabasemetadata"></a>getExtraNameCharacters 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getExtraNameCharacters()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getExtraNameCharacters 메서드는 java.sql.DatabaseMetaData 인터페이스의 getExtraNameCharacters 메서드에 의해 지정 됩니다.  
+ 이 getExtraNameCharacters 메서드는 getExtraNameCharacters 메서드에 의해 지정 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 함께 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 사용할 경우 이 메서드는 $, # 및 \@ 추가 문자를 반환합니다.  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7def226c-b211-459e-8c1a-08592d75d4a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 271669134e18d3c6040f1e2e10163b5d5e21daab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ee4ab641ede4d4ec614a306f9c0e08c9f16aa5ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974944"
 ---
 # <a name="setbytes-method-long-byte-int-int"></a>setBytes 메서드(long, byte, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

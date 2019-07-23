@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f77af027-c021-4a17-b264-1ee592bfdd84
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5dbf1b4159d060fce122455436a3ff7b7199e583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26986587e9c6f2ba98f5a0a30a5f9ba504d61d6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977084"
 ---
 # <a name="iswrapperfor-method-sqlserverdatasource"></a>isWrapperFor 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +32,7 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>매개 변수  
  *iface*  
   
- A **클래스** 인터페이스를 정의 합니다.  
+ 인터페이스를 정의 하는 **클래스** 입니다.  
   
 ## <a name="return-value"></a>반환 값  
  이 개체가 인터페이스를 구현하거나 인터페이스를 구현하는 개체를 래핑하면 **true**이고, 그렇지 않으면 **false**입니다.  
@@ -46,10 +45,10 @@ public boolean isWrapperFor(Class iface)
   
  이 메서드가 true를 반환하는 경우 동일한 인수로 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)을 호출하는 데 성공합니다.  
   
- 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)합니다.  
+ 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [unwrap 메서드 &#40;SQLServerDataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)   
+ [래핑 해제 &#40;방법 SQLServerDataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)   
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: e668b40c-bd4d-4415-850d-20fc4872ee72
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 52195cc99c61fb8dbf074f2362e0d7e13eb0b68d
-ms.sourcegitcommit: f1cf91e679d1121d7f1ef66717b173c22430cb42
+ms.openlocfilehash: de565a5d34ddbf8388e2c20a564bc8c872a0a1c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52586276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140807"
 ---
 # <a name="cursors"></a>커서
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ API 커서는 OLE DB와 ODBC의 API 커서 함수를 지원합니다. API 서버
   
 애플리케이션에서 이러한 두 가지 커서 요청 방법을 혼합하여 사용할 수 없습니다. API를 사용하여 커서 동작을 지정한 애플리케이션은 또한 [!INCLUDE[tsql](../includes/tsql-md.md)] DECLARE CURSOR 문을 실행하여 [!INCLUDE[tsql](../includes/tsql-md.md)] 커서를 요청할 수 없습니다. 모든 API 커서 특성을 기본값으로 설정한 경우에만 DECLARE CURSOR를 실행해야 합니다.  
   
-[!INCLUDE[tsql](../includes/tsql-md.md)] 및 API 커서 모두 요청되지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 기본적으로 기본 결과 집합이라고 하는 전체 결과 집합을 응용 프로그램에 반환합니다.  
+[!INCLUDE[tsql](../includes/tsql-md.md)] 및 API 커서 모두 요청되지 않은 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 기본적으로 기본 결과 집합이라고 하는 전체 결과 집합을 애플리케이션에 반환합니다.  
   
 ## <a name="cursor-process"></a>커서 프로세스  
  [!INCLUDE[tsql](../includes/tsql-md.md)] 커서와 API 커서는 구문이 서로 다르지만 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 커서에 대해 다음과 같은 일반 프로세스를 사용합니다.  

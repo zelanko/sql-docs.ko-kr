@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8822bd29-4575-46c8-92a0-1a39bc2604c1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 706ea983c2fcbd8607ed64f8257d96ad89189d27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 338f515547b146d67eeec5d288cce3d433ae2aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057428"
 ---
 # <a name="integration-services-ssis-queries"></a>Integration Services(SSIS) 쿼리
 
@@ -116,7 +115,7 @@ ms.locfileid: "65723542"
 |----------|-----------------|  
 |**다이어그램** 창|쿼리를 다이어그램에 표시합니다. 다이어그램은 쿼리에 포함된 테이블과 이러한 테이블의 조인 방법을 보여 줍니다. 쿼리 출력에 열을 추가하거나 제거하려면 테이블에서 해당 열의 옆에 있는 확인란을 선택하거나 선택을 취소합니다.<br /><br /> 쿼리에 테이블을 추가하면 쿼리 작성기에서 테이블의 키에 따라 테이블을 기반으로 테이블 간의 조인을 만듭니다. 조인을 추가하려면 한 테이블의 필드를 다른 테이블의 필드로 끌어 놓습니다. 조인을 관리하려면 해당 조인을 마우스 오른쪽 단추로 클릭한 다음 메뉴 옵션을 선택합니다.<br /><br /> **다이어그램** 창을 마우스 오른쪽 단추로 클릭하여 테이블을 추가 또는 제거하고, 모든 테이블을 선택하고, 창을 표시하거나 숨길 수 있습니다.|  
 |**표 형태** 창|쿼리를 표에 표시합니다. 이 창을 사용하여 쿼리에서 열을 추가 및 제거하고 각 열의 설정을 변경할 수 있습니다.|  
-|**SQL** |쿼리를 SQL 텍스트로 표시합니다. **다이어그램** 창 및 **표 형태** 창에서 변경한 내용은 이 창에 나타나고 여기에서 변경한 내용은 **다이어그램** 창 및 **표 형태** 창에 나타납니다.|  
+|**SQL**|쿼리를 SQL 텍스트로 표시합니다. **다이어그램** 창 및 **표 형태** 창에서 변경한 내용은 이 창에 나타나고 여기에서 변경한 내용은 **다이어그램** 창 및 **표 형태** 창에 나타납니다.|  
 |**결과** 창|도구 모음에서 **실행** 을 클릭하면 쿼리 결과가 표시됩니다.| 
 
   

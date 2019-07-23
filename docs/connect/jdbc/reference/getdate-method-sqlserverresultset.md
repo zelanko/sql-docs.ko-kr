@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: efb17208-4cd3-4aa8-a39b-e169b414758c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8104d1a67cff8b31ad04f2dd4ad30231d0cffe16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f284c3287527a94b859414f67ac02a1097da9e7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983882"
 ---
 # <a name="getdate-method-sqlserverresultset"></a>getDate 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

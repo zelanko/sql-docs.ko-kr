@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b78d2192-f315-4c45-9051-c77059e2c3f4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7c01717f734a4bbf2d9df35b8f2c3ce2e40baa19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4a47ac1202ec73c15198b9b6f3c87ee53e027c83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976189"
 ---
 # <a name="preparestatement-method-javalangstring-int-int-int"></a>prepareStatement 메서드(java.lang.String, int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -56,13 +55,13 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
  결과 집합 유지 기능을 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- PreparedStatement 개체입니다.  
+ Java.sql.preparedstatement 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 prepareStatement 메서드는 java.sql.Connection 인터페이스의 prepareStatement 메서드에 의해 지정 됩니다.  
+ 이 prepareStatement 메서드는 java. .sql. Connection 인터페이스의 prepareStatement 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [prepareStatement 메서드 &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   

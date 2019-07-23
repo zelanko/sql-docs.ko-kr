@@ -1,6 +1,6 @@
 ---
-title: 'Ibcpsession:: Bcpreadfmt (OLE DB) | Microsoft Docs'
-description: 'Ibcpsession:: Bcpreadfmt (OLE DB) 형식 파일에서 데이터를 읽기 위한 사용 하 여'
+title: 'IBCPSession:: BCPReadFmt (OLE DB) | Microsoft Docs'
+description: '서식 파일에서 데이터를 읽는 데 IBCPSession:: BCPReadFmt 사용 (OLE DB)'
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPReadFmt method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 46139cddfb91c974f78547794bec55251abce25c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 97274315275f11e77c458827740f44906a524ed9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015503"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,13 +38,13 @@ HRESULT BCPReadFmt(
 ```  
   
 ## <a name="remarks"></a>Remarks  
- **BCPReadFmt** 메서드는 데이터 파일의 데이터 형식을 지정하는 서식 파일에서 데이터를 읽을 때 사용됩니다. 이 메서드는 서식 파일의 올바른 버전을 검색할 수 있으므로 서식 파일이 xml인지 이전 스타일의 텍스트 형식인지 자동으로 검색하여 그에 따라 동작합니다. SQL Server BCP에 대 한 OLE DB 드라이버에서 지 원하는 서식 파일 버전은 버전 6.0 이상입니다.  
+ **BCPReadFmt** 메서드는 데이터 파일의 데이터 형식을 지정하는 서식 파일에서 데이터를 읽을 때 사용됩니다. 이 메서드는 서식 파일의 올바른 버전을 검색할 수 있으므로 서식 파일이 xml인지 이전 스타일의 텍스트 형식인지 자동으로 검색하여 그에 따라 동작합니다. SQL Server BCP에 대 한 OLE DB 드라이버에서 지 원하는 형식 파일 버전은 버전 6.0 이상입니다.  
   
  **BCPReadFmt** 메서드는 형식 값을 읽은 후 [IBCPSession::BCPColumns](../../oledb/ole-db-interfaces/ibcpsession-bcpcolumns-ole-db.md) 및 [IBCPSession::BCPColFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpcolfmt-ole-db.md) 메서드를 적절히 호출합니다. 따라서 사용자가 서식 파일의 구문을 분석하여 메서드를 호출할 필요가 없습니다.  
   
  서식 파일을 저장하려면 [IBCPSession::BCPWriteFmt](../../oledb/ole-db-interfaces/ibcpsession-bcpwritefmt-ole-db.md) 메서드를 호출합니다. **BCPReadFmt** 메서드를 호출할 때 저장된 형식을 참조할 수 있습니다. 또한 대량 복사 유틸리티(**bcp**)로 사용자 정의 데이터 형식을 **BCPReadFmt** 메서드가 참조할 수 있는 파일에 저장할 수 있습니다.  
   
- **BCP_OPTION_DELAYREADFMT** 의 값을 *eOption* 의 매개 변수 [ibcpsession:: Bcpcontrol](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) ibcpsession:: Bcpreadfmt의 동작을 수정 합니다.  
+ [IBCPSession:: BCPControl](../../oledb/ole-db-interfaces/ibcpsession-bcpcontrol-ole-db.md) 의 *eoption* 매개 변수에 대 한 **BCP_OPTION_DELAYREADFMT** 값은 IBCPSession:: bcpreadfmt의 동작을 수정 합니다.  
   
 ## <a name="arguments"></a>인수  
  *pwszFormatFile*[in]  

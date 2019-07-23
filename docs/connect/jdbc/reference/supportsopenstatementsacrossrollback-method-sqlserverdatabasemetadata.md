@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4e38b938-f39f-4c5d-9b32-4ba489535c45
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ee68785233d81b69548ffa07a5f6e9cb204d34e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9ea2ba789b3b2d34671f07acad9f5a7e6636326c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969061"
 ---
 # <a name="supportsopenstatementsacrossrollback-method-sqlserverdatabasemetadata"></a>supportsOpenStatementsAcrossRollback 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsOpenStatementsAcrossRollback()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsOpenStatementsAcrossRollback 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsOpenStatementsAcrossRollback 메서드에 의해 지정 됩니다.  
+ 이 supportsOpenStatementsAcrossRollback 메서드는 supportsOpenStatementsAcrossRollback 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

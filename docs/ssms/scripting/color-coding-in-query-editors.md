@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70d93fe9ea77d394fbc643303c6054009d82bc70
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 7a562e65b84abc7c952abe992ee2a63c9b0fa22d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683825"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256678"
 ---
 # <a name="color-coding-in-query-editors"></a>쿼리 편집기에서 코드 색상 지정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

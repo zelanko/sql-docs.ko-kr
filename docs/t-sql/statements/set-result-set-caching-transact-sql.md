@@ -13,14 +13,13 @@ dev_langs:
 helpviewer_keywords: ''
 author: XiaoyuL-Preview
 ms.author: xiaoyul
-manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: a9f050fd8e95a7dba255cf7aa164f1d58179182e
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: 7b2fa42b039f184485635d407adacd53081504b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67564115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141330"
 ---
 # <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f1e45900-bea0-4f6f-924e-c11e1f98ab62
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9b894f1f5c4399589788272b899df0448707f54e
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7690198e904ab22c463da5a9de90c48ad8b9e15f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118573"
 ---
 # <a name="work-with-directories-and-paths-in-filetables"></a>FileTable에서 디렉터리 및 경로 작업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

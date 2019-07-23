@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d766423b4ee2c1db4b7515c87edfa96b4b84b416
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3dade70a033ddf2a9e20ffc09930a27e26d9a579
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916503"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>매개 변수가 없는 저장 프로시저 사용
 
@@ -29,7 +28,7 @@ JDBC 드라이버를 사용하여 매개 변수가 없는 저장 프로시저를
 `{call procedure-name}`
 
 > [!NOTE]  
-> SQL 이스케이프 시퀀스에 대 한 자세한 내용은 참조 하세요. [SQL 이스케이프 시퀀스를 사용 하 여](../../connect/jdbc/using-sql-escape-sequences.md)입니다.
+> SQL 이스케이프 시퀀스에 대 한 자세한 내용은 [Sql 이스케이프 시퀀스 사용](../../connect/jdbc/using-sql-escape-sequences.md)을 참조 하세요.
 
 이에 대한 예로 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 다음 저장 프로시저를 만듭니다.
 

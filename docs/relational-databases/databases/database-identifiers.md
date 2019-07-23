@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 171291bb-f57f-4ad1-8cea-0b092d5d150c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cb86e584ea81e8ca8208f96283b2be6e43b36011
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d71cd82e5fe9af99bb42a6a8971f4d2157612407
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037562"
 ---
 # <a name="database-identifiers"></a>데이터베이스 식별자
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +59,7 @@ WHERE KeyCol = 124
 ```  
   
  구분 식별자  
- 큰따옴표(")나 대괄호([])로 묶여져 있습니다. 식별자 형식 규칙을 따르는 식별자는 구분되지 않을 수도 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 큰따옴표(")나 대괄호([])로 묶여져 있습니다. 식별자 형식 규칙을 따르는 식별자는 구분되지 않을 수도 있습니다. 예를 들어  
   
 ```  
 SELECT *  
@@ -68,7 +67,7 @@ FROM [TableX]         --Delimiter is optional.
 WHERE [KeyCol] = 124  --Delimiter is optional.  
 ```  
   
- 모든 식별자 규칙을 따르지 않는 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 구분되어야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 모든 식별자 규칙을 따르지 않는 식별자는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문에서 구분되어야 합니다. 예를 들어  
   
 ```  
 SELECT *  

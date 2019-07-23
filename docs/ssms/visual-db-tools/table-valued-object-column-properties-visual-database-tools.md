@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 212d9bcd-aded-4313-a6b9-d7e2270e5954
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: c7b7af9365a276c9d6fc2ef134c2a1eebdebf8e9
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 020c695ecd85de811586b55f2b739caab1590b8f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689585"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68261471"
 ---
 # <a name="table-valued-object-column-properties-visual-database-tools"></a>테이블 반환 개체(열) 속성(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1c574f1b-54f7-4c05-8e42-8620e2c1df0f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a67815d20a1275d8ae77042c89f76189748d336
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c87cd625222fc320d2a9a6f022a19361e74964f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945581"
 ---
 # <a name="debugging-data-flow"></a>데이터 흐름 디버깅
 

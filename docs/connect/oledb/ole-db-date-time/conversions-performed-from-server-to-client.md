@@ -1,5 +1,5 @@
 ---
-title: 변환은 서버에서 클라이언트로 수행 | Microsoft Docs
+title: 서버에서 클라이언트로 수행 되는 변환 | Microsoft Docs
 description: 서버에서 클라이언트로 수행되는 변환
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3ff9bc3f85340eb86aa0fa21820977e70ab51c5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22f3b681f9c4256087c17bd1e74011c2ba0916fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015811"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>서버에서 클라이언트로 수행되는 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66769370"
   이 문서에서는 [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상과 SQL Server 용 OLE DB 드라이버를 사용하여 작성된 클라이언트 애플리케이션 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
   
 ## <a name="conversions"></a>변환  
- 다음 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수의 경우 icommandwithparameters:: Setparameterinfo가 호출 된 경우 지정 된 유형의 *pwszDataSourceType* 서버에서 수행할 변환 하는 암시적 변환 서버의 실제 형식이 일치 하지 않음 를 클라이언트에 반환 되는 형식 icommandwithparameters:: Setparameterinfo를 통해 지정 된 형식과 일치 하 게 됩니다. 따라서 서버의 변환 규칙이 이 문서에서 설명된 내용과 다를 경우 예기치 못한 변환 결과가 나타날 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 1899-12-30을 사용하지 않고, 1900-1-1을 사용합니다.  
+ 다음 표에서는 클라이언트로 반환된 형식과 바인딩 형식 간의 변환에 대해 설명합니다. 출력 매개 변수의 경우 ICommandWithParameters:: SetParameterInfo를 호출 하 고 *pwszDataSourceType* 에 지정 된 형식이 서버의 실제 형식과 일치 하지 않으면 서버에서 암시적 변환이 수행 되 고 형식이 반환 됩니다. 클라이언트는 ICommandWithParameters:: SetParameterInfo를 통해 지정 된 형식과 일치 합니다. 따라서 서버의 변환 규칙이 이 문서에서 설명된 내용과 다를 경우 예기치 못한 변환 결과가 나타날 수 있습니다. 예를 들어 기본 날짜를 입력해야 하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 1899-12-30을 사용하지 않고, 1900-1-1을 사용합니다.  
   
 |대상 -><br /><br /> 보낸 사람|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
@@ -51,7 +50,7 @@ ms.locfileid: "66769370"
 |기호|의미|  
 |------------|-------------|  
 |확인|변환이 필요 없습니다.|  
-|-|변환이 지원되지 않습니다. 바인딩을 iaccessor:: Createaccessor 호출 될 때 유효성이 검사 되는 경우에 DBBINDSTATUS_UPSUPPORTEDCONVERSION이 반환 됩니다 *rgStatus*합니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
+|-|변환이 지원되지 않습니다. IAccessor:: CreateAccessor가 호출 될 때 바인딩의 유효성을 검사 하는 경우 DBBINDSTATUS_UPSUPPORTEDCONVERSION가 *rgStatus*에서 반환 됩니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
 |1|시간 필드가 0으로 설정됩니다.|  
 |2|DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다.|  
 |3|표준 시간대가 0으로 설정됩니다.|  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f38b97b5-d4f0-4f74-a33d-740241a85842
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: abbb07c23685562d28297f096728589fdc3a343e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff224739664e55a1e05d45f684f199969903fc04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972646"
 ---
 # <a name="setstring-method-sqlservercallablestatement"></a>setString 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

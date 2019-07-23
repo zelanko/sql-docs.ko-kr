@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: c1e9105b104d6fb79c43d23bdda6da4b4603d339
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: d405373dbd22b66310768a727f236d7596d05809
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111657"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>다른 SQL Server로 TDE 보호 데이터베이스 이동
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +166,7 @@ ms.locfileid: "67585683"
      기본적으로 분리 작업은 데이터베이스와 연결된 모든 전체 텍스트 카탈로그를 유지합니다. 전체 텍스트 카탈로그를 제거하려면 **전체 텍스트 카탈로그 유지** 확인란의 선택을 취소합니다. 이 옵션은 데이터베이스를 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 업그레이드하는 경우에만 표시됩니다.  
   
      **상태**  
-     다음 상태 중 하나를 표시합니다. **준비** 또는 **준비 안 됨**  
+     다음 상태 중 하나를 표시합니다. **준비** 또는 **준비 안 됨**을 표시합니다.  
   
      **메시지**  
      다음과 같이 **메시지** 열에 데이터베이스에 대한 정보가 표시될 수도 있습니다.  

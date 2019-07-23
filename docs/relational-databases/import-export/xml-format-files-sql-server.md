@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b65b89ea70d48991af89190c7577cd7dee2043a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724898bb35df9126ba61b5ebac147a37f272effc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091430"
 ---
 # <a name="xml-format-files-sql-server"></a>XML 서식 파일(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

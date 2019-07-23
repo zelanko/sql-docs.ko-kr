@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 85e12df8-1be7-4bdc-aea9-05aade085c06
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f32cf35670149a42941c91572d25bdd235c503d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aeae859d86f33e264234c38e0d398e772c537ddf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062519"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>bcp를 사용하여 파일 스토리지 유형 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -100,7 +99,7 @@ ms.locfileid: "64946117"
 |**numeric**|SQLNUMERIC|  
 |**float**|SQLFLT8|  
 |**real**|SQLFLT4|  
-|**ssNoversion**|SQLINT|  
+|**int**|SQLINT|  
 |**bigint**|SQLBIGINT|  
 |**smallint**|SQLSMALLINT|  
 |**tinyint**|SQLTINYINT|  

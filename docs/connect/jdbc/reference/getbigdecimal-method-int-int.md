@@ -1,5 +1,5 @@
 ---
-title: getBigDecimal 메서드 (int, int) | Microsoft Docs
+title: Get이상 Decimal 메서드 (int, int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d9351b35-7046-4852-a612-72d4c46b2bbb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6216ccb9b89de50a506a7c2e59dd962d067faed0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 77fa7092b7835e400b7ced8c7dbc0368188b0eb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954001"
 ---
 # <a name="getbigdecimal-method-int-int"></a>getBigDecimal 메서드(int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,13 +48,13 @@ public java.math.BigDecimal getBigDecimal(int index,
  소수점 이하의 자릿수를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- BigDecimal 개체입니다.  
+ 가는 10 진수 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getBigDecimal 메서드는 java.sql.CallableStatement 인터페이스의 getBigDecimal 메서드에 의해 지정 됩니다.  
+ 이 getBigDecimal 메서드는 java. CallableStatement 인터페이스의 Get이상 Decimal 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getBigDecimal 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlservercallablestatement.md)   

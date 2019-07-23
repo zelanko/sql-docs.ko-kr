@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 45fd2a7f8281a2b65097c7c0e493cc0a6f60eddc
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: add1b0fc86c5e43bedd1e3ebbf7921fb1e9847c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058064"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>변경 데이터 캡처 관리 및 모니터링(SQL Server)
 
@@ -120,7 +119,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
 
 ### <a name="use-data-collector-to-collect-sampling-data"></a>데이터 수집기를 사용하여 샘플링 데이터 수집
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 수집기를 사용하면 모든 테이블 또는 동적 관리 뷰에서 데이터에 대한 스냅숏을 수집하고 성능 데이터 웨어하우스를 구축할 수 있습니다. 데이터베이스에 변경 데이터 캡처가 설정된 경우 나중에 분석할 수 있도록 sys.dm_cdc_log_scan_sessions 뷰 및 sys.dm_cdc_errors 뷰의 스냅샷을 정기적으로 수집하는 것이 좋습니다. 다음 절차에서는 sys.dm_cdc_log_scan_sessions 관리 뷰에서 샘플 데이터를 수집하도록 데이터 수집기를 설정합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 수집기를 사용하면 모든 테이블 또는 동적 관리 뷰에서 데이터에 대한 스냅샷을 수집하고 성능 데이터 웨어하우스를 구축할 수 있습니다. 데이터베이스에 변경 데이터 캡처가 설정된 경우 나중에 분석할 수 있도록 sys.dm_cdc_log_scan_sessions 뷰 및 sys.dm_cdc_errors 뷰의 스냅샷을 정기적으로 수집하는 것이 좋습니다. 다음 절차에서는 sys.dm_cdc_log_scan_sessions 관리 뷰에서 샘플 데이터를 수집하도록 데이터 수집기를 설정합니다.
 
 #### <a name="configuring-data-collection"></a>데이터 컬렉션 구성
 

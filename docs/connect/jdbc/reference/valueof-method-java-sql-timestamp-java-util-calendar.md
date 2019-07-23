@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3e2d977647153ab74299a6b6f002ec33d3003558
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 11d8f8e346fdb0f07770feec815e5aa5fe88355f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001589"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>valueOf 메서드(java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,13 +36,13 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
   
  *calendar*  
   
- 오프셋 값입니다.  날짜 및 시간 구성 요소 *달력* 에 따라 설정 됩니다는 *타임 스탬프* 값입니다.  
+ 오프셋 값입니다.  *Calendar* 의 날짜 및 시간 구성 요소는 *타임 스탬프* 값에 따라 설정 됩니다.  
   
 ## <a name="return-value"></a>반환 값  
- 시간 지정된 java.util.Calendar 개체의 표준 시간대에서 java.sql.Timestamp 개체로 지정 된 시점을 나타내는 DateTimeOffset 개체를 반환 합니다.  
+ 지정 된 java. util 개체의 표준 시간대에서 해당 지정 시간을 나타내는 DateTimeOffset 개체를 반환 합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이 메서드는 또한 java.sql.Timestamp 개체로 지정 된 시점의 지점 java.util.Calendar 개체를 설정 합니다.  
+ 또한이 메서드는 java. c a. i. i. i. i. i.  
   
 ## <a name="see-also"></a>참고 항목  
  [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md)   

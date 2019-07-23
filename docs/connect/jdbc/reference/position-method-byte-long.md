@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 787412c2-4342-49c8-9ca2-7a9ddcd3277c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e6056412f6ab2726112d5286f2f52c83ff6691cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf8cfa3bb6aed74c7689639698715dc24803d46d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976470"
 ---
 # <a name="position-method-byte-long"></a>position 메서드(byte, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public long position(byte[] bPattern,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 위치 메서드는 java.sql.Blob 인터페이스의 위치 메서드에 의해 지정 됩니다.  
+ 이 position 메서드는 java. Blob 인터페이스의 position 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [position 메서드 &#40;SQLServerBlob&#41;](../../../connect/jdbc/reference/position-method-sqlserverblob.md)   

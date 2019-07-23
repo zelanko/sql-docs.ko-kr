@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: 517fe745-d79b-4aae-99a7-72be45ea6acb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4c99c5348b5ba0f3638fd3eaaaf261caa984a6fd
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: ed1fb6d31d22f04657288e2c924316b891841946
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061078"
 ---
 # <a name="create-column-encryption-key-transact-sql"></a>CREATE COLUMN ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -87,12 +86,12 @@ Always Encrypted 지원 암호화 알고리즘은 256비트를 가진 일반 텍
   
 열 암호화 키에 대한 정보를 보려면 [sys.columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md), [sys.column_encryption_keys&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-keys-transact-sql.md), [sys.column_encryption_key_values&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-encryption-key-values-transact-sql.md)를 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **ALTER ANY COLUMN ENCRYPTION KEY** 권한을 요구합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-column-encryption-key"></a>1. 열 암호화 키 만들기  
+### <a name="a-creating-a-column-encryption-key"></a>1\. 열 암호화 키 만들기  
 다음 예에서는 `MyCEK`라는 열 암호화 키를 만듭니다.  
   
 ```  

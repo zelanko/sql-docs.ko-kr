@@ -9,10 +9,10 @@ ms.date: 11/15/2018
 ms.author: maggies
 ms.custom: include file
 ms.openlocfilehash: a72ae2bdc9d6adde389b5bd6a2930854bdf05139
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
-ms.translationtype: HT
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68222965"
 ---
  ![아니요](media/no.png)SharePoint Online
