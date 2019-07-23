@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: bda0b29e-57f5-4879-b04d-1396dc56daa8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 70dd29f6a9a5cea1046b3e62612492469d967d98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b650963db2dbfe07eaafdc879da39ff62d8e57c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724734"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896383"
 ---
 # <a name="developing-a-custom-connection-manager"></a>사용자 지정 연결 관리자 개발
 

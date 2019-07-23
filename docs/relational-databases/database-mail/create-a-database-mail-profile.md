@@ -14,25 +14,24 @@ helpviewer_keywords:
 ms.assetid: 58ae749d-6ada-4f9c-bf00-de7c7a992a2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ae292a384a26c050976d4557793f6060ac3fe1b7
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 6be64ffc819157b95729f855bb81a5e12c78a7f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980449"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134483"
 ---
 # <a name="create-a-database-mail-profile"></a>데이터베이스 메일 프로필 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 공개 프로필 및 개인 프로필을 만들 수 있습니다. 메일 프로필에 대한 자세한 내용은 [데이터베이스 메일 프로필](database-mail-configuration-objects.md)을 참조하세요.
+  **데이터베이스 메일 구성 마법사** 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 을 사용하여 데이터베이스 메일 퍼블릭 프로필 및 프라이빗 프로필을 만들 수 있습니다. 메일 프로필에 대한 자세한 내용은 [데이터베이스 메일 프로필](database-mail-configuration-objects.md)을 참조하세요.
   
 -   **시작하기 전에:** [필수 구성 요소](#Prerequisites), [보안](#Security)  
   
--   **데이터베이스 메일 개인 프로필을 만들려면 다음을 사용합니다.**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
+-   **데이터베이스 메일 프라이빗 프로필을 만들려면 다음을 사용합니다.**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#PrivateProfile)  
   
 -   **데이터베이스 메일 공개 프로필을 만들려면 다음을 사용합니다.**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#PublicProfile)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Prerequisites"></a> 필수 구성 요소  
  프로필에 대한 데이터베이스 메일 계정을 하나 이상 만듭니다. 데이터베이스 메일 계정을 만드는 방법은 [데이터베이스 메일 계정 만들기](../../relational-databases/database-mail/create-a-database-mail-account.md)를 참조하세요.  
@@ -40,7 +39,7 @@ ms.locfileid: "53980449"
 ###  <a name="Security"></a> 보안  
  공개 프로필을 사용하여 **msdb** 데이터베이스에 액세스할 수 있는 모든 사용자는 해당 프로필을 사용하여 메일을 보낼 수 있습니다. 프라이빗 프로필은 사용자 또는 역할에 의해 사용될 수 있습니다. 프로필에 대한 액세스 권한을 역할에 부여하면 보다 쉽게 유지 관리되는 아키텍처가 생성됩니다. 메일을 보내려면 **msdb** 데이터베이스에서 **DatabaseMailUserRole** 의 멤버여야 하며 적어도 하나 이상의 데이터베이스 메일 프로필에 액세스할 수 있어야 합니다.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  프로필 계정을 만들고 저장 프로시저를 실행하는 사용자는 sysadmin 고정 서버 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> 데이터베이스 메일 구성 마법사 사용  
@@ -60,7 +59,7 @@ ms.locfileid: "53980449"
   
 -   **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 새 프로필 만들기를 완료합니다.  
   
--   **데이터베이스 메일 개인 프로필을 구성하려면**  
+-   **데이터베이스 메일 프라이빗 프로필을 구성하려면**  
   
     -   데이터베이스 메일 구성 마법사를 엽니다.  
   
@@ -68,7 +67,7 @@ ms.locfileid: "53980449"
   
     -   **프로필 및 계정 관리** 페이지에서 **프로필 보안 관리** 옵션을 선택하고 **다음**을 클릭합니다.  
   
-    -   **개인 프로필** 탭에서 구성하려는 프로필에 대한 확인란을 선택하고 **다음**을 클릭합니다.  
+    -   **프라이빗 프로필** 탭에서 구성하려는 프로필에 대한 확인란을 선택하고 **다음**을 클릭합니다.  
   
     -   **마법사 완료** 페이지에서 수행할 동작을 검토하고 **마침** 을 클릭하여 프로필 구성을 완료합니다.  
   
@@ -86,7 +85,7 @@ ms.locfileid: "53980449"
   
 ## <a name="using-transact-sql"></a>Transact-SQL 사용  
   
-###  <a name="PrivateProfile"></a> 데이터베이스 메일 개인 프로필을 만들려면  
+###  <a name="PrivateProfile"></a> 데이터베이스 메일 프라이빗 프로필을 만들려면  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다.  
   

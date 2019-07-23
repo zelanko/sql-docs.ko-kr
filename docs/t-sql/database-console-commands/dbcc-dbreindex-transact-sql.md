@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 9bc65e7f29f75d4aaf2f1e6366f29d45f04cafd0
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 5aa089ac3c8de549e0c2ec33fd413c9cafba24dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101994"
 ---
 # <a name="dbcc-dbreindex-transact-sql"></a>DBCC DBREINDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,11 +88,11 @@ NO_INFOMSGS가 지정되지 않은 한(테이블 이름이 지정되어야 함) 
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 호출자는 테이블을 소유하거나, **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
-### <a name="a-rebuilding-an-index"></a>1. 인덱스 다시 작성  
+### <a name="a-rebuilding-an-index"></a>1\. 인덱스 다시 작성  
 다음 예에서는 `Employee_EmployeeID` 데이터베이스의 `80` 테이블에 채우기 비율 `Employee`의 `AdventureWorks` 클러스터형 인덱스를 다시 작성하는 방법을 보여 줍니다.
   
 ```sql  
@@ -103,7 +102,7 @@ DBCC DBREINDEX ('HumanResources.Employee', PK_Employee_BusinessEntityID,80);
 GO  
 ```  
   
-### <a name="b-rebuilding-all-indexes"></a>2. 모든 인덱스 다시 작성  
+### <a name="b-rebuilding-all-indexes"></a>2\. 모든 인덱스 다시 작성  
 다음 예에서는 채우기 비율 값 `Employee`을 사용하여 `AdventureWorks`의 `70` 테이블에서 모든 인덱스를 다시 작성하는 방법을 보여 줍니다.
   
 ```sql

@@ -23,22 +23,21 @@ helpviewer_keywords:
 ms.assetid: 787154a6-39a6-4dd6-a6d0-67b4364f95d5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f23352e40c7b068eb0341c97c5f86d1b6f07ad66
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b7e0a949e132f01ce82e46a6e8b4c1d761c1a52a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100050"
 ---
 # <a name="set-textsize-transact-sql"></a>SET TEXTSIZE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  SELECT 문에서 반환된 **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** 및 **image** 데이터의 크기를 지정합니다.  
+  SELECT 문에서 반환된 **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext** 및 **image** 데이터의 크기를 지정합니다.  
   
 > [!IMPORTANT]
->  **ntext**, **text** 및 **image** 데이터 형식은 이후 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 **nvarchar(max)**, **varchar(max)** 및 **varbinary(max)** 를 사용합니다.  
+>  **ntext**, **text** 및 **image** 데이터 형식은 이후 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 **nvarchar(max)** , **varchar(max)** 및 **varbinary(max)** 를 사용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +49,7 @@ SET TEXTSIZE { number }
   
 ## <a name="arguments"></a>인수  
  *number*  
- **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **text**, **ntext** 또는 **image** 데이터의 길이를 바이트 단위로 표시합니다. *숫자*는 최대 값이 2147483647(2GB)인 정수입니다.  값 -1은 무제한 크기를 나타냅니다. 값 0은 크기를 기본값(4KB)으로 다시 설정됩니다.  
+ **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **text**, **ntext** 또는 **image** 데이터의 길이를 바이트 단위로 표시합니다. *숫자*는 최대 값이 2147483647(2GB)인 정수입니다.  값 -1은 무제한 크기를 나타냅니다. 값 0은 크기를 기본값(4KB)으로 다시 설정됩니다.  
   
  연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client(10.0 이상) 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 용 ODBC 드라이버가 자동으로 `-1`(무제한)을 지정합니다.  
   
@@ -61,7 +60,7 @@ SET TEXTSIZE { number }
   
  SET TEXTSIZE 옵션은 실행 시간 또는 런타임에 설정되며, 구문 분석 시에는 설정되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

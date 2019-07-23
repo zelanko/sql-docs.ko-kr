@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6d17b39369f19736e587fc82507a82fe02f85590
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 06e0c90fef7c030a9ab67998a8f74ae8c0430fbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127859"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>스냅샷으로 구독 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,6 +50,6 @@ ms.locfileid: "54124263"
   
 ## <a name="see-also"></a>참고 항목  
  [구독 초기화](../../relational-databases/replication/initialize-a-subscription.md)   
- [스냅숏 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
+ [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)  
   
   

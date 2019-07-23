@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 662d019e-f217-49df-9e2f-b5662fa0342d
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 86da716e81c9bcf499c09d28a55c92e3b6f6eebd
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 0d4148e002ba84677e13e101a4830f0b6da10915
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088971"
 ---
 # <a name="create-diagnostics-session-transact-sql"></a>CREATE DIAGNOSTICS SESSION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -102,7 +101,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-diagnostics-session"></a>1. 진단 세션 만들기  
+### <a name="a-creating-a-diagnostics-session"></a>1\. 진단 세션 만들기  
  이 예제에서는 데이터베이스 엔진 성능의 메트릭을 기록하는 진단 세션을 만듭니다. 이 예제에서는 엔진 쿼리 실행/종료 이벤트 및 차단 DMS 이벤트를 수신하는 진단 세션을 만듭니다. 반환되는 항목은 명령 텍스트, 컴퓨터 이름, 요청 ID(쿼리 ID) 및 이벤트가 만들어진 세션입니다.  
   
 ```  
@@ -149,7 +148,7 @@ SELECT * FROM master.sysdiag.MYDIAGSESSION;
 DROP DIAGNOSTICS SESSION MYDIAGSESSION;  
 ```  
   
-### <a name="b-alternative-diagnostic-session"></a>2. 대체 진단 세션  
+### <a name="b-alternative-diagnostic-session"></a>2\. 대체 진단 세션  
  약간 다른 속성을 가진 두 번째 예입니다.  
   
 ```  

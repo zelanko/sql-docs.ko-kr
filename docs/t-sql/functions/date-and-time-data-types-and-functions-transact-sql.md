@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 83e378a2-6e89-4c80-bc4f-644958d9e0a9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = azure-sqldw-latest||= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 340967f5f44b7cbdec4e23dd0cd9a400522bbe8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a823ffd693e770f97811124d77f39763680fb658
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999263"
 ---
 # <a name="date-and-time-data-types-and-functions-transact-sql"></a>날짜 및 시간 데이터 형식 및 함수(Transact-SQL)
 
@@ -88,10 +87,10 @@ ms.locfileid: "65943718"
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |--------------|------------|------------------|----------------------|-----------------|  
 |[DATENAME](../../t-sql/functions/datename-transact-sql.md)|DATENAME ( *datepart* , *date* )|지정한 날짜에서 특정 *datepart*를 나타내는 문자열을 반환합니다.|**nvarchar**|비결정적|   
-|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|지정한 *date*에서 특정 *datepart*를 나타내는 정수를 반환합니다.|**ssNoversion**|비결정적|  
-|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|지정한 *date*에서 일 부분을 나타내는 정수를 반환합니다.|**ssNoversion**|결정적|  
-|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|지정한 *date*에서 월 부분을 나타내는 정수를 반환합니다.|**ssNoversion**|결정적|  
-|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|지정한 *date*에서 연도 부분을 나타내는 정수를 반환합니다.|**ssNoversion**|결정적|  
+|[DATEPART](../../t-sql/functions/datepart-transact-sql.md)|DATEPART ( *datepart* , *date* )|지정한 *date*에서 특정 *datepart*를 나타내는 정수를 반환합니다.|**int**|비결정적|  
+|[DAY](../../t-sql/functions/day-transact-sql.md)|DAY ( *date* )|지정한 *date*에서 일 부분을 나타내는 정수를 반환합니다.|**int**|결정적|  
+|[MONTH](../../t-sql/functions/month-transact-sql.md)|MONTH ( *date* )|지정한 *date*에서 월 부분을 나타내는 정수를 반환합니다.|**int**|결정적|  
+|[YEAR](../../t-sql/functions/year-transact-sql.md)|YEAR ( *date* )|지정한 *date*에서 연도 부분을 나타내는 정수를 반환합니다.|**int**|결정적|  
   
 ###  <a name="fromParts"></a> 해당 부분에서 날짜 및 시간 값을 반환하는 함수
   
@@ -108,7 +107,7 @@ ms.locfileid: "65943718"
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
-|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|지정된 두 날짜 간에 교차되는 날짜 또는 시간 *datepart* 경계의 수를 반환합니다.|**ssNoversion**|결정적|  
+|[DATEDIFF](../../t-sql/functions/datediff-transact-sql.md)|DATEDIFF ( *datepart* , *startdate* , *enddate* )|지정된 두 날짜 간에 교차되는 날짜 또는 시간 *datepart* 경계의 수를 반환합니다.|**int**|결정적|  
 |[DATEDIFF_BIG](../../t-sql/functions/datediff-big-transact-sql.md)|DATEDIFF_BIG ( *datepart* , *startdate* , *enddate* )|지정된 두 날짜 간에 교차되는 날짜 또는 시간 *datepart* 경계의 수를 반환합니다.|**bigint**|결정적|  
   
 ###  <a name="ModifyDateandTimeValues"></a> 날짜 및 시간 값을 수정하는 함수
@@ -135,7 +134,7 @@ ms.locfileid: "65943718"
   
 |함수|구문|반환 값|반환 데이터 형식|결정성|  
 |---|---|---|---|---|
-|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|**datetime** 또는 **smalldatetime** 입력 식이 유효한 날짜 또는 시간 값인지 여부를 확인합니다.|**ssNoversion**|ISDATE는 CONVERT 함수와 함께 사용되고 CONVERT 스타일 매개 변수가 지정되고 스타일이 0, 100, 9 또는 109가 아닌 경우에만 결정적입니다.|  
+|[ISDATE](../../t-sql/functions/isdate-transact-sql.md)|ISDATE ( *expression* )|**datetime** 또는 **smalldatetime** 입력 식이 유효한 날짜 또는 시간 값인지 여부를 확인합니다.|**int**|ISDATE는 CONVERT 함수와 함께 사용되고 CONVERT 스타일 매개 변수가 지정되고 스타일이 0, 100, 9 또는 109가 아닌 경우에만 결정적입니다.|  
   
 ##  <a name="DateandTimeRelatedTopics"></a> 날짜 및 시간 관련 토픽 
   

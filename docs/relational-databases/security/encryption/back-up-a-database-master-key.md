@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 337646527cfaabfb3b803f37088f398cfd63808e
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 0a45b7977d19603387e51b9ed824d9e8a4d759b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997678"
 ---
 # <a name="back-up-a-database-master-key"></a>데이터베이스 마스터 키 백업
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "53997515"
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>사용 권한
 데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="using-sql-server-management-studio-with-transact-sql"></a>Transact-SQL과 함께 SQL Server Management Studio 사용  

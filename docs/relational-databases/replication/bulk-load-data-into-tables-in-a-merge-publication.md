@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 16e6498a-b449-4051-aec4-ea814a2ad993
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cc2ab453279e429f148f257f75f44f26c4e57287
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 44c3549b04bd2bf534e626764bbc56c688b3ca5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781741"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085838"
 ---
 # <a name="bulk-load-data-into-tables-in-a-merge-publication"></a>병합 게시에서 데이터를 테이블로 대량 로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,6 +35,6 @@ ms.locfileid: "47781741"
   
     -   FIRE_TRIGGERS 옵션을 사용하여 대량 복사를 실행합니다.  
   
-    -   데이터가 삽입된 데이터베이스에서 [sp_addtabletocontents&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md)를 실행합니다. 데이터가 삽입된 테이블 이름을 **@table_name**를 실행합니다.  
+    -   데이터가 삽입된 데이터베이스에서 [sp_addtabletocontents&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addtabletocontents-transact-sql.md)를 실행합니다. 데이터가 삽입된 테이블 이름을 **@table_name** 를 실행합니다.  
   
   

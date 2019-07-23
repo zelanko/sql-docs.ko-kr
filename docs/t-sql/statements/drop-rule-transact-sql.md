@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8e101334a5957349beaf7fcac9e8355ee17acdc6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: cce8533a1ac74feb95577d28f73cb6f87c15aa31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68223606"
 ---
 # <a name="drop-rule-transact-sql"></a>DROP RULE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]
   
  DROP RULE 문은 CHECK 제약 조건에 적용되지 않습니다. CHECK 제약 조건 삭제 방법은 [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)을 참조하십시오.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  DROP RULE을 실행하려면 최소한 규칙이 속한 스키마에 대한 ALTER 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  

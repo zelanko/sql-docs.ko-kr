@@ -39,14 +39,13 @@ helpviewer_keywords:
 ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b673b21eca837e9ccaacd3a47c819287a854e6f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c43f8296c6bb4d25c58ba65516601c37381d7b4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082461"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE 문(Transact-SQL)
 
@@ -64,7 +63,7 @@ BACKUP 명령을 사용하여 만든 SQL 데이터베이스 백업을 복원합�
 
 ||||
 |-|-|-|
-|** _\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -456,7 +455,7 @@ RESTORE 예에는 다음이 포함됩니다.
 - G. [트랜잭션 로그를 표시까지 복원](#restoring_transaction_log_to_mark)
 - H. [TAPE 구문을 사용하여 복원](#restoring_using_TAPE)
 - 9\. [FILE 및 FILEGROUP 구문을 사용하여 복원](#restoring_using_FILE_n_FG)
-- J. [데이터베이스 스냅숏으로 되돌리기](#reverting_from_db_snapshot)
+- J. [데이터베이스 스냅샷으로 되돌리기](#reverting_from_db_snapshot)
 - 11. [Microsoft Azure Blob Storage 서비스에서 복원](#Azure_Blob)
 
 > [!NOTE]
@@ -736,7 +735,7 @@ RESTORE DATABASE Sales
 
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|** _\*SQL Database<br />관리되는 인스턴스\*_**|[Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />관리되는 인스턴스 \*_**|[Analytics Platform<br />System(PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -877,7 +876,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System(PDW) \*_**
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|[SQL Database<br />관리되는 인스턴스](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System(PDW) \*_**
 
 &nbsp;
 

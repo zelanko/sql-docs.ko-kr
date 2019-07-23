@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bdc92038-3720-4795-8a5c-79b963f2c952
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 80f4948d7223dbe4f95b7b81fcc7043796cf2809
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 940f4b2adcb586dce923f33d02b2e75b9ce2b5b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904850"
 ---
 # <a name="cache-connection-manager"></a>캐시 연결 관리자
 

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: ae1d8fad-6649-4e93-b589-14a32d07da33
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fd1ce5f5da0fec21ee1ac944df6da0f9f6b1390b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cd6827a10bdacd11b092aa157b28604373aa018
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019666"
 ---
 # <a name="message-queue-task"></a>Message Queue Task
 
@@ -121,7 +120,7 @@ ms.locfileid: "65727573"
  2000 형식의 MSMQ(메시지 큐)를 사용할지 여부를 나타냅니다. 기본값은 **False**입니다.  
   
  **MSMQConnection**  
- 기존 MSMQ 연결 관리자를 선택하거나 \<**새 연결...**>을 클릭하여 새 연결 관리자를 만듭니다.  
+ 기존 MSMQ 연결 관리자를 선택하거나 \<**새 연결...** >을 클릭하여 새 연결 관리자를 만듭니다.  
   
  **관련 항목**: [MSMQ 연결 관리자](../../integration-services/connection-manager/msmq-connection-manager.md), [MSMQ 연결 관리자 편집기](../../integration-services/connection-manager/msmq-connection-manager-editor.md)  
   
@@ -231,7 +230,7 @@ ms.locfileid: "65727573"
 |**받을 패키지**|메시지는 지정한 패키지의 메시지만 받습니다. 이 값을 선택하면 동적 옵션 **Identifier**가 표시됩니다.|  
   
  **변수**  
- 변수 이름을 입력하거나 \<**새 변수...**>를 클릭한 다음, 새 변수를 구성합니다.  
+ 변수 이름을 입력하거나 \<**새 변수...** >를 클릭한 다음, 새 변수를 구성합니다.  
   
  **관련 항목:** [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
@@ -276,7 +275,7 @@ ms.locfileid: "65727573"
  **Compare** 옵션을 **없음**으로 설정한 경우가 아니면 메시지를 비교할 문자열을 제공합니다.  
   
  **변수**  
- 받은 메시지를 보관할 변수의 이름을 입력하거나 \<**새 변수...**>를 클릭한 다음, 새 변수를 구성합니다.  
+ 받은 메시지를 보관할 변수의 이름을 입력하거나 \<**새 변수...** >를 클릭한 다음, 새 변수를 구성합니다.  
   
  **관련 항목:** [변수 추가](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

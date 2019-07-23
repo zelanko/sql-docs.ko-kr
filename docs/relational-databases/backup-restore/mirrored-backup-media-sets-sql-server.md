@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 05a0b8d1-3585-4f77-972f-69d1c0d4aa9b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4ce1303c580bb8eabca7fa3fcdb15ed821ff827a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33875074e9c6975e187baceaff18ad49c057a8e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033734"
 ---
 # <a name="mirrored-backup-media-sets-sql-server"></a>미러된 백업 미디어 세트(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ ms.locfileid: "47626301"
   
  미러의 해당 볼륨의 내용은 동일하므로 복원할 때 서로 교환될 수 있습니다. 예를 들어 위의 그림에서 테이프 2의 3번째 볼륨은 테이프 0의 3번째 볼륨과 바꾸어 사용할 수 있습니다.  
   
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 장치에 대한 쓰기를 동기화하여 미러된 미디어의 내용이 동일하도록 합니다. 미러 중 하나가 채워지면 나머지 미러도 모두 동시에 스팬됩니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 은 디바이스에 대한 쓰기를 동기화하여 미러된 미디어의 내용이 동일하도록 합니다. 미러 중 하나가 채워지면 나머지 미러도 모두 동시에 스팬됩니다.  
   
 > [!IMPORTANT]  
 >  미러된 미디어 세트는 미러 제거를 통해 암시적으로 분할될 수 없습니다. 미러의 테이프 또는 디스크가 손상되거나 다시 포맷되는 경우 해당 미러는 추가 백업에 더 이상 사용할 수 없습니다. 채워진 미러가 하나 이상 그대로 유지되는 경우 해당 미디어 세트를 읽을 수 있습니다. 모든 미러에서 지정된 미디어 패밀리가 손실될 경우 해당 미디어 세트는 쓸모없게 됩니다.  
@@ -69,14 +68,14 @@ ms.locfileid: "47626301"
  다양한 여러 종류 중에서 속성이 같은 유사한 디바이스를 사용해야 합니다. 유사하지 않은 디바이스를 사용하면 오류 메시지(3212)가 발생합니다. 부합되는 디바이스를 사용하려면 동일한 디바이스, 즉 제조업체가 같고 모델 번호도 같은 드라이브만 사용합니다.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
- **미러된 백업 장치에 백업하려면**  
+ **미러된 백업 디바이스에 백업하려면**  
   
 -   [미러된 미디어 세트에 백업&#40;Transact-SQL&#41;](../../relational-databases/backup-restore/back-up-to-a-mirrored-media-set-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [백업 및 복원 중 발생 가능한 미디어 오류&#40;SQL Server&#41;](../../relational-databases/backup-restore/possible-media-errors-during-backup-and-restore-sql-server.md)   
  [RESTORE VERIFYONLY&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)   
- [백업 장치&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
+ [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [미디어 세트, 미디어 패밀리 및 백업 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

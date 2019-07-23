@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c86a8bf325bc12ce9fc4843038898a579c2308be
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: eb6a57ae483b36aba960a2b10423d38e72d32c5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066098"
 ---
 # <a name="add-signature-transact-sql"></a>ADD SIGNATURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -99,12 +98,12 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
 그러나 ProcSelectT1ForAlice에 서명하는 데 사용된 것과 같은 인증서로 procSelectT1에 연대 서명을 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호출 체인 전체에 대해 서명을 유지하며 T1에 대한 액세스를 허용합니다. 연대 서명은 아무런 권한을 부여하지 않으므로 Alice가 procSelectT1을 직접 호출하려고 시도해도 T1에는 액세스할 수 없습니다. 아래의 3번 예에서는 이 예에 사용할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 보여 줍니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  개체에 대한 ALTER 권한과 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다. 연결된 프라이빗 키가 암호로 보호되어 있으면 사용자도 암호가 있어야 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>1. 인증서를 사용하여 저장 프로시저에 서명  
+### <a name="a-signing-a-stored-procedure-by-using-a-certificate"></a>1\. 인증서를 사용하여 저장 프로시저에 서명  
  다음 예에서는 `HumanResources.uspUpdateEmployeeLogin` 인증서를 사용하여 `HumanResourcesDP` 저장 프로시저에 서명합니다.  
   
 ```  
@@ -114,7 +113,7 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>2. 서명된 BLOB을 사용하여 저장 프로시저에 서명  
+### <a name="b-signing-a-stored-procedure-by-using-a-signed-blob"></a>2\. 서명된 BLOB을 사용하여 저장 프로시저에 서명  
  다음 예에서는 새 데이터베이스를 만들고 예에서 사용할 인증서를 만듭니다. 예에서는 간단한 저장 프로시저를 만들어 서명하고 `sys.crypt_properties`에서 서명 BLOB을 검색합니다. 서명이 삭제된 후 다시 추가됩니다. 예에서는 WITH SIGNATURE 구문을 사용하여 프로시저에 서명합니다.  
   
 ```  
@@ -160,7 +159,7 @@ ADD SIGNATURE TO [sp_signature_demo]
 GO  
 ```  
   
-### <a name="c-accessing-a-procedure-using-a-countersignature"></a>3. 연대 서명을 사용하여 프로시저 액세스  
+### <a name="c-accessing-a-procedure-using-a-countersignature"></a>C. 연대 서명을 사용하여 프로시저 액세스  
  다음 예에서는 연대 서명을 통해 개체 액세스를 제어하는 방법을 보여 줍니다.  
   
 ```  

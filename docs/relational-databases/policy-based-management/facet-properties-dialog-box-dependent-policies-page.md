@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c2ab881c752c100d2fb9176eea377486382f8e07
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 538752d8752eb9cdba0adda94d03af498ccfbe05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087300"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>패싯 속성 대화 상자, 종속 정책 페이지
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 대화 상자를 사용하여 이 정책 기반 관리 패싯을 현재 참조하는 정책 목록을 표시할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **이름**  
  현재 패싯을 참조하는 각 정책의 이름을 나열합니다.  
   

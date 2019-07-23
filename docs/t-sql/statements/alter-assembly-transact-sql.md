@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87bca678-4e79-40e1-bb8b-bd5ed8f34853
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6ac4fde8a0058d05125346167e07c3d99e687a8e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 2881c4ee5145506158585611f61219983b764936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066110"
 ---
 # <a name="alter-assembly-transact-sql"></a>ALTER ASSEMBLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -168,7 +167,7 @@ ALTER ASSEMBLY assembly_name
   
  UNCHECKED 데이터 절 없이 ALTER ASSEMBLY를 실행하면 새 어셈블리 버전이 테이블의 기존 데이터에 영향을 미치지 않는지 확인하는 검사가 수행됩니다. 확인해야 하는 데이터 양에 따라 이 검사가 성능에 영향을 미칠 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  어셈블리에 대한 ALTER 권한이 필요합니다. 추가 요구 사항은 다음과 같습니다.  
   
 -   기존 권한이 EXTERNAL_ACCESS로 설정되어 있는 어셈블리를 변경하려면 서버에 대한 **EXTERNAL ACCESS ASSEMBLY** 권한이 필요합니다.  
@@ -195,7 +194,7 @@ ALTER ASSEMBLY assembly_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-refreshing-an-assembly"></a>1. 어셈블리 새로 고치기  
+### <a name="a-refreshing-an-assembly"></a>1\. 어셈블리 새로 고치기  
  다음 예에서는 `ComplexNumber` 어셈블리를 어셈블리의 구현을 유지하는 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 모듈의 최신 복사본으로 업데이트합니다.  
   
 > [!NOTE]  
@@ -209,7 +208,7 @@ ALTER ASSEMBLY assembly_name
 > [!IMPORTANT]
 > Azure SQL Database는 파일 참조를 지원하지 않습니다.
 
-### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>2. 어셈블리와 연결할 파일 추가  
+### <a name="b-adding-a-file-to-associate-with-an-assembly"></a>2\. 어셈블리와 연결할 파일 추가  
  다음 예에서는 `Class1.cs` 어셈블리와 연결할 소스 코드 파일 `MyClass`를 업로드합니다. 이 예에서는 데이터베이스에 이미 `MyClass` 어셈블리가 있다고 가정합니다.  
   
 ```  
@@ -220,7 +219,7 @@ ADD FILE FROM 'C:\MyClassProject\Class1.cs';
 > [!IMPORTANT]
 > Azure SQL Database는 파일 참조를 지원하지 않습니다.
 
-### <a name="c-changing-the-permissions-of-an-assembly"></a>3. 어셈블리의 사용 권한 변경  
+### <a name="c-changing-the-permissions-of-an-assembly"></a>C. 어셈블리의 사용 권한 변경  
  다음 예에서는 `ComplexNumber` 어셈블리 사용 권한 설정을 SAFE에서 `EXTERNAL ACCESS`로 변경합니다.  
   
 ```  

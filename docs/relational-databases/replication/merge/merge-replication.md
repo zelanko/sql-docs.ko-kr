@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ff87c368-4c00-4e48-809d-ea752839551e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dae0c0efc712dd1b14fe36f4a7c002a66fcc7fe9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a0392ff8153a5125dadc20eefa96a6a9dfc521f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033213"
 ---
 # <a name="merge-replication"></a>병합 복제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "47664771"
   
  병합 복제를 사용하면 여러 사이트에서 자율적으로 작업한 후 나중에 하나의 균일한 결과로 업데이트를 병합할 수 있습니다. 업데이트는 둘 이상의 노드에서 수행되므로 게시자 및 둘 이상의 구독자가 같은 데이터를 업데이트할 수 있습니다. 따라서 업데이트가 병합될 때 충돌이 발생할 수 있으며 병합 복제는 충돌을 처리하는 다양한 방법을 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스냅숏 에이전트와 병합 에이전트가 병합 복제를 구현합니다. 게시가 필터링되지 않거나 정적 필터를 사용하면 스냅샷 에이전트는 단일 스냅샷을 만듭니다. 게시에서 매개 변수가 있는 필터를 사용하면 스냅샷 에이전트는 각 데이터 파티션에 대한 스냅샷을 만듭니다. 병합 에이전트는 초기 스냅샷을 구독자에 적용합니다. 또한 초기 스냅샷이 만들어진 후 게시자 또는 구독자에서 발생한 증분 데이터 변경 내용을 병합하고 사용자가 구성한 규칙에 따라 충돌을 감지하고 해결합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스냅샷 에이전트와 병합 에이전트가 병합 복제를 구현합니다. 게시가 필터링되지 않거나 정적 필터를 사용하면 스냅샷 에이전트는 단일 스냅샷을 만듭니다. 게시에서 매개 변수가 있는 필터를 사용하면 스냅샷 에이전트는 각 데이터 파티션에 대한 스냅샷을 만듭니다. 병합 에이전트는 초기 스냅샷을 구독자에 적용합니다. 또한 초기 스냅샷이 만들어진 후 게시자 또는 구독자에서 발생한 증분 데이터 변경 내용을 병합하고 사용자가 구성한 규칙에 따라 충돌을 감지하고 해결합니다.  
   
  변경 내용을 추적하기 위해 병합 복제와 지연 업데이트 구독이 있는 트랜잭션 복제는 게시된 모든 테이블에 있는 모든 행을 고유하게 식별할 수 있어야 합니다. 이 병합 복제를 위해서는 테이블에 이미 **rowguid** 속성이 설정된 **uniqueidentifier** 데이터 형식의 열(이 열이 사용되는 경우)이 포함되지 않은 한 모든 테이블에 **ROWGUIDCOL** 열을 추가합니다. 게시에서 테이블이 삭제되면 **rowguid** 열이 제거됩니다. 추적 작업에 기존 열이 사용되면 해당 열은 제거되지 않습니다. 필터는 행 식별을 위해 복제에 사용된 **rowguidcol** 을 포함하지 않아야 합니다. **newid()** 함수가 **rowguid** 열에 대한 기본값으로 제공되지만 고객은 필요에 따라 각 행에 대한 GUID를 제공할 수 있습니다. 그러나 00000000-0000-0000-0000-000000000000 값은 제공하지 마세요.  
   

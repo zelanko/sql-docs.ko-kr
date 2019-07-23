@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: bf64036b88b6f29da0404b6e611ae891db93da70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912663"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -367,7 +366,7 @@ RETURNS return_data_type
 > [!NOTE]  
 > 포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
- *\<* table_type_definition*>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 열 또는 테이블 제약 조건이 포함됩니다. 테이블은 항상 주 파일 그룹에 포함됩니다.  
+ *\<* table_type_definition *>* ( { \<column_definition> \<column_constraint>    | \<computed_column_definition> }    [ \<table_constraint> ] [ ,...*n* ] ) [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 열 또는 테이블 제약 조건이 포함됩니다. 테이블은 항상 주 파일 그룹에 포함됩니다.  
   
  \< clr_table_type_definition >  ( { *column_name**data_type* } [ ,...*n* ] )    
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]([일부 지역에서 미리 보기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).  
@@ -558,7 +557,7 @@ INLINE = { ON | OFF }
  CLR 함수 프로그래밍 방법은 [CLR 사용자 정의 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md)를 참조하세요.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 스칼라 함수는 스칼라 식이 사용되는 위치에서 호출할 수 있습니다. 여기에는 계산 열 및 CHECK 제약 조건 정의가 포함됩니다. 스칼라 함수는 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 문을 사용하여 실행할 수도 있습니다. 스칼라 함수는 적어도 두 부분으로 구성된 함수 이름을 사용하여 호출해야 합니다(*<schema>.<function>*). 다중 부분 이름에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙(Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요. 테이블 반환 함수는 `SELECT`, `INSERT`, `UPDATE` 또는 `DELETE` 문 `FROM` 절의 테이블 식이 허용되는 위치에서 호출할 수 있습니다. 자세한 내용은 [사용자 정의 함수 실행](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)을 참조하세요.  
+ 스칼라 함수는 스칼라 식이 사용되는 위치에서 호출할 수 있습니다. 여기에는 계산 열 및 CHECK 제약 조건 정의가 포함됩니다. 스칼라 함수는 [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md) 문을 사용하여 실행할 수도 있습니다. 스칼라 함수는 적어도 두 부분으로 구성된 함수 이름을 사용하여 호출해야 합니다( *<schema>.<function>* ). 다중 부분 이름에 대한 자세한 내용은 [Transact-SQL 구문 표기 규칙(Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)을 참조하세요. 테이블 반환 함수는 `SELECT`, `INSERT`, `UPDATE` 또는 `DELETE` 문 `FROM` 절의 테이블 식이 허용되는 위치에서 호출할 수 있습니다. 자세한 내용은 [사용자 정의 함수 실행](../../relational-databases/user-defined-functions/execute-user-defined-functions.md)을 참조하세요.  
   
 ## <a name="interoperability"></a>상호 운용성  
  함수에서 유효한 문은 다음과 같습니다.  
@@ -671,7 +670,7 @@ SELECT 쿼리에도 `ORDER BY`를 지정하고 쿼리를 실행해야 `ORDER` �
 > [!NOTE]
 > UDF에 대한 자세한 예제 및 성능 고려 사항은 [사용자 정의 함수 만들기&#40;데이터베이스 엔진&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)를 참조하세요. 
 
-### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>1. ISO 주를 계산하는 스칼라 반환 사용자 정의 함수 사용  
+### <a name="a-using-a-scalar-valued-user-defined-function-that-calculates-the-iso-week"></a>1\. ISO 주를 계산하는 스칼라 반환 사용자 정의 함수 사용  
  다음 예에서는 사용자 정의 함수 `ISOweek`를 만듭니다. 이 함수는 날짜 인수를 사용하여 ISO 주 번호를 계산합니다. 이 함수가 계산을 제대로 수행하기 위해서는 함수를 호출하기 전에 `SET DATEFIRST 1`을 호출해야 합니다.  
   
  또한 이 예에서는 [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 절을 사용하여 저장 프로시저가 실행될 수 있는 보안 컨텍스트를 지정하는 방법을 보여 줍니다. 이 예에서 `CALLER` 옵션은 프로시저를 호출하는 사용자의 컨텍스트에서 프로시저를 실행하도록 지정합니다. 지정할 수 있는 다른 옵션은 `SELF`, `OWNER` 및 *user_name*입니다.  
@@ -710,7 +709,7 @@ ISO Week
 52  
 ```  
   
-### <a name="b-creating-an-inline-table-valued-function"></a>2. 인라인 테이블 반환 함수 만들기  
+### <a name="b-creating-an-inline-table-valued-function"></a>2\. 인라인 테이블 반환 함수 만들기  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 인라인 테이블 값 함수를 반환합니다. `ProductID` 열, `Name` 열, 그리고 대리점에 판매된 각 제품에 대한 대리점별 총 연간 매출의 집계를 `YTD Total` 열로 반환합니다.  
   
 ```sql  
@@ -736,7 +735,7 @@ GO
 SELECT * FROM Sales.ufn_SalesByStore (602);  
 ```  
   
-### <a name="c-creating-a-multi-statement-table-valued-function"></a>3. 다중 문 테이블 반환 함수 만들기  
+### <a name="c-creating-a-multi-statement-table-valued-function"></a>3\. 다중 문 테이블 반환 함수 만들기  
  다음 예에서는 AdventureWorks2012 데이터베이스에서 테이블 값 함수 `fn_FindReports(InEmpID)`를 만듭니다. 이 함수에 유효한 직원 ID를 제공하면 해당 직원에게 보고하는 모든 직속 부하 직원 및 관련 부서 직원에 해당하는 테이블이 반환됩니다. 이 함수는 재귀 CTE(공통 테이블 식)를 사용하여 직원의 계층적 목록을 생성합니다. 재귀 CTE에 대한 자세한 내용은 [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
   
 ```sql  
@@ -784,7 +783,7 @@ FROM dbo.ufn_FindReports(1);
 GO  
 ```  
   
-### <a name="d-creating-a-clr-function"></a>4. CLR 함수 만들기  
+### <a name="d-creating-a-clr-function"></a>4\. CLR 함수 만들기  
  이 예에서는 CLR 함수 `len_s`를 만듭니다. 함수를 만들기 전에 `SurrogateStringFunction.dll` 어셈블리가 로컬 데이터베이스에 등록됩니다.  
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] SP1 ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])  
@@ -811,7 +810,7 @@ GO
   
  CLR 테이블 반환 함수를 만드는 방법에 대한 예는 [CLR 테이블 반환 함수](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-table-valued-functions.md)를 참조하세요.  
   
-### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>5. [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수의 정의를 표시합니다.  
+### <a name="e-displaying-the-definition-of-includetsqlincludestsql-mdmd-user-defined-functions"></a>5\. [!INCLUDE[tsql](../../includes/tsql-md.md)] 사용자 정의 함수의 정의를 표시합니다.  
   
 ```sql  
 SELECT definition, type   

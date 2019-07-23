@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 803c1fccf0369497da75554842d34c72d4c5b95f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 89f1338f2e127742a3e76b4b2dbc2f2ae5e8b8ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117127"
 ---
 # <a name="create-server-role-transact-sql"></a>CREATE SERVER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
  권한 시스템 디자인에 대한 정보는 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CREATE SERVER ROLE 권한 또는 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다.  
   
  로그인의 경우 *server_principal* 에 대한 IMPERSONATE이 필요하고 *server_principal*로 사용되는 서버 역할의 경우 ALTER 권한이 필요합니다. 또는 server_principal로 사용되는 Windows 그룹의 멤버 자격이 필요합니다.  
@@ -76,7 +75,7 @@ CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-server-role-that-is-owned-by-a-login"></a>1. 로그인이 소유하는 서버 역할 만들기  
+### <a name="a-creating-a-server-role-that-is-owned-by-a-login"></a>1\. 로그인이 소유하는 서버 역할 만들기  
  다음 예에서는 `buyers` 로그인이 소유하는 `BenMiller` 서버 역할을 만듭니다.  
   
 ```  
@@ -85,7 +84,7 @@ CREATE SERVER ROLE buyers AUTHORIZATION BenMiller;
 GO  
 ```  
   
-### <a name="b-creating-a-server-role-that-is-owned-by-a-fixed-server-role"></a>2. 고정 서버 역할이 소유하는 서버 역할 만들기  
+### <a name="b-creating-a-server-role-that-is-owned-by-a-fixed-server-role"></a>2\. 고정 서버 역할이 소유하는 서버 역할 만들기  
  다음 예에서는 `auditors` 고정 서버 역할이 소유하는 `securityadmin` 서버 역할을 만듭니다.  
   
 ```  

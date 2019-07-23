@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: c97fbb20-3d12-4d0b-9b52-62a229bc83c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4b03094aa0d75b2491e2635506c9a7b6563dacba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cc949553b66e1bd8e8d501a40a367d23559bb96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121667"
 ---
 # <a name="backslash-line-continuation-transact-sql"></a>백슬래시(줄 연속 문자)(Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "65981681"
 
 ## <a name="examples"></a>예  
 
-### <a name="a-splitting-a-character-string"></a>1. 문자열 분할  
+### <a name="a-splitting-a-character-string"></a>1\. 문자열 분할  
 
 다음 예에서는 백슬래시 및 캐리지 리턴을 사용하여 문자열을 두 줄로 분할합니다.  
   
@@ -80,7 +79,7 @@ def' AS [ColumnResult];
  abcdef
  ```    
 
-### <a name="b-splitting-a-binary-string"></a>2. 이진 문자열 분할  
+### <a name="b-splitting-a-binary-string"></a>2\. 이진 문자열 분할  
 
 다음 예에서는 백슬래시 및 캐리지 리턴을 사용하여 이진 문자열을 두 줄로 분할합니다.  
 

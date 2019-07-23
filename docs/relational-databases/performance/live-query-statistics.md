@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 5b60d4190ad25dd57098ef4cd107f1838886a767
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 96b7659d84ce548ee95ae23bc437f60575df5e35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53368415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051885"
 ---
 # <a name="live-query-statistics"></a>활성 쿼리 통계
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "53368415"
 ## <a name="remarks"></a>Remarks  
  통계 프로필 인프라를 사용하도록 설정해야 활성 쿼리 통계에서 쿼리 진행률에 관한 정보를 수집할 수 있습니다. 버전에 따라 오버헤드가 중요할 수 있습니다. 이 오버헤드에 대한 자세한 내용은 [쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **활성 쿼리 통계** 결과 페이지를 채우려면 데이터베이스 수준의 `SHOWPLAN` 권한이 필요하고 활성 통계를 보려면 서버 수준의 `VIEW SERVER STATE` 권한이 필요하며 쿼리를 실행하는 데 필요한 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f11d2c5e-ee05-45f3-8dc2-0feb99b2f76f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 523fb8a446e6985efe3e632a2e1c2b9804b76f49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8fb8a254b32f2c01192cbb799a75692a954b5a6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65729239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070582"
 ---
 # <a name="browse-all-principals-dialog-box"></a>모든 보안 주체 찾아보기 대화 상자
 
