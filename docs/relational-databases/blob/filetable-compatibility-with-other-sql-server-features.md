@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f12a17e4-bd3d-42b0-b253-efc36876db37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4afc0cfe0b310dcfcc106fc9d38b028c88f0261c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62b418a5876c6bc6e562fdce8557223a40dbf144
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116187"
 ---
 # <a name="filetable-compatibility-with-other-sql-server-features"></a>FileTable과 기타 SQL Server 기능 간 호환성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,7 +94,7 @@ ms.locfileid: "65094372"
  **인덱싱된 뷰**  
  현재 인덱싱된 뷰에는 FILESTREAM 열이나 FILESTREAM 열에 종속된 계산/지속형 계산 열이 포함될 수 없습니다. 이 동작은 FileTable에 정의된 뷰에도 그대로 적용됩니다.  
   
-##  <a name="OtherSnapshots"></a> 스냅숏 격리와 FileTable  
+##  <a name="OtherSnapshots"></a> 스냅샷 격리와 FileTable  
  RCSI(커밋된 읽기 스냅샷 격리)와 SI(스냅샷 격리)는 데이터에 대한 업데이트 작업이 수행 중인 경우에도 판독기에서 데이터의 스냅샷을 사용할 수 있도록 하는 기능에 의존합니다. 그러나 FileTable을 사용하면 Filestream 데이터에 대한 비트랜잭션 쓰기 액세스가 허용됩니다. 따라서 FileTable이 포함된 데이터베이스에서 이러한 기능을 사용하는 경우에는 다음 제한 사항이 적용됩니다.  
   
 -   FileTable이 포함된 데이터베이스를 변경하여 RCSI/SI를 사용하도록 설정할 수 있습니다.  

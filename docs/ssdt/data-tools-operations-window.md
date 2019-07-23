@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: afb49faa-321a-42b1-a378-955b586429f2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 012afa885490bb180b9ba0cae7b8ad435cf70e58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61db90f4082d19551d1d7b3227069cd0c9cf835a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984532"
 ---
 # <a name="data-tools-operations-window"></a>Data Tools 작업 창
 **Data Tools 작업 창**에는 이 항목에서 설명하는 일부 작업의 진행률이 표시되고 오류가 발생하는 경우 알림이 표시됩니다.  

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 24bc60e00fa628a0c984302a4d91c806eab09b4b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2baf7dd62a949dadbaaa5ff1f867c84fb097ed75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65949158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059896"
 ---
 # <a name="log-transact-sql"></a>LOG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -70,7 +69,7 @@ LOG ( float_expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-calculating-the-logarithm-for-a-number"></a>1. 수의 로그를 계산합니다.  
+### <a name="a-calculating-the-logarithm-for-a-number"></a>1\. 수의 로그를 계산합니다.  
  다음 예에서는 지정된 **float** 식의 `LOG`를 계산하는 방법을 보여 줍니다.  
   
 ```  
@@ -88,7 +87,7 @@ The LOG of the variable is: 2.30259
 (1 row(s) affected)  
 ```  
   
-### <a name="b-calculating-the-logarithm-of-the-exponent-of-a-number"></a>2. 수의 지수에 대한 로그를 계산합니다.  
+### <a name="b-calculating-the-logarithm-of-the-exponent-of-a-number"></a>2\. 수의 지수에 대한 로그를 계산합니다.  
  다음 예에서는 수의 지수에 대한 `LOG`를 계산합니다.  
   
 ```  

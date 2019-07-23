@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 434948bebe433c8325fc93e0a79a749e34a886d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97c28b53a15f1123acd8c22480743b64741229b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117078"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -105,7 +104,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  동의어는 동적 SQL에서 생성, 삭제 및 참조할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  지정된 스키마에서 동의어를 만들려면 사용자에게 CREATE SYNONYM 권한이 있어야 하며 스키마를 소유하거나 ALTER SCHEMA 권한이 있어야 합니다.  
   
  CREATE SYNONYM 권한은 부여할 수 있는 권한입니다.  
@@ -115,7 +114,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-synonym-for-a-local-object"></a>1. 로컬 개체의 동의어 만들기  
+### <a name="a-creating-a-synonym-for-a-local-object"></a>1\. 로컬 개체의 동의어 만들기  
  다음 예에서는 먼저 `Product` 데이터베이스의 기준 개체인 `AdventureWorks2012`에 대한 동의어를 만든 다음 동의어를 사용하여 쿼리합니다.  
   
 ```  
@@ -145,7 +144,7 @@ GO
  (4 row(s) affected)
 ``` 
   
-### <a name="b-creating-a-synonym-to-remote-object"></a>2. 원격 개체의 동의어 만들기  
+### <a name="b-creating-a-synonym-to-remote-object"></a>2\. 원격 개체의 동의어 만들기  
  다음 예에서 기준 개체인 `Contact`는 원격 서버인 `Server_Remote`에 있습니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
@@ -159,7 +158,7 @@ CREATE SYNONYM MyEmployee FOR Server_Remote.AdventureWorks2012.HumanResources.Em
 GO  
 ```  
   
-### <a name="c-creating-a-synonym-for-a-user-defined-function"></a>3. 사용자 정의 함수의 동의어 만들기  
+### <a name="c-creating-a-synonym-for-a-user-defined-function"></a>C. 사용자 정의 함수의 동의어 만들기  
  다음 예제에서는 주문 총계를 정확하게 12단위로 늘리는 `dbo.OrderDozen`라는 함수를 만듭니다. 그런 다음 `dbo.CorrectOrder` 함수에 대해 동의어 `dbo.OrderDozen`를 만듭니다.  
   
 ```  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d0637fc4-27cc-4046-98ea-dc86b7a3bd75
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 67e0345c73041ee7084695ec94adb79239a68462
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e0848a5452ad7cdb189b00c5ed90a6ad1cb8a1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648604"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127871"
 ---
 # <a name="initialize-a-transactional-subscription-from-a-backup"></a>트랜잭션 구독을 백업에서 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,9 +50,9 @@ ms.locfileid: "47648604"
   
     -   **@sync_type** - **initialize with backup**을 참조하세요.  
   
-    -   **@backupdevicetype** - 백업 장치의 유형: **논리** (기본값) **디스크**또는 **테이프**을 참조하세요.  
+    -   **@backupdevicetype** - 백업 디바이스의 유형: **논리** (기본값) **디스크**또는 **테이프**을 참조하세요.  
   
-    -   **@backupdevicename** - 복원에 사용할 논리적 또는 물리적 백업 장치  
+    -   **@backupdevicename** - 복원에 사용할 논리적 또는 물리적 백업 디바이스  
   
          논리적 디바이스의 경우 **sp_addumpdevice** 를 사용하여 디바이스를 만들 때 지정한 백업 디바이스의 이름을 지정합니다.  
   

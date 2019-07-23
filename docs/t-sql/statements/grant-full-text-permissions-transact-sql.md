@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1f0a85482a663b9be77ea455bdbabe87acf3b1e1
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 527e59ef18d152b4546619cf67130dc7aecbfe6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050828"
 ---
 # <a name="grant-full-text-permissions-transact-sql"></a>GRANT 전체 텍스트 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,10 +53,10 @@ GRANT permission [ ,...n ] ON
  *permission*  
  사용 권한의 이름입니다. 보안 개체에 대한 사용 권한의 올바른 매핑에 대해서는 이 항목 뒷부분의 "주의" 섹션에 설명되어 있습니다.  
   
- ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
+ ON FULLTEXT CATALOG **::** _full-text_catalog_name_  
  사용 권한을 부여할 전체 텍스트 카탈로그를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
+ ON FULLTEXT STOPLIST **::** _full-text_stoplist_name_  
  사용 권한을 부여할 전체 텍스트 중지 목록을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  
@@ -111,7 +110,7 @@ AS *granting_principal*
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다.  
   
  AS 옵션을 사용하는 경우 다음과 같은 추가 요구 사항이 적용됩니다.  
@@ -133,7 +132,7 @@ AS *granting_principal*
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-permissions-to-a-full-text-catalog"></a>1. 전체 텍스트 카탈로그에 사용 권한 부여  
+### <a name="a-granting-permissions-to-a-full-text-catalog"></a>1\. 전체 텍스트 카탈로그에 사용 권한 부여  
  다음 예에서는 `Ted`에게 전체 텍스트 카탈로그 `CONTROL`에 대한 `ProductCatalog` 사용 권한을 부여합니다.  
   
 ```  
@@ -142,7 +141,7 @@ GRANT CONTROL
     TO Ted ;  
 ```  
   
-### <a name="b-granting-permissions-to-a-stoplist"></a>2. 중지 목록에 대한 사용 권한 부여  
+### <a name="b-granting-permissions-to-a-stoplist"></a>2\. 중지 목록에 대한 사용 권한 부여  
  다음 예에서는 `Mary`에게 전체 텍스트 중지 목록 `VIEW DEFINITION`에 대한 `ProductStoplist` 사용 권한을 부여합니다.  
   
 ```  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b48da086-37dd-460a-8a4b-912f52c9b158
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 69d2edc4de33348daaab80344f9174ae7e308e27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d11088abe6327c9e3466ea115dd03834d2a0a1c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967708"
 ---
 # <a name="--subtract-ssis-expression"></a>-(빼기)(SSIS 식)
 

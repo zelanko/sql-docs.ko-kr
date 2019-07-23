@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6fd2d269-d87a-4134-82a1-40a09b3b5453
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea7010ed5c9a0399023c455fff2fc324297a0d0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3dccd3641592ebaadb7df3dd467cb28cf9a617f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062943"
 ---
 # <a name="developing-a-user-interface-for-a-custom-log-provider"></a>사용자 지정 로그 공급자의 사용자 인터페이스 개발
 

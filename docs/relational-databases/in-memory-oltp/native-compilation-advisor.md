@@ -13,14 +13,13 @@ f1_keywords:
 ms.assetid: d3898a47-2985-4a08-bc70-fd8331a01b7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a91aa69fcc3fc375c1a6469274613fa656813b8b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: bc5a4def5c32ffc39c0df58d5a7927a24c90860d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135549"
 ---
 # <a name="native-compilation-advisor"></a>네이티브 컴파일 관리자
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "52507840"
   
  지정된 해석 저장 프로시저에서 NCA를 통해 네이티브 모듈에서 지원되지 않는 모든 기능을 식별할 수 있습니다. NCA는 해결 방법 또는 솔루션에 대한 설명서 링크를 제공합니다.  
   
- 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 워크로드 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
+ 마이그레이션 방법에 대한 자세한 내용은 [메모리 내 OLTP – 일반적인 작업 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)을 참조하세요.  
   
 ## <a name="walkthrough-using-the-native-compilation-advisor"></a>네이티브 컴파일 관리자 사용 연습  
  **개체 탐색기**에서 변환할 저장 프로시저를 마우스 오른쪽 단추로 클릭하고 **네이티브 컴파일 관리자**를 선택합니다. **저장 프로시저 네이티브 컴파일 관리자**시작 페이지가 표시됩니다. 계속하려면 **다음** 을 클릭합니다.  

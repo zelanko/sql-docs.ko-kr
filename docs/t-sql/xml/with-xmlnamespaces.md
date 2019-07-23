@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3b32662b-566f-454d-b7ca-e247002a9a0b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ee0c340ebc917d7ced83b453d1cfd6126ff42f2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 86bdd12d5dabd7ad74662cd47b2004594328a6c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026604"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048144"
 ---
 # <a name="with-xmlnamespaces"></a>WITH XMLNAMESPACES
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ DEFAULT <xml_namespace_uri>
   
 -   XML 네임스페이스 접두어 `xsi`는 쿼리에서 ELEMENTS XSINIL 지시어를 사용하고 있는 경우 다시 선언할 수 없습니다.  
 
--   xsi 표준 네임스페이스를 사용하기 위해 'http://www.w3.org/2001/XMLSchema-instance'를 선언할 필요는 없습니다. 지정되지 않은 경우 XML/XPATH 프로세서에 의해 암시적으로 추가되며 xpath 식은 xml 문서에서 'http://www.w3.org/2001/XMLSchema-instance' 스키마가 올바르게 선언되어 있는 한 xsi 접두사를 사용할 수 있습니다.
+-   xsi 표준 네임스페이스를 사용하기 위해 'http://www.w3.org/2001/XMLSchema-instance '를 선언할 필요는 없습니다. 지정되지 않은 경우 XML/XPATH 프로세서에 의해 암시적으로 추가되며 xpath 식은 xml 문서에서 'http://www.w3.org/2001/XMLSchema-instance ' 스키마가 올바르게 선언되어 있는 한 xsi 접두사를 사용할 수 있습니다.
 
 -   URI 문자열 값은 현재 데이터베이스 데이터 정렬 코드 페이지에 따라 인코딩되며 내부적으로 유니코드로 변환됩니다.  
   

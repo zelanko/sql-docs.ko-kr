@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 46bd3edd-d6de-40a6-a015-21cce8321feb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ad33d137f6c5815bb30c4546d6d6acf578e60997
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0cce122c394453d842f7edcedc75cc5bea4dde9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758341"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128475"
 ---
 # <a name="deprecated-features-in-sql-server-replication"></a>SQL Server 복제에서 사용되지 않는 기능
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 계속 제공되지만 더 이상 사용되지 않는 복제 기능에 대해 설명합니다. 이러한 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 릴리스에서 제거될 예정입니다. 새 애플리케이션에는 이러한 기능을 사용하면 안 됩니다.  
   
-## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
+## <a name="items-deprecated-in-includesssql15includessssql15-mdmd"></a>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]  
   
 |기능|설명|  
 |-------------|-----------------|  

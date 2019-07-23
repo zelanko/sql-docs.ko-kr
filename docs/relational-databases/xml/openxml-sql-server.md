@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 060126fc-ed0f-478f-830a-08e418d410dc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2197039cd6517e27fef9711e56607418add0003e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6282a242807532095d13fed4b853731937bdd176
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62935876"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995360"
 ---
 # <a name="openxml-sql-server"></a>OPENXML(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -143,7 +142,7 @@ EXEC sp_xml_removedocument @docHandle;
 |-----------------|---------------|-----------------|  
 |**id**|**bigint**|문서 노드의 고유 ID입니다.<br /><br /> 루트 요소의 ID 값은 0입니다. 음수 ID 값은 예약된 값입니다.|  
 |**parentid**|**bigint**|노드의 부모를 나타냅니다. 이 ID로 식별된 부모는 부모 요소가 아닐 수도 있습니다. 하지만 부모 요소인지 여부는 부모가 이 ID에 의해 식별되는 노드의 NodeType에 따라 달라집니다. 예를 들어 노드가 텍스트 노드인 경우 해당 부모는 특성 노드일 수 있습니다.<br /><br /> 노드가 XML 문서의 최상위 수준에 있으면 해당 **ParentID** 는 NULL입니다.|  
-|**node type**|**ssNoversion**|노드 유형을 식별하며 XML 개체 모델(DOM) 노드 유형의 지정 번호에 해당하는 정수입니다.<br /><br /> 다음은 이 열에 표시될 수 있는 노드 유형을 나타내는 값입니다.<br /><br /> **1** = 요소 노드<br /><br /> **2** = 특성 노드<br /><br /> **3** = 텍스트 노드<br /><br /> **4** = CDATA 섹션 노드<br /><br /> **5** = 엔터티 참조 노드<br /><br /> **6** = 엔터티 노드<br /><br /> **7** = 처리 명령 노드<br /><br /> **8** = 주석 노드<br /><br /> **9** = 문서 노드<br /><br /> **10** = 문서 유형 노드<br /><br /> **11** = 문서 조각 노드<br /><br /> **12** = 표기법 노드<br /><br /> 자세한 내용은 MSXML(Microsoft XML) SDK의 "nodeType Property" 항목을 참조하십시오.|  
+|**node type**|**int**|노드 유형을 식별하며 XML 개체 모델(DOM) 노드 유형의 지정 번호에 해당하는 정수입니다.<br /><br /> 다음은 이 열에 표시될 수 있는 노드 유형을 나타내는 값입니다.<br /><br /> **1** = 요소 노드<br /><br /> **2** = 특성 노드<br /><br /> **3** = 텍스트 노드<br /><br /> **4** = CDATA 섹션 노드<br /><br /> **5** = 엔터티 참조 노드<br /><br /> **6** = 엔터티 노드<br /><br /> **7** = 처리 명령 노드<br /><br /> **8** = 주석 노드<br /><br /> **9** = 문서 노드<br /><br /> **10** = 문서 유형 노드<br /><br /> **11** = 문서 조각 노드<br /><br /> **12** = 표기법 노드<br /><br /> 자세한 내용은 MSXML(Microsoft XML) SDK의 "nodeType Property" 항목을 참조하십시오.|  
 |**localname**|**nvarchar(max)**|요소 또는 특성의 로컬 이름을 지정합니다. DOM 개체에 이름이 없는 경우에는 NULL입니다.|  
 |**prefix**|**nvarchar(max)**|노드 이름의 네임스페이스 접두사입니다.|  
 |**namespaceuri**|**nvarchar(max)**|노드의 네임스페이스 URI입니다. 값이 NULL이면 네임스페이스가 없는 것입니다.|  

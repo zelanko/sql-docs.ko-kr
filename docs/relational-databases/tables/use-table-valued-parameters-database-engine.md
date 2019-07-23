@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: df29531eb72457f371cde7e8c371006836fa6af5
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: b47d53f088089ed348e01ae380e0f21dcca420fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140318"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>테이블 반환 매개 변수 사용(데이터베이스 엔진)
 

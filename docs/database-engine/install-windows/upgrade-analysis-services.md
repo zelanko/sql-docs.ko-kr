@@ -21,12 +21,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: c70928d3a123dd3348baeb9c91edc42c06d7fc5e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6e7d840e2f2c6fd0ef9530dd696dcdf96aa72d44
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676011"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264604"
 ---
 # <a name="upgrade-analysis-services"></a>Analysis Services 업그레이드
 

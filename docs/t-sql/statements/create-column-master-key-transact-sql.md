@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: f8926b95-e146-4e3f-b56b-add0c0d0a30e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 17e717fd999109390c001bdab9aeee5629c1a119
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 6405f27391915af7305ab4615f4b3746fd17e5ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061061"
 ---
 # <a name="create-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -166,7 +165,7 @@ ENCLAVE_COMPUTATIONS
 열 마스터 키를 Enclave 사용 키로 지정합니다. 이 열 마스터 키로 암호화된 모든 열 암호화 키를 서버 쪽 보안 Enclave와 공유하고 Enclave 내의 계산에 사용할 수 있습니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
 
 *signature*  
-이진 리터럴은 ‘키 경로’ 및 ENCLAVE_COMPUTATIONS 설정을 열 마스터 키로 디지털 서명한 결과입니다. 이 서명은 ENCLAVE_COMPUTATIONS가 지정되었는지 여부를 반영합니다. 이 서명은 권한 없는 사용자가 서명된 값을 변경하지 못하도록 보호합니다. Always Encrypted 사용 가능 클라이언트 드라이버는 서명을 확인하고, 서명이 유효하지 않은 경우 애플리케이션에 오류를 반환합니다. 이 서명은 클라이언트 쪽 도구를 사용하여 생성해야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
+이진 리터럴은 ‘키 경로’ 및 ENCLAVE_COMPUTATIONS 설정을 열 마스터 키로 디지털 서명한 결과입니다.  이 서명은 ENCLAVE_COMPUTATIONS가 지정되었는지 여부를 반영합니다. 이 서명은 권한 없는 사용자가 서명된 값을 변경하지 못하도록 보호합니다. Always Encrypted 사용 가능 클라이언트 드라이버는 서명을 확인하고, 서명이 유효하지 않은 경우 애플리케이션에 오류를 반환합니다. 이 서명은 클라이언트 쪽 도구를 사용하여 생성해야 합니다. 자세한 내용은 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
   
   
 ## <a name="remarks"></a>Remarks  
@@ -175,12 +174,12 @@ ENCLAVE_COMPUTATIONS
 
 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **ALTER ANY COLUMN MASTER KEY** 권한을 요구합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-column-master-key"></a>1. 열 마스터 키 만들기  
+### <a name="a-creating-a-column-master-key"></a>1\. 열 마스터 키 만들기  
 다음 예제에서는 열 마스터 키의 열 마스터 키 메타데이터 항목을 만듭니다. MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 애플리케이션이 열 마스터 키에 액세스할 수 있도록 열 마스터 키가 인증서 저장소에 저장됩니다.  
   
 ```  
@@ -220,7 +219,7 @@ WITH (
     KEY_PATH = 'https://contoso.vault/sales_db_tce_key'  
 );  
 ```  
-### <a name="b-creating-an-enclave-enabled-column-master-key"></a>2. Enclave 사용 열 마스터 키 만들기  
+### <a name="b-creating-an-enclave-enabled-column-master-key"></a>2\. Enclave 사용 열 마스터 키 만들기  
 다음 예제에서는 Enclave 사용 가능 열 마스터 키의 열 마스터 키 메타데이터 항목을 만듭니다. MSSQL_CERTIFICATE_STORE 공급자를 사용하는 클라이언트 애플리케이션이 열 마스터 키에 액세스할 수 있도록 Enclave 사용 가능 열 마스터 키가 인증서 저장소에 저장됩니다.  
   
 ```  

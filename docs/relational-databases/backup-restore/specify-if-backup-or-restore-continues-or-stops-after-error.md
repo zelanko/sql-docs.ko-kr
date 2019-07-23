@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0c36052ce31b2d0edede232151bb8ef21e9af772
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e40636bc4f76e6963c0c766c36392515f7c200da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62516844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216178"
 ---
 # <a name="specify-if-backup-or-restore-continues-or-stops-after-error"></a>오류 발생 후 백업 또는 복원을 계속할지 중지할지 지정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

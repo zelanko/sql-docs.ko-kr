@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70102127d7d48160c5320e02a97113cdd903fb0b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334650"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948243"
 ---
 # <a name="top-transact-sql"></a>TOP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +84,7 @@ TOP 식은 트리거로 인해 실행될 수 있는 문에 영향을 주지 않�
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 뷰를 통해 행을 업데이트할 수 있습니다. TOP 절을 뷰 정의에 포함할 수 있으므로 행이 업데이트로 인해 TOP 식의 요구 사항을 더 이상 충족하지 않는 경우에는 특정 행이 뷰에서 사라질 수 있습니다.  
   
-MERGE 문에 지정되는 경우 TOP 절은 전체 원본 테이블과 전체 대상 테이블이 조인된 ‘후에’ 적용됩니다. 또한 삽입, 업데이트 또는 삭제 동작에 적합하지 않은 조인된 행이 제거됩니다. TOP 절은 조인된 행 수를 지정된 값으로 더 줄이며, 삽입, 업데이트 또는 삭제 동작은 나머지 조인된 행에 순서 없이 적용됩니다. 즉, 행은 WHEN 절에 정의된 동작에 순서 없이 분산됩니다. 예를 들어 TOP (10)을 지정하면 10개 행이 영향을 받는 경우 이 10개 행 중 7개가 업데이트되고 3개가 삽입될 수 있습니다. 또는 1개가 삭제되고 5개가 업데이트되고 4개가 삽입될 수 있습니다. MERGE 문은 원본과 대상 테이블 모두에 전체 테이블 검색을 수행하므로 큰 테이블을 수정하기 위해 TOP 절을 사용하여 다중 일괄 처리를 생성하는 경우에는 I/O 성능에 영향을 줄 수 있습니다. 이러한 시나리오에서 연속된 모든 일괄 처리는 새로운 행을 대상으로 해야 합니다.  
+MERGE 문에 지정되는 경우 TOP 절은 전체 원본 테이블과 전체 대상 테이블이 조인된 ‘후에’ 적용됩니다.  또한 삽입, 업데이트 또는 삭제 동작에 적합하지 않은 조인된 행이 제거됩니다. TOP 절은 조인된 행 수를 지정된 값으로 더 줄이며, 삽입, 업데이트 또는 삭제 동작은 나머지 조인된 행에 순서 없이 적용됩니다. 즉, 행은 WHEN 절에 정의된 동작에 순서 없이 분산됩니다. 예를 들어 TOP (10)을 지정하면 10개 행이 영향을 받는 경우 이 10개 행 중 7개가 업데이트되고 3개가 삽입될 수 있습니다. 또는 1개가 삭제되고 5개가 업데이트되고 4개가 삽입될 수 있습니다. MERGE 문은 원본과 대상 테이블 모두에 전체 테이블 검색을 수행하므로 큰 테이블을 수정하기 위해 TOP 절을 사용하여 다중 일괄 처리를 생성하는 경우에는 I/O 성능에 영향을 줄 수 있습니다. 이러한 시나리오에서 연속된 모든 일괄 처리는 새로운 행을 대상으로 해야 합니다.  
   
 UNION, UNION ALL, EXCEPT 또는 INTERSECT 연산자가 포함된 쿼리에서 TOP 절을 지정할 때는 주의해야 합니다. 이러한 연산자가 SELECT 작업에 사용된 경우에는 TOP 및 ORDER BY 절이 논리적으로 처리되는 순서가 직관적이지 않을 수 있으므로 예기치 않은 결과를 반환하는 쿼리가 작성될 수 있습니다. 예를 들어 다음 테이블 및 데이터에서 가장 저렴한 빨간색 차와 가장 저렴한 파란색 차, 즉 red sedan과 blue van을 반환하려는 경우를 가정해 봅니다.  
   
@@ -165,7 +164,7 @@ INSERT, UPDATE, MERGE 또는 DELETE에서 TOP을 사용하면 참조된 행이 �
 ###  <a name="BasicSyntax"></a>기본 구문  
 이 섹션의 예에서는 최소 필수 구문을 사용하여 ORDER BY 절의 기본 기능을 보여 줍니다.  
   
-#### <a name="a-using-top-with-a-constant-value"></a>1. TOP에 상수 값 사용  
+#### <a name="a-using-top-with-a-constant-value"></a>1\. TOP에 상수 값 사용  
 다음 예에서는 상수 값을 사용하여 쿼리 결과 집합에 반환되는 직원 수를 지정합니다. 첫 번째 예에서는 ORDER BY 절을 사용하지 않으므로 정의되지 않은 처음 10개 행이 반환됩니다. 두 번째 예에서는 ORDER BY 절을 사용하여 최근에 고용된 상위 10명의 직원을 반환합니다.  
   
 ```sql  
@@ -182,7 +181,7 @@ ORDER BY HireDate DESC;
 GO  
 ```  
   
-#### <a name="b-using-top-with-a-variable"></a>2. TOP에 변수 사용  
+#### <a name="b-using-top-with-a-variable"></a>2\. TOP에 변수 사용  
 다음 예에서는 변수를 사용하여 쿼리 결과 집합에 반환되는 직원 수를 지정합니다.  
   
 ```sql  
@@ -209,7 +208,7 @@ GO
   
 ###  <a name="tie"></a>동률 값 포함  
   
-#### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>1. WITH TIES를 사용하여 마지막 행의 값과 일치하는 행 포함  
+#### <a name="a-using-with-ties-to-include-rows-that-match-the-values-in-the-last-row"></a>1\. WITH TIES를 사용하여 마지막 행의 값과 일치하는 행 포함  
 다음 예에서는 급여가 가장 많은 `10`%의 직원을 검색하여 급여에 따라 내림차순으로 반환합니다. `WITH TIES`를 지정하면 가장 급여가 낮은 직원(마지막 행)이 여러 명이어서 `10`%를 넘는 경우에도 해당하는 직원이 모두 결과 집합에 포함됩니다.  
   
 ```sql  
@@ -228,7 +227,7 @@ GO
   
 ###  <a name="DML"></a>DELETE, INSERT 또는 UPDATE의 영향을 받는 행 제한  
   
-#### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>1. TOP를 사용하여 삭제되는 행 수 제한  
+#### <a name="a-using-top-to-limit-the-number-of-rows-deleted"></a>1\. TOP를 사용하여 삭제되는 행 수 제한  
 DELETE와 함께 TOP (*n*) 절을 사용하면 임의로 선택된 *n*개의 행에 대해 삭제 작업이 수행됩니다. 즉, DELETE 문이 WHERE 절에 정의된 조건을 충족하는 행의 수(*n*)를 선택합니다. 다음 예에서는 `PurchaseOrderDetail` 테이블에서 기한이 2002년 7월 1일 이전인 행 중 `20`개의 행을 삭제합니다.  
   
 ```sql  
@@ -253,7 +252,7 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-#### <a name="b-using-top-to-limit-the-number-of-rows-inserted"></a>2. TOP를 사용하여 삽입되는 행 수 제한  
+#### <a name="b-using-top-to-limit-the-number-of-rows-inserted"></a>2\. TOP를 사용하여 삽입되는 행 수 제한  
 다음 예에서는 `EmployeeSales` 테이블을 만들고 `HumanResources.Employee` 테이블에서 가져온 직원 상위 5명에 대한 이름 및 연간 매출 데이터를 삽입합니다. 즉, INSERT 문이 `SELECT` 문에서 반환되는 행 중 WHERE 절에 정의된 조건을 충족하는 임의의 행 5개를 선택합니다. OUTPUT  절은 `EmployeeSales` 테이블에 삽입되는 행을 표시합니다. SELECT 문의 ORDER BY 절은 상위 5명의 직원을 결정하는 데 사용되지 않습니다.  
   
 ```sql  

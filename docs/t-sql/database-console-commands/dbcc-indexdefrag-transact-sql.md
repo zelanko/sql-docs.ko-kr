@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 8efd6bf4ca5ec7cf4a1ab1699bf1cae5ce33cb08
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7372051d8dfb23430f834ca159125822c6892956
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685470"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116528"
 ---
 # <a name="dbcc-indexdefrag-transact-sql"></a>DBCC INDEXDEFRAG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -109,11 +108,11 @@ Pages Scanned Pages Moved Pages Removed
 DBCC execution completed. If DBCC printed error messages, contact your system administrator.  
 ```  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 호출자는 테이블을 소유하거나, **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
-### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>1. DBCC INDEXDEFRAG를 사용하여 인덱스 조각 모음 수행  
+### <a name="a-using-dbcc-indexdefrag-to-defragment-an-index"></a>1\. DBCC INDEXDEFRAG를 사용하여 인덱스 조각 모음 수행  
 다음 예제에서는 `AdventureWorks` 데이터베이스의 `Production.Product` 테이블에서 `PK_Product_ProductID` 인덱스의 모든 파티션을 조각 모음합니다.
   
 ```sql  
@@ -121,7 +120,7 @@ DBCC INDEXDEFRAG (AdventureWorks2012, 'Production.Product', PK_Product_ProductID
 GO  
 ```  
   
-### <a name="b-using-dbcc-showcontig-and-dbcc-indexdefrag-to-defragment-the-indexes-in-a-database"></a>2. DBCC SHOWCONTIG 및 DBCC INDEXDEFRAG를 사용하여 데이터베이스에서 인덱스 조각 모음 수행  
+### <a name="b-using-dbcc-showcontig-and-dbcc-indexdefrag-to-defragment-the-indexes-in-a-database"></a>2\. DBCC SHOWCONTIG 및 DBCC INDEXDEFRAG를 사용하여 데이터베이스에서 인덱스 조각 모음 수행  
  다음 예에서는 데이터베이스에서 선언된 임계값 이상으로 조각화된 모든 인덱스에 조각 모음을 수행하는 간단한 방법을 보여 줍니다.  
   
 ```sql  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 - PREDICT clause
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=sql-server-2017||=azuresqldb-current||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f93217e87bf081ed8f7c551fd4c9e6ccb7807ef
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c50bdedab94a2bd9dd1c6da6556fbd882412fe45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141314"
 ---
 # <a name="predict-transact-sql"></a>PREDICT(Transact-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ WITH 절을 사용하여 `PREDICT` 함수에서 반환되는 출력의 스키마
 
 사용하는 알고리즘은 RevoScaleR 패키지에서 지원되는 알고리즘 중 하나를 사용하여 만들어졌어야 합니다. 현재 지원되는 모델의 목록은 [실시간 점수 매기기](../../advanced-analytics/real-time-scoring.md)를 참조하세요.
 
-### <a name="permissions"></a>Permissions
+### <a name="permissions"></a>사용 권한
 
 `PREDICT`를 위해 권한은 필요 없지만, 사용자는 데이터베이스에 대한 `EXECUTE` 권한 및 입력으로 사용하는 데이터를 쿼리하는 권한이 필요합니다. 또한 모델이 테이블에 저장된 경우 사용자는 테이블에서 모델을 읽을 수 있어야 합니다.
 

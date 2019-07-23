@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b3783bbaa861ad857efce87b82c50536757fd499
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e4866e0878411f6e81718df4184c1e5f2ac57f06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111147"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>복제 모니터에 임계값 및 경고 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "54135474"
   
 -   [병합 게시에 대한 임계값 및 경고 설정](#Merge)  
   
--   [스냅숏 게시에 대한 임계값 및 경고 설정](#Snapshot)  
+-   [스냅샷 게시에 대한 임계값 및 경고 설정](#Snapshot)  
   
 ##  <a name="Transactional"></a> 트랜잭션 게시에 대한 임계값 및 경고를 설정하려면  
   
@@ -131,7 +130,7 @@ ms.locfileid: "54135474"
   
 5.  **닫기**를 클릭합니다.  
   
-##  <a name="Snapshot"></a> 스냅숏 게시에 대한 임계값 및 경고 설정  
+##  <a name="Snapshot"></a> 스냅샷 게시에 대한 임계값 및 경고 설정  
   
 1.  왼쪽 창에서 게시자 그룹을 확장하고 해당 게시자를 확장한 다음 해당 게시를 클릭합니다.  
   

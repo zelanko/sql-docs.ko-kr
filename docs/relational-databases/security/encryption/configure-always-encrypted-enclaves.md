@@ -9,14 +9,13 @@ ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
-manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 87ae14a8acaa94873b81238d998f755a8ee0a8bd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7fd710359f6a2d97bebd9785dd010ff586f43cd1
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583655"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307581"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted 구성
 
@@ -151,7 +150,7 @@ Enclave 사용 열 암호화 키를 프로비전하려면 열 암호화 키를 �
 
 현재 Enclave 사용 키 프로비전에는 다음과 같은 제한 사항이 적용됩니다.
 
-- enclave 사용 열 마스터 키는 [Windows 인증서 저장소](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores/) 또는 [Azure Key Vault](/azure/key-vault/key-vault-whatis/)에 저장해야 합니다. 지금은 enclave 사용 열 마스터 키를 다른 유형의 키 저장소(예: 하드웨어 보안 모듈 또는 사용자 지정 키 저장소)에 저장할 수 없습니다.
+- enclave 사용 열 마스터 키는 [Windows 인증서 저장소](/windows/desktop/seccrypto/managing-certificates-with-certificate-stores) 또는 [Azure Key Vault](/azure/key-vault/key-vault-whatis/)에 저장해야 합니다. 지금은 enclave 사용 열 마스터 키를 다른 유형의 키 저장소(예: 하드웨어 보안 모듈 또는 사용자 지정 키 저장소)에 저장할 수 없습니다.
 
 ### <a name="provision-enclave-enabled-keys-using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하여 Enclave 사용 키 프로비저닝
 

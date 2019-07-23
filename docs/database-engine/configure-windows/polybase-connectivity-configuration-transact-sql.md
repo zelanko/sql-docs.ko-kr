@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 82252e4f-b1d0-49e5-aa0b-3624aade2add
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d86483245f8a4f06dfcb357d5d105539dd56f3a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997920"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>PolyBase 연결 구성(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-pdw-md.md)]
@@ -95,10 +94,10 @@ RECONFIGURE
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(35)**|구성 옵션의 이름입니다.|  
-|**minimum**|**ssNoversion**|구성 옵션의 최소값입니다.|  
-|**maximum**|**ssNoversion**|구성 옵션의 최대값입니다.|  
-|**config_value**|**ssNoversion**|**sp_configure**를 사용하여 설정된 값입니다.|  
-|**run_value**|**ssNoversion**|PolyBase에서 사용 중인 현재 값입니다. 이 값은 RECONFIGURE를 실행하여 설정합니다.<br /><br /> **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.<br /><br /> 재구성이 진행 중인 경우 이 실행 값이 정확하기 위해서는 다시 시작해야 할 수 있습니다.|  
+|**minimum**|**int**|구성 옵션의 최소값입니다.|  
+|**maximum**|**int**|구성 옵션의 최대값입니다.|  
+|**config_value**|**int**|**sp_configure**를 사용하여 설정된 값입니다.|  
+|**run_value**|**int**|PolyBase에서 사용 중인 현재 값입니다. 이 값은 RECONFIGURE를 실행하여 설정합니다.<br /><br /> **config_value** 및 **run_value** 는 값이 변경 중이 아니라면 일반적으로 동일합니다.<br /><br /> 재구성이 진행 중인 경우 이 실행 값이 정확하기 위해서는 다시 시작해야 할 수 있습니다.|  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 RECONFIGURE를 실행한 후 'hadoop connectivity'의 실행 값을 적용하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 다시 시작해야 합니다.  

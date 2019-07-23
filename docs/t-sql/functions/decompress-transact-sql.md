@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 738d56be-3870-4774-b112-3dce27becc11
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c14596554fd5df79fc967866421d7137ead71872
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d94ffd0182bfad3ed95f52640a2aed01ceeaa54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118967"
 ---
 # <a name="decompress-transact-sql"></a>DECOMPRESS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -38,7 +37,7 @@ DECOMPRESS ( expression )
   
 ## <a name="arguments"></a>인수  
  *expression*  
-**varbinary(**_n_**)**, **varbinary(max)** 또는 **binary(**_n_**)** 값 자세한 내용은 [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
+**varbinary(** _n_ **)** , **varbinary(max)** 또는 **binary(** _n_ **)** 값 자세한 내용은 [식 &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)을 참조하세요.  
   
 ## <a name="return-types"></a>반환 형식  
 데이터 형식 **varbinary(max)** 의 값입니다. `DECOMPRESS`는 ZIP 알고리즘을 사용하여 입력 인수의 압축을 풉니다. 필요한 경우 사용자가 명시적으로 결과를 대상 유형으로 캐스팅해야 합니다.  
@@ -47,7 +46,7 @@ DECOMPRESS ( expression )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-decompress-data-at-query-time"></a>1. 쿼리 시간에 데이터 압축 해제  
+### <a name="a-decompress-data-at-query-time"></a>1\. 쿼리 시간에 데이터 압축 해제  
 이 예제에서는 압축된 테이블 데이터를 반환하는 방법을 보여줍니다.  
   
 ```  
@@ -56,7 +55,7 @@ SELECT _id, name, surname, datemodified,
 FROM player;  
 ```  
   
-### <a name="b-display-compressed-data-using-computed-column"></a>2. 계산 열을 사용하여 압축된 데이터 표시   
+### <a name="b-display-compressed-data-using-computed-column"></a>2\. 계산 열을 사용하여 압축된 데이터 표시  
 이 예에서는 압축 해제된 데이터 스토리지에 대한 테이블을 만드는 방법을 보여줍니다.  
   
 ```  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3ca82fb9-81e6-4c3c-94b3-b15f852b18bd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0677b75397522602a7cd6d42942f0b8610d6d9b6
-ms.sourcegitcommit: 0a64d26f865a21f4bd967b2b72680fd8638770b8
+ms.openlocfilehash: 54ea1c6f261a8ca6d7b68f4b9751338e6baf10db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54395372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121238"
 ---
 # <a name="transactional-replication"></a>트랜잭션 복제
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "54395372"
  기본적으로 변경 내용은 게시자로 다시 전파되지 않기 때문에 트랜잭션 게시에 대한 구독자는 읽기 전용으로 취급됩니다. 그러나 트랜잭션 복제는 구독자의 업데이트를 허용하는 다양한 옵션을 제공합니다.  
   
 ##  <a name="HowWorks"></a> 트랜잭션 복제 작동 방법  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스냅숏 에이전트, 로그 판독기 에이전트 및 배포 에이전트가 트랜잭션 복제를 구현합니다. 스냅샷 에이전트는 게시된 테이블과 데이터베이스 개체의 스키마 및 데이터를 포함하는 스냅샷 파일을 준비하여 스냅샷 폴더에 저장하고 배포자의 배포 데이터베이스에 동기화 작업을 기록합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 스냅샷 에이전트, 로그 판독기 에이전트 및 배포 에이전트가 트랜잭션 복제를 구현합니다. 스냅샷 에이전트는 게시된 테이블과 데이터베이스 개체의 스키마 및 데이터를 포함하는 스냅샷 파일을 준비하여 스냅샷 폴더에 저장하고 배포자의 배포 데이터베이스에 동기화 작업을 기록합니다.  
   
  로그 판독기 에이전트는 트랜잭션 복제를 위해 구성한 각 데이터베이스의 트랜잭션 로그를 모니터링하고 복제용으로 표시된 트랜잭션을 트랜잭션 로그에서 배포 데이터베이스로 복사하여 안정적인 저장 후 전달 큐 역할을 합니다. 배포 에이전트는 스냅샷 폴더의 초기 스냅샷 파일과 배포 데이터베이스 테이블의 트랜잭션을 구독자로 복사합니다.  
   
@@ -58,7 +57,7 @@ ms.locfileid: "54395372"
 ## <a name="concurrent-snapshot-processing"></a>동시 스냅샷 처리  
  스냅샷 복제는 스냅샷을 생성하는 동안 복제의 일부로 게시된 모든 테이블에 공유 잠금을 배치합니다. 이렇게 하면 업데이트가 게시 중인 테이블에서 이루어지는 것을 방지할 수 있습니다. 트랜잭션 복제의 기본값인 동시 스냅샷 처리는 전체 스냅샷 생성 과정 동안 공유 잠금을 보유하지 않기 때문에 복제에서 초기 스냅샷 파일을 만드는 동안 사용자는 중단 없이 작업을 계속할 수 있습니다.  
   
-##  <a name="SnapshotAgent"></a> 스냅숏 에이전트  
+##  <a name="SnapshotAgent"></a> 스냅샷 에이전트  
  스냅샷 에이전트가 트랜잭션 복제에서 초기 스냅샷을 구현하는 프로시저는 스냅샷 복제에서 사용하는 프로시저와 같습니다. 앞에서 설명한 것처럼 동시 스냅샷 처리에 대해서는 제외합니다.  
   
  스냅샷 파일을 만든 후 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 탐색기를 사용하여 스냅샷 폴더에서 해당 파일을 볼 수 있습니다.  

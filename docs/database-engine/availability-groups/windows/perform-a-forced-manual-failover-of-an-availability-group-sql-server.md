@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: e79323684bff589f54d3247d2feb710d97ceebe8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3c6ba5932e440373ae9e08afc1c8483e25ceebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014610"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 가용성 그룹의 강제 수동 장애 조치(failover) 수행(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -222,9 +221,9 @@ ms.locfileid: "66798223"
     > [!IMPORTANT]  
     >  보조 데이터베이스 중 하나라도 일시 중지되어 있는 동안에는 주 데이터베이스에서 트랜잭션 로그 잘림이 지연됩니다. 또한 일시 중지된 상태로 남아 있는 로컬 데이터베이스가 있으면 동기 커밋 보조 복제본의 동기화 상태가 정상으로 전환될 수 없습니다.  
   
-     **데이터베이스 스냅숏을 만들려면**  
+     **데이터베이스 스냅샷을 만들려면**  
   
-    -   [데이터베이스 스냅숏 만들기&#40;Transact-SQL&#41;](../../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
+    -   [데이터베이스 스냅샷 만들기&amp;#40;Transact-SQL&amp;#41;](../../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
      **가용성 데이터베이스를 재개하려면**  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6669dcce-85f9-495f-aadf-7f62cff4a9da
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 4c0fd20a264223fe5a85864bd1a8b2331664eac0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 615659a84dcf318adb598451626f5282fa8e3d36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014808"
 ---
 # <a name="add-a-secondary-replica-to-an-always-on-availability-group"></a>Always On 가용성 그룹에 보조 복제본 추가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: b34df777-79b0-49a5-88db-b99998479a5d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e081af76034b467a84eb6dbf81ab3b884a4440fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7fb31db6e9b438fbab74a8b23462d8c7dc897d46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65949140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059759"
 ---
 # <a name="loginproperty-transact-sql"></a>LOGINPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -120,7 +119,7 @@ LOGINPROPERTY ( 'login_name' , 'property_name' )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-checking-whether-a-login-must-change-its-password"></a>1. 로그인이 해당 암호를 변경해야 하는지 여부 확인  
+### <a name="a-checking-whether-a-login-must-change-its-password"></a>1\. 로그인이 해당 암호를 변경해야 하는지 여부 확인  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `John3`이 다음에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 때 해당 암호를 변경해야 하는지 여부를 확인합니다.  
   
 ```  
@@ -128,7 +127,7 @@ SELECT LOGINPROPERTY('John3', 'IsMustChange');
 GO  
 ```  
   
-### <a name="b-checking-whether-a-login-is-locked-out"></a>2. 로그인이 잠겼는지 여부 확인  
+### <a name="b-checking-whether-a-login-is-locked-out"></a>2\. 로그인이 잠겼는지 여부 확인  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `John3`가 잠겼는지 여부를 확인합니다.  
   
 ```  

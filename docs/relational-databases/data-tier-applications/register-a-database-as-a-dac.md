@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cfcb3a58ee61e7cd4404ec32799fbc265acdc8f6
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 726955115dc956f2ad16e39775610deb16c445a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134684"
 ---
 # <a name="register-a-database-as-a-dac"></a>DAC로 데이터베이스 등록
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,7 +108,7 @@ ms.locfileid: "53591357"
  [데이터 계층 애플리케이션 등록 마법사 사용](#UsingRegisterDACWizard)  
   
 ### <a name="validating-objects"></a>개체 유효성 확인  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. _SchemaName_**.**_ObjectName_ 은 현재 확인 중인 개체가 무엇인지 식별합니다.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - 마법사가 검색된 개체의 종속성을 확인하고 모두 DAC에 유효한 개체인지 확인할 때 진행률 표시줄을 표시합니다. _SchemaName_ **.** _ObjectName_ 은 현재 확인 중인 개체가 무엇인지 식별합니다.  
   
  **< 이전** - 입력한 값을 변경하기 위해 **속성 설정** 페이지로 돌아갑니다.  
   

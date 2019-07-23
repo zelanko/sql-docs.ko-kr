@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d21158a65edf2000d122850e0966d7ffb582a41f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 09b935ccc5f8ac1d357168f2032e822c9c0bcd8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141195"
 ---
 # <a name="begin-conversation-timer-transact-sql"></a>BEGIN CONVERSATION TIMER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 ```  
   
 ## <a name="arguments"></a>인수  
- BEGIN CONVERSATION TIMER **(**_conversation\_handle_**)**  
+ BEGIN CONVERSATION TIMER **(** _conversation\_handle_ **)**  
  대화에 시간을 지정합니다. *conversation_handle*은 **uniqueidentifier** 형식이어야 합니다.  
   
  TIMEOUT  
@@ -72,7 +71,7 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
   
  BEGIN CONVERSATION TIMER는 사용자 정의 함수에 유효하지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대화 타이머 설정 권한은 기본적으로 대화의 서비스에 대한 SEND 권한이 있는 사용자, **sysadmin** 고정 서버 역할의 멤버 및 **db_owner** 고정 데이터베이스 역할의 멤버로 설정됩니다.  
   
 ## <a name="examples"></a>예  

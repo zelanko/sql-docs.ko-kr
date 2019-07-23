@@ -6,7 +6,6 @@ helpviewer_keywords:
 - tde akv configuration, troubleshooting
 - tde troubleshooting
 author: aliceku
-manager: craigg
 ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
@@ -14,12 +13,12 @@ ms.topic: conceptual
 ms.date: 04/26/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f963e15d674115029fce78b98ba280fe75da2cd1
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: f67d1ed9bf809baaa4d934947e86d3fd1b7ed0b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716673"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111531"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault의 고객 관리 키를 통한 투명한 데이터 암호화의 일반적인 오류
 

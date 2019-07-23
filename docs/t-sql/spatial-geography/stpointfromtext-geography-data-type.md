@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5fe54dc-0007-4631-8dde-7ae4d4c41f6e
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: acadcd11bf7d11c21d3dd83dcdd6999da20d9f0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5fe71b55325297a4267901e380831c4df889629
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120836"
 ---
 # <a name="stpointfromtext-geography-data-type"></a>STPointFromText(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

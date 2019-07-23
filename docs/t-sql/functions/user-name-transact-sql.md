@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: ab32d644-4228-449a-9ef0-5a975c305775
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6cf3099efd6ccb301be024c6a18b2279d0482f26
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.openlocfilehash: e407ab5ac5e69c78d19a1022210ca8da5e470d64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927592"
 ---
 # <a name="username-transact-sql"></a>USER_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +56,7 @@ USER_NAME ( [ id ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-username"></a>1. USER_NAME 사용  
+### <a name="a-using-username"></a>1\. USER_NAME 사용  
  다음 예에서는 사용자 ID `13`에 대한 사용자 이름을 반환합니다.  
   
 ```  
@@ -65,7 +64,7 @@ SELECT USER_NAME(13);
 GO  
 ```  
   
-### <a name="b-using-username-without-an-id"></a>2. ID 없이 USER_NAME 사용  
+### <a name="b-using-username-without-an-id"></a>2\. ID 없이 USER_NAME 사용  
  다음 예에서는 ID를 지정하지 않고 현재 사용자의 이름을 찾습니다.  
   
 ```  

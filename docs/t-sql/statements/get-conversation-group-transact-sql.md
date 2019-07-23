@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 15be53ce562e717af448092699689687b4cb30bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bec815372c77e8433fdfdaeedc2cc95a41901738
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084411"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ ms.locfileid: "65503437"
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  GET CONVERSATION GROUP 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자인 세미콜론(**;**)으로 종결되어야 합니다.  
+>  GET CONVERSATION GROUP 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자인 세미콜론( **;** )으로 종결되어야 합니다.  
   
  GET CONVERSATION GROUP 문에 지정된 큐를 사용할 수 없으면 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류가 발생하여 문이 실패합니다.  
   
@@ -101,7 +100,7 @@ ms.locfileid: "65503437"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>1. 무한 대기하여 대화 그룹 가져오기  
+### <a name="a-getting-a-conversation-group-waiting-indefinitely"></a>1\. 무한 대기하여 대화 그룹 가져오기  
  다음 예에서는 `@conversation_group_id`를 `ExpenseQueue`에 있는 사용 가능한 다음 메시지의 대화 그룹 식별자로 설정합니다. 명령은 메시지를 사용할 수 있게 될 때까지 대기합니다.  
   
 ```  
@@ -113,7 +112,7 @@ WAITFOR (
 ) ;  
 ```  
   
-### <a name="b-getting-a-conversation-group-waiting-one-minute"></a>2. 1분간 대기하여 대화 그룹 가져오기  
+### <a name="b-getting-a-conversation-group-waiting-one-minute"></a>2\. 1분간 대기하여 대화 그룹 가져오기  
  다음 예에서는 `@conversation_group_id`를 `ExpenseQueue`에 있는 사용 가능한 다음 메시지의 대화 그룹 식별자로 설정합니다. 1분 이내에 사용 가능한 메시지가 없으면 GET CONVERSATION GROUP이 `@conversation_group_id` 값을 그대로 반환합니다.  
   
 ```  

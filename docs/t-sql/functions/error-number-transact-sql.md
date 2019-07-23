@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 536e45d86f0f40fdfa3269aad5e168573a16c9f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 085832fdb8d0918c76dbbcadb759c2fdf1169b5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65949087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094707"
 ---
 # <a name="errornumber-transact-sql"></a>ERROR_NUMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +43,7 @@ ERROR_NUMBER ( )
 ```  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="return-value"></a>반환 값  
 CATCH 블록에서 호출되면 `ERROR_NUMBER`는 CATCH 블록을 실행시킨 오류의 오류 번호를 반환합니다.  

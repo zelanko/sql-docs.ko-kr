@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 8ac501c3-4280-4d5b-b58a-1524fa715b50
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 563f031d16e725fb58535c03c0ea77a81dbef2eb
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: e2f8c5534e58299f17f89543668404e7ea8507bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071291"
 ---
 # <a name="alter-master-key-transact-sql"></a>ALTER MASTER KEY(Transact-SQL)
 
@@ -105,13 +104,13 @@ REGENERATE 옵션은 데이터베이스 마스터 키와 이 키가 보호하는
 
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 AES 암호화 알고리즘을 사용하여 SMK(서비스 마스터 키) 및 DMK(데이터베이스 마스터 키)를 보호합니다. AES는 이전 버전에서 사용하는 3DES보다 최신 암호화 알고리즘입니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스를 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 로 업그레이드한 후 SMK와 DMK를 다시 생성해야 마스터 키가 AES로 업그레이드됩니다. SMK를 다시 생성하는 방법은 [ALTER SERVICE MASTER KEY](../../t-sql/statements/alter-service-master-key-transact-sql.md)를 참조하세요.
 
-FORCE 옵션을 사용할 경우에는 마스터 키를 사용할 수 없거나 서버에서 모든 암호화된 프라이빗 키의 암호를 해독할 수 없는 경우에도 키 다시 만들기 작업이 계속됩니다. 마스터 키를 열 수 없으면 [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md) 문을 사용하여 백업에서 마스터 키를 복원합니다. 마스터 키를 검색할 수 없거나 암호 해독에 실패한 경우에만 FORCE 옵션을 사용합니다. 검색할 수 없는 키로만 암호화된 정보는 손실됩니다.
+FORCE 옵션을 사용할 경우에는 마스터 키를 사용할 수 없거나 서버에서 모든 암호화된 프라이빗 키의 암호를 해독할 수 없는 경우에도 키 다시 만들기 작업이 계속됩니다. 마스터 키를 열 수 없으면 [RESTORE MASTER KEY](../../t-sql/statements/restore-master-key-transact-sql.md) 문을 사용하여 백업에서 마스터 키를 복원합니다. 마스터 키를 검색할 수 없거나 암호 해독에 실패한 경우에만 FORCE 옵션을 사용합니다. 검색할 수 없는 키로 암호화된 정보는 손실됩니다.
 
 DROP ENCRYPTION BY SERVICE MASTER KEY 옵션은 서비스 마스터 키로 데이터베이스 마스터 키에 대한 암호화를 제거합니다.
 
 ADD ENCRYPTION BY SERVICE MASTER KEY를 사용하면 마스터 키 복사본이 서비스 마스터 키를 사용하여 암호화되고 현재 데이터베이스와 master에 모두 저장됩니다.
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 데이터베이스에 대한 CONTROL 권한이 필요합니다. 데이터베이스 마스터 키가 암호로 암호화된 경우 해당 암호도 알고 있어야 합니다.
 

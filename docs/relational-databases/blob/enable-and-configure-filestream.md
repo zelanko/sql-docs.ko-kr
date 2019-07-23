@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 78737e19-c65b-48d9-8fa9-aa6f1e1bce73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 100e08cc7dcb83ad8e65b86424acb9aba4d62120
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 9d0d82135fae0c05c4ad5b33868f66a74db847df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085386"
 ---
 # <a name="enable-and-configure-filestream"></a>FILESTREAM 사용 및 구성
 

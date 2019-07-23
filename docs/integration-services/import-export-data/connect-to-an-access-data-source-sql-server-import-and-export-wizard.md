@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 790ffc531244e3a1b757b8809e7ca09e737e87b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dca8a4f49a8c7ffbef251a90d72bdd13395185e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65723873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114598"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Access 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 
