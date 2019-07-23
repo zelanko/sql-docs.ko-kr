@@ -1,5 +1,5 @@
 ---
-title: updateBlob 메서드 (int, java.sql.Blob) | Microsoft Docs
+title: updateBlob 메서드 (int, java. .sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1e86f588-1365-4011-9412-f0acf7009880
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01b7e30b72fdd41c5397aebee92c7cb9aeecec1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ce5c1c2e8ce635e5b53f5b5e609666e39e36bc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997140"
 ---
 # <a name="updateblob-method-int-javasqlblob"></a>updateBlob 메서드(int, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

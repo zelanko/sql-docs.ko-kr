@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 95924a8b-a43c-4133-aff6-1d712e60e234
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 15510f9efe318a056de4d9a4a752f828b3b46453
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c19e8cd92f7ee7aafcf6dd23e9c179f2557e628f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803743"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955994"
 ---
 # <a name="addbatch-method-sqlserverstatement"></a>addBatch 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void addBatch(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 addBatch 메서드는 java.sql.Statement 인터페이스의 addBatch 메서드에 의해 지정 됩니다.  
+ 이 addBatch 메서드는 java. Statement 인터페이스의 addBatch 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

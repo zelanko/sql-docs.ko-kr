@@ -1,6 +1,6 @@
 ---
 title: 메타 데이터 검색 | Microsoft Docs
-description: OLE DB 드라이버에서 SQL Server에 대 한 메타 데이터 검색
+description: SQL Server에 대 한 OLE DB 드라이버의 메타 데이터 검색
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 3ed5020498dee14a34bd66076fc74a578bc09e69
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9891e5708110be83a4ef33cb2a142accaf93ffe2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989065"
 ---
 # <a name="metadata-discovery"></a>메타데이터 검색
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,11 +35,11 @@ ms.locfileid: "66765971"
   
 -   IColumnsRowset::GetColumnsRowset  
   
--   Icommandwithparameters:: Getparameterinfo (참조 [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) 자세한)  
+-   ICommandWithParameters:: GetParameterInfo (자세한 내용은 [ICommandWithParameters](../../oledb/ole-db-interfaces/icommandwithparameters.md) 참조)  
   
  또한 IBCPSession::BCPSetBulkMode를 사용하여 메타데이터 형식을 지정하는 경우 향상된 성능을 경험할 수 있습니다.  
   
- OLE DB 드라이버에서 SQL Server에 대 한 향상 된 메타 데이터 검색 되어 있는 두 개의 저장된 프로시저의 추가 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]:  
+ 에서 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]두 개의 저장 프로시저를 추가 하 여 SQL Server에 대 한 OLE DB 드라이버에서 향상 된 메타 데이터 검색을 수행할 수 있습니다.  
   
 -   sp_describe_first_result_set  
   

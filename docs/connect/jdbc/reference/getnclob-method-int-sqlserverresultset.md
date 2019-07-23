@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 103082e3-de98-4dff-8dc7-eaa5c64b1597
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 96ab1084104b39cda6e52dc6fb80b67d3810b832
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dfe7b70d4a176832873bb9f5dcd7db3c8d8c553b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784567"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981529"
 ---
 # <a name="getnclob-method-int-sqlserverresultset"></a>getNClob 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public java.sql.NClob getNClob(int columnIndex)
 ## <a name="remarks"></a>Remarks  
  이 getNClob 메서드는 java.sql.ResultSet 인터페이스의 getNClob 메서드에 의해 지정됩니다.  
   
- 이 메서드는 에서만 지원 됩니다 **nvarchar (max)** 하십시오 **ntext**, 및 **xml** 열입니다. 다른 데이터 형식에 이 메서드를 사용하면 예외가 발생합니다.  
+ 이 메서드는 **nvarchar (max)** , **ntext**및 **xml** 열 에서만 지원 됩니다. 다른 데이터 형식에 이 메서드를 사용하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getNClob 메서드(SQLServerResultSet)](../../../connect/jdbc/reference/getnclob-method-sqlserverresultset.md)   

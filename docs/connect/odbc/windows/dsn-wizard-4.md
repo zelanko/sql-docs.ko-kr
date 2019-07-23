@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93145892c96d2b255dca758e7028d2884cec359b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989458"
 ---
 # <a name="data-source-wizard-screen-4"></a>데이터 원본 마법사 화면 4
 
@@ -34,7 +33,7 @@ SQL Server 메시지에 사용할 언어, 문자 집합 변환 및 ODBC Driver f
 
 ### <a name="trust-server-certificate"></a>서버 인증서 신뢰
 
-이 옵션은 경우에만 적용 **강력한 암호화를 사용 하 여 데이터에 대 한** 사용 가능 합니다. 옵션을 선택 하면 서버의 올바른 호스트 이름이 있고 신뢰할 수 있는 인증 기관에서 발급 하는 서버의 인증서 검사 하지 않습니다. 
+이 옵션은 **데이터에 대해 강력한 암호화 사용** 이 사용 되는 경우에만 적용 됩니다. 이를 선택 하면 서버 인증서의 유효성을 검사 하 여 서버의 올바른 호스트 이름이 있고 신뢰할 수 있는 인증 기관에서 발급 되지 않습니다. 
 
 ### <a name="perform-translation-for-character-data"></a>문자 데이터에 대한 변환 실행
 
@@ -62,19 +61,19 @@ SQL Server 메시지에 사용할 언어, 문자 집합 변환 및 ODBC Driver f
 
 ### <a name="connect-retry-count"></a>연결 다시 시도 횟수
 
-실패 한 연결 시도 다시 시도 횟수를 지정 합니다.
+실패 한 연결 시도를 다시 시도할 횟수를 지정 합니다.
 
 ### <a name="connect-retry-interval-seconds"></a>연결 다시 시도 간격(초)
 
-각 연결 다시 시도 간격 (초) 수를 지정합니다. 이 작업에 대 한 자세한 내용은 및 **연결 다시 시도 횟수가** 옵션을 참조 하세요 [Connection Resiliency in Windows ODBC 드라이버](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)합니다.
+각 연결을 다시 시도 하는 간격 (초)을 지정 합니다. 이 작업 및 **연결 다시 시도 횟수** 옵션에 대 한 자세한 내용은 [Windows ODBC 드라이버에서 연결 복원 력](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)을 참조 하세요.
 
 ### <a name="back"></a>뒤로
 
-마법사의 이전 페이지로 다시 이동 하려면이 단추를 클릭 합니다.
+마법사의 이전 페이지로 돌아가려면이 단추를 클릭 합니다.
 
 ### <a name="finish"></a>마침
 
-이 화면에 지정 된 정보를 완료 하는 경우 클릭할 수 있습니다 **완료**합니다. DSN이 및 마법사의 다른 화면에 지정 된 모든 특성을 사용 하 여 만들어지고 새로 만든 DSN을 테스트할 수 있는 기회를 제공 됩니다.
+이 화면에 지정 된 정보가 완료 되 면 **마침**을 클릭할 수 있습니다. 이 마법사 및 다른 화면에 지정 된 모든 특성을 사용 하 여 DSN이 만들어지고 새로 만든 DSN을 테스트할 수 있는 기회가 제공 됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 

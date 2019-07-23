@@ -10,33 +10,32 @@ ms.topic: conceptual
 ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3aebe9cd16901581d5fdba8cd3d8302c5af30ae
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 945d36208fc4c8858b789f7037d256902aeb92f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957633"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>1단계: ADO.NET 개발을 위한 개발 환경 구성
 
 - 다음 문서:&nbsp;&nbsp;&nbsp;[2단계: ADO.NET 개발을 위한 SQL 데이터베이스 만들기](step-2-create-a-sql-database-for-ado-net-development.md)  
 
-## <a name="download-a-net-sql-driver"></a>.NET SQL driver 다운로드
+## <a name="download-a-net-sql-driver"></a>.NET SQL 드라이버 다운로드
 
-현재 코드 예제는 Windows에 대 한.NET Framework의 ADO.NET을 사용합니다. .NET Core는 Linux 및 MacOS (Windows) 외에도 사용할 수 있습니다.
+현재 코드 예제에서는 Windows에 대 한 .NET Framework ADO.NET를 사용 합니다. .NET Core는 Windows 외에도 Linux 및 MacOS에서 사용할 수 있습니다.
 
-### <a name="adonet-for-windows"></a>Windows에 대 한 ADO.NET
+### <a name="adonet-for-windows"></a>Windows 용 ADO.NET
 
-1. ![다운로드-아래쪽 화살표-원이](../../ssdt/media/download.png)[다운로드 하 고 ADO.NET 등의.NET Framework 설치](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+1. ![다운로드-아래쪽 화살표-](../../ssdt/media/download.png)[ADO.NET을 포함 하 여 .NET Framework를 다운로드 하 고 설치 합니다](../sql-connection-libraries.md#anchor-20-drivers-relational-access) .
 
-2. Visual Studio Community 설치 또는 유사한 작성 및 C# 소스 코드를 컴파일하기 위한 개발 환경 (IDE)를 통합 합니다. Microsoft 제공에 대 한 Visual Studio Community *무료*합니다.  
+2. 소스 코드를 작성 하 고 컴파일하기 C# 위해 Visual Studio Community 또는 유사한 IDE (통합 개발 환경)를 설치 합니다. Microsoft는 이제 Visual Studio Community를 *무료로*제공 합니다.  
     - [Visual Studio Community 다운로드](https://www.visualstudio.com/products/visual-studio-community-vs)  
     - [무료 Visual Studio에 대 한 추가 옵션](https://www.visualstudio.com/products/free-developer-offers-vs.aspx)  
 
 
-### <a name="net-core-for-linux-ubuntu-and-macos"></a>Ubuntu Linux 및 MacOS 용.NET core
+### <a name="net-core-for-linux-ubuntu-and-macos"></a>Linux-Ubuntu 및 MacOS 용 .NET Core
 
-다양 한 운영 체제에 대 한.NET Core 다운로드에 대 한 링크에서 사용할 수 있습니다.
+다양 한 운영 체제용 .NET Core 다운로드 링크는 다음에서 제공 됩니다.
 
-- ![다운로드-아래쪽 화살표-원이](../../ssdt/media/download.png)[다운로드 하 여.NET Core를 설치 합니다.](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+- ![다운로드-아래쪽 화살표-원](../../ssdt/media/download.png)[.Net Core 다운로드 및 설치](../sql-connection-libraries.md#anchor-20-drivers-relational-access)

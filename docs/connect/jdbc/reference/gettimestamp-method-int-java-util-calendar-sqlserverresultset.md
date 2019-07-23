@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f2dd5688-7344-437a-8716-7024fb8e9c31
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 469cc5febe96b84e3df05a6b56fbb5367efce155
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4022d3a90e81ba3d4de73aab88b740108584c5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978888"
 ---
 # <a name="gettimestamp-method-int-javautilcalendar-sqlserverresultset"></a>getTimestamp 메서드(int, java.util.Calendar)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public java.sql.Timestamp getTimestamp(int columnIndex,
  일정 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 타임 스탬프 개체입니다.  
+ Timestamp 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

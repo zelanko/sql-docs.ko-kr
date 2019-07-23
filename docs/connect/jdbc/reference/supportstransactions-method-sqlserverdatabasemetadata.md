@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 57d28ee5-c2f6-4740-b42d-cead1aade809
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5dbba0cb5d79f8e15c195dd92b9d52353d85a4ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aca62d4355c19497b5e9d2f86c105c7f083a1346
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968645"
 ---
 # <a name="supportstransactions-method-sqlserverdatabasemetadata"></a>supportsTransactions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsTransactions()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsTransactions 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsTransactions 메서드에 의해 지정 됩니다.  
+ 이 supportsTransactions 메서드는 supportsTransactions 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

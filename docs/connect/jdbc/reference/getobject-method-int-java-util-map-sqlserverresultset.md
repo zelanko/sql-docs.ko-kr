@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: df85a514-ab43-4bf6-98dd-f7f37fad1850
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f1c909b174a0f5750bf55c8a80193865746bd737
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b66ef3388d8536ca4299891ec24f57fff41a3610
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981265"
 ---
 # <a name="getobject-method-int-javautilmap-sqlserverresultset"></a>getObject 메서드(int, java.util.Map)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public java.lang.Object getObject(int i,
   
  *map*  
   
- 지도 개체입니다.  
+ Map 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
  **Object** 값입니다.  

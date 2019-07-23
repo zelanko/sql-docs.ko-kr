@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6dd275d3-d9b2-4db7-938a-d4406c940a7a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8c098106fc3961e0248d638356df70527739203b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e2cf823a6c1cd33d647472a2e709517175ddce7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978160"
 ---
 # <a name="getversioncolumns-method-sqlserverdatabasemetadata"></a>getVersionColumns 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -67,8 +66,8 @@ public java.sql.ResultSet getVersionColumns(java.lang.String catalog,
 |COLUMN_NAME|**String**|열 이름입니다.|  
 |DATA_TYPE|**short**|java.sql.Types의 SQL 데이터 형식입니다.|  
 |TYPE_NAME|**String**|데이터 형식의 이름입니다.|  
-|COLUMN_SIZE|**ssNoversion**|열의 전체 자릿수입니다.|  
-|BUFFER_LENGTH|**ssNoversion**|열의 길이(바이트)입니다.|  
+|COLUMN_SIZE|**int**|열의 전체 자릿수입니다.|  
+|BUFFER_LENGTH|**int**|열의 길이(바이트)입니다.|  
 |DECIMAL_DIGITS|**short**|열의 소수 자릿수입니다.|  
 |PSEUDO_COLUMN|**short**|열이 의사 열인지 여부를 나타냅니다. 다음 값 중 하나일 수 있습니다.<br /><br /> versionColumnUnknown(0)<br /><br /> versionColumnNotPseudo(1)<br /><br /> versionColumnPseudo(2)|  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8f491b70-7d1b-42bd-964f-9a8b86af5eaa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f14589bfdf5197bdb80e535e00d0fdbeba913529
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 954883c4c69e07493a15ef77eecfed606e9cf9a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916520"
 ---
 # <a name="using-a-stored-procedure-with-input-parameters"></a>입력 매개 변수가 있는 저장 프로시저 사용
 
@@ -29,7 +28,7 @@ JDBC 드라이버를 사용하여 입력 매개 변수가 포함된 저장 프�
 `{call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> SQL 이스케이프 시퀀스에 대 한 자세한 내용은 참조 하세요. [SQL 이스케이프 시퀀스를 사용 하 여](../../connect/jdbc/using-sql-escape-sequences.md)입니다.
+> SQL 이스케이프 시퀀스에 대 한 자세한 내용은 [Sql 이스케이프 시퀀스 사용](../../connect/jdbc/using-sql-escape-sequences.md)을 참조 하세요.
 
 `call` 이스케이프 시퀀스를 만드는 경우 물음표(?) 문자를 사용하여 입력 매개 변수를 지정합니다. 이 문자는 저장 프로시저로 전달될 매개 변수 값에 대한 자리 표시자로 사용됩니다. 매개 변수의 값을 지정 하려면 SQLServerPreparedStatement 클래스의 setter 메서드 중 하나를 사용할 수 있습니다. 사용할 수 있는 setter 메서드는 입력 매개 변수의 데이터 형식에 따라 결정됩니다.
 

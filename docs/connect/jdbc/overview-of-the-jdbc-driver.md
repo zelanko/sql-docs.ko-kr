@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9e9e7c7c6c29847fef54ac3e484e7ed7b1821f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 770352acd95fd2fb947e29f79230dedab575602b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801801"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956233"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 드라이버 개요
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "66801801"
 |[Microsoft JDBC 드라이버 재배포](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Microsoft JDBC Driver를 재배포하도록 등록하는 방법을 설명합니다.|  
 |[추가 JDBC 드라이버 정보 찾기](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|외부 리소스 링크를 포함하여 Microsoft JDBC 드라이버에 대한 추가 리소스를 확인할 수 있는 위치를 소개합니다.|  
 |[SQL Server용 Microsoft JDBC 드라이버 지원 매트릭스](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft JDBC Driver for SQL Server에 대한 지원 매트릭스 및 지원 드라이버에 대한 지원 주기 정책입니다.|  
-|[질문과 대답 &#40;FAQ&#41; JDBC 드라이버에 대 한](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC Driver에 대한 질문과 대답입니다.|  
+|[JDBC 드라이버에 &#40;대&#41; 한 faq (질문과 대답)](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC Driver에 대한 질문과 대답입니다.|  
 |[Microsoft JDBC Driver for SQL Server의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server의 기능 종속성|
 
 ## <a name="see-also"></a>참고 항목  

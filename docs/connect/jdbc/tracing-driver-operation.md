@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d19cd119ca2d0832f3e3b7fe261245a2a55987a8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798257"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916681"
 ---
 # <a name="tracing-driver-operation"></a>드라이버 작업 추적
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66798257"
 > [!NOTE]  
 >  JDBC 드라이버에 포함된 네이티브 구성 요소(sqljdbc_xa.dll)의 경우 BID(Built-In Diagnostics) 프레임워크를 사용하여 추적 기능을 활성화합니다. BID에 대한 자세한 내용은 [SQL Server에서 데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=70042)을 참조하세요.  
   
- 애플리케이션을 개발할 때 Logger 개체를 호출한 다음, LogRecord 개체를 만들고 Handler 개체에 전달하여 처리할 수 있습니다. 로 거 및 처리기 개체 수준 로깅 사용 및 로깅 필터는 LogRecords 규제를 선택적으로 처리 됩니다. 로깅 작업이 완료되면 Handler 개체는 필요에 따라 Formatter 개체를 사용하여 로그 정보를 게시합니다.  
+ 애플리케이션을 개발할 때 Logger 개체를 호출한 다음, LogRecord 개체를 만들고 Handler 개체에 전달하여 처리할 수 있습니다. 로 거 및 처리기 개체는 모두 로깅 수준을 사용 하 고 선택적으로 로깅 필터를 사용 하 여 처리 되는 LogRecords를 제어 합니다. 로깅 작업이 완료되면 Handler 개체는 필요에 따라 Formatter 개체를 사용하여 로그 정보를 게시합니다.  
   
  기본적으로 java.util.logging 프레임워크는 출력을 파일에 작성합니다. 이 출력 로그 파일은 JDBC 드라이버가 실행 중인 컨텍스트에 대한 쓰기 권한이 있어야 합니다.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66798257"
   
 |속성|설명|  
 |----------|-----------------|  
-|AuthenticationJNI|통합 인증 문제는 Windows에 대 한 로그 메시지 (때 합니다 **authenticationScheme** 연결 속성이 암시적 또는 명시적으로 설정 **NativeAuthentication**).<br /><br /> 응용 프로그램에서는 로깅 수준을 FINEST 및 FINE으로 설정할 수 있습니다.|  
+|AuthenticationJNI|Windows 통합 인증 문제에 관한 메시지를 기록 합니다 ( **Authenticationscheme** 연결 속성이 암시적 또는 명시적으로 **NativeAuthentication**로 설정 된 경우).<br /><br /> 응용 프로그램에서는 로깅 수준을 FINEST 및 FINE으로 설정할 수 있습니다.|  
 |SQLServerConnection|[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE 및 FINER로 설정할 수 있습니다.|  
 |SQLServerDataSource|[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 및 [SQLServerPooledConnection](../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 클래스의 메시지를 로깅합니다.<br /><br /> 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
 |InputStream|java.io.InputStream, java.io.Reader 및 varchar, nvarchar, varbinary 데이터 형식 등의 최대값 지정자가 있는 데이터 형식과 관련된 메시지를 로깅합니다.<br /><br /> 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
@@ -88,7 +87,7 @@ ms.locfileid: "66798257"
 |SQLServerResultSet|[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE, FINER 및 FINEST로 설정할 수 있습니다.|  
 |SQLServerStatement|[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE, FINER 및 FINEST로 설정할 수 있습니다.|  
 |XA|[SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스의 모든 XA 트랜잭션에 대한 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE 및 FINER로 설정할 수 있습니다.|  
-|KerbAuthentication|유형 4 Kerberos 인증에 대 한 메시지를 기록 합니다 (경우 합니다 **authenticationScheme** 연결 속성이로 설정 된 **JavaKerberos**). 응용 프로그램에서는 로깅 수준을 FINE 또는 FINER로 설정할 수 있습니다.|  
+|KerbAuthentication|유형 4 Kerberos 인증에 대 한 메시지를 기록 합니다 ( **Authenticationscheme** 연결 속성이 **JavaKerberos**로 설정 된 경우). 응용 프로그램에서는 로깅 수준을 FINE 또는 FINER로 설정할 수 있습니다.|  
 |TDS.DATA|드라이버와 SQL 서버 간 TDS 프로토콜 수준 대화를 포함하는 메시지를 로깅합니다. 주고받는 각 TDS 패킷의 자세한 내용이 ASCII 및 16진수로 로깅됩니다. 로그인 자격 증명(사용자 이름 및 암호)은 로깅되지 않습니다. 다른 모든 데이터는 로깅됩니다.<br /><br /> 이 범주는 매우 자세한 메시지를 작성하기 때문에 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Channel|이 범주는 SQL 서버와의 TCP 통신 채널의 동작을 추적합니다. 로깅된 메시지는 소켓을 열고 닫는 동작과 읽고 쓰는 동작을 포함합니다. 또한 SQL 서버와의 SSL(Secure Sockets Layer) 연결 설정과 관련된 메시지를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINE, FINER 또는 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Writer|이 범주는 TDS 채널에 대한 쓰기 동작을 추적합니다. 내용이 아닌, 쓰기 길이만 추적됩니다. 또한 이 범주에서는 문의 실행을 취소하기 위해 주의 신호가 서버로 전송되는 경우의 문제를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  

@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 메타 데이터를 사용 하 여 | Microsoft Docs
+title: 데이터베이스 메타 데이터 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0bad06da093edd83b7df2e1c10f2b68bdca7a210
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fbe290c558dd8c64605bad0a977657904582c696
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916266"
 ---
 # <a name="using-database-metadata"></a>데이터베이스 메타데이터 사용
 
@@ -26,7 +25,7 @@ ms.locfileid: "66798669"
 
 SQLServerDatabaseMetaData 개체를 만들려면 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [getMetaData](../../connect/jdbc/reference/getmetadata-method-sqlserverconnection.md) 메서드를 사용하여 연결된 데이터베이스에 관한 정보를 가져옵니다.
 
-다음 예제에 대해 열린 연결을 여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 예제 데이터베이스는 함수에 전달 된, SQLServerConnection 클래스의 getMetaData 메서드를 사용 하 여는 SQLServerDatabaseMetadata 개체와의 다음 다양 한 메서드를 반환 하는 SQLServerDatabaseMetaData 개체는 드라이버, 드라이버 버전, 데이터베이스 이름 및 데이터베이스 버전에 대 한 정보를 표시 하는 데 사용 됩니다.
+다음 예제에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대 한 열린 연결을 함수에 전달 하 고, SQLServerConnection 클래스의 getMetaData 메서드를 사용 하 여 SQLServerDatabaseMetadata 개체를 반환 하 고, 다음의 여러 메서드를 사용 합니다. SQLServerDatabaseMetaData 개체는 드라이버, 드라이버 버전, 데이터베이스 이름 및 데이터베이스 버전에 대 한 정보를 표시 하는 데 사용 됩니다.
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 

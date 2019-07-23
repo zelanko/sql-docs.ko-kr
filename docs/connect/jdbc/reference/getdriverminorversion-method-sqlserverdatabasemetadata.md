@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: adb6ae29-025e-4ab3-a6e4-133fc29fb98b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f59a574317b6f08aff66cd9abab42183b2fdba35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62f43bff794aac306bddb288e9e932e5511f6db1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983450"
 ---
 # <a name="getdriverminorversion-method-sqlserverdatabasemetadata"></a>getDriverMinorVersion 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getDriverMinorVersion()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getDriverMinorVersion 메서드는 java.sql.DatabaseMetaData 인터페이스의 getDriverMinorVersion 메서드에 의해 지정 됩니다.  
+ 이 getDriverMinorVersion 메서드는 getDriverMinorVersion 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

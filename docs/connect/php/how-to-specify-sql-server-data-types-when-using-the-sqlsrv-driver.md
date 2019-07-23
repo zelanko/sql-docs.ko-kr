@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1fcf73cb-5634-4d89-948f-9326f1dbd030
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5d4727029dbb1ba4fbfdbdd10abf6b1cd0812790
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9ddb359c34e929247357713c5c48035a3eed9a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993361"
 ---
 # <a name="how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 SQL Server 데이터 형식 지정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

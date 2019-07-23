@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9ae20556-e243-4a60-b076-9fd9e82c7355
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9cffd51ef8da35c7ee8c1e424c2cddbac92955cd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 698c78dced26e7981fb7a651c22530909427b796
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517277"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68222561"
 ---
 # <a name="working-with-snapshots-web-portal"></a>스냅샷 사용(웹 포털)
 
@@ -32,7 +32,7 @@ ms.locfileid: "52517277"
   
 ![ssRSWebPortal-report-caching4](../reporting-services/media/ssrswebportal-report-caching4.png)  
   
-1.  **캐싱** 페이지에서 **항상 사전 생성된 스냅숏에 대해 이 보고서 실행** 을 선택하여 스냅숏을 만들기 위한 옵션을 사용할 수 있습니다.  
+1.  **캐싱** 페이지에서 **항상 사전 생성된 스냅샷에 대해 이 보고서 실행** 을 선택하여 스냅샷을 만들기 위한 옵션을 사용할 수 있습니다.  
   
 2.  되풀이 스냅샷을 예약하려면 **일정에 따라 캐시 스냅샷 만들기** 를 선택합니다. 그런 다음 공유 일정을 사용하거나 사용자 지정 일정을 정의하여 스냅샷을 새로 고칠 수 있습니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "52517277"
   
 기록 스냅샷으로 작업하려면 보고서를 관리하고 **기록 스냅샷**을 선택합니다.  
   
-**기록 스냅숏** 페이지를 사용하여 시간에 따라 생성 및 저장된 보고서 스냅숏을 볼 수 있습니다. 보고서 서버에 설정된 옵션에 따라 기록에 최근 스냅샷만 포함되어 있을 수 있습니다.  
+**기록 스냅샷** 페이지를 사용하여 시간에 따라 생성 및 저장된 보고서 스냅샷을 볼 수 있습니다. 보고서 서버에 설정된 옵션에 따라 기록에 최근 스냅샷만 포함되어 있을 수 있습니다.  
   
 보고서 기록은 항상 이 기록의 원본으로 사용되는 보고서의 컨텍스트 내에서 볼 수 있습니다. 보고서 서버의 모든 보고서 기록을 한 곳에서 볼 수는 없습니다.  
   
@@ -58,15 +58,15 @@ ms.locfileid: "52517277"
   
 ### <a name="schedule-and-settings"></a>일정 및 설정  
   
-**일정 및 설정** 을 선택하면 일정에 추가 옵션을 제공하고 생성된 스냅숏의 보존 일정을 제어합니다.  
+**일정 및 설정** 을 선택하면 일정에 추가 옵션을 제공하고 생성된 스냅샷의 보존 일정을 제어합니다.  
   
 ![ssRSWebPortal-historysnapshots2](../reporting-services/media/ssrswebportal-historysnapshots2.png)  
    
-필요에 따라 스냅샷 생성에 대한 일정을 만들 수 있습니다. 또한 다른 사용자가 새 스냅샷을 만드는 것을 방지할 수 있습니다. **사람들이 스냅숏을 수동으로 만들 수 있도록 허용** 을 선택 취소하면 **+ 새 스냅숏 기록 단추**를 사용할 수 없게 됩니다.  
+필요에 따라 스냅샷 생성에 대한 일정을 만들 수 있습니다. 또한 다른 사용자가 새 스냅샷을 만드는 것을 방지할 수 있습니다. **사람들이 스냅샷을 수동으로 만들 수 있도록 허용** 을 선택 취소하면 **+ 새 스냅샷 기록 단추**를 사용할 수 없게 됩니다.  
   
 원하는 스냅샷 보존 방법을 정의할 수도 있습니다.  
   
-**보고서 기록에 캐시 스냅숏도 저장**  
+**보고서 기록에 캐시 스냅샷도 저장**  
   
 보고서 실행 속성에 따라 생성하는 보고서 스냅샷을 보고서 기록에 복사하려면 이를 선택합니다. 생성된 스냅샷에서 보고서를 실행하도록 보고서 실행 속성을 설정할 수 있습니다. 이 보고서 기록 속성을 설정하면 스냅샷의 복사본을 보고서 기록에 저장하여 시간에 따라 생성되는 모든 보고서 스냅샷에 대한 기록을 보관할 수 있습니다.
 
@@ -74,6 +74,6 @@ ms.locfileid: "52517277"
 
 [웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
 [페이지를 매긴 보고서 사용](working-with-paginated-reports-web-portal.md)  
-[공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
+[공유 데이터 세트 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

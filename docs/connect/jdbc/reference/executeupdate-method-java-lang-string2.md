@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 91ecb1cd-001d-4ac9-9ae8-5db05c3c2959
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8c408098ebe1e9e732b171390eb1901f01014292
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04b3bdcd2b495513500d07583fadc910fe9c13a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954681"
 ---
 # <a name="executeupdate-method-javalangstring"></a>executeUpdate 메서드(java.lang.String)
 

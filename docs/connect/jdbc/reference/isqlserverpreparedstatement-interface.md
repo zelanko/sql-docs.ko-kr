@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf87892e-5c34-4ac6-8258-c2a81e117b26
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6defd8b451089c70969f7b8efca5fec41d6af258
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 05fda4ea42c1819f3cbb4f16fcc7f02da2a06b8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977428"
 ---
 # <a name="isqlserverpreparedstatement-interface"></a>ISQLServerPreparedStatement 인터페이스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public interface ISQLServerPreparedStatement
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 이 인터페이스는 구현한 [SQLServerPreparedStatement 클래스](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)합니다.  
+ 이 인터페이스는 [SQLServerPreparedStatement 클래스](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)에 의해 구현 됩니다.  
   
  이 인터페이스는 다음 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 관련 메서드를 노출합니다.  
   

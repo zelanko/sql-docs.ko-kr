@@ -7,14 +7,14 @@ ms.technology: reporting-services
 ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ec3fac28637e21da9fecc7ad291b8ff347ba7d6d
-ms.sourcegitcommit: 9d2fef55b0abfc049fbb55c315097dda2aeb6853
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 58d70878051df627e8dc788e414dc2ab1e88e839
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2018
-ms.locfileid: "53010294"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221383"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>보고서 서버의 웹 포털(SSRS 기본 모드)
 

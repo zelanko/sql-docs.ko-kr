@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 21c25443-bd2b-4b60-9798-4efe2c158952
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: caf5b0a71fe179aa58da59a4434c485693939b9b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3de927351c2474c60af8ba1e168b0d7e76f98260
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952963"
 ---
 # <a name="getcolumndisplaysize-method-sqlserverresultsetmetadata"></a>getColumnDisplaySize 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getColumnDisplaySize(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getColumnDisplaySize 메서드는 java.sql.ResultSetMetaData 인터페이스의 getColumnDisplaySize 메서드에 의해 지정 됩니다.  
+ 이 getColumnDisplaySize 메서드는 getColumnDisplaySize 메서드에서 지정 하는 java. .sql Setmetadata 인터페이스입니다.  
   
  [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0에서는 COLUMN_SIZE 열의 동작이 변경되었습니다. 자세한 내용은 [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)를 참조하십시오.  
   

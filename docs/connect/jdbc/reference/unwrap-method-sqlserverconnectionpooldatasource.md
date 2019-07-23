@@ -1,5 +1,5 @@
 ---
-title: unwrap 메서드 (SQLServerConnectionPoolDataSource) | Microsoft Docs
+title: 래핑 해제 방법 (SQLServerConnectionPoolDataSource) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f5c9b734-2096-4ae4-a284-6b4d1b4a00d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 51c3a41c0c46345efc83247e6fe45140c6054b62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab408e917a1e6c22cdbe320eb19f5c9995c6e216
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985612"
 ---
 # <a name="unwrap-method-sqlserverconnectionpooldatasource"></a>unwrap 메서드(SQLServerConnectionPoolDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public <T> T unwrap(Class<T> iface)
   
  [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 클래스는 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스를 확장합니다. 이 메서드가 호출되면 개체가 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스 및 [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 클래스로 래핑 해제됩니다.  
   
- 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)합니다.  
+ 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnectionPoolDataSource 메서드](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-methods.md)   

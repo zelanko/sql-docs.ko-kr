@@ -1,5 +1,5 @@
 ---
-title: 테이블 반환 매개 변수 (OLE DB)를 사용 하 여 | Microsoft Docs
+title: 테이블 반환 매개 변수 (OLE DB) 사용 | Microsoft Docs
 description: 테이블 반환 매개 변수 사용(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 96a17c186c5eb39765d94d88310b1c77d73633b4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7ec89b3fdafaba7fe81849ab2ae5b2baf926ef83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791044"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994593"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>테이블 반환 매개 변수 사용(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +32,9 @@ ms.locfileid: "66791044"
   
 -   ISSCommandWithParameters를 사용하는 사용자 지정 매개 변수 속성을 사용합니다.  
   
--   오류 MSOLEDBSQL 오류에 대 한 처리를 보여 줍니다.  
+-   MSOLEDBSQL 오류에 대 한 오류 처리를 보여 줍니다.  
   
- 테이블 반환 매개 변수에 대 한 자세한 내용은 참조 하세요. [테이블 반환 매개 변수 &#40;OLE DB Driver for SQL Server&#41;](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)합니다.  
+ 테이블 반환 매개 변수에 대 한 자세한 내용은 [SQL Server&#41;드라이버 OLE DB 테이블 반환 매개 &#40;변수](../../oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md)를 참조 하세요.  
   
 ## <a name="example"></a>예제  
  첫 번째([!INCLUDE[tsql](../../../includes/tsql-md.md)]) 코드 목록은 예제에서 사용하는 데이터베이스를 만듭니다.  

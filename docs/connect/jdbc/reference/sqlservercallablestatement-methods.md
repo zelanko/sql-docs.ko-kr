@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 2af91aa4-f725-4cfe-9fbc-b91b4784c437
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aaa038c3679b6a3f9af0e1bb7f46fee1dacb8bc8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d473d5fa44dc4767812801e9fe8e5a6786e1dedc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971884"
 ---
 # <a name="sqlservercallablestatement-methods"></a>SQLServerCallableStatement 메서드
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  SQLServerCallableStatement의 멤버에 대 한 정보를 참조 하세요 [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)합니다.  
+  SQLServerCallableStatement의 멤버에 대 한 자세한 내용은 [SQLServerCallableStatement members](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)를 참조 하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

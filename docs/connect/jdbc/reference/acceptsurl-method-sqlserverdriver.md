@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fc744566-7191-4b15-9f76-b4b8087fb14a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ca37a11eba988f0a4b65281ca6f6f4b0e83863f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7c51da69e7218f91630543fe7bee5ec0d7fd6b0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956024"
 ---
 # <a name="acceptsurl-method-sqlserverdriver"></a>acceptsURL 메서드(SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean acceptsURL(java.lang.String url)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 acceptsURL 메서드는 java.sql.Driver 인터페이스의 acceptsURL 메서드에 의해 지정 됩니다.  
+ 이 acceptsURL 메서드는 acceptsURL 인터페이스의 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDriver 메서드](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

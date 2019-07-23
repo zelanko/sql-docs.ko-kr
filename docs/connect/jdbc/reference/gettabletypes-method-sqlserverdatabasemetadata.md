@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e0f5dc57-07b8-4811-ab1a-80a524bfdb42
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6795a84a042a7abaa52fe83f562911c934709f81
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8da791a53d6ee25dd56f7f015ccc69947999f3b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979152"
 ---
 # <a name="gettabletypes-method-sqlserverdatabasemetadata"></a>getTableTypes 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fcb66851-db5f-4ae8-b728-d129480b6f42
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f170e15ec0096d02fd98acb16e15a6ac05257f31
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4aa608851ddbe00c8d7c09523c0f3b8f9ec95ff6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978208"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>getURL 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public java.lang.String getURL()
   
 -   URL 값 "jdbc:sqlserver://"  
   
--   선택적 연결 속성을 같은 **serverName**를 **instanceName**, 및 **portNumber**  
+-   **서버 이름**, **인스턴스**이름 및 **portNumber** 와 같은 선택적 연결 속성  
   
 -   사용자가 설정한 기타 연결 속성과 비어 있지 않거나 null이 아닌 드라이버 기본값을 갖는 모든 연결 속성(**userName**, **password** 및 **integratedSecurity** 제외)  
   

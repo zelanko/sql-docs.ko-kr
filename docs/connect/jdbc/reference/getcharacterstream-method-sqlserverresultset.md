@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c70e210f-0288-47cc-9268-a29c45979729
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 88f13fee66e60ee73c2742672239de375ab6e9cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f16880bdeca2afb2512ae84b72266a57b6dd38e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953182"
 ---
 # <a name="getcharacterstream-method-sqlserverresultset"></a>getCharacterStream 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

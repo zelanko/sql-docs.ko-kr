@@ -1,5 +1,5 @@
 ---
-title: JDBC 드라이버 열려 있는 결과 집합 닫지 | Microsoft Docs
+title: JDBC 드라이버에서 열린 결과 집합을 닫음 Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1739ecb5-e5cb-4807-b5a8-97c0299929d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fc9a0629c15f98008cfd35f5ff6ab4203b12f05f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9fded722f558b68e393fc4e0815a35cc7383b8d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955850"
 ---
 # <a name="autocommitfailureclosesallresultsets-method-sqlserverdatabasemetadata"></a>autoCommitFailureClosesAllResultSets 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public boolean autoCommitFailureClosesAllResultSets()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 autoCommitFailureClosesAllResultSets 메서드는 java.sql.DatabaseMetaData 인터페이스의 autoCommitFailureClosesAllResultSets 메서드에 의해 지정 됩니다.  
+ 이 autoCommitFailureClosesAllResultSets 메서드는 autoCommitFailureClosesAllResultSets 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb06138639be09378baa8dfe94d110c0ded41223
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3f70413a7624b9bbd380a664fbf61b9a33f8989b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955513"
 ---
 # <a name="compareto-method-datetimeoffset"></a>compareTo 메서드(DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  비교 **DateTimeOffset** 개체를 다른 **DateTimeOffset** GMT 시간을 기준으로 개체입니다.  
+  GMT의 시간을 기준으로이 **datetimeoffset** 개체를 다른 **datetimeoffset** 개체와 비교 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,9 +37,9 @@ public int compareTo(DateTimeOffset other)
   
 |반환 값|설명|  
 |------------------|-----------------|  
-|0|둘 다 **DateTimeOffset** 개체가 동일한 시각을 나타내는지 합니다.|  
-|음수|이렇게 **DateTimeOffset** 개체가 앞에 있는 시간에는 시각을 나타내는지 *다른*합니다.|  
-|양수|이렇게 **DateTimeOffset** 개체가 시간 후에 시각을 나타내는지 *다른*합니다.|  
+|0|두 **DateTimeOffset** 개체는 같은 지정 시간을 나타냅니다.|  
+|음수|이 **DateTimeOffset** 개체는 *다른*시점 이전의 지정 시간을 나타냅니다.|  
+|양수|이 **DateTimeOffset** 개체는 *다른*시점 이후의 지정 시간을 나타냅니다.|  
   
 ## <a name="remarks"></a>Remarks  
  두 **DateTimeOffset** 개체가 GMT에서 동일한 시간을 갖고 있으면 오프셋에 따라 개체의 순서가 추가로 지정되지 않습니다.  

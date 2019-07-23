@@ -10,37 +10,37 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: david-puglielli
 ms.author: v-dapugl
-manager: mbarwin
-ms.openlocfilehash: 30423cd7c15a920d99fad4c0ea08e074beaece0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 8712681a244e969d230b0b7099acd4aa56334f11
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62522805"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265185"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD)는 대 안으로 작동 하는 중앙 사용자 ID 관리 기술 [SQL Server 인증](../../connect/php/how-to-connect-using-sql-server-authentication.md)합니다. Azure AD 허용 사용자 이름 및 암호, Windows 통합 인증 또는 Azure AD 액세스 토큰을 사용 하 여 Azure AD에서 페더레이션된 id 사용 하 여 Microsoft Azure SQL Database 및 SQL Data Warehouse에 연결 합니다. SQL Server 용 PHP 드라이버에는 이러한 기능에 대 한 부분 지원을 제공합니다.
+[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD)는 [SQL Server 인증](../../connect/php/how-to-connect-using-sql-server-authentication.md)에 대 한 대 안으로 작동 하는 중앙 사용자 ID 관리 기술입니다. Azure AD는 사용자 이름 및 암호, Windows 통합 인증 또는 Azure AD 액세스 토큰을 사용 하 여 Azure AD에서 페더레이션 id로 Microsoft Azure SQL Database 및 SQL Data Warehouse에 대 한 연결을 허용 합니다. SQL Server 용 PHP 드라이버는 이러한 기능을 부분적으로 지원 합니다.
 
-Azure AD를 사용 하려면 사용 합니다 **인증** 또는 **AccessToken** 키워드 (이러한 상호 배타적인)를 표에 표시 된 것 처럼 합니다. 자세한 기술 정보를 참조 [를 사용 하 여 Azure Active Directory와 ODBC 드라이버](../../connect/odbc/using-azure-active-directory.md)합니다.
+Azure AD를 사용 하려면 다음 표에 나와 있는 것 처럼 **인증** 또는 **AccessToken** 키워드 (함께 사용할 수 없음)를 사용 합니다. 자세한 기술 정보는 [ODBC 드라이버를 사용 하 여 Azure Active Directory 사용](../../connect/odbc/using-azure-active-directory.md)을 참조 하세요.
 
 |키워드|값|설명|
 |-|-|-|
-|**AccessToken**|(기본값)을 설정 하지|다른 키워드에 의해 결정 되는 인증 모드입니다. 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요. |
-||바이트 문자열|Azure AD 액세스 토큰을 OAuth JSON 응답에서 추출 합니다. 연결 문자열에는 사용자 ID, 암호 또는 인증 키워드가 없어야 (필요한 ODBC 드라이버 버전 17 이상 Linux 또는 macOS에서). |
-|**인증**|(기본값)을 설정 하지|다른 키워드에 의해 결정 되는 인증 모드입니다. 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요. |
-||`SqlPassword`|(Azure 인스턴스 수 있음)는 SQL Server 인스턴스를 직접 인증할 사용자 이름 및 암호를 사용 합니다. 사용자 이름 및 암호를 사용 하 여 연결 문자열에 전달 해야 합니다 **UID** 하 고 **PWD** 키워드입니다. |
-||`ActiveDirectoryPassword`|사용자 이름 및 암호를 사용 하 여 Azure Active Directory id를 사용 하 여 인증 합니다. 사용자 이름 및 암호를 사용 하 여 연결 문자열에 전달 해야 합니다 **UID** 하 고 **PWD** 키워드입니다. |
-||`ActiveDirectoryMsi`|시스템 할당 된 관리 되는 id 또는 사용자 할당 관리 id를 사용 하 여 인증 (ODBC 드라이버 버전 17.3.1.1 필요 이상). 개요 및 자습서를 참조 하세요 [Azure 리소스에 대 한 관리 되는 id 란?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)합니다.|
+|**AccessToken**|설정 안 함 (기본값)|다른 키워드에 의해 결정 되는 인증 모드입니다. 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요. |
+||바이트 문자열입니다.|OAuth JSON 응답에서 추출 된 Azure AD 액세스 토큰입니다. 연결 문자열에는 사용자 ID, 암호 또는 인증 키워드가 포함 되지 않아야 합니다 (Linux 또는 macOS에서 ODBC 드라이버 버전 17 이상이 필요 함). |
+|**인증**|설정 안 함 (기본값)|다른 키워드에 의해 결정 되는 인증 모드입니다. 자세한 내용은 [Connection Options](../../connect/php/connection-options.md)을 참조하세요. |
+||`SqlPassword`|사용자 이름 및 암호를 사용 하 여 SQL Server 인스턴스 (Azure 인스턴스 일 수 있음)에 직접 인증 합니다. **UID** 및 **PWD** 키워드를 사용 하 여 연결 문자열에 사용자 이름 및 암호를 전달 해야 합니다. |
+||`ActiveDirectoryPassword`|사용자 이름 및 암호를 사용 하 여 Azure Active Directory id를 사용 하 여 인증 합니다. **UID** 및 **PWD** 키워드를 사용 하 여 연결 문자열에 사용자 이름 및 암호를 전달 해야 합니다. |
+||`ActiveDirectoryMsi`|시스템 할당 관리 id 또는 사용자 할당 관리 id 중 하나를 사용 하 여 인증 합니다 (ODBC 드라이버 버전 17.3.1.1 이상 필요). 개요 및 자습서는 [Azure 리소스에 대 한 관리 되는 id 란?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)을 참조 하세요.|
 
-합니다 **인증** 키워드 연결 보안 설정에 영향을 줍니다. 기본적으로 다음 연결 문자열에 설정 된 경우는 **Encrypt** 키워드를 클라이언트에 암호화를 요청 합니다 즉 true로 설정 합니다. 또한 서버 인증서 유효성을 검사할 암호화 설정에 관계 없이 경우가 아니면 **TrustServerCertificate** 설정 된 true (**false** 기본적으로). 이 기능은 보안 로그인 메서드는 서버 인증서의 유효성 검사 암호화 연결 문자열에 특별히 요청 될 경우에 덜 이전에서 구분 됩니다.
+**Authentication** 키워드는 연결 보안 설정에 영향을 줍니다. 연결 문자열에 설정 된 경우 기본적으로 **Encrypt** 키워드가 true로 설정 됩니다. 즉, 클라이언트가 암호화를 요청 합니다. 또한 **Trustservercertificate** 가 true로 설정 되어 있지 않으면 (기본적으로**false** ) 암호화 설정에 관계 없이 서버 인증서의 유효성이 검사 됩니다. 이 기능은 연결 문자열에서 암호화가 구체적으로 요청 된 경우에만 서버 인증서의 유효성을 검사 하는 이전의 낮은 보안 로그인 방법과 구별 됩니다.
 
-PHP 드라이버를 사용 하 여 Azure AD를 사용 하 여 Windows에서 SQL server, 설치를 묻는 메시지가 표시 될 수 있습니다 합니다 [Microsoft Online Services 로그인 도우미](https://www.microsoft.com/download/details.aspx?id=41950) (17 + ODBC에 대 한 필요 없음).
+Windows에서 SQL Server 용 PHP 드라이버와 함께 Azure AD를 사용 하는 경우 [Microsoft Online Services 로그인 도우미](https://www.microsoft.com/download/details.aspx?id=41950) 를 설치 하 라는 메시지가 표시 될 수 있습니다 (ODBC 17 이상에서는 필요 없음).
 
 #### <a name="limitations"></a>제한 사항
 
-Windows에 기본 ODBC 드라이버 지원에 대 한 하나 더 많은 가치를 **인증** 키워드 **ActiveDirectoryIntegrated**, 하지만 PHP 드라이버를 모든 플랫폼에서이 값을 지원 하지 않습니다.
+Windows에서 기본 ODBC 드라이버는 **인증** 키워드 **ActiveDirectoryIntegrated**에 대해 하나 이상의 값을 지원 하지만 PHP 드라이버는 모든 플랫폼에서이 값을 지원 하지 않습니다.
 
 ## <a name="example---connect-using-sqlpassword-and-activedirectorypassword"></a>예제-SqlPassword 및 ActiveDirectoryPassword를 사용 하 여 연결
 
@@ -159,11 +159,11 @@ try {
 ?>
 ```
 
-## <a name="example---connect-using-managed-identities-for-azure-resources"></a>예제-관리 되는 id를 사용 하 여 Azure 리소스에 대 한 연결
+## <a name="example---connect-using-managed-identities-for-azure-resources"></a>예제-Azure 리소스에 대해 관리 되는 id를 사용 하 여 연결
 
-### <a name="using-the-system-assigned-managed-identity-with-sqlsrv-driver"></a>SQLSRV 드라이버를 사용 하 여 관리 되는 시스템 할당 id를 사용 하 여
+### <a name="using-the-system-assigned-managed-identity-with-sqlsrv-driver"></a>SQLSRV 드라이버를 사용 하 여 시스템 할당 관리 id 사용
 
-관리 되는 id 시스템 할당을 사용 하 여 연결 하는 중, 하는 경우 UID 또는 PWD 옵션을 사용 하지 마십시오.
+시스템 할당 관리 id를 사용 하 여 연결 하는 경우 UID 또는 PWD 옵션을 사용 하지 마십시오.
 
 ```php
 <?php
@@ -198,11 +198,11 @@ if ($conn === false) {
 ?>
 ```
 
-### <a name="using-the-user-assigned-managed-identity-with-pdosqlsrv-driver"></a>PDO_SQLSRV 드라이버를 사용 하 여 사용자 할당 관리 되는 id를 사용 하 여
+### <a name="using-the-user-assigned-managed-identity-with-pdosqlsrv-driver"></a>PDO_SQLSRV driver와 함께 사용자 할당 관리 id 사용
 
-사용자 할당 관리 id는 독립 실행형 Azure 리소스 생성 됩니다. Azure에서 사용 중인 구독에서 신뢰할 수 있는 Azure AD 테 넌 트 id를 만듭니다. Id를 만든 후 하나 이상의 Azure 서비스 인스턴스에 id는 할당할 수 있습니다. 복사를 `Object ID` 연결 문자열에 이름을 사용자로는이 id 및 집합입니다. 
+사용자 할당 관리 id는 독립 실행형 Azure 리소스로 생성 됩니다. Azure는 사용 중인 구독에서 신뢰할 수 있는 Azure AD 테 넌 트에 id를 만듭니다. Id를 만든 후에는 하나 이상의 Azure 서비스 인스턴스에 id를 할당할 수 있습니다. 이 id `Object ID` 의를 복사 하 고 연결 문자열의 사용자 이름으로 설정 합니다. 
 
-따라서 관리 되는 id 사용자 할당을 사용 하 여 연결 하는 중에 사용자 이름으로 개체 ID를 제공 하지만 암호를 생략 합니다.
+따라서 사용자 할당 관리 id를 사용 하 여 연결 하는 경우에는 개체 ID를 사용자 이름으로 제공 하 고 암호는 생략 합니다.
 
 ```php
 <?php

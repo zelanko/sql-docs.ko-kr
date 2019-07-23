@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: extensions
 ms.topic: reference
 ms.assetid: bfa0a35b-ccfb-4279-bae6-106c227c5f16
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 853d40be782355841d68d3ace92e4228b0631057
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 9fcef802f6c61b85b4905365bda075a9f11d9e10
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50020667"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68223234"
 ---
 # <a name="how-to-install-custom-security-extensions"></a>사용자 지정 보안 확장 프로그램 설치 방법
 
@@ -91,7 +91,7 @@ public void GetUserInfo(IRSRequestContext requestContext, out IIdentity userIden
     </system.web>
 ```
 
-### <a name="power-bi-report-server"></a>Power BI 보고서 서버
+### <a name="power-bi-report-server"></a>Power BI Report Server
 
 현재 2017년 6월(빌드 14.0.600.301) 릴리스부터 사용할 수 있습니다.
 

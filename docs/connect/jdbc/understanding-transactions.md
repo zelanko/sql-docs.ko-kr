@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad6ccc7f65d6d4c65fb1bb63b58e0b13269ea351
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 090597e3afcf335aba674cd11e603067892819b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916583"
 ---
 # <a name="understanding-transactions"></a>트랜잭션 이해
 
@@ -24,7 +23,7 @@ ms.locfileid: "66788388"
 
 트랜잭션은 논리적 작업 단위로 결합되는 작업 그룹입니다. 트랜잭션은 시스템에서 발생할 수 있는 오류에 관계없이 트랜잭션의 각 동작에 대해 일관성과 무결성을 제어하고 유지 관리하는 데 사용됩니다.
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]의 트랜잭션은 로컬 또는 분산 중 하나일 수 있습니다. 또한 트랜잭션은 격리 수준을 사용합니다. JDBC 드라이버에서 지 원하는 격리 수준에 대 한 자세한 내용은 참조 하세요. [격리 수준 이해](../../connect/jdbc/understanding-isolation-levels.md)합니다.
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]의 트랜잭션은 로컬 또는 분산 중 하나일 수 있습니다. 또한 트랜잭션은 격리 수준을 사용합니다. JDBC 드라이버에서 지 원하는 격리 수준에 대 한 자세한 내용은 [격리 수준 이해](../../connect/jdbc/understanding-isolation-levels.md)를 참조 하세요.
 
 응용 프로그램은 Transact-SQL 문 또는 JDBC 드라이버에서 제공하는 메서드 중 하나만을 사용하여 트랜잭션을 제어해야 합니다. 동일한 트랜잭션에서 Transact-SQL 문과 JDBC API 메서드를 둘 다 사용하면 트랜잭션을 정상적으로 커밋할 수 없거나, 트랜잭션이 커밋 또는 롤백되고 예상치 않은 새로운 트랜잭션이 시작되거나, "트랜잭션 다시 시작 실패" 예외 등의 문제가 발생할 수 있습니다.
 
@@ -42,7 +41,7 @@ ms.locfileid: "66788388"
 
 JDBC 드라이버는 MS DTC([!INCLUDE[msCoName](../../includes/msconame_md.md)] Distributed Transaction Coordinator)와 원활하게 통합되어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 진정한 분산 트랜잭션을 지원합니다. MS DTC는 [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows 시스템용으로 [!INCLUDE[msCoName](../../includes/msconame_md.md)]에서 제공하는 분산 트랜잭션 기능입니다. MS DTC는 [!INCLUDE[msCoName](../../includes/msconame_md.md)]의 검증된 트랜잭션 처리 기술을 사용하여 완전한 2단계 분산 커밋 프로토콜 및 분산 트랜잭션 복구와 같은 XA 기능을 지원합니다.
 
-분산된 트랜잭션을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [XA 트랜잭션 이해](../../connect/jdbc/understanding-xa-transactions.md)합니다.
+분산 트랜잭션을 사용 하는 방법에 대 한 자세한 내용은 [XA 트랜잭션 이해](../../connect/jdbc/understanding-xa-transactions.md)를 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

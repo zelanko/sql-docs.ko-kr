@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0bbd6842-7210-432a-bef4-e15a63f5cc96
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d3e836a031f319c3e92227f1d51fcd436c9d3ed7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c9c73652c1c0b512c24e2d592323833390c7b0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953339"
 ---
 # <a name="getcatalogseparator-method-sqlserverdatabasemetadata"></a>getCatalogSeparator 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a153e4ce-992d-4211-9a0f-c0998c706402
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 281799b3a7e7015e9fd2a545fb47840a5c62e5b4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8414497fed891e153399febf84151c82d915d77a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993593"
 ---
 # <a name="example-application-pdosqlsrv-driver"></a>예제 애플리케이션(PDO_SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -33,7 +32,7 @@ AdventureWorks 제품 검토 예제 애플리케이션은 [!INCLUDE[ssDriverPHP]
 ## <a name="requirements"></a>요구 사항  
 AdventureWorks 제품 검토 예제 애플리케이션을 실행하려면 해당 컴퓨터에 대해 다음 조건을 만족해야 합니다.  
   
--   시스템이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]요구 사항을 만족해야 합니다. 자세한 내용은 [Microsoft Drivers for PHP for SQL Server에 대 한 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)합니다.  
+-   시스템이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]요구 사항을 만족해야 합니다. 자세한 내용은 [Microsoft Drivers FOR PHP for SQL Server의 시스템 요구 사항](../../connect/php/system-requirements-for-the-php-sql-driver.md)을 참조 하세요.  
  -   adventureworks_demo.php 및 photo.php 파일이 웹 서버의 루트 디렉터리에 있어야 합니다. 파일에 이 문서 뒷부분에 나열된 코드가 있어야 합니다.  
 -   [AdventureWorks2008](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) 데이터베이스가 연결된 SQL Server 2005 또는 SQL Server 2008이 로컬 컴퓨터에 설치되어 있어야 합니다.  
 -   웹 브라우저가 설치됩니다.  
@@ -42,8 +41,8 @@ AdventureWorks 제품 검토 예제 애플리케이션을 실행하려면 해당
 AdventureWorks 제품 검토 예제 애플리케이션은 다음을 보여 줍니다.  
   
 -   Windows 인증을 사용하여 SQL Server에 대한 연결을 여는 방법  
--   준비 및 매개 변수가 있는 쿼리를 실행 하는 방법입니다.  
--   데이터를 검색 하는 방법입니다.  
+-   매개 변수가 있는 쿼리를 준비 하 고 실행 하는 방법입니다.  
+-   데이터를 검색 하는 방법  
 -   오류를 확인하는 방법  
   
 ## <a name="example"></a>예제  

@@ -12,12 +12,12 @@ helpviewer_keywords:
 author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: ad963176194300054b97db8b6faa360bce17e558
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2dbe0f90af6d3c51c55698ebd74c4972ea1d4db
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63190552"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68252157"
 ---
 # <a name="using-xa-transactions"></a>XA 트랜잭션 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,13 +25,13 @@ ms.locfileid: "63190552"
 
 ## <a name="overview"></a>개요
 
-17\.3 버전에서 시작 하는 SQL Server 용 Microsoft ODBC Driver XA 트랜잭션을 사용 하 여는 DTC Distributed Transaction Coordinator ()에서 Windows, Linux 및 Mac.에 대 한 지원 제공 드라이버 쪽 XA 구현을 통해 직렬 작업 (시작, 커밋, 롤백 트랜잭션 분기 등)는 Transaction Manager (TM)을 보내는 데 클라이언트 응용 프로그램입니다. 및 다음 TM 사용 하 여 리소스 관리자 (RM) 이러한 작업에 따라 통신 합니다. XA 사양에 대 한 자세한 내용은 및 DTC (MS DTC)에 대 한 Microsoft에서 구현한 [작동 방법: SQL Server DTC(MSDTC and XA Transactions)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)합니다.
+버전 17.3에서 시작 하는 Microsoft ODBC Driver for SQL Server Windows, Linux 및 Mac에서 DTC (DTC(Distributed Transaction Coordinator))를 사용 하 여 XA 트랜잭션을 지원 합니다. 드라이버 측에서 XA 구현을 사용 하면 클라이언트 응용 프로그램에서 트랜잭션 관리자 (TM)로 일련의 작업 (예: 시작, 커밋, 트랜잭션 분기 롤백 등)을 보낼 수 있습니다. 그런 다음, TM은 이러한 작업에 따라 RM (리소스 관리자)과 통신 합니다. XA 사양 및 DTC (MS DTC)의 Microsoft 구현에 대 한 자세한 내용은 [작동 방법 SQL Server: dtc (MSDTC 및 XA 트랜잭션)](https://blogs.msdn.microsoft.com/bobsql/2018/01/28/how-it-works-sql-server-dtc-msdtc-and-xa-transactions/)를 참조 하세요.
 
 
 
-## <a name="the-xacallparam-structure"></a>XACALLPARAM 구조
+## <a name="the-xacallparam-structure"></a>XACALLPARAM 구조체
 
-`XACALLPARAM` 구조는 XA 트랜잭션 관리자 요청에 필요한 정보를 정의 합니다. 다음과 같이 정의 됩니다.
+구조 `XACALLPARAM` 는 XA 트랜잭션 관리자 요청에 필요한 정보를 정의 합니다. 다음과 같이 정의 됩니다.
 
 ```
 typedef struct XACallParam {    
@@ -46,27 +46,27 @@ typedef struct XACallParam {
 ```
 
 *sizeParam*  
-크기는 `XACALLPARAM` 구조입니다. 다음 데이터의 크기는 제외 `XACALLPARAM`합니다.
+`XACALLPARAM` 구조체의 크기입니다. 이는 다음 `XACALLPARAM`데이터의 크기를 제외 합니다.
 
 *operation*  
-TM에 전달할 XA 작업입니다. 가능한 작업에 정의 된 [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)합니다.
+TM에 전달할 XA 작업입니다. 가능한 작업은 [xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)에 정의 되어 있습니다.
 
 *xid*  
 트랜잭션 분기 식별자입니다.
 
 *flags*  
-TM 요청과 관련 된 플래그입니다. 가능한 값에 정의 된 [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh)합니다.
+TM 요청에 연결 된 플래그입니다. 가능한 값은 [xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh)에 정의 되어 있습니다.
 
 *상태*  
-TM에서 상태를 반환 합니다. 참조 [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 가능한 반환 상태에 대 한 헤더입니다.
+TM에서 상태를 반환 합니다. 가능한 반환 상태는 [xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 헤더를 참조 하세요.
 
 *sizeData*  
-데이터 버퍼 다음 크기인 `XACALLPARAM`합니다. 
+다음 `XACALLPARAM`데이터 버퍼의 크기입니다. 
 
 *sizeReturned*  
 반환 되는 데이터의 크기입니다.
 
-TM 요청을 수행 하기 위해 합니다 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 특성을 사용 하 여 호출 해야 하는 함수 _SQL_COPT_SS_ENLIST_IN_XA_ 에 대 한 포인터를 `XACALLPARAM` 개체입니다.  
+TM 요청을 만들려면 특성 _SQL_COPT_SS_ENLIST_IN_XA_ 및 `XACALLPARAM` 개체에 대 한 포인터를 사용 하 여 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 함수를 호출 해야 합니다.  
 
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
@@ -75,7 +75,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 
 ## <a name="code-sample"></a>코드 예제 
 
-다음 예에서는 TM XA 트랜잭션에 대 한 통신 및 클라이언트 응용 프로그램에서 다른 작업을 실행 하는 방법을 보여 줍니다. 테스트를 Microsoft SQL Server에 대해 실행 하는 경우 MS DTC는 XA 트랜잭션을 사용 하도록 올바르게 구성 해야 합니다. XA 정의에서 찾을 수 있습니다 합니다 [xadefs.h](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 헤더 파일입니다. 
+다음 예제에서는 XA 트랜잭션에 대해 TM과 통신 하 고 클라이언트 응용 프로그램에서 다른 작업을 실행 하는 방법을 보여 줍니다. Microsoft SQL Server에 대해 테스트를 실행 하는 경우에는 XA 트랜잭션을 사용 하도록 MS DTC를 적절히 구성 해야 합니다. XA 정의는 [xadefs](../../connect/odbc/use-xa-with-dtc.md#xadefsh) 헤더 파일에서 찾을 수 있습니다. 
 
 ```
 
@@ -434,7 +434,7 @@ int main(int argc, char** argv)
 
 ```
 
-`XATestRunner` 클래스는 서버와 통신할 때 가능한 XA 호출은 구현 합니다.
+클래스 `XATestRunner` 는 서버와 통신할 때 가능한 XA 호출을 구현 합니다.
 
 ```
 

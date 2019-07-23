@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 842dbcfb-7f6a-46d5-b386-c6cbb879a23d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: de6dc11129945db43595f2b825382c6f012b1645
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 183175e7af5e264284f35021fd64939cc1fa425b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973510"
 ---
 # <a name="setnull-method-sqlservercallablestatement"></a>setNull 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

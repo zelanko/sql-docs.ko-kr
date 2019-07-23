@@ -1,5 +1,5 @@
 ---
-title: 변환은 클라이언트에서 서버로 수행 | Microsoft Docs
+title: 클라이언트에서 서버로 수행 되는 변환 | Microsoft Docs
 description: 클라이언트에서 서버로 수행되는 변환
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a4dd3540f4171847014e6175b84bd861b7abb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995140"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>클라이언트에서 서버로 수행되는 변환
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66769305"
 ## <a name="conversions"></a>변환  
  이 문서에서는 클라이언트에서 수행되는 변환에 대해 설명합니다. 클라이언트가 매개 변수에 지정한 소수 자릿수 초의 전체 자릿수가 서버에 정의된 것과 다르면 서버에서 작업을 허용하는 경우에 클라이언트 변환이 실패할 수 있습니다. 특히 클라이언트는 소수 자릿수 초 잘림을 모두 오류로 취급하는 반면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 시간 값을 가장 근사한 정수 초로 반올림합니다.  
   
- Icommandwithparameters:: Setparameterinfo를 호출 하지 않은 경우 DBTYPE_DBTIMESTAMP 바인딩은 것 처럼 변환 됩니다 **datetime2**합니다.  
+ ICommandWithParameters:: SetParameterInfo를 호출 하지 않으면 DBTYPE_DBTIMESTAMP 바인딩은 **datetime2**인 것 처럼 변환 됩니다.  
   
 |대상 -><br /><br /> 보낸 사람|DBDATE(date)|DBTIME(time)|DBTIME2(time)|DBTIMESTAMP(smalldatetime)|DBTIMESTAMP(datetime)|DBTIMESTAMP(datetime2)|DBTIMESTAMPOFFSET(datetimeoffset)|STR|WSTR|SQLVARIANT<br /><br /> (sql_variant)|  
 |----------------------|---------------------|---------------------|----------------------|-----------------------------------|------------------------------|-------------------------------|------------------------------------------|---------|----------|-------------------------------------|  
@@ -52,7 +51,7 @@ ms.locfileid: "66769305"
   
 |기호|의미|  
 |------------|-------------|  
-|-|변환이 지원되지 않습니다. 바인딩을 iaccessor:: Createaccessor 호출 될 때 유효성이 검사 되는 경우에 DBBINDSTATUS_UPSUPPORTEDCONVERSION이 반환 됩니다 *rgStatus*합니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
+|-|변환이 지원되지 않습니다. IAccessor:: CreateAccessor가 호출 될 때 바인딩의 유효성을 검사 하는 경우 DBBINDSTATUS_UPSUPPORTEDCONVERSION가 *rgStatus*에서 반환 됩니다. 접근자 유효성 검사가 지연되면 DBSTATUS_E_BADACCESSOR가 설정됩니다.|  
 |해당 사항 없음|해당 사항 없음|  
 |1|지정한 데이터가 유효하지 않으면 DBSTATUS_E_CANTCONVERTVALUE가 설정됩니다. 입력 데이터는 변환이 적용되기 전에 유효성이 검사되므로 이후 변환에서 구성 요소를 무시하더라도 계속 유효해야 변환에 성공할 수 있습니다.|  
 |2|시간 필드가 무시됩니다.|  

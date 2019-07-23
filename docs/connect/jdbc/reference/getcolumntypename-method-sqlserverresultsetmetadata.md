@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a444da82-c1af-40a5-9774-02476416c92c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 72d51d7830cdcdb14208550974fe432a48a67b1f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6ff7fbebe710b9d52394b12bbd1524ff9785ba7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952803"
 ---
 # <a name="getcolumntypename-method-sqlserverresultsetmetadata"></a>getColumnTypeName 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getColumnTypeName(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getColumnTypeName 메서드는 java.sql.ResultSetMetaData 인터페이스의 getColumnTypeName 메서드에 의해 지정 됩니다.  
+ 이 getColumnTypeName 메서드는 getColumnTypeName 메서드에서 지정 하는 java. .sql Setmetadata 인터페이스입니다.  
   
  [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0에서는 TYPE_NAME 열의 동작이 변경되었습니다. 자세한 내용은 [SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md)를 참조하십시오.  
   

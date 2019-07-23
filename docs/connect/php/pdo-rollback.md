@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d918c1e3-1be0-4001-b3b0-000db6d9e8b8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ec879876a76df2ffd72aad0145b29ceb8c98afa9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d37145856da6c4b3ff6def1620de443b20faebfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936193"
 ---
 # <a name="pdorollback"></a>PDO::rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

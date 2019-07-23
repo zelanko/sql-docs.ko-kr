@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Bindparam | Microsoft Docs'
+title: 'PDOStatement:: bindParam | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8186b87e5dde50b07aa69e4dde870d8474265bd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936152"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +38,7 @@ $*data_type*: 선택적 (정수) PDO::PARAM_* 상수입니다. 기본값은 PDO:
   
 $*length*: 데이터 형식의 선택적 (정수) 길이입니다. $*data_type*에서 PDO::PARAM_INT 또는 PDO::PARAM_BOOL을 사용할 때 기본 크기를 나타내기 위해 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE를 지정할 수 있습니다.  
   
-$*driver_options*: 선택적 (혼합된) 드라이버 관련 옵션입니다. 예를 들어 PDO::SQLSRV_ENCODING_UTF8을 지정하여 UTF-8로 인코드된 문자열로 변수에 열을 바인딩할 수 있습니다.  
+$*driver_options*: 선택적 (혼합) 드라이버별 옵션입니다. 예를 들어 PDO::SQLSRV_ENCODING_UTF8을 지정하여 UTF-8로 인코드된 문자열로 변수에 열을 바인딩할 수 있습니다.  
   
 ## <a name="return-value"></a>반환 값  
 성공하면 TRUE이고, 그렇지 않으면 FALSE입니다.  
@@ -100,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> 값의 범위를 벗어나는 결국 경우 bigint 형식으로 출력 매개 변수를 바인딩하는 경우는 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)를 "범위를 벗어났습니다. 값" 예외가 발생할 수 있습니다 PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE PARAM_INT 사용 합니다. 따라서 pdo:: PARAM_STR 기본값 대신 사용 하 고 21은 최대 하는 결과 문자열의 크기를 제공 합니다. Bigint 값의 음수 기호를 포함 하 여 숫자의 최대 수는 것입니다. 
+> 출력 매개 변수를 bigint 형식에 바인딩하는 경우 값이 [정수](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)범위를 벗어나면 pdo::P aram_int를 사용 하 여 pdo:: SQLSRV_PARAM_OUT_DEFAULT_SIZE를 사용 하면 "값이 범위를 벗어남" 예외가 발생할 수 있습니다. 따라서 기본 PDO::P ARAM_STR를 대신 사용 하 고 결과 문자열의 크기 (최대 21)를 제공 합니다. 음수 부호를 포함 하 여 모든 bigint 값의 최대 자릿수입니다. 
 
 ## <a name="example"></a>예제  
 이 코드 샘플은 입출력 매개 변수를 사용하는 방법을 보여 줍니다.  

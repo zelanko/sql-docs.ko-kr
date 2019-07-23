@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bc81b9a3-96ae-4c9c-b6c4-abd7b83175e9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b4184dd39fa016f4379cf24c83e78488e3f9c2ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce96850f9fb39ca2484dd003e4a861813e53766d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953821"
 ---
 # <a name="getbigdecimal-method-sqlservercallablestatement"></a>getBigDecimal 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

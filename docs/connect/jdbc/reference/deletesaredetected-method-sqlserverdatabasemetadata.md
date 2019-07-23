@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d6e0fc0bad10ad67c549a3ab3d505af899f67c45
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955128"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected 메서드(SQLServerDatabaseMetaData)
 
@@ -59,7 +58,7 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>반환 값  
- **true** 간격이 삭제 된 행을 대체 하는 경우. **false** 경우 삭제 된 행이 제거 됩니다.  
+ 간격이 삭제 된 행을 대체 하면 **true** 입니다. 삭제 된 행이 제거 되 면 **false** 입니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]를 함께 사용할 경우 이 메서드는 TYPE_SS_SCROLL_KEYSET 커서에 대해 **true**를 반환하고 다른 모든 결과 집합 유형에 대해서는 **false**를 반환합니다.  
   
@@ -67,7 +66,7 @@ public boolean deletesAreDetected(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 deletesAreDetected 메서드는 java.sql.DatabaseMetaData 인터페이스의 deletesAreDetected 메서드에 의해 지정 됩니다.  
+ 이 deletesAreDetected 메서드는 deletesAreDetected 메서드에 의해 지정 됩니다.  
   
 > [!NOTE]  
 >  검색이 정방향 및 동적 커서에 대해 일시적이기는 하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 업데이트 가능한 모든 커서 유형에 대해 삭제된 행을 검색합니다.  

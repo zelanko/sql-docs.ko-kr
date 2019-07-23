@@ -1,5 +1,5 @@
 ---
-title: 큰 CLR 사용자 정의 형식 (OLE DB) | Microsoft Docs
+title: 대량 CLR 사용자 정의 형식 (OLE DB) | Microsoft Docs
 description: 큰 CLR 사용자 정의 형식(OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - large CLR user-defined types [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 2af61fea9909597736769eb3d28fda43753a800b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 228054b56d6b26bf4439c01363d6cad24422f938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015225"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>큰 CLR 사용자 정의 형식(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66795974"
 
   이 항목에서는 큰 CLR(공용 언어 런타임) UDT(사용자 정의 형식)를 지원하기 위한 SQL Server용 OLE DB 드라이버의 OLE DB 변경 내용에 대해 설명합니다.  
   
- SQL Server 용 OLE DB 드라이버의 큰 CLR Udt 지원에 대 한 자세한 내용은 참조 하세요. [Large CLR User-Defined 형식](../../oledb/features/large-clr-user-defined-types.md)합니다. 샘플을 보려면 [큰 CLR Udt를 사용 하 여 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)합니다.  
+ SQL Server에 대 한 OLE DB 드라이버의 large CLR Udt 지원에 대 한 자세한 내용은 [LARGE Clr 사용자 정의 형식](../../oledb/features/large-clr-user-defined-types.md)을 참조 하세요. 샘플은 [OLE DB &#40;&#41;Large CLR udt 사용](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)을 참조 하세요.  
   
 ## <a name="data-format"></a>데이터 형식  
  SQL Server용 OLE DB 드라이버는 ~0을 사용하여 LOB(Large Object) 형식에 대해 무제한 크기인 값의 길이를 나타냅니다. ~0은 8,000바이트보다 큰 CLR UDT 크기도 나타냅니다.  
@@ -49,7 +48,7 @@ ms.locfileid: "66795974"
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable의 데이터 형식 매핑  
  UDT 열이 필요한 경우 ITableDefinition::CreateTable에서 **DBCOLUMNDESC** 구조에 사용하는 정보는 다음과 같습니다.  
   
-|OLE DB 데이터 형식 (*wType*)|*pwszTypeName*|SQL Server 데이터 형식|*rgPropertySets*|  
+|OLE DB 데이터 형식 (*Wtype*)|*pwszTypeName*|SQL Server 데이터 형식|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
 |DBTYPE_UDT|무시됨|UDT|DBPROPSET_SQLSERVERCOLUMN 속성 집합을 포함해야 합니다.|  
   
@@ -140,7 +139,7 @@ ms.locfileid: "66795974"
 |3|데이터가 이진 데이터에서 16진수 문자열로 변환됩니다.|  
 |4|**CreateAccessor** 또는 **GetNextRows**를 사용할 때 유효성 검사가 수행될 수 있습니다. 오류는 DB_E_ERRORSOCCURRED이고 바인딩 상태는 DBBINDSTATUS_UNSUPPORTEDCONVERSION으로 설정됩니다.|  
 |5|BY_REF가 사용될 수 있습니다.|  
-|6|UDT 매개 변수를 DBBINDING의 DBTYPE_IUNKNOWN으로 바인딩할 수 있습니다. DBTYPE_IUNKNOWN으로 바인딩할 경우 애플리케이션이 ISequentialStream 인터페이스를 사용하여 데이터를 스트림으로 처리하려는 것을 나타냅니다. 소비자를 지정 하는 경우 *wType* 을 DBTYPE_IUNKNOWN 유형으로 바인딩 및 해당 열 또는 출력을 저장된 프로시저의 매개 변수는 UDT, OLE DB Driver for SQL Server는 ISequentialStream을 반환 합니다. 입력된 매개 변수에 대 한 OLE DB Driver for SQL Server에 대 한 쿼리는 ISequentialStream 인터페이스에 대 한 합니다.<br /><br /> 큰 UDT의 경우 DBTYPE_IUNKNOWN 바인딩을 사용하는 동안 UDT 데이터의 길이를 바인딩하지 않도록 선택할 수 있습니다. 하지만 작은 UDT의 경우에는 길이를 바인딩해야 합니다. 다음 중 하나 이상이 True이면 DBTYPE_UDT 매개 변수를 큰 UDT로 지정할 수 있습니다.<br />*ulParamParamSize*는 ~0입니다.<br />DBPARAMBINDINFO 구조체에 DBPARAMFLAGS_ISLONG이 설정되어 있습니다.<br /><br /> 행 데이터의 경우 DBTYPE_IUNKNOWN 바인딩만 큰 UDT에 사용할 수 있습니다. 열 행 집합에서 icolumnsinfo:: Getcolumninfo 메서드를 사용 하 여 큰 UDT 유형이 있는지 확인 하거나 개체의 IColumnsInfo 인터페이스 수 있습니다. 다음 중 하나 이상이 True이면 DBTYPE_UDT 열은 큰 UDT 열입니다.<br />DBCOLUMNFLAGS_ISLONG 플래그가 DBCOLUMNINFO 구조의 *dwFlags* 멤버에 설정되어 있습니다. <br />*ulColumnSize* DBCOLUMNINFO의 멤버는 ~ 0입니다.|  
+|6|UDT 매개 변수를 DBBINDING의 DBTYPE_IUNKNOWN으로 바인딩할 수 있습니다. DBTYPE_IUNKNOWN으로 바인딩할 경우 애플리케이션이 ISequentialStream 인터페이스를 사용하여 데이터를 스트림으로 처리하려는 것을 나타냅니다. 소비자가 바인딩에서 *Wtype* 을 형식 DBTYPE_IUNKNOWN으로 지정 하 고 저장 프로시저의 해당 열 또는 출력 매개 변수가 UDT 인 경우 SQL Server에 대 한 OLE DB Driver는 ISequentialStream를 반환 합니다. 입력 매개 변수의 경우 OLE DB Driver for SQL Server는 ISequentialStream 인터페이스에 대 한를 쿼리 합니다.<br /><br /> 큰 UDT의 경우 DBTYPE_IUNKNOWN 바인딩을 사용하는 동안 UDT 데이터의 길이를 바인딩하지 않도록 선택할 수 있습니다. 하지만 작은 UDT의 경우에는 길이를 바인딩해야 합니다. 다음 중 하나 이상이 True이면 DBTYPE_UDT 매개 변수를 큰 UDT로 지정할 수 있습니다.<br />*ulParamParamSize*는 ~0입니다.<br />DBPARAMBINDINFO 구조체에 DBPARAMFLAGS_ISLONG이 설정되어 있습니다.<br /><br /> 행 데이터의 경우 DBTYPE_IUNKNOWN 바인딩만 큰 UDT에 사용할 수 있습니다. 행 집합 또는 명령 개체의 IColumnsInfo 인터페이스에 대해 IColumnsInfo:: GetColumnInfo 메서드를 사용 하 여 열이 커다란 UDT 형식 인지 확인할 수 있습니다. 다음 중 하나 이상이 True이면 DBTYPE_UDT 열은 큰 UDT 열입니다.<br />DBCOLUMNFLAGS_ISLONG 플래그가 DBCOLUMNINFO 구조의 *dwFlags* 멤버에 설정되어 있습니다. <br />DBCOLUMNINFO의 *Ulcolumnsize* 멤버는 ~ 0입니다.|  
   
  DBTYPE_NULL 및 DBTYPE_EMPTY는 입력 매개 변수에 대해서는 바인딩할 수 있지만 출력 매개 변수나 결과에 대해서는 바인딩할 수 없습니다. 입력 매개 변수에 대해 바인딩할 경우 DBTYPE_NULL을 나타내는 DBSTATUS_S_ISNULL 또는 DBTYPE_EMPTY를 나타내는 DBSTATUS_S_DEFAULT로 상태를 설정해야 합니다. DBTYPE_BYREF는 DBTYPE_NULL 또는 DBTYPE_EMPTY에 사용할 수 없습니다.  
   

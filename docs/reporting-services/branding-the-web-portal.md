@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 description: 이 문서에서는 브랜드 패키지를 통해 비즈니스로 브랜딩하여 웹 포털의 모양을 변경하는 방법에 대해 알아봅니다. 브랜드 패키지는 사용자가 CSS 스타일 시트에 대한 깊은 지식이 없어도 만들 수 있도록 설계되었습니다.
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2303ae2f21f9bbdc9c15c2d60f62d10f65b5a624
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506510"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221704"
 ---
 # <a name="branding-the-web-portal"></a>웹 포털 브랜딩
 

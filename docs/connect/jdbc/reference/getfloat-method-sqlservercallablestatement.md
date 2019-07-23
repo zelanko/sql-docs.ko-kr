@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 58a60767-655b-4c89-a44a-965b9fb9bcd6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bec91538bde4d9afcad1502ca8f512b90e1daec8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f10a0878c741c34ed26c0bd1114d17e85548ff51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983014"
 ---
 # <a name="getfloat-method-sqlservercallablestatement"></a>getFloat 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

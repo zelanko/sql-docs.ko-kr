@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 139a5b74-8d7d-41cf-991a-a142349c58f6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 18e05d4707977499cff3864cef34e39f1bd45feb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3002c3375f14eb4c33554c960c567e4a3d8526b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974769"
 ---
 # <a name="setcharacterstream-method-int-javaioreader-int"></a>setCharacterStream 메서드(int, java.io.Reader, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public final void setCharacterStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setCharacterStream 메서드는 java.sql.PreparedStatement 인터페이스의 setCharacterStream 메서드에 의해 지정 됩니다.  
+ 이 setCharacterStream 메서드는 Java.sql.preparedstatement 인터페이스의 setCharacterStream 메서드에 의해 지정 됩니다.  
   
  스트림의 길이가 *length* 매개 변수에 지정된 길이와 다르면 행이 업데이트되거나 삽입될 때 JDBC 드라이버에서 예외가 발생합니다.  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 45c83c4f-649a-4cd6-9d44-d38524758bb8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 575a442e9107c45a5b8e49015c3d45fe789d3d96
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cc000039be5ca8a9699100f9bbe4672af26b0530
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969587"
 ---
 # <a name="supportsconvert-method-"></a>supportsConvert 메서드()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsConvert()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsConvert 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsConvert 메서드에 의해 지정 됩니다.  
+ 이 supportsConvert 메서드는 java. DatabaseMetaData 인터페이스의 supportsConvert 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [supportsConvert 메서드&#40;SQLServerDatabaseMetaData&#41;](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   

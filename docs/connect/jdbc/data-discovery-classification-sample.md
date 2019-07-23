@@ -9,21 +9,20 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ae1ea54ae5f980c84e83922ffcfb9ad6ac83ded9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08a02ed004c5edd7b849b0c5ae1a43f21da031ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66782061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956748"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-이렇게 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에는 결과 집합 getter 메서드를 사용 하 여 검색 하는 방법을 보여 줍니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ' SQL 데이터 검색 및 분류 ' 테이블의 정보는 이러한 정보를 보관 합니다.
+이 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 샘플 응용 프로그램에서는 결과 집합 getter 메서드를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 해당 정보가 포함 된 테이블에서 ' SQL 데이터 검색 및 분류 정보 '를 검색 하는 방법을 보여 줍니다.
   
-이 샘플에 대 한 코드 파일의 이름은 DataDiscoveryAndClassification.java를 하 고 다음 위치에서 찾을 수 있습니다.  
+이 샘플에 대 한 코드 파일의 이름은 DataDiscoveryAndClassification. java 이며 다음 위치에서 찾을 수 있습니다.  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  
@@ -31,7 +30,7 @@ ms.locfileid: "66782061"
 
 ## <a name="requirements"></a>요구 사항  
 
-이 샘플 애플리케이션을 실행하려면 mssql-jdbc jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 또한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대한 액세스 권한이 필요합니다. 클래스 경로 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [JDBC 드라이버를 사용 하 여](../../connect/jdbc/using-the-jdbc-driver.md)입니다.
+이 샘플 애플리케이션을 실행하려면 mssql-jdbc jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 또한 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대한 액세스 권한이 필요합니다. 클래스 경로를 설정 하는 방법에 대 한 자세한 내용은 [JDBC 드라이버 사용](../../connect/jdbc/using-the-jdbc-driver.md)을 참조 하세요.
 
 ```java
 import java.sql.Connection;

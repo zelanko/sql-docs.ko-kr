@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ca125846062a77b19c324a50f9ed13c528f1e051
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c1b930c13856dd6c0e0945c82364e811730ed236
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971595"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>SQLServerConnectionPoolDataSource 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "66800592"
 |[getMultiSubnetFailover](../../../connect/jdbc/reference/getmultisubnetfailover-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며 **multiSubnetFailover** 연결 속성의 값을 반환합니다.|  
 |[getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)|풀링된 연결로 사용할 수 있는 실제 데이터베이스 연결을 설정합니다.|  
 |[getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]와의 통신에 사용되는 현재 포트 번호를 반환합니다.|  
-|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverconnectionpooldatasource.md)|이 데이터 원본 개체에 대 한 참조를 반환합니다.|  
+|[getReference](../../../connect/jdbc/reference/getreference-method-sqlserverconnectionpooldatasource.md)|이 DataSource 개체에 대 한 참조를 반환 합니다.|  
 |[getSelectMethod](../../../connect/jdbc/reference/getselectmethod-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 이 DataSource 개체를 사용하여 만들어진 모든 결과 집합에 사용되는 기본 커서 유형을 반환합니다.|  
 |[getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, 문자열 매개 변수를 유니코드 형식으로 서버에 보낼 수 있는지 여부를 나타내는 **Boolean** 값을 반환합니다.|  
 |[getServerName](../../../connect/jdbc/reference/getservername-method-sqlserverdatasource.md)|[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)에서 상속되며, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 실행하고 있는 컴퓨터의 이름을 반환합니다.|  

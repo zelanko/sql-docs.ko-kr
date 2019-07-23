@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ee3cff7-a422-4805-8516-a8d9d1eb2731
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8f03bc0fdff52678a79bebb217dd0731515e47be
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ccdaa6df027edd9dac3243dffc420898543f9632
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955159"
 ---
 # <a name="datetimeoffset-members"></a>DateTimeOffset 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,12 +32,12 @@ ms.locfileid: "66780422"
   
 |속성|설명|  
 |----------|-----------------|  
-|[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|비교 **DateTimeOffset** 개체를 다른 **DateTimeOffset** 개체 GMT 기준 시간에 기반 합니다.|  
-|[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|비교 **DateTimeOffset** 개체를 다른 **개체**합니다.|  
-|[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|Gmt를 기준으로이 분에서 오프셋을 반환 **DateTimeOffset** 개체입니다.|  
-|[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|이 나타내는 시간에서 반환 **DateTimeOffset** 는 java.sql.Timestamp 개체로 합니다.|  
+|[compareTo](../../../connect/jdbc/reference/compareto-method-datetimeoffset.md)|GMT의 시간에 따라이 **datetimeoffset** 개체를 다른 **datetimeoffset** 개체와 비교 합니다.|  
+|[equals](../../../connect/jdbc/reference/equals-method-datetimeoffset.md)|이 **DateTimeOffset** 개체를 다른 **개체**와 비교 합니다.|  
+|[getMinutesOffset](../../../connect/jdbc/reference/getminutesoffset-method-datetimeoffset.md)|GMT에서이 **DateTimeOffset** 개체의 오프셋 (분)을 반환 합니다.|  
+|[getTimestamp](../../../connect/jdbc/reference/gettimestamp-method-datetimeoffset.md)|이 **DateTimeOffset** 개체에서 표시 하는 지정 시간을 Java. Timestamp로 반환 합니다.|  
 |[hashCode](../../../connect/jdbc/reference/hashcode-method-datetimeoffset.md)|개체의 해시 코드 값을 반환합니다.|  
-|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|문자열 표현을 반환 합니다 **DateTimeOffset** 개체입니다.|  
+|[toString](../../../connect/jdbc/reference/tostring-method-datetimeoffset.md)|**DateTimeOffset** 개체의 문자열 표현을 반환 합니다.|  
 |[valueOf](../../../connect/jdbc/reference/valueof-method-datetimeoffset.md)|GMT를 기준으로 특정 오프셋의 시점을 나타내는 **DateTimeOffset** 개체를 만듭니다.|  
   
 ## <a name="inherited-methods"></a>상속된 메서드  

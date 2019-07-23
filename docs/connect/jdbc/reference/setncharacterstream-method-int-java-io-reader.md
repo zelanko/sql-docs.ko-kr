@@ -1,5 +1,5 @@
 ---
-title: setNCharacterStream 메서드 판독기 개체-int | Microsoft Docs
+title: setNCharacterStream 메서드를 판독기 개체로-int | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7732746b-eda5-469e-8567-e8546c4d81cd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a871bbbb7135d22771b3cd769a6ef0e5eb1bbe9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01e501bbe9ae68b35c4e9b8373b0dfe1f55d9f6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66768760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973904"
 ---
 # <a name="setncharacterstream-method-int-javaioreader"></a>setNCharacterStream 메서드(int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,9 +43,9 @@ public final void setNCharacterStream(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setNCharacterStream 메서드는 java.sql.PreparedStatement 인터페이스의 setNCharacterStream 메서드에 의해 지정 됩니다.  
+ 이 setNCharacterStream 메서드는 Java.sql.preparedstatement 인터페이스의 setNCharacterStream 메서드에 의해 지정 됩니다.  
   
- 에 대 한이 메서드를 사용할지 **NCHAR**, **NVARCHAR**를 **NTEXT**, 및 **XML** 데이터 형식입니다.  
+ 이 메서드는 **NCHAR**, **NVARCHAR**, **NTEXT**및 **XML** 데이터 형식에 사용 해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [setNCharacterStream 메서드 &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
