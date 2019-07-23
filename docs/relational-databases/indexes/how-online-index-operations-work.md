@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: eef0c9d1-790d-46e4-a758-d0bf6742e6ae
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ms.prod_service: database-engine, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8adad3882ffb5a127729ff371800791556558f20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2dd4970cc25e382706f63ed94b7bcc3700549d9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909750"
 ---
 # <a name="how-online-index-operations-work"></a>온라인 인덱스 작동 방식
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

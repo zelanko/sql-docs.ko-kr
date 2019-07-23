@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 927321ee-b459-4f5b-9719-4a7a95639143
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: bc13c7cc5f02de7942121c0a2cd40e7dd563d3d5
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 59da7b5c0097b8ead05fb5ecd04873bf35b79142
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681118"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267335"
 ---
 # <a name="set-up-database-diagram-designer-visual-database-tools"></a>데이터베이스 다이어그램 디자이너 설정(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0aea822-a21e-44e1-a3d3-8777bd0a1c34
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0addcc06e200cd5ffcf49bc7d0d7beb142cb2142
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97a76ef35410975544071e7178df9399c77b95b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094548"
 ---
 # <a name="comparing-scripting-solutions-and-custom-objects"></a>스크립팅 솔루션과 사용자 지정 개체 비교
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eeb7d806-3cbb-405d-8199-8b82282c53df
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: c5dc363a4b22bbd8fb8cd808d615174072fe26cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e13735c1782c4b2ced2751cbc59d53859516fcb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117390"
 ---
 # <a name="stmpointfromwkb-geography-data-type"></a>STMPointFromWKB(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

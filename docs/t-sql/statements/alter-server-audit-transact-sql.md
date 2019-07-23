@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 63426d31-7a5c-4378-aa9e-afcf4f64ceb3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 14ee8d172f48640f414bb27d4c600248acac99cb
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 85820073391fe2c61c297fc3b5d1ddae7e6163bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55420990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070311"
 ---
 # <a name="alter-server-audit--transact-sql"></a>ALTER SERVER AUDIT(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,13 +81,13 @@ ALTER SERVER AUDIT audit_name
 > [!IMPORTANT]
 > Azure SQL Database 관리되는 인스턴스에서 SQL Audit은 서버 수준에서 작동하며 Azure Blob Storage에 `.xel` 파일을 저장합니다.
   
- FILEPATH **= ‘**_os\_파일\_경로_**’**  
+ FILEPATH **= ‘** _os\_파일\_경로_ **’**  
  감사 내역의 경로입니다. 파일 이름은 감사 이름과 감사 GUID를 기준으로 생성됩니다.  
   
- MAXSIZE **=**_최대\_크기_  
+ MAXSIZE **=** _최대\_크기_  
  감사 파일이 증가할 수 있는 최대 크기를 지정합니다. *max_size* 값은 뒤에 **MB**, **GB**, **TB**가 나오는 정수이거나 **UNLIMITED**여야 합니다. *max_size*에 대해 지정할 수 있는 최소 크기는 2**MB**이고 최대 크기는 2,147,483,647**TB**입니다. **UNLIMITED**를 지정하는 경우 디스크가 꽉 찰 때까지 파일이 증가합니다. 2MB보다 작은 값을 지정하면 MSG_MAXSIZE_TOO_SMALL 오류가 발생합니다. 기본값은 **UNLIMITED**입니다.  
   
- MAX_ROLLOVER_FILES **=**_integer_ | **UNLIMITED**  
+ MAX_ROLLOVER_FILES **=** _integer_ | **UNLIMITED**  
  파일 시스템에 보관할 최대 파일 수를 지정합니다. MAX_ROLLOVER_FILES=0으로 설정하면 롤오버 파일이 무제한으로 만들어집니다. 기본값은 0입니다. 지정할 수 있는 최대 파일 수는 2,147,483,647입니다.  
   
  MAX_FILES =*integer*  
@@ -98,7 +97,7 @@ ALTER SERVER AUDIT audit_name
  RESERVE_DISK_SPACE **=** { ON | OFF }  
  이 옵션은 디스크의 파일을 MAXSIZE 값으로 미리 할당하며, MAXSIZE가 UNLIMITED가 아닌 경우에만 적용됩니다. 기본값은 OFF입니다.  
   
- QUEUE_DELAY **=**_integer_  
+ QUEUE_DELAY **=** _integer_  
  감사 동작이 강제 처리되기 전까지 허용되는 시간(밀리초)을 지정합니다. 값이 0인 경우 동기 배달을 나타냅니다. 설정 가능한 최소 쿼리 지연 값은 1000입니다. 이 값은 1초에 해당하며 기본값입니다. 최대값은 2,147,483,647로 2,147,483.647초 또는 24일, 20시간, 31분, 23.647초에 해당합니다. 잘못된 수를 지정하면 MSG_INVALID_QUEUE_DELAY 오류가 발생합니다.  
   
  ON_FAILURE **=** { CONTINUE | SHUTDOWN | FAIL_OPERATION}  
@@ -145,12 +144,12 @@ SHUTDOWN
   
  감사를 만든 후에는 감사의 GUID를 변경할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버 감사 보안 주체를 생성, 변경 또는 삭제하려면 ALTER ANY SERVER AUDIT 또는 CONTROL SERVER 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-a-server-audit-name"></a>1. 서버 감사 이름 변경  
+### <a name="a-changing-a-server-audit-name"></a>1\. 서버 감사 이름 변경  
  다음 예에서는 서버 감사 이름 `HIPAA_Audit`를 `HIPAA_Audit_Old`로 변경합니다.  
   
 ```  
@@ -167,7 +166,7 @@ WITH (STATE = ON);
 GO  
 ```  
   
-### <a name="b-changing-a-server-audit-target"></a>2. 서버 감사 대상 변경  
+### <a name="b-changing-a-server-audit-target"></a>2\. 서버 감사 대상 변경  
  다음 예에서는 `HIPAA_Audit`라는 서버 감사를 파일 대상으로 변경합니다.  
   
 ```  

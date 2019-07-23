@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: d0a0a394-6cb6-416a-a25f-9babf8ba294a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d2c08af731fc8f75089250c92ec4f0912a96eee6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89ca0b89957081fa2e93d5d28bbef79ecb7d7834
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119841"
 ---
 # <a name="import-into-a-database-project"></a>데이터베이스 프로젝트로 가져오기
 가져오기를 사용하여 라이브 데이터베이스 또는 .dacpac의 새 개체로 프로젝트를 채우거나 프로젝트의 기존 개체를 스크립트의 새 정의로 업데이트할 수 있습니다. 이러한 세 경로 사이에는 아래 설명과 같이 주목할 몇 가지 동작 차이가 있습니다.  

@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 49b09e0f-06e8-451f-b979-a0d91000bfe3
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 86752adeb2770d2c89b616ac2ba42f2aeb2215d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bfb24dc3d07953460fd33f7d0016cdc891ff5be9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934638"
 ---
 # <a name="catalogexplicitobjectpermissions-ssisdb-database"></a>catalog.explicit_object_permissions(SSISDB 데이터베이스)
 
@@ -31,10 +30,10 @@ ms.locfileid: "65714810"
 |-----------------|---------------|-----------------|  
 |object_type|**smallint**|보안 개체의 유형입니다. 보안 개체 유형에는 폴더(`1`), 프로젝트(`2`), 환경(`3`) 및 작업(`4`)이 있습니다.|  
 |object_id|**bigint**|보안 개체의 고유 식별자(ID) 또는 기본 키입니다.|  
-|principal_id|**ssNoversion**|데이터베이스 보안 주체의 ID입니다.|  
+|principal_id|**int**|데이터베이스 보안 주체의 ID입니다.|  
 |permission_type|**smallint**|사용 권한의 유형입니다.|  
 |is_deny|**bit**|사용 권한이 거부되었는지 허용되었는지를 나타냅니다. 값이 `1`이면 사용 권한이 거부되었고, 값이 `0`이면 사용 권한이 거부되지 않았습니다.|  
-|grantor_id|**ssNoversion**|사용 권한을 부여받은 보안 주체의 ID입니다.|  
+|grantor_id|**int**|사용 권한을 부여받은 보안 주체의 ID입니다.|  
   
 ## <a name="remarks"></a>Remarks  
  이 뷰는 다음 표에 나열된 사용 권한 유형을 표시합니다.  

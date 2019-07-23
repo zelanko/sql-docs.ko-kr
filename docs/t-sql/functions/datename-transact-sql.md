@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 11855b56-c554-495d-aad4-ba446990153b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 189c33c70474f3075236a22de5242de9bcda72ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 669ed425772a311a1eb35531a4c80c785430ef12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119145"
 ---
 # <a name="datename-transact-sql"></a>DATENAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -116,7 +115,7 @@ SELECT DATENAME(year, '12:10:30.123')
     ,DATENAME(weekday, '12:10:30.123');  
 ```  
   
-*date*가 변수 또는 테이블 열로 지정되고 해당 변수 또는 열의 데이터 형식에 지정된 *datepart*가 없으면 `DATENAME`은 오류 9810을 반환합니다. 이 예제에서 변수 *@t*에는 **time** 데이터 형식이 있습니다. 날짜 부분 연도가 **time** 데이터 형식에 적합하지 않으므로 이 예제는 실패입니다.
+*date*가 변수 또는 테이블 열로 지정되고 해당 변수 또는 열의 데이터 형식에 지정된 *datepart*가 없으면 `DATENAME`은 오류 9810을 반환합니다. 이 예제에서 변수 *@t* 에는 **time** 데이터 형식이 있습니다. 날짜 부분 연도가 **time** 데이터 형식에 적합하지 않으므로 이 예제는 실패입니다.
   
 ```sql
 DECLARE @t time = '12:10:30.123';   

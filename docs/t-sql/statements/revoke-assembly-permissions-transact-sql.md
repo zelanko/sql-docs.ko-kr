@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f88e9da1-2c0b-4bdd-9ec5-44467707cb46
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f10a5ac6202e635d69756fa57430109c7459e353
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 898037be3f55692d7c85dbe92d00dc3f305e2ec7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082379"
 ---
 # <a name="revoke-assembly-permissions-transact-sql"></a>REVOKE 어셈블리 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *permission*  
  어셈블리에 대해 취소할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON ASSEMBLY **::**_assembly_name_  
+ ON ASSEMBLY **::** _assembly_name_  
  사용 권한을 취소할 어셈블리를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  
@@ -109,7 +108,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  어셈블리에 대한 CONTROL 사용 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

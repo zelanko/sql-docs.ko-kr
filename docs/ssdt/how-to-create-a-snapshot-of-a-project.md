@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4093d18cfce9e7a5632039cf819955762c84adc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fad9b94c83a314ab252ed52377d6fb332e7029e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897202"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>방법: 프로젝트의 스냅샷 만들기
 **데이터 계층 애플리케이션** 파일은 데이터베이스 스키마를 만들 때의 읽기 전용 표현을 제공합니다. 이 파일은 기본적으로 데이터베이스 스키마로 처리되며, 이 스키마의 스키마 개체를 다시 프로젝트로 가져올 수 있습니다. 또한 스냅샷을 데이터베이스 또는 프로젝트의 스키마와 비교하고, 스냅샷에 정의된 스키마를 반영하도록 데이터베이스나 프로젝트를 업데이트할 수도 있습니다.  

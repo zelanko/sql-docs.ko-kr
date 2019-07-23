@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 633de3ef-533c-4f0c-9c7b-c105129d8e94
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: a065225cdabe601d0e56323e06bf12fa3abc8847
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: cddb71a35ac762ed602dd93e9e50f463da3e41f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947921"
 ---
 # <a name="sql-server-user-settable-object"></a>SQL Server, User Settable 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ GO
 > [!IMPORTANT]  
 >  사용자 카운터 저장 프로시저에서 정의한 쿼리는 가능한 한 단순한 것이 좋습니다. I/O를 많이 사용하는 실제 배열, 해시 작업 또는 쿼리를 실행하는 메모리 집중형 쿼리는 실행하는 데 비용이 많이 들며 성능에도 영향을 미칩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sp_user_counter** 는 모든 사용자에 대해 사용할 수 있지만 쿼리 카운터로 제한될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  

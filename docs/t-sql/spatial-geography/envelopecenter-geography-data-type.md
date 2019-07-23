@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dee9d807-faad-45b8-b3f3-7e8aa7d07147
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 03187cc9deebd78a87638a9ce7bb7c7e8f9b296f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da1c2fd6f1e6732f28f79196b433b8e46a595a85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066436"
 ---
 # <a name="envelopecenter-geography-data-type"></a>EnvelopeCenter(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

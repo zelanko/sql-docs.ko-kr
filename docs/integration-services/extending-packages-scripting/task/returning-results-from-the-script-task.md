@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ac06805b-c2db-44bd-af5c-5a0debe36dd7
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 59a9ce64016cb4a3b748b504895262bce6be58d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a291a51aee2160d3b6680a2c5baac415e66bdf5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102860"
 ---
 # <a name="returning-results-from-the-script-task"></a>스크립트 태스크에서 결과 반환
 

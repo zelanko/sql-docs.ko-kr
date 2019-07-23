@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 452d181a-a8e6-44a3-975d-29966d01b18d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 356fd02aad93f523aa621927997fb50182730a05
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 6b5b788ef8978ce88fdb3d8aa0567724023fd5cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984290"
 ---
 # <a name="drop-assembly-transact-sql"></a>DROP ASSEMBLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
   
  DROP ASSEMBLY는 현재 실행되고 있는 어셈블리를 참조하는 코드를 방해하지 않습니다. 그러나 DROP ASSEMBLY를 실행한 후에는 어셈블리 코드를 호출하려는 모든 시도가 실패합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  어셈블리 소유권이나 어셈블리에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

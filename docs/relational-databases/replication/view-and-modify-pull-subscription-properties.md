@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 60365d5a49d4871ae57b3dbb1644355a0193be8e
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 5aa2d901cd6bd299fc87db16fbdc706407866adf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115175"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>끌어오기 구독 속성 보기 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ ms.locfileid: "67585154"
   
     -   **0** - 구독이 트랜잭션 게시에 속합니다.  
   
-    -   **1** - 구독이 스냅숏 게시에 속합니다.  
+    -   **1** - 구독이 스냅샷 게시에 속합니다.  
   
 3.  게시자에서 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)을 실행합니다. 이때 **@publication** 및 **@subscriber** 에서 사용 가능합니다.  
   

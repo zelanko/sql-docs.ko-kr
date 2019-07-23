@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1dc06f65e1c724466154197d156517b2c72827f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: d3eb9e5c5b451854876cf31ae05641f12e8bc722
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006521"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -65,7 +64,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 **CREATE ROLE**이나 **db_securityadmin** 고정 데이터베이스 역할의 멤버 자격이 필요합니다. **AUTHORIZATION** 옵션을 사용할 경우 다음 권한도 필요합니다.  
   
 -   다른 사용자에게 역할의 소유권을 할당하려면 해당 사용자에 대한 IMPERSONATE 권한이 필요합니다.  
@@ -77,7 +76,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
 ## <a name="examples"></a>예  
 다음 예에서는 모두 AdventureWorks 데이터베이스를 사용합니다.   
 
-### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>1. 데이터베이스 사용자가 소유하는 데이터베이스 역할 만들기  
+### <a name="a-creating-a-database-role-that-is-owned-by-a-database-user"></a>1\. 데이터베이스 사용자가 소유하는 데이터베이스 역할 만들기  
  다음 예에서는 `buyers` 사용자가 소유하는 `BenMiller` 데이터베이스 역할을 만듭니다.  
   
 ```  
@@ -85,7 +84,7 @@ CREATE ROLE buyers AUTHORIZATION BenMiller;
 GO  
 ```  
   
-### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>2. 고정 데이터베이스 역할이 소유하는 데이터베이스 역할 만들기  
+### <a name="b-creating-a-database-role-that-is-owned-by-a-fixed-database-role"></a>2\. 고정 데이터베이스 역할이 소유하는 데이터베이스 역할 만들기  
  다음 예에서는 `auditors` 고정 데이터베이스 역할이 소유하는 `db_securityadmin` 데이터베이스 역할을 만듭니다.  
   
 ```  

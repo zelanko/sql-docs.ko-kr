@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: eacf443c-001a-445f-ad1c-5f5a45eca6f4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 361abc38238916a6c2f98e088d8609e325237b33
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08b1cc612c8156b54db4cdea06184f3866f722ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951057"
 ---
 # <a name="comparing-disk-based-table-storage-to-memory-optimized-table-storage"></a>디스크 기반 테이블 스토리지와 메모리 액세스에 최적화된 테이블 스토리지 비교
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,6 +31,6 @@ ms.locfileid: "47632921"
 |데이터 조각화|데이터 조작은 데이터를 조각화하여 부분적으로 채워진 페이지와 디스크에 연속되지 않고 논리적으로 연속된 페이지가 만들어집니다. 이로 인해 데이터 액세스 성능이 저하되고 데이터 조각 모음을 수행해야 합니다.|메모리 액세스에 최적화된 데이터는 페이지에 저장되지 않으므로 데이터 조각화가 없습니다. 그러나 행이 업데이트되고 삭제됨에 따라 데이터 및 델타 파일을 압축해야 합니다. 이런 작업은 병합 정책에 따라 백그라운드 MERGE 스레드에 의해 수행됩니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 액세스에 최적화된 개체의 저장소 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
+ [메모리 액세스에 최적화된 개체의 스토리지 만들기 및 관리](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)  
   
   

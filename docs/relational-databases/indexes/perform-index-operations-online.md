@@ -13,15 +13,14 @@ helpviewer_keywords:
 ms.assetid: 1e43537c-bf67-4db3-9908-3cb45c6fdaa1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ac49348a7cfacf441977051727c0d062f9586d8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ac1c10bfefd80a121e858cc0175f08b6ee68ab6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909599"
 ---
 # <a name="perform-index-operations-online"></a>온라인으로 인덱스 작업 수행
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

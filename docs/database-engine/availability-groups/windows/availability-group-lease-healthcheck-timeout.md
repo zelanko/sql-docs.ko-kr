@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: b4093a3629278f6bd733abdd3d14a006d2b73a75
-ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
+ms.openlocfilehash: 51a683d7566fb9a4e7d25da4c89e7ef3ceb1b007
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/17/2019
-ms.locfileid: "67166395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991464"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Always On 가용성 그룹의 임대, 클러스터 및 상태 확인 제한 시간의 메커니즘 및 지침 
 

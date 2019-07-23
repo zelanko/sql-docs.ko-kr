@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fba1139-82cb-4244-a41f-4337a7d0c132
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: ed6d36c68fad62155261181d4134e097f59dd163
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: 2899945661ca2f0502b9553cc8e78b751570a092
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985004"
 ---
 # <a name="columnstore-index-recommendations-in-database-engine-tuning-advisor-dta"></a>DTA(데이터베이스 엔진 튜닝 관리자)의 Columnstore 인덱스 권장 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

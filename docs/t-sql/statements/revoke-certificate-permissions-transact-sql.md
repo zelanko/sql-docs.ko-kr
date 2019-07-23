@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2272324a-98f2-42c6-88b1-96a99020c9e9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 4cd2c67c8dd24a7e6a39a98285235090017adb1e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: fc7a59b36d7fce90315833baf8461a1860be2a64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140914"
 ---
 # <a name="revoke-certificate-permissions-transact-sql"></a>REVOKE 인증서 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
  *permission*  
  인증서에 대해 취소할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON CERTIFICATE **::**_certificate_name_  
+ ON CERTIFICATE **::** _certificate_name_  
  사용 권한을 취소할 인증서를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  
@@ -110,7 +109,7 @@ REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  인증서에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

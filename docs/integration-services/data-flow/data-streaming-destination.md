@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 504c05882d1e7c690b8ddbd46c331073f63bbb7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d06e1b4ea0302bc8da4d7ad7a95927593c199d40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049413"
 ---
 # <a name="data-streaming-destination"></a>데이터 스트리밍 대상
 

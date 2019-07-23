@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 1da4d2c9-e767-434e-b49b-615711a7f626
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6f6540db42c0f83edd86b66a31fa2217762f4475
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d76dd0507336a110337f01509440d4ad64afc085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129443"
 ---
 # <a name="move-conversation-transact-sql"></a>MOVE CONVERSATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,13 +57,13 @@ MOVE CONVERSATION conversation_handle
  MOVE CONVERSATION 문은 *conversation_handle*로 지정된 대화를 *conversation_group_id*로 식별된 대화 그룹으로 이동합니다. 같은 큐와 연관된 대화 그룹 간에만 대화를 재지정할 수 있습니다.  
   
 > [!IMPORTANT]  
->  MOVE CONVERSATION 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자인 세미콜론(**;**)으로 종결되어야 합니다.  
+>  MOVE CONVERSATION 문이 일괄 처리 또는 저장 프로시저에서 첫 번째 문이 아닌 경우 이전 문은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 종결자인 세미콜론( **;** )으로 종결되어야 합니다.  
   
  MOVE CONVERSATION 문은 명령문을 포함하는 트랜잭션이 커밋되거나 롤백될 때까지 *conversation_handle*과 연결된 대화 그룹 및 *conversation_group_id*에 의해 지정된 대화 그룹을 잠급니다.  
   
  MOVE CONVERSATION은 사용자 정의 함수에 유효하지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대화를 이동하려면 현재 사용자가 대화 및 대화 그룹의 소유자, sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  

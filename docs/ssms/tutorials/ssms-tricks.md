@@ -8,7 +8,6 @@ ms.prod_service: sql-tools
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: sstein
-manager: jroth
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
 - Help [SQL Server], SQL Server Management Studio
@@ -20,12 +19,12 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: c31c8243ef74b69a5fe050e5487911138db76741
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: d5b52a35bce720e3985a8191335491c50e43c50e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860653"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267579"
 ---
 # <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)를 사용하기 위한 팁과 요령
 

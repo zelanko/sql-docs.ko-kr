@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 6aca7412-66a5-4fa4-86b2-061512ff2080
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 152eda3ae79d3d941e42bfa68dc951f63b928e5b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b490b3aae8fce4ef7b4ae912275e8a338f44833
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47712549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898057"
 ---
 # <a name="drop-endpoint-transact-sql"></a>DROP ENDPOINT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ DROP ENDPOINT endPointName
 ## <a name="remarks"></a>Remarks  
  사용자 트랜잭션 내에서 ENDPOINT DDL 문을 실행할 수 없습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **sysadmin** 고정 서버 역할의 멤버 또는 엔드포인트 소유자이거나 엔드포인트에 대한 CONTROL 권한을 부여받아야 합니다.  
   
 ## <a name="examples"></a>예  

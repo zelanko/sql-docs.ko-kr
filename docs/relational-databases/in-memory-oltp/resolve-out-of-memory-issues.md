@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 38ac1dae8a3d679a09ccebaa2aca06b681ac48ff
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: a2dd428c7f035cf73e679bbd6c47e78f1f745457
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111820"
 ---
 # <a name="resolve-out-of-memory-issues"></a>OOM(메모리 부족) 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

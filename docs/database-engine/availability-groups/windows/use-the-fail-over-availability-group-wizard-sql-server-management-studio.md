@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 7ea5095fcec5681ea54a07bbcf8c41255d66db87
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c4f93fcfb153c2e65f27fc85890382c2e93ae8a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013521"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>가용성 그룹 장애 조치(Failover) 마법사 사용(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

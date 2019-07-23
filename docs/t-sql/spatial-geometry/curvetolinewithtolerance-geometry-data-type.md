@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 30264ebeef5a398d677abbb2bc380a68c69893d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95893aac0b6ca62b60b12f9d35daf15e77e565f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929309"
 ---
 # <a name="curvetolinewithtolerance-geometry-data-type"></a>CurveToLineWithTolerance(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

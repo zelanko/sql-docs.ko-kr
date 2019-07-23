@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 64fb0e9310230634c36ee0c1bca0cf9c89914bab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eab2401dc3cb85dfeaedc22b406f1da73c112127
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941464"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 데이터 형식
 
@@ -240,7 +239,7 @@ ms.locfileid: "65726879"
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
 |DT_I2|SMALLINT|SMALLINT|Short||smallint|SMALLINT|  
-|DT_I4|ssNoversion|ssNoversion|Long||INTEGER|INTEGER|  
+|DT_I4|int|int|Long||INTEGER|INTEGER|  
 |DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
 |DT_R4|REAL|REAL|단일||real|real|  

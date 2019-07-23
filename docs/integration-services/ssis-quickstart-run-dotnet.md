@@ -8,13 +8,12 @@ ms.custom: ''
 ms.technology: integration-services
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8344f9377cfe1850c7eefbf379667dba664aedfa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d73f7481e92d5ff390c9d84dfc36a62ea3cd58ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068837"
 ---
 # <a name="run-an-ssis-package-with-c-code-in-a-net-app"></a>.NET 앱에서 C# 코드가 있는 SSIS 패키지 실행
 

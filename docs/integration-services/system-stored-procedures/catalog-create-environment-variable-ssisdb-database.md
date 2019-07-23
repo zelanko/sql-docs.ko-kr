@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e6ae0fc2e0f9949bfac6b4043c581dd0921efb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83dea4c55a06aa139a561e9e5c7f99e0c5559f4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023504"
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable(SSISDB 데이터베이스)
 
@@ -102,7 +101,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
 |**DateTime**|**datetime**, **datetime2**, **datetimeoffset**, **smalldatetime**|  
 |**Double**|정밀 숫자: **decimal**, **numeric**, 근사 숫자: **float**, **real**|  
 |**Int16**|**smallint**|  
-|**Int32**|**ssNoversion**|  
+|**Int32**|**int**|  
 |**Int64**|**bigint**|  
 |**단일**|정밀 숫자: **decimal**, **numeric**, 근사 숫자: **float**, **real**|  
 |**String**|**varchar**, **nvarchar**, **char**|  

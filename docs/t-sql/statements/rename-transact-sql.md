@@ -8,14 +8,13 @@ ms.topic: language-reference
 ms.assetid: 0907cfd9-33a6-4fa6-91da-7d6679fee878
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1299b67b30561ffcd8168879a04840c3efebfe25
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: 624131beece632cffd13bde3d6ad378f67b3a340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141269"
 ---
 # <a name="rename-transact-sql"></a>RENAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -51,7 +50,7 @@ RENAME DATABASE [::] database_name TO new_database_name
 ## <a name="arguments"></a>인수
 
 RENAME OBJECT [::] [ [*database_name* . [ *schema_name* ] . ] | [ *schema_name* . ] ]*table_name* TO *new_table_name*
-**적용 대상:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
+**적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 사용자 정의 테이블의 이름을 변경합니다. 이름을 변경할 테이블을 하나, 둘 또는 세 부분으로 지정합니다. 새 테이블 *new_table_name*을 한 부분 이름으로 지정합니다.
 
@@ -70,7 +69,7 @@ RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 - DWDiagnostics
 - DWQueue
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 이 명령을 실행하려면 이 권한이 필요합니다.
 
@@ -98,9 +97,9 @@ RENAME DATABASE [::] [ *database_name* TO *new_database_name*
 
 ## <a name="examples"></a>예
 
-### <a name="a-rename-a-database"></a>1. 데이터베이스 이름 바꾸기
+### <a name="a-rename-a-database"></a>1\. 데이터베이스 이름 바꾸기
 
-**적용 대상:**[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]만 해당
+**적용 대상:** [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]만 해당
 
 이 예제에서는 사용자 정의 데이터베이스 AdWorks의 이름을 AdWorks2로 바꿉니다.
 
@@ -112,7 +111,7 @@ RENAME DATABASE AdWorks to AdWorks2;
 
  테이블 이름을 바꿀 때 해당 테이블과 연결된 모든 개체 및 속성은 새 테이블 이름을 참조하도록 업데이트됩니다. 예를 들어, 테이블 정의, 인덱스, 제약 조건 및 권한이 업데이트됩니다. 뷰는 업데이트되지 않습니다.
 
-### <a name="b-rename-a-table"></a>2. 테이블 이름 바꾸기
+### <a name="b-rename-a-table"></a>2\. 테이블 이름 바꾸기
 
 **적용 대상:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 

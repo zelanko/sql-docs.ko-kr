@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3c387c6e-9a67-4daa-b64a-c87f6b3c9c4f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e1b3affaf97a04ddbe16b114d340fa989dab7f5b
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 828ff285606fcd1f0daf1c7dd2343a1c3cfed9e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898178"
 ---
 # <a name="drop-database-audit-specification-transact-sql"></a>DROP DATABASE AUDIT SPECIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +47,12 @@ DROP DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  DROP DATABASE AUDIT SPECIFICATION은 DROP 명령이 실행되기 전에 수집된 감사 데이터를 제외한 감사 사양의 메타데이터를 제거합니다. 삭제하려면 `ALTER DATABASE AUDIT SPECIFICATION`을 사용하여 데이터베이스 감사 사양의 상태를 OFF로 설정해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  **ALTER ANY DATABASE AUDIT** 권한이 있는 사용자는 서버 감사 사양을 삭제할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-a-database-audit-specification"></a>1. 데이터베이스 감사 사양 삭제  
+### <a name="a-dropping-a-database-audit-specification"></a>1\. 데이터베이스 감사 사양 삭제  
  다음 예에서는 `HIPAA_Audit_DB_Specification`라는 감사를 삭제합니다.  
   
 ```  

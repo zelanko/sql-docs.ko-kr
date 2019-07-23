@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 37c07446-1264-4814-b4f5-9c66d333bb24
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bca1c858dd57d13ed89b817c97818784cf275a2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4dff3986f3f733095adc1d4d0bc20d59b386eb2c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726895"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941582"
 ---
 # <a name="excel-destination"></a>Excel 대상
 

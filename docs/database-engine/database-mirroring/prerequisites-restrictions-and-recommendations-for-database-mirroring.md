@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: acd91330934f2d9bc87064d593202ef1b58814ee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 135c0d98dd1be7e00ccaafdccba8115e1af8d54d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025434"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>데이터베이스 미러링을 위한 필수 구성 요소, 제한 사항 및 권장 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

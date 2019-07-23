@@ -19,11 +19,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: 0b7a932f58fe791b6609b999f4495a42af88422d
-ms.sourcegitcommit: ba7fb4b9b4f0dbfe77a7c6906a1fde574e5a8e1e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52303426"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68219446"
 ---
 # <a name="compare-and-analyze-execution-plans"></a>실행 계획 비교 및 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

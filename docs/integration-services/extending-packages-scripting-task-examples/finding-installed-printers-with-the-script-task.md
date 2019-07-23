@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 50a55014-e2c3-4ecd-84e1-3e877c55a260
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f8a89e4aa9364db4901f85e4ed2452514eea72f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 198366cb00b16c029936460082c114d3499ff78f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112266"
 ---
 # <a name="finding-installed-printers-with-the-script-task"></a>스크립트 태스크를 사용하여 설치된 프린터 찾기
 

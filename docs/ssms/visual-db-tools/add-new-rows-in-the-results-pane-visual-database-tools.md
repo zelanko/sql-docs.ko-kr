@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 59891c84-3f54-4ab9-8b86-72c59627b480
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: e2efd0c9cddc2342b506e44438af0a8890efe941
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 844acf7ff29557e67edab6a4851216a119542cd4
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686571"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263436"
 ---
 # <a name="add-new-rows-in-the-results-pane-visual-database-tools"></a>결과 창에서 새 행 추가(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

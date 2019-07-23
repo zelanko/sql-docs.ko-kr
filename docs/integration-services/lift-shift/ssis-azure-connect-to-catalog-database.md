@@ -10,13 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-manager: craigg
-ms.openlocfilehash: ba29528248a94a2a46aa14a2cdb5f72e1501f273
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 436d65965fa0fa114f1891293972141f1373a696
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66015181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037173"
 ---
 # <a name="connect-to-the-ssis-catalog-ssisdb-in-azure"></a>Azure에서 SSIS 카탈로그(SSISDB)에 연결
 

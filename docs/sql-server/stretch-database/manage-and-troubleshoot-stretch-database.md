@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6334db3e-9297-44df-8d53-211187a95520
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b6e24af8c3117c85e2dbeb90f2482ca55db9eac6
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 282d712f1ebb870c236917d49beb50423957b2a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136112"
 ---
 # <a name="manage-and-troubleshoot-stretch-database"></a>Stretch Database 관리 및 문제 해결
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

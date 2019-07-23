@@ -17,13 +17,12 @@ f1_keywords:
 ms.assetid: 0b7883fa-b6e1-4ccf-b1d8-f522fd03a59d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 5861f16d20d95ae6ba9d2024d2199b853934d355
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fb617241f9af31122993bc1d341e433ac62904f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897150"
 ---
 # <a name="how-to-create-a-new-database-project"></a>방법: 새 데이터베이스 프로젝트 만들기
 새 데이터베이스 프로젝트를 만들고 기존 데이터베이스, .sql 스크립트 파일 또는 데이터 계층 응용 프로그램(.dacpac)에서 데이터베이스 스키마를 가져올 수 있습니다. 그런 다음 연결된 데이터베이스 개발에 사용할 수 있는 것과 동일한 비주얼 디자이너 도구(Transact\-SQL 편집기, 테이블 디자이너)를 호출하여 오프라인 데이터베이스 프로젝트를 변경하고 변경 내용을 다시 프로덕션 데이터베이스에 게시할 수 있습니다. 변경 내용을 스크립트로 저장하여 나중에 게시할 수도 있습니다. **프로젝트 속성** 창을 사용하면 대상 플랫폼을 SQL Azure를 포함한 다른 버전의 SQL Server로 변경할 수 있습니다.  

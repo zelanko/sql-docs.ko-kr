@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: bc07937bb9e554d2e052fd12cf0c157519c02368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d5f89f5e3aa801386642bfb75470cef15db6e96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012048"
 ---
 # <a name="database-engine-instances-sql-server"></a>데이터베이스 엔진 인스턴스(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

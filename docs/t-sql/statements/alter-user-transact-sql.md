@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 344fc6ce-a008-47c8-a02e-47fae66cc590
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 522ff2df33067792979e785b60417c9783d5e46a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f15ddbb8a8a58fad194750ad88f36b397aba1d22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62648814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911761"
 ---
 # <a name="alter-user-transact-sql"></a>ALTER USER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,12 +111,12 @@ ALTER USER userName
  *userName*  
  이 데이터베이스 내에서 사용자를 식별하는 이름을 지정합니다.  
   
- LOGIN **=**_loginName_  
+ LOGIN **=** _loginName_  
  사용자의 SID(보안 식별자)를 다른 로그인의 SID와 일치하도록 변경하여 사용자를 다른 로그인으로 다시 매핑합니다.  
   
  ALTER USER 문이 SQL 일괄 처리의 유일한 문인 경우 Microsoft Azure SQL Database는 WITH LOGIN 절을 지원합니다. ALTER USER 문이 SQL 일괄 처리의 유일한 문이 아니거나 동적 SQL에서 실행되는 경우 WITH LOGIN 절이 지원되지 않습니다.  
   
- NAME **=**_newUserName_  
+ NAME **=** _newUserName_  
  이 사용자의 새 이름을 지정합니다. *newUserName*은 현재 데이터베이스에 아직 없는 이름이어야 합니다.  
   
  DEFAULT_SCHEMA **=** { *schemaName* | NULL }  
@@ -131,7 +130,7 @@ ALTER USER userName
 > [!NOTE]  
 >  이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다. 자세한 내용은 [Contained Databases](../../relational-databases/databases/contained-databases.md) 및 [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)를 참조하십시오.  
   
- OLD_PASSWORD **=**_'oldpassword'_  
+ OLD_PASSWORD **=** _'oldpassword'_  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
   
  '*암호*'로 바뀔 현재 사용자 암호입니다. 암호는 대소문자를 구분합니다. **ALTER ANY USER** 권한이 없으면 *OLD_PASSWORD*가 있어야 암호를 변경할 수 있습니다. *OLD_PASSWORD*를 요구하면 **IMPERSONATION** 권한을 가진 사용자가 암호를 변경할 수 없습니다.  
@@ -139,7 +138,7 @@ ALTER USER userName
 > [!NOTE]  
 >  이 옵션은 포함된 사용자에 대해서만 사용할 수 있습니다.  
   
- DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<language name> | \<language alias> }_  
+ DEFAULT_LANGUAGE **=** _{ NONE | \<lcid> | \<language name> | \<language alias> }_  
  **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  사용자에게 할당할 기본 언어를 지정합니다. 이 옵션을 NONE으로 설정하면 기본 언어가 데이터베이스의 현재 기본 언어로 설정됩니다. 나중에 데이터베이스의 기본 언어가 변경되더라도 사용자의 기본 언어는 그대로 유지됩니다. *DEFAULT_LANGUAGE*는 로컬 ID(lcid), 언어 이름 또는 언어 별칭이 될 수 있습니다.  
@@ -206,7 +205,7 @@ ALTER USER userName
 
 모든 예제는 사용자 데이터베이스에서 실행됩니다.  
 
-### <a name="a-changing-the-name-of-a-database-user"></a>1. 데이터베이스 사용자의 이름 변경  
+### <a name="a-changing-the-name-of-a-database-user"></a>1\. 데이터베이스 사용자의 이름 변경  
  다음 예에서는 데이터베이스 사용자 `Mary5`의 이름을 `Mary51`로 변경합니다.  
   
 ```  
@@ -214,7 +213,7 @@ ALTER USER Mary5 WITH NAME = Mary51;
 GO  
 ```  
   
-### <a name="b-changing-the-default-schema-of-a-user"></a>2. 사용자의 기본 스키마 변경  
+### <a name="b-changing-the-default-schema-of-a-user"></a>2\. 사용자의 기본 스키마 변경  
  다음 예에서는 `Mary51` 사용자의 기본 스키마를 `Purchasing`으로 변경합니다.  
   
 ```  

@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: a6b595e1-5227-47ce-8ee2-a28c1e1d5645
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3b18b2bdd034cf5d6864ddb4e652eda0266758a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0757a9c140a78642f9b6c1d58a4333e24d3d8733
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997833"
 ---
 # <a name="catalogprojects-ssisdb-database"></a>catalog.projects(SSISDB 데이터베이스)
 
@@ -33,7 +32,7 @@ ms.locfileid: "65714435"
 |folder_id|**bigint**|프로젝트가 있는 폴더의 고유 ID입니다.|  
 |NAME|**sysname**|프로젝트의 이름입니다.|  
 |description|**nvarchar(1024)**|프로젝트에 대한 설명(옵션)입니다.|  
-|project_format_version|**ssNoversion**|프로젝트를 개발하는 데 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다.|  
+|project_format_version|**int**|프로젝트를 개발하는 데 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 버전입니다.|  
 |deployed_by_sid|**varbinary(85)**|프로젝트를 설치한 사용자의 보안 식별자(SID)입니다.|  
 |deployed_by_name|**nvarchar(128)**|프로젝트를 설치한 사용자의 이름입니다.|  
 |last_deployed_time|**datetimeoffset(7)**|프로젝트를 마지막으로 배포하거나 다시 배포한 날짜 및 시간입니다.|  

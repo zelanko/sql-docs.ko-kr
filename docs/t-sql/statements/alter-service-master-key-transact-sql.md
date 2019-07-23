@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5fe3a72c49f04d2e9a6a6ac8300ae3732adf06d0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 29a30f6b8d65cf1b821c93de0f051925b3cb6626
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112866"
 ---
 # <a name="alter-service-master-key-transact-sql"></a>ALTER SERVICE MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ ALTER SERVICE MASTER KEY
   
  SQL을 다른 머신으로 이동하는 경우 동일한 서비스 계정을 사용하여 SMK를 해독해야 하며 SQL Server에서 머신 계정 암호화를 자동으로 해결합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버에 대한 CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

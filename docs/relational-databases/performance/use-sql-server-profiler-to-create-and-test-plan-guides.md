@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: bc1fb5a5d5c397c8d7eb1a3d784394b46ca5a6fe
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 3137bffef524faf061322224e92941687bb16046
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987276"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler를 사용하여 계획 지침 작성 및 테스트
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

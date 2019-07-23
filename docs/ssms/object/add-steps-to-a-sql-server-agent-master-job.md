@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9cc1e8ab-7ddc-427b-859e-203aa7e24642
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: e1c1be85288b622c09e8bb9ab125aef85c8a4f8e
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: f5d3ac4bbe8083f19e2385bd2310538e80b93aa6
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690044"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265037"
 ---
 # <a name="add-steps-to-a-sql-server-agent-master-job"></a>Add Steps to a SQL Server Agent Master Job
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

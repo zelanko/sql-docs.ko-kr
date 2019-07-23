@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a4de41f-f38d-40ea-ba1b-6c0ef67ea52a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 1307ae8e5fdc81a0c42d17899fb9ea0fa3a1e2f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 090ca41d55a1ba0c616ede884029c0306b4e4812
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910042"
 ---
 # <a name="column-length-distribution-profile-request-options-data-profiling-task"></a>열 길이 분포 프로필 요청 옵션(데이터 프로파일링 태스크)
 

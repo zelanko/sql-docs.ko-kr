@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d198c866-78f4-4a50-ae15-333160645815
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 812915337b03927af5b23a66a0452d0d6a875112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be4616aa2ea73d2f4c78d7fe06bb3674486ff022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114686"
 ---
 # <a name="creating-an-odbc-destination-with-the-script-component"></a>스크립트 구성 요소를 사용하여 ODBC 대상 만들기
 

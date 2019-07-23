@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: aca5a0b5-34a9-45bc-a234-8e63ea51a1ee
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: af2cc62bd09dd2376c68ec5d66e4867369ef8b68
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d87dd85b63a669ae0d390ac83203889f78c5cbfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727755"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043863"
 ---
 # <a name="execute-process-task"></a>프로세스 실행 태스크
 

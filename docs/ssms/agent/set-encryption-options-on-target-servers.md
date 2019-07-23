@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1a9fd539-e166-4ea8-9f21-ac400ca74dee
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 6ae2115d9e7207c5c2c448f04e77040647ae5c72
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 897ae325775119b8f7f588aa399bb850100ad411
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67685112"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267831"
 ---
 # <a name="set-encryption-options-on-target-servers"></a>대상 서버의 암호화 옵션 설정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

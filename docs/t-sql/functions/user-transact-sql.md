@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bf480e3e72a6495f9c0eefe04255a2ed566818df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cdead9d5b6f84072dae454eced8301add4b3c31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927611"
 ---
 # <a name="user-transact-sql"></a>USER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +57,7 @@ USER
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-user-to-return-the-database-user-name"></a>1. USER를 사용하여 데이터베이스 사용자 이름 반환  
+### <a name="a-using-user-to-return-the-database-user-name"></a>1\. USER를 사용하여 데이터베이스 사용자 이름 반환  
  다음 예에서는 변수를 `char`로 선언하고 USER의 현재 값을 변수에 할당한 다음 텍스트 설명과 함께 변수를 인쇄합니다.  
   
 ```  
@@ -77,7 +76,7 @@ The current user's database username is: dbo
 (1 row(s) affected)
 ```  
   
-### <a name="b-using-user-with-default-constraints"></a>2. DEFAULT 제약 조건으로 USER 사용  
+### <a name="b-using-user-with-default-constraints"></a>2\. DEFAULT 제약 조건으로 USER 사용  
  다음 예에서는 판매 행의 판매원에 대한 `USER` 제약 조건으로 `DEFAULT`를 사용하여 테이블을 만듭니다.  
   
 ```  

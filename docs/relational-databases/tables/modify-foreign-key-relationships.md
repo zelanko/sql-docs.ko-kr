@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 0c9ca80d-d79b-44c4-a21e-0fce39c398ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 646a0e6b7885c2b220d7ea5c0165dbcd5a3c4de4
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ca7964d61cd272af8adc93aac89f8da68827acac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139597"
 ---
 # <a name="modify-foreign-key-relationships"></a>외래 키 관계 수정
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "52517085"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
  다음 경우를 제외하고 새 외래 키 열의 데이터 형식 및 크기는 관련된 기본 키 열의 데이터 형식 및 크기와 일치해야 합니다.  
@@ -57,7 +56,7 @@ ms.locfileid: "52517085"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  테이블에 대한 ALTER 사용 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -86,7 +85,7 @@ ms.locfileid: "52517085"
      제약 조건을 만들거나 다시 활성화하기 전부터 테이블에 있던 모든 데이터를 제약 조건에 대해 검사합니다.  
   
      **테이블 및 열 사양 범주**  
-     확장하여 어떠한 테이블의 어떠한 열이 관계에서 외래 키와 기본 키(또는 고유 키)로 사용되는지에 대한 정보를 표시합니다. 이러한 값을 편집하거나 정의하려면 속성 필드의 오른쪽에 있는 줄임표 단추(**...**)를 클릭합니다.  
+     확장하여 어떠한 테이블의 어떠한 열이 관계에서 외래 키와 기본 키(또는 고유 키)로 사용되는지에 대한 정보를 표시합니다. 이러한 값을 편집하거나 정의하려면 속성 필드의 오른쪽에 있는 줄임표 단추( **...** )를 클릭합니다.  
   
      **외래 키 기본 테이블**  
      선택한 관계에서 외래 키로 사용되는 열이 포함된 테이블을 표시합니다.  

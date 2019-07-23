@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b9e9d646-4894-4dee-a02a-0c71a8dc020e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c890d632618a6afdf1be342e73520808732e1deb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e50d06fcd76950ff885a22af67534b5006b6a1e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63008573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137874"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-an-object"></a>개체의 정책 기반 관리 정책 평가
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

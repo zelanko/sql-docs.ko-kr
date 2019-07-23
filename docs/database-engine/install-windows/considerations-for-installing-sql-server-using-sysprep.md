@@ -10,13 +10,12 @@ ms.assetid: e1792eeb-2874-4653-b20e-3063f4eb4e5d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: jroth
-ms.openlocfilehash: 2148567af651e5b859dfb1e2764243ad35d2c0e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d2b063af4e9cc0c78a5bfe10c9aa6b2c1367743
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054204"
 ---
 # <a name="considerations-for-installing-sql-server-using-sysprep"></a>SysPrep을 사용하여 SQL Server 설치 시 고려 사항
 

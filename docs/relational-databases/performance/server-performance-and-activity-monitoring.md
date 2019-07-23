@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f9abe48d-d6e9-4c38-a355-fc5eb5a95a25
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 6bca272809116f41a16ef033814fb354ffe46ce2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 073095217dc08f2f11605f8b0e7b5da11035e34a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62936830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113354"
 ---
 # <a name="server-performance-and-activity-monitoring"></a>서버 성능 및 작업 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

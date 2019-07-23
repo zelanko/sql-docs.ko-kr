@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 5bcb73a9c1129864991dee80a8e2951f2ca803de
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2134b04c87d6bbc3ca400ebf307dae4a1f0eab36
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687772"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264929"
 ---
 # <a name="create-full-text-search-queries-visual-database-tools"></a>전체 텍스트 검색 쿼리 만들기(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

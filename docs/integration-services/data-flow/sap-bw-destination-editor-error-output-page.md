@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a543d811-0bd2-4890-a0d3-f5fdcd4524b8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 9547e76602ab82b7cc66b62eb52d37857de95ab4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b30f3ba05726b038b802c704df855e9896da082c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034189"
 ---
 # <a name="sap-bw-destination-editor-error-output-page"></a>SAP BW 대상 편집기(오류 출력 페이지)
 

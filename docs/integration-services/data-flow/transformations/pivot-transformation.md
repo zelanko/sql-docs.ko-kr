@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 55f5db6e-6777-435f-8a06-b68c129f8437
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8bc233f7b23d08b9fd697eeddfae683420be33c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca3c25c3d5b2df2427543722a4b95809a736b805
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944052"
 ---
 # <a name="pivot-transformation"></a>피벗 변환
 

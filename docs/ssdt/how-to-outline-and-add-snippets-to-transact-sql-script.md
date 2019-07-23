@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 842fb0e2b111b5bcd17b26d13db15e47aa5c1ad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035121"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>방법: 코드 조각 개요 표시 및 Transact-SQL 스크립트에 코드 조각 추가
 SQL Server Data Tools에는 애플리케이션에 바로 삽입할 수 있는 코드 조각으로 구성된 코드 라이브러리가 포함되어 있습니다. 각 코드 조각은 함수, 테이블, 트리거, 인덱스, 뷰, 사용자 정의 데이터 형식 등을 만드는 것과 같은 완전한 스크립팅 작업을 수행합니다. 마우스 클릭 몇 번만으로도 소스 코드에 코드 조각을 삽입할 수 있습니다. 이러한 코드 조각은 입력에 소비되는 시간을 줄여 생산성을 높여 줍니다.  

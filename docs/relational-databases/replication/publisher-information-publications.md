@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 0b2e3d4e-03b7-4c31-8f96-48648d750010
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: deb1f9af6d006ff9e524d2f91d61af6269737079
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ecad54e3d3393caffb6474352657c2a4d25907c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62752780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140712"
 ---
 # <a name="publisher-information-publications"></a>게시자 정보, 게시
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

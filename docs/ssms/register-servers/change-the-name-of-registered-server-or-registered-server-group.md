@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 10e1546b-9edb-400c-8676-2ea1192d6134
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 4917ff578f86ae64c2e23f68f854ab147375e713
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: b50053684dd4217293b90420f6006727911c894f
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680029"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267759"
 ---
 # <a name="change-the-name-of-registered-server-or-registered-server-group"></a>등록된 서버 또는 등록된 서버 그룹 이름 변경
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

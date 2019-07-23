@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5b42a083-7a11-41d8-9e3f-320c7c907237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0ccb3c2ce2784bf27dc84584eeceec1ee4692f25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4f8809b5fad7f9f5a31615bdbe92d6f949b52106
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47693892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128316"
 ---
 # <a name="distribution-database"></a>배포 데이터베이스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "47693892"
   
  대부분의 경우 배포 데이터베이스는 하나면 충분합니다. 그러나 여러 게시자가 단일 배포자를 사용하는 경우에는 각 게시자에 대해 배포 데이터베이스를 만들어 보십시오. 이렇게 하면 각 배포 데이터베이스를 통한 데이터 흐름이 고유하게 유지됩니다. 배포 구성 마법사를 사용하여 배포자에 대한 배포 데이터베이스를 하나 지정할 수 있습니다. 필요한 경우 **배포자 속성** 대화 상자에서 추가 배포 데이터베이스를 지정하십시오.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **배포 데이터베이스 이름**  
  배포 데이터베이스 이름을 입력합니다. 배포 데이터베이스의 기본 이름은 'distribution'입니다. 이름을 지정할 경우 이름은 최대 128자가 될 수 있으며 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스 내에서 고유해야 하고 식별자에 대한 규칙을 따라야 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   

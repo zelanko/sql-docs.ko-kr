@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8921129e8e5b7afcf3f141749bc31ec857a166e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cd7a605fbe9d3075d4d67e1ce824664ef2747c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897143"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>방법: 빈 SQL Server 단위 테스트 만들기
 데이터베이스 개체에 대한 변경 내용이 기존 기능을 중단하지 않는지 확인하기 위해서는 데이터베이스 프로젝트에 단위 테스트를 포함합니다. 다음 절차에서는 데이터베이스 개체에 대한 SQL Server 단위 테스트를 만드는 방법에 대해 설명합니다. SQL Server Data Tools에는 데이터베이스 함수, 트리거 및 저장 프로시저에 대한 추가 지원 기능이 포함되어 있습니다. 자세한 내용은 [방법: 함수, 트리거 및 저장 프로시저에 대한 SQL Server 단위 테스트 만들기](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md)를 참조하세요.  

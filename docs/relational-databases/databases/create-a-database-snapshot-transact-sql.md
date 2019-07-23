@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ddb53c690023a0d0abdb95a9ca054f611990a4ee
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 7376d783bd2aab594d0beeb18dc1cc03af4b9c50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025884"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Create a Database Snapshot (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 스냅숏은 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해서만 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 데이터베이스 스냅숏 만들기를 지원하지 않습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 스냅샷은 [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용해서만 만들 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 데이터베이스 스냅샷 만들기를 지원하지 않습니다.  
   
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
@@ -30,7 +29,7 @@ ms.locfileid: "67584306"
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  복구 모델을 사용할 수 있는 원본 데이터베이스는 다음 사전 요구 사항을 충족해야 합니다.  
   
--   서버 인스턴스는 데이터베이스 스냅샷을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 스냅숏 지원에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
+-   서버 인스턴스는 데이터베이스 스냅샷을 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전을 실행해야 합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 데이터베이스 스냅샷 지원에 대한 자세한 내용은 [SQL Server 2016 버전에서 지원하는 기능](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
 -   데이터베이스 미러링 세션의 미러 데이터베이스가 아닌 경우 원본 데이터베이스는 온라인 상태여야 합니다.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "67584306"
 - 원본 데이터베이스에는 MEMORY_OPTIMIZED_DATA 파일 그룹이 포함될 수 없습니다. 자세한 내용은 [메모리 내 OLTP에 대한 지원되지 않는 SQL Server 기능](../../relational-databases/in-memory-oltp/unsupported-sql-server-features-for-in-memory-oltp.md)을 참조하세요.
 
 > [!IMPORTANT]
-> 다른 주요 고려 사항에 대한 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 사용해서만 만들 수 있습니다.  
+> 다른 주요 고려 사항에 대한 자세한 내용은 [데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
   
 ##  <a name="Recommendations"></a> 권장 사항  
  이 섹션에서는 다음과 같은 최상의 방법에 대해 설명합니다.  
@@ -91,12 +90,12 @@ AdventureWorks_snapshot_evening
 ####  <a name="Permissions"></a> 사용 권한  
  데이터베이스를 만들 수 있는 모든 사용자는 데이터베이스 스냅샷을 만들 수 있습니다. 그러나 미러 데이터베이스의 스냅샷을 만들려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
   
-##  <a name="TsqlProcedure"></a> 데이터베이스 스냅숏을 만드는 방법(Transact-SQL 사용)  
- **데이터베이스 스냅숏을 만들려면**  
+##  <a name="TsqlProcedure"></a> 데이터베이스 스냅샷을 만드는 방법(Transact-SQL 사용)  
+ **데이터베이스 스냅샷을 만들려면**  
   
 >  이 프로시저의 예는 이 섹션의 뒷부분에 나오는 [예제(Transact-SQL)](#TsqlExample)을 참조하세요.  
   
-1.  원본 데이터베이스의 현재 크기를 기준으로 데이터베이스 스냅샷을 저장할 수 있는 충분한 디스크 공간이 있는지 확인합니다. 데이터베이스 스냅샷의 최대 크기는 스냅샷을 생성할 때의 원본 데이터베이스 크기입니다. 자세한 내용은 [데이터베이스 스냅숏 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)를 참조하세요.  
+1.  원본 데이터베이스의 현재 크기를 기준으로 데이터베이스 스냅샷을 저장할 수 있는 충분한 디스크 공간이 있는지 확인합니다. 데이터베이스 스냅샷의 최대 크기는 스냅샷을 생성할 때의 원본 데이터베이스 크기입니다. 자세한 내용은 [데이터베이스 스냅샷 스파스 파일의 크기 보기&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)를 참조하세요.  
   
 2.  AS SNAPSHOT OF 절을 사용하여 파일에서 CREATE DATABASE 문을 실행합니다. 스냅샷을 만들려면 원본 데이터베이스를 구성하는 모든 데이터베이스 파일의 논리적 이름을 지정해야 합니다. 구문은 다음과 같습니다.  
 
@@ -130,9 +129,9 @@ AdventureWorks_snapshot_evening
   
  이 섹션에서는 다음과 같은 예를 보여 줍니다.  
   
--   1\. [AdventureWorks 데이터베이스에 대한 스냅숏 만들기](#Creating_on_AW)  
+-   1\. [AdventureWorks 데이터베이스에 대한 스냅샷 만들기](#Creating_on_AW)  
   
--   2\. [Sales 데이터베이스에 대한 스냅숏 만들기](#Creating_on_Sales)  
+-   2\. [Sales 데이터베이스에 대한 스냅샷 만들기](#Creating_on_Sales)  
   
 ####  <a name="Creating_on_AW"></a> 1. AdventureWorks 데이터베이스에 대한 스냅샷 만들기  
  이 예에서는 `AdventureWorks` 데이터베이스에 대한 데이터베이스 스냅샷을 만듭니다. 스냅샷 이름 `AdventureWorks_dbss_1800` 및 스파스 파일의 파일 이름 `AdventureWorks_data_1800.ss`는 생성 시간이 오후 6시(18:00시)임을 나타냅니다.  
@@ -170,15 +169,15 @@ GO
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
--   [데이터베이스 스냅숏 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
+-   [데이터베이스 스냅샷 보기&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
--   [데이터베이스를 데이터베이스 스냅숏으로 되돌리기](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
+-   [데이터베이스를 데이터베이스 스냅샷으로 되돌리기](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
   
--   [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 삭제&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [CREATE DATABASE&#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
+ [데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   
 

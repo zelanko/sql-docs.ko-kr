@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 6c13f5c9-c75e-4e52-94dc-2d2db2c578fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 4d9db7052463dfbc15df62357d9fffba7def05ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2bef735ab6a0f798df175fc9fd8749126056f42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086594"
 ---
 # <a name="lesson-2-2---verifying-the-deployment-bundle"></a>2-2단원 - 배포 번들 확인
 

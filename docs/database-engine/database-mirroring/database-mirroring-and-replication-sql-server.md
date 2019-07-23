@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 82796217-02e2-4bc5-9ab5-218bae11a2d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: c10d9627e09630270779c00cbe5739885ae8c94e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9296bd28852eda3abd29e8a54984ec37f726c8b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006461"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>데이터베이스 미러링 및 복제(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ ms.locfileid: "66774808"
   
     -   **@publisher** 매개 변수의 값을 미러 서버의 네트워크 이름으로 설정합니다.  
   
-    -   **@working_directory** 매개 변수의 값을 주 서버에서 사용되는 스냅숏 폴더로 설정합니다.  
+    -   **@working_directory** 매개 변수의 값을 주 서버에서 사용되는 스냅샷 폴더로 설정합니다.  
   
 4.  **–PublisherFailoverPartner** 에이전트 매개 변수에 대한 미러 이름을 지정합니다. 이 에이전트 매개 변수는 다음 에이전트에서 장애 조치 후 미러 서버를 식별하는 데 필요합니다.  
   

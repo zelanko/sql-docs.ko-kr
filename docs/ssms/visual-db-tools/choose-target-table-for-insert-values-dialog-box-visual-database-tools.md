@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 580ed86a-be86-419b-9dc7-e3b17f19905f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 66349a2fee507c6d4a333ee843073395de911438
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: bce90ddd0f84a389770fcd3b98f17151ffad1b35
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686391"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263665"
 ---
 # <a name="choose-target-table-for-insert-values-dialog-box-visual-database-tools"></a>값 삽입의 대상 테이블 선택 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

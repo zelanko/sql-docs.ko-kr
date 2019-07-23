@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0d9fce3c-3772-46ce-a7a3-4f4988dc6cae
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ad9da93b21133817852efde492d10fed179fbcce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f17ce560ef7ee5917fb76b997636fb079327d8b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007024"
 ---
 # <a name="mssqlserver---database-engine-error"></a>MSSQLSERVER - 데이터베이스 엔진 오류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

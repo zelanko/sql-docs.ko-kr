@@ -136,14 +136,13 @@ helpviewer_keywords:
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fb9b4f90b40b70c67e27233f84ee7b2a99635cf
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 46578b4795bc02b0d426564b357dea580665ceeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048845"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>실행 계획 논리 및 물리 연산자 참조
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -159,11 +158,11 @@ ms.locfileid: "54069093"
   
  물리 연산자는 초기화하고 데이터를 수집하며 종료합니다. 특히 물리 연산자는 다음 3개의 메서드 호출에 응답할 수 있습니다.  
   
--   **Init()**: **Init()** 메서드는 물리 연산자가 초기화하고 필요한 데이터 구조를 설정하도록 합니다. 일반적으로 물리 연산자는 하나의 **Init()** 호출을 받지만 여러 개의 호출을 받을 수도 있습니다.  
+-   **Init()** : **Init()** 메서드는 물리 연산자가 초기화하고 필요한 데이터 구조를 설정하도록 합니다. 일반적으로 물리 연산자는 하나의 **Init()** 호출을 받지만 여러 개의 호출을 받을 수도 있습니다.  
   
--   **GetNext()**: **GetNext()** 메서드는 물리 연산자가 처음 또는 다음 데이터 행을 가져오도록 합니다. 물리 연산자는 **GetNext()** 호출을 받지 않을 수도 있고 여러 개의 호출을 받을 수도 있습니다.  
+-   **GetNext()** : **GetNext()** 메서드는 물리 연산자가 처음 또는 다음 데이터 행을 가져오도록 합니다. 물리 연산자는 **GetNext()** 호출을 받지 않을 수도 있고 여러 개의 호출을 받을 수도 있습니다.  
   
--   **Close()**: **Close()** 메서드는 물리 연산자가 정리 작업을 수행하고 종료하도록 합니다. 물리 연산자는 하나의 **Close()** 호출만 받습니다.  
+-   **Close()** : **Close()** 메서드는 물리 연산자가 정리 작업을 수행하고 종료하도록 합니다. 물리 연산자는 하나의 **Close()** 호출만 받습니다.  
   
 **GetNext()** 메서드는 하나의 데이터 행을 반환하며 호출 횟수는 SET STATISTICS PROFILE ON 또는 SET STATISTICS XML ON을 사용하여 생성된 실행 계획 출력에 **ActualRows**로 나타납니다. 이러한 SET 옵션에 대한 자세한 내용은 [SET STATISTICS PROFILE&#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-profile-transact-sql.md) 및 [SET STATISTICS XML&#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-xml-transact-sql.md)을 참조하세요.  
   
@@ -206,7 +205,7 @@ ms.locfileid: "54069093"
 |![Clustered index update 연산자 아이콘](../relational-databases/media/clustered-index-update-32x.gif "Clustered index update operator icon")|**Clustered Index Update**|**Clustered Index Update** 연산자는 **Argument** 열에 지정된 클러스터형 인덱스의 입력 행을 업데이트합니다. WHERE:() 조건자가 있는 경우에는 조건자에 부합되는 행만 업데이트됩니다. SET:() 조건자가 있는 경우에는 업데이트된 각 열이 이 값으로 설정됩니다. DEFINE:() 조건자가 있는 경우에는 이 연산자가 정의하는 값이 나열됩니다. 이러한 값은 SET 절 또는 이 연산자의 다른 곳과 이 쿼리 내의 다른 곳에서 참조될 수 있습니다. **Clustered Index Update** 은 논리 및 물리 연산자입니다.| 
 |![Collapse 연산자 아이콘](../relational-databases/media/collapse-32x.gif "Collapse operator icon")|**축소**|**Collapse** 연산자는 업데이트 처리를 최적화합니다. 업데이트 처리는 **Split** 연산자를 사용하여 삭제와 삽입으로 분리할 수 있습니다. **Argument** 열에는 키 열 목록을 지정하는 GROUP BY:() 절이 포함됩니다. 쿼리 프로세서가 동일한 키 값을 삭제 및 삽입하는 인접 행을 발견하면 별개의 두 작업을 보다 효율적인 한 개의 업데이트 작업으로 교체합니다. **Collapse** 은 논리 및 물리 연산자입니다.| 
 |![Columnstore 인덱스 검색](../relational-databases/media/columnstoreindexscan.gif "Columnstore 인덱스 검색")|**Columnstore 인덱스 검색**|**Columnstore Index Scan** 연산자는 쿼리 실행 계획의 **Argument** 열에 지정된 Columnstore 인덱스를 검색합니다.| 
-|![Compute scalar 연산자 아이콘](../relational-databases/media/compute-scalar-32x.gif "Compute scalar operator icon")|**Compute Scalar**|**Compute Scalar** 연산자는 식을 계산하여 계산된 스칼라 값을 만듭니다. 이 값은 사용자에 반환되거나 그 외에 쿼리에서 참조되거나 둘 다일 수 있습니다. 예를 들어 두 작업은 모두 필터 조건자 또는 조인 조건자에서 수행됩니다. **Compute Scalar** 는 논리 및 물리 연산자입니다.<br /><br /> SET STATISTICS XML에 의해 생성된 실행 계획에 나타나는**Compute Scalar** 연산자는 **RunTimeInformation** 요소를 포함할 수 없습니다. **에서**실제 실행 계획 포함 **옵션을 선택하면 그래픽 실행 계획의**속성 **창에** 실제 행 수 **,** 실제 다시 바인딩 횟수 **및** 실제 되감기 횟수 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]가 표시되지 않을 수도 있습니다. 이 경우 컴파일된 쿼리 계획에서 이러한 연산자가 사용된 경우에도 런타임 쿼리 계획의 다른 연산자가 해당 작업을 수행한 것입니다. 또한 SET STATISTICS PROFILE로 만든 실행 계획 출력의 실행 수는 SET STATISTICS XML로 만든 실행 계획의 다시 바인딩 및 다시 감기의 합과 같습니다.| 
+|![Compute scalar 연산자 아이콘](../relational-databases/media/compute-scalar-32x.gif "Compute scalar operator icon")|**Compute Scalar**|**Compute Scalar** 연산자는 식을 컴퓨팅하여 컴퓨팅된 스칼라 값을 만듭니다. 이 값은 사용자에 반환되거나 그 외에 쿼리에서 참조되거나 둘 다일 수 있습니다. 예를 들어 두 작업은 모두 필터 조건자 또는 조인 조건자에서 수행됩니다. **Compute Scalar** 는 논리 및 물리 연산자입니다.<br /><br /> SET STATISTICS XML에 의해 생성된 실행 계획에 나타나는**Compute Scalar** 연산자는 **RunTimeInformation** 요소를 포함할 수 없습니다. **에서**실제 실행 계획 포함 **옵션을 선택하면 그래픽 실행 계획의**속성 **창에** 실제 행 수 **,** 실제 다시 바인딩 횟수 **및** 실제 되감기 횟수 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]가 표시되지 않을 수도 있습니다. 이 경우 컴파일된 쿼리 계획에서 이러한 연산자가 사용된 경우에도 런타임 쿼리 계획의 다른 연산자가 해당 작업을 수행한 것입니다. 또한 SET STATISTICS PROFILE로 만든 실행 계획 출력의 실행 수는 SET STATISTICS XML로 만든 실행 계획의 다시 바인딩 및 다시 감기의 합과 같습니다.| 
 |![Concatenation 연산자 아이콘](../relational-databases/media/concatenation-32x.gif "Concatenation operator icon")|**Concatenation**|**Concatenation** 연산자는 여러 개의 입력을 검색하고 검색된 각 행을 반환합니다. **Concatenation** 은 일반적으로 [!INCLUDE[tsql](../includes/tsql-md.md)] UNION ALL 구조를 구현하는 데 사용됩니다. **Concatenation** 물리 연산자에는 두 개 이상의 입력과 한 개의 출력이 있습니다. Concatenation은 첫 번째 입력 스트림에서 출력 스트림으로 행을 복사한 다음 이 연산을 각 추가 입력 스트림에 대해 반복합니다. **Concatenation** 은 논리 및 물리 연산자입니다.| 
 |![Constant scan 연산자 아이콘](../relational-databases/media/constant-scan-32x.gif "Constant scan operator icon")|**Constant Scan**|**Constant Scan** 연산자는 하나 이상의 상수 행을 쿼리에 사용하며 **Compute Scalar** 연산자는 **Constant Scan** 연산자로 생성된 행에 열을 추가하기 위해 **Constant Scan** 뒤에 사용되는 경우가 많습니다.| 
 |![Convert(데이터베이스 엔진) 언어 요소 아이콘](../relational-databases/media/convert-32x.gif "Convert (Database Engine) language element icon")|**변환**|**Convert** 연산자는 스칼라 데이터 형식을 다른 형식으로 변환합니다. **Convert** 는 언어 요소입니다.| 
@@ -273,7 +272,7 @@ ms.locfileid: "54069093"
 |![Sequence 연산자 아이콘](../relational-databases/media/sequence-32x.gif "Sequence operator icon")|**시퀀스**|**Sequence** 연산자는 광범위한 업데이트 계획을 실행합니다. 각 입력은 위에서 아래 방향으로 차례로 실행됩니다. 각 입력은 대개 서로 다른 개체의 업데이트이며 마지막(최하위) 입력으로부터의 행만 반환됩니다. **Sequence** 은 논리 및 물리 연산자입니다.| 
 |![Sequence project 연산자 아이콘](../relational-databases/media/sequence-project-32x.gif "Sequence project operator icon")|**Sequence Project**|**Sequence Project** 연산자는 열을 추가하여 정렬된 집합에 대한 계산을 수행합니다. 이 연산자는 하나 이상의 열 값에 따라 입력 집합을 세그먼트로 나눕니다. 그런 다음 연산자는 한 번에 한 세그먼트씩 출력합니다. 이런 열은 **Sequence Project** 연산자에서 인수로 표시됩니다. **Sequence Project** 은 논리 및 물리 연산자입니다.| 
 |없음|**Segment Repartition**|병렬 쿼리 계획에는 반복자라는 개념 영역이 존재하기도 합니다. 이 영역에 있는 모든 반복자는 병렬 스레드에 의해 실행될 수 있습니다. 영역 자체는 직렬로 실행되어야 합니다. 개별 영역 내에 있는 일부 **Parallelism** 반복자를 **Branch Repartition**이라고 합니다. 이러한 두 영역의 경계에 있는 **Parallelism** 반복자를 **Segment Repartition**이라고 합니다. **Branch Repartition** 과 **Segment Repartition** 은 논리 연산자입니다.| 
-|![Snapshot 커서 연산자 아이콘](../relational-databases/media/snapshot-32x.gif "Snapshot cursor operator icon")|**스냅숏**|**Snapshot** 연산자는 다른 연산자가 만든 변경 내용을 확인하지 않는 커서를 만듭니다.| 
+|![Snapshot 커서 연산자 아이콘](../relational-databases/media/snapshot-32x.gif "Snapshot cursor operator icon")|**스냅샷**|**Snapshot** 연산자는 다른 연산자가 만든 변경 내용을 확인하지 않는 커서를 만듭니다.| 
 |![Sort 연산자 아이콘](../relational-databases/media/sort-32x.gif "Sort operator icon")|**Sort**|**Sort** 연산자는 모든 들어오는 행을 정렬합니다. **Argument** 열에는 이 작업으로 중복 요소가 제거되면 DISTINCT ORDER BY:() 조건자가 포함되거나 정렬될 열의 쉼표로 구분된 목록이 있으면 ORDER BY:() 조건자가 포함됩니다. 열이 오름차순으로 정렬되는 경우에는 ASC 값, 내림차순으로 정렬되는 경우에는 DESC 값이 열의 접두사로 사용됩니다. **Sort** 는 논리 및 물리 연산자입니다.| 
 |![Split 연산자 아이콘](../relational-databases/media/split-32x.gif "Split operator icon")|**Split**|**Split** 연산자는 업데이트 과정을 최적화하는 데 사용됩니다. 즉, 각 업데이트 작업을 삭제 및 삽입 작업으로 분할합니다. **Split** 은 논리 및 물리 연산자입니다.| 
 |![Spool 연산자 아이콘](../relational-databases/media/spool-32x.gif "Spool operator icon")|**Eager Spool**|**Eager Spool** 연산자는 전체 입력을 받아 각 행을 **tempdb** 데이터베이스에 저장된 숨겨진 임시 개체에 저장합니다. 예를 들어 **Nested Loops** 연산자로 연산자를 다시 돌리지만 다시 바인딩할 필요가 없을 경우 입력 사항을 다시 검색하는 대신 스풀된 데이터를 사용합니다. 다시 바인딩해야 하는 경우에는 스풀된 데이터를 삭제하고 다시 바인딩된 입력을 다시 검색하여 스풀 개체를 다시 작성합니다. **Eager Spool** 연산자는 "신속하게" 스풀 파일을 만듭니다. 스풀의 부모 연산자가 첫 번째 행을 요청하면 스풀 연산자는 입력 연산자로부터 모든 행을 받아 스풀에 저장합니다. **Eager Spool** 은 논리 연산자입니다.| 

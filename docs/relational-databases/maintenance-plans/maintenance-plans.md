@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5982ca65-74fe-44e3-aef9-00a65a0db169
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 919b2b928319c38870c7bba95adc1d582b1aa569
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: f773e5188716e7f74fc75567b0c6e000607d47c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115876"
 ---
 # <a name="maintenance-plans"></a>유지 관리 계획
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
