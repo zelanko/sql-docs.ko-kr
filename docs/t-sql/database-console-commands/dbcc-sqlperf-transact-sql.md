@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 52ef837c789d9fd33c357cd5013549b7c47f48be
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: f3142f2474dbf00e165878d20fbdda53528fa930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040617"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +57,10 @@ LOGSPACE
 > [!IMPORTANT]
 > [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]로 시작하는 트랜잭션 로그의 공간 사용 정보에 대한 자세한 내용은 이 항목의 [설명](#Remarks) 섹션을 참조하세요.
   
-**"sys.dm_os_latch_stats"**, CLEAR  
+**"sys.dm_os_latch_stats"** , CLEAR  
 래치 통계를 다시 설정합니다. 자세한 내용은 [sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)을 참조하세요. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서는 이 옵션을 사용할 수 없습니다.  
   
-**"sys.dm_os_wait_stats"**, CLEAR  
+**"sys.dm_os_wait_stats"** , CLEAR  
 대기 통계를 다시 설정합니다. 자세한 내용은 [sys.dm_os_wait_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)를 참조하세요. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서는 이 옵션을 사용할 수 없습니다.  
   
 WITH NO_INFOMSGS  
@@ -82,14 +81,14 @@ WITH NO_INFOMSGS
  
 트랜잭션 로그는 데이터베이스에서 수행된 각 트랜잭션을 기록합니다. 자세한 내용은 [트랜잭션 로그 &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) 및 [SQL Server 트랜잭션 로그 아키텍처 및 관리 가이드](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)을 참조하세요.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 `DBCC SQLPERF(LOGSPACE)`를 실행하려면 서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다. 대기 및 래치 통계를 다시 설정하려면 서버에 대한 `ALTER SERVER STATE` 권한이 필요합니다.
   
 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 및 중요 비즈니스용 계층에서 데이터베이스에 대한 `VIEW DATABASE STATE` 권한이 필요합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 표준, 기본 및 범용 계층에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관리자 계정이 필요합니다. 대기 및 래치 통계 재설정은 지원되지 않습니다.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-displaying-log-space-information-for-all-databases"></a>1. 모든 데이터베이스에 대한 로그 공간 정보 표시  
+### <a name="a-displaying-log-space-information-for-all-databases"></a>1\. 모든 데이터베이스에 대한 로그 공간 정보 표시  
 다음 예에서는 `LOGSPACE` 인스턴스에 포함된 모든 데이터베이스에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 정보를 표시합니다.
   
 ```sql  
@@ -109,7 +108,7 @@ msdb           3.99219      17.0132            0
 AdventureWorks 19.554688    17.748701          0  
 ```  
   
-### <a name="b-resetting-wait-statistics"></a>2. 대기 통계 다시 설정  
+### <a name="b-resetting-wait-statistics"></a>2\. 대기 통계 다시 설정  
 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 대기 통계를 다시 설정합니다.
   
 ```sql  

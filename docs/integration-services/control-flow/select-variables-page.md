@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 993cf560f8bd3c07b5930219ca041ebe5c411ea1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 89553e2489f9ce65545686e83eee4ff017ef2799
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023696"
 ---
 # <a name="select-variables-page"></a>변수 선택 페이지
 

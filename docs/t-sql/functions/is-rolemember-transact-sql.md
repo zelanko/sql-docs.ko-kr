@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 73efa688-ae91-4014-98bc-1cabe47321f7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bc51f5f2d064e5a9cfeeb709cc3649daaaf4c736
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71a3d8f8ce28fcc8918f2058d08f99df2982be5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65942781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086709"
 ---
 # <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -50,7 +49,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
  확인할 데이터베이스 사용자, 데이터베이스 역할 또는 응용 프로그램 역할의 이름입니다. *database_principal*은 **sysname**이며 기본값은 NULL입니다. 값을 지정하지 않으면 현재의 실행 컨텍스트에 따른 결과를 얻게 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 |반환 값|설명|  
 |------------------|-----------------|  

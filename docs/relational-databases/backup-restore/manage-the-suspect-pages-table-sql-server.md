@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 053ea3fdc7ad56ef6b6c9c9992506cf07623cb5e
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 6b463e8afdfa7f3f1c2054c273ed1b9074b7035b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033814"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>suspect_pages 테이블 관리(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

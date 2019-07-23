@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 1a1063e8-ffc7-4775-a40d-e155740ad7b2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c77dbfc9ba5e7d2d7672cc339bdedba0dae3f9ef
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: baf3fd0a03beb185a43180599352b6f64f8044cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082362"
 ---
 # <a name="revoke-asymmetric-key-permissions-transact-sql"></a>REVOKE 비대칭 키 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
  *permission*  
  어셈블리에 대해 취소할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON ASYMMETRIC KEY **::**_asymmetric_key_name_  
+ ON ASYMMETRIC KEY **::** _asymmetric_key_name_  
  사용 권한을 취소할 비대칭 키를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  
@@ -110,7 +109,7 @@ REVOKE [ GRANT OPTION FOR ] { permission  [ ,...n ] }
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  비대칭 키에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

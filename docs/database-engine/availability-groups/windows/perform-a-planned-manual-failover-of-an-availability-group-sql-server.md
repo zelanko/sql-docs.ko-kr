@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 674af28b550a7c40837755a301f2c0c2594c8486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: daa68b80718903051fdb2cfd9dd8b15b64b68b23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014588"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 가용성 그룹의 계획된 수동 장애 조치(failover) 수행(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 53223432-615e-440f-904d-925d33ec2144
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: ee3fcfb29de3f029c8229e0092ee31c8a8faa007
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d8a311d8792468909fe00f02a051e33326f2483
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795391"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045633"
 ---
 # <a name="mirror-server-instance-configure-database-mirroring-security-wizard"></a>미러 서버 인스턴스(데이터베이스 미러링 보안 구성 마법사)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

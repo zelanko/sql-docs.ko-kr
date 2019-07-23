@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 04106e18-bbf7-4a5e-a2e1-3d65319814d5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f47e6ca86b2172c4fe23f0660245dd854f611f1b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: ad5b91a85db47b500d8a48d0fa3384eb65ba2a19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041541"
 ---
 # <a name="restore-database-to-point-of-failure---full-recovery"></a>실패 지점으로 데이터베이스 복원 - 전체 복구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

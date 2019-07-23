@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 691ac7dd-afc5-4760-932c-2b1dcd9394ed
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 297c8a75a5adce2c0739fa2cbc6d5b840260c466
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6fc25632b2567b191fef3ffa3111a73da9699de9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001754"
 ---
 # <a name="use-nested-for-xml-queries-in-aspnet"></a>ASP.NET에서 중첩 FOR XML 쿼리 사용
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

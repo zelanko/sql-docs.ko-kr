@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 22b077b1-fa25-49ff-94f6-6d0d196d870a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fbd30a8b0e112d74bf9bd0d009592d753688fadd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d683bc743fe621b35cdc59588ce04f6ee96c5bbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068972"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>연습: 데이터베이스 프로젝트 배포를 확장하여 배포 계획 수정
 배포 참가자를 만들어서 SQL 프로젝트를 배포할 때 사용자 지정 작업을 수행할 수 있습니다. 배포 참가자는 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx) 또는 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx) 중에서 만들 수 있습니다. [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)를 사용하면 계획을 실행하기 전에 항목을 변경할 수 있고 [DeploymentPlanExecutor](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanexecutor.aspx)를 사용하면 계획을 실행하는 동안 작업을 수행할 수 있습니다. 이 연습에서는 SqlRestartableScriptContributor라는 [DeploymentPlanModifier](https://msdn.microsoft.com/library/microsoft.sqlserver.dac.deployment.deploymentplanmodifier.aspx)를 만듭니다. 이 배포 참가자는 배포 스크립트의 일괄 처리에 IF 문을 추가해서 실행 중 오류가 발생할 경우 완료될 때까지 스크립트를 다시 실행할 수 있게 합니다.  

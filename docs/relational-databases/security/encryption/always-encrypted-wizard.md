@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 68daddc9-ce48-49aa-917f-6dec86ad5af5
 author: aliceku
 ms.author: aliceku
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5007955504a0eb6501ee32600e9d4e86bc9e1feb
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: e45ddec1a380ea6ea867fb0306cca4176786fbf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043148"
 ---
 # <a name="always-encrypted-wizard"></a>상시 암호화 마법사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

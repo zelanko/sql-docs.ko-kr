@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 3dda28d6-10d8-4294-9b5e-a6048c07faf9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 34c282905f5314772a11318bf7c3eb60650e96fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c96ea5b857bb95477e34464cb84b870b21d993e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017447"
 ---
 # <a name="catalogexecutablestatistics"></a>catalog.executable_statistics 
 
@@ -37,7 +36,7 @@ ms.locfileid: "65714956"
 |Execution_path|nvarchar(max)|구성 요소의 각 반복을 포함하는 패키지 구성 요소의 전체 실행 경로입니다.|  
 |Start_time|datetimeoffset(7)|실행 파일이 실행 전 단계에 진입하는 시간입니다.|  
 |End_time|datetimeoffset(7)|실행 파일이 실행 후 단계에 진입하는 시간입니다.|  
-|Execution_duration|ssNoversion|실행 파일이 실행에 소비한 시간입니다. 값은 밀리초 단위입니다.|  
+|Execution_duration|int|실행 파일이 실행에 소비한 시간입니다. 값은 밀리초 단위입니다.|  
 |Execution_result|SMALLINT|가능한 값은 다음과 같습니다.<br /><br /> 0(성공)<br /><br /> 1(실패)<br /><br /> 2(완료)<br /><br /> 3(취소됨)|  
 |Execution_value|sql_variant|실행에 의해 반환되는 값입니다. 사용자 정의 값입니다.|  
   

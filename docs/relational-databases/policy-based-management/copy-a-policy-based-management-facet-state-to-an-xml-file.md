@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7d604ab1-6dd6-4f8e-a79c-eba99ab106fd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 45ebbb2cbbc0e39ee3da54e4b914aff4906df1cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0e3d197f8cb6b7b5bd05ed037fd32e938b5ad4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63007614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109732"
 ---
 # <a name="copy-a-policy-based-management-facet-state-to-an-xml-file"></a>XML 파일로 정책 기반 관리 패싯 상태 복사
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ ms.locfileid: "63007614"
   
 1.  개체 탐색기에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스, 인스턴스 개체, 데이터베이스 또는 데이터베이스 개체를 마우스 오른쪽 단추로 클릭한 다음 **패싯**을 클릭합니다.  
   
-2.  **패싯 보기 –**_object_name_ 대화 상자에서 **정책으로 현재 상태 내보내기**를 클릭합니다.  
+2.  **패싯 보기 –** _object_name_ 대화 상자에서 **정책으로 현재 상태 내보내기**를 클릭합니다.  
   
-3.  **정책으로 내보내기** 대화 상자에서 파일의 경로와 이름을 입력하거나 찾아보기(**...**) 단추를 사용하여 파일을 찾은 다음 XML 파일의 이름을 입력합니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [Export As Policy Dialog Box](../../relational-databases/policy-based-management/export-as-policy-dialog-box.md)를 참조하세요.  
+3.  **정책으로 내보내기** 대화 상자에서 파일의 경로와 이름을 입력하거나 찾아보기( **...** ) 단추를 사용하여 파일을 찾은 다음 XML 파일의 이름을 입력합니다. 이 대화 상자에서 사용할 수 있는 옵션에 대한 자세한 내용은 [Export As Policy Dialog Box](../../relational-databases/policy-based-management/export-as-policy-dialog-box.md)를 참조하세요.  
   
 4.  완료되었으면 **확인**을 클릭합니다.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 408a1360-12ee-4896-ac94-482ae839593b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3739277da5fa62a1fdafb596e44c85d8e9258fac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bffe0040c4108fdadc2ac163b5a48a53abc7173
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907730"
 ---
 # <a name="delete-a-publication"></a>게시 삭제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ ms.locfileid: "47625171"
         > [!NOTE]  
         >  **@force** 에 **1** 값을 지정하면 데이터베이스에 복제 관련 게시 개체가 남을 수 있습니다.  
   
-2.  (선택 사항) 이 데이터베이스에 다른 게시가 없으면 [sp_replicationdboption&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 실행하여 스냅숏 또는 트랜잭션 복제를 통해 현재 데이터베이스를 게시할 수 없도록 해제합니다.  
+2.  (선택 사항) 이 데이터베이스에 다른 게시가 없으면 [sp_replicationdboption&amp;#40;Transact-SQL&amp;#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)을 실행하여 스냅샷 또는 트랜잭션 복제를 통해 현재 데이터베이스를 게시할 수 없도록 해제합니다.  
   
 3.  (옵션) 구독 데이터베이스의 구독자에서 [sp_subscription_cleanup](../../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) 을 실행하여 구독 데이터베이스에 남은 모든 복제 메타데이터를 제거합니다.  
   

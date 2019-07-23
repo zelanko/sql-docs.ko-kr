@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 8b80390f-5f8b-4e66-9bcc-cabd653c19fd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e5ed9b37cc49991a7f7af0b4264c68277d362667
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 6f5a03089b51d0c3f37dc28411ff9e0ab376efc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500176"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912768"
 ---
 # <a name="create-fulltext-index-transact-sql"></a>CREATE FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

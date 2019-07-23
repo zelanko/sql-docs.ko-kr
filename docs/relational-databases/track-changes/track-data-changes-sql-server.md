@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0928eb2cd30ba16466c3c091ab2c810c2f3a17d5
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3299d13c2ff371f0194c501f34d5615486decc84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006105"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -157,7 +156,7 @@ ms.locfileid: "67585359"
   
 -   [Microsoft Sync Framework 개발자 센터(Microsoft Sync Framework Developer Center)](https://go.microsoft.com/fwlink/?LinkId=108054)  
   
-     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 및 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]의 전체 설명서를 제공합니다. [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]의 설명서에 "방법: SQL Server 변경 내용 추적 사용" 항목에 자세한 내용과 코드 예제가 포함되어 있습니다.  
+     [!INCLUDE[ssSyncFrameLong](../../includes/sssyncframelong-md.md)] 및 [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]의 전체 설명서를 제공합니다. [!INCLUDE[sql_sync_short](../../includes/sql-sync-short-md.md)]의 설명서에서 "방법: "방법: SQL Server 변경 내용 추적 사용" 항목에 자세한 내용과 코드 예제가 포함되어 있습니다.  
   
 ## <a name="related-tasks-required"></a>관련 태스크(필수)  
   

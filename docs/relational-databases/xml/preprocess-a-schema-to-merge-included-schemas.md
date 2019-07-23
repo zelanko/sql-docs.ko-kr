@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 471ec988d450fa00bbeaca9fb2a11432817e6689
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 58773dbce29589d66403c6584b5360c0dc8026d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995332"
 ---
 # <a name="preprocess-a-schema-to-merge-included-schemas"></a>포함된 스키마를 병합하기 위해 스키마 전처리
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0deed900-c910-4d12-aac0-6ab9e39eb068
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: d41ba5ba2023c992fabaa9dae867a83497428645
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 14d7372258e3cc15eb3da6d5577145b588473388
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67683320"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262131"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>사용자 지정 보고서 실행 경고 표시
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
