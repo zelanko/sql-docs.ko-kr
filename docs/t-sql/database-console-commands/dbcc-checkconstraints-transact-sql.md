@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 911cb0643318e98b46746c7cd11ef2ebbfcaca2b
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 8653b197e0fa16b4e939ab94865395d68bf1f852
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102122"
 ---
 # <a name="dbcc-checkconstraints-transact-sql"></a>DBCC CHECKCONSTRAINTS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ DBCC CHECKCONSTRAINTS
  제약 조건 이름은 제약 조건이 속해 있는 테이블을 고유하게 식별합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
   
  의 모든 멘션을  
- 지정할 옵션을 활성화합니다.  
+ 지정할 옵션을 설정합니다.  
   
  ALL_CONSTRAINTS  
  테이블 이름을 지정하거나 모든 테이블을 검사하는 경우에는 해당 테이블에서 설정 및 해제된 모든 제약 조건을 확인합니다. 그렇지 않은 경우에는 설정된 제약 조건만 확인합니다. 제약 조건 이름이 지정된 경우에는 ALL_CONSTRAINTS가 적용되지 않습니다.  
@@ -112,12 +111,12 @@ DBCC CHECKCONSTRAINTS는 다음 열이 있는 행 집합을 반환합니다.
 |Constraint Name|**varchar**|위반된 제약 조건의 이름입니다.|  
 |위치|**varchar**|제약 조건을 위반한 행을 식별하는 열 값 할당입니다.<br /><br /> 이 열의 값은 제약 조건을 위반한 행을 쿼리하는 SELECT 문의 WHERE 절에 사용될 수 있습니다.|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 **sysadmin** 고정 서버 역할의 멤버 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-checking-a-table"></a>1. 테이블 검사  
+### <a name="a-checking-a-table"></a>1\. 테이블 검사  
 다음은 `Table1` 데이터베이스에 있는 `AdventureWorks` 테이블의 제약 조건 무결성을 검사하는 예입니다.
   
 ```sql  
@@ -133,7 +132,7 @@ DBCC CHECKCONSTRAINTS(Table1);
 GO  
 ```  
   
-### <a name="b-checking-a-specific-constraint"></a>2. 특정 제약 조건 검사  
+### <a name="b-checking-a-specific-constraint"></a>2\. 특정 제약 조건 검사  
 다음은 `CK_ProductCostHistory_EndDate` 제약 조건의 무결성을 검사하는 예입니다.
   
 ```sql  

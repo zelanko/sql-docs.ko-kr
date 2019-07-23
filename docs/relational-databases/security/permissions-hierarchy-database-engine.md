@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f6d20a55-ef03-4e14-85f9-009902889866
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 89e34ec0a10cd6b79057dff4b117690ac75d36d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 22bb9713faab2b1d3195092130a95997ca69641f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010816"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>사용 권한 계층(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

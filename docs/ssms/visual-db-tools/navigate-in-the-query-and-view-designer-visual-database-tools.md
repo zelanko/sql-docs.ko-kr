@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c65acef-6dfa-463a-bf37-5a5335fe3865
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: abfbe23266a726053a8dbf3cf1a068d9a85046e3
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: f9581eca3d6abbefcd897ccc4ce627ca180649b3
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681074"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262296"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>쿼리 및 뷰 디자이너에서 탐색(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

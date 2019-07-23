@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d151d0c-e841-4325-8606-c094de37d7d1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ee494429768619f4cdf622be569dbad81182b976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f962688b69155c6daddc98e6d505a5275741cf86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044710"
 ---
 # <a name="recover-from-failover-cluster-instance-failure"></a>장애 조치(failover) 클러스터 인스턴스 오류 복구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

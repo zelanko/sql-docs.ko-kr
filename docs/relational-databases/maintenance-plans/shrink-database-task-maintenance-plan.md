@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a9874cac-cded-4145-9c38-8aafd267dbee
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b31d51d0f1e43fd14153753d80d8e3909b5cc669
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: bbba27f582b65fdcc99ed8fda4d892b9a92eebb6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115563"
 ---
 # <a name="shrink-database-task-maintenance-plan"></a>데이터베이스 축소 태스크(유지 관리 계획)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51216561"
   
  이 태스크는 DBCC SHRINKDATABASE 문을 실행합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **대량 삽입 태스크 편집기**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   

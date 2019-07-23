@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 9325820ea71c94bb1e43828998ebbf810fb11c10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 281d392bcb6c9bd6e46dbb6b41a85d080bb811f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66775273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038833"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>SQL Server 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

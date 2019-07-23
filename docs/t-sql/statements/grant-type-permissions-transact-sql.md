@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14bd2fb3-1446-49c0-be87-c6a670317ed0
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a97a63633dd2d1260cf83de6236bd4924af02f6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b263463874113ce590da9bde57f15b4b03c13e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62636270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071210"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT 유형 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,8 +55,8 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  유형에 대해 부여할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- ON TYPE **::** [ _schema_name_**.** ] *type_name*  
- 사용 권한을 부여할 유형을 지정합니다. 범위 한정자(**::**)가 필요합니다. *schema_name*을 지정하지 않은 경우 기본 스키마가 사용됩니다. *schema_name*을 지정한 경우 스키마 범위 한정자(**.**)가 필요합니다.  
+ ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
+ 사용 권한을 부여할 유형을 지정합니다. 범위 한정자( **::** )가 필요합니다. *schema_name*을 지정하지 않은 경우 기본 스키마가 사용됩니다. *schema_name*을 지정한 경우 스키마 범위 한정자( **.** )가 필요합니다.  
   
  \<database_principal>에 대해 사용 권한을 부여할 보안 주체를 지정합니다.  
   

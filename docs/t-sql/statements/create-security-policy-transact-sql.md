@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: d6ab70ee-0fa2-469c-96f6-a3c16d673bc8
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f5732c63ae381c0ca9c120b64aef3915dc6db926
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 8cf0332d2a82113145e549d9419b855a222f7441
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117290"
 ---
 # <a name="create-security-policy-transact-sql"></a>CREATE SECURITY POLICY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -94,7 +93,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
   
  차단 조건자는 해당 DML 작업이 실행된 후 평가됩니다. 따라서 READ UNCOMMITTED 쿼리는 롤백될 임시 값을 볼 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  스키마에 대한 ALTER ANY SECURITY POLICY 권한 및 ALTER 권한이 필요합니다.  
   
  또한 추가된 각 조건자에는 다음 권한이 필요합니다.  
@@ -108,7 +107,7 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
 ## <a name="examples"></a>예  
  다음 예는 **CREATE SECURITY POLICY** 구문의 사용을 보여 줍니다. 완벽한 보안 정책 시나리오의 예를 보려면 [행 수준 보안](../../relational-databases/security/row-level-security.md)을 참조하세요.  
   
-### <a name="a-creating-a-security-policy"></a>1. 보안 정책 만들기  
+### <a name="a-creating-a-security-policy"></a>1\. 보안 정책 만들기  
  다음 구문은 Customer 테이블에 대한 필터 조건자가 있는 보안 정책을 만들고 보안 정책을 사용하지 않도록 설정해 둡니다.  
   
 ```  
@@ -117,7 +116,7 @@ ADD FILTER PREDICATE [rls].[fn_securitypredicate]([CustomerId])
 ON [dbo].[Customer];  
 ```  
   
-### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>2. 여러 테이블에 영향을 주는 정책 만들기  
+### <a name="b-creating-a-policy-that-affects-multiple-tables"></a>2\. 여러 테이블에 영향을 주는 정책 만들기  
  다음 구문은 서로 다른 세 테이블에서 3개의 필터 조건자를 사용하여 보안 정책을 만들고 보안 정책을 사용하도록 설정합니다.  
   
 ```  
@@ -131,7 +130,7 @@ ADD FILTER PREDICATE [rls].[fn_securitypredicate2]([WingId])
 WITH (STATE = ON);  
 ```  
   
-### <a name="c-creating-a-policy-with-multiple-types-of-security-predicates"></a>3. 여러 형식의 보안 조건자를 사용해 정책 만들기  
+### <a name="c-creating-a-policy-with-multiple-types-of-security-predicates"></a>C. 여러 형식의 보안 조건자를 사용해 정책 만들기  
  영업 테이블에 필터 조건자와 차단 조건자 둘 다 추가합니다.  
   
 ```  

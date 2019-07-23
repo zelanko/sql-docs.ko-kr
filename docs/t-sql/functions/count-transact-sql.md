@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 28d39da6-bc2e-46c7-858c-b1721c938830
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ddd5d9584f71e8a6b1ae9686203463b1eb77f47e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e4cec9afec24b1ef184b9f37795903017c6d3b00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026494"
 ---
 # <a name="count-transact-sql"></a>COUNT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +65,7 @@ OVER **(** [ *partition_by_clause* ] [ *order_by_clause* ] [ *ROW_or_RANGE_claus
 *partition_by_clause*는 `FROM` 절이 생성한 결과 집합을 `COUNT` 함수가 적용되는 파티션으로 나눕니다. 지정하지 않을 경우 쿼리 결과 집합의 모든 행이 단일 그룹으로 취급됩니다. *order_by_clause*는 작업의 논리적 순서를 결정합니다. 자세한 내용은 [OVER 절 &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요. 
 
 ## <a name="return-types"></a>반환 형식
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
 COUNT(\*)는 그룹에 포함된 항목 개수를 반환합니다. 여기에는 NULL 값과 중복 항목이 포함됩니다.

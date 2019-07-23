@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c504c7f-5c1d-4124-b697-f735ef0084f0
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: a28e7f6a105d26d1dc68d295798e04c3d32edfd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40376a81eb1a51bc903a7a4ab81f00c187d5f8f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66772600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008377"
 ---
 # <a name="configure-a-flexible-automatic-failover-policy-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 유연한 자동 장애 조치(failover) 정책 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

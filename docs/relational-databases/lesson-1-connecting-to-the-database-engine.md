@@ -10,13 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a7f95a4ebc0227a4bb16f256073a3408ae15a1c2
-ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
+ms.openlocfilehash: 549b8d9e18db73cb91c9707ac51f2db52d368d0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67517765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073732"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>1단원: 데이터베이스 엔진에 연결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

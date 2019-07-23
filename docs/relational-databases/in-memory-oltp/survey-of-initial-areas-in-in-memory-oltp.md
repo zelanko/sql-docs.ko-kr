@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0988c2cf4d133305676241763aa90f1db68b86c
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 5c28ca4d58a717d34f6036376f8facc395e30cd3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063147"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>메모리 내 OLTP에서 초기 영역 설문 조사
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

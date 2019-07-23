@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 39252dd5-09c3-46f9-a17b-15208cfd336d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fee01a2531ce405f212c2559d91ec0ea241b9784
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d1e9adb43a260cc1cd0fa450bc300eb39169065
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084399"
 ---
 # <a name="perform-an-incremental-load-of-multiple-tables"></a>여러 테이블의 증분 로드 수행
 

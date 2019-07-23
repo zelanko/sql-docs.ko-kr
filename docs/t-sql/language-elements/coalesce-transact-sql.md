@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b44f7d9d37efaac80f018ce2b1c1497230e66e3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950297"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]

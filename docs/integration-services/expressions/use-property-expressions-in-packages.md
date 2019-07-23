@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a4bfc925-3ef6-431e-b1dd-7e0023d3a92d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f8373f860bfb9346f9df32649976ce53f1c9d8be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e917a042fc760170b6dabe12bb90c20e2a38bc7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967546"
 ---
 # <a name="use-property-expressions-in-packages"></a>패키지에서 속성 식 사용
 

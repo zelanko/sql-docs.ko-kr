@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 74753f0e23c64650e1d2056716cf65ffa0862f38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f360f60727e91407c1993c18d9548dbefd46a388
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047984"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>전송 보안 - 데이터베이스 미러링 - Always On 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

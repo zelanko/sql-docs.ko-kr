@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e2bb2e21-62a7-4689-b68b-bdfba3fdd985
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 84a01d34e8158d69eb00618cd02ebd1b9923a115
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 3c11c13d89e813141784a7d1f9631d83f01eb90d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027704"
 ---
 # <a name="mssqleng021330"></a>MSSQL_ENG021330
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,8 +40,8 @@ ms.locfileid: "54126625"
  스냅샷 폴더에 대해 올바른 경로가 지정되었는지 확인하고 게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 실행하는 계정에 충분한 사용 권한이 있는지 확인하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [스냅숏 옵션 수정](../../relational-databases/replication/snapshot-options.md)   
+ [스냅샷 옵션 수정](../../relational-databases/replication/snapshot-options.md)   
  [오류 및 이벤트 참조&#40;복제&#41;](../../relational-databases/replication/errors-and-events-reference-replication.md)   
- [스냅숏 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)  
+ [스냅샷 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)  
   
   

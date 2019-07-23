@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 1270cc8f84113433954a5178f791f3795ed419fc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f9b69ec02d8f436ccaacf8f9fc75fbb01b429316
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914260"
 ---
 # <a name="revoke-search-property-list-permissions-transact-sql"></a>REVOKE 검색 속성 목록 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  사용 권한의 이름입니다. 보안 개체에 대한 사용 권한의 올바른 매핑에 대해서는 이 항목 뒷부분의 "주의" 섹션에 설명되어 있습니다.  
   
- ON SEARCH PROPERTY LIST **::**_search_property_list_name_  
+ ON SEARCH PROPERTY LIST **::** _search_property_list_name_  
  사용 권한을 취소할 검색 속성 목록을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  
@@ -113,7 +112,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  전체 텍스트 카탈로그에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

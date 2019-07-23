@@ -9,14 +9,13 @@ ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7a23a4a5cab2e5528b30b4887c5fe15e5b7e0c95
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: b13b484806775a9a1eb8826a22cf446a17a3a9a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021106"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

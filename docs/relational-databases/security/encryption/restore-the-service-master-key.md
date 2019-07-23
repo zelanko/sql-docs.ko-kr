@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14bdbbbe-d384-4692-b670-4243d2466fe1
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: cf93c5a2918089bffd8bfe724f165d20722af086
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: c16742fe161f947e6256537ce04f36f9a07a89a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111619"
 ---
 # <a name="restore-the-service-master-key"></a>서비스 마스터 키 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "53997535"
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
 서버에 대한 CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="using-transact-sql"></a>Transact-SQL 사용  

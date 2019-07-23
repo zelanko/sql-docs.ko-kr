@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: a44d702b-b3fb-4950-8c8f-1adcf3f514ba
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 22891968234e0ad81e95e6aa78c76a2f8e5d4910
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: d0b6f9dac0cb065a9509040b5693b09b1fa9d5e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039103"
 ---
 # <a name="dbcc-inputbuffer-transact-sql"></a>DBCC INPUTBUFFER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ FROM sys.dm_exec_requests
 WHERE session_id = @@spid;  
 ```  
 의 모든 멘션을  
-지정할 옵션을 활성화합니다.  
+지정할 옵션을 설정합니다.  
   
 NO_INFOMSGS  
 심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
@@ -88,7 +87,7 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
 > [!NOTE]
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2로 시작되며, [sys.dm_exec_input_buffer](../../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 제출된 문에 대한 정보를 반환합니다.
 
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다음 중 하나가 필요합니다.
 -   사용자는 **sysadmin** 고정 서버 역할의 멤버여야 합니다.  
 -   사용자에게 VIEW SERVER STATE 권한이 있어야 합니다.  

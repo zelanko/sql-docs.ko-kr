@@ -10,13 +10,12 @@ ms.topic: reference
 ms.assetid: 26616eb8-9e80-434d-b22a-ece1b00f449d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 807cefcb077fd5cf2d11d6ccae9800157395cfc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38bfd8cd4f67b3344e7c898ff003f4b41729a481
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65724609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116294"
 ---
 # <a name="extending-packages-with-custom-objects"></a>사용자 지정 개체를 사용한 패키지 확장
 

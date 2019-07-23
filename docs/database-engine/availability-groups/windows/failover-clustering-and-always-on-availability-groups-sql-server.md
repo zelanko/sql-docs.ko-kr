@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 613bfbf1-9958-477b-a6be-c6d4f18785c3
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: e97881362ed01f08a0c229025c21950cf117835a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a1e9f29db3c9aec7dc86520c502cc3fdbea7a86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988391"
 ---
 # <a name="failover-clustering-and-always-on-availability-groups-sql-server"></a>장애 조치(failover) 클러스터링 및 Always On 가용성 그룹(SQL Server)
 

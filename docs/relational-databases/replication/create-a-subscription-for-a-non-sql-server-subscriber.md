@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5020ee68-b988-4d57-8066-67d183e61237
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4ae569fa5f7a15435fc69f84fd4254c692e1eb1d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d199fff8243584ee86dd97f97bcc3b8b68beb3dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063112"
 ---
 # <a name="create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자에 대한 구독 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,9 +40,9 @@ ms.locfileid: "54126513"
   
 2.  새 게시 마법사를 사용하여 게시를 만듭니다. 게시를 만드는 방법에 대한 자세한 내용은 [게시 만들기](../../relational-databases/replication/publish/create-a-publication.md) 및 [Oracle 데이터베이스에서 게시 만들기](../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md)를 참조하세요. 새 게시 마법사에서 다음 옵션을 지정합니다.  
   
-    -   **게시 유형** 페이지에서 **스냅숏 게시** 또는 **트랜잭션 게시**를 선택합니다.  
+    -   **게시 유형** 페이지에서 **스냅샷 게시** 또는 **트랜잭션 게시**를 선택합니다.  
   
-    -   **스냅숏 에이전트** 페이지에서 **즉시 스냅숏 만들기**의 선택을 취소합니다.  
+    -   **스냅샷 에이전트** 페이지에서 **즉시 스냅샷 만들기**의 선택을 취소합니다.  
   
          스냅샷 에이전트에서[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 적합한 스냅샷 및 초기화 스크립트를 생성하려면[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대한 게시를 설정한 다음 스냅샷을 만듭니다.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "54126513"
     > [!NOTE]  
     >  **True** 를 선택하면 **pre_creation_cmd** 아티클 속성 값이 'drop'으로 설정됩니다. 이 설정은 구독자의 테이블이 아티클의 테이블 이름과 일치하는 경우 복제가 구독자의 테이블을 삭제하도록 지정합니다. 구독자에서 기존 테이블을 계속 유지하려는 경우 각 아티클에 대해 [sp_changearticle](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 저장 프로시저를 사용하고 **pre_creation_cmd**에 'none' 값을 지정합니다. `sp_changearticle @publication= 'MyPublication', @article= 'MyArticle', @property='pre_creation_cmd', @value='none'`  
   
-5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 게시에 대한 새 스냅숏을 만들라는 메시지가 표시됩니다. 지금 스냅숏을 만들지 않으려면 나중에 다음 "방법" 절차에서 설명한 단계를 사용합니다.  
+5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] 게시에 대한 새 스냅샷을 만들라는 메시지가 표시됩니다. 지금 스냅숏을 만들지 않으려면 나중에 다음 "방법" 절차에서 설명한 단계를 사용합니다.  
   
 #### <a name="to-create-a-subscription-for-a-non-sql-server-subscriber"></a>SQL Server 이외 구독자에 대한 구독을 만들려면  
   
@@ -139,7 +138,7 @@ ms.locfileid: "54126513"
   
 2.  게시를 마우스 오른쪽 단추로 클릭한 다음 **스냅샷 에이전트 상태 보기**를 클릭합니다.  
   
-3.  **스냅숏 에이전트 상태 보기 - \<게시>** 대화 상자에서 **시작**을 클릭합니다.  
+3.  **스냅샷 에이전트 상태 보기 - \<게시&gt;** 대화 상자에서 **시작**을 클릭합니다.  
   
  스냅샷 에이전트에서 스냅샷 생성을 마치면 "[100%] 17개 아티클의 스냅샷이 생성되었습니다"라는 메시지가 표시됩니다.  
   

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c211fa83d1b2e0d8a1b6c499f20705b2459e2431
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: ede74cb467b0ee9f83c72c5c07ee1b933c1a7fa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072099"
 ---
 # <a name="drop-view-transact-sql"></a>DROP VIEW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -77,12 +76,12 @@ DROP VIEW [ schema_name . ] view_name [ ; ]
   
  뷰의 텍스트 보기에 대한 자세한 내용은 [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  보기에 대한 **CONTROL** 권한, 뷰가 포함된 스키마에 대한 **ALTER** 권한 또는 **db_ddladmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-drop-a-view"></a>1. 뷰 삭제  
+### <a name="a-drop-a-view"></a>1\. 뷰 삭제  
  다음 예에서는 `Reorder` 뷰를 제거합니다.  
   
 ```sql

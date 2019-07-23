@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 5f84ff9e-c1ec-46aa-8501-50f854ebcc3a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 65d4e1418dcf8f74cd994034097bc3ae0495e910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2910ac2c0ba1390eb8d82900bb3c8d64947a6944
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914307"
 ---
 # <a name="pwdcompare-transact-sql"></a>PWDCOMPARE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ PWDCOMPARE ( 'clear_text_password'
 >  이 매개 변수는 이전 버전과의 호환성을 위해 제공되지만 지금 암호 해시 BLOB이 해당 버전 설명을 포함하고 있으므로 무시됩니다. [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)]  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
  *clear_text_password*의 해시가 *password_hash* 매개 변수와 일치하면 1을, 그렇지 않으면 0을 반환합니다.  
   

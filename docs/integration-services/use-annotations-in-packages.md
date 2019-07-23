@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 48c8ed9a-b10d-490c-9ba7-4b77aa44e3dd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a9953cba066e658b6198718f4039487330e8f15f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fe4e538c03ab711da811ae6dcac33e602c333a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945440"
 ---
 # <a name="use-annotations-in-packages"></a>패키지에서 주석 사용
 

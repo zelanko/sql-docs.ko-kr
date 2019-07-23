@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 04935f35-96cc-4d70-a250-0fd326f8daff
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b1e3f616b0de021d5c8ac967b630a6bf9ca9bc50
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97eddaf05a3ac7eec342d696691a6f38a9b57488
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060808"
 ---
 # <a name="determine-whether-the-change-data-is-ready"></a>변경 데이터의 준비 여부 확인
 

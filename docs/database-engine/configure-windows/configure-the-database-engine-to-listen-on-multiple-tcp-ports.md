@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 2fa73136dfc026f158cbe7a81a08d68cf9142114
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3055750ac7f52c4dfaaae3cef94021d9d024a50a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012723"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>여러 TCP 포트에서 수신하도록 데이터베이스 엔진 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

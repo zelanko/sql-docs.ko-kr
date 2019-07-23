@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9a02f7d9e8d16789151da19d705c49e39421e2e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 1f52dd565f634061468a0eee4fbfbb2855da99c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082220"
 ---
 # <a name="revoke-full-text-permissions-transact-sql"></a>REVOKE 전체 텍스트 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,10 +56,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  사용 권한의 이름입니다. 보안 개체에 대한 사용 권한의 올바른 매핑에 대해서는 이 항목 뒷부분의 "주의" 섹션에 설명되어 있습니다.  
   
- ON FULLTEXT CATALOG **::**_full-text_catalog_name_  
+ ON FULLTEXT CATALOG **::** _full-text_catalog_name_  
  사용 권한을 취소할 전체 텍스트 카탈로그를 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
- ON FULLTEXT STOPLIST **::**_full-text_stoplist_name_  
+ ON FULLTEXT STOPLIST **::** _full-text_stoplist_name_  
  사용 권한을 취소할 전체 텍스트 중지 목록을 지정합니다. 범위 한정자 **::** 가 필요합니다.  
   
  *database_principal*  
@@ -131,7 +130,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
 |TAKE OWNERSHIP|CONTROL|CONTROL|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  전체 텍스트 카탈로그에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

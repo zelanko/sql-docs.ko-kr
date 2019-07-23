@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: fe830577-11ca-44e5-953b-2d589d54d045
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=aps-pdw-2016||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84a2318f89872f490d8d3fc08902438f7a189443
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 1c5bd7fef54ee28993472bd6b3f4e4df3bba739f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060980"
 ---
 # <a name="create-database-scoped-credential-transact-sql"></a>CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,10 +50,10 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  만들려는 데이터베이스 범위 자격 증명의 이름을 지정합니다. *credential_name*은 번호(#) 기호로 시작할 수 없습니다. 시스템 자격 증명은 ##으로 시작합니다.  
   
- IDENTITY **='**_identity\_name_**'**  
+ IDENTITY **='** _identity\_name_ **'**  
  서버 외부에 연결할 때 사용할 계정의 이름을 지정합니다. Azure Blob Storage에서 공유 키를 사용하여 파일을 가져오려면 ID 이름이 `SHARED ACCESS SIGNATURE`여야 합니다. SQL DW로 데이터를 로드하기 위해 ID에 모든 유효한 값을 사용할 수 있습니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.  
   
- SECRET **='**_secret_**'**  
+ SECRET **='** _secret_ **'**  
  나가는 인증에 필요한 암호를 지정합니다. `SECRET`은 Azure Blob 스토리지에서 파일을 가져오는 데 필요합니다. Azure Blob Storage에서 SQL DW 또는 병렬 데이터 웨어하우스로 로드하려면 Azure Storage Key가 암호여야 합니다.  
 > [!WARNING]
 >  SAS 키 값은 '?'(물음표)로 시작될 수 있습니다. SAS 키를 사용할 때는 앞의 '?'를 제거해야 합니다. 그렇지 않으면 작업이 차단될 수 있습니다.  
@@ -83,11 +82,11 @@ WITH IDENTITY = 'identity_name'
 
 - [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md)와 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)은 데이터베이스 범위 자격 증명을 사용하여 Azure BLOB 스토리지의 데이터에 액세스합니다. 자세한 내용은 [Azure Blob Storage의 데이터에 대량 액세스 예제](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)를 참조하세요. 
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 **CONTROL** 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
-### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>1. 애플리케이션에 대한 데이터베이스 범위 자격 증명을 만듭니다.
+### <a name="a-creating-a-database-scoped-credential-for-your-application"></a>1\. 애플리케이션에 대한 데이터베이스 범위 자격 증명을 만듭니다.
  다음 예에서는 `AppCred`라는 데이터베이스 범위 자격 증명을 만듭니다. 이 데이터베이스 범위 자격 증명에는 Windows 사용자 `Mary5` 및 암호가 들어 있습니다.  
   
 ```sql  
@@ -100,7 +99,7 @@ CREATE DATABASE SCOPED CREDENTIAL AppCred WITH IDENTITY = 'Mary5',
 GO  
 ```  
 
-### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>2. 공유 액세스 서명을 위한 데이터베이스 범위 자격 증명을 만듭니다.   
+### <a name="b-creating-a-database-scoped-credential-for-a-shared-access-signature"></a>2\. 공유 액세스 서명을 위한 데이터베이스 범위 자격 증명을 만듭니다.   
 다음 예에서는 [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) 및 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)과 같은 대량 작업을 수행할 수 있는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md)을 만드는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다. 공유 액세스 서명은 SQL Server, APS 또는 SQL DW에서 PolyBase에 사용할 수 없습니다.
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL MyCredentials  
@@ -108,7 +107,7 @@ WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
 SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
 ```
   
-### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>3. Azure Data Lake Store에 PolyBase 연결을 위한 데이터베이스 범위 자격 증명을 만듭니다.  
+### <a name="c-creating-a-database-scoped-credential-for-polybase-connectivity-to-azure-data-lake-store"></a>C. Azure Data Lake Store에 PolyBase 연결을 위한 데이터베이스 범위 자격 증명을 만듭니다.  
 다음 예에서는 Azure SQL Data Warehouse에서 PolyBase에 사용될 수 있는 [외부 데이터 원본](../../t-sql/statements/create-external-data-source-transact-sql.md)을 만드는 데 사용할 수 있는 데이터베이스 범위 자격 증명을 만듭니다.
 
 Azure Data Lake Store는 서비스 간 인증에 Azure Active Directory 애플리케이션을 사용합니다.

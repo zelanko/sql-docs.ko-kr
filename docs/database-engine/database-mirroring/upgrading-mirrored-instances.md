@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: d7335d16f428af13813cea36de6a7de79e1faf95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d1b8c8060309cfb2f5137e5b1ea4ad2eaf31d1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66795126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050634"
 ---
 # <a name="upgrading-mirrored-instances"></a>미러된 인스턴스 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

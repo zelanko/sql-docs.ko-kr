@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 97e3110d-fde7-4f5d-9309-dc1697960aeb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d2aba0c1526473d48fe1171bbd41f4e006ca1690
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9c8334573b66b5c227a5033a63b5aedf06909c78
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732418"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316965"
 ---
 # <a name="modify-an-index"></a>인덱스 수정
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,11 +62,11 @@ ms.locfileid: "67732418"
   
 다음 예제에서는 `DROP_EXISTING` 옵션을 사용하여 AdventureWorks 데이터베이스에 있는 `Production.WorkOrder` 테이블의 `ProductID` 열에서 기존 인덱스를 삭제하고 다시 만듭니다. `FILLFACTOR` 및 `PAD_INDEX` 옵션도 설정됩니다.  
   
-     [!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
+[!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
   
-     The following example uses ALTER INDEX to set several options on the index `AK_SalesOrderHeader_SalesOrderNumber`.  
+다음 예에서는 ALTER INDEX를 사용하여 `AK_SalesOrderHeader_SalesOrderNumber`인덱스에 몇 가지 옵션을 설정합니다.  
   
-     [!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_2.sql)]  
+[!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_2.sql)]  
   
 #### <a name="to-modify-index-columns"></a>인덱스 열을 수정하려면  
   

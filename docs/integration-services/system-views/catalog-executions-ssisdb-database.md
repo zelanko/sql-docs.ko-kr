@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 879f13b0-331d-4dee-a079-edfaca11ae5b
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b2ff22b3a5dfde43e4202062cb40737fb7d4c02e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f7c22a7c8120e67034e8a22a42948e607bec177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65714855"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104864"
 ---
 # <a name="catalogexecutions-ssisdb-database"></a>catalog.executions(SSISDB 데이터베이스)
 
@@ -46,19 +45,19 @@ ms.locfileid: "65714855"
 |use32bitruntime|**bit**|64비트 운영 체제에서 32비트 런타임을 사용하여 패키지를 실행해야 하는지 여부를 나타냅니다. 값이 `1`이면 32비트 런타임으로 실행이 수행됩니다. 값이 `0`이면 64비트 런타임으로 실행이 수행됩니다.|  
 |object_type|**smallint**|개체의 유형입니다. 개체는 프로젝트(`20`) 또는 패키지(`30`)일 수 있습니다.|  
 |object_id|**bigint**|작업의 영향을 받는 개체의 ID입니다.|  
-|상태|**ssNoversion**|작업의 상태입니다. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
+|상태|**int**|작업의 상태입니다. 가능한 값은 생성됨(`1`), 실행 중(`2`), 취소됨(`3`), 실패(`4`), 보류 중(`5`), 갑자기 종료됨(`6`), 성공(`7`), 중지 중(`8`) 및 완료(`9`)입니다.|  
 |start_time|**datetimeoffset**|실행 인스턴스가 시작된 시간입니다.|  
 |end_time|**datetimeoffsset**|실행 인스턴스가 종료된 시간입니다.|  
 |caller_sid|**varbinary(85)**|Windows 인증을 사용하여 로그온한 사용자의 보안 ID(SID)입니다.|  
 |caller_name|**nvarchar(128)**|작업을 수행한 계정의 이름입니다.|  
-|process_id|**ssNoversion**|외부 프로세스의 프로세스 ID입니다(해당되는 경우).|  
+|process_id|**int**|외부 프로세스의 프로세스 ID입니다(해당되는 경우).|  
 |stopped_by_sid|**varbinary(85)**|실행 인스턴스를 중지한 사용자의 보안 ID(SID)입니다.|  
 |stopped_by_name|**nvarchar(128)**|실행 인스턴스를 중지한 사용자의 이름입니다.|  
 |total_physical_memory_kb|**bigint**|실행이 시작될 때 서버의 실제 메모리 전체 크기(MB)입니다.|  
 |available_physical_memory_kb|**bigint**|실행이 시작될 때 서버의 가용 실제 메모리 전체 크기(MB)입니다.|  
 |total_page_file_kb|**bigint**|실행이 시작될 때 서버의 페이지 메모리 전체 크기(MB)입니다.|  
 |available_page_file_kb|**bigint**|실행이 시작될 때 서버의 가용 페이지 메모리 전체 크기(MB)입니다.|  
-|cpu_count|**ssNoversion**|실행이 시작될 때 서버의 논리적 CPU 수입니다.|  
+|cpu_count|**int**|실행이 시작될 때 서버의 논리적 CPU 수입니다.|  
 |server_name|**nvarchar(128)**|Windows 서버 및 지정된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 인스턴스 정보입니다.|  
 |machine_name|**nvarchar(128)**|서버 인스턴스가 실행 중인 컴퓨터 이름입니다.|  
 |dump_id|**uniqueidentifier**|실행 덤프의 ID입니다.|  

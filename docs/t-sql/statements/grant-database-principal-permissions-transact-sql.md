@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 012588a2-cbe1-48f0-a731-b4a2b83203d5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c95e031051e15af24ac854e4cf42cadcdb2431e0
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: b681050bdcb101078a8dbab6027e8a2fc162ba4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065501"
 ---
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -146,7 +145,7 @@ GRANT permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다.  
   
  AS 옵션을 사용하는 경우 다음과 같은 추가 요구 사항이 적용됩니다.  
@@ -168,7 +167,7 @@ GRANT permission [ ,...n ]
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>1. 다른 사용자에게 사용자에 대한 CONTROL 권한 부여  
+### <a name="a-granting-control-permission-on-a-user-to-another-user"></a>1\. 다른 사용자에게 사용자에 대한 CONTROL 권한 부여  
  다음 예에서는 사용자 `CONTROL`에게 사용자 `AdventureWorks2012`의 `Wanida`에 대한 `RolandX` 권한을 부여합니다.  
   
 ```  
@@ -176,7 +175,7 @@ GRANT CONTROL ON USER::Wanida TO RolandX;
 GO  
 ```  
   
-### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>2. GRANT OPTION을 지정하여 사용자에게 역할에 대한 VIEW DEFINITION 권한 부여  
+### <a name="b-granting-view-definition-permission-on-a-role-to-a-user-with-grant-option"></a>2\. GRANT OPTION을 지정하여 사용자에게 역할에 대한 VIEW DEFINITION 권한 부여  
  다음 예에서는 `VIEW DEFINITION`을 지정하여 데이터베이스 사용자 `AdventureWorks2012`에게 `SammamishParking` 역할 `GRANT OPTION`에 대한 `JinghaoLiu` 권한을 부여합니다.  
   
 ```  
@@ -185,7 +184,7 @@ GRANT VIEW DEFINITION ON ROLE::SammamishParking
 GO  
 ```  
   
-### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>3. 응용 프로그램 역할에 사용자에 대한 IMPERSONATE 권한 부여  
+### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. 응용 프로그램 역할에 사용자에 대한 IMPERSONATE 권한 부여  
  다음 예에서는 `IMPERSONATE` 응용 프로그램 역할 `HamithaL`에 대해 사용자 `AdventureWorks2012`에 대한 `AccountsPayable17` 권한을 부여합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  

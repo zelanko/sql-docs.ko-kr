@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5c6adc27241ca7668a353b9b5b74d75c18e0e4ac
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 862d99fd57b22e1643ce2591fccfb0478b664074
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67679847"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267690"
 ---
 # <a name="specify-a-hit-count"></a>적중 횟수 지정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

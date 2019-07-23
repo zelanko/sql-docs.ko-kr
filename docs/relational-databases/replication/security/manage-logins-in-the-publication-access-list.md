@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fceb216b-0b18-4e3b-8ae0-13e35920dcbc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6d0c686bcc52732f1fa25a4e4b4b83b776bb8633
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2e8ebae67cbe6f4619803648795254ea7a51413
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046685"
 ---
 # <a name="manage-logins-in-the-publication-access-list"></a>게시 액세스 목록에서 로그인 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

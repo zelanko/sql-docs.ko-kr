@@ -4,18 +4,17 @@ description: 이 페이지에서는 관계형 데이터 원본에 대해 외부 
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-manager: craigg
 ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42bd59fc668009fbb367f282c1c2d4ac3296ad41
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f0e0c5ec609670e6ce1483a9bdbdf81f223b3481
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041108"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>관계형 데이터 원본과 함께 외부 테이블 마법사 사용
 

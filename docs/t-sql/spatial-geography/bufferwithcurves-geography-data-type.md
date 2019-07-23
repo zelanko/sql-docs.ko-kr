@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: 81222e73df527d5d51a592dd2cabe62384b5f936
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f0e5927216d6bc0ff1acbb2146d7f23c31012ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937321"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066548"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "65937321"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>1. 1차원 geography 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
+### <a name="a-calling-bufferwithcurves-with-a-parameter-value--0-on-one-dimensional-geography-instance"></a>1\. 1차원 geography 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
  다음 예에서는 빈 `GeometryCollection` 인스턴스를 반환합니다.  
   
  ```sql
@@ -80,7 +79,7 @@ ms.locfileid: "65937321"
  SELECT @g.BufferWithCurves(-1).ToString();
 ``` 
   
-### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geography-instance"></a>2. 2차원 geography 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
+### <a name="b-calling-bufferwithcurves-with-a-parameter-value--0-on-a-two-dimensional-geography-instance"></a>2\. 2차원 geography 인스턴스에서 매개 변수 값 < 0인 BufferWithCurves() 호출  
  다음 예에서는 버퍼가 음수인 `CurvePolygon` 인스턴스를 반환합니다.  
   
  ```sql

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e110e8136388bc32c275a3e1230eb595390827e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b92660ac902061aabe0c8f19eb1a17891529d93b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904166"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제
 

@@ -11,14 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 957e5a385f40f25bc608088b981853e23daf1dec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bbf25218547548bf48c6eaf7c57c0a000e84c85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022484"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 SQL Server 관리 개체 지원
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,19 +27,19 @@ ms.locfileid: "47741601"
 
 다음 형식과 멤버는 네임스페이스 **Microsoft.SqlServer.Management.Smo**에 있으며 메모리 내 OLTP를 지원합니다.
 
-- **<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>**(열거형)
-- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (속성)
-- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (생성자)
-- **<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>**(열거형)
-- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (속성)
-- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (열거형 멤버)
-- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (속성)
-- Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (속성)
-- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (속성)
-- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (속성)
-- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (속성)
-- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (속성)
-- UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (속성)
+- **<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** (열거형)
+- FileGroup. **<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (속성)
+- FileGroup. **<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (생성자)
+- **<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (열거형)
+- Index. **<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (속성)
+- IndexType. **<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (열거형 멤버)
+- Index. **<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (속성)
+- Server. **<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (속성)
+- StoredProcedure. **<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (속성)
+- StoredProcedure. **<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (속성)
+- Table. **<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (속성)
+- Table. **<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (속성)
+- UserDefinedTableType. **<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (속성)
 
 ## <a name="c-code-example"></a>C# 코드 예제
 

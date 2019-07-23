@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: b2aa1fc8-e7af-45d2-9f80-737543c8aa95
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a5d923201600adcf0e1bb4026e3feee28dea7e97
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 37da86b825ee68be83d0aa653005a1ea12db5ed7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050815"
 ---
 # <a name="grant-schema-permissions-transact-sql"></a>GRANT 스키마 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -79,7 +78,7 @@ AS *granting_principal*
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다. 테이블에 대한 ALTER 권한과 함수에 대한 REFERENCE 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 있어야 합니다.  
+>  일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어 테이블에 대한 ALTER 권한과 함수에 대한 REFERENCE 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 있어야 합니다.  
   
  스키마는 사용 권한 계층에서 부모 데이터베이스에 포함된 데이터베이스 수준 보안 개체입니다. 아래에는 스키마에 부여할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
   
@@ -111,7 +110,7 @@ AS *granting_principal*
   
  자세한 내용은 Microsoft 기술 자료 문서 번호 914847을 참조하십시오.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다.  
   
  AS 옵션을 사용하는 경우 다음과 같은 추가 요구 사항이 적용됩니다.  
@@ -133,13 +132,13 @@ AS *granting_principal*
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-insert-permission-on-schema-humanresources-to-guest"></a>1. 게스트에게 HumanResources 스키마에 대한 INSERT 사용 권한 부여  
+### <a name="a-granting-insert-permission-on-schema-humanresources-to-guest"></a>1\. 게스트에게 HumanResources 스키마에 대한 INSERT 사용 권한 부여  
   
 ```  
 GRANT INSERT ON SCHEMA :: HumanResources TO guest;  
 ```  
   
-### <a name="b-granting-select-permission-on-schema-person-to-database-user-wiljo"></a>2. 데이터베이스 사용자 WilJo에게 Person 스키마에 대한 SELECT 사용 권한 부여  
+### <a name="b-granting-select-permission-on-schema-person-to-database-user-wiljo"></a>2\. 데이터베이스 사용자 WilJo에게 Person 스키마에 대한 SELECT 사용 권한 부여  
   
 ```  
 GRANT SELECT ON SCHEMA :: Person TO WilJo WITH GRANT OPTION;  

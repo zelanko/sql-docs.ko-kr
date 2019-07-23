@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 040c30ce4c48ce8d1fc596b88bae4bc1fec242aa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 43970780903aa0a4d5aef84f971ac230f2f26358
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065728"
 ---
 # <a name="alter-database-transact-sql-set-hadr"></a>ALTER DATABASE(Transact-SQL) SET HADR 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ALTER DATABASE database_name
  SET HADR  
  지정한 데이터베이스에 대해 지정한 [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 명령을 실행합니다.  
   
- { AVAILABILITY GROUP **=**_group_name_ | OFF }  
+ { AVAILABILITY GROUP **=** _group_name_ | OFF }  
  다음과 같이 지정한 데이터베이스를 지정한 가용성 그룹에 조인하거나 그룹에서 제거합니다.  
   
  *group_name*  
@@ -129,7 +128,7 @@ ALTER DATABASE database_name
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER 권한이 필요합니다. 데이터베이스를 가용성 그룹에 조인하려면 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ## <a name="examples"></a>예  
@@ -143,7 +142,7 @@ ALTER DATABASE AccountsDb1 SET HADR AVAILABILITY GROUP = AccountsAG;
 >  컨텍스트에서 사용되는 이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 보려면 [가용성 그룹 만들기&#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/create-an-availability-group-transact-sql.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL &#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/alter-availability-group-transact-sql.md)   
  [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   
  [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [AlwaysOn 가용성 그룹 구성 문제 해결 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md) 

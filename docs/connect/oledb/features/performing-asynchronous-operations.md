@@ -1,6 +1,6 @@
 ---
-title: 비동기 작업을 수행 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버를 사용 하 여 비동기 작업을 수행합니다.
+title: 비동기 작업 수행 | Microsoft Docs
+description: SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 비동기 작업 수행
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, asynchronous operations
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 9893e66debd7c147a0d288d56dad5f6190789898
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4080e8147c4d2a05916f23051f61a9dbe3697b1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802938"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989020"
 ---
 # <a name="performing-asynchronous-operations"></a>비동기 작업 수행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "66802938"
 ## <a name="execution-and-rowset-initialization"></a>실행 및 행 집합 초기화  
  명령의 실행 결과를 비동기식으로 열도록 설계된 응용 프로그램에서는 DBPROP_ROWSET_ASYNCH 속성의 DBPROPVAL_ASYNCH_INITIALIZE 비트를 설정할 수 있습니다. **IDBInitialize::Initialize**, **ICommand::Execute**, **IOpenRowset::OpenRowset** 또는 **IMultipleResults::GetResult**를 호출하기 전에 이 비트를 설정할 경우 *riid* 인수를 IID_IDBAsynchStatus, IID_ISSAsynchStatus 또는 IID_IUnknown으로 설정해야 합니다.  
   
- 메서드는 행 집합 초기화가 즉시 완료되면 S_OK와 함께 즉시 반환되고 행 집합 초기화가 행 집합의 요청된 인터페이스로 설정된 *ppRowset*을 사용하여 비동기식으로 계속되면 DB_S_ASYNCHRONOUS와 함께 즉시 반환됩니다. OLE DB 드라이버의 SQL Server에 대 한 경우이 인터페이스 여야 **IDBAsynchStatus** 하거나 **ISSAsynchStatus**합니다. 행 집합이 완전히 초기화될 때까지 이 인터페이스는 일시 중단 상태에 있는 것처럼 동작하며 인터페이스에 대해 **IID_IDBAsynchStatus** 또는 **IID_ISSAsynchStatus**가 아닌 **QueryInterface**를 호출하면 E_NOINTERFACE가 반환될 수 있습니다. 소비자가 비동기 처리를 명시적으로 요청하지 않을 경우 행 집합은 동기식으로 초기화됩니다. 동기화 작업이 완료되었다는 메시지와 함께 **IDBAsynchStaus::GetStatus** 또는 **ISSAsynchStatus::WaitForAsynchCompletion**이 반환되면 요청된 모든 인터페이스를 사용할 수 있습니다. 이는 행 집합이 모두 채워지지는 않았지만 초기화가 완료되어 모든 기능이 올바로 작동함을 의미합니다.  
+ 메서드는 행 집합 초기화가 즉시 완료되면 S_OK와 함께 즉시 반환되고 행 집합 초기화가 행 집합의 요청된 인터페이스로 설정된 *ppRowset*을 사용하여 비동기식으로 계속되면 DB_S_ASYNCHRONOUS와 함께 즉시 반환됩니다. SQL Server에 대 한 OLE DB 드라이버의 경우이 인터페이스는 **Idbasynchstatus** 또는 **ISSAsynchStatus**만 가능 합니다. 행 집합이 완전히 초기화될 때까지 이 인터페이스는 일시 중단 상태에 있는 것처럼 동작하며 인터페이스에 대해 **IID_IDBAsynchStatus** 또는 **IID_ISSAsynchStatus**가 아닌 **QueryInterface**를 호출하면 E_NOINTERFACE가 반환될 수 있습니다. 소비자가 비동기 처리를 명시적으로 요청하지 않을 경우 행 집합은 동기식으로 초기화됩니다. 동기화 작업이 완료되었다는 메시지와 함께 **IDBAsynchStaus::GetStatus** 또는 **ISSAsynchStatus::WaitForAsynchCompletion**이 반환되면 요청된 모든 인터페이스를 사용할 수 있습니다. 이는 행 집합이 모두 채워지지는 않았지만 초기화가 완료되어 모든 기능이 올바로 작동함을 의미합니다.  
   
  실행한 명령이 행 집합을 반환하지 않을 경우 이 명령은 계속 **IDBAsynchStatus**를 지원하는 개체와 함께 즉시 반환됩니다.  
   
@@ -65,7 +64,7 @@ ms.locfileid: "66802938"
   
  그러면 **QueryInterface**를 통해 여러 결과 인터페이스를 쿼리하여 **IDBAsynchStatus** 및 **ISSAsynchStatus** 인터페이스를 가져올 수 있습니다.  
   
- 명령 실행을 마치면 **IMultipleResults** 동기 사례에서 한 가지 예외를 사용 하 여 정상적으로 사용할 수 있습니다: DB_S_ASYNCHRONOUS을 반환할 수 있으며 이때 **IDBAsynchStatus** 또는 **ISSAsynchStatus** 작업이 완료 되 면 확인 하기 위해 사용할 수 있습니다.  
+ 명령 실행이 완료 되 면 **IMultipleResults** 를 정상적으로 사용할 수 있습니다 .이 경우에 **IDBAsynchStatus** 는 DB_S_ASYNCHRONOUS가 반환 될 수 있습니다. **ISSAsynchStatus** 를 사용 하 여 작업이 완료 된 시간을 확인할 수 있습니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 응용 프로그램에서 비블로킹 메서드를 호출하고 몇 가지 다른 처리를 수행한 다음 다시 호출 결과를 처리합니다. **ISSAsynchStatus::WaitForAsynchCompletion**은 비동기식으로 실행된 작업이 완료되거나 *dwMilisecTimeOut*으로 지정한 시간이 경과될 때까지 내부 이벤트 개체를 기다립니다.  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 7532fea5-ee5e-4edd-b98b-111a7ba56c8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 44cb6fa7f32616f7a1616c334c438b7a752546e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59b44b3356a0f71074543eb35107040ff8c47982
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071500"
 ---
 # <a name="fileidex-transact-sql"></a>FILE_IDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ FILE_IDEX ( file_name )
 파일 이름에 대해 파일 ID 값 ‘FILE_IDEX’를 반환하는 **sysname** 형식의 식입니다. 
   
 ## <a name="return-types"></a>반환 형식  
-**ssNoversion**  
+**int**  
   
 오류 발생 시 **NULL**  
   

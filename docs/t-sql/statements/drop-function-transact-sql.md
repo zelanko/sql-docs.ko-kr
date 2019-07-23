@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: ee5ad283-9e44-4109-902f-0ce12669ee11
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9aea2cb62ad12745a8ad03fd9998a47ee77173e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b318f7be6b403cb540305eb492cf99a776efc9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044236"
 ---
 # <a name="drop-function-transact-sql"></a>DROP FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,12 +70,12 @@ DROP FUNCTION [ schema_name. ] function_name
   
  DROP FUNCTION은 이 함수를 참조하고 인덱싱된 계산 열이 있는 경우 실패합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  DROP FUNCTION을 실행하려면 사용자에게 최소한 해당 함수가 속한 스키마에 대한 ALTER 권한이나 해당 함수에 대한 CONTROL 권한이 있어야 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-a-function"></a>1. 함수 삭제  
+### <a name="a-dropping-a-function"></a>1\. 함수 삭제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]예제 데이터베이스의 `Sales` 스키마에서 `fn_SalesByStore` 사용자 정의 함수를 삭제합니다. 이 함수를 만들려면의 [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md)에서 예제 B를 참조 하십시오.  
   
 ```  

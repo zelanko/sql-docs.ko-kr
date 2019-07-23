@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: e94720a8-a3a2-4364-b0a3-bbe86e3ce4d5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: edc81e7f148a2d0c2572da4902a90499baf9db7e
-ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
+ms.openlocfilehash: f51227380aa0e3cacebceaae246df672d3fcd663
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67866286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056047"
 ---
 # <a name="manage-trigger-security"></a>트리거 보안 관리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

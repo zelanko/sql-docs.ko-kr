@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0afa469d682aac12e35ddf0bad15091cdac14364
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1385a80df97bc02af60cb5c151424dc79bd03913
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109448"
 ---
 # <a name="isdate-transact-sql"></a>ISDATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +60,7 @@ ISDATE ( expression )
  문자열이거나 문자열로 변환할 수 있는 [expression](../../t-sql/language-elements/expressions-transact-sql.md)입니다. 이 식은 4,000자 미만이어야 합니다. datetime 및 smalldatetime을 제외하고 날짜 및 시간 데이터 형식은 ISDATE에 대한 인수로 허용되지 않습니다.  
   
 ## <a name="return-type"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  ISDATE는 [CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) 함수와 함께 사용하고 CONVERT 스타일 매개 변수가 지정되고 스타일이 0, 100, 9 또는 109가 아닌 경우에만 결정적입니다.  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: cd83fa81-ac37-4eda-a3c3-17610b051de2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ea11cc0403c9a417437c7b92d0eec5c46bcffb69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95ca1cbd0929607b45c8f9cc429d4224a60b555c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068261"
 ---
 # <a name="mssqlserver10507"></a>MSSQLSERVER_10507
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "63048399"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름|PG_STMT_DOES_NOT_MATCH|  
-|메시지 텍스트|**@stmt** 및 **@module_or_batch** 또는 **@plan_handle** 및 **@statement_start_offset**으로 지정된 문이 지정된 모듈 또는 일괄 처리 문과 일치하지 않아 계획 지침 '%.\*ls'을(를) 만들 수 없습니다. 모듈 또는 일괄 처리 문과 일치하도록 값을 수정하십시오.|  
+|메시지 텍스트|**@stmt** 및 **@module_or_batch** 또는 **@plan_handle** 및 **@statement_start_offset** 으로 지정된 문이 지정된 모듈 또는 일괄 처리 문과 일치하지 않아 계획 지침 '%.\*ls'을(를) 만들 수 없습니다. 모듈 또는 일괄 처리 문과 일치하도록 값을 수정하십시오.|  
   
 ## <a name="explanation"></a>설명  
 지정한 모듈 또는 일괄 처리 문이 지정된 문 또는 문 오프셋 값과 일치하지 않습니다.  

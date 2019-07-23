@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 0544da48-0ca3-4a01-ba4c-940e23dc315b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f691bd99036ea6b27f9f20cd53e8d6bc72312224
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: e1340fd34fe452babf96a3bcd7fcd205a0aa85b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060993"
 ---
 # <a name="create-database-audit-specification-transact-sql"></a>CREATE DATABASE AUDIT SPECIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -86,14 +85,14 @@ CREATE DATABASE AUDIT SPECIFICATION audit_specification_name
 ## <a name="remarks"></a>Remarks  
  데이터베이스 감사 사양은 지정된 데이터베이스에 있는 비보안 개체입니다. 데이터베이스 감사 사양을 처음 만들 때는 사용할 수 없는 상태입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  `ALTER ANY DATABASE AUDIT` 권한이 있는 사용자는 데이터베이스 감사 사양을 만들어 모든 감사에 바인딩할 수 있습니다.  
   
  생성된 데이터베이스 감사 사양은 `CONTROL SERVER`,`ALTER ANY DATABASE AUDIT`권한이 있는 보안 주체 또는 `sysadmin` 계정이 볼 수 있습니다.  
   
 ## <a name="examples"></a>예
 
-### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>1. 데이터베이스 감사 주체에 대해 테이블에서 SELECT 및 INSERT 감사 
+### <a name="a-audit-select-and-insert-on-a-table-for-any-database-principal"></a>1\. 데이터베이스 감사 주체에 대해 테이블에서 SELECT 및 INSERT 감사 
  다음 예에서는 `Payrole_Security_Audit`라는 서버 감사를 만들고 `AdventureWorks2012` 데이터베이스의 `HumanResources.EmployeePayHistory` 테이블에 대해 사용자(`public`)의 `SELECT` 및 `INSERT` 문을 감사하는 `Payrole_Security_Audit`라는 데이터베이스 감사 사양을 만듭니다.  
   
 ```  
@@ -120,7 +119,7 @@ WITH (STATE = ON) ;
 GO  
 ``` 
 
-### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>2. 특정 데이터베이스 역할에 대해 _sales_ 스키마에서 _모든_ 개체에 대해 DML(INSERT, UPDATE 또는 DELETE) 감사  
+### <a name="b-audit-any-dml-insert-update-or-delete-on-all-objects-in-the-sales-schema-for-a-specific-database-role"></a>2\. 특정 데이터베이스 역할에 대해 _sales_ 스키마에서 _모든_ 개체에 대해 DML(INSERT, UPDATE 또는 DELETE) 감사  
  다음 예에서는 `DataModification_Security_Audit`라는 서버 감사를 만든 다음, `AdventureWorks2012` 데이터베이스의 `Sales` 스키마에 있는 모든 개체에 대해 새 데이터베이스 역할 `SalesUK`의 사용자에 의한 `INSERT`, `UPDATE` 및 `DELETE` 문을 감사하는 `Audit_Data_Modification_On_All_Sales_Tables`라는 데이터베이스 감사 사양을 만듭니다.  
   
 ```  

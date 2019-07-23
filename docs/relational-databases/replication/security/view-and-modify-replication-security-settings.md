@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: aa4ed7aa2eaf3d10ec2b69860b71b8b612cc9ff8
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: 55b838b7fb324cf15b3bf4967d1de68706a337d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051745"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>복제 보안 설정 보기 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -91,9 +90,9 @@ ms.locfileid: "67860614"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>스냅샷 에이전트의 보안 설정을 변경하려면  
   
-1.  **게시 속성 - \<게시>** 대화 상자의 **에이전트 보안** 페이지에서 **스냅숏 에이전트** 입력란 옆에 있는 **보안 설정** 단추를 클릭합니다.  
+1.  **게시 속성 - \<게시&gt;** 대화 상자의 **에이전트 보안** 페이지에서 **스냅샷 에이전트** 입력란 옆에 있는 **보안 설정** 단추를 클릭합니다.  
   
-2.  **스냅숏 에이전트 보안** 대화 상자에서 에이전트가 실행될 계정을 지정합니다.  
+2.  **스냅샷 에이전트 보안** 대화 상자에서 에이전트가 실행될 계정을 지정합니다.  
   
     -   **에이전트 계정** 입력란에 새 Windows 계정을 입력합니다.  
   

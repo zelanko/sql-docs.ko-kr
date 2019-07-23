@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 436d9afb-09c3-4838-9b54-4449a5178d0f
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: ccc290062027334e8d75f73f28680d351c94c20f
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: f8832355b2ef5ae1969d3bd98e84f654ba9cde16
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681887"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265056"
 ---
 # <a name="general-user-interface-elements"></a>일반 사용자 인터페이스 요소
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 1aac4a0582906ac74994ac45a932b4a781f97e37
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: c79a2c3da9ee7f877c3d13bf17ca7912117df883
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680750"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264699"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 사용 현황 및 진단 데이터 수집에 대한 로컬 감사
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

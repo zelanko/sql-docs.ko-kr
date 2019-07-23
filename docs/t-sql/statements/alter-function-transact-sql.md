@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 89f066ee-05ac-4439-ab04-d8c3d5911179
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 02860ad96192b9f67820381d34f9dc05c6fb54db
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d33471982d291ba1f57d7d3d64a918cec1cc5e91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067488"
 ---
 # <a name="alter-function-transact-sql"></a>ALTER FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -217,7 +216,7 @@ RETURNS return_data_type
   
  하나의 함수에 최대 2,100개의 매개 변수를 지정할 수 있습니다. 매개 변수에 기본값이 정의되지 않은 경우 함수를 실행할 때 사용자가 선언된 각 매개 변수의 값을 지정해야 합니다.  
   
- "at" 기호(**@**)를 첫 번째 문자로 사용하여 매개 변수 이름을 지정하십시오. 매개 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 매개 변수는 함수에서 로컬로 사용되므로 다른 함수에서 동일한 매개 변수 이름을 사용할 수 있습니다. 매개 변수는 상수 대신 사용할 수 있지만 테이블 이름, 열 이름 또는 다른 데이터베이스 개체의 이름 대신 사용할 수는 없습니다.  
+ "at" 기호( **@** )를 첫 번째 문자로 사용하여 매개 변수 이름을 지정하십시오. 매개 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 매개 변수는 함수에서 로컬로 사용되므로 다른 함수에서 동일한 매개 변수 이름을 사용할 수 있습니다. 매개 변수는 상수 대신 사용할 수 있지만 테이블 이름, 열 이름 또는 다른 데이터베이스 개체의 이름 대신 사용할 수는 없습니다.  
   
 > [!NOTE]  
 >  저장 프로시저 또는 사용자 정의 함수에 매개 변수를 전달할 때 또는 일괄 처리 문에서 변수를 선언하고 설정할 때 ANSI_WARNINGS는 인식되지 않습니다. 예를 들어 변수가 **char(3)** 로 정의된 경우 3자보다 큰 값으로 설정하면 해당 데이터가 정의된 크기로 잘리고 INSERT 또는 UPDATE 문은 성공합니다.  
@@ -233,7 +232,7 @@ RETURNS return_data_type
   
 -   현재 데이터베이스의 **dbo** 스키마  
   
- [ **=**_default_ ]  
+ [ **=** _default_ ]  
  매개 변수의 기본값입니다. *기본* 값이 정의되어 있으면 해당 매개 변수 값을 지정하지 않아도 함수를 실행할 수 있습니다.  
   
 > [!NOTE]  
@@ -255,11 +254,11 @@ RETURNS return_data_type
  스칼라 함수가 스칼라 값을 반환하도록 지정합니다.  
   
  TABLE  
- 테이블 반환 함수의 반환 값이 테이블임을 지정합니다. 상수 및 **@**_local\_variables_만 테이블 반환 함수에 전달할 수 있습니다.  
+ 테이블 반환 함수의 반환 값이 테이블임을 지정합니다. 상수 및 **@** _local\_variables_만 테이블 반환 함수에 전달할 수 있습니다.  
   
  인라인 테이블 반환 함수에서 TABLE 반환 값은 단일 SELECT 문을 통해 정의됩니다. 인라인 함수에는 연관된 반환 변수가 없습니다.  
   
- 다중 문 테이블 반환 함수에서 **@**_return\_variable_은 TABLE 변수이며 함수의 값으로 반환되어야 하는 행을 저장하고 누적하는 데 사용됩니다. **@**_return\_variable_은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에서만 지정할 수 있으며 CLR 함수에서는 지정할 수 없습니다.  
+ 다중 문 테이블 반환 함수에서 **@** _return\_variable_은 TABLE 변수이며 함수의 값으로 반환되어야 하는 행을 저장하고 누적하는 데 사용됩니다. **@** _return\_variable_은 [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에서만 지정할 수 있으며 CLR 함수에서는 지정할 수 없습니다.  
   
  *select-stmt*  
  인라인 테이블 반환 함수의 반환 값을 정의하는 단일 SELECT 문입니다.  
@@ -267,7 +266,7 @@ RETURNS return_data_type
  EXTERNAL NAME \<method_specifier>*assembly_name.class_name*.*method_name*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 함수와 바인딩할 어셈블리의 메서드를 지정합니다. *assembly_name*은 표시 유형이 지정되어 있는 현재 데이터베이스에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기존 어셈블리와 일치해야 합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에서 클래스로 존재해야 합니다. 클래스가 마침표(**.**)를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름을 가질 경우 클래스 이름은 대괄호(**[]**) 또는 큰따옴표(**""**)를 사용하여 구분되어야 합니다. *method_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 지정된 클래스에서 정적 메서드로 존재해야 합니다.  
+ 함수와 바인딩할 어셈블리의 메서드를 지정합니다. *assembly_name*은 표시 유형이 지정되어 있는 현재 데이터베이스에 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기존 어셈블리와 일치해야 합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에서 클래스로 존재해야 합니다. 클래스가 마침표( **.** )를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름을 가질 경우 클래스 이름은 대괄호( **[]** ) 또는 큰따옴표( **""** )를 사용하여 구분되어야 합니다. *method_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 지정된 클래스에서 정적 메서드로 존재해야 합니다.  
   
 > [!NOTE]  
 >  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드를 실행할 수 없습니다. 공용 언어 런타임 모듈을 참조하는 데이터베이스 개체를 생성, 수정 및 삭제할 수 있지만 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정할 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 참조를 실행할 수 없습니다. 이 옵션을 설정하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용합니다.  
@@ -275,10 +274,10 @@ RETURNS return_data_type
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
- _\<_table\_type\_definition_\>_**(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,**...*n* ]**)**  
+ _\<_table\_type\_definition_\>_ **(** { \<column_definition\> \<column\_constraint\> | \<computed\_column\_definition\> } [ \<table\_constraint\> ] [ **,** ...*n* ] **)**  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 정의와 열 또는 테이블 제약 조건이 포함됩니다.  
   
-\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,**...*n* ] **)** **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([일부 지역에서는 미리보기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))  
+\< clr_table_type_definition \> **(** { *column_name**data_type* } [ **,** ...*n* ] **)** **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([일부 지역에서는 미리보기](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag))  
   
  CLR 함수에 대한 테이블 데이터 형식을 정의합니다. 테이블 선언에는 열 이름과 데이터 형식만 포함됩니다.  
   
@@ -405,7 +404,7 @@ RETURNS return_data_type
   
  PRIMARY KEY 또는 UNIQUE 인덱스에 대한 인덱스 옵션을 지정합니다. 인덱스 옵션에 대한 자세한 내용은 [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)을 참조하세요.  
   
- PAD_INDEX = { ON | OFF }  
+ PAD_INDEX  =  {  ON  |  OFF  }  
  인덱스 패딩을 지정합니다. 기본값은 OFF입니다.  
   
  FILLFACTOR = *fillfactor*  
@@ -435,7 +434,7 @@ RETURNS return_data_type
 -   RECEIVE  
 -   SEND  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  함수 또는 스키마에 대한 ALTER 권한이 필요합니다. 함수에 사용자 정의 형식이 지정되면 해당 유형에 대한 EXECUTE 권한이 필요합니다.  
   
 ## <a name="see-also"></a>참고 항목  

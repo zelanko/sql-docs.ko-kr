@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-manager: jroth
-ms.openlocfilehash: 65d7c56f399a9bd8ba6fb4d68311fe7823fa2eab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 440855051e0927bf4d660224fdbeba64bace1a4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059039"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ ms.locfileid: "66794529"
 -   [쿼리 저장소](#query-store)
 -   [임시 테이블](#temporal-tables)
 -   [Microsoft Azure Blob Storage에 대한 스트라이프 백업](#striped-backups-to-microsoft-azure-blob-storage)
--   [Microsoft Azure Blob Storage에 대한 파일-스냅숏 백업](#file-snapshot-backups-to-microsoft-azure-blob-storage)
+-   [Microsoft Azure Blob Storage에 대한 파일-스냅샷 백업](#file-snapshot-backups-to-microsoft-azure-blob-storage)
 -   [Managed Backup](#managed-backup)
 -   [TempDB 데이터베이스](#tempdb-database)
 -   [기본 제공 JSON 지원](#built-in-json-support)
@@ -243,7 +242,7 @@ Insert select 문에서 Insert는 다중 스레드 형식이거나, 병렬 계�
 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]에서 Microsoft Azure Blob Storage 서비스를 사용하는 URL에 SQL Server 백업 기능에서 12.8TB의 최대 백업 크기를 지원하는 블록 Blob을 사용하여 스트라이프 백업 세트를 지원합니다. 예를 보려면 [Code Examples](../relational-databases/backup-restore/sql-server-backup-to-url.md#Examples)를 참조하세요.
 
 ### <a name="file-snapshot-backups-to-microsoft-azure-blob-storage"></a>Microsoft Azure Blob Storage에 대한 파일-스냅샷 백업
- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]의 URL에 대한 SQL Server 백업 기능에서는 이제 Azure 스냅숏을 사용하여 모든 데이터베이스 파일이 Microsoft Azure Blob Storage 서비스를 통해 저장되는 데이터베이스를 백업할 수 있습니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.
+ [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]의 URL에 대한 SQL Server 백업 기능에서는 이제 Azure 스냅샷을 사용하여 모든 데이터베이스 파일이 Microsoft Azure Blob Storage 서비스를 통해 저장되는 데이터베이스를 백업할 수 있습니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.
 
 ### <a name="managed-backup"></a>Managed Backup
 Microsoft Azure에 대한 [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] SQL Server Managed Backup에서는 백업 파일에 새 블록 Blob 스토리지를 사용합니다. Managed Backup에 대한 몇 가지 변경 내용과 향상된 기능도 있습니다.

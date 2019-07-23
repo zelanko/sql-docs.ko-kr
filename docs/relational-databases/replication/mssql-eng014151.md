@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54b45e70-46b3-4c7a-a5bf-06f6dd028ceb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fe24bc816174f7e3ee21d91bd7c2028427655e3c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ae48559351b032e42c39fe9091f4d2e090fd4715
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100201"
 ---
 # <a name="mssqleng014151"></a>MSSQL_ENG014151
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,6 +56,6 @@ ms.locfileid: "54133114"
  [복제 로그 판독기 에이전트](../../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [복제 병합 에이전트](../../relational-databases/replication/agents/replication-merge-agent.md)   
  [복제 큐 판독기 에이전트](../../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [복제 스냅숏 에이전트](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   

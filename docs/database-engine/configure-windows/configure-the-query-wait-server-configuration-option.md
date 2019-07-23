@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0fc4aa01-65a3-4a33-9ef4-caca41add238
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: a0ae01b1bbf0242cc3912d57c50d5e91d2864586
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bcba6def4229175c46a981dd03037006bfba2aa2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012374"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>query wait 서버 구성 옵션 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

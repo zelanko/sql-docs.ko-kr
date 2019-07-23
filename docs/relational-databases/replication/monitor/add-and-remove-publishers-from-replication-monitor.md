@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fa36c4b4-bfa5-494e-92e3-07a02d7332c3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4a67f087349214623cf76012d12a85abb9c8df51
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 24cc3942c0b4df2f49ec4f40a394f07e60b1efd7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018631"
 ---
 # <a name="add-and-remove-publishers-from-replication-monitor"></a>복제 모니터에서 게시자 추가 및 제거
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

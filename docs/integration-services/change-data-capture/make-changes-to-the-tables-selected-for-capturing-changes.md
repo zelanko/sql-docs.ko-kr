@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a309f82a-c6ef-464d-a6ef-df555bfb609a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3ccaf1145b4d1c2b1f0c0c72adb67e6eecc4f1b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d363df2409f51186a3b459e2e75398c6f5e1dd4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101704"
 ---
 # <a name="make-changes-to-the-tables-selected-for-capturing-changes"></a>변경 캡처를 위해 선택된 테이블 변경
 

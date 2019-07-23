@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dbf800653dd5cfeaef9eca4867770852fc6af374
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad8f9e49ea1dd22184384b337d036991d9dc7f9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044108"
 ---
 # <a name="drop-partition-function-transact-sql"></a>DROP PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ DROP PARTITION FUNCTION partition_function_name [ ; ]
 ## <a name="remarks"></a>Remarks  
  현재 파티션 함수를 사용하는 파티션 구성표가 없는 경우에만 파티션 함수를 삭제할 수 있습니다. 파티션 함수를 사용하는 파티션 구성표가 있는 경우 DROP PARTITION FUNCTION은 오류를 반환합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  DROP PARTITION FUNCTION 함수를 실행하는 데 다음 권한을 사용할 수 있습니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  

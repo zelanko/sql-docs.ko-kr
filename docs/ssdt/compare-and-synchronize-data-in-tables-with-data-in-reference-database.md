@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 96d743b0-b69a-45bb-ae0e-62103dca76e2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 567855c53848a354ec03c8de7fea1bb37c1c2a21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 055731473f94003440f4a78c6446ec965f1d0a2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984670"
 ---
 # <a name="compare-and-synchronize-data-in-one-or-more-tables-with-data-in-a-reference-database"></a>하나 이상의 테이블에 있는 데이터를 참조 데이터베이스에 있는 데이터와 비교 및 동기화
 ‘원본’ 데이터베이스 및 ‘대상’ 데이터베이스의 데이터를 비교하고 비교할 테이블을 지정할 수 있습니다.   데이터를 검토하고 동기화할 변경 내용을 결정할 수 있습니다. 그런 후 대상을 업데이트해서 데이터베이스를 동기화하거나 업데이트 스크립트를 Transact\-SQL 편집기 또는 파일로 내보낼 수 있습니다.  

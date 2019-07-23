@@ -41,14 +41,13 @@ helpviewer_keywords:
 ms.assetid: 1f635762-f7aa-4241-9b7a-b51b22292b07
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 47dca205ad7ac3dd2a82ce404bc2e7fb20938346
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf78133d4efa7f055694306f7b7ab22f7937b73b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065760"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>ALTER DATABASE(Transact-SQL) 파일 및 파일 그룹 옵션
 
@@ -140,7 +139,7 @@ REMOVE FILE *logical_file_name* [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 *logical_file_name* 파일 참조 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 이름입니다.
 
 > [!WARNING]
-> `FILE_SNAPSHOT` 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅숏은 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
+> `FILE_SNAPSHOT` 백업과 연결된 데이터베이스 파일을 제거하는 것은 성공하지만 연결된 스냅샷은 데이터베이스 파일을 참조하는 백업이 무효화되는 것을 방지하기 위해 삭제되지 않습니다. 파일은 잘라지지만 FILE_SNAPSHOT 백업을 그대로 유지하기 위해 물리적으로 삭제되지는 않습니다. 자세한 내용은 [Microsoft Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요. **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
 
 MODIFY FILE 수정할 파일을 지정합니다. \<filespec> 속성은 한 번에 한 개씩만 변경할 수 있습니다. 수정할 파일을 식별하려면 \<filespec>에 항상 NAME을 지정해야 합니다. SIZE를 지정할 경우 새 크기가 현재 파일 크기보다 커야 합니다.
 

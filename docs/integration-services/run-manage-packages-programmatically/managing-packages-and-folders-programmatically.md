@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ec59b75d-ba09-44ac-9039-9d593bb462d9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: f38f79f90a1ec39a013efc4efd03a13f96e51a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb313fa34500cb9ae2d6f49bd930bd96e407bd2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65719116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028464"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>프로그래밍 방식으로 패키지 및 폴더 관리
 
