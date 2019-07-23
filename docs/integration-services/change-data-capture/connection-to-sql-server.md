@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5bb582f9-68d3-4c1e-ab02-6fc16807f1a5
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a3e9f70011d96d9aa5d5068af5cddecd8f29cce9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3dafccc85b6ca100177364ae9d33e55a8ddc93b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060849"
 ---
 # <a name="connection-to-sql-server"></a>SQL 서버에 연결
 
