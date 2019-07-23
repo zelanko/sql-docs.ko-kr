@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 698073b2-3f0c-449c-ad68-48144698fe8f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6f9ca7497c14da33d9e25b1c6a5ed934b7d96181
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c549d3e1b7b9b63663333a59b263a2aa6ad4113
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972672"
 ---
 # <a name="setstring-method-long-javalangstring-sqlservernclob"></a>setString 메서드(long, java.lang.String)(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정 된 기록 **문자열** 에 **NCLOB** 지정된 된 위치에서 시작 합니다.  
+  지정 된 **문자열** 을 지정 된 위치에서 시작 하는 **NCLOB** 에 씁니다.  
   
 ## <a name="syntax"></a>구문  
   

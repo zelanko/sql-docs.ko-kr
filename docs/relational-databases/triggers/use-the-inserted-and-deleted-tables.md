@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ed84567f-7b91-4b44-b5b2-c400bda4590d
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7c0c75d1bbeb25dade2bb8e333067fb244d8248
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e070cfc4b02ae52ab755306a29eb90c6afc912cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075505"
 ---
 # <a name="use-the-inserted-and-deleted-tables"></a>inserted 및 deleted 테이블 사용
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47831001"
 > [!NOTE]  
 >  트리거 동작이 데이터 수정의 영향을 받는 행의 수에 따라 달라지는 경우 여러 행 데이터 수정(SELECT 문을 기반으로 하는 INSERT, DELETE 또는 UPDATE)에 @@ROWCOUNT 검사 같은 테스트를 사용하고 적합한 작업을 수행합니다.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 inserted 및 deleted 테이블에서 AFTER 트리거에 대한 **text**, **ntext**또는 **image** 열 참조를 허용하지 않습니다. 하지만 이러한 데이터 형식은 단지 이전 버전과의 호환성을 위해 포함된 것입니다. 큰 데이터를 스토리지하는 경우 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용하는 것이 좋습니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터를 지원합니다. 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 inserted 및 deleted 테이블에서 AFTER 트리거에 대한 **text**, **ntext**또는 **image** 열 참조를 허용하지 않습니다. 하지만 이러한 데이터 형식은 단지 이전 버전과의 호환성을 위해 포함된 것입니다. 큰 데이터를 스토리지하는 경우 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식을 사용하는 것이 좋습니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터를 지원합니다. 자세한 내용은 [CREATE TRIGGER&#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)를 참조하세요.  
   
  **비즈니스 규칙을 적용하기 위해 트리거의 inserted 테이블을 사용하는 예**  
   
@@ -76,7 +75,7 @@ ms.locfileid: "47831001"
   
  INSERT, UPDATE 또는 DELETE 문에서 INSTEAD OF 트리거가 있는 뷰를 참조할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 테이블에 대해 직접 동작을 수행하는 대신 트리거를 호출합니다. 뷰에 대해 작성된 inserted 및 deleted 테이블의 정보 형식이 기본 테이블에 있는 데이터 형식과 다른 경우에도 트리거는 inserted 및 deleted 테이블에 있는 정보를 사용하여 기본 테이블에서 요청된 동작을 구현하는 데 필요한 문을 작성해야 합니다.  
   
- 뷰에 정의된 INSTEAD OF 트리거로 전달되는 inserted 및 deleted 테이블의 형식은 뷰에 대해 정의된 SELECT 문의 선택 목록과 일치합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 뷰에 정의된 INSTEAD OF 트리거로 전달되는 inserted 및 deleted 테이블의 형식은 뷰에 대해 정의된 SELECT 문의 선택 목록과 일치합니다. 예를 들어  
   
 ```  
 USE AdventureWorks2012;  

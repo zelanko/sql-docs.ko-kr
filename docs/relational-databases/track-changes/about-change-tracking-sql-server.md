@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5e0ef05a-8317-4c98-be20-b19d4cd78f12
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 63995b077cd041e79cad82cd1b5479ece1dc1328
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a9d361d6746a9900c0db3e3f955774b1d79fad20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058084"
 ---
 # <a name="about-change-tracking-sql-server"></a>변경 내용 추적 정보(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,17 +44,17 @@ ms.locfileid: "51558660"
 >  애플리케이션이 적용된 모든 변경 내용에 대한 정보와 변경된 데이터의 중간 값을 요구하면 변경 내용 추적 대신 변경 데이터 캡처를 사용하는 것이 좋습니다. 자세한 내용은 [변경 데이터 캡처 정보&#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)를 참조하세요.  
   
 ## <a name="one-way-and-two-way-synchronization-applications"></a>단방향 및 양방향 동기화 애플리케이션  
- [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스와 데이터를 동기화해야 하는 응용 프로그램은 변경 내용을 쿼리할 수 있어야 합니다. 변경 내용 추적은 단방향 및 양방향 동기화 애플리케이션 모두에 대한 기반으로 사용될 수 있습니다.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스와 데이터를 동기화해야 하는 애플리케이션은 변경 내용을 쿼리할 수 있어야 합니다. 변경 내용 추적은 단방향 및 양방향 동기화 애플리케이션 모두에 대한 기반으로 사용될 수 있습니다.  
   
 ### <a name="one-way-synchronization-applications"></a>단방향 동기화 애플리케이션  
  클라이언트 또는 중간 계층 캐싱 애플리케이션과 같은 단방향 동기화 애플리케이션은 변경 내용 추적을 사용하도록 구축할 수 있습니다. 다음 그림에서 볼 수 있듯이 캐싱 애플리케이션에서는 데이터가 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에 저장되어야 하고 다른 데이터 저장소에 캐시되어야 합니다. 애플리케이션은 데이터베이스 테이블에 수행된 변경 작업에 대해 캐시를 최신 상태로 유지할 수 있어야 합니다. 변경 내용은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]으로 다시 전달되지 않습니다.  
   
- ![단방향 동기화 응용 프로그램 표시](../../relational-databases/track-changes/media/one-waysync.gif "단방향 동기화 응용 프로그램 표시")  
+ ![단방향 동기화 애플리케이션 표시](../../relational-databases/track-changes/media/one-waysync.gif "단방향 동기화 애플리케이션 표시")  
   
 ### <a name="two-way-synchronization-applications"></a>양방향 동기화 애플리케이션  
  양방향 동기화 애플리케이션도 변경 내용 추적을 사용하도록 구축할 수 있습니다. 이 시나리오에서 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스의 데이터는 하나 이상의 데이터 저장소와 동기화됩니다. 이러한 저장소의 데이터는 업데이트가 가능하며 변경 내용은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]과 다시 동기화되어야 합니다.  
   
- ![양방향 동기화 응용 프로그램 표시](../../relational-databases/track-changes/media/two-waysync.gif "양방향 동기화 응용 프로그램 표시")  
+ ![양방향 동기화 애플리케이션 표시](../../relational-databases/track-changes/media/two-waysync.gif "양방향 동기화 애플리케이션 표시")  
   
  양방향 동기화 애플리케이션의 좋은 예는 간헐적으로 연결되는 애플리케이션입니다. 이러한 유형의 애플리케이션에서 클라이언트 애플리케이션은 로컬 저장소를 쿼리 및 업데이트합니다. 클라이언트와 서버 간에 연결을 사용할 수 있는 경우 애플리케이션은 서버와 동기화되고 변경된 데이터는 양방향으로 흐르게 됩니다.  
   

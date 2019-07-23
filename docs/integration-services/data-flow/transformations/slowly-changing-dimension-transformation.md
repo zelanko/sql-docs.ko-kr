@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 8ef0312076baa49f264baba5fbd3eaf24bce8a47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b867d0f1d8dff2c424a7b23d9f7cfa30565f483
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928158"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>느린 변경 차원 변환
 

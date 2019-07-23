@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b126e95-8458-41d6-af37-fc6662859f19
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4077f11e28bc382976eb3da441cfd42a24a567f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: eb5654563a0894abd497dfb0053b3e5667bf433d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916508"
 ---
 # <a name="using-a-stored-procedure-with-a-return-status"></a>반환 상태가 있는 저장 프로시저 사용
 
@@ -29,7 +28,7 @@ JDBC 드라이버를 사용하여 이러한 종류의 저장 프로시저를 호
 `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`
 
 > [!NOTE]  
-> SQL 이스케이프 시퀀스에 대 한 자세한 내용은 참조 하세요. [SQL 이스케이프 시퀀스를 사용 하 여](../../connect/jdbc/using-sql-escape-sequences.md)입니다.
+> SQL 이스케이프 시퀀스에 대 한 자세한 내용은 [Sql 이스케이프 시퀀스 사용](../../connect/jdbc/using-sql-escape-sequences.md)을 참조 하세요.
 
 `call` 이스케이프 시퀀스를 만드는 경우 물음표(?) 문자를 사용하여 입력 매개 변수를 지정합니다. 이 문자는 저장 프로시저에서 반환될 매개 변수 값에 대한 자리 표시자로 사용됩니다. 반환 상태 매개 변수에 대한 값을 지정하려면 저장 프로시저를 실행하기 전에 SQLServerCallableStatement 클래스의 [registerOutParameter](../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 메서드를 사용하여 매개 변수의 데이터 형식을 지정해야 합니다.
 

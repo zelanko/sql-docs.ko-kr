@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 70866dac-0a8f-4235-8108-51547949ada4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a7790e54a3418a7771f2355a071db9b8aab7a1d9
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.openlocfilehash: c2418bedb172464002fd640a50c8b57f3daca712
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071250"
 ---
 # <a name="alter-partition-function-transact-sql"></a>ALTER PARTITION FUNCTION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -101,7 +100,7 @@ ALTER PARTITION FUNCTION의 영향을 받는 모든 파일 그룹이 온라인 �
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 파티션 함수 수정을 위한 복제 지원을 제공하지 않습니다. 게시 데이터베이스 내의 파티션 함수에 대한 변경은 구독 데이터베이스에 수동으로 적용해야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 ALTER PARTITION FUNCTION을 실행하려면 다음 중 하나의 권한이 필요합니다.  
   
 -   ALTER ANY DATASPACE 권한. 이 권한은 기본적으로 **sysadmin** 고정 서버 역할 및 **db_owner** 및 **db_ddladmin** 고정 데이터베이스 역할의 멤버에게 부여됩니다.  
@@ -112,7 +111,7 @@ ALTER PARTITION FUNCTION을 실행하려면 다음 중 하나의 권한이 필�
   
 ## <a name="examples"></a>예  
   
-### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>1. 분할 테이블 또는 인덱스의 파티션을 두 개의 파티션으로 분할  
+### <a name="a-splitting-a-partition-of-a-partitioned-table-or-index-into-two-partitions"></a>1\. 분할 테이블 또는 인덱스의 파티션을 두 개의 파티션으로 분할  
 다음 예에서는 테이블이나 인덱스를 4개의 파티션으로 분할하는 파티션 함수를 만듭니다. `ALTER PARTITION FUNCTION`은 파티션 중 하나를 둘로 분할하여 총 5개의 파티션을 만듭니다.  
   
 ```sql  
@@ -130,7 +129,7 @@ ALTER PARTITION FUNCTION myRangePF1 ()
 SPLIT RANGE (500);  
 ```  
   
-### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>2. 분할된 테이블의 두 개의 파티션을 하나의 파티션으로 병합  
+### <a name="b-merging-two-partitions-of-a-partitioned-table-into-one-partition"></a>2\. 분할된 테이블의 두 개의 파티션을 하나의 파티션으로 병합  
 다음 예에서는 위의 예와 같은 파티션 함수를 만든 다음 두 개의 파티션을 하나로 병합하여 총 3개의 파티션을 만드는 방법을 보여 줍니다.  
   
 ```sql  

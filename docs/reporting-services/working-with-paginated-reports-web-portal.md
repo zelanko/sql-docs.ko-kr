@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: fb0bc38f-dc56-4350-8457-cd135c0346e1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7cab15eb6feb4a502957c7e8a1b929601cd6fd1a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 0516adde38fc7f6e9cc1b4e20bc9beef76a4df22
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537347"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68222663"
 ---
 # <a name="working-with-paginated-reports-web-portal"></a>페이지를 매긴 보고서 사용(웹 포털)
 
@@ -133,7 +133,7 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
   
 2.  **이 보고서의 복사본을 캐시하고 사용 가능할 때 사용** 은 데이터 임시 사본을 캐시에 보관하여 나중에 사용할 수 있도록 합니다. 캐시를 사용하면 데이터 세트 쿼리를 다시 실행하지 않고 캐시에서 바로 가져오기 때문에 일반적으로 성능이 향상됩니다. 이 방법을 사용하는 경우 10명의 사용자가 보고서를 열면 첫 번째로 요청된 보고서만 데이터 원본에 대한 쿼리가 됩니다. 보고서는 나중에 캐시되며 나머지 9명의 사용자는 캐시된 보고서를 볼 수 있습니다.  
   
-3.  **항상 사전 생성된 스냅숏에 대해 이 보고서 실행** 은 지정된 기간 동안 보고서 레이아웃 및 데이터를 캐시합니다. 보고서를 보고서 스냅샷으로 실행하면 임의의 시간에(예: 예약된 백업 시간 동안) 보고서가 실행되지 않도록 할 수 있습니다. 일정에 따라 스냅샷은 새로 고칠 수 있습니다. [자세히 알아보기]  
+3.  **항상 사전 생성된 스냅샷에 대해 이 보고서 실행** 은 지정된 기간 동안 보고서 레이아웃 및 데이터를 캐시합니다. 보고서를 보고서 스냅샷으로 실행하면 임의의 시간에(예: 예약된 백업 시간 동안) 보고서가 실행되지 않도록 할 수 있습니다. 일정에 따라 스냅샷은 새로 고칠 수 있습니다. [자세히 알아보기]  
   
 ![ssRSWebPortal-report-caching1](../reporting-services/media/ssrswebportal-report-caching1.png)  
    
@@ -191,6 +191,6 @@ Reporting Services 구독은 특정 시간 또는 이벤트에 대한 응답으�
 ## <a name="next-steps"></a>다음 단계
 
 [웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
-[공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
+[공유 데이터 세트 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014203"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>보조-주 복제본 읽기/쓰기 연결 리디렉션(Always On 가용성 그룹)
 
@@ -35,7 +34,7 @@ ms.locfileid: "54206309"
 
 ## <a name="use-cases"></a>사용 사례
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 이전에는 장애 조치(Failover) 후에 다시 연결되도록 하기 위해 AG 수신기 및 해당 클러스터 리소스가 사용자 트래픽을 주 복제본으로 리디렉션합니다. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]에서는 AG 수신기 기능을 계속 지원하고 수신기를 포함할 수 없는 시나리오를 위해 복제본 연결 리디렉션을 추가합니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] 이전에는 장애 조치(Failover) 후에 다시 연결되도록 하기 위해 AG 수신기 및 해당 클러스터 리소스가 사용자 트래픽을 주 복제본으로 리디렉션합니다. [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)]에서는 AG 수신기 기능을 계속 지원하고 수신기를 포함할 수 없는 시나리오를 위해 복제본 연결 리디렉션을 추가합니다. 예를 들어
 
 * SQL Server 가용성 그룹과 통합되는 클러스터 기술은 수신기 유사 기능을 제공하지 않습니다. 
 * 클라우드 또는 다중 서브넷 부동 IP(Pacemaker 포함)의 다중 서브넷 구성(관련된 여러 구성 요소로 인해 구성이 복잡해지고 오류가 발생하기 쉬우며 문제 해결이 어려움)

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2a3dde54-aace-42b1-97da-4b6a0918a346
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbc52376ee8e57a1eb4ee5c5c5ce3578b023e82a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0915de12eddfceff753b045c20400c3670a7500b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954140"
 ---
 # <a name="getasciistream-method-sqlservercallablestatement"></a>getAsciiStream 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "66799974"
 |속성|설명|  
 |----------|-----------------|  
 |[getAsciiStream &#40;int&#41;](../../../connect/jdbc/reference/getasciistream-int.md)|매개 변수 인덱스가 지정된 경우 지정된 매개 변수의 값을 **ASCII** 문자의 스트림으로 검색합니다.|  
-|[getAsciiStream &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getasciistream-java-lang-string.md)|매개 변수 이름이 지정된 경우 지정된 매개 변수의 값을 **ASCII** 문자의 스트림으로 검색합니다.|  
+|[getAsciiStream &#40;&#41;](../../../connect/jdbc/reference/getasciistream-java-lang-string.md)|매개 변수 이름이 지정된 경우 지정된 매개 변수의 값을 **ASCII** 문자의 스트림으로 검색합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

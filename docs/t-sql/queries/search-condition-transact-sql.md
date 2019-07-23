@@ -36,14 +36,13 @@ helpviewer_keywords:
 ms.assetid: 09974469-c5d2-4be8-bc5a-78e404660b2c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d95d03a9060c367c398327a1b771a730f341fa53
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c7d18395321a6ea4c077b251b1a838646af9b2a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027653"
 ---
 # <a name="search-condition-transact-sql"></a>검색 조건(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -206,7 +205,7 @@ ms.locfileid: "57334620"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-where-with-like-and-escape-syntax"></a>1. WHERE 절에 LIKE 및 ESCAPE 구문 사용  
+### <a name="a-using-where-with-like-and-escape-syntax"></a>1\. WHERE 절에 LIKE 및 ESCAPE 구문 사용  
  다음 예제에서는 `LargePhotoFileName` 열에 `green_` 문자가 있는 행을 검색하고, _이 와일드카드 문자이므로 `ESCAPE` 옵션을 사용합니다. `ESCAPE` 옵션을 지정하지 않으면 쿼리에서 `green` 단어 뒤에 _ 문자가 아닌 임의의 단일 문자가 포함된 설명 값을 검색합니다.  
   
 ```  
@@ -217,7 +216,7 @@ FROM Production.ProductPhoto
 WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;  
 ```  
   
-### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>2. WHERE 및 LIKE 구문에 유니코드 데이터 사용  
+### <a name="b-using-where-and-like-syntax-with-unicode-data"></a>2\. WHERE 및 LIKE 구문에 유니코드 데이터 사용  
  다음 예에서는 `WHERE` 절을 사용하여 미국(`US`) 이외의 국가에서 `Pa`으로 시작하는 시에 있는 모든 기업의 우편 주소를 검색합니다.  
   
 ```  

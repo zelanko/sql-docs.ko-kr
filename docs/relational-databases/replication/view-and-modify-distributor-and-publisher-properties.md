@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 43830b86ef02a0d9d3edf2db3ee8ebde129963c0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5d654627a3e35aacfebe4b3c69573eff83beaa39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115228"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>게시자 및 배포자 속성 보기 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "54133394"
   
 3.  **배포자 속성 - \<Distributor>** 대화 상자에서 속성을 보고 수정합니다.  
   
-    -   배포 데이터베이스의 속성을 보고 수정하려면 대화 상자의 **일반** 페이지에서 해당 데이터베이스에 대한 속성 단추(**...**)를 클릭합니다.  
+    -   배포 데이터베이스의 속성을 보고 수정하려면 대화 상자의 **일반** 페이지에서 해당 데이터베이스에 대한 속성 단추( **...** )를 클릭합니다.  
   
     -   배포자와 관련된 게시자 속성을 보고 수정하려면 대화 상자의**게시자**페이지에서 해당 게시자에 대한 속성 단추 ( **...** )를 클릭합니다.  
   

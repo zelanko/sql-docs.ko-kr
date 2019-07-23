@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 0aa2525686794462559e6dfea40aa65260e50b88
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9e4cc8da724c142d34280ebe8001a2aaa164c675
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690391"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263829"
 ---
 # <a name="description-property-dialog-box-visual-database-tools"></a>설명 속성 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

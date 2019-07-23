@@ -1,5 +1,5 @@
 ---
-title: 저장된 프로시저 (OLE DB) 실행 | Microsoft Docs
+title: 저장 프로시저 실행 (OLE DB) | Microsoft Docs
 description: 저장 프로시저 실행(OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -14,13 +14,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0059c7c6e03c9abb9edf4cb3db35f8435174d8fc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993798"
 ---
 # <a name="stored-procedures---running"></a>저장 프로시저 - 실행
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "66795899"
   
 -   기능 추가  
   
- OLE DB Driver for SQL Server를 지 원하는 세 가지 메커니즘을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 반환 데이터를 사용 하 여 저장된 프로시저:  
+ SQL Server에 대 한 OLE DB 드라이버는 저장 프로시저에서 데이터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 반환 하는 데 사용 하는 세 가지 메커니즘을 지원 합니다.  
   
 -   프로시저의 모든 SELECT 문은 결과 집합을 생성합니다.  
   

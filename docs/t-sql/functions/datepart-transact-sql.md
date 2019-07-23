@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5bec4347301ed95671b6d5df5b91a5b958bff584
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b9443f1c33a89dd5eb51c143f23e65c2a12e3d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119139"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -89,7 +88,7 @@ DATEPART ( datepart , date )
 *date*의 경우 `DATEPART`은 열 식, 식, 문자열 리터럴 또는 사용자 정의 변수를 허용합니다. 모호성 문제를 피하려면 4자리 연도를 사용하세요. 두 자리 연도에 대한 정보는 [두 자리 연도 구분 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md)을 참조하세요.
   
 ## <a name="return-type"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="return-value"></a>반환 값  
 각 *datepart*와 해당 약어는 동일한 값을 반환합니다.

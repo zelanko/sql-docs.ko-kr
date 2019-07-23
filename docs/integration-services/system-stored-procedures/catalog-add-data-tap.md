@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: a25ebcc7-535e-4619-adf6-4e2b5a62ba37
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a4e4dc5e53f4e45c558b5d709073900b6e724f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bf44403cc058e130c59fe65515eaa19c45f08c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110536"
 ---
 # <a name="catalogadddatatap"></a>catalog.add_data_tap 
 

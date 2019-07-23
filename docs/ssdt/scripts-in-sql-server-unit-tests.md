@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c0d94a0b49e9fd02803d07270ba6f890eb4c311
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f84c8b03343b353cf355f0f604152a82b23627b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110737"
 ---
 # <a name="scripts-in-sql-server-unit-tests"></a>SQL Server 단위 테스트의 스크립트
 각 SQL Server 단위 테스트에는 단일 테스트 전 작업, 테스트 작업 및 테스트 후 작업이 포함됩니다. 이러한 작업에는 각각 다음과 같은 항목이 포함됩니다.  

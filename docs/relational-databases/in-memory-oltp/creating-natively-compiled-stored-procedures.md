@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: e6b34010-cf62-4f65-bbdf-117f291cde7b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1bb3879e8f411dc8fa82fe8344df693e8cdaef2a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7b029527eec87c87b9b21b4da8aff5e289424e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047905"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032021"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>고유하게 컴파일된 저장 프로시저 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "63047905"
   
     -   CREATE PROCEDURE dbo.myproc (@myVarchar  varchar(32)  **not null**) ...  
   
-    -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"**; -- *(값으로 초기화해야 함)*  
+    -   DECLARE @myVarchar  varchar(32)  **not null = "Hello"** ; -- *(값으로 초기화해야 함)*  
   
     -   SET @myVarchar **= null**; -- *(컴파일되지만 런타임 중에 실패함)*  
   

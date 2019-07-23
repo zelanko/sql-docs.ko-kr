@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7b04e03d96dafe642035cc6e3c1a72b5eccfd464
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6b21412bfb6555dbe9c45d411f0b1e7292e79e2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046706"
 ---
 # <a name="replication-backward-compatibility"></a>복제의 이전 버전과의 호환성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

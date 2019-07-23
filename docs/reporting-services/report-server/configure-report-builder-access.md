@@ -6,14 +6,13 @@ ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.date: 06/06/2019
-ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826911"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255169"
 ---
 # <a name="configure-report-builder-access"></a>보고서 작성기 액세스 구성
 보고서 작성기는 기본 모드 또는 SharePoint 통합 모드용으로 구성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버와 함께 설치되는 임시 보고 도구입니다.  
@@ -30,15 +29,15 @@ ms.locfileid: "66826911"
 
 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서는 보고서 작성기를 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 지원되는 기능 목록은 [SQL Server 2017 버전에서 지원하는 기능](../../sql-server/editions-and-components-of-sql-server-2017.md)을 참조하세요.  
 
-클라이언트 컴퓨터에 있어야 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 또는 4.6.1 SSRS 2016 및 2017에 대해 각각 설치 합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 는 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 애플리케이션을 실행하기 위한 인프라를 제공합니다.  
+클라이언트 컴퓨터에는 각각 SSRS [!INCLUDE[msCoName](../../includes/msconame-md.md)] 2016 및 2017에 대해 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 또는 4.6.1가 설치 되어 있어야 합니다. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 는 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] 애플리케이션을 실행하기 위한 인프라를 제공합니다.  
 
-사용 해야 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 이상 또는 다른 최신 브라우저입니다.  
+Internet Explorer 11 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 이상 또는 다른 최신 브라우저를 사용 해야 합니다.  
 
 보고서 작성기는 항상 완전 신뢰 수준에서 실행되며 부분 신뢰 수준에서 실행되도록 구성할 수 없습니다. 이전 릴리스에서는 보고서 작성기를 부분 신뢰 수준에서 실행할 수 있었지만 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 버전에서는 해당 옵션이 지원되지 않습니다.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>보고서 작성기 설정 및 해제  
 
-보고서 작성기는 기본적으로 설정되어 있습니다. 보고서 서버 관리자는 보고서 서버 시스템 속성인 **ShowDownloadMenu**를 **false**로 설정하여 보고서 작성기 기능을 해제할 수 있습니다. 이 속성을 설정 하면 보고서 작성기, 모바일 보고서 게시자 및 해당 보고서 서버에 대 한 Power BI Mobile을 다운로드 합니다.  
+보고서 작성기는 기본적으로 설정되어 있습니다. 보고서 서버 관리자는 보고서 서버 시스템 속성인 **ShowDownloadMenu**를 **false**로 설정하여 보고서 작성기 기능을 해제할 수 있습니다. 이 속성을 설정 하면 해당 보고서 서버에 대 한 보고서 작성기, 모바일 보고서 게시자 및 Power BI Mobile 다운로드를 사용 하지 않도록 설정 됩니다.  
 
  보고서 서버 시스템 속성을 설정하려면 Management Studio 또는 스크립트를 사용합니다.   
 
@@ -110,7 +109,7 @@ ms.locfileid: "66826911"
 
 1. 웹 포털을 시작합니다.  
 
-2. 위쪽에 있는 기어 아이콘을 클릭 합니다. 선택한 웹 포털 홈 페이지의 오른쪽 **사이트 설정** 드롭다운 메뉴에서에서.  
+2. 웹 포털 홈 페이지의 오른쪽 위에 있는 기어 아이콘을 클릭 하 고 드롭다운 메뉴에서 **사이트 설정** 을 선택 합니다.  
 ![웹 포털 기어 아이콘 및 메뉴](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. **보안**을 클릭합니다.  

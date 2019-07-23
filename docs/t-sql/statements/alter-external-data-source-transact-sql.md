@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: dc70465eac81711cfcc3fd500c45e92f682b792c
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 25df03e48d08e09033b52e4b51c11d3ecc4db4ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065650"
 ---
-# <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE(Transact-SQL) 
+# <a name="alter-external-data-source-transact-sql"></a>ALTER EXTERNAL DATA SOURCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   외부 테이블을 만드는데 사용되는 외부 데이터 원본을 수정합니다. 외부 데이터 원본은 Hadoop 또는 Azure Blob 스토리지(WASB)일 수 있습니다.
@@ -63,7 +62,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 
 형식 = BLOB_STORAGE   
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]을 참조하세요.
-대량 작업의 경우에만 `LOCATION`은 Azure Blob 스토리지의 URL에 유효해야 합니다. `LOCATION` URL 끝에 **/**, 파일 이름 또는 공유 액세스 서명 매개 변수를 두지 마십시오.
+대량 작업의 경우에만 `LOCATION`은 Azure Blob 스토리지의 URL에 유효해야 합니다. `LOCATION` URL 끝에 **/** , 파일 이름 또는 공유 액세스 서명 매개 변수를 두지 마십시오.
 사용되는 자격 증명은 `SHARED ACCESS SIGNATURE`을 ID로 사용하여 만들어져야 합니다. 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)을 참조하세요.
 
   
@@ -71,7 +70,7 @@ ALTER EXTERNAL DATA SOURCE data_source_name
 ## <a name="remarks"></a>Remarks
  한 번에 하나의 원본만 수정할 수 있습니다. 동일한 원본을 수정하기 위한 동시 요청은 하나의 명령문이 기다려야 합니다. 그러나 다른 원본은 동시에 수정할 수 있습니다. 이 명령문은 다른 명령문과 동시에 실행할 수 있습니다.
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ALTER ANY EXTERNAL DATA SOURCE 권한이 필요합니다.
  > [!IMPORTANT]  
  >  ALTER ANY EXTERNAL DATA SOURCE 권한은 모든 보안 주체에 외부 데이터 원본 개체를 만들고 수정하는 기능을 부여하고, 따라서 데이터베이스의 모든 데이터베이스 범위 자격 증명에 액세스하는 기능도 부여합니다. 이 권한은 높은 수준의 권한으로 간주되어야 하므로, 시스템의 신뢰할 수 있는 보안 주체에만 부여되어야 합니다.

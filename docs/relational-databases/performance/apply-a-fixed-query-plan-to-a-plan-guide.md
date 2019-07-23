@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bbf401f9-af7c-48e7-8a43-bf25e8af2fd7
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 6dd1148be3e8b01bb8db9150106903c862207c57
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 8bb64d5a74fbc7b72c543a49fcf658caea6a2ef4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985064"
 ---
 # <a name="apply-a-fixed-query-plan-to-a-plan-guide"></a>계획 지침에 정해진 쿼리 계획 적용
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

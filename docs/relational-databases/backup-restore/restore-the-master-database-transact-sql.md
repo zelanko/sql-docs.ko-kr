@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c83d802c-e84e-4458-b3ca-173d9ba32f73
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 08da0ac24a7999235efc6150d313ca2bb2ae0ea7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ce115a0df8ca77b37a78234247174ca9f2dd006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041473"
 ---
 # <a name="restore-the-master-database-transact-sql"></a>master 데이터베이스 복원(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "52502204"
   
 1.  서버 인스턴스를 단일 사용자 모드로 시작합니다.  
   
-     단일 사용자 시작 매개 변수(**-m**)를 지정하는 방법은 [서버 시작 옵션 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)을 참조하세요.  
+     단일 사용자 시작 매개 변수( **-m**)를 지정하는 방법은 [서버 시작 옵션 구성&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/scm-services-configure-server-startup-options.md)을 참조하세요.  
   
 2.  **master**의 전체 데이터베이스 백업을 복원하려면 다음 [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용합니다.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "52502204"
  다음 예에서는 기본 서버 인스턴스에 `master` 데이터베이스를 복원합니다. 이 예에서는 서버 인스턴스가 이미 단일 사용자 모드로 실행되고 있다고 가정합니다. 다음 예에서는 `sqlcmd` 를 시작하고 디스크 디바이스에서 `RESTORE DATABASE` 의 전체 데이터베이스 백업을 복원하는 `master` 문을 실행합니다. `Z:\SQLServerBackups\master.bak`  
   
 > [!NOTE]  
->  명명된 인스턴스의 경우 **sqlcmd** 명령에 **-S**_\<ComputerName>_\\*\<InstanceName>* 옵션을 지정해야 합니다.  
+>  명명된 인스턴스의 경우 **sqlcmd** 명령에 **-S** _\<ComputerName>_ \\ *\<InstanceName>* 옵션을 지정해야 합니다.  
   
 ```  
   

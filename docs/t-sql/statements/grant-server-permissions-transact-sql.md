@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 352cbbbbb0ea3e67d8025e36bc4e90d7571aa893
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 5eeda80431c403fd1178399b4c2c3500154acd48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050795"
 ---
 # <a name="grant-server-permissions-transact-sql"></a>GRANT 서버 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -140,12 +139,12 @@ GRANT permission [ ,...n ]
  **SELECT ALL USER SECURABLES** 권한  
  허용하면 감사자 등으로 로그인하여 사용자 연결이 가능한 모든 데이터베이스에서 데이터를 볼 수 있습니다. 거부하면 개체가 **sys** 스키마에 있지 않는 한 개체에 대한 액세스를 차단합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다. sysadmin 고정 서버 역할의 멤버는 모든 사용 권한을 부여할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-a-permission-to-a-login"></a>1. 로그인에 사용 권한 부여  
+### <a name="a-granting-a-permission-to-a-login"></a>1\. 로그인에 사용 권한 부여  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `CONTROL SERVER`에 대해 `TerryEminhizer` 권한을 부여합니다.  
   
 ```  
@@ -154,7 +153,7 @@ GRANT CONTROL SERVER TO TerryEminhizer;
 GO  
 ```  
   
-### <a name="b-granting-a-permission-that-has-grant-permission"></a>2. GRANT 권한이 있는 사용 권한 부여  
+### <a name="b-granting-a-permission-that-has-grant-permission"></a>2\. GRANT 권한이 있는 사용 권한 부여  
  다음 예에서는 다른 로그인에 사용 권한을 부여할 수 있는 권한이 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `ALTER ANY EVENT NOTIFICATION`에 대해 `JanethEsteves`을 부여합니다.  
   
 ```  
@@ -163,7 +162,7 @@ GRANT ALTER ANY EVENT NOTIFICATION TO JanethEsteves WITH GRANT OPTION;
 GO  
 ```  
   
-### <a name="c-granting-a-permission-to-a-server-role"></a>3. 서버 역할에 사용 권한 부여  
+### <a name="c-granting-a-permission-to-a-server-role"></a>C. 서버 역할에 사용 권한 부여  
  다음 예에서는 `ITDevAdmin` 및 `ITDevelopers`라는 두 개의 서버 역할을 만듭니다. `ALTER ANY DATABASE` 서버 역할이 `ITDevAdmin` 권한을 다시 할당할 수 있도록 `WITH GRANT` 옵션을 포함하여 `ITDevAdmin` 사용자 정의 서버 역할에 `ALTER ANY DATABASE` 권한을 부여합니다. 그럼 다음 예에서 `ITDevelopers` 서버 역할의 `ALTER ANY DATABASE` 권한을 사용할 사용 권한을 `ITDevAdmin`에 부여합니다.  
   
 ```  

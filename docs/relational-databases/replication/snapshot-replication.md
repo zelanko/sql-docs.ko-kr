@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 5d745f22-9c6b-4e11-8c62-bc50e9a8bf38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e8218845aa40e78578dc590be0f00b27841c69d8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 066021013e2c3e3f43c229965152d66ce2c328e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47650461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907588"
 ---
 # <a name="snapshot-replication"></a>Snapshot Replication
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,14 +44,14 @@ ms.locfileid: "47650461"
   
  **항목 내용**  
   
- [스냅숏 복제 작동 방법](#HowWorks)  
+ [스냅샷 복제 작동 방법](#HowWorks)  
   
- [스냅숏 에이전트](#SnapshotAgent)  
+ [스냅샷 에이전트](#SnapshotAgent)  
   
  [배포 및 병합 에이전트](#DistAgent)  
   
-##  <a name="HowWorks"></a> 스냅숏 복제 작동 방법  
- 기본적으로 3가지 복제 유형은 모두 스냅샷을 사용하여 구독자를 초기화합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 에이전트는 항상 스냅숏 파일을 생성하지만 이 파일을 배달하는 에이전트는 사용하는 복제 유형에 따라 다릅니다. 스냅샷 복제 및 트랜잭션 복제는 배포 에이전트를 사용하여 파일을 배달하지만 병합 복제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 병합 에이전트를 사용합니다. 배포자에서 스냅샷 에이전트를 실행합니다. 배포 에이전트와 병합 에이전트는 밀어넣기 구독을 위한 배포자에서 실행되거나 끌어오기 구독을 위한 구독자에서 실행됩니다.  
+##  <a name="HowWorks"></a> 스냅샷 복제 작동 방법  
+ 기본적으로 3가지 복제 유형은 모두 스냅샷을 사용하여 구독자를 초기화합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅샷 에이전트는 항상 스냅샷 파일을 생성하지만 이 파일을 배달하는 에이전트는 사용하는 복제 유형에 따라 다릅니다. 스냅샷 복제 및 트랜잭션 복제는 배포 에이전트를 사용하여 파일을 배달하지만 병합 복제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 병합 에이전트를 사용합니다. 배포자에서 스냅샷 에이전트를 실행합니다. 배포 에이전트와 병합 에이전트는 밀어넣기 구독을 위한 배포자에서 실행되거나 끌어오기 구독을 위한 구독자에서 실행됩니다.  
   
  구독을 만든 즉시 또는 게시를 만들 때 설정한 일정에 따라 스냅샷을 생성하고 적용할 수 있습니다. 스냅샷 에이전트는 게시된 테이블 및 데이터베이스 개체의 스키마 및 데이터를 포함하는 스냅샷 파일을 준비하여 게시자의 스냅샷 폴더에 저장하고 배포자의 배포 데이터베이스에 추적 정보를 기록합니다. 배포자를 구성할 때 기본 스냅샷 폴더를 지정하지만 기본 위치 대신 또는 기본 위치에 추가로 게시에 대한 대체 위치를 지정할 수 있습니다.  
   
@@ -60,9 +59,9 @@ ms.locfileid: "47650461"
   
  다음 그림에서는 스냅샷 복제의 주요 구성 요소를 보여 줍니다.  
   
- ![스냅숏 복제 구성 요소 및 데이터 흐름](../../relational-databases/replication/media/snapshot.gif "Snapshot replication components and data flow")  
+ ![스냅샷 복제 구성 요소 및 데이터 흐름](../../relational-databases/replication/media/snapshot.gif "Snapshot replication components and data flow")  
   
-##  <a name="SnapshotAgent"></a> 스냅숏 에이전트  
+##  <a name="SnapshotAgent"></a> 스냅샷 에이전트  
  병합 복제의 경우 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성됩니다. 트랜잭션 복제의 경우 게시 속성 **immediate_sync**의 설정에 따라 스냅샷 생성이 달라집니다. 이 속성을 TRUE(새 게시 마법사 사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 실행될 때마다 스냅샷이 생성되고 언제든지 스냅샷을 구독자에 적용할 수 있습니다. 이 속성을 FALSE( **sp_addpublication**사용 시 기본 설정)로 설정하면 스냅샷 에이전트가 마지막으로 실행된 후에 새 구독이 추가된 경우에만 스냅샷이 생성됩니다. 구독자는 동기화하기 위해 스냅샷 에이전트가 완료될 때까지 기다려야 합니다.  
   
  스냅샷 에이전트는 다음 단계를 수행하세요.  
@@ -79,7 +78,7 @@ ms.locfileid: "47650461"
   
 3.  게시자에서 게시된 테이블의 데이터를 복사하고 이 데이터를 스냅샷 폴더에 기록합니다. 스냅샷은 BCP(대량 복사 프로그램) 파일의 집합으로 생성됩니다.  
   
-4.  스냅샷 및 트랜잭션 게시의 경우 스냅샷 에이전트는 행을 배포 데이터베이스의 **MSrepl_commands** 및 **MSrepl_transactions** 테이블에 추가합니다. **MSrepl_commands** 테이블의 항목은 .sch 및 .bcp 파일, 다른 스냅숏 파일, 프리 스냅숏 및 포스트 스냅숏 스크립트에 대한 참조 위치를 나타내는 명령입니다. **MSrepl_transactions** 테이블의 항목은 구독자 동기화와 관련된 명령입니다.  
+4.  스냅샷 및 트랜잭션 게시의 경우 스냅샷 에이전트는 행을 배포 데이터베이스의 **MSrepl_commands** 및 **MSrepl_transactions** 테이블에 추가합니다. **MSrepl_commands** 테이블의 항목은 .sch 및 .bcp 파일, 다른 스냅샷 파일, 프리 스냅샷 및 포스트 스냅샷 스크립트에 대한 참조 위치를 나타내는 명령입니다. **MSrepl_transactions** 테이블의 항목은 구독자 동기화와 관련된 명령입니다.  
   
      병합 게시의 경우 스냅샷 에이전트는 추가 단계를 수행합니다.  
   

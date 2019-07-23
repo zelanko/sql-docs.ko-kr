@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 006d68ea-1b5c-4c1e-8079-3910288e012c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: c03218101637767dbaf6e5abe2132eb3c0f332da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 798ec9b823c324ea67d50023dd12f4fe585c5de1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100856"
 ---
 # <a name="ssis-designer"></a>SSIS 디자이너
 

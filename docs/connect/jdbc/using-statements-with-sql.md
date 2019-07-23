@@ -1,5 +1,5 @@
 ---
-title: SQL 문 사용 | Microsoft Docs
+title: SQL에서 문 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: faac11590e21ec6bc4ef27f73c50bf61a66b61a5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 082671d3acf2873bb822e6b836599c00f42d6323
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916160"
 ---
 # <a name="using-statements-with-sql"></a>SQL이 있는 문 사용
 
@@ -27,7 +26,7 @@ ms.locfileid: "66798561"
 SQL 문에 입력 매개 변수가 없는 경우 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스를 사용하고, 입력 매개 변수가 있는 경우 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스를 사용합니다.  
   
 > [!NOTE]  
-> 입력 및 출력 매개 변수가 모두 있는 SQL 문을 사용해야 하는 경우 저장 프로시저로 구현하고 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스를 사용하여 호출해야 합니다. 저장된 프로시저를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [저장 프로시저를 사용 하 여 문을 사용 하 여](../../connect/jdbc/using-statements-with-stored-procedures.md)입니다.  
+> 입력 및 출력 매개 변수가 모두 있는 SQL 문을 사용해야 하는 경우 저장 프로시저로 구현하고 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스를 사용하여 호출해야 합니다. 저장 프로시저 사용에 대 한 자세한 내용은 [저장 프로시저에 문 사용](../../connect/jdbc/using-statements-with-stored-procedures.md)을 참조 하세요.  
   
 다음 섹션에서는 SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 데이터 작업을 수행하는 여러 시나리오에 대해 설명합니다.  
 

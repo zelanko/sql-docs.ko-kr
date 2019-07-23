@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: baa1f607e9bdce0dfedc989125e5d29111d44f93
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 068701e16d192ca5edfb45267ebee0cece3619a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052285"
 ---
 # <a name="deny-permissions-on-an-xml-schema-collection"></a>XML 스키마 컬렉션에 대한 사용 권한 거부
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "58511610"
 ## <a name="examples"></a>예  
  다음 예의 시나리오에서는 XML 스키마 권한의 작동 방식을 보여 줍니다. 각 예에서는 필요한 테스트 데이터베이스, 관계형 스키마 및 로그인을 만듭니다. 이러한 로그인에는 필요한 XML 스키마 컬렉션 권한이 부여됩니다. 각 예에서는 종료 시 필요한 정리를 수행합니다.  
   
-### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>1. 사용자가 XML 스키마 컬렉션을 만드는 것을 방지  
+### <a name="a-preventing-a-user-from-creating-an-xml-schema-collection"></a>1\. 사용자가 XML 스키마 컬렉션을 만드는 것을 방지  
  사용자가 XML 스키마 컬렉션을 만들 수 없게 하는 방법 중 하나는 관계형 스키마에 대한 ALTER 권한을 거부하는 것입니다. 이는 다음 예에서 확인할 수 있습니다.  
   
  이 예에서는 `TestLogin1`이라는 사용자와 데이터베이스를 만듭니다. 또한 데이터베이스에 `dbo` 스키마 외에 관계형 스키마를 만듭니다. 처음에는 사용자가 `CREATE XML SCHEMA` 권한을 사용하여 데이터베이스의 모든 위치에 스키마 컬렉션을 만들 수 있습니다. 그런 다음 관계형 스키마 중 하나에 대한 사용자의 `ALTER` 권한을 거부합니다. 이렇게 하면 사용자가 해당 관계형 스키마에 XML 스키마 컬렉션을 만들 수 없습니다.  
@@ -111,7 +110,7 @@ DROP LOGIN TestLogin1
 GO  
 ```  
   
-### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>2. XML 스키마 컬렉션에 대한 사용 권한 거부  
+### <a name="b-denying-permissions-on-an-xml-schema-collection"></a>2\. XML 스키마 컬렉션에 대한 사용 권한 거부  
  다음 예에서는 로그인에 대해 기존 XML 스키마 컬렉션에 대한 특정 권한을 거부할 수 있는 방법을 보여 줍니다. 이 예에서 테스트 로그인은 기존 XML 스키마 컬렉션에 대한 REFERENCES 권한이 거부됩니다.  
   
  이 예에서는 `TestLogin1`이라는 사용자와 데이터베이스를 만듭니다. 또한 데이터베이스에 `dbo` 스키마 외에 관계형 스키마를 만듭니다. 처음에는 사용자가 `CREATE XML SCHEMA` 권한을 사용하여 데이터베이스의 모든 위치에 스키마 컬렉션을 만들 수 있습니다.  

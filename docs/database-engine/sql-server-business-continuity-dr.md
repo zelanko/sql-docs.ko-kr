@@ -3,19 +3,18 @@ title: SQL Server의 재해 복구 | Microsoft Docs
 description: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ms.reviewer: mikeray
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: high-availability
 ms.assetid: c75717c8-c677-4033-8ca6-d0ac93aee04d
-ms.openlocfilehash: d3be555a890dcfa1fe2e3e26360fbb74c0f33faa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e08700fda793e2290e47b4499faa6bb97b37592f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020754"
 ---
 # <a name="business-continuity-and-database-recovery---sql-server"></a>비즈니스 연속성 및 데이터베이스 복구 - SQL Server
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]

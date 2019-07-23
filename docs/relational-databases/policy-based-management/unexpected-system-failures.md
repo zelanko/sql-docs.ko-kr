@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1679bf9e-a2ef-4f90-8907-a002f7341a7d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dde1e7592a3af09900cd656d7b6faafeab88f27d
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 8fb34965fe6392ac09b2582f5d840f0da90294d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021472"
 ---
 # <a name="unexpected-system-failures"></a>예기치 않은 시스템 오류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

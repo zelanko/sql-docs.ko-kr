@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 50c1c88525c096e5b573236c569b9e15d703a60f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65fd65d6849153b807ecbdb0d24296640ca38390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098730"
 ---
 # <a name="tryparse-transact-sql"></a>TRY_PARSE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |범주|형식|.NET 형식|사용되는 스타일|  
 |--------------|----------|---------------|-----------------|  
 |숫자|BIGINT|Int64|NumberStyles.Number|  
-|숫자|ssNoversion|Int32|NumberStyles.Number|  
+|숫자|int|Int32|NumberStyles.Number|  
 |숫자|SMALLINT|Int16|NumberStyles.Number|  
 |숫자|TINYINT|Byte|NumberStyles.Number|  
 |숫자|Decimal|Decimal|NumberStyles.Number|  
@@ -128,7 +127,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-example-of-tryparse"></a>1. TRY_PARSE의 간단한 예  
+### <a name="a-simple-example-of-tryparse"></a>1\. TRY_PARSE의 간단한 예  
   
 ```  
 SELECT TRY_PARSE('Jabberwokkie' AS datetime2 USING 'en-US') AS Result;  
@@ -144,7 +143,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-detecting-nulls-with-tryparse"></a>2. TRY_PARSE를 사용하여 Null 검색  
+### <a name="b-detecting-nulls-with-tryparse"></a>2\. TRY_PARSE를 사용하여 Null 검색  
   
 ```  
 SELECT  

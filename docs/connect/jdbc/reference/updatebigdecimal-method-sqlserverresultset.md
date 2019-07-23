@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: 35445fe4-3b8e-4ec5-a138-067524236dc6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a8988926cb92f1f152e38efbadaa2466f9bd4b13
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6231368cd83ffdbff9732c8b7886a7dc4af571e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985409"
 ---
 # <a name="updatebigdecimal-method-sqlserverresultset"></a>updateBigDecimal 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  BigDecimal 개체와 지정된 된 열을 업데이트합니다.  
+  지정 된 열을 해당 하는 10 진수 개체로 업데이트 합니다.  
   
 ## <a name="overload-list"></a>오버로드 목록  
   

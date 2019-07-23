@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: edc80444-b697-410f-9419-0f63c9b5618d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: bddc7c269443446a6b8de6498cf73dd35f218e16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f38ee0e89201a1ecc0a8faa145167ad58601c133
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077817"
 ---
 # <a name="isdescendantof-database-engine"></a>IsDescendantOf(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ IsDescendantOf 테스트를 수행해야 하는 **hierarchyid** 노드입니다.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-isdescendantof-in-a-where-clause"></a>1. WHERE 절에서 IsDescendantOf 사용  
+### <a name="a-using-isdescendantof-in-a-where-clause"></a>1\. WHERE 절에서 IsDescendantOf 사용  
 다음 예에서는 관리자와 관리자에게 보고하는 직원을 반환합니다.
   
 ```sql
@@ -70,7 +69,7 @@ SELECT * FROM HumanResources.EmployeeDemo
 WHERE OrgNode.IsDescendantOf(@Manager) = 1  
 ```  
   
-### <a name="b-using-isdescendantof-to-evaluate-a-relationship"></a>2. IsDescendantOf를 사용하여 관계 평가  
+### <a name="b-using-isdescendantof-to-evaluate-a-relationship"></a>2\. IsDescendantOf를 사용하여 관계 평가  
 다음 코드는 세 개의 변수를 선언하고 채웁니다. 그런 다음 계층 관계를 평가하고 비교를 기반으로 두 개의 출력된 결과 중 하나를 반환합니다.
   
 ```sql

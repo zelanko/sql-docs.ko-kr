@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4df1bfdb-eea3-4a00-a99f-750a69795ab3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 24c5cb680aa052970279d3b86119ea5199c9294c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfd69fa5cbc14af7667c7a7fc00694433a37f951
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974490"
 ---
 # <a name="setdatabasename-method-sqlserverdatasource"></a>setDatabaseName 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 354e2150-fa2a-4583-b1aa-6b78ae4378b6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6731d73830fe4f79525e05110920c6a3e6c2a1e
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 2416bdc2b49a88b4306ae46973eab70fc38c0d9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943259"
 ---
 # <a name="for-xml-support-for-the-user-defined-data-types-udt"></a>사용자 정의 데이터 형식(UDT)에 대한 FOR XML 지원
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

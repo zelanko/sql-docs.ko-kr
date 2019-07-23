@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 11caad507a8d8af50bae6c3d2b51807287ee694c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 81a8422cbab7eb10d0c74ad5cd758817a665eaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326604"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050779"
 ---
 # <a name="grant-server-principal-permissions-transact-sql"></a>GRANT 서버 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ GRANT permission [ ,...n ] }
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대해 부여할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  LOGIN **::** *SQL_Server_login*  
- 사용 권한을 부여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ 사용 권한을 부여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  SERVER ROLE **::** *server_role*  
- 사용 권한을 부여할 사용자 정의 서버 역할을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ 사용 권한을 부여할 사용자 정의 서버 역할을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  TO \<server_principal> 사용 권한을 부여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 서버 역할을 지정합니다.  
   
@@ -103,14 +102,14 @@ GRANT permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  로그인의 경우 로그인에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY LOGIN 권한이 필요합니다.  
   
  서버 역할의 경우 서버 역할에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY SERVER ROLE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-impersonate-permission-on-a-login"></a>1. 로그인에 IMPERSONATE 권한 부여  
+### <a name="a-granting-impersonate-permission-on-a-login"></a>1\. 로그인에 IMPERSONATE 권한 부여  
  다음 예에서는 Windows 사용자 `AdvWorks\YoonM`에서 생성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `WanidaBenshoof`에 대한 `IMPERSONATE` 권한을 부여합니다.  
   
 ```  
@@ -119,7 +118,7 @@ GRANT IMPERSONATE ON LOGIN::WanidaBenshoof to [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-granting-view-definition-permission-with-grant-option"></a>2. GRANT OPTION을 지정하여 VIEW DEFINITION 권한 부여  
+### <a name="b-granting-view-definition-permission-with-grant-option"></a>2\. GRANT OPTION을 지정하여 VIEW DEFINITION 권한 부여  
  다음 예에서는 `VIEW DEFINITION`으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `EricKurjan`에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `RMeyyappan`에 대한 `GRANT OPTION`을 부여합니다.  
   
 ```  
@@ -129,7 +128,7 @@ GRANT VIEW DEFINITION ON LOGIN::EricKurjan TO RMeyyappan
 GO   
 ```  
   
-### <a name="c-granting-view-definition-permission-on-a-server-role"></a>3. 서버 역할에 대한 VIEW DEFINITION 권한 부여  
+### <a name="c-granting-view-definition-permission-on-a-server-role"></a>C. 서버 역할에 대한 VIEW DEFINITION 권한 부여  
  다음 예에서는 `VIEW DEFINITION` 서버 역할에 대한 `Sales`을 `Auditors` 서버 역할에 부여합니다.  
   
 ```  

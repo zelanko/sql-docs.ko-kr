@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 28b07746-fc6f-42b2-b741-9de6fac3f29c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: e51dd2b69e7b815134b156e0ff065c81aa8d4a63
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 056115b494d7b2b7aa45505f8f1960032ac028e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112590"
 ---
 # <a name="derive-column-values-by-using-the-derived-column-transformation"></a>파생 열 변환을 사용하여 열 값 파생
 

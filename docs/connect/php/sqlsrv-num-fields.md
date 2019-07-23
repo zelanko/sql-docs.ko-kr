@@ -16,18 +16,17 @@ helpviewer_keywords:
 ms.assetid: 03ca1860-01ed-408c-862a-57a7355de4bf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2ca2ae8a4c6f1e1d3c9f82a756a5c268bf52eec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5c095b74f8f299a1d5f2b15daaf95e3d5086ebd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992671"
 ---
 # <a name="sqlsrvnumfields"></a>sqlsrv_num_fields
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-활성 결과 집합의 필드 수를 검색합니다. 이 함수는 실행 전 또는 후 준비 된 문에서 호출할 수 있습니다.  
+활성 결과 집합의 필드 수를 검색합니다. 이 함수는 실행 전후에 준비 된 문에서 호출할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   

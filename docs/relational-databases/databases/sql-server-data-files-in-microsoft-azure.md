@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6df72b8094f62ca2ab16bee617f9d1c442cc10d5
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 2c423f3df3f2dce99caa8ec085ab12f5eac8060c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127159"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Microsoft Azure의 SQL Server 데이터 파일
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "67583444"
   
 -   **보안 이점:** 이 새로운 향상된 기능을 사용하여 컴퓨팅 인스턴스를 스토리지 인스턴스와 구분할 수 있습니다. 스토리지 인스턴스가 아닌 컴퓨팅 인스턴스에서만 암호 해독이 포함된 완전히 암호화된 데이터베이스를 설정할 수 있습니다. 즉, 이 새로운 향상된 기능을 사용하면 데이터와 물리적으로 구분되는 TDE(투명한 데이터 암호화) 인증서로 공용 클라우드의 모든 데이터를 암호화할 수 있습니다. TDE 키를 master 데이터베이스에 저장한 다음 이 master 데이터베이스를 물리적으로 안전한 온-프레미스 컴퓨터에 로컬로 저장하고 로컬로 백업할 수 있습니다. 이러한 로컬 키를 사용하여 Microsoft Azure 스토리지에 있는 데이터를 암호화할 수 있습니다. 클라우드 스토리지 계정 자격 증명을 도난 당한 경우에도 TDE 인증서가 항상 온-프레미스에 있으므로 데이터는 여전히 안전합니다.  
   
--   **스냅숏 백업:**  이 기능은 Azure 스냅샷을 사용하여 Azure Blob Storage 서비스를 통해 저장된 데이터베이스 파일에 대한 거의 즉시 백업 및 보다 신속한 복원을 제공합니다. 이 기능을 사용하면 백업 및 복원 정책을 간소화할 수 있습니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+-   **스냅샷 백업:**  이 기능은 Azure 스냅샷을 사용하여 Azure Blob Storage 서비스를 통해 저장된 데이터베이스 파일에 대한 거의 즉시 백업 및 보다 신속한 복원을 제공합니다. 이 기능을 사용하면 백업 및 복원 정책을 간소화할 수 있습니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 ## <a name="concepts-and-requirements"></a>개념 및 요구 사항  
   

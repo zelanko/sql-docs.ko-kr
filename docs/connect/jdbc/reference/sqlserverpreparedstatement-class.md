@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8481c06-fbba-432b-8c69-4f4619c20ad4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7112a20f7811a0796396045c50b1b243ed0c3802
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 96d2e01d4ca8d38b79906ee31cc5b50df0d8cb25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970765"
 ---
 # <a name="sqlserverpreparedstatement-class"></a>SQLServerPreparedStatement 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public class SQLServerPreparedStatement
   
  SQLServerPreparedStatement는 여러 개의 준비된 문이 단일 데이터베이스 왕복으로 실행되는 일괄 처리를 지원하여 런타임 성능을 향상시킵니다.  
   
- 이 클래스는 SQLServerPreparedStatement 클래스, ISQLServerPreparedStatement 인터페이스, java.sql.PreparedStatement 인터페이스 및 클래스 및 래핑 해제에 대 한 SQLServerStatement에서 지 원하는 인터페이스에 대 한 래핑 해제를 지원 합니다. 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)합니다.  
+ 이 클래스는 래핑 해제 to SQLServerPreparedStatement class, ISQLServerPreparedStatement interface, Java.sql.preparedstatement interface 및 SQLServerStatement for 래핑 해제에서 지 원하는 클래스 및 인터페이스를 지원 합니다. 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerPreparedStatement 멤버](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

@@ -11,14 +11,13 @@ dev_langs:
 - TSQL
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: f83aeec8ca81dd819e466f0e5017fb2e13514b61
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: d0dd253eb161c842a2edbdcad73edd41114d73cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57684959"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039075"
 ---
 # <a name="dbcc-pdwshowexecutionplan-transact-sql"></a>DBCC PDW_SHOWEXECUTIONPLAN(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -53,14 +52,14 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
  *spid*  
  쿼리 계획을 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션에 대한 식별자입니다. 이는 NULL이 아닌 정수여야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]에 대한 CONTROL 권한이 필요합니다.  
   
 어플라이언스에서 VIEW-SERVER-STATE 권한이 필요합니다.
   
-## <a name="examples-includesssdwincludessssdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]   
+## <a name="examples-includesssdwincludessssdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]  
   
-### <a name="a-dbcc-pdwshowexecutionplan-basic-syntax"></a>1. DBCC PDW_SHOWEXECUTIONPLAN 기본 구문  
+### <a name="a-dbcc-pdwshowexecutionplan-basic-syntax"></a>1\. DBCC PDW_SHOWEXECUTIONPLAN 기본 구문  
  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 인스턴스에서 실행되는 경우 distribution_id를 선택하도록 위 쿼리를 수정합니다.  
   
 ```sql
@@ -76,8 +75,8 @@ order by request_id, [dms_step_index];
 DBCC PDW_SHOWEXECUTIONPLAN ( 1, 375 );  
 ```  
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
-### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>2. DBCC PDW_SHOWEXECUTIONPLAN 기본 구문  
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+### <a name="b-dbcc-pdwshowexecutionplan-basic-syntax"></a>2\. DBCC PDW_SHOWEXECUTIONPLAN 기본 구문  
  너무 오래 실행되는 쿼리는 DMS 쿼리 계획 작업 또는 SQL 쿼리 계획 작업을 실행 중입니다.  
   
 쿼리가 DMS 쿼리 계획 작업을 실행 중인 경우 다음 쿼리를 사용하여 완료되지 않은 단계에 대한 노드 ID 및 세션 ID의 목록을 검색할 수 있습니다.

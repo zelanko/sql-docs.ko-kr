@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 0f31c5cc-3078-4f6a-9870-7eb1a98053fb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6b37c60fa27af53949803c2077ba0736bf5de7e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6c7f0ebb1960c763dead68443ed4ae0c4c397db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086151"
 ---
 # <a name="unary-operators---positive"></a>단항 연산자 - 양수
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "65981011"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-setting-a-variable-to-a-positive-value"></a>1. 변수를 양수 값으로 설정  
+### <a name="a-setting-a-variable-to-a-positive-value"></a>1\. 변수를 양수 값으로 설정  
  다음 예에서는 변수를 양수 값으로 설정합니다.  
   
 ```  
@@ -81,7 +80,7 @@ GO
 (1 row(s) affected)  
 ```  
   
-### <a name="b-using-the-unary-plus-operator-with-a-negative-value"></a>2. 음수 값에 단항 더하기 연산자 사용  
+### <a name="b-using-the-unary-plus-operator-with-a-negative-value"></a>2\. 음수 값에 단항 더하기 연산자 사용  
  다음 예에서는 같은 음수 식에 단항 더하기와 ABS() 함수를 사용하는 것을 보여 줍니다. 단항 더하기는 식에 영향을 주지 않지만 ABS 함수는 식의 양수 값을 반환합니다.  
   
 ```  

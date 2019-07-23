@@ -26,38 +26,37 @@ helpviewer_keywords:
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: afbb8ce321418cce7797b12b161bcef88b88183e
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: d57369af9e621b9b2700104aff9050fda43593fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065480"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> SQL Server 2014 및 하위 [sqlcmd 유틸리티](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
-> )합니다.
+> SQL Server 2014 및 lower의 경우 sqlcmd [유틸리티](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014
+> )를 참조 하세요.
 > 
-> Sqlcmd를 사용 하 여 linux에 대해서 [Linux에서 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)합니다.
+> Linux에서 sqlcmd를 사용 하는 방법에 대해서는 [linux에서 sqlcmd 및 Bcp 설치](../linux/sql-server-linux-setup-tools.md)를 참조 하세요.
 
- 합니다 **sqlcmd** 유틸리티를 사용 하면 TRANSACT-SQL 문, 시스템 프로시저 및 다양 한 사용 가능한 모드를 통해 스크립트 파일을 입력 합니다.
+ **Sqlcmd** 유틸리티를 사용 하면 사용 가능한 다양 한 모드를 통해 transact-sql 문, 시스템 프로시저 및 스크립트 파일을 입력할 수 있습니다.
 
 - 명령 프롬프트에서 다음을 수행합니다.
-- **쿼리 편집기** SQLCMD 모드에서입니다.
-- Windows 스크립트 파일입니다.
-- SQL Server 에이전트 작업의 운영 체제 (Cmd.exe) 작업 단계입니다.
+- SQLCMD 모드의 **쿼리 편집기**
+- Windows 스크립트 파일에 있습니다.
+- SQL Server 에이전트 작업의 운영 체제 (Cmd.exe) 작업 단계
 
-유틸리티는 ODBC를 사용 하 여 TRANSACT-SQL 일괄 처리 실행.
+이 유틸리티는 ODBC를 사용 하 여 Transact-sql 일괄 처리를 실행 합니다.
 
-## <a name="download-the-latest-version-of-sqlcmd-utility"></a>Sqlcmd 유틸리티의 최신 버전 다운로드
+## <a name="download-the-latest-version-of-sqlcmd-utility"></a>최신 버전의 sqlcmd 유틸리티 다운로드
 
 **[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0.x(x64) 다운로드(2.6MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
 <br>**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0.x(x86) 다운로드(2.3MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
-하지만 명령줄 도구는 일반 가용성 (GA)에 대 한 설치 관리자 패키지를 사용 하 여 릴리스되기 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]합니다.
+명령줄 도구는 GA (일반 공급) 이지만 용 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]설치 관리자 패키지를 사용 하 여 릴리스됩니다.
 
 **버전 정보**
 
@@ -65,19 +64,19 @@ ms.locfileid: "67728184"
 빌드 번호: 15.0.1300.359<br>
 릴리스 날짜: 2019년 3월 13일
 
-새 버전의 SQLCMD에 SQL Database, SQL Data Warehouse 및 상시 암호화 기능에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
-새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
+새 버전의 SQLCMD는 SQL Database, SQL Data Warehouse 및 Always Encrypted 기능에 대 한 MFA (Multi-factor Authentication) 지원을 포함 하 여 Azure AD 인증을 지원 합니다.
+새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 MFA (Multi-factor Authentication) 지원을 포함 하 여 Azure AD 인증을 지원 합니다.
 
-**시스템 요구 사항** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2이 구성 요소에는 [Windows 설치 관리자 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 하 고 [SQL Server 용 Microsoft ODBC Driver 17.3.1.1](https://www.microsoft.com/download/details.aspx?id=56567)합니다.
+**시스템 요구 사항** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, windows server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2이 구성 요소에는 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 및 [Microsoft ODBC Driver 17.3.1.1가 모두 필요 합니다. SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)입니다.
  
-SQLCMD 버전 실행을 확인 하려면 `sqlcmd -?` 명령 및 해당 15.0.1300.359 확인 버전 이상이 사용에서 합니다.
+SQLCMD 버전 실행 `sqlcmd -?` 명령을 확인 하 고 15.0.1300.359 이상 버전이 사용 중인지 확인 합니다.
 
 
 
 > [!NOTE]
-> 버전 13.1 이상이 상시 암호화를 지원 해야 (`-g`) 및 Azure Active Directory 인증 (`-G`). (컴퓨터에 설치된 sqlcmd.exe 버전이 여러 개일 수 있습니다. 올바른 버전을 사용해야 합니다. 버전을 확인하려면 `sqlcmd -?`를 실행하세요.)
+> Always Encrypted (`-g`) 및 Azure Active Directory 인증 (`-G`)을 지원 하려면 버전 13.1 이상이 필요 합니다. (컴퓨터에 설치된 sqlcmd.exe 버전이 여러 개일 수 있습니다. 올바른 버전을 사용해야 합니다. 버전을 확인하려면 `sqlcmd -?`를 실행하세요.)
 
-기본적으로 미리 설치 하는 대로 Azure Cloud Shell에서 sqlcmd 유틸리티를 시도할 수 있습니다: [ ![Cloud Shell 시작](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell 시작")](https://shell.azure.com)
+Sqlcmd 유틸리티는 기본적으로 미리 설치 된 Azure Cloud Shell에서 실행할 수 있습니다. Cloud Shell 시작을 [ ![시작](https://shell.azure.com/images/launchcloudshell.png "Cloud Shell")](https://shell.azure.com)
 
   SSMS에서 sqlcmd 문을 실행하려면 위쪽 탐색 쿼리 메뉴 드롭다운에서 SQLCMD 모드를 선택합니다.  
   
@@ -146,13 +145,13 @@ sqlcmd
 ## <a name="command-line-options"></a>명령줄 옵션  
  **로그인 관련 옵션**  
   **-A**  
- DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. 이 연결 유형은 서버 문제를 해결하는 데 사용됩니다. 이 연결은 DAC를 지 원하는 서버 컴퓨터 에서만 작동 합니다. DAC를 사용할 수 없는 경우 **sqlcmd**는 오류 메시지를 생성하고 종료됩니다. DAC에 대한 자세한 내용은 [데이터베이스 관리자를 위한 진단 연결](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)을 참조하세요. 옵션-G 옵션과 함께 지원 되지 않습니다. -A를 사용 하 여 SQL Database에 연결할 때 SQL server 관리자 여야 합니다. DAC에 대 한 Azure Active Directory 관리자를 사용할 수 없습니다.
+ DAC(관리자 전용 연결)를 사용하여 SQL Server에 로그인합니다. 이 연결 유형은 서버 문제를 해결하는 데 사용됩니다. 이 연결은 DAC를 지 원하는 서버 컴퓨터 에서만 작동 합니다. DAC를 사용할 수 없는 경우 **sqlcmd**는 오류 메시지를 생성하고 종료됩니다. DAC에 대한 자세한 내용은 [데이터베이스 관리자를 위한 진단 연결](../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)을 참조하세요. -A 옵션은-G 옵션을 사용 하 여 지원 되지 않습니다. -A를 사용 하 여 SQL Database에 연결 하는 경우 SQL server 관리자 여야 합니다. Azure Active Directory 관리자는 DAC를 사용할 수 없습니다.
   
  **-C**  
  이 스위치는 클라이언트에서 유효성 검사 없이 암시적으로 서버 인증서를 신뢰하는 데 사용됩니다. 이 옵션은 ADO.NET 옵션 `TRUSTSERVERCERTIFICATE = true`와 동일합니다.  
   
  **-d** _db_name_  
- **sqlcmd**를 시작할 때 `USE` *db_name* 문을 실행합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDDBNAME을 설정합니다. 이 매개 변수는 초기 데이터베이스를 지정합니다. 기본값은 사용자 로그인의 기본 데이터베이스 속성입니다. 데이터베이스가 없을 경우 오류 메시지가 생성되고 **sqlcmd** 가 종료됩니다.  
+ **sqlcmd**를 시작할 때 `USE` *db_name* 문을 실행합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDDBNAME을 설정합니다. 이 매개 변수는 초기 데이터베이스를 지정 합니다. 기본값은 사용자 로그인의 기본 데이터베이스 속성입니다. 데이터베이스가 없을 경우 오류 메시지가 생성되고 **sqlcmd** 가 종료됩니다.  
   
  **-l** _login_timeout_  
  서버에 연결을 시도할 때 ODBC 드라이버에 대한 **sqlcmd** 로그인 시간 제한(초)을 지정합니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDLOGINTIMEOUT을 설정합니다. 기본 **sqlcmd** 로그인 제한 시간은 8초입니다. **-G** 옵션을 사용하여 SQL 데이터베이스 또는 SQL 데이터 웨어하우스에 연결하고 Azure Active Directory를 사용하여 인증하는 경우 최소 30초의 시간 제한 값이 권장됩니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 **sqlcmd** 는 오류 메시지를 생성합니다. 값을 0으로 설정하면 제한 시간이 없습니다.
@@ -166,11 +165,11 @@ sqlcmd
 열 암호화 설정을 `Enabled`로 설정합니다. 자세한 내용은 [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요. Windows 인증서 저장소에 저장된 마스터 키만 지원됩니다. -g 스위치를 사용하려면 적어도 **sqlcmd** 버전 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 `sqlcmd -?`를 실행하세요.
 
  **-G**  
- 이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 SQL 데이터 웨어하우스 또는 SQL 데이터베이스에 연결할 때 클라이언트에서 사용됩니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDUSEAAD = true를 설정합니다. -G 스위치를 사용하려면 적어도 **sqlcmd** 버전 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 `sqlcmd -?`를 실행하세요. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database 및 SQL Data Warehouse에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요. 옵션-G 옵션과 함께 지원 되지 않습니다.
+ 이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 SQL 데이터 웨어하우스 또는 SQL 데이터베이스에 연결할 때 클라이언트에서 사용됩니다. 이 옵션은 **sqlcmd** 스크립팅 변수 SQLCMDUSEAAD = true를 설정합니다. -G 스위치를 사용하려면 적어도 **sqlcmd** 버전 [13.1](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 `sqlcmd -?`를 실행하세요. 자세한 내용은 [Azure Active Directory 인증을 사용하여 SQL Database 및 SQL Data Warehouse에 연결](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/)을 참조하세요. -A 옵션은-G 옵션을 사용 하 여 지원 되지 않습니다.
 
 > [!IMPORTANT]
 > `-G` 옵션은 Azure SQL Database 및 Azure Data Warehouse에만 적용됩니다.
-> AAD 통합 및 대화형 인증 Linux 또는 macOS에서 현재 지원 되지 않습니다.
+> AAD 통합 및 대화형 인증은 현재 Linux 또는 macOS에서 지원 되지 않습니다.
 
 - **Azure Active Directory 사용자 이름 및 암호:** 
 
@@ -179,7 +178,7 @@ sqlcmd
     ``` 
     Sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -U bob@contoso.com -P MyAADPassword -G 
     ``` 
-    -G 매개 변수는 백 엔드에 다음 연결 문자열을 생성합니다. 
+    -G 매개 변수는 백 엔드에서 다음 연결 문자열을 생성 합니다. 
 
     ```
      SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID= bob@contoso.com;PWD=MyAADPassword;AUTHENTICATION = ActiveDirectoryPassword 
@@ -188,7 +187,7 @@ sqlcmd
 - **Azure Active Directory 통합** 
  
    Azure Active Directory 통합 인증을 위해 사용자 이름이나 암호 없이 **-G** 옵션을 제공합니다.
-   *AAD 통합 인증은 현재 Linux 또는 macOS에서 지원 되지 않습니다*합니다.
+   *AAD 통합 인증은 현재 Linux 또는 macOS에서 지원 되지 않습니다*.
 
     ```
     Sqlcmd -S Target_DB_or_DW.testsrv.database.windows.net -G
@@ -206,36 +205,36 @@ sqlcmd
 
 - **Azure Active Directory 대화형**  
  
-   Azure SQL Database 및 SQL Data Warehouse에 대 한 Azure AD 대화형 인증을 사용 하면 다단계 인증을 지 원하는 대화형 메서드를 사용할 수 있습니다. 자세한 내용은 [Active Directory 대화형 인증](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)합니다. 
+   Azure SQL Database 및 SQL Data Warehouse에 대 한 Azure AD 대화형 인증을 사용 하면 다단계 인증을 지 원하는 대화형 메서드를 사용할 수 있습니다. 자세한 내용은 [Active Directory 대화형 인증](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)을 참조 하세요. 
 
-   대화형 azure AD에 필요 **sqlcmd** [버전 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 뿐만 이상을 [ODBC 버전 17.2 이상이](https://www.microsoft.com/download/details.aspx?id=56567)합니다.  
+   Azure AD interactive에는 **sqlcmd** [버전 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) 이상 및 [ODBC 버전 17.2](https://www.microsoft.com/download/details.aspx?id=56567)이상이 필요 합니다.  
 
-   대화형 인증을 사용 하려면 사용자 이름의-G 옵션 제공 (-U) 암호 없이 합니다.
+   대화형 인증을 사용 하도록 설정 하려면 사용자 이름 (-U)만 사용 하 여 암호 없이-G 옵션을 제공 합니다.
 
-   다음 예제에서는 사용자의 AAD 계정을 나타냅니다 있는 사용자를 나타내는 Azure AD 대화형 모드 사용 하 여 데이터를 내보냅니다. 이 이전 섹션에 사용 된 동일한 예제: *Azure Active Directory 사용자 이름 및 암호*합니다.  
+   다음 예제에서는 사용자가 AAD 계정을 나타내는 사용자 이름을 나타내는 Azure AD interactive 모드를 사용 하 여 데이터를 내보냅니다. 이는 이전 섹션인 *Azure Active Directory 사용자 이름 및 암호*에 사용 된 것과 동일한 예제입니다.  
 
-   대화형 모드에 수동으로 입력 하는 데 암호 필요 하거나 다단계 인증을 사용 하는 계정에 구성 된 MFA 인증 메서드를 완료 합니다.
+   대화형 모드에서는 암호를 수동으로 입력 하거나 multi-factor authentication을 사용 하도록 설정한 계정에 대해 구성 된 MFA 인증 방법을 완료 해야 합니다.
 
    ``` 
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U alice@aadtest.onmicrosoft.com
    ```
 
-   이전 명령에서는 백 엔드에서 다음 연결 문자열을 생성합니다.  
+   이전 명령은 백 엔드에서 다음 연결 문자열을 생성 합니다.  
 
    ```
    SERVER = Target_DB_or_DW.testsrv.database.windows.net;UID=alice@aadtest.onmicrosoft.com; AUTHENTICATION = ActiveDirectoryInteractive   
    ```
 
-   명령줄에 필요한 사용자 이름과 해당 도메인 계정을 포함 Azure AD 사용자는 Windows 계정을 사용 하 여 도메인 페더레이션된 사용자 인 경우 (예를 들어 joe@contoso.com 아래 참조).
+   Azure AD 사용자가 Windows 계정을 사용 하는 도메인 페더레이션 사용자 인 경우 명령줄에 필요한 사용자 이름에는 해당 도메인 계정이 포함 됩니다 (예 joe@contoso.com : 아래 참조).
 
    ```
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
  
-   게스트 사용자는 특정 Azure AD에 존재 하 고 sqlcmd 명령을 실행 하려면 데이터베이스 권한이 있는 SQL DB에 존재 하는 그룹의 일부인, 게스트 사용자 별칭이 사용 됩니다 (예를 들어 *keith0@adventureworks.com* ).
+   게스트 사용자가 특정 Azure AD에 있고 sqlcmd 명령을 실행 하는 데이터베이스 권한이 있는 SQL DB에 있는 그룹의 일부인 경우 해당 게스트 사용자 별칭이 사용 됩니다 (예: *keith0@adventureworks.com* ).
 
   >[!IMPORTANT]
-  >사용 하는 경우 알려진된 문제가 없는 합니다 `-G` 및 `-U` SQLCMD 사용 하 여 옵션 배치 하는 경우를 `-U` 전에 옵션를 `-G` 옵션 인증이 실패 발생할 수 있습니다. 항상 시작 합니다 `-G` 옵션 뒤에 `-U` 옵션입니다.
+  >SQLCMD와 함께 `-G` `-U` 및 옵션을 사용 하는 경우 알려진 문제가 있습니다. 옵션 앞 `-G` 에 옵션을배치하면인증이실패할수있습니다.`-U` 항상 옵션 다음 `-U` 에 `-G` 옵션으로 시작 합니다.
 
     
  **-H** _workstation_name_  
@@ -254,7 +253,7 @@ sqlcmd
  이 스위치는 클라이언트에서 암호화된 연결을 요청하는 데 사용됩니다.  
   
  **-P** _password_  
- 사용자가 지정하는 암호입니다. 암호는 대소문자를 구분합니다. -U 옵션을 사용하고 **-P** 옵션을 사용하지 않으며 SQLCMDPASSWORD 환경 변수를 설정하지 않을 경우 **sqlcmd** 는 암호를 묻는 메시지를 표시합니다. Null 암호를 사용 권장 하지는 않습니다 하지만 매개 변수 값에 대 한 연속 큰따옴표 쌍을 사용 하 여 null 암호를 지정할 수 있습니다.
+ 사용자가 지정하는 암호입니다. 암호는 대소문자를 구분합니다. -U 옵션을 사용하고 **-P** 옵션을 사용하지 않으며 SQLCMDPASSWORD 환경 변수를 설정하지 않을 경우 **sqlcmd** 는 암호를 묻는 메시지를 표시합니다. Null 암호를 사용 하지 않는 것이 좋지만, 매개 변수 값에 연속 된 큰따옴표 쌍을 사용 하 여 null 암호를 지정할 수 있습니다.
 
 - **-P ""**
 
@@ -278,7 +277,7 @@ sqlcmd
   
  사용자 이름 및 암호 조합이 잘못된 경우 오류 메시지가 생성됩니다.  
   
-**참고!**  OSQLPASSWORD 환경 변수는 이전 버전과의 호환성을 위해 유지되었습니다. SQLCMDPASSWORD 환경 변수는 OSQLPASSWORD 환경 변수 보다 우선합니다. OSQLPASSWORD은 더 이상 공유할 했으므로 유틸리티 **sqlcmd** 하 고 **osql** 간섭 없이 나란히 사용할 수 없습니다. 이전 스크립트는 계속 작동 합니다.  
+**참고!**  OSQLPASSWORD 환경 변수는 이전 버전과의 호환성을 위해 유지되었습니다. SQLCMDPASSWORD 환경 변수는 OSQLPASSWORD 환경 변수 보다 우선 적용 됩니다. 이제 OSQLPASSWORD가 더 이상 공유 되지 **않으므로 유틸리티를** 간섭 없이 서로 옆에 사용할 **수 있습니다.** 이전 스크립트는 계속 작동 합니다.  
   
  **-P** 옵션과 함께 **-E** 옵션을 사용하면 오류 메시지가 생성됩니다.  
   
@@ -350,7 +349,7 @@ sqlcmd
  **-o** _output_file_  
  **sqlcmd**에서 출력을 받는 파일을 식별합니다.  
   
- **-u** 를 지정하면 *output_file* 이 유니코드 형식으로 저장됩니다. 파일 이름이 잘못된 경우 오류 메시지가 생성되고 **sqlcmd** 가 종료됩니다. **sqlcmd** 는 여러 **sqlcmd** 프로세스를 같은 파일에 동시에 쓸 수 없습니다. 이 경우 파일 출력이 손상되거나 제대로 수행되지 않습니다. 참조 된 **-f** 스위치와 관련 된 파일 형식 이기도 합니다. 이 파일은 없는 경우 생성됩니다. 이전 **sqlcmd** 세션에서와 이름이 같은 파일은 덮어쓰여집니다. 여기에 지정된 파일은 **stdout** 파일이 아닙니다. **stdout** 파일이 지정된 경우에는 이 파일이 사용되지 않습니다.  
+ **-u** 를 지정하면 *output_file* 이 유니코드 형식으로 저장됩니다. 파일 이름이 잘못된 경우 오류 메시지가 생성되고 **sqlcmd** 가 종료됩니다. **sqlcmd** 는 여러 **sqlcmd** 프로세스를 같은 파일에 동시에 쓸 수 없습니다. 이 경우 파일 출력이 손상되거나 제대로 수행되지 않습니다. **-F** 스위치는 파일 형식과도 관련이 있습니다. 이 파일은 없는 경우 생성됩니다. 이전 **sqlcmd** 세션에서와 이름이 같은 파일은 덮어쓰여집니다. 여기에 지정된 파일은 **stdout** 파일이 아닙니다. **stdout** 파일이 지정된 경우에는 이 파일이 사용되지 않습니다.  
   
  경로 예는 다음과 같습니다.  
 
@@ -507,7 +506,7 @@ sqlcmd
 > [!NOTE]  
 >  네트워크에서 브로드캐스팅의 특성으로 인해 **sqlcmd** 는 모든 서버로부터 시기 적절한 응답을 받지 못할 수 있습니다. 그러므로 반환되는 서버 목록은 이 옵션을 호출할 때마다 다를 수 있습니다.  
   
- 옵션 매개 변수 **c** 를 지정하면 **Servers:** 머리글 없이 출력이 나타납니다. 그리고 각 서버 줄이 선행 공백 없이 나열됩니다. 이 프레젠테이션에서 정리 된 출력 이라고 합니다. 정리된 출력은 스크립트 언어의 처리 성능을 향상시킵니다.  
+ 옵션 매개 변수 **c** 를 지정하면 **Servers:** 머리글 없이 출력이 나타납니다. 그리고 각 서버 줄이 선행 공백 없이 나열됩니다. 이 프레젠테이션을 clean output 이라고 합니다. 정리된 출력은 스크립트 언어의 처리 성능을 향상시킵니다.  
   
  **-p**[**1**]  
  모든 결과 집합에 대한 성능 통계를 출력합니다. 다음 표시는 성능 통계 형식의 예입니다.  
@@ -678,7 +677,7 @@ sqlcmd
   
  **출력 명령**  
   **:Error**   
- _ **\<**_  _filename_  ** _>|_ STDERR|STDOUT**  
+ _**\<**_  _filename_  **_>|_ STDERR|STDOUT**  
  *file name*에 지정된 파일, **stderr** 또는 **stdout**으로 모든 오류 출력을 리디렉션합니다. 스크립트에서 **Error** 명령이 여러 번 나타날 수 있습니다. 기본적으로 오류 출력은 **stderr**로 전송됩니다.  
   
  *file name*  
@@ -753,7 +752,7 @@ sqlcmd
 |-102|반환 값을 선택할 때 변환 오류가 발생했습니다.|  
   
  **GO** [*count*]  
- GO는 일괄 처리의 끝을 알려 주고 캐시된 Transact-SQL 문을 실행하도록 신호를 보냅니다. 일괄 처리는 별도 배치로 여러 번 실행 됩니다. 단일 일괄 처리에서 변수를 두 번 이상 선언할 수 없습니다.
+ GO는 일괄 처리의 끝을 알려 주고 캐시된 Transact-SQL 문을 실행하도록 신호를 보냅니다. 일괄 처리는 별도의 일괄 처리로 여러 번 실행 됩니다. 단일 일괄 처리에서 변수를 두 번 이상 선언할 수 없습니다.
   
  **기타 명령**  
   **:r \<** _filename_ **>**  
@@ -831,7 +830,7 @@ sqlcmd
 
 `sqlcmd`
   
-sqlcmd 프롬프트 유형:
+Sqlcmd 프롬프트에 다음을 입력 합니다.
 
 `USE AdventureWorks2012;`
 

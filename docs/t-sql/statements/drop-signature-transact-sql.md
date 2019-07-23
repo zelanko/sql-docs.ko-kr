@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 8a1fd8c5-0e75-4b2f-9d3c-c296bed56cc7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a7def68fb093f056569836a3cbdad5f71b3fbd2f
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: f36f0bc8b70a371e61f309ac61b7b0d769135429
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929200"
 ---
 # <a name="drop-signature-transact-sql"></a>DROP SIGNATURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ DROP [ COUNTER ] SIGNATURE FROM module_name
 ## <a name="remarks"></a>Remarks  
  서명 정보는 sys.crypt_properties 카탈로그 뷰에 표시됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  개체에 대한 ALTER 권한과 인증서 또는 비대칭 키에 대한 CONTROL 권한이 필요합니다. 연결된 프라이빗 키가 암호로 보호되어 있으면 사용자도 암호가 있어야 합니다.  
   
 ## <a name="examples"></a>예  

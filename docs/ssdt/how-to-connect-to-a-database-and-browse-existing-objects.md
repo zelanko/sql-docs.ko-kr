@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 9b331800-3806-4459-ac58-88cdc98124d3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 21096819ebd7a54ab8f4505ad980c0e6a5266d6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49049fbbff2397f6492cac385b10c23a66d48a74
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897331"
 ---
 # <a name="how-to-connect-to-a-database-and-browse-existing-objects"></a>방법: 데이터베이스에 연결 및 기존 개체 찾아보기
 데이터베이스 관리자 및 개발자가 수행하는 가장 일반적인 작업은 라이브 데이터베이스에 연결하고, 해당 스키마를 디자인하거나 찾아보고, 개체에 대해 쿼리하는 것입니다. 이제 Visual Studio의 SQL Server 개체 탐색기에는 연결된 모든 **SQL Server** 인스턴스와 해당 데이터베이스가 SSMS와 유사한 계층 구조로 그룹화되는 전용 SQL Server 노드가 포함되어 있습니다. 연결된 SQL Server 인스턴스는 실행 중인 SQL Server 2008과 같은 내부 인스턴스이거나 외부 SQL Azure 인스턴스일 수 있습니다.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c288daab-5181-4d4b-ba2a-8a147098e758
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f2cd74f8912d711b7cd6be93e63aca322172754c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 5878de6131ce193f8f3b415b07d8961d7058ffa5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051718"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>기록 보존 기간 설정(SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "54135283"
   
 ### <a name="to-specify-the-history-retention-period"></a>기록 보존 기간을 지정하려면  
   
-1.  **배포자 속성 - \<Distributor>** 대화 상자의 **일반** 페이지에서 배포 데이터베이스에 대한 속성 단추(**…**)를 클릭합니다.  
+1.  **배포자 속성 - \<Distributor>** 대화 상자의 **일반** 페이지에서 배포 데이터베이스에 대한 속성 단추( **…** )를 클릭합니다.  
   
 2.  **최소 다음 기간 동안 복제 성능 기록 저장** 상자에 값을 입력합니다.  
   

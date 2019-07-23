@@ -1,5 +1,5 @@
 ---
-title: 결과 집합 사용 | Microsoft Docs
+title: 결과 집합 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 351351dd287da5b7efeb59bd9d1df97e52b30f57
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9d33dbebaad162feb77a4cbea8de33993fc79f14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956959"
 ---
 # <a name="working-with-result-sets"></a>결과 집합 사용
 
@@ -27,7 +26,7 @@ ms.locfileid: "66798505"
 또한 SQLServerResultSet 개체는 데이터 행을 탐색하고 포함된 데이터를 수집 또는 설정하며 기본 데이터베이스의 변경 내용에 따라 중요도 수준을 다양하게 설정할 수 있는 메서드를 제공합니다.  
   
 > [!NOTE]  
-> 변경 내용에 따른 중요도 포함 하 여 결과 집합을 관리 하는 방법에 대 한 자세한 내용은 참조 [JDBC 드라이버로 결과 집합 관리](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)합니다.  
+> 변경에 대 한 민감도를 포함 하 여 결과 집합을 관리 하는 방법에 대 한 자세한 내용은 [JDBC 드라이버를 사용 하 여 결과 집합 관리](../../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)를 참조 하세요.  
   
 이 섹션의 항목에서는 결과 집합을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터를 조작하는 다양한 방법에 대해 설명합니다.  
   

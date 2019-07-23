@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 70fc970a214c001e00703ddaa79438d59e31e487
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a072483769e4e75ac21b992b0fefa462640fa31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984602"
 ---
 # <a name="connected-database-development"></a>연결된 데이터베이스 개발
 이 섹션에서는 SQL Server Data Tools에서 연결된 데이터베이스를 디자인하고 쿼리하는 용도로 제공되는 기능에 대해 설명합니다.  

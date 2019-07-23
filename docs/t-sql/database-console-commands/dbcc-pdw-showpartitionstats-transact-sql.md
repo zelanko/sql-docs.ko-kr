@@ -10,14 +10,13 @@ dev_langs:
 - TSQL
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 7b80b96436b8cc7346a69a8b2448ade60dd009b5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ac6d3ac9128c8f27a898f4b903f74d1e9ab9bb1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116499"
 ---
 # <a name="dbcc-pdwshowpartitionstats-transact-sql"></a>DBCC PDW_SHOWPARTITIONSTATS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -46,15 +45,15 @@ DBCC PDW_SHOWPARTITIONSTATS ( " [ database_name . [ schema_name ] . ] | [ schema
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|partition_number|ssNoversion|파티션 번호입니다.|  
+|partition_number|int|파티션 번호입니다.|  
 |used_page_count|BIGINT|데이터에 사용되는 페이지 수입니다.|  
 |reserved_page_count|BIGINT|파티션에 사용하도록 예약된 페이지의 수입니다.|  
 |row_count|BIGINT|파티션의 행 수입니다.|  
-|pdw_node_id|ssNoversion|데이터에 대한 노드를 컴퓨팅합니다.|  
-|distribution_id|ssNoversion|데이터의 배포 식별자입니다.|  
+|pdw_node_id|int|데이터에 대한 노드를 컴퓨팅합니다.|  
+|distribution_id|int|데이터의 배포 식별자입니다.|  
   
 ## <a name="examples-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
-### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>1. DBCC PDW_SHOWPARTITIONSTATS 기본 구문 예제  
+### <a name="a-dbcc-pdwshowpartitionstats-basic-syntax-examples"></a>1\. DBCC PDW_SHOWPARTITIONSTATS 기본 구문 예제  
 다음 예제에서는 [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] 데이터베이스의 FactInternetSales 테이블에 대해 파티션별 사용된 공간 및 행 수를 표시합니다.
   
 ```sql

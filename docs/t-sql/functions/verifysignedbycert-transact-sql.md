@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 4e041f33-60c4-4190-91c7-220d51dd6c8f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: adbc2e1862a783c0452519054e839261d08709d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 360b597b8cd122ede57426cc879dd041b3414078
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65946228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927551"
 ---
 # <a name="verifysignedbycert-transact-sql"></a>VERIFYSIGNEDBYCERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ VerifySignedByCert( Cert_ID , signed_data , signature )
  서명된 데이터에 첨부된 서명입니다. *signature*는 **varbinary**입니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
  서명된 데이터가 변경되지 않았으면 1을, 변경되었으면 0을 반환합니다.  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 55da55b347037de5531b8409472ef4c405c55da6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31a5d85546a8760dc8853c4bdd25369dc36c2152
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112549"
 ---
 # <a name="derived-column-transformation"></a>파생 열 변환
 

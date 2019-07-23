@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 0669b1d0-46cc-4fac-8df7-5f7fa7af5db4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 3829348777930a9184620d21a0969e166ce37efc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5316bb4daa281c0abedd133803965a0b0af63bdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912765"
 ---
 # <a name="create-fulltext-stoplist-transact-sql"></a>CREATE FULLTEXT STOPLIST(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
 ## <a name="remarks"></a>Remarks  
  중지 목록의 생성자는 해당 소유자입니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  STOPLIST를 만들려면 CREATE FULLTEXT CATALOG 권한이 필요합니다. 중지 목록 소유자는 중지 목록에 대한 CONTROL 권한을 명시적으로 부여하여 사용자가 단어를 추가 및 제거하고 중지 목록을 삭제하도록 허용할 수 있습니다.  
   
 > [!NOTE]  
@@ -84,7 +83,7 @@ CREATE FULLTEXT STOPLIST stoplist_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-new-full-text-stoplist"></a>1. 새로운 전체 텍스트 중지 목록 작성  
+### <a name="a-creating-a-new-full-text-stoplist"></a>1\. 새로운 전체 텍스트 중지 목록 작성  
  다음 예에서는 `myStoplist`라는 새로운 전체 텍스트 중지 목록을 만듭니다.  
   
 ```  
@@ -92,7 +91,7 @@ CREATE FULLTEXT STOPLIST myStoplist;
 GO  
 ```  
   
-### <a name="b-copying-a-full-text-stoplist-from-an-existing-full-text-stoplist"></a>2. 기존 전체 텍스트 중지 목록에서 전체 텍스트 중지 목록 복사  
+### <a name="b-copying-a-full-text-stoplist-from-an-existing-full-text-stoplist"></a>2\. 기존 전체 텍스트 중지 목록에서 전체 텍스트 중지 목록 복사  
  다음 예에서는 기존 AdventureWorks 중지 목록 `myStoplist2`를 복사하여 새로운 전체 텍스트 중지 목록 `Customers.otherStoplist`를 만듭니다.  
   
 ```  
@@ -100,7 +99,7 @@ CREATE FULLTEXT STOPLIST myStoplist2 FROM AdventureWorks.otherStoplist;
 GO  
 ```  
   
-### <a name="c-copying-a-full-text-stoplist-from-the-system-full-text-stoplist"></a>3. 시스템 전체 텍스트 중지 목록에서 전체 텍스트 중지 목록 복사  
+### <a name="c-copying-a-full-text-stoplist-from-the-system-full-text-stoplist"></a>C. 시스템 전체 텍스트 중지 목록에서 전체 텍스트 중지 목록 복사  
  다음 예에서는 시스템 중지 목록에서 전체 텍스트 중지 목록을 복사하여 `myStoplist3`이라는 새로운 전체 텍스트 중지 목록을 만듭니다.  
   
 ```  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6da39bea-0f67-4660-98fc-d7214f9b2138
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: bd15742428c99db099878a800c8d2bd178fd5411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aa054a04b236c419b833df42ba668926e97e312
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030868"
 ---
 # <a name="stisvalid-geometry-data-type"></a>STIsValid(geometry 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]

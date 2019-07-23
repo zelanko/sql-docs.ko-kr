@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 65fff22d-5963-4a8c-8b31-fe9ab247a03e
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 275b48491ddf5c868e467043c57c64e0936e36d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5dd782fc153829fcaa1105d37421963a8884bb0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991478"
 ---
 # <a name="availability-group-properties-new-availability-group-backup-preferences-page"></a>가용성 그룹 속성: 새 가용성 그룹(백업 기본 설정 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

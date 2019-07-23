@@ -4,7 +4,6 @@ titleSuffix: SQL Server
 description: 이 빠른 시작에서는 선택한 클라우드의 Linux에서 SQL Server를 실행하는 방법을 보여 줍니다.
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ms.date: 05/25/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -12,12 +11,12 @@ ms.custom: ''
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 8453d74227e1007a42adfbd8ac1f91bf1a6d86da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dedadc89cd10da6f00ac768c3e15e151d0028e23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033623"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>빠른 시작: 온-프레미스 SQL Server 데이터베이스 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

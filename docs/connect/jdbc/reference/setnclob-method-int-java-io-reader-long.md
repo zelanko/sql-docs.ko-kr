@@ -1,5 +1,5 @@
 ---
-title: setNClob 메서드 (int, java.io.Reader, long) | Microsoft Docs
+title: setNClob 메서드 (int, java. io. 판독기, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11071f8f-0e9b-45f0-b600-aaef7e2815d8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1f21ad97e886b8fb4d3ed19ff2ed02e08a7b63fc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dae9fbeb16a5b9c9c881e4250206b7f83344ef78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800450"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973801"
 ---
 # <a name="setnclob-method-int-javaioreader-long"></a>setNClob 메서드(int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
