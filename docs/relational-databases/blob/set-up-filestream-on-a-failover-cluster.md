@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6721f780-20b7-4109-8ddb-ac327310699e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 18e9bbe981ebd8f36999f3ba0312e3f426457955
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ef524c6ee823b80b25fa5cf5ee4584ba8b8d00c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65094161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912191"
 ---
 # <a name="set-up-filestream-on-a-failover-cluster"></a>장애 조치(Failover) 클러스터에서 FILESTREAM 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

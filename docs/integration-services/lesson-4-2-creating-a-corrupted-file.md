@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: cd0b18dc-66c3-4d88-86ef-8e40cb660fae
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fd9a0270f4fabdae863ba1c476af9ae10b006bab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d7601ba8a9cdb05372b27358488ab7f621a65809
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055846"
 ---
 # <a name="lesson-4-2-create-a-corrupted-file"></a>4-2단원: 손상된 파일 만들기
 

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7165b90db10cab6060d674ad8ae4779af843173
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f41eb44b026c78a3d99814b231f52b518c18a177
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136578"
 ---
 # <a name="stored-procedures-database-engine"></a>저장 프로시저(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "51671582"
  보안 강화  
  여러 사용자 및 클라이언트 프로그램이 기본 데이터베이스 개체에 대한 직접적인 사용 권한이 없는 경우에도 프로시저를 통해 이러한 기본 개체에 대해 작업을 수행할 수 있습니다. 프로시저는 수행되는 프로세스 및 작업을 제어하고 기본 데이터베이스 개체를 보호합니다. 따라서 개별 개체 수준에서 사용 권한을 부여할 필요가 없으며 보안 계층이 간소화됩니다.  
   
- [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 절을 CREATE PROCEDURE 문에 지정하여 다른 사용자를 가장하거나 사용자 또는 응용 프로그램에서 기본 개체 및 명령에 대한 직접적인 사용 권한 없이도 특정 데이터베이스 작업을 수행할 수 있도록 할 수 있습니다. 예를 들어 TRUNCATE TABLE 등의 일부 동작에는 부여할 수 있는 권한이 없습니다. TRUNCATE TABLE을 실행하려면 사용자가 지정된 테이블에 대한 ALTER 권한을 가지고 있어야 합니다. 사용자가 너무 큰 권한을 갖게 되어 테이블을 자를 수도 있으므로 사용자에게 테이블에 대한 ALTER 권한을 부여하는 것은 최상의 방법이 아닙니다. TRUNCATE TABLE 문을 모듈에 통합하고 테이블 수정 권한을 가진 사용자로 모듈이 실행되도록 지정하면 테이블 자르기 권한을 모듈에 대해 EXECUTE 권한을 부여한 사용자에게로 확장할 수 있습니다.  
+ [EXECUTE AS](../../t-sql/statements/execute-as-clause-transact-sql.md) 절을 CREATE PROCEDURE 문에 지정하여 다른 사용자를 가장하거나 사용자 또는 애플리케이션에서 기본 개체 및 명령에 대한 직접적인 사용 권한 없이도 특정 데이터베이스 작업을 수행할 수 있도록 할 수 있습니다. 예를 들어 TRUNCATE TABLE 등의 일부 동작에는 부여할 수 있는 권한이 없습니다. TRUNCATE TABLE을 실행하려면 사용자가 지정된 테이블에 대한 ALTER 권한을 가지고 있어야 합니다. 사용자가 너무 큰 권한을 갖게 되어 테이블을 자를 수도 있으므로 사용자에게 테이블에 대한 ALTER 권한을 부여하는 것은 최상의 방법이 아닙니다. TRUNCATE TABLE 문을 모듈에 통합하고 테이블 수정 권한을 가진 사용자로 모듈이 실행되도록 지정하면 테이블 자르기 권한을 모듈에 대해 EXECUTE 권한을 부여한 사용자에게로 확장할 수 있습니다.  
   
  네트워크를 통해 프로시저를 호출하면 프로시저를 실행할 호출만 표시됩니다. 따라서 악의적인 사용자가 테이블 및 데이터베이스 개체 이름을 보거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 포함하거나 중요한 데이터를 검색할 수 없습니다.  
   

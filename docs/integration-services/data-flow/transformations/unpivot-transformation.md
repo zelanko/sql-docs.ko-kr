@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f635c64b-a9c5-4f11-9c40-9cd9d5298c5d
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 6bd29508a760421722a776aa3924c3866bee79f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 393ebc9ac1d1854b5cf2e07ebbd8304f3c8f555f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943897"
 ---
 # <a name="unpivot-transformation"></a>피벗 해제 변환
 

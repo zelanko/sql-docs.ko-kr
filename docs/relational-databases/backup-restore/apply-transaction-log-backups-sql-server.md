@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 777b83d5021a61ea42610680d52345ad4ca001b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b59c6973c8b1662d61a0ec022eba830558d51cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64478540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934545"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>트랜잭션 로그 백업 적용(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

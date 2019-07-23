@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: dfca4f9367a15cf5c418b8d671ae968260323898
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0e511e34b782c444bcdf6c778bb89dfebd4fab4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099030"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>텍스트 및 이미지 함수 - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,17 +62,17 @@ TEXTPTR ( column )
   
 |함수 또는 문|설명|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|**text** 또는 **ntext** 열에서 지정된 문자열의 문자 위치를 반환합니다.|  
-|DATALENGTH<b>(</b>_expression_**)**|**text**, **ntext** 및 **image** 열의 데이터 길이를 반환합니다.|  
+|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|**text** 또는 **ntext** 열에서 지정된 문자열의 문자 위치를 반환합니다.|  
+|DATALENGTH<b>(</b>_expression_ **)**|**text**, **ntext** 및 **image** 열의 데이터 길이를 반환합니다.|  
 |SET TEXTSIZE|SELECT 문으로 반환할 **text**, **ntext** 또는 **image** 데이터의 크기 제한(바이트)을 반환합니다.|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|지정한 *start* 오프셋과 *length*로 지정한 **varchar** 문자열을 반환합니다. 길이는 8KB보다 작아야 합니다.|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|지정한 *start* 오프셋과 *length*로 지정한 **varchar** 문자열을 반환합니다. 길이는 8KB보다 작아야 합니다.|  
   
 ## <a name="examples"></a>예  
   
 > [!NOTE]  
 >  다음 예를 실행하려면 **pubs** 데이터베이스를 설치해야 합니다.  
   
-### <a name="a-using-textptr"></a>1. TEXTPTR 사용  
+### <a name="a-using-textptr"></a>1\. TEXTPTR 사용  
  다음 예에서는 `TEXTPTR` 함수를 사용하여 `pubs` 데이터베이스의 `pub_info` 테이블에서 `New Moon Books`와 관련된 **image** 열 `logo`를 찾는 방법을 보여 줍니다. 텍스트 포인터는 지역 변수인 `@ptrval.`로 설정합니다.  
   
 ```  
@@ -87,7 +86,7 @@ WHERE p.pub_id = pr.pub_id
 GO  
 ```  
   
-### <a name="b-using-textptr-with-in-row-text"></a>2. 행 내부 텍스트와 함께 TEXTPTR 사용  
+### <a name="b-using-textptr-with-in-row-text"></a>2\. 행 내부 텍스트와 함께 TEXTPTR 사용  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다음 예와 같이 트랜잭션 내에서 행 내부 텍스트 포인터를 사용해야 합니다.  
   
 ```  

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 348911ab-b0b6-4867-aee7-e6f42e053a4a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 56b8c34562c85e1154d01b772a6ba2db1b28ab70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b3e67e84738532baee8f0413dd3896c2a19f26d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139119"
 ---
 # <a name="suserid-transact-sql"></a>SUSER_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ SUSER_ID ( [ 'login' ] )
  사용자의 로그인 이름입니다. *login*은 **nchar**입니다. *login*이 **char**로 지정되면, *login*은 암시적으로 **nchar**로 변환됩니다. *login*은 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 연결할 권한이 있는 Windows 사용자 또는 그룹일 수 있습니다. *login*을 지정하지 않으면 현재 사용자의 로그인 ID 번호가 반환됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  SUSER_ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내부에서 명시적으로 제공된 로그인에 대해서만 ID를 반환합니다. 이 ID는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 소유권 및 사용 권한을 추적하는 데 사용되며 SUSER_SID가 반환하는 로그인의 SID와는 다릅니다. *login*이 SQL Server 로그인인 경우 SID가 GUID에 매핑됩니다. *login*이 Windows 로그인 또는 Windows 그룹인 경우 SID가 Windows 보안 ID에 매핑됩니다.  

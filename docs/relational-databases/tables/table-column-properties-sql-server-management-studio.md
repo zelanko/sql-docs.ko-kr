@@ -14,14 +14,13 @@ f1_keywords:
 ms.assetid: 09830897-cc10-46b8-95f5-e0e9681b668c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9e10bb43295df9fac711792f65ed22e4b55a1605
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3ef1d3001078b4f1217bad60646d28a26319d80c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016237"
 ---
 # <a name="table-column-properties-sql-server-management-studio"></a>테이블 열 속성(SQL Server Management Studio)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]

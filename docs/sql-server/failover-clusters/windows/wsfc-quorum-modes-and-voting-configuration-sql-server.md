@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ca0d59ef-25f0-4047-9130-e2282d058283
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8cba297aa253fd4f4d7798342ccb4627f8008154
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 09dc99233119b39161039f524599b9f36c3128ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107867"
 ---
 # <a name="wsfc-quorum-modes-and-voting-configuration-sql-server"></a>WSFC 쿼럼 모드 및 투표 구성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "53215519"
 -   **디스크만** 공유 디스크 클러스터 리소스가 미러링 모니터로 지정되며 노드에서 해당 공유 디스크로의 연결이 찬성으로 계산됩니다.  
   
 > [!TIP]  
->  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대해 비대칭 저장소 구성을 사용할 때는 일반적으로 투표 노드의 수가 홀수인 경우 노드 과반수 쿼럼 모드를 사용하고 투표 노드의 수가 짝수인 경우 노드 및 파일 공유 과반수 쿼럼 모드를 사용해야 합니다.  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]에 대해 비대칭 스토리지 구성을 사용할 때는 일반적으로 투표 노드의 수가 홀수인 경우 노드 과반수 쿼럼 모드를 사용하고 투표 노드의 수가 짝수인 경우 노드 및 파일 공유 과반수 쿼럼 모드를 사용해야 합니다.  
   
 ##  <a name="VotingandNonVotingNodes"></a> 투표 및 비투표 노드  
  기본적으로 WSFC 클러스터의 각 노드는 클러스터 쿼럼의 멤버로 포함됩니다. 각 노드는 전반적인 클러스터 상태를 결정하는 데 하나의 투표권이 있으며 지속적으로 쿼럼을 설정하려고 합니다.  이 시점까지 쿼럼 토론은 클러스터 상태에 대해 투표하는 WSFC 클러스터 노드 집합을 *투표 노드*로 간주합니다.  

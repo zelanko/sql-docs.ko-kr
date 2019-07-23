@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 719282c3-e9cc-4e0e-9a83-7fb8b8b17f67
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 095f446192beb8441e0587bbf3ef6af0307d0208
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 8b42208648f5e310b484105a88335e13046387ea
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681161"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68261988"
 ---
 # <a name="property-pages-in-sql-server-management-studio"></a>SQL Server Management Studio의 속성 페이지
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 47ef6547-5ec7-4cf5-a4d4-e34cbeec72eb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7e776aaff34a88554a34f00f360e8c871e701cbf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4dee62a135b45b0181094aeec8b5edc063f6ffea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980384"
 ---
 # <a name="getresultsetconcurrency-method-sqlserverstatement"></a>getResultSetConcurrency 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

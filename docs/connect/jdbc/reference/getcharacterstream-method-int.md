@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4f9f230d-be4c-469a-b3dc-f24531429aae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ab08146bcda8d9cfa57021f141f309cacde549b9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c0dd69211302a10fe72fc2742cbcd8b6bda7c933
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213693"
 ---
 # <a name="getcharacterstream-method-int"></a>getCharacterStream 메서드(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.Reader getCharacterStream(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getCharacterStream 메서드는 java.sql.ResultSet 인터페이스의 getCharacterStream 메서드에 의해 지정 됩니다.  
+ 이 getCharacterStream 메서드는 getCharacterStream 인터페이스의 메서드에 의해 지정 됩니다.  
   
  이 메서드는 nchar, nvarchar, nvarchar(max) 및 ntext와 같은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 유니코드 문자 데이터 형식만 읽습니다. ASCII 문자 형식을 비롯한 다른 모든 데이터 형식에서는 예외가 발생합니다. ASCII 데이터 형식을 읽으려면 [getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlserverresultset.md) 메서드를 사용합니다.  
   

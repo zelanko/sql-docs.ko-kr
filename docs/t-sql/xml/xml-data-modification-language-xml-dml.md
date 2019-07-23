@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 20ce50d2-c07b-4e41-93a7-1380d2cd49cb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58ba90d2f94c08160ec5ad5382ca31a9c5dc7c44
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 28de1be430d02a9288b0a1fe27567965fb0a32e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140885"
 ---
 # <a name="xml-data-modification-language-xml-dml"></a>XML DML(XML 데이터 수정 언어)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "56013944"
   
 -   **modify()** 메서드 내부에 적합한 XML DML 문을 지정합니다.  
   
- 일부 특성은 해당 값을 삽입, 삭제 또는 수정할 수 없습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 일부 특성은 해당 값을 삽입, 삭제 또는 수정할 수 없습니다. 예를 들어  
   
 -   형식화된 또는 형식화되지 않은 **xml**의 경우 특성은 **xmlns**, **xmlns:\*** 및 **xml:base**입니다.  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: cbfbed6239d48cf01e65411250b163797d13333c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13680aea1d34b83d76647d39d0f40b84609b2e8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910652"
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) 절의 *column_expression*입니다.  
   
 ## <a name="return-type"></a>반환 형식  
- **ssNoversion**  
+ **int**  
   
 ## <a name="remarks"></a>Remarks  
  GROUPING_ID \<column_expression>은 GROUP BY 목록의 식과 정확하게 일치해야 합니다. 예를 들어 DATEPART(yyyy, \<*column name*>)를 기준으로 그룹화하는 경우에는 GROUPING_ID(DATEPART(yyyy, \<*column name*>))를 사용하고, \<*column name*>를 기준으로 그룹화하는 경우에는 GROUPING_ID(\<*column name*>)를 사용하세요.  

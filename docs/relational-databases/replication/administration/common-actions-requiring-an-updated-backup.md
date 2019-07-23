@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a5975bf4-183e-42e3-b7d1-ad02f89d2e1d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b3cfae90f4116ad1e3b6a313969a00f9ca5ed39c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9989b048522b9ad387b5fb8efd1588de55281e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665115"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939320"
 ---
 # <a name="common-actions-requiring-an-updated-backup"></a>업데이트된 백업이 필요한 일반 동작
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

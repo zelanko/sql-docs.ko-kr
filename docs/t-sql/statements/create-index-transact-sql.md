@@ -53,14 +53,13 @@ helpviewer_keywords:
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 195f7d0f298d191845a65864e752ab9a4dea5d06
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: c7808af6be2759b618ec0c57fb9ebb6e97f3b3a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048167"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 

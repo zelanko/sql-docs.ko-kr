@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cb4d0b91-db1d-4a6f-a87c-8ea125215afc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c6abf07e5ff18fba6fd68e8c109388f82bc5eae4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 688d17b7f703dc34658e66e3915b8ffaeda24e7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969220"
 ---
 # <a name="supportsmultipleresultsets-method-sqlserverdatabasemetadata"></a>supportsMultipleResultSets 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsMultipleResultSets()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsMultipleResultSets 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsMultipleResultSets 메서드에 의해 지정 됩니다.  
+ 이 supportsMultipleResultSets 메서드는 supportsMultipleResultSets 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

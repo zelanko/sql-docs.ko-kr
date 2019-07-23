@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: ef1cc7de-63be-4fa3-a622-6d93b440e3ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0dc7ab298607964f4b9a6d7c1c7fa74a53c6bc83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fe7d83331ee1dc0824e77602c60be04e070fb6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050201"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 소개
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

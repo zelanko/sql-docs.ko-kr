@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: edd0d17a-0e9c-4c28-8395-a7d47e8ce3d6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b8b74629bcaea743026c453614f2c69e268b6bc
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 01a1e4be7476b2f683345e8bfd23f4fcf0e90642
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063079"
 ---
 # <a name="debug-a-business-logic-handler-replication-programming"></a>비즈니스 논리 처리기 디버깅(복제 프로그래밍)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

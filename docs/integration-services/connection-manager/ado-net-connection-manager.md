@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: bee4d3ea71aaeacf682a6e90fad91786fa7a0c9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32b01cce82cd1fd2af018b002a3c551ea480c000
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66221170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897985"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 연결 관리자
 

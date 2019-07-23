@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 362bbcd8-b7b0-4bab-8afe-1212b2ad1af9
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a5094f1fc42715dfed74aee022d8ebe2bd36d8b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93bdaf392909a03c704aba74d7b75abaa59846dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038755"
 ---
 # <a name="odbc-source-custom-properties"></a>ODBC Source Custom Properties
 

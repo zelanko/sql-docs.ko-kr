@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8b3c3938-e057-4919-9e9f-01eb8a4ad937
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6d8f95f84c3725c76dd30289eba6d6c12e664cc3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b08ca8e8cb96329d29310f9c0c0e250ab6b10e12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66767319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978770"
 ---
 # <a name="gettimestamp-method-javalangstring-sqlserverresultset"></a>getTimestamp 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Timestamp getTimestamp(java.lang.String columnName)
  열 이름이 포함된 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 타임 스탬프 개체입니다.  
+ Timestamp 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

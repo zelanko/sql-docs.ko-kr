@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: dbba47d7-e08e-4435-b876-35dced1f325d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f7d3690f00742c93e33a7fa2ac3b4130b8045a0b
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: f28eeedaa731a504390f5c636fe485ec4676f1f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58566432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000288"
 ---
 # <a name="transact-sql-reference-database-engine"></a>Transact-SQL 참조(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +56,7 @@ T-SQL 토픽을 찾으려면 이 페이지의 오른쪽 위에 있는 검색을 
 
  
 ## <a name="applies-to-references"></a>'적용 대상' 참조  
- T-SQL 참조 토픽에는 다른 Azure SQL 서비스뿐만 아니라, 2008부터 시작하는 여러 버전의 SQL Server가 포함됩니다.  각 토픽의 위쪽에는 토픽의 제목을 지원하는 제품 및 서비스를 나타내는 섹션이 있습니다. 
+ T-SQL 참조 토픽에는 다른 Azure SQL 서비스뿐만 아니라, 2008부터 시작하는 여러 버전의 SQL Server가 포함됩니다. 각 토픽의 위쪽에는 토픽의 제목을 지원하는 제품 및 서비스를 나타내는 섹션이 있습니다. 
 
 예를 들어, 이 토픽은 모든 버전에 적용되며 다음 레이블이 있습니다. 
   

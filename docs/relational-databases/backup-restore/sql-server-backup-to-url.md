@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 73faafc9f9aca28ec6c334722a1cb9ce0a51d5ca
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: d8bc7ae686b78481583548d630751d365e3e01e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041555"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ ms.locfileid: "67860696"
   
  ![Azure Blob Storage](../../relational-databases/backup-restore/media/backuptocloud-blobarchitecture.gif "Azure Blob Storage")  
   
- **Azure 스냅숏:** 지정 시간에 생성된 Azure blob의 스냅샷입니다. 자세한 내용은 [Blob의 스냅샷 만들기](https://msdn.microsoft.com/library/azure/hh488361.aspx)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 Microsoft Azure Blob Storage 서비스에 저장된 데이터베이스 파일의 Azure 스냅샷 백업을 지원합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
+ **Azure 스냅샷:** 지정 시간에 생성된 Azure blob의 스냅샷입니다. 자세한 내용은 [Blob의 스냅샷 만들기](https://msdn.microsoft.com/library/azure/hh488361.aspx)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업에서는 Microsoft Azure Blob Storage 서비스에 저장된 데이터베이스 파일의 Azure 스냅샷 백업을 지원합니다. 자세한 내용은 [Azure의 데이터베이스 파일에 대한 파일-스냅샷 백업](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md)을 참조하세요.  
   
 ###  <a name="sqlserver"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Components  
  **URL:** URL은 고유한 백업 파일에 대한 URI(Uniform Resource Identifier)를 지정합니다. URL은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 파일의 위치와 이름을 제공하는 데 사용됩니다. URL은 컨테이너가 아닌 실제 Blob을 가리켜야 합니다. Blob이 없으면 만들어집니다. 기존 blob이 지정된 경우에는 “WITH FORMAT” 옵션을 지정하여 blob에서 기존 백업 파일을 덮어쓰지 않으면 BACKUP이 실패합니다.  
@@ -145,7 +144,7 @@ ms.locfileid: "67860696"
 |**WITH 옵션:**||||  
 |CREDENTIAL|Y||WITH CREDENTIAL은 스토리지 계정 키를 암호로 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명을 정의한 경우 BACKUP TO URL 옵션을 사용하여 Microsoft Azure Blob Storage서비스에 백업할 때만 지원됩니다.|  
 |FILE_SNAPSHOT|Y|||  
-|ENCRYPTION|Y||**WITH ENCRYPTION** 인수를 지정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅숏 백업은 백업을 가져오기 전에 먼저 전체 데이터베이스가 TDE 암호화되었는지 확인하며, 그런 경우 데이터베이스에서 TDE에 대해 지정된 알고리즘을 사용하여 파일-스냅숏 백업 파일 자체를 암호화합니다. 전체 데이터베이스의 일부 데이터가 암호화되지 않은 경우 백업이 실패합니다(예: 암호화 프로세스가 아직 완료되지 않은 경우).|  
+|ENCRYPTION|Y||**WITH ENCRYPTION** 인수를 지정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅샷 백업은 백업을 가져오기 전에 먼저 전체 데이터베이스가 TDE 암호화되었는지 확인하며, 그런 경우 데이터베이스에서 TDE에 대해 지정된 알고리즘을 사용하여 파일-스냅샷 백업 파일 자체를 암호화합니다. 전체 데이터베이스의 일부 데이터가 암호화되지 않은 경우 백업이 실패합니다(예: 암호화 프로세스가 아직 완료되지 않은 경우).|  
 |DIFFERENTIAL|Y|||  
 |COPY_ONLY|Y|||  
 |COMPRESSION&#124;NO_COMPRESSION|Y|파일-스냅샷 백업에 지원되지 않습니다.||  
@@ -210,7 +209,7 @@ ms.locfileid: "67860696"
 SQL Server 자격 증명을 사용하여 SQL Server Management Studio의 백업 태스크를 통해 데이터베이스를 URL에 백업할 수 있습니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅숏 백업을 만들거나 기존 미디어 세트를 덮어쓰려면 SQL Server Management Studio의 백업 태스크 대신 TRANSACT-SQL, Powershell 또는 C#을 사용해야 합니다.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅샷 백업을 만들거나 기존 미디어 세트를 덮어쓰려면 SQL Server Management Studio의 백업 태스크 대신 TRANSACT-SQL, Powershell 또는 C#을 사용해야 합니다.  
   
  다음 단계에서는 Microsoft Azure Storage로 백업할 수 있도록 SQL Server Management Studio에서 변경된 데이터베이스 백업 태스크에 대해 설명합니다.  
   

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d0023f2646cadac8b189992f06b695c1779c491d
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: b1eb75b2ce7b0674ad62a406e3a99d4782b61f3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009588"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>데이터베이스의 호환성 수준 보기 또는 변경
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 15cd2ab23a46bb9fa18a4b0fbf77b8ae3d958199
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: adc776d009a6836a6ce46207d0d426f7e444259b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797039"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935872"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>커서 유형 지정 및 행 선택
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

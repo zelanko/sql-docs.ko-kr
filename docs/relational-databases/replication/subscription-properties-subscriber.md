@@ -13,14 +13,13 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 43268755a3de5cf3a8a84547bafe5dc66ad1ac48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc85c55e86ee026a59c20539eb5c761d0cf66fd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129825"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server 복제 구독 속성 대화 상자 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "62751677"
  옵션이 읽기 전용으로 표시되면 구독을 만들 때만 해당 옵션을 설정할 수 있습니다. 새 구독 마법사에서 사용할 수 없는 옵션을 설정하려면 저장 프로시저를 사용하여 구독을 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) 및 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)를 참조하세요.  
   
 > [!NOTE]  
->  구독에 대한 배포 에이전트 또는 병합 에이전트 작업이 아직 생성되지 않은 경우 많은 구독 속성이 표시되지 않습니다. 끌어오기 구독에 대한 에이전트 작업을 만들려면 [sp_addpullsubscription_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)(스냅숏 또는 트랜잭션 게시에 대한 구독) 또는 [sp_addmergepullsubscription_agent&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)(병합 게시에 대한 구독)을 실행합니다.  
+>  구독에 대한 배포 에이전트 또는 병합 에이전트 작업이 아직 생성되지 않은 경우 많은 구독 속성이 표시되지 않습니다. 끌어오기 구독에 대한 에이전트 작업을 만들려면 [sp_addpullsubscription_agent&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)(스냅샷 또는 트랜잭션 게시에 대한 구독) 또는 [sp_addmergepullsubscription_agent&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)(병합 게시에 대한 구독)을 실행합니다.  
   
 ## <a name="publisher-options-for-all-subscriptions"></a>모든 구독에 대한 게시자 옵션  
  **보안**  
@@ -76,22 +75,22 @@ ms.locfileid: "62751677"
 
   
 ## <a name="subscriber-options-for-all-subscriptions"></a>모든 구독에 대한 구독자 옵션  
- **스냅숏에서 게시된 데이터 초기화**  
+ **스냅샷에서 게시된 데이터 초기화**  
  구독을 스냅샷으로 초기화할 것인지(기본값), 아니면 다른 방법으로 초기화할 것인지를 결정합니다. 구독 초기화에 대한 자세한 내용은 [구독 초기화](../../relational-databases/replication/initialize-a-subscription.md)를 참조하세요.  
   
- **스냅숏 위치**  
+ **스냅샷 위치**  
  초기화 또는 다시 초기화 중에 스냅샷 파일에 액세스하는 위치를 결정합니다. 다음 위치 값 중 하나가 표시됩니다.  
   
 -   **기본 위치**: 배포자를 구성할 때 정의되는 기본 위치입니다. 자세한 내용은 [스냅샷 옵션 지정](../../relational-databases/replication/snapshot-options.md)을 참조하세요.  
   
 -   **대체 폴더**: **게시 속성** 대화 상자에서 지정할 수 있는 대체 폴더입니다. 자세한 내용은 [스냅샷 옵션 지정](../../relational-databases/replication/snapshot-options.md)을 참조하세요.  
   
--   **동적 스냅숏 폴더**: 매개 변수가 있는 행 필터를 사용하는 병합 게시에 대한 스냅숏 위치입니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을(를) 참조하세요.  
+-   **동적 스냅샷 폴더**: 매개 변수가 있는 행 필터를 사용하는 병합 게시에 대한 스냅샷 위치입니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을(를) 참조하세요.  
   
 -   **FTP 폴더**: FTP(파일 전송 프로토콜) 서버에 액세스할 수 있는 폴더입니다. 자세한 내용은 [FTP를 통해 스냅샷 배달](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md)을 참조하세요.  
   
- **스냅숏 폴더**  
- **스냅숏 위치** 옵션에 대해 **기본 위치** 이외의 값을 선택하는 경우 스냅숏 폴더의 경로를 지정해야 합니다.  
+ **Snapshot folder**  
+ **스냅샷 위치** 옵션에 대해 **기본 위치** 이외의 값을 선택하는 경우 스냅샷 폴더의 경로를 지정해야 합니다.  
   
  **Windows 동기화 관리자 사용**  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 동기화 관리자를 사용하여 이 구독을 동기화할 수 있는지 여부를 결정합니다.  

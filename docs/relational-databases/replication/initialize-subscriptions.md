@@ -12,19 +12,18 @@ f1_keywords:
 ms.assetid: 7b170e4e-470d-4828-a9ed-7435b0b03514
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ea99b2118c915e03270475e607678ca6f9e92678
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d7bf65224506e820ad6c486f3bb0e78d002cc793
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127918"
 ---
 # <a name="initialize-subscriptions"></a>구독 초기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   구독자는 초기화되어야만 복제된 데이터를 받을 수 있습니다. 초기 데이터 세트는 필요 없지만 구독자에는 적어도 복제된 각 개체에 대한 스키마와 복제에 필요한 메타데이터 테이블 및 프로시저가 있어야 합니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **구독 속성**  
  초기 데이터 집합이 필요한 각 구독자의 **초기화** 열에서 확인란을 선택합니다. 확인란 선택을 취소하면 복제 메타데이터 및 프로시저만 초기화됩니다. 스냅샷 없이 구독 초기화에 대한 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)를 참조하세요.  
   

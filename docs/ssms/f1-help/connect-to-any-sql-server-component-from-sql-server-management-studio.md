@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5eeb41bd-b25b-4d3b-a005-a7d9e4b5978e
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 33b69a99d6ff965c7e8d95c67b48a1f358ffe7aa
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 5ff8f8f4b71b108597f367c7ca041f2a3feba962
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680326"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265133"
 ---
 # <a name="connect-to-any-sql-server-component-from-sql-server-management-studio"></a>SQL Server Management Studio에서 SQL Server 구성 요소로 연결
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 142e0c55-a8b9-4669-be49-b9dc602d5988
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b8ae5bf3c9359b2fd114214ea41c3e0e43be770
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 1ba8bbd7b78a2ca0a246bf01836a33f2592a8c82
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681172"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68251727"
 ---
 # <a name="create-a-sql-server-agent-proxy"></a>SQL Server 에이전트 프록시 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

@@ -5,11 +5,11 @@ ms.topic: include
 ms.date: 11/14/2018
 ms.author: mathoma
 ms.openlocfilehash: c4e33852ab323a23871668a9758d3f5bc0d724aa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212349"
 ---
 ### <a name="transactional-replication-matrix"></a>트랜잭션 복제 매트릭스 
 

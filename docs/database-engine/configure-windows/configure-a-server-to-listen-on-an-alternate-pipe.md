@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 7b595eb58dba9f76c2fcb7e825cfc4e0597d739e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd7a0ebf16733109e59aac74652d90e0b63a1d9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012913"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>대체 파이프에서 수신 대기하도록 서버 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -22,11 +22,11 @@ author: HeidiSteen
 ms.author: heidist
 manager: cgronlund
 ms.openlocfilehash: 49baad50d950578b9d2bbb96b4168c730056b307
-ms.sourcegitcommit: 7c052fc969d0f2c99ad574f99076dc1200d118c3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2019
-ms.locfileid: "55570676"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68223618"
 ---
 # <a name="create-external-resource-pool-transact-sql"></a>CREATE EXTERNAL RESOURCE POOL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ MAX_PROCESSES =*value*
 
 기계 학습에 사용된 외부 리소스 풀 관리 관련 정보는 [SQL Server에서 기계 학습을 위한 리소스 거버넌스](../../advanced-analytics/r/resource-governance-for-r-services.md)를 참조하세요. 
 
-## <a name="permissions"></a>Permissions
+## <a name="permissions"></a>사용 권한
 
 `CONTROL SERVER` 권한이 필요합니다.
 

@@ -32,14 +32,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: c7e831a6c0e5a1d45c8e7ac2c921be3ef120a41f
-ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
+ms.openlocfilehash: 3827cdec3aff869bc0057a7f4fd2d7f07396f179
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67556957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035264"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>SQL Server 2017의 버전과 지원하는 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]

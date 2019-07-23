@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 715effa0eb16a298f5064f08d2751df07bfa8677
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c10c5b34f7a3364113062821aba99e11536cc2ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56020215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948049"
 ---
 # <a name="xml-data-type-methods"></a>xml 데이터 형식 메서드
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "56020215"
 |[XML 데이터 내 관계형 데이터 바인딩](../../t-sql/xml/binding-relational-data-inside-xml-data.md)|XML 내에 XML이 아닌 데이터를 바인딩하는 방법에 대해 설명합니다.|  
 |[xml 데이터 형식 메서드를 사용하기 위한 지침](../../t-sql/xml/guidelines-for-using-xml-data-type-methods.md)|**xml** 데이터 형식 메서드 사용에 대한 지침을 설명합니다.|  
   
- 사용자 정의 형식 메서드 호출 구문을 사용하여 이러한 메서드를 호출할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 사용자 정의 형식 메서드 호출 구문을 사용하여 이러한 메서드를 호출할 수 있습니다. 예를 들어  
   
 ```  
 SELECT XmlCol.query(' ... ')  
@@ -47,7 +46,7 @@ FROM   Table
 ```  
   
 > [!NOTE]  
->  **xml** 데이터 형식 메서드 **query()**, **value()** 및 **exist()** 는 NULL XML 인스턴스에 대해 실행된 경우 NULL을 반환합니다. 또한 **modify()** 는 아무 것도 반환하지 않지만 **nodes()** 는 행 집합과 NULL 입력 사항이 있는 빈 행 집합을 반환합니다.  
+>  **xml** 데이터 형식 메서드 **query()** , **value()** 및 **exist()** 는 NULL XML 인스턴스에 대해 실행된 경우 NULL을 반환합니다. 또한 **modify()** 는 아무 것도 반환하지 않지만 **nodes()** 는 행 집합과 NULL 입력 사항이 있는 빈 행 집합을 반환합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   

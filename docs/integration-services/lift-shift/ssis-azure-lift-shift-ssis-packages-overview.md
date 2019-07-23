@@ -10,13 +10,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-manager: craigg
-ms.openlocfilehash: cd4b7a4901ed294c4698c4edc23d73a6cd497e58
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a402c50e8a7f1c2467b00fbbaa599d6c289ebab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896185"
 ---
 # <a name="lift-and-shift-sql-server-integration-services-workloads-to-the-cloud"></a>SQL Server Integration Services 워크로드를 클라우드로 리프트 앤 시프트
 

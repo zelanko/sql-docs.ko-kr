@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 49198d63-76cb-4843-8d04-e49b1fbb6916
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56d6fb5c6c9b7ac8224d8d7f42c379110520c557
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fe32325caccebd0e85204bbbc11b7a0cbe4eefca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972987"
 ---
 # <a name="setsendstringparametersasunicode-method-sqlserverdatasource"></a>setSendStringParametersAsUnicode 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void setSendStringParametersAsUnicode(boolean sendStringParametersAsUnico
 ## <a name="remarks"></a>Remarks  
  sendStringParametersAsUnicode 속성이 기본값인 **true**로 설정되어 있으면 문자열 매개 변수가 서버에 유니코드 형식으로 보내집니다. sendStringParametersAsUnicode 속성이 **false**로 설정되어 있으면 문자열 매개 변수가 서버에 유니코드 형식이 아닌 ASCII/MBCS 형식으로 보내집니다. sendStringParametersAsUnicode 속성이 설정되어 있지 않으면 [getSendStringParametersAsUnicode](../../../connect/jdbc/reference/getsendstringparametersasunicode-method-sqlserverdatasource.md) 기본값인 **true**를 반환합니다.  
   
- SendStringParametersAsUnicode 연결 속성에 대 한 자세한 내용은 참조 하세요. [연결 속성 설정](../../../connect/jdbc/setting-the-connection-properties.md)합니다.  
+ SendStringParametersAsUnicode connection 속성에 대 한 자세한 내용은 [연결 속성 설정](../../../connect/jdbc/setting-the-connection-properties.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3dca7f9498ae10d67fd804d6ce0e4a33f99584e
-ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
+ms.openlocfilehash: c1e2d8f01370978074a07eaa0e5f784927bef511
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67860715"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024969"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore 인덱스 쿼리 성능
 

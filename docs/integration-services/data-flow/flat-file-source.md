@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4a64f7f3-f25d-4db0-93b3-a29496030e58
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 3d325033d1e315ce7b9175f812ae992316fa2f44
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f8f9bd1a31fd395daea280a4718f87e12c774de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941491"
 ---
 # <a name="flat-file-source"></a>플랫 파일 원본
 

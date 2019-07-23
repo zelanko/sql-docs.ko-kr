@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d612461d-4c3f-46db-b968-ff4c80b2aa7c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 920e47391cbaaeb1e78c8a7a4f440880edab60fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e32cbf975d156aae723dfbff105fe51e039dc1b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977019"
 ---
 # <a name="iswrapperfor-method-sqlserverxadatasource"></a>isWrapperFor 메서드(SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +32,7 @@ public boolean isWrapperFor(Class iface)
 #### <a name="parameters"></a>매개 변수  
  *iface*  
   
- A **클래스** 인터페이스를 정의 합니다.  
+ 인터페이스를 정의 하는 **클래스** 입니다.  
   
 ## <a name="return-value"></a>반환 값  
  이 개체가 인터페이스를 구현하거나 인터페이스를 구현하는 개체를 래핑하면 **true**이고, 그렇지 않으면 **false**입니다.  
@@ -46,10 +45,10 @@ public boolean isWrapperFor(Class iface)
   
  이 메서드가 true를 반환하는 경우 동일한 인수로 [unwrap](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)을 호출하는 데 성공합니다.  
   
- 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)합니다.  
+ 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [unwrap 메서드 &#40;SQLServerXADataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)   
+ [래핑 해제 &#40;방법 SQLServerXADataSource&#41;](../../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)   
  [SQLServerXADataSource 메서드](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   
  [SQLServerXADataSource 멤버](../../../connect/jdbc/reference/sqlserverxadatasource-members.md)   
  [SQLServerXADataSource 클래스](../../../connect/jdbc/reference/sqlserverxadatasource-class.md)  

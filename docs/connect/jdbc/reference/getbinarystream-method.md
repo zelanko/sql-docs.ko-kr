@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0c8f7741-daba-4c04-adc0-8d76345a899a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f629b626426f8d94eb91f0e772b074f451172bce
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 486958cb6df51accc3446d1545b734efe9a6fc66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953629"
 ---
 # <a name="getbinarystream-method-"></a>getBinaryStream 메서드()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.io.InputStream getBinaryStream()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getBinaryStream 메서드는 java.sql.Blob 인터페이스의 getBinaryStream 메서드에 의해 지정 됩니다.  
+ 이 getBinaryStream 메서드는 java. Blob 인터페이스의 getBinaryStream 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerBlob 메서드](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

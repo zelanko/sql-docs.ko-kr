@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: cd5fc8c8-eab1-4165-9468-384f31e53f0a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 929a6a40b7203147ed59e045bb359c464c248850
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5e56c9013afbfce762f35edb41d0b411c426028
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062545"
 ---
 # <a name="specify-data-formats-for-compatibility-when-using-bcp-sql-server"></a>bcp를 사용하여 데이터 형식을 호환 가능하도록 지정(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

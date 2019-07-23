@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 40f942cc-8c87-45de-9456-44bd53b519e7
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: d5aa56fa7c9a7f3c482cb9b8880cdb66fa3e3523
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 777a98412ba6a9b18d825d16e8a4b4e911d6d92d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103256"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132107"
 ---
 # <a name="check-for-updates-dialog-box"></a>업데이트 확인 대화 상자
 SQL Server Data Tools의 2012년 11월 릴리스부터는 **SQL** 메뉴 아래에 **업데이트 확인** 메뉴 옵션이 표시됩니다.  

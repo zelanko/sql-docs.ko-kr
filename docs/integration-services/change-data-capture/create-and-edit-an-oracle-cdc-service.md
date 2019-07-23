@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d5d690eeaa3d6af5efa06f1e3e439aa4ba7692a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c00da27f5e4e6502bb431854ef0105e3b20954a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728941"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060845"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service 만들기 및 편집
 

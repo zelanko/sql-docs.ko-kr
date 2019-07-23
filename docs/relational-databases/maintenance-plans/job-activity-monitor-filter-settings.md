@@ -12,17 +12,16 @@ f1_keywords:
 ms.assetid: 89cb0055-5262-447f-8464-7203d4caba78
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d20532a4fb3aad70ca2ff972d6236680db221768
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 2532ca83c063d029015560b22e1a89317b90b5b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115805"
 ---
 # <a name="job-activity-monitor-filter-settings"></a>작업 활동 모니터(필터 설정)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  이 페이지를 사용하여 작업 활동 모니터에 표시되는 행 수를 줄일 수 있습니다. 하나 또는 여러 개의 사용 가능한 상자에 조건을 입력하여 지정한 값을 만족하는 행만 표시합니다. **상태** 또는 **차단 유형** 과 같은 일부 상자에서는 드롭다운 목록으로 한정된 수의 가능한 값을 제공합니다. **응용 프로그램** 과 같은 기타 상자에서는 어떤 값이든 원하는 만큼 쉼표로 구분된 목록으로 입력할 수 있습니다. 도구 모음 아이콘을 사용하면 범주별 또는 사전순으로 사용 가능한 상자를 정렬할 수 있습니다. 각각에 대해 간단한 설명을 표시할 조건을 클릭합니다.  
+  이 페이지를 사용하여 작업 활동 모니터에 표시되는 행 수를 줄일 수 있습니다. 하나 또는 여러 개의 사용 가능한 상자에 조건을 입력하여 지정한 값을 만족하는 행만 표시합니다. **상태** 또는 **차단 유형** 과 같은 일부 상자에서는 드롭다운 목록으로 한정된 수의 가능한 값을 제공합니다. **애플리케이션** 과 같은 기타 상자에서는 어떤 값이든 원하는 만큼 쉼표로 구분된 목록으로 입력할 수 있습니다. 도구 모음 아이콘을 사용하면 범주별 또는 사전순으로 사용 가능한 상자를 정렬할 수 있습니다. 각각에 대해 간단한 설명을 표시할 조건을 클릭합니다.  
   
  작업 활동 모니터를 필터링하려면 원하는 개수만큼 필터 조건을 제공하고 **필터 적용**을 클릭한 다음 **확인**을 클릭합니다.  
   

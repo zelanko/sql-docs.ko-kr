@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: db9404d8-4c42-45e5-a100-c7a84b056109
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 960c172b5634ba081fdcec404f13d0314e512f91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3851f85bf353e1ebe39f9bb24c88406550e1c286
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941280"
 ---
 # <a name="look-up-rfc-destination"></a>RFC 대상 조회
 

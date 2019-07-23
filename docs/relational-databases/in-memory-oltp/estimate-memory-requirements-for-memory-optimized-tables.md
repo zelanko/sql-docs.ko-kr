@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bfe74821b37a5e658ffc9abe3ff9710d8e53f592
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aeb9fdd447b36a44803d711a80aa7f2714857d01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050404"
 ---
 # <a name="estimate-memory-requirements-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 필요한 메모리 예측
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

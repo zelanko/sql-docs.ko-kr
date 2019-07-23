@@ -13,13 +13,12 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 59b8c8dd755a73220de058b6c10220f4cf00d6d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c776fd176379e8a65bdc70f6bf4c56fd370bef0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134382"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>데이터베이스 메일: 메일이 지연되고 배달되지 않음 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

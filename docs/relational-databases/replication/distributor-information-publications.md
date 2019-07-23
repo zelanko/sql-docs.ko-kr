@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a0275065ac80f9b34e32da885ba838da63ea6711
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 90459364211bef6714ba3af63cdc4669e0190049
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128296"
 ---
 # <a name="distributor-information-publications"></a>배포자 정보, 게시
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "54135398"
   병합 게시 구독 정보는 게시자 이름을 포함합니다. 그 밖에 이 대화 상자에 제공되는 기능 및 정보는 게시자 뷰와 동일합니다. 이 대화 상자를 사용하는 방법은 [게시자 정보, 구독 조사 목록&#40;병합 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-merge-publication.md)을 참조하세요.  
 
 ### <a name="snapshot-replication"></a>스냅샷 복제 
-  스냅샷 게시 구독 정보는 게시자 이름을 포함합니다. 그 밖에 이 대화 상자에 제공되는 기능 및 정보는 게시자 뷰와 동일합니다. 이 대화 상자를 사용하는 방법은 [게시자 정보, 구독 조사 목록&#40;스냅숏 게시, SQL Server 2005 이상&#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md)을 참조하세요.  
+  스냅샷 게시 구독 정보는 게시자 이름을 포함합니다. 그 밖에 이 대화 상자에 제공되는 기능 및 정보는 게시자 뷰와 동일합니다. 이 대화 상자를 사용하는 방법은 [게시자 정보, 구독 조사 목록&amp;#40;스냅샷 게시, SQL Server 2005 이상&amp;#41;](../../relational-databases/replication/publisher-information-subscription-watch-list-snapshot.md)을 참조하세요.  
 
 ## <a name="agents"></a>에이전트
 **에이전트** 탭에는 게시자 및 구독자와 연결된 에이전트 및 유지 관리 작업에 대한 정보가 표시됩니다.  

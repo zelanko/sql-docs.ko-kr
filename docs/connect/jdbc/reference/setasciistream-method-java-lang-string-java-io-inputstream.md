@@ -1,5 +1,5 @@
 ---
-title: setAsciiStream 메서드 스트림 입력 | Microsoft Docs
+title: setAsciiStream 메서드를 입력 스트림 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dc2caa44-9eb5-4ed8-a889-36148b50901d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: af7d8bbc9362d2aae15c9f84a64b76f00bd3a1df
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 72da8111b115c9c1eda4a328fc2cc173eebea5c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975447"
 ---
 # <a name="setasciistream-method-javalangstring-javaioinputstream"></a>setAsciiStream 메서드(java.lang.String, java.io.InputStream)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setAsciiStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setAsciiStream 메서드는 java.sql.PreparedStatement 인터페이스의 setAsciiStream 메서드에 의해 지정 됩니다.  
+ 이 setAsciiStream 메서드는 Java.sql.preparedstatement 인터페이스의 setAsciiStream 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [setAsciiStream(SQLServerCallableStatement)](../../../connect/jdbc/reference/setasciistream-sqlservercallablestatement.md)   

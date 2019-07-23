@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 45f2e781-c21d-4b44-8992-89f60fb3d022
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 1137138911519b2e6497525acb39b7de87a4fd63
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 38d86590da144386077b170433c52dcd1cc18d7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085916"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters"></a>복제 에이전트의 명령 프롬프트 매개 변수 보기 및 수정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

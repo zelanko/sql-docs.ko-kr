@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9231bd89-75e1-45c4-b4c8-13f08695af68
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70d624af12c1a97e6e76881b3c2f481179d47c70
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: bbdde51fe1015f224f1868842a80bee72dded4ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898133"
 ---
 # <a name="drop-database-encryption-key-transact-sql"></a>DROP DATABASE ENCRYPTION KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -46,7 +45,7 @@ DROP DATABASE ENCRYPTION KEY
 ## <a name="remarks"></a>Remarks  
  데이터베이스가 암호화되면 먼저 ALTER DATABASE 문을 사용하여 데이터베이스에서 암호화를 제거해야 합니다. 데이터베이스 암호화 키를 제거하기 전에 해독이 완료될 때까지 기다립니다. ALTER DATABASE 문에 대한 자세한 내용은 [ALTER DATABASE SET 옵션 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하십시오. 데이터베이스 상태를 보려면 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

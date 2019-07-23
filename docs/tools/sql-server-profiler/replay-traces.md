@@ -1,5 +1,5 @@
 ---
-title: 추적 재생 | Microsoft Docs
+title: 재생 추적 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: da958d3c-7f3e-44c9-aecc-8a9493bea7c0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fe0132fa04e2201a66c64e672b074d380a831b94
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9d255396add95167673908e13041760c2c7d6c30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928839"
 ---
 # <a name="replay-traces"></a>추적 재생
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

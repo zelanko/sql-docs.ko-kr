@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: 52f6b2a7-2274-4c35-86be-0278c27cd418
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5fb60571c6462c76e4368d73af70a07df92a2547
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: e56445654c7c52d4c8cc0a4592a5c4f5c72b0ac0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67685352"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68257663"
 ---
 # <a name="proxy-account-properties-references-tab"></a>프록시 계정 속성(참조 탭)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

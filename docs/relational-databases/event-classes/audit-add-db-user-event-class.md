@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: ac9ed573-c84d-444c-81fb-923a6240c1ef
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 426eefeb5a2c2ac04f201e9d5e4fdb4e74f46a87
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: e7536c32a511f1792a1d3f50e775d6b94d237dae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903680"
 ---
 # <a name="audit-add-db-user-event-class"></a>Audit Add DB User 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "52397456"
   
 |데이터 열 이름|데이터 형식|설명|열 ID|필터 가능|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|예|  
+|**ApplicationName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|10|예|  
 |**ClientProcessID**|**int**|클라이언트 애플리케이션이 실행 중인 프로세스에 대해 호스트 컴퓨터가 할당한 ID입니다. 클라이언트가 클라이언트 프로세스 ID를 제공하면 이 데이터 열이 채워집니다.|9|예|  
 |**ColumnPermissions**|**int**|열 사용 권한이 설정되어 있는지 나타냅니다. 문 텍스트를 구문 분석하여 어떤 사용 권한이 어떤 열에 적용되었는지 알 수 있습니다.|44|예|  
 |**DatabaseID**|**int**|USE *database* 문에서 지정한 데이터베이스 ID이거나, 지정한 인스턴스에 대해 USE *database* 문을 실행하지 않은 경우 기본 데이터베이스입니다. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  

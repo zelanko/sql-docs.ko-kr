@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 815eedc74e64a8c9e6ef38ba8cb9c8b0048aecbd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f4d2fbf448dc34d687359724e3ec19d3023262a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967871"
 ---
 # <a name="property-expressions-editor"></a>속성 식 편집기
 

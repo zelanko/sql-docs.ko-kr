@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2edf9b51-63e1-4c28-afdf-2d4af593d5f7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7dbb398a1b280b413739b4464d859e85cc7d6811
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cee317d725b730f50eeef0502f63d7fca6d2c4b1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997120"
 ---
 # <a name="updateblob-method-int-javaioinputstream-long"></a>updateBlob 메서드(int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

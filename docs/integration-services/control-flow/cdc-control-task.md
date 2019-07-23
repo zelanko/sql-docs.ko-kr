@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 6404dc7f-550c-47cc-b901-c072742f430a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 875eada43d37add815b3e4f3c0634273be324174
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f07faf757a8d2bf4b8f2f93042e0af196e6e6d50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904178"
 ---
 # <a name="cdc-control-task"></a>CDC 제어 태스크
 
@@ -135,7 +134,7 @@ ms.locfileid: "65727918"
   
  상태 변수를 정의하는 방법에 대한 자세한 내용은 [상태 변수 정의](../../integration-services/data-flow/define-a-state-variable.md)를 참조하세요.  
   
- **CDC/스냅숏 이름을 시작하는 SQL Server LSN:**  
+ **CDC/스냅샷 이름을 시작하는 SQL Server LSN:**  
  CDC가 시작되는 위치를 결정하기 위해 초기 로드가 수행되는 스냅샷 데이터베이스의 이름 또는 현재 원본 데이터베이스 LSN을 입력합니다. 이 작업은 **CDC 제어 작업** 이 **CDC 시작 표시**로 설정되어 있는 경우에만 사용할 수 있습니다.  
   
  이러한 작업에 대한 자세한 내용은 [CDC Control Task](../../integration-services/control-flow/cdc-control-task.md)를 참조하세요.  

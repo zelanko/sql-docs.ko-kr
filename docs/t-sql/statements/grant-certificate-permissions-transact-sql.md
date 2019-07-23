@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 77270245-a24b-4a20-b481-e6a5ea05b499
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: d9cbc0842265a077d7167bdd0f613a9aed3f0e66
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7b7c9706f3b2943780e48ba5fe99769ddc059c94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065528"
 ---
 # <a name="grant-certificate-permissions-transact-sql"></a>GRANT 인증서 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ GRANT permission  [ ,...n ]
  *permission*  
  인증서에 부여할 수 있는 사용 권한을 지정합니다. 아래와 같습니다.  
   
- ON CERTIFICATE **::**_certificate_name_  
+ ON CERTIFICATE **::** _certificate_name_  
  사용 권한을 부여할 인증서를 지정합니다. 범위 한정자 "::"이 필요합니다.  
   
  *database_principal*  
@@ -86,7 +85,7 @@ AS *granting_principal*
 |REFERENCES|CONTROL|REFERENCES|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다.  
   
  AS 옵션을 사용하는 경우 다음과 같은 추가 요구 사항이 적용됩니다.  

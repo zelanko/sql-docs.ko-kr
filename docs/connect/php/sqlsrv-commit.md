@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bad67571-61ad-45b5-b4ff-677e3544f809
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd620df122c3203a056817f3e9c35667fad433f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13c4f2534ec49c1d3467045d778e0c446f972573
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992854"
 ---
 # <a name="sqlsrvcommit"></a>sqlsrv_commit
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

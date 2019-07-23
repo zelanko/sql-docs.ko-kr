@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 05c8d10d-5823-46c6-8b1a-81722da6a42b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d1b4bcffb5ec575c90561daf5c8c3757b3cdcb65
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 909a8156556cd4a654dcfd6406de2bd45826e31b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990489"
 ---
 # <a name="join-a-role"></a>역할 조인
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "52539131"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -64,7 +63,7 @@ ms.locfileid: "52539131"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  데이터베이스에 대한 **ALTER ANY ROLE** 권한, 역할에 대한 **ALTER** 권한 또는 **db_securityadmin**의 멤버 자격이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -79,9 +78,9 @@ ms.locfileid: "52539131"
   
 4.  편집할 역할을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-5.  **서버 역할 속성 –**_server\_role\_name_ 대화 상자의 **멤버** 페이지에서 **추가**를 클릭합니다.  
+5.  **서버 역할 속성 –** _server\_role\_name_ 대화 상자의 **멤버** 페이지에서 **추가**를 클릭합니다.  
   
-6.  **서버 로그인 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 서버 역할에 추가할 로그인 또는 서버 역할을 입력합니다. 또는 **찾아보기…** 를 클릭하고 **개체 찾아보기** 대화 상자에서 사용 가능한 모든 개체를 선택합니다. **확인**을 클릭하여 **서버 역할 속성 –**_server\_role\_name_ 대화 상자로 돌아갑니다.  
+6.  **서버 로그인 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 서버 역할에 추가할 로그인 또는 서버 역할을 입력합니다. 또는 **찾아보기…** 를 클릭하고 **개체 찾아보기** 대화 상자에서 사용 가능한 모든 개체를 선택합니다. **확인**을 클릭하여 **서버 역할 속성 –** _server\_role\_name_ 대화 상자로 돌아갑니다.  
   
 7.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -101,9 +100,9 @@ ms.locfileid: "52539131"
   
 7.  편집할 역할을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-8.  **데이터베이스 역할 속성 –**_database\_role\_name_ 대화 상자의 **일반** 페이지에서 **추가**를 클릭합니다.  
+8.  **데이터베이스 역할 속성 –** _database\_role\_name_ 대화 상자의 **일반** 페이지에서 **추가**를 클릭합니다.  
   
-9. **데이터베이스 사용자 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 데이터베이스 역할에 추가할 로그인 또는 데이터베이스 역할을 입력합니다. 또는 **찾아보기…** 를 클릭하고 **개체 찾아보기** 대화 상자에서 사용 가능한 모든 개체를 선택합니다. **확인**을 클릭하여 **데이터베이스 역할 속성 –**_database\_role\_name_ 대화 상자로 돌아갑니다.  
+9. **데이터베이스 사용자 또는 역할 선택** 대화 상자의 **선택할 개체 이름을 입력하십시오. (예)** 에 이 데이터베이스 역할에 추가할 로그인 또는 데이터베이스 역할을 입력합니다. 또는 **찾아보기…** 를 클릭하고 **개체 찾아보기** 대화 상자에서 사용 가능한 모든 개체를 선택합니다. **확인**을 클릭하여 **데이터베이스 역할 속성 –** _database\_role\_name_ 대화 상자로 돌아갑니다.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -142,6 +141,6 @@ ms.locfileid: "52539131"
 ## <a name="see-also"></a>참고 항목  
  [서버 수준 역할](../../../relational-databases/security/authentication-access/server-level-roles.md)   
  [데이터베이스 수준 역할](../../../relational-databases/security/authentication-access/database-level-roles.md)   
- [응용 프로그램 역할](../../../relational-databases/security/authentication-access/application-roles.md)  
+ [애플리케이션 역할](../../../relational-databases/security/authentication-access/application-roles.md)  
   
   

@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: d74642a5-42b9-4a15-aa3d-f98bfe695050
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ccd0d4878b7f83634babf7c9dc451a28e56dbc8
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: febe2e0e7964d550f0b154188281f3c7bd3f2281
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009406"
 ---
 # <a name="sql-server-extended-events-engine"></a>SQL Server 확장 이벤트 엔진
 

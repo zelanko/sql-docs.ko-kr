@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: af04ab37-6cbb-4185-9382-e5922fa5b1df
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0dff2087286035b078f59ac1673a733fb3cc8358
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f7861e3ef232dd3f244c9c325468e6ba4d51d16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929617"
 ---
 # <a name="how-to-execute-a-partial-query"></a>방법: 부분 쿼리 실행
 Transact\-SQL 편집기에서는 스크립트의 특정 세그먼트를 강조 표시하고 해당 세그먼트를 단일 쿼리로 실행할 수 있습니다. 이렇게 하면 복잡한 쿼리의 섹션을 간단하게 디버깅할 수 있습니다.  

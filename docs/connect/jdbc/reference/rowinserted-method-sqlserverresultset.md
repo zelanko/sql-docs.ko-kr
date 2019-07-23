@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e7c10372-0be8-4baa-87f7-ed6b66003357
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: da746533231983d67bbfe3689d0df63086d678bc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2b52007528ee5c3d3caaabc83b158e50156b664e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975689"
 ---
 # <a name="rowinserted-method-sqlserverresultset"></a>rowInserted 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean rowInserted()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 rowUpdated 메서드는 java.sql.ResultSet 인터페이스의 rowUpdated 메서드에 의해 지정 됩니다.  
+ 이 rowUpdated 메서드는 rowUpdated 인터페이스의 메서드에 의해 지정 됩니다.  
   
  반환되는 값은 이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체가 표시된 삽입 내용을 검색할 수 있는지 여부에 따라 달라집니다.  
   

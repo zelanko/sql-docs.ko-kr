@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5eb62be6ce7966ed7e04d2117895f215a1e842e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f5416534c7e8ef1b787f046a27310abcad93ade
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948668"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>복제 스크립트 업그레이드(복제 Transact-SQL 프로그래밍)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47787491"
   
 -   **sp_addpublication_snapshot**:  
   
-     이제 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행하여 배포자에서 스냅숏 에이전트가 실행되는 작업을 만들 때 Windows 자격 증명을 **@job_login** 및 **@job_password** 로 제공해야 합니다.  
+     이제 [sp_addpublication_snapshot&amp;#40;Transact-SQL&amp;#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행하여 배포자에서 스냅샷 에이전트가 실행되는 작업을 만들 때 Windows 자격 증명을 **@job_login** 및 **@job_password** 로 제공해야 합니다.  
   
 -   **sp_addpushsubscription_agent**:  
   

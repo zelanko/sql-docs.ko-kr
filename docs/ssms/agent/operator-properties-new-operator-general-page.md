@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: c036d1c9-83d1-4a95-b67e-29d283b1a046
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 42053bb3484a26a15192de895736f08d727addb0
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 6ce0287cb4c1e56ba5ce50a91838367b3b1791ff
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67685624"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68260209"
 ---
 # <a name="operator-properties---new-operator-general-page"></a>운영자 속성 - 새 운영자(일반 페이지)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

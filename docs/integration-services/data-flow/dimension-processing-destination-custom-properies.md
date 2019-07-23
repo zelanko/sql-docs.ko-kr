@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: db68e2b9d24c60378e94436652d3e5daead94369
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7b6ebfd668f4a6d4449d8dc2fed27c07b8983b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941620"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>차원 처리 대상 사용자 지정 속성
 

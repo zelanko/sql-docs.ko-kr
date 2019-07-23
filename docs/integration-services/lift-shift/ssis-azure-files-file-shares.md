@@ -8,13 +8,12 @@ ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-manager: craigg
-ms.openlocfilehash: 972a3f058ce77b9fceb48cd4279ec32baf834377
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 696b7bbd19ed41aeedaf0cbba683870c04de1b13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66012900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896207"
 ---
 # <a name="open-and-save-files-on-premises-and-in-azure-with-ssis-packages-deployed-in-azure"></a>Azure에 배포된 SSIS 패키지로 온-프레미스 및 Azure에서 파일 열기 및 저장
 

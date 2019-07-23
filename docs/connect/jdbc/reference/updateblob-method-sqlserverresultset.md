@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 78e367c6-5e4d-4715-8cb7-e841e4f76a7c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3a99919763cdf26ee49292ccaa5ec5ee9c28437d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b57b962b343da7d169f77ad09a9e9a3191da443
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997079"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>updateBlob 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

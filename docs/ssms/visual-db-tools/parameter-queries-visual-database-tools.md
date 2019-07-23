@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4897c41a-324a-47b8-a30b-cbc9e9e19a8b
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 9f52a4cd57fea2c7db68636b5672c358eb8d5ed2
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 8c7f9d141edc20a981618b29776e8f9e7106bd19
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680971"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263246"
 ---
 # <a name="parameter-queries-visual-database-tools"></a>매개 변수 쿼리(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

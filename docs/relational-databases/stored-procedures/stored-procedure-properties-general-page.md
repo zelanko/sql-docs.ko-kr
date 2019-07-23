@@ -12,20 +12,19 @@ f1_keywords:
 ms.assetid: 8ee433b6-3931-47e8-b1cf-332806f71161
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a87351a2aae1eeace37d3af347350163cc3c710
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c78124b3836026ced3f36500ed5558b58009fe5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47752231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136633"
 ---
 # <a name="stored-procedure-properties-general-page"></a>저장 프로시저 속성(일반 페이지)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   저장 프로시저에 대한 정보를 표시합니다. 모든 정보는 읽기 전용입니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **데이터베이스 백업**  
  이 저장 프로시저를 포함하는 데이터베이스의 이름입니다.  
   

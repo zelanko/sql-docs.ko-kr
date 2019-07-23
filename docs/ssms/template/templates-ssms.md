@@ -9,7 +9,6 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: jroth
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Management Studio
 - source controls [SQL Server Management Studio], tutorials
@@ -20,12 +19,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: a634a106704cebd91ce74910de17166c85c6c4de
-ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
+ms.openlocfilehash: b3df46f3536c488ff863287a0efb26ed7063ffc2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/13/2019
-ms.locfileid: "67866266"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266639"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>SQL Server Management Studio에서 템플릿 사용
 

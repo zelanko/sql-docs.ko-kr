@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5aa2886e-1db1-4066-85df-57ccf4538c54
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7def62cfb99363c5d27a4c32b89c511e4db4a97c
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 5a051787cbd112a1f267d5812a2ebb38ea4d6ee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134369"
 ---
 # <a name="database-mail-messaging-objects"></a>데이터베이스 메일 메시징 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

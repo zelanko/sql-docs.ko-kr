@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 03d71a35-97fa-4bba-aa9a-23ac9c9cf879
 author: markingmyname
 ms.author: maghan
-manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 56ff10976d1a2d0358af6ed0253c225668cb8137
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 1f5eb2eb09293cc08469cb9865edad30a4dcbc8a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689922"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68267318"
 ---
 # <a name="create-a-user-defined-event"></a>사용자 정의 이벤트 만들기
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

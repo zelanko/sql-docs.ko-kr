@@ -37,13 +37,12 @@ helpviewer_keywords:
 ms.assetid: 4165c404-4d50-4063-9a6e-6e267d309376
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 00726a70cc40548f3c75b786a9fa2b601ec9dd57
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2fc021cec09a7f62d05f5e435db9d6fc2597fce3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117337"
 ---
 # <a name="create-remote-service-binding-transact-sql"></a>CREATE REMOTE SERVICE BINDING(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
  사용자가 인증서를 두 개 이상 소유하고 있는 경우 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 현재 유효하며 AVAILABLE FOR BEGIN_DIALOG로 표시된 인증서 중에서 만료 날짜가 가장 최근인 인증서를 선택합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  원격 서비스 바인딩 생성 권한은 기본적으로 USER 절에 명명된 사용자, **db_owner** 고정 데이터베이스 역할의 멤버, **db_ddladmin** 고정 데이터베이스 역할의 멤버 및 **sysadmin** 고정 서버 역할의 멤버에게 있습니다.  
   
  CREATE REMOTE SERVICE BINDING 문을 실행하는 사용자는 문에서 지정한 보안 주체에 대해 가장 권한이 있어야 합니다.  
@@ -97,7 +96,7 @@ CREATE REMOTE SERVICE BINDING binding_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-remote-service-binding"></a>1. 원격 서비스 바인딩 만들기  
+### <a name="a-creating-a-remote-service-binding"></a>1\. 원격 서비스 바인딩 만들기  
  다음 예에서는 `//Adventure-Works.com/services/AccountsPayable` 서비스에 대한 바인딩을 만듭니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 `APUser` 데이터베이스 보안 주체가 소유한 인증서를 사용하여 해당 원격 서비스와 세션 암호화 키를 교환합니다.  
   
 ```  
@@ -106,7 +105,7 @@ CREATE REMOTE SERVICE BINDING APBinding
     WITH USER = APUser ;  
 ```  
   
-### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>2. 익명 인증을 사용하여 원격 서비스 바인딩 만들기  
+### <a name="b-creating-a-remote-service-binding-using-anonymous-authentication"></a>2\. 익명 인증을 사용하여 원격 서비스 바인딩 만들기  
  다음 예에서는 `//Adventure-Works.com/services/AccountsPayable` 서비스에 대한 바인딩을 만듭니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 `APUser` 데이터베이스 보안 주체가 소유한 인증서를 사용하여 해당 원격 서비스와 세션 암호화 키를 교환합니다. 원격 서비스를 인증하지는 않습니다. 원격 서비스를 호스팅하는 데이터베이스에서 메시지는 **guest** 사용자로 배달됩니다.  
   
 ```  

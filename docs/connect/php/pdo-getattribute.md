@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c81833ea-8b8a-459d-8f24-920098da994d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7a7b634b10be90b164f67eb2837a053eef3db7e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e286b0a66258b68680e8144d2aa04876dc70092a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936221"
 ---
 # <a name="pdogetattribute"></a>PDO::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

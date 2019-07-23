@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e733586c-9222-43cb-92ea-ba474f442a43
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 003829ffe09782693f7d69f2c8b055c66252dbc4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dbc4dfe12daf675f16a632ed5caa8b7b3830ced0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969088"
 ---
 # <a name="supportsopenstatementsacrosscommit-method-sqlserverdatabasemetadata"></a>supportsOpenStatementsAcrossCommit 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsOpenStatementsAcrossCommit()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsOpenStatementsAcrossCommit 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsOpenStatementsAcrossCommit 메서드에 의해 지정 됩니다.  
+ 이 supportsOpenStatementsAcrossCommit 메서드는 supportsOpenStatementsAcrossCommit 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

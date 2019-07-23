@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: ba22628773ece8251c61858b1f2a24d19b4531fb
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: e365b03b5a6a475f98a940f5b6f243bc7fa31789
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361373"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898231"
 ---
 # <a name="drop-credential-transact-sql"></a>DROP CREDENTIAL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ DROP CREDENTIAL credential_name
 > [!WARNING]  
 >  프록시는 자격 증명과 연관됩니다. 프록시에 사용되는 자격 증명을 삭제하면 연관된 프록시가 사용할 수 없는 상태가 됩니다. 프록시에 사용되는 자격 증명을 삭제할 때는 [sp_delete_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)를 사용하여 프록시를 삭제하고 [sp_add_proxy &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)를 사용하여 연관된 프록시를 다시 만드세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  ALTER ANY CREDENTIAL 권한이 필요합니다. 시스템 자격 증명을 삭제하는 경우 CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59ff07bd-a147-47e1-969f-3b260a9e2763
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: ca105f33bf460b8b1eebf0d1461da26fb774901f
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 785d823f822e2c350c899bbed3a0e12e53c6edda
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689110"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258779"
 ---
 # <a name="work-with-diagram-layout-visual-database-tools"></a>다이어그램 레이아웃 작업(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

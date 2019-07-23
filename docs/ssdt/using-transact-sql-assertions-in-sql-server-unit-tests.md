@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 55d8be9c-9282-47d3-be7f-e2c26f00c95e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0b6949adf3c92d14d081ef07d8e30605a22fe9d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4ff76e7d980081208f310dcae2a498f857151df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140958"
 ---
 # <a name="using-transact-sql-assertions-in-sql-server-unit-tests"></a>SQL Server 단위 테스트에서 Transact-SQL 어설션 사용
 SQL Server 단위 테스트에서는 Transact\-SQL 테스트 스크립트가 실행되어 결과를 반환합니다. 결과가 결과 집합으로 반환되는 경우도 있습니다. 테스트 조건을 사용하면 결과의 유효성을 검사할 수 있습니다. 예를 들어 테스트 조건을 사용하여 특정 결과 집합에서 반환되는 행 수를 확인하거나 특정 테스트가 실행되는 데 걸린 시간을 확인할 수 있습니다. 테스트 조건에 대한 자세한 내용은 [SQL Server 단위 테스트에서 테스트 조건 사용](../ssdt/using-test-conditions-in-sql-server-unit-tests.md)을 참조하세요.  
