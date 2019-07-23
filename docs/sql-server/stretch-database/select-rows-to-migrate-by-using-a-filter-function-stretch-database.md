@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 090890ee-7620-4a08-8e15-d2fbc71dd12f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6a3099541a4eb83e321c0a73422c98b303c375e6
-ms.sourcegitcommit: ec1f01b4bb54621de62ee488decf9511d651d700
+ms.openlocfilehash: 5456a9c8febe97f7dbfc09ebba52be469b30c3e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56240857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136055"
 ---
 # <a name="select-rows-to-migrate-by-using-a-filter-function-stretch-database"></a>필터 함수를 사용하여 마이그레이션할 행 선택(Stretch Database)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
@@ -152,7 +151,7 @@ RETURN  SELECT 1 AS is_eligible
  하위 쿼리 또는 명확하지 않은 함수(예: RAND() 또는 GETDATE())를 사용할 수 없습니다.  
   
 ## <a name="add-a-filter-function-to-a-table"></a>테이블에 필터 함수 추가  
- **ALTER TABLE** 문을 실행하고 기존 인라인 테이블 반환 함수를 **FILTER_PREDICATE** 매개 변수 값으로 지정하여 테이블에 필터 함수를 추가합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ **ALTER TABLE** 문을 실행하고 기존 인라인 테이블 반환 함수를 **FILTER_PREDICATE** 매개 변수 값으로 지정하여 테이블에 필터 함수를 추가합니다. 예를 들어  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -484,7 +483,7 @@ COMMIT ;
     ```  
   
 ## <a name="how-stretch-database-applies-the-filter-function"></a>스트레치 데이터베이스에서 필터 함수를 적용하는 방법  
- 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용하고 적합한 행을 결정합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 스트레치 데이터베이스는 CROSS APPLY 연산자를 사용하여 테이블에 필터 함수를 적용하고 적합한 행을 결정합니다. 예를 들어  
   
 ```sql  
 SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column2)  
@@ -493,7 +492,7 @@ SELECT * FROM stretch_table_name CROSS APPLY fn_stretchpredicate(column1, column
  함수에서 행에 대해 비어 있지 않은 결과가 반환되는 경우 해당 행은 마이그레이션에 적합합니다.  
   
 ## <a name="replacePredicate"></a>기존 필터 함수 바꾸기  
- **ALTER TABLE** 문을 다시 실행하고 **FILTER_PREDICATE** 매개 변수에 대한 새 값을 지정하여 이전에 지정된 필터 함수를 바꿀 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ **ALTER TABLE** 문을 다시 실행하고 **FILTER_PREDICATE** 매개 변수에 대한 새 값을 지정하여 이전에 지정된 필터 함수를 바꿀 수 있습니다. 예를 들어  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  
@@ -588,7 +587,7 @@ GO
 ```  
   
 ## <a name="remove-a-filter-function-from-a-table"></a>테이블에서 필터 함수 제거  
- 선택한 행이 아니라 전체 테이블을 마이그레이션하려면 **FILTER_PREDICATE**  를 null로 설정하여 기존 함수를 제거합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 선택한 행이 아니라 전체 테이블을 마이그레이션하려면 **FILTER_PREDICATE**  를 null로 설정하여 기존 함수를 제거합니다. 예를 들어  
   
 ```sql  
 ALTER TABLE stretch_table_name SET ( REMOTE_DATA_ARCHIVE = ON (  

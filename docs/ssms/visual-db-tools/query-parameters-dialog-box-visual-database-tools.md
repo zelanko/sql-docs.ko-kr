@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 31cdaee2-d7cd-4d64-a45f-924b27e8b1f0
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: ebc464ea13bf7b5e81deda03e2b2764cf98652d3
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 8bea7f04d7a0275b035879dabcb1da8b3952c849
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687533"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266297"
 ---
 # <a name="query-parameters-dialog-box-visual-database-tools"></a>쿼리 매개 변수 대화 상자(Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

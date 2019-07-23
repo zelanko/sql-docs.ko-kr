@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4c968ee4-b041-424a-bf69-cc2c4a4f51c6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7d922c2c2fcfadb6b7807b8d2845f8d3e6c5188c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 79d9090df19851af3a778e23b7919f28081f32ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974149"
 ---
 # <a name="setintegratedsecurity-method-sqlserverdatasource"></a>setIntegratedSecurity 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public void setIntegratedSecurity(boolean enable)
 > [!NOTE]  
 >  이 속성은 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] Windows 운영 체제에서만 지원됩니다.  
   
- 통합된 인증을 사용 하는 방법에 대 한 자세한 내용은 참조 하십시오 [연결 URL 작성](../../../connect/jdbc/building-the-connection-url.md)합니다.  
+ 통합 인증을 사용 하는 방법에 대 한 자세한 내용은 [연결 URL 작성](../../../connect/jdbc/building-the-connection-url.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

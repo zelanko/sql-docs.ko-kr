@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9727c944-b645-48d6-9012-18dbde35ee3c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 82fa4ef2f47143afe8f2331469a1eb07fd9b2522
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4081e9db30e3607d783de40a71d9d7b2e7599c76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993696"
 ---
 # <a name="constants-microsoft-drivers-for-php-for-sql-server"></a>상수(Microsoft Drivers for PHP for SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -65,14 +64,14 @@ PDO::SQLSRV_ATTR_QUERY_TIMEOUT 특성은 시간 제한 기간(초)을 나타내�
 ### <a name="direct-or-prepared-execution"></a>직접 또는 준비된 실행  
 PDO::SQLSRV_ATTR_DIRECT_QUERY 특성을 사용하여 직접 쿼리 실행 또는 준비된 문 실행을 선택할 수 있습니다. PDO::SQLSRV_ATTR_DIRECT_QUERY는 [PDO::prepare](../../connect/php/pdo-prepare.md) 또는 [PDO::setAttribute](../../connect/php/pdo-setattribute.md)를 사용하여 설정될 수 있습니다. PDO::SQLSRV_ATTR_DIRECT_QUERY에 대한 자세한 내용은 [PDO_SQLSRV 드라이버에서 직접 명령문 실행 및 준비된 명령문 실행](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)을 참조하세요.  
 
-### <a name="handling-numeric-fetches"></a>인출 숫자 처리
-PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성 (비트, 정수, smallint, tinyint, float 및 real) 숫자 SQL 유형이 있는 열에서 숫자 인출 처리를 사용할 수 있습니다. SQL 부동 reals 부동 소수점 수로 표시 되는 동안 ints로 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 결과 정수 열에서 true로 설정 된 경우 표시 됩니다. 이 특성을 사용 하 여 설정할 수 있습니다 [pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md)합니다. 
+### <a name="handling-numeric-fetches"></a>숫자 페치 처리
+PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성을 사용 하 여 숫자 SQL 형식 (비트, 정수, smallint, tinyint, float, real)을 가진 열에서 숫자 페치를 처리할 수 있습니다. PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE가 true로 설정 되 면 정수 열의 결과가 정수로 표시 되는 반면 SQL float 및 reals는 float로 표시 됩니다. 이 특성은 [PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md)를 사용 하 여 설정할 수 있습니다. 
 
-PDO::SQLSRV_ATTR_FORMAT_DECIMALS 및 PDO::SQLSRV_ATTR_DECIMAL_PLACES 특성을 사용 하 여 기본 10 진수 서식 지정 동작을 수정할 수 있습니다. 이러한 특성의 동작 SQLSRV 쪽에서 해당 옵션에 동일 (**FormatDecimals** 하 고 **DecimalPlaces**) 점을 제외 하 고는 서식 지정에 대 한 출력 매개 변수를 사용할 수 없습니다. 이러한 특성을 사용 하 여 연결 또는 문 수준에서 설정할 수 있습니다 [pdo:: setattribute](../../connect/php/pdo-setattribute.md) 또는 [pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md), 하지만 해당 모든 문 특성은 재정의 연결 특성입니다. 자세한 내용은 [Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)(10진수 문자열 및 Money 값 서식 지정(PDO_SQLSRV 드라이버))를 참조하세요.
+PDO:: SQLSRV_ATTR_FORMAT_DECIMALS 및 PDO:: SQLSRV_ATTR_DECIMAL_PLACES 특성을 사용 하 여 기본 소수 서식 지정 동작을 수정할 수 있습니다. 이러한 특성의 동작은 출력 매개 변수가 서식 지정에 지원 되지 않는다는 점을 제외 하 고 SQLSRV 쪽의 해당 옵션 (**Formatdecimals** 및 **DecimalPlaces**)과 동일 합니다. 이러한 특성은 [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) 또는 [PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md)를 사용 하는 연결 또는 문 수준에서 설정 될 수 있지만 모든 문 특성은 해당 연결 특성을 재정의 합니다. 자세한 내용은 [Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)(10진수 문자열 및 Money 값 서식 지정(PDO_SQLSRV 드라이버))를 참조하세요.
 
 ### <a name="handling-date-and-time-fetches"></a>날짜 및 시간 페치 처리
 
-PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 지정 날짜 및 시간 형식으로 검색할 것인지 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체입니다. false로 유지하면 기본적으로 문자열로 반환됩니다. 이 특성을 사용 하 여 연결 또는 문 수준에서 설정할 수 있습니다 [pdo:: setattribute](../../connect/php/pdo-setattribute.md) 하거나 [pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md), 하지만 해당 문 특성은 재정의 연결 특성입니다. 자세한 내용은 [방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP DateTime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)을 참조하세요.
+PDO:: SQLSRV_ATTR_FETCHES_DATETIME_TYPE는 날짜 및 시간 형식을 [PHP DATETIME](http://php.net/manual/en/class.datetime.php) 개체로 검색할지 여부를 지정 합니다. false로 유지하면 기본적으로 문자열로 반환됩니다. 이 특성은 [PDO:: setAttribute](../../connect/php/pdo-setattribute.md) 또는 [PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md)를 사용 하는 연결 또는 문 수준에서 설정할 수 있지만 statement 특성은 해당 연결 특성을 재정의 합니다. 자세한 내용은 [방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP DateTime 개체로 검색](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)을 참조하세요.
 
 ## <a name="sqlsrv-driver-constants"></a>SQLSRV 드라이버 상수  
 다음 섹션에서는 SQLSRV 드라이버에서 사용되는 상수를 나열합니다.  
@@ -161,7 +160,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 지정 날짜 및 시간 형식으로 검
 이러한 상수에 대한 자세한 내용은 [방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md), [방법: SQLSRV 드라이버를 사용하여 스트림으로 문자 데이터 가져오기](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)를 참조하세요.  
   
 ### <a name="sqltype-constants"></a>SQLTYPE 상수  
-다음 표는 SQL Server 데이터 형식을 설명하는 데 사용되는 상수를 나열합니다. 몇 가지 상수 함수와 비슷한 되며 해당 매개 변수는 전체 자릿수, 배율 및/또는 길이 걸릴 수 있습니다.  매개 변수를 바인딩하는 경우 함수 같은 상수를 사용 해야 합니다. 형식 비교에 대 한 표준 (비 함수 같은) 상수는 필요 합니다. SQL Server 데이터 형식에 대한 자세한 내용은 [데이터 형식(Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요. 전체 자릿수, 소수 자릿수 및 길이에 대한 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이(Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)를 참조하세요.  
+다음 표는 SQL Server 데이터 형식을 설명하는 데 사용되는 상수를 나열합니다. 일부 상수는 함수와 유사 하며 전체 자릿수, 소수 자릿수 및/또는 길이에 해당 하는 매개 변수를 사용할 수 있습니다.  매개 변수를 바인딩하는 경우 함수 형태의 상수를 사용 해야 합니다. 형식 비교의 경우 표준 (비 함수 형식) 상수가 필요 합니다. SQL Server 데이터 형식에 대한 자세한 내용은 [데이터 형식(Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)을 참조하세요. 전체 자릿수, 소수 자릿수 및 길이에 대한 자세한 내용은 [전체 자릿수, 소수 자릿수 및 길이(Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md)를 참조하세요.  
   
 |SQLSRV 상수|SQL Server 데이터 형식|  
 |-------------------|------------------------|  
@@ -178,7 +177,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 지정 날짜 및 시간 형식으로 검
 |SQLSRV_SQLTYPE_DECIMAL($precision, $scale)|Decimal|  
 |SQLSRV_SQLTYPE_FLOAT|FLOAT|  
 |SQLSRV_SQLTYPE_IMAGE|image<sup>1</sup>|  
-|SQLSRV_SQLTYPE_INT|ssNoversion|  
+|SQLSRV_SQLTYPE_INT|int|  
 |SQLSRV_SQLTYPE_MONEY|money| 
 |SQLSRV_SQLTYPE_NCHAR|nchar<sup>5</sup>|   
 |SQLSRV_SQLTYPE_NCHAR($charCount)|NCHAR|  
@@ -214,7 +213,7 @@ PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE 지정 날짜 및 시간 형식으로 검
   
 4.  이 형식에 대한 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 1.1에 추가되었습니다.  
 
-5.  이러한 상수 형식 비교 연산에 사용 해야 하며 유사한 구문을 사용 하 여 함수 같은 상수를 바꾸지 않습니다. 매개 변수 바인딩에 대해 함수와 비슷한 상수를 사용 해야 합니다.
+5.  이러한 상수는 형식 비교 연산에서 사용 해야 하며 함수 같은 상수를 유사한 구문으로 바꾸지 마십시오. 바인딩 매개 변수의 경우 함수 형태의 상수를 사용 해야 합니다.
 
   
 다음 표는 매개 변수 및 매개 변수에 허용되는 값 범위를 수락하는 SQLTYPE 상수를 나열합니다.  

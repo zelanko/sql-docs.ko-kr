@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 099ffb2203397bd02b91af68651ccb42a23e2b5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64f39be7193fdbfc72b009f58b4fe0047eceef1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989034"
 ---
 # <a name="ole-db-driver-for-sql-server-support-for-localdb"></a>SQL Server용 OLE DB 드라이버의 LocalDB 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

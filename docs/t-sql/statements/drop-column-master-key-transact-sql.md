@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: fd5e77c8-a3ae-4795-bb46-b322c0500041
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 89ff78ad0c8cd82b4235adaa247a34a4a6442db5
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 6d3be4cb1c92f964d914c782abfa6a46caf47a48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073150"
 ---
 # <a name="drop-column-master-key-transact-sql"></a>CREATE COLUMN MASTER KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -48,12 +47,12 @@ DROP COLUMN MASTER KEY key_name;
 ## <a name="remarks"></a>Remarks  
  열 암호화 키를 사용해 암호화된 열 암호화 키 값이 없는 경우 열 마스터 키를 삭제할 수 있습니다. 열 암호화 키 값을 삭제하려면 [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) 문을 사용하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 **ALTER ANY COLUMN MASTER KEY** 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-a-column-master-key"></a>1. 열 마스터 키 삭제  
+### <a name="a-dropping-a-column-master-key"></a>1\. 열 마스터 키 삭제  
  다음 예에서는 `MyCMK`이라고 하는 열 마스터 키를 삭제합니다.  
   
 ```  

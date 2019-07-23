@@ -1,5 +1,5 @@
 ---
-title: 중지 추적 (SQL Server Profiler) | Microsoft Docs
+title: 추적 중지 (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47c4f33d-63e0-4444-bec8-4c1c91f8e25c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 08e735a45ba6ae2403d89491e0f75817ac5dd028
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: d574d3b18b47c4860f710f933ac9ba50a54db270
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059629"
 ---
 # <a name="stop-a-trace-sql-server-profiler"></a>추적 중지(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 638aca05-63e4-4d73-a9c8-e0442f775720
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 130489258d13d801a973e510042463440479f6b8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bd9252827e7c7bec70636937bc89dd5390e68519
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980943"
 ---
 # <a name="getparametertype-method-sqlserverparametermetadata"></a>getParameterType 메서드(SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getParameterType(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getParameterType 메서드는 java.sql.ParameterMetaData 인터페이스의 getParameterType 메서드에 의해 지정 됩니다.  
+ 이 getParameterType 메서드는 getParameterType 메타 데이터 인터페이스의 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerParameterMetaData 메서드](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   

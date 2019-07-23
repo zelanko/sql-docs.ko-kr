@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bf755ccfe5a1a6816129173dcb6ad5050ea5e114
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213317"
+---
 
 ## <a name="add-a-database-to-the-availability-group"></a>가용성 그룹에 데이터베이스 추가
 
@@ -7,7 +15,7 @@
 CREATE DATABASE [db1];
 ALTER DATABASE [db1] SET RECOVERY FULL;
 BACKUP DATABASE [db1]
-   TO DISK = N'/var/opt/mssql/data/db1.bak';
+   TO DISK = N'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\Backup\db1.bak';
 ```
 
 `db1`이라는 데이터베이스를 `ag1`이라는 가용성 그룹에 추가하려면 기본 SQL Server 복제본에서 다음 Transact-SQL 스크립트를 실행합니다.

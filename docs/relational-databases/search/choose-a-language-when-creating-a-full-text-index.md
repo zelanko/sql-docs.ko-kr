@@ -18,14 +18,13 @@ ms.assetid: 670a5181-ab80-436a-be96-d9498fbe2c09
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 9f1310318cde48b1cd5c001e655ed341bc9cc780
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 05a5e9c01e46a83e0ba6a2bc206fd6f10328e9c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093386"
 ---
 # <a name="choose-a-language-when-creating-a-full-text-index"></a>전체 텍스트 인덱스 생성 시 언어 선택
 

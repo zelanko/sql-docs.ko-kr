@@ -12,13 +12,12 @@ helpviewer_keywords:
 - metadata [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1109aeea10d08f3447f789698a5d464475ae4aaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 641859e134a5f3c3201f239023f911b79de1c11e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995101"
 ---
 # <a name="metadata---parameter-and-rowset"></a>메타데이터 - 매개 변수 및 행 집합
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,11 +66,11 @@ ms.locfileid: "66769244"
 |datetime2 또는 DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- 합니다 *bPrecision* 매개 변수가 무시 됩니다.  
+ *Bprecision* 매개 변수는 무시 됩니다.  
   
- "DBPARAMFLAGS_SS_ISVARIABLESCALE"은 데이터를 서버로 보낼 때 무시됩니다. 애플리케이션은 공급자별 유형 이름 "**datetime**" 및 "**smalldatetime**"을 사용하여 레거시 TDS(Tabular Data Stream) 유형의 사용을 강제할 수 있습니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 버전의 서버에 연결된 경우 "**datetime2**" 형식이 사용되며, 유형 이름이 "**datetime2**" 또는 "DBTYPE_DBTIMESTAMP"이면 필요에 따라 암시적 서버 변환이 발생합니다. *bScale* 공급자별 이름을 입력 하는 경우 무시 됩니다 "**datetime**"또는"**smalldatetime**"는 데 사용 됩니다. 응용 프로그램 확인 해야이 고, 그렇지 *bScale* 올바르게 설정 되어 있습니다. 응용 프로그램에서 SQL Server 용 MDAC 및 OLE DB 드라이버에서 업그레이드 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 사용 하는 설정 하지 않을 경우 "DBTYPE_DBTIMESTAMP" 못합니다 *bScale* 올바르게 합니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전 버전의 서버 인스턴스에 연결된 경우 "DBTYPE_DBTIMESTAMP"가 있는 *bScale* 값이 0 또는 3이 아니면 오류이며 E_FAIL이 반환됩니다.  
+ "DBPARAMFLAGS_SS_ISVARIABLESCALE"은 데이터를 서버로 보낼 때 무시됩니다. 애플리케이션은 공급자별 유형 이름 "**datetime**" 및 "**smalldatetime**"을 사용하여 레거시 TDS(Tabular Data Stream) 유형의 사용을 강제할 수 있습니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이상 버전의 서버에 연결된 경우 "**datetime2**" 형식이 사용되며, 유형 이름이 "**datetime2**" 또는 "DBTYPE_DBTIMESTAMP"이면 필요에 따라 암시적 서버 변환이 발생합니다. 공급자별 형식 이름 "**datetime**" 또는 "**smalldatetime**"을 사용 하는 경우에는 *눈금이* 무시 됩니다. 그렇지 않으면 응용 프로그램에서 *Bscale* 이 올바르게 설정 되었는지 확인 해야 합니다. DBTYPE_DBTIMESTAMP를 사용 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 하는 MDAC 및 SQL Server 용 OLE DB 드라이버에서 업그레이드 한 응용 프로그램은 *bscale* 을 올바르게 설정 하지 않은 경우 실패 합니다. [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] 이전 버전의 서버 인스턴스에 연결된 경우 "DBTYPE_DBTIMESTAMP"가 있는 *bScale* 값이 0 또는 3이 아니면 오류이며 E_FAIL이 반환됩니다.  
   
- Icommandwithparameters:: Setparameterinfo를 호출 하지 않으면 공급자 iaccessor:: Createaccessor에 지정 된 바인딩 유형에 서 서버 유형을 다음과 같이 의미 합니다.  
+ ICommandWithParameters:: SetParameterInfo를 호출 하지 않으면 공급자는 다음과 같이 IAccessor:: CreateAccessor에 지정 된 바인딩 형식의 서버 유형을 의미 합니다.  
   
 |바인딩 유형|*pwszDataSourceType*<br /><br /> (공급자별로 다름)|  
 |------------------|----------------------------------------------------|  
@@ -83,7 +82,7 @@ ms.locfileid: "66769244"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- **Icolumnsrowset:: Getcolumnsrowset** 다음 열을 반환 합니다.  
+ **IColumnsRowset:: GetColumnsRowset** 는 다음 열을 반환 합니다.  
   
 |열 유형|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0b11ed31a21e965303c4e6518410cf1caa050921
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 34e0bc66497d789e13005b1bdaa85e50bb062234
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120279"
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>게시 정보, 추적 프로그램 토큰(SQL Server 2005 이상)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2adca850-58a2-4ed5-bded-9dd091fc33f2
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: 9b5657b77d2b41e333b083daa3664981a867278e
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 028ab587298879bc3bbb8be444e8d5094921fab2
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67688443"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264725"
 ---
 # <a name="rename-solutions-and-project-items"></a>솔루션 및 프로젝트 항목의 이름 바꾸기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

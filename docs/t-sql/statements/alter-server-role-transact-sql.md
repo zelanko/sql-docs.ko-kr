@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 7a4db7bb-c442-4e12-9a8a-114da5bc7710
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: df9cc3231b9e883857563b2f7ed0bf8bc8d1a2f3
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 2307a80d3a40599aed4762077b188baac0533967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070268"
 ---
 # <a name="alter-server-role-transact-sql"></a>ALTER SERVER ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-pdw-md.md)]
@@ -65,7 +64,7 @@ ADD MEMBER *server_principal*
 DROP MEMBER *server_principal*  
 서버 역할에서 지정한 서버 보안 주체를 제거합니다. *server_principal*은 로그인 또는 사용자 정의 서버 역할일 수 있습니다. *server_principal*은 고정 서버 역할, 데이터베이스 역할 또는 sa가 될 수 없습니다.  
   
-WITH NAME **=**_new_server_role_name_  
+WITH NAME **=** _new_server_role_name_  
 사용자 정의 서버 역할의 새로운 이름을 지정합니다. 이 이름은 아직 서버에 없는 이름이어야 합니다.  
   
 ## <a name="remarks"></a>Remarks  
@@ -77,7 +76,7 @@ WITH NAME **=**_new_server_role_name_
   
 사용자 정의 서버 역할의 소유자를 변경하려면 [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)을 사용하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 사용자 정의 서버 역할의 이름을 변경하려면 서버에 대한 `ALTER ANY SERVER ROLE` 권한이 필요합니다.  
   
 **고정 서버 역할**  
@@ -96,7 +95,7 @@ WITH NAME **=**_new_server_role_name_
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-the-name-of-a-server-role"></a>1. 서버 역할의 이름 변경  
+### <a name="a-changing-the-name-of-a-server-role"></a>1\. 서버 역할의 이름 변경  
 다음 예에서는 `Product`라는 서버 역할을 만든 다음 서버 역할 이름을 `Production`으로 변경합니다.  
   
 ```  
@@ -105,14 +104,14 @@ ALTER SERVER ROLE Product WITH NAME = Production ;
 GO  
 ```  
   
-### <a name="b-adding-a-domain-account-to-a-server-role"></a>2. 서버 역할에 도메인 계정 추가  
+### <a name="b-adding-a-domain-account-to-a-server-role"></a>2\. 서버 역할에 도메인 계정 추가  
 다음 예에서는 `adventure-works\roberto0`이라는 도메인 계정을 `Production`이라는 사용자 정의 서버 역할에 추가합니다.  
   
 ```  
 ALTER SERVER ROLE Production ADD MEMBER [adventure-works\roberto0] ;  
 ```  
   
-### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>3. 서버 역할에 SQL Server 로그인 추가  
+### <a name="c-adding-a-sql-server-login-to-a-server-role"></a>C. 서버 역할에 SQL Server 로그인 추가  
 다음 예에서는 `Ted`라는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 `diskadmin` 고정 서버 역할에 추가합니다.  
   
 ```  
@@ -157,7 +156,7 @@ JOIN sys.server_principals AS SP2
 ORDER BY  SP.name,  SP2.name  
 ```  
   
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]   
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="h-basic-syntax"></a>H. 기본 구문  
 다음 예는 Windows 로그인 `Anna`을 `LargeRC` 서버 역할에 추가합니다.  
@@ -166,7 +165,7 @@ ORDER BY  SP.name,  SP2.name
 ALTER SERVER ROLE LargeRC ADD MEMBER Anna;  
 ```  
   
-### <a name="i-remove-a-login-from-a-resource-class"></a>9. 리소스 클래스에서 로그인을 제거합니다.  
+### <a name="i-remove-a-login-from-a-resource-class"></a>9\. 리소스 클래스에서 로그인을 제거합니다.  
 다음 예제에서는 `LargeRC` 서버 역할에서 안나의 멤버 자격을 삭제합니다.  
   
 ```  

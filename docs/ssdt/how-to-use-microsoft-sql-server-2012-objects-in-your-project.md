@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e3175f523a0cc6b91fd1d5bd955e6872a5cf0064
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 222b725e7e5497adaf679f710fa390dcea8aecf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034981"
 ---
 # <a name="how-to-use-microsoft-sql-server-2012-objects-in-your-project"></a>방법: 프로젝트에서 Microsoft SQL Server 2012 개체 사용
 이 예제에서는 Microsoft SQL Server 2012를 대상으로 하는 데이터베이스 프로젝트에 시퀀스 개체를 추가합니다.  

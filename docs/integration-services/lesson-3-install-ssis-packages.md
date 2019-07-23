@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 87bc4d82-39d8-424f-886f-98cf1e4bb07a
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2b79666ea6ebc28a68777f1c87cd79ef5c8f1ade
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6d5e59c07874ead6eeba97cc2aeaaa240464c21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055920"
 ---
 # <a name="lesson-3-install-ssis-packages"></a>3단원: SSIS 패키지 설치
 

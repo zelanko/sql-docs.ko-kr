@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 0b4b4d11-eb9d-4f3e-9629-6c79cec7a81a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b9480fc29339d0cd33d063c24f19c083804d1ae0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e256287f178999d1bb5f23a4739c17d0abc8ff2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68141232"
 ---
 # <a name="restore-statements---filelistonly-transact-sql"></a>RESTORE 문 - FILELISTONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -99,8 +98,8 @@ FROM <backup_device>
 |ReadOnlyLSN|**numeric(25,0) NULL**|해당 파일이 포함된 파일 그룹이 읽기/쓰기에서 읽기 전용으로 변경된 시점(가장 최근 변경)의 로그 시퀀스 번호입니다.|  
 |ReadWriteLSN|**numeric(25,0)** NULL|해당 파일이 포함된 파일 그룹이 읽기 전용에서 읽기/쓰기로 변경된 시점(가장 최근의 변경)의 로그 시퀀스 번호입니다.|  
 |BackupSizeInBytes|**bigint**|이 파일의 백업의 크기(바이트)입니다.|  
-|SourceBlockSize|**ssNoversion**|백업 장치를 제외한 해당 파일이 포함된 물리적 장치의 블록 크기(바이트)입니다.|  
-|FileGroupID|**ssNoversion**|파일 그룹의 ID입니다.|  
+|SourceBlockSize|**int**|백업 장치를 제외한 해당 파일이 포함된 물리적 장치의 블록 크기(바이트)입니다.|  
+|FileGroupID|**int**|파일 그룹의 ID입니다.|  
 |LogGroupGUID|**uniqueidentifier** NULL|NULL|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|차등 백업의 경우 로그 시퀀스 번호가 **DifferentialBaseLSN**보다 크거나 같은 변경 내용이 포함됩니다.<br /><br /> 다른 백업 유형의 경우 값은 NULL입니다.|  
 |DifferentialBaseGUID|**uniqueidentifier** NULL|차등 백업의 경우 차등 기반의 고유 식별자입니다.<br /><br /> 다른 백업 유형의 경우 값은 NULL입니다.|  

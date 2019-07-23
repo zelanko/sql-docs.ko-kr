@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f45fcf45-b9e7-4d14-a90a-ebc542ac7755
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b007954bacff570760e46b1563e59a5323dfd670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 205b939a870ede1a5a4a02fec81d73ea8dba073d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66792429"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981978"
 ---
 # <a name="getmaxstatementlength-method-sqlserverdatabasemetadata"></a>getMaxStatementLength 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxStatementLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getMaxStatementLength 메서드는 java.sql.DatabaseMetaData 인터페이스의 getMaxStatementLength 메서드에 의해 지정 됩니다.  
+ 이 getMaxStatementLength 메서드는 getMaxStatementLength 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
