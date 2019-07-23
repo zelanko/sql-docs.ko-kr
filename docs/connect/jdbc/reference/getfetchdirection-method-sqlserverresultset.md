@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5ab385c2-e18c-4b75-ac2d-2402af5c52a5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: efd432f446efaef2c8d3d391c98ea1ba72a3f662
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f56893764392236d563fa2b9a236f55e67e13595
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983247"
 ---
 # <a name="getfetchdirection-method-sqlserverresultset"></a>getFetchDirection 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getFetchDirection()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getFetchDirection 메서드는 java.sql.ResultSet 인터페이스의 getFetchDirection 메서드에 의해 지정 됩니다.  
+ 이 getFetchDirection 메서드는 java. ResultSet 인터페이스의 getFetchDirection 메서드에 의해 지정 됩니다.  
   
  이 메서드는 정방향 전용 커서에 대해 FETCH_FORWARD를 반환하고, 다른 커서 형식에 대해서는 [setFetchDirection](../../../connect/jdbc/reference/setfetchdirection-method-sqlserverresultset.md) 메서드를 호출하여 만든 마지막 설정을 반환하며, setFetchDirection 메서드를 호출한 적이 없는 경우에는 이러한 커서 형식에 대해 FETCH_UNKNOWN을 반환합니다.  
   

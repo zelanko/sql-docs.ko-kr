@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bffd20a6-1310-44b0-9602-974500481fa6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01548f5d9a2e54607ff0b260a39724591de4380e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a188d5d98aca0418a2452f29912f62604f3ffa90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972175"
 ---
 # <a name="settypemap-method-sqlserverconnection"></a>setTypeMap 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public void setTypeMap(java.util.Map map)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setTypeMap 메서드는 java.sql.Connection 인터페이스의 setTypeMap 메서드에 의해 지정 됩니다.  
+ 이 Settyp\method 메서드는 java. .sql. Connection 인터페이스의 Settyp\method에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

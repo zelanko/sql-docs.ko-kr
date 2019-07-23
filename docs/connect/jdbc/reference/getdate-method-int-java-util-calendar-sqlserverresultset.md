@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 150411f7-2a73-4380-b921-9698acd5d1f9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aec9dda321477e15c3bc984283e29a2a29170f17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17f2762975f72ccd1e6482ea7120701eacf0c4c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984081"
 ---
 # <a name="getdate-method-int-javautilcalendar-sqlserverresultset"></a>getDate 메서드(int, java.util.Calendar)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +45,7 @@ public java.sql.Date getDate(int columnIndex,
  일정 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- Date 개체입니다.  
+ 날짜 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

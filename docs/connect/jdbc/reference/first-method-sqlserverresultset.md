@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 67ed9447-7b10-4c87-98e7-f4c2e2470b3a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 778ac7b5a7ccbed86363a455e8694845ef16538f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98f35916270d7cb7026e994cb11d564d70739c7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954553"
 ---
 # <a name="first-method-sqlserverresultset"></a>first 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

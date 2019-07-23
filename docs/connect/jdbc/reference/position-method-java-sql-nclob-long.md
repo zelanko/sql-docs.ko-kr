@@ -1,5 +1,5 @@
 ---
-title: position 메서드 (java.sql.NClob, long) | Microsoft Docs
+title: position 메서드 (java. .sql, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 35d8a3903cc18ce371b2d6c333747710ac6efc7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea868190b635a9471bfad424d6fc74572970799b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976366"
 ---
 # <a name="position-method-javasqlnclob-long"></a>position 메서드(java.sql.NClob, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  문자 위치를 검색 합니다. 지정 된 **NClob** 개체 *searchstr* 이 표시 됩니다 **NClob** 개체입니다.  
+  이 **nclob** 개체에 지정 된 **nclob** 개체 *searchstr* 이 나타나는 문자 위치를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -47,7 +46,7 @@ long position(java.sql.NClob searchstr,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 위치 메서드 java.sql.NClob 인터페이스의 위치 메서드에 의해 지정 됩니다.  
+ 이 position 메서드는 java. NClob 인터페이스의 position 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [position 메서드 &#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   

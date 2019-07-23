@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 038c179061c2210278dbfadea236be9dc0bcb09f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ef748c0b53ecd4812816bfc021567e91fbc10c52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023796"
 ---
 # <a name="tcpip-properties-protocols-tab"></a>TCP/IP 속성(프로토콜 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

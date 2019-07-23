@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: eaffcff1-286c-459f-83da-3150778480c9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71513f5e8006adffdb46b249f6358030d11b95a6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7e0a2185037f54aa7ed975667c0bdd5fb921c845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970618"
 ---
 # <a name="sqlserverresultset-class"></a>SQLServerResultSet 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public final class SQLServerResultSet
   
  SQLServerResultSet 클래스에서는 결과 집합을 네이티브 Java 데이터 형식 및 여러 Java 개체 형식으로 업데이트할 수 있게 해 주는 여러 메서드를 제공합니다.  
   
- 이 클래스는 SQLServerResultSet 클래스, ISQLServerResultSet 인터페이스 및 java.sql.ResultSet 인터페이스에 대 한 래핑 해제를 지원 합니다. 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)합니다.  
+ 이 클래스는 래핑 해제 클래스, ISQLServerResultSet 인터페이스 및 SQLServerResultSet 인터페이스를 지원 합니다. 자세한 내용은 [래퍼 및 인터페이스](../../../connect/jdbc/wrappers-and-interfaces.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

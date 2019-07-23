@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 7c46fbea6a02a089b07ad359bc3c53bc5022f3e3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
-ms.translationtype: HT
+ms.openlocfilehash: 5df0001449d5ec1d2fded885fb932436a313bbfe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986301"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag Utility
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -218,7 +217,7 @@ sqldiag
  **/L** 은 서비스 모드를 나타내는 인수가 아닙니다. **SQLdiag** 를 서비스로 실행할 때 **/L** 을 사용하려면 해당 서비스를 등록할 때 명령줄에서 /L을 지정해야 합니다.  
   
  **/X**  
- 스냅샷 모드에서 **SQLdiag** 를 실행합니다. **SQLdiag** 는 구성된 모든 진단 정보에 대해 스냅숏을 만들고 자동으로 종료됩니다.  
+ 스냅샷 모드에서 **SQLdiag** 를 실행합니다. **SQLdiag** 는 구성된 모든 진단 정보에 대해 스냅샷을 만들고 자동으로 종료됩니다.  
   
  **START** | **STOP** | **STOP_ABORT**  
  **SQLdiag** 서비스를 시작하거나 중지합니다. **STOP_ABORT** 는 현재 수행하고 있는 진단 정보 수집을 완료하지 않고 가능한 빨리 서비스를 강제 종료합니다.  
@@ -264,7 +263,7 @@ sqldiag
  **SQLdiag** 에서는 대부분의 진단 데이터를 병렬로 수집합니다. Windows 성능 로그 및 이벤트 로그에서 정보를 수집하는 경우를 제외하고 모든 진단 정보는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **sqlcmd** 유틸리티나 Windows 명령 처리기와 같은 도구에 연결하여 수집합니다. **SQLdiag** 에서는 컴퓨터당 작업자 스레드를 하나씩 사용하여 이러한 도구의 진단 데이터 수집을 모니터링하므로 동시에 여러 도구가 완료되기까지 기다려야 하는 경우도 있습니다. 수집이 진행되는 동안 **SQLdiag** 는 각 진단의 출력을 출력 폴더로 라우팅합니다.  
   
 ## <a name="stopping-data-collection"></a>데이터 수집 중지  
- **SQLdiag** 에서 진단 데이터를 수집하기 시작하면 사용자가 직접 중지하거나 지정한 시간에 중지되도록 구성한 경우를 제외하고 계속해서 데이터를 수집합니다. **/E** 인수를 사용하여 중지 시간을 지정하거나 **/X** 인수를 사용하여 **SQLdiag** 를 스냅숏 모드로 실행하면 지정한 시간에 중지되도록 **SQLdiag** 를 구성할 수 있습니다.  
+ **SQLdiag** 에서 진단 데이터를 수집하기 시작하면 사용자가 직접 중지하거나 지정한 시간에 중지되도록 구성한 경우를 제외하고 계속해서 데이터를 수집합니다. **/E** 인수를 사용하여 중지 시간을 지정하거나 **/X** 인수를 사용하여 **SQLdiag** 를 스냅샷 모드로 실행하면 지정한 시간에 중지되도록 **SQLdiag** 를 구성할 수 있습니다.  
   
  **SQLdiag** 가 중지되면 시작했던 모든 진단이 중지됩니다. 예를 들어 수집 중인 [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] 추적이 중지되고 실행 중인 [!INCLUDE[tsql](../includes/tsql-md.md)] 스크립트 실행이 중지되며 데이터를 수집하는 동안 발생한 모든 하위 프로세스가 중지됩니다. 진단 데이터 수집이 완료되면 **SQLdiag** 가 종료됩니다.  
   
@@ -313,7 +312,7 @@ sqldiag /B +01:00:00 /E 08:30:00
  현재 시간이 08:00일 경우 실제로 진단 정보 수집을 시작하기 전에 종료 시간이 지났습니다. 이러한 경우 **SQLdiag** 에서 자동으로 시작 및 종료 날짜를 다음 날로 조정하기 때문에 이 예에서 진단 정보 수집은 오늘 09:00에 시작되어( **+** 를 사용하여 상대 시작 시간 지정) 다음날 아침 08:30까지 계속됩니다.  
   
 ### <a name="stopping-and-restarting-sqldiag-to-collect-daily-diagnostics"></a>일일 진단 정보를 수집하는 SQLdiag 중지 및 다시 시작  
- 수동으로 **SQLdiag**를 시작하고 중지할 필요 없이 지정한 진단 정보를 매일 수집하려면 **/L** 인수를 사용합니다. **/L** 인수를 사용하면 예약된 종료 후에 자동으로 다시 시작하여 **SQLdiag** 가 계속해서 실행됩니다. **/L** 을 지정한 경우 **SQLdiag** 가 **/E** 인수로 지정한 종료 시간에 도달해서 중지되거나 **/X** 인수를 사용하여 스냅숏 모드에서 실행되고 있기 때문에 중지되면 **SQLdiag** 가 종료되는 대신 다시 시작됩니다.  
+ 수동으로 **SQLdiag**를 시작하고 중지할 필요 없이 지정한 진단 정보를 매일 수집하려면 **/L** 인수를 사용합니다. **/L** 인수를 사용하면 예약된 종료 후에 자동으로 다시 시작하여 **SQLdiag** 가 계속해서 실행됩니다. **/L** 을 지정한 경우 **SQLdiag** 가 **/E** 인수로 지정한 종료 시간에 도달해서 중지되거나 **/X** 인수를 사용하여 스냅샷 모드에서 실행되고 있기 때문에 중지되면 **SQLdiag** 가 종료되는 대신 다시 시작됩니다.  
   
  다음 예에서는 연속 모드에서 **SQLdiag** 를 실행하여 03:00:00부터 05:00:00까지 진단 데이터를 수집한 후 자동으로 다시 시작하도록 지정합니다.  
   

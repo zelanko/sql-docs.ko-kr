@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 625f48ba-53d0-45a6-8fcb-643f1e0cbe8a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ac97844b24c2948949e682aba6b9b8b989aecff3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 60de0b0fd051ed67a2f2804443e419d454c2cb5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996910"
 ---
 # <a name="updatebytes-method-int-byte"></a>updateBytes 메서드(int, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void updateBytes(int index,
   
  *x*  
   
- 배열을 **바이트** 값입니다.  
+ **바이트** 값의 배열입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

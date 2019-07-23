@@ -14,20 +14,19 @@ helpviewer_keywords:
 - OLE DB, creating applications
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c36ec6878f7ef981e72a64121c98c930e6481104
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4f7861e02b1ed203911f4e3f86575a9688c861fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015655"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>SQL Server 애플리케이션용 OLE DB 드라이버 만들기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB 드라이버 만들기 SQL Server 응용 프로그램에 대해 이러한 단계가 포함 됩니다.  
+  SQL Server 응용 프로그램에 대 한 OLE DB 드라이버를 만들려면 다음 단계를 수행 해야 합니다.  
   
 1.  데이터 원본에 대한 연결 설정  
   

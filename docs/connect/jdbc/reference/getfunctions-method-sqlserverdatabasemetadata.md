@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44335cbd-c84d-4ef3-a6a1-fca7eb7ec768
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe24a26956a295ccfd00f8d782611057cf019308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b799fb56207294041c52fe455ad2acceff508d3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982950"
 ---
 # <a name="getfunctions-method-sqlserverdatabasemetadata"></a>getFunctions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -66,9 +65,9 @@ public ResultSet getFunctions(java.lang.String catalog,
 |FUNCTION_CAT|**String**|함수가 있는 데이터베이스의 이름입니다.|  
 |FUNCTION_SCHEM|**String**|함수가 있는 스키마의 이름입니다.|  
 |FUNCTION_NAME|**String**|함수의 이름입니다.|  
-|NUM_INPUT_PARAMS|**ssNoversion**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
-|NUM_OUTPUT_PARAMS|**ssNoversion**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
-|NUM_RESULT_SETS|**ssNoversion**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
+|NUM_INPUT_PARAMS|**int**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
+|NUM_OUTPUT_PARAMS|**int**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
+|NUM_RESULT_SETS|**int**|나중에 사용하기 위해 예약되었으며, 현재는 -1 값을 반환합니다.|  
 |REMARKS|**String**|함수에 대한 설명입니다.|  
 |FUNCTION_TYPE|**short**|함수의 형식입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> SQL_PT_UNKNOWN(0)<br /><br /> SQL_PT_PROCEDURE(1)<br /><br /> SQL_PT_FUNCTION(2)|  
   

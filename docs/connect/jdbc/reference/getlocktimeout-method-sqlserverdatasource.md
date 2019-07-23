@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 676094e9-ec18-4524-9b21-1f9c5b16dd52
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 120a90168d46f81d57115812c832c5c6674cf436
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9c94e0c69bd528f1c579f41319a4db18b7d4d3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982564"
 ---
 # <a name="getlocktimeout-method-sqlserverdatasource"></a>getLockTimeout 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

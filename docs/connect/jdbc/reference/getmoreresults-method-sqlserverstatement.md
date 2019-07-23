@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6b18510a-4d6d-4eeb-a9d0-32e920eb0048
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 90168fa250b83b8418e09c12feb5650a50b3bb15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b7d8c1c63823cd558122746fdc2dbca84d3f64a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981743"
 ---
 # <a name="getmoreresults-method-sqlserverstatement"></a>getMoreResults 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5b8e78e6-2bb0-4dc7-9c77-a5609654cb05
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45d1b81a18d953bcf3df8ff142535204e648edbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a5893bb1585fba014a5bf652265d69953c6a11d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979297"
 ---
 # <a name="getsupertypes-method-sqlserverdatabasemetadata"></a>getSuperTypes 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

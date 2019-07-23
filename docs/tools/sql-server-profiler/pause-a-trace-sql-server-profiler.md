@@ -1,5 +1,5 @@
 ---
-title: (SQL Server Profiler) 추적을 일시 중지 | Microsoft Docs
+title: 추적 일시 중지 (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 432b9b0c-b5e7-47f3-a71b-310fb3bf2445
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8ddbfe90e8943acc38bc2a85363a55614ce1dbe0
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: c314337c317ef4892405058b8eba50220a8bcdbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911708"
 ---
 # <a name="pause-a-trace-sql-server-profiler"></a>추적 일시 중지(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

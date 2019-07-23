@@ -15,20 +15,19 @@ helpviewer_keywords:
 - stored procedures [OLE DB], command syntax
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: ac3ea02fbdf4a94f7f524022a1808410ca1dfd61
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 15d6d221c9e3435a3ba4c3f58c7d6b6e55314f29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016125"
 ---
 # <a name="command-syntax"></a>명령 구문
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server는 DBGUID_SQL 매크로로 지정 된 명령 구문을 인식 합니다. OLE DB 드라이버의 SQL Server에 대 한 경우 지정자를 나타냅니다 ODBC sql, ISO 모두 유효함 및 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 올바른 구문입니다. 예를 들어 다음 SQL 문은 ODBC SQL 이스케이프 시퀀스를 사용하여 LCASE 문자열 함수를 지정합니다.  
+  SQL Server에 대 한 OLE DB 드라이버는 DBGUID_SQL 매크로로 지정 된 명령 구문을 인식 합니다. SQL Server에 대 한 OLE DB 드라이버의 경우 지정자는 ODBC SQL, ISO 및 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 의 amalgam가 유효한 구문 임을 나타냅니다. 예를 들어 다음 SQL 문은 ODBC SQL 이스케이프 시퀀스를 사용하여 LCASE 문자열 함수를 지정합니다.  
   
 ```  
 SELECT customerid={fn LCASE(CustomerID)} FROM Customers  

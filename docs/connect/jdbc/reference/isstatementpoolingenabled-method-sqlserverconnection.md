@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6265aaf5121e50684e205b5d80199222b510f5d6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d2f5178c8a2ce5b527ce70e6a3d8fc139ccc9c72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977206"
 ---
 # <a name="isstatementpoolingenabled-method-sqlserverconnection"></a>isStatementPoolingEnabled 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 문 풀링을 사용 하도록 설정할지 여부이 연결용를 반환 합니다.
+ 이 연결에 대해 문 풀링이 사용 되는지 여부를 반환 합니다.
 
 ## <a name="syntax"></a>구문  
   
@@ -36,13 +35,13 @@ public boolean isStatementPoolingEnabled()
 ```  
 
 ## <a name="return-value"></a>반환 값
- A **부울** 여부 문 풀링을 사용할지 여부를 나타내는 플래그를 포함 하는 합니다.
+ 문 풀링이 사용 되는지 여부를 나타내는 플래그를 포함 하는 **부울** 입니다.
 
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- 이 메서드는 JDBC 드라이버 버전 6.4에서에서 사용 가능 하 고 향후에.
+ 이 메서드는 JDBC 드라이버 버전 6.4 및 이후 버전에서 사용할 수 있습니다.
  
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

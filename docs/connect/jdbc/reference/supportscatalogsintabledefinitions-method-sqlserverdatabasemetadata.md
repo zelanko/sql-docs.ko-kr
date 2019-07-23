@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1e1e50ac-f3d4-416a-8a69-d8b7b4f30bf3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f80dad51a9ce9d0c156dbac86284372848fdcae9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aa1c949cab59b1ff04f9cb0ae693b037fd3588f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969660"
 ---
 # <a name="supportscatalogsintabledefinitions-method-sqlserverdatabasemetadata"></a>supportsCatalogsInTableDefinitions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsCatalogsInTableDefinitions()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsCatalogsInTableDefinitions 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsCatalogsInTableDefinitions 메서드에 의해 지정 됩니다.  
+ 이 supportsCatalogsInTableDefinitions 메서드는 supportsCatalogsInTableDefinitions 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

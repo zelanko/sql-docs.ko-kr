@@ -1,5 +1,5 @@
 ---
-title: JDBC 4.1 준수 JDBC 드라이버에 대 한 | Microsoft Docs
+title: Jdbc 드라이버에 대 한 JDBC 4.1 준수 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7c21c548b113e9da03661ca3beb04b6757c92697
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bf37b74c06ac03ef135eab7a09d275bde78b867
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956374"
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>JDBC 드라이버의 JDBC 4.1 준수
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "66781634"
   
 |새 기능|설명|  
 |-----------------|-----------------|  
-|새 이스케이프 함수<br /><br /> 제한된 행 반환 이스케이프|부분적으로 지원됨<br /><br /> 이스케이프 구문을: 제한을 \<행 > [오프셋 < row_offset >](using-sql-escape-sequences.md)합니다.|  
+|새 이스케이프 함수<br /><br /> 제한된 행 반환 이스케이프|부분적으로 지원됨<br /><br /> 이스케이프 구문: 행 \<제한 > [OFFSET < 요소인 >](using-sql-escape-sequences.md).|  
   
  Java Database Connectivity API 4.1 사양은 다음과 같은 데이터 형식 매핑을 통해 SQL Server용 Microsoft JDBC Driver 4.2에서 지원됩니다.  
   

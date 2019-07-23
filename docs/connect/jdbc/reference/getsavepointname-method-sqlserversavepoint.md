@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6affbe5c-e836-4195-a3ba-1892cbf81907
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f4d695c8c3d81786bdc931d576a701a7b54746a0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8fe7df1dcba7762cded47fb5483e017ed6851054
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66762536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980208"
 ---
 # <a name="getsavepointname-method-sqlserversavepoint"></a>getSavepointName 메서드(SQLServerSavepoint)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getSavepointName()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getSavepointName 메서드는 java.sql.Savepoint 인터페이스의 getSavepointName 메서드에 의해 지정 됩니다.  
+ 이 getSavepointName 메서드는 java. 저장점 인터페이스의 getSavepointName 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerSavepoint 메서드](../../../connect/jdbc/reference/sqlserversavepoint-methods.md)   

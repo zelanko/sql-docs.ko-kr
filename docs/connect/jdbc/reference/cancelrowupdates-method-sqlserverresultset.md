@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2ecacca4-f7bc-4f5d-886a-da7747fdccae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cdd669db96a3019915e7380aa6a450b2333de36e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d1598bca994ae41ccee56ca68e12e74e8d18fd0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955795"
 ---
 # <a name="cancelrowupdates-method-sqlserverresultset"></a>cancelRowUpdates 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void cancelRowUpdates()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 cancelRowUpdates 메서드는 java.sql.ResultSet 인터페이스의 cancelRowUpdates 메서드에 의해 지정 됩니다.  
+ 이 cancelRowUpdates 메서드는 java. ResultSet 인터페이스의 cancelRowUpdates 메서드에 의해 지정 됩니다.  
   
  updater 메서드를 호출한 후 [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 메서드를 호출하기 전에 이 메서드를 호출하면 행에 대한 업데이트 내용이 롤백됩니다. 업데이트를 수행하지 않았거나 updateRow가 이미 호출된 경우 이 메서드는 아무 영향도 주지 않습니다.  
   

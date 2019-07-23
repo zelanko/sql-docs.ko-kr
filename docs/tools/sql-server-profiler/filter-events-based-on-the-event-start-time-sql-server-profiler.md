@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e965579e-d006-41a3-89ec-cfd5398c67d2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: aa61ce726ce3e0610a3c1db8337c36054dc1b9e7
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a1e0dddb26a2ea89635f995c5d1c270d1454b3b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930009"
 ---
 # <a name="filter-events-based-on-the-event-start-time-sql-server-profiler"></a>이벤트 시작 시간을 기준으로 이벤트 필터링(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

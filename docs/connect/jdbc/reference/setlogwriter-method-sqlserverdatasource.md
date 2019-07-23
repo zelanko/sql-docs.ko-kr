@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: 7a77d8ef-2211-4bf8-af35-020fc896c073
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8c2d2ca8edbb3bf0b218a7e5f9b49925c2f52c4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1adddf442f9d2b6ff84f955cf4e448a31e6741da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799231"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974074"
 ---
 # <a name="setlogwriter-method-sqlserverdatasource"></a>setLogWriter 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  이 메서드는 내부 전용입니다. 로깅에 대 한 자세한 내용은 참조 하세요. [Tracing Driver Operation](../../../connect/jdbc/tracing-driver-operation.md)합니다.  
+  이 메서드는 내부 전용입니다. 로깅에 대 한 자세한 내용은 [드라이버 작업 추적](../../../connect/jdbc/tracing-driver-operation.md)을 참조 하세요.  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,7 +40,7 @@ public void setLogWriter(java.io.PrintWriter out)
  PrintWriter 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이 setLogWriter 메서드는 javax.sql.DataSource 인터페이스의 setLogWriter 메서드에 의해 지정 됩니다.  
+ 이 setLogWriter 메서드는 javax.sql 인터페이스의 setLogWriter 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

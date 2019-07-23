@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f3c54bfe-d5b7-4f6e-ae6c-3e8954e5b1c9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c841052f4fad09905f0aab447af9441919a23f1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bc8420b9f79ce61874dbb03e73924e7be6eca96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976778"
 ---
 # <a name="movetoinsertrow-method-sqlserverresultset"></a>moveToInsertRow 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

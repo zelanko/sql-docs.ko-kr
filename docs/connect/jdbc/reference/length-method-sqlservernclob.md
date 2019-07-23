@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: dd1fb351-b4f2-4ebe-80a0-8bafb0637906
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5fa3d153f6e36fe4eb45cc54da2326aec8e32dd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e32b559d43e44e75d4f87ecf99cfd871727c9934
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976855"
 ---
 # <a name="length-method-sqlservernclob"></a>length 메서드(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public long length()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 길이 메서드 java.sql.NClob 인터페이스의 길이 메서드에 의해 지정 됩니다.  
+ 이 길이 메서드는 java. NClob 인터페이스의 length 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerNClob 메서드](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

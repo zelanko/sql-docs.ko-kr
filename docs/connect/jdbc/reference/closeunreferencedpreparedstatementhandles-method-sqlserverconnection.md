@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d0fb6ae351cde68956defff6081fa19f02c092e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7256475421b8666e28eaaf03f3ff4cb9768aa289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955608"
 ---
 # <a name="closeunreferencedpreparedstatementhandles-method-sqlserverconnection"></a>closeUnreferencedPreparedStatementHandles 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 취소를 강제로-실행할 모든 미해결 삭제 된 준비 된 문에 대 한 요청을 준비 합니다.
+ 보류 중인 삭제 된 준비 문이 실행 될 때까지 준비 취소 요청을 강제로 실행 합니다.
 
 ## <a name="syntax"></a>구문  
   
@@ -40,7 +39,7 @@ public void closeUnreferencedPreparedStatementHandles()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
 
 ## <a name="remarks"></a>Remarks  
- 이 메서드는 JDBC 드라이버 버전 6.4에서에서 사용 가능 하 고 향후에.
+ 이 메서드는 JDBC 드라이버 버전 6.4 및 이후 버전에서 사용할 수 있습니다.
  
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

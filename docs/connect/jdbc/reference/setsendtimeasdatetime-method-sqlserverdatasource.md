@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: 705a0494-b5e2-43db-940a-1b8cec550cdb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 92ffcfe235d33158fb26552c74c13d9533a11781
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 293667d8e3e06fb5eda7a74fdeed58c89fb0f1ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66767816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972964"
 ---
 # <a name="setsendtimeasdatetime-method-sqlserverdatasource"></a>setSendTimeAsDatetime 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   이 메서드는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0에서 추가되었습니다.  
   
- 설정을 수정 합니다 **sendTimeAsDatetime** 연결 속성입니다.  
+ **SendTimeAsDatetime** connection 속성의 설정을 수정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,9 +39,9 @@ public void setSendTimeAsDatetime(boolean sendTimeAsDateTime)
 ## <a name="remarks"></a>Remarks  
  [SQLServerDataSource.getSendTimeAsDatetime](../../../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md)은 **sendTimeAsDatetime** 연결 속성의 설정을 반환합니다.  
   
- 에 대 한 자세한 합니다 **sendTimeAsDatetime** 연결 속성을 참조 하세요 [연결 속성 설정](../../../connect/jdbc/setting-the-connection-properties.md)합니다.  
+ **SendTimeAsDatetime** connection 속성에 대 한 자세한 내용은 [연결 속성 설정](../../../connect/jdbc/setting-the-connection-properties.md)을 참조 하세요.  
   
- 자세한 내용은 [어떻게 구성 java.sql.Time 값을 서버로 전송 됩니다](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)합니다.  
+ 자세한 내용은 [java. 시간 값을 서버로 보내는 방법 구성](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

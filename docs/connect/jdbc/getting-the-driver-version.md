@@ -1,5 +1,5 @@
 ---
-title: 드라이버 버전 가져오기 | Microsoft Docs
+title: 드라이버 버전을 가져오는 중 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2cfe90d0a38cf5e599d82a6208a145daa3a3d1c7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c75f14ca3f24a97240d7430210ab79c70e0bac85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956559"
 ---
 # <a name="getting-the-driver-version"></a>드라이버 버전 가져오기
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66781821"
   
  또한 JDBC 드라이버 이름은 SQLServerDatabaseMetaData 클래스의 [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md) 메서드 호출에서 반환될 수 있습니다. 예를 들어 이 메서드는 “SQL Server용 Microsoft JDBC Driver 6.4”를 반환합니다.  
   
- 다음은 SQLServerDatabaseMetaData 클래스의 메서드 호출에서 출력의 예제입니다.  
+ 다음은 SQLServerDatabaseMetaData 클래스의 메서드에 대 한 호출의 출력 예제입니다.  
   
  `getDriverName = Microsoft JDBC Driver 6.4 for SQL Server`  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 553c0603-c07d-436a-86eb-3ba6b51bd696
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e103a29dacea48c42f7d6602f8e8fcb924774ddf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 78b4d49029c6a0f2696cc93348bff7b32767bc13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974834"
 ---
 # <a name="setcatalog-method-sqlserverconnection"></a>setCatalog 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void setCatalog(java.lang.String catalog)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setCatalog 메서드는 java.sql.Connection 인터페이스의 setCatalog 메서드에 의해 지정 됩니다.  
+ 이 setCatalog 메서드는 java. .sql. Connection 인터페이스의 setCatalog 메서드에 의해 지정 됩니다.  
   
  *catalog* 인수는 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에 의해 자동으로 이스케이프됩니다. 이 메서드를 사용하면 Connection 개체의 카탈로그 속성이 설정됩니다. 이 속성은 다른 방법으로 암시적으로 설정되지 않습니다.  
   

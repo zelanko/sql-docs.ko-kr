@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1dd80df3a0f7fabec7ae9ddc51b16cb4456c7970
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996613"
 ---
 # <a name="connecting-with-bcp"></a>bcp를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 유틸리티는 Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 수 있습니다. 이 페이지의 Windows 버전 간의 차이점을 설명 `bcp`합니다.
+[bcp](https://go.microsoft.com/fwlink/?LinkID=190626) 유틸리티는 Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 수 있습니다. 이 페이지에서는 Windows 버전의 `bcp`차이점을 설명 합니다.
   
 - 필드 종결자는 탭("\t")입니다.  
   
@@ -79,7 +78,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 작업 시 삽입된 열에 기본값이 지정되지 않고 빈 열이 Null 값을 보유하도록 지정합니다.  
   
 - -l  
-로그인 시간 제한을 지정합니다. -l 옵션을 사용하여 서버에 연결을 시도할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 로그인 제한 시간(초)을 지정합니다. 기본 로그인 제한 시간은 15 초입니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 `bcp`는 오류 메시지를 생성합니다. 값이 0 이면 시간 제한이 무한를 지정합니다.
+로그인 시간 제한을 지정합니다. -l 옵션을 사용하여 서버에 연결을 시도할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 로그인 제한 시간(초)을 지정합니다. 기본 로그인 제한 시간은 15 초입니다. 로그인 제한 시간은 0에서 65534 사이의 숫자여야 합니다. 입력한 값이 숫자가 아니거나 이 범위에 속하지 않을 경우 `bcp`는 오류 메시지를 생성합니다. 값 0은 무한 시간 제한을 지정 합니다.
   
 - -L *last_row*  
 테이블에서 내보내거나 데이터 파일에서 가져올 마지막 행 번호를 지정합니다.  
@@ -103,7 +102,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 클라이언트 컴퓨터의 로캘 설정에 정의된 국가별 형식을 사용하여 통화, 날짜 및 시간 데이터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로 대량 복사하도록 지정합니다.  
   
 - -S *server*  
-이름을 지정 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결 하 여 차원 인지 또는 사용, DSN입니다.  
+연결할 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정 하거나,-D를 사용 하는 경우 DSN을 지정 합니다.  
   
 - -t *field_terminator*  
 필드 종결자를 지정합니다.  

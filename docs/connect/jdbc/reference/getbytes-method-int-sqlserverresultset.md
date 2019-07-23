@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1385d7d4-9288-4cbd-8606-4b919e9b07b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f3299b061303400f75241e863b8675ad95b3e485
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d328a2b1f092686403ba4cbcddf1ad22d733ea06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213731"
 ---
 # <a name="getbytes-method-int-sqlserverresultset"></a>getBytes 메서드(int) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public byte[] getBytes(int columnIndex)
  열 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 배열을 **바이트** 값입니다.  
+ **바이트** 값의 배열입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2910453562cf78c4b88140de15885d4ddca5fe3a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5843deb0b1d598525efcc657b16fe0b610048a35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983628"
 ---
 # <a name="getdiscardedserverpreparedstatementcount-method-sqlserverconnection"></a>getDiscardedServerPreparedStatementCount 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 준비 된 현재 처리 중인 개수를 반환 문 준비 작업을 취소 합니다.
+ 현재 해결 되지 않은 준비 된 문 unprepare 작업 수를 반환 합니다.
 
 ## <a name="syntax"></a>구문  
   
@@ -36,13 +35,13 @@ public int getDiscardedServerPreparedStatementCount()
 ```  
 
 ## <a name="return-value"></a>반환 값
- **int** 현재 처리 중인 준비 된 문 수를 포함 하는 작업 준비 취소 합니다.
+ 현재 처리 중인 준비 된 문 unprepare 작업 수를 포함 하는 **int** 입니다.
 
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- 이 메서드는 JDBC 드라이버 버전 6.4에서에서 사용 가능 하 고 향후에.
+ 이 메서드는 JDBC 드라이버 버전 6.4 및 이후 버전에서 사용할 수 있습니다.
  
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

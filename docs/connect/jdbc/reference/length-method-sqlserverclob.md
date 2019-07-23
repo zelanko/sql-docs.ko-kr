@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 18bea01e-7d3d-40aa-961f-2318513fab1c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d46824b0d49bd359c748d4ab9ab33f5d4b29958d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 634e38cf6dabea5ffb65ebb3d8c442fc0b844f6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976870"
 ---
 # <a name="length-method-sqlserverclob"></a>length 메서드(SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public long length()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 길이 메서드는 java.sql.Clob 인터페이스의 길이 메서드에 의해 지정 됩니다.  
+ 이 길이 메서드는 java. Clob 인터페이스의 length 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerClob 메서드](../../../connect/jdbc/reference/sqlserverclob-methods.md)   

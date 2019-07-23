@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ceea73eba8f1c01590218c106f3b2b10237408e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 743eab241fa9feb4a622054b3be48b887b804813
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957612"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>3단계: ADO.NET을 사용하여 SQL에 연결하는 개념 증명
 
@@ -24,11 +23,11 @@ ms.locfileid: "66770570"
 - 다음 문서:&nbsp;&nbsp;&nbsp;[4단계: ADO.NET을 사용하여 탄력적으로 SQL에 연결](step-4-connect-resiliently-to-sql-with-ado-net.md)  
 
   
-이 C# 코드 예제는 개념 증명만 고려 되어야 합니다. 샘플 코드를 이해 하기 쉽도록 간소화 되었습니다 및 Microsoft에서 권장 하는 모범 사례를 반드시 나타내지는지 않습니다.  
+이 C# 코드 예제는 개념 증명 으로만 간주 해야 합니다. 이 샘플 코드는 명확 하 게 하기 위해 단순화 되었으며 Microsoft에서 권장 하는 모범 사례를 나타내지는 않습니다.  
   
 ## <a name="step-1-connect"></a>1 단계: 연결
   
-메서드 **SqlConnection.Open** SQL database에 연결 하는 데 사용 됩니다.  
+**SqlConnection** 메서드는 SQL 데이터베이스에 연결 하는 데 사용 됩니다.  
 
 
 ```csharp
@@ -67,10 +66,10 @@ ms.locfileid: "66770570"
 
 ## <a name="step-2--execute-a-query"></a>2단계: 쿼리 실행  
   
-SqlCommand.ExecuteReader 메서드:  
+ExecuteReader 메서드는 다음과 같습니다.  
   
-- SQL 시스템에 SQL SELECT 문을 실행합니다.  
-- 결과 행에 대 한 액세스를 제공 하는 SqlDataReader의 인스턴스를 반환 합니다.  
+- Sql SELECT 문을 SQL 시스템에 발급 합니다.  
+- 결과 행에 대 한 액세스를 제공 하기 위해 SqlDataReader의 인스턴스를 반환 합니다.  
   
   
   
@@ -156,9 +155,9 @@ SqlCommand.ExecuteReader 메서드:
   
 이 예에서는 다음을 수행하는 방법을 보여 줍니다.  
   
-- SQL INSERT 문에서 매개 변수를 전달 하 여 안전 하 게 실행 합니다.  
-  - 매개 변수 사용 하 여 SQL 주입 공격 으로부터 보호합니다.  
-- 자동으로 생성 된 값을 검색 합니다.  
+- 매개 변수를 전달 하 여 SQL INSERT 문을 안전 하 게 실행 합니다.  
+  - 매개 변수를 사용 하면 SQL 삽입 공격 으로부터 보호 됩니다.  
+- 자동 생성 된 값을 검색 합니다.  
   
   
   

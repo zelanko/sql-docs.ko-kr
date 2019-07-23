@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c9e43ff2-8117-4dca-982d-83c863d0c8e1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fa4e1c6921495448ce0a1e01a972b1786a69efd9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f5bfc0fb1d1a74131d0e8e71055356f958a9b508
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973106"
 ---
 # <a name="setresponsebuffering-method-sqlserverdatasource"></a>setResponseBuffering 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +44,7 @@ public void setResponseBuffering(java.lang.String value)
   
  **adaptive** 값은 필요할 때 가능한 최소한의 데이터를 버퍼링하도록 지정합니다. **adaptive** 값은 기본 버퍼링 모드입니다.  
   
- 응답 버퍼링 모드를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [를 사용 하 여 선택 버퍼링](../../../connect/jdbc/using-adaptive-buffering.md)합니다.  
+ 응답 버퍼링 모드를 사용 하는 방법에 대 한 자세한 내용은 [적응 버퍼링 사용](../../../connect/jdbc/using-adaptive-buffering.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

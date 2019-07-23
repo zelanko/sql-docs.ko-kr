@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b50a920c-3839-40f0-9411-c60bbc2a9f34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bbdf6c4f9ab7e50447b887240d0f946477cbcb0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32a541ae426a450c23af98cf47fba3f3fff85f1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975257"
 ---
 # <a name="setbigdecimal-method-sqlservercallablestatement"></a>setBigDecimal 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void setBigDecimal(java.lang.String sCol,
   
  *bd*  
   
- BigDecimal 개체입니다.  
+ 가는 10 진수 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setBigDecimal 메서드는 java.sql.CallableStatement 인터페이스의 setBigDecimal 메서드에 의해 지정 됩니다.  
+ 이 Set이상 Decimal 메서드는 java. CallableStatement 인터페이스의 Set이상 Decimal 메서드로 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerCallableStatement 멤버](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

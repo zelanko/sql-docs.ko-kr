@@ -1,5 +1,5 @@
 ---
-title: JDBC 드라이버로 메타 데이터 처리 | Microsoft Docs
+title: JDBC 드라이버를 사용 하 여 메타 데이터 처리 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c479651027429463dc88ae7ddce816a7973ac0d2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a5ac2591c10bc77ff4e4d1d9dcacd755a442b9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956527"
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>JDBC 드라이버로 메타데이터 처리
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

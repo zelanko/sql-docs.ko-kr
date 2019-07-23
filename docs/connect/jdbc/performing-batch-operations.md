@@ -1,5 +1,5 @@
 ---
-title: 일괄 처리 작업 수행 | Microsoft Docs
+title: 일괄 작업 수행 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4923354c5f6dc013d9fee0284279bb5b6b887556
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 244c20b2fb7721d117557581068791e1a2d99d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956220"
 ---
 # <a name="performing-batch-operations"></a>일괄 작업 수행
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66801820"
   
  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스는 모두 일괄 처리 업데이트를 전송하는 데 사용할 수 있습니다. [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) 메서드는 명령을 추가하는 데 사용됩니다. [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) 메서드는 명령 목록을 지우는 데 사용됩니다. [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) 메서드는 처리할 모든 명령을 전송하는 데 사용됩니다. 단순 업데이트 횟수를 반환하는 DDL(데이터 정의 언어) 및 DML(데이터 조작 언어) 문만 일괄 처리의 일부로 실행할 수 있습니다.  
   
- executeBatch 메서드는 각 명령의 업데이트 횟수에 해당하는 **int** 값 배열을 반환합니다. 명령 중 하나가 실패 하면는 BatchUpdateException throw 되지 않으며 업데이트 횟수 배열을 검색 BatchUpdateException 클래스의 getUpdateCounts 메서드를 사용 해야 합니다. 명령 하나가 실패하더라도 드라이버는 계속해서 나머지 명령을 처리합니다. 그러나 명령에 구문 오류가 있으면 일괄 처리에 있는 문이 실패합니다.  
+ executeBatch 메서드는 각 명령의 업데이트 횟수에 해당하는 **int** 값 배열을 반환합니다. 명령 중 하나가 실패 하면 BatchUpdateException이 throw 되며, BatchUpdateException 클래스의 getUpdateCounts 메서드를 사용 하 여 업데이트 횟수 배열을 검색 해야 합니다. 명령 하나가 실패하더라도 드라이버는 계속해서 나머지 명령을 처리합니다. 그러나 명령에 구문 오류가 있으면 일괄 처리에 있는 문이 실패합니다.  
   
 > [!NOTE]  
 >  업데이트 횟수를 사용할 필요가 없다면 SET NOCOUNT ON 문을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 먼저 발급할 수 있습니다. 이렇게 하면 네트워크 트래픽이 감소하고 응용 프로그램의 성능도 향상됩니다.  

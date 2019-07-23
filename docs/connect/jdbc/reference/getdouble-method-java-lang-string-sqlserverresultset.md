@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3ee26412-43d2-404b-bc05-ffd0fc75805c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fb74dd4b80256ad85e03a258a0adc5d93ba1880d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e82f85941899fc05fc8fdf35cd7ae65870100ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983571"
 ---
 # <a name="getdouble-method-javalangstring-sqlserverresultset"></a>getDouble 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public double getDouble(java.lang.String columnName)
  열 이름이 포함된 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- A **이중** 값입니다.  
+ **Double** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

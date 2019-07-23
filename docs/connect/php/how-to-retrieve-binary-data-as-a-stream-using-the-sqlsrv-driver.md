@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e4bf2ae4330a98d810d0d3291f0045834b8927d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f77439f2369d7fbf4e27603bcbf8c8a2f8d8399
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993483"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 스트림으로 이진 데이터 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 276e0093-3d42-4f73-acc4-2b5b98245b40
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: db13bdb3a1039abf1b07616d4cd94001833e3600
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 23ba6bc636e5bc714a606c29a46f7b52ce1bbea4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801712"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977988"
 ---
 # <a name="getxaconnection-method-javalangstring-javalangstring"></a>getXAConnection 메서드(java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,13 +45,13 @@ public javax.sql.XAConnection getXAConnection(java.lang.String user,
  암호가 포함된 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- XAConnection 개체입니다.  
+ Javax.sql.xaconnection 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 이 getXAConnection 메서드는 javax.sql.XADataSource 인터페이스의 getXAConnection 메서드에 의해 지정 됩니다.  
+ 이 getXAConnection 메서드는 Javax.sql.xadatasource 인터페이스의 getXAConnection 메서드에 의해 지정 됩니다.  
   
 > [!NOTE]  
 >  이 메서드는 일반적으로 XA 연결 풀 구현에서 호출되며 일반적인 JDBC 응용 프로그램 코드에서는 호출되지 않습니다.  

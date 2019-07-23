@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 90c47643-e27e-425d-85a0-63866f858367
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0d64afe09e86e37f0f2725d3f3f5feaa24938ea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 343a39fbe3f7f98717beb7044b6faab802eaac51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999023"
 ---
 # <a name="updatedouble-method-int-double"></a>updateDouble 메서드(int, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void updateDouble(int index,
   
  *x*  
   
- A **이중** 값입니다.  
+ **Double** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

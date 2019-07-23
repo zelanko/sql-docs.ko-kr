@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6d043ba9-b8ec-41d3-bb22-ad2c4aebda6f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11d260eaa15b4d8f61a6f3804edb8a087c1fa81b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38b9da1b88b43fbc333313065c2b0134d1c08bfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955239"
 ---
 # <a name="createstatement-method-sqlserverconnection"></a>createStatement 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

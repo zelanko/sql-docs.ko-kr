@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e4e1ae9d-18a6-41db-8bd2-9cf0eee4cccb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b635cfc7ecbe3e658a364a214d5c7cf744095492
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 04cbe39698a99fbde43043b70bb9b1f0e5887f58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977004"
 ---
 # <a name="jdbc-driver-api-reference"></a>JDBC 드라이버 API 참조
 
@@ -26,26 +25,26 @@ ms.locfileid: "66803215"
 
 
 
-### <a name="javadocio-website-is-primary"></a>JavaDoc.io 웹 사이트는 주
+### <a name="javadocio-website-is-primary"></a>JavaDoc.io 웹 사이트가 기본입니다.
 
-Microsoft JDBC API 참조 설명서는 JavaDoc.io 웹 사이트에서 사용자 보기에 대 한 호스트 됩니다. JavaDoc.io는 JDBC 참조 설명서에 대 한 기본 웹 사이트 되었습니다. JavaDoc.io에 JDBC 참조 설명서는 다음 직접 링크를 통해 제공 됩니다.
+Microsoft JDBC API 참조 설명서는 JavaDoc.io 웹 사이트에서 볼 수 있도록 호스팅됩니다. JavaDoc.io는 이제 JDBC 참조 설명서에 대 한 기본 웹 사이트입니다. JavaDoc.io에 대 한 JDBC 참조 설명서는 다음 직접 링크에서 제공 됩니다.
 
 - [https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/](https://javadoc.io/doc/com.microsoft.sqlserver/mssql-jdbc/)
 
-JavaDoc.io 버전 6.0부터 JDBC 참조 설명서를 있습니다.
+JavaDoc.io에는 버전 6.0부터 JDBC 참조 설명서가 포함 되어 있습니다.
 
-#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>만 레거시 JDBC 설명서는 여기에서 문서
+#### <a name="only-legacy-jdbc-documentation-is-here-on-docs"></a>기존 JDBC 설명서만 문서에 있습니다.
 
-JDBC API 참조 설명서는 여기 기사 **https://docs.microsoft.com/sql/connect/jdbc/reference/** 새 릴리스에 대 한 JDBC 클래스를 업데이트할 때 업데이트할 더 이상. 그러나이 문서를 수행할 JDBC 버전 4.1 및 4.2에 대 한 모든 참조를 포함 합니다.
+새 릴리스에 대해 jdbc 클래스가 업데이트 될 때 **https://docs.microsoft.com/sql/connect/jdbc/reference/** 여기에 있는 jdbc API 참조 설명서 문서는 더 이상 업데이트 되지 않습니다. 그러나 여기에 포함 된 문서에는 JDBC 버전 4.1 및 4.2에 대 한 모든 참조가 포함 됩니다.
 
-JDBC 버전 6.0 및 일부 이상 버전에 대 한 설명서는 또한 여기 있습니다. 하지만 모든 버전 6.0 이상 JavaDoc.io 웹 사이트를 사용 합니다.
+JDBC 버전 6.0 및 일부 이후 버전에 대 한 설명서도 여기에 있습니다. 그러나 버전 6.0 이상에서는 JavaDoc.io 웹 사이트를 사용 합니다.
 
 
 
 ### <a name="important-notes"></a>중요 사항
 
 > [!NOTE]  
->  JDBC 드라이버를 사용 하는 방법에 대 한 개념 정보를 참조 하세요 [JDBC 드라이버 개요](../../../connect/jdbc/overview-of-the-jdbc-driver.md)합니다.  
+>  JDBC 드라이버를 사용 하는 방법에 대 한 개념 정보 [는 Jdbc 드라이버 개요](../../../connect/jdbc/overview-of-the-jdbc-driver.md)를 참조 하세요.  
   
 > [!IMPORTANT]  
 >  JDBC 4.1 및 4.2 준수를 지원하려면 SQL Server용 Microsoft JDBC Driver 4.2 이상을 사용하세요. Microsoft JDBC Driver 4.1 및 4.0 이전 릴리스에서는 JDBC 4.1 또는 4.2에 도입된 새로운 메서드가 지원되지 않습니다.  
@@ -58,7 +57,7 @@ JDBC 버전 6.0 및 일부 이상 버전에 대 한 설명서는 또한 여기 �
 >   
 >  이 섹션에는 SQL Server용 Microsoft JDBC Driver 6.0부터 사용할 수 있는 Always Encrypted에 대한 API 세부 정보는 없습니다. [JDBC 드라이버에 대해 Always Encrypted API 참조](../../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)를 참조  
 >   
->  이 단원의 Using Table-Valued 매개 변수를 SQL Server 용 Microsoft JDBC Driver 6.0부터 사용할 수 있습니다에 대 한 API 세부 정보를 제공 하지 않습니다. [테이블 반환 매개 변수 사용](../../../connect/jdbc/using-table-valued-parameters.md) 참조  
+>  SQL Server에 대 한 Microsoft JDBC Driver 6.0부터 사용할 수 있는 테이블 반환 매개 변수 사용에 대 한 API 세부 정보는이 섹션에서 찾을 수 없습니다. [테이블 반환 매개 변수 사용](../../../connect/jdbc/using-table-valued-parameters.md) 참조  
 >   
 >  Microsoft JDBC Driver 6.4에서는 JDK 7.0, 8.0 및 9.0을 사용한 컴파일이 지원됩니다.  
 >   

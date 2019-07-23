@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 975fdc643bfd094eee2385ae345aed29ee708841
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 69c138e7eb5d2c4f6dbace0db59ce235e1c0a5f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801473"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993662"
 ---
 # <a name="default-sql-server-data-types"></a>기본 SQL Server 데이터 형식
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "66801473"
 |-----------------|------------------------------------------------|-----------------------------------------------------|  
 |NULL|varchar(1)|지원되지 않음|  
 |Boolean|bit|bit|  
-|정수|ssNoversion|ssNoversion|  
+|정수|int|int|  
 |float|float(24)|지원되지 않음|  
 |String(8000바이트보다 작은 길이)|varchar(<string length>)|varchar(<string length>)|  
 |문자열(8,000바이트를 초과하는 길이)|varchar(max)|varchar(max)|  

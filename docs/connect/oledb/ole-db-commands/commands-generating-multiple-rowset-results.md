@@ -1,5 +1,5 @@
 ---
-title: 여러 행 집합 결과 생성 하는 명령 | Microsoft Docs
+title: 여러 행 집합 결과를 생성 하는 명령 | Microsoft Docs
 description: 여러 행 집합 결과를 생성하는 명령
 ms.custom: ''
 ms.date: 06/14/2018
@@ -17,27 +17,26 @@ helpviewer_keywords:
 - multiple-rowset results
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 29504408c66cb5bada0e180eeda8f41834e10288
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5374e1ccd1024993369091b431a025676bccf1f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016062"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>여러 행 집합 결과를 생성하는 명령
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server에서 여러 행 집합을 반환할 수 있습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문입니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문은 다음과 같은 조건에서 여러 행 집합 결과를 반환합니다.  
+  SQL Server에 대 한 OLE DB 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문에서 여러 행 집합을 반환할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 문은 다음과 같은 조건에서 여러 행 집합 결과를 반환합니다.  
   
 -   일괄 처리되는 SQL 문이 단일 명령으로 제출된 경우  
   
 -   저장 프로시저가 SQL 문의 일괄 처리를 구현하는 경우  
   
 ## <a name="batches"></a>일괄 처리  
- OLE DB Driver for SQL Server는 SQL 문의 일괄 처리 구분 기호로 세미콜론 문자를 인식합니다.  
+ SQL Server에 대 한 OLE DB 드라이버는 세미콜론 문자를 SQL 문의 일괄 처리 구분 기호로 인식 합니다.  
   
 ```  
 WCHAR*       wSQLString = L"SELECT * FROM Categories; "  

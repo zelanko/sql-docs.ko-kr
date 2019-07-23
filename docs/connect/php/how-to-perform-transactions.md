@@ -1,5 +1,5 @@
 ---
-title: '방법: 트랜잭션을 수행 | Microsoft Docs'
+title: '방법: 트랜잭션 수행 | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f4643b85-f929-4919-8951-23394bc5bfa7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ee3e77677a3ae52fb112ae8a280e91086a483875
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 26ca7fbe56a17e1bf2a7c69b9e8c2dcd63073f87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936432"
 ---
 # <a name="how-to-perform-transactions"></a>방법: 트랜잭션 수행
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -151,7 +150,7 @@ function perform_trans_ops($conn, $orderId)
 ```  
   
 ### <a name="comments"></a>주석  
-트랜잭션 동작에 중점을 두기 위해 몇 가지 권장 오류 처리 방법은 이전 예제에 포함되지 않았습니다. 응용 프로그램을 프로덕션에 대 한 검사를 호출할 때 권장을 **sqlsrv** 오류에 대 한 함수를 적절 하 게 처리 합니다.
+트랜잭션 동작에 중점을 두기 위해 몇 가지 권장 오류 처리 방법은 이전 예제에 포함되지 않았습니다. 프로덕션 응용 프로그램의 경우 **sqlsrv** 함수에 대 한 호출에서 오류를 확인 하 고 적절 하 게 처리 하는 것이 좋습니다.
   
 ## <a name="see-also"></a>참고 항목  
 [데이터 업데이트&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)

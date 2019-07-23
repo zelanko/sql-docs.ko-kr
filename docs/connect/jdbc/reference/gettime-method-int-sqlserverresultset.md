@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e18c84f5-7171-4057-8c9e-fe1d43ae9c20
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1c48d78534119eb49d552899658c57b10a09fb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b862aed00a154cac23df4008da649347f94f000a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778995"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979114"
 ---
 # <a name="gettime-method-int-sqlserverresultset"></a>getTime 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

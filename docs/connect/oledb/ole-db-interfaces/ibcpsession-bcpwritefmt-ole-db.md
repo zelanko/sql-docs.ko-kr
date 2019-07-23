@@ -1,6 +1,6 @@
 ---
-title: 'Ibcpsession:: Bcpwritefmt (OLE DB) | Microsoft Docs'
-description: 'Ibcpsession:: Bcpwritefmt를 사용 하 여 xml 또는 텍스트 형식 (OLE DB)는 서식 파일을 저장 하려면'
+title: 'IBCPSession:: BCPWriteFmt (OLE DB) | Microsoft Docs'
+description: 'IBCPSession:: BCPWriteFmt를 사용 하 여 서식 파일을 xml 또는 텍스트 형식으로 저장 (OLE DB)'
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPWriteFmt method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5d93d2114ff462eddd45fb5520a976d148cc96ac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 42a8b450fcc5536920ead44d4f401fb2e81d2b08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994539"
 ---
 # <a name="ibcpsessionbcpwritefmt-ole-db"></a>IBCPSession::BCPWriteFmt(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

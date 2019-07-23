@@ -1,5 +1,5 @@
 ---
-title: 매개 변수를 사용 하 여 SQL 문을 사용 하 여 | Microsoft Docs
+title: 매개 변수가 있는 SQL 문 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2c2647b4737268a1550bd9e45deb9557ecc0f81d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6716f670c42172f1721968124d7113e8f1936ddc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916372"
 ---
 # <a name="using-an-sql-statement-with-parameters"></a>매개 변수가 있는 SQL 문 사용
 
@@ -26,7 +25,7 @@ ms.locfileid: "66790130"
 
 SQL 문을 생성할 때 물음표(?)를 사용하여 입력 매개 변수를 지정하면 SQL 문으로 전달될 매개 변수 값에 대한 자리 표시자로 사용됩니다. 매개 변수의 값을 지정 하려면 SQLServerPreparedStatement 클래스의 setter 메서드 중 하나를 사용할 수 있습니다. 사용하는 setter 메서드는 SQL 문에 전달할 값의 데이터 형식에 따라 결정됩니다.
 
-setter 메서드에 값을 전달할 때는 SQL 문에 사용할 실제 값은 물론 SQL 문에서 해당 매개 변수의 서수 위치도 지정해야 합니다. 예를 들어, 단일 매개 변수를 포함 하는 SQL 문의 해당 서 수 값 1이 됩니다. 명령문에 두 개의 매개 변수가 포함된 경우 첫 번째 서수 값은 1이고 두 번째 서수 값은 2가 됩니다.
+setter 메서드에 값을 전달할 때는 SQL 문에 사용할 실제 값은 물론 SQL 문에서 해당 매개 변수의 서수 위치도 지정해야 합니다. 예를 들어 SQL 문에 단일 매개 변수가 포함 된 경우 서 수 값은 1이 됩니다. 명령문에 두 개의 매개 변수가 포함된 경우 첫 번째 서수 값은 1이고 두 번째 서수 값은 2가 됩니다.
 
 다음 예제에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대해 열린 연결을 함수로 전달하고, SQL의 준비된 명령문을 생성하여 단일 String 매개 변수 값으로 실행한 다음, 결과 집합에서 결과를 읽습니다.
 

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b1d3a50c-3d05-44b3-b1ba-404a013fd627
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 29125e2b384dcd921d22518439a8fb7bbd01428b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f355974fb2d3710f50f052dc5a800c48e60a3b35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955681"
 ---
 # <a name="clearwarnings-method-sqlserverstatement"></a>clearWarnings 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

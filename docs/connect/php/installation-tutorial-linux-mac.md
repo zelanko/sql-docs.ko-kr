@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 90d2b5850010d49e881ea0169566fe8e7d046f0d
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 7a2312a4ff6af5a11825274e3e010873ef2d3bd9
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343907"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68256701"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server의 Linux 및 macOS 설치 자습서
 다음 지침은 정리된 환경을 가정하며 Ubuntu 16.04, 18.04 및 18.10, RedHat 7, Debian 8 및 9, Suse 12 및 15, macOS 10.12, 10.13 및 10.14에 PHP 7.x, Microsoft ODBC 드라이버, Apache 및 Microsoft Drivers for PHP for SQL Server를 설치하는 방법을 보여 줍니다. 이 지침에서는 PECL를 사용하여 드라이버를 설치하도록 권유하지만, [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) Github 프로젝트 페이지에서 미리 작성된 이진 파일을 다운로드하고 [Microsoft Drivers for PHP for SQL Server 로드](../../connect/php/loading-the-php-sql-driver.md)의 지침에 따라 설치할 수도 있습니다. 확장 로드에 대한 설명과 php.ini에 확장을 추가하지 않는 이유는 [드라이버 로드](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup) 섹션을 참조하세요.
@@ -55,7 +55,7 @@ exit
 sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
 
-PHP 버전을 하나만 시스템의 경우 마지막 단계를 단순화할 수 있습니다. `phpenmod sqlsrv pdo_sqlsrv`합니다.
+시스템에 PHP 버전이 하나만 있는 경우 마지막 단계를로 `phpenmod sqlsrv pdo_sqlsrv`단순화할 수 있습니다.
 
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>4단계. Apache 설치 및 드라이버 로드 구성
 ```
@@ -156,7 +156,7 @@ exit
 sudo phpenmod -v 7.3 sqlsrv pdo_sqlsrv
 ```
 
-PHP 버전을 하나만 시스템의 경우 마지막 단계를 단순화할 수 있습니다. `phpenmod sqlsrv pdo_sqlsrv`합니다.
+시스템에 PHP 버전이 하나만 있는 경우 마지막 단계를로 `phpenmod sqlsrv pdo_sqlsrv`단순화할 수 있습니다.
 
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>4단계. Apache 설치 및 드라이버 로드 구성
 ```

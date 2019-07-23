@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e87ef65f-4b5a-4e1c-8db5-7f0932390bb0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93cd6a4f612af7de32dc790f497a3d7a11b9cd1e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a0f6d74b8dee21333c1358a9f998371e38b5c0cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953349"
 ---
 # <a name="getcatalog-method-sqlserverconnection"></a>getCatalog 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,9 +41,9 @@ public java.lang.String getCatalog()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getCatalog 메서드는 java.sql.Connection 인터페이스의 getCatalog 메서드에 의해 지정 됩니다.  
+ 이 getCatalog 메서드는 java. .sql. 연결 인터페이스에서 getCatalog 메서드에 의해 지정 됩니다.  
   
- 설정 되지 않은 경우 null이 SQLServerConnection 개체의 현재 카탈로그 속성을 반환 합니다. 카탈로그 속성은 [setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md) 메서드를 사용하여 명시적으로 설정되거나, 현재 카탈로그의 TDS에 대한 환경 변경 내용을 읽을 때 암시적으로 업데이트됩니다.  
+ SQLServerConnection 개체의 현재 카탈로그 속성을 반환 하거나, 설정 되지 않은 경우 null을 반환 합니다. 카탈로그 속성은 [setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md) 메서드를 사용하여 명시적으로 설정되거나, 현재 카탈로그의 TDS에 대한 환경 변경 내용을 읽을 때 암시적으로 업데이트됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

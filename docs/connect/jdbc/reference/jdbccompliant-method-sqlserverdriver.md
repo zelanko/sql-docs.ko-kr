@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b299b20d-d1cd-45b3-91dc-dcf579498570
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0199a2cbbeb5f01472a17ade1575031c3ad994e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c36d7980355eed1e1a1e8f42fb53c75fdb70d0ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976953"
 ---
 # <a name="jdbccompliant-method-sqlserverdriver"></a>jdbcCompliant 메서드(SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public boolean jdbcCompliant()
  JDBC 드라이버가 최소 요구 사항을 충족하면 **true**이고, 그렇지 않으면 **false**입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이 jdbcCompliant 메서드는 java.sql.Driver 인터페이스의 jdbcCompliant 메서드에 의해 지정 됩니다.  
+ 이 jdbcCompliant 메서드는 node.js 인터페이스의 jdbcCompliant 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDriver 메서드](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

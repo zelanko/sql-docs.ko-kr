@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 3004ed22-5d69-4dd0-8761-d39f0b7dde13
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8fd762ff700b543345dc9c2abbba3eabf6dcb2fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 487d214dbdd6974442749dd0cff6ac24fe9d1977
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66791939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979956"
 ---
 # <a name="getservername-method-sqlserverdatasource"></a>getServerName 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

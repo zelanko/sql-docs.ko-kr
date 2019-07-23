@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 66eb4e10-c375-4b31-ac46-3ba1d9dbf6a0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e2eb9db321fc8c2b8b20ca41b685cb27f8595072
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e1f13c3fedc3cfaa0645eec5a769ed482b339563
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976004"
 ---
 # <a name="previous-method-sqlserverresultset"></a>previous 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean previous()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 을 새 현재 행이 유효 합니다. **false** 처리할 행이 더 이상 없으면입니다.  
+ 새 현재 행이 올바르면 **true** 입니다. 처리할 행이 더 이상 없는 경우 **false** 입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 이전 메서드는 java.sql.ResultSet 인터페이스의 이전 메서드에 의해 지정 됩니다.  
+ 이 이전 메서드는 java. ResultSet 인터페이스의 이전 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

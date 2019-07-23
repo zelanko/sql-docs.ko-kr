@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2641ea84-9343-4e6f-aec1-25339031b163
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 85d63fa9515552f2c2acc5851f36e38f52017dda
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e034b911ec5817ac82214466fdc2bf7087e8865a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539100"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68222755"
 ---
 # <a name="work-with-shared-datasets---web-portal"></a>공유 데이터 세트 사용 - 웹 포털
 
@@ -29,13 +29,13 @@ ms.locfileid: "52539100"
   
 1.  메뉴 모음에서 새로 만들기를 선택합니다.  
   
-2.  **데이터 집합**을 선택합니다.  
+2.  **데이터 세트**를 선택합니다.  
   
     ![ssRSDataset-NewDataset](../reporting-services/media/ssrsdataset-newdataset.png)  
   
 3.  보고서 작성기가 시작되거나 보고서 작성기를 다운로드하라는 메시지가 표시됩니다.  
   
-4.  **새 보고서 또는 데이터 집합** 대화 상자에서, 데이터 집합에 사용할 데이터 원본 연결을 선택합니다. 공유 데이터 원본의 위치를 찾아서 선택해야 하는 경우도 있습니다.  
+4.  **새 보고서 또는 데이터 세트** 대화 상자에서, 데이터 세트에 사용할 데이터 원본 연결을 선택합니다. 공유 데이터 원본의 위치를 찾아서 선택해야 하는 경우도 있습니다.  
   
 5.  **만들기**를 선택합니다.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "52539100"
 기존 공유 데이터 세트를 관리하려면, 다음을 수행합니다.  
   
 > [!NOTE]
-> 폴더에 공유 데이터 세트가 표시되지 않으면 데이터 세트가 표시되는 것을 확인해야 합니다. 웹 포털 오른쪽 위에 있는 메뉴 모음에서 **보기** 를 선택할 수 있습니다. **데이터 집합** 이 선택되어 있는지 확인합니다.  
+> 폴더에 공유 데이터 세트가 표시되지 않으면 데이터 세트가 표시되는 것을 확인해야 합니다. 웹 포털 오른쪽 위에 있는 메뉴 모음에서 **보기** 를 선택할 수 있습니다. **데이터 세트**가 선택되어 있는지 확인합니다.  
   
 1.  관리하려는 데이터 세트의 **줄임표(…)** 를 선택합니다.  
   
     ![ssRSDataset-Ellipse](../reporting-services/media/ssrsdataset-ellipse.png)  
   
-2.  **관리**를 선택하여 편집 화면으로 이동합니다.  
+2.  **관리** 를 선택하여 편집 화면으로 이동합니다.  
   
     ![ssRSDataset-Manage](../reporting-services/media/ssrsdataset-manage.png)  
   
@@ -68,11 +68,11 @@ ms.locfileid: "52539100"
   
 1.  **항상 최신 데이터로 이 보고서 실행** 은 요청 시 데이터 원본에 대한 쿼리를 생성합니다.  
   
-2.  **이 보고서의 복사본을 캐시하고 사용 가능할 때 사용** 은 데이터 임시 사본을 캐시에 보관하여 이 데이터 집합을 사용하는 항목과 사용할 수 있도록 합니다. 캐시를 사용하면 데이터 세트 쿼리를 다시 실행하지 않고 캐시에서 바로 가져오기 때문에 일반적으로 성능이 향상됩니다.  
+2.  **이 보고서의 복사본을 캐시하고 사용 가능할 때 사용**은 데이터 임시 사본을 캐시에 보관하여 이 데이터 세트를 사용하는 항목과 사용할 수 있도록 합니다. 캐시를 사용하면 데이터 세트 쿼리를 다시 실행하지 않고 캐시에서 바로 가져오기 때문에 일반적으로 성능이 향상됩니다.  
   
 ![ssRSDataset-Caching1](../reporting-services/media/ssrsdataset-caching1.png)  
   
-**이 보고서의 복사본을 캐시하고 사용 가능할 때 사용**을 선택하면 몇 가지 옵션이 더 제공됩니다.  
+**이 보고서의 복사본을 캐시하고 사용 가능할 때 사용** 을 선택하면 몇 가지 옵션이 더 제공됩니다.  
   
 ![ssRSDataset-Caching2](../reporting-services/media/ssrsdataset-caching2.png)  
   

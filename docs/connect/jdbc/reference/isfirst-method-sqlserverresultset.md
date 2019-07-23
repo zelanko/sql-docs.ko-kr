@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2ff94b95-32ad-4378-8bb1-970030527bb2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c27320c78db2bd04ec9747079beb4b306446bab4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b847361621ad8d44840aa4bab02e4877128e8f48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977626"
 ---
 # <a name="isfirst-method-sqlserverresultset"></a>isFirst 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean isFirst()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 커서가 첫 번째 행에 있는 경우. **false** 커서가 그 외의 위치 또는 결과 집합에 행이 없습니다.  
+ 커서가 첫 번째 행에 있으면 **true** 입니다. 커서가 다른 위치에 있거나 결과 집합에 행이 포함 되어 있지 않으면 **false** 입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b063f191-175e-4430-aab7-d88907f4ebec
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8386d896391405777648ee3ec27b188b313c737c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 303742b8e7b7bf8221565e09cf23d2e18cdca8de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788956"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970950"
 ---
 # <a name="sqlservernclob-members"></a>SQLServerNClob 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,14 +36,14 @@ ms.locfileid: "66788956"
 |속성|설명|  
 |----------|-----------------|  
 |[free](../../../connect/jdbc/reference/free-method-sqlservernclob.md)|이 메서드는 **NCLOB** 개체 및 이 개체가 보유한 리소스를 해제합니다.|  
-|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|검색을 **NCLOB** 값으로 지정 합니다 **java.sql.NClob** 을 ASCII 스트림으로 개체.|  
-|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|검색을 **NCLOB** 값으로 지정 합니다 **java.sql.NClob** 개체.|  
-|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|지정된 된 부분 문자열의 복사본을 검색 합니다 **NCLOB** 로 지정 된 값을 **java.sql.NClob** 개체입니다.|  
-|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|문자 수를 검색 합니다 **NCLOB** 값으로 지정 합니다 **java.sql.NClob** 개체.|  
+|[getAsciiStream](../../../connect/jdbc/reference/getasciistream-method-sqlservernclob.md)|**Java. nclob** 개체에 의해 지정 된 **NCLOB** 값을 ASCII 스트림으로 검색 합니다.|  
+|[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|**Java. nclob** 개체에 지정 된 **nclob** 값을 검색 합니다.|  
+|[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|**Java. nclob** 개체에 지정 된 **nclob** 값에서 지정 된 부분 문자열의 복사본을 검색 합니다.|  
+|[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|**Java. nclob** 개체에 지정 된 **nclob** 값의 문자 수를 검색 합니다.|  
 |[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|지정된 시작 위치에 따라 지정된 **java.sql.NClob** 개체 또는 해당 **java.sql.NClob**에 있는 부분 문자열의 문자 위치를 검색합니다.|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|지정된 위치에서부터 ASCII 문자를 이 **java.sql.NClob** 개체가 나타내는 **NCLOB** 값에 쓰는 데 사용할 스트림을 검색합니다.|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|지정된 위치에서부터 유니코드 문자의 스트림을 이 **java.sql.NClob** 개체가 나타내는 **NCLOB** 값에 쓰는 데 사용할 스트림을 검색합니다.|  
-|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|지정 된 기록 **문자열** 에 **NCLOB** 지정된 된 위치에서 시작 합니다.|  
+|[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|지정 된 **문자열** 을 지정 된 위치에서 시작 하는 **NCLOB** 에 씁니다.|  
 |[truncate](../../../connect/jdbc/reference/truncate-method-sqlservernclob.md)|**NCLOB**값을 지정된 길이로 자릅니다.|  
   
 ## <a name="inherited-methods"></a>상속된 메서드  

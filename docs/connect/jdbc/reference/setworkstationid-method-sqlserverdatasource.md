@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c1093615-90bf-4918-9f05-8abd765ffb03
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3b9b4dd4ce34dcc39148a2346fd729a8dfb6b87f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08b09958276a5cc7f7cc3de6e56f7d7336ca9e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972027"
 ---
 # <a name="setworkstationid-method-sqlserverdatasource"></a>setWorkstationID 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

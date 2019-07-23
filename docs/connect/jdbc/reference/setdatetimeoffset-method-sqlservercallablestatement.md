@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: 9383e14d-c83e-43c5-980c-50a3e0bedc31
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 423061bf167e85a276fee0bec5a1b4c49c7ecff9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 264de7ac150aca7494a380fbbd4f5b490607c5c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974647"
 ---
 # <a name="setdatetimeoffset-method-sqlservercallablestatement"></a>setDateTimeOffset 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   이 메서드는 [!INCLUDE[msCoName](../../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0에서 추가되었습니다.  
   
- 에 지정 된 열의 값을 설정 합니다 [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 값입니다.  
+ 지정 된 열의 값을 [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 값으로 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,13 +38,13 @@ public void setDateTimeOffset(String sCol, microsoft.sql.DateTimeOffset t)
   
  *t*  
   
- 합니다 [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체입니다.  
+ [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 검색할 수 있습니다는 [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 값을 [SQLServerCallableStatement.getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)합니다.  
+ [SQLServerCallableStatement](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)를 사용 하 여 [datetimeoffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 값을 검색할 수 있습니다.  
   
  [setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlserverpreparedstatement.md)은 열의 서수를 사용합니다.  
   

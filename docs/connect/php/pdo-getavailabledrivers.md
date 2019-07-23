@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: eab561e6-1229-401a-9482-008c23f9a4e6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 52df84278079a9d1c7f7e7c23e4c86b5413758e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 632663b813db9a8b9a5b425c717613c24fa58ad5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993263"
 ---
 # <a name="pdogetavailabledrivers"></a>PDO::getAvailableDrivers
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

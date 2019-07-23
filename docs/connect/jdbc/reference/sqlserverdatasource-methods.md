@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: fac054f1-60dc-4261-bc1b-ed70d1ceb85f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c5d876b3868a1f65dc9c94ed112fe51f116b3bda
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 555d3f69d2087388e7f7e07ff66d79cc9b01eacc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971389"
 ---
 # <a name="sqlserverdatasource-methods"></a>SQLServerDataSource 메서드
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  SQLServerDataSource의 멤버에 대 한 정보를 참조 하세요 [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)합니다.  
+  SQLServerDataSource의 멤버에 대 한 자세한 내용은 [SQLServerDataSource members](../../../connect/jdbc/reference/sqlserverdatasource-members.md)를 참조 하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 클래스](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  

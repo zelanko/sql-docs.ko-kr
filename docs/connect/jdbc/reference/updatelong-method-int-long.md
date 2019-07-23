@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f6363288-1415-4b25-8bb3-c34d6211c6d7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3387b6b5631130347baaa5f49563ffc9fb658c96
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8e8d0ad2332d1990445b8c6fb3c1ebd5914453d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998811"
 ---
 # <a name="updatelong-method-int-long"></a>updateLong 메서드(int, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void updateLong(int index,
   
  *x*  
   
- A **긴** 값입니다.  
+ **Long** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

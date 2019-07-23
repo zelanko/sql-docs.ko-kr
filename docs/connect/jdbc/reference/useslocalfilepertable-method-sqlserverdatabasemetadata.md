@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1fafb076-2bb7-4845-9c02-788479f00ca2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ac94bcab076912437e00f24e9f6acababcf01902
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: de5afaab5a6d5d0cce1f895330a3409e4f96709a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998100"
 ---
 # <a name="useslocalfilepertable-method-sqlserverdatabasemetadata"></a>usesLocalFilePerTable 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean usesLocalFilePerTable()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 usesLocalFilePerTable 메서드는 java.sql.DatabaseMetaData 인터페이스의 usesLocalFilePerTable 메서드에 의해 지정 됩니다.  
+ 이 usesLocalFilePerTable 메서드는 usesLocalFilePerTable 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

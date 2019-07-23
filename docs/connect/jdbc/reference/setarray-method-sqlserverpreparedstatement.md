@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b7fb66d4-6a42-43d0-ba68-8514816917cb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ff6cfceb24d89778f974aa47b636a7b0e26f26d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 35dd7ff60e6f6c9bc7c9608ddc714049d3aee5fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975547"
 ---
 # <a name="setarray-method-sqlserverpreparedstatement"></a>setArray 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

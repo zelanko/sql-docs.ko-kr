@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 19ff5285-fb9d-4fd1-97c4-ec72c311c384
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8717043764d67ab16217da7beecdc7bfee6515c3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 7495e00200455be05b621124c0276d07727d58cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949953"
 ---
 # <a name="replay-trace-data"></a>추적 데이터 재생
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "67729349"
   
  관리 도구 **replay** 옵션을 사용하여 Distributed Replay의 이벤트 재생 단계를 시작할 수 있습니다. 이 단계는 추적 데이터 디스패치와 분산 재생 시작 및 동기화의 두 부분으로 구성됩니다.  
   
- ![Distributed 이벤트 재생](../../tools/distributed-replay/media/eventreplay.gif "Distributed 이벤트 재생")  
+ ![분산 이벤트 재생](../../tools/distributed-replay/media/eventreplay.gif "분산 이벤트 재생")  
   
  추적 데이터는 두 가지 시퀀스 모드(스트레스 모드 또는 동기화 모드) 중 하나로 재생할 수 있습니다. 기본 동작은 스트레스 모드로 추적 데이터를 재생하는 것입니다. 이벤트 재생 단계 및 시퀀스 모드에 대한 자세한 내용은 [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)을 참조하십시오.  
   

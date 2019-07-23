@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dbcad2e1-7508-49ff-9f6d-db11200d87b6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2f148968bd005d692871c8a2549687451fc3ee33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9499dd3c146aa383f98d7ef67bcf036dd3430b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66792676"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982178"
 ---
 # <a name="getmaxcolumnsintable-method-sqlserverdatabasemetadata"></a>getMaxColumnsInTable 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxColumnsInTable()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getMaxColumnsInTable 메서드는 java.sql.DatabaseMetaData 인터페이스의 getMaxColumnsInTable 메서드에 의해 지정 됩니다.  
+ 이 Getmax감열재 Intable 메서드는 java. DatabaseMetaData 인터페이스의 Getmax감열재 Intable 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

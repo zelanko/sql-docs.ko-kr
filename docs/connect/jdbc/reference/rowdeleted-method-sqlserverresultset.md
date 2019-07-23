@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9c6db315-e614-4604-b020-41af6a214cc1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 656672ad8ae1c852da2e1242f85cc6c0d5f90df3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 37221f0f9c7cf87576f0014b855ed28740e4818e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975705"
 ---
 # <a name="rowdeleted-method-sqlserverresultset"></a>rowDeleted 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean rowDeleted()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 rowDeleted 메서드는 java.sql.ResultSet 인터페이스의 rowDeleted 메서드에 의해 지정 됩니다.  
+ 이 rowDeleted 메서드는 java. ResultSet 인터페이스의 rowDeleted 메서드에 의해 지정 됩니다.  
   
  삭제된 행은 결과 집합에 가시적인 빈틈을 남겨 둘 수 있습니다. 이 메서드를 사용하면 결과 집합에서 빈틈을 검색할 수 있습니다. 반환되는 값은 이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체가 삭제 내용을 검색할 수 있는지 여부에 따라 달라집니다.  
   

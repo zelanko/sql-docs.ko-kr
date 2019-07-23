@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 78f39ec7-e27c-4534-bb19-fae806afd08c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 108e3c3c48249c0cd228a8b88679e81c97c8cdb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9c18df5aa5b0b82e14a20489df4afd99636aa2e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784033"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996683"
 ---
 # <a name="updatecharacterstream-method-sqlserverresultset"></a>updateCharacterStream 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b6e88cea-54b3-4d18-a9af-db54abf19f45
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: eb7fe193d1b854ca3d551b065825e8705cd92cb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8db05472492e7893dd7874e137baaa5cf8fd89e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804002"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213724"
 ---
 # <a name="getbytes-method-sqlservercallablestatement"></a>getBytes 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

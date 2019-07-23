@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 738ffe3d-0df0-4884-9bd8-31b951e008c8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f33a7037ee4fea7f37aa4f71419e3d11ba9f3526
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd9812f87d3d5d253b6ea95db065506f75f2f126
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978197"
 ---
 # <a name="geturl-method-sqlserverresultset"></a>getURL 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

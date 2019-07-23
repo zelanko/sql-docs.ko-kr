@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 372515da-3b0e-46f6-8c0b-01b1b45c5a2f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7a40c4067ae4cbdb9af6ca31bcba26bd8e9f2793
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63416d8d6fcc5eb43fe71645877aae9e4a50ebb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976658"
 ---
 # <a name="nullsaresortedatstart-method-sqlserverdatabasemetadata"></a>nullsAreSortedAtStart 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean nullsAreSortedAtStart()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 nullsAreSortedAtStart 메서드는 java.sql.DatabaseMetaData 인터페이스의 nullsAreSortedAtStart 메서드에 의해 지정 됩니다.  
+ 이 nullsAreSortedAtStart 메서드는 nullsAreSortedAtStart 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

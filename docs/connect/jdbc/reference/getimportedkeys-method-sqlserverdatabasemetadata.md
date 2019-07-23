@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: dc8c1a5e-700e-4059-a5ed-5013bbb87fb6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: edebe0f57ed09acbf9faa338355314e0bc6199d2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2418bd5e62f00e46ddc329c1c7ba987505fb5a7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982819"
 ---
 # <a name="getimportedkeys-method-sqlserverdatabasemetadata"></a>getImportedKeys 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public java.sql.ResultSet getImportedKeys(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getImportedKeys 메서드는 java.sql.DatabaseMetaData 인터페이스의 getImportedKeys 메서드에 의해 지정 됩니다.  
+ 이 getImportedKeys 메서드는 java. DatabaseMetaData 인터페이스의 getImportedKeys 메서드에 의해 지정 됩니다.  
   
  getImportedKeys 메서드에서 반환되는 결과 집합에는 다음 정보가 포함됩니다.  
   

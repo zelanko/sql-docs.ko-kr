@@ -1,5 +1,5 @@
 ---
-title: Filegroup 요소 (DTA) 인덱스에 대 한 | Microsoft Docs
+title: Index의 Filegroup 요소 (DTA) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7078d2fb-fa77-44fc-beb3-c095088fcb85
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9536c494f06c981207acd8e4711b9b071f760db0
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 8ea26368dacd6cfc3a81245fe95eef27ec94b9a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034894"
 ---
 # <a name="filegroup-element-for-index-dta"></a>Index의 Filegroup 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

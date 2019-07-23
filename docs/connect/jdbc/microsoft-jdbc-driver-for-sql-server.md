@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f55ff68ff0e3e4fca63fa284e25fa0c4c0ae4d86
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a12209cc5782c0134c4e14723d7ce73049db1ddd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801840"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956329"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>SQL Server용 Microsoft JDBC Driver
 
@@ -41,7 +40,7 @@ Microsoft JDBC Driver for SQL Server는 IBM WebSphere 및 SAP NetWeaver 등의 �
 * [성능 및 안정성](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [문제 해결](diagnosing-problems-with-the-jdbc-driver.md)
 * [코드 샘플](sample-jdbc-driver-applications.md)
-* [준수 및 법적 고 지](compliance-and-legal-for-the-jdbc-sql-driver.md)  
+* [규정 준수 및 법률](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>커뮤니티
 
@@ -49,13 +48,13 @@ Microsoft JDBC Driver for SQL Server는 IBM WebSphere 및 SAP NetWeaver 등의 �
   
 ## <a name="download"></a>다운로드
 
-[SQL Server 용 Microsoft JDBC Driver 다운로드](download-microsoft-jdbc-driver-for-sql-server.md) -Maven 프로젝트 등에 대 한 추가 정보가 있습니다.
+[MICROSOFT JDBC Driver for SQL Server 다운로드](download-microsoft-jdbc-driver-for-sql-server.md) -Maven 프로젝트 등에 대 한 추가 정보를 포함 합니다.
   
 ## <a name="samples"></a>샘플  
 
 * [샘플 JDBC 드라이버 애플리케이션](sample-jdbc-driver-applications.md)  
-* [Windows에서 Java를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [MacOS에서 Java를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [Ubuntu에서 Java를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Red Hat Enterprise Linux (RHEL)에서 Java를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [SUSE Linux Enterprise server (SLES)는 Java를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [Windows에서 Java 시작](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [MacOS에서 Java 시작](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [Ubuntu에서 Java 시작](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Red Hat Enterprise Linux에서 Java 시작 (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [SUSE Linux Enterprise Server에서 Java 시작 (SLES)](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

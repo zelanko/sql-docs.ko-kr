@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fbc70604-519d-461c-a8fa-e0a072d28a54
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e394cd56a4aab4ac010e13c0deafd658ce7d290b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5f6c9fff572794c523e8420c84af57b53ece1c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66804241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999134"
 ---
 # <a name="updatedate-method-sqlserverresultset"></a>updateDate 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

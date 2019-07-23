@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::debugDumpParams | Microsoft Docs
+title: PDOStatement::d ebugDumpParams | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf156d65-d933-4235-b89a-18e172d61c15
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cedb389768d68e126d8bd7e1efc319c554a8585c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c5584d645bc506d1399a47852bed481791988623
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993093"
 ---
 # <a name="pdostatementdebugdumpparams"></a>PDOStatement::debugDumpParams
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

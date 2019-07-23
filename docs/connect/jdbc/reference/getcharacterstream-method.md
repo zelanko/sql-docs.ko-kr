@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 70a5a8c8-791a-43f9-8a0e-1c390f30857c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: deed81383c6fc813d971019ee0843b8098f2e400
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e9cacf116a8da7db6651bd000c14329b3e62a0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953198"
 ---
 # <a name="getcharacterstream-method-"></a>getCharacterStream 메서드()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.io.Reader getCharacterStream()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getCharacterStream 메서드는 java.sql.Clob 인터페이스의 getCharacterStream 메서드에 의해 지정 됩니다.  
+ 이 getCharacterStream 메서드는 getCharacterStream 인터페이스의 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerClob 메서드](../../../connect/jdbc/reference/sqlserverclob-methods.md)   

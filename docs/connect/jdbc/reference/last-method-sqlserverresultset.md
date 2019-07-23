@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ac9bef59-8c31-437b-a183-619cc778fe7a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f97a3d27deeb4a51663cb108ab3adc77b75e29e8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bf176794b2fac5a241c14ee494d08ddd4aa98dbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790031"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976894"
 ---
 # <a name="last-method-sqlserverresultset"></a>last 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean last()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 을 새 현재 행이 유효 합니다. **false** 처리할 행이 더 이상 없으면입니다.  
+ 새 현재 행이 올바르면 **true** 입니다. 처리할 행이 더 이상 없는 경우 **false** 입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

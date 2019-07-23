@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8fd5b5ef-d939-4b78-b900-5b7b6ddb3eb9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a69bf1d98d666b0b4b76be604abc31e28958adb4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5bc0e483c70033c8a8132a27879c5616e550ec26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956531"
 ---
 # <a name="handling-errors"></a>오류 처리
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,23 +30,23 @@ ms.locfileid: "66781703"
   
 -   `getNextException()`은 다음 `SQLServerException` 개체를 반환하거나 반환할 예외 개체가 없는 경우 null을 반환합니다.
 
--   `getSQLServerError()` 반환 된 `SQLServerError` SQL Server에서 수신 된 예외에 대 한 자세한 정보를 포함 하는 개체입니다. 이 메서드가 없는 서버 오류가 발생 하는 경우 null을 반환 합니다.
+-   `getSQLServerError()`SQL Server에서 `SQLServerError` 받은 예외에 대 한 자세한 정보를 포함 하는 개체를 반환 합니다. 서버 오류가 발생 하지 않은 경우이 메서드는 null을 반환 합니다.
 
-다음 메서드는 `SQLServerError` 클래스는 서버에서 생성 된 오류에 대 한 추가 세부 정보를 가져오는 데 사용할 수 있습니다.
+`SQLServerError` 클래스의 다음 메서드를 사용 하 여 서버에서 생성 된 오류에 대 한 추가 정보를 가져올 수 있습니다.
 
--   `SQLServerError.getErrorMessage()` 서버에서 받은 오류 메시지를 반환 합니다.
+-   `SQLServerError.getErrorMessage()`서버에서 받은 오류 메시지를 반환 합니다.
 
--   `SQLServerError.getErrorNumber()` 오류의 형식을 식별 하는 숫자를 반환 합니다.
+-   `SQLServerError.getErrorNumber()`오류의 유형을 식별 하는 번호를 반환 합니다.
 
--   `SQLServerError.getErrorState()` 오류, 경고 또는 "데이터 없음" 메시지를 나타내는 SQL Server에서 숫자 오류 코드를 반환 합니다.
+-   `SQLServerError.getErrorState()`오류, 경고 또는 "데이터를 찾을 수 없습니다." 메시지를 나타내는 SQL Server에서 숫자 오류 코드를 반환 합니다.
 
--   `SQLServerError.getErrorSeverity()` 수신 된 오류의 심각도 반환 합니다.
+-   `SQLServerError.getErrorSeverity()`받은 오류의 심각도 수준을 반환 합니다.
 
--   `SQLServerError.getServerName()` 오류를 생성 하는 SQL Server의 인스턴스를 실행 하는 컴퓨터의 이름을 반환 합니다.
+-   `SQLServerError.getServerName()`오류를 생성 한 SQL Server의 인스턴스를 실행 하는 컴퓨터의 이름을 반환 합니다.
 
--   `SQLServerError.getProcedureName()` 저장된 프로시저 또는 오류를 발생 시킨 원격 프로시저 호출 (RPC)의 이름을 반환 합니다.
+-   `SQLServerError.getProcedureName()`오류를 생성 한 저장 프로시저 또는 RPC (원격 프로시저 호출)의 이름을 반환 합니다.
 
--   `SQLServerError.getLineNumber()` TRANSACT-SQL 명령 일괄 처리 또는 오류를 생성 하는 저장된 프로시저의 줄 번호를 반환 합니다.
+-   `SQLServerError.getLineNumber()`오류를 생성 한 Transact-sql 명령 일괄 처리 또는 저장 프로시저 내의 줄 번호를 반환 합니다.
   
  다음 예제에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대해 열린 연결을 함수로 전달하고, FROM 절이 없는 잘못된 형식의 SQL 문을 생성합니다. 그런 다음 이 문을 실행하고 SQL 예외를 처리합니다.  
   

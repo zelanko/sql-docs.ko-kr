@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 38692b3e-ca7f-4e26-8787-1a34bb13c996
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a19162610ceb6dfb0a6971ff86496f7b08ad750f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25f5b108451e4e256283d9d72cce8c2c65665538
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788783"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001562"
 ---
 # <a name="valueof-method-datetimeoffset"></a>valueOf 메서드(DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 62de4be6-b027-427d-a7e5-352960e42877
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e760523026251463f80d7f7e3e14b7e52b36ab2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 322a22c2236898876ae2fd5e942a1ad3617c1959
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956388"
 ---
 # <a name="jdbc-driver-support-for-high-availability-disaster-recovery"></a>고가용성, 재해 복구를 위한 JDBC 드라이브 지원
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,19 +28,19 @@ ms.locfileid: "66781542"
   
 -   **applicationIntent**
  
-가용성 그룹 또는 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결하는 경우 multiSubnetFailover=true를 지정합니다. 사실은 **multiSubnetFailover** 는 기본적으로 false입니다. 사용 하 여 **applicationIntent** 응용 프로그램 작업 유형을 선언 합니다. 자세한 내용은 아래 섹션을 참조 하세요.
+가용성 그룹 또는 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결하는 경우 multiSubnetFailover=true를 지정합니다. **MultiSubnetFailover** 은 기본적으로 false입니다. **Applicationintent** 를 사용 하 여 응용 프로그램 작업 부하 유형을 선언 합니다. 자세한 내용은 아래 섹션을 참조 하세요.
  
-새 연결 속성을 SQL Server 용 Microsoft JDBC Driver 6.0 버전부터 **transparentNetworkIPResolution** (TNIR)에 추가 됩니다 투명 하 게 연결에 대 한 Always On 가용성 그룹에 있는 서버 여러 IP 주소를 연결 합니다. 때 **transparentNetworkIPResolution** 이 true 인 경우 드라이버에서 사용 가능한 첫 번째 IP 주소에 연결 하려고 합니다. 첫 번째 시도가 실패 하면 드라이버는 제한 시간이 만료 되 면 그 중 하나에 성공 하면 보류 중인 연결 시도 삭제 될 때까지 병렬로 모든 IP 주소에 연결 하려고 합니다.   
+SQL Server 용 Microsoft JDBC Driver 버전 6.0부터 Always On 가용성 그룹 또는 여러 IP 주소가 있는 서버에 대 한 투명 연결에 대해 새 연결 속성 **transparentNetworkIPResolution** (tnir)이 추가 되었습니다. 연결할. **TransparentNetworkIPResolution** 가 true 이면 드라이버는 사용 가능한 첫 번째 IP 주소에 연결을 시도 합니다. 첫 번째 시도가 실패 하면 제한 시간이 만료 될 때까지 드라이버는 모든 IP 주소에 병렬로 연결을 시도 하 고, 그 중 하나가 성공할 때 보류 중인 연결 시도를 모두 삭제 합니다.   
 
-note 하십시오.
-* transparentNetworkIPResolution은 기본적으로 true
-* multiSubnetFailover 참인 경우 transparentNetworkIPResolution 무시 됩니다.
+다음 사항에 유의 하세요.
+* transparentNetworkIPResolution는 기본적으로 true입니다.
+* multiSubnetFailover이 true 이면 transparentNetworkIPResolution가 무시 됩니다.
 * 데이터베이스 미러링이 사용 되는 경우 transparentNetworkIPResolution은 무시 됩니다.
-* transparentNetworkIPResolution 64 개 IP 주소가 있는 경우 무시 됩니다.
-* TransparentNetworkIPResolution이 true 이면 연결 시도 처음 500 밀리초의 시간 제한 값을 사용 합니다. 연결 시도가 나머지 multiSubnetFailover 기능과 동일한 논리를 수행 합니다. 
+* IP 주소가 64 개를 초과 하는 경우 transparentNetworkIPResolution은 무시 됩니다.
+* TransparentNetworkIPResolution가 true 인 경우 첫 번째 연결 시도는 500ms의 timeout 값을 사용 합니다. 나머지 연결 시도는 multiSubnetFailover 기능과 동일한 논리를 따릅니다. 
 
 > [!NOTE]
-> 사용자는 Microsoft JDBC Driver 4.2를 사용 하 여 (또는 낮은) SQL Server에 대 한 경우 **multiSubnetFailover** 이 false 인 경우는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 첫 번째 IP 주소에 연결 하려고 합니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 첫 번째 IP 주소와 연결을 설정할 수 없는 경우 연결은 실패합니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 서버와 연결된 후속 IP 주소에는 연결을 시도하지 않습니다. 
+> SQL Server에 Microsoft JDBC Driver 4.2 (또는 lower)를 사용 하 고 **multiSubnetFailover** 이 false 인 경우는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 첫 번째 IP 주소에 연결을 시도 합니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 첫 번째 IP 주소와 연결을 설정할 수 없는 경우 연결은 실패합니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 서버와 연결된 후속 IP 주소에는 연결을 시도하지 않습니다. 
 > 
 > 
 > [!NOTE]
@@ -54,15 +53,15 @@ note 하십시오.
   
  **multiSubnetFailover** 연결 속성은 애플리케이션을 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 배포하는 중이며 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]가 모든 IP 주소에 연결을 시도하여 주 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결을 시도함을 나타냅니다. 연결에 대해 **MultiSubnetFailover=true**를 지정하면 클라이언트는 운영 체제의 기본 TCP 재전송 간격보다 빠르게 TCP 연결을 다시 시도합니다. 이렇게 하면 AlwaysOn 가용성 그룹 또는 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스의 장애 조치(Failover) 후 더 빠르게 다시 연결할 수 있습니다. 이 설정은 단일/다중 서브넷 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 모두 적용됩니다.  
   
- 연결 문자열 키워드에 대 한 자세한 내용은 합니다 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], 참조 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)합니다.  
+ 의 연결 문자열 키워드 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에 대 한 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조 하세요.  
   
  가용성 그룹 수신기 또는 장애 조치(Failover) 클러스터 인스턴스 이외의 다른 항목에 연결할 때 **multiSubnetFailover=true**를 지정하면 성능에 상당히 부정적인 영향을 줄 수 있으므로 이러한 설정은 지원되지 않습니다.  
   
- 보안 관리자가 설치되지 않은 경우 Java Virtual Machine은 기본적으로 JDK 구현 및 Java 속성 networkaddress.cache.ttl 및 networkaddress.cache.negative.ttl에 정의된 제한 시간 동안 VIP(가상 IP 주소)를 캐시합니다. JDK 보안 관리자가 설치된 경우 Java Virtual Machine은 VIP를 캐시하고 기본적으로 캐시를 새로 고치지 않습니다. Java Virtual Machine 캐시에 대해 "TTL(time-to-live)"(networkaddress.cache.ttl)을 1일로 설정해야 합니다. 기본값을 1일(정도)로 변경하지 않으면 VIP를 추가하거나 업데이트할 때 Java Virtual Machine 캐시에서 기존 값이 삭제되지 않습니다. Networkaddress.cache.ttl 및 networkaddress.cache.negative.ttl에 대 한 자세한 내용은 참조 하세요. [ https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html ](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)합니다.  
+ 보안 관리자가 설치되지 않은 경우 Java Virtual Machine은 기본적으로 JDK 구현 및 Java 속성 networkaddress.cache.ttl 및 networkaddress.cache.negative.ttl에 정의된 제한 시간 동안 VIP(가상 IP 주소)를 캐시합니다. JDK 보안 관리자가 설치된 경우 Java Virtual Machine은 VIP를 캐시하고 기본적으로 캐시를 새로 고치지 않습니다. Java Virtual Machine 캐시에 대해 "TTL(time-to-live)"(networkaddress.cache.ttl)을 1일로 설정해야 합니다. 기본값을 1일(정도)로 변경하지 않으면 VIP를 추가하거나 업데이트할 때 Java Virtual Machine 캐시에서 기존 값이 삭제되지 않습니다. Networkaddress. cache. ttl 및 networkaddress .에 대 한 자세한 내용은을 참조 [https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html](https://download.oracle.com/javase/6/docs/technotes/guides/net/properties.html)하십시오.  
   
  다음 지침에 따라 장애 조치(Failover) 클러스터 인스턴스 또는 가용성 그룹의 서버에 연결하십시오.  
   
--   드라이버에서 오류가 발생 하는 경우는 **instanceName** 연결 속성은 같은 연결 문자열에서 사용 합니다 **multiSubnetFailover** 연결 속성입니다. 이는 SQL Browser가 가용성 그룹에 사용되지 않는다는 사실을 반영합니다. 그러나 경우 합니다 **portNumber** 연결 속성은 또한 지정 된, 드라이버는 무시 **instanceName** 사용 하 여 **portNumber**합니다.  
+-   **InstanceName** 연결 속성이 **multiSubnetFailover** 연결 속성과 동일한 연결 문자열에 사용 되는 경우 드라이버에서 오류를 생성 합니다. 이는 SQL Browser가 가용성 그룹에 사용되지 않는다는 사실을 반영합니다. 그러나 **portNumber** connection 속성도 지정 된 경우 드라이버는 **instanceName** 을 무시 하 고 **portNumber**를 사용 합니다.  
   
 -   단일 서브넷 또는 다중 서브넷에 연결할 때 **multiSubnetFailover** 연결 속성을 사용하면 두 서브넷의 성능이 향상됩니다.  
   
@@ -94,7 +93,7 @@ note 하십시오.
 
 
 ## <a name="new-methods-supporting-multisubnetfailover-and-applicationintent"></a>multiSubnetFailover 및 applicationIntent를 지원하는 새 메서드  
- 다음 방법에 대 한 프로그래밍 방식의 액세스를 제공 합니다 **multiSubnetFailover**를 **applicationIntent** 하 고 **transparentNetworkIPResolution** 연결 문자열 키워드:  
+ 다음 메서드는 **multiSubnetFailover**, **Applicationintent** 및 **transparentNetworkIPResolution** 연결 문자열 키워드에 대 한 프로그래밍 방식 액세스를 제공 합니다.  
   
 -   [SQLServerDataSource.getApplicationIntent](../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)  
   
@@ -110,10 +109,10 @@ note 하십시오.
 
 -   SQLServerDataSource.getTransparentNetworkIPResolution
   
- 합니다 **getMultiSubnetFailover**를 **setMultiSubnetFailover**를 **getApplicationIntent**를 **setApplicationIntent**를 **getTransparentNetworkIPResolution** 하 고 **setTransparentNetworkIPResolution** 방법에도 추가 됩니다 [SQLServerDataSource 클래스](../../connect/jdbc/reference/sqlserverdatasource-class.md), [ SQLServerConnectionPoolDataSource 클래스](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md), 및 [SQLServerXADataSource 클래스](../../connect/jdbc/reference/sqlserverxadatasource-class.md)합니다.  
+ **GetMultiSubnetFailover**, **setMultiSubnetFailover**, **getapplicationintent**, **setapplicationintent**, **getTransparentNetworkIPResolution** 및 **setTransparentNetworkIPResolution** 메서드는 [SQLServerDataSource 클래스](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource 클래스](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)및 [SQLServerXADataSource 클래스](../../connect/jdbc/reference/sqlserverxadatasource-class.md)에도 추가 됩니다.  
   
 ## <a name="ssl-certificate-validation"></a>SSL 인증서의 유효성 검사  
- 가용성 그룹은 여러 물리적 서버로 구성되어 있습니다. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에서는 여러 호스트를 동일한 인증서에 연결할 수 있도록 SSL 인증서에서 **Subject Alternate Name**에 대한 지원을 추가했습니다. SSL에 대 한 자세한 내용은 참조 하세요. [SSL 지원 이해](../../connect/jdbc/understanding-ssl-support.md)합니다.  
+ 가용성 그룹은 여러 물리적 서버로 구성되어 있습니다. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에서는 여러 호스트를 동일한 인증서에 연결할 수 있도록 SSL 인증서에서 **Subject Alternate Name**에 대한 지원을 추가했습니다. SSL에 대 한 자세한 내용은 [Ssl 지원 이해](../../connect/jdbc/understanding-ssl-support.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)   

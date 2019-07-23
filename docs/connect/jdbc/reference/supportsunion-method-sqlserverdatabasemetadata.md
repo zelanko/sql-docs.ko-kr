@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a757ea51-ff2e-4848-adaf-d9373e418fa3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cfa6c097e57ee9ca8a2eeda26e7fa2857558d428
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b7dd44915a066753e367beb82d88258c3a0d3abf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968568"
 ---
 # <a name="supportsunion-method-sqlserverdatabasemetadata"></a>supportsUnion 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsUnion()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsUnion 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsUnion 메서드에 의해 지정 됩니다.  
+ 이 supportsUnion 메서드는 java. DatabaseMetaData 인터페이스의 supportsUnion 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: Bcpcolfmt (OLE DB) | Microsoft Docs'
+title: 'IBCPSession:: BCPColFmt (OLE DB) | Microsoft Docs'
 description: IBCPSession::BCPColFmt(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - BCPColFmt method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fdb46a6a2391c70f452d2fcf2c49045c59bd1e0a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 76dd26d42951a95c604b8d5b3bceaff21c355be2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994579"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +78,7 @@ HRESULT BCPColFmt(
  사용자 데이터 파일에 포함된 필드의 인덱스입니다.  
   
  *eUserDataType*[in]  
- 사용자 데이터 파일에 포함된 필드의 데이터 형식입니다. 사용 가능한 데이터 형식은 OLE DB 드라이버에 BCP_TYPE_XXX 형식, 예를 들어 BCP_TYPE_SQLINT4 사용 하 여 SQL Server 헤더 파일 (msoledbsql.h)에 나열 됩니다. BCP_TYPE_DEFAULT 값을 지정하면 공급자는 테이블 또는 뷰 열 유형과 동일한 유형을 사용합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eUserDataType **인수가 BCP_TYPE_SQLDECIMAL 또는 BCP_TYPE_SQLNUMERIC인 경우** 에서 파일로 대량 복사 작업을 수행하는 경우 다음과 같이 동작합니다.  
+ 사용자 데이터 파일에 포함된 필드의 데이터 형식입니다. 사용 가능한 데이터 형식은 BCP_TYPE_XXX 형식의 SQL Server 헤더 파일 (msoledbsql)에 대 한 OLE DB 드라이버 (예: BCP_TYPE_SQLINT4)에 나열 됩니다. BCP_TYPE_DEFAULT 값을 지정하면 공급자는 테이블 또는 뷰 열 유형과 동일한 유형을 사용합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eUserDataType **인수가 BCP_TYPE_SQLDECIMAL 또는 BCP_TYPE_SQLNUMERIC인 경우** 에서 파일로 대량 복사 작업을 수행하는 경우 다음과 같이 동작합니다.  
   
 -   원본 열이 decimal 또는 numeric이 아니면 기본 전체 자릿수 및 소수 자릿수가 사용됩니다.  
   

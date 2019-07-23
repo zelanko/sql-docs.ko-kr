@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c0fce3fe-5b16-4f60-9b0e-e9b30a90525e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5475726e2905909515003cefc4aba19c1a4b86cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3918215f40a77fa5288dd345715856829b607dae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977520"
 ---
 # <a name="isnullable-method-sqlserverresultsetmetadata"></a>isNullable 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int isNullable(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 isNullable 메서드는 java.sql.ResultSetMetaData 인터페이스의 isNullable 메서드에 의해 지정 됩니다.  
+ 이 isNullable 메서드는 isNullable 메서드에서 지정 하는 java. .sql Setmetadata 인터페이스입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSetMetaData 메서드](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: Banner 요소 (ssbdiagnose) | Microsoft Docs
+title: 배너 요소 (ssbdiagnose) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cc6cd49a-acf0-4cfb-8c6a-554692b89de2
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2846f35b8cd8f99d61a70fe355ac5077fcb00eb9
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 202652271b9d8de9603706b9d1c7be8ca9411bb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986213"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner 요소(ssbdiagnose)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

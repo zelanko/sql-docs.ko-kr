@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a38bbf56613f0b06f874b5db4e4de03f0064492f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be54aea70e712d2209c04196d3e450bca488578b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783545"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972187"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>setTrustStore 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

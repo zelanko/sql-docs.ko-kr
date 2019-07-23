@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f0f798c8-cafb-4acc-b85d-2e0059c91d92
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c63c526aed7bfae6027f3a9aa028bc2a2e20fbef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5424de7d0d6f7bda44ec61ea61f48d63bb097c97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973203"
 ---
 # <a name="setpoolable-method-sqlserverstatement"></a>setPoolable 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void setPoolable(boolean poolable) throws SQLException
   
  문의 풀 값은 드라이버에 의해 구현된 내부 문 캐시와 응용 프로그램 서버 및 다른 응용 프로그램에 의해 구현된 외부 문 캐시 모두에 적용됩니다.  
   
- 기본적으로 SQLServerStatement 개체는 풀링 가능한 상태로 만들어집니다. SQLServerPreparedStatement 및 SQLServerCallableStatement 개체는 풀링 가능한 상태로 만들어집니다.  
+ 기본적으로 SQLServerStatement 개체는 생성 시 poolable 되지 않습니다. SQLServerPreparedStatement 및 SQLServerCallableStatement 개체는 생성 될 때 poolable 됩니다.  
   
  닫힌 문에 대해 이 메서드를 호출하면 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)이 발생합니다.  
   

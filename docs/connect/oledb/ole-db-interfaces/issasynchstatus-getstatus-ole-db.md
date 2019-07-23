@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus:: Getstatus (OLE DB) | Microsoft Docs'
+title: 'ISSAsynchStatus:: GetStatus (OLE DB) | Microsoft Docs'
 description: ISSAsynchStatus::GetStatus(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - GetStatus method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d22bc6d19aa4593d400b62c19f72c9fbe3745005
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f05b5c7c7b03fa1b68f3da5c6fbed29ed98a3c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994379"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +44,7 @@ HRESULT GetStatus(
   
 ## <a name="arguments"></a>인수  
  *hChapter*[in]  
- 장 핸들입니다. 폴링된 개체 행 집합 개체가 아니거나 작업이 장에 적용 되지 않습니다, 경우에 공급자가 무시 되는 db_null_hchapter로 설정 되어야 합니다.  
+ 장 핸들입니다. 폴링 된 개체가 행 집합 개체가 아니거나 장에 적용 되지 않는 경우에는 공급자가 무시 하는 DB_NULL_HCHAPTER로 설정 해야 합니다.  
   
  *eOperation*[in]  
  비동기 상태가 요청되는 작업입니다. 다음 값을 사용 해야 합니다.  

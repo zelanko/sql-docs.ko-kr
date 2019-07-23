@@ -1,5 +1,5 @@
 ---
-title: registerOutParameter 메서드를 형식 및 이름 | Microsoft Docs
+title: 형식 및 이름을 위한 registerOutParameter 메서드 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f962c912-2475-4e1f-a384-579be2d17f37
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5c0fb7eb2f50aabb2bcc2a51085f0afdd94cf419
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 18c7dad22a4f5314a0bc920c650bcdf0ecd32d52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975923"
 ---
 # <a name="registeroutparameter-method-javalangstring-int-javalangstring"></a>registerOutParameter 메서드(java.lang.String, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public void registerOutParameter(java.lang.String s,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 registerOutParameter 메서드는 java.sql.CallableStatement 인터페이스의 registerOutParameter 메서드에 의해 지정 됩니다.  
+ 이 registerOutParameter 메서드는 java. CallableStatement 인터페이스의 registerOutParameter 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [registerOutParameter 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   

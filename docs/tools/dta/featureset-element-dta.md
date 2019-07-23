@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: fab04800631cde90514b234b85adf2e5cdf010ac
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9c0711dc15327cad726e61857f61539f8cadea02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034974"
 ---
 # <a name="featureset-element-dta"></a>FeatureSet 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

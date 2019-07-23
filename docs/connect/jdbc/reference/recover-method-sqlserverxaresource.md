@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1ca9d0fede758b99f442a9553e4266e79fa81134
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 92d7b0db997a6b77b43efb6d8104f629bb5507e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976025"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>recover 메서드(SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
 #### <a name="parameters"></a>매개 변수  
  *flags*  
   
- **int** 다음 값 중 하나를 수행 하는 값: XAResource.TMSTARTRSCAN 또는 XAResource.TMENDRSCAN 또는 XAResource.TMNOFLAGS XAResource.TMSTARTTRSCAN | XAResource.TMENDRSCAN 합니다.  
+ 다음 값 중 하나를 사용할 수 있는 **int** 값: XAResource. TMSTARTRSCAN 또는 xaresource. TMSTARTRSCAN 또는 xaresource. TMNOFLAGS 또는 xaresource. TMSTARTRSCAN | XAResource. TMENDRSCAN.  
   
 ## <a name="return-value"></a>반환 값  
  Xid 개체입니다.  
@@ -49,7 +48,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
 ## <a name="remarks"></a>Remarks  
  이 recover 메서드는 javax.transaction.xa.XAResource 인터페이스의 recover 메서드에 의해 지정됩니다.  
   
- 경우 매개 변수 **플래그** 없거나 XAResource.TMSTARTRSCAN XAResource.TMSTARTRSCAN | XAResource.TMENDRSCAN, 복구 검색이 진행에서 해야 합니다.  
+ 매개 변수 **플래그가** XAResource입니다. tmstartrscan 또는 XARESOURCE. tmstartrscan | XAResource. TMENDRSCAN, 복구 검사가 진행 중 이어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerXAResource 메서드](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   

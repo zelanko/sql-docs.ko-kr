@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 94e59366-ca34-4cd5-a6ec-ae32d475ef36
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 69ea6db0c79840f1bcdea0605611cdfa853055a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98db08e342f1951df8346ae44e0689dbd7b7dd86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981237"
 ---
 # <a name="getobject-method-int-sqlserverresultset"></a>getObject 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

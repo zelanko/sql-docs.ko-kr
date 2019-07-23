@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7740d17d-282f-4f1d-91f9-c68a873b069a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a07f14422a1e4d6db9c9715ac766b9265fdeb86c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba6c81bb3ce7760427388032cf9a8b216ce06d6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998599"
 ---
 # <a name="updateref-method-javalangstring-javasqlref"></a>updateRef 메서드(java.lang.String, java.sql.Ref)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

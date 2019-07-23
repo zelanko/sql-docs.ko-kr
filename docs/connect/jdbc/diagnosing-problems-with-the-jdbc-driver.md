@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b938a1e6e60307b991bf90d87673765f2efb01ef
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 39523acba6f13bd73130a3786f1421e0468084f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956698"
 ---
 # <a name="diagnosing-problems-with-the-jdbc-driver"></a>JDBC 드라이버 관련 문제 진단
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

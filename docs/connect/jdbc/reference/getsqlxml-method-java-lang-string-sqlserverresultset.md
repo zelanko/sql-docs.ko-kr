@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab9c7b10-026f-4a51-8d60-e6871d1abd02
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea12e36463212117353284fb0543e00af8f2a1ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ecf5030c4722f2e5681cb199993a48fea0e22462
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979686"
 ---
 # <a name="getsqlxml-method-javalangstring-sqlserverresultset"></a>getSQLXML 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

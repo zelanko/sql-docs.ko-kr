@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5fed9ebb-d9a3-4d1a-9212-1057a603c4e5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 488d79e4b3d82bc20d7046efd09621fb0d08e707
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7fcdbd273af8d4b3ddddbdebcfea3d2740eb480
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66787063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996960"
 ---
 # <a name="updateboolean-method-javalangstring-boolean"></a>updateBoolean 메서드(java.lang.String, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 432da51055d0a9f250c342338770103fbe8fe4b0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
-ms.translationtype: HT
+ms.openlocfilehash: 6cfbc099d88a96574439fa8c178b12629d92782c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916647"
 ---
 # <a name="understanding-isolation-levels"></a>격리 수준 이해
 
@@ -62,7 +61,7 @@ ms.locfileid: "66800172"
 con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);  
 ```
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 스냅숏 격리 수준을 사용하려면 다음과 같은 `SQLServerConnection` 상수 중 하나를 사용할 수 있습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 스냅샷 격리 수준을 사용하려면 다음과 같은 `SQLServerConnection` 상수 중 하나를 사용할 수 있습니다.  
 
 ```java
 con.setTransactionIsolation(SQLServerConnection.TRANSACTION_SNAPSHOT);  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8c961487aaff7e6aa57ea8add571ccbc2945dee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f6edf465f5b853008c9bdc8c420f6e862e360593
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936609"
 ---
 # <a name="data-source-wizard-screen-1"></a>데이터 원본 마법사 화면 1
 
@@ -34,7 +33,7 @@ ODBC 응용 프로그램에서 데이터 원본에 대한 연결을 요청할 �
 
 ### <a name="select-or-enter-a-server-name"></a>서버 이름 선택 또는 입력
 
-네트워크에서 SQL Server 인스턴스의 이름입니다. 옆에 있는 입력란에 서버를 지정해야 합니다.
+네트워크에 SQL Server 인스턴스의 이름입니다. 옆에 있는 입력란에 서버를 지정해야 합니다.
 
 대부분의 경우 ODBC 드라이버는 이 입력란에 제공된 서버 이름과 기본 프로토콜 순서를 사용하여 연결할 수 있습니다. 서버의 별칭을 만들거나 클라이언트 네트워크 라이브러리를 구성하려면 SQL Server 구성 관리자를 사용하십시오.
 
@@ -48,7 +47,7 @@ SQL Server에 연결하는 데 필요한 모든 정보가 이 화면에 지정�
 
 ### <a name="next"></a>다음
 
-마법사의 다음 화면으로 이동, 클릭 **다음**합니다.
+마법사의 다음 화면으로 이동 하려면 **다음**을 클릭 합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

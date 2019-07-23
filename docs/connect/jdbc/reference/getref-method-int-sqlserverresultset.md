@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fc3f2d79-7cc3-47fa-a05e-4f7939d7f090
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e00336655f9948becf4d68203dcf6fb137125b4c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8ad14430d5750befc073489596de2a4082f4ff8d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800230"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980605"
 ---
 # <a name="getref-method-int-sqlserverresultset"></a>getRef 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

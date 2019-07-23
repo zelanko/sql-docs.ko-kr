@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770265"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957370"
 ---
 # <a name="building-the-connection-url"></a>연결 URL 작성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66770265"
   
  각 항목이 나타내는 의미는 다음과 같습니다.  
   
--   **jdbc:sqlserver://**(필수)는 하위 프로토콜이라고 하며 일정한 형태를 나타냅니다.  
+-   **jdbc:sqlserver://** (필수)는 하위 프로토콜이라고 하며 일정한 형태를 나타냅니다.  
   
 -   **serverName**(옵션)은 연결할 서버의 주소입니다. 이는 DNS나 IP 주소일 수도 있고 로컬 컴퓨터인 경우 localhost나 127.0.0.1일 수도 있습니다. 연결 URL에 지정하지 않은 경우 속성 컬렉션에 서버 이름을 지정해야 합니다.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66770265"
 -   **property**(옵션)는 하나 이상의 옵션 연결 속성입니다. 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요. 목록에 있는 속성은 모두 지정할 수 있습니다. 속성은 세미콜론(';')으로만 구분할 수 있고 중복될 수 없습니다.  
   
 > [!CAUTION]  
->  보안을 위해 사용자 입력을 토대로 연결 URL을 작성하지 않는 것이 좋습니다. URL에는 서버 이름과 드라이버만 지정해야 합니다. 사용자 이름 및 암호 값에는 연결 속성 컬렉션을 사용합니다. JDBC 응용 프로그램의 보안에 대 한 자세한 내용은 참조 하세요. [JDBC 드라이버 응용 프로그램 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)합니다.  
+>  보안을 위해 사용자 입력을 토대로 연결 URL을 작성하지 않는 것이 좋습니다. URL에는 서버 이름과 드라이버만 지정해야 합니다. 사용자 이름 및 암호 값에는 연결 속성 컬렉션을 사용합니다. JDBC 응용 프로그램의 보안에 대 한 자세한 내용은 [Jdbc 드라이버 응용 프로그램](../../connect/jdbc/securing-jdbc-driver-applications.md)보안을 참조 하세요.  
   
 ## <a name="connection-examples"></a>연결 예  
  사용자 이름 및 암호를 사용하여 로컬 컴퓨터에서 기본 데이터베이스에 연결합니다.  
@@ -99,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  \<*설치 디렉터리*>\sqljdbc_\<*버전*>\\<*언어*>\auth\  
   
- 지 원하는 운영 체제에 대 한 합니다 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 참조 하세요 [Kerberos 통합 인증을 사용 하려면 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) 에 추가 된 기능에 대 한 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 응용 프로그램에 연결할 수 있도록를 유형 4 Kerberos 통합된 인증을 사용 하는 데이터베이스입니다.  
+ 에서 지 원하는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]모든 운영 체제의 경우 응용 프로그램이 통합을 사용 하 여 데이터베이스에 연결할 수 있도록 하 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 는 [Kerberos 통합 인증을 사용 하 여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) 을 참조 하세요. 유형 4 Kerberos 인증.  
   
 > [!NOTE]  
 >  32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 sqljdbc_auth.dll 파일을 사용하십시오. x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 sqljdbc_auth.dll 파일을 사용하십시오.  

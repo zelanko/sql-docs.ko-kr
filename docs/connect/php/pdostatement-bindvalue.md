@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::bindValue | Microsoft Docs
+title: 'PDOStatement:: bindValue | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 13bc4ece-420e-4887-8809-bf0705ddf126
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93cf012017e6614bc0ae4d81150e90ddab5b424a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 89126d696f7210132adb5ef10ec557604ebc543f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993116"
 ---
 # <a name="pdostatementbindvalue"></a>PDOStatement::bindValue
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

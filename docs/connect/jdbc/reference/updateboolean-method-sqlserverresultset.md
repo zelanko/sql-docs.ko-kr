@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 524ecc30-1587-47e1-812d-ddbc75163266
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a997e09e10b428b3d2fff05c1c28fb916f1580d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb459d663bd48bd5d2a0f6a63667e37fb55e90f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66786997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996950"
 ---
 # <a name="updateboolean-method-sqlserverresultset"></a>updateBoolean 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

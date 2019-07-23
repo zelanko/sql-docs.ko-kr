@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: de170a1a-fd06-4b70-8749-d86e2e0fb286
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7cbd53d1757033e13f7fe8c8c157447c60bda34
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bdb999935069a2ae3bd941442c443ced4f289dbd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970349"
 ---
 # <a name="sqlserverstatement-methods"></a>SQLServerStatement 메서드
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  SQLServerStatement의 멤버에 대 한 정보를 참조 하세요 [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)합니다.  
+  SQLServerStatement의 멤버에 대 한 자세한 내용은 [SQLServerStatement members](../../../connect/jdbc/reference/sqlserverstatement-members.md)를 참조 하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

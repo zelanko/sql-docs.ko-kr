@@ -1,5 +1,5 @@
 ---
-title: isWritable 메서드 (SQLServerResultSetMetaData) | Microsoft Docs
+title: isWritable 가능한 메서드 (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 50846aa8-e4e5-4fc3-a638-0e5fa8b597be
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 73b9541904e833d47be1e458aa9ee4cddeb2aa6f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8d5a22e4fa9a3bd27da1862b0157324e3fbe9098
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977015"
 ---
 # <a name="iswritable-method-sqlserverresultsetmetadata"></a>isWritable 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isWritable(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 isWritable 메서드는 java.sql.ResultSetMetaData 인터페이스의 isWritable 메서드에 의해 지정 됩니다.  
+ 이 isWritable 수 있는 메서드는 java. ResultSetMetaData 인터페이스의 isWritable 가능 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSetMetaData 메서드](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

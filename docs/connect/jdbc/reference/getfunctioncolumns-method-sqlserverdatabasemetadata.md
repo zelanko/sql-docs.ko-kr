@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd4958db78e2e35d29bcc47428295db50f7e5678
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6c25349d6fbf9495647ae73773d984dfcd269f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982965"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -72,17 +71,17 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |COLUMN_TYPE|**short**|**열의 유형입니다. 다음 값 중 하나일 수 있습니다.**<br /><br /> functionColumnUnknown(0): 알 수 없는 형식입니다.<br /><br /> functionColumnIn(1): 입력 매개 변수입니다.<br /><br /> functionColumnInOut(2): 입/출력 매개 변수입니다.<br /><br /> functionColumnOut(3): 출력 매개 변수입니다.<br /><br /> functionReturn(4): 함수 반환 값입니다.<br /><br /> functionColumnResult(5): 매개 변수 또는 열은 결과 집합의 열입니다.|  
 |DATA_TYPE|**smallint**|Java.sql.Types의 SQL 데이터 형식입니다.|  
 |TYPE_NAME|**String**|데이터 형식의 이름입니다.|  
-|PRECISION|**ssNoversion**|총 유효 자릿수입니다.|  
-|LENGTH|**ssNoversion**|데이터의 길이(바이트)입니다.|  
+|PRECISION|**int**|총 유효 자릿수입니다.|  
+|LENGTH|**int**|데이터의 길이(바이트)입니다.|  
 |SCALE|**short**|소수점 이하 자릿수입니다.|  
 |RADIX|**short**|숫자 형식의 기수입니다.|  
 |NULLABLE|**short**|매개 변수 또는 반환 값에 **null** 값이 포함될 수 있는지 여부를 나타냅니다.<br /><br /> **다음 값 중 하나일 수 있습니다.**<br /><br /> functionNoNulls(0): NULL 값이 허용되지 않습니다.<br /><br /> functionNullable(1): NULL 값이 허용됩니다.<br /><br /> functionNullableUnknown(2): 알 수 없는 형식입니다.|  
 |REMARKS|**String**|열 또는 매개 변수에 대한 설명입니다.|  
 |COLUMN_DEF|**String**|열의 기본값입니다.<br /><br /> **참고:** 이 정보는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 수 있으며 JDBC 드라이버별 정보입니다.|  
 |SQL_DATA_TYPE|**smallint**|이 열은 **datetime** 및 ISO **interval** 데이터 형식을 제외하고는 **DATA_TYPE** 열과 동일합니다.<br /><br /> **참고:** 이 정보는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 수 있으며 JDBC 드라이버별 정보입니다.|  
-|SQL_DATETIME_SUB|**smallint**|**SQL_DATA_TYPE** 값이 **SQL_DATETIME** 또는 **SQL_INTERVAL**인 경우 **datetime** ISO **interval** 하위 코드입니다. 이외의 다른 데이터 형식의 **날짜/시간** 및 ISO **간격**,이 열은 NULL입니다.<br /><br /> **참고:** 이 정보는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 수 있으며 JDBC 드라이버별 정보입니다.|  
-|CHAR_OCTET_LENGTH|**ssNoversion**|이진 및 문자 기반 매개 변수 또는 열의 최대 길이입니다. 다른 데이터 형식의 경우에는 NULL입니다.|  
-|ORDINAL_POSITION|**ssNoversion**|입력 및 출력 매개 변수의 경우 1부터 시작하는 위치를 나타냅니다.<br /><br /> 결과 집합 열의 경우 1부터 시작하는 결과 집합의 열 위치입니다.<br /><br /> 반환 값의 경우 0입니다.|  
+|SQL_DATETIME_SUB|**smallint**|**SQL_DATA_TYPE** 값이 **SQL_DATETIME** 또는 **SQL_INTERVAL**인 경우 **datetime** ISO **interval** 하위 코드입니다. **Datetime** 및 ISO **간격이**아닌 데이터 형식의 경우이 열은 NULL입니다.<br /><br /> **참고:** 이 정보는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용할 수 있으며 JDBC 드라이버별 정보입니다.|  
+|CHAR_OCTET_LENGTH|**int**|이진 및 문자 기반 매개 변수 또는 열의 최대 길이입니다. 다른 데이터 형식의 경우에는 NULL입니다.|  
+|ORDINAL_POSITION|**int**|입력 및 출력 매개 변수의 경우 1부터 시작하는 위치를 나타냅니다.<br /><br /> 결과 집합 열의 경우 1부터 시작하는 결과 집합의 열 위치입니다.<br /><br /> 반환 값의 경우 0입니다.|  
 |IS_NULLABLE|**String**|매개 변수 또는 열의 Null 허용 여부를 결정합니다.<br /><br /> 다음 값 중 하나일 수 있습니다.<br /><br /> **YES**: 매개 변수 또는 열에 NULL 값이 포함될 수 있습니다.<br /><br /> **NO**: 매개 변수 또는 열에 NULL 값이 포함될 수 없습니다.<br /><br /> 빈 문자열(""): 알 수 없는 형식입니다.|  
 |SS_TYPE_CATALOG_NAME|**String**|UDT(사용자 정의 형식)를 포함하는 카탈로그의 이름입니다.|  
 |SS_TYPE_SCHEMA_NAME|**String**|UDT(사용자 정의 형식)를 포함하는 스키마의 이름입니다.|  

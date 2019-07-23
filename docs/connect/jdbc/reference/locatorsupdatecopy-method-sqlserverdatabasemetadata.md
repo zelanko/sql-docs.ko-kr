@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f6ec8c1d-7ff8-4bc5-8bd3-0199a9294a6e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01cf5c8d9d4d4b40e4f76040725a81e6424bb254
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5e9e800c326f18b5247d1257431bb2243ad00c57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976839"
 ---
 # <a name="locatorsupdatecopy-method-sqlserverdatabasemetadata"></a>locatorsUpdateCopy 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean locatorsUpdateCopy()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 업데이트가 복사본으로 수행 되는 경우. **false** 직접 업데이트 하는 경우.  
+ 복사본이 업데이트 되 면 **true** 입니다. 업데이트를 직접 수행 하는 경우 **false** 입니다.  
   
 ## <a name="exceptions"></a>예외  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 이 locatorsUpdateCopy 메서드는 java.sql.DatabaseMetaData 인터페이스의 locatorsUpdateCopy 메서드에 의해 지정 됩니다.  
+ 이 locatorsUpdateCopy 메서드는 locatorsUpdateCopy 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

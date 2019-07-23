@@ -1,5 +1,5 @@
 ---
-title: 연결 문자열 보안 | Microsoft Docs
+title: 연결 문자열 보안 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 995b8ae8affbd04349013724bb43101040e27ebb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 05782c2691b3409339554e2154b385b93c17b4d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945780"
 ---
 # <a name="securing-connection-strings"></a>연결 문자열 보안
 

@@ -1,5 +1,5 @@
 ---
-title: getMaxTablesInSelect 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: GetmaxSQLServerDatabaseMetaData Inselect 메서드 () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f5291217-2a0c-4daa-9e39-9f348fc911f7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 51db61a1ea139878269e90291d27b2acce778d86
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d125e9dad6d5c6f82ff177abdaced9d784295c11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981927"
 ---
 # <a name="getmaxtablesinselect-method-sqlserverdatabasemetadata"></a>getMaxTablesInSelect 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxTablesInSelect()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getMaxTablesInSelect 메서드는 java.sql.DatabaseMetaData 인터페이스의 getMaxTablesInSelect 메서드에 의해 지정 됩니다.  
+ 이 Getmaxnode.js Inselect 메서드는 java. DatabaseMetaData 인터페이스의 Getmaxnode.js Inselect 메서드로 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

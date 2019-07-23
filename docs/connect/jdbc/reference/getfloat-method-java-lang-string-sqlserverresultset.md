@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 09491a8a-1931-411e-9b35-2b269c1b7f12
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1f51e162dae52941138ada1f03023a19c6eca614
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 08d74e16d8d841503ea729d28518be8018e2bc6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983075"
 ---
 # <a name="getfloat-method-javalangstring-sqlserverresultset"></a>getFloat 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public float getFloat(java.lang.String columnName)
  열 이름이 포함된 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- A **float** 값입니다.  
+ **Float** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

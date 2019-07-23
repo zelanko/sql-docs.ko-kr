@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: fdb60557-006c-4eb5-9cef-2eb392e862de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fb45d4df3ab054c320bb110c009e8fc4ea6edb59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca5946eb5c6450d55168f64dddbd0ca82d986be9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935741"
 ---
 # <a name="python-sql-driver---pyodbc"></a>Python SQL 드라이버 - pyodbc
 
-![다운로드-아래쪽 화살표-원이](../../../ssdt/media/download.png)[for Python SQL 드라이버를 설치 하려면](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![다운로드-아래쪽 화살표-](../../../ssdt/media/download.png)[Python 용 SQL 드라이버 설치로](../../sql-connection-libraries.md#anchor-20-drivers-relational-access) 원
 
 ## <a name="getting-started"></a>시작
 

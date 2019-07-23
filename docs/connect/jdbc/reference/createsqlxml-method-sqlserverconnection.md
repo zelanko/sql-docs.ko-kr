@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf5bfcdd-bc03-4c5b-b554-d8a8a4067e93
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f44520d6d6a060bb323436d23fa7335e25551883
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d1265a48fbe07bdf59616026a069fda05723f10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955337"
 ---
 # <a name="createsqlxml-method-sqlserverconnection"></a>createSQLXML 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 87b7fbaf-7149-494f-b3b2-16b468a8ebf1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4444e4988df4a922d42742c58f4bc9e439eb603f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33f5e25d45f1e08c30f3094a9200291de9510150
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66779005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979102"
 ---
 # <a name="gettime-method-int-javautilcalendar"></a>getTime 메서드(int, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public java.sql.Time getTime(int index,
 ## <a name="remarks"></a>Remarks  
  이 getTime 메서드는 java.sql.CallableStatement 인터페이스의 getTime 메서드에 의해 지정됩니다.  
   
- "Getter 메서드 변환" 이라는 차트에 나오는 [데이터 형식 변환 이해](../../../connect/jdbc/understanding-data-type-conversions.md) 는 보려는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이 메서드를 사용 하 여 데이터 형식을 검색할 수 있습니다.  
+ 이 메서드를 사용 하 여 검색할 수 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식에 대 한 자세한 내용은 [데이터 형식 변환 이해](../../../connect/jdbc/understanding-data-type-conversions.md) 의 "Getter 메서드 변환" 이라는 차트를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [getTime 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   

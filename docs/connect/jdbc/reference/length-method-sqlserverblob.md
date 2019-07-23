@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aa233ccb-72d3-4ea3-979d-07ef9aa47359
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e176624817a67945fa68ef34b2baaad7ed35714c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5848943e2b8540f1c2f7733af404520159dfb5ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976905"
 ---
 # <a name="length-method-sqlserverblob"></a>length 메서드(SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public long length()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 길이 메서드는 java.sql.Blob 인터페이스의 길이 메서드에 의해 지정 됩니다.  
+ 이 길이 메서드는 java. Blob 인터페이스의 length 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerBlob 메서드](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

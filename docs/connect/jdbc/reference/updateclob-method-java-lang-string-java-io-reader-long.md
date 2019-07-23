@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6b8f759a-ce5d-41b2-b6cc-24a3ab299f1f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 94267286c253015e0720a6ca930292de6421b8fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5fd7344227bdaa2ba7f0dccb1dd823d210b66ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999221"
 ---
 # <a name="updateclob-method-javalangstring-javaioreader-long"></a>updateClob 메서드(java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

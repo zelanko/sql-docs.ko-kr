@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 59c5fa23-bc1a-4142-af17-70e275f0b833
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 304d63f7822990c4d8e4a9c0787c9e688c222580
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0c171e8fb78553275d6a1f5d4bcce485a470f94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973194"
 ---
 # <a name="setportnumber-method-sqlserverdatasource"></a>setPortNumber 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void setPortNumber(int portNumber)
  포트 번호는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 소켓 연결을 열 때 사용되는 TCP/IP 포트 번호입니다. portNumber 속성이 설정되어 있지 않으면 [getPortNumber](../../../connect/jdbc/reference/getportnumber-method-sqlserverdatasource.md) 메서드는 기본값인 1433을 반환합니다.  
   
 > [!NOTE]  
->  SetPortNumber 메서드는 전달 된 포트 값에 대해 범위 검사를 수행 하지 않습니다. 오류를 트리거하지 않고 따라서 99999와 같이 올바르지 않은 포트 번호를 전달할 수 있습니다.  
+>  SetPortNumber 메서드는 전달 된 포트 값에 대 한 범위 검사를 수행 하지 않습니다. 오류를 트리거하지 않고 잘못 된 포트 번호 (예: 99999)를 전달할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

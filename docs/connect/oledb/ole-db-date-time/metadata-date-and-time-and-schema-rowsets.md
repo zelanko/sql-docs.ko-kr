@@ -1,5 +1,5 @@
 ---
-title: 날짜 및 시간과 스키마 행 집합 | Microsoft Docs
+title: 날짜 및 시간 및 스키마 행 집합 | Microsoft Docs
 description: 날짜 및 시간과 스키마 행 집합
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - date/time [OLE DB], schema rowsets
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: e9ac734cbc11492074c322c21a9e7127249223a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19524bbd935335cc0568dc499f95a794580df476
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015694"
 ---
 # <a name="metadata---date-and-time-and-schema-rowsets"></a>메타데이터 - 날짜 및 시간과 스키마 행 집합
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,6 +95,6 @@ ms.locfileid: "66800691"
  OLE DB는 numeric 및 decimal 형식의 MINIMUM_SCALE 및 MAXIMUM_SCALE만 정의하므로 일반적으로 SQL Server용 OLE DB 드라이버에서는 time, datetime2 및 datetimeoffset에 이러한 열을 사용하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [메타 데이터 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
+ [메타 &#40;데이터 OLE DB&#41;](../../oledb/ole-db-date-time/metadata-parameter-and-rowset.md)  
   
   

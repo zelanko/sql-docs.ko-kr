@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4dddf885-0482-4776-8e9a-69f6c6270931
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f27f2eadeb1c9743a83ef3ae78b011da5edf13c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b08a6574f16159e5eebb9a95af7483b2ce7b0c84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996754"
 ---
 # <a name="updatecharacterstream-method-int-javaioreader"></a>updateCharacterStream 메서드(int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,11 +43,11 @@ public void updateCharacterStream(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 updateCharacterStream 메서드는 java.sql.ResultSet 인터페이스의 updateCharacterStream 메서드에 의해 지정 됩니다.  
+ 이 updateCharacterStream 메서드는 updateCharacterStream 인터페이스의 메서드에 의해 지정 됩니다.  
   
  이 메서드는 판독기 개체의 유니코드 문자를 선택된 텍스트 및 이진 열에 전달합니다. 여기에는 모든 텍스트 열과 **binary**, **varbinary**, **varbinary(max)** , **image** 및 **xml** 열이 포함되지만 **udt** 열은 포함되지 않습니다.  
   
- 이 메서드를 사용 하는 **이미지**를 **텍스트**, 및 **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식에는 성능 저하 될 수 있습니다.  
+ **Image**, **text**및 **ntext** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식에이 메서드를 사용 하면 성능에 영향을 줄 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateCharacterStream 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)   

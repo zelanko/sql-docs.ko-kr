@@ -1,6 +1,6 @@
 ---
-title: 사용자 정의 형식을 사용 하 여 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버를 사용 하 여 사용자 정의 형식 사용
+title: 사용자 정의 형식 사용 | Microsoft Docs
+description: SQL Server에 대 한 OLE DB 드라이버에서 사용자 정의 형식 사용
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: efc2c82f047beca82f1daeda6318f16803499f86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 731e00fdf4c9f073348389f537fa812e10bcbab5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802854"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988802"
 ---
 # <a name="using-user-defined-types"></a>사용자 정의 형식 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,18 +44,18 @@ ms.locfileid: "66802854"
 >  **IRowsetFind::FindNextRow** 메서드는 UDT 데이터 형식과 함께 사용할 수 없습니다. UDT가 검색 열 유형으로 사용되는 경우 DB_E_BADCOMPAREOP가 반환됩니다.  
   
 ### <a name="data-bindings-and-coercions"></a>데이터 바인딩 및 강제 변환  
- 다음 표에서는 표의 데이터 형식을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT와 함께 사용할 때 발생하는 바인딩 및 강제 변환에 대해 설명합니다. UDT 열은 DBTYPE_UDT로 SQL Server 용 OLE DB 드라이버를 통해 노출 됩니다. 적절한 스키마의 행 집합을 통해 메타데이터를 얻을 수 있으므로 사용자 정의 형식을 개체로 관리할 수 있습니다.  
+ 다음 표에서는 표의 데이터 형식을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] UDT와 함께 사용할 때 발생하는 바인딩 및 강제 변환에 대해 설명합니다. UDT 열은 DBTYPE_UDT의 SQL Server에 대 한 OLE DB 드라이버를 통해 노출 됩니다. 적절한 스키마의 행 집합을 통해 메타데이터를 얻을 수 있으므로 사용자 정의 형식을 개체로 관리할 수 있습니다.  
   
 |데이터 형식|SQL Server의<br /><br /> **UDT**|SQL Server의<br /><br /> **non-UDT**|SQL Server의<br /><br /> **UDT**|SQL Server의<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_UDT|지원 되는<sup>6</sup>|오류<sup>1</sup>|지원 되는<sup>6</sup>|오류<sup>5</sup>|  
-|DBTYPE_BYTES|지원 되는<sup>6</sup>|해당 없음<sup>2</sup>|지원 되는<sup>6</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_WSTR|지원 되는<sup>3,6</sup>|해당 없음<sup>2</sup>|지원 되는<sup>4,6</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_BSTR|지원 되는<sup>3,6</sup>|해당 없음<sup>2</sup>|지원 되는<sup>4</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_STR|지원 되는<sup>3,6</sup>|해당 없음<sup>2</sup>|지원 되는<sup>4,6</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_UDT|지원 됨<sup>6</sup>|오류<sup>1</sup>|지원 됨<sup>6</sup>|오류<sup>5</sup>|  
+|DBTYPE_BYTES|지원 됨<sup>6</sup>|해당 없음<sup>2</sup>|지원 됨<sup>6</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_WSTR|지원 되<sup>는 3, 6</sup>|해당 없음<sup>2</sup>|지원 되<sup>는 4, 6</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_BSTR|지원 되<sup>는 3, 6</sup>|해당 없음<sup>2</sup>|지원 됨<sup>4</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_STR|지원 되<sup>는 3, 6</sup>|해당 없음<sup>2</sup>|지원 되<sup>는 4, 6</sup>|해당 없음<sup>2</sup>|  
 |DBTYPE_IUNKNOWN|지원되지 않음|해당 없음<sup>2</sup>|지원되지 않음|해당 없음<sup>2</sup>|  
-|DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|지원 되는<sup>6</sup>|해당 없음<sup>2</sup>|지원 되는<sup>4</sup>|해당 없음<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|지원 되는<sup>3,6</sup>|해당 없음<sup>2</sup>|해당 사항 없음|해당 없음<sup>2</sup>|  
+|DBTYPE_VARIANT(VT_UI1 &#124; VT_ARRAY)|지원 됨<sup>6</sup>|해당 없음<sup>2</sup>|지원 됨<sup>4</sup>|해당 없음<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|지원 되<sup>는 3, 6</sup>|해당 없음<sup>2</sup>|해당 사항 없음|해당 없음<sup>2</sup>|  
   
  <sup>1</sup>DBTYPE_UDT 이외의 서버 유형이 **ICommandWithParameters::SetParameterInfo**로 지정되고 접근자 유형이 DBTYPE_UDT인 경우 문을 실행하면 오류가 발생합니다(DB_E_ERRORSOCCURRED, 매개 변수 상태는 DBSTATUS_E_BADACCESSOR임). 그렇지 않은 경우에는 데이터가 서버로 전송되지만 UDT에서 매개 변수의 데이터 형식으로의 암시적 변환이 이루어지지 않았음을 나타내는 오류가 반환됩니다.  
   
@@ -82,7 +81,7 @@ ms.locfileid: "66802854"
  OLE DB 핵심 서비스(**IDataConvert**)에서 제공하는 데이터 변환은 DBTYPE_UDT에는 적용되지 않습니다. 다른 바인딩은 지원되지 않습니다.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 행 집합의 추가 내용 및 변경 내용  
- OLE DB Driver for SQL Server 새 값을 추가 하거나 많은 핵심 OLE DB 스키마 행 집합을 변경 합니다.  
+ SQL Server에 대 한 OLE DB 드라이버는 많은 핵심 OLE DB 스키마 행 집합에 새로운 값 이나 변경 내용을 추가 합니다.  
   
 #### <a name="the-procedureparameters-schema-rowset"></a>PROCEDURE_PARAMETERS 스키마 행 집합  
  PROCEDURE_PARAMETERS 스키마 행 집합에 다음이 추가되었습니다.  
@@ -137,7 +136,7 @@ ms.locfileid: "66802854"
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|전체 형식 이름(AQN)은 적용 가능한 경우 네임스페이스에 따른 접두사가 추가된 형식 이름을 포함합니다.|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB 속성 집합의 추가 내용 및 변경 내용  
- OLE DB Driver for SQL Server 새 값 추가 또는 많은 핵심 OLE DB 속성 집합 변경 합니다.  
+ SQL Server에 대 한 OLE DB 드라이버는 많은 핵심 OLE DB 속성 집합에 새 값 또는 변경 사항을 추가 합니다.  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
  OLE DB를 통해 UDT를 지원하기 위해 SQL Server용 OLE DB 드라이버는 다음 값이 포함된 새로운 DBPROPSET_SQLSERVERPARAMETER 속성 집합을 구현합니다.  
@@ -173,7 +172,7 @@ ms.locfileid: "66802854"
  UDT 정의가 다른 데이터베이스에 속하는 경우 SSPROP_COL_UDT_CATALOGNAME 및 SSPROP_COL_UDT_SCHEMANAME을 모두 지정해야 합니다.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB 인터페이스의 추가 내용 및 변경 내용  
- OLE DB Driver for SQL Server 새 값을 추가 하거나 많은 핵심 OLE DB 인터페이스를 변경 합니다.  
+ SQL Server에 대 한 OLE DB 드라이버는 여러 핵심 OLE DB 인터페이스에 새 값 또는 변경 사항을 추가 합니다.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 인터페이스  
  OLE DB를 통해 UDT를 지원하기 위해 SQL Server용 OLE DB 드라이버는 **ISSCommandWithParameters** 인터페이스의 추가를 비롯하여 많은 변경을 구현합니다. 이 새 인터페이스는 핵심 OLE DB 인터페이스인 **ICommandWithParameters**에서 상속됩니다. **ICommandWithParameters**에서 상속되는 세 개의 메서드인 **GetParameterInfo**, **MapParameterNames** 및 **SetParameterInfo** 외에도 **ISSCommandWithParameters**는 서버 데이터 형식을 처리하는 데 사용되는 **GetParameterProperties** 및 **SetParameterProperties** 메서드를 제공합니다.  

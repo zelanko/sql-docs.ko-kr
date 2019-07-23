@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f475d3d02f671cc9c6d277cc50589c4e6980070
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a2da0a2f04fa90b2d25dbd68baf7b769d5afdcf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983642"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverconnection"></a>getDisableStatementPooling 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 값을 반환 **disableStatementPooling** 연결 속성입니다. 이 설정은 문 풀링을 사용 하도록 설정할지 여부이 연결용 제어 합니다.
+ **Statementpoolingcachesize** connection 속성의 값을 반환 합니다. 이 설정은이 연결에 대해 문 풀링이 사용 되는지 여부를 제어 합니다.
 
 ## <a name="syntax"></a>구문  
   
@@ -36,13 +35,13 @@ public boolean getDisableStatementPooling()
 ```  
 
 ## <a name="return-value"></a>반환 값
- A **부울** 의 값이 포함 된 **disableStatementPooling** 연결 속성입니다.
+ **Statementpoolingcachesize** connection 속성의 값을 포함 하는 **부울** 입니다.
 
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- 이 메서드는 JDBC 드라이버 버전 6.4에서에서 사용 가능 하 고 향후에.
+ 이 메서드는 JDBC 드라이버 버전 6.4 및 이후 버전에서 사용할 수 있습니다.
  
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 멤버](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6494300b-7fc0-4076-8311-22d35a96cdc6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 690f4e43fcbc1064fe0e59143be76d24e5cfc556
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5891b971bcf6129ec3b5fcec4e9ae8f0301283b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973589"
 ---
 # <a name="setnstring-method-sqlservercallablestatement"></a>setNString 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public final void setNString(java.lang.String parameterName, java.lang.String va
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한이 메서드를 사용할지 **NCHAR**, **NVARCHAR**를 **NTEXT**, 및 **XML** 데이터 형식입니다.  
+ 이 메서드는 **NCHAR**, **NVARCHAR**, **NTEXT**및 **XML** 데이터 형식에 사용 해야 합니다.  
   
  이 setNString 메서드는 java.sql.CallableStatement 인터페이스의 setNString 메서드에 의해 지정됩니다.  
   

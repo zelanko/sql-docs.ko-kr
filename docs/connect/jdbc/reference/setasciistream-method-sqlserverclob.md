@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6e1779df-3b2a-41d1-8dca-99692cc9da14
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76d58f43e1caded32ac03e2c8f96ee5b9365bb72
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fff312217f9191e6752f8eb753096ff7499a0496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975429"
 ---
 # <a name="setasciistream-method-sqlserverclob"></a>setAsciiStream 메서드(SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.io.OutputStream setAsciiStream(long pos)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 이 setAsciiStream 메서드는 java.sql.Clob 인터페이스의 setAsciiStream 메서드에 의해 지정 됩니다.  
+ 이 setAsciiStream 메서드는 setAsciiStream 인터페이스의 메서드에 의해 지정 됩니다.  
   
  CLOB의 문자 데이터는 출력 스트림에 의해 지정된 위치부터 덮어쓰여지며 CLOB의 초기 길이를 초과할 수 있습니다. 위치+1 값을 지정하면 ASCII 문자가 추가되고, 위치+2 이상(또는 0 이하)의 값을 지정하면 위치 오류가 발생합니다.  
   

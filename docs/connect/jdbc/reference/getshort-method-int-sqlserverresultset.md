@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0b543c92-feb8-46a4-8477-9b5f94f1cdc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bd66bf9996ce01435c8243a13c86c65d11072fee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a301a499a1f640703c431b42739f366596f28b55
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791883"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979897"
 ---
 # <a name="getshort-method-int-sqlserverresultset"></a>getShort 메서드(int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public short getShort(int columnIndex)
  열 인덱스를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- A **짧은** 값입니다.  
+ **Short** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

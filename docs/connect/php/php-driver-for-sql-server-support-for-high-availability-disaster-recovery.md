@@ -1,5 +1,5 @@
 ---
-title: Support for High Availability, Microsoft Drivers for PHP for SQL Server에 대 한 재해 복구 | Microsoft Docs
+title: SQL Server 용 Microsoft driver for PHP에 대 한 고가용성, 재해 복구 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 73a80821-d345-4fea-b076-f4aabeb4af3e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5e0ad826c8846330c7207b14ac2344687563bbfa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fab65d777025f59fab6566d118233febbb51aaa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992967"
 ---
 # <a name="support-for-high-availability-disaster-recovery"></a>고가용성, 재해 복구 지원
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "66797112"
   
 SQL Server 2012 가용성 그룹 수신기 또는 SQL Server 2012 장애 조치(Failover) 클러스터 인스턴스에 연결할 때는 항상 **MultiSubnetFailover=True**를 지정하세요. **MultiSubnetFailover**를 사용하면 SQL Server 2012에서 모든 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 대한 장애 조치(Failover)를 빠르게 수행하고 단일 및 다중 서브넷 AlwaysOn 토폴로지에 대한 장애 조치(Failover) 시간을 크게 줄일 수 있습니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷을 장애 조치하는 동안 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]는 TCP 연결을 공격적으로 재시도합니다.  
   
-연결 문자열 키워드에 대 한 자세한 내용은 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 참조 하세요 [연결 옵션](../../connect/php/connection-options.md)합니다.  
+의 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]연결 문자열 키워드에 대 한 자세한 내용은 [connection Options](../../connect/php/connection-options.md)을 참조 하세요.  
   
 가용성 그룹 수신기 또는 장애 조치(Failover) 클러스터 인스턴스 이외의 다른 항목에 연결할 때 **MultiSubnetFailover=true**를 지정하면 성능에 상당히 부정적인 영향을 줄 수 있으므로 이러한 설정은 지원되지 않습니다.  
   
@@ -63,16 +62,16 @@ SQL Server 2012 가용성 그룹 수신기 또는 SQL Server 2012 장애 조치(
 
 ## <a name="transparent-network-ip-resolution-tnir"></a>TNIR(투명 네트워크 IP 확인)
 
-투명 네트워크 IP 확인 (TNIR)는 기존의 MultiSubnetFailover 기능의 수정 버전입니다. 첫 번째 호스트 이름의 IP 응답 하지 않는 되며 호스트와 연결 된 여러 Ip를 확인 하는 경우 드라이버의 연결 순서를 적용 됩니다. MultiSubnetFailover 함께 다음 네 가지 연결 시퀀스를 제공 합니다. 
+TNIR (투명 네트워크 IP 확인)은 기존 MultiSubnetFailover 기능을 수정한 것입니다. 호스트 이름에 대 한 첫 번째 확인 된 IP가 응답 하지 않고 호스트 이름과 연결 된 여러 ip가 있는 경우 드라이버의 연결 시퀀스에 영향을 줍니다. MultiSubnetFailover와 함께 다음 네 가지 연결 시퀀스를 제공 합니다. 
 
-- TNIR 사용 & MultiSubnetFailover 사용 안 함: 하나의 IP 시도 뒤에 동시에 모든 Ip
-- TNIR 사용 & MultiSubnetFailover 사용: 모든 Ip 병렬로 하려고 합니다.
-- TNIR 사용 안 함 & MultiSubnetFailover 사용 안 함: 모든 Ip 시도 한 번에 하나씩
-- TNIR 사용 안 함 & MultiSubnetFailover 사용: 모든 Ip 병렬로 하려고 합니다.
+- TNIR 사용 & MultiSubnetFailover 사용 안 함: 하나의 IP가 시도 된 후 모든 ip가 병렬로 수행 됩니다.
+- TNIR Enabled & MultiSubnetFailover Enabled: 모든 Ip가 병렬로 시도 됩니다.
+- TNIR 사용 안 함 & MultiSubnetFailover 사용 안 함: 모든 Ip를 한 후에 시도 합니다.
+- TNIR Disabled & MultiSubnetFailover Enabled: 모든 Ip가 병렬로 시도 됩니다.
 
-TNIR는 기본적으로 사용 하도록 설정 및 MultiSubnetFailover 기본적으로 비활성화 됩니다.
+TNIR은 기본적으로 사용 하도록 설정 되며 MultiSubnetFailover는 기본적으로 사용 하지 않도록 설정 됩니다.
 
-이것이 TNIR 및 MultiSubnetFailover PDO_SQLSRV 드라이버를 사용 하 여 활성화의 예:
+다음은 PDO_SQLSRV 드라이버를 사용 하 여 TNIR 및 MultiSubnetFailover를 모두 사용 하도록 설정 하는 예입니다.
 
 ```
 <?php

@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: 835e9cb8-5fd5-4a05-aa47-59ae3ed1ae6d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ca8ae9c3193f72e7169469f54196c254e915d0f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7a16568d3237f85ecd53ac7ad936f6c46ed0d35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953207"
 ---
 # <a name="getcharacterstream-method-sqlservernclob"></a>getCharacterStream 메서드(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  검색 된 **NCLOB** 이 지정 된 값 **java.sql.NClob** 개체를 **java.io.Reader** 개체입니다.  
+  이 **java. nclob** 개체에 의해 지정 된 **nclob** 값을 검색 하 여 **java.**  
   
 ## <a name="overload-list"></a>오버로드 목록  
   

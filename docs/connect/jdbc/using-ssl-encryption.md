@@ -1,5 +1,5 @@
 ---
-title: SSL 암호화를 사용 하 여 | Microsoft Docs
+title: SSL 암호화 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2cb0e7789e5b75aeed1f8e7bcbe50e25925606da
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 98c9cd99d8fd8a54c96a9301ac3a050b54614c17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003970"
 ---
 # <a name="using-ssl-encryption"></a>SSL 암호화 사용
 
@@ -33,7 +32,7 @@ SSL 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
 이 섹션의 항목에서는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 버전에서 새 연결 속성을 비롯한 SSL 암호화를 지원하는 방식과 클라이언트 쪽에서 트러스트 저장소를 구성하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
-> 합니다 **hostNameInCertificate** SSL 인증서의 유효성을 검사 하는 연결 속성 좋습니다.  
+> **HostNameInCertificate** connection 속성은 SSL 인증서의 유효성을 검사 하는 데 권장 됩니다.  
 
 ## <a name="in-this-section"></a>섹션 내용  
 

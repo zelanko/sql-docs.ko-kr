@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: af5ef257-7cf6-4db3-b1ee-07d22d82bef1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cc0193997b2c1e475132e0fb9a8bc43407074039
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 40474f747022c34994dba9f34dbed15f1791c2af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66782298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971150"
 ---
 # <a name="sqlserverexception-class"></a>SQLServerException 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public final class SQLServerException
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SQLServerException 클래스는 SQL 92 및 XOPEN 상태 코드를 처리합니다. 이러한 상태 코드는 사용자가 지정한 연결 속성을 사용하여 전환할 수 있습니다. 예외는 열려 있는 지정된 로그 파일에 기록됩니다.  
+ SQLServerException 클래스는 SQL 92 및 XOPEN 상태 코드를 모두 처리 합니다. 이러한 상태 코드는 사용자가 지정한 연결 속성을 사용하여 전환할 수 있습니다. 예외는 열려 있는 지정된 로그 파일에 기록됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerException 멤버](../../../connect/jdbc/reference/sqlserverexception-members.md)   

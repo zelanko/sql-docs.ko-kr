@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d920d15bb633828dd2ad614c6789f397e229f0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97ddd5aa4abf926ecd4e68e89bef63b8f25ce323
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009976"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server에서 드라이버 인식 연결 풀링
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -25,12 +24,12 @@ ms.locfileid: "66797802"
   
 -   연결 속성에 관계없이 `SQLDriverConnect`를 사용하는 연결은 `SQLConnect`를 사용하는 연결과는 별도의 풀로 이동합니다.
 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 및 드라이버 인식 연결 풀링을 사용하는 경우 드라이버가 풀에서 연결을 분리하기 위해 현재 스레드에 대한 Windows 사용자의 보안 컨텍스트를 사용하지 않습니다. 즉, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용하는 Windows 가장 시나리오에 대해 연결이 동일한 매개 변수를 사용하고 동일한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증 자격 증명을 사용하여 백 엔드에 연결하는 경우 여러 Windows 사용자가 잠재적으로 동일한 연결 풀을 사용할 수 있다는 것입니다. Windows 인증 및 드라이버 인식 연결 풀링을 사용하는 경우 드라이버가 풀에서 연결을 분리하기 위해 현재 Windows 사용자의 보안 컨텍스트를 사용합니다. 즉, Windows의 가장 시나리오에 대해 연결이 동일한 매개 변수를 사용하는 경우에도 여러 Windows 사용자가 연결을 공유하지 않습니다.
-- 또한 Azure Active Directory 및 드라이버 인식 연결 풀링을 사용 하 여, 드라이버 연결 풀의 멤버 자격을 확인 하려면 인증 값을 사용 합니다.
+- Azure Active Directory 및 드라이버 인식 연결 풀링을 사용 하는 경우 드라이버는 인증 값을 사용 하 여 연결 풀의 멤버 자격을 확인 합니다.
   
 -   드라이버 인식 연결 풀링에서 잘못된 연결이 풀에서 반환되지 않도록 방지합니다.  
   
--   드라이버 인식 연결 풀링이 드라이버별 연결 특성을 인식합니다. 따라서 연결을 사용 하는 경우 `SQL_COPT_SS_APPLICATION_INTENT` 읽기 전용으로 설정, 연결 자체 연결 풀을 가져옵니다.
--   설정 된 `SQL_COPT_SS_ACCESS_TOKEN` 특성을 사용 하면 개별적으로 풀링됩니다에 대 한 연결 
+-   드라이버 인식 연결 풀링이 드라이버별 연결 특성을 인식합니다. 따라서 연결 `SQL_COPT_SS_APPLICATION_INTENT` 에서를 읽기 전용으로 설정 하는 경우 해당 연결은 자체 연결 풀을 가져옵니다.
+-   `SQL_COPT_SS_ACCESS_TOKEN` 특성을 설정 하면 연결이 별도로 풀링되지 않습니다. 
   
 연결 문자열과 풀링된 연결 문자열 사이에서 다음 연결 특성 ID 또는 연결 문자열 키워드 중 하나가 다른 경우 드라이버가 풀링된 연결을 사용합니다. 그러나 모든 연결 특성 ID 또는 연결 문자열 키워드가 일치하면 성능이 향상됩니다. 풀에서 연결을 일치시키기 위해 드라이버가 특성을 재설정합니다. 다음 매개 변수를 재설정하려면 추가 네트워크 호출이 필요하기 때문에 성능이 저하됩니다.  
   

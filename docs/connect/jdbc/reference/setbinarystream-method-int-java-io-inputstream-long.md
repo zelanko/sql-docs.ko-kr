@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4ab2e2f3-eaf0-471a-8422-2cf98ce979cf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71e98565d09b7128c4a0dee257b28bb0a0b9983a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34b61ba6338967945f92add5b212bfeae2458e4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975288"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-long"></a>setBinaryStream 메서드(int, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void setBinaryStream(int parameterIndex,
   
  *x*  
   
- Java.io.InputStream 개체입니다.  
+ InputStream 개체입니다.  
   
  *length*  
   
@@ -49,7 +48,7 @@ public final void setBinaryStream(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setBinaryStream 메서드는 java.sql.PreparedStatement 인터페이스의 setBinaryStream 메서드에 의해 지정 됩니다.  
+ 이 setBinaryStream 메서드는 Java.sql.preparedstatement 인터페이스의 setBinaryStream 메서드에 의해 지정 됩니다.  
   
  스트림의 길이가 *length* 매개 변수에 지정된 길이와 다르면 행이 업데이트되거나 삽입될 때 JDBC 드라이버에서 예외가 발생합니다.  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9e3c51bc-7285-4f28-92c8-cfa05e49da9e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 339f5cb3876df2eb9da0052c8d9e714c919a509f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d382ef1b3a07abce21ccdf4b621d214f92d2007
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979793"
 ---
 # <a name="getshort-method-sqlservercallablestatement"></a>getShort 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

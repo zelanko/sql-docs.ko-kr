@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d26ea46d-a9f5-40ed-af56-2b10a0364882
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 033eeac3d9f0bf14a587d3248899bf0ac4284efa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e08958772ce1c67bbbe9cb3bdad9d290746a9e71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980120"
 ---
 # <a name="getschemas-method-sqlserverdatabasemetadata"></a>getSchemas 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66792170"
 |속성|설명|  
 |----------|-----------------|  
 |[getSchemas 메서드 &#40;&#41;](../../../connect/jdbc/reference/getschemas-method.md)|현재 데이터베이스에서 사용할 수 있는 스키마 이름을 검색합니다.|  
-|[getSchemas 메서드 &#40;String, String&#41;](../../../connect/jdbc/reference/getschemas-method-string-string.md)|지정된 카탈로그 이름 및 스키마 이름을 사용하여 현재 데이터베이스에서 사용할 수 있는 스키마 이름을 검색합니다.|  
+|[getSchemas 메서드 &#40;문자열, 문자열&#41;](../../../connect/jdbc/reference/getschemas-method-string-string.md)|지정된 카탈로그 이름 및 스키마 이름을 사용하여 현재 데이터베이스에서 사용할 수 있는 스키마 이름을 검색합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

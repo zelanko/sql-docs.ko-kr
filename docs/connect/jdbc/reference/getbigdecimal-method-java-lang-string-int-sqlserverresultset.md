@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 572a1799-c232-400f-b8d8-37a5719a8d5e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b50838375ee561df7266a065a23808dc1258e44e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 701afddaeaad79356a6b76a05a02f5cff1df1f39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799892"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953909"
 ---
 # <a name="getbigdecimal-method-javalangstring-int-sqlserverresultset"></a>getBigDecimal 메서드(java.lang.String, int)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,13 +48,13 @@ public java.math.BigDecimal getBigDecimal(java.lang.String columnName,
  소수점 이하의 자릿수를 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- BigDecimal 개체입니다.  
+ 가는 10 진수 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getBigDecimal 메서드는 java.sql.ResultSet 인터페이스의 getBigDecimal 메서드에 의해 지정 됩니다.  
+ 이 Get이상 Decimal 메서드는 java. ResultSet 인터페이스의 Get이상 Decimal 메서드로 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getBigDecimal 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbigdecimal-method-sqlserverresultset.md)   

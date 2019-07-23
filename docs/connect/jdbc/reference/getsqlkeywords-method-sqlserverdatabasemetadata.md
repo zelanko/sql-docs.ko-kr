@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a2a0dfbb-11ec-429f-aea6-8f44148ebb8e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: abd3db2e2140db54bf5994423596fb355f046af9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 79995b672219c456284809ee16593fbe800a9638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774275"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979744"
 ---
 # <a name="getsqlkeywords-method-sqlserverdatabasemetadata"></a>getSQLKeywords 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getSQLKeywords()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getSQLKeywords 메서드는 java.sql.DatabaseMetaData 인터페이스의 getSQLKeywords 메서드에 의해 지정 됩니다.  
+ 이 getSQLKeywords 메서드는 java. DatabaseMetaData 인터페이스의 getSQLKeywords 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

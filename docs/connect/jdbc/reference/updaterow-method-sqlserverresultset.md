@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cfced0ca-a281-40dc-8d2f-370d5f0bf12b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4cda7aba62051a42656fd10c6ff8f785b81b96a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e33da1c8873bdc2d69c93d533860d9b9f5e227d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998344"
 ---
 # <a name="updaterow-method-sqlserverresultset"></a>updateRow 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

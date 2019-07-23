@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler 사용 하 여 교착 상태 분석 | Microsoft Docs
+title: SQL Server Profiler를 사용 하 여 교착 상태 분석 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 72d6718f-501b-4ea6-b344-c0e653f19561
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c90dd4ee9872c558d552b19e99ad66d417d91a9e
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ab8914abdaa2056a71fdd4d0e1a277c89e200dc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105629"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>SQL Server Profiler를 사용하여 교착 상태 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

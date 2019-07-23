@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2a438d5d-2d6a-46a0-a2ae-f35fbae4a472
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 57e1859d4729860e7d8a5d11be4a4c3299bccced
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fed1b515d6e003f00cebbaf3f3a9306572e2ad2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970567"
 ---
 # <a name="sqlserverresultset-members"></a>SQLServerResultSet 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "66801501"
 |[getConcurrency](../../../connect/jdbc/reference/getconcurrency-method-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 동시성 모드를 검색합니다.|  
 |[getCursorName](../../../connect/jdbc/reference/getcursorname-method-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에서 사용되는 SQL 커서의 이름을 검색합니다.|  
 |[getDate](../../../connect/jdbc/reference/getdate-method-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열의 값을 Java 프로그래밍 언어의 java.sql.Date 개체로 검색합니다.|  
-|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|지정 된 열의 값을 검색 하는[DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체입니다.|  
+|[getDateTimeOffset](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)|지정 된 열의 값을 검색 하 여[DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 개체로 반환 합니다.|  
 |[getDouble](../../../connect/jdbc/reference/getdouble-method-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 현재 행에서 지정된 열의 값을 Java 프로그래밍 언어의 **double**로 검색합니다.|  
 |[getFetchDirection](../../../connect/jdbc/reference/getfetchdirection-method-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 인출 방향을 검색합니다.|  
 |[getFetchSize](../../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체의 인출 크기를 검색합니다.|  
@@ -117,7 +116,7 @@ ms.locfileid: "66801501"
 |[setFetchSize](../../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md)|이 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 추가 행이 필요할 때 데이터베이스에서 인출할 행 수에 관한 힌트를 JDBC 드라이버에 제공합니다.|  
 |[updateArray](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)|지정된 열을 Array 개체로 업데이트합니다.|  
 |[updateAsciiStream](../../../connect/jdbc/reference/updateasciistream-method-sqlserverresultset.md)|지정된 열을 ASCII 스트림 값으로 업데이트합니다.|  
-|[updateBigDecimal](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)|BigDecimal 개체와 지정된 된 열을 업데이트합니다.|  
+|[updateBigDecimal](../../../connect/jdbc/reference/updatebigdecimal-method-sqlserverresultset.md)|지정 된 열을 해당 하는 10 진수 개체로 업데이트 합니다.|  
 |[updateBinaryStream](../../../connect/jdbc/reference/updatebinarystream-method-sqlserverresultset.md)|지정된 열을 이진 스트림 값으로 업데이트합니다.|  
 |[updateBlob](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)|지정된 열을 java.sql.Blob 값으로 업데이트합니다.|  
 |[updateBoolean](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)|지정된 열을 **boolean** 값으로 업데이트합니다.|  
@@ -126,7 +125,7 @@ ms.locfileid: "66801501"
 |[updateCharacterStream](../../../connect/jdbc/reference/updatecharacterstream-method-sqlserverresultset.md)|지정된 열을 문자 스트림 값으로 업데이트합니다.|  
 |[updateClob](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)|지정된 열을 java.sql.Clob 값으로 업데이트합니다.|  
 |[updateDate](../../../connect/jdbc/reference/updatedate-method-sqlserverresultset.md)|지정된 열을 날짜 값으로 업데이트합니다.|  
-|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|업데이트를 [DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 열입니다.|  
+|[updateDateTimeOffset](../../../connect/jdbc/reference/updatedatetimeoffset-sqlserverresultset.md)|[DateTimeOffset 클래스](../../../connect/jdbc/reference/datetimeoffset-class.md) 열을 업데이트 합니다.|  
 |[updateDouble](../../../connect/jdbc/reference/updatedouble-method-sqlserverresultset.md)|지정된 열을 **double** 값으로 업데이트합니다.|  
 |[updateFloat](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)|지정된 열을 **float** 값으로 업데이트합니다.|  
 |[updateInt](../../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)|지정된 열을 **int** 값으로 업데이트합니다.|  

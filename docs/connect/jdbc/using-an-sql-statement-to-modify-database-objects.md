@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f49ea499-df3c-4e85-9fc7-450fb99622a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 257dba1d93b2a22838cf7c3c631f65a29d517157
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 28c71784f8e51600aef111649b12f81b5878b324
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916382"
 ---
 # <a name="using-an-sql-statement-to-modify-database-objects"></a>SQL 문을 사용하여 데이터베이스 개체 수정
 
@@ -27,7 +26,7 @@ SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
 이렇게 하려면 먼저 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createStatement](../../connect/jdbc/reference/createstatement-method-sqlserverconnection.md) 메서드를 사용하여 SQLServerStatement 개체를 만들어야 합니다.
 
 > [!NOTE]  
-> 데이터베이스에서 개체를 수정하는 SQL 문은 DDL(데이터 정의 언어) 문이라고 합니다. 와 같은 이러한 include 문을 `CREATE TABLE`, `DROP TABLE`를 `CREATE INDEX`, 및 `DROP INDEX`합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 DDL 문의 형식에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 참조하세요.
+> 데이터베이스에서 개체를 수정하는 SQL 문은 DDL(데이터 정의 언어) 문이라고 합니다. `CREATE TABLE` `DROP TABLE`여기 에는`DROP INDEX`, ,및과같은문이포함됩니다.`CREATE INDEX` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 지원하는 DDL 문의 형식에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 참조하세요.
 
 다음 예제에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대해 열린 연결을 함수로 전달하고, 데이터베이스에 간단한 테스트 테이블을 만드는 SQL 문을 생성한 다음, 해당 명령문을 실행하고 반환 값을 표시합니다.
 

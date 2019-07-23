@@ -1,19 +1,18 @@
 ---
 title: Reporting Services에서 KPI 사용 | Microsoft Docs
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: 4e6a5bbf2d744475ca49e3917f6539e81e6439ea
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572806"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329366"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Reporting Services에서 KPI 사용
 
@@ -28,7 +27,10 @@ SQL Server Reporting Services에서 KPI를 사용하여 다음 질문에 대한 
 - 나는 얼마나 앞 또는 뒤에 있는가?  
   
 - 내가 완료 한 최소 금액은 무엇 인가요?  
-  
+
+> [!NOTE]
+> Kpi는 SSRS 포털의 Enterprise (Developer) 버전 에서만 액세스할 수 있습니다.
+
 ## <a name="creating-a-dataset"></a>데이터 세트 만들기
 
 KPI는 공유된 데이터 세트에서 데이터의 첫 행만 사용합니다. 사용하려는 데이터가 첫 행에 있는지 확인합니다. 공유 데이터 세트를 만들기 위해 보고서 작성기 또는 SQL Server Data Tools를 사용할 수 있습니다.  
@@ -40,7 +42,7 @@ KPI는 공유된 데이터 세트에서 데이터의 첫 행만 사용합니다.
 KPI는 보고서 서버의 모든 폴더에서 만들 수 있습니다.  KPI를 만들기 전에 저장할 적합한 위치에 대해 생각해 봐야 할 것입니다. 사용자가 볼 수 있는 폴더에 배치하는 동시에 KPI 주변의 다른 보고서 및 KPI와 관련될 수 있습니다.  
 ## <a name="adding-a-kpi"></a>KPI 추가
   
-KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서 **New(새로 만들기)** > **KPI** 를 선택합니다.  
+KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서 **New(새로 만들기)**  > **KPI** 를 선택합니다.  
   
 ![rsCreateKPI1](../reporting-services/media/rscreatekpi1.png)  
   
@@ -57,7 +59,7 @@ KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서
 | 목표 | 숫자 값에 대한 비교로 사용되며 백분율 차로 표시됩니다. |
 | 상태 | KPI 타일 색을 결정하는 데 사용되는 숫자 값입니다. 유효한 값은 1(녹색), 0(주황색) 및 -1(빨강)입니다. |
 | 추세 집합 | 차트 시각화에 사용되는 쉼표로 구분되는 숫자 값입니다. 또한, 추세를 나타내는 값으로 데이터 세트의 열에 설정할 수도 있습니다. |
-| 관련 내용 | 드릴스루 링크를 설정할 수 있습니다. 이 링크는 포털 또는 사용자 지정 URL에 게시 된 모바일 보고서 일 수 있습니다. |
+| 관련 내용 | 드릴스루 링크를 설정 하는 기능입니다. 이 링크는 포털에 게시 된 모바일 보고서 또는 사용자 지정 URL 일 수 있습니다. |
   
 > **경고**: 설계 시간에 **상태** 필드에 대한 단어 값을 사용할 수 있지만, 데이터 세트를 새로 고침하는 경우 숫자 값을 사용해야 합니다. 숫자 대신 단어 값으로 데이터 세트를 새로 고침할 경우 서버에서 KPI가 손상될 수 있습니다.  
 >
@@ -87,21 +89,21 @@ KPI의 위치를 확인한 후 해당 폴더로 이동하고 상단 메뉴에서
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)
 
-## <a name="configuring-related-content"></a>관련된 콘텐츠를 구성합니다.
+## <a name="configuring-related-content"></a>관련 콘텐츠 구성
 
-선택 하는 경우 **모바일 보고서**, 대상 대화 상자에서 선택할 수 있습니다.
+**모바일 보고서**를 선택 하는 경우 대화 상자에서 대상을 선택할 수 있습니다.
 
    ![모바일 보고서](media/rscreatekpi-related-content-mobile-report.png)
 
-이제 클릭 하면 포털에서 KPI, 모바일 보고서의 미리 보기 관련된 콘텐츠 드롭다운 아래에서 보여 줍니다. 이 축소판 그림을 클릭 직접 이동할 수 있습니다이 보고서.
+이제 포털에서 KPI를 클릭 하면 모바일 보고서의 미리 보기가 관련 콘텐츠 드롭다운 아래에 표시 됩니다. 이 미리 보기를 클릭 하면이 보고서로 바로 이동할 수 있습니다.
 
-또한 사용자 지정 URL을 지정할 수 있습니다. 이 작업 항목 수: 웹 사이트, SharePoint 사이트 (허용 하는 하드 코드 된 매개 변수를 전달할 수 있습니다) SSRS 보고서에 대 한 URL입니다.
+사용자 지정 URL을 지정할 수도 있습니다. 이 작업은 웹 사이트, SharePoint 사이트, SSRS 보고서에 대 한 URL (하드 코드 된 매개 변수를 함께 전달할 수 있음) 일 수 있습니다.
 
 ![사용자 지정 URL](media/rscreatekpi-related-content-custom-url.png)
 
-이제 KPI에서 클릭 하면 관련된 콘텐츠 아래 URL이 표시 됩니다.
+이제 KPI를 클릭 하면 관련 콘텐츠 아래에 URL이 표시 됩니다.
 
-모바일 보고서 또는 사용자 지정 URL을 한 개를 추가 하는 것만 같습니다.
+하나 이상의 모바일 보고서 또는 사용자 지정 URL 하나를 추가할 수 있습니다.
   
 ## <a name="removing-a-kpi"></a>KPI 제거  
   

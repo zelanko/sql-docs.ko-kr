@@ -1,6 +1,6 @@
 ---
 title: SQL Server 테이블에 열 추가 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버를 사용 하 여 SQL Server 테이블에 열 추가
+description: SQL Server 용 OLE DB Driver를 사용 하 여 SQL Server 테이블에 열 추가
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,22 +15,21 @@ helpviewer_keywords:
 - adding columns
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 282166444597245ad70be565ce6db9f01533a227
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c6cd539e499f80342a30371d047c9870c4fda08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994098"
 ---
 # <a name="adding-a-column-to-a-sql-server-table"></a>SQL Server 테이블에 열 추가
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server 노출 합니다 **ITableDefinition::AddColumn** 함수입니다. 소비자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 열을 추가할 수 있습니다.  
+  SQL Server에 대 한 OLE DB 드라이버는 **Itabledefinition:: AddColumn** 함수를 노출 합니다. 소비자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 열을 추가할 수 있습니다.  
   
- 열을 추가 하는 경우는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블, OLE DB 드라이버의 SQL Server 소비자는 다음과 같이 제한 됩니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 열을 추가 하는 경우 SQL Server 소비자에 대 한 OLE DB 드라이버는 다음과 같이 제한 됩니다.  
   
 -   DBPROP_COL_AUTOINCREMENT가 VARIANT_TRUE이면 DBPROP_COL_NULLABLE은 VARIANT_FALSE여야 합니다.  
   

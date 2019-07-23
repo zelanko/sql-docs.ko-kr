@@ -1,6 +1,6 @@
 ---
-title: 대규모 데이터 가져오기 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버를 사용 하는 대규모 데이터 가져오기
+title: 대량 데이터 가져오기 | Microsoft Docs
+description: SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 대량 데이터 가져오기
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - large data, OLE objects
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 968ab9c3d586a9a1b49d356a6e55ff35336c28cd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fc9b1ccc24a31083e2a6ef111ad2e79781eef6d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936531"
 ---
 # <a name="getting-large-data"></a>대규모 데이터 가져오기
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "66803931"
   
 -   ICommand::Execute  
   
- 행 집합 속성 그룹의 DBPROP_ACCESSORDER 속성이 DBPROPVAL_AO_SEQUENTIAL 또는 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 중 하나로 설정되어 있으면 소비자는 **GetNextRows** 메서드 호출에서 단일 데이터 행만 인출해야 합니다. BLOB 데이터가 버퍼링 되지 때문입니다. DBPROP_ACCESSORDER 값이 DBPROPVAL_AO_RANDOM으로 설정되어 있으면 소비자가 **GetNextRows**에서 여러 데이터 행을 인출할 수 있습니다.  
+ 행 집합 속성 그룹의 DBPROP_ACCESSORDER 속성이 DBPROPVAL_AO_SEQUENTIAL 또는 DBPROPVAL_AO_SEQUENTIALSTORAGEOBJECTS 중 하나로 설정되어 있으면 소비자는 **GetNextRows** 메서드 호출에서 단일 데이터 행만 인출해야 합니다. 이는 BLOB 데이터가 버퍼링 되지 않기 때문입니다. DBPROP_ACCESSORDER 값이 DBPROPVAL_AO_RANDOM으로 설정되어 있으면 소비자가 **GetNextRows**에서 여러 데이터 행을 인출할 수 있습니다.  
   
- OLE DB Driver for SQL Server에서 큰 데이터를 검색 하지 않습니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 이렇게 하려면 소비자가 요청할 때까지 합니다. 소비자는 모든 소규모 데이터를 하나의 접근자에 바인딩한 다음 필요에 따라 하나 이상의 임시 접근자를 사용하여 대규모 데이터 값을 검색해야 합니다.  
+ SQL Server에 대 한 OLE DB 드라이버는 고객이 요청을 받을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 때까지에서 대량 데이터를 검색 하지 않습니다. 소비자는 모든 소규모 데이터를 하나의 접근자에 바인딩한 다음 필요에 따라 하나 이상의 임시 접근자를 사용하여 대규모 데이터 값을 검색해야 합니다.  
   
 ## <a name="example"></a>예제  
  이 예는 단일 열에서 대규모 데이터 값을 검색합니다.  

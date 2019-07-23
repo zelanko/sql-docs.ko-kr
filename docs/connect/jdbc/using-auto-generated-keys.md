@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 55a062c7-45ce-40e3-9a6f-4a0f4da4e2a6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4d45e8966ffb57ba10ac96967cfbc87d820e7085
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 55541d7487f27a6fa4e38fef8baf47a6ef3ff6d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003991"
 ---
 # <a name="using-auto-generated-keys"></a>자동 생성 키 사용
 

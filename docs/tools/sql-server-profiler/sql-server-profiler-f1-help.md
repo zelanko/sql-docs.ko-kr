@@ -41,17 +41,16 @@ helpviewer_keywords:
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e042e9d81d389a323e092b2f370b03cb66c2921c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 32cc19df636f6e0fa98dca0ab45dd8142d9db54f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059705"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler 대화 상자
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 서버로부터 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 캡처하는 도구입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다. 다음은 명령 및의 대화 상자에서 사용 가능한 설정 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]합니다.  
+Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 서버로부터 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이벤트를 캡처하는 도구입니다. 이벤트는 추적 파일에 저장되며 이 파일은 나중에 분석되거나 문제를 진단할 때 특정 단계를 다시 수행하기 위해 사용할 수 있습니다. 다음은의 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]대화 상자에서 사용할 수 있는 명령 및 설정입니다.  
 ## <a name="trace-properties"></a>추적 속성
 ### <a name="general-tab"></a>일반 탭
 **추적 속성** 대화 상자의 **일반** 탭을 사용하여 추적의 속성을 확인하거나 지정할 수 있습니다.  
@@ -87,7 +86,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] 는 서�
 |**열 구성**|추적의 열 순서를 변경하고 결과를 하나 이상의 열로 그룹화합니다.  
 
 ## <a name="trace-template-properties"></a>추적 템플릿 속성 
-### <a name="new-general-tab"></a>새 (일반 탭)
+### <a name="new-general-tab"></a>새로 만들기 (일반 탭)
 **추적 템플릿 속성** 대화 상자의 **일반** 탭을 사용하여 다음 옵션으로 새 추적 템플릿을 만들 수 있습니다. 이 대화 상자에 액세스하려면 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **파일** 메뉴에서 **템플릿**을 가리킨 다음, **새로 만들기**를 클릭합니다.
 
 |항목|설명

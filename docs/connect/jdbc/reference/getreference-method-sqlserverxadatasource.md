@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c9e7b904-2e98-459f-9173-382919d741e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d45536588b4870f688fc0f8256233f6037c3987
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 189b35b98c6b604563d056f286b9640ee47637a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980455"
 ---
 # <a name="getreference-method-sqlserverxadatasource"></a>getReference 메서드(SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

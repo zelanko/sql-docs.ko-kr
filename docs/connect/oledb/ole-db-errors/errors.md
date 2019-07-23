@@ -16,13 +16,12 @@ helpviewer_keywords:
 - OLE DB error handling
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: a9f937e130af664570b92b006a54d329b33b9e23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bf1985706cefc3007da56a9bf782a070e3b8edf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994959"
 ---
 # <a name="errors"></a>오류
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "66798141"
   
  SQL Server용 OLE DB 드라이버는 OLE DB 레코드로 향상된 **IErrorInfo**, 사용자 지정 **ISQLErrorInfo** 및 공급자별 [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) 오류 개체 인터페이스를 제공합니다.  
   
- 오류 추적에 대한 자세한 내용은 [데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805)을 참조하십시오. 에 추가 하는 오류 추적 향상 기능에 대 한 자세한 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]를 참조 하세요 [확장 이벤트 로그의 진단 정보 액세스](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)합니다.  
+ 오류 추적에 대한 자세한 내용은 [데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805)을 참조하십시오. 에 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]추가 된 오류 추적의 향상 된 기능에 대 한 자세한 내용은 [확장 이벤트 로그에서 진단 정보에 액세스](../../oledb/features/accessing-diagnostic-information-in-the-extended-events-log.md)를 참조 하세요.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

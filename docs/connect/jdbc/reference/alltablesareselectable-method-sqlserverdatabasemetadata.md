@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eb340450-45a7-49c8-84bc-1b9dd5ee842f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fbc609140cf15e90e409cf123f59ae3409d15a26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2fa61d7239858cb3479e7eeaa730e4197bf6bc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955869"
 ---
 # <a name="alltablesareselectable-method-sqlserverdatabasemetadata"></a>allTablesAreSelectable 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean allTablesAreSelectable()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 allTablesAreSelectable 메서드는 java.sql.DatabaseMetaData 인터페이스의 allTablesAreSelectable 메서드에 의해 지정 됩니다.  
+ 이 Allnode.js Are선택할 수 있는 메서드는 java. DatabaseMetaData 인터페이스의 Allnode.js Are선택할 수 있는 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

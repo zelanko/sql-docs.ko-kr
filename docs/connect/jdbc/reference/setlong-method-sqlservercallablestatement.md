@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 137416fe-a580-424e-be79-fe946eba9e6e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e10e06460ee04abeace42af47c84270901fa1a17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f7110594eb808a50fa88e22b1e38d2a4052066f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974042"
 ---
 # <a name="setlong-method-sqlservercallablestatement"></a>setLong 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void setLong(java.lang.String sCol,
   
  *l*  
   
- A **긴** 값입니다.  
+ **Long** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: updateNString 메서드 (int, java.lang.String) | Microsoft Docs
+title: updateNString 메서드 (int, java. lang) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1bb909f1-4a96-4be1-adea-36c8d9703112
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c00621a2fedce7d9fba4d65f248b412627ee6233
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90aa44eda2af60ffdc73a65e01b3ae12b949d79f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998800"
 ---
 # <a name="updatenstring-method-int-javalangstring"></a>updateNString 메서드(int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public void updateNString(int columnIndex,
   
  *nString*  
   
- A **문자열** 개체입니다.  
+ **문자열** 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -46,7 +45,7 @@ public void updateNString(int columnIndex,
 ## <a name="remarks"></a>Remarks  
  이 updateNString 메서드는 java.sql.ResultSet 인터페이스의 updateNString 메서드에 의해 지정됩니다.  
   
- 이 메서드는 Java 전달 **문자열** 를 선택한 **nchar**를 **nvarchar (max)** 를 **ntext**, 및 **xml** 열입니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
+ 이 메서드는 Java **문자열** 을 선택한 **nchar**, **nvarchar (max)** , **ntext**및 **xml** 열에 전달 합니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateNString 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   
