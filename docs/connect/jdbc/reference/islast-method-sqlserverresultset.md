@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 85d4451f-6392-470e-ab21-78a495b45792
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dab78e0f48f2bb7debcf5d993dfb128388a42506
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 840d1183794a5d69ad108aef8eee9ef7aedffe4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796515"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977614"
 ---
 # <a name="islast-method-sqlserverresultset"></a>isLast 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean isLast()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 커서가 마지막 행에 있는 경우. **false** 커서가 그 외의 위치 또는 결과 집합에 행이 없습니다.  
+ 커서가 마지막 행에 있으면 **true** 입니다. 커서가 다른 위치에 있거나 결과 집합에 행이 포함 되어 있지 않으면 **false** 입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

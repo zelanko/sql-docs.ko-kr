@@ -1,6 +1,6 @@
 ---
-title: 결과 집합 (OLE DB)에서 행을 인출 합니다. | Microsoft Docs
-description: 결과 SQL Server 용 OLE DB 드라이버를 사용 하 여 집합에서 행을 인출 합니다.
+title: 결과 집합에서 행 인출 (OLE DB) | Microsoft Docs
+description: SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 결과 집합에서 행 페치
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - rows [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: cd3369e685b495fa775a350a9b5fc7dcae2a5f57
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8aed6ce5eb93c68f22217667fe01306e28d9910e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015554"
 ---
 # <a name="fetch-rows-from-a-result-set-ole-db"></a>결과 집합에서 행 인출(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

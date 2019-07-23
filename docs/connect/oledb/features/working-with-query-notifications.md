@@ -1,6 +1,6 @@
 ---
-title: 쿼리 알림 작업 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버에서 쿼리 알림 작업
+title: 쿼리 알림 사용 | Microsoft Docs
+description: SQL Server에 대 한 OLE DB 드라이버에서 쿼리 알림 사용
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - consumer notification for rowset changes [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 20860d018e8971089ee1eb80ec0303bdc63ef211
-ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
+ms.openlocfilehash: 5b563099b161fa9b55a72820edd3411a4c72b4fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67208342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988733"
 ---
 # <a name="working-with-query-notifications"></a>쿼리 알림 작업
 
@@ -35,7 +34,7 @@ ms.locfileid: "67208342"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-에 도입 된 쿼리 알림 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 및 OLE DB Driver for SQL Server입니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입된 Service Broker 인프라를 기반으로 구축된 쿼리 알림을 통해 응용 프로그램은 데이터 변경 시 알림을 받을 수 있습니다. 이 기능은 데이터베이스의 정보 캐시를 제공하며 원본 데이터 변경 시 알림을 받아야 하는 응용 프로그램(예: 웹 응용 프로그램)에 특히 유용합니다.
+쿼리 알림은 및 SQL Server에 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 대 한 OLE DB 드라이버에서 도입 되었습니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입된 Service Broker 인프라를 기반으로 구축된 쿼리 알림을 통해 응용 프로그램은 데이터 변경 시 알림을 받을 수 있습니다. 이 기능은 데이터베이스의 정보 캐시를 제공하며 원본 데이터 변경 시 알림을 받아야 하는 응용 프로그램(예: 웹 응용 프로그램)에 특히 유용합니다.
 
 쿼리 알림을 사용하면 쿼리의 기본 데이터가 변경될 때 지정한 제한 시간 내에 알림을 요청할 수 있습니다. 알림 요청은 서비스 이름, 메시지 텍스트 및 제한 시간 값을 비롯한 알림 옵션을 서버에 지정합니다. 알림은 응용 프로그램에서 사용 가능한 알림을 폴링할 수 있는 Service Broker 큐를 통해 배달됩니다.
 
@@ -71,7 +70,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 
 ## <a name="ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버
 
-OLE DB Driver for SQL Server 행 집합 수정에 소비자 알림을 지원합니다. 소비자는 모든 행 집합 수정 단계와 변경 시도에 대해 알림을 받습니다.
+SQL Server에 대 한 OLE DB 드라이버는 행 집합 수정에 대 한 소비자 알림을 지원 합니다. 소비자는 모든 행 집합 수정 단계와 변경 시도에 대해 알림을 받습니다.
 
 > [!NOTE]
 > **ICommand::Execute**를 사용하여 알림 쿼리를 서버로 전달해야만 SQL Server OLE DB 드라이버에서 쿼리 알림을 구독할 수 있습니다.
@@ -110,7 +109,7 @@ SSPROP_QP_NOTIFICATION_MSGTEXT 및 SSPROP_QP_NOTIFICATION_OPTIONS가 NULL이 아
 > [!NOTE]
 > 문을 준비할 때는 구독이 시작되지 않습니다. 문을 실행해야 구독이 시작되며 쿼리 알림은 OLE DB 핵심 서비스 사용의 영향을 받지 않습니다.
 
-DBPROPSET_SQLSERVERROWSET 속성 집합에 대 한 자세한 내용은 참조 하세요. [행 집합 속성 및 동작](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)합니다.
+DBPROPSET_SQLSERVERROWSET 속성 집합에 대 한 자세한 내용은 [행 집합 속성 및 동작](../../oledb/ole-db-rowsets/rowset-properties-and-behaviors.md)을 참조 하세요.
 
 ## <a name="see-also"></a>참고 항목
 

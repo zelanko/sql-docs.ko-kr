@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fa17cc56-fb38-433b-a40d-65642f04dc23
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7854d52116b9092a069043f8e3c1ca9a23fbbce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64ddca64f049ba95426dec542d68dc8a84e7d9dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015016"
 ---
 # <a name="sqlsrvgetfield"></a>sqlsrv_get_field
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

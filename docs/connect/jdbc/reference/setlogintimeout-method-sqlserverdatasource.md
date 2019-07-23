@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b63d1cf4-dc1b-4e35-9a56-50436642eaaf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a242499204215f0d8ecdb16698bcc0fe07377db3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a64bc643e8d5a9d820b2bcd9cd307f033a869d7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974090"
 ---
 # <a name="setlogintimeout-method-sqlserverdatasource"></a>setLoginTimeout 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public void setLoginTimeout(int loginTimeout)
  대기할 시간(초)을 나타내는 **int** 값입니다. 0은 제한 시간이 기본 시스템 제한 시간(기본적을 15초로 지정됨)임을 의미합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이 setLoginTimeout 메서드는 javax.sql.DataSource 인터페이스의 setLoginTimeout 메서드에 의해 지정 됩니다.  
+ 이 setLoginTimeout 메서드는 javax.sql 인터페이스의 setLoginTimeout 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDataSource 멤버](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

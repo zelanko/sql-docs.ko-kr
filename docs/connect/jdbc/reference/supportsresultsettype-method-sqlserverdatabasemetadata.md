@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aded734f-c96e-460f-afaa-8f64a92560d7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c3438f7a17e919e905ea12e064a4d145ba16e728
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5966367c786cc8e591103166bbe8dadb47c664f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968933"
 ---
 # <a name="supportsresultsettype-method-sqlserverdatabasemetadata"></a>supportsResultSetType 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -59,13 +58,13 @@ public boolean supportsResultSetType(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsResultSetType 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsResultSetType 메서드에 의해 지정 됩니다.  
+ 이 supportsResultSetType 메서드는 java. DatabaseMetaData 인터페이스의 supportsResultSetType 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

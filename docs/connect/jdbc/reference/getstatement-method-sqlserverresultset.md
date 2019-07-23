@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7dea981b-b4fd-4f8d-954f-e686124627e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3284704376609da6b17c6f0769fec62dde275d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7fca859273c5eff58cde02b98f98699307ff1b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979587"
 ---
 # <a name="getstatement-method-sqlserverresultset"></a>getStatement 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

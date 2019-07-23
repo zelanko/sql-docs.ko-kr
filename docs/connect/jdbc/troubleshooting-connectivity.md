@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 05a8e57b4d531d05cdf14cb57ab164851d0c1800
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7bfb8eee85e9eede4dcf3e47ad4ecbe13a08d2ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004238"
 ---
 # <a name="troubleshooting-connectivity"></a>연결 문제 해결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66798245"
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치되어 있지만 TCP/IP가 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네트워크 유틸리티 또는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 네트워크 프로토콜로 설치되어 있지 않습니다.  
   
-    -   TCP/IP가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로토콜로 설치되어 있지만 JDBC 연결 URL에 지정한 포트에서 수신 대기하고 있지 않습니다. 기본 포트는 1433이지만 제품 설치 시 임의의 포트에서 수신 대기하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 포트 1433에서 수신 대기 중인지 확인합니다. 또는 포트를 변경한 경우 JDBC 연결 URL에 지정된 포트가 변경된 포트와 일치하는지 확인합니다. JDBC 연결 Url에 대 한 자세한 내용은 참조 하세요. [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)합니다.  
+    -   TCP/IP가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로토콜로 설치되어 있지만 JDBC 연결 URL에 지정한 포트에서 수신 대기하고 있지 않습니다. 기본 포트는 1433이지만 제품 설치 시 임의의 포트에서 수신 대기하도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 구성할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 포트 1433에서 수신 대기 중인지 확인합니다. 또는 포트를 변경한 경우 JDBC 연결 URL에 지정된 포트가 변경된 포트와 일치하는지 확인합니다. JDBC 연결 Url에 대 한 자세한 내용은 [연결 Url 작성](../../connect/jdbc/building-the-connection-url.md)을 참조 하세요.  
   
     -   JDBC 연결 URL에 지정한 컴퓨터 주소가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치되어 실행되는 서버를 가리키지 않습니다.  
   

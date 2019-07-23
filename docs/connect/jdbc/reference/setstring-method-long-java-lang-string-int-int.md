@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 604e39fcf2d8bd6bfb218fe33fda391c2b53403a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5741f8ba74009327befc8f940e1d3b37df6ef1ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972705"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>setString 메서드(long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7641698e-b25c-4bb2-bcc7-9273bdd08bf0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e6ce2f52a8f3326a753d1647bd865c7d6d939e45
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d0a2c40462784558f4d618c7e3d0a206d6d382
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953296"
 ---
 # <a name="getcharacterstream-method--sqlservernclob"></a>getCharacterStream 메서드()(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public java.io.Reader getCharacterStream()
  **NCLOB** 데이터가 들어 있는 Reader 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  
- GetCharacterStream 메서드가 java.sql.NClob 인터페이스의 getCharacterStream 메서드에 의해 지정 됩니다.  
+ 이 getCharacterStream 메서드는 getCharacterStream 인터페이스의 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getCharacterStream 메서드&#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)   

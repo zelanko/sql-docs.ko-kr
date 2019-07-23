@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9dcdbf69-1d47-422c-842e-0bed5afdcb93
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f1b73f9a0d1c95978dc92d3139ba637bfa707b6f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 91cc095971d4cf4b613d1a9447ee10b6c8a65d75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981867"
 ---
 # <a name="getmetadata-method-sqlserverresultset"></a>getMetaData 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.sql.ResultSetMetaData getMetaData()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getMetaData 메서드는 java.sql.ResultSet 인터페이스의 getMetaData 메서드에 의해 지정 됩니다.  
+ 이 getMetaData 메서드는 getMetaData 인터페이스의 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

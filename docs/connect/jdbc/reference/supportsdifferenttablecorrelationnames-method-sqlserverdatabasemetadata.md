@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b4f8db0c-2eaf-476b-b916-3e83355778f7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb739baaacaf84c4853a7c62a261832bb8c5d2bf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3c938fc0da6ed235f080492e573ad558d75751c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969428"
 ---
 # <a name="supportsdifferenttablecorrelationnames-method-sqlserverdatabasemetadata"></a>supportsDifferentTableCorrelationNames 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsDifferentTableCorrelationNames()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsDifferentTableCorrelationNames 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsDifferentTableCorrelationNames 메서드에 의해 지정 됩니다.  
+ 이 supportsDifferentTableCorrelationNames 메서드는 supportsDifferentTableCorrelationNames 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

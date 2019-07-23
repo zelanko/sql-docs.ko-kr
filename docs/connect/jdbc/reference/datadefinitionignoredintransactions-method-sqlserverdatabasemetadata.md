@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스 트랜잭션 내의 데이터 정의 문을 무시 | Microsoft Docs
+title: 데이터베이스에서 트랜잭션 내의 데이터 정의 문을 무시 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1674fb46-43a7-46d0-9f05-cf993d3bc032
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fda0e082d8f0f35995e622f7f3a47b0a075f9eee
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4d1538cc4aaf3e62086f57602b29ce0e61bceb6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772837"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955203"
 ---
 # <a name="datadefinitionignoredintransactions-method-sqlserverdatabasemetadata"></a>dataDefinitionIgnoredInTransactions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean dataDefinitionIgnoredInTransactions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 dataDefinitionIgnoredInTransactions 메서드는 java.sql.DatabaseMetaData 인터페이스의 dataDefinitionIgnoredInTransactions 메서드에 의해 지정 됩니다.  
+ 이 dataDefinitionIgnoredInTransactions 메서드는 dataDefinitionIgnoredInTransactions 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

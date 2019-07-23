@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 70bbdde0-75f7-4169-88c5-dbbe2c4bcd03
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c335edb18b1aef95354b74c7fe1ad80754b99d4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2a1af43238d2f0da19c65535f3c6f84fa0e434f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972803"
 ---
 # <a name="setsqlxml-method-sqlserverpreparedstatement"></a>setSQLXML 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

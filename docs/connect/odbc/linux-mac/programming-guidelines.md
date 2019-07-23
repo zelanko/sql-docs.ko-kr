@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45d1fc9d06dd814e4ee6d80ec5ecbbe9e58d09c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798744"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264150"
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
 
@@ -130,6 +129,8 @@ ODBC 드라이버 13 및 13.1에서 UTF-8 멀티바이트 문자 또는 UTF-16 �
     > DAC 연결은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용해야 합니다.  
     
 2.  UnixODBC 드라이버 관리자는 문 특성이 SQLSetConnectAttr을 통해 전달될 때 모든 문 특성에 대해 "잘못된 특성/옵션 식별자"를 반환합니다. Windows에서 SQLSetConnectAttr이 명령문 특성 값을 받을 때 드라이버가 연결 핸들의 자식인 모든 활성 명령문의 해당 값을 설정합니다.  
+
+3.  다중 스레드 응용 프로그램에서 드라이버를 사용 하는 경우 다중 스레드 처리 유효성 검사가 성능 병목 상태가 될 수 있습니다. 이러한 시나리오에서는 `--enable-fastvalidate` 옵션을 사용 하 여 다양 한 옵션을 사용 하 여 다양 한 성능을 얻을 수 있습니다. 그러나이로 인해 오류가 반환 `SQL_INVALID_HANDLE` 되는 것이 아니라 ODBC api에 잘못 된 핸들을 전달 하는 응용 프로그램이 작동 하지 않을 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목  
 [질문과 대답](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

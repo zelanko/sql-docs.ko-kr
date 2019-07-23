@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c4e8d429490a0dd7fe8f0a259d065f1f4914dd29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956170"
 ---
 # <a name="programming-with-sqlxml"></a>SQLXML을 사용한 프로그래밍
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -28,11 +27,11 @@ ms.locfileid: "66794052"
 ## <a name="reading-and-writing-xml-data-with-sqlxml-objects"></a>SQLXML 개체를 사용하여 XML 데이터 읽기 및 쓰기  
  다음 목록은 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] API 메서드를 사용하여 SQLXML 개체를 통해 XML 데이터를 읽고 쓰는 방법에 대해 설명합니다.  
   
--   SQLXML 개체를 만들려면 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 메서드를 사용합니다. 이 메서드는 데이터가 포함되어 있지 않은 SQLXML 개체를 만듭니다. 추가할 **xml** SQLXML 개체에 데이터를 SQLXML 인터페이스에 지정 된 다음 방법 중 하나를 호출 합니다., setBinaryStream, setCharacterStream, setResult 또는 setString 합니다.  
+-   SQLXML 개체를 만들려면 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [createSQLXML](../../connect/jdbc/reference/createsqlxml-method-sqlserverconnection.md) 메서드를 사용합니다. 이 메서드는 데이터가 포함되어 있지 않은 SQLXML 개체를 만듭니다. SQLXML 개체에 **xml** 데이터를 추가 하려면 sqlxml 인터페이스에 지정 된 다음 메서드 (setresult, SetCharacterStream, setBinaryStream 또는 setresult) 중 하나를 호출 합니다.  
   
 -   SQLXML 개체 자체를 검색하려면 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스 또는 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 getSQLXML 메서드를 사용합니다.  
   
--   검색 하는 **xml** SQLXML 개체를 데이터로 SQLXML 인터페이스에 지정 된 다음 방법 중 하나를 사용 합니다: getSource, getCharacterStream, getBinaryStream, 또는 getString 합니다.  
+-   SQLXML 개체에서 **xml** 데이터를 검색 하려면 sqlxml 인터페이스에 지정 된 Getsource, GetCharacterStream, getBinaryStream 또는 getString 메서드 중 하나를 사용 합니다.  
   
 -   SQLXML 개체의 **xml** 데이터를 업데이트하려면 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 [updateSQLXML](../../connect/jdbc/reference/updatesqlxml-method-sqlserverresultset.md) 메서드를 사용합니다.  
   

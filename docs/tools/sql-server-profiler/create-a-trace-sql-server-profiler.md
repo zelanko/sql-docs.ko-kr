@@ -1,5 +1,5 @@
 ---
-title: 추적 (SQL Server Profiler) 만들기 | Microsoft Docs
+title: 추적 만들기 (SQL Server Profiler) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2016
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: dcc2a2e828360d26eb5dde3ec41cd85395d9c8fd
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: cb6a3f10f93d7bba147dca0cc9f7bbb879a82d68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930163"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>추적 만들기(SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -1,6 +1,6 @@
 ---
-title: 'Irow:: Getcolumns를 사용 하 여 | Microsoft Docs'
-description: 'Irow:: Getcolumns를 사용 하 여 행의 모든 열에 액세스 하려면'
+title: 'IRow:: GetColumns 사용 | Microsoft Docs'
+description: 'IRow:: GetColumns를 사용 하 여 행의 모든 열에 액세스'
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 - GetColumns method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: f210e06b3c1304251e52ad8fc3f3177fef5e5a10
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ddec5950f9dd8acc55c8bf1b6fe751bd0f34ac1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015334"
 ---
 # <a name="using-irowgetcolumns"></a>IRow::GetColumns 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6daca03f-c60f-4842-b9e3-11d136e78312
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a6451896913876c3694a72e877c449109c61ac0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0fdc853608cf1897e97e08aac673aff78df00aef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998547"
 ---
 # <a name="updatenstring-method-javalangstring-javalangstring"></a>updateNString 메서드(java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ public void updateNString(java.lang.String columnLabel,
   
  *nString*  
   
- A **문자열** 개체입니다.  
+ **문자열** 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -46,7 +45,7 @@ public void updateNString(java.lang.String columnLabel,
 ## <a name="remarks"></a>Remarks  
  이 updateNString 메서드는 java.sql.ResultSet 인터페이스의 updateNString 메서드에 의해 지정됩니다.  
   
- 이 메서드는 Java 전달 **문자열** 를 선택한 **nchar**를 **nvarchar (max)** 를 **ntext**, 및 **xml** 열입니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
+ 이 메서드는 Java **문자열** 을 선택한 **nchar**, **nvarchar (max)** , **ntext**및 **xml** 열에 전달 합니다. 다른 데이터 형식 열에 이 메서드를 사용하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateNString 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenstring-method-sqlserverresultset.md)   

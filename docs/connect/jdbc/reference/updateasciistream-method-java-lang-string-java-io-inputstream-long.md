@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d426e8b9-62b7-49f8-9863-8697fd3a7085
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f340131d0f08b77efe1b497299405fcae8dc1dfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf88e18d8b68bff0f2d82d589e5760bfbb25d12e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986281"
 ---
 # <a name="updateasciistream-method-javalangstring-javaioinputstream-long"></a>updateAsciiStream 메서드(java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateAsciiStream(java.lang.String columnName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 updateAsciiStream 메서드는 java.sql.ResultSet 인터페이스의 updateAsciiStream 메서드에 의해 지정 됩니다.  
+ 이 updateAsciiStream 메서드는 java. ResultSet 인터페이스의 updateAsciiStream 메서드에 의해 지정 됩니다.  
   
  이 메서드는 InputStream 개체의 ASCII 문자(바이트)를 변환 가능한 문자 열에 전달합니다. 이러한 열은 유니코드의 ASCII 범위 [0x00 – 0x7F]와 874, 932, 936, 949, 950, 1250-1258 코드 페이지입니다. 이 메서드는 대상 데이터 정렬 페이지에 대한 변환을 수행합니다. 변환할 수 없는 대상 열을 업데이트하려고 하면 예외가 발생합니다. 이진 열의 경우 원시 바이트가 전달됩니다.  
   

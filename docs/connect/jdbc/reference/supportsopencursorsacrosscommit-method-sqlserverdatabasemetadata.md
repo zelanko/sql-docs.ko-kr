@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b7eed108-64cc-4be6-b297-8af6c1e3dc72
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2bf1e1b24295a491fdd17df45c126f5c3151403e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 264f61c744be0ffc614ca3f45e5268715c680ed8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969101"
 ---
 # <a name="supportsopencursorsacrosscommit-method-sqlserverdatabasemetadata"></a>supportsOpenCursorsAcrossCommit 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsOpenCursorsAcrossCommit()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsOpenCursorsAcrossCommit 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsOpenCursorsAcrossCommit 메서드에 의해 지정 됩니다.  
+ 이 supportsOpenCursorsAcrossCommit 메서드는 supportsOpenCursorsAcrossCommit 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

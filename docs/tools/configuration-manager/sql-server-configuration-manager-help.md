@@ -13,20 +13,19 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 2610106e0ab691af885bb8eb3c1d62555db7f56f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: fa579e072ffdddc70e10d3ad1e9a205840374aee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024090"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 구성 관리자 도움말
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스와 네트워크 연결을 구성할 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 를 사용하면 데이터베이스 개체를 만들거나 관리하고, 보안을 구성하고, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]쿼리를 작성할 수 있습니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
 
  > [!TIP]
- > 구성 해야 할 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] linux에서 사용 합니다 **mssql conf** 도구입니다. 자세한 내용은 [mssql-conf 도구를 사용 하 여 Linux에서 SQL Server 구성](../../linux/sql-server-linux-configure-mssql-conf.md)합니다.
+ > Linux에서를 구성 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 해야 하는 경우 **mssql-회의** 도구를 사용 합니다. 자세한 내용은 [mssql-회의 도구를 사용 하 여 SQL Server on Linux 구성](../../linux/sql-server-linux-configure-mssql-conf.md)을 참조 하세요.
 
  이 섹션에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자의 대화 상자에 대한 F1 도움말 항목을 제공합니다.  
   

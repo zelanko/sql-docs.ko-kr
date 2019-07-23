@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0b6b65a1-8e62-4cd5-ab28-6231c3e20d81
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e127e1b102ecab9a848c19b060a36927246e9557
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 068e9d4b633a7d958224e99c64001e880f847b2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998542"
 ---
 # <a name="updatenstring-method-sqlserverresultset"></a>updateNString 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

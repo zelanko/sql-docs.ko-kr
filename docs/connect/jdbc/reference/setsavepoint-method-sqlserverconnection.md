@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c39c6b4f-b9e2-423b-94ae-9f82d9e6d08d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 565168626bc62bfc718e2309fdbe6e28e5e2b366
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3ea0f2b9f9e08f44da775f1e93df8ee7afe16bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973067"
 ---
 # <a name="setsavepoint-method-sqlserverconnection"></a>setSavepoint 메서드(SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

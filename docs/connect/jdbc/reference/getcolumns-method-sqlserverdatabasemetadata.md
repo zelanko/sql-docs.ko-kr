@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f173fa5d-e114-4a37-a5c4-2baad9ff3af1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2a3f536c180106ed29ae5758433d2f59bb7a8b47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d34f5748a5a85d67754ea9a001ba1819935e53a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66763384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952833"
 ---
 # <a name="getcolumns-method-sqlserverdatabasemetadata"></a>getColumns 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -74,7 +73,7 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |COLUMN_NAME|**String**|열 이름입니다.|  
 |DATA_TYPE|**smallint**|java.sql.Types의 SQL 데이터 형식입니다.|  
 |TYPE_NAME|**String**|데이터 형식의 이름입니다.|  
-|COLUMN_SIZE|**ssNoversion**|열의 전체 자릿수입니다.|  
+|COLUMN_SIZE|**int**|열의 전체 자릿수입니다.|  
 |BUFFER_LENGTH|**smallint**|데이터의 전송 크기입니다.|  
 |DECIMAL_DIGITS|**smallint**|열의 소수 자릿수입니다.|  
 |NUM_PREC_RADIX|**smallint**|열의 기수입니다.|  
@@ -83,8 +82,8 @@ public java.sql.ResultSet getColumns(java.lang.String catalog,
 |COLUMN_DEF|**String**|열의 기본값입니다.|  
 |SQL_DATA_TYPE|**smallint**|설명자의 TYPE 필드에 표시되는 SQL 데이터 형식의 값입니다. 이 열은 datetime 및 SQL-92 interval 데이터 형식을 제외하고는 DATA_TYPE 열과 동일합니다. 이 열은 항상 값을 반환합니다.|  
 |SQL_DATETIME_SUB|**smallint**|datetime 및 SQL-92 interval 데이터 형식에 대한 하위 형식 코드입니다. 이 열은 다른 데이터 형식에 대해서는 NULL을 반환합니다.|  
-|CHAR_OCTET_LENGTH|**ssNoversion**|열의 최대 바이트 수입니다.|  
-|ORDINAL_POSITION|**ssNoversion**|테이블 내의 열 인덱스입니다.|  
+|CHAR_OCTET_LENGTH|**int**|열의 최대 바이트 수입니다.|  
+|ORDINAL_POSITION|**int**|테이블 내의 열 인덱스입니다.|  
 |IS_NULLABLE|**String**|열에 null 값을 사용할 수 있는지 여부를 나타냅니다.|  
 |SS_IS_SPARSE|**smallint**|열이 스파스 열이면 1 값을 갖고, 그렇지 않으면 0.<sup>1</sup> 값을 갖습니다.|  
 |SS_IS_COLUMN_SET|**smallint**|열이 스파스 column_set 열이면 1 값을 갖고, 그렇지 않으면 0 값을 갖습니다. <sup>1</sup>|  

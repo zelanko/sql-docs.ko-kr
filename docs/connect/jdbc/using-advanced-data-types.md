@@ -1,5 +1,5 @@
 ---
-title: 고급 데이터 형식을 사용 하 여 | Microsoft Docs
+title: 고급 데이터 형식 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2682d5fe31bcd2f22eb92960ab16f70458687b55
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004069"
 ---
 # <a name="using-advanced-data-types"></a>고급 데이터 형식 사용
 
@@ -48,7 +47,7 @@ ms.locfileid: "66790359"
 JDBC 드라이버는 java.sql.Blob, java.sql.Clob 및 java.sql.NClob 인터페이스의 모든 메서드를 구현합니다.  
   
 > [!NOTE]  
-> CLOB 값은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상의 큰 값 데이터 형식과 함께 사용할 수 있습니다. 특히 CLOB 형식은 사용할 수 있습니다는 **varchar (max)** 하 고 **nvarchar (max)** 데이터 형식을 사용 하 여 BLOB 형식을 사용할 수 있습니다 **varbinary (max)** 고 **이미지**  데이터 형식 및 NCLOB 형식은 사용 될 수 있습니다 **ntext** 하 고 **nvarchar (max)** 합니다.  
+> CLOB 값은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상의 큰 값 데이터 형식과 함께 사용할 수 있습니다. 특히 CLOB 형식은 **varchar (max)** 및 **nvarchar (max)** 데이터 형식과 함께 사용할 수 있고, BLOB 형식은 **varbinary (max)** 및 **image** 데이터 형식과 함께 사용할 수 있으며, NCLOB 형식은 **ntext** 및 **nvarchar (max)와 함께 사용할 수 있습니다. )** .  
 
 ## <a name="large-value-data-types"></a>큰 값 데이터 형식
 
@@ -67,7 +66,7 @@ Reader reader = rs.getCharacterStream(2);
 ```
 
 > [!NOTE]
-> 에 대 한 이와 동일한 방법을 사용할 수도 있습니다는 **텍스트**를 **ntext**, 및 **nvarchar (max)** 데이터 형식입니다.  
+> 이 방법은 **text**, **ntext**및 **nvarchar (max)** 데이터 형식에도 사용할 수 있습니다.  
 
 **varbinary(max)** 데이터 형식과 같은 이진 큰 값 데이터 형식을 데이터베이스에서 검색할 때 사용할 수 있는 방법에는 몇 가지가 있습니다. 가장 효율적인 방법은 다음과 같이 데이터를 이진 스트림으로 읽는 것입니다.  
 
@@ -102,7 +101,7 @@ pstmt.executeUpdate();
 ```
 
 > [!NOTE]  
-> 에 저장 된 값에 대 한이 접근 방식을 사용할 수도 있습니다 **텍스트**하십시오 **ntext**, 및 **nvarchar (max)** 열입니다.  
+> 이 방법은 **text**, **ntext**및 **nvarchar (max)** 열에 저장 된 값에도 사용할 수 있습니다.  
 
 서버에 이미지 라이브러리가 있는데 전체 이진 이미지 파일을 **varbinary(max)** 열에 업로드해야 하는 경우 JDBC 드라이버를 사용하는 가장 효율적인 방법은 다음과 같이 스트림을 직접 사용하는 것입니다.  
 
@@ -149,7 +148,7 @@ try (Statement stmt = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, Resul
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 XML 문서와 조각을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장할 수 있도록 하는 **xml** 데이터 형식을 제공합니다. **xml** 데이터 형식은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본 제공 데이터 형식이며 **int** 및 **varchar**와 같은 다른 기본 제공 형식과 비슷합니다. 다른 기본 제공 유형과 마찬가지로 변수 유형, 매개 변수 유형, 함수 반환 형식 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] CAST 및 CONVERT 함수로 테이블을 만들 때 **xml** 데이터 형식을 열 유형으로 사용할 수 있습니다.  
   
-JDBC 드라이버에서 **xml** 데이터 형식은 문자열, 바이트 배열, 스트림, CLOB, BLOB 또는 SQLXML 개체로 매핑될 수 있습니다. 기본값은 문자열입니다. JDBC 드라이버 버전 2.0 이상에서는 SQLXML 인터페이스가 추가된 JDBC 4.0 API가 지원됩니다. SQLXML 인터페이스는 XML 데이터에 대한 상호 작용 및 조작을 수행하는 메서드를 정의합니다. **SQLXML** 데이터 형식에 매핑되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **xml** 데이터 형식입니다. **SQLXML** Java 데이터 형식으로 관계형 데이터베이스에서 XML 데이터를 읽고 쓰는 방법은 [XML 데이터 지원](../../connect/jdbc/supporting-xml-data.md)을 참조하세요.  
+JDBC 드라이버에서 **xml** 데이터 형식은 문자열, 바이트 배열, 스트림, CLOB, BLOB 또는 SQLXML 개체로 매핑될 수 있습니다. 기본값은 문자열입니다. JDBC 드라이버 버전 2.0 이상에서는 SQLXML 인터페이스가 추가된 JDBC 4.0 API가 지원됩니다. SQLXML 인터페이스는 XML 데이터에 대한 상호 작용 및 조작을 수행하는 메서드를 정의합니다. **SQLXML** 데이터 형식은 **xml** 데이터 형식에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]매핑됩니다. **SQLXML** Java 데이터 형식으로 관계형 데이터베이스에서 XML 데이터를 읽고 쓰는 방법은 [XML 데이터 지원](../../connect/jdbc/supporting-xml-data.md)을 참조하세요.  
   
 JDBC 드라이버의 **xml** 데이터 형식 구현에서는 다음을 지원합니다.  
   
@@ -173,11 +172,11 @@ JDBC 드라이버의 **xml** 데이터 형식 구현에서는 다음을 지원�
   
 ## <a name="sqlvariant-data-type"></a>Sql_variant 데이터 형식
 
-Sql_variant 데이터 형식에 대 한 자세한 내용은 [Sql_variant 데이터 형식을 사용 하 여](../../connect/jdbc/using-sql-variant-datatype.md)입니다.  
+Sql_variant 데이터 형식에 대 한 자세한 내용은 [Sql_variant 데이터 형식 사용](../../connect/jdbc/using-sql-variant-datatype.md)을 참조 하세요.  
 
 ## <a name="spatial-data-types"></a>공간 데이터 형식
 
-공간 데이터 형식에 대 한 자세한 내용은 [공간 데이터 형식을 사용 하 여](../../connect/jdbc/use-spatial-datatypes.md)입니다.  
+공간 데이터 형식에 대 한 자세한 내용은 [공간](../../connect/jdbc/use-spatial-datatypes.md)데이터 형식 사용을 참조 하세요.  
 
 ## <a name="see-also"></a>참고 항목
 

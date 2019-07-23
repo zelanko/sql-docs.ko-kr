@@ -1,5 +1,5 @@
 ---
-title: updateNClob 메서드 (int, java.io.Reader, long) | Microsoft Docs
+title: updateNClob 메서드 (int,, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2bdbb539-0cb9-4047-98e3-7d6906af68f8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 829a4c4eeab254931a6ef7094dfc5fd8ab4d8ec4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93b6fca31afd24a8992e442096117d9479b52b48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998650"
 ---
 # <a name="updatenclob-method-int-javaioreader-long"></a>updateNClob 메서드(int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +50,7 @@ public void updateNClob(int columnIndex,
 ## <a name="remarks"></a>Remarks  
  이 updateNClob 메서드는 java.sql.ResultSet 인터페이스의 updateNClob 메서드에 의해 지정됩니다.  
   
- 이 메서드는 에서만 지원 됩니다 **nvarchar (max)** 하십시오 **ntext**, 및 **xml** 열입니다. 다른 데이터 형식에 이 메서드를 사용하면 예외가 발생합니다.  
+ 이 메서드는 **nvarchar (max)** , **ntext**및 **xml** 열 에서만 지원 됩니다. 다른 데이터 형식에 이 메서드를 사용하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [updateNClob 메서드&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatenclob-method-sqlserverresultset.md)   

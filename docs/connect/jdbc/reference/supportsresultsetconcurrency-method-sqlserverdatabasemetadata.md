@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8f7573b2-ac5c-4721-8a02-4b6cb60c74b2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 098b696ea160a768b424c17275253baf60207b6b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 43c3fb3800b18af27d811fd7679e4b957f1e2113
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797407"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968958"
 ---
 # <a name="supportsresultsetconcurrency-method-sqlserverdatabasemetadata"></a>supportsResultSetConcurrency 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -76,13 +75,13 @@ public boolean supportsResultSetConcurrency(int type,
  CONCUR_SS_OPTIMISTIC_VAL  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsResultSetConcurrency 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsResultSetConcurrency 메서드에 의해 지정 됩니다.  
+ 이 supportsResultSetConcurrency 메서드는 java. DatabaseMetaData 인터페이스의 supportsResultSetConcurrency 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

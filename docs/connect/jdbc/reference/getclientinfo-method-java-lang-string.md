@@ -1,5 +1,5 @@
 ---
-title: getClientInfo 메서드 (java.lang.String) | Microsoft Docs
+title: getClientInfo 메서드 () | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e8e632c4-d6cc-4c5e-b6ad-873579343b19
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b9fd6139a7fc36033c33fa4fc5301f5f7d0a4f14
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7d3005e2b5ae8628ab31ceeb6314159afd796e83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953133"
 ---
 # <a name="getclientinfo-method-javalangstring"></a>getClientInfo 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getClientInfo (java.lang.String name)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getClientInfo 메서드는 java.sql.Connection 인터페이스의 getClientInfo 메서드에 의해 지정 됩니다.  
+ 이 getClientInfo 메서드는 getClientInfo 인터페이스의 메서드에 의해 지정 됩니다.  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 클라이언트 정보 속성을 지원하지 않습니다. 따라서 이 메서드는 **null**을 반환합니다.  
   

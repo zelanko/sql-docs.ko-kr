@@ -1,5 +1,5 @@
 ---
-title: SQL Server 프로그래밍 용 OLE DB 드라이버 | Microsoft Docs
+title: SQL Server 프로그래밍에 대 한 OLE DB 드라이버 | Microsoft Docs
 description: SQL Server 프로그래밍용 OLE DB 드라이버
 ms.custom: ''
 ms.date: 06/12/2018
@@ -18,24 +18,23 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, OLE DB
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 54d0a800c3b651162edbf583c8f5e49005ed2628
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0645659036af0b00e2cf1b62b67830ded43aecbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993917"
 ---
 # <a name="ole-db-driver-for-sql-server-programming"></a>SQL Server 프로그래밍용 OLE DB 드라이버
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server에는 데이터 액세스에 사용 되는 낮은 수준의 COM API입니다. 고성능이 필요한 도구, 유틸리티 및 하위 수준 구성 요소 개발에는 SQL Server용 OLE DB 드라이버를 사용하는 것이 좋습니다. SQL Server용 OLE DB 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TDS(Tabular Data Stream) 프로토콜에 직접적으로 액세스하는 고성능 네이티브 공급자입니다.  
+  SQL Server에 대 한 OLE DB 드라이버는 데이터 액세스에 사용 되는 하위 수준 COM API입니다. 고성능이 필요한 도구, 유틸리티 및 하위 수준 구성 요소 개발에는 SQL Server용 OLE DB 드라이버를 사용하는 것이 좋습니다. SQL Server용 OLE DB 드라이버는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] TDS(Tabular Data Stream) 프로토콜에 직접적으로 액세스하는 고성능 네이티브 공급자입니다.  
   
- OLE DB Driver for SQL Server에 연결 하는 응용 프로그램에 OLE DB 지원을 제공 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다.  
+ SQL Server에 대 한 OLE DB 드라이버는에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]연결 하는 응용 프로그램에 대 한 OLE DB 지원을 제공 합니다.  
   
- OLE DB Driver for SQL Server는 OLE DB 버전 2.0 호환 공급자입니다.  
+ SQL Server에 대 한 OLE DB 드라이버는 OLE DB 버전 2.0 호환 공급자입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -73,7 +72,7 @@ ms.locfileid: "66795991"
   
 -   [스파스 열 지원&#40;OLE DB&#41;](../../oledb/ole-db/sparse-columns-support-ole-db.md)  
   
--   [SQL Server 용 OLE DB 드라이버 &#40;OLE DB&#41; 참조](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
+-   [SQL Server &#40;OLE DB&#41; 참조 OLE DB 드라이버](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md)  
   
 -   [OLE DB 방법 도움말 항목](../../oledb/ole-db-how-to/ole-db-how-to-topics.md)  
   

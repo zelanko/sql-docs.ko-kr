@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0610d667-a16d-4201-a14b-0a40048911e1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 26c1630042b4f33230f37ec979de7bfa643b283b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0fe3b01fd02bf48fb5f38707530e3b3344133e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802604"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979227"
 ---
 # <a name="gettableprivileges-method-sqlserverdatabasemetadata"></a>getTablePrivileges 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

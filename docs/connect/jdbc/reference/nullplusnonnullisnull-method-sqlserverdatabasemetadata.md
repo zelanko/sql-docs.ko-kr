@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c594736f-3a9b-463f-bbd8-eaf9221230ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 096113ec5fa76be364dcf7e51fd3d457a2a76f1f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 314c3bd05db19d795ce203308b9a9ab87a10e338
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976732"
 ---
 # <a name="nullplusnonnullisnull-method-sqlserverdatabasemetadata"></a>nullPlusNonNullIsNull 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean nullPlusNonNullIsNull()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 nullPlusNonNullIsNull 메서드는 java.sql.DatabaseMetaData 인터페이스의 nullPlusNonNullIsNull 메서드에 의해 지정 됩니다.  
+ 이 nullPlusNonNullIsNull 메서드는 nullPlusNonNullIsNull 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 멤버](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   

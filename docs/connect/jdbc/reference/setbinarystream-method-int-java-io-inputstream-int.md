@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fd6be063-08eb-40cf-9201-5a9f62387726
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5b68714f1fe78a356556bc2a8f379eab60003c57
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0265f06d589ea89b38f995f8a9616fd22bcf92ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975264"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream-int"></a>setBinaryStream 메서드(int, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,7 +53,7 @@ public final void setBinaryStream(int n,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setBinaryStream 메서드는 java.sql.PreparedStatement 인터페이스의 setBinaryStream 메서드에 의해 지정 됩니다.  
+ 이 setBinaryStream 메서드는 Java.sql.preparedstatement 인터페이스의 setBinaryStream 메서드에 의해 지정 됩니다.  
   
  스트림의 길이가 *length* 매개 변수에 지정된 길이와 다르면 행이 업데이트되거나 삽입될 때 JDBC 드라이버에서 예외가 발생합니다.  
   

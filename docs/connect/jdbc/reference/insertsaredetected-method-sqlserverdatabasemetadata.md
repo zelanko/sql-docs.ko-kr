@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f296cc42-9d26-48c3-a360-bcf51c31f7fb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7d27da8ff8baf048e7890efab212b7835f4037e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4d2889af814e7c7122c9784f5ac9a70421731c09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977868"
 ---
 # <a name="insertsaredetected-method-sqlserverdatabasemetadata"></a>insertsAreDetected 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean insertsAreDetected(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 insertsAreDetected 메서드는 java.sql.DatabaseMetaData 인터페이스의 insertsAreDetected 메서드에 의해 지정 됩니다.  
+ 이 insertsAreDetected 메서드는 insertsAreDetected 메서드에 의해 지정 됩니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 모든 커서 유형에 대해 삽입된 행을 검색하지 않습니다.  

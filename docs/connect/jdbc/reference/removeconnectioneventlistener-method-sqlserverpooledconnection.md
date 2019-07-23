@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 46902e89-f512-40af-a2d9-a896f03d1200
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a0714a5a0067aff66407cd340ed147b0553a3368
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b9d2980b86704efe7e611878d373e0dd9b5cb7fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975752"
 ---
 # <a name="removeconnectioneventlistener-method-sqlserverpooledconnection"></a>removeConnectionEventListener 메서드(SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,12 +35,12 @@ public void removeConnectionEventListener(javax.sql.ConnectionEventListener list
 ```  
   
 #### <a name="parameters"></a>매개 변수  
- ‘수신기’   
+ *‘수신기’*  
   
  ConnectionEventListener 개체입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 이 removeConnectionEventListener 메서드는 javax.sql.PooledConnection 인터페이스의 removeConnectionEventListener 메서드에 의해 지정 됩니다.  
+ 이 removeConnectionEventListener 메서드는 javax.sql 연결 인터페이스의 removeConnectionEventListener 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerPooledConnection 메서드](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   

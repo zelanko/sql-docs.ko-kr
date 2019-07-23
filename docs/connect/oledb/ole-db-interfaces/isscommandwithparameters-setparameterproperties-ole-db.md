@@ -1,5 +1,5 @@
 ---
-title: 'Isscommandwithparameters:: Setparameterproperties (OLE DB) | Microsoft Docs'
+title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) | Microsoft Docs'
 description: ISSCommandWithParameters::SetParameterProperties(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - SetParameterProperties method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1dd2184a859f3bb6c0b961ac8596cdbea48d2d25
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b9f5a3251b05453d01b2ef984c6a9ea7bde1c115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015395"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +73,7 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- 부터 데이터베이스 엔진의 개선 사항 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] isscommandwithparameters:: Setparameterproperties 예상된 결과 대 한 보다 정확한 설명의 얻을를 허용 합니다. 이전 버전의 isscommandwithparameters:: Setparameterproperties 반환한 값에서 다를 수 있습니다 이러한 보다 정확한 결과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]합니다. 자세한 내용은 [메타데이터 검색](../../oledb/features/metadata-discovery.md)을 참조하세요.  
+ 에서 시작 하는 데이터베이스 엔진의 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 향상 된 기능으로는 ISSCommandWithParameters:: setparameterproperties를 사용 하 여 예상 결과에 대 한 보다 정확한 설명을 얻을 수 있습니다. 이러한 더 정확한 결과는 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 ISSCommandWithParameters:: setparameterproperties에서 반환 된 값과 다를 수 있습니다. 자세한 내용은 [메타데이터 검색](../../oledb/features/metadata-discovery.md)을 참조하세요.  
   
 |멤버|설명|  
 |------------|-----------------|  

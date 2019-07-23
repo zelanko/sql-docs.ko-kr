@@ -16,13 +16,12 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 503e0f8fcc7cac9a3001ec00fb872642c1fcecd8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994181"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>행 집합 및 SQL Server 커서
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "66803791"
   
  소비자는 특정 행 집합 속성을 설정하여 행 집합에 다른 커서 동작을 요청할 수 있습니다. 소비자가 이러한 행 집합 속성 중 하나를 설정하지 않거나 모두 해당 기본값으로 설정하면 SQL Server용 OLE DB 드라이버는 기본 결과 집합을 사용하여 행 집합을 구현합니다. 이러한 속성 중 하나라도 기본값이 아닌 값으로 설정하면 SQL Server용 OLE DB 드라이버는 서버 커서를 사용하여 행 집합을 구현합니다.  
   
- 다음 행 집합 속성은 OLE DB 드라이버 사용 하도록 SQL Server에 대 한 직접 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커서입니다. 일부 속성은 다른 속성과 안전하게 조합할 수 있습니다. 예를 들어 DBPROP_IRowsetScroll 및 DBPROP_IRowsetChange 속성을 나타내는 행 집합은 즉시 업데이트 동작을 표시하는 책갈피 행 집합이 됩니다. 다른 속성은 함께 사용할 수 없습니다. 예를 들어 DBPROP_OTHERINSERT를 나타내는 행 집합은 책갈피를 포함할 수 없습니다.  
+ 다음 행 집합 속성은 커서를 사용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하도록 SQL Server에 대 한 OLE DB 드라이버를 지시 합니다. 일부 속성은 다른 속성과 안전하게 조합할 수 있습니다. 예를 들어 DBPROP_IRowsetScroll 및 DBPROP_IRowsetChange 속성을 나타내는 행 집합은 즉시 업데이트 동작을 표시하는 책갈피 행 집합이 됩니다. 다른 속성은 함께 사용할 수 없습니다. 예를 들어 DBPROP_OTHERINSERT를 나타내는 행 집합은 책갈피를 포함할 수 없습니다.  
   
 |속성 ID|값|행 집합 동작|  
 |-----------------|-----------|---------------------|  

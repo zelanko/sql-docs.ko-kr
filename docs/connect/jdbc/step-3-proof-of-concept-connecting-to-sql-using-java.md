@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: af6fc51c3aba34e8118d5519b5acf2fc9583738f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004291"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>3단계: Java를 사용하여 SQL에 연결하는 개념 증명
   
-이 예제에서는 개념만 고려 되어야 합니다. 샘플 코드를 이해 하기 쉽도록 간소화 되었습니다 및 Microsoft에서 권장 하는 모범 사례를 나타내지는지 않습니다.  
+이 예는 개념 증명 으로만 간주 해야 합니다. 이 샘플 코드는 명확 하 게 하기 위해 단순화 되었으며 Microsoft에서 권장 하는 모범 사례를 나타내지는 않습니다.  
   
 ## <a name="step-1--connect"></a>1 단계: 연결  
   
-SQL Database에 연결 하는 연결 클래스를 사용 합니다.   
+Connection 클래스를 사용 하 여 SQL Database에 연결 합니다.   
   
 ```java  
 import java.sql.Connection;
@@ -56,7 +55,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-2-execute-a-query"></a>2단계: 쿼리 실행  
-이 샘플에서는 Azure SQL Database에 연결 하 고 SELECT 문을 실행 합니다. 선택한 행을 반환 합니다.   
+이 샘플에서는 Azure SQL Database에 연결 하 여 SELECT 문을 실행 하 고 선택한 행을 반환 합니다.   
   
 ```java  
 import java.sql.Connection;
@@ -101,7 +100,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-3-insert-a-row"></a>3 단계: 행 삽입  
-이 예제에서는 INSERT 문을 실행 매개 변수를 전달 하 고 자동으로 생성 된 기본 키 값을 검색 합니다.   
+이 예에서는 INSERT 문을 실행 하 고 매개 변수를 전달 하며 자동 생성 된 기본 키 값을 검색 합니다.   
   
 ```java  
 import java.sql.Connection;

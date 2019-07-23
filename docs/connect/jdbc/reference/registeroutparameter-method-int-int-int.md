@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d902d4e0-881f-4182-814c-0ede9a8da7fd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: df9265a677d9e44c2d8834d3c45525b7af80142a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b6948bf6b86160b1752a483b13f83abbfc467ef2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802108"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975947"
 ---
 # <a name="registeroutparameter-method-int-int-int"></a>registerOutParameter 메서드(int, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,11 +53,11 @@ public void registerOutParameter(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 registerOutParameter 메서드는 java.sql.CallableStatement 인터페이스의 registerOutParameter 메서드에 의해 지정 됩니다.  
+ 이 registerOutParameter 메서드는 java. CallableStatement 인터페이스의 registerOutParameter 메서드에 의해 지정 됩니다.  
   
- 부터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0 때 *sqlType* 는이 메서드의 동작은 수정자 java.sql.types.time 형식이 합니다 **sendTimeAsDatetime** 연결 속성 ([연결 속성 설정](../../../connect/jdbc/setting-the-connection-properties.md)) 및 [SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)합니다.  
+ JDBC driver 3.0부터 *sqlType* 가 **sendTimeAsDatetime** 형식일 때이 메서드의 동작은 connection 속성 ([연결 속성 설정](../../../connect/jdbc/setting-the-connection-properties.md))에 의해 수정 됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [ SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- 자세한 내용은 [어떻게 구성 java.sql.Time 값을 서버로 전송 됩니다](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)합니다.  
+ 자세한 내용은 [java. 시간 값을 서버로 보내는 방법 구성](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [registerOutParameter 메서드&#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md)   

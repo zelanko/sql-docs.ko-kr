@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3317d4f8-ed9e-4f2e-b5f1-a6bf3a9d6c8d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 75f7d30dba13538fdbd735fff34021cbc3497aa0
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: b2f526510f69a91e3228431953f73717790246f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034745"
 ---
 # <a name="lesson-2-using-database-engine-tuning-advisor"></a>2단원: 데이터베이스 엔진 튜닝 관리자 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,12 +35,12 @@ ms.locfileid: "67727607"
 SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이스 복원](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)을 참조하세요.
 
   >[!NOTE]
-  > 이 자습서는 기본적인 데이터베이스 관리 작업 및 SQL Server Management Studio를 사용 하 여 친숙 한 사용자에 대 한 것입니다. 
+  > 이 자습서는 SQL Server Management Studio 및 기본적인 데이터베이스 관리 작업을 사용 하는 데 익숙한 사용자를 위한 것입니다. 
   
 ## <a name="tuning-a-workload"></a>작업 튜닝
 데이터베이스 엔진 튜닝 관리자를 사용하여 튜닝하려고 선택한 데이터베이스와 테이블의 쿼리 성능에 가장 적합한 물리적 데이터베이스 디자인을 찾을 수 있습니다.  
 
-1.  샘플을 복사 [선택](../../t-sql/queries/select-examples-transact-sql.md) 문의 문을의 쿼리 편집기에 붙여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]합니다. 쉽게 찾을 수 있는 디렉터리에 **MyScript.sql**이라는 이름으로 파일을 저장합니다. 아래 AdventureWorks2017 데이터베이스에 대해 작동 하는 예로 제공 되었습니다.  
+1.  Sample [select](../../t-sql/queries/select-examples-transact-sql.md) 문을 복사 하 여의 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]쿼리 편집기에 문을 붙여넣습니다. 쉽게 찾을 수 있는 디렉터리에 **MyScript.sql**이라는 이름으로 파일을 저장합니다. AdventureWorks2017 데이터베이스에 대해 작동 하는 예제는 아래에 제공 되어 있습니다.  
 
  ```sql
  Use [Adventureworks2017]; -- may need to modify database name to match database
@@ -61,13 +60,13 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
  GO
  ```
 
-  ![SQL 쿼리를 저장 합니다.](media/dta-tutorials/dta-save-query.png)
+  ![SQL 쿼리 저장](media/dta-tutorials/dta-save-query.png)
   
-2.  데이터베이스 엔진 튜닝 관리자를 시작합니다. 선택 **데이터베이스 튜닝** 에서 합니다 **도구** 메뉴 SQL Server Management Studio (SSMS).  자세한 내용은 [Launch Database Engine Tuning Advisor](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor)(데이터베이스 엔진 튜닝 관리자 시작)를 참조하세요. 에 SQL Server에 연결 합니다 **서버에 연결** 대화 상자.  
+2.  데이터베이스 엔진 튜닝 관리자를 시작합니다. SSMS (SQL Server Management Studio)의 **도구** 메뉴에서 **데이터베이스 튜닝 관리자** 를 선택 합니다.  자세한 내용은 [Launch Database Engine Tuning Advisor](lesson-1-basic-navigation-in-database-engine-tuning-advisor.md#launch-database-tuning-advisor)(데이터베이스 엔진 튜닝 관리자 시작)를 참조하세요. **서버에 연결** 대화 상자에서 SQL Server에 연결 합니다.  
   
 3.  데이터베이스 엔진 튜닝 관리자 GUI 오른쪽 창의 **일반** 탭에서 **세션 이름**에 **MySession**을 입력합니다. 
   
-4.  선택 **파일** 에 대 한 프로그램 **워크 로드**, 쌍안경 아이콘을 선택 하 고 **워크 로드 파일 찾아보기**합니다. 찾을 합니다 **MyScript.sql** 1 단계에서에서 저장 된 파일입니다.  
+4.  **작업**에 대해 **파일** 을 선택 하 고 쌍안경 아이콘을 선택 하 여 **작업 파일을 찾습니다**. 1 단계에서 저장 한 **MyScript** 파일을 찾습니다.  
 
    ![이전에 저장 된 스크립트 찾기](media/dta-tutorials/dta-script.png)
   
@@ -88,7 +87,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
   
 8.  분석을 완료한 후 [!INCLUDE[tsql](../../includes/tsql-md.md)] 동작 **메뉴에서** 권장 구성 저장 **을 클릭하여** 스크립트로 권장 구성을 저장합니다. **다른 이름으로 저장** 대화 상자에서 권장 구성 스크립트를 저장할 디렉터리로 이동하고 파일 이름 **MyRecommendations**를 입력합니다.  
 
-  ![DTA 권장 구성 저장](media/dta-tutorials/dta-save-recommendations.png)
+  ![DTA 권장 사항 저장](media/dta-tutorials/dta-save-recommendations.png)
 
 ## <a name="view-tuning-recommendations"></a>튜닝 권장 구성 보기
   
@@ -123,7 +122,7 @@ SSMS에서 데이터베이스를 복원하기 위한 지침은 [데이터베이�
 튜닝 결과를 구현하는 데 사용할 수 있는 스크립트를 보면 도움이 되지만 데이터베이스 엔진 튜닝 관리자에서 제공하는 여러 가지 보고서를 보아도 유용합니다. 이러한 보고서는 튜닝하고 있는 데이터베이스의 기존 물리적 디자인 구조와 권장 구조에 대한 정보를 제공합니다. 튜닝 보고서는 다음 연습에서 설명하는 대로 **보고서** 탭을 클릭하여 볼 수 있습니다.
 
 
-1. 선택 된 **보고서** 데이터베이스 튜닝 관리자 탭 합니다. 
+1. 데이터베이스 튜닝 관리자에서 **보고서** 탭을 선택 합니다. 
 2. **튜닝 요약** 창에서 이 튜닝 세션에 대한 정보를 볼 수 있습니다. 스크롤 막대를 사용하여 모든 창 내용을 볼 수 있습니다. **예상 향상률** 과 **권장 구성이 사용하는 공간**을 확인합니다. 튜닝 옵션을 설정할 때 권장 구성이 사용하는 공간을 제한할 수 있습니다. **튜닝 옵션** 탭에서 **고급 옵션**을 선택합니다. **권장 구성에 필요한 최대 공간 정의**를 선택하고 권장 구성이 사용할 수 있는 최대 공간(MB)을 지정합니다. 도움말 브라우저의 **뒤로** 단추를 사용하여 이 자습서로 돌아올 수 있습니다. 
 
     ![DTA 튜닝 요약](media/dta-tutorials/dta-tuning-summary.png)

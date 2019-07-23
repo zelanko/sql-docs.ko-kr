@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 183af414-b0a3-4ca7-b160-d199bcf469b0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7b295f312057e366ef9e7b09c62da55a09a2262a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2ab1ec7a5fc68a34c2f6a72b9ea940405d099f05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979866"
 ---
 # <a name="getshort-method-javalangstring-sqlserverresultset"></a>getShort 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public short getShort(java.lang.String columnName)
  열 이름이 포함된 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- A **짧은** 값입니다.  
+ **Short** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

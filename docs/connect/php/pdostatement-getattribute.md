@@ -1,5 +1,5 @@
 ---
-title: PDOStatement::getAttribute | Microsoft Docs
+title: 'PDOStatement:: getAttribute | Microsoft Docs'
 ms.custom: ''
 ms.date: 07/13/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 41d0cca3-8556-4573-bb90-8e9402d9379f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b3c1c79da6d1efc51778cb09eb6bd2fed460576a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 014f679480caaabd42863d2551cfa4c25bbe94d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992983"
 ---
 # <a name="pdostatementgetattribute"></a>PDOStatement::getAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +30,7 @@ mixed PDOStatement::getAttribute( $attribute );
 ```  
   
 #### <a name="parameters"></a>매개 변수  
-$*attribute*: PDO::ATTR_* 또는 PDO::SQLSRV_ATTR_\* 상수 중 하나인 정수입니다. 지원 되는 특성은 이러한 특성에 사용 하 여 설정할 수 있습니다 [pdostatement:: Setattribute](../../connect/php/pdostatement-setattribute.md), pdo:: SQLSRV_ATTR_DIRECT_QUERY (자세한 내용은 참조 하세요. [직접 문 실행 및 준비 된 문 실행에서 PDO_SQLSRV 드라이버](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)), pdo:: ATTR_CURSOR 및 pdo:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE (자세한 내용은 참조 하십시오 [커서 유형 (PDO_SQLSRV 드라이버)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)).  
+$*attribute*: PDO::ATTR_* 또는 PDO::SQLSRV_ATTR_\* 상수 중 하나인 정수입니다. 지원 되는 특성은 [PDOStatement:: setAttribute](../../connect/php/pdostatement-setattribute.md), pdo:: SQLSRV_ATTR_DIRECT_QUERY를 사용 하 여 설정할 수 있는 특성입니다. 자세한 내용은 [PDO_SQLSRV 드라이버에서 직접 문 실행 및 준비 된 문 실행](../../connect/php/direct-statement-execution-prepared-statement-execution-pdo-sqlsrv-driver.md)을 참조 하세요. : ATTR_CURSOR 및 PDO:: SQLSRV_ATTR_CURSOR_SCROLL_TYPE (자세한 내용은 [커서 형식 (PDO_SQLSRV 드라이버)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md))을 참조 하세요.  
   
 ## <a name="return-value"></a>반환 값  
 성공하면 미리 정의된 PDO 특성 또는 사용자 지정 드라이버 특성에 대한 (혼합) 값을 반환합니다. 실패한 경우 null을 반환합니다.  

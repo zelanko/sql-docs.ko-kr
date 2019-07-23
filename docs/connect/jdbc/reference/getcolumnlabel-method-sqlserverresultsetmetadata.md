@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cf67692c-24aa-49e6-8e88-a47d4e8c021c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 16ebb1fe51cb811fd912044f7194ccb8555bb914
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9784c4aa2dd892473e4ac0ef46f0e8f62d359c5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952953"
 ---
 # <a name="getcolumnlabel-method-sqlserverresultsetmetadata"></a>getColumnLabel 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getColumnLabel(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getColumnLabel 메서드는 java.sql.ResultSetMetaData 인터페이스의 getColumnLabel 메서드에 의해 지정 됩니다.  
+ 이 getColumnLabel 메서드는 getColumnLabel 메서드에서 지정 하는 java. .sql Setmetadata 인터페이스입니다.  
   
  이 메서드는 열의 별칭 이름을 반환합니다. 별칭 이름을 사용할 수 없으면 이 메서드는 열 이름을 반환합니다.  
   

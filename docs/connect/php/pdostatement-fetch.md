@@ -1,5 +1,5 @@
 ---
-title: 'Pdostatement:: Fetch | Microsoft Docs'
+title: 'PDOStatement:: fetch | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4368e362-5bda-4da1-8462-33714683c39f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: afd2f2fc098e23685dca1b913e010dced40cece9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a69b1093240112a804504f8d0e636ffbdfe8439e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993062"
 ---
 # <a name="pdostatementfetch"></a>PDOStatement::fetch
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

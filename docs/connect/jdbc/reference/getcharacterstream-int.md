@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eb20714b-52bc-4b6c-b23f-c9c3c9d73783
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f72510a01362dfea3772e5ccbe4ea5ec47ccf41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55fab0482e38afc175718a1b729d68124781dac9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953303"
 ---
 # <a name="getcharacterstream-int"></a>getCharacterStream(int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

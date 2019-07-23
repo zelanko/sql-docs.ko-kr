@@ -1,5 +1,5 @@
 ---
-title: setBinaryStream 메서드 입력 스트림을-장기를 | Microsoft Docs
+title: 입력 스트림을 입력 하는 setBinaryStream 메서드-long | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d59c7327-c9dc-4e4f-9dff-19e1a3c62eb2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 65c4a60dbd9dd4d7f0d3ffd59897262679b9a656
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 32d909e721e38ac2a459188e31236e43398a28de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764696"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975164"
 ---
 # <a name="setbinarystream-method-javalangstring-javaioinputstream-long"></a>setBinaryStream 메서드(java.lang.String, java.io.InputStream, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void setBinaryStream(java.lang.String parameterName,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setBinaryStream 메서드는 java.sql.CallableStatement 인터페이스의 setBinaryStream 메서드에 의해 지정 됩니다.  
+ 이 setBinaryStream 메서드는 java. CallableStatement 인터페이스의 setBinaryStream 메서드에 의해 지정 됩니다.  
   
  스트림의 길이가 *length* 매개 변수에 지정된 길이와 다르면 행이 업데이트되거나 삽입될 때 JDBC 드라이버에서 예외가 발생합니다.  
   

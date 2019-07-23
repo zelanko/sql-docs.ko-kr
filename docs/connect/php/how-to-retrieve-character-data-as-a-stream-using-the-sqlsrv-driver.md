@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 026160c3e65255321691ec24fc331f8c7ab09b5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3b4a0fd48809d53cda18f2ceb4eaf1f435210e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936417"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 스트림으로 문자 데이터 가져오기
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

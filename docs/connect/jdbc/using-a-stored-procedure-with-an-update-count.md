@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b65d882365b7424cd88fa0942674cfe0a7660795
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4d66c19e9e033e838eac07f7140ce7864fc049e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004077"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>업데이트 횟수가 있는 저장 프로시저 사용
 
@@ -27,7 +26,7 @@ ms.locfileid: "66797121"
 SQLServerCallableStatement 클래스를 사용하여 저장 프로시저에 대한 호출을 설정한 후에는 [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) 또는 [executeUpdate](../../connect/jdbc/reference/executeupdate-method-sqlserverstatement.md) 메서드를 사용하여 저장 프로시저를 호출할 수 있습니다. executeUpdate 메서드는 저장 프로시저에 의해 영향을 받은 행 수가 포함된 **int** 값을 반환하지만 execute 메서드는 그렇지 않습니다. execute 메서드를 사용하여 영향을 받은 행 수를 가져오려면 저장 프로시저를 실행한 후 [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) 메서드를 호출합니다.
 
 > [!NOTE]  
-> JDBC 드라이버가 발생 가능성이 있는 모든 트리거가 반환한 업데이트 횟수를 포함하여 모든 업데이트 횟수를 반환하게 하려면 lastUpdateCount 연결 문자열 속성을 "false"로 설정합니다. LastUpdateCount 속성이 사용에 대 한 자세한 내용은 참조 하세요. [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)합니다.
+> JDBC 드라이버가 발생 가능성이 있는 모든 트리거가 반환한 업데이트 횟수를 포함하여 모든 업데이트 횟수를 반환하게 하려면 lastUpdateCount 연결 문자열 속성을 "false"로 설정합니다. LastUpdateCount 속성에 대 한 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조 하세요.
 
 이에 대한 예로 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 다음 테이블 및 저장 프로시저를 만들고 예제 데이터도 삽입합니다.
 

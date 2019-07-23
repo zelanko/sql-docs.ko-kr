@@ -1,5 +1,5 @@
 ---
-title: updateBytes 메서드 (java.lang.String, byte) | Microsoft Docs
+title: updateBytes 메서드 (String.format, byte) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4fb9de2b-61bc-4c96-89a5-c07cd7ee201a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 80fca41da217b3f13d7aadc688f96c7ca6ffa360
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 19ebdfb5b13cd528e5690fe2eeae9bec35e2134d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996898"
 ---
 # <a name="updatebytes-method-javalangstring-byte"></a>updateBytes 메서드(java.lang.String, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void updateBytes(java.lang.String columnName,
   
  *x*  
   
- 배열을 **바이트** 값입니다.  
+ **바이트** 값의 배열입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eadd2c37-d9ec-4b47-a91e-ed90b1eaf4b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 610100e8a9634fd25232b515533d993bb459b2bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c38f17451149e9206cf12329e5ffef314eac7480
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969387"
 ---
 # <a name="supportsgroupbybeyondselect-method-sqlserverdatabasemetadata"></a>supportsGroupByBeyondSelect 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsGroupByBeyondSelect()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsGroupByBeyondSelect 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsGroupByBeyondSelect 메서드에 의해 지정 됩니다.  
+ 이 supportsGroupByBeyondSelect 메서드는 supportsGroupByBeyondSelect 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 84a25d64-dd3e-4696-bb5f-4eaf391fab7e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f795eb85fca38eddb44d937ccc3a942e5fae653b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3dac8a4677126f83b489cf3eb14c7c5335407b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955610"
 ---
 # <a name="close-method-sqlserverstatement"></a>close 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

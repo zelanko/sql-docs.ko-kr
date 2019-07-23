@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 47b7b0da-e467-465a-aa19-bc702efcfaa0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f7ffdc84d40f68b1f1697357a892fb2d136be2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd3027348673bfb85d9ab512a3f89f2e278edde9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66766532"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969786"
 ---
 # <a name="supportsbatchupdates-method-sqlserverdatabasemetadata"></a>supportsBatchUpdates 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsBatchUpdates()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsBatchUpdates 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsBatchUpdates 메서드에 의해 지정 됩니다.  
+ 이 supportsBatchUpdates 메서드는 java. DatabaseMetaData 인터페이스의 supportsBatchUpdates 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

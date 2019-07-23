@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2c7f00b7f908a7b13f388df6dfd745a29000e4ac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f49cdf12c4aaca9633670f7688783407acb05342
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957043"
 ---
 # <a name="working-with-data-types-jdbc"></a>데이터 형식(JDBC) 사용
 
@@ -37,7 +36,7 @@ SQL Server 데이터 형식 작업을 위해 JDBC 드라이버에서는 [SQLServ
 | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | [기본 데이터 형식 샘플](../../../connect/jdbc/code-samples/basic-data-types-sample.md)   | 결과 집합 getter 메서드를 사용하여 기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식 값을 검색하는 방법 및 결과 집합 업데이트 메서드를 사용하여 이러한 값을 업데이트하는 방법을 설명합니다.                                             |
 | [SQLXML 데이터 형식 샘플](../../../connect/jdbc/code-samples/sqlxml-data-type-sample.md)   | XML 데이터를 관계형 데이터베이스에 저장하는 방법, XML 데이터를 데이터베이스에서 검색하는 방법 및 **SQLXML** Java 데이터 형식으로 XML 데이터를 구문 분석하는 방법을 보여 줍니다.                                                                                   |
-| [공간 데이터 형식 샘플](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | SQL server에서 공간 데이터를 저장 하는 방법 및 SQL Server에서 이러한 형식을 검색 하는 방법을 설명 합니다. 새로 정의 된 클래스를 사용 하는 방법에 대해서도 설명 **기 하 도형** 하 고 **Geography** Java 이러한 데이터 형식에 대 한 참조를 관리 하기 위한 드라이버에서. |
+| [공간 데이터 형식 샘플](../../../connect/jdbc/code-samples/spatial-data-types-sample.md) | SQL Server에 공간 데이터 형식을 저장 하는 방법 및 이러한 형식을 SQL Server에서 다시 검색 하는 방법에 대해 설명 합니다. 또한 이러한 데이터 형식의 Java 참조를 관리 하기 위해 드라이버에서 새로 정의 된 클래스 **기 하 도형** 및 **지리** 를 사용 하는 방법에 대해서도 설명 합니다. |
   
 ## <a name="see-also"></a>참고 항목
 

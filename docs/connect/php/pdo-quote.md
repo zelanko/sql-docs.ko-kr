@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab9ddc48-42f8-4edf-aa8b-b0fc66706161
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b08ead32ba3c31f8f928c6e6dda051df1204073c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eeb83be9d9414d0d9380ca1771bf50985e283b98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66762014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993169"
 ---
 # <a name="pdoquote"></a>PDO::quote
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

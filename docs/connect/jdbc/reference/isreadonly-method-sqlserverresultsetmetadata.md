@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aba234d9-04ec-46a5-ba9e-7903f48b4ecc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a3cbf45389bd7cb87f724b0ff1db9b2b24e66c8d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f88939af9ba975abc32a1c3b7f26e5a3db04ce0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977297"
 ---
 # <a name="isreadonly-method-sqlserverresultsetmetadata"></a>isReadOnly 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isReadOnly(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 isReadOnly 메서드는 java.sql.ResultSetMetaData 인터페이스의 isReadOnly 메서드에 의해 지정 됩니다.  
+ 이 isReadOnly 메서드는 isReadOnly 메서드에서 지정 하는 java. .sql Setmetadata 인터페이스입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSetMetaData 메서드](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

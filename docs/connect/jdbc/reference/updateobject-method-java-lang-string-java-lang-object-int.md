@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 27283ce1-637e-4e2c-91ee-8ad379114ac5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: caad7bed9eab964193f0c5ec6734a1dc097b26ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12645120f543094015f2da03eca224c40e16ab6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998462"
 ---
 # <a name="updateobject-method-javalangstring-javalangobject-int"></a>updateObject 메서드(java.lang.String, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

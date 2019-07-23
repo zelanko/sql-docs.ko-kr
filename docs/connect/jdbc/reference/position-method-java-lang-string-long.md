@@ -1,5 +1,5 @@
 ---
-title: position 메서드 (java.lang.String, long) | Microsoft Docs
+title: position 메서드 (String.format, long) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 86fad8ed-375a-42e1-b40e-1fa085957a2c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 40c7dadf83861d889acd7932dbe1dad17fda4b35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ed0a62940fc29e2d909678dabec784a906c02515
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976447"
 ---
 # <a name="position-method-javalangstring-long"></a>position 메서드(java.lang.String, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +51,7 @@ public long position(java.lang.String searchstr,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 위치 메서드는 java.sql.Clob 인터페이스의 위치 메서드에 의해 지정 됩니다.  
+ 이 position 메서드는 java. Clob 인터페이스의 position 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [position 메서드 &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/position-method-sqlserverclob.md)   

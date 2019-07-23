@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6dea35a0-56a8-412c-8cd3-6539527ff597
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99044bb6a9536f7ad2d2fe69284e4699786e6593
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fe27259efbc3448fd0d8d4350d0c2e93e906c34a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66774454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982855"
 ---
 # <a name="getidentifierquotestring-method-sqlserverdatabasemetadata"></a>getIdentifierQuoteString 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getIdentifierQuoteString()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getIdentifierQuoteString 메서드는 java.sql.DatabaseMetaData 인터페이스의 getIdentifierQuoteString 메서드에 의해 지정 됩니다.  
+ 이 getIdentifierQuoteString 메서드는 getIdentifierQuoteString 메서드에 의해 지정 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 함께 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] JDBC 드라이버를 사용할 경우 이 메서드는 **따옴표** 식별자(“”)를 반환합니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: 'Pdo:: begintransaction | Microsoft Docs'
+title: 'PDO:: beginTransaction | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d5db438-9df7-4d22-9907-3ddc63bd2220
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9399e903db0806778dffc192b3bd512514d71b07
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 739565ae633140cef7d0df6531b6adfd6389d1e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993296"
 ---
 # <a name="pdobegintransaction"></a>PDO::beginTransaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

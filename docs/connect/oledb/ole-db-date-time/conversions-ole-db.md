@@ -14,24 +14,23 @@ helpviewer_keywords:
 - OLE DB, bindings and conversions
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 19c732a38c5237811f4f2219292ab4589018f4e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dc86193f40474fc373c1b0e7dd48e579e8548821
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015840"
 ---
 # <a name="conversions-ole-db"></a>변환(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  이 섹션에서는 간에 변환 하는 방법 설명 **날짜/시간** 하 고 **datetimeoffset** 값입니다. 이 섹션에 설명된 변환은 OLE DB에서 이미 제공하거나 OLE DB의 일관된 확장입니다.  
+  이 섹션에서는 **datetime** 과 **datetimeoffset** 값을 변환 하는 방법을 설명 합니다. 이 섹션에 설명된 변환은 OLE DB에서 이미 제공하거나 OLE DB의 일관된 확장입니다.  
   
- OLE DB에서 날짜와 시간에 대한 리터럴 및 문자열 형식은 일반적으로 ISO를 따르며 클라이언트 로캘에 종속되지 않습니다. 한 가지 예외는 OLE Automation이 표준인 DBTYPE_DATE이지만 그러나 OLE DB Driver for SQL Server 데이터와 클라이언트에서 전송 될 때 형식 간의 변환, 이므로 OLE DB Driver for SQL Server DBTYPE_DATE와 문자열 형식 간의 변환 하도록 응용 프로그램에 대 한 방법은 없습니다. 이러한 경우를 제외하면 문자열에는 다음과 같은 형식이 사용됩니다. 여기서 대괄호 안의 텍스트는 선택적 요소를 나타냅니다.  
+ OLE DB에서 날짜와 시간에 대한 리터럴 및 문자열 형식은 일반적으로 ISO를 따르며 클라이언트 로캘에 종속되지 않습니다. 한 가지 예외는 OLE Automation이 표준인 DBTYPE_DATE이지만 그러나 SQL Server에 대 한 OLE DB 드라이버는 데이터를 클라이언트로 전송 하거나 클라이언트에서 전송 하는 경우에만 형식 간을 변환 하기 때문에 응용 프로그램에서 SQL Server OLE DB 드라이버를 강제로 DBTYPE_DATE과 문자열 형식 간에 변환 하는 방법은 없습니다. 이러한 경우를 제외하면 문자열에는 다음과 같은 형식이 사용됩니다. 여기서 대괄호 안의 텍스트는 선택적 요소를 나타냅니다.  
   
--   형식은 **날짜/시간** 하 고 **datetimeoffset** 문자열:  
+-   **Datetime** 및 **datetimeoffset** 문자열의 형식은 다음과 같습니다.  
   
      *yyyy*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
@@ -39,14 +38,14 @@ ms.locfileid: "66769404"
   
      *hh*:*mm*:*ss*[.*9999999*]  
   
--   형식은 **날짜** 문자열:  
+-   **날짜** 문자열의 형식은 다음과 같습니다.  
   
      *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
->  이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 SQLOLEDB에서는 OLE 변환을 구현했으며 이 경우 표준 변환은 실패했습니다. OLE DB Driver for SQL Server와 같은 동작을 따릅니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client입니다. 결과적으로, SQL Server 용 OLE DB 드라이버에서 수행 되는 일부 변환에서 OLE DB 사양과 다릅니다.  
+>  이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client와 SQLOLEDB에서는 OLE 변환을 구현했으며 이 경우 표준 변환은 실패했습니다. SQL Server에 대 한 OLE DB 드라이버는 Native Client와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 동일한 동작을 따릅니다. 따라서 SQL Server에 대 한 OLE DB 드라이버에서 수행 하는 변환 중 일부는 OLE DB 사양과 다릅니다.  
   
- 문자열에서 변환을 시작하면 공백 및 필드 너비를 보다 융통성 있게 사용할 수 있습니다. 자세한 내용은의 "데이터 형식:: 문자열 및 리터럴" 섹션을 참조 하세요 [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)합니다.  
+ 문자열에서 변환을 시작하면 공백 및 필드 너비를 보다 융통성 있게 사용할 수 있습니다. 자세한 내용은 [OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../oledb/ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md)의 "데이터 형식: 문자열 및 리터럴" 섹션을 참조 하세요.  
   
  일반적인 변환 규칙은 다음과 같습니다.  
   

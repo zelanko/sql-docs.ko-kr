@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dc3a6edb0d1108123b5ea22ca717a06409582cbc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0b7054a390f8318b3c4c2db39eda3d2bd2fb842
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014860"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대한 지원 리소스
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,12 +46,12 @@ SQL Server 및 Transact-SQL 설명서는 [SQL Server 설명서](../../sql-server
 ## <a name="php-support-resources"></a>PHP 지원 리소스  
 [Windows용 PHP 설명서](https://windows.php.net/)  
   
-PHP에 대 한 최신 정보를 참조 하세요 [ http://www.php.net/ ](http://www.php.net)합니다.  
+PHP에 대 한 최신 정보는를 [http://www.php.net/](http://www.php.net)참조 하세요.  
   
-PHP 설명서를 방문 [ http://www.php.net/docs.php ](http://www.php.net/docs.php)합니다.  
+PHP 설명서는를 참조 [http://www.php.net/docs.php](http://www.php.net/docs.php)하세요.  
   
 ## <a name="microsoft-customer-support"></a>Microsoft 고객 지원  
-와 관련 된 지원 질문에 대 한 합니다 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에 문의할 수 있습니다 [Microsoft 지원](https://support.microsoft.com/contactus/)에 요청 또는 합니다 [Github 프로젝트 페이지](https://github.com/Microsoft/msphpsql/issues).  
+와 관련 된 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]지원 질문에 대 한 자세한 내용은 [Github 프로젝트 페이지](https://github.com/Microsoft/msphpsql/issues)를 [Microsoft 지원](https://support.microsoft.com/contactus/)하거나 문의 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
 [Microsoft Drivers for PHP for SQL Server 개요](../../connect/php/overview-of-the-php-sql-driver.md)

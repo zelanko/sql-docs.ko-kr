@@ -6,16 +6,15 @@ ms.technology: troubleshooting
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 55246173a23d8bae7fa9aab82a527800eb8bb23a
-ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
+ms.openlocfilehash: d2d1a8c853bd4ad577dd1c0ced9aed47b15a2ee7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285058"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68258542"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>오류 및 이벤트 참조(Reporting Services)
 
@@ -47,7 +46,7 @@ ms.locfileid: "67285058"
 |119|Error|활성화|보고서 서버<br /><br /> 일정 예약 및 배달 프로세서|*\<Source>* 에 보고서 서버 데이터베이스의 내용에 대한 액세스 권한이 부여되지 않았습니다.|  
 |120|Error|활성화|보고서 서버|대칭 키를 해독할 수 없습니다. 서비스가 실행되는 계정이 변경된 것 같습니다. 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.|  
 |121|Error|시작/종료|보고서 서버|RPC(원격 프로시저 호출) 서비스를 시작하지 못했습니다.|  
-|122|경고|배달|일정 예약 및 배달 프로세서|일정 예약 및 배달 프로세서에서 전자 메일 배달에 사용되는 SMTP 서버에 연결할 수 없습니다. SMTP 서버 연결에 대 한 자세한 내용은 참조 하세요. [전자 메일 설정-Reporting Services 기본 모드 (구성 관리자)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)합니다.|  
+|122|경고|배달|일정 예약 및 배달 프로세서|일정 예약 및 배달 프로세서에서 전자 메일 배달에 사용되는 SMTP 서버에 연결할 수 없습니다. SMTP 서버 연결에 대 한 자세한 내용은 [전자 메일 설정-Reporting Services 기본 모드 (Configuration Manager)](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)를 참조 하세요.|  
 |123|경고|로깅|보고서 서버<br /><br /> 웹 포털|보고서 서버에서 추적 로그에 쓰지 못했습니다. 추적 로그에 대한 자세한 내용은 [보고서 서버 서비스 추적 로그](../../reporting-services/report-server/report-server-service-trace-log.md)를 참조하세요.|  
 |124|정보|활성화|보고서 서버|보고서 서버 서비스가 활성화되었습니다. 자세한 내용은 [보고서 서버 초기화&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)를 참조하세요.|  
 |125|정보|활성화|보고서 서버|데이터 암호화에 사용된 키를 추출했습니다. 키에 대한 자세한 내용은 [암호화 키 구성 및 관리&#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)를 참조하세요.|  

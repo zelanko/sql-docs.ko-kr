@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9dd19257-b120-4b74-8055-6570a343fc8d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ec3207d53dfb3ff937c4c5b9313650434d8c0330
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e79d93030bc8bafbc569e8bbcd289479c760750e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797460"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969035"
 ---
 # <a name="supportsouterjoins-method-sqlserverdatabasemetadata"></a>supportsOuterJoins 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsOuterJoins()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsOuterJoins 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsOuterJoins 메서드에 의해 지정 됩니다.  
+ 이 supportsOuterJoins 메서드는 supportsOuterJoins 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

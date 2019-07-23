@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ff617165-47f8-41c1-9c51-37ffc7714923
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6ad7f9ee6fc5250ac2bc349ccadb8909fc0e3cbe
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4591a91d1adb924801a39a132a0f20c68579e31b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804028"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953380"
 ---
 # <a name="getbytes-method-javalangstring-sqlserverresultset"></a>getBytes 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public byte[] getBytes(java.lang.String columnName)
  열 이름이 포함된 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 배열을 **바이트** 값입니다.  
+ **바이트** 값의 배열입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 용 Microsoft ADO.NET | Microsoft Docs
+title: SQL Server에 대 한 Microsoft ADO.NET | Microsoft Docs
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 82125679283a67006ed93bcd0d8355e2aaaf3d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11bf2d62735f7cb05e6ba9a601b22d4540f9565d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957657"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET for SQL Server
 
@@ -41,8 +40,8 @@ ADO.NET은 .NET 언어에 대한 핵심 데이터 액세스 기술입니다. Sys
   
 ## <a name="more-samples"></a>다른 샘플  
 * [ADO.NET 코드 예제](https://msdn.microsoft.com/library/dw70f090.aspx)  
-* [Windows에서.NET Framework 시작](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
-* [MacOS에서.NET Core를 사용 하 여 시작](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
-* [Ubuntu에서.NET Core 시작](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
-* [Red Hat Enterprise Linux (RHEL)에.NET Core 시작](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
+* [Windows에서 .NET Framework 시작](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
+* [MacOS에서 .NET Core 시작](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
+* [Ubuntu에서 .NET Core 시작](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)
+* [Red Hat Enterprise Linux에서 .NET Core 시작 (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/csharp/rhel/)
   

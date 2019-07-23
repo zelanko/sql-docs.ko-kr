@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8a677cc6-8e33-4e57-8678-0849345aa8d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 22414058b0763f32c2b991487e006b8de8e50611
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dd512236aa3070ce299756d4e4294c79ac2e94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982795"
 ---
 # <a name="getindexinfo-method-sqlserverdatabasemetadata"></a>getIndexInfo 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -54,11 +53,11 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
   
  *unique*  
   
- **true** 고유한 값의 인덱스만 반환 됩니다. **false** 모든 인덱스가 반환 되 면 합니다.  
+ 고유 값에 대 한 인덱스만 반환 되 면 **true** 입니다. 모든 인덱스가 반환 되 면 **false** 입니다.  
   
  *approximate*  
   
- **true** 결과 대략적인 이나 오래 된 값을 반영 하는 경우. **false** 결과가 정확 하면입니다.  
+ 결과가 대략적 이거나 오래 된 값을 반영 하면 **true** 입니다. 결과가 정확한 경우 **false** 입니다.  
   
 ## <a name="return-value"></a>반환 값  
  [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체입니다.  
@@ -83,8 +82,8 @@ public java.sql.ResultSet getIndexInfo(java.lang.String cat,
 |ORDINAL_POSITION|**short**|인덱스에 있는 열의 서수 위치입니다. 인덱스의 첫 번째 열은 1입니다.|  
 |COLUMN_NAME|**String**|열 이름입니다.|  
 |ASC_OR_DESC|**String**|인덱스의 데이터 정렬에 사용되는 순서입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> A(오름차순)<br /><br /> D(내림차순)<br /><br /> NULL(해당 사항 없음)<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 항상 “A”를 반환합니다.|  
-|CARDINALITY|**ssNoversion**|테이블의 행 또는 인덱스의 고유 값 수입니다.|  
-|PAGES|**ssNoversion**|인덱스 또는 테이블을 저장하는 데 사용되는 페이지 수입니다.|  
+|CARDINALITY|**int**|테이블의 행 또는 인덱스의 고유 값 수입니다.|  
+|PAGES|**int**|인덱스 또는 테이블을 저장하는 데 사용되는 페이지 수입니다.|  
 |FILTER_CONDITION|**String**|필터 조건입니다.<br /><br /> **참고:** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 항상 null을 반환합니다.|  
   
 > [!NOTE]  

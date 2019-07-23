@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4ee82290-508d-4bff-a5c5-8a56338deef8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31315b70f770d2f95e97d34b2064152234cae248
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d801a0184259ae22f86ea5ec23391ef78b23ce38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974270"
 ---
 # <a name="setfetchdirection-method-sqlserverresultset"></a>setFetchDirection 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public void setFetchDirection(int direction)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setFetchDirection 메서드는 java.sql.ResultSet 인터페이스의 setFetchDirection 메서드로 지정 됩니다.  
+ 이 setFetchDirection 메서드는 java. ResultSet 인터페이스의 setFetchDirection 메서드에 의해 지정 됩니다.  
   
  이 메서드의 초기 값은 이 SQLServerResultSet 개체를 생성한 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 결정됩니다. 인출 방향은 언제든지 변경할 수 있습니다.  
   
