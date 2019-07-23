@@ -14,19 +14,18 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e10313d27d7760d05ed79e1fa5d5cd1944009778
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: e4de9bbecbd7c473780d8baa598246f732b0ebcd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215961"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115737"
 ---
 # <a name="maintenance-plan-design-tab"></a>유지 관리 계획(디자인 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **유지 관리 계획(디자인 탭)** 을 사용하여 유지 관리 계획 및 해당 하위 계획의 속성을 지정할 수 있습니다. 도구 상자에서 계획 디자이너로 태스크를 끌어다 놓은 다음 태스크 그룹을 마우스 오른쪽 단추로 클릭하여 분기 실행 경로를 만듭니다. 유지 관리 계획은 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 에이전트 작업으로 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 패키지로 저장됩니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **하위 계획 추가**  
  구성할 수 있는 하위 계획을 추가합니다.  
   

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 72f5afa3-d636-410b-9e81-2ffa27772a8c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dd0a6810290d3f7becd6e03cb061b5052b544d17
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dccf6bd22d6e68271f83d686cf8ddffe9e190ead
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904676"
 ---
 # <a name="integration-services-ssis-connections"></a>Integration Services(SSIS) 연결
 

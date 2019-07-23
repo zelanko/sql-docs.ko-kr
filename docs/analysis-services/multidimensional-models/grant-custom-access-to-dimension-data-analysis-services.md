@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb93b4aeeaae9d659a225763286fc15a7d9f52a3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024730"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208869"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>차원 데이터에 대한 사용자 지정 액세스 부여(Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34024730"
 > [!NOTE]  
 >  다음 지침에서는 MDX에서 쿼리를 실행하는 클라이언트 연결을 가정합니다. 클라이언트에서 Power BI의 파워 뷰와 같은 DAX를 사용하는 경우 차원 보안이 쿼리 결과에 분명히 나타나지 않습니다. 자세한 내용은 [다차원 모델용 파워 뷰 이해](understanding-power-view-for-multidimensional-models.md) 를 참조하세요.
       
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>사전 요구 사항  
  일부 측정값 또는 차원 구성원은 사용자 지정 액세스 시나리오에 사용할 수 없습니다. 역할이 기본 측정값 또는 구성원에 대한 액세스를 제한하거나 측정값 식의 일부인 측정값에 대한 액세스를 제한하는 경우 연결에 실패합니다.  
   
  **차원 보안에 대한 장애물 확인: 기본 측정값, 기본 구성원 및 측정값 식에 사용된 측정값**  
@@ -61,7 +61,7 @@ ms.locfileid: "34024730"
 5.  필요에 따라 **고급** 을 클릭하여 이 특성 계층에 대해 **보이는 값 합계** 를 사용합니다. 이 옵션은 역할을 통해 사용 가능한 구성원을 기준으로 집계를 다시 계산합니다.  
   
     > [!NOTE]  
-    >  차원 구성원을 지우는 권한을 적용할 때, 집계된 합계가 자동으로 다시 계산되지 않습니다. 권한이 적용되기 전에 특성 계층의 **All** 구성원이 200을 반환한다고 가정합시다. 일부 구성원에 대한 액세스를 거부하는 권한이 적용된 후, 사용자에게 표시되는 구성원 값이 200보다 훨씬 적음에도 불구하고 **All** 은 계속 200을 반환합니다. 큐브의 소비자가 혼동하지 않도록 **All** 구성원을 특성 계층의 모든 구성원에 대한 집계가 아니라, 역할 구성원에 대한 구성원의 집계로 구성할 수 있습니다. 이 동작을 호출하기 위해 차원 보안을 구성할 때 **고급** **Visual Totals** 탭에서 를 활성화할 수 있습니다. 이 기능을 설정하면 미리 계산된 집계에서 가져오지 않고 쿼리 시 집계가 계산됩니다. 이 기능은 쿼리 성능에 많은 영향을 미칠 수 있으므로 필요한 경우에만 사용하세요.  
+    >  차원 구성원을 지우는 권한을 적용할 때, 집계된 합계가 자동으로 다시 계산되지 않습니다. 권한이 적용되기 전에 특성 계층의 **All** 구성원이 200을 반환한다고 가정합시다. 일부 구성원에 대한 액세스를 거부하는 권한이 적용된 후, 사용자에게 표시되는 구성원 값이 200보다 훨씬 적음에도 불구하고 **All** 은 계속 200을 반환합니다. 큐브의 소비자가 혼동하지 않도록 **All** 구성원을 특성 계층의 모든 구성원에 대한 집계가 아니라, 역할 구성원에 대한 구성원의 집계로 구성할 수 있습니다. 이 동작을 호출하기 위해 차원 보안을 구성할 때 고급 **Visual Totals** 탭에서  를 활성화할 수 있습니다. 이 기능을 설정하면 미리 계산된 집계에서 가져오지 않고 쿼리 시 집계가 계산됩니다. 이 기능은 쿼리 성능에 많은 영향을 미칠 수 있으므로 필요한 경우에만 사용하세요.  
   
 ## <a name="hiding-measures"></a>측정값 숨기기  
  [Grant custom access to cell data &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)에서는 셀 데이터가 아닌 측정값의 모든 보이는 측면을 완전히 숨기려면 차원 멤버에 대한 권한이 필요하다고 설명했습니다. 이 섹션에서는 측정값의 개체 메타데이터에 대한 액세스를 거부하는 방법을 설명합니다.  
@@ -87,7 +87,7 @@ ms.locfileid: "34024730"
  AllowedSet을 생성하면 특성이 여러 수준 계층에 참여할 때 파급 효과가 있습니다. 예를 들어 역할이 워싱턴 주에 대한 액세스를 허용한다고 가정해 봅시다(역할이 회사의 워싱턴 주 영업 부서에 대한 권한을 부여하는 시나리오를 가정). 이 역할을 통해 연결된 사람은 상위 항목(미국) 또는 하위 항목(시애틀 및 레드먼드)이 포함된 쿼리를 통해 워싱턴 주를 포함한 체인의 구성원만 볼 수 있습니다. 다른 주를 명시적으로 허용하지 않았기 때문에 거부된 것과 같은 효과가 나타납니다.  
   
 > [!NOTE]  
->  빈 집합을 정의 하는 경우 ({}) 특성 멤버의 특성의 멤버가 없는 데이터베이스 역할에 표시 됩니다. 허용 집합이 없는 경우가 빈 집합으로 해석되지는 않습니다.  
+>  빈 집합을 정의 하는 경우 ({}) 특성 멤버의 특성의 멤버가 데이터베이스 역할에 표시 됩니다. 허용 집합이 없는 경우가 빈 집합으로 해석되지는 않습니다.  
   
  **거부된 멤버 집합**  
  DeniedSet 속성은 멤버 없음, 모든 멤버(기본값) 또는 일부 특성 멤버로 분석할 수 있습니다. 거부 집합에 특정한 특성 구성원 집합만 포함되어 있으면 특성이 여러 수준 계층에 있는 경우 하위 항목뿐만 아니라 그러한 특정 구성원에 대해서만 데이터베이스 역할의 액세스가 거부됩니다. 워싱턴 주 영업 부서 예를 생각해 봅시다. 워싱턴이 DeniedSet에 있는 경우 이 역할을 통해 연결하는 사람들에게 워싱턴과 하위 특성을 제외한 다른 모든 주가 표시됩니다.  
@@ -115,10 +115,10 @@ ms.locfileid: "34024730"
  **확인**  
  이 페이지에서 정의한 MDX 구문을 테스트하려면 클릭합니다.  
   
-## <a name="see-also"></a>관련 항목:  
+## <a name="see-also"></a>관련 항목  
  [큐브 또는 모델 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [셀 데이터에 대 한 사용자 지정 액세스 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [데이터 마이닝 구조 및 모델에 대 한 권한 부여 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [셀 데이터에 대한 사용자 지정 액세스 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [데이터 마이닝 구조 및 모델에 대한 권한 부여&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [데이터 원본 개체 & #40;에 대 한 권한 부여 Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

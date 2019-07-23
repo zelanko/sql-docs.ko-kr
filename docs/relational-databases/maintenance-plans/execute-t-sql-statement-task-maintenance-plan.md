@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: fef3e259-0c47-4f6e-ade0-aee95e3d6c1a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0018e80cb5795775b18c1700cbd470831bb1c25f
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: d27395a66cd9bddb66bd2a74bcd13492509046e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115795"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>T-SQL 문 실행 태스크(유지 관리 계획)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **T-SQL 문 실행 태스크** 대화 상자를 사용하여 선택한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 유지 관리 계획에 추가하여 유지 관리 계획을 사용자 지정할 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **대량 삽입 태스크 편집기**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   

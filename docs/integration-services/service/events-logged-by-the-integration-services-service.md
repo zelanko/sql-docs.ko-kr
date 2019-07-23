@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d4122dcf-f16f-47a0-93a2-ffa3d0d4f9cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ea9c422f19554c1e88852eaad1cfa91c00db5f5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d1e4a801a8f7ac102ece4099084310714dcab6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947153"
 ---
 # <a name="events-logged-by-the-integration-services-service"></a>Integration Services 서비스에서 기록하는 이벤트
 

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 50d2e015-05ae-4014-a1cd-4de7866ad651
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c1e6878b4b6e1e0f77bba31b3bce57c79e531b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ea010277a05a3c4442089d89a87c2983a99b2ccc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47856543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010882"
 ---
 # <a name="metadata-visibility-configuration"></a>메타데이터 표시 유형 구성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,7 +59,7 @@ GO
   
  제한된 메타데이터 액세스란 다음을 의미합니다.  
   
--   **public** 메타데이터 액세스가 사용되는 응용 프로그램이 차단됩니다.  
+-   **public** 메타데이터 액세스가 사용되는 애플리케이션이 차단됩니다.  
   
 -   시스템 뷰에 대한 쿼리는 행의 하위 집합이나 일부 경우에는 빈 결과 집합을 반환합니다.  
   

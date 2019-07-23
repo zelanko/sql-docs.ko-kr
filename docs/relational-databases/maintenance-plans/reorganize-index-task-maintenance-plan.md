@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: e9cbebbd-f36f-4176-9832-382a46ac946c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 52412e1e6cc12c45399168062d397eb070887843
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 748a7f24d8e15974138f4fbaa5e9df6bd56cca75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115572"
 ---
 # <a name="reorganize-index-task-maintenance-plan"></a>인덱스 다시 구성 태스크(유지 관리 계획)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **인덱스 다시 구성 태스크** 대화 상자를 사용하여 인덱스 페이지를 보다 효율적인 검색 순서로 이동할 수 있습니다. `ALTER INDEX REORGANIZE` 데이터베이스의 경우 이 태스크를 수행하면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 문이 사용됩니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **대량 삽입 태스크 편집기**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   
