@@ -1,59 +1,59 @@
 ---
-title: 미리 학습 된 기계 학습 모델-SQL Server Machine Learning 설치
-description: SQL Server 2017 Machine Learning Services (R 또는 Python) 또는 SQL Server 2016 R Services에 감정 분석 및 이미지 기능화 (featurization)에 대 한 미리 학습 된 모델을 추가 합니다.
+title: 미리 학습 된 기계 학습 모델 설치
+description: 감정 분석 및 이미지 기능화에 대해 미리 학습 된 모델을 SQL Server 2017 Machine Learning Services (R 또는 Python) 또는 SQL Server 2016 R Services에 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 78e2a544766875b03144eb85b12aacee59295a2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2045d6611d5f418a9ed102a1d776080973c08659
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962873"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344974"
 ---
-# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 대 한 모델을 학습 하는 미리 학습 된 기계를 설치 합니다.
+# <a name="install-pre-trained-machine-learning-models-on-sql-server"></a>SQL Server에 미리 학습 된 기계 학습 모델 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 Powershell을 사용 하 여 무료 미리 학습 된 기계 학습에 대 한 모델을 추가 하는 방법에 설명 *감정 분석* 하 고 *이미지 기능화 (featurization)* SQL Server 인스턴스에 있는 R 또는 Python 통합 합니다. 미리 학습 된 모델은 Microsoft 및 사용 준비를 하 여 빌드됩니다. 설치 후 태스크로 인스턴스를 추가 합니다. 이러한 모델에 대 한 자세한 내용은 참조는 [리소스](#bkmk_resources) 이 문서의 섹션입니다.
+이 문서에서는 Powershell을 사용 하 여 *감정 분석* 및 *이미지 기능화* 을 위한 무료 미리 학습 된 기계 학습 모델을 R 또는 Python 통합이 있는 SQL Server 인스턴스에 추가 하는 방법을 설명 합니다. 미리 학습 된 모델은 설치 후 작업으로 인스턴스에 추가 되 고 Microsoft에서 바로 사용할 수 있습니다. 이러한 모델에 대 한 자세한 내용은이 문서의 [리소스](#bkmk_resources) 섹션을 참조 하세요.
 
-설치 되 면 미리 학습된 된 모델 MicrosoftML (R) 및 microsoftml (Python) 라이브러리의 특정 함수는 구현 세부 사항으로 간주 됩니다. 처리할 수 있습니다 하 고 사용자 지정 코드에는 독립 된 리소스로 안 (이며) 보기, 사용자 지정 또는 모델을 재 학습 또는 다른 함수 쌍을 이룹니다. 
+일단 설치 되 면 미리 학습 된 모델은 MicrosoftML (R) 및 MicrosoftML (Python) 라이브러리의 특정 기능에 대 한 구현 세부 정보로 간주 됩니다. 모델을 보거나, 사용자 지정 하거나, 다시 학습, 사용자 지정 코드 또는 쌍을 이루는 다른 함수에서 독립적인 리소스로 취급할 수 없습니다. 
 
-미리 학습 된 모델을 사용 하려면 다음 표에 나열 된 함수를 호출 합니다.
+사전 학습 된 모델을 사용 하려면 다음 표에 나열 된 함수를 호출 합니다.
 
 | R 함수 (MicrosoftML) | Python 함수 (microsoftml) | 사용법 |
 |--------------------------|-------------------------------|-------|
-| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 텍스트 입력에 대해 양수 음수가 감정 점수를 생성합니다. |
-| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 이미지 파일 입력에서 텍스트 정보를 추출합니다. |
+| [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 텍스트 입력에 대해 긍정 네거티브 감정 점수를 생성 합니다. |
+| [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 이미지 파일 입력에서 텍스트 정보를 추출 합니다. |
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-기계 학습 알고리즘입니다. 계산이있지 않습니다. 16GB RAM의 모든 샘플 데이터를 사용 하 여 자습서 연습 완료 등 낮음-보통 워크 로드에 대 한 사용 하는 것이 좋습니다.
+기계 학습 알고리즘은 계산 집약적입니다. 모든 샘플 데이터를 사용 하는 자습서 연습을 완료 하는 것을 포함 하 여 낮은 규모의 워크 로드에 16gb RAM을 권장 합니다.
 
-미리 학습 된 모델에 추가할 컴퓨터와 SQL Server에 대 한 관리자 권한이 있어야 합니다.
+미리 학습 된 모델을 추가 하려면 컴퓨터에 대 한 관리자 권한이 있어야 하 고 SQL Server 합니다.
 
-외부 스크립트를 사용 하도록 설정 하 고 SQL Server 실행 패드 서비스가 실행 되어야 합니다. 설치 지침을 활성화 하 고 이러한 기능을 확인 하는 단계를 제공 합니다. 
+외부 스크립트를 사용 하도록 설정 하 고 SQL Server 실행 패드 서비스가 실행 되 고 있어야 합니다. 설치 지침은 이러한 기능을 사용 하도록 설정 하 고 확인 하는 단계를 제공 합니다. 
 
-[MicrosoftML R 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 나 [microsoftml Python 패키지](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 미리 학습된 된 모델을 포함 합니다.
+[MicrosoftML R 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 또는 [MicrosoftML Python 패키지](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) 는 미리 학습 된 모델을 포함 합니다.
 
-+ [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) 사용자의 추가 작업이 없으므로 사용 하 여이 필수 조건을 충족 하므로 두 언어 버전의 machine learning 라이브러리를 포함 합니다. 라이브러리가 있는 이기 때문에 이러한 라이브러리에 미리 학습된 된 모델을 추가 하려면이 문서에 설명 된 PowerShell 스크립트를 사용할 수 있습니다.
++ [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md) 에는 Machine Learning 라이브러리의 언어 버전이 모두 포함 되어 있으므로이 필수 구성 요소는 추가 작업 없이 충족 됩니다. 라이브러리가 존재 하므로이 문서에 설명 된 PowerShell 스크립트를 사용 하 여 미리 학습 된 모델을 이러한 라이브러리에 추가할 수 있습니다.
 
-+ [SQL Server 2016 R Services](sql-r-services-windows-install.md)에 R 전용 이며, 포함 되지 않습니다 [MicrosoftML 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 기본적입니다. MicrosoftML를 추가 하려면 수행 해야 합니다는 [구성 요소 업그레이드](../install/upgrade-r-and-python.md)합니다. 구성 요소 업그레이드의 장점 중 하나는 추가할 수 있는 동시에 미리 학습 된 모델에 불필요 한 PowerShell 스크립트를 실행할 수 있습니다. 그러나 이미 업그레이드 하지만 경우 처음에는 미리 학습된 된 모델을 추가 하는 누락 된이 문서에 설명 된 대로 PowerShell 스크립트를 실행할 수 있습니다. 두 버전의 SQL Server에서 작동합니다. 를 수행 하기 전에 MicrosoftML 라이브러리 C:\Program Files\Microsoft SQL Server\MSSQL13에 존재 하는지 확인 합니다. MSSQLSERVER\R_SERVICES\library 합니다.
++ [SQL Server 2016 r Services](sql-r-services-windows-install.md)(r 전용)는 기본적으로 [MicrosoftML 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) 를 포함 하지 않습니다. MicrosoftML를 추가 하려면 [구성 요소 업그레이드](../install/upgrade-r-and-python.md)를 수행 해야 합니다. 구성 요소 업그레이드의 이점 중 하나는 미리 학습 된 모델을 동시에 추가 하 여 PowerShell 스크립트를 불필요 하 게 실행 하는 것입니다. 그러나 이미 업그레이드 했지만 처음으로 미리 학습 된 모델을 추가 하지 못한 경우이 문서에 설명 된 대로 PowerShell 스크립트를 실행할 수 있습니다. SQL Server의 두 버전 모두에 대해 작동 합니다. 이렇게 하기 전에 MicrosoftML 라이브러리가 C:\Program Files\Microsoft SQL Server\MSSQL13.에 있는지 확인 합니다. MSSQLSERVER\R_SERVICES\library.
 
 
 <a name="file-location"></a>
 
-## <a name="check-whether-pre-trained-models-are-installed"></a>미리 학습 된 모델의 설치 여부를 확인 합니다.
+## <a name="check-whether-pre-trained-models-are-installed"></a>미리 학습 된 모델 설치 여부 확인
 
-R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
+R 및 Python 모델의 설치 경로는 다음과 같습니다.
 
-+ R:에 대 한 `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
++ R의 경우:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library\MicrosoftML\mxLibs\x64`
 
-+ Python: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
++ Python의 경우:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\microsoftml\mxLibs`
 
-모델 파일 이름 아래에 나열 됩니다.
+모델 파일 이름은 다음과 같습니다.
 
 + AlexNet\_Updated.model
 + ImageNet1K\_mean.xml
@@ -62,16 +62,16 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 + ResNet\_18\_Updated.model
 + ResNet\_50\_Updated.model
 
-모델은 이미 설치 된 경우는 [유효성 검사 단계](#verify) 사용할 수 있는지 확인 합니다.
+모델이 이미 설치 되어 있는 경우 [유효성 검사 단계로](#verify) 이동 하 여 가용성을 확인 합니다.
 
-## <a name="download-the-installation-script"></a>설치 스크립트를 다운로드 합니다.
+## <a name="download-the-installation-script"></a>설치 스크립트 다운로드
 
-클릭 [ https://aka.ms/mlm4sql ](https://aka.ms/mlm4sql) 파일을 다운로드 하려면 **설치 MLModels.ps1**합니다.
+Install-MLModels [https://aka.ms/mlm4sql](https://aka.ms/mlm4sql) 파일을 다운로드 하려면 클릭 합니다.
 
 ## <a name="execute-with-elevated-privileges"></a>상승 된 권한으로 실행
 
-1. PowerShell을 시작 합니다. 작업 표시줄에서 PowerShell 프로그램 아이콘을 마우스 오른쪽 단추로 클릭 하 고 선택 **관리자 권한으로 실행**합니다.
-2. 설치 스크립트 파일에 정규화 된 경로 입력 하 고 인스턴스 이름을 포함 합니다. Downloads 폴더 및 기본 인스턴스를 사용 한다고 가정 합니다 명령을 다음과 같이 표시 될 수 있습니다.
+1. PowerShell을 시작 합니다. 작업 표시줄에서 PowerShell 프로그램 아이콘을 마우스 오른쪽 단추로 클릭 하 고 **관리자 권한으로 실행**을 선택 합니다.
+2. 설치 스크립트 파일의 정규화 된 경로를 입력 하 고 인스턴스 이름을 포함 합니다. 다운로드 폴더와 기본 인스턴스를 가정 하면 명령은 다음과 같이 표시 될 수 있습니다.
 
    ```powershell
    PS C:\WINDOWS\system32> C:\Users\<user-name>\Downloads\Install-MLModels.ps1 MSSQLSERVER
@@ -79,7 +79,7 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 **출력**
 
-인터넷에 연결 된 SQL Server 2017의 Machine Learning 기본 인스턴스에 R 및 Python을 사용 하 여 다음과 비슷한 메시지가 표시 됩니다.
+R 및 Python을 사용 하 여 인터넷에 연결 된 SQL Server 2017 Machine Learning 기본 인스턴스에서 다음과 비슷한 메시지가 표시 됩니다.
 
    ```powershell
    MSSQL14.MSSQLSERVER
@@ -95,13 +95,13 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 ## <a name="verify-installation"></a>설치 확인
 
-먼저 새 파일을 확인 합니다 [mxlibs 폴더](#file-location)합니다. 데모 코드 모델이 설치 되어 작동을 확인 하려면 다음을 실행 합니다. 
+먼저 [mxlibs 폴더](#file-location)에서 새 파일을 확인 합니다. 다음으로 데모 코드를 실행 하 여 모델이 설치 되 고 작동 하는지 확인 합니다. 
 
 ### <a name="r-verification-steps"></a>R 확인 단계
 
-1. 시작 **RGUI 합니다. EXE** C:\Program Files\Microsoft SQL Server\MSSQL14에서. MSSQLSERVER\R_SERVICES\bin\x64 합니다.
+1. **Rgui를 시작 합니다.** C:\Program FILES\MICROSOFT SQL Server\MSSQL14.의 EXE MSSQLSERVER\R_SERVICES\bin\x64.
 
-2. 명령 프롬프트에서 다음 R 스크립트에 붙여 넣습니다.
+2. 명령 프롬프트에서 다음 R 스크립트를 붙여 넣습니다.
 
     ```R
     # Create the data
@@ -123,7 +123,7 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
     sentimentScores
     ```
 
-3. Enter 키를 눌러 감정 점수를 볼 수 있습니다. 출력은 다음과 같이 됩니다.
+3. Enter 키를 눌러 감정 점수를 확인 합니다. 출력은 다음과 같아야 합니다.
 
     ```R
     > sentimentScores
@@ -139,9 +139,9 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 ### <a name="python-verification-steps"></a>Python 확인 단계
 
-1. 시작 **Python.exe** C:\Program Files\Microsoft SQL Server\MSSQL14에서. MSSQLSERVER\PYTHON_SERVICES 합니다.
+1. C:\Program Files\Microsoft SQL Server\MSSQL14.에서 **Python을** 시작 합니다. MSSQLSERVER\PYTHON_SERVICES.
 
-2. 명령 프롬프트에서 다음 Python 스크립트에 붙여 넣습니다.
+2. 다음 Python 스크립트를 명령 프롬프트에 붙여 넣습니다.
 
     ```python
     import numpy
@@ -165,7 +165,7 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
     print(sentiment_scores)
     ```
 
-3. Enter 키를 눌러 점수를 인쇄 합니다. 출력은 다음과 같이 됩니다.
+3. Enter 키를 눌러 점수를 인쇄 합니다. 출력은 다음과 같아야 합니다.
 
     ```python
     >>> print(sentiment_scores)
@@ -177,11 +177,11 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
     ```
 
 > [!NOTE]
-> 데모 스크립트 실패 하는 경우 먼저 파일 위치를 확인 합니다. SQL Server의 여러 인스턴스가 포함 된 시스템에서 실행 되는 인스턴스 또는-side-by-side 독립 실행형 버전을 사용 하 여, 있기 잘못가 환경의 읽 및 잘못 된 위치에 파일을 배치 하기 위한 설치 스크립트가 있습니다. 일반적으로 올바른 mxlib 폴더로 파일을 수동으로 복사 문제를 해결 합니다.
+> 데모 스크립트가 실패할 경우 먼저 파일 위치를 확인 합니다. SQL Server 인스턴스를 여러 개 포함 하거나 독립 실행형 버전과 함께 실행 되는 인스턴스의 경우에는 설치 스크립트에서 환경을 잘못 읽을 수 있으며 파일을 잘못 된 위치에 저장할 수 있습니다. 일반적으로 파일을 올바른 mxlib 폴더에 수동으로 복사 하면 문제가 해결 됩니다.
 
 ## <a name="examples-using-pre-trained-models"></a>미리 학습 된 모델을 사용 하는 예제
 
-다음 링크를 미리 학습 된 모델을 호출 하는 예제 코드를 포함 합니다.
+다음 링크에는 미리 학습 된 모델을 호출 하는 예제 코드가 포함 되어 있습니다.
 
 + [코드 샘플: 텍스트 Featurizer를 사용 하 여 감정 분석](https://github.com/Microsoft/microsoft-r/tree/master/microsoft-ml/Samples/101/BinaryClassification/SimpleSentimentAnalysis)
 
@@ -189,25 +189,25 @@ R 및 Python 모델에 대 한 설치 경로 다음과 같습니다.
 
 ## <a name="research-and-resources"></a>연구 및 리소스
 
-현재 사용할 수 있는 모델은 감정 분석 및 이미지 분류에 대 한 심층 신경망 (DNN) 모델. Microsoft의를 사용 하 여 모든 미리 학습 된 모델이 학습 되었습니다 [계산 Network Toolkit](https://cntk.ai/Features/Index.html), 또는 **CNTK**합니다.
+현재 사용할 수 있는 모델은 감정 분석 및 이미지 분류를 위한 심층 신경망 (DNN) 모델입니다. 미리 학습 된 모든 모델은 Microsoft의 [계산 네트워크 도구 키트](https://cntk.ai/Features/Index.html)또는 **CNTK**를 사용 하 여 학습 되었습니다.
 
-각 네트워크의 구성 된 다음 참조 구현을 기반으로 합니다.
+각 네트워크의 구성은 다음 참조 구현을 기반으로 합니다.
 
 + ResNet-18
 + ResNet-50
 + ResNet-101
 + AlexNet
 
-이러한 심층 학습 모델 및 그 구현 방법에 사용 되는 알고리즘에 대 한 자세한 내용은 및 CNTK를 사용 하 여 학습, 이러한 문서를 참조 하세요.
+이러한 심층 학습 모델에 사용 되는 알고리즘과 CNTK를 사용 하 여 구현 및 학습 되는 방법에 대 한 자세한 내용은 다음 문서를 참조 하세요.
 
-+ [Microsoft 연구원 들은 알고리즘 마일스 톤을 ImageNet 챌린지를 설정합니다.](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
++ [Microsoft 연구원의 알고리즘이 ImageNet 챌린지 마일스 톤을 설정 합니다.](https://www.microsoft.com/research/blog/microsoft-researchers-algorithm-sets-imagenet-challenge-milestone/)
 
-+ [Microsoft Computational Network Toolkit는 가장 효율적인 분산된 심층 학습 계산 성능을 제공합니다](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
++ [Microsoft 컴퓨팅 네트워크 도구 키트는 가장 효율적인 분산 심층 학습 계산 성능을 제공 합니다.](https://www.microsoft.com/research/blog/microsoft-computational-network-toolkit-offers-most-efficient-distributed-deep-learning-computational-performance/)
 
 ## <a name="see-also"></a>참조
 
 + [SQL Server 2016 R Services](sql-r-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning 서비스](sql-machine-learning-services-windows-install.md)
-+ [SQL Server 인스턴스에 R 및 Python 구성 요소를 업그레이드 합니다.](../install/upgrade-r-and-python.md)
++ [SQL Server 2017 Machine Learning Services](sql-machine-learning-services-windows-install.md)
++ [SQL Server 인스턴스에서 R 및 Python 구성 요소 업그레이드](../install/upgrade-r-and-python.md)
 + [R에 대 한 MicrosoftML 패키지](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)
 + [Python 용 microsoftml 패키지](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package)

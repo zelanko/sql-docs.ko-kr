@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e22a94fef64ac6b31d4a7609c01a50f11d5020bf
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 52e3d6ea8cff9d1984ee11a510a6c21833034c29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511940"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006681"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>예: XMLTEXT 지시어 지정
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +99,7 @@ FOR XML EXPLICIT;
   
  *AttributeName*이 `xmltext` 지시어와 함께 지정된 경우 <`overflow`> 요소의 특성이 묶는 <`Parent`> 요소의 하위 요소에 대한 특성으로 추가됩니다. *AttributeName* 에 대해 지정된 이름은 하위 요소의 이름이 됩니다.  
   
- 이 쿼리에서 *AttributeName*인 <`overflow`>는 `xmltext` 지시어와 함께 지정됩니다.  
+ 이 쿼리에서 *AttributeName*인 <`overflow`>는 `xmltext` 지시어와 함께 지정됩니다.   
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e526bbe9191aa83cedd45c2115b3cb4b54a937d2
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ebedefdd7e11f7ff3edcd884674092aeaf3b4f9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939154"
 ---
 # <a name="enhance-transactional-replication-performance"></a>트랜잭션 복제 성능 향상
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "54136083"
   
 -   여러 게시 간에 아티클을 분산시킵니다.  
   
-     [**-SubscriptionStreams** 매개 변수](#subscriptionstreams)를 사용할 수 없는 경우 여러 게시를 만들어 보세요. 이러한 게시에 아티클을 분산시키면 복제가 구독자에게 변경 내용을 병렬로 적용할 수 있습니다.  
+     [ **-SubscriptionStreams** 매개 변수](#subscriptionstreams)를 사용할 수 없는 경우 여러 게시를 만들어 보세요. 이러한 게시에 아티클을 분산시키면 복제가 구독자에게 변경 내용을 병렬로 적용할 수 있습니다.  
   
 ## <a name="subscription-considerations"></a>구독 고려 사항  
   
@@ -76,9 +75,9 @@ ms.locfileid: "54136083"
 로그 판독기 및 배포 에이전트의 성능을 개선할 최상의 값을 확인하기 위해 테스트가 수행되었습니다. 이 테스트의 결과에 따르면 어떤 상황에서 어떤 값이 작동하는지를 결정하는 요소는 워크로드였고, 모든 상황에서 성능을 개선하는 하나의 값 조정은 없습니다. 
 
 결과: 
-- 더 작은 트랜잭션(500개 미만의 명령)의 워크로드가 있는 ‘로그 판독기 에이전트’의 경우 **ReadBatchSize** 값이 높으면 처리량이 향상될 수 있습니다. 그러나 큰 트랜잭션이 있는 워크로드의 경우 이 값을 변경해도 성능이 향상되지 않습니다. 
+- 더 작은 트랜잭션(500개 미만의 명령)의 워크로드가 있는 ‘로그 판독기 에이전트’의 경우 **ReadBatchSize** 값이 높으면 처리량이 향상될 수 있습니다.  그러나 큰 트랜잭션이 있는 워크로드의 경우 이 값을 변경해도 성능이 향상되지 않습니다. 
     - 동일한 서버에서 병렬로 실행되는 여러 배포 에이전트 및 여러 로그 판독기 에이전트가 있는 경우 **ReadBatchSize** 값이 높으면 배포 데이터베이스에서 경합이 발생합니다. 
-- ‘배포 에이전트’의 경우
+- ‘배포 에이전트’의 경우 
     - **CommitBatchSize**를 늘리면 처리량이 향상될 수 있습니다. 하지만 오류가 발생하는 경우에는 배포 에이전트가 많은 트랜잭션을 롤백하고 다시 시작하여 다시 적용해야 한다는 것을 고려해야 합니다. 
     - **SubscriptionStreams** 값을 늘리면 구독자에 대한 여러 연결이 변경 내용의 일괄 처리를 병렬로 적용하므로 배포 에이전트의 전체 처리량에 도움이 됩니다. 그러나 프로세서 및 기타 메타데이터 조건(예: 기본 키, 외래 키, 고유 제약 조건 및 인덱스)의 수에 따라 SubscriptionStreams 값이 높으면 실제로 부정적인 영향을 줄 수 있습니다. 또한 스트림이 실행 또는 커밋되지 않으면 배포 에이전트는 대신에 단일 스트림을 사용하여 실패한 일괄 처리를 다시 시도합니다.
 
@@ -116,7 +115,7 @@ ms.locfileid: "54136083"
   
 **–SubscriptionStreams** 매개 변수는 집계 복제 처리량을 크게 높일 수 있습니다. 이 매개 변수는 변경 내용의 일괄 처리를 병렬로 적용하기 위해 구독자에 여러 연결을 설정하도록 허용하지만 단일 스레드를 사용할 때 나타나는 여러 가지 트랜잭션 특징을 유지합니다. 여러 연결 중 하나가 실행 또는 커밋되지 않으면 모든 연결에서 현재 일괄 처리를 중지하고 에이전트가 단일 스트림을 사용하여 실패한 일괄 처리를 다시 시도합니다. 이러한 재시도 단계가 완료되기 전에는 구독자에 임시 트랜잭션 불일치가 발생할 수 있으며 실패한 일괄 처리가 성공적으로 커밋되면 구독자의 트랜잭션 일관성이 다시 유지됩니다.  
   
-[sp_addsubscription&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)의 **@subscriptionstreams**를 사용하여 이 에이전트 매개 변수의 값을 지정할 수 있습니다.  
+[sp_addsubscription&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)의 **@subscriptionstreams** 를 사용하여 이 에이전트 매개 변수의 값을 지정할 수 있습니다.  
 
 구독 스트림 구현에 대한 자세한 내용은 [Navigating SQL replication subscriptionStream setting](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting)(SQL 복제 subscriptionStream 설정 살펴보기)을 참조하세요.
   

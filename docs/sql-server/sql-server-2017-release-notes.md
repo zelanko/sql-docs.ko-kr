@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = sql-server-2017 || = sqlallproducts-allversions
-ms.openlocfilehash: 9fd3ee0706e30d6a7077f22488a1f64084b5ae8a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2c928db781c6e7d31f07e1cea37ed80481b8fed6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58797013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136477"
 ---
 # <a name="sql-server-2017-release-notes"></a>SQL Server 2017 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "58797013"
     3. 원본 공유 이름으로 **파일 I/O 스트리밍 액세스에 FILESTREAM 사용**을 다시 선택하고 **적용**을 클릭합니다.
 
 ### <a name="master-data-services-mds"></a>MDS(Master Data Services)
-- **문제 및 고객에게 미치는 영향:**  사용자 권한 페이지에서 엔터티 트리 뷰의 루트 수준에 대한 권한을 부여할 때 다음 오류가 표시됩니다. `"The model permission cannot be saved. The object guid is not valid"`
+- **문제 및 고객에게 미치는 영향:**   사용자 권한 페이지에서 엔터티 트리 뷰의 루트 수준에 대한 권한을 부여할 때 다음 오류가 표시됩니다. `"The model permission cannot be saved. The object guid is not valid"`
 
 - **해결 방법:** 
   - 루트 수준이 아니라 트리 뷰의 하위 노드에 대한 권한을 부여합니다.
@@ -74,7 +73,7 @@ ms.locfileid: "58797013"
 - **문제 및 고객에게 미치는 영향:** 일관성과 가독성을 향상하기 위해 저장 프로시저 **[catalog].[create_execution]** 의 *runincluster* 매개 변수 이름이 *runinscaleout*으로 변경되었습니다.
 - **해결 방법:** Scale Out에서 패키지를 실행하는 기존 스크립트가 있는 경우 매개 변수 이름을 *runincluster*에서 *runinscaleout*으로 변경해야만 RC1에서 스크립트가 작동합니다.
 
-- **문제 및 고객에게 미치는 영향:** SSMS(SQL Server Management Studio) 17.1 및 이전 버전은 RC1의 Scale Out에서 패키지 실행을 트리거할 수 없습니다. 오류 메시지: “*@runincluster*은(는) 프로시저 **create_execution**의 매개 변수가 아닙니다.” 이 문제는 다음 릴리스인 SSMS 버전 17.2에서 해결됩니다. SSMS 17.2 이상 버전은 Scale Out에서 새 매개 변수 이름 및 패키지 실행을 지원합니다. 
+- **문제 및 고객에게 미치는 영향:** SSMS(SQL Server Management Studio) 17.1 및 이전 버전은 RC1의 Scale Out에서 패키지 실행을 트리거할 수 없습니다. 오류 메시지: “ *@runincluster* 은(는) 프로시저 **create_execution**의 매개 변수가 아닙니다.” 이 문제는 다음 릴리스인 SSMS 버전 17.2에서 해결됩니다. SSMS 17.2 이상 버전은 Scale Out에서 새 매개 변수 이름 및 패키지 실행을 지원합니다. 
 - **해결 방법:** SSMS 버전 17.2가 나올 때까지:
   1. 기존 버전의 SSMS를 사용하여 패키지 실행 스크립트를 생성합니다.
   2. 스크립트에서 *runincluster* 매개 변수의 이름을 *runinscaleout*으로 변경합니다.
@@ -114,9 +113,9 @@ ms.locfileid: "58797013"
 
 ### <a name="tsqllanguageservicemsi-ctp-21"></a>TSqlLanguageService.msi(CTP 2.1)
 
-- **문제 및 고객에게 미치는 영향:** 2016 버전의 ‘TSqlLanguageService.msi’가 SQL 설치 프로그램을 통해서 또는 독립 실행형 재배포 가능 패키지로 설치된 컴퓨터에 설치한 후 v13.*(SQL 2016) 버전의 ‘Microsoft.SqlServer.Management.SqlParser.dll’ 및 ‘Microsoft.SqlServer.Management.SystemMetadataProvider.dll’이 제거됩니다. 이러한 어셈블리의 2016 버전에 종속된 모든 애플리케이션에서는 작동이 중지되고 *오류 : 파일 또는 어셈블리 ‘Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91’ 또는 해당 종속성 중 하나를 로드할 수 없습니다. 지정한 파일을 찾을 수 없습니다.* 와 유사한 오류가 표시됩니다.
+- **문제 및 고객에게 미치는 영향:** 2016 버전의 ‘TSqlLanguageService.msi’가 SQL 설치 프로그램을 통해서 또는 독립 실행형 재배포 가능 패키지로 설치된 컴퓨터에 설치한 후 v13.*(SQL 2016) 버전의 ‘Microsoft.SqlServer.Management.SqlParser.dll’ 및 ‘Microsoft.SqlServer.Management.SystemMetadataProvider.dll’이 제거됩니다.    이러한 어셈블리의 2016 버전에 종속된 모든 애플리케이션에서는 작동이 중지되고 *오류 : 파일 또는 어셈블리 ‘Microsoft.SqlServer.Management.SqlParser, Version=13.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91’ 또는 해당 종속성 중 하나를 로드할 수 없습니다. 지정한 파일을 찾을 수 없습니다.* 와 유사한 오류가 표시됩니다.
 
-   또 TSqlLanguageService.msi의 2016 버전을 다시 설치하려고 하면 설치가 실패하고 ‘컴퓨터에 상위 버전이 이미 설치되어 있으므로 Microsoft SQL Server 2016 T-SQL 언어 서비스를 설치하지 못했습니다.’라는 메시지가 표시됩니다.
+   또 TSqlLanguageService.msi의 2016 버전을 다시 설치하려고 하면 설치가 실패하고 ‘컴퓨터에 상위 버전이 이미 설치되어 있으므로 Microsoft SQL Server 2016 T-SQL 언어 서비스를 설치하지 못했습니다.’라는 메시지가 표시됩니다. 
 
 - **해결 방법** 이 문제를 해결하고 어셈블리의 v13 버전에 종속된 애플리케이션을 수정하려면 다음 단계를 수행합니다.
 
