@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6c2fd2c71c5272b8104eaf5b24fa8e7c0a9fc8c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8cf804f934a08db335c55b15ab23b9e42a7ee9c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051323"
 ---
 # <a name="delete-xml-dml"></a>delete(XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ delete Expression
   
 ## <a name="examples"></a>예  
   
-### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>1. 형식화되지 않은 xml 변수에 저장된 문서에서 노드 삭제  
+### <a name="a-deleting-nodes-from-a-document-stored-in-an-untyped-xml-variable"></a>1\. 형식화되지 않은 xml 변수에 저장된 문서에서 노드 삭제  
  다음 예에서는 문서에서 여러 노드를 삭제하는 방법을 보여 줍니다. 먼저 **xml** 형식의 변수에 XML 인스턴스가 할당됩니다. 그런 다음 이후의 delete XML DML 문이 문서에서 여러 노드를 삭제합니다.  
   
 ```  
@@ -84,7 +83,7 @@ SET @myDoc.modify('
 SELECT @myDoc  
 ```  
   
-### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>2. 형식화되지 않은 xml 열에 저장된 문서에서 노드 삭제  
+### <a name="b-deleting-nodes-from-a-document-stored-in-an-untyped-xml-column"></a>2\. 형식화되지 않은 xml 열에 저장된 문서에서 노드 삭제  
  다음 예에서 **delete** XML DML 문은 열에 저장된 문서에서 <`Features`>의 두 번째 자식 요소를 제거합니다.  
   
 ```  

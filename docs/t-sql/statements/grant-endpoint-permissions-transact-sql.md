@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9eda885c-fc3a-4c9d-8de6-ce07fb35a934
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0e655ac992946cfe08a8ef63c7b6b8de3f8fef45
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 53cac5548d231896b72e0786516c1e32c994869a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050844"
 ---
 # <a name="grant-endpoint-permissions-transact-sql"></a>GRANT 엔드포인트 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,8 +51,8 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
  *permission*  
  엔드포인트에 대해 부여할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
- ON ENDPOINT **::**_endpoint_name_  
- 사용 권한을 부여할 엔드포인트를 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ ON ENDPOINT **::** _endpoint_name_  
+ 사용 권한을 부여할 엔드포인트를 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  TO \<server_principal>  
  사용 권한을 부여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다.  
@@ -91,12 +90,12 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
 |TAKE OWNERSHIP|CONTROL|CONTROL SERVER|  
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  엔드포인트에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY ENDPOINT 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>1. 엔드포인트에 대한 VIEW DEFINITION 권한 부여  
+### <a name="a-granting-view-definition-permission-on-an-endpoint"></a>1\. 엔드포인트에 대한 VIEW DEFINITION 권한 부여  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 대해 엔드포인트 `Mirror7`에 대한 `ZArifin` 권한을 부여합니다.  
   
 ```  
@@ -105,7 +104,7 @@ GRANT VIEW DEFINITION ON ENDPOINT::Mirror7 TO ZArifin;
 GO  
 ```  
   
-### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>2. GRANT OPTION을 지정하여 TAKE OWNERSHIP 권한 부여  
+### <a name="b-granting-take-ownership-permission-with-the-grant-option"></a>2\. GRANT OPTION을 지정하여 TAKE OWNERSHIP 권한 부여  
  다음 예에서는 `TAKE OWNERSHIP`으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자 `Shipping83`에 대해 엔드포인트 `PKomosinski`에 대한 `GRANT OPTION` 권한을 부여합니다.  
   
 ```  
@@ -116,8 +115,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [DENY 엔드포인트 권한&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
- [REVOKE 엔드포인트 권한&amp;#40;Transact-SQL&amp;#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
+ [DENY 엔드포인트 권한&#40;Transact-SQL&#41;](../../t-sql/statements/deny-endpoint-permissions-transact-sql.md)   
+ [REVOKE 엔드포인트 권한&#40;Transact-SQL&#41;](../../t-sql/statements/revoke-endpoint-permissions-transact-sql.md)   
  [CREATE ENDPOINT&#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   
  [엔드포인트 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [sys.endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)   
