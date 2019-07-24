@@ -1,5 +1,5 @@
 ---
-title: updateClob 메서드 (int, java.io.Reader) | Microsoft Docs
+title: updateClob 메서드 (int,) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: df60fbf1-44b2-4658-84a5-5cb129ce2dc6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8da48ddf067d830a3fe69fe63de3636a9ae8852c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4aebc496766fbf8358e7e18004cd74779cbbfafa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996641"
 ---
 # <a name="updateclob-method-int-javaioreader"></a>updateClob 메서드(int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fee6e6b8-aad9-496b-84a2-18d2950470a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 596c7b648d0d6812859fc688657dfba4f7567b1e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ae00c01e962da05015a5132608915fc9d70258f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936392"
 ---
 # <a name="how-to-specify-php-data-types"></a>방법: PHP 데이터 형식 지정
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

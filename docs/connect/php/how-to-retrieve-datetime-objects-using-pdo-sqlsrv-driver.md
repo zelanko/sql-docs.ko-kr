@@ -10,28 +10,28 @@ helpviewer_keywords:
 - date and time types, retrieving as datetime objects
 author: yitam
 ms.author: v-yitam
-manager: mbarwin
-ms.openlocfilehash: 54e5b5c9c1ba59ed64db740fbbb1a643e7cb1b2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63210432"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264575"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdosqlsrv-driver"></a>방법: PDO_SQLSRV 드라이버를 사용하여 날짜 및 시간 형식을 PHP DateTime 개체로 검색
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-버전 5.6.0에 추가 하는이 기능을 때만 유효 PDO_SQLSRV 드라이버를 사용 하 여 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]입니다.
+버전 5.6.0에 추가 된이 기능은 용 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]PDO_SQLSRV 드라이버를 사용 하는 경우에만 유효 합니다.
 
 ### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>날짜 및 시간 형식을 DateTime 개체로 검색 하려면
 
-PDO_SQLSRV를 사용 하는 경우 날짜 및 시간 형식 (**smalldatetime**를 **datetime**에 **날짜**를 **시간**, **datetime2**, 및 **datetimeoffset**) 기본적으로 문자열로 반환 됩니다. PDO::ATTR_STRINGIFY_FETCHES 아니고 PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성에 아무 효과가 있습니다. 날짜 및 시간 형식으로 검색 하기 위해 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 문이나 연결 특성을 설정 하는 개체를 `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` 하 **true** (것 **false** 기본적으로).
+PDO_SQLSRV를 사용 하는 경우 날짜 및 시간 형식 (**smalldatetime**, **datetime**, **date**, **time**, **datetime2**및 **datetimeoffset**)은 기본적으로 문자열로 반환 됩니다. PDO:: ATTR_STRINGIFY_FETCHES 및 PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 특성은 아무런 영향도 미치지 않습니다. 날짜 및 시간 형식을 [PHP DateTime](http://php.net/manual/en/class.datetime.php) 개체로 검색 하려면 연결 또는 문 특성 `PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE` 을 **true** 로 설정 합니다 (기본적으로 **false** 임).
 
 > [!NOTE]
-> 이 연결 또는 문 특성에만 적용 됩니다 일반 가져오기 날짜 및 시간 형식을 DateTime 개체를 출력 매개 변수로 지정할 수 없습니다.
+> 이 연결 또는 문 특성은 날짜 및 시간 형식에 대 한 일반 인출에만 적용 됩니다. DateTime 개체는 출력 매개 변수로 지정할 수 없기 때문입니다.
 
-## <a name="example---use-the-connection-attribute"></a>예제-연결 특성을 사용 하 여
-다음 예제에서는 오류 명확성을 위해 검사를 생략 합니다. 이 항목에 연결 특성을 설정 하는 방법을 보여 줍니다.
+## <a name="example---use-the-connection-attribute"></a>예-연결 특성 사용
+다음 예에서는 명확 하 게 하기 위해 오류 검사를 생략 합니다. 이 항목에서는 연결 특성을 설정 하는 방법을 보여 줍니다.
 
 ```php
 <?php
@@ -58,8 +58,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-attribute"></a>예제-문 특성을 사용 하 여
-이 예제에서는 문 특성을 설정 하는 방법을 보여 줍니다.
+## <a name="example---use-the-statement-attribute"></a>예-statement 특성 사용
+이 예에서는 문 특성을 설정 하는 방법을 보여 줍니다.
 
 ```php
 <?php
@@ -80,8 +80,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-option"></a>예제-문 옵션을 사용 하 여
-또는 문 특성 옵션으로 설정할 수 있습니다.
+## <a name="example---use-the-statement-option"></a>예-문 옵션 사용
+또는 문 특성을 옵션으로 설정할 수 있습니다.
 
 ```php
 <?php
@@ -103,8 +103,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---retrieve-datetime-types-as-strings"></a>예제-날짜/시간 형식 문자열로 검색
-다음 예제에서는 (실제로 필요 없는 기본적으로 false 이므로)는 그 반대를 수행 하는 방법을 보여 줍니다.
+## <a name="example---retrieve-datetime-types-as-strings"></a>예제-datetime 형식을 문자열로 검색
+다음 예에서는 반대를 얻는 방법을 보여 줍니다 .이는 기본적으로 false 이므로 반드시 필요한 것은 아닙니다.
 
 ```php
 <?php

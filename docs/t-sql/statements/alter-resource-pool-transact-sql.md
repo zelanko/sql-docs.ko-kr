@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 711ac97cd2376cc924075d67b2f25ece1a4744e0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6b95fd77e973e918dda99ef4a1053b45d3f3f067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927190"
 ---
 # <a name="alter-resource-pool-transact-sql"></a>ALTER RESOURCE POOL(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ ALTER RESOURCE POOL { pool_name | "default" }
 ```  
   
 ## <a name="arguments"></a>인수  
- { *pool_name* | **"default"** }  
+ { *pool_name* |  **"default"** }  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치될 때 만들어지는 기본 리소스 풀이나 기존 사용자 정의 리소스 풀의 이름입니다.  
   
  "default"는 시스템 예약어인 DEFAULT와의 충돌을 피하기 위해 ALTER RESOURCE POOL과 함께 사용될 경우 따옴표("") 또는 대괄호([])로 묶어야 합니다. 자세한 내용은 [Database Identifiers](../../relational-databases/databases/database-identifiers.md)을 참조하세요.  
@@ -135,7 +134,7 @@ INNER JOIN sys.dm_os_schedulers AS sc
 > [!CAUTION]  
 >  하나 이상의 작업 그룹에 연결된 리소스 풀에서 캐시된 계획을 삭제하면 *pool_name*에 의해 식별된 사용자 정의 리소스 풀과 함께 모든 작업 그룹에 영향을 미칩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  

@@ -1,5 +1,5 @@
 ---
-title: getDate 메서드 (java.lang.String) 열 | Microsoft Docs
+title: getDate 메서드 (java. String) 열 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 821058ae-cbe3-4a14-aa02-d55e45491437
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 387847f82246b8571fa588f52e9f07235172d0cd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c534c043de11d9123beaaa36f38c4bbd009012c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983906"
 ---
 # <a name="getdate-method-javalangstring-sqlserverresultset"></a>getDate 메서드(java.lang.String)(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Date getDate(java.lang.String columnName)
  열 이름이 포함된 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- Date 개체입니다.  
+ 날짜 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

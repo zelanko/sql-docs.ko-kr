@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: jroth
-ms.openlocfilehash: 2d7cf1f31ce5cf42b9c2e4c7b72938b8def2ed4f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fcfde122b978fa1e77baa690a1f3e09417dab1c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989425"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>SQL Server 로그인 대화 상자(ODBC)
 
@@ -26,7 +25,7 @@ ms.locfileid: "66797742"
 
 ### <a name="server"></a>서버
 
-네트워크에서 SQL Server 인스턴스의 이름입니다. 목록에서 서버\인스턴스 이름을 선택하거나 **서버** 상자에 서버\인스턴스 이름을 입력합니다. 필요한 경우 **SQL Server 구성 관리자**를 사용하여 클라이언트 컴퓨터에서 서버 별칭을 만들고 **서버** 상자에 이 이름을 입력할 수 있습니다.
+네트워크에 SQL Server 인스턴스의 이름입니다. 목록에서 서버\인스턴스 이름을 선택하거나 **서버** 상자에 서버\인스턴스 이름을 입력합니다. 필요한 경우 **SQL Server 구성 관리자**를 사용하여 클라이언트 컴퓨터에서 서버 별칭을 만들고 **서버** 상자에 이 이름을 입력할 수 있습니다.
 
 SQL Server와 동일한 컴퓨터를 사용하는 경우에는 "(로컬)"을 입력할 수 있습니다. 그러면 네트워크에 연결되지 않은 SQL Server 버전을 실행하는 경우에도 SQL Server의 로컬 인스턴스에 연결할 수 있습니다.
 
@@ -34,14 +33,14 @@ SQL Server와 동일한 컴퓨터를 사용하는 경우에는 "(로컬)"을 입
 
 ### <a name="authentication-mode"></a>인증 모드
 
-다음 중 하나에서 인증 모드를 선택합니다.
-- **SQL Server** 로그인 ID 및 암호를 사용 하 여
-- **Windows 통합** 현재 로그인 한 사용자의 계정을 사용 하 여 인증
-- **Active Directory 암호** 로그인 ID 및 암호를 사용 하 여
-- **Active Directory 통합** 현재 로그인 한 사용자의 계정을 사용 하 여 인증
+다음 중 하나에서 인증 모드를 선택 합니다.
+- 로그인 ID 및 암호를 사용 하 여 **SQL Server**
+- 현재 로그인 한 사용자 계정을 사용 하는 **Windows 통합** 인증
+- 로그인 ID 및 암호를 사용 하 **Active Directory 암호**
+- 현재 로그인 한 사용자 계정을 사용 하 여 **통합 인증 Active Directory**
 - 로그인 ID를 사용하여 **Active Directory 대화형** 인증
 
-참조 [데이터 원본 마법사 화면 2](../../../connect/odbc/windows/dsn-wizard-2.md) 인증 모드에 대 한 자세한 내용은 합니다.
+인증 모드에 대 한 자세한 내용은 [데이터 원본 마법사 화면 2](../../../connect/odbc/windows/dsn-wizard-2.md) 를 참조 하세요.
 
 ### <a name="server-spn"></a>서버 SPN
 
@@ -49,11 +48,11 @@ SQL Server와 동일한 컴퓨터를 사용하는 경우에는 "(로컬)"을 입
 
 ### <a name="login-id"></a>로그인 ID
 
-경우에 연결에 사용할 SQL Server 또는 Azure Active Directory 로그인 ID를 지정 **인증 모드** 로 설정 된 **SQL Server** 하거나 **Active Directory 암호** 또는 **Active Directory 대화형**합니다. 그렇지 않으면 합니다 **로그인 ID** 상자는 비활성화 됩니다.
+**인증 모드가** **SQL Server** 또는 **Active Directory Active Directory 암호나** **대화형**으로 설정 된 경우 연결에 사용할 SQL Server 또는 Azure Active Directory 로그인 ID를 지정 합니다. 그렇지 않으면 **로그인 ID** 상자를 사용할 수 없습니다.
 
 ### <a name="password"></a>암호
 
-연결에 사용 하는 경우 SQL Server 또는 Azure Active Directory 로그인 ID에 대 한 암호를 지정 합니다 **인증 모드** 로 설정 된 **SQL Server** 또는 **ActiveDirectory암호**. 그렇지 않으면 합니다 **암호** 상자는 비활성화 됩니다.
+**인증 모드가** **SQL Server** 또는 **Active Directory 암호로**설정 된 경우 연결에 사용 되는 SQL Server 또는 Azure Active Directory 로그인 ID의 암호를 지정 합니다. 그렇지 않으면 **암호** 상자를 사용할 수 없습니다.
 
 ### <a name="options"></a>옵션
 
@@ -97,11 +96,11 @@ SQL Server 시스템 메시지에 사용할 국가별 언어를 지정합니다.
 
 ### <a name="use-strong-encryption-for-data"></a>데이터에 대하여 강력한 암호화 사용
 
-옵션을 선택 하면 연결을 통해 전달 되는 데이터가 암호화 됩니다. 이 확인란의 선택을 취소하는 경우에도 로그인은 기본적으로 암호화됩니다.
+이를 선택 하면 연결을 통해 전달 되는 데이터가 암호화 됩니다. 이 확인란의 선택을 취소하는 경우에도 로그인은 기본적으로 암호화됩니다.
 
 ### <a name="trust-server-certificate"></a>서버 인증서 신뢰
 
-이 옵션은 경우에만 적용 **강력한 암호화를 사용 하 여 데이터에 대 한** 사용 가능 합니다. 옵션을 선택 하면 서버의 올바른 호스트 이름이 있고 신뢰할 수 있는 인증 기관에서 발급 하는 서버의 인증서 검사 하지 않습니다.
+이 옵션은 **데이터에 대해 강력한 암호화 사용** 이 사용 되는 경우에만 적용 됩니다. 이를 선택 하면 서버 인증서의 유효성을 검사 하 여 서버의 올바른 호스트 이름이 있고 신뢰할 수 있는 인증 기관에서 발급 되지 않습니다.
 
 ## <a name="see-also"></a>참고 항목
 

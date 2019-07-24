@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76af99170edeaca8f600d12955a6de2b09897548
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6af72a4e9157de72a46ecbb7443c0f58d3b400d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003847"
 ---
 # <a name="working-with-data-types-jdbc"></a>데이터 형식(JDBC) 사용
 
@@ -37,7 +36,7 @@ SQL Server 데이터 형식 작업을 위해 JDBC 드라이버에서는 [SQLServ
 |-----------|-----------------|  
 |[기본 데이터 형식 샘플](../../connect/jdbc/basic-data-types-sample.md)|결과 집합 getter 메서드를 사용하여 기본 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식 값을 검색하는 방법 및 결과 집합 업데이트 메서드를 사용하여 이러한 값을 업데이트하는 방법을 설명합니다.|  
 |[SQLXML 데이터 형식 샘플](../../connect/jdbc/sqlxml-data-type-sample.md)|XML 데이터를 관계형 데이터베이스에 저장하는 방법, XML 데이터를 데이터베이스에서 검색하는 방법 및 **SQLXML** Java 데이터 형식으로 XML 데이터를 구문 분석하는 방법을 보여 줍니다.|  
-|[공간 데이터 형식 샘플](../../connect/jdbc/spatial-data-types-sample.md)|공간 데이터 형식 '기 하 도형' 및 'Geography'의 사용 하 여 검색할 데이터를 저장 하는 방법에 설명 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여 데이터베이스 **기 하 도형** 하 고 **Geography** Microsoft JDBC 드라이버에서 정의 하는 Java 형식입니다.|
+|[공간 데이터 형식 샘플](../../connect/jdbc/spatial-data-types-sample.md)|Microsoft JDBC Driver에서 정의한 **geometry** 및 **Geography** Java 형식으로 공간 데이터 형식 ' geometry ' 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 ' Geography '를 사용 하 여 데이터를 저장 하 고 검색 하는 방법을 설명 합니다.|
 
 ## <a name="see-also"></a>참고 항목
 

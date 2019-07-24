@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 09e8ece5-0200-41f2-87c1-9fab19e261be
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b1990930387dbd68ea843073b9d372ce735273f9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 786f7391d87799a0822f357e449db21fea0d0f09
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52542009"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221254"
 ---
 # <a name="working-with-subscriptions-web-portal"></a>구독 작업(웹 포털)
 
@@ -28,7 +28,7 @@ ms.locfileid: "52542009"
   
 ![ssRSWebPortal-subscriptions1](../reporting-services/media/ssrswebportal-subscriptions1.png)  
    
-보고서의 **줄임표(...)**, **관리** 및 **구독**을 차례로 선택하면 구독 페이지에 액세스할 수 있습니다.  
+보고서의 **줄임표(...)** , **관리** 및 **구독**을 차례로 선택하면 구독 페이지에 액세스할 수 있습니다.  
   
 구독 페이지에서 **+ 새 구독**을 선택하면 새 구독을 만들 수 있습니다. 기존 구독을 편집하거나 선택한 구독을 삭제할 수도 있습니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "52542009"
 -   파일 공유 구독은 대상 위치를 지정할 수 있도록 허용하는 필드를 제공합니다. 모든 보고서를 파일 공유로 배달할 수 있습니다. 그러나 대화형 기능을 지원하는 보고서(관련 행 및 열에 대한 드릴다운을 지원하는 행렬 보고서 포함)는 정적 파일로 렌더링됩니다. 드릴다운 행 및 열은 정적 파일에서 볼 수 없습니다. 파일 공유 이름은 UNC(Uniform Naming Convention) 형식(예: \mycomputer\public\myreportfiles)으로 지정해야 합니다. 경로 이름 뒤에 백슬래시를 사용하지 마십시오. 보고서 파일은 렌더링 형식을 기반으로 하는 파일 형식으로 배달됩니다. 예를 들어 Excel을 선택할 경우 보고서는 .xlsx 파일로 배달됩니다.  
   
 ### <a name="data-driven-subscription-dataset"></a>데이터 기반 구독 데이터 세트  
-데이터 기반 구독의 경우 구독에 사용되는 데이터 세트를 정의해야 합니다. **데이터 집합 편집** 을 선택하여 해당 정보를 제공합니다.  
+데이터 기반 구독의 경우 구독에 사용되는 데이터 세트를 정의해야 합니다. **데이터 세트 편집**을 선택하여 해당 정보를 제공합니다.  
   
 ![ssRSWebPortal-subscriptions4](../reporting-services/media/ssrswebportal-subscriptions4.png)  
   
@@ -86,6 +86,6 @@ ms.locfileid: "52542009"
 
 [웹 포털](../reporting-services/web-portal-ssrs-native-mode.md)  
 [페이지를 매긴 보고서 사용](working-with-paginated-reports-web-portal.md)  
-[공유 데이터 집합 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
+[공유 데이터 세트 작업](../reporting-services/work-with-shared-datasets-web-portal.md)
 
 추가 질문이 있으신가요? [Reporting Services 포럼에서 질문하기](https://go.microsoft.com/fwlink/?LinkId=620231)

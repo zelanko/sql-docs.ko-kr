@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 16370bc2-6ec1-402d-83f6-213a6831d2ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1317188674a59097a340e07ac1254d327962aac2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8d17b3bdeb0c08c3e4a5e631b6122af04f110690
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989492"
 ---
 # <a name="typessservercursorforwardonly-field-sqlserverresultset"></a>TYPE_SS_SERVER_CURSOR_FORWARD_ONLY 필드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

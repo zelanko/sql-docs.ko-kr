@@ -11,13 +11,12 @@ apitype: Assembly
 ms.assetid: 7db785ca-edd5-4833-8053-17fdbf87279a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0940e17ada4fb6ebf9c18667bff55a4fe4c42799
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 55e306b2fe7b8f52655f504d63f02ffc26e04ea1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971786"
 ---
 # <a name="sqlserverclob-members"></a>SQLServerClob 멤버
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

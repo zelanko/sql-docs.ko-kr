@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 0e8c0a25-8f79-41df-8ed2-f82a74b129cd
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a5240f2f255281709bf563f5a82dc70ecb534d6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 907dd855186236e05eb103fd771a28ff0bc916ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086576"
 ---
 # <a name="lesson-2-4-test-the-lesson-2-tutorial-package"></a>2-4단원: 2단원 자습서 패키지 테스트
 

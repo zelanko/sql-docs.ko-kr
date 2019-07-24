@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6d468357-bf73-484c-9a30-3671e399cf26
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bb80e0cfa79f6d93c9702c9bee953bf72b08ada3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59d23bf2536806135b2ec5068c2478e30b4353a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998144"
 ---
 # <a name="updatetimestamp-method-javalangstring-javasqltimestamp"></a>updateTimestamp 메서드(java.lang.String, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

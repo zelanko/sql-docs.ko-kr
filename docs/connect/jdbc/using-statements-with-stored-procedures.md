@@ -1,5 +1,5 @@
 ---
-title: 저장 프로시저를 사용 하 여 문을 사용 하 여 | Microsoft Docs
+title: 저장 프로시저에 문 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2dd4ead601700baefaf356840fba4184ab427ef2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 774e79b6baa3db1c6356768de4b04226ddbc7688
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003934"
 ---
 # <a name="using-statements-with-stored-procedures"></a>저장 프로시저가 있는 문 사용
 
@@ -33,17 +32,17 @@ ms.locfileid: "66798550"
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "저장 프로시저 이해"를 참조하세요.  
   
-저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 대한 작업을 수행할 수 있도록 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스를 제공합니다. 어떤 클래스를 사용할지는 저장 프로시저의 입력 또는 출력 매개 변수 필요성 여부에 따라 달라집니다. 저장 프로시저가 입력 또는 출력 매개 변수가 필요하지 않은 경우 SQLServerStatement 클래스를 사용할 수 있으며, 저장 프로시저가 여러 번 호출되거나 입력 매개 변수만을 필요로 하는 경우에는 SQLServerPreparedStatement 클래스를 사용할 수 있습니다. 저장된 프로시저 모두에 필요한 경우를 OUT 매개 변수는 SQLServerCallableStatement 클래스를 사용 해야 합니다. 저장 프로시저에 출력 매개 변수만 필요한 경우에는 SQLServerCallableStatement 클래스 사용 오버헤드가 필요합니다.  
+저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 대한 작업을 수행할 수 있도록 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md), [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스를 제공합니다. 어떤 클래스를 사용할지는 저장 프로시저의 입력 또는 출력 매개 변수 필요성 여부에 따라 달라집니다. 저장 프로시저가 입력 또는 출력 매개 변수가 필요하지 않은 경우 SQLServerStatement 클래스를 사용할 수 있으며, 저장 프로시저가 여러 번 호출되거나 입력 매개 변수만을 필요로 하는 경우에는 SQLServerPreparedStatement 클래스를 사용할 수 있습니다. 저장 프로시저에 IN 및 OUT 매개 변수가 모두 필요한 경우에는 SQLServerCallableStatement 클래스를 사용 해야 합니다. 저장 프로시저에 출력 매개 변수만 필요한 경우에는 SQLServerCallableStatement 클래스 사용 오버헤드가 필요합니다.  
   
 > [!NOTE]  
-> 저장 프로시저는 업데이트 횟수 및 여러 결과 집합을 반환할 수도 있습니다. 자세한 내용은 참조 하세요. [업데이트 횟수가 있는 저장 프로시저를 사용 하 여](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) 하 고 [사용 하 여 여러 결과 집합](../../connect/jdbc/using-multiple-result-sets.md)합니다.  
+> 저장 프로시저는 업데이트 횟수 및 여러 결과 집합을 반환할 수도 있습니다. 자세한 내용은 [업데이트 횟수가 있는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) 및 [여러 결과 집합 사용](../../connect/jdbc/using-multiple-result-sets.md)을 참조 하세요.  
   
 JDBC 드라이버를 사용하여 매개 변수가 포함된 저장 프로시저를 호출하는 경우에는`call` SQL 이스케이프 시퀀스와 [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) 메서드를 함께 사용해야 합니다. `call` 이스케이프 시퀀스의 전체 구문은 다음과 같습니다.  
   
  `{[?=]call procedure-name[([parameter][,[parameter]]...)]}`  
   
 > [!NOTE]  
-> 에 대 한 자세한 내용은 합니다 `call` 및 다른 SQL 이스케이프 시퀀스를 참조 하십시오 [SQL 이스케이프 시퀀스를 사용 하 여](../../connect/jdbc/using-sql-escape-sequences.md)입니다.  
+> `call` 및 기타 sql 이스케이프 시퀀스에 대 한 자세한 내용은 [sql 이스케이프 시퀀스 사용](../../connect/jdbc/using-sql-escape-sequences.md)을 참조 하세요.  
   
 이 섹션의 항목에서는 JDBC 드라이버 및 `call` SQL 이스케이프 시퀀스를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 저장 프로시저를 호출하는 방법에 대해 설명합니다.  
   

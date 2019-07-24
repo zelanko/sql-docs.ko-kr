@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b7dd60f5-c4f3-4b14-9a33-d95327395083
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 63477b2799eb9173e17c8c33a1aacf496abc59db
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b0c4a376970658df1bdce94e45694edae18149c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969996"
 ---
 # <a name="storeslowercaseidentifiers-method-sqlserverdatabasemetadata"></a>storesLowerCaseIdentifiers 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean storesLowerCaseIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 storesLowerCaseIdentifiers 메서드는 java.sql.DatabaseMetaData 인터페이스의 storesLowerCaseIdentifiers 메서드에 의해 지정 됩니다.  
+ 이 storesLowerCaseIdentifiers 메서드는 storesLowerCaseIdentifiers 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

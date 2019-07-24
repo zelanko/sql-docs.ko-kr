@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 85c623ca-4656-4d70-a9db-ee4d897cd214
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ba50f7bc86377c8d49f954c813f0b2eb604ffe1
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 766ae29c9024afd31b4c2bf353653f9f6b1a079f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732239"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123719"
 ---
 # <a name="create-primary-keys"></a>기본 키 만들기
 

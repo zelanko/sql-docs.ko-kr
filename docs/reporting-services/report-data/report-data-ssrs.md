@@ -2,7 +2,6 @@
 title: 보고서 데이터
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.reviewer: ''
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +9,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: e75714085c7eb515de60d35af0dafabe04755e12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3aa702eef414fdc92670a51b8d374627797fe3d
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500383"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265565"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 보고서 데이터
 

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c5f6df2e302b96d5f49785ee835650a2ef2f788
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132765"
 ---
 # <a name="dta-utility"></a>dta 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +177,7 @@ dta -d AdventureWorks2012 ...
  필터링된 인덱스가 새 제안 사항을 만들 때 고려되도록 지정합니다. 자세한 내용은 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)을(를) 참조하세요.  
   
 **-fc**  
- ColumnStore 인덱스가 새 권장 사항으로 고려되도록 지정합니다. DTA는 모두 클러스터형 및 비클러스터형 columnstore 인덱스를 고려 합니다. 자세한 내용은 다음을 참조하세요.    
+ ColumnStore 인덱스가 새 권장 사항으로 고려되도록 지정합니다. DTA는 클러스터형 columnstore 인덱스와 비클러스터형 columnstore 인덱스를 모두 고려 합니다. 자세한 내용은 다음을 참조하세요.    
 [DTA(데이터베이스 엔진 튜닝 관리자)의 Columnstore 인덱스 권장 사항](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
  ||  
 |-|  
@@ -217,7 +216,7 @@ dta -d AdventureWorks2012 ...
  계획 캐시를 작업으로 사용할 수 있도록 지정합니다. 명시적으로 선택한 데이터베이스에 대한 상위 1,000개의 계획 캐시 이벤트가 분석됩니다. **–n** 옵션을 사용하여 이 값을 변경할 수 있습니다.  
  
 **-iq**  
- 쿼리 저장소 작업으로 사용할 수 있는지를 지정 합니다. 명시적으로 선택한 데이터베이스에 대 한 쿼리 저장소에서 상위 1,000 개의 이벤트가 분석 됩니다. **–n** 옵션을 사용하여 이 값을 변경할 수 있습니다.  자세한 내용은 [쿼리 저장소](../../relational-databases/performance/how-query-store-collects-data.md) 및 [쿼리 저장소의 작업을 사용하여 데이터베이스 튜닝](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)을 참조하세요.
+ 쿼리 저장소 작업으로 사용 되도록 지정 합니다. 명시적으로 선택한 데이터베이스에 대 한 쿼리 저장소의 상위 1000 이벤트가 분석 됩니다. **–n** 옵션을 사용하여 이 값을 변경할 수 있습니다.  자세한 내용은 [쿼리 저장소](../../relational-databases/performance/how-query-store-collects-data.md) 및 [쿼리 저장소의 작업을 사용하여 데이터베이스 튜닝](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)을 참조하세요.
  ||  
 |-|  
 |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  
@@ -267,11 +266,11 @@ dta -n number_of_events -A 0
  이러한 경우 반드시 무제한 튜닝 시간(`-A 0`)을 지정해야 합니다. 그렇지 않으면 기본적으로 데이터베이스 엔진 튜닝 관리자에서 튜닝 시간으로 8시간을 적용합니다.
  
  **-I** _time_window_in_hours_   
-   기간 (시간)을 지정 하면 쿼리 실행 사용 하는 경우 튜닝에 대 한 DTA로 간주 되기 위해 **-iq** 옵션 (쿼리 저장소의 작업). 
+   **-Iq** 옵션 (쿼리 저장소의 작업)을 사용 하는 경우 튜닝할 때 튜닝할 때 쿼리를 실행 해야 하는 시간 기간 (시간)을 지정 합니다. 
 ```  
 dta -iq -I 48  
 ```  
-이 경우 DTA를 작업의 원본으로 쿼리 저장소를 사용 하 여 지난 48 시간을 사용 하 여 실행 하는 쿼리를 고려해 야 합니다.  
+이 경우 DTA는 쿼리 저장소 작업의 원본으로 사용 하 고 지난 48 시간 동안 실행 된 쿼리만 고려 합니다.  
   ||  
 |-|  
 |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지|  

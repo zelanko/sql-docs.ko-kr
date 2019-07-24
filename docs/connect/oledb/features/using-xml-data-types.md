@@ -1,6 +1,6 @@
 ---
 title: XML 데이터 형식 사용 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버를 사용 하 여 XML 데이터 형식 사용
+description: SQL Server 용 OLE DB 드라이버에서 XML 데이터 형식 사용
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -30,13 +30,12 @@ helpviewer_keywords:
 - COLUMNS rowset
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 8de7c74e41a3f61105c7b70cc453ee8d361ba7ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d3554363e4813dfb4b3f6cbeefec00214d5a2d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988794"
 ---
 # <a name="using-xml-data-types"></a>XML 데이터 형식 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,7 +58,7 @@ ms.locfileid: "66796065"
  `INSERT INTO xmltable(xmlcol) VALUES(N'<?xml version="1.0" encoding="UTF-8"?><doc/>')`  
   
 ## <a name="ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버 
- DBTYPE_XML에는 특정 OLE DB 드라이버에서 SQL Server에 대 한 XML을 새 데이터 형식입니다. DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT, DBTYPE_IUNKNOWN 등 기존의 OLE DB 형식을 통해서도 XML 데이터에 액세스할 수 있습니다. XML 형식 열에 저장된 데이터는 SQL Server용 OLE DB 드라이버 행 집합에 있는 다음 형식의 열에서 검색할 수 있습니다.  
+ DBTYPE_XML는 SQL Server에 대 한 OLE DB 드라이버에서 XML에 관련 된 새로운 데이터 형식입니다. DBTYPE_BYTES, DBTYPE_WSTR, DBTYPE_BSTR, DBTYPE_XML, DBTYPE_STR, DBTYPE_VARIANT, DBTYPE_IUNKNOWN 등 기존의 OLE DB 형식을 통해서도 XML 데이터에 액세스할 수 있습니다. XML 형식 열에 저장된 데이터는 SQL Server용 OLE DB 드라이버 행 집합에 있는 다음 형식의 열에서 검색할 수 있습니다.  
   
 -   텍스트 문자열  
   
@@ -68,7 +67,7 @@ ms.locfileid: "66796065"
 > [!NOTE]  
 >  SQL Server용 OLE DB 드라이버에 SAX 판독기가 포함되어 있지는 않지만 MSXML에서 **ISequentialStream**을 SAX 및 DOM 개체로 쉽게 전달할 수 있습니다.  
   
- **ISequentialStream**은 큰 XML 문서의 검색에 사용합니다. 다른 큰 값 유형에 사용되는 방법이 XML에도 적용됩니다. 자세한 내용은 [큰 값 형식을 사용 하 여](../../oledb/features/using-large-value-types.md)입니다.  
+ **ISequentialStream**은 큰 XML 문서의 검색에 사용합니다. 다른 큰 값 유형에 사용되는 방법이 XML에도 적용됩니다. 자세한 내용은 [Large Value Types 사용](../../oledb/features/using-large-value-types.md)을 참조 하세요.  
   
  행 집합의 XML 형식 열에 저장된 데이터는 **IRow::GetColumns**, **IRowChange::SetColumns** 및 **ICommand::Execute** 같은 일반 인터페이스를 통해 애플리케이션에 의해서도 검색, 삽입 또는 업데이트될 수 있습니다. 검색의 경우와 마찬가지로 애플리케이션에서 텍스트 문자열 또는 **ISequentialStream**을 SQL Server용 OLE DB 드라이버에 전달할 수 있습니다.  
   
@@ -126,7 +125,7 @@ ms.locfileid: "66796065"
   
  OLE DB 핵심 서비스에서 제공하는 데이터 변환(**IDataConvert**)은 DBTYPE_XML에 적용되지 않습니다.  
   
- 데이터가 서버로 전송되면 유효성 검사가 수행됩니다. 클라이언트 쪽 유효성 검사 및 인코딩 변경 내용이 응용 프로그램에서 처리 되어야 합니다. XML 데이터를 직접 처리 하지 않습니다 하지만 처리 대신 DOM 이나 SAX 판독기를 사용 해야 하는 것이 좋습니다.  
+ 데이터가 서버로 전송되면 유효성 검사가 수행됩니다. 클라이언트 쪽 유효성 검사 및 인코딩 변경 내용은 응용 프로그램에서 처리 해야 합니다. XML 데이터를 직접 처리 하지 말고 DOM 또는 SAX 판독기를 사용 하 여 처리 하는 것이 좋습니다.  
   
  DBTYPE_NULL 및 DBTYPE_EMPTY는 입력 매개 변수에 대해서는 바인딩할 수 있지만 출력 매개 변수나 결과에 대해서는 바인딩할 수 없습니다. 입력 매개 변수에 대해 바인딩할 경우 상태를 DBSTATUS_S_ISNULL 또는 DBSTATUS_S_DEFAULT로 설정해야 합니다.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "66796065"
  앞의 표에서 볼 수 있듯이 DBTYPE_IUNKNOWN은 지원되는 바인딩이지만 DBTYPE_XML과 DBTYPE_IUNKNOWN 간에는 변환이 수행되지 않습니다. DBTYPE_IUNKNOWN을 DBTYPE_BYREF와는 사용할 수 없습니다.  
   
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 행 집합의 추가 내용 및 변경 내용  
- OLE DB Driver for SQL Server 새 값을 추가 하거나 많은 핵심 OLE DB 스키마 행 집합을 변경 합니다.  
+ SQL Server에 대 한 OLE DB 드라이버는 많은 핵심 OLE DB 스키마 행 집합에 새로운 값 이나 변경 내용을 추가 합니다.  
   
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS 및 PROCEDURE_PARAMETERS 스키마 행 집합  
  COLUMNS 및 PROCEDURE_PARAMETERS 스키마 행 집합에 추가된 열은 다음과 같습니다.  
@@ -167,7 +166,7 @@ ms.locfileid: "66796065"
 |DBSCHEMA_XML_COLLECTIONS|4|SCHEMACOLLECTION_CATALOGNAME<br /><br /> SCHEMACOLLECTION_SCHEMANAME<br /><br /> SCHEMACOLLECTIONNAME<br /><br /> TARGETNAMESPACEURI|  
   
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB 속성 집합의 추가 내용 및 변경 내용  
- OLE DB Driver for SQL Server 새 값 추가 또는 많은 핵심 OLE DB 속성 집합 변경 합니다.  
+ SQL Server에 대 한 OLE DB 드라이버는 많은 핵심 OLE DB 속성 집합에 새 값 또는 변경 사항을 추가 합니다.  
   
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
  OLE DB를 통해 **xml** 데이터 형식을 지원하기 위해 SQL Server용 OLE DB 드라이버는 다음 값이 포함된 새로운 DBPROPSET_SQLSERVERPARAMETER 속성 집합을 구현합니다.  
@@ -190,7 +189,7 @@ ms.locfileid: "66796065"
  SSPROP_PARAM 값과 마찬가지로 이러한 속성은 모두 옵션이며 기본적으로 비어 있습니다. SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME 및 SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME은 SSPROP_COL_XML_SCHEMACOLLECTIONNAME이 지정된 경우에만 지정할 수 있습니다. XML을 서버에 전달할 때 이러한 값이 포함되어 있으면 현재 데이터베이스에 대해 이들 속성의 존재 여부(유효성)가 확인되고 인스턴스 데이터가 스키마에 대해 검사됩니다. 어떤 경우든 이러한 속성은 모두 비어 있거나 모두 채워져 있어야 올바른 상태입니다.  
   
 ### <a name="ole-db-interface-additions-and-changes"></a>OLE DB 인터페이스의 추가 내용 및 변경 내용  
- OLE DB Driver for SQL Server 새 값을 추가 하거나 많은 핵심 OLE DB 인터페이스를 변경 합니다.  
+ SQL Server에 대 한 OLE DB 드라이버는 여러 핵심 OLE DB 인터페이스에 새 값 또는 변경 사항을 추가 합니다.  
   
 #### <a name="the-isscommandwithparameters-interface"></a>ISSCommandWithParameters 인터페이스  
  OLE DB를 통해 **xml** 데이터 형식을 지원하기 위해 SQL Server용 OLE DB 드라이버는 [ISSCommandWithParameters](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md) 인터페이스의 추가를 비롯하여 많은 변경을 구현합니다. 이 새 인터페이스는 핵심 OLE DB 인터페이스인 **ICommandWithParameters**에서 상속됩니다. **ICommandWithParameters**에서 상속되는 세 개의 메서드인 **GetParameterInfo**, **MapParameterNames** 및 **SetParameterInfo** 외에도 **ISSCommandWithParameters**는 서버별 데이터 형식을 처리하는 데 사용되는 [GetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md) 및 [SetParameterProperties](../../oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md) 메서드를 제공합니다.  

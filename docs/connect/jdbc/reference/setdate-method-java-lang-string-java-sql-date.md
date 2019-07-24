@@ -1,5 +1,5 @@
 ---
-title: setDate 메서드 setDate 메서드 날짜 값-문자열 | Microsoft Docs
+title: setDate 메서드 setDate to date value-string | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4762e2bd-5e94-4562-97d5-f023ecffc08c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 09c69a4f9950fc1bd93ae0f4d008bec66becb762
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e516299b5de1b2329a9880690a8178082eac97d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974429"
 ---
 # <a name="setdate-method-javalangstring-javasqldate"></a>setDate 메서드(java.lang.String, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public void setDate(java.lang.String sCol,
   
  *d*  
   
- Date 개체입니다.  
+ 날짜 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

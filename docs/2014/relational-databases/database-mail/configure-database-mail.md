@@ -39,12 +39,12 @@ ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e480363941d8928d270f978471b5474a8e24b0a1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872219"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418879"
 ---
 # <a name="configure-database-mail"></a>데이터베이스 메일 구성
   이 항목에서는 데이터베이스 메일 구성 마법사를 사용하여 데이터베이스 메일을 활성화 및 구성하고, 템플릿을 사용하여 데이터베이스 메일 구성 스크립트를 만드는 방법에 대해 설명합니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "62872219"
   
 2.  **관리** 노드를 확장합니다.  
   
-3.  긴밀 하 게 원클릭 **데이터베이스 메일**를 클릭 하 고 **데이터베이스 메일 구성**합니다.  
+3.  **데이터베이스 메일**을 마우스 오른쪽 단추로 클릭하고 **데이터베이스 메일 구성**을 클릭합니다.  
   
 4.  마법사의 대화 상자를 완료합니다.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "62872219"
  마법사를 사용할 때마다 **구성 태스크 선택** 페이지를 사용하여 수행할 작업을 지정할 수 있습니다. 마법사를 완료하기 전에 태스크를 취소하고 다른 태스크를 수행하려면 **뒤로** 단추를 눌러 이 페이지로 다시 돌아와 다른 태스크를 선택합니다.  
   
 > [!NOTE]  
->  데이터베이스 메일이 설정 되지 않은 경우 메시지가 표시 됩니다. **데이터베이스 메일 기능을 사용할 수 없는 경우  이 기능을 설정하시겠습니까?** 라는 메시지가 나타납니다. **예**를 선택하면 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 시스템 저장 프로시저의 **Database Mail XPs 옵션** 을 사용하는 경우와 동일하게 데이터베이스 메일을 설정할 수 있습니다.  
+>  데이터베이스 메일이 설정되지 않은 경우 **데이터베이스 메일 기능을 사용할 수 없습니다.  이 기능을 설정하시겠습니까?** 라는 메시지가 나타납니다. **예**를 선택하면 [sp_configure](../../database-engine/configure-windows/database-mail-xps-server-configuration-option.md) 시스템 저장 프로시저의 **Database Mail XPs 옵션** 을 사용하는 경우와 동일하게 데이터베이스 메일을 설정할 수 있습니다.  
   
  **다음 태스크를 수행하여 데이터베이스 메일 설치**  
  최초로 데이터베이스 메일을 설정하는 데 필요한 모든 태스크를 수행합니다. 이 옵션에는 다른 세 가지 옵션이 모두 포함됩니다.  
@@ -129,7 +129,7 @@ ms.locfileid: "62872219"
  이 계정에서 보낸 전자 메일 메시지에 대한 회신에 사용할 전자 메일 주소를 입력합니다. 회신 전자 메일은 선택 사항입니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 계정에 대한 회신은 데이터베이스 관리자인 danw@Adventure-Works.com을 클릭합니다.  
   
  **서버 이름**  
- 계정에서 전자 메일을 보내기 위해 사용하는 SMTP 서버의 이름 또는 IP 주소를 입력합니다. 일반적으로 이것이 비슷한 형식 `smtp.` *< your_company >* `.com`합니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.  
+ 계정에서 전자 메일을 보내기 위해 사용하는 SMTP 서버의 이름 또는 IP 주소를 입력합니다. 일반적으로 `smtp.` *< y >* `.com`와 비슷한 형식으로 되어 있습니다. 이에 대한 도움을 얻으려면 메일 관리자에게 문의하십시오.  
   
  **포트 번호**  
  이 계정에 대한 SMTP 서버의 포트 번호를 입력합니다. 대부분의 SMTP 서버에서는 포트 25를 사용합니다.  

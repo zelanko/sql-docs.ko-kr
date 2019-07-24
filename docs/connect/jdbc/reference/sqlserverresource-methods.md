@@ -10,17 +10,16 @@ ms.topic: conceptual
 ms.assetid: 14d9226b-33df-43d3-a174-1b11ba43ab2e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 54c71927173a0dab8fce6362ca4aea45a328112e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5099a6e0a9c87e767837a793d219a0c98a105ef6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801514"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970628"
 ---
 # <a name="sqlserverresource-methods"></a>SQLServerResource 메서드
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  멤버에 대 한 자세한 [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)를 참조 하십시오 [SQLServerResource 멤버](../../../connect/jdbc/reference/sqlserverresource-members.md)합니다.  
+  [SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)의 멤버에 대 한 자세한 내용은 [SQLServerResource members](../../../connect/jdbc/reference/sqlserverresource-members.md)를 참조 하십시오.  
   
   

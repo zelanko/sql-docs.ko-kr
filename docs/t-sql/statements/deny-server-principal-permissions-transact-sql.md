@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bb2b43324d9147dfdd55f3109842dceb2ffcb975
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 2fc90354abf3c18a5eba7a92b7a5ffa54a84ce3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984506"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY 서버 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ DENY permission [ ,...n ] }
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인에 대해 거부할 수 있는 사용 권한을 지정합니다. 사용 권한 목록은 이 항목의 뒤에 나오는 주의 섹션을 참조하세요.  
   
  LOGIN **::** *SQL_Server_login*  
- 사용 권한을 거부할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ 사용 권한을 거부할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  SERVER ROLE **::** *server_role*  
- 사용 권한을 거부할 서버 역할을 지정합니다. 범위 한정자(**::**)가 필요합니다.  
+ 사용 권한을 거부할 서버 역할을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  TO \<server_principal>  
  사용 권한을 부여할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 서버 역할을 지정합니다.  
@@ -109,14 +108,14 @@ DENY permission [ ,...n ] }
 |VIEW DEFINITION|CONTROL|VIEW ANY DEFINITION|  
 |ALTER|CONTROL|ALTER ANY LOGIN<br /><br /> ALTER ANY SERVER ROLE|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  로그인의 경우 로그인에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY LOGIN 권한이 필요합니다.  
   
  서버 역할의 경우 서버 역할에 대한 CONTROL 권한 또는 서버에 대한 ALTER ANY SERVER ROLE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-denying-impersonate-permission-on-a-login"></a>1. 로그인에 IMPERSONATE 권한 거부  
+### <a name="a-denying-impersonate-permission-on-a-login"></a>1\. 로그인에 IMPERSONATE 권한 거부  
  다음 예에서는 `IMPERSONATE`Windows 사용자 에서 생성된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인`WanidaBenshoof`에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인에 대한 권한을 거부합니다`AdvWorks\YoonM`.  
   
 ```  
@@ -125,7 +124,7 @@ DENY IMPERSONATE ON LOGIN::WanidaBenshoof TO [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-denying-view-definition-permission-with-cascade"></a>2. CASCADE를 지정하여 VIEW DEFINITION 권한 거부  
+### <a name="b-denying-view-definition-permission-with-cascade"></a>2\. CASCADE를 지정하여 VIEW DEFINITION 권한 거부  
  다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `VIEW DEFINITION`에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 `EricKurjan`에 대한 `RMeyyappan` 권한을 거부합니다. `CASCADE` 옵션은 `VIEW DEFINITION`에 대한 `EricKurjan` 권한도 `RMeyyappan`이 이 사용 권한을 부여한 보안 주체에 대해 거부됨을 나타냅니다.  
   
 ```  
@@ -135,7 +134,7 @@ DENY VIEW DEFINITION ON LOGIN::EricKurjan TO RMeyyappan
 GO   
 ```  
   
-### <a name="c-denying-view-definition-permission-on-a-server-role"></a>3. 서버 역할에 대한 VIEW DEFINITION 권한 거부  
+### <a name="c-denying-view-definition-permission-on-a-server-role"></a>C. 서버 역할에 대한 VIEW DEFINITION 권한 거부  
  다음 예에서는 `VIEW DEFINITION` 서버 역할에 대한 `Sales`을 `Auditors` 서버 역할에 대해 거부합니다.  
   
 ```  

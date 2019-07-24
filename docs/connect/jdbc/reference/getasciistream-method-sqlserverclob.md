@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 134abe5e-5add-4d27-b333-b4b0f4d94c31
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4dfd2c53ab5fb883edbaabbc33c8ac8255b284ed
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dfa7ed5314d75ba0bec0d2a000575e8d9ed4d3fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954132"
 ---
 # <a name="getasciistream-method-sqlserverclob"></a>getAsciiStream 메서드(SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.io.InputStream getAsciiStream()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getAsciiStream 메서드는 java.sql.Clob 인터페이스의 getAsciiStream 메서드에 의해 지정 됩니다.  
+ 이 getAsciiStream 메서드는 getAsciiStream 인터페이스의 메서드에 의해 지정 됩니다.  
   
  항상 바이트 배열을 반환하며, CLOB의 데이터가 유니코드인지 아니면 다른 멀티바이트 코드 페이지인지를 알 수 있는 방법이 없으므로 이 데이터가 ASCII 형식이라고 가정합니다.  
   

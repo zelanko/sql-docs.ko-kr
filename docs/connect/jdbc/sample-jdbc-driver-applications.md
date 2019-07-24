@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 385a5d46129aac81125e29b182cb5a9fdde13897
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3227aa1fc886c72b1655fc8ef9770be2c914af3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945833"
 ---
 # <a name="sample-jdbc-driver-applications"></a>샘플 JDBC 드라이버 애플리케이션
 
@@ -40,7 +39,7 @@ ms.locfileid: "66797848"
 | [데이터 형식 작업 &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | 이 샘플 애플리케이션은 JDBC 드라이버 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터로 작업하는 방법을 보여줍니다.                                                                                           |
 | [결과 집합 작업](../../connect/jdbc/working-with-result-sets.md)                                   | 이 샘플 애플리케이션은 결과 집합을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 포함된 데이터를 처리하는 방법을 소개합니다.                                                                                                         |
 | [대규모 데이터 작업](../../connect/jdbc/working-with-large-data.md)                                     | 이러한 샘플 애플리케이션은 선택 버퍼링을 사용하여 서버 커서 오버헤드 없이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 큰 값 데이터를 검색하는 방법에 대해 설명합니다.                                                      |
-| [SQL 데이터 검색 및 분류](../../connect/jdbc/data-discovery-classification-sample.md) | 이 샘플 응용 프로그램 방법을 검색 하려면 데이터 검색 및 분류 정보에 포함 하는 방법을 보여 줍니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC 드라이버를 사용 하 여 결과 집합 개체의 데이터베이스입니다.                                      |
+| [SQL 데이터 검색 및 분류](../../connect/jdbc/data-discovery-classification-sample.md) | 이 샘플 응용 프로그램은 JDBC 드라이버를 사용 하 여 ResultSet 개체에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 포함 된 데이터 검색 및 분류 정보를 검색 하는 방법을 보여 줍니다.                                      |
   
 ## <a name="see-also"></a>참고 항목
 

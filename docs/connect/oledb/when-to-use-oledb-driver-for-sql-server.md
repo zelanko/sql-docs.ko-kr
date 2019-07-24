@@ -14,20 +14,19 @@ helpviewer_keywords:
 - data access [OLE DB Driver for SQL Server], about OLE DB Driver for SQL Server
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 210a15d827cb8f0a828c11c1c8fe87586cd79028
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 74bd79c24b913cd3c3d2f782b77cf2bb4c23e397
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795881"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015194"
 ---
 # <a name="when-to-use-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버를 사용해야 하는 경우
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server는 데이터에 액세스 하는 데 사용할 수 있는 하나의 기술을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스입니다.  다른 데이터 액세스 기술에 대한 자세한 내용은 [데이터 액세스 기술 로드맵](https://go.microsoft.com/fwlink/?LinkID=179186) 참조  
+  SQL Server에 대 한 OLE DB 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터에 액세스 하는 데 사용할 수 있는 하나의 기술입니다.  다른 데이터 액세스 기술에 대한 자세한 내용은 [데이터 액세스 기술 로드맵](https://go.microsoft.com/fwlink/?LinkID=179186) 참조  
   
  SQL Serverd용 OLE DB 드라이버를 애플리케이션의 데이터 액세스 기술로 사용할지 여부를 결정할 때는 여러 요인을 고려해야 합니다.  
   
@@ -37,9 +36,9 @@ ms.locfileid: "66795881"
   
  기존 OLE DB 애플리케이션의 경우 주된 문제는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 기능에 액세스해야 하는지 여부입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 새 기능이 필요 없는 완성된 응용 프로그램인 경우 계속 MDAC를 사용할 수 있습니다. 그러나 [xml 데이터 형식](../../t-sql/xml/xml-transact-sql.md)과 같은 새 기능에 액세스해야 하는 경우에는 SQL Serverd용 OLE DB 드라이버를 사용해야 합니다.  
   
- 모두 OLE DB Driver for SQL Server 및 MDAC 지원 커밋된 읽기 트랜잭션 격리 행 버전 관리 하지만 OLE DB 드라이버를 사용 하 여 SQL Server에서 지 원하는 스냅숏 트랜잭션 격리에 대 한 합니다. 프로그래밍 측면에서 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션 격리는 커밋된 읽기 트랜잭션과 동일합니다.  
+ SQL Server 및 MDAC 용 OLE DB 드라이버는 모두 행 버전 관리를 사용 하는 커밋된 읽기 트랜잭션 격리를 지원 하지만 SQL Server 용 OLE DB 드라이버만 snapshot 트랜잭션 격리를 지원 합니다. 프로그래밍 측면에서 행 버전 관리를 사용하는 커밋된 읽기 트랜잭션 격리는 커밋된 읽기 트랜잭션과 동일합니다.  
   
- OLE DB Driver for SQL Server와 MDAC의 차이점에 대 한 자세한 내용은 [MDAC에서 SQL Server 용 OLE DB 드라이버로 응용 프로그램 업데이트](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)합니다.  
+ SQL Server와 MDAC 용 OLE DB 드라이버 간의 차이점에 대 한 자세한 내용은 [mdac에서 SQL Server에 대 한 OLE DB 드라이버에 응용 프로그램 업데이트](../oledb/applications/updating-an-application-to-oledb-driver-for-sql-server-from-mdac.md)를 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server용 OLE DB 드라이버](../oledb/oledb-driver-for-sql-server.md)     

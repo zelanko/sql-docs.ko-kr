@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5bb96dbe-f673-41b5-911b-8f661cca071a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0cfbcf94a1211738b0cf0abb8e2657257edd09eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b192f9055394393c48fa19eda697791ddfe3fa2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976164"
 ---
 # <a name="preparestatement-method-javalangstring-int-int"></a>prepareStatement 메서드(java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,13 +50,13 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sSql,
  결과 집합 동시성 유형을 나타내는 **int**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- PreparedStatement 개체입니다.  
+ Java.sql.preparedstatement 개체입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 prepareStatement 메서드는 java.sql.Connection 인터페이스의 prepareStatement 메서드에 의해 지정 됩니다.  
+ 이 prepareStatement 메서드는 java. .sql. Connection 인터페이스의 prepareStatement 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerConnection 메서드](../../../connect/jdbc/reference/sqlserverconnection-methods.md)   

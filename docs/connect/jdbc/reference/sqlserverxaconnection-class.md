@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5ecb4bf1-b8d1-47cf-9cb1-7a18acc11ce2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 177b10c9657c4cb8d6b37f7dec9d3b860308dcb7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 32d538e31ca3f4a0d9b23411ebcb7b282df46b33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788896"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970314"
 ---
 # <a name="sqlserverxaconnection-class"></a>SQLServerXAConnection 클래스
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public class SQLServerXAConnection
 ```  
   
 ## <a name="remarks"></a>Remarks  
- [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 개체를 사용하여 SQLServerXAConnection 개체를 분산 트랜잭션에 참여시킬 수 있습니다. 트랜잭션 관리자를 중간 계층 서버를 일반적으로 일부 SQLServerXAResource 개체를 통해 SQLServerXAConnection 개체를 관리합니다.  
+ [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 개체를 사용하여 SQLServerXAConnection 개체를 분산 트랜잭션에 참여시킬 수 있습니다. 일반적으로 중간 계층 서버에 속한 트랜잭션 관리자는 SQLServerXAResource 개체를 통해 SQLServerXAConnection 개체를 관리 합니다.  
   
 > [!NOTE]  
 >  응용 프로그램 프로그래머는 일반적으로 이 인터페이스를 직접 사용하지 않습니다. 이 인터페이스는 중간 계층 서버에서 작업하는 트랜잭션 관리자가 주로 사용합니다.  

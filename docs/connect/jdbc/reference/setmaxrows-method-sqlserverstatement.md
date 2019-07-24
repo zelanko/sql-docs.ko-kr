@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cccc0667-589b-4655-8ea8-14ae8b2eb9dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 693214651211a74ccefa49429b7aa81dd65e48cf
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1ff4ab9e1db2415c92d42012d45b04c57ac30b67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794245"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973975"
 ---
 # <a name="setmaxrows-method-sqlserverstatement"></a>setMaxRows 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setMaxRows(int max)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setMaxRows 메서드는 java.sql.Statement 인터페이스의 setMaxRows 메서드에 의해 지정 됩니다.  
+ 이 setMaxRows 메서드는 setMaxRows 인터페이스의 메서드에 의해 지정 됩니다.  
   
  이 setMaxRows 메서드는 동적 스크롤 가능 커서에는 아무런 영향을 주지 않습니다. 응용 프로그램에서는 SELECT TOP N SQL 구문을 사용하여 크기가 커질 수 있는 결과 집합에서 반환되는 행 수를 제한해야 합니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: 대규모 데이터 작업 | Microsoft Docs
+title: 대량 데이터 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1d279371d425af60687e2c046d1c75316eeae67
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f4c8cf36ca44e4de7bf3b49ac59285fedded6dd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797482"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956982"
 ---
 # <a name="working-with-large-data"></a>큰 데이터 작업
 

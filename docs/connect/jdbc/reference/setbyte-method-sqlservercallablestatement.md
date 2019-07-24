@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0fbb03a5-61ee-4fb8-9dea-dce5cb1a367e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 38dea38205d2eba003f1cdeb4c8af5718311f591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0039322a86e0dd35c0da78e3173f835bcc47129d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975014"
 ---
 # <a name="setbyte-method-sqlservercallablestatement"></a>setByte 메서드(SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1cdb12dd-6e6f-4bbd-8f5f-9e630f3ee2c9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ae50bcd5499ffa3bd5c10ef492d78de4685402e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3764ff5b9308b4b370dda14e98787513c28458c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983370"
 ---
 # <a name="getencrypt-method-sqlserverdatasource"></a>getEncrypt 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

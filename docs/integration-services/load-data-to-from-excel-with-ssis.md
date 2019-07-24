@@ -10,13 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 77125f88ed8d378a0cc2dc60ae47db641a681a95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38694c8637423c1ecd151d439f48bc1c0e962c04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720481"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054541"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Excel에서 데이터 가져오기 또는 Excel로 데이터 내보내기
 
@@ -125,11 +124,11 @@ Excel에서 데이터를 내보내고 이 옵션을 활성화한 경우 내보�
 
 데이터에 대해 데이터 원본이나 대상으로 사용할 수 있는 Excel 개체의 유형에는 워크시트, 명명된 된 범위 또는 해당 주소로 지정한 셀의 명명되지 않은 영역, 이렇게 세 가지가 있습니다.
 
--   **워크시트.** 워크시트를 지정하려면 시트 이름 끝에 `$` 문자를 추가하고 문자열 주위에 구분 기호를 추가합니다(예: **[Sheet1$]**). 또는 기존 테이블 및 뷰 목록에서 `$` 문자로 끝나는 이름을 찾습니다.
+-   **워크시트.** 워크시트를 지정하려면 시트 이름 끝에 `$` 문자를 추가하고 문자열 주위에 구분 기호를 추가합니다(예: **[Sheet1$]** ). 또는 기존 테이블 및 뷰 목록에서 `$` 문자로 끝나는 이름을 찾습니다.
 
 -   **명명된 범위.** 명명된 범위를 지정하려면 범위 이름을 제공합니다(예: **MyDataRange**). 또는 기존 테이블 및 뷰 목록에서 `$` 문자로 끝나지 않는 이름을 찾습니다.
     
--   **명명되지 않은 범위.** 명명하지 않은 셀의 범위를 지정하려면 시트 이름 끝에 $ 문자를 추가하고 문자열 주위에 구분 기호를 추가합니다(예: **[Sheet1$A1:B4]**).
+-   **명명되지 않은 범위.** 명명하지 않은 셀의 범위를 지정하려면 시트 이름 끝에 $ 문자를 추가하고 문자열 주위에 구분 기호를 추가합니다(예: **[Sheet1$A1:B4]** ).
 
 데이터에 대해 원본 또는 대상으로 사용하려는 Excel 개체의 유형을 선택하거나 지정하려면 다음 작업 중 하나를 수행합니다.
 

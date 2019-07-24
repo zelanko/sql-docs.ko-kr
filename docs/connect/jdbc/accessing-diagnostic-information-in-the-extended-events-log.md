@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a79e9468-2257-4536-91f1-73b008c376c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b13f081338e26aaa33306998d3e562088609a6a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4e43c9e6c284a5a546f7648b72158597921aa922
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957480"
 ---
 # <a name="accessing-diagnostic-information-in-the-extended-events-log"></a>확장 이벤트 로그의 진단 정보 액세스
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "66770519"
 ## <a name="details"></a>세부 정보  
  연결 작업의 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 클라이언트 연결 ID를 전송합니다. 연결이 실패하는 경우 연결 링 버퍼에 액세스할 수 있으며([연결 링 버퍼가 있는 SQL Server 2008의 연결 문제 해결](https://go.microsoft.com/fwlink/?LinkId=207752)) **ClientConnectionID** 필드를 찾아서 연결 실패에 대한 진단 정보를 얻을 수 있습니다. 클라이언트 연결 ID는 오류가 발생하는 경우에만 링 버퍼에 기록됩니다. 로그인 전 패킷을 전송하기 전에 연결이 실패하는 경우 클라이언트 연결 ID는 생성되지 않습니다. 클라이언트 연결 ID는 16바이트 GUID입니다. 확장 이벤트 세션에서 **client_connection_id** 동작을 이벤트에 추가한 경우 확장 이벤트 대상 출력에서 클라이언트 연결 ID를 찾을 수도 있습니다. 클라이언트 드라이버 진단 추가 지원이 필요한 경우 추적을 사용하도록 설정하고 연결 명령을 다시 실행하여 추적에 있는 **ClientConnectionID** 필드를 관찰할 수 있습니다.  
   
- 클라이언트를 가져올 수 있습니다 사용 하 여 프로그래밍 방식으로 연결 ID [ISQLServerConnection 인터페이스](../../connect/jdbc/reference/isqlserverconnection-interface.md)합니다. 연결 ID는 연결 관련 예외에서도 표시됩니다.  
+ [ISQLServerConnection 인터페이스](../../connect/jdbc/reference/isqlserverconnection-interface.md)를 사용 하 여 클라이언트 연결 ID를 프로그래밍 방식으로 가져올 수 있습니다. 연결 ID는 연결 관련 예외에서도 표시됩니다.  
   
  연결 오류가 발생하는 경우 서버의 BID(기본 제공 진단) 추적 정보 및 연결 링 버퍼에 있는 클라이언트 연결 ID를 사용하여 클라이언트 연결과 서버 연결의 상관관계를 지정할 수 있습니다. 서버의 BID 추적에 대한 자세한 내용은 [데이터 액세스 추적](https://go.microsoft.com/fwlink/?LinkId=125805)을 참조하세요. 데이터 액세스 추적 문서에는 데이터 액세스 추적에 대한 정보도 포함되어 있습니다. 이 정보는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에 적용되지 않습니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용하여 데이터 액세스 추적을 수행하는 방법에 대한 자세한 내용은 [드라이버 작업 추적](../../connect/jdbc/tracing-driver-operation.md)을 참조하세요.  
   

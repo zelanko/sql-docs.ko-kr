@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5dd39c40-e7cc-4ff9-8491-7e20e25a9d17
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1e7bb0c91e1d50f38b44d2766fd7886ae10f3535
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9136c379793f4f66fcc4c69b11da9a0ea49d294d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979764"
 ---
 # <a name="getshort-method-sqlserverresultset"></a>getShort 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

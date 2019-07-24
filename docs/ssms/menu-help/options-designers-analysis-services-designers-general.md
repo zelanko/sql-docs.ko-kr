@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 7f976d2b-1a16-47f8-85e6-d7c2bf6a84b8
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: f930820f381e3599cc3ae13007b8abf84bbe7e28
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: be8d79eef8e8d4a1361db8f7d7502b52f48eb0fd
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67690273"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265938"
 ---
 # <a name="options-designers---analysis-services-designers---general"></a>옵션(디자이너 - Analysis Services 디자이너 - 일반)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 57801bcc-4d51-4ffc-8454-b9cb6eddbfe0
 author: rothja
 ms.author: jroth
-manager: jroth
-ms.openlocfilehash: 6412aadf3bca28db229977bec0e96e901584cce0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 435a20941a6827aea7e6e3709b5123b059d8735a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68013463"
 ---
 # <a name="useful-tools-for-troubleshooting"></a>문제 해결에 유용한 도구
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

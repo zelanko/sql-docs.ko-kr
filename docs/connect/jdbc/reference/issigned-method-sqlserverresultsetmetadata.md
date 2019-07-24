@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1d16672f-1515-4255-8b20-e7911c999f60
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fec14aa519dfcc5539005321f0110c25146ce6e6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4c9fa67d11e07e52980c165745b806aaca042163
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977246"
 ---
 # <a name="issigned-method-sqlserverresultsetmetadata"></a>isSigned 메서드(SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isSigned(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 isSigned 메서드는 java.sql.ResultSetMetaData 인터페이스의 isSigned 메서드에 의해 지정 됩니다.  
+ 이 isSigned 메서드는 java .sql. ResultSetMetaData 인터페이스의 isSigned 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSetMetaData 메서드](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

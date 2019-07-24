@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cc18f99e-c19f-4bd0-96ae-b9a6a0de1926
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 963637dc079d34dd169301aa48c5f7f66f470a83
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 16a57ee05bbe67d4fe8a88f61d969f79734521cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969697"
 ---
 # <a name="supportscatalogsinprivilegedefinitions-method-sqlserverdatabasemetadata"></a>supportsCatalogsInPrivilegeDefinitions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsCatalogsInPrivilegeDefinitions()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsCatalogsInPrivilegeDefinitions 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsCatalogsInPrivilegeDefinitions 메서드에 의해 지정 됩니다.  
+ 이 supportsCatalogsInPrivilegeDefinitions 메서드는 supportsCatalogsInPrivilegeDefinitions 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

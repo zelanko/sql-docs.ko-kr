@@ -9,21 +9,20 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 457dd90b386cf606462e61229aa14ad4a6f7dfbe
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a61d24ed5f2c36a84560cbcd04cd409fd6a59a44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957458"
 ---
 # <a name="azure-key-vault-sample-version-622"></a>Azure Key Vault 샘플 버전 6.2.2
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-## <a name="sample-application-using-azure-key-vault-feature"></a>Azure Key Vault 기능을 사용 하 여 샘플 응용 프로그램
+## <a name="sample-application-using-azure-key-vault-feature"></a>Azure Key Vault 기능을 사용 하는 샘플 응용 프로그램
 
-이 응용 프로그램은 6.2.2 및 6.4.0 JDBC 드라이버를 사용 하 여 실행 가능한 및 Azure-Keyvault (버전 1.0.0) Adal4j (버전 1.4.0) 및 해당 종속성입니다.  기본 종속성 설명 된 대로 프로젝트의 pom 파일에 이러한 라이브러리를 추가 하 여 해결할 수 있습니다 [여기](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md):
+이 응용 프로그램은 JDBC Driver 6.2.2 및 v6.4.0 및 Azure-Keyvault (버전 1.0.0), Adal4j (버전 1.4.0) 및 해당 종속성을 사용 하 여 실행할 수 있습니다.  [여기](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)에 설명 된 대로 프로젝트의 pom 파일에 이러한 라이브러리를 추가 하 여 기본 종속성을 확인할 수 있습니다.
 
 ```java
 import java.net.URISyntaxException;

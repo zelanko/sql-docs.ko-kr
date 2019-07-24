@@ -1,6 +1,6 @@
 ---
 title: Analysis Services 일반 속성 | Microsoft Docs
-ms.date: 04/04/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0d2a1fd8a83c4b181dfc182f5fb5630e29c9efb
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714700"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419515"
 ---
 # <a name="general-properties"></a>일반 속성
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 다음 표에 나열된 서버 속성을 사용할 수 있습니다. 이 항목에서는 msmdsrv.ini 파일의 서버 속성 중 보안, 네트워크, ThreadPool 등 특정 섹션에 포함되지 않은 속성에 대해 설명됩니다. 추가 서버 속성 및 해당 속성 설정 방법에 대한 자세한 내용은 [Analysis Services의 서버 속성](../../analysis-services/server-properties/server-properties-in-analysis-services.md)을 참조하세요.  
   
- **적용 대상:** 다차원 및 테이블 형식 서버 모드(다르게 표시되지 않은 경우)  
+ 이러한 속성은 다른 설명이 없는 한 다차원 및 테이블 형식 서버 모드에 적용 됩니다.  
   
 ## <a name="non-specific-category"></a>일반 범주  
  **AdminTimeout**  
@@ -33,11 +33,11 @@ ms.locfileid: "62714700"
  Analysis Services 대화 상자에서 파일을 저장하고 열고 찾을 때 검색할 수 있는 폴더를 쉼표로 구분된 목록으로 지정하는 문자열 속성입니다. Analysis Services 서비스 계정은 목록에 추가되는 모든 폴더에 대해 읽기 및 쓰기 권한을 가지고 있어야 합니다.  
   
  **BackupDir**  
- 백업 명령의 일부로 경로가 지정 되지 이벤트에 기본적으로 백업 파일을 저장할 디렉터리의 이름을 식별 하는 문자열 속성입니다.  
+ 백업 명령의 일부로 경로가 지정 되지 않은 경우 기본적으로 백업 파일이 저장 되는 디렉터리의 이름을 식별 하는 문자열 속성입니다.  
  
-**ClientCacheRefreshPolicy** Azure Analysis services에 적용 됩니다. 재정의 된 **예약 된 캐시 새로 고침** 모든 Power BI 데이터 집합에 대 한 설정입니다. Live Connect 모든 보고서 서버 수준 설정을 설정 하는 데이터 집합 수준에 관계 없이 관찰할 또는 작업 영역에 상주 합니다.
+**ClientCacheRefreshPolicy** SSAS 및 Azure Analysis Services 테이블 형식 모델의 경우이 속성은 모든 Power BI 데이터 집합에 대 한 **예약 된 캐시 새로 고침** 설정을 재정의 합니다. 모든 라이브 연결 보고서는 데이터 집합 수준 설정 또는 해당 작업 영역에 관계 없이 서버 수준 설정을 관찰 합니다.
 
-이 속성의 기본값은-1로, 예약 된 캐시 새로 고침 데이터 집합에 대 한 설정에 지정 된 대로 모든 백그라운드 캐시 새로 고침을 허용 합니다. 모든 백그라운드 캐시 하지 못하게 하려면 새로 고칩니다. 영 (0)를 지정 합니다.
+이 속성의 기본값은-1입니다 .이 값은 데이터 집합에 대 한 예약 된 캐시 새로 고침 설정에 지정 된 대로 모든 백그라운드 캐시 새로 고침을 허용 합니다. 모든 백그라운드 캐시 새로 고침을 억제 하려면 영 (0)을 지정 합니다.
 
   
  **CollationName**  
@@ -52,7 +52,7 @@ ms.locfileid: "62714700"
  파티션 인덱스를 작성하도록 할당된 최대 스레드 수를 정의하는 부호 있는 32비트 정수 속성입니다. 메모리 사용을 늘리는 대신 파티션 인덱싱 속도를 높이려면 이 값을 늘리십시오. 이 속성에 대한 자세한 내용은 [SQL Server 2008 R2 Analysis Services 작업 가이드](http://go.microsoft.com/fwlink/?LinkID=225539)를 참조하십시오.  
   
  **CoordinatorCancelCount**  
- 내부 반복 횟수에 따라 Cancel 이벤트가 발생했는지 여부를 서버에서 검사하는 빈도를 정의하는 부호 있는 32비트 정수 속성입니다. 일반 성능 대신 Cancel 이벤트를 보다 자주 검사하려면 이 값을 줄이십시오. 이 속성은 테이블 형식 서버 모드에서는 무시 됩니다.  
+ 내부 반복 횟수에 따라 Cancel 이벤트가 발생했는지 여부를 서버에서 검사하는 빈도를 정의하는 부호 있는 32비트 정수 속성입니다. 일반 성능 대신 Cancel 이벤트를 보다 자주 검사하려면 이 값을 줄이십시오. 이 속성은 테이블 형식 서버 모드에서 무시 됩니다.  
   
  **CoordinatorExecutionMode**  
  서버에서 시도하는 작업 처리 및 쿼리를 포함한 최대 병렬 작업 수를 정의하는 부호 있는 32비트 정수 속성입니다. 0으로 설정하면 내부 알고리즘에 따라 서버에서 작업 수를 결정합니다. 양수 값은 최대 작업 수의 합계를 나타냅니다. 음수 값은 부호를 반대로 하여 프로세서당 최대 작업 수를 나타냅니다.  
@@ -69,7 +69,7 @@ ms.locfileid: "62714700"
  데이터가 저장되는 디렉터리의 이름을 식별하는 문자열 속성입니다.  
   
  **DeploymentMode**  
- Analysis Services 서버 인스턴스의 작업 컨텍스트를 결정합니다. 이 속성 대화 상자, 메시지 및 설명서의 '서버 모드로' 이라고 합니다. 이 속성은 Analysis Services를 설치할 때 선택한 서버 모드를 기준으로 SQLServer 설치 프로그램이 구성합니다. 이 속성을 내부 값으로만 간주하여 항상 설치 프로그램에서 지정한 값을 사용해야 합니다.  
+ Analysis Services 서버 인스턴스의 작업 컨텍스트를 결정합니다. 대화 상자, 메시지 및 설명서에서는이 속성을 ' 서버 모드 ' 라고 합니다. 이 속성은 Analysis Services를 설치할 때 선택한 서버 모드를 기준으로 SQLServer 설치 프로그램이 구성합니다. 이 속성을 내부 값으로만 간주하여 항상 설치 프로그램에서 지정한 값을 사용해야 합니다.  
   
  이 속성에 유효한 값은 다음과 같습니다.  
   

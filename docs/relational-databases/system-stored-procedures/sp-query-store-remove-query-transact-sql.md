@@ -1,5 +1,5 @@
 ---
-title: sp_query_store_remove_query (TRANSACT-SQL) | Microsoft Docs
+title: sp_query_store_remove_query (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/29/2016
 ms.prod: sql
@@ -21,17 +21,17 @@ ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cb65ba60dc99be491cffcd70a0eb442bfe61d580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c87dc88db41e6699e1ce39e924b017c11bf5621e
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67896405"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418913"
 ---
-# <a name="spquerystoreremovequery-transact-sql"></a>sp_query_store_remove_query (Transact SQL)
+# <a name="spquerystoreremovequery-transact-sql"></a>sp_query_store_remove_query (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  쿼리 저장소에서 쿼리 뿐만 아니라 연결 된 모든 계획 및 런타임 통계를 제거합니다.  
+  쿼리 저장소에서 관련 된 모든 계획 및 런타임 통계를 비롯 하 여 쿼리를 제거 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +43,7 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @query_id = ] query_id` 쿼리 저장소에서 제거할 쿼리의 id가입니다. *query_id* 되는 **bigint**, 기본값은 없습니다.  
+`[ @query_id = ] query_id`쿼리 저장소에서 제거할 쿼리의 id입니다. *query_id* 는 **bigint**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -51,10 +51,10 @@ sp_query_store_remove_query [ @query_id = ] query_id [;]
 ## <a name="remarks"></a>설명  
   
 ## <a name="permissions"></a>사용 권한  
- 필요 합니다 **EXECUTE** 데이터베이스에 대 한 권한 및 **삭제** 의 쿼리 저장소 카탈로그 뷰 사용 권한.  
+ 데이터베이스에 대 한 **ALTER** 권한이 필요 합니다.
   
 ## <a name="examples"></a>예  
- 다음 예제에서는 쿼리 저장소에서 쿼리에 대 한 정보를 반환합니다.  
+ 다음 예에서는 쿼리 저장소의 쿼리에 대 한 정보를 반환 합니다.  
   
 ```  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
@@ -65,7 +65,7 @@ JOIN sys.query_store_query_text AS Txt
     ON Qry.query_text_id = Txt.query_text_id ;  
 ```  
   
- 삭제 하려는 query_id를 확인 한 후 쿼리를 삭제 하려면 다음 예제를 사용 합니다.  
+ 삭제할 query_id를 확인 한 후 다음 예제를 사용 하 여 쿼리를 삭제 합니다.  
   
  다음 예에서는  
   
@@ -74,11 +74,11 @@ EXEC sp_query_store_remove_query 3;
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [sp_query_store_force_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
- [sp_query_store_remove_plan &#40;TRANSCT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
- [sp_query_store_unforce_plan &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
- [sp_query_store_reset_exec_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
+ [sp_query_store_force_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)   
+ [sp_query_store_remove_plan &#40;TRANSCT-SQL&AMP;-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)   
+ [sp_query_store_unforce_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
+ [sp_query_store_reset_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
+ [sp_query_store_flush_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)   
  [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
  [쿼리 저장소를 사용하여 성능 모니터링](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
   

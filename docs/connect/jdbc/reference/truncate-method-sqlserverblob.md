@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ef181e04-003a-442a-9b7e-0c508a7cc873
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ce085032435cfe2bbb95137c12c98ac0f53206b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3195b0eafb5eb48f7ec6b159fef05036d6efd7df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785042"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968490"
 ---
 # <a name="truncate-method-sqlserverblob"></a>truncate 메서드(SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public void truncate(long len)
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- 이 자르기 메서드는 java.sql.Blob 인터페이스의 자르기 메서드에 의해 지정 됩니다.  
+ 이 truncate 메서드는 java. Blob 인터페이스의 truncate 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerBlob 메서드](../../../connect/jdbc/reference/sqlserverblob-methods.md)   

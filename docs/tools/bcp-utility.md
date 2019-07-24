@@ -27,22 +27,21 @@ helpviewer_keywords:
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 53f25408fd487e265647eb2464aebacf8338ebbe
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
-ms.translationtype: HT
+ms.openlocfilehash: 612132eec023e3497344c01bd34947bb49195385
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727800"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010433"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> Bcp를 사용 하 여 linux에 대해서 [Linux에서 sqlcmd 및 bcp 설치](../linux/sql-server-linux-setup-tools.md)합니다.
+> Linux에서 bcp를 사용 하는 경우 [linux에서 sqlcmd 및 Bcp 설치](../linux/sql-server-linux-setup-tools.md)를 참조 하세요.
 >
-> Bcp를 사용 하 여 Azure SQL Data warehouse에 대 한 자세한 내용은 [bcp 사용 하 여 데이터 로드](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)합니다.
+> Azure SQL Data Warehouse에서 bcp를 사용 하는 방법에 대 한 자세한 내용은 [bcp를 사용 하 여 데이터 로드](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)를 참조 하세요.
 
   **대**량 **복**사 **프**로그램 유틸리티(**bcp**)는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스와 사용자가 지정한 형식의 데이터 파일 간에 데이터를 대량 복사합니다. **bcp** 유틸리티를 사용하여 많은 수의 새 행을 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 테이블로 가져오거나 테이블에서 데이터 파일로 데이터를 내보낼 수 있습니다. **queryout** 옵션과 함께 사용하는 경우를 제외하고 이 유틸리티를 사용하는 데에는 [!INCLUDE[tsql](../includes/tsql-md.md)]에 대한 지식이 필요하지 않습니다. 테이블로 데이터를 가져오려면 해당 테이블에 대해 만든 서식 파일을 사용하거나 이 테이블의 열에 적합한 테이블 구조와 데이터 형식을 알아야 합니다.  
   
@@ -51,12 +50,12 @@ ms.locfileid: "67727800"
 > [!NOTE]
 > **bcp** 를 사용하여 데이터를 백업하는 경우 서식 파일을 만들어 데이터 서식을 기록합니다. **bcp** 데이터 파일에는 스키마 또는 서식 정보가 **포함되어 있지 않기** 때문에 테이블이나 뷰가 삭제된 경우 서식 파일이 없으면 데이터를 가져오지 못할 수 있습니다.
 
-## <a name="download-the-latest-version-of-bcp-utility"></a>Bcp 유틸리티의 최신 버전 다운로드
+## <a name="download-the-latest-version-of-bcp-utility"></a>최신 버전의 bcp 유틸리티를 다운로드 합니다.
 
 **[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0(x64) 다운로드](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![다운로드](../ssdt/media/download.png) SQL Server용 Microsoft 명령줄 유틸리티 15.0(x86) 다운로드](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
-하지만 명령줄 도구는 일반 가용성 (GA)에 대 한 설치 관리자 패키지를 사용 하 여 릴리스되기 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]합니다.
+명령줄 도구는 GA (일반 공급) 이지만 용 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]설치 관리자 패키지를 사용 하 여 릴리스됩니다.
 
 **버전 정보**
 
@@ -64,12 +63,12 @@ ms.locfileid: "67727800"
 빌드 번호: 15.0.1000.34<br>
 릴리스 날짜: 2018년 10월 18일
 
-새 버전의 SQLCMD에 SQL Database, SQL Data Warehouse 및 상시 암호화 기능에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
-새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 Multi-factor Authentication (MFA) 지원을 비롯 하 여 Azure AD 인증을 지원 합니다.
+새 버전의 SQLCMD는 SQL Database, SQL Data Warehouse 및 Always Encrypted 기능에 대 한 MFA (Multi-factor Authentication) 지원을 포함 하 여 Azure AD 인증을 지원 합니다.
+새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 MFA (Multi-factor Authentication) 지원을 포함 하 여 Azure AD 인증을 지원 합니다.
 
-**시스템 요구 사항** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2이 구성 요소에는 [Windows 설치 관리자 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 하 고 [SQL Server 용 Microsoft ODBC Driver 17.3](https://www.microsoft.com/download/details.aspx?id=56567)합니다.
+**시스템 요구 사항** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, windows server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2이 구성 요소에는 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 및 [Microsoft ODBC Driver 17.3가 모두 필요 합니다. SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
 
-BCP 버전 실행을 확인 하려면 `bcp /v` 명령 및 해당 15.0.1000.34 확인 또는 이상을 사용 중입니다.
+BCP 버전 실행 `bcp /v` 명령을 확인 하 고 15.0.1000.34 이상이 사용 중인지 확인 합니다.
 
 <table><th>구문</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -203,25 +202,25 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* 는 최대 2^63-1의 값을 갖는 양의 정수입니다. **-F** *first_row* 는 1부터 시작합니다.  
 
 **-G**<a name="G"></a>  
- 이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 Azure SQL Data Warehouse 또는 Azure SQL Database에 연결할 때 클라이언트에서 사용됩니다. -G 스위치를 사용하려면 [버전 14.0.3008.27 이상](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 bcp -v를 실행하세요. 자세한 내용은 [SQL Database 또는 SQL Data Warehouse에서 인증을 위해 사용 하 여 Azure Active Directory 인증](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)합니다. 
+ 이 스위치는 Azure Active Directory 인증을 사용하여 사용자를 인증하도록 지정하기 위해 Azure SQL Data Warehouse 또는 Azure SQL Database에 연결할 때 클라이언트에서 사용됩니다. -G 스위치를 사용하려면 [버전 14.0.3008.27 이상](https://go.microsoft.com/fwlink/?LinkID=825643)이 필요합니다. 사용 중인 버전을 확인하려면 bcp -v를 실행하세요. 자세한 내용은 [SQL Database 또는 SQL Data Warehouse 인증에 Azure Active Directory 인증 사용](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)을 참조 하세요. 
 
 > [!IMPORTANT]
 > **-G** 옵션은 Azure SQL 데이터베이스 및 Azure 데이터 웨어하우스에만 적용됩니다.
-> AAD 통합 및 대화형 인증 Linux 또는 macOS에서 현재 지원 되지 않습니다.
+> AAD 통합 및 대화형 인증은 현재 Linux 또는 macOS에서 지원 되지 않습니다.
 
 > [!TIP]
->  Bcp 버전 Azure Active Directory 인증 (AAD) 형식에 대 한 지원을 포함 하는 경우 검사할 **bcp-** (bcp\<공간 >\<dash >\<dash >)-G 목록에 표시 되는지 확인 하 고 사용 가능한 인수입니다.
+>  버전의 bcp에 AAD (Azure Active Directory 인증) 형식 **bcp** (>)가 포함 되어 있는지 확인 하려면 (\<bcp space\<대시\<> 대시 >) 사용 가능한 인수 목록에-G가 표시 되는지 확인 합니다.
 
 - **Azure Active Directory 사용자 이름 및 암호:** 
 
     Azure Active Directory의 사용자 이름과 암호를 사용하려는 경우 **-G** 옵션을 제공하고 **-U** 및 **-P** 옵션도 제공하여 사용자 이름 및 암호를 사용할 수 있습니다. 
 
-    다음 예제에서는 Azure AD 사용자를 사용 하 여 데이터 내보내기 및 사용자 이름 및 암호는 AAD 자격 증명 암호입니다. 이 예제에서는 테이블을 내보냅니다 `bcptest` 데이터베이스에서 `testdb` Azure 서버의 `aadserver.database.windows.net` 파일에서 데이터를 가져와 `c:\last\data1.dat`:
+    다음 예제에서는 Azure AD 사용자 이름 및 암호를 사용 하 여 사용자와 암호가 AAD 자격 증명 인 데이터를 내보냅니다. 이 예에서는 Azure `bcptest` 서버 `aadserver.database.windows.net` 에서 `testdb` 데이터베이스의 테이블을 내보내고 파일 `c:\last\data1.dat`에 데이터를 저장 합니다.
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    다음 예제에서는 Azure AD 사용자를 사용 하 여 데이터 및 사용자 이름 및 암호는 AAD 자격 증명 암호입니다. 이 예제에서는 파일에서 데이터를 가져옵니다 `c:\last\data1.dat` 테이블로 `bcptest` 데이터베이스용 `testdb` Azure 서버의 `aadserver.database.windows.net` Azure AD 사용자/암호를 사용 하 여:
+    다음 예제에서는 Azure AD 사용자 이름 및 암호를 사용 하 여 사용자와 암호가 AAD 자격 증명 인 데이터를 가져옵니다. 이 예에서는 azure AD 사용자 `c:\last\data1.dat` /암호 `bcptest` 를 사용 `testdb` 하 여 azure `aadserver.database.windows.net` 서버에서 데이터베이스에 대 한 테이블로 파일의 데이터를 가져옵니다.
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -230,15 +229,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 통합** 
  
-    Azure Active Directory 통합 인증을 위해 사용자 이름이나 암호 없이 **-G** 옵션을 제공합니다. 이 구성은 현재 Windows 사용자 계정 (bcp 명령을 실행 중인 계정)를 Azure AD와 페더레이션 되는 가정 합니다. 
+    Azure Active Directory 통합 인증을 위해 사용자 이름이나 암호 없이 **-G** 옵션을 제공합니다. 이 구성에서는 현재 Windows 사용자 계정 (bcp 명령이 실행 되 고 있는 계정)이 Azure AD와 페더레이션된 것으로 가정 합니다. 
 
-    다음 예제에서는 Azure AD 통합된 계정을 사용 하 여 데이터를 내보냅니다. 이 예제에서는 테이블을 내보냅니다 `bcptest` 데이터베이스에서 `testdb` Azure 서버에서 Azure AD 통합을 사용 하 여 `aadserver.database.windows.net` 파일에서 데이터를 가져와 `c:\last\data2.dat`:
+    다음 예제에서는 Azure AD 통합 계정을 사용 하 여 데이터를 내보냅니다. 예제는 azure 서버 `bcptest` `testdb` `aadserver.database.windows.net` 에서 통합 된 azure AD를 사용 하 여 데이터베이스에서 테이블을 내보내고 파일 `c:\last\data2.dat`에 데이터를 저장 합니다.
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    다음 예제에서는 Azure AD 통합된 인증을 사용 하 여 데이터를 가져옵니다. 이 예제에서는 파일에서 데이터를 가져옵니다 `c:\last\data2.txt` 테이블로 `bcptest` 데이터베이스용 `testdb` Azure 서버의 `aadserver.database.windows.net` Azure AD 통합된 인증을 사용 하 여:
+    다음 예제에서는 Azure AD 통합 인증을 사용 하 여 데이터를 가져옵니다. 이 예에서는 azure AD 통합 `c:\last\data2.txt` 인증을 `bcptest` 사용 하 `testdb` 여 azure 서버 `aadserver.database.windows.net` 에서 데이터베이스에 대 한 테이블로 파일의 데이터를 가져옵니다.
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -246,29 +245,29 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 대화형**  
 
-   Azure SQL Database 및 SQL Data Warehouse에 대 한 Azure AD 대화형 인증을 사용 하면 다단계 인증을 지 원하는 대화형 메서드를 사용할 수 있습니다. 자세한 내용은 참조 하세요. [Active Directory 대화형 인증](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)합니다. 
+   Azure SQL Database 및 SQL Data Warehouse에 대 한 Azure AD 대화형 인증을 사용 하면 다단계 인증을 지 원하는 대화형 메서드를 사용할 수 있습니다. 자세한 내용은 [Active Directory 대화형 인증](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)을 참조 하세요. 
 
-   대화형 azure AD에 필요 **bcp** [버전 15.0.1000.34](#download-the-latest-version-of-bcp-utility) 뿐만 이상을 [ODBC 버전 17.2 이상이](https://www.microsoft.com/download/details.aspx?id=56567)합니다.  
+   Azure AD interactive에는 [ODBC 버전 17.2](https://www.microsoft.com/download/details.aspx?id=56567)이상 뿐만 아니라 **bcp** [버전 15.0.1000.34](#download-the-latest-version-of-bcp-utility) 이상이 필요 합니다.  
 
-   대화형 인증을 사용 하려면 사용자 이름의-G 옵션 제공 (-U) 암호 없이 합니다.   
+   대화형 인증을 사용 하도록 설정 하려면 사용자 이름 (-U)만 사용 하 여 암호 없이-G 옵션을 제공 합니다.   
 
-   다음 예제에서는 사용자의 AAD 계정을 나타냅니다 있는 사용자를 나타내는 Azure AD 대화형 모드 사용 하 여 데이터를 내보냅니다. 이 이전 섹션에 사용 된 동일한 예제: *Azure Active Directory 사용자 이름 및 암호*합니다.  
+   다음 예제에서는 사용자가 AAD 계정을 나타내는 사용자 이름을 나타내는 Azure AD interactive 모드를 사용 하 여 데이터를 내보냅니다. 이는 이전 섹션인 *Azure Active Directory 사용자 이름 및 암호*에 사용 된 것과 동일한 예제입니다.  
 
-   대화형 모드에 수동으로 입력 하는 데 암호 필요 하거나 다단계 인증을 사용 하는 계정에 구성 된 MFA 인증 메서드를 완료 합니다. 
+   대화형 모드에서는 암호를 수동으로 입력 하거나 multi-factor authentication을 사용 하도록 설정한 계정에 대해 구성 된 MFA 인증 방법을 완료 해야 합니다. 
 
    ``` 
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
    ``` 
 
-   도메인 페더레이션 한 경우 Azure AD 사용자 Windows 계정을 사용 하 여, 명령줄에 필요한 사용자 이름과 해당 도메인 계정을 포함 (예를 들어 joe@contoso.com 아래 참조).   
+   Azure AD 사용자가 Windows 계정을 사용 하 여 페더레이션 된 도메인 인 경우 명령줄에 필요한 사용자 이름에는 해당 도메인 계정이 포함 됩니다 (예 joe@contoso.com : 아래 참조).   
 
    ```
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
    ```
 
-   게스트 사용자는 특정 Azure AD에 존재 하 고 bcp 명령을 실행 하려면 데이터베이스 권한이 있는 SQL DB에 존재 하는 그룹의 일부인, 게스트 사용자 별칭이 사용 됩니다 (예를 들어 *keith0@adventureworks.com* ).
+   특정 Azure AD에 게스트 사용자가 있고 bcp 명령을 실행 하는 데이터베이스 권한이 있는 SQL DB에 있는 그룹의 일부인 경우 해당 게스트 사용자 별칭이 사용 됩니다 (예: *keith0@adventureworks.com* ).
   
-**-h** _ **"load hints**_ [ ,... *n*] **"** <a name="h"></a> 데이터를 테이블 또는 뷰로 대량으로 가져올 때 사용할 힌트를 지정합니다.  
+**-h** _**"load hints**_ [ ,... *n*] **"** <a name="h"></a> 데이터를 테이블 또는 뷰로 대량으로 가져올 때 사용할 힌트를 지정합니다.  
   
 * **ORDER**( **_column_[ASC | DESC] [** , **..._n_])**  
 데이터 파일에 있는 데이터의 정렬 순서입니다. 가져올 데이터를 테이블의 클러스터형 인덱스(있는 경우)에 따라 정렬하면 대량 가져오기 성능이 향상됩니다. 데이터 파일을 클러스터형 인덱스 키와 다른 순서로 정렬하거나 테이블에 클러스터형 인덱스가 없으면 ORDER 절이 무시됩니다. 지정한 열 이름은 대상 테이블에서 올바른 열 이름이어야 합니다. 기본적으로 **bcp** 는 데이터 파일이 정렬되지 않은 것으로 간주합니다. 대량 가져오기 작업을 최적화하기 위해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에서는 가져온 데이터가 정렬되어 있는지도 확인합니다.  
@@ -548,7 +547,7 @@ bcp 유틸리티는 [Microsoft SQL Server 2016 기능 팩](https://www.microsoft
 
 ### <a name="example-test-conditions"></a>**예제 테스트 조건**
 
-아래 예에서는 SQL Server(2016 시작) 및 Azure SQL Database에 대한 `WideWorldImporters` 샘플 데이터베이스를 사용합니다.  `WideWorldImporters` 다운로드할 수 있습니다 [ https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0 ](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)합니다.  샘플 데이터베이스를 복원하는 구문은 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 을 참조하세요.  다르게 지정되지 않는 한 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  이름이 `D:\BCP` 인 디렉터리는 많은 예제에서 사용됩니다.
+아래 예에서는 SQL Server(2016 시작) 및 Azure SQL Database에 대한 `WideWorldImporters` 샘플 데이터베이스를 사용합니다.  `WideWorldImporters`에서 [https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)다운로드할 수 있습니다.  샘플 데이터베이스를 복원하는 구문은 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 을 참조하세요.  다르게 지정되지 않는 한 이 예에서는 Windows 인증을 사용하고 있고 **bcp** 명령을 실행 중인 서버 인스턴스에 트러스트된 연결이 설정되어 있다고 가정합니다.  이름이 `D:\BCP` 인 디렉터리는 많은 예제에서 사용됩니다.
 
 다음 스크립트에서는 `WideWorldImporters.Warehouse.StockItemTransactions` 테이블의 빈 복사본을 만들고 기본 키 제약 조건을 추가합니다.  SSMS(SQL Server Management Studio)에서 다음 T-SQL 스크립트를 실행합니다.
 

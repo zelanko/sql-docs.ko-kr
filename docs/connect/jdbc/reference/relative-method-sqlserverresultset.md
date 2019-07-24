@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2bcdbb69-95fd-4ae8-8488-1a75a91fe2e0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b8907a5e2eb2ead5202e8aec9fd5320a6047a5f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b2e644feff3cd2787cc6bd80bce54562ad20794
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975788"
 ---
 # <a name="relative-method-sqlserverresultset"></a>relative 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean relative(int nRows)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 상대 메서드는 java.sql.ResultSet 인터페이스의 상대 메서드에 의해 지정 됩니다.  
+ 이 상대 메서드는 java. ResultSet 인터페이스의 상대 메서드로 지정 됩니다.  
   
  결과 집합의 첫 번째 또는 마지막 행을 지나 이동하려고 하면 커서가 첫 번째 행의 앞이나 마지막 행의 뒤에 놓입니다. `relative(0)`를 호출할 수는 있지만 이 경우 커서 위치가 변경되지 않습니다.  
   

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 760e555e-9667-4b40-b0ba-778026ff2923
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: acf74ae4b3f9c95002de418a5b77a44a7b0a1bfa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 58af3c6d8b9d0967ff370047e49a377bf52ec985
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974242"
 ---
 # <a name="setfetchsize-method-sqlserverstatement"></a>setFetchSize 메서드(SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setFetchSize(int rows)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setFetchSize 메서드는 java.sql.Statement 인터페이스의 setFetchSize 메서드로 지정 됩니다.  
+ 이 setFetchSize 메서드는 java. Statement 인터페이스의 setFetchSize 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerStatement 멤버](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

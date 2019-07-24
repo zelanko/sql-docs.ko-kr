@@ -1,5 +1,5 @@
 ---
-title: 향상 된 날짜 및 시간 기능 (OLE DB) 사용 | Microsoft Docs
+title: 향상 된 날짜 및 시간 기능 사용 (OLE DB) | Microsoft Docs
 description: 향상된 날짜 및 시간 기능 사용(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -10,13 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: cb62604971ab0e16b0fe252534317b586d39ed0c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 907d810c1579229ea69d39ecb32af9f06dec01b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015533"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>향상된 날짜 및 시간 기능 사용(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: 'Isqlservererrorinfo:: Geterrorinfo (OLE DB) | Microsoft Docs'
+title: 'ISQLServerErrorInfo:: GetErrorInfo (OLE DB) | Microsoft Docs'
 description: ISQLServerErrorInfo::GetErrorInfo(OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,22 +15,21 @@ helpviewer_keywords:
 - GetErrorInfo method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 6a43a5882529353a05b41a111ead20d0dd148078
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 54e9c71ca21647004ea3899306dcb15689dcc3d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015443"
 ---
 # <a name="isqlservererrorinfogeterrorinfo-ole-db"></a>ISQLServerErrorInfo::GetErrorInfo(OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB driver for SQL Server SSERRORINFO 구조를 포함 하는 포인터를 반환 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 세부 정보입니다.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류 정보를 포함 하는 SQL Server SSERRORINFO 구조체의 OLE DB 드라이버에 대 한 포인터를 반환 합니다.  
   
- OLE DB 드라이버 SQL Server에 대 한 정의 **ISQLServerErrorInfo** 오류 인터페이스입니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류의 심각도 및 상태를 비롯하여 오류에 대한 자세한 정보를 반환합니다.  
+ SQL Server에 대 한 OLE DB 드라이버는 **ISQLServerErrorInfo** error 인터페이스를 정의 합니다. 이 인터페이스는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 오류의 심각도 및 상태를 비롯하여 오류에 대한 자세한 정보를 반환합니다.  
 
   
 ## <a name="syntax"></a>구문  
@@ -54,10 +53,10 @@ HRESULT GetErrorInfo(
  메서드가 성공했습니다.  
   
  E_INVALIDARG  
- 중 하나는 *ppSSErrorInfo* 또는 *ppErrorStrings* 인수가 NULL입니다.  
+ *PpSSErrorInfo* 또는 *ppErrorStrings* 인수가 NULL입니다.  
   
  E_OUTOFMEMORY  
- OLE DB Driver for SQL Server에서 요청을 완료할 충분 한 메모리를 할당 하지 못했습니다.  
+ SQL Server에 대 한 OLE DB 드라이버에서 요청을 완료 하기에 충분 한 메모리를 할당할 수 없습니다.  
   
 ## <a name="remarks"></a>Remarks  
  SQL Server용 OLE DB 드라이버가 소비자에 의해 전달된 포인터를 통해 반환된 SSERRORINFO 및 OLECHAR 문자열을 위한 메모리를 할당했습니다. 소비자는 오류 데이터에 액세스할 필요가 없게 되면 **IMalloc::Free** 메서드를 사용하여 이 메모리의 할당을 취소해야 합니다.  

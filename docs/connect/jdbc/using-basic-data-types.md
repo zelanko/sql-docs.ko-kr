@@ -1,5 +1,5 @@
 ---
-title: 기본 데이터 형식을 사용 하 여 | Microsoft Docs
+title: 기본 데이터 형식 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2018
 ms.prod: sql
@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916366"
 ---
 # <a name="using-basic-data-types"></a>기본 데이터 형식 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 JDBC 기본 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 Java 프로그래밍 언어가 인식할 수 있는 형식으로 변환하며 그 반대 과정도 수행합니다. JDBC 드라이버는 포함 된 JDBC 4.0 API를 지원 합니다 **SQLXML** 데이터 형식 및 국가별 (유니코드) 데이터 형식이 같은 **NCHAR**를 **NVARCHAR**, **LONGNVARCHAR**, 및 **NCLOB**합니다.  
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 JDBC 기본 데이터 형식을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 Java 프로그래밍 언어가 인식할 수 있는 형식으로 변환하며 그 반대 과정도 수행합니다. JDBC 드라이버는 **SQLXML** 데이터 형식 및 **NCHAR**, **NVARCHAR**, **LONGNVARCHAR**및 **NCLOB**와 같은 국가별 (유니코드) 데이터 형식을 포함 하는 jdbc 4.0 API에 대 한 지원을 제공 합니다.  
   
 ## <a name="data-type-mappings"></a>데이터 형식 매핑
 
@@ -41,7 +40,7 @@ ms.locfileid: "66790093"
 | Decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | FLOAT              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
-| ssNoversion                | INTEGER                                            | ssNoversion                          |
+| int                | INTEGER                                            | int                          |
 | money              | DECIMAL                                            | java.math.BigDecimal         |
 | NCHAR              | CHAR<br /><br /> NCHAR(Java SE 6.0)               | String                       |
 | ntext              | LONGVARCHAR<br /><br /> LONGNVARCHAR(Java SE 6.0) | String                       |
@@ -69,7 +68,7 @@ ms.locfileid: "66790093"
   
 (1) time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 형식과 함께 java.sql.Time을 사용하려면 **sendTimeAsDatetime** 연결 속성을 false로 설정해야 합니다.  
   
-(의 값에 프로그래밍 방식으로 액세스할 수 2) **datetimeoffset** 사용 하 여 [DateTimeOffset 클래스](../../connect/jdbc/reference/datetimeoffset-class.md)합니다.  
+(2) [Datetimeoffset 클래스](../../connect/jdbc/reference/datetimeoffset-class.md)를 사용 하 여 **datetimeoffset** 값에 프로그래밍 방식으로 액세스할 수 있습니다.  
   
 다음 섹션에서는 JDBC 드라이버와 기본 데이터 형식을 사용하는 방법의 예를 보여 줍니다. Java 애플리케이션에서 기본 데이터 형식을 사용하는 방법에 대한 자세한 예는 [기본 데이터 형식 샘플](../../connect/jdbc/basic-data-types-sample.md)을 참조하세요.  
   
@@ -86,11 +85,11 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
-> GetUnicodeStream 및 확장 메서드를 사용 하 여 getBigDecimal 사용 되지 않습니다. JDBC 드라이버에서 사용할 수 없습니다.
+> 크기 조정 메서드를 사용 하는 getUnicodeStream 및 Get Decimal은 더 이상 사용 되지 않으며 JDBC 드라이버에서 지원 되지 않습니다.
 
 ## <a name="updating-data-by-data-type"></a>데이터 형식별 데이터 업데이트
 
-데이터 원본에 있는 필드의 값을 업데이트 해야 할 경우 업데이트 중 하나를 사용\<유형 > SQLServerResultSet 클래스의 메서드. 다음 예제에서는 [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) 메서드와 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 메서드를 함께 사용하여 데이터 원본의 데이터를 업데이트합니다.  
+데이터 원본의 필드 값을 업데이트 해야 하는 경우 SQLServerResultSet 클래스의 업데이트\<유형 > 메서드 중 하나를 사용 합니다. 다음 예제에서는 [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) 메서드와 [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) 메서드를 함께 사용하여 데이터 원본의 데이터를 업데이트합니다.  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -103,7 +102,7 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
-매개 변수가 있는 쿼리에 대 한 자세한 내용은 참조 하세요. [매개 변수를 사용 하 여 SQL 문을 사용 하 여](../../connect/jdbc/using-an-sql-statement-with-parameters.md)입니다.  
+매개 변수가 있는 쿼리에 대 한 자세한 내용은 [매개 변수와 함께 SQL 문 사용](../../connect/jdbc/using-an-sql-statement-with-parameters.md)을 참조 하세요.  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>저장 프로시저에 매개 변수 전달
 
@@ -114,7 +113,7 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
 > [!NOTE]  
 > 이 예제에서는 저장 프로시저 실행 결과가 들어 있는 결과 집합을 반환합니다.
 
-저장된 프로시저 및 입력된 매개 변수와 함께 JDBC 드라이버를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [저장 프로시저를 사용 하 여 입력 매개 변수를 사용 하 여](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)입니다.  
+저장 프로시저 및 입력 매개 변수와 함께 JDBC 드라이버를 사용 하는 방법에 대 한 자세한 내용은 [입력 매개 변수가 있는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)을 참조 하세요.  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>저장 프로시저에서 매개 변수 검색
 
@@ -125,7 +124,7 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
 > [!NOTE]  
 > 반환된 출력 매개 변수 외에도 저장 프로시저 실행 결과가 들어 있는 결과 집합이 반환될 수 있습니다.  
   
-저장된 프로시저 및 출력 매개 변수와 함께 JDBC 드라이버를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [출력 매개 변수를 사용 하 여 저장 프로시저를 사용 하 여](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)입니다.  
+저장 프로시저 및 출력 매개 변수와 함께 JDBC 드라이버를 사용 하는 방법에 대 한 자세한 내용은 [Output 매개 변수가 있는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)을 참조 하세요.  
 
 ## <a name="see-also"></a>참고 항목
 
