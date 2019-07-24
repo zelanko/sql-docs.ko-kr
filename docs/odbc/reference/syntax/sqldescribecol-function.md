@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: eddef353-83f3-4a3c-8f24-f9ed888890a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d179e7da0b53dbff66c8a3262f68fc4c3fa89df8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63982d87f0dbbe0c8ab1a540185e298d9943f630
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104792"
 ---
 # <a name="sqldescribecol-function"></a>SQLDescribeCol 함수
 **규칙**  
@@ -98,7 +97,7 @@ SQLRETURN SQLDescribeCol(
 ## <a name="diagnostics"></a>진단  
  때 **SQLDescribeCol** SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환 합니다. 호출 하 여 연관된 된 SQLSTATE 값을 가져올 수 있습니다 **SQLGetDiagRec** 사용 하 여를 *HandleType*호출의와 *처리할* 의 *StatementHandle*합니다. 다음 표에서 일반적으로 반환한 SQLSTATE 값 **SQLDescribeCol** ;이 함수의 컨텍스트에서 각각에 설명 하 고 "(DM)" 표기법 드라이버 관리자에 의해 반환 된 Sqlstate 설명은 앞에 옵니다. 각 SQLSTATE 값과 연결 된 반환 코드를 다른 설명이 없는 경우 SQL_ERROR를 됩니다.  
   
-|SQLSTATE|Error|Description|  
+|SQLSTATE|오류|설명|  
 |--------------|-----------|-----------------|  
 |01000|일반 경고|드라이버 관련 정보 메시지입니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  
 |01004|문자열 데이터 오른쪽 잘림|버퍼 \* *ColumnName* 열 이름이 잘렸습니다 하므로 전체 열 이름을 반환 하기에 충분히 없습니다. 잘리지 않은 열 이름의 길이에서 **NameLengthPtr*합니다. (함수는 SQL_SUCCESS_WITH_INFO를 반환합니다.)|  

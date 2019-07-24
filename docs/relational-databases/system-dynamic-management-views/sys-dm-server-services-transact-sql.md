@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c968c1c7445b89d0291faf97056417952e417dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090686"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62686229"
   SQL Server, 전체 텍스트 및 현재 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 SQL Server 에이전트 서비스에 대한 정보를 반환합니다. 이 동적 관리 뷰를 사용하여 이러한 서비스에 대한 상태 정보를 보고할 수 있습니다.  
   
  
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|이름을 합니다 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], 전체 텍스트 또는 SQL Server 에이전트 서비스입니다. null일 수 없습니다.|  
 |startup_type|**int**|서비스의 시작 모드를 나타냅니다. 가능한 값 및 해당 설명을 다음과 같습니다.<br /><br /> 0: 기타<br />1: 기타<br />2: 자동<br />3: 수동<br />4: 사용 안 함<br /><br /> Null을 허용합니다.|  
@@ -53,5 +52,5 @@ ms.locfileid: "62686229"
  서버에 대한 `VIEW SERVER STATE` 권한이 필요합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [sys.dm_server_registry &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
+ [sys.dm_server_registry &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-registry-transact-sql.md)  
   

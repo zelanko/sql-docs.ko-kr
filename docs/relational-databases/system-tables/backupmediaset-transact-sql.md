@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d9c18a93-cab9-4db8-ae09-c6bd8145ab8f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 831571621256a34611672ae6444379c375370f1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1dbaf429acb94334540f0e147eae2808e1655309
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119353"
 ---
 # <a name="backupmediaset-transact-sql"></a>backupmediaset(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "47679281"
   각 백업 미디어 세트에 대해 한 행을 포함합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
  
   
-|열 이름|데이터 형식|Description|  
+|열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |**media_set_id**|**int**|고유한 미디어 세트 ID 번호입니다. ID, 즉 기본 키입니다.|  
 |**media_uuid**|**uniqueidentifier**|미디어 세트의 UUID입니다. 모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 미디어 세트에는 UUID가 있습니다.<br /><br /> 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]그러나 미디어 세트에는 하나의 미디어 패밀리가 포함 된 경우는 **media_uuid** 열에는 NULL 일 수 있습니다 (**media_family_count** 는 1).|  
@@ -47,7 +46,7 @@ ms.locfileid: "47679281"
 |**is_compressed**|**bit**|백업의 압축 여부:<br /><br /> 0 = 압축되지 않음<br /><br /> 1 = 압축됨<br /><br /> 중에 **msdb** 업그레이드,이 값을 NULL로 설정 됩니다. 백업이 압축되지 않았음을 나타냅니다.|  
 |**is_encrypted**|**Bit**|백업의 암호화 여부입니다.<br /><br /> 0 = 암호화되지 않음<br /><br /> 1 = 암호화됨|  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  RESTORE VERIFYONLY FROM *backup_device* WITH LOADHISTORY 채웁니다의 열을 **backupmediaset** 미디어 세트 헤더의 적절 한 값이 있는 테이블입니다.  
   
  이 테이블에 다른 백업 및 기록 테이블의 행 수를 줄이려면 다음을 실행 합니다 [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) 저장 프로시저입니다.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ae733d560c227ccf282dfe4caed3935d9ffaebe
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096215"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +81,9 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @ts_col = ] 'timestamp_col'` 이름인 합니다 **타임 스탬프** 게시자의 열입니다. *timestamp_col* 됩니다 **sysname**, 기본값은 NULL입니다.  
   
-`[ @filter_clause = ] 'filter_clause'` 제한은 행 필터를 정의 하는 (WHERE) 절입니다. 제약 조건 절을 입력할 때는 키워드인 WHERE를 생략합니다. *filter_clause*됩니다 **nvarchar(4000)**, 기본값은 NULL입니다.  
+`[ @filter_clause = ] 'filter_clause'` 제한은 행 필터를 정의 하는 (WHERE) 절입니다. 제약 조건 절을 입력할 때는 키워드인 WHERE를 생략합니다. *filter_clause*됩니다 **nvarchar(4000)** , 기본값은 NULL입니다.  
   
-`[ @primary_key_bitmap = ] 'primary_key_bitmap'` 테이블의 기본 키 열의 비트 맵입니다. *primary_key_bitmap* 됩니다 **varbinary(4000)**, 기본값은 없습니다.  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'` 테이블의 기본 키 열의 비트 맵입니다. *primary_key_bitmap* 됩니다 **varbinary(4000)** , 기본값은 없습니다.  
   
 `[ @identity_support = ] identity_support` 사용 하도록 설정 하 고 지연 업데이트를 사용할 경우 자동 id 범위 처리를 사용 하지 않도록 설정 합니다. *identity_support* 되는 **비트**, 기본값은 **0**합니다. **0** id 임을 의미 지원 범위 **1** 자동 id 범위 처리를 사용 하도록 설정 합니다.  
   
@@ -97,7 +96,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>설명  
  **sp_addsynctriggers** 구독 초기화의 일부로 배포 에이전트에서 사용 됩니다. 일반적으로 사용자는 이 저장 프로시저를 실행하지 않지만 no-sync 구독을 수동으로 설정해야 하는 경우 유용할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
