@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 447d3964-b387-40f6-9189-71386774c29e
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 786aeeadec0e0b00bed087dec8c7306319e5a017
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3e7b86c8ac990c7add4856e2c00e43550903f55a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034828"
 ---
 # <a name="index-element-dta"></a>Index 요소(DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

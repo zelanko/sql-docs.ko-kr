@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: da999781-f0ff-47eb-ba7a-09c0ed8f61ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a491f61544e89883a46632aca17c80d8f883dee8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e6b68d6e5376bdf24efb09c50e3df63ed5810373
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949932"
 ---
 # <a name="review-the-replay-results"></a>재생 결과 검토
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

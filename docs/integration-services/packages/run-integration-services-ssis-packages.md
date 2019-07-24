@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c5fecc23-6f04-4fb2-9a29-01492ea41404
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fb256646e7bf71a2829cfa35ef70184d0b267748
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5046708ffd705ca937b89a7780e47cd62cdc3f97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65805258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913701"
 ---
 # <a name="run-integration-services-ssis-packages"></a>Integration Services(SSIS) 패키지 실행
 

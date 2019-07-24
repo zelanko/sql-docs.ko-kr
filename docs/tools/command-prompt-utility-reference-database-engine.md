@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: 48364bd9-6ea7-45e9-a332-acf3d81bbfae
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 5e83792a7d982dedf41e525fc7801fb76f1db7d5
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 8fdcb3b307f525ff9eda14006e6fd4f6378f418c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010426"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>SQL 명령 프롬프트 유틸리티 (데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   명령 프롬프트 유틸리티를 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 작업을 스크립트로 작성할 수 있습니다. 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 제공하는 다양한 명령 프롬프트 유틸리티를 보여 줍니다.  
 
-에 대 한 정보에 대 한 합니다 *주* SQL gui 및 명령줄 도구 참조 [SQL 도구 개요](overview-sql-tools.md)합니다.
+*기본* sql gui 및 명령줄 도구에 대 한 자세한 내용은 [sql 도구 개요](overview-sql-tools.md)를 참조 하세요.
 
   
 |**유틸리티**|**설명**|**설치 위치**|  
@@ -69,6 +68,6 @@ ms.locfileid: "67730111"
  [복제 로그 판독기 에이전트](../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [복제 병합 에이전트](../relational-databases/replication/agents/replication-merge-agent.md)   
  [복제 큐 판독기 에이전트](../relational-databases/replication/agents/replication-queue-reader-agent.md)   
- [복제 스냅숏 에이전트](../relational-databases/replication/agents/replication-snapshot-agent.md)  
+ [Replication Snapshot Agent](../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
   
