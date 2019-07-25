@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 043e1e570efc42988dcf6b0fb66098cbcd7fc9ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65713319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024874"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "65713319"
 파티션 함수의 파티션을 파일 그룹 집합으로 매핑하는 데이터베이스 개체입니다. 별개의 파일 그룹에 파티션을 넣는 주된 이유는 파티션 백업 작업을 독립적으로 수행하기 위해서입니다. 이는 개별 파일 그룹에 대해 백업을 수행할 수 있기 때문입니다.  
   
 ### <a name="partitioning-column"></a>분할 열  
-파티션 함수가 테이블이나 인덱스를 분할하는 데 사용하는 테이블 또는 인덱스의 열입니다. 파티션 함수에 참여하는 계산 열은 명시적으로 PERSISTED로 표시되어야 합니다. **timestamp**를 제외하고 인덱스 열로 사용할 수 있는 모든 데이터 형식을 분할 열로 사용할 수 있습니다. **ntext**, **text**, **image**, **xml**, **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 데이터 형식은 지정할 수 없습니다. 또한 Microsoft .NET Framework CLR(공용 언어 런타임) 사용자 정의 유형 및 별칭 데이터 형식 열은 지정할 수 없습니다.  
+파티션 함수가 테이블이나 인덱스를 분할하는 데 사용하는 테이블 또는 인덱스의 열입니다. 파티션 함수에 참여하는 계산 열은 명시적으로 PERSISTED로 표시되어야 합니다. **timestamp**를 제외하고 인덱스 열로 사용할 수 있는 모든 데이터 형식을 분할 열로 사용할 수 있습니다. **ntext**, **text**, **image**, **xml**, **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 데이터 형식은 지정할 수 없습니다. 또한 Microsoft .NET Framework CLR(공용 언어 런타임) 사용자 정의 유형 및 별칭 데이터 형식 열은 지정할 수 없습니다.  
   
 ### <a name="aligned-index"></a>정렬된 인덱스  
 해당 테이블과 동일한 파티션 구성표를 기반으로 작성되는 인덱스입니다. 테이블과 인덱스가 정렬되면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이블과 인덱스의 파티션 구조를 유지하면서 신속하고 효율적으로 파티션을 전환할 수 있습니다. 인덱스가 기본 테이블에 맞게 정렬되기 위해 반드시 같은 이름의 파티션 함수를 사용할 필요는 없습니다. 그러나 인덱스 및 기본 테이블의 파티션 함수는 다음과 같은 측면에서 기본적으로 동일해야 합니다.

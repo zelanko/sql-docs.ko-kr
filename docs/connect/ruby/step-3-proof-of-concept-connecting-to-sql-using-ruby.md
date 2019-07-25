@@ -10,21 +10,20 @@ ms.topic: conceptual
 ms.assetid: cac20b18-0a6d-4243-bbda-a5d1b9476441
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 20b63a0ffbe12f43ff943b9588e8392a90cff7e0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 9724fb48f6ae896d9026bfec63056070e2180a8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992492"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-ruby"></a>3단계: Ruby를 사용하여 SQL과 연결된 개념 증명
 
-이 예제에서는 개념만 고려 되어야 합니다.  샘플 코드를 이해 하기 쉽도록 간소화 되었습니다 및 Microsoft에서 권장 하는 모범 사례를 반드시 나타내지는지 않습니다.  
+이 예는 개념 증명 으로만 간주 해야 합니다.  이 샘플 코드는 명확 하 게 하기 위해 단순화 되었으며 Microsoft에서 권장 하는 모범 사례를 나타내지는 않습니다.  
   
 ## <a name="step-1--connect"></a>1 단계: 연결  
   
-합니다 [tinytds:: Client](https://github.com/rails-sqlserver/tiny_tds) 함수는 SQL Database에 연결 하는 데 사용 됩니다.  
+[TinyTDS:: Client](https://github.com/rails-sqlserver/tiny_tds) 함수를 사용 하 여 SQL Database에 연결 합니다.  
   
 ``` ruby
     require 'tiny_tds'  
@@ -35,11 +34,11 @@ ms.locfileid: "66800810"
   
 ## <a name="step-2--execute-a-query"></a>2단계: 쿼리 실행  
   
-복사 하 고 빈 파일에 다음 코드를 붙여넣습니다. 이름을 test.rb입니다. 다음 명령 프롬프트에서 다음 명령을 입력 하 여 실행 합니다.  
+다음 코드를 복사 하 여 빈 파일에 붙여 넣습니다. It 테스트를 호출 합니다. 그런 다음 명령 프롬프트에서 다음 명령을 입력 하 여 실행 합니다.  
   
     ruby test.rb  
   
-코드 샘플에는 [tinytds:: Result](https://github.com/rails-sqlserver/tiny_tds) 함수 로부터 결과 집합 쿼리를 SQL Database에 대해 검색 하는 합니다. 이 함수는 쿼리를 허용 하 고 결과 집합을 반환 합니다. 결과 집합을 사용 하 여 반복 되 [result.each do | 행 |](https://github.com/rails-sqlserver/tiny_tds)합니다.  
+코드 샘플에서 [TinyTds:: result](https://github.com/rails-sqlserver/tiny_tds) 함수는 SQL Database에 대 한 쿼리에서 결과 집합을 검색 하는 데 사용 됩니다. 이 함수는 쿼리를 허용 하 고 결과 집합을 반환 합니다. 결과 집합은 결과를 사용 하 여 반복 됩니다 [. 각 작업은 | row |](https://github.com/rails-sqlserver/tiny_tds)입니다.  
   
 ``` ruby 
     require 'tiny_tds'    
@@ -55,11 +54,11 @@ ms.locfileid: "66800810"
   
 ## <a name="step-3--insert-a-row"></a>3 단계: 행 삽입  
   
-이 예제에서는 실행 하는 방법에에서는 [삽입](../../t-sql/statements/insert-transact-sql.md) 에서 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 전달 하는 문을 [SQL 주입](../../relational-databases/tables/primary-and-foreign-key-constraints.md) 값입니다.    
+이 예제에서는 [SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [삽입](../../t-sql/statements/insert-transact-sql.md) 값 으로부터 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 실행 하는 방법을 확인 합니다.    
   
-TinyTDS와 Azure 함께 사용 하려면 것이 좋습니다 여러 실행 `SET` 문을 현재 세션에서 특정 정보를 처리 하는 방법을 변경 합니다. 권장 `SET` 문을 코드 샘플에 제공 됩니다. 예를 들어 `SET ANSI_NULL_DFLT_ON` 열의 null 허용 여부 상태가 명시적으로 명시 되지 않은 경우에 null 값을 허용 하기 위해 만든 새 열을 사용 하면 됩니다.  
+Azure에서 TinyTDS를 사용 하려면 여러 `SET` 문을 실행 하 여 현재 세션에서 특정 정보를 처리 하는 방법을 변경 하는 것이 좋습니다. 권장 `SET` 문은 코드 샘플에 제공 됩니다. 예를 들어 `SET ANSI_NULL_DFLT_ON` 는 열의 null 허용 여부 상태가 명시적으로 명시 되지 않은 경우에도 새 열이 null 값을 허용 하도록 허용 합니다.  
   
-Microsoft SQL Server에 맞게 [날짜/시간](../../t-sql/data-types/datetime-transact-sql.md) 형식에 사용 합니다 [strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) 해당 날짜/시간 형식으로 캐스팅 함수입니다.  
+Microsoft SQL Server [datetime](../../t-sql/data-types/datetime-transact-sql.md) 형식에 맞추려면 [strftime](https://ruby-doc.org/core-2.2.0/Time.html#method-i-strftime) 함수를 사용 하 여 해당 날짜/시간 형식으로 캐스팅 합니다.  
   
 ``` ruby
     require 'tiny_tds'  

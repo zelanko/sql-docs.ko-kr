@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7bd89ddd-0403-4930-a5eb-3c78718533d4
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 405a8d9d63db1f295e4a4fd95ede4c5ff1950877
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a79b8399a6b435d4ed8b391b040e4800f1f50405
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988439"
 ---
 # <a name="configure-read-only-routing-for-an-always-on-availability-group"></a>Always On 가용성 그룹에 대한 읽기 전용 라우팅 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ ms.locfileid: "66793654"
   
     -   보조 역할에 대한 읽기 전용 라우팅을 구성하려면 ADD REPLICA 또는 MODIFY REPLICA WITH 절에서 다음과 같이 SECONDARY_ROLE 옵션을 지정합니다.  
   
-         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**')**  
+         SECONDARY_ROLE **(** READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **')**  
   
          읽기 전용 라우팅 URL의 매개 변수는 다음과 같습니다.  
   
@@ -95,7 +94,7 @@ ms.locfileid: "66793654"
   
     -   주 역할에 대한 읽기 전용 라우팅을 구성하려면 ADD REPLICA 또는 MODIFY REPLICA WITH 절에서 다음과 같이 PRIMARY_ROLE 옵션을 지정합니다.  
   
-         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('**_server_**'** [ **,**...*n* ] **))**  
+         PRIMARY_ROLE **(** READ_ONLY_ROUTING_LIST **=('** _server_ **'** [ **,** ...*n* ] **))**  
   
          여기서 *server* 는 가용성 그룹의 읽기 전용 보조 복제본을 호스트하는 서버 인스턴스를 식별합니다.  
   
@@ -165,13 +164,13 @@ GO
   
 2.  가용성 그룹에 가용성 복제본을 추가하는 경우 **New-SqlAvailabilityReplica** cmdlet을 사용합니다. 기존 가용성 복제본을 수정하는 경우 **Set-SqlAvailabilityReplica** cmdlet을 사용합니다. 관련 매개 변수는 다음과 같습니다.  
   
-    -   보조 역할에 대한 읽기 전용 라우팅을 구성하려면 **ReadonlyRoutingConnectionUrl"**_url_**"** 매개 변수입니다.  
+    -   보조 역할에 대한 읽기 전용 라우팅을 구성하려면 **ReadonlyRoutingConnectionUrl"** _url_ **"** 매개 변수입니다.  
   
          여기서 *url* 은 읽기 전용 연결을 위해 복제본으로 라우팅할 때 사용할 연결 FQDN(정규화된 도메인 이름) 및 포트입니다. 예를 들어  `-ReadonlyRoutingConnectionUrl "TCP://DBSERVER8.manufacturing.Adventure-Works.com:7024"`  
   
          자세한 내용은 [Always On에 대한 read_only_routing_url 계산](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-Always%20On.aspx)을 참조하세요.  
   
-    -   주 역할에 대한 연결 액세스를 구성하려면 **ReadonlyRoutingList"**_server_**"** [ **,**...*n* ]를 지정합니다. 여기서 *server* 는 가용성 그룹의 읽기 전용 보조 복제본을 호스트하는 서버 인스턴스를 식별합니다. 예를 들어  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
+    -   주 역할에 대한 연결 액세스를 구성하려면 **ReadonlyRoutingList"** _server_ **"** [ **,** ...*n* ]를 지정합니다. 여기서 *server* 는 가용성 그룹의 읽기 전용 보조 복제본을 호스트하는 서버 인스턴스를 식별합니다. 예를 들어  `-ReadOnlyRoutingList "SecondaryServer","PrimaryServer"`  
   
         > [!NOTE]  
         >  복제본의 읽기 전용 라우팅 목록을 구성하기 전에 읽기 전용 라우팅 URL을 설정해야 합니다.  

@@ -10,35 +10,35 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: yitam
 ms.author: v-yitam
-manager: mbarwin
-ms.openlocfilehash: 35626c192c3d74ad0201cee3c5e97adbce92a3aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 76c314159faf15e63bf77b17a8a45abf217b205c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669698"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265147"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdosqlsrv-driver"></a>10진수 문자열 및 금액 값 형식 지정(PDO_SQLSRV 드라이버)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-정확도 유지 하기 위해 [10 진수 또는 숫자 형식](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) 정확한 전체 자릿수 및 확장을 사용 하 여 문자열로 항상 페치됩니다. 모든 값이 1 보다 작은 경우 앞에 오는 0이 없습니다. 패턴은 4 같음 고정 소수 10 진수 필드는 그대로 money 및 smallmoney 필드와 같습니다.
+정확도를 유지 하기 위해 [decimal 또는 numeric 형식은](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql) 항상 정확한 전체 자릿수 및 배율이 포함 된 문자열로 인출 됩니다. 값이 1 보다 작은 경우 앞에 0이 없습니다. Money 및 smallmoney 필드는 고정 소수 자릿수가 4 인 10 진수 필드 이므로 동일 합니다.
 
-## <a name="add-leading-zeroes-if-missing"></a>누락 된 경우 앞에 오는 0을 추가 합니다.
-버전 5.6.0, 연결 또는 문 특성을 사용 하 여 시작 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 10 진수 문자열을 서식을 적용할 수 있습니다. 이 특성은 부울 값 (true 또는 false) 및 인출된 결과의 소수 또는 숫자 값의 서식 지정에 적용 합니다. 즉,이 특성에 삽입 또는 업데이트 등과 같은 다른 작업에 영향을 주지 않습니다.
+## <a name="add-leading-zeroes-if-missing"></a>누락 된 경우 선행 0 추가
+5\.6.0 버전부터 connection 또는 statement 특성 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 을 사용 하면 10 진수 문자열의 서식을 지정할 수 있습니다. 이 특성은 부울 값 (true 또는 false)을 예상 하며 인출 된 결과에서 decimal 또는 numeric 값의 형식에만 영향을 줍니다. 즉,이 특성은 삽입 또는 업데이트와 같은 다른 작업에는 영향을 주지 않습니다.
 
-기본적으로 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS`는 **false**입니다. 이면 10 진수 문자열에 선행 0 true로 설정은 1 보다 작은 10 진수 값에 대 한 추가 됩니다.
+기본적으로 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS`는 **false**입니다. True로 설정 하면 1 보다 작은 10 진수 값에 대해 선행 0에서 10 진수 문자열이 추가 됩니다.
 
-## <a name="configure-number-of-decimal-places"></a>소수 자릿수를 구성 합니다.
-사용 하 여 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 켜지 면 다른 연결 또는 명령문 특성 `PDO::SQLSRV_ATTR_DECIMAL_PLACES`, money 및 smallmoney 데이터를 표시할 때 소수 자릿수의 수를 구성할 수 있습니다. 정수 값의 범위를 받아들이는지 [0, 4], 표시 될 때 반올림 발생할 수 있습니다. 그러나 기본 비용 데이터를 그대로 유지 됩니다.
+## <a name="configure-number-of-decimal-places"></a>소수 자릿수 구성
+가 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` on으로 설정 되 면 다른 연결 또는 문 `PDO::SQLSRV_ATTR_DECIMAL_PLACES`특성인를 사용 하 여 money 및 smallmoney 데이터를 표시할 때 소수 자릿수를 구성할 수 있습니다. 이 값은 [0, 4] 범위의 정수 값을 허용 하 고, 반올림은 표시 될 때 발생할 수 있습니다. 그러나 기본 money 데이터는 동일 하 게 유지 됩니다.
 
-문 특성에는 항상 해당 연결 설정을 재정의 합니다. 합니다 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 옵션 **만** money 데이터에 영향을 줍니다 및 `PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 설정 해야 true로 합니다. 그렇지 않은 경우 서식 지정 꺼져에 관계 없이 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 설정 합니다.
+문 특성은 항상 해당 하는 연결 설정을 재정의 합니다. 옵션 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 은**money 데이터** 에만영향을주며true로설정해야합니다.`PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 그렇지 않으면 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 설정에 관계 없이 형식이 해제 됩니다.
 
 > [!NOTE]
-> 비용 또는 smallmoney 필드 확장 4가 설정 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 임의의 음수 또는 4를 무시할지 보다 큰 값입니다. 하지 서식이 지정 된 비용 데이터 계산에 대 한 입력으로 사용 하는 것이 좋습니다.
+> Money 또는 smallmoney 필드에는 소수 자릿수 4가 `PDO::SQLSRV_ATTR_DECIMAL_PLACES` 있기 때문에를 음수로 설정 하거나 4 보다 큰 값은 무시 됩니다. 형식이 지정 된 money 데이터를 계산에 대 한 입력으로 사용 하지 않는 것이 좋습니다.
 
-### <a name="to-set-the-connection-attributes"></a>연결 속성을 설정 하려면
+### <a name="to-set-the-connection-attributes"></a>연결 특성을 설정 하려면
 
--   연결 지점에서 특성을 설정 합니다.
+-   연결 지점에서 특성 설정:
 
     ```php
     $attrs = array(PDO::SQLSRV_ATTR_FORMAT_DECIMALS => true,
@@ -47,7 +47,7 @@ ms.locfileid: "62669698"
     $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password, $attrs);
     ```
 
--   Post 연결 특성을 설정 합니다.
+-   연결 게시 특성 설정:
 
     ```php
     $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password);
@@ -55,8 +55,8 @@ ms.locfileid: "62669698"
     $conn->setAttribute(PDO::SQLSRV_ATTR_DECIMAL_PLACES, 2);
     ```
 
-## <a name="example---format-money-data"></a>예제-money 데이터 형식
-다음 예제에서는 사용 하 여 비용 데이터를 인출 하는 방법을 보여 줍니다 [pdostatement:: Bindcolumn](../../connect/php/pdostatement-bindcolumn.md):
+## <a name="example---format-money-data"></a>예제-money 데이터 형식 지정
+다음 예제에서는 [PDOStatement:: bindColumn](../../connect/php/pdostatement-bindcolumn.md)을 사용 하 여 money 데이터를 인출 하는 방법을 보여 줍니다.
 
 ```php
 <?php
@@ -80,8 +80,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---override-connection-attributes"></a>예제-재정의 연결 특성
-다음 예제에는 연결 특성을 재정의 하는 방법을 보여 줍니다.
+## <a name="example---override-connection-attributes"></a>예-연결 특성 재정의
+다음 예에서는 연결 특성을 재정의 하는 방법을 보여 줍니다.
 
 ```php
 <?php

@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8f4c34c1b6b945c28193a549a06546ec952a5d9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 87faa60456dd6d03f23d45346ab0dd103dc07c82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780369"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992511"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>3단계: pyodbc를 사용하여 SQL에 연결하는 개념 증명
 
-이 예제에서는 개념만 고려 되어야 합니다.  샘플 코드를 이해 하기 쉽도록 간소화 되었습니다 및 Microsoft에서 권장 하는 모범 사례를 반드시 나타내지는지 않습니다.  
+이 예는 개념 증명 으로만 간주 해야 합니다.  이 샘플 코드는 명확 하 게 하기 위해 단순화 되었으며 Microsoft에서 권장 하는 모범 사례를 나타내지는 않습니다.  
 
-**아래 샘플 스크립트를 실행** test.py, 라는 파일을 만들고 진행 하면서 각 코드 조각을 추가 합니다. 
+**아래 샘플 스크립트 실행**  Test.py 라는 파일을 만들고 각 코드 조각을 이동 하는 동안 추가 합니다. 
 
 ```
 > python test.py
@@ -46,9 +45,9 @@ cursor = cnxn.cursor()
 ```  
   
   
-## <a name="step-2--execute-query"></a>2 단계: 쿼리를 실행 합니다.  
+## <a name="step-2--execute-query"></a>2 단계: 쿼리 실행  
   
-결과 SQL Database에 대해 쿼리에서 집합을 검색 하는 cursor.executefunction은 사용할 수 있습니다. 이 함수에서 기본적으로 모든 쿼리를 허용 하 고 cursor.fetchone () 사용 하 여 반복 될 수 있는 결과 집합을 반환 합니다.
+커서. executefunction을 사용 하 여 SQL Database에 대 한 쿼리에서 결과 집합을 검색할 수 있습니다. 이 함수는 기본적으로 모든 쿼리를 허용 하 고 커서를 사용 하 여 반복 될 수 있는 결과 집합을 반환 합니다. fetchone ()
   
   
 ```python
@@ -63,7 +62,7 @@ while row:
   
 ## <a name="step-3--insert-a-row"></a>3 단계: 행 삽입  
   
-이 예제에서는 실행 하는 방법에에서는 [삽입](../../../t-sql/statements/insert-transact-sql.md) 에서 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 전달 하는 문을 [SQL 주입](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) 값입니다.    
+이 예제에서는 [SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) [삽입](../../../t-sql/statements/insert-transact-sql.md) 값 으로부터 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 실행 하는 방법을 확인 합니다.    
   
   
 ```python
@@ -79,4 +78,4 @@ while row:
   `      
   ## <a name="next-steps"></a>다음 단계  
   
-자세한 내용은 참조는 [Python 개발자 센터](https://azure.microsoft.com/develop/python/)합니다.
+자세한 내용은 [Python 개발자 센터](https://azure.microsoft.com/develop/python/)를 참조 하세요.

@@ -13,23 +13,22 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5b8f304d7681d3df4ae4c6f065a6128beb5822d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66769401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995114"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB 날짜 및 시간 기능 향상을 위한 데이터 형식 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  이 문서에서는 OLE DB (OLE DB Driver for SQL Server)에 대 한 정보 지 원하는 형식을 제공 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 날짜/시간 데이터 형식입니다.  
+  이 문서에서는 날짜/시간 데이터 형식을 지 원하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB (SQL Server OLE DB Driver) 유형에 대 한 정보를 제공 합니다.  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>행 집합 및 매개 변수의 데이터 형식 매핑  
- OLE DB는 새 서버 유형을 지원 하기 위해 두 개의 새 데이터 형식을 제공 합니다: DBTYPE_DBTIME2와 DBTYPE_DBTIMESTAMPOFFSET 합니다. 다음 표에서는 전체 서버 유형 매핑을 보여 줍니다.  
+ OLE DB는 새 서버 유형 (DBTYPE_DBTIME2 및 DBTYPE_DBTIMESTAMPOFFSET)을 지 원하는 두 가지 새 데이터 형식을 제공 합니다. 다음 표에서는 전체 서버 유형 매핑을 보여 줍니다.  
   
 |[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식|OLE DB 데이터 형식|값|  
 |-----------------------------------------|----------------------|-----------|  
@@ -61,7 +60,7 @@ ms.locfileid: "66769401"
   
  빈 문자열은 유효한 날짜/시간 리터럴이 아니며 NULL 값을 나타내지 않습니다. 빈 문자열을 날짜/시간 값으로 변환하려고 하면 SQLState 22018 및 "캐스트 사양의 문자 값이 올바르지 않습니다."라는 메시지와 함께 오류가 발생합니다.  
   
-## <a name="data-formats-data-structures"></a>데이터 구조 데이터 형식:  
+## <a name="data-formats-data-structures"></a>데이터 형식: 데이터 구조  
  아래에 설명된 OLE DB별 구조에서 OLE DB는 다음 제약 조건을 준수합니다. 이러한 제약 조건은 일반 달력을 기준으로 합니다.  
   
 -   월 범위는 1에서 12까지입니다.  
@@ -161,7 +160,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- 사용 하는 응용 프로그램 SQL Server 용 OLE DB 드라이버 마이그레이션할 **sql_variant** 의 제한 된 정밀도에 의존 하 고 **datetime** 를사용하도록기본스키마를업데이트하는경우업데이트해야**datetime2** 대신 **날짜/시간**합니다.  
+ **Sql_variant** 를 사용 하 고 **datetime** 의 제한 된 정밀도에 의존 하는 SQL Server OLE DB 드라이버로 마이그레이션하는 응용 프로그램은 기본 스키마가 **datetime**이 아닌 **datetime2** 를 사용 하도록 업데이트 된 경우 업데이트 되어야 합니다.  
   
  SSVARIANT의 액세스 매크로도 다음과 같은 추가를 통해 확장되었습니다.  
   
@@ -173,16 +172,16 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable의 데이터 형식 매핑  
- Itabledefinition:: Createtable 사용 되는 DBCOLUMNDESC 구조를 사용 하 여 다음 형식 매핑이 사용 됩니다.  
+ 다음 형식 매핑은 ITableDefinition:: CreateTable에서 사용 되는 DBCOLUMNDESC 구조체와 함께 사용 됩니다.  
   
-|OLE DB 데이터 형식 (*wType*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식|참고|  
+|OLE DB 데이터 형식 (*Wtype*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터 형식|참고|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|날짜||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|OLE DB 드라이버 SQL Server에 대 한 검사는 DBCOLUMDESC *bScale* 초 소수 부분 자릿수를 결정 하는 멤버입니다.|  
-|DBTYPE_DBTIME2|**time**(p)|OLE DB 드라이버 SQL Server에 대 한 검사는 DBCOLUMDESC *bScale* 초 소수 부분 자릿수를 결정 하는 멤버입니다.|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|OLE DB 드라이버 SQL Server에 대 한 검사는 DBCOLUMDESC *bScale* 초 소수 부분 자릿수를 결정 하는 멤버입니다.|  
+|DBTYPE_DBTIMESTAMP|**datetime2**(p)|SQL Server에 대 한 OLE DB 드라이버는 DBCOLUMDESC *Bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
+|DBTYPE_DBTIME2|**time**(p)|SQL Server에 대 한 OLE DB 드라이버는 DBCOLUMDESC *Bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|SQL Server에 대 한 OLE DB 드라이버는 DBCOLUMDESC *Bscale* 멤버를 검사 하 여 초 소수 부분 자릿수를 확인 합니다.|  
   
- 응용 프로그램에 DBTYPE_DBTIMESTAMP를 지정 하는 경우 *wType*에 대 한 매핑을 재정의할 수 있습니다 **datetime2** 에 형식 이름을 제공 하 여 *pwszTypeName*. 하는 경우 **날짜/시간** 를 지정 하면 *bScale* 3 이어야 합니다. 하는 경우 **smalldatetime** 를 지정 하면 *bScale* 0 이어야 합니다. 하는 경우 *bScale* 와 일치 하지 않습니다 *wType* 하 고 *pwszTypeName*, DB_E_BADSCALE이 반환 됩니다.  
+ 응용 프로그램에서  *DBTYPE_DBTIMESTAMP*를 지정 하는 경우 *pwszTypeName*에 형식 이름을 제공 하 여 **datetime2** 로의 매핑을 재정의할 수 있습니다. **Datetime** 을 지정 하는 경우 *bscale* 은 3 이어야 합니다. **Smalldatetime** 을 지정 하면 *bscale* 은 0 이어야 합니다. *Bscale* 이 *Wtype* 및 *pwszTypeName*와 일치 하지 않으면 DB_E_BADSCALE이 반환 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [날짜 및 시간 기능 향상&#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

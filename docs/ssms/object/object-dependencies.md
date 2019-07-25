@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: c63d1160-3f3d-45df-99be-6fe081125fb5
 author: markingmyname
 ms.author: maghan
-manager: jroth
-ms.openlocfilehash: f5b0e56972485cb14597dfdffc4a1e9e53935105
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 78be395cccceff6c01152b38ddf9aa7008a273c8
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67689972"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264087"
 ---
 # <a name="object-dependencies"></a>개체 종속성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,10 +28,10 @@ ms.locfileid: "67689972"
 선택한 개체를 변경하거나 삭제하기 전에 개체의 종속성을 파악하려면 이 대화 상자를 사용하십시오.  
   
 ## <a name="uielement-list"></a>UIElement 목록  
-**** _\<선택한 개체>에_ 종속된 개체 표시  
+_\<선택한 개체>에_ **종속된 개체 표시**  
 이 단추를 클릭하면 종속성이 추적되고 선택한 개체에 종속된 개체의 목록이 표시됩니다.  
   
-**** _\<선택한 개체>에_ **종속된 개체**  
+_\<선택한 개체>에_ **종속된** **개체**  
 이 단추를 클릭하면 종속성이 추적되고 선택한 개체가 종속된 개체의 목록이 표시됩니다.  
   
 **종속성**  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b555568ae93936c1f8659b52ba6bb731e8398e0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5e9d6902733ea8a9cca91b4bd33adcb66708672
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956470"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 드라이버의 국가별 기능
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66781654"
 ## <a name="handling-of-character-data"></a>문자 데이터 처리  
  Java 문자 데이터는 기본적으로 유니코드로 처리하며 Java **문자열** 개체는 유니코드 문자 데이터를 나타냅니다. JDBC 드라이버에서 이 규칙의 유일한 예외는 ASCII 스트림 getter 및 setter 메서드입니다. 이들 메서드는 암시적으로 잘 알려진 단일 코드 페이지(ASCII)를 전제로 한 바이트 스트림을 사용하기 때문에 특수한 경우에 해당합니다.  
   
- 또한 JDBC 드라이버를 제공 합니다 **sendStringParametersAsUnicode** 연결 문자열 속성입니다. 이 속성을 사용하여 문자 데이터의 준비된 매개 변수를 유니코드 대신 ASCII 또는 MBCS(멀티바이트 문자 집합)로 보내도록 지정할 수 있습니다. 에 대 한 자세한 내용은 합니다 **sendStringParametersAsUnicode** 연결 문자열 속성을 참조 하세요 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)합니다.  
+ 또한 JDBC 드라이버는 **sendStringParametersAsUnicode** 연결 문자열 속성을 제공 합니다. 이 속성을 사용하여 문자 데이터의 준비된 매개 변수를 유니코드 대신 ASCII 또는 MBCS(멀티바이트 문자 집합)로 보내도록 지정할 수 있습니다. **SendStringParametersAsUnicode** 연결 문자열 속성에 대 한 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조 하세요.  
   
 ### <a name="driver-incoming-conversions"></a>드라이버의 들어오는 데이터 변환  
  서버에서 들어오는 유니코드 텍스트 데이터는 유니코드로 직접 전달되므로 변환할 필요가 없습니다. 서버에서 들어오는 데이터 중 유니코드가 아닌 데이터는 데이터베이스 또는 열 수준에서 데이터의 코드 페이지에서 유니코드로 변환됩니다. JDBC 드라이버는 이러한 변환을 수행하기 위해 JVM(Java Virtual Machine) 변환 루틴을 사용합니다. 이러한 변환은 형식화된 모든 문자열 및 문자 스트림 getter 메서드에서 수행됩니다.  
@@ -47,7 +46,7 @@ ms.locfileid: "66781654"
  반면 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 setString, setCharacterStream 및 setClob 메서드와 같은 비국가별 문자 API 메서드는 **sendStringParametersAsUnicode** 속성이 “true”로 설정(기본값)된 경우에만 해당 값을 유니코드로 서버에 전송합니다.  
   
 ## <a name="non-unicode-parameters"></a>유니코드가 아닌 매개 변수  
- 최적의 성능을 위한 **CHAR**, **VARCHAR** 하거나 **LONGVARCHAR** 유니코드가 아닌 매개 변수의 입력을 설정 합니다 **sendStringParametersAsUnicode** 연결 속성을 "false" 문자열 및 비 국가별 문자 메서드를 사용 합니다.  
+ 유니코드가 아닌 매개 변수의 **CHAR**, **VARCHAR** 또는 **sendStringParametersAsUnicode** 속성을 사용 하는 최적의 성능을 위해, 연결 문자열 속성을 "false"로 설정 하 고 국가별 문자 메서드가 아닌 메서드를 사용 합니다 **.**  
   
 ## <a name="formatting-issues"></a>서식 지정 문제  
  날짜, 시간 및 통화의 경우 지역화된 데이터에 관한 모든 서식 지정은 Locale 개체와 **Date**, **Calendar** 및 **Number** 데이터 형식의 다양한 서식 지정 메서드를 사용하여 Java 언어 수준에서 수행됩니다. 드문 경우이기는 하지만 JDBC 드라이버가 지역화된 형식으로 로캘 구분 데이터를 함께 전달해야 하는 경우 기본 JVM 로캘과 함께 적절한 포맷터가 사용됩니다.  

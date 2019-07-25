@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12fbfd6c6e6ba6e6a3bb015aed5375553fcd735f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8e5d686d0028b871fa163b3e1e4a1c71647ede60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129796"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Windows 동기화 관리자를 사용하여 구독 동기화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "54131903"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 동기화 관리자를 통한 끌어오기 구독 동기화가 가능하도록 설정하려면  
   
-1.  **구독 속성 - \<구독자>: \<SubscriptionDatabase>** 대화 상자의 **일반** 페이지에서 **Windows 동기화 관리자 사용** 옵션에 대한 **사용** 값을 선택합니다.  
+1.  **구독 속성 - \<구독자>: \<SubscriptionDatabase>** 대화 상자의 일반 페이지에서 **Windows 동기화 관리자 사용** 옵션에 대한 **사용** 값을 선택합니다.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

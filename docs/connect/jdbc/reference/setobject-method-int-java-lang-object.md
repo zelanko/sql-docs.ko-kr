@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 61f19faa-3006-4a1c-974c-55951e3b3000
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aaf2b256329c66b6169593f71f4e85439aff21ab
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e4ab210a30080472a777d151695a04ec49ff1041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973385"
 ---
 # <a name="setobject-method-int-javalangobject"></a>setObject 메서드(int, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,15 +56,15 @@ public final void setObject(int index,
   
 -   SQLServerPreparedStatement 클래스 또는 SQLServerCallableStatement 클래스의 setNull 메서드  
   
--   합니다 [registerOutParameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) SQLServerCallableStatement 클래스의 메서드  
+-   SQLServerCallableStatement 클래스의 [Registeroutparameter](../../../connect/jdbc/reference/registeroutparameter-method-sqlservercallablestatement.md) 메서드  
   
  이러한 경우 매개 변수 형식은 자동으로 설정됩니다. 애플리케이션에서 obj 값 NULL을 사용하여 이 setObject 메서드를 호출할 경우 드라이버에서는 매개 변수 형식을 이전에 호출한 메서드에 의해 설정된 형식으로 가정합니다.  
   
  obj 값이 NULL이고 해당 매개 변수에 대한 형식 정보를 판별할 수 없는 경우 이 setObject 메서드는 지정된 매개 변수를 데이터베이스로 보내기 전에 CHAR로 변환합니다.  
   
- 부터는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC 드라이버 3.0에서는이 메서드는 수정자를 **sendTimeAsDatetime** 연결 속성 ([연결 속성 설정](../../../connect/jdbc/setting-the-connection-properties.md)) 및 [ SQLServerDataSource.setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)합니다.  
+ JDBC 드라이버 3.0부터이 메서드의 동작은 **sendTimeAsDatetime** connection 속성 ([연결 속성 설정](../../../connect/jdbc/setting-the-connection-properties.md))에 의해 수정 됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [SQLServerDataSource. setSendTimeAsDatetime](../../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md).  
   
- 자세한 내용은 [어떻게 구성 java.sql.Time 값을 서버로 전송 됩니다](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)합니다.  
+ 자세한 내용은 [java. 시간 값을 서버로 보내는 방법 구성](../../../connect/jdbc/configuring-how-java-sql-time-values-are-sent-to-the-server.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [setObject 메서드&#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setobject-method-sqlserverpreparedstatement.md)   

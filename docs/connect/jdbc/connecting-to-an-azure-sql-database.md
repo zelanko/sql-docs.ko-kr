@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66789330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956850"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL 데이터베이스에 연결
 
@@ -32,8 +31,8 @@ ms.locfileid: "66789330"
   
 ## <a name="details"></a>세부 정보
 
-에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]를 호출 하려면 master 데이터베이스에 연결 해야 **SQLServerDatabaseMetaData.getCatalogs**합니다.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData.getCatalogs** sys.databases 뷰를 사용 하 여 카탈로그를 가져옵니다. 권한 설명을 참조 하세요 [sys.databases (TRANSACT-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 알아야 **SQLServerDatabaseMetaData.getCatalogs** 동작을 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]입니다.  
+에 연결할 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]때 **SQLServerDatabaseMetaData**를 호출 하려면 master 데이터베이스에 연결 해야 합니다.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData** 뷰를 사용 하 여 카탈로그를 가져옵니다. **SQLServerDatabaseMetaData** [(transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 의 사용 권한에 대 한 설명을 참조 하 여의  [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]동작을 이해 하십시오.  
   
 ## <a name="connections-dropped"></a>연결이 삭제됨
 
@@ -81,7 +80,7 @@ shutdown /r /t 1
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>암호화 사용에 hostNameInCertificate 설정 필요
 
-7\.2의 버전 이전에 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에 연결할 때는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]를 지정 해야 **hostNameInCertificate** 지정 하는 경우 **암호화 = true** (서버 연결의 이름을 지정 하는 경우 문자열이 *shortName*. *domainName*로 설정 합니다 **hostNameInCertificate** 속성을 \*. *domainName*.). 이 속성의 드라이버 버전 7.2부터 선택 사항입니다.
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]7.2 버전 이전에서는에 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]연결할 때 **encrypt = true** (연결 문자열의 서버 이름이 *짧은 이름*인 경우)를 지정 하는 경우 **hostNameInCertificate** 을 지정 해야 합니다. *domainName*으로 **hostNameInCertificate** 속성을로 \*설정 합니다. *domainName*.). 드라이버 버전 7.2의 경우이 속성은 선택 사항입니다.
 
 예를 들어
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 398a8f072fd264307c1da08af5a187490813e8ac
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7be51a27364107afe6b79ebcce5de109909b1836
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916061"
 ---
 # <a name="wrappers-and-interfaces"></a>래퍼 및 인터페이스
 
@@ -28,9 +27,9 @@ ms.locfileid: "66780833"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 java.sql.Wrapper 인터페이스를 지원합니다. 이 인터페이스는 프록시 인터페이스를 통해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]와 관련된 JDBC API에 대한 확장에 액세스할 수 있는 메커니즘을 제공합니다.
 
-Java.sql.Wrapper 인터페이스는 두 메서드를 정의 합니다. **isWrapperFor** 하 고 **unwrap**. **isWrapperFor** 메서드는 지정된 입력 개체가 이 인터페이스를 구현하는지 확인합니다. **unwrap** 메서드는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드에 액세스할 수 있도록 이 인터페이스를 구현하는 개체를 반환합니다.
+**isWrapperFor** 인터페이스는 두 메서드인  및 **래핑**해제를 정의 합니다. **isWrapperFor** 메서드는 지정된 입력 개체가 이 인터페이스를 구현하는지 확인합니다. **unwrap** 메서드는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드에 액세스할 수 있도록 이 인터페이스를 구현하는 개체를 반환합니다.
 
-**isWrapperFor** 하 고 **unwrap** 메서드는 다음과 같이 노출 됩니다.
+**isWrapperFor** 및 **래핑** 해제 메서드는 다음과 같이 노출 됩니다.
 
 - [isWrapperFor 메서드&#40;SQLServerCallableStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlservercallablestatement.md)
 
@@ -42,7 +41,7 @@ Java.sql.Wrapper 인터페이스는 두 메서드를 정의 합니다. **isWrapp
 
 - [isWrapperFor 메서드&#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)
 
-- [unwrap 메서드 &#40;SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
+- [래핑 해제 &#40;방법 SQLServerDataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverdatasource.md)
 
 - [isWrapperFor 메서드&#40;SQLServerPreparedStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverpreparedstatement.md)
 
@@ -50,11 +49,11 @@ Java.sql.Wrapper 인터페이스는 두 메서드를 정의 합니다. **isWrapp
 
 - [isWrapperFor 메서드&#40;SQLServerStatement&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md)
 
-- [unwrap 메서드 &#40;SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
+- [래핑 해제 &#40;방법 SQLServerStatement&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md)
 
 - [isWrapperFor 메서드&#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/iswrapperfor-method-sqlserverxadatasource.md)
 
-- [unwrap 메서드 &#40;SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
+- [래핑 해제 &#40;방법 SQLServerXADataSource&#41;](../../connect/jdbc/reference/unwrap-method-sqlserverxadatasource.md)
 
 ## <a name="interfaces"></a>인터페이스
 

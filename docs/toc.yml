@@ -61,8 +61,8 @@
           items:
             - name: 빅 데이터 도구 설치
               href: big-data-cluster/deploy-big-data-tools.md
-            - name: mssqlctl 설치
-              href: big-data-cluster/deploy-install-mssqlctl.md
+            - name: Azdata 설치
+              href: big-data-cluster/deploy-install-azdata.md
         - name: 배포
           items:
             - name: 배포 지침
@@ -87,6 +87,8 @@
               items:
                 - name: Azure Kubernetes Service
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+                - name: Azure Data Studio Notebook을 사용하여 배포
+                  href: big-data-cluster/deploy-notebooks.md
     - name: 개념
       items:
         - name: 응용 프로그램 개발
@@ -137,7 +139,7 @@
               href: big-data-cluster/data-ingestion-restore-database.md
         - name: 앱 배포 및 사용
           items:
-            - name: mssqlctl을 사용하여 배포
+            - name: Azdata를 사용하여 배포
               href: big-data-cluster/big-data-cluster-create-apps.md
             - name: VS Code를 사용하여 배포
               href: big-data-cluster/app-deployment-extension.md
@@ -161,6 +163,8 @@
               href: big-data-cluster/view-cluster-status.md
             - name: Kubernetes 문제 해결
               href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: Notebook으로 관리
+              href: big-data-cluster/manage-notebooks.md
         - name: 전자 필기장
           items:
             - name: 전자 필기장 개요
@@ -175,6 +179,8 @@
               href: big-data-cluster/spark-submit-job.md
             - name: IntelliJ에서 Spark 작업 제출
               href: big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+            - name: Visual Studio Code에서 Spark 작업 제출
+              href: big-data-cluster/spark-hive-tools-vscode.md
             - name: 확장 Spark 기록 서버 사용
               href: big-data-cluster/spark-history-server.md
     - name: 참조
@@ -183,50 +189,56 @@
           items:
             - name: 배포 구성 파일
               href: big-data-cluster/reference-deployment-config.md
-        - name: mssqlctl 참조
+        - name: azdata 참조
           items:
-            - name: mssqlctl
-              href: big-data-cluster/reference-mssqlctl.md
+            - name: azdata
+              href: big-data-cluster/reference-azdata.md
             - name: 앱 배포
               items:
                 - name: 앱
-                  href: big-data-cluster/reference-mssqlctl-app.md
+                  href: big-data-cluster/reference-azdata-app.md
                 - name: 앱 템플릿
-                  href: big-data-cluster/reference-mssqlctl-app-template.md
+                  href: big-data-cluster/reference-azdata-app-template.md
             - name: 클러스터
               items:
                 - name: bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc.md
+                  href: big-data-cluster/reference-azdata-bdc.md
                 - name: bdc 구성
-                  href: big-data-cluster/reference-mssqlctl-bdc-config.md
-                - name: bdc 구성 섹션
-                  href: big-data-cluster/reference-mssqlctl-bdc-config-section.md
+                  href: big-data-cluster/reference-azdata-bdc-config.md
                 - name: bdc 컨트롤
-                  href: big-data-cluster/reference-mssqlctl-bdc-control.md
+                  href: big-data-cluster/reference-azdata-bdc-control.md
                 - name: bdc 제어 상태
-                  href: big-data-cluster/reference-mssqlctl-bdc-control-status.md
+                  href: big-data-cluster/reference-azdata-bdc-control-status.md
                 - name: bdc 디버그
-                  href: big-data-cluster/reference-mssqlctl-bdc-debug.md
+                  href: big-data-cluster/reference-azdata-bdc-debug.md
                 - name: bdc 엔드포인트
-                  href: big-data-cluster/reference-mssqlctl-bdc-endpoint.md
+                  href: big-data-cluster/reference-azdata-bdc-endpoint.md
+                - name: bdc hdfs
+                  href: big-data-cluster/reference-azdata-bdc-hdfs.md
+                - name: bdc hdfs 탑재
+                  href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
                 - name: bdc 풀
-                  href: big-data-cluster/reference-mssqlctl-bdc-pool.md
+                  href: big-data-cluster/reference-azdata-bdc-pool.md
                 - name: bdc 풀 상태
-                  href: big-data-cluster/reference-mssqlctl-bdc-pool-status.md
+                  href: big-data-cluster/reference-azdata-bdc-pool-status.md
+                - name: bdc spark
+                  href: big-data-cluster/reference-azdata-bdc-spark.md
+                - name: bdc spark 일괄 처리
+                  href: big-data-cluster/reference-azdata-bdc-spark-batch.md
+                - name: bdc spark 세션
+                  href: big-data-cluster/reference-azdata-bdc-spark-session.md
+                - name: bdc spark 문
+                  href: big-data-cluster/reference-azdata-bdc-spark-statement.md
                 - name: bdc 상태
-                  href: big-data-cluster/reference-mssqlctl-bdc-status.md
-            - name: 스토리지
+                  href: big-data-cluster/reference-azdata-bdc-status.md
+            - name: Notebook
               items:
-                - name: bdc 스토리지
-                  href: big-data-cluster/reference-mssqlctl-bdc-storage-pool.md
-                - name: bdc 스토리지 탑재
-                  href: big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount.md
-                - name: hdfs
-                  href: big-data-cluster/reference-mssqlctl-hdfs.md
+                - name: Notebook
+                  href: big-data-cluster/reference-azdata-notebook.md
             - name: SQL
               items:
                 - name: sql
-                  href: big-data-cluster/reference-mssqlctl-sql.md
+                  href: big-data-cluster/reference-azdata-sql.md
 - name: 비즈니스 연속성
   items:
     - name: 개요
@@ -15964,6 +15976,8 @@
                   href: t-sql/functions/filegroupproperty-transact-sql.md
                 - name: FILEPROPERTY
                   href: t-sql/functions/fileproperty-transact-sql.md
+                - name: FILEPROPERTYEX
+                  href: t-sql/functions/filepropertyex-transact-sql.md
                 - name: FULLTEXTCATALOGPROPERTY
                   href: t-sql/functions/fulltextcatalogproperty-transact-sql.md
                 - name: FULLTEXTSERVICEPROPERTY
