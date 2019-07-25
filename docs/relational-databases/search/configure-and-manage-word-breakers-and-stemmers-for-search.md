@@ -20,12 +20,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d071c934e5ebf6cb08b649bc33735cf39f4f0cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3201e13c967906c624bee5be28b157a887155c7f
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048952"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388339"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>검색을 위해 단어 분리기와 형태소 분석기 구성 및 관리
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ GO
 특정 열의 단어 분리기 언어를 보려면 다음 문을 실행합니다.
    
 ```sql 
-SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
+SELECT language_id AS 'LCID' FROM sys.fulltext_index_columns;
 ```  
 
 추가 옵션 및 추가 정보는 [sys.fulltext_index_columns&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-index-columns-transact-sql.md)를 참조하세요.
@@ -133,11 +133,9 @@ SELECT 'language_id' AS "LCID" FROM sys.fulltext_index_columns;
  각 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에는 일반적으로 더욱 효과적인 언어 규칙이 있고 이전 단어 분리기보다 정확한 차세대 단어 분리기가 포함되어 있습니다. 경우에 따라 새로운 단어 분리기가 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 가져온 전체 텍스트 인덱스의 단어 분리기와 약간 다르게 동작할 수도 있습니다.
  
 이는 데이터베이스를 현재 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 업그레이드한 상태에서 전체 텍스트 카탈로그를 가져온 경우에 중요합니다. 이제 전체 텍스트 카탈로그의 전체 텍스트 인덱스에서 사용되는 하나 이상의 언어를 새로운 단어 분리기와 연결할 수 있습니다. 자세한 내용은 [전체 텍스트 검색 업그레이드](../../relational-databases/search/upgrade-full-text-search.md)를 참조하세요.  
-  
-
+ 
 ## <a name="see-also"></a>참고 항목  
  [CREATE FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)    
  [ALTER FULLTEXT INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [전체 텍스트 검색에 사용할 중지 단어와 중지 목록 구성 및 관리](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
- 
-  
+
