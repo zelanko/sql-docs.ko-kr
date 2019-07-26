@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cfbd5417106d8e6ddd0ab5c76c2c05dae07c0605
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: d90e2d4887154d3545884a77d0290e632f04a569
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345988"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470595"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>RxExec를 사용 하 여 SQL Server에서 사용자 지정 R 함수 실행
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [Rxexec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec)를 통해 함수를 전달 하 여 SQL Server 컨텍스트에서 사용자 지정 R 함수를 실행할 수 있습니다 .이 경우 스크립트에 필요한 라이브러리도 서버에 설치 되 고 해당 라이브러리는 R의 기본 배포와 호환 된다고 가정 합니다. 
 

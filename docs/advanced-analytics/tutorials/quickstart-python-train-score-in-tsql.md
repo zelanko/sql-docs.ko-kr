@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c2c36c5aa81da098064885fd5b006d78494cd962
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 47ee23d945ded9fac97fe3eddc2137eeead00ae1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345769"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469506"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>빠른 시작: SQL Server에서 저장 프로시저를 사용 하 여 Python 모델 만들기, 학습 및 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 빠른 시작에서는 Python을 사용 하 여 두 개의 저장 프로시저를 만들고 실행 합니다. 첫 번째는 클래식 Iri 꽃 데이터 집합을 사용 하 고 Naive Bayes 모델을 생성 하 여 꽃 특성을 기반으로 하는 조리개 종류를 예측 합니다. 두 번째 절차는 점수 매기기를 위한 것입니다. 첫 번째 절차에서 생성 된 모델을 호출 하 여 예측 집합을 출력 합니다. 저장 프로시저에 코드를 배치 하면 다른 저장 프로시저와 클라이언트 응용 프로그램에서 작업을 포함 하 고 재사용 가능 하며 호출할 수 있습니다. 
 

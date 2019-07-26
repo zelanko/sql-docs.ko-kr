@@ -8,15 +8,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: dec0fe7147eab6a4b6545decf99e1731d773957c
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: cec029f4ffb047a49ff9902c430c4bd98aa03850
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343422"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470282"
 ---
 #  <a name="get-r-and-python-package-information"></a>R 및 Python 패키지 정보 가져오기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 여러 환경 또는 R 또는 Python 설치를 사용 하는 경우에는 실행 중인 코드가 Python에 대해 예상 되는 환경을 사용 하 고 있는지 확인 하거나 R에 올바른 작업 영역을 사용 하 고 있는지 확인 해야 합니다. 예를 들어 [r 또는 Python을 업그레이드](../install/upgrade-r-and-python.md)한 경우 r 라이브러리의 경로는 기본값과 다른 폴더에 있을 수 있습니다. 또한 R 클라이언트 또는 독립 실행형 서버 인스턴스를 설치 하는 경우 컴퓨터에 R 라이브러리가 여러 개 있을 수 있습니다.
 

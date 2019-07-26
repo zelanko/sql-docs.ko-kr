@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e81731683fb71b074ed754ab6ab4eaab40d08c20
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: aa3a65020f2900bc4d9e0b5c5fd5a200f3334435
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345401"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469334"
 ---
 # <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>빠른 시작: SQL Server에서 R을 사용 하 여 모델에서 예측
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 빠른 시작에서는 이전 퀵 스타트에서 만든 모델을 사용 하 여 새 데이터에 대 한 예측 점수를 계산 합니다. 새로운 데이터를 사용한 _채점(scoring)_ 을 위해서 테이블로부터 훈련된 모델 중 하나를 가져온 다음 예측을 기반으로 새로운 데이터 집합을 호출합니다. 채점이란 훈련된 모델에 주어진 새로운 데이터에 기반한 예측, 확률, 혹은 기타 값을 생성함을 의미하는 데이터 과학에서 종종 사용되는 용어입니다.
 

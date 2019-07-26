@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a03d78e5d3100105f74e2efe361391a6bcfaf7ac
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 07993b982b5c79e3814aa29730fb1849075f5667
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345282"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470081"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>SQL Server에서 R 패키지를 사용 하기 위한 팁
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 문서에는 SQL Server 인스턴스의 패키지 액세스에 익숙하지 않은 R 및 숙련 된 R 개발자에 게 익숙하지 않은 Dba를 위한 별도의 섹션이 포함 되어 있습니다.
 

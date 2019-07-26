@@ -6,15 +6,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 70c290d494f7dcb97dd197c057e11dfcc38ada0a
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 46c25083133677b382b33480ac5674f1786a7bf8
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345045"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469931"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>ODBC를 사용 하 여 SQL Server에서 R 개체 저장 및 로드
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server R Services는 직렬화된 R 개체를 테이블에 저장한 다음 R 코드를 다시 실행하거나 모델을 다시 학습시키지 않고 필요에 따라 테이블에서 개체를 로드할 수 있습니다. R 개체를 데이터베이스에 저장하는 이 기능은 모델을 교육하고 저장한 다음 점수 매기기나 분석을 위해 나중에 사용하는 시나리오에서 매우 중요합니다.
 

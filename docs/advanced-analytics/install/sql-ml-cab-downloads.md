@@ -7,14 +7,16 @@ ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0fd6b624b024c51965420dd438b8eb9ec04fbafc
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: ab87112d20d2571936fa7d61c34c5910859f2642
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344953"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470312"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>데이터베이스 내 분석 인스턴스 SQL Server의 누적 업데이트에 대 한 CAB 다운로드
+
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 데이터베이스 내 분석을 위해 구성 된 SQL Server 인스턴스에는 R 및 Python 기능이 포함 됩니다. 이러한 기능은 CAB 파일에 제공 되며 SQL Server 설치를 통해 설치 및 서비스 됩니다. 인터넷에 연결 된 장치에서 CAB 업데이트는 일반적으로 Windows 업데이트를 통해 적용 됩니다. 연결 되지 않은 서버에서는 CAB 파일을 수동으로 다운로드 하 여 적용 해야 합니다. 
 

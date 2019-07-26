@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-ms.openlocfilehash: 71a6149f1d89a4a1df114f376c250c203a8721cf
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0ee8902dad88cc148481585aaa9e1e083e536d0f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344912"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469897"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning 또는 R Server에 대 한 업그레이드 및 설치 FAQ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 항목에서는 SQL Server의 기계 학습 기능 설치와 관련 된 몇 가지 일반적인 질문에 대 한 답변을 제공 합니다. 또한 업그레이드에 대 한 일반적인 질문을 다룹니다.
 

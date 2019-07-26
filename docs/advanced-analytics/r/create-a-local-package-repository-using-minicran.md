@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e6d204b7f0e2ab0207b22a5e61e1e266a813f195
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 34b7fee6b5eef1503f56dd72c6d8ff10911bbdc1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345156"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470221"
 ---
 # <a name="create-a-local-r-package-repository-using-minicran"></a>MiniCRAN를 사용 하 여 로컬 R 패키지 리포지토리 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [Vries](https://blog.revolutionanalytics.com/2016/05/minicran-sql-server.html)에서 만든 [miniCRAN](https://cran.r-project.org/web/packages/miniCRAN/index.html) 패키지는 패키지와 종속성을 식별 하 여 단일 폴더에 다운로드 합니다 .이 패키지는 오프 라인 R 패키지 설치를 위해 다른 컴퓨터에 복사할 수 있습니다.
 

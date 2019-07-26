@@ -10,12 +10,12 @@ ms.assetid: b856ee9a-49e7-4fab-a88d-48a633fce269
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: ee47da3e97240ec4573303700e9793ee482821c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 726fb1ffd4175afa0d247d2029db559db2ff3231
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62513076"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475980"
 ---
 # <a name="sql-server-index-design-guide"></a>SQL Server 인덱스 디자인 가이드
 
@@ -25,7 +25,7 @@ ms.locfileid: "62513076"
   
  이 가이드에서는 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 사용할 수 있는 인덱스 유형에 대한 기본적인 지식이 있다고 가정합니다. 인덱스 형식에 대한 일반적인 설명은 [인덱스 유형](../relational-databases/indexes/indexes.md)을 참조하십시오.  
   
-##  <a name="Top"></a> 이 가이드의  
+##  <a name="Top"></a>이 가이드의  
 
  [인덱스 디자인 기본 사항](#Basics)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "62513076"
   
  [필터링된 인덱스 디자인 지침](#Filtered)  
   
- [더 보기](#Additional_Reading)  
+ [추가 참고 자료](#Additional_Reading)  
   
 ##  <a name="Basics"></a> 인덱스 디자인 기본 사항  
 
@@ -55,7 +55,7 @@ ms.locfileid: "62513076"
 
  권장되는 인덱스 디자인 전략은 다음과 같은 태스크로 이루어집니다.  
   
-1.  데이터베이스의 특징을 이해합니다. 예를 들어 데이터베이스가 데이터 수정이 잦은 OLTP(온라인 트랜잭션 처리) 데이터베이스인지, DSS(의사 결정 지원 시스템)인지, 주로 읽기 전용 데이터를 포함하고 매우 많은 데이터 집합을 빠르게 처리해야 하는 OLAP(데이터 웨어하우징) 데이터베이스인지를 파악해야 합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 *xVelocity memory optimized columnstore* 인덱스는 일반 데이터 웨어하우징 데이터 집합에 특히 적합합니다. Columnstore 인덱스는 필터링, 집계, 그룹화, 스타 조인 쿼리 등 일반 데이터 웨어하우징 쿼리에 대한 성능을 개선하여 사용자의 데이터 웨어하우징 환경을 바꿀 수 있습니다. 자세한 내용은 [Columnstore Indexes Described](../relational-databases/indexes/columnstore-indexes-described.md)합니다.  
+1.  데이터베이스의 특징을 이해합니다. 예를 들어 데이터베이스가 데이터 수정이 잦은 OLTP(온라인 트랜잭션 처리) 데이터베이스인지, DSS(의사 결정 지원 시스템)인지, 주로 읽기 전용 데이터를 포함하고 매우 많은 데이터 집합을 빠르게 처리해야 하는 OLAP(데이터 웨어하우징) 데이터베이스인지를 파악해야 합니다. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]에서 *xVelocity memory optimized columnstore* 인덱스는 일반 데이터 웨어하우징 데이터 집합에 특히 적합합니다. Columnstore 인덱스는 필터링, 집계, 그룹화, 스타 조인 쿼리 등 일반 데이터 웨어하우징 쿼리에 대한 성능을 개선하여 사용자의 데이터 웨어하우징 환경을 바꿀 수 있습니다. 자세한 내용은 [설명 된 Columnstore 인덱스](../relational-databases/indexes/columnstore-indexes-described.md)를 참조 하세요.  
   
 2.  가장 자주 사용하는 쿼리의 특성을 이해합니다. 예를 들어 두 개 이상의 테이블을 조인하는 쿼리를 자주 사용한다는 것을 알면 가장 적절한 인덱스 유형을 결정하는 데 도움이 됩니다.  
   
@@ -180,7 +180,7 @@ ORDER BY RejectedQty DESC, ProductID ASC;
   
  이 쿼리에 대한 다음 실행 계획은 쿼리 최적화 프로그램에서 SORT 연산자를 사용하여 ORDER BY 절로 지정된 순서로 결과 집합을 반환했음을 보여 줍니다.  
   
- ![실행 계획 연산자를 사용 하는 정렬을 보여 줍니다. ](media/indexsort1.gif "실행 계획 연산자를 사용 하는 정렬 보여줍니다.")  
+ ![실행 계획은 SORT 연산자가 사용 됨을 보여 줍니다.](media/indexsort1.gif "실행 계획은 SORT 연산자가 사용 됨을 보여 줍니다.")  
   
  쿼리의 ORDER BY 절에 있는 것과 일치하는 키 열로 인덱스가 생성되는 경우 쿼리 계획에서 SORT 연산자를 제거하여 쿼리 계획의 효율성을 향상시킬 수 있습니다.  
   
@@ -192,7 +192,7 @@ ON Purchasing.PurchaseOrderDetail
   
  쿼리가 다시 실행된 후 다음 실행 계획은 SORT 연산자가 제거되어 새로 생성된 비클러스터형 인덱스가 사용됨을 보여 줍니다.  
   
- ![실행 계획 표시 정렬 연산자를 사용 하지](media/insertsort2.gif "보여 주는 실행 계획을 정렬 연산자를 사용 하지 않습니다")  
+ ![SORT 연산자가 사용 되지 않는 실행 계획을 보여 줍니다] . (media/insertsort2.gif "SORT 연산자가 사용 되지 않는 실행 계획을 보여 줍니다") .  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 어느 방향으로든 동일하게 효율적으로 이동할 수 있습니다. ORDER BY 절에 있는 열의 정렬 방향이 반대가 되는 쿼리에도 `(RejectedQty DESC, ProductID ASC)` 로 정의된 인덱스를 사용할 수 있습니다. 예를 들어 ORDER BY 절 `ORDER BY RejectedQty ASC, ProductID DESC` 를 포함하는 쿼리에 인덱스를 사용할 수 있습니다.  
   
@@ -213,7 +213,7 @@ ON Purchasing.PurchaseOrderDetail
   
 -   범위 쿼리에서 사용할 수 있습니다.  
   
- 클러스터형 인덱스가 UNIQUE 속성으로 생성되지 않는 경우 [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 4바이트 고유 식별자 열을 테이블에 자동으로 추가합니다. 필요한 경우 [!INCLUDE[ssDE](../includes/ssde-md.md)] 은 고유 식별자 값을 자동으로 행에 추가하여 각 키를 고유하게 만듭니다. 이 열과 해당 값은 내부적으로 사용되며 사용자는 보거나 액세스할 수 없습니다.  
+ 고유 속성을 사용 하 여 클러스터형 인덱스를 만들지 않은 경우는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 테이블에 4 바이트 uniquifier 열을 자동으로 추가 합니다. 필요한 경우는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 자동으로 uniquifier 값을 행에 추가 하 여 각 키를 고유 하 게 만듭니다. 이 열과 해당 값은 내부적으로 사용되며 사용자는 보거나 액세스할 수 없습니다.  
   
 ### <a name="clustered-index-architecture"></a>클러스터형 인덱스 아키텍처  
 
@@ -227,7 +227,7 @@ ON Purchasing.PurchaseOrderDetail
   
  이 그림에서는 단일 파티션의 클러스터형 인덱스 구조를 보여 줍니다.  
   
- ![클러스터형된 인덱스의 수준](media/bokind2.gif "클러스터형된 인덱스의 수준")  
+ ![클러스터형 인덱스의 수준](media/bokind2.gif "클러스터형 인덱스의 수준")  
   
 ### <a name="query-considerations"></a>쿼리 고려 사항  
 

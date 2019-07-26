@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 45a1352b60574304a124af88226cc2a9d7f1a804
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 072d2c2e8843b17b3a4ccfeed16bd0916ce501e7
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345796"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468634"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>자습서: R 데이터 과학자 SQL 개발
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 데이터 과학자에 대 한이 자습서에서는 SQL Server 2016 또는 SQL Server 2017에서 R 기능 지원을 기반으로 예측 모델링을 위한 종단 간 솔루션을 빌드하는 방법에 대해 알아봅니다. 이 자습서에서는 SQL Server에서 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) 데이터베이스를 사용 합니다. 
 

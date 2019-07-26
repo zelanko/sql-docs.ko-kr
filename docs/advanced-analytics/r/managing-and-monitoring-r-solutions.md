@@ -7,15 +7,15 @@ ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fab91e142fad3bcb1ce23816d6705f7a7d208851
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 705df9d06a7dbf4563df3670894351d15c0962a5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345323"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470094"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>SQL Server에서 기계 학습 워크 로드 관리 및 통합
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 문서는 여러 작업을 지 원하는 서버 자산에 효율적인 데이터 과학 인프라를 배포 해야 하는 SQL Server 데이터베이스 관리자를 위한 것입니다. SQL Server에서 R 및 Python 코드 실행의 관리와 관련 된 관리 문제 공간을 프레임 합니다. 
 

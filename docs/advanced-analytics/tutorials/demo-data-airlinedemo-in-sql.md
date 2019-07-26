@@ -7,15 +7,15 @@ ms.date: 10/22/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 82afddf861ecda2d25260f69e532c63a1203030b
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 38e61bcbf3a5ff5ed44f85d5ad28406550e5a726
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344631"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469681"
 ---
 #  <a name="airline-flight-arrival-demo-data-for-sql-server-python-and-r-tutorials"></a>Python 및 R 자습서 SQL Server에 대 한 항공 비행 도착 데모 데이터
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 연습에서는 R 또는 Python 기본 제공 항공 데모 데이터 집합에서 가져온 데이터를 저장 하는 SQL Server 데이터베이스를 만듭니다. R 및 Python 배포는 Management Studio를 사용 하 여 SQL Server 데이터베이스로 가져올 수 있는 동일한 데이터를 제공 합니다.
 

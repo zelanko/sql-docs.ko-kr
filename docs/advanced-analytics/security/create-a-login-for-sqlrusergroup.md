@@ -7,15 +7,15 @@ ms.date: 01/25/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 74330d37a037b0951c4964cafbd6e0c26b4fdea1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f86bedc3cfd92272b500d5d3edd701b6ca51d38b
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345633"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469986"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup에 대한 로그인 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 스크립트의 루프백 [연결](../../advanced-analytics/concepts/security.md#implied-authentication) 에서 *트러스트 된 연결*을 지정 하 고 개체를 실행 하는 데 사용 되는 id에 Windows 사용자 계정인 [SQLRUserGroup](../concepts/security.md#sqlrusergroup) 에 대 한 [SQL Server 로그인](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) 을 만듭니다.
 

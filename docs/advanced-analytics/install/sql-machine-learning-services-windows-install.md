@@ -7,12 +7,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6e4d1eace0be8d00d536d1ab3782685da9512ab5
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 2bc932a16155472f7dfa5cfa22eba6a4a5c59cd0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344166"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470445"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows에 SQL Server Machine Learning를 설치합니다.
 
@@ -196,21 +196,13 @@ SSMS에서 인스턴스에 대해 마우스 오른쪽 단추 **를 클릭 하거
     GO
     ```
 
- **결과**
+    **결과**
 
     외부 스크립트 런타임이 처음 로드 될 때 스크립트를 실행 하는 데 약간의 시간이 걸릴 수 있습니다. 결과는 다음과 같습니다.
 
     | hello |
     |----|
     | 1|
-
-
-<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
-Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
-due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
-I will inform HeidiSteen  [GeneMi, 2019/01/17]
--->
-
 
 > [!NOTE]
 > Python 스크립트에서 사용 되는 열 또는 머리글은 의도적으로 반환 되지 않습니다. 출력에 대 한 열 이름을 추가 하려면 반환 데이터 집합에 대 한 스키마를 지정 해야 합니다. 저장 프로시저의 WITH RESULTS 매개 변수를 사용 하 여 열의 이름을 지정 하 고 SQL 데이터 형식을 지정 하 여이 작업을 수행 합니다.

@@ -9,15 +9,15 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8ceba61f4bdc22b4049453ed27245f09efe080b1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 024ddc72ae2b0a2c443546148a66d0fa85060cb6
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345952"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469195"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>자습서: SQL Server에서 R로 파티션 기반 모델 만들기
-[!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server 2019에서 파티션 기반 모델링은 분할 된 데이터에 대해 모델을 만들고 학습 하는 기능입니다. 지리적 지역, 날짜 및 시간, 연령 또는 성별 등의 지정 된 분류 스키마로 자연스럽 게 분할 된 층 화 데이터의 경우 변경 되지 않은 상태로 유지 되는 파티션을 모델링, 학습 및 점수를 매기는 기능을 사용 하 여 전체 데이터 집합에 대해 스크립트를 실행할 수 있습니다. 모든 작업을 수행 합니다. 
 

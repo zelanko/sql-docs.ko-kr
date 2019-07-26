@@ -7,15 +7,15 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 86c5eaa600da0dbe9106278dd36b21eba322e2b7
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: edbd13de96c514a498aaee9482616a9b1723d632
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345969"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468950"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>SQL Server 2017 Python 자습서
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 문서에서는 [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)의 데이터베이스 내 분석에 대 한 Python 자습서를 설명 합니다. 
 

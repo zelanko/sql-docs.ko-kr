@@ -7,15 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1c51691ad55ac8aa340eb71257489bd14c0099a5
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5d3e03e718aea725267a2251768ef040905b020e
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345533"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470184"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>rxExecBy를 사용하여 여러 모델 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 RevoScaleR의 **Rxexecby** 함수는 여러 관련 모델의 병렬 처리를 지원 합니다. 여러 유사한 엔터티의 데이터를 기반으로 하는 하나의 커다란 모델을 학습 하는 대신, 데이터 과학자는 단일 엔터티와 관련 된 데이터를 사용 하 여 여러 개의 관련 모델을 신속 하 게 만들 수 있습니다. 
 

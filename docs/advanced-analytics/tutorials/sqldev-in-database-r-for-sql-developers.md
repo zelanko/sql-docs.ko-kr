@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 64995cc5de7bb3609f1923b7755be9b33b55e764
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1257cc3f3d0b3ed07bc879f5bc3337d62bc1b3a0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345908"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470581"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>자습서: SQL 개발자를 위한 R 데이터 분석
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL 프로그래머를 위한이 자습서에서는 SQL Server에서 [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) 데이터베이스를 사용 하 여 r 기반 기계 학습 솔루션을 구축 하 고 배포 하 여 r 통합에 대해 알아봅니다. T-sql, SQL Server Management Studio 및 데이터베이스 엔진 인스턴스를 [Machine Learning Services] ([Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) 및 R 언어 지원으로 사용 합니다.
 

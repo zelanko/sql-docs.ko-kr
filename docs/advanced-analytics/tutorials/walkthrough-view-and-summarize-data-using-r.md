@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 52ba1a8f036037ade42c8483b1735c84cc72867e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: e209b707c3d04cef7709945dc2a32b171f90771e
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345789"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468841"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>R을 사용 하 여 SQL Server 데이터 보기 및 요약 (연습)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 단원에서는 **RevoScaleR** 패키지의 함수를 소개 하 고 다음 작업을 단계별로 안내 합니다.
 

@@ -7,15 +7,15 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a6b2fb46cb2ee361d858fa460119e6960d78fda7
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: be6d23c6b176e8d7b2c9bf0d7ff7a02212509a10
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345100"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469836"
 ---
 # <a name="give-users-permission-to-sql-server-machine-learning-services"></a>사용자에 게 SQL Server Machine Learning Services 사용 권한 부여
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 문서에서는 SQL Server Machine Learning Services에서 외부 스크립트를 실행 하 고 데이터베이스에 대 한 읽기, 쓰기 또는 DDL (데이터 정의 언어) 권한을 부여할 수 있는 권한을 사용자에 게 부여 하는 방법을 설명 합니다.
 

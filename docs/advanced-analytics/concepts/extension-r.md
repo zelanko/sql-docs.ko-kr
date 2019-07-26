@@ -7,15 +7,15 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3bf8e77cec92cde0e5a8adf4d3e1e36f1689b917
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 300b5d25d62be24c1e5590f5cd9795d08da7f2c1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343407"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470494"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server에서 R 언어 확장
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R 확장은 관계형 데이터베이스 엔진에 대 한 SQL Server Machine Learning Services 추가 기능 중 일부입니다. R 실행 환경, 표준 라이브러리 및 도구를 사용 하 여 기본 R 배포, Microsoft R 라이브러리를 추가 합니다. [RevoScaleR](../r/ref-r-revoscaler.md) for analytics, 기계 학습 알고리즘에 대 한 [MicrosoftML](../r/ref-r-microsoftml.md) , SQL Server의 데이터 또는 R 코드에 액세스 하기 위한 기타 라이브러리.
 

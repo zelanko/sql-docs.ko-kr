@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2cf89b26ffad2902223a84e19ccaf425aa6f8b2d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 6808fa01bd4b62a67b220cec86d025820958298d
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344903"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470017"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (SQL Server의 R 라이브러리)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **MicrosoftML** 은 고성능 기계 학습 알고리즘을 제공 하는 Microsoft의 R 함수 라이브러리입니다. 여기에는 학습 및 변환, 점수 매기기, 텍스트 및 이미지 분석, 기존 데이터에서 값을 파생 하기 위한 기능 추출을 위한 함수가 포함 됩니다.
 

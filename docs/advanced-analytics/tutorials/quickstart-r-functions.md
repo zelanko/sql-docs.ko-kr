@@ -1,33 +1,33 @@
 ---
-title: R 함수-SQL Server Machine Learning을 보여주는 빠른 시작
-description: 이 빠른 시작에서는 고급 통계 계산을 위해 R 함수를 작성 하는 방법을 알아봅니다.
+title: R 함수를 보여 주는 빠른 시작-SQL Server Machine Learning
+description: 이 빠른 시작에서는 고급 통계 계산을 위해 R 함수를 작성 하는 방법에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fa2d47729641e8efd13e9e30be7a61186a892b5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f43709f563d1dc5838cdd6636bcac4dc5664a6da
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962017"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469276"
 ---
 # <a name="quickstart-using-r-functions"></a>빠른 시작: R 함수 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이전 빠른 시작을 완료 하는 경우 기본 작업을 사용 하 여 친숙 하 고 통계 함수와 같은 더 복잡 한 항목에 대 한 준비 하는 것이 여러분이 합니다. T-SQL에서 구현 하는 복잡 한 고급 통계 함수 코드 한 줄만을 사용 하 여 R에서 수행할 수 있습니다.
+이전 빠른 시작을 완료 한 경우에는 기본 작업에 대해 잘 알고 있으며 통계 함수 등의 더 복잡 한 작업을 수행할 수 있습니다. T-sql에서 구현 하기에 복잡 한 고급 통계 함수는 단 한 줄의 코드를 사용 하 여 R에서 수행할 수 있습니다.
 
-이 빠른 시작에서는 R 수학를 포함할 수 있습니다 및 저장 프로시저를 SQL Server 유틸리티 함수입니다.
+이 빠른 시작에서는 SQL Server 저장 프로시저에 R 수학 및 유틸리티 함수를 포함 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이전 빠른 시작에서는 [SQL Server에 있는지 확인 하는 R](quickstart-r-verify.md), 정보를 제공 하 고이 빠른 시작에 필요한 R 환경 설정에 대 한 링크입니다.
+이전 퀵 스타트 인 [r이 SQL Server에 있는지 확인](quickstart-r-verify.md)하 고,이 빠른 시작에 필요한 r 환경을 설정 하기 위한 정보 및 링크를 제공 합니다.
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>난수를 생성하는 저장 프로시저 만들기
 
-간단히 하기 위해 R을 사용 하겠습니다 `stats` 패키지를 설치 하 고 SQL Server에서 R 기능 지원을 설치 하면 기본적으로 로드 됩니다. 이 패키지에는 일반 통계 작업용으로 수백 개의 함수가 포함되어 있으며, 그 중 `rnorm` 함수는 주어진 표준 편차와 평균으로 정규 분포를 사용한 지정된 수의 난수를 생성합니다.
+간단히 하기 위해 SQL Server에서 r 기능 지원을 `stats` 설치할 때 기본적으로 설치 및 로드 되는 r 패키지를 사용 하겠습니다. 이 패키지에는 일반 통계 작업용으로 수백 개의 함수가 포함되어 있으며, 그 중 `rnorm` 함수는 주어진 표준 편차와 평균으로 정규 분포를 사용한 지정된 수의 난수를 생성합니다.
 
 예를 들어 이 R 코드는 평균 50, 표준 편차 3에 기반을 둔 100개의 숫자를 반환합니다.
 
@@ -96,7 +96,7 @@ WITH RESULT SETS (([Col1] int not null));
 
 많은 사용자가 성능 문제 분석을 위해 R 프로세스가 사용하는 시간을 캡처해주는 `sy`system.time` `proc.time` 같은 시스템 타이밍 함수를 사용합니다.
 
-예를 들어이 자습서를 참조 하세요. [데이터 기능 만들기](../tutorials/walkthrough-create-data-features.md)합니다. 이 연습에서는 R 시간 함수는 데이터에서 기능을 만들기 위한 두 가지 방법의 성능을 비교 하는 솔루션에 포함 됩니다. R 함수 및 T-SQL 함수의 성능을 비교합니다.
+예제는 다음 자습서를 참조 하세요. [데이터 기능을 만듭니다](../tutorials/walkthrough-create-data-features.md). 이 연습에서 R 타이밍 함수는 데이터에서 기능을 만드는 두 가지 방법의 성능을 비교 하기 위해 솔루션에 포함 되어 있습니다. R 함수 및 T-SQL 함수의 성능을 비교합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

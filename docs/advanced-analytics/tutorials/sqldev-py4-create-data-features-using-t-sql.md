@@ -7,15 +7,15 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1d421d4fc3ed28276b950f797529f089f94aaf6a
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f1e07ffa4423ccfc2cc0082910a2ca8aff8fd087
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345911"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468677"
 ---
 # <a name="create-data-features-using-t-sql"></a>T-sql을 사용 하 여 데이터 기능 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 데이터 탐색 후 데이터에서 일부 정보를 수집 하 고 *기능 엔지니어링*으로 이동할 준비가 되었습니다. 원시 데이터에서 기능을 만드는이 프로세스는 고급 분석 모델링의 중요 한 단계 일 수 있습니다.
 

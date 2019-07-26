@@ -7,15 +7,15 @@ ms.date: 03/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 09547f5f77eae8cff0924dfdf227c31563c10abd
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 79a5eeb48816f858d3e009f8564487fd68769979
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345589"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470205"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server에서 R을 사용 하 여 SSIS 및 SSRS 워크플로 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 문서에서는 SQL Server SQL Server Machine Learning Services의 언어 및 데이터 과학 기능을 사용 하 여 포함 된 R 및 Python 스크립트를 사용 하는 방법을 설명 합니다. SQL Server Integration Services (SSIS) 및 SQL Server Reporting Services SSRS. SQL Server의 R 및 Python 라이브러리는 통계 및 예측 함수를 제공 합니다. SSIS 및 SSRS는 각각 조정 ETL 변환과 시각화를 제공 합니다. 이 문서에서는 이러한 모든 기능을이 워크플로 패턴에 함께 포함 하는 방법을 설명 합니다.
 

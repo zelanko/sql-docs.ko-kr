@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 225fe78a84da986120ce23f2a1f16fae244e26e4
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0f8cc5aaa10beeb5b91b27111e15013cc705ed20
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345062"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469954"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server에서 R 개발용 데이터 과학 클라이언트 설정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R 통합은 [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md) 또는 [SQL Server 2017 Machine Learning Services (데이터베이스 내)](../install/sql-machine-learning-services-windows-install.md) 설치에 r 언어 옵션을 포함 하는 경우 SQL Server 2016 이상에서 사용할 수 있습니다. 
 

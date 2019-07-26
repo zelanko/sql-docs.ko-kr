@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 547a567b00474f0c1538d907d70d8a808bebf851
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: be55e779f335277a1c0f03fe871b8dcb952e088f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344937"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470410"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning Services의 알려진 문제
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 문서에서는 [r 및 Python을 사용 하 여](install/sql-machine-learning-services-windows-install.md) [SQL Server 2016 r Services](install/sql-r-services-windows-install.md) 및 SQL Server 2017 Machine Learning Services의 옵션으로 제공 되는 기계 학습 구성 요소에 대 한 알려진 문제 또는 제한 사항을 설명 합니다.
 

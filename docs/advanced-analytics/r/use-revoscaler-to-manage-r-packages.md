@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: dafbe12c6304866dc36dde6fffec44da441e582f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: e5cd2f55559671b1e3f3d2004c4865b8bac8aa42
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344831"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469884"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 함수를 사용 하 여 SQL Server에서 R 패키지를 찾거나 설치 하는 방법
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 RevoScaleR 9.0.1 이상에는 R 패키지 관리를 위한 함수 SQL Server 계산 컨텍스트가 포함 되어 있습니다. 이러한 함수는 원격 관리자가 아닌 원격 서버에 직접 액세스 하지 않고 SQL Server에 패키지를 설치 하는 데 사용할 수 있습니다.
 

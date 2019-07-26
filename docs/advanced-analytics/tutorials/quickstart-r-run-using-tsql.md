@@ -7,15 +7,15 @@ ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 61b1959b9b3b0769e080a2a4a44b1d4d10ef2b61
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: ab73e0231f462504652e0e1af62fed80c706f061
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345977"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469033"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>빠른 시작: SQL Server에서 "Hello 세계" R 스크립트 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 빠른 시작에서는 **sp_execute_external_script** 시스템 저장 프로시저를 소개 하 고 "Hello World" R 스크립트 INT-SQL을 실행 하 여 주요 개념에 대해 알아봅니다. 
 

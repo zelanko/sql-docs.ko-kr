@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8de02f679af1bbeed8f65f4e4dc5456cd414e75e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1a6459d45d36ff69bdafb62a712e18937bf8eb30
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345550"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470109"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server에 새 R 패키지 설치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 문서에서는 machine learning을 사용 하는 SQL Server 인스턴스에 새 R 패키지를 설치 하는 방법을 설명 합니다. 새 R 패키지를 설치 하는 방법에는 여러 가지가 있으며, 해당 SQL Server 버전에 따라 서버에 인터넷 연결이 있는지 여부가 결정 됩니다. 새 패키지를 설치 하는 다음과 같은 방법을 사용할 수 있습니다.
 

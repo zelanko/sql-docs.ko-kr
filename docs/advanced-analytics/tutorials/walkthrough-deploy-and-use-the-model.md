@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2cb6bf28fa849e2015d111c564bb0af84f103d19
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 96744b15bef03b7d8badc803b1fa5f5de382e64f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345853"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470543"
 ---
 # <a name="deploy-the-r-model-and-use-it-in-sql-server-walkthrough"></a>R 모델을 배포 하 고 SQL Server에 사용 (연습)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 단원에서는 저장 프로시저에서 학습 된 모델을 호출 하 여 프로덕션 환경에서 R 모델을 배포 하는 방법에 대해 알아봅니다. R에서 저장 프로시저를 호출 하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] C#, (예:, Java, Python 등)를 지 원하는 응용 프로그램 프로그래밍 언어를 호출 하 고, 모델을 사용 하 여 새 관찰에 대 한 예측을 만들 수 있습니다.
 

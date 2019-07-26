@@ -7,15 +7,15 @@ ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f681634b9f57a5fd459e3f6452c04aba024bd297
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 80af3f93eb84c7b78c5cb1e5395175501931e24c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345308"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470084"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-sql (CREATE EXTERNAL LIBRARY)을 사용 하 여 SQL Server에 R 패키지 설치
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 문서에서는 machine learning이 사용 되는 SQL Server 인스턴스에 새 R 패키지를 설치 하는 방법을 설명 합니다. 여러 가지 방법 중에서 선택할 수 있습니다. T-sql을 사용 하는 것은 R에 익숙하지 않은 서버 관리자에 게 가장 적합 합니다.
 

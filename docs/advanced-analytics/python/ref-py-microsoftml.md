@@ -7,15 +7,15 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 298328db563cac8183b14b47e5c75c850c782d58
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: c2d27b295df6b29d69ce90a7c70c135a197b68b0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345458"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470231"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoftml (SQL Server)의 Python 모듈
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **microsoftml** 은 고성능 기계 학습 알고리즘을 제공 하는 Microsoft의 Python35 호환 모듈입니다. 여기에는 학습 및 변환, 점수 매기기, 텍스트 및 이미지 분석, 기존 데이터에서 값을 파생 하기 위한 기능 추출을 위한 함수가 포함 됩니다.
 

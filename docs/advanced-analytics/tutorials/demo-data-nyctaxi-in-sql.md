@@ -7,15 +7,15 @@ ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1b0eea71105cb22cce81ac482c8ad6df50e63fa0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5d5d74090713666a2da6058d9eccee1e33e4d7cb
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343425"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469749"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python 및 R 자습서에 대 한 NYC Taxi demo 데이터
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 문서에서는 [뉴욕 도시 Taxi 및 리무진 위원회](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)의 공용 데이터로 구성 된 샘플 데이터베이스를 설정 하는 방법을 설명 합니다. 이 데이터는 SQL Server의 데이터베이스 내 분석을 위한 여러 R 및 Python 자습서에서 사용 됩니다. 샘플 코드를 더 빨리 실행하기 위해 데이터의 대표적인 1 % 샘플링을 만들었습니다. 시스템에서 데이터베이스 백업 파일은 90 MB 보다 약간 더 기본 데이터 테이블에 170만 행을 제공 합니다.
 

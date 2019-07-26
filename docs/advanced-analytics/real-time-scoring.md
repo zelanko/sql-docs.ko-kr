@@ -7,15 +7,15 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2e9c9353acdc0a2641203788c8e4883a9accb021
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345682"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469966"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>기계 학습 SQL Server sp_rxPredict의 실시간 점수 매기기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 실시간 점수 매기기는 [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) 시스템 저장 프로시저와 SQL SERVER의 CLR 확장 기능을 사용 하 여 예측 워크 로드의 고성능 예측 또는 점수를 제공 합니다. 실시간 점수 매기기는 언어와 관계 없이 R 또는 Python 실행 시간에 대 한 종속성 없이 실행 됩니다. Microsoft 함수를 사용 하 여 모델을 만들고 학습 한 다음 SQL Server에서 이진 형식으로 serialize 하는 경우 실시간 점수 매기기를 사용 하 여 R 또는 Python 추가 기능이 없는 SQL Server 인스턴스에서 새 데이터 입력에 대 한 예측 결과를 생성할 수 있습니다. 설치한.
 

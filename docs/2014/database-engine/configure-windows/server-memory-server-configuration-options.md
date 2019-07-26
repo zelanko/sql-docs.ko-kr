@@ -21,12 +21,12 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d4447d7df594e9542982d6ba05de05f42b0628a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c366a239ca3459bc8fe4517736a4c0bcc64301cb
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62810067"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68475969"
 ---
 # <a name="server-memory-server-configuration-options"></a>서버 메모리 서버 구성 옵션
   **최소 서버 메모리** 및 **최대 서버 메모리**의 두 가지 서버 메모리 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 사용하는 SQL Server 프로세스의 메모리 양(MB)을 다시 구성할 수 있습니다. 이 메모리는 SQL Server Memory Manager가 관리합니다.  
@@ -45,23 +45,36 @@ ms.locfileid: "62810067"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 메모리를 동적으로 사용할 수 있게 하는 것이 좋지만 메모리 옵션을 수동으로 설정하고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 액세스할 수 있는 메모리 양을 제한할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]메모리 양을 설정하기 전에 OS 및 기타 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(컴퓨터가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]전용이 아닌 경우 다른 시스템 사용)에 필요한 메모리를 총 실제 메모리에서 빼서 적합한 메모리 설정을 결정합니다. 이러한 차이 값이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 할당할 수 있는 최대 메모리 양입니다.  
   
 ## <a name="setting-the-memory-options-manually"></a>메모리 옵션 수동 설정  
- **min server memory** 및 **max server memory** 를 설정하여 메모리 값 범위를 확장합니다. 이 방법은 시스템 또는 데이터베이스 관리자가 같은 컴퓨터에서 실행 중인 다른 애플리케이션의 메모리 요구 사항과 관련하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 구성하는 경우 유용합니다.  
+서버 옵션 **min server memory** 및 **max server memory**를 설정하여 메모리 값 범위를 확장합니다. 이 방법은 시스템 또는 데이터베이스 관리자가 다른 애플리케이션의 메모리 요구 사항 또는 동일한 호스트에서 실행되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다른 인스턴스와 함께 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스를 구성하는 데 유용합니다.
+
+> [!NOTE]
+> **min server memory** 및 **max server memory** 는 고급 옵션입니다. **sp_configure** 시스템 저장 프로시저를 사용하여 이러한 설정을 변경할 경우 **고급 옵션 표시** 를 1로 설정해야만 변경할 수 있습니다. 이러한 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
- **min server memory** 옵션을 사용하여 SQL Server Memory Manager가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 사용할 수 있는 최소 메모리 양을 보장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 시작할 때 **min server memory** 에 지정된 메모리의 양을 즉시 할당하지 않습니다. 그러나 클라이언트 로드 때문에 메모리 사용량이 이 값에 도달하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **값을 줄이기 전에는** 가 메모리를 비울 수 없습니다.  
-  
+<a name="min_server_memory"></a> **min_server_memory** 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 사용할 수 있는 최소 메모리 양을 보장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 시작할 때 **min server memory** 에 지정된 메모리의 양을 즉시 할당하지 않습니다. 그러나 클라이언트 로드 때문에 메모리 사용량이 이 값에 도달하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **값을 줄이기 전에는** 가 메모리를 비울 수 없습니다. 예를 들어 동일한 호스트에 여러 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 동시에 존재할 수 있는 경우 인스턴스의 메모리를 예약하기 위해 max_server_memory 대신 min_server_memory 매개 변수를 설정합니다. 또한 가상 환경에서 min_server_memory 값을 설정하여 기본 호스트의 메모리 압력을 가하는 것은 게스트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가상 머신(VM)의 버퍼 풀에서 수용 가능한 성능에 필요한 것 이상으로 메모리를 할당 해제하지 않도록 하는 데 필수적입니다.
+ 
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **min server memory**에 지정된 메모리 양을 할당하는 것이 보장되지 않습니다. 서버의 로드 때문에 **min server memory**에 지정된 메모리 양을 할당할 필요가 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 보다 적은 메모리로 실행됩니다.  
+> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **min server memory**에 지정된 메모리 양을 할당하는 것이 보장되지 않습니다. 서버의 로드 때문에 **min server memory**에 지정된 메모리 양을 할당할 필요가 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 보다 적은 메모리로 실행됩니다.  
   
-|OS 유형|최소 메모리 크기에 허용 **최대 서버 메모리**|  
+<a name="max_server_memory"></a> OS가 유해 메모리 압력을 겪지 않도록 **max_server_memory**를 사용합니다. 최대 서버 메모리 구성을 설정하려면 메모리 요구 사항을 결정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 전체 소비량을 모니터링합니다. 단일 인스턴스에 대해 이러한 계산을 통해보다 정확한 결과를 얻으려면
+ -  전체 OS 메모리에서 1GB-4GB를 OS에 예약합니다.
+ -  그런 다음,  **_스택 크기 <sup>1</sup> \* 계산된 최대 작업자 스레드 수 <sup>2</sup> + -g 시작 매개 변수 <sup>3</sup>_** (또는 *-g*가 설정되지 않은 경우 기본적으로 256MB)으로 구성된 **최대 서버 메모리** 컨트롤 외부의 잠재적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 할당량을 뺍니다. 남은 일은 단일 인스턴스 설정을 위한 max_server_memory를 설정하는 것입니다.
+ 
+<sup>1</sup> 아키텍처당 스레드 스택 크기에 대한 내용은 [ 메모리 관리 아키텍처 가이드 ](https://docs.microsoft.com/sql/relational-databases/memory-management-architecture-guide#stacksizes)를 참조하세요.
+
+<sup>2</sup> 현재 호스트에서 선호도가 높은 CPU의 지정된 수에 대해 계산된 기본 작업자 스레드에 대한 내용은 [max worker threads 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) 방법에 대한 설명서 페이지를 참조하세요.
+
+<sup>3</sup> *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)의 설명서 페이지를 참조하세요. 32 비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Aplicable)로만 이동 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]합니다.
+
+|OS 유형|**최대 서버 메모리** 에 허용 되는 최소 메모리 양|  
 |-------------|----------------------------------------------------------------|  
-|32비트|64MB|  
-|64비트|128MB|  
-  
+|32비트|64 M B|  
+|64비트|128 M B| 
+
 ## <a name="how-to-configure-memory-options-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 메모리 옵션을 구성하는 방법  
  **최소 서버 메모리** 및 **최대 서버 메모리**의 두 가지 서버 메모리 옵션을 사용하여 SQL Server Memory Manager가 관리하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스의 메모리 양(MB)을 다시 구성할 수 있습니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경할 수 있습니다.  
   
 ### <a name="procedure-for-configuring-a-fixed-amount-of-memory"></a>고정 메모리 양을 구성하는 절차  
- **고정 된 양의 메모리를 설정 합니다.**  
+ **고정 된 메모리 양을 설정 하려면 다음을 수행 합니다.**  
   
 1.  개체 탐색기에서 서버를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.  
   
@@ -83,14 +96,14 @@ ms.locfileid: "62810067"
 3.  **네트워크 응용 프로그램을 위해 데이터 처리량 최대화** 가 선택된 경우에는 다른 옵션을 선택하고 **확인**을 클릭한 다음 나머지 대화 상자를 닫습니다.  
   
 ## <a name="lock-pages-in-memory"></a>메모리의 페이지 잠금  
- 이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다. 메모리의 페이지를 잠그면 메모리를 디스크로 페이징할 때 서버가 계속해서 응답합니다. SQL Server **Lock Pages in Memory** 옵션은 32 비트 및 64 비트 인스턴스를 ON으로 설정 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Standard edition 및 더 높은 경우 sqlservr.exe 실행 권한이 있는 계정 권한이 Windows에서 "잠금 페이지 "LPIM (메모리) 사용자 권한이 있습니다. 이전 버전의 SQL Server에서는 SQL Server의 32비트 인스턴스에 대한 페이지 잠금 옵션을 설정하려면 sqlservr.exe 실행 권한이 있는 계정에 LPIM 사용자 권한이 있고 'awe_enabled' 구성 옵션을 ON으로 설정해야 합니다.  
+ 이 Windows 정책은 데이터를 실제 메모리에 유지하는 프로세스를 사용하여 시스템이 디스크의 가상 메모리로 데이터를 페이징하지 않도록 방지할 수 있는 계정을 결정합니다. 메모리의 페이지를 잠그면 메모리를 디스크로 페이징할 때 서버가 계속해서 응답합니다. Sqlservr.exe 실행 권한이 있는 계정에 Windows "lpim (잠긴 페이지 메모리)" 사용자 권한이 부여 된 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에는 **메모리의 페이지 잠금** 옵션은 Standard edition 이상에서 32 비트 및 64 비트 인스턴스에서 ON으로 설정 됩니다. SQL Server 이전 버전의 SQL Server에서는 SQL Server의 32비트 인스턴스에 대한 페이지 잠금 옵션을 설정하려면 sqlservr.exe 실행 권한이 있는 계정에 LPIM 사용자 권한이 있고 'awe_enabled' 구성 옵션을 ON으로 설정해야 합니다.  
   
- 사용 하지 않도록 설정 합니다 **메모리의 페이지 잠금** 에 대 한 옵션 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL Server 시작 계정에 대 한 오른쪽 "메모리의 페이지 잠금" 사용자를 제거 합니다.  
+ 에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **메모리의 페이지 잠금** 옵션을 사용 하지 않도록 설정 하려면 SQL Server 시작 계정에 대 한 "메모리의 페이지 잠금" 사용자 권한을 제거 합니다.  
   
 ### <a name="to-disable-lock-pages-in-memory"></a>메모리의 페이지 잠금을 사용하지 않도록 설정하려면  
- **Lock pages in memory 옵션을 사용 하지 않도록 설정 합니다.**  
+ **메모리의 페이지 잠금 옵션을 사용 하지 않도록 설정 하려면:**  
   
-1.  **시작** 메뉴에서 **실행**을 클릭합니다. 에 **엽니다** 상자에 입력 `gpedit.msc`합니다.  
+1.  **시작** 메뉴에서 **실행**을 클릭합니다. **열기** 상자에을 입력 `gpedit.msc`합니다.  
   
      **그룹 정책** 대화 상자가 열립니다.  
   
@@ -132,11 +145,11 @@ ms.locfileid: "62810067"
   
 ||32비트|64비트|  
 |-|-------------|-------------|  
-|기본 메모리|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 프로세스 가상 주소 공간 제한까지 허용됩니다.<br /><br /> 2GB<br /><br /> 사용 하면 3GB **3gb** 부팅 매개 변수 *<br /><br /> Wow64에서는 4GB\*\*|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 프로세스 가상 주소 공간 제한까지 허용됩니다.<br /><br /> 8TB(x64 아키텍처 사용)|  
+|기본 메모리|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 프로세스 가상 주소 공간 제한까지 허용됩니다.<br /><br /> 2GB<br /><br /> 3gb ( **/3gb** 부팅 매개 변수 포함) *<br /><br /> WOW64에서 4gb\*\*|모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 프로세스 가상 주소 공간 제한까지 허용됩니다.<br /><br /> 8TB(x64 아키텍처 사용)|  
   
  * **/3gb** 는 운영 체제 부팅 매개 변수입니다. 자세한 내용은 [MSDN 라이브러리](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)를 참조하세요.  
   
- \* * WOW64 (Windows on Windows 64)는 32 비트에서 모드가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 비트 운영 체제에서 실행 합니다. 자세한 내용은 [MSDN 라이브러리](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)를 참조하세요.  
+ \* * WOW64 (windows의 windows 64)는 32 비트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 64 비트 운영 체제에서 실행 되는 모드입니다. 자세한 내용은 [MSDN 라이브러리](https://go.microsoft.com/fwlink/?LinkID=10257&clcid=0x409)를 참조하세요.  
   
 ## <a name="examples"></a>예  
   

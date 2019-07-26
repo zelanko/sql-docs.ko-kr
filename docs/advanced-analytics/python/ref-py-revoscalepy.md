@@ -7,15 +7,15 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e38cac8969544a93d7487d83636c866ec7b09ce9
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 297e58fe089b0f68670a9d2a994f05d9c8bf4344
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344606"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470327"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (SQL Server)의 Python 모듈
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **revoscalepy** 는 분산 컴퓨팅, 원격 계산 컨텍스트 및 고성능 데이터 과학 알고리즘을 지 원하는 Microsoft의 Python35 호환 모듈입니다. R에 대 한 **RevoScaleR** 패키지 (Microsoft R Server 및 SQL Server R Services와 함께 배포 됨)를 기반으로 하 여 비슷한 기능을 제공 합니다.
 

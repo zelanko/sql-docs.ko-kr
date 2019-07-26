@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3786ab3ee17bbbc0b54e439e3466236af098ffd3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 84c7c8f10c6a5b0da69d24389e12633df3774ffb
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345174"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470488"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>SQL Server에서 실행 패드 서비스 및 외부 스크립트 실행에 대 한 일반적인 문제
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
  SQL Server 신뢰할 수 있는 실행 패드 서비스는 R 및 Python에 대 한 외부 스크립트 실행을 지원 합니다. SQL Server 2016 R Services에서 s p 1은 서비스를 제공 합니다. SQL Server 2017는 초기 설치의 일부로 실행 패드 서비스를 포함 합니다.
 

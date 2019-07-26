@@ -7,15 +7,15 @@ ms.date: 03/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b106607a535adc074a241ecee0b2db66e137c687
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1ac89b23d9b027c8f5fd02daa28a4246cddf48f1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345332"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470140"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 저장 프로시저를 사용 하 여 R 코드 운영
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server Machine Learning Services에서 R 및 Python 기능을 사용 하는 경우 솔루션을 프로덕션 환경으로 이동 하는 가장 일반적인 방법은 저장 프로시저에 코드를 포함 하는 것입니다. 이 문서에서는 SQL Server를 사용 하 여 R 코드를 운영 화 때 고려할 SQL 개발자를 위한 핵심 사항을 요약 합니다.
 

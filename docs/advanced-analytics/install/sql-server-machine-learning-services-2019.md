@@ -8,15 +8,15 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8996d47c58841f668813c8ff344683150e456fb3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 218ae9bd0685370f38942592fd32da75272fbcac
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345001"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470306"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019의 SQL Server Machine Learning Services 설치의 차이점  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Windows에서 SQL Server 2019 설치 프로그램은 외부 프로세스에 대 한 격리 메커니즘을 변경 합니다. 이 변경 내용은 Windows에서 실행 되는 클라이언트 응용 프로그램에 대 한 격리 기술인 로컬 작업자 계정을 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)으로 바꿉니다. 
 

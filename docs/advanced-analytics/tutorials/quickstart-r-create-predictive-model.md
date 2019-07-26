@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 39310d935ddefe463b81af495f63304822035818
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 7de37b16c04cf2f972e36c11ba5dfb53721e6094
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345480"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469440"
 ---
 # <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>빠른 시작: SQL Server에서 R을 사용 하 여 예측 모델 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 빠른 시작에서는 R을 사용 하 여 모델을 학습 한 다음 SQL Server의 테이블에 모델을 저장 하는 방법을 배웁니다. 모델은 차량에서 수동 전송에 적합 한 확률을 예측 하는 단순한 일반화 된 선형 모델 (글 화 m)입니다. R에 포함 된 `mtcars` 데이터 집합을 사용 합니다.
 

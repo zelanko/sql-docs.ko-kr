@@ -6,15 +6,15 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e50344bc94f25e6efd8303f93506401448f94fd1
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: cb144eb5c766b417884f6f1adb67dc0ac48504a5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344725"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469775"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>데이터 과학 시나리오 및 솔루션 템플릿
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 템플릿은 모범 사례를 보여 주고 솔루션을 더 빠르게 구현할 수 있도록 구성 요소를 제공하는 샘플 솔루션입니다. 각 템플릿은 특정 수직 또는 업계에 대 한 특정 문제를 해결 하도록 설계 되었습니다. 각 템플릿의 작업은 데이터 준비 및 기능 엔지니어링에서 모델 학습 및 점수 매기기까지 확장됩니다. 이러한 템플릿을 사용 하 여가 [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 작동 하는 방법을 알아보세요. 그런 다음 사용자의 시나리오에 맞게 템플릿을 자유롭게 사용자 지정 하 고 사용자 지정 솔루션을 빌드할 수 있습니다. 
 

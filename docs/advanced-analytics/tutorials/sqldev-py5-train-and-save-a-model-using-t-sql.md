@@ -7,15 +7,15 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: dbe5bcb39ddbcc2b4968beccb9363a92cf6e8817
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 41403018f6b3a2740328ad1576f8c357e7896b12
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345878"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470564"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>T-sql을 사용 하 여 Python 모델 학습 및 저장
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 문서는 [SQL 개발자를 위한 데이터베이스 내 Python 분석](sqldev-in-database-python-for-sql-developers.md)자습서의 일부입니다. 
 
@@ -166,7 +166,7 @@ ms.locfileid: "68345878"
     이 저장 프로시저는 모델 학습의 일부로 다음 단계를 수행 합니다.
 
     - SELECT 쿼리는 사용자 지정 스칼라 함수 _fnCalculateDistance_ 을 적용 하 여 선택 및 드롭다운 위치 간의 직접 거리를 계산 합니다. 쿼리 결과는 기본 Python 입력 변수인 `InputDataset`에 저장 됩니다.
-    - _Passenger_count_, _trip_distance_, _trip_time_in_secs_및 _direct_distance_기능 열을 사용 하 여 모델은 *레이블* 또는 결과 열로 사용 되 고 모델은 적합 합니다. 
+    - _Passenger_count_, _trip_distance_, _trip_time_in_secs_및 _direct_distance_기능 열을 사용 하 여 모델은 *레이블* 또는 결과 열로 사용 되 고 모델은 적합 합니다.
     - 학습 된 모델은 serialize 되어 Python 변수에 `logitObj`저장 됩니다. T-sql 키워드 출력을 추가 하 여 저장 프로시저의 출력으로 변수를 추가할 수 있습니다. 다음 단계에서이 변수는 모델의 이진 코드를 데이터베이스 테이블 _nyc_taxi_models_삽입 하는 데 사용 됩니다. 이 메커니즘을 사용 하면 모델을 쉽게 저장 하 고 재사용할 수 있습니다.
 
 2. 다음과 같이 저장 프로시저를 실행 하 여 학습 된 **revoscalepy** 모델을 *nyc_taxi_models*테이블에 삽입 합니다.

@@ -7,15 +7,15 @@ ms.date: 12/18/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f50049b1b93068748da84342d68ab6cb319c5d98
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 84ef5d684e767016491baa6e47e37d1402fc6879
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344891"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470043"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>SQL Server에서 R Server (독립 실행형) 및 Machine Learning Server (독립 실행형)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server는 독립 실행형 R Server 또는 SQL Server와 독립적으로 실행하는 Machine Learning Server 설치 지원을 제공합니다. SQL Server 버전에 따라 독립 실행형 서버는 대규모 통계 및 예측 분석 기능을 추가하는 Microsoft 제공 고성능 라이브러리와 함께 오픈 소스 R 및 경우에 따라 Python을 기반으로합니다. 라이브러리는 또한 R 또는 Python으로 스크립팅된 머신 러닝 작업을 가능하게 합니다. 
 

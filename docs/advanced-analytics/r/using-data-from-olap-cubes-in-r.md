@@ -6,15 +6,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3063758e1186dc81e5ce9e70891403e7afd3a89f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: c8ac0827ba6bfbb2c35e594967925d16d4730915
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345106"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469870"
 ---
 # <a name="using-data-from-olap-cubes-in-r"></a>R에서 OLAP 큐브의 데이터 사용
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **Olapr** 패키지는 Machine Learning Server 및 SQL Server와 함께 사용 하기 위해 Microsoft에서 제공 하는 R 패키지로, OLAP 큐브에서 데이터를 가져오기 위해 MDX 쿼리를 실행할 수 있도록 합니다. 이 패키지를 사용 하면 연결 된 서버를 만들거나 일반 행 집합을 정리할 필요가 없습니다. R에서 직접 OLAP 데이터를 가져올 수 있습니다.
 

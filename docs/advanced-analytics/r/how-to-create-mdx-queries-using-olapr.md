@@ -7,15 +7,15 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2d3b9df3e99abe3a443dd0fa9b66921a0e9a4506
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 09f2f1dcca3fd8d0828a87e8c781d05c4ad8e5f5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345571"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470130"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>OlapR를 사용 하 여 R에서 MDX 쿼리를 만드는 방법
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [Olapr](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) 패키지는 SQL Server Analysis Services에서 호스트 되는 큐브에 대해 MDX 쿼리를 지원 합니다. 기존 큐브에 대 한 쿼리를 작성 하 고, 차원 및 기타 큐브 개체를 탐색 하 고, 데이터를 검색 하기 위해 기존 MDX 쿼리에 붙여 넣을 수 있습니다.
 

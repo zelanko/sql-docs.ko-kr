@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a23896f5242e0f1182b2864e426bbb20aeda763f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0259a4695ab1ee6f42b92e12b47f81e9aa851469
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344811"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469610"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>빠른 시작: SQL Server에서 Python을 사용 하 여 입력 및 출력 처리
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 빠른 시작에서는 SQL Server Machine Learning Services에서 Python을 사용할 때 입력 및 출력을 처리 하는 방법을 보여 줍니다.
 

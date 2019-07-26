@@ -7,15 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0713a126a237f20b2de4e3b16225bb9e5ae26307
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: a224bed65cd7d3fd1b6dda4ed10d56f79ecc12ee
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345573"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470145"
 ---
 # <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Sqlrutils를 사용 하 여 저장 된 pProcedure 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 문서에서는 T-sql 저장 프로시저로 실행 되도록 R 코드를 변환 하는 단계를 설명 합니다. 최상의 결과를 얻으려면 모든 입력을 매개 변수화할 수 있도록 코드를 약간 수정해야 할 수 있습니다.
 

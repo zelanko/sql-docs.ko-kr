@@ -7,15 +7,15 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: eec6d165b8e3aa4130246aae6d4aaf5b4102fc0f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: ecff1f32d129b71a014038fa681e76b9a2f44554
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345828"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470526"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R 모델을 빌드하고 SQL Server에 저장 (연습)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 단계에서는 machine learning 모델을 작성 하 고 모델 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 저장 하는 방법에 대해 알아봅니다. 모델을 저장 하 여 시스템 저장 프로시저, [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 또는 [!INCLUDE[tsql](../../includes/tsql-md.md)] [PREDICT (t-sql) 함수](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)를 사용 하 여 코드에서 직접 호출할 수 있습니다.
 
