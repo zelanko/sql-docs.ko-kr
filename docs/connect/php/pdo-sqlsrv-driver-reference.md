@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a618a360-d4aa-475b-97d0-81979ebad444
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8edc7a19526a0a1e2f8d57e12de505be774c66de
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a8aa5f04ab9ae510ec0a7c3ead0c30600ebb9b48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936187"
 ---
 # <a name="pdosqlsrv-driver-reference"></a>PDO_SQLSRV 드라이버 참조
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,7 +35,7 @@ PDO 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버�
 
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
-[SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Microsoft Drivers for PHP for SQL Server 시작](../../connect/php/getting-started-with-the-php-sql-driver.md)
 

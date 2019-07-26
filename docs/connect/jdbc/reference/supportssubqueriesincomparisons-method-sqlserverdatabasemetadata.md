@@ -1,5 +1,5 @@
 ---
-title: supportsSubqueriesInComparisons 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: supportsSubqueriesInComparisons 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 467d32e6-b47e-4095-9f8b-73e07fb814e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbe03e6e976908d359e7f5f34879f67105c3d9a7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6766181d669498dedd09a475d75315cb2770f414
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968756"
 ---
 # <a name="supportssubqueriesincomparisons-method-sqlserverdatabasemetadata"></a>supportsSubqueriesInComparisons 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsSubqueriesInComparisons()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsSubqueriesInComparisons 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsSubqueriesInComparisons 메서드에 의해 지정 됩니다.  
+ 이 supportsSubqueriesInComparisons 메서드는 supportsSubqueriesInComparisons 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

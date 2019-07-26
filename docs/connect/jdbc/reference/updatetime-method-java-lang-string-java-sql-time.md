@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fbbcef68-b903-4cfd-911c-a7e239d17c74
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f0c83ba68ee231db0f5122dbe16842f50b490b5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2d0c97f49c4d865b5f0aa99b602e5524a0a97b1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998189"
 ---
 # <a name="updatetime-method-javalangstring-javasqltime"></a>updateTime 메서드(java.lang.String, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: setCharacterStream 메서드 (SQLServerNClob) | Microsoft Docs
+title: setCharacterStream 메서드(SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 09042ee9-dfb1-4d0b-82bd-d1224b0aea80
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dbddcadfec0ed7b2bab9573717d0079240443a94
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: dc966b97231f491a5f3c2cdb71c457f0324a8df3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974855"
 ---
 # <a name="setcharacterstream-method-sqlservernclob"></a>setCharacterStream 메서드(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.io.Writer setCharacterStream(long pos)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setCharacterStream 메서드 setCharacterStream java.sql.NClob 인터페이스의 메서드에 의해 지정 됩니다.  
+ 이 setCharacterStream 메서드는 setCharacterStream 인터페이스의 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerNClob 메서드](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

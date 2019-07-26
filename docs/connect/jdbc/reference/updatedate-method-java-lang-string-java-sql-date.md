@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4fbe9123-7365-4a8f-bbd5-dc2b16f1b231
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b1ba26a22d3ee06041b6a6db051ad6363fa393b7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2eee4ccb8230ee32398cb75445297950ff89aa94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999146"
 ---
 # <a name="updatedate-method-javalangstring-javasqldate"></a>updateDate 메서드(java.lang.String, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a56e08ae-6f4e-4dc6-b175-ff457d0d7a81
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8b6d796bbcea2cbb7956cc966c9436793b693e92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6264c962f843a8e7b05c0d3fd0297bb1e4a8fdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978956"
 ---
 # <a name="gettimedatefunctions-method-sqlserverdatabasemetadata"></a>getTimeDateFunctions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getTimeDateFunctions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getTimeDateFunctions 메서드는 java.sql.DatabaseMetaData 인터페이스의 getTimeDateFunctions 메서드에 의해 지정 됩니다.  
+ 이 getTimeDateFunctions 메서드는 java.sql.DatabaseMetaData 인터페이스의 getTimeDateFunctions 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

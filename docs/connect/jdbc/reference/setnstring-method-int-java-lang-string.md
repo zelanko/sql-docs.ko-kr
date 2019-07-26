@@ -1,5 +1,5 @@
 ---
-title: setNString 메서드 (int, java.lang.String) | Microsoft Docs
+title: setNString 메서드(int, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b7da6d44-f5b1-44f8-95f5-40179968b1b0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56e07aec8b54eac95340c6997bdaa676e7cf0219
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 835cbbfe7e4d117957eaa811c40c98d9481066ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800361"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973653"
 ---
 # <a name="setnstring-method-int-javalangstring"></a>setNString 메서드(int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +43,7 @@ public final void setNString(int parameterIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 에 대 한이 메서드를 사용할지 **NCHAR**, **NVARCHAR**를 **NTEXT**, 및 **XML** 데이터 형식입니다.  
+ 이 메서드는 **NCHAR**, **NVARCHAR**, **NTEXT**및 **XML** 데이터 형식에 사용 해야 합니다.  
   
  이 setNString 메서드는 java.sql.PreparedStatement 인터페이스의 setNString 메서드에 의해 지정됩니다.  
   

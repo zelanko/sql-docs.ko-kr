@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5442e564d7b085c144ffe98a4b67eb74499bf975
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13da9b638f117bc84700b044c6c2e8e70ada8518
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015094"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server 다운로드
 
@@ -23,7 +22,7 @@ ms.locfileid: "66796205"
 
 ## <a name="windows"></a>Windows
 
-다음 버전의 Windows에서 php 드라이버 다운로드에 사용할 수 있습니다.
+Windows에서 PHP 용 다음 버전의 드라이버를 다운로드할 수 있습니다.
 
 - [Microsoft Drivers 5.6 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57916)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://www.microsoft.com/download/details.aspx?id=57163)
@@ -33,7 +32,7 @@ ms.locfileid: "66796205"
 
 ## <a name="linux-and-macos"></a>Linux 및 macOS
 
-Php 드라이버 다운로드 쉽게 되 고 PECL를 사용 하 여 Linux 및 macOS에 설치 합니다. 참조 된 [Linux 및 macOS 설치 자습서](installation-tutorial-linux-mac.md) 세부 정보에 대 한 합니다. Linux 및 macOS에서 PHP 용 드라이버를 수동으로 설치 해야 할 경우 다음 버전은 다운로드할 수 있습니다.
+Linux 및 macOS에서 PECL를 사용 하 여 PHP 용 드라이버를 쉽게 다운로드 하 고 설치할 수 있습니다. 자세한 내용은 [Linux 및 macOS 설치 자습서](installation-tutorial-linux-mac.md) 를 참조 하세요. Linux 및 macOS에서 PHP 용 드라이버를 수동으로 설치 해야 하는 경우 다음 버전을 다운로드할 수 있습니다.
 
 - [Microsoft Drivers 5.6 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 - [Microsoft Drivers 5.3 for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
@@ -46,7 +45,7 @@ Php 드라이버 다운로드 쉽게 되 고 PECL를 사용 하 여 Linux 및 ma
 
 [Microsoft Drivers for PHP for SQL Server에 대한 시스템 요구 사항](system-requirements-for-the-php-sql-driver.md)
 
-[SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드 | Microsoft Docs](programming-guide-for-php-sql-driver.md)
 
 [SQLSRV 드라이버 API 참조](sqlsrv-driver-api-reference.md)
 

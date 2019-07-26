@@ -1,5 +1,5 @@
 ---
-title: supportsOrderByUnrelated 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: supportsOrderByUnrelated 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9ea6c534-8132-49f3-aac3-a12ec4c46df2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 54f0fb8c780c79c1857a6e027ddf24a51fad7477
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5ddbb8fa811a4370db06b4992eb43e26845e1298
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66763873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969077"
 ---
 # <a name="supportsorderbyunrelated-method-sqlserverdatabasemetadata"></a>supportsOrderByUnrelated 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsOrderByUnrelated()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- **true** 지원 되는 경우. 그렇지 않으면 **false**입니다.  
+ 지원 되는 경우 **true** 입니다. 그렇지 않으면 **false**입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 supportsOrderByUnrelated 메서드는 java.sql.DatabaseMetaData 인터페이스의 supportsOrderByUnrelated 메서드에 의해 지정 됩니다.  
+ 이 supportsOrderByUnrelated 없는 메서드는 java. DatabaseMetaData 인터페이스의 Supportsorderbybymethod에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

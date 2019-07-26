@@ -1,5 +1,5 @@
 ---
-title: getMaxUserNameLength 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: getMaxUserNameLength 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 09ec7d40-4c4a-4d89-ba11-78e5327b5759
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 519cb4fae291bddabc77137cb1084afb970da8e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 272fd1bbcacabda3bf2b3ecfe236e6c14354f9cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981895"
 ---
 # <a name="getmaxusernamelength-method-sqlserverdatabasemetadata"></a>getMaxUserNameLength 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxUserNameLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getMaxUserNameLength 메서드는 java.sql.DatabaseMetaData 인터페이스의 getMaxUserNameLength 메서드에 의해 지정 됩니다.  
+ 이 getMaxUserNameLength 메서드는 getMaxUserNameLength 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

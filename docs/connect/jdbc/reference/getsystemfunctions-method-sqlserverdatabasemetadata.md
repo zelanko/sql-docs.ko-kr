@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6d390ec5-9ee2-49c4-b661-a93b55691dd1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0176be5707f0e0af9fa2444445881eed3039d532
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08df5c1c52712e8180d18dbe930cea271ca03e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979272"
 ---
 # <a name="getsystemfunctions-method-sqlserverdatabasemetadata"></a>getSystemFunctions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getSystemFunctions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getSystemFunctions 메서드는 java.sql.DatabaseMetaData 인터페이스의 getSystemFunctions 메서드에 의해 지정 됩니다.  
+ 이 getSystemFunctions 메서드는 java.sql.DatabaseMetaData 인터페이스의 getSystemFunctions 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

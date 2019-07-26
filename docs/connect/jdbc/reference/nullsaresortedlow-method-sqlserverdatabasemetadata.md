@@ -1,5 +1,5 @@
 ---
-title: nullsAreSortedLow 메서드 (SQLServerDatabaseMetaData) | Microsoft Docs
+title: nullsAreSortedLow 메서드(SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 30c06a9d-3513-42d0-8b2a-5a20ac31eb0e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9d4758c90abb72d87a1fd4de0501a9e822f45641
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2259a68458b6ec1d82019bec7167ca167aa99d9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976638"
 ---
 # <a name="nullsaresortedlow-method-sqlserverdatabasemetadata"></a>nullsAreSortedLow 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean nullsAreSortedLow()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 nullsAreSortedLow 메서드는 java.sql.DatabaseMetaData 인터페이스의 nullsAreSortedLow 메서드에 의해 지정 됩니다.  
+ 이 nullsAreSortedLow 메서드는 nullsAreSortedLow 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

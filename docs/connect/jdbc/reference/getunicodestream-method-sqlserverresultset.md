@@ -1,5 +1,5 @@
 ---
-title: getUnicodeStream 메서드 (SQLServerResultSet) | Microsoft Docs
+title: getUnicodeStream 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0dd61865-663b-47e2-b417-e9df418894cc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f225dafb0316775e7491036f84e24a03bc326546
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 079663faa466b171df35481ee69374194c015acb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978386"
 ---
 # <a name="getunicodestream-method-sqlserverresultset"></a>getUnicodeStream 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

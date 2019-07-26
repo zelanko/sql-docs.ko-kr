@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e29fd659e2119682325b3df6725aefc37953b452
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ca79a13146df59b0c7159de112feee3ec478249d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015102"
 ---
 # <a name="converting-data-types"></a>데이터 형식 변환
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,10 +31,10 @@ ms.locfileid: "66796250"
 |[방법: SQL Server 데이터 형식 지정](../../connect/php/how-to-specify-sql-server-data-types-when-using-the-sqlsrv-driver.md)|데이터를 서버에 보낼 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 지정하는 방법을 보여 줍니다.|  
 |[방법: PHP 데이터 형식 지정](../../connect/php/how-to-specify-php-data-types.md)|서버에서 데이터를 검색할 때 PHP 데이터 형식을 지정하는 방법을 보여 줍니다.|  
 |[방법: 기본 제공 UTF-8 지원을 사용하여 UTF-8 데이터 보내기 및 검색](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|UTF-8 데이터에 대한 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 기본 제공 지원을 사용하는 방법을 보여 줍니다.<br /><br />UTF-8 문자 지원이 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 버전 1.1에 추가되었습니다.|  
-|[방법: Linux 및 macOS에서 ASCII 데이터 전송 및 검색](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|사용 하는 방법을 보여 줍니다 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]의 Linux 또는 macOS에서 ASCII 데이터에 대 한 지원.<br /><br />버전 5.2에서에서 비 Windows 환경에서 ASCII 문자에 대 한 지원이 추가 되었습니다는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]합니다.|
+|[방법: Linux 및 macOS에서 ASCII 데이터 전송 및 검색](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Linux 또는 macos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에서 ASCII 데이터에 대 한 지원을 사용 하는 방법을 보여 줍니다.<br /><br />Windows 이외의 환경에서 ASCII 문자에 대 한 지원이의 버전 5.2 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에 추가 되었습니다.|
   
 ## <a name="see-also"></a>참고 항목  
-[SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)
 

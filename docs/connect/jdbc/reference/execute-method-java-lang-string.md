@@ -1,5 +1,5 @@
 ---
-title: execute 메서드 (java.lang.String) | Microsoft Docs
+title: execute 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a871917e-d286-46c3-96cf-2e8e8b22111c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d3ffb7c175c21d56467899bba9de7c110e324d1d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 09adea323a5a2930e9c636a1b2e1b00567dbd9ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954955"
 ---
 # <a name="execute-method-javalangstring"></a>execute 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public final boolean execute(java.lang.String sql)
  SQL 문이 포함된 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- **true** 문에서 결과 집합을 반환 합니다. **false** 업데이트 횟수 또는 없는 결과 반환 하는 경우.  
+ 문에서 결과 집합을 반환 하면 **true** 입니다. 업데이트 횟수가 반환 되거나 결과가 반환 되지 않으면 **false** 입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

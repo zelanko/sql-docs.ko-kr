@@ -1,5 +1,5 @@
 ---
-title: getAsciiStream 메서드 (SQLServerResultSet) | Microsoft Docs
+title: getAsciiStream 메서드(SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 57560f0a-0fb8-40dd-bbe5-49feb502b9bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d56958b0a5317f02ab1c4cf8b911306b11bfad5a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 983d1f9c670801995d8a29d82cf71500605bf7ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954108"
 ---
 # <a name="getasciistream-method-sqlserverresultset"></a>getAsciiStream 메서드(SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8d1c3848-bdb7-452a-862f-6421e1a7ce8b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3e2431a61089f2128fa73feea8893a3a1c82bffa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6b38d58ddf81f0b8439912b865b1d94a7b15ecf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981268"
 ---
 # <a name="getnumericfunctions-method-sqlserverdatabasemetadata"></a>getNumericFunctions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getNumericFunctions()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getNumericFunctions 메서드는 java.sql.DatabaseMetaData 인터페이스의 getNumericFunctions 메서드에 의해 지정 됩니다.  
+ 이 getNumericFunctions 메서드는 java.sql.DatabaseMetaData 인터페이스의 getNumericFunctions 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

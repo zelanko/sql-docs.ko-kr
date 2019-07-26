@@ -1,5 +1,5 @@
 ---
-title: 보안 고려 사항 Microsoft Drivers for PHP for SQL Server | Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server의 보안 고려 사항 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797059"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992891"
 ---
-# <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>보안 고려 사항 Microsoft Drivers for PHP for SQL Server
+# <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server에 대 한 보안 고려 사항
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-이 항목에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하는 애플리케이션 개발, 배포 및 실행과 관련된 보안 고려 사항을 설명합니다. 자세한 내용을 보려면 SQL Server 보안에 대 한 정보를 참조 하세요 [SQL Server 보안 개요](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security)합니다.  
+이 항목에서는 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]를 사용하는 애플리케이션 개발, 배포 및 실행과 관련된 보안 고려 사항을 설명합니다. SQL Server 보안에 대 한 자세한 내용은 [SQL Server 보안 개요](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security)를 참조 하세요.  
   
 ## <a name="connect-using-windows-authentication"></a>Windows 인증을 사용하여 연결  
 다음과 같은 이유로 가능하면 SQL Server에 연결하는 데 Windows 인증을 사용해야 합니다.  
@@ -54,5 +53,5 @@ SQL 주입 공격 및 관련된 보안 고려 사항에 대한 자세한 내용�
 배포된 애플리케이션에 대해 로그가 보안 위치에 기록되거나 해당 로깅이 해제되었는지 확인합니다. 그러면 로그 파일에 기록된 정보에 최종 사용자가 액세스할 가능성이 차단됩니다. 자세한 내용은 [Logging Activity](../../connect/php/logging-activity.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
-[SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
   

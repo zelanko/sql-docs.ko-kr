@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 257c6f53-9137-4619-a613-eee33d2077e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ab00d886cb8d30dbf61ed4de4d9911b42a4dd584
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2073159ce86604109c71c7addce7caac431851c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993573"
 ---
 # <a name="how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver"></a>방법: SQLSRV 드라이버를 사용하여 오류 및 경고 처리 구성
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -101,7 +100,7 @@ sqlsrv_close($conn);
 ## <a name="see-also"></a>참고 항목  
 [작업 로깅](../../connect/php/logging-activity.md)
 
-[SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [SQLSRV 드라이버 API 참조](../../connect/php/sqlsrv-driver-api-reference.md)  
   

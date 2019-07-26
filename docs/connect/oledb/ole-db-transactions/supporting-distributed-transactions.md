@@ -1,6 +1,6 @@
 ---
-title: 분산된 트랜잭션 지원 | Microsoft Docs
-description: SQL Server 용 OLE DB 드라이버에서 분산된 트랜잭션
+title: 분산 트랜잭션 지원 | Microsoft Docs
+description: OLE DB Driver for SQL Server의 분산 트랜잭션
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -18,13 +18,12 @@ helpviewer_keywords:
 - MS DTC, about distributed transaction support
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 97c7c4744d21697620740d2a865e5e6a66558a0f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 22527cdfa08907dfdf120ef32c918ecb9eaf86bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993981"
 ---
 # <a name="supporting-distributed-transactions"></a>분산 트랜잭션 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "66766122"
 
   SQL Server용 OLE DB 드라이버 소비자는 **ITransactionJoin::JoinTransaction** 메서드를 사용하여 MS DTC(Microsoft Distributed Transaction Coordinator)가 관리하는 분산 트랜잭션에 참가할 수 있습니다.  
   
- MS DTC는 클라이언트가 여러 데이터 저장소에 대한 둘 이상의 연결에서 통합 트랜잭션을 시작하거나 통합 트랜잭션에 참가하는 데 사용할 수 있는 COM 개체를 제공합니다. OLE DB Driver for SQL Server 소비자 사용 하는 MS DTC 트랜잭션을 시작 합니다 **ITransactionDispenser** 인터페이스입니다. **ITransactionDispenser**의 **BeginTransaction** 멤버는 분산 트랜잭션 개체에 대한 참조를 반환합니다. 이 참조는 사용 하 여 SQL Server에 대 한 OLE DB 드라이버 전달할 **JoinTransaction**합니다.  
+ MS DTC는 클라이언트가 여러 데이터 저장소에 대한 둘 이상의 연결에서 통합 트랜잭션을 시작하거나 통합 트랜잭션에 참가하는 데 사용할 수 있는 COM 개체를 제공합니다. 트랜잭션을 시작 하기 위해 SQL Server 소비자 용 OLE DB 드라이버는 MS DTC **ITransactionDispenser** 인터페이스를 사용 합니다. **ITransactionDispenser**의 **BeginTransaction** 멤버는 분산 트랜잭션 개체에 대한 참조를 반환합니다. 이 참조는 **JoinTransaction**을 사용 하 여 SQL Server에 대 한 OLE DB 드라이버로 전달 됩니다.  
   
  MS DTC는 분산 트랜잭션에 대해 비동기 커밋 및 중단을 지원합니다. 비동기 트랜잭션 상태에 대한 알림을 제공하려면 소비자는 **ITransactionOutcomeEvents** 인터페이스를 구현하고 이 인터페이스를 MS DTC 트랜잭션 개체에 연결합니다.  
   
@@ -42,9 +41,9 @@ ms.locfileid: "66766122"
 |매개 변수|설명|  
 |---------------|-----------------|  
 |*punkTransactionCoord*|MS DTC 트랜잭션 개체에 대한 포인터입니다.|  
-|*IsoLevel*|SQL Server 용 OLE DB 드라이버에서 무시 됩니다. MS DTC 통합 트랜잭션의 격리 수준은 소비자가 MS DTC로부터 트랜잭션 개체를 가져올 때 결정됩니다.|  
-|*IsoFlags*|0이어야 합니다. OLE DB Driver for SQL Server 소비자가 모든 다른 값을 지정 하는 경우 XACT_E_NOISORETAIN을 반환 합니다.|  
-|*POtherOptions*|그렇지 않은 경우 null 인 경우에 OLE DB Driver for SQL Server 인터페이스에서 옵션 개체를 요청 합니다. 경우 XACT_E_NOTIMEOUT을 반환 하는 OLE DB Driver for SQL Server 옵션 개체의 *ulTimeout* 멤버가 0이 아닙니다. OLE DB Driver for SQL Server의 값을 무시 합니다 *szDescription* 멤버입니다.|  
+|*IsoLevel*|SQL Server에 대 한 OLE DB 드라이버에서 무시 됩니다. MS DTC 통합 트랜잭션의 격리 수준은 소비자가 MS DTC로부터 트랜잭션 개체를 가져올 때 결정됩니다.|  
+|*IsoFlags*|0이어야 합니다. 소비자가 다른 값을 지정 하는 경우 SQL Server의 OLE DB 드라이버는 XACT_E_NOISORETAIN를 반환 합니다.|  
+|*POtherOptions*|NULL이 아닌 경우 SQL Server OLE DB 드라이버가 인터페이스에서 옵션 개체를 요청 합니다. Options 개체의 *Ultimeout* 멤버가 0이 아닌 경우 SQL Server OLE DB 드라이버는 XACT_E_NOTIMEOUT를 반환 합니다. SQL Server에 대 한 OLE DB 드라이버는 *Szdescription* 멤버의 값을 무시 합니다.|  
   
  이 예에서는 MS DTC를 사용하여 트랜잭션을 관리합니다.  
   

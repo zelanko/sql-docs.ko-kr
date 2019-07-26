@@ -1,5 +1,5 @@
 ---
-title: setAsciiStream 메서드 (SQLServerNClob) | Microsoft Docs
+title: setAsciiStream 메서드(SQLServerNClob) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 617ece92-0fb1-4f95-b32d-29b5b56eb3fb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aebc713ab5256527571eb1a4277caa74e53623d7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 043a94108bdb7c8938f06e8bf1d4bf58651fbf21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975371"
 ---
 # <a name="setasciistream-method-sqlservernclob"></a>setAsciiStream 메서드(SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.io.OutputStream setAsciiStream(long pos)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 setAsciiStream 메서드 setAsciiStream java.sql.NClob 인터페이스의 메서드에 의해 지정 됩니다.  
+ 이 setAsciiStream 메서드는 setAsciiStream 인터페이스의 메서드에 의해 지정 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerNClob 메서드](../../../connect/jdbc/reference/sqlservernclob-methods.md)   

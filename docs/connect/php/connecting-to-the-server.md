@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c251a239-e0bd-4f45-9207-b76651072dd0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 47a894b93a0228782e48116dc3bcc2272e4264c2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 789fec0bd9299f4d436c664306d380bb9a7da153
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015137"
 ---
 # <a name="connecting-to-the-server"></a>서버에 연결
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,9 +38,9 @@ ms.locfileid: "66795814"
 |[LocalDB 지원](../../connect/php/php-driver-for-sql-server-support-for-localdb.md)|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]에 추가된 LocalDB 기능에 대한 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 지원을 설명합니다.|  
 |[고가용성, 재해 복구 지원](../../connect/php/php-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 추가된 고가용성의 재해 복구 기능을 활용하도록 애플리케이션을 구성할 수 있는 방법을 설명합니다.|  
 |[Microsoft Azure SQL Database에 연결](../../connect/php/connecting-to-microsoft-azure-sql-database.md)|Azure SQL Database에 연결하는 방법에 대해 설명합니다.|  
-|[연결 복원력](../../connect/php/connection-resiliency.md)|끊어진된 연결을 다시 설정 하는 연결 복원 력 기능을 설명 합니다.|  
+|[연결 복원력](../../connect/php/connection-resiliency.md)|끊어진 연결을 해제 하는 연결 복원 력 기능에 대해 설명 합니다.|  
 
 ## <a name="see-also"></a>참고 항목  
-[SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [예제 애플리케이션&#40;SQLSRV 드라이버&#41;](../../connect/php/example-application-sqlsrv-driver.md)  

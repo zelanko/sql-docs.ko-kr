@@ -1,5 +1,5 @@
 ---
-title: SQLServerException 생성자 (java.lang.String, java.lang.String, int, java.lang.Throwable) | Microsoft Docs
+title: SQLServerException 생성자(java.lang.String, java.lang.String, int, java.lang.Throwable) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,18 +13,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fbd40c6edb2e4b623f0e2fbf7e00ad91dc683a04
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18827d05bc5567b4566eaa006d88c249874132cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66766869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971081"
 ---
-# <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>SQLServerException 생성자 (java.lang.String, java.lang.String, int, java.lang.Throwable)
+# <a name="sqlserverexception-constructor-javalangstring-javalangstring-int-javalangthrowable"></a>SQLServerException 생성자(java.lang.String, java.lang.String, int, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  새 인스턴스를 초기화 합니다 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스를 **문자열** 개체를 **문자열** 개체를 **int**, 및를 **throw 할 수 있는** 개체입니다.
+  **문자열** 개체, **문자열** 개체, **int**및 **java.lang.throwable** 개체가 지정 된 경우 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) 클래스의 새 인스턴스를 초기화 합니다.
 
 ## <a name="syntax"></a>구문  
   
@@ -51,7 +50,7 @@ public SQLServerException(java.lang.String errText,
  
  *cause*  
   
- 예외의 원인을 포함 하는 throw 할 수 있는 개체입니다.
+ 예외의 원인을 포함 하는 java.lang.throwable 개체입니다.
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerException 생성자](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   

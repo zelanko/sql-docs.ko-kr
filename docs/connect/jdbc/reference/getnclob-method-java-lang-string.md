@@ -1,5 +1,5 @@
 ---
-title: getNClob 메서드 (java.lang.String) | Microsoft Docs
+title: getNClob 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: be01ce56-8f13-437b-8de6-246cda5f7830
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b95a22911f1b7e49f6310e9c06a7ea4ef4a899fa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cbe655691ed898dfbb8eac5da5bb28d4d6cde686
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66784461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981499"
 ---
 # <a name="getnclob-method-javalangstring"></a>getNClob 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public java.sql.NClob getNClob(java.lang.String parameterName)
  매개 변수 이름이 들어 있는 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- ANClobobject 합니다.  
+ ANClobobject.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -44,7 +43,7 @@ public java.sql.NClob getNClob(java.lang.String parameterName)
 ## <a name="remarks"></a>Remarks  
  이 getNClob 메서드는 java.sql.CallableStatement 인터페이스의 getNClob 메서드에 의해 지정됩니다.  
   
- 이 메서드는 검색만 지원 **NCHAR**, **NVARCHAR**하십시오 **NTEXT**, 및 **XML** 매개 변수. 다른 데이터 형식 매개 변수에서 이러한 메서드를 호출하면 예외가 발생합니다.  
+ 이 메서드는 **NCHAR**, **NVARCHAR**, **NTEXT**및 **XML** 매개 변수만 검색 하는 것을 지원 합니다. 다른 데이터 형식 매개 변수에서 이러한 메서드를 호출하면 예외가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getNClob 메서드 &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md)   

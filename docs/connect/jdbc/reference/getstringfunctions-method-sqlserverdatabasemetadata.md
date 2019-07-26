@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4fb489ee-185e-405a-a4f7-3eb73c29bcd6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 20dfb1ecadbd417a79e74171e4f247e6b09ed40f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7a17f4482c46b9e9650b9debbb8a1517f022f1bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979374"
 ---
 # <a name="getstringfunctions-method-sqlserverdatabasemetadata"></a>getStringFunctions 메서드(SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public java.lang.String getStringFunctions()
 ```  
   
 ## <a name="return-value"></a>반환 값  
- A **문자열** 포함 하는 **문자열** 함수입니다.  
+ **문자열** 함수를 포함 하는 **문자열** 입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- 이 getStringFunctions 메서드는 java.sql.DatabaseMetaData 인터페이스의 getStringFunctions 메서드에 의해 지정 됩니다.  
+ 이 getStringFunctions 메서드는 java.sql.DatabaseMetaData 인터페이스의 getStringFunctions 메서드에 의해 지정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 메서드](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

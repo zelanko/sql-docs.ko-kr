@@ -7,14 +7,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: jroth
 author: MightyPen
-ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9d85cee931774da3efd0956ae259bd6eecb42eed
+ms.sourcegitcommit: b57d445d73a0133c7998653f2b72cf09ee83a208
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680077"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68231851"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,12 +57,12 @@ Always Encrypted를 사용하도록 설정해도 암호화 또는 암호 해독�
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>암호화된 열에서 데이터 검색 및 수정
 
-연결에 Always Encrypted를 사용 하면 표준 ODBC Api를 사용할 수 있습니다. ODBC Api를 검색 하거나 암호화 된 데이터베이스 열에서 데이터를 수정할 수 있습니다. 다음 설명서 항목이이 도움이 될 수 있습니다.
+연결에 Always Encrypted을 사용 하도록 설정 하면 표준 ODBC Api를 사용할 수 있습니다. ODBC Api는 암호화 된 데이터베이스 열의 데이터를 검색 하거나 수정할 수 있습니다. 다음 설명서 항목은이 작업에 도움이 될 수 있습니다.
 
 - [ODBC 샘플 코드](cpp-code-example-app-connect-access-sql-db.md)
 - [ODBC 프로그래머 참조](../../odbc/reference/odbc-programmer-s-reference.md)
 
-응용 프로그램이 필요한 데이터베이스 권한이 있어야 하며 열 마스터 키에 액세스할 수 있어야 합니다. 그런 다음 드라이버는 암호화 된 열을 대상으로 하는 쿼리 매개 변수를 암호화 합니다. 드라이버에는 암호화 된 열에서 검색 한 데이터 암호 해독 합니다. 드라이버는 모든이 암호화 하 고 소스 코드의 도움 없이도 암호 해독을 수행 합니다. 프로그램 처럼 열 암호화 되지 않은 것입니다.
+응용 프로그램에 필요한 데이터베이스 권한이 있어야 하 고 열 마스터 키에 액세스할 수 있어야 합니다. 그런 다음, 드라이버는 암호화 된 열을 대상으로 하는 모든 쿼리 매개 변수를 암호화 합니다. 또한이 드라이버는 암호화 된 열에서 검색 된 데이터의 암호를 해독 합니다. 드라이버는 소스 코드의 도움 없이 모든 암호화 및 암호 해독을 수행 합니다. 프로그램에는 열이 암호화 되지 않은 것 처럼 됩니다.
 
 상시 암호화를 사용하지 않는 경우 암호화된 열을 대상으로 하는 매개 변수가 있는 쿼리가 실패합니다. 쿼리에 암호화된 열을 대상으로 하는 매개 변수가 없는 경우 암호화된 열에서 데이터를 검색할 수 있습니다. 그러나 드라이버에서 암호 해독을 시도하지 않고, 애플리케이션이 암호화된 이진 데이터를 바이트 배열로 수신합니다.
 
@@ -363,9 +362,10 @@ ODBC Driver for SQL Server에는 다음과 같은 기본 제공 키 저장소 �
 
 ### <a name="using-the-azure-key-vault-provider"></a>Azure Key Vault 공급자 사용
 
-Azure 주요 자격 증명 모음은 상시 암호화에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). Linux, macOS 및 Windows의 ODBC Driver for SQL Server에는 Azure Key Vault용 기본 제공 열 마스터 키 저장소 공급자가 포함되어 있습니다. Always Encrypted에 대해 Azure Key Vault를 구성하는 방법에 대한 자세한 내용은 [Azure Key Vault - 단계별](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Key Vault 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) 및 [Azure Key Vault에 열 마스터 키 만들기](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)를 참조하세요.
+AKV(Azure Key Vault)는 Always Encrypted에 대한 열 마스터 키를 저장 및 관리하는 편리한 옵션입니다(특히 애플리케이션이 Azure에서 호스트되는 경우). Linux, macOS 및 Windows의 ODBC Driver for SQL Server에는 Azure Key Vault용 기본 제공 열 마스터 키 저장소 공급자가 포함되어 있습니다. Always Encrypted에 대해 Azure Key Vault를 구성하는 방법에 대한 자세한 내용은 [Azure Key Vault - 단계별](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/), [Key Vault 시작](https://azure.microsoft.com/documentation/articles/key-vault-get-started/) 및 [Azure Key Vault에 열 마스터 키 만들기](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)를 참조하세요.
 
 > [!NOTE]
+> ODBC 드라이버는 AKV 인증에 대 한 Active Directory Federation Services 지원 하지 않습니다. AKV에 Azure Active Directory 인증을 사용 하는 경우 Active Directory 구성에 페더레이션된 서비스가 포함 되 면 인증에 실패할 수 있습니다.
 > Linux 및 macOS의 드라이버 버전 17.2 이상에서 이 공급자를 사용하려면 `libcurl`이 필요하지만, 다른 드라이버 관련 작업에서는 필요하지 않기 때문에 명시적 종속성은 아닙니다. `libcurl`에 관한 오류가 발생하는 경우 해당 패키지가 설치되었는지 확인하십시오.
 
 드라이버에서 다음과 같은 자격 증명 유형을 사용하여 Azure Key Vault에 인증할 수 있습니다.

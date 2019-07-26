@@ -1,5 +1,5 @@
 ---
-title: getString 메서드 (java.lang.String) | Microsoft Docs
+title: getString 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f67371e0-e879-4188-85fc-ecb85f0be2a9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 114eaa8b3300f5e0785a3bac389eb00d4d5ee7ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4ff58d1a2f58e044b49767f8fb2982b669a7b78
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66773722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979437"
 ---
 # <a name="getstring-method-javalangstring"></a>getString 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

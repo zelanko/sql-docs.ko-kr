@@ -1,5 +1,5 @@
 ---
-title: getArray 메서드 (java.lang.String) | Microsoft Docs
+title: getArray 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4610cbaf-5638-4a66-bd83-70aefca40e58
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 24bb9e5831e3eb79bc5d9fa451ca4e73fcd56fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc6050bfbd2ba444e59b57209355d663b9f1f7ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800072"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67954365"
 ---
 # <a name="getarray-method-javalangstring"></a>getArray 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,5 +1,5 @@
 ---
-title: updateTime 메서드 (int, java.sql.Time) | Microsoft Docs
+title: updateTime 메서드(int, java.sql.Time) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fa7a3ca5-1111-4480-97ca-65b632aa1e5b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7c5b8d73641e787906c52f32f705dc32ef26d261
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6a4b48fc5d573f8b91c0538956b83ecd15e3d9c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000261"
 ---
 # <a name="updatetime-method-int-javasqltime"></a>updateTime 메서드(int, java.sql.Time)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

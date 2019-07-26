@@ -10,24 +10,23 @@ ms.topic: conceptual
 ms.assetid: 91df14fb-ff92-457f-ad51-50da7a254630
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5095b2334fa9f138ed8791d2152e959cf14c77a5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b26eee3bcb7a182cd6ce3d71a013fc44d61c3137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975358"
 ---
 # <a name="setasciistream-method-sqlserverpreparedstatement"></a>setAsciiStream 메서드(SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  지정 된 java.io.InputStream 개체에 지정 된 매개 변수 번호를 설정합니다.  
+  지정된 매개 변수 번호를 지정된 java.io.InputStream 개체로 설정합니다.  
   
 ## <a name="overload-list"></a>오버로드 목록  
   
 |속성|설명|  
 |----------|-----------------|  
-|[setAsciiStream 메서드 &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md)|지정 된 java.io.InputStream 개체에 지정 된 매개 변수 번호를 설정합니다.|  
+|[setAsciiStream 메서드 &#40;int, java.io.InputStream&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md)|지정된 매개 변수 번호를 지정된 java.io.InputStream 개체로 설정합니다.|  
 |[setAsciiStream 메서드 &#40;int, java.io.InputStream, int&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-int.md)|지정된 매개 변수 번호를 지정된 바이트 수를 포함하는 지정된 java.io.InputStream 개체로 설정합니다.|  
 |[setAsciiStream 메서드 &#40;int, java.io.InputStream, long&#41;](../../../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-long.md)|지정된 매개 변수 번호를 지정된 바이트 수를 포함하는 지정된 java.io.InputStream 개체로 설정합니다.|  
   

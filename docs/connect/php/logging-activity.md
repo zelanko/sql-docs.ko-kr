@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8612874b351af1cfd9370b8ef29dae4a0c4235e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 29c7c1e3b536e237e2c61a8e3303313ec53fe679
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993333"
 ---
 # <a name="logging-activity"></a>작업 로깅
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -41,9 +40,9 @@ pdo_sqlsrv.log_severity = <number>
 |---------|---------------|  
 |0|로깅이 사용되지 않습니다(아무 것도 정의되지 않은 경우 기본값).|  
 |-1|오류, 경고 및 알림이 기록된다는 것을 지정합니다.|  
-|1|오류가 기록 됩니다 지정 합니다.|  
-|2|경고가 기록 됩니다 지정 합니다.|  
-|4|알림 기록 됩니다 지정 합니다.|  
+|1|오류를 기록 하도록 지정 합니다.|  
+|2|경고를 기록 하도록 지정 합니다.|  
+|4|통지를 기록 하도록 지정 합니다.|  
   
 로깅 정보가 phperrors.log 파일에 추가됩니다.  
   
@@ -96,9 +95,9 @@ php.ini 파일에서 **LogSubsystems** 설정에 대한 정수 값을 지정하�
 |값(괄호 안의 정수)|설명|  
 |-----------------------------------------------|---------------|  
 |SQLSRV_LOG_SEVERITY_ALL(-1)|오류, 경고 및 알림이 기록된다는 것을 지정합니다.|  
-|SQLSRV_LOG_SEVERITY_ERROR(1)|오류가 기록 됩니다 지정 합니다. 기본값입니다.|  
-|SQLSRV_LOG_SEVERITY_WARNING(2)|경고가 기록 됩니다 지정 합니다.|  
-|SQLSRV_LOG_SEVERITY_NOTICE(4)|알림 기록 됩니다 지정 합니다.|  
+|SQLSRV_LOG_SEVERITY_ERROR(1)|오류를 기록 하도록 지정 합니다. 기본값입니다.|  
+|SQLSRV_LOG_SEVERITY_WARNING(2)|경고를 기록 하도록 지정 합니다.|  
+|SQLSRV_LOG_SEVERITY_NOTICE(4)|통지를 기록 하도록 지정 합니다.|  
   
 논리적 OR 연산자(|)를 사용하면 **LogSeverity** 설정에 대해 한 번에 둘 이상의 값을 설정할 수 있습니다. 예를 들어 다음 코드 줄은 오류 및 경고가 기록된다는 것을 지정합니다.  
   
@@ -116,7 +115,7 @@ php.ini 파일에서 정수 값을 사용하여 **LogSeverity** 설정에 대한
 `sqlsrv.LogSeverity = 3`  
   
 ## <a name="see-also"></a>참고 항목  
-[SQL Server 용 PHP 용 Microsoft 드라이버에 대 한 가이드를 프로그래밍](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Microsoft Drivers for PHP for SQL Server 프로그래밍 가이드](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [상수&#40;Microsoft Drivers for PHP for SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 

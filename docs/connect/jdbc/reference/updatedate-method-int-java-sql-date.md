@@ -1,5 +1,5 @@
 ---
-title: updateDate 메서드 (int, java.sql.Date) | Microsoft Docs
+title: updateDate 메서드 (int, java. .sql. Date) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c5fb1292-a5cf-4cdd-8c4a-d1679944a6d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13a8ed675e63d19d3c21dddf54751073593ae156
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3318bc5ebd8eb6496262cc9992a4e516aeebf9fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999160"
 ---
 # <a name="updatedate-method-int-javasqldate"></a>updateDate 메서드(int, java.sql.Date)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

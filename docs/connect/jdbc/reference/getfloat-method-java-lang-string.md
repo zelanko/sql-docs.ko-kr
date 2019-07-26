@@ -1,5 +1,5 @@
 ---
-title: getFloat 메서드 (java.lang.String) | Microsoft Docs
+title: getFloat 메서드(java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b6492341-fdc2-449c-9d03-95a5dadf1bb0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f34ed33a7951ef15762829a08f6669e6bdc5c7b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab60742b06054f5583cc438a68ddb5ed634740f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983028"
 ---
 # <a name="getfloat-method-javalangstring"></a>getFloat 메서드(java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public float getFloat(java.lang.String sCol)
  매개 변수 이름이 들어 있는 **문자열**입니다.  
   
 ## <a name="return-value"></a>반환 값  
- A **float** 값입니다.  
+ **Float** 값입니다.  
   
 ## <a name="exceptions"></a>예외  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48e4771b8d538775ae2e2faec053f0263bd6d653
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a782db89033da42ebf17ed33565ec680fafa0d04
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005916"
 ---
 # <a name="connecting-with-sqlcmd"></a>sqlcmd를 사용하여 연결
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
 [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481) 유틸리티는 Linux 및 macOS 기반 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver에서 사용할 수 있습니다.
   
-다음 명령은 Windows 인증 (Kerberos)을 사용 하는 방법을 보여 줍니다 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증, 각각.
+다음 명령은 각각 Kerberos (Windows 인증) 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증을 사용 하는 방법을 보여 줍니다.
   
 ```  
 sqlcmd -E -Sxxx.xxx.xxx.xxx  
@@ -36,7 +35,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 
 현재 릴리스에서 다음 옵션을 사용할 수 있습니다.  
   
-- -? 표시 `sqlcmd` 사용 합니다.  
+- -? 사용법 `sqlcmd` 을 표시 합니다.  
   
 - -a 패킷 크기를 요청합니다.  
   
@@ -46,13 +45,13 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -C 서버 인증서를 신뢰합니다.  
 
-- -d *database_name* 문제를 `USE` *database_name* 시작 하면 문을 `sqlcmd`합니다.  
+- -d *database_name* 를 `USE` 시작할 `sqlcmd`때 *database_name* 문을 실행 합니다.  
 
 - -D `sqlcmd` -S 옵션에 전달된 값이 DSN(데이터 원본 이름)으로 해석되도록 합니다. 자세한 내용은 이 항목의 끝에 있는 "`sqlcmd` 및 `bcp`에서 DSN 지원"을 참조하세요.  
   
 - -e 표준 출력 디바이스(stdout)에 입력 스크립트를 기록합니다.
 
-- 신뢰할 수 있는 연결, 통합된 인증을 사용합니다. Linux 또는 macOS 클라이언트에서 통합된 인증을 사용 하는 신뢰할 수 있는 연결에 대 한 자세한 내용은 참조 하세요. [Using Integrated Authentication](../../../connect/odbc/linux-mac/using-integrated-authentication.md)합니다.
+- 신뢰할 수 있는 연결, 통합된 인증을 사용합니다. Linux 또는 macOS 클라이언트에서 통합 인증을 사용 하는 트러스트 된 연결을 만드는 방법에 대 한 자세한 내용은 [통합 인증 사용](../../../connect/odbc/linux-mac/using-integrated-authentication.md)을 참조 하세요.
 
 - -h *number_of_rows* 열 머리글 사이에 출력할 행의 수를 지정합니다.  
   
@@ -60,7 +59,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -i *input_file*[,*input_file*[,...]] SQL 문 또는 저장 프로시저의 일괄 처리가 포함된 파일을 식별합니다.  
   
-- -I 집합은 `SET QUOTED_IDENTIFIER` 연결 옵션을 ON입니다.  
+- -I `SET QUOTED_IDENTIFIER` 연결 옵션을 ON으로 설정 합니다.  
   
 - -k 제어 문자를 제거하거나 바꿉니다.  
   
@@ -75,7 +74,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -m *error_level* stdout에 보낼 오류 메시지를 제어합니다.  
   
 - **-M**_multisubnet\_failover_  
-[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 가용성 그룹 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M**은 현재 활성 상태인 서버에 대한 장애 조치를 빠르게 검색하고 연결할 수 있도록 지원합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. 에 대 한 자세한 내용은 [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]를 참조 하세요 [Linux 및 macOS-고가용성 및 재해 복구에 대 한 ODBC 드라이버](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)합니다.  
+[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 가용성 그룹 또는 [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] 장애 조치(failover) 클러스터 인스턴스의 가용성 그룹 수신기에 연결할 때는 항상 **-M**을 지정합니다. **-M**은 현재 활성 상태인 서버에 대한 장애 조치를 빠르게 검색하고 연결할 수 있도록 지원합니다. **–M**이 지정되지 않으면 **-M** 이 해제되어 있습니다. [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]에 대한 자세한 내용은 [Linux 및 macOS의 ODBC 드라이버 - 고가용성 및 재해 복구](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)를 참조하세요.  
   
 > [!NOTE]  
 > **-M** 이 CTP for SUSE Linux에서 지원되지 않습니다. 그러나 `sqlcmd`에 전달된 DSN 파일에서 **MultiSubnetFailover=Yes** 키워드를 지정합니다. 자세한 내용은 이 항목의 끝에 있는 "`sqlcmd` 및 `bcp`에서 DSN 지원"을 참조하세요.  
@@ -88,9 +87,9 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -P 사용자 암호를 지정합니다.  
   
-- -q *commandline_query* 쿼리를 실행할 때 `sqlcmd` 시작 되지만 쿼리 실행이 완료 된 때를 종료 하지 않습니다.  
+- -q *commandline_query* 쿼리를 시작할 때 `sqlcmd` 쿼리를 실행 하지만 쿼리 실행이 완료 되 면 종료 하지 않습니다.  
 
-- -Q *commandline_query* 쿼리를 실행할 때 `sqlcmd` 시작 합니다. 쿼리가 완료되면 `sqlcmd`가 종료됩니다.  
+- -Q *commandline_query* 가 시작 될 때 `sqlcmd` 쿼리를 실행 합니다. 쿼리가 완료되면 `sqlcmd`가 종료됩니다.  
 
 - -r 오류 메시지를 stderr로 리디렉션합니다.
 
@@ -99,13 +98,13 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
 - -s *column_separator_char* 열 구분 기호 문자를 지정 합니다.  
 
 - -S [*protocol*:] *server*[ **,** _port_]  
-인스턴스를 지정 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결할 차원 인지 또는 사용, DSN입니다. Linux 및 macOS에서 ODBC 드라이버-S. 필요 사실은 **tcp** 만 유효한 프로토콜입니다.  
+연결할 인스턴스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 지정 하거나,-D를 사용 하는 경우 DSN을 지정 합니다. Linux 및 macOS의 ODBC 드라이버에는-S가 필요 합니다. **Tcp** 는 유일 하 게 유효한 프로토콜입니다.  
   
 - -t *query_timeout* 명령(또는 SQL 문)이 시간 초과까지의 시간(초)을 지정합니다.  
   
 - -u input_file 형식에 관계없이 output_file이 유니코드 형식으로 저장되도록 지정합니다.  
   
-- -U *login_id* 사용자 로그인 ID를 지정 합니다.  
+- -U *login_id* 사용자 로그인 id를 지정 합니다.  
   
 - -V *error_severity_level* ERRORLEVEL 변수를 설정하는 데 사용되는 심각도를 제어합니다.  
   
@@ -117,9 +116,9 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -X 명령, 시작 스크립트 및 환경 변수를 사용하지 않습니다.  
   
-- -y *variable_length_type_display_width* 설정 된 `sqlcmd` 스크립팅 변수 `SQLCMDMAXFIXEDTYPEWIDTH`합니다.
+- -y *variable_length_type_display_width* 스크립팅 변수 `sqlcmd` `SQLCMDMAXFIXEDTYPEWIDTH`를 설정 합니다.
   
-- -Y *fixed_length_type_display_width* 설정 된 `sqlcmd` 스크립팅 변수 `SQLCMDMAXVARTYPEWIDTH`합니다.
+- -Y *fixed_length_type_display_width* 스크립팅 변수 `sqlcmd` `SQLCMDMAXVARTYPEWIDTH`를 설정 합니다.
 
 
 ## <a name="available-commands"></a>사용 가능한 명령
@@ -167,7 +166,7 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 - -v `sqlcmd` 스크립트에서 사용할 수 있는 `sqlcmd` 스크립팅 변수를 만듭니다.  
   
-다음과 같은 대체 방법을 사용할 수 있습니다: 다른 파일에 추가할 수 있습니다는 하나의 파일 안에 매개 변수를 삽입 합니다. 그러면 매개 변수 파일을 사용하여 값을 바꿀 수 있습니다. 예를 들어 다음과 같은 내용으로 `a.sql`(매개 변수 파일)이라는 파일을 만듭니다.
+다음과 같은 대체 방법을 사용할 수 있습니다. 한 파일에 매개 변수를 추가한 다음 다른 파일에 추가할 수 있습니다. 그러면 매개 변수 파일을 사용하여 값을 바꿀 수 있습니다. 예를 들어 다음과 같은 내용으로 `a.sql`(매개 변수 파일)이라는 파일을 만듭니다.
   
     :setvar ColumnName object_id  
     :setvar TableName sys.objects  
@@ -176,19 +175,19 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
     select $(ColumnName) from $(TableName)  
 
-명령줄에서 결합 `a.sql` 하 고 `b.sql` 에 `c.sql` 다음 명령을 사용 하 여:  
+명령줄에서 다음 명령을 `a.sql` `c.sql` 사용 하 여 `b.sql` 및를 결합 합니다.  
   
     cat a.sql > c.sql 
   
     cat b.sql >> c.sql  
   
-실행할 `sqlcmd` 사용 하 여 `c.sql` 입력 파일:  
+를 `sqlcmd` 실행 하 `c.sql` 고 입력 파일로 사용 합니다.  
   
     slqcmd -S<...> -P<..> -U<..> -I c.sql  
 
-- -z *암호* 암호 변경.  
+- -z *암호* 변경 암호입니다.  
   
-- -Z *암호* 암호 변경 후 종료 합니다.  
+- -Z *암호* 암호를 변경 하 고 종료 합니다.  
 
 ## <a name="unavailable-commands"></a>사용할 수 없는 명령
 
@@ -202,9 +201,9 @@ sqlcmd -Sxxx.xxx.xxx.xxx -Uxxx -Pxxx
   
 ## <a name="dsn-support-in-sqlcmd-and-bcp"></a>sqlcmd 및 bcp에서 DSN 지원
 
--D를 지정하는 경우 **sqlcmd** 또는 **bcp** `-S` 옵션(또는 **sqlcmd** :Connect 명령)의 서버 이름 대신 DSN(데이터 원본 이름)을 지정할 수 있습니다. -D **sqlcmd** 하거나 **bcp** -S 옵션이 DSN에서 지정 된 서버에 연결 합니다.  
+-D를 지정하는 경우 **sqlcmd** 또는 **bcp** `-S` 옵션(또는 **sqlcmd** :Connect 명령)의 서버 이름 대신 DSN(데이터 원본 이름)을 지정할 수 있습니다. -D는 **sqlcmd** 또는 **bcp** 에서 DSN에 지정 된 서버에-S 옵션으로 연결 되도록 합니다.  
   
-시스템 Dsn에 저장 되는 `odbc.ini` 이 ODBC SysConfigDir 디렉터리의 파일 (`/etc/odbc.ini` 표준 설치에서). 사용자 Dsn에 저장 됩니다 `.odbc.ini` 사용자의 홈 디렉터리에서 (`~/.odbc.ini`).
+시스템 dsn은 ODBC sysconfigdir 디렉터리 ( `odbc.ini` `/etc/odbc.ini` 표준 설치)의 파일에 저장 됩니다. 사용자 dsn은 사용자의 `.odbc.ini` 홈 디렉터리 (`~/.odbc.ini`)에 저장 됩니다.
   
 Linux 또는 macOS의 DSN에서 다음 항목이 지원됩니다.
 
@@ -212,11 +211,11 @@ Linux 또는 macOS의 DSN에서 다음 항목이 지원됩니다.
 
 -   **Database=** _database\_name_  
   
--   **드라이버 ODBC Driver 11 for SQL Server =** 또는 **드라이버 기반 ODBC Driver 13 for SQL Server =**
+-   **Driver = Odbc driver 11 for SQL Server** 또는 **Driver = SQL Server 용 odbc driver 13**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server =** _server\_이름\_하거나\_IP\_주소_  
+-   **서버 =** _서버\_이름또는\_IP\_주소\__  
   
 -   **Trusted_Connection=yes**|**no**  
   
