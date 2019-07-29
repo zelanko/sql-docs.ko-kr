@@ -1,7 +1,7 @@
 ---
 title: '3단계: Node.js를 사용하여 SQL에 연결하는 개념 증명 | Microsoft Docs'
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 07/23/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7a462fcb1e8fe91cc2a140716968bd6b6f188ac1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.openlocfilehash: 7dc49b466885e63ad9bd380a53a432a936310e18
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003750"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419260"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>3단계: Node.js를 사용하여 SQL에 연결하는 개념 증명
 
@@ -32,15 +32,23 @@ ms.locfileid: "68003750"
 ```javascript  
     var Connection = require('tedious').Connection;  
     var config = {  
-        userName: 'yourusername',  
-        password: 'yourpassword',  
-        server: 'yourserver.database.windows.net',  
-        // If you are on Microsoft Azure, you need this:  
-        options: {encrypt: true, database: 'AdventureWorks'}  
+        server: 'your_server.database.windows.net',  //update me
+        authentication: {
+            type: 'default',
+            options: {
+                userName: 'your_username', //update me
+                password: 'your_password'  //update me
+            }
+        },
+        options: {
+            // If you are on Microsoft Azure, you need encryption:
+            encrypt: true,
+            database: 'your_database'  //update me
+        }
     };  
     var connection = new Connection(config);  
     connection.on('connect', function(err) {  
-    // If no error, then good to proceed.  
+        // If no error, then good to proceed.
         console.log("Connected");  
     });  
 ```  
@@ -54,12 +62,20 @@ ms.locfileid: "68003750"
 ```javascript  
     var Connection = require('tedious').Connection;  
     var config = {  
-        userName: 'yourusername',  
-        password: 'yourpassword',  
-        server: 'yourserver.database.windows.net',  
-        // When you connect to Azure SQL Database, you need these next options.  
-        options: {encrypt: true, database: 'AdventureWorks'}  
-    };  
+        server: 'your_server.database.windows.net',  //update me
+        authentication: {
+            type: 'default',
+            options: {
+                userName: 'your_username', //update me
+                password: 'your_password'  //update me
+            }
+        },
+        options: {
+            // If you are on Microsoft Azure, you need encryption:
+            encrypt: true,
+            database: 'your_database'  //update me
+        }
+    }; 
     var connection = new Connection(config);  
     connection.on('connect', function(err) {  
         // If no error, then good to proceed.  
@@ -97,17 +113,25 @@ ms.locfileid: "68003750"
   
 ## <a name="step-3-insert-a-row"></a>3 단계: 행 삽입  
   
-이 예제에서는 [SQL](../../relational-databases/tables/primary-and-foreign-key-constraints.md) [삽입](../../t-sql/statements/insert-transact-sql.md) 값 으로부터 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 실행 하는 방법을 확인 합니다.    
+[이 예제에서는 SQL](../../t-sql/statements/insert-transact-sql.md) [삽입 값 으로부터 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 실행 하는 방법을 확인 합니다.](../../relational-databases/tables/primary-and-foreign-key-constraints.md)    
   
   
 ```javascript  
     var Connection = require('tedious').Connection;  
     var config = {  
-        userName: 'yourusername',  
-        password: 'yourpassword',  
-        server: 'yourserver.database.windows.net',  
-        // If you are on Azure SQL Database, you need these next options.  
-        options: {encrypt: true, database: 'AdventureWorks'}  
+        server: 'your_server.database.windows.net',  //update me
+        authentication: {
+            type: 'default',
+            options: {
+                userName: 'your_username', //update me
+                password: 'your_password'  //update me
+            }
+        },
+        options: {
+            // If you are on Microsoft Azure, you need encryption:
+            encrypt: true,
+            database: 'your_database'  //update me
+        }
     };  
     var connection = new Connection(config);  
     connection.on('connect', function(err) {  

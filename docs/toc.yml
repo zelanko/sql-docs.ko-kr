@@ -75,7 +75,7 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: 오프라인 배포
               href: big-data-cluster/deploy-offline.md
-            - name: 배포 대상
+            - name: Kubernetes 클러스터
               items:
                 - name: Azure Kubernetes Service
                   href: big-data-cluster/deploy-on-aks.md
@@ -85,9 +85,11 @@
                   href: big-data-cluster/deploy-on-minikube.md
             - name: 배포 스크립트
               items:
-                - name: Azure Kubernetes Service
+                - name: AKS python 스크립트
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
-                - name: Azure Data Studio Notebook을 사용하여 배포
+                - name: 단일 노드 kubeadm 스크립트
+                  href: big-data-cluster/deployment-script-single-node-kubeadm.md
+                - name: 전자 필기장을 사용하여 배포
                   href: big-data-cluster/deploy-notebooks.md
     - name: 개념
       items:
@@ -6670,6 +6672,8 @@
                   href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
         - name: SQL Server 유틸리티
           href: relational-databases/manage/sql-server-utility-features-and-tasks.md
+        - name: SQL 평가 API
+          href: sql-assessment-api/sql-assessment-api-overview.md
           items:
             - name: 동일한 SQL Server 인스턴스에서 유틸리티 및 유틸리티 이외의 컬렉션 세트 실행을 위한 고려 사항
               href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -7500,7 +7504,7 @@
 - name: 보고 및 분석
   items:
     - name: 고급 분석 및 기계 학습 >>
-      href: advanced-analytics/index.md
+      href: advanced-analytics/
     - name: 분석 플랫폼 시스템 >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
