@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ed1ef012-fa14-4ba5-bafe-d1527ba065b3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d861c45f8f91a9026285552f30434250bb89d515
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 60183a9777098728ee258274a19aca4d65885b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51216531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115832"
 ---
 # <a name="options-in-the-back-up-database-task-for-maintenance-plan"></a>유지 관리 계획을 위한 데이터베이스 백업 태스크의 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "51216531"
   
 -   [유지 관리 계획 만들기](../../relational-databases/maintenance-plans/create-a-maintenance-plan.md)  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **대량 삽입 태스크 편집기**  
  이 태스크를 수행할 때 사용할 서버 연결을 선택합니다.  
   
@@ -39,7 +38,7 @@ ms.locfileid: "51216531"
  이 태스크를 수행할 때 사용할 새 서버 연결을 만듭니다. 아래에서는 **새 연결** 대화 상자에 대해 설명합니다.  
   
  **데이터베이스**  
- 이 태스크의 영향을 받는 데이터베이스를 지정합니다. 이 옵션을 선택하면 **모든 데이터베이스**, **모든 시스템 데이터베이스**, **모든 사용자 데이터베이스**, **다음 데이터베이스**옵션을 제공하는 드롭다운 목록이 표시됩니다.  
+ 이 태스크의 영향을 받는 데이터베이스를 지정합니다. 이 옵션을 선택하면 **모든 데이터베이스**, **모든 시스템 데이터베이스**, **모든 사용자 데이터베이스**, **다음 데이터베이스** 옵션을 제공하는 드롭다운 목록이 표시됩니다.  
   
  **모든 데이터베이스**  
  모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대해 유지 관리 태스크를 실행하는 유지 관리 계획을 생성합니다.  
@@ -66,7 +65,7 @@ ms.locfileid: "51216531"
  파일 또는 테이프에 데이터베이스를 백업합니다. 데이터베이스를 포함하는 컴퓨터에 연결된 테이프 디바이스만 사용할 수 있습니다.  
   
  **하나 이상의 파일에 데이터베이스 백업**  
- **추가** 를 클릭하여 **백업 대상 선택** 대화 상자를 연 다음 하나 이상의 디스크 위치나 테이프 장치를 지정합니다.  
+ **추가** 를 클릭하여 **백업 대상 선택** 대화 상자를 연 다음 하나 이상의 디스크 위치나 테이프 디바이스를 지정합니다.  
   
  **백업 파일이 있는 경우**  
  파일의 끝에 이 백업을 추가하려면 **추가** 를 선택합니다. 파일의 이전 백업을 모두 제거하고 새 백업으로 바꾸려면 **덮어쓰기**를 선택합니다.  
@@ -127,7 +126,7 @@ ms.locfileid: "51216531"
  Windows 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 연결합니다.  
   
  **특정 사용자 이름 및 암호 사용**  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결합니다. 이 옵션은 사용할 수 없습니다.  
   
  **User name**  
  인증 시 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인을 입력합니다. 이 옵션은 사용할 수 없습니다.  

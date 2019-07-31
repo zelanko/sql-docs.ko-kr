@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948688"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -150,7 +149,7 @@ ms.locfileid: "54125273"
   
          구독자에 이미 데이터가 있다고 지정하는 방법은 [Initialize a Subscription Manually](../../../relational-databases/replication/initialize-a-subscription-manually.md)를 참조하십시오.  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>게시 데이터베이스: 구독 업데이트가 있는 트랜잭션 복제  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>게시 데이터베이스: 업데이트 구독을 사용한 트랜잭션 복제  
   
 1.  게시 데이터베이스의 최신 백업을 복원합니다. 2단계로 이동합니다.  
   

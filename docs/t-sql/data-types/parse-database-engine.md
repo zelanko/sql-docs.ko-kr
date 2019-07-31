@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 55ac77cc4332ce7fe71f1dc2f1fc57d29a05a1e3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 8f7160513cd23e16f06dbba27851920b66bf72c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119824"
 ---
 # <a name="parse-database-engine"></a>Parse(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ Parse가 **hierarchyid**의 유효한 문자열 표현이 아닌 값을 수신�
   
 ## <a name="examples"></a>예  
   
-### <a name="a-converting-transact-sql-values-without-a-table"></a>1. 테이블이 없는 Transact-SQL 값 변환  
+### <a name="a-converting-transact-sql-values-without-a-table"></a>1\. 테이블이 없는 Transact-SQL 값 변환  
 다음 코드 예에서는 `ToString`을 사용하여 **hierarchyid** 값을 문자열로 변환하고 `Parse`를 사용하여 문자열 값을 **hierarchyid**로 변환합니다.
   
 ```sql
@@ -82,7 +81,7 @@ hierarchyidRepresentation    StringRepresentation
 0x5ADE                       /1/1/3/
 ```
   
-### <a name="b-clr-example"></a>2. CLR 예  
+### <a name="b-clr-example"></a>2\. CLR 예  
 다음 코드 조각에서는 Parse() 메서드를 호출합니다.
   
 ```sql

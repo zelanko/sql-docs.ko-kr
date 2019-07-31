@@ -1,5 +1,5 @@
 ---
-title: '자습서: 인증서로 저장 프로시저 서명 | Microsoft 문서'
+title: '자습서: 인증서로 저장 프로시저 서명 | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/23/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a4b0f23b-bdc8-425f-b0b9-e0621894f47e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cb9a7a9ddb5bba961b6d0df54cab4fdcf91ed1a5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 225f827de70f4946cabca3e06e7a7be364094479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47738141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138380"
 ---
 # <a name="tutorial-signing-stored-procedures-with-a-certificate"></a>자습서: 인증서로 저장 프로시저 서명
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

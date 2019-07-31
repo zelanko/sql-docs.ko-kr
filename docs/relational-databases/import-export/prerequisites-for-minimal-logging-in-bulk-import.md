@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 48d62232c5d481ccbb6204f5ba14465dea75ca30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946570"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307642"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "64946570"
   
 -   테이블이 복제되고 있지 않아야 합니다.  
   
--   테이블 잠금이 지정되어야 합니다(TABLOCK 사용). 클러스터형 columnstore 인덱스가 포함된 테이블의 경우에는 최소 로깅에 TABLOCK을 사용할 필요가 없습니다.  또한 압축된 행 그룹으로의 데이터 로드는 최소 로깅되므로 일괄 처리 크기가 102400 이상이어야 합니다.  
+-   테이블 잠금이 지정되어야 합니다(TABLOCK 사용). 클러스터형 columnstore 인덱스가 포함된 테이블의 경우에는 최소 로깅에 TABLOCK을 사용할 필요가 없습니다.  또한 압축된 행 그룹으로 로드된 데이터만 최소 로깅되므로 일괄 처리 크기가 102400 이상이어야 합니다.  
   
     > [!NOTE]  
     >  대량 가져오기 작업을 최소 로깅으로 수행하는 동안 데이터 삽입은 트랜잭션 로그에 기록되지 않지만 새 익스텐트를 테이블에 할당할 때마다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 익스텐트 할당을 기록합니다.  
@@ -50,17 +49,15 @@ ms.locfileid: "64946570"
   
 -   테이블에 클러스터형 인덱스는 없지만 하나 이상의 비클러스터형 인덱스가 있는 경우 데이터 페이지는 항상 최소 로깅됩니다. 그러나 인덱스 페이지 로깅 방법은 다음과 같이 테이블이 비어 있는지 여부에 따라 달라집니다.  
   
-    -   테이블이 비어 있는 경우 인덱스 페이지가 최소 로깅됩니다.  
+    -   테이블이 비어 있는 경우 인덱스 페이지가 최소 로깅됩니다.  빈 테이블로 시작하여 데이터 대량 가져오기를 다중 일괄 처리로 수행하는 경우 첫 번째 일괄 처리에서는 인덱스 및 데이터 페이지가 최소 로깅되지만 두 번째 일괄 처리부터는 데이터 페이지만 최소 로깅됩니다. 
   
-    -   테이블이 비어 있지 않은 경우 인덱스 페이지가 모두 로깅됩니다.  
+    -   테이블이 비어 있지 않은 경우 인덱스 페이지가 모두 로깅됩니다.    
+
+-   테이블에 클러스터형 인덱스가 있고 비어 있는 경우 데이터 및 인덱스 페이지가 모두 최소 로깅됩니다. 이와 달리 테이블이 btree 기반 클러스터형 인덱스를 포함하며 비어 있지 않으면 복구 모델과 관계없이 데이터 페이지와 인덱스 페이지가 모두 완전히 로깅됩니다. 빈 테이블 행 저장소 테이블로 시작하여 데이터 대량 가져오기를 일괄 처리로 수행하는 경우 첫 번째 일괄 처리에서는 인덱스 및 데이터 페이지가 최소 로깅되지만 두 번째 일괄 처리부터는 데이터 페이지만 대량으로 로깅됩니다.
+
+- CCI(클러스터형 columnstore 인덱스)의 로깅에 대한 자세한 내용은 [columnstore 인덱스 데이터 로드 지침](../indexes/columnstore-indexes-data-loading-guidance.md#plan-bulk-load-sizes-to-minimize-delta-rowgroups)을 참조하세요.
   
-        > [!NOTE]  
-        >  빈 테이블로 시작하여 데이터 대량 가져오기를 다중 일괄 처리로 수행하는 경우 첫 번째 일괄 처리에서는 인덱스 및 데이터 페이지가 최소 로깅되지만 두 번째 일괄 처리부터는 데이터 페이지만 최소 로깅됩니다.  
-  
--   테이블에 클러스터형 인덱스가 있고 비어 있는 경우 데이터 및 인덱스 페이지가 모두 최소 로깅됩니다. 이와 달리 테이블이 btree 기반 클러스터형 인덱스를 포함하며 비어 있지 않으면 복구 모델에 관계없이 데이터 페이지와 인덱스 페이지가 모두 완전히 로깅됩니다. 클러스터형 columnstore 인덱스가 포함된 테이블의 경우 테이블이 비어 있거나 일괄 처리 크기가 102400 이상인지 여부에 관계없이 압축된 행 그룹에 대한 데이터 로드는 항상 최소 로깅됩니다.  
-  
-    > [!NOTE]  
-    >  빈 테이블 행 저장소 테이블로 시작하여 데이터 대량 가져오기를 일괄 처리로 수행하는 경우 첫 번째 일괄 처리에서는 인덱스 및 데이터 페이지가 최소 로깅되지만 두 번째 일괄 처리부터는 데이터 페이지만 대량으로 로깅됩니다.  
+
   
 > [!NOTE]  
 >  트랜잭션 복제를 사용하는 경우 대량 로그 복구 모델에서도 BULK INSERT 작업이 모두 기록됩니다.  

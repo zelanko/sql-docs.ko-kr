@@ -1,10 +1,10 @@
 ---
 title: ALTER EXTERNAL LIBRARY(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/27/2019
+ms.date: 07/09/2019
 ms.prod: sql
 ms.reviewer: ''
-ms.technology: ''
+ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
 - ALTER EXTERNAL LIBRARY
@@ -16,22 +16,29 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 33270c8ccc490a400db45b6525d8c6002d974f3a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions'
+ms.openlocfilehash: d2e7f22081322c62a6f3c8f8cd91f6f588f88610
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583176"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329316"
 ---
 # <a name="alter-external-library-transact-sql"></a>ALTER EXTERNAL LIBRARY(Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 기존 외부 패키지 라이브러리의 콘텐츠를 수정합니다.
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 > [!NOTE]
-> SQL Server 2017에서는 R 언어 및 Windows 플랫폼이 지원됩니다. Windows 및 Linux 플랫폼의 R, Python 및 Java는 SQL Server 2019 CTP 2.4에서 지원됩니다. 
+> SQL Server 2017에서는 R 언어 및 Windows 플랫폼이 지원됩니다. Windows 및 Linux 플랫폼의 R, Python 및 외부 언어는 SQL Server 2019 CTP 2.4 이상에서 지원됩니다.
+::: moniker-end
+
+::: moniker range="=azuresqldb-current"
+> [!NOTE]
+> Azure SQL Database에서 라이브러리를 제거한 다음, **sqlmlutils**를 통해 변경된 버전을 설치하면 라이브러리를 변경할 수 있습니다. **sqlmlutils**에 대한 자세한 내용은 [sqlmlutils를 사용하여 패키지 추가](/azure/sql-database/sql-database-machine-learning-services-add-r-packages#add-a-package-with-sqlmlutils)를 참조하세요.
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ## <a name="syntax-for-sql-server-2019"></a>SQL Server 2019용 구문
@@ -72,7 +79,7 @@ WITH ( LANGUAGE = <language> )
 {
       'R'
     | 'Python'
-    | 'Java'
+    | <external_language>
 }
 ```
 ::: moniker-end
@@ -107,6 +114,29 @@ WITH ( LANGUAGE = 'R' )
 ```
 ::: moniker-end
 
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+## <a name="syntax-for-azure-sql-database"></a>Azure SQL Database용 구문
+
+```text
+CREATE EXTERNAL LIBRARY library_name  
+[ AUTHORIZATION owner_name ]  
+FROM <file_spec> [ ,...2 ]  
+WITH ( LANGUAGE = 'R' )  
+[ ; ]  
+
+<file_spec> ::=  
+{  
+    (CONTENT = <library_bits>)  
+}  
+
+<library_bits> :: =  
+{ 
+      varbinary_literal 
+    | varbinary_expression 
+}
+```
+::: moniker-end
+
 ### <a name="arguments"></a>인수
 
 **library_name**
@@ -119,6 +149,7 @@ WITH ( LANGUAGE = 'R' )
 
 외부 라이브러리를 소유하는 사용자 또는 역할의 이름을 지정합니다.
 
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **file_spec**
 
 특정 플랫폼에 대한 패키지의 콘텐츠를 지정합니다. 플랫폼당 한 개의 파일 아티팩트만 지원됩니다.
@@ -127,9 +158,11 @@ WITH ( LANGUAGE = 'R' )
 
 선택적으로 파일에 대한 OS 플랫폼을 지정할 수 있습니다. 특정 언어 또는 런타임에 대해 각 OS 플랫폼당 한 개의 파일 아티팩트 또는 콘텐츠만 허용됩니다.
 
+::: moniker-end
+
 **library_bits**
 
-패키지의 콘텐츠를 어셈블리와 유사한 16진수 리터럴로 지정합니다. 
+패키지의 콘텐츠를 어셈블리와 유사한 16진수 리터럴로 지정합니다.
 
 이 옵션은 라이브러리를 변경하기 위해 필요한 권한을 가지고 있지만 서버에 대한 파일 액세스가 제한되어 콘텐츠를 서버에서 액세스할 수 있는 경로에 저장할 수 없는 경우 유용합니다.
 
@@ -138,17 +171,33 @@ WITH ( LANGUAGE = 'R' )
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
 **PLATFORM = WINDOWS**
 
-라이브러리의 콘텐츠에 대한 플랫폼을 지정합니다. 이 값은 다른 플랫폼을 추가하기 위해 기존 라이브러리를 수정할 때 필요합니다. SQL Server 2017에서는 Windows 플랫폼만 지원됩니다.
-
+라이브러리의 콘텐츠에 대한 플랫폼을 지정합니다. 이 값은 다른 플랫폼을 추가하기 위해 기존 라이브러리를 수정할 때 필요합니다.
+SQL Server 2017에서는 Windows 플랫폼만 지원됩니다.
 ::: moniker-end
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **플랫폼**
 
-라이브러리의 콘텐츠에 대한 플랫폼을 지정합니다. 이 값은 다른 플랫폼을 추가하기 위해 기존 라이브러리를 수정할 때 필요합니다. SQL Server 2019에서는 Windows 및 Linux 플랫폼이 지원됩니다.
+라이브러리의 콘텐츠에 대한 플랫폼을 지정합니다. 이 값은 다른 플랫폼을 추가하기 위해 기존 라이브러리를 수정할 때 필요합니다. 
+SQL Server 2019에서는 Windows 및 Linux 플랫폼이 지원됩니다.
+::: moniker-end
 
+::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+**LANGUAGE = ‘R’**
+
+패키지의 언어를 지정합니다. R은 SQL Server 2017에서 지원됩니다.
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+**LANGUAGE = ‘R’**
+
+패키지의 언어를 지정합니다. R은 Azure SQL Database에서 지원됩니다.
+::: moniker-end
+
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 **language**
 
-패키지의 언어를 지정합니다. 값은 **R**, **Python** 또는 **Java**일 수 있습니다.
+패키지의 언어를 지정합니다. 값은 **R**, **Python** 또는 외부 언어의 이름일 수 있습니다([CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md) 참조).
 ::: moniker-end
 
 ## <a name="remarks"></a>Remarks
@@ -173,7 +222,8 @@ Python 언어의 경우 .whl 또는 .zip 파일의 패키지는 압축된 보관
 
 다음 예제에서는 `customPackage`라는 외부 라이브러리를 변경합니다.
 
-### <a name="a-replace-the-contents-of-a-library-using-a-file"></a>1. 파일을 사용하여 라이브러리의 콘텐츠 바꾸기
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
+### <a name="replace-the-contents-of-a-library-using-a-file"></a>파일을 사용하여 라이브러리의 콘텐츠 바꾸기
 
 다음 예제에서는 업데이트된 비트가 포함된 압축된 파일을 사용하여 `customPackage`라는 외부 라이브러리를 수정합니다.
 
@@ -192,17 +242,19 @@ EXEC sp_execute_external_script
 @script=N'library(customPackage)'
 ;
 ```
+::: moniker-end
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 SQL Server 2019의 Python 언어의 경우, 이 예제는 `'R'`을 `'Python'`으로 대체하여 작동합니다.
 ::: moniker-end
-### <a name="b-alter-an-existing-library-using-a-byte-stream"></a>2. 바이트 스트림을 사용하여 외부 라이브러리 변경
 
-다음 예제는 새 비트를 16진수 리터럴로 전달하여 기존 라이브러리를 변경합니다.
+### <a name="alter-an-existing-library-using-a-byte-stream"></a>바이트 스트림을 사용하여 외부 라이브러리 변경
+
+다음 예제에서는 새 비트를 16진수 리터럴로 전달하여 기존 라이브러리를 변경합니다.
 
 ```SQL
 ALTER EXTERNAL LIBRARY customLibrary 
-SET (CONTENT = 0xabc123) WITH (LANGUAGE = 'R');
+SET (CONTENT = 0xABC123...) WITH (LANGUAGE = 'R');
 ```
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -214,7 +266,7 @@ SQL Server 2019의 Python 언어의 경우, 이 예제는 `'R'`을 `'Python'`으
 
 ## <a name="see-also"></a>관련 항목:
 
-[CREATE EXTERNAL LIBRARY(Transact-SQL)](create-external-library-transact-sql.md)
+[CREATE EXTERNAL LIBRARY(Transact-SQL)](create-external-library-transact-sql.md)  
 [DROP EXTERNAL LIBRARY(Transact-SQL)](drop-external-library-transact-sql.md)  
 [sys.external_library_files](../../relational-databases/system-catalog-views/sys-external-library-files-transact-sql.md)  
 [sys.external_libraries](../../relational-databases/system-catalog-views/sys-external-libraries-transact-sql.md) 

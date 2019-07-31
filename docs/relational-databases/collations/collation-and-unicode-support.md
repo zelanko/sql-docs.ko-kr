@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bcff15423fb1ab3f1f05347bddba6eab09fae713
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118486"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -271,10 +270,14 @@ UTF-8은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 제공된 보충 �
 
 <sup>2</sup> [보조 문자](#Supplementary_Characters)의 코드 포인트 범위입니다.
 
-위에 표시된 대로, 적절한 유니코드 인코딩과 데이터 형식을 선택하면 사용 중인 문자 집합에 따라 스토리지 비용을 훨씬 절감할 수 있습니다. 예를 들어 ASCII 문자를 포함하는 기존 열 데이터 형식을 `NCHAR(10)`에서 UTF-8 사용 데이터 정렬을 사용하는 `CHAR(10)`로 변경하면 스토리지 요구 사항이 50% 감소합니다. 이러한 감소는 `NCHAR(10)`는 스토리지로 20바이트가 필요하지만 `CHAR(10)`는 동일한 유니코드 문자열 표현에 10바이트만 필요하기 때문입니다.
+> [!TIP]   
+> [CHAR(*n*) and VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 또는 [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)에서 *n*이 문자 수를 정의한다고 잘못 생각하는 경우가 많습니다. CHAR(10) 열의 예제에서 Latin1_General_100_CI_AI와 같은 데이터 정렬을 사용하여 0~127 범위의 ASCII 문자 10자를 저장할 수 있기 때문입니다. 이 범위의 각 문자는 1바이트만 사용합니다.    
+> 그러나 [CHAR(*n*) 및 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)의 *n*은 **바이트**(0~8,000) 단위로 문자열 길이를 정의하는 반면, [NCHAR(*n*) 및 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)의 *n*은 **바이트 쌍**(0~4,000)으로 문자열 길이를 정의합니다. *n*은 저장할 수 있는 문자 수를 정의하지 않습니다.
+
+위에 표시된 대로, 적절한 유니코드 인코딩과 데이터 형식을 선택하면 사용 중인 문자 집합에 따라 스토리지 비용을 훨씬 절감하거나 현재 스토리지 공간을 늘릴 수 있습니다. 예를 들어 Latin1_General_100_CI_AI_SC_UTF8과 같이 UTF-8을 지원하는 라틴어 데이터 정렬을 사용하는 경우 `CHAR(10)` 열은 10바이트를 저장하며, 0~127 범위의 ASCII 문자 10자, 128~2047 범위의 5자, 2048~65535 범위의 3자만 포함할 수 있습니다. 이에 반해, `NCHAR(10)` 열은 10바이트 쌍(20바이트)을 저장하기 때문에 0~65535 범위의 문자 10자를 포함할 수 있습니다.  
 
 데이터베이스나 열에 UTF-8 또는 UTF-16 인코딩을 사용할 것인지 선택하기 전에 저장되는 문자열 데이터의 분포를 고려합니다.
--  대체로 ASCII 범위인 경우(예: 영어), UTF-8에서는 각 문자에 1바이트, UTF-16에서는 2바이트가 필요합니다. UTF-8을 사용하는 것이 스토리지 측면에서 효율적입니다. 
+-  대체로 ASCII 범위 0~127을 사용하는 경우(예: 영어), UTF-8에서는 각 문자에 1바이트, UTF-16에서는 2바이트가 필요합니다. UTF-8을 사용하는 것이 스토리지 측면에서 효율적입니다. UTF-8 지원 데이터 정렬을 사용하여 0~127 범위의 ASCII 문자를 포함하는 기존 열 데이터 형식을 `NCHAR(10)`에서 `CHAR(10)`로 변경하면 스토리지 요구 사항이 50% 감소합니다. 이러한 감소는 `NCHAR(10)`는 스토리지로 20바이트가 필요하지만 `CHAR(10)`는 동일한 유니코드 문자열 표현에 10바이트만 필요하기 때문입니다.    
 -  ASCII 범위를 초과하는 거의 모든 라틴어 기반 스크립트와 그리스어, 키릴 자모, 콥트어, 아르메니아어, 히브리어, 아랍어, 시리아어, 타나 문자, 은코 문자는 UTF-8과 UTF-16에서 모두, 문자당 2바이트가 필요합니다. 이러한 경우에는 비교 가능한 데이터 형식 간(예: **char** 또는 **nchar** 사용 간)에 큰 스토리지 차이가 없습니다.
 -  대체로 동아시아 스크립트인 경우(예: 한국어, 중국어, 일본어), UTF-8에서는 각 문자에 3바이트, UTF-16에서는 2바이트가 필요합니다. UTF-16을 사용하는 것이 스토리지 측면에서 효율적입니다. 
 -  010000~10FFFF 범위의 문자는 UTF-8과 UTF-16에서 모두, 4바이트가 필요합니다. 이러한 경우에는 비교 가능한 데이터 형식 간(예: **char** 또는 **nchar** 사용 간)에 스토리지 차이가 없습니다.

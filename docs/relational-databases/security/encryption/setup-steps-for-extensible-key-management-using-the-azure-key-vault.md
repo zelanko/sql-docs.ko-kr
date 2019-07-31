@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: d25a38a0c7bd274e07d0932d6b8ef451a22dda06
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 3d9b28b1723b5c984446be09336b24ff5e2d2bb0
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306081"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316644"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault를 사용한 SQL Server TDE 확장 가능 키 관리 - 설정 단계
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -235,17 +234,17 @@ SQL Server 버전  |재배포 가능 설치 링크
                  keys/ContosoRSAKey0/<guid>  
     ```  
  > [!IMPORTANT]  
-    >  주요 자격 증명 모음은 동일한 이름이 지정된 키의 여러 버전을 지원하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에서 사용할 키는 버전이 지정되거나 여기저기 사용해서는 안 됩니다. 관리자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화에 사용된 키를 다른 곳에 사용하려는 경우, 자격 증명 모음에서 다른 이름으로 새 키를 만들어 DEK를 암호화하는 데 사용해야 합니다.  
+ > 주요 자격 증명 모음은 동일한 이름이 지정된 키의 여러 버전을 지원하지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터에서 사용할 키는 버전이 지정되거나 여기저기 사용해서는 안 됩니다. 관리자가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화에 사용된 키를 다른 곳에 사용하려는 경우, 자격 증명 모음에서 다른 이름으로 새 키를 만들어 DEK를 암호화하는 데 사용해야 합니다.  
    
   
 ## <a name="part-iii-install-the-includessnoversionincludesssnoversion-mdmd-connector"></a>3부: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 설치  
  [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/p/?LinkId=521700)에서 SQL Server 커넥터를 다운로드합니다. 이 작업은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 컴퓨터의 관리자가 수행해야 합니다.  
 
 > [!NOTE]  
->  1.0.0.440 및 이전 버전은 대체되었으며 프로덕션 환경에서 더 이상 지원되지 않습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=45344)를 방문하고 "SQL Server 커넥터 업그레이드" 아래의 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 페이지에 있는 지침을 사용하여 1.0.1.0 이상 버전으로 업그레이드하세요.
+>  1\.0.0.440 및 이전 버전은 대체되었으며 프로덕션 환경에서 더 이상 지원되지 않습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=45344)를 방문하고 "SQL Server 커넥터 업그레이드" 아래의 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 페이지에 있는 지침을 사용하여 1.0.1.0 이상 버전으로 업그레이드하세요.
 
 > [!NOTE]  
-> 1.0.5.0 버전의 경우 지문 알고리즘 측면에서 큰 변화가 있습니다. 1.0.5.0 버전으로 업그레이드한 후 데이터베이스 복원 실패가 발생할 수 있습니다. [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0) KB 문서를 참조하세요.
+> 1\.0.5.0 버전의 경우 지문 알고리즘 측면에서 큰 변화가 있습니다. 1\.0.5.0 버전으로 업그레이드한 후 데이터베이스 복원 실패가 발생할 수 있습니다. [447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0) KB 문서를 참조하세요.
   
  ![ekm-connector-install](../../../relational-databases/security/encryption/media/ekm-connector-install.png "ekm-connector-install")  
   
@@ -316,7 +315,7 @@ SQL Server 버전  |재배포 가능 설치 링크
   
     -   Azure Key Vault를 가리키도록 `IDENTITY` 인수(`ContosoDevKeyVault`)를 편집합니다.
         - **전역 Azure**를 사용하는 경우 `IDENTITY` 인수를 파트 2의 Azure Key Vault 이름으로 바꿉니다.
-        - **사설 Azure 클라우드** (예: Azure Government, Azure China 또는 Azure Germany)를 사용하는 경우는 `IDENTITY` 인수를 파트 2의 3단계에서 반환된 자격 증명 모음 URI로 바꿉니다. 자격 증명 모음 URI에 "https://"를 포함하지 마세요.   
+        - **프라이빗 Azure 클라우드** (예: Azure Government, Azure China 또는 Azure Germany)를 사용하는 경우는 `IDENTITY` 인수를 파트 2의 3단계에서 반환된 자격 증명 모음 URI로 바꿉니다. 자격 증명 모음 URI에 "https://"를 포함하지 마세요.   
     -   `SECRET` 인수의 첫 번째 부분을 1부의 Azure Active Directory **클라이언트 ID** 로 바꿉니다. 이 예제에서 **클라이언트 ID** 는 `EF5C8E094D2A4A769998D93440D8115D`입니다.  
   
         > [!IMPORTANT]  

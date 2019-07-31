@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: edd8ea9a11a06182dced486ed1b03f1b916e15e4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1fcb84fe69c617cacc183910e3446400a172ea6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47793261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903124"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>토폴로지 구성(피어 투 피어 복제)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47793261"
 > [!NOTE]  
 >  피어 투 피어 토폴로지 구성 마법사는 닫힐 때 토폴로지 정보를 요청합니다. 모든 노드가 이 정보 요청에 응답하기 전에 마법사가 닫혔다가 다시 열리면 마법사에 부분 네트워크가 표시될 수 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **토폴로지 구성** 페이지에는 여러 가지 인터페이스 요소와 요소를 마우스 오른쪽 단추로 클릭하면 사용할 수 있는 옵션이 포함되어 있습니다. 다음 표에서는 각 인터페이스 요소에 대해 설명합니다.  
   
 |인터페이스 요소|설명|  
@@ -64,7 +63,7 @@ ms.locfileid: "47793261"
   
 ### <a name="options-for-each-node"></a>각 노드에 대해 사용할 수 있는 옵션  
  **새 피어 연결 추가**  
- 두 노드 사이에 연결을 추가합니다. 예를 들어 노드 A와 노드 B 사이의 연결을 추가하는 경우 복제 과정에서 두 개의 구독이 추가되는데 첫 번째는 노드 A에서 노드 B의 게시 변경 내용을 받는 데 사용되는 구독이고, 두 번째는 노드 B에서 노드 A의 게시 변경 내용을 받는 데 사용되는 구독입니다.  
+ 두 노드 사이에 연결을 추가합니다. 예를 들어 노드 A와 노드 B 사이에 연결을 추가하면 복제 과정에서 두 개의 구독이 추가됩니다. 첫 번째 구독은 노드 A에서 노드 B의 게시 변경 내용을 받는 데 사용되고, 두 번째 구독은 노드 B에서 노드 A의 게시 변경 내용을 받는 데 사용됩니다.  
   
  **피어 노드 삭제**  
  토폴로지에서 노드를 제거합니다. 예를 들어 노드 C를 제거하면 해당 노드에 있는 게시도 제거됩니다. 이 경우 노드 A와 노드 C 간의 구독 및 노드 B와 노드 C 간의 구독도 제거됩니다. 노드 C의 데이터베이스는 삭제되지 않으며 게시 및 배포를 계속 사용할 수 있습니다.  

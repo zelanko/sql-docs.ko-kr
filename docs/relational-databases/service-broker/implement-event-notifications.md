@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 29ac8f68-a28a-4a77-b67b-a8663001308c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 0cc1e8e4405c6900860d8323d31d52e4a320639d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: acdbd90268b1282bd6011ac7816157c70f66bb71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51662241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048833"
 ---
 # <a name="implement-event-notifications"></a>이벤트 알림 구현
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ TO SERVICE 'NotifyService', '8140a771-3c4b-4479-8ac0-81008ab17984' ;
 >   
 >  `CREATE TABLE t1 (col1 int)`  
 >   
->  이 경우 이벤트 알림은 CREATE_SCHEMA 이벤트가 발생할 때와 CREATE_TABLE 이벤트가 발생할 때 각각 한 번씩, 두 번 발생합니다. CREATE_SCHEMA 이벤트 및 해당하는 CREATE SCHEMA 정의의 <schema_element> 텍스트 둘 다에 대해 이벤트 알림이 생성되는 것을 방지하거나 필요 없는 이벤트 데이터의 캡처를 방지하는 논리를 응용 프로그램에 구축하는 것이 좋습니다.  
+>  이 경우 이벤트 알림은 CREATE_SCHEMA 이벤트가 발생할 때와 CREATE_TABLE 이벤트가 발생할 때 각각 한 번씩, 두 번 발생합니다. CREATE_SCHEMA 이벤트 및 해당하는 CREATE SCHEMA 정의의 &lt;schema_element&gt; 텍스트 둘 다에 대해 이벤트 알림이 생성되는 것을 방지하거나 필요 없는 이벤트 데이터의 캡처를 방지하는 논리를 애플리케이션에 구축하는 것이 좋습니다.  
   
  **이벤트 알림을 만들려면**  
   

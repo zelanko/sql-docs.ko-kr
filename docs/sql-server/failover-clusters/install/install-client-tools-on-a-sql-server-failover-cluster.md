@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3c82d510-9798-46be-bebb-cac9bef56936
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4e5c1182bb2aeb9a5a3a5c0db640b89237c58a29
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 359548f6315535e324158cdecd015c1c03266d7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063940"
 ---
 # <a name="install-client-tools-on-a-sql-server-failover-cluster"></a>SQL Server 장애 조치 클러스터에 클라이언트 도구 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ ms.locfileid: "47792901"
   
 #### <a name="installing-includessnoversionincludesssnoversion-mdmd-client-tools-at-the-command-prompt"></a>명령 프롬프트를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 도구 설치  
   
-1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 도구 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서를 설치하려면 Setup.exe/q/Action=Install /Features=Tools 명령을 실행합니다.  
+1.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 도구 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 온라인 설명서를 설치하려면 다음 명령을 실행합니다. Setup.exe/q/Action=Install /Features=Tools  
   
-2.  기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리 도구만 설치하려면 Setup.exe/q/Action=Install Features=SSMS 명령을 실행합니다. 그러면 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] , [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], sqlcmd 유틸리티 및 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)]Powershell 공급자에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지원이 설치됩니다.  
+2.  기본 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리 도구만 설치하려면 다음 명령을 실행합니다. Setup.exe/q/Action=Install Features=SSMS. 그러면 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] , [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)], sqlcmd 유틸리티 및 [!INCLUDE[ssExpress](../../../includes/ssexpress-md.md)]Powershell 공급자에 대한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지원이 설치됩니다.  
   
-3.  전체 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리 도구만 설치하려면 Setup.exe/q/Action=Install /Features=ADV_SSMS 명령을 실행합니다. 기능의 매개 변수 값에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
+3.  전체 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 관리 도구를 설치하려면 다음 명령을 실행합니다. Setup.exe/q/Action=Install /Features=ADV_SSMS. 기능의 매개 변수 값에 대한 자세한 내용은 [명령 프롬프트에서 SQL Server 2016 설치](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
   
 ### <a name="uninstalling-includessnoversionincludesssnoversion-mdmd-client-tools"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 클라이언트 도구 제거  
  클라이언트 도구는 제어판의 프로그램 추가/제거에 **[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]** 로 나타나고 여기서 제거할 수 있습니다. 장애 조치(Failover) 클러스터에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 제거하기 위해 노드 제거를 사용하면 클라이언트 구성 요소가 동시에 제거되지 않습니다.  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 6bc64ddb-5c86-4681-a391-77fc1d3c4e6e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a984f7cefc10e89fdb2b3bafca94b2d455105eac
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dbdb879f51c564dcfeb156a8b56b77bbe8d5d10e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021355"
 ---
 # <a name="publisher-information-subscription-watch-list-transactional"></a>게시자 정보, 구독 조사 목록(트랜잭션)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "54125324"
  **성능 심각** 및 **곧 만료됨/만료됨** 상태 값은 임계값이 설정된 경우에만 표시됩니다. 성능 측정 및 임계값 설정에 대한 자세한 내용은 [복제 모니터로 성능 모니터링](../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md) 및 [복제 모니터에 임계값 및 경고 설정](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
   
  **구독**  
- 각 구독의 이름으로, 형식은 형식은 *SubscriberName: SubscriptionDatabaseName*입니다.  
+ 각 구독의 이름으로, 형식은 *SubscriberName: SubscriptionDatabaseName*입니다.  
   
  **게시**  
  구독을 동기화할 게시의 이름입니다. 형식은 *PublicationDatabaseName: PublicationName*입니다.  

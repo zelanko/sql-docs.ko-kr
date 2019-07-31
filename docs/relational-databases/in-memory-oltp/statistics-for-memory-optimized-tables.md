@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: e644766d-1d1c-43d7-83ff-8ccfe4f3af9f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 23f442dcf798a1d4f1961698958673dac007a37e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42b42356331d91683811472b420e656560a77d79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086266"
 ---
 # <a name="statistics-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블에 대한 통계
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "47857241"
 
 3. 업데이트된 통계를 활용하기 위해 고유하게 컴파일된 저장 프로시저를 수동으로 다시 컴파일합니다.
 
-*통계에 대한 일회성 스크립트:* 낮은 호환성 수준에서 만든 메모리 최적화 테이블에 대해 다음 TRANSACT-SQL 스크립트를 한 번 실행하여 메모리 최적화 모든 테이블의 통계를 업데이트하고 향후 통계 자동 업데이트를 사용하도록 설정합니다(AUTO_UPDATE_STATISTICS가 데이터베이스에 사용하도록 설정된 것으로 가정).
+통계에 대한 일회성 스크립트:  낮은 호환성 수준에서 만든 메모리 최적화 테이블에 대해 다음 Transact-SQL 스크립트를 한 번 실행하여 메모리 최적화 모든 테이블의 통계를 업데이트하고 향후 통계 자동 업데이트를 사용하도록 설정합니다(AUTO_UPDATE_STATISTICS가 데이터베이스에 사용하도록 설정된 것으로 가정).
 
 ```
 -- Assuming AUTO_UPDATE_STATISTICS is already ON for your database:
@@ -75,7 +74,7 @@ GO
 -- UPDATE STATISTICS [dbo].[MyMemoryOptimizedTable];
 ```
 
-*자동 업데이트가 사용하도록 설정되어 있는지 확인:* 다음 스크립트는 메모리 최적화 테이블에 대한 통계에 자동 업데이트가 사용되는지 여부를 확인합니다. 이전 스크립트를 실행한 후 모든 통계 개체에 대한 `1` 열에 `auto-update enabled` 가 반환됩니다.
+자동 업데이트가 사용하도록 설정되어 있는지 확인:  다음 스크립트는 메모리 최적화 테이블에 대한 통계에 자동 업데이트가 사용되는지 여부를 확인합니다. 이전 스크립트를 실행한 후 모든 통계 개체에 대한 `1` 열에 `auto-update enabled` 가 반환됩니다.
 
 ```
 SELECT 

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9ac472b720f8c4262b657c35e2c363bae73687ab
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: bbdae019d2b4903bcebb0339df0ef243d6974766
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112918"
 ---
 # <a name="create-instances-of-xml-data"></a>XML 데이터 인스턴스 만들기
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "58511550"
 -   대량 로드 사용  
   
 ## <a name="type-casting-string-and-binary-instances"></a>문자열 및 이진 인스턴스의 형식 캐스팅  
- 문자열을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml**데이터 형식으로 캐스팅(CAST) 또는 변환(CONVERT)하여 [** n **][** var **]** char **,**[n]text **,** varbinary **및**image **와 같은** 문자열 데이터 형식을 **xml** 데이터 형식으로 구문 분석할 수 있습니다. 형식화되지 않은 XML의 형식이 올바른지 확인하기 위해 검사합니다. **xml** 유형과 관련된 스키마가 있을 경우 유효성 검사도 수행됩니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
+ 문자열을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] xml**데이터 형식으로 캐스팅(CAST) 또는 변환(CONVERT)하여 [** n **][** var **]** char **,** [n]text **,** varbinary **및**image **와 같은** 문자열 데이터 형식을 **xml** 데이터 형식으로 구문 분석할 수 있습니다. 형식화되지 않은 XML의 형식이 올바른지 확인하기 위해 검사합니다. **xml** 유형과 관련된 스키마가 있을 경우 유효성 검사도 수행됩니다. 자세한 내용은 [형식화된 XML과 형식화되지 않은 XML 비교](../../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)를 참조하세요.  
   
  XML 문서는 UTF-8, UTF-16, windows-1252 등과 같은 다른 인코딩 방식으로 인코딩할 수 있습니다. 다음은 문자열 및 이진 원본 유형이 XML 문서 인코딩과 상호 작용하는 방법 및 파서의 동작 방식에 대한 규칙을 대략적으로 설명한 것입니다.  
   

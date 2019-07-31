@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6bb879e9-a5ee-402e-94e4-fe8cec5966b0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c213f8923fcdc4751b2944b2e62d4e565a509285
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: b09c2392f49bdfb8a86c33ce16679ec02c232310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078007"
 ---
 # <a name="unique-particle-attribution-constraint"></a>UNIQUE PARTICLE ATTRIBUTION 제약 조건
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,11 +81,11 @@ ms.locfileid: "58510170"
 ## <a name="finding-more-information"></a>추가 정보 찾기  
  다음 문서는 W3C(World Wide Web Consortium)에서 발행했으며 UNIQUE PARTICLE ATTRIBUTION 제약 조건에 대한 기술적인 설명이 포함되어 있습니다.  
   
- "XML Schema Part 1: 구조 제2판, W3C 제안 수정 추천:  
+ “XML 스키마 1부: 구조 제2판, W3C 제안 수정 권장 사항”:  
   
--   Section 3.8.6: 모델 그룹 스키마 구성 요소의 제한 사항  
+-   섹션 3.8.6: 모델 그룹 스키마 구성 요소의 제한 사항  
   
--   Appendix H: Unique Particle Attribution 제약 조건 분석(비표준)  
+-   부록 H: Unique Particle Attribution 제약 조건 분석(비표준)  
   
  이 문서를 보려면 [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?linkid=48881)을 방문하세요.  
   

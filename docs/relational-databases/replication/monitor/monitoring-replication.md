@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f182f43a-6af8-45bc-a708-08d5f7a6984a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c65f93054125090f92eb4924e1007d5b9075c0f4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f58fb09416bb6cc800c31dffa47e359d361ccaf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128193"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082968"
 ---
 # <a name="monitoring-replication"></a>모니터링(복제)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "54128193"
 다음 도구를 사용하여 복제를 모니터링할 수 있습니다.  
   
 -   **SQL Server 복제 모니터** - 모든 복제에 대한 게시자 중심의 관점을 제공하기 위한 가장 중요한 도구입니다. 자세한 내용은 [Monitoring Replication](../../../relational-databases/replication/monitor/monitor-performance-with-replication-monitor.md)을 참조하세요. 
--   **SQL Server Management Studio** - 복제 모니터에 대한 액세스를 제공합니다. 또한 로그 판독기 에이전트, 스냅숏 에이전트, 병합 에이전트 및 배포 에이전트에 의해 기록된 현재 상태 및 마지막 메시지를 보고 각 에이전트를 시작 및 중지할 수 있도록 합니다. 자세한 내용은 [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md)을 참조하세요.  
+-   **SQL Server Management Studio** - 복제 모니터에 대한 액세스를 제공합니다. 또한 로그 판독기 에이전트, 스냅샷 에이전트, 병합 에이전트 및 배포 에이전트에 의해 기록된 현재 상태 및 마지막 메시지를 보고 각 에이전트를 시작 및 중지할 수 있도록 합니다. 자세한 내용은 [Monitor Replication Agents](../../../relational-databases/replication/monitor/monitor-replication-agents.md)을 참조하세요.  
   
 -   **T-SQL(Transact-SQL) 및 RMO(복제 관리 개체)** - 두 인터페이스 모두를 사용하면 배포자에서 모든 유형의 복제를 모니터링할 수 있습니다. 또한 병합 복제는 구독자의 복제를 모니터링하는 기능을 제공합니다.  
   

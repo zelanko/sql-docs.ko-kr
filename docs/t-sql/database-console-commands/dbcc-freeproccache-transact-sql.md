@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 0e09d210-6f23-4129-aedb-3d56b2980683
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c3302577e705bf563ad54037437213a4088407f0
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 48eaf7f49976ed8784973c950887dc92252b08e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101897"
 ---
 # <a name="dbcc-freeproccache-transact-sql"></a>DBCC FREEPROCCACHE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -113,9 +112,9 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 -   user options  
   
 ## <a name="result-sets"></a>결과 집합  
-WITH NO_INFOMSGS 절이 지정되지 않았으면 DBCC FREEPROCCACHE이 다음 메시지를 반환합니다. "DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."
+WITH NO_INFOMSGS 절을 지정하지 않으면 DBCC FREEPROCCACHE는 다음 메시지를 반환합니다. “DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 - 서버에 대한 ALTER SERVER STATE 권한이 필요합니다.  
 
@@ -136,9 +135,9 @@ DBCC FREEPROCCACHE는 EXPLAIN 문에서 지원되지 않습니다.
 ## <a name="metadata-for-includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 대한 메타데이터  
 DBCC FREEPROCCACHE가 실행되면 새 행이 sys.pdw_exec_requests 시스템 뷰에 추가됩니다.
 
-## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>예제: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
+## <a name="examples-includessnoversionincludesssnoversion-mdmd"></a>예제: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>1. 계획 캐시에서 쿼리 계획 만들기  
+### <a name="a-clearing-a-query-plan-from-the-plan-cache"></a>1\. 계획 캐시에서 쿼리 계획 만들기  
 다음 예에서는 쿼리 계획 핸들을 지정하여 계획 캐시에서 계획 지침을 삭제합니다. 예제 쿼리가 계획 캐시에 놓이도록 쿼리가 먼저 실행됩니다. `sys.dm_exec_cached_plans` 및 `sys.dm_exec_sql_text` 동적 관리 뷰를 쿼리하여 쿼리에 대한 계획 핸들을 반환합니다. 
 
 그러면 계획 캐시에서 해당 계획만 제거하도록 결과 집합의 계획 핸들 값이 `DBCC FREEPROCACHE` 문에 삽입됩니다.
@@ -171,7 +170,7 @@ DBCC FREEPROCCACHE (0x060006001ECA270EC0215D05000000000000000000000000);
 GO  
 ```  
   
-### <a name="b-clearing-all-plans-from-the-plan-cache"></a>2. 계획 캐시에서 모든 계획 삭제  
+### <a name="b-clearing-all-plans-from-the-plan-cache"></a>2\. 계획 캐시에서 모든 계획 삭제  
 다음 예에서는 계획 캐시에서 모든 요소를 삭제합니다. WITH `NO_INFOMSGS`절은 정보 메시지가 표시되지 않도록 지정됩니다.
   
 ```sql  

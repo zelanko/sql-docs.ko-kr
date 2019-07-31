@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 6029f21d65c3732f7aa1aec2ec6a330c8642c991
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e9ff3121d9a961981b1a6933f3e1433999c72ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47715681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061149"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ FOR CONVERSATION
  이 대화 우선 순위의 이름을 지정합니다. 이름은 현재 데이터베이스에서 고유해야 하며 [!INCLUDE[ssDE](../../includes/ssde-md.md)] [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다.  
   
  SET  
- 대화 우선 순위를 대화에 적용할지 여부를 결정하는 조건을 지정합니다. 지정된 경우 SET이 CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME 또는 PRIORITY_LEVEL 조건을 하나 이상 포함해야 합니다. SET이 지정되지 않은 경우 세 조건 모두에 대한 기본값이 설정됩니다.  
+ 대화 우선 순위를 대화에 적용할지 여부를 결정하는 조건을 지정합니다. 지정된 경우 SET에 CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME 또는 PRIORITY_LEVEL 조건을 하나 이상 포함해야 합니다. SET이 지정되지 않은 경우 세 조건 모두에 대한 기본값이 설정됩니다.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  대화 우선 순위를 대화에 적용할지 여부를 결정하기 위한 조건으로 사용할 계약 이름을 지정합니다. *ContractName*은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자이며 현재 데이터베이스의 계약 이름을 지정해야 합니다.  
@@ -159,12 +158,12 @@ FOR CONVERSATION
   
 -   데이터베이스에 대화 우선 순위가 생성되어 있지 않은 경우에는 데이터베이스의 모든 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 작업에 기본 우선 순위 5가 할당됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대화 우선 순위를 만들 수 있는 권한은 기본적으로 db_ddladmin 또는 db_owner 고정 데이터베이스 역할 및 sysadmin 고정 서버 역할의 멤버에게 있습니다. 데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>1. 대화의 양쪽 방향에 우선 순위 수준 할당  
+### <a name="a-assigning-a-priority-level-to-both-directions-of-a-conversation"></a>1\. 대화의 양쪽 방향에 우선 순위 수준 할당  
  다음 두 대화 우선 순위는 `SimpleContract`와 `TargetService` 사이에서 `InitiatorAService`를 사용하는 모든 작업에 우선 순위 수준 3을 할당합니다.  
   
 ```  
@@ -182,7 +181,7 @@ CREATE BROKER PRIORITY TargetToInitiatorAPriority
          PRIORITY_LEVEL = 3);  
 ```  
   
-### <a name="b-setting-the-priority-level-for-all-conversations-that-use-a-contract"></a>2. 계약을 사용하는 모든 대화의 우선 순위 수준 설정  
+### <a name="b-setting-the-priority-level-for-all-conversations-that-use-a-contract"></a>2\. 계약을 사용하는 모든 대화의 우선 순위 수준 설정  
  `7`라는 계약을 사용하는 모든 작업에 우선 순위 수준 `SimpleContract`을 할당합니다. 이 경우 `SimpleContract`와 로컬 또는 원격 서비스를 모두 지정하는 다른 우선 순위가 없다고 가정합니다.  
   
 ```  
@@ -194,7 +193,7 @@ CREATE BROKER PRIORITY SimpleContractDefaultPriority
          PRIORITY_LEVEL = 7);  
 ```  
   
-### <a name="c-setting-a-base-priority-level-for-a-database"></a>3. 데이터베이스의 기본 우선 순위 수준 설정  
+### <a name="c-setting-a-base-priority-level-for-a-database"></a>C. 데이터베이스의 기본 우선 순위 수준 설정  
  두 특정 서비스의 대화 우선 순위를 정의한 다음 다른 모든 대화 엔드포인트와 일치하는 대화 우선 순위를 정의합니다. 이는 항상 5인 기본 우선 순위를 대체하지 않지만 기본값이 할당되는 항목 수를 최소화합니다.  
   
 ```  
@@ -218,7 +217,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
          PRIORITY_LEVEL = 3);  
 ```  
   
-### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>4. 서비스를 사용하여 대상 서비스의 세 가지 우선 순위 수준 만들기  
+### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. 서비스를 사용하여 대상 서비스의 세 가지 우선 순위 수준 만들기  
  세 가지 성능 수준인 금(높음), 은(중간), 동(낮음)을 제공하는 시스템을 지원합니다. 계약은 하나지만 각 수준마다 별도의 시작자 서비스가 있습니다. 모든 시작자 서비스는 중앙 대상 서비스와 통신합니다.  
   
 ```  
@@ -260,7 +259,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
          PRIORITY_LEVEL = 2);  
 ```  
   
-### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>5. 계약을 사용하여 여러 서비스의 세 가지 우선 순위 수준 만들기  
+### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. 계약을 사용하여 여러 서비스의 세 가지 우선 순위 수준 만들기  
  세 가지 성능 수준인 금(높음), 은(중간), 동(낮음)을 제공하는 시스템을 지원합니다. 각 수준은 별도의 계약을 가집니다. 이러한 우선 순위는 해당 계약을 사용하는 대화에서 참조하는 모든 서비스에 적용됩니다.  
   
 ```  

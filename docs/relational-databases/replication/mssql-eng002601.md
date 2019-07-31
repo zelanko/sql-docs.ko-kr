@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 657c3ae6-9e4b-4c60-becc-4caf7435c1dc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd3e274f1a8616c0d0aa9d54bcdd84a35d6936ad
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d24cc29fd35694ab69ad006498d3456d3ade68e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111015"
 ---
 # <a name="mssqleng002601"></a>MSSQL_ENG002601
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47777873"
   
 -   ID 열이 있는 테이블이 사용되지만 해당 열이 적절히 관리되지 않습니다.  
   
--   병합 복제에서 이 오류는 시스템 테이블인 **MSmerge_contents**에 삽입하는 동안에도 발생할 수 있습니다. 발생하는 오류는 "고유 인덱스가 'ucl1SycContents'인 개체 'MSmerge_contents'에 중복 키 행을 삽입할 수 없습니다"와 비슷합니다.  
+-   병합 복제에서 이 오류는 시스템 테이블인 **MSmerge_contents**에 삽입하는 중에도 발생할 수 있습니다. 발생하는 오류는 “고유 인덱스가 ‘ucl1SycContents’인 개체 ‘MSmerge_contents’에 중복 키 행을 삽입할 수 없습니다.”와 비슷합니다.  
   
 ## <a name="user-action"></a>사용자 동작  
  필요한 동작은 오류 발생 원인에 따라 다릅니다.  

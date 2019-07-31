@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 03acf5db82c21a66e2fbd8337713b6989ce36a31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a115dafb386323bc1f4738720e7576657d22543
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403066"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316685"
 ---
 # <a name="azure-storage-connection-manager"></a>Azure Storage 연결 관리자
 
@@ -37,7 +36,7 @@ ms.locfileid: "66403066"
 - **계정 이름**: 스토리지 계정 이름을 지정합니다.
 - **인증:** 사용할 인증 방법을 지정합니다. **AccessKey** 및 **ServicePrincipal** 인증이 지원됩니다.
     - **AccessKey:** 이 인증 방법에 대해 **계정 키**를 지정합니다.
-    - **ServicePrincipal:** 이 인증 방법에 대해 서비스 주체의 **애플리케이션 ID**, **애플리케이션 키**, **테넌트 ID**를 지정합니다.
-      서비스 주체에는 스토리지 계정의 **Storage Blob 데이터 기여자** 역할을 할당해야 합니다.
+    - **ServicePrincipal:** 이 인증 방법에 대해 서비스 사용자의 **애플리케이션 ID**, **애플리케이션 키**, **테넌트 ID**를 지정합니다.
+      **테스트 연결**이 이뤄지려면 서비스 사용자에게 스토리지 계정에 대한 **Storage Blob 데이터 읽기 권한자** 역할을 하나 이상 할당해야 합니다.
       세부 정보는 [이](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 페이지를 참조하세요.
 - **환경:** 스토리지 계정을 호스팅하는 클라우드 환경을 지정합니다.

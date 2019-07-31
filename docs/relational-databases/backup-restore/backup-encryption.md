@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2420e494a312f64ba84edbd9a77b26be2a53e33b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 862f97bbe21d47c830dad59e69f2c508e7eebc15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103764"
 ---
 # <a name="backup-encryption"></a>백업 암호화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,9 +27,9 @@ ms.locfileid: "47659332"
   
  백업 중에 암호화하려면 암호화 키를 보호할 암호기와 암호화 알고리즘을 지정해야 합니다. 지원되는 암호화 옵션은 다음과 같습니다.  
   
--   **암호화 알고리즘:** 지원되는 암호화 알고리즘은 AES 128, AES 192, AES 256, Triple DES입니다.  
+-   **암호화 알고리즘:** 지원되는 암호화 알고리즘은 AES 128, AES 192, AES 256 및 Triple DES입니다.  
   
--   **암호기:** 인증서 또는 비대칭 키입니다.  
+-   **암호기:** 인증서 또는 비대칭 키  
   
 > [!CAUTION]  
 >  인증서나 비대칭 키를 백업하는 것이 매우 중요하며, 이때 가급적이면 인증서나 비대칭 키를 사용하여 암호화한 백업 파일과 다른 위치에 백업하는 것이 좋습니다. 인증서나 비대칭 키가 없으면 백업을 복원할 수 없으므로 백업 파일을 사용할 수 없게 됩니다.  
@@ -41,7 +40,7 @@ ms.locfileid: "47659332"
   
 ##  <a name="Benefits"></a> 이점  
   
-1.  데이터베이스 백업을 암호화하면 데이터를 보호할 수 있습니다. SQL Server는 백업을 만드는 동안 백업 데이터를 암호화하는 옵션을 제공합니다.  
+1.  데이터베이스 백업을 암호화하면 데이터를 보호하는 데 도움이 됩니다. SQL Server는 백업을 만드는 동안 백업 데이터를 암호화하는 옵션을 제공합니다.  
   
 2.  TDE를 사용하여 암호화된 데이터베이스에도 암호화를 사용할 수 있습니다.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "47659332"
 ##  <a name="Prerequisites"></a> 사전 요구 사항  
  백업을 암호화하기 위한 사전 요구 사항은 다음과 같습니다.  
   
-1.  **master 데이터베이스용 데이터베이스 마스터 키 만들기:** 데이터베이스 마스터 키는 데이터베이스에 있는 비대칭 키와 인증서의 개인 키를 보호하는 데 사용되는 대칭 키입니다. 자세한 내용은 [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)를 참조하세요.  
+1.  **master 데이터베이스의 데이터베이스 마스터 키를 만듭니다.** 데이터베이스 마스터 키는 데이터베이스에 있는 비대칭 키와 인증서의 프라이빗 키를 보호하는 데 사용되는 대칭 키입니다. 자세한 내용은 [SQL Server 및 데이터베이스 암호화 키&#40;데이터베이스 엔진&#41;](../../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md)를 참조하세요.  
   
 2.  백업 암호화에 사용할 인증서나 비대칭 키를 만듭니다. 인증서를 만드는 방법은 [CREATE CERTIFICATE&#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)를 참조하세요. 비대칭 키를 만드는 방법은 [CREATE ASYMMETRIC KEY&#40;Transact-SQL&#41;](../../t-sql/statements/create-asymmetric-key-transact-sql.md)를 참조하세요.  
   
@@ -74,7 +73,7 @@ ms.locfileid: "47659332"
 -   암호화된 백업의 경우 기존 백업 세트 옵션에 추가는 지원되지 않습니다.  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> 사용 권한  
  **백업을 암호화하거나 암호화된 백업에서 복원하려면:**  
   
  데이터베이스 백업을 암호화하는 데 사용된 인증서 또는 비대칭 키에 대한**VIEW DEFINITION** 권한을 사용합니다.  

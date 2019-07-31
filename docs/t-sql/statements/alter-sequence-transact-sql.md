@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: a482767c416e1adf4de30d6493c4c79ca07d2398
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 337b2ee6d7edffeb49c2cee6291d30100b4c1df0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420379"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070331"
 ---
 # <a name="alter-sequence-transact-sql"></a>ALTER SEQUENCE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -88,7 +87,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  시퀀스에 대한 **ALTER** 권한 또는 스키마에 대한 **ALTER** 권한이 필요합니다. 시퀀스에 대한 **ALTER** 권한을 부여하려면 다음 형식으로 **ALTER ON OBJECT**를 사용합니다.  
   
 ```  
@@ -103,8 +102,8 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
 ## <a name="examples"></a>예  
  시퀀스를 만들고 **NEXT VALUE FOR** 함수를 사용하여 시퀀스 번호를 생성하는 방법에 대한 예는 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)를 참조하세요.  
   
-### <a name="a-altering-a-sequence"></a>1. 시퀀스 변경  
- 다음 예에서는 범위가 0에서 255인 **int** 데이터 형식을 사용하여 Test라는 스키마와 TestSeq라는 시퀀스를 만듭니다. 시퀀스는 125부터 시작하여 번호가 생성될 때마다 25씩 증가합니다. 시퀀스가 순환하도록 구성되었기 때문에 값이 최대값 200을 초과하는 경우 최소값 100에서 시퀀스가 다시 시작됩니다.  
+### <a name="a-altering-a-sequence"></a>1\. 시퀀스 변경  
+ 다음 예제에서는 범위가 100에서 200 사이인 **int** 데이터 형식을 사용하여 Test라는 스키마와 TestSeq라는 시퀀스를 만듭니다. 시퀀스는 125부터 시작하여 번호가 생성될 때마다 25씩 증가합니다. 시퀀스가 순환하도록 구성되었기 때문에 값이 최대값 200을 초과하는 경우 최소값 100에서 시퀀스가 다시 시작됩니다.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -122,7 +121,7 @@ CREATE SEQUENCE Test.TestSeq
 GO  
 ```  
   
- 다음 예에서는 0에서 255 사이의 범위로 TestSeq 시퀀스를 변경합니다. 시퀀스는 100부터 번호가 매겨지도록 다시 시작되며 번호가 생성될 때마다 50씩 증가합니다.  
+ 다음 예제에서는 범위가 50에서 200 사이가 되도록 TestSeq 시퀀스를 변경합니다. 시퀀스는 100부터 번호가 매겨지도록 다시 시작되며 번호가 생성될 때마다 50씩 증가합니다.  
   
 ```  
 ALTER SEQUENCE Test. TestSeq  
@@ -138,7 +137,7 @@ GO
   
  시퀀스가 순환하지 않기 때문에 200을 초과하는 경우 **NEXT VALUE FOR** 함수에서 오류가 발생합니다.  
   
-### <a name="b-restarting-a-sequence"></a>2. 시퀀스 다시 시작  
+### <a name="b-restarting-a-sequence"></a>2\. 시퀀스 다시 시작  
  다음 예에서는 CountBy1이라는 시퀀스를 만듭니다. 이 시퀀스는 기본값을 사용합니다.  
   
 ```  

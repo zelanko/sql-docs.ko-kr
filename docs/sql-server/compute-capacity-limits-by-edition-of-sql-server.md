@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: cd308bc9-9468-40cc-ad6e-1a8a69aca6c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b74eddf6fa77c63d7b4657375883e9b83e1893d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6bd60789112a8aa28481b3bb615f1df2a957125a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52400626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067571"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>SQL Server의 버전별 컴퓨팅 용량 제한
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 버전별 컴퓨팅 용량 제한과 이들 버전이 하이퍼 스레드 프로세서가 있는 물리적 환경 및 가상화된 환경에서 서로 어떻게 다른지에 대해 설명합니다.  
   
- ![계산 용량 제한에 매핑](../sql-server/media/compute-capacity-limits.gif "계산 용량 제한에 매핑")  
+ ![컴퓨팅 용량 제한에 매핑](../sql-server/media/compute-capacity-limits.gif "컴퓨팅 용량 제한에 매핑")  
   
  이 표에서는 위 다이어그램의 표기법에 대해 설명합니다.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "52400626"
   
 -   실제 프로세서는 하나 이상의 코어로 구성될 수 있습니다. 실제 프로세서는 프로세서 패키지 또는 소켓과 동일합니다.  
   
-하나 이상의 실제 프로세서가 포함된 시스템이나 여러 코어 및/또는 하이퍼 스레드가 있는 실제 프로세서가 포함된 시스템은 운영 체제에서 여러 태스크를 동시에 실행할 수 있도록 합니다. 각 실행 스레드는 논리적 프로세서로 나타납니다. 예를 들어, 컴퓨터에 하이퍼 스레딩을 사용하고 코어당 스레드 두 개인 쿼드 코어 프로세서 두 개가 있는 경우, 프로세서 2개 x 프로세서당 코어 4개 x 코어당 스레드 2개로 논리적 프로세서가 16개 있는 것입니다. 다음 사항에 주목할 필요가 있습니다.  
+하나 이상의 실제 프로세서가 포함된 시스템이나 여러 코어 및/또는 하이퍼 스레드가 있는 실제 프로세서가 포함된 시스템은 운영 체제에서 여러 태스크를 동시에 실행할 수 있도록 합니다. 각 실행 스레드는 논리적 프로세서로 나타납니다. 예를 들어 하이퍼스레딩을 사용하고 코어당 스레드 두 개인 쿼드 코어 프로세서 두 개가 컴퓨터에 있는 경우, 논리 프로세서 수는 프로세서 2개 x 프로세서당 코어 4개 x 코어당 스레드 2개로 16개가 됩니다. 다음 사항에 주목할 필요가 있습니다.  
   
 -   하이퍼 스레드 코어의 단일 스레드에서 논리적 프로세서의 컴퓨팅 용량은 하이퍼 스레딩을 사용하지 않은 동일한 코어에서 논리적 프로세서의 컴퓨팅 용량보다 적습니다.  
   

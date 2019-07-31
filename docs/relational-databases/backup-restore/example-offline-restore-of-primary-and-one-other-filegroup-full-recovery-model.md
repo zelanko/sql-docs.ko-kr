@@ -1,5 +1,5 @@
 ---
-title: '오프라인 복원 예제: 주 파일 그룹 및 하나의 파일 그룹(전체 복구 모델) | Microsoft 문서'
+title: '오프라인 복원 예제: 주 파일 그룹 및 하나의 파일 그룹(전체 복구 모델) | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 7d6c50eb-dc84-4d66-855a-0b5f1bd89737
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 29fb82d5be1cd97d18cc9cbb76da6b0839e5023d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 390db80fc88e3d115bad292e5bf0bf1a4a921639
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702501"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089790"
 ---
-# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>예제: 주 파일 그룹 및 다른 파일 그룹의 오프라인 복원(전체 복구 모델)
+# <a name="example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model"></a>예: 주 파일 그룹 및 다른 파일 그룹의 오프라인 복원(전체 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   이 항목에서는 전체 복구 모델에서 데이터베이스에 여러 개의 파일 그룹이 있는 경우와 관련된 내용을 다룹니다.  
@@ -32,7 +31,7 @@ ms.locfileid: "47702501"
  데이터베이스 관리자가 주 파일 그룹과 파일 그룹 `B`를 복원 및 복구하려고 합니다. 데이터베이스에서 전체 복구 모델을 사용하고 있으므로 복원이 시작되기 전에 데이터베이스의 비상 로그 백업을 만들어야 합니다. 데이터베이스가 온라인 상태가 되면 파일 그룹 `A` 와 `C` 도 자동으로 온라인 상태가 됩니다.  
   
 > [!NOTE]  
->  오프라인 복원 시퀀스는 읽기 전용 파일의 온라인 복원 시퀀스보다 단계 수가 적습니다. 예제는 [예제: 읽기 전용 파일 온라인 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)을 참조하세요. 그러나 전체 데이터베이스는 시퀀스가 진행되는 동안 오프라인 상태입니다.  
+>  오프라인 복원 시퀀스는 읽기 전용 파일의 온라인 복원 시퀀스보다 단계 수가 적습니다. 예를 보려면 [예제: 읽기 전용 파일의 온라인 복원&#40;전체 복구 모델&#41;](../../relational-databases/backup-restore/example-online-restore-of-a-read-only-file-full-recovery-model.md)을 참조하세요. 그러나 전체 데이터베이스는 시퀀스가 진행되는 동안 오프라인 상태입니다.  
   
 ## <a name="tail-log-backup"></a>비상 로그 백업  
  데이터베이스를 복원하기 전에 데이터베이스 관리자는 비상 로그 백업을 만들어야 합니다. 데이터베이스가 손상되었으므로 비상 로그 백업을 만들려면 NO_TRUNCATE 옵션을 사용해야 합니다.  

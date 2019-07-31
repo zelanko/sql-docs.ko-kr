@@ -12,13 +12,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2a0ffa4b881fe550aba6c547fcea690932eef110
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8200ed17e9581f0c39693ee7386f7f33c566265
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462618"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316623"
 ---
 # <a name="flexible-file-destination"></a>유연한 파일 대상
 
@@ -53,11 +52,28 @@ ms.locfileid: "66462618"
 - **escapeChar:** 입력 파일의 내용에서 열 구분 기호를 이스케이프하는 데 사용되는 특수 문자입니다. 테이블에 escapeChar와 quoteChar를 둘 다 지정할 수 없습니다. 하나의 문자만 허용됩니다. 기본값이 없습니다.
 - **quoteChar:** 문자열 값을 인용하는 데 사용되는 문자입니다. 인용 문자 안의 열과 행 구분 기호는 문자열 값의 일부로 처리됩니다. 이 속성은 입력 및 출력 데이터 세트 모두에 적용할 수 있습니다. 테이블에 escapeChar와 quoteChar를 둘 다 지정할 수 없습니다. 하나의 문자만 허용됩니다. 기본값이 없습니다.
 - **nullValue:** null 값을 나타내는 데 사용되는 하나 이상의 문자입니다. **기본**값은 \N입니다.
-- **encodingName:** 인코딩 이름을 지정합니다. [Encoding.EncodingName](https://docs.microsoft.com/en-us/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8) 속성을 참조하세요.
+- **encodingName:** 인코딩 이름을 지정합니다. [Encoding.EncodingName](https://docs.microsoft.com/dotnet/api/system.text.encoding?redirectedfrom=MSDN&view=netframework-4.8) 속성을 참조하세요.
 - **skipLineCount:**  입력 파일에서 데이터를 읽을 때 건너뛸 비어 있지 않은 행의 수를 나타냅니다. skipLineCount와 firstRowAsHeader가 모두 지정되면 먼저 줄을 건너뛴 다음, 입력 파일에서 헤더 정보를 읽습니다.
 - **treatEmptyAsNull:** 입력 파일에서 데이터를 읽을 때 null 또는 빈 문자열을 null 값으로 처리할지 여부를 지정합니다. **기본**값은 True입니다.
 
 연결 정보를 지정한 다음 **열** 페이지로 전환하여 SSI 데이터 흐름에 대해 원본 열을 대상 열에 매핑합니다.
+
+**서비스 사용자 권한 구성에 대한 참고 사항**
+
+**테스트 연결**이 이뤄지려면(Blob Storage 또는 Data Lake Storage Gen2) 서비스 사용자에게 스토리지 계정에 대한 **Storage Blob 데이터 읽기 권한자** 역할을 하나 이상 할당해야 합니다.
+이 작업은 [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal)를 사용하여 수행됩니다.
+
+Blob Storage의 경우 최소한 **Storage Blob 데이터 기여자** 역할을 할당하여 쓰기 권한을 부여합니다.
+
+Data Lake Storage Gen2의 경우 RBAC 및 [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer)을 통해 사용 권한이 결정됩니다.
+ACL은 [여기](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)에 자세히 설명된 대로 앱 등록에 서비스 사용자의 OID(개체 ID)를 사용하여 구성된다는 것에 주의합니다.
+RBAC 구성에 사용되는 애플리케이션(클라이언트) ID와는 다릅니다.
+기본 제공 역할 또는 사용자 지정 역할을 통해 보안 주체에 RBAC 데이터 권한이 부여된 경우 요청의 권한 부여 시 먼저 이러한 사용 권한이 평가됩니다.
+보안 주체의 RBAC 할당을 통해 요청한 작업의 권한이 부여된 경우 권한 부여가 즉시 확인되고 추가 ACL 검사가 수행되지 않습니다.
+또는 보안 주체에 RBAC 할당이 없거나 요청한 작업이 할당된 사용 권한과 일치하지 않는 경우 ACL 검사를 통해 보안 주체가 요청된 작업을 수행할 수 있는 권한이 있는지 확인합니다.
+쓰기 권한의 경우 싱크 폴더에 대한 **쓰기** 권한과 함께 싱크 파일 시스템부터 최소한 **실행** 권한을 부여합니다.
+또는 RBAC를 사용하여 최소한 **Storage Blob 데이터 기여자** 역할을 부여합니다.
+자세한 내용은 [이](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) 문서를 참조하세요.
 
 **ORC/Parquet 파일 형식의 필수 구성 요소**
 

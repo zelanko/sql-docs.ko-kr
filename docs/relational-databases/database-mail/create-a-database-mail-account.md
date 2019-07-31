@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c07abbc6-fc6a-470b-8fa3-532f2e06b16a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a682f0d3c8373ea7fc96dd82796108d5d71f26ef
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: a31f23d4de02bd4554d997364a3a5aa26b3d4ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134486"
 ---
 # <a name="create-a-database-mail-account"></a>데이터베이스 메일 계정 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,11 +26,11 @@ ms.locfileid: "51558290"
   
 -   **시작하기 전 주의 사항:**  [필수 구성 요소](#Prerequisites)  
   
--   **데이터베이스 메일 계정을 만들려면:**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **다음을 사용하여 데이터베이스 메일 계정 만들기:**  [데이터베이스 메일 구성 마법사](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
 -   **후속 작업:**  [데이터베이스 메일을 구성하기 위한 다음 단계](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   

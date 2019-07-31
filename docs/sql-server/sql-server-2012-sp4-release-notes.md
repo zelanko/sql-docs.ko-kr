@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
-manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: cc09ccfbf23e200f8771b84d40fb5a1dd3d1dc9c
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 1198933f5dd996b2cf050ea0fbb7960410095869
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68136523"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 서비스 팩 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -136,7 +135,7 @@ ms.locfileid: "58306111"
 ### <a name="analysis-services-and-powerpivot"></a>Analysis Services 및 PowerPivot  
   
 ##### <a name="powerpivot-configuration-tool-does-not-create-the-powerpivot-gallery"></a>PowerPivot 구성 도구로 PowerPivot 갤러리가 만들어지지 않음  
-**문제점:** PowerPivot 구성 도구는 팀 사이트를 프로비전하므로 PowerPivot 갤러리가 만들어지지 않습니다.  
+**문제점:** PowerPivot 구성 도구는 팀 사이트를 프로비저닝하므로 PowerPivot 갤러리가 만들어지지 않습니다.  
   
 **해결 방법:** 새 앱(라이브러리)을 만듭니다.  
   
@@ -147,7 +146,7 @@ ms.locfileid: "58306111"
 3.  **PowerPivot  갤러리**를 클릭합니다.  
   
 #### <a name="to-use-powerpivot-for-excel-with-excel-2013-you-must-use-the-add-in-that-is-installed-with-excel"></a>Excel 2013에서 PowerPivot for Excel을 사용하려면 Excel과 함께 설치된 추가 기능을 사용해야 합니다.  
-**문제점:** Office 2010을 사용하는 경우 PowerPivot for Excel은 독립 실행형 추가 기능으로, [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx)에서 다운로드할 수 있습니다. 또는 [Microsoft  다운로드 센터](https://www.microsoft.com/download/details.aspx?id=29074)에서 다운로드할 수도 있습니다. 다운로드로 제공되는 두 가지 버전의 PowerPivot이 있습니다. 하나는 SQL Server 2008 R2와 함께 제공되는 버전이고 다른 하나는 SQL Server 2012와 함께 제공되는 버전입니다. 그러나 Office 2013의 경우 PowerPivot for Excel은 Office와 함께 제공되며 Excel과 함께 설치됩니다. SQL Server 2008 R2 및 SQL Server 2012 버전의 PowerPivot for Excel 2010이 Excel 2013과 호환되지 않지만 Excel 2010을 Excel 2013과 함께 실행하려면 PowerPivot for Excel 2010을 클라이언트 컴퓨터에 설치할 수 있습니다. 즉, 두 버전의 Excel이 공존할 수 있으므로 해당 PowerPivot 추가 기능을 사용할 수 있습니다.  
+**문제점:** Office 2010을 사용하는 경우 PowerPivot for Excel은 독립 실행형 추가 기능으로, [https://www.microsoft.com/bi/powerpivot.aspx](https://www.microsoft.com/bi/powerpivot.aspx)에서 다운로드할 수 있습니다. 또는 [Microsoft  다운로드 센터](https://www.microsoft.com/download/details.aspx?id=29074)에서 다운로드할 수도 있습니다. 다운로드로 제공되는 두 가지 버전의 PowerPivot 추가 기능이 있습니다. 하나는 SQL Server 2008 R2와 함께 제공되는 버전이고, 다른 하나는 SQL Server 2012와 함께 제공되는 버전입니다. 그러나 Office 2013의 경우 PowerPivot for Excel은 Office와 함께 제공되며 Excel과 함께 설치됩니다. SQL Server 2008 R2 및 SQL Server 2012 버전의 PowerPivot for Excel 2010이 Excel 2013과 호환되지 않지만 Excel 2010을 Excel 2013과 함께 실행하려면 PowerPivot for Excel 2010을 클라이언트 컴퓨터에 설치할 수 있습니다. 즉, 두 버전의 Excel이 공존할 수 있으므로 해당 PowerPivot 추가 기능을 사용할 수 있습니다.  
   
 **해결 방법:** PowerPivot for Excel 2013을 사용하려면 COM 추가 기능을 사용해야 합니다. Excel 2013에서 **파일** | **옵션** | **추가 기능**을 선택합니다. **관리** 드롭다운 상자에서 **COM 추가 기능** 을 선택하고 **이동**을 클릭합니다. **COM 추가 기능**에서 **Microsoft Office PowerPivot for Excel 2013** 을 선택하고 **확인**을 클릭합니다.  
   
@@ -167,7 +166,7 @@ ms.locfileid: "58306111"
 #### <a name="power-view-in-sharepoint-server-2013-requires-microsoftanalysisservicesspclientdll"></a>SharePoint Server 2013의 Power View에 Microsoft.AnalysisServices.SPClient.dll이 필요함  
 **문제:** [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]에서는 필수 구성 요소인 **Microsoft.AnalysisServices.SPClient.dll**을 설치하지 않습니다. SharePoint 모드에서 SharePoint Server 2013 미리 보기 및 [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 를 설치하지만 SharePoint 2013용 PowerPivot 설치 관리자 패키지인 **spPowerPivot.msi** 를 다운로드 및 설치하지 않는 경우, 파워 뷰가 작동하지 않고 파워 뷰에서 다음 증상이 나타납니다.  
   
-**증상:** Power View 보고서를 만들려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
+**증상:** 파워 뷰 보고서를 만들려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
   
 -   "데이터 원본에 대한 연결을 설정할 수 없습니다..."  
   
@@ -197,9 +196,9 @@ SQL  Server  2012  Express  서비스 팩 1(SP1)  릴리스에는 SQL  Server  2
 ### <a name="change-data-capture-service-and-designer-for-oracle-by-attunity"></a>Change Data Capture Service 및 Designer for Oracle by Attunity  
   
 #### <a name="upgrading-the-cdc-service-and-designer"></a>CDC Service 및 Designer 업그레이드  
-**문제점:** SQL Server 2012 SP1 설치 시 Change Data Capture Designer for Oracle 및 Change Data Capture Service for Oracle by Attunity가 컴퓨터에 설치되는 경우 SP1을 설치해도 이러한 구성 요소가 업그레이드되지 않습니다.  
+**문제점:** SQL Server 2012 SP1 설치 시 Change Data Capture Designer for Oracle 및 Change Data Capture Service for Oracle by Attunity가 머신에 설치되는 경우 SP1을 설치해도 이러한 구성 요소가 업그레이드되지 않습니다.  
   
-**해결 방법:** CDC 구성 요소를 최신 버전으로 업그레이드하려면  
+**해결 방법:** CDC 구성 요소를 최신 버전으로 업그레이드하려면 다음을 수행합니다.  
   
 1.  [SQL  Server  2012  SP1  기능 팩 다운로드 페이지](https://go.microsoft.com/fwlink/p/?LinkID=268266)에서 Change  Data  Capture  Service  for  Oracle  by  Attunity의 .msi  파일을 다운로드합니다.  
   

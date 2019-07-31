@@ -1,7 +1,7 @@
 ---
 title: nchar 및 nvarchar(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 07/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -15,28 +15,30 @@ helpviewer_keywords:
 ms.assetid: 81ee5637-ee31-4c4d-96d0-56c26a742354
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ee44e6c7a4ff8befc21b461feab44a07a8658a2f
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 8a8baa16e2b2d7e22bfd3d4045ff77483e198aec
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696732"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354593"
 ---
 # <a name="nchar-and-nvarchar-transact-sql"></a>nchar 및 nvarchar(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-고정 길이(**nchar**) 또는 가변 길이(**nvarchar**)인 문자 데이터 형식입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [SC(보조 문자)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 사용 데이터 정렬을 사용할 때 이러한 데이터 형식은 전체 범위의 [유니코드](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 문자 데이터를 저장하고 [UTF-16](https://www.wikipedia.org/wiki/UTF-16) 문자 인코딩을 사용합니다. SC가 아닌 데이터 정렬이 지정된 경우 이러한 데이터 형식은 [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 문자 인코딩에서 지원하는 문자 데이터의 하위 집합만 저장합니다.
+고정 크기(**nchar**) 또는 가변 크기(**nvarchar**)인 문자 데이터 형식입니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [SC(보조 문자)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 사용 데이터 정렬을 사용할 때 이러한 데이터 형식은 전체 범위의 [유니코드](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 문자 데이터를 저장하고 [UTF-16](https://www.wikipedia.org/wiki/UTF-16) 문자 인코딩을 사용합니다. SC가 아닌 데이터 정렬이 지정된 경우 이러한 데이터 형식은 [UCS-2](https://www.wikipedia.org/wiki/Universal_Coded_Character_Set#Encoding_forms) 문자 인코딩에서 지원하는 문자 데이터의 하위 집합만 저장합니다.
   
 ## <a name="arguments"></a>인수  
 **nchar** [ ( n ) ]  
-고정 길이 문자열 데이터입니다. *n*은 바이트 쌍으로 문자열 길이를 정의하며 1에서 4,000 사이의 값이어야 합니다. 스토리지 크기는 *n*바이트의 두 배입니다. [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 인코딩의 경우 저장소 크기는 *n*바이트의 두 배이고 저장할 수 있는 문자 수도 *n*입니다. UTF-16 인코딩의 경우 스토리지 크기는 여전히 *n*바이트의 두 배이지만, 보조 문자가 2바이트 쌍([서로게이트 쌍](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)이라고도 함)을 사용하기 때문에 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. **nchar**의 ISO 동의어는 **national char**와 **national character**입니다.
+고정 크기 문자열 데이터입니다. *n*은 바이트 쌍으로 문자열 크기를 정의하며 1에서 4,000 사이의 값이어야 합니다. 스토리지 크기는 *n*바이트의 두 배입니다. [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 인코딩의 경우 스토리지 크기는 *n*바이트의 두 배이고 저장할 수 있는 문자 수도 *n*입니다. UTF-16 인코딩의 경우 스토리지 크기는 여전히 *n*바이트의 두 배이지만, 보조 문자가 2바이트 쌍([서로게이트 쌍](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)이라고도 함)을 사용하기 때문에 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. **nchar**의 ISO 동의어는 **national char**와 **national character**입니다.
   
 **nvarchar** [ ( n | **max** ) ]  
-가변 길이 문자열 데이터입니다. *n*은 바이트 쌍으로 문자열 길이를 정의하며 1에서 4,000 사이의 값이 될 수 있습니다. **max**는 최대 저장소 크기가 2^30-1자(2GB)임을 나타냅니다. 스토리지 크기는 *n*바이트 + 2바이트의 두 배입니다. [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 인코딩의 경우 저장소 크기는 *n*바이트 + 2바이트의 두 배이고 저장할 수 있는 문자 수도 *n*입니다. UTF-16 인코딩의 경우 스토리지 크기는 여전히 *n*바이트 +2바이트의 두 배이지만, 보조 문자가 2바이트 쌍([서로게이트 쌍](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)이라고도 함)을 사용하기 때문에 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. **nvarchar**의 ISO 동의어는 **national char varying** 및 **national character varying**로 다양합니다.
+가변 크기 문자열 데이터입니다. *n*은 바이트 쌍으로 문자열 길이를 정의하며 1에서 4,000 사이의 값일 수 있습니다. **max**는 최대 스토리지 크기가 2^30-1자(2GB)임을 나타냅니다. 스토리지 크기는 *n*바이트 + 2바이트의 두 배입니다. [UCS-2](https://www.wikipedia.org/wiki/UTF-16#U+0000_to_U+D7FF_and_U+E000_to_U+FFFF) 인코딩의 경우 스토리지 크기는 *n*바이트 + 2바이트의 두 배이고 저장할 수 있는 문자 수도 *n*입니다. UTF-16 인코딩의 경우 스토리지 크기는 여전히 *n*바이트 +2바이트의 두 배이지만, 보조 문자가 2바이트 쌍([서로게이트 쌍](https://www.wikipedia.org/wiki/UTF-16#U+010000_to_U+10FFFF)이라고도 함)을 사용하기 때문에 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. **nvarchar**의 ISO 동의어는 **national char varying** 및 **national character varying**로 다양합니다.
   
 ## <a name="remarks"></a>Remarks  
+[NCHAR(*n*) 및 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)에서 *n*이 문자 수를 정의한다고 잘못 생각하는 경우가 많습니다. 그러나 [NCHAR(*n*) 및 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)에서 *n*은 **바이트 쌍**의 문자열 길이(0~4,000)를 정의합니다. *n*은 저장할 수 있는 문자 수를 정의하지 않습니다. [CHAR(*n*) 및 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 정의와 비슷합니다.   
+이러한 오해는 유니코드 범위 0~65,535에 정의된 문자를 사용하는 경우 각 바이트 쌍당 하나의 문자를 저장할 수 있기 때문에 발생합니다. 그러나 더 높은 유니코드 범위(65,536~1,114,111)에서는 한 문자가 두 개의 바이트 쌍을 사용할 수 있습니다. 예를 들어 NCHAR(10)로 정의된 열에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 하나의 바이트 쌍을 사용하는 문자(유니코드 범위 0~65,535) 10자를 저장할 수 있지만, 두 개의 바이트 쌍을 사용하는 경우(유니코드 범위 65,536~1,114,111) 10자 미만을 저장할 수 있습니다. 유니코드 스토리지 및 문자 범위에 대한 자세한 내용은 [UTF-8과 UTF-16 간의 스토리지 차이점](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)을 참조하세요.     
+
 데이터 정의나 변수 선언문에서 *n*을 지정하지 않으면 기본 길이 1이 사용됩니다. CAST 함수에 *n*을 지정하지 않으면 기본 길이 30이 사용됩니다.
 
 **nchar** 또는 **nvarchar**를 사용하는 경우 다음을 수행하는 것이 좋습니다.

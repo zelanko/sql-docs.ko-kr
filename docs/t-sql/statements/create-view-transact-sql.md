@@ -36,14 +36,13 @@ helpviewer_keywords:
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f0e93aaff4ed0f8eb02de0acb3e9362c1a390a1
-ms.sourcegitcommit: a11e733bd417905150567dfebc46a137df85a2fa
+ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53991916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938889"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -148,7 +147,7 @@ OR ALTER
  CREATE VIEW 문의 텍스트가 포함된 [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md)의 항목을 암호화합니다. WITH ENCRYPTION을 사용하면 뷰가 SQL Server 복제의 일부로 게시되지 않도록 할 수 있습니다.  
   
  SCHEMABINDING  
- 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 미치는 방법으로 기본 테이블을 수정할 수 없습니다. 뷰 정의 자체를 먼저 수정하거나 삭제하여 수정할 테이블에 대해 종속성을 제거해야 합니다. SCHEMABINDING을 사용하는 경우 *select_statement*에 참조되는 테이블, 뷰 또는 사용자 정의 함수의 두 부분으로 구성된 이름(_schema_**.**_object_)이 있어야 합니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
+ 기본 테이블의 스키마에 뷰를 바인딩합니다. SCHEMABINDING을 지정하면 뷰 정의에 영향을 미치는 방법으로 기본 테이블을 수정할 수 없습니다. 뷰 정의 자체를 먼저 수정하거나 삭제하여 수정할 테이블에 대해 종속성을 제거해야 합니다. SCHEMABINDING을 사용하는 경우 *select_statement*에 참조되는 테이블, 뷰 또는 사용자 정의 함수의 두 부분으로 구성된 이름(_schema_ **.** _object_)이 있어야 합니다. 참조된 개체는 모두 같은 데이터베이스에 있어야 합니다.  
   
  SCHEMABINDING 절로 만든 뷰에서 사용하는 뷰 또는 테이블은 뷰가 삭제되거나 변경되어 스키마 바인딩이 더 이상 존재하지 않는 경우에만 삭제할 수 있습니다. 그렇지 않으면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류가 발생합니다. 또한 ALTER TABLE 문이 뷰 정의에 영향을 미치는 경우에는 스키마 바인딩이 있는 뷰에서 사용하는 테이블에서 이러한 문을 실행할 수 없습니다.  
   
@@ -347,14 +346,14 @@ FROM Tn;
   
 -   뷰를 사용하여 수행된 업데이트의 복제는 서로 다른 두 데이터베이스에서 테이블이 복제될 때와 동일합니다. 서로 다른 복제 에이전트에서 테이블을 제공하며 업데이트 순서는 보장되지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스에는 CREATE VIEW 권한이 필요하고 뷰를 만들 구성표에는 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
 
 이 예에서는 AdventureWorks 2012 또는 AdventureWorksDW 데이터베이스를 사용합니다.  
 
-### <a name="a-using-a-simple-create-view"></a>1. 간단한 CREATE VIEW 사용  
+### <a name="a-using-a-simple-create-view"></a>1\. 간단한 CREATE VIEW 사용  
  다음 예에서는 간단한 `SELECT` 문을 사용하여 뷰를 만듭니다. 간단한 뷰는 열 조합을 자주 쿼리할 때 유용합니다. 이 뷰의 데이터는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `HumanResources.Employee` 및 `Person.Person` 테이블에 있습니다. 이 데이터는 [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)]의 직원 이름과 채용 날짜 정보를 제공합니다. 입사일 추적 담당자에게 이 테이블의 모든 데이터에 액세스할 권한을 주지 않아도 해당 뷰를 만들 수 있습니다.  
   
 ```  
@@ -367,7 +366,7 @@ GO
   
 ```  
   
-### <a name="b-using-with-encryption"></a>2. WITH ENCRYPTION 사용  
+### <a name="b-using-with-encryption"></a>2\. WITH ENCRYPTION 사용  
  다음 예에서는 `WITH ENCRYPTION` 옵션을 사용하여 계산 열, 이름이 바뀐 열 및 복수 열을 보여 줍니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]까지  
@@ -385,7 +384,7 @@ GO
   
 ```  
   
-### <a name="c-using-with-check-option"></a>3. WITH CHECK OPTION 사용  
+### <a name="c-using-with-check-option"></a>C. WITH CHECK OPTION 사용  
  다음 예에서는 5개의 테이블을 참조하고 데이터 수정을 허용하여 시애틀에 사는 직원에게만 적용하는 `SeattleOnly`라는 뷰를 보여 줍니다.  
   
 ```  

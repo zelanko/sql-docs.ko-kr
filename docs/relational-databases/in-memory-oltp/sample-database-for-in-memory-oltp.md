@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: df347f9b-b950-4e3a-85f4-b9f21735eae3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddbafb58662497dc2ee9c513aa206d826d5db8c1
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 2806522e0dcc0c9aa7badd099be28e11072b396e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111800"
 ---
 # <a name="sample-database-for-in-memory-oltp"></a>메모리 내 OLTP에 대한 예제 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -440,7 +439,7 @@ ostress.exe -S. -E -dAdventureWorks2016CTP3 -Q"EXEC Demo.usp_DemoReset"
   
     -   증상: 디스크 기반 테이블에서 작업을 실행할 때 CPU 사용률이 높은 경우 경합이 많다는 의미이며 동시성 부족을 나타냅니다.  
   
--   로그 드라이브의 속도: 로그 드라이브가 시스템의 트랜잭션 처리량 수준을 유지할 수 없는 경우 작업이 로그 IO에서 병목 상태가 됩니다. 메모리 내 OLTP를 사용하는 경우 로깅이 보다 효율적이지만 로그 IO가 병목 상태인 경우 잠재적인 성능 이점이 제한됩니다.  
+-   로그 드라이브의 속도: 로그 드라이브가 시스템의 트랜잭션 처리량 수준을 유지할 수 없는 경우 워크로드가 로그 IO에서 병목 상태가 됩니다. 메모리 내 OLTP를 사용하는 경우 로깅이 보다 효율적이지만 로그 IO가 병목 상태인 경우 잠재적인 성능 이점이 제한됩니다.  
   
     -   증상: 메모리 최적화 테이블에서 작업을 실행할 때 CPU 사용률이 100%에 가깝지 않거나 변동이 심한 경우 로그 IO 병목 상태가 있을 수 있습니다. 이는 리소스 모니터를 열고 로그 드라이브의 큐 길이를 살펴보고 확인할 수 있습니다.  
   
@@ -496,7 +495,7 @@ WHERE t.type='U'
 |SalesOrderHeader_inmem|7168|147456|  
 |Product_inmem|124|12352|  
   
- 보시다시피 테이블은 상당히 작습니다. SalesOrderHeader_inmem은 약 7MB이고, SalesOrderDetail_inmem은 약 15MB입니다.  
+ 보시는 것처럼 테이블이 상당히 작습니다. SalesOrderHeader_inmem은 약 7MB이고, SalesOrderDetail_inmem은 약 15MB입니다.  
   
  여기에서 눈에 띄는 것은 테이블 데이터의 크기와 비교할 때 인덱스에 할당된 메모리의 크기입니다. 이는 예제에서 해시 인덱스의 크기가 더 큰 데이터 크기에 대해 설정되었기 때문입니다. 해시 인덱스의 크기는 고정되어 있으므로 테이블의 데이터 크기에 따라 커지지 않습니다.  
   
@@ -566,7 +565,7 @@ FROM sys.dm_os_memory_clerks WHERE type LIKE '%xtp%'
   
  이는 예상된 결과입니다. 트랜잭션 작업이 실행 중일 때 메모리가 회수됩니다.  
   
- 데모 작업의 두 번째 실행을 시작하는 경우 이전에 삭제된 행이 정리됨에 따라 메모리 사용률이 처음에는 줄어드는 것을 확인할 수 있습니다. 특정 시점에서 메모리 크기가 다시 증가하고 작업이 완료될 때까지 증가합니다. 데모를 다시 설정하고 1,000만 개의 행을 삽입한 후 메모리 사용률은 처음 실행한 후의 사용률과 매우 유사합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 데모 작업의 두 번째 실행을 시작하는 경우 이전에 삭제된 행이 정리됨에 따라 메모리 사용률이 처음에는 줄어드는 것을 확인할 수 있습니다. 특정 시점에서 메모리 크기가 다시 증가하고 작업이 완료될 때까지 증가합니다. 데모를 다시 설정하고 1,000만 개의 행을 삽입한 후 메모리 사용률은 처음 실행한 후의 사용률과 매우 유사합니다. 예를 들어  
   
 ```  
 SELECT type  
@@ -740,7 +739,7 @@ ORDER BY state, file_type
   
  데모를 다시 설정한 후 1,000만 개의 판매 주문을 삽입하는 데모 작업을 두 번째로 실행하면 작업을 처음 실행하는 동안 생성된 파일이 정리된 것을 확인할 수 있습니다. 작업이 실행되는 동안 위의 쿼리를 몇 차례 실행하는 경우 검사점 파일이 다양한 상태를 거치는 것을 확인할 수 있습니다.  
   
- 1,000만 개의 판매 주문을 삽입하는 작업을 두 번째로 실행한 후 디스크 사용률이 처음 실행한 후와 매우 유사한 것을 확인할 수 있습니다. 하지만 시스템이 특성상 동적이므로 반드시 같지는 않습니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 1,000만 개의 판매 주문을 삽입하는 작업을 두 번째로 실행한 후 디스크 사용률이 처음 실행한 후와 매우 유사한 것을 확인할 수 있습니다. 하지만 시스템이 특성상 동적이므로 반드시 같지는 않습니다. 예를 들어  
   
 ```  
 SELECT state_desc  

@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2c9c2cbb9799447ad3e12cab311a5153d6341045
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 98e784be4bbe4e939ed4413a33d6a3ed36872558
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51695565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902808"
 ---
 # <a name="create-event-notification-transact-sql"></a>CREATE EVENT NOTIFICATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
 ## <a name="arguments"></a>인수  
  *event_notification_name*  
- 이벤트 알림의 이름입니다. 이벤트 알림 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 준수하고 이들을 만든 SERVER, DATABASE 또는 *object_name* 범위 내에서 고유해야 합니다.  
+ 이벤트 알림의 이름입니다. 이벤트 알림 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 준수하고 알림이 생성된 범위인 SERVER, DATABASE 또는 *object_name* 내에서 고유해야 합니다.  
   
  SERVER  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 현재 인스턴스에 이벤트 알림 범위를 적용합니다. 지정한 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 FOR 절에 지정한 이벤트가 발생할 때마다 알림이 발생합니다.  
@@ -95,7 +94,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  이벤트 알림이 삭제될 때까지 대화는 열려 있습니다. 특정 오류로 인해 대화가 일찍 닫힐 수 있습니다. 일부 또는 전체 대화를 명시적으로 종료하면 대상 서비스가 더 이상 메시지를 받지 못할 수 있습니다.  
   
- { **‘**_broker\_instance\_specifier_**’** | **‘current database’** }  
+ { **‘** _broker\_instance\_specifier_ **’**  |  **‘current database’** }  
  *broker_service*가 확인되는 Service Broker 인스턴스를 지정합니다. **sys.databases** 카탈로그 뷰의 **service_broker_guid** 열을 쿼리하면 특정 Service Broker 값을 얻을 수 있습니다. 현재 데이터베이스의 Service Broker 인스턴스를 지정하려면 **'current database'** 를 사용합니다. **'current database'** 는 대/소문자를 구분하지 않는 문자열 리터럴입니다.  
   
 > [!NOTE]  
@@ -117,7 +116,7 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
   
  이벤트 알림 보내기 실패는 모두 기록됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  데이터베이스(ON DATABASE)에 한정되는 이벤트 알림을 생성하려면 현재 데이터베이스에 대해 CREATE DATABASE DDL EVENT NOTIFICATION 권한이 필요합니다.  
   
  DDL 문에서 서버(ON SERVER)에 한정되는 이벤트 알림을 생성하려면 해당 서버에 대해 CREATE DDL EVENT NOTIFICATION 권한이 필요합니다.  
@@ -131,9 +130,9 @@ TO SERVICE 'broker_service' , { 'broker_instance_specifier' | 'current database'
 > [!NOTE]  
 >  다음의 예 1과 예 2에서 `TO SERVICE 'NotifyService'` 절의 GUID('8140a771-3c4b-4479-8ac0-81008ab17984')는 예가 구성된 컴퓨터에만 해당됩니다. 예를 들어 이 GUID는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 GUID입니다.  
 >   
->  이러한 예를 복사하고 실행하려면 이 GUID를 사용자의 컴퓨터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 맞게 바꿔야 합니다. 위의 인수 섹션에서 설명한 것처럼 sys.databases 카탈로그 뷰의 service_broker_guid 열을 쿼리하여 **‘**_broker\_instance\_specifier_**’** 를 얻을 수 있습니다.  
+>  이러한 예를 복사하고 실행하려면 이 GUID를 사용자의 컴퓨터 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 맞게 바꿔야 합니다. 위의 인수 섹션에서 설명한 것처럼 sys.databases 카탈로그 뷰의 service_broker_guid 열을 쿼리하여 **‘** _broker\_instance\_specifier_ **’** 를 얻을 수 있습니다.  
   
-### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>1. 서버에 한정되는 이벤트 알림 생성  
+### <a name="a-creating-an-event-notification-that-is-server-scoped"></a>1\. 서버에 한정되는 이벤트 알림 생성  
  다음 예에서는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]를 사용하여 대상 서비스를 설정하는 데 필요한 개체를 만듭니다. 대상 서비스는 이벤트 알림용 시작 서비스의 메시지 유형과 계약을 참조합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 `Object_Created` 추적 이벤트가 발생할 때마다 알림을 보내는 대상 서비스에서 이벤트 알림이 생성됩니다.  
   
 ```sql  
@@ -160,7 +159,7 @@ TO SERVICE 'NotifyService',
     '8140a771-3c4b-4479-8ac0-81008ab17984' ;  
 ```  
   
-### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>2. 데이터베이스에 한정되는 이벤트 알림 생성  
+### <a name="b-creating-an-event-notification-that-is-database-scoped"></a>2\. 데이터베이스에 한정되는 이벤트 알림 생성  
  다음 예에서는 앞의 예와 같은 대상 서비스에서 이벤트 알림을 생성합니다. [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 예제 데이터베이스에서 `ALTER_TABLE` 이벤트가 발생한 후 이벤트 알림이 발생합니다.  
   
 ```sql  
@@ -171,7 +170,7 @@ TO SERVICE 'NotifyService',
     '8140a771-3c4b-4479-8ac0-81008ab17984';  
 ```  
   
-### <a name="c-getting-information-about-an-event-notification-that-is-server-scoped"></a>3. 서버에 한정되는 이벤트 알림에 대한 정보 얻기  
+### <a name="c-getting-information-about-an-event-notification-that-is-server-scoped"></a>C. 서버에 한정되는 이벤트 알림에 대한 정보 얻기  
  다음 예에서는 서버 범위를 사용하여 생성한 이벤트 알림 `sys.server_event_notifications`에 대한 메타데이터에 대해 `log_ddl1` 카탈로그 뷰를 쿼리합니다.  
   
 ```  
@@ -179,7 +178,7 @@ SELECT * FROM sys.server_event_notifications
 WHERE name = 'log_ddl1';  
 ```  
   
-### <a name="d-getting-information-about-an-event-notification-that-is-database-scoped"></a>4. 데이터베이스에 한정되는 이벤트 알림에 대한 정보 얻기  
+### <a name="d-getting-information-about-an-event-notification-that-is-database-scoped"></a>D. 데이터베이스에 한정되는 이벤트 알림에 대한 정보 얻기  
  다음 예에서는 데이터베이스 범위를 사용하여 생성한 이벤트 알림 `sys.event_notifications`에 대한 메타데이터에 대해 `Notify_ALTER_T1` 카탈로그 뷰를 쿼리합니다.  
   
 ```sql  

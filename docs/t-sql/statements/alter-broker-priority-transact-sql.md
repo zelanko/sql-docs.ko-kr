@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 15fda1b2-e4dd-4f9d-935a-2e38926075b2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: cff00447a3a3bb76c5766fc8799a9f85c3d23144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 06ab8c327709fa6bfb504217bdd083aaed98f870
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066005"
 ---
 # <a name="alter-broker-priority-transact-sql"></a>ALTER BROKER PRIORITY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FOR CONVERSATION
  변경할 대화 우선 순위의 이름을 지정합니다. 현재 데이터베이스의 대화 우선 순위를 참조하는 이름이어야 합니다.  
   
  SET  
- 대화 우선 순위를 대화에 적용할지 여부를 결정하는 조건을 지정합니다. SET은 필수이며 CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME 또는 PRIORITY_LEVEL 조건을 하나 이상 포함해야 합니다.  
+ 대화 우선 순위를 대화에 적용할지 여부를 결정하는 조건을 지정합니다. SET는 필수이며 CONTRACT_NAME, LOCAL_SERVICE_NAME, REMOTE_SERVICE_NAME 또는 PRIORITY_LEVEL 조건을 하나 이상 포함해야 합니다.  
   
  CONTRACT_NAME = {*ContractName* | **ANY**}  
  대화 우선 순위를 대화에 적용할지 여부를 결정하기 위한 조건으로 사용할 계약 이름을 지정합니다. *ContractName*은 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 식별자이며 현재 데이터베이스의 계약 이름을 지정해야 합니다.  
@@ -113,12 +112,12 @@ FOR CONVERSATION
   
  자세한 내용은 [CREATE BROKER PRIORITY &#40;Transact-SQL&#41;](../../t-sql/statements/create-broker-priority-transact-sql.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  대화 우선 순위를 만들 수 있는 권한은 기본적으로 **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할 및 **sysadmin** 고정 서버 역할의 멤버에게 있습니다. 데이터베이스에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-changing-only-the-priority-level-of-an-existing-conversation-priority"></a>1. 기존 대화 우선 순위의 우선 순위 수준만 변경  
+### <a name="a-changing-only-the-priority-level-of-an-existing-conversation-priority"></a>1\. 기존 대화 우선 순위의 우선 순위 수준만 변경  
  우선 순위 수준을 변경하지만 계약, 로컬 서비스 또는 원격 서비스 속성은 변경하지 않습니다.  
   
 ```  
@@ -127,7 +126,7 @@ ALTER BROKER PRIORITY SimpleContractDefaultPriority
     SET (PRIORITY_LEVEL = 3);  
 ```  
   
-### <a name="b-changing-all-of-the-properties-of-an-existing-conversation-priority"></a>2. 기존 대화 우선 순위의 모든 속성 변경  
+### <a name="b-changing-all-of-the-properties-of-an-existing-conversation-priority"></a>2\. 기존 대화 우선 순위의 모든 속성 변경  
  우선 순위 수준, 계약, 로컬 서비스 및 원격 서비스 속성을 변경합니다.  
   
 ```  

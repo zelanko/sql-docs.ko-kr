@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 536283eb15d0b2f40e896520ab5d73327320bf56
-ms.sourcegitcommit: 56fb7b648adae2c7b81bd969de067af1a2b54180
+ms.openlocfilehash: c2ca8bd62bc1f05e655875c528efa8ea32b20ff5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57227195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948423"
 ---
 # <a name="select---group-by--transact-sql"></a>SELECT - GROUP BY- Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -345,7 +344,7 @@ GROUP BY 절은 SQL-2006 표준에 포함된 모든 GROUP BY 기능을 지원하
 |기능|SQL Server Integration Services|SQL Server 호환성 수준 100 이상|SQL Server 2008 이상(호환성 수준 90).|  
 |-------------|-------------------------------------|--------------------------------------------------|-----------------------------------------------------------|  
 |DISTINCT 집계|WITH CUBE 또는 WITH ROLLUP에 대해 지원되지 않습니다.|WITH CUBE, WITH ROLLUP, GROUPING SETS, CUBE 또는 ROLLUP에 대해 지원됩니다.|호환성 수준 100과 같습니다.|  
-|GROUP BY 절에서 이름이 CUBE 또는 ROLLUP인 사용자 정의 함수|**dbo.cube(**_arg1_**,**_...argN_**)** 또는 **dbo.rollup(**_arg1_**,**..._argN_**)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|**dbo.cube (**_arg1_**,**...argN **)** 또는 **dbo.rollup(** arg1 **,**_...argN_**)** 사용자 정의 함수는 GROUP BY 절에 허용되지 않습니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 이 경우 오류 메시지가 반환됩니다. "키워드 'cube'&#124;'rollup' 근처의 구문이 잘못되었습니다."<br /><br /> 이 문제를 방지하려면 `dbo.cube`를 `[dbo].[cube]`로 바꾸거나 `dbo.rollup`을 `[dbo].[rollup]`으로 바꿉니다.<br /><br /> 허용되는 예제: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|**dbo.cube (**_arg1_**,**_...argN_) 또는 **dbo.rollup(**_arg1_**,**_...argN_**)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
+|GROUP BY 절에서 이름이 CUBE 또는 ROLLUP인 사용자 정의 함수|**dbo.cube(** _arg1_ **,** _...argN_ **)** 또는 **dbo.rollup(** _arg1_ **,** ..._argN_ **)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|**dbo.cube (** _arg1_ **,** ...argN **)** 또는 **dbo.rollup(** arg1 **,** _...argN_ **)** 사용자 정의 함수는 GROUP BY 절에 허용되지 않습니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`<br /><br /> 다음 오류 메시지가 반환됩니다. "키워드 'cube'&#124;'rollup' 근처의 구문이 잘못되었습니다."<br /><br /> 이 문제를 방지하려면 `dbo.cube`를 `[dbo].[cube]`로 바꾸거나 `dbo.rollup`을 `[dbo].[rollup]`으로 바꿉니다.<br /><br /> 허용되는 예제: `SELECT SUM (x) FROM T  GROUP BY [dbo].[cube](y);`|**dbo.cube (** _arg1_ **,** _...argN_) 또는 **dbo.rollup(** _arg1_ **,** _...argN_ **)** 사용자 정의 함수가 GROUP BY 절에 허용됩니다.<br /><br /> 예: `SELECT SUM (x) FROM T  GROUP BY dbo.cube(y);`|  
 |GROUPING SETS|지원되지 않음|지원됨|지원됨|  
 |CUBE|지원되지 않음|지원됨|지원되지 않음|  
 |ROLLUP|지원되지 않음|지원됨|지원되지 않음|  
@@ -359,7 +358,7 @@ GROUP BY 절은 SQL-2006 표준에 포함된 모든 GROUP BY 기능을 지원하
   
 ## <a name="examples"></a>예  
   
-### <a name="a-use-a-simple-group-by-clause"></a>1. 단순 GROUP BY 절 사용  
+### <a name="a-use-a-simple-group-by-clause"></a>1\. 단순 GROUP BY 절 사용  
  다음 예에서는 `SalesOrderID` 테이블의 각 `SalesOrderDetail`에 대한 합계를 계산합니다. 이 예제에서는 AdventureWorks를 사용합니다.  
   
 ```sql  
@@ -369,7 +368,7 @@ GROUP BY SalesOrderID
 ORDER BY SalesOrderID;  
 ```  
   
-### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>2. 여러 테이블이 포함된 GROUP BY 절 사용  
+### <a name="b-use-a-group-by-clause-with-multiple-tables"></a>2\. 여러 테이블이 포함된 GROUP BY 절 사용  
  다음 예에서는 `City` 테이블에 조인된 `Address` 테이블에서 각 `EmployeeAddress`에 대한 직원 수를 검색합니다. 이 예제에서는 AdventureWorks를 사용합니다. 
   
 ```sql  
@@ -453,7 +452,7 @@ GROUP BY OrderDateKey, DueDateKey
 ORDER BY OrderDateKey;  
 ```  
   
-### <a name="i-using-a-group-by-clause-with-a-having-clause"></a>9. HAVING 절과 함께 GROUP BY 절 사용  
+### <a name="i-using-a-group-by-clause-with-a-having-clause"></a>9\. HAVING 절과 함께 GROUP BY 절 사용  
  다음 예제에서는 `HAVING` 절을 사용하여 결과 집합에 포함되어야 하는 `GROUP BY` 절에 생성된 그룹을 지정합니다. 2004년 이후의 주문 날짜가 있는 그룹만 결과에 포함됩니다.  
   
 ```sql  

@@ -1,5 +1,5 @@
 ---
-title: '자습서: 복제를 위한 SQL Server 준비 - 게시자, 배포자, 구독자 | Microsoft Docs'
+title: '자습서: 복제를 위한 SQL Server 준비(게시자, 배포자, 구독자) | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/02/2018
 ms.prod: sql
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 39eac1be5a9e6479a7607364bb194b5aa5b8716f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895439"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>자습서: 복제를 위한 SQL Server 준비(게시자, 배포자, 구독자)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "51672592"
 > - [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서는 **sysadmin** 고정 서버 역할의 멤버인 로그인을 사용하여 게시자 및 구독자에 연결해야 합니다. 이 역할에 대한 자세한 내용은 [서버 수준 역할](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/server-level-roles)을 참조하세요.  
 
 
-**이 자습서를 완료하는 데 소요되는 예상 시간: 30분**
+**이 자습서에 소요되는 예상 시간: 30분**
   
 ## <a name="create-windows-accounts-for-replication"></a>복제용 Windows 계정 만들기
 이 섹션에서는 복제 에이전트를 실행할 Windows 계정을 만듭니다. 다음 에이전트에 대해 로컬 서버에 별도의 Windows 계정을 만듭니다.  
@@ -123,7 +122,7 @@ ms.locfileid: "51672592"
 
    ![Repldata 폴더를 공유하기 위한 선택 항목](media/tutorial-preparing-the-server-for-replication/repldata.png)
 
-6. **repldata의 사용 권한** 대화 상자에서 **추가**를 선택합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 상자에서 이전에 만든 스냅숏 에이전트 계정 이름을 <*Publisher_Machine_Name>* > **\repl_snapshot**으로 입력합니다. **이름 확인**을 선택한 다음, **확인**을 선택합니다.  
+6. **repldata의 사용 권한** 대화 상자에서 **추가**를 선택합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 상자에서 이전에 만든 스냅샷 에이전트 계정 이름을 &lt;*Publisher_Machine_Name&gt;* > **\repl_snapshot**으로 입력합니다. **이름 확인**을 선택한 다음, **확인**을 선택합니다.  
 
    ![공유 권한 추가를 위한 선택 항목](media/tutorial-preparing-the-server-for-replication/addshareperms.png)
 
@@ -142,7 +141,7 @@ ms.locfileid: "51672592"
 
     ![“보안” 탭에서 “편집” 단추](media/tutorial-preparing-the-server-for-replication/editsecurity.png)   
 
-11. **repldata의 사용 권한** 대화 상자에서 **추가**를 선택합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 상자에서 이전에 만든 스냅숏 에이전트 계정 이름을 <*Publisher_Machine_Name>* > **\repl_snapshot**으로 입력합니다. **이름 확인**을 선택한 다음, **확인**을 선택합니다.  
+11. **repldata의 사용 권한** 대화 상자에서 **추가**를 선택합니다. **사용자, 컴퓨터, 서비스 계정 또는 그룹 선택** 상자에서 이전에 만든 스냅샷 에이전트 계정 이름을 &lt;*Publisher_Machine_Name&gt;* > **\repl_snapshot**으로 입력합니다. **이름 확인**을 선택한 다음, **확인**을 선택합니다.  
 
     ![보안 권한 추가를 위한 선택 항목](media/tutorial-preparing-the-server-for-replication/addsecuritypermissions.png)
 
@@ -192,7 +191,7 @@ ms.locfileid: "51672592"
 4. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 실행되고 있지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **에이전트 시작** 페이지에서 **예를 선택하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 자동으로 시작**되도록 구성합니다. **다음**을 선택합니다.  
 
      
-5. **스냅숏 폴더** 상자에 \\\\<*Publisher_Machine_Name*> **\repldata** 경로를 입력한 후, **다음**을 선택합니다. 이 경로는 공유 속성을 구성한 후 repldata 속성 폴더의 **네트워크 경로**에서 이전의 본 것과 일치해야 합니다. 
+5. **스냅샷 폴더** 상자에 \\\\<*Publisher_Machine_Name*> **\repldata** 경로를 입력한 후, **다음**을 선택합니다. 이 경로는 공유 속성을 구성한 후 repldata 속성 폴더의 **네트워크 경로**에서 이전의 본 것과 일치해야 합니다. 
 
    ![배포 구성 마법사 및 "repldata 속성" 대화 상자에서 네트워크 경로의 비교](media/tutorial-preparing-the-server-for-replication/repldatasnapshot.png)
   

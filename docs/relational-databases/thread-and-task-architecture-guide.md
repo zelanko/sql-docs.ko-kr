@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 925b42e0-c5ea-4829-8ece-a53c6cddad3b
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2d0c25e433fd9e311908d1759bbe75a1e1a1f045
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+ms.openlocfilehash: 5dd4aa4c3beb769509884c6ebb75fd8c82c1c8ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058133"
 ---
 # <a name="thread-and-task-architecture-guide"></a>스레드 및 태스크 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ Microsoft Windows에서는 1부터 31까지의 숫자 우선 순위 시스템을
 
 기본적으로 각 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]인스턴스의 우선 순위는 보통 우선 순위인 7입니다. 이 기본값은 다른 응용 프로그램에 나쁜 영향을 주지 않고 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스레드가 충분한 CPU 리소스를 얻을 수 있는 우선 순위를 제공합니다. 
 
-[priority boost](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) 구성 옵션을 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 스레드의 우선 순위를 높은 우선 순위인 13으로 높일 수 있습니다. 이 설정은 대부분의 다른 응용 프로그램보다 높은 우선 순위를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스레드에 제공합니다. 따라서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스레드는 일반적으로 실행할 준비가 될 때마다 디스패치되고 다른 응용 프로그램의 스레드에 의해 미리 점유되지 않습니다. 이는 서버가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스만 실행하고 다른 응용 프로그램은 실행하지 않을 때 성능을 향상시킬 수 있습니다. 그러나 메모리 집중형 작업이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 발생할 경우 대개는 다른 응용 프로그램이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스레드를 미리 점유할 만큼 충분히 높은 우선 순위를 갖고 있지 않습니다. 
+[priority boost](../database-engine/configure-windows/configure-the-priority-boost-server-configuration-option.md) 구성 옵션을 사용하면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스 스레드의 우선 순위를 높은 우선 순위인 13으로 높일 수 있습니다. 이 설정은 대부분의 다른 애플리케이션보다 높은 우선 순위를 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스레드에 제공합니다. 따라서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스레드는 일반적으로 실행할 준비가 될 때마다 디스패치되고 다른 응용 프로그램의 스레드에 의해 미리 점유되지 않습니다. 이는 서버가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스만 실행하고 다른 응용 프로그램은 실행하지 않을 때 성능을 향상시킬 수 있습니다. 그러나 메모리 집중형 작업이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 발생할 경우 대개는 다른 응용 프로그램이 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 스레드를 미리 점유할 만큼 충분히 높은 우선 순위를 갖고 있지 않습니다. 
 
 컴퓨터에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 여러 인스턴스를 실행하고 일부 인스턴스에 대해서만 priority boost 옵션이 설정되어 있는 경우 보통 우선 순위에서 실행되는 인스턴스의 성능에 나쁜 영향을 줄 수 있습니다. 또한 priority boost가 설정되어 있으면 서버의 다른 애플리케이션 및 구성 요소의 성능도 저하될 수 있습니다. 따라서 엄격하게 제어되는 환경에서만 이 설정을 사용해야 합니다.
 

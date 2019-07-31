@@ -12,17 +12,16 @@ helpviewer_keywords:
 ms.assetid: 7a291015-df15-44fe-8d53-c6d90a157118
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7a11a699a9bba7f04459bbcc39ef6fcf085cbed1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3019dc90789ccf8cf43b07a15d5ff0ccc7fb50a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095118"
 ---
 # <a name="sql-server-audit-records"></a>SQL Server Audit 레코드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 기능을 통해 서버 수준 및 데이터베이스 수준의 이벤트와 이벤트 그룹을 감사할 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]을 참조하세요.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit 기능을 통해 서버 수준 및 데이터베이스 수준의 이벤트와 이벤트 그룹을 감사할 수 있습니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]입니다.  
   
  감사는 0개 이상의 감사 동작 항목으로 구성되어 있으며 이들은 감사 *대상*에 기록됩니다. 이진 파일, Windows 애플리케이션 이벤트 로그 또는 Windows 보안 이벤트 로그가 감사 대상이 될 수 있습니다. 대상에 전달된 레코드에는 다음 표에 설명된 요소가 포함될 수 있습니다.  
   
@@ -30,7 +29,7 @@ ms.locfileid: "52539697"
 |-----------------|-----------------|----------|----------------------|  
 |**event_time**|감사 가능한 동작이 발생한 날짜/시간입니다.|**datetime2**|예|  
 |**sequence_no**|너무 커서 감사에 대한 쓰기 버퍼에 맞지 않는 단일 감사 레코드 내의 레코드 시퀀스를 추적합니다.|**int**|예|  
-|**action_id**|동작의 ID입니다.<br /><br /> 팁: **action_id** 를 조건자로 사용하려면 문자열에서 숫자 값으로 변환해야 합니다. 자세한 내용은 [action_id/class_type 조건자에서 SQL Server 감사 필터링](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)을 참조하세요.|**varchar(4)**|예|  
+|**action_id**|동작의 ID입니다.<br /><br /> 팁: **action_id**를 조건자로 사용하려면 문자열에서 숫자 값으로 변환해야 합니다. 자세한 내용은 [action_id/class_type 조건자에서 SQL Server 감사 필터링](https://blogs.msdn.com/b/sqlsecurity/archive/2012/10/03/filter-sql-server-audit-on-action-id-class-type-predicate.aspx)을 참조하세요.|**varchar(4)**|예|  
 |**succeeded**|감사 이벤트를 트리거하는 동작의 사용 권한 검사가 성공했는지 아니면 실패했는지 여부를 나타냅니다. |**bit**<br /> –1 = 성공, <br />0 = 실패|예|  
 |**permission_bitmask**|해당되는 경우 부여, 거부 또는 취소된 사용 권한을 표시합니다.|**bigint**|아니오|  
 |**is_column_permission**|열 수준 사용 권한을 나타내는 플래그입니다.|**bit** <br />- 1 = True, <br />0 = False|아니오|  

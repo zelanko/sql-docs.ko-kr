@@ -32,14 +32,13 @@ helpviewer_keywords:
 ms.assetid: 12be2923-7289-4150-b497-f17e76a50b2e
 author: pmasl
 ms.author: umajay
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3bf37beac7838f3dcb1e111e3632952864b8d7bd
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 327b084471155c9e7d8451fc8dceec8e4c00496f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116479"
 ---
 # <a name="dbcc-showstatistics-transact-sql"></a>DBCC SHOW_STATISTICS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +86,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
  NO_INFOMSGS  
  심각도가 0에서 10 사이인 모든 정보 메시지를 표시하지 않습니다.  
   
- STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,**_n_ ]  
+ STAT_HEADER | DENSITY_VECTOR | HISTOGRAM | STATS_STREAM [ **,** _n_ ]  
  이 옵션 중 하나 이상을 지정하면 문에서 반환하는 결과 집합이 지정한 옵션으로 제한됩니다. 옵션을 지정하지 않으면 모든 통계 정보가 반환됩니다.  
   
  STATS_STREAM은 [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]입니다.  
@@ -104,7 +103,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 |단계|히스토그램의 총 단계 수입니다. 각 단계의 범위는 열 값에서 상한 열 값까지입니다. 히스토그램 단계는 통계의 첫 번째 키 열에 정의됩니다. 최대 단계 수는 200개입니다.|  
 |밀도|히스토그램 경계 값을 제외하고 통계 개체의 첫 번째 키 열에 있는 모든 값에 대해 1/ *고유 값* 으로 계산됩니다. 이 밀도 값은 쿼리 최적화 프로그램에서 사용되지 않으며 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이전 버전과의 호환성을 위해 표시됩니다.|  
 |평균 키 길이|통계 개체의 키 열에 있는 모든 값에 대한 값당 평균 바이트 수입니다.|  
-|문자열 인덱스|'예'는 통계 개체에 LIKE 연산자를 사용하는 쿼리 조건자(예: `WHERE ProductName LIKE '%Bike'`)의 카디널리티 예상치 정확도를 높이기 위한 문자열 요약 통계가 있음을 나타냅니다. 문자열 요약 통계는 히스토그램과는 별도로 저장되며 통계 개체에서 **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)**, **nvarchar(max)**, **text**또는 **ntext**형식인 첫 번째 키 열에 생성됩니다.|  
+|문자열 인덱스|'예'는 통계 개체에 LIKE 연산자를 사용하는 쿼리 조건자(예: `WHERE ProductName LIKE '%Bike'`)의 카디널리티 예상치 정확도를 높이기 위한 문자열 요약 통계가 있음을 나타냅니다. 문자열 요약 통계는 히스토그램과는 별도로 저장되며 통계 개체에서 **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**또는 **ntext**형식인 첫 번째 키 열에 생성됩니다.|  
 |필터 식|통계 개체에 포함된 테이블 행의 하위 집합에 대한 조건자입니다. NULL = 필터링되지 않은 통계입니다. 필터링된 조건자에 대한 자세한 내용은 [필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)를 참조하세요. 필터링된 통계에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요.|  
 |필터링되지 않은 행|필터 식을 적용하기 전 테이블에 있는 전체 행 수입니다. 필터 식이 NULL이면 필터링되지 않은 행과 행이 동일합니다.|  
 |지속된 샘플 비율|샘플링 비율을 명시적으로 지정하지 않은 통계 업데이트에 사용되는 샘플 비율을 유지합니다. 값이 0이면 이 통계에 대해 지속 된 샘플 백분율이 설정되지 않습니다.<br /><br /> **적용 대상:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4| 
@@ -143,7 +142,7 @@ DBCC SHOW_STATISTICS ( table_name , target )
 각 히스토그램 단계를 살펴보면 다음과 같습니다.
 -   굵은 선은 상한 값(RANGE_HI_KEY)과 발생한 횟수(EQ_ROWS)를 나타냅니다.  
 -   RANGE_HI_KEY 왼쪽의 채워진 영역은 열 값의 범위와 각 열 값이 발생한 평균 횟수(AVG_RANGE_ROWS)를 나타냅니다. 첫 번째 히스토그램 단계의 AVG_RANGE_ROWS는 항상 0입니다.  
--   점선은 범위 내 고유 값의 총 개수(DISTINCT_RANGE_ROWS) 및 범위 내 값의 총 개수(RANGE_ROWS)를 예상하는 데 사용되는 샘플링된 값을 나타냅니다. 쿼리 최적화 프로그램은 RANGE_ROWS 및 DISTINCT_RANGE_ROWS를 사용하여 AVG_RANGE_ROWS를 컴퓨팅하며 샘플링된 값은 저장하지 않습니다.  
+-   점선은 범위 내 고유 값의 총 개수(DISTINCT_RANGE_ROWS) 및 범위 내 값의 총 개수(RANGE_ROWS)를 예상하는 데 사용되는 샘플링된 값을 나타냅니다. 쿼리 최적화 프로그램은 RANGE_ROWS 및 DISTINCT_RANGE_ROWS를 사용하여 AVG_RANGE_ROWS를 계산하며 샘플링된 값은 저장하지 않습니다.  
   
 쿼리 최적화 프로그램은 통계적 중요성에 따라 히스토그램 단계를 정의합니다. 또한 히스토그램의 단계 수를 최소화하면서 경계 값 간의 차이를 최대화하기 위해 최대 차이 알고리즘을 사용합니다. 최대 단계 수는 200개입니다. 히스토그램 단계 수는 경계 지점이 200개 미만인 열에서도 고유 값의 개수보다 적을 수 있습니다. 예를 들어 100개의 고유 값을 가진 열의 히스토그램에 100개 미만의 경계 지점이 있을 수 있습니다.
   
@@ -181,7 +180,7 @@ DBCC SHOW_STATISTICS는 셸 데이터베이스의 제어 노드 수준에 저장
 DBCC SHOW_STATISTICS는 외부 테이블에 대해 지원되지 않습니다.
   
 ## <a name="examples-includessnoversionincludesssnoversion-mdmd-and-includesssdsincludessssds-mdmd"></a>예제: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]  
-### <a name="a-returning-all-statistics-information"></a>1. 모든 통계 정보 반환  
+### <a name="a-returning-all-statistics-information"></a>1\. 모든 통계 정보 반환  
 다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Person.Address` 테이블의 `AK_Address_rowguid` 인덱스에 대한 모든 통계 정보를 표시합니다.
   
 ```sql
@@ -189,7 +188,7 @@ DBCC SHOW_STATISTICS ("Person.Address", AK_Address_rowguid);
 GO  
 ```  
   
-### <a name="b-specifying-the-histogram-option"></a>2. HISTOGRAM 옵션 지정  
+### <a name="b-specifying-the-histogram-option"></a>2\. HISTOGRAM 옵션 지정  
 이렇게 하면 Customer_LastName에 대해 표시된 통계 정보를 HISTOGRAM 데이터로 제한합니다.
   
 ```sql

@@ -50,13 +50,12 @@ helpviewer_keywords:
 ms.assetid: 309b9dac-0b3a-4617-85ef-c4519ce9d014
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: deac964cb20d64d7a1dc2d1cc1e76f5004d80033
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c91c4e9a432992475daef8a987dea2dc9adf913
+ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803284"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68290372"
 ---
 # <a name="configure-windows-service-accounts-and-permissions"></a>Windows 서비스 계정 및 권한 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ ms.locfileid: "66803284"
   
 -   **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** - [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]인스턴스에 대해 동시 작업을 시뮬레이션하기 위해 Distributed Replay Controller와 함께 작동하는 하나 이상의 Distributed Replay Client 컴퓨터입니다.  
   
--   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]**  - [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]의 일부분으로 설치되는 R 런타임과 같이 Microsoft에서 제공하는 외부 실행 파일을 호스트하는 신뢰할 수 있는 서비스입니다. 위성 프로세스는 실행 패드 프로세스를 통해 시작할 수 있지만 해당 리소스는 개별 인스턴스의 구성에 따라 제어됩니다. 실행 패드 서비스는 자체 사용자 계정에서 실행되며 등록된 특정 런타임에 대한 각 위성 프로세스는 실행 패드의 사용자 계정을 상속합니다. 위성 프로세스는 실행 시간 동안 요청 시에 생성되고 소멸됩니다.
+-   **[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]** - R Services 또는 Machine Learning Services의 일부로 설치된 R 또는 Python 런타임과 같이 Microsoft에서 제공하는 외부 실행 파일을 호스트하는 신뢰할 수 있는 서비스입니다. 위성 프로세스는 실행 패드 프로세스를 통해 시작할 수 있지만 해당 리소스는 개별 인스턴스의 구성에 따라 제어됩니다. 실행 패드 서비스는 자체 사용자 계정에서 실행되며 등록된 특정 런타임에 대한 각 위성 프로세스는 실행 패드의 사용자 계정을 상속합니다. 위성 프로세스는 실행 시간 동안 요청 시에 생성되고 소멸됩니다.
 
     실행 패드는 도메인 컨트롤러로도 사용되는 컴퓨터에 SQL Server를 설치하는 경우 사용하는 계정을 만들 수 없습니다. 따라서 R Services(데이터베이스 내) 또는 Machine Learning Services(데이터베이스 내)의 설치는 도메인 컨트롤러에서 실패합니다.
 
@@ -232,7 +231,7 @@ ms.locfileid: "66803284"
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|ISSVCACCOUNT, ISSVCPASSWORD, ISSVCSTARTUPTYPE|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|DRU_CTLR, CTLRSVCACCOUNT,CTLRSVCPASSWORD, CTLRSTARTUPTYPE, CTLRUSERS|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|DRU_CLT, CLTSVCACCOUNT, CLTSVCPASSWORD, CLTSTARTUPTYPE, CLTCTLRNAME, CLTWORKINGDIR, CLTRESULTDIR|  
-|[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
+|R Services 또는 Machine Learning Services|EXTSVCACCOUNT, EXTSVCPASSWORD, ADVANCEDANALYTICS\*\*\*|
 |PolyBase 엔진| PBENGSVCACCOUNT, PBENGSVCPASSWORD, PBENGSVCSTARTUPTYPE, PBDMSSVCACCOUNT,PBDMSSVCPASSWORD, PBDMSSVCSTARTUPTYPE, PBSCALEOUT, PBPORTRANGE
   
  \*무인 설치에 대한 자세한 내용과 샘플 구문은 [명령 프롬프트에서 SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)를 참조하세요.  
@@ -301,8 +300,8 @@ ms.locfileid: "66803284"
 |**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client:**|**서비스로 로그온** (SeServiceLogonRight)|  
 |**PolyBase 엔진 및 DMS**| **서비스로 로그온** (SeServiceLogonRight)  |   
 |**실행 패드:**|**서비스로 로그온** (SeServiceLogonRight) <br /><br /> **프로세스 수준 토큰 바꾸기** (SeAssignPrimaryTokenPrivilege)<br /><br />**트래버스 검사 무시** (SeChangeNotifyPrivilege)<br /><br />**프로세스의 메모리 할당량 조정** (SeIncreaseQuotaPrivilege)|     
-|**R Services:** **SQLRUserGroup**(SQL 2016 및 2017)  |**로컬 로그온 허용** |   
-|**Machine Learning** '**모든 애플리케이션 패키지’ [AppContainer]** (SQL 2019)  |SQL Server 'Binn', R_Services 및 PYTHON_Services 디렉터리에 대한 **읽기 및 실행 권한** |   
+|**R Services/Machine Learning Services:** **SQLRUserGroup**(SQL 2016 및 2017)  |기본적으로 **로컬 로그온 허용** 권한이 없습니다. |   
+|**Machine Learning Services** **‘모든 애플리케이션 패키지’ [AppContainer]** (SQL 2019)  |SQL Server 'Binn', R_Services 및 PYTHON_Services 디렉터리에 대한 **읽기 및 실행 권한** |   
 
  \*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스는 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]의 인스턴스에서 사용할 수 없습니다.  
   

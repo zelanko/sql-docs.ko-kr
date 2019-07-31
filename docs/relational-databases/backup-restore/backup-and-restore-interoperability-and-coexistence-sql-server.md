@@ -1,5 +1,5 @@
 ---
-title: '백업 및 복원: 상호 운용성 및 공존성(SQL Server) | Microsoft 문서'
+title: '백업 및 복원: 상호 운용성 및 공존성 (SQL Server) | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/05/2016
 ms.prod: sql
@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 69f212b8-edcd-4c5d-8a8a-679ced33c128
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0ba345be62ae0efdcb13fe35103c472a17bef952
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d22aaa5ec3eba14931c5af22f68152bf7b19ad84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940879"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>백업 및 복원: 상호 운용성 및 공존성(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "47723791"
   
  데이터베이스 시작 중에 문제가 발생하면 복구에 실패하고 데이터베이스가 주의 대상으로 표시됩니다. 문제를 한 파일이나 몇 개의 파일로 격리시킬 수 있는 경우 데이터베이스 관리자는 해당 파일을 오프라인 상태로 만들고 데이터베이스를 다시 시작할 수 있습니다. 파일을 오프라인 상태로 만들려면 다음 [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) 문을 실행합니다.  
   
- ALTER DATABASE *database_name* MODIFY FILE (NAME **='***filename***'**, OFFLINE)  
+ ALTER DATABASE *database_name* MODIFY FILE (NAME **='***filename***'** , OFFLINE)  
   
  데이터베이스가 성공적으로 시작되면 오프라인 파일을 포함하는 모든 파일 그룹은 오프라인 상태로 남게 됩니다.  
   
@@ -135,6 +134,6 @@ ms.locfileid: "47723791"
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 데이터베이스 백업 및 복원](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)   
-[활성 보조: 보조 복제본에 백업 \(Always On 가용성 그룹)\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
+[활성 보조 복제본: 보조 복제본에 백업\((Always On 가용성 그룹)\)](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)  
   
   

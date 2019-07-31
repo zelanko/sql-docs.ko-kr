@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8ff8f2d557fac07f588b278e2b2667b75e60f478
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 5bd9dd2e967c1ce6551dbc3b952a8bf8baa09585
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084489"
 ---
 # <a name="end-conversation-transact-sql"></a>END CONVERSATION(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ END CONVERSATION conversation_handle
  오류 메시지입니다. *failure_text*는 **nvarchar(3000)** 형식입니다. 오류 텍스트는 다른 쪽의 대화로 보낸 오류 메시지에 포함되는 사용자 정의 텍스트입니다.  
   
  WITH CLEANUP  
- 대화에 참가하는 양자 중 정상적으로 완료할 수 없는 한쪽의 모든 메시지와 카탈로그 뷰 항목을 제거합니다. 다른 쪽은 정리에 대한 알림을 받지 못합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 대화 엔드포인트, 전송 큐의 모든 대화 메시지 및 서비스 큐의 모든 대화 메시지를 삭제합니다. 관리자는 이 옵션을 사용하여 정상적으로 완료할 수 없는 대화를 제거할 수 있습니다. 예를 들어 원격 서비스가 영구적으로 제거된 경우 관리자는 WITH CLEANUP을 사용하여 해당 서비스에 대한 대화를 제거할 수 있습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 응용 프로그램의 코드에서는 WITH CLEANUP을 사용하지 마십시오. 수신 엔드포인트에서 메시지 수신 사실을 알리기 전에 END CONVERSATION WITH CLEANUP이 실행되면 전송 엔드포인트가 해당 메시지를 다시 전송합니다. 이 경우 대화가 다시 실행될 수 있습니다.  
+ 대화에 참가하는 양자 중 정상적으로 완료할 수 없는 한쪽의 모든 메시지와 카탈로그 뷰 항목을 제거합니다. 다른 쪽은 정리에 대한 알림을 받지 못합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 대화 엔드포인트, 전송 큐의 모든 대화 메시지 및 서비스 큐의 모든 대화 메시지를 삭제합니다. 관리자는 이 옵션을 사용하여 정상적으로 완료할 수 없는 대화를 제거할 수 있습니다. 예를 들어 원격 서비스가 영구적으로 제거된 경우 관리자는 WITH CLEANUP을 사용하여 해당 서비스에 대한 대화를 제거할 수 있습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 애플리케이션의 코드에서는 WITH CLEANUP을 사용하지 마십시오. 수신 엔드포인트에서 메시지 수신 사실을 알리기 전에 END CONVERSATION WITH CLEANUP이 실행되면 전송 엔드포인트가 해당 메시지를 다시 전송합니다. 이 경우 대화가 다시 실행될 수 있습니다.  
   
 ## <a name="remarks"></a>Remarks  
  대화를 종료하면 제공된 *conversation_handle*이 속하는 대화 그룹이 잠깁니다. 대화가 종료되면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 서비스 큐에서 모든 대화 메시지를 제거합니다.  
@@ -84,21 +83,21 @@ END CONVERSATION conversation_handle
   
  END CONVERSATION은 사용자 정의 함수에 유효하지 않습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  활성 대화를 종료하려면 현재 사용자가 대화의 소유자, sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이스 역할의 멤버여야 합니다.  
   
  sysadmin 고정 서버 역할의 멤버 또는 db_owner 고정 데이터베이스 역할의 멤버는 WITH CLEANUP을 사용하여 이미 완료된 대화에 대한 메타데이터를 제거할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-ending-a-conversation"></a>1. 대화 종료  
+### <a name="a-ending-a-conversation"></a>1\. 대화 종료  
  다음 예에서는 `@dialog_handle`로 지정된 대화를 종료합니다.  
   
 ```  
 END CONVERSATION @dialog_handle ;  
 ```  
   
-### <a name="b-ending-a-conversation-with-an-error"></a>2. 오류가 발생하여 대화 종료  
+### <a name="b-ending-a-conversation-with-an-error"></a>2\. 오류가 발생하여 대화 종료  
  다음 예에서는 처리 문이 오류를 보고할 경우 오류가 발생한 `@dialog_handle` 대화를 종료합니다. 이는 가장 간단한 오류 처리 방법이지만 일부 응용 프로그램에는 적합하지 않을 수 있습니다.  
   
 ```  
@@ -123,7 +122,7 @@ ELSE
 COMMIT TRANSACTION ;  
 ```  
   
-### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>3. 정상적으로 완료할 수 없는 대화 정리  
+### <a name="c-cleaning-up-a-conversation-that-cannot-complete-normally"></a>C. 정상적으로 완료할 수 없는 대화 정리  
  다음 예에서는 `@dialog_handle`로 지정된 대화를 종료합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 원격 서비스에게 알리지 않고 서비스 큐와 전송 큐에서 모든 메시지를 즉시 제거합니다. 정리를 사용하여 대화 상자를 종료하면 원격 서비스에 알리지 않으므로 이 방법은 원격 서비스가 **EndDialog** 또는 **Error** 메시지를 받을 수 없는 경우에만 사용해야 합니다.  
   
 ```  

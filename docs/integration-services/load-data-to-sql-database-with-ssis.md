@@ -10,13 +10,12 @@ ms.custom: loading
 ms.date: 08/20/2018
 ms.author: janinez
 author: janinezhang
-manager: craigg
-ms.openlocfilehash: 73b77182cc8ed447f8540aed5010aeee704c0e97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57c9f725ec8f7c2a26a110a6d317bd5ec1de118
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054515"
 ---
 # <a name="load-data-into-sql-server-or-azure-sql-database-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 SQL Server 또는 Azure SQL Database에 데이터 로드
 
@@ -57,7 +56,7 @@ SQL Server 및 SQL Database에 연결하려면 ADO.NET 연결 관리자와 원�
 이 자습서를 단계별로 실행하려면 다음 항목이 필요합니다.
 
 1. **SSIS(SQL Server Integration Services)** SSIS는 SQL Server의 구성 요소이며 SQL Server의 라이선스 버전 또는 개발자나 평가 버전이 필요합니다. SQL Server의 평가 버전을 가져오려면 [SQL Server 평가](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)를 참조하세요.
-2. **Visual Studio**(선택 사항) 무료 Visual Studio 커뮤니티 버전을 가져오려면 [Visual Studio 커뮤니티][Visual Studio Community]를 참조하세요. Visual Studio를 설치하지 않으려는 경우 SSDT(SQL Server Data Tools)만을 설치할 수 있습니다. SSDT는 제한된 기능을 포함한 Visual Studio 버전을 설치합니다.
+2. **Visual Studio**(선택 사항) Visual Studio Community Edition을 체험하려면 [Visual Studio Community][Visual Studio Community]를 참조하세요. Visual Studio를 설치하지 않으려는 경우 SSDT(SQL Server Data Tools)만을 설치할 수 있습니다. SSDT는 제한된 기능을 포함한 Visual Studio 버전을 설치합니다.
 3. **Visual Studio용 SSDT(SQL Server Data Tools)** Visual Studio용 SQL Server Data Tools를 가져오려면 [SSDT(SQL Server Data Tools) 다운로드][Download SQL Server Data Tools (SSDT)]를 참조하세요.
 4. 이 자습서에서는 SQL Server 또는 SQL Database 인스턴스에 연결하고 여기에 데이터를 로드합니다. 다음 중 하나에 연결하고, 테이블을 만들고, 데이터를 로드할 수 있는 권한이 있어야 합니다.
    - **Azure SQL Database 데이터베이스**. 자세한 내용은 [Azure SQL Database](/azure/sql-database/)를 참조하세요.  
@@ -141,8 +140,8 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
    2. **서버 이름**의 경우 SQL Server 또는 SQL Database 서버의 이름을 입력합니다.
    3. **서버에 로그온** 섹션에서 **SQL Server 인증 사용**을 선택하고 인증 정보를 입력합니다.
    4. **데이터베이스에 연결** 섹션에서 기존 데이터베이스를 선택합니다.
-    1. **연결 테스트**를 클릭합니다.
-    2. 연결 테스트의 결과를 보고하는 대화 상자에서 **확인**을 클릭하여 **연결 관리자** 대화 상자로 돌아갑니다.
+    1\. **연결 테스트**를 클릭합니다.
+    2\. 연결 테스트의 결과를 보고하는 대화 상자에서 **확인**을 클릭하여 **연결 관리자** 대화 상자로 돌아갑니다.
     c. **연결 관리자** 대화 상자에서 **확인**을 클릭하여 **ADO.NET 연결 관리자 구성** 대화 상자로 돌아갑니다.
 5. **ADO.NET 연결 관리자 구성** 대화 상자에서 **확인**을 클릭하여 **ADO.NET 대상 편집기**로 돌아갑니다.
 6. **ADO.NET 대상 편집기**에서 **테이블 또는 뷰 사용** 목록 옆의 **새로 만들기**를 클릭하여 **테이블 만들기** 대화 상자를 열고 원본 테이블과 일치하는 열 목록으로 새 대상 테이블을 만듭니다.

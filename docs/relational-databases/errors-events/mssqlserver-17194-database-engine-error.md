@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0d03eb20-28a7-4ceb-8903-7f9420a620f7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 86dadfebb4c43ed474a033ad5100be1da86ec74c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 47678d81d2868af5a921d26f3e121837a1ddc938
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68131725"
 ---
 # <a name="mssqlserver17194"></a>MSSQLSERVER_17194
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47844171"
 |이벤트 원본|MSSQLSERVER|  
 |구성 요소|SQLEngine|  
 |심볼 이름||  
-|메시지 텍스트|서버에서 로그인에 필요한 SSL 공급자 라이브러리를 로드할 수 없습니다. 연결이 닫혔습니다. SSL은 관리자가 서버를 구성한 방식에 따라 로그인 시퀀스 또는 모든 통신을 암호화하는 데 사용됩니다. 온라인 설명서에서 다음 오류 메시지에 대한 정보를 확인하세요.:  0xXXXX. [클라이언트: 11.11.11.11]|  
+|메시지 텍스트|서버에서 로그인에 필요한 SSL 공급자 라이브러리를 로드할 수 없습니다. 연결이 닫혔습니다. SSL은 관리자가 서버를 구성한 방식에 따라 로그인 시퀀스 또는 모든 통신을 암호화하는 데 사용됩니다. 온라인 설명서에서 다음 오류 메시지에 대한 정보를 확인하세요.  0xXXXX. [CLIENT: 11.11.11.11]|  
   
 ## <a name="explanation"></a>설명  
 이 오류는 클라이언트가 연결을 닫았음을 나타내며 연결 제한 시간이 초과되어 발생할 수 있습니다. 이 오류 메시지에는 근본 문제를 설명하는 운영 체제의 값이 표시됩니다.  

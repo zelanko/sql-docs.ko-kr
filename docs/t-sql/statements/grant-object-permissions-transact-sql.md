@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ed580cb28c65eab7f0abd7702cab623bcf9fcd2e
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: a90add62cdda0e127d84a60fadf7f1f1578c7a0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050823"
 ---
 # <a name="grant-object-permissions-transact-sql"></a>GRANT 개체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -116,7 +115,7 @@ PRIVILEGES
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어 다음과 같이 사용할 수 있습니다. 테이블에 대한 ALTER 권한과 함수에 대한 REFERENCE 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 필요합니다.  
+>  일부 경우에서 ALTER 사용 권한과 REFERENCE 사용 권한의 조합을 사용하면 피부여자가 데이터를 보거나 권한 없는 함수를 실행할 수 있습니다. 예를 들어 테이블에 대한 ALTER 권한과 함수에 대한 REFERENCE 권한을 가진 사용자는 함수를 통해 계산 열을 만들고 실행할 수 있습니다. 이 경우 계산 열에 대한 SELECT 사용 권한도 필요합니다.  
   
  개체에 대한 정보는 다양한 카탈로그 뷰에 표시됩니다. 자세한 내용은 [Object Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)을 참조하세요.  
   
@@ -137,7 +136,7 @@ PRIVILEGES
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용 권한을 부여한 사용자 또는 AS 옵션으로 지정한 보안 주체에게 GRANT OPTION을 통한 사용 권한이 있거나 부여할 사용 권한을 포함하는 상위 사용 권한이 있어야 합니다.  
   
  AS 옵션을 사용하는 경우 다음과 같은 추가 요구 사항이 적용됩니다.  
@@ -155,7 +154,7 @@ PRIVILEGES
   
 ## <a name="examples"></a>예  
   
-### <a name="a-granting-select-permission-on-a-table"></a>1. 테이블에 대한 SELECT 사용 권한 부여  
+### <a name="a-granting-select-permission-on-a-table"></a>1\. 테이블에 대한 SELECT 사용 권한 부여  
  다음 예에서는 사용자 `SELECT`에게 `RosaQdM` 데이터베이스의 `Person.Address` 테이블에 대한 `AdventureWorks2012` 사용 권한을 부여합니다.  
   
 ```  
@@ -163,7 +162,7 @@ GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;
 GO  
 ```  
   
-### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>2. 저장 프로시저에 대한 EXECUTE 사용 권한 부여  
+### <a name="b-granting-execute-permission-on-a-stored-procedure"></a>2\. 저장 프로시저에 대한 EXECUTE 사용 권한 부여  
  다음 예에서는 `EXECUTE`이라는 응용 프로그램 역할에 대해 저장 프로시저 `HumanResources.uspUpdateEmployeeHireInfo`에 대한 `Recruiting11` 사용 권한을 부여합니다.  
   
 ```  
@@ -173,7 +172,7 @@ GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo
 GO   
 ```  
   
-### <a name="c-granting-references-permission-on-a-view-with-grant-option"></a>3. GRANT OPTION을 지정하여 뷰에 대한 REFERENCES 사용 권한 부여  
+### <a name="c-granting-references-permission-on-a-view-with-grant-option"></a>C. GRANT OPTION을 지정하여 뷰에 대한 REFERENCES 사용 권한 부여  
  다음 예에서는 `REFERENCES`을 지정하여 사용자 `BusinessEntityID`에게 `HumanResources.vEmployee` 뷰의 `Wanida` 열에 대한 `GRANT OPTION` 사용 권한을 부여합니다.  
   
 ```  

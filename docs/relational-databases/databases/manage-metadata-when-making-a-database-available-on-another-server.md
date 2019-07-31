@@ -34,13 +34,12 @@ helpviewer_keywords:
 ms.assetid: 5d98cf2a-9fc2-4610-be72-b422b8682681
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a73e8c25d891350f26bfff0ce62a2835fc5355d0
-ms.sourcegitcommit: 2e8783e6bedd9597207180941be978f65c2c2a2d
+ms.openlocfilehash: d61d42a5b684032898a0eabc3dbc4a1b350653d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54405843"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940721"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server"></a>다른 서버에서 데이터베이스를 사용할 수 있도록 할 때 메타데이터 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,11 +126,11 @@ ms.locfileid: "54405843"
   
   
 ##  <a name="encrypted_data"></a> 암호화된 데이터  
- 다른 서버 인스턴스에서 사용할 수 있도록 할 데이터베이스에 암호화된 데이터가 있으며 데이터베이스 마스터 키가 원래 서버의 서비스 마스터 키로 보호되는 경우 서비스 마스터 키 암호화를 다시 만들어야 할 수도 있습니다. *데이터베이스 마스터 키* 는 암호화된 데이터베이스에 있는 인증서의 개인 키와 비대칭 키를 보호하는 데 사용되는 대칭 키입니다. 데이터베이스 마스터 키는 생성 시에 Triple DES 알고리즘 및 사용자 제공 암호를 사용하여 암호화됩니다.  
+ 다른 서버 인스턴스에서 사용할 수 있도록 할 데이터베이스에 암호화된 데이터가 있으며 데이터베이스 마스터 키가 원래 서버의 서비스 마스터 키로 보호되는 경우 서비스 마스터 키 암호화를 다시 만들어야 할 수도 있습니다. *데이터베이스 마스터 키* 는 암호화된 데이터베이스에 있는 인증서의 프라이빗 키와 비대칭 키를 보호하는 데 사용되는 대칭 키입니다. 데이터베이스 마스터 키는 생성 시에 Triple DES 알고리즘 및 사용자 제공 암호를 사용하여 암호화됩니다.  
   
  서버 인스턴스에서 데이터베이스 마스터 키의 자동 암호 해독을 설정하기 위해 서비스 마스터 키를 사용하여 이 키의 복사본을 암호화합니다. 이 암호화된 복사본은 해당 데이터베이스와 **master**에 모두 저장됩니다. 일반적으로 **master** 에 저장된 복사본은 마스터 키가 변경될 때마다 자동으로 업데이트됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 먼저 인스턴스의 서비스 마스터 키로 데이터베이스 마스터 키의 암호를 해독하려고 시도합니다. 암호 해독에 실패하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 마스터 키가 필요한 데이터베이스와 패밀리 GUID가 동일한 마스터 키 자격 증명을 자격 증명 저장소에서 검색합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 암호 해독이 성공하거나 남은 자격 증명이 없을 때까지 일치하는 각 자격 증명을 사용하여 데이터베이스 마스터 키의 암호화를 해독하려고 시도합니다. 서비스 마스터 키를 사용하여 암호화되지 않은 마스터 키는 OPEN MASTER KEY 문과 암호를 사용하여 열어야 합니다.  
   
- 암호화된 데이터베이스를 복사 또는 복원하거나 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결할 때는 서비스 마스터 키로 암호화된 데이터베이스 마스터 키의 복사본이 대상 서버 인스턴스의 **master** 에 저장되지 않습니다. 대상 서버 인스턴스에서 해당 데이터베이스의 마스터 키를 열어야 합니다. 마스터 키를 열려면 OPEN MASTER KEY DECRYPTION BY PASSWORD **='**_password_**'** 문을 실행합니다. 그런 다음 ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY 문을 실행하여 데이터베이스 마스터 키의 자동 암호 해독을 설정하는 것이 좋습니다. 이 ALTER MASTER KEY 문은 서비스 마스터 키로 암호화된 데이터베이스 마스터 키의 복사본을 서버 인스턴스에 제공합니다. 자세한 내용은 [OPEN MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) 및 [ALTER MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)를 참조하세요.  
+ 암호화된 데이터베이스를 복사 또는 복원하거나 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결할 때는 서비스 마스터 키로 암호화된 데이터베이스 마스터 키의 복사본이 대상 서버 인스턴스의 **master** 에 저장되지 않습니다. 대상 서버 인스턴스에서 해당 데이터베이스의 마스터 키를 열어야 합니다. 마스터 키를 열려면 OPEN MASTER KEY DECRYPTION BY PASSWORD **='** _password_ **'** 문을 실행합니다. 그런 다음, ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY 문을 실행하여 데이터베이스 마스터 키의 자동 암호 해독을 설정하는 것이 좋습니다. 이 ALTER MASTER KEY 문은 서비스 마스터 키로 암호화된 데이터베이스 마스터 키의 복사본을 서버 인스턴스에 제공합니다. 자세한 내용은 [OPEN MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/open-master-key-transact-sql.md) 및 [ALTER MASTER KEY&#40;Transact-SQL&#41;](../../t-sql/statements/alter-master-key-transact-sql.md)를 참조하세요.  
   
  미러 데이터베이스의 데이터베이스 마스터 키 자동 암호 해독을 설정하는 방법은 [암호화된 미러 데이터베이스 설정](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md)을 참조하세요.  
   
@@ -266,7 +265,7 @@ ms.locfileid: "54405843"
 > **참고:** 미러된 데이터베이스에 대한 로그인을 설정하는 방법은 [데이터베이스 미러링 또는 Always On 가용성 그룹에 대한 로그인 계정 설정(SQL Server)](../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md) 및 [역할 전환 후 로그인 및 작업 관리&#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)를 참조하세요.  
   
   
-##  <a name="permissions"></a> Permissions  
+##  <a name="permissions"></a> 사용 권한  
  데이터베이스를 다른 서버 인스턴스에서 사용할 수 있을 때 다음의 사용 권한 유형이 영향을 받을 수 있습니다.  
   
 -   시스템 개체에 대한 GRANT, REVOKE 또는 DENY 권한  

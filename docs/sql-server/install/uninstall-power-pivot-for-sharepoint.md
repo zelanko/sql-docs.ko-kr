@@ -10,12 +10,12 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: 105401dc20d20b3414624d5dd0a40238a32bd243
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a5d31f60aac72ce342e16ea251adbe59cb8a8227
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126018"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 제거
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "52535123"
   
 -   [3단계: SQL Server 설치 프로그램을 실행하여 로컬 컴퓨터에서 프로그램 제거](#bkmk_uninstall)  
   
--   [4단계: SharePoint용 Power Pivot 추가 기능 제거](#bkmk_addin)  
+-   [4단계: SharePoint용 파워 피벗 추가 기능 제거](#bkmk_addin)  
   
 -   [5단계: 제거 확인](#verify)  
   
@@ -66,7 +66,7 @@ ms.locfileid: "52535123"
 5.  필요한 경우 서비스를 중지하고 소프트웨어를 제거하기 전에 며칠 정도 기다립니다. 이 단계는 제거에 반드시 필요한 것은 아니지만 데이터 마이그레이션 또는 기술 대체 문제가 발생한 경우 서비스를 일시적으로 재개할 수 있는 기회를 제공합니다.  
   
 ##  <a name="bkmk_remove"></a> 2단계: SharePoint에서 기능 및 솔루션 제거  
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하여 SharePoint에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 및 응용 프로그램을 제거합니다.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하여 SharePoint에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 및 애플리케이션을 제거합니다.  
   
 -   팜 관리자, Analysis Services 인스턴스의 서버 관리자 및 팜의 구성 데이터베이스의 **db_owner**여야 합니다.  
   
@@ -74,13 +74,13 @@ ms.locfileid: "52535123"
   
 -   SharePoint 관리 서비스가 실행되고 있는지 확인합니다.  
   
-1.  **구성 도구 실행:** 구성 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 가 로컬 서버에 설치되어 있을 때만 나열됩니다. **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]를 클릭하고 **구성 도구**를 클릭한 후 다음 중 하나를 클릭합니다.  
+1.  **구성 도구를 실행합니다.** 구성 도구는 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]가 로컬 서버에 설치되어 있을 때만 나열됩니다. **시작** 메뉴에서 **모든 프로그램**을 가리키고 [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **구성 도구**를 차례로 클릭한 후에 다음 중 하나를 클릭합니다.  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성**  
   
     -   **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구**  
   
-2.  **기능, 서비스, 응용 프로그램 및 솔루션 제거** 를 선택한 다음 **확인**을 클릭합니다.  
+2.  **기능, 서비스, 애플리케이션 및 솔루션 제거** 를 선택한 다음 **확인**을 클릭합니다.  
   
 3.  필요한 경우 창을 전체 크기로 확장합니다. 창 아래쪽에 **유효성 검사**, **실행**및 **끝내기** 명령이 포함된 단추 모음이 표시됩니다.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "52535123"
   
 6.  **유효성 검사** 를 클릭하여 각 동작이 유효한지 여부를 확인합니다. **유효성 검사** 를 사용할 수 없는 경우 모든 동작이 시스템에 유효한 것입니다.  
   
-7.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. **실행**을 클릭하면 동작이 일괄 처리 모드로 처리됨을 알리는 다음 경고가 나타납니다. “도구에서 유효한 것으로 플래그가 지정되는 모든 구성 설정이 SharePoint 팜에 적용됩니다. 계속하시겠습니까?”  
+7.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. **실행**을 클릭하면 작업이 일괄 처리 모드로 처리됨을 알리는 다음 경고가 나타납니다. "도구에서 유효한 것으로 플래그가 지정되는 모든 구성 설정이 SharePoint 팜에 적용됩니다. 계속하시겠습니까?”  
   
 8.  계속하려면 **예** 를 클릭합니다.  
   
@@ -122,7 +122,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
     Stsadm -o enumdeployments  
     ```  
   
-3.  기존 배포에서 **유형** 이 취소 또는 배포인지, **파일** 이 powerpivotwebapp.wsp 또는 powerpivotfarm.wsp인지 검토합니다.  
+3.  기존 배포에서 **유형**이 취소 또는 배포인지, **파일**이 powerpivotwebapp.wsp 또는 powerpivotfarm.wsp인지 검토합니다.  
   
 4.  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 솔루션에 관련된 배포 또는 취소의 경우 **JobId**의 GUID 값을 복사하여 다음 명령에 붙여넣습니다(Shell의 편집 메뉴에서 표시, 복사 및 붙여넣기 명령을 사용하여 GUID를 복사합니다).  
   
@@ -147,8 +147,8 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
      설치 프로그램에서 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 인스턴스를 선택한 다음 **Analysis Services** 및 **Analysis Services SharePoint 통합** 을 선택하여 해당 기능만 제거하고 나머지 모든 기능을 그대로 둘 수 있습니다.  
   
-##  <a name="bkmk_addin"></a> 4단계: SharePoint용 Power Pivot 추가 기능 제거  
- [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포에 두 개 이상의 서버가 포함되었고 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 경우 모든 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 파일을 완전히 제거하려면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 각 서버에서 이 추가 기능을 제거합니다. 자세한 내용은 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 제거하려면 Analysis Services 시스템 관리자 및 로컬 Administrators 그룹의 구성원이어야 합니다.  
+##  <a name="bkmk_addin"></a> 4단계: SharePoint용 파워 피벗 추가 기능 제거  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포에 두 개 이상의 서버가 포함되었고 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 경우 모든 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 파일을 완전히 제거하려면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 각 서버에서 이 추가 기능을 제거합니다. 자세한 내용은 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조하세요.  
   
 ##  <a name="verify"></a> 5단계: 제거 확인  
   
@@ -179,7 +179,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
     -   [Power Pivot 데이터 피드 라이브러리 삭제](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)  
   
-3.  보안 저장소 서비스에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에 사용되는 저장된 자격 증명이 있는 모든 대상 애플리케이션을 삭제합니다. 보안 저장소 서비스의 일부 항목은 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 제거할 때 삭제됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 무인 데이터 새로 고침 계정에 대해 만든 대상 응용 프로그램 및 데이터 새로 고침을 위해 만든 모든 대상 응용 프로그램은 아직 삭제되지 않으므로 수동으로 삭제해야 합니다.  
+3.  보안 저장소 서비스에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에 사용되는 저장된 자격 증명이 있는 모든 대상 애플리케이션을 삭제합니다. 보안 저장소 서비스의 일부 항목은 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 제거할 때 삭제됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 무인 데이터 새로 고침 계정에 대해 만든 대상 애플리케이션 및 데이터 새로 고침을 위해 만든 모든 대상 애플리케이션은 아직 삭제되지 않으므로 수동으로 삭제해야 합니다.  
   
      반면, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 시스템 서비스에 의해 자동 생성된 개별 대상 애플리케이션은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 제거할 때 자동으로 삭제됩니다.  
   

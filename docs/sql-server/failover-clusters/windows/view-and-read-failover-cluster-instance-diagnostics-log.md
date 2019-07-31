@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 68074bd5-be9d-4487-a320-5b51ef8e2b2d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8979e3457250cbce7fe3dbe5992c84e786d3f7c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0932181110c5c4ec34e3d4bdf6b1395bffc65cca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47709701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904993"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>장애 조치(failover) 클러스터 인스턴스 진단 로그 보기 및 읽기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,9 +22,9 @@ ms.locfileid: "47709701"
   
 -   **시작하기 전 주의 사항:**  [권장 사항](#Recommendations), [보안](#Security)  
   
--   **진단 로그를 보려면:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
+-   **다음을 사용하여 진단 로그 보기:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   **진단 로그 설정을 구성하려면:** [Transact-SQL](#TsqlConfigure)  
+-   **다음을 사용하여 진단 로그 설정 구성:** [Transact-SQL](#TsqlConfigure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -36,7 +35,7 @@ ms.locfileid: "47709701"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  **fn_xe_file_target_read_file**을 실행하려면 VIEW SERVER STATE 권한이 필요합니다.  
   
  SQL Server Management Studio를 관리자로 열기  
@@ -101,21 +100,21 @@ ORDER BY Time;
 ####  <a name="TsqlExample"></a> Setting diagnostic log options  
  이 섹션의 예에서는 진단 로그 옵션 값을 설정하는 방법을 보여 줍니다.  
   
-##### <a name="a-starting-diagnostic-logging"></a>1. 진단 로깅 시작  
+##### <a name="a-starting-diagnostic-logging"></a>1\. 진단 로깅 시작  
  다음 예에서는 진단 데이터의 로깅을 시작합니다.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG ON;  
 ```  
   
-##### <a name="b-stopping-diagnostic-logging"></a>2. 진단 로깅 중지  
+##### <a name="b-stopping-diagnostic-logging"></a>2\. 진단 로깅 중지  
  다음 예에서는 진단 데이터의 로깅을 중지합니다.  
   
 ```  
 ALTER SERVER CONFIGURATION SET DIAGNOSTICS LOG OFF;  
 ```  
   
-##### <a name="c-specifying-the-location-of-the-diagnostic-logs"></a>3. 진단 로그의 위치 지정  
+##### <a name="c-specifying-the-location-of-the-diagnostic-logs"></a>C. 진단 로그의 위치 지정  
  다음 예에서는 진단 로그의 위치를 지정된 파일 경로로 설정합니다.  
   
 ```  
@@ -123,7 +122,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
   
-##### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>4. 각 진단 로그의 최대 크기 지정  
+##### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D. 각 진단 로그의 최대 크기 지정  
  다음 예에서는 각 진단 로그의 최대 크기를 10MB로 설정합니다.  
   
 ```  

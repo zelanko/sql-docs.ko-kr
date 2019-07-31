@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: b9058fcb7ffff72620c6560fbe81df6f33fa327d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 13afbab4c154b39fe7762d39c0d431ce17848213
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901869"
 ---
 # <a name="output-clause-transact-sql"></a>OUTPUT 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -134,13 +133,13 @@ DELETE Sales.ShoppingCartItem
 ```  
   
  *column_name*  
- 명시적 열 참조입니다. 수정할 테이블에 대한 모든 참조는 INSERTED **.**_column\_name_.  
+ 명시적 열 참조입니다. 수정되는 테이블에 대한 모든 참조는 INSERTED 또는 DELETED 접두사로 적절히 한정되어야 합니다. 예: INSERTED **.** _column\_name_.  
   
  $action  
- MERGE 문에만 사용할 수 있습니다. 각 행에 대해 세 개의 값 중 하나를 반환하는 MERGE 문의 OUTPUT 절에 **nvarchar(10)** 형식의 열을 지정합니다. 이 열은 해당 행에서 수행한 동작에 따라 'INSERT', 'UPDATE' 또는 'DELETE' 중 하나를 각 행의 값으로 반환합니다.  
+ MERGE 문에만 사용할 수 있습니다. 각 행에 대해 세 개의 값 중 하나를 반환하는 MERGE 문의 OUTPUT 절에 **nvarchar(10)** 형식의 열을 지정합니다. 이 열은 해당 행에서 수행한 동작에 따라 ‘INSERT’, ‘UPDATE’ 또는 ‘DELETE’ 중 하나를 각 행의 값으로 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
- OUTPUT \<dml_select_list> 절 및 OUTPUT \<dml_select_list> INTO { **\@**_table\_variable_ | _output\_table_ } 절은 단일 INSERT, UPDATE, DELETE 또는 MERGE 문에서 정의할 수 있습니다.  
+ OUTPUT \<dml_select_list> 절 및 OUTPUT \<dml_select_list> INTO { **\@** _table\_variable_ | _output\_table_ } 절은 단일 INSERT, UPDATE, DELETE 또는 MERGE 문에서 정의할 수 있습니다.  
   
 > [!NOTE]  
 >  다르게 지정되지 않는 이상 OUTPUT 절에 대한 참조는 OUTPUT 절 및 OUTPUT INTO 절 모두를 참조합니다.  
@@ -227,7 +226,7 @@ DELETE Sales.ShoppingCartItem
  sp_configure 옵션인 트리거에서 결과 반환 허용 안 함이 설정되어 있으면 INTO 절이 없는 OUTPUT 절이 트리거 내부에서 호출되었을 때 문이 실패합니다.  
   
 ## <a name="data-types"></a>데이터 형식  
- OUTPUT 절은 큰 개체 데이터 형식, 즉 **nvarchar(max)**, **varchar(max)**, **varbinary(max)**, **text**, **ntext**, **image** 및 **xml**을 지원합니다. UPDATE 문에서 .WRITE 절을 사용하여 **nvarchar(max)**, **varchar(max)** 또는 **varbinary(max)** 열을 수정하는 경우, 값의 이전 및 이후 이미지 전체가 참조되면 해당 이미지가 반환됩니다. TEXTPTR( ) 함수는 OUTPUT 절의 **text**, **ntext**또는 **image** 열에 대한 식의 일부로 나타날 수 없습니다.  
+ OUTPUT 절은 큰 개체 데이터 형식, 즉 **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , **text**, **ntext**, **image** 및 **xml**을 지원합니다. UPDATE 문에서 .WRITE 절을 사용하여 **nvarchar(max)** , **varchar(max)** 또는 **varbinary(max)** 열을 수정하는 경우, 값의 이전 및 이후 이미지 전체가 참조되면 해당 이미지가 반환됩니다. TEXTPTR( ) 함수는 OUTPUT 절의 **text**, **ntext**또는 **image** 열에 대한 식의 일부로 나타날 수 없습니다.  
   
 ## <a name="queues"></a>큐  
  테이블을 큐 또는 중간 결과 집합의 저장을 위해 사용하는 응용 프로그램에서 OUTPUT을 사용할 수 있습니다. 이 경우 응용 프로그램은 지속적으로 테이블에 행을 추가하거나 제거합니다. 다음 예에서는 삭제된 행을 호출하는 응용 프로그램에 반환하기 위해 DELETE 문에 OUTPUT 절을 사용합니다.  
@@ -307,14 +306,14 @@ DROP TABLE dbo.table1;
 > [!NOTE]  
 >  여러 개의 응용 프로그램에서 한 테이블에 대해 파괴 읽기를 허용하는 경우 UPDATE 및 DELETE 문에서 READPAST 테이블 힌트를 사용하세요. 이렇게 하면 다른 응용 프로그램이 이미 테이블의 첫 번째 정규화 레코드를 읽고 있는 경우 발생할 수 있는 잠금 문제를 방지합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  SELECT 권한은 \<dml_select_list>를 통해 검색되거나 \<scalar_expression>에서 사용되는 모든 열에 필요합니다.  
   
  INSERT 권한은 \<output_table>에 지정된 모든 테이블에 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-output-into-with-a-simple-insert-statement"></a>1. 간단한 INSERT 문과 함께 OUTPUT INTO 사용  
+### <a name="a-using-output-into-with-a-simple-insert-statement"></a>1\. 간단한 INSERT 문과 함께 OUTPUT INTO 사용  
  다음 예제에서는 `ScrapReason` 테이블에 행을 삽입하고, `OUTPUT` 절을 사용하여 명령문의 결과를 `@MyTableVar``table` 변수에 반환합니다. `ScrapReasonID` 열은 IDENTITY 속성을 사용해 정의되기 때문에 이 열의 값은 `INSERT` 문에서 지정되지 않습니다. 하지만 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 의해 생성된 해당 열의 값은 `OUTPUT` 열의 `inserted.ScrapReasonID` 절에서 반환됩니다.  
   
 ```  
@@ -337,7 +336,7 @@ GO
   
 ```  
   
-### <a name="b-using-output-with-a-delete-statement"></a>2. DELETE 문과 함께 OUTPUT 사용  
+### <a name="b-using-output-with-a-delete-statement"></a>2\. DELETE 문과 함께 OUTPUT 사용  
  다음 예에서는 `ShoppingCartItem` 테이블의 모든 행을 삭제합니다. `OUTPUT deleted.*` 절은 `DELETE` 문의 결과로 삭제된 행의 모든 열을 호출하는 응용 프로그램에 반환하도록 지정합니다. 이어지는 `SELECT` 문은 `ShoppingCartItem` 테이블의 삭제 작업 결과를 확인합니다.  
   
 ```  
@@ -551,7 +550,7 @@ GO
  17             My scrap reason  2004-04-12 16:23:33.050
  ```  
   
-### <a name="i-using-output-into-with-identity-and-computed-columns"></a>9. ID 및 계산 열과 함께 OUTPUT INTO 사용  
+### <a name="i-using-output-into-with-identity-and-computed-columns"></a>9\. ID 및 계산 열과 함께 OUTPUT INTO 사용  
  다음 예에서는 `EmployeeSales` 테이블을 만들고 `INSERT` 문에 `SELECT` 문을 사용하여 이 테이블에 여러 개의 행을 삽입한 후 원본 테이블에서 데이터를 검색합니다. `EmployeeSales` 테이블에는 ID 열(`EmployeeID`)과 계산 열(`ProjectedSales`)이 포함되어 있습니다.  
   
 ```  

@@ -10,13 +10,12 @@ ms.custom: loading
 ms.date: 08/09/2018
 ms.author: janinez
 author: janinezhang
-manager: craigg
-ms.openlocfilehash: 8a2d8444e0b19ed4672e9582ef9802d0cd6f6fe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29668550dc64d4c782101f2690058bb465764c90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65720739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908629"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>SSIS(SQL Server Integration Services)를 사용하여 Azure SQL Data Warehouse로 데이터 로드
 
@@ -53,7 +52,7 @@ SSIS(SQL Server Integration Services)는 SQL Data Warehouse에 연결하고 데�
 이 자습서를 단계별로 실행하려면 다음 항목이 필요합니다.
 
 1. **SSIS(SQL Server Integration Services)** SSIS는 SQL Server의 구성 요소이며 SQL Server의 라이선스 버전 또는 개발자나 평가 버전이 필요합니다. SQL Server의 평가 버전을 가져오려면 [SQL Server 평가](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm)를 참조하세요.
-2. **Visual Studio**(선택 사항) 무료 Visual Studio 커뮤니티 버전을 가져오려면 [Visual Studio 커뮤니티][Visual Studio Community]를 참조하세요. Visual Studio를 설치하지 않으려는 경우 SSDT(SQL Server Data Tools)만을 설치할 수 있습니다. SSDT는 제한된 기능을 포함한 Visual Studio 버전을 설치합니다.
+2. **Visual Studio**(선택 사항) Visual Studio Community Edition을 체험하려면 [Visual Studio Community][Visual Studio Community]를 참조하세요. Visual Studio를 설치하지 않으려는 경우 SSDT(SQL Server Data Tools)만을 설치할 수 있습니다. SSDT는 제한된 기능을 포함한 Visual Studio 버전을 설치합니다.
 3. **Visual Studio용 SSDT(SQL Server Data Tools)** Visual Studio용 SQL Server Data Tools를 가져오려면 [SSDT(SQL Server Data Tools) 다운로드][Download SQL Server Data Tools (SSDT)]를 참조하세요.
 4. **Azure SQL Data Warehouse 데이터베이스 및 사용 권한** 이 자습서에서는 SQL Data Warehouse 인스턴스에 연결하고 데이터를 로드합니다. 연결하고, 테이블을 만들고, 데이터를 로드하는 사용 권한이 있어야 합니다.
 
@@ -97,7 +96,7 @@ Visual Studio가 열리고 새 Integration Services(SSIS) 프로젝트를 만듭
 
 추가 컨트롤의 경우 SQL DW 업로드 태스크에서 수행한 작업을 에뮬레이트하는 패키지를 수동으로 만들 수 있습니다. 
 
-1. Azure Blob 업로드 태스크를 사용하여 Azure Blob Storage에 데이터를 저장합니다. Azure Blob 업로드 태스크를 가져오려면 [Azure용 Microsoft SQL Server Integration Services 기능 팩][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]을 다운로드합니다.
+1. Azure Blob 업로드 태스크를 사용하여 Azure Blob Storage에 데이터를 저장합니다. Azure Blob 업로드 작업을 가져오려면 [Azure용 Microsoft SQL Server Integration Services 기능 팩][Microsoft SQL Server 2017 Integration Services Feature Pack for Azure]을 다운로드합니다.
 
 2. 그런 다음, SSIS 실행 SQL 태스크를 사용하여 데이터를 SQL Data Warehouse로 로드하는 PolyBase 스크립트를 시작합니다. Azure Blob Storage에서 SQL Data Warehouse로 데이터를 로드하는 예제(SSIS가 아닌)는 [자습서: Azure SQL Data Warehouse에 데이터 로드](/azure/sql-data-wAREHOUSE/load-data-wideworldimportersdw)를 참조하세요.
 

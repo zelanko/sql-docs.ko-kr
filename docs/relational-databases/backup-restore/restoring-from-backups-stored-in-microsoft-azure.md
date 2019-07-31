@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6ae358b2-6f6f-46e0-a7c8-f9ac6ce79a0e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e12e2b8d1578d85420d7a5f3ddd61a85fdd6de7d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 51e1ce454a2b6d0309a33d155cc0e069b5a17a29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041459"
 ---
 # <a name="restoring-from-backups-stored-in-microsoft-azure"></a>Microsoft Azure에 저장된 백업에서 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,11 +30,11 @@ ms.locfileid: "51663062"
   
 -   SQL Server는 백업 파일을 검색하기 위해 외부 원본에 연결해야 하므로 스토리지 계정을 인증하는 데 SQL 자격 증명이 사용됩니다. 결과적으로 RESTORE 문에 WITH CREDENTIAL 옵션이 필요합니다. 자세한 내용은 [Microsoft Azure Blob Storage 서비스로 SQL Server 백업 및 복원](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 사용하여 클라우드로의 백업을 관리하는 경우 **smart_admin.fn_available_backups** 시스템 함수를 사용하여 저장소에서 사용 가능한 모든 백업을 검토할 수 있습니다. 이 시스템 함수는 테이블에 데이터베이스에 대한 사용 가능한 모든 백업을 반환합니다. 결과가 테이블에 반환되면 해당 결과를 필터링하거나 정렬할 수 있습니다. 자세한 내용은 [managed_backup.fn_available_backups&#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql.md)을(를) 참조하세요.  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 사용하여 클라우드로의 백업을 관리하는 경우 **smart_admin.fn_available_backups** 시스템 함수를 사용하여 스토리지에서 사용 가능한 모든 백업을 검토할 수 있습니다. 이 시스템 함수는 테이블에 데이터베이스에 대한 사용 가능한 모든 백업을 반환합니다. 결과가 테이블에 반환되면 해당 결과를 필터링하거나 정렬할 수 있습니다. 자세한 내용은 [managed_backup.fn_available_backups&#40;Transact-SQL&#41;](../../relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql.md)을(를) 참조하세요.  
   
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio 사용  
   
--   복원 태스크는 SQL Server Management Studio를 사용하여 데이터베이스를 복원하는 데 사용됩니다. 이제 백업 미디어 페이지에 Windows Azure Blob 스토리지 서비스에 저장된 백업 파일을 표시하는 **URL** 옵션이 포함됩니다. 스토리지 계정 인증에 사용되는 SQL 자격 증명도 제공해야 합니다. **복원에 사용할 백업 세트** 표가 Windows Azure Blob 저장소의 사용 가능한 백업으로 채워집니다. 자세한 내용은 [Restoring from Windows Azure storage Using SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)을 참조하세요.  
+-   복원 태스크는 SQL Server Management Studio를 사용하여 데이터베이스를 복원하는 데 사용됩니다. 이제 백업 미디어 페이지에 Windows Azure Blob 스토리지 서비스에 저장된 백업 파일을 표시하는 **URL** 옵션이 포함됩니다. 스토리지 계정 인증에 사용되는 SQL 자격 증명도 제공해야 합니다. **복원에 사용할 백업 세트** 표가 Windows Azure Blob 스토리지의 사용 가능한 백업으로 채워집니다. 자세한 내용은 [Restoring from Windows Azure storage Using SQL Server Management Studio](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)을 참조하세요.  
   
 ### <a name="optimizing-restores"></a>복원 최적화  
  복원 쓰기 시간을 줄이려면 SQL Server 사용자 계정에 **볼륨 유지 관리 작업 수행** 사용자 권한을 추가합니다. 자세한 내용은 [데이터베이스 파일 초기화](https://go.microsoft.com/fwlink/?LinkId=271622)를 참조하세요. 즉시 파일 초기화가 설정되었는데도 복원 속도가 느리면 데이터베이스가 백업된 인스턴스에서 로그 파일의 크기를 확인해야 합니다. 로그 크기가 매우 큰 경우(여러 GB) 복원 속도가 느려질 수 있습니다. 복원 중에 로그 파일이 초기화되어야 하며 여기에는 상당한 시간이 걸립니다.  

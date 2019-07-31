@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 27cfb819-3e8d-4274-8bbe-cbbe4d9c2e23
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de761d6ffe58f757b933c8235a8c82d13bda1cc0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: a62fe54a6bbdd7287c46f103f9963302727a1077
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161820"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948090"
 ---
 # <a name="with-commontableexpression-transact-sql"></a>WITH common_table_expression(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -101,7 +100,7 @@ CTE(공통 테이블 식)라고도 하는 임시로 이름이 지정된 결과 �
   
 -   재귀 CTE 정의는 적어도 두 개의 CTE 쿼리 정의 즉, 하나의 앵커 멤버와 재귀 멤버를 포함해야 합니다. 앵커 멤버와 재귀 멤버를 여러 개 정의할 수 있지만 앵커 멤버 쿼리 정의는 모두 첫 번째 재귀 멤버 정의 앞에 와야 합니다. 모든 CTE 쿼리 정의는 CTE 자체를 참조하지 않는 한 앵커 멤버입니다.  
   
--   앵커 멤버는 UNION ALL, UNION, INTERSECT 또는 EXCEPT 집합 연산자 중 하나를 사용해 결합해야 합니다. UNION ALL은 여러 재귀 멤버를 결합할 때 마지막 앵커 멤버와 첫 번째 재귀 멤버 사이에서 허용되는 유일한 집합 연산자입니다.  
+-   고정 멤버는 UNION ALL, UNION, INTERSECT 또는 EXCEPT 집합 연산자 중 하나를 사용해 결합해야 합니다. UNION ALL은 여러 재귀 멤버를 결합할 때 마지막 앵커 멤버와 첫 번째 재귀 멤버 사이에서 허용되는 유일한 집합 연산자입니다.  
   
 -   앵커 멤버 및 재귀 멤버에 있는 열의 수는 같아야 합니다.  
   

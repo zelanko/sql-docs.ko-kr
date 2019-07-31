@@ -14,19 +14,18 @@ helpviewer_keywords:
 ms.assetid: 0422e99c-e688-419b-bb4c-c7bebeef1d8d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3738ada96f1b3a01bb7a95219f3a69b5c7da0d5c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 519cf5845956aa52094f9fff7ba1640d09b0aed7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027852"
 ---
 # <a name="agent-profiles"></a>에이전트 프로필
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **에이전트 프로필** 대화 상자를 사용하여 에이전트 프로필을 관리할 수 있습니다. 에이전트 프로필을 사용하면 각 에이전트의 런타임 매개 변수를 편리하게 관리할 수 있습니다. 각 에이전트에는 기본 프로필이 있으며 미리 정의된 프로필이 추가된 에이전트도 있습니다. 예를 들어 병합 에이전트에는 느린 대역폭 연결을 위한 "느린 연결" 프로필이 있습니다. 대부분의 애플리케이션은 미리 정의된 프로필만으로 충분하지만 사용자 정의 프로필을 만들어 에이전트 동작을 사용자 지정할 수도 있습니다.  
   
-## <a name="options"></a>Options  
+## <a name="options"></a>옵션  
  **페이지 선택**  
  왼쪽 창에서 에이전트를 선택하면 오른쪽 창에 해당 에이전트의 프로필이 표시됩니다.  
   
@@ -37,7 +36,7 @@ ms.locfileid: "47724081"
  프로필의 이름입니다.  
   
  **형식**  
- 프로필 유형: **사용자** (사용자 정의 프로필) 또는 **시스템** (미리 정의된 프로필)입니다.  
+ 프로필의 유형입니다. **사용자**(사용자 정의 프로필) 또는 **시스템**(미리 정의된 프로필)입니다.  
   
  **속성 (...)**  
  에이전트 프로필의 각 매개 변수에 사용된 값을 보려면 클릭합니다.  

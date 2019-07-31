@@ -18,14 +18,13 @@ f1_keywords:
 ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 089a97d4a2f6476719a3570d4d59bea664b71690
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909710"
 ---
 # <a name="index-properties-f1-help"></a>인덱스 속성 F1 도움말
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47846376"
   
  [(인덱스) 열 선택 대화 상자](#Columns)  
   
- [인덱스 속성 저장소 페이지](#Storage)  
+ [인덱스 속성 스토리지 페이지](#Storage)  
   
  [인덱스 속성 공간 페이지](#Spatial)  
   
@@ -56,7 +55,7 @@ ms.locfileid: "47846376"
  인덱스 이름을 표시합니다. 기존 인덱스의 경우 이 필드는 읽기 전용입니다. 새 인덱스를 만드는 중이면 인덱스 이름을 입력합니다.  
   
  **인덱스 유형**  
- 인덱스의 유형을 나타냅니다. 새 인덱스의 경우 대화 상자를 열 때 선택한 인덱스의 유형을 나타냅니다. 인덱스는 **클러스터형**, **비클러스터형**, **기본 XML**, **보조 XML**, **공간**, **클러스터형 Columnstore**또는 **비클러스터형 Columnstore**일 수 있습니다.  
+ 인덱스의 유형을 나타냅니다. 새 인덱스의 경우 대화 상자를 열 때 선택한 인덱스의 유형을 나타냅니다. 인덱스는 **클러스터형**, **비클러스터형**, **기본 XML**, **보조 XML**, **공간**, **클러스터형 Columnstore** 또는 **비클러스터형 Columnstore**일 수 있습니다.  
   
  **참고** 각 테이블에 대해 클러스터형 인덱스는 하나만 허용됩니다. 각 테이블에 대해 xVelocity 메모리 액세스에 최적화된 columnstore 인덱스는 하나만 허용됩니다.  
   
@@ -135,7 +134,7 @@ ms.locfileid: "47846376"
  **Allow Nulls**  
  테이블 정의에 따라 열에 Null 값이 허용되는 경우 **예** 를 표시합니다. 테이블 정의에 따라 열에 Null 값이 허용되지 않는 경우 **아니요** 를 표시합니다.  
   
-##  <a name="Storage"></a> 저장소 페이지 옵션  
+##  <a name="Storage"></a> 스토리지 페이지 옵션  
  이 페이지를 사용하여 선택한 인덱스의 파일 그룹 또는 파티션 구성표 속성을 확인하거나 수정할 수 있습니다. 인덱스 유형과 관련된 옵션만 표시됩니다.  
   
  **파일 그룹**  

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cd5f5aac2f12cd20b5459f4b1f725b975b4dd1e7
-ms.sourcegitcommit: 480961f14405dc0b096aa8009855dc5a2964f177
+ms.openlocfilehash: 5bbb131ef95949d2739c859ecd24b32c4ef25397
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2019
-ms.locfileid: "54419828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990562"
 ---
 # <a name="replication-agent-administration"></a>복제 에이전트 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "54419828"
   
 |에이전트 실행 파일|파일 이름|  
 |----------------------|---------------|  
-|[복제 스냅숏 에이전트](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
+|[Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)|snapshot.exe|  
 |[Replication Distribution Agent](../../../relational-databases/replication/agents/replication-distribution-agent.md)|distrib.exe|  
 |[복제 로그 판독기 에이전트](../../../relational-databases/replication/agents/replication-log-reader-agent.md)|logread.exe|  
 |[복제 큐 판독기 에이전트](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)|qrdrsvc.exe|  
@@ -79,7 +78,7 @@ ms.locfileid: "54419828"
   
     -   병합 에이전트  
   
-     이러한 에이전트와 연결된 정보 및 태스크는 **구독 조사 목록**(각 게시자에 대해 사용 가능) 또는 **모든 구독** 탭(각 게시에 대해 사용 가능)을 통해 액세스할 수 있습니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
+     이러한 에이전트와 연결된 정보 및 작업은 **구독 조사 목록**(각 게시자에 대해 사용 가능) 또는 **모든 구독** 탭(각 게시에 대해 사용 가능)을 통해 액세스할 수 있습니다. 자세한 내용은 [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../../../relational-databases/replication/monitor/view-information-and-perform-tasks-replication-monitor.md)을 참조하세요.  
   
 ## <a name="independent-and-shared-agents"></a>독립 및 공유 에이전트  
  독립 에이전트는 한 구독에 사용되는 에이전트입니다. 공유 에이전트는 여러 구독을 제공합니다. 동일한 공유 에이전트를 사용하는 여러 구독을 동기화해야 할 경우 기본적으로 여러 구독은 큐에서 대기하고 공유 에이전트가 한 번에 하나씩 구독을 처리합니다. 독립 에이전트는 구독에 동기화가 필요할 때마다 준비가 되어 있기 때문에 이를 사용하면 대기 시간이 줄어듭니다. 병합 복제는 항상 독립 에이전트를 사용하고 트랜잭션 복제는 새 게시 마법사에서 만든 게시에 대해 기본적으로 독립 에이전트를 사용합니다. 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 트랜잭션 복제가 기본적으로 공유 에이전트를 사용했습니다.  

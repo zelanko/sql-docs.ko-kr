@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: 8bf1316f-c0ef-49d0-90a7-3946bc8e7a89
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: be67801f6f386bd4d63a5edc3459820075628864
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 9c09ce1ef34e7355651be0aab473ca39bd2dae1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901969"
 ---
 # <a name="hints-transact-sql---table"></a>힌트(Transact-SQL) - 테이블
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -122,13 +121,13 @@ WITH  ( <table_hint> [ [, ]...n ] )
 ```  
   
 ## <a name="arguments"></a>인수  
-WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
+WITH **(** \<table_hint> **)** [ [ **,** ]...*n* ]  
 몇 가지 예외가 있지만 테이블 힌트는 WITH 키워드를 사용하여 힌트를 지정할 때만 FROM 절에서 지원됩니다. 또한 테이블 힌트는 괄호로 묶어 지정해야 합니다.  
   
 > [!IMPORTANT]  
 > WITH 키워드 생략은 더 이상 사용되지 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT 및 NOEXPAND 테이블 힌트를 WITH 키워드와 함께 또는 WITH 키워드 없이 사용할 수 있습니다. 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+NOLOCK, READUNCOMMITTED, UPDLOCK, REPEATABLEREAD, SERIALIZABLE, READCOMMITTED, TABLOCK, TABLOCKX, PAGLOCK, ROWLOCK, NOWAIT, READPAST, XLOCK, SNAPSHOT 및 NOEXPAND 테이블 힌트를 WITH 키워드와 함께 또는 WITH 키워드 없이 사용할 수 있습니다. 이러한 테이블 힌트를 WITH 키워드 없이 지정하는 경우 힌트를 단독으로 지정해야 합니다. 예를 들어  
   
 ```sql  
 FROM t (TABLOCK)  
@@ -148,7 +147,7 @@ FROM t WITH (TABLOCK, INDEX(myindex))
 NOEXPAND  
 쿼리 최적화 프로그램에서 쿼리를 처리할 때 기본 테이블에 액세스하기 위해 인덱싱된 뷰를 확장하지 않도록 지정합니다. 쿼리 최적화 프로그램은 뷰를 클러스터형 인덱스가 있는 테이블처럼 처리합니다. NOEXPAND는 인덱싱된 뷰에만 적용됩니다. 자세한 내용은 [NOEXPAND 사용](#using-noexpand)을 참조하세요.  
   
-INDEX  **(**_index\_value_ [**,**... _n_ ] ) | INDEX =  ( _index\_value_**)**  
+INDEX  **(** _index\_value_ [ **,** ... _n_ ] ) | INDEX =  ( _index\_value_ **)**  
 INDEX() 구문은 쿼리 최적화 프로그램이 문을 처리할 때 사용할 인덱스 하나 이상의 이름이나 ID를 지정합니다. 대체 INDEX = 구문은 단일 인덱스 값을 지정하며 테이블당 하나의 인덱스 힌트만 지정할 수 있습니다.  
   
 클러스터형 인덱스가 있는 경우에는 INDEX(0)이 클러스터형 인덱스 검색을 강제 실행하고 INDEX(1)이 클러스터형 인덱스 검색 또는 찾기를 강제 실행합니다. 클러스터형 인덱스가 없는 경우 INDEX(0)은 테이블 검색을 강제 실행하고 INDEX(1)은 오류로 해석됩니다.  
@@ -179,7 +178,7 @@ BULK 옵션이 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)와
   
 INSERT ... SELECT * FROM OPENROWSET (BULK ...) 문에서 이 힌트를 사용하는 예제는 [대량 가져오기 수행 중 Null 유지 또는 기본값 사용&#40;SQL Server&#41;](../../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)을 참조하세요.  
   
-FORCESEEK [ **(**_index\_value_**(**_index\_column\_name_ [ **,**... _n_ ] **))** ]  
+FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... _n_ ] **))** ]  
 쿼리 최적화 프로그램이 테이블 또는 뷰의 데이터에 대한 액세스 경로로 Index Seek 연산만 사용하도록 지정합니다. 
 
 > [!NOTE]
@@ -412,12 +411,12 @@ NOEXPAND는 *인덱싱된 뷰*에만 적용됩니다. 인덱싱된 뷰란 고유
 ## <a name="using-a-table-hint-as-a-query-hint"></a>테이블 힌트를 쿼리 힌트로 사용  
  *테이블 힌트*는 OPTION (TABLE HINT) 절을 사용하여 쿼리 힌트로 지정할 수도 있습니다. 테이블 힌트는 [계획 지침](../../relational-databases/performance/plan-guides.md)의 컨텍스트에서 쿼리 힌트로만 사용하는 것이 좋습니다. 다른 임시 쿼리의 경우에는 이러한 힌트를 테이블 힌트로만 지정합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  KEEPIDENTITY, IGNORE_CONSTRAINTS 및 IGNORE_TRIGGERS 힌트를 사용하려면 테이블에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>1. TABLOCK 힌트를 사용하여 잠금 방법 지정  
+### <a name="a-using-the-tablock-hint-to-specify-a-locking-method"></a>1\. TABLOCK 힌트를 사용하여 잠금 방법 지정  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Production.Product` 테이블에 공유 잠금을 사용하고 UPDATE 문이 끝날 때까지 유지하도록 지정합니다.  
   
 ```sql  
@@ -428,7 +427,7 @@ WHERE ProductNumber LIKE 'BK-%';
 GO  
 ```  
   
-### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>2. FORCESEEK 힌트를 사용하여 Index Seek 연산 지정  
+### <a name="b-using-the-forceseek-hint-to-specify-an-index-seek-operation"></a>2\. FORCESEEK 힌트를 사용하여 Index Seek 연산 지정  
  다음 예에서는 인덱스를 지정하지 않고 FORCESEEK 힌트를 사용하여 쿼리 최적화 프로그램이 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Sales.SalesOrderDetail` 테이블에서 Index Seek 연산을 수행하도록 지정합니다.  
   
 ```sql

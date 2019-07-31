@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 01796551-578d-4425-9b9e-d87210f7ba72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d3094df3f5fff3a0dbeb70573236432202420224
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: be8d6f23c880d96f46aecc433d46b0971995278d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210542"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041304"
 ---
 # <a name="use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql"></a>리소스 관리자를 사용하여 백업 압축을 통해 CPU 사용량 제한(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "53210542"
 ##  <a name="setup_login_and_user"></a> 우선 순위가 낮은 작업에 대한 로그인 및 사용자 설정  
  이 항목의 시나리오에는 우선 순위가 낮은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 사용자가 필요합니다. 사용자 이름은 이 로그인에서 실행되는 세션을 분류하고 CPU 사용량을 제한하는 리소스 관리자 작업 그룹으로 이러한 세션을 라우팅하는 데 사용됩니다.  
   
- 다음 절차에서는 이러한 목적에 맞게 로그인 및 사용자를 설정하는 단계를 설명하며, 그 다음에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 예로 "예 1: 로그인 및 사용자 설정(Transact-SQL)"이 제공됩니다.  
+ 다음 절차에서는 이러한 목적에 맞게 로그인 및 사용자를 설정하는 단계를 설명하며, 그다음에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 예로 “예제 A: 로그인 및 사용자 설정(Transact-SQL)”이 제공됩니다.  
   
 ### <a name="to-set-up-a-login-and-database-user-for-classifying-sessions"></a>세션 분류를 위한 로그인 및 데이터베이스 사용자를 설정하려면  
   
@@ -79,7 +78,7 @@ ms.locfileid: "53210542"
   
      자세한 내용은 [GRANT 데이터베이스 보안 주체 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)을 참조하세요.  
   
-### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>예 1: 로그인 및 사용자 설정(Transact-SQL)  
+### <a name="example-a-setting-up-a-login-and-user-transact-sql"></a>예제 A: 로그인 및 사용자 설정(Transact-SQL)  
  다음 예는 우선 순위가 낮은 백업을 위한 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 사용자를 만들도록 선택한 경우에만 해당합니다. 또는 적절한 기존의 로그인 및 사용자가 있는 경우 이를 사용할 수 있습니다.  
   
 > [!IMPORTANT]  
@@ -186,7 +185,7 @@ GO
     ALTER RESOURCE GOVERNOR RECONFIGURE;  
     ```  
   
-### <a name="example-b-configuring-resource-governor-transact-sql"></a>예 2: 리소스 관리자 구성(Transact-SQL)  
+### <a name="example-b-configuring-resource-governor-transact-sql"></a>예제 B: Resource Governor 구성(Transact-SQL)  
  다음 예에서는 하나의 트랜잭션 내에서 다음과 같은 단계를 수행합니다.  
   
 1.  `pMAX_CPU_PERCENT_20` 리소스 풀을 만듭니다.  
@@ -200,7 +199,7 @@ GO
  트랜잭션을 커밋한 후 예에서는 ALTER WORKLOAD GROUP 또는 ALTER RESOURCE POOL 문에 요청된 구성 변경 내용을 적용합니다.  
   
 > [!IMPORTANT]  
->  다음 예에서는 “예 1: 로그인 및 사용자 설정(Transact-SQL)"에서 만든 예제 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자의 사용자 이름인 *domain_name*`\MAX_CPU`을 사용합니다. 이 이름을 우선 순위가 낮은 압축된 백업을 만드는 데 사용할 로그인 사용자의 이름으로 대체합니다.  
+>  다음 예제에서는 “예제 A: 로그인 및 사용자 설정(Transact-SQL)”에서 만든 샘플 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자의 사용자 이름인 *domain_name*`\MAX_CPU`을 사용합니다. 이 이름을 우선 순위가 낮은 압축된 백업을 만드는 데 사용할 로그인 사용자의 이름으로 대체합니다.  
   
 ```sql  
 -- Configure Resource Governor.  
@@ -264,7 +263,7 @@ GO
 ##  <a name="creating_compressed_backup"></a> CPU가 제한된 세션을 사용하여 백업 압축  
  최대 CPU가 제한된 세션에서 압축된 백업을 만들려면 분류자 함수에 지정된 사용자로 로그인합니다. 백업 명령에 WITH COMPRESSION([!INCLUDE[tsql](../../includes/tsql-md.md)])을 지정하거나 **백업 압축**([!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)])을 선택합니다. 압축된 데이터베이스 백업을 만들려면 [전체 데이터베이스 백업 만들기&#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)를 참조하세요.  
   
-### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>예 3: 압축된 백업 만들기(Transact-SQL)  
+### <a name="example-c-creating-a-compressed-backup-transact-sql"></a>예제 C: 압축된 백업 만들기(Transact-SQL)  
  다음 [BACKUP](../../t-sql/statements/backup-transact-sql.md) 예에서는 새로 형식이 지정된 백업 파일인 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 에 `Z:\SQLServerBackups\AdvWorksData.bak`데이터베이스의 압축된 전체 백업을 만듭니다.  
   
 ```sql  

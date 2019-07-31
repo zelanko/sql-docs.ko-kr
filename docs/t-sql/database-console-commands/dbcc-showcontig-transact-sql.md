@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 0cc3055f6d6d6f293500cdd6aabca5c0e51df11a
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 0e1fff3c60dab7e8fe055753c125fddf70abb1df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039065"
 ---
 # <a name="dbcc-showcontig-transact-sql"></a>DBCC SHOWCONTIG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ DBCC SHOWCONTIG
 |**익스텐트 스위치**|DBCC 문이 테이블이나 인덱스의 페이지를 이동한 동안 익스텐트 간에 이동한 횟수입니다.|  
 |**Avg. Pages per Extent**|페이지 체인에서 익스텐트당 페이지 수입니다.|  
 |**검색 밀도[최적: 실제]**|백분율입니다. **Best Count** 대 **Actual Count**의 비율입니다. 모든 데이터가 인접한 경우 이 값은 100이고 이 값이 100보다 작으면 일부 데이터가 조각화된 것입니다.<br /><br /> **최적**은 모든 데이터가 인접해서 연결되어 있는 경우 이상적인 익스텐트 변경 횟수이고 **실제**는 실제 익스텐트 변경 횟수입니다.|  
-|**논리 검색 조각화 상태**|인덱스의 리프 페이지 검색에서 반환된 순서가 잘못된 페이지의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 페이지란 인덱스에 할당된 다음 물리적 페이지가 현재 리프 페이지의 다음 페이지 포인터가 가리키는 페이지와 다른 경우를 나타냅니다.|  
+|**논리 검색 조각화 상태**|인덱스의 리프 페이지 검색에서 반환된 순서가 잘못된 페이지의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 페이지란 인덱스에 할당된 다음 물리적 페이지가 현재 리프 페이지의 다음 페이지  포인터가 가리키는 페이지와 다른 경우를 나타냅니다.|  
 |**익스텐트 검색 조각화 상태**|인덱스의 리프 페이지 검색에서 순서가 잘못된 익스텐트의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 익스텐트란 인덱스의 현재 페이지가 들어 있는 익스텐트가 실제로 인덱스의 이전 페이지가 들어 있는 익스텐트의 다음 익스텐트가 아닌 경우입니다.<br /><br /> 참고: 인덱스가 여러 파일에 걸쳐 있을 경우 이 값은 의미가 없습니다.|  
 |**Avg. Bytes Free per Page**|검색된 페이지에서 사용 가능한 평균 바이트 수입니다. 이 값이 클수록 페이지의 사용률이 낮습니다. 인덱스의 임의 삽입 횟수가 적은 경우 이 값이 작은 것이 좋습니다. 이 값은 행 크기에 따라 달라지며 행 크기가 크면 값이 커집니다.|  
 |**Avg. Page density (full)**|평균 페이지 밀도입니다(백분율). 이 값은 행 크기의 영향을 받습니다. 따라서 이 값은 페이지의 꽉 찬 정도를 보다 정확하게 반영합니다. 이 백분율 값이 클수록 좋습니다.|  
@@ -131,7 +130,7 @@ TABLERESULTS를 지정하면 DBCC SHOWCONTIG가 다음 열을 반환하고 이�
 |**ScanDensity**|백분율입니다. **BestCount** 대 **ActualCount** 비율입니다. 모든 데이터가 인접한 경우 이 값은 100이고 이 값이 100보다 작으면 일부 데이터가 조각화된 것입니다.|  
 |**BestCount**|모든 데이터가 인접해서 연결되어 있는 경우 이상적인 익스텐트 변경 횟수가 됩니다.|  
 |**ActualCount**|실제 익스텐트 변경 횟수입니다.|  
-|**LogicalFragmentation**|인덱스의 리프 페이지 검색에서 반환된 순서가 잘못된 페이지의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 페이지란 인덱스에 할당된 다음 물리적 페이지가 현재 리프 페이지의 다음 페이지 포인터가 가리키는 페이지와 다른 경우를 나타냅니다.|  
+|**LogicalFragmentation**|인덱스의 리프 페이지 검색에서 반환된 순서가 잘못된 페이지의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 페이지란 인덱스에 할당된 다음 물리적 페이지가 현재 리프 페이지의 다음 페이지  포인터가 가리키는 페이지와 다른 경우를 나타냅니다.|  
 |**ExtentFragmentation**|인덱스의 리프 페이지 검색에서 순서가 잘못된 익스텐트의 비율입니다. 이 값은 힙과는 관계가 없습니다. 순서가 잘못된 익스텐트란 인덱스의 현재 페이지가 들어 있는 익스텐트가 실제로 인덱스의 이전 페이지가 들어 있는 익스텐트의 다음 익스텐트가 아닌 경우입니다.<br /><br /> 참고: 인덱스가 여러 파일에 걸쳐 있을 경우 이 값은 의미가 없습니다.|  
   
 WITH TABLERESULTS와 FAST를 지정할 때의 결과 집합은 다음 열이 Null 값을 가진다는 점을 제외하면 WITH TABLERESULTS를 지정할 때와 동일합니다.
@@ -149,9 +148,9 @@ DBCC SHOWCONTIG 문은 *index_id*를 지정했을 때 지정된 인덱스의 리
 ## <a name="restrictions"></a>Restrictions  
 DBCC SHOWCONTIG는 **ntext**, **text** 및 **image** 데이터 형식에 데이터를 표시하지 않습니다. 이것은 텍스트와 이미지 데이터를 저장하는 텍스트 인덱스가 더 이상 존재하지 않기 때문입니다.
   
-또한 DBCC SHOWCONTIG는 일부 새로운 기능을 지원하지 않습니다. 예를 들어 다음과 같이 사용할 수 있습니다.
+또한 DBCC SHOWCONTIG는 일부 새로운 기능을 지원하지 않습니다. 예를 들어
 -   지정된 테이블이나 인덱스가 분할되는 경우 DBCC SHOWCONTIG는 지정된 테이블이나 인덱스의 첫 번째 파티션만 표시합니다.  
--   DBCC SHOWCONTIG는 행 오버플로 스토리지 정보와 **nvarchar(max)**, **varchar(max)**, **varbinary(max)** 및 **xml**과 같은 새로운 행 외부 데이터 형식을 표시하지 않습니다.  
+-   DBCC SHOWCONTIG는 행 오버플로 스토리지 정보와 **nvarchar(max)** , **varchar(max)** , **varbinary(max)** 및 **xml**과 같은 새로운 행 외부 데이터 형식을 표시하지 않습니다.  
 -   공간 인덱스는 DBCC SHOWCONTIG에서 지원되지 않습니다.  
   
 모든 새로운 기능은 [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 뷰에서 완전히 지원됩니다.
@@ -167,7 +166,7 @@ DBCC SHOWCONTIG는 테이블의 조각화 여부를 확인합니다. 테이블 �
 -   인덱스를 다시 작성합니다.  
      ALTER INDEX에 REBUILD를 사용하여 인덱스를 다시 작성합니다. 자세한 내용은 [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요.  
   
-임의 삽입이 많지 않은 인덱스의 경우 **Avg. Bytes free per page** 및 **Avg. Page density (full)** 통계는 인덱스 페이지의 사용률을 나타냅니다. 임의 삽입이 많지 않은 인덱스의 경우 **Avg. Bytes free per page** 수는 낮고 **Avg. Page density (full)** 수는 임의 삽입이 많지 않은 인덱스에 대해 높아야 합니다. 인덱스를 삭제하고 FILLFACTOR 옵션을 지정하여 다시 만들면 통계 결과를 개선할 수 있습니다. 또한 FILLFACTOR를 고려하여 ALTER INDEX에 REORGANIZE를 사용하면 인덱스가 압축되어 통계 결과가 개선됩니다.
+결과 집합의 **Avg. Bytes free per page** 및 **Avg. Page density (full)** 통계는 인덱스 페이지의 사용률을 나타냅니다. 결과 집합의 **Avg. Bytes free per page** 수는 낮고 **Avg. Page density (full)** 수는 임의 삽입이 많지 않은 인덱스에 대해 높아야 합니다. 인덱스를 삭제하고 FILLFACTOR 옵션을 지정하여 다시 만들면 통계 결과를 개선할 수 있습니다. 또한 FILLFACTOR를 고려하여 ALTER INDEX에 REORGANIZE를 사용하면 인덱스가 압축되어 통계 결과가 개선됩니다.
   
 > [!NOTE]  
 >  임의 삽입이 많고 페이지 사용률이 매우 높은 인덱스에서는 페이지 분할의 횟수가 증가하므로 더 많은 조각이 생깁니다.  
@@ -185,11 +184,11 @@ DBCC SHOWCONTIG는 테이블의 조각화 여부를 확인합니다. 테이블 �
     > [!NOTE]  
     >  인덱스가 여러 파일에 걸쳐 있으면 **익스텐트 검색 조각화 상태** 값이 높아집니다. 이 값을 줄이려면 인덱스 조각화를 줄여야 합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 사용자는 테이블을 소유하거나 **sysadmin** 고정 서버 역할, **db_owner** 고정 데이터베이스 역할 또는 **db_ddladmin** 고정 데이터베이스 역할의 멤버여야 합니다.
   
 ## <a name="examples"></a>예  
-### <a name="a-displaying-fragmentation-information-for-a-table"></a>1. 테이블의 조각화 정보 표시  
+### <a name="a-displaying-fragmentation-information-for-a-table"></a>1\. 테이블의 조각화 정보 표시  
 다음 예에서는 `Employee` 테이블의 조각화 정보를 표시합니다.
   
 ```sql  
@@ -199,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>2. OBJECT_ID를 사용한 테이블 ID 가져오기 및 sys.indexes를 사용한 인덱스 ID 가져오기  
+### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>2\. OBJECT_ID를 사용한 테이블 ID 가져오기 및 sys.indexes를 사용한 인덱스 ID 가져오기  
 다음 예에서는 `OBJECT_ID` 및 `sys.indexes` 카탈로그 뷰를 사용하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]데이터베이스의 `Production.Product`테이블에서 `AK_Product_Name` 인덱스의 테이블 ID 및 인덱스 ID를 가져옵니다.
   
 ```sql  

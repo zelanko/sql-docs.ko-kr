@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 2db3b6241096501190e2d1c8e3978bd349fed7a3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4729caa9c90ae2ebc90ab3254b4222e0fb47ae46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526204"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067530"
 ---
 # <a name="alter-fulltext-index-transact-sql"></a>ALTER FULLTEXT INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ ALTER FULLTEXT INDEX ON table_name
  전체 텍스트 인덱스를 비활성화하면 변경 내용 추적 기능을 해제할 수 있지만 전체 텍스트 인덱스는 유지할 수 있으므로 ENABLE을 사용하여 언제든지 다시 활성화할 수 있습니다. 전체 텍스트 인덱스를 비활성화해도 전체 텍스트 인덱스 메타데이터는 시스템 테이블에 유지됩니다. 전체 텍스트 인덱스가 비활성화되어 있는 경우 CHANGE_TRACKING이 활성화된 상태(자동 또는 수동 업데이트)이면 인덱스 상태가 고정되고 진행 중인 탐색이 중지되며 테이블 데이터 변경 내용이 추적 또는 인덱스에 전파되지 않습니다.  
   
  SET CHANGE_TRACKING {MANUAL | AUTO | OFF}  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 인덱스가 적용되는 테이블 열의 변경 내용(업데이트, 삭제 또는 삽입)을 전체 텍스트 인덱스에 전파할지 여부를 지정합니다. WRITETEXT 및 UPDATETEXT를 통한 데이터 변경 내용은 전체 텍스트 인덱스에 반영되지 않고 변경 내용 추적 시 선택되지도 않습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 전체 텍스트 인덱스가 적용되는 테이블 열의 변경 내용(업데이트, 삭제 또는 삽입)을 해당 전체 텍스트 인덱스로 전파할지 여부를 지정합니다. WRITETEXT 및 UPDATETEXT를 통한 데이터 변경 내용은 전체 텍스트 인덱스에 반영되지 않고 변경 내용 추적 시 선택되지도 않습니다.  
   
 > [!NOTE]  
 >  변경 내용 추적과 WITH NO POPULATION 간의 상호 작용에 대한 자세한 내용은 이 항목의 뒷부분에 나오는 "주의"를 참조하십시오.  
@@ -128,13 +127,13 @@ ALTER FULLTEXT INDEX ON table_name
   
  통계 의미 체계 인덱싱의 일부인 추가 키 구 및 문서 유사성 인덱스를 만듭니다. 자세한 내용은 [의미 체계 검색&#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md)을 참조하세요.  
   
- [ **,**_...n_]  
+ [ **,** _...n_]  
  ADD, ALTER 또는 DROP 절에 대해 여러 열을 지정할 수 있음을 나타냅니다. 여러 열을 지정하는 경우 각 열을 쉼표로 구분하십시오.  
   
  WITH NO POPULATION  
  ADD 또는 DROP 열 작업이나 SET STOPLIST 작업 후 전체 텍스트 인덱스가 채워지지 않도록 지정합니다. 사용자가 START...POPULATION 명령을 실행하는 경우에만 인덱스가 채워집니다.  
   
- NO POPULATION이 지정되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 인덱스를 채우지 않습니다. 인덱스는 사용자가 ALTER FULLTEXT INDEX...START POPULATION 명령을 제공하는 경우에만 채워집니다. NO POPULATION이 지정되어 있지 않은 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인덱스를 채웁니다.  
+ NO POPULATION이 지정되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 인덱스를 채우지 않습니다. 인덱스는 사용자가 ALTER FULLTEXT INDEX...START POPULATION 명령을 제공하는 경우에만 채워집니다. NO POPULATION이 지정되어 있지 않은 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 인덱스를 채웁니다.  
   
  CHANGE_TRACKING을 활성화하고 WITH NO POPULATION을 지정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류를 반환합니다. CHANGE_TRACKING이 설정되어 있고 WITH NO POPULATION이 지정되어 있지 않은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 인덱스에 대해 전체 채우기를 수행합니다.  
   
@@ -185,7 +184,7 @@ ALTER FULLTEXT INDEX ON table_name
  인덱스와 연결된 검색 속성 목록을 변경합니다(있을 경우).  
   
  OFF  
- 속성 목록을 전체 텍스트 인덱스와 연결하지 않도록 지정합니다. 전체 텍스트 인덱스의 검색 속성 목록을 해제할 경우(ALTER FULLTEXT INDEX... SET SEARCH PROPERTY LIST OFF) 기본 테이블에 대해 더 이상 속성 검색을 할 수 없습니다.  
+ 속성 목록을 전체 텍스트 인덱스와 연결하지 않도록 지정합니다. 전체 텍스트 인덱스의 검색 속성 목록을 해제할 경우(ALTER FULLTEXT INDEX... SET SEARCH PROPERTY LIST OFF) 기본 테이블에서 더 이상 속성을 검색할 수 없습니다.  
   
  기본적으로 기존의 검색 속성 목록을 해제할 경우 전체 텍스트 인덱스가 자동으로 다시 채워집니다. 검색 속성 목록을 해제할 때 WITH NO POPULATION을 지정하면 자동으로 다시 채워지지 않습니다. 그러나 나중에라도 사용자의 편의를 위해 이 전체 텍스트 인덱스에 대해 전체 채우기를 실행하는 것이 좋습니다. 전체 텍스트 인덱스를 다시 채우면 삭제된 각 검색 속성의 속성별 메타데이터가 제거되어 전체 텍스트 인덱스 크기가 줄어들고 효율성이 높아집니다.  
   
@@ -274,7 +273,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 3.  같은 검색 속성 목록이나 다른 검색 속성 목록에 전체 텍스트 인덱스가 한 번 더 연결됩니다.  
   
-     예를 들어 다음 문은 전체 텍스트 인덱스를 원래의 검색 속성 목록 `spl_1`과 다시 연결합니다.  
+     예를 들어 다음 명령문은 전체 텍스트 인덱스를 원래의 검색 속성 목록 `spl_1`과 다시 연결합니다.  
   
     ```  
     ALTER FULLTEXT INDEX ON table_1 SET SEARCH PROPERTY LIST spl_1;  
@@ -283,9 +282,9 @@ ALTER FULLTEXT INDEX ON table_name
      이 문을 사용하면 기본 동작인 전체 채우기가 시작됩니다.  
   
     > [!NOTE]  
-    >  `spl_2`와 같은 다른 검색 속성 목록에는 다시 작성이 필요합니다.  
+    >  `spl_2`과 같은 다른 검색 속성 목록에는 다시 작성이 필요합니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  사용자는 테이블 또는 인덱싱된 뷰에 대한 ALTER 권한을 가지거나 **sysadmin** 고정 서버 역할, **db_ddladmin** 또는 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
  SET STOPLIST를 지정한 경우 사용자는 중지 목록에 대한 REFERENCES 권한이 있어야 합니다. SET SEARCH PROPERTY LIST가 지정된 경우 사용자가 검색 속성 목록에 대한 REFERENCES 권한이 있어야 합니다. 지정한 중지 목록이나 검색 속성 목록의 소유자는 ALTER FULLTEXT CATALOG 권한을 가진 경우 REFERENCES 권한을 부여할 수 있습니다.  
@@ -295,7 +294,7 @@ ALTER FULLTEXT INDEX ON table_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-setting-manual-change-tracking"></a>1. 수동 변경 내용 추적 설정  
+### <a name="a-setting-manual-change-tracking"></a>1\. 수동 변경 내용 추적 설정  
  다음 예에서는 `JobCandidate` 테이블에서 전체 텍스트 인덱스에 대한 수동 변경 내용 추적을 설정합니다.  
   
 ```  
@@ -306,7 +305,7 @@ ALTER FULLTEXT INDEX ON HumanResources.JobCandidate
 GO  
 ```  
   
-### <a name="b-associating-a-property-list-with-a-full-text-index"></a>2. 전체 텍스트 인덱스와 속성 목록 연결  
+### <a name="b-associating-a-property-list-with-a-full-text-index"></a>2\. 전체 텍스트 인덱스와 속성 목록 연결  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
@@ -323,7 +322,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-### <a name="c-removing-a-search-property-list"></a>3. 검색 속성 목록 제거  
+### <a name="c-removing-a-search-property-list"></a>C. 검색 속성 목록 제거  
   
 **적용 대상**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
@@ -337,7 +336,7 @@ ALTER FULLTEXT INDEX ON Production.Document
 GO  
 ```  
   
-### <a name="d-starting-a-full-population"></a>4. 전체 채우기 시작  
+### <a name="d-starting-a-full-population"></a>D. 전체 채우기 시작  
  다음 예에서는 `JobCandidate` 테이블에서 전체 텍스트 인덱스에 대한 전체 채우기를 시작합니다.  
   
 ```  

@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 298eafca-e01f-4707-8c29-c75546fcd6b0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 979866917514cb10689f60bf5114d02dbe889fd9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 543b28f5980c8126a9475a54557a05964718c707
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826711"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056128"
 ---
 # <a name="dml-triggers"></a>DML 트리거
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ ms.locfileid: "47826711"
 |적용 대상|테이블|테이블 및 뷰|  
 |각 테이블이나 뷰에서 가능한 트리거 수|각 트리거 동작(UPDATE, DELETE 및 INSERT)에 대해 여러 개 사용 가능|각 트리거 동작(UPDATE, DELETE 및 INSERT)에 대해 한 개만 사용 가능|  
 |연계 참조|적용되는 제한 없음|연계 참조 무결성 제약 조건이 적용되는 테이블에는 INSTEAD OF UPDATE 트리거와 DELETE 트리거가 허용되지 않습니다.|  
-|실행|이후:<br /><br /> 제약 조건 처리<br /><br /> 선언적 참조 동작<br /><br /> **inserted** 및 **deleted** 테이블 만들기<br /><br /> 트리거 동작|이전: 제약 조건 처리<br /><br /> 대신: 트리거 동작<br /><br /> 이후:  **inserted** 및 **deleted** 테이블 만들기|  
+|실행|이후:<br /><br /> 제약 조건 처리<br /><br /> 선언적 참조 동작<br /><br /> **inserted** 및 **deleted** 테이블 만들기<br /><br /> 트리거 동작|이전: 제약 조건 처리<br /><br /> 다음 대신  트리거 동작<br /><br /> 이후:  **inserted** 및 **deleted** 테이블 만들기|  
 |실행 순서|첫 실행과 마지막 실행을 지정할 수 있음|해당 사항 없음|  
 |**inserted**및 **deleted**테이블의 **varchar(max)** , **nvarchar(max)** 미 **varbinary(max)** 열 참조|허용함|허용함|  
 |**inserted**및 **deleted**테이블의 **text** , **ntext** 및 **image** 열 참조|허용 안 됨|허용함|  

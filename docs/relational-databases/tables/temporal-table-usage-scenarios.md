@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b8fa2dd-1790-4289-8362-f11e6d63bb09
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f25c7527000cb95878b60f4dfe05be4b47f943bb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 621387ca62340818cbe8d5529de17bcdf7e96884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999369"
 ---
 # <a name="temporal-table-usage-scenarios"></a>임시 테이블 사용 시나리오
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ CREATE TABLE Employee
  시스템에서 버전이 관리되는 임시 테이블을 만드는 다양한 옵션은 [시스템 버전 임시 테이블 만들기](../../relational-databases/tables/creating-a-system-versioned-temporal-table.md)에 설명되어 있습니다.  
   
 ### <a name="enabling-system-versioning-on-an-existing-table-for-data-audit"></a>데이터 감사를 위해 기존 테이블에 시스템 버전 관리를 사용하도록 설정  
- 기존 데이터베이스에서 데이터 감사를 수행해야 할 경우 시스템 버전이 관리되도록 ALTER TABLE을 사용하여 비temporal 테이블을 확장합니다. [비임시 테이블을 시스템 버전 임시 테이블로 변경](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)에 설명된 대로 응용 프로그램에서 새로운 변경이 발생하지 않도록 HIDDEN으로 기간 열을 추가합니다. 다음 예제에서는 가상 HR 데이터베이스에 있는 기존 직원 테이블에서 시스템 버전 관리를 사용하도록 설정하는 방법을 보여 줍니다.  
+ 기존 데이터베이스에서 데이터 감사를 수행해야 할 경우 시스템 버전이 관리되도록 ALTER TABLE을 사용하여 비temporal 테이블을 확장합니다. [비임시 테이블을 시스템 버전 임시 테이블로 변경](https://msdn.microsoft.com/library/mt590957.aspx#Anchor_3)에 설명된 대로 애플리케이션에서 새로운 변경이 발생하지 않도록 HIDDEN으로 기간 열을 추가합니다. 다음 예제에서는 가상 HR 데이터베이스에 있는 기존 직원 테이블에서 시스템 버전 관리를 사용하도록 설정하는 방법을 보여 줍니다.  
   
 ```  
 /*   
@@ -427,11 +426,11 @@ FROM CTE
   
  변경 기록이 유지되는 방법에 따라 느린 변경 차원 범주가 몇 가지 있습니다.  
   
--   유형 0: 기록이 유지되지 않습니다. 차원 특성은 원래 값을 반영합니다.  
+-   유형 0:  기록이 유지되지 않습니다. 차원 특성은 원래 값을 반영합니다.  
   
--   유형 1: 차원 특성이 최신 값을 반영합니다(이전 값은 덮어 씀).  
+-   유형 1:  차원 특성이 최신 값을 반영합니다(이전 값을 덮어씀).  
   
--   유형 2: 모든 버전의 차원 멤버가 유효 기간을 나타내는 열이 포함된 테이블에서 별도의 행으로 나타납니다.  
+-   유형 2:  모든 버전의 차원 멤버가 유효 기간을 나타내는 열이 포함된 테이블에서 별도의 행으로 나타납니다.  
   
 -   유형 3: 동일한 행에서 추가 열을 사용하여 선택한 특성에 대해 제한된 기록을 유지합니다.  
   

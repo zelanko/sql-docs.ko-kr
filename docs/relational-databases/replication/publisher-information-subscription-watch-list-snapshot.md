@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 2ebeee62-7f54-4c77-9d37-15708bc5cc23
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f67ec660d736dc3cf1c3dc9653c1339dada924c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7e4ce6300fdd99b3f19c2337e5420cc28ad065a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021422"
 ---
 # <a name="publisher-information-subscription-watch-list-snapshot"></a>게시자 정보, 구독 조사 목록(스냅샷)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "54130713"
   
  필터 설정은 각 표에 대해 지정됩니다. 열 선택 및 정렬은 각 게시자에 대한 게시 표와 같이 동일한 유형의 모든 표에 적용됩니다.  
   
- **스냅숏 구독 표시**  
+ **스냅샷 구독 표시**  
  선택한 게시자에 대해 표시할 구독 유형(트랜잭션, 스냅샷 또는 병합)을 선택합니다.  
   
  **표시**  
@@ -67,7 +66,7 @@ ms.locfileid: "54130713"
  **곧 만료됨/만료됨** 상태 값은 임계값을 설정한 경우에만 표시됩니다. 임계값 설정에 대한 자세한 내용은 [복제 모니터에 임계값 및 경고 설정](../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)을 참조하세요.  
   
  **구독**  
- 각 구독의 이름으로, 형식은 형식은 *SubscriberName: SubscriptionDatabaseName*입니다.  
+ 각 구독의 이름으로, 형식은 *SubscriberName: SubscriptionDatabaseName*입니다.  
   
  **게시**  
  구독을 동기화할 게시의 이름입니다. 형식은 *PublicationDatabaseName: PublicationName*입니다.  

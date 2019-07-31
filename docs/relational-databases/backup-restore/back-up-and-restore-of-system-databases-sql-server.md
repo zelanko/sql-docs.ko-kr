@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: aef0c4fa-ba67-413d-9359-1a67682fdaab
 author: mashamsft
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 87ed4e0440f31f63d0f0ecf8456acffea4502fae
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: d0998a357a115622a0c8703bd4b200cc06f86685
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54241789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941028"
 ---
 # <a name="back-up-and-restore-of-system-databases-sql-server"></a>시스템 데이터베이스 백업 및 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "54241789"
 |[master](../../relational-databases/databases/master-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템의 모든 시스템 수준 정보를 기록하는 데이터베이스입니다.|예|간단|업무상 데이터 보호가 특별히 요구되는 경우 **master** 를 필요한 만큼 자주 백업하십시오. 정기 백업 일정을 사용하고 중요한 업데이트 후에는 추가 백업으로 보완하는 것이 좋습니다.|  
 |[model](../../relational-databases/databases/model-database.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 생성되는 모든 데이터베이스용 템플릿입니다.|예|사용자 구성 가능*|해당 데이터베이스 옵션을 사용자 지정한 후 즉시 백업하는 경우와 같이 업무상 필요한 경우에만 **model** 을 백업합니다.<br /><br /> **최선의 구현 방법:** 필요에 따라 **모델**의 전체 데이터베이스 백업만 만드는 것이 좋습니다. **model** 은 작고 거의 변경되지 않으므로 로그를 백업할 필요가 없습니다.|  
 |[msdb](../../relational-databases/databases/msdb-database.md)|경고 및 작업을 예약하고 운영자를 기록하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 사용하는 데이터베이스입니다. **msdb** 는 백업 및 복원 기록 테이블과 같은 기록 테이블도 포함합니다.|예|단순(기본값)|**msdb** 가 업데이트될 때마다 백업하십시오.|  
-|[리소스](../../relational-databases/databases/resource-database.md) (RDB)|다음과 함께 제공되는 모든 시스템 개체의 복사본이 포함된 읽기 전용 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|아니오|-|**리소스** 데이터베이스는 코드만 포함하는 mssqlsystemresource.mdf 파일에 있습니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **리소스** 데이터베이스를 백업할 수 없습니다.<br /><br /> 참고: mssqlsystemresource.mdf 파일을 데이터베이스 파일이 아니라 이진 파일(.exe)로 취급하는 방법으로 파일 기반 백업 또는 디스크 기반 백업을 수행할 수 있습니다. 그러나 이러한 백업에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복원은 사용할 수 없습니다. 수동으로만 mssqlsystemresource.mdf 백업 복사본을 복원할 수 있으며 현재 **Resource** 데이터베이스를 오래된 버전이나 안전하지 않은 버전으로 덮어쓰지 않도록 주의해야 합니다.|  
+|[리소스](../../relational-databases/databases/resource-database.md) (RDB)|다음과 함께 제공되는 모든 시스템 개체의 복사본이 포함된 읽기 전용 데이터베이스입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|아니오|-|**리소스** 데이터베이스는 코드만 포함하는 mssqlsystemresource.mdf 파일에 있습니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 **리소스** 데이터베이스를 백업할 수 없습니다.<br /><br /> 참고: mssqlsystemresource.mdf 파일을 데이터베이스 파일이 아니라 이진 파일(.exe)로 처리하여 파일 기반 백업 또는 디스크 기반 백업을 수행할 수 있습니다. 그러나 이러한 백업에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 복원은 사용할 수 없습니다. 수동으로만 mssqlsystemresource.mdf 백업 복사본을 복원할 수 있으며 현재 **Resource** 데이터베이스를 오래된 버전이나 안전하지 않은 버전으로 덮어쓰지 않도록 주의해야 합니다.|  
 |[tempdb](../../relational-databases/databases/tempdb-database.md)|임시 또는 중간 결과 집합을 유지하기 위한 작업 영역입니다. 이 데이터베이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 시작될 때마다 다시 생성됩니다. 서버 인스턴스가 종료될 때 **tempdb** 에 있는 모든 데이터는 영구적으로 삭제됩니다.|아니오|간단|**tempdb** 시스템 데이터베이스는 백업할 수 없습니다.|  
 |[배포 구성](../../relational-databases/replication/configure-distribution.md)|서버가 복제 배포자로 구성된 경우에만 존재하는 데이터베이스입니다. 이 데이터베이스는 모든 유형의 복제 및 트랜잭션(트랜잭션 복제의 경우)에 대한 메타데이터 및 기록 데이터를 저장합니다.|예|간단|**distribution** 데이터베이스의 백업 시기는 [복제된 데이터베이스 백업 및 복원](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)을 참조하세요.|  
   

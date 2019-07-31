@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 86a15b33-4d03-4549-8ea2-b45e4f1baad7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 034a46affb198c89baab3c4741ae84569c96951b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: feceb314570449173b5ffc03869e5e3ad06906d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063797"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>Always On 장애 조치(failover) 클러스터 인스턴스(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +156,7 @@ ms.locfileid: "52509923"
 |----------------------------|---------------|  
 |새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI를 설치하는 방법을 설명합니다.|[새 SQL Server 장애 조치(failover) 클러스터 만들기&#40;설치 프로그램&#41;](../../../sql-server/failover-clusters/install/create-a-new-sql-server-failover-cluster-setup.md)|  
 |[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] 장애 조치(failover) 클러스터를 업그레이드하는 방법을 설명합니다.|[SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](../../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Windows 장애 조치(Failover) 클러스터링 개념을 설명하고 Windows 장애 조치(Failover) 클러스터링에 관련된 태스크의 링크를 제공합니다.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [장애 조치(Failover) 클러스터 개요](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [장애 조치(Failover) 클러스터 개요](https://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Windows 장애 조치(Failover) 클러스터링 개념을 설명하고 Windows 장애 조치(Failover) 클러스터링에 관련된 태스크의 링크를 제공합니다.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [장애 조치(failover) 클러스터 개요](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [장애 조치(failover) 클러스터 개요](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |FCI의 노드와 가용성 그룹 내 복제본 간의 개념적인 차이를 설명하고 FCI를 사용하여 가용성 그룹을 위한 복제본을 호스팅할 때 고려해야 할 사항에 대해 설명합니다.|[장애 조치(failover) 클러스터링 및 가용성 그룹&#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

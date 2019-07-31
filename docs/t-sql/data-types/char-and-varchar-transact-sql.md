@@ -1,7 +1,7 @@
 ---
 title: char 및 varchar(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 10/22/2018
+ms.date: 07/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,26 +23,29 @@ helpviewer_keywords:
 ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 60bec45b4feacff0390bfb359010767dc3bcd2af
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a7e625e1d532f42f2e72e57590943de7e5834dbf
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801407"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354615"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 및 varchar(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-고정 길이(**char**) 또는 가변 길이(**varchar**)인 문자 데이터 형식입니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 UTF-8 사용 데이터 정렬을 사용할 때 이러한 데이터 형식은 전체 범위의 [유니코드](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 문자 데이터를 저장하고 [UTF-8](https://www.wikipedia.org/wiki/UTF-8) 문자 인코딩을 사용합니다. UTF-8이 아닌 데이터 정렬이 지정된 경우 이러한 데이터 형식은 해당 데이터 정렬의 코드 페이지에서 지원하는 문자의 하위 집합만 저장합니다.
+고정 크기(**char**) 또는 가변 크기(**varchar**)인 문자 데이터 형식입니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 UTF-8 사용 데이터 정렬을 사용할 때 이러한 데이터 형식은 전체 범위의 [유니코드](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) 문자 데이터를 저장하고 [UTF-8](https://www.wikipedia.org/wiki/UTF-8) 문자 인코딩을 사용합니다. UTF-8이 아닌 데이터 정렬이 지정된 경우 이러한 데이터 형식은 해당 데이터 정렬의 코드 페이지에서 지원하는 문자의 하위 집합만 저장합니다.
   
 ## <a name="arguments"></a>인수  
-**char** [ ( *n* ) ] 고정 길이 문자열 데이터입니다. *n*은 바이트로 문자열 길이를 정의하며 1에서 8,000 사이의 값이어야 합니다. ‘라틴 문자’처럼 싱글바이트 인코딩 문자 집합의 경우 스토리지 크기는 *n*바이트이고 저장할 수 있는 문자 수도 *n*입니다. 멀티바이트 인코딩 문자 집합의 경우 스토리지 크기는 여전히 *n*바이트이지만 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. ISO에서 정의한 **char**의 동의어는 **character**입니다. 문자 집합에 대한 자세한 내용은 [싱글바이트 및 멀티바이트 문자 집합](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)을 참조하세요.
+**char** [ ( *n* ) ] 고정 크기 문자열 데이터입니다. *n*은 바이트로 문자열 크기를 정의하며 1에서 8,000 사이의 값이어야 합니다. ‘라틴 문자’처럼 싱글바이트 인코딩 문자 집합의 경우 스토리지 크기는 *n*바이트이고 저장할 수 있는 문자 수도 *n*입니다.  멀티바이트 인코딩 문자 집합의 경우 스토리지 크기는 여전히 *n*바이트이지만 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. ISO에서 정의한 **char**의 동의어는 **character**입니다. 문자 집합에 대한 자세한 내용은 [싱글바이트 및 멀티바이트 문자 집합](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)을 참조하세요.
 
-**varchar** [ ( *n* | **max** ) ] 가변 길이의 문자열 데이터입니다. *n*은 바이트로 문자열 길이를 정의하며 1에서 8,000 사이의 값이 될 수 있습니다. **max**는 최대 스토리지 크기가 2^31-1바이트(2GB)임을 나타냅니다. ‘라틴 문자’처럼 싱글바이트 인코딩 문자 집합의 경우 스토리지 크기는 *n*바이트 +2바이트이고 저장할 수 있는 문자 수도 *n*입니다. 멀티바이트 인코딩 문자 집합의 경우 스토리지 크기는 여전히 *n*바이트 +2바이트이지만 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. ISO에서 정의한 **varchar**의 동의어는 **charvarying** 또는 **charactervarying**입니다. 문자 집합에 대한 자세한 내용은 [싱글바이트 및 멀티바이트 문자 집합](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)을 참조하세요.
+**varchar** [ ( *n* | **max** ) ] 가변 크기의 문자열 데이터입니다. *n*은 바이트로 문자열 크기를 정의하며 1에서 8,000 사이의 값일 수 있습니다. **max**는 최대 스토리지 크기가 2^31-1바이트(2GB)임을 나타냅니다. ‘라틴 문자’처럼 싱글바이트 인코딩 문자 집합의 경우 스토리지 크기는 *n*바이트 +2바이트이고 저장할 수 있는 문자 수도 *n*입니다.  멀티바이트 인코딩 문자 집합의 경우 스토리지 크기는 여전히 *n*바이트 + 2바이트지만 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. ISO에서 정의한 **varchar**의 동의어는 **charvarying** 또는 **charactervarying**입니다. 문자 집합에 대한 자세한 내용은 [싱글바이트 및 멀티바이트 문자 집합](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)을 참조하세요.
 
 ## <a name="remarks"></a>Remarks  
+[CHAR(*n*) 및 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)에서 *n*이 문자 수를 정의한다고 잘못 생각하는 경우가 많습니다. 그러나 [CHAR(*n*) 및 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)에서 *n*은 **바이트**의 문자열 길이(0~8,000)를 정의합니다. *n*은 저장할 수 있는 문자 수를 정의하지 않습니다. [NCHAR(*n*) 및 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 정의와 비슷합니다.    
+싱글바이트 인코딩을 사용하는 경우 CHAR 및 VARCHAR의 스토리지 크기는 *n*바이트이고 문자 수도 *n*자이기 때문에 오해가 발생합니다. 그러나 [UTF-8](https://www.wikipedia.org/wiki/UTF-8)과 같은 멀티바이트 인코딩의 경우 상위 유니코드 범위(128~1,114,111)에서는 한 문자가 2바이트 이상을 사용합니다. 예를 들어 CHAR(10)로 정의된 열에서 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 싱글바이트 인코딩을 사용하는 문자(유니코드 범위 0~127) 10자를 저장할 수 있지만, 멀티바이트 인코딩을 사용하는 경우(유니코드 범위 128~1,114,111) 10자 미만을 저장할 수 있습니다. 유니코드 스토리지 및 문자 범위에 대한 자세한 내용은 [UTF-8과 UTF-16 간의 스토리지 차이점](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)을 참조하세요.      
+
+
 데이터 정의나 변수 선언문에서 *n*을 지정하지 않으면 기본 길이는 1입니다. CAST 및 CONVERT 함수를 사용할 경우 *n*을 지정하지 않으면 기본 길이는 30입니다.
   
 **char** 또는 **varchar**를 사용하는 개체에는 COLLATE 절을 사용하여 특정 데이터 정렬을 할당하지 않는 한 데이터베이스의 기본 데이터 정렬이 할당됩니다. 데이터 정렬은 문자 데이터를 저장하는 데 사용되는 코드 페이지를 제어합니다.
@@ -82,7 +85,7 @@ CREATE TABLE 또는 ALTER TABLE 중 하나를 실행할 때 SET ANSI_PADDING이 
   
 ## <a name="examples"></a>예  
   
-### <a name="a-showing-the-default-value-of-n-when-used-in-variable-declaration"></a>1. 변수 선언에 사용될 때 n의 기본값 표시  
+### <a name="a-showing-the-default-value-of-n-when-used-in-variable-declaration"></a>1\. 변수 선언에 사용될 때 n의 기본값 표시  
 다음 예에서는 `char` 및 `varchar` 데이터 형식이 변수 선언에 사용될 때 *n*의 기본값이 1임을 보여 줍니다.
   
 ```sql
@@ -93,7 +96,7 @@ SELECT DATALENGTH(@myVariable), DATALENGTH(@myNextVariable);
 GO  
 ```  
   
-### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>2. CAST 및 CONVERT에 varchar가 사용될 때 n의 기본값 표시  
+### <a name="b-showing-the-default-value-of-n-when-varchar-is-used-with-cast-and-convert"></a>2\. CAST 및 CONVERT에 varchar가 사용될 때 n의 기본값 표시  
 다음 예에서는 `char` 또는 `varchar` 데이터 형식이 `CAST` 및 `CONVERT` 함수에 사용될 때 *n*의 기본값이 30임을 보여 줍니다.
   
 ```sql

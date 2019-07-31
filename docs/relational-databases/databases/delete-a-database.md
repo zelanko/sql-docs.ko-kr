@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1fd8c0f5-03e1-449a-af45-b8cacb479d9c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4756b7746e0d139384766aaa492af9064fd8ad1
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: 87ca7ef24d34a6f39255a92fcabaa2dab53cfa26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558590"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006199"
 ---
 # <a name="delete-a-database"></a>데이터베이스 삭제
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,9 +47,9 @@ ms.locfileid: "51558590"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Follow Up:**  [After deleting a database](#FollowUp)  
+-   **후속 작업:**  [데이터베이스를 삭제한 후](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Restrictions"></a> 제한 사항  
   
@@ -58,7 +57,7 @@ ms.locfileid: "51558590"
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   
--   데이터베이스에 있는 모든 데이터베이스 스냅샷을 삭제합니다. 자세한 내용은 [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)를 참조하세요.  
+-   데이터베이스에 있는 모든 데이터베이스 스냅샷을 삭제합니다. 자세한 내용은 [Drop a Database Snapshot &amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md).  
   
 -   데이터베이스가 로그 전달과 관련되어 있으면 로그 전달을 제거합니다.  
   
@@ -70,7 +69,7 @@ ms.locfileid: "51558590"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  DROP DATABASE를 실행하려면 최소한 데이터베이스에 대한 CONTROL 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  

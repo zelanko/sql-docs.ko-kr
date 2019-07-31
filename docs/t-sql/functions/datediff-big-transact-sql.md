@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF_BIG(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2acd0d75b28f3a0d6a155f681a5b8011473f91a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3724c25854bd98a98b077fb59897ba4da250aee1
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65943679"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329295"
 ---
 # <a name="datediffbig-transact-sql"></a>DATEDIFF_BIG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,19 +38,20 @@ ms.locfileid: "65943679"
   
 ## <a name="syntax"></a>구문  
   
-```sql
-  
+```
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
   
 ## <a name="arguments"></a>인수  
 *datepart*  
-겹쳐지는 범위의 유형을 지정하는 *startdate*와 *enddate* 부분입니다. `DATEDIFF_BIG`은 해당하는 사용자 정의 변수 항목을 허용하지 않습니다. 이 표에서는 올바른 *datepart* 인수가 모두 나열되어 있습니다.
+겹쳐지는 범위의 유형을 지정하는 *startdate*와 *enddate* 부분입니다.
 
 > [!NOTE]
-> `DATEDIFF_BIG`은 *datepart* 인수에 해당하는 사용자 정의 변수 항목을 허용하지 않습니다.
+> `DATEDIFF_BIG`는 사용자 정의 변수 또는 따옴표 붙은 문자열의 *datepart* 값을 허용하지 않습니다.
+
+다음 표에는 유효한 *datepart* 인수 이름과 약어가 모두 나와 있습니다.
   
-|*datepart*|약어|  
+|*datepart* 이름| *datepart* 약어|  
 |---|---|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  
@@ -65,7 +65,10 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-  
+
+> [!NOTE]
+> 각 특정 *datepart* 이름과 해당 *datepart* 이름의 약어는 동일한 값을 반환합니다.
+
 *startdate*  
 다음 값 중 하나를 확인할 수 있는 식입니다.
 
@@ -82,12 +85,10 @@ DATEDIFF_BIG ( datepart , startdate , enddate )
 *startdate*를 참조하세요.
   
 ## <a name="return-type"></a>반환 형식  
-
 서명된 **bigint**  
   
 ## <a name="return-value"></a>반환 값  
-지정된 startdate와 enddate 사이에 지정된 datepart 경계의 수(부호 있는 큰 정수 값으로)를 반환합니다.
--   각 특정 *datepart* 및 해당 *datepart*에 대한 약어는 동일한 값을 반환합니다.  
+*startdate*와 *enddate* 사이의 **bigint** 차이를 반환하며, *datepart*에 설정된 국가로 표시됩니다.
   
 **bigint**에 대한 범위를 벗어난 반환 값의 경우(-9,223,372,036,854,775,808 to 9,223,372,036,854,775,807) `DATEDIFF_BIG`에서 오류를 반환합니다. **int**을 반환하여 **분** 이상의 정밀도로 오버플로할 수 있는 `DATEDIFF`와 달리, `DATEDIFF_BIG`은 *enddate*와 *startdate* 간의 차이가 292년, 3개월, 10일, 23시간, 47분 및 16.8547758초를 넘는 **나노초** 정밀도를 사용하는 경우에만 오버플로할 수 있습니다.
   

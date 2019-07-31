@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f5f39596-033e-4243-acbc-caa188b45b03
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 28face7dd893a43b9167ff162a3c741b99c65eab
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 3d015602e944416435c95aba6aaea1ead84b834a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56018874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077970"
 ---
 # <a name="getdescendant-database-engine"></a>GetDescendant(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,16 +59,16 @@ NULL 또는 현재 노드의 자식에 대한 **hierarchyid**입니다.
 -   parent가 NULL이 아니고 child1과 child2가 모두 NULL인 경우 부모의 자식을 반환합니다.  
 -   parent와 child1이 NULL이 아니고 child2가 NULL인 경우 child1보다 큰 부모의 자식을 반환합니다.  
 -   parent와 child2가 NULL이 아니고 child1이 NULL인 경우 child2보다 작은 부모의 자식을 반환합니다.  
--   parent, child1 및 child2가 NULL이 아닌 경우 <codeInline>GetDescendant</codeInline>는 child1보다 크고 child2보다 작은 부모의 자식을 반환합니다.  
+-   parent, child1 및 child2가 NULL이 아닌 경우 &lt;codeInline&gt;GetDescendant&lt;/codeInline&gt;는 child1보다 크고 child2보다 작은 부모의 자식을 반환합니다.  
 -   child1이 NULL도 아니고 부모의 자식도 아닌 경우 예외가 발생합니다.  
 -   child2가 NULL도 아니고 부모의 자식도 아닌 경우 예외가 발생합니다.  
--   child1이 child2보가 크거나 같으면 예외가 발생합니다.  
+-   child1이 child2보다 크거나 같으면 예외가 발생합니다.  
   
 GetDescendant는 결정적입니다. 따라서 GetDescendant가 동일한 입력으로 호출되면 항상 동일한 출력이 생성됩니다. 그러나 생성되는 자식의 정확한 ID는 예 3에 표시된 대로 다른 노드와의 관계에 따라 달라질 수 있습니다.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>1. 행을 가장 작은 항목 노드로 삽입  
+### <a name="a-inserting-a-row-as-the-least-descendant-node"></a>1\. 행을 가장 작은 항목 노드로 삽입  
 노드 `/3/1/`에 있는 기존 직원에게 보고하는 새 직원을 고용합니다. 다음 코드를 실행하여 새 행을 추가합니다. 여기서는 새 행 노드를 `/3/1/1/`로 지정하는 인수 없이 GetDescendant 메서드를 사용합니다.
   
 ```sql
@@ -82,7 +81,7 @@ VALUES
 'adventure-works\FirstNewEmployee', 'Application Intern', '3/11/07') ;  
 ```  
   
-### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>2. 행을 큰 하위 항목 노드로 삽입  
+### <a name="b-inserting-a-row-as-a-greater-descendant-node"></a>2\. 행을 큰 하위 항목 노드로 삽입  
 예 1과 같은 관리자에게 보고하는 다른 새 직원을 고용합니다. 다음 코드를 실행하여 새 행을 삽입합니다. 여기서는 GetDescendant 메서드에서 새 행의 노드가 예 1의 노드 다음에 오도록, 즉 `/3/1/2/`가 되도록 지정하는 child 1 인수를 사용합니다.
   
 ```sql

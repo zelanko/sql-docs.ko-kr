@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e95de9d6-c950-41cd-8aaa-be529c6de198
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 0f0dec8faf609eeef7d82e2d746a0f84aec6a6de
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 2dd802097e083adb633549174dbc420b5967fb10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093589"
 ---
 # <a name="sql-server-deprecated-features-object"></a>SQL Server, Deprecated Features 개체
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ WHERE object_name = 'SQLServer:Deprecated Features';
 |SQL Server Deprecated Features 카운터 인스턴스|설명|  
 |------------------------------------------------------|-----------------|  
 |임시 테이블 및 저장 프로시저의 이름으로 사용되는 '#' 및 '##'|# 외에 다른 문자를 포함하지 않는 식별자가 발견되었습니다. 적어도 하나 이상의 추가 문자를 사용해야 합니다. 컴파일마다 한 번씩 발생합니다.|  
-|'::' 함수 호출 구문|테이블 반환 함수에 대해 :: 함수 호출 구문이 발견되었습니다. `SELECT column_list FROM` *<function_name>*`()`으로 바꿉니다. 예를 들어 `SELECT * FROM ::fn_virtualfilestats(2,1)`를 `SELECT * FROM sys.fn_virtualfilestats(2,1)`로 대체합니다. 컴파일마다 한 번씩 발생합니다.|  
+|'::' 함수 호출 구문|테이블 반환 함수에 대해 :: 함수 호출 구문이 발견되었습니다. `SELECT column_list FROM` *<function_name>* `()`으로 바꿉니다. 예를 들어 `SELECT * FROM ::fn_virtualfilestats(2,1)`를 `SELECT * FROM sys.fn_virtualfilestats(2,1)`로 대체합니다. 컴파일마다 한 번씩 발생합니다.|  
 |‘\@’ 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 식별자 ‘\@\@’으로 시작하는 이름|\@ 또는 \@\@으로 시작하는 식별자가 발견되었습니다. \@\@ 식별자로 시작하는 이름, \@ 또는 \@v@은 사용할 수 없습니다. 컴파일마다 한 번씩 발생합니다.|  
 |ADDING TAPE DEVICE|사용되지 않는 기능인 sp_addumpdevice'**tape**'가 발견되었습니다. 대신 sp_addumpdevice'**disk**'를 사용하세요. 사용할 때마다 한 번씩 발생합니다.|  
 |ALL 권한|GRANT ALL, DENY ALL 또는 REVOKE ALL 구문이 발견된 총 횟수입니다. 특정 권한을 거부하도록 구문을 수정해야 합니다. 쿼리마다 한 번씩 발생합니다.|  

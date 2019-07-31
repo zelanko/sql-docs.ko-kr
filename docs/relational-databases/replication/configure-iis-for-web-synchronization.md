@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 78fc4eff34dd98552924435c3132c1fafb96c746
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: ece2cb8575ae7cf4d20f4e27b848970ade4a27ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903199"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>웹 동기화를 위한 IIS 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -175,7 +174,7 @@ ms.locfileid: "67585796"
   
     1.  **추가**를 클릭한 다음 **사용자 또는 그룹 선택** 대화 상자에서 구독자가 IIS 연결에 사용할 계정을 추가합니다. 이러한 계정은 새 구독 마법사의 **웹 서버 정보** 페이지에서 지정하거나 [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) *@internet_login* 매개 변수의 값으로 지정합니다.  
   
-9. **스냅숏 공유 액세스** 페이지에서 스냅숏 공유를 입력합니다. 구독자가 스냅샷 파일에 액세스할 수 있도록 이 공유에는 적절한 사용 권한이 설정되어 있습니다. 공유 사용 권한에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
+9. **스냅샷 공유 액세스** 페이지에서 스냅샷 공유를 입력합니다. 구독자가 스냅샷 파일에 액세스할 수 있도록 이 공유에는 적절한 사용 권한이 설정되어 있습니다. 공유 사용 권한에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요.  
   
 10. **마법사 완료** 페이지에서 **마침**을 클릭합니다.  
   

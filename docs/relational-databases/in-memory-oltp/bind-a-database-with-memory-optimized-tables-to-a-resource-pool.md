@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f222b1d5-d2fa-4269-8294-4575a0e78636
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e176906e41e815733ac50f2e1b9e0db90a8d3a5a
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a0a0eec6d8a700fe35df358b35ce756dc700a2f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513149"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951149"
 ---
 # <a name="bind-a-database-with-memory-optimized-tables-to-a-resource-pool"></a>메모리 액세스에 최적화된 테이블이 있는 데이터베이스를 리소스 풀에 바인딩
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ GO
 ###  <a name="bkmk_DeterminePercent"></a> MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT의 최소값 결정  
  메모리 최적화 테이블에 필요한 메모리를 결정한 후에는 필요한 사용 가능 메모리 비율을 결정하고 해당 값 이상으로 메모리 비율을 설정합니다.  
   
- **예:**   
+ **예:**    
 이 예에서는 메모리 최적화 테이블 및 인덱스에 16GB의 메모리가 필요하며, 32GB의 메모리를 사용할 수 있게 커밋했다고 가정합니다.  
   
  얼핏 보기에는 MIN_MEMORY_PERCENT와 MAX_MEMORY_PERCENT를 50(16은 32의 50%)으로 설정하면 될 것 같습니다.  그러나 이렇게 설정하면 메모리 최적화 테이블에서 사용할 수 있는 메모리가 부족합니다. 아래 표([메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable))에서 커밋된 메모리가 32GB인 경우 이 중 80%는 메모리 최적화 테이블과 인덱스에 사용할 수 있습니다.  따라서 커밋된 메모리가 아니라 사용 가능한 메모리를 기준으로 최소 및 최대 비율을 계산합니다.  
@@ -87,7 +86,7 @@ GO
 ###  <a name="bkmk_CreateResourcePool"></a> 리소스 풀 만들기 및 메모리 구성  
  메모리 최적화 테이블의 메모리를 구성할 때 용량 계획은 MAX_MEMORY_PERCENT가 아니라 MIN_MEMORY_PERCENT를 기준으로 해야 합니다.  MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT에 대한 자세한 내용은 [ALTER RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-pool-transact-sql.md)을 참조하세요. 이렇게 하면 MIN_MEMORY_PERCENT로 인해 다른 리소스 풀에 대한 메모리 압력이 발생하여 메모리가 확실히 적용되므로 메모리 최적화 테이블의 메모리 가용성을 보다 효율적으로 예측할 수 있습니다. 메모리를 사용할 수 있고 OOM(메모리 부족) 조건을 방지할 수 있도록 하려면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값이 동일해야 합니다. 커밋된 메모리의 양에 따라 메모리 최적화 테이블에 사용 가능한 메모리의 비율은 아래 [메모리 최적화 테이블 및 인덱스에 사용 가능한 메모리 비율](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#bkmk_PercentAvailable) 을 참조하세요.  
   
- VM 환경에서 작업할 때 자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 을 참조하세요.  
+ VM 환경에서 작업하는 경우에 대한 자세한 내용은 [모범 사례: VM 환경에서 메모리 내 OLTP 사용](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9)을 참조하세요.  
   
  다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드에서는 메모리의 절반을 사용할 수 있는 Pool_IMOLTP라는 리소스 풀을 만듭니다.  풀이 만들어진 후 Pool_IMOLTP를 포함하도록 리소스 관리자가 다시 구성됩니다.  
   
@@ -143,7 +142,7 @@ GO
  이제 데이터베이스가 리소스 풀에 바인딩됩니다.  
   
 ##  <a name="bkmk_ChangeAllocation"></a> 기존 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 변경  
- 서버에 메모리를 더 추가하거나 메모리 최적화 테이블에 필요한 메모리 양이 변경되면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 수정해야 합니다. 다음 단계에서는 리소스 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT의 값을 변경하는 방법을 보여 줍니다. MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT에 사용할 값에 대한 지침은 아래 섹션을 참조하십시오.  자세한 내용은 [최선의 구현 방법: VM 환경에서 메모리 내 OLTP 사용](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 항목을 참조하세요.  
+ 서버에 메모리를 더 추가하거나 메모리 최적화 테이블에 필요한 메모리 양이 변경되면 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 수정해야 합니다. 다음 단계에서는 리소스 풀에서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT의 값을 변경하는 방법을 보여 줍니다. MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT에 사용할 값에 대한 지침은 아래 섹션을 참조하십시오.  자세한 내용은 [모범 사례: VM 환경에서 메모리 내 OLTP 사용](https://msdn.microsoft.com/library/27ec7eb3-3a24-41db-aa65-2f206514c6f9) 항목을 참조하세요.  
   
 1.  `ALTER RESOURCE POOL` 을 사용해서 MIN_MEMORY_PERCENT 및 MAX_MEMORY_PERCENT 값을 모두 변경합니다.  
   

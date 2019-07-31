@@ -18,17 +18,18 @@ helpviewer_keywords:
 ms.assetid: 00179314-f23e-47cb-a35c-da6f180f86d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4507a56146b6324e065d6d24a19855292ebf5276
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724511cb3a60278c6642eb31cbb3481fe92f0d72
+ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861238"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68300433"
 ---
 # <a name="database-snapshots-sql-server"></a>데이터베이스 스냅샷(SQL Server)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  데이터베이스 스냅샷은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스( *원본 데이터베이스*)의 읽기 전용 정적 뷰입니다. 데이터베이스 스냅샷은 스냅샷을 만든 시점의 원본 데이터베이스와 트랜잭션이 일치합니다. 데이터베이스 스냅샷은 항상 원본 데이터베이스와 동일한 서버 인스턴스에 있습니다. 원본 데이터베이스가 업데이트되면 데이터베이스 스냅샷도 업데이트됩니다. 따라서 데이터베이스 스냅샷을 오래 보관할수록 사용 가능한 공간이 소모될 가능성이 높습니다.  
+
+데이터베이스 스냅샷은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스( *원본 데이터베이스*)의 읽기 전용 정적 뷰입니다. 데이터베이스 스냅샷은 스냅샷을 만든 시점의 원본 데이터베이스와 트랜잭션이 일치합니다. 데이터베이스 스냅샷은 항상 원본 데이터베이스와 동일한 서버 인스턴스에 있습니다. 데이터베이스 스냅샷은 스냅샷을 만들 때와 동일한 상태의 데이터 읽기 전용 뷰를 제공하는 반면, 스냅샷 파일의 크기는 원본 데이터베이스가 변경됨에 따라 증가합니다. 자세한 내용은 아래의 [기능 개요](#FeatureOverview) 섹션을 참조하세요.
   
  지정된 원본 데이터베이스에 스냅샷이 여러 개 있을 수 있습니다. 각 데이터베이스 스냅샷은 데이터베이스 소유자가 명시적으로 삭제하기 전까지 유지됩니다.  
   
@@ -39,11 +40,11 @@ ms.locfileid: "62861238"
   
 -   [기능 개요](#FeatureOverview)  
   
--   [데이터베이스 스냅숏의 이점](#Benefits)  
+-   [데이터베이스 스냅샷의 이점](#Benefits)  
   
 -   [용어 및 정의](#TermsAndDefinitions)  
   
--   [데이터베이스 스냅숏 사전 요구 사항 및 제한 사항](#LimitationsRequirements)  
+-   [데이터베이스 스냅샷 사전 요구 사항 및 제한 사항](#LimitationsRequirements)  
   
 -   [관련 작업](#RelatedTasks)  
   
@@ -52,9 +53,9 @@ ms.locfileid: "62861238"
   
  복사된 원본 페이지를 저장하기 위해 스냅샷은 하나 이상의 *스파스 파일*을 사용합니다. 처음에 스파스 파일은 기본적으로 사용자 데이터가 없는 빈 파일이며 사용자 데이터에 대한 디스크 공간이 할당되어 있지 않습니다. 원본 데이터베이스에서 페이지를 업데이트할수록 파일 크기가 증가합니다. 다음 그림은 스냅샷 크기에 대한 두 가지 상반된 업데이트 패턴의 효과를 보여 줍니다. 업데이트 패턴 A는 스냅샷 수명 동안 원본 페이지의 30%가 업데이트되는 환경을 반영합니다. 업데이트 패턴 B는 스냅샷 수명 동안 원본 페이지의 80%가 업데이트되는 환경을 반영합니다.  
   
- ![대체 업데이트 패턴 및 스냅숏 크기](../../relational-databases/databases/media/dbview-04.gif "대체 업데이트 패턴 및 스냅숏 크기")  
+ ![대체 업데이트 패턴 및 스냅샷 크기](../../relational-databases/databases/media/dbview-04.gif "대체 업데이트 패턴 및 스냅샷 크기")  
   
-##  <a name="Benefits"></a> 데이터베이스 스냅숏의 이점  
+##  <a name="Benefits"></a> 데이터베이스 스냅샷의 이점  
   
 -   스냅샷은 보고 용도로 사용할 수 있습니다.  
   
@@ -66,7 +67,7 @@ ms.locfileid: "62861238"
   
 -   가용성 목적으로 유지 관리 중인 미러 데이터베이스를 활용하여 보고 작업 오프로드  
   
-     데이터베이스 스냅샷을 데이터베이스 미러링에 사용하면 보고를 위해 미러 서버의 데이터에 액세스할 수 있습니다. 또한 미러 데이터베이스에서 쿼리를 실행하면 주 데이터베이스의 리소스를 확보할 수 있습니다. 자세한 내용은 [데이터베이스 미러링 및 데이터베이스 스냅숏&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)을 사용합니다.  
+     데이터베이스 스냅샷을 데이터베이스 미러링에 사용하면 보고를 위해 미러 서버의 데이터에 액세스할 수 있습니다. 또한 미러 데이터베이스에서 쿼리를 실행하면 주 데이터베이스의 리소스를 확보할 수 있습니다. 자세한 내용은 [데이터베이스 미러링 및 데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)을 사용합니다.  
   
 -   관리 오류로부터 데이터 보호  
   
@@ -105,18 +106,18 @@ ms.locfileid: "62861238"
  스파스 파일(sparse file)  
  NTFS 파일 시스템에서 제공하는 파일로, 다른 경우보다 훨씬 더 적은 디스크 공간만 사용합니다. 스파스 파일은 데이터베이스 스냅샷에 복사된 페이지를 저장하는 데 사용됩니다. 스파스 파일은 처음 만들어질 때 디스크 공간을 거의 차지하지 않습니다. 데이터베이스 스냅샷에 데이터를 쓸수록 NTFS는 해당하는 스파스 파일에 점진적으로 디스크 공간을 할당합니다.  
   
-##  <a name="LimitationsRequirements"></a> 데이터베이스 스냅숏 사전 요구 사항 및 제한 사항  
+##  <a name="LimitationsRequirements"></a> 데이터베이스 스냅샷 사전 요구 사항 및 제한 사항  
  **섹션 내용**  
   
 -   [필수 구성 요소](#Prerequisites)  
   
 -   [원본 데이터베이스에 대한 제한 사항](#LimitsOnSourceDb)  
   
--   [데이터베이스 스냅숏에 대한 제한 사항](#LimitsOnDbSS)  
+-   [데이터베이스 스냅샷에 대한 제한 사항](#LimitsOnDbSS)  
   
 -   [디스크 공간 요구 사항](#DiskSpace)  
   
--   [오프라인 파일 그룹의 데이터베이스 스냅숏](#OfflineFGs)  
+-   [오프라인 파일 그룹의 데이터베이스 스냅샷](#OfflineFGs)  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
  복구 모델을 사용할 수 있는 원본 데이터베이스는 다음 사전 요구 사항을 충족해야 합니다.  
@@ -152,7 +153,7 @@ ms.locfileid: "62861238"
   
 -   원본 데이터베이스 또는 모든 스냅샷에서 파일을 삭제할 수 없습니다.  
   
-###  <a name="LimitsOnDbSS"></a> 데이터베이스 스냅숏에 대한 제한 사항  
+###  <a name="LimitsOnDbSS"></a> 데이터베이스 스냅샷에 대한 제한 사항  
  데이터베이스 스냅샷에 다음 제한 사항이 적용됩니다.  
   
 -   데이터베이스 스냅샷은 원본 데이터베이스와 같은 서버 인스턴스에서 생성 및 유지되어야 합니다.  
@@ -165,7 +166,7 @@ ms.locfileid: "62861238"
   
 -   스냅샷은 읽기 전용입니다. 읽기 전용이므로 업그레이드할 수 없습니다. 따라서 업그레이드 후 데이터베이스 스냅샷은 표시되지 않습니다.  
   
--   **model**, **master**및 **tempdb** 데이터베이스의 스냅숏은 금지됩니다.  
+-   **model**, **master**및 **tempdb** 데이터베이스의 스냅샷은 금지됩니다.  
   
 -   데이터베이스 스냅샷 파일의 사양을 변경할 수 없습니다.  
   
@@ -206,7 +207,7 @@ ms.locfileid: "62861238"
 > [!NOTE]  
 >  파일 공간을 제외하고 데이터베이스 스냅샷은 대략 데이터베이스와 같은 양의 리소스를 사용합니다.  
   
-###  <a name="OfflineFGs"></a> 오프라인 파일 그룹의 데이터베이스 스냅숏  
+###  <a name="OfflineFGs"></a> 오프라인 파일 그룹의 데이터베이스 스냅샷  
  원본 데이터베이스의 오프라인 파일 그룹은 다음 작업을 수행하려 할 때 데이터베이스 스냅샷에 영향을 줍니다.  
   
 -   스냅샷 만들기  
@@ -227,18 +228,18 @@ ms.locfileid: "62861238"
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   
--   [데이터베이스 스냅숏 만들기&#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 만들기&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
--   [데이터베이스 스냅숏 보기&#40;SQL Server&#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
+-   [데이터베이스 스냅샷 보기&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/view-a-database-snapshot-sql-server.md)  
   
--   [데이터베이스 스냅숏 스파스 파일의 크기 보기&#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 스파스 파일의 크기 보기&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md)  
   
--   [데이터베이스를 데이터베이스 스냅숏으로 되돌리기](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
+-   [데이터베이스를 데이터베이스 스냅샷으로 되돌리기](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)  
   
--   [데이터베이스 스냅숏 삭제&#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
+-   [데이터베이스 스냅샷 삭제&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [데이터베이스 미러링 및 데이터베이스 스냅숏&#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
+ [데이터베이스 미러링 및 데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../database-engine/database-mirroring/database-mirroring-and-database-snapshots-sql-server.md)  
   
   
 

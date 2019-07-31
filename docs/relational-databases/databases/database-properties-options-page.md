@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: a3447987-5507-4630-ac35-58821b72354d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce814d567aa695be417fa4fa92d988938dfec6bf
-ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
+ms.openlocfilehash: 9ea3a23299c15a2d473b68f691345d69afaaf1eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049031"
 ---
 # <a name="database-properties-options-page"></a>데이터베이스 속성(옵션 탭)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "57007596"
  목록에서 선택하여 데이터베이스의 데이터 정렬을 지정합니다. 자세한 내용은 [Set or Change the Database Collation](../../relational-databases/collations/set-or-change-the-database-collation.md)을 참조하세요.  
   
  **복구 모델**  
- 데이터베이스 복구 모델을 **전체**, **대량 로그** 또는 **단순** 중에서 하나를 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
+ 데이터베이스 복구 모델로 **전체**, **대량 로그** 또는 **단순** 중에서 하나를 지정합니다. 복구 모델에 대한 자세한 내용은 [복구 모델&#40;SQL Server&#41;](../../relational-databases/backup-restore/recovery-models-sql-server.md)을 참조하세요.  
   
  **호환성 수준**  
  데이터베이스에서 지원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 최신 버전을 지정합니다. 가능한 값은 [ALTER DATABASE(Transact-SQL) 호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요. SQL Server 데이터베이스가 업그레이드되면 해당 데이터베이스에 대한 호환성 수준이 보존되거나(가능한 경우) 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 지원되는 최소 수준으로 변경됩니다. 
@@ -135,7 +134,7 @@ Azure SQL Database에 연결되면 이 섹션에는 SLO(서비스 수준 목표)
  파일 시스템을 통해 FileTable에 저장된 FILESTREAM 데이터에 비트랜잭션 방식으로 액세스하기 위한 옵션을 **OFF**, **READ_ONLY** 또는 **FULL** 중 하나로 지정합니다. 서버에 FILESTREAM이 사용하도록 설정되어 있지 않은 경우에는 이 값이 OFF로 설정되고 사용할 수 없는 상태로 표시됩니다. 자세한 내용은 [FileTables&#40;SQL Server&#41;](../../relational-databases/blob/filetables-sql-server.md)를 참조하세요.  
   
 ## <a name="miscellaneous"></a>기타  
-**스냅숏 격리 허용**  
+**스냅샷 격리 허용**  
 이 기능을 사용할 수 있습니다.  
 
  **ANSI Null 기본값**  
@@ -167,7 +166,7 @@ Azure SQL Database에 연결되면 이 섹션에는 SLO(서비스 수준 목표)
  **지원된 내구성**  
  이 기능을 사용할 수 있습니다.  
  
- **Read Committed 스냅숏 설정 여부**  
+ **Read Committed 스냅샷 설정 여부**  
  이 기능을 사용할 수 있습니다.  
  
  **숫자 반올림 시 중단**  

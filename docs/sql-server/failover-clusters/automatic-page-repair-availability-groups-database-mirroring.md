@@ -1,5 +1,5 @@
 ---
-title: '자동 페이지 복구(가용성 그룹: 데이터베이스 미러링) | Microsoft 문서'
+title: '자동 페이지 복구(가용성 그룹: 데이터베이스 미러링) | Microsoft Docs'
 ms.custom: ''
 ms.date: 05/17/2016
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf2e3650-5fac-4f34-b50e-d17765578a8e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8fa157929e6936ed80ab8ca895b89309d68b960d
-ms.sourcegitcommit: b1990ec4491b5a8097c3675334009cb2876673ef
+ms.openlocfilehash: 9e445d15401b747be6bd690e4ae6884a831e66de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/17/2018
-ms.locfileid: "49383568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035267"
 ---
 # <a name="automatic-page-repair-availability-groups-database-mirroring"></a>자동 페이지 복구(가용성 그룹: 데이터베이스 미러링)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +62,10 @@ ms.locfileid: "49383568"
   
 -   9페이지(데이터베이스 부트 페이지)  
   
--   할당 페이지: GAM(전역 할당 맵) 페이지, SGAM(공유 전역 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
+-   할당 페이지: GAM(글로벌 할당 맵) 페이지, SGAM(공유 글로벌 할당 맵) 페이지 및 PFS(페이지 여유 공간) 페이지.  
   
  
-##  <a name="PrimaryIOErrors"></a> Handling I/O Errors on the Principal/Primary Database  
+##  <a name="PrimaryIOErrors"></a> 주/기본 데이터베이스에서 I/O 오류 처리  
  주/기본 데이터베이스에서는 데이터베이스가 SYNCHRONIZED 상태이고 주/기본 데이터베이스가 미러/보조 데이터베이스에 대한 로그 레코드를 계속 보내는 경우에만 자동 페이지 복구가 시도됩니다. 자동 페이지 복구 시도에서 기본적인 동작 시퀀스는 다음과 같습니다.  
   
 1.  주/기본 데이터베이스의 데이터 페이지에서 읽기 오류가 발생하면 주/기본 데이터베이스는 해당 오류 상태와 함께 [suspect_pages](../../relational-databases/system-tables/suspect-pages-transact-sql.md) 테이블에 행을 삽입합니다. 그런 다음 데이터베이스 미러링의 경우에는 주 데이터베이스가 미러 데이터베이스에 해당 페이지의 복사본을 요청합니다. [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]의 경우에는 주 데이터베이스가 해당 요청을 모든 보조 데이터베이스에 브로드캐스팅하고 응답할 첫 번째 데이터베이스에서 페이지를 가져옵니다. 이 요청에는 페이지 ID와 현재 플러시된 로그 끝에 있는 LSN이 지정됩니다. 페이지가 *복원 보류*로 표시되므로 자동 페이지 복구 시도 중에는 액세스할 수 없습니다. 복구 시도 중에 이 페이지에 액세스하려고 하면 오류 829(복원 보류)가 발생하며 실패합니다.  
@@ -96,7 +95,7 @@ ms.locfileid: "49383568"
  자동 페이지 복구는 백그라운드로 실행되는 비동기 프로세스입니다. 따라서 읽을 수 없는 페이지를 요청하는 데이터베이스 작업은 실패하게 되고 오류를 일으킨 조건과 상관없이 오류 코드가 반환됩니다. 미러된 데이터베이스 또는 가용성 데이터베이스에 대한 애플리케이션을 개발하는 경우 실패한 작업에 대한 예외를 차단해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 코드가 823, 824 또는 829인 경우 작업을 나중에 다시 시도해야 합니다.  
   
 
-##  <a name="ViewAPRattempts"></a> 자동 페이지 복구 시도 보기  
+##  <a name="ViewAPRattempts"></a> 방법: 자동 페이지 복구 시도 보기  
  다음 동적 관리 뷰는 지정된 가용성 데이터베이스 또는 미러된 데이터베이스에 대한 최근 자동 페이지 복구 시도에 해당하는 행을 데이터베이스당 최대 100개까지 반환합니다.  
   
 -   **Always On 가용성 그룹:**  

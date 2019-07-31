@@ -37,14 +37,13 @@ helpviewer_keywords:
 ms.assetid: 40e63302-0c68-4593-af3e-6d190181fee7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b408c61d265506f19c7c9c5a115381fe6b438a7b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: b856ee0218f7b4909ad9c62a42b95dfd96c93abc
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334680"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68317101"
 ---
 # <a name="update-transact-sql"></a>UPDATE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -121,7 +120,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
   
  공통 테이블 식은 SELECT, INSERT, DELETE 및 CREATE VIEW 문에서도 사용됩니다. 자세한 내용은 [WITH common_table_expression&#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)을 참조하세요.  
   
- TOP **(** _expression_**)** [ PERCENT ]  
+ TOP **(** _expression_ **)** [ PERCENT ]  
  업데이트할 행의 수 또는 비율을 지정합니다. *expression* 은 행의 수 또는 비율일 수 있습니다.  
   
  INSERT, UPDATE 또는 DELETE와 함께 사용된 TOP 식에서 참조된 행은 어떠한 순서로도 정렬되지 않습니다.  
@@ -159,7 +158,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  변경할 데이터가 포함된 열입니다. *column_name*은 *table_or view_name*에 있어야 합니다. ID 열은 업데이트할 수 없습니다.  
   
  *expression*  
- 단일 값을 반환하는 변수, 리터럴 값, 식 또는 괄호로 묶인 하위 SELECT 문입니다. *expression*에서 반환된 값이 *column_name* 또는 *@variable*의 기존 값을 대체합니다.  
+ 단일 값을 반환하는 변수, 리터럴 값, 식 또는 괄호로 묶인 하위 SELECT 문입니다. *expression*에서 반환된 값이 *column_name* 또는@*variable*의 기존 값을 대체합니다.  
   
 > [!NOTE]  
 >  **nchar**, **nvarchar** 및 **ntext** 유니코드 문자 데이터 형식을 참조할 때는 'expression' 앞에 대문자 'N'이 접두사로 와야 합니다. 'N'을 지정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 또는 열의 기본 데이터 정렬에 해당하는 코드 페이지로 문자열을 변환합니다. 이 코드 페이지에 없는 문자는 모두 손실됩니다.  
@@ -167,7 +166,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  DEFAULT  
  열에 정의한 기본값이 열의 기존 값을 대체하도록 지정합니다. 열에 기본값이 없고 NULL 값을 허용하도록 정의한 경우, 열을 NULL로 변경하는 데 사용할 수도 있습니다.  
   
- { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+ { **+=**  |  **-=**  |  **\*=**  |  **/=**  |  **%=**  |  **&=**  |  **^=**  |  **|=** }  
  복합 할당 연산자:  
  +=                       더하기 및 할당  
  -=                        빼기 및 할당  
@@ -184,24 +183,24 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  *property_name* | *field_name*  
  사용자 정의 형식의 공용 속성 또는 공용 데이터 멤버입니다.  
   
- *method_name* **(** *argument* [ **,**... *n*] **)**  
+ *method_name* **(** *argument* [ **,** ... *n*] **)**  
  하나 이상의 인수를 사용하는 *udt_column_name*의 비정적 공용 변경자(mutator) 메서드입니다.  
   
- **.** WRITE **(**_expression_**,**_@Offset_**,**_@Length_**)**  
- *column_name* 값의 섹션이 수정되도록 지정합니다. *expression*은 *column_name*의 *@Offset*에서 시작하는 *@Length* 단위를 대체합니다. **varchar(max)**, **nvarchar(max)** 또는 **varbinary(max)** 의 열만 이 절을 사용하여 지정될 수 있습니다. *column_name*은 NULL일 수 없으며 테이블 이름 또는 테이블 별칭으로 정규화될 수 없습니다.  
+ **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)**  
+ *column_name* 값의 섹션이 수정되도록 지정합니다. *expression*이 *column_name*의 @*Offset*부터 @*Length* 단위를 대체합니다. **varchar(max)** , **nvarchar(max)** 또는 **varbinary(max)** 의 열만 이 절을 사용하여 지정될 수 있습니다. *column_name*은 NULL일 수 없으며 테이블 이름 또는 테이블 별칭으로 정규화될 수 없습니다.  
   
- *expression*은 *column_name*에 복사된 값입니다. *expression*은 *column_name* 형식으로 평가되거나 암시적으로 이러한 데이터 형식으로 변환될 수 있어야 합니다. *expression*을 NULL로 설정하면 *@Length*가 무시되고 *column_name*의 값이 지정된 *@Offset*에서 잘립니다.  
+ *expression*은 *column_name*에 복사된 값입니다. *expression*은 *column_name* 형식으로 평가되거나 암시적으로 이러한 데이터 형식으로 변환될 수 있어야 합니다. *expression*을 NULL로 설정하면 @*Length*가 무시되고 *column_name*의 값이 지정된 @*Offset*에서 잘립니다.  
   
- *@Offset*은 *expression*이 쓰여질 *column_name* 값의 시작 지점입니다. *@Offset*은 0부터 시작하는 서수 위치이고 **bigint**이며 음수가 될 수 없습니다. *@Offset*이 NULL이면 업데이트 작업 시 기존 *column_name* 값 끝에 *expression*이 추가되고 *@Length*는 무시됩니다. @Offset이 *column_name* 값의 길이보다 크면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류를 반환합니다. *@Offset*에 *@Length*를 더한 길이가 기반 열의 값 길이를 초과하면 값의 마지막 문자까지 삭제가 이루어집니다. *@Offset*에 LEN(*expression*)을 더한 값이 선언된 기본 크기보다 크면 오류가 발생합니다.  
+ @*Offset*은 *expression*이 쓰여질 *column_name* 값의 시작 지점입니다. @*Offset*은 0부터 시작하는 서수 위치이고 **bigint**이며 음수가 될 수 없습니다. @*Offset*이 NULL이면 업데이트 작업 시 기존 *column_name* 값 끝에 *expression*이 추가되고 @*Length*는 무시됩니다. @Offset이 *column_name* 값의 길이보다 크면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류를 반환합니다. @*Offset*에 @*Length*를 더한 값이 열의 기본 값 길이를 초과하면 값의 마지막 문자까지 삭제됩니다. @*Offset*에 LEN(*expression*)을 더한 값이 선언된 기본 크기보다 크면 오류가 발생합니다.  
   
- *@Length*는 *expression*으로 대체될 열 부분의 길이이며 시작 부분은 *@Offset*으로 지정됩니다. *@Length*는 **bigint**이며 음수일 수 없습니다. *@Length*가 NULL이면 업데이트 작업 시 *@Offset*에서부터 *column_name* 값의 끝까지 모든 데이터를 제거합니다.  
+ @*Length*는 @*Offset*부터 *expression*으로 대체될 열 섹션의 길이입니다. @*Length*는 **bigint**이며 음수일 수 없습니다. @*Length*가 NULL이면 업데이트 작업 시 @*Offset*부터 *column_name* 값의 끝까지 모든 데이터를 제거합니다.  
   
  자세한 내용은 설명 부분을 참조하세요.  
   
  **@** *변수*  
  *expression*에서 반환된 값으로 설정한 선언된 변수입니다.  
   
- SET **@**_variable_ = *column* = *expression*은 열과 동일한 값으로 변수를 설정합니다. 이것은 변수를 이미 업데이트한 열 값으로 설정하는 SET **@**_variable_ = _column_, _column_ = _expression_과는 다릅니다.  
+ SET **@** _variable_ = *column* = *expression*은 열과 동일한 값으로 변수를 설정합니다. 이것은 변수를 이미 업데이트한 열 값으로 설정하는 SET **@** _variable_ = _column_, _column_ = _expression_과는 다릅니다.  
   
  \<OUTPUT_Clause>  
  UPDATE 작업의 일부로서 업데이트된 데이터 또는 이를 바탕으로 한 식을 반환합니다. OUTPUT 절은 원격 테이블 또는 뷰를 대상으로 하는 어떤 DML 문에서도 지원되지 않습니다. 자세한 내용은 [OUTPUT Clause&#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md)를 참조하세요.  
@@ -240,7 +239,7 @@ GLOBAL
 *cursor_variable_name*  
  커서 변수의 이름입니다. *cursor_variable_name*은 업데이트를 허용하는 커서를 참조해야 합니다.  
   
-OPTION **(** \<query_hint> [ **,**... *n* ] **)**  
+OPTION **(** \<query_hint> [ **,** ... *n* ] **)**  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 문을 처리하는 방식을 사용자 지정하기 위한 최적화 프로그램 힌트를 지정합니다. 자세한 내용은 [쿼리 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)를 참조하세요.  
   
 ## <a name="best-practices"></a>최선의 구현 방법  
@@ -331,21 +330,21 @@ GO
 >  **ntext**, **text** 및 **image** 데이터 형식은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이후 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다.  
   
 ### <a name="updating-large-value-data-types"></a>큰 값 데이터 형식 업데이트  
- **\.** WRITE (_expression_**,** _@Offset_**,**_@Length_) 절을 사용하여 **varchar(max)**, **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 부분 또는 전체 업데이트를 수행합니다. 예를 들어 **varchar(max)** 열의 부분 업데이트를 통해 열의 처음 200개 문자만 삭제 또는 변경할 수 있으며, 전체 업데이트를 통해서는 열의 모든 데이터를 삭제하거나 수정할 수 있습니다. **.** WRITE는 데이터베이스 복구 모델이 대량 로그 또는 단순으로 설정되면 새 데이터의 삽입 또는 추가를 최소 로깅하도록 업데이트합니다. 기존 값이 업데이트되면 최소 로깅이 사용되지 않습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
+ **.** WRITE **(** _expression_ **,** @_Offset_ **,** @_Length_ **)** 절을 사용하여 **varchar(max)** , **nvarchar(max)** 및 **varbinary(max)** 데이터 형식의 부분 또는 전체 업데이트를 수행합니다. 예를 들어 **varchar(max)** 열의 부분 업데이트를 통해 열의 처음 200개 문자만 삭제 또는 변경할 수 있으며, 전체 업데이트를 통해서는 열의 모든 데이터를 삭제하거나 수정할 수 있습니다. **.WRITE**는 데이터베이스 복구 모델이 대량 로그 또는 단순으로 설정되면 새 데이터의 삽입 또는 추가를 최소 로깅하도록 업데이트합니다. 기존 값이 업데이트되면 최소 로깅이 사용되지 않습니다. 자세한 내용은 [트랜잭션 로그&#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)을(를) 참조하세요.  
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 UPDATE 문이 다음 중 한 가지 동작을 유발할 때 부분 업데이트를 전체 업데이트로 변환합니다.  
 -   분할된 뷰 또는 테이블의 키 열을 변경합니다.  
 -   하나 이상의 행을 변경하고 고유하지 않은 클러스터형 인덱스의 키를 상수가 아닌 값으로 업데이트합니다.  
   
-**.** WRITE 절을 사용하여 NULL 열을 업데이트하거나 *column_name*의 값을 NULL로 설정할 수 없습니다.  
+**.WRITE** 절을 사용하여 NULL 열을 업데이트하거나 *column_name*의 값을 NULL로 설정할 수 없습니다.  
   
-*@Offset* 및 *@Length*는 **varbinary** 및 **varchar** 데이터 형식의 경우 바이트 단위로 지정되며 **nvarchar** 데이터 형식의 경우 문자 단위로 지정됩니다. 오프셋은 DBCS(더블바이트 문자 집합) 데이터 정렬에 맞게 적절히 계산됩니다.  
+@*Offset* 및 @*Length*는 **varbinary** 및 **varchar** 데이터 형식의 경우 바이트 단위로 지정되고, **nvarchar** 데이터 형식의 경우 문자 단위로 지정됩니다. 오프셋은 DBCS(더블바이트 문자 집합) 데이터 정렬에 맞게 적절히 계산됩니다.  
   
 최상의 성능을 위해 8,040바이트의 배수인 청크 크기로 데이터를 삽입 또는 업데이트하는 것이 좋습니다.  
   
-**.** WRITE 절로 수정된 열을 OUTPUT 절에서 참조하면 열의 전체 값, 즉 **deleted.**_column\_name_의 이전 이미지 또는 **inserted.**_column\_name_의 이후 이미지가 테이블 변수에 지정된 열로 반환됩니다. 뒷부분의 예제 R을 참조하세요.  
+**\..WRITE** 절로 수정된 열을 OUTPUT 절에서 참조하면 열의 전체 값, 즉 **deleted.** _column\_name_의 이전 이미지 또는 **inserted.** _column\_name_의 이후 이미지가 테이블 변수에 지정된 열로 반환됩니다. 뒷부분의 예제 R을 참조하세요.  
   
-다른 문자 또는 binary 데이터 형식에 대해 **.** WRITE의 기능과 동일한 결과를 얻으려면 [STUFF&#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)를 사용합니다.  
+다른 문자 또는 binary 데이터 형식에 대해 **\..WRITE**의 기능과 동일한 결과를 얻으려면 [STUFF&#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)를 사용합니다.  
   
 ### <a name="updating-user-defined-type-columns"></a>사용자 정의 형식 열 업데이트  
  다음 중 한 가지 방법으로 사용자 정의 형식 열의 값을 업데이트할 수 있습니다.  
@@ -463,7 +462,7 @@ ID     Value
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  대상 테이블에 대한 UPDATE 권한이 필요합니다. 또한 UPDATE 문에 WHERE 절이 포함되거나, SET 절의 *expression*에서 테이블의 열을 사용할 경우 업데이트하는 중인 테이블에 대해 SELECT 권한이 요구됩니다.  
   
  UPDATE 권한은 기본적으로 **sysadmin** 고정 서버 역할과 **db_owner** 및 **db_datawriter** 고정 데이터베이스 역할의 멤버 및 테이블 소유자에게 부여됩니다. **sysadmin**, **db_owner** 및 **db_securityadmin** 역할의 멤버와 테이블 소유자는 다른 사용자에게 권한을 위임할 수 있습니다.  
@@ -487,7 +486,7 @@ ID     Value
 ###  <a name="BasicSyntax"></a> 기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 UPDATE 문의 기본 기능을 보여 줍니다.  
   
-#### <a name="a-using-a-simple-update-statement"></a>1. 단순 UPDATE 문 사용  
+#### <a name="a-using-a-simple-update-statement"></a>1\. 단순 UPDATE 문 사용  
  다음 예에서는 `Person.Address` 테이블의 모든 행에 대해 단일 열을 업데이트합니다.  
   
 ```sql  
@@ -497,7 +496,7 @@ UPDATE Person.Address
 SET ModifiedDate = GETDATE();  
 ```  
   
-#### <a name="b-updating-multiple-columns"></a>2. 여러 열 업데이트  
+#### <a name="b-updating-multiple-columns"></a>2\. 여러 열 업데이트  
  다음 예에서는 `Bonus` 테이블의 모든 행에 대해 `CommissionPct`, `SalesQuota` 및 `SalesPerson` 열의 값을 업데이트합니다.  
   
 ```sql  
@@ -633,7 +632,7 @@ SET Name += ' - tool malfunction'
 WHERE ScrapReasonID BETWEEN 10 and 12;  
 ```  
   
-#### <a name="i-specifying-a-subquery-in-the-set-clause"></a>9. SET 절에 하위 쿼리 지정  
+#### <a name="i-specifying-a-subquery-in-the-set-clause"></a>9\. SET 절에 하위 쿼리 지정  
  다음 예에서는 SET 절에 하위 쿼리를 사용하여 열을 업데이트하는 데 사용되는 값을 확인합니다. 이 하위 쿼리는 스칼라 값, 즉 각 행에 대해 단일 값을 반환해야 합니다. 이 예에서는 `SalesYTD` 테이블의 `SalesPerson` 열을 변경하여 `SalesOrderHeader` 테이블의 가장 최근 판매 기록을 반영합니다. 하위 쿼리는 `UPDATE` 문에서 각 영업 사원의 판매를 집계합니다.  
   
 ```sql  

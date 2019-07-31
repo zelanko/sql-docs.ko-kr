@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 2963dd3f867b4080d383f51dc9f41baf0a1733ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
+ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793739"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68354606"
 ---
 # <a name="configure-a-distributed-always-on-availability-group"></a>분산 Always On 가용성 그룹 구성  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,10 +81,10 @@ GO
 ```  
   
 >[!NOTE]
->이전 예제에서는 직접 시드를 사용하며, 복제본 및 분산 가용성 그룹 모두에 대해 **SEEDING_MODE**가 **AUTOMATIC**으로 설정됩니다. 이 구성은 수동으로 백업하고 주 데이터베이스를 복원할 필요 없이 보조 복제본과 보조 가용성 그룹이 자동으로 채워지도록 설정합니다.  
+>이전 예제에서는 자동 시드를 사용하며, 복제본 및 분산 가용성 그룹에서 모두 **SEEDING_MODE**가 **AUTOMATIC**으로 설정됩니다. 이 구성은 수동으로 백업하고 주 데이터베이스를 복원할 필요 없이 보조 복제본과 보조 가용성 그룹이 자동으로 채워지도록 설정합니다.  
   
 ### <a name="join-the-secondary-replicas-to-the-primary-availability-group"></a>보조 복제본을 주 가용성 그룹에 조인  
-모든 보조 복제본은 **JOIN** 옵션으로 **ALTER AVAILABILITY GROUP** 이(가) 있는 가용성 그룹에 조인되어야 합니다. 이 예제에서는 직접 시딩이 사용되었지 때문에  **GRANT CREATE ANY DATABASE** 옵션으로 **ALTER AVAILABILITY GROUP** 도 호출해야 합니다. 이 설정을 통해 가용성 그룹이 데이터베이스를 만들고 주 복제본에서 자동으로 시딩을 시작할 수 있습니다.  
+모든 보조 복제본은 **JOIN** 옵션으로 **ALTER AVAILABILITY GROUP** 이(가) 있는 가용성 그룹에 조인되어야 합니다. 이 예제에서는 자동 시드를 사용하기 때문에 **GRANT CREATE ANY DATABASE** 옵션으로 **ALTER AVAILABILITY GROUP**도 호출해야 합니다. 이 설정을 통해 가용성 그룹이 데이터베이스를 만들고 주 복제본에서 자동으로 시딩을 시작할 수 있습니다.  
   
 이 예제에서는 보조 복제본 `server2`에서 다음 명령이 실행되어 가용성 그룹 `ag1` 에 조인됩니다. 그런 다음 가용성 그룹이 보조 가용성 그룹에 데이터베이스를 만들 수 있습니다.  
   
@@ -136,7 +135,7 @@ GO
 > 보조 가용성 그룹은 동일한 데이터베이스 미러링 엔드포인트(이 예제에서는 5022 포트)를 사용해야 합니다. 그렇지 않으면 로컬 장애 조치(failover) 후 복제가 중지됩니다.  
   
 ### <a name="join-the-secondary-replicas-to-the-secondary-availability-group"></a>보조 복제본을 보조 가용성 그룹에 조인  
- 이 예제에서는 보조 복제본 `server4`에서 다음 명령이 실행되어 가용성 그룹 `ag2` 에 조인됩니다. 그런 다음 가용성 그룹은 보조 가용성 그룹에 데이터베이스를 만들어 직접 시딩을 지원할 수 있습니다.  
+ 이 예제에서는 보조 복제본 `server4`에서 다음 명령이 실행되어 가용성 그룹 `ag2` 에 조인됩니다. 그러면 가용성 그룹이 보조 복제본에 데이터베이스를 만들어 자동 시드를 지원할 수 있습니다.  
   
 ```sql  
 ALTER AVAILABILITY GROUP [ag2] JOIN   

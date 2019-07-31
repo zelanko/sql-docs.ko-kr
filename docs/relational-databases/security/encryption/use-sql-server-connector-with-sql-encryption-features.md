@@ -1,7 +1,7 @@
 ---
 title: SQL 암호화 기능을 통해 SQL Server 커넥터 사용 | Microsoft 문서
 ms.custom: ''
-ms.date: 04/04/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,17 +12,15 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-manager: craigg
-monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: b6f47c0b1139e78119a345cfbb7565500dc346a1
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52401086"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329258"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 암호화 기능을 통해 SQL Server 커넥터 사용
-[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-xx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Azure 주요 자격 증명 모음으로 보호되는 비대칭 키를 사용하는 일반적인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 암호화 작업에는 다음 세 가지 영역이 포함됩니다.  
   
 -   Azure 주요 자격 증명 모음에서 비대칭 키를 사용한 투명한 데이터 암호화  
@@ -34,7 +32,7 @@ ms.locfileid: "52401086"
  이 항목의 단계를 수행하기 전에 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)항목의 1 ~ 4부를 완료합니다.  
  
 > [!NOTE]  
->  1.0.0.440 및 이전 버전은 대체되었으며 프로덕션 환경에서 더 이상 지원되지 않습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=45344)를 방문하고 "SQL Server 커넥터 업그레이드"의 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 페이지에 있는 지침을 사용하여 1.0.1.0 또는 이후 버전으로 업그레이드하세요.  
+>  1\.0.0.440 및 이전 버전은 대체되었으며 프로덕션 환경에서 더 이상 지원되지 않습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=45344)를 방문하고 "SQL Server 커넥터 업그레이드" 아래의 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 페이지에 있는 지침을 사용하여 1.0.1.0 이상 버전으로 업그레이드하세요.  
   
 ## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Azure 주요 자격 증명 모음에서 비대칭 키를 사용한 투명한 데이터 암호화  
  Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계 항목의 1~4부를 완료한 후, Azure 주요 자격 증명 모음 키를 사용하여 TDE를 사용하는 데이터베이스 암호화 키를 암호화합니다.  
@@ -49,8 +47,8 @@ ms.locfileid: "52401086"
      다음과 같이 아래 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 수정합니다.  
   
     -   Azure Key Vault를 가리키도록 `IDENTITY` 인수(`ContosoDevKeyVault`)를 편집합니다.
-        - **공용 Azure**를 사용하는 경우 `IDENTITY` 인수를 파트 2의 Azure Key Vault 이름으로 바꿉니다.
-        - **사설 Azure 클라우드** (예: Azure Government, Azure China 또는 Azure Germany)를 사용하는 경우는 `IDENTITY` 인수를 파트 2의 3단계에서 반환된 자격 증명 모음 URI로 바꿉니다. 자격 증명 모음 URI에 "https://"를 포함하지 마세요.   
+        - **전역 Azure**를 사용하는 경우 `IDENTITY` 인수를 파트 2의 Azure Key Vault 이름으로 바꿉니다.
+        - **프라이빗 Azure 클라우드** (예: Azure Government, Azure 중국 21Vianet 또는 Azure 독일)를 사용하는 경우 `IDENTITY` 인수를 파트 2, 3단계에서 반환된 자격 증명 모음 URI로 바꿉니다. 자격 증명 모음 URI에 "https://"를 포함하지 마세요.   
   
     -   `SECRET` 인수의 첫 번째 부분을 1부의 Azure Active Directory **클라이언트 ID** 로 바꿉니다. 이 예제에서 **클라이언트 ID** 는 `EF5C8E094D2A4A769998D93440D8115D`입니다.  
   
@@ -62,9 +60,9 @@ ms.locfileid: "52401086"
     ```sql  
     USE master;  
     CREATE CREDENTIAL Azure_EKM_TDE_cred   
-        WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+        WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+        -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
         -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
         SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
     FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;  
@@ -146,8 +144,8 @@ ms.locfileid: "52401086"
      다음과 같이 아래 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트를 수정합니다.  
   
     -   Azure Key Vault를 가리키도록 `IDENTITY` 인수(`ContosoDevKeyVault`)를 편집합니다.
-        - **공용 Azure**를 사용하는 경우 `IDENTITY` 인수를 파트 2의 Azure Key Vault 이름으로 바꿉니다.
-        - **사설 Azure 클라우드** (예: Azure Government, Azure China 또는 Azure Germany)를 사용하는 경우는 `IDENTITY` 인수를 파트 2의 3단계에서 반환된 자격 증명 모음 URI로 바꿉니다. 자격 증명 모음 URI에 "https://"를 포함하지 마세요.    
+        - **전역 Azure**를 사용하는 경우 `IDENTITY` 인수를 파트 2의 Azure Key Vault 이름으로 바꿉니다.
+        - **프라이빗 Azure 클라우드** (예: Azure Government, Azure 중국 21Vianet 또는 Azure 독일)를 사용하는 경우 `IDENTITY` 인수를 파트 2, 3단계에서 반환된 자격 증명 모음 URI로 바꿉니다. 자격 증명 모음 URI에 "https://"를 포함하지 마세요.    
   
     -   `SECRET` 인수의 첫 번째 부분을 1부의 Azure Active Directory **클라이언트 ID** 로 바꿉니다. 이 예제에서 **클라이언트 ID** 는 `EF5C8E094D2A4A769998D93440D8115D`입니다.  
   
@@ -160,9 +158,9 @@ ms.locfileid: "52401086"
         USE master;  
   
         CREATE CREDENTIAL Azure_EKM_Backup_cred   
-            WITH IDENTITY = 'ContosoDevKeyVault', -- for public Azure
+            WITH IDENTITY = 'ContosoDevKeyVault', -- for global Azure
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.usgovcloudapi.net', -- for Azure Government
-            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China
+            -- WITH IDENTITY = 'ContosoDevKeyVault.vault.azure.cn', -- for Azure China 21Vianet
             -- WITH IDENTITY = 'ContosoDevKeyVault.vault.microsoftazure.de', -- for Azure Germany   
             SECRET = 'EF5C8E094D2A4A769998D93440D8115DReplace-With-AAD-Client-Secret'   
         FOR CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov;    

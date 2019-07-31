@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 3bbeb979-e6fc-4184-ad6e-cca62108de74
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bdb182e2861675cd42d295bd9004cd62198f7687
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: cfcb5d25b207af35e9a26b95b86997c803828f3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51702381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002476"
 ---
 # <a name="configure-healthchecktimeout-property-settings"></a>HealthCheckTimeout 속성 설정 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,16 +22,16 @@ ms.locfileid: "51702381"
   
 -   **시작하기 전 주의 사항:**  [제한 사항](#Limits), [보안](#Security)  
   
--   **HeathCheckTimeout 설정을 구성하려면:**  [PowerShell](#PowerShellProcedure), [장애 조치(failover) 클러스터 관리자](#WSFC), [Transact-SQL](#TsqlProcedure)  
+-   **다음을 사용하여 HeathCheckTimeout 설정 구성:**  [PowerShell](#PowerShellProcedure), [장애 조치(Failover) 클러스터 관리자](#WSFC), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Limits"></a> 제한 사항  
  이 속성의 기본값은 30,000밀리초(30초)이고, 최소값은 15,000밀리초(15초)입니다.  
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  ALTER SETTINGS 및 VIEW SERVER STATE 사용 권한이 필요합니다.  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
@@ -72,7 +71,7 @@ Get-ClusterResource $fci | Set-ClusterParameter HealthCheckTimeout 60000
   
 1.  장애 조치(failover) 클러스터 관리자 스냅인을 엽니다.  
   
-2.  **서비스 및 응용 프로그램** 을 확장하고 FCI를 선택합니다.  
+2.  **서비스 및 애플리케이션** 을 확장하고 FCI를 선택합니다.  
   
 3.  **기타 리소스** 에서 **SQL Server 리소스** 를 마우스 오른쪽 단추로 클릭한 다음 오른쪽 클릭 메뉴에서 **속성** 을 선택합니다. SQL Server 리소스 **속성** 대화 상자가 열립니다.  
   

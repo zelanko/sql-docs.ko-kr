@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b8d3ddc-38c0-4241-b7bb-ee654a5081aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f3d5bea06c12da29eb38c3190682d2fcfe344fe4
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 05f0d6d99ca4e5274882ec5d4e751ba658b62a1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114797"
 ---
 # <a name="deny-object-permissions-transact-sql"></a>DENY 개체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ PRIVILEGES
 >  테이블 수준의 DENY는 열 수준의 GRANT보다 우선하지 않습니다. 사용 권한 계층에서의 이러한 불일치는 이전 버전과의 호환성을 위해 유지되었습니다.  
   
  ON [ OBJECT **::** ] [ *schema_name* ] **.** *object_name*  
- 사용 권한을 거부할 개체를 지정합니다. *schema_name*을 지정한 경우 OBJECT 구는 선택 사항입니다. OBJECT 구가 사용된 경우 범위 한정자(**::**)가 필요합니다. *schema_name*을 지정하지 않은 경우 기본 스키마가 사용됩니다. *schema_name*을 지정한 경우 스키마 범위 한정자(**.**)가 필요합니다.  
+ 사용 권한을 거부할 개체를 지정합니다. *schema_name*을 지정한 경우 OBJECT 구는 선택 사항입니다. OBJECT 구가 사용된 경우 범위 한정자( **::** )가 필요합니다. *schema_name*을 지정하지 않은 경우 기본 스키마가 사용됩니다. *schema_name*을 지정한 경우 스키마 범위 한정자( **.** )가 필요합니다.  
   
  TO \<database_principal>  
  사용 권한을 거부할 보안 주체를 지정합니다.  
@@ -132,7 +131,7 @@ PRIVILEGES
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  개체에 대한 CONTROL 권한이 필요합니다.  
   
  AS 절을 사용하는 경우 지정된 보안 주체가 사용 권한을 거부할 개체를 소유해야 합니다.  
@@ -140,7 +139,7 @@ PRIVILEGES
 ## <a name="examples"></a>예  
 다음 예에서는 모두 AdventureWorks 데이터베이스를 사용합니다.
   
-### <a name="a-denying-select-permission-on-a-table"></a>1. 테이블에 대한 SELECT 권한 거부  
+### <a name="a-denying-select-permission-on-a-table"></a>1\. 테이블에 대한 SELECT 권한 거부  
  다음 예에서는 `Person.Address` 테이블에 대해 사용자 `RosaQdM`의 `SELECT` 권한을 거부합니다.  
   
 ```  
@@ -148,7 +147,7 @@ DENY SELECT ON OBJECT::Person.Address TO RosaQdM;
 GO  
 ```  
   
-### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>2. 저장 프로시저에 대한 EXECUTE 권한 거부  
+### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>2\. 저장 프로시저에 대한 EXECUTE 권한 거부  
  다음 예에서는 `EXECUTE`이라는 응용 프로그램 역할에 대해 저장 프로시저 `HumanResources.uspUpdateEmployeeHireInfo`에 대한 `Recruiting11` 권한을 거부합니다.  
   
 ```  
@@ -157,7 +156,7 @@ DENY EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo
 GO   
 ```  
   
-### <a name="c-denying-references-permission-on-a-view-with-cascade"></a>3. CASCADE를 지정하여 뷰에 대한 REFERENCES 권한 거부  
+### <a name="c-denying-references-permission-on-a-view-with-cascade"></a>C. CASCADE를 지정하여 뷰에 대한 REFERENCES 권한 거부  
  다음 예에서는 `REFERENCES`를 지정하여 사용자 `BusinessEntityID`에 대해 `HumanResources.vEmployee` 뷰의 `Wanida` 열에 대한 `CASCADE` 권한을 거부합니다.  
   
 ```  

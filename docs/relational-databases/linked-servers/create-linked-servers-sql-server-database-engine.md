@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3228065d-de8f-4ece-a9b1-e06d3dca9310
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68ffba6177eb86944ad62cc4876effdd7a63af8c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 3112a23426054740a0c716648c94d83d4c39925a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073674"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>연결된 서버 만들기(SQL Server 데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "52391247"
   
 ##  <a name="Security"></a> 보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용할 때는 서버에 대한 **ALTER ANY LINKED SERVER** 권한 또는 **setupadmin** 고정 서버 역할의 멤버 자격이 필요합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용할 때는 **CONTROL SERVER** 권한 또는 **sysadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ##  <a name="Procedures"></a> 방법: 연결된 서버 만들기  
@@ -120,7 +119,7 @@ ms.locfileid: "52391247"
      **다음 보안 컨텍스트를 사용하여 연결**  
      목록에 정의되어 있지 않은 로그인의 경우 **원격 로그인** 및 **암호** 상자에서 지정한 로그인과 암호를 사용하여 연결하도록 지정합니다. 원격 로그인은 원격 서버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증 로그인이어야 합니다.  
   
-5.  필요에 따라 서버 옵션을 보거나 지정하려면 **서버 옵션** 페이지를 클릭합니다.  
+5.  필요에 따라 서버 옵션을 보거나 지정하려면 **서버 옵션**  페이지를 클릭합니다.  
   
      **데이터 정렬 호환**  
      연결된 서버에 대한 분산 쿼리 실행에 영향을 줍니다. 이 옵션을 true로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 연결된 서버의 모든 문자에 대한 문자 집합 및 데이터 정렬 시퀀스(또는 정렬 순서)가 로컬 서버와 호환된다고 가정합니다. 이렇게 함으로써 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 문자 열에 관한 비교를 공급자에 전달할 수 있습니다. 이 옵션을 설정하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 항상 문자 열에 관한 비교를 로컬로 평가합니다.  
@@ -223,7 +222,7 @@ ms.locfileid: "52391247"
   
     ```  
   
-##  <a name="FollowUp"></a> 추가 작업: 연결된 서버를 만든 후 수행할 단계  
+##  <a name="FollowUp"></a> 후속 작업: 연결된 서버를 만든 후 수행할 단계  
   
 #### <a name="to-test-the-linked-server"></a>연결된 서버 테스트  
   

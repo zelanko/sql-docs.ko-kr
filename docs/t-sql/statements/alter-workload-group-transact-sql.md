@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 957addce-feb0-4e54-893e-5faca3cd184c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: bac81675ce0469fe39d11745462f2a3376aed73f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6563abe72382cb912e3d71851398e5d778b47a19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724653"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091749"
 ---
 # <a name="alter-workload-group-transact-sql"></a>ALTER WORKLOAD GROUP(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ ALTER WORKLOAD GROUP { group_name | "default" }
  병렬 요청의 최대 DOP(병렬 처리 수준)를 지정합니다. *value*는 0 또는 1~255 범위의 양의 정수여야 합니다. *value*가 0이면 서버는 최대 병렬 처리 수준을 선택합니다. 이 값은 기본값이며 권장 설정입니다.  
   
 > [!NOTE]  
-> [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 MAX_DOP에 설정하는 실제 값은 지정된 값보다 작을 수 있습니다. 최종 값은 min(255, CPU 수) 수식에 의해 결정됩니다.  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 MAX_DOP에 설정하는 실제 값은 지정된 값보다 작을 수 있습니다. 최종 값은 min(255, CPU 수) 수식에 의해 결정됩니다  .  
   
 > [!CAUTION]  
 > MAX_DOP를 변경하면 서버 성능이 저하될 수 있습니다. MAX_DOP를 변경해야 할 경우에는 단일 NUMA 노드에 있는 하드웨어 스케줄러의 최대 수보다 작거나 같은 값으로 설정하는 것이 좋습니다. MAX_DOP를 8보다 큰 값으로 설정하면 성능에 영향을 줄 수 있습니다.  
@@ -158,13 +157,13 @@ ALTER WORKLOAD GROUP { group_name | "default" }
   
  DDL 문을 실행할 경우 리소스 관리자 상태에 대해 잘 알고 있는 것이 좋습니다. 자세한 내용은 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)를 참조하세요.  
   
- REQUEST_MEMORY_GRANT_PERCENT: [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 인덱스 생성은 향상된 성능을 위해 초기에 부여된 메모리보다 많은 작업 메모리를 사용할 수 있습니다. 이 특수 처리는 이후 버전의 리소스 관리자에서 지원되지만 초기 부여 및 추가 메모리 부여는 리소스 풀 및 작업 그룹 설정에 따라 제한됩니다.  
+ REQUEST_MEMORY_GRANT_PERCENT: [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서는 인덱스를 만들 때 향상된 성능을 위해 처음에 부여된 메모리보다 많은 작업 영역 메모리를 사용할 수 있습니다. 이 특수 처리는 이후 버전의 리소스 관리자에서 지원되지만 초기 부여 및 추가 메모리 부여는 리소스 풀 및 작업 그룹 설정에 따라 제한됩니다.  
   
  **분할된 테이블에서 인덱스 생성**  
   
  정렬되지 않은 분할된 테이블에서 인덱스 생성에 사용되는 메모리는 관련된 파티션 수에 비례합니다.  필요한 총 메모리가 리소스 관리자 작업 그룹 설정에서 지정한 쿼리당 제한(REQUEST_MAX_MEMORY_GRANT_PERCENT)을 초과하면 이 인덱스 생성이 실행되지 않을 수 있습니다. "default" 작업 그룹에서는 쿼리가 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 호환성을 위해 시작하는 데 필요한 최소 메모리를 포함하는 쿼리당 제한을 초과하게 되므로 "default" 리소스 풀에 이러한 쿼리를 실행할 수 있는 총 메모리가 구성되어 있는 경우 사용자가 "default" 작업 그룹에서 같은 인덱스 생성을 실행할 수 있습니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  CONTROL SERVER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
@@ -189,7 +188,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [관리](../../relational-databases/resource-governor/resource-governor.md)   
+ [리소스 관리자](../../relational-databases/resource-governor/resource-governor.md)   
  [CREATE WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md)   
  [DROP WORKLOAD GROUP&#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)   
  [CREATE RESOURCE POOL&#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md)   

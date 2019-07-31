@@ -1,5 +1,5 @@
 ---
-title: 'Columnstore 인덱스: 개요 | Microsoft Docs'
+title: 'columnstore 인덱스: 개요 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/08/2018
 ms.prod: sql
@@ -17,16 +17,15 @@ helpviewer_keywords:
 ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ebf4644c17f9fdbb02c89edec72abd39bdd9c42e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae39d06d96232b27d58020d5f6e6184a57001e6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912088"
 ---
-# <a name="columnstore-indexes-overview"></a>Columnstore 인덱스: 개요
+# <a name="columnstore-indexes-overview"></a>columnstore 인덱스: 개요
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Columnstore 인덱스는 대규모 데이터 웨어하우징 팩트 테이블을 저장하고 쿼리하는 표준입니다. 이 인덱스는 열 기반 데이터 스토리지 및 쿼리 처리를 사용하여 데이터 웨어하우스에서 기존 행 기반 스토리지보다 최대 **10배 높은 쿼리 성능**을 실현합니다. 또한 압축되지 않은 데이터 크기보다 최대 **10배 높은 데이터 압축**을 실현합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 columnstore 인덱스는 트랜잭션 워크로드에 고성능 실시간 분석을 실행하는 기능인 운영 분석을 지원합니다.  
@@ -46,7 +45,7 @@ Columnstore 인덱스는 *columnstore*라는 칼럼 데이터 서식을 사용�
 columnstore는 열과 행이 있는 테이블로 논리적으로 구성되는 데이터로, 열 데이터 서식으로 물리적으로 저장됩니다.  
   
 #### <a name="rowstore"></a>Rowstore
-Rowstore는 열과 행이 있는 테이블로 논리적으로 구성되는 데이터로, 행 데이터 서식으로 물리적으로 저장됩니다. 이 서식은 관계형 테이블 데이터를 저장하는 기존 방식입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 rowstore는 기본 데이터 저장소 서식이 힙, 클러스터형 인덱스인 테이블 또는 메모리 최적화 테이블을 참조합니다.  
+Rowstore는 열과 행이 있는 테이블로 논리적으로 구성되는 데이터로, 행 데이터 서식으로 물리적으로 저장됩니다. 이 서식은 관계형 테이블 데이터를 저장하는 기존 방식입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 rowstore는 기본 데이터 스토리지 서식이 힙, 클러스터형 인덱스인 테이블 또는 메모리 최적화 테이블을 참조합니다.  
   
 > [!NOTE]  
 > Columnstore 인덱스에 대한 설명에서는 데이터 스토리지에 대한 서식을 강조하기 위해 rowstore 및 columnstore라는 용어를 사용합니다.  
@@ -89,7 +88,7 @@ columnstore 인덱스에는 둘 이상의 델타 행 그룹이 포함될 수 있
 비클러스터형 columnstore 인덱스는 columnstore 인덱스에서 분석이 동시에 실행되는 동안 OLTP 워크로드에서 기본 클러스터형 인덱스를 사용하는 실시간 운영 분석을 지원합니다. 자세한 내용은 [실시간 운영 분석을 위한 columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)을 참조하세요.  
   
 #### <a name="batch-mode-execution"></a>일괄 처리 모드 실행
-‘일괄 처리 모드 실행’은 여러 행을 함께 처리하는 쿼리 처리 방법입니다. 배치 모드 실행은 columnstore 스토리지 형식과 긴밀히 통합되고 그에 맞게 최적화되어 있습니다. 일괄 처리 모드 실행을 ‘벡터 기반’ 또는 ‘벡터화된 실행’이라고도 합니다. Columnstore 인덱스에 대한 쿼리는 일반적으로 쿼리 성능을 2~4배 개선하는 일괄 처리 모드 실행을 사용합니다. 자세한 내용은 [쿼리 처리 아키텍처 가이드](../query-processing-architecture-guide.md#execution-modes)를 참조하세요. 
+‘일괄 처리 모드 실행’은 여러 행을 함께 처리하는 쿼리 처리 방법입니다. 배치 모드 실행은 columnstore 스토리지 형식과 긴밀히 통합되고 그에 맞게 최적화되어 있습니다. 일괄 처리 모드 실행을 ‘벡터 기반’ 또는 ‘벡터화된 실행’이라고도 합니다.   Columnstore 인덱스에 대한 쿼리는 일반적으로 쿼리 성능을 2~4배 개선하는 일괄 처리 모드 실행을 사용합니다. 자세한 내용은 [쿼리 처리 아키텍처 가이드](../query-processing-architecture-guide.md#execution-modes)를 참조하세요. 
   
 ##  <a name="benefits"></a> Columnstore 인덱스를 사용해야 하는 이유  
 Columnstore 인덱스는 매우 높은 수준의 데이터 압축(일반적으로 10배)을 제공하여 데이터 웨어하우스 스토리지 비용을 크게 줄일 수 있습니다. 분석을 위해 columnstore 인덱스는 btree 인덱스보다 몇 배 더 나은 성능을 제공합니다. Columnstore 인덱스는 데이터 웨어하우징 및 분석 작업에 대한 기본 설정된 데이터 스토리지 형식입니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 운영 워크로드에 대한 실시간 분석에 columnstore 인덱스를 사용할 수 있습니다.  
@@ -150,7 +149,7 @@ columnstore 인덱스에 있는 모든 열이 메타데이터에 포괄 열로 �
 |데이터 웨어하우징용 고성능 columnstore 인덱스를 만듭니다.|[데이터 웨어하우스용 Columnstore 인덱스](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|Columnstore 테이블에서 btree 인덱스를 사용하여 고성능 데이터 웨어하우징 쿼리를 만드는 방법을 설명합니다.|  
 |btree 인덱스를 사용하여 columnstore 테이블에서 기본 키 제약 조건을 적용합니다.|[데이터 웨어하우스용 Columnstore 인덱스](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)|btree 및 columnstore 인덱스를 결합하여 columnstore 인덱스에서 기본 키 제약 조건을 적용하는 방법을 보여 줍니다.|  
 |Columnstore 인덱스를 삭제합니다.|[DROP INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)|Columnstore 인덱스 삭제에서는 btree 인덱스에서 사용하는 표준 `DROP INDEX` 구문을 사용합니다. 클러스터형 columnstore 인덱스를 삭제하면 columnstore 테이블이 힙으로 변환됩니다.|  
-|Columnstore 인덱스에서 행을 삭제합니다.|[DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|행을 삭제하려면 [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) 를 사용합니다.<br /><br /> **columnstore 행**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 행을 논리적으로 삭제된 것으로 표시하지만, 인덱스가 다시 작성될 때까지는 행에 대한 실제 저장소를 회수하지 않습니다.<br /><br /> **deltastore** 행: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 행을 논리적 및 물리적으로 삭제합니다.|  
+|Columnstore 인덱스에서 행을 삭제합니다.|[DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|행을 삭제하려면 [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) 를 사용합니다.<br /><br /> **columnstore 행**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 행을 논리적으로 삭제된 것으로 표시하지만, 인덱스가 다시 작성될 때까지는 행에 대한 실제 스토리지를 회수하지 않습니다.<br /><br /> **deltastore** 행: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 행을 논리적 및 물리적으로 삭제합니다.|  
 |Columnstore 인덱스의 행을 업데이트합니다.|[UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|행을 삭제하려면 [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) 를 사용합니다.<br /><br /> **columnstore 행**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 행을 논리적으로 삭제됨으로 표시한 다음 업데이트된 행을 deltastore에 삽입합니다.<br /><br /> **deltastore 행**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 deltastore에 있는 행을 업데이트합니다.|  
 |데이터를 columnstore 인덱스로 로드합니다.|[Columnstore 인덱스 데이터 로드](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)||  
 |deltastore의 모든 행을 강제로 columnstore로 이동합니다.|[ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [Columnstore 인덱스 조각 모음](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)|`REBUILD` 옵션과 함께 `ALTER INDEX`를 사용하면 모든 행이 강제로 columnstore로 이동합니다.|  

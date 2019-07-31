@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: b29850b5-5530-498d-8298-c4d4a741cdaf
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b458dc14c0a64428b5d59d7a4411327a82326d0d
-ms.sourcegitcommit: c017b8afb37e831c17fe5930d814574f470e80fb
+ms.openlocfilehash: e518d4021e4c78d4716f80c7f63f9a18bc1908be
+ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59506500"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68307632"
 ---
 # <a name="columnstore-indexes---data-loading-guidance"></a>Columnstore 인덱스 - 데이터 로드 지침
 
@@ -44,11 +43,15 @@ ms.locfileid: "59506500"
 > 비클러스터형 columnstore 인덱스 데이터가 있는 rowstore 테이블에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 은 항상 데이터를 기본 테이블에 삽입합니다. 데이터는 columnstore 인덱스에 직접 삽입되지 않습니다.  
 
 대량 로드에는 다음과 같은 기본 제공 성능 최적화 기능이 있습니다.
--   **병렬 로드:** 각각 데이터 파일을 로드하는 여러 개의 동시 대량 로드(bcp 또는 대량 삽입)를 수행할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로의 rowstore 대량 로드와는 달리, 각 대량 가져오기 스레드가 배타적 잠금 상태의 별도 행 그룹(압축 또는 델타 행 그룹)으로 배타적으로 로드되므로 `TABLOCK`을 지정할 필요가 없습니다. `TABLOCK`을 사용하면 테이블에 대한 배타적 잠금이 강제 적용되어 데이터를 병렬로 가져올 수 없게 됩니다.  
--   **최소 로깅:** 대량 로드는 압축된 행 그룹으로 바로 이동하는 데이터에 대해 최소 로깅을 사용합니다. 델타 행 그룹으로 이동하는 데이터는 자세히 로깅됩니다. 여기에는 102,400개의 행보다 작은 모든 일괄 처리 크기가 포함됩니다. 그러나 대량 로드의 목표는 대부분의 데이터가 델타 행 그룹을 우회하도록 하는 것입니다.  
--   **잠금 최적화:** 압축된 행 그룹으로 로드 시 행 그룹에 대한 X 잠금이 획득됩니다. 그러나 델타 행 그룹으로 대량 로드 시 행 그룹에서 X 잠금이 획득되지만 X 행 그룹 잠금이 잠금 계층 구조의 일부가 아니므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 계속해서 잠금 PAGE/EXTENT를 잠급니다.  
+-   **병렬 로드:** 각각 데이터 파일을 로드하는 여러 개의 동시 대량 로드(bcp 또는 대량 삽입)를 수행할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로의 rowstore 대량 로드와는 달리, 각 대량 가져오기 스레드가 배타적 잠금 상태의 별도 행 그룹(압축 또는 델타 행 그룹)으로 데이터를 배타적으로 로드하므로 `TABLOCK`을 지정할 필요가 없습니다. 
+
+-   **축소 로깅:** 압축된 행 그룹으로 데이터가 직접 로드되므로 로그 크기를 훨씬 줄일 수 있습니다. 예를 들어 데이터가 10배 압축된 경우 TABLOCK 또는 대량 로그/단순 복구 모델 없이도 해당 트랜잭션 로그가 대략 10배 축소됩니다. 델타 행 그룹으로 이동하는 데이터는 자세히 로깅됩니다. 여기에는 102,400개의 행보다 작은 모든 일괄 처리 크기가 포함됩니다.  모범 사례는 batchsize >= 102400을 사용하는 것입니다. TABLOCK이 필요하지 않으므로 데이터를 병렬로 로드할 수 있습니다. 
+
+-   **최소 로깅:** [최소 로깅](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)의 필수 조건을 따르면 로깅을 더욱 줄일 수 있습니다. 그러나 rowstore로 데이터를 로드하는 경우와 달리 TABLOCK이 BU(대량 업데이트) 잠금이 아닌 테이블에 대한 X 잠금을 수행하므로 병렬 데이터 로드를 수행할 수 없습니다. 잠금에 대한 자세한 내용은 [잠금 및 행 버전 관리[(.../sql-server-transaction-locking-and-row-versioning-guide.md)를 참조하세요.
+
+-   **잠금 최적화:** 압축된 행 그룹으로 데이터를 로드하는 경우 행 그룹에 대한 X 잠금이 자동으로 획득됩니다. 그러나 델타 행 그룹으로 대량 로드 시 행 그룹에서 X 잠금이 획득되지만, X 행 그룹 잠금이 잠금 계층 구조의 일부가 아니므로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 계속해서 PAGE/EXTENT를 잠급니다.  
   
-columnstore 인덱스에 비클러스터형 B-트리 인덱스가 있는 경우 인덱스 자체에 대한 잠금 또는 로깅 최적화는 없지만 위의 설명대로 클러스터형 columnstore 인덱스에 대한 최적화는 여전히 남아 있습니다.  
+columnstore 인덱스에 비클러스터형 B-트리 인덱스가 있는 경우 인덱스 자체에 대한 잠금 또는 로깅 최적화는 없지만, 위의 설명대로 클러스터형 columnstore 인덱스에 대한 최적화를 적용할 수 있습니다.  
   
 ## <a name="plan-bulk-load-sizes-to-minimize-delta-rowgroups"></a>델타 행 그룹을 최소화하는 대량 로드 크기 계획
 columnstore 인덱스는 대부분의 행이 columnstore로 압축되고 델타 행 그룹에 저장되지 않을 때 성능이 최적화됩니다. 행이 columnstore로 바로 이동하고 최대한 deltastore를 우회하도록 로드 크기를 지정하는 것이 좋습니다.
@@ -83,7 +86,7 @@ INSERT INTO <columnstore index>
 SELECT <list of columns> FROM <Staging Table>  
 ```  
   
- 이 명령은 BCP 또는 Bulk Insert와 유사한 방식이지만, 단일 일괄 처리로 columnstore 인덱스에 데이터를 로드합니다. 준비 테이블의 행 수가 102400 미만인 경우 행은 델타 행 그룹으로 로드됩니다. 그렇지 않으면, 행은 압축된 행 그룹으로 바로 로드됩니다. 한 가지 주요 제한 사항은 이 `INSERT` 작업이 단일 스레드라는 것입니다. 병렬로 데이터를 로드하려면 여러 준비 테이블을 만들거나 준비 테이블에서 행의 범위가 겹치지 않는 `INSERT`/`SELECT`를 실행할 수 있습니다. 이 제한 사항은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 사라집니다. 아래 명령은 준비 테이블에서 데이터를 병렬로 로드하지만 `TABLOCK`을 지정해야 합니다.  
+ 이 명령은 BCP 또는 Bulk Insert와 유사한 방식이지만, 단일 일괄 처리로 columnstore 인덱스에 데이터를 로드합니다. 준비 테이블의 행 수가 102400 미만인 경우 행은 델타 행 그룹으로 로드됩니다. 그렇지 않으면, 행은 압축된 행 그룹으로 바로 로드됩니다. 한 가지 주요 제한 사항은 이 `INSERT` 작업이 단일 스레드라는 것입니다. 병렬로 데이터를 로드하려면 여러 준비 테이블을 만들거나 준비 테이블에서 행의 범위가 겹치지 않는 `INSERT`/`SELECT`를 실행할 수 있습니다. 이 제한 사항은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 사라집니다. 아래 명령은 준비 테이블에서 데이터를 병렬로 로드하지만 `TABLOCK`을 지정해야 합니다. 이 내용이 대량 로드와 관련하여 앞서 설명한 내용과 모순되는 것처럼 보일 수도 있지만, 주요 차이점은 준비 테이블에서의 병렬 데이터 로드가 동일한 트랜잭션에서 실행된다는 것입니다.
   
 ```sql  
 INSERT INTO <columnstore index> WITH (TABLOCK) 
@@ -91,7 +94,7 @@ SELECT <list of columns> FROM <Staging Table>
 ```  
   
  준비 테이블에서 클러스터형 columnstore 인덱스로 대량 로드 시 사용 가능한 최적화는 다음과 같습니다.
--   **로그 최적화:** 데이터가 압축된 행 그룹으로 로드될 때 둘 다 최소로 기록됩니다. 데이터가 델타 행 그룹으로 로드되는 경우 최소 로깅은 없습니다.  
+-   **로그 최적화:** 데이터가 압축된 행 그룹으로 로드되면 로깅이 축소됩니다.   
 -   **잠금 최적화:** 압축된 행 그룹으로 로드 시 행 그룹에 대한 X 잠금이 획득됩니다. 그러나 델타 행 그룹을 통해 X 잠금이 행 그룹에서 획득되지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 X 행 그룹 잠금이 잠금 계층 구조의 일부가 아니므로, 잠금 PAGE/EXTENT를 그대로 잠급니다.  
   
  하나 이상의 비클러스터형 인덱스가 있는 경우 인덱스 자체에 대한 잠금 또는 로깅 최적화는 없지만 위의 설명대로 클러스터형 columnstore 인덱스에 대한 최적화는 여전히 남아 있습니다.  

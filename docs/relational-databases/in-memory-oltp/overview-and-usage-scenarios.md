@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ca7cb161bb4b3bebf2d7c65018b5221fd5bf1cf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e16f646a963d22a2fe3a6a67428970d11ee5cb43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100260"
 ---
 # <a name="overview-and-usage-scenarios"></a>개요 및 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -66,8 +65,8 @@ ms.locfileid: "52533403"
 
 #### <a name="customer-case-studies"></a>고객 사례 연구
 
-- CMC Markets는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 내 OLTP를 활용하여 일관된 짧은 대기 시간을 달성합니다. [1초도 기다리기에 너무 긴 시간이기 때문에 이 금융 서비스 회사는 현재 거래 소프트웨어를 업데이트하고 있습니다.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
-- Derivco는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 내 OLTP를 활용하여 증가된 처리량을 지원하고 워크로드의 급증을 처리합니다. [온라인 게임 회사는 향후 위험을 원치 않을 때 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 투자합니다.](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
+- CMC Markets는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 메모리 내 OLTP를 활용하여 일관성 있게 낮은 대기 시간을 실현합니다. [1초도 기다리기에 너무 긴 시간이기 때문에 이 금융 서비스 회사는 현재 거래 소프트웨어를 업데이트하고 있습니다.](https://customers.microsoft.com/story/because-a-second-is-too-long-to-wait-this-financial-services-firm-is-updating-its-trading-software)
+- Derivco는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 메모리 내 OLTP를 활용하여 증가된 처리량을 지원하고 워크로드의 급증을 처리합니다. [온라인 게임 회사는 향후 위험을 원치 않을 때 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에 투자합니다.](https://customers.microsoft.com/story/when-an-online-gaming-company-doesnt-want-to-risk-its-future-it-bets-on-sql-server-2016)
 
 
 ### <a name="data-ingestion-including-iot-internet-of-things"></a>IoT(사물 인터넷)를 비롯한 데이터 수집
@@ -85,7 +84,7 @@ ms.locfileid: "52533403"
 - [을 수행하는 작업을 사용하여](../indexes/columnstore-indexes-overview.md)클러스터형 Columnstore 인덱스 `INSERT INTO <disk-based table> SELECT FROM <memory-optimized table>`가 있는 디스크 기반 테이블에 데이터를 정기적으로 일괄 오프로드합니다.
 - [temporal 메모리 최적화 테이블](../tables/system-versioned-temporal-tables-with-memory-optimized-tables.md)을 사용하여 기록 데이터를 관리합니다. 이 모드에서는 기록 데이터가 디스크에 있으며 데이터 이동이 시스템에서 관리됩니다.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 샘플 리포지토리에는 temporal 메모리 최적화 테이블, 메모리 최적화 테이블 형식 및 고유하게 컴파일된 저장 프로시저를 사용하여 센서 데이터의 메모리 내 OLTP 저장소 공간을 관리하는 동시에 데이터 수집을 가속화하는 스마트 그리드 응용 프로그램이 포함되어 있습니다. 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 샘플 리포지토리에는 temporal 메모리 최적화 테이블, 메모리 최적화 테이블 형식 및 고유하게 컴파일된 저장 프로시저를 사용하여 센서 데이터의 메모리 내 OLTP 스토리지 공간을 관리하는 동시에 데이터 수집을 가속화하는 스마트 그리드 애플리케이션이 포함되어 있습니다. 
 
  - [smart-grid-release](https://github.com/Microsoft/sql-server-samples/releases/tag/iot-smart-grid-v1.0) 
  - [smart-grid-source-code](https://github.com/Microsoft/sql-server-samples/tree/master/samples/applications/iot-smart-grid)
@@ -93,14 +92,14 @@ ms.locfileid: "52533403"
 #### <a name="customer-case-studies"></a>고객 사례 연구
 
 - [Quorum은 Azure SQL Database에서 메모리 내 OLTP를 활용하여 사용률을 70%로 낮추는 동시에 주요 데이터베이스의 워크로드를 두 배로 늘림](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
-- EdgeNet은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 일괄 처리 데이터 로드 성능을 개선하고 다중 계층 캐시를 유지 관리해야 하는 필요성을 제거했습니다. [데이터 서비스 회사에서 메모리 내 기술을 사용하여 제품 데이터에 대한 실시간 액세스 실현](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- Beth Israel Deaconess Medical Center는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 도메인 컨트롤러에서 데이터 수집률을 획기적으로 개선하고 워크로드의 급증을 처리할 수 있었습니다[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for].
+- EdgeNet은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 메모리 내 OLTP를 사용하여 일괄 처리 데이터 로드 성능을 개선하고 다중 계층 캐시를 유지 관리해야 하는 필요성을 제거했습니다. [데이터 서비스 회사에서 메모리 내 기술을 사용하여 제품 데이터에 실시간으로 액세스](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
+- Beth Israel Deaconess Medical Center는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 도메인 컨트롤러에서 데이터 수집률을 획기적으로 개선하고 워크로드의 급증을 처리할 수 있었습니다[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for ].
 
 ### <a name="caching-and-session-state"></a>캐싱 및 세션 상태
 
 메모리 내 OLTP 기술은 SQL의 세션 상태 유지 관리(예: ASP.NET 애플리케이션) 및 캐싱 기능을 크게 향상시킵니다.
 
-ASP.NET 세션 상태는 메모리 내 OLTP의 매우 성공적인 사용 사례입니다. 한 고객은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 초당 120만 요청을 달성하려고 했습니다. 그 동안 엔터프라이즈의 모든 중간 계층 애플리케이션의 캐싱 요구 사항을 위해 메모리 내 OLTP를 사용하기 시작했습니다. 세부 정보: [bwin에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 메모리 내 OLTP을 사용하여 전례 없는 성능 및 확장성을 달성하는 방법](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
+ASP.NET 세션 상태는 메모리 내 OLTP의 매우 성공적인 사용 사례입니다. 한 고객은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용하여 초당 120만 요청을 달성하려고 했습니다. 그 동안 엔터프라이즈의 모든 중간 계층 애플리케이션의 캐싱 요구 사항을 위해 메모리 내 OLTP를 사용하기 시작했습니다. 상세 정보: [bwin에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 메모리 내 OLTP를 사용하여 최고의 성능 및 확장성을 실현하는 방법](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 #### <a name="implementation-considerations"></a>구현 고려 사항
 
@@ -112,8 +111,8 @@ GitHub에 게시된 스크립트에서 기본 제공 [!INCLUDE[ssNoVersion](../.
 
 #### <a name="customer-case-studies"></a>고객 사례 연구
 
-- bwin은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 처리량을 획기적으로 늘리고 ASP.NET 세션 상태에 대한 하드웨어 공간을 크게 줄일 수 있었습니다. [게임 사이트에서 초당 250,000 요청으로 확장하고 플레이어 경험 개선](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
-- bwin은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 메모리 내 OLTP를 사용하여 ASP.NET 세션 상태 처리량을 늘리고 엔터프라이즈 수준의 다중 계층 캐싱 시스템을 구현했습니다. [bwin에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 메모리 내 OLTP를 사용하여 전례 없는 성능 및 확장성을 달성하는 방법](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
+- bwin은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 메모리 내 OLTP를 사용하여 처리량을 획기적으로 늘리고 ASP.NET 세션 상태에 대한 하드웨어 공간을 크게 줄일 수 있었습니다. [게임 사이트에서 초당 250,000건의 요청으로 확장하고 플레이어 경험 개선](https://customers.microsoft.com/story/gaming-site-can-scale-to-250000-requests-per-second-an)
+- bwin은 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 메모리 내 OLTP를 사용하여 ASP.NET 세션 상태 처리량을 늘리고 엔터프라이즈 수준의 다중 계층 캐싱 시스템을 구현했습니다. [bwin에서 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 메모리 내 OLTP를 사용하여 최고의 성능 및 확장성을 실현하는 방법](https://blogs.msdn.microsoft.com/sqlcat/2016/10/26/how-bwin-is-using-sql-server-2016-in-memory-oltp-to-achieve-unprecedented-performance-and-scale/)
 
 ### <a name="tempdb-object-replacement"></a>Tempdb 개체 대체
 
@@ -127,8 +126,8 @@ GitHub에 게시된 스크립트에서 기본 제공 [!INCLUDE[ssNoVersion](../.
 
 #### <a name="customer-case-studies"></a>고객 사례 연구
 
-- 한 고객은 기존 TVP를 메모리 최적화 TVP로 바꾼 것만으로 성능을 40% 개선할 수 있었습니다. [Azure에서 메모리 내 OLTP를 사용하여 고속 IoT 데이터 수집](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
-- SentryOne은 엔터프라이즈 확장성 개선의 일환으로 tempdb의 테이블을 메모리 내 OLTP 테이블로 교환하여 모니터링 솔루션에서 대기 시간이 거의 없이 데이터 수집 용량을 크게 향상시켰습니다. [솔루션 공급자가 데이터 모니터링 혁신을 통해 성능 한계를 극복했습니다.](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
+- 한 고객은 기존 TVP를 메모리 최적화 TVP로 바꾼 것만으로 성능을 40% 개선할 수 있었습니다. [Azure의 메모리 내 OLTP를 사용한 고속 IoT 데이터 수집](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/04/07/a-technical-case-study-high-speed-iot-data-ingestion-using-in-memory-oltp-in-azure/)
+- SentryOne은 엔터프라이즈 확장성 개선 목적으로 tempdb의 테이블을 메모리 내 OLTP 테이블로 교환하여 모니터링 솔루션에서 대기 시간이 거의 없이 데이터 수집 용량을 훨씬 개선했습니다. [솔루션 공급자가 데이터 모니터링 혁신을 통해 성능 한계 극복](https://customers.microsoft.com/story/sentryone-partner-professional-services-sql-server-azure)
 
 ### <a name="etl-extract-transform-load"></a>ETL(추출, 변환, 로드)
 
@@ -138,7 +137,7 @@ ETL 워크플로에는 종종 준비 테이블로 데이터 로드, 데이터 �
 
 데이터 준비에 비영구 메모리 최적화 테이블을 사용합니다. 모든 IO가 완전히 제거되고 데이터 액세스 효율성이 향상됩니다.
 
-워크플로의 일환으로 준비 테이블에서 변환을 수행하는 경우 고유하게 컴파일된 저장 프로시저를 사용하여 이러한 변환을 가속화할 수 있습니다. 이러한 변환을 동시에 수행할 수 있으면 메모리 최적화에서 추가적인 확장 이점을 얻을 수 있습니다.
+워크플로 목적으로 준비 테이블에서 변환을 수행하는 경우 고유하게 컴파일된 저장 프로시저를 사용하여 이러한 변환을 가속화할 수 있습니다. 이러한 변환을 동시에 수행할 수 있으면 메모리 최적화에서 추가적인 확장 이점을 얻을 수 있습니다.
 
 ## <a name="sample-script"></a>예제 스크립트
 
@@ -225,7 +224,7 @@ GO
 
 [더 빠른 T-SQL 성능을 위한 메모리 내 OLTP 기술](https://msdn.microsoft.com/library/mt694156.aspx)   
 메모리 내 OLTP 사용에 대한 성능 데모는 [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0) 에서 확인할 수 있습니다.  
-[메모리 내 OLTP를 설명하고 데모를 보여 주는 17분 분량의 비디오](https://www.youtube.com/watch?v=l5l5eophmK4) (데모는 8분 25초에서 시작)   
+[메모리 내 OLTP를 설명하고 데모를 보여 주는 17분 분량의 동영상](https://www.youtube.com/watch?v=l5l5eophmK4) (데모는 8분 25초에서 시작)   
 [메모리 내 OLTP를 사용하도록 설정하고 권장 옵션을 설정하는 스크립트](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
 [기본 메모리 내 OLTP 설명서](in-memory-oltp-in-memory-optimization.md)   
 [Azure SQL Database의 메모리 내 OLTP 성능 및 리소스 사용률 이점](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)  

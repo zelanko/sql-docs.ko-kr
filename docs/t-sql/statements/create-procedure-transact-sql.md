@@ -45,14 +45,13 @@ helpviewer_keywords:
 ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a9bd4b93d90bc75e7dfc97a526cee544cb71b69a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006532"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -157,7 +156,7 @@ OR ALTER
   
  프로시저 이름을 지정할 때 **sp_** 접두사를 사용하지 않도록 합니다. 이 접두사는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시스템 프로시저를 지정하는 데 사용됩니다. 이 접두사를 사용하면 같은 이름의 시스템 프로시저가 있을 경우 응용 프로그램 코드가 손상될 수 있습니다.  
   
- 로컬 임시 프로시저의 경우 *procedure_name* 앞에 숫자 기호(#)를 하나 사용하고(*#procedure_name*) 전역 임시 프로시저의 경우 숫자 기호를 두 개 사용하여(*##procedure_name*) 로컬 또는 전역 임시 프로시저를 각각 만들 수 있습니다. 로컬 임시 프로시저는 해당 프로시저를 만든 연결에만 표시되고 해당 연결을 닫을 때 삭제됩니다. 전역 임시 프로시저는 모든 연결에서 사용할 수 있고 해당 프로시저를 사용하는 마지막 세션이 종료될 때 삭제됩니다. CLR 프로시저에는 임시 이름을 지정할 수 없습니다.  
+ 로컬 임시 프로시저의 경우 *procedure_name* 앞에 숫자 기호(#)를 하나 사용하고( *#procedure_name*) 전역 임시 프로시저의 경우 숫자 기호를 두 개 사용하여( *##procedure_name*) 로컬 또는 전역 임시 프로시저를 각각 만들 수 있습니다. 로컬 임시 프로시저는 해당 프로시저를 만든 연결에만 표시되고 해당 연결을 닫을 때 삭제됩니다. 전역 임시 프로시저는 모든 연결에서 사용할 수 있고 해당 프로시저를 사용하는 마지막 세션이 종료될 때 삭제됩니다. CLR 프로시저에는 임시 이름을 지정할 수 없습니다.  
   
  프로시저 또는 전역 임시 프로시저의 전체 이름은 ##을 포함하여 128자를 초과할 수 없습니다. 로컬 임시 프로시저의 전체 이름은 #을 포함하여 116자를 초과할 수 없습니다.  
   
@@ -172,13 +171,13 @@ OR ALTER
  번호가 매겨진 프로시저는 **xml** 또는 CLR 사용자 정의 형식을 사용할 수 없으며 계획 지침에 사용될 수 없습니다.  
   
  **@** *parameter*  
- 프로시저에 선언된 매개 변수입니다. at 기호(**@**)를 첫 번째 문자로 사용하여 매개 변수 이름을 지정합니다. 매개 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 매개 변수는 프로시저에서 로컬로 사용되므로 다른 프로시저에서 동일한 매개 변수 이름을 사용할 수 있습니다.  
+ 프로시저에 선언된 매개 변수입니다. at 기호( **@** )를 첫 번째 문자로 사용하여 매개 변수 이름을 지정합니다. 매개 변수 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 매개 변수는 프로시저에서 로컬로 사용되므로 다른 프로시저에서 동일한 매개 변수 이름을 사용할 수 있습니다.  
   
  하나 이상의 매개 변수를 선언할 수 있으며 최대 2,100개까지 선언할 수 있습니다. 선언된 각 매개 변수의 값은 기본값이 정의된 경우나 다른 매개 변수와 값이 같도록 설정된 경우를 제외하면 프로시저가 호출될 때 사용자가 지정해야 합니다. 프로시저에 [테이블 반환 매개 변수](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)가 포함되어 있고 호출에 매개 변수가 없는 경우 빈 테이블이 전달됩니다. 매개 변수는 상수 식 대신 사용할 수 있지만 테이블 이름, 열 이름 또는 다른 데이터베이스 개체의 이름 대신 사용할 수는 없습니다. 자세한 내용은 [EXECUTE&#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)을 참조하세요.  
   
  FOR REPLICATION을 지정하면 매개 변수를 선언할 수 없습니다.  
   
- [ _type\_schema\_name_**.** ] *data_type*  
+ [ _type\_schema\_name_ **.** ] *data_type*  
  매개 변수의 데이터 형식 및 해당 데이터 형식이 속하는 스키마입니다.  
   
 **[!INCLUDE[tsql](../../includes/tsql-md.md)] 프로시저에 대한 지침**:  
@@ -242,10 +241,10 @@ FOR REPLICATION
  { [ BEGIN ] *sql_statement* [;] [ ...*n* ] [ END ] }  
  프로시저 본문을 구성하는 하나 이상의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문입니다. 선택적 키워드인 BEGIN과 END를 사용하여 문을 묶을 수 있습니다. 자세한 내용은 다음에 나오는 최선의 구현 방법, 일반적인 주의 사항 및 제한 사항 섹션을 참조하세요.  
   
-EXTERNAL NAME _assembly\_name_**.**_class\_name_**.**_method\_name_  
+EXTERNAL NAME _assembly\_name_ **.** _class\_name_ **.** _method\_name_  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
   
- CLR 저장 프로시저가 참조할 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리의 메서드를 지정합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에서 클래스로 존재해야 합니다. 클래스가 마침표(**.**)를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름을 가질 경우 클래스 이름은 대괄호(**[]**) 또는 큰따옴표(**""**)를 사용하여 구분되어야 합니다. 지정한 메서드는 해당 클래스의 정적 메서드여야 합니다.  
+ CLR 저장 프로시저가 참조할 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 어셈블리의 메서드를 지정합니다. *class_name*은 유효한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 식별자여야 하며 어셈블리에서 클래스로 존재해야 합니다. 클래스가 마침표( **.** )를 사용하여 네임스페이스 부분을 구분하는 네임스페이스로 한정된 이름을 가질 경우 클래스 이름은 대괄호( **[]** ) 또는 큰따옴표( **""** )를 사용하여 구분되어야 합니다. 지정한 메서드는 해당 클래스의 정적 메서드여야 합니다.  
   
  기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 CLR 코드를 실행할 수 없습니다. 공용 언어 런타임 모듈을 참조하는 데이터베이스 개체를 생성, 수정 및 삭제할 수 있지만 [clr enabled 옵션](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md)을 설정할 때까지 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 이러한 참조를 실행할 수 없습니다. 이 옵션을 설정하려면 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 사용합니다.  
   
@@ -344,7 +343,7 @@ SELECT DB_NAME() AS ThisDB;
 ```   
 `EXEC What_DB_is_this;` 문으로 저장 프로시저 호출   
 
-좀더 복잡한 방법은 입력 매개 변수를 제공하여 프로시저의 유연성을 높이는 것입니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+좀더 복잡한 방법은 입력 매개 변수를 제공하여 프로시저의 유연성을 높이는 것입니다. 예를 들어  
 ```sql   
 CREATE PROC What_DB_is_that @ID int   
 AS    
@@ -452,15 +451,15 @@ GO
   
 |성능 모니터 개체 이름|성능 모니터 카운터 이름|  
 |-------------------------------------|--------------------------------------|  
-|SQLServer: 계획 캐시 개체|Cache Hit Ratio|  
+|SQLServer: 플랜 캐시 개체|Cache Hit Ratio|  
 ||Cache Pages|  
 ||Cache Object Counts*|  
   
- * 이 카운터는 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)], 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)], 프로시저, 트리거 등 여러 종류의 캐시 개체에서 사용할 수 있습니다. 자세한 내용은 [SQL Server, Plan Cache 개체](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)를 참조하세요.  
+ \* 이 카운터는 임시 [!INCLUDE[tsql](../../includes/tsql-md.md)], 준비된 [!INCLUDE[tsql](../../includes/tsql-md.md)], 프로시저, 트리거 등 여러 종류의 캐시 개체에서 사용할 수 있습니다. 자세한 내용은 [SQL Server, Plan Cache 개체](../../relational-databases/performance-monitor/sql-server-plan-cache-object.md)를 참조하세요.  
   
 ## <a name="security"></a>보안  
   
-### <a name="permissions"></a>Permissions  
+### <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 **CREATE PROCEDURE** 권한과 프로시저를 만들고 있는 스키마에 대한 **ALTER** 권한이 필요하거나 **db_ddladmin** 고정 데이터베이스 역할의 멤버 자격이 필요합니다.  
   
  CLR 저장 프로시저의 경우 EXTERNAL NAME 절에서 참조되는 어셈블리에 대한 소유권 또는 해당 어셈블리에 대한 **REFERENCES** 권한이 필요합니다.  
@@ -503,7 +502,7 @@ GO
 ###  <a name="BasicSyntax"></a> 기본 구문  
  이 섹션의 예에서는 최소 필수 구문을 사용하여 CREATE PROCEDURE 문의 기본 기능을 보여 줍니다.  
   
-#### <a name="a-creating-a-simple-transact-sql-procedure"></a>1. 단순 Transact-SQL 프로시저 만들기  
+#### <a name="a-creating-a-simple-transact-sql-procedure"></a>1\. 단순 Transact-SQL 프로시저 만들기  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 뷰에서 모든 직원(성과 이름 제공), 직함 및 부서 이름을 반환하는 저장 프로시저를 만듭니다. 이 프로시저는 매개 변수를 사용하지 않습니다. 다음 예에서는 세 가지의 프로시저 실행 방법에 대해 설명합니다.  
   
 ```sql  
@@ -529,7 +528,7 @@ GO
 HumanResources.uspGetAllEmployees;  
 ```  
   
-#### <a name="b-returning-more-than-one-result-set"></a>2. 둘 이상의 결과 집합 반환  
+#### <a name="b-returning-more-than-one-result-set"></a>2\. 둘 이상의 결과 집합 반환  
  다음 프로시저는 두 개의 결과 집합을 반환합니다.  
   
 ```sql  
@@ -770,7 +769,7 @@ GO
 ###  <a name="Modify"></a> 저장 프로시저를 사용하여 데이터 수정  
  이 섹션의 예에서는 프로시저 정의에 DML(데이터 조작 언어) 문을 포함해 테이블 또는 뷰에 있는 데이터를 삽입하거나 수정하는 방법을 보여 줍니다.  
   
-#### <a name="i-using-update-in-a-stored-procedure"></a>9. 저장 프로시저에 UPDATE 사용  
+#### <a name="i-using-update-in-a-stored-procedure"></a>9\. 저장 프로시저에 UPDATE 사용  
  다음 예에서는 저장 프로시저에 UPDATE 문을 사용합니다. 이 프로시저에서는 `@NewHours`라는 입력 매개 변수 하나와 `@RowCount`라는 출력 매개 변수 하나를 사용합니다. UPDATE 문에 사용된 `@NewHours` 매개 변수 값은 `HumanResources.Employee` 테이블의 `VacationHours` 열을 업데이트합니다. `@RowCount` 출력 매개 변수는 영향을 받는 행 수를 지역 변수에 반환하는 데 사용됩니다. CASE 식은 SET 절에서 `VacationHours`에 설정되는 값을 조건에 따라 결정하는 데 사용됩니다. 시간당 급여를 받는 직원(`SalariedFlag` = 0)의 경우 현재 시간 수에 `VacationHours`에 지정된 값을 더한 값으로 `@NewHours`가 설정되고, 그 외의 경우에는 `VacationHours`에 지정된 값으로 `@NewHours`가 설정됩니다.  
   
 ```sql  

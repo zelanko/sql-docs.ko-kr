@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 39ceaac5-42fa-4b5d-bfb6-54403d7f0dc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bce8b626c33bfb5a75fe7614ddb5c55d80d1d906
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 8e2fae9bbc5f0f601f4d455204df6c9d18383458
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044753"
 ---
 # <a name="failover-policy-for-failover-cluster-instances"></a>장애 조치(failover) 클러스터 인스턴스용 장애 조치(failover) 정책
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -105,7 +104,7 @@ ms.locfileid: "52398658"
  *기본값  
   
 ####  <a name="respond"></a> 실패에 대한 응답  
- 하나 이상의 오류 상태가 감지된 경우 WSFC 서비스의 오류 대응 방법은 FCI 리소스 그룹의 다시 시작 및 장애 조치(failover) 설정과 WSFC 쿼럼 상태에 따라 다릅니다. FCI에 손실된 WSFC 쿼럼이 있으면 전체 FCI가 오프라인 상태가 되고 해당 FCI의 고가용성이 손실됩니다. 이 FCI가 계속 WSFC 쿼럼을 유지하면 WSFC 서비스는 실패한 노드의 다시 시작을 처음 시도하여 대응하고 다시 시작 시도가 실패할 경우 장애 조치(failover)할 수도 있습니다. 다시 시작 및 장애 조치(failover) 설정은 장애 조치(failover) 클러스터 관리자 스냅인에서 구성됩니다. 이러한 설정에 대한 자세한 내용은 [\<리소스> 속성: 정책 탭](https://technet.microsoft.com/library/cc725685.aspx)을 참조하세요.  
+ 하나 이상의 오류 상태가 감지된 경우 WSFC 서비스의 오류 대응 방법은 FCI 리소스 그룹의 다시 시작 및 장애 조치(failover) 설정과 WSFC 쿼럼 상태에 따라 다릅니다. FCI에 손실된 WSFC 쿼럼이 있으면 전체 FCI가 오프라인 상태가 되고 해당 FCI의 고가용성이 손실됩니다. 이 FCI가 계속 WSFC 쿼럼을 유지하면 WSFC 서비스는 실패한 노드의 다시 시작을 처음 시도하여 대응하고 다시 시작 시도가 실패할 경우 장애 조치(failover)할 수도 있습니다. 다시 시작 및 장애 조치(failover) 설정은 장애 조치(failover) 클러스터 관리자 스냅인에서 구성됩니다. 이러한 설정에 대한 자세한 내용은 [\<Resource> 속성: 정책 탭](https://technet.microsoft.com/library/cc725685.aspx)을 참조하세요.  
   
  쿼럼 상태의 유지 관리에 대한 자세한 내용은 [WSFC 쿼럼 모드 및 투표 구성&#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md)을 참조하세요.  
   

@@ -30,13 +30,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 504e17e0cb7d377f4b5567d705b9efb4647091aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62521d308c361b8ea6dc8abdabedd8386d07b933
+ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403045"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68316653"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
 
@@ -508,7 +507,19 @@ Azure Data Lake 연결 관리자를 지정하거나 ADLS 계정을 참조하는 
 파일을 열거할 폴더의 경로를 지정합니다.
 
 **SearchRecursively**  
-지정된 폴더 내에서 재귀적으로 검색할 것인지 지정합니다.  
+지정된 폴더 내에서 재귀적으로 검색할 것인지 지정합니다.
+
+***서비스 사용자 권한 구성에 대한 참고 사항***
+
+Data Lake Storage Gen2 사용 권한은 [RBAC](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) 및 [ACL](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-how-to-set-permissions-storage-explorer)을 통해 결정됩니다.
+ACL은 [여기](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control#how-do-i-set-acls-correctly-for-a-service-principal)에 자세히 설명된 대로 앱 등록에 서비스 사용자의 OID(개체 ID)를 사용하여 구성된다는 것에 주의합니다.
+RBAC 구성에 사용되는 애플리케이션(클라이언트) ID와는 다릅니다.
+기본 제공 역할 또는 사용자 지정 역할을 통해 보안 주체에 RBAC 데이터 권한이 부여된 경우 요청의 권한 부여 시 먼저 이러한 사용 권한이 평가됩니다.
+보안 주체의 RBAC 할당을 통해 요청한 작업의 권한이 부여된 경우 권한 부여가 즉시 확인되고 추가 ACL 검사가 수행되지 않습니다.
+또는 보안 주체에 RBAC 할당이 없거나 요청한 작업이 할당된 사용 권한과 일치하지 않는 경우 ACL 검사를 통해 보안 주체가 요청된 작업을 수행할 수 있는 권한이 있는지 확인합니다.
+열거자가 작동하려면 대상 폴더에 대한 **읽기** 권한과 함께 최소한 루트 파일 시스템부터 **실행** 권한을 부여합니다.
+또는 RBAC를 사용하여 최소한 **Storage Blob 데이터 읽기 권한자** 역할을 부여합니다.
+자세한 내용은 [이](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) 문서를 참조하세요.
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>변수 매핑 페이지 - Foreach 루프 편집기
  **Foreach 루프 편집기** 대화 상자의 **변수 매핑** 페이지를 사용하여 변수를 컬렉션 값에 매핑할 수 있습니다. 변수 값은 루프가 반복될 때마다 컬렉션 값으로 업데이트됩니다.  

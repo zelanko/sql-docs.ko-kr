@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e48239d521ed82c5bcfe2920c36b89e82cc1e193
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117140"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ CREATE SERVER AUDIT audit_name
  MAXSIZE = { *max_size }*  
  감사 파일이 증가할 수 있는 최대 크기를 지정합니다. *max_size* 값은 뒤에 MB, GB, TB가 나오는 정수이거나 UNLIMITED여야 합니다. *max_size*에 대해 지정할 수 있는 최소 크기는 2MB이고 최대 크기는 2,147,483,647 TB입니다. UNLIMITED를 지정하는 경우 디스크가 꽉 찰 때까지 파일이 증가합니다. 0도 UNLIMITED를 나타냅니다. 2MB보다 작은 값을 지정하면 MSG_MAXSIZE_TOO_SMALL 오류가 발생합니다. 기본값은 UNLIMITED입니다.  
   
- MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
+ MAX_ROLLOVER_FILES = *{ integer* | UNLIMITED }  
  현재 파일 외에 파일 시스템에 보관할 최대 파일 수를 지정합니다. *MAX_ROLLOVER_FILES* 값은 정수 또는 UNLIMITED여야 합니다. 기본값은 UNLIMITED입니다. 이 매개 변수는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스가 다시 시작되거나 감사가 해제된 후 다시 활성화되어 감사가 다시 시작될 때마다 평가되거나 MAXSIZE에 도달하여 새 파일이 필요할 때 평가됩니다. *MAX_ROLLOVER_FILES*가 평가될 때 파일 수가 *MAX_ROLLOVER_FILES* 설정을 초과하면 가장 오래된 파일부터 삭제됩니다. 따라서 *MAX_ROLLOVER_FILES* 설정이 0이면 *MAX_ROLLOVER_FILES* 설정이 평가될 때마다 새 파일이 만들어집니다. *MAX_ROLLOVER_FILES* 설정이 평가될 때 파일이 한 개만 자동으로 삭제되므로 *MAX_ROLLOVER_FILES*의 값이 감소될 때 파일 수는 오래된 파일을 수동으로 삭제하지 않는 한 줄어들지 않습니다. 지정할 수 있는 최대 파일 수는 2,147,483,647입니다.  
   
  MAX_FILES =*integer*  
@@ -151,14 +150,14 @@ SHUTDOWN
   
  CREATE SERVER AUDIT 문은 트랜잭션 범위 내에 있습니다. 트랜잭션이 롤백되면 이 문도 롤백됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  서버 감사를 생성, 변경 또는 삭제하려면 보안 주체에게 ALTER ANY SERVER AUDIT 또는 CONTROL SERVER 권한이 있어야 합니다.  
   
  감사 정보를 파일에 저장할 때 변조를 방지하기 위해 파일 위치에 대한 액세스를 제한합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-server-audit-with-a-file-target"></a>1. 파일 대상을 사용하여 서버 감사 만들기  
+### <a name="a-creating-a-server-audit-with-a-file-target"></a>1\. 파일 대상을 사용하여 서버 감사 만들기  
  다음 예에서는 이진 파일을 대상으로 사용하고 옵션 없이 `HIPAA_Audit`라는 서버 감사를 만듭니다.  
   
 ```sql  
@@ -166,7 +165,7 @@ CREATE SERVER AUDIT HIPAA_Audit
     TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
 ```  
   
-### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>2. Windows 응용 프로그램 로그 대상과 옵션을 사용하여 서버 감사 만들기  
+### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>2\. Windows 응용 프로그램 로그 대상과 옵션을 사용하여 서버 감사 만들기  
  다음 예에서는 Windows 응용 프로그램 로그에 대한 대상 집합을 사용하여 `HIPAA_Audit`라는 서버 감사를 만듭니다. 큐가 1초마다 기록되고 실패 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진을 종료합니다.  
   
 ```sql  

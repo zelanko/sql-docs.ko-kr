@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 4b5c460b-e4ad-404a-b4ca-d65aba38ebbb
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 00b6ddce8d5c69e16913290b0300fc6828352147
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 451743ebafe719b554384edd2d9abadb60e070f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039135"
 ---
 # <a name="dbcc-freesystemcache-transact-sql"></a>DBCC FREESYSTEMCACHE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,14 +62,14 @@ NO_INFOMSGS
 DBCC FREESYSTEMCACHE를 실행하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 계획 캐시가 삭제됩니다. 계획 캐시를 삭제하면 모든 예정된 실행 계획이 다시 컴파일되며 일시적으로 갑자기 쿼리 성능이 저하될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 "'DBCC FREEPROCCACHE' 또는 'DBCC FREESYSTEMCACHE' 작업으로 인해 '%s' 캐시스토어(계획 캐시의 일부)에 대한 캐시스토어 플러시가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 %d번 발견되었습니다"라는 계획 캐시의 삭제된 각 캐시스토어에 대한 정보 메시지가 있습니다. 이 메시지는 캐시가 해당 시간 간격 내에 플러시되는 동안 5분마다 기록됩니다.
 
 ## <a name="result-sets"></a>결과 집합  
-DBCC FREESYSTEMCACHE는 다음을 반환합니다. "DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."
+DBCC FREESYSTEMCACHE는 다음을 반환합니다. “DBCC 실행이 완료되었습니다. DBCC에서 오류 메시지를 출력하면 시스템 관리자에게 문의하세요."
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
 서버에 대한 ALTER SERVER STATE 권한이 필요합니다.
   
 ## <a name="examples"></a>예  
   
-### <a name="a-releasing-unused-cache-entries-from-a-resource-governor-pool-cache"></a>1. 리소스 관리자 풀 캐시에서 사용하지 않는 캐시 항목 해제  
+### <a name="a-releasing-unused-cache-entries-from-a-resource-governor-pool-cache"></a>1\. 리소스 관리자 풀 캐시에서 사용하지 않는 캐시 항목 해제  
 다음 예에서는 지정된 리소스 관리자 리소스 풀에만 사용되는 캐시를 정리하는 방법을 설명합니다.
   
 ```sql
@@ -78,7 +77,7 @@ DBCC FREESYSTEMCACHE는 다음을 반환합니다. "DBCC 실행이 완료되었�
 DBCC FREESYSTEMCACHE ('ALL', default);  
 ```  
   
-### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>2. 캐시에서 더 이상 사용되지 않는 항목 해제  
+### <a name="b-releasing-entries-from-their-respective-caches-after-they-become-unused"></a>2\. 캐시에서 더 이상 사용되지 않는 항목 해제  
 다음 예에서는 MARK_IN_USE_FOR_REMOVAL 절을 사용하여 모든 현재 캐시에서 더 이상 사용되지 않는 항목을 해제합니다.
   
 ```sql

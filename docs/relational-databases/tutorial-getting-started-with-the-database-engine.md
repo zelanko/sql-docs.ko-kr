@@ -1,5 +1,5 @@
 ---
-title: '자습서: 데이터베이스 엔진 시작 | Microsoft 문서'
+title: '자습서: 데이터베이스 엔진 시작 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/21/2017
 ms.prod: sql
@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 655e709b-346b-469c-bddc-a5a0238d07e0
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ed7e9e5831d4a3e17d29395279b9c680afaea8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 535854f49dc1271d24af5718edb4258bc76566ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075490"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>자습서: 데이터베이스 엔진 시작
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

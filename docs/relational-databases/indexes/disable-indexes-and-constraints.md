@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: 2198f1af-fa44-47e9-92df-f4fde322ba18
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ffc25fcdd81c647dcff73c047924f3fbec13b6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e3fbbeed1224c6cd67c4292a6e263fb079d3ad5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107141"
 ---
 # <a name="disable-indexes-and-constraints"></a>인덱스 및 제약 조건 비활성화
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -91,7 +90,7 @@ ms.locfileid: "47740101"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  ALTER INDEX를 실행하려면 최소한 테이블이나 뷰에 대한 ALTER 권한이 필요합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -131,7 +130,7 @@ ms.locfileid: "47740101"
  인덱스가 생성된 테이블 또는 뷰의 이름을 표시합니다.  
   
  **인덱스 유형**  
- 인덱스의 유형( **클러스터형**, **비클러스터형**, **공간**또는 **XML**)을 표시합니다.  
+ 인덱스 유형을 표시합니다. 인덱스 유형에는 **클러스터형**, **비클러스터형**, **공간** 또는 **XML**이 있습니다.  
   
  **상태**  
  비활성화 작업의 상태를 표시합니다. 실행 후에 표시될 수 있는 값은 다음과 같습니다.  

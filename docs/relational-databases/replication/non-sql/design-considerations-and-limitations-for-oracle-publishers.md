@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7488391716a4ebc094bd6e783b591252bd24590f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 159a2f0b75371aa24661d3e33f3e2108dc93432b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125859"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901090"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Oracle 게시자에 대한 디자인 고려 사항 및 제한 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +138,7 @@ ms.locfileid: "54125859"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 이진 유효성 검사와 행 개수 유효성 검사를 지원합니다. Oracle 게시자에서는 행 개수 유효성 검사를 지원합니다. 자세한 내용은 [복제된 데이터의 유효성 검사](../../../relational-databases/replication/validate-data-at-the-subscriber.md)를 참조하세요.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 네이티브 bcp 모드 스냅숏과 문자 모드 스냅숏을 제공합니다. Oracle 게시자에서는 문자 모드 스냅샷을 지원합니다.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 네이티브 bcp 모드 스냅샷과 문자 모드 스냅샷을 제공합니다. Oracle 게시자에서는 문자 모드 스냅샷을 지원합니다.  
   
 -   게시된 Oracle 테이블의 스키마 변경은 지원되지 않습니다. 스키마를 변경하려면 먼저 게시를 삭제하고 스키마를 변경한 다음 게시 및 구독을 다시 만듭니다.  
   
@@ -157,11 +156,11 @@ ms.locfileid: "54125859"
   
      표준 트랜잭션 복제에서 계정은 [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) 및 [sp_addlogreader_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)로 지정됩니다.  
   
--   스냅숏 에이전트와 로그 판독기 에이전트가 연결되는 계정은 [sp_changedistpublisher&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) 또는 속성 시트를 통해 변경할 수 없지만 암호는 변경할 수 있습니다.  
+-   스냅샷 에이전트와 로그 판독기 에이전트가 연결되는 계정은 [sp_changedistpublisher&amp;#40;Transact-SQL&amp;#41;](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) 또는 속성 시트를 통해 변경할 수 없지만 암호는 변경할 수 있습니다.  
   
 -   [sp_adddistpublisher&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)의 **@security_mode** 매개 변수 값을 1(Windows 통합 인증)로 지정하는 경우  
   
-    -   스냅숏 에이전트와 로그 판독기 에이전트에 사용된 프로세스 계정 및 암호([sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) 및 [sp_addlogreader_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)의 **@job_login** 및 **@job_password** 매개 변수)는 Oracle 게시자에 연결하는 데 사용된 계정 및 암호와 같아야 합니다.  
+    -   스냅샷 에이전트와 로그 판독기 에이전트에 사용된 프로세스 계정 및 암호([sp_addpublication_snapshot&amp;#40;Transact-SQL&amp;#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) 및 [sp_addlogreader_agent&amp;#40;Transact-SQL&amp;#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)의 **@job_login** 및 **@job_password** 매개 변수)는 Oracle 게시자에 연결하는 데 사용된 계정 및 암호와 같아야 합니다.  
   
     -   [sp_changepublication_snapshot&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) 또는 [sp_changelogreader_agent&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)에서 **@job_login** 매개 변수는 변경할 수 없지만 암호는 변경할 수 있습니다.  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6da0e4f4-f252-4b7e-ba60-d2e912aa278e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8744c1ff2980db897606dfc11ab6ba7085da93f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b9d63f55ec7baacb4e387f6ee2f4a063ffa645b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901127"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Oracle 게시자에 대한 데이터 형식 매핑
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,36 +29,36 @@ ms.locfileid: "47739191"
   
 |Oracle 데이터 형식|SQL Server 데이터 형식|대체 형식|  
 |----------------------|--------------------------|------------------|  
-|BFILE|VARBINARY(MAX)|사용자 계정 컨트롤|  
-|BLOB|VARBINARY(MAX)|사용자 계정 컨트롤|  
-|CHAR([1-2000])|CHAR([1-2000])|사용자 계정 컨트롤|  
-|CLOB|VARCHAR(MAX)|사용자 계정 컨트롤|  
-|DATE|DATETIME|사용자 계정 컨트롤|  
+|BFILE|VARBINARY(MAX)|예|  
+|BLOB|VARBINARY(MAX)|예|  
+|CHAR([1-2000])|CHAR([1-2000])|예|  
+|CLOB|VARCHAR(MAX)|예|  
+|DATE|DATETIME|예|  
 |FLOAT|FLOAT|아니오|  
 |FLOAT([1-53])|FLOAT([1-53])|아니오|  
 |FLOAT([54-126])|FLOAT|아니오|  
-|INT|NUMERIC(38)|사용자 계정 컨트롤|  
-|INTERVAL|DATETIME|사용자 계정 컨트롤|  
-|LONG|VARCHAR(MAX)|사용자 계정 컨트롤|  
-|LONG RAW|IMAGE|사용자 계정 컨트롤|  
+|INT|NUMERIC(38)|예|  
+|INTERVAL|DATETIME|예|  
+|LONG|VARCHAR(MAX)|예|  
+|LONG RAW|IMAGE|예|  
 |NCHAR([1-1000])|NCHAR([1-1000])|아니오|  
-|NCLOB|NVARCHAR(MAX)|사용자 계정 컨트롤|  
-|NUMBER|FLOAT|사용자 계정 컨트롤|  
+|NCLOB|NVARCHAR(MAX)|예|  
+|NUMBER|FLOAT|예|  
 |NUMBER([1-38])|NUMERIC([1-38])|아니오|  
-|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|사용자 계정 컨트롤|  
+|NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|예|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|아니오|  
 |RAW([1-2000])|VARBINARY([1-2000])|아니오|  
 |real|FLOAT|아니오|  
 |ROWID|CHAR(18)|아니오|  
-|TIMESTAMP|DATETIME|사용자 계정 컨트롤|  
-|TIMESTAMP(0-7)|DATETIME|사용자 계정 컨트롤|  
-|TIMESTAMP(8-9)|DATETIME|사용자 계정 컨트롤|  
-|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|사용자 계정 컨트롤|  
+|timestamp|DATETIME|예|  
+|TIMESTAMP(0-7)|DATETIME|예|  
+|TIMESTAMP(8-9)|DATETIME|예|  
+|TIMESTAMP(0-7) WITH TIME ZONE|VARCHAR(37)|예|  
 |TIMESTAMP(8-9) WITH TIME ZONE|VARCHAR(37)|아니오|  
-|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|사용자 계정 컨트롤|  
+|TIMESTAMP(0-7) WITH LOCAL TIME ZONE|VARCHAR(37)|예|  
 |TIMESTAMP(8-9) WITH LOCAL TIME ZONE|VARCHAR(37)|아니오|  
 |UROWID|CHAR(18)|아니오|  
-|VARCHAR2([1-4000])|VARCHAR([1-4000])|사용자 계정 컨트롤|  
+|VARCHAR2([1-4000])|VARCHAR([1-4000])|예|  
   
 ## <a name="considerations-for-data-type-mapping"></a>데이터 형식 매핑에 대한 고려 사항  
  Oracle 데이터베이스에서 데이터를 복제할 때는 다음 데이터 형식 문제를 고려하십시오.  
@@ -83,7 +82,7 @@ ms.locfileid: "47739191"
 ### <a name="float-and-number-types"></a>FLOAT 및 NUMBER 형식  
  FLOAT 및 NUMBER 데이터 형식 매핑 중에 지정하는 전체 자릿수 및 소수 자릿수는 Oracle 데이터베이스에서 해당 데이터 형식을 사용하는 열에 지정된 전체 자릿수 및 소수 자릿수에 따라 달라집니다. 전체 자릿수는 숫자의 모든 자릿수이고 소수 자릿수는 숫자에서 소수점 오른쪽에 있는 자릿수입니다. 예를 들어 123.45의 전체 자릿수는 5이고 소수 자릿수는 2입니다.  
   
- Oracle에서는 NUMBER(4,5)처럼 전체 자릿수보다 큰 소수 자릿수로 숫자를 정의할 수 있지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 전체 자릿수가 소수 자릿수보다 크거나 같아야 합니다. 데이터가 잘리지 않도록 하기 위해 Oracle 게시자에서 소수 자릿수가 전체 자릿수보다 클 경우 데이터 형식이 매핑될 때 전체 자릿수가 소수 자릿수와 동일하게 설정됩니다.NUMBER(4,5)는 NUMERIC(5,5)로 매핑됩니다.  
+ Oracle에서는 NUMBER(4,5)처럼 전체 자릿수보다 큰 소수 자릿수로 숫자를 정의할 수 있지만 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 전체 자릿수가 소수 자릿수보다 크거나 같아야 합니다. 데이터가 잘리지 않도록 하기 위해 Oracle 게시자에서 소수 자릿수가 전체 자릿수보다 클 경우 데이터 형식이 매핑될 때 전체 자릿수가 소수 자릿수와 동일하게 설정됩니다. NUMBER(4,5)는 NUMERIC(5,5)으로 매핑됩니다.  
   
 > [!NOTE]  
 >  NUMBER에 대한 소수 자릿수와 전체 자릿수를 지정하지 않으면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서는 기본적으로 최대 소수 자릿수(8)와 최대 전체 자릿수(38)를 사용합니다. 데이터를 복제할 때 더 나은 스토리지를 사용하고 성능을 높이려면 Oracle에서 특정 소수 자릿수와 전체 자릿수를 설정하는 것이 좋습니다.  

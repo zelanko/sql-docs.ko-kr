@@ -12,20 +12,19 @@ helpviewer_keywords:
 ms.assetid: d7a9638b-717c-4680-9b98-8849081e08be
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bf856f9ae013dd2f19cb72b04c0c2296d0185511
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d49dbce19b0d2c7ce1fa1337eb6cbdc58da08f7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140856"
 ---
 # <a name="set-or-change-the-column-collation"></a>열 데이터 정렬 설정 또는 변경
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   특정 테이블의 열에 대해 다른 데이터 정렬을 지정하고 다음 중 하나를 사용하여 **char**, **varchar**, **text**, **nchar**, **nvarchar**및 **ntext** 데이터의 데이터베이스 데이터 정렬을 재정의할 수 있습니다.  
   
--   [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 및 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)의 COLLATE 절 예를 들어 다음과 같이 사용할 수 있습니다.  
+-   [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 및 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)의 COLLATE 절 예를 들어  
   
     ```  
     CREATE TABLE dbo.MyTable  
@@ -70,7 +69,7 @@ USE TestDB;
 CREATE TABLE TestPermTab (PrimaryKey int PRIMARY KEY, Col1 nchar );  
 ```  
   
- 이 시스템에서 **tempdb** 데이터베이스는 코드 페이지 1252를 포함하는 Latin1_General_CS_AS 데이터 정렬을 사용하고 `TestDB` 및 `TestPermTab.Col1` 은 코드 페이지 1257을 포함하는 `Estonian_CS_AS` 데이터 정렬을 사용합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 이 시스템에서 **tempdb** 데이터베이스는 코드 페이지 1252를 포함하는 Latin1_General_CS_AS 데이터 정렬을 사용하고 `TestDB` 및 `TestPermTab.Col1` 은 코드 페이지 1257을 포함하는 `Estonian_CS_AS` 데이터 정렬을 사용합니다. 예를 들어  
   
 ```  
 USE TestDB;  
@@ -83,13 +82,13 @@ INSERT INTO #TestTempTab
 GO  
 ```  
   
- 이전 예에서 **tempdb** 데이터베이스는 Latin1_General_CS_AS 데이터 정렬을 사용하고 `TestDB` 및 `TestTab.Col1` 은 `Estonian_CS_AS` 데이터 정렬을 사용합니다. 예를 들어 다음과 같이 사용할 수 있습니다.  
+ 이전 예에서 **tempdb** 데이터베이스는 Latin1_General_CS_AS 데이터 정렬을 사용하고 `TestDB` 및 `TestTab.Col1` 은 `Estonian_CS_AS` 데이터 정렬을 사용합니다. 예를 들어  
   
 ```  
 SELECT * FROM TestPermTab AS a INNER JOIN #TestTempTab on a.Col1 = #TestTempTab.Col1;  
 ```  
   
- **tempdb** 는 기본 서버 데이터 정렬을 사용하고 `TestPermTab.Col1` 은 다른 데이터 정렬을 사용하므로 SQL Server는 "같음 작업에서 'Latin1_General_CI_AS_KS_WS'과(와) 'Estonian_CS_AS' 간의 데이터 정렬 충돌을 해결할 수 없습니다"라는 오류를 반환합니다.  
+ **tempdb**는 기본 서버 데이터 정렬을 사용하고 `TestPermTab.Col1`은 다른 데이터 정렬을 사용하므로 SQL Server는 “같음 작업에서 ‘Latin1_General_CI_AS_KS_WS’과(와) ‘Estonian_CS_AS’ 간의 데이터 정렬 충돌을 해결할 수 없습니다.”라는 오류를 반환합니다.  
   
  이 오류를 방지하는 데 사용할 수 있는 방법은 다음과 같습니다.  
   

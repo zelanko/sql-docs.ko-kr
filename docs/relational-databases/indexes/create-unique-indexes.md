@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 56b5982e-cb94-46c0-8fbb-772fc275354a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: caec4221795ed991c01d635931989499302b0c1d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7129c5feb6bc23a7e72dddfa70a10d4d2bc0811c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515080"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898601"
 ---
 # <a name="create-unique-indexes"></a>고유 인덱스 만들기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "52515080"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> 시작하기 전 주의 사항  
+##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
 ###  <a name="Benefits"></a> 고유 인덱스의 이점  
   
@@ -95,7 +94,7 @@ ms.locfileid: "52515080"
   
 ###  <a name="Security"></a> 보안  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> 사용 권한  
  테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 **sysadmin** 고정 서버 역할의 멤버 또는 **db_ddladmin** 및 **db_owner** 고정 데이터베이스 역할의 멤버여야 합니다.  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -124,7 +123,7 @@ ms.locfileid: "52515080"
   
 11. 표의 **(일반)** 에서 **고유 여부** 를 선택한 다음 목록에서 **예** 를 선택합니다.  
   
-12. 선택 사항: 주 표의 **테이블 디자이너**에서 **중복 키 무시** 를 선택한 다음 목록에서 **예** 를 선택합니다. 고유 인덱스에 중복 키를 만드는 데이터를 추가하려는 시도를 무시하려는 경우 이와 같이 선택합니다.  
+12. 선택 사항: 주 그리드의 **테이블 디자이너**에서 **중복 키 무시** 를 선택한 다음, 목록에서 **예** 를 선택합니다. 고유 인덱스에 중복 키를 만드는 데이터를 추가하려는 시도를 무시하려는 경우 이와 같이 선택합니다.  
   
 13. **닫기**를 클릭합니다.  
   
@@ -138,7 +137,7 @@ ms.locfileid: "52515080"
   
 3.  고유 인덱스를 만들 테이블을 확장합니다.  
   
-4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 후 **비클러스터형 인덱스...** 를 선택합니다.  
+4.  **인덱스** 폴더를 마우스 오른쪽 단추로 클릭하고 **새 인덱스**를 가리킨 다음, **비클러스터형 인덱스...** 를 선택합니다.  
   
 5.  **새 인덱스** 대화 상자의 **일반** 페이지에서 **인덱스 이름** 상자에 새 인덱스의 이름을 입력합니다.  
   

@@ -12,14 +12,13 @@ f1_keywords:
 ms.assetid: eec59d8e-cadb-4623-a31f-9f42ec09c97f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f649899e0f68dda76a7b10ae661fa575df9b4781
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 807af3881bececb71e7e1570550f06336c588c03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018663"
 ---
 # <a name="microsoft-replication-conflict-viewer-transactional-replication"></a>Microsoft 복제 충돌 뷰어(트랜잭션 복제)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -63,11 +62,11 @@ ms.locfileid: "54130094"
  **처음 다섯 개의 열 및 충돌하는 데이터를 포함하는 기타 열 표시**  
  처음 5개 열과 충돌이 발생한 기타 모든 열을 표시하려면 선택합니다. 이 옵션은 테이블에 많은 열이 있지만 충돌 해결에 가장 도움이 되는 열만 보려는 경우에 유용합니다. 기본 키 또는 이름 필드와 같이 행을 식별하는 필드가 테이블의 앞쪽 열에 포함되어 있는 경우가 많으므로 처음 5개 열은 항상 이 뷰에 포함됩니다.  
   
- **열 정보 표시** (**…**)  
- 테이블 이름, 열 이름, **데이터 이름**, **열 이름**, **데이터 형식** 및 **열 값**과 같은 열 정보를 보려면 클릭합니다.  
+ **열 정보 표시** ( **…** )  
+ 뷰에서 **데이터 이름**, **열 이름**, **데이터 형식** 및 **열 값**과 같은 열 정보를 보려면 클릭합니다.  
   
  **이 충돌 정보 기록**  
- 자세한 충돌 정보를 파일에 기록하려면 이 확인란을 선택합니다. 파일 위치를 지정하려면 **보기** 메뉴를 가리키고 **옵션**을 클릭합니다. 값을 입력하거나 찾아보기 (**...**)를 클릭한 다음 해당 파일로 이동합니다. **확인** 을 클릭하여 **옵션** 대화 상자를 종료합니다.  
+ 자세한 충돌 정보를 파일에 기록하려면 이 확인란을 선택합니다. 파일 위치를 지정하려면 **보기** 메뉴를 가리키고 **옵션**을 클릭합니다. 값을 입력하거나 찾아보기 ( **...** )를 클릭한 다음 해당 파일로 이동합니다. **확인** 을 클릭하여 **옵션** 대화 상자를 종료합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [피어 투 피어 복제에서 충돌 검색](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   

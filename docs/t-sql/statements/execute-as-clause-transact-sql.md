@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8b20360492be7a7667f8f43b686bc04c723bd5e9
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 7adffba6294d2639f94f8ebe753248bcb58f39dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084476"
 ---
 # <a name="execute-as-clause-transact-sql"></a>EXECUTE AS 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -188,7 +187,7 @@ GO
 ## <a name="best-practice"></a>최선의 구현 방법  
  모듈에 정의된 작업을 수행하는 데 필요한 최소한의 권한이 있는 로그인이나 사용자를 지정합니다. 예를 들어 데이터베이스 소유자 계정은 해당 권한이 필요한 경우에만 지정하세요.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  EXECUTE AS로 지정된 모듈을 실행하려면 호출자에게 해당 모듈에 대한 EXECUTE 권한이 있어야 합니다.  
   
  다른 데이터베이스 또는 서버의 리소스에 액세스하는 EXECUTE AS로 지정된 CLR 모듈을 실행하려면 대상 데이터베이스나 서버가 모듈이 원래 속한 원본 데이터베이스의 인증자를 트러스트해야 합니다.  

@@ -1,7 +1,7 @@
 ---
 title: DATEDIFF(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/13/2018
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -30,14 +30,13 @@ helpviewer_keywords:
 ms.assetid: eba979f2-1a8d-4cce-9d75-b74f9b519b37
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 837cf72fd303259a4fb2a9fd23c6cac925f054ca
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 83e515054db5d9727733de6cfc2426ee9ac3aa01
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793636"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329278"
 ---
 # <a name="datediff-transact-sql"></a>DATEDIFF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,16 +49,21 @@ ms.locfileid: "67793636"
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
 ## <a name="arguments"></a>인수  
 *datepart*  
-겹쳐지는 범위의 유형을 지정하는 *startdate*와 *enddate* 부분입니다. `DATEDIFF`은 해당하는 사용자 정의 변수 항목을 허용하지 않습니다. 이 표에서는 올바른 *datepart* 인수가 모두 나열되어 있습니다.
-  
-|*datepart*|약어|  
-|---|---|
+겹쳐지는 범위의 유형을 지정하는 *startdate*와 *enddate* 부분입니다.
+
+> [!NOTE]
+> `DATEDIFF`는 사용자 정의 변수 또는 따옴표 붙은 문자열의 *datepart* 값을 허용하지 않습니다. 
+
+다음 표에는 유효한 *datepart* 인수 이름과 약어가 모두 나와 있습니다.
+
+|*datepart* 이름|*datepart* 약어|  
+|-----------|------------|
 |**year**|**yy, yyyy**|  
 |**quarter**|**qq, q**|  
 |**month**|**mm, m**|  
@@ -72,7 +76,10 @@ DATEDIFF ( datepart , startdate , enddate )
 |**millisecond**|**ms**|  
 |**microsecond**|**mcs**|  
 |**nanosecond**|**ns**|  
-  
+
+> [!NOTE]
+> 각 특정 *datepart* 이름과 해당 *datepart* 이름의 약어는 동일한 값을 반환합니다.
+
 *startdate*  
 다음 값 중 하나를 확인할 수 있는 식입니다.
 
@@ -92,8 +99,7 @@ DATEDIFF ( datepart , startdate , enddate )
  **int**  
   
 ## <a name="return-value"></a>반환 값  
-  
-각 특정 *datepart* 및 해당 *datepart*에 대한 약어는 동일한 값을 반환합니다.  
+*startdate*와 *enddate* 사이의 **int** 차이로, *datepart*에 설정된 국가로 표시됩니다.
   
 **int**에 대한 범위를 벗어난 반환 값의 경우(-2,147,483,648 to +2,147,483,647) `DATEDIFF`에서 오류를 반환합니다.  **밀리초**의 경우 *startdate*와 *enddate*의 최대 차이는 24일, 20시간, 31분 및 23.647초입니다. **second**의 경우 최대 차이는 68년, 19일, 3시, 14분 7초입니다.
   
@@ -108,7 +114,7 @@ DATEDIFF ( datepart , startdate , enddate )
 *startdate*와 *enddate*가 날짜 데이터 형식이 다르고 한 쪽의 시간 부분 또는 소수 자릿수 초의 전체 자릿수가 다른 쪽보다 많을 경우 `DATEDIFF`는 다른 쪽의 누락된 부분을 0으로 설정합니다.
   
 ## <a name="datepart-boundaries"></a>datepart 범위  
-다음 명령문은 동일한 *startdate*와 동일한 *endate* 값을 가집니다. 이 날짜는 서로 인접하며 100나노초(.0000001초)만큼 시간이 다릅니다. 각 문에서 *startdate*와 *endate* 사이의 차이는 해당 *datepart*에서 하나의 달력 또는 시간 범위를 넘어섭니다. 각 문은 1을 반환합니다. *startdate* 및 *enddate*의 연도 값이 다르지만 달력 주 값이 동일한 경우 `DATEDIFF`는 *datepart* **week**에 대해 0을 반환합니다.
+다음 명령문은 동일한 *startdate*와 동일한 *endate* 값을 가집니다. 이 날짜는 서로 인접하며 100나노초(.0000001초)만큼 시간이 다릅니다. 각 문에서 *startdate*와 *endate* 사이의 차이는 해당 *datepart*에서 하나의 달력 또는 시간 범위를 넘어섭니다. 각 문은 1을 반환합니다. 
   
 ```sql
 SELECT DATEDIFF(year,        '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
@@ -123,7 +129,9 @@ SELECT DATEDIFF(second,      '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00
 SELECT DATEDIFF(millisecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 SELECT DATEDIFF(microsecond, '2005-12-31 23:59:59.9999999', '2006-01-01 00:00:00.0000000');
 ```
-  
+
+*startdate* 및 *enddate*의 연도 값이 다르지만 달력 주 값이 동일한 경우 `DATEDIFF`는 *datepart* **week**에 대해 0을 반환합니다.
+
 ## <a name="remarks"></a>Remarks  
 `SELECT <list>`, `WHERE`, `HAVING`, `GROUP BY` 및 `ORDER BY` 절에서 `DATEDIFF`를 사용합니다.
   
@@ -241,6 +249,7 @@ GO
 ### <a name="i-finding-difference-between-startdate-and-enddate-as-date-parts-strings"></a>9\. 날짜 부분 문자열로 startdate와 enddate 간의 차이점 찾기
 
 ```sql
+-- DOES NOT ACCOUNT FOR LEAP YEARS
 DECLARE @date1 DATETIME, @date2 DATETIME, @result VARCHAR(100)
 DECLARE @years INT, @months INT, @days INT, @hours INT, @minutes INT, @seconds INT, @milliseconds INT
 

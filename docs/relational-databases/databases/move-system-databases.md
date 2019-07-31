@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 72bb62ee-9602-4f71-be51-c466c1670878
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0995346ac3c740efb6779f69e29003abf625a81e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 652e8448eb5e4de9b39f9e399d1f2a709ef8cf47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100457"
 ---
 # <a name="move-system-databases"></a>시스템 데이터베이스 이동
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -147,9 +146,9 @@ ms.locfileid: "54136123"
   
 1.  **시작** 메뉴에서 **모든 프로그램**, **Microsoft SQL Server**, **구성 도구**를 차례로 가리킨 다음 **SQL Server 구성 관리자**를 클릭합니다.  
   
-2.  **SQL Server 서비스** 노드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(예: **SQL Server(MSSQLSERVER)**)를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
+2.  **SQL Server 서비스** 노드에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스(예: **SQL Server(MSSQLSERVER)** )를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   
-3.  **SQL Server(**_instance_name_**) 속성** 대화 상자에서 **시작 매개 변수** 탭을 클릭합니다.  
+3.  **SQL Server(** _instance_name_ **) 속성** 대화 상자에서 **시작 매개 변수** 탭을 클릭합니다.  
   
 4.  **기존 매개 변수** 상자에서 –d 매개 변수를 선택하여 마스터 데이터 파일을 이동합니다. **업데이트** 를 클릭하여 변경 내용을 저장합니다.  
   
@@ -219,7 +218,7 @@ ms.locfileid: "54136123"
   
 ##  <a name="Examples"></a> 예  
   
-### <a name="a-moving-the-tempdb-database"></a>1. tempdb 데이터베이스 이동  
+### <a name="a-moving-the-tempdb-database"></a>1\. tempdb 데이터베이스 이동  
  다음 예에서는 계획된 재배치의 일부로 `tempdb` 데이터와 로그 파일을 새 위치로 이동합니다.  
   
 > [!NOTE]  

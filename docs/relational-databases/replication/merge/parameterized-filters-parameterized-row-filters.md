@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b48a6825-068f-47c8-afdc-c83540da4639
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 55de7bcfd14c4a3fde78ac6b62874b75b103e01b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c0168db6a35606f3495d66eae87a0671672a6e99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54127713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140135"
 ---
 # <a name="parameterized-filters---parameterized-row-filters"></a>매개 변수가 있는 필터 - 매개 변수가 있는 행 필터
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "54127713"
  매개 변수가 있는 행 필터를 정의하거나 수정하려면 [병합 아티클에 대한 매개 변수가 있는 행 필터 정의 및 수정](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)을 참조하십시오.  
   
 ## <a name="how-parameterized-filters-work"></a>매개 변수가 있는 필터의 동작 방식  
- 매개 변수가 있는 행 필터는 WHERE 절을 사용하여 게시할 데이터를 선택합니다. 정적 행 필터와는 달리 해당 절에 리터럴 값을 지정하는 대신 하나 또는 둘 모두를 지정합니다. 사용자 정의 함수를 사용할 수도 있지만 사용자 정의 함수는 함수 본문에 SUSER_SNAME() 또는 HOST_NAME()을 포함해야 하거나 `MyUDF(SUSER_SNAME()`과 같은 시스템 함수 중 하나를 평가해야 합니다. 사용자 정의 함수의 본문에 SUSER_SNAME() 또는 HOST_NAME()이 포함되어 있는 경우 함수에 매개 변수를 전달할 수 없습니다.  
+ 매개 변수가 있는 행 필터는 WHERE 절을 사용하여 게시할 데이터를 선택합니다. 정적 행 필터와는 달리 해당 절에 리터럴 값을 지정하는 대신 SUSER_SNAME 및 HOST_NAME 시스템 함수를 하나 또는 둘 다 지정합니다. 사용자 정의 함수를 사용할 수도 있지만 사용자 정의 함수는 함수 본문에 SUSER_SNAME() 또는 HOST_NAME()을 포함해야 하거나 `MyUDF(SUSER_SNAME()`과 같은 시스템 함수 중 하나를 평가해야 합니다. 사용자 정의 함수의 본문에 SUSER_SNAME() 또는 HOST_NAME()이 포함되어 있는 경우 함수에 매개 변수를 전달할 수 없습니다.  
   
  SUSER_SNAME() 및 HOST_NAME() 시스템 함수는 병합 복제에 사용하는 것이 아니라 병합 복제에서 매개 변수가 있는 필터링용으로 사용합니다.  
   

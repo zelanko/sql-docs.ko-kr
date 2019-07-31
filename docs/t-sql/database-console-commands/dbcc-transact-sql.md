@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: e746569eb629eb41c96cc7738e9529949307532e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 22b7963d17039e029ac88ae6f9bc4c2bd9005275
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040524"
 ---
 # <a name="dbcc-transact-sql"></a>DBCC(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ ms.locfileid: "57685720"
 DBCC 명령은 입력 매개 변수와 반환 값을 사용합니다. 모든 DBCC 명령 매개 변수는 유니코드와 DBCS 리터럴을 모두 사용할 수 있습니다.
   
 ## <a name="dbcc-internal-database-snapshot-usage"></a>DBCC 내부 데이터베이스 스냅샷 사용법  
-다음 DBCC 명령은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 만든 내부 읽기 전용 데이터베이스 스냅샷에서 작동합니다. 이렇게 하면 이러한 명령이 실행될 때 차단 및 동시성 문제를 방지할 수 있습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.
+다음 DBCC 명령은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 만든 내부 읽기 전용 데이터베이스 스냅샷에서 작동합니다. 이렇게 하면 이러한 명령이 실행될 때 차단 및 동시성 문제를 방지할 수 있습니다. 자세한 내용은 [데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.
 - DBCC CHECKALLOC
 - DBCC CHECKCATALOG
 - DBCC CHECKDB

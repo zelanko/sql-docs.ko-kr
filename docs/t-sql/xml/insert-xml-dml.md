@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4cedc8dee9040e198ffc5f229453a10d54065257
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 95cf1eaa68e429d18456d7f0f9490b700efad3db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051293"
 ---
 # <a name="insert-xml-dml"></a>insert(XML DML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ insert
   
 ## <a name="arguments"></a>인수  
  *Expression1*  
- 삽입할 하나 이상의 노드를 식별합니다. 이는 상수 XML 인스턴스, 수정 메서드가 적용되고 있는 XML 스키마 컬렉션과 동일하게 형식화된 XML 데이터 형식 인스턴스에 대한 참조, 독립 실행형 **sql:column()**/**sql:variable()** 함수를 사용하는 형식화되지 않은 XML 데이터 형식 인스턴스 또는 XQuery 식일 수 있습니다. 식 결과는 노드, 텍스트 노드 또는 노드의 정렬된 시퀀스일 수 있습니다. 루트(/) 노드로는 확인될 수 없습니다. 식 결과가 값이나 값의 시퀀스인 경우 해당 값은 시퀀스의 각 값을 구분하기 위한 공백이 포함된 단일 텍스트 노드로 삽입됩니다. 여러 노드를 상수로 지정하는 경우 괄호 안에 노드가 포함되고 쉼표로 구분됩니다. 요소, 특성 또는 값의 시퀀스와 같은 유형이 다른 시퀀스는 삽입할 수 없습니다. *Expression1*이 빈 시퀀스로 확인되는 경우 삽입이 수행되지 않고 오류가 반환되지 않습니다.  
+ 삽입할 하나 이상의 노드를 식별합니다. 이는 상수 XML 인스턴스, 수정 메서드가 적용되고 있는 XML 스키마 컬렉션과 동일하게 형식화된 XML 데이터 형식 인스턴스에 대한 참조, 독립 실행형 **sql:column()** /**sql:variable()** 함수를 사용하는 형식화되지 않은 XML 데이터 형식 인스턴스 또는 XQuery 식일 수 있습니다. 식 결과는 노드, 텍스트 노드 또는 노드의 정렬된 시퀀스일 수 있습니다. 루트(/) 노드로는 확인될 수 없습니다. 식 결과가 값이나 값의 시퀀스인 경우 해당 값은 시퀀스의 각 값을 구분하기 위한 공백이 포함된 단일 텍스트 노드로 삽입됩니다. 여러 노드를 상수로 지정하는 경우 괄호 안에 노드가 포함되고 쉼표로 구분됩니다. 요소, 특성 또는 값의 시퀀스와 같은 유형이 다른 시퀀스는 삽입할 수 없습니다. *Expression1*이 빈 시퀀스로 확인되는 경우 삽입이 수행되지 않고 오류가 반환되지 않습니다.  
   
  into  
  *Expression1*에 의해 식별된 노드는 *Expression2*에 의해 식별된 노드의 직접 하위 항목(자식 노드)으로 삽입됩니다. *Expression2*의 노드에 이미 하나 이상의 자식 노드가 있는 경우 **as first** 또는 **as last**를 사용하여 새 노드를 추가할 위치를 지정해야 합니다. 예를 들어 자식 목록의 시작이나 끝에 노드를 각각 추가합니다. **as first** 및 **as last** 키워드는 특성이 삽입된 경우 무시됩니다.  
@@ -58,7 +57,7 @@ insert
   
 ## <a name="examples"></a>예  
   
-### <a name="a-inserting-element-nodes-into-the-document"></a>1. 문서에 요소 노드 삽입  
+### <a name="a-inserting-element-nodes-into-the-document"></a>1\. 문서에 요소 노드 삽입  
  다음 예에서는 문서에 요소를 삽입하는 방법을 보여 줍니다. 먼저 XML 문서가 **xml** 형식의 변수에 할당됩니다. 그런 다음, 여러 **insert** XML DML 문을 통해 예에서 요소 노드가 문서에 삽입되는 방법을 보여 줍니다. 각 삽입 이후 SELECT 문으로 결과를 표시합니다.  
   
 ```  
@@ -105,7 +104,7 @@ GO
   
  이 예의 여러 경로 식은 정적 입력별 요구 사항으로 "[1]"을 지정합니다. 이렇게 하면 단일 대상 노드가 보장됩니다.  
   
-### <a name="b-inserting-multiple-elements-into-the-document"></a>2. 문서에 여러 요소 삽입  
+### <a name="b-inserting-multiple-elements-into-the-document"></a>2\. 문서에 여러 요소 삽입  
  다음 예에서는 문서를 **xml** 형식의 변수에 먼저 할당합니다. 그런 다음, 제품 기능을 나타내는 두 요소의 시퀀스를 **xml** 형식의 두 번째 변수에 할당하고, 이를 다시 첫 번째 변수에 삽입합니다.  
   
 ```  
@@ -168,7 +167,7 @@ GO
 ```  
   
 ### <a name="d-inserting-a-comment-node"></a>D. 주석 노드 삽입  
- 이 쿼리에서는 먼저 XML 문서가 **xml** 형식의 변수에 할당됩니다. 그런 다음 XML DML을 사용하여 첫 번째 <`step`> 요소 다음에 주석 노드를 삽입합니다.  
+ 이 쿼리에서는 먼저 XML 문서가 **xml** 형식의 변수에 할당됩니다. 그런 다음, XML DML을 사용하여 첫 번째 <`step`> 요소 다음에 주석 노드를 삽입합니다.  
   
 ```  
 USE AdventureWorks;  
@@ -212,7 +211,7 @@ GO
 ```  
   
 ### <a name="f-inserting-data-using-a-cdata-section"></a>F. CDATA 섹션을 사용하여 데이터 삽입  
- < 또는 >와 같이 XML에서 유효하지 않은 문자가 포함된 텍스트를 삽입하는 경우 다음 쿼리에서와 같이 CDATA 섹션을 사용하여 데이터를 삽입할 수 있습니다. 이 쿼리에서는 CDATA 섹션을 지정하지만 엔터티로 변환된 유효하지 않은 문자가 포함된 텍스트 노드로 추가됩니다. 예를 들어 ‘<’는 &lt;로 저장됩니다.  
+ XML에서 유효하지 않은 <, > 등의 문자가 포함된 텍스트를 삽입하는 경우 다음 쿼리와 같이 CDATA 섹션을 사용하여 데이터를 삽입할 수 있습니다. 이 쿼리에서는 CDATA 섹션을 지정하지만 엔터티로 변환된 유효하지 않은 문자가 포함된 텍스트 노드로 추가됩니다. 예를 들어 ‘<’는 &lt;로 저장됩니다.  
   
 ```  
 USE AdventureWorks;  
@@ -243,7 +242,7 @@ GO
 ```  
   
 ### <a name="g-inserting-text-node"></a>G. 텍스트 노드 삽입  
- 이 쿼리에서는 먼저 XML 문서가 **xml** 형식의 변수에 할당됩니다. 그런 다음 XML DML을 사용하여 <`Root`> 요소의 첫 번째 자식으로 텍스트 노드를 삽입합니다. 텍스트 생성자는 텍스트를 지정하는 데 사용됩니다.  
+ 이 쿼리에서는 먼저 XML 문서가 **xml** 형식의 변수에 할당됩니다. 그런 다음, XML DML을 사용하여 <`Root`> 요소의 첫 번째 자식으로 텍스트 노드를 삽입합니다. 텍스트 생성자는 텍스트를 지정하는 데 사용됩니다.  
   
 ```  
 USE AdventureWorks;  
@@ -289,7 +288,7 @@ SET x.modify('insert <Material>Aluminium</Material> as first
 GO  
 ```  
   
- 마찬가지로 <`Material`> 요소가 삽입되는 경우 경로 식이 단일 대상을 반환해야 합니다. 이것은 식의 끝에 [1]을 추가하여 명시적으로 지정됩니다.  
+ 마찬가지로, <`Material`> 요소 노드를 삽입하는 경우 경로 식에서 단일 대상을 반환해야 합니다. 이것은 식의 끝에 [1]을 추가하여 명시적으로 지정됩니다.  
   
 ```  
 -- check the update  
@@ -298,7 +297,7 @@ FROM T;
 GO  
 ```  
   
-### <a name="i-inserting-based-on-an-if-condition-statement"></a>9. if 조건 문을 기준으로 삽입  
+### <a name="i-inserting-based-on-an-if-condition-statement"></a>9\. if 조건 문을 기준으로 삽입  
  다음 예에서는 **insert** XML DML 문에서 Expression1의 일부로 IF 조건이 지정됩니다. 조건이 True이면 특성이 <`WorkCenter`> 요소에 추가됩니다.  
   
 ```  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8e7c288fb10eb1473835f29fa538c49d2fe47585
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 0e374b0042ec4b46b8c64e71b86d45d1f4cd3062
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140897"
 ---
 # <a name="revoke-object-permissions-transact-sql"></a>REVOKE 개체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -142,14 +141,14 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
 |VIEW CHANGE TRACKING|CONTROL|VIEW CHANGE TRACKING|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  개체에 대한 CONTROL 권한이 필요합니다.  
   
  AS 절을 사용하는 경우 지정된 보안 주체가 사용 권한을 취소할 개체를 소유해야 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-revoking-select-permission-on-a-table"></a>1. 테이블에 대한 SELECT 사용 권한 취소  
+### <a name="a-revoking-select-permission-on-a-table"></a>1\. 테이블에 대한 SELECT 사용 권한 취소  
  다음 예에서는 `SELECT` 데이터베이스의 `RosaQdM` 테이블에 대해 사용자 `Person.Address`에서 `AdventureWorks2012` 사용 권한을 취소합니다.  
   
 ```  
@@ -158,7 +157,7 @@ REVOKE SELECT ON OBJECT::Person.Address FROM RosaQdM;
 GO  
 ```  
   
-### <a name="b-revoking-execute-permission-on-a-stored-procedure"></a>2. 저장 프로시저에 대한 EXECUTE 권한 취소  
+### <a name="b-revoking-execute-permission-on-a-stored-procedure"></a>2\. 저장 프로시저에 대한 EXECUTE 권한 취소  
  다음 예에서는 `EXECUTE`이라는 응용 프로그램 역할에서 저장 프로시저 `HumanResources.uspUpdateEmployeeHireInfo`에 대한 `Recruiting11` 사용 권한을 취소합니다.  
   
 ```  
@@ -168,7 +167,7 @@ REVOKE EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo
 GO   
 ```  
   
-### <a name="c-revoking-references-permission-on-a-view-with-cascade"></a>3. CASCADE를 지정하여 뷰에 대한 REFERENCES 권한 취소  
+### <a name="c-revoking-references-permission-on-a-view-with-cascade"></a>C. CASCADE를 지정하여 뷰에 대한 REFERENCES 권한 취소  
  다음 예에서는 `REFERENCES`를 지정하여 사용자 `BusinessEntityID`로부터 `HumanResources.vEmployee` 뷰의 `Wanida` 열에 대한 `CASCADE` 권한을 거부합니다.  
   
 ```  

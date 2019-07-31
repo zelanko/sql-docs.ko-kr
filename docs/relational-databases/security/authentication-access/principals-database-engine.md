@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 3f7adbf7-6e40-4396-a8ca-71cbb843b5c2
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9bf4ae1f391a982294a14cb38bcdce879d0b2253
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: efc249be2368973bcd1f3a4692ed280c1a131ec6
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632704"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344601"
 ---
 # <a name="principals-database-engine"></a>보안 주체(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,12 +52,12 @@ ms.locfileid: "47632704"
   
 ## <a name="database-level-principals"></a>데이터베이스 수준의 보안 주체
   
-- 데이터베이스 사용자(사용자 유형은 11가지입니다. 자세한 내용은 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.)
+- 데이터베이스 사용자(사용자 유형은 12가지입니다. 자세한 내용은 [CREATE USER](../../../t-sql/statements/create-user-transact-sql.md)를 참조하세요.)
 - 데이터베이스 역할
 - 애플리케이션 역할
   
 ## <a name="sa-login"></a>sa 로그인  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` 로그인은 서버 수준의 보안 주체로서, 인스턴스를 설치하면 기본적으로 생성됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 sa의 기본 데이터베이스가 master입니다. 이 동작은 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 변경되었습니다. `sa` 로그인은 `sysadmin` 고정 데이터베이스 역할의 멤버입니다. `sa` 로그인에는 서버에 대한 모든 권한이 부여되며 제한할 수 없습니다. `sa` 로그인은 삭제할 수 없지만 아무도 사용할 수 없도록 해제할 수는 있습니다.
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `sa` 로그인은 서버 수준의 보안 주체로서, 인스턴스를 설치하면 기본적으로 생성됩니다. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]부터는 sa의 기본 데이터베이스가 master입니다. 이 동작은 이전 버전의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 변경되었습니다. `sa` 로그인은 `sysadmin` 고정 서버 수준 역할의 멤버입니다. `sa` 로그인에는 서버에 대한 모든 권한이 부여되며 제한할 수 없습니다. `sa` 로그인은 삭제할 수 없지만 아무도 사용할 수 없도록 해제할 수는 있습니다.
 
 ## <a name="dbo-user-and-dbo-schema"></a>dbo 사용자 및 dbo 스키마
 
@@ -99,7 +98,7 @@ ms.locfileid: "47632704"
   
 -   [데이터베이스 수준 역할](../../../relational-databases/security/authentication-access/database-level-roles.md)  
   
--   [응용 프로그램 역할](../../../relational-databases/security/authentication-access/application-roles.md)  
+-   [애플리케이션 역할](../../../relational-databases/security/authentication-access/application-roles.md)  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 보안 설정](../../../relational-databases/security/securing-sql-server.md)   

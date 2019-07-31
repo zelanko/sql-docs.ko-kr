@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: cf608c46a176e53c76a3ca67c8707beea76a2205
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 026f801a055bf801b6b1afd2a07a5b4499f9b3da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129394"
 ---
 # <a name="open-symmetric-key-transact-sql"></a>OPEN SYMMETRIC KEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,18 +78,18 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
   
  암호화 공급자에서 만든 대칭 키는 열 수 없습니다. 암호화 공급자가 이런 키를 열고 닫으므로 이런 종류의 키를 사용한 암호화 및 해독 작업은 **OPEN** 문이 없어도 성공적으로 수행됩니다.  
   
-## <a name="permissions"></a>Permissions  
+## <a name="permissions"></a>사용 권한  
  호출자는 키에 대한 일부 사용 권한을 가지고 있어야 하며 키에 대한 VIEW DEFINITION 권한이 거부되지 않은 상태여야 합니다. 해독 메커니즘에 따라 추가 요구 사항이 따를 수도 있습니다.  
   
--   인증서로 해독: 인증서에 대한 CONTROL 권한이 있어야 하고 인증서의 개인 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
+-   인증서로 암호 해독: 인증서에 대한 CONTROL 권한이 있어야 하고 인증서의 프라이빗 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
   
--   비대칭 키로 해독: 비대칭 키에 대한 CONTROL 권한이 있어야 하고 비대칭 키의 개인 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
+-   비대칭 키로 암호 해독: 비대칭 키에 대한 CONTROL 권한이 있어야 하고 비대칭 키의 프라이빗 키를 암호화하는 데 사용된 암호를 알고 있어야 합니다.  
   
 -   DECRYPTION BY PASSWORD: 대칭 키를 암호화하는 데 사용된 암호 중 하나를 알고 있어야 합니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>1. 인증서를 사용하여 대칭 키 열기  
+### <a name="a-opening-a-symmetric-key-by-using-a-certificate"></a>1\. 인증서를 사용하여 대칭 키 열기  
  다음 예에서는 `SymKeyMarketing3` 대칭 키를 열고 `MarketingCert9` 인증서의 프라이빗 키를 사용하여 해독합니다.  
   
 ```  
@@ -100,7 +99,7 @@ OPEN SYMMETRIC KEY SymKeyMarketing3
 GO  
 ```  
   
-### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>2. 다른 대칭 키를 사용하여 대칭 키 열기  
+### <a name="b-opening-a-symmetric-key-by-using-another-symmetric-key"></a>2\. 다른 대칭 키를 사용하여 대칭 키 열기  
  다음 예에서는 `MarketingKey11` 대칭 키를 열고 `HarnpadoungsatayaSE3` 대칭 키를 사용하여 해독합니다.  
   
 ```  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 34f30a8eb8a2d894b1de0a62f5151956c80f5653
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 3e2b32c6804de71d9af074de15b8506c493dfa99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030477"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>SQL Server 개체 및 버전에 대한 DAC 지원
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "53588727"
 |FUNCTION: 다중 문 테이블 반환|FUNCTION: 스칼라|  
 |INDEX: 클러스터형|INDEX: 비클러스터형|  
 |INDEX: 공간|INDEX: 고유|  
-|Login|Permissions|  
+|Login|사용 권한|  
 |역할 멤버 자격|SCHEMA|  
 |통계|STORED PROCEDURE: Transact-SQL|  
 |동의어|TABLE: CHECK 제약 조건|  
@@ -117,7 +116,7 @@ ms.locfileid: "53588727"
 ##  <a name="Considerations"></a> 배포 작업에 대한 추가 고려 사항  
  DAC Framework 데이터 배포 작업에 대한 다음 고려 사항에 유의하세요.  
   
--   **추출/내보내기** - DAC Framework를 사용하여 데이터베이스에서 패키지를 만드는 작업(예: .dacpac 파일 추출, .bacpac 파일 내보내기 등)에서는 이러한 제한이 적용되지 않습니다. 패키지의 데이터는 원본 데이터베이스에서 데이터의 전체 정확도 표현입니다. 패키지에 이러한 조건 중 하나라도 있는 경우 추출/내보내기 로그에는 위에서 설명한 메시지를 통한 문제 요약이 포함됩니다. 이것은 그들이 만든 패키지의 잠재적인 데이터 배포 문제에 대해 사용자에게 경고하기 위한 것입니다. 사용자는 로그에서 다음과 같은 요약 메시지를 확인할 수도 있습니다.  **이러한 제한은 데이터 형식 및 DAC Framework에서 만든 DAC 패키지에 저장된 값의 정확도에 영향을 미치지 않고, DAC 패키지를 데이터베이스에 배포한 결과 발생한 데이터 유형 및 값에만 적용됩니다. 영향 받는 데이터 및 이 제한을 해결하는 방법은** [다음 항목](https://go.microsoft.com/fwlink/?LinkId=267086)을 참조하세요.  
+-   **추출/내보내기** - DAC Framework를 사용하여 데이터베이스에서 패키지를 만드는 작업(예: .dacpac 파일 추출, .bacpac 파일 내보내기 등)에서는 이러한 제한이 적용되지 않습니다. 패키지의 데이터는 원본 데이터베이스에서 데이터의 전체 정확도 표현입니다. 패키지에 이러한 조건 중 하나라도 있는 경우 추출/내보내기 로그에는 위에서 설명한 메시지를 통한 문제 요약이 포함됩니다. 이것은 그들이 만든 패키지의 잠재적인 데이터 배포 문제에 대해 사용자에게 경고하기 위한 것입니다. 사용자는 로그에서 다음과 같은 요약 메시지를 확인할 수도 있습니다.  **이러한 제한은 데이터 형식 및 DAC Framework에서 만든 DAC 패키지에 저장된 값의 정확도에 영향을 미치지 않고, DAC 패키지를 데이터베이스에 배포한 결과로 생성된 데이터 형식 및 값에만 적용됩니다. 영향 받는 데이터 및 이 제한을 해결하는 방법은** [다음 항목](https://go.microsoft.com/fwlink/?LinkId=267086)을 참조하세요.  
   
 -   **배포/게시/가져오기** - DAC Framework를 사용하여 패키지를 데이터베이스에 배포하는 작업(예: .dacpac 파일 배포 또는 게시, .bacpac 파일 가져오기 등)에서는 이러한 제한이 적용됩니다. 대상 데이터베이스를 만드는 데이터에 패키지에 있는 데이터의 전체 정확도 표현이 포함되지 않을 수 있습니다. 배포/가져오기 로그에는 문제가 발생한 모든 인스턴스에 대해 위에서 언급한 메시지가 포함됩니다. 오류로 인해 작업은 차단되지만(위의 범주 3 참조) 다른 경고와 함께 계속됩니다.  
   

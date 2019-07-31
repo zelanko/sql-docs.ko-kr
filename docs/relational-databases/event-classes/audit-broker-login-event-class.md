@@ -11,14 +11,13 @@ helpviewer_keywords:
 ms.assetid: af9b1153-2791-40ef-a95c-50923cd0cc97
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 409e35e1f3f331eac121fea0588814a62bac6144
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: babd96ee665a589456d3fda7ed7e2a5a13366d36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903523"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -28,25 +27,25 @@ ms.locfileid: "47802311"
   
 |데이터 열|형식|설명|열 번호|필터 가능|  
 |-----------------|----------|-----------------|-------------------|----------------|  
-|**ApplicationName**|**nvarchar**|이 이벤트 클래스에서는 사용되지 않습니다.|10|사용자 계정 컨트롤|  
-|**ClientProcessID**|**int**|이 이벤트 클래스에서는 사용되지 않습니다.|9|사용자 계정 컨트롤|  
-|**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|사용자 계정 컨트롤|  
+|**ApplicationName**|**nvarchar**|이 이벤트 클래스에서는 사용되지 않습니다.|10|예|  
+|**ClientProcessID**|**int**|이 이벤트 클래스에서는 사용되지 않습니다.|9|예|  
+|**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ServerName **데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면** 에 데이터베이스 이름이 표시됩니다. DB_ID 함수를 사용하여 데이터베이스의 값을 확인할 수 있습니다.|3|예|  
 |**EventClass**|**int**|캡처된 이벤트 클래스 유형입니다. **Audit Broker Login** 에 대해서는 항상 **159**입니다.|27|아니오|  
 |**EventSequence**|**int**|이 이벤트의 시퀀스 번호입니다.|51|아니오|  
-|**EventSubClass**|**int**|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 다음 표에서는 이 이벤트에 대한 이벤트 하위 클래스 값을 나열합니다.|21|사용자 계정 컨트롤|  
+|**EventSubClass**|**int**|각 이벤트 클래스에 대한 자세한 정보를 제공하는 이벤트 하위 클래스 유형입니다. 다음 표에서는 이 이벤트에 대한 이벤트 하위 클래스 값을 나열합니다.|21|예|  
 |**FileName**|**nvarchar**|원격 Broker 인증 수준입니다. 원격 Broker 엔드포인트에서 구성된 지원되는 인증 방법입니다. 둘 이상의 메서드를 사용할 수 있는 경우 수락하는(대상) 엔드포인트에서 먼저 시도할 메서드를 결정합니다. 가능한 값은<br /><br /> **없음**. 인증 방법이 구성되어 있지 않습니다.<br /><br /> **NTLM**. NTLM 인증이 필요합니다.<br /><br /> **KERBEROS**- Kerberos 인증이 필요합니다.<br /><br /> **NEGOTIATE**- Windows에서 인증 방법을 협상합니다.<br /><br /> **CERTIFICATE**- 엔드포인트에 대해 구성된 인증서가 필요합니다. 이 인증서는 **master** 데이터베이스에 저장되어 있습니다.<br /><br /> **NTLM, CERTIFICATE**- NTLM 또는 SSL 인증서 인증을 적용합니다.<br /><br /> **KERBEROS, CERTIFICATE**- Kerberos 또는 엔드포인트 인증서 인증을 적용합니다.<br /><br /> **NEGOTIATE, CERTIFICATE**- Windows에서 인증 방법을 협상하거나 엔드포인트 인증서 인증을 사용합니다.<br /><br /> **CERTIFICATE, NTLM**- 엔드포인트 인증서 또는 NTLM 인증을 적용합니다.<br /><br /> **CERTIFICATE, KERBEROS**- 엔드포인트 인증서 또는 Kerberos 인증을 적용합니다.<br /><br /> **CERTIFICATE, NEGOTIATE**- 엔드포인트 인증서 인증을 적용하거나 Windows에서 인증 방법을 협상합니다.|36|아니오|  
-|**HostName**|**nvarchar**|이 이벤트 클래스에서는 사용되지 않습니다.|8|사용자 계정 컨트롤|  
+|**HostName**|**nvarchar**|이 이벤트 클래스에서는 사용되지 않습니다.|8|예|  
 |**IsSystem**|**int**|이벤트가 시스템 프로세스에서 발생했는지 아니면 사용자 프로세스에서 발생했는지를 나타냅니다. 1 = 시스템, 0 = 사용자|60|아니오|  
-|**LoginSid**|**image**|로그인한 사용자의 SID(보안 ID)입니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|사용자 계정 컨트롤|  
-|**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|사용자 계정 컨트롤|  
-|**NTUserName**|**nvarchar**|이 이벤트를 생성한 연결을 소유하고 있는 사용자의 이름입니다.|6|사용자 계정 컨트롤|  
+|**LoginSid**|**image**|로그인한 사용자의 SID(보안 ID)입니다. 각 SID는 서버의 각 로그인마다 고유합니다.|41|예|  
+|**NTDomainName**|**nvarchar**|사용자가 속한 Windows 도메인입니다.|7|예|  
+|**NTUserName**|**nvarchar**|이 이벤트를 생성한 연결을 소유하고 있는 사용자의 이름입니다.|6|예|  
 |**ObjectName**|**nvarchar**|이 연결에 사용된 연결 문자열입니다.|34|아니오|  
 |**OwnerName**|**nvarchar**|로컬 Broker 엔드포인트에서 구성된 지원되는 인증 방법입니다. 둘 이상의 메서드를 사용할 수 있는 경우 수락하는(대상) 엔드포인트에서 먼저 시도할 메서드를 결정합니다. 가능한 값은<br /><br /> **없음**. 인증 방법이 구성되어 있지 않습니다.<br /><br /> **NTLM**. NTLM 인증이 필요합니다.<br /><br /> **KERBEROS**- Kerberos 인증이 필요합니다.<br /><br /> **NEGOTIATE**- Windows에서 인증 방법을 협상합니다.<br /><br /> **CERTIFICATE**- 엔드포인트에 대해 구성된 인증서가 필요합니다. 이 인증서는 **master** 데이터베이스에 저장되어 있습니다.<br /><br /> **NTLM, CERTIFICATE**- NTLM 또는 SSL 인증서 인증을 적용합니다.<br /><br /> **KERBEROS, CERTIFICATE**- Kerberos 또는 엔드포인트 인증서 인증을 적용합니다.<br /><br /> **NEGOTIATE, CERTIFICATE**- Windows에서 인증 방법을 협상하거나 엔드포인트 인증서 인증을 사용합니다.<br /><br /> **CERTIFICATE, NTLM**- 엔드포인트 인증서 또는 NTLM 인증을 적용합니다.<br /><br /> **CERTIFICATE, KERBEROS**- 엔드포인트 인증서 또는 Kerberos 인증을 적용합니다.<br /><br /> **CERTIFICATE, NEGOTIATE**- 엔드포인트 인증서 인증을 적용하거나 Windows에서 인증 방법을 협상합니다.|37|아니오|  
 |**ProviderName**|**nvarchar**|이 연결에 사용된 인증 방법입니다.|46|아니오|  
 |**RoleName**|**nvarchar**|연결의 역할입니다. 이 역할은 **시작자** 또는 **대상**입니다.|38|아니오|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar**|추적 중인 SQL Server 인스턴스의 이름입니다.|26|아니오|  
-|**SPID**|**int**|SQL Server가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|사용자 계정 컨트롤|  
-|**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|사용자 계정 컨트롤|  
+|**SPID**|**int**|SQL Server가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|12|예|  
+|**StartTime**|**datetime**|이벤트가 시작된 시간입니다(사용 가능한 경우).|14|예|  
 |**State**|**int**|SQL Server 원본 코드 내에서 이벤트가 생성된 위치를 나타냅니다. 이 이벤트가 생성될 수 있는 각 위치의 상태 코드는 서로 다릅니다. Microsoft 지원 엔지니어는 이 상태 코드를 사용하여 이벤트가 생성된 위치를 찾을 수 있습니다.|30|아니오|  
 |**TargetUserName**|**nvarchar**|로그인 상태입니다. 다음 중 하나입니다.<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> error<br /><br /> <br /><br /> **참고**: ISC = 보안 컨텍스트 시작. ASC = 보안 컨텍스트 허용|39|아니오|  
 |**TransactionID**|**bigint**|시스템이 할당한 트랜잭션 ID입니다.|4|아니오|  

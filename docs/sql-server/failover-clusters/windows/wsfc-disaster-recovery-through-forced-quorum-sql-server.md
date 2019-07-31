@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: 6cefdc18-899e-410c-9ae4-d6080f724046
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d1d5b272edba906e829b44ae4e23e9ddd8d4eaa0
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 2453c994ca274d4fd584d04026e3f4e0eb0cecf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904950"
 ---
 # <a name="wsfc-disaster-recovery-through-forced-quorum-sql-server"></a>강제 쿼럼을 통해 WSFC 재해 복구(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   쿼럼 실패는 일반적으로 시스템 관련 재해나, 지속적인 통신 오류 또는 WSFC 클러스터의 여러 노드와 관련된 잘못된 구성으로 인해 발생합니다.  쿼럼 실패에서 복구하려면 수동 개입이 필요합니다.  
   
--   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
+-   **시작하기 전에:**  [필수 구성 요소](#Prerequisites), [보안](#Security)  
   
 -   **강제 쿼럼 절차를 통해 WSFC 재해 복구** [강제 쿼럼 절차를 통해 WSFC 재해 복구](#Main)  
   
@@ -41,7 +40,7 @@ ms.locfileid: "51699731"
 > [!WARNING]  
 >  사용자는 Windows Server 장애 조치(Failover) 클러스터링, WSFC 쿼럼 모델, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]및 환경의 특정 배포 구성에 대한 개념 및 상호 작용에 대해 잘 알고 있어야 합니다.  
 >   
->  자세한 내용은  [SQL Server의 WSFC(Windows Server 장애 조치(failover) 클러스터링)](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 쿼럼 모드 및 투표 구성(SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)을 참조하세요.  
+>  참조 항목:  [SQL Server의 WSFC(Windows Server 장애 조치(Failover) 클러스터링)](https://msdn.microsoft.com/library/hh270278\(v=SQL.110\).aspx), [WSFC 쿼럼 모드 및 투표 구성(SQL Server)](https://msdn.microsoft.com/library/hh270280\(v=SQL.110\).aspx)  
   
 ###  <a name="Security"></a> 보안  
  사용자는 WSFC 클러스터의 각 노드에 대한 로컬 Administrators 그룹의 멤버인 도메인 계정이어야 합니다.  
@@ -66,7 +65,7 @@ ms.locfileid: "51699731"
   
      이 노드에서 강제 쿼럼 절차를 수행하여 수동으로 클러스터를 온라인 상태로 전환합니다.  데이터 손실 위험을 최소화하려면 가용성 그룹 주 복제본을 마지막으로 호스팅한 노드를 선택합니다.  
   
-     자세한 내용은  [쿼럼 없이 WSFC 클러스터 강제 시작](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)을 참조하세요.  
+     참조 항목:  [쿼럼 없이 WSFC 클러스터 강제 시작](https://msdn.microsoft.com/library/hh270275\(v=SQL.110\).aspx)  
   
     > [!NOTE]  
     >  강제 쿼럼 설정은 클러스터 전반에 영향을 주어 논리적 WSFC 클러스터가 과반수의 투표를 확보하고 자동으로 정상 쿼럼 작업 모드로 전환될 때까지 쿼럼 검사를 차단합니다.  
