@@ -11,12 +11,12 @@ author: Minewiskan
 ms.author: owend
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: erikre
-ms.openlocfilehash: 99e6a0b600dfe7adfe173176b69cd2b45ffdd223
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 8afd4b49a5dddd4ea9806dddd9c1cf30cd04e603
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209212"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265659"
 ---
 # <a name="upgrade-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 업그레이드
 
@@ -121,11 +121,11 @@ ms.locfileid: "53209212"
         > [!IMPORTANT]  
         >  첫 번째 동작인 **팜 솔루션 업그레이드**를 항상 먼저 처리해야 합니다. 이 동작은 서버를 구성하는 데 사용되는 PowerShell cmdlet을 등록합니다. 이 동작에서 오류가 발생하는 경우 계속하지 마십시오. 태스크 목록의 추가 동작을 처리하기 전에 오류에서 제공하는 정보를 사용하여 문제를 진단하고 해결합니다.  
   
-    7.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. **실행**을 클릭하면 작업이 일괄 처리 모드로 처리됨을 알리는 다음 경고가 나타납니다. "**도구에서 유효한 것으로 플래그가 지정되는 모든 구성 설정이 SharePoint 팜에 적용됩니다. 계속하시겠습니까?**”.  
+    7.  **실행** 을 클릭하여 이 태스크에 유효한 모든 동작을 수행합니다. **실행** 은 유효성 검사를 통과한 후에만 사용할 수 있습니다. **실행**을 클릭하면 작업이 일괄 처리 모드로 처리됨을 알리는 다음 경고가 나타납니다. "**도구에서 유효한 것으로 플래그가 지정되는 모든 구성 설정이 SharePoint 팜에 적용됩니다. 계속하시겠습니까?** ”.  
   
     8.  계속하려면 **예** 를 클릭합니다.  
   
-    9. 팜에서 솔루션 및 기능 업그레이드를 완료하는 데 몇 분 정도 걸릴 수 있습니다. 이 시간 동안 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터**** 에 대한 연결 요청은 “**데이터를 새로 고칠 수 없습니다**” 또는 “**요청된 작업을 수행하는 동안 오류가 발생했습니다. 다시 시도하세요**.” 업그레이드가 완료된 후에는 서버를 사용할 수 있으며 이러한 오류가 더 이상 발생하지 않습니다.  
+    9. 팜에서 솔루션 및 기능 업그레이드를 완료하는 데 몇 분 정도 걸릴 수 있습니다. 이 시간 동안 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터에 대한 연결 요청은 **실패**하며 “**데이터를 새로 고칠 수 없습니다.** ” 또는 “**요청된 작업을 수행하는 동안 오류가 발생했습니다. 다시 시도하세요**.” 업그레이드가 완료된 후에는 서버를 사용할 수 있으며 이러한 오류가 더 이상 발생하지 않습니다.  
   
      자세한 내용은 다음 항목을 참조하세요.  
   

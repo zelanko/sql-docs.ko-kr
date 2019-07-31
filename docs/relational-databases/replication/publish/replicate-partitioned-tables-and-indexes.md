@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: aface984e9cc370ed906ab5abef65ac6f4bb6bd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1962546b83926f1ff189ece6757ebbf3659976ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073585"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>분할 테이블 및 인덱스 복제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,15 +42,15 @@ ms.locfileid: "47787261"
   
 -   다음 저장 프로시저 중 하나의 *schema_option* 매개 변수를 사용합니다.  
   
-    -   트랜잭션 복제의 경우[sp_addarticle](../../../relational-databases/system-st또는ed-procedures/sp-addarticle-transact-sql.md) 또는 [sp_changearticle](../../../relational-databases/system-st또는ed-procedures/sp-changearticle-transact-sql.md) f또는 transactional replication  
+    -   트랜잭션 복제의 경우[sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 또는 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) f또는 transactional replication  
   
-    -   병합 복제의 경우[sp_addmergearticle](../../../relational-databases/system-st또는ed-procedures/sp-addmergearticle-transact-sql.md) 또는 [sp_changemergearticle](../../../relational-databases/system-st또는ed-procedures/sp-changemergearticle-transact-sql.md) f또는 merge replication  
+    -   병합 복제의 경우[sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)또는 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) f또는 merge replication  
   
      위의 표에 나온 개체를 복사하려면 적절한 스키마 옵션 값을 지정합니다. 스키마 옵션을 지정하는 방법은 [Specify Schema Options](../../../relational-databases/replication/publish/specify-schema-options.md)을 참조하십시오.  
   
  복제는 초기 동기화 중에 개체를 구독자에 복사합니다. 파티션 구성표에서 PRIMARY 파일 그룹 이외의 파일 그룹을 사용하는 경우 초기 동기화 전에 이러한 파일 그룹이 구독자에 있어야 합니다.  
   
- 구독자를 초기화하면 데이터 변경 사항이 구독자로 전파되고 해당 파티션에 적용됩니다. 그러나 파티션 구성표에 대한 변경은 지원되지 않습니다. 트랜잭션 및 병합 복제는 다음 명령의 복제를 지원하지 않습니다. ALTER INDEX의 ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 REBUILD WITH PARTITION 문을 지원하지 않습니다. 연결된 변경 내용은 구독자에게 자동으로 복제되지 않습니다. 구독자에서 수동으로 비슷한 변경을 하려면 사용자에게 책임이 있습니다.  
+ 구독자를 초기화하면 데이터 변경 사항이 구독자로 전파되고 해당 파티션에 적용됩니다. 그러나 파티션 구성표에 대한 변경은 지원되지 않습니다. 트랜잭션 및 병합 복제는 ALTER INDEX의 ALTER PARTITION FUNCTION, ALTER PARTITION SCHEME 또는 REBUILD WITH PARTITION 문의 복제를 지원하지 않습니다. 연결된 변경 내용은 구독자에게 자동으로 복제되지 않습니다. 구독자에서 수동으로 비슷한 변경을 하려면 사용자에게 책임이 있습니다.  
   
 ## <a name="replication-support-for-partition-switching"></a>파티션 전환을 위한 복제 지원  
  테이블 분할의 주요 이점 중 하나는 파티션 간에 데이터의 하위 집합을 빠르고 효율적으로 이동할 수 있다는 것입니다. 데이터는 SWITCH PARTITION 문을 사용하여 이동합니다. 기본적으로 복제를 사용할 수 있도록 테이블을 설정하면 다음과 같은 이유로 SWITCH PARTITION 작업이 차단됩니다.  
@@ -72,7 +71,7 @@ ms.locfileid: "47787261"
 ### <a name="enabling-partition-switching"></a>파티션 전환 설정  
  다음과 같은 트랜잭션 게시 속성을 사용하면 사용자가 복제된 환경에서 파티션 전환의 동작을 제어할 수 있습니다.  
   
--   **@allow_partition_switch**. **테이블 파티션 구성표 복사**로 설정하면 게시 데이터베이스에 대해 SWITCH PARTITION을 실행할 수 있습니다.  
+-   **@allow_partition_switch** . **테이블 파티션 구성표 복사**로 설정하면 게시 데이터베이스에 대해 SWITCH PARTITION을 실행할 수 있습니다.  
   
 -   **@replicate_partition_switch** . SWITCH PARTITION DDL 문을 구독자에 복제해야 하는지 여부를 결정합니다. 이 옵션은 **@allow_partition_switch** 가 **테이블 파티션 구성표 복사**을 참조하세요.  
   
