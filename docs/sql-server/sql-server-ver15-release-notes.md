@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 릴리스 정보 | Microsoft Docs
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 7394fcf4d3a6fcc282e7ea0c09af01aada643954
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8e06fd47a8922e1b0ed494ce8ae47fc334ff8e6
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136316"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495492"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 미리 보기 릴리스 정보
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "68136316"
 이 문서에서는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP(Community Technology Preview) 릴리스의 제한 사항 및 알려진 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
 - [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-## <a name="ctp-31"></a>CTP 3.1
+## <a name="ctp-32"></a>CTP 3.2
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1은 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 최신 퍼블릭 릴리스입니다.
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1은 Evaluation Edition으로만 사용 가능합니다. 다른 에디션은 사용할 수 없습니다.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2는 Evaluation Edition으로만 사용 가능합니다. 다른 에디션은 사용할 수 없습니다.
 
 CTP 릴리스의 지원 및 라이선스에 관한 전체 세부 정보는 설치 미디어가 포함된 `license_Eval.rtf` 내에 있습니다.
 
@@ -59,19 +59,18 @@ CTP 릴리스의 지원 및 라이선스에 관한 전체 세부 정보는 설�
   - SQL Server Reporting Services
   - Kubernetes에 대한 Always On 가용성 그룹
   - 가속 데이터베이스 복구
-  - 메모리 최적화 tempdb 메타데이터
 
 - **해결 방법**: 없음 제외는 SQL 얼리어답터 프로그램 참가자를 포함하여 모든 고객에게 적용됩니다.
 
-- **적용 대상**: CTP 3.0
+- **적용 대상**: 모든 CTP 릴리스
 
 ## <a name="updated-compiler"></a>컴파일러 업데이트
 
-- **문제 및 고객에게 미치는 영향**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]는 업데이트 컴파일러를 사용하여 빌드됩니다. CTP 2.1에서는 부동 소수점 및 다른 변환 시나리오가 업데이트된 컴파일러 때문에 이전 버전과 다른 값을 반환할 수 있다는 알려진 문제가 발생했습니다. CTP 2.2에는 영향을 받는 시나리오가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]라는 이전 버전과 동일한 결과를 반환하는지 확인하는 작업이 포함됩니다. CTP 3.1 릴리스부터는 다른 문제가 발생하지 않았습니다. [!INCLUDE[ss2017](../includes/sssqlv14-md.md)]와 비교하여 비정상적인 결과를 즉시 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 팀](http://aka.ms/sqlfeedback)에게 보고해주세요.
+- **문제 및 고객에게 미치는 영향**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]는 업데이트 컴파일러를 사용하여 빌드됩니다. CTP 2.1에서는 부동 소수점 및 다른 변환 시나리오가 업데이트된 컴파일러 때문에 이전 버전과 다른 값을 반환할 수 있다는 알려진 문제가 발생했습니다. CTP 2.2에는 영향을 받는 시나리오가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]라는 이전 버전과 동일한 결과를 반환하는지 확인하는 작업이 포함됩니다. CTP 3.2 릴리스부터는 다른 문제가 발생하지 않았습니다. [!INCLUDE[ss2017](../includes/sssqlv14-md.md)]와 비교하여 비정상적인 결과를 즉시 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 팀](http://aka.ms/sqlfeedback)에게 보고해주세요.
 
 - **해결 방법**: 해당 사항 없음
 
-- **적용 대상**: SQL Server 2019 CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
+- **적용 대상**: 모든 CTP 릴리스
 
 ## <a name="installation-wizard-may-wait-between-eula-pages"></a>EULA 페이지가 넘어갈 때마다 설치 마법사가 잠시 멈출 수 있습니다.
 
@@ -94,7 +93,7 @@ CTP 릴리스의 지원 및 라이선스에 관한 전체 세부 정보는 설�
  
 - **해결 방법**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP에 대한 해결 방법은 없습니다.
 
-- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2, CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
 ## <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 
@@ -102,7 +101,7 @@ CTP 릴리스의 지원 및 라이선스에 관한 전체 세부 정보는 설�
 
 - **해결 방법**: 리치 계산을 사용하도록 설정하려면 `DBCC traceon(127,-1)`을 실행합니다. 자세한 내용은 [풍부한 컴퓨팅사용](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave)을 참조하세요.
 
-- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2, CTP 3.1
 
 ## <a name="sql-server-configuration-manager-may-not-start"></a>SQL Server 구성 관리자가 시작하지 않을 수도 있습니다.
 
