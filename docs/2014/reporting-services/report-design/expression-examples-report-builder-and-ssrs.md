@@ -9,16 +9,16 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
-ms.openlocfilehash: 456dd8e4e232f77e7cc7709a997fdd8ae5ef0e5b
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413008"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661288"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>식 예(보고서 작성기 및 SSRS)
 
-식은 보고서에서 내용과 보고서 모양을 제어하는 데 자주 사용됩니다. 식 쓰는지 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], 기본 제공 함수 사용자 지정 코드, 보고서 및 그룹 변수 및 사용자 정의 변수를 사용할 수 있습니다. 식은 등호(=)로 시작됩니다. 식 편집기와 포함할 수 있는 참조 형식에 대한 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) 및 [식 추가&#40;보고서 작성기 및 SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)를 참조하세요.  
+식은 보고서에서 내용과 보고서 모양을 제어하는 데 자주 사용됩니다. 식은에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]작성 되며 기본 제공 함수 사용자 지정 코드, 보고서 및 그룹 변수 및 사용자 정의 변수를 사용할 수 있습니다. 식은 등호(=)로 시작됩니다. 식 편집기와 포함할 수 있는 참조 형식에 대한 자세한 내용은 [보고서에 사용되는 식&#40;보고서 작성기 및 SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md) 및 [식 추가&#40;보고서 작성기 및 SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)를 참조하세요.  
 
 > [!IMPORTANT]  
 >  RDL 샌드박싱 기능이 설정되면 보고서를 게시할 때 특정 형식 및 멤버만 식 텍스트에서 사용할 수 있습니다. 자세한 내용은 [Enable and Disable RDL Sandboxing](../enable-and-disable-rdl-sandboxing.md)을 참조하세요.  
@@ -51,7 +51,7 @@ ms.locfileid: "67413008"
 
 이 항목의 식 예제에서도 사용하는 함수와 연산자 중 상당수를 사용하는 식을 작성하는 방법을 보고서 작성의 맥락에서 알아보려면 [자습서: 식 소개](../tutorial-introducing-expressions.md)를 참조하세요.  
 
-식 편집기에서는 기본 제공 함수를 계층적으로 볼 수 있습니다. 함수를 선택하면 값 창에 코드 예가 표시됩니다. 자세한 내용은 참조는 [식 대화 상자](../expression-dialog-box.md) 또는 [식 대화 상자 &#40;보고서 작성기&#41;](../expression-dialog-box-report-builder.md).  
+식 편집기에서는 기본 제공 함수를 계층적으로 볼 수 있습니다. 함수를 선택하면 값 창에 코드 예가 표시됩니다. 자세한 내용은 [보고서 작성기 &#40;&#41;](../expression-dialog-box-report-builder.md) [식 대화 상자](../expression-dialog-box.md) 또는 식 대화 상자를 참조 하세요.  
 
 ## <a name="functions"></a>함수  
 
@@ -176,9 +176,9 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
 ```  
 
-대신 서식을 적용 하려면 입력란의 Format 속성을 사용 해야 입력란에 날짜 또는 숫자만 있으면는 `Format` 입력란 내의 함수입니다.  
+텍스트 상자에 날짜 또는 숫자만 있는 경우 텍스트 상자 내에서 `Format` 함수 대신 텍스트 상자의 Format 속성을 사용 하 여 서식을 적용 해야 합니다.  
 
--   합니다 `Right`, `Len`, 및 `InStr` 함수는 부분 문자열을 반환, 예를 들어, 조정 하는 데 유용 *도메인*\\*username* 에서 사용자 이름만을 합니다. 다음 식에서는\\User *라는 매개 변수에서 백슬래시(* ) 문자의 오른쪽에 있는 문자열 부분을 반환합니다.  
+-   , `Right`\\  및 함수`InStr` 는 부분 문자열을 반환 하는 데 유용 합니다. 예를 들어 도메인 사용자 이름만 사용자 이름으로 트리밍할 수 있습니다. `Len` 다음 식에서는\\User *라는 매개 변수에서 백슬래시(* ) 문자의 오른쪽에 있는 문자열 부분을 반환합니다.  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -190,7 +190,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
 ```  
 
--   다중값 매개 변수에서 선택한 값을 표시합니다. 다음 예제에서는 합니다 `Join` 함수는 매개 변수의 선택한 값을 연결 하려면 *MySelection* 보고서 항목에 있는 입력란의 값에 대 한 식으로 설정할 수 있는 단일 문자열에:  
+-   다중값 매개 변수에서 선택한 값을 표시합니다. 다음 예에서는 함수를 `Join` 사용 하 여 *myselection* 매개 변수의 선택한 값을 보고서 항목에 있는 입력란의 값에 대 한 식으로 설정할 수 있는 단일 문자열에 연결 합니다.  
 
 ```  
 = Join(Parameters!MySelection.Value)  
@@ -203,7 +203,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 
 ```  
 
--   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions>의 `Regex` 함수는 전화 번호 형식을 지정하는 등 기존 문자열의 형식을 변경하는 데 유용합니다. 다음 식을 사용 하 여 `Replace` 필드의 10 자리 전화 번호 서식을 변경 하는 함수 "*nnn*-*nnn*-*nnnn* "를" (*nnn*) *nnn*-*nnnn*":  
+-   [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions>의 `Regex` 함수는 전화 번호 형식을 지정하는 등 기존 문자열의 형식을 변경하는 데 유용합니다. 다음 식에서는 `Replace` 함수를 사용 하 여 필드의 10 자리 전화 번호 형식을 "*nnn*-*nnn*-*nnnn*"에서 "(*nnn*) *nnn* - 으로 변경 합니다. *nnnn*":  
 
 ```  
 =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -217,7 +217,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 -   키 필드를 지정하면 `Lookup` 함수를 사용하여 키-값 쌍과 같이 일 대 일 관계가 있는 데이터 집합에서 값을 검색할 수 있습니다. 일치시킬 제품 식별자가 제공된 경우 다음 식은 데이터 세트에서 제품 이름("Product")을 표시합니다.  
 
 ```  
-=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
 ```  
 
 #### <a name="lookupset"></a>LookupSet  
@@ -433,7 +433,7 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 =IIF(CountRows()>12,false,true)  
 ```  
 
--   다음 식 설정 된 경우는 `Hidden` 열의 속성이 열을 표시만 데이터 원본에서 데이터를 검색 한 후 보고서 데이터 집합에 필드가 있는 경우:  
+-   다음 식을 열의 `Hidden` 속성에 설정 하면 데이터 원본에서 데이터를 검색 한 후 보고서 데이터 집합에 필드가 있는 경우에만 열이 표시 됩니다.  
 
 ```  
 =IIF(Fields!Column_1.IsMissing, true, false)  

@@ -1,5 +1,5 @@
 ---
-title: 백업, 복원 및 SSIS 카탈로그를 이동 합니다. | Microsoft Docs
+title: SSIS 카탈로그 백업, 복원 및 이동 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 625e090ab65eff7a912785e3ddef2de3e7d83b0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061273"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670504"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>SSIS 카탈로그 백업, 복원 및 이동
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] 에는 SSISDB 데이터베이스가 포함되어 있습니다. SSISDB 데이터베이스에서 뷰를 쿼리하여 **SSISDB** 카탈로그에 저장된 개체, 설정 및 작업 데이터를 검사할 수 있습니다. 이 항목에서는 데이터베이스 백업 및 복원에 대한 지침을 제공합니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "66061273"
   
 5.  SSISDB 카탈로그가 만들어지지 않은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스로 SSISDB 데이터베이스를 복원할 경우 다음을 수행하여 sp_ssis_startup에 대한 CREATE PROCEDURE 스크립트를 생성합니다. 자세한 내용은 [CREATE PROCEDURE&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)를 참조하세요.  
   
-    1.  개체 탐색기에서 **데이터베이스** 노드를 확장한 후 **master** > **프로그래밍 기능** > **저장 프로시저** 노드를 확장합니다.  
+    1.  개체 탐색기에서 **데이터베이스** 노드를 확장 한 다음 **시스템 데이터베이스** > **마스터** > **프로그래밍 기능** > **저장 프로시저** 노드를 확장 합니다.  
   
     2.  **dbo.sp_ssis_startup**을 마우스 오른쪽 단추로 클릭한 후 **저장 프로시저 스크립팅** > **CREATE** > **새 쿼리 편집기 창**을 클릭합니다.  
   
