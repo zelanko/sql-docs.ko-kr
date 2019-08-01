@@ -6672,8 +6672,6 @@
                   href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
         - name: SQL Server 유틸리티
           href: relational-databases/manage/sql-server-utility-features-and-tasks.md
-        - name: SQL 평가 API
-          href: sql-assessment-api/sql-assessment-api-overview.md
           items:
             - name: 동일한 SQL Server 인스턴스에서 유틸리티 및 유틸리티 이외의 컬렉션 세트 실행을 위한 고려 사항
               href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -6709,6 +6707,8 @@
               href: relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md
             - name: 유틸리티 탐색기 F1 도움말
               href: relational-databases/manage/utility-explorer-f1-help.md
+        - name: SQL 평가 API
+          href: sql-assessment-api/sql-assessment-api-overview.md
     - name: 모니터
       href: relational-databases/performance/monitor-and-tune-for-performance.md
       items:
@@ -7532,6 +7532,8 @@
               href: master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md
             - name: Master Data Services 개발자 설명서
               href: master-data-services/develop/master-data-services-developer-documentation.md
+            - name: 관리되는 인스턴스의 호스트 데이터베이스
+              href: ./master-data-services/master-data-services-host-database-on-managed-instance.md
         - name: Excel 추가 기능
           href: master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
           items:
@@ -7972,8 +7974,6 @@
               href: relational-databases/security/sql-vulnerability-assessment.md
             - name: 데이터 검색 및 분류
               href: relational-databases/security/sql-data-discovery-and-classification.md
-            - name: SQL Server 커넥터 문제 해결
-              href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
         - name: 인증 액세스
           items:
             - name: 유효 사용 권한 결정
@@ -8021,8 +8021,16 @@
                   href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: TDE로 보호되는 데이터베이스 이동
               href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
-            - name: EKM를 사용하여 TDE 활성화
-              href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+            - name: 확장 가능 키 관리
+              items:
+                - name: EKM를 사용하여 TDE 활성화
+                  href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+                - name: 암호화를 사용하여 SQL Server 커넥터
+                  href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
+                - name: Azure Key Vault를 사용한 EKM
+                  href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+                - name: SQL Server 커넥터 문제 해결
+                  href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
             - name: 서비스 마스터 키 백업
               href: relational-databases/security/encryption/back-up-the-service-master-key.md
             - name: 서비스 마스터 키 복원
@@ -8039,16 +8047,12 @@
               href: relational-databases/security/encryption/encrypt-a-column-of-data.md
         - name: Azure SQL Database 보호
           items:
-            - name: 암호화를 사용하여 SQL Server 커넥터
-              href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
             - name: 사용자 고유 키 가져오기 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
             - name: TDE BYOK 키 순환 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
             - name: TDE 보호기 제거 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
-            - name: Azure Key Vault를 사용한 EKM
-              href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
         - name: 감사
           items:
             - name: 서버 감사 사양 만들기
