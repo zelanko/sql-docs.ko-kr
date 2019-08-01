@@ -1,5 +1,5 @@
 ---
-title: sp_server_info (TRANSACT-SQL) | Microsoft Docs
+title: sp_server_info (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 2dc2c262-3cfa-4a84-8127-3632ba583543
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 6aae34fb03322a40f1b970df6271bb89d18b3293
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7409dcee64c7867b8811a282be71070923d48aa1
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104447"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702850"
 ---
 # <a name="spserverinfo-transact-sql"></a>sp_server_info(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 데이터베이스 게이트웨이 또는 기본 데이터 원본에 대해 특성 이름의 목록과 특성 값을 반환합니다.  
   
@@ -39,7 +40,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @attribute_id = ] 'attribute_id'` 특성의 정수 ID입니다. *attribute_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @attribute_id = ] 'attribute_id'`특성의 정수 ID입니다. *attribute_id* 은 **int**이며 기본값은 NULL입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  없음  
@@ -52,7 +53,7 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**ATTRIBUTE_NAME**|**varchar(** 60 **)**|특성 이름입니다.|  
 |**ATTRIBUTE_VALUE**|**varchar(** 255 **)**|특성의 현재 설정입니다.|  
   
- 다음 표에서는 특성을 나열합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ODBC 클라이언트 라이브러리는 현재 특성을 사용 **1**, **2**합니다 **18**를 **22**, 및 **500** 연결 시 시간입니다.  
+ 다음 표에서는 특성을 나열합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]ODBC 클라이언트 라이브러리는 현재 연결 시 특성 **1**, **2**, **18**, **22**및 **500** 을 사용 합니다.  
   
 |ATTRIBUTE_ID|ATTRIBUTE_NAME 설명|ATTRIBUTE_VALUE|  
 |-------------------|---------------------------------|----------------------|  
@@ -69,12 +70,12 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**18**|COLLATION_SEQ<br /><br /> 해당 서버의 문자 집합 순서를 나타냅니다.|charset=iso_1 sort_order=dictionary_iso charset_num=1 sort_order_num=51|  
 |**19**|SAVEPOINT_SUPPORT<br /><br /> 기본 DBMS가 명명된 저장점을 지원하는지를 나타냅니다.|Y|  
 |**20**|MULTI_RESULT_SETS<br /><br /> 기본 데이터베이스 또는 게이트웨이가 여러 결과 집합을 지원하는지를 나타냅니다. 지원될 경우 게이트웨이를 통해 여러 결과 집합을 클라이언트에 반환하는 여러 문을 보낼 수 있습니다.|Y|  
-|**22**|ACCESSIBLE_TABLES<br /><br /> 지정에서 든 **sp_tables**, 게이트웨이가 테이블, 뷰 및 등등으로 현재 사용자 (즉, 테이블에 대해 최소한 SELECT 권한이 있는 사용자)가 액세스할 수를 반환 합니다.|Y|  
+|**22**|ACCESSIBLE_TABLES<br /><br /> **Sp_tables**에서 게이트웨이가 현재 사용자가 액세스할 수 있는 테이블, 뷰 등을 반환 하는지 여부를 지정 합니다 (테이블에 대 한 SELECT 권한이 있는 사용자).|Y|  
 |**100**|USERID_LENGTH<br /><br /> 사용자 이름에 사용할 수 있는 최대 문자 수를 나타냅니다.|128|  
 |**101**|QUALIFIER_TERM<br /><br /> 세 부분으로 구성된 이름 중 첫 번째 부분인 테이블 한정자에 대한 DBMS 공급업체 용어를 나타냅니다.|database|  
 |**102**|NAMED_TRANSACTIONS<br /><br /> 기본 DBMS가 명명된 트랜잭션을 지원하는지를 나타냅니다.|Y|  
 |**103**|SPROC_AS_LANGUAGE<br /><br /> 저장 프로시저가 언어 이벤트로 실행될 수 있는지 나타냅니다.|Y|  
-|**104**|ACCESSIBLE_SPROC<br /><br /> 지정에서 든 **sp_stored_procedures**, 게이트웨이가 현재 사용자가 실행 된 저장된 프로시저만 반환 합니다.|Y|  
+|**104**|ACCESSIBLE_SPROC<br /><br /> **Sp_stored_procedures**에서 게이트웨이가 현재 사용자가 실행 가능한 저장 프로시저만 반환 하는지 여부를 지정 합니다.|Y|  
 |**105**|MAX_INDEX_COLS<br /><br /> DBMS의 인덱스에 사용 가능한 최대 열 수를 나타냅니다.|16|  
 |**106**|RENAME_TABLE<br /><br /> 테이블의 이름을 바꿀 수 있는지를 나타냅니다.|Y|  
 |**107**|RENAME_COLUMN<br /><br /> 열의 이름을 바꿀 수 있는지를 나타냅니다.|Y|  
@@ -87,13 +88,13 @@ sp_server_info [[@attribute_id = ] 'attribute_id']
 |**500**|SYS_SPROC_VERSION<br /><br /> 저장 프로시저가 현재 구현하고 있는 카탈로그의 버전을 나타냅니다.|현재 버전 번호|  
   
 ## <a name="remarks"></a>설명  
- **sp_server_info** 에서 제공 된 정보의 하위 집합을 반환 **SQLGetInfo** ODBC에서.  
+ **sp_server_info** 는 ODBC에서 **SQLGetInfo** 가 제공 하는 정보의 하위 집합을 반환 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  스키마에 대한 SELECT 권한이 필요합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [카탈로그 저장된 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [카탈로그 저장 프로시저 &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
