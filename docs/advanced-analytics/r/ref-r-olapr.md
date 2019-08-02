@@ -1,18 +1,19 @@
 ---
 title: olapR R 함수 라이브러리
-description: SQL Server 2016 R Services에서 olapR 함수 라이브러리를 소개 하 고 R을 사용 하 여 SQL Server 2017 Machine Learning Services를 소개 합니다.
+description: SQL Server 2016 R Services에서 olapR 함수 라이브러리를 소개 하 고 R을 사용 하 Machine Learning Services SQL Server 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 674e4ed4d1967452093e81e7bb4f5518d9237cf6
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 507bd04140880a3c15f1e72eed49c29ade56769c
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469972"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715002"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapR (SQL Server의 R 라이브러리)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +42,7 @@ library(olapR)
 
 Product | 위치 |
 --------|----------|
-SQL Server 2017 Machine Learning Services (R 통합 포함) | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
+SQL Server Machine Learning Services (R 통합 포함) | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
 SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
 Microsoft Machine Learning Server (R Server) | C:\Program Files\Microsoft\R_SERVER\library |
 Microsoft R Client | C:\Program Files\Microsoft\R Client\R_SERVER\library |

@@ -7,12 +7,13 @@ ms.date: 01/25/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f86bedc3cfd92272b500d5d3edd701b6ca51d38b
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a5194f251b7ea47e0d9485446b8957e96037ded0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469986"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714967"
 ---
 # <a name="create-a-login-for-sqlrusergroup"></a>SQLRUserGroup에 대한 로그인 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

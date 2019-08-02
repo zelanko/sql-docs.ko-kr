@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1257cc3f3d0b3ed07bc879f5bc3337d62bc1b3a0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e15e56dfb4a27f0a99262ff1f105ceb0a1fbc294
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470581"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715383"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>자습서: SQL 개발자를 위한 R 데이터 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +53,7 @@ SQL 프로그래머를 위한이 자습서에서는 SQL Server에서 [NYCTaxi_sa
 
 이 자습서에서는 데이터베이스 및 테이블 만들기, 데이터 가져오기 및 SQL 쿼리 작성과 같은 기본적인 데이터베이스 작업에 대해 잘 알고 있는 것으로 가정 합니다. R을 알고 있다고 가정 하지 않습니다. 따라서 모든 R 코드가 제공 됩니다. 
 
-+ [R을 사용 하는](../install/sql-machine-learning-services-windows-install.md#verify-installation) [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md#verify-installation) 또는 SQL Server 2017 Machine Learning Services
++ [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md#verify-installation) 또는 [r을 사용 하는 SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
 + [R 라이브러리](../package-management/installed-package-information.md)
 

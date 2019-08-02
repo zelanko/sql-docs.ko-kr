@@ -7,12 +7,13 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6147c4670dace104c2c33c19e1fd29cbf2d4f2ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 9d3905ef9434bf4d3f887130c6f67ad68c6a6e36
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468860"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714760"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>자습서: SQL 개발자를 위한 Python 데이터 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +52,7 @@ Python에 대 한 SQL 프로그래머 또는 SQL의 Python 개발자 인 경우�
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-+ [Python에서 2017 Machine Learning Services SQL Server](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [Python을 사용 하 여 SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
 + [사용 권한](../security/user-permission.md)
 

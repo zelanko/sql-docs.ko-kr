@@ -6,19 +6,20 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e0e685543fe1e99f7adbfeb69567c366b0714ef7
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 8dc99a6f5ac1ff660f34f2248c844e5386bea5f0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470163"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715128"
 ---
 # <a name="extended-events-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에 대 한 확장 이벤트
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server는에 관련 된 작업을 수행 하는 데 사용할 수 있는 확장 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]이벤트 집합 뿐만 아니라로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]전송 되는 Python 또는 R 작업도 제공 합니다.
 
-**적용 대상:**  SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+**적용 대상:**  SQL Server 2016 R Services SQL Server Machine Learning Services
 
 ## <a name="sql-server-events-for-machine-learning"></a>Machine learning에 대 한 SQL Server 이벤트
 

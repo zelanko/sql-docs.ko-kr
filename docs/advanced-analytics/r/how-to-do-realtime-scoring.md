@@ -1,18 +1,19 @@
 ---
 title: 기계 학습 모델을 사용 하 여 예측 및 예측 생성
-description: RxPredict 또는 sp_rxPredict를 사용 하 여 실시간 점수 매기기를 사용 하거나, SQL Server Machine Learning에서 R 및 Pythin의 예측 및 예측에 대 한 네이티브 점수 매기기를 위한 T-sql을 예측 합니다.
+description: RxPredict 또는 sp_rxPredict를 사용 하 여 실시간 점수를 매기고, SQL Server Machine Learning에서 R 및 Python의 예측 및 예측에 대 한 네이티브 점수 매기기를 위한 T-sql을 예측 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 39edb40da1ebbddfff805aca321b99ea766f085c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: d01be0f7d7a18091b965ad73b9bf035558b34864
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470121"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715693"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>SQL Server에서 기계 학습 모델을 사용 하 여 예측 및 예측을 생성 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

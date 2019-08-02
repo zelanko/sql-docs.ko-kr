@@ -3,16 +3,17 @@ title: R 언어 및 Python 스크립트에 대 한 확장성 아키텍처
 description: 관계형 데이터에서 R 및 Python 스크립트를 실행 하기 위한 이중 아키텍처를 사용 하는 SQL Server 데이터베이스 엔진에 대 한 외부 코드 지원
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/17/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a5c49172ed23867f95e383878f792092bd762177
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 49c45fa39cd271140ba78c2b1b32ee8a2f9c1a7a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470454"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715249"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 확장성 아키텍처 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ SQL Server에는 서버에서 R 또는 Python과 같은 외부 스크립트를 �
 
 ## <a name="background"></a>배경
 
-확장성 프레임 워크는 R 런타임을 지원 하기 위해 SQL Server 2016에서 도입 되었습니다. SQL Server 2017는 Python에 대 한 지원을 추가 합니다.
+확장성 프레임 워크는 R 런타임을 지원 하기 위해 SQL Server 2016에서 도입 되었습니다. SQL Server 2017 이상에서는 Python을 지원 합니다.
 
 확장성 프레임 워크의 목적은 R 및 Python과 같은 SQL Server와 데이터 과학 언어 간의 인터페이스를 제공 하 고, 데이터 과학 솔루션을 프로덕션으로 이동 하 고, 개발 중에 노출 되는 데이터를 보호 하는 것입니다. 프로세스. 데이터베이스 관리자는 SQL Server로 관리 되는 보안 프레임 워크 내에서 신뢰할 수 있는 스크립트 언어를 실행 하 여 데이터 과학자 엔터프라이즈 데이터 액세스를 허용 하는 동시에 보안을 유지할 수 있습니다.
 
@@ -55,8 +56,8 @@ SQL Server에는 서버에서 R 또는 Python과 같은 외부 스크립트를 �
 
 | 신뢰할 수 있는 관리자 | 확장명 | SQL Server 버전 |
 |-------------------|-----------|---------------------|
-| R 언어의 RLauncher .dll | [R 확장](extension-r.md) | SQL Server 2016, SQL Server 2017 |
-| Python 3.5에 대 한 Pythonlauncher | [Python 확장](extension-python.md) | SQL Server 2017 |
+| R 언어의 RLauncher .dll | [R 확장](extension-r.md) | SQL Server 2016 이상 |
+| Python 3.5에 대 한 Pythonlauncher | [Python 확장](extension-python.md) | SQL Server 2017 이상 |
 
 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)] 서비스는 자체 사용자 계정으로 실행됩니다. 실행 패드를 실행 하는 계정을 변경 하는 경우 SQL Server 구성 관리자를 사용 하 여 변경 내용을 관련 파일에 쓰도록 해야 합니다.
 
@@ -70,7 +71,7 @@ Machine Learning Services SQL Server [!INCLUDE[rsql_launchpad_md](../../includes
 
 실제로 BxlServer는 SQL Server에서 데이터를 전송 하 고 작업을 관리 하는 데 사용할 수 있는 언어 런타임 환경과 함께 사용 됩니다. BXL은 바이너리 교환 언어를 나타내며 SQL Server와 외부 프로세스 간에 데이터를 효율적으로 이동 하는 데 사용 되는 데이터 형식을 나타냅니다. BxlServer는 Microsoft R Client 및 Microsoft R Server와 같은 관련 제품의 중요 한 부분 이기도 합니다.
 
-**SQL 위성** 은 외부 코드 또는 C 또는 C++를 사용 하 여 구현 되는 외부 런타임을 지 원하는 SQL Server 2016부터 데이터베이스 엔진에 포함 된 확장성 API입니다.
+**SQL 위성** 은 외부 코드 또는 C 또는 C++를 사용 하 여 구현 되는 외부 런타임을 지 원하는 데이터베이스 엔진에 포함 된 확장성 API입니다.
 
 BxlServer는 SQL Satellite를 사용하여 다음 작업을 수행합니다.
 

@@ -8,12 +8,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cec029f4ffb047a49ff9902c430c4bd98aa03850
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ff4d0839cfdf24b1b43fe9d5a371092713bc63cf
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470282"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715790"
 ---
 #  <a name="get-r-and-python-package-information"></a>R 및 Python 패키지 정보 가져오기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-필요에 따라 SQL Server 2017 Machine Learning Services의 최신 버전 RevoScaleR에서 [Rxsql 경로](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) 를 사용 하거나, [r Services를 RevoScaleR 9.0.1 이상으로 업그레이드할](../install/upgrade-r-and-python.md)수 있습니다. 이 저장 프로시저는 인스턴스 라이브러리의 경로와 SQL Server에서 사용 하는 RevoScaleR 버전을 반환 합니다.
+필요에 따라 SQL Server Machine Learning Services에서 최신 버전의 RevoScaleR에서 [Rxsql 경로](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) 를 사용 하거나, r [Services를 RevoScaleR 9.0.1 이상으로 업그레이드할](../install/upgrade-r-and-python.md)수 있습니다. 이 저장 프로시저는 인스턴스 라이브러리의 경로와 SQL Server에서 사용 하는 RevoScaleR 버전을 반환 합니다.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -59,7 +60,7 @@ STDOUT message(s) from external script:
 
 ## <a name="get-the-python-library-location"></a>Python 라이브러리 위치 가져오기
 
-SQL Server 2017에서 **Python** 의 경우 다음 문을 실행 하 여 현재 인스턴스의 기본 라이브러리를 확인 합니다. 이 예에서는 Python `sys.path` 변수에 포함 된 폴더 목록을 반환 합니다. 이 목록에는 현재 디렉터리와 표준 라이브러리 경로가 포함 됩니다.
+**Python**의 경우 다음 문을 실행 하 여 현재 인스턴스의 기본 라이브러리를 확인 합니다. 이 예에서는 Python `sys.path` 변수에 포함 된 폴더 목록을 반환 합니다. 이 목록에는 현재 디렉터리와 표준 라이브러리 경로가 포함 됩니다.
 
 ```sql
 EXECUTE sp_execute_external_script

@@ -7,17 +7,18 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0f8cc5aaa10beeb5b91b27111e15013cc705ed20
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e87770447c371f46ad384daffa3c7bc40b836904
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469954"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715601"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server에서 R 개발용 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-R 통합은 [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md) 또는 [SQL Server 2017 Machine Learning Services (데이터베이스 내)](../install/sql-machine-learning-services-windows-install.md) 설치에 r 언어 옵션을 포함 하는 경우 SQL Server 2016 이상에서 사용할 수 있습니다. 
+R 통합은 [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md) 또는 [SQL Server Machine Learning Services (데이터베이스 내)](../install/sql-machine-learning-services-windows-install.md) 설치에 r 언어 옵션을 포함 하는 경우 SQL Server 2016 이상에서 사용할 수 있습니다. 
 
 SQL Server 용 R 솔루션을 개발 하 고 배포 하려면 개발 워크스테이션에 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client) 를 설치 하 여 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 및 기타 r 라이브러리를 가져옵니다. RevoScaleR 라이브러리는 원격 SQL Server 인스턴스에도 필요 하며 두 시스템 간의 컴퓨팅 요청을 조정 합니다. 
 

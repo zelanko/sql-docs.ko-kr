@@ -7,12 +7,13 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7de37b16c04cf2f972e36c11ba5dfb53721e6094
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f902bd7325e84f07d50196c19338d9c05b3503d8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469440"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715438"
 ---
 # <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>빠른 시작: SQL Server에서 R을 사용 하 여 예측 모델 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

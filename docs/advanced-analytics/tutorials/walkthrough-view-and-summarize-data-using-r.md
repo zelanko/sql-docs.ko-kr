@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e209b707c3d04cef7709945dc2a32b171f90771e
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 47850bebcc20fdd357b2336a9597da067cd479ca
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468841"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715359"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>R을 사용 하 여 SQL Server 데이터 보기 및 요약 (연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

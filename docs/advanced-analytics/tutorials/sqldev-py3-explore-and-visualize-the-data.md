@@ -7,12 +7,13 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0442fd942f0dd509f24b98b5ca1c6d6c31a197f0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 6ee82de1431a6bc21596505dc4b008b817b35830
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470553"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714700"
 ---
 # <a name="explore-and-visualize-the-data"></a>데이터 탐색 및 시각화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

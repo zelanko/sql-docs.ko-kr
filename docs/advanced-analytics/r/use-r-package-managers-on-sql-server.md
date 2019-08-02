@@ -1,18 +1,19 @@
 ---
 title: R 패키지 관리자 사용
-description: Install. 패키지와 같은 표준 R 명령을 사용 하 여 SQL Server 2016 R Services 또는 SQL Server 2017 Machine Learning Services (데이터베이스 내)에 새 R 패키지를 추가 합니다.
+description: Install. 패키지와 같은 표준 R 명령을 사용 하 여 SQL Server 2016 R Services 또는 SQL Server Machine Learning Services (데이터베이스 내)에 새 R 패키지를 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1977e616b8f5ac41f533d49fab684db146cdb204
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469874"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715018"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>R 패키지 관리자를 사용 하 여 SQL Server에 R 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +37,7 @@ ms.locfileid: "68469874"
 
 대상 패키지가 추가 패키지에 따라 달라 지는 경우 R 설치 관리자가 자동으로 종속성을 다운로드 하 여 설치 합니다.
 
-SQL Server 2016 R Services 및 SQL Server 2017 Machine Learning Services의 side-by-side 인스턴스와 같이 SQL Server 인스턴스가 여러 개 있는 경우 두 컨텍스트에서 패키지를 사용 하려는 경우 각 인스턴스에 대해 별도로 설치를 실행 합니다. 패키지는 인스턴스 간에 공유할 수 없습니다.
+SQL Server 2016 R Services 및 SQL Server Machine Learning Services의 side-by-side 인스턴스와 같이 SQL Server 인스턴스가 여러 개 있는 경우 두 컨텍스트에서 패키지를 사용 하려는 경우 각 인스턴스에 대해 별도로 설치를 실행 합니다. 패키지는 인스턴스 간에 공유할 수 없습니다.
 
 ## <a name = "bkmk_offlineInstall"></a>R 도구를 사용 하 여 오프 라인 설치
 

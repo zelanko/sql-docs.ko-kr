@@ -3,21 +3,22 @@ title: R 및 Python 구성 요소에 대 한 명령 프롬프트 설치
 description: SQL Server 명령줄 설치 프로그램을 실행 하 여 SQL Server 데이터베이스 엔진 인스턴스에 R 언어 및 Python 통합을 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/13/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 86f17e9775108e9b075b3733df59202654888d62
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3e1e74c9d14c93cf44a7da5db4795a1524d238be
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345032"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715269"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>명령줄에서 SQL Server machine learning R 및 Python 구성 요소를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 명령줄에서 기계 학습 구성 요소를 intalling SQL Server에 대 한 지침을 제공 합니다.
+이 문서에서는 명령줄에서 SQL Server machine learning 구성 요소를 설치 하는 방법에 대 한 지침을 제공 합니다.
 
 + [새 데이터베이스 내 인스턴스](#indb)
 + [기존 데이터베이스 엔진 인스턴스에 추가](#add-existing)
@@ -45,19 +46,31 @@ ms.locfileid: "68345032"
 
 명령 프롬프트에서 설치할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 /Q 매개 변수를 사용하는 완전 자동 모드 또는 /QS 매개 변수를 사용하는 단순 자동 모드를 지원합니다. /QS 스위치를 사용하면 진행률만 표시되고 입력이 허용되지 않으므로 오류가 발생해도 오류 메시지가 표시되지 않습니다. /QS 매개 변수는 /Action=install이 지정된 경우에만 지원됩니다.
 
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 | 인수 | 설명 |
 |-----------|-------------|
-| /FEATURES = AdvancedAnalytics | 데이터베이스 내 버전을 설치 합니다. SQL Server 2017 Machine Learning Services (데이터베이스 내) 또는 SQL Server 2016 R 서비스 (데이터베이스 내)입니다.  |
-| /FEATURES = SQL_INST_MR | SQL Server 2017에만 적용 됩니다. AdvancedAnalytics를 사용 하 여이를 페어링 합니다. Microsoft R Open 및 독점 R 패키지를 포함 하 여 (데이터베이스 내) R 기능을 설치 합니다. SQL Server 2016 R Services 기능은 R 전용 이므로 해당 릴리스에 대 한 매개 변수가 없습니다.|
-| /FEATURES = SQL_INST_MPY | SQL Server 2017에만 적용 됩니다. AdvancedAnalytics를 사용 하 여이를 페어링 합니다. Anaconda 및 독점 Python 패키지를 포함 하 여 (데이터베이스 내) Python 기능을 설치 합니다. |
-| /FEATURES = SQL_SHARED_MR | 독립 실행형 버전에 대 한 R 기능을 설치 합니다. SQL Server 2017 Machine Learning Server (독립 실행형) 또는 SQL Server 2016 R 서버 (독립 실행형). 독립 실행형 서버는 데이터베이스 엔진 인스턴스에 바인딩되지 않은 "공유 기능"입니다.|
-| /FEATURES = SQL_SHARED_MPY | SQL Server 2017에만 적용 됩니다. 독립 실행형 버전에 대 한 Python 기능을 설치 합니다. SQL Server 2017 Machine Learning Server (독립 실행형). 독립 실행형 서버는 데이터베이스 엔진 인스턴스에 바인딩되지 않은 "공유 기능"입니다.|
+| /FEATURES = AdvancedAnalytics | 데이터베이스 내 버전을 설치 합니다. SQL Server R Services (데이터베이스 내).  |
+| /FEATURES = SQL_SHARED_MR | 독립 실행형 버전에 대 한 R 기능을 설치 합니다. R Server (독립 실행형)를 SQL Server 합니다. 독립 실행형 서버는 데이터베이스 엔진 인스턴스에 바인딩되지 않은 "공유 기능"입니다.|
+| /IACCEPTROPENLICENSETERMS  | 오픈 소스 R 구성 요소를 사용 하기 위한 사용 조건에 동의 했음을 나타냅니다. |
+| /IACCEPTPYTHONLICENSETERMS | Python 구성 요소 사용에 대 한 사용 조건에 동의 했음을 나타냅니다. |
+| /IACCEPTSQLSERVERLICENSETERMS | SQL Server 사용 조건에 동의 했음을 나타냅니다.|
+| /MRCACHEDIRECTORY | 오프 라인 설치의 경우 R 구성 요소 CAB 파일이 포함 된 폴더를 설정 합니다. |
+::: moniker-end
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+| 인수 | 설명 |
+|-----------|-------------|
+| /FEATURES = AdvancedAnalytics | 데이터베이스 내 버전을 설치 합니다. Machine Learning Services (데이터베이스 내)를 SQL Server 합니다.  |
+| /FEATURES = SQL_INST_MR | AdvancedAnalytics를 사용 하 여이를 페어링 합니다. Microsoft R Open 및 독점 R 패키지를 포함 하 여 (데이터베이스 내) R 기능을 설치 합니다. |
+| /FEATURES = SQL_INST_MPY | AdvancedAnalytics를 사용 하 여이를 페어링 합니다. Anaconda 및 독점 Python 패키지를 포함 하 여 (데이터베이스 내) Python 기능을 설치 합니다. |
+| /FEATURES = SQL_SHARED_MR | 독립 실행형 버전에 대 한 R 기능을 설치 합니다. SQL Server Machine Learning Server (독립 실행형). 독립 실행형 서버는 데이터베이스 엔진 인스턴스에 바인딩되지 않은 "공유 기능"입니다.|
+| /FEATURES = SQL_SHARED_MPY | 독립 실행형 버전에 대 한 Python 기능을 설치 합니다. SQL Server Machine Learning Server (독립 실행형). 독립 실행형 서버는 데이터베이스 엔진 인스턴스에 바인딩되지 않은 "공유 기능"입니다.|
 | /IACCEPTROPENLICENSETERMS  | 오픈 소스 R 구성 요소를 사용 하기 위한 사용 조건에 동의 했음을 나타냅니다. |
 | /IACCEPTPYTHONLICENSETERMS | Python 구성 요소 사용에 대 한 사용 조건에 동의 했음을 나타냅니다. |
 | /IACCEPTSQLSERVERLICENSETERMS | SQL Server 사용 조건에 동의 했음을 나타냅니다.|
 | /MRCACHEDIRECTORY | 오프 라인 설치의 경우 R 구성 요소 CAB 파일이 포함 된 폴더를 설정 합니다. |
 | /MPYCACHEDIRECTORY | 나중에 사용하도록 예약되어 있습니다. 인터넷에 연결 되지 않은 컴퓨터에 설치할 Python 구성 요소 CAB 파일을 저장 하려면% TEMP%를 사용 합니다. |
-
+::: moniker-end
 
 ## <a name="indb"></a>데이터베이스 내 인스턴스 설치
 
@@ -68,7 +81,8 @@ ms.locfileid: "68345032"
 > [!IMPORTANT]
 > 설치 후에는 두 개의 추가 구성 단계가 남아 있습니다. 이러한 작업을 수행 하기 전에는 통합이 완료 되지 않습니다. 지침은 [설치 후 작업](#post-install) 을 참조 하세요.
 
-### <a name="sql-server-2017-database-engine-advanced-analytics-with-python-and-r"></a>SQL Server 2017: 데이터베이스 엔진, Python 및 R을 사용한 고급 분석
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+### <a name="sql-server-machine-learning-services-database-engine-advanced-analytics-with-python-and-r"></a>SQL Server Machine Learning Services: 데이터베이스 엔진, Python 및 R을 사용한 고급 분석
 
 데이터베이스 엔진 인스턴스의 동시 설치를 위해 인스턴스 이름 및 관리자 (Windows) 로그인을 제공 합니다. 핵심 및 언어 구성 요소를 설치 하는 기능 뿐만 아니라 모든 사용 조건에 대 한 동의를 포함 합니다.
 
@@ -93,16 +107,19 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MPY
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<username>" 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTPYTHONLICENSETERMS
 ```
+::: moniker-end
 
-### <a name="sql-server-2016-database-engine-and-advanced-analytics-with-r"></a>SQL Server 2016: R을 사용 하 여 데이터베이스 엔진 및 고급 분석
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+### <a name="sql-server-r-services-database-engine-and-advanced-analytics-with-r"></a>SQL Server R Services: R을 사용 하 여 데이터베이스 엔진 및 고급 분석
 
-이 명령은 SQL Server 2017와 동일 하지만 SQL Server 2016 설정에서 사용할 수 없는 Python 요소는 포함 하지 않습니다.
+데이터베이스 엔진 인스턴스의 동시 설치를 위해 인스턴스 이름 및 관리자 (Windows) 로그인을 제공 합니다. 핵심 및 언어 구성 요소를 설치 하는 기능 뿐만 아니라 모든 사용 조건에 대 한 동의를 포함 합니다.
 
 ```cmd  
 Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 /INSTANCENAME=MSSQLSERVER /SQLSYSADMINACCOUNTS="<Windows-username>" 
 /IACCEPTSQLSERVERLICENSETERMS /IACCEPTROPENLICENSETERMS 
 ```
+::: moniker-end
 
 ## <a name="post-install"></a>설치 후 구성 (필수)
 
@@ -112,11 +129,18 @@ Setup.exe /qs /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR
 
 설치를 완료 하려면 다음 두 가지 작업을 더 수행 해야 합니다.
 
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 1. 데이터베이스 엔진 서비스를 다시 시작 합니다.
 
-1. 기능을 사용 하려면 외부 스크립트를 사용 하도록 설정 합니다. 다음 단계로 [SQL Server 2017 Machine Learning Services (데이터베이스 내) 설치](sql-machine-learning-services-windows-install.md) 의 지침을 따르세요. 
+1. SQL Server Machine Learning Services: 기능을 사용 하려면 외부 스크립트를 사용 하도록 설정 합니다. 다음 단계로 [SQL Server Machine Learning Services (데이터베이스 내) 설치](sql-machine-learning-services-windows-install.md) 의 지침을 따르세요. 
+::: moniker-end
 
-SQL Server 2016의 경우이 문서를 대신 사용 하 여 [SQL Server 2016 R Services (데이터베이스 내)를 설치](sql-r-services-windows-install.md)합니다.
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+1. 데이터베이스 엔진 서비스를 다시 시작 합니다.
+
+1. SQL Server R Services: 기능을 사용 하려면 외부 스크립트를 사용 하도록 설정 합니다. 다음 단계로 [SQL Server R Services 설치 (데이터베이스 내)](sql-r-services-windows-install.md) 의 지침을 따릅니다. 
+::: moniker-end
 
 ## <a name="add-existing"></a>기존 데이터베이스 엔진 인스턴스에 고급 분석 추가
 
@@ -126,8 +150,6 @@ SQL Server 2016의 경우이 문서를 대신 사용 하 여 [SQL Server 2016 R 
 Setup.exe /qs /ACTION=Install /FEATURES=SQL_INST_MR /INSTANCENAME=MSSQLSERVER 
 /IACCEPTSQLSERVERLICENSETERMS  /IACCEPTROPENLICENSETERMS
 ```
-
-
 
 ## <a name="silent"></a>자동 설치
 
@@ -142,27 +164,30 @@ Setup.exe /q /ACTION=Install /FEATURES=SQLEngine,ADVANCEDANALYTICS,SQL_INST_MR,S
 
 ## <a name="shared-feature"></a>독립 실행형 서버 설치
 
-독립 실행형 서버는 데이터베이스 엔진 인스턴스에 바인딩되지 않은 "공유 기능"입니다. 다음 예에서는 두 릴리스에 대 한 올바른 구문을 보여 줍니다.
+독립 실행형 서버는 데이터베이스 엔진 인스턴스에 바인딩되지 않은 "공유 기능"입니다. 다음 예에서는 독립 실행형 서버를 설치 하기 위한 올바른 구문을 보여 줍니다.
 
-SQL Server 2017는 독립 실행형 서버에서 Python 및 R을 지원 합니다.
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+SQL Server Machine Learning Server는 독립 실행형 서버에서 Python 및 R을 지원 합니다.
 
 ```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR,SQL_SHARED_MPY  
 /IACCEPTROPENLICENSETERMS /IACCEPTPYTHONLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
-
-SQL Server 2016은 R 전용입니다.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+R Server SQL Server R 전용:
 
 ```cmd
 Setup.exe /q /ACTION=Install /FEATURES=SQL_SHARED_MR 
 /IACCEPTROPENLICENSETERMS /IACCEPTSQLSERVERLICENSETERMS
 ```
+::: moniker-end
 
 설치가 완료 되 면 배포에 포함 된 서버, Microsoft 패키지, R의 오픈 소스 배포와 Python, 도구, 샘플 및 스크립트를 사용할 수 있습니다. 
 
-R 콘솔 창을 열려면 files\Microsoft SQL Server\140 (또는 130) \R_SERVER\bin\x64로 이동한 다음 **Rgui**를 두 번 클릭 합니다. R을 처음 사용하세요? 이 자습서를 사용해 보세요. [기본 R 명령 및 RevoScaleR 함수: 25 개의 일반적인](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)예입니다.
+R 콘솔 창을 열려면로 `\Program files\Microsoft SQL Server\150 (or 140/130)\R_SERVER\bin\x64` 이동 하 고 **rgui**를 두 번 클릭 합니다. R을 처음 사용하세요? 이 자습서를 사용해 보세요. [기본 R 명령 및 RevoScaleR 함수: 25 개의 일반적인](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler)예입니다.
 
-Python 명령을 열려면 files\Microsoft SQL Server\140\PYTHON_SERVER\bin\x64로 이동 하 고 **python**을 두 번 클릭 합니다.
+Python 명령을 열려면로 `\Program files\Microsoft SQL Server\150 (or 140)\PYTHON_SERVER\bin\x64` 이동 하 여 **python**을 두 번 클릭 합니다.
 
 ## <a name="get-help"></a>도움말 보기
 
@@ -172,7 +197,7 @@ Python 명령을 열려면 files\Microsoft SQL Server\140\PYTHON_SERVER\bin\x64�
 
 인스턴스의 설치 상태를 확인 하 고 일반적인 문제를 해결 하려면 이러한 사용자 지정 보고서를 실행 합니다.
 
-* [SQL Server R Services에 대 한 사용자 지정 보고서](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
+* [SQL Server에 대 한 사용자 지정 보고서](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
 ## <a name="next-steps"></a>다음 단계
 

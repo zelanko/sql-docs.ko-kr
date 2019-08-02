@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 072d2c2e8843b17b3a4ccfeed16bd0916ce501e7
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7d494329a52f73d489350792b6f43e138f3618a8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468634"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714663"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>자습서: R 데이터 과학자 SQL 개발
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +28,7 @@ R 코드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SQL Server �
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-+ [SQL Server 2017 r 통합](../install/sql-machine-learning-services-windows-install.md#verify-installation) 또는 [SQL Server 2016 r 서비스](../install/sql-r-services-windows-install.md) Machine Learning Services
++ R 통합 또는 [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md) [를 사용 하 여 SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
 + [데이터베이스 사용 권한](../security/user-permission.md) 및 SQL Server 데이터베이스 사용자 로그인
 

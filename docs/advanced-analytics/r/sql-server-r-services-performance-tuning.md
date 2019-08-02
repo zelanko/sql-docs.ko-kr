@@ -6,12 +6,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9d6dbc55281a725dea0373f2a4d61293b2ddb9c0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: dd12e38e0d1f01cd142cc4c11efe43346dd1f8ce
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469941"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715625"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>SQL Server에서 R에 대 한 성능 조정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68469941"
 + 세 번째 문서에서는 운영 화에 대 한 R 코드 및 리소스의 최적화에 대해 다룹니다.
 + 네 번째 문서에서는 테스트 메서드에 대해 자세히 설명 하 고 결과 및 결론을 보고 합니다.
 
-**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+**적용 대상:** SQL Server 2016 R Services SQL Server Machine Learning Services
 
 ## <a name="performance-goals-and-targeted-scenarios"></a>성능 목표 및 대상 시나리오
 

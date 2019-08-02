@@ -2,16 +2,17 @@
 title: Machine learning에 대 한 데이터 수집 문제 해결
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 02/28/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3dbca20d974570d04d65fba30110049efad4e90d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c7566d9b25b15a334e48380daca6cb81e92f6a2b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470440"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715228"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Machine learning에 대 한 데이터 수집 문제 해결
 
@@ -19,13 +20,11 @@ ms.locfileid: "68470440"
 
 이 문서에서는 문제를 해결 하려고 하거나 Microsoft 고객 지원의 도움을 받을 때 사용 해야 하는 데이터 수집 방법을 설명 합니다.
 
-**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (R 및 Python)
-
 ## <a name="sql-server-version-and-edition"></a>SQL Server 버전 및 에디션
 
-SQL Server 2016 R Services는 통합 R 지원을 포함 하는 SQL Server의 첫 번째 릴리스입니다. SQL Server 2016 SP1 (서비스 팩 1)에는 외부 스크립트를 실행 하는 기능을 비롯 하 여 몇 가지 주요 개선 사항이 포함 되어 있습니다. SQL Server 2016 고객 인 경우 SP1 이상을 설치 하는 것을 고려해 야 합니다.
+SQL Server 2016 R Services는 통합 R 지원을 포함 하는 SQL Server의 첫 번째 릴리스입니다. SQL Server 2016 SP1 (서비스 팩 1)에는 외부 스크립트를 실행 하는 기능을 비롯 하 여 몇 가지 주요 개선 사항이 포함 되어 있습니다. SQL Server 2016를 사용 하는 경우 SP1 이상을 설치 하는 것을 고려해 야 합니다.
 
-SQL Server 2017는 Python 언어 통합을 추가 했습니다. 이전 릴리스에서는 Python 기능 통합을 가져올 수 없습니다.
+SQL Server 2017 이상에는 Python 언어 통합이 있습니다. 이전 릴리스에서는 Python 기능 통합을 가져올 수 없습니다.
 
 버전 및 버전을 가져오는 방법에 대 한 자세한 내용은이 문서를 참조 하세요 .이 문서는 각 [SQL Server 버전](https://social.technet.microsoft.com/wiki/contents/articles/783.sql-server-versions.aspx#Service_Pack_editions)의 빌드 번호를 나열 합니다.
 

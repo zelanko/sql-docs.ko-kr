@@ -7,12 +7,13 @@ ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1a665fd92f630b46351ef96cc203c9bbf71f54a2
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 55a83e7e63a4e43afe1168aab3307f2806a55fca
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345140"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715259"
 ---
 # <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL Server에서 machine learning에 대 한 리소스 관리
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

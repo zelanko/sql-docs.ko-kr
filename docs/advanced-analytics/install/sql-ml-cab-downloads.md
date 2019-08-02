@@ -1,18 +1,19 @@
 ---
 title: SQL Server 누적 업데이트에 대 한 CAB 다운로드
-description: SQL Server 2017 Machine Learning Services 및 SQL Server 2016 R Services에 대 한 R 및 Python CAB 및 패키지 다운로드가 있습니다.
+description: SQL Server Machine Learning Services 및 SQL Server 2016 R Services에 대 한 r 및 Python CAB 및 패키지 다운로드가 있습니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ab87112d20d2571936fa7d61c34c5910859f2642
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 7b77a1fd3a0d2575f0add7badb1c5bf632d29d70
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470312"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715828"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>데이터베이스 내 분석 인스턴스 SQL Server의 누적 업데이트에 대 한 CAB 다운로드
 
@@ -20,16 +21,18 @@ ms.locfileid: "68470312"
 
 데이터베이스 내 분석을 위해 구성 된 SQL Server 인스턴스에는 R 및 Python 기능이 포함 됩니다. 이러한 기능은 CAB 파일에 제공 되며 SQL Server 설치를 통해 설치 및 서비스 됩니다. 인터넷에 연결 된 장치에서 CAB 업데이트는 일반적으로 Windows 업데이트를 통해 적용 됩니다. 연결 되지 않은 서버에서는 CAB 파일을 수동으로 다운로드 하 여 적용 해야 합니다. 
 
-이 문서에서는 각 누적 업데이트에 대 한 CAB 파일에 대 한 다운로드 링크를 제공 합니다. SQL Server 2017 Machine Learning Services (R 및 Python) 및 SQL Server 2016 R 서비스에 대 한 링크가 제공 됩니다. 오프 라인 설치에 대 한 자세한 내용은 [인터넷에 액세스 하지 않고 machine learning 구성 요소 설치 SQL Server](sql-ml-component-install-without-internet-access.md#apply-cu)를 참조 하세요.
+이 문서에서는 각 누적 업데이트에 대 한 CAB 파일에 대 한 다운로드 링크를 제공 합니다. 오프 라인 설치에 대 한 자세한 내용은 [인터넷에 액세스 하지 않고 machine learning 구성 요소 설치 SQL Server](sql-ml-component-install-without-internet-access.md#apply-cu)를 참조 하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 기준 설치를 시작 합니다.
 
-+ SQL Server 2017 Machine Learning Services에서 초기 릴리스는 기본 설치입니다. 
++ SQL Server Machine Learning Services에서 초기 릴리스는 기본 설치입니다. 
 + SQL Server 2016 R Services에서 초기 릴리스, SP1 또는 s p 2로 시작할 수 있습니다. 
 
 또한 독립 실행형 서버에 누적 업데이트를 적용할 수 있습니다.
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
 ## <a name="sql-server-2017-cabs"></a>SQL Server 2017 CABs
 
@@ -88,6 +91,9 @@ CAB 파일은 역순 시간 순서로 나열 됩니다. CAB 파일을 다운로�
 | | Microsoft Python Open     |[SPO_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851502) |
 | | Python Server    |[SPS_9.2.0.24_1033.cab](https://go.microsoft.com/fwlink/?LinkId=851508) |
 
+::: moniker-end
+
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
 <a name="bkmk_2016Installers"></a>
 
@@ -134,7 +140,9 @@ SQL Server 2016 R Services의 경우 기본 릴리스는 RTM 버전 또는 Servi
 
 Microsoft R에 대 한 소스 코드를 보려면 다음을 사용 하 여 파일을. tar 형식으로 다운로드할 수 있습니다. [R Server 설치 관리자 다운로드](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows#download)
 
-## <a name="see-also"></a>참조
+::: moniker-end
+
+## <a name="next-steps"></a>다음 단계
 
 [인터넷에 액세스 하지 않고 컴퓨터에 누적 업데이트 적용](sql-ml-component-install-without-internet-access.md#apply-cu)
 

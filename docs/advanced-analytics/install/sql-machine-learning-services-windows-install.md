@@ -1,30 +1,29 @@
 ---
 title: Windows에 SQL Server Machine Learning Services (데이터베이스 내) 설치
-description: SQL Server 또는 Python의 R은 Windows의 SQL Server 2017 Machine Learning Services에 대 한 SQL Server 설치 단계를 수행 합니다.
+description: SQL Server 또는 Python의 R은 Windows의 SQL Server Machine Learning Services에 대 한 SQL Server 설치 단계를 수행 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2bc932a16155472f7dfa5cfa22eba6a4a5c59cd0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470445"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715221"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows에 SQL Server Machine Learning를 설치합니다.
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017부터 데이터베이스 내 분석에 대 한 R 및 Python 지원은 **SQL Server Machine Learning Services**에 제공 되며, 후속 작업은 SQL Server 2016에 도입 [SQL Server R Services](../r/sql-server-r-services.md) . 함수 라이브러리는 R 및 Python에서 사용할 수 있으며 데이터베이스 엔진 인스턴스에서 외부 스크립트로 실행할 수 있습니다. 
-
 이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 실행하고 화면의 지시에 따라 머신 러닝 구성 요소를 설치하는 방법을 설명합니다.
 
 ## <a name="bkmk_prereqs"></a> 사전 설치 검사 목록
 
-+ R 또는 Python 언어 지원으로 Machine Learning Services을 설치 하려면 SQL Server 2017 이상이 필요 합니다. SQL Server 2016 설치 미디어가 있는 경우에는 [SQL Server 2016 r Services (데이터베이스 내)](sql-r-services-windows-install.md) 를 설치 하 여 R 언어 지원을 받을 수 있습니다.
++ R 또는 Python 언어 지원으로 Machine Learning Services을 설치 하려면 SQL Server 2017 이상이 필요 합니다. SQL Server 2016 설치 미디어가 있는 경우 [SQL Server R Services (데이터베이스 내)](sql-r-services-windows-install.md) 를 설치 하 여 R 언어 지원을 받을 수 있습니다.
 
 + 데이터베이스 엔진 인스턴스가 필요 합니다. 기존 인스턴스에 점진적으로 추가할 수는 있지만 R 또는 Python 기능만 설치할 수는 없습니다.
 
@@ -283,8 +282,7 @@ SQL Server에 대해 만드는 R 솔루션은 기본 R 함수, SQL Server 설치
 
 SQL Server에서 사용할 패키지는 인스턴스에서 사용되는 기본 라이브러리에 설치되어야 합니다. 컴퓨터에 R을 별도로 설치 하거나 사용자 라이브러리에 패키지를 설치한 경우 T-sql에서 해당 패키지를 사용할 수 없습니다.
 
-R 패키지를 설치 하 고 관리 하는 프로세스는 SQL Server 2016 및 SQL Server 2017에서 다릅니다. SQL Server 2016에서 데이터베이스 관리자는 사용자에 게 필요한 R 패키지를 설치 해야 합니다. SQL Server 2017에서는 데이터베이스 수준에서 패키지를 공유 하도록 사용자 그룹을 설정 하거나 사용자가 자신의 패키지를 설치할 수 있도록 데이터베이스 역할을 구성할 수 있습니다. 자세한 내용은 [SQL Server에 새 R 패키지 설치](../r/install-additional-r-packages-on-sql-server.md)를 참조 하세요.
-
+R 패키지를 설치 하 고 관리 하려면 사용자 그룹을 설정 하 여 데이터베이스 수준에서 패키지를 공유 하거나 사용자가 자신의 패키지를 설치할 수 있도록 데이터베이스 역할을 구성할 수 있습니다. 자세한 내용은 [SQL Server에 새 R 패키지 설치](../r/install-additional-r-packages-on-sql-server.md)를 참조 하세요.
 
 ## <a name="next-steps"></a>다음 단계
 

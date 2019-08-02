@@ -1,18 +1,19 @@
 ---
 title: 새 R 언어 패키지 설치
-description: SQL Server 2016 R Services 또는 SQL Server 2017 Machine Learning Services (데이터베이스 내)에 새 R 패키지 추가
+description: SQL Server 2016 R Services 또는 SQL Server Machine Learning Services에 새 R 패키지 추가 (데이터베이스 내)
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1a6459d45d36ff69bdafb62a712e18937bf8eb30
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 1048dc6ef0a43c5fa41dd5398a5b3dced4a5ebe8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470109"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715100"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server에 새 R 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +86,7 @@ R 개발자는 중앙에서 찾은 라이브러리의 제한이 없는 경우 �
 
 R 및 Python 기능은 여러 Microsoft 제품에 포함 되어 있으며, 모두 동일한 컴퓨터에 공존할 수 있습니다.
 
-SQL Server 2017 Microsoft Machine Learning Server (독립 실행형) 또는 SQL Server 2016 R 서버 (독립 실행형) 외에도 데이터베이스 내 분석 (SQL Server 2017 Machine Learning Services 및 SQL Server 2016 R Services)을 설치한 경우 컴퓨터에는 별도의 모든 R 도구 및 라이브러리의 중복 항목을 포함 하 여 각에 대 한 R 설치
+SQL Server 2017 Microsoft Machine Learning Server (독립 실행형) 또는 SQL Server 2016 R 서버 (독립 실행형) 외에도 데이터베이스 내 분석 (SQL Server Machine Learning Services 및 SQL Server 2016 R 서비스)을 설치한 경우 컴퓨터에는 별도의 모든 R 도구 및 라이브러리의 중복 항목을 포함 하 여 각에 대 한 R 설치
 
 R_SERVER 라이브러리에 설치 된 패키지는 독립 실행형 서버 에서만 사용 되며 SQL Server (데이터베이스 내) 인스턴스에서는 액세스할 수 없습니다. SQL Server에서 데이터베이스 `R_SERVICES` 내에 사용할 패키지를 설치할 때 항상 라이브러리를 사용 합니다. 경로에 대 한 자세한 내용은 [패키지 라이브러리 위치](../package-management/default-packages.md)를 참조 하세요.
 

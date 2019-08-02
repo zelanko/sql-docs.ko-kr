@@ -1,18 +1,19 @@
 ---
 title: Python 프로그래밍 언어 확장
-description: SQL Server 2017 Machine Learning Services에서 Python 코드 실행 및 기본 제공 Python 라이브러리에 대해 알아봅니다.
+description: SQL Server Machine Learning Services에서 Python 코드 실행 및 기본 제공 Python 라이브러리에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f85392f8bfbb7ee89b8387b0f7d27038b9a8303b
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 61a1a5629d4f0488b5f75a08578c39f2e68f2c7d
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470462"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715869"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server의 Python 언어 확장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

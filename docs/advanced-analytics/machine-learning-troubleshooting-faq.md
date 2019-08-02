@@ -6,19 +6,18 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 86c698420a64832e49cd6cbff5e6727896ec45f4
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 1573c260c3d34ba3f733316fbae2672b2f9adfb1
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470276"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715153"
 ---
 # <a name="troubleshoot-machine-learning-in-sql-server"></a>SQL Server에서 기계 학습 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 알려진 문제를 해결 하기 위한 시작 지점으로이 페이지를 사용 합니다.
-
-**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (R 및 Python)
 
 ## <a name="known-issues"></a>알려진 문제
 
@@ -38,10 +37,8 @@ ms.locfileid: "68470276"
 
 SQL Server를 사용 하 여 기계 학습을 설정 하지 않았거나 기능을 추가 하려는 경우 여기서 시작 하세요.
 
-+ [SQL Server 2017 Machine Learning Services (데이터베이스 내) 설치](install/sql-machine-learning-services-windows-install.md)
-+ [SQL Server 2017 Machine Learning Server (독립 실행형) 설치](install/sql-machine-learning-standalone-windows-install.md)
-+ [SQL Server 2016 R Services (데이터베이스 내)를 설치 합니다.](install/sql-r-services-windows-install.md)
-+ [SQL Server 2016 R Server (독립 실행형) 설치](install/sql-r-standalone-windows-install.md)
++ [Machine Learning Services SQL Server 설치 (데이터베이스 내)](install/sql-machine-learning-services-windows-install.md)
++ [Machine Learning Server SQL Server 설치 (독립 실행형)](install/sql-machine-learning-standalone-windows-install.md)
 + [명령 프롬프트 설치](install/sql-ml-component-commandline-install.md)
 + [오프라인 설치(인터넷 없음)](install/sql-ml-component-install-without-internet-access.md)
 

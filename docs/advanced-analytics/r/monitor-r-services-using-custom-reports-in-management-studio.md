@@ -6,12 +6,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: effcfe458fc004fd8fb44bb58095e91a2fb56b8d
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a7ab7a4ccd4956bd1752be398b25a6ff9fd92ce5
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470065"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715078"
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Management Studio에서 사용자 지정 보고서를 사용하여 Machine Learning Services 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "68470065"
 - R Services에 대 한 확장 이벤트
 - 현재 인스턴스에 설치 된 R 또는 Python 패키지
 
-이 문서에서는 컴퓨터 leaerning으로 특별히 제공 된 사용자 지정 보고서를 설치 하 고 사용 하는 방법을 설명 합니다. 
+이 문서에서는 기계 학습을 위해 특별히 제공 된 사용자 지정 보고서를 설치 하 고 사용 하는 방법을 설명 합니다. 
 
 Management Studio의 보고서에 대 한 일반적인 소개는 [Management Studio의 사용자 지정 보고서](../../ssms/object/custom-reports-in-management-studio.md)를 참조 하세요.
 

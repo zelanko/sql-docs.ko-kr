@@ -1,18 +1,19 @@
 ---
 title: sqlrutils 도우미 함수
-description: SQL Server 2016 R Services 및 SQL Server 2017 Machine Learning Services에서 sqlrutils 함수 라이브러리를 사용 하 여 r 스크립트를 포함 하는 저장 프로시저를 생성 합니다.
+description: SQL Server 2016 R Services에서 sqlrutils 함수 라이브러리를 사용 하 고 R을 사용 하 여 Machine Learning Services를 SQL Server 하 여 R 스크립트를 포함 하는 저장 프로시저를 생성 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b4218a1b30aedacdab73d08c7b76e3e19d17511c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3de8d438691afb7ebf1aabe15265227b7876b837
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469943"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715036"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (SQL Server의 R 라이브러리)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

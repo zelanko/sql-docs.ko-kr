@@ -7,12 +7,13 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5d01004fb54c0410acc372c5c66930f33bbd8856
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a94ae0f82b407f8f254a31b33d4d9dcd97f24e77
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469994"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714943"
 ---
 # <a name="sql-server-launchpad-service-configuration"></a>SQL Server 실행 패드 서비스 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

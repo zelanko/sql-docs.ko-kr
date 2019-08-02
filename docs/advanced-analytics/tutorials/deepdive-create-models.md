@@ -7,19 +7,20 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 65d5d999df39909a5419883736686c5bc22e0062
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 00c1c1ed13f1257267111c3bdf71277fa41d0bdc
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469804"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714871"
 ---
 # <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>R 모델 만들기 (SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 단원에서는 SQL Server [RevoScaleR 함수](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) 를 사용 하는 방법에 대 한 [RevoScaleR 자습서](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) 의 일부입니다.
 
-학습 데이터를 보강 이제 회귀 모델링을 사용 하 여 데이터를 분석할 시간입니다. 선형 모델은 예측 분석 분야에서 중요 한 도구 이며, **RevoScaleR** 패키지에는 워크 로드를 세분화 하 여 병렬로 실행할 수 있는 회귀 알고리즘이 포함 되어 있습니다.
+학습 데이터를 보강 합니다. 이제 회귀 모델링을 사용 하 여 데이터를 분석할 수 있습니다. 선형 모델은 예측 분석 분야에서 중요 한 도구입니다. **RevoScaleR** 패키지에는 워크 로드를 세분화 하 고 동시에 실행할 수 있는 회귀 알고리즘이 포함 되어 있습니다.
 
 > [!div class="checklist"]
 > * 선형 회귀 모델 만들기

@@ -7,12 +7,13 @@ ms.date: 03/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1ac89b23d9b027c8f5fd02daa28a4246cddf48f1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: adcac48bc7d90aae5f05a9b671f05e34cc8cf554
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470140"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715681"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 저장 프로시저를 사용 하 여 R 코드 운영
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +43,7 @@ R 또는 Python 코드에서 약간의 최적화가 수행 되 면 SQL에서 R �
 
 점수 매기기는 쉽게 자동화 하거나 외부 응용 프로그램에서 시작할 수 있는 중요 한 작업입니다. R 또는 Python 또는 저장 프로시저를 사용 하 여 미리 모델을 학습 하 고 [모델을 이진 형식](../tutorials/walkthrough-build-and-save-the-model.md) 으로 테이블에 저장 합니다. 그런 다음 T-sql의 점수 매기기를 위해 다음 옵션 중 하나를 사용 하 여 모델을 저장 프로시저 호출의 일부로 변수에 로드할 수 있습니다.
 
-+ [실시간](../real-time-scoring.md) 점수 매기기, 작은 일괄 처리에 최적화
++ [실시간 점수 매기기, 작은 일괄 처리에 대해 최적화 됨
 + 응용 프로그램에서 호출 하기 위한 단일 행 점수 매기기
 + R을 호출 하지 않고 SQL Server에서 빠른 일괄 처리 예측을 위한 [기본 점수 매기기](../sql-native-scoring.md)
 

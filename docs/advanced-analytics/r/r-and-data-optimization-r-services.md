@@ -6,12 +6,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 95cbcd152e9f7665191e44b7c6d704d2b0c63037
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a65afba9455fb475b760439e92ad8d4d38a70be8
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470040"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715652"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services에 대 한 성능-데이터 최적화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +33,7 @@ SQL Server 2016 및 2017에서 R 또는 Python 스크립트를 실행할 때 **�
 
 R 언어에는 범주 데이터에 대 한 특수 변수인 *요소*개념이 있습니다. 데이터 과학자는 범주 변수를 요소로 처리 하는 것이 기계 학습 함수에 의해 올바르게 처리 되도록 하기 때문에 수식에서 요소 변수를 사용 하는 경우가 많습니다. 자세한 내용은 Dummies에 대 [한 R을 참조 하세요. 요소 변수](https://www.dummies.com/programming/r/how-to-look-at-the-structure-of-a-factor-in-r/).
 
-디자인에 따라 요소 변수를 문자열에서 정수로 변환 하 고 저장 또는 처리를 위해 다시 되돌릴 수 있습니다. 인수 stringsAsFactors `data.frame` 가 **False**로 설정 되어 있지 않으면 R 함수는 모든  문자열을 요소 변수로 처리 합니다. 즉, 문자열은 처리를 위해 정수로 자동 변환 된 다음 원래 문자열로 다시 매핑됩니다.
+디자인에 따라 요소 변수를 문자열에서 정수로 변환 하 고 저장 또는 처리를 위해 다시 되돌릴 수 있습니다. 인수 stringsAsFactors `data.frame` 가 **False**로 설정 되어 있지 않으면 R 함수는 모든 문자열을 요소 변수로 처리 합니다. 즉, 문자열은 처리를 위해 정수로 자동 변환 된 다음 원래 문자열로 다시 매핑됩니다.
 
 요소에 대 한 원본 데이터를 정수로 저장 하는 경우 R은 런타임에 계수 정수를 문자열로 변환 하 고 자체 내부 문자열에서 정수로 변환을 수행 하기 때문에 성능이 저하 될 수 있습니다.
 

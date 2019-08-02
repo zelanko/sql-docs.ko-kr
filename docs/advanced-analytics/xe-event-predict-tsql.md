@@ -6,12 +6,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1c534681200abf056c8bc7dd3745d8098d59c146
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 283e128285fc50b9109d7950b171e30224fb9692
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345659"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714639"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>PREDICT 문 모니터링에 대한 확장 이벤트
 

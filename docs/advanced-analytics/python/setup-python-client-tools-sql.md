@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b5f406ec4b6cfbd65db7a4ecd3a1ad14dff6d8e1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: a37f0eb62ec0483b8c73bd5cc4d6d29221e8082f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470235"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715181"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 Python 개발을 위한 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,9 +50,9 @@ SSMS는 Python 코드를 포함 하는 저장 프로시저를 포함 하 여 SQL
 
 1. 설치 스크립트를 다운로드 합니다.
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py)Microsoft Python 패키지의 버전 9.2.1을 설치 합니다. 이 버전은 기본 SQL Server 2017 인스턴스에 해당 합니다. 
+  + [https://aka.ms/mls-py](https://aka.ms/mls-py)Microsoft Python 패키지의 버전 9.2.1을 설치 합니다. 이 버전은 기본 SQL Server 인스턴스에 해당 합니다. 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)Microsoft Python 패키지 버전 9.3을 설치 합니다. 원격 SQL Server 2017 인스턴스가 [Machine Learning Server 9.3에 바인딩되](../install/upgrade-r-and-python.md)는 경우이 버전을 선택 하는 것이 좋습니다.
+  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py)Microsoft Python 패키지 버전 9.3을 설치 합니다. 원격 SQL Server 인스턴스가 [Machine Learning Server 9.3에 바인딩되](../install/upgrade-r-and-python.md)는 경우이 버전을 선택 하는 것이 좋습니다.
 
 2. 관리자 권한으로 PowerShell 창을 엽니다 ( **관리자 권한으로 실행**을 마우스 오른쪽 단추로 클릭).
 
@@ -258,7 +259,7 @@ display.Image(data=image)
 
 ### <a name="command-line"></a>패키지 실행 유틸리티
 
-C:\Program Files\Microsoft\PyForMLS (또는 Python 클라이언트 라이브러리 설치를 위해 지정한 위치)에서 **python** 을 실행 하는 경우 전체 Anaconda 배포에 대 한 액세스 권한 및 Microsoft python 모듈, revoscalepy에 액세스할 수 있습니다. 및 **microsoftml**.
+C:\Program Files\Microsoft\PyForMLS (또는 Python 클라이언트 라이브러리 설치를 위해 지정한 위치)에서 **python** 을 실행 하는 경우 전체 Anaconda 배포에 대 한 액세스 권한 및 Microsoft python 모듈, revoscalepy에 액세스할 수 있습니다.및 **microsoftml**.
 
 1. C:\Program Files\Microsoft\PyForMLS로 이동 하 고 **Python**을 두 번 클릭 합니다.
 2. 대화형 도움말을 엽니다.`help()`

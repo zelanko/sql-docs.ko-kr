@@ -7,12 +7,13 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b148bd1ca51a7121ae043e2b616100e295c008aa
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f84b799fa901f7461f448683cceffe78e1dddfd3
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344762"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714957"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>PREDICT T-sql 함수를 사용 하는 기본 점수 매기기
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68344762"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-PREDICT는 SQL Server 2017 데이터베이스 엔진의 모든 버전에서 사용할 수 있으며 Windows의 SQL Server 2017 Machine Learning Services, SQL Server 2017 (Windows), SQL Server 2017 (Linux) 또는 Azure SQL Database를 비롯 하 여 기본적으로 사용 하도록 설정 되어 있습니다. R, Python을 설치 하거나 추가 기능을 사용 하도록 설정할 필요는 없습니다.
+PREDICT는 SQL Server 2017 데이터베이스 엔진의 모든 버전에서 사용할 수 있으며 Windows의 SQL Server Machine Learning Services, SQL Server 2017 (Windows), SQL Server 2017 (Linux) 또는 Azure SQL Database를 비롯 하 여 기본적으로 사용 하도록 설정 되어 있습니다. R, Python을 설치 하거나 추가 기능을 사용 하도록 설정할 필요는 없습니다.
 
 + 모델은 아래에 나열 된 지원 되는 **rx** 알고리즘 중 하나를 사용 하 여 미리 학습 해야 합니다.
 

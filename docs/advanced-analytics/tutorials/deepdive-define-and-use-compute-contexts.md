@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 053fc48c4117372eb3e3bebb715b4176ec1dd828
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c5fb28af293c549a9f5494ab08c6c01ebf5d2a20
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469726"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715541"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>계산 컨텍스트 정의 및 사용 (SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

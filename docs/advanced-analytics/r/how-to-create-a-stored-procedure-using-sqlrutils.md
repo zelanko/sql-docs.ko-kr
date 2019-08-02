@@ -7,14 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a224bed65cd7d3fd1b6dda4ed10d56f79ecc12ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 22faeb2ea9f3e2104c2c1921b91a26ec5068079e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470145"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715701"
 ---
-# <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Sqlrutils를 사용 하 여 저장 된 pProcedure 만들기
+# <a name="create-a-stored-procedure-using-sqlrutils"></a>sqlrutils를 사용하여 저장 프로시저 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이 문서에서는 T-sql 저장 프로시저로 실행 되도록 R 코드를 변환 하는 단계를 설명 합니다. 최상의 결과를 얻으려면 모든 입력을 매개 변수화할 수 있도록 코드를 약간 수정해야 할 수 있습니다.
@@ -29,7 +30,7 @@ ms.locfileid: "68470145"
 
 ### <a name="inputs"></a>입력
 
-입력 매개 변수 중 하나의 데이터 프레임만 있을 수 있습니다.
+입력 매개 변수 중에는 데이터 프레임이 최대 하나만 있을 수 있습니다.
 
 함수의 다른 모든 입력 매개 변수뿐만 아니라 데이터 프레임 내의 개체는 다음과 같은 R 데이터 형식이어야 합니다.
 - POSIXct
@@ -116,10 +117,10 @@ StoredProcedure (foosql, sp_rsample, queryinput, sqloutput, filePath = "C:\\Temp
 
 R을 사용 하 여 저장 프로시저를 등록 하거나 T-sql에서 CREATE PROCEDURE 문을 실행할 수 있습니다.
 
-- T-sql 사용.  T-sql을 사용 하는 것이 더 어려우면 sql Server Management Studio (또는 sql DDL 명령을 실행할 수 있는 다른 클라이언트)를 열고 `StoredProcedure` 함수에서 준비한 코드를 사용 하 여 CREATE PROCEDURE 문을 실행 합니다.
+- T-sql 사용.  T-sql을 사용 하는 것이 더 어려우면 SQL Server Management Studio (또는 SQL DDL 명령을 실행할 수 있는 다른 클라이언트)를 열고 `StoredProcedure` 함수에서 준비한 코드를 사용 하 여 CREATE PROCEDURE 문을 실행 합니다.
 - R 사용. R 환경에서 `registerStoredProcedure` **sqlrutils** 의 함수를 사용 하 여 저장 프로시저를 데이터베이스에 등록할 수 있습니다.
 
-  예를 들어 다음 R 호출을 수행 하  여 *sqlsp_rsample str*에 정의 된 인스턴스 및 데이터베이스에 저장 프로시저를 등록할 수 있습니다.
+  예를 들어 다음 R 호출을 수행 하 여 *sqlsp_rsample str*에 정의 된 인스턴스 및 데이터베이스에 저장 프로시저를 등록할 수 있습니다.
 
   ```R
   registerStoredProcedure(sp_rsample, sqlConnStr)

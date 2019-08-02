@@ -6,12 +6,13 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8d7f046e961efb6129f807a7626e498062c415b6
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: aa56a9367271df2172236b133d85b5771089b1ac
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470154"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715040"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>R Services에 대 한 성능: 결과 및 리소스
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ ms.locfileid: "68470154"
 
 이 사례 연구는 SQL Server R Services 개발 팀에서 다양 한 최적화의 영향을 테스트 했습니다. 단일 rxLogit 모델이 만들어지고 항공 데이터 집합에서 점수를 계산 합니다. 개별 영향을 평가 하기 위해 학습 및 점수 매기기 프로세스 중에 최적화가 적용 되었습니다.
 
-- Github SQL Server 최적화 학습을 위한 [샘플 데이터 및 스크립트](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
+- GitHub: SQL Server 최적화 학습을 위한 [샘플 데이터 및 스크립트](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/PerfTuning)
 
 ### <a name="test-methods"></a>테스트 메서드
 

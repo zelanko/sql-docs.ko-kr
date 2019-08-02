@@ -7,17 +7,18 @@ ms.date: 12/18/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: edbd13de96c514a498aaee9482616a9b1723d632
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 65dd2197d9fb079da116908871d931ad19370cf5
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468950"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714777"
 ---
 # <a name="sql-server-2017-python-tutorials"></a>SQL Server 2017 Python 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)의 데이터베이스 내 분석에 대 한 Python 자습서를 설명 합니다. 
+이 문서에서는 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)의 데이터베이스 내 분석에 대 한 Python 자습서를 설명 합니다. 
 
 + 저장 프로시저에서 Python 코드를 래핑하고 실행 하는 방법에 대해 알아봅니다.
 + Python 기반 모델을 Serialize 하 고 SQL Server 데이터베이스에 저장 합니다.

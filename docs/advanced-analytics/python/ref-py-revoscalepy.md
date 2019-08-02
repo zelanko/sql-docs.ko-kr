@@ -1,18 +1,19 @@
 ---
 title: revoscalepy Python 패키지
-description: SQL Server 2017 Machine Learning Services Python과 함께 revoscalepy 모듈을 소개 합니다.
+description: Python을 사용 하 여 SQL Server Machine Learning Services의 revoscalepy 모듈을 소개 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 297e58fe089b0f68670a9d2a994f05d9c8bf4344
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 76c68d0753c4ba29387b3378c1086ce9bce4f53b
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470327"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715771"
 ---
 # <a name="revoscalepy-python-module-in-sql-server"></a>revoscalepy (SQL Server)의 Python 모듈
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +35,7 @@ ms.locfileid: "68470327"
 
 **Revoscalepy** 모듈은 Python 3.5을 기반으로 하며 다음 Microsoft 제품 또는 다운로드 중 하나를 설치한 경우에만 사용할 수 있습니다.
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server 컴퓨터 학습 서비스](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 이상](https://docs.microsoft.com/machine-learning-server/)
 + [데이터 과학 클라이언트용 Python 클라이언트 라이브러리](setup-python-client-tools-sql.md)
 

@@ -7,12 +7,13 @@ ms.date: 03/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 79a5eeb48816f858d3e009f8564487fd68769979
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470205"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715168"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server에서 R을 사용 하 여 SSIS 및 SSRS 워크플로 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

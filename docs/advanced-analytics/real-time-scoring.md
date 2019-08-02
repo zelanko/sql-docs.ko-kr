@@ -3,16 +3,17 @@ title: Sp_rxPredict 저장 프로시저를 사용 하 여 실시간 점수 매�
 description: Sp_rxPredict를 사용 하 여 예측을 생성 하 고 R로 작성 된 미리 학습 된 모델에 대 한 데이터 입력 점수를 SQL Server 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/29/2019
+ms.date: 07/26/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 26701ac6e538d195a5a85ad66af9578848889d23
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469966"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715642"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>기계 학습 SQL Server sp_rxPredict의 실시간 점수 매기기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ ms.locfileid: "68469966"
 
 ## <a name="how-real-time-scoring-works"></a>실시간 점수 매기기 작동 방법
 
-RevoScaleR 또는 MicrosoftML 기능 (예: [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxneuralnet (MicrosoftML))](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)을 기반으로 하는 특정 모델 유형에 대해 SQL Server 2017 및 SQL Server 2016에서 실시간 점수가 지원 됩니다. 특수 이진 형식 C++ 으로 저장 된 기계 학습 모델에 제공 된 사용자 입력을 기준으로 기본 라이브러리를 사용 하 여 점수를 생성 합니다.
+RevoScaleR 또는 MicrosoftML 함수 (예: [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)[rxneuralnet (MicrosoftML))](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)를 기반으로 하는 특정 모델 유형에 대해 실시간 점수 매기기가 지원 됩니다. 특수 이진 형식 C++ 으로 저장 된 기계 학습 모델에 제공 된 사용자 입력을 기준으로 기본 라이브러리를 사용 하 여 점수를 생성 합니다.
 
 외부 언어 런타임을 호출할 필요 없이 학습 된 모델을 점수 매기기에 사용할 수 있기 때문에 여러 프로세스의 오버 헤드가 줄어듭니다. 이는 프로덕션 점수 매기기 시나리오에 대해 훨씬 빠른 예측 성능을 지원 합니다. 데이터는 SQL Server 되지 않으므로 R과 SQL 간에 데이터를 변환 하지 않고 결과를 생성 하 고 새 테이블에 삽입할 수 있습니다.
 

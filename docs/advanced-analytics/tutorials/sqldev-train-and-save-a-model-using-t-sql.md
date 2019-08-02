@@ -7,12 +7,13 @@ ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0825d99aee2639d28e95dfcaf79e1a8e915bf25a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f23f4c350855b71a3633587bb3c092988fe89fef
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470540"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715330"
 ---
 # <a name="lesson-3-train-and-save-a-model-using-t-sql"></a>3단원: T-sql을 사용 하 여 모델 학습 및 저장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +81,7 @@ T-SQL에서 R을 호출할 때 시스템 저장 프로시저 [sp_execute_externa
     INSERT INTO nyc_taxi_models (name, model) VALUES('RxTrainLogit_model', @model);
     ```
 
-2. 다음 메시지  와 같이 R [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 의 **stdout** 스트림으로 파이프 되는 메시지에 대 한 메시지 창을 시청 합니다. 
+2. 다음 메시지 와 같이 R [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 의 **stdout** 스트림으로 파이프 되는 메시지에 대 한 메시지 창을 시청 합니다. 
 
     "외부 스크립트의 STDOUT 메시지: 읽은 행: 1193025, 총 처리 된 행: 1193025, 총 청크 시간: 0.093 초 "
 

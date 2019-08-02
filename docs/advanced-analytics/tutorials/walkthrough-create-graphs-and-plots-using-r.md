@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f14005b8ba9d6f05d2b69deba29d83af5695f657
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 3e8293fecf351176ac2b1e88176395f6c2b34d20
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470507"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715308"
 ---
 # <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>SQL 및 R을 사용한 그래프와 플롯(plot) 만들기(연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

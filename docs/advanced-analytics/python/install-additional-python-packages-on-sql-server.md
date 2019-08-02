@@ -1,29 +1,30 @@
 ---
 title: 새 Python 언어 패키지 설치
-description: SQL Server 2017 Machine Learning Services (데이터베이스 내) 및 Machine Learning Server (독립 실행형)에 새 Python 패키지를 추가 합니다.
+description: SQL Server Machine Learning Services (데이터베이스 내) 및 Machine Learning Server (독립 실행형)에 새 Python 패키지를 추가 합니다.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fc8c7148369ec1a501106e573e195a8f0b7f060a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e107622655d5f00d27de6abcea46a92526f47ada
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470252"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715800"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server에 새 Python 패키지를 설치 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 SQL Server 2017 Machine Learning Services의 인스턴스에 새 Python 패키지를 설치 하는 방법을 설명 합니다. 일반적으로 새 패키지를 설치 하는 프로세스는 표준 Python 환경의 경우와 유사 합니다. 그러나 서버에 인터넷 연결이 없는 경우에는 몇 가지 추가 단계가 필요 합니다.
+이 문서에서는 SQL Server Machine Learning Services 인스턴스에 새 Python 패키지를 설치 하는 방법을 설명 합니다. 일반적으로 새 패키지를 설치 하는 프로세스는 표준 Python 환경의 경우와 유사 합니다. 그러나 서버에 인터넷 연결이 없는 경우에는 몇 가지 추가 단계가 필요 합니다.
 
 패키지 위치 및 설치 경로에 대 한 자세한 내용은 [R 또는 Python 패키지 정보 가져오기](../package-management/installed-package-information.md)를 참조 하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-+ Python 언어 옵션을 사용 하 여 [2017 Machine Learning Services (데이터베이스 내)를 SQL Server](../install/sql-machine-learning-services-windows-install.md) 합니다. 
++ Python 언어 옵션을 사용 하 여 [Machine Learning Services (데이터베이스 내)를 SQL Server](../install/sql-machine-learning-services-windows-install.md) 합니다. 
 
 + 패키지는 Python 3.5 호환 되며 Windows에서 실행 되어야 합니다. 
 

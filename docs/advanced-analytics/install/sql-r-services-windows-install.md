@@ -7,19 +7,20 @@ ms.date: 05/03/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9cc14328e0e43106f9fec0779f073bcd1568e888
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: 61dd49191e85d9fd4685904ae01b72d754d43318
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345012"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715817"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 **SQL Server 2016 R Services**를 설치 하 고 구성 하는 방법을 설명 합니다. 2016 SQL Server 있는 경우이 기능을 설치 하 여 SQL Server에서 R 코드를 실행할 수 있도록 합니다.
 
-SQL Server 2017에서 R 통합은 Python 추가를 반영 하 여 [Machine Learning Services](../r/r-server-standalone.md)에 제공 됩니다. R 통합을 원하는 경우 SQL Server 2017 설치 미디어를 [설치 하려면 SQL Server 2017 Machine Learning Services 설치](sql-machine-learning-services-windows-install.md) 를 참조 하 여 기능을 추가 합니다. 
+SQL Server 2017에서 R 통합은 Python 추가를 반영 하 여 [Machine Learning Services](../r/r-server-standalone.md)에 제공 됩니다. R 통합을 원하는 경우 SQL Server 2017 설치 미디어를 [설치 하려면 SQL Server Machine Learning Services 설치](sql-machine-learning-services-windows-install.md) 를 참조 하 여 기능을 추가 합니다. 
 
 <a name="bkmk_prereqs"> </a> 
 
@@ -27,7 +28,7 @@ SQL Server 2017에서 R 통합은 Python 추가를 반영 하 여 [Machine Learn
 
 + 데이터베이스 엔진 인스턴스가 필요 합니다. 기존 인스턴스에 점진적으로 추가할 수는 있지만 R만 설치할 수는 없습니다.
 
-+ 비즈니스 연속성을 위해 [Always On 가용성 그룹이](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) R Services에 대해 지원 됩니다. 각 노드에서 R Services를 설치 하 고 패키지를 구성 해야 합니다.
++ 비즈니스 연속성을 위해 R Services에 대 한 [가용성 그룹 Always On](https://docs.microsoft.com/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server) 지원 됩니다. 각 노드에서 R Services를 설치 하 고 패키지를 구성 해야 합니다.
 
 + 장애 조치 (failover) 클러스터에 R Services를 설치 하지 마십시오. R 프로세스 격리에 사용 되는 보안 메커니즘은 Windows Server 장애 조치 (failover) 클러스터 환경과 호환 되지 않습니다.
 

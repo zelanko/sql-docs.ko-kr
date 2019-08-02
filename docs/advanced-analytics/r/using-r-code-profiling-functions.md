@@ -7,12 +7,13 @@ ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a586a4f7656dd0319e3139e05ba1bea6c8d96abe
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e03ae1a8c4cdab87f46f63da6271886b4518b5e3
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469842"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715010"
 ---
 # <a name="use-r-code-profiling-functions-to-improve-performance"></a>R 코드 프로 파일링 함수를 사용 하 여 성능 향상
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

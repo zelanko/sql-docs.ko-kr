@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e799b1ccba38d7716f2987112573a1d2d07203cd
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f12c20a54c0811e392eaa85684d7fac1a209c396
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68468463"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714691"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R 및 SQL Server를 사용 하 여 데이터 기능 만들기 (연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -134,7 +135,7 @@ R 언어는 풍부하고 다양한 통계 라이브러리로 잘 알려져 있�
     ```sql
     CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)
     -- User-defined function calculates the direct distance between two geographical coordinates.
-    RETURNS
+    RETURNS decimal(28, 10)
     AS
     BEGIN
       DECLARE @distance decimal(28, 10)

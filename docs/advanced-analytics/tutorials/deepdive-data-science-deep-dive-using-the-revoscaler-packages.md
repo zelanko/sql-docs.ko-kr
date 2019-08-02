@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c326d51e9b3ac4edac61f97bf5f7fa3143d8d350
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 4db5debf4ba71f29a8870c8674a5422e9ffd334a
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470628"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714881"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>자습서: SQL Server 데이터에 RevoScaleR R 함수 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -23,7 +24,7 @@ ms.locfileid: "68470628"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) R 기능 또는 [SQL Server 2016 R 서비스 (데이터베이스 내)](../install/sql-r-services-windows-install.md)
++ R 기능 또는 [SQL Server R Services (데이터베이스 내)](../install/sql-r-services-windows-install.md) 를 사용 하 여 [Machine Learning Services SQL Server](../install/sql-machine-learning-services-windows-install.md)
   
 + [데이터베이스 사용 권한](../security/user-permission.md) 및 SQL Server 데이터베이스 사용자 로그인
 
@@ -31,7 +32,7 @@ ms.locfileid: "68470628"
 
 + RStudio와 같은 IDE 또는 R에 포함 된 기본 제공 RSTUDIO 도구
 
-로컬이나 원격 계산 환경으로 전환하려면 두 시스템이 필요합니다. 로컬 환경은 일반적으로 데이터 과학 작업을 하는 데 충분한 성능을 가진 개발 환경입니다. 이 경우, 원격 환경은 R을 사용할 수 있는 SQL Server 2017 또는 SQL Server 2016입니다. 
+로컬이나 원격 계산 환경으로 전환하려면 두 시스템이 필요합니다. 로컬 환경은 일반적으로 데이터 과학 작업을 하는 데 충분한 성능을 가진 개발 환경입니다. 이 경우 원격은 R 기능이 사용 하도록 설정 된 SQL Server 됩니다. 
 
 로컬 및 원격 시스템 모두에서 동일한 버전의 **RevoScaleR** 를 보유 하 여 계산 컨텍스트를 전환할 수 있습니다. 로컬 워크스테이션에서 Microsoft R Client를 설치 하 여 **RevoScaleR** 패키지 및 관련 공급자를 가져올 수 있습니다.
 
@@ -57,7 +58,7 @@ ms.locfileid: "68470628"
 
 ## <a name="summary-of-tasks"></a>작업 요약
 
-+ 데이터는 처음에 CSV 파일 또는 XDF 파일에서 가져옵니다. RevoScaleR 패키지의 함수를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여로 데이터  를 가져옵니다.
++ 데이터는 처음에 CSV 파일 또는 XDF 파일에서 가져옵니다. RevoScaleR 패키지의 함수를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 여로 데이터 를 가져옵니다.
 + 모델 학습과 평가는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 계산 환경에 의해 수행됩니다. 
 + **RevoScaleR** 함수를 사용 하 여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 점수 매기기 결과를 저장 하는 새 테이블을 만듭니다.
 + 서버나 로컬 계산 환경에서 plot을 생성할 수 있습니다.

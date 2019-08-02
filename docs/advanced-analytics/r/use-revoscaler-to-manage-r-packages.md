@@ -6,19 +6,20 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e5cd2f55559671b1e3f3d2004c4865b8bac8aa42
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 8db20295c2e21b6499d4d935f9c99161983b588f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469884"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715579"
 ---
 # <a name="how-to-use-revoscaler-functions-to-find-or-install-r-packages-on-sql-server"></a>RevoScaleR 함수를 사용 하 여 SQL Server에서 R 패키지를 찾거나 설치 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 RevoScaleR 9.0.1 이상에는 R 패키지 관리를 위한 함수 SQL Server 계산 컨텍스트가 포함 되어 있습니다. 이러한 함수는 원격 관리자가 아닌 원격 서버에 직접 액세스 하지 않고 SQL Server에 패키지를 설치 하는 데 사용할 수 있습니다.
 
-SQL Server 2017 Machine Learning Services에 최신 버전의 RevoScaleR가 이미 포함 되어 있습니다. SQL Server 2016 R Services 고객은 [구성 요소 업그레이드](../install/upgrade-r-and-python.md) 를 수행 하 여 RevoScaleR 패키지 관리 기능을 가져와야 합니다. 패키지 버전 및 내용을 검색 하는 방법에 대 한 지침은 [패키지 정보 가져오기](../package-management/installed-package-information.md)를 참조 하세요.
+SQL Server Machine Learning Services에 최신 버전의 RevoScaleR가 이미 포함 되어 있습니다. SQL Server 2016 R Services 고객은 [구성 요소 업그레이드](../install/upgrade-r-and-python.md) 를 수행 하 여 RevoScaleR 패키지 관리 기능을 가져와야 합니다. 패키지 버전 및 내용을 검색 하는 방법에 대 한 지침은 [패키지 정보 가져오기](../package-management/installed-package-information.md)를 참조 하세요.
 
 ## <a name="revoscaler-functions-for-package-management"></a>패키지 관리에 대 한 RevoScaleR 함수
 

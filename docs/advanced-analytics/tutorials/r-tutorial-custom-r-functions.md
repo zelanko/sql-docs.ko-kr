@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d90e2d4887154d3545884a77d0290e632f04a569
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 439b21bce4e081025db1db53ab44498415ca44af
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470595"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715410"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>RxExec를 사용 하 여 SQL Server에서 사용자 지정 R 함수 실행
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "68470595"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-+ [SQL Server 2017 Machine Learning Services (R 포함](../install/sql-machine-learning-services-windows-install.md) ) 또는 [SQL Server 2016 R 서비스 (데이터베이스 내)](../install/sql-r-services-windows-install.md)
++ [SQL Server Machine Learning Services (R 포함](../install/sql-machine-learning-services-windows-install.md) ) 또는 [SQL Server 2016 R 서비스 (데이터베이스 내)](../install/sql-r-services-windows-install.md)
   
 + [데이터베이스 사용 권한](../security/user-permission.md) 및 SQL Server 데이터베이스 사용자 로그인
 
@@ -145,7 +146,7 @@ R에서 사용자 지정 함수를 만든 다음 여러 번 실행하면 게임�
 
 이 연습은 간단 하지만 SQL Server에서 실행 되는 R 스크립트에서 임의의 R 함수를 통합 하는 데 중요 한 메커니즘을 보여 줍니다. 이 기법을 가능 하 게 하는 핵심 요소를 요약 하면 다음과 같습니다.
 
-+ 기계 학습 및 R 통합을 위해 SQL Server를 구성 해야 합니다. [SQL Server 2017](../install/sql-machine-learning-services-windows-install.md) 은 R 기능 또는 [SQL Server 2016 R 서비스 (데이터베이스 내)](../install/sql-r-services-windows-install.md)를 사용 하 여 Machine Learning Services.
++ 기계 학습 및 R 통합을 위해 SQL Server를 구성 해야 합니다. R 기능을 사용 하 여 [Machine Learning Services을 SQL Server](../install/sql-machine-learning-services-windows-install.md) 하거나 [2016 r 서비스 (데이터베이스 내)를 SQL Server](../install/sql-r-services-windows-install.md)합니다.
 
 + 모든 종속성을 포함 하 여 함수에 사용 되는 오픈 소스 또는 타사 라이브러리는 SQL Server에 설치 해야 합니다. 자세한 내용은 [새 R 패키지 설치](../r/install-additional-r-packages-on-sql-server.md)를 참조 하세요.
 

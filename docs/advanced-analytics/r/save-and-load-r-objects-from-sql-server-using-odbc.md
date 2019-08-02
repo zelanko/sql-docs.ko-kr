@@ -6,12 +6,13 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 46c25083133677b382b33480ac5674f1786a7bf8
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e3d7891098727c066b05bbd9f2f23c41bbdcca59
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469931"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714981"
 ---
 # <a name="save-and-load-r-objects-from-sql-server-using-odbc"></a>ODBC를 사용 하 여 SQL Server에서 R 개체 저장 및 로드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

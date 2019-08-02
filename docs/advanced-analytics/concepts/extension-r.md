@@ -1,25 +1,26 @@
 ---
 title: R 프로그래밍 언어 확장
-description: SQL Server 2016 R Services 또는 SQL Server 2017 Machine Learning Services의 R 코드 실행 및 기본 제공 R 라이브러리에 대해 알아봅니다.
+description: SQL Server R Services 또는 SQL Server Machine Learning Services의 R 코드 실행 및 기본 제공 R 라이브러리에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 300b5d25d62be24c1e5590f5cd9795d08da7f2c1
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: fa39240da51d0b7a9269777f751944104d703d59
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470494"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715240"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server에서 R 언어 확장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R 확장은 관계형 데이터베이스 엔진에 대 한 SQL Server Machine Learning Services 추가 기능 중 일부입니다. R 실행 환경, 표준 라이브러리 및 도구를 사용 하 여 기본 R 배포, Microsoft R 라이브러리를 추가 합니다. [RevoScaleR](../r/ref-r-revoscaler.md) for analytics, 기계 학습 알고리즘에 대 한 [MicrosoftML](../r/ref-r-microsoftml.md) , SQL Server의 데이터 또는 R 코드에 액세스 하기 위한 기타 라이브러리.
 
-R 통합은 SQL Server 2016부터 [r 서비스](../r/sql-server-r-services.md)를 사용 하 여 SQL Server에서 사용할 수 있으며 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)의 일부로 계속 진행할 수 있습니다.
+R 통합은 [SQL Server R Services](../r/sql-server-r-services.md) 및 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)에서 사용할 수 있습니다.
 
 ## <a name="r-components"></a>R 구성 요소
 
@@ -27,7 +28,7 @@ SQL Server는 오픈 소스 패키지와 소유 패키지를 모두 포함 합�
 
 SQL Server는 기본 R 실행 파일을 수정 하지 않지만, 해당 버전은 독점 패키지가 빌드되고 테스트 된 버전 이므로 설치 프로그램에서 설치 하는 R 버전을 사용 해야 합니다. CRAN에서 얻을 수 있는 R의 기본 배포와 어떻게 다른 지에 대 한 자세한 내용은 [r 언어 및 Microsoft r 제품 및 기능과의 상호 운용성](https://docs.microsoft.com/r-server/what-is-r-server-interoperability)을 참조 하세요.
 
-설치 프로그램에서 설치 하는 R 기본 패키지 배포는 인스턴스와 연결 된 폴더에서 찾을 수 있습니다. 예를 들어 SQL Server 2016 기본 인스턴스에 R Services를 설치한 경우 R 라이브러리는 기본적 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`으로이 폴더에 배치 됩니다. 마찬가지로 기본 인스턴스와 연결 된 R 도구는 기본적 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`으로이 폴더에 배치 됩니다.
+설치 프로그램에서 설치 하는 R 기본 패키지 배포는 인스턴스와 연결 된 폴더에서 찾을 수 있습니다. 예를 들어 SQL Server 기본 인스턴스에 R Services를 설치한 경우 R 라이브러리는 기본적 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library`으로이 폴더에 배치 됩니다. 마찬가지로 기본 인스턴스와 연결 된 R 도구는 기본적 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\bin`으로이 폴더에 배치 됩니다.
 
 병렬 및 분산 작업을 위해 Microsoft에서 추가한 R 패키지에는 다음 라이브러리가 포함 됩니다.
 

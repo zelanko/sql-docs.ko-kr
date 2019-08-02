@@ -7,12 +7,13 @@ ms.date: 12/18/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 84ef5d684e767016491baa6e47e37d1402fc6879
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: d4843aaf14a944e7beef73ef1330985666007498
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470043"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715112"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>SQL Server에서 R Server (독립 실행형) 및 Machine Learning Server (독립 실행형)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

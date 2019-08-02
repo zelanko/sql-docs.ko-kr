@@ -6,20 +6,18 @@ ms.date: 05/31/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 268b3df72d468170fbefae2557892c49fd15515c
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 10ec78bf8627bfef3232dfc72d7ef7f638604b15
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470299"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715751"
 ---
 # <a name="r-scripting-errors-in-sql-server"></a>SQL Server에서 R 스크립팅 오류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 SQL Server에서 R 코드를 실행할 때 gerrors의 몇 가지 .scriptin 합니다. 목록은 포괄적이 지 않습니다. 많은 패키지가 있으며, 동일한 패키지의 버전 마다 오류가 다를 수 있습니다. R Services (데이터베이스 내), Microsoft R Client 및 Microsoft R Server에서 사용 되는 기계 학습 구성 요소를 지 원하는 [Machine Learning Server 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)에 스크립트 오류를 게시 하는 것이 좋습니다.
-
-**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
-
+이 문서에서는 SQL Server에서 R 코드를 실행할 때의 여러 스크립팅 오류에 대해 설명 합니다. 목록은 포괄적이 지 않습니다. 많은 패키지가 있으며, 동일한 패키지의 버전 마다 오류가 다를 수 있습니다. R Services (데이터베이스 내), Microsoft R Client 및 Microsoft R Server에서 사용 되는 기계 학습 구성 요소를 지 원하는 [Machine Learning Server 포럼](https://social.msdn.microsoft.com/Forums/en-US/home?category=MicrosoftR)에 스크립트 오류를 게시 하는 것이 좋습니다.
 
 ## <a name="valid-script-fails-in-t-sql-or-in-stored-procedures"></a>T-sql 또는 저장 프로시저에서 올바른 스크립트가 실패 합니다.
 
@@ -57,7 +55,7 @@ R 스크립트는 다음과 같은 여러 가지 이유로 SQL Server 컨텍스�
 
 ## <a name="implied-authentication-for-remote-execution-via-odbc"></a>ODBC를 통한 원격 실행을 위한 묵시적 인증
 
-RevoScaleR 함수를 사용 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 여 R 명령을 실행 하기 위해 컴퓨터에  연결 하는 경우 서버에 데이터를 쓰는 ODBC 호출을 사용 하면 오류가 발생할 수 있습니다. 이 오류는 Windows 인증을 사용 하는 경우에만 발생 합니다.
+RevoScaleR 함수를 사용 하 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 여 R 명령을 실행 하기 위해 컴퓨터에 연결 하는 경우 서버에 데이터를 쓰는 ODBC 호출을 사용 하면 오류가 발생할 수 있습니다. 이 오류는 Windows 인증을 사용 하는 경우에만 발생 합니다.
 
 그 이유는 R Services에 대해 만들어진 작업자 계정에 서버에 연결할 수 있는 권한이 없기 때문입니다. 따라서 ODBC 호출은 사용자를 대신 하 여 실행할 수 없습니다. Sql 로그인을 사용 하면 R 클라이언트에서 SQL Server 인스턴스로 명시적으로 전달 된 다음 ODBC에 자격 증명이 전달 되기 때문에 SQL 로그인에 문제가 발생 하지 않습니다. 그러나 SQL 로그인을 사용 하는 것은 Windows 인증을 사용 하는 것 보다 더 안전 하지 않습니다.
 

@@ -7,12 +7,13 @@ ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 705df9d06a7dbf4563df3670894351d15c0962a5
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 2677b48daf253a85f2b74078bdad7de65e37d572
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470094"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715056"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>SQL Server에서 기계 학습 워크 로드 관리 및 통합
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +30,7 @@ R 및 Python machine learning은 [SQL Server Machine Learning Services](../what-
 
 ## <a name="feature-availability"></a>기능 가용성
 
-R 및 Python 통합은 연속 된 단계를 통해 사용할 수 있습니다. 첫 번째는 데이터베이스 엔진 인스턴스에 Machine Learning Services 기능을 [포함 하거나 추가  ](../install/sql-machine-learning-services-windows-install.md) 하는 경우 설정입니다. 이후 단계로 데이터베이스 엔진 인스턴스에서 외부 스크립팅을 사용 하도록 설정 해야 합니다 (기본적으로 해제 됨).
+R 및 Python 통합은 연속 된 단계를 통해 사용할 수 있습니다. 첫 번째는 데이터베이스 엔진 인스턴스에 Machine Learning Services 기능을 [포함 하거나 추가 ](../install/sql-machine-learning-services-windows-install.md) 하는 경우 설정입니다. 이후 단계로 데이터베이스 엔진 인스턴스에서 외부 스크립팅을 사용 하도록 설정 해야 합니다 (기본적으로 해제 됨).
 
 이 시점에서 데이터베이스 관리자만 외부 스크립트를 만들고 실행 하 고, 패키지를 추가 또는 삭제 하 고, 저장 프로시저 및 기타 개체를 만들 수 있는 모든 권한을 갖습니다.
 

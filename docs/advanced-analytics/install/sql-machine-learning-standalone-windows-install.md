@@ -7,18 +7,23 @@ ms.date: 08/28/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0abf14fa61d9408f8403a493b7559148f0f5a775
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 94ca7b3646b9005e11b3ee4968cbfaaa65d42264
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344976"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715844"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>SQL Server 설치를 사용 하 여 Machine Learning Server (독립 실행형) 또는 R Server (독립 실행형) 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 설치 프로그램에는 SQL Server 외부에서 실행 되는 인스턴스를 인식 하지 않는 독립 실행형 machine learning 서버를 설치 하기 위한 **공유 기능** 옵션이 포함 되어 있습니다. SQL Server 2016에서이 기능을 **R Server (독립 실행형)** 라고 합니다. SQL Server 2017에서이를 **Machine Learning Server (독립 실행형)** 라고 하며 R 및 Python을 포함 합니다. 
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+SQL Server 설치 프로그램에는 SQL Server 외부에서 실행 되는 인스턴스를 인식 하지 않는 독립 실행형 machine learning 서버를 설치 하기 위한 **공유 기능** 옵션이 포함 되어 있습니다. 이를 **Machine Learning Server (독립 실행형)** 이라고 하며 R 및 Python을 포함 합니다. 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+SQL Server 설치 프로그램에는 SQL Server 외부에서 실행 되는 인스턴스를 인식 하지 않는 독립 실행형 machine learning 서버를 설치 하기 위한 **공유 기능** 옵션이 포함 되어 있습니다. SQL Server 2016에서이 기능을 **R Server (독립 실행형)** 라고 합니다.  
+::: moniker-end
 
 SQL Server 설치 프로그램에서 설치 하는 독립 실행형 서버는 다음과 같은 사용 사례 및 시나리오를 지 원하는 SQL 브랜드가 아닌 버전의 [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)와 기능적으로 동일 합니다.
 
@@ -39,7 +44,7 @@ SQL Server 2016 R Server (독립 실행형) 또는 Microsoft R Server와 같은 
 
 일반적으로 독립 실행형 서버 및 데이터베이스 엔진 인스턴스 인식 설치를 함께 사용할 수 없는 것으로 간주 하 여 리소스 경합을 방지 하는 것이 좋지만, 리소스가 충분 한 경우에는 금지 동일한 물리적 컴퓨터.
 
-컴퓨터에는 하나의 독립 실행형 서버 (SQL Server 2017 Machine Learning Server 또는 SQL Server 2016 R 서버 (독립 실행형)만 사용할 수 있습니다. 새 버전을 추가 하기 전에 버전 하나를 제거 해야 합니다.
+컴퓨터에 독립 실행형 서버를 하나만 포함할 수 있습니다. SQL Server Machine Learning Server (독립 실행형) 또는 SQL Server R 서버 (독립 실행형)입니다. 새 버전을 추가 하기 전에 버전 하나를 제거 해야 합니다.
 
 ::: moniker range="=sql-server-2016"
 <a name="bkmk_ga_instalpatch"></a> 
@@ -152,7 +157,7 @@ R 및 Python 개발의 경우 동일한 컴퓨터에 여러 버전을 포함 하
 |----|----|----|
 |SQL Server 2017 Machine Learning Server (독립 실행형) |  SQL Server 2017 설치 마법사 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server (독립 실행형) |  Windows 독립 실행형 설치 관리자 |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|
-|SQL Server 2017 Machine Learning Services (데이터베이스 내) |SQL Server 2017 설치 마법사, R 언어 옵션|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
+|SQL Server Machine Learning Services (데이터베이스 내) |SQL Server 2017 설치 마법사, R 언어 옵션|`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\R_SERVICES`  <br/>`C:\Program Files\Microsoft SQL Server\MSSQL14.<instance_name>\PYTHON_SERVICES` |
 |SQL Server 2016 R 서버 (독립 실행형) |  SQL Server 2016 설치 마법사 |`C:\Program Files\Microsoft SQL Server\130\R_SERVER`|
 |SQL Server 2016 R Services (데이터베이스 내) |SQL Server 2016 설치 마법사|`C:\Program Files\Microsoft SQL Server\MSSQL13.<instance_name>\R_SERVICES`|
 

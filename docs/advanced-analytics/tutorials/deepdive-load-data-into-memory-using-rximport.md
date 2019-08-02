@@ -7,12 +7,13 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6e7e986b3d0ebd21527d730cb5b4bd5fa60d1c4f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0e498e2aff0f6c21d11e4c34439301f36119257f
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469740"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714918"
 ---
 # <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>RxImport를 사용 하 여 메모리에 데이터 로드 (SQL Server 및 RevoScaleR 자습서)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +75,7 @@ ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans credit
 
 **rxImport** 를 사용하여 데이터 이동은 물론 데이터를 읽는 동안 데이터를 변환할 수도 있습니다. 예를 들어 고정 너비 열에 대해 문자 수를 지정하고, 변수에 대한 설명을 제공하고, 요소 열에 대한 수준을 설정하고, 가져온 후 사용할 새로운 수준을 만들 수 있습니다.
 
-**Rximport** 함수는 가져오기 프로세스 동안 열에 변수 이름을 할당 하지만, *colInfo* 매개 변수를 사용 하 여 새 변수 이름을 지정 하거나 colclasses 매개 변수를 사용 하 여  데이터 형식을 변경할 수 있습니다.
+**Rximport** 함수는 가져오기 프로세스 동안 열에 변수 이름을 할당 하지만, *colInfo* 매개 변수를 사용 하 여 새 변수 이름을 지정 하거나 colclasses 매개 변수를 사용 하 여 데이터 형식을 변경할 수 있습니다.
 
 *transforms* 매개 변수에서 추가 작업을 지정하여 읽은 각 데이터 청크에 대한 기본 처리를 수행할 수 있습니다.
 

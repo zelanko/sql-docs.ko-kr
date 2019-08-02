@@ -7,12 +7,13 @@ ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ab73e0231f462504652e0e1af62fed80c706f061
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ac9537e3e13313e6ca0094a75b0e72c7c8ee80c2
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469033"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714750"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>빠른 시작: SQL Server에서 "Hello 세계" R 스크립트 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

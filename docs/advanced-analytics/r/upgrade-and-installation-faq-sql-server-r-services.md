@@ -7,12 +7,13 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-ms.openlocfilehash: 0ee8902dad88cc148481585aaa9e1e083e536d0f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: fe196a82badcab9ebe05004ee05cd67131942dd1
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469897"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715608"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>SQL Server Machine Learning 또는 R Server에 대 한 업그레이드 및 설치 FAQ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +23,7 @@ ms.locfileid: "68469897"
 + 일부 문제는 시험판 버전에서 업그레이드 하는 경우에만 발생 합니다. 따라서 이러한 정보를 읽기 전에 먼저 버전 및 에디션을 확인 하는 것이 좋습니다. 버전 정보를 가져오려면 SQL Server Management Studio의 `@@VERSION` 쿼리에서를 실행 합니다.
 + 최신 릴리스에서 수정 된 문제를 해결 하기 위해 최대한 빨리 최신 릴리스 또는 서비스 릴리스로 업그레이드 합니다.
 
-**적용 대상:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services (데이터베이스 내)
+**적용 대상:** SQL Server 2016 R Services, SQL Server Machine Learning Services (데이터베이스 내)
 
 ## <a name="requirements-and-restrictions-on-older-versions-of-sql-server-2016"></a>이전 버전의 SQL Server 2016에 대 한 요구 사항 및 제한 사항 
 

@@ -1,20 +1,21 @@
 ---
 title: R 및 Python에 대 한 리소스 풀을 만드는 방법
-description: SQL Server 2016 또는 SQL Server 2017 데이터베이스 엔진 인스턴스에서 R 또는 Python 프로세스에 대 한 SQL Server 리소스 풀을 정의 합니다.
+description: SQL Server 데이터베이스 엔진 인스턴스에서 R 또는 Python 프로세스에 대 한 SQL Server 리소스 풀을 정의 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5b58c2a42334352d64aa2cea61a75585f29996c3
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 882b9b15fbba567f30172d625af3867b27ae387e
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344073"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715901"
 ---
-# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>SQL Server에서 machine learning에 대 한 리소스 풀을 만드는 방법
+# <a name="how-to-create-a-resource-pool-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에 대 한 리소스 풀을 만드는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 이 문서에서는 SQL Server에서 R 및 Python 기계 학습 워크 로드를 관리 하는 데 특별히 리소스 풀을 만들고 사용 하는 방법을 설명 합니다. 이미 기계 학습 기능을 설치 하 고 사용 하도록 설정 하 고, R 또는 Python과 같은 외부 프로세스에서 사용 하는 리소스의 보다 세분화 된 관리를 지원 하도록 인스턴스를 다시 구성 하려고 한다고 가정 합니다.
@@ -188,7 +189,7 @@ ms.locfileid: "68344073"
   
      이 경우 풀이 AUTO 선호도로 생성되었으므로 정보가 표시되지 않습니다. 자세한 내용은 [sys.dm_resource_governor_resource_pool_affinity&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md)를 참조하세요.
 
-## <a name="see-also"></a>참고자료
+## <a name="next-steps"></a>다음 단계
 
 서버 리소스를 관리 하는 방법에 대 한 자세한 내용은 다음을 참조 하세요.
 

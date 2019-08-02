@@ -7,12 +7,13 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ecff1f32d129b71a014038fa681e76b9a2f44554
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: af2b1bf8f619800737863ff955011b011f4819d0
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470526"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715397"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R 모델을 빌드하고 SQL Server에 저장 (연습)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
