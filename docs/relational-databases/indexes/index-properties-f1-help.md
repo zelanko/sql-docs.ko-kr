@@ -19,12 +19,12 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909710"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476296"
 ---
 # <a name="index-properties-f1-help"></a>인덱스 속성 F1 도움말
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -96,7 +96,7 @@ ms.locfileid: "67909710"
  인덱스 키에 참여하는 열이 테이블 또는 뷰 열에 NULL 값을 저장하도록 허용할지 여부를 나타냅니다.  
   
  **추가**  
- 인덱스 키에 열을 추가합니다. **추가**를 클릭하면 나타나는 *\<테이블 이름>***에서 열 선택** 대화 상자에서 테이블 열을 선택합니다. 공간 인덱스의 경우 열을 하나 선택하면 이 단추가 흐리게 표시됩니다.  
+ 인덱스 키에 열을 추가합니다. **추가**를 클릭하면 나타나는 *\<테이블 이름>* **에서 열 선택** 대화 상자에서 테이블 열을 선택합니다. 공간 인덱스의 경우 열을 하나 선택하면 이 단추가 흐리게 표시됩니다.  
   
  **제거**  
  선택된 열을 인덱스 키에 참여하는 열에서 제거합니다.  
@@ -133,7 +133,76 @@ ms.locfileid: "67909710"
   
  **Allow Nulls**  
  테이블 정의에 따라 열에 Null 값이 허용되는 경우 **예** 를 표시합니다. 테이블 정의에 따라 열에 Null 값이 허용되지 않는 경우 **아니요** 를 표시합니다.  
+
+##  <a name="Options"></a> 옵션 페이지 옵션
+ 이 페이지를 사용하여 다양한 인덱스 옵션을 보거나 수정할 수 있습니다.
+
+### <a name="general-options"></a>일반 옵션
+**자동으로 통계 다시 계산**<br>
+배포 통계를 자동으로 다시 계산할지 여부를 지정합니다. 기본값은 **True**이며 STATISTICS_NORECOMPUTE를 OFF로 설정하는 것과 같습니다. 이 옵션을 **False**로 설정하면 STATISTICS_NORECOMPUTE가 ON으로 설정됩니다.
+
+**중복 값 무시** <br>
+삽입 작업에서 고유 인덱스에 중복된 키 값을 삽입하려는 경우에 대한 오류 응답을 지정합니다.
+
+True<br>
+중복된 키 값이 고유 인덱스에 삽입되는 경우 경고 메시지가 나타나고 고유성 제약 조건을 위반하는 행만 실패합니다.
+
+False<br>
+중복된 키 값이 고유 인덱스에 삽입되는 경우 오류 메시지가 나타나고 전체 INSERT 작업이 롤백됩니다.
+
+### <a name="locks-options"></a>잠금 옵션
+
+**행 잠금 허용**<br>
+행 잠금의 허용 여부를 지정합니다.
+
+**페이지 잠금 허용**<br>
+페이지 잠금의 허용 여부를 지정합니다.
+
+### <a name="operation-options"></a>작업 옵션
+
+ **온라인 DML 처리 허용**  
+ 이 옵션을 사용하면 사용자는 CREATE 또는 ALTER 같은 인덱스 작업 중에 기본 테이블이나 클러스터형 인덱스 데이터 및 연관된 모든 비클러스터형 인덱스에 액세스할 수 있습니다. 자세한 내용은 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.  
   
+> [!NOTE]  
+>  이 옵션은 XML 인덱스에 대해서는 사용할 수 없으며 인덱스가 비활성화된 클러스터형 인덱스인 경우에도 사용할 수 없습니다.  
+  
+ **최대 병렬 처리 수준**  
+ 병렬 계획 실행 중 사용할 프로세서 수를 제한합니다. 기본값인 0으로 설정하면 사용 가능한 실제 CPU 수를 사용합니다. 값을 1로 설정하면 병렬 계획이 생성되지 않습니다. 값을 1보다 큰 값으로 설정하면 단일 쿼리 실행에서 사용하는 최대 프로세서 수가 제한됩니다. 이 옵션은 대화 상자가 **다시 작성** 또는 **다시 만들기** 상태에 있을 때만 사용할 수 있습니다. 자세한 내용은 [최적 성능을 위해 최대 병렬 처리 수준 옵션 설정](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)을 참조하세요.  
+  
+> [!NOTE]  
+>  사용 가능한 CPU 수보다 더 큰 수를 지정하면 사용 가능한 실제 CPU 수가 사용됩니다.  
+
+
+**순차 키에 맞게 최적화**<br>
+마지막 페이지 삽입 경합에 최적화할지 여부를 지정합니다. 자세한 내용은 [순차 키](../../t-sql/statements/create-index-transact-sql.md#sequential-keys)를 참조하세요.
+
+### <a name="storage-options"></a>스토리지 옵션
+
+**tempdb에 정렬**<br>
+tempdb에 임시 정렬 결과를 저장할지 여부를 지정합니다.
+
+True<br>
+인덱스 작성에 사용된 중간 정렬 결과가 tempdb에 저장됩니다. 이 경우 사용자 데이터베이스가 아닌 다른 디스크 세트에 tempdb가 있으면 인덱스 생성에 필요한 시간이 단축될 수 있습니다. 그러나 인덱스 작성 중에 사용되는 디스크 공간의 크기는 커집니다.
+
+False<br>
+중간 정렬 결과가 인덱스와 같은 데이터베이스에 저장됩니다. 자세한 내용은 [인덱스에 대한 SORT_IN_TEMPDB 옵션](./sort-in-tempdb-option-for-indexes.md)을 참조하세요.
+
+**채우기 비율**<br>
+인덱스 생성 또는 다시 빌드 중에 데이터베이스 엔진이 각 인덱스 페이지의 리프 수준을 얼마나 채울지 나타내는 백분율을 지정합니다. fillfactor는 1에서 100 사이의 정수 값이어야 합니다. fillfactor가 100이면 데이터베이스 엔진은 리프 페이지가 꽉 찬 인덱스를 만듭니다.
+FILLFACTOR 설정은 인덱스를 만들거나 다시 작성하는 경우에만 적용됩니다. 데이터베이스 엔진에서는 페이지에 지정된 비율의 빈 공간을 동적으로 유지하지 않습니다.
+
+자세한 내용은 [인덱스의 채우기 비율 지정](./specify-fill-factor-for-an-index.md)을 참조하세요.
+
+**인덱스 패딩(Pad index)**<br>
+인덱스 패딩을 지정합니다.
+
+True<br>
+fillfactor로 지정된 사용 가능한 공간의 비율이 인덱스의 중간 수준 페이지에 적용됩니다.
+
+False 또는 fillfactor가 지정되지 않음<br>
+중간 수준 페이지는 중간 페이지의 키 집합을 고려하며 인덱스가 가질 수 있는 최대 크기의 한 행에 필요한 공간을 충분히 남기고 용량을 거의 채웁니다.
+
+
 ##  <a name="Storage"></a> 스토리지 페이지 옵션  
  이 페이지를 사용하여 선택한 인덱스의 파일 그룹 또는 파티션 구성표 속성을 확인하거나 수정할 수 있습니다. 인덱스 유형과 관련된 옵션만 표시됩니다.  
   
@@ -165,25 +234,13 @@ ms.locfileid: "67909710"
 > [!NOTE]  
 >  테이블 열이 계산 열이면 **열 데이터 형식** 에 "계산 열"이 표시됩니다.  
   
- **인덱스를 이동하는 동안 DML 문의 온라인 처리 허용**  
- 이 옵션을 사용하면 사용자는 인덱스 작업 중에 기본 테이블이나 클러스터형 인덱스 데이터 및 연관된 모든 비클러스터형 인덱스에 액세스할 수 있습니다. 자세한 내용은 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.  
-  
-> [!NOTE]  
->  이 옵션은 XML 인덱스에 대해서는 사용할 수 없으며 인덱스가 비활성화된 클러스터형 인덱스인 경우에도 사용할 수 없습니다.  
-  
- **최대 병렬 처리 수준 설정**  
- 병렬 계획 실행 중 사용할 프로세서 수를 제한합니다. 기본값인 0으로 설정하면 사용 가능한 실제 CPU 수를 사용합니다. 값을 1로 설정하면 병렬 계획이 생성되지 않습니다. 값을 1보다 큰 값으로 설정하면 단일 쿼리 실행에서 사용하는 최대 프로세서 수가 제한됩니다. 이 옵션은 대화 상자가 **다시 작성** 또는 **다시 만들기** 상태에 있을 때만 사용할 수 있습니다. 자세한 내용은 [최적 성능을 위해 최대 병렬 처리 수준 옵션 설정](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)을 참조하세요.  
-  
-> [!NOTE]  
->  사용 가능한 CPU 수보다 더 큰 수를 지정하면 사용 가능한 실제 CPU 수가 사용됩니다.  
-  
 ##  <a name="Spatial"></a> 공간 페이지 인덱스 옵션  
  **공간** 페이지를 사용하여 공간 속성의 값을 확인하거나 지정할 수 있습니다. 자세한 내용은 [공간 데이터&#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)을 참조하세요.  
   
 ### <a name="bounding-box"></a>경계 상자  
  *경계 상자* 는 기하 평면에서 최상위 표의 경계입니다. 경계 상자 매개 변수는 기하 도형 표 공간 분할에서만 존재합니다. 이러한 매개 변수는 **공간 분할(tessellation) 구성표** 가 **지리 표**인 경우 사용할 수 없습니다.  
   
- 패널에는 경계 상자의 **(**_X-min_**,**_Y-min_**)** 및 **(**_X-max_**,**_Y-max_**)** 좌표가 표시됩니다. 기본 좌표 값은 없습니다. 따라서 **geometry** 유형 열에 새 공간 인덱스를 만드는 경우 좌표 값을 지정해야 합니다.  
+ 패널에는 경계 상자의 **(** _X-min_ **,** _Y-min_ **)** 및 **(** _X-max_ **,** _Y-max_ **)** 좌표가 표시됩니다. 기본 좌표 값은 없습니다. 따라서 **geometry** 유형 열에 새 공간 인덱스를 만드는 경우 좌표 값을 지정해야 합니다.  
   
  **X-min**  
  경계 상자의 왼쪽 아래 모퉁이의 X 좌표입니다.  

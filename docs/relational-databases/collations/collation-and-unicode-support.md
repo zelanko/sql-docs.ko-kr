@@ -24,17 +24,20 @@ helpviewer_keywords:
 - SQL Server collations
 - UTF-8
 - UTF-16
+- UTF8
+- UTF16
+- UCS2
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5807b8ae9c3b074068d0422a91b1dc1711c4067a
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118486"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471040"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -272,7 +275,7 @@ UTF-8은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 제공된 보충 �
 
 > [!TIP]   
 > [CHAR(*n*) and VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) 또는 [NCHAR(*n*) and NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)에서 *n*이 문자 수를 정의한다고 잘못 생각하는 경우가 많습니다. CHAR(10) 열의 예제에서 Latin1_General_100_CI_AI와 같은 데이터 정렬을 사용하여 0~127 범위의 ASCII 문자 10자를 저장할 수 있기 때문입니다. 이 범위의 각 문자는 1바이트만 사용합니다.    
-> 그러나 [CHAR(*n*) 및 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)의 *n*은 **바이트**(0~8,000) 단위로 문자열 길이를 정의하는 반면, [NCHAR(*n*) 및 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)의 *n*은 **바이트 쌍**(0~4,000)으로 문자열 길이를 정의합니다. *n*은 저장할 수 있는 문자 수를 정의하지 않습니다.
+> 그러나 [CHAR(*n*) 및 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)의 *n*은 **바이트**(0~8,000) 단위로 문자열 크기를 정의하는 반면, [NCHAR(*n*) 및 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)의 *n*은 **바이트 쌍**(0~4,000)으로 문자열 크기를 정의합니다. *n*은 저장할 수 있는 문자 수를 정의하지 않습니다.
 
 위에 표시된 대로, 적절한 유니코드 인코딩과 데이터 형식을 선택하면 사용 중인 문자 집합에 따라 스토리지 비용을 훨씬 절감하거나 현재 스토리지 공간을 늘릴 수 있습니다. 예를 들어 Latin1_General_100_CI_AI_SC_UTF8과 같이 UTF-8을 지원하는 라틴어 데이터 정렬을 사용하는 경우 `CHAR(10)` 열은 10바이트를 저장하며, 0~127 범위의 ASCII 문자 10자, 128~2047 범위의 5자, 2048~65535 범위의 3자만 포함할 수 있습니다. 이에 반해, `NCHAR(10)` 열은 10바이트 쌍(20바이트)을 저장하기 때문에 0~65535 범위의 문자 10자를 포함할 수 있습니다.  
 
@@ -301,7 +304,9 @@ UTF-8은 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에 제공된 보충 �
 [국가별 Transact-SQL 문 작성](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 ["SQL Server 모범 사례 유니코드로 마이그레이션"](https://go.microsoft.com/fwlink/?LinkId=113890) - 더 이상 유지 관리되지 않음   
 [유니코드 컨소시엄 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=48619)   
-[유니코드 표준](http://www.unicode.org/standard/standard.html)      
+[유니코드 표준](http://www.unicode.org/standard/standard.html)     
+[SQL Server용 OLE DB 드라이버에서 UTF-8 지원](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+블로그 [Introducing UTF-8 support for SQL Server](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)(SQL Server에 UTF-8 지원 도입)       
     
 ## <a name="see-also"></a>참고 항목    
 [포함된 데이터베이스 데이터 정렬](../../relational-databases/databases/contained-database-collations.md)     

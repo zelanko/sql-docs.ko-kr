@@ -7,17 +7,18 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d901d11b11019a19d5e26e12956e9ba520e33e8f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 5e05a62be604b9d1a3feeaea1ed4f05dc3538493
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68469622"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715473"
 ---
 # <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>R 및 Python의 SQL Server Machine Learning 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) 또는 [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)의 기계 학습 기능을 보여 주는 자습서 및 코드 샘플의 포괄적인 목록을 제공 합니다. 
+이 문서에서는 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) 또는 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)의 기계 학습 기능을 보여 주는 자습서 및 코드 샘플의 포괄적인 목록을 제공 합니다. 
 
 + 빠른 시작은 기본 제공 데이터를 사용 하거나 최소한의 노력으로 빠른 탐색을 위해 데이터를 사용 하지 않습니다.
 + 자습서는 더 많은 작업, 더 큰 데이터 집합 및 긴 설명으로 더 자세히 살펴보겠습니다.

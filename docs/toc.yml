@@ -9987,22 +9987,8 @@
           items:
             - name: SSMS 지원 정책
               href: ssms/support-policy.md
-            - name: 비즈니스 사용자에 대한 지원 옵션
-              href: 'https://support.microsoft.com/gp/support-options-for-business'
-            - name: Microsoft에 문의
-              href: 'https://support.microsoft.com/gp/contactus81?Audience=Commercial'
-            - name: 도움말을 사용하는 모든 방법
+            - name: 피드백 및 도움말
               href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
-            - name: UserVoice - SQL Server 개선을 위한 제안
-              href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: 설치 및 업그레이드 -  MSDN 포럼
-              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc'
-            - name: Transact-SQL - MSDN 포럼
-              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql'
-            - name: Stack Overflow
-              href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: Microsoft SQL Server 사용 조건 및 정보
-              href: 'https://www.microsoft.com/download/details.aspx?id=39299'
             - name: SSMS의 사용자 지원
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: 익명 사용 현황 데이터
@@ -10444,28 +10430,12 @@
           href: 'https://mva.microsoft.com/product-training/sql-server'
         - name: Channel 9의 SQL >
           href: 'https://channel9.msdn.com/Search'
-    - name: 블로그
-      items:
-        - name: SQL Server >
-          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: SQL Server 데이터베이스 엔진 >
-          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: SQL Server 보안 >
-          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools >
-          href: 'https://blogs.msdn.microsoft.com/ssdt/'
-    - name: 피드백 및 도움말
+    - name: 도움말
       items:
         - name: 도움말 보기
           href: sql-server/sql-server-get-help.md
-        - name: SQL 문서에 대한 피드백 >
-          href: 'https://aka.ms/sqldocsfeedback'
-        - name: SQL Server에 대한 피드백(UserVoice) >
-          href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: SQL 문서 설문 조사 >
-          href: 'https://aka.ms/sqldocsurvey'
-        - name: SQL 설명서에 참여하세요!
-          href: sql-server/sql-server-docs-contribute.md
+        - name: SQL 문서 탐색 팁
+          href: sql-server/sql-docs-navigation-guide.md
         - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: 스택 오버플로 >
@@ -10474,6 +10444,24 @@
           href: 'https://social.msdn.microsoft.com/Forums/home'
         - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
+    - name: 블로그
+      items:
+        - name: SQL Server >
+          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
+        - name: 데이터베이스 엔진 >
+          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
+        - name: 보안 >
+          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
+        - name: Data Tools >
+          href: 'https://blogs.msdn.microsoft.com/ssdt/'
+    - name: 피드백
+      items:
+        - name: SQL 문서 >
+          href: 'https://aka.ms/sqldocsfeedback'
+        - name: SQL Server >
+          href: 'https://feedback.azure.com/forums/908035-sql-server'
+        - name: SQL 설명서를 편집합니다.
+          href: sql-server/sql-server-docs-contribute.md
     - name: 파트너
       items:
         - name: 모니터링
@@ -10488,8 +10476,6 @@
       href: sql-server/sql-server-help-installation.md
 - name: 참조
   items:
-    - name: SQL 문서 포함 파일
-      href: sql-server/applies-to-includes.md
     - name: 보관된 콘텐츠(SQL 2005 - 2012) >
       displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
       href: 'https://docs.microsoft.com/previous-versions/sql/'

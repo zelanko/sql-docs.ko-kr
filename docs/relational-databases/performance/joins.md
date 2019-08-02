@@ -1,7 +1,7 @@
 ---
 title: 조인(SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/18/2018
+ms.date: 07/19/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
@@ -10,31 +10,33 @@ helpviewer_keywords:
 - HASH join
 - NESTED LOOPS join
 - MERGE join
+- ADAPTIVE join
 - joins [SQL Server], about joins
 - join hints [SQL Server]
 ms.assetid: bfc97632-c14c-4768-9dc5-a9c512f4b2bd
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29fa0dcc89cd8e1ad88abcf9974884b723b7a64e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8808dc2befdcb2c31218e7dc155921bb10947e14
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051951"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419591"
 ---
 # <a name="joins-sql-server"></a>조인(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리 내 정렬 및 해시 조인 기술을 사용하여 정렬, 교집합, 합집합 및 차집합 연산을 수행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 유형의 쿼리 계획을 사용하여 종형 저장이라고 하는 수직 테이블 분할을 지원합니다.   
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용되는 세 가지 유형의 조인 연산은 다음과 같습니다.    
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용되는 네 가지 유형의 조인 연산은 다음과 같습니다.    
 -   중첩 루프 조인     
 -   병합 조인   
 -   해시 조인   
+-   적응 조인([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터)
 
 ## <a name="fundamentals"></a> 조인 기본 사항
-조인을 사용하면 테이블 간의 논리적 관계를 기준으로 둘 이상의 테이블에서 데이터를 검색할 수 있습니다. 조인은 Microsoft SQL Server에서 특정 테이블의 데이터를 사용하여 다른 테이블의 행을 선택하는 방법을 나타냅니다.    
+조인을 사용하면 테이블 간의 논리적 관계를 기준으로 둘 이상의 테이블에서 데이터를 검색할 수 있습니다. 조인은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 테이블의 데이터를 사용하여 다른 테이블의 행을 선택하는 방법을 나타냅니다.    
 
 조인 조건은 다음과 같이 쿼리에서 두 테이블의 관계를 정의합니다.    
 -   조인에 사용될 각 테이블에서 열을 지정합니다. 일반적으로 조인 조건은 한 테이블에서 외래 키를 지정하고 다른 테이블에서 이와 관련된 키를 지정합니다.    
@@ -115,6 +117,8 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 
 외부 입력은 작고 내부 입력은 크며 미리 인덱스가 정해져 있는 경우 중첩 루프 조인이 상당히 효과적입니다. 작은 행 집합에만 영향을 주는 일반적인 소규모 트랜잭션의 경우 인덱스 중첩 루프 조인이 병합 조인이나 해시 조인보다 훨씬 우수합니다. 그러나 크기가 큰 쿼리에서는 중첩 루프 조인이 최적의 선택이 아닌 경우도 많습니다.    
 
+중첩 루프의 조인 연산자의 OPTIMIZED 특성이 **True**로 설정되면 최적화된 중첩 루프(또는 일괄 처리 정렬)가 내부 쪽 테이블이 클 때 평행화 여부에 상관없이 I/O를 최소화하는 데 사용됨을 의미합니다. 정렬 자체가 숨겨진 작업임을 고려하면, 지정된 계획에서 이 최적화의 존재는 실행 계획을 분석할 때 아주 명백하지 않을 수 있습니다. 그러나 OPTIMIZED 특성에 대한 계획 XML을 살펴보면, 이는 중첩 루프 조인이 I/O 성능을 향상시키기 위해 입력 행을 다시 정렬하려고 함을 나타냅니다.
+
 ## <a name="merge"></a> 병합 조인 이해
 두 조인 입력이 작지는 않지만 해당 조인 열을 기준으로 정렬되는 경우(예: 정렬된 인덱스 검색으로 가져온 경우)에는 병합 조인이 가장 빠른 조인 연산입니다. 두 조인 입력이 모두 크고 비슷한 크기인 경우에는 사전 정렬이 포함된 병합 조인과 해시 조인이 비슷한 성능을 제공합니다. 그러나 두 입력의 크기가 서로 많이 다를 때는 해시 조인 연산이 더 빠른 경우가 많습니다.       
 
@@ -142,15 +146,12 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 다음 섹션에서는 인-메모리 해시 조인, 유예 해시 조인 및 재귀 해시 조인 등 여러 해시 조인 유형을 설명합니다.    
 
 ### <a name="inmem_hash"></a> 인-메모리 해시 조인
-
 해시 조인은 먼저 전체 빌드 입력을 스캔하거나 계산한 다음 해시 테이블을 메모리에 작성합니다. 해시 키에 대해 계산된 해시 값에 따라 각 행이 해시 버킷에 삽입됩니다. 전체 빌드 입력이 사용 가능한 메모리보다 작으면 모든 행을 해시 테이블에 삽입할 수 있습니다. 이 빌드 단계 다음으로는 검색 단계가 이어집니다. 전체 검색 입력은 한 번에 한 행씩 스캔 또는 계산되며, 각 검색 행에 대해 해시 키 값이 계산되고 해당 해시 버킷이 스캔되며 일치하는 항목이 생성됩니다.    
 
 ### <a name="grace_hash"></a> 유예 해시 조인
-
 빌드 입력이 메모리 크기에 맞지 않으면 해시 조인은 몇 개의 단계로 진행됩니다. 이것을 유예 해시 조인이라고 합니다. 각 단계마다 빌드 단계와 검색 단계가 있습니다. 처음에는 전체 빌드 및 검색 입력이 사용되며 해시 키에 대한 해시 함수를 사용하여 여러 파일로 분할됩니다. 해시 키에 대한 해시 함수를 사용하면 2개의 조인 레코드가 모두 동일한 파일 쌍에 있는 것이 보장됩니다. 따라서 2개의 큰 입력을 조인하는 태스크가 동일한 작업의 여러 개의 작은 인스턴스로 축소되었습니다. 그런 다음 해시 조인은 분할된 파일의 각 쌍에 적용됩니다.    
 
 ### <a name="recursive_hash"></a> 재귀 해시 조인
-
 빌드 입력이 너무 커서 표준 외부 병합에 대한 입력에 여러 개의 병합 수준이 필요한 경우에는 여러 개의 분할 단계와 여러 개의 분할 수준이 요구됩니다. 일부 파티션만 큰 경우에는 해당 파티션에서만 추가 분할 단계가 사용됩니다. 모든 분할 단계를 가능한 한 빠르게 유지하기 위해서는 단일 스레드가 여러 개의 디스크 드라이브를 사용 중인 상태로 유지할 수 있도록 대형의 비동기 I/O 작업이 사용됩니다.    
 
 > [!NOTE]
@@ -164,14 +165,132 @@ WHERE pv.BusinessEntityID=v.BusinessEntityID
 > 역할 반전은 모든 쿼리 참고 또는 구조와 관계없이 발생합니다. 역할 반전은 쿼리 계획에 나타나지 않습니다. 역할 반전이 발생하면 사용자는 인식하지 못합니다.
 
 ### <a name="hash_bailout"></a> 해시 재귀 한도 초과
-
 해시 재귀 한도 초과라는 용어는 경우에 따라 유예 해시 조인 또는 재귀 해시 조인을 설명하는 데 사용됩니다.    
 
 > [!NOTE]
 > 재귀 해시 조인 또는 해시 재귀 한도 초과는 서버 성능을 저하시킵니다. 추적에서 해시 경고 이벤트가 많이 발견되면 조인되는 열의 통계를 업데이트하십시오.    
 
 해시 재귀 한도 초과에 대한 자세한 내용은 [해시 경고 이벤트 클래스](../../relational-databases/event-classes/hash-warning-event-class.md)를 참조하세요.    
-  
+
+## <a name="adaptive"></a> 적응 조인 이해
+[일괄 처리 모드](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) 적응 조인을 사용하면 [해시 조인](#hash) 또는 [중첩 루프](#nested_loops) 조인 메서드 선택을 첫 번째 입력이 검사된 **후**까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 쿼리 계획을 다시 컴파일하지 않고도 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다. 
+
+> [!TIP]
+> 작은 조인 입력 검색과 큰 조인 입력 검색 간에 자주 변동하는 워크로드가 이 기능에서 가장 큰 혜택을 받게 됩니다.
+
+런타임은 다음 단계에 따라 결정됩니다.
+-  중첩 루프 조인이 해시 조인보다 적합할 만큼 빌드 조인 입력의 행 수가 충분히 적으면 계획이 중첩 루프 알고리즘으로 전환됩니다.
+-  빌드 조인 입력이 특정 행 수 임계값을 초과하면 전환이 발생하지 않으며 계획이 해시 조인을 계속 사용합니다.
+
+다음 쿼리는 적응 조인 예제를 설명하기 위해 사용됩니다.
+
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 360;
+```
+
+이 쿼리는 336개의 행을 반환합니다. [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)를 사용하도록 설정하면 다음 계획이 표시됩니다.
+
+![쿼리 결과 336개 행](../../relational-databases/performance/media/4_AQPStats336Rows.png)
+
+계획에서 다음을 확인합니다.
+1. 해시 조인 빌드 단계에 대한 행을 제공하는 데 columnstore 인덱스 검색이 사용됩니다.
+2. 새 적응 조인 연산자입니다. 이 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 이 예제에서 임계값은 78개 행입니다. &gt;= 78개 행이면 모두 해시 조인을 사용합니다. 임계값보다 작으면 중첩 루프 조인이 사용됩니다.
+3. 쿼리에서 336개 행을 반환하기 때문에 임계값을 초과하므로 두 번째 분기가 표준 해시 조인 작업의 프로브 단계를 나타냅니다. 활성 쿼리 통계는 연산자를 통과하는 행(이 경우 "672/672")을 보여줍니다.
+4. 마지막 분기는 임계값을 초과하지 않을 경우 중첩 루프 조인에서 사용하기 위한 Clustered Index Seek입니다. "0/336"개 행이 표시됩니다(분기가 사용되지 않음).
+
+이제 계획과 동일한 쿼리를 비교합니다. 하지만 *Quantity* 값이 테이블에 행이 하나만 있는 경우
+ 
+```sql
+SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
+FROM [Fact].[Order] AS [fo]
+INNER JOIN [Dimension].[Stock Item] AS [si]
+       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
+WHERE [fo].[Quantity] = 361;
+```
+쿼리가 하나의 행을 반환합니다. 활성 쿼리 통계를 사용하도록 설정하면 다음 계획이 표시됩니다.
+
+![쿼리 결과 하나의 행](../../relational-databases/performance/media/5_AQPStatsOneRow.png)
+
+계획에서 다음을 확인합니다.
+- 하나의 행이 반환되면 이제 Clustered Index Seek에 통과하는 행이 있습니다.
+- 해시 조인 빌드 단계를 계속 진행하지 않았으므로 두 번째 분기를 통해 흐르는 행이 없습니다.
+
+### <a name="adaptive-join-remarks"></a>적응 조인 설명
+적응 조인은 동등한 인덱스 중첩된 루프 조인 계획보다 메모리 요구 사항이 더 높습니다. 중첩 루프가 해시 조인인 것처럼 추가 메모리가 요청됩니다. 동등한 중첩된 루프 스트리밍 조인에 비해 스탑앤고(stop-and-go) 작업으로서 빌드 단계에 대한 오버헤드도 있습니다. 빌드 입력의 행 수가 변동될 수 있는 시나리오에서 해당 추가 비용과 함께 유연성이 제공됩니다.
+
+일괄 처리 모드 적응 조인은 문의 초기 실행에서 작동하며, 컴파일된 후에는 컴파일된 적응 조인 임계값과 외부 입력의 빌드 단계를 통과하는 런타임 행에 따라 연속 실행이 적응 상태로 유지됩니다.
+
+적응 조인이 중첩된 루프 작업으로 전환하는 경우 해시 조인 빌드에서 이미 읽은 행이 사용됩니다. 연산자는 외부 참조 행을 다시 읽지 **않습니다**.
+
+### <a name="tracking-adaptive-join-activity"></a>적응 조인 작업 추적
+적응 조인 연산자에는 다음과 같은 계획 연산자 특성이 있습니다.
+
+|계획 특성|설명|
+|---|---|
+|AdaptiveThresholdRows|해시 조인에서 중첩된 루프 조인으로 전환하는 데 사용되는 임계값을 보여 줍니다.|
+|EstimatedJoinType|가능한 조인 형식입니다.|
+|ActualJoinType|실제 계획에서 임계값에 따라 최종적으로 선택된 조인 알고리즘을 보여 줍니다.|
+
+예상 계획은 정의된 적응 조인 임계값 및 예상 조인 형식과 함께 적응 조인 계획 모양을 보여줍니다.
+
+> [!TIP]
+> 쿼리 저장소는 일괄 처리 모드 적응 조인 계획을 캡처하고 강제로 적용할 수 있습니다.
+
+### <a name="adaptive-join-eligible-statements"></a>적응 조인 적합한 문
+논리 조인을 일괄 처리 모드 적응 조인에 적합하게 만드는 몇 가지 조건은 다음과 같습니다.
+- 데이터베이스 호환성 수준이 140 이상입니다.
+- 쿼리가 `SELECT` 문입니다(데이터 수정 문은 현재 적합하지 않음).
+- 인덱싱된 중첩 루프 조인 또는 해시 조인 실제 알고리즘 둘 다에서 조인을 실행할 수 있습니다.
+- 해시 조인이 쿼리 전체의 Columnstore 인덱스 현재 상태를 통해 또는 조인에서 직접 참조되는 Columnstore 인덱싱된 테이블을 통해 [일괄 처리 모드](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution)를 사용합니다.
+- 중첩 루프 조인 및 해시 조인의 생성된 대체 솔루션에 동일한 첫 번째 자식(외부 참조)이 있어야 합니다.
+
+### <a name="adaptive-threshold-rows"></a>적응 임계값 행
+다음 차트에서는 해시 조인 비용과 중첩 루프 조인 대안 비용 간의 교차 예를 보여줍니다. 이 교차 지점에서 결정되는 임계값에 따라 다시 조인 작업에 사용되는 실제 알고리즘이 결정됩니다.
+
+![조인 임계값](../../relational-databases/performance/media/6_AQPJoinThreshold.png)
+
+### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>호환성 수준을 변경하지 않고 적응형 조인 비활성화
+데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 적응형 조인을 비활성화할 수 있습니다.  
+데이터베이스에서 발생하는 모든 쿼리 실행에 대한 적응형 조인을 비활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
+```
+
+활성화될 경우 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에서 이 설정이 enabled로 표시됩니다.
+데이터베이스에서 발생하는 모든 쿼리 실행에 대한 적응형 조인을 재활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
+
+```sql
+-- SQL Server 2017
+ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
+```
+
+또한 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`를 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 적응형 조인을 비활성화할 수 있습니다. 예를 들어
+
+```sql
+SELECT s.CustomerID,
+       s.CustomerName,
+       sc.CustomerCategoryName
+FROM Sales.Customers AS s
+LEFT OUTER JOIN Sales.CustomerCategories AS sc
+       ON s.CustomerCategoryID = sc.CustomerCategoryID
+OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
+```
+
+> [!NOTE]
+> USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래그 설정보다 우선합니다. 
+
 ## <a name="nulls_joins"></a> Null 값 및 조인
 조인되는 테이블의 열에 Null 값이 있을 경우 Null 값은 서로 일치하지 않습니다. 조인되는 테이블 중 한 테이블의 열에 있는 Null 값은 외부 조인을 사용해야만 반환됩니다(`WHERE` 절이 Null 값을 배제하지 않을 경우).     
 
@@ -236,7 +355,3 @@ NULL        three  NULL        NULL
 [데이터 형식 변환&#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
 [Subqueries](../../relational-databases/performance/subqueries.md)      
 [Adaptive Joins](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)    
-
-
-  
-  

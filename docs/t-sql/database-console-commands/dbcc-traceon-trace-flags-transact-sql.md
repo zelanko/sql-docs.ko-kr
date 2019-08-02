@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4b6b05436f85fa96a164f6e86733c5bc4bf95f0d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 21c43f2780f555b9cabd0ec84b47f80ff0284764
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345470"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388436"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
@@ -138,7 +138,7 @@ ms.locfileid: "68345470"
 |**7412**|간단한 쿼리 실행 통계 프로파일링 인프라를 사용하도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3170113)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 이상의 빌드에 적용됩니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 경량 프로파일링이 기본적으로 사용 가능으로 설정되므로 이 추적 플래그가 영향을 주지 않습니다.<br /><br />**범위**: 전역만|
 |**7471**|단일 테이블에서 서로 다른 통계에 대해 여러 [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md)를 동시에 실행할 수 있도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/3156157)를 참조하세요.<br /><br />**참고:** 이 추적 플래그는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 이상의 빌드에 적용됩니다.<br /><br />**범위**: 전역만|
 |**7745**|데이터베이스 종료 시 쿼리 저장소에서 데이터를 디스크에 플러시하지 않도록 합니다.<br /><br />**참고:** 이 추적을 사용하면 종료 시 이전에 디스크로 플러시되지 않은 쿼리 저장소 데이터가 손실될 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 종료의 경우 이 추적 플래그 대신 SHUTDOWN WITH NOWAIT 명령을 사용하여 강제로 즉시 종료할 수 있습니다.<br /><br />**범위**: 전역만|
-|**7752**|쿼리 저장소의 비동기 로드를 사용하도록 설정합니다.<br /><br />**참고:** [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]에서 쿼리 저장소 동기 로드와 관련된 많은 수의 QDS_LOADDB 대기가 발생하는 경우를 이 추적 플래그를 사용합니다(데이터베이스가 복구되는 동안의 기본 동작).<br /><br />**범위**: 전역만|
+|**7752**|쿼리 저장소의 비동기 로드를 사용하도록 설정합니다.<br /><br />**참고:** [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]에서 쿼리 저장소 동기 로드와 관련된 많은 수의 QDS_LOADDB 대기가 발생하는 경우를 이 추적 플래그를 사용합니다(데이터베이스가 복구되는 동안의 기본 동작).<br /><br />**참고:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 이 동작은 엔진에서 제어되며, 7752 추적 플래그는 아무 효과가 없습니다.<br /><br />**범위**: 전역만|
 |**7806**|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에 DAC(관리자 전용 연결)를 설정합니다. 기본적으로 [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]에는 DAC 리소스가 예약되어 있지 않습니다. 자세한 내용은 [데이터베이스 관리자를 위한 진단 연결](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)을 참조하세요.<br /><br />**범위**: 전역만|  
 |**8011**|리소스 모니터에 대한 링 버퍼를 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/920093)를 참조하세요.<br /><br />**범위**: 전역 및 세션|
 |**8012**|스케줄러에 대한 링 버퍼를 사용하지 않도록 설정합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/920093)를 참조하세요.<br /><br />**범위**: 전역만|
