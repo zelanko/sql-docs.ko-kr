@@ -1,5 +1,5 @@
 ---
-title: sp_help_agent_profile (TRANSACT-SQL) | Microsoft Docs
+title: sp_help_agent_profile (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 5637b671-4aa3-497e-9a1c-c99798a1afb4
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a431b41119e919adfd62178ed32473a931b455b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f7b63875d7c4c4c5ab5f3880c133448fe6da240
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055213"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771463"
 ---
 # <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   지정된 에이전트의 프로필을 표시합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -38,17 +38,17 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @agent_type = ] agent_type` 에이전트의 유형이입니다. *agent_type* 됩니다 **int**, 기본값은 **0**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @agent_type = ] agent_type`에이전트의 유형입니다. *agent_type* 은 **int**이며 기본값은 **0**이 고 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
-|**1**|스냅샷 에이전트|  
+|**1**|스냅숏 에이전트|  
 |**2**|로그 판독기 에이전트|  
 |**3**|배포 에이전트|  
 |**4**|병합 에이전트|  
 |**9**|큐 판독기 에이전트|  
   
-`[ @profile_id = ] profile_id` 표시할 프로필의 ID입니다. *profile_id* 은 **int**, 기본값은 **-1**에 있는 모든 프로필을 반환 하는 **MSagent_profiles** 테이블.  
+`[ @profile_id = ] profile_id`표시할 프로필의 ID입니다. *profile_id* 는 **int**이며 기본값은 **MSagent_profiles** 테이블의 모든 프로필을 반환 하는 **-1**입니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   
@@ -65,15 +65,15 @@ sp_help_agent_profile [ [ @agent_type = ] agent_type ]
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_help_agent_profile** 모든 유형의 복제에 사용 됩니다.  
+ **sp_help_agent_profile** 은 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할 또는 **replmonitor** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_help_agent_profile**합니다.  
+ **Sysadmin** 고정 서버 역할 또는 **replmonitor** 고정 데이터베이스 역할의 멤버만 **sp_help_agent_profile**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 에이전트 프로필 작업](../../relational-databases/replication/agents/work-with-replication-agent-profiles.md)   
- [sp_add_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
- [sp_drop_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
- [sp_help_agent_parameter &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
+ [sp_add_agent_profile &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md)   
+ [sp_drop_agent_profile &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md)   
+ [sp_help_agent_parameter &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md)  
   
   

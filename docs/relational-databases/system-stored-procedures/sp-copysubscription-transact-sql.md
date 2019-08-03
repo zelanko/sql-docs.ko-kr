@@ -1,5 +1,5 @@
 ---
-title: sp_copysubscription (TRANSACT-SQL) | Microsoft Docs
+title: sp_copysubscription (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,19 +15,19 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 71027fb060a5085289aed4c8a637bc76a71bbd2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d1a093364192e3bab32a2fa0234c7198d8e0f3ff
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68108685"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771426"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
     
 > [!IMPORTANT]  
->  연결 가능한 구독 기능은 더 이상 사용되지 않으며 후속 릴리스에서 제거될 예정입니다. 새로운 개발 작업에서는 이 기능을 사용하면 안 됩니다. 매개 변수가 있는 필터를 사용하여 분할된 병합 게시의 경우 구독을 대량으로 초기화하는 작업을 간단하게 만들어 주는 분할된 스냅샷의 새 기능을 사용하는 것이 좋습니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을(를) 참조하세요. 분할되지 않은 게시의 경우 백업을 사용하여 구독을 초기화할 수 있습니다. 자세한 내용은 [스냅샷 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
+>  연결 가능한 구독 기능은 더 이상 사용되지 않으며 후속 릴리스에서 제거될 예정입니다. 새로운 개발 작업에서는 이 기능을 사용하면 안 됩니다. 매개 변수가 있는 필터를 사용하여 분할된 병합 게시의 경우 구독을 대량으로 초기화하는 작업을 간단하게 만들어 주는 분할된 스냅샷의 새 기능을 사용하는 것이 좋습니다. 자세한 내용은 [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)을 참조하세요. 분할되지 않은 게시의 경우 백업을 사용하여 구독을 초기화할 수 있습니다. 자세한 내용은 [스냅숏 없이 트랜잭션 구독 초기화](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)에서 수동으로 구독을 초기화하는 방법에 대해 설명합니다.  
   
  끌어오기 구독만 있고 밀어넣기 구독이 없는 구독 데이터베이스를 복사합니다. 하나의 파일로 구성된 데이터베이스만 복사할 수 있습니다. 이 저장 프로시저는 구독 데이터베이스의 구독자에서 실행됩니다.  
   
@@ -43,24 +43,24 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @filename = ] 'file_name'` 데이터 파일 (.mdf)의 복사본 저장 되는 파일 이름을 포함 한 전체 경로 지정 하는 문자열이입니다. *파일 이름* 됩니다 **nvarchar(260)** , 기본값은 없습니다.  
+`[ @filename = ] 'file_name'`데이터 파일 (.mdf)의 복사본을 저장할 파일 이름을 포함 한 전체 경로를 지정 하는 문자열입니다. *파일 이름은* **nvarchar (260)** 이며 기본값은 없습니다.  
   
-`[ @temp_dir = ] 'temp_dir'` 임시 파일을 포함 하는 디렉터리의 이름이입니다. *temp_dir* 됩니다 **nvarchar(260)** , 기본값은 NULL입니다. NULL 인 경우는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기본 데이터 디렉터리가 사용 됩니다. 디렉터리에는 모든 구독자 데이터베이스 파일을 저장할 수 있는 충분한 공간이 있어야 합니다.  
+`[ @temp_dir = ] 'temp_dir'`임시 파일이 포함 된 디렉터리의 이름입니다. *temp_dir* 은 **nvarchar (260)** 이며 기본값은 NULL입니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] NULL[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인 경우 기본 데이터 디렉터리가 사용 됩니다. 디렉터리에는 모든 구독자 데이터베이스 파일을 저장할 수 있는 충분한 공간이 있어야 합니다.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` 에 지정 된 동일한 이름의 기존 파일을 덮어쓸 것인지 여부를 지정 하는 선택적인 부울 플래그 **@filename** 합니다. *overwrite_existing_file*됩니다 **비트**, 기본값은 **0**합니다. 하는 경우 **1**, 지정 된 파일을 덮어씁니다 **@filename** 존재 하는 경우. 하는 경우 **0**, 파일이 존재 하는 경우 파일을 덮어쓰지 않습니다 저장된 프로시저가 실패 합니다.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'`는에 **@filename** 지정 된 동일한 이름의 기존 파일을 덮어쓸지 여부를 지정 하는 선택적 부울 플래그입니다. *overwrite_existing_file*는 **bit**이며 기본값은 **0**입니다. **1**인 경우에서 **@filename** 지정한 파일 (있는 경우)을 덮어씁니다. **0**인 경우 파일이 있는 경우 저장 프로시저가 실패 하 고 파일을 덮어쓰지 않습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_copysubscription** 모든 유형의 복제에 구독자에서 스냅숏을 적용 하는 대신 파일 구독 데이터베이스를 복사 하는 데 사용 됩니다. 데이터베이스는 반드시 끌어오기 구독만을 지원하도록 구성되어야 합니다. 적절한 권한을 가진 사용자는 구독 데이터베이스를 복사할 수 있으며, 그런 다음 구독 파일(.msf)을 다른 구독자가 구독으로 사용할 수 있게끔 전자 메일로 보내거나 복사하거나 전송할 수 있습니다.  
+ **sp_copysubscription** 는 구독자에서 스냅숏을 적용 하는 대신 구독 데이터베이스를 파일에 복사 하는 모든 유형의 복제에 사용 됩니다. 데이터베이스는 반드시 끌어오기 구독만을 지원하도록 구성되어야 합니다. 적절한 권한을 가진 사용자는 구독 데이터베이스를 복사할 수 있으며, 그런 다음 구독 파일(.msf)을 다른 구독자가 구독으로 사용할 수 있게끔 전자 메일로 보내거나 복사하거나 전송할 수 있습니다.  
   
  복사할 구독 데이터베이스의 크기는 2GB 미만이어야 합니다.  
   
- **sp_copysubscription** 클라이언트 구독을 사용 하 여 데이터베이스에 대 한 에서만 지원 되며 데이터베이스에 서버 구독이 있는 경우에 실행할 수 없습니다.  
+ **sp_copysubscription** 은 클라이언트 구독이 있는 데이터베이스에 대해서만 지원 되며 데이터베이스에 서버 구독이 있는 경우에는 실행할 수 없습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_copysubscription**합니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_copysubscription**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [대체 스냅숏 폴더 위치](../../relational-databases/replication/snapshot-options.md)   

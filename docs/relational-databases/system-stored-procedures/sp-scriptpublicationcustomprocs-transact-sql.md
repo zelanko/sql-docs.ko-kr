@@ -1,5 +1,5 @@
 ---
-title: sp_scriptpublicationcustomprocs (TRANSACT-SQL) | Microsoft Docs
+title: sp_scriptpublicationcustomprocs (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: b06102d5-4284-4834-b126-bc0baea49be5
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 89cd3991819bdba99d3a4b95c16e7b3247808031
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8436616ced84892dc7e484a5d83f3f0c3779f244
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126382"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771578"
 ---
 # <a name="spscriptpublicationcustomprocs-transact-sql"></a>sp_scriptpublicationcustomprocs(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  사용자 지정 프로시저 스키마 자동 생성 옵션을 사용하는 게시의 모든 테이블 아티클에 대한 사용자 지정 INSERT, UPDATE 및 DELETE 프로시저를 스크립팅합니다. **sp_scriptpublicationcustomprocs** 스냅숏이 수동으로 적용 하는 대 한 구독을 설정 하는 데 특히 유용 합니다.  
+  사용자 지정 프로시저 스키마 자동 생성 옵션을 사용하는 게시의 모든 테이블 아티클에 대한 사용자 지정 INSERT, UPDATE 및 DELETE 프로시저를 스크립팅합니다. **sp_scriptpublicationcustomprocs** 는 스냅숏이 수동으로 적용 되는 구독을 설정 하는 데 특히 유용 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,18 +37,18 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication_name'` 게시의 이름이입니다. *publication_name* 됩니다 **sysname** 기본값은 없습니다.  
+`[ @publication = ] 'publication_name'`게시의 이름입니다. *publication_name* 는 **sysname** 이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="result-sets"></a>결과 집합  
- 반환 된 결과 집합을 단일 이루어져 **nvarchar(4000)** 열입니다. 결과 집합은 사용자 지정 저장 프로시저를 만드는 데 필요한 완전한 CREATE PROCEDURE 문을 이룹니다.  
+ 단일 **nvarchar (4000)** 열로 구성 된 결과 집합을 반환 합니다. 결과 집합은 사용자 지정 저장 프로시저를 만드는 데 필요한 완전한 CREATE PROCEDURE 문을 이룹니다.  
   
 ## <a name="remarks"></a>설명  
  사용자 지정 프로시저(0x2) 스키마 자동 생성 옵션을 사용하지 않으면 아티클에 대해 사용자 지정 프로시저가 스크립팅되지 않습니다.  
   
- 사용 하는 절차 **sp_scriptpublicationcustomprocs** 구독자 프로시저를 만들 수 및 직접 실행할 수 없습니다.  
+ 다음 프로시저는 **sp_scriptpublicationcustomprocs** 에서 구독자에 대 한 프로시저를 만드는 데 사용 되며 직접 실행 해서는 안 됩니다.  
   
  **sp_script_reconciliation_delproc**  
   
@@ -75,7 +75,7 @@ sp_scriptpublicationcustomprocs [ @publication = ] 'publication_name'
  **sp_scriptxupdproc**  
   
 ## <a name="permissions"></a>사용 권한  
- 실행 권한이 부여 되었습니다 **공개**;의 멤버에 대 한 액세스를 제한 하려면이 저장된 프로시저 내에서 프로시저 보안 검사가 수행 되기 합니다 **sysadmin** 고정된 서버 역할 및 **db_ 소유자** 현재 데이터베이스에서 고정된 데이터베이스 역할.  
+ Execute 권한은 **public**에 부여 됩니다. 현재 데이터베이스의 **sysadmin** 고정 서버 역할 및 **db_owner** 고정 데이터베이스 역할의 멤버에 대 한 액세스를 제한 하기 위해이 저장 프로시저 내에서 프로시저 보안 검사가 수행 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

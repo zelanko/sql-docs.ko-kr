@@ -1,5 +1,5 @@
 ---
-title: sp_refreshsubscriptions (TRANSACT-SQL) | Microsoft Docs
+title: sp_refreshsubscriptions (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: 6cb9b1ce-1ce7-43ab-9451-201f79ed1ffa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9de03f10d16e81f97bd155212c8e2dafbd81216b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 548285b08ceedab49674b35128216bed320c3e7c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075765"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771180"
 ---
 # <a name="sprefreshsubscriptions-transact-sql"></a>sp_refreshsubscriptions(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  새 문서를 즉시 업데이트 게시에 대 한 모든 기존 구독자에 대 한 구독을 추가 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
+  모든 기존 구독자에 대 한 새 아티클에 대 한 구독을 즉시 업데이트 게시에 추가 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -37,7 +37,7 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'` 구독을 새로 고칠 게시가입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'`구독을 새로 고칠 게시입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -46,15 +46,15 @@ sp_refreshsubscriptions [ @publication = ] 'publication'
  없음  
   
 ## <a name="remarks"></a>설명  
- **sp_refreshsubscriptions** 스냅숏, 트랜잭션 및 병합 복제에 사용 됩니다.  
+ **sp_refreshsubscriptions** 는 스냅숏, 트랜잭션 및 병합 복제에 사용 됩니다.  
   
- **sp_refreshsubscriptions** 호출한 **sp_addarticle** 즉시 업데이트 게시 합니다.  
+ **sp_refreshsubscriptions** 는 즉시 업데이트 게시를 위해 **sp_addarticle** 에 의해 호출 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_refreshsubscriptions**합니다.  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만이 **sp_refreshsubscriptions**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

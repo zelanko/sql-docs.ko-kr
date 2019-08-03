@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributor_properties (TRANSACT-SQL) | Microsoft Docs
+title: sp_helpdistributor_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 61d11dd443e68d743b30cee890d33e4852c99b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4cacb78e797583dbd45954f09c89a774c381966
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902905"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770916"
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   배포자 속성을 반환합니다. 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -46,12 +46,12 @@ sp_helpdistributor_properties
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_helpdistributor_properties** 모든 유형의 복제에 사용 됩니다.  
+ **sp_helpdistributor_properties** 은 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 구성원만 합니다 **sysadmin** 고정된 서버 역할의 멤버, 합니다 **db_owner** 또는 **replmonitor** 고정된 데이터베이스 역할의 사용자가 배포 데이터베이스에는 이 배포자를 사용 하는 게시에 대 한 게시 액세스 목록 (PAL) 실행할 수 있습니다 **sp_helpdistributor_properties**합니다.  
+ **Sysadmin** 고정 서버 역할의 멤버, 배포 데이터베이스에서 **db_owner** 또는 **replmonitor** 고정 데이터베이스 역할의 멤버 및이 배포자를 사용 하는 게시에 대 한 PAL (게시 액세스 목록)의 사용자만 수행할 수 있습니다. **sp_helpdistributor_properties**를 실행 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
+ [sp_changedistributor_property &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

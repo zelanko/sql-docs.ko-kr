@@ -1,5 +1,5 @@
 ---
-title: sp_dropdistpublisher (TRANSACT-SQL) | Microsoft Docs
+title: sp_dropdistpublisher (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: c0bdd3de-3be0-455c-898a-98d4660e7ce3
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fcb1487d4291116bfb6fc0ad266b147e0fd69981
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8558c8d9caffd27d7a87743c88e1d62c430640fd
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927832"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768908"
 ---
 # <a name="spdropdistpublisher-transact-sql"></a>sp_dropdistpublisher(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   배포 게시자를 삭제합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -39,37 +39,37 @@ sp_dropdistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'` 삭제할 게시자가입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'`삭제할 게시자입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @no_checks = ] no_checks` 지정 여부 **sp_dropdistpublisher** 게시자가 배포자로 서버를 제거 했는지 확인 합니다. *no_checks* 됩니다 **비트**, 기본값은 **0**합니다.  
+`[ @no_checks = ] no_checks`**Sp_dropdistpublisher** 에서 게시자가 배포자로 서버를 제거 했는지 여부를 확인 합니다. *no_checks* 는 **bit**이며 기본값은 **0**입니다.  
   
- 하는 경우 **0**, 복제 원격 게시자가 배포자로 로컬 서버를 제거 했는지 확인 합니다. 게시자가 로컬인 경우에는 복제 시 로컬 서버에 게시 또는 배포 개체가 남아 있지 않음을 확인합니다.  
+ **0**인 경우 복제는 원격 게시자가 로컬 서버를 배포자로 제거 했는지 확인 합니다. 게시자가 로컬인 경우에는 복제 시 로컬 서버에 게시 또는 배포 개체가 남아 있지 않음을 확인합니다.  
   
- 하는 경우 **1**, 원격 게시자에 연결할 수 없는 경우에 배포 게시자와 연결 된 모든 복제 개체가 삭제 됩니다. 이 작업을 수행한 후 원격 게시자 복제를 사용 하 여 제거 해야 합니다 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) 사용 하 여 **@ignore_distributor**  =  **1**합니다.  
+ **1**인 경우에는 원격 게시자에 연결할 수 없는 경우에도 배포 게시자와 연결 된 모든 복제 개체가 삭제 됩니다. 이 작업을 수행한 후 원격 게시자는 [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) **@ignore_distributor**  =  **1**을 사용 하 여 복제를 제거 해야 합니다.  
   
-`[ @ignore_distributor = ] ignore_distributor` 게시자가 제거 하는 경우 배포자에서 배포 개체를 남겨둘지 여부를 지정 합니다. *ignore_distributor* 됩니다 **비트** 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @ignore_distributor = ] ignore_distributor`게시자를 제거할 때 배포 개체가 배포자에 남아 있는지 여부를 지정 합니다. *ignore_distributor* 는 **bit** 이며 다음 값 중 하나일 수 있습니다.  
   
- **1** 속하는 배포 개체가 = 합니다 *게시자* 배포자에 남아 있습니다.  
+ **1** = *게시자* 에 속하는 배포 개체가 배포자에 남아 있습니다.  
   
- **0** = 배포 개체에 대 한 합니다 *게시자* 정리 배포자입니다.  
+ **0** = *게시자* 의 배포 개체가 배포자에서 정리 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_dropdistpublisher** 모든 유형의 복제에 사용 됩니다.  
+ **sp_dropdistpublisher** 은 모든 유형의 복제에 사용 됩니다.  
   
- 게시자를 삭제할 수 없는 경우 Oracle 게시자를 삭제 하는 경우 **sp_dropdistpublisher** 반환 오류 및 게시자에 대 한 배포자 개체가 제거 됩니다.  
+ Oracle 게시자를 삭제할 수 없는 경우 게시자 **sp_dropdistpublisher** 을 삭제할 수 없으면 오류가 반환 되 고 게시자의 배포자 개체가 제거 됩니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/sp-dropdistpublisher-tra_1.sql)]  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_dropdistpublisher**합니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_dropdistpublisher**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [게시 및 배포 해제](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_helpdistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

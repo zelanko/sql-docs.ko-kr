@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplicationoption (TRANSACT-SQL) | Microsoft Docs
+title: sp_helpreplicationoption (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9852aaaf0b719bfa03736997959d76110dff4d6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1003a1a33565da9b48135123d83c4ea6551debeb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997511"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771479"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   서버에 대해 사용할 수 있는 복제 옵션 유형을 표시합니다. 이 저장 프로시저는 모든 데이터베이스의 모든 서버에서 실행됩니다.  
   
@@ -37,7 +37,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @optname = ] 'option_name'` 쿼리할 복제 옵션의 이름이입니다. *option_name* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @optname = ] 'option_name'`쿼리할 복제 옵션의 이름입니다. *option_name* 는 **sysname**이며 기본값은 NULL입니다.  
   
 |값|설명|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_helpreplicationoption** 특정 서버에서 사용 하도록 설정 하는 복제 옵션에 대 한 정보를 가져오는 데 사용 됩니다. 특정 데이터베이스에 대 한 정보를 가져오려면 **sp_helpreplicationdboption**합니다.  
+ **sp_helpreplicationoption** 은 특정 서버에서 사용 하도록 설정 된 복제 옵션에 대 한 정보를 가져오는 데 사용 됩니다. 특정 데이터베이스에 대 한 정보를 가져오려면 **sp_helpreplicationdboption**을 사용 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  실행 권한은 기본적으로 **public** 역할로 설정됩니다.  

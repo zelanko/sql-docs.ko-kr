@@ -1,5 +1,5 @@
 ---
-title: sp_changedistpublisher (TRANSACT-SQL) | Microsoft Docs
+title: sp_changedistpublisher (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 302d807b70e4cceb7cf25bffd0af637df7c4ad8c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80eb30fc6b6b2cea9fc058780831af3915fd9007
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120162"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771360"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   배포 게시자의 속성을 변경합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -40,13 +40,13 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publisher = ] 'publisher'` 게시자 이름이입니다. *게시자* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publisher = ] 'publisher'`게시자 이름입니다. *publisher* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @property = ] 'property'` 지정된 된 게시자에 대 한 변경 하려면 속성이입니다. *속성* 됩니다 **sysname** 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @property = ] 'property'`지정 된 게시자에 대해 변경할 속성입니다. *속성* 은 **sysname** 이며 다음 값 중 하나일 수 있습니다.  
   
-`[ @value = ] 'value'` 지정된 된 속성에 대 한 값이입니다. *값* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다.  
+`[ @value = ] 'value'`지정 된 속성에 대 한 값입니다. *value* 는 **nvarchar (255)** 이며 기본값은 NULL입니다.  
   
-`[ @storage_connection_string = ] 'storage_connection_string'` SQL Database 관리 되는 인스턴스에 대 한 필요 하며 Azure SQL Database 저장소 볼륨에 대 한 액세스 키와 일치 해야 합니다. 
+`[ @storage_connection_string = ] 'storage_connection_string'`SQL Database 관리 되는 인스턴스에 필요 합니다. Azure SQL Database 저장소 볼륨에 대 한 액세스 키와 일치 해야 합니다. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -60,25 +60,25 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |**distribution_db**||배포 데이터베이스의 이름입니다.|  
 |**login**||로그인 이름입니다.|  
 |**password**||제공된 로그인에 대한 강력한 암호입니다.|  
-|**security_mode**|**1**|게시자에 연결할 때 Windows 인증을 사용합니다. *이외에 대 한 변경할 수 없습니다* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자입니다.*|  
-||**0**|게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다. *이외에 대 한 변경할 수 없습니다* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *게시자입니다.*|  
+|**security_mode**|**1**|게시자에 연결할 때 Windows 인증을 사용합니다. *이외* [!INCLUDE[msCoName](../../includes/msconame-md.md)]게시자에 대해서는 변경할 수 없습니다 *.* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+||**0**|게시자에 연결할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용합니다. *이외 게시자에 대해서는 변경할 수 없습니다* *.* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**working_directory**||게시용 데이터 및 스키마 파일을 저장하는 데 사용되는 작업 디렉터리입니다.|  
-|NULL(기본값)||사용 가능한 모든 *속성* 옵션을 출력 합니다.| 
-|**storage_connection_string**| 액세스 키 | 데이터베이스가 Azure SQL Database Managed Instance 때 작업 디렉터리에 대 한 액세스 키입니다. 
+|NULL(기본값)||사용 가능한 모든 *속성* 옵션이 출력 됩니다.| 
+|**storage_connection_string**| 액세스 키 | 데이터베이스가 Azure SQL Database Managed Instance 될 때의 작업 디렉터리에 대 한 액세스 키입니다. 
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_changedistpublisher** 모든 유형의 복제에 사용 됩니다.  
+ **sp_changedistpublisher** 은 모든 유형의 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_changedistpublisher**합니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_changedistpublisher**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_adddistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

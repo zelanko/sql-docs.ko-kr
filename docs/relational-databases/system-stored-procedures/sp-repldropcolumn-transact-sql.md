@@ -1,5 +1,5 @@
 ---
-title: sp_repldropcolumn (TRANSACT-SQL) | Microsoft Docs
+title: sp_repldropcolumn (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,20 +15,20 @@ helpviewer_keywords:
 ms.assetid: fdc1ec5f-f108-42b4-a2d8-f06a71913ab8
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d18116f59b44e5e36e92d755c7a8ac7d7fdc683e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6b398a4dd7e93521b38708d3a7e37ae09e70a15
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68090018"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771466"
 ---
 # <a name="sprepldropcolumn-transact-sql"></a>sp_repldropcolumn(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   게시된 기존 테이블 아티클에서 열을 삭제합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
 > [!IMPORTANT]
->  이 저장 프로시저는 더 이상 사용되지 않으며 주로 이전 버전과의 호환성을 위해 지원됩니다. 사용 하 여만 사용 해야 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 게시자 및 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 재게시 구독자입니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상에서 도입된 데이터 형식을 사용하는 열에는 이 절차를 사용하지 않아야 합니다.  
+>  이 저장 프로시저는 더 이상 사용되지 않으며 주로 이전 버전과의 호환성을 위해 지원됩니다. [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 게시자 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 및[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] 재게시 구독자 에서만 사용 해야 합니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상에서 도입된 데이터 형식을 사용하는 열에는 이 절차를 사용하지 않아야 합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -45,20 +45,20 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
   
 ## <a name="arguments"></a>인수  
  [ @source_object =] '*source_object*'  
- 삭제할 열을 포함하는 테이블 아티클의 이름입니다. *source_object* 는 nvarchar(258) 이며 기본값은 없습니다.  
+ 삭제할 열을 포함하는 테이블 아티클의 이름입니다. *source_object* 은 nvarchar (258) 이며 기본값은 없습니다.  
   
  [ @column =] '*열*'  
- 삭제될 테이블 내에 있는 열의 이름입니다. *열* 는 sysname 이며 기본값은 없습니다.  
+ 삭제될 테이블 내에 있는 열의 이름입니다. *열* 은 sysname 이며 기본값은 없습니다.  
   
  [ @from_agent =] *from_agent*  
- 복제 에이전트에서 저장 프로시저를 실행하는 경우 *from_agent* 은 int 이며 기본값은 0에서 복제 에이전트가이 저장된 프로시저 실행 되 고 다른 모든 경우의 기본값은 0 사용 해야 하는 경우 값 1은 사용 하는 위치입니다.  
+ 복제 에이전트에서 저장 프로시저를 실행하는 경우 *from_agent* 은 int 이며 기본값은 0입니다. 여기서 값 1은 복제 에이전트가이 저장 프로시저를 실행할 때 사용 되며 다른 모든 경우에는 기본값 0을 사용 해야 합니다.  
   
  [ @schema_change_script =] '*schema_change_script*'  
- 시스템 생성 사용자 지정 저장 프로시저를 수정하는 데 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트의 이름과 경로를 지정합니다. *schema_change_script* 는 nvarchar(4000) 이며 기본값은 NULL입니다. 복제를 사용하면 트랜잭션 복제에서 사용되는 하나 이상의 기본 프로시저를 사용자 정의 사용자 지정 저장 프로시저로 바꿀 수 있습니다. *schema_change_script* 스키마 변경 sp_repldropcolumn을 사용 하 여 복제 된 테이블 아티클에 하려고 하 고 다음 중 하나를 수행할 수 후에 실행 됩니다.  
+ 시스템 생성 사용자 지정 저장 프로시저를 수정하는 데 사용된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스크립트의 이름과 경로를 지정합니다. *schema_change_script* 는 nvarchar (4000) 이며 기본값은 NULL입니다. 복제를 사용하면 트랜잭션 복제에서 사용되는 하나 이상의 기본 프로시저를 사용자 정의 사용자 지정 저장 프로시저로 바꿀 수 있습니다. *schema_change_script* 는 sp_repldropcolumn를 사용 하 여 복제 된 테이블 아티클의 스키마를 변경한 후 실행 되며 다음 중 하나를 수행 하는 데 사용할 수 있습니다.  
   
--   사용자 지정 저장된 프로시저는 자동으로 다시 생성 하는 경우 *schema_change_script* 이러한 사용자 지정 저장된 프로시저를 삭제 하 고 그것을 사용자 정의 사용자 지정 저장된 프로시저가 새 스키마를 지 원하는 데 사용할 수 있습니다.  
+-   사용자 지정 저장 프로시저가 자동으로 다시 생성 되는 경우 *schema_change_script* 를 사용 하 여 이러한 사용자 지정 저장 프로시저를 삭제 하 고 새 스키마를 지 원하는 사용자 정의 사용자 지정 저장 프로시저로 바꿀 수 있습니다.  
   
--   사용자 지정 저장된 프로시저는 자동으로 다시 생성 되지 *schema_change_script*이러한 저장된 프로시저를 다시 생성 데 사용할 수 있습니다 또는 저장 프로시저를 사용자 지정 사용자 정의 만듭니다.  
+-   사용자 지정 저장 프로시저가 자동으로 다시 생성 되지 않으면 *schema_change_script*을 사용 하 여 이러한 저장 프로시저를 다시 생성 하거나 사용자 정의 사용자 지정 저장 프로시저를 만들 수 있습니다.  
   
  [ @force_invalidate_snapshot =] *force_invalidate_snapshot*  
  스냅샷 무효화 기능을 설정하거나 해제합니다. *force_invalidate_snapshot* 는 bit 이며 기본값은 1입니다.  
@@ -68,7 +68,7 @@ sp_repldropcolumn [ @source_object = ] 'source_object', [ @column = ] 'column'
  0은 아티클에 대한 변경으로 인해 스냅샷이 무효화되지 않도록 지정합니다.  
   
  [ @force_reinit_subscription =] *force_reinit_subscription*  
- 구독 다시 초기화 기능을 설정하거나 해제합니다. *force_reinit_subscription* 은 bit 이며 기본값은 0입니다.  
+ 구독 다시 초기화 기능을 설정하거나 해제합니다. *force_reinit_subscription* 는 bit 이며 기본값은 0입니다.  
   
  0은 아티클에 대한 변경으로 인해 구독이 다시 초기화되지 않도록 지정합니다.  
   

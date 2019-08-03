@@ -1,5 +1,5 @@
 ---
-title: sp_articlefilter (TRANSACT-SQL) | Microsoft Docs
+title: sp_articlefilter (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 4c3fee32-a43f-4757-a029-30aef4696afb
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 11d00c389f815117f624ea0a8099a49e7db28fdd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d90cd0ba957da820ce5a937ae687e39ca0302025
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129749"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769064"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   테이블 아티클을 기준으로 게시할 데이터를 필터링합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -43,56 +43,56 @@ sp_articlefilter [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'` 아티클이 속한 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'`아티클이 포함 된 게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @article = ] 'article'` 아티클의 이름이입니다. *문서* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @article = ] 'article'`아티클의 이름입니다. *article* 은 **sysname**이며 기본값은 없습니다.  
   
-`[ @filter_name = ] 'filter_name'` 만들 필터 저장 프로시저의 이름은 합니다 *filter_name*합니다. *filter_name* 됩니다 **nvarchar(386)** , 기본값은 NULL입니다. 고유한 아티클 필터의 이름을 지정해야 합니다.  
+`[ @filter_name = ] 'filter_name'`*Filter_name*에서 만들 필터 저장 프로시저의 이름입니다. *filter_name* 은 **nvarchar (386)** 이며 기본값은 NULL입니다. 고유한 아티클 필터의 이름을 지정해야 합니다.  
   
-`[ @filter_clause = ] 'filter_clause'` 제한은 행 필터를 정의 하는 (WHERE) 절입니다. 제약 조건 절을 입력할 때는 키워드인 WHERE를 생략합니다. *filter_clause* 됩니다 **ntext**, 기본값은 NULL입니다.  
+`[ @filter_clause = ] 'filter_clause'`는 가로 필터를 정의 하는 제한 (WHERE) 절입니다. 제약 조건 절을 입력할 때는 키워드인 WHERE를 생략합니다. *filter_clause* 는 **ntext**이며 기본값은 NULL입니다.  
   
-`[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 으로 인해이 저장된 프로시저가 수행한 동작 기존 스냅숏을 무효화 될 수 있습니다. *force_invalidate_snapshot* 되는 **비트**, 기본값은 **0**합니다.  
+`[ @force_invalidate_snapshot = ] force_invalidate_snapshot`이 저장 프로시저가 수행한 동작으로 인해 기존 스냅숏이 무효화 될 수 있음을 승인 합니다. *force_invalidate_snapshot* 는 **bit**이며 기본값은 **0**입니다.  
   
- **0** 는 아티클에 대 한 변경 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅샷을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
+ **0** 은 아티클에 대 한 변경으로 인해 스냅숏이 무효화 되지 않도록 지정 합니다. 저장 프로시저가 새 스냅샷을 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
- **1** 은 아티클의 변경이 잘못 스냅숏이 무효화 될 수 있습니다 새 스냅숏이 필요한 기존 구독이 있는 경우 기존 스냅숏이 되지 않음으로 표시 하 고 새 스냅숏을 생성할 권한을 부여 되도록 지정 합니다.  
+ **1** 은 아티클에 대 한 변경으로 인해 스냅숏이 무효화 될 수 있음을 지정 합니다. 새 스냅숏이 필요한 기존 구독이 있는 경우 기존 스냅숏이 사용 되지 않는 것으로 표시 되 고 새 스냅숏으로 생성 될 수 있는 권한을 부여 합니다.  
   
-`[ @force_reinit_subscription = ] force_reinit_subscription` 이 저장된 프로시저가 수행한 동작 기존 구독을 다시 초기화에 필요할 수 있음을 승인 합니다. *force_reinit_subscription* 되는 **비트**, 기본값은 **0**합니다.  
+`[ @force_reinit_subscription = ] force_reinit_subscription`이 저장 프로시저가 수행한 동작으로 인해 기존 구독을 다시 초기화 해야 할 수도 있습니다. *force_reinit_subscription* 는 **bit**이며 기본값은 **0**입니다.  
   
- **0** 아티클의 아티클의 변경이 수행 하지 않는 구독을 다시 초기화 해야 합니다. 저장 프로시저가 구독의 다시 초기화를 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
+ **0** 은 아티클에 대 한 변경으로 인해 구독을 다시 초기화할 필요가 없도록 지정 합니다. 저장 프로시저가 구독의 다시 초기화를 필요로 하는 변경을 감지하면 오류가 발생하며 변경이 수행되지 않습니다.  
   
- **1** 문서 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수에 대 한 사용 권한을 부여 합니다.  
+ **1** 은 아티클에 대 한 변경으로 인해 기존 구독이 다시 초기화 되도록 지정 하며 구독을 다시 초기화할 수 있는 권한을 부여 합니다.  
   
-`[ @publisher = ] 'publisher'` 이외 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`[!INCLUDE[msCoName](../../includes/msconame-md.md)] 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *게시자* 사용 하 여 사용할 수 없습니다는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
+>  게시자에는 *게시자* 를 사용할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 없습니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_articlefilter** 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
+ **sp_articlefilter** 는 스냅숏 복제 및 트랜잭션 복제에 사용 됩니다.  
   
- 실행 **sp_articlefilter** 하려면 기존 구독을 사용 하 여 문서에 대 한 해당 구독을 다시 초기화 합니다.  
+ 기존 구독이 있는 아티클에 대해 **sp_articlefilter** 을 실행 하려면 해당 구독을 다시 초기화 해야 합니다.  
   
- **sp_articlefilter** 필터를 만들고 필터 저장 프로시저의 ID를 삽입 합니다 **필터** 열의 합니다 [sysarticles &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블 차례로 제한 절의 텍스트를 삽입 합니다 **filter_clause** 열입니다.  
+ **sp_articlefilter** 필터를 만들고 [sysarticles &#40;&#41; transact-sql](../../relational-databases/system-tables/sysarticles-transact-sql.md) 테이블의 **필터** 열에 필터 저장 프로시저의 ID를 삽입 한 다음 제한 절의 텍스트를 필터에 삽입 합니다.  **_clause** 열입니다.  
   
- 아티클을 행 필터링을 사용 하 여 만들려는 실행 [sp_addarticle &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 없이 *필터* 매개 변수입니다. 실행 **sp_articlefilter**를 비롯 한 모든 매개 변수를 제공 *filter_clause*, 및 실행 한 다음 [sp_articleview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md), 동일한 포함 하는 모든 매개 변수를 제공 *filter_clause*합니다. 필터가 이미 존재 하는 경우는 **형식** 에 **sysarticles** 됩니다 **1** (로그 기반 아티클) 이면 이전 필터가 삭제 되 고 새 필터가 작성 됩니다.  
+ 행 필터를 사용 하 여 아티클을 만들려면 *필터* 매개 변수 없이 [sp_addarticle &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) 을 실행 합니다. **Sp_articlefilter**를 실행 하 고 *filter_clause*를 포함 한 모든 매개 변수를 제공한 다음 [ &#40;sp_articleview&#41;transact-sql](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)을 실행 하 여 동일한 *filter_clause*를 포함 하는 모든 매개 변수를 제공 합니다. 필터가 이미 존재 하 고 **sysarticles** 의 **유형이** **1** (로그 기반 아티클) 인 경우에는 이전 필터가 삭제 되 고 새 필터가 생성 됩니다.  
   
- 하는 경우 *filter_name* 하 고 *filter_clause* 를 제공 하지 않은 이전 필터가 삭제 되 고 필터 ID로 설정 됩니다 **0**합니다.  
+ *Filter_name* 및 *filter_clause* 를 제공 하지 않으면 이전 필터가 삭제 되 고 필터 ID가 **0**으로 설정 됩니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_AddTranArticle](../../relational-databases/replication/codesnippet/tsql/sp-articlefilter-transac_1.sql)]  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_articlefilter**합니다.  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만이 **sp_articlefilter**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [정적 행 필터 정의 및 수정](../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   
- [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_articleview &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
+ [sp_addarticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_articleview &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md)   
  [sp_changearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
  [sp_helparticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   

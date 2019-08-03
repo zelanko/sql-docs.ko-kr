@@ -1,18 +1,18 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: SQL Server Machine Learning Services (R 및 Python) 설명서
+title: SQL Server Machine Learning Services (Python 및 R) 설명서
 metadata:
-  title: 'SQL Server Machine Learning Services (R, Python) 설명서-자습서, 빠른 시작 및 설치 가이드 | Microsoft Docs'
+  title: 'SQL Server Machine Learning Services (Python, R) 설명서-자습서, 빠른 시작 및 설치 가이드 | Microsoft Docs'
   titleSuffix: ''
-  description: 'SQL Server Machine Learning Services를 사용 하 여 관계형 데이터에서 R 및 Python 스크립트를 실행 하는 방법에 대해 알아봅니다. 자습서, 코드 예제, 설치 가이드 및 기타 설명서에서는 방법을 보여 줍니다.'
+  description: 'SQL Server Machine Learning Services를 사용 하 여 관계형 데이터에서 Python 및 R 스크립트를 실행 하는 방법에 대해 알아봅니다. 자습서, 코드 예제, 설치 가이드 및 기타 설명서에서는 방법을 보여 줍니다.'
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 06/22/2019
+  ms.date: 08/01/2019
 abstract:
-  description: '관계형 데이터에서 R 및 Python 스크립트를 실행 하는 데 SQL Server Machine Learning Services를 사용 하는 방법에 대해 알아봅니다. 자습서, 코드 예제, 설치 가이드 및 기타 설명서에서는 방법을 보여 줍니다.'
+  description: '관계형 데이터에서 Python 및 R 스크립트를 실행 하는 데 SQL Server Machine Learning Services를 사용 하는 방법에 대해 알아봅니다. 자습서, 코드 예제, 설치 가이드 및 기타 설명서에서는 방법을 보여 줍니다.'
   aside:
     image:
       alt: null
@@ -30,8 +30,8 @@ sections:
       - type: list
         style: unordered
         items:
-          - html: <a href="tutorials/quickstart-r-run-using-tsql">R</a> 또는 <a href="tutorials/quickstart-python-run-using-t-sql">Python</a> 에서 "Hello 세계" 스크립트 실행
-          - html: <a href="tutorials/quickstart-r-create-predictive-model">R</a> 또는 <a href="tutorials/quickstart-python-train-score-in-tsql">Python</a> 에서 예측 모델 만들기
+          - html: <a href="tutorials/quickstart-python-run-using-t-sql">Python</a> 또는 <a href="tutorials/quickstart-r-run-using-tsql">R</a> 에서 "Hello 세계" 스크립트를 실행 합니다.
+          - html: <a href="tutorials/quickstart-python-train-score-in-tsql">Python</a> 또는 <a href="tutorials/quickstart-r-create-predictive-model">R</a> 에서 예측 모델 만들기
   - title: 단계별 자습서
     items:
       - type: paragraph
@@ -39,9 +39,9 @@ sections:
       - type: list
         style: unordered
         items:
+          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">T-sql에서 Python 사용</a>: 데이터</a>탐색, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 만들기 (5 부 시리즈)'
           - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">T-sql에서 R 사용</a>: 데이터 탐색, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 만들기 (5 부 시리즈)'
           - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">R 도구에서 Machine Learning Services 사용</a>: 데이터 탐색, 그래프 및 플롯 만들기, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 만들기 (6 부 시리즈)'
-          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">T-sql에서 Python 사용</a>: 데이터</a>탐색, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 만들기 (5 부 시리즈)'
   - title: 솔루션
     items:
       - type: paragraph
@@ -49,16 +49,16 @@ sections:
   - title: 참조
     items:
       - type: paragraph
-        text: SQL Server Machine Learning Services에는 R 및 Python에 대 한 여러 패키지가 있습니다.
+        text: 'SQL Server Machine Learning Services에서 오픈 소스 패키지와 프레임 워크, Microsoft Python 및 R 패키지를 모두 사용 합니다.'
       - type: list
         style: unordered
         items:
-          - html: '<a href="r/ref-r-revoscaler">R의 RevoScaleR</a>: R 작업에 대한 분산 및 병렬 처리: 데이터 변환, 탐색, 시각화, 통계 및 예측 분석'
-          - html: '<a href="r/ref-r-microsoftml">R의 MicrosoftML</a>: r에 맞게 조정 되는 Microsoft AI 알고리즘을 기반으로 하는 함수'
+          - html: '<a href="python/ref-py-revoscalepy">Python의 revoscalepy</a>: Python 작업에 대 한 분산 및 병렬 처리: 데이터 변환, 탐색, 시각화, 통계 및 예측 분석'
+          - html: '<a href="python/ref-py-microsoftml">Python의 microsoftml</a>: Python 용 Microsoft AI 알고리즘을 기반으로 하는 함수'
+          - html: '<a href="r/ref-r-revoscaler">R의 RevoScaleR</a>: R 작업에 대 한 분산 및 병렬 처리: 데이터 변환, 탐색, 시각화, 통계 및 예측 분석'
+          - html: '<a href="r/ref-r-microsoftml">R의 MicrosoftML</a>: R에 대 한 Microsoft AI 알고리즘을 기반으로 하는 함수'
           - html: '<a href="r/ref-r-olapr">R의 Olapr</a>: OLAP 큐브에서 데이터를 가져옵니다.'
           - html: '<a href="r/ref-r-sqlrutils">R의 sqlRUtils</a>: R 및 T-sql을 캡슐화 하기 위한 도우미 함수'
-          - html: '<a href="python/ref-py-revoscalepy">Python의 revoscalepy</a>: Python 작업에 대 한 분산 및 병렬 처리: 데이터 변환, 탐색, 시각화, 통계 및 예측 분석'
-          - html: '<a href="python/ref-py-microsoftml">Python의 microsoftml</a>: Python에 맞게 조정 되는 Microsoft AI 알고리즘을 기반으로 하는 함수'
   - title: 기타 Machine Learning 기술
     items:
       - type: list

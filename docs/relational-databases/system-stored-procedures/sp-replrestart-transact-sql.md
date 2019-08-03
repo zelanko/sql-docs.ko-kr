@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fc15ed0b36738968a2b455157213a10dbceb2965
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.openlocfilehash: a9108ab25d1a23e06ccd93daad5f755a3a65aa44
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68300444"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770889"
 ---
 # <a name="spreplrestart-transact-sql"></a>sp_replrestart(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   백업 및 복원 중에 트랜잭션 복제에서 사용되며 배포자의 복제된 데이터가 게시자의 데이터와 동기화되도록 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: sp_browsereplcmds (TRANSACT-SQL) | Microsoft Docs
+title: sp_browsereplcmds (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: b29ee604f1b584fcbdcd0ef91e32c84d89cc5f96
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045995"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769004"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   배포 데이터베이스에 복제되어 저장된 결과 집합을 읽을 수 있는 버전으로 반환합니다. 이 결과 집합은 진단 도구에서 사용됩니다. 이 저장 프로시저는 배포 데이터베이스의 배포자에서 실행됩니다.  
   
@@ -44,21 +44,21 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @xact_seqno_start = ] 'xact_seqno_start'` 반환할 가장 낮은 값된 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_start* 됩니다 **nchar(22)** , 기본값은 0x00000000000000000000입니다.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'`반환할 가장 작은 값의 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_start* 은 **nchar (22)** 이며 기본값은은 x 00000000000000000000입니다.  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'` 반환할 가장 높은 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_end* 됩니다 **nchar(22)** , 기본값은 0xFFFFFFFFFFFFFFFFFFFF입니다.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'`반환할 가장 높은 정확한 시퀀스 번호를 지정 합니다. *xact_seqno_end* 은 **nchar (22)** 이며 기본값은 0xffffffffffffffffffff입니다.  
   
-`[ @originator_id = ] 'originator_id'` 지정 된 명령을 *originator_id* 반환 됩니다. *originator_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @originator_id = ] 'originator_id'`지정 된 *originator_id* 의 명령이 반환 되는지 여부를 지정 합니다. *originator_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @publisher_database_id = ] 'publisher_database_id'` 지정 된 명령을 *publisher_database_id* 반환 됩니다. *publisher_database_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @publisher_database_id = ] 'publisher_database_id'`지정 된 *publisher_database_id* 의 명령이 반환 되는지 여부를 지정 합니다. *publisher_database_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @article_id = ] 'article_id'` 지정 된 명령을 *article_id* 반환 됩니다. *article_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @article_id = ] 'article_id'`지정 된 *article_id* 의 명령이 반환 되는지 여부를 지정 합니다. *article_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @command_id = ] command_id` 명령의 위치인 [MSrepl_commands &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) 디코딩할 합니다. *command_id* 됩니다 **int**, 기본값은 NULL입니다. 지정 하는 경우 다른 모든 매개 변수 또한 지정 해야 하 고 *xact_seqno_start*같아야 *xact_seqno_end*.  
+`[ @command_id = ] command_id`[MSrepl_commands &#40;transact-sql&#41; ](../../relational-databases/system-tables/msrepl-commands-transact-sql.md) 에서 디코딩할 명령의 위치입니다. *command_id* 은 **int**이며 기본값은 NULL입니다. 지정 된 경우 다른 모든 매개 변수도 지정 해야 하 고 *xact_seqno_start*는 *xact_seqno_end*와 동일 해야 합니다.  
   
-`[ @agent_id = ] agent_id` 특정 복제 에이전트에 대 한 명령만 반환 되도록 지정 합니다. *agent_id* 됩니다 **int**, 기본값은 NULL입니다.  
+`[ @agent_id = ] agent_id`특정 복제 에이전트에 대 한 명령만 반환 하도록 지정 합니다. *agent_id* 은 **int**이며 기본값은 NULL입니다.  
   
-`[ @compatibility_level = ] compatibility_level` 버전이 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반이 *compatibility_level* 은 **int**, 이며 기본값은 9000000입니다.  
+`[ @compatibility_level = ] compatibility_level`*Compatibility_level* 이 **int**인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이며 기본값은 900만입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
@@ -78,19 +78,19 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_db_version**|**int**|트랜잭션이 시작된 데이터베이스의 버전입니다.|  
 |**originator_lsn**|**varbinary(16)**|원본 게시에서 명령의 LSN(로그 시퀀스 번호)을 식별합니다. 피어 투 피어 트랜잭션 복제에 사용됩니다.|  
 |**명령**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 명령입니다.|  
-|**command_id**|**int**|명령 ID [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)합니다.|  
+|**command_id**|**int**|[MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md)에 있는 명령의 ID입니다.|  
   
  긴 명령은 결과 집합에서 여러 행으로 분할될 수 있습니다.  
   
 ## <a name="remarks"></a>설명  
- **sp_browsereplcmds** 트랜잭션 복제에 사용 됩니다.  
+ **sp_browsereplcmds** 은 트랜잭션 복제에 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버만 합니다 **sysadmin** 고정 서버 역할의 멤버는 **db_owner** 하거나 **replmonitor** 배포 데이터베이스의 고정된 데이터베이스 역할 실행할수있습니다**sp_browsereplcmds**합니다.  
+ 배포 데이터베이스의 **sysadmin** 고정 서버 역할 또는 **db_owner** 또는 **replmonitor** 고정 데이터베이스 역할의 멤버만 **sp_browsereplcmds**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [sp_replcmds&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
- [sp_replshowcmds &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
+ [sp_replshowcmds &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
