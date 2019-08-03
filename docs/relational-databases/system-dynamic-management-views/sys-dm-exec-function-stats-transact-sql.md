@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_function_stats (TRANSACT-SQL) | Microsoft Docs
+title: _exec_function_stats (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/30/2019
 ms.prod: sql
@@ -18,64 +18,64 @@ ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e67a50287e0878a3dcc0779bb4a78dbcbbdd0260
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 89d66217536d5cd552eb11de67d6d97d21ec9f6e
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68259251"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742831"
 ---
-# <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact SQL)
+# <a name="sysdmexecfunctionstats-transact-sql"></a>_exec_function_stats (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
 
-  캐시 된 함수에 대 한 성능 통계를 집계 하는 반환 합니다. 각 함수 캐시 된 계획에 대 한 하나의 행을 반환 하는 뷰 및 행의 유효 기간은 함수 동안 캐시 합니다. 함수는 캐시에서 제거 되 면 해당 행이 뷰에서 제거 됩니다. 이때 Performance Statistics SQL 추적 이벤트를 발생 비슷합니다 **sys.dm_exec_query_stats**합니다. 메모리에서 함수 및 CLR 스칼라 함수를 비롯 한 스칼라 함수에 대 한 정보를 반환 합니다. 테이블 반환 함수에 대 한 정보를 반환 하지 않습니다.  
+  캐시 된 함수에 대 한 집계 성능 통계를 반환 합니다. 이 뷰는 캐시 된 각 함수 계획에 대해 하나의 행을 반환 하 고, 해당 함수는 캐시 된 상태로 유지 되는 동안에는 행의 수명이 지속 됩니다. 캐시에서 함수를 제거 하면 해당 행이이 뷰에서 제거 됩니다. 이때 Performance Statistics SQL 추적 이벤트는 **_exec_query_stats**와 유사 하 게 발생 합니다. 메모리 내 함수 및 CLR 스칼라 함수를 비롯 한 스칼라 함수에 대 한 정보를 반환 합니다. 는 테이블 반환 함수에 대 한 정보를 반환 하지 않습니다.  
   
- [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이 정보 공개를 방지 하려면 연결 된 테 넌 트에 속하지 않는 데이터가 포함 된 모든 행 필터링 됩니다.  
+ [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 동적 관리 뷰는 데이터베이스 포함에 영향을 줄 수 있는 정보 또는 사용자가 액세스할 수 있는 다른 데이터베이스 정보를 노출할 수 없습니다. 이 정보를 노출 하지 않도록 하기 위해 연결 된 테 넌 트에 속하지 않는 데이터를 포함 하는 모든 행이 필터링 됩니다.  
   
 > [!NOTE]
-> 초기 쿼리 **sys.dm_exec_function_stats** 중인 서버에서 현재 실행 중인 작업이 있을 경우 부정확 한 결과 생성할 수 있습니다. 쿼리를 다시 실행하면 보다 정확한 결과를 확인할 수 있습니다.  
-  
+> **_Exec_function_stats** 의 결과는 데이터에서 완료 된 쿼리만 반영 하 고 아직 진행 중인 쿼리는 반영 하지 않으므로 각 실행에 따라 달라질 수 있습니다. 
+
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**database_id**|**int**|함수가 상주 하는 데이터베이스 ID입니다.|  
-|**object_id**|**int**|함수의 개체 id.|  
-|**type**|**char(2)**|개체의 유형입니다.   FN = 스칼라 반환된 함수|  
+|**database_id**|**int**|함수가 있는 데이터베이스 ID입니다.|  
+|**object_id**|**int**|함수의 개체 id입니다.|  
+|**type**|**char(2)**|개체의 유형입니다.   FN = 스칼라 반환 함수|  
 |**type_desc**|**nvarchar(60)**|개체 유형에 대한 설명: SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary(64)**|이 쿼리는 상관 관계를 사용할 수 있습니다 **sys.dm_exec_query_stats** 이 함수 내에서 실행 된 합니다.|  
-|**plan_handle**|**varbinary(64)**|메모리 내 계획의 식별자입니다. 이 식별자는 일시적이며 계획이 캐시에 있는 동안에만 일정하게 유지됩니다. 이 값을 사용 하 여 사용할 수는 **sys.dm_exec_cached_plans** 동적 관리 뷰.<br /><br /> 0x000 경우 고유 하 게 컴파일된 함수 쿼리 메모리 최적화 테이블은 항상입니다.|  
-|**cached_time**|**datetime**|캐시에 추가 된 함수는 시간입니다.|  
-|**last_execution_time**|**datetime**|함수는 실행 된 마지막 시간입니다.|  
-|**execution_count**|**bigint**|마지막으로 컴파일된 함수 이후 실행 된 횟수입니다.|  
-|**total_worker_time**|**bigint**|총 CPU 시간으로 컴파일된 이후 실행 될 때이 함수 사용 된 마이크로초입니다.<br /><br /> 고유 하 게 컴파일된 함수에 대 한 **total_worker_time** 보다 작거나 1 밀리초 소요 하는 경우 정확 하 게 되지 않을 수 있습니다.|  
-|**last_worker_time**|**bigint**|CPU 시간을 마이크로초에서 함수가 실행 된 마지막으로 사용한입니다. <sup>1</sup>|  
-|**min_worker_time**|**bigint**|최소 CPU 시간, 단일 실행 중이 함수에 사용 된는 마이크로초입니다. <sup>1</sup>|  
-|**max_worker_time**|**bigint**|최대 CPU 시간, 단일 실행 중이 함수에 사용 된는 마이크로초입니다. <sup>1</sup>|  
-|**total_physical_reads**|**bigint**|컴파일된 이후 실행 될 때이 함수 수행 된 물리적 읽기의 총 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
-|**last_physical_reads**|**bigint**|마지막으로 함수 실행을 수행 하는 물리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
-|**min_physical_reads**|**bigint**|단일 실행 중이 함수에서 수행한 물리적 읽기의 최소 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
-|**max_physical_reads**|**bigint**|최대 단일 실행 중이 함수에서 수행한 물리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
-|**total_logical_writes**|**bigint**|컴파일된 이후 실행 될 때가이 함수에서 수행 된 논리적 쓰기의 총 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
+|**sql_handle**|**varbinary(64)**|이 함수 내에서 실행 된 **_exec_query_stats** 의 쿼리와 상호 연결 하는 데 사용할 수 있습니다.|  
+|**plan_handle**|**varbinary(64)**|메모리 내 계획의 식별자입니다. 이 식별자는 일시적이며 계획이 캐시에 있는 동안에만 일정하게 유지됩니다. 이 값은 **_exec_cached_plans** 동적 관리 뷰와 함께 사용할 수 있습니다.<br /><br /> 고유 하 게 컴파일된 함수가 메모리 최적화 테이블을 쿼리하면 항상 0x000입니다.|  
+|**cached_time**|**datetime**|함수가 캐시에 추가 된 시간입니다.|  
+|**last_execution_time**|**datetime**|함수가 마지막으로 실행 된 시간입니다.|  
+|**execution_count**|**bigint**|함수가 마지막으로 컴파일된 이후 실행 된 횟수입니다.|  
+|**total_worker_time**|**bigint**|이 함수가 컴파일된 이후 실행 되는 동안 사용 된 총 CPU 시간 (마이크로초)입니다.<br /><br /> 고유 하 게 컴파일된 함수에 대해 많은 실행이 1 밀리초 미만으로 소요 되는 경우 **total_worker_time** 는 정확 하지 않을 수 있습니다.|  
+|**last_worker_time**|**bigint**|함수가 마지막으로 실행 되었을 때 사용 된 CPU 시간 (마이크로초)입니다. <sup>1</sup>|  
+|**min_worker_time**|**bigint**|단일 실행 중에이 함수가 사용한 최소 CPU 시간 (마이크로초)입니다. <sup>1</sup>|  
+|**max_worker_time**|**bigint**|단일 실행 중이 함수가 사용한 최대 CPU 시간 (마이크로초)입니다. <sup>1</sup>|  
+|**total_physical_reads**|**bigint**|이 함수가 컴파일된 이후 실행 될 때 수행 된 총 물리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
+|**last_physical_reads**|**bigint**|함수가 마지막으로 실행 되었을 때 수행 된 물리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
+|**min_physical_reads**|**bigint**|단일 실행 중이 함수가 수행한 최소 물리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
+|**max_physical_reads**|**bigint**|단일 실행 중이 함수가 수행한 최대 물리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
+|**total_logical_writes**|**bigint**|이 함수가 컴파일된 이후 실행 될 때 수행 된 총 논리적 쓰기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
 |**last_logical_writes**|**bigint**|계획이 마지막으로 실행될 때 변경된 버퍼 풀 페이지 수입니다. 페이지가 이미 변경된(수정된) 경우에는 쓰기 수가 계산되지 않습니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
-|**min_logical_writes**|**bigint**|단일 실행 중이 함수에서 수행한 논리적 쓰기의 최소 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
-|**max_logical_writes**|**bigint**|단일 실행 중이 함수에서 수행한 논리적 쓰기의 최대 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
-|**total_logical_reads**|**bigint**|컴파일된 이후 실행 될 때가이 함수에서 수행 된 논리적 읽기의 총 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
-|**last_logical_reads**|**bigint**|마지막으로 함수 실행을 수행 하는 논리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
-|**min_logical_reads**|**bigint**|단일 실행 중이 함수에서 수행한 논리적 읽기의 최소 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
-|**max_logical_reads**|**bigint**|최대 단일 실행 중이 함수에서 수행한 논리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
-|**total_elapsed_time**|**bigint**|총 경과 시간, 완료 된 실행이 함수의 마이크로초에서입니다.|  
-|**last_elapsed_time**|**bigint**|이 함수의 가장 최근에 완료 된 실행을 위해 마이크로초에서 경과 시간입니다.|  
-|**min_elapsed_time**|**bigint**|최소 경과 시간 (마이크로초)에 대 한이 함수의 실행을 완료 합니다.|  
-|**max_elapsed_time**|**bigint**|최대 경과 시간 (마이크로초)에 대 한이 함수의 실행을 완료 합니다.|  
-|**total_page_server_reads**|**bigint**|컴파일된 이후 실행 될 때가이 함수를 수행한 페이지 서버 읽기의 총 수입니다.<br /><br /> **적용 대상:** Azure SQL Database 대규모 합니다.|  
-|**last_page_server_reads**|**bigint**|마지막으로 함수 실행을 수행 하는 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL Database 대규모 합니다.|  
-|**min_page_server_reads**|**bigint**|이 함수에서 단일 실행 중 수행한 페이지 서버의 최소 수를 읽습니다.<br /><br /> **적용 대상:** Azure SQL Database 대규모 합니다.|  
-|**max_page_server_reads**|**bigint**|이 함수에서 단일 실행 중 수행한 페이지 서버의 최대 수를 읽습니다.<br /><br /> **적용 대상:** Azure SQL Database 대규모 합니다.|
+|**min_logical_writes**|**bigint**|단일 실행 중이 함수가 수행한 최소 논리적 쓰기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
+|**max_logical_writes**|**bigint**|단일 실행 중이 함수가 수행한 최대 논리적 쓰기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
+|**total_logical_reads**|**bigint**|이 함수가 컴파일된 이후 실행 될 때 수행 된 총 논리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
+|**last_logical_reads**|**bigint**|함수가 마지막으로 실행 되었을 때 수행 된 논리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
+|**min_logical_reads**|**bigint**|단일 실행 중이 함수가 수행한 최소 논리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
+|**max_logical_reads**|**bigint**|단일 실행 중이 함수가 수행한 최대 논리적 읽기 수입니다.<br /><br /> 메모리 최적화 테이블을 쿼리하는 경우 항상 0입니다.|  
+|**total_elapsed_time**|**bigint**|이 함수의 실행을 완료 하는 데 소요 된 총 경과 시간 (마이크로초)입니다.|  
+|**last_elapsed_time**|**bigint**|가장 최근에이 함수의 실행을 완료 하는 데 소요 된 경과 시간 (마이크로초)입니다.|  
+|**min_elapsed_time**|**bigint**|이 함수의 실행을 완료 하는 데 소요 된 최소 경과 시간 (마이크로초)입니다.|  
+|**max_elapsed_time**|**bigint**|이 함수의 실행을 완료 하는 데 소요 된 최대 경과 시간 (마이크로초)입니다.|  
+|**total_page_server_reads**|**bigint**|이 함수가 컴파일된 이후 실행 될 때 수행 된 총 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL Database Hyperscale.|  
+|**last_page_server_reads**|**bigint**|함수가 마지막으로 실행 되었을 때 수행 된 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL Database Hyperscale.|  
+|**min_page_server_reads**|**bigint**|단일 실행 중이 함수가 수행한 최소 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL Database Hyperscale.|  
+|**max_page_server_reads**|**bigint**|단일 실행 중이 함수가 수행한 최대 페이지 서버 읽기 수입니다.<br /><br /> **적용 대상:** Azure SQL Database Hyperscale.|
   
 ## <a name="permissions"></a>사용 권한  
 
-온 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], 필요한 `VIEW SERVER STATE` 권한.   
-온 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 프리미엄 계층 필요는 `VIEW DATABASE STATE` 데이터베이스의 권한. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 표준 및 기본 계층에 필요 합니다 **서버 관리자** 요소나 **Azure Active Directory 관리자** 계정.   
+에 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]는 권한이 `VIEW SERVER STATE` 필요 합니다.   
+Premium [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 계층에서는 데이터베이스에 대 `VIEW DATABASE STATE` 한 권한이 필요 합니다. 표준 및 기본 계층에서는 **서버 관리자** 또는 **Azure Active Directory 관리자** 계정이 필요 합니다. [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]   
   
 ## <a name="examples"></a>예  
  다음 예에서는 평균 경과 시간으로 식별 된 상위 10 개의 함수에 대 한 정보를 반환 합니다.  
@@ -90,11 +90,11 @@ ORDER BY [total_worker_time] DESC;
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [실행 관련 동적 관리 뷰 및 함수 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [실행 관련 동적 관리 뷰 및 함수 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+ [_exec_sql_text &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_query_stats&#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  
- [sys.dm_exec_trigger_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
- [sys.dm_exec_procedure_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+ [_exec_trigger_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
+ [_exec_procedure_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
   
   
