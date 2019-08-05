@@ -12,12 +12,12 @@ ms.assetid: 5064e35b-b70d-4a0b-a9e9-fff04162f9d2
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c213b95258b30a8d910c7d96d7598ddd930c9687
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ea3d65d8ceaf06fc04efea138b3133fdeb0f335
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934684"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68714650"
 ---
 # <a name="upgrade-sql-server"></a>SQL Server 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -54,6 +54,6 @@ ms.locfileid: "67934684"
  [복제된 데이터베이스 업그레이드](../../database-engine/install-windows/upgrade-replicated-databases.md)   
  [Master Data Services 업그레이드](../../database-engine/install-windows/upgrade-master-data-services.md)   
  [SQL Server 2008 R2 Best Practices Analyzer](https://go.microsoft.com/fwlink/?LinkId=197135)   
- [이전 버전과의 호환성_삭제됨](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
+ [이전 버전과의 호환성](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   
   

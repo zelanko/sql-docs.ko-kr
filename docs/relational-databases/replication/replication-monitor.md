@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 39b92198-c3f6-4f25-8560-095848ad652d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7a926e4735c29d92f9faaec69e06171e134360aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 89f992afc1a419f5d2fa5aa172d9e5e930a8a21b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005429"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769676"
 ---
 # <a name="replication-monitor"></a>복제 모니터
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   설명서의 이 섹션에는 복제 모니터에 대한 정보가 포함되어 있습니다. 모니터에 표시되는 페이지와 대화 상자는 모니터링 중인 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 버전 및 복제 유형에 따라 달라집니다.  
   
 -   [복제 모니터, 주 페이지](../../relational-databases/replication/replication-monitor-main-page.md)  

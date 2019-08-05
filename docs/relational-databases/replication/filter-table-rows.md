@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 005f5c71-0401-490e-8823-adc54a2e9675
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6974e8c3d07bd1da5fd48a4bbbc8e49c86e2d314
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 321859ffa20f9c576635a2c082b5f0d2458e848d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128094"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770626"
 ---
 # <a name="filter-table-rows"></a>테이블 행 필터
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **테이블 행 필터** 페이지를 사용하여 다음 작업을 수행할 수 있습니다.  
   
 -   스냅샷, 트랜잭션 및 병합 게시의 테이블 아티클에 정적 행 필터를 적용합니다.  

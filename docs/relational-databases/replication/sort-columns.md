@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 66b44b6c-10a5-4e3f-a97b-7568609c88ac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dd17c07b9154761f5f9c665e10941d04093c1dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 0f7cca09018f9486c831e3803aedb5c969c422d1
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907607"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769498"
 ---
 # <a name="sort-columns"></a>열 정렬
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **열 정렬** 대화 상자를 사용하여 복제 모니터에서 하나 이상의 열을 기준으로 표를 정렬할 수 있습니다. 복제 모니터 표의 열 머리글을 클릭하여 단일 열을 기준으로 정렬할 수도 있습니다. 예를 들어 **모든 구독** 탭에서 구독을 상태별로 정렬한 다음 연결 유형별로 정렬하려면 다음 단계를 수행합니다.  
   
 1.  표의 첫 번째 행에서 **열 이름** 열의 **상태** 를 선택하고 **정렬 순서** 열에서 값을 선택합니다.  

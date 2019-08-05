@@ -18,15 +18,16 @@ helpviewer_keywords:
 ms.assetid: 091c51dc-8b32-4b4f-847e-b317456c8394
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6b21412bfb6555dbe9c45d411f0b1e7292e79e2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d255b4f3599cc9d42f52e860a21941c6e8b95436
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046706"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769738"
 ---
 # <a name="replication-backward-compatibility"></a>복제의 이전 버전과의 호환성
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 업그레이드하는 경우 또는 복제 토폴로지에 둘 이상의 SQL Server 버전이 있는 경우 이전 버전과의 호환성을 이해하는 것이 중요합니다. 
 

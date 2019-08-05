@@ -16,16 +16,16 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e750743eb98307433d8ad6878cec12ea4e43ca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 2e3abb6dfb8556f4e598e55e8ae3d645e117a8b5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895226"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769294"
 ---
 # <a name="validate-replicated-data"></a>복제된 데이터의 유효성 검사
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 구독자의 데이터에 대한 유효성을 검사하는 방법에 대해 설명합니다.  
   
 트랜잭션 및 병합 복제를 사용하면 구독자의 데이터가 게시자의 데이터와 일치하는지 확인할 수 있습니다. 게시에 대한 특정 구독 또는 모든 구독에 대해 유효성 검사를 수행할 수 있습니다. 다음 유효성 검사 유형 중 하나를 지정합니다. 배포 에이전트 또는 병합 에이전트가 다음에 실행될 때 해당 유형에 따라 데이터의 유효성을 검사합니다.  
@@ -34,6 +34,8 @@ ms.locfileid: "67895226"
 -   **행 개수와 이진 체크섬**. 게시자 및 구독자에서 행 개수의 유효성을 검사할 뿐만 아니라 체크섬 알고리즘을 사용하여 모든 데이터의 체크섬을 계산합니다. 행 개수 확인을 실패하면 체크섬 계산이 수행되지 않습니다.  
   
  구독자의 데이터와 게시자의 데이터가 일치하는지에 대한 유효성 검사 외에도 병합 복제는 각 구독자에 대해 데이터가 올바르게 분할되었는지에 대한 유효성을 검사하는 기능을 제공합니다. 자세한 내용은 [병합 구독자의 파티션 정보 유효성 검사](../../relational-databases/replication/validate-partition-information-for-a-merge-subscriber.md)를 참조하세요.  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
    
 ## <a name="how-data-validation-works"></a>데이터 유효성 검사 작업 방식  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 게시자에서 행 개수 또는 체크섬을 계산한 다음 그 값을 구독자에서 계산된 행 개수 또는 체크섬과 비교하여 데이터의 유효성을 검사합니다. 전체 게시 테이블과 전체 구독 테이블에 대해 각각 하나의 값이 계산되지만 **text**, **ntext**또는 **image** 열의 데이터는 계산에 포함되지 않습니다.  

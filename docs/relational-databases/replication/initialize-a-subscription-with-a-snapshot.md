@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 77a9ade2-cdc0-4ae9-a02d-6e29d7c2ada0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 06e0c90fef7c030a9ab67998a8f74ae8c0430fbe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 68be2c5a44777bb62a594cf2ab612e46a078d0eb
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127859"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767849"
 ---
 # <a name="initialize-a-subscription-with-a-snapshot"></a>스냅샷으로 구독 초기화
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   게시가 생성된 후 일반적으로 초기 스냅샷이 생성되어 스냅샷 폴더로 복사됩니다. 이 작업은 새 게시 마법사에서 만든 병합 게시에 대해 기본적으로 수행됩니다. 스냅샷은 그런 다음 구독의 초기 동기화 중 배포 에이전트(트랜잭션 및 스냅샷 게시의 경우) 또는 병합 에이전트(병합 게시의 경우)에 의해 구독자에 적용됩니다. 스냅샷 프로세스는 게시 유형에 따라 달라집니다.  
   
 -   스냅샷이 스냅샷 게시, 트랜잭션 게시 또는 매개 변수가 있는 필터를 사용하지 않는 병합 게시용인 경우 스냅샷에는 제약 조건, 확장 속성, 인덱스, 트리거 및 복제에 필요한 시스템 테이블뿐만 아니라 스키마 및 데이터가 bcp(대량 복사 프로그램) 파일로 포함됩니다. 스냅샷을 만들고 적용하는 방법은 [스냅샷 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)을 참조하세요.  
