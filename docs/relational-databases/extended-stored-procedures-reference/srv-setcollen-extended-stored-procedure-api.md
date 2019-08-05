@@ -26,7 +26,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68119636"
 ---
-# <a name="srvsetcollen-extended-stored-procedure-api"></a>srv_setcollen(확장 저장 프로시저 API)
+# <a name="srv_setcollen-extended-stored-procedure-api"></a>srv_setcollen(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
