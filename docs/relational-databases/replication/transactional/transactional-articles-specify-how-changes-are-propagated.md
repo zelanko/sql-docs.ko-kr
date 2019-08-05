@@ -12,15 +12,16 @@ helpviewer_keywords:
 ms.assetid: a10c5001-22cc-4667-8f0b-3d0818dca2e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5a53c0ac886185e2d6723a5a01c055c1c828fe51
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: c7f499c813f31717e5932cf0b78b4699b72b2a85
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121263"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769338"
 ---
 # <a name="transactional-articles---specify-how-changes-are-propagated"></a>트랜잭션 아티클 - 변경 내용을 전파하는 방법 지정
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   트랜잭션 복제를 사용하여 데이터 변경 내용이 게시자에서 구독자로 전파되는 방법을 지정할 수 있습니다. 다음 4가지 중 하나를 사용하여 게시된 각 테이블에 대해 INSERT, UPDATE 또는 DELETE 등의 각 작업이 구독자로 전파되는 방법을 지정할 수 있습니다.  
   
 -   트랜잭션 복제가 저장 프로시저를 스크립팅한 후 저장 프로시저를 호출하여 변경 내용을 구독자로 전파하도록 지정합니다(기본값).  
@@ -44,7 +45,7 @@ ms.locfileid: "68121263"
   
 -   **sp_MSdel_\<** *tablename* **>** 은 삭제를 처리합니다.  
   
- 프로시저에서 사용하는 **\<**_tablename_**>** 은 아티클을 게시에 추가하는 방법과 구독 데이터베이스에 소유자는 다르지만 이름이 같은 테이블이 포함되어 있는지 여부에 따라 다릅니다.  
+ 프로시저에서 사용하는 **\<** _tablename_ **>** 은 아티클을 게시에 추가하는 방법과 구독 데이터베이스에 소유자는 다르지만 이름이 같은 테이블이 포함되어 있는지 여부에 따라 다릅니다.  
   
  이러한 프로시저는 아티클을 게시에 추가할 때 지정하는 사용자 지정 프로시저로 바꿀 수 있습니다. 구독자에서 행이 업데이트될 때 데이터를 감사 테이블에 삽입하는 경우와 같이 애플리케이션에 사용자 지정 논리가 필요할 경우 사용자 지정 프로시저를 사용합니다. 사용자 지정 저장 프로시저 지정 방법은 위에 나열된 항목을 참조하십시오.  
   
@@ -117,7 +118,7 @@ pkc1, pkc2, pkc3,... pkcn
   
 #### <a name="scall-syntax"></a>SCALL 구문  
  UPDATE 저장 프로시저  
- 변경된 열에 대해서만 UPDATE 문을 처리하는 저장 프로시저에 업데이트된 값이 전달된 다음 차례대로 기본 키 열의 원래 값과 변경된 열을 나타내는 비트 마스크(**binary(n)**) 매개 변수가 전달됩니다. 다음 예에서 열 2(c2)는 변경되지 않은 것입니다.  
+ 변경된 열에 대해서만 UPDATE 문을 처리하는 저장 프로시저에 업데이트된 값이 전달된 다음 차례대로 기본 키 열의 원래 값과 변경된 열을 나타내는 비트 마스크(**binary(n)** ) 매개 변수가 전달됩니다. 다음 예에서 열 2(c2)는 변경되지 않은 것입니다.  
   
 ```  
 c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  
@@ -125,7 +126,7 @@ c1, , c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask
   
 #### <a name="mcall-syntax"></a>MCALL 구문  
  UPDATE 저장 프로시저  
- UPDATE 문을 처리하는 저장 프로시저에 아티클에 정의된 모든 열에 대해 업데이트된 값이 전달된 다음 차례대로 기본 키 열의 원래 값과 변경된 열을 나타내는 비트 마스크(**binary(n)**) 매개 변수가 전달됩니다.  
+ UPDATE 문을 처리하는 저장 프로시저에 아티클에 정의된 모든 열에 대해 업데이트된 값이 전달된 다음 차례대로 기본 키 열의 원래 값과 변경된 열을 나타내는 비트 마스크(**binary(n)** ) 매개 변수가 전달됩니다.  
   
 ```  
 c1, c2, c3,... cn, pkc1, pkc2, pkc3,... pkcn, bitmask  

@@ -14,15 +14,16 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: cc7cb345bd79ff38d2ed2512a50e1962a68eeada
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 836a286c5852a9822835977c47d9cd204a3724ce
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111076"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68766896"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>복제 모니터를 사용하여 정보 보기 및 태스크 수행
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 복제 모니터는 정보를 보고 다양한 작업을 수행할 수 있는 여러 가지 탭과 옵션을 제공합니다. 이 아티클에서는 복제 모니터를 사용할 때 보고 수행할 수 있는 여러 가지 사항을 설명합니다. 
 
 

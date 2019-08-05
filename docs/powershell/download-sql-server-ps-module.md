@@ -11,12 +11,12 @@ keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b7c49c25e1594657c3855aca1d50aac0fc47316f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 622d086c110bbf321534371d6b5547cadf9cbfd8
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951719"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697286"
 ---
 # <a name="install-sql-server-powershell-module"></a>SQL Server PowerShell 모듈 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,6 @@ ms.locfileid: "67951719"
 > * **SqlServer**: 이 모듈에는 최신 SQL 기능을 지원하는 새 cmdlet이 포함되어 있습니다. 또한 이 모듈에는 **SQLPS**의 업데이트된 cmdlet 버전도 포함되어 있습니다. 
 
 이전 버전의 **SqlServer** 모듈은 SSMS(SQL Server Management Studio)에 *포함되었습니다*(SSMS 16.x 버전만 해당). SSMS 17.0 이상이 포함된 PowerShell을 사용하려면 [PowerShell 갤러리](https://www.powershellgallery.com/packages/Sqlserver)에서 **SqlServer** 모듈을 설치해야 합니다.
-**SqlServer** 모듈의 현재 버전은 21.1.18080입니다. 이는 Microsoft.SQLServer.SMO의 버전 v150을 기반으로 하며 다음 버전의 SQL Server를 지원합니다. Microsoft.SQLServer.SMO의 버전 v140을 기반으로 하는 모듈의 마지막 버전)은 21.0.17279입니다.
 
 모듈의 시험판 버전은 더 자주 제공될 수 있습니다. 이러한 버전의 모듈을 가져오는 방법에 대해서는 이 페이지 하단의 섹션을 참조하세요.
 

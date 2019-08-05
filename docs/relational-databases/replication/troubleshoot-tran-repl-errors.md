@@ -10,14 +10,17 @@ helpviewer_keywords:
 - replication [SQL Server], tutorials
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 03ffb9e8259e463c261838ffc79cf0b9c5908b39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895537"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769347"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>문제 해결사: SQL Server 트랜잭션 복제를 사용하여 오류 찾기 
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
 복제 오류를 해결하는 것은 트랜잭션 복제 작동 방법에 대한 기본적인 이해 없이는 불편을 느낄 수 있습니다. 게시를 만드는 첫 번째 단계는 스냅샷 에이전트가 스냅샷을 만들어 스냅샷 폴더에 저장하게 하는 것입니다. 다음으로 배포 에이전트가 스냅샷을 구독자에게 적용합니다. 
 
 이 프로세스는 게시를 만들어 *동기화* 상태에 배치합니다. 동기화는 세 단계로 작동합니다.

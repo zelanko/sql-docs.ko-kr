@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: e67d1bab-47b6-441d-ab9c-251a2ca499e1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 03b231b1a1f90703a26268e97401d39e3f685262
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: a42dc8a023e1d44e911907cc96a77017dfc69eaf
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128129"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768499"
 ---
 # <a name="errors-and-events-reference-replication"></a>오류 및 이벤트 참조(복제)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   설명서의 이 섹션에는 복제와 관련된 다양한 오류의 원인 및 해결 방법에 대한 정보가 포함되어 있습니다.  
   
 |Error|메시지|  

@@ -13,16 +13,28 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 096c11c018294cbc92b2be13801d6cd953548fff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9aba2495e5f4661c7c042125608f34d577cddfe3
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264007"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702816"
 ---
 # <a name="list-of-bugs-fixed"></a>수정 된 버그 목록
 
 이 페이지에는 ODBC Driver 17 for에서 시작 하 여 [!INCLUDE[msCoName](../../includes/msconame_md.md)] 각 릴리스에서 수정 된 버그 목록이 포함 되어 있습니다.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4의 버그 수정[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- MARS (Multiple Active Results Sets)를 사용 하는 경우 간헐적인 중단에 대 한 수정
+- 비동기 알림을 사용 하는 경우 연결 복원 력 수정 중지
+- 다중 스레드 연결 시도에 대 한 진단 레코드를 검색할 때 충돌 해결
+- SQL_USER_NAME 및 SQL_DATA_SOURCE_READ_ONLY를 사용 하 여 SQLGetInfo ()를 호출한 후 다시 연결할 때 ' 암호화가 지원 되지 않음 ' 수정
+- Azure Active Directory 대화형 인증을 수행 하는 동안 COM 초기화 오류 수정
+- 멀티 바이트 UTF8 데이터의 SQLGetData () 수정
+- SQLGetData ()를 사용 하 여 sql_variant 열의 길이 검색 수정
+- Bcp를 사용 하 여 7992 바이트를 초과 하는 sql_variant 열 가져오기 수정
+- 좁은 문자 데이터의 서버에 올바른 인코딩 전송 수정
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.3의 버그 수정[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

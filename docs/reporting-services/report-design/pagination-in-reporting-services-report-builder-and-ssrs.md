@@ -1,6 +1,6 @@
 ---
 title: Reporting Services의 페이지 매김(보고서 작성기 및 SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 07/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 93ba4ad975c940979cd1e5604de51e92f2c441cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 507aeab666f1849b9216b22e90dfee3d21f92694
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65582208"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632032"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services의 페이지 매김(보고서 작성기 및 SSRS)
   페이지 매김이란 보고서 내의 페이지 수와 이러한 페이지에 보고서 항목이 정렬되는 방식을 의미합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에서의 페이지 매김은 보고서를 보거나 배달하는 데 사용하는 렌더링 확장 프로그램에 따라 다릅니다. 보고서 서버에서 보고서를 실행하는 경우 보고서에는 HTML 렌더러가 사용됩니다. HTML은 페이지 매김과 관련하여 일련의 특별한 규칙을 따릅니다. 예를 들어 동일한 보고서를 PDF로 내보내면 PDF 렌더러가 사용되고 다른 규칙 집합이 적용되므로 보고서의 페이지가 다른 방식으로 매겨집니다. 보고서를 배달하는 데 사용할 렌더러에 최적화되고 사용자가 쉽게 읽을 수 있는 보고서를 성공적으로 디자인하려면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 페이지 매김을 제어하는 데 사용되는 규칙을 이해할 필요가 있습니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "65582208"
   
  페이지 크기는 기본적으로 8.5 x 11인치이지만 **보고서 속성** 창, **페이지 설정** 대화 상자를 사용하거나 **속성** 창에서 PageHeight 및 PageWidth 속성을 변경하여 이 크기를 변경할 수 있습니다. 페이지 크기는 보고서 본문의 내용을 수용하는 데 필요한 정도로 확대 또는 축소되지 않습니다. 보고서를 한 페이지에 표시하려면 보고서 본문의 모든 내용이 물리적 페이지 크기에 맞아야 합니다. 보고서 본문 내용이 물리적 페이지 크기에 맞지 않을 경우 하드 페이지 나누기 형식을 사용하려면 보고서에 페이지가 추가로 필요합니다. 보고서 본문이 너무 커서 물리적 페이지의 오른쪽 가장자리를 벗어나면 가로 방향으로 페이지 나누기가 삽입됩니다. 보고서 본문이 너무 커서 물리적 페이지의 아래쪽 가장자리를 벗어나면 세로 방향으로 페이지 나누기가 삽입됩니다.  
   
- 보고서에 정의된 물리적 페이지 크기를 다시 정의하려면 보고서를 내보내는 데 사용하려는 특정 렌더러의 디바이스 정보 설정을 사용하여 물리적 페이지 크기를 지정합니다. 자세한 내용은 [Reporting Services 디바이스 정보 설정(Reporting Services Device Information Settings)](https://go.microsoft.com/fwlink/?LinkId=102515)을 참조하십시오.  
+ 보고서에 정의된 물리적 페이지 크기를 다시 정의하려면 보고서를 내보내는 데 사용하려는 특정 렌더러의 디바이스 정보 설정을 사용하여 물리적 페이지 크기를 지정합니다. 자세한 내용은 [Reporting Services 디바이스 정보 설정(Reporting Services Device Information Settings)](../device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하십시오.  
   
 ### <a name="margins"></a>여백  
  여백은 물리적 페이지 치수의 가장자리에서 시작하여 지정된 여백 설정만큼 안쪽으로 들어간 지점까지의 공간을 차지합니다. 보고서 항목이 여백 영역까지 확장된 경우에는 여백 영역으로 넘어온 부분이 잘리고 그 중첩 영역이 렌더링되지 않습니다. 페이지의 가로 또는 세로 너비가 0이 되도록 여백 크기를 지정하면 오히려 여백 설정이 0으로 기본 지정됩니다. 여백을 지정하려면 **보고서 속성** 창, **페이지 설정** 대화 상자를 사용하거나 **속성** 창에서 TopMargin, BottomMargin, LeftMargin 및 RightMargin 속성을 변경합니다. 보고서에 정의된 여백 크기를 다시 정의하려면 보고서를 내보내는 데 사용하려는 특정 렌더러의 디바이스 정보 설정을 사용하여 여백 크기를 지정합니다.  

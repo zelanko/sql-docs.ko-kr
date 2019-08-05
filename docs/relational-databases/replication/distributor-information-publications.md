@@ -16,15 +16,16 @@ f1_keywords:
 ms.assetid: 1f499277-7f12-42ba-8cf4-52b683434944
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 90459364211bef6714ba3af63cdc4669e0190049
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 043a13a84eebe9fc1c2cac96628ce6303653e8ac
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128296"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768588"
 ---
 # <a name="distributor-information-publications"></a>배포자 정보, 게시
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **게시** 탭은 왼쪽 창에서 선택한 배포자에서의 모든 게시에 대한 요약 정보를 제공합니다.  
   
 배포자에서 지원하는 게시에 대해 표시되는 정보에는 게시자의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 있는 열이 포함됩니다. 그 밖에 표시되는 게시 정보는 복제 모니터의 게시자 뷰에서 게시를 볼 때 제공되는 게시 정보와 같습니다. **게시** 탭의 열에 대한 자세한 내용은 [Publisher Information, Publications](../../relational-databases/replication/publisher-information-publications.md)를 참조하십시오.  

@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 52787c5e-c9ef-440e-a000-0787111b7dbb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: efaff5ca7858048413440c9cfe774397bdc9069f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: c9a5e8924139cf01a75bf48407c769a839a77f5e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128327"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770649"
 ---
 # <a name="distributor-password"></a>배포자 암호
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   이 마법사의 **게시자** 페이지에서 하나 이상의 게시자가 이 서버를 원격 배포자로 설정한 경우 복제가 **distributor_admin** 로그인을 사용하여 게시자와 원격 배포자 간 연결을 만들 때 사용할 암호를 지정해야 합니다. 새 게시 마법사 또는 배포 구성 마법사의 **관리 암호** 페이지에서 이 원격 배포자를 사용하는 각 게시자에 대해 동일한 암호를 입력해야 합니다. 배포자 보안에 자세한 내용은 [배포자 보안 설정](../../relational-databases/replication/security/secure-the-distributor.md)을 참조하세요.  
   
 ## <a name="options"></a>옵션  

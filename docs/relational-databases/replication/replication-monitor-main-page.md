@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 65ea76db-d809-439d-be64-08b6965aaea1
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 923841cc1dd7e0f2be7366b4dbc5a41cf874ac48
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7cc6c6ec614acb33938433f081dfcafc2cc5fb25
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005453"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769671"
 ---
 # <a name="replication-monitor-main-page"></a>복제 모니터, 주 페이지
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   복제 모니터를 사용하여 복제 토폴로지상에서 게시 및 구독의 상태 및 성능을 추적할 수 있습니다. 다음 항목에서는 보다 자세한 정보를 제공합니다.  
   
 -   복제 모니터의 개요는 [복제 모니터링](../../relational-databases/replication/monitor/monitoring-replication.md)을 참조하세요.  

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fa71d22-ce5a-4aae-ba05-4d755842aeac
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ae37ea5fd27ae6309eaa5cf879b562e254c1786
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1837e3b57548ec0d4324a408f8f43201ccc3ca6b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063067"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768166"
 ---
 # <a name="define-filters"></a>필터 정의
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68063067"
   
 ## <a name="options"></a>옵션  
  **같음**  
- **작거나 같음**등의 필터에 대한 연산자를 선택합니다.  
+ **작거나 같음**등의 필터에 대한 연산자를 선택합니다.
   
  **ReplTest1**  
  필터 값을 입력합니다. 대부분의 연산자는 첫 번째 **값** 열에만 값을 입력하면 되지만 **사이** 및 **사이에 있지 않음** 연산자는 두 **값** 열에 값을 모두 입력해야 합니다.  

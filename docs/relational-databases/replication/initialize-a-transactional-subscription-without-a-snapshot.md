@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe907a62279c819c227772d70008ee96d172e229
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: aeee5d947a2af0f58030ce6ba94091df10d56c49
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127883"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767773"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>스냅샷 없이 트랜잭션 구독 초기화
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   기본적으로 트랜잭션 게시에 대한 구독은 스냅샷 에이전트가 생성하고 배포 에이전트가 적용하는 스냅샷으로 초기화됩니다. 큰 초기 데이터 세트를 다루는 시나리오와 같은 일부 시나리오에서는 다른 방법을 사용하여 구독을 초기화하는 것이 좋습니다. 구독자를 초기화하는 다른 방법은 다음과 같습니다.  
   
 -   백업을 지정하고 이 백업을 구독자에서 복원하면 배포 에이전트가 필요한 복제 메타데이터와 시스템 프로시저를 복사합니다. 게시를 백업으로 초기화할 수 있도록 설정한 다음 생성된 백업 중 어떤 최근 백업이든 사용할 수 있으므로 백업으로 초기화는 방법은 데이터를 구독자에 배달하는 가장 빠르고도 편리한 방법입니다.  

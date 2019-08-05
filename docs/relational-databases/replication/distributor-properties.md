@@ -14,15 +14,16 @@ f1_keywords:
 ms.assetid: f643c7c3-f238-4835-b81e-2c2b3b53b23f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3e542e49811ed7f57a9b60dbf1f0428f69706bdb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7a14ded4a0d86973b6e267d35b505aa21e5d8629
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128306"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768580"
 ---
 # <a name="sql-server-replication-distributor-properties-dialog-box"></a>SQL Server 복제 배포자 속성 대화 상자 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 이 페이지에서는 배포자 속성 대화 상자 내에 있는 페이지를 설명합니다. 
 
