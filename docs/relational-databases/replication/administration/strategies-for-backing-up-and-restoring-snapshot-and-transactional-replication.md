@@ -20,24 +20,25 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: ddfc9d657334e6aa971ff57b2febdff175ce3911
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948688"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768727"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>스냅샷 및 트랜잭션 복제의 백업 및 복원을 위한 전략
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   스냅샷 및 트랜잭션 복제에 대한 백업 및 복원 전략을 설계할 때 다음 세 가지 영역을 고려해야 합니다.  
   
--   백업할 데이터베이스  
-  
--   트랜잭션 복제에 대한 백업 설정  
-  
+-   백업할 데이터베이스
+-   트랜잭션 복제에 대한 백업 설정
 -   데이터베이스를 복원하는 데 필요한 단계. 이 단계는 선택한 복제 유형 및 옵션에 따라 달라집니다.  
   
  이 항목에서는 다음 3개의 섹션에서 각 영역을 설명합니다. Oracle 게시에 대한 백업 및 복원에 대한 자세한 내용은 [Oracle 게시자 백업 및 복원](../../../relational-databases/replication/non-sql/backup-and-restore-for-oracle-publishers.md)을 참조하세요.  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../../includes/azure-sql-db-replication-supportability-note.md)]
   
 ## <a name="backing-up-databases"></a>데이터베이스 백업  
  스냅샷 및 트랜잭션 복제의 경우 다음 데이터베이스를 정기적으로 백업해야 합니다.  
