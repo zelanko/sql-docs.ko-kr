@@ -35,16 +35,28 @@
           href: ../advanced-analytics/install/sql-ml-cab-downloads.md
     - name: 명령 프롬프트 설정
       href: ../advanced-analytics/install/sql-ml-component-commandline-install.md
-    - name: R 및 Python 업그레이드
+    - name: Python 및 R 업그레이드
       href: ../advanced-analytics/install/upgrade-r-and-python.md
-    - name: R 클라이언트 설정
-      href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: Python 클라이언트 설정
       href: ../advanced-analytics/python/setup-python-client-tools-sql.md
+    - name: R 클라이언트 설정
+      href: ../advanced-analytics/r/set-up-a-data-science-client.md
     - name: Azure VM에 설치
       href: ../advanced-analytics/install/sql-machine-learning-azure-virtual-machine.md
 - name: 빠른 시작
   items:
+    - name: Python
+      items:
+        - name: SQL Server에 Python이 있는지 확인
+          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
+        - name: Python 및 SQL의 Hello World
+          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
+        - name: 입력 및 출력 처리
+          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
+        - name: Python 데이터 구조 및 SQL
+          href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
+        - name: 첫 번째 모델 학습 및 사용
+          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
     - name: R
       items:
         - name: SQL Server에 R이 있는지 확인
@@ -61,18 +73,6 @@
           href: ../advanced-analytics/tutorials/quickstart-r-create-predictive-model.md
         - name: 모델에서 예측
           href: ../advanced-analytics/tutorials/quickstart-r-predict-from-model.md
-    - name: Python
-      items:
-        - name: SQL Server에 Python이 있는지 확인
-          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-        - name: Python 및 SQL의 Hello World
-          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-        - name: 입력 및 출력 처리
-          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-        - name: Python 데이터 구조 및 SQL
-          href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: 첫 번째 모델 학습 및 사용
-          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
 - name: 자습서
   items:
     - name: 자습서 개요
@@ -85,6 +85,24 @@
           href: ../advanced-analytics/tutorials/demo-data-iris-in-sql.md
         - name: NYC 택시 데이터 집합
           href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
+    - name: Python
+      items:
+        - name: Python 자습서
+          href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
+        - name: revoscalepy를 사용하여 Python 모델 만들기
+          href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
+        - name: SQL 개발자를 위한 Python
+          items:
+            - name: 1 - 소개
+              href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md
+            - name: 2 - 데이터 살펴보기
+              href: ../advanced-analytics/tutorials/sqldev-py3-explore-and-visualize-the-data.md
+            - name: 3 - 기능 엔지니어링
+              href: ../advanced-analytics/tutorials/sqldev-py4-create-data-features-using-t-sql.md
+            - name: 4 - 학습 및 배포
+              href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+            - name: 5 - 예측
+              href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
     - name: R
       items:
         - name: R 자습서
@@ -149,24 +167,6 @@
               href: ../advanced-analytics/tutorials/deepdive-move-data-between-sql-server-and-xdf-file.md
             - name: 15. rxExec를 사용하여 사용자 지정 R 보내기
               href: ../advanced-analytics/tutorials/r-tutorial-custom-r-functions.md
-    - name: Python
-      items:
-        - name: Python 자습서
-          href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
-        - name: revoscalepy를 사용하여 Python 모델 만들기
-          href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
-        - name: SQL 개발자를 위한 Python
-          items:
-            - name: 1 - 소개
-              href: ../advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md
-            - name: 2 - 데이터 살펴보기
-              href: ../advanced-analytics/tutorials/sqldev-py3-explore-and-visualize-the-data.md
-            - name: 3 - 기능 엔지니어링
-              href: ../advanced-analytics/tutorials/sqldev-py4-create-data-features-using-t-sql.md
-            - name: 4 - 학습 및 배포
-              href: ../advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
-            - name: 5 - 예측
-              href: ../advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md
 - name: 샘플 >
   href: 'https://github.com/Microsoft/sql-server-samples'
 - name: 솔루션
@@ -175,10 +175,10 @@
   items:
     - name: 확장성 프레임워크
       href: ../advanced-analytics/concepts/extensibility-framework.md
-    - name: R 확장
-      href: ../advanced-analytics/concepts/extension-r.md
     - name: Python 확장
       href: ../advanced-analytics/concepts/extension-python.md
+    - name: R 확장
+      href: ../advanced-analytics/concepts/extension-r.md
     - name: 보안
       href: ../advanced-analytics/concepts/security.md
 - name: 방법 가이드
@@ -203,10 +203,10 @@
               href: ../advanced-analytics/r/creating-multiple-models-using-rxexecby.md
     - name: 데이터 형식 변환
       items:
-        - name: R to SQL
-          href: ../advanced-analytics/r/r-libraries-and-data-types.md
         - name: Python to SQL
           href: ../advanced-analytics/python/python-libraries-and-data-types.md
+        - name: R to SQL
+          href: ../advanced-analytics/r/r-libraries-and-data-types.md
     - name: 배포
       items:
         - name: 저장 프로시저를 사용하여 운영
@@ -305,6 +305,12 @@
               href: ../advanced-analytics/r/using-r-code-profiling-functions.md
 - name: 참조
   items:
+    - name: Python 패키지
+      items:
+        - name: revoscalepy
+          href: ../advanced-analytics/python/ref-py-revoscalepy.md
+        - name: microsoftml
+          href: ../advanced-analytics/python/ref-py-microsoftml.md
     - name: R 패키지
       items:
         - name: RevoScaleR
@@ -315,12 +321,6 @@
           href: ../advanced-analytics/r/ref-r-olapr.md
         - name: sqlrutils
           href: ../advanced-analytics/r/ref-r-sqlrutils.md
-    - name: Python 패키지
-      items:
-        - name: revoscalepy
-          href: ../advanced-analytics/python/ref-py-revoscalepy.md
-        - name: microsoftml
-          href: ../advanced-analytics/python/ref-py-microsoftml.md
 - name: 리소스
   items:
     - name: 릴리스 정보 >>
