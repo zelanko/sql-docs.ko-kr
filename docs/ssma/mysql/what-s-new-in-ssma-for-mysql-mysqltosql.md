@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 54edb2b971cbc83d56498065efa72a4e84257147
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: d02b002dd5f974fa7fd989026172b70a049d0e5f
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632048"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811487"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>MySQL용 SSMA의 새로운 기능(MySQLToSql)
 
@@ -34,7 +34,7 @@ MySQL 용 SSMA의 v2.0 릴리스는 품질 및 변환 메트릭을 향상 시 �
 
 MySQL 용 SSMA의 v 8.2 릴리스는 품질 및 변환 메트릭을 개선 하 고에 대 한 수정 사항을 위해 디자인 된 수정 사항 집합을 사용 하 여 향상 되었습니다.
 
-* 데이터 마이그레이션 후 사용 하지 않도록 설정 된 비클러스터형 인덱스에 문제가 있습니다.
+* 데이터 마이그레이션 후 비활성화 된 비클러스터형 인덱스에 문제가 있습니다.
 * 자동 설치 중에 .NET Framework를 검색 합니다.
 * 새 버전이 다운로드 될 때 발생 하는 일시적인 충돌입니다.
 

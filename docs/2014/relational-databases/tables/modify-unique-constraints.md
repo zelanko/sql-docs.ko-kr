@@ -15,12 +15,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 311862d3612760da88d62f3ab51a5ca16d554b0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8bb3daf170e25abc9b346aeaedb4b835cae2dfdd
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68196772"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809923"
 ---
 # <a name="modify-unique-constraints"></a>UNIQUE 제약 조건 수정
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 UNIQUE 제약 조건을 수정할 수 있습니다.  
@@ -60,7 +60,7 @@ ms.locfileid: "68196772"
     |--------|------------------------|  
     |제약 조건이 연결된 열 변경|1) **(일반)** 아래의 표에서 **열** 을 클릭한 다음, 속성 오른쪽에 있는 줄임표 **(…)** 를 클릭합니다.<br /><br /> 2) **인덱스 열** 대화 상자에서 인덱스에 대해 새 열 또는 정렬 순서 또는 두 가지 옵션을 모두 지정합니다.|  
     |제약 조건 이름 바꾸기|**ID**아래의 표에서 **이름** 상자에 새 이름을 입력합니다. 새 이름은 **선택한 기본/고유 키 또는 인덱스** 목록의 다른 이름과 중복되지 않아야 합니다.|  
-    |클러스터형 옵션 설정|**테이블 디자이너**아래의 표에서 **클러스터형으로 만들기** 를 선택한 다음 클러스터형 인덱스를 만들려면 드롭다운에서 예를 선택하고 비클러스터형 인덱스를 만들려면 아니요를 선택합니다. 클러스터형 인덱스는 테이블마다 하나씩만 만들 수 있습니다. 클러스터형 인덱스가 이미 이 테이블에 있는 경우 원본 인덱스에 대해 이 설정을 먼저 해제해야 합니다.|  
+    |클러스터형 옵션 설정|**테이블 디자이너**아래의 표에서 **클러스터형으로 만들기** 를 선택 하 고 드롭다운에서 예를 선택 하 여 클러스터형 인덱스를 만들고 아니요를 선택 하 여 비클러스터형 인덱스를 만듭니다. 클러스터형 인덱스는 테이블마다 하나씩만 만들 수 있습니다. 클러스터형 인덱스가 이미 이 테이블에 있는 경우 원본 인덱스에 대해 이 설정을 먼저 해제해야 합니다.|  
     |채우기 비율 정의|**테이블 디자이너**아래의 표에서 **파일 사양** 범주를 확장하고 0에서 100 사이의 정수를 **채우기 비율** 상자에 입력합니다.|  
   
 5.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  

@@ -10,12 +10,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 0ee585f9773858848f213b3eeef6e995aedfb53f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63250878"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811233"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>메모리 액세스에 최적화된 테이블 구독자로 복제
   피어 투 피어 트랜잭션 복제를 제외하고 트랜잭션 복제 구독자 역할을 수행하는 테이블은 메모리 최적화 테이블로 구성할 수 있습니다. 다른 복제 구성은 메모리 최적화 테이블과 호환되지 않습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "63250878"
     GO  
     ```  
   
- **스냅숏을 생성 하 고 스키마 조정**  
+ **스냅숏 생성 및 스키마 조정**  
   
 1.  스냅샷 작업을 만들고 스냅샷을 생성합니다.  
   
@@ -59,9 +59,9 @@ ms.locfileid: "63250878"
     EXEC sp_startpublication_snapshot @publication = N'Publication1';  
     ```  
   
-2.  스냅샷 폴더로 이동합니다. 기본 위치는 "C:\Program Files\Microsoft SQL Server\MSSQL12. \<인스턴스 > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\"입니다.  
+2.  스냅샷 폴더로 이동합니다. 기본 위치는 "C:\Program Files\Microsoft SQL Server\MSSQL12. 인스턴스 > \MSSQL\repldata\unc\XXX\YYYYMMDDHHMMSS\\". \<  
   
-3.  찾을 **합니다. SCH** 테이블에 대 한 파일 및 Management Studio에서 엽니다. 아래 설명에 따라 테이블 스키마를 변경하고 저장 프로시저를 업데이트합니다.  
+3.  을 찾습니다 **.** 테이블에 대 한 sch-m 파일을 만들고 Management Studio에서 엽니다. 아래 설명에 따라 테이블 스키마를 변경하고 저장 프로시저를 업데이트합니다.  
   
      IDX 파일에 정의된 인덱스를 평가합니다. `CREATE TABLE`을 수정하여 필수 인덱스, 제약 조건, 기본 키 및 메모리 최적화 구문을 지정합니다. 메모리 최적화 테이블에서 인덱스 열은 NOT NULL이어야 하며 문지 형식의 인덱스 열은 Unicode여야 하고 BIN2 데이터 정렬을 사용해야 합니다. 아래 예제를 참조하십시오.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "63250878"
     go  
     ```  
   
-5.  사용 하 여 구독자 데이터베이스 만들기를 **스냅숏 격리로 승격** 옵션 및 비유니코드 문자 데이터 형식을 사용 하는 경우 기본 데이터 정렬을 Latin1_General_CS_AS_KS_WS로 설정 합니다.  
+5.  **Snapshot 격리로 승격** 옵션을 사용 하 여 구독자 데이터베이스를 만들고 비유니코드 문자 데이터 형식을 사용 하는 경우 기본 데이터 정렬을 Latin1_General_CS_AS_KS_WS로 설정 합니다.  
   
     ```  
     CREATE DATABASE [Sub]   
@@ -241,7 +241,7 @@ ms.locfileid: "63250878"
     GO  
     ```  
   
-6.  구독자의 데이터베이스에 스키마를 적용 하 고 나중에 사용할 스키마를 저장 합니다.  
+6.  구독자의 데이터베이스에 스키마를 적용 하 고 나중에 사용할 수 있도록 스키마를 저장 합니다.  
   
 7.  구독자에 대해 게시자(원본) 데이터를 로드합니다. 구독을 추가할 때까지는 게시자에서 데이터가 변경되지 않아야 합니다.  아래 표시된 것처럼 BCP를 사용할 수 있습니다.  
   
@@ -263,7 +263,7 @@ ms.locfileid: "63250878"
     GO  
     ```  
   
- **비동기 구독 추가**  
+ **동기화 구독 없음 추가**  
   
  비동기 구독을 추가합니다.  
   
@@ -293,19 +293,19 @@ GO
   
  구독자에서 트랜잭션 복제와 관련된 테이블은 메모리 최적화 테이블로 구성할 수 있지만 구독자 테이블은 메모리 최적화 테이블의 요구 사항을 충족해야 합니다. 여기에는 다음과 같은 제한 사항이 필요합니다.  
   
--   트랜잭션 복제 구독자에서 메모리 최적화 테이블을 만들려면 메모리 최적화 테이블을 만드는 데 사용된 스냅샷 스키마 파일을 수동으로 수정해야 합니다. 자세한 내용은 [스키마 파일 수정](#Schema)합니다.  
+-   트랜잭션 복제 구독자에서 메모리 최적화 테이블을 만들려면 메모리 최적화 테이블을 만드는 데 사용된 스냅샷 스키마 파일을 수동으로 수정해야 합니다. 자세한 내용은 [스키마 파일 수정](#Schema)을 참조 하세요.  
   
 -   구독자에서 메모리 최적화 테이블로 복제된 테이블은 메모리 최적화 테이블의 행당 8060바이트로 제한됩니다.  
   
--   구독자에서 메모리 최적화 테이블로 복제된 테이블은 메모리 최적화 테이블에 허용된 데이터 형식으로 제한됩니다. 자세한 내용은 [Supported Data Types](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md)합니다.  
+-   구독자에서 메모리 최적화 테이블로 복제된 테이블은 메모리 최적화 테이블에 허용된 데이터 형식으로 제한됩니다. 자세한 내용은 [지원 되는 데이터 형식](../in-memory-oltp/supported-data-types-for-in-memory-oltp.md)을 참조 하세요.  
   
--   구독자에서 메모리 최적화 테이블에 복제하는 테이블의 기본 키는 업데이트하는 데 제한 사항이 있습니다. 자세한 내용은 [기본 키에 변경 내용 복제](#PrimaryKey)합니다.  
+-   구독자에서 메모리 최적화 테이블에 복제하는 테이블의 기본 키는 업데이트하는 데 제한 사항이 있습니다. 자세한 내용은 [기본 키로 변경 내용 복제](#PrimaryKey)를 참조 하세요.  
   
 -   외래 키, 고유 제약 조건, 트리거, 스키마 수정, ROWGUIDCOL, 계산 열, 데이터 압축, 별칭 데이터 형식, 버전 관리 및 잠금은 메모리 최적화 테이블에서 지원되지 않습니다. 자세한 내용은 [메모리 내 OLTP에서 지원되지 않는 T-SQL 구문](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) 을 참조하십시오.  
   
 ##  <a name="Schema"></a> 스키마 파일 수정  
   
--   클러스터형 인덱스는 지원되지 않습니다. 클러스터형 인덱스를 비클러스터형 인덱스로 변경합니다.  
+-   클러스터형 인덱스는 지원되지 않습니다. 클러스터형 인덱스를 비클러스터형 인덱스로 변경 합니다.  
   
 -   인덱스의 키에서 모든 열은 `NOT NULL`로 지정되어야 합니다.  
   
@@ -313,7 +313,7 @@ GO
   
 -   ANSI_PADDING은 ON이어야 합니다.  
   
-##  <a name="PrimaryKey"></a> 기본 키에 변경 내용 복제  
+##  <a name="PrimaryKey"></a>기본 키에 대 한 변경 내용 복제  
  메모리 최적화 테이블의 기본 키는 업데이트할 수 없습니다. 구독자에서 기본 키 업데이트를 복제하려면 삭제 및 삽입 쌍으로 업데이트를 제공하도록 업데이트 저장 프로시저를 수정합니다.  
   
 ## <a name="see-also"></a>관련 항목  

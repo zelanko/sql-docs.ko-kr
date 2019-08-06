@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 27e1e0ee06f343c63240c1155601b2eab5e8c6cc
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: da0a047b0ae20fbc191a61e1c9eb96660eac035e
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631999"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811452"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Oracle 용 SSMA의 새로운 기능 (OracleToSQL)
 이 문서에서는 각 릴리스의 Oracle 변경 내용에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.
@@ -43,7 +43,7 @@ Oracle 용 SSMA의 v 8.2 릴리스는 다음과 같이 향상 되었습니다.
 
 또한이 버전에는 품질 및 변환 메트릭을 개선 하기 위해 설계 된 수정 내용 집합 뿐만 아니라에 대 한 수정 프로그램도 포함 됩니다.
 
-* 데이터 마이그레이션 후 사용 하지 않도록 설정 된 비클러스터형 인덱스에 문제가 있습니다.
+* 데이터 마이그레이션 후 비활성화 된 비클러스터형 인덱스에 문제가 있습니다.
 * 자동 설치 중에 .NET Framework를 검색 합니다.
 * 새 버전이 다운로드 될 때 발생 하는 일시적인 충돌입니다.
 

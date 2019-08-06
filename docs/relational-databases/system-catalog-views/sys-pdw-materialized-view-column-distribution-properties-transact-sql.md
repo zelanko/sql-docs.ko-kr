@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_materialized_view_column_distribution_properties (TRANSACT-SQL) | Microsoft Docs
+title: _materialized_view_column_distribution_properties (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -9,27 +9,27 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 19acc92475716b219485b9366e6facbc89268909
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8713f0728f7afb8e86b693fe5f1e50652bbddf43
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059449"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811432"
 ---
-# <a name="syspdwmaterializedviewcolumndistributionproperties-transact-sql-preview"></a>sys.pdw_materialized_view_column_distribution_properties (TRANSACT-SQL) (미리 보기)
+# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql-preview"></a>_materialized_view_column_distribution_properties (Transact-sql) (미리 보기)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-구체화 된 뷰의 열에 대 한 배포 정보를 표시합니다.  
+구체화 된 뷰에서 열에 대 한 분포 정보를 표시 합니다.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|열이 속한 개체의 ID입니다. |  
 |column_id|**int**|열의 ID입니다.|  
-|distribution_ordinal|**tinyint**|0 = 배포 열이 아닌 합니다.</br> 1 = SQL Data Warehouse는이 열을 사용 하 여 구체화 된 뷰를 배포 합니다.|
+|distribution_ordinal|**tinyint**|0 = 배포 열이 아닙니다.</br> 1 = SQL Data Warehouse이 열을 사용 하 여 구체화 된 뷰를 배포 합니다.|
  
 ## <a name="permissions"></a>사용 권한 
 

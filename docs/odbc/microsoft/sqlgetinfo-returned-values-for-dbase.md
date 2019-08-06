@@ -1,5 +1,5 @@
 ---
-title: DBASE에 대 한 SQLGetInfo 반환 값 | Microsoft Docs
+title: DBASE에 대해 SQLGetInfo 반환 값 | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -16,25 +16,25 @@ helpviewer_keywords:
 ms.assetid: af64753c-c758-4b68-954b-2c84e3bbd93f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dd6b25ebc06df82fa9974b3274ae527e6f6fa347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 247928cfbc7e051853bba0c7f49644a1a6203614
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003155"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794678"
 ---
 # <a name="sqlgetinfo-returned-values-for-dbase"></a>dBASE에 대한 SQLGetInfo 반환 값
-다음 표에 C 언어 #에 대 한 defines 합니다 *fInfoType* 인수 및 반환 하는 해당 값 **SQLGetInfo**합니다. 나열 된 C 언어를 전달 하 여이 정보를 검색할 수 있습니다 #defines **SQLGetInfo** 에 *fInfoType* 인수입니다. 반환 하는 값에 대 한 자세한 내용은 **SQLGetInfo**를 참조 합니다 *ODBC 프로그래머 참조*합니다.  
+다음 표에서는 *Finfotype* 인수의 C 언어 #defines와 **SQLGetInfo**에서 반환 된 해당 값을 보여 줍니다. 이 정보는 나열 된 C 언어 #defines을 *Finfotype* 인수의 **SQLGetInfo** 에 전달 하 여 검색할 수 있습니다. **SQLGetInfo**에서 반환 하는 값에 대 한 자세한 내용은 *ODBC 프로그래머 참조*를 참조 하세요.  
   
 > [!NOTE]  
->  여기서 **SQLGetInfo** 세로 막대 32 비트 비트 마스크를 반환 합니다 (&#124;)는 비트 OR를 나타냅니다.  
+>  **SQLGetInfo** 에서 32 비트 비트 마스크를 반환 하는 경우 세로 막대&#124;()는 비트 or를 나타냅니다.  
   
 |InfoType|반환 값|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"N"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_ENVIRONMENTS|0|  
-|SQL_AGGREGATE_FUNCTIONS|모두 설정|  
+|SQL_AGGREGATE_FUNCTIONS|모든 집합|  
 |SQL_ALTER_DOMAIN|0|  
 |SQL_ALTER_TABLE|다중 값|  
 |SQL_ASYNC_MODE|0|  
@@ -44,7 +44,7 @@ ms.locfileid: "68003155"
 |SQL_CATALOG_LOCATION|SQL_QL_START|  
 |SQL_CATALOG_NAME|"Y"|  
 |SQL_CATALOG_NAME_SEPARATOR|"\\"|  
-|SQL_CATALOG_TERM|"Directory"|  
+|SQL_CATALOG_TERM|디렉터리나|  
 |SQL_CATALOG_USAGE|다중 값|  
 |SQL_COLLATION_SEQ|""|  
 |SQL_COLUMN_ALIAS|"Y"|  
@@ -81,8 +81,8 @@ ms.locfileid: "68003155"
 |SQL_CURSOR_COMMIT_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_ROLLBACK_BEHAVIOR|SQL_CB_CLOSE|  
 |SQL_CURSOR_SENSITIVITY|SQL_UNSPECIFIED|  
-|SQL_DATA_SOURCE_NAME|Odbc.ini의 DSN 또는 "" Odbc.ini DRIVER 키워드가 사용 되는 경우|  
-|SQL_DATA_SOURCE_READ_ONLY|"N" (이에 따라 달라 집니다 데이터 원본입니다.)|  
+|SQL_DATA_SOURCE_NAME|Odbc .ini에서 DSN 또는 "" if DRIVER 키워드를 사용 하는 경우.|  
+|SQL_DATA_SOURCE_READ_ONLY|"N" (데이터 소스에 따라 달라 짐)|  
 |SQL_DATABASE_NAME|현재 데이터베이스 디렉터리|  
 |SQL_DATETIME_LITERALS|0|  
 |SQL_DBMS_NAME|"DBASE"|  
@@ -96,7 +96,7 @@ ms.locfileid: "68003155"
 |SQL_DRIVER_HSTMT|드라이버 관리자에 의해 처리 됩니다.|  
 |SQL_DRIVER_NAME|"OdbcJt32.dll"|  
 |SQL_DRIVER_ODBC_VER|"3.51.0000"|  
-|SQL_DRIVER_VER|"4.00.*nnnn*" (*nnnn* 빌드 날짜를 지정)|  
+|SQL_DRIVER_VER|"4.00-*nnnn*" (*nnnn* 은 빌드 날짜를 지정)|  
 |SQL_DROP_ASSERTION|0|  
 |SQL_DROP_CHARACTER_SET|0|  
 |SQL_DROP_COLLATION|0|  
@@ -110,8 +110,8 @@ ms.locfileid: "68003155"
 |SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1|SQL_CA1_NEXT|  
 |SQL_GETDATA_EXTENSIONS|다중 값|  
 |SQL_GROUP_BY|SQL_GB_GROUP_BY_CONTAINS_SELECT|  
-|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (한정자 반환 됨 대/소문자 혼합된에서 Windows NT 디렉터리를 찾을 수 있도록 합니다.)|  
-|SQL_IDENTIFIER_QUOTE_CHAR|"'" (따옴표 다시)|  
+|SQL_IDENTIFIER_CASE|SQL_IC_UPPER (Windows NT에서 디렉터리를 찾을 수 있도록 한정자가 대/소문자를 구분 하 여 반환 됩니다.)|  
+|SQL_IDENTIFIER_QUOTE_CHAR|"\`" (후방 따옴표)|  
 |SQL_KEYWORDS|다중 값|  
 |SQL_LIKE_ESCAPE_CLAUSE|"N"|  
 |SQL_MAX_BINARY_LITERAL_LEN|255|  
@@ -119,7 +119,7 @@ ms.locfileid: "68003155"
 |SQL_MAX_CHAR_LITERAL_LEN|254|  
 |SQL_MAX_COLUMN_NAME_LEN|10|  
 |SQL_MAX_COLUMNS_IN_GROUP_BY|10|  
-|SQL_MAX_COLUMNS_IN_INDEX|0 (제한 알 수 없거나 적용할 수 없음)|  
+|SQL_MAX_COLUMNS_IN_INDEX|0 (알 수 없음 또는 해당 없음 제한)|  
 |SQL_MAX_COLUMNS_IN_ORDER_BY|10|  
 |SQL_MAX_COLUMNS_IN_SELECT|255|  
 |SQL_MAX_COLUMNS_IN_TABLE|255|  
@@ -156,11 +156,11 @@ ms.locfileid: "68003155"
 |SQL_SCROLL_OPTIONS|다중 값|  
 |SQL_SEARCH_PATTERN_ESCAPE|"\\"|  
 |SQL_SERVER_NAME|"DBASE"|  
-|SQL_SPECIAL_CHARACTERS|"~`@#$%^&*_-+=\\}{"';:?/><,.!'[]&#124;"|  
+|SQL_SPECIAL_CHARACTERS|"~\`\@}{\?" ';:/<,.!\>'#$%^&\*\_-+=\\ \[]&#124;"|  
 |SQL_STRING_FUNCTIONS|다중 값|  
 |SQL_SUBQUERIES|다중 값|  
 |SQL_SYSTEM_FUNCTIONS|0|  
-|SQL_TABLE_TERM|"TABLE"|  
+|SQL_TABLE_TERM|테이블|  
 |SQL_TIMEDATE_ADD_INTERVALS|0|  
 |SQL_TIMEDATE_DIFF_INTERVALS|0|  
 |SQL_TIMEDATE_FUNCTIONS|다중 값|  

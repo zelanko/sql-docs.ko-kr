@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: c57bf8b8-55a6-4b6c-9adb-91b5f4f1ee3c
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 546e04385490e725adfa0bb2f256109da7a0d55d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88b94a0c476921d501bd4f456fa2d7e9077dee36
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094430"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810950"
 ---
 # <a name="custom-index-master-data-services"></a>사용자 지정 인덱스(Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  사용자 지정 인덱스는 엔터티에서 하나의 속성(단일 인덱스) 또는 속성 목록(복합 인덱스)에 대한 비클러스터형 인덱스를 생성합니다. 일반적으로 인덱스는 쿼리 프로세스의 성능을 향상시킵니다. SQL Server 인덱스에 대한 자세한 내용은 [인덱스](../relational-databases/indexes/indexes.md)를 참조하세요.  
+  사용자 지정 인덱스는 엔터티에서 하나의 특성 (단일 인덱스) 또는 특성 목록 (복합 인덱스)에 비클러스터형 인덱스를 만듭니다. 일반적으로 인덱스는 쿼리 프로세스의 성능을 향상시킵니다. SQL Server 인덱스에 대한 자세한 내용은 [인덱스](../relational-databases/indexes/indexes.md)를 참조하세요.  
   
 ## <a name="type-of-indexes"></a>인덱스 유형  
  각 엔터티에 대하여 다음과 같은 여러 사용자 지정 인덱스를 생성할 수 있습니다.  

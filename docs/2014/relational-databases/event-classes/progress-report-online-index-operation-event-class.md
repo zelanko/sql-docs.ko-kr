@@ -14,15 +14,15 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d0efc3d22fcba588c1104d716cbab0f26eff374
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62520411"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811258"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>진행률 보고서: Online Index Operation 이벤트 클래스
-  Progress Report: Online Index Operation 이벤트 클래스는 빌드 프로세스에서 실행 되는 동안 온라인 인덱스 빌드 작업의 진행률을 나타냅니다.  
+  Progress Report: Online Index Operation 이벤트 클래스는 온라인 인덱스 작성 작업을 진행하는 동안 온라인 인덱스 작성 진행률을 나타냅니다.  
   
 ## <a name="progress-report-online-index-operation-event-class-data-columns"></a>진행률 보고서: Online Index Operation 이벤트 클래스 데이터 열  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62520411"
 |EndTime|`datetime`|온라인 인덱스 작업이 완료된 시간입니다.|15|사용자 계정 컨트롤|  
 |EventClass|`int`|이벤트 유형 = 190|27|아니요|  
 |EventSequence|`int`|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니요|  
-|EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 1=시작<br /><br /> 2=단계 1 실행 시작<br /><br /> 3=단계 1 실행 종료<br /><br /> 4=2단계 실행 시작<br /><br /> 5=2단계 실행 종료<br /><br /> 6=삽입된 행 수<br /><br /> 7=완료<br /><br /> 1단계는 기준 개체(클러스터형 인덱스 또는 힙)를 참조하거나 인덱스 작업에 하나의 비클러스터형 인덱스만 포함될 경우 수행됩니다. 2단계는 인덱스 작성 작업에 원래의 다시 작성과 추가 비클러스터형 인덱스가 모두 포함될 경우에 사용됩니다.  예를 들어 개체에 하나의 클러스터형 인덱스와 7개의 비클러스터형 인덱스가 있을 경우 'rebuild all' 명령은 모든 인덱스를 다시 작성합니다. 기준 개체(클러스터형 인덱스)는 1단계에서 다시 작성되며 그런 다음 2단계에서 모든 비클러스터형 인덱스가 다시 작성됩니다.|21|사용자 계정 컨트롤|  
+|EventSubClass|`int`|이벤트 하위 클래스의 유형입니다.<br /><br /> 1=시작<br /><br /> 2=단계 1 실행 시작<br /><br /> 3=단계 1 실행 종료<br /><br /> 4=2단계 실행 시작<br /><br /> 5=2단계 실행 종료<br /><br /> 6=삽입된 행 수<br /><br /> 7=완료<br /><br /> 1 단계는 기준 개체 (클러스터형 인덱스 또는 힙)를 참조 하거나 인덱스 작업에 하나의 비클러스터형 인덱스만 포함 하는 경우입니다. 2 단계는 인덱스 작성 작업에 원래 다시 작성 및 추가 비클러스터형 인덱스가 모두 포함 된 경우에 사용 됩니다.  예를 들어 개체에 클러스터형 인덱스와 여러 비클러스터형 인덱스가 있는 경우 ' rebuild all '은 모든 인덱스를 다시 작성 합니다. 기준 개체 (클러스터형 인덱스)는 1 단계에서 다시 작성 된 다음 모든 비클러스터형 인덱스가 2 단계에서 다시 작성 됩니다.|21|사용자 계정 컨트롤|  
 |GroupID|`int`|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|사용자 계정 컨트롤|  
 |HostName|`nvarchar`|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|사용자 계정 컨트롤|  
 |IndexID|`int`|이벤트에 의해 영향 받는 개체의 인덱스 ID입니다.|24|사용자 계정 컨트롤|  

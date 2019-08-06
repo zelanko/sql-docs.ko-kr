@@ -21,12 +21,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666800"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811076"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server 에이전트 서비스의 계정 선택
   서비스 시작 계정은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에이전트를 실행하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows 계정과 해당 네트워크 사용 권한을 정의합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 지정된 사용자 계정으로 실행됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자에서 다음 옵션 중 하나를 선택하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스의 계정을 선택하십시오.  
@@ -74,22 +74,22 @@ ms.locfileid: "62666800"
 ## <a name="supported-service-account-types"></a>지원되는 서비스 계정 유형  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스에 사용할 수 있는 Windows 계정 유형을 나열합니다.  
   
-|서비스 계정 유형|비클러스터형 서버|클러스터형 서버|도메인 컨트롤러(비클러스터형)|  
+|서비스 계정 유형|비클러스터형 서버|클러스터형 서버|도메인 컨트롤러 (비클러스터형)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 도메인 계정(Windows Administrators 그룹의 멤버)|지원됨|지원됨|지원됨|  
-|Windows 도메인 계정(비관리자)|지원 되는<sup>1</sup>|지원 되는<sup>1</sup>|지원 되는<sup>1</sup>|  
-|네트워크 서비스 계정(NT AUTHORITY\NetworkService)|지원 되는<sup>1, 3, 4</sup>|지원되지 않음|지원되지 않음|  
-|로컬 사용자 계정(비관리자)|지원 되는<sup>1</sup>|지원되지 않음|해당 사항 없음|  
-|로컬 시스템 계정(NT AUTHORITY\System)|지원 되는<sup>2</sup>|지원되지 않음|지원 되는<sup>2</sup>|  
+|Windows 도메인 계정(비관리자)|지원 됨<sup>1</sup>|지원 됨<sup>1</sup>|지원 됨<sup>1</sup>|  
+|네트워크 서비스 계정(NT AUTHORITY\NetworkService)|지원 되<sup>는 1, 3, 4</sup>|지원되지 않음|지원되지 않음|  
+|로컬 사용자 계정(비관리자)|지원 됨<sup>1</sup>|지원되지 않음|해당 사항 없음|  
+|로컬 시스템 계정(NT AUTHORITY\System)|지원 됨<sup>2</sup>|지원되지 않음|지원 됨<sup>2</sup>|  
 |로컬 서비스 계정(NT AUTHORITY\LocalService)|지원되지 않음|지원되지 않음|지원되지 않음|  
   
  <sup>1</sup> 아래의 제한 사항 1을 참조 하세요.  
   
  <sup>2</sup> 아래의 제한 사항 2를 참조 하세요.  
   
- <sup>3</sup> 제한은 아래 3을 참조 하세요.  
+ <sup>3</sup> 아래의 제한 3을 참조 하세요.  
   
- <sup>4</sup> 아래의 제한 4를 참조 하세요.  
+ <sup>4</sup> 아래의 제한 사항 4를 참조 하십시오.  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>제한 사항 1: 다중 서버 관리에 비관리자 계정 사용  
  대상 서버를 마스터 서버에 등록하면 다음 오류 메시지와 함께 실패할 수 있습니다. "등록 작업이 실패했습니다."  

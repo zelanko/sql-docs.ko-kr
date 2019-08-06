@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71355cfe5341af74083e21cb786b441c71c48c80
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62802699"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811314"
 ---
 # <a name="understanding-incremental-generation"></a>증분 생성 이해
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "62802699"
  차원, 큐브 또는 특성 등의 새 개체 추가  
  스키마 생성 마법사는 새 개체가 매핑되는 원본 개체를 추가합니다.  
   
- 주제 영역 데이터베이스에 사용자 개체가 있어 데이터베이스 엔진이 오류를 반환하기 때문에 스키마 생성 마법사가 필요한 변경 작업을 수행할 수 없는 경우 스키마 생성 마법사는 실패하고 데이터베이스 엔진에서 반환한 오류가 표시됩니다. 예를 들어 마법사가 테이블을 생성한 후 사용자가 테이블에 PRIMARY KEY 제약 조건이나 비클러스터형 인덱스를 만들 경우 스키마 생성 마법사가 이러한 제약 조건이나 인덱스를 만들지 않았기 때문에 해당 테이블은 삭제되지 않습니다.  
+ 주제 영역 데이터베이스에 사용자 개체가 있어 데이터베이스 엔진이 오류를 반환하기 때문에 스키마 생성 마법사가 필요한 변경 작업을 수행할 수 없는 경우 스키마 생성 마법사는 실패하고 데이터베이스 엔진에서 반환한 오류가 표시됩니다. 예를 들어 마법사가 테이블을 생성 한 후 테이블에 primary key 제약 조건이 나 비클러스터형 인덱스를 만들 경우 스키마 생성 마법사는 제약 조건이 나 인덱스를 만들지 않았기 때문에 해당 테이블을 삭제 하지 않습니다.  
   
 ## <a name="supporting-schema-changes"></a>스키마 변경 지원  
  주제 영역 데이터베이스 또는 연결된 데이터 원본 뷰에서 테이블이나 열의 속성을 변경하면 스키마 생성 마법사는 다음과 같이 변경 내용을 처리합니다.  

@@ -2,19 +2,19 @@
 title: MLeap를 사용 하 여 Spark machine learning 모델 만들기 및 내보내기
 titleSuffix: SQL Server big data clusters
 description: PySpark를 사용 하 여 SQL Server 빅 데이터 클러스터 (미리 보기)에서 Spark를 사용 하 여 기계 학습 모델을 학습 하 고 만들 수 있습니다. MLeap를 사용 하 여 내보낸 다음 SQL Server의 Java를 사용 하 여 모델의 점수를 계산 합니다.
-author: lgongmsft
-ms.author: lgong
+author: RogPodge
+ms.author: roliu
 ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 9e139e76e5f5f756b57a9366cc896716cda58959
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67727379"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811213"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에서 Spark 기계 학습 모델 만들기, 내보내기 및 점수 매기기
 

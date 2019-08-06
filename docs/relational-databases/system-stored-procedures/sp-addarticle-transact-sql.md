@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 7be448918599918bdf638b43178030703da724a9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e337e04714b0d8dcc9a8227ca48ad9dc33dcc3dc
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771366"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811390"
 ---
-# <a name="spaddarticle-transact-sql"></a>sp_addarticle(Transact-SQL)
+# <a name="sp_addarticle-transact-sql"></a>sp_addarticle(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   아티클을 만들어 게시에 추가합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
@@ -211,7 +211,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x40000000000**|구독자에서 메모리 최적화 테이블을 만들기 위해 스냅숏 에이전트에서 스크립팅을 사용 하도록 설정 합니다.|  
 |**0x80000000000**|메모리 액세스에 최적화 된 아티클에 대해 클러스터형 인덱스를 비클러스터형 인덱스로 변환 합니다.|  
 |**0x400000000000**|테이블에서 비클러스터형 columnstore 인덱스를 복제 합니다.|  
-|**0x800000000000**|테이블에 대 한 모든 비클러스터형 columnstore 인덱스를 복제 합니다.|  
+|**0x800000000000**|테이블에서 flitro비클러스터형 columnstore 인덱스를 복제 합니다.|  
 |NULL|복제는 자동으로 *schema_option* 을 기본값으로 설정 하 고,이 값은 다른 아티클 속성에 따라 달라 집니다. 주의 섹션에 있는 “기본 스키마 옵션” 표에서는 아티클 유형과 복제 유형을 기반으로 하는 기본 스키마 옵션을 보여 줍니다.<br /><br /> 이외[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시의 기본값은 **0x050d3**입니다.|  
   
  모든 복제 유형 및 아티클 유형에 대해 모든 *schema_option* 값이 유효 하지는 않습니다. 설명 섹션의 **유효한 스키마 옵션** 표에서는 아티클 유형과 복제 유형의 조합에 따라 선택할 수 있는 유효한 스키마 옵션을 보여 줍니다.  

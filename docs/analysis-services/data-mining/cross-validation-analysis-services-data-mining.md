@@ -1,5 +1,5 @@
 ---
-title: 교차 유효성 검사 (Analysis Services-데이터 마이닝) | Microsoft Docs
+title: 교차 유효성 검사 (Analysis Services 데이터 마이닝) | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: bf8960fb659611003325275b2cf86d9325351c29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b207ce822fbe83d4a388ecf9da52b7c6cfa020a1
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68183814"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811373"
 ---
 # <a name="cross-validation-analysis-services---data-mining"></a>교차 유효성 검사(Analysis Services - 데이터 마이닝)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68183814"
   
  다음 다이어그램의 예에서는 3개의 접기가 지정된 경우의 데이터 사용을 보여 줍니다.  
   
- ![교차 유효성 검사 데이터를 분할 하는 방법](../../analysis-services/data-mining/media/xvoverviewmain.gif "교차 유효성 검사 데이터를 분할 하는 방법")  
+ ![교차 유효성 검사 세그먼트 데이터](../../analysis-services/data-mining/media/xvoverviewmain.gif "교차 유효성 검사 세그먼트 데이터")  
   
  위 다이어그램의 시나리오에서 마이닝 구조에는 테스트에 사용되는 홀드아웃 데이터 집합이 포함되어 있지만 테스트 데이터 집합은 교차 유효성 검사에 포함되지 않았습니다. 따라서 마이닝 구조 데이터의 70%인 학습 데이터 집합의 모든 데이터가 교차 유효성 검사에 사용됩니다. 교차 유효성 검사 보고서에는 각 파티션에 사용된 총 사례 수가 표시됩니다.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "68183814"
 ### <a name="choosing-models-and-columns-to-validate"></a>유효성을 검사할 모델 및 열 선택  
  데이터 마이닝 디자이너의 **교차 유효성 검사** 탭을 사용할 때는 먼저 목록에서 예측 가능한 열을 선택해야 합니다. 일반적으로 마이닝 구조는 여러 마이닝 모델을 지원할 수 있으며 이러한 모델 중 일부는 같은 예측 가능한 열을 사용하지 않을 수 있습니다. 교차 유효성 검사를 실행할 때는 같은 예측 가능한 열을 사용하는 모델만 보고서에 포함될 수 있습니다.  
   
- 예측 가능한 특성을 선택하려면 **대상 특성** 을 클릭하고 목록에서 열을 선택합니다. 대상 특성이 중첩된 열 또는 중첩된 테이블의 열 이면 형식을 사용 하는 중첩 열의 이름을 입력 해야 합니다 \<중첩 테이블 이름 > (키).\< 중첩 열 >. 중첩된 테이블에서 사용 되는 유일한 열이 키 열인 경우 사용할 수 있습니다 \<중첩 테이블 이름 > (키).  
+ 예측 가능한 특성을 선택하려면 **대상 특성** 을 클릭하고 목록에서 열을 선택합니다. 대상 특성이 중첩 열 또는 중첩 테이블의 열인 경우 중첩 테이블 이름 > (키) 형식 \<으로 중첩 열의 이름을 입력 해야 합니다.\< 중첩 열 >입니다. 중첩 테이블에서 사용 되는 유일한 열이 키 열인 경우 중첩 테이블 이름 > ( \<키)를 사용할 수 있습니다.  
   
  예측 가능한 특성을 선택하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 동일한 예측 가능한 특성을 사용하는 모든 모델을 자동으로 테스트합니다. 대상 특성에 불연속 값이 포함되어 있는 경우에는 예측 가능한 열을 선택한 후 예측할 특정 값이 있으면 필요에 따라 대상 상태를 입력할 수 있습니다.  
   
- 선택하는 대상 상태는 반환되는 측정값에 영향을 줍니다. 대상 특성을 지정 하는 경우-즉, 열 이름-및 예측 가능성이 가장 높은 상태에 따라 모델을 평가할 기본적으로 예측 모델을 특정 값을 선택 하지 않습니다.  
+ 선택하는 대상 상태는 반환되는 측정값에 영향을 줍니다. 대상 특성, 즉 열 이름을 지정 하 고 모델이 예측할 특정 값을 선택 하지 않은 경우 기본적으로 가장 가능성이 높은 상태를 예측 하 여 모델을 평가 합니다.  
   
  클러스터링 모델에서 교차 유효성 검사를 사용하는 경우에는 예측 가능한 열이 없습니다. 대신 **대상 특성** 목록 상자의 예측 가능한 특성 목록에서 **#Cluster** 를 선택합니다. 이 옵션을 선택한 후에는 **대상 상태**와 같이 클러스터링 모델과 관계가 없는 기타 옵션을 사용할 수 없게 됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 는 마이닝 구조와 연결된 모든 클러스터링 모델을 테스트합니다.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "68183814"
  사용자 인터페이스를 사용하여 교차 유효성 검사 보고서를 만드는 방법의 예는 [교차 유효성 검사 보고서 만들기](../../analysis-services/data-mining/create-a-cross-validation-report.md)를 참조하세요.  
   
 ### <a name="cross-validation-stored-procedures"></a>교차 유효성 검사 저장 프로시저  
- 고급 사용자의 경우 전체 매개 변수가 있는 시스템 저장 프로시저 형태의 교차 유효성 검사를 사용할 수 있습니다. 인스턴스에 연결 하 여 저장된 프로시저를 실행할 수 있습니다 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], 또는 임의의 관리 코드 응용 프로그램입니다.  
+ 고급 사용자의 경우 전체 매개 변수가 있는 시스템 저장 프로시저 형태의 교차 유효성 검사를 사용할 수 있습니다. 저장 프로시저는 또는 관리 코드 응용 프로그램에서 인스턴스에 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]연결 하 여 실행할 수 있습니다.  
   
  저장 프로시저는 마이닝 모델 유형별로 그룹화됩니다. 하나의 저장 프로시저 집합은 클러스터링 모델에서만 작동합니다. 다른 저장 프로시저 집합은 다른 마이닝 모델에서 작동합니다.  
   
- 각 유형의 마이닝 모델(클러스터형 또는 비클러스터형)에 대해 저장 프로시저는 두 개의 별도 단계로 교차 유효성 검사를 수행합니다.  
+ 각 유형의 마이닝 모델 (클러스터형 또는 비클러스터형)에 대해 저장 프로시저는 두 개의 별도 단계로 교차 유효성 검사를 수행 합니다.  
   
  **데이터 분할 및 파티션의 메트릭 생성**  
   

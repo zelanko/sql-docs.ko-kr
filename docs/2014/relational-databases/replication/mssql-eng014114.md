@@ -12,14 +12,14 @@ ms.assetid: f5f04590-e1c6-40d8-ab2b-98c791a0fc44
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 51b62a64ae008e0994054d40344d1e0d68bb296b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0afebe3d8e974ac4920a6f75bf544a13027b360e
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191678"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811005"
 ---
-# <a name="mssqleng014114"></a>MSSQL_ENG014114
+# <a name="mssql_eng014114"></a>MSSQL_ENG014114
     
 ## <a name="message-details"></a>메시지 정보  
   
@@ -50,7 +50,7 @@ ms.locfileid: "63191678"
   
      10.193.17.129 inst1  
   
--   배포를 해제하고 인스턴스를 등록한 후 배포를 다시 설정합니다. 비클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 다음 단계를 수행하세요.  
+-   배포를 해제하고 인스턴스를 등록한 후 배포를 다시 설정합니다. 비클러스터형 인스턴스에 대해 @@SERVERNAME 값이 올바르지 않으면 다음 단계를 수행 합니다.  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  

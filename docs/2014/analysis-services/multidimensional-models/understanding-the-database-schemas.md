@@ -17,12 +17,12 @@ ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3439fff5e3bba68f01c24a0979434e21a01ded6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072707"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811050"
 ---
 # <a name="understanding-the-database-schemas"></a>데이터베이스 스키마 이해
   스키마 생성 마법사는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 차원 및 측정값 그룹을 기반으로 주제 영역 데이터베이스에 대한 비정규 관계형 스키마를 생성합니다. 마법사는 각 차원에 대해 차원 데이터를 저장할 관계형 테이블(차원 테이블)과 각 측정값 그룹에 대해 팩트 데이터를 저장할 관계형 테이블(팩트 테이블)을 생성합니다. 이러한 관계형 테이블을 생성할 때 연결된 차원, 연결된 측정값 및 서버 시간 차원은 무시합니다.  
@@ -71,7 +71,7 @@ ms.locfileid: "66072707"
  관계  
  마법사는 팩트 테이블의 각 일반 차원 관계에 대해 차원 테이블의 세분성 특성에 대한 관계를 생성합니다. 세분성이 차원 테이블의 키 특성을 기반으로 하는 경우에는 데이터베이스와 데이터 원본 뷰에서 관계가 생성됩니다. 세분성이 다른 특성을 기반으로 하는 경우에는 데이터 원본 뷰에서만 관계가 생성됩니다.  
   
- 마법사에서 인덱스를 생성하도록 선택한 경우에는 이러한 각 관계 열에 대해 비클러스터형 인덱스가 생성됩니다.  
+ 마법사에서 인덱스를 생성 하도록 선택한 경우 이러한 각 관계 열에 대해 비클러스터형 인덱스가 생성 됩니다.  
   
  제약 조건  
  팩트 테이블에서는 기본 키가 생성되지 않습니다.  

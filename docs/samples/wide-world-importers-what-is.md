@@ -1,5 +1,5 @@
 ---
-title: Wide World Importers-sql 예제 데이터베이스 | Microsoft Docs
+title: 와이드 세계 가져오기-SQL 용 샘플 데이터베이스 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -9,59 +9,59 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c178d116dddb5dc18b1bec91066205fe08f6d0c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 872892d307883bb7df31b08de701b2030d9aeb1f
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68067615"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794600"
 ---
-# <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft sql wide World Importers 예제 데이터베이스
+# <a name="wide-world-importers-sample-databases-for-microsoft-sql"></a>Microsoft SQL 용 와이드 세계 가져오기 샘플 데이터베이스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-이것이 회사인 Wide World Importers 및 WideWorldImporters 샘플 데이터베이스는 SQL Server 및 Azure SQL Database에 대 한 주소가 지정 된 워크플로 개요입니다.  
+SQL Server 및 Azure SQL Database에 대 한 WideWorldImporters 예제 데이터베이스에서 해결 된 가상의 회사 전체 가져오기 및 워크플로에 대 한 개요입니다.  
 
-Wide World Importers (WWI)는 도매 새로 움 상품 가져오기 샌프란시스코 베이 영역에서 운영 하는 배포자입니다.
+WWI (와이드 세계 가져오기)는 샌프란시스코 베이 영역에서 작동 하는 도매 새로 움 상품 가져오기 및 배포자입니다.
 
-도매업,으로 WWI의 고객에 게는 개인에 게 재판매 하는 회사 대부분입니다. WWI 판매 소매 고객에 게 전문 저장소 슈퍼마켓을 비롯 한 미국에서 컴퓨팅, 저장소, 여행자 인력 상점 및 일부 사용자에 게 합니다. 또한 WWI 네트워크 WWI의 대신 제품을 홍보 하는 에이전트를 통해 다른 프랜차이즈를 판매 합니다. WWI의 고객의 모든 현재 미국의 기반으로 하는 동안 회사 다른 국가에 대 한 확장에 대 한 적용할 예정입니다.
+Wholesaler, WWI 고객은 대부분 개인에 게 재판매 하는 회사입니다. WWI는 특수 매장, supermarkets, 컴퓨팅 매장, tourist 인력 상점 및 일부 개인을 포함 하 여 미국에서 소매 고객에 게 판매 합니다. WWI는 또한 WWI를 대신 하 여 제품을 홍보 하는 에이전트 네트워크를 통해 다른 프랜차이즈에 판매 합니다. 모든 WWI 고객은 현재 미국에 기반 하 고 있지만 다른 국가로 확장 하기 위해이 회사를 푸시하는 것이 좋습니다.
 
-WWI 새로 움 장난감 제조업체 및 기타 새로 움 프랜차이즈를 포함 하 여 공급 업체에서 제품을 구입 합니다. 스톡 고객 주문을 수행할 수 있도록 하는 데 필요한 대로 WWI 웨어하우스 및 공급 업체에서 다시 정렬에서 상품 합니다. 또한 많은 양의 자료, 패키지를 구입 하 고 고객에 대 한 편의 위해 더 작은 수량에서 이러한 판매 합니다.
+WWI는 새로 움 및 장난감 제조업체와 기타 새로 움 프랜차이즈를 포함 하 여 공급 업체의 상품을 구입 합니다. 이는 WWI 웨어하우스에서 상품을 재고 하 고, 필요에 따라 고객 주문을 수행할 하 여 공급 업체의 순서를 변경 합니다. 또한 대용량 포장 자료를 구매 하 고 고객의 편의를 위해 이러한 자료를 작은 수량으로 판매 합니다.
 
-최근에 WWI 식용 novelties chilli 등의 다양 한 초콜릿 판매 하기 시작 했습니다.  회사는 이전에 chilled 항목을 처리할 수 없습니다. 이제 음식 처리 요구를 달성 하기 위해가 냉각기 방 냉각기 섹션이 포함 된 해당 트럭 중 하나에 온도 모니터링 해야 합니다.
+최근 WWI는 chilli 빠졌습니다과 같은 다양 한 novelties를 판매 하기 시작 했습니다.  이전에는 회사에서 chilled 항목을 처리할 필요가 없습니다. 이제 음식 처리 요구 사항을 충족 하기 위해 냉각기 실내의 온도와 냉각기 섹션을 포함 하는 트럭을 모니터링 해야 합니다.
 
-## <a name="workflow-for-warehouse-stock-items"></a>웨어하우스 주식 항목에 대 한 워크플로
+## <a name="workflow-for-warehouse-stock-items"></a>웨어하우스 재고 항목에 대 한 워크플로
 
-항목은 누적 및 분산 하는 방법에 대 한 일반적인 흐름은 다음과 같습니다.
-- WWI 구매 주문을 만들고 공급 업체에 주문을 제출 합니다.
-- 공급 업체 항목을 보낼, WWI를 수신 합니다 및는 웨어하우스에서 구할 하 합니다.
-- WWI에서 고객 주문 항목
-- WWI 웨어하우스의 재고 항목을 사용 하 여 고객 주문을 채우고 공급 업체에서 추가 재고 주문 충분 한 재고가 없는 경우.
-- 일부 고객은 재고가 없는 항목에 대 한 대기 하지 않으려는 합니다. 다른 5 개의 예를 들어 주문 주식 항목 및 4는 사용 가능한 경우 네 항목 및 나머지 항목 재고가 수신 하려는 합니다. 항목을 별도 배송 항목을 나중에 전송 됩니다.
-- WWI 송장으로 순서를 전환 하 여 주식 항목에 대 한 고객은 일반적으로 송장 합니다.
-- 고객 재고가 없는 항목을 주문할 수 있습니다. 이러한 항목은 미처리입니다.
-- WWI 자신의 배달 van를 통하거나 다른 couriers 또는 freight 메서드를 통해 고객에 게 재고 항목을 제공합니다.
-- 고객은 WWI에 청구서를 지불합니다.
-- 정기적으로 WWI 구매 주문서에 있던 항목에 대 한 공급 업체를 지불 합니다. 이 종종 잠시 상품 받은 후입니다.
+항목의 보충 및 배포 방법에 대 한 일반적인 흐름은 다음과 같습니다.
+- WWI는 구매 주문을 만들고 해당 주문을 공급자에 게 제출 합니다.
+- 공급 업체는 항목을 보내고, WWI는 항목을 수신 하 고 창 고 합니다.
+- WWI에서 항목 주문 하는 고객
+- WWI는 웨어하우스의 재고 항목으로 고객 주문을 채우고, 재고가 충분 하지 않은 경우 suppliers에서 추가 재고를 주문 합니다.
+- 일부 고객은 재고가 없는 항목에 대해 대기 하지 않으려고 합니다. 5 개의 다른 재고 항목을 표시 하 고 4를 사용할 수 있는 경우 4 개의 항목을 받고 나머지 항목의 순서를 역순으로 만들려고 합니다. 그런 다음 항목은 나중에 별도의 배송에서 전송 됩니다.
+- WWI는 일반적으로 주문을 송장으로 변환 하 여 재고 항목에 대 한 고객을 송장으로 변환 합니다.
+- 고객이 재고가 없는 항목을 주문할 수 있습니다. 이러한 항목은 backordered입니다.
+- WWI는 자체 배달 vans를 통하거나 다른 고객 또는 운임 메서드를 통해 재고 항목을 고객에 게 제공 합니다.
+- 고객은 WWI로 송장을 지불 합니다.
+- 정기적으로 WWI는 구매 주문서에 있던 항목에 대 한 공급자를 지불 합니다. 이는 상품을 받은 후에 종종 발생 합니다.
 
 ## <a name="data-warehouse-and-analysis-workflow"></a>데이터 웨어하우스 및 분석 워크플로
 
-SQL Server Reporting Services를 사용 하 여 WideWorldImporters 데이터베이스에서 운영 보고서를 생성 하는 WWI 팀은를 전략적 보고서를 생성 해야 하는 데이터 분석을 수행도 필요 합니다. 팀은 WideWorldImportersDW 데이터베이스에서 차원 데이터 모델을 만들었습니다. 이 데이터베이스는 Integration Services 패키지에서 채워집니다.
+WWI의 팀은 SQL Server Reporting Services를 사용 하 여 WideWorldImporters 데이터베이스에서 작업 보고서를 생성 하는 동안에도 데이터에 대 한 분석을 수행 하 고 전략적 보고서를 생성 해야 합니다. 팀이 데이터베이스 WideWorldImportersDW에 차원 데이터 모델을 만들었습니다. 이 데이터베이스는 Integration Services 패키지로 채워집니다.
 
-SQL Server Analysis Services는 분석 데이터 모델을 만드는 데이터 차원 데이터 모델에서 사용 됩니다. SQL Server Reporting Services 보고서를 생성할 전략적 차원 데이터 모델에서 직접 및 분석 모델에서 사용 됩니다. Power BI 대시보드를 만드는 동일한 데이터에서 사용 됩니다. 대시보드는 휴대폰 및 태블릿 및 웹 사이트에서 사용 됩니다. *참고: 이러한 데이터 모델 및 보고서 아직 제공 되지 않습니다.*
+SQL Server Analysis Services는 차원 데이터 모델의 데이터에서 분석 데이터 모델을 만드는 데 사용 됩니다. SQL Server Reporting Services는 차원 데이터 모델에서 직접 전략적 보고서를 생성 하는 데 사용 되 고 분석 모델 에서도 사용 됩니다. Power BI는 동일한 데이터에서 대시보드를 만드는 데 사용 됩니다. 대시보드는 웹 사이트 및 휴대폰 및 태블릿에서 사용 됩니다. *참고: 이러한 데이터 모델 및 보고서는 아직 사용할 수 없습니다.*
 
 ## <a name="additional-workflows"></a>추가 워크플로
 
-이들은 추가 워크플로입니다.
-- WWI 문제 신용 정보 때 고객이 상품 잘못 된 경우 또는 어떤 이유로 good를 수신 하지 않습니다. 이 음수 송장으로 처리 됩니다.
-- WWI는 주기적으로 시스템에 사용 가능한 것으로 표시 된 재고 수량 정확한 지 확인 하는 주식 항목의 보유 수량을 계산 합니다. (이 프로세스는 stocktake를 이라고) 합니다.
-- 콜드 방 온도입니다. 부패 상품 refrigerated 대화방에 저장 됩니다. 이 대화방에서 센서 데이터 모니터링 및 분석을 위해 데이터베이스에 수집 됩니다.
-- 차량 위치를 추적 합니다. WWI에 대 한 상품을 전송 하는 차량에 위치를 추적 하는 센서가 포함 됩니다. 이 위치는 다시 추가 모니터링 및 분석에 대 한 데이터베이스에 수집 됩니다.
+추가 워크플로는 다음과 같습니다.
+- WWI는 고객이 어떤 이유로 든 지 나 상품에 문제가 발생 한 경우 크레딧 정보를 발급 합니다. 이는 부정 송장으로 처리 됩니다.
+- WWI는 시스템에서 사용 가능한 것으로 표시 된 주식 수량이 정확한 지 확인 하기 위해 재고 항목의 재고 수량을 주기적으로 계산 합니다. (이 작업을 수행 하는 프로세스를 stocktake 라고 합니다.)
+- 냉 실내 온도. Perishable 상품은 refrigerated 방에 저장 됩니다. 이러한 방에 있는 센서 데이터는 모니터링 및 분석을 위해 데이터베이스에 수집 됩니다.
+- 차량 위치 추적. WWI 용 상품을 전송 하는 차량에는 위치를 추적 하는 센서가 포함 됩니다. 이 위치는 모니터링 및 추가 분석을 위해 데이터베이스에 다시 수집 됩니다.
 
 ## <a name="fiscal-year"></a>회계 연도
 
-회사에서 11 월 1 일부 터 시작 하는 회계 연도 사용 하 여 작동 합니다.
+이 회사는 11 월 1 일에 시작 하는 재무 연도를 사용 합니다.
 
 ## <a name="terms-of-use"></a>사용 약관
 
-예제 데이터베이스 및 샘플 코드에 대 한 라이선스 여기에 설명 된: [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
+예제 데이터베이스 및 예제 코드에 대 한 라이선스는 다음에 설명 되어 있습니다. [license.txt](https://github.com/Microsoft/sql-server-samples/blob/master/license.txt)
 
-샘플 데이터베이스 data.gov 및 자연 스러운 EarthData에서 로드 된 공용 데이터를 포함 합니다. 사용 약관은 다음과 같습니다. [https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)
+예제 데이터베이스에는 data.gov 및 자연 EarthData에서 로드 된 공용 데이터가 포함 되어 있습니다. 사용 약관은 다음과 같습니다.[https://www.naturalearthdata.com/about/terms-of-use/](https://www.naturalearthdata.com/about/terms-of-use/)

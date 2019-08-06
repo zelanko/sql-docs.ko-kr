@@ -14,12 +14,12 @@ ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 003b56fe3dbfae3f442be6b966f3cdc3008909b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072675"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811062"
 ---
 # <a name="understanding-incremental-generation"></a>증분 생성 이해
   처음 스키마를 생성한 후 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]를 사용하여 큐브 및 차원 정의를 변경하고 스키마 생성 마법사를 다시 실행할 수 있습니다. 마법사는 주제 영역 데이터베이스 및 연결된 데이터 원본 뷰에서 스키마를 업데이트하여 변경 내용을 반영하고 다시 생성될 테이블의 현재 데이터를 가능한 범위까지 보존합니다. 처음 스키마를 생성한 후 테이블을 변경하면 스키마 생성 마법사가 다음 규칙에 따라 가능한 경우 해당 변경 내용을 유지합니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "66072675"
  차원, 큐브 또는 특성 등의 새 개체 추가  
  스키마 생성 마법사는 새 개체가 매핑되는 원본 개체를 추가합니다.  
   
- 주제 영역 데이터베이스에 사용자 개체가 있어 데이터베이스 엔진이 오류를 반환하기 때문에 스키마 생성 마법사가 필요한 변경 작업을 수행할 수 없는 경우 스키마 생성 마법사는 실패하고 데이터베이스 엔진에서 반환한 오류가 표시됩니다. 예를 들어 마법사가 테이블을 생성한 후 사용자가 테이블에 PRIMARY KEY 제약 조건이나 비클러스터형 인덱스를 만들 경우 스키마 생성 마법사가 이러한 제약 조건이나 인덱스를 만들지 않았기 때문에 해당 테이블은 삭제되지 않습니다.  
+ 주제 영역 데이터베이스에 사용자 개체가 있어 데이터베이스 엔진이 오류를 반환하기 때문에 스키마 생성 마법사가 필요한 변경 작업을 수행할 수 없는 경우 스키마 생성 마법사는 실패하고 데이터베이스 엔진에서 반환한 오류가 표시됩니다. 예를 들어 마법사가 테이블을 생성 한 후 테이블에 primary key 제약 조건이 나 비클러스터형 인덱스를 만들 경우 스키마 생성 마법사는 제약 조건이 나 인덱스를 만들지 않았기 때문에 해당 테이블을 삭제 하지 않습니다.  
   
 ## <a name="supporting-schema-changes"></a>스키마 변경 지원  
  주제 영역 데이터베이스 또는 연결된 데이터 원본 뷰에서 테이블이나 열의 속성을 변경하면 스키마 생성 마법사는 다음과 같이 변경 내용을 처리합니다.  

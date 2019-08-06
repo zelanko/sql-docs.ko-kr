@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 6c456334d9d77424c1955f392e8c8a5d16261234
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: e41cd9e244a39f5ec2e84d6f3512a709319acb24
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632035"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811461"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>D b 2 용 SSMA의 새로운 기능 (DB2ToSQL)
 
@@ -43,7 +43,7 @@ D b 2 용 SSMA의 v2.0 릴리스는 품질 및 변환 메트릭을 향상 시 �
 
 D b 2 용 SSMA의 v 8.2 릴리스는로 향상 되어, SSMA 콘솔 도구에서 Azure SQL Database에 대 한 연결 문제를 해결 하 고, 변환 하는 동안 보기 선언에서 COUNT_BIG 열이 누락 되었습니다. 또한이 버전에는 품질 및 변환 메트릭을 개선 하기 위해 설계 된 수정 내용 집합 뿐만 아니라에 대 한 수정 프로그램도 포함 됩니다.
 
-* 데이터 마이그레이션 후 사용 하지 않도록 설정 된 비클러스터형 인덱스에 문제가 있습니다.
+* 데이터 마이그레이션 후 비활성화 된 비클러스터형 인덱스에 문제가 있습니다.
 * 자동 설치 중에 .NET Framework를 검색 합니다.
 * 새 버전이 다운로드 될 때 발생 하는 일시적인 충돌입니다.
 

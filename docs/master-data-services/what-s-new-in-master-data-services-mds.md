@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4fdb279d47fd182d3196e760e19723715debbb7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017223"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810507"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>MDS(Master Data Services)의 새로운 기능
 
@@ -177,7 +177,7 @@ ms.locfileid: "68017223"
     
  **사용자 지정 인덱스**  
   
- 엔터티에서 하나의 속성(단일 인덱스) 또는 속성 목록(복합 인덱스)에 대한 비클러스터형 인덱스를 만들어 쿼리 성능을 개선할 수 있습니다. 자세한 내용은 [사용자 지정 인덱스&#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)를 참조하세요.  
+ 한 특성 (단일 인덱스) 또는 엔터티의 특성 목록 (복합 인덱스)에서 비클러스터형 인덱스를 만들어 쿼리 성능을 향상 시킬 수 있습니다. 자세한 내용은 [사용자 지정 인덱스&#40;Master Data Services&#41;](../master-data-services/custom-index-master-data-services.md)를 참조하세요.  
  
   **특성 필터**  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab70f8c3f7bd788214ce6ed27f2e02ea6a0b43ac
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68164967"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811297"
 ---
 # <a name="understanding-the-database-schemas"></a>데이터베이스 스키마 이해
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68164967"
  관계  
  마법사는 팩트 테이블의 각 일반 차원 관계에 대해 차원 테이블의 세분성 특성에 대한 관계를 생성합니다. 세분성이 차원 테이블의 키 특성을 기반으로 하는 경우에는 데이터베이스와 데이터 원본 뷰에서 관계가 생성됩니다. 세분성이 다른 특성을 기반으로 하는 경우에는 데이터 원본 뷰에서만 관계가 생성됩니다.  
   
- 마법사에서 인덱스를 생성하도록 선택한 경우에는 이러한 각 관계 열에 대해 비클러스터형 인덱스가 생성됩니다.  
+ 마법사에서 인덱스를 생성 하도록 선택한 경우 이러한 각 관계 열에 대해 비클러스터형 인덱스가 생성 됩니다.  
   
  제약 조건  
  팩트 테이블에서는 기본 키가 생성되지 않습니다.  

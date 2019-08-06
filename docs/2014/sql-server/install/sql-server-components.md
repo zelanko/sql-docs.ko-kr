@@ -21,27 +21,27 @@ ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 52045095714bfc2be7e929ed27a26a800c860fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 514524f063bf78ceb4862612dd8c78ce8cf78fc4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092089"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811093"
 ---
 # <a name="sql-server-components"></a>SQL Server 구성 요소
-  있는 로컬 또는 원격 컴퓨터에 대해 업그레이드 관리자 분석 마법사를 실행할 수 있습니다 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]를 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 설치 합니다. 업그레이드 이전 분석의 첫 번째 단계는 분석을 위한 컴퓨터 및 구성 요소를 식별하는 작업입니다.  
+  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], ,[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]또는 가설치된로컬또는원격컴퓨터에대해업그레이드관리자분석마법사를실행할수있습니다.[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 업그레이드 이전 분석의 첫 번째 단계는 분석을 위한 컴퓨터 및 구성 요소를 식별하는 작업입니다.  
   
 ## <a name="options"></a>변수  
  **컴퓨터 이름**  
- 분석할 컴퓨터의 이름을 지정합니다. 채워집니다 합니다 **서버 이름** 상자가 로컬 컴퓨터 이름으로 합니다. "." 및 "localhost"를 사용하여 로컬 컴퓨터에 연결할 수도 있습니다.  
+ 분석할 컴퓨터의 이름을 지정합니다. 업그레이드 관리자는 **서버 이름** 상자를 로컬 컴퓨터 이름으로 채웁니다. "." 및 "localhost"를 사용하여 로컬 컴퓨터에 연결할 수도 있습니다.  
   
  다른 컴퓨터를 분석하려면 다음 지침을 사용하십시오.  
   
--   비클러스터형 인스턴스를 검색하려면 컴퓨터 이름을 입력합니다.  
+-   비클러스터형 인스턴스를 검색 하려면 컴퓨터 이름을 입력 합니다.  
   
 -   클러스터형 인스턴스를 검색하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 장애 조치 클러스터 인스턴스의 이름을 입력합니다.  
   
--   클러스터의 노드에 설치된 비클러스터형 구성 요소를 검색하려면 장애 조치 클러스터 노드의 컴퓨터 이름을 입력합니다.  
+-   클러스터의 노드에 설치 된 비클러스터형 구성 요소를 검색 하려면 장애 조치 (failover) 클러스터 노드의 컴퓨터 이름을 입력 합니다.  
   
     > [!IMPORTANT]  
     >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 이름은 포함하지 마십시오.  
@@ -50,8 +50,8 @@ ms.locfileid: "66092089"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 검색하는 경우 로컬 컴퓨터의 이름을 지정해야 합니다. 업그레이드 관리자는 로컬 보고서 서버만 검색합니다.  
   
- **검색**  
- 합니다 **검색** 단추는 지정 된 컴퓨터에 액세스 하 고 분석할 구성 요소를 검색 합니다.  
+ **탐색**  
+ **검색** 단추는 지정 된 컴퓨터에 액세스 하 여 분석할 구성 요소를 검색 합니다.  
   
 -   원격 컴퓨터에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 분석하는 경우에는 원격 컴퓨터에서 원격 레지스트리 서비스를 사용하도록 설정해야 합니다.  
   
@@ -62,10 +62,10 @@ ms.locfileid: "66092089"
 -   컴퓨터의 레지스트리에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 발견되면 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]가 검색됩니다. 그러나 업그레이드 관리자는 로컬 보고서 서버만 검색합니다.  
   
  **Components**  
- 분석할 구성 요소를 선택합니다. 클릭할 수는 **검색** 단추를 컴퓨터에 설치 된 모든 구성 요소를 선택 합니다. 컴퓨터에 설치된 것으로 검색된 구성 요소 옆에는 확인 표시가 나타납니다. 각 구성 요소의 옆에 있는 확인란을 선택하거나 선택 취소하여 분석할 구성 요소를 수동으로 선택할 수도 있습니다.  
+ 분석할 구성 요소를 선택합니다. **검색** 단추를 클릭 하 여 컴퓨터에 설치 된 모든 구성 요소를 선택할 수 있습니다. 컴퓨터에 설치된 것으로 검색된 구성 요소 옆에는 확인 표시가 나타납니다. 각 구성 요소의 옆에 있는 확인란을 선택하거나 선택 취소하여 분석할 구성 요소를 수동으로 선택할 수도 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [업그레이드 관리자를 사용 하 여 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
+ [업그레이드 관리자 작업](../../../2014/sql-server/install/working-with-upgrade-advisor.md)   
  [업그레이드 관리자 사용자 인터페이스 참조](../../../2014/sql-server/install/upgrade-advisor-user-interface-reference.md)  
   
   

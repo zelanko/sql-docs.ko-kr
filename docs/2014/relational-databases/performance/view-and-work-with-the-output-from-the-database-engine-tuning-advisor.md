@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 29dac7e1636026da3f77ac832a148a832abe240a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151452"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811022"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>데이터베이스 엔진 튜닝 관리자의 출력 보기 및 작업
   데이터베이스 엔진 튜닝 관리자는 데이터베이스를 튜닝할 때 요약, 권장 구성, 보고서 및 튜닝 로그를 만듭니다. 튜닝 로그 출력을 사용하여 데이터베이스 엔진 튜닝 관리자 튜닝 세션의 문제를 해결할 수 있습니다. 요약, 권장 구성 및 보고서를 사용하여 튜닝 권장 구성을 구현하거나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 필요한 쿼리 성능이 향상될 때까지 튜닝을 계속합니다. 데이터베이스 튜닝 관리자를 사용하여 작업을 만들고 데이터베이스를 튜닝하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)을 참조하세요.  
@@ -163,7 +163,7 @@ ms.locfileid: "63151452"
   
 2.  [사용자 정의 구성이 포함된 XML 입력 파일 샘플&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)을 복사하여 XML 편집기 또는 텍스트 편집기에 붙여넣습니다. 이 예제를 사용하여 튜닝 세션용 XML 입력 파일을 만듭니다. 이 태스크를 수행하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)의 "XML 입력 파일 만들기" 섹션을 참조하세요.  
   
-3.  예제 XML 입력 파일에서 `TuningOptions` 및 `Configuration` 요소를 편집합니다. `TuningOptions` 요소에서 데이터베이스 엔진 튜닝 관리자가 튜닝 세션 중 고려할 물리적 디자인 구조를 지정합니다. `Configuration` 요소에서 데이터베이스 엔진 튜닝 관리자가 분석할 물리적 데이터베이스 디자인 구조의 가상 구성과 일치하는 물리적 디자인 구조를 지정합니다. 특성 및 자식 요소에 대 한 정보를 사용할 수 있습니다 합니다 `TuningOptions` 하며 `Configuration` 부모 요소를 참조 하십시오 [XML 입력 파일 참조 &#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md).  
+3.  예제 XML 입력 파일에서 `TuningOptions` 및 `Configuration` 요소를 편집합니다. `TuningOptions` 요소에서 데이터베이스 엔진 튜닝 관리자가 튜닝 세션 중 고려할 물리적 디자인 구조를 지정합니다. `Configuration` 요소에서 데이터베이스 엔진 튜닝 관리자가 분석할 물리적 데이터베이스 디자인 구조의 가상 구성과 일치하는 물리적 디자인 구조를 지정합니다. 및 부모 요소에 사용할 [ &#40;&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)수 있는 특성 및 자식 요소에 대 한 자세한 내용은 XML 입력 파일 참조 데이터베이스 엔진 튜닝 관리자를 참조 하세요. `Configuration` `TuningOptions`  
   
 4.  입력 파일을 **.xml** 확장명으로 저장합니다.  
   
@@ -282,7 +282,7 @@ ms.locfileid: "63151452"
  권장 구성의 영향을 받는 인덱스 또는 뷰입니다. 이 열의 아이콘은 권장되는 사항이 **권장 구성의 대상**에 대한 삭제인지 아니면 추가인지 여부를 나타냅니다.  
   
  **세부 정보**  
- **권장 구성의 대상**에 대한 설명입니다. 사용될 수 있는 값은 클러스터형, 인덱싱된 뷰 또는 비클러스터형 인덱스를 나타내는 공백입니다. 인덱스가 고유한지 여부도 나타냅니다.  
+ **권장 구성의 대상**에 대한 설명입니다. 가능한 값에는 비클러스터형 인덱스를 나타내는 클러스터형, 인덱싱된 뷰 또는 빈 값이 있습니다. 인덱스가 고유한지 여부도 나타냅니다.  
   
  **파티션 구성표**  
  파티션이 권장되는 경우 이 열에 파티션 구성표가 제공됩니다.  

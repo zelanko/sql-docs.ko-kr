@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_objects_disabled_on_compatibility_level_change (TRANSACT-SQL) | Microsoft Docs
+title: _db_objects_disabled_on_compatibility_level_change (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -20,14 +20,14 @@ ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 343acc1c284027dc6faf4eb08fc93e2cd528df05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937101"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809906"
 ---
-# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>공간 데이터 요금-sys.dm_db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>공간 데이터-_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 호환성 수준 변경의 결과로 비활성화되는 인덱스 및 제약 조건을 나열합니다. 식에서 공간 UDT를 사용하는 지속형 계산 열을 포함하는 인덱스 및 제약 조건은 호환성 수준을 업그레이드하거나 변경하면 비활성화됩니다. 이 동적 관리 함수를 사용하여 호환성 수준 변경의 결과를 확인할 수 있습니다.  
@@ -42,7 +42,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ##  <a name="Arguments"></a> 인수  
  *compatibility_level*  
- **int** 설정 하려는 호환성 수준을 식별 하는 합니다.  
+ 설정 하려는 호환성 수준을 식별 하는 **int** 입니다.  
   
 ## <a name="table-returned"></a>반환된 테이블  
   
@@ -66,58 +66,58 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Soundex**  
   
--   **Geography:: GeomFromGML**  
+-   **지리:: GeomFromGML**  
   
--   **Geography:: STGeomFromText**  
+-   **지리:: STGeomFromText**  
   
--   **Geography:: STLineFromText**  
+-   **지리:: STLineFromText**  
   
--   **Geography:: STPolyFromText**  
+-   **지리:: STPolyFromText**  
   
--   **Geography:: STMPointFromText**  
+-   **지리:: STMPointFromText**  
   
--   **Geography:: STMLineFromText**  
+-   **지리:: STMLineFromText**  
   
--   **Geography:: STMPolyFromText**  
+-   **지리:: STMPolyFromText**  
   
--   **Geography:: STGeomCollFromText**  
+-   **지리:: STGeomCollFromText**  
   
--   **Geography:: STGeomFromWKB**  
+-   **지리:: STGeomFromWKB**  
   
--   **Geography:: STLineFromWKB**  
+-   **지리:: STLineFromWKB**  
   
--   **Geography:: STPolyFromWKB**  
+-   **지리:: STPolyFromWKB**  
   
--   **Geography:: STMPointFromWKB**  
+-   **지리:: STMPointFromWKB**  
   
--   **Geography:: STMLineFromWKB**  
+-   **지리:: STMLineFromWKB**  
   
--   **Geography:: STMPolyFromWKB**  
+-   **지리:: STMPolyFromWKB**  
   
--   **Geography:: STUnion**  
+-   **지리:: STUnion**  
   
--   **Geography:: STIntersection**  
+-   **지리:: STIntersection**  
   
--   **Geography:: STDifference**  
+-   **지리:: STDifference**  
   
--   **Geography:: STSymDifference**  
+-   **지리:: STSymDifference**  
   
--   **Geography:: STBuffer**  
+-   **지리:: STBuffer**  
   
--   **Geography:: BufferWithTolerance**  
+-   **지리:: BufferWithTolerance**  
   
--   **Geography:: 구문 분석**  
+-   **지리:: 구문 분석**  
   
--   **Geography:: 줄이기**  
+-   **지리:: 줄이십시오**  
   
 ### <a name="behavior-of-the-disabled-objects"></a>비활성화된 개체의 동작  
  **인덱스**  
   
- 클러스터형된 인덱스가 비활성화 된 경우, 비클러스터형 인덱스를 강제 적용 하는 경우 다음 오류가 발생 합니다. "쿼리 프로세서에서 계획을 생성할 수 없는 인덱스 ' %. \*l s에 테이블 또는 뷰 ' %. \*l s를 사용 하지 않도록 설정 합니다. " 이러한 개체를 다시 활성화 하려면 인덱스를 다시 작성 업그레이드 후 호출 하 여 **ALTER INDEX ON... REBUILD**를 사용하여 변경할 수 있습니다.  
+ 클러스터형 인덱스를 사용할 수 없거나 비클러스터형 인덱스가 강제로 적용 된 경우 다음 오류가 발생 합니다. "인덱스 '% (으)로 인해 쿼리 프로세서에서 계획을 생성할 수 없습니다. \*ls ' 테이블 또는 뷰 '%. \*ls '을 (를) 사용할 수 없습니다. " 이러한 개체를 다시 활성화 하려면 업그레이드 후 ALTER INDEX ON ...를 호출 **하 여 인덱스를 다시 작성 합니다. REBUILD**를 사용하여 변경할 수 있습니다.  
   
- **힙**  
+ **힙에**  
   
- 비활성화된 힙이 포함된 테이블을 사용하면 다음 오류가 발생합니다. 이러한 개체를 다시 활성화 하려면 다시 업그레이드 후 호출 하 여 **ALTER INDEX 모든 ON... REBUILD**를 사용하여 변경할 수 있습니다.  
+ 비활성화된 힙이 포함된 테이블을 사용하면 다음 오류가 발생합니다. 이러한 개체를 다시 활성화 하려면 업그레이드 후 ALTER INDEX ALL ON **...을 호출 하 여 다시 빌드하십시오. REBUILD**를 사용하여 변경할 수 있습니다.  
   
 ```  
 // ErrorNumber: 8674  
@@ -130,13 +130,13 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 // ErrorFirstProduct: SQL11  
 ```  
   
- 온라인 작업 중 힙을 다시 작성 하려고 하면 오류가 발생 합니다.  
+ 온라인 작업 중에 힙을 다시 작성 하려고 하면 오류가 발생 합니다.  
   
  **Check 제약 조건 및 외래 키**  
   
- 비활성화된 CHECK 제약 조건 및 외래 키는 오류를 일으키지 않습니다. 그러나 행이 수정될 때 제약 조건이 적용되지 않습니다. 이러한 개체를 다시 활성화 하려면 호출 하 여 업그레이드 한 후 제약 조건을 확인 **ALTER TABLE... CHECK 제약 조건을**합니다.  
+ 비활성화된 CHECK 제약 조건 및 외래 키는 오류를 일으키지 않습니다. 그러나 행이 수정될 때 제약 조건이 적용되지 않습니다. 이러한 개체를 다시 사용 하도록 설정 하려면 업그레이드 **후 ALTER TABLE ... CHECK 제약**조건입니다.  
   
- **지속형된 계산된 열**  
+ **지속형 계산 열**  
   
  단일 열은 비활성화할 수 없으므로 클러스터형 인덱스나 힙을 비활성화하여 전체 테이블이 비활성화됩니다.  
   
@@ -146,7 +146,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
  VIEW DATABASE STATE 권한이 필요합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서 쿼리를 보여 줍니다 **sys.dm_db_objects_disabled_on_compatibility_level_change** 호환성 수준을 120으로 변경 하 여 영향을 받는 개체를 찾으려고 합니다.  
+ 다음 예제에서는 **_db_objects_disabled_on_compatibility_level_change** 에 대 한 쿼리를 통해 호환성 수준을 120로 변경 하 여 영향을 받는 개체를 찾습니다.  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  
