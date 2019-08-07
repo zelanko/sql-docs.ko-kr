@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 919a386af2ff0ceb714daf2c48ac199d2cbfb46d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b7e2dde267cf2c5f12140d883114565390d2e5d6
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008715"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702715"
 ---
 # <a name="system-requirements"></a>시스템 요구 사항
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -39,8 +39,10 @@ Linux 및 macOS 드라이버는 다음 운영 체제의 64비트 버전에만 �
 |Apple macOS 10.14(Mojave)|17| 
 |Debian Linux 8|13, 13.1, 17|
 |Debian Linux 9|17|
+|Debian Linux 10|17.4|
 |RedHat Enterprise Linux 6|13, 13.1, 17|
 |RedHat Enterprise Linux 7|13, 13.1, 17|
+|RedHat Enterprise Linux 8|17.4|
 |SuSE Linux Enterprise Server 11|13, 13.1, 17 <br /><br /> **참고:** ODBC 드라이버 17은 SuSE Linux Enterprise Server 11 SP4만 지원합니다.|
 |SuSE Linux Enterprise Server 12|13, 13.1, 17|
 |SuSE Linux Enterprise Server 15|17|
@@ -52,6 +54,7 @@ Linux 및 macOS 드라이버는 다음 운영 체제의 64비트 버전에만 �
 |Ubuntu Linux 17.10|17|
 |Ubuntu Linux 18.04|17| 
 |Ubuntu Linux 18.10|17| 
+|Ubuntu Linux 19.04|17.3| 
 
 [드라이버 설치](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)에서 설명한 대로 Linux 및 macOS 기반 [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC 드라이버 13, 13.1 및 17[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]용 설치 패키지는 사용자 배포의 패키지 관리 시스템을 사용하여 설치된 경우 드라이버의 종속성을 자동으로 해결합니다.
 

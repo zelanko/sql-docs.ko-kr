@@ -11,12 +11,12 @@ ms.reviewer: v-jizho2, v-chojas, genemi
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: f74d5a70325fdceb311bb3a45ba6824e64242ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6eebce61ede6e1e3dd76028a653a00ffa06990e
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63031211"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702751"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Windows 기반 SQL Server에 대한 ODBC 릴리스 정보
 
@@ -43,6 +43,15 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## <a name="174-july-2019"></a>17.4, 2019년 7월
+
+| 추가된 기능 | 세부 정보 |
+| :------------ | :------ |
+| 보안 Enclave를 사용한 Always Encrypted. | [Always Encrypted와 ODBC 드라이버 사용](../using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. |
+| 구성 가능한 TCP 연결 유지 설정입니다. | [SQL Server에 연결](../linux-mac/connection-string-keywords-and-data-source-names-dsns.md)을 참조하세요. |
+| 버그 수정. | [버그 수정](../bug-fixes.md)을 참조하세요. |
+| &nbsp; | &nbsp; |
 
 ## <a name="173-february-2019"></a>17.3, 2019년 2월
 

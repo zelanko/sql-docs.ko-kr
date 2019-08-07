@@ -28,12 +28,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 504e0978e37e5c550985e40b7f68e0323a9dc187
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5267b5b02ce84d70feb4245fe75f62591409f39f
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476317"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742998"
 ---
 # <a name="bcp-utility"></a>bcp 유틸리티
 
@@ -57,7 +57,7 @@ ms.locfileid: "68476317"
 
 명령줄 도구는 GA (일반 공급) 이지만 용 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]설치 관리자 패키지를 사용 하 여 릴리스됩니다.
 
-**버전 정보**
+### <a name="version-information"></a>버전 정보
 
 릴리스 번호: 15.0 <br>
 빌드 번호: 15.0.1000.34<br>
@@ -66,7 +66,11 @@ ms.locfileid: "68476317"
 새 버전의 SQLCMD는 SQL Database, SQL Data Warehouse 및 Always Encrypted 기능에 대 한 MFA (Multi-factor Authentication) 지원을 포함 하 여 Azure AD 인증을 지원 합니다.
 새 BCP는 SQL Database 및 SQL Data Warehouse에 대 한 MFA (Multi-factor Authentication) 지원을 포함 하 여 Azure AD 인증을 지원 합니다.
 
-**시스템 요구 사항** Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, windows server 2008 R2, Windows Server 2008 R2 SP1, Windows Server 2012, Windows Server 2012 R2이 구성 요소에는 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 및 [Microsoft ODBC Driver 17.3가 모두 필요 합니다. SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+### <a name="system-requirements"></a>시스템 요구 사항
+
+Windows 10, Windows 7, Windows 8, Windows 8.1, Windows Server 2008, Windows Server 2008 R2, Windows Server 2008 R2 SP1, windows Server 2012, Windows Server 2012 R2
+
+이 구성 요소에는 [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) 및 [Microsoft ODBC Driver 17.3 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)가 모두 필요합니다.
 
 BCP 버전 실행 `bcp /v` 명령을 확인 하 고 15.0.1000.34 이상이 사용 중인지 확인 합니다.
 

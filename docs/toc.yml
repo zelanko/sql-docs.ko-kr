@@ -233,14 +233,6 @@
                   href: big-data-cluster/reference-azdata-bdc-spark-statement.md
                 - name: bdc 상태
                   href: big-data-cluster/reference-azdata-bdc-status.md
-            - name: Notebook
-              items:
-                - name: Notebook
-                  href: big-data-cluster/reference-azdata-notebook.md
-            - name: SQL
-              items:
-                - name: sql
-                  href: big-data-cluster/reference-azdata-sql.md
 - name: 비즈니스 연속성
   items:
     - name: 개요

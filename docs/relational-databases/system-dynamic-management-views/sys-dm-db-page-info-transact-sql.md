@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_page_info (TRANSACT-SQL) | Microsoft Docs
+title: sys. dm _db_s_info (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/18/2018
 ms.prod: sql
@@ -20,18 +20,22 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 31b1a282e6d68bf9a31f26536926f9dccd4ff6de
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0802f3013af11814586634f890bb8ddddeadeec6
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263821"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841600"
 ---
-# <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
+# <a name="sysdm_db_page_info-transact-sql"></a>sys.dm_db_page_info (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ssver15-asdb-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
-데이터베이스의 페이지에 대 한 정보를 반환합니다.  페이지에서 헤더 정보를 포함 하는 하나의 행을 반환 하는 함수 등을 `object_id`, `index_id`, 및 `partition_id`합니다.  이 함수를 사용하면 대부분의 경우에서 `DBCC PAGE`를 사용할 필요가 없습니다.
+데이터베이스의 페이지에 대 한 정보를 반환 합니다.  함수는 `object_id`, `index_id`및 `partition_id`를 포함 하 여 페이지의 헤더 정보를 포함 하는 하나의 행을 반환 합니다.  이 함수를 사용하면 대부분의 경우에서 `DBCC PAGE`를 사용할 필요가 없습니다.
+
+> [!NOTE]
+> `sys.dm_db_page_info`는 현재 이상 에서만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 지원 됩니다.
+
 
 ## <a name="syntax"></a>구문   
 ```  
@@ -40,16 +44,16 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 
 ## <a name="arguments"></a>인수  
 *DatabaseId* | NULL | 기본     
-데이터베이스의 ID입니다. *DatabaseId* 됩니다 **smallint**합니다. 유효한 입력은 데이터베이스의 ID 번호. 하지만 기본값은 NULL,이 매개 변수에 대해 NULL 값을 오류가 발생 하면를 전송 합니다.
+데이터베이스의 ID입니다. *DatabaseId* 는 **smallint**입니다. 올바른 입력은 데이터베이스의 ID 번호입니다. 기본값은 NULL 이지만이 매개 변수에 NULL 값을 전송 하면 오류가 발생 합니다.
  
 *FileId* | NULL | 기본   
-파일 ID입니다. *FileId* 됩니다 **int**합니다.  유효한 입력은 지정한 데이터베이스에 있는 파일의 ID 번호 *DatabaseId*합니다. 하지만 기본값은 NULL,이 매개 변수에 대해 NULL 값을 오류가 발생 하면를 전송 합니다.
+파일 ID입니다. *FileId* 는 **int**입니다.  유효한 입력은 *DatabaseId*로 지정 된 데이터베이스에 있는 파일의 ID 번호입니다. 기본값은 NULL 이지만이 매개 변수에 NULL 값을 전송 하면 오류가 발생 합니다.
 
 *PageId* | NULL | DEFAULT   
-페이지의 ID입니다.  *PageId* 됩니다 **int**합니다.  유효한 입력은 지정한 파일에서 페이지의 ID 번호 *FileId*합니다. 하지만 기본값은 NULL,이 매개 변수에 대해 NULL 값을 오류가 발생 하면를 전송 합니다.
+페이지의 ID입니다.  *PageId* 는 **int**입니다.  유효한 입력은 *FileId*로 지정 된 파일에 있는 페이지의 ID 번호입니다. 기본값은 NULL 이지만이 매개 변수에 NULL 값을 전송 하면 오류가 발생 합니다.
 
 *모드* | NULL | 기본   
-함수 출력의 세부 수준을 결정합니다. 모든 설명 열에 대해 NULL 값을 반환 합니다 '제한', '자세한' 채워집니다 설명 열입니다.  기본값은 '제한'.
+함수 출력의 세부 수준을 결정 합니다. ' 제한 됨 '은 모든 설명 열에 대해 NULL 값을 반환 하 고 ' DETAILED '는 설명 열을 채웁니다.  기본값은 ' 제한 됨 '입니다.
 
 ## <a name="table-returned"></a>반환된 테이블  
 
@@ -58,82 +62,83 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 |database_id |ssNoversion |데이터베이스 ID |
 |file_id |ssNoversion |파일 ID |
 |page_id |ssNoversion |페이지 ID |
+|page_header_version |ssNoversion |페이지 머리글 버전 |
 |page_type |ssNoversion |페이지 유형 |
-|page_type_desc |nvarchar(64) |페이지 유형에 대 한 설명 |
-|page_flag_bits |nvarchar(64) |페이지 머리글 플래그 비트 |
-|page_flag_bits_desc |nvarchar(256) |페이지 머리글에서 플래그 비트 설명 |
-|page_type_flag_bits |nvarchar(64) |페이지 머리글에서 플래그 비트를 입력 합니다. |
-|page_type_flag_bits_desc |nvarchar(64) |페이지 머리글에서 형식 플래그 비트 설명 |
-|object_id |ssNoversion |페이지를 소유 하는 개체의 ID |
-|index_id |ssNoversion |인덱스 (힙 데이터 페이지에 대 한 0)의 ID |
-|partition_id |BIGINT |파티션의 ID |
-|alloc_unit_id |BIGINT |할당 단위 ID |
-|page_level |ssNoversion |인덱스에서 페이지의 수준 (리프 = 0) |
-|slot_count |SMALLINT |슬롯 개수 (사용 및 사용 하지 않는) <br> 데이터 페이지에 대 한이 숫자 행 개수와 동일합니다. |
-|ghost_rec_count |SMALLINT |페이지에서 삭제할 것으로 표시 하는 레코드 수 <br> 고스트 레코드는 삭제 하도록 표시 되었지만 아직 제거할입니다. |
-|torn_bits |ssNoversion |조각난된 쓰기가 검색 섹터당 1 비트입니다. 체크섬을 저장 하는 데도 사용 <br> 이 값은 데이터 손상을 검색할 사용 |
-|is_iam_pg |bit |페이지는 IAM 페이지 인지 여부를 나타내는 비트  |
-|is_mixed_ext |bit |비트 나타내면 혼합 익스텐트에서 할당 |
-|pfs_file_id |SMALLINT |해당 하는 PFS 페이지의 파일 ID |
+|page_type_desc |nvarchar(64) |페이지 종류에 대 한 설명 |
+|page_type_flag_bits |nvarchar(64) |페이지 머리글에 플래그 비트 입력 |
+|page_type_flag_bits_desc |nvarchar(64) |페이지 머리글에 플래그 비트 설명 입력 |
+|page_flag_bits |nvarchar(64) |페이지 머리글의 플래그 비트 |
+|page_flag_bits_desc |nvarchar(256) |페이지 헤더의 플래그 비트 설명 |
+|page_lsn |nvarchar(64) |로그 시퀀스 번호/타임 스탬프 |
+|page_level |ssNoversion |인덱스의 페이지 수준 (리프 = 0) |
+|object_id |ssNoversion |페이지를 소유 하는 개체의 ID입니다. |
+|index_id |ssNoversion |인덱스의 ID입니다 (힙 데이터 페이지의 경우 0). |
+|partition_id |BIGINT |파티션의 ID입니다. |
+|alloc_unit_id |BIGINT |할당 단위의 ID입니다. |
+|is_encrypted |bit |페이지가 암호화 되는지 여부를 나타내는 비트입니다. |
+|has_checksum |bit |페이지에 체크섬 값이 있는지 여부를 나타내는 비트 |
+|체크섬(checksum) |ssNoversion |데이터 손상을 검색 하는 데 사용 되는 체크섬 값을 저장 합니다. |
+|is_iam_pg |bit |페이지가 IAM 페이지 인지 여부를 나타내는 비트입니다.  |
+|is_mixed_ext |bit |혼합 익스텐트에 할당 되었는지 여부를 나타내는 비트 |
+|has_ghost_records |bit |페이지에 고스트 레코드가 포함 되어 있는지 여부를 나타내는 비트 <br> 삭제 된 레코드는 삭제 하도록 표시 되었지만 아직 제거 되지 않은 레코드입니다.|
+|has_version_records |bit |페이지에 [가속화 된 데이터베이스 복구](../backup-restore/restore-and-recovery-overview-sql-server.md#adr) 에 사용 되는 버전 레코드가 포함 되어 있는지 여부를 나타내는 비트 |
 |pfs_page_id |ssNoversion |해당 PFS 페이지의 페이지 ID |
-|pfs_alloc_percent |ssNoversion |PFS 바이트에 의해 표시 된 대로 할당 비율 |
+|pfs_is_allocated |bit |해당 PFS 페이지에서 페이지가 할당 된 것으로 표시 되는지 여부를 나타내는 비트입니다. |
+|pfs_alloc_percent |ssNoversion |해당 PFS 바이트로 표시 되는 할당 백분율 |
 |pfs_status |nvarchar(64) |PFS 바이트 |
-|pfs_status_desc |nvarchar(64) |PFS 바이트의 설명 |
-|gam_file_id |SMALLINT |해당 하는 GAM 페이지의 파일 ID |
-|gam_page_id |ssNoversion |해당 하는 GAM 페이지의 페이지 ID |
-|gam_status |bit |비트 나타내면 GAM에 할당 |
-|gam_status_desc |nvarchar(64) |GAM 상태 비트 설명 |
-|sgam_file_id |SMALLINT |해당 하는 SGAM 페이지의 파일 ID |
-|sgam_page_id |ssNoversion |해당 하는 SGAM 페이지의 페이지 ID |
-|sgam_status |bit |비트 나타내면 SGAM에 할당 |
-|sgam_status_desc |nvarchar(64) |설명은 SGAM 상태 비트 |
-|diff_map_file_id |SMALLINT |해당 하는 차등 비트맵 페이지의 파일 ID |
-|diff_map_page_id |ssNoversion |해당 하는 차등 비트맵 페이지의 페이지 ID |
-|diff_status |bit |Diff 상태가 변경 되는 경우를 나타내는 비트 |
-|diff_status_desc |nvarchar(64) |Diff 상태 비트 설명 |
-|ml_file_id |SMALLINT |해당 하는 최소 로깅 비트맵 페이지의 파일 ID |
-|ml_page_id |ssNoversion |해당 하는 최소 로깅 비트맵 페이지의 페이지 ID |
-|ml_status |bit |페이지 작업이 최소한으로 로깅되는 경우를 나타내는 비트 |
-|ml_status_desc |nvarchar(64) |비트 최소 로깅의 상태에 대 한 |
-|free_bytes |SMALLINT |페이지의 사용 가능한 바이트 수 |
-|free_data_offset |ssNoversion |공간 데이터 영역의 끝 오프셋 |
-|reserved_bytes |SMALLINT |모든 트랜잭션이 예약한 가능한 바이트 수 (하는 경우 힙) <br> 고스트 행 (경우 인덱스 리프) 수 |
-|reserved_xdes_id |SMALLINT |M_xdesID m_reservedCnt 제공한 공간 <br> 디버깅 목적 으로만 |
-|xdes_id |nvarchar(64) |M_reserved 제공한 최신 트랜잭션 <br> 디버깅 목적 으로만 |
+|pfs_status_desc |nvarchar(64) |PFS 바이트에 대 한 설명 |
+|gam_page_id |ssNoversion |해당 GAM 페이지의 페이지 ID입니다. |
+|gam_status |bit |GAM에서 할당 되었는지 여부를 나타내는 비트 |
+|gam_status_desc |nvarchar(64) |GAM 상태 비트에 대 한 설명 |
+|sgam_page_id |ssNoversion |해당 SGAM 페이지의 페이지 ID입니다. |
+|sgam_status |bit |SGAM에서 할당 되었는지 여부를 나타내는 비트입니다. |
+|sgam_status_desc |nvarchar(64) |SGAM 상태 비트에 대 한 설명 |
+|diff_map_page_id |ssNoversion |해당 하는 차등 비트맵 페이지의 페이지 ID입니다. |
+|diff_status |bit |Diff 상태가 변경 되었는지 여부를 나타내는 비트 |
+|diff_status_desc |nvarchar(64) |Diff 상태 비트에 대 한 설명 |
+|ml_map_page_id |ssNoversion |해당 하는 최소 로깅 비트맵 페이지의 페이지 ID입니다. |
+|ml_status |bit |페이지가 최소 기록 되는지 여부를 나타내는 비트 |
+|ml_status_desc |nvarchar(64) |최소 로깅 상태 비트의 설명입니다. |
 |prev_page_file_id |SMALLINT |이전 페이지 파일 ID |
-|prev_page_page_id |ssNoversion |이전 페이지의 페이지 ID |
+|prev_page_page_id |ssNoversion |이전 페이지 페이지 ID |
 |next_page_file_id |SMALLINT |다음 페이지 파일 ID |
-|next_page_page_id |ssNoversion |다음 페이지의 페이지 ID |
-|min_len |SMALLINT |고정된 크기의 행의 길이 |
-|lsn |nvarchar(64) |로그 시퀀스 번호 / 타임 스탬프 |
-|header_version |ssNoversion |페이지 헤더 버전 |
+|next_page_page_id |ssNoversion |다음 페이지 페이지 ID |
+|fixed_length |SMALLINT |고정 크기 행의 길이 |
+|slot_count |SMALLINT |총 슬롯 수 (사용 및 사용 안 함) <br> 데이터 페이지의 경우이 숫자는 행 수와 같습니다. |
+|ghost_rec_count |SMALLINT |페이지에서 고스트로 표시 된 레코드 수 <br> 삭제 된 레코드는 삭제 하도록 표시 되었지만 아직 제거 되지 않은 레코드입니다. |
+|free_bytes |SMALLINT |페이지의 사용 가능한 바이트 수 |
+|free_data_offset |ssNoversion |데이터 영역 끝에서 사용 가능한 공간의 오프셋 |
+|reserved_bytes |SMALLINT |모든 트랜잭션에 예약 된 사용 가능한 바이트 수 (힙) <br> 삭제할 행 수 (인덱스 리프 인 경우) |
+|reserved_bytes_by_xdes_id |SMALLINT |M_reservedCnt에 m_xdesID에서 제공한 공간 <br> 디버깅 목적 으로만 사용 |
+|xdes_id |nvarchar(64) |M_reserved에서 제공한 최신 트랜잭션 <br> 디버깅 목적 으로만 사용 |
+||||
 
 ## <a name="remarks"></a>설명
-합니다 `sys.dm_db_page_info` 동적 관리 함수 같은 페이지 정보를 반환 합니다. `page_id`를 `file_id`, `index_id`, `object_id` 페이지 머리글에 존재 하는 등입니다. 이 정보는 문제 해결 및 다양 한 성능 (잠금 및 래치 경합) 및 손상 문제를 디버깅 하는 데 유용 합니다.
+`file_id` `page_id` `object_id` `index_id`동적 관리 함수는 페이지 머리글에 표시 되는,, 등의 페이지 정보를 반환 합니다. `sys.dm_db_page_info` 이 정보는 다양 한 성능 (잠금 및 래치 경합) 및 손상 문제를 해결 하 고 디버깅 하는 데 유용 합니다.
 
-`sys.dm_db_page_info` 대신 사용할 수는 `DBCC PAGE` 하지만 대부분의 경우에 문이 페이지 헤더 정보만 반환, 페이지의 본문에 없습니다. `DBCC PAGE` 여기서 전체 페이지의 내용이 필요한 사용 사례에 여전히 필요 합니다.
+`sys.dm_db_page_info`는 대부분의 경우 `DBCC PAGE` 문 대신 사용할 수 있지만 페이지의 본문이 아닌 페이지 헤더 정보만 반환 합니다. `DBCC PAGE`는 페이지의 전체 내용이 필요한 사용 사례에도 필요 합니다.
 
 ## <a name="using-in-conjunction-with-other-dmvs"></a>다른 Dmv와 함께 사용
-중요 한 사용 사례 중 `sys.dm_db_page_info` 페이지 정보를 노출 하는 다른 Dmv와 조인 하는 것입니다.  새 열이 사용 사례를 용이 하 게 호출 `page_resource` 8 바이트 16 진수 형식으로 페이지 정보를 노출 하는 추가 되었습니다. 이 열에 추가 되었습니다 `sys.dm_exec_requests` 고 `sys.sysprocesses` 및 필요에 따라 나중에 다른 Dmv에 추가 됩니다.
+의 `sys.dm_db_page_info` 중요 한 사용 사례 중 하나는 페이지 정보를 노출 하는 다른 dmv와 조인 하는 것입니다.  이 사용 사례를 용이 하 게 하기 위해 라는 `page_resource` 새 열이 추가 되어 페이지 정보를 8 바이트 16 진수 형식으로 노출 합니다. 이 열은 및 `sys.dm_exec_requests` `sys.sysprocesses` 에 추가 되었으며 나중에 필요에 따라 다른 dmv에 추가 될 예정입니다.
 
-새 함수 `sys.fn_PageResCracker`를 사용 합니다 `page_resource` 입력 및 출력 포함 된 단일 행으로 `database_id`, `file_id` 및 `page_id`.  이 함수는 간 조인이 용이 하도록 한 다음 사용할 수 있습니다 `sys.dm_exec_requests` 나 `sys.sysprocesses` 고 `sys.dm_db_page_info`입니다.
+`sys.fn_PageResCracker`새 함수인 `page_id`는 `page_resource` 를 입력으로 사용 하 고, 및를 `file_id` 포함 `database_id`하는 단일 행을 출력 합니다.  그런 다음이 함수를 사용 하 여 또는 `sys.dm_exec_requests` `sys.sysprocesses` 와 `sys.dm_db_page_info`간의 조인을 편리 하 게 수행할 수 있습니다.
 
 ## <a name="permissions"></a>사용 권한  
-필요는 `VIEW DATABASE STATE` 데이터베이스의 권한입니다.  
+데이터베이스에 `VIEW DATABASE STATE` 대 한 권한이 필요 합니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-displaying-all-the-properties-of-a-page"></a>A. 페이지의 모든 속성 표시
-모든 페이지 정보를 사용 하 여 하나의 행을 반환 하는 다음 쿼리는 주어진 `database_id`, `file_id`, `page_id` 기본 모드 ('제한')와 함께
+다음 쿼리는 지정 `database_id` `file_id` `page_id` 된에 대 한 모든 페이지 정보를 포함 하는 하나의 행을 기본 모드 (' 제한 됨 ')와 함께 반환 합니다.
 
 ```sql
 SELECT *  
 FROM sys.dm_db_page_info (5, 1, 15, DEFAULT)
 ```
 
-### <a name="b-using-sysdmdbpageinfo-with-other-dmvs"></a>2\. 다른 Dmv sys.dm_db_page_info 사용 
+### <a name="b-using-sysdm_db_page_info-with-other-dmvs"></a>2\. 다른 Dmv를 사용 하 여 sys. dm _db_db_l 
 
-다음 쿼리는 행을 하나씩 반환 `wait_resource` 에 의해 노출 `sys.dm_exec_requests` 행에 null이 아닌를 포함 하는 경우 `page_resource`
+다음 쿼리는 행이 null이 `wait_resource` 아닌 값 `sys.dm_exec_requests` 을 포함 하는 경우에 의해 노출 된 한 행을 반환 합니다.`page_resource`
 
 ```sql
 SELECT page_info.* 
@@ -144,7 +149,7 @@ CROSS APPLY sys.dm_db_page_info(r.db_id, r.file_id, r.page_id, 'LIMITED') AS pag
 
 ## <a name="see-also"></a>관련 항목  
 [동적 관리 뷰 및 함수&#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
-[데이터베이스 관련 동적 관리 뷰 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
+[데이터베이스 관련 동적 관리 뷰 &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)     
 [sys.fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)
 

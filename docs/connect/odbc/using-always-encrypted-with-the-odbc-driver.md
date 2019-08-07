@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: MightyPen
-ms.openlocfilehash: 9d85cee931774da3efd0956ae259bd6eecb42eed
-ms.sourcegitcommit: b57d445d73a0133c7998653f2b72cf09ee83a208
+ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68231851"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702701"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server용 ODBC 드라이버와 함께 상시 암호화 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,9 +25,11 @@ ms.locfileid: "68231851"
 
 ### <a name="introduction"></a>소개
 
-이 문서에서는 [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 및 [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)를 사용하여 ODBC 애플리케이션을 개발하는 방법을 설명합니다.
+이 문서에서는 [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 또는 [보안 Enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) 및 [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md)를 사용하여 ODBC 애플리케이션을 개발하는 방법을 설명합니다.
 
-Always Encrypted를 사용하면 클라이언트 애플리케이션이 중요한 데이터를 암호화하고 해당 데이터 또는 암호화 키를 SQL Server 또는 Azure SQL Database에 표시하지 않을 수 있습니다. SQL Server용 ODBC 드라이버와 같은 상시 암호화 지원 드라이버는 클라이언트 애플리케이션의 중요한 데이터를 투명하게 암호화하고 암호 해독합니다. 이 드라이버는 중요 데이터베이스 열에 해당하는 쿼리 매개 변수를 자동으로 확인하고(Always Encrypted를 사용하여 보호) 데이터를 SQL Server 또는 Azure SQL Database로 전달하기 전에 이러한 매개 변수의 값을 암호화합니다. 마찬가지로, 이 드라이버는 쿼리 결과의 암호화된 데이터베이스 열에서 검색한 데이터의 암호를 투명하게 해독합니다. 자세한 내용은 [상시 암호화(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요.
+Always Encrypted를 사용하면 클라이언트 애플리케이션이 중요한 데이터를 암호화하고 해당 데이터 또는 암호화 키를 SQL Server 또는 Azure SQL Database에 표시하지 않을 수 있습니다. SQL Server용 ODBC 드라이버와 같은 상시 암호화 지원 드라이버는 클라이언트 애플리케이션의 중요한 데이터를 투명하게 암호화하고 암호 해독합니다. 이 드라이버는 중요 데이터베이스 열에 해당하는 쿼리 매개 변수를 자동으로 확인하고(Always Encrypted를 사용하여 보호) 데이터를 SQL Server 또는 Azure SQL Database로 전달하기 전에 이러한 매개 변수의 값을 암호화합니다. 마찬가지로, 이 드라이버는 쿼리 결과의 암호화된 데이터베이스 열에서 검색한 데이터의 암호를 투명하게 해독합니다. *보안 Enclave를 사용한* Always Encrypted는 이 기능을 확장하여 데이터 기밀성을 유지하면서 중요한 데이터에 대해 보다 풍부한 기능을 사용하도록 설정합니다.
+
+자세한 내용은 [Always Encrypted (데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 및 [Always Encrypted with Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조 하세요.
 
 ### <a name="prerequisites"></a>사전 요구 사항
 
@@ -54,6 +56,17 @@ Always Encrypted를 사용하도록 설정해도 암호화 또는 암호 해독�
 - 애플리케이션에는 *VIEW ANY COLUMN MASTER KEY DEFINITION* 및 *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* 데이터베이스 권한이 있으며 데이터베이스에서 상시 암호화 키에 대한 메타데이터에 액세스하는 데 필요합니다. 자세한 내용은 [데이터베이스 사용 권한](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)을 참조하세요.
 
 - 애플리케이션은 쿼리된 암호화된 열의 CEK를 보호하는 CMK에 액세스할 수 있습니다. 이 기능은 CMK를 저장하는 키 저장소 공급자에 따라 달라집니다. 자세한 내용은 [열 마스터 키 저장소 작업](#working-with-column-master-key-stores)을 참조하세요.
+
+### <a name="enabling-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted를 사용하도록 설정
+
+17.4 버전부터 드라이버는 Secure Enclaves를 사용 하 여 Always Encrypted을 지원 합니다. SQL Server 2019 이상에 연결할 때 enclave를 사용 하도록 설정 하려면 `ColumnEncryption` DSN, 연결 문자열 또는 연결 특성을 enclave 유형 및 증명 프로토콜의 이름과 연결 된 증명 데이터를 쉼표로 구분 하 여 설정 합니다. 버전 17.4에서는로 `VBS-HGS`표시 되는 [가상화 기반 Security](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) enclave type 및 [Host 보호자 서비스](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) 증명 프로토콜만 지원 됩니다 .이를 사용 하려면 증명 서버의 URL을 지정 합니다. 예를 들면 다음과 같습니다.
+
+```
+Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
+```
+
+서버 및 증명 서비스가 올바르게 구성 되어 있고 원하는 열에 대해 enclave 사용 CMKs 및 CEKs를 사용 하는 경우에는 현재 내부 암호화와 같은 enclave을 사용 하는 쿼리를 실행할 수 있어야 합니다. Always Encrypted에서 제공 하는 기존 기능 자세한 내용은 [Configure Always Encrypted with secure enclaves](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) 를 참조 하세요.
+
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>암호화된 열에서 데이터 검색 및 수정
 
@@ -148,7 +161,7 @@ CREATE TABLE [dbo].[Patients](
 - 이 드라이버는 SSN 및 BirthDate 열에서 검색한 데이터의 암호를 투명하게 해독하므로 프로그램에서 인쇄한 모든 값은 일반 텍스트로 표시됩니다.
 
 > [!NOTE]
-> 암호화가 결정적인 경우에만 쿼리에서 암호화된 열에 대해 동등 비교를 수행할 수 있습니다. 자세한 내용은 [결정적 또는 임의 암호화 선택](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)을 참조하세요.
+> 암호화가 결정적 이거나 secure enclave가 사용 하도록 설정 된 경우에만 쿼리에서 암호화 된 열에 대 한 같음 비교를 수행할 수 있습니다. 자세한 내용은 [결정적 또는 임의 암호화 선택](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)을 참조하세요.
 
 ```
 SQLCHAR SSN[12];
@@ -579,7 +592,7 @@ ODBC Driver 17 for SQL Server부터 Always Encrypted에서 [SQL 대량 복사 �
 
 |속성|설명|  
 |----------|-----------------|  
-|`ColumnEncryption`|허용되는 값은 `Enabled`/`Disabled`입니다.<br>`Enabled` - 연결에 상시 암호화 기능을 사용하도록 설정합니다.<br>`Disabled` - 연결에 Always Encrypted 기능을 사용하지 않도록 설정합니다. <br><br>기본값은 `Disabled`입니다.|  
+|`ColumnEncryption`|허용되는 값은 `Enabled`/`Disabled`입니다.<br>`Enabled` - 연결에 상시 암호화 기능을 사용하도록 설정합니다.<br>`Disabled` - 연결에 Always Encrypted 기능을 사용하지 않도록 설정합니다.<br>*유형*,*데이터* --(버전 17.4 이상)를 사용 하면 보안 enclave 및 증명 프로토콜 *유형*및 연결 된 증명 데이터 *데이터*를 사용 하 여 Always Encrypted 수 있습니다. <br><br>기본값은 `Disabled`입니다.|
 |`KeyStoreAuthentication` | 유효한 값: `KeyVaultPassword`,`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | `KeyStoreAuthentication` = `KeyVaultPassword`이면, 이 값을 유효한 Azure Active Directory 사용자 계정 이름으로 설정합니다. <br>`KeyStoreAuthetication` = `KeyVaultClientSecret`이면, 이 값을 유효한 Azure Active Directory 애플리케이션 클라이언트 ID로 설정합니다. |
 |`KeyStoreSecret` | `KeyStoreAuthentication` = `KeyVaultPassword`이면, 이 값을 해당 사용자 이름의 암호로 설정합니다. <br>`KeyStoreAuthentication` = `KeyVaultClientSecret`이면, 이 값을 유효한 Azure Active Directory 애플리케이션 클라이언트 ID와 관련된 애플리케이션 비밀로 설정합니다. |
@@ -589,7 +602,7 @@ ODBC Driver 17 for SQL Server부터 Always Encrypted에서 [SQL 대량 복사 �
 
 |속성|형식|설명|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|연결 전|`SQL_COLUMN_ENCRYPTION_DISABLE`(0) - Always Encrypted를 사용하지 않도록 설정합니다. <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1) - Always Encrypted를 사용하도록 설정합니다.|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|연결 전|`SQL_COLUMN_ENCRYPTION_DISABLE`(0) - Always Encrypted를 사용하지 않도록 설정합니다. <br>`SQL_COLUMN_ENCRYPTION_ENABLE`(1) - Always Encrypted를 사용하도록 설정합니다.<br> *형식*에 대 한 포인터,*데이터* 문자열--(버전 17.4 이상)에서 secure enclave를 사용 하도록 설정|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|연결 후|[Set] CEKeystoreProvider 로드 시도<br>[Get] CEKeystoreProvider 이름 반환|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|연결 후|[Set] CEKeystoreProvider에 데이터 쓰기<br>[Get] CEKeystoreProvider에서 데이터 읽기|
 |`SQL_COPT_SS_CEKCACHETTL`|연결 후|[Set] CEK 캐시 TTL 설정<br>[Get] 현재 CEK 캐시 TTL 가져오기|
@@ -607,7 +620,7 @@ ODBC Driver 17 for SQL Server부터 Always Encrypted에서 [SQL 대량 복사 �
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD(2바이트)|0|0(기본값)인 경우: 이 매개 변수의 암호화가 암호화 메타데이터의 사용 가능 여부에 따라 결정됩니다.<br><br>0이 아닌 경우: 이 매개 변수에 대한 암호화 메타데이터를 사용할 수 있으면 암호화됩니다. 암호화 메타데이터를 사용할 수 없으면 다음 오류가 발생하고 요청이 실패합니다. [CE300] [Microsoft][ODBC Driver 13 for SQL Server]매개 변수에 대해 필수 암호화가 지정되었지만 서버에서 제공된 암호화 메타데이터가 없습니다.|
 
-### <a name="bcpcontrol-options"></a>bcp_control 옵션
+### <a name="bcp_control-options"></a>bcp_control 옵션
 
 |옵션 이름|기본값|설명|
 |-|-|-|
@@ -616,5 +629,6 @@ ODBC Driver 17 for SQL Server부터 Always Encrypted에서 [SQL 대량 복사 �
 ## <a name="see-also"></a>참고 항목
 
 - [Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [보안 enclave를 사용한 Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [상시 암호화 블로그](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 

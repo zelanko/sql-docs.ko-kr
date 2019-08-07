@@ -7,14 +7,14 @@ ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264150"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742795"
 ---
 # <a name="programming-guidelines"></a>프로그래밍 지침
 
@@ -64,7 +64,7 @@ ODBC([SQL Server Native Client(ODBC)](https://go.microsoft.com/fwlink/?LinkID=13
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect  
+-   SQLBrowseConnect (버전 17.2 이전)
 -   SQL_C_INTERVAL_YEAR_TO_MONTH와 같은 C 간격 유형([데이터 형식 식별자 및 설명자](https://msdn.microsoft.com/library/ms716351(VS.85).aspx)에 설명됨)
 -   SQLSetConnectAttr 함수의 SQL_ATTR_ODBC_CURSORS 특성에 대한 SQL_CUR_USE_ODBC 값입니다.
 
@@ -116,6 +116,12 @@ SQLBindParameter를 사용하여 입력 매개 변수를 바인딩하는 경우 
 Windows와 Linux 및 macOS 기반 iconv 라이브러의 여러 버전 간에는 인코딩 변환에서 몇 가지 차이점이 있습니다. 코드 페이지 1255(히브리어)의 텍스트 데이터에는 유니코드로 변환하면 다르게 동작하는 하나의 코드 포인트(0xCA)가 있습니다. Windows의 경우 이 문자는 UTF-16 코드 포인트 0x05BA로 변환됩니다. 1\.15 이전 버전 libiconv를 포함하는 macOS 및 Linux의 경우 0x00CA로 변환됩니다. 2003 개정판 Big5/CP950(`BIG5-2003`)을 지원하지 않는 iconv 라이브러리를 포함하는 Linux의 경우 해당 개정판에서 추가된 문자는 올바르게 변환되지 않습니다. 코드 페이지 932(일본어, Shift-JIS)의 경우 원래 인코딩 표준에 정의되지 않은 문자를 해독한 결과도 다릅니다. 예를 들어 바이트 0x80은 Windows에서 U+0080으로 변환되지만 Linux 및 macOS에서는 iconv 버전에 따라 U+30FB가 될 수 있습니다.
 
 ODBC 드라이버 13 및 13.1에서 UTF-8 멀티바이트 문자 또는 UTF-16 서로게이트가 SQLPutData 버퍼로 분할되면 데이터 손상이 발생합니다. 버퍼를 부분 문자 인코딩으로 끝나지 않는 SQLPutData 스트리밍에 사용합니다. 이 제한 사항은 ODBC 드라이버 17에서 제거되었습니다.
+
+## <a name="bkmk-openssl"></a>OpenSSL
+버전 17.4부터 드라이버는 OpenSSL를 동적으로 로드 하므로 별도의 드라이버 파일을 사용 하지 않고 버전 1.0 또는 1.1를 사용 하는 시스템에서 실행할 수 있습니다. 여러 버전의 OpenSSL가 있는 경우 드라이버에서 최신 버전의 로드를 시도 합니다. 드라이버는 현재 OpenSSL 1.0. x 및 1.1. x를 지원 합니다.
+
+> [!NOTE]  
+> 드라이버 또는 해당 구성 요소 중 하나를 사용 하는 응용 프로그램이 서로 다른 버전의 OpenSSL를 연결 하거나 동적으로 로드 하는 경우 잠재적인 충돌이 발생할 수 있습니다. 여러 버전의 OpenSSL가 시스템에 있고 응용 프로그램에서이를 사용 하는 경우, 오류가 발생 하 여 메모리를 손상 시킬 수 있으므로 응용 프로그램 및 드라이버에 의해 로드 된 버전이 일치 하지 않는지 확인 하는 것이 좋습니다. 는 명확 하거나 일관 된 방식으로 매니페스트가 아닐 수도 있습니다.
 
 ## <a name="additional-notes"></a>참고 사항  
 

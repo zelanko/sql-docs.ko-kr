@@ -7,15 +7,15 @@ ms.prod_service: connectivity
 ms.reviewer: MightyPen
 ms.technology: connectivity
 ms.topic: conceptual
-author: karinazhou
+author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6f6cdc23073585f5a9a6a8cee0c3fc779f7ca27a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d2587a6150807841edc9773478f1b798ee60d84
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63190578"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742809"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server에 대한 릴리스 정보
 
@@ -35,6 +35,15 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+## <a name="174-august-2019"></a>17.4, 2019 년 8 월
+
+| 추가된 기능 | 세부 정보 |
+| :------------ | :------ |
+| 보안 Enclave를 사용한 Always Encrypted. | [Always Encrypted와 ODBC 드라이버 사용](../using-always-encrypted-with-the-odbc-driver.md)을 참조하세요. |
+| OpenSSL의 동적 로드 | [프로그래밍 지침](programming-guidelines.md#bkmk-openssl)을 참조하세요. |
+| 구성 가능한 TCP 연결 유지 설정입니다. | [SQL Server에 연결](connection-string-keywords-and-data-source-names-dsns.md)을 참조하세요. |
+| 버그 수정. | [버그 수정](../bug-fixes.md)을 참조하세요. |
+| &nbsp; | &nbsp; |
 
 ## <a name="173-february-2019"></a>17.3, 2019년 2월
 

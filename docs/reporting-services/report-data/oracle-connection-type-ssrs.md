@@ -1,6 +1,6 @@
 ---
-title: Oracle 연결 형식(SSRS) | Microsoft Docs
-ms.date: 01/11/2017
+title: Oracle 연결 형식 (SSRS, Power BI Report Server 및 보고서 작성기) | Microsoft Docs
+ms.date: 07/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -8,39 +8,49 @@ ms.topic: conceptual
 ms.assetid: 9db86dd2-beda-42d8-8af7-2629d58a8e3d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 67cb43743f8153a39d28af26807ddea98955674e
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 2942ad1432b2674ab0b9906b5ab6e2f07be83ae7
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66499554"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632079"
 ---
-# <a name="oracle-connection-type-ssrs"></a>Oracle 연결 형식(SSRS)
-보고서에서 Oracle 데이터베이스의 데이터를 사용하려면 Oracle 유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 Oracle Data Provider를 사용하며 Oracle 클라이언트 소프트웨어 구성 요소를 필요로 합니다.
+# <a name="oracle-connection-type-ssrs-power-bi-report-server-and-report-builder"></a>Oracle 연결 형식 (SSRS, Power BI Report Server 및 보고서 작성기)
 
-Oracle 클라이언트 도구를 설치하기 위해 다음을 수행할 수 있습니다.
- 
-1.  [Oracle의 다운로드 사이트](https://www.oracle.com/downloads/)로 이동
-2.  Windows(서버에 대해 64비트, 도구에 대해 32비트)용 ODAC 12c 릴리스 4(12.1.0.2.4) 다운로드
-3.  Data Provider for .NET 4 설치
-  
+보고서에서 Oracle 데이터베이스의 데이터를 사용하려면 Oracle 유형의 보고서 데이터 원본을 기반으로 하는 데이터 세트가 있어야 합니다. 이 기본 제공 데이터 원본 유형은 Oracle Data Provider를 사용하며 Oracle 클라이언트 소프트웨어 구성 요소를 필요로 합니다. 이 문서에서는 Reporting Services, Power BI Report Server 및 보고서 작성기에 대 한 드라이버를 다운로드 하 고 설치 하는 방법을 설명 합니다.
+
+## <a name="64-bit-drivers-for-the-report-servers"></a>보고서 서버용 64 비트 드라이버
+
+Power BI Report Server 및 SQL Server Reporting Services 2016 및 2017는 모두 관리 되는 ODP.NET을 사용 합니다. 다음 단계는 최신 18x 드라이버를 사용 하는 경우에만 필요 합니다. C:\oracle64.에 파일을 설치 했다고 가정 합니다.
+
+1. Oracle 다운로드 사이트에서 [oracle 64-BIT ODAC Oracle Universal Installer (oua)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdeploy-4242173.html)를 설치 합니다. 
+2. ODP.NET 관리 클라이언트를 GAC: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: gac/providerpath: C:\oracle64\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll에 등록 합니다.
+3. ODP.NET 관리 되는 클라이언트 항목을 machine.config에 추가: C:\oracle64\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: config/force/제품: odpm/frameworkversion: v 4.0.30319/productversion: 4.122.18.3
+
+## <a name="32-bit-drivers-for-report-builder"></a>보고서 작성기에 대 한 32 비트 드라이버
+다음 단계는 최신 18x 드라이버를 사용 하는 경우에만 필요 합니다. C:\oracle32.에 파일을 설치 했다고 가정 합니다.
+
+1. Oracle 다운로드 사이트에서 [oracle 32-BIT ODAC Oracle Universal Installer (oua)](https://www.oracle.com/technetwork/topics/dotnet/downloads/odacdev-4242174.html)를 설치 합니다.
+2. ODP.NET 관리 클라이언트를 GAC: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: gac/providerpath: C:\oracle32\product\18.0.0\client_1\odp.net\managed\common\Oracle.ManagedDataAccess.dll에 등록 합니다.
+3. ODP.NET 관리 되는 클라이언트 항목을 machine.config에 추가: C:\oracle32\product\18.0.0\client_1\odp.net\bin\4\OraProvCfg.exe/action: config/force/제품: odpm/frameworkversion: v 4.0.30319/productversion: 4.122.18.3
+
  이 항목의 정보를 사용하여 데이터 원본을 작성할 수 있습니다. 단계별 지침은 [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="Connection"></a> 연결 문자열  
- 데이터 원본 연결에 사용할 자격 증명 및 연결 정보는 데이터베이스 관리자에게 문의하십시오. 다음 연결 문자열 예에서는 유니코드를 사용하는 "Oracle9"라는 서버의 Oracle 데이터베이스를 지정합니다. 서버 이름은 Tnsnames.ora 구성 파일에 Oracle 서버 인스턴스 이름으로 정의되어 있는 이름과 일치해야 합니다.  
+ 데이터 원본 연결에 사용할 자격 증명 및 연결 정보는 데이터베이스 관리자에게 문의하십시오. 다음 연결 문자열 예에서는 유니코드를 사용하는 "Oracle18"이라는 서버의 Oracle 데이터베이스를 지정합니다. 서버 이름은 Tnsnames.ora 구성 파일에 Oracle 서버 인스턴스 이름으로 정의되어 있는 이름과 일치해야 합니다.  
   
 ```  
 Data Source="Oracle"; Unicode="True"  
 ```  
   
- 연결 문자열 예제에 대한 자세한 내용은 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
+ 연결 문자열 예제는 [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)을 참조하세요.  
   
 ##  <a name="Credentials"></a> 자격 증명  
  쿼리를 실행하거나 보고서를 로컬로 미리 보거나 보고서 서버의 보고서를 미리 보려면 자격 증명이 필요합니다.  
   
  보고서를 게시한 후 보고서를 보고서 서버에서 실행할 때 데이터를 검색할 수 있는 권한이 유효하도록 데이터 원본에 대한 자격 증명을 변경해야 할 수도 있습니다.  
   
- 자세한 내용은 [데이터 연결, 데이터 원본 및 연결 문자열 &#40;보고서 작성기 및 SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) 하거나 [보고서데이터원본에대한연결정보와자격증명지정](specify-credential-and-connection-information-for-report-data-sources.md).  
+ 자세한 내용은 [보고서 데이터 원본에 대한 자격 증명 및 연결 정보 지정](specify-credential-and-connection-information-for-report-data-sources.md)을 참조하세요.  
   
   
 ##  <a name="Query"></a> 쿼리  
@@ -59,52 +69,26 @@ Data Source="Oracle"; Unicode="True"
   
  자세한 내용은 다음 항목을 참조하세요.  
   
--   msdn.microsoft.com의[.NET Framework Data Provider for Oracle 사용](https://go.microsoft.com/fwlink/?LinkId=112314)  
-  
 -   [Reporting Services를 사용한 Oracle 데이터 원본 구성 및 액세스 방법](https://support.microsoft.com/kb/834305)  
-  
 -   [NETWORK SERVICE 보안 주체에 대한 사용 권한을 추가하는 방법](https://support.microsoft.com/kb/870668)  
   
-###### <a name="alternate-data-extensions"></a>대체 데이터 확장 프로그램  
+### <a name="alternate-data-extensions"></a>대체 데이터 확장 프로그램 
+ 
  OLE DB 데이터 원본 유형을 사용하여 Oracle 데이터베이스에서 데이터를 검색할 수도 있습니다. 자세한 내용은 [OLE DB 연결 형식&#40;SSRS&#41;](../../reporting-services/report-data/ole-db-connection-type-ssrs.md)을 참조하세요.  
-  
-###### <a name="report-models"></a>보고서 모델  
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions" 
+### <a name="report-models"></a>보고서 모델  
+
  Oracle 데이터베이스를 기반으로 모델을 만들 수도 있습니다.  
+::: moniker-end
+   
+### <a name="platform-and-version-information"></a>플랫폼 및 버전 정보  
+
+ 플랫폼 및 버전 지원에 대한 자세한 내용은 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md)을 참조하세요.  
+
   
-###### <a name="platform-and-version-information"></a>플랫폼 및 버전 정보  
- 플랫폼 및 버전 지원에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서에서 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
-  
-  
-##  <a name="HowTo"></a> 방법 도움말 항목  
- 이 섹션에서는 데이터 연결, 데이터 원본 및 데이터 세트를 사용하는 방법을 단계별로 설명합니다.  
-  
- [데이터 연결 추가 및 확인&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
-  
- [공유 데이터 세트 또는 포함된 데이터 세트 만들기&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
-  
- [데이터 세트에 필터 추가&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
-  
-  
-##  <a name="Related"></a> 관련 단원  
- 설명서의 다음 섹션에서는 보고서 데이터에 대한 깊이 있는 개념 정보를 제공하며, 데이터와 관련된 보고서 부분을 정의, 사용자 지정 및 사용하는 방법을 절차적인 측면에서 소개합니다.  
-  
- [보고서 데이터 세트&#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
- 보고서의 데이터 액세스에 대한 개요를 제공합니다.  
-  
- [보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
- 데이터 연결 및 데이터 원본에 대한 정보를 제공합니다.  
-  
- [보고서 포함된 데이터 세트 및 공유 데이터 세트&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
- 포함된 데이터 세트 및 공유 데이터 세트에 대한 정보를 제공합니다.  
-  
- [데이터 세트 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
- 쿼리에 의해 생성되는 데이터 세트 필드 컬렉션에 대한 정보를 제공합니다.  
-  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?linkid=121312)에 있는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설명서의 [Reporting Services&#40;SSRS&#41;에서 지원하는 데이터 원본](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md).  
- 각 데이터 확장 프로그램의 플랫폼 및 버전 지원에 대한 자세한 정보를 제공합니다.  
-  
-  
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
+
  [보고서 매개 변수&#40;보고서 작성기 및 보고서 디자이너&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)   
  [데이터 필터링, 그룹화 및 정렬&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [식&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/expressions-report-builder-and-ssrs.md)  
