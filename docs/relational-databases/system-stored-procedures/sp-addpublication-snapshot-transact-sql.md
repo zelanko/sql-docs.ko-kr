@@ -1,5 +1,5 @@
 ---
-title: sp_addpublication_snapshot (TRANSACT-SQL) | Microsoft Docs
+title: sp_addpublication_snapshot (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/15/2018
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 4fbba559eceae58483419c0f1e3826b9db79bef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061829"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769107"
 ---
-# <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+# <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot(Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   지정된 게시에 대해 스냅샷 에이전트를 만듭니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
   
@@ -57,9 +57,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @publication = ] 'publication'` 게시의 이름이입니다. *게시* 됩니다 **sysname**, 기본값은 없습니다.  
+`[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @frequency_type = ] frequency_type` 스냅숏 에이전트가 실행 되는 빈도. *frequency_type* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @frequency_type = ] frequency_type`스냅숏 에이전트 실행 되는 빈도입니다. *frequency_type* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -71,19 +71,19 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**64**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 시작될 때|  
 |**128**|컴퓨터가 유휴 상태일 때 실행|  
   
-`[ @frequency_interval = ] frequency_interval` 설정 된 빈도에 적용 하려면 값인 *frequency_type*합니다. *frequency_interval* 됩니다 **int**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @frequency_interval = ] frequency_interval`*Frequency_type*에 의해 설정 된 빈도에 적용 되는 값입니다. *frequency_interval* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |frequency_type 값|frequency_interval에 미치는 영향|  
 |------------------------------|-----------------------------------|  
-|**1**|*frequency_interval* 사용 되지 않습니다.|  
-|**4** (기본값)|모든 *frequency_interval* 일 이며 기본값은 매일입니다.|  
-|**8**|*frequency_interval* 은 다음 중 하나 이상을 (결합을 [ &#124; (비트 OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 논리 연산자).<br /><br /> **1** = 일요일&#124;<br /><br /> **2** = 월요일&#124;<br /><br /> **4** = 화요일&#124;<br /><br /> **8** = 수요일&#124;<br /><br /> **16** = 목요일&#124;<br /><br /> **32** = 금요일&#124;<br /><br /> **64** = 토요일|  
-|**16**|에 *frequency_interval* 월의 일입니다.|  
-|**32**|*frequency_interval* 다음 중 하나입니다.<br /><br /> **1** = 일요일&#124;<br /><br /> **2** = 월요일&#124;<br /><br /> **3** = 화요일&#124;<br /><br /> **4** = 수요일&#124;<br /><br /> **5** = 목요일&#124;<br /><br /> **6** = 금요일&#124;<br /><br /> **7** = 토요일&#124;<br /><br /> **8** = 일&#124;<br /><br /> **9** = 평일&#124;<br /><br /> **10** = 주말|  
-|**64**|*frequency_interval* 사용 되지 않습니다.|  
-|**128**|*frequency_interval* 사용 되지 않습니다.|  
+|**1**|*frequency_interval* 가 사용 되지 않습니다.|  
+|**4** (기본값)|*Frequency_interval* 일 마다 기본값은 매일입니다.|  
+|**8**|*frequency_interval* 는 [ &#124; (비트 or)](../../t-sql/language-elements/bitwise-or-transact-sql.md) 논리 연산자와 결합 된 다음 중 하나 이상입니다.<br /><br /> **1** = 일요일&#124;<br /><br /> **2** = 월요일&#124;<br /><br /> **4** = 화요일&#124;<br /><br /> **8** = 수요일&#124;<br /><br /> **16** = 목요일&#124;<br /><br /> **32** = 금요일&#124;<br /><br /> **64** = 토요일|  
+|**16**|월의 *frequency_interval* 일|  
+|**32**|*frequency_interval* 은 다음 중 하나입니다.<br /><br /> **1** = 일요일&#124;<br /><br /> **2** = 월요일&#124;<br /><br /> **3** = 화요일&#124;<br /><br /> **4** = 수요일&#124;<br /><br /> **5** = 목요일&#124;<br /><br /> **6** = 금요일&#124;<br /><br /> **7** = 토요일&#124;<br /><br /> **8** = 일&#124;<br /><br /> **9** = 평일&#124;<br /><br /> **10** = 주말|  
+|**64**|*frequency_interval* 가 사용 되지 않습니다.|  
+|**128**|*frequency_interval* 가 사용 되지 않습니다.|  
   
-`[ @frequency_subday = ] frequency_subday` 단위입니다 *freq_subday_interval*합니다. *frequency_subday* 됩니다 **int**, 이며 다음이 값 중 하나일 수 있습니다.  
+`[ @frequency_subday = ] frequency_subday`*Freq_subday_interval*에 대 한 단위입니다. *frequency_subday* 은 **int**이며 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -92,64 +92,64 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |**4** (기본값)|Minute|  
 |**8**|Hour|  
   
-`[ @frequency_subday_interval = ] frequency_subday_interval` 에 대 한 간격인 *frequency_subday*합니다. *frequency_subday_interval* 됩니다 **int**, 기본값은 5 이며 5 분 마다 의미입니다.  
+`[ @frequency_subday_interval = ] frequency_subday_interval`*Frequency_subday*에 대 한 간격입니다. *frequency_subday_interval* 은 **int**이며 기본값은 5 분 마다입니다.  
   
-`[ @frequency_relative_interval = ] frequency_relative_interval` 스냅숏 에이전트가 실행 될 날짜가입니다. *frequency_relative_interval* 됩니다 **int**, 기본값은 1입니다.  
+`[ @frequency_relative_interval = ] frequency_relative_interval`스냅숏 에이전트 실행 되는 날짜입니다. *frequency_relative_interval* 은 **int**이며 기본값은 1입니다.  
   
-`[ @frequency_recurrence_factor = ] frequency_recurrence_factor` 사용 하는 되풀이 비율 *frequency_type*합니다. *frequency_recurrence_factor* 됩니다 **int**, 기본값은 0입니다.  
+`[ @frequency_recurrence_factor = ] frequency_recurrence_factor`*Frequency_type*에서 사용 하는 되풀이 비율입니다. *frequency_recurrence_factor* 은 **int**이며 기본값은 0입니다.  
   
-`[ @active_start_date = ] active_start_date` 가 경우 스냅숏 에이전트 첫 번째 예약 된 날짜 이며 YYYYMMDD 형식으로 합니다. *active_start_date* 됩니다 **int**, 기본값은 0입니다.  
+`[ @active_start_date = ] active_start_date`스냅숏 에이전트 처음으로 예약 된 날짜 이며 YYYYMMDD 형식으로 표시 됩니다. *active_start_date* 은 **int**이며 기본값은 0입니다.  
   
-`[ @active_end_date = ] active_end_date` 날짜에서 스냅숏 에이전트가 예약 된 형식은 YYYYMMDD입니다. *active_end_date* 됩니다 **int**, 이며 기본값은 99991231 의미 하는 12 월 31 일에서 9999입니다.  
+`[ @active_end_date = ] active_end_date`스냅숏 에이전트가 마지막으로 예약 된 날짜 이며 YYYYMMDD 형식으로 표시 됩니다. *active_end_date* 는 **int**이며 기본값은 9999 년 12 월 31 일을 의미 하는 99991231입니다.  
   
-`[ @active_start_time_of_day = ] active_start_time_of_day` 스냅숏 에이전트가 처음 하루 중 시간 예약 된 hhmmss입니다. *active_start_time_of_day* 됩니다 **int**, 기본값은 0입니다.  
+`[ @active_start_time_of_day = ] active_start_time_of_day`하루 중 스냅숏 에이전트 처음으로 예약 된 시간이 며 HHMMSS 형식으로 표시 됩니다. *active_start_time_of_day* 은 **int**이며 기본값은 0입니다.  
   
-`[ @active_end_time_of_day = ] active_end_time_of_day` 하루 중 스냅숏 에이전트에 예약 된 형식은 HHMMSS입니다. *active_end_time_of_day* 됩니다 **int**, 이며 기본값은 235959 의미 하는 오후 11시 59분: 59 235959입니다.  
+`[ @active_end_time_of_day = ] active_end_time_of_day`하루 중 스냅숏 에이전트이 예약 된 시간이 며 HHMMSS 형식으로 표시 됩니다. *active_end_time_of_day* 은 **int**이며 기본값은 235959입니다 .이는 11:59:59를 의미 합니다. 235959입니다.  
   
-`[ @snapshot_job_name = ] 'snapshot_agent_name'` 기존 작업을 사용 하는 경우 기존 스냅숏 에이전트 작업의 이름이입니다. *snapshot_agent_name* 됩니다 **nvarchar(100)** 이며 기본값은 NULL입니다. 이 매개 변수는 내부용이고 새 게시를 만들 때 지정되지 않아야 합니다. 하는 경우 *snapshot_agent_name* 을 지정한 경우 *job_login* 하 고 *job_password* NULL 이어야 합니다.  
+`[ @snapshot_job_name = ] 'snapshot_agent_name'`기존 작업을 사용 하는 경우 기존 스냅숏 에이전트 작업 이름의 이름입니다. *snapshot_agent_name* 은 **nvarchar (100)** 이며 기본값은 NULL입니다. 이 매개 변수는 내부용이고 새 게시를 만들 때 지정되지 않아야 합니다. *Snapshot_agent_name* 가 지정 된 경우 *job_login* 및 *job_password* 는 NULL 이어야 합니다.  
   
-`[ @publisher_security_mode = ] publisher_security_mode` 보안 모드는 에이전트에서 게시자에 연결할 때. *publisher_security_mode* 됩니다 **smallint**, 기본값은 1입니다. **0** 지정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 하 고 **1** Windows 인증을 지정 합니다. 값이 **0** 를 지정 해야 이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`게시자에 연결할 때 에이전트가 사용 하는 보안 모드입니다. *publisher_security_mode* 은 **smallint**이며 기본값은 1입니다. **0** 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 지정 하 고, **1** 은 Windows 인증을 지정 합니다. 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 대해 **0** 값을 지정 해야 합니다. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
-`[ @publisher_login = ] 'publisher_login'` 로그인에 게시자에 연결할 때 사용 됩니다. *publisher_login* 됩니다 **sysname**, 기본값은 NULL입니다. *publisher_login* 시기를 지정 해야 합니다 *publisher_security_mode* 됩니다 **0**합니다. 하는 경우 *publisher_login* 가 NULL 및 *publisher_security_mode* 됩니다 **1**에 지정 된 계정이 *job_login* 때 사용할 게시자에 연결합니다.  
+`[ @publisher_login = ] 'publisher_login'`게시자에 연결할 때 사용 되는 로그인입니다. *publisher_login* 는 **sysname**이며 기본값은 NULL입니다. *publisher_security_mode* 가 **0**일 경우 *publisher_login* 을 지정 해야 합니다. *Publisher_login* 가 NULL이 고 *publisher_security_mode* 가 **1**이면 게시자에 연결할 때 *job_login* 에 지정 된 계정이 사용 됩니다.  
   
-`[ @publisher_password = ] 'publisher_password'` 게시자에 연결할 때 암호가 사용 됩니다. *publisher_password* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher_password = ] 'publisher_password'`게시자에 연결할 때 사용 되는 암호입니다. *publisher_password* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!IMPORTANT]  
 >  스크립트 파일에 인증 정보를 저장하지 않도록 합니다. 보안 향상을 위해 런타임에 로그인 이름과 암호를 제공하는 것이 좋습니다.  
   
-`[ @job_login = ] 'job_login'` 에이전트가 실행 되는 계정에 대 한 로그인이입니다. Azure SQL Database Managed Instance, SQL Server 계정을 사용 합니다. *job_login* 됩니다 **nvarchar(257)** , 기본값은 NULL입니다. 이 계정은 배포자에 에이전트 연결에 대해 항상 사용 됩니다. 새 스냅샷 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다.  
+`[ @job_login = ] 'job_login'`에이전트를 실행 하는 계정에 대 한 로그인입니다. Azure SQL Database Managed Instance에서 SQL Server 계정을 사용 합니다. *job_login* 은 **nvarchar (257)** 이며 기본값은 NULL입니다. 이 계정은 항상 배포자에 대 한 에이전트 연결에 사용 됩니다. 새 스냅샷 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다.  
   
 > [!NOTE]
->  에 대 한 비 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자에 지정 된 동일한 로그인 이어야 합니다 [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)합니다.  
+>  이외 게시자의 경우이는 [sp_adddistpublisher &#40;&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)에 지정 된 것과 동일한 로그인 이어야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-`[ @job_password = ] 'job_password'` 에이전트가 실행 되는 Windows 계정의 암호가입니다. *job_password* 됩니다 **sysname**, 기본값은 없습니다. 새 스냅샷 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다.  
+`[ @job_password = ] 'job_password'`에이전트를 실행 하는 Windows 계정의 암호입니다. *job_password* 는 **sysname**이며 기본값은 없습니다. 새 스냅샷 에이전트 작업을 만들 때는 이 매개 변수를 제공해야 합니다.  
   
 > [!IMPORTANT]  
 >  스크립트 파일에 인증 정보를 저장하지 않도록 합니다. 보안 향상을 위해 런타임에 로그인 이름과 암호를 제공하는 것이 좋습니다.  
   
-`[ @publisher = ] 'publisher'` 지정 된 비- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다. *게시자* 됩니다 **sysname**, 기본값은 NULL입니다.  
+`[ @publisher = ] 'publisher'`이외 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 합니다. *publisher* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
->  *게시자* 해서는 안에서 스냅숏 에이전트를 만들 때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자입니다.  
+>  게시자에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 스냅숏 에이전트를 만들 때 게시자를 사용 하면 안 됩니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_addpublication_snapshot** 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
+ **sp_addpublication_snapshot** 는 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
 ## <a name="example"></a>예제  
  [!code-sql[HowTo#sp_AddTranPub](../../relational-databases/replication/codesnippet/tsql/sp-addpublication-snapsh_1.sql)]  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할 또는 **db_owner** 고정된 데이터베이스 역할을 실행할 수 있습니다 **sp_addpublication_snapshot**합니다.  
+ **Sysadmin** 고정 서버 역할 또는 **db_owner** 고정 데이터베이스 역할의 멤버만이 **sp_addpublication_snapshot**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
- [스냅숏 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
- [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
- [sp_changepublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
- [sp_startpublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
+ [스냅샷 만들기 및 적용](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)   
+ [sp_addpublication &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
+ [sp_changepublication_snapshot &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)   
+ [sp_startpublication_snapshot &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

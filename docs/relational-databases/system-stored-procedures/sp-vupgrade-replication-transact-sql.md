@@ -1,5 +1,5 @@
 ---
-title: sp_vupgrade_replication (TRANSACT-SQL) | Microsoft Docs
+title: sp_vupgrade_replication (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: d2c0ed66-07d1-4adc-82e5-a654376879bc
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 66ee4819e8830fd718334d4a094ec22c01bf069d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f6b2c736087b2f860bf8419264904e8669ba8951
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927800"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771554"
 ---
-# <a name="spvupgradereplication-transact-sql"></a>sp_vupgrade_replication(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_vupgrade_replication-transact-sql"></a>sp_vupgrade_replication(Transact-SQL)
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   복제 서버를 업그레이드할 때 설치 프로그램에 의해 활성화됩니다. 현재 제품 수준에서 복제를 지원하기 위해 필요한 경우 스키마 및 시스템 데이터를 업그레이드합니다. 시스템 및 사용자 데이터베이스에서 새로운 복제 시스템 개체를 만듭니다. 이 저장 프로시저는 복제 업그레이드가 수행될 컴퓨터에서 실행됩니다.  
   
@@ -41,12 +41,12 @@ sp_vupgrade_replication [ [@login=] 'login' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @login = ] 'login'` 배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 로그인이입니다. *login*은 **sysname**이며 기본값은 NULL입니다. 경우에이 매개 변수가 필요 하지 않습니다 *security_mode* 로 설정 된 **1**, Windows 인증이 있는 합니다.  
+`[ @login = ] 'login'`배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 로그인입니다. *login*은 **sysname**이며 기본값은 NULL입니다. *Security_mode* 가 Windows 인증용 **1**로 설정 된 경우에는이 매개 변수가 필요 하지 않습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드할 경우 이 매개 변수가 무시됩니다.  
   
-`[ @password = ] 'password'` 배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 암호가입니다. *암호* 됩니다 **sysname**, 기본값은 **'** (빈 문자열)입니다. 경우에이 매개 변수가 필요 하지 않습니다 *security_mode* 로 설정 된 **1**, Windows 인증이 있는 합니다.  
+`[ @password = ] 'password'`배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 시스템 관리자 암호입니다. *password* 는 **sysname**이며 기본값은 **' '** (빈 문자열)입니다. *Security_mode* 가 Windows 인증용 **1**로 설정 된 경우에는이 매개 변수가 필요 하지 않습니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드할 경우 이 매개 변수가 무시됩니다.  
@@ -57,7 +57,7 @@ sp_vupgrade_replication [ [@login=] 'login' ]
   
 `[ @force_remove = ] 'force_removal'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @security_mode = ] 'security_mode'` 배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 로그인 보안 모드가입니다. *security_mode* 됩니다 **비트** 이며 기본값은 **0**합니다. 하는 경우 **0**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용 합니다. 하는 경우 **1**, Windows 인증을 사용 합니다.  
+`[ @security_mode = ] 'security_mode'`배포 데이터베이스에서 새 시스템 개체를 만들 때 사용할 로그인 보안 모드입니다. *security_mode* 는 **bit** 이며 기본값은 **0**입니다. 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인 경우 인증이 사용 됩니다. **1**인 경우 Windows 인증이 사용 됩니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이상 버전으로 업그레이드할 경우 이 매개 변수가 무시됩니다.  
@@ -66,10 +66,10 @@ sp_vupgrade_replication [ [@login=] 'login' ]
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_vupgrade_replication** 모든 유형의 복제를 업그레이드 하는 경우에 사용 됩니다.  
+ **sp_vupgrade_replication** 는 모든 유형의 복제를 업그레이드할 때 사용 됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 멤버는 **sysadmin** 고정된 서버 역할을 실행할 수 있습니다 **sp_vupgrade_replication**합니다.  
+ **Sysadmin** 고정 서버 역할의 멤버만 **sp_vupgrade_replication**을 실행할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
