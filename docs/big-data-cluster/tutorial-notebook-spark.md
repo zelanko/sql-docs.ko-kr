@@ -1,7 +1,7 @@
 ---
-title: 샘플 노트북을 실행 합니다. | Microsoft Docs
+title: 샘플 Notebook 실행 | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: 이 자습서에서는 실행을 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 샘플 Spark 노트북을 로드할 수 있습니다 하는 방법을 보여 줍니다.
+description: 이 자습서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)에서 샘플 Spark Notebook을 로드 및 실행하는 방법을 보여 줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,20 +10,20 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: ab558194a67118719c144ea20f9e97496d2cb478
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957739"
 ---
-# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 notebook 실행
+# <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 샘플 Notebook 실행
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 자습서에는 로드 하 고 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 Azure Data Studio에서 notebook을 실행 하는 방법을 보여 줍니다. 이렇게 하면 데이터 과학자 및 데이터 엔지니어가 클러스터에 대해 Python, R 또는 Scala 코드를 실행할 수 있습니다.
+이 자습서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)의 Azure Data Studio에서 Notebook을 로드 및 실행하는 방법을 보여 줍니다. 이를 통해 데이터 과학자 및 데이터 엔지니어가 클러스터에 대해 Python, R 또는 Scala 코드를 실행할 수 있습니다.
 
 > [!TIP]
-> 원한다 면 다운로드 하 고이 자습서의 명령에 대 한 스크립트를 실행할 수 있습니다. 지침은 합니다 [Spark 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark) github입니다.
+> 원하는 경우 이 자습서의 명령에 대한 스크립트를 다운로드하여 실행할 수 있습니다. 지침에 대해서는 GitHub의 [Spark 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark)을 참조하세요.
 
 ## <a id="prereqs"></a> 사전 요구 사항
 
@@ -33,47 +33,47 @@ ms.locfileid: "67957739"
    - **SQL Server 2019 확장**
 - [빅 데이터 클러스터에 샘플 데이터 로드](tutorial-load-sample-data.md)
 
-## <a name="download-the-sample-notebook-file"></a>샘플 노트북 파일 다운로드
+## <a name="download-the-sample-notebook-file"></a>샘플 Notebook 파일 다운로드
 
-샘플 전자 필기장 파일을 로드 하려면 다음 지침을 따르십시오 **spark sql.ipynb** Azure 데이터 스튜디오로입니다.
+다음 지침에 따라 샘플 Notebook 파일 **spark-sql.ipynb**를 Azure Data Studio에 로드합니다.
 
-1. Bash 명령 프롬프트 (Linux) 또는 Windows PowerShell을 엽니다.
+1. bash 명령 프롬프트(Linux) 또는 Windows PowerShell을 엽니다.
 
-1. 샘플 노트북 파일을 다운로드 하려는 디렉터리로 이동 합니다.
+1. 샘플 Notebook 파일을 다운로드할 디렉터리로 이동합니다.
 
-1. 다음을 실행 합니다 **curl** GitHub에서 notebook 파일을 다운로드 하는 명령:
+1. 다음 **curl** 명령을 실행하여 GitHub에서 Notebook 파일을 다운로드합니다.
 
    ```bash
    curl 'https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-loading/transform-csv-files.ipynb' -o transform-csv-files.ipynb
    ```
 
-## <a name="open-the-notebook"></a>Notebook을 열려면
+## <a name="open-the-notebook"></a>Notebook 열기
 
-다음 단계를 Azure Data Studio에서 notebook 파일을 여는 방법을 보여 줍니다.
+다음 단계는 Azure Data Studio에서 Notebook 파일을 여는 방법을 보여 줍니다.
 
-1. Azure 데이터 스튜디오에서 빅 데이터 클러스터의 마스터 인스턴스에 연결 합니다. 자세한 내용은 [빅 데이터 클러스터에 연결](connect-to-big-data-cluster.md)합니다.
+1. Azure Data Studio에서 빅 데이터 클러스터의 마스터 인스턴스에 연결합니다. 자세한 내용은 [빅 데이터 클러스터에 연결](connect-to-big-data-cluster.md)을 참조하세요.
 
-1. HDFS/Spark 게이트웨이 연결을 두 번 클릭 합니다 **서버** 창입니다. 선택한 **노트북 열기**합니다.
+1. **서버** 창에서 HDFS/Spark 게이트웨이 연결을 두 번 클릭합니다. 그런 다음, **Notebook 열기**를 선택합니다.
 
-   ![전자 필기장 열기](media/tutorial-notebook-spark/azure-data-studio-open-notebook.png)
+   ![Notebook 열기](media/tutorial-notebook-spark/azure-data-studio-open-notebook.png)
 
-1. 대기 합니다 **커널** 대상 컨텍스트와 (**연결할**) 채워져야 합니다. 설정 합니다 **커널** 하 **PySpark3**, 설정 및 **연결할** 빅 데이터 클러스터 끝점의 IP 주소로.
+1. **커널** 및 대상 컨텍스트(**연결 대상**)가 채워질 때까지 기다립니다. **커널**을 **PySpark3**으로, **연결 대상**을 빅 데이터 클러스터 엔드포인트의 IP 주소로 설정합니다.
 
-   ![커널을 설정에 연결](media/tutorial-notebook-spark/set-kernel-and-attach-to.png)
+   ![커널 및 연결 대상 설정](media/tutorial-notebook-spark/set-kernel-and-attach-to.png)
 
 ## <a name="run-the-notebook-cells"></a>Notebook 셀 실행
 
-셀의 왼쪽에 play 단추를 눌러 각 notebook 셀을 실행할 수 있습니다. 셀 실행이 완료 된 후 결과 노트북에 표시 됩니다.
+셀 왼쪽의 재생 단추를 눌러 각 Notebook 셀을 실행할 수 있습니다. 결과는 셀 실행이 완료된 후 Notebook에 표시됩니다.
 
 ![Notebook 셀 실행](media/tutorial-notebook-spark/run-notebook-cell.png)
 
-연속에서 샘플 전자 필기장의 각 셀을 실행 합니다. SQL Server 빅 데이터 클러스터를 사용 하 여 notebook을 사용 하는 방법에 대 한 자세한 내용은 다음 리소스를 참조 합니다.
+샘플 Notebook의 각 셀을 연속해서 실행합니다. SQL Server 빅 데이터 클러스터에서 노트북을 사용하는 방법에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
-- [SQL Server 2019 미리 보기에서 notebook을 사용 하는 방법](notebooks-guidance.md)
+- [SQL Server 2019 미리 보기에서 노트북을 사용하는 방법](notebooks-guidance.md)
 - [Azure Data Studio에서 Notebooks를 관리하는 방법](notebooks-how-to-manage.md)
 
 ## <a name="next-steps"></a>다음 단계
 
-Notebook에 대 한 자세한 정보:
+Notebook에 대한 자세한 정보:
 > [!div class="nextstepaction"]
-> [Notebook에 알아봅니다](notebooks-guidance.md)
+> [Notebook에 대한 자세한 정보](notebooks-guidance.md)

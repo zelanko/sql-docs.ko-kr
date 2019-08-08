@@ -1,6 +1,6 @@
 ---
-title: SQL Server on Linux FAQ
-description: 이 문서에서는 Linux에서 실행 되는 SQL Server에 대 한 질문과 대답을 제공 합니다.
+title: Linux의 SQL Server FAQ
+description: 이 문서에서는 Linux에서 실행되는 SQL Server에 대한 자주 묻는 질문에 대한 답변을 제공합니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 01/10/2019
@@ -8,49 +8,49 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: c6d9ea0eb36c212d3312522adafc50406c7a646d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67952639"
 ---
-# <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server에는 질문과 대답 (FAQ)
+# <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>Linux의 SQL Server FAQ(질문과 대답)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-다음 섹션에서는 일반적인 질문 및 답변 SQL Server에 대 한 Linux를 실행 합니다.
+다음 섹션에서는 Linux에서 실행되는 SQL Server에 대한 일반적인 질문과 대답을 제공합니다.
 
 ## <a name="general-questions"></a>일반적인 질문
 
-1. **Linux 플랫폼 지원 되나요?**
+1. **어떤 Linux 플랫폼이 지원되나요?**
 
-   SQL Server는 현재 Red Hat Enterprise Server, SUSE Linux Enterprise Server 및 Ubuntu에서 지원 됩니다. Docker 컨테이너에서 실행도 지원 합니다. 지원 되는 버전에 대 한 최신 정보를 참조 하세요 [지원 되는 플랫폼](sql-server-linux-setup.md#supportedplatforms)합니다.
+   SQL Server는 현재 Red Hat Enterprise Server, SUSE Linux Enterprise Server 및 Ubuntu에서 지원됩니다. Docker를 사용하여 컨테이너에서 실행할 수도 있습니다. 지원되는 버전에 대한 최신 정보는 [지원되는 플랫폼](sql-server-linux-setup.md#supportedplatforms)을 참조하세요.
 
-1. **Linux의 SQL Server는 다른 플랫폼에서 작동**?
+1. **Linux의 SQL Server가 다른 플랫폼에서 작동하나요?**
 
-   SQL Server는 테스트 하 고 앞에 나열 된 배포에 대 한 Linux 지원 합니다. 다른 Linux 배포판 밀접 한 관련이 및 SQL Server를 실행 하는 일을 할 수 있습니다 (예를 들어 CentOS는 밀접 하 Red Hat Enterprise Server). 지원 되지 않는 운영 체제에서 SQL Server를 설치 하려는 경우 살펴보시기 하지만 **지원 정책** 섹션을 [Microsoft SQL Server에 대 한 기술 지원 정책](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server) 지원 이해 영향을 줍니다. 일부 커뮤니티에서 유지 관리 되며 Linux 배포판에 정식 기본 운영 체제 문제 이면 지원을 받을 수 없는 note도 합니다.
+   SQL Server는 이전에 나열된 배포판용 Linux에서 테스트되었으며 지원됩니다. 다른 Linux 배포판은 밀접하게 관련되어 있으며 SQL Server를 실행할 수도 있습니다(예: CentOS는 Red Hat Enterprise Server와 밀접하게 관련되어 있음). 그러나 지원되지 않는 운영 체제에 SQL Server를 설치하도록 선택하는 경우 [Microsoft SQL Server 기술 지원 정책](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)의 **지원 정책** 섹션을 검토하여 자세한 지원 정보를 참조하세요. 또한 일부 커뮤니티에서 유지 관리하는 Linux 배포판에는 기본 운영 체제가 문제가 될 경우 지원을 받을 수 있는 공식적인 방법이 없습니다.
 
-1. **Windows에서와 같은 Linux의 SQL Server를 입니까?**
+1. **Linux의 SQL Server가 Windows의 SQL Server와 동일한가요?**
 
-   SQL Server 용 데이터베이스 엔진의 핵심 이므로 Windows에서 Linux에서 동일 합니다. 그러나 일부 기능은 현재 사용할 수 없습니다 linux. Linux에서 지원 되지 않는 기능의 목록을 보려면 참조는 [기능 및 서비스를 지원 되지 않는](sql-server-linux-release-notes.md#Unsupported)합니다. 또한 검토 해야 합니다 [알려진 문제](sql-server-linux-release-notes.md#known-issues)합니다. 이러한 목록에 지정 되지 않으면 다른 SQL Server 기능 및 서비스는 Linux에서 지원 됩니다.
+   SQL Server의 핵심 데이터베이스 엔진은 Windows와 Linux가 동일합니다. 그러나 일부 기능은 현재 Linux에서 지원되지 않습니다. Linux에서 지원되지 않는 기능 목록은 [지원되지 않는 기능 및 서비스](sql-server-linux-release-notes.md#Unsupported)를 참조하세요. [알려진 문제](sql-server-linux-release-notes.md#known-issues)도 검토하세요. 이러한 목록에 지정되지 않은 다른 SQL Server 기능 및 서비스는 Linux에서 지원됩니다.
 
-1. **SQL Server에 대 한 지원 정책은 무엇 인가요?**
+1. **SQL Server에 대한 지원 정책은 무엇인가요?**
 
-   지원 정책을 이해 하려면 다음을 검토 합니다 [SQL Server에 대 한 기술 지원 정책을](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)합니다.
+   지원 정책을 이해하려면 [SQL Server에 대한 기술 지원 정책](https://support.microsoft.com/help/4047326/support-policy-for-microsoft-sql-server)을 검토하세요.
 
-1. **Windows SQL Server에서 어. 리소스 Linux에서 SQL Server를 사용 하는 방법을 알아볼 수 있습니까?**
+1. **Windows SQL Server를 사용하던 작업자입니다. Linux에서 SQL Server를 사용하는 방법을 익히는 데 도움이 되는 리소스가 있나요?**
 
-   합니다 [퀵 스타트](sql-server-linux-setup.md#platforms) Linux에서 SQL Server를 설치 하 고 TRANSACT-SQL 쿼리를 실행 하는 방법에 대 한 단계별 지침을 제공 합니다. 다른 자습서는 Linux에서 SQL Server를 사용 하 여 추가 지침을 제공 합니다. 제 3 자 목록은 팁을 참조 하세요.를 [SQL Server Linux 팁에서 동료 목록](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/)합니다.
+   [빠른 시작](sql-server-linux-setup.md#platforms)은 Linux에서 SQL Server를 설치하고 Transact-SQL 쿼리를 실행하는 방법에 대한 단계별 지침을 제공합니다. 다른 자습서에서는 Linux에서 SQL Server를 사용하기 위한 추가 지침을 제공합니다. 타사 팁 목록을 보려면 [Linux의 SQL Server에 대한 MSSQLTIPS 팁 목록](https://www.mssqltips.com/sql-server-tip-category/226/sql-server-on-linux/)을 참조하세요.
 
-## <a name="licensing"></a>라이선싱
+## <a name="licensing"></a>라이선스
 
-1. **Linux에서 라이선스 작업 어떻게 하나요?**
+1. **Linux에서 라이선스는 어떻게 작동하나요?**
 
-   SQL Server는 Windows 및 Linux 모두에 대해 동일한 방식으로 허가 되어 있습니다. 사실, SQL Server의 라이선스 수 및 다음 원하는 플랫폼에서 해당 라이선스를 사용 하도록 선택할 수 있습니다. 자세한 내용은 [SQL Server 라이선스 방법](https://www.microsoft.com/sql-server/sql-server-2017-pricing)합니다.
+   SQL Server는 Windows 및 Linux에서 동일한 방식으로 사용이 허가됩니다. 실제로 SQL Server 라이선스를 획득한 후 원하는 플랫폼에서 해당 라이선스를 사용하도록 선택할 수 있습니다. 자세한 내용은 [SQL Server 라이선스 획득 방법](https://www.microsoft.com/sql-server/sql-server-2017-pricing)을 참조하세요.
 
-1. **어떤 버전의 SQL Server 선택 해야 하나요 이미 구매한 경우?**
+1. **이미 구매한 경우 어떤 SQL Server 버전을 선택해야 하나요?**
 
-   Mssql-conf를 실행 하면 다음 옵션이 표시 됩니다.
+   mssql-conf 설치 프로그램을 실행하는 경우 다음 옵션이 표시됩니다.
    
    ```
    Choose an edition of SQL Server:
@@ -64,11 +64,11 @@ ms.locfileid: "67952639"
       8. I bought a license through a retail sales channel and have a product key to enter.
    ```
      
-   엔터프라이즈 규약의 일부분으로 볼륨 라이선스를 통해 또는 MSDN 구독을 통해 라이선스를 구입한 경우에 4 ~ 7 옵션을 선택 해야 합니다. 이 단계에서는 라이선스를 입력 하도록 요청 하지 않지만 해야 이전에 구입한 적절 한 라이선스가 구성에 대 한 합니다. 소매 채널을 통해 Standard edition을 구매한 경우 8 옵션을 선택 합니다. 이 옵션은 키를 입력 하 라는 메시지가 표시 됩니다. 
+   기업계약의 일부로 볼륨 라이선스를 통해 또는 MSDN 구독을 통해 라이선스를 획득한 경우 옵션 4~7을 선택해야 합니다. 이 단계에서는 라이선스를 입력하라는 메시지가 표시되지 않으며, 구성에 적합한 라이선스를 이전에 구입했어야 합니다. 정품 구입 채널을 통해 Standard Edition을 구매한 경우 옵션 8을 선택합니다. 이 옵션을 선택하면 키를 입력하라는 메시지가 표시됩니다. 
 
-1. **설치 된 버전 및 Linux에서 SQL Server의 에디션 확인 방법**
+1. **Linux에 설치된 SQL Server 버전 및 에디션을 확인하려면 어떻게 하나요?**
 
-   와 같은 클라이언트 도구를 사용 하 여 SQL Server 인스턴스에 연결할 **sqlcmd**를 **mssql cli**, 또는 Visual Studio Code. 다음 버전 및 실행 중인 SQL Server 버전을 확인 하려면 다음 TRANSACT-SQL 쿼리를 실행 합니다. 
+   **sqlcmd**, **mssql-cli** 또는 Visual Studio Code와 같은 클라이언트 도구를 사용하여 SQL Server 인스턴스에 연결합니다. 그런 후 다음 Transact-SQL 쿼리를 실행하여 실행 중인 SQL Server 버전 및 에디션을 확인합니다. 
 
    ```sql
    SELECT @@VERSION
@@ -77,91 +77,91 @@ ms.locfileid: "67952639"
 
 ## <a name="installation"></a>설치
 
-1. **내 Linux 서버에 설치 된 SQL Server는 어떻게 받나요?**
+1. **Linux 서버에 설치된 SQL Server를 가져오려면 어떻게 하나요?**
 
-   Microsoft SQL Server 설치를 위한 패키지 리포지토리를 유지 관리 및 yum, zypper와 같은 네이티브 패키지 관리자를 통해 설치를 지 원하는 아파트 및 스위트룸 합니다. 신속 하 게 설치 하려면 중 하나를 참조 합니다 [퀵 스타트](sql-server-linux-setup.md#platforms)합니다.
+   Microsoft는 SQL Server를 설치하기 위한 패키지 리포지토리를 유지 관리하고 yum, zypper 및 apt와 같은 네이티브 패키지 관리자를 통해 설치를 지원합니다. 빠르게 설치하려면 [빠른 시작](sql-server-linux-setup.md#platforms) 중 하나를 참조하세요.
 
-1. **Windows 10에 대 한 Linux 하위 시스템에서 SQL Server를 설치할 수 있습니까?**
+1. **Windows 10용 Linux 하위 시스템에 SQL Server를 설치할 수 있나요?**
 
-   아니요. Windows 10에서 실행 되는 Linux 아니며 현재 SQL Server 및 관련된 도구에 대 한 지원 되는 플랫폼
+   아니요. Windows 10에서 실행되는 Linux는 현재 SQL Server 및 관련 도구의 지원되는 플랫폼이 아닙니다.
 
-1. **데이터 파일에 대 한 SQL Server에서 사용할 수 있는 Linux 파일 시스템?**
+1. **SQL Server는 데이터 파일을 위해 어떤 Linux 파일 시스템을 사용할 수 있나요?**
 
-   현재 SQL Server on Linux ext4 및 XFS 지원합니다. 나중에 필요에 따라 다른 파일 시스템에 대 한 지원이 추가 됩니다.
+   현재, Linux의 SQL Server는 ext4 및 XFS를 지원합니다. 나중에 필요에 따라 다른 파일 시스템에 대한 지원이 추가될 예정입니다.
 
-1. **SQL Server를 오프 라인으로 설치 하려면 설치 패키지를 다운로드할 수 있습니까?**
+1. **오프라인으로 SQL Server를 설치하기 위한 설치 패키지를 다운로드할 수 있나요?**
 
-   예 자세한 내용은 다운로드 링크에서 패키지 참조를 [릴리스](sql-server-linux-release-notes.md)합니다. 또한 검토 합니다 [오프 라인 설치에 대 한 지침](sql-server-linux-setup.md#offline)합니다.
+   예 자세한 내용은 [릴리스 정보](sql-server-linux-release-notes.md)의 패키지 다운로드 링크를 참조하세요. 또한 [오프라인 설치 지침](sql-server-linux-setup.md#offline)을 검토하세요.
 
-1. **Linux의 SQL Server의 무인된 설치를 수행할 수 있습니까?**
+1. **Linux에서 SQL Server 무인 설치를 수행할 수 있나요?**
 
-   예 무인된 설치의 논의 참조 하세요 [Linux의 SQL Server에 대 한 설치 지침은](sql-server-linux-setup.md#unattended)합니다. 에 대 한 샘플 스크립트를 참조 하세요 [Red Hat](sample-unattended-install-redhat.md)를 [SUSE Linux Enterprise Server](sample-unattended-install-suse.md), 및 [Ubuntu](sample-unattended-install-ubuntu.md)합니다. 또한 검토할 수 있습니다 [이 샘플 스크립트](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/) SQL Server 고객 자문 팀에서 만든 합니다.
+   예 무인 설치에 대한 설명은 [Linux의 SQL Server 설치 지침](sql-server-linux-setup.md#unattended)을 참조하세요. [Red Hat](sample-unattended-install-redhat.md), [SUSE Linux Enterprise Server](sample-unattended-install-suse.md) 및 [Ubuntu](sample-unattended-install-ubuntu.md)에 대한 샘플 스크립트를 참조하세요. SQL Server 고객 자문 팀에서 만든 [이 샘플 스크립트](https://blogs.msdn.microsoft.com/sqlcat/2017/10/03/unattended-install-and-configuration-for-sql-server-2017-on-linux/)를 검토할 수도 있습니다.
 
-## <a name="tools"></a>Tools
+## <a name="tools"></a>도구
 
-1. **사용할 수 있습니까 SQL Server Management Studio 클라이언트 Windows에서 Linux의 SQL Server에 액세스 하려면?**
+1. **Windows에서 SQL Server Management Studio 클라이언트를 사용하여 Linux의 SQL Server에 액세스할 수 있나요?**
 
-   예, Linux의 SQL Server에 액세스 하는 Windows에서 실행 되는 모든 기존 도구를 사용할 수 있습니다. 여기에 microsoft SQL Server Management Studio (SSMS), SQL Server 데이터 도구 (SSDT) 및 OS와 같은 도구 및 타사 도구 포함 됩니다.
+   예. Windows에서 실행되는 기존의 모든 도구를 사용하여 Linux의 SQL Server에 액세스할 수 있습니다. 여기에는 SSMS(SQL Server Management Studio), SSDT(SQL Server Data Tools), OSS 등의 Microsoft 도구와 타사 도구가 포함됩니다.
 
-1. **Linux에서 실행 되는 SSMS와 같은 도구는 있나요?**
+1. **Linux에서 실행되는 SSMS와 같은 도구가 있나요?**
 
-   새 Azure Data Studio는 SQL Server를 관리 하기 위한 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio 란](../azure-data-studio/what-is.md)합니다.
+   새 Azure Data Studio는 SQL Server를 관리하기 위한 플랫폼 간 도구입니다. 자세한 내용은 [Azure Data Studio란?](../azure-data-studio/what-is.md)을 참조하세요.
 
-1. **Linux에서 사용할 수 있는 sqlcmd 및 bcp와 같은 명령을?합니다**
+1. **Linux에서 sqlcmd 및 bcp와 같은 명령을 사용할 수 있나요?**
 
-   예, [sqlcmd 및 bcp](sql-server-linux-setup-tools.md) Linux, macOS 및 Windows에서 기본적으로 사용할 수 있습니다. 또한 사용 하는 새 [mssql scripter](https://github.com/Microsoft/mssql-scripter) 어디를 실행 하 여 SQL database에 대 한 T-SQL 스크립트를 생성 하도록 하는 Linux, macOS 또는 Windows에서 명령줄 도구입니다. 참고: 미리 보기 릴리스 [mssql cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)합니다.
+   예. [sqlcmd 및 bcp](sql-server-linux-setup-tools.md)는 Linux, macos 및 Windows에서 기본적으로 사용할 수 있습니다. 또한 Linux, macos 또는 Windows에서 새로운 [mssql-scripter](https://github.com/Microsoft/mssql-scripter) 명령줄 도구를 사용하여 어디서나 실행되는 SQL 데이터베이스용 T-SQL 스크립트를 생성합니다. 또한 미리 보기 릴리스에서 [mssql-cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/)를 참조하세요.
 
-1. **Linux에서 실행 중인 인스턴스에 대 한 Windows의 SSMS를 통해 연결 되어 있을 때 작업 모니터를 볼 수 있습니까?**
+1. **Linux에서 실행되는 인스턴스를 위해 Windows에서 SSMS를 통해 연결할 경우 작업 모니터를 볼 수 있나요?**
 
-   예, Windows에서 SSMS를 사용 하 여 원격으로 연결할 수 있습니다 하 고 사용 하 여 도구 / 등의 기능이 Linux 인스턴스에서 작업 모니터 명령으로 합니다.
+   예. Windows에서 SSMS를 사용하여 원격으로 연결하고, Linux 인스턴스에서 작업 모니터 명령과 같은 도구/기능을 사용할 수 있습니다.
 
-1. **Linux에서 SQL Server 성능 모니터링을 사용할 수 있는 도구?**
+1. **Linux에서 SQL Server 성능을 모니터링하는 데 어떤 도구를 사용할 수 있나요?**
 
-   사용할 수 있습니다 [시스템 동적 관리 뷰 (Dmv)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md) 를 다양 한 유형의 SQL Server, Linux 프로세스 정보를 포함 하는 방법에 대 한 정보를 수집 합니다. 사용할 수 있습니다 [쿼리 저장소](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md) 쿼리 성능을 향상 시킵니다. 기본 제공 같은 다른 도구를 [성능 대시보드](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/)원격에서 SSMS SQL Server Management Studio () Windows에서 작동 합니다.
+   [시스템 DMV(동적 관리 뷰)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 사용하여 Linux 프로세스 정보를 비롯한 SQL Server에 대한 다양한 유형의 정보를 수집할 수 있습니다. [쿼리 저장소](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)를 사용하여 쿼리 성능을 향상시킬 수 있습니다. 기본 제공 [성능 대시보드](https://blogs.msdn.microsoft.com/sql_server_team/new-in-ssms-performance-dashboard-built-in/) 등의 기타 도구는 Windows의 SSMS(SQL Server Management Studio)에서 원격으로 작동합니다.
 
    > [!TIP]
-   > 성능 향상을 위해 한 가지 방법은 제대로 Linux 운영 체제 및 SQL Server insance를 구성 하는 것입니다. 자세한 내용은 [성능 모범 사례 및 Linux의 SQL Server에 대 한 구성 지침](sql-server-linux-performance-best-practices.md)합니다.
+   > 성능을 향상시키는 한 가지 방법은 Linux 운영 체제와 SQL Server 인스턴스를 올바르게 구성하는 것입니다. 자세한 내용은 [Linux의 SQL Server에 대한 성능 모범 사례 및 구성 지침](sql-server-linux-performance-best-practices.md)을 참조하세요.
 
 ## <a name="administration"></a>관리
 
-1. **Microsoft가 Linux에서 SQL Server 구성 관리자와 같은 앱을 만들고?**
+1. **Microsoft가 Linux의 SQL Server 구성 관리자와 같은 앱을 만들었나요?**
 
-   예는 Linux의 SQL Server에 대 한 구성 도구: [mssql conf](sql-server-linux-configure-mssql-conf.md)합니다.
+   예. Linux의 SQL Server를 위한 구성 도구인 [mssql-conf](sql-server-linux-configure-mssql-conf.md)가 있습니다.
 
-1. **Linux의 SQL Server 같은 호스트의 여러 인스턴스를 지원 합니까?**
+1. **Linux의 SQL Server는 동일한 호스트에서 여러 인스턴스를 지원하나요?**
 
-   여러 고유 인스턴스를 호스트에서 여러 컨테이너를 실행 하는 것이 좋습니다. Docker를 사용 하 여 쉽게 이루어집니다 있지만 각 컨테이너에서 다른 포트에서 수신 대기 해야 합니다. 자세한 내용은 [여러 SQL Server 컨테이너를 실행할](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)합니다.
+   호스트에서 여러 컨테이너를 실행하여 여러 개의 고유 인스턴스를 유지하는 것이 좋습니다. docker를 사용하면 쉽게 이렇게 할 수 있지만, 컨테이너마다 다른 포트에서 수신해야 합니다. 자세한 내용은 [여러 SQL Server 컨테이너 실행](sql-server-linux-configure-docker.md#run-multiple-sql-server-containers)을 참조하세요.
 
-1. **Active Directory 인증이 Linux에서 지원 되나요?**
+1. **Linux에서 Active Directory 인증이 지원되나요?**
 
-   예 자세한 내용은 [Linux의 SQL Server를 사용 하 여 Active Directory 인증](sql-server-linux-active-directory-authentication.md)합니다.
+   예 자세한 내용은 [Linux의 SQL Server에 대한 Active Directory 인증](sql-server-linux-active-directory-authentication.md)을 참조하세요.
 
-1. **Linux에서 지원 되는 클러스터링 및 Always On 인가요?**
+1. **Linux에서 Always On 및 클러스터링이 지원되나요?**
 
-   장애 조치 클러스터링 및 고가용성 on Linux: Linux의 Pacemaker를 사용 하 여 수행 됩니다. 자세한 내용은 [비즈니스 연속성 및 데이터베이스 복구-SQL Server on Linux](sql-server-linux-business-continuity-dr.md)합니다.
+   Linux의 장애 조치(failover) 클러스터링 및 고가용성은 Linux의 Pacemaker를 통해 구현됩니다. 자세한 내용은 [비즈니스 연속성 및 데이터베이스 복구 - Linux의 SQL Server](sql-server-linux-business-continuity-dr.md)를 참조하세요.
 
-1. **Windows로 또는 그 반대로 Linux에서 복제를 구성할 수는?**
+1. **Linux에서 Windows로 또는 그 반대로 복제를 구성할 수 있나요?**
 
-   읽기-배율 복제본 단방향 데이터 복제에 대 한 Windows 및 Linux 간에 사용할 수 있습니다.
+   읽기 확장 복제본은 Windows와 Linux 간에 단방향 데이터 복제에 사용할 수 있습니다.
 
-1. **Linux에서 Windows 이전 버전의 SQL Server의 기존 데이터베이스를 마이그레이션할 수는?**
+1. **이전 버전의 SQL Server에 있는 기존 데이터베이스를 Windows에서 Linux로 마이그레이션할 수 있나요?**
 
-   예, 가지 [여러 가지 방법을](sql-server-linux-migrate-overview.md) 이 달성 하는 합니다.
+   예. 이를 위한 [몇 가지 방법](sql-server-linux-migrate-overview.md)이 있습니다.
 
-1. **마이그레이션할 수 데이터를 Oracle 및 기타 데이터베이스 엔진에서 Linux의 SQL server?**
+1. **Oracle 및 다른 데이터베이스 엔진에서 Linux의 SQL Server로 데이터를 마이그레이션할 수 있나요?**
 
-   예 SSMA는 여러 유형의 데이터베이스 엔진에서 마이그레이션을 지원합니다. Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE (이전의 SAP Sybase ASE). SSMA를 사용 하는 방법의 예제를 참조 하세요 [Oracle 스키마를 SQL Server Migration Assistant를 사용 하 여 Linux에서 SQL Server로 마이그레이션할](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json)합니다.
+   예 SSMA는 Microsoft Access, DB2, MySQL, Oracle 및 SAP ASE(이전의 SAP Sybase ASE)를 비롯한 여러 유형의 데이터베이스 엔진에서 마이그레이션하도록 지원합니다. SSMA를 사용하는 방법에 대한 예제는 [SQL Server Migration Assistant를 사용하여 Oracle 스키마를 Linux의 SQL Server로 마이그레이션](../ssma/oracle/sql-server-linux-convert-from-oracle.md?toc=/sql/toc/toc.json)을 참조하세요.
 
-1. **SQL Server 파일에 필요한 권한은 무엇입니까?**
+1. **SQL Server 파일에는 어떤 사용 권한이 필요한가요?**
 
-   모든 파일을 `/var/opt/mssql` 파일 폴더에서 소유 해야 합니다 **mssql** 사용자에 속할를 **mssql** 그룹. 모두를 **mssql** 사용자 및 그룹에는 모든 파일 및 디렉터리 읽기 / 쓰기 권한이 있어야 합니다. 파일 및 디렉터리 사용 권한을 포함 하는 다음과 같은 특별 한 시나리오를 note:
+   `/var/opt/mssql` 파일 폴더의 모든 파일은 **mssql** 사용자가 소유하고 **mssql** 그룹에 속해야 합니다. **mssql** 사용자 및 그룹은 모든 파일 및 디렉터리에 대한 읽기/쓰기 권한이 있어야 합니다. 파일 및 디렉터리 사용 권한과 관련된 다음과 같은 특수한 시나리오를 확인합니다.
 
-   * Mssql 소유자 및 그룹 권한은 SQL Server 파일을 저장 하는 데 사용 되는 탑재 된 네트워크 공유에 대 한 필요 합니다.
-   * 데이터베이스 파일 또는 백업을 기본이 아닌 디렉터리를 찾을 경우 해당 디렉터리에 대 한 권한을 설정 해야 합니다.
-   * 기본 루트 umask 0022를 변경 하면 설치 후 SQL Server 구성이 실패 합니다. 그런 다음 SQL Server 시작 계정에 필요한 권한의 수동으로 적용 해야 합니다.
+   * SQL Server 파일을 저장하는 데 사용되는 탑재된 네트워크 공유에는 mssql 소유자 및 그룹에 대한 권한이 필요합니다.
+   * 기본 디렉터리가 아닌 디렉터리에서 데이터베이스 파일 또는 백업을 찾은 경우해당 디렉터리에 대한 사용 권한도 설정해야 합니다.
+   * 기본 루트 umask를 0022와는 다르게 변경하면 설치 후에 SQL Server 구성이 실패합니다. 그런 다음, 필요한 권한을 SQL Server 시작 계정에 수동으로 적용해야 합니다.
 
-1. **설치 된 mssql 계정 및 그룹에서 SQL Server 파일 및 디렉터리의 소유권을 변경할 수 있나요?**
+1. **설치된 mssql 계정 및 그룹에서 SQL Server 파일 및 디렉터리의 소유권을 변경할 수 있나요?**
 
-   기본 설치에서 SQL Server 디렉터리 및 파일의 소유권을 변경 지원 하지 않습니다. Mssql 계정 및 그룹 SQL Server에 대 한 구체적으로 대화형 로그인 권한이 없습니다.
+   기본 설치에서 SQL Server 디렉터리 및 파일의 소유권을 변경하는 것은 지원되지 않습니다. mssql 계정 및 그룹은 특별한 경우에 SQL Server에 사용되며 대화형 로그인 액세스 권한이 없습니다.
 
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

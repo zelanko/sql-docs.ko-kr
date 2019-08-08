@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215634"
 ---
 ## <a name="connect-locally"></a>로컬로 연결
@@ -52,7 +52,7 @@ ms.locfileid: "68215634"
    ```
 
 > [!TIP]
-> TRANSACT-SQL 문 및 쿼리를 작성 하는 방법에 대 한 자세한 내용은를 참조 하세요. [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)을 참조하세요.
+> Transact-SQL 문 및 쿼리를 작성하는 방법에 대한 자세한 내용은 [자습서: Transact-SQL 문 작성](../t-sql/tutorial-writing-transact-sql-statements.md)을 참조하세요.
 
 ### <a name="insert-data"></a>데이터 삽입
 
@@ -108,18 +108,18 @@ QUIT
 
 ## <a name="performance-best-practices"></a>성능 모범 사례
 
-SQL Server on Linux를 설치한 후 프로덕션 시나리오에 대 한 성능 향상을 위해 Linux 및 SQL Server를 구성 하기 위한 모범 사례를 검토 합니다. 자세한 내용은 [성능 모범 사례 및 Linux의 SQL Server에 대 한 구성 지침](../linux/sql-server-linux-performance-best-practices.md)합니다.
+Linux에 SQL Server를 설치한 후에는 프로덕션 시나리오에 대한 성능을 향상시키도록 Linux 및 SQL Server를 구성하기 위한 모범 사례를 검토하세요. 자세한 내용은 [Linux의 SQL Server에 대한 성능 모범 사례 및 구성 지침](../linux/sql-server-linux-performance-best-practices.md)을 참조하세요.
 
 ## <a name="cross-platform-data-tools"></a>플랫폼 간 데이터 도구
 
-외에 **sqlcmd**, SQL Server를 관리 하려면 다음과 같은 플랫폼 간 도구를 사용할 수 있습니다.
+**sqlcmd** 외에도 다음과 같은 플랫폼 간 도구를 사용하여 SQL Server를 관리할 수 있습니다.
 
 |||
 |---|---|
-| [Azure Data Studio](../azure-data-studio/index.md) | 크로스 플랫폼 GUI 데이터베이스 관리 유틸리티입니다. |
-| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Mssql 확장을 사용 하 여 TRANSACT-SQL 문을 실행 하는 크로스 플랫폼 GUI 코드 편집기입니다. |
-| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | 플랫폼 간 자동화 및 구성 도구 cmdlet를 기반으로 합니다. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | TRANSACT-SQL 명령을 실행 하기 위한 플랫폼 간 명령줄 인터페이스입니다. |
+| [Azure Data Studio](../azure-data-studio/index.md) | 플랫폼 간 GUI 데이터베이스 관리 유틸리티입니다. |
+| [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | mssql 확장을 사용하여 Transact-SQL 문을 실행하는 플랫폼 간 GUI 코드 편집기입니다. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | cmdlet을 기준으로 하는 플랫폼 간 자동화 및 구성 도구입니다. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Transact-SQL 명령을 실행하기 위한 플랫폼 간 명령줄 인터페이스입니다. |
 
 ## <a name="connecting-from-windows"></a>Windows에서 연결
 
@@ -133,7 +133,7 @@ Windows에서 실행하지만 Linux의 SQL Server에 연결하는 다른 도구�
 - [Windows PowerShell](../linux/sql-server-linux-manage-powershell.md)
 - [SSDT(SQL Server Data Tools)](../linux/sql-server-linux-develop-use-ssdt.md)
 
-## <a name="other-deployment-scenarios"></a>다른 배포 시나리오
+## <a name="other-deployment-scenarios"></a>기타 배포 시나리오
 
 다른 설치 시나리오의 경우 다음 리소스를 참조하세요.
 
@@ -145,9 +145,9 @@ Windows에서 실행하지만 Linux의 SQL Server에 연결하는 다른 도구�
 | [오프라인 설치](../linux/sql-server-linux-setup.md#offline) | 오프라인 설치에 대한 패키지를 수동으로 다운로드하는 방법을 알아봅니다. |
 
 > [!TIP]
-> 자주 묻는 질문에 대한 답변은, [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md)를 참조하세요.
+> 자주하는 질문과 대답은 [Linux의 SQL Server FAQ](../linux/sql-server-linux-faq.md)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
-> [Linux에서 SQL Server에 대 한 자습서를 탐색](../linux/sql-server-linux-migrate-restore-database.md)
+> [Linux의 SQL Server에 대한 자습서 살펴보기](../linux/sql-server-linux-migrate-restore-database.md)

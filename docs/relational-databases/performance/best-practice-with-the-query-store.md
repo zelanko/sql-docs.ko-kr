@@ -1,7 +1,7 @@
 ---
 title: 쿼리 저장소에 대한 모범 사례 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa4528b916e70ed838ab8f3665de9293646d94ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 917a471183d31fab92aa871b6f71a5835c7999d1
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985033"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495386"
 ---
 # <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "67985033"
   
  쿼리 저장소에서 쿼리, 실행 계획 및 통계를 수집하는 동안 이 한도에 도달할 때까지 데이터베이스에서 크기가 증가합니다. 한도에 도달하면 쿼리 저장소는 작업 모드를 자동으로 읽기 전용으로 변경하고 새 데이터 수집을 중지합니다. 즉 성능 분석은 더 이상 정확하지 않게 됩니다.  
   
- 서로 다른 쿼리와 계획을 많이 생성하거나 쿼리 기록을 장기간 유지하려고 할 경우에는 기본값(100MB)이 충분하지 않을 수도 있습니다. 현재 공간 사용을 계속 추적하고 최대 크기(MB)를 늘려 쿼리 저장소가 읽기 전용 모드로 전환되지 않도록 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하거나 다음 스크립트를 실행하여 쿼리 저장소 크기에 대한 최신 정보를 확인합니다.  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]의 기본값은 100MB로, 서로 다른 쿼리와 계획을 많이 생성하거나 쿼리 기록을 장기간 유지하려고 할 경우에는 충분하지 않을 수도 있습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 기본값은 1GB입니다. 현재 공간 사용을 계속 추적하고 최대 크기(MB)를 늘려 쿼리 저장소가 읽기 전용 모드로 전환되지 않도록 합니다. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 를 사용하거나 다음 스크립트를 실행하여 쿼리 저장소 크기에 대한 최신 정보를 확인합니다.  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -109,11 +109,13 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **쿼리 저장소 캡처 모드:** 쿼리 저장소에 대한 쿼리 캡처 정책을 지정합니다.  
   
--   **모두** - 모든 쿼리를 캡처합니다. 이 옵션이 기본 옵션입니다.  
+-   **모두** - 모든 쿼리를 캡처합니다. 이 옵션이 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]의 기본 옵션입니다.  
   
--   **자동** – 빈번하지 않은 쿼리와 중요하지 않은 쿼리에 대한 컴파일 및 실행 기간이 무시됩니다. 실행 횟수, 컴파일 및 런타임 기간에 대한 임계값이 내부적으로 결정됩니다.  
+-   **자동** – 빈번하지 않은 쿼리와 중요하지 않은 쿼리에 대한 컴파일 및 실행 기간이 무시됩니다. 실행 횟수, 컴파일 및 런타임 기간에 대한 임계값이 내부적으로 결정됩니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 이 옵션이 기본 옵션입니다.  
   
 -   **없음** - 쿼리 저장소에서 새 쿼리 캡처가 중지됩니다.  
+
+-   **사용자 지정** - 추가 제어를 허용하고 데이터 수집 정책을 미세 조정합니다. 새 사용자 지정 설정은 내부 캡처 정책 시간 임계값 동안 수행되는 작업을 정의합니다. 이 임계값은 구성 가능한 조건을 평가하는 시간 범위로, 조건이 참이면 쿼리 저장소에서 쿼리를 캡처할 수 있습니다.
   
  다음 스크립트는 쿼리 캡처 모드를 자동으로 설정합니다.  
   
@@ -121,7 +123,64 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
+
+### <a name="examples"></a>예
+다음 예제에서는 쿼리 캡처 모드를 자동으로 설정하고 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 다른 권장 옵션을 설정합니다.  
   
+```sql  
+ALTER DATABASE [QueryStoreDB]   
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```  
+
+다음 예제에서는 쿼리 캡처 모드를 자동으로 설정하고 대기 통계를 포함하도록 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]의 다른 권장 옵션을 설정합니다.  
+
+```sql
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+다음 예제에서는 쿼리 캡처 모드를 자동으로 설정하고, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]의 다른 권장 옵션을 설정하고, 선택적으로 사용자 지정 캡처 정책을 기본값으로 설정합니다.  
+
+```sql
+ALTER DATABASE [QueryStoreDB]  
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
 ## <a name="how-to-start-with-query-performance-troubleshooting"></a>쿼리 성능 문제 해결을 시작 하는 방법  
  다음 다이어그램에 표시된 대로 쿼리 저장소의 워크플로 문제는 간단히 해결됩니다.  
   
@@ -132,8 +191,8 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
 ```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
-  
- 작업을 정확하게 나타내는 데이터 집합을 쿼리 저장소에서 수집할 때까지 약간의 시간이 걸립니다. 매우 복잡한 작업의 경우라도 일반적으로 하루면 충분합니다. 그러나 기능을 사용하도록 설정한 후에는 데이터 탐색을 시작하고 즉시 주의가 필요한 쿼리를 식별할 수 있습니다.   
+
+작업을 정확하게 나타내는 데이터 집합을 쿼리 저장소에서 수집할 때까지 약간의 시간이 걸립니다. 매우 복잡한 작업의 경우라도 일반적으로 하루면 충분합니다. 그러나 기능을 사용하도록 설정한 후에는 데이터 탐색을 시작하고 즉시 주의가 필요한 쿼리를 식별할 수 있습니다.   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 개체 탐색기의 데이터베이스 노드 아래에서 쿼리 저장소 하위 폴더로 이동하여 특정 시나리오에 대한 문제 해결 보기를 엽니다.   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 쿼리 저장소 보기는 실행 메트릭 집합을 사용하여 동작하며 각 메트릭은 다음 통계 함수 중 하나로 표현됩니다.  
   
@@ -246,7 +305,7 @@ FROM sys.database_query_store_options;
   
  문제가 지속되면 쿼리 저장소 데이터의 손상이 디스크에서 지속되고 있음을 나타냅니다.
  
- SQL 2017 이상의 경우 영향을 받는 데이터베이스 내에서 **sp_query_store_consistency_check** 저장 프로시저를 실행하여 쿼리 저장소를 복구할 수 있습니다. 2016의 경우 아래 표시된 바와 같이 쿼리 저장소에서 데이터를 정리해야 합니다.
+ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터, 영향을 받는 데이터베이스 내에서 **sp_query_store_consistency_check** 저장 프로시저를 실행하여 쿼리 저장소를 복구할 수 있습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 경우 아래 표시된 바와 같이 쿼리 저장소에서 데이터를 정리해야 합니다.
  
  그래도 해결되지 않으면 읽기-쓰기 모드를 요청하기 전에 쿼리 저장소를 정리할 수 있습니다.  
   
@@ -271,10 +330,14 @@ FROM sys.database_query_store_options;
   
 |쿼리 캡처 모드|시나리오|  
 |------------------------|--------------|  
-|All|모든 쿼리 셰이프 및 해당 실행 빈도 관점에서 작업과 기타 통계를 철저하게 분석합니다.<br /><br /> 작업에서 새 쿼리를 식별합니다.<br /><br /> 사용자나 자동 매개 변수화에 대한 기회를 식별하는 데 임시 쿼리를 사용하는지 검색합니다.|  
-|Auto|관련성이 높고 조치가 가능한 쿼리에 주목합니다. 정기적으로 실행되거나 리소스 사용이 상당히 많은 쿼리가 여기 해당합니다.|  
-|None|런타임 시 모니터링하고 다른 쿼리에서 발생할 수 있는 방해 요소를 제거할 쿼리 집합을 이미 캡처했습니다.<br /><br /> 이 모드는 환경 테스트 및 벤치마킹에 적합합니다.<br /><br /> 또한 애플리케이션 작업을 모니터링하도록 구성된 쿼리 저장소 구성을 제공하는 소프트웨어 공급업체에게도 적절합니다.<br /><br /> 이 모드는 주의해서 사용해야 합니다. 중요한 새 쿼리를 추적하고 최적화할 기회를 놓칠 수 있기 때문입니다. 필요한 특정 시나리오가 없으면 사용하지 마세요.|  
-  
+|All|모든 쿼리 셰이프 및 해당 실행 빈도 관점에서 작업과 기타 통계를 철저하게 분석합니다.<br /><br /> 작업에서 새 쿼리를 식별합니다.<br /><br /> 사용자나 자동 매개 변수화에 대한 기회를 식별하는 데 임시 쿼리를 사용하는지 검색합니다.<br /><br />**참고:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 및[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]의 기본 캡처 모드입니다.|  
+|Auto|관련성이 높고 조치가 가능한 쿼리에 주목합니다. 정기적으로 실행되거나 리소스 사용이 상당히 많은 쿼리가 여기 해당합니다.<br /><br />**참고:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터는 이 모드가 기본 캡처 모드로 사용됩니다.|  
+|없음|런타임 시 모니터링하고 다른 쿼리에서 발생할 수 있는 방해 요소를 제거할 쿼리 집합을 이미 캡처했습니다.<br /><br /> 이 모드는 환경 테스트 및 벤치마킹에 적합합니다.<br /><br /> 또한 애플리케이션 작업을 모니터링하도록 구성된 쿼리 저장소 구성을 제공하는 소프트웨어 공급업체에게도 적절합니다.<br /><br /> 이 모드는 주의해서 사용해야 합니다. 중요한 새 쿼리를 추적하고 최적화할 기회를 놓칠 수 있기 때문입니다. 필요한 특정 시나리오가 없으면 사용하지 마세요.|  
+|사용자 지정|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 `ALTER DATABASE SET QUERY_STORE` 명령 아래에 사용자 지정 캡처 모드를 도입했습니다. 사용하도록 설정된 경우 특정 서버의 데이터 컬렉션을 정밀 조정하기 위해 새로운 쿼리 저장소 캡처 정책 설정 아래에서 추가 쿼리 저장소 구성을 사용할 수 있습니다.<br /><br />새 사용자 지정 설정은 내부 캡처 정책 시간 임계값 동안 수행되는 작업을 정의합니다. 이 임계값은 구성 가능한 조건을 평가하는 시간 범위로, 조건이 참이면 쿼리 저장소에서 쿼리를 캡처할 수 있습니다. 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.|  
+
+> [!NOTE]
+> 쿼리 캡처 모드를 모두, 자동 또는 사용자 지정으로 설정하면 커서, 저장 프로시저 내부 쿼리 및 고유하게 컴파일된 쿼리가 항상 캡처됩니다.
+
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>쿼리 저장소에 가장 관련성이 높은 데이터 보관  
  관련된 데이터만 포함하도록 쿼리 저장소를 구성하면 정기 작업에 미치는 영향을 최소화하면서 유용한 문제 해결 경험을 제공하면서 계속 실행됩니다.  
 다음 표에서는 모범 사례를 제공합니다.  
@@ -310,7 +373,6 @@ FROM sys.database_query_store_options;
 쿼리 저장소는 쿼리 항목을 포함하는 개체(저장 프로시저, 함수 및 트리거)에 연결합니다.  포함하는 개체를 다시 만들면 같은 쿼리 텍스트에 대해 새 쿼리 항목이 생성됩니다. 시간이 흐름에 따라 해당 쿼리에 대한 성능 통계를 추적하는 작업이 방지되고 강제 적용 메커니즘이 사용됩니다. 이 문제를 방지하려면 `ALTER <object>` 프로세스를 사용하여 가능할 때마다 포함하는 개체 정의를 변경합니다.  
   
 ##  <a name="CheckForced"></a> 강제 계획의 상태를 정기적으로 확인  
-
 강제 계획은 중요한 쿼리 성능을 수정하고 쿼리를 좀 더 예측 가능하게 하는 편리한 메커니즘입니다. 그러나 계획 힌트 및 계획 가이드와 마찬가지로 강제 계획은 이후 실행에 사용됨을 보장하지는 않습니다. 일반적으로 실행 계획에서 참조하는 개체가 변경되거나 삭제되는 방식으로 데이터베이스 스키마가 변경하는 경우 강제 계획이 실패하기 시작합니다. 이 경우 실제 강제 실패 이유가 [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)에 표시되는 동안 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 쿼리 재컴파일로 대체합니다. 다음 쿼리는 강제 계획에 대한 정보를 반환합니다.  
   
 ```sql  
@@ -340,10 +402,14 @@ WHERE is_forced_plan = 1;
   
 -  추적 플래그 7752는 쿼리 저장소의 비동기 로드를 사용하도록 설정합니다. 이 설정을 통해 쿼리 저장소가 완전히 복구되기 전에 데이터베이스가 온라인 상태로 전환되고 쿼리가 실행됩니다. 기본 동작은 쿼리 저장소의 비동기 로드 실행입니다. 이 기본 동작은 쿼리 저장소가 복구되기 전에 쿼리 실행을 차단하며 데이터 수집에서 쿼리가 누락되지 않도록 방지합니다.
 
+   > [!NOTE]
+   > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 이 동작은 엔진에서 제어되며, 7752 추적 플래그는 아무 효과가 없습니다.
+
 > [!IMPORTANT]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 Just-In-Time 워크로드 인사이트에 대해 쿼리 저장소를 사용하는 경우, 가능하면 빨리 [KB 4340759](https://support.microsoft.com/help/4340759)의 성능 확장성 픽스를 설치하세요. 
 
 ## <a name="see-also"></a>참고 항목  
+[ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)     
 [쿼리 저장소 카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
 [쿼리 저장소 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     
 [메모리 내 OLTP와 쿼리 저장소 사용](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)     

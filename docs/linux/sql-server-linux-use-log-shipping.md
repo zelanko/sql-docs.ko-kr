@@ -1,6 +1,6 @@
 ---
-title: Linux의 SQL Server의 로그 전달을 구성 합니다.
-description: 이 자습서에서는 Linux에서 SQL Server 인스턴스를 사용 하 여 로그 전달 보조 인스턴스에 복제 하는 방법의 기본적인 예를 보여 줍니다.
+title: Linux에서 SQL Server의 로그 전달 구성
+description: 이 자습서에서는 로그 전달을 사용하여 Linux의 SQL Server 인스턴스를 보조 인스턴스에 복제하는 방법에 대한 기본 예제를 보여 줍니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 04/19/2017
@@ -8,43 +8,43 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5f5b795d35899025f1651b0f7db758d60103c511
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032204"
 ---
-# <a name="get-started-with-log-shipping-on-linux"></a>Linux에서 로그 전달을 사용 시작
+# <a name="get-started-with-log-shipping-on-linux"></a>Linux에서 로그 전달 시작
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하나 이상의 보조 서버로 복제 하는 위치입니다. 간단히 말해 원본 데이터베이스의 백업은 보조 서버에 복원 됩니다. 다음 주 서버의 트랜잭션 로그 백업을 정기적으로 만들고 보조 서버를 복원 하면 데이터베이스의 보조 복사본을 업데이트 합니다. 
+SQL Server 로그 전달은 주 서버의 데이터베이스가 하나 이상의 보조 서버에 복제되는 HA 구성입니다. 간단히 말해서 원본 데이터베이스의 백업이 보조 서버로 복원됩니다. 그런 다음, 주 서버가 트랜잭션 로그 백업을 주기적으로 만들고, 보조 서버에서 데이터베이스의 보조 복사본을 업데이트하여 복원합니다. 
 
   ![로그 전달](https://preview.ibb.co/hr5Ri5/logshipping.png)
 
 
-이 항목에 설명 된 대로 그림, 로그 전달 세션을 단계는 다음과 같습니다.
+이 그림에 설명된 대로, 로그 전달 세션에는 다음 단계가 포함됩니다.
 
 - 주 SQL Server 인스턴스에서 트랜잭션 로그 파일 백업
-- 보조 SQL Server 인스턴스에 하나 이상의 네트워크를 통해 트랜잭션 로그 백업 파일 복사
+- 네트워크를 통해 하나 이상의 보조 SQL Server 인스턴스에 트랜잭션 로그 백업 파일 복사
 - 보조 SQL Server 인스턴스에서 트랜잭션 로그 백업 파일 복원
 
 ## <a name="prerequisites"></a>사전 요구 사항
-- [Linux에서 SQL Server 에이전트를 설치 합니다.](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
+- [Linux에 SQL Server 에이전트 설치](https://docs.microsoft.com/sql/linux/sql-server-linux-setup-sql-agent)
 
-## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>로그 전달이 CIFS를 사용 하 여 네트워크 공유 설정 
+## <a name="setup-a-network-share-for-log-shipping-using-cifs"></a>CIFS를 사용하여 로그 전달에 대한 네트워크 공유 설정 
 
 > [!NOTE] 
-> 이 자습서를 사용 하 여 CIFS + Samba 네트워크 공유를 설정 합니다. NFS를 사용 하려는 경우 의견을 남겨 주세요 및 문서에 추가 됩니다.       
+> 이 자습서에서는 CIFS + Samba를 사용하여 네트워크 공유를 설정합니다. NFS를 사용하려는 경우 의견을 남기면 문서에 추가해 드립니다.       
 
-### <a name="configure-primary-server"></a>주 서버를 구성 합니다.
--   Samba를 설치 하려면 다음을 실행 합니다.
+### <a name="configure-primary-server"></a>주 서버 구성
+-   다음을 실행하여 Samba를 설치합니다.
 
     ```bash
     sudo apt-get install samba #For Ubuntu
     sudo yum -y install samba #For RHEL/CentOS
     ```
--   로그 전달에 대 한 로그를 저장 하 고 mssql 필요한 권한을 제공 하는 디렉터리 만들기
+-   로그 전달을 위한 로그를 저장할 디렉터리를 만들고 mssql에 필요한 사용 권한을 부여합니다.
 
     ```bash
     mkdir /var/opt/mssql/tlogs
@@ -52,7 +52,7 @@ SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하
     chmod 0700 /var/opt/mssql/tlogs
     ```
 
--   (루트 권한이 필요에 대 한) /etc/samba/smb.conf 파일 편집 하 고 다음 섹션을 추가 합니다.
+-   /etc/samba/smb.conf 파일을 편집하고(루트 권한 필요) 다음 섹션을 추가합니다.
 
     ```bash
     [tlogs]
@@ -64,26 +64,26 @@ SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하
     writable=no
     ```
 
--   Samba mssql 사용자 만들기
+-   Samba의 mssql 사용자를 만듭니다.
 
     ```bash
     sudo smbpasswd -a mssql
     ```
 
--   Samba 서비스를 다시 시작
+-   Samba 서비스를 다시 시작합니다.
     ```bash
     sudo systemctl restart smbd.service nmbd.service
     ```
  
-### <a name="configure-secondary-server"></a>보조 서버를 구성 합니다.
+### <a name="configure-secondary-server"></a>보조 서버를 구성합니다.
 
--   CIFS 클라이언트를 설치 하려면 다음을 실행 합니다.
+-   다음을 실행하여 CIFS 클라이언트를 설치합니다.
     ```bash   
     sudo apt-get install cifs-utils #For Ubuntu
     sudo yum -y install cifs-utils #For RHEL/CentOS
     ```
 
--   자격 증명을 저장할 파일을 만듭니다. 최근에 사용자 mssql Samba 계정에 대해 설정한 암호 사용 
+-   자격 증명을 저장할 파일을 만듭니다. mssql Samba 계정에 대해 최근에 설정한 암호를 사용합니다. 
 
         vim /var/opt/mssql/.tlogcreds
         #Paste the following in .tlogcreds
@@ -91,7 +91,7 @@ SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하
         domain=<domain>
         password=<password>
 
--   빈 디렉터리 탑재에 대 한 만들기 및 사용 권한 및 소유권을 올바르게 설정 하려면 다음 명령을 실행 합니다.
+-   다음 명령을 실행하여 탑재할 빈 디렉터리를 만들고 권한 및 소유권을 올바르게 설정합니다.
     ```bash   
     mkdir /var/opt/mssql/tlogs
     sudo chown root:root /var/opt/mssql/tlogs
@@ -100,18 +100,18 @@ SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하
     sudo chmod 0660 /var/opt/mssql/.tlogcreds
     ```
 
--   공유를 유지 하려면 등/fstab에 줄을 추가 합니다. 
+-   공유를 유지하기 위해 etc/fstab에 다음 줄을 추가합니다. 
 
         //<ip_address_of_primary_server>/tlogs /var/opt/mssql/tlogs cifs credentials=/var/opt/mssql/.tlogcreds,ro,uid=mssql,gid=mssql 0 0
         
--   공유를 탑재 합니다.
+-   공유를 탑재합니다.
     ```bash   
     sudo mount -a
     ```
        
-## <a name="setup-log-shipping-via-t-sql"></a>T-SQL을 통해 전달 되는 로그를 설정 합니다.
+## <a name="setup-log-shipping-via-t-sql"></a>T-SQL을 통한 로그 전달 설정
 
-- 주 서버에서이 스크립트를 실행 합니다.
+- 주 서버에서 이 스크립트를 실행합니다.
 
     ```sql
     BACKUP DATABASE SampleDB
@@ -177,7 +177,7 @@ SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하
     ```
 
 
-- 보조 서버에서이 스크립트를 실행 합니다.
+- 보조 서버에서 이 스크립트를 실행합니다.
 
     ```sql
     RESTORE DATABASE SampleDB FROM DISK = '/var/opt/mssql/tlogs/SampleDB.bak'
@@ -283,9 +283,9 @@ SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하
     END 
     ```
 
-## <a name="verify-log-shipping-works"></a>로그 전달 작동 하는지 확인
+## <a name="verify-log-shipping-works"></a>로그 전달이 작동되는지 확인
 
-- 주 서버에서 다음 작업을 시작 하 여 로그 전달에서 작동 하는지 확인
+- 주 서버에서 다음 작업을 시작하여 로그 전달이 작동되는지 확인합니다.
 
     ```sql
     USE msdb ;  
@@ -295,7 +295,7 @@ SQL Server 로그 전달 구성은 HA 주 서버에서 데이터베이스의 하
     GO  
     ```
 
-- 보조 서버에서 다음 작업을 시작 하 여 로그 전달에서 작동 하는지 확인
+- 보조 서버에서 다음 작업을 시작하여 로그 전달이 작동되는지 확인합니다.
  
     ```sql
     USE msdb ;  

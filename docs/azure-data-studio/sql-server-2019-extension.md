@@ -1,7 +1,7 @@
 ---
-title: SQL Server 2019 확장 (미리 보기)
+title: SQL Server 2019 확장(미리 보기)
 titleSuffix: Azure Data Studio
-description: Azure Data Studio에 대 한 SQL Server 2019 미리 보기 확장
+description: Azure Data Studio용 SQL Server 2019 미리 보기 확장
 ms.custom: seodec18
 ms.date: 06/25/2019
 ms.reviewer: alayu; sstein
@@ -11,179 +11,179 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 9b25fd044b94e21151b687d428c469a12d8c8a5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959211"
 ---
-# <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기)
+# <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장(미리 보기)
 
-SQL Server 2019 확장 (미리 보기) 새로운 기능과 도구를 지 원하는 전달에 대 한 미리 보기 지원을 제공 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]합니다. 에 대 한 미리 보기 지원을 포함 합니다. [SQL Server 2019 빅 데이터 클러스터](../big-data-cluster/big-data-cluster-overview.md), 통합 된 [노트북 환경](../big-data-cluster/notebooks-guidance.md), 및는 PolyBase [Create External Table 마법사](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)합니다.
+SQL Server 2019 확장(미리 보기)은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 지원에 제공되는 새로운 기능 및 지원 기능에 대한 미리 보기 지원을 제공합니다. 여기에는 [SQL Server 2019 빅 데이터 클러스터](../big-data-cluster/big-data-cluster-overview.md), 통합 [Notebook 환경](../big-data-cluster/notebooks-guidance.md) 및 PolyBase [외부 테이블 만들기 마법사](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)에 대 한 미리 보기 지원이 포함됩니다.
 
-## <a name="install-the-sql-server-2019-extension-preview"></a>SQL Server 2019 확장 (미리 보기) 설치
+## <a name="install-the-sql-server-2019-extension-preview"></a>SQL Server 2019 확장(미리 보기) 설치
 
-SQL Server 2019 확장 (미리 보기)을 설치 하려면 다운로드 하 고 연결된.vsix 파일을 설치 합니다.
+SQL Server 2019 확장(미리 보기)을 설치하려면 연결된 .vsix 파일을 다운로드하여 설치합니다.
 
-1. SQL Server 2019 확장 (미리 보기).vsix 파일을 로컬 디렉터리로 다운로드:
+1. SQL Server 2019 확장(미리 보기) .vsix 파일을 로컬 디렉터리에 다운로드합니다.
 
-   |플랫폼|다운로드|릴리스 날짜|버전
+   |플랫폼|다운로드|릴리스 날짜|버전 옵션
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|2019 년 6 월 25 일 |0.14.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|2019 년 6 월 25 일 |0.14.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|2019 년 6 월 25 일 |0.14.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|2019년 6월 25일 |0.14.1
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|2019년 6월 25일 |0.14.1
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|2019년 6월 25일 |0.14.1
 
-1. Azure 데이터 studio **VSIX 패키지에서 확장 설치** 에서 합니다 **파일** 메뉴 및 다운로드 한.vsix 파일을 선택 합니다.
+1. Azure Data Studio의 **파일** 메뉴에서 **VSIX 패키지에서 확장 설치**를 선택하고 다운로드한 .vsix 파일을 선택합니다.
 
-1. 선택할 **예** 나타나면 설치를 확인 하 고 설치 성공 했다는 알림을 기다립니다.
+1. 설치할지 확인하라는 메시지가 표시되면 **예**를 선택하고 설치 성공 알림이 표시될 때까지 기다립니다.
 
-1. 선택 **다시 로드** (처음 확장을 설치 하면 필수)에 확장을 사용 하도록 설정 합니다.
+1. **다시 로드**를 선택하여 확장을 사용하도록 설정합니다(확장을 처음 설치할 때만 필요).
 
-1. 다시 로드 한 후 확장 종속성을 설치 합니다. 출력 창에서 진행률을 볼 수 있습니다 하 고 몇 분 정도 걸릴 수 있습니다.
+1. 다시 로드하면 확장 기능이 종속성을 설치합니다. 출력 창에서 진행률을 볼 수 있으며 몇 분 정도 걸릴 수 있습니다.
 
-1. 종속성 후 설치를 완료, Azure Data Studio를 닫았다가 다시 엽니다. 합니다 **SQL Server 빅 데이터 클러스터** 연결 유형을 사용할 수 없는 Azure Data Studio를 다시 시작 해야 합니다.
+1. 종속성 설치가 끝나면 Azure Data Studio을 닫았다가 다시 엽니다. **SQL Server 빅 데이터 클러스터** 연결 유형은 Azure Data Studio를 다시 시작해야만 사용할 수 있습니다.
 
-## <a name="changes-in-release-0141"></a>0\.14.1 릴리스의 변경 내용
-* CTP 3.1 데이터 원본 지원에 대 한 지원
+## <a name="changes-in-release-0141"></a>릴리스 0.14.1의 변경 내용
+* CTP 3.1 데이터 원본 지원
 
-## <a name="changes-in-release-0121"></a>0\.12.1 릴리스의 변경 내용
+## <a name="changes-in-release-0121"></a>릴리스 0.12.1의 변경 내용
 
-* 합니다 **SQL Server 빅 데이터 클러스터** 연결 유형을이 릴리스에서 제거 되었습니다. SQL Server 빅 데이터 클러스터 연결에서 사용할 수 없었던 모든 기능이 SQL Server 연결에서 출시 되었습니다.
-* HDFS 검색에서 찾을 수 있습니다 합니다 **Data Services** 폴더
-* Notebook에 PySpark 및 기타 빅 데이터 커널을 작동 SQL Server 빅 데이터 클러스터에 마스터 SQL Server 인스턴스에 연결 하는 경우.
-* 외부 테이블 마법사를 만듭니다.
-  * 기존 외부 데이터 원본을 사용 하 여 외부 테이블 만들기를 지원 합니다.
-  * 마법사에서 성능이 향상 되었습니다.
-  * 향상 된 특수 문자가 포함 된 개체 이름을 처리 합니다. 일부 경우에에서 이러한 발생 마법사가 실패 하
-  * 개체 매핑 페이지에 대 한 안정성 향상입니다.
-  * 제거 된 시스템 데이터베이스 'DWConfiguration', 'DWDiagnostics', 'dwqueue '를 설치-데이터베이스 드롭다운 목록에서.
-  * 외부 파일 형식 개체의 이름을 설정 하는 것에 대 한 지원 합니다 **CSV 파일에서 Create External Table** 마법사.
-  * 첫 페이지에 새로 고침 단추를 추가 합니다 **CSV 파일에서 Create External Table** 마법사.
+* 이 릴리스에서는 **SQL Server 빅 데이터 클러스터** 연결 형식이 제거되었습니다. SQL Server 빅 데이터 클러스터 연결에서 이전에 사용할 수 있던 모든 기능을 이제 SQL Server 연결에서 사용할 수 있습니다.
+* HDFS 검색은 **Data Services** 폴더 아래에서 찾을 수 있습니다.
+* Notebook의 경우 PySpark 및 기타 빅 데이터 커널은 SQL Server 빅 데이터 클러스터의 SQL Server 마스터 인스턴스에 연결될 때 작동합니다.
+* 외부 테이블 만들기 마법사:
+  * 기존 외부 데이터 원본을 사용하여 외부 테이블을 만들 수 있도록 지원합니다.
+  * 마법사 전체에서 성능이 향상되었습니다.
+  * 특수 문자를 포함하는 개체 이름의 처리가 개선되었습니다. 일부 경우에는 이로 인해 마법사가 실패했습니다.
+  * 개체 매핑 페이지의 안정성이 개선되었습니다.
+  * 데이터베이스 드롭다운에서 'DWConfiguration', 'Dwconfiguration', 'Dwconfiguration' 등의 시스템 데이터베이스가 제거되었습니다.
+  * **CSV 파일에서 외부 테이블 만들기** 마법사에서 외부 파일 형식 개체의 이름을 설정할 수 있도록 지원합니다.
+  * **CSV 파일에서 외부 테이블 만들기** 마법사의 첫 번째 페이지에 새로 고침 단추를 추가했습니다.
 
-## <a name="release-notes-v0110"></a>릴리스 정보 (v0.11.0)
+## <a name="release-notes-v0110"></a>릴리스 정보(v0.11.0)
 
-* Jupyter Notebook 지원, Python3 및 Spark 커널에 대 한 지원 특히 Azure 데이터 Studio로 이동 되었습니다. 이 확장 Notebook을 사용 하기 위해 필요 하지 않습니다.
-* 외부 데이터는 마법사의 여러 버그 수정:
-  * Oracle 형식 매핑은 SQL Server 2019 CTP 2.3에서 제공 하는 변경 내용과 일치 하도록 업데이트 되었습니다.
-  * 새 스키마 테이블 매핑 컨트롤에 입력 된 끊어져서 문제를 해결 했습니다.
-  * 여기서 테이블 매핑에 데이터베이스 노드를 확인 하는 중 발생 하지 모든 테이블 및 뷰 선택 되는 문제가 해결 되었습니다.
+* Jupyter Notebook 지원, 특히 Python3 및 Spark 커널 지원이 Azure Data Studio으로 이동되었습니다. 이 확장은 더 이상 Notebook을 사용하는 데 필요하지 않습니다.
+* 외부 데이터 마법사의 여러 버그 수정:
+  * Oracle 형식 매핑이 SQL Server 2019 CTP 2.3에서 제공되는 변경 내용에 맞게 업데이트되었습니다.
+  * 테이블 매핑 컨트롤에 입력한 새 스키마가 손실되는 문제가 해결되었습니다.
+  * 테이블 매핑의 데이터베이스 노드를 확인할 때 모든 테이블과 뷰가 확인되지는 않는 문제가 해결되었습니다.
 
 
-## <a name="release-notes-v0102"></a>릴리스 정보 (v0.10.2)
+## <a name="release-notes-v0102"></a>릴리스 정보(v0.10.2)
 ### <a name="sql-server-2019-support"></a>SQL Server 2019 지원
-SQL Server 2019에 대 한 지원이 새로 고쳤습니다. SQL Server 빅 데이터 클러스터에 연결 하는 방법에 새 인스턴스에 _Data Services_ 폴더 탐색기 트리에 표시 됩니다. 이 연결에 대해 새 노트북을 열고 Spark 작업 제출, HDFS 사용 등의 작업에 대 한 시작 지점에 있습니다. 와 같은 일부 작업에 대 한 유의 _외부 데이터 만들기_ HDFS 파일/폴더를 통해 합니다 _SQL Server 2019 Preview_ 확장을 설치 해야 합니다.
+SQL Server 2019에 대한 지원이 업데이트되었습니다. SQL Server 빅 데이터 클러스터 인스턴스에 연결할 때 탐색기 트리에 새 _Data Services_ 폴더가 나타납니다. 여기에는 연결에 대해 새 Notebook을 열고, Spark 작업을 제출하고, HDFS로 작업하는 것과 같은 작업을 위한 시작 지점이 있습니다. HDFS 파일/ 폴더를 통해 _외부 데이터 만들기_와 같은 일부 작업을 수행하려면 _SQL Server 2019 미리 보기_ 확장을 설치해야 합니다.
 
 ### <a name="notebook-support"></a>Notebook 지원
-이 릴리스에서 노트북 사용자 인터페이스에 중요 한 업데이트를 했습니다. 이번에 사용자와 공유 되는 전자 필기장 읽기 쉽게 했습니다. 이 셀 주위의 상자 선택, 마우스가 가리키는 경우가 아니면 모든 개요 제거를 위한 쉬운 셀 수준 작업 하지 않고 셀을 선택 해야 할에 대 한 가리킨 항목 지원을 추가 및 애니메이션된 실행 횟수를 추가 하 여 실행 상태를 명확히 _중지실행_ 단추를 더 합니다. 또한 바로 가기 키를 추가 했습니다 _새 노트북_ (`Ctrl+Shift+N`), _실행 셀_ (`F5`), _새 코드 셀_ (`Ctrl+Shift+C`),  _새 텍스트 셀_ (`Ctrl+Shift+T`). 앞에서는 됩니다 것을 목표로 컴파일되는 모든 주요 작업 바로 가기가 보겠습니다 무엇을 하 고 누락 된 알고!
+이 릴리스에서는 Notebook 사용자 인터페이스의 중요한 기능이 업데이트되었습니다. 이러한 업데이트는 사용자와 공유하는 Notebook을 쉽게 읽을 수 있도록 하는 데 중점을 두고 진행되었습니다. 즉, 선택하거나 가리키지 않으면 셀 주변의 모든 개요 상자가 제거되고, 셀을 선택하지 않고도 쉬운 셀 수준 작업을 수행하기 위한 가리키기 지원이 추가되고, 실행 횟수, 애니메이션 _실행 중지_ 단추 등을 추가하여 실행 상태를 명확히 나타냅니다. 또한 _새 Notebook_(`Ctrl+Shift+N`), _셀 실행_(`F5`), _새 코드 셀_(`Ctrl+Shift+C`), _새 텍스트 셀_(`Ctrl+Shift+T`)의 바로 가기 키도 추가했습니다. 앞으로 모든 주요 작업을 바로 가기로 실행할 수 있도록 할 예정이므로 놓치기 쉬운 작업이 있으면 알려주세요.
 
-기타 개선 사항 및 수정은 다음과 같습니다.
-* 합니다 _SQL Server 2019 Preview_ 확장은 이제 프롬프트 사용 하 여 Python 종속성에 대 한 설치 디렉터리를 선택 합니다. 더 이상 또한에서 Python을 `.vsix file`, 전체 확장 크기를 줄일 합니다. Python 종속성이이 확장을 설치 해야 사용 하 여 Spark 및 Python3 커널은 지원에 필요 합니다.
-* 명령줄에서 새 notebook을 실행 하기 위한 지원이 추가 되었습니다. 인수를 사용 하 여 시작 `--command=notebook.command.new --server=myservername` 새 노트북을 열고이 서버에 연결 해야 합니다.
-* 노트북 셀에는 대규모 코드 길이에 대 한 성능을 수정 합니다. 코드 셀 250 개 이상의 줄을 추가 하는 스크롤 막대를 갖게 됩니다.
-* 향상 된.ipynb 파일을 지원 합니다. 버전 3 이상 이제 지원 됩니다. 파일 저장에 버전으로 업데이트 4 이상 note 하십시오.
-* `notebook.enabled` 사용자 설정 되었습니다. 제거 이제는 기본 제공 전자 필기장에서 뷰어는 안정적인
-* 이 경우 여러 개체 레이아웃을 수정 높은 대비 테마 지원 이제 됩니다.
-* #3680 출력 많은 경우에 따라 표시 되는 위치를 고정 `,,,` 올바르게 문자
-* Azure 데이터 studio 외부로 이동한 후 편집기가 사라집니다 셀에 대 한 고정된 # 3602
-* 에 대 한 표 뷰를 사용 하도록 지원이 추가 되었습니다는 `application/vnd.dataresource+json` MIME 형식을 출력 합니다. 즉,이 사용 하는 많은 Notebook (설정 하 여 예를 들어 `pd.options.display.html.table_schema` Python notebook에서) 고정 #3959 Azure Data Studio notebook 닫으면 두 번 노트북 서버를 종료 하려고 하는 멋진 테이블 형식 출력 해야 합니다.
+기타 개선 사항 및 수정 내용은 다음과 같습니다.
+* 이제 _SQL Server 2019 미리 보기_ 확장은 Python 종속성의 설치 디렉터리를 선택하라는 메시지를 표시합니다. 또한 `.vsix file`에 더 이상 Python이 포함되지 않으므로 전반적인 확장 크기가 줄어듭니다. Spark 및 Python3 커널을 지원하려면 Python 종속성이 필요하므로 이러한 커널을 사용하려면 이 확장을 설치해야 합니다.
+* 명령줄에서 새 Notebook을 시작할 수 있는 지원이 추가되었습니다. 인수 `--command=notebook.command.new --server=myservername`을 사용하여 시작하면 새 Notebook이 열리고 이 서버에 연결됩니다.
+* 셀에 길이가 긴 코드가 포함된 Notebook의 성능이 수정되었습니다. 코드 셀이 250줄을 초과하면 스크롤 막대가 추가됩니다.
+* .ipynb 파일 지원이 개선되었습니다. 이제 버전 3 이상이 지원됩니다. 저장 시 파일이 버전 4 이상으로 업데이트됩니다.
+* 기본 제공 노트북 뷰어가 안정화되었으므로 `notebook.enabled` 사용자 설정이 제거되었습니다.
+* 이 경우 개체 레이아웃의 다양한 수정을 통해 고대비 테마가 지원됩니다.
+* 출력에 많은 `,,,` 문자가 잘못 표시되는 #3680 문제가 해결되었습니다.
+* Azure Data Studio 밖으로 이동한 후 셀 편집기가 사라지는 #3602 문제가 해결되었습니다.
+* `application/vnd.dataresource+json` 출력 MIME 형식에 대한 그리드 보기를 사용하도록 지원이 추가되었습니다. 즉, 이 보기를 사용하는 많은 Notebook(예: Python Notebook에서 `pd.options.display.html.table_schema` 설정)은 보다 나은 테이블 형식 출력을 표시합니다. Azure Data Studio가 Notebook을 닫은 후에 Notebook 서버를 두 번 종료하려고 하는 #3959 문제를 해결했습니다.
 
 #### <a name="known-issues"></a>알려진 문제
-* Notebook을 열면 설치 python 대화 상자가 표시 됩니다. 커널 하면이 설치를 취소 하 고 연결 대상 드롭다운 표시 되지 않는 값을 예상 합니다. Python 설치를 완료 하려면이 문제를 해결 합니다.
-* 지원 되지 않는 커널을 사용 하 여 notebook을 열면, 커널 및 _연결할_ 드롭다운에는 Azure 데이터 Studio가 중단 하면 됩니다. Azure Data Studio 닫아야 하며, 지원 되는 커널을 사용 해야 합니다 (Python3, Spark | R, Spark | Scala, PySpark, PySpark3)
-* Spark UI 링크 PySpark3 또는 SQL Server 끝점에 대해 다른 Spark 커널을 사용 하는 경우 실패 합니다. 문제를 해결 하세요. 대시보드에서 Spark UI에서 클릭 하거나 올바른 Spark UI 하이퍼링크 해야 하는 대로 SQL Server 빅 데이터 클러스터 연결 형식을 사용 하 여 연결
+* Notebook을 열면 python 설치 대화 상자가 표시됩니다. 이 설치를 취소하면 커널 및 연결 대상 드롭다운에 예상되는 값이 표시되지 않습니다. 해결 방법은 Python 설치를 완료하는 것입니다.
+* 지원되지 않는 커널을 사용하여 Notebook을 열면 커널 및 _연결 대상_ 드롭다운에서 Azure Data Studio가 중단됩니다. Azure Data Studio를 닫고 지원되는 커널을 사용하고 있는지 확인해야 합니다(Python3, Spark | R, Spark | Scala, PySpark, PySpark3).
+* SQL Server 엔드포인트에 대해 PySpark3 또는 기타 Spark 커널을 사용하는 경우 Spark UI 링크가 실패합니다. 해결 방법으로 대시보드에서 Spark UI를 클릭하거나 SQL Server 빅 데이터 클러스터 연결 유형을 사용하여 연결합니다. 이 연결 유형은 올바른 Spark UI 하이퍼링크를 사용합니다.
 
 ### <a name="extensibility-improvements"></a>확장성 향상
-이 릴리스에서 추가 된 다양 한 extender는 데 도움이 되는 향상 된 기능
-* 새 `ObjectExplorerNodeProvider` API 확장 SQL Server 또는 기타 연결 노드 아래의 폴더에 적용할 수 있습니다. 이 방법을 `Data Services` 노드 SQL Server 2019 인스턴스 아래에 추가 됩니다 있지만 UI를 쉽게 모니터링 또는 다른 폴더를 추가할 수 있습니다.
-* 두 개의 새 상황에 맞는 키 값이 대시보드에 표시/숨기기 기여 하는 데 사용할 수 있습니다.
-  * `mssql:iscluster` SQL Server 2019 빅 데이터 클러스터 인지 여부를 나타냅니다.
-  * `mssql:servermajorversion` 서버 버전 (SQL Server 2019, SQL Server 2017 등에 대 한 14에 대 한 15)에 있습니다. 이 기능은 요소가 표시 되 면 SQL Server 2017 이상의 경우, 예를 들어 수 있습니다.
+Extender를 지원하는 다양한 개선 기능이 이 릴리스에 추가되었습니다.
+* 새 `ObjectExplorerNodeProvider` API를 사용하면 확장을 통해 SQL Server 또는 다른 연결 노드 아래에 폴더가 배치될 수 있습니다. `Data Services` 노드는 이러한 방식으로 SQL Server 2019 인스턴스 아래에 추가되지만, 모니터링 또는 기타 폴더를 UI에 쉽게 추가하는 데 이 API를 사용할 수 있습니다.
+* 대시보드에 기여를 표시하거나 숨기는 데 사용할 수 있는 두 가지 새로운 컨텍스트 키 값이 제공됩니다.
+  * `mssql:iscluster`는 SQL Server 2019 빅 데이터 클러스터 인지 여부를 나타냅니다.
+  * `mssql:servermajorversion`에는 서버 버전(SQL Server 2019의 경우 15, SQL Server 2017의 경우 14 등)이 표시됩니다. 이 값은 예를 들어, SQL Server 2017 이상에 대해서만 기능을 표시해야 하는 경우에 유용할 수 있습니다.
 
 
-## <a name="release-notes-v080"></a>릴리스 정보 (v0.8.0)
+## <a name="release-notes-v080"></a>릴리스 정보(v0.8.0)
 *Notebook*:
-* 셀 추가 셀 "기타 작업" 셀 단추를 클릭 하면 이제는 전 / 후 기존
-* **새 연결 추가** "다른 이름에 연결" 드롭다운 목록에서 연결 옵션이 추가 되었습니다
-* A **Notebook 종속성을 다시 설치** Python 패키지 업데이트를 지원 하 고 설치 응용 프로그램을 닫거나 걸리거나 도중에 중단 된 경우 해결에 명령이 추가 되었습니다. 이 명령 팔레트에서 실행할 수 있습니다 (사용 하 여 `Ctrl/Cmd+Shift+P` 형식과 `Reinstall Notebook Dependencies`)
-* PROSE python 패키지 1.1.0으로 업데이트 된 버그 수정 포함 하 고 있습니다. 사용 된 **Notebook 종속성을 다시 설치** 이 패키지를 업데이트 하는 명령
-* A **출력 지우기** 명령을 클릭 하 여 이제 지원 되는 **기타 작업** 셀 단추
-* 다음을 고정 고객 문제를 보고 합니다.
-  * Notebook 세션 경로 문제로 인해 Windows에서 시작할 수 없음
-  * 예: C:\ 또는 D:\ 드라이브의 루트 폴더에서 notebook은 시작할 수 없습니다.
-  * [#2820](https://github.com/Microsoft/azuredatastudio/issues/2820) VS Code에서 광고에서 만든 notebook을 편집할 수 없습니다.
-  * Spark UI 링크 Spark 커널을 실행 하는 경우 이제 작동
-  * "패키지 관리" 이름이 "패키지 설치"
+* 이제 "추가 작업" 셀 단추를 클릭하여 기존 셀 앞/뒤에 셀을 추가할 수 있습니다.
+* "연결 대상" 드롭다운의 연결에 **새 연결 추가** 옵션이 추가되었습니다.
+* **Notebook 종속성 다시 설치** 명령은 Python 패키지 업데이트를 지원하고, 애플리케이션을 닫아 설치가 중단되는 경우를 해결하기 위해 추가되었습니다. 이 명령은 명령 팔레트에서 실행할 수 있습니다(`Ctrl/Cmd+Shift+P`를 사용하고 `Reinstall Notebook Dependencies` 입력).
+* PROSE python 패키지는 1.1.0으로 업데이트되었으며 많은 버그 수정이 포함되어 있습니다. 이 패키지를 업데이트하려면 **Notebook 종속성 다시 설치** 명령을 사용합니다.
+* 이제 **추가 작업** 셀 단추를 클릭하여 **출력 지우기** 명령을 수행할 수 있습니다.
+* 고객이 보고한 다음 문제를 수정했습니다.
+  * 경로 문제로 인해 Windows에서 Notebook 세션을 시작할 수 없습니다.
+  * 드라이브의 루트 폴더(예: C:\ 또는 D:\)에서 Notebook을 시작할 수 없습니다.
+  * [#2820](https://github.com/Microsoft/azuredatastudio/issues/2820) ADS에서 만든 Notebook을 VS Code에서 편집할 수 없습니다.
+  * Spark UI 링크는 이제 Spark 커널을 실행할 때 작동합니다.
+  * "관리형 패키지"가 "패키지 설치"로 바뀌었습니다.
 
 *외부 데이터 만들기*:
 
-* 오류 메시지 복사할 및에 대 한 요약 및 세부 보기도 쉽게 구분 되었습니다.
-* 향상 된 UI 레이아웃이 크게 향상 된 안정성 및 오류 처리
-* 다음을 고정 고객 문제를 보고 합니다.
-  * 잘못 된 열 매핑 사용 하 여 테이블은 사용 안 함으로 표시 되 고 경고에서 오류를 설명 합니다.
+* 오류 메시지는 복사 가능하며 더 쉽게 볼 수 있게 요약 및 상세 보기로 분리되었습니다.
+* UI 레이아웃이 향상되고 안정성 및 오류 처리가 크게 개선되었습니다.
+* 고객이 보고한 다음 문제를 수정했습니다.
+  * 열 매핑이 잘못된 테이블은 사용 안 함으로 표시되고 경고에 오류 설명이 표시됩니다.
 
-## <a name="release-notes-v072"></a>릴리스 정보 (v0.7.2)
-* Azure 리소스 탐색기는 이제 Azure Data Studio에 기본 제공 하 고이 확장에서 제거 되었습니다. 이에 대 한 피드백을 주셔서 감사 합니다!
-* Markdown 셀 수를 사용 하 여 notebook의 성능이 향상 되었습니다.
-* Notebook에서 자동 크기 조정 코드 셀입니다. 셀 도구 모음에 따라 최소 크기를 아직이 있습니다.
-* Notebook 종속성을 설치 하는 경우 사용자를 게 알립니다. Windows에서 특히이 걸릴 수 있습니다 시간이 있도록 알림을 이제 작업 보기에 표시 됩니다.
-* Notebook 종속성을 다시 설치를 지원 합니다. 사용자 이미 닫혀 Azure Data Studio만 설치 하는 경우에 유용 합니다.
-* Notebook 셀 실행 취소를 지원 합니다.
-* 외부 데이터 만들기 마법사를 사용 하는 경우 향상 된 안정성, 특히 연결 오류가 발생 한 경우.
-* PolyBase 사용 또는 대상 서버에서 실행 되는 경우에 외부 데이터 만들기 마법사의 사용을 차단 합니다.
-* 맞춤법 및 SQL Server 2019 및 외부 데이터 만들기와 관련 된 픽스를 명명 합니다.
-* Azure Data Studio 디버그 콘솔에서 많은 오류를 제거 합니다.
+## <a name="release-notes-v072"></a>릴리스 정보(v0.7.2)
+* Azure Resource Explorer는 이제 Azure Data Studio에 기본적으로 제공되며 이 확장에서 제거되었습니다. 피드백을 주셔서 감사합니다.
+* 많은 Markdown 셀이 있는 Notebook의 성능이 개선되었습니다.
+* Notebook에서 코드 셀 크기를 자동으로 조정합니다. 최소 크기는 여전히 셀 도구 모음을 기준으로 합니다.
+* Notebook 종속성을 설치할 때 사용자에게 알립니다. 특히 Windows에서 이 작업은 시간이 오래 걸릴 수 있으므로 이제 작업 보기에 알림이 표시됩니다.
+* Notebook 종속성을 다시 설치할 수 있습니다. 이러한 기능은 이전에 사용자가 설치 도중에 Azure Data Studio를 닫은 경우에 유용합니다.
+* Notebook에서 셀 실행을 취소할 수 있습니다.
+* 특히, 연결 오류가 발생할 때 외부 데이터 만들기 마법사를 사용할 경우의 안정성이 향상되었습니다.
+* 대상 서버에서 PolyBase를 사용하도록 설정하지 않았거나 실행하고 있지 않은 경우에는 외부 데이터 만들기 마법사의 사용을 차단합니다.
+* SQL Server 2019 및 외부 데이터 만들기와 관련해서 철자 및 이름이 수정되었습니다.
+* Azure Data Studio 디버그 콘솔에서 다수의 오류가 제거되었습니다.
 
 ##  <a name="sql-server-2019-big-data-cluster-support"></a>SQL Server 2019 빅 데이터 클러스터 지원
 
-* 클릭 **연결 추가** 에 *개체 탐색기* 선택한 **SQL Server 빅 데이터 클러스터** 연결 유형으로 합니다.
+* *개체 탐색기*에서 **연결 추가**를 클릭하고 연결 형식응로 **SQL Server 빅 데이터 클러스터**를 선택합니다.
 
    > [!TIP]
-   > 표시 되지 않으면 합니다 **SQL Server 빅 데이터 클러스터** 연결 형식으로 Azure 데이터 Studio 다시 시작 합니다.
+   > **SQL Server 빅 데이터 클러스터** 연결 형식이 표시되지 않으면 Azure Data Studio를 다시 시작합니다.
 
-* 호스트 이름 또는 IP 주소 클러스터 끝점 및 사용자 이름 및 연결 하는 데 사용 되는 암호를 입력 합니다.
-* 필요에 따라에 친숙 한 표시 이름을 포함 합니다 **이름을** 필드입니다.
-* 클릭 **Connect** 일반적인 작업을 시작할 수 있습니다 및 대시보드에서 찾아보기 **HDFS** 개체 탐색기 및 여기에서 상황에 맞는 작업을 실행된 합니다.
-* 클러스터에 대해 Spark 작업을 제출 하려면 마우스 오른쪽 단추로 클릭에서 서버 노드 *개체 탐색기* 선택한 **Spark 작업 제출** 제출 대화 상자를 표시 합니다.
-* Notebook을 열려면 다음 섹션을 참조 합니다.
+* 클러스터 엔드포인트의 호스트 이름 또는 IP 주소와 연결에 사용되는 사용자 이름 및 암호를 입력합니다.
+* 필요에 따라 **이름** 필드에 표시 이름을 포함합니다.
+* **연결**을 클릭하고 대시보드에서 일반 작업을 시작한 후 개체 탐색기에서 **HDFS**를 찾습니다. 여기에서 컨텍스트 내 작업을 실행할 수 있습니다.
+* 클러스터에 대해 Spark 작업을 제출하려면 작업 *개체 탐색기*에서 서버 노드를 마우스 오른쪽 단추로 클릭하고 **Spark 작업 제출**을 선택하여 제출 대화 상자를 표시합니다.
+* Notebook을 열려면 다음 섹션을 참조하세요.
 
-자세한 내용은 참조 하세요 [빅 데이터 클러스터](../big-data-cluster/big-data-cluster-overview.md)합니다.
+자세한 내용은 [빅 데이터 클러스터](../big-data-cluster/big-data-cluster-overview.md)를 참조하세요.
 
 
 ## <a name="azure-data-studio-notebooks"></a>Azure Data Studio Notebook
 
-* 다음 방법 중 하나에서 notebook을 엽니다.
-  * 새 notebook을 엽니다는 *명령 팔레트*합니다.
-  * SQL Server 2019 빅 데이터 클러스터 중 하나를 HDFS 개체 탐색기 트리를 엽니다.
-    * 해당 서버 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **새 Jupyter 노트북**합니다.
-    * CSV 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **Notebook에서 분석**합니다.
-  * 기존.ipynb 파일을 엽니다는 **파일** 메뉴 또는 파일 탐색기 *(.ipynb 파일 올바르게 로드 4 이상 버전으로 업그레이드 해야 합니다)*
-* 커널을 선택 합니다. 로컬 전자 필기장 실행을 위한 Python 3를 선택 합니다. 원격 실행을 위해 PySpark 또는 Spark 선택 | Scala 합니다.
-* 원격으로 실행 하는 경우 연결할 SQL Server 빅 데이터 클러스터 끝점을 선택 (필요 없는 Python 3를 사용 하 여 로컬 개발에 대 한).
-* Notebook 헤더의 단추를 통해 코드 또는 markdown 셀을 추가 합니다. 각 셀의 왼쪽에 휴지통 아이콘을 사용 하 여 셀을 제거 합니다.
-* 코드 셀에 대 한 재생 단추를 사용 하 여 셀을 실행 하 고 markdown 편집 간을 전환 눈 모양 아이콘을 사용 하 여 미리 보기
+* 다음 방법 중 하나로 Notebook을 엽니다.
+  * *명령 팔레트*에서 새 Notebook을 엽니다.
+  * SQL Server 2019 빅 데이터 클러스터에 대한 HDFS 개체 탐색기 트리를 열고 다음 중 하나를 수행합니다.
+    * 서버 노드를 마우스 오른쪽 단추로 클릭하고 **새 Jupyter Notebook**을 선택합니다.
+    * CSV 파일을 마우스 오른쪽 단추로 클릭하고 **Notebook에서 분석**을 선택합니다.
+  * **파일** 메뉴 또는 파일 탐색기에서 기존 .ipverb 파일을 엽니다 *(.ipverb 파일을 제대로 로드하려면 버전 4 이상으로 업그레이드해야 함)* .
+* 커널을 선택합니다. 로컬 Notebook 실행의 경우 Python 3을 선택합니다. 원격 실행의 경우 PySpark 또는 Spark | Scala를 선택합니다.
+* 원격으로 실행하는 경우 연결할 SQL Server 빅 데이터 클러스터 엔드포인트를 선택합니다(Python 3를 사용한 로컬 개발에는 필요하지 않음).
+* Notebook 헤더의 단추를 통해 코드 또는 Markdown 셀을 추가합니다. 각 셀의 왼쪽에 있는 휴지통 아이콘을 사용하여 셀을 제거합니다.
+* 코드 셀에 대해 재생 단추를 사용하여 셀을 실행하고 눈 모양 아이콘으로 Markdown 편집 및 미리 보기를 설정/해제합니다.
 
-## <a name="polybase-create-external-table-wizard"></a>PolyBase 외부 테이블 마법사 만들기
+## <a name="polybase-create-external-table-wizard"></a>PolyBase 외부 테이블 만들기 마법사
 
-* SQL Server 2019 인스턴스에서 *외부 테이블 만들기 마법사* 세 가지 방법으로 열 수 있습니다.
-  * 서버를 마우스 오른쪽 단추로 클릭, 선택 **관리**SQL Server 2019 (미리 보기)에 대 한 탭을 클릭 하 고 선택 **Create External Table**합니다.
-  * 선택한 SQL Server 2019 인스턴스와 *개체 탐색기*, 불러옵니다 *외부 만들기 마법사* 를 통해 합니다 *명령 팔레트*합니다.
-  * SQL Server 2019 데이터베이스를 마우스 오른쪽 단추로 클릭 *개체 탐색기* 선택한 **Create External Table**합니다.
-* 확장의이 버전에서는 원격 SQL Server 및 Oracle 테이블에 액세스 하려면 외부 테이블을 만들 수 있습니다.
+* SQL Server 2019 인스턴스에서 *외부 테이블 만들기 마법사*를 다음과 같은 세 가지 방법으로 열 수 있습니다.
+  * 서버를 마우스 오른쪽 단추로 클릭하고 **관리**를 선택한 다음, SQL Server 2019(미리 보기) 탭을 클릭하고 **외부 테이블 만들기**를 선택합니다.
+  * *개체 탐색기*에서 SQL Server 2019 인스턴스를 선택한 상태로 *명령 팔레트*를 통해 *외부 만들기 마법사*를 엽니다.
+  * *개체 탐색기*에서 SQL Server 2019 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **외부 테이블 만들기**를 선택합니다.
+* 이 확장 버전에서는 원격 SQL Server 및 Oracle 테이블에 액세스하기 위해 외부 테이블을 만들 수 있습니다.
 
   > [!NOTE]
-  > 외부 테이블 기능을 SQL 2019 기능 이지만, 원격 SQL Server 이전 버전의 SQL Server를 실행할 수 있습니다.
+  > 외부 테이블 기능은 SQL 2019 기능이며, 원격 SQL Server는 이전 버전의 SQL Server를 실행할 수 있습니다.
 
-* 마법사의 첫 번째 페이지에서 SQL Server 또는 Oracle 액세스 하 고 계속 있는지 여부를 선택 합니다.
-* 하나 아직 만들어지지 않은 경우 데이터베이스 마스터 키를 만들려면 나타납니다 (암호 복잡성이 부족 하 여 차단).
-* 데이터 원본 연결을 만들고 원격 서버에 대 한 자격 증명 이름이 있습니다.
-* 새 외부 테이블에 매핑할 개체를 선택 합니다.
-* 선택 **스크립트 생성** 하거나 **만들기** 마법사를 마칩니다.
-* 외부 테이블을 만든 후 즉시 나타나는 데이터베이스의 개체 트리 생성 된 것입니다.
+* 마법사의 첫 번째 페이지에서 SQL Server에 액세스할지 또는 Oracle에 액세스할지를 선택하고 계속합니다.
+* 데이터베이스 마스터 키가 아직 만들지 않은 경우 만들라는 메시지가 표시됩니다(복잡성이 부족한 암호는 차단됨).
+* 원격 서버에 대해 데이터 원본 연결 및 명명된 자격 증명을 만듭니다.
+* 새 외부 테이블에 매핑할 개체를 선택합니다.
+* **스크립트 생성** 또는 **만들기**를 선택하여 마법사를 완료합니다.
+* 외부 테이블을 만들면 해당 테이블이 만들어진 데이터베이스의 개체 트리에 바로 표시됩니다.
 
 
 ## <a name="known-issues"></a>알려진 문제
 
-* 연결을 만들 때 암호를 저장 하지 않으면, Spark 작업을 제출 하는 등 일부 작업이 실패할 수 있습니다.
-* 기존.ipynb notebook 뷰어에 내용을 로드할 4 이상 버전으로 업그레이드 해야 합니다.
-* 실행 합니다 **Notebook 종속성을 다시 설치** 명령 2 개의 태스크가 실패 한 작업 보기를 표시 될 수 있습니다. 설치에 실패 해도이
-* 선택 **새 연결 추가** Notebook을 및 취소를 클릭 하면 **연결 선택** 이미 연결 된 경우에 표시 됩니다.
+* 연결을 만들 때 암호를 저장하지 않으면 Spark 작업 제출 등의 일부 작업이 실패할 수 있습니다.
+* 뷰어에서 콘텐츠를 로드하려면 기존 .ipynb Notebook을 버전 4 이상으로 업그레이드해야 합니다.
+* **Notebook 종속성 다시 설치** 명령을 실행하면 작업 보기에 2개의 작업이 표시될 수 있으며, 그 중 하나는 실패합니다. 이로 인해 설치가 실패하는 것은 아닙니다.
+* Notebook에서 **새 연결 추가**를 선택하고 취소를 클릭하면 이미 연결된 경우에도 **연결 선택**이 표시됩니다.

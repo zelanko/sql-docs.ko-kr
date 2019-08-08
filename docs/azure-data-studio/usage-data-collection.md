@@ -1,7 +1,7 @@
 ---
-title: 사용 또는 사용 현황 데이터 수집 및 크래시 보고를 사용 하지 않도록 설정
+title: 사용 현황 데이터 수집 및 충돌 보고 사용 또는 사용 안 함
 titleSuffix: Azure Data Studio
-description: 이 문서에서는 사용량 및 크래시 보고 데이터는 수집 되 고 Microsoft로 전송 하는 경우를 제어 하는 방법을 설명 합니다.
+description: 이 문서에서는 사용량 및 충돌 보고 데이터를 수집하여 Microsoft로 보낼지 여부를 제어하는 방법을 설명합니다.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,37 +11,37 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 71ed86e9ad076a41099eaf4e56fe67a25b5f2c21
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958943"
 ---
-# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>에 대 한 사용 데이터 컬렉션 설정 또는 해제 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="enable-or-disable-usage-data-collection-for-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 사용 현황 데이터 수집 사용 또는 사용 안 함
 
-## <a name="how-to-disable-telemetry-reporting"></a>원격 분석 보고를 사용 하지 않도록 설정 하는 방법
+## <a name="how-to-disable-telemetry-reporting"></a>원격 분석 보고를 사용하지 않도록 설정하는 방법
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 사용 현황 데이터를 수집 하 고 제품과 서비스를 개선 하기 위해 Microsoft로 보냅니다. 자세한 내용은 참조는 [개인정보취급방침](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409)합니다.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서는 사용 현황 데이터를 수집한 후 Microsoft로 보내 제품 및 서비스를 개선합니다. 자세히 알아보려면 [개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409)을 읽어보세요.
 
-Microsoft 사용 현황 데이터 보내기 않으려면 경우 설정할 수 있습니다 합니다 *telemetry.enableTelemetry* 설정을 *false*합니다.
+사용 현황 데이터를 Microsoft로 보내지 않으려는 경우 *telemetry.enableTelemetry* 설정을 *false*로 지정할 수 있습니다.
 
-모든 원격 분석 이벤트를 억제 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 **파일** > **기본 설정** > **설정**, 다음 옵션을 추가 합니다.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 모든 원격 분석 이벤트를 대기하도록 하려면 **파일** > **기본 설정** > **설정**에서 다음 옵션을 추가합니다.
 
 ```json
     "telemetry.enableTelemetry": false
 ```
 
-**중요 알림**: 이 옵션의 다시 시작이 필요한 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 적용 합니다. 
+**중요한 알림**: 이 옵션을 적용하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 다시 시작해야 합니다. 
 
-## <a name="how-to-disable-crash-reporting"></a>작동 중단 보고를 사용 하지 않도록 설정 하는 방법
+## <a name="how-to-disable-crash-reporting"></a>충돌 보고를 사용하지 않도록 설정하는 방법
 
-충돌 보고를 사용 하지 않도록 설정에서 **파일** > **기본 설정** > **설정**, 다음 옵션을 추가 합니다.
+충돌 보고를 사용하지 않도록 설정하려면 **파일** > **기본 설정** > **설정**에서 다음 옵션을 추가합니다.
 
 ```json
     "telemetry.enableCrashReporter": false
 ```
 
-**중요 알림**: 이 옵션의 다시 시작이 필요한 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 적용 합니다.
+**중요한 알림**: 이 옵션을 적용하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 다시 시작해야 합니다.
 
-## <a name="additional-resources"></a>추가 자료
+## <a name="additional-resources"></a>추가 리소스
 - [작업 영역 및 사용자 설정](settings.md)

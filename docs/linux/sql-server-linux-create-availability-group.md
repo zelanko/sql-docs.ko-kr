@@ -1,6 +1,6 @@
 ---
-title: 만들고 Linux의 SQL Server에 대 한 가용성 그룹 구성
-description: 이 자습서에서는 만들고 Linux의 SQL Server에 대 한 가용성 그룹을 구성 하는 방법을 보여 줍니다.
+title: Linux의 SQL Server에 대해 가용성 그룹 만들기 및 구성
+description: 이 자습서에서는 Linux의 SQL Server에 대해 가용성 그룹을 만들고 구성하는 방법을 보여 줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -9,49 +9,49 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 5d341d7bbda403b405268fe253cff7d60cea4d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077441"
 ---
-# <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>만들고 Linux의 SQL Server에 대 한 가용성 그룹 구성
+# <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Linux의 SQL Server에 대해 가용성 그룹 만들기 및 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 자습서에 대 한 만들기 및 가용성 그룹 (AG) 구성 방법에 설명 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] linux. 와 달리 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] 이전에 Windows를 설정할 수 있습니다. Ag 기본 Pacemaker 클러스터를 먼저 만들 유무 및 합니다. 클러스터와의 통합 필요에 따라 수행 되지 않으므로 나중.
+이 자습서에서는 Linux에서 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 대해 가용성 그룹을 만들고 구성하는 방법을 보여 줍니다. Windows의 [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] 및 이전 버전과 달리 기본 Pacemaker 클러스터를 먼저 만들거나 만들지 않고 AG를 사용하도록 설정할 수 있습니다. 필요에 따라 나중까지 클러스터와 연결되지 않을 수 있습니다.
 
-이 자습서에는 다음 작업이 포함 됩니다.
+이 자습서에는 다음 작업이 포함되어 있습니다.
  
 > [!div class="checklist"]
-> * 가용성 그룹을 사용 하도록 설정 합니다.
-> * 인증서 및 가용성 그룹 끝점을 만듭니다.
-> * 사용 하 여 [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) 또는 TRANSACT-SQL을 가용성 그룹을 만듭니다.
-> * 만들기는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Pacemaker에 대 한 사용 권한과 로그인 합니다.
-> * Pacemaker 클러스터 (외부 형식에만 해당)에서 가용성 그룹 리소스를 만듭니다.
+> * 가용성 그룹을 사용하도록 설정합니다.
+> * 가용성 그룹 엔드포인트 및 인증서를 만듭니다.
+> * SSMS([!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]) 또는 Transact-SQL을 사용하여 가용성 그룹을 만듭니다.
+> * Pacemaker에 대한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 로그인 및 사용 권한을 만듭니다.
+> * Pacemaker 클러스터에서 가용성 그룹 리소스를 만듭니다(외부 형식만 해당).
 
 ## <a name="prerequisite"></a>사전 요구 사항
-- 에 설명 된 대로 Pacemaker 고가용성 클러스터를 배포 [SQL Server on Linux의 Pacemaker 클러스터를 배포](sql-server-linux-deploy-pacemaker-cluster.md)합니다.
+- [Linux의 SQLServer에 대한 Pacemaker 클러스터 배포](sql-server-linux-deploy-pacemaker-cluster.md)에 설명된 대로 Pacemaker 고가용성 클러스터를 배포합니다.
 
 
-## <a name="enable-the-availability-groups-feature"></a>가용성 그룹 기능을 사용 하도록 설정
+## <a name="enable-the-availability-groups-feature"></a>가용성 그룹 기능 사용
 
-와 달리, Windows에서 사용할 수 없습니다 PowerShell 또는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Configuration Manager 가용성 그룹 (AG) 기능입니다. Linux를 사용 해야 `mssql-conf` 기능을 사용 하도록 합니다. 가용성 그룹 기능을 사용 하는 방법은 두 가지: 사용 된 `mssql-conf` 유틸리티 또는 편집은 `mssql.conf` 파일을 수동으로.
+Windows에서와 달리 PowerShell 또는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Configuration Manager를 사용하여 AG(가용성 그룹) 기능을 사용하도록 설정할 수 없습니다. Linux에서는 이 기능을 사용하도록 설정하려면 `mssql-conf`를 사용해야 합니다. 가용성 그룹 기능을 사용하도록 설정하는 방법에는 `mssql-conf` 유틸리티를 사용하거나 `mssql.conf` 파일을 수동으로 편집하는 두 가지 방법이 있습니다.
 
 > [!IMPORTANT]
-> 에서도 구성 전용 복제본에 대 한 AG 기능을 사용 하도록 해야 [!INCLUDE[ssexpress-md](../includes/ssexpress-md.md)]합니다.
+> AG 기능은 [!INCLUDE[ssexpress-md](../includes/ssexpress-md.md)]에서도 구성 전용 복제본에 사용하도록 설정해야 합니다.
 
-### <a name="use-the-mssql-conf-utility"></a>Mssql conf 유틸리티 사용
+### <a name="use-the-mssql-conf-utility"></a>mssql-conf 유틸리티 사용
 
-프롬프트에서 다음을 실행 합니다.
+프롬프트에서 다음을 실행합니다.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 ```
 
-### <a name="edit-the-mssqlconf-file"></a>Mssql.conf 파일 편집
+### <a name="edit-the-mssqlconf-file"></a>mssql.conf 파일 편집
 
-수정할 수도 있습니다는 `mssql.conf` 아래에 있는 파일은 `/var/opt/mssql` 폴더에 다음 줄을 추가 합니다.
+`/var/opt/mssql` 폴더 아래에 있는 `mssql.conf` 파일을 수정하여 다음 줄을 추가할 수도 있습니다.
 
 ```
 [hadr]
@@ -59,34 +59,34 @@ sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled 1
 hadr.hadrenabled = 1
 ```
 
-### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>다시 시작 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]
-다시 시작 해야 Windows에서에 따라 가용성 그룹을 사용 하도록 설정한 후 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다. 다음으로 수행할 수 있습니다.
+### <a name="restart-includessnoversion-mdincludesssnoversion-mdmd"></a>[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 다시 시작
+Windows에서와 같이 가용성 그룹을 사용하도록 설정한 후 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 다시 시작해야 합니다. 이러한 작업은 다음을 통해 수행할 수 있습니다.
 
 ```bash
 sudo systemctl restart mssql-server
 ```
 
-## <a name="create-the-availability-group-endpoints-and-certificates"></a>인증서 및 가용성 그룹 끝점 만들기
+## <a name="create-the-availability-group-endpoints-and-certificates"></a>가용성 그룹 엔드포인트 및 인증서 만들기
 
-가용성 그룹을 통신에 대 한 TCP 끝점을 사용합니다. Linux에서 AG에 대 한 끝점은 경우에 지원 인증서 인증에 사용 됩니다. 즉, 동일한 AG에 참여 하는 복제본 수 있는 다른 모든 인스턴스에 대 한 인스턴스에서 인증서를 복원할 수 해야 합니다. 인증서 과정이 구성 전용 복제본에 대해서도 필요 합니다. 
+가용성 그룹은 통신에 TCP 엔드포인트를 사용합니다. Linux에서 AG의 엔드포인트는 인증에 인증서를 사용하는 경우에만 지원됩니다. 즉, 한 인스턴스의 인증서를 동일한 AG에 참여하는 복제본이 될 다른 모든 인스턴스에서 복원해야 합니다. 구성 전용 복제본의 경우에도 인증서 프로세스가 필요합니다. 
 
-끝점을 만들고 인증서를 복원만 TRANSACT-SQL을 통해 수행할 수 있습니다. 비-사용할 수 있습니다 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-인증서도 생성 합니다. 프로세스를 관리 하 고 만료 되는 모든 인증서를 교체 해야 합니다.
+엔드포인트를 만들고 인증서를 복원하는 작업은 Transact-SQL을 통해서만 수행할 수 있습니다. [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에서 생성하지 않은 인증서도 사용할 수 있습니다. 또한 만료되는 인증서를 관리하고 바꾸는 프로세스도 필요합니다.
 
 > [!IMPORTANT]
-> 사용 하려는 경우는 [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] 경우에 AG를 만들기 위해 마법사를 만들고 Linux의 TRANSACT-SQL을 사용 하 여 인증서를 복원 해야 합니다.
+> [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] 마법사를 사용하여 AG를 만들려는 경우에도 Linux에서 Transact-SQL을 사용하여 인증서를 만들고 복원해야 합니다.
 
-다양 한 명령 (예: 추가 보안)에 대 한 사용 가능한 옵션에서 전체 구문의 경우, 다음을 참조 하세요.
+다양한 명령에 사용할 수 있는 옵션의 전체 구문(예: 추가 보안)에 대해서는 다음을 참조하세요.
 
 -   [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
--   [인증서 만들기](../t-sql/statements/create-certificate-transact-sql.md)
+-   [CREATE CERTIFICATE](../t-sql/statements/create-certificate-transact-sql.md)
 -   [CREATE ENDPOINT](../t-sql/statements/create-endpoint-transact-sql.md)
 
 > [!NOTE]
-> 끝점의 형식을 사용 하 여 가용성 그룹을 만들어야 합니다 하지만 *FOR DATABASE_MIRRORING*이므로 몇 가지 기본 측면은 이제 사용 되지 않는 기능을 사용 하 여 한 번 공유 합니다.
+> 가용성 그룹을 만드는 경우에도 일부 기본 측면이 현재는 더 이상 사용되지 않는 기능과 공유되므로 해당 엔드포인트 유형은 *FOR DATABASE_MIRRORING*을 사용합니다.
 
-이 예제에서는 3 개 노드 구성에 대 한 인증서를 만듭니다. 인스턴스 이름을 LinAGN1, LinAGN2, 및 LinAGN3입니다.
+이 예제에서는 3개 노드 구성을 위한 인증서를 만듭니다. 인스턴스 이름은 LinAGN1, LinAGN2 및 LinAGN3입니다.
 
-1.  다음을 실행 하 여 마스터 키, 인증서 및 끝점을 만들려면 LinAGN1와 인증서를 백업 합니다. 예를 들어 일반적인 TCP 포트 5022의 끝점에 사용 됩니다.
+1.  LinAGN1에서 다음을 실행하여 마스터 키, 인증서 및 엔드포인트를 만들고 인증서를 백업합니다. 이 예제에서는 일반적인 TCP 포트 5022이 엔드포인트에 사용됩니다.
     
     ```SQL
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
@@ -115,7 +115,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-2.  LinAGN2에서 동일한 작업을 수행 합니다.
+2.  LinAGN2에 대해 동일한 작업을 수행합니다.
     
     ```SQL
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
@@ -144,7 +144,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-3.  마지막으로 LinAGN3에서 같은 시퀀스를 수행 합니다.
+3.  마지막으로 LinAGN3에서 동일한 시퀀스를 수행합니다.
     
     ```SQL
     CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<StrongPassword>';
@@ -173,21 +173,21 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-4.  사용 하 여 `scp` 또는 다른 유틸리티에서 인증서의 백업을 AG의 일부가 될 각 노드에 복사 합니다.
+4.  `scp` 또는 다른 유틸리티를 사용하여 AG에 포함될 각 노드에 인증서의 백업을 복사합니다.
     
-    이 예제:
+    이 예제에서는 다음과 같이 복사합니다.
     
-    - LinAGN2 및 LinAGN3 LinAGN1_Cert.cer 복사
-    - LinAGN2_Cert.cer LinAGN1 LinAGN3를 복사 합니다.
-    - LinAGN3_Cert.cer LinAGN1 LinAGN2를 복사 합니다.
+    - LinAGN1_Cert.cer을 LinAGN2 및 LinAGN3에 복사합니다.
+    - LinAGN2_Cert.cer을 LinAGN1 및 LinAGN3에 복사합니다.
+    - LinAGN3_Cert.cer을 LinAGN1 및 LinAGN2에 복사합니다.
     
-5.  소유권 및 복사한 인증서 파일을 사용 하 여 연결 된 그룹을 변경 `mssql`합니다.
+5.  복사한 인증서 파일과 관련된 소유권 및 그룹을 `mssql`로 변경합니다.
     
     ```bash
     sudo chown mssql:mssql <CertFileName>
     ```
     
-6.  인스턴스 수준 로그인 및 LinAGN2 LinAGN1에서 LinAGN3와 연결 된 사용자를 만듭니다.
+6.  LinAGN1에서 LinAGN2 및 LinAGN3과 연결된 인스턴스 수준 로그인 및 사용자를 만듭니다.
     
     ```SQL
     CREATE LOGIN LinAGN2_Login WITH PASSWORD = '<StrongPassword>';
@@ -201,7 +201,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-7.  LinAGN2_Cert 및 LinAGN3_Cert LinAGN1에 복원 합니다. 다른 복제본의 인증서는 것이 AG 통신 및 보안의 중요 한 측면입니다.
+7.  LinAGN1에서 LinAGN2_Cert 및 LinAGN3_Cert를 복원합니다. 다른 복제본의 인증서를 유지하는 것이 AG 통신 및 보안의 중요한 측면입니다.
     
     ```SQL
     CREATE CERTIFICATE LinAGN2_Cert
@@ -228,7 +228,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-9.  인스턴스 수준 로그인 및 LinAGN1 LinAGN2에서 LinAGN3와 연결 된 사용자를 만듭니다.
+9.  LinAGN2에서 LinAGN1 및 LinAGN3과 연결된 인스턴스 수준 로그인 및 사용자를 만듭니다.
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -242,7 +242,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-10. LinAGN1_Cert 및 LinAGN3_Cert LinAGN2에 복원 합니다.
+10. LinAGN2에서 LinAGN1_Cert 및 LinAGN3_Cert를 복원합니다.
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -258,7 +258,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-11. LinAGN2의 끝점에 연결할 LinAG1 및 LinAGN3 권한으로 연결 된 로그인 권한을 부여 합니다.
+11. LinAGN2의 엔드포인트에 연결하기 위한 LinAG1 및 LinAGN3 권한과 관련된 로그인을 부여합니다.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -270,7 +270,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-12. 인스턴스 수준 로그인 및 LinAGN1 LinAGN3에서 LinAGN2와 연결 된 사용자를 만듭니다.
+12. LinAGN3에서 LinAGN1 및 LinAGN2와 연결된 인스턴스 수준 로그인 및 사용자를 만듭니다.
     
     ```SQL
     CREATE LOGIN LinAGN1_Login WITH PASSWORD = '<StrongPassword>';
@@ -284,7 +284,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-13. LinAGN1_Cert 및 LinAGN2_Cert LinAGN3에 복원 합니다. 
+13. LinAGN3에서 LinAGN1_Cert 및 LinAGN2_Cert를 복원합니다. 
     
     ```SQL
     CREATE CERTIFICATE LinAGN1_Cert
@@ -300,7 +300,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-14. LinAGN3의 끝점에 연결할 LinAG1 및 LinAGN2 권한으로 연결 된 로그인 권한을 부여 합니다.
+14. LinAGN3의 엔드포인트에 연결하기 위한 LinAG1 및 LinAGN2 권한과 관련된 로그인을 부여합니다.
     
     ```SQL
     GRANT CONNECT ON ENDPOINT::AGEP TO LinAGN1_Login;
@@ -314,76 +314,76 @@ sudo systemctl restart mssql-server
 
 ## <a name="create-the-availability-group"></a>가용성 그룹 만들기
 
-이 섹션에서는 사용 하는 방법을 다룹니다 [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) 또는 TRANSACT-SQL에 대 한 가용성 그룹을 만들려면 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다.
+이 섹션에서는 SSMS([!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]) 또는 Transact-SQL을 사용하여 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 대한 가용성 그룹을 만드는 방법을 설명합니다.
 
 ### <a name="use-includessmanstudiofull-mdincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] 사용
 
-이 섹션에서는 SSMS를 사용 하 여 새 가용성 그룹 마법사를 사용 하 여 클러스터 유형이 외부인을 사용 하 여 AG를 만드는 방법.
+이 섹션에서는 새 가용성 그룹 마법사에서 SSMS를 사용하여 외부 클러스터 유형의 AG를 만드는 방법을 보여 줍니다.
 
-1.  SSMS에서 확장 **Always On 고가용성**를 마우스 오른쪽 단추로 클릭 **가용성 그룹**를 선택 하 고 **새 가용성 그룹 마법사**합니다.
+1.  SSMS에서 **Always On 고가용성**을 확장하고 **가용성 그룹** 을 마우스 오른쪽 단추로 클릭한 후 **새 가용성 그룹 마법사**를 선택합니다.
 
-2.  소개 대화 상자에서 클릭 **다음**합니다.
+2.  소개 페이지에서 **다음**을 클릭합니다.
 
-3.  가용성 그룹 옵션 지정 대화 상자에서 가용성 그룹의 이름을 입력 하 고 드롭다운 목록에서 외부 없거나 클러스터 유형을 선택 합니다. 외부는 Pacemaker를 배포할 때 사용 해야 합니다. None 읽기 확장과 같은 특별 한 시나리오입니다. 데이터베이스 수준 상태 검색에 대 한 옵션을 선택 하는 것은 선택 사항입니다. 이 옵션에 대 한 자세한 내용은 참조 하세요. [가용성 그룹 데이터베이스 수준의 상태 검색 장애 조치 옵션](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)합니다. **다음**을 클릭합니다.
+3.  가용성 그룹 옵션 지정 대화 상자에서 가용성 그룹의 이름을 입력하고 드롭다운에서 클러스터 유형으로 외부 또는 없음을 선택합니다. Pacemaker를 배포하는 경우 외부를 사용해야 합니다. 읽기 확장과 같은 특수한 시나리오의 경우에는 없음을 사용합니다. 데이터베이스 수준 상태 검색 옵션을 선택하는 것은 선택 사항입니다. 이 옵션에 대한 자세한 내용은 [가용성 그룹 데이터베이스 수준의 상태 검색 장애 조치(failover) 옵션](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md)을 참조하세요. **다음**을 클릭합니다.
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  데이터베이스 선택 대화 상자에서 AG에 참여할 데이터베이스를 선택 합니다. 각 데이터베이스를 AG에 추가할 수 있습니다 전체 백업이 있어야 합니다. **다음**을 클릭합니다.
+4.  데이터베이스 선택 대화 상자에서 AG에 참여할 데이터베이스를 선택합니다. 각 데이터베이스를 AG에 추가하려면 먼저 전체 백업이 있어야 합니다. **다음**을 클릭합니다.
 
-5.  복제본 지정 대화 상자에서 클릭 **복제본 추가**합니다.
+5.  복제본 지정 대화 상자에서 **복제본 추가**를 클릭합니다.
 
-6.  서버 대화 상자에 연결, Linux 인스턴스의 이름을 입력 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 보조 복제본 및 연결 자격 증명이 사용 됩니다. **연결**을 클릭합니다.
+6.  서버에 연결 대화 상자에서 보조 복제본이 될 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]의 Linux 인스턴스 이름과 연결할 자격 증명을 입력합니다. **연결**을 클릭합니다.
 
-7.  에 다른 보조 복제본 또는 구성 전용 복제본을 포함 하는 인스턴스에 대 한 이전 두 단계를 반복 합니다.
+7.  구성 전용 복제본 또는 다른 보조 복제본을 포함할 인스턴스에 대해 앞의 두 단계를 반복합니다.
 
-8.  이제 세 인스턴스는 모두 복제본 지정 대화 상자에 나열 됩니다. True는 보조 복제본이 될 보조 복제본의 클러스터 유형이 외부인 경우 사용 하는 경우에 일치 주 복제본의 가용성 모드 및 장애 조치 모드가 External로 설정 되어 있는지 확인 합니다. 구성 전용 복제본에 대 한 구성의 가용성 모드를만 선택 합니다.
+8.  이제 세 개의 인스턴스가 모두 복제본 지정 대화 상자에 나열됩니다. 클러스터 유형으로 외부를 사용하는 경우 진정한 보조 복제본을 사용될 보조 복제본에 대해, 가용성 모드가 주 복제본의 가용성 모드와 일치하는지와 장애 조치(failover) 모드가 외부로 설정되어 있는지 확인합니다. 구성 전용 복제본의 경우 구성 전용 가용성 모드를 선택합니다.
 
-    다음 예제에서는 두 개의 복제본, 클러스터 유형이 외부인 경우 및 구성 전용 복제본을 사용 하 여 AG를 보여 줍니다.
+    다음 예제에서는 클러스터 유형이 외부인 두 개의 복제본과 구성 전용 복제본이 있는 AG를 보여 줍니다.
 
     ![](./media/sql-server-linux-create-availability-group/image4.png)
 
-    다음 예제에서는 두 개의 복제본 AG, 클러스터 유형이 None, 및 구성 전용 복제본을 보여 줍니다.
+    다음 예제에서는 클러스터 유형이 없음인 두 개의 복제본과 구성 전용 복제본이 있는 AG를 보여 줍니다.
 
     ![](./media/sql-server-linux-create-availability-group/image5.png)
 
-9.  백업 기본 설정을 변경 하려는 경우 백업 기본 설정 탭을 클릭 합니다. Ag 사용 하 여 백업 기본 설정에 대 한 자세한 내용은 참조 하세요. [가용성 복제본에 백업 구성](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)합니다.
+9.  백업 기본 설정을 변경하려면 백업 기본 설정 탭을 클릭합니다. AG의 백업 기본 설정에 대한 자세한 내용은 [가용성 복제본에 백업 구성](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md)을 참조하세요.
 
-10. 클러스터를 사용 하 여 AG를 만들거나 읽기 가능한 보조 복제본을 사용 하 여 읽기-배율에 대 한 none 입력을 하는 경우 수신기 탭을 선택 하 여 수신기를 만들 수 있습니다. 수신기를 나중에 추가할 수 있습니다. 옵션을 선택 하는 수신기를 만들려면 **가용성 그룹 수신기 만들기** 를 이름, TCP/IP 포트 및 정적 또는 자동으로 할당 된 DHCP IP 주소를 사용할지 여부를 입력 합니다. 클러스터 유형이 없음인는 AG에 대 한 IP 되도록 설정 하 고 정적 기억 주의 IP 주소입니다.
+10. 읽을 수 있는 보조 복제본을 사용하거나 읽기 확장을 위해 클러스터 유형이 없음인 AG를 만드는 경우 수신기 탭을 선택하여 수신기를 만들 수 있습니다. 수신기를 나중에 추가할 수도 있습니다. 수신기를 만들려면 **가용성 그룹 수신기 만들기** 옵션을 선택하고 이름, TCP/IP 포트를 입력하고, 고정 DHCP IP 주소 또는 자동으로 할당된 DHCP IP 주소 중 어떤 주소를 사용할지 지정합니다. 클러스터 유형이 없음인 AG의 경우 IP는 고정이어야 하고, 기본 IP 주소로 설정되어야 합니다.
 
     ![](./media/sql-server-linux-create-availability-group/image6.png)
 
-11. 읽을 수 있는 시나리오에 대 한 수신기를 만든 경우 SSMS 17.3 이상 마법사에서 읽기 전용 라우팅을 만들 수 있습니다. SSMS 또는 TRANSACT-SQL을 통해 나중에 추가할 수도 있습니다. 읽기 전용 라우팅을 이제 추가:
+11. 읽을 수 있는 시나리오에 대해 수신기를 만드는 경우 SSMS 17.3 이상에서 마법사를 통해 읽기 전용 라우팅을 만들 수 있습니다. SSMS 또는 Transact-SQL을 통해 나중에 추가할 수도 있습니다. 지금 읽기 전용 라우팅을 추가하려면
 
-    a.  읽기 전용 라우팅을 탭을 선택 합니다.
+    1\.  읽기 전용 라우팅 탭을 선택합니다.
 
-    b.  읽기 전용 복제본에 대 한 Url을 입력 합니다. 이러한 Url 끝점 하지 인스턴스 포트를 사용 하는 점을 제외 하 고 끝점와 비슷합니다.
+    2\.  읽기 전용 복제본의 URL을 입력합니다. 이러한 URL은 엔드포인트가 아니라 인스턴스의 포트를 사용한다는 점을 제외하고 엔드포인트와 비슷합니다.
 
-    c.  각 URL을 선택 하 고 맨 아래에서 읽기 가능한 복제본을 선택 합니다. 다중 선택 하려면 SHIFT 또는 클릭 끌기 누른 합니다.
+    c.  각 URL을 선택하고 아래쪽에서 읽을 수 있는 복제본을 선택합니다. 여러 개를 선택하려면 Shift 키를 누른 채 선택하거나 클릭하여 끕니다.
 
 12. **다음**을 클릭합니다.
 
-13. 보조 복제본은 초기화 하는 방법을 선택 합니다. 기본값을 사용 하는 것 [자동 시드](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), 동일한 경로 AG에 참여 하는 모든 서버에 필요 합니다. (두 번째 옵션); 복원 마법사 백업, 복사를 수행할 수도 있습니다. 수동으로 백업, 복사, 하 고 복제본에서 데이터베이스를 복원 하는 경우 조인 있습니다 (옵션 3 차); 또는 나중에 데이터베이스 추가 (마지막 옵션). 인증서를 수동으로 백업 하 고 복사 하는 경우와 마찬가지로 백업 파일에 대 한 권한을 다른 복제본에서 설정 해야 합니다. **다음**을 클릭합니다.
+13. 보조 복제본을 초기화하는 방법을 선택합니다. 기본값은 AG에 참여하는 모든 서버에서 동일한 경로를 필요로 하는 [자동 시드](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md)를 사용하는 것입니다. 마법사에서 백업, 복사 및 복원을 수행하거나(두 번째 옵션), 복제본에서 데이터베이스를 수동으로 백업, 복사 및 복원한 경우 조인하거나(세 번째 옵션), 나중에 데이터베이스를 추가합니다(마지막 옵션). 인증서를 사용할 때와 마찬가지로 수동으로 백업 및 복사하는 경우 백업 파일에 대한 사용 권한을 다른 복제본에 대해 설정해야 합니다. **다음**을 클릭합니다.
 
-14. 유효성 검사 대화 상자에서 모든 돌아오지 않으면 성공으로, 경우 조사 합니다. 일부 경고는 허용 및 치명적이 지 않음, 같은 수신기를 만들지 않도록 하는 경우입니다. **다음**을 클릭합니다.
+14. 유효성 검사 대화 상자에서 모든 결과가 성공이 아니면 조사합니다. 수신기를 만들지 않는 경우처럼, 일부 경고는 치명적이지 않고 허용되는 수준입니다. **다음**을 클릭합니다.
 
-15. 요약 대화 상자에서 클릭 **완료**합니다. 이제 AG를 만드는 프로세스를 시작 합니다.
+15. 요약 페이지에서 **마침**을 클릭합니다. 이제 AG를 만드는 프로세스가 시작됩니다.
 
-16. AG를 만드는 완료 되 면 클릭 **닫기** 결과입니다. 이제 SSMS에서 Always On 고가용성 폴더 및 동적 관리 뷰에서 복제본 AG를 볼 수 있습니다.
+16. AG 만들기가 끝나면 결과에서 **닫기**를 클릭합니다. 이제 동적 관리 뷰 뿐만 아니라 SSMS의 Always On 고가용성 폴더 아래에서도 복제본에 대한 AG를 확인할 수 있습니다.
 
 ### <a name="use-transact-sql"></a>Transact-SQL 사용
 
-이 섹션에서는 TRANSACT-SQL을 사용 하 여 AG를 만드는 방법의 예제를 보여 줍니다. AG 만들어진 후에 수신기 및 읽기 전용 라우팅을 구성할 수 있습니다. 자체 AG를 사용 하 여 수정할 수 있습니다 `ALTER AVAILABILITY GROUP`에서 수행할 수 없는 클러스터 유형을 변경 하지만 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]합니다. 클러스터 유형이 외부인을 사용 하 여 AG를 만들려는 되지는 않은 경우 삭제 하 고 클러스터 유형이 None을 사용 하 여 다시 만들어야 합니다. 자세한 내용 및 기타 옵션은 다음 링크에서 찾을 수 있습니다.
+이 섹션에서는 Transact-SQL을 사용하여 AG를 만드는 예를 보여 줍니다. AG를 만든 후에 수신기와 읽기 전용 라우팅을 구성할 수 있습니다. AG 자체는 `ALTER AVAILABILITY GROUP`을 사용하여 수정할 수 있지만 클러스터 유형 변경은 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]에서 수행할 수 없습니다. 클러스터 유형으로 외부를 사용하여 AG를 만들지 않은 경우 삭제한 후 클러스터 유형이 없음을 사용하여 다시 만들어야 합니다. 추가 정보 및 기타 옵션은 다음 링크에서 찾을 수 있습니다.
 
 -   [CREATE AVAILABILITY GROUP(Transact-SQL)](../t-sql/statements/create-availability-group-transact-sql.md)
 -   [ALTER AVAILABILITY GROUP(Transact-SQL)](../t-sql/statements/alter-availability-group-transact-sql.md)
--   [가용성 그룹 (SQL Server)에 대 한 읽기 전용 라우팅 구성](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
--   [(SQL Server)는 가용성 그룹 수신기 만들기 또는 구성](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
+-   [가용성 그룹에 대한 읽기 전용 라우팅 구성(SQL Server)](../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)
+-   [가용성 그룹 수신기 만들기 또는 구성(SQL Server)](../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)
 
-#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>구성 전용 복제본 (외부 클러스터 형식)를 사용 하 여 예제 1-2 복제본
+#### <a name="example-one---two-replicas-with-a-configuration-only-replica-external-cluster-type"></a>예제 1 - 구성 전용 복제본을 포함하는 두 개의 복제본(외부 클러스터 유형)
 
-이 예제에는 구성 전용 복제본을 사용 하는 두 개의 복제본 AG를 만드는 방법을 보여 줍니다.
+이 예제에서는 구성 전용 복제본을 사용하는 두 개의 복제본 AG를 만드는 방법을 보여 줍니다.
 
-1.  주 복제본 데이터베이스의 완전 읽기/쓰기 복사본을 포함 하 되는 노드에서 실행 합니다. 이 예제에서는 자동 시드를 사용 합니다.
+1.  데이터베이스의 전체 읽기/쓰기 복사본을 포함하는 주 복제본이 될 노드에서 작업을 실행합니다. 이 예제에서는 자동 시드를 사용합니다.
 
     ```SQL
     CREATE AVAILABILITY GROUP [<AGName>]
@@ -405,7 +405,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-2.  다른 복제본에 연결 된 쿼리 창에서 AG에 복제본을 조인 하 고 보조 복제본으로 주 데이터베이스에서 시드 프로세스를 시작 하려면 다음을 실행 합니다.
+2.  다른 복제본에 연결된 쿼리 창에서 다음을 실행하여 AG에 복제본을 조인하고 주 복제본에서 보조 복제본으로의 시드 프로세스를 시작합니다.
     
     ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -417,7 +417,7 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-3. 구성 전용 복제본에 연결 된 쿼리 창에서 AG에 조인 합니다.
+3. 구성 전용 복제본에 연결된 쿼리 창에서 AG에 조인합니다.
     
    ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -425,11 +425,11 @@ sudo systemctl restart mssql-server
     GO
    ```
 
-#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>예제 2-3 개 복제본 읽기 전용 라우팅을 (외부 클러스터 형식)
+#### <a name="example-two---three-replicas-with-read-only-routing-external-cluster-type"></a>예제 2 - 읽기 전용 라우팅을 사용하는 3개의 복제본(외부 클러스터 유형)
 
-이 예제에서는 세 가지 전체 복제본 및 읽기 전용 라우팅 초기 AG 만들기의 일환으로 구성할 수 있습니다.
+이 예제에서는 세 개의 전체 복제본과 읽기 전용 라우팅을 초기 AG 생성의 일부로 구성할 수 있는 방법을 보여 줍니다.
 
-1.  주 복제본 데이터베이스의 완전 읽기/쓰기 복사본을 포함 하 되는 노드에서 실행 합니다. 이 예제에서는 자동 시드를 사용 합니다.
+1.  데이터베이스의 전체 읽기/쓰기 복사본을 포함하는 주 복제본이 될 노드에서 작업을 실행합니다. 이 예제에서는 자동 시드를 사용합니다.
 
     ```SQL
     CREATE AVAILABILITY GROUP [<AGName>]
@@ -461,15 +461,15 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-    이 구성에 대해 몇 가지 사항은 다음과 같습니다.
+    이 구성에 대해 유의해야 할 몇 가지 사항은 다음과 같습니다.
     
-    - *AGName* 가용성 그룹의 이름입니다.
-    - *DBName* 가용성 그룹을 사용 하 여 사용할 데이터베이스의 이름입니다. 쉼표로 구분 된 이름 목록 일 수도 있습니다.
-    - *ListenerName* 기본 서버/노드 중 하나가 다른 이름입니다. 와 함께 DNS에 등록 됩니다 *IPAddress*합니다.
-    - *IPAddress* 는 연결 된 IP 주소 *ListenerName*합니다. 고유 이기도 동일 하지는 않습니다 서버/노드 중 하나입니다. 응용 프로그램 및 최종 사용자가 사용 됩니다 *ListenerName* 또는 *IPAddress* AG를 연결할 수 있습니다.
-    - *SubnetMask* 의 서브넷 마스크 *IPAddress*; 예를 들어 255.255.255.0입니다.
+    - *AGName*은 가용성 그룹의 이름입니다.
+    - *DBName*은 가용성 그룹에 사용되는 데이터베이스의 이름입니다. 쉼표로 구분된 이름 목록일 수도 있습니다.
+    - *ListenerName*은 기본 서버/노드의 이름과는 다른 이름입니다. *IPAddress*와 함께 DNS에 등록됩니다.
+    - *IPAddress*는 *ListenerName*과 연결된 IP 주소입니다. 또한 고유하며, 서버/노드의 IP 주소와 동일하지 않습니다. 애플리케이션 및 최종 사용자는 *ListenerName* 또는 *IPAddress*를 사용하여 AG에 연결합니다.
+    - *SubnetMask*는 *IPAddress*의 서브넷 마스크입니다(예: 255.255.255.0).
 
-2.  다른 복제본에 연결 된 쿼리 창에서 AG에 복제본을 조인 하 고 보조 복제본으로 주 데이터베이스에서 시드 프로세스를 시작 하려면 다음을 실행 합니다.
+2.  다른 복제본에 연결된 쿼리 창에서 다음을 실행하여 AG에 복제본을 조인하고 주 복제본에서 보조 복제본으로의 시드 프로세스를 시작합니다.
     
     ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
@@ -481,13 +481,13 @@ sudo systemctl restart mssql-server
     GO
     ```
     
-3.  세 번째 복제본에 대 한 2 단계를 반복 합니다.
+3.  세 번째 복제본에 대해 2단계를 반복합니다.
 
-#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>예제에서는 3 개의 복제본 (None 클러스터 유형) 읽기 전용 라우팅을 사용 하 여
+#### <a name="example-three---two-replicas-with-read-only-routing-none-cluster-type"></a>예제 3 - 읽기 전용 라우팅을 사용하는 2개의 복제본(없음 클러스터 유형)
 
-이 예제에서는 클러스터 유형이 None을 사용 하 여 두 개의 복제 구성의 생성을 보여 줍니다. 읽기 확장 시나리오에 대 한 장애 조치가 필요한 경우 사용 됩니다. 이 읽기 전용 라우팅, 뿐만 아니라 실제로 주 복제본을 라운드 로빈 기능을 사용 하는 수신기를 만듭니다.
+이 예제에서는 클러스터 유형 없음을 사용하여 두 개의 복제본 구성을 만드는 방법을 보여 줍니다. 장애 조치(failover)가 필요하지 않은 읽기 확장 조정 시나리오에 사용됩니다. 이 예제에서는 왕복 기능을 사용하여 읽기 전용 라우팅 뿐만 아니라 실제로 주 복제본에 해당하는 수신기를 만듭니다.
 
-1.  주 복제본 데이터베이스의 완전 읽기/쓰기 복사본을 포함 하 되는 노드에서 실행 합니다. 이 예제에서는 자동 시드를 사용 합니다.
+1.  데이터베이스의 전체 읽기/쓰기 복사본을 포함하는 주 복제본이 될 노드에서 작업을 실행합니다. 이 예제에서는 자동 시드를 사용합니다.
 
     ```SQL
     CREATE AVAILABILITY GROUP [<AGName>]
@@ -513,15 +513,15 @@ sudo systemctl restart mssql-server
     ```
     
     위치
-    - *AGName* 가용성 그룹의 이름입니다.
-    - *DBName* 가용성 그룹을 사용 하 여 사용할 데이터베이스의 이름입니다. 쉼표로 구분 된 이름 목록 일 수도 있습니다.
-    - *PortOfEndpoint* 만들어진 끝점에서 사용 하는 포트 번호입니다.
-    - *PortOfInstance* 의 인스턴스에서 사용할 포트 번호는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다.
-    - *ListenerName* 다른 기본 복제본 중 하나 이지만 실제로 사용 되지 것입니다는 이름입니다.
-    - *PrimaryReplicaIPAddress* 주 복제본의 IP 주소입니다.
-    - *SubnetMask* 의 서브넷 마스크 *IPAddress*합니다. 예를 들어, 255.255.255.0입니다.
+    - *AGName*은 가용성 그룹의 이름입니다.
+    - *DBName*은 가용성 그룹에 사용되는 데이터베이스의 이름입니다. 쉼표로 구분된 이름 목록일 수도 있습니다.
+    - *PortOfEndpoint*는 생성된 엔드포인트에서 사용하는 포트 번호입니다.
+    - *PortOfInstance*는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]의 인스턴스에서 사용되는 포트 번호입니다.
+    - *ListenerName*은 기본 복제본과는 다른 이름이지만 실제로는 사용되지 않습니다.
+    - *PrimaryReplicaIPAddress*는 주 복제본의 IP 주소입니다.
+    - *SubnetMask*는 *IPAddress*의 서브넷 마스크입니다. 예를 들면 255.255.255.0과 같습니다.
     
-2.  AG에 보조 복제본을 조인 하 고 자동 시드를 시작 합니다.
+2.  AG에 보조 복제본을 가입하고 자동 시드를 시작합니다.
     
     ```SQL
     ALTER AVAILABILITY GROUP [<AGName>] JOIN WITH (CLUSTER_TYPE = NONE);
@@ -533,11 +533,11 @@ sudo systemctl restart mssql-server
     GO
     ```
 
-## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>만들기는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 로그인 및 Pacemaker에 대 한 사용 권한
+## <a name="create-the-includessnoversion-mdincludesssnoversion-mdmd-login-and-permissions-for-pacemaker"></a>Pacemaker에 대한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 로그인 및 사용 권한 만들기
 
-Pacemaker 고가용성 클러스터 내부 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] linux에 대 한 액세스를 해야 합니다 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 자체 가용성 그룹에 대 한 권한 뿐만 아니라 인스턴스. 다음이 단계를 만들고 로그인 Pacemaker 로그인 하는 방법을 알려 주는 파일과 함께 연관된 된 권한을 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]합니다.
+Linux의 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 기준으로 하는 Pacemaker 고가용성 클러스터는 가용성 그룹 자체에 대한 권한 뿐만 아니라 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 인스턴스에 대한 액세스 권한이 필요합니다. 이러한 단계를 수행하면 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 로그인하는 방법을 Pacemaker에 알려주는 파일과 함께 로그인 및 관련 사용 권한이 만들어집니다.
 
-1.  첫 번째 복제본에 연결 된 쿼리 창에서 다음을 실행 합니다.
+1.  첫 번째 복제본에 연결된 쿼리 창에서 다음을 실행합니다.
 
     ```SQL
     CREATE LOGIN PMLogin WITH PASSWORD ='<StrongPassword>';
@@ -553,47 +553,47 @@ Pacemaker 고가용성 클러스터 내부 [!INCLUDE[ssnoversion-md](../includes
     GO
     ```
     
-2.  노드 1에서 명령을 입력합니다 
+2.  노드 1에서 다음 명령을 입력합니다. 
     ```bash
     sudo emacs /var/opt/mssql/secrets/passwd
     ```
     
-    Emacs 편집기에서 열립니다.
+    그러면 Emacs 편집기가 열립니다.
     
-3.  편집기에 다음 두 줄을 입력 합니다.
+3.  쿼리 창에서 다음 두 줄을 입력합니다.
 
     ```
     PMLogin
     <StrongPassword>
     ```
     
-4.  CTRL 키를 누른 다음 X 파일을 저장 하 고 종료 한 다음 C 키를 누릅니다.
+4.  Ctrl 키를 누른 상태에서 X, C를 차례로 눌러 종료하고 파일을 저장합니다.
 
-5.  실행 
+5.  Execute 
     ```bash
     sudo chmod 400 /var/opt/mssql/secrets/passwd
     ```
     
-    에 파일을 잠급니다.
+    파일을 잠급니다.
 
-6.  복제본으로 사용할 다른 서버에서 1 ~ 5 단계를 반복 합니다.
+6.  복제본 역할을 할 다른 서버에서 1-5단계를 반복합니다.
 
-## <a name="create-the-availability-group-resources-in-the-pacemaker-cluster-external-only"></a>Pacemaker 클러스터 (외부에만 해당)의 가용성 그룹 리소스 만들기
+## <a name="create-the-availability-group-resources-in-the-pacemaker-cluster-external-only"></a>Pacemaker 클러스터에서 가용성 그룹 리소스를 만듭니다(외부만 해당).
 
-가용성 그룹이 만들어진 후에 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)], 외부 클러스터 유형이 지정 된 경우 Pacemaker에 해당 리소스를 생성 해야 합니다. AG와 관련 된 두 개의 리소스가 있습니다: 자체 AG와 IP 주소입니다. 수신기 기능을 사용 하지 않지만 권장 되는 데 사용 되는 경우 IP 주소 리소스를 구성 합니다. 선택 사항입니다.
+클러스터 유형으로 외부를 지정하고 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에서 가용성 그룹을 만든 후에는 Pacemaker에서 해당 리소스를 만들어야 합니다. AG와 연결된 두 가지 리소스는 AG 자체와 IP 주소입니다. 수신기 기능을 사용하지 않는 경우 IP 주소 리소스를 구성하는 것이 좋지만 권장 사항입니다.
 
-만든 AG 리소스는 복제본을 호출 하는 리소스의 특별 한 합니다. 기본적으로 복사본이 각 노드에서 AG 리소스가 되며 마스터 라는 하나의 제어 리소스. 마스터 주 복제본을 호스팅하는 서버를 사용 하 여 연결 됩니다. 보조 복제본 (일반 또는 구성 전용) 슬레이브 것으로 간주 됩니다 및 승격 될 수 있습니다 (failover)에서 마스터입니다.
+만든 AG 리소스는 복제본이라는 특수한 종류의 리소스입니다. AG 리소스는 기본적으로 각 노드에 복사본이 있으며, 마스터라는 하나의 제어 리소스가 있습니다. 마스터는 주 복제본을 호스트하는 서버와 연결됩니다. 보조 복제본(일반 또는 구성 전용)은 슬레이브으로 간주되며 장애 조치(failover) 시 마스터로 승격될 수 있습니다.
 
-1.  다음 구문을 사용 하 여 AG 리소스를 만듭니다.
+1.  다음 구문을 사용하여 AG 리소스를 만듭니다.
 
-    **Ubuntu 및 Red Hat Enterprise Linux (RHEL)**
+    **RHEL(Red Hat Enterprise Linux) 및 Ubuntu**
     
     ```bash
     sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failure-timeout=30s --master meta notify=true
     ```
 
     >[!NOTE]
-    >RHEL 7.4에서 사용 하 여-마스터 경고가 발생할 수 있습니다. 이 문제를 방지 하려면 사용 `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failover-timeout=30s master notify=true`
+    >RHEL 7.4에서는 --master를 사용할 때 경고가 발생할 수 있습니다. 이를 방지하려면 `sudo pcs resource create <NameForAGResource> ocf:mssql:ag ag_name=<AGName> meta failover-timeout=30s master notify=true`를 사용합니다.
    
     **SUSE Linux Enterprise Server(SLES)**
     
@@ -616,9 +616,9 @@ Pacemaker 고가용성 클러스터 내부 [!INCLUDE[ssnoversion-md](../includes
     commit
     ```
     
-    여기서 *NameForAGResource* AG에 대해이 클러스터 리소스에 지정 된 고유 이름 및 *AGName* 만든 AG의 이름입니다.
+    여기서 *NameForAGResource*는 AG에 대해 이 클러스터 리소스에 지정된 고유한 이름이고, *AGName*은 생성된 AG의 이름입니다.
  
-2.  수신기 기능과 관련 된 AG에 대해 IP 주소 리소스를 만듭니다.
+2.  수신기 기능과 연결될 AG의 IP 주소 리소스를 만듭니다.
 
     **RHEL 및 Ubuntu**
     
@@ -636,9 +636,9 @@ Pacemaker 고가용성 클러스터 내부 [!INCLUDE[ssnoversion-md](../includes
           cidr_netmask=<Netmask>
     ```
     
-    여기서 *NameForIPResource* IP 리소스에 대 한 고유 이름 및 *IPAddress* 고정 IP 주소 리소스에 할당 됩니다. SLES에서의 네트워크 마스크를 제공 해야 합니다. 예를 들어, 255.255.255.0 값이에 대 한 24 해야 *네트워크 마스크입니다.*
+    여기서 *NameForIPResource*는 IP 리소스의 고유한 이름이고 *IPAddress*는 리소스에 할당된 고정 IP 주소입니다. SLES에서는 네트워크 마스크도 제공해야 합니다. 예를 들어, 255.255.255.0은 *네트워크 마스크* 값이 24입니다.
     
-3.  을 보장 하기 위해 IP 주소 및 AG 리소스가 동일한 노드에서 실행 되는 공동 배치 제약 조건을 구성 되어야 합니다.
+3.  IP 주소와 AG 리소스가 동일한 노드에서 실행되고 있는지 확인하려면 공동 배치 제약 조건을 구성해야 합니다.
 
     **RHEL 및 Ubuntu**
     
@@ -654,9 +654,9 @@ Pacemaker 고가용성 클러스터 내부 [!INCLUDE[ssnoversion-md](../includes
     commit
     ```
     
-    여기서 *NameForIPResource* IP 리소스에 대 한 이름 *NameForAGResource* AG 리소스 및 SLES에서의 이름인 *NameForConstraint* 의 이름인는 제약 조건입니다.
+    여기서 *NameForIPResource*는 는 IP 리소스의 이름이고, *NameForAGResource*는 AG 리소스의 이름이고, SLES의 경우 *NameForConstraint*는 제약 조건의 이름입니다.
 
-4.  AG 리소스가 구성 되었는지 확인 하도록 제약 조건을 순서 지정 및 실행 전에 IP 주소를 만듭니다. 공동 배치 제약 조건을 정렬 제약 조건을 의미 하는 동안이 적용 됩니다.
+4.  AG 리소스가 IP 주소보다 먼저 가동 상태가 되도록 하려면 정렬 제약 조건을 만듭니다. 공동 배치 제약 조건은 정렬 제약 조건을 암시하지만 정렬 제약 조건이 적용됩니다.
 
     **RHEL 및 Ubuntu**
     
@@ -672,20 +672,20 @@ Pacemaker 고가용성 클러스터 내부 [!INCLUDE[ssnoversion-md](../includes
     commit
     ```
     
-    여기서 *NameForIPResource* IP 리소스에 대 한 이름 *NameForAGResource* AG 리소스 및 SLES에서의 이름인 *NameForConstraint* 의 이름인는 제약 조건입니다.
+    여기서 *NameForIPResource*는 는 IP 리소스의 이름이고, *NameForAGResource*는 AG 리소스의 이름이고, SLES의 경우 *NameForConstraint*는 제약 조건의 이름입니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 만들고 가용성 그룹을 구성 하는 방법을 배웠습니다 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] linux. 방법을 배웠습니다에:
+이 자습서에서는 Linux에서 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에 대해 가용성 그룹을 만들고 구성하는 방법을 살펴보았습니다. 또한 다음 방법에 대해 알아보았습니다.
 > [!div class="checklist"]
-> * 가용성 그룹을 사용 하도록 설정 합니다.
-> * 인증서 및 끝점 만들기 AG입니다.
-> * 사용 하 여 [!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)] (SSMS) 또는 TRANSACT-SQL을 AG를 만듭니다.
-> * 만들기는 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] Pacemaker에 대 한 사용 권한과 로그인 합니다.
+> * 가용성 그룹을 사용하도록 설정합니다.
+> * AG 엔드포인트 및 인증서를 만듭니다.
+> * SSMS([!INCLUDE[ssmanstudiofull-md](../includes/ssmanstudiofull-md.md)]) 또는 Transact-SQL을 사용하여 AG를 만듭니다.
+> * Pacemaker에 대한 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] 로그인 및 사용 권한을 만듭니다.
 > * Pacemaker 클러스터에서 AG 리소스를 만듭니다.
 
-대부분의 AG 관리 등의 작업을 업그레이드 및 장애 조치를 참조 하세요.
+업그레이드 및 장애 조치(failover)를 비롯한 대부분의 AG 관리 작업에 대해서는 다음을 참조하세요.
 
 > [!div class="nextstepaction"]
-> [Linux의 SQL Server에 대 한 HA 가용성 그룹을 작동](sql-server-linux-availability-group-failover-ha.md)
+> [Linux의 SQL Server에 대해 HA 가용성 그룹 작동](sql-server-linux-availability-group-failover-ha.md)
 

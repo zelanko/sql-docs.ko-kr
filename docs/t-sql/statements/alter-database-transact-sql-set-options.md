@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 30cab7ddfe6c0c6b88f1fb6e619cb84866c3efbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065717"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495456"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -769,7 +769,10 @@ OFF
 SIZE_BASED_CLEANUP_MODE는 **nvarchar** 형식입니다.
 
 QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }         
-현재 활성 쿼리 캡처 모드를 지정합니다.
+현재 활성 쿼리 캡처 모드를 지정합니다. 각 모드는 특정 쿼리 캡처 정책을 정의합니다.
+
+> [!NOTE]
+> 쿼리 캡처 모드를 모두, 자동 또는 사용자 지정으로 설정하면 커서, 저장 프로시저 내부 쿼리 및 고유하게 컴파일된 쿼리가 항상 캡처됩니다.
 
 ALL         
 쿼리를 모두 캡처합니다. ALL은 기본 구성 값입니다. 이는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]를 시작하는 기본 구성 값입니다.
@@ -1233,7 +1236,7 @@ GO
 
 ```
 
-### <a name="b-setting-the-database-to-readonly"></a>2\. 데이터베이스를 READ_ONLY로 설정
+### <a name="b-setting-the-database-to-read_only"></a>2\. 데이터베이스를 READ_ONLY로 설정
 
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예에서는 데이터베이스를 `SINGLE_USER` 모드로 설정하여 배타적 액세스 권한을 확보한 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
 
@@ -2084,7 +2087,7 @@ NO_WAIT
 
 ## <a name="examples"></a>예
 
-### <a name="a-setting-the-database-to-readonly"></a>1\. 데이터베이스를 READ_ONLY로 설정
+### <a name="a-setting-the-database-to-read_only"></a>1\. 데이터베이스를 READ_ONLY로 설정
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
 
 ```sql
@@ -2790,7 +2793,7 @@ NO_WAIT
 
 ## <a name="examples"></a>예
 
-### <a name="a-setting-the-database-to-readonly"></a>1\. 데이터베이스를 READ_ONLY로 설정
+### <a name="a-setting-the-database-to-read_only"></a>1\. 데이터베이스를 READ_ONLY로 설정
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
 
 ```sql

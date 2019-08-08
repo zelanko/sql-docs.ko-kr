@@ -1,6 +1,6 @@
 ---
-title: Linux에서 스냅숏 폴더 공유 SQL Server 복제 구성
-description: 이 문서에서는 Linux에서 스냅숏 폴더 공유 SQL Server 복제를 구성 하는 방법을 설명 합니다.
+title: Linux에서 스냅샷 폴더 공유를 SQL Server 복제로 구성
+description: 이 문서에서는 Linux에서 스냅샷 폴더 공유를 SQL Server 복제로 구성하는 방법을 설명합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,40 +10,40 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2513511889c4bc22757f0970269fa9ee7b51857d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68093121"
 ---
-# <a name="configure-replication-snapshot-folder-with-shares"></a>복제 스냅숏 폴더를 공유로 구성
+# <a name="configure-replication-snapshot-folder-with-shares"></a>공유를 사용하여 복제 스냅샷 폴더 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-공유;로 지정한 디렉터리가 스냅숏 폴더 이 폴더에서 읽고 있는 에이전트에 액세스할 수 있는 권한이 있어야 합니다.
+스냅샷 폴더는 공유로 지정한 디렉터리이며 이 폴더에 읽기/쓰기 작업을 수행하려면 에이전트에게 충분한 액세스 권한이 있어야 합니다.
 
 ![복제 다이어그램][1]
 
-### <a name="replication-snapshot-folder-share-explained"></a>복제 스냅숏 폴더 공유 설명
+### <a name="replication-snapshot-folder-share-explained"></a>복제 스냅샷 폴더 공유 설명
 
-예 전에 SQL Server 복제에서 samba 공유를 사용 하는 방법을 통해 확인해 보겠습니다. 다음은이 과정의 기본적인 예입니다.
+예제에 앞서, SQL Server가 복제에 samba 공유를 사용 하는 방법을 살펴보겠습니다. 이 방법이 작동하는 방식의 기본 예제는 다음과 같습니다.
 
-1. Samba 공유 되는 구성 파일에 기록 `/local/path1` 복제 하 여 게시자에 에이전트에서 확인할 수 있습니다 구독자
-2. SQL Server가 모든 인스턴스를 확인할 수 있도록 배포 서버에 게시자를 설정 하는 경우 공유 경로 사용 하도록 구성 합니다 `//share/path`
-3. SQL Server의 로컬 경로 찾습니다는 `//share/path` 파일을 검색할 수 있는 위치를 알아야
-4. Samba 공유에서 지원 되는 로컬 경로에 SQL Server 읽기/쓰기
+1. Samba 공유는 게시자의 복제 에이전트가 `/local/path1`에 쓴 파일을 구독자가 볼 수 있도록 구성됩니다.
+2. 배포 서버에서 게시자를 설정할 때 공유 경로를 사용하도록 SQL Server가 구성되므로 모든 인스턴스가 `//share/path`를 볼 수 있습니다.
+3. SQL Server는 `//share/path`에서 로컬 경로를 찾아 파일을 찾을 위치를 파악합니다.
+4. SQL Server는 samba 공유에서 지원하는 로컬 경로에 읽고 씁니다.
 
 
-## <a name="configure-a-samba-share-for-the-snapshot-folder"></a>스냅숏 폴더에 대 한 samba 공유를 구성 합니다. 
+## <a name="configure-a-samba-share-for-the-snapshot-folder"></a>스냅샷 폴더의 samba 공유 구성 
 
-복제 에이전트는 다른 컴퓨터에 스냅숏 폴더에 액세스할 수 있는 복제 호스트 사이 공유 디렉터리를 해야 합니다. 예를 들어 트랜잭션 끌어오기 복제에서 문서를 가져오기 위해 배포자에 대 한 액세스를 해야 하는 구독자에서 배포 에이전트가 상주 합니다. 이 섹션에서는 두 복제 호스트 samba 공유를 구성 하는 방법의 예제를 통해 살펴보겠습니다.
+복제 에이전트는 다른 컴퓨터의 스냅샷 폴더에 액세스하기 위해 복제 호스트 간에 공유 디렉터리가 필요합니다. 예를 들어, 트랜잭션 끌어오기 복제에서 배포 에이전트는 구독자에 상주하며, 아티클을 가져오기 위해 배포자에 액세스해야 합니다. 이 섹션에서는 두 개의 복제 호스트에서 samba 공유를 구성하는 방법의 예를 살펴보겠습니다.
 
 
 ## <a name="steps"></a>단계
 
-예를 들어 Samba를 사용 하 여 호스트 2 (구독자)를 사용 하 여 공유 하도록 호스트 1 (배포자)에서 스냅숏 폴더를 구성 합니다. 
+예를 들어, Samba를 사용하여 호스트 1(배포자)의 스냅샷 폴더를 호스트 2(구독자)와 공유하도록 구성합니다. 
 
-### <a name="install-and-start-samba-on-both-machines"></a>설치 하 고 두 컴퓨터 모두에서 Samba 시작 
+### <a name="install-and-start-samba-on-both-machines"></a>두 컴퓨터에서 Samba 설치 및 시작 
 
 Ubuntu:
 
@@ -52,7 +52,7 @@ sudo apt-get -y install samba
 sudo service smbd restart
 ```
 
-RHEL의 경우:
+RHEL:
 
 ```bash
 sudo yum install samba
@@ -60,15 +60,15 @@ sudo service smb start
 sudo service smb status
 ```
 
-### <a name="on-host-1-distributor-set-up-the-samba-share"></a>Samba 공유 호스트 1 (배포자) 설정에서 
+### <a name="on-host-1-distributor-set-up-the-samba-share"></a>호스트 1(배포자)에서 Samba 공유 설정 
 
-1. 사용자 설정 및 samba에 대 한 암호:
+1. samba의 사용자 및 암호를 설정합니다.
 
   ```bash
   sudo smbpasswd -a mssql 
   ```
 
-1. 편집 된 `/etc/samba/smb.conf` 다음 항목을 포함 하 여 입력 합니다 *공유 이름* 및 *경로* 필드
+1. 다음 항목을 포함하도록 `/etc/samba/smb.conf`를 편집하고 *share_name* 및 *path* 필드를 입력합니다.
  ```bash
   <[share_name]>
   path = </local/path/on/host/1>
@@ -89,9 +89,9 @@ sudo service smb status
   valid users = mssql   <- list of users who can login to this share
   ```
 
-### <a name="on-host-2-subscriber--mount-the-samba-share"></a>2 (구독자) 호스트에서 Samba 공유를 탑재 합니다.
+### <a name="on-host-2-subscriber--mount-the-samba-share"></a>호스트 2(구독자)에서 Samba 공유 탑재
 
-올바른 경로 사용 하 여 명령을 편집한 machine2에서 다음 명령을 실행 합니다.
+올바른 경로를 사용하여 명령을 편집하고 machine2에서 다음 명령을 실행합니다.
 
   ```bash
   sudo mount //<name_of_host_1>/<share_name> </local/path/on/host/2> -o user=mssql,uid=mssql,gid=mssql
@@ -107,9 +107,9 @@ sudo service smb status
   gid=mssql   <- sets the mssql group as the owner of the mounted directory
   ```
 
-### <a name="on-both-hosts--configure-sql-server-on-linux-instances-to-use-snapshot-share"></a>모두 호스트 구성의 SQL server 스냅숏 공유를 사용 하도록 Linux 인스턴스
+### <a name="on-both-hosts--configure-sql-server-on-linux-instances-to-use-snapshot-share"></a>두 호스트에서 스냅샷 공유를 사용하도록 Linux의 SQL Server 인스턴스 구성
 
-다음 섹션을 추가 `mssql.conf` 두 컴퓨터 모두에서 합니다. 아무 곳에 나 사용 하 여 / / 공유/경로 대 한 samba 공유 합니다. 이 예에서 것 `//host1/mssql_data`
+두 컴퓨터의 `mssql.conf`에 다음 섹션을 추가합니다. //share/path에 대해 samba 공유를 사용합니다. 이 예제에서는 `//host1/mssql_data`입니다.
 
   ```bash
   [uncmapping]
@@ -118,29 +118,29 @@ sudo service smb status
 
   **예제**
 
-  Host1에서:
+  host1:
 
   ```bash
   [uncmapping]
   //host1/mssql_data = /local/path/on/hosts/1
   ```
 
-  Host2에:
+  host2:
   
   ```bash
   [uncmapping]
   //host1/mssql_data = /local/path/on/hosts/2
   ```
 
-### <a name="configuring-publisher-with-shared-paths"></a>공유 경로 사용 하 여 게시자 구성
+### <a name="configuring-publisher-with-shared-paths"></a>공유 경로를 사용하여 게시자 구성
 
-* 복제를 설정할 때 사용 하 여 공유 경로 (예: `//host1/mssql_data`
-* 지도 `//host1/mssql_data` 로컬 디렉터리를 추가할 매핑을 `mssql.conf`합니다.
+* 복제를 설정할 때 공유 경로를 사용합니다(예: `//host1/mssql_data`).
+* `//host1/mssql_data`를 로컬 디렉터리와 `mssql.conf`에 추가된 매핑에 매핑합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-[개념: Linux에서 SQL Server 복제](sql-server-linux-replication.md)
+[개념: Linux의 SQL Server 복제](sql-server-linux-replication.md)
 
-[복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)합니다.
+[복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).
 
 [1]: ./media/sql-server-linux-replication-snapshot-shares/image1.png

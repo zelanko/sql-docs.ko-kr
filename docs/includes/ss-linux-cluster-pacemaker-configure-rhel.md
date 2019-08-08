@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 6cf3dd279f33ea0c157743d4b4c11248267a0a62
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68215623"
 ---
 3. 모든 클러스터 노드에서 Pacemaker 방화벽 포트를 엽니다. `firewalld`를 사용하여 이러한 포트를 열려면 다음 명령을 실행합니다.
@@ -13,9 +13,9 @@ ms.locfileid: "68215623"
    sudo firewall-cmd --reload
    ```
 
-   > 방화벽을 기본 제공 고가용성 구성에 없는 경우 Pacemaker에 대해 다음 포트를 엽니다.
+   > 방화벽에 고가용성 구성이 기본 제공되지 않는 경우 Pacemaker에 대해 다음 포트를 엽니다.
    >
-   > * TCP: 2224 3121, 21064 포트
+   > * TCP: 포트 2224, 3121, 21064
    > * UDP: 포트 5405
 
 1. 모든 노드에 Pacemaker 패키지를 설치합니다.

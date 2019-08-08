@@ -1,7 +1,7 @@
 ---
-title: 데이터 랭 글 링 작업에 대 한 코드를 생성 합니다.
+title: 데이터 랭글링 작업에 대한 코드 생성
 titleSuffix: Azure Data Studio
-description: 이 문서에서는 Azure 데이터 Studio에서 PROSE 코드 액셀러레이터 키를 사용 하 여 일반적인 데이터 랭 글 링 작업에 대 한 코드를 자동으로 생성 하는 방법을 설명 합니다.
+description: 이 문서에서는 Azure Data Studio에서 PROSE Code Accelerator를 사용하여 일반적인 데이터 랭글링 작업의 코드를 자동으로 생성하는 방법을 설명합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,40 +10,40 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957682"
 ---
-# <a name="data-wrangling-using-prose-code-accelerator"></a>PROSE 코드 Accelerator를 사용 하 여 데이터 Wrangling
+# <a name="data-wrangling-using-prose-code-accelerator"></a>PROSE Code Accelerator를 사용한 데이터 랭글링
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-PROSE 코드 가속기에 데이터 랭 글 링 작업에 대 한 읽을 수 있는 Python 코드를 생성합니다. Azure Data Studio 내에서 notebook에서 작업 하는 동안 원활한 방식으로 생성된 된 코드에 직접 작성 한 코드를 혼합할 수 있습니다. 이 문서에서는 코드 액셀러레이터 키를 사용 하는 방법의 개요를 제공 합니다.
+PROSE Code Accelerator는 데이터 랭글링 작업에 대해 판독 가능한 Python 코드를 생성합니다. Azure Data Studio 내에서 Notebook으로 작업하면서 생성한 코드와 손으로 작성한 코드를 원활하게 혼합할 수 있습니다. 이 문서에서는 Code Accelerator를 사용하는 방법을 간략히 설명합니다.
 
  > [!NOTE]
- > 프로그램 Synthesis using Examples, 즉, PROSE에서는 AI를 사용 하 여 알기 쉬운 코드를 생성 하는 Microsoft 기술입니다. 사용자의 의도 뿐만 아니라 데이터를 분석 하 고, 여러 후보 프로그램 생성, 순위 알고리즘을 사용 하 여 가장 적합 한 프로그램을 선택 하 여 수행 합니다. PROSE 기술에 대 한 자세한 내용을 보려면, 방문 합니다 [PROSE 홈페이지](https://microsoft.github.io/prose/)합니다.
+ > PROSE(Program Synthesis using Examples)는 AI를 사용하여 사람이 읽을 수 있는 코드를 생성하는 Microsoft 기술입니다. 이를 위해 사용자의 의도와 데이터를 분석하고, 여러 후보 프로그램을 생성하고, 순위 알고리즘을 사용하여 최상의 프로그램을 선택합니다. PROSE 기술에 대한 자세한 내용을 보려면 [PROSE 홈 페이지](https://microsoft.github.io/prose/)를 방문하세요.
 
-코드가 액셀러레이터 키에는 Azure Data Studio를 사용 하 여 미리 설치 합니다. Notebook에 다른 Python 패키지와 같은 데이터를 가져올 수 있습니다. 규칙에 따라 가져옵니다 줄여서 cx로 합니다.
+Code Accelerator는 Azure Data Studio와 함께 미리 설치됩니다. Notebook에서 다른 Python 패키지처럼 가져올 수 있습니다. 관례상, 이 기능을 간단히 cx로 가져옵니다.
 
 ```python
 import prose.codeaccelerator as cx
 ```
 
-현재 릴리스에서 코드 액셀러레이터 다음과 같은 작업에 대 한 Python 코드를 지능적으로 생성할 수 있습니다.
+현재 릴리스에서 Code Accelerator는 다음 작업에 대한 Python 코드를 지능적으로 생성할 수 있습니다.
 
-- Pandas 데이터 파일 읽기 또는 Pyspark 데이터 프레임입니다.
-- Dataframe에 데이터 형식을 수정 합니다.
-- 정규식 패턴에서 문자열의 목록 나타내는 찾기.
+- Pandas 또는 Pyspark 데이터 프레임으로 데이터 파일 읽기
+- 데이터 프레임의 데이터 형식 수정
+- 문자열 목록에서 패턴을 나타내는 정규식 찾기
 
-코드 Accelerator 방법의 일반적인 개요를 참조 합니다 [설명서](https://aka.ms/prose-codeaccelerator-overview)합니다.
+Code Accelerator 메서드의 일반적인 개요를 보려면 [설명서](https://aka.ms/prose-codeaccelerator-overview)를 참조하세요.
 
-## <a name="reading-data-from-a-file-to-a-dataframe"></a>데이터 프레임에 데이터 파일에서 읽기
+## <a name="reading-data-from-a-file-to-a-dataframe"></a>파일의 데이터를 데이터 프레임으로 읽기
 
-를 데이터 프레임에 파일을 읽는 종종 파일의 내용을 확인 하 고 올바른 데이터 로딩 라이브러리에 전달할 매개 변수를 확인 합니다. 파일의 복잡성에 따라 올바른 매개 변수를 식별 합니다. 여러 번 반복 해야 합니다.
+종종, 데이터 프레임으로 파일을 읽어오면 파일의 내용을 보고, 데이터 로드 라이브러리에 전달할 올바른 매개 변수를 결정하게 됩니다. 파일의 복잡도에 따라 올바른 매개 변수를 식별하는 데 몇 가지 반복 작업이 필요할 수 있습니다.
 
-PROSE 코드 Accelerator 데이터 파일의 구조를 분석 하 고 자동으로 파일을 로드 하는 코드를 생성 하 여이 문제를 해결 합니다. 대부분의 경우 생성된 된 코드 데이터 구문을 올바르게 분석합니다. 몇 가지 경우에 요구 사항에 맞게 코드를 조정 해야 할 수 있습니다.
+PROSE Code Accelerator는 데이터 파일의 구조를 분석하고 파일을 로드하는 코드를 자동으로 생성하여 이 문제를 해결합니다. 대부분의 경우 생성된 코드는 데이터를 올바르게 구문 분석합니다. 일부 경우에는 요구 사항에 맞게 코드를 조정해야 할 수 있습니다.
 
 다음 예를 살펴 보십시오.
 
@@ -60,7 +60,7 @@ builder = cx.ReadCsvBuilder(r'C:/911.txt')
 builder.learn().code()
  ```
 
-이전 코드 블록 구분 기호로 분리 된 파일을 읽기 위해 다음 python 코드를 인쇄 합니다. PROSE 헤더, quotechars, 구분 기호 등 건너뛸 줄 수 자동으로 파악 하는 방법을 확인할 수 있습니다.
+이전 코드 블록은 다음 python 코드를 인쇄하여 구분된 파일을 읽습니다. 어떻게 PROSE에서 건너뛸 줄 수, header, quotechar, delimiter 등을 자동으로 계산하는지 확인합니다.
 
  ```python
 import pandas as pd
@@ -86,13 +86,13 @@ def read_file(file):
     return df
  ```
 
-코드가 액셀러레이터 코드를 구분 하는 부하, JSON 및 데이터 프레임에 고정 폭 파일을 생성할 수 있습니다. 고정 너비 파일을 읽기 위한를 `ReadFwfBuilder` 는 필요에 따라 열 위치를 가져오려면 구문 분석할 수 있는 사용자를 읽을 수 있는 스키마 파일을 사용 합니다. 자세한 내용은 참조는 [설명서](https://aka.ms/prose-codeaccelerator-docs)합니다.
+Code Accelerator는 구분된, JSON 및 고정 너비 파일을 데이터 프레임으로 로드하는 코드를 생성할 수 있습니다. 고정 너비 파일을 읽기 위해 `ReadFwfBuilder`는 경우에 따라 열 위치를 가져오기 위해 구문 분석할 수 있는 사람이 읽을 수 있는 스키마 파일을 사용합니다. 자세히 알아보려면 [설명서](https://aka.ms/prose-codeaccelerator-docs)를 참조하세요.
 
-## <a name="fixing-data-types-in-a-dataframe"></a>Dataframe에 데이터 형식 수정
+## <a name="fixing-data-types-in-a-dataframe"></a>데이터 프레임의 데이터 형식 수정
 
-Pandas을 해야 일반적 또는 잘못 된 데이터 형식 사용 하 여 pyspark 데이터 프레임입니다. 몇 가지 비준수로 인해 이런 종종 열의 값입니다. 따라서 정수 Float 또는 문자열을 읽고 날짜 문자열로 읽습니다. 데이터 형식을 수동으로 수정 하는 데 필요한 노력이 열의 수에 비례 합니다.
+pandas 또는 pyspark 데이터 프레임에 잘못된 데이터 형식이 지정되는 경우가 일반적입니다. 열에 소수의 비규격 값이 포함되어 있기 때문인 경우가 많습니다. 그 결과 Integer는 Float 또는 String으로 읽고, Date는 String으로 읽습니다. 데이터 형식을 수동으로 수정할 경우 열 개수만큼 작업량이 늘어납니다.
 
-사용할 수는 `DetectTypesBuilder` 이러한 상황에서. 데이터를 분석 하 고 블랙 박스 방식으로 데이터 형식을 수정 하는 대신 데이터 형식을 수정 하는 것에 대 한 코드를 생성 합니다. 코드를 시작 점으로 사용 됩니다. 검토를 사용 하거나 필요에 따라 수정할 수 있습니다.
+이러한 상황에서는 `DetectTypesBuilder`를 사용할 수 있습니다. 이 기능은 데이터를 분석하고, 데이터 형식을 블랙 박스 방식으로 수정하는 대신, 데이터 형식을 수정하는 코드를 생성합니다. 이 코드는 시작 지점으로 사용됩니다. 필요에 따라 코드를 검토하거나 사용하거나 수정할 수 있습니다.
 
 ```python
 import prose.codeaccelerator as cx
@@ -106,22 +106,22 @@ builder = cx.DetectTypesBuilder(df)
 builder.learn().code()
 ```
 
-자세한 내용은 참조는 [설명서](https://aka.ms/prose-codeaccelerator-fixtypes)합니다.
+자세히 알아보려면 [설명서](https://aka.ms/prose-codeaccelerator-fixtypes)를 참조하세요.
 
-## <a name="identifying-patterns-in-strings"></a>문자열의 패턴을 식별합니다.
+## <a name="identifying-patterns-in-strings"></a>문자열의 패턴 식별
 
-다른 일반적인 시나리오 정리 또는 그룹화 하기 위해 문자열 열의 패턴을 검색 하는 것입니다. 예를 들어, 다양 한 형식으로 날짜를 사용 하 여 날짜 열이 있는 될 수 있습니다. 값을 표준화 하기 위해 정규식을 사용 하는 조건문을 작성 하는 것이 좋습니다.
+또 다른 일반적인 시나리오는 정리 또는 그룹화의 목적으로 문자열 열의 패턴을 검색하는 것입니다. 예를 들어, 여러 다른 형식의 날짜를 포함하는 날짜 열이 있을 수 있습니다. 값을 표준화하기 위해 정규식을 사용하여 조건문을 작성할 수 있습니다.
 
 
-|   |이름                      |BirthDate      |
+|   |속성                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
-| 1 |Naiara Moravcikova        |알 수 없음        |
+| 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |
-| 3 |Viachaslau Gordan Hilario |22-년 4 월-67      |
+| 3 |Viachaslau Gordan Hilario |22-Apr-67      |
 | 4 |Maya de Villiers          |19-Mar-60      |
 
-볼륨 및 데이터의 다양성에 따라 열에 서로 다른 패턴에 대 한 정규식을 작성은 시간이 오래 걸리는 작업을 수 있습니다. `FindPatternsBuilder` 는 문자열의 목록에 대 한 정규식을 생성 하 여 위의 문제를 해결 하는 강력한 코드 가속 도구입니다.
+데이터의 양과 다양성에 따라 열의 다양한 패턴에 대한 정규식을 작성하는 일은 시간이 오래 걸리는 작업일 수 있습니다. `FindPatternsBuilder`는 문자열 목록에 대한 정규식을 생성하여 위의 문제를 해결하는 강력한 코드 가속 도구입니다.
 
 ```python
 import prose.codeaccelerator as cx
@@ -134,7 +134,7 @@ builder = cx.FindPatternsBuilder(df['BirthDate'])
 builder.learn().regexes
 ```
 
-다음에서 생성 되는 정규식은는 `FindPatternsBuilder` 위의 데이터에 대 한 합니다.
+위의 데이터에 대해 `FindPatternsBuilder`에서 생성한 정규식은 다음과 같습니다.
 
 ```
 ^[0-9]{2}-[A-Z][a-z]+-[0-9]{2}$
@@ -143,4 +143,4 @@ builder.learn().regexes
 ^Unknown$
 ```
 
-Regular Expressions 생성 외에도 `FindPatternsBuilder` 생성 된 regex에 따라 값을 클러스터링에 대 한 코드를 생성할 수도 있습니다. 열의 모든 값이 생성 된 정규식을 따르는지 어설션할 수도 있습니다. 및 다른 유용한 시나리오를 참조 하세요. 자세한 내용은 참조는 [설명서](https://aka.ms/prose-codeaccelerator-findpatterns)합니다.
+정규식 생성 외에, `FindPatternsBuilder`는 생성된 정규식을 기준으로 값을 클러스터링하는 코드도 생성할 수 있습니다. 또한 열의 모든 값이 생성된 정규식을 준수한다는 것도 어설션할 수 있습니다. 자세히 알아보고 기타 유용한 시나리오를 보려면 [설명서](https://aka.ms/prose-codeaccelerator-findpatterns)를 참조하세요.
