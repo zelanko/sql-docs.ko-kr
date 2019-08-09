@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5cc205c8e35a275cb043de89d06557cc975518e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: feee489d990bfce813c0bb16aafaf9e7e3a673cf
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127947"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661393"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>병합 아티클용 사용자 지정 충돌 해결 프로그램 구현
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ ms.locfileid: "68127947"
   
     |매개 변수|데이터 형식|설명|  
     |---------------|---------------|-----------------|  
-    |**@tableowner**|**sysname**|충돌을 해결 중인 테이블의 소유자 이름. 게시 데이터베이스에 있는 테이블의 소유자입니다.|  
-    |**@tablename**|**sysname**|충돌을 해결 중인 테이블의 이름|  
-    |**@rowguid**|**uniqueidentifier**|충돌이 있는 행의 고유 식별자|  
-    |**@subscriber**|**sysname**|충돌 변경 내용을 전파 중인 서버의 이름|  
-    |**@subscriber_db**|**sysname**|충돌 변경 내용을 전파 중인 데이터베이스의 이름|  
-    |**@log_conflict OUTPUT**|**int**|병합 프로세스에서 나중에 충돌을 해결할 수 있도록 충돌을 기록할지 여부를 나타냅니다.<br /><br /> **0** = 충돌을 기록하지 않습니다.<br /><br /> **1** = 충돌 시 구독자의 변경 내용이 무시됩니다.<br /><br /> **2** = 충돌 시 게시자의 변경 내용이 무시됩니다.|  
-    |**@conflict_message OUTPUT**|**nvarchar(512)**|충돌을 기록할 경우 해결 정보로 제공되는 메시지|  
-    |**@destowner**|**sysname**|구독자에 있는 게시된 테이블의 소유자|  
+    |**\@tableowner**|**sysname**|충돌을 해결 중인 테이블의 소유자 이름. 게시 데이터베이스에 있는 테이블의 소유자입니다.|  
+    |**\@tablename**|**sysname**|충돌을 해결 중인 테이블의 이름|  
+    |**\@rowguid**|**uniqueidentifier**|충돌이 있는 행의 고유 식별자|  
+    |**\@subscriber**|**sysname**|충돌 변경 내용을 전파 중인 서버의 이름|  
+    |**\@subscriber_db**|**sysname**|충돌 변경 내용을 전파 중인 데이터베이스의 이름|  
+    |**\@log_conflict OUTPUT**|**int**|병합 프로세스에서 나중에 충돌을 해결할 수 있도록 충돌을 기록할지 여부를 나타냅니다.<br /><br /> **0** = 충돌을 기록하지 않습니다.<br /><br /> **1** = 충돌 시 구독자의 변경 내용이 무시됩니다.<br /><br /> **2** = 충돌 시 게시자의 변경 내용이 무시됩니다.|  
+    |**\@conflict_message OUTPUT**|**nvarchar(512)**|충돌을 기록할 경우 해결 정보로 제공되는 메시지|  
+    |**\@destowner**|**sysname**|구독자에 있는 게시된 테이블의 소유자|  
   
      이 저장 프로시저는 병합 에이전트가 이 매개 변수에 전달한 값을 사용하여 사용자 지정 충돌 해결 논리를 구현합니다. 이 저장 프로시저는 기본 테이블과 구조가 같고 충돌 시 적용되는 행의 데이터 값을 포함하는 단일 행 결과 집합을 반환해야 합니다.  
   
@@ -64,13 +64,13 @@ ms.locfileid: "68127947"
 
 #### <a name="to-use-a-custom-conflict-resolver-with-a-new-table-article"></a>새 테이블 아티클에 사용자 지정 충돌 해결 프로그램을 사용하려면  
   
-1.  **@article_resolver** 매개 변수에 **MicrosoftSQL** **Server Stored Procedure Resolver** 값, **@resolver_info** 매개 변수에 충돌 해결 프로그램 논리를 구현하는 저장 프로시저 이름을 지정하여 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하고 아티클을 정의합니다. 자세한 내용은 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+1.  **\@article_resolver** 매개 변수에 **MicrosoftSQL** **Server Stored Procedure Resolver** 값, **\@resolver_info** 매개 변수에 충돌 해결 프로그램 논리를 구현하는 저장 프로시저 이름을 지정하여 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하고 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>기존 테이블 아티클에 사용자 지정 충돌 해결 프로그램을 사용하려면  
   
-1.  **@publication** , **@article** , **@property** 에 **article_resolver** 값, **@value** 에 **MicrosoftSQL** **Server Stored ProcedureResolver** 값을 지정하여 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
+1.  **\@publication**, **\@article**을 지정하고 **\@property**에 **article_resolver** 값, **\@value**에 **MicrosoftSQL** **Server Stored ProcedureResolver** 값을 지정하여 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
   
-2.  **@publication** , **@article** , **@property** 에 **resolver_info** 값, **@value** 에 충돌 해결 프로그램 논리를 구현하는 저장 프로시저 이름을 지정하여 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
+2.  **\@publication** 및 **\@article**을 지정하고 **\@property**에 **resolver_info** 값, **\@value**에 충돌 해결 프로그램 논리를 구현하는 저장 프로시저 이름을 지정하여 [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
   
 ##  <a name="COM"></a> COM 기반 사용자 지정 해결 프로그램 사용  
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 네임스페이스는 이벤트를 처리하고 병합 복제 동기화 프로세스 중에 발생하는 충돌을 해결하는 복잡한 비즈니스 논리를 작성할 수 있게 해주는 인터페이스를 구현합니다. 자세한 내용은 [병합 아티클에 대한 비즈니스 논리 처리기 구현](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)을 참조하세요. 네이티브 코드 기반 사용자 지정 비즈니스 논리를 직접 작성하여 충돌을 해결할 수도 있습니다. 이 논리는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++와 같은 제품을 사용하여 COM 구성 요소로 빌드되며 DLL(동적 연결 라이브러리)로 컴파일됩니다. 이러한 COM 기반 사용자 지정 충돌 해결 프로그램은 충돌 해결을 위해 특별히 설계된 **ICustomResolver** 인터페이스를 구현해야 합니다.  
@@ -100,7 +100,7 @@ ms.locfileid: "68127947"
   
 8.  게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)를 실행하여 라이브러리가 이미 사용자 지정 충돌 해결 프로그램으로 등록되어 있지 않은지 확인합니다.  
   
-9. 라이브러리를 사용자 지정 충돌 해결 프로그램으로 등록하려면 배포자에서 [sp_registercustomresolver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)를 실행합니다. **@article_resolver** 에 COM 개체 이름, **@resolver_clsid** 에 라이브러리의 ID(CLSID), **@is_dotnet_assembly** 에 **false** 값을 지정합니다.  
+9. 라이브러리를 사용자 지정 충돌 해결 프로그램으로 등록하려면 배포자에서 [sp_registercustomresolver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)를 실행합니다. **\@article_resolver**에 COM 개체 식별 이름, **\@resolver_clsid**에 라이브러리의 ID(CLSID)를 지정하고 **\@is_dotnet_assembly**에 **false** 값을 지정합니다.  
   
     > [!NOTE]  
     >  사용자 지정 충돌 해결 프로그램이 더 이상 필요하지 않으면 [sp_unregistercustomresolver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)를 사용하여 등록을 취소할 수 있습니다.  
@@ -111,13 +111,13 @@ ms.locfileid: "68127947"
   
 1.  게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)를 실행하고 원하는 해결 프로그램의 이름을 확인합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 아티클을 정의합니다. **@article_resolver** 에 1단계의 아티클 해결 프로그램 이름을 지정합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_addmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 아티클을 정의합니다. **\@article_resolver**에 1단계의 아티클 해결 프로그램 식별 이름을 지정합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>기존 테이블 아티클에 사용자 지정 충돌 해결 프로그램을 사용하려면  
   
 1.  게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)를 실행하고 원하는 해결 프로그램의 이름을 확인합니다.  
   
-2.  **@publication** , **@article** , **@property** 에 **article_resolver** 값, **@value** 에 1단계의 아티클 해결 프로그램 이름을 지정하여 [sp_changemergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
+2.  **\@publication**, **\@article**을 지정하고 **\@property**에 **article_resolver** 값, **\@value**에 1단계의 아티클 해결 프로그램 식별 이름을 지정하여 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
   
 
 ## <a name="see-also"></a>참고 항목  

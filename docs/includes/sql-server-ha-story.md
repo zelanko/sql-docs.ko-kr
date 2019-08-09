@@ -12,7 +12,7 @@ SQL Server를 배포하는 모든 사람들이 공통적으로 해야 할 작업
 
 SQL Server 2017은 기존 기능에 새롭거나 향상된 기능을 많이 도입했으며 그 중 일부는 가용성을 위한 것입니다. SQL Server 2017에서 가장 크게 추가된 기능은 Linux 배포판에서 SQL Server를 지원하는 것입니다. SQL Server 2017 새로운 기능의 전체 목록은 [SQL Server의 새로운 기능](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017)을 참조하십시오.
 
-이 문서는 SQL Server 2017의 가용성 시나리오와 SQL Server 2017의 새롭고 향상된 가용성 기능을 설명하는 데 중점을 두고 있습니다. 이 시나리오에는 Windows Server 및 Linux에서 SQL Server 배포를 확장할 수 있을 뿐만 아니라 데이터베이스의 읽기 가능한 복사본 수를 늘릴 수 있는 하이브리드 시나리오도 포함됩니다. 이 문서에서는 가상화에서 제공되는 것과 같은 SQL Server 외부의 가용성 옵션에 대해서는 설명하지 않지만, 여기에 언급된 모든 내용은 공개 클라우드의 게스트 가상 머신이나 온-프레미스 하이퍼바이저 서버가 호스트하는 게스트 가상 머신 내부의 SQL Server 설치에 적용됩니다.
+이 문서는 SQL Server 2017의 가용성 시나리오와 SQL Server 2017의 새롭고 향상된 가용성 기능을 설명하는 데 중점을 두고 있습니다. 이 시나리오에는 Windows Server 및 Linux에서 SQL Server 배포를 확장할 수 있을 뿐만 아니라 데이터베이스의 읽기 가능한 복사본 수를 늘릴 수 있는 하이브리드 시나리오도 포함됩니다. 이 문서에서는 가상화에서 제공되는 것과 같은 SQL Server 외부의 가용성 옵션에 대해서는 설명하지 않지만, 여기에 언급된 모든 내용은 퍼블릭 클라우드의 게스트 가상 머신이나 온-프레미스 하이퍼바이저 서버가 호스트하는 게스트 가상 머신 내부의 SQL Server 설치에 적용됩니다.
 
 ## <a name="sql-server-2017-scenarios-using-the-availability-features"></a>가용성 기능을 사용하는 SQL Server 2017 시나리오
 
@@ -91,7 +91,7 @@ WSFC와 Pacemaker는 다르기보다는 유사합니다. 둘 다 개별 서버�
 
 ![SSMS AG 옵션](media/sql-server-ha-story/image2.png)
  
-##### <a name="requiredsynchronizedsecondariestocommit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
+##### <a name="required_synchronized_secondaries_to_commit"></a>REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT
 
 SQL Server 2016은 Enterprise Edition에서 동기 복제본 수에 대한 지원을 2에서 3으로 증가 시켰습니다. 하지만 하나의 보조 복제본이 동기화되었지만 다른 복제본에 문제가 있다면 오작동하는 복제본을 기다리거나 그대로 진행하도록 기본 복제본에 알리는 동작을 제어할 방법이 없습니다. 즉 보조 복제본이 동기화된 상태가 아니라도 다시 말해 보조 복제본에 데이터 손실이 발생하더라도 주 복제본은 어느 시점에 쓰기 트래픽을 계속 받게 됩니다.
 SQL Server 2017에는 동기 복제본이 있을 때 발생하는 동작을 제어할 수 있는 REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT라는 옵션이 있습니다. 이 옵션은 다음과 같이 작동합니다.
@@ -203,13 +203,13 @@ FCI를 SQL Server 2017로 업그레이드할 수 있습니다. 자세한 내용�
 
 ### <a name="other-sql-server-deployment-methods-and-availability"></a>기타 SQL Server 배포 방법 및 가용성
 
-Linux에서 SQL Server에 대한 다른 두 가지 배포 방법은 컨테이너 및 Azure(또는 다른 공용 클라우드 공급자)를 사용하는 것입니다. 이 문서에 제시된 가용성에 대한 일반적인 필요성은 SQL Server 배포 방법에 관계없이 존재합니다. 이 두 가지 방법은 SQL Server의 가용성을 높이는 데 있어 특별한 고려 사항이 있습니다.
+Linux에서 SQL Server에 대한 다른 두 가지 배포 방법은 컨테이너 및 Azure(또는 다른 퍼블릭 클라우드 공급자)를 사용하는 것입니다. 이 문서에 제시된 가용성에 대한 일반적인 필요성은 SQL Server 배포 방법에 관계없이 존재합니다. 이 두 가지 방법은 SQL Server의 가용성을 높이는 데 있어 특별한 고려 사항이 있습니다.
 
 [Docker를 사용하는 컨테이너](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker)는 Windows Server 또는 Linux용 SQL Server를 배포하는 새로운 방법입니다. 컨테이너는 실행 준비가 되어 있는 SQL Server의 전체 이미지입니다. 그러나 클러스터링에 대한 기본 지원이 없으므로 직접적인 고가용성 또는 재해 복구는 없습니다. 현재 컨테이너를 사용하여 SQL Server 데이터베이스를 사용할 수 있도록 만드는 옵션은 로그 전달 및 백업 및 복원입니다. 클러스터 유형이 없음인 가용성 그룹을 구성할 수 있지만 앞에서 설명한 것처럼 실제 가용성 구성으로 간주되지는 않습니다. Microsoft는 컨테이너를 사용하여 가용성 그룹 또는 FCI를 사용하도록 설정하는 방법을 모색하고 있습니다. 
 
 현재 컨테이너를 사용하는 경우 컨테이너가 손실되면 컨테이너 플랫폼에 따라 다시 배포하고 사용했던 공유 스토리지에 연결할 수 있습니다. 이 메커니즘 중 일부는 컨테이너 조정자가 제공합니다. 이 기능은 약간의 복원력을 제공하지만 데이터베이스 복구와 관련된 가동 중지 시간이 있을 수 있으며 가용성 그룹 또는 FCI를 사용하는 경우처럼 실제로 가용성이 높지는 않습니다. 
 
-Azure를 사용하여 SQL Server를 설치하면 Linux IaaS 가상 컴퓨터를 배포할 수 있습니다. 온-프레미스 기반 설치에서와 마찬가지로 지원되는 설치에서는 Pacemaker 외부에 있는 STONITH(헤드에 있는 다른 노드 맞추기)를 사용해야 합니다. STONITH는 펜싱 가용성 에이전트를 통해 제공됩니다. 일부 배포는 플랫폼의 일부로 제공되고 나머지 배포는 외부 하드웨어 및 소프트웨어 공급 업체에 의존합니다. 원하는 Linux 배포판을 확인하여 지원되는 솔루션을 공용 클라우드에 배포할 수 있도록 어떤 형태의 STONITH가 제공되는지 확인하십시오.
+Azure를 사용하여 SQL Server를 설치하면 Linux IaaS 가상 컴퓨터를 배포할 수 있습니다. 온-프레미스 기반 설치에서와 마찬가지로 지원되는 설치에서는 Pacemaker 외부에 있는 STONITH(헤드에 있는 다른 노드 맞추기)를 사용해야 합니다. STONITH는 펜싱 가용성 에이전트를 통해 제공됩니다. 일부 배포는 플랫폼의 일부로 제공되고 나머지 배포는 외부 하드웨어 및 소프트웨어 공급 업체에 의존합니다. 원하는 Linux 배포판을 확인하여 지원되는 솔루션을 퍼블릭 클라우드에 배포할 수 있도록 어떤 형태의 STONITH가 제공되는지 확인하십시오.
 
 ## <a name="cross-platform-and-linux-distribution-interoperability"></a>플랫폼 간 및 Linux 배포 상호 운용성
 

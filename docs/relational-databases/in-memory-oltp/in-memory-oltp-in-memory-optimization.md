@@ -1,7 +1,7 @@
 ---
 title: 메모리 내 OLTP(메모리 내 최적화) | Microsoft 문서
 ms.custom: ''
-ms.date: 06/24/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,27 +14,21 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4908caa8c45b4c4f4cd1cdbbc539fe4da3265677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ab822203fa55e32a3b310f6c5a3ecfe3269d8ed
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050217"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715915"
 ---
-# <a name="in-memory-oltp-in-memory-optimization"></a>메모리 내 OLTP(메모리 내 최적화)
+# <a name="in-memory-oltp-and-memory-optimization"></a>메모리 내 OLTP 및 메모리 최적화)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 트랜잭션 처리, 데이터 수집 및 데이터 로드, 일시적인 데이터 시나리오의 성능을 크게 개선할 수 있습니다.  기본 코드 및 정보를 즉시 활용하려면 직접 작성한 메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저를 빠르게 테스트해야 합니다. 자세한 내용은 다음을 참조하세요.
  -  [빠른 시작 1: 더 빠른 Transact-SQL 성능을 위한 메모리 내 OLTP 기술](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)을 참조하세요.  
  
-메모리 내 OLTP를 설명하고 성능상의 이점을 설명하는 17분 분량의 비디오
-
--  [SQL Server 2016의 메모리 내 OLTP](https://www.youtube.com/watch?v=l5l5eophmK4)
-
-비디오에 사용되는 메모리 내 OLTP에 대한 성능 데모를 다운로드하려면 다음을 참조하세요. 
-
-- [메모리 내 OLTP 성능 데모 v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+SQL Server의 메모리 내 OLTP를 설명하고 성능상의 이점을 보여 주는 [**17분 분량의 비디오**](#anchorname-17minute-video)가 YouTube에 업로드되었습니다.
 
 메모리 내 OLTP 및 이 기술의 성능 이점을 보여 주는 시나리오에 대한 자세한 내용은 다음을 참조하세요.
 
@@ -70,10 +64,13 @@ ms.locfileid: "68050217"
 |[메모리 내 OLTP 데이터베이스에 대한 고가용성 지원](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|[!INCLUDE[hek_2](../../includes/hek-2-md.md)]의 가용성 그룹 및 장애 조치(failover) 클러스터링을 논의합니다.|  
 |[메모리 내 OLTP에 대한 SQL Server 지원](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|메모리 최적화 테이블을 지원하는 새 구문/기능과 업데이트된 구문/기능을 나열합니다.|  
 |[메모리 내 OLTP로 마이그레이션](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)|디스크 기반 테이블을 메모리 최적화 테이블로 마이그레이션하는 방법에 대해 설명합니다.|  
-  
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 에 대한 자세한 내용은 다음을 참조하세요.  
+| &nbsp; | &nbsp; |
 
-- [메모리 내 OLTP를 설명하고 성능상의 이점을 보여 주는 비디오](https://www.youtube.com/watch?v=l5l5eophmK4).
+## <a name="links-to-other-websites"></a>다른 웹 사이트 링크
+
+이 섹션에서는 SQL Server의 I메모리 내 OLTP에 대한 정보가 포함된 다른 웹 사이트의 링크를 제공합니다.
+
+- [메모리 내 OLTP를 설명하고 성능상의 이점을 보여 주는 **비디오**](#anchorname-17minute-video)
 
 - [메모리 내 OLTP 성능 데모 v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
@@ -86,8 +83,57 @@ ms.locfileid: "68050217"
 -   [메모리 내 OLTP – 일반적인 워크로드 패턴 및 마이그레이션 고려 사항](https://msdn.microsoft.com/library/dn673538.aspx)  
   
 -   [메모리 내 OLTP 블로그](https://go.microsoft.com/fwlink/?LinkId=311696)  
-  
-## <a name="see-also"></a>참고 항목  
+
+## <a name="anchorname-17minute-video"></a>인덱싱된 17분 분량의 비디오
+
+- _비디오 제목:_ **SQL Server 2016의 메모리 내 OLTP**
+- _게시 날짜:_ 2019-03-10
+- _길이:_ 17:32
+- _호스팅 담당자:_ Jos de Bruijn, SQL Server 선임 프로그램 관리자
+
+### <a name="demo-can-be-downloaded"></a>데모 다운로드 가능
+
+시간이 08:09로 표시되면 비디오에서 데모를 두 번 실행합니다. 비디오에 사용된 실행 가능한 성능 데모는 다음 링크에서 다운로드할 수 있습니다.
+
+- [메모리 내 OLTP 성능 데모 v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+
+비디오에 표시되는 일반적인 단계는 다음과 같습니다.
+
+1. 먼저 데모는 일반 테이블로 실행됩니다.
+2. 그 다음 SQL Server Management Studio(SSMS.exe)에서 몇 번의 클릭으로 생성하여 채울 수 있는 메모리 최적화 테이블 버전을 확인할 수 있습니다.
+3. 그런 다음 메모리 최적화 테이블을 사용하여 데모를 다시 실행합니다. 속도가 크게 향상되었음을 확인할 수 있습니다.
+
+### <a name="index-to-each-section-in-the-video"></a>비디오의 각 섹션에 대한 인덱스
+
+| 시간 표시 링크 | 섹션 제목 |
+| :------------- | :------------ |
+| A.&nbsp; [00:00](https://www.youtube.com/watch?v=l5l5eophmK4&t=0) | 시작. |
+| <br/>B.&nbsp; [00:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=56) | <br/>고객이 메모리 내 OLTP를 적용해야 하는 이유는 다음과 같습니다. |
+| &nbsp; &nbsp; [01:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=63) | 최신 하드웨어에는 최신 데이터베이스 시스템 아키텍처가 필요합니다. |
+| &nbsp; &nbsp; [02:10](https://www.youtube.com/watch?v=l5l5eophmK4&t=130) | 생성되는 데이터가 급증하여 작업을 즉시 진행해야 합니다(대기 시간 짧음). |
+| &nbsp; &nbsp; [03:19](https://www.youtube.com/watch?v=l5l5eophmK4&t=199) | TCO 절감 - 보유한 리소스로 더 많은 작업을 수행할 수 있습니다. |
+| <br/>C.&nbsp; [03:33](https://www.youtube.com/watch?v=l5l5eophmK4&t=213) | <br/>메모리 내 OLTP의 의미<br/>메모리 최적화 기술을 사용하여 성능 최적화 |
+| &nbsp; &nbsp; [05:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=303) | 최대 30배 빠른 트랜잭션 처리 |
+| &nbsp; &nbsp; [05:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=322) | 완전한 내구성 – 서버 오류가 발생해도 데이터는 유지됩니다. |
+| &nbsp; &nbsp; [06:15](https://www.youtube.com/watch?v=l5l5eophmK4&t=375) | SQL Server에 완전히 통합되었습니다. 따라서 새로운 언어 또는 도구를 배울 필요가 없습니다. |
+| &nbsp; &nbsp; [07:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=442) | SQL Server 2014에서 처음 릴리스되었지만 2016에 주요 개선 사항이 적용되었습니다. |
+| &nbsp; &nbsp; [07:58](https://www.youtube.com/watch?v=l5l5eophmK4&t=558) | Microsoft Azure SQL Database에서도 사용할 수 있습니다(클라우드). |
+| <br/>D.&nbsp; [08:09](https://www.youtube.com/watch?v=l5l5eophmK4&t=489) | <br/>성능 데모.<br/> 일반 테이블을 사용하여 데모를 실행합니다. |
+| &nbsp; &nbsp; [09:11](https://www.youtube.com/watch?v=l5l5eophmK4&t=551) | SSMS 바로 가기 메뉴: **보고서** &gt; **트랜잭션 성능 분석** |
+| &nbsp; &nbsp; [10:38](https://www.youtube.com/watch?v=l5l5eophmK4&t=638) | SSMS 바로 가기 메뉴: **메모리 최적화 관리자**<br/> &nbsp; &nbsp; 실제로 일반 테이블에서 메모리 최적화 테이블을 생성하고 데이터를 마이그레이션합니다. |
+| &nbsp; &nbsp; [11:28](https://www.youtube.com/watch?v=l5l5eophmK4&t=688) | 데모를 다시 실행하고 45배 향상된 속도를 경험하세요. |
+| <br/>E.&nbsp; [12:17](https://www.youtube.com/watch?v=l5l5eophmK4&t=737) | <br/>SQL Server 2016에서 메모리 내 OLTP를 2014보다 더 쉽게 사용할 수 있습니다. |
+| &nbsp; &nbsp; [12:43](https://www.youtube.com/watch?v=l5l5eophmK4&t=763) | 앱 마이그레이션에 도움이 되는 간략한 분석. |
+| &nbsp; &nbsp; [13:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=783) | Transact-SQL 언어 지원의 개선(예: 외래 키 및 트리거)으로 앱 마이그레이션의 복잡성이 줄어들었습니다. |
+| &nbsp; &nbsp; [13:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=836) | 관리 효율성 향상.<br/> &nbsp; &nbsp; 예를 들어 스키마 및 인덱스 변경, 통계 자동 업데이트 등이 있습니다. |
+| <br/>F.&nbsp; [14:46](https://www.youtube.com/watch?v=l5l5eophmK4&t=886) | <br/>확장성 향상. |
+| &nbsp; &nbsp; [15:12](https://www.youtube.com/watch?v=l5l5eophmK4&t=912) | 대규모 메모리 최적화 테이블(데이터베이스 당 최대 2TB). |
+| &nbsp; &nbsp; [15:34](https://www.youtube.com/watch?v=l5l5eophmK4&t=934) | 더 효과적인 크기 조정. |
+| &nbsp; &nbsp; [16:41](https://www.youtube.com/watch?v=l5l5eophmK4&t=1001) | 이미 보유한 리소스로 더 많은 작업을 수행할 수 있습니다! |
+| <br/>G.&nbsp; [16:53](https://www.youtube.com/watch?v=l5l5eophmK4&t=1013) | <br/>최종 설명. (17:32에서 종료) |
+| &nbsp; | &nbsp; |
+
+## <a name="see-also"></a>관련 항목:  
  [데이터베이스 기능](../../relational-databases/database-features.md)  
   
   

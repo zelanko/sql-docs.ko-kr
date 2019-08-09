@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: rothja
 ms.author: jroth
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: a13421707f332ee992d07daa4e9bd337996a7dad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b63711b537358db7cbf3fa34dcbfdf7444d4b7a
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136393"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68693186"
 ---
 # <a name="how-to-contribute-to-sql-server-documentation"></a>SQL Server 설명서에 기여하는 방법
 
@@ -32,14 +32,24 @@ ms.locfileid: "68136393"
 
 ## <a id="githubui"></a> 브라우저에서 편집
 
-브라우저에서 SQL Server 콘텐츠를 간단하게 편집한 다음, Microsoft에 제출할 수 있습니다. 전체 프로세스는 [Microsoft Docs 기여자 가이드 개요](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents) 문서에 설명되어 있습니다. 다음 비디오는 브라우저에서 변경 사항을 제출하는 종단 간 프로세스를 보여 줍니다.
+브라우저에서 SQL Server 콘텐츠를 간단하게 편집한 다음, Microsoft에 제출할 수 있습니다. 자세한 내용은 [Microsoft Docs 참여자 가이드 개요](https://docs.microsoft.com/contribute/#quick-edits-to-existing-documents)에서 확인할 수 있습니다. 
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE23pxh]
+다음 단계는 프로세스를 요약합니다. 
 
-> [!TIP]
-> **편집** 단추의 위치는 비디오에서 표시된 것과 약간 다르지만 프로세스는 동일합니다.
->
-> ![편집 단추](./media/sql-server-docs-contribute/edit-sql-server-docs.png)
+1. 관련 피드백이 있는 페이지에서 오른쪽 상단의 **편집** 링크를 선택합니다.
+1. 다음 페이지에서 오른쪽 상단의 **연필** 아이콘을 선택합니다.
+1. 다음 페이지의 **파일 편집** 텍스트 창에서 변경하려는 텍스트를 직접 편집합니다.
+    새 텍스트 또는 변경된 텍스트의 서식을 지정하는 데 도움이 필요한 경우 [Markdown 참고 자료](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)를 참조하세요.
+1. 편집한 후 **변경 내용 커밋**에서 다음을 수행합니다.
+    1. 첫 번째 텍스트 상자에 변경 내용에 대한 간략한 설명을 입력합니다.
+    1. **자세한 설명(선택 사항) 추가** 상자에 변경 내용에 대한 간략한 설명을 제공합니다.
+1. **Propose file change(파일 변경 제안)** 를 선택합니다.
+1. **변경 내용 비교** 페이지에서 **끌어오기 요청 만들기**를 선택합니다. 
+1. **끌어오기 요청 열기** 페이지에서 **끌어오기 요청 만들기**를 선택합니다. 
+
+다음 GIF는 브라우저에서 변경 사항을 제출하는 종단 간 프로세스를 보여 줍니다.
+
+![SQL 문서 편집](media/sql-server-docs-navigation-guide/edit-sql-docs.gif)
 
 ## <a id="tools"></a> 도구를 사용하여 로컬로 편집
 

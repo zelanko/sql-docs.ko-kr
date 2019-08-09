@@ -21,12 +21,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c129998db40a64507b119b8392abcb56cc119a8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001681"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697499"
 ---
 # <a name="data-type-conversion-database-engine"></a>데이터 형식 변환(데이터베이스 엔진)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,8 +57,44 @@ CAST ( $157.27 AS VARCHAR(10) )
 다음 그림에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 제공 데이터 형식에 허용된 모든 명시적 및 암시적 데이터 형식 변환을 보여 줍니다. 여기에는 **xml**, **bigint** 및 **sql_variant**가 포함됩니다. 할당 시 **sql_variant** 데이터 형식에서 암시적으로 변환되지는 않지만 **sql_variant**로는 암시적으로 변환됩니다.
   
 ![데이터 형식 변환표](../../t-sql/data-types/media/lrdatahd.png "데이터 형식 변환표")
-  
+
+위 차트는 SQL Server에서 허용되는 모든 명시적 및 암시적 변환을 보여 주지만 변환의 결과 데이터 형식을 나타내지는 않습니다. SQL Server가 명시적 변환을 수행하면 문 자체에서 결과 데이터 형식을 결정합니다. 암시적 변환의 경우 변수 값을 설정하거나 열에 값을 삽입하는 등의 대입문은 변수 선언 또는 열 정의에 의해 정의된 데이터 형식으로 이어집니다. 비교 연산자 또는 다른 식의 경우 결과 데이터 형식은 데이터 형식 우선 순위 규칙에 따라 달라집니다.
+
+예를 들어 다음 스크립트는 `varchar` 형식 변수를 정의하고 변수에 `int` 형식 값을 할당한 다음 문자열과 변수의 연결을 선택합니다.
+
+```sql
+DECLARE @string varchar(10);
+SET @string = 1;
+SELECT @string + ' is a string.'
+```
+
+`1`의 `int` 값은 `varchar`로 변환되므로 `SELECT` 문은 `1 is a string.` 값을 반환합니다.
+
+다음 예에서는 대신 `int` 변수를 사용하는 유사한 스크립트를 보여 줍니다.
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + ' is not a string.'
+```
+
+이 경우 `SELECT` 문은 다음 오류를 발생시킵니다.
+
+`Msg 245, Level 16, State 1, Line 3`
+`Conversion failed when converting the varchar value ' is not a string.' to data type int.`
+
+`@notastring + ' is not a string.'` 식을 평가하기 위해 SQL Server는 데이터 형식 우선 순위 규칙에 따라 식 결과를 계산하기 전에 암시적 변환을 완료합니다. `int`는 `varchar`보다 우선 순위가 높기 때문에 SQL Server는 문자열을 정수로 변환하려고 시도하지만 이 문자열을 정수로 변환할 수 없으므로 실패합니다. 식이 변환할 수 있는 문자열을 제공하는 경우 다음 예제와 같이 문이 성공합니다.
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + '1'
+```
+
+이 경우 문자열 `1`을 정수 값 `1`로 변환할 수 있으므로 이 `SELECT` 문은 `2` 값을 반환합니다. 제공된 데이터 형식이 정수인 경우 `+` 연산자는 연결이 아닌 추가가 됩니다.
+
 ## <a name="data-type-conversion-behaviors"></a>데이터 형식 변환 동작
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체의 데이터 형식을 변환할 때 일부 암시적 및 명시적 데이터 형식 변환은 지원되지 않습니다. 예를 들면 **nchar** 값은 **이미지** 값으로 변환할 수 없습니다. **nchar**는 명시적 변환을 사용하여 **이진**으로만 변환할 수 있고, **이진**으로의 암시적 변환은 지원되지 않습니다. 그러나 **nchar**는 암시적으로나 명시적으로 **nvarchar**로 변환할 수 있습니다.
   
 다음 항목에서는 해당 데이터 형식이 나타내는 변환 동작에 대해 설명합니다.
