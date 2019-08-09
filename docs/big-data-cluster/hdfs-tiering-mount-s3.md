@@ -5,16 +5,16 @@ description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미�
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 28c80d6076f07c8a4f1605149f4b5c730c8349a1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 10e7d0e30135622fedfcbe8f8dba67bfaf1908cd
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419343"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702873"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 HDFS 계층화를 위한 S3를 탑재하는 방법
 
@@ -22,7 +22,7 @@ ms.locfileid: "68419343"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- [배포된 빅 데이터 클러스터](deployment-guidance.md)
+- [빅 데이터 클러스터 배포](deployment-guidance.md)
 - [빅 데이터 도구](deploy-big-data-tools.md)
   - **azdata**
   - **kubectl**
@@ -77,13 +77,13 @@ ms.locfileid: "68419343"
 빅 데이터 클러스터에 있는 모든 탑재 상태를 나열하려면 다음 명령을 사용합니다.
 
 ```bash
-azdata bdc storage-pool mount status
+azdata bdc hdfs mount status
 ```
 
 HDFS의 특정 경로에 있는 탑재 상태를 나열하려면 다음 명령을 사용합니다.
 
 ```bash
-azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="refresh-a-mount"></a>탑재 새로 고침
@@ -99,7 +99,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 탑재를 삭제하려면 **azdata bdc storage-pool mount delete** 명령을 사용하고 HDFS의 탑재 경로를 지정합니다.
 
 ```bash
-azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>다음 단계

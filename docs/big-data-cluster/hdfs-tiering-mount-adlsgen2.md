@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d7d8a6dd53452700853dca9774ed0196ed7546fe
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 83922206503b690a7b49c27d4686333bf7b966a1
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419350"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742730"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 HDFS 계층화를 위한 ADLS Gen2를 탑재하는 방법
 
@@ -22,7 +22,7 @@ ms.locfileid: "68419350"
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- [배포된 빅 데이터 클러스터](deployment-guidance.md)
+- [빅 데이터 클러스터 배포](deployment-guidance.md)
 - [빅 데이터 도구](deploy-big-data-tools.md)
   - **azdata**
   - **kubectl**
@@ -110,10 +110,10 @@ Azure Portal에서 ADLS 계정에 대해 얻을 수 있는 액세스 키를 사�
    ```
 1. 환경 변수 MOUNT_CREDENTIALS를 설정합니다(지침을 보려면 위로 스크롤).
 
-1. **azdata bdc storage-pool mount create**를 사용하여 Azure에 원격 HDFS 스토리지를 탑재합니다. 다음 명령을 실행하기 전에 자리 표시자 값을 바꿉니다.
+1. **Azdata bdc HDFS mount create**를 사용 하 여 Azure에 원격 HDFS 저장소를 탑재 합니다. 다음 명령을 실행하기 전에 자리 표시자 값을 바꿉니다.
 
    ```bash
-   azdata bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
+   azdata bdc hdfs mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -126,13 +126,13 @@ Azure Portal에서 ADLS 계정에 대해 얻을 수 있는 액세스 키를 사�
 빅 데이터 클러스터에 있는 모든 탑재 상태를 나열하려면 다음 명령을 사용합니다.
 
 ```bash
-azdata bdc storage-pool mount status
+azdata bdc hdfs mount status
 ```
 
 HDFS의 특정 경로에 있는 탑재 상태를 나열하려면 다음 명령을 사용합니다.
 
 ```bash
-azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="refresh-a-mount"></a>탑재 새로 고침
@@ -145,10 +145,10 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> 탑재 삭제
 
-탑재를 삭제하려면 **azdata bdc storage-pool mount delete** 명령을 사용하고 HDFS의 탑재 경로를 지정합니다.
+탑재를 삭제 하려면 **azdata bdc hdfs mount delete** 명령을 사용 하 고 hdfs에서 탑재 경로를 지정 합니다.
 
 ```bash
-azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>다음 단계
