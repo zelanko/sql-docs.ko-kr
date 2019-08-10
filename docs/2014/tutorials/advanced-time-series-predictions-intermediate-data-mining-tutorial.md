@@ -10,12 +10,12 @@ ms.assetid: b614ebdb-07ca-44af-a0ff-893364bd4b71
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 3db82b977725bdcb615ec67bd66e530b38f385c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca144d1d473f7df49f73d5ed170052c61ce6107d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62822452"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893695"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>고급 시계열 예측(중급 데이터 마이닝 자습서)
   예측 모델 탐색을 통해 대부분 지역의 판매는 유사한 패턴을 따르지만 태평양 지역의 M200 모델과 같이 특정 지역 및 모델은 서로 매우 다른 추세를 보여 준다는 사실을 알았습니다. 이는 놀라운 일이 아니고 알려진 바와 같이 지역 간 차이는 일반적인 것이며 마케팅 홍보, 정확하지 않은 보고 또는 지정학적 사건과 같은 많은 요인으로 인해 발생할 수 있습니다.  
@@ -26,24 +26,24 @@ ms.locfileid: "62822452"
   
  **단계**  
   
-1.  [확장된 판매 데이터를 준비 합니다 (예측)](#bkmk_newExtendData)  
+1.  [확장 된 판매 데이터 준비 (예측 용)](#bkmk_newExtendData)  
   
-2.  [집계 된 데이터 (모델 작성용) 준비](#bkmk_newReplaceData)  
+2.  [집계 된 데이터 준비 (모델 작성)](#bkmk_newReplaceData)  
   
-3.  [시계열 데이터를 준비 합니다 (교차 예측)](#bkmk_CrossData2)  
+3.  [계열 데이터 준비 (교차 예측 용)](#bkmk_CrossData2)  
   
 4.  [EXTEND를 사용한 예측](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 5.  [교차 예측 모델 만들기](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
-6.  [REPLACE를 사용한 예측](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
+6.  [REPLACE를 사용 하 여 예측](../../2014/tutorials/time-series-predictions-replacement-data-intermediate-data-mining.md)  
   
 7.  [새 예측 검토](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
-##  <a name="bkmk_newExtendData"></a> 새로운 확장된 판매 데이터 만들기  
+##  <a name="bkmk_newExtendData"></a>새 확장 판매 데이터 만들기  
  판매 데이터를 업데이트하려면 최신 판매 수치가 필요합니다. 신규 매장에 대한 관심을 불러일으키고 해당 제품의 인지도를 높이기 위해 지역 판매 홍보를 실시한 태평양 지역 내 데이터는 특히 중요합니다.  
   
- 이 시나리오에서는 방금 3 개월 동안의 신규 데이터가 두 군데 지역에 대 한 포함 된 Excel 통합 문서에서 데이터를 가져왔는지 가정 합니다. Transact SQL 스크립트를 사용 하는 데이터용 테이블을 만들고 예측에 사용할 데이터 원본 뷰를 정의 합니다.  
+ 이 시나리오에서는 두 지역에 대 한 새 데이터의 3 개월이 포함 된 Excel 통합 문서에서 데이터를 가져온 것으로 가정 합니다. Transact-sql 스크립트를 사용 하 여 데이터에 대 한 테이블을 만든 다음 예측에 사용할 데이터 원본 뷰를 정의 합니다.  
   
 #### <a name="create-the-table-with-new-sales-data"></a>새 판매 데이터가 있는 테이블 만들기  
   
@@ -93,43 +93,43 @@ ms.locfileid: "62822452"
     >   
     >  예제 데이터베이스에 사용된 날짜가 이 릴리스에 맞게 변경되었습니다. 이전 버전의 AdventureWorks를 사용하는 경우에는 이에 따라 삽입된 날짜를 조정해야 할 수 있습니다.  
   
-###  <a name="bkmk_newReplaceData"></a> 새 판매 데이터를 사용 하 여 데이터 원본 뷰 만들기  
+###  <a name="bkmk_newReplaceData"></a>새 판매 데이터를 사용 하 여 데이터 원본 뷰 만들기  
   
-1.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **데이터 원본 뷰**를 선택한 후 **새 데이터 원본 뷰**합니다.  
+1.  **솔루션 탐색기**에서 **데이터 원본 뷰**를 마우스 오른쪽 단추로 클릭 한 다음 **새 데이터 원본 뷰**를 선택 합니다.  
   
 2.  데이터 원본 뷰 마법사에서 다음을 선택합니다.  
   
-     **데이터 원본**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
+     **데이터 원본**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **테이블 및 뷰 선택**: NewSalesData 테이블에 방금 만든 선택 합니다.  
+     **테이블 및 뷰 선택**: 방금 만든 테이블 NewSalesData를 선택 합니다.  
   
 3.  **마침**을 클릭합니다.  
   
-4.  데이터 원본 뷰 디자인 화면에서 NewSalesData를 마우스 오른쪽 단추로 클릭 한 다음 선택 **데이터 탐색** 데이터를 확인 합니다.  
+4.  데이터 원본 뷰 디자인 화면에서 NewSalesData를 마우스 오른쪽 단추로 클릭 한 다음 **데이터 탐색** 을 선택 하 여 데이터를 확인 합니다.  
   
 > [!WARNING]  
 >  이 데이터는 예측에만 사용하므로 데이터는 불완전해도 상관없습니다.  
   
-##  <a name="bkmk_CrossData2"></a> 교차 예측 모델에 대 한 데이터 만들기  
- 데이터 원본에 사용 된 여러 자전거 모델이 더 적은 수의 범주를 축소 하 고 개별 국가의 결과가 지역 병합할 vTimeSeries 뷰에 다소 그룹화 이미 모델을 예측 합니다. 전 세계 예측에 사용할 수 있는 모델을 만들기 위해 데이터 원본 뷰 디자이너에서 직접 추가 단순 집계를 생성합니다. 새 데이터 원본 뷰에는 전 지역의 모든 제품 판매에 대한 합계와 평균만 포함됩니다.  
+##  <a name="bkmk_CrossData2"></a>교차 예측 모델에 대 한 데이터 만들기  
+ 원래 예측 모델에 사용 된 데이터는 이미 여러 자전거 모델을 더 적은 수의 범주로 축소 하 고 개별 국가의 결과를 지역으로 병합 하는 뷰 vTimeSeries에 의해 약간 그룹화 되었습니다. 전 세계 예측에 사용할 수 있는 모델을 만들기 위해 데이터 원본 뷰 디자이너에서 직접 추가 단순 집계를 생성합니다. 새 데이터 원본 뷰에는 전 지역의 모든 제품 판매에 대한 합계와 평균만 포함됩니다.  
   
  모델에 사용할 데이터 원본을 만든 후에는 예측에 사용할 새 데이터 원본 뷰를 만들어야 합니다. 예를 들어, 새로운 전 세계 모델을 사용하여 유럽 지역의 판매를 예측하려는 경우 유럽 지역의 데이터만 넣어야 합니다. 따라서 원래 데이터를 필터링하는 새 데이터 원본 뷰를 설정하고 각 예측 쿼리 집합에 대한 필터 조건을 변경합니다.  
   
 #### <a name="to-create-the-model-data-using-a-custom-data-source-view"></a>사용자 지정 데이터 원본 뷰를 사용하여 모델 데이터를 만들려면  
   
-1.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **데이터 원본 뷰**를 선택한 후 **새 데이터 원본 뷰**합니다.  
+1.  **솔루션 탐색기**에서 **데이터 원본 뷰**를 마우스 오른쪽 단추로 클릭 한 다음 **새 데이터 원본 뷰**를 선택 합니다.  
   
 2.  마법사 시작 페이지에서 **다음**을 클릭합니다.  
   
 3.  **데이터 원본 선택** 페이지에서 [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]를 선택한 후 **다음**을 클릭합니다.  
   
-4.  페이지에서 **테이블 및 뷰 선택**, 모든 테이블 단지 클릭을 추가 하지 마세요 **다음**합니다.  
+4.  **테이블 및 뷰 선택**페이지에서 테이블을 추가 하지 않습니다. **다음**을 클릭 하면 됩니다.  
   
-5.  페이지의 **마법사 완료**, 이름을 입력 합니다 `AllRegions`를 클릭 하 고 **마침**합니다.  
+5.  **마법사 완료**페이지에서 이름을 `AllRegions`입력 한 다음 **마침**을 클릭 합니다.  
   
-6.  다음으로 빈 데이터 원본 뷰 디자인 화면을 마우스 오른쪽 단추로 클릭 하 고 선택한 **새 명명 된 쿼리**합니다.  
+6.  다음으로 빈 데이터 원본 뷰 디자인 화면을 마우스 오른쪽 단추로 클릭 한 다음 **새 명명 된 쿼리**를 선택 합니다.  
   
-7.  에 **명명 된 쿼리 만들기** 대화 상자에 대 한 **이름**, 형식 `AllRegions`, 및 **설명**, 형식 **합계 및 모든 모델에 대 한 판매액의 평균이 및 지역**합니다.  
+7.  **명명 된 쿼리 만들기** 대화 상자에서 **이름**에를 입력 `AllRegions`하 고 **설명**에 **모든 모델 및 지역에 대 한 매출 합계 및 평균**을 입력 합니다.  
   
 8.  SQL 텍스트 창에 다음 문을 입력한 다음 확인을 클릭합니다.  
   
@@ -142,29 +142,29 @@ ms.locfileid: "62822452"
     GROUP BY ReportingDate  
     ```  
   
-9. 마우스 오른쪽 단추로 클릭 합니다 `AllRegions` 테이블을 선택한 후 **데이터 탐색**합니다.  
+9. `AllRegions` 테이블을 마우스 오른쪽 단추로 클릭 한 다음 **데이터 탐색**을 선택 합니다.  
   
-###  <a name="bkmk_CrossData"></a> 교차 예측 용 계열 데이터를 만들려면  
+###  <a name="bkmk_CrossData"></a>교차 예측을 위한 계열 데이터를 만들려면  
   
-1.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **데이터 원본 뷰**를 선택한 후 **새 데이터 원본 뷰**합니다.  
+1.  **솔루션 탐색기**에서 **데이터 원본 뷰**를 마우스 오른쪽 단추로 클릭 한 다음 **새 데이터 원본 뷰**를 선택 합니다.  
   
 2.  데이터 원본 뷰 마법사에서 다음을 선택합니다.  
   
-     **데이터 원본**: [!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
+     **데이터 원본**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **테이블 및 뷰 선택**: 모든 테이블을 선택 하지 마십시오  
+     **테이블 및 뷰 선택**: 테이블을 선택 하지 않습니다.  
   
      **이름**: `T1000 Pacific Region`  
   
 3.  **마침**을 클릭합니다.  
   
-4.  에 대 한 빈 디자인 화면을 마우스 오른쪽 단추로 클릭 **T1000 Pacific Region.dsv**를 선택한 후 **새 명명 된 쿼리**합니다.  
+4.  **T1000 태평양 지역**에 대 한 빈 디자인 화면을 마우스 오른쪽 단추로 클릭 한 다음 **새 명명 된 쿼리**를 선택 합니다.  
   
      **명명된 쿼리 만들기** 대화 상자가 나타납니다. 이름을 다시 입력한 후 설명을 추가합니다.  
   
      **이름**: `T1000 Pacific Region`  
   
-     **설명**: **필터`vTimeSeries`지역과 모델 별로**  
+     **설명**: **영역`vTimeSeries`및 모델로 필터링**  
   
 5.  텍스트 창에 다음 쿼리를 입력한 다음 확인을 클릭합니다.  
   
@@ -177,16 +177,16 @@ ms.locfileid: "62822452"
     > [!NOTE]  
     >  각 계열에 대한 예측을 개별적으로 생성해야 할 수 있으므로 다른 데이터 계열에 다시 사용할 수 있도록 쿼리 텍스트를 복사하고 텍스트 파일에 저장할 수도 있습니다.  
   
-6.  데이터 원본 뷰 디자인 화면에서 T1000 Pacific을 마우스 오른쪽 단추로 클릭 한 다음 선택 **데이터 탐색** 데이터가 올바르게 필터링 되었는지 확인 합니다.  
+6.  데이터 원본 뷰 디자인 화면에서 T1000 태평양를 마우스 오른쪽 단추로 클릭 한 다음 **데이터 탐색** 을 선택 하 여 데이터가 올바르게 필터링 되었는지 확인 합니다.  
   
      교차 예측 쿼리를 생성할 때 이 데이터를 모델에 대한 입력으로 사용합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [업데이트 된 데이터를 사용 하 여 시계열 예측 &#40;중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+ [업데이트 된 데이터 &#40;를 사용한 시계열 예측 중급 데이터 마이닝 자습서&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Microsoft 시계열 알고리즘](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
  [Microsoft 시계열 알고리즘 기술 참조](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [다차원 모델의 데이터 원본 뷰](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [다차원 모델의 데이터 원본 뷰](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

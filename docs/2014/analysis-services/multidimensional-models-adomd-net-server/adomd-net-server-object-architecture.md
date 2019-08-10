@@ -13,20 +13,20 @@ ms.assetid: bdc81de9-b390-4654-b62a-cd6c0c9ca10d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1333f91630cb822c85dd283a40a2cb06db3dffb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80856721092becb85d6ff6fb2652013e975c6157
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62727887"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887967"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET 서버 개체 아키텍처
-  ADOMD.NET 서버 개체는 사용자 정의 함수 (Udf) 또는 저장된 프로시저를 만드는 데 사용할 수 있는 도우미 개체 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다.  
+  ADOMD.NET 서버 개체는에서 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]udf (사용자 정의 함수) 또는 저장 프로시저를 만드는 데 사용할 수 있는 도우미 개체입니다.  
   
 > [!NOTE]  
 >  `Microsoft.AnalysisServices.AdomdServer` 네임스페이스 및 이러한 개체를 사용하려면 msmgdsrv.dll에 대한 참조를 UDF 프로젝트 또는 저장 프로시저에 추가해야 합니다.  
   
- ![ADOMD.NET 서버에서 개체 관계를 보여 줍니다](../../../2014/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "ADOMD.NET 서버에서 개체 관계를 보여 줍니다.")  
+ ![ADOMD.NET 서버에서 개체 관계를 표시 합니다] . (https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "ADOMD.NET 서버에서 개체 관계를 표시 합니다") .  
 ADOMD.NET 개체 모델  
   
  ADOMD.NET 개체 계층 구조와의 상호 작용은 일반적으로 다음 표에 설명된 최상위 레이어에 있는 하나 이상의 개체에서 시작됩니다.  

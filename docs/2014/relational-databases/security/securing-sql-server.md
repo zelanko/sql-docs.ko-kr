@@ -18,12 +18,12 @@ ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 2195c4efcec60b5a350475ab2600b42ef5c93b36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1a701f1e63877c807964a8d81a829afdc9f7b81
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62992352"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891620"
 ---
 # <a name="securing-sql-server"></a>SQL Server 보안 설정
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안은 플랫폼, 인증, 개체(데이터 포함) 및 시스템에 액세스하는 응용 프로그램의 네 가지 영역과 관련된 일련의 단계로 볼 수 있습니다. 다음 항목에서는 효과적인 보안 계획을 만들고 구현하는 방법을 설명합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "62992352"
 |---------------------------|---------|  
 |사용할 방화벽 구성: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |사용할 방화벽 구성: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[SSIS 서비스 액세스에 대한 Windows 방화벽 구성](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
-|사용할 방화벽 구성: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|사용할 방화벽 구성: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |다음에 액세스할 수 있도록 방화벽의 특정 포트 열기: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |채널 바인딩 및 서비스 바인딩을 사용하여 인증에 대한 확장된 보호 지원 구성|[확장된 보호를 사용하여 데이터베이스 엔진에 연결](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
   

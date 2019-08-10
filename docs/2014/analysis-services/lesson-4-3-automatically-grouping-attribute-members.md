@@ -10,12 +10,12 @@ ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c521a3faf0c11cfab7bab337226de647e27cd060
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 568cb46a17ac29cabe45b79212400fd020be84c3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078653"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888414"
 ---
 # <a name="automatically-grouping-attribute-members"></a>자동으로 특성 멤버 그룹화
   큐브를 찾아볼 때 일반적으로 한 특성 계층의 멤버 차원은 다른 특성 계층의 멤버별로 구분합니다. 예를 들어 고객 판매를 도시별, 구매 제품별 또는 성별로 그룹화할 수 있습니다. 그러나 특정 특성 유형의 경우에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 특성 계층 내의 멤버 배포에 따라 자동으로 특성 멤버를 그룹화하도록 하는 것이 유용합니다. 예를 들어 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 고객의 연간 소득 값 그룹을 만들도록 할 수 있습니다. 이 작업을 수행하면 특성 계층을 찾아보는 사용자는 멤버 자체가 아니라 그룹의 이름과 값을 보게 됩니다. 이렇게 하면 사용자에게 표시되는 수준 수가 제한되므로 분석하는 데 보다 유용합니다.  
@@ -44,11 +44,11 @@ ms.locfileid: "66078653"
   
 4.  **특성** 창에서 **Yearly Income**을 선택합니다.  
   
-5.  속성 창에서 값을 변경 합니다 **DiscretizationMethod** 속성을 **자동** 값을 변경 하 고는 **DiscretizationBucketCount** 속성 `5`입니다.  
+5.  속성 창에서 **DiscretizationMethod** 속성 값을 **Automatic** 으로 변경 하 고 **DiscretizationBucketCount** 속성의 값을로 `5`변경 합니다.  
   
      다음 그림에서는 **Yearly Income**의 수정된 속성을 보여 줍니다.  
   
-     ![연간 소득에 대 한 속성을 수정한](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Yearly Income에 대 한 속성을 수정 합니다.")  
+     ![연간 수입에 대 한 수정 된 속성](../../2014/tutorials/media/l4-discretizationmethod-1.gif "연간 수입에 대 한 수정 된 속성")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Employee 차원의 특성 계층 멤버 그룹화  
   
@@ -62,11 +62,11 @@ ms.locfileid: "66078653"
   
 4.  **특성** 창에서 **Sick Leave Hours**를 선택합니다.  
   
-5.  속성 창에서 값을 변경 합니다 **DiscretizationMethod** 속성을 **클러스터** 값을 변경 하 고는 **DiscretizationBucketCount** 속성 `5`.  
+5.  속성 창에서 **DiscretizationMethod** 속성의 값을 **클러스터** 로 변경 하 고 **DiscretizationBucketCount** 속성의 값을로 `5`변경 합니다.  
   
 6.  **특성** 창에서 **Vacation Hours**를 선택합니다.  
   
-7.  속성 창에서 값을 변경 합니다 **DiscretizationMethod** 속성을 **Equal Areas** 값을 변경 하 고는 **DiscretizationBucketCount** 속성 `5`입니다.  
+7.  속성 창에서 **DiscretizationMethod** 속성의 값을 **동일한 영역** 으로 변경 하 고 **DiscretizationBucketCount** 속성의 값을로 `5`변경 합니다.  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>수정된 특성 계층 찾아보기  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66078653"
   
      다음 이미지에서는 직원 병가 시간별로 차원이 구분된 판매량을 보여 줍니다.  
   
-     ![판매 직원 병가 별로 차원이 구분 시간 둡니다](../../2014/tutorials/media/l4-discretizationmethod-2.gif "판매 직원 병가 별로 차원이 구분 유지 시간")  
+     ![직원 병가 시간별로 차원을 지정 하는 판매액](../../2014/tutorials/media/l4-discretizationmethod-2.gif "직원 병가 시간별로 차원을 지정 하는 판매액")  
   
 10. **Sick Leave Hours** 특성 계층을 **데이터** 창의 열 영역에서 제거합니다.  
   
@@ -123,7 +123,7 @@ ms.locfileid: "66078653"
      이제 제품에 대한 판매량 값이 있는 **Vacation Hours** 특성 멤버에는 3개의 그룹이 있습니다. 다른 7개의 그룹에는 판매량 데이터가 없는 멤버가 포함됩니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [특성 계층 숨기기 및 비활성화](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+ [특성 계층 숨기기 및 비활성화](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
   
 ## <a name="see-also"></a>관련 항목  
  [특성 멤버 그룹화&#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  

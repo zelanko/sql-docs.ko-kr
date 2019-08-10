@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 201072b1b0e371e1f22ee9e32b009ebcea47b2b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4e31a687597e454b9afe38d6c6dd1c15af486d0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038172"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893718"
 ---
 # <a name="mdx-data-definition---drop-set"></a>MDX 데이터 정의 - DROP SET
 
@@ -40,9 +40,9 @@ DROP [SESSION] SET
  삭제할 명명된 집합의 이름을 지정하는 유효한 문자열 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 명명된 집합에 대한 자세한 내용은 [명명된 집합을 MDX로 작성&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md)을 참조하세요.  
+ 명명된 집합에 대한 자세한 내용은 [명명된 집합을 MDX로 작성&#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [MDX 데이터 정의 문 &#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
+ [Mdx 데이터 정의 문 &#40;mdx&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

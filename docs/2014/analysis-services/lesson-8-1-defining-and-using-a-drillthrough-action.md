@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a4b503c63706135b326490ccefc3f0d8ca6ceccb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078272"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888111"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>드릴스루 동작 정의 및 사용
   쿼리가 반환하는 데이터를 올바르게 필터링하지 않고 팩트 차원별로 팩트 데이터의 차원을 지정하면 쿼리 성능이 느려집니다. 이 문제를 방지하려면 반환되는 전체 행 수를 제한하는 드릴스루 동작을 정의하면 됩니다. 이렇게 하면 쿼리 성능이 대폭 향상됩니다.  
@@ -30,15 +30,15 @@ ms.locfileid: "66078272"
   
      다음 그림에서는 큐브 디자이너의 **동작** 탭을 보여 줍니다.  
   
-     ![큐브 디자이너의 작업 탭](../../2014/tutorials/media/l8-action1.gif "큐브 디자이너의 작업 탭")  
+     ![큐브 디자이너의 동작 탭](../../2014/tutorials/media/l8-action1.gif "큐브 디자이너의 동작 탭")  
   
 2.  **동작** 탭의 도구 모음에서 **새 드릴스루 동작** 단추를 클릭합니다.  
   
      표시 창에 빈 동작 템플릿이 표시됩니다.  
   
-     ![표시 창의 빈 동작 템플릿](../../2014/tutorials/media/l8-action2.gif "표시 창의 빈 동작 템플릿이")  
+     ![표시 창의 빈 동작 템플릿](../../2014/tutorials/media/l8-action2.gif "표시 창의 빈 동작 템플릿")  
   
-3.  에 **이름을** 상자에서이 동작의 이름을 변경 `Internet Sales Details Drillthrough Action`합니다.  
+3.  **이름** 상자에서이 작업의 이름을로 `Internet Sales Details Drillthrough Action`변경 합니다.  
   
 4.  **측정값 그룹 멤버** 목록에서 **Internet Sales**를 선택합니다.  
   
@@ -52,9 +52,9 @@ ms.locfileid: "66078272"
   
      ![추가 속성 상자](../../2014/tutorials/media/l8-action4.gif "추가 속성 상자")  
   
-8.  에 **최대 행** 상자에 입력 `10`합니다.  
+8.  **최대 행** 상자에를 입력 `10`합니다.  
   
-9. 에 **캡션** 상자에 입력 `Drillthrough to Order Details...`합니다.  
+9. **캡션** 상자에를 입력 `Drillthrough to Order Details...`합니다.  
   
      이렇게 설정하면 반환되는 행 수가 제한되며 클라이언트 애플리케이션 메뉴에 표시되는 캡션이 지정됩니다. 다음 그림에서는 **추가 속성** 상자에서 지정하는 이러한 설정을 보여 줍니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66078272"
   
      다음 그림에 표시된 것처럼 Adam Powell에게 운송된 주문에 대한 세부 정보가 **데이터 샘플 뷰어**에 표시됩니다. 그러나 주문일, 기한 및 운송일과 같은 일부 추가 세부 정보가 도움이 될 수도 있습니다. 다음 절차에서는 이러한 세부 정보를 추가합니다.  
   
-     ![Adam Powell에 주문 배송](../../2014/tutorials/media/l8-action6.gif "Adam Powell에 배송 주문")  
+     ![Adam Powell에 제공 된 주문](../../2014/tutorials/media/l8-action6.gif "Adam Powell에 제공 된 주문")  
   
 8.  Excel 닫기  
   
@@ -104,11 +104,11 @@ ms.locfileid: "66078272"
   
     -   ShipDateKey  
   
-6.  변경을 **이름을** 속성에 대 한를 **Order Date Key** 특성을 `Order Date` 에 대 한 찾아보기 단추를 클릭 합니다 **이름 열** 속성에는 **이름 열** 대화 상자에서 **날짜** 원본 테이블 및 원본 열으로 SimpleDate를 선택 합니다. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  **Order Date Key** 특성의 `Order Date` **name** 속성을로 변경한 다음 **name column** 속성의 찾아보기 단추를 클릭 하 고 **이름 열** 대화 상자에서 원본 테이블로 **Date** 를 선택 하 고 다음을 선택 합니다. 원본 열로 SimpleDate. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  변경 합니다 **이름** 속성에 대 한 합니다 **Due Date Key** 특성을 `Due Date`, 한 다음, 동일한 방법을 사용 하 여를 **Order Date Key** 특성을 변경 합니다  **열의 이름을** 속성에이 특성에 대 한 **Date.SimpleDate (WChar)** 합니다.  
+7.  **기한 키** 특성의 `Due Date` **이름** 속성을로 변경한 다음 **Order date key** 특성과 동일한 방법을 사용 하 여이 특성의 **name Column** 속성을 **SimpleDate (WChar)로 변경 합니다.** .  
   
-8.  변경 합니다 **이름** 속성에 대 한 합니다 **Ship Date Key** 특성을 `Ship Date`, 변경한 후를 **이름 열** 이 특성에 대 한 속성  **Date.SimpleDate (WChar)** 합니다.  
+8.  **운송 날짜 키** 특성의 `Ship Date` **이름** 속성을로 변경 하 고이 특성의 **name Column** 속성을 **SimpleDate (WChar)** 로 변경 합니다.  
   
 9. **Tutorial 큐브에 대한 큐브 디자이너의** 동작 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 탭으로 전환합니다.  
   
@@ -140,16 +140,16 @@ ms.locfileid: "66078272"
   
      Adam Powell에게 운송된 이 주문에 대한 세부 정보가 임시 워크시트에 표시됩니다. 다음 그림에 표시된 것처럼 여기에는 항목에 대한 설명, 주문 번호, 주문 날짜, 기한 및 운송 날짜 정보가 포함됩니다.  
   
-     ![Adam Powell에 주문 배송](../../2014/tutorials/media/l8-action8.gif "Adam Powell에 배송 주문")  
+     ![Adam Powell에 제공 된 주문](../../2014/tutorials/media/l8-action8.gif "Adam Powell에 제공 된 주문")  
   
 ## <a name="next-lesson"></a>다음 단원  
- [9 단원: 큐브 뷰 및 번역 정의](../analysis-services/lesson-9-defining-perspectives-and-translations.md)  
+ [단원 9: 큐브 뷰 및 번역 정의](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
   
 ## <a name="see-also"></a>관련 항목  
  [작업 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [다차원 모델의 동작](multidimensional-models/actions-in-multidimensional-models.md)   
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [팩트 관계 정의](../analysis-services/lesson-5-2-defining-a-fact-relationship.md)   
+ [팩트 관계 정의](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
  [팩트 관계 및 팩트 관계 속성 정의](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

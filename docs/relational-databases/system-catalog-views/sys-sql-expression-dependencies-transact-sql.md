@@ -1,5 +1,5 @@
 ---
-title: sys.sql_expression_dependencies (TRANSACT-SQL) | Microsoft Docs
+title: sys.debug .sql (Transact-sql) (_s) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -20,17 +20,17 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bee68e3ba1863602d9a96635cdfa4c533a00c649
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 29bf4991ce5dd52e9c66c31abade833e4fe319b2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073169"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893541"
 ---
-# <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies(Transact-SQL)
+# <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
-  현재 데이터베이스에서 사용자 정의 엔터티의 이름별 종속성마다 한 개의 행을 포함합니다. 고유 하 게 컴파일된 스칼라 사용자 정의 함수 및 기타 간의 종속성을 여기 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모듈입니다. 하나의 엔터티만 호출 될 때 두 엔터티 간의 종속성이 만들어집니다 합니다 *엔터티를 참조*, 라는 다른 엔터티의 영구 SQL 식에서 이름별으로 나타날를 *참조 엔터티*합니다. 예를 들어 뷰 정의에서 테이블을 참조하면 참조 엔터티인 뷰는 참조된 엔터티인 테이블에 종속됩니다. 테이블이 삭제되면 뷰를 사용할 수 없습니다.  
+  현재 데이터베이스에서 사용자 정의 엔터티의 이름별 종속성마다 한 개의 행을 포함합니다. 여기에는 고유 하 게 컴파일된, 스칼라 사용자 정의 함수 및 기타 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 모듈 간의 종속성 포함 됩니다. 두 엔터티 간의 종속성은 *참조 된 엔터티*라고 하는 한 엔터티가 *참조 엔터티*라고 하는 다른 엔터티의 지속형 SQL 식에서 이름별로 표시 될 때 생성 됩니다. 예를 들어 뷰 정의에서 테이블을 참조하면 참조 엔터티인 뷰는 참조된 엔터티인 테이블에 종속됩니다. 테이블이 삭제되면 뷰를 사용할 수 없습니다.  
   
  자세한 내용은 [메모리 내 OLTP에 대한 사용자 정의 스칼라 함수](../../relational-databases/in-memory-oltp/scalar-user-defined-functions-for-in-memory-oltp.md)를 참조하세요.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68073169"
   
 -   데이터베이스 간 및 서버 간 엔터티. 엔터티 이름이 보고되지만 엔터티 ID는 확인되지 않습니다.  
   
--   스키마 바운드 엔터티에 대한 열 수준 종속성. 비 스키마 바운드 개체에 대 한 열 수준 종속성을 사용 하 여 반환할 수 있습니다 [sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)합니다.  
+-   스키마 바운드 엔터티에 대한 열 수준 종속성. 비 스키마 바운드 개체에 대 한 열 수준 종속성은 [_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)를 사용 하 여 반환할 수 있습니다.  
   
 -   master 데이터베이스의 컨텍스트에서 서버 수준 DLL 트리거  
   
@@ -55,17 +55,20 @@ ms.locfileid: "68073169"
 |is_schema_bound_reference|**bit**|1 = 참조된 엔터티가 스키마 바운드입니다.<br /><br /> 0 = 참조된 엔터티가 비스키마 바운드입니다.<br /><br /> Null을 허용하지 않습니다.|  
 |referenced_class|**tinyint**|참조된 엔터티의 클래스입니다.<br /><br /> 1 = 개체 또는 열<br /><br /> 6 = 형식<br /><br /> 10 = XML 스키마 컬렉션<br /><br /> 21 = 파티션 함수<br /><br /> Null을 허용하지 않습니다.|  
 |referenced_class_desc|**nvarchar(60)**|참조된 엔터티의 클래스에 대한 설명입니다.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Null을 허용하지 않습니다.|  
-|referenced_server_name|**sysname**|참조된 엔터티의 서버 이름입니다.<br /><br /> 이 열은 네 부분으로 된 올바른 이름을 지정하여 생성되는 서버 간 종속성에 대해 채워집니다. 다중 부분 이름에 대 한 정보를 참조 하세요 [TRANSACT-SQL 구문 표기 규칙 &#40;TRANSACT-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)합니다.<br /><br /> 네 부분 이름을 지정하지 않고 엔터티가 참조되는 비스키마 바운드 엔터티의 경우 NULL입니다.<br /><br /> 동일한 데이터베이스에 있어야 하며 따라서만 정의 될 수는 두 부분으로 구성을 사용 하 여 스키마 바운드 엔터티에 대 한 NULL (*schema.object*) 이름입니다.|  
-|referenced_database_name|**sysname**|참조된 엔터티의 데이터베이스 이름입니다.<br /><br /> 이 열은 세 부분 또는 네 부분으로 된 올바른 이름을 지정하여 생성되는 데이터베이스 간 또는 서버 간 참조에 대해 채워집니다.<br /><br /> 한 부분 또는 두 부분으로 된 이름을 사용하여 지정된 비스키마 바운드 참조의 경우 NULL입니다.<br /><br /> 동일한 데이터베이스에 있어야 하며 따라서만 정의 될 수는 두 부분으로 구성을 사용 하 여 스키마 바운드 엔터티에 대 한 NULL (*schema.object*) 이름입니다.|  
+|referenced_server_name|**sysname**|참조된 엔터티의 서버 이름입니다.<br /><br /> 이 열은 네 부분으로 된 올바른 이름을 지정하여 생성되는 서버 간 종속성에 대해 채워집니다. 다중 부분 이름에 대 한 자세한 내용은 [Transact-sql 구문 표기 &#40;&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)방법을 참조 하세요.<br /><br /> 네 부분 이름을 지정하지 않고 엔터티가 참조되는 비스키마 바운드 엔터티의 경우 NULL입니다.<br /><br /> 스키마 바운드 엔터티의 경우 NULL은 동일한 데이터베이스에 있어야 하므로 두 부분으로 구성 된 (*schema. object*) 이름만 사용 하 여 정의할 수 있기 때문입니다.|  
+|referenced_database_name|**sysname**|참조된 엔터티의 데이터베이스 이름입니다.<br /><br /> 이 열은 세 부분 또는 네 부분으로 된 올바른 이름을 지정하여 생성되는 데이터베이스 간 또는 서버 간 참조에 대해 채워집니다.<br /><br /> 한 부분 또는 두 부분으로 된 이름을 사용하여 지정된 비스키마 바운드 참조의 경우 NULL입니다.<br /><br /> 스키마 바운드 엔터티의 경우 NULL은 동일한 데이터베이스에 있어야 하므로 두 부분으로 구성 된 (*schema. object*) 이름만 사용 하 여 정의할 수 있기 때문입니다.|  
 |referenced_schema_name|**sysname**|참조된 엔터티가 속한 스키마입니다.<br /><br /> 스키마 이름 지정 없이 엔터티가 참조되는 비스키마 바운드 참조의 경우 NULL입니다.<br /><br /> 스키마 바운드 엔터티는 두 부분 이름을 사용하여 정의 및 참조되어야 하므로 스키마 바운드 참조의 경우 NULL이 될 수 없습니다.|  
 |referenced_entity_name|**sysname**|참조된 엔터티의 이름입니다. Null을 허용하지 않습니다.|  
-|referenced_id|**int**|참조된 엔터티의 ID입니다. 이 열의 값은 스키마 바운드 참조에 대 한 NULL이 아닙니다. 이 열의 값은 항상 서버 간 및 데이터베이스 간 참조에 대해 NULL입니다.<br /><br /> 데이터베이스 내 참조의 경우 ID를 확인할 수 없으면 NULL입니다. 비스키마 바운드 참조는 다음과 같은 경우 ID를 확인할 수 없습니다.<br /><br /> 참조된 엔터티가 데이터베이스에 없는 경우<br /><br /> 호출자 스키마에 종속되는 참조된 엔터티의 스키마이며 런타임에 확인됩니다. 이 경우 is_caller_dependent는 1로 설정됩니다.|  
+|referenced_id|**int**|참조된 엔터티의 ID입니다. 스키마 바운드 참조의 경우이 열의 값은 NULL 일 수 없습니다. 서버 간 및 데이터베이스 간 참조의 경우이 열의 값은 항상 NULL입니다.<br /><br /> 데이터베이스 내 참조의 경우 ID를 확인할 수 없으면 NULL입니다. 비스키마 바운드 참조는 다음과 같은 경우 ID를 확인할 수 없습니다.<br /><br /> 참조된 엔터티가 데이터베이스에 없는 경우<br /><br /> 호출자 스키마에 종속되는 참조된 엔터티의 스키마이며 런타임에 확인됩니다. 이 경우 is_caller_dependent는 1로 설정됩니다.|  
 |referenced_minor_id|**int**|참조 엔터티가 열인 경우 참조된 열의 ID이며 그렇지 않은 경우 0입니다. Null을 허용하지 않습니다.<br /><br /> 열이 참조 엔터티에서 이름으로 식별되거나 부모 엔터티가 SELECT * 문에 사용된 경우 참조된 엔터티는 열입니다.|  
 |is_caller_dependent|**bit**|참조된 엔터티에 대한 스키마 바인딩이 런타임에 발생하므로 엔터티 ID 확인이 호출자의 스키마에 종속됨을 나타냅니다. 이는 참조된 엔터티가 저장 프로시저, 확장 저장 프로시저, 또는 EXECUTE 문에서 호출되는 비스키마 바운드 사용자 정의 함수인 경우에 발생합니다.<br /><br /> 1 = 참조된 엔터티가 호출자에 종속되고 런타임에 확인됩니다. 이 경우 referenced_id는 NULL입니다.<br /><br /> 0 = 참조된 엔터티 ID가 호출자에 종속되지 않습니다.<br /><br /> 스키마 이름을 명시적으로 지정하는 스키마 바운드 참조와 데이터베이스 간 및 서버 간 참조의 경우 항상 0입니다. 예를 들어 `EXEC MyDatabase.MySchema.MyProc` 형식의 엔터티에 대한 참조는 호출자에 종속되지 않습니다. 하지만 `EXEC MyDatabase..MyProc` 형식의 참조는 호출자에 종속됩니다.|  
-|is_ambiguous|**bit**|대 한 참조가 모호 하며 런타임에 사용자 정의 함수, 사용자 정의 형식 (UDT) 또는 형식의 열에 대 한 xquery 참조로 확인할 수 나타냅니다 **xml**합니다.<br /><br /> 예를 들어 `SELECT Sales.GetOrder() FROM Sales.MySales` 문이 저장 프로시저에 정의되어 있다고 가정해 보겠습니다. `Sales.GetOrder()`가 `Sales` 스키마의 사용자 정의 함수인지, 아니면 `Sales`라는 메서드가 있는 UDT 형식의 `GetOrder()` 열인지는 저장 프로시저가 실행될 때까지 알 수 없습니다.<br /><br /> 1 = 참조가 모호합니다.<br /><br /> 0 = 참조가 명확하거나 뷰를 호출할 때 엔터티를 바인딩할 수 있습니다.<br /><br /> 스키마 바운드 참조의 경우 항상 0입니다.|  
+|is_ambiguous|**bit**|참조가 모호 하며 런타임에 사용자 정의 함수, UDT (사용자 정의 형식) 또는 **xml**형식의 열에 대 한 xquery 참조로 확인 될 수 있음을 나타냅니다.<br /><br /> 예를 들어 `SELECT Sales.GetOrder() FROM Sales.MySales` 문이 저장 프로시저에 정의되어 있다고 가정해 보겠습니다. `Sales.GetOrder()`가 `Sales` 스키마의 사용자 정의 함수인지, 아니면 `Sales`라는 메서드가 있는 UDT 형식의 `GetOrder()` 열인지는 저장 프로시저가 실행될 때까지 알 수 없습니다.<br /><br /> 1 = 참조가 모호합니다.<br /><br /> 0 = 참조가 명확하거나 뷰를 호출할 때 엔터티를 바인딩할 수 있습니다.<br /><br /> 스키마 바운드 참조의 경우 항상 0입니다.|  
   
 ## <a name="remarks"></a>설명  
  다음 표에서는 종속성 정보가 생성 및 유지되는 엔터티 유형을 보여 줍니다. 종속성 정보는 규칙, 기본값, 임시 테이블, 임시 저장 프로시저 또는 시스템 개체에 대해서는 생성 및 유지되지 않습니다.  
+
+> [!NOTE]
+> Azure SQL data warehouse 및 병렬 데이터 웨어하우스는이 목록에서 테이블, 뷰, 필터링 된 통계 및 Transact-sql 저장 프로시저 엔터티 형식을 지원 합니다.  종속성 정보는 테이블, 뷰 및 필터링 된 통계에 대해서만 생성 및 유지 관리 됩니다.  
   
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
@@ -88,7 +91,7 @@ ms.locfileid: "68073169"
 |XML 스키마 컬렉션|아니요|예|  
 |파티션 함수|아니요|예|  
   
- \* 테이블을 참조 하는 경우에 참조 엔터티로 추적을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 모듈, 사용자 정의 형식 또는 계산된 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의에서 XML 스키마 컬렉션입니다.  
+ \*테이블은 계산 열, CHECK 제약 조건 또는 DEFAULT 제약 조건 정의 [!INCLUDE[tsql](../../includes/tsql-md.md)] 에서 모듈, 사용자 정의 형식 또는 XML 스키마 컬렉션을 참조 하는 경우에만 참조 엔터티로 추적 됩니다.  
   
  ** 필터 조건자에 사용된 각 열은 참조 엔터티로 추적됩니다.  
   

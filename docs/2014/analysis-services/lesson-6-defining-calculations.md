@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d8312019c5deeebb93185609433ae7e4925e3da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078387"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888042"
 ---
 # <a name="lesson-6-defining-calculations"></a>6단원: 계산 정의
   이 단원에서는 MDX(Multidimensional Expressions) 식 또는 스크립트에 해당하는 계산을 정의하는 방법을 배웁니다. 계산을 사용하면 계산 멤버와 명명된 집합을 정의하고 기타 스크립트 명령을 실행하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브의 기능을 확장할 수 있습니다. 예를 들어 스크립트 명령을 실행하여 하위 큐브를 정의한 다음 하위 큐브의 셀에 계산을 할당할 수 있습니다.  
@@ -45,18 +45,18 @@ ms.locfileid: "66078387"
   
  이 단원에서는 다음 태스크를 다룹니다.  
   
- [계산 멤버 정의](../analysis-services/lesson-6-1-defining-calculated-members.md)  
+ [계산 멤버 정의](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
  이 태스크에서는 계산 멤버의 정의 방법을 배웁니다.  
   
- [명명된 집합 정의](../analysis-services/lesson-6-2-defining-named-sets.md)  
+ [명명된 집합 정의](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
  이 태스크에서는 명명된 집합의 정의 방법을 배웁니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [7단원: 핵심 성과 지표를 정의 합니다. &#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [7단원: 핵심 성과 지표 &#40;kpi 정의&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services Tutorial 시나리오](../analysis-services/analysis-services-tutorial-scenario.md)   
- [다차원 모델링 &#40;Adventure Works 자습서&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
+ [Analysis Services 자습서 시나리오](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [다차원 모델링 &#40;놀이 Works 자습서&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
  [명명 된 집합 만들기](multidimensional-models/create-named-sets.md)   
  [계산 멤버 만들기](multidimensional-models/create-calculated-members.md)  
   

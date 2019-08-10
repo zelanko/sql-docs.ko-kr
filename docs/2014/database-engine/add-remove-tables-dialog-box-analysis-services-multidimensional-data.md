@@ -1,5 +1,5 @@
 ---
-title: 테이블 대화 상자 (Analysis Services-다차원 데이터)를 추가 / 제거 | Microsoft Docs
+title: 테이블 추가/제거 대화 상자 (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8ea017c7b463a0287e6b6f4437549db667bd251
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065237"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889219"
 ---
-# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>테이블 대화 상자 (Analysis Services-다차원 데이터)를 추가 / 제거 합니다.
+# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>테이블 추가/제거 대화 상자 (Analysis Services 다차원 데이터)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 **테이블 추가/제거** 대화 상자를 사용하여 데이터 원본의 테이블을 데이터 원본 뷰에서 추가 또는 제거할 수 있습니다. 다음을 수행하여 **테이블 추가/제거** 대화 상자를 표시할 수 있습니다.  
   
 -   **데이터 원본 뷰 디자이너**의 **도구 모음** 창에서 **개체 추가/제거**를 클릭합니다.  
@@ -48,11 +48,11 @@ ms.locfileid: "66065237"
   
  **포함된 개체**에 나열된 모든 개체를 **사용 가능한 개체**로 전송하려면 **<<** 을 클릭하고, 선택한 개체를 **사용 가능한 개체**로 전송하려면 하나 이상의 개체를 선택하고 **<** 을 클릭합니다.  
   
- **관련된 테이블 추가**  
+ **관련 테이블 추가**  
  **포함된 개체**에서 선택한 테이블과 관련된 모든 테이블을 추가하려면 클릭합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services Designers and Dialog Boxes &#40;다차원 데이터&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Analysis Services 디자이너 및 대화 상자 &#40;다차원 데이터&#41;](https://docs.microsoft.com/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data)   
+ [데이터 원본 뷰 디자이너&#40;Analysis Services - 다차원 데이터&#41;](https://docs.microsoft.com/analysis-services/data-source-view-designer-analysis-services-multidimensional-data)  
   
   

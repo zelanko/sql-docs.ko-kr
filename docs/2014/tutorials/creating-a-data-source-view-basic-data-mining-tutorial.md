@@ -1,5 +1,5 @@
 ---
-title: 만들기는 데이터 원본 뷰를 (기본 데이터 마이닝 자습서) | Microsoft Docs
+title: 데이터 원본 뷰 만들기 (기본 데이터 마이닝 자습서) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.assetid: c1e68a88-0f82-415d-becc-78d180d4f845
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: b11844e6b184099a9c6146d290a0dc081429f5d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac7730e8437eaed304ed69c40e45fc93ee9b5531
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273394"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888644"
 ---
 # <a name="creating-a-data-source-view-basic-data-mining-tutorial"></a>데이터 원본 뷰 만들기(기본 데이터 마이닝 자습서)
-  데이터 원본 뷰는 데이터 원본을 기반으로 하고, 마이닝 구조에 사용할 수 있는 데이터 하위 집합을 정의합니다. 데이터 원본 뷰를 사용하여 열을 추가하고 계산 열 및 집계를 만들고 명명된 뷰를 추가할 수도 있습니다. 데이터 원본 뷰를 사용하면 원래 데이터 원본을 수정하지 않고도 프로젝트와 관련된 테이블을 선택하고 테이블 간의 관계를 설정하며 데이터 구조를 수정할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)를 참조하세요.  
+  데이터 원본 뷰는 데이터 원본을 기반으로 하고, 마이닝 구조에 사용할 수 있는 데이터 하위 집합을 정의합니다. 데이터 원본 뷰를 사용하여 열을 추가하고 계산 열 및 집계를 만들고 명명된 뷰를 추가할 수도 있습니다. 데이터 원본 뷰를 사용하면 원래 데이터 원본을 수정하지 않고도 프로젝트와 관련된 테이블을 선택하고 테이블 간의 관계를 설정하며 데이터 구조를 수정할 수 있습니다. 자세한 내용은 [다차원 모델의 데이터 원본 뷰](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)를 참조하세요.  
   
 ### <a name="to-create-a-data-source-view"></a>데이터 원본 뷰를 만들려면  
   
@@ -39,17 +39,17 @@ ms.locfileid: "63273394"
   
 5.  **다음**을 클릭합니다.  
   
-6.  **마법사 완료** 페이지에서는 기본적으로 데이터 원본 뷰의 이름이 Adventure Works DW 2012로 지정되어 있습니다. 이름을 `Targeted Mailing`를 클릭 하 고 **완료**합니다.  
+6.  **마법사 완료** 페이지에서는 기본적으로 데이터 원본 뷰의 이름이 Adventure Works DW 2012로 지정되어 있습니다. 이름을로 `Targeted Mailing`변경 하 고 **마침**을 클릭 합니다.  
   
      **Targeted Mailing.dsv [디자인]** 탭에 새 데이터 원본 뷰가 열립니다.  
   
 ## <a name="previous-task-in-lesson"></a>단원의 이전 태스크  
- [데이터 원본 만들기 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [데이터 원본 &#40;기본 데이터 마이닝 자습서 만들기&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>다음 단원  
- [2단원: 타겟된 메일링 구조 구축 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [2단원: 타겟 메일링 구조 &#40;빌드 기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 원본 뷰 정의&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
+ [데이터 원본 뷰 정의&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services)  
   
   

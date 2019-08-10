@@ -1,5 +1,5 @@
 ---
-title: 정의 및 큐브 뷰 찾아보기 | Microsoft Docs
+title: 큐브 뷰 정의 및 찾아보기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c449e323c87f55d1cbc334d41916a26863cfccd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d7f0f0964c2602ef4203c0f14ee71af73f65d46
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078214"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888063"
 ---
 # <a name="defining-and-browsing-perspectives"></a>큐브 뷰 정의 및 찾아보기
   큐브 뷰는 특정 목적을 위해 큐브의 보기를 단순화할 수 있습니다. 기본적으로 사용자들은 사용 권한이 있는 큐브의 모든 요소를 볼 수 있습니다. 사용자가 전체 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브를 볼 때 표시되는 내용은 큐브의 기본 큐브 뷰입니다. 전체 큐브의 보기는 너무 복잡해서 사용자가 탐색하기 어려울 수 있으며, 비즈니스 인텔리전스 및 보고 요구 사항을 만족시키기 위해 큐브의 일부만 사용하면 되는 사용자에게는 더욱 그렇습니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "66078214"
   
      ![큐브 뷰 이름 열의 새 큐브 뷰](../../2014/tutorials/media/l9-perspectives-2.gif "큐브 뷰 이름 열의 새 큐브 뷰")  
   
-3.  큐브 뷰 이름을 `Internet Sales`입니다.  
+3.  큐브 뷰 이름을로 `Internet Sales`변경 합니다.  
   
 4.  다음 행에서 DefaultMeasure를 **Internet Sales-Sales Amount**로 설정합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66078214"
   
 5.  다음 개체에 대한 확인란의 선택을 취소합니다.  
   
-    -   `Reseller Sales` 측정값 그룹  
+    -   `Reseller Sales`측정값 그룹  
   
     -   **Sales Quotas** 측정값 그룹  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66078214"
   
 1.  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
   
-2.  에 새 큐브 뷰의 이름을 변경할 `Reseller Sales`합니다.  
+2.  새 큐브 뷰의 이름을로 `Reseller Sales`변경 합니다.  
   
 3.  **Reseller Sales-Sales Amount** 를 기본 측정값으로 설정합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66078214"
   
 4.  다음 개체에 대한 확인란의 선택을 취소합니다.  
   
-    -   `Internet Sales` 측정값 그룹  
+    -   `Internet Sales`측정값 그룹  
   
     -   **Internet Sales Reason** 측정값 그룹  
   
@@ -131,16 +131,16 @@ ms.locfileid: "66078214"
   
 1.  **큐브 뷰** 탭의 도구 모음에서 **새 큐브 뷰** 단추를 클릭합니다.  
   
-2.  에 새 큐브 뷰의 이름을 변경할 `Sales Summary`합니다.  
+2.  새 큐브 뷰의 이름을로 `Sales Summary`변경 합니다.  
   
     > [!NOTE]  
     >  계산 측정값은 기본 측정값으로 지정할 수 없습니다.  
   
 3.  다음 개체에 대한 확인란의 선택을 취소합니다.  
   
-    -   `Internet Sales` 측정값 그룹  
+    -   `Internet Sales`측정값 그룹  
   
-    -   `Reseller Sales` 측정값 그룹  
+    -   `Reseller Sales`측정값 그룹  
   
     -   **Internet Sales Reason** 측정값 그룹  
   
@@ -170,28 +170,28 @@ ms.locfileid: "66078214"
   
 4.  다음 그림에 표시된 것처럼 Excel에서 분석에서 Excel에서 모델을 검색할 때 사용할 큐브 뷰를 선택하라는 메시지를 표시합니다.  
   
-     ![Internet Sales 큐브 뷰에 대 한 개체](../../2014/tutorials/media/l9-perspectives-3.gif "Internet Sales 큐브 뷰 개체")  
+     ![Internet Sales 큐브 뷰에 대 한 개체](../../2014/tutorials/media/l9-perspectives-3.gif "Internet Sales 큐브 뷰에 대 한 개체")  
   
 5.  또는 다음 그림에 표시된 것처럼 Windows 시작 메뉴에서 Excel을 시작하고 localhost의 Analysis Services 자습서 데이터베이스에 대한 연결을 정의하고 데이터 연결 마법사에서 큐브 뷰를 선택합니다.  
   
-     ![Excel에서 데이터 연결 마법사](../../2014/tutorials/media/l9-perspectives-3b.gif "Excel에서 데이터 연결 마법사")  
+     ![Excel의 데이터 연결 마법사](../../2014/tutorials/media/l9-perspectives-3b.gif "Excel의 데이터 연결 마법사")  
   
-6.  선택 `Internet Sales` 에 **관점** 목록 및 측정값과 차원을 메타 데이터 창에서 검토 합니다.  
+6.  `Internet Sales` **큐브 뷰** 목록에서를 선택한 다음 메타 데이터 창에서 측정값과 차원을 검토 합니다.  
   
      Internet Sales 큐브 뷰에 대해 지정된 개체만 나타납니다.  
   
 7.  메타데이터 창에서 **Measures**를 확장합니다.  
   
-     멤버만 합니다 `Internet Sales` 측정값 그룹만 표시 됩니다, 함께 사용 하 여는 **Internet GPM** 하 고 **Internet Sales Ratio to All Products** 계산 멤버입니다.  
+     측정값 그룹만 **internet gpm** 및 **internet Sales Ratio to All Products** 계산 멤버와 함께 표시 됩니다. `Internet Sales`  
   
 8.  모델에서 Excel을 다시 선택합니다. `Sales Summary`을(를) 선택합니다.  
   
      다음 그림에 표시된 것처럼 이러한 각 측정값 그룹에서 단일 측정값만 나타납니다.  
   
-     ![Internet Sales 및 Reseller Sales 측정값](../../2014/tutorials/media/l9-perspectives-4.gif "Internet Sales 및 Reseller Sales 측정값")  
+     ![Internet sales 및 대리점 판매 측정값](../../2014/tutorials/media/l9-perspectives-4.gif "Internet sales 및 대리점 판매 측정값")  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [번역 정의 및 찾아보기](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
+ [번역 정의 및 찾아보기](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
   
 ## <a name="see-also"></a>관련 항목  
  [큐브 뷰](multidimensional-models-olap-logical-cube-objects/perspectives.md)   

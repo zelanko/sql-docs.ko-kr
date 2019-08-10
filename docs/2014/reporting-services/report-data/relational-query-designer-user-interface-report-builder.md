@@ -16,15 +16,15 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a8be3c24a5d13c1a1b3733ab7cbf755c732a612
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c273e453d4eec6d754f38d6be03385957ad50fec
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107135"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890945"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>관계형 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
-  보고서 작성기에서 검색할 데이터를 지정 하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하 고 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 관계형 데이터베이스 및 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 보고서 데이터 집합에 대 한 합니다. 그래픽 쿼리 디자이너를 사용하면 메타데이터를 탐색하고,  쿼리를 대화형으로 작성하고,  쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
+  보고서 작성기 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 는 및 관계형[!INCLUDE[msCoName](../../../includes/msconame-md.md)]데이터베이스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서검색할데이터 를지정하는쿼리를만들수있도록그래픽쿼리디자이너와텍스트기반쿼리디자이너를모두제공합니다.[!INCLUDE[ssSDS](../../includes/sssds-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)] 보고서 데이터 집합의 경우 그래픽 쿼리 디자이너를 사용하면 메타데이터를 탐색하고,  쿼리를 대화형으로 작성하고,  쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
   
 > [!NOTE]  
 >  보고서 작성기에서 Oracle, OLE DB, ODBC, Teradata 등의 데이터 원본 유형에 대한 쿼리를 지정하려면 텍스트 기반 쿼리 디자이너를 사용해야 합니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스&#40;보고서 작성기&#41;](text-based-query-designer-user-interface-report-builder.md)를 참조하세요.  
@@ -42,11 +42,11 @@ ms.locfileid: "66107135"
   
  다음 그림에서는 테이블 또는 뷰와 함께 사용할 때의 그래픽 쿼리 디자이너를 보여 줍니다.  
   
- ![쿼리용 그래픽 디자이너](../../analysis-services/media/rsqd-relational-graphical.gif "쿼리용 그래픽 디자이너")  
+ ![쿼리용 그래픽 디자이너](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "쿼리용 그래픽 디자이너")  
   
  다음 그림에서는 저장 프로시저 또는 테이블 반환 함수와 함께 사용할 때의 그래픽 쿼리 디자이너를 보여 줍니다.  
   
- ![그래픽 쿼리 디자이너의 저장 프로시저](../../analysis-services/media/rs-relational-graphical-sp.gif "그래픽 쿼리 디자이너의 저장 프로시저")  
+ ![그래픽 쿼리 디자이너의 저장 프로시저](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "그래픽 쿼리 디자이너의 저장 프로시저")  
   
  다음 표에서는 각 창의 기능을 설명합니다.  
   

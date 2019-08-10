@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b3e6cd4a38d45f2b63fa5333526832ba31e1ce9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097195"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893535"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>큐브 및 하위 큐브 식 사용
 
@@ -23,7 +23,7 @@ ms.locfileid: "68097195"
 ## <a name="cube-expressions"></a>큐브 식  
  큐브 식은 큐브 식별자 또는 CURRENTCUBE 키워드를 포함하므로 간단한 식이어야 합니다. 많은 MDX 문에서 현재의 큐브 컨텍스트를 식별하기 위해 큐브 식별자를 요청하는 대신 CURRENTCUBE 키워드를 사용합니다.  
   
- 큐브 식별자가 요소로 *Cube_Name* MDX 문의 BNF 표기법 설명 합니다.  
+ 큐브 식별자는 MDX 문의 BNF notation 설명에 *Cube_Name* 로 표시 됩니다.  
   
  큐브 식은 여러 위치에 나타날 수 있습니다. MDX SELECT 문에서 데이터를 검색할 큐브를 지정합니다. 다음 예제 쿼리에서 [Adventure Works] 식은 해당 이름의 큐브를 참조합니다.  
   
@@ -66,12 +66,12 @@ ms.locfileid: "68097195"
   
  `END SCOPE;`  
   
- 하위 큐브 식별자 *Subcube_Name*합니다. 나타납니다.  
+ 하위 큐브 식별자는 *Subcube_Name*로 표시 됩니다. 나타납니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [기본 MDX 쿼리&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [MDX로 하위 큐브를 구축 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
- [CREATE SUBCUBE 문 &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
+ [기본 MDX 쿼리&#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [MDX &#40;mdx로 하위 큐브 작성&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [CREATE 하위 큐브 &#40;문 MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
  [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)   
  [SCOPE 문&#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   

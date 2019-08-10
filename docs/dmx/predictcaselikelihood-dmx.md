@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 12eddedce5d00c1bbc9e71995c2c9ceab34386d6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0302af7f2241f3e158e8fa95691544c6fdf2dfac
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074720"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893923"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,13 +35,13 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
  사례 특성의 확률을 곱한 값인 사례의 원시 확률이 반환됩니다.  
   
 ## <a name="applies-to"></a>적용 대상  
- 사용 하 여 작성 된 모델에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘입니다.  
+ [!INCLUDE[msCoName](../includes/msconame-md.md)] 클러스터링 및[!INCLUDE[msCoName](../includes/msconame-md.md)] 시퀀스 클러스터링 알고리즘을 사용 하 여 작성 된 모델입니다.  
   
 ## <a name="return-type"></a>반환 형식  
  0에서 1 사이의 배정밀도 부동 소수점 숫자입니다. 1에 가까울수록 이 모델에 사례가 나타날 확률이 높음을 나타내고 0에 가까울수록 이 모델에 사례가 나타날 가능성이 낮음을 나타냅니다.  
   
 ## <a name="remarks"></a>설명  
- 기본적으로 결과 **PredictCaseLikelihood** 함수 정규화 됩니다. 일반적으로 정규화된 값은 사례 증가에 있는 특성 수와 두 사례의 원시 확률 간 차이가 작을수록 더 유용합니다.  
+ 기본적으로 **PredictCaseLikelihood** 함수의 결과는 정규화 됩니다. 일반적으로 정규화된 값은 사례 증가에 있는 특성 수와 두 사례의 원시 확률 간 차이가 작을수록 더 유용합니다.  
   
  다음 수식은 x와 y가 제공될 경우 정규화된 값을 계산하는 데 사용됩니다.  
   
@@ -51,7 +51,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
   
 -   Z = Exp( log(x) - Log(Y))  
   
- 정규화 = (z / (1 + z))  
+ 정규화 된 = (z/(1 + z))  
   
 ## <a name="examples"></a>예  
  다음 예에서는 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 데이터베이스를 기반으로 하는 클러스터링 모델에 지정한 사례가 나타날 가능성을 반환합니다.  
@@ -77,11 +77,11 @@ NATURAL PREDICTION JOIN
 |-------------------------|----------------------------|---------------------|  
 |6.30672792729321E-08|6.30672792729321E-08|9.5824454056846E-48|  
   
- 이러한 결과 간의 차이는 정규화의 효과를 보여 줍니다. 원시 값입니다 **CaseLikelihood** 제안 사례의 확률이 20%는; 그러나 결과 정규화 하는 경우이 드러납니다 사례의 가능성이 매우 낮습니다.  
+ 이러한 결과 간의 차이는 정규화의 효과를 보여 줍니다. **CaseLikelihood** 에 대 한 원시 값은 사례의 확률이 약 20% 임을 나타냅니다. 그러나 결과를 정규화 하면 사례의 가능성이 매우 낮을 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

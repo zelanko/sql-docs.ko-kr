@@ -5,16 +5,16 @@ description: PySpark를 사용 하 여 SQL Server 빅 데이터 클러스터 (�
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9e139e76e5f5f756b57a9366cc896716cda58959
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 91c9dad3c87b9c43a611293a549f782b85beec5c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811213"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893962"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에서 Spark 기계 학습 모델 만들기, 내보내기 및 점수 매기기
 
@@ -41,7 +41,7 @@ ms.locfileid: "68811213"
 
 이 샘플에서는 인구 조사 data (**AdultCensusIncome**)를 사용 하 여 Spark ML 파이프라인 모델을 만듭니다.
 
-1. [Mleap_sql_test/setup.exe](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/setup.sh) 파일을 사용 하 여 인터넷에서 데이터 집합을 다운로드 하 고 SQL Server 빅 데이터 클러스터의 HDFS에 배치 합니다. 이렇게 하면 Spark에서 액세스할 수 있습니다.
+1. [Mleap_sql_test/setup.exe](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/setup.sh) 파일을 사용 하 여 인터넷에서 데이터 집합을 다운로드 하 고 SQL Server 빅 데이터 클러스터의 HDFS에 배치 합니다. 이렇게 하면 Spark에서 액세스할 수 있습니다.
 
 1. 그런 다음 샘플 노트북 train_score_export_ml_models_with_spark를 다운로드 합니다 [.](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb) PowerShell 또는 bash 명령줄에서 다음 명령을 실행 하 여 노트북을 다운로드 합니다.
 
@@ -56,15 +56,15 @@ ms.locfileid: "68811213"
 먼저 데이터를 Spark로 읽어서 학습 및 테스트 데이터 집합으로 분할 합니다. 그런 다음 코드는 학습 데이터를 사용 하 여 파이프라인 모델을 학습 합니다. 마지막으로, 모델을 MLeap 번들로 내보냅니다.
 
 > [!TIP]
-> [Mleap_sql_test/mleap_pyspark py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_pyspark.py) 파일의 노트북 외부에서 이러한 단계와 연결 된 Python 코드를 검토 하거나 실행할 수도 있습니다.
+> [Mleap_sql_test/mleap_pyspark py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_pyspark.py) 파일의 노트북 외부에서 이러한 단계와 연결 된 Python 코드를 검토 하거나 실행할 수도 있습니다.
 
 ## <a name="model-scoring-with-sql-server"></a>SQL Server를 사용 하 여 모델 점수 매기기
 
 이제 Spark ML 파이프라인 모델이 일반적인 직렬화 [Mleap 번들](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html) 형식 이므로 spark가 없어도 Java에서 모델의 점수를 매길 수 있습니다. 
 
-이 샘플에서는 SQL Server의 [Java 언어 확장](../language-extensions/language-extensions-overview.md) 을 사용 합니다. SQL Server에서 모델의 점수를 매기는 먼저 모델을 Java로 로드 하 고 점수를 매길 수 있는 Java 응용 프로그램을 만들어야 합니다. 이 Java 응용 프로그램에 대 한 샘플 코드는 [mssql-mleap-앱 폴더](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app)에서 찾을 수 있습니다.
+이 샘플에서는 SQL Server의 [Java 언어 확장](../language-extensions/language-extensions-overview.md) 을 사용 합니다. SQL Server에서 모델의 점수를 매기는 먼저 모델을 Java로 로드 하 고 점수를 매길 수 있는 Java 응용 프로그램을 만들어야 합니다. 이 Java 응용 프로그램에 대 한 샘플 코드는 [mssql-mleap-앱 폴더](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mssql-mleap-app)에서 찾을 수 있습니다.
 
-예제를 빌드한 후에는 Transact-sql을 사용 하 여 Java 응용 프로그램을 호출 하 고 데이터베이스 테이블을 사용 하 여 모델의 점수를 매길 수 있습니다. 이는 [mleap_sql_test/mleap_sql_tests py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py) 원본 파일에서 볼 수 있습니다.
+예제를 빌드한 후에는 Transact-sql을 사용 하 여 Java 응용 프로그램을 호출 하 고 데이터베이스 테이블을 사용 하 여 모델의 점수를 매길 수 있습니다. 이는 [mleap_sql_test/mleap_sql_tests py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/mleap_sql_test/mleap_sql_tests.py) 원본 파일에서 볼 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

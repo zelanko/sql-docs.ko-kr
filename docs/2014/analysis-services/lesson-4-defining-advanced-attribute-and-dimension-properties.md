@@ -10,12 +10,12 @@ ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a8b81a5d2e8bfe57c1ae8d8464b5af9140dd9dbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1da73bb522aa3fbf825841e637f01b0c455f09c2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078637"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888253"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>4단원: 고급 특성 및 차원 속성 정의
   이 단원에서는 특성의 일부 고급 속성, 특성 계층 및 차원 속성을 사용하는 방법에 대해 설명합니다.  
@@ -29,12 +29,12 @@ ms.locfileid: "66078637"
  이 태스크에서는 여러 측정값 그룹과 추가 차원이 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 프로젝트의 수정된 버전을 열어서 검토하고 배포합니다.  
   
  [부모-자식 계층의 부모 특성 속성 정의](lesson-4-2-defining-parent-attribute-properties-in-a-parent-child-hierarchy.md)  
- 이 태스크에서는 부모-자식 차원의 수준 이름을 정의하고 부모 멤버에 관련된 데이터의 표시 여부를 지정합니다. 자세한 내용은 [부모-자식 계층 구조](multidimensional-models/parent-child-dimension.md) 하 고 [부모-자식 계층의 특성](multidimensional-models/parent-child-dimension-attributes.md)합니다.  
+ 이 태스크에서는 부모-자식 차원의 수준 이름을 정의하고 부모 멤버에 관련된 데이터의 표시 여부를 지정합니다. 자세한 내용은 부모-자식 [계층](multidimensional-models/parent-child-dimension.md) 및 부모 [-자식 계층의 특성](multidimensional-models/parent-child-dimension-attributes.md)을 참조 하세요.  
   
  [자동으로 특성 멤버 그룹화](lesson-4-3-automatically-grouping-attribute-members.md)  
  이 태스크에서는 특성 계층 내에서 멤버의 분포에 따라 특성 멤버 그룹을 자동으로 만듭니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)를 참조하세요.  
   
- [특성 계층 숨기기 및 비활성화](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+ [특성 계층 숨기기 및 비활성화](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
  이 태스크에서는 특성 계층을 해제하거나 숨기는 방법과 시기에 대해 알아봅니다.  
   
  [보조 특성을 기준으로 특성 멤버 정렬](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
@@ -47,11 +47,11 @@ ms.locfileid: "66078637"
  이 태스크에서는 UnknownMember 및 UnknownMemberName 속성을 구성하여 Null 차원 멤버가 발생시킨 오류 조건을 처리합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [5단원: 차원과 측정값 그룹 간의 관계를 정의합니다.](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [5단원: 차원과 측정값 그룹 간의 관계 정의](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services Tutorial 시나리오](analysis-services-tutorial-scenario.md)   
- [다차원 모델링 &#40;Adventure Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
+ [Analysis Services 자습서 시나리오](analysis-services-tutorial-scenario.md)   
+ [다차원 모델링 &#40;놀이 Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [다차원 모델의 차원](multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

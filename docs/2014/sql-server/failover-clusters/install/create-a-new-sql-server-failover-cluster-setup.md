@@ -17,12 +17,12 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 696d8becd23f7a7136011a5e1c61eb9669c58e12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03e62c5ca77a05ee8f8b1bbca13a57a71b37e2a5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740609"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893711"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치)
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 설치하거나 업그레이드하려면 장애 조치 클러스터의 각 노드에서 설치 프로그램을 실행해야 합니다. 기존의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 노드를 추가하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스에 추가할 노드에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램을 실행해야 합니다. 다른 노드를 관리하려고 액티브 노드에서 설치 프로그램을 실행하지 않도록 주의해야 합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "62740609"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 설치에 사용할 수 있는 옵션은 다음과 같습니다.  
   
- **옵션 1: 통합 설치-노드 추가**  
+ **옵션 1: 통합 설치 - 노드 추가**  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 통합 장애 조치(Failover) 클러스터 설치는 다음 단계로 구성됩니다.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62740609"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 고급/엔터프라이즈 장애 조치(Failover) 클러스터 설치는 다음 단계로 구성됩니다.  
   
--   새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터의 소유자가 될 수 있는 각 노드에서 [준비](#prepare)섹션에 나와 있는 설명에 따라 장애 조치(Failover) 클러스터 설치 준비 단계를 실행합니다. 한 노드에서 장애 조치(Failover) 클러스터 준비를 실행하고 나면 지정된 모든 설정의 목록을 포함하는 Configuration.ini 파일이 설치 프로그램을 통해 만들어집니다. 설치를 준비해야 할 다른 노드에서 같은 단계를 반복하는 대신 첫 노드에서 자동으로 생성된 Configuration.ini 파일을 설치 명령줄에 입력 매개 변수로 사용할 수 있습니다. 자세한 내용은 [SQL Server 2014 사용 하 여 설치 구성 파일](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)합니다. 이 단계는 노드를 클러스터링할 수 있도록 준비하지만 이 시점에서는 작동하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 없습니다.  
+-   새 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터의 소유자가 될 수 있는 각 노드에서 [준비](#prepare)섹션에 나와 있는 설명에 따라 장애 조치(Failover) 클러스터 설치 준비 단계를 실행합니다. 한 노드에서 장애 조치(Failover) 클러스터 준비를 실행하고 나면 지정된 모든 설정의 목록을 포함하는 Configuration.ini 파일이 설치 프로그램을 통해 만들어집니다. 설치를 준비해야 할 다른 노드에서 같은 단계를 반복하는 대신 첫 노드에서 자동으로 생성된 Configuration.ini 파일을 설치 명령줄에 입력 매개 변수로 사용할 수 있습니다. 자세한 내용은 [구성 파일을 사용 하 여 SQL Server 2014 설치](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)를 참조 하세요. 이 단계는 노드를 클러스터링할 수 있도록 준비하지만 이 시점에서는 작동하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 없습니다.  
   
 -   노드를 클러스터링할 수 있도록 준비했으면 준비된 노드 중 하나에서 설치 프로그램을 실행합니다. 이 단계에서는 장애 조치(Failover) 클러스터 인스턴스를 구성하고 마칩니다. 이 단계를 마치고 나면 작동 가능한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터 인스턴스가 준비되고 해당 인스턴스에 대해 앞서 준비했던 모든 노드에서 새로 작성된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터를 소유할 수 있습니다.  
   
@@ -96,11 +96,11 @@ ms.locfileid: "62740609"
   
 6.  시스템 구성 검사기가 설치를 계속하기 전에 컴퓨터의 시스템 상태를 확인합니다. 검사가 완료되면 **다음** 을 클릭하여 작업을 계속 진행합니다. **자세한 정보 표시**를 클릭하여 화면에 세부 정보를 표시하거나 **자세한 보고서 보기**를 클릭하여 HTML 보고서 형식으로 볼 수 있습니다.  
   
-7.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]무료 버전을 설치할지, 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지 표시합니다. 자세한 내용은 [버전 및 SQL Server 2014 구성 요소](../../editions-and-components-of-sql-server-2016.md)합니다.  
+7.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]무료 버전을 설치할지, 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지 표시합니다. 자세한 내용은 [SQL Server 2014의 버전 및 구성 요소](../../editions-and-components-of-sql-server-2016.md)를 참조 하세요.  
   
 8.  사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. 계속하려면 **다음** 을 클릭합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
   
-9. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 원하는 대로 선택할 수 있지만 장애 조치(Failover) 클러스터링을 지원하는 것은 테이블 형식 모드의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 다차원 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 뿐입니다. 선택한 다른 구성 요소는 설치를 실행하고 있는 현재 노드에서 장애 조치(Failover) 기능 없이 독립 실행형 기능으로 실행됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
+9. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 원하는 대로 선택할 수 있지만 장애 조치(Failover) 클러스터링을 지원하는 것은 테이블 형식 모드의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 다차원 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 뿐입니다. 선택한 다른 구성 요소는 설치를 실행하고 있는 현재 노드에서 장애 조치(Failover) 기능 없이 독립 실행형 기능으로 실행됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)을 참조하세요.  
   
      선택한 기능의 필수 구성 요소가 오른쪽 창에 표시됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이미 설치되어 있지 않은 필수 구성 요소가 있는 경우 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다.  
   
@@ -228,7 +228,7 @@ ms.locfileid: "62740609"
 30. 방금 만든 단일 노드 장애 조치(Failover)에 노드를 추가하려면 추가할 각 노드에서 설치를 실행하고 AddNode 작업 단계를 따릅니다. 자세한 내용은 [SQL Server 장애 조치(failover) 클러스터에서 노드 추가 또는 제거&#40;설치 프로그램&#41;](add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md)을 참조하세요.  
   
     > [!NOTE]  
-    >  노드를 여러 개 추가하는 경우 구성 파일을 사용하여 설치를 배포할 수 있습니다. 자세한 내용은 [SQL Server 2014 사용 하 여 설치 구성 파일](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)합니다.  
+    >  노드를 여러 개 추가하는 경우 구성 파일을 사용하여 설치를 배포할 수 있습니다. 자세한 내용은 [구성 파일을 사용 하 여 SQL Server 2014 설치](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)를 참조 하세요.  
     >   
     >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터의 모든 노드에서 설치하는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 버전이 동일해야 합니다. 기존 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 장애 조치(Failover) 클러스터에 새 노드를 추가할 때는 기존의 장애 조치(Failover) 클러스터 버전에 일치하는 버전을 지정해야 합니다.  
   
@@ -252,14 +252,14 @@ ms.locfileid: "62740609"
   
      계속하려면 **다음**을 클릭합니다.  
   
-8.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]무료 버전을 설치할지 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지 표시합니다. 자세한 내용은 [버전 및 SQL Server 2014 구성 요소](../../editions-and-components-of-sql-server-2016.md)합니다.  
+8.  제품 키 페이지에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]무료 버전을 설치할지 아니면 제품의 프로덕션 버전에 대한 PID 키가 있는지 표시합니다. 자세한 내용은 [SQL Server 2014의 버전 및 구성 요소](../../editions-and-components-of-sql-server-2016.md)를 참조 하세요.  
   
     > [!NOTE]  
     >  동일한 장애 조치(Failover) 클러스터를 위해 준비하고 있는 모든 노드에서 동일한 제품 키를 지정해야 합니다.  
   
 9. 사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. 계속하려면 **다음** 을 클릭합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
   
-10. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 원하는 대로 선택할 수 있지만 장애 조치(Failover) 클러스터링을 지원하는 것은 테이블 형식 모드의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 다차원 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 뿐입니다. 선택한 다른 구성 요소는 설치를 실행하고 있는 현재 노드에서 장애 조치(Failover) 기능 없이 독립 실행형 기능으로 실행됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
+10. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 원하는 대로 선택할 수 있지만 장애 조치(Failover) 클러스터링을 지원하는 것은 테이블 형식 모드의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 다차원 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 뿐입니다. 선택한 다른 구성 요소는 설치를 실행하고 있는 현재 노드에서 장애 조치(Failover) 기능 없이 독립 실행형 기능으로 실행됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)을 참조하세요.  
   
      선택한 기능의 필수 구성 요소가 오른쪽 창에 표시됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이미 설치되어 있지 않은 필수 구성 요소가 있는 경우 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다.  
   
@@ -324,7 +324,7 @@ ms.locfileid: "62740609"
   
 23. 컴퓨터를 다시 시작합니다. 설치가 끝나면 설치 마법사에 표시되는 메시지를 읽어야 합니다. 설치 로그 파일에 대한 자세한 내용은 [SQL Server 설치 로그 파일 보기 및 읽기](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)를 참조하세요.  
   
-24. 지금까지 설명한 단계를 반복하여 장애 조치(Failover) 클러스터의 다른 노드를 준비합니다. 자동 생성된 구성 파일을 사용하여 다른 노드를 준비할 수도 있습니다. 자세한 내용은 [SQL Server 2014 사용 하 여 설치 구성 파일](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)합니다.  
+24. 지금까지 설명한 단계를 반복하여 장애 조치(Failover) 클러스터의 다른 노드를 준비합니다. 자동 생성된 구성 파일을 사용하여 다른 노드를 준비할 수도 있습니다. 자세한 내용은 [구성 파일을 사용 하 여 SQL Server 2014 설치](../../../database-engine/install-windows/install-sql-server-using-a-configuration-file.md)를 참조 하세요.  
   
 ## <a name="complete"></a>완료  
   

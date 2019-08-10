@@ -12,17 +12,17 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81af61f5bc7af7b4b722067622918bd1c9cecd9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a18d9d54034ea98cf7a449c8f7147eaa54c65263
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62698950"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889444"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP 아키텍처 이해
   다음 항목을 통해 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다차원 데이터베이스를 더 잘 이해하고 비즈니스 인텔리전스 솔루션에서 다차원 데이터베이스를 구현하는 방법을 계획할 수 있습니다.  
   
- ![작은 파일 폴더 아이콘](../../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **논리 아키텍처**  
+ ![작은 파일 폴더 아이콘](../../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **논리적 아키텍처**  
  [서버 개체 &#40;Analysis Services-다차원 데이터&#41;](../olap-logical/server-objects-analysis-services-multidimensional-data.md)  
   
  [차원 개체 &#40;Analysis Services-다차원 데이터&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
@@ -46,7 +46,7 @@ ms.locfileid: "62698950"
  [ADOMD.NET을 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![작은 파일 폴더 아이콘](../../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **국가별 고려 사항**  
- [Analysis Services 다차원에 대 한 세계화 시나리오](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  
+ [Analysis Services Multiidimensional에 대 한 세계화 시나리오](https://docs.microsoft.com/analysis-services/globalization-scenarios-for-analysis-services-multiidimensional)  
   
 ## <a name="see-also"></a>관련 항목  
  [기술 참조 &#40;SSAS&#41;](../../powershell/technical-reference-ssas.md)  

@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e7d6e072cd47233b6cb76c09fb3bc0e9b9b42604
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a9aa2ab3fbfdbe10246e0dcf8758cfcf7732375
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020656"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893670"
 ---
 # <a name="properties-mdx"></a>Properties(MDX)
 
@@ -35,16 +35,16 @@ Member_Expression.Properties(Property_Name [, TYPED])
  멤버 속성 이름의 유효한 문자열 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **속성** 함수에는 지정한 멤버 속성에 대 한 지정된 된 멤버의 값을 반환 합니다. 멤버 속성 같은 내장 멤버 속성 중 하나가 될 수 있습니다 **이름을**를 **ID**를 **키**, 또는 **캡션**, 될 수도 있습니다는 사용자 정의 멤버 속성입니다. 자세한 내용은 [내장 멤버 속성 &#40;MDX&#41; ](../analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties.md) 하 고 [사용자 정의 멤버 속성 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties.md).  
+ **Properties** 함수는 지정 된 멤버 속성에 대해 지정 된 멤버의 값을 반환 합니다. 멤버 속성은 **NAME**, **ID**, **KEY**또는 **CAPTION**과 같은 기본 멤버 속성 이거나 사용자 정의 멤버 속성 일 수 있습니다. 자세한 내용은 [기본 멤버 속성 &#40;&#41; mdx](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-intrinsic-member-properties) 및 [사용자 정의 멤버 속성 &#40;mdx&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties-user-defined-member-properties)를 참조 하십시오.  
   
- 기본적으로 값은 문자열로 변환됩니다. 하는 경우 **형식화 된** 반환 값은 강력한 형식이 지정 됩니다.  
+ 기본적으로 값은 문자열로 변환됩니다. **형식화** 된 경우 반환 값은 강력한 형식입니다.  
   
 -   속성 유형이 기본인 경우 함수는 원래 유형의 멤버를 반환합니다.  
   
--   속성 형식이 사용자 정의 인 경우 반환 값의 형식이 반환 값의 형식과 동일 합니다 **MemberValue** 함수입니다.  
+-   속성 유형이 사용자 정의 인 경우 반환 값의 유형은 **Membervalue** 함수의 반환 값 유형과 동일 합니다.  
   
 > [!NOTE]  
->  Properties ('Key')는 복합 키를 제외하고 Key0과 동일한 결과를 반환합니다. Properties ('Key')는 복합 키에 대해 Null을 반환합니다. 키를 사용 하 여*x* 예제에 나온 것 처럼 복합 키에 대 한 구문입니다. Properties ('Key0'), Properties ('Key1'), Properties ('Key2') 등이 전체적으로 복합 키를 구성합니다.  
+>  Properties ('Key')는 복합 키를 제외하고 Key0과 동일한 결과를 반환합니다. Properties ('Key')는 복합 키에 대해 Null을 반환합니다. 예제에 나와 있는 것 처럼 복합 키에 대해 키*x* 구문을 사용 합니다. Properties ('Key0'), Properties ('Key1'), Properties ('Key2') 등이 전체적으로 복합 키를 구성합니다.  
   
 ## <a name="example"></a>예제  
  다음 예에서는 기본 멤버 속성과 사용자 정의 멤버 속성을 모두 반환합니다. 이때 TYPED 인수를 사용하여 Day Name 멤버 속성에 대한 강력한 형식의 값을 반환합니다.  
@@ -85,7 +85,7 @@ SELECT {Measures.MemberName
 FROM [Adventure Works]  
 ```  
   
- 다음 예제에서는 키의 사용을 보여 줍니다*x* 속성입니다.  
+ 다음 예에서는 키*x* 속성을 사용 하는 방법을 보여 줍니다.  
   
 ```  
 WITH   
@@ -105,7 +105,7 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [멤버 속성 사용&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-member-properties.md)   
+ [멤버 속성 사용&#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-member-properties)   
  [MDX 함수 참조&#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

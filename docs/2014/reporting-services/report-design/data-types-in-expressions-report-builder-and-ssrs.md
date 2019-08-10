@@ -10,12 +10,12 @@ ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5db09273a26bd8dd596a6ae576b2f8f0cc414190
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66106073"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891863"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>식의 데이터 형식(보고서 작성기 및 SSRS)
   데이터 형식은 여러 종류의 데이터를 나타낼 때 이를 효율적으로 저장하고 처리할 수 있도록 합니다. 일반적인 데이터 형식으로는 텍스트(문자열이라고도 함), 소수 자릿수가 있거나 없는 숫자, 날짜 및 시간, 이미지 등이 있습니다. 보고서의 값은 RDL(Report Definition Language) 데이터 형식이어야 합니다. 보고서에서 값을 표시할 때 원하는 대로 값의 형식을 지정할 수 있습니다. 예를 들어 통화를 나타내는 필드는 보고서 정의에 부동 소수점 숫자로 저장되지만 이를 표시할 때는 사용자가 선택한 형식 속성에 따라 다양한 형식을 사용할 수 있습니다.  
@@ -30,12 +30,12 @@ ms.locfileid: "66106073"
   
 |RDL 형식|CLR 형식|  
 |--------------|---------------|  
-|문자열|기본값: 문자열<br /><br /> Chart, GUID, Timespan|  
+|String|기본값: 문자열<br /><br /> Chart, GUID, Timespan|  
 |Boolean|기본값: Boolean|  
 |정수|기본값: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|DateTime|기본값: DateTime<br /><br /> DateTimeOffset|  
+|Datetime|기본값: Datetime<br /><br /> DateTimeOffset|  
 |부동|기본값: Double<br /><br /> Single, Decimal|  
-|이진|기본값: Byte[]|  
+|Binary|기본값: Byte[]|  
 |Variant|Byte[]를 제외한 위의 모든 항목|  
 |VariantArray|Variant의 배열|  
 |직렬화 가능|Serializable로 표시되어 있거나 ISerializable을 구현하는 형식 또는 Variant|  
@@ -68,7 +68,7 @@ ms.locfileid: "66106073"
 -   사용 중인 데이터 처리 확장 프로그램에 미리 형식이 지정된 데이터를 검색하기 위한 메타데이터가 포함되어 있는지 확인합니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX 쿼리에는 큐브를 처리할 때 이미 형식이 지정된 큐브 값에 대한 FORMATTED_VALUE 확장 속성이 포함되어 있습니다. 자세한 내용은 [Analysis Services 데이터베이스에 대한 확장 필드 속성 &#40;SSRS&#41;](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md)을 참조하세요.  
   
 ## <a name="understanding-parameter-data-types"></a>매개 변수 데이터 형식 이해  
- 보고서 매개 변수 데이터 형식 중 하나 여야 합니다. 부울, DateTime, Integer, Float 또는 텍스트 (문자열이 라고도 함). 데이터 세트 쿼리에 쿼리 매개 변수가 포함되는 경우 보고서 매개 변수가 자동으로 만들어져 쿼리 매개 변수에 연결됩니다. 보고서 매개 변수의 기본 데이터 형식은 String입니다. 보고서 매개 변수의 기본 데이터 형식을 변경하려면 **보고서 매개 변수 속성** 대화 상자의 **일반** 페이지에 있는 **데이터 형식** 드롭다운 목록에서 올바른 값을 선택합니다.  
+ 보고서 매개 변수는 다음 5 가지 데이터 형식 중 하나 여야 합니다. Boolean, DateTime, Integer, Float 또는 Text (String이 라고도 함)를 참조 하세요. 데이터 세트 쿼리에 쿼리 매개 변수가 포함되는 경우 보고서 매개 변수가 자동으로 만들어져 쿼리 매개 변수에 연결됩니다. 보고서 매개 변수의 기본 데이터 형식은 String입니다. 보고서 매개 변수의 기본 데이터 형식을 변경하려면 **보고서 매개 변수 속성** 대화 상자의 **일반** 페이지에 있는 **데이터 형식** 드롭다운 목록에서 올바른 값을 선택합니다.  
   
 > [!NOTE]  
 >  DateTime 데이터 형식인 보고서 매개 변수는 밀리초를 지원하지 않습니다. 밀리초가 포함된 값을 기반으로 하는 매개 변수를 만들 수 있지만 사용 가능한 값 드롭다운 목록에서 밀리초가 포함된 날짜 또는 시간 값이 들어 있는 값을 선택할 수는 없습니다.  
@@ -116,9 +116,9 @@ ms.locfileid: "66106073"
   
     -   다음 식은 문자열을 날짜 및 시간 값으로 변환합니다. `=DateTime.Parse(Fields!MyDateTime.Value)`  
   
-         `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 다음 `DateTime` 값: `2007-07-06 04:07:07 PM` (2007 7 월 6 일 오후 4시 07분)입니다.  
+         `MyDateTime.Value` 문자열에 UTC 오프셋이 있는 경우 `DateTime.Parse` 함수는 먼저 UTC 오프셋(오전 7시: UTC 시간인 전날 밤 오후 11시 + [`+08:00`])에 맞게 조정합니다. 그런 다음 `DateTime.Parse` 함수는 로컬 보고서 서버의 UTC 오프셋을 적용하고, 필요한 경우 일광 절약 시간제에 맞게 시간을 다시 조정합니다. 예를 들어 워싱턴의 레드몬드에서 일광 절약 시간제에 맞게 조정된 현지 시간 오프셋은 `[-07:00]`이거나 오후 11시로부터 7시간 전입니다. 결과 `DateTime` 값은 다음과 같습니다. `2007-07-06 04:07:07 PM`(2007 년 7 월 6 일 4:07 P. M).  
   
- 문자열을 변환 하는 방법에 대 한 자세한 내용은 `DateTime` 데이터 형식 참조 [구문 분석 하는 날짜 및 시간 문자열](https://go.microsoft.com/fwlink/?LinkId=89703)를 [특정 문화권에 대 한 시간과 날짜 서식 지정](https://go.microsoft.com/fwlink/?LinkId=89704), 및 [선택 DateTime, DateTimeOffset 및 TimeZoneInfo 간의](https://go.microsoft.com/fwlink/?linkid=110652) MSDN에 있습니다.  
+ 문자열을 데이터 `DateTime` 형식으로 변환 하는 방법에 대 한 자세한 내용은 [날짜 및 시간 문자열 구문 분석](https://go.microsoft.com/fwlink/?LinkId=89703), [특정 문화권의 날짜 및 시간 형식 지정](https://go.microsoft.com/fwlink/?LinkId=89704), [DateTime, DateTimeOffset 및 TimeZoneInfo on 선택](https://go.microsoft.com/fwlink/?linkid=110652) 을 참조 하세요. 알려면.  
   
 -   식을 사용하여 문자열의 일부를 추출하는 새 계산 필드를 보고서 데이터 세트에 추가합니다. 자세한 내용은 [보고서 데이터 창에서 필드 추가, 편집, 새로 고침&#40;보고서 작성기 및 SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)을 참조하세요.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66106073"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 데이터 형식에 대한 자세한 내용은 [SQL Server 온라인 설명서](https://go.microsoft.com/fwlink/?linkid=120955)의 [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) 및 [날짜 및 시간 데이터 형식 및 함수&#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql)을 참조하세요.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [SQL Server 온라인 설명서](../../analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services.md) 의 [SQL Server Books Onl의e](https://go.microsoft.com/fwlink/?linkid=120955)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 형식에 대한 자세한 내용은 [SQL Server 온라인 설명서](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/data-types-in-analysis-services) 의 [SQL Server Books Onl의e](https://go.microsoft.com/fwlink/?linkid=120955)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [보고서 항목 서식 지정&#40;보고서 작성기 및 SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)  

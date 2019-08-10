@@ -10,12 +10,12 @@ ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62791888"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889231"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Always On 가용성 그룹이 포함된 Analysis Services
   AlwaysOn 가용성 그룹은 미리 정의된 SQL Server 관계형 데이터베이스 컬렉션으로, 조건이 한 데이터베이스에서 장애 조치(failover)를 트리거하면 전체 데이터베이스에서 함께 장애 조치가 수행되고, 동일한 가용성 그룹에 있는 다른 인스턴스의 미러된 데이터베이스로 요청을 리디렉션합니다. 가용성 그룹을 고가용성 솔루션으로 사용하는 경우 해당 그룹의 데이터베이스를 Analysis Services 테이블 형식 또는 다차원 솔루션의 데이터 원본으로 사용할 수 있습니다. 가용성 데이터베이스를 사용할 경우 데이터 처리 또는 가져오기, 관계형 데이터 직접 쿼리(ROLAP 스토리지 또는 DirectQuery 모드 사용), 쓰기 저장과 같은 모든 Analysis Services 작업이 예상대로 작동합니다.  
@@ -115,7 +115,7 @@ ms.locfileid: "62791888"
   
      이제, 방금 구성한 그룹의 데이터베이스를 사용하는 Analysis Services 모델의 데이터 원본을 만듭니다.  
   
-##  <a name="bkmk_ssasAODB"></a> AlwaysOn 가용성 데이터베이스를 사용 하 여 Analysis Services 데이터 원본 만들기  
+##  <a name="bkmk_ssasAODB"></a>AlwaysOn 가용성 데이터베이스를 사용 하 여 Analysis Services 데이터 원본 만들기  
  이 섹션에서는 가용성 그룹의 데이터베이스에 연결하는 Analysis Services 데이터 원본을 만드는 방법을 설명합니다. 이 지침을 따르면 이전 섹션의 단계에 따라 구성한 주 복제본(기본값) 또는 읽기 가능한 보조 복제본에 대한 연결을 구성할 수 있습니다. AlwaysOn 구성 설정 및 클라이언트의 연결 속성 설정이 주 복제복 또는 보조 복제본 사용 여부를 결정합니다.  
   
 1.  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)]의 Analysis Services 다차원 및 데이터 마이닝 모델 프로젝트에서 **데이터 원본**을 마우스 오른쪽 단추로 클릭하고 **새 데이터 원본**을 선택합니다. **새로 만들기** 를 클릭하여 새 데이터 원본을 만듭니다.  
@@ -207,7 +207,7 @@ ms.locfileid: "62791888"
   
  오류가 지속되면 구성 문제일 가능성이 큽니다. 보조 복제본에 대한 라우팅 목록, 읽기 전용 URL, 읽기 전용 문제를 해결하기 위해 T-SQL 스크립트를 다시 실행해 볼 수 있습니다. 또한 주 복제본에서 모든 연결을 허용하는지 확인해야 합니다.  
   
-##  <a name="bkmk_writeback"></a> AlwaysOn 가용성 데이터베이스를 사용할 때의 쓰기 저장  
+##  <a name="bkmk_writeback"></a>AlwaysOn 가용성 데이터베이스를 사용할 때의 쓰기 저장  
  쓰기 저장은 Excel의 가상 분석을 지원하는 Analysis Services 기능입니다. 또한 이 기능은 사용자 지정 애플리케이션에서 예산 작성 및 예측 태스크에 일반적으로 사용됩니다.  
   
  쓰기 저장을 지원하려면 READWRITE 클라이언트 연결이 필요합니다. Excel에서 읽기 전용 연결에 대한 쓰기 저장을 시도하면 다음과 같은 오류가 발생합니다. 오류가 발생합니다. 오류가 발생합니다.  
@@ -218,9 +218,9 @@ ms.locfileid: "62791888"
   
 ## <a name="see-also"></a>관련 항목  
  [가용성 그룹 수신기, 클라이언트 연결 및 응용 프로그램 장애 조치(failover)&#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [활성 보조 복제본: 읽기 가능한 보조 복제본 &#40;AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [AlwaysOn 가용성 그룹의 운영 문제에 대 한 AlwaysOn 정책 &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
- [데이터 원본 만들기&#40;SSAS 다차원&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [차원 쓰기 저장(writeback) 설정](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+ [활성 보조 복제본: 읽을 수 있는 &#40;보조 복제본 AlwaysOn 가용성 그룹&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [AlwaysOn 가용성 그룹 &#40;SQL Server의 운영 문제에 대 한 AlwaysOn 정책&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [데이터 원본 만들기&#40;SSAS 다차원&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [차원 쓰기 저장(writeback) 설정](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   
   

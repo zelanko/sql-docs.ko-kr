@@ -1,5 +1,5 @@
 ---
-title: 논리 아키텍처 개요 (Analysis Services-다차원 데이터) | Microsoft Docs
+title: 논리적 아키텍처 개요 (Analysis Services 다차원 데이터) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -13,22 +13,22 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62699191"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889605"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
-  Analysis Services는 여러 가지 유형의 Analysis Services 모델에 사용되는 메모리 아키텍처 및 런타임 환경을 결정하는 서버 배포 모드에서 작동합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 테이블 형식 모델을 지원 합니다. **SharePoint 통합된 모드** 로드 및 쿼리 하는 통합 문서 내부의 Excel 또는 PowerPivot 데이터 모델에 사용 되는 SharePoint 용 powerpivot 설치 된 Analysis Services의 인스턴스를 가리킵니다.  
+  Analysis Services는 여러 가지 유형의 Analysis Services 모델에 사용되는 메모리 아키텍처 및 런타임 환경을 결정하는 서버 배포 모드에서 작동합니다. 서버 모드는 설치 중에 결정됩니다. **다차원 및 데이터 마이닝 모드** 는 기존 OLAP 및 데이터 마이닝을 지원 합니다. **테이블 형식 모드** 에서는 테이블 형식 모델을 지원 합니다. **SharePoint 통합 모드** 는 통합 문서 내에서 Excel 또는 PowerPivot 데이터 모델을 로드 하 고 쿼리 하는 데 사용 되는 SharePoint용 PowerPivot로 설치 된 Analysis Services의 인스턴스를 나타냅니다.  
   
- 이 항목에서는 다차원 및 데이터 마이닝 모드에서 작업할 때의 기본 Analysis Services 아키텍처에 대해 설명합니다. 다른 모드에 대 한 자세한 내용은 참조 하세요. [테이블 형식 모델링 &#40;&AMP;#40;SSAS 테이블 형식&#41; ](../../tabular-models/tabular-models-ssas.md) 하 고 [비교 테이블 형식 및 다차원 솔루션 &#40;SSAS&#41;](../../../analysis-services/comparing-tabular-and-multidimensional-solutions-ssas.md).  
+ 이 항목에서는 다차원 및 데이터 마이닝 모드에서 작업할 때의 기본 Analysis Services 아키텍처에 대해 설명합니다. 다른 모드에 대 한 자세한 내용은 [테이블 형식 모델링 &#40;ssas 테이블&#41; ](../../tabular-models/tabular-models-ssas.md) 형식 및 [테이블 형식 및 다차원 &#40;솔루션&#41;비교 ssas](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)를 참조 하세요.  
   
 ## <a name="basic-architecture"></a>기본 아키텍처  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에는 여러 데이터베이스가 있을 수 있으며, 데이터베이스에는 OLAP 개체와 데이터 마이닝 개체가 동시에 있을 수 있습니다. 응용 프로그램은 지정된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 지정된 데이터베이스에 연결합니다. 서버 컴퓨터는 여러 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 호스팅할 수 있습니다. 인스턴스의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 명칭은 "\<서버 이름 >\\< n a m e\>"입니다. 다음 그림에서는 언급 된 모든 관계를 보여 줍니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 개체입니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에는 여러 데이터베이스가 있을 수 있으며, 데이터베이스에는 OLAP 개체와 데이터 마이닝 개체가 동시에 있을 수 있습니다. 응용 프로그램은 지정된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 지정된 데이터베이스에 연결합니다. 서버 컴퓨터는 여러 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 호스팅할 수 있습니다. 인스턴스는 "\<ServerName >\\< InstanceName\>"으로 이름이 지정 됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 그림에서는 개체 간에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 언급 된 모든 관계를 보여 줍니다.  
   
- ![AMO 실행 개체 관계](../../../analysis-services/dev-guide/media/amo-runningobjects.gif "AMO 실행 개체 관계")  
+ ![AMO 실행 개체 관계](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO 실행 개체 관계")  
   
  기본 클래스는 큐브를 만드는 데 필요한 최소 개체 집합입니다. 이 최소 개체 집합은 차원, 측정값 그룹 및 파티션입니다. 집계는 선택 사항입니다.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62699191"
  각 데이터베이스 개체에는 하나 이상의 큐브 개체가 포함되어 있습니다. 큐브는 해당 측정값과 차원에 의해 정의됩니다. 큐브의 측정값과 차원은 큐브의 기반이 되고 측정값과 차원 정의에서 생성된 데이터 원본 뷰에 있는 테이블과 뷰에서 파생됩니다.  
   
 ## <a name="object-inheritance"></a>개체 상속  
- ASSL 개체 모델에는 많은 반복 요소 그룹이 포함되어 있습니다. 예를 들어 요소 그룹 "`Dimensions` 포함할 `Hierarchies`,"는 요소의 차원 계층을 정의 합니다. `Cubes` 및 `MeasureGroups` 둘 다에는 요소 그룹 "`Dimensions` 포함 `Hierarchies`"가 포함되어 있습니다.  
+ ASSL 개체 모델에는 많은 반복 요소 그룹이 포함되어 있습니다. 예를 들어 요소 그룹 "`Dimensions` 포함 `Hierarchies`"은 요소의 차원 계층 구조를 정의 합니다. `Cubes` 및 `MeasureGroups` 둘 다에는 요소 그룹 "`Dimensions` 포함 `Hierarchies`"가 포함되어 있습니다.  
   
  명시적으로 재정의되지 않는 한 요소는 상위 수준에서 이러한 반복 요소 그룹의 정보를 상속합니다. 예를 들어 `Translations`의 `CubeDimension`는 해당 상위 항목 요소인 `Translations`의 `Cube`과 같습니다.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62699191"
 ## <a name="example"></a>예제  
  Packages와 Last라는 두 개의 측정값과 Route, Source, Time이라는 세 개의 관련 차원이 있는 Imports 큐브가 있다고 가정합니다.  
   
- ![큐브 예 1](../../../analysis-services/dev-guide/media/cubeintro1.gif "큐브 예 1")  
+ ![큐브 예 1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "큐브 예 1")  
   
  큐브 주위의 더 작은 영숫자 값이 차원의 멤버입니다. 예제 멤버는 ground(Route 차원의 멤버), Africa(Source 차원의 멤버) 및 1st quarter(Time 차원의 멤버)입니다.  
   
@@ -72,29 +72,29 @@ ms.locfileid: "62699191"
  Route 차원은 수입품이 목적지에 도착하는 방법을 나타냅니다. 이 차원의 멤버에는 ground, nonground, air, sea, road 또는 rail이 있습니다. Source 차원은 수입품이 생산되는 Africa 또는 Asia 등의 지역을 나타냅니다. Time 차원은 단일 연도의 분기와 반기를 나타냅니다.  
   
 ### <a name="aggregates"></a>집계  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 필요에 따라 상위 수준의 값을 집계하므로 차원 내 멤버의 수준에 관계없이 큐브의 비즈니스 사용자가 모든 차원의 각 멤버에 대한 측정값을 결정할 수 있습니다. 예를 들어 다음 다이어그램에 표시 된 것과 같이 Time 차원에서 Calendar Time 계층을 사용 하 여 앞의 그림에서 측정값을 표준 달력 계층에 따라 집계할 수 있습니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 필요에 따라 상위 수준의 값을 집계하므로 차원 내 멤버의 수준에 관계없이 큐브의 비즈니스 사용자가 모든 차원의 각 멤버에 대한 측정값을 결정할 수 있습니다. 예를 들어 다음 다이어그램에 나와 있는 것 처럼 Time 차원의 Calendar Time 계층을 사용 하 여 이전 그림의 측정값을 표준 달력 계층 구조에 따라 집계할 수 있습니다.  
   
- ![시간 차원에 따라 구성 된 측정값 다이어그램](../../../analysis-services/dev-guide/media/cubeintro2.gif "시간 차원에 따라 구성 된 측정값 다이어그램")  
+ ![시간 차원에 따라 구성 된 측정값의 다이어그램](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "시간 차원에 따라 구성 된 측정값의 다이어그램")  
   
  단일 차원을 사용하여 측정값을 집계하는 것 외에도 다른 차원의 멤버를 조합하여 측정값을 집계할 수 있습니다. 이렇게 하면 비즈니스 사용자가 동시에 여러 차원에서 측정값을 평가할 수 있습니다. 예를 들어 비즈니스 사용자가 Eastern Hemisphere와 Western Hemisphere에서 항공편으로 도착한 분기별 수입품을 분석하려는 경우 큐브에 대해 쿼리를 실행하여 다음과 같은 데이터 집합을 검색할 수 있습니다.  
   
 ||||패키지|||마지막|||  
 |-|-|-|--------------|-|-|----------|-|-|  
 ||||All Sources|Eastern Hemisphere|Western Hemisphere|All Sources|Eastern Hemisphere|Western Hemisphere|  
-|All Time|||25110|6547|18563|Dec-29-99|Dec-22-99|Dec-29-99|  
+|All Time|||25110|6547|18563|Dec-29-99|12 월-22-99|Dec-29-99|  
 ||1st half||11173|2977|8196|Jun-28-99|6 월-20-99|Jun-28-99|  
-|||1st quarter|5108|1452|3656|Mar-30-99|Mar-19-99|Mar-30-99|  
+|||1st quarter|5108|1452|3656|Mar-30-99|3 월-19-99|Mar-30-99|  
 |||2nd quarter|6065|1525|4540|Jun-28-99|6 월-20-99|Jun-28-99|  
-||2nd half||13937|3570|10367|Dec-29-99|Dec-22-99|Dec-29-99|  
-|||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
-|||4th quarter|7818|2126|5692|Dec-29-99|Dec-22-99|Dec-29-99|  
+||2nd half||13937|3570|10367|Dec-29-99|12 월-22-99|Dec-29-99|  
+|||3rd quarter|6119|1444|4675|Sep-30-99|9 월-18-99|Sep-30-99|  
+|||4th quarter|7818|2126|5692|Dec-29-99|12 월-22-99|Dec-29-99|  
   
- 큐브를 정의한 다음에는 새 집계를 만들거나, 집계를 처리하는 동안 미리 계산할 것인지 또는 쿼리 시 계산할 것인지와 같은 옵션을 설정하기 위해 기존 집계를 변경할 수 있습니다. **관련된 항목:** [집계 및 집계 디자인](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)합니다.  
+ 큐브를 정의한 다음에는 새 집계를 만들거나, 집계를 처리하는 동안 미리 계산할 것인지 또는 쿼리 시 계산할 것인지와 같은 옵션을 설정하기 위해 기존 집계를 변경할 수 있습니다. **관련 항목:** [집계 및 집계 디자인](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>측정값, 특성 및 계층 매핑  
  이 예제 큐브의 측정값, 특성 및 계층은 큐브의 팩트 및 차원 테이블의 다음 열에서 파생됩니다.  
   
-|측정값 또는 특성(수준)|멤버|원본 테이블|원본 열|열 값의 예|  
+|측정값 또는 특성(수준)|Members|원본 테이블|원본 열|열 값의 예|  
 |------------------------------------|-------------|------------------|-------------------|-------------------------|  
 |Packages 측정값|해당 사항 없음|ImportsFactTable|패키지|12|  
 |Last 측정값|해당 사항 없음|ImportsFactTable|마지막|May-03-99|  
@@ -105,23 +105,23 @@ ms.locfileid: "62699191"
 |Time 차원의 Half 특성|1st half,2nd half|TimeDimensionTable|Half|2nd half|  
 |Time 차원의 Quarter 특성|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Quarter|3rd quarter|  
   
- 단일 큐브 셀의 데이터는 일반적으로 팩트 테이블의 여러 행에서 파생됩니다. 예를 들어 air 멤버, Africa 멤버 및 1st quarter 멤버가 교차 큐브 셀의 다음 행을 집계 하 여 파생 되는 값이 포함 된 **ImportsFactTable** 팩트 테이블입니다.  
+ 단일 큐브 셀의 데이터는 일반적으로 팩트 테이블의 여러 행에서 파생됩니다. 예를 들어, **지점의** 팩트 테이블의 다음 행을 집계 하 여 파생 되는 값은 air 멤버, 아프리카 멤버 및 1 분기 멤버의 교집합에 있는 큐브 셀에 포함 됩니다.  
   
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|패키지|마지막|  
 |3516987|1|6|1|15|1 월-10-99|  
-|3554790|1|6|1|40|1 월 1 일 ~ 19-99|  
+|3554790|1|6|1|40|1 월-19-99|  
 |3572673|1|6|1|34|Jan-27-99|  
 |3600974|1|6|1|45|Feb-02-99|  
 |3645541|1|6|1|20|Feb-09-99|  
 |3674906|1|6|1|36|Feb-17-99|  
   
- 앞의 표에서 각 행에 동일한 값을 **RouteKey**, **SourceKey**, 및 **TimeKey** 동일한 큐브 셀에 영향을 이러한 행을 나타내는 열입니다.  
+ 위의 표에서 각 행은 **RouteKey**, **Sourcekey**및 **timekey** 열에 대해 동일한 값을 가지 며 이러한 행이 동일한 큐브 셀에 기여 함을 나타냅니다.  
   
- 여기에 제시된 예는 큐브에 단일 측정값 그룹이 있으며 모든 차원 테이블이 별모양 스키마로 팩트 테이블에 조인된다는 점에서 매우 단순한 큐브를 나타냅니다. 팩트 테이블에 직접 조인되는 것이 아니라 또 다른 차원 테이블에 하나 이상의 차원 테이블이 조인되는 눈송이 스키마도 많이 사용됩니다. **관련된 항목:** [차원 &#40;Analysis Services-Multidimensional Data&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)합니다.  
+ 여기에 제시된 예는 큐브에 단일 측정값 그룹이 있으며 모든 차원 테이블이 별모양 스키마로 팩트 테이블에 조인된다는 점에서 매우 단순한 큐브를 나타냅니다. 팩트 테이블에 직접 조인되는 것이 아니라 또 다른 차원 테이블에 하나 이상의 차원 테이블이 조인되는 눈송이 스키마도 많이 사용됩니다. **관련 항목:** [차원 &#40;Analysis Services 다차원 데이터&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)입니다.  
   
- 여기에 제시된 예에는 단일 팩트 테이블만 있습니다. 큐브에 팩트 테이블이 여러 개 있는 경우 각 팩트 테이블의 측정값은 측정값 그룹으로 구성되고 측정값 그룹은 정의된 차원 관계에 따라 특정 차원 집합에 연결됩니다. 이러한 관계는 참여하는 테이블을 데이터 원본 뷰에 지정하고 관계의 세분성을 지정하여 정의됩니다. **관련된 항목:** [차원 관계](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)합니다.  
+ 여기에 제시된 예에는 단일 팩트 테이블만 있습니다. 큐브에 팩트 테이블이 여러 개 있는 경우 각 팩트 테이블의 측정값은 측정값 그룹으로 구성되고 측정값 그룹은 정의된 차원 관계에 따라 특정 차원 집합에 연결됩니다. 이러한 관계는 참여하는 테이블을 데이터 원본 뷰에 지정하고 관계의 세분성을 지정하여 정의됩니다. **관련 항목:** [차원 관계](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>관련 항목  
  [다차원 model 데이터베이스&#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  

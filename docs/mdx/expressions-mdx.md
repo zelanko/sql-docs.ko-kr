@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: d8ed2484bb3eb31b1bb73000f848dffd27e85e9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118869"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893593"
 ---
 # <a name="expressions-mdx"></a>식(MDX)
 
 
-  식에는 식별자, 값 및 평가 결과가 표시 될 수 있는 연산자의 조합입니다. 식은 데이터를 액세스하거나 변경하는 여러 위치에서 사용됩니다. 예를 들어 쿼리를 사용해 검색할 데이터 또는 특정 조건을 만족하는 데이터를 찾는 검색 조건으로 식을 사용할 수 있습니다.  
+  식은 결과를 얻기 위해 평가할 수 있는 식별자, 값 및 연산자의 조합입니다. 식은 데이터를 액세스하거나 변경하는 여러 위치에서 사용됩니다. 예를 들어 쿼리를 사용해 검색할 데이터 또는 특정 조건을 만족하는 데이터를 찾는 검색 조건으로 식을 사용할 수 있습니다.  
   
 ## <a name="simple-and-complex-expressions"></a>단순 식 및 복합 식  
  MDX 식에는 단순 식과 복합 식이 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "68118869"
  스칼라 함수는 MDX 내의 계산에서 단일 값을 반환합니다. 대부분의 MDX 식, 문, 및 스크립트는 단일 데이터 요소로 계산되지 않고 셀 또는 멤버와 같은 데이터 요소 그룹을 대상으로 반복적으로 계산되므로 이러한 차이는 MDX의 스칼라 함수 계산 방식을 이해하는 데 중요합니다. 스칼라 함수를 계산할 때 함수는 보통 단일 데이터 요소를 검토합니다.  
   
  개체 식별자  
- 다차원 데이터의 특성에 의해 MDX는 개체 지향적입니다. 개체 식별자는 MDX에서 단순 식으로 간주됩니다. 식별자에 대 한 자세한 내용은 참조 하세요. [식별자 &#40;MDX&#41;](../mdx/identifiers-mdx.md)합니다.  
+ 다차원 데이터의 특성에 의해 MDX는 개체 지향적입니다. 개체 식별자는 MDX에서 단순 식으로 간주됩니다. 식별자에 대 한 자세한 내용은 [식별자 &#40;MDX&#41;](../mdx/identifiers-mdx.md)를 참조 하십시오.  
   
  이러한 엔터티를 연산자로 연결하여 복합 식을 만들 수도 있습니다.  
   
@@ -85,6 +85,6 @@ WHERE [Product].[Category].[Bikes]
   
 ## <a name="see-also"></a>관련 항목  
  [MDX 언어 참조 & #40; Mdx& #41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
+ [MDX 쿼리 기본 사항&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

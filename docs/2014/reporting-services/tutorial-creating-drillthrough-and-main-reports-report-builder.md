@@ -10,24 +10,24 @@ ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ff48bab49e2ef0889bda054d6a1ff656f0916585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b074195ecda842e0270f3cadce790be30fdce7cc
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66098882"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892383"
 ---
-# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 보고서 및 주 보고서 (보고서 작성기) 만들기
+# <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>자습서: 드릴스루 및 주 보고서 만들기 (보고서 작성기)
   이 자습서에서는 두 종류의 보고서인 드릴스루 보고서와 주 보고서를 만드는 방법을 배웁니다. 이러한 보고서에서 사용되는 샘플 판매 데이터는 Analysis Services 큐브에서 검색됩니다. 다음 그림에서는 만들려는 보고서를 보여 줍니다.  
   
  ![rs_DrillthroughCubeTutorial](../../2014/tutorials/media/rs-drillthroughcubetutorial.gif "rs_DrillthroughCubeTutorial")  
   
- 다음 그림에서는 어떻게 필드 값인 Games and Toys가 드릴스루 보고서의 제목에 주 보고서 표시에서를 보여 줍니다. 드릴스루의 데이터는 Games and Toys 제품 범주에 속합니다.  
+ 다음 그림에서는 주 보고서의 필드 값, 게임 및 장난감이 드릴스루 보고서의 제목에 표시 되는 방법을 보여 줍니다. 드릴스루의 데이터는 Games and Toys 제품 범주에 속합니다.  
   
  ![rs_DrillthroughCubeTutorialParmExpr](../../2014/tutorials/media/rs-drillthroughcubetutorialparmexpr.gif "rs_DrillthroughCubeTutorialParmExpr")  
   
 ## <a name="what-you-will-learn"></a>학습 내용  
- **드릴스루 보고서의 학습할 방법:**  
+ **드릴스루 보고서에서 다음 작업을 수행 하는 방법을 배웁니다.**  
   
 1.  [테이블 또는 행렬 마법사에서 드릴스루 행렬 보고서 및 데이터 집합 만들기](#DMatrixAndDataset)  
   
@@ -35,23 +35,23 @@ ms.locfileid: "66098882"
   
     2.  [MDX 쿼리 만들기](#DMDXQuery)  
   
-    3.  [데이터를 그룹 스타일으로 구성](#DLayout)  
+    3.  [데이터를 그룹 스타일로 구성](#DLayout)  
   
     4.  [부분합 및 합계 추가](#DTotals)  
   
     5.  [스타일 선택](#DStyle)  
   
-2.  [데이터 서식 통화로](#DFormat)  
+2.  [데이터 형식을 통화로 지정](#DFormat)  
   
-3.  [스파크 라인에 판매 값을 표시 하려면 열을 추가 합니다.](#DSparkline)  
+3.  [스파크 라인에 판매 값을 표시 하는 열 추가](#DSparkline)  
   
-4.  [제품 범주 이름의 보고서 제목 추가](#DReportTitle)  
+4.  [제품 범주 이름을 사용 하 여 보고서 제목 추가](#DReportTitle)  
   
 5.  [매개 변수 속성 업데이트](#DParameter)  
   
 6.  [SharePoint 라이브러리에 보고서 저장](#DSave)  
   
- **주 보고서에서 학습할 방법:**  
+ **주 보고서에서 다음 작업을 수행 하는 방법을 배웁니다.**  
   
 1.  [테이블 또는 행렬 마법사에서 주 행렬 보고서 및 데이터 집합 만들기](#MMatrixAndDataset)  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66098882"
   
 2.  [총합계 행 제거](#MGrandTotal)  
   
-3.  [드릴스루에 대 한 입력란 동작 구성](#MDrillthrough)  
+3.  [드릴스루에 대 한 텍스트 상자 작업 구성](#MDrillthrough)  
   
 4.  [숫자 값을 표시기로 바꾸기](#MIndicators)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66098882"
   
 8.  [주 보고서 및 드릴스루 보고서 실행](#MRunReports)  
   
- 이 자습서를 완료 하는 시간을 예상 합니다. 30 분입니다.  
+ 이 자습서를 완료 하는 데 소요 되는 예상 시간: 30 분.  
   
 ## <a name="requirements"></a>요구 사항  
  이 자습서를 실행하려면 Contoso Sales 큐브에 액세스해야 합니다. 이 요구 사항은 드릴스루 보고서와 주 보고서 모두에 적용됩니다. 요구 사항에 대한 자세한 내용은 [자습서의 필수 조건&#40;보고서 작성기&#41;](../reporting-services/report-builder-tutorials.md)을 참조하세요.  
@@ -89,9 +89,9 @@ ms.locfileid: "66098882"
   
 #### <a name="to-create-a-new-report"></a>새 보고서를 만들려면  
   
-1.  클릭 **시작**, 가리킨 **프로그램**를 가리킨 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **보고서 작성기**를 클릭 하 고 **보고서 작성기**.  
+1.  **시작**을 클릭 하 고 **프로그램** [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] , **보고서 작성기**을 차례로 가리킨 다음 **보고서 작성기**를 클릭 합니다.  
   
-     **시작** 대화 상자가 열립니다. 표시 되지 않으면에서 합니다 **보고서 작성기** 단추를 클릭 **새로 만들기**합니다.  
+     **시작** 대화 상자가 열립니다. 표시 되지 않는 경우 **보고서 작성기** 단추에서 **새로 만들기**를 클릭 합니다.  
   
 2.  왼쪽 창에 **새 보고서** 가 선택되어 있는지 확인합니다.  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66098882"
 2.  **큐브 선택** 대화 상자에서 Sales를 클릭한 다음 **확인**을 클릭합니다.  
   
     > [!TIP]  
-    >  MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](../analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여넣은 다음, [데이터 세트를 만들려면](#DSkip)의 6단계를 진행합니다.  
+    >  MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여넣은 다음, [데이터 세트를 만들려면](#DSkip)의 6단계를 진행합니다.  
   
     ```  
     SELECT NON EMPTY { [Measures].[Sales Amount], [Measures].[Sales Return Amount] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS * [Product].[Product Subcategory Name].[Product Subcategory Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGS  
@@ -167,7 +167,7 @@ ms.locfileid: "66098882"
   
 5.  필터 식 목록에서 **All Channel**을 확장하고, **Online**, **Reseller**를 차례로 클릭한 다음 **확인**을 클릭합니다.  
   
-     이제 쿼리에이 채널만 포함할 필터가 제공 됩니다. 온라인 및 대리점입니다.  
+     이제 쿼리에는 다음 채널만 포함 하는 필터가 포함 됩니다. 온라인 및 대리점.  
   
 6.  Sales Territory 차원을 확장한 다음 Sales Territory Group을 **Channel Name** 아래에 있는 **계층**열로 끕니다.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "66098882"
     > [!NOTE]  
     >  매개 변수에는 제품 범주의 이름이 포함됩니다. 주 보고서에서 제품 범주 이름을 클릭하면 해당 이름이 이 매개 변수를 사용하여 드릴스루 보고서로 전달됩니다.  
   
-###  <a name="DSkip"></a> 데이터 집합을 만들려면  
+###  <a name="DSkip"></a>데이터 집합을 만들려면  
   
 1.  Channel 차원에서 Channel Name을 데이터 창으로 끕니다.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "66098882"
   
 #### <a name="to-specify-a-style"></a>스타일을 지정하려면  
   
-1.  에 **스타일 선택** 페이지의 스타일 창에서 Slate를 선택 합니다.  
+1.  **스타일 선택** 페이지의 스타일 창에서 슬레이트를 선택 합니다.  
   
 2.  **마침**을 클릭합니다.  
   
@@ -394,7 +394,7 @@ ms.locfileid: "66098882"
   
 #### <a name="to-create-a-new-report"></a>새 보고서를 만들려면  
   
-1.  클릭 **시작**, 가리킨 **프로그램**를 가리킨 [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] **보고서 작성기**를 클릭 하 고 **보고서 작성기**.  
+1.  **시작**을 클릭 하 고 **프로그램** [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] , **보고서 작성기**을 차례로 가리킨 다음 **보고서 작성기**를 클릭 합니다.  
   
 2.  **시작** 대화 상자에서 **새 보고서** 가 선택되어 있는지 확인한 다음 **테이블 또는 행렬 마법사**를 클릭합니다.  
   
@@ -447,7 +447,7 @@ ms.locfileid: "66098882"
 2.  **큐브 선택** 대화 상자에서 Sales를 클릭한 다음 **확인**을 클릭합니다.  
   
     > [!TIP]  
-    >  MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](../analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여 넣은다음, [데이터 세트를 만들려면](#MSkip)의 5단계를 진행합니다.  
+    >  MDX 쿼리를 수동으로 작성하지 않을 경우 ![디자인 모드로 전환](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-designmode.gif "디자인 모드로 전환") 아이콘을 클릭하고, 쿼리 디자이너를 쿼리 모드로 토글하고, 완료된 MDX를 쿼리 디자이너로 붙여 넣은다음, [데이터 세트를 만들려면](#MSkip)의 5단계를 진행합니다.  
   
     ```  
     WITH MEMBER [Measures].[Net QTY] AS [Measures].[Sales Quantity] -[Measures].[Sales Return Quantity] MEMBER [Measures].[Net Sales] AS [Measures].[Sales Amount] - [Measures].[Sales Return Amount] SELECT NON EMPTY { [Measures].[Net QTY], [Measures].[Net Sales] } ON COLUMNS, NON EMPTY { ([Channel].[Channel Name].[Channel Name].ALLMEMBERS * [Product].[Product Category Name].[Product Category Name].ALLMEMBERS ) } DIMENSION PROPERTIES MEMBER_CAPTION, MEMBER_UNIQUE_NAME ON ROWS FROM ( SELECT ( { [Date].[Calendar Year].&[2009] } ) ON COLUMNS FROM ( SELECT ( STRTOSET(@ProductProductCategoryName, CONSTRAINED) ) ON COLUMNS FROM ( SELECT ( { [Sales Territory].[Sales Territory Group].&[North America] } ) ON COLUMNS FROM ( SELECT ( { [Channel].[Channel Name].&[2], [Channel].[Channel Name].&[4] } ) ON COLUMNS FROM [Sales])))) WHERE ( [Sales Territory].[Sales Territory Group].&[North America], [Date].[Calendar Year].&[2009] ) CELL PROPERTIES VALUE, BACK_COLOR, FORE_COLOR, FORMATTED_VALUE, FORMAT_STRING, FONT_NAME, FONT_SIZE, FONT_FLAGSQuery text: Code.  
@@ -461,7 +461,7 @@ ms.locfileid: "66098882"
   
 5.  필터 식 목록에서 **All Channel**을 확장하고, **Online** , **Reseller**를 차례로 클릭한 다음 **확인**을 클릭합니다.  
   
-     이제 쿼리에이 채널만 포함할 필터가 제공 됩니다. 온라인 및 대리점입니다.  
+     이제 쿼리에는 다음 채널만 포함 하는 필터가 포함 됩니다. 온라인 및 대리점.  
   
 6.  Sales Territory 차원을 확장한 다음 Sales Territory Group을 **Channel Name** 아래에 있는 **계층**열로 끕니다.  
   
@@ -519,7 +519,7 @@ ms.locfileid: "66098882"
   
 8.  **이름** 상자에  **Net Sales**를 입력한 다음 **확인**을 클릭합니다. 계산 멤버 창에 **Net Sales** 계산 멤버가 나열됩니다.  
   
-###  <a name="MSkip"></a> 데이터 집합을 만들려면  
+###  <a name="MSkip"></a>데이터 집합을 만들려면  
   
 1.  Channel 차원에서 Channel Name을 데이터 창으로 끕니다.  
   
@@ -561,7 +561,7 @@ ms.locfileid: "66098882"
   
 1.  **레이아웃 선택** 페이지의 **옵션**에서 **부분합 및 총합계 표시** 가 선택되어 있는지 확인합니다.  
   
-     마법사 미리 보기 창에 4개의 행이 있는 행렬이 표시됩니다.  보고서를 실행하면 각 행이 다음과 같은 방식으로 표시됩니다. 첫 번째 행은 열 그룹, 열 머리글을 포함 하는 두 번째 행은 제품 범주 데이터를 포함 하는 세 번째 행 (`[Sum(Net_ QTY)]` 및 `[Sum(Net_Sales)]`, 네 번째 행은 합계를 포함 하 고 있습니다.  
+     마법사 미리 보기 창에 4개의 행이 있는 행렬이 표시됩니다.  보고서를 실행하면 각 행이 다음과 같은 방식으로 표시됩니다. 첫 번째 행은 열 그룹이 고, 두 번째 행은 열 머리글을 포함 하 고, 세 번째 행은 제품`[Sum(Net_ QTY)]` 범주 `[Sum(Net_Sales)]`데이터 (및)를 포함 하며, 네 번째 행은 합계를 포함 합니다.  
   
 2.  **다음**을 클릭합니다.  
   
@@ -570,7 +570,7 @@ ms.locfileid: "66098882"
   
 #### <a name="to-specify-a-style"></a>스타일을 지정하려면  
   
-1.  에 **스타일 선택** 페이지의 스타일 창에서 Slate를 선택 합니다.  
+1.  **스타일 선택** 페이지의 스타일 창에서 슬레이트를 선택 합니다.  
   
 2.  **마침**을 클릭합니다.  
   
@@ -684,7 +684,7 @@ ms.locfileid: "66098882"
   
 1.  디자인 화면에서 **제목을 추가하려면 클릭하십시오.** 를 클릭합니다.  
   
-2.  형식 **2009 Product Category Sales: Online and Reseller Category:** 를 입력합니다.  
+2.  2009 **제품 범주 판매를 입력 합니다. Online and Reseller Category:** 를 입력합니다.  
   
 3.  입력한 텍스트를 선택합니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: 멤버 식을 사용 하 여 | Microsoft Docs
+title: 멤버 식 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 41ff63d47a62b9b83fb583c55ff2405638de22cf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d40d6a3b6cacb65cf1463b0eeb8b29e59e079e4
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097109"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893511"
 ---
 # <a name="using-member-expressions"></a>멤버 식 사용
 
@@ -56,10 +56,10 @@ Dimension_Name
   
 ```  
   
- 멤버를 반환하는 여러 MDX 함수가 있습니다. 전체 목록을 참조 하세요 [MDX 함수 참조 &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
+ 멤버를 반환하는 여러 MDX 함수가 있습니다. 전체 목록은 [Mdx 함수 참조 &#40;&#41; mdx](../mdx/mdx-function-reference-mdx.md) 를 참조 하십시오.  
   
 > [!NOTE]  
->  멤버 이름과 멤버 키에 대 한 자세한 내용은 참조 하세요. [Members, Tuples, and Sets를 사용 하 여 작업 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)합니다.  
+>  멤버 이름 및 멤버 키에 대 한 자세한 내용은 [멤버, 튜플 및 &#40;집합 MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)를 참조 하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)  

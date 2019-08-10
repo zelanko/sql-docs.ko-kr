@@ -1,5 +1,5 @@
 ---
-title: 비정형 계층 | Microsoft Docs
+title: 비정형 계층 구조 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b0a7498820bedf5d412fe227c268a6bef35d3d74
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 533abbb47db40f16c0d7d5e4d85851975c89e23d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072518"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889328"
 ---
 # <a name="ragged-hierarchies"></a>비정형 계층 구조
   비정형 계층은 균일하지 않은 수준 수가 있는 사용자 정의 계층입니다. 일반적인 예로 계정 차트, 고위 관리자가 부서 관리자와 비관리자를 부하 직원으로 둔 조직 차트, Washington D.C., Vatican City 또는 New Delhi와 같이 부모 State 또는 Province가 없이 Country-Region-City로 구성된 지역 계층 등이 있습니다.  
@@ -41,9 +41,9 @@ ms.locfileid: "66072518"
   
 -   일반 계층을 사용하지만 각 수준에 대해 `HideMemberIf` 속성을 설정하여 누락된 수준을 사용자에게 시각화할지 여부를 지정합니다. `HideMemberIf`를 설정하는 경우 연결 문자열에 대한 `MDXCompatibility`도 설정하여 기본 탐색 동작을 재정의해야 합니다. 이러한 속성을 설정하는 지침이 이 항목에 설명되어 있습니다.  
   
--   수준 멤버를 명시적으로 관리하는 부모-자식 계층을 만듭니다. 이 기술의 일러스트레이션을 보려면 [SSAS의 비정형 계층(블로그 포스트)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)을 참조하세요. 온라인 설명서에 대 한 자세한 내용은 참조 하세요. [부모-자식 계층](parent-child-dimension.md)합니다. 부모-자식 계층을 만드는 경우의 단점은 차원당 부모-자식 계층이 하나만 있을 수 있으며 중간 멤버에 대한 집계를 계산할 때 일반적으로 성능 저하가 발생하는 것입니다.  
+-   수준 멤버를 명시적으로 관리하는 부모-자식 계층을 만듭니다. 이 기술의 일러스트레이션을 보려면 [SSAS의 비정형 계층(블로그 포스트)](http://dwbi1.wordpress.com/2011/03/30/ragged-hierarchy-in-ssas/)을 참조하세요. 온라인 설명서에 대 한 자세한 내용은 [부모-자식 계층](parent-child-dimension.md)을 참조 하세요. 부모-자식 계층을 만드는 경우의 단점은 차원당 부모-자식 계층이 하나만 있을 수 있으며 중간 멤버에 대한 집계를 계산할 때 일반적으로 성능 저하가 발생하는 것입니다.  
   
- 차원에 둘 이상의 비정형 계층이 포함된 경우 첫 번째 방법인 `HideMemberIf`를 설정해야 합니다. 비정형 계층 작업 실무 경험이 있는 BI 개발자는 물리적 데이터 테이블에서 추가 변경 내용을 지원하고 각 수준에 대한 별도의 테이블을 만듭니다. 참조 [Martin Mason의 SSAS 재무 큐브 부분 1a 비정형 계층 (블로그)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 이 기술에 대 한 세부 정보에 대 한 합니다.  
+ 차원에 둘 이상의 비정형 계층이 포함된 경우 첫 번째 방법인 `HideMemberIf`를 설정해야 합니다. 비정형 계층 작업 실무 경험이 있는 BI 개발자는 물리적 데이터 테이블에서 추가 변경 내용을 지원하고 각 수준에 대한 별도의 테이블을 만듭니다. 이 기술에 대 한 자세한 내용은 [Martin Mason 'S SSAS 금융 큐브-파트 1a-비정형 계층 (블로그)](http://martinmason.wordpress.com/2012/03/03/the-ssas-financial-cubepart-1aragged-hierarchies-cont/) 을 참조 하세요.  
   
 ##  <a name="bkmk_Hide"></a> 일반 계층에서 멤버를 숨기도록 HideMemberIf 설정  
  비정형 차원 테이블의 경우 논리적으로 누락된 멤버를 여러 방법으로 표시할 수 있습니다. 테이블 셀에는 Null 또는 빈 문자열을 포함할 수 있습니다. 또는 자리 표시자 역할을 하기 위해 부모와 같은 값을 포함할 수도 있습니다. 자리 표시자의 표현은 클라이언트 응용 프로그램에 대한 `HideMemberIf` 연결 문자열 속성 및 `MDX Compatibility` 속성에 의해 결정되는 자식 멤버의 자리 표시자 상태에 의해 결정됩니다.  
@@ -74,6 +74,6 @@ ms.locfileid: "66072518"
  [사용자 정의 계층 만들기](user-defined-hierarchies-create.md)   
  [사용자 계층](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [부모-자식 계층](parent-child-dimension.md)   
- [연결 문자열 속성&#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [연결 문자열 속성&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

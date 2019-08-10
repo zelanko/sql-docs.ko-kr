@@ -1,5 +1,5 @@
 ---
-title: sysmail_delete_mailitems_sp (TRANSACT-SQL) | Microsoft Docs
+title: sysmail_delete_mailitems_sp (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 23ecda5fd8d91f20133eb2295d38dc9d9ace66f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: df7ae090efbcd448dc5df3df5355273c891da4fe
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68069098"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941178"
 ---
-# <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp(Transact-SQL)
+# <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   데이터베이스 메일의 내부 테이블에서 전자 메일 메시지를 영구 삭제합니다.  
@@ -40,20 +40,20 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @sent_before = ] 'sent_before'` 날짜 및 시간으로 제공 된 최대 전자 메일을 삭제 합니다 *sent_before* 인수입니다. *sent_before* 됩니다 **datetime** 기본적으로 null입니다. NULL은 모든 날짜를 나타냅니다.  
+`[ @sent_before = ] 'sent_before'`*Sent_before* 인수로 제공 된 날짜 및 시간 까지의 전자 메일을 삭제 합니다. *sent_before* 는 **datetime** 이며 기본값은 NULL입니다. NULL은 모든 날짜를 나타냅니다.  
   
-`[ @sent_status = ] 'sent_status'` 지정 된 형식의 전자 메일을 삭제 *sent_status*합니다. *sent_status* 됩니다 **varchar(8)** 기본값은 없습니다. 유효한 항목은 **전송**를 **보내지 않은**를 **을 다시 시도**, 및 **실패**합니다. NULL은 모든 상태를 나타냅니다.  
+`[ @sent_status = ] 'sent_status'`*Sent_status*에 지정 된 유형의 전자 메일을 삭제 합니다. *sent_status* 은 **varchar (8)** 이며 기본값은 없습니다. 유효한 항목은 **전송**, **보내지**않음, **다시 시도**및 **실패**입니다. NULL은 모든 상태를 나타냅니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  
   
 ## <a name="remarks"></a>설명  
- 데이터베이스 메일 메시지 및 첨부 파일에 저장 되는 **msdb** 데이터베이스입니다. 메시지를 방지 하려면에 주기적으로 삭제 해야 **msdb** 예상 보다 커지는 및 조직의 문서 보존 프로그램 사용을 준수 하도록 합니다. 사용 된 **sysmail_delete_mailitems_sp** 저장 프로시저를 데이터베이스 메일 테이블에서 전자 메일 메시지를 영구적으로 삭제 합니다. 옵션 인수를 사용하여 특정 날짜 및 시간보다 오래된 전자 메일만 삭제할 수 있습니다. 이 인수에 지정된 날짜 및 시간보다 오래된 전자 메일은 삭제됩니다. 다른 선택적 인수를 사용 하면 특정 형식으로 지정 된 전자 메일만 삭제할 수 있습니다 합니다 **sent_status** 인수입니다. 인수에 대해 제공 해야 합니다 **@sent_before** 하거나 **@sent_status** 합니다. 모든 메시지를 삭제 하려면 사용 하 여  **@sent_before getdate () =** 합니다.  
+ 데이터베이스 메일 메시지 및 첨부 파일은 **msdb** 데이터베이스에 저장 됩니다. **Msdb** 가 예상 보다 크게 증가 하는 것을 방지 하 고 조직 문서 보존 프로그램을 따르도록 메시지를 주기적으로 삭제 해야 합니다. **Sysmail_delete_mailitems_sp** 저장 프로시저를 사용 하 여 데이터베이스 메일 테이블에서 전자 메일 메시지를 영구적으로 삭제할 수 있습니다. 옵션 인수를 사용하여 특정 날짜 및 시간보다 오래된 전자 메일만 삭제할 수 있습니다. 이 인수에 지정된 날짜 및 시간보다 오래된 전자 메일은 삭제됩니다. 또 다른 선택적 인수를 사용 하면 **sent_status** 인수로 지정 된 특정 유형의 전자 메일만 삭제할 수 있습니다. **\@Sent_before** 또는 **sent_status 에대한인수를제공해야합니다.\@** 모든 메시지를 삭제 하려면  **\@sent_before = getdate ()** 를 사용 합니다.  
   
- 전자 메일을 삭제하면 해당 메시지와 관련된 첨부 파일도 삭제됩니다. 전자 메일을 삭제 해도의 해당 항목은 삭제 되지 않습니다 **sysmail_event_log**합니다. 사용 하 여 [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) 로그에서 항목을 삭제 합니다.  
+ 전자 메일을 삭제하면 해당 메시지와 관련된 첨부 파일도 삭제됩니다. 전자 메일을 삭제 해도 **sysmail_event_log**의 해당 항목은 삭제 되지 않습니다. [Sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) 를 사용 하 여 로그에서 항목을 삭제 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 기본적으로이 저장된 프로시저는 실행에 대 한 멤버에 게 부여 해제 합니다 **sysadmin** 고정된 서버 역할 및 **DatabaseMailUserRole**합니다. 멤버는 **sysadmin** 고정된 서버 역할에서 모든 사용자가 보낸 전자 메일을 삭제 하는이 절차를 실행할 수 있습니다. 멤버인 **DatabaseMailUserRole** 해당 사용자가 보낸 전자 메일만 삭제할 수 있습니다.  
+ 기본적으로 **sysadmin** 고정 서버 역할 및 **DatabaseMailUserRole**의 멤버에 대해이 저장 프로시저를 실행할 수 있습니다. **Sysadmin** 고정 서버 역할의 멤버는이 프로시저를 실행 하 여 모든 사용자가 보낸 전자 메일을 삭제할 수 있습니다. **DatabaseMailUserRole** 의 멤버는 해당 사용자가 보낸 전자 메일만 삭제할 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
@@ -86,9 +86,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
- [sysmail_event_log &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
- [sysmail_mailattachments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
+ [sysmail_allitems &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
+ [sysmail_event_log &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
+ [sysmail_mailattachments &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   
  [데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기](../../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md)  
   
   

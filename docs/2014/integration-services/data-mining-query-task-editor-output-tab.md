@@ -14,17 +14,17 @@ ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db02b92ffead56451e72c7a1d564c2c9956d2ecc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059781"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890465"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>데이터 마이닝 쿼리 태스크 편집기(출력 탭)
   **데이터 마이닝 쿼리 태스크 편집기** 대화 상자의 **출력** 탭을 사용하여 예측 쿼리의 대상을 지정할 수 있습니다.  
   
- 패키지에서 데이터 마이닝을 구현하는 방법에 대한 자세한 내용은 [데이터 마이닝 쿼리 태스크](control-flow/data-mining-query-task.md) 및 [데이터 마이닝 솔루션](../analysis-services/data-mining/data-mining-solutions.md)을 참조하세요.  
+ 패키지에서 데이터 마이닝을 구현하는 방법에 대한 자세한 내용은 [데이터 마이닝 쿼리 태스크](control-flow/data-mining-query-task.md) 및 [데이터 마이닝 솔루션](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)을 참조하세요.  
   
 ## <a name="general-options"></a>일반 옵션  
  **이름**  
@@ -53,6 +53,6 @@ ms.locfileid: "66059781"
  [Integration Services 오류 및 메시지 참조](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [데이터 마이닝 쿼리 태스크 편집기&#40;마이닝 모델 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [데이터 마이닝 쿼리 태스크 편집기&#40;쿼리 탭&#41;](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [데이터 마이닝 디자이너](../analysis-services/data-mining/data-mining-designer.md)  
+ [데이터 마이닝 디자이너](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

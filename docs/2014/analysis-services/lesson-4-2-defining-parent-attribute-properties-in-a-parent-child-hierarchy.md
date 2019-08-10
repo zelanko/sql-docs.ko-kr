@@ -10,17 +10,17 @@ ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 613156430d7c85977aee2e147c5b158124316a94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8688e40fc0075bded60069bea24e8114dd51fa0f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078665"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888385"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>부모-자식 계층의 부모 특성 속성 정의
   부모-자식 계층은 두 개의 테이블 열을 기반으로 하는 차원의 계층입니다. 이 두 열은 차원의 멤버 간 계층 관계를 정의합니다. *멤버 키 열*이라는 첫 번째 열은 각 차원 멤버를 식별합니다. *부모 열*이라는 다른 하나의 열은 각 차원 멤버의 부모를 식별합니다. 부모 특성의 **NamingTemplate** 속성은 부모-자식 계층의 각 수준 이름을 지정하고 **MembersWithData** 속성은 부모 멤버의 데이터 표시 여부를 지정합니다.  
   
- 자세한 내용은 [부모-자식 계층 구조](multidimensional-models/parent-child-dimension.md), [부모-자식 계층의 특성](multidimensional-models/parent-child-dimension-attributes.md)  
+ 자세한 내용은 [부모-자식 계층](multidimensional-models/parent-child-dimension.md), [부모-자식 계층의 특성](multidimensional-models/parent-child-dimension-attributes.md) 을 참조 하세요.  
   
 > [!NOTE]  
 >  차원 마법사를 사용하여 차원을 만들면 마법사에서 부모-자식 관계가 있는 테이블을 인식하고 자동으로 부모-자식 계층을 정의합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "66078665"
   
      다음 그림에서는 확장된 Employees 계층을 보여 줍니다.  
   
-10. ![Employees 계층을 보여 주는 피벗 테이블](../../2014/tutorials/media/l4-employee-1.gif "직원 계층을 보여 주는 피벗 테이블")  
+10. ![Employees 계층을 보여 주는 피벗 테이블](../../2014/tutorials/media/l4-employee-1.gif "Employees 계층을 보여 주는 피벗 테이블")  
   
      Level 03의 각 관리자가 판매한 판매량도 Level 04에 표시됩니다. 각 관리자도 다른 관리자의 직원이기 때문입니다. 다음 태스크에서는 이러한 판매량을 숨기는 방법에 대해 설명합니다.  
   
@@ -101,10 +101,10 @@ ms.locfileid: "66078665"
   
      다음 이미지에서는 Employees 계층의 변경 내용을 보여 줍니다. Stephen Y. Jiang은 더 이상 직원으로 나타나지 않습니다.  
   
-     ![Employees 계층을 수정할](../../2014/tutorials/media/l4-employee-2.png "수정 직원 계층")  
+     ![수정 된 Employees 계층](../../2014/tutorials/media/l4-employee-2.png "수정 된 Employees 계층")  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [자동으로 특성 멤버 그룹화](../analysis-services/lesson-4-3-automatically-grouping-attribute-members.md)  
+ [자동으로 특성 멤버 그룹화](https://docs.microsoft.com/analysis-services/lesson-4-3-automatically-grouping-attribute-members)  
   
 ## <a name="see-also"></a>관련 항목  
  [부모-자식 계층](multidimensional-models/parent-child-dimension.md)   

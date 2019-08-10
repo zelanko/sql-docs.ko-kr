@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 275a7546bae70ba329cff7af2df107e43c3d1b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63de71ae82e60b8ec7d8a39e18f89e6bd2393f2d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047165"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892942"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin(MDX)
 
@@ -39,14 +39,14 @@ Set_Expression1 * Set_Expression2 [* ...n]
  집합을 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **Crossjoin** 이상 지정 된 집합 또는 함수 2의 교차곱을 반환 합니다. 결과 집합에서 튜플의 순서는 집합의 조인 순서 및 해당 멤버의 순서에 따라 달라집니다. 예를 들어 경우 첫 번째 집합은 구성의 {x1, x2,..., x*n*}, 고 두 번째 집합이 {y1, y2,..., y*n*}, 이러한 집합의 교차곱은:  
+ **Crossjoin** 함수는 지정 된 두 개 이상의 집합에 대 한 교차곱을 반환 합니다. 결과 집합에서 튜플의 순서는 집합의 조인 순서 및 해당 멤버의 순서에 따라 달라집니다. 예를 들어 첫 번째 집합이 {x1, x2,..., x*n*}으로 구성 되 고 두 번째 집합이 {y1, y2, ..., y*n*}로 구성 된 경우 이러한 집합의 교차곱은 다음과 같습니다.  
   
- {0} (x1, y1), (x1, y2),..., (x1, y*n*), (x2, y1), (x2 y2),...,  
+ {(x1, y1), (x1, y2),..., (x1, y*n*), (x2, y1), (x2, y2),...,  
   
  (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
   
 > [!IMPORTANT]  
->  크로스 조인의 집합이 동일한 차원에 있는 다른 특성 계층의 튜플로 구성된 경우 이 함수는 실제로 존재하는 튜플만 반환합니다. 자세한 내용은 [9a43-81a1af7eb36c"&gt;key Concepts in MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)합니다.  
+>  크로스 조인의 집합이 동일한 차원에 있는 다른 특성 계층의 튜플로 구성된 경우 이 함수는 실제로 존재하는 튜플만 반환합니다. 자세한 내용은 [MDX &#40;Analysis Services&#41;의 주요 개념](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)을 참조 하세요.  
   
 ## <a name="examples"></a>예  
  다음 쿼리에서는 쿼리의 Columns 및 Rows 축에서 Crossjoin 함수를 사용하는 간단한 예를 보여 줍니다.  

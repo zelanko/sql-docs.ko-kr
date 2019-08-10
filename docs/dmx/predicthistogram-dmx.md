@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 61a90dc7fa034fc8983246aa4eb7119832a2d47d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdc63d1c93d1290c701233cb94f71f157c771182
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008015"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893856"
 ---
 # <a name="predicthistogram-dmx"></a>PredictHistogram(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,10 +34,10 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
  테이블입니다.  
   
 ## <a name="remarks"></a>설명  
- 히스토그램은 통계 열을 생성합니다. 사용 되는 열 참조 유형에 따라 달라 집니다 반환된 된 히스토그램의 열 구조를 **PredictHistogram** 함수입니다.  
+ 히스토그램은 통계 열을 생성합니다. 반환 된 히스토그램의 열 구조는 **PredictHistogram** 함수와 함께 사용 되는 열 참조의 유형에 따라 달라 집니다.  
   
 ## <a name="scalar-columns"></a>스칼라 열  
- 에 대 한는 \<스칼라 열 참조 >, 히스토그램은 합니다 **PredictHistogram** 다음 열으로 구성 함수 반환:  
+ 스칼라 열 참조 >의 경우 PredictHistogram 함수가 반환 하는 히스토그램은 다음과 같은 열로 구성 됩니다. \<  
   
 -   예측되는 값  
   
@@ -47,18 +47,18 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
   
 -   **$ProbabilityVariance**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 알고리즘을 지원 하지 않습니다 **$ProbabilityVariance**합니다. 이 열은 항상 [!INCLUDE[msCoName](../includes/msconame-md.md)] 알고리즘에 대해 0을 포함합니다.  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]데이터 마이닝 알고리즘은 **$ProbabilityVariance**를 지원 하지 않습니다. 이 열은 항상 [!INCLUDE[msCoName](../includes/msconame-md.md)] 알고리즘에 대해 0을 포함합니다.  
   
 -   **$ProbabilityStdev**  
   
-     [!INCLUDE[msCoName](../includes/msconame-md.md)] 데이터 마이닝 알고리즘을 지원 하지 않습니다 **$ProbabilityStdev**합니다. 이 열은 항상 [!INCLUDE[msCoName](../includes/msconame-md.md)] 알고리즘에 대해 0을 포함합니다.  
+     [!INCLUDE[msCoName](../includes/msconame-md.md)]데이터 마이닝 알고리즘은 **$ProbabilityStdev**를 지원 하지 않습니다. 이 열은 항상 [!INCLUDE[msCoName](../includes/msconame-md.md)] 알고리즘에 대해 0을 포함합니다.  
   
 -   **$AdjustedProbability**  
   
-     **$AdjustedProbability** 열이를 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 확장을 [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB for Data Mining 사양 합니다.  
+     **$AdjustedProbability** 열은 데이터 마이닝 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 사양의 [!INCLUDE[msCoName](../includes/msconame-md.md)] OLE DB에 대 한 확장입니다.  
   
 ## <a name="cluster-columns"></a>클러스터 열  
- 히스토그램은를 **PredictHistogram** 함수에 대해 반환을 \<클러스터 열 참조 > 다음 열으로 구성 됩니다.  
+ **PredictHistogram** 함수가 \<클러스터 열 참조 > 대해 반환 하는 히스토그램은 다음과 같은 열로 구성 됩니다.  
   
 -   **$Cluster** (클러스터 이름을 나타냄)  
   
@@ -67,7 +67,7 @@ PredictHistogram(<scalar column reference> | <cluster column reference>)
 -   **$Probability**  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 단일 쿼리를 사용하여 Bike Buyer 열의 예측 상태를 반환합니다. 쿼리를 사용 하 여 얻은 조정 된 확률을 기반으로 Bike Buyer 특성의 맨 위 두 가능성이 가장 높은 상태를 반환 합니다 **PredictHistogram** 함수입니다.  
+ 다음 예에서는 단일 쿼리를 사용하여 Bike Buyer 열의 예측 상태를 반환합니다. 또한이 쿼리는 **PredictHistogram** 함수를 사용 하 여 얻은 조정 된 확률에 따라 자전거 구매자 특성의 가장 중요 한 두 가지 상태를 반환 합니다.  
   
 ```  
 SELECT  
@@ -91,8 +91,8 @@ NATURAL PREDICTION JOIN
  [PredictStdev &#40;DMX&#41;](../dmx/predictstdev-dmx.md)   
  [PredictSupport &#40;DMX&#41;](../dmx/predictsupport-dmx.md)   
  [PredictVariance &#40;DMX&#41;](../dmx/predictvariance-dmx.md)   
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
- [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [함수 &#40;DMX&#41;](../dmx/functions-dmx.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)  
   

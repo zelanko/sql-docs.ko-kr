@@ -14,12 +14,12 @@ ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bdd12cf49c86cb9a622c1ac546fd755056b5e357
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a71c1781432ee4ca35c72beb8b091380f2e72513
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66106978"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891876"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>텍스트 기반 쿼리 디자이너 사용자 인터페이스(보고서 작성기)
   텍스트 기반 쿼리 디자이너에서 데이터 원본에서 지원하는 쿼리 언어를 사용하여 쿼리를 지정하고, 쿼리를 실행하고, 디자인 타임에 결과를 볼 수 있습니다. 여러 개의 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문, 사용자 지정 데이터 처리 확장 프로그램에 대한 쿼리 또는 명령 구문, 식으로 지정된 쿼리를 지정할 수 있습니다. 텍스트 기반 쿼리 디자이너는 쿼리를 전처리하지 않고 모든 종류의 쿼리 구문을 포함할 수 있으므로 많은 데이터 원본 유형에 대한 기본 쿼리 디자이너 도구입니다.  
@@ -40,13 +40,13 @@ ms.locfileid: "66106978"
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다. 모든 데이터 원본 유형에서 그래픽 쿼리 디자이너를 지원하는 것은 아닙니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. sql 및 rdl 파일 형식만 지원됩니다.|  
-|![쿼리 실행](../../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 결과 창에 결과 집합을 표시합니다.|  
+|![쿼리 실행](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행하고 결과 창에 결과 집합을 표시합니다.|  
 |**명령 유형**|**Text**, **StoredProcedure**또는 **TableDirect**를 선택합니다. 저장 프로시저에 매개 변수가 있을 경우 도구 모음에서 **실행** 을 클릭하면 **쿼리 매개 변수 정의** 대화 상자가 표시되며 필요에 따라 값을 입력할 수 있습니다.<br /><br /> 참고: 저장 프로시저에서 둘 이상의 결과 세트를 반환할 경우 첫 번째 결과 집합만 데이터 세트를 채우는 데 사용됩니다.|  
   
 ### <a name="command-type-text"></a>Text 명령 유형  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 집합을 만들 때 기본적으로 관계형 쿼리 디자이너가 열립니다. 텍스트 기반 쿼리 디자이너로 전환하려면 도구 모음에서 **텍스트로 편집** 토글 단추를 클릭합니다. 텍스트 기반 쿼리 디자이너에는 쿼리 창 및 결과 창이 제공됩니다. 다음 그림에서는 레이블과 함께 각 창을 보여 줍니다.  
   
- ![관계형 데이터 쿼리를 위한 일반 쿼리 디자이너](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "관계형 데이터 쿼리를 위한 일반 쿼리 디자이너")  
+ ![관계형 데이터 쿼리를 위한 일반 쿼리 디자이너](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-dsaw-sql-generic.gif "관계형 데이터 쿼리를 위한 일반 쿼리 디자이너")  
   
  다음 표에서는 각 창의 기능을 설명합니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66106978"
 |결과|쿼리 결과를 표시합니다. 쿼리를 실행하려면 아무 창이나 마우스 오른쪽 단추로 클릭한 다음 **실행**을 클릭하거나 도구 모음에서 **실행** 단추를 클릭합니다.|  
   
 #### <a name="example"></a>예제  
- 다음 쿼리는에서 성 목록을 반환 합니다 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 데이터베이스 `ContactType` 테이블는 `Person` 스키마.  
+ 다음 쿼리는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** `ContactType` 데이터베이스테이블에서스키마에대한마지막이름목록을반환합니다.`Person`  
   
 ```  
 SELECT Name FROM Person.ContactType  
@@ -69,7 +69,7 @@ SELECT Name FROM Person.ContactType
   
  다음 그림에서는 저장 프로시저를 실행할 때 쿼리 및 결과 창을 보여 줍니다. 이 경우 입력 매개 변수는 상수입니다.  
   
- ![텍스트 기반 쿼리 디자이너의 저장 프로시저](../../analysis-services/media/rs-relational-text-sp.gif "텍스트 기반 쿼리 디자이너의 저장 프로시저")  
+ ![텍스트 기반 쿼리 디자이너의 저장 프로시저](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-text-sp.gif "텍스트 기반 쿼리 디자이너의 저장 프로시저")  
   
  다음 표에서는 각 창의 기능을 설명합니다.  
   
@@ -79,7 +79,7 @@ SELECT Name FROM Person.ContactType
 |결과|쿼리 결과를 표시합니다. 쿼리를 실행하려면 아무 창이나 마우스 오른쪽 단추로 클릭한 다음 **실행**을 클릭하거나 도구 모음에서 **실행** 단추를 클릭합니다.|  
   
 #### <a name="example"></a>예제  
- 다음 호출을 쿼리 합니다 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 저장 프로시저 `uspGetWhereUsedProductID`합니다. 쿼리를 실행할 때 제품 ID 번호 매개 변수에 대한 값을 입력해야 합니다.  
+ 다음 쿼리는 **2008** 저장 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]프로시저 `uspGetWhereUsedProductID`를 호출 합니다. 쿼리를 실행할 때 제품 ID 번호 매개 변수에 대한 값을 입력해야 합니다.  
   
 ```  
 uspGetWhereUsedProductID  
@@ -98,7 +98,7 @@ uspGetWhereUsedProductID
  **명령 typeTableDirect**를 선택하면 텍스트 기반 쿼리 디자이너에 쿼리 창 및 결과 창이 제공됩니다. 테이블을 입력하고 **실행** 단추를 클릭할 경우 해당 테이블의 모든 열이 반환됩니다.  
   
 #### <a name="example"></a>예제  
- OLE DB 데이터 원본 유형의 경우 다음 데이터 집합 쿼리는 결과의 모든 연락처 유형에 대 한 집합을 반환 합니다 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 데이터베이스입니다.  
+ OLE DB 데이터 원본 유형의 경우 다음 데이터 집합 쿼리는 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** 데이터베이스에 있는 모든 연락처 유형에 대 한 결과 집합을 반환 합니다.  
   
  `Person.ContactType`  
   

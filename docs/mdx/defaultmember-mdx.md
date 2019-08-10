@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c5843ec42cf4ba712a2e55c9cc96dd6f482c0760
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0b5039ae62eac25d698442d4aeb92ad3c4ebc3a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047088"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892906"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember(MDX)
 
@@ -35,7 +35,7 @@ Hierarchy_Expression.DefaultMember
  특성의 기본 멤버는 쿼리에 특성이 포함되어 있지 않을 때 식을 평가하는 데 사용됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 합니다 **DefaultMember** 함수를 함께 합니다 **이름** Adventure Works 큐브에 있는 Destination Currency 차원의 기본 멤버를 반환 합니다. 이 예에서는 반환 **미국 달러**합니다. 합니다 **이름을** 함수는 사용 되는 측정값의 기본 속성 대신 측정값의 이름을 반환 **값**합니다.  
+ 다음 예에서는 **DefaultMember** 함수를 **Name** 함수와 함께 사용 하 여 놀이 Works 큐브의 Destination Currency 차원에 대 한 기본 멤버를 반환 합니다. 이 예에서는 **미국 달러**를 반환 합니다. **Name** 함수는 측정값의 default 속성 ( **value**)이 아닌 측정값의 이름을 반환 하는 데 사용 됩니다.  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -46,6 +46,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>관련 항목  
  [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)   
- [기본 멤버 정의](../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
+ [기본 멤버 정의](https://docs.microsoft.com/analysis-services/multidimensional-models/attribute-properties-define-a-default-member)  
   
   

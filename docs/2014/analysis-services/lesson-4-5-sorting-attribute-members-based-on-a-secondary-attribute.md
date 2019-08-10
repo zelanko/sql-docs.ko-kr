@@ -1,5 +1,5 @@
 ---
-title: 보조 특성에 따라 특성 멤버 정렬 | Microsoft Docs
+title: 보조 특성을 기준으로 특성 멤버 정렬 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,15 +10,15 @@ ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f7424a92ce4d8e4f6b0ca4c55238ede33d982933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db52caa0670af868cd5986c85890c291e5f6aac7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078696"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888309"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>보조 특성을 기준으로 특성 멤버 정렬
-  3단원에서는 이름이나 키 값을 기준으로 특성 멤버를 정렬하는 방법과 복합 멤버 키를 사용하여 특성 멤버와 정렬 순서를 조정하는 방법에 대해 배웠습니다. 자세한 내용은 [Date 차원 수정](../analysis-services/lesson-3-4-modifying-the-date-dimension.md)을 참조하세요. 그러나 특성의 키나 이름으로는 원하는 정렬 순서를 얻을 수 없는 경우 보조 특성을 사용하여 필요한 순서에 따라 정렬할 수 있습니다. 특성 간의 관계를 정의함으로써 두 번째 특성을 사용하여 첫 번째 특성의 멤버를 정렬할 수 있습니다.  
+  3단원에서는 이름이나 키 값을 기준으로 특성 멤버를 정렬하는 방법과 복합 멤버 키를 사용하여 특성 멤버와 정렬 순서를 조정하는 방법에 대해 배웠습니다. 자세한 내용은 [Date 차원 수정](https://docs.microsoft.com/analysis-services/lesson-3-4-modifying-the-date-dimension)을 참조하세요. 그러나 특성의 키나 이름으로는 원하는 정렬 순서를 얻을 수 없는 경우 보조 특성을 사용하여 필요한 순서에 따라 정렬할 수 있습니다. 특성 간의 관계를 정의함으로써 두 번째 특성을 사용하여 첫 번째 특성의 멤버를 정렬할 수 있습니다.  
   
  특성 관계는 특성 간의 관계나 종속성을 정의합니다. 하나의 관계형 테이블을 기준으로 하는 차원에서는 일반적으로 모든 특성이 키 특성을 통해 서로 연결됩니다. 이는 차원에 대한 모든 특성이 차원의 키 특성으로 각 관련 측정값 그룹의 팩트 테이블에 있는 팩트에 연결된 멤버에 대한 정보를 제공하기 때문입니다. 여러 테이블을 기준으로 하는 차원에서는 일반적으로 특성이 테이블 간의 조인 키를 기준으로 연결됩니다. 기본 데이터에서 지원하는 경우 관련 특성을 사용하여 정렬 순서를 지정할 수 있습니다. 예를 들어, 관련 특성에 대한 정렬 논리를 제공하는 새 특성을 만들 수 있습니다.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078696"
   
      다음 이미지와 같이 이제 월이 시간순으로 정렬됩니다.  
   
-     ![시간순으로 사용자 계층을 수정할](../../2014/tutorials/media/l4-memberproperties-3.gif "순서로 사용자 계층 구조를 수정 합니다.")  
+     ![시간 순서 대로 수정 된 사용자 계층](../../2014/tutorials/media/l4-memberproperties-3.gif "시간 순서 대로 수정 된 사용자 계층")  
   
 ## <a name="defining-attribute-relationships-and-sort-order-in-the-customer-dimension"></a>Customer 차원의 특성 관계 및 정렬 순서 정의  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66078696"
   
      다음 이미지에서는 멤버 키의 ASCII 값을 기준으로 정렬된 **Commute Distance** 특성 계층 멤버를 보여 줍니다.  
   
-     ![통근 거리 특성 계층](../../2014/tutorials/media/l4-memberproperties-4.gif "통근 거리 특성 계층")  
+     ![Commute Distance 특성 계층](../../2014/tutorials/media/l4-memberproperties-4.gif "Commute Distance 특성 계층")  
   
 2.  Customer 차원에 대한 차원 디자이너에서 **차원 구조** 탭으로 전환하여 **데이터 원본 뷰** 창의 **Customer** 테이블에 있는 **CommuteDistanceSort** 를 마우스 오른쪽 단추로 클릭한 다음 **열의 새 특성**을 클릭합니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66078696"
   
      다음 이미지와 같이 이제 특성 계층 멤버가 증가하는 거리를 기준으로 논리적 순서에 따라 정렬됩니다.  
   
-     ![통근 거리 특성 계층을 다시 정렬](../../2014/tutorials/media/l4-memberproperties-5.gif "Re-sorted 통근 거리 특성 계층")  
+     ![다시 정렬 된 Commute Distance 특성 계층](../../2014/tutorials/media/l4-memberproperties-5.gif "다시 정렬 된 Commute Distance 특성 계층")  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
  [사용자 정의 계층의 특성 간 특성 관계 지정](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  

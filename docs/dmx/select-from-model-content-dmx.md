@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;모델&gt;합니다. 콘텐츠 (DMX) | Microsoft Docs
+title: '&lt;모델&gt;에서 선택 합니다. 콘텐츠 (DMX) | Microsoft Docs'
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,14 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61cbacee45147b7b6203e9cb2164c02cdc2c7453
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906730"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892837"
 ---
-# <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;모델&gt;합니다. 콘텐츠 (DMX)
+# <a name="select-from-ltmodelgtcontent-dmx"></a>&lt;모델&gt;에서 선택 합니다. 콘텐츠 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   지정한 데이터 마이닝 모델의 마이닝 모델 스키마 행 집합을 반환합니다.  
@@ -46,12 +46,12 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 합니다 **SELECT FROM**  _\<모델 >_ **합니다. 콘텐츠** 문은 각 알고리즘에 관련 된 내용을 반환 합니다. 예를 들어 사용자 지정 응용 프로그램에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 사용할 수는 **SELECT FROM \<모델 >. 콘텐츠** 문을 모델의 NODE_RULE 열 값을 반환 합니다.  
+ **SELECT**  _FROM\<model >_ **입니다. CONTENT** 문은 각 알고리즘과 관련 된 콘텐츠를 반환 합니다. 예를 들어 사용자 지정 응용 프로그램에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 **SELECT FROM \<model >를 사용할 수 있습니다.** 모델의 NODE_RULE 열에 있는 값을 반환 하는 내용 문입니다.  
   
  다음 표에서는 마이닝 모델 콘텐츠에 포함된 열을 나열합니다.  
   
 > [!NOTE]  
->  알고리즘은 콘텐츠를 올바르게 표시하기 위해 열을 다르게 해석할 수 있습니다. 각 알고리즘 및 해석 하 고 각 모델 유형에 대해 콘텐츠 마이닝 모델을 쿼리 하는 방법에 대 한 팁에 대 한 콘텐츠는 마이닝 모델의 설명을 참조 하세요 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)합니다.  
+>  알고리즘은 콘텐츠를 올바르게 표시하기 위해 열을 다르게 해석할 수 있습니다. 각 알고리즘에 대 한 마이닝 모델 콘텐츠 및 각 모델 유형에 대 한 마이닝 모델 콘텐츠를 해석 하 고 쿼리 하는 방법에 대 한 설명은 [마이닝 모델 콘텐츠 &#40;Analysis Services-데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining)을 참조 하세요.  
   
 |CONTENT 행 집합 열|설명|  
 |---------------------------|-----------------|  
@@ -88,10 +88,10 @@ WHERE NODE_TYPE = 1
 |-----------------|----------------|  
 |TM_DecisionTree|0|  
   
- 다음 쿼리에서 **IsDescendant** 함수를 쿼리에서 반환 된 노드의 인접 한 자식을 반환 합니다.  
+ 다음 쿼리에서는 **Isdescendant** 함수를 사용 하 여 이전 쿼리에서 반환 된 노드의 직계 자식을 반환 합니다.  
   
 > [!NOTE]  
->  인수로 NODE_ID를 반환 하는 하위 select 문을 사용할 수 없습니다 NODE_NAME의 값이 문자열 이기 때문에 합니다 **IsDescendant** 함수입니다.  
+>  NODE_NAME의 값은 문자열 이므로 하위 select 문을 사용 하 여 NODE_ID를 **Isdescendant** 함수에 대 한 인수로 반환할 수 없습니다.  
   
 ```  
 SELECT NODE_NAME, NODETYPE, NODE_CAPTION   
@@ -101,7 +101,7 @@ WHERE ISDESCENDANT('0')
   
  예상 결과:  
   
- 모델이 의사 결정 트리 모델이므로 모델 부모 노드의 하위 항목에는 예측 가능한 특성을 나타내는 한계 통계 노드 하나와 입력 특성 및 값이 들어 있는 여러 노드가 포함되어 있습니다. 자세한 내용은 [의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)를 참조하세요.  
+ 모델이 의사 결정 트리 모델이므로 모델 부모 노드의 하위 항목에는 예측 가능한 특성을 나타내는 한계 통계 노드 하나와 입력 특성 및 값이 들어 있는 여러 노드가 포함되어 있습니다. 자세한 내용은 [의사 결정 트리 모델에 대한 마이닝 모델 콘텐츠&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining)를 참조하세요.  
   
 ## <a name="using-the-flattened-keyword"></a>FLATTENED 키워드 사용  
  마이닝 모델 콘텐츠의 중첩 테이블 열에는 모델에 대한 유용한 정보가 들어 있는 경우가 많습니다. FLATTENED 키워드를 사용하면 계층적 행 집합을 지원하는 공급자를 사용하지 않아도 중첩 테이블 열에서 데이터를 검색할 수 있습니다.  
@@ -143,8 +143,8 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>관련 항목  
- [선택 &#40;DMX&#41;](../dmx/select-dmx.md)   
- [Data Mining Extensions &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
+ [DMX &#40;선택&#41;](../dmx/select-dmx.md)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 데이터 조작 문](../dmx/dmx-statements-data-manipulation.md)   
  [DMX&#40;Data Mining Extensions&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

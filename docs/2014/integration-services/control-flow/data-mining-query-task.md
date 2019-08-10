@@ -15,12 +15,12 @@ ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 7cd5890df8ddc080aaa3e647c77b3c09d8d35216
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f11f2eac6d1d44ed361324f2b5e25cea80df8768
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832617"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890404"
 ---
 # <a name="data-mining-query-task"></a>데이터 마이닝 쿼리 태스크
   데이터 마이닝 쿼리 태스크는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 작성된 데이터 마이닝 모델을 기반으로 예측 쿼리를 실행합니다. 예측 쿼리는 마이닝 모델을 사용하여 새 데이터에 대한 예측을 만듭니다. 예를 들어 예측 쿼리는 여름 기간 동안 판매될 요트 수를 예측하거나 요트를 구매할 잠재 고객 목록을 생성할 수 있습니다.  
@@ -36,9 +36,9 @@ ms.locfileid: "62832617"
 ## <a name="prediction-queries"></a>예측 쿼리  
  쿼리는 DMX(Data Mining Extensions) 문입니다. DMX 언어는 마이닝 모델 작업을 지원하는 SQL 언어의 확장입니다. DMX 언어를 사용하는 방법은 [DMX&#40;Data Mining Extensions&#41; 참조](/sql/dmx/data-mining-extensions-dmx-reference)를 참조하세요.  
   
- 이 태스크는 동일한 마이닝 구조를 사용하는 여러 개의 마이닝 모델을 쿼리할 수 있습니다. 마이닝 모델은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 데이터 마이닝 알고리즘 중 하나를 사용하여 작성합니다. 데이터 마이닝 쿼리 태스크가 참조하는 마이닝 구조에 다른 알고리즘을 사용하여 작성된 여러 개의 마이닝 모델이 포함될 수도 있습니다. 자세한 내용은 [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md) 및 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요.  
+ 이 태스크는 동일한 마이닝 구조를 사용하는 여러 개의 마이닝 모델을 쿼리할 수 있습니다. 마이닝 모델은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 데이터 마이닝 알고리즘 중 하나를 사용하여 작성합니다. 데이터 마이닝 쿼리 태스크가 참조하는 마이닝 구조에 다른 알고리즘을 사용하여 작성된 여러 개의 마이닝 모델이 포함될 수도 있습니다. 자세한 내용은 [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) 및 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)을 참조하세요.  
   
- 데이터 마이닝 쿼리 태스크가 실행하는 예측 쿼리는 단일 행이나 데이터 집합을 결과로 반환합니다. 단일 행을 반환하는 쿼리를 단일 쿼리라고 합니다. 예를 들어 여름 기간 동안 판매될 요트 수를 예측하는 쿼리는 한 개의 숫자를 반환합니다. 단일 행을 반환 하는 예측 쿼리에 대 한 자세한 내용은 참조 하세요. [데이터 마이닝 쿼리 인터페이스](../../analysis-services/data-mining/data-mining-query-tools.md)합니다.  
+ 데이터 마이닝 쿼리 태스크가 실행하는 예측 쿼리는 단일 행이나 데이터 집합을 결과로 반환합니다. 단일 행을 반환하는 쿼리를 단일 쿼리라고 합니다. 예를 들어 여름 기간 동안 판매될 요트 수를 예측하는 쿼리는 한 개의 숫자를 반환합니다. 단일 행을 반환 하는 예측 쿼리에 대 한 자세한 내용은 [데이터 마이닝 쿼리 인터페이스](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)를 참조 하세요.  
   
  쿼리 결과는 테이블에 저장됩니다. 지정한 이름의 테이블이 이미 있으면 데이터 마이닝 쿼리 태스크는 동일한 이름에 번호를 추가하여 새 테이블을 만들거나 테이블 내용을 덮어쓸 수 있습니다.  
   

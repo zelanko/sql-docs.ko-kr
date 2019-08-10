@@ -8,17 +8,17 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 24a1f2b1cb49335ba529126005c41b062e7a9e60
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105412"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891216"
 ---
 # <a name="identifiers-mdx"></a>식별자(MDX)
 
 
-  식별자에는 Analysis Services 개체의 이름입니다. 모든 개체 하는 식별자가 있어야 합니다. 식별자로는 큐브, 차원, 계층, 수준, 멤버 등이 있습니다. MDX 문에서는 개체를 참조하는 개체의 식별자를 사용합니다.  
+  식별자는 Analysis Services 개체의 이름입니다. 모든 개체에는 식별자가 있어야 하 고 식별자가 있어야 합니다. 식별자로는 큐브, 차원, 계층, 수준, 멤버 등이 있습니다. MDX 문에서는 개체를 참조하는 개체의 식별자를 사용합니다.  
   
  개체의 이름을 어떻게 지정하느냐에 따라 개체 식별자는 일반 식별자 또는 구분 식별자가 됩니다.  
   
@@ -32,19 +32,19 @@ ms.locfileid: "68105412"
   
 1.  첫 문자는 다음 중 하나여야 합니다.  
   
-    -   문자는 Unicode Standard 2.0에서 정의 합니다. 다른 언어의 문자 외에도 문자의 유니코드 정의에는 a에서 z까지 그리고 A에서 Z까지의 라틴 문자가 포함됩니다.  
+    -   유니코드 표준 2.0에 정의 된 문자입니다. 다른 언어의 문자 외에도 문자의 유니코드 정의에는 a에서 z까지 그리고 A에서 Z까지의 라틴 문자가 포함됩니다.  
   
     -   밑줄(_)  
   
 2.  그 다음 문자에는 다음과 같은 문자를 사용할 수 있습니다.  
   
-    -   Unicode Standard 2.0에서 정의한 문자입니다.  
+    -   유니코드 표준 2.0에 정의 된 문자입니다.  
   
     -   기본 라틴 또는 기타 국가 스크립트의 10진수  
   
     -   밑줄(_)  
   
-3.  MDX 예약어는 식별자로 사용할 수 없습니다. MDX에서 예약어는 대/소문자를 구분하지 않습니다. 자세한 내용은 [예약 된 키워드 &#40;MDX 구문&#41;](../mdx/reserved-keywords-mdx-syntax.md)합니다.  
+3.  MDX 예약어는 식별자로 사용할 수 없습니다. MDX에서 예약어는 대/소문자를 구분하지 않습니다. 자세한 내용은 [예약 된 &#40;키워드 MDX 구문&#41;](../mdx/reserved-keywords-mdx-syntax.md)을 참조 하세요.  
   
 4.  포함된 공백이나 특수 문자는 사용할 수 없습니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68105412"
   
 -   개체 이름 또는 이름 중 일부에 예약어를 사용하는 경우  
   
-     예약어는 개체 이름으로 사용하지 않는 것이 좋습니다. 이전 버전에서 업그레이드 된 데이터베이스 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이전 버전의 예약어를 포함 하는 식별자를 포함할 수 있지만 이제 예약 됩니다. 해당 개체에 대한 식별자를 변경할 수 있을 때까지는 구분 식별자를 사용하여 개체를 참조할 수 있습니다.  
+     예약어는 개체 이름으로 사용하지 않는 것이 좋습니다. 이전 버전의 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 업그레이드 된 데이터베이스에는 이전 버전에서 예약 되지 않은 단어를 포함 하는 식별자가 포함 되어 있지만 현재 예약 되어 있습니다. 해당 개체에 대한 식별자를 변경할 수 있을 때까지는 구분 식별자를 사용하여 개체를 참조할 수 있습니다.  
   
 -   개체 이름에 정규화된 식별자로 나열되지 않은 문자를 사용하는 경우  
   
@@ -124,7 +124,7 @@ ms.locfileid: "68105412"
   
 ## <a name="see-also"></a>관련 항목  
  [MDX 언어 참조 & #40; Mdx& #41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
- [MDX 구문 요소 &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX 쿼리 기본 사항 & #40; Analysis Services & #41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
+ [Mdx 구문 요소 &#40;mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

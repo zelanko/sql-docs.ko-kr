@@ -1,5 +1,5 @@
 ---
-title: 사용법 (DMX) | Microsoft Docs
+title: 사용량 (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,23 +8,23 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 4f576243ead99869ae4b12dfc4e79a1a6d57f5cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b961282ba6bc25caa260a3e156f843a413a5ef1a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939900"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893109"
 ---
 # <a name="usage-dmx"></a>사용법(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  확장 DMX (Data Mining)에서 새 데이터 마이닝 모델 정의를 사용 하는 경우 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 모델을 작성 하는 데이터 마이닝 알고리즘은 각 열을 사용 하는 방법을 지정 해야 합니다. 다음 유형 중 하나로 열을 지정할 수 있습니다.  
+  DMX (데이터 마이닝 확장)를 사용 하 여에서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]새 데이터 마이닝 모델을 정의 하는 경우 모델을 작성 하는 데이터 마이닝 알고리즘에서 각 열을 사용 하는 방법을 지정 해야 합니다. 다음 유형 중 하나로 열을 지정할 수 있습니다.  
   
 -   **Key**  
   
 -   **키 시퀀스**  
   
--   **Key Time**  
+-   **키 시간**  
   
 -   **Predict**  
   
@@ -34,18 +34,18 @@ ms.locfileid: "67939900"
   
  모델을 올바르게 처리하려면 각 행을 고유하게 식별하는 키 열, 예측 가능한 모델을 만드는 경우 예측을 만들 대상 열, 그리고 대상 열을 예측하는 관계를 만들기 위해 입력 열로 사용할 열을 알고리즘에서 파악해야 합니다.  
   
- 으로 지정 된 열을 **Predict** 형식 입력 및 출력 열으로 사용 됩니다. 으로 지정 된 열 **PredictOnly** 출력 열으로만 사용 됩니다. 특정 알고리즘에서는 Predict 열을 다른 방식으로 처리할 수 있습니다.  
+ **Predict** 유형으로 지정 된 열은 입력 및 출력 열 모두로 사용 됩니다. **Predictonly** 로 지정 된 열은 출력 열로만 사용 됩니다. 특정 알고리즘에서는 Predict 열을 다른 방식으로 처리할 수 있습니다.  
   
- 열에 대 한 자세한 내용은 사용 하는 유형에 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 지 원하는 참조 [마이닝 모델 열](../analysis-services/data-mining/mining-model-columns.md)합니다.  
+ 에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 지 원하는 열 사용 유형에 대 한 자세한 내용은 [마이닝 모델 열](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)을 참조 하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
+ [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)   
  [Data Mining Extensions & #40; DMX & #41; 참조](../dmx/data-mining-extensions-dmx-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
- [Data Mining Extensions &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Data Mining Extensions &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
- [Data Mining Extensions &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 구문 요소](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 함수 참조](../dmx/data-mining-extensions-dmx-function-reference.md)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 연산자 참조](../dmx/data-mining-extensions-dmx-operator-reference.md)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 문 참조](../dmx/data-mining-extensions-dmx-statements.md)   
+ [데이터 마이닝 확장 &#40;DMX&#41; 구문 표기 규칙](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [일반 예측 함수 &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
  [DMX 예측 쿼리의 구조 및 사용법](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [DMX Select 문 이해](../dmx/understanding-the-dmx-select-statement.md)  

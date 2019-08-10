@@ -19,20 +19,20 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e6324606dea5f3ea6f094e9b3c3dbe31d5fbcf92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2fc424ec2354130d361305b0e3dd2a0bb015cca6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107258"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891099"
 ---
 # <a name="graphical-query-designer-user-interface"></a>그래픽 쿼리 디자이너 사용자 인터페이스
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 디자이너의 보고서 데이터 집합에 대한 관계형 데이터베이스에서 데이터를 검색하기 위해 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB 및 ODBC와 같은 데이터 원본 유형에 대한 쿼리를 대화형으로 작성하고 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 여러 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문, 복잡한 쿼리 또는 명령 구문 및 식 기반 쿼리를 지정할 수 있습니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스](../text-based-query-designer-user-interface.md)를 참조하세요. 특정 데이터 원본 유형 작업에 대 한 자세한 내용은 참조 하세요. [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-datasets-ssrs.md)합니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 보고서 디자이너의 보고서 데이터 집합에 대한 관계형 데이터베이스에서 데이터를 검색하기 위해 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB 및 ODBC와 같은 데이터 원본 유형에 대한 쿼리를 대화형으로 작성하고 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 여러 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문, 복잡한 쿼리 또는 명령 구문 및 식 기반 쿼리를 지정할 수 있습니다. 자세한 내용은 [텍스트 기반 쿼리 디자이너 사용자 인터페이스](../text-based-query-designer-user-interface.md)를 참조하세요. 특정 데이터 원본 유형을 사용 하는 방법에 대 한 자세한 내용은 [보고서 &#40;에 데이터 추가 보고서 작성기 및 SSRS&#41;](report-datasets-ssrs.md)를 참조 하세요.  
   
  .  
   
 ## <a name="graphical-query-designer"></a>그래픽 쿼리 디자이너  
- 이 그래픽 쿼리 디자이너에는 세 가지 유형의 쿼리 명령 지원합니다. **텍스트**하십시오 **StoredProcedure**, 또는 **TableDirect**합니다. 데이터 세트에 대한 쿼리를 만들기 전에 [데이터 세트 속성](../dataset-properties-dialog-box-query.md) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
+ 이 그래픽 쿼리 디자이너는 다음 세 가지 유형의 쿼리 명령을 지원 합니다. **텍스트**, **StoredProcedure**또는 **TableDirect**입니다. 데이터 세트에 대한 쿼리를 만들기 전에 [데이터 세트 속성](../dataset-properties-dialog-box-query.md) 대화 상자의 쿼리 페이지에서 명령 유형 옵션을 선택해야 합니다.  
   
  쿼리 유형에 사용할 수 있는 옵션은 다음과 같습니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66107258"
 |![표 형태 창 표시/숨기기 토글](../media/rsqdicon-showhidegrid.gif "표 형태 창 표시/숨기기 토글")|표 형태 창을 표시하거나 숨깁니다.|  
 |![SQL 창 표시/숨기기 토글](../media/rsqdicon-showhidesql.gif "SQL 창 표시/숨기기 토글")|SQL 창을 표시하거나 숨깁니다.|  
 |![결과 창 표시/숨기기 토글](../media/rsqdicon-showhideresult.gif "결과 창 표시/숨기기 토글")|결과 창을 표시하거나 숨깁니다.|  
-|![쿼리 실행](../../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행합니다.|  
+|![쿼리 실행](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "쿼리 실행")|쿼리를 실행합니다.|  
 |![SQL 창의 SQL 검증 단추](../media/rsqdicon-verifysql.gif "SQL 창의 SQL 검증 단추")|쿼리 텍스트의 구문이 올바른지 확인합니다.|  
 |![선택한 필드에 대해 오름차순 정렬 설정](../media/rsqdicon-sortascending.gif "선택한 필드에 대해 오름차순 정렬 설정")|다이어그램 창의 선택한 열에 대해 정렬 순서를 **오름차순 정렬** 로 설정합니다.|  
 |![선택한 필드에 대해 내림차순 정렬 설정](../media/rsqdicon-sortdescending.gif "선택한 필드에 대해 내림차순 정렬 설정")|다이어그램 창의 선택한 열에 대해 정렬 순서를 **내림차순 정렬** 로 설정합니다.|  
@@ -118,7 +118,7 @@ EXEC uspGetEmployeeManagers '1';
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.|  
 |![일반 쿼리 디자이너 단추 아이콘](../media/icongenericquerydesigner.gif "일반 쿼리 디자이너 단추 아이콘")|쿼리 텍스트 또는 저장 프로시저 보기를 유지하면서 일반 쿼리 디자이너 및 그래픽 쿼리 디자이너 사이를 전환합니다.|  
-|![쿼리 실행](../../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|선택한 테이블의 모든 열을 선택합니다.|  
+|![쿼리 실행](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "쿼리 실행")|선택한 테이블의 모든 열을 선택합니다.|  
   
 ### <a name="command-type-storedprocedure"></a>StoredProcedure 명령 유형  
  **StoredProcedure** 유형에서 그래픽 쿼리 디자이너는 데이터 원본의 사용 가능한 저장 프로시저에 대한 드롭다운 목록과 결과 창을 표시합니다. 다음 표에서는 각 창의 기능을 설명합니다.  
@@ -135,7 +135,7 @@ EXEC uspGetEmployeeManagers '1';
 |------------|-----------------|  
 |**텍스트로 편집**|텍스트 기반 쿼리 디자이너와 그래픽 쿼리 디자이너 사이를 전환합니다.|  
 |**가져오기**|파일 또는 보고서에서 기존 쿼리를 가져옵니다. 파일 유형 .sql 및 .rdl만 지원됩니다. 자세한 내용은 [보고서 포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)이라는 데이터 집합이 들어 있습니다.|  
-|![쿼리 실행](../../analysis-services/media/rsqdicon-run.gif "쿼리 실행")|선택한 저장 프로시저를 실행합니다.|  
+|![쿼리 실행](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqdicon-run.gif "쿼리 실행")|선택한 저장 프로시저를 실행합니다.|  
 |저장 프로시저 드롭다운 목록|아래쪽 화살표를 클릭하면 데이터 원본의 사용 가능한 저장 프로시저 목록이 표시됩니다. 저장 프로시저를 선택하려면 목록에서 클릭합니다.|  
   
 #### <a name="example"></a>예제  
@@ -144,11 +144,11 @@ EXEC uspGetEmployeeManagers '1';
  `uspGetEmployeeManagers '1';`  
   
 ## <a name="see-also"></a>관련 항목  
- [쿼리, 보고서 디자이너 SQL Server Data Tools의 디자인 도구 &#40;SSRS&#41;](query-design-tools-ssrs.md)   
- [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-datasets-ssrs.md)   
+ [보고서 디자이너 SQL Server Data Tools &#40;SSRS의 쿼리 디자인 도구&#41;](query-design-tools-ssrs.md)   
+ [보고서 &#40;보고서 작성기 및 SSRS에 데이터 추가&#41;](report-datasets-ssrs.md)   
  [SQL Server 연결 형식&#40;SSRS&#41;](sql-server-connection-type-ssrs.md)   
  [OLE DB 연결 형식&#40;SSRS&#41;](ole-db-connection-type-ssrs.md)   
- [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-datasets-ssrs.md)   
+ [보고서 &#40;보고서 작성기 및 SSRS에 데이터 추가&#41;](report-datasets-ssrs.md)   
  [Oracle 연결 형식&#40;SSRS&#41;](oracle-connection-type-ssrs.md)   
  [RSReportDesigner 구성 파일](../report-server/rsreportdesigner-configuration-file.md)   
  [쿼리 및 뷰 디자인 방법 도움말 항목&#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/design-queries-and-views-how-to-topics-visual-database-tools.md)  

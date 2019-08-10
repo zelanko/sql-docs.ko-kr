@@ -10,12 +10,12 @@ ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b39d9d685b158b32dc504229221e6089e6b3e41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45f4b0b09c5f99a1dc561fdba40a659b7f0012d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107986"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891133"
 ---
 # <a name="relational-query-designer-user-interface"></a>관계형 쿼리 디자이너 사용자 인터페이스
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] 및 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]에서 보고서 데이터 집합에 대해 검색할 데이터를 지정하는 쿼리를 만들 수 있도록 그래픽 쿼리 디자이너와 텍스트 기반 쿼리 디자이너를 모두 제공합니다. 그래픽 쿼리 디자이너를 사용하면 메타데이터를 탐색하고,  쿼리를 대화형으로 작성하고,  쿼리 결과를 볼 수 있습니다. 텍스트 기반 쿼리 디자이너를 사용하면 그래픽 쿼리 디자이너로 만든 쿼리를 보거나 쿼리를 수정할 수 있습니다. 파일 또는 보고서에서 기존 쿼리를 가져올 수도 있습니다.  
@@ -36,11 +36,11 @@ ms.locfileid: "66107986"
   
  다음 그림에서는 테이블 또는 뷰와 함께 사용할 때의 그래픽 쿼리 디자이너를 보여 줍니다.  
   
- ![쿼리용 그래픽 디자이너](../analysis-services/media/rsqd-relational-graphical.gif "쿼리용 그래픽 디자이너")  
+ ![쿼리용 그래픽 디자이너](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "쿼리용 그래픽 디자이너")  
   
  다음 그림에서는 저장 프로시저 또는 테이블 반환 함수와 함께 사용할 때의 그래픽 쿼리 디자이너를 보여 줍니다.  
   
- ![그래픽 쿼리 디자이너의 저장 프로시저](../analysis-services/media/rs-relational-graphical-sp.gif "그래픽 쿼리 디자이너의 저장 프로시저")  
+ ![그래픽 쿼리 디자이너의 저장 프로시저](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "그래픽 쿼리 디자이너의 저장 프로시저")  
   
  다음 표에서는 각 창의 기능을 설명합니다.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66107986"
   
  집계는 데이터에 대한 요약을 제공하며 데이터는 요약 데이터를 전달하는 집계를 지원하도록 그룹화됩니다. 쿼리에 집계를 사용하는 경우 쿼리에서 반환되는 다른 필드는 모두 자동으로 그룹화되며 쿼리에는 SQL  GROUP  BY  절이 포함됩니다. **그룹화 및 집계** 목록에서 **그룹화 기준** 옵션만 사용하면 집계를 추가하지 않고 데이터를 요약할 수 있습니다. 대부분의 집계에는 DISTINCT  키워드를 사용하는 버전이 포함됩니다. DISTINCT를 포함하면 중복 값이 제거됩니다.  
   
- [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 사용 하 여 [!INCLUDE[tsql](../includes/tsql-md.md)] 하 고 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 사용 하 여 [!INCLUDE[DWsql](../includes/dwsql-md.md)]입니다. 두 SQL  언어 모두 쿼리 디자이너가 제공하는 집계,  절 및 키워드를 지원합니다.  
+ [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]는 [!INCLUDE[tsql](../includes/tsql-md.md)] [!INCLUDE[msCoName](../includes/msconame-md.md)] 및를[!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 사용 합니다.[!INCLUDE[DWsql](../includes/dwsql-md.md)] 두 SQL  언어 모두 쿼리 디자이너가 제공하는 집계,  절 및 키워드를 지원합니다.  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)]에 대한 자세한 내용은 msdn.microsoft.com의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인 설명서](https://go.microsoft.com/fwlink/?LinkId=141687)에서 [Transact-SQL 참조&#40;데이터베이스 엔진&#41;](/sql/t-sql/language-reference)를 참조하세요.  
   

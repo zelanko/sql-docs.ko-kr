@@ -25,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db986748530a11057bf55e18c6404160504fdb89
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063874"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891755"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>쿼리 및 텍스트 편집기(SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 편집기 중 하나를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX 또는 XML/A 스크립트를 대화식으로 편집 및 테스트하거나 XML 또는 일반 텍스트 파일을 편집할 수 있습니다. 각 편집기에서는 키워드에 색을 지정하고 구문 및 사용법 오류를 검사하는 언어 관련 서비스가 지원됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 문제를 수정하는 데 도움이 되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 포함되어 있습니다.  
@@ -108,8 +108,8 @@ ms.locfileid: "66063874"
 |태스크 설명|항목|  
 |----------------------|-----------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에서 기본 기능을 보거나 사용하는 방법에 대해 설명합니다.|[데이터베이스 엔진 쿼리 편집기&#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|MDX 쿼리 편집기에서 기본 기능을 보거나 사용하는 방법에 대해 설명합니다.|[MDX 쿼리 편집기&#40;Analysis Services - 다차원 데이터&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
-|DMX 쿼리 편집기에서 기본 기능을 보거나 사용하는 방법에 대해 설명합니다.|[DMX 쿼리 편집기&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
+|MDX 쿼리 편집기에서 기본 기능을 보거나 사용하는 방법에 대해 설명합니다.|[MDX 쿼리 편집기&#40;Analysis Services - 다차원 데이터&#41;](https://docs.microsoft.com/analysis-services/mdx-query-editor-analysis-services-multidimensional-data)|  
+|DMX 쿼리 편집기에서 기본 기능을 보거나 사용하는 방법에 대해 설명합니다.|[DMX 쿼리 편집기&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/dmx-query-editor-analysis-services-data-mining)|  
 |XML/A 편집기에서 기본 기능을 보거나 사용하는 방법에 대해 설명합니다.|[XML 편집기&#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
 |줄 번호 매기기 및 IntelliSense 옵션과 같은 다양한 편집기 옵션을 구성하는 방법을 설명합니다.|[편집기 구성&#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
 |[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]에서 편집기를 여는 다양한 방법에 대해 설명합니다.|[편집기 열기&#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  

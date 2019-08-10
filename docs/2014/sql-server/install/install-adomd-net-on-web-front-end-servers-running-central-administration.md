@@ -10,12 +10,12 @@ ms.assetid: c2372180-e847-4cdb-b267-4befac3faf7e
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 2d8a3c6a47a9f353f44a9ec9c4a0cbb2c3cd3505
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b77948b3ae5b27d7ecb82c277424057fe39ff7a0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094703"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891036"
 ---
 # <a name="install-adomdnet-on-web-front-end-servers-running-central-administration"></a>중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치
   Excel Services 또는 SharePoint용 PowerPivot이 없는 중앙 관리의 토폴로지가 포함된 팜에 SharePoint용 PowerPivot을 설치하는 경우, PowerPivot 관리 대시보드의 모든 기본 제공 보고서에 액세스하려면 Microsoft ADOMD.NET 클라이언트 라이브러리를 다운로드하여 설치합니다. 대시보드의 일부 보고서는 ADOMD.NET을 사용하여 팜의 PowerPivot 쿼리 처리 및 서버 상태에 대한 보고 데이터를 제공하는 내부 데이터에 액세스합니다.  
@@ -42,9 +42,9 @@ ms.locfileid: "66094703"
   
 3.  **버전**을 클릭합니다.  
   
-4.  버전에 12.00.<이 포함 되어 있는지 확인 합니다. \<빌드 번호 > Microsoft.AnalysisService.AdomdClient 인지 하 고 있습니다.  
+4.  버전에 12.00이 포함 되어 있는지 확인 합니다. \<빌드 번호 > 고 설명은 AnalysisService. microsoft.analysisservices.adomdclient.cellset<입니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [PowerPivot 관리 대시보드 및 사용 데이터](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
+ [PowerPivot 관리 대시보드 및 사용 데이터](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data)  
   
   

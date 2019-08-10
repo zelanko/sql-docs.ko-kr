@@ -1,5 +1,5 @@
 ---
-title: 집합 식을 사용 하 여 | Microsoft Docs
+title: 집합 식 사용 | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 622458f3ea3f8baf74b3aaa4aa9c46f94972f490
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1588d955e728830da4417160591a5c2b6c231473
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038016"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893500"
 ---
 # <a name="using-set-expressions"></a>집합 식 사용
 
@@ -22,7 +22,7 @@ ms.locfileid: "68038016"
   
  집합의 전체 식은 중괄호로 묶인 0개 이상의 명시적으로 지정된 튜플로 구성됩니다.  
   
- {0} [{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* } ] ... ] }  
+ {[{ *Tuple_expression* | *Member_expression* } [, { *Tuple_expression* | *Member_expression* }] ...]}  
   
  집합 식에서 지정된 멤버 식은 멤버가 하나인 튜플 식으로 변환됩니다.  
   
@@ -49,15 +49,15 @@ ms.locfileid: "68038016"
   
  집합은 Measures 차원의 두 멤버로 구성됩니다. Rows 축에서  
   
- {0} ([product]입니다. [Product Categories]입니다. [Category]. [4] 및 [Date]. [일정]입니다. [Calendar Year]. [2004] &),  
+ {([Product]). [제품 범주]. [Category]. & [4], [Date]. [Calendar]. [Calendar Year]. & [2004]),  
   
- ([Product]입니다. [Product Categories]입니다. [Category]. [1] 및 [Date]. [일정]입니다. [Calendar Year]. [2003] &),  
+ ([Product]. [제품 범주]. [Category]. & [1], [Date]. [Calendar]. [Calendar Year]. & [2003]),  
   
- ([Product]입니다. [Product Categories]입니다. [Category]. [3] 및 [Date]. [일정]입니다. [Calendar Year]. amp;[2004])}  
+ ([Product]. [제품 범주]. [Category]. [3], [Date] & 합니다. [Calendar]. [Calendar Year]. & [2004])}  
   
  집합은 3개의 튜플로 구성됩니다. 각 튜플은 Product 차원의 Product Categories 계층 및 Date 차원의 Calendar 계층에 있는 멤버에 대한 두 개의 명시적 참조를 포함합니다.  
   
- 집합을 반환 하는 함수의 예제를 참조 하세요 [Members, Tuples, and Sets를 사용 하 여 작업 &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)합니다.  
+ 집합을 반환 하는 함수의 예는 [Members 작업, 튜플 &#40;및 집합 MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx)를 참조 하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [식 &#40;MDX&#41;](../mdx/expressions-mdx.md)  

@@ -1,5 +1,5 @@
 ---
-title: 특성 계층 숨기기 및 비활성화 | Microsoft Docs
+title: 특성 계층 숨기기 및 해제 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 095039c2-7104-414c-a9a6-327b03ce79df
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b662b537913847ee2858f933a54f37739d1c5c34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 411e5f822d0f54e6d8b7654b67bf5776ceb3c9e5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078616"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888356"
 ---
 # <a name="hiding-and-disabling-attribute-hierarchies"></a>특성 계층 숨기기 및 비활성화
   기본적으로 특성 계층은 차원의 모든 특성에 대해 만들어지며 각 계층을 팩트 데이터 차원 지정에 사용할 수 있습니다. 이 계층은 계층의 모든 멤버를 포함하는 “All” 수준 및 세부 수준으로 구성됩니다. 이미 설명한 대로 특성을 사용자 정의 계층으로 구성하여 큐브에 탐색 경로를 제공할 수 있습니다. 경우에 따라서는 일부 특성과 계층을 비활성화하거나 숨길 수 있습니다. 예를 들어 주민 등록 번호, 급여, 생년월일 및 로그인 정보와 같은 일부 특성은 사용자가 큐브 정보의 차원을 지정하는 데 사용하는 특성이 아닙니다. 일반적으로 이 정보는 특정 특성 멤버의 세부 사항으로만 표시됩니다. 이러한 특성 계층을 숨기고 특정 특성의 멤버 속성으로만 특성을 표시할 수 있습니다. 또한 고객 이름, 우편 번호 등의 다른 특성 멤버가 특성 계층을 통해 따로 표시되지 않고 사용자 계층을 통해 표시될 경우에만 이러한 특성 멤버를 표시할 수도 있습니다. 그 이유 중 하나는 특성 계층에 있는 고유한 멤버의 개수 때문입니다. 마지막으로 처리 성능을 향상시키기 위해 사용자가 탐색에 사용하지 않는 특성 계층을 비활성화해야 합니다.  
@@ -77,7 +77,7 @@ ms.locfileid: "66078616"
   
      다음 이미지에서는 선택한 특성에 대해 False로 설정된 **AttributeHierarchyEnabled** 속성을 보여 줍니다.  
   
-     ![AttributeHierarchyEnabled 속성이 False로 설정](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled 속성이 False로 설정")  
+     ![AttributeHierarchyEnabled 속성을 False로 설정 합니다] . (../../2014/tutorials/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled 속성을 False로 설정 합니다") .  
   
 5.  **빌드** 메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "66078616"
   
      다음 이미지에서는 False로 설정된 **AttributeHierarchyVisible** 속성을 보여 줍니다.  
   
-     ![AttributeHierarchyVisible 속성이 False로 설정](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible 속성이 False로 설정")  
+     ![AttributeHierarchyVisible 속성을 False로 설정 합니다] . (../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible 속성을 False로 설정 합니다") .  
   
 5.  **특성** 창의 **우편 번호** 특성을 **계층 및 수준** 창에 있는 **고객 지리** 사용자 계층의 **구/군/시** 수준 바로 아래로 끌어 놓습니다.  
   
@@ -126,6 +126,6 @@ ms.locfileid: "66078616"
      숨겨진 수준인 **우편 번호** 와 **전체 이름**이 사용자 정의 계층에 표시됩니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [보조 특성을 기준으로 특성 멤버 정렬](../analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  
+ [보조 특성을 기준으로 특성 멤버 정렬](https://docs.microsoft.com/analysis-services/lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute)  
   
   

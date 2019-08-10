@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 6be7de10c10c39e5e53cbe43ca7be46219e7d4cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4395f0ff113c8549ec2250d5fa87d37090627b3c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023401"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892913"
 ---
 # <a name="datamember-mdx"></a>DataMember(MDX)
 
@@ -32,13 +32,13 @@ Member_Expression.DataMember
  멤버를 반환하는 유효한 MDX 식입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 함수는 계층의 리프가 아닌 멤버에서 작동 하 고 사용할 수는 [UPDATE CUBE 문 (MDX)](../mdx/mdx-data-manipulation-update-cube.md) 리프 멤버의 하위 항목 대신 리프가 아닌 멤버에 직접 쓰기 저장 데이터에 명령 합니다.  
+ 이 함수는 계층의 리프가 아닌 멤버에 대해 작동 하며, [UPDATE CUBE 문 (MDX)](../mdx/mdx-data-manipulation-update-cube.md) 명령에서 리프 멤버의 하위 항목이 아닌 리프가 아닌 멤버에 직접 데이터를 쓰기 저장 하는 데 사용할 수 있습니다.  
   
 > [!NOTE]  
 >  지정된 멤버가 리프 멤버인 경우나 리프가 아닌 멤버에 관련 데이터 멤버가 없는 경우에는 지정된 멤버를 반환합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 합니다 **DataMember** 각 개별 직원에 대 한 판매 할당량을 표시 하는 계산된 측정값에서 함수:  
+ 다음 예에서는 계산 측정값의 **DataMember** 함수를 사용 하 여 각 개별 직원에 대 한 판매 할당량을 표시 합니다.  
   
 ```  
 WITH MEMBER measures.InvidualQuota AS   
@@ -51,6 +51,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>관련 항목  
  [MDX 함수 참조 & #40; Mdx& #41;](../mdx/mdx-function-reference-mdx.md)   
- [MDX의 주요 개념&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)  
+ [MDX의 주요 개념&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)  
   
   

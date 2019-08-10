@@ -1,5 +1,5 @@
 ---
-title: Services (기본 데이터 마이닝 자습서) 프로젝트 분석 만들기 | Microsoft Docs
+title: Analysis Services 프로젝트 만들기 (기본 데이터 마이닝 자습서) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: ee6c1a8b765843304d25f1e2ad485ede2badcba4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bec038ece2971c82315aca9965f0d897e6de1034
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62855191"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893339"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Analysis Services 프로젝트 만들기(기본 데이터 마이닝 자습서)
   각 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에서는 단일 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 있는 개체를 정의합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에는 여러 다른 유형의 개체가 포함될 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "62855191"
   
  기본적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 새 프로젝트에 **localhost** 인스턴스를 사용합니다. 명명된 인스턴스나 다른 서버를 사용할 경우에는 먼저 프로젝트를 만들고 연 다음 인스턴스 이름을 변경해야 합니다.  
   
- 에 대 한 자세한 내용은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트를 참조 하세요 [Analysis Services 프로젝트 만들기](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)합니다.  
+ 프로젝트에 대 한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 자세한 내용은 [Analysis Services 프로젝트 만들기](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project)를 참조 하세요.  
   
 ### <a name="to-create-an-analysis-services-project"></a>Analysis Services 프로젝트를 만들려면  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62855191"
   
 4.  **템플릿** 창에서 **Analysis Services 다차원 및 데이터 마이닝 프로젝트**를 선택합니다.  
   
-5.  에 **이름을** 상자에서 새 프로젝트의 이름을 `BasicDataMining`입니다.  
+5.  **이름** 상자에서 새 프로젝트 `BasicDataMining`의 이름을로 합니다.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -57,10 +57,10 @@ ms.locfileid: "62855191"
 3.  **속성 페이지** 창 오른쪽의 **대상**에서 **서버** 이름이 **localhost**인지 확인합니다. 다른 인스턴스를 사용할 경우에는 해당 인스턴스의 이름을 입력합니다. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [데이터 원본 만들기 &#40;기본 데이터 마이닝 자습서&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
+ [데이터 원본 &#40;기본 데이터 마이닝 자습서 만들기&#41;](../../2014/tutorials/creating-a-data-source-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 프로젝트 빌드&#40;SSDT&#41;](../analysis-services/multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](../analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [Analysis Services 프로젝트 빌드&#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
+ [Analysis Services 프로젝트 만들기&#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

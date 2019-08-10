@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: be7f1cfdff083984f4aff4dd12d5d8251fd623f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4aa9738232eae175c78596f741d3f1bcce0910b6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67921485"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887386"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vb"></a>ActualSize 및 DefinedSize 속성 예제 (VB)
-이 예제에서는 합니다 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성을 정의 크기와 필드의 실제 크기를 표시 합니다.  
+이 예에서는 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) 및 [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) 속성을 사용 하 여 필드의 정의 된 크기 및 실제 크기를 표시 합니다.  
   
-```  
+```vb
 'BeginActualSizeVB  
   
     'To integrate this code  

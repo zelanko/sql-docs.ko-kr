@@ -14,12 +14,12 @@ ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6a114cba7caa1fa223f21de2aa8cc4a85979fe1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061466"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890362"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>Analysis Services 처리 태스크 편집기(Analysis Services 페이지)
   **Analysis Services 처리 태스크 편집기** 대화 상자의 **Analysis Services** 페이지를 사용하여 Analysis Services 연결 관리자를 지정하고, 처리할 분석 개체를 선택하고, 처리 및 오류 처리 옵션을 설정할 수 있습니다.  
@@ -46,11 +46,11 @@ ms.locfileid: "66061466"
  **관련 항목:** [Analysis Services 연결 관리자](connection-manager/analysis-services-connection-manager.md), [Analysis Services 연결 관리자 추가 대화 상자 UI 참조](connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **개체 목록**  
- |속성|Description|  
+ |속성|설명|  
 |--------------|-----------------|  
 |**Object Name**|지정한 개체 이름을 나열합니다.|  
 |**형식**|지정한 개체의 유형을 나열합니다.|  
-|**처리 옵션**|목록에서 처리 옵션을 선택합니다.<br /><br /> **관련 항목**: [다차원 모델 개체 처리](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**처리 옵션**|목록에서 처리 옵션을 선택합니다.<br /><br /> **관련 항목**: [다차원 모델 개체 처리](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**설정**|지정한 개체에 대한 처리 설정을 나열합니다.|  
   
  **추가**  
@@ -65,7 +65,7 @@ ms.locfileid: "66061466"
  **관련 항목:** [영향 분석 대화 상자&#40;Analysis Services - 다차원 데이터&#41;](../../2014/analysis-services/impact-analysis-dialog-box-analysis-services-multidimensional-data.md)  
   
  **일괄 처리 설정 요약**  
- |속성|Description|  
+ |속성|설명|  
 |--------------|-----------------|  
 |**처리 순서**|개체가 순차적으로 또는 일괄 처리 방식으로 처리되는지 여부를 지정합니다. 병렬 처리가 사용되면 동시에 처리할 개체 수를 지정합니다.|  
 |**트랜잭션 모드**|순차적 처리를 위한 트랜잭션 모드를 지정합니다.|  

@@ -1,5 +1,5 @@
 ---
-title: 새로운&#39;s (Reporting Services) | Microsoft Docs
+title: 새로운&#39;기능 (Reporting Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,23 +15,23 @@ ms.assetid: bc909063-6b84-4b3a-80d2-e93fc04b4b9d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 542caa127340e3f86295f4de8a41954feb4c7564
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 968c7bab8d0ef0d57336491c7975f0f3006be108
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66098614"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892362"
 ---
-# <a name="what39s-new-reporting-services"></a>새로운&#39;s (Reporting Services)
+# <a name="what39s-new-reporting-services"></a>새로운&#39;기능 (Reporting Services)
   
   
 ||  
 |-|  
-|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 릴리스에는 Google Chrome 브라우저에 대한 지원이 추가되었습니다. 지원 되는 브라우저에 대 한 자세한 내용은 참조 하세요. [Reporting Services 및 파워 뷰 브라우저 지원 계획 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)합니다.|  
+|[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 릴리스에는 Google Chrome 브라우저에 대한 지원이 추가되었습니다. 지원 되는 브라우저에 대 한 자세한 내용은 [Reporting Services 계획 및 파워 뷰 브라우저 지원 &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)을 참조 하세요.|  
   
- 다른 방법은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 제품 및 기술 참조 [What's New in SQL Server 2014](../sql-server/what-s-new-in-sql-server-2016.md)합니다.  
+ 다른 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 제품 및 기술에 대 한 자세한 내용은 [SQL Server 2014의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)을 참조 하세요.  
   
- 관련 변경 사항에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Business Intelligence 참조 [What's New in Analysis Services 및 Business Intelligence](../analysis-services/what-s-new-in-analysis-services.md)합니다.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 비즈니스 인텔리전스와 관련 된 변경 내용에 대 한 자세한 내용은 [Analysis Services 및 비즈니스 인텔리전스의 새로운 기능](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)을 참조 하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [Reporting Services의 이전 버전과의 호환성](reporting-services-backward-compatibility.md)   
