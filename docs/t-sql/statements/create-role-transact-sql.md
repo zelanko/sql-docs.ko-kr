@@ -27,12 +27,12 @@ ms.assetid: b0cd54ad-e81d-4d71-acec-8a6d7261ca08
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3eb9e5c5b451854876cf31ae05641f12e8bc722
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49741cf920c85ac55288b7cd881b1c52335d3d07
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006521"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661421"
 ---
 # <a name="create-role-transact-sql"></a>CREATE ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
  만들 역할의 이름입니다.  
   
  AUTHORIZATION *owner_name*  
- 새 역할을 소유할 데이터베이스 사용자나 역할입니다. 사용자를 지정하지 않으면 CREATE ROLE을 실행하는 사용자가 역할을 소유합니다.  
+ 새 역할을 소유할 데이터베이스 사용자나 역할입니다. 사용자를 지정하지 않으면 CREATE ROLE을 실행하는 사용자가 역할을 소유합니다. 역할의 소유자 또는 소유 역할의 멤버는 역할의 멤버를 추가하거나 제거할 수 있습니다.
   
 ## <a name="remarks"></a>Remarks  
  역할은 데이터베이스 수준 보안 개체입니다. 역할을 만든 후 GRANT, DENY 및 REVOKE를 사용하여 역할의 데이터베이스 수준 사용 권한을 구성합니다. 데이터베이스 역할에 멤버를 추가하려면 [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)를 사용합니다. 자세한 내용은 [데이터베이스 수준 역할](../../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.  

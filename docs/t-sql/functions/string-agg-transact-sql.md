@@ -16,14 +16,14 @@ ms.assetid: 8860ef3f-142f-4cca-aa64-87a123e91206
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3af59410ed151e54a5cc7ea7a546f8979a318693
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d7ef8b52e3ee31e688e51454a72c0f359bcb68b
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67906871"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632130"
 ---
-# <a name="stringagg-transact-sql"></a>STRING_AGG(Transact-SQL)
+# <a name="string_agg-transact-sql"></a>STRING_AGG(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
 문자열 식의 값을 연결하고 그 사이에 구분 기호 값을 추가합니다. 구분 기호는 문자열 끝에 추가되지 않습니다.
@@ -95,6 +95,7 @@ FROM Person.Person;
 |Syed <br />Catherine <br />Kim <br />Kim <br />Kim <br />Hazem <br />... | 
 
 `name` 셀에 있는 `NULL` 값은 결과에 반환되지 않습니다.   
+
 > [!NOTE]  
 >  Management Studio Query Editor를 사용하는 경우 **표 형태로 결과 표시** 옵션으로 캐리지 리턴을 구현할 수 없습니다. 결과 집합을 올바르게 보려면 **텍스트로 결과 표시**로 전환하세요.   
 
@@ -127,16 +128,17 @@ FROM Person.Person;
 |Ken Sánchez (Feb  8 2003 12:00AM) <br />Terri Duffy (Feb 24 2002 12:00AM) <br />Roberto Tamburello (Dec  5 2001 12:00AM) <br />Rob Walters (Dec 29 2001 12:00AM) <br />... |
 
 > [!NOTE]  
->  Management Studio Query Editor를 사용하는 경우 **표 형태로 결과 표시** 옵션으로 캐리지 리턴을 구현할 수 없습니다. 결과 집합을 올바르게 보려면 **텍스트로 결과 표시**로 전환하세요.   
+> Management Studio Query Editor를 사용하는 경우 **표 형태로 결과 표시** 옵션으로 캐리지 리턴을 구현할 수 없습니다. 결과 집합을 올바르게 보려면 **텍스트로 결과 표시**로 전환하세요.
 
-### <a name="d-return-news-articles-with-related-tags"></a>D. 뉴스 기사 및 관련 태그 반환 
+### <a name="d-return-news-articles-with-related-tags"></a>D. 뉴스 기사 및 관련 태그 반환
+
 기사와 태그가 다른 테이블로 구분됩니다. 개발자들은 각 기사당 관련 태그가 모두 포함된 하나의 행을 반환하려고 합니다. 다음 쿼리를 사용합니다.
 
 ```sql
-SELECT a.articleId, title, STRING_AGG (tag, ',') as tags 
-FROM dbo.Article AS a       
-LEFT JOIN dbo.ArticleTag AS t 
-    ON a.ArticleId = t.ArticleId 
+SELECT a.articleId, title, STRING_AGG (tag, ',') as tags
+FROM dbo.Article AS a
+LEFT JOIN dbo.ArticleTag AS t
+    ON a.ArticleId = t.ArticleId
 GROUP BY a.articleId, title;
 ```
 
@@ -144,9 +146,12 @@ GROUP BY a.articleId, title;
 
 |articleId |title |tags |
 |--- |--- |--- |
-|172 |Polls indicate close election results |politics,polls,city council | 
+|172 |Polls indicate close election results |politics,polls,city council |
 |176 |New highway expected to reduce congestion |NULL |
-|177 |Dogs continue to be more popular than cats |polls,animals| 
+|177 |Dogs continue to be more popular than cats |polls,animals|
+
+> [!NOTE]
+> `STRING_AGG` 함수가 `SELECT` 목록의 유일한 항목이 아닌 경우 `GROUP BY` 절이 필요합니다.
 
 ### <a name="e-generate-list-of-emails-per-towns"></a>E. 도시별 이메일 목록 생성
 

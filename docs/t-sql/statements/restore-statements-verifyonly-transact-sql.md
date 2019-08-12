@@ -23,12 +23,12 @@ ms.assetid: cba3b6a0-b48e-4c94-812b-5b3cbb408bd6
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: abaee73772c2d0b8f4beaff05c2daaf7fe2e80ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fec8542ec7575013f8dd101c1e50e3a7b6a13a6
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082439"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742991"
 ---
 # <a name="restore-statements---verifyonly-transact-sql"></a>RESTORE 문 - VERIFYONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -82,12 +82,14 @@ FROM <backup_device> [ ,...n ]
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
-   | { DISK | TAPE } = { 'physical_backup_device_name' |  
+   | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
   
 ```  
-  
+ > [!NOTE] 
+> URL은 Microsoft Azure Blob Storage의 위치 및 파일 이름을 지정하는 데 사용되는 형식이며 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 지원됩니다. Microsoft Azure Blob Storage는 서비스이지만, 모든 세 디바이스에 대해 일관되고 원활한 복원 환경을 가능하게 하는 디스크와 테이프와 구현이 유사합니다.
+ 
 ## <a name="arguments"></a>인수  
  RESTORE VERIFYONLY 인수에 대한 설명은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요.  
   

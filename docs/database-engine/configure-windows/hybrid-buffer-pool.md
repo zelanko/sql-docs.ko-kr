@@ -10,21 +10,22 @@ ms.topic: conceptual
 ms.assetid: ''
 author: DBArgenis
 ms.author: argenisf
-ms.openlocfilehash: 471708dc2e6b6feb3f91bd831ff63fce1177c8d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e4808c0895695eba562c25ea0ee412348dc148f5
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67998060"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697552"
 ---
 # <a name="hybrid-buffer-pool"></a>하이브리드 버퍼 풀
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 하이브리드 버퍼 풀을 사용하면 데이터베이스 엔진이 영구 메모리(PMEM) 디바이스에 저장된 데이터베이스 파일의 데이터 페이지에 직접 액세스할 수 있습니다. 이 기능은 [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)]에 도입되었습니다.
 
-PMEM이 없는 기존 시스템에서는 SQL Server가 DRAM 기반 버퍼 풀에 데이터 페이지를 캐시합니다. 하이브리드 버퍼 풀에서는 SQL Server가 버퍼 풀의 DRAM 기반 부분에 페이지를 복사하는 작업을 건너뜁니다. 대신 PMEM 디바이스에 상주하는 데이터베이스 파일에서 직접 페이지에 액세스합니다. 하이브리드 버퍼 풀에 대한 PMEM 디바이스의 데이터 파일은 MMIO(메모리 맵형 I/O)를 사용하여 액세스하며, 이 방법을 SQL Server 내에 있는 데이터 파일에 대한 *인라이튼먼트(enlightenment)* 라고도 합니다.
+PMEM이 없는 기존 시스템에서는 SQL Server가 버퍼 풀에 데이터 페이지를 캐시합니다. 하이브리드 버퍼 풀을 사용하면 SQL Server가 페이지를 버퍼 풀의 DRAM 부분에 복사하는 대신에, PMEM 디바이스에 상주하는 데이터베이스 파일에서 직접 페이지를 액세스합니다. 하이브리드 버퍼 풀에 대한 PMEM 디바이스의 데이터 파일에 대한 읽기 액세스는 PMEM 디바이스의 데이터 페이지로 포인터를 따라 직접 수행됩니다.  
 
-클린 페이지만 PMEM 디바이스에서 직접 액세스할 수 있습니다. 더티로 표시된 페이지는 최종적으로 PMEM 디바이스에 다시 쓰고 다시 클린으로 표시하기 전에 DRAM 기반 버퍼 풀에 복사됩니다. 이 프로세스는 정기 검사점 작업 중에 발생합니다.
+클린 페이지만 PMEM 디바이스에서 직접 액세스할 수 있습니다. 더티로 표시된 페이지는 최종적으로 PMEM 디바이스에 다시 쓰고 다시 클린으로 표시하기 전에 DRAM 버퍼 풀에 복사됩니다. 이 작업은 검사점 작업 중에 이루어집니다. PMEM 디바이스에서 DRAM으로 파일을 복사하는 메커니즘은 직접 메모리 매핑된 I/O(MMIO)이며 SQL Server 내에서 데이터 파일의 *향상 기능*이라고도 합니다.
+
 
 하이브리드 버퍼 풀 기능은 Windows와 Linux에서 모두 사용할 수 있습니다. PMEM 디바이스는 DAX(DirectAccess)를 지원하는 파일 시스템을 사용하여 포맷해야 합니다. XFS, EXT4 및 NTFS 파일 시스템은 모두 DAX를 지원합니다. SQL Server는 데이터 파일이 적절하게 서식이 지정된 PMEM 디바이스에 상주하는지 자동으로 검색하고, 사용자 공간에서 메모리 매핑을 수행합니다. 이 매핑은 시작할 때, 새 데이터베이스가 연결되거나 복원되거나 만들어졌을 때, 또는 데이터베이스에 대해 하이브리드 버퍼 풀 기능을 사용할 때 발생합니다.
 

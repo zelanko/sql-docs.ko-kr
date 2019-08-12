@@ -1,6 +1,6 @@
 ---
 title: SQL Server 설명서 | Microsoft Docs
-ms.date: 08/12/2018
+ms.date: 08/02/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d925fcbdb80ada3426b42d4dcb413937f4d3953
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 824036a79897302411ec1a7026351832269511b3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136336"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771599"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
 
@@ -109,7 +109,7 @@ SQL Server 2014 및 SQL Server 2005를 비롯한 이전 버전의 설명서는 [
 |||
 |-|-|
 |![SQL 데이터베이스 엔진](../sql-server/media/sql-database-engine.png "SQL 데이터베이스 엔진")|**[데이터베이스 엔진](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> 데이터베이스 엔진은 데이터 저장, 처리 및 보안 유지를 위한 핵심 서비스입니다. 데이터베이스 엔진에서는 기업 내에서 가장 다루기 어려운 데이터 소비형 애플리케이션의 요구 사항을 충족시키기 위해 액세스 제어 및 빠른 트랜잭션 처리를 제공합니다. 또한 데이터베이스 엔진은 고가용성을 유지하기 위한 다각적인 지원을 제공합니다.|
-|![R Server](../sql-server/media/r-server.png "R Server")|**[Machine Learning Services](../advanced-analytics/r-services/r-services.md)**<br /><br /> Microsoft Machine Learning Services는 인기 있는 R 및 Python 언어를 사용하여 엔터프라이즈 워크플로에 대한 기계 학습의 통합을 지원합니다.<br /><br /> Machine Learning Services(데이터베이스 내)는 R 및 Python을 SQL Server와 통합함으로써 저장 프로시저를 호출하여 모델을 쉽게 빌드 및 재교육하고 점수를 매길 수 있도록 합니다.  Microsoft Machine Learning Server는 SQL Server를 요구하지 않고 R 및 Python에 대한 엔터프라이즈 규모의 지원을 제공합니다.|
+|![Machine Learning Services](../sql-server/media/r-server.png "R Server")|**[Machine Learning Services](../advanced-analytics/index.yml)**<br /><br /> Machine Learning Services는 관계형 데이터를 사용하여 Python 및 R 스크립트를 실행할 수 있는 기능을 제공합니다. 예측 분석 및 기계 학습에 오픈 소스 및 Microsoft 패키지를 사용할 수 있습니다. 스크립트는 SQL Server 외부에서 또는 네트워크를 통해 데이터를 이동하지 않고 데이터베이스 내에서 실행됩니다.|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 는 데이터 웨어하우징을 위해 추출, 변환 및 로드하는 ETL 패키지를 비롯하여 고성능 데이터 통합 솔루션을 작성하기 위한 플랫폼입니다.|
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] 는 개인, 팀 및 기업의 비즈니스 인텔리전스를 위한 분석 데이터 플랫폼 및 도구 집합입니다. 서버 및 클라이언트 디자이너는 기존의 OLAP 솔루션, 새 테이블 형식 모델링 솔루션, 그리고 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)], Excel 및 SharePoint Server 환경을 사용하는 셀프 서비스 분석과 협업을 지원합니다. 또한[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에는 많은 양의 데이터 내에 숨겨진 패턴과 관계를 확인할 수 있도록 데이터 마이닝 기능이 포함되어 있습니다.|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services는 엔터프라이즈에 웹 사용이 가능한 보고 기능을 제공합니다.  다양한 데이터 원본에서 내용을 가져오고 다양한 형식으로 보고서를 게시하며 중앙에서 보안 및 구독을 관리하는 보고서를 만들 수 있습니다.|

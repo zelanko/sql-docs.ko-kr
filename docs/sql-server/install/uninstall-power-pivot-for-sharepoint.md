@@ -10,12 +10,12 @@ ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: a5d31f60aac72ce342e16ea251adbe59cb8a8227
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 58dd67bdc23728460faa7f56b214a22907491086
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126018"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892206"
 ---
 # <a name="uninstall-power-pivot-for-sharepoint"></a>SharePoint용 Power Pivot 제거
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,9 +53,9 @@ ms.locfileid: "68126018"
   
 1.  SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치와 연결된 모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서, 문서 및 라이브러리를 삭제합니다. 소프트웨어가 제거되면 라이브러리와 문서가 작동하지 않습니다.  
   
-    -   [파워 피벗 갤러리 삭제](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
+    -   [파워 피벗 갤러리 삭제](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
   
-    -   [Power Pivot 데이터 피드 라이브러리 삭제](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)  
+    -   [Power Pivot 데이터 피드 라이브러리 삭제](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library)  
   
 2.  다른 라이브러리에서 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터를 포함하거나 참조하는 Excel 통합 문서 또는 Reporting Services 보고서를 삭제합니다.  
   
@@ -114,7 +114,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
  큐에 이미 있는 배포 또는 취소 작업을 찾아서 제거하려면 다음을 수행합니다.  
   
-1.  다른 모든 오류에 대해서는 ULS 로그를 확인합니다. 자세한 내용은 [SharePoint 로그 파일과 진단 로깅 구성 및 보기&#40;SharePoint용 파워 피벗&#41;](~/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)를 참조하세요.  
+1.  다른 모든 오류에 대해서는 ULS 로그를 확인합니다. 자세한 내용은 [SharePoint 로그 파일과 진단 로깅 구성 및 보기&#40;SharePoint용 파워 피벗&#41;](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging)를 참조하세요.  
   
 2.  SharePoint 관리 셸을 관리자 권한으로 시작하고 다음 명령을 실행하여 큐에 있는 작업을 봅니다.  
   
@@ -132,7 +132,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 5.  **유효성 검사** 를 클릭한 다음 **실행**을 클릭하여 구성 도구에서 태스크를 다시 시도합니다.  
   
- PowerShell을 사용하여 팜에서 기능과 솔루션을 제거할 수도 있습니다. 자세한 내용은 [SharePoint용 파워 피벗에 대한 PowerShell 참조](../../analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint.md)를 참조하세요.  
+ PowerShell을 사용하여 팜에서 기능과 솔루션을 제거할 수도 있습니다. 자세한 내용은 [SharePoint용 파워 피벗에 대한 PowerShell 참조](https://docs.microsoft.com/analysis-services/powershell/powershell-reference-for-power-pivot-for-sharepoint)를 참조하세요.  
   
 ##  <a name="bkmk_uninstall"></a> 3단계: SQL Server 설치 프로그램을 실행하여 로컬 컴퓨터에서 프로그램 제거  
  프로그램 파일을 삭제하려면 소프트웨어를 제거하기 위해 SQL Server 설치 프로그램을 실행해야 합니다. 제거하면 설치 프로그램에서 생성된 파일과 레지스트리 항목이 모두 제거됩니다. 프로그램 및 기능 페이지를 사용하여 소프트웨어를 제거할 수 있습니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 은 SQL Server를 설치할 때 함께 설치됩니다.  
@@ -148,7 +148,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      설치 프로그램에서 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** 인스턴스를 선택한 다음 **Analysis Services** 및 **Analysis Services SharePoint 통합** 을 선택하여 해당 기능만 제거하고 나머지 모든 기능을 그대로 둘 수 있습니다.  
   
 ##  <a name="bkmk_addin"></a> 4단계: SharePoint용 파워 피벗 추가 기능 제거  
- [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포에 두 개 이상의 서버가 포함되었고 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 경우 모든 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 파일을 완전히 제거하려면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 각 서버에서 이 추가 기능을 제거합니다. 자세한 내용은 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)를 참조하세요.  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 배포에 두 개 이상의 서버가 포함되었고 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 경우 모든 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 파일을 완전히 제거하려면 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 추가 기능이 설치된 각 서버에서 이 추가 기능을 제거합니다. 자세한 내용은 [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)를 참조하세요.  
   
 ##  <a name="verify"></a> 5단계: 제거 확인  
   
@@ -175,9 +175,9 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 2.  모든 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서, 문서 및 라이브러리를 삭제합니다(아직 삭제하지 않은 경우).  
   
-    -   [파워 피벗 갤러리 삭제](../../analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery.md)  
+    -   [파워 피벗 갤러리 삭제](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-power-pivot-gallery)  
   
-    -   [Power Pivot 데이터 피드 라이브러리 삭제](../../analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library.md)  
+    -   [Power Pivot 데이터 피드 라이브러리 삭제](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/delete-a-power-pivot-data-feed-library)  
   
 3.  보안 저장소 서비스에서 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에 사용되는 저장된 자격 증명이 있는 모든 대상 애플리케이션을 삭제합니다. 보안 저장소 서비스의 일부 항목은 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 을 제거할 때 삭제됩니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 무인 데이터 새로 고침 계정에 대해 만든 대상 애플리케이션 및 데이터 새로 고침을 위해 만든 모든 대상 애플리케이션은 아직 삭제되지 않으므로 수동으로 삭제해야 합니다.  
   
@@ -190,7 +190,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      Analysis Services OLE DB 공급자를 제거하지 마세요. SharePoint는 OLE DB 공급자를 Analysis Services 데이터베이스에 연결하는 Excel 통합 문서의 필수 구성 요소로 설치합니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 에서 최신 버전을 설치하지만 이 버전은 이전 버전과 호환되므로 나중에 데이터 연결 문제를 피하려면 OLE DB 공급자를 시스템에 그대로 두어야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)   
- [파워 피벗 구성 도구](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools.md)  
+ [SharePoint용 파워 피벗 추가 기능 설치 또는 제거&#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
+ [파워 피벗 구성 도구](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
   

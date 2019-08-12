@@ -38,12 +38,12 @@ ms.assetid: 7f3fa5f6-6b50-43bb-9047-1544ade55e39
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b345e8084b491adeadb5a814655284e9699f5550
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e91fcd2281082bbef88f0a8387d3ed6cef603d9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094910"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742841"
 ---
 # <a name="database-level-roles"></a>데이터베이스 수준 역할
 
@@ -73,7 +73,7 @@ ms.locfileid: "68094910"
 |고정 데이터베이스 역할 이름|설명|  
 |-------------------------------|-----------------|  
 |**db_owner**|**db_owner** 고정 데이터베이스 역할의 멤버는 데이터베이스에서 모든 구성 및 유지 관리 작업을 수행할 수 있고 [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]에서 데이터베이스를 삭제할 수도 있습니다. [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]에서 일부 유지 관리 작업은 서버 수준 권한이 필요하여 **db_owners**으로 수행할 수 없습니다.|  
-|**db_securityadmin**|**db_securityadmin** 고정 데이터베이스 역할의 구성원은 사용자 지정 역할에 대해서만 역할 멤버 자격을 수정할 수 있습니다. 로그인하지 않고 사용자를 만들고 사용 권한을 관리할 수도 있습니다. 이 역할에 보안 주체를 추가하면 원하지 않는 권한 상승이 설정될 수 있습니다.|  
+|**db_securityadmin**|**db_securityadmin** 고정 데이터베이스 역할의 구성원은 사용자 지정 역할에 대해서만 역할 멤버 자격을 수정하고 사용 권한을 관리할 수 있습니다. 이 역할의 구성원은 잠재적으로 권한을 상승시킬 수 있으며 해당 작업을 모니터링해야 합니다.|  
 |**db_accessadmin**|**db_accessadmin** 고정 데이터베이스 역할의 멤버는 Windows 로그인, Windows 그룹 및 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인의 데이터베이스에 대한 액세스를 추가하거나 제거할 수 있습니다.|  
 |**db_backupoperator**|**db_backupoperator** 고정 데이터베이스 역할의 멤버는 데이터베이스를 백업할 수 있습니다.|  
 |**db_ddladmin**|**db_ddladmin** 고정 데이터베이스 역할의 멤버는 데이터베이스에서 모든 DDL(데이터 정의 언어) 명령을 실행할 수 있습니다.|  
@@ -86,7 +86,7 @@ ms.locfileid: "68094910"
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]의 특수 역할
+## <a name="special-roles-for-includesssds_mdincludessssds-mdmd-and-includesssdw_mdincludessssdw-mdmd"></a>[!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] 및 [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]의 특수 역할
 
 이러한 데이터베이스 역할은 가상 master 데이터베이스에만 존재합니다. 해당 권한은 master에서 수행된 작업으로 제한됩니다. master에서 데이터베이스 사용자만 이러한 역할에 추가할 수 있습니다. 이 역할에는 로그인을 추가할 수 없습니다. 하지만 로그인을 기반으로 사용자를 만들어 해당 사용자를 역할에 추가할 수는 있습니다. 마스터에서 포함된 데이터베이스 사용자도 역할에 추가할 수 있습니다. 그러나 마스터의 **dbmanager** 역할에 추가되는 포함된 데이터베이스 사용자를 사용하여 새 데이터베이스를 만들 수 없습니다.
 

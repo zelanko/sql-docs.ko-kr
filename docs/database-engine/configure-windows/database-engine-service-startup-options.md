@@ -1,7 +1,7 @@
 ---
 title: 데이터베이스 엔진 서비스 시작 옵션 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 53c7ea706f9e886f147532bfbd3dd148a6ca7d1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91f6f88255fb45e101484637f1db823660796475
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011973"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763226"
 ---
 # <a name="database-engine-service-startup-options"></a>데이터베이스 엔진 서비스 시작 옵션
 
@@ -82,8 +82,9 @@ ms.locfileid: "68011973"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작할 때마다 사용하는 시작 옵션이 있을 수 있습니다. 추적 플래그로 시작하는 등의 이러한 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager를 통해 시작 매개 변수를 구성하면 가장 쉽게 설정할 수 있습니다. 이러한 도구는 시작 옵션을 레지스트리 키로 저장하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 항상 이 시작 옵션으로 시작할 수 있게 됩니다.  
   
 ## <a name="compatibility-support"></a>호환성 지원  
- **-h**  매개 변수는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되지 않습니다. 이 매개 변수는 이전 버전 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 AWE가 설정된 경우 Hot Add 메모리 메타데이터에 대해 가상 주소 공간을 예약하는 데 사용되었습니다. 자세한 내용은 [SQL Server 2016에서 지원되지 않는 SQL Server 기능](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)을 참조하세요.  
-  
+
+이전 릴리스에서 제거된 옵션의 경우 [sqlservr 애플리케이션](../../tools/sqlservr-application.md#compatibility-support)을 참조하세요.
+
 ## <a name="related-tasks"></a>관련 작업  
 [scan for startup procs 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [데이터베이스 엔진, SQL Server 에이전트 또는 SQL Server Browser 서비스 시작, 중지, 일시 중지, 재개 및 다시 시작](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)

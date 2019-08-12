@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/20/2019
-ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343874"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893278"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server 버전에서 지원하는 SQL Server Reporting Services 기능
 
@@ -24,9 +24,9 @@ ms.locfileid: "67343874"
 
  ## <a name="try-sql-server-2017"></a>SQL Server 2017을 사용해 보세요.
 
-> [![SQL Server 2017 다운로드](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[평가 센터에서 SQL Server 2017을 다운로드하세요.](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+> [![SQL Server 2017 다운로드](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[평가 센터에서 SQL Server 2017을 다운로드하세요.](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Azure Virtual Machine 소형](../analysis-services/media/azure-virtual-machine-small.png) **[이미 설치된 SQL Server 2017로 Virtual Machine을 스핀업](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Azure Virtual Machine 소형](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[이미 설치된 SQL Server 2017로 Virtual Machine을 스핀업](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 Evaluation 및 Developer 버전에서 지원하는 기능은 다음 표의 SQL Server Enterprise Edition 열을 참조하세요.
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e91341c5c1d6b4f9ddd521a4735f22f63907784
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500026"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891998"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Power BI의 대시보드에 Reporting Services 페이지를 매긴 보고서 항목 고정
 
@@ -68,7 +68,7 @@ ms.locfileid: "66500026"
   
 4. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]에 고정할 보고서 항목을 선택합니다. 한 번에 한 항목만 고정할 수 있습니다.  보고서 뷰어가 보고서의 음영 처리된 뷰를 표시하며 고정할 수 있는 보고서 항목은 강조 표시되는 반면에 고정할 수 없는 항목은 어둡게 음영 처리되어 표시됩니다.  
   
-    **(1)** 고정할 대시보드가 있는 그룹을 선택하고, **(2)** 항목을 고정할 대시보드를 선택하고 **(3)** 대시보드에서 타일을 업데이트할 빈도를 선택합니다.   ![참고](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고") 새로 고침은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독에 의해 관리되며 항목이 고정된 후 구독을 편집하고 다른 새로 고침 일정을 구성할 수 있습니다.  
+    **(1)** 고정할 대시보드가 있는 그룹을 선택하고, **(2)** 항목을 고정할 대시보드를 선택하고 **(3)** 대시보드에서 타일을 업데이트할 빈도를 선택합니다.   ![참고](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고") 새로 고침은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독에 의해 관리되며 항목이 고정된 후 구독을 편집하고 다른 새로 고침 일정을 구성할 수 있습니다.  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   

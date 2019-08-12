@@ -11,12 +11,12 @@ ms.assetid: 2bcacab2-3a4f-4aae-b123-19d756b9b9ed
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: aac7ce5685f4f70b98028d481f2da2bf630e3cb0
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: f86af60001deb0991983fe17c3cf1cf9ba3f2552
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412644"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893447"
 ---
 # <a name="performance-counters---reportserver-service--performance-objects"></a>성능 카운터 - ReportServer 서비스 성능 개체
   이 항목에서는 **배포에 포함된** ReportServer:Service **및** ReportServerSharePoint:Service [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 성능 개체의 성능 카운터에 대해 설명합니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "67412644"
   
  다음 표에서는 **ReportServer:Service** 성능 개체에 포함된 카운터를 나열합니다.  
   
- ![PowerShell 관련 콘텐츠](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName의 성능 카운터 목록을 반환합니다.  
+ ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName의 성능 카운터 목록을 반환합니다.  
   
 ```  
 (get-counter -listset "ReportServer:Service").paths  
@@ -76,7 +76,7 @@ ms.locfileid: "67412644"
 ##  <a name="bkmk_ReportServerSharePoint"></a> ReportServerSharePoint:Service(SharePoint 모드 보고서 서버)  
  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에서 **ReportServerSharePoint:Service** 성능 개체가 추가되었습니다.  
   
- ![PowerShell 관련 콘텐츠](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName의 성능 카운터 목록을 반환합니다.  
+ ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName의 성능 카운터 목록을 반환합니다.  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  
@@ -89,7 +89,7 @@ ms.locfileid: "67412644"
 |**Memory Shrink Notifications/Sec**||  
   
 ##  <a name="bkmk_powershell"></a> PowerShell Cmdlet을 사용하여 목록 반환  
- ![PowerShell 관련 콘텐츠](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName "ReportServerSharePoint:Service"의 성능 카운터 목록을 반환합니다.  
+ ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") 다음 Windows PowerShell 스크립트는 CounterSetName "ReportServerSharePoint:Service"의 성능 카운터 목록을 반환합니다.  
   
 ```  
 (get-counter -listset "ReportServerSharePoint:Service").paths  

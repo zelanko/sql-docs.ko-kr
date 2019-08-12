@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5cf3a03385ee30d1c037090d47ca91094bdd0aae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 473c12211ada579c3ceb441792788a1e975a85e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081685"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892490"
 ---
 # <a name="securing-sql-server"></a>SQL Server 보안 설정
 
@@ -55,7 +55,7 @@ ms.locfileid: "68081685"
 |---------------------------|---------|  
 |사용할 방화벽 구성: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |사용할 방화벽 구성: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Integration Services 서비스&#40;SSIS 서비스&#41;](../../integration-services/service/integration-services-service-ssis-service.md)|  
-|사용할 방화벽 구성: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|사용할 방화벽 구성: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |다음에 액세스할 수 있도록 방화벽의 특정 포트 열기: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |채널 바인딩 및 서비스 바인딩을 사용하여 인증에 대한 확장된 보호 지원 구성|[확장된 보호를 사용하여 데이터베이스 엔진에 연결](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
 | &nbsp; | &nbsp; |

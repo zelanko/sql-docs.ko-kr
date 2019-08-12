@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a5cbc96390799219347415719ddf6754e3c33bbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984746"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893031"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -62,7 +62,7 @@ SQL Server 2016 Analysis Services는 **1200 호환성 수준**을 기준으로 �
 - 새 **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** 네임스페이스는 테이블 형식 모드 인스턴스 및 모델을 관리합니다. 
 - [Analysis Services Management Objects(AMO)](https://msdn.microsoft.com/library/mt436122.aspx)가 두 번째 어셈블리인 **Microsoft.AnalysisServices.Core.dll**을 포함하도록 리팩터링되었습니다.
 
-[Analysis Services 엔진(SSAS)](../analysis-services/what-s-new-in-analysis-services.md)을 참조하세요. 
+[Analysis Services 엔진(SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)을 참조하세요. 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services(SSIS)
 - **Always On 가용성 그룹** 지원

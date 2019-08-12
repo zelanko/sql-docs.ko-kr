@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 81110ef6-4289-405c-a931-e7e9f49e69ba
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f25397d69f297c3cbd754de0cf19a8cb90cf872f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07f8cd00781717511bbcaba6e76553cc17d0c5bf
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65580944"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893246"
 ---
 # <a name="turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls"></a>SharePoint 추적 로그에 대한 Reporting Services 이벤트 설정(ULS)
 
@@ -138,7 +138,7 @@ Get-SPDiagnosticConfig
 |공유 서비스|샘플 항목:<br /><br /> MediumUpdating ReportingWebServiceApplication<br /><br /> 콘텐츠 데이터베이스에 대한 MediumGranting 액세스입니다.<br /><br /> ReportingWebServiceApplication의 MediumProvisioning 인스턴스<br /><br /> ReportingWebServiceApplication에 대한 MediumProcessing 서비스 계정 변경 내용<br /><br /> MediumSetting 데이터베이스 사용 권한입니다.|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell에서 로그 파일 보기  
- ![PowerShell 관련 내용](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 내용")PowerShell을 사용하여 ULS 로그 파일에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관련 이벤트 목록을 반환할 수 있습니다. ULS 로그 파일 UESQL11SPOINT-20110606-1530.log 파일에서 "**sql server reporting services**"가 포함된 필터링된 행 목록을 반환하려면 SharePoint 2010 관리 셸에서 다음 명령을 입력합니다.  
+ ![PowerShell 관련 내용](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 내용")PowerShell을 사용하여 ULS 로그 파일에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 관련 이벤트 목록을 반환할 수 있습니다. ULS 로그 파일 UESQL11SPOINT-20110606-1530.log 파일에서 "**sql server reporting services**"가 포함된 필터링된 행 목록을 반환하려면 SharePoint 2010 관리 셸에서 다음 명령을 입력합니다.  
   
 ```  
 Get-content -path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS\UESQL11SPOINT-20110606-1530.log" | select-string "sql server reporting services"  

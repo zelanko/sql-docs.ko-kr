@@ -10,12 +10,12 @@ ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: afef865ed2440f278d61e8b0f4d3304867803853
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 418852430170e40308d1d37446b9868281960f49
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126186"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894056"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>SQL Server Business Intelligence 기능 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "68126186"
 ## <a name="sql-server-bi-features"></a>SQL Server BI 기능  
  BI 구성 요소를 포함한 모든 SQL Server 기능은 SQL Server 설치 프로그램을 통해 설치됩니다. 다음 링크는 각 BI 기능에 관련된 추가 정보를 제공합니다.  
   
--   [Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services.md)  
+-   [Analysis Services 설치](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)  
   
--   [파워 피벗 모드에서 Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+-   [파워 피벗 모드에서 Analysis Services 설치](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)  
   
 -   [Data Quality Services 설치](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68126186"
   
 ## <a name="see-also"></a>참고 항목  
  [Reporting Services&#40;SSRS&#41;의 새로운 기능](https://msdn.microsoft.com/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
- [Analysis Services의 새로운 기능](../../analysis-services/what-s-new-in-analysis-services.md)   
+ [Analysis Services의 새로운 기능](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)   
  [Integration Services의 새로운 기능](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)   
  [MDS&#40;Master Data Services&#41;의 새로운 기능](../../master-data-services/what-s-new-in-master-data-services-mds.md)   
  [SQL Server 2016 설치](../../database-engine/install-windows/install-sql-server.md)   

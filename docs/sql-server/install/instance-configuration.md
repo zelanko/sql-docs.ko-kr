@@ -15,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
-ms.openlocfilehash: b7170b1fbbdd95b1ba50e2448de322fa1247059a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: edd2c17b106e536f1a2694fe0cb25e34b10d1138
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126166"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894060"
 ---
 # <a name="installation-wizard-help"></a>설치 마법사 도움말
 
@@ -122,7 +122,7 @@ ms.locfileid: "68126166"
   
 ### <a name="see-also"></a>관련 항목:
   
-* [서비스 계정 구성&#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)
+* [서비스 계정 구성&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)
 * [Windows 서비스 계정 및 사용 권한 구성](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
 
 ## <a name="analysis-services-configuration---data-directories-page"></a>Analysis Services 구성 - 데이터 디렉터리 페이지

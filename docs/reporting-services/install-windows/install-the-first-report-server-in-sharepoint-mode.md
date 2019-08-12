@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1fb9daa74abd547f23bc78e76b8c0840e9c54af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775772"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892286"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint 모드에서 첫 번째 보고서 서버 설치
 
@@ -142,7 +142,7 @@ ms.locfileid: "64775772"
   
 9. 데이터베이스 엔진 서비스를 선택한 경우 **인스턴스 구성** 페이지에서 **MSSQLSERVER** 의 기본 인스턴스를 적용하고 **다음**을 클릭합니다.  
   
-     ![참고](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고")Reporting Services SharePoint 서비스 아키텍처는 이전 Reporting Services 아키텍처처럼 SQL Server "인스턴스"를 기반으로 하지 않습니다.  
+     ![참고](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고")Reporting Services SharePoint 서비스 아키텍처는 이전 Reporting Services 아키텍처처럼 SQL Server "인스턴스"를 기반으로 하지 않습니다.  
   
 10. **서버 구성** 페이지가 표시되면 적합한 자격 증명을 입력합니다. Reporting Services 데이터 경고 또는 가입 기능을 사용하려면 SQL Server 에이전트의 **시작 유형**을 **자동**으로 변경해야 합니다. 컴퓨터에 이미 설치된 기능에 따라 **서버 구성** 페이지가 표시되지 않을 수 있습니다.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "64775772"
 15. 설치하는 데 몇 분 정도 걸립니다. 기능 목록 및 각 기능의 상태가 표시된 **완료** 페이지가 나타납니다. 컴퓨터를 다시 시작해야 함을 나타내는 정보 대화 상자가 표시될 수 있습니다.  
   
 ##  <a name="bkmk_install_SSRS_sharedservice"></a> 2단계: Reporting Services SharePoint 서비스 등록 및 시작  
- ![PowerShell 관련 콘텐츠](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
+ ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
   
 > [!NOTE]
 > 기존 SharePoint 팜에 설치하는 경우에는 이 섹션의 단계를 완료할 필요가 없습니다. 이 문서의 이전 섹션의 일부로 SQL Server 설치 마법사를 실행한 경우 Reporting Services SharePoint 서비스가 설치되어 시작되었습니다.  
@@ -254,7 +254,7 @@ ms.locfileid: "64775772"
   
 11. 서비스 애플리케이션 만들기를 완료하는 데 몇 분이 걸릴 수 있습니다. 완료되면 확인 메시지와 **구독 및 경고 프로비전** 페이지로 이동하는 링크가 표시됩니다. Reporting Services 구독 기능 및 데이터 경고 기능을 사용하려면 프로비전 단계를 완료합니다. 자세한 내용은 [SSRS 서비스 애플리케이션에 대한 구독 및 경고 프로비전](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)을 참조하세요.  
   
- ![PowerShell 관련 콘텐츠](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") Reporting Services 서비스 애플리케이션을 만드는 데 PowerShell을 사용하는 방법은 다음을 참조하세요.  
+ ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠") Reporting Services 서비스 애플리케이션을 만드는 데 PowerShell을 사용하는 방법은 다음을 참조하세요.  
   
 -   다음 섹션인 [1-4단계를 위한 Windows PowerShell 스크립트](#bkmk_full_script)를 참조하세요.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "64775772"
   
      원하는 SharePoint 사이트로 브라우저를 엽니다. 엽니다(예: https://\<servername>/sites/bi).  
   
-2.  **설정**![SharePoint 설정](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")을 선택합니다.  
+2.  **설정**![SharePoint 설정](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 설정")을 선택합니다.  
   
 3.  **사이트 설정**을 선택합니다.  
   
@@ -391,13 +391,13 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  SharePoint 2016의 경우 Excel Services를 사용하려면 [Office Online Server](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) 를 구성해야 합니다. 자세한 내용은 다음 백서를 참조하세요.
  
- - [SharePoint 2016에서 SQL Server 2016 PowerPivot 및 파워 뷰 배포](../../analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md)
+ - [SharePoint 2016에서 SQL Server 2016 PowerPivot 및 파워 뷰 배포](https://docs.microsoft.com/analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016)
  
- - [다층 계층 SharePoint 2016 팜에서 SQL Server 2016 PowerPivot 및 파워 뷰 배포](../../analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)
+ - [다층 계층 SharePoint 2016 팜에서 SQL Server 2016 PowerPivot 및 파워 뷰 배포](https://docs.microsoft.com/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
  
  SharePoint 2016의 경우 Excel Services 애플리케이션을 만들고 구성해야 합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
--   [파워 피벗 모드에서 Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)의 "Analysis Services 통합에 대한 Excel Services 구성" 섹션.  
+-   [파워 피벗 모드에서 Analysis Services 설치](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)의 "Analysis Services 통합에 대한 Excel Services 구성" 섹션.  
   
 -   [Excel Services 데이터 모델 설정(SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
 

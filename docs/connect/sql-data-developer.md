@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cfd79f0cd7470ea94be1c77e5bc27016531909ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265390"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893915"
 ---
 # <a name="sql-data-developer"></a>SQL 데이터 개발자
 Microsoft의 SQL data platform을 사용 하 여 웹 서버, 엔터프라이즈 서버 및 클라우드의 모바일 장치 및 데스크톱에서 데이터 중심 솔루션을 만들 수 있습니다.  
@@ -40,7 +40,7 @@ Microsoft의 SQL data platform을 사용 하 여 웹 서버, 엔터프라이즈 
 * [Sqlxml 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): sqlxml 4.0을 사용 하 여 관계형 데이터를 XML로 내보냅니다.
 
 ## <a name="data-collection-processing-and-visualization"></a>데이터 수집, 처리 및 시각화
-* [Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
+* [Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)
 * [Integration Services](../integration-services/integration-services-developer-documentation.md)  
 * [MDS(Master Data Services)](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [Replication Services](../relational-databases/replication/concepts/replication-developer-documentation.md)

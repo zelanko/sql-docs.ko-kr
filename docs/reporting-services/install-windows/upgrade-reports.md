@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 04dacff6d9a7feed350c6f8e4417bbbd81b80b30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4516effe7308386def1aa7cca885f9fa48547ec5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502616"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889734"
 ---
 # <a name="upgrade-reports-ssrs"></a>보고서 업그레이드(SSRS)
 
@@ -31,7 +31,7 @@ ms.locfileid: "65502616"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]의 보고서 디자이너에서 페이지를 매긴 보고서를 열면 보고서 정의가 현재 지원되는 RDL 스키마로 업그레이드됩니다. 프로젝트 속성에서 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 보고서 서버를 지정하면 보고서 정의는 대상 서버와 호환되는 스키마에 저장됩니다.  
   
--   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 설치로 업그레이드한 경우 보고서 서버에 게시된 기존 보고서 및 스냅숏은 처음 처리되는 시점에서 새 스키마로 컴파일되고 자동으로 업그레이드됩니다. 자동으로 업그레이드할 수 없는 보고서는 이전 버전 호환 모드를 사용하여 처리됩니다. 보고서 정의는 원래 스키마에 유지됩니다.  
+-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] 설치로 업그레이드한 경우 보고서 서버에 게시된 기존 보고서 및 스냅샷은 처음 처리되는 시점에서 새 스키마로 컴파일되고 자동으로 업그레이드됩니다. 자동으로 업그레이드할 수 없는 보고서는 이전 버전 호환 모드를 사용하여 처리됩니다. 보고서 정의는 원래 스키마에 유지됩니다.  
   
  로컬 또는 보고서 서버에서 보고서를 업그레이드한 후 추가적인 오류, 경고 및 메시지가 나타날 수 있습니다. 이것은 내부 보고서 개체 모델 및 처리 구성 요소가 변경됨에 따라 보고서에서 근본적인 문제를 감지하고 메시지를 표시하기 때문입니다. 자세한 내용은 [Reporting Services Backward Compatibility](../../reporting-services/reporting-services-backward-compatibility.md)을 참조하세요.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "65502616"
   
  보고서, 보고서 서버 또는 보고서 디자이너에 대한 현재 RDL 스키마를 확인하려면 [보고서 정의 스키마 버전 찾기&#40;SSRS&#41;](../../reporting-services/reports/find-the-report-definition-schema-version-ssrs.md)를 참조하세요.  
   
-##  <a name="bkmk_publishedreports_and_snapshots"></a> 게시된 보고서 및 보고서 스냅숏  
+##  <a name="bkmk_publishedreports_and_snapshots"></a> 게시된 보고서 및 보고서 스냅샷  
  처음 사용할 때 보고서 서버는 게시된 기존 보고서와 보고서 스냅샷을 새 보고서 정의 스키마로 업그레이드하려고 합니다. 이때 사용자는 특정 동작을 수행할 필요가 없습니다. 이러한 업그레이드 시도는 사용자가 보고서 또는 보고서 스냅샷을 보거나 보고서 서버에서 구독을 처리할 때 수행됩니다. 보고서 정의는 대체되지 않고 보고서 서버의 원래 스키마에 계속 저장됩니다. 업그레이드할 수 없는 보고서는 이전 버전 호환 모드에서 실행됩니다.  
   
 ##  <a name="bkmk_backcompat"></a> 이전 버전 호환 모드  
@@ -136,8 +136,8 @@ ms.locfileid: "65502616"
 ## <a name="next-steps"></a>다음 단계
 
 [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[SQL Server 2016에서 SQL Server Reporting Services의 주요 변경 내용](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
-[SQL Server 2016에서 SQL Server Reporting Services의 동작 변경 내용](../../analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016.md)   
+[SQL Server 2016에서 SQL Server Reporting Services의 주요 변경 내용](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
+[SQL Server 2016에서 SQL Server Reporting Services의 동작 변경 내용](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
 [SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [사용자 지정 보고서 항목](../../reporting-services/custom-report-items/custom-report-items.md)   
 [보고서 서버 데이터베이스 업그레이드](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  

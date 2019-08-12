@@ -11,12 +11,12 @@ ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 4676b4d17dc2de9118623037e6725c2b3c637c7e
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.openlocfilehash: 9efb156c64d0e8daf7dcae8849a2e4687773602c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290363"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892470"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 릴리스 정보
 
@@ -947,6 +947,6 @@ _SQL Server 2016의 경우._
 [SQL Server Data Tools 다운로드 &#40;SSDT&#41;](../ssdt/download-sql-server-data-tools-ssdt.md)  
 [SQL Server Data Tools&#40;SSDT 및 SSDT-BI&#41;의 이전 릴리스](../ssdt/previous-releases-of-sql-server-data-tools-ssdt-and-ssdt-bi.md)  
 [데이터베이스 엔진의 새로운 기능](https://msdn.microsoft.com/library/bb510411.aspx)  
-[Analysis Services의 새로운 기능](../analysis-services/what-s-new-in-analysis-services.md)  
+[Analysis Services의 새로운 기능](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  
 [Integration Services의 새로운 기능](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   

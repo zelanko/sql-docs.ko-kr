@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5352a4b71e485a58907d4702dd10929955f92500
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0359a53fafa4c738b80d4ad44b3c9babdd534cf7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65570973"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892548"
 ---
 # <a name="grouping-pane"></a>그룹화 창
 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 보고서를 디자인할 때 그룹화 창에는 현재 선택한 테이블릭스 데이터 영역에 대한 행 그룹과 열 그룹이 표시됩니다. 차트 및 계기 데이터 영역은 그룹화 창에서 사용할 수 없습니다. 그룹화 창은 행 그룹 창과 열 그룹 창으로 구성되며 기본 및 고급 모드의 두 가지 모드를 제공합니다. 기본 모드에서는 행 및 열 그룹의 동적 멤버의 계층 뷰를 표시하고 고급 모드에서는 행과 열 그룹의 동적 및 정적 멤버를 모두 표시합니다. 그룹은 데이터 영역에 표시되는 보고서 데이터 세트의 명명된 데이터 세트입니다. 그룹은 정적 및 동적 멤버를 포함하는 계층으로 구성됩니다. 자세한 내용은 [그룹 이해&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/understanding-groups-report-builder-and-ssrs.md)를 참조하세요.  
   
-  ![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 그룹화 창이 표시되지 않는 경우 **보고서** 메뉴에서 **그룹화**를 클릭합니다.
+  ![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) 그룹화 창이 표시되지 않는 경우 **보고서** 메뉴에서 **그룹화**를 클릭합니다.
   
  행과 열 그룹 영역에 있는 셀은 그룹의 정적 또는 동적 멤버일 수 있습니다. 정적 멤버는 그룹당 한 번씩 반복되며 일반적으로 레이블 또는 합계를 포함합니다. 동적 멤버는 그룹 인스턴스당 한 번씩 반복되며 일반적으로 그룹 식의 고유한 값을 포함합니다. 행 그룹 영역이나 열 그룹 영역에 있는 테이블릭스 셀을 선택하면 행 그룹 또는 열 그룹 창에서 해당 그룹 멤버가 선택됩니다. 반대로 그룹화 창에서 그룹을 선택하면 디자인 화면에서 이 그룹 멤버와 연결된 해당 셀이 선택됩니다. 테이블릭스 행 및 열 그룹 영역에 대한 자세한 내용은 [테이블릭스 데이터 영역&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-design/tablix-data-region-areas-report-builder-and-ssrs.md)를 참조하세요.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65570973"
 ## <a name="advanced-mode"></a>고급 모드  
 고급 모드에서는 그룹의 모든 정적 및 동적 멤버를 볼 수 있습니다. 멤버를 선택하면 속성 창에 현재 선택한 **테이블릭스 멤버**에 대한 속성이 표시됩니다.  
   
-![ssrs_fyi_note](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png) **고급 모드**를 전환하려면 열 그룹 창 옆에 있는 아래쪽 화살표를 마우스 오른쪽 단추로 클릭한 다음 **고급 모드**를 클릭합니다.  
+![ssrs_fyi_note](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png) **고급 모드**를 전환하려면 열 그룹 창 옆에 있는 아래쪽 화살표를 마우스 오른쪽 단추로 클릭한 다음 **고급 모드**를 클릭합니다.  
   
 대부분의 경우 정적 및 동적 그룹 행과 열의 표시를 제어하는 속성은 그룹을 만들거나 합계를 추가할 때 자동으로 설정됩니다. 
 

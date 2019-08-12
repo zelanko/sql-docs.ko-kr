@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 760a15ce22421ac1e98c6b14ea661de28bf299a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fdee1ff2ec3ddb825dd4030c3ff1c29d78570254
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904172"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893379"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>Analysis Services DDL 실행 태스크
 
@@ -44,9 +44,9 @@ ms.locfileid: "67904172"
 ## <a name="ddl-statements"></a>DDL 문  
  DDL 문은 ASSL( [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language) 문으로 표현되고 XML for Analysis(XMLA) 명령에 포함됩니다.  
   
--   ASSL은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 이 인스턴스에 포함된 데이터베이스 및 데이터베이스 개체를 정의하고 설명하는 데 사용합니다. 자세한 내용은 [Analysis Services Scripting Language&#40;XMLA용 ASSL&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md)를 참조하세요.  
+-   ASSL은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스와 이 인스턴스에 포함된 데이터베이스 및 데이터베이스 개체를 정의하고 설명하는 데 사용합니다. 자세한 내용은 [Analysis Services Scripting Language&#40;XMLA용 ASSL&#41;](https://docs.microsoft.com/analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla)를 참조하세요.  
   
--   XMLA는 만들기, 변경 또는 처리와 같은 동작 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스로 보내는 데 사용하는 명령 언어입니다. 자세한 내용은 [XMLA&#40;XML for Analysis&#41; 참조](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md)를 참조하세요.  
+-   XMLA는 만들기, 변경 또는 처리와 같은 동작 명령을 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]인스턴스로 보내는 데 사용하는 명령 언어입니다. 자세한 내용은 [XMLA&#40;XML for Analysis&#41; 참조](https://docs.microsoft.com/analysis-services/xmla/xml-for-analysis-xmla-reference)를 참조하세요.  
   
  DDL 코드가 별도의 파일에 저장되어 있을 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 실행 태스크는 파일 연결 관리자를 사용하여 해당 파일의 경로를 지정합니다. 자세한 내용은 [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md)을 참조하세요.  
   

@@ -14,12 +14,12 @@ ms.assetid: 0300e777-d56b-4d10-9c33-c9ebd2489ee5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: dff9635858d1fba1f5c8999bd6b49a3d845c412b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d790ef532a66bf7f8e34f69b9f982bef3416d0a1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055941"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893982"
 ---
 # <a name="install-sql-server"></a>SQL Server 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "68055941"
 |-----------|-----------------|  
 |[SQL Server 액세스를 허용하도록 Windows 방화벽 구성](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|이 문서에서는 방화벽 구성 및 Windows 방화벽 구성 방법에 대한 개요를 제공합니다.|  
 |[SQL Server 액세스를 허용하도록 다중 홈 컴퓨터 구성](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|이 문서에서는 다중 홈 환경에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 네트워크 연결을 제공하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 고급 보안이 포함된 Windows 방화벽을 구성하는 방법에 대해 설명합니다.|  
-|[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|이 문서에서 제공하는 단계를 따라 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에 액세스할 수 있도록 포트 및 방화벽 설정 모두를 구성할 수 있습니다.|  
+|[Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|이 문서에서 제공하는 단계를 따라 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 또는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]에 액세스할 수 있도록 포트 및 방화벽 설정 모두를 구성할 수 있습니다.|  
   
 ## <a name="related-sections"></a>관련 단원  
 [[!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]의 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)  

@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65fd65d6849153b807ecbdb0d24296640ca38390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77a7bd22ee9317e60d1b755e8ef3755735e0d845
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098730"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893797"
 ---
-# <a name="tryparse-transact-sql"></a>TRY_PARSE(Transact-SQL)
+# <a name="try_parse-transact-sql"></a>TRY_PARSE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 요청한 데이터 형식으로 변환된 식 결과를 반환하거나 캐스팅에 실패한 경우 null을 반환합니다. TRY_PARSE는 문자열에서 날짜/시간 및 숫자 형식으로 변환하는 경우에만 사용하세요.  
@@ -101,7 +101,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Nederlands|네덜란드어|1043|nl-NL|  
 |Norsk|노르웨이어|2068|nn-NO|  
 |Português|포르투갈어|2070|pt-PT|  
-|Suomi|핀란드어|1035|fi|  
+|Suomi|핀란드어|1035|fi-FI|  
 |Svenska|스웨덴어|1053|sv-SE|  
 |čeština|체코어|1029|Cs-CZ|  
 |magyar|헝가리어|1038|Hu-HU|  
@@ -127,7 +127,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-simple-example-of-tryparse"></a>1\. TRY_PARSE의 간단한 예  
+### <a name="a-simple-example-of-try_parse"></a>1\. TRY_PARSE의 간단한 예  
   
 ```  
 SELECT TRY_PARSE('Jabberwokkie' AS datetime2 USING 'en-US') AS Result;  
@@ -143,7 +143,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-detecting-nulls-with-tryparse"></a>2\. TRY_PARSE를 사용하여 Null 검색  
+### <a name="b-detecting-nulls-with-try_parse"></a>2\. TRY_PARSE를 사용하여 Null 검색  
   
 ```  
 SELECT  
@@ -164,7 +164,7 @@ True
 (1 row(s) affected)  
 ```  
   
-### <a name="c-using-iif-with-tryparse-and-implicit-culture-setting"></a>C. TRY_PARSE 및 암시적 culture 설정과 함께 IIF 사용  
+### <a name="c-using-iif-with-try_parse-and-implicit-culture-setting"></a>C. TRY_PARSE 및 암시적 culture 설정과 함께 IIF 사용  
   
 ```  
 SET LANGUAGE English;  

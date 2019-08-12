@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: edd6d1ddb936571861260e7fafe6a3903e72b29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091825"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893079"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68091825"
   
 |기술|설명|  
 |--------------|---------------|  
-|[Analysis Services 자습서&#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 테이블 형식 모델 또는 다차원 모델을 개발하고 배포하는 방법에 대해 알아봅니다. PowerPivot과 같은 도구를 사용하여 모델의 데이터를 분석하는 방법에 대해서도 알아봅니다.|  
+|[Analysis Services 자습서&#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 의 테이블 형식 모델 또는 다차원 모델을 개발하고 배포하는 방법에 대해 알아봅니다. PowerPivot과 같은 도구를 사용하여 모델의 데이터를 분석하는 방법에 대해서도 알아봅니다.|  
 |[데이터베이스 엔진 자습서](../relational-databases/database-engine-tutorials.md)|데이터베이스 엔진 인스턴스에 연결한 다음 Transact-SQL 문을 작성하고 실행하는 방법에 대해 알아봅니다.|  
 |[엔터프라이즈 정보 관리 자습서](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Microsoft EIM 기술을 사용하여 엔터프라이즈에서 정보를 관리하는 방법에 대해 알아봅니다.|  
 |[Integration Services 자습서](../integration-services/integration-services-tutorials.md)|[!INCLUDE[ssIS](../includes/ssis-md.md)] 패키지를 만들고 배포하는 방법에 대해 알아봅니다.|  

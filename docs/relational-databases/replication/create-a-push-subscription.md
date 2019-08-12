@@ -16,16 +16,19 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4ab4102c477a8904dd99eb2717f2c5e31c38b9bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b5a52597f2d81fc3d2431d0ab9e97ac0e64f63f9
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903037"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768650"
 ---
 # <a name="create-a-push-subscription"></a>밀어넣기 구독 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 밀어넣기 구독을 만드는 방법에 대해 설명합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자에 대해 밀어넣기 구독을 만드는 방법에 대한 자세한 내용은 [SQL Server 이외 구독자에 대한 구독 만들기](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)를 참조하세요.  
+
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
   
  
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio 사용  
@@ -90,19 +93,19 @@ ms.locfileid: "67903037"
   
     -   **allow_push** 의 값이 **1**이면 게시에서 밀어넣기 구독을 지원합니다.  
   
-    -   **allow_push**의 값이 **0**이면 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행하고 **@property** 에 **allow_push**, **@value** 에 **true**를 지정합니다.  
+    -   **allow_push**의 값이 **0**이면 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행하고 **\@property**에 **allow_push**를 지정하고 **\@value**에 **true**를 지정합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행합니다. **@publication** , **@subscriber** 및 **@destination_db** 을 지정합니다. **@subscription_type** 에 **push** 값을 지정합니다. 구독 업데이트 방법은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요.  
+2.  게시 데이터베이스의 게시자에서 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)을 실행합니다. **\@publication**, **\@subscriber** 및 **\@destination_db**를 참조하세요. **\@subscription_type**의 값을 **push**로 지정합니다. 구독 업데이트 방법은 [트랜잭션 게시에 대해 업데이트할 수 있는 구독 만들기](publish/create-an-updatable-subscription-to-a-transactional-publication.md)를 참조하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)를 실행합니다. 다음을 지정합니다.  
   
-    -   배포자의 배포 에이전트가 **@subscriber** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db** 및 **@publication** 매개 변수  
+    -   **\@subscriber**, **\@subscriber_db** 및 **\@publication** 매개 변수.  
   
-    -   배포자의 배포 에이전트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] @job_login **@job_login** 를 지정하고 **@job_password** 를 참조하세요.  
+    -   배포자의 배포 에이전트가 **\@job_login** 및 **\@job_password**에 대해 실행되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 자격 증명.  
   
-        > **참고:** Windows 통합 인증을 사용하여 만든 연결은 항상 **@job_login** 을 지정하고 **@job_password** 를 참조하세요. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
+        > **참고:** Windows 통합 인증을 사용하여 만든 연결은 항상 **\@job_login** 및 **\@job_password**로 지정한 Windows 자격 증명만 사용합니다. 배포 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 대한 로컬 연결을 만듭니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
   
-    -   (옵션) **0** 에 **@subscriber_security_mode** 값 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@subscriber_login** 를 지정하고 **@subscriber_password** 를 참조하세요. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 매개 변수를 지정합니다.  
+    -   (옵션) **\@subscriber_security_mode**에 대한 **0** 값과 **\@subscriber_login** 및 **\@subscriber_password**에 대한 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인 정보. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 매개 변수를 지정합니다.  
   
     -   이 구독에 대한 배포 에이전트 작업 일정. 자세한 내용은 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요.  
   
@@ -114,29 +117,29 @@ ms.locfileid: "67903037"
   
     -   **allow_push** 값이 **1**이면 게시에서 밀어넣기 구독을 지원합니다.  
   
-    -   **allow_push**의 값이 **1**이 아니면 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행하고 **@property** 에 **allow_push**, **@value** 에 **true**를 지정합니다.  
+    -   **allow_push**의 값이 **1**이 아니면 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행하고 **\@property**에 **allow_push**를 지정하고 **\@value**에 **true**를 지정합니다.  
   
 2.  게시 데이터베이스의 게시자에서 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)을 실행하고 다음 매개 변수를 지정합니다.  
   
-    -   **@publication** 를 참조하세요. 게시의 이름입니다.  
+    -   **\@publication**. 게시의 이름입니다.  
   
-    -   **@subscriber_type** 를 참조하세요. 클라이언트 구독에 **local** 을 지정하고 서버 구독에 **global**을 지정합니다.  
+    -   **\@subscriber_type**. 클라이언트 구독에 **local** 을 지정하고 서버 구독에 **global**을 지정합니다.  
   
-    -   **@subscription_priority** 를 참조하세요. 서버 구독에 대해 구독의 우선 순위를 지정합니다(**0.00** ~ **99.99**).  
+    -   **\@subscription_priority**. 서버 구독에 대해 구독의 우선 순위를 지정합니다(**0.00** ~ **99.99**).  
   
          자세한 내용은 [고급 병합 복제 충돌 감지 및 해결](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)을 참조하세요.  
   
 3.  게시 데이터베이스의 게시자에서 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)를 실행합니다. 다음을 지정합니다.  
   
-    -   구독자에서 배포 에이전트가 실행되는 **@subscriber** 또는 RMO(복제 관리 개체)를 사용하여 **@subscriber_db** 및 **@publication** 매개 변수  
+    -   **\@subscriber**, **\@subscriber_db** 및 **\@publication** 매개 변수.  
   
-    -   **@job_login** 및 **@job_password** 에 대해 배포자의 병합 에이전트를 실행하는 데 사용되는 Windows 자격 증명  
+    -   **\@job_login** 및 **\@job_password**에 대해 배포자에서 병합 에이전트가 실행되는 Windows 자격 증명.  
   
-        > **참고:**  Windows 통합 인증을 사용하여 만든 연결은 항상 **@job_login** 을 지정하고 **@job_password** 를 참조하세요. 병합 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 로컬로 연결합니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
+        > **참고:**  Windows 통합 인증을 사용하여 만든 연결은 항상 **\@job_login** 및 **\@job_password**로 지정한 Windows 자격 증명만 사용합니다. 병합 에이전트는 항상 Windows 통합 인증을 사용하여 배포자에 로컬로 연결합니다. 기본적으로 에이전트는 Windows 통합 인증을 사용하여 구독자에 연결합니다.  
   
-    -   (옵션) **0** 에 **@subscriber_security_mode** 값 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@subscriber_login** 를 지정하고 **@subscriber_password** 를 참조하세요. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 매개 변수를 지정합니다.  
+    -   (옵션) **\@subscriber_security_mode**에 대한 **0** 값과 **\@subscriber_login** 및 **\@subscriber_password**에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인 정보. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 매개 변수를 지정합니다.  
   
-    -   (옵션) **0** 에 **@publisher_security_mode** 값 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 **@publisher_login** 를 지정하고 **@publisher_password** 를 참조하세요. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 값을 지정합니다.  
+    -   (옵션) **\@publisher_security_mode**에 대한 **0** 값과 **\@publisher_login** 및 **\@publisher_password**에 대한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로그인 정보. 구독자에 연결할 때 SQL Server 인증을 사용해야 하는 경우 이러한 값을 지정합니다.  
   
     -   이 구독에 대한 병합 에이전트 작업 일정. 자세한 내용은 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요.  
   
@@ -192,7 +195,7 @@ ms.locfileid: "67903037"
   
 8.  <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출합니다.  
   
-    > **중요!!** 원격 배포자가 있는 게시자에서 밀어넣기 구독을 만드는 경우 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 비롯한 모든 속성에 제공된 값이 일반 텍스트로 배포자에게 보내집니다. <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
+    > **중요!! **원격 배포자가 있는 게시자에서 푸시 구독을 만드는 경우 <xref:Microsoft.SqlServer.Replication.Subscription.SynchronizationAgentProcessSecurity%2A>를 비롯한 모든 속성에 제공된 값이 일반 텍스트로 배포자에게 보내집니다. <xref:Microsoft.SqlServer.Replication.Subscription.Create%2A> 메서드를 호출하기 전에 게시자와 해당 원격 배포자 간 연결을 암호화해야 합니다. 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용&#40;SQL Server 구성 관리자&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.  
   
 #### <a name="to-create-a-push-subscription-to-a-merge-publication"></a>병합 게시에 밀어넣기 구독을 만들려면  
   

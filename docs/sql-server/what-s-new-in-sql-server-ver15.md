@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d988fc9dfc126bef79d94ca0867128085069456e
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: caf8b23b823d7863e1bd7c8abd01ef43b0b8ec20
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495446"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702890"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -125,7 +125,10 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 
 ### <a name="polybase"></a>PolyBase
 
-|새 기능 또는 업데이트 | 세부 정보 | |PolyBase |이제 외부 테이블 열 이름이 SQL Server, Oracle, Teradata, MongoDB 및 ODBC 데이터 원본을 쿼리하는 데 사용됩니다. | | &nbsp; | &nbsp; |
+|새로운 기능 또는 업데이트 | 세부 정보 |
+|:---|:---|
+|PolyBase |이제 외부 테이블 열 이름이 SQL Server, Oracle, Teradata, MongoDB 및 ODBC 데이터 원본을 쿼리하는 데 사용됩니다. |
+| &nbsp; | &nbsp; |
 
 ### <a name="collation"></a>데이터 정렬
 

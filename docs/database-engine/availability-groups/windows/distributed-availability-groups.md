@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7fadeded7c979631cabc763d1be8d037b5913d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968307"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702747"
 ---
 # <a name="distributed-availability-groups"></a>분산 가용성 그룹
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -235,7 +235,7 @@ GO
 
 ![이전 쿼리의 예제 출력](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 
-### <a name="dmv-to-list-distribtued-ag-health"></a>분산 AG 상태를 나열하는 DMV
+### <a name="dmv-to-list-distributed-ag-health"></a>분산 AG 상태를 나열하는 DMV
 
 SQL Server Management Studio에서 대시보드 및 다른 영역에 표시되는 모든 상태는 가용성 그룹 내의 로컬 동기화에만 해당됩니다. 분산 가용성 그룹의 상태를 표시하려면 동적 관리 뷰를 쿼리하세요. 다음 예제 쿼리는 이전 쿼리를 확장하고 구체화합니다.
 

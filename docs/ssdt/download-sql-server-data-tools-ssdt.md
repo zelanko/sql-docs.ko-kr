@@ -13,12 +13,12 @@ ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 62b3db01792005afa7c124f4f31b78cdc350b2dd
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.openlocfilehash: 06b2d138ce3d12fdf2a115343d922368accbeda7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290343"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892422"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -148,7 +148,7 @@ SSDT를 설치한 후 데이터베이스, 패키지, 데이터 모델 및 SSDT�
 
 - [프로젝트 기반 오프라인 데이터베이스 개발](project-oriented-offline-database-development.md)  
 - [SSIS 자습서: 간단한 ETL 패키지 만들기](../integration-services/ssis-how-to-create-an-etl-package.md)  
-- [Analysis Services 자습서](../analysis-services/analysis-services-tutorials-ssas.md)  
+- [Analysis Services 자습서](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)  
 - [기본 테이블 보고서 만들기(SSRS 자습서)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

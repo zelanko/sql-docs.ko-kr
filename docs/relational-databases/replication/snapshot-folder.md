@@ -12,18 +12,22 @@ f1_keywords:
 ms.assetid: 3eb1b73f-ddb3-4d09-be6e-811c414698e9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 99e3910e3c97b4dcda725e80ce45d9fd928cdead
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 92abee758d5eda99aebddc874550eb9cd2e87ca5
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051629"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769509"
 ---
 # <a name="snapshot-folder"></a>스냅샷 폴더
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  **스냅샷 폴더** 페이지는 배포 구성 마법사 및 새 게시 마법사에 나타납니다. 지정하는 스냅샷 폴더 위치는 이 마법사에서 설정하는 모든 게시자의 기본값으로 사용됩니다. 기본 스냅샷 폴더는 나중에 **배포자 속성** 대화 상자를 사용하여 설정하는 게시자에는 적용되지 않습니다. 배포 구성 마법사 또는 **배포자 속성** 대화 상자의 **게시자** 페이지에서 임의의 게시자에 대해 이 기본값을 무시할 수 있습니다.  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+**스냅샷 폴더** 페이지는 배포 구성 마법사 및 새 게시 마법사에 나타납니다. 지정하는 스냅샷 폴더 위치는 이 마법사에서 설정하는 모든 게시자의 기본값으로 사용됩니다. 기본 스냅샷 폴더는 나중에 **배포자 속성** 대화 상자를 사용하여 설정하는 게시자에는 적용되지 않습니다. 배포 구성 마법사 또는 **배포자 속성** 대화 상자의 **게시자** 페이지에서 임의의 게시자에 대해 이 기본값을 무시할 수 있습니다.  
   
- 스냅샷 폴더는 공유하도록 지정된 디렉터리일 뿐이며 이 폴더에 읽기/쓰기 작업을 수행하려면 에이전트에게 충분한 액세스 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요. 복제를 구현하기 전에 복제 에이전트에서 스냅샷 폴더에 연결할 수 있는지 테스트합니다. 각 에이전트에서 사용할 계정으로 로그온한 다음 스냅샷 폴더에 액세스해 봅니다.  
+스냅샷 폴더는 공유하도록 지정된 디렉터리일 뿐이며 이 폴더에 읽기/쓰기 작업을 수행하려면 에이전트에게 충분한 액세스 권한이 있어야 합니다. 폴더의 적절한 보안 유지 방법에 대한 자세한 내용은 [스냅샷 폴더 보안 설정](../../relational-databases/replication/security/secure-the-snapshot-folder.md)을 참조하세요. 복제를 구현하기 전에 복제 에이전트에서 스냅샷 폴더에 연결할 수 있는지 테스트합니다. 각 에이전트에서 사용할 계정으로 로그온한 다음 스냅샷 폴더에 액세스해 봅니다.  
+
+Azure SQL Database 관리형 인스턴스의 경우, 스냅샷 폴더가 Azure 파일 공유여야 합니다. 
   
 ## <a name="options"></a>옵션  
  **Snapshot folder**  

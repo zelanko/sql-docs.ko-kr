@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1ac2646d-ed5a-4436-b18f-2150c33f3d87
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a59fb73e4abc987a258405a5b3ee8f5e9ec62c64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1a0c969bf5e1964446ac9ffd3d9abe12bb90b89
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65571676"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893398"
 ---
 # <a name="scripting-and-powershell-with-reporting-services"></a>Reporting Services를 사용한 스크립팅 및 PowerShell
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 rs.exe 명령줄 유틸리티, SharePoint 모드 보고서 서버용 PowerShell cmdlet을 비롯한 스크립트를 통해 기본 모드 및 SharePoint 모드에서 PowerShell의 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 개체 모델을 활용하여 다양한 개발 및 관리 시나리오를 지원합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "65571676"
 -   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET 스크립트를 보고서 서버에서 실행되는 스크립트 호스트인 RS.exe 유틸리티에서 처리할 수 있는 스크립트 언어로 지원합니다.  
   
 ## <a name="reporting-services-sharepoint-mode-powershell-cmdlets-and-samples"></a>Reporting Services SharePoint 모드 PowerShell cmdlet 및 샘플  
- ![PowerShell 관련 콘텐츠](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
+ ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 모드에는 보고서 서버 관리를 위한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] cmdlet이 포함되어 있습니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "65571676"
     -   데이터 확장 나열  
   
 ## <a name="reporting-services-object-model-and-powershell-samples"></a>Reporting Services 개체 모델 및 Powershell 샘플  
- ![PowerShell 관련 콘텐츠](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
+ ![PowerShell 관련 콘텐츠](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 관련 콘텐츠")  
   
  대부분 SharePoint 및 기본 모드에 유효하며 핵심 개체 모델을 호출하는 PowerShell(예: 마이그레이션 작업, 구독 작업)과 관련 샘플은 SQL15에서 작동합니다.  
   

@@ -1,7 +1,7 @@
 ---
 title: 애플리케이션 역할 | Microsoft 문서
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/06/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,16 +21,16 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a64d707ff73f228d45a9e977c20be6ac57eed5e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b26765281f650a73e7c21e40ce63916eeb9fa21f
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095052"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841586"
 ---
 # <a name="application-roles"></a>애플리케이션 역할
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  애플리케이션 역할은 애플리케이션이 사용자와 같은 자체 사용 권한으로 실행할 수 있도록 설정하는 데이터베이스 보안 주체입니다. 애플리케이션 역할을 사용하면 특정 데이터에 대한 액세스를 특정 애플리케이션을 통해 연결하는 사용자에게만 허용할 수 있습니다. 데이터베이스 역할과는 달리 애플리케이션 역할에는 멤버가 없으며 기본적으로 비활성화됩니다. 애플리케이션 역할은 두 인증 모드에서 모두 작동하며 **sp_setapprole**을 사용하여 활성화되고 암호가 필요합니다. 애플리케이션 역할은 데이터베이스 수준의 보안 주체이기 때문에 다른 데이터베이스에서 **guest**에 부여한 사용 권한을 통해서만 해당 데이터베이스에 액세스할 수 있습니다. 따라서 다른 데이터베이스의 애플리케이션 역할은 **guest** 가 해제된 데이터베이스에 액세스할 수 없습니다.  
+  애플리케이션 역할은 애플리케이션이 사용자와 같은 자체 사용 권한으로 실행할 수 있도록 설정하는 데이터베이스 보안 주체입니다. 애플리케이션 역할을 사용하면 특정 데이터에 대한 액세스를 특정 애플리케이션을 통해 연결하는 사용자에게만 허용할 수 있습니다. 데이터베이스 역할과는 달리 애플리케이션 역할에는 멤버가 없으며 기본적으로 비활성화됩니다. **sp_setapprole**을 사용하여 활성화되고 암호가 필요합니다. 애플리케이션 역할은 데이터베이스 수준의 보안 주체이기 때문에 다른 데이터베이스에서 **guest**에 부여한 사용 권한을 통해서만 해당 데이터베이스에 액세스할 수 있습니다. 따라서 다른 데이터베이스의 애플리케이션 역할은 **guest** 가 해제된 데이터베이스에 액세스할 수 없습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 애플리케이션 역할은 서버 수준의 보안 주체와 연결되어 있지 않으므로 서버 수준 메타데이터에 액세스할 수 없습니다. 이 제한을 해제하여 애플리케이션 역할이 서버 수준 메타데이터에 액세스할 수 있도록 하려면 전역 플래그 4616을 설정합니다. 자세한 내용은 [추적 플래그&#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 및 [DBCC TRACEON&#40;Transact-SQL&#41;](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md)을 참조하세요.  
   

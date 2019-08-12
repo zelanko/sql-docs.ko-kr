@@ -1,7 +1,7 @@
 ---
 title: SQL Server 도움말 및 피드백 | Microsoft Docs
 description: SQL Server 제품 또는 SQL Server 기술 설명서에 대한 문제를 해결하거나 피드백을 제출하는 방법을 찾기 위한 리소스입니다.
-ms.date: 07/11/2010
+ms.date: 07/11/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4e55c7f224313edda1039b994fd64166551d2b38
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: 9192afa87b3a035bbc048fa2476c18c1673a7a39
+ms.sourcegitcommit: 3ec48823bee1c092ce2aba6011b95174de03fb65
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68693165"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68926946"
 ---
 # <a name="sql-server-help-and-feedback"></a>SQL Server 도움말 및 피드백
 

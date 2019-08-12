@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2581a2a6c91640ce00b8bc804d8b52183de533ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02cb0eb53ee8561884799c3a5e4f4f44eb5ff752
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063968"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893181"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>새 SQL Server 장애 조치(Failover) 클러스터 만들기(설치)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "68063968"
   
 8.  사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. 계속하려면 **다음** 을 클릭합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
   
-9. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 원하는 대로 선택할 수 있지만 장애 조치(Failover) 클러스터링을 지원하는 것은 테이블 형식 모드의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 다차원 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 뿐입니다. 선택한 다른 구성 요소는 설치를 실행하고 있는 현재 노드에서 장애 조치(Failover) 기능 없이 독립 실행형 기능으로 실행됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
+9. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 원하는 대로 선택할 수 있지만 장애 조치(Failover) 클러스터링을 지원하는 것은 테이블 형식 모드의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 다차원 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 뿐입니다. 선택한 다른 구성 요소는 설치를 실행하고 있는 현재 노드에서 장애 조치(Failover) 기능 없이 독립 실행형 기능으로 실행됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)을 참조하세요.  
   
      선택한 기능의 필수 구성 요소가 오른쪽 창에 표시됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이미 설치되어 있지 않은 필수 구성 요소가 있는 경우 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "68063968"
   
 9. 사용 조건 페이지에서 사용권 계약을 읽은 다음 사용 조건과 계약 조건에 동의하면 해당 확인란을 선택합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 개선을 돕기 위해 기능 사용 옵션을 사용하도록 설정하여 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]로 보고서를 보낼 수도 있습니다. 계속하려면 **다음** 을 클릭합니다. 설치를 끝내려면 **취소**를 클릭합니다.  
   
-10. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 원하는 대로 선택할 수 있지만 장애 조치(Failover) 클러스터링을 지원하는 것은 테이블 형식 모드의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 다차원 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 뿐입니다. 선택한 다른 구성 요소는 설치를 실행하고 있는 현재 노드에서 장애 조치(Failover) 기능 없이 독립 실행형 기능으로 실행됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
+10. 기능 선택 페이지에서 설치할 구성 요소를 선택합니다. 기능 이름을 선택하면 오른쪽 창에 각 구성 요소 그룹에 대한 설명이 나타납니다. 확인란을 원하는 대로 선택할 수 있지만 장애 조치(Failover) 클러스터링을 지원하는 것은 테이블 형식 모드의 [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 및 다차원 모드의 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 뿐입니다. 선택한 다른 구성 요소는 설치를 실행하고 있는 현재 노드에서 장애 조치(Failover) 기능 없이 독립 실행형 기능으로 실행됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 모드에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)을 참조하세요.  
   
      선택한 기능의 필수 구성 요소가 오른쪽 창에 표시됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 설치 프로그램에서는 이미 설치되어 있지 않은 필수 구성 요소가 있는 경우 이 절차의 뒷부분에 설명된 설치 단계에서 이를 설치합니다.  
   

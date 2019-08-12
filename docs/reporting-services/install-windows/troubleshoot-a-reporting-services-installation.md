@@ -7,12 +7,12 @@ ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 6a36d9acd795bfbcc226d7ffe601fd2b15ee7406
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 281eeffa237a24e6da8794e99ff6d4fd3a716181
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65502665"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889693"
 ---
 # <a name="troubleshoot-a-reporting-services-installation"></a>Reporting Services 설치 문제 해결
 
@@ -74,7 +74,7 @@ ms.locfileid: "65502665"
   
  **해결 방법:** SharePoint 중앙 관리를 사용하여 SharePoint 모드에서 보고서 서버를 구성합니다. 자세한 내용은 [Reporting Services SharePoint 서비스 애플리케이션 관리](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)를 참조하세요.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
+ ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_no_ssrs_service"></a> SharePoint 모드에서 SQL Server 2016 SSRS를 설치하면 SharePoint 중앙 관리에 SQL Server Reporting Services 서비스가 나타나지 않습니다.  
  **설명:** SharePoint 모드에서 SQL Server 2016 Reporting Services 및 SharePoint 2013/2016용 SQL Server 2016 Reporting Services 추가 기능을 성공적으로 설치한 후 다음 두 메뉴에 "SQL Server Reporting Services"가 나타나지 않는 경우 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스가 등록되지 않은 것입니다.  
@@ -103,7 +103,7 @@ ms.locfileid: "65502665"
   
 2.  SharePoint 2013/2016 중앙 관리 -> "**애플리케이션 관리**" -> "**서버의 서비스 관리**" 페이지에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 상태가 "**시작됨**"으로 표시되는지 확인합니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
+ ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_cmdlets_not_recognized"></a> Reporting Services PowerShell cmdlet을 사용할 수 없으며 명령이 인식되지 않습니다.  
  **설명:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] PowerShell cmdlet을 실행하려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
@@ -124,7 +124,7 @@ ms.locfileid: "65502665"
   
 -   [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
+ ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_URL_not_configured"></a> URL이 구성되지 않았음을 나타내는 오류 메시지가 표시됩니다.  
  **설명:** 다음과 유사한 오류 메시지가 표시됩니다.  
@@ -147,7 +147,7 @@ ms.locfileid: "65502665"
   
 -   서비스 애플리케이션 관리  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
+ ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_sharepoint_not_confiugred"></a> 컴퓨터에 SharePoint가 설치됐지만 구성되지 않은 경우 설치 프로그램이 실패합니다.  
  **설명:** SharePoint가 설치됐지만 구성되지 않은 컴퓨터에 Reporting Services SharePoint 모드를 설치하려고 선택한 경우 다음과 비슷한 오류 메시지가 표시되고 설치가 중지됩니다.  
@@ -158,7 +158,7 @@ ms.locfileid: "65502665"
   
  **추가 정보:** 기존 SharePoint 설치로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 을 설치할 때 설치 프로그램에서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 서비스를 설치하고 시작합니다. SharePoint가 구성되지 않은 경우 서비스 설치가 실패하므로 설치 프로그램이 실패합니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
+ ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_central_admin_blank"></a> SharePoint 중앙 관리 페이지 비어 있음  
  **설명:** 설치 오류 없이 SharePoint 2013/2016을 성공적으로 설치했습니다. 그러나 중앙 관리를 탐색할 때 빈 페이지만 표시됩니다.  
@@ -171,7 +171,7 @@ ms.locfileid: "65502665"
   
 -   SharePoint 2013/2016 중앙 관리 서비스와 같은 SharePoint 서비스를 위해 사용 중인 서비스 계정은 로컬 운영 체제에 관리 권한이 있어야 합니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
+ ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_reportbuilder_newreport_error"></a> 새 보고서 작성기 보고서를 만들려고 할 때 오류 메시지가 표시됩니다.  
  **설명:** 문서 라이브러리 내부에 보고서 작성기 보고서를 만들려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
@@ -180,7 +180,7 @@ ms.locfileid: "65502665"
   
  **해결 방법:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션이 있고 올바르게 구성되었는지 확인합니다. 자세한 내용은 [SharePoint 모드에서 첫 번째 보고서 서버 설치](install-the-first-report-server-in-sharepoint-mode.md)를 참조하세요.
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
+ ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
   
 ###  <a name="bkmk_RS_SHP_notsupported"></a> PREPAREIMAGE에는 RS_SHP가 지원되지 않는다는 오류 메시지가 표시됩니다.  
  **설명:** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 대한 PREPAREIMAGE를 실행하려고 하면 다음과 비슷한 오류 메시지가 표시됩니다.  
@@ -189,7 +189,7 @@ ms.locfileid: "65502665"
   
  **해결 방법:** 해결 방법이 없습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 SYSPREP(PREPAREIMAGE)를 지원하지 않습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기본 모드는 SYSPREP을 지원하지 않습니다.  
   
- ![맨 위 링크와 함께 사용되는 화살표 아이콘](../../analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
+ ![맨 위 링크와 함께 사용되는 화살표 아이콘](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "맨 위 링크와 함께 사용되는 화살표 아이콘") [SharePoint 모드 설치 관련 문제 해결](#bkmk_tshoot_sharepoint)  
 
 ::: moniker-end
   

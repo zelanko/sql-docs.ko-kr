@@ -2373,12 +2373,16 @@
       items:
         - name: Microsoft JDBC Driver for SQL Server 다운로드
           href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+        - name: 결과 구문 분석
+          href: ../connect/jdbc/parsing-the-results.md
         - name: JDBC 드라이버에 대한 릴리스 정보
           href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
         - name: JDBC 드라이버의 시스템 요구 사항
           href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
         - name: JDBC 드라이버 사용
           href: ../connect/jdbc/using-the-jdbc-driver.md
+        - name: useFmtOnly를 사용
+          href: ../connect/jdbc/using-usefmtonly.md
         - name: Java EE 지원 이해
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: JDBC 드라이버 배포
@@ -2538,6 +2542,8 @@
               href: ../connect/jdbc/understanding-data-type-differences.md
             - name: 다중 결과 집합 사용
               href: ../connect/jdbc/using-multiple-result-sets.md
+            - name: NTLM 인증을 사용
+              href: ../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md
             - name: 유지 기능 사용
               href: ../connect/jdbc/using-holdability.md
             - name: Azure Active Directory 인증을 사용하여 연결

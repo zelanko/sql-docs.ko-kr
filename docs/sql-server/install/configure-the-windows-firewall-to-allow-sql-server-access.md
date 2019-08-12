@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: f55c6a0e-b6bd-4803-b51a-f3a419803024
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ba7459c97a64422023bed0cffd292c418933ce43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64637e048277db5ad082b2b6a9ffad4b4b0d3ea7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126196"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892289"
 ---
 # <a name="configure-the-windows-firewall-to-allow-sql-server-access"></a>Configure the Windows Firewall to Allow SQL Server Access
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68126196"
  **Windows 방화벽** 관리에 익숙한 사용자이며 어떤 방화벽 설정을 구성할지 알고 있다면 다음과 같은 고급 문서로 직접 이동할 수 있습니다.  
   
 -   [데이터베이스 엔진 액세스에 대한 Windows 방화벽 구성](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)    
--   [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)    
+-   [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)    
 -   [보고서 서버 액세스를 위한 방화벽 구성](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  
   
 ##  <a name="BKMK_basic"></a> 기본 방화벽 정보  
@@ -159,7 +159,7 @@ ms.locfileid: "68126196"
   
  사용자가 IIS 및 인터넷을 통해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에 액세스하는 경우 IIS가 수신하고 있는 포트를 열고 클라이언트 연결 문자열에 해당 포트를 지정해야 합니다. 이 경우 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 직접 액세스하는 포트를 열 필요가 없습니다. 기본 포트 2389 및 포트 2382는 필요 없는 다른 모든 포트와 함께 제한해야 합니다.  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)을 참조하세요.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 대해 Windows 방화벽을 구성하는 단계별 지침은 [Analysis Services 액세스를 허용하도록 Windows 방화벽 구성](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)을 참조하세요.  
   
 ###  <a name="BKMK_ssrs"></a> Reporting Services에서 사용하는 포트  
 

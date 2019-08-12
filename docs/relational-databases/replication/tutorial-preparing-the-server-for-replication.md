@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895439"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742939"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>자습서: 복제를 위한 SQL Server 준비(게시자, 배포자, 구독자)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -212,7 +212,7 @@ SQL Server Management Studio 인스턴스를 관리자 권한으로 실행 중�
 >[!NOTE]
 > SQL 에이전트가 시각적으로 시작되지 않으면 SSMS에서 SQL Server 에이전트를 마우스 오른쪽 단추로 클릭하고 **새로 고침**을 클릭합니다. 여전히 중지 상태인 경우 SQL Server 구성 관리자에서 수동으로 시작합니다.    
   
-### <a name="set-database-permissions-at-the-publisher"></a>게시자에서 데이터베이스 권한 설정  
+## <a name="set-database-permissions"></a>데이터베이스 권한 설정  
   
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]에서 **보안**을 확장하고, **로그인**을 마우스 오른쪽 단추로 클릭한 다음, **새 로그인**을 선택합니다.  
 
@@ -233,6 +233,8 @@ SQL Server Management Studio 인스턴스를 관리자 권한으로 실행 중�
 5. 1-4단계를 반복하여 다른 로컬 계정(repl_distribution, repl_logreader 및 repl_merge)에 대한 로그인을 만듭니다. 이러한 로그인은 **배포** 및 **AdventureWorks** 데이터베이스에서 **db_owner** 고정 데이터베이스 역할의 멤버인 사용자에게도 매핑되어야 합니다.  
 
    ![개체 탐색기에서 4개 계정 모두 보기](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
+   
+ 6. 배포 에이전트 및 병합 에이전트의 구독자에서 1~4단계를 반복하여 머신 이름을 구독자의 이름으로 변경합니다. 
   
   
 참조 항목:

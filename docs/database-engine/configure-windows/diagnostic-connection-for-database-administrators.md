@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c912c17ce6914a2de2425ad61e27f49ef7cab86c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee6c63623cc5b88e0cbb9c4a3edd7a78e6137d77
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011869"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670467"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>데이터베이스 관리자를 위한 진단 연결
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "68011869"
     -   이 세션과 연관된 sys.dm_os_tasks에 태스크가 없지만 KILL 명령을 실행한 후 sys.dm_exec_sessions에 세션이 그대로 남아 있는 경우 사용 가능한 작업자가 없음을 의미합니다. 현재 실행 중인 태스크( `sessions_id <> NULL`로 sys.dm_os_tasks 뷰에 나열된 작업) 중 하나를 선택하고 해당 작업과 연관된 세션을 중지하여 작업자를 확보합니다. 한 세션을 중지해도 해결되지 않으면 여러 세션을 중지해야 합니다.  
   
 ## <a name="dac-port"></a>DAC 포트  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 TCP 포트 1434(사용 가능한 경우) 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 시작 시 동적으로 할당된 TCP 포트에서 DAC를 수신합니다. 오류 로그에는 DAC를 수신 대기 중인 포트 번호가 포함되어 있습니다. 기본적으로 DAC 수신기는 로컬 포트에서만 연결을 허용합니다. 원격 관리 연결을 활성화하는 코드 샘플은 [remote admin connections 서버 구성 옵션](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 TCP 포트 1434(사용 가능한 경우) 또는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 시작 시 동적으로 할당된 TCP 포트에서 DAC를 수신합니다. [오류 로그](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)에는 DAC를 수신 대기 중인 포트 번호가 포함되어 있습니다. 기본적으로 DAC 수신기는 로컬 포트에서만 연결을 허용합니다. 원격 관리 연결을 활성화하는 코드 샘플은 [remote admin connections 서버 구성 옵션](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)을 참조하세요.  
   
  원격 관리 연결이 구성된 후에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 다시 시작하지 않고도 DAC 수신기를 사용할 수 있고 클라이언트가 DAC에 원격으로 연결할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 응답하지 않더라도 먼저 DAC를 로컬로 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에 연결한 다음 sp_configure 저장 프로시저를 실행하여 원격 연결을 허용하면 DAC 수신기가 원격 연결을 허용하도록 할 수 있습니다.  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: ''
 ms.date: 05/29/2019
-ms.openlocfilehash: aba53145a679503fde2a965b818949885edaa92a
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 8632bd86a19bdce57114e36247f0b805da6804e7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680740"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893258"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)란? 
 
@@ -56,7 +56,7 @@ ms.locfileid: "67680740"
   
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 및 XMLA(XML for Analysis)로 작성된 스크립트를 개발 및 저장할 수 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 스크립트 프로젝트를 제공합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 스크립트 프로젝트를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 인스턴스에서 관리 태스크를 수행하거나 데이터베이스 및 큐브와 같은 개체를 다시 만들 수 있습니다. 예를 들어 기존 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 인스턴스에 직접 새 개체를 만드는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 스크립트 프로젝트에서 XMLA 스크립트를 개발할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 스크립트 프로젝트는 솔루션의 일부로 저장되어 원본 코드 제어와 함께 통합될 수 있습니다.
   
-[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하는 방법에 대한 자세한 내용은 [SQL Server Management Studio를 사용한 개발 및 구현](../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md)을 참조하세요.
+[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하는 방법에 대한 자세한 내용은 [SQL Server Management Studio를 사용한 개발 및 구현](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio)을 참조하세요.
   
 ### <a name="managing-integration-services-solutions-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 Integration Services 솔루션 관리
 
@@ -97,7 +97,7 @@ SQL Server Management Studio를 사용하여 Reporting Services 기능을 활성
 - [영어가 아닌 언어 버전의 SSMS(SQL Server Management Studio) 설치](install-other-languages.md)
 - [자습서: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
 - [자습서: Transact-SQL 문 작성](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
-- [SQL Server Data Tools를 사용한 개발 및 구현](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)
+- [SQL Server Data Tools를 사용한 개발 및 구현](https://docs.microsoft.com/analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt)
 - [SQL Server Data Tools의 Reporting Services](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)
 - [자습서: SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
 

@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc85c55e86ee026a59c20539eb5c761d0cf66fd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129825"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769456"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server 복제 구독 속성 대화 상자 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ### <a name="publisher-properties"></a>게시자 속성
 게시자의 **구독 속성** 대화 상자를 사용하여 밀어넣기 구독에 대한 속성을 보고 설정할 수 있습니다. 끌어오기 구독에 대한 일부 속성도 볼 수 있지만 구독자의 **구독 속성** 대화 상자는 추가 속성을 표시하고 속성을 수정할 수 있게 해줍니다.  
@@ -46,7 +46,8 @@ ms.locfileid: "68129825"
  옵션이 읽기 전용으로 표시되면 구독을 만들 때만 해당 옵션을 설정할 수 있습니다. 새 구독 마법사에서 사용할 수 없는 옵션을 설정하려면 저장 프로시저를 사용하여 구독을 만듭니다. 자세한 내용은 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) 및 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)를 참조하세요.  
   
 > [!NOTE]  
->  구독에 대한 배포 에이전트 또는 병합 에이전트 작업이 아직 생성되지 않은 경우 많은 구독 속성이 표시되지 않습니다. 끌어오기 구독에 대한 에이전트 작업을 만들려면 [sp_addpullsubscription_agent&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)(스냅샷 또는 트랜잭션 게시에 대한 구독) 또는 [sp_addmergepullsubscription_agent&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)(병합 게시에 대한 구독)을 실행합니다.  
+>  - 구독에 대한 배포 에이전트 또는 병합 에이전트 작업이 아직 생성되지 않은 경우 많은 구독 속성이 표시되지 않습니다. 끌어오기 구독에 대한 에이전트 작업을 만들려면 [sp_addpullsubscription_agent&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)(스냅샷 또는 트랜잭션 게시에 대한 구독) 또는 [sp_addmergepullsubscription_agent&amp;#40;Transact-SQL&amp;#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)(병합 게시에 대한 구독)을 실행합니다.  
+> - Azure SQL Database 관리형 인스턴스는 스냅샷 및 트랜잭션 복제의 게시자, 배포자 및 구독자일 수 있습니다. Azure SQL 데이터베이스 단일 및 풀링된 데이터베이스만 스냅샷 및 트랜잭션의 복제 푸시 구독자가 될 수 있습니다. 자세한 내용은 [Azure SQL Database를 사용하는 트랜잭션 복제](/azure/sql-database/sql-database-managed-instance-transactional-replication)를 참조하세요. 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>모든 구독에 대한 게시자 옵션  
  **보안**  

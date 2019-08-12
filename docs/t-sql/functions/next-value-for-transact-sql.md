@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: da73c06c49f54caf5e750f6816738738e7a03681
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e37586d17a7b99d3dd191f63ed858805ef497a03
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914931"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670531"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]

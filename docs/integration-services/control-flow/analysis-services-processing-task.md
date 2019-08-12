@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 617676bf00f5f91652719ca93ef614152523367a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bc0ae0b7a64f7f3d75d9ff67da0142682093da0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947933"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893049"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 처리 태스크
 
@@ -123,7 +123,7 @@ ms.locfileid: "67947933"
 |--------------|-----------------|  
 |**Object Name**|지정한 개체 이름을 나열합니다.|  
 |**형식**|지정한 개체의 유형을 나열합니다.|  
-|**처리 옵션**|목록에서 처리 옵션을 선택합니다.<br /><br /> **관련 항목**: [다차원 모델 처리&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**처리 옵션**|목록에서 처리 옵션을 선택합니다.<br /><br /> **관련 항목**: [다차원 모델 처리&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**설정**|지정한 개체에 대한 처리 설정을 나열합니다.|  
   
  **추가**  

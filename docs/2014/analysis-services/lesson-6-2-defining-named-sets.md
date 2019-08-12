@@ -10,12 +10,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c13de7878753524986cd4574aa2e892b3367eb6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd42fdd888ca8d4b7fc72e20fb3c6a71b9e0170f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078412"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888134"
 ---
 # <a name="defining-named-sets"></a>명명된 집합 정의
   명명된 집합은 차원 멤버 집합을 반환하는 MDX(Multidimensional Expressions) 식입니다. 명명된 집합을 정의한 후 큐브 정의의 일부로 저장할 수 있습니다. 또한 클라이언트 애플리케이션에서도 명명된 집합을 만들 수 있습니다. 큐브 데이터, 산술 연산자, 숫자 및 함수를 조합하여 명명된 집합을 만들 수 있습니다. 명명된 집합을 클라이언트 애플리케이션의 MDX 쿼리에서 사용할 수 있으며 하위 큐브의 집합을 정의하는 데도 사용할 수 있습니다. 하위 큐브는 큐브 공간을 후속 문에 대해 정의된 하위 공간으로 제한하는 크로스 조인된 집합 컬렉션입니다. 제한된 큐브 공간을 정의하는 것은 MDX 스크립팅에 대한 기본 개념에 해당합니다.  
@@ -32,11 +32,11 @@ ms.locfileid: "66078412"
   
      **계산** 탭에서 새 계산을 정의할 때 계산은 **스크립트 구성 도우미** 창에 나타나는 순서대로 수행된다는 사실에 유의하세요. 새 계산을 만들 때 해당 창 내의 포커스에 따라 계산 실행 순서가 결정됩니다. 즉, 새로운 계산은 포커스된 계산 바로 다음에 정의됩니다.  
   
-3.  에 **이름을** 상자에서 명명 된 집합의 새 이름 변경 `[Core Products]`합니다.  
+3.  **이름** 상자에서 새 명명 된 집합의 이름을로 `[Core Products]`변경 합니다.  
   
      **스크립트 구성 도우미** 창에는 스크립트 명령이나 계산 멤버에서 명명된 집합을 구분할 수 있는 고유 아이콘이 표시됩니다.  
   
-4.  에 **메타 데이터** 탭에 **계산 도구** 창 확장 **제품**를 확장 **범주**, 확장 `Members`, 차례로 확장 **All Products**합니다.  
+4.  **계산 도구** 창의 **메타 데이터** 탭에서 `Members` **Product**, **Category**,를 차례로 확장 한 다음 **All Products**를 확장 합니다.  
   
     > [!NOTE]  
     >  **계산 도구** 창에 메타데이터가 표시되지 않으면 도구 모음에서 **다시 연결** 을 클릭합니다. 이 옵션을 사용할 수 없으면 큐브를 처리하거나 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스를 시작해야 할 수 있습니다.  
@@ -47,11 +47,11 @@ ms.locfileid: "66078412"
   
 ## <a name="defining-a-large-resellers-named-set"></a>Large Resellers 명명된 집합 정의  
   
-1.  마우스 오른쪽 단추로 클릭 `[Core Products]` 에 **스크립트 구성 도우미** 창과 클릭 **새 명명 된 집합**합니다.  
+1.  `[Core Products]` **스크립트 구성 도우미** 창을 마우스 오른쪽 단추로 클릭 한 다음 **새 명명 된 집합**을 클릭 합니다.  
   
-2.  에 **이름을** 상자에서이 명명 된 집합의 이름을 변경 `[Large Resellers]`합니다.  
+2.  **이름** 상자에서이 명명 된 집합의 이름을로 `[Large Resellers]`변경 합니다.  
   
-3.  에 **식을** 상자에 입력 `Exists()`합니다.  
+3.  **식** 상자에를 입력 `Exists()`합니다.  
   
      Exists 함수를 사용하여 직원 수 특성 계층에서 직원 수가 가장 많은 멤버 집합과 공통되는 Reseller Name 특성 계층의 멤버 집합을 반환합니다.  
   
@@ -67,33 +67,33 @@ ms.locfileid: "66078412"
     Exists([Reseller].[Reseller Name].[Reseller Name].Members)  
     ```  
   
-     이제 정의한 첫 번째 집합 Exists 집합 식에는 직원의 최대 수를 포함 하는 Reseller 차원의 멤버 집합의 두 번째 집합에 추가할 수 있습니다.  
+     이제 Exists 집합 식에 대 한 첫 번째 집합을 정의 했으므로 직원 수가 가장 많은 대리점 차원의 멤버 집합을 추가할 준비가 되었습니다.  
   
-7.  에 **메타 데이터** 탭에서 합니다 **계산 도구** 창 확장 **Number of Employees** Reseller 차원에서 확장 `Members`를 펼친 다음 **All Resellers**합니다.  
+7.  **계산 도구** 창의 **메타 데이터** 탭에서 재판매인 차원의 **직원 수** 를 확장 하 고를 확장 `Members`한 다음 **모든 대리점**을 확장 합니다.  
   
      이 특성 계층의 멤버는 그룹화되지 않습니다.  
   
 8.  **Reseller** 차원에 대한 차원 디자이너를 열고 **특성** 창에서 **Number of Employees** 를 클릭합니다.  
   
-9. 속성 창에서 변경 합니다 `DiscretizationMethod` 속성을 **자동**를 변경한 후 합니다 `DiscretizationBucketCount` 속성을 `5`입니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)를 참조하세요.  
+9. 속성 창에서 `DiscretizationMethod` 속성을 **자동**으로 변경 하 `DiscretizationBucketCount` 고 속성을로 `5`변경 합니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)를 참조하세요.  
   
 10. **의** 빌드 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
   
 11. 배포가 성공적으로 완료되면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브에 대한 큐브 디자이너로 전환한 후 **계산** 탭의 도구 모음에서 **다시 연결** 을 클릭합니다.  
   
-12. 에 **메타 데이터** 탭에 **계산 도구** 창 확장 **Number of Employees** 에 **Reseller** 차원에서 `Members`을 펼친 다음 **All Resellers**합니다.  
+12. **계산 도구** 창의 **메타 데이터** 탭에서 **재판매인** `Members`차원의 **직원 수** 를 확장 하 고를 확장 한 다음 **모든 대리점**을 확장 합니다.  
   
      이제 이 특성 계층의 멤버는 0번부터 4번까지의 5개 그룹에 포함됩니다. 그룹 번호를 확인하려면 해당 그룹 위에 포인터를 잠시 올려놓고 정보 팁을 봅니다. `2 -17`범위의 정보 팁에는 `[Reseller].[Number of Employees].&[0]`가 포함되어야 합니다.  
   
-     DiscretizationBucketCount 속성이로 설정 되어 있으므로이 특성 계층의 멤버의 그룹화 `5` DiscretizationMethod 속성을로 설정 하 고 **자동**합니다.  
+     DiscretizationBucketCount 속성이로 `5` 설정 되 고 DiscretizationMethod 속성이 **Automatic**으로 설정 되어 있으므로이 특성 계층의 멤버는 그룹화 됩니다.  
   
 13. **식** 상자의 Exists 집합 식에서 Members 함수 뒤, 닫는 괄호 앞에 쉼표를 추가한 후 **메타데이터** 창에서 **83 - 100** 을 끌어다 쉼표 뒤에 놓습니다.  
   
      이제 Large Resellers 명명된 집합을 축 위에 놓았을 때 지정된 두 집합, 즉 모든 대리점의 집합 및 직원 수가 83명에서 100명 사이인 대리점의 집합과 공통되는 멤버 집합을 반환하는 Exists 집합 식이 완성되었습니다.  
   
-     다음 이미지는 **계산 식** 창에는 `[Large Resellers]` 명명 된 집합입니다.  
+     다음 그림에서는 `[Large Resellers]` 명명 된 집합에 대 한 **계산 식** 창을 보여 줍니다.  
   
-     ![[Large Resellers]에 대 한 계산 식 창](../../2014/tutorials/media/l6-named-set-02.gif "[Large Resellers]에 대 한 계산 식 창")  
+     ![[대기업]에 대 한 계산 식 창](../../2014/tutorials/media/l6-named-set-02.gif "[대기업]에 대 한 계산 식 창")  
   
 14. **계산** 탭의 도구 모음에서 **스크립트 보기**를 클릭하고 계산 스크립트에 방금 추가한 두 개의 명명된 집합을 검토합니다.  
   
@@ -123,16 +123,16 @@ ms.locfileid: "66078412"
   
      **Category** 특성의 **Bike** 멤버와 **Bike** 하위 범주의 멤버만 큐브에 그대로 남아 있습니다. **Core Products** 명명된 집합이 하위 큐브를 정의하는 데 사용되기 때문입니다. 다음 그림에 표시된 것처럼 이 하위 큐브는 하위 큐브 내의 **Product** 차원에 포함된 **Category** 특성의 멤버를 **Core Product** 명명된 집합의 멤버로 제한합니다.  
   
-     ![멤버의 핵심 제품 명명 된 집합](../../2014/tutorials/media/l6-named-set-04.gif "멤버인 핵심 제품 명명 된 집합")  
+     ![핵심 Product 명명 된 집합의 멤버](../../2014/tutorials/media/l6-named-set-04.gif "핵심 Product 명명 된 집합의 멤버")  
   
 7.  **메타데이터** 창에서 **Reseller**를 확장하고 필터 영역에 **Large Resellers** 를 추가합니다.  
   
      데이터 창의 Reseller Sales Amount 측정값은 자전거를 판매하는 대형 대리점의 판매액만 표시합니다. 또한 필터 창에는 다음 그림에 표시된 것처럼 이러한 특정 하위 큐브를 정의하는 데 사용되는 두 개의 명명된 집합을 표시합니다.  
   
-     ![설정 하는 두 개의 명명 된 포함 된 필터 창](../../2014/tutorials/media/l6-named-set-05.gif "설정 하는 두 개의 명명 된 포함 된 필터 창")  
+     ![두 개의 명명 된 집합이 포함 된 필터 창](../../2014/tutorials/media/l6-named-set-05.gif "두 개의 명명 된 집합이 포함 된 필터 창")  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [7단원: 핵심 성과 지표를 정의 합니다. &#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [7단원: 핵심 성과 지표 &#40;kpi 정의&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
   
 ## <a name="see-also"></a>관련 항목  
  [계산](multidimensional-models-olap-logical-cube-objects/calculations.md)   

@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e16f646a963d22a2fe3a6a67428970d11ee5cb43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1f8f4937efa5db9de76d6e111d5a0abf0223d23
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100260"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715291"
 ---
 # <a name="overview-and-usage-scenarios"></a>개요 및 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -137,7 +137,7 @@ ETL 워크플로에는 종종 준비 테이블로 데이터 로드, 데이터 �
 
 데이터 준비에 비영구 메모리 최적화 테이블을 사용합니다. 모든 IO가 완전히 제거되고 데이터 액세스 효율성이 향상됩니다.
 
-워크플로 목적으로 준비 테이블에서 변환을 수행하는 경우 고유하게 컴파일된 저장 프로시저를 사용하여 이러한 변환을 가속화할 수 있습니다. 이러한 변환을 동시에 수행할 수 있으면 메모리 최적화에서 추가적인 확장 이점을 얻을 수 있습니다.
+워크플로의 일환으로 준비 테이블에서 변환을 수행하는 경우 고유하게 컴파일된 저장 프로시저를 사용하여 이러한 변환을 가속화할 수 있습니다. 이러한 변환을 동시에 수행할 수 있으면 메모리 최적화에서 추가적인 확장 이점을 얻을 수 있습니다.
 
 ## <a name="sample-script"></a>예제 스크립트
 
@@ -224,7 +224,7 @@ GO
 
 [더 빠른 T-SQL 성능을 위한 메모리 내 OLTP 기술](https://msdn.microsoft.com/library/mt694156.aspx)   
 메모리 내 OLTP 사용에 대한 성능 데모는 [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0) 에서 확인할 수 있습니다.  
-[메모리 내 OLTP를 설명하고 데모를 보여 주는 17분 분량의 동영상](https://www.youtube.com/watch?v=l5l5eophmK4) (데모는 8분 25초에서 시작)   
+[메모리 내 OLTP를 설명하고 데모를 보여 주는 17분 분량의 비디오](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
 [메모리 내 OLTP를 사용하도록 설정하고 권장 옵션을 설정하는 스크립트](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
 [기본 메모리 내 OLTP 설명서](in-memory-oltp-in-memory-optimization.md)   
 [Azure SQL Database의 메모리 내 OLTP 성능 및 리소스 사용률 이점](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)  

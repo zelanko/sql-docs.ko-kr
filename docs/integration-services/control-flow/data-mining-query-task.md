@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: f489348c-2008-4f66-8c2c-c07c3029439a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: bf7fc37921ae37996b5d93b1ed1e913232a28b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a981ec4f29cd1fe5dd9629498799dd488f03e3f8
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101567"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893232"
 ---
 # <a name="data-mining-query-task"></a>Data Mining Query Task
 
@@ -43,9 +43,9 @@ ms.locfileid: "68101567"
 ## <a name="prediction-queries"></a>예측 쿼리  
  쿼리는 DMX(Data Mining Extensions) 문입니다. DMX 언어는 마이닝 모델 작업을 지원하는 SQL 언어의 확장입니다. DMX 언어를 사용하는 방법은 [DMX&#40;Data Mining Extensions&#41; 참조](../../dmx/data-mining-extensions-dmx-reference.md)를 참조하세요.  
   
- 이 태스크는 동일한 마이닝 구조를 사용하는 여러 개의 마이닝 모델을 쿼리할 수 있습니다. 마이닝 모델은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 데이터 마이닝 알고리즘 중 하나를 사용하여 작성합니다. 데이터 마이닝 쿼리 태스크가 참조하는 마이닝 구조에 다른 알고리즘을 사용하여 작성된 여러 개의 마이닝 모델이 포함될 수도 있습니다. 자세한 내용은 [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md) 및 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)을 참조하세요.  
+ 이 태스크는 동일한 마이닝 구조를 사용하는 여러 개의 마이닝 모델을 쿼리할 수 있습니다. 마이닝 모델은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 제공하는 데이터 마이닝 알고리즘 중 하나를 사용하여 작성합니다. 데이터 마이닝 쿼리 태스크가 참조하는 마이닝 구조에 다른 알고리즘을 사용하여 작성된 여러 개의 마이닝 모델이 포함될 수도 있습니다. 자세한 내용은 [마이닝 구조&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining) 및 [데이터 마이닝 알고리즘&#40;Analysis Services - 데이터 마이닝&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining)을 참조하세요.  
   
- 데이터 마이닝 쿼리 태스크가 실행하는 예측 쿼리는 단일 행이나 데이터 집합을 결과로 반환합니다. 단일 행을 반환하는 쿼리를 단일 쿼리라고 합니다. 예를 들어 여름 기간 동안 판매될 요트 수를 예측하는 쿼리는 한 개의 숫자를 반환합니다. 단일 행을 반환하는 예측 쿼리에 대한 자세한 내용은 [데이터 마이닝 쿼리 도구](../../analysis-services/data-mining/data-mining-query-tools.md)를 참조하세요.  
+ 데이터 마이닝 쿼리 태스크가 실행하는 예측 쿼리는 단일 행이나 데이터 집합을 결과로 반환합니다. 단일 행을 반환하는 쿼리를 단일 쿼리라고 합니다. 예를 들어 여름 기간 동안 판매될 요트 수를 예측하는 쿼리는 한 개의 숫자를 반환합니다. 단일 행을 반환하는 예측 쿼리에 대한 자세한 내용은 [데이터 마이닝 쿼리 도구](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)를 참조하세요.  
   
  쿼리 결과는 테이블에 저장됩니다. 지정한 이름의 테이블이 이미 있으면 데이터 마이닝 쿼리 태스크는 동일한 이름에 번호를 추가하여 새 테이블을 만들거나 테이블 내용을 덮어쓸 수 있습니다.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "68101567"
 ## <a name="data-mining-query-task-editor-mining-model-tab"></a>데이터 마이닝 쿼리 태스크 편집기(마이닝 모델 탭)
   **데이터 마이닝 쿼리 태스크** 대화 상자의 **마이닝 모델** 탭을 사용하여 사용할 마이닝 구조와 마이닝 모델을 지정할 수 있습니다.  
   
- 패키지에서 데이터 마이닝을 구현하는 방법에 대한 자세한 내용은 [데이터 마이닝 쿼리 태스크](../../integration-services/control-flow/data-mining-query-task.md) 및 [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)을 참조하세요.  
+ 패키지에서 데이터 마이닝을 구현하는 방법에 대한 자세한 내용은 [데이터 마이닝 쿼리 태스크](../../integration-services/control-flow/data-mining-query-task.md) 및 [데이터 마이닝 솔루션](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)을 참조하세요.  
   
 ### <a name="general-options"></a>일반 옵션  
  **이름**  
@@ -103,7 +103,7 @@ ms.locfileid: "68101567"
 ## <a name="data-mining-query-task-editor-query-tab"></a>데이터 마이닝 쿼리 태스크 편집기(쿼리 탭)
   **데이터 마이닝 쿼리 태스크** 대화 상자의 **쿼리** 탭을 사용하여 마이닝 모델을 기반으로 하는 예측 쿼리를 만들 수 있습니다. 또한 이 대화 상자에서 매개 변수 및 결과 집합을 변수에 바인딩할 수 있습니다.  
   
- 패키지에서 데이터 마이닝을 구현하는 방법에 대한 자세한 내용은 [데이터 마이닝 쿼리 태스크](../../integration-services/control-flow/data-mining-query-task.md) 및 [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)을 참조하세요.  
+ 패키지에서 데이터 마이닝을 구현하는 방법에 대한 자세한 내용은 [데이터 마이닝 쿼리 태스크](../../integration-services/control-flow/data-mining-query-task.md) 및 [데이터 마이닝 솔루션](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)을 참조하세요.  
   
 ### <a name="general-options"></a>일반 옵션  
  **이름**  
@@ -159,7 +159,7 @@ ms.locfileid: "68101567"
 ## <a name="data-mining-query-task-editor-output-tab"></a>데이터 마이닝 쿼리 태스크 편집기(출력 탭)
   **데이터 마이닝 쿼리 태스크 편집기** 대화 상자의 **출력** 탭을 사용하여 예측 쿼리의 대상을 지정할 수 있습니다.  
   
- 패키지에서 데이터 마이닝을 구현하는 방법에 대한 자세한 내용은 [데이터 마이닝 쿼리 태스크](../../integration-services/control-flow/data-mining-query-task.md) 및 [데이터 마이닝 솔루션](../../analysis-services/data-mining/data-mining-solutions.md)을 참조하세요.  
+ 패키지에서 데이터 마이닝을 구현하는 방법에 대한 자세한 내용은 [데이터 마이닝 쿼리 태스크](../../integration-services/control-flow/data-mining-query-task.md) 및 [데이터 마이닝 솔루션](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)을 참조하세요.  
   
 ### <a name="general-options"></a>일반 옵션  
  **이름**  

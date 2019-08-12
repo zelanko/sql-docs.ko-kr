@@ -22,12 +22,12 @@ ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 176a5d39efc5e0501d425100e458235a971d87da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8865d5c4331fc9414d4621f98d6b21f85561f15f
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914794"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702759"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -115,6 +115,7 @@ OBJECTPROPERTY ( id , property )
 |IsUserTable|Table|사용자 정의 테이블입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsView|보기|뷰입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |OwnerId|임의의 스키마 범위 개체|개체의 소유자입니다.<br /><br /> **참고:**  스키마 소유자가 개체 소유자일 필요는 없습니다. 예를 들어 자식 개체(*parent_object_id*가 Null이 아닌 개체)는 항상 부모 개체와 같은 소유자 ID를 반환합니다.<br /><br /> Null이 아닌 경우 = 개체 소유자의 데이터베이스 사용자 ID입니다.|  
+|SchemaId|임의의 스키마 범위 개체| 개체가 속한 스키마의 스키마 ID입니다.| 
 |TableDeleteTrigger|Table|테이블에 DELETE 트리거가 있습니다.<br /><br /> >1 = 지정된 유형의 첫 번째 트리거 ID.|  
 |TableDeleteTriggerCount|Table|테이블에 지정된 개수의 DELETE 트리거가 있습니다.<br /><br /> >0 = DELETE 트리거의 수입니다.|  
 |TableFullTextMergeStatus|Table|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 테이블에 현재 병합 중인 전체 텍스트 인덱스가 있는지를 나타냅니다.<br /><br /> 0 = 테이블에 전체 텍스트 인덱스가 없거나 병합 중인 전체 텍스트 인덱스가 없습니다.<br /><br /> 1 = 전체 텍스트 인덱스가 병합 중입니다.|  
