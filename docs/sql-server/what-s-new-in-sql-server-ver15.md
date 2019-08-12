@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: caf8b23b823d7863e1bd7c8abd01ef43b0b8ec20
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702890"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893996"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -46,7 +46,7 @@ CTP(Community Technology Preview) 3.2는 [!INCLUDE[sql-server-2019](../includes/
 
 | 새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---| 
-| Power BI 캐시 새로 고침에 대한 거버넌스 설정.  | Power BI 서비스는 라이브 연결 보고서의 초기 로드에 대한 대시보드 타일 데이터 및 보고서 데이터를 캐시하여 많은 수의 캐시 쿼리가 SSAS로 전송되도록 하며, 극단적인 경우 서버에 과부하를 발생하기도 합니다. 이 릴리스에는 **ClientCacheRefreshPolicy** 속성이 도입되었습니다. 이 속성을 사용하여 서버 수준에서 이 동작을 재정의할 수 있습니다. 자세히 알아보려면 [일반 속성](../analysis-services/server-properties/general-properties.md)을 참조하세요. |
+| Power BI 캐시 새로 고침에 대한 거버넌스 설정.  | Power BI 서비스는 라이브 연결 보고서의 초기 로드에 대한 대시보드 타일 데이터 및 보고서 데이터를 캐시하여 많은 수의 캐시 쿼리가 SSAS로 전송되도록 하며, 극단적인 경우 서버에 과부하를 발생하기도 합니다. 이 릴리스에는 **ClientCacheRefreshPolicy** 속성이 도입되었습니다. 이 속성을 사용하여 서버 수준에서 이 동작을 재정의할 수 있습니다. 자세히 알아보려면 [일반 속성](https://docs.microsoft.com/analysis-services/server-properties/general-properties)을 참조하세요. |
 | 온라인 연결  | 이 기능은 테이블 형식 모델을 온라인 작업으로 연결하는 기능을 제공합니다. 온라인 연결 기능은 온-프레미스 쿼리 스케일 아웃 환경에서 읽기 전용 복제본을 동기화하는 데 사용할 수 있습니다. 자세히 알아보려면 [온라인 연결](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
