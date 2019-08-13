@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/27/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 621a122ae3464f207797b6e51a21674192e2a758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68060248693b33cead474f051f93d69208ce512f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902724"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893572"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 
@@ -73,7 +73,7 @@ WITH
 
 ## <a name="arguments"></a>인수
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 데이터 원본에 대한 사용자 정의 이름을 지정합니다. 이름은 SQL Server의 데이터베이스 내에서 반드시 고유해야 합니다.
 
@@ -110,7 +110,7 @@ WITH
 - `wasb`는 Azure Blob 스토리지의 기본 프로토콜입니다. `wasbs`는 선택 사항이지만 보안 SSL 연결을 통해 데이터를 전송하므로 권장됩니다.
 - Hadoop `Namenode` 장애 조치(failover) 중에 PolyBase 쿼리를 성공적으로 수행하려면 Hadoop 클러스터의 `Namenode`에 대한 가상 IP 주소 사용을 고려하세요. 그렇지 않은 경우 [ALTER EXTERNAL DATA SOURCE][alter_eds] 명령을 실행하여 새 위치를 가리킵니다.
 
-### <a name="connectionoptions--keyvaluepair"></a>CONNECTION_OPTIONS = *key_value_pair*
+### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
 
 `ODBC`를 외부 데이터 원본에 연결할 때 추가 옵션을 지정합니다.
 
@@ -126,7 +126,7 @@ WITH
 
 쿼리 수준에서 푸시 다운을 활성화 또는 비활성화는 [힌트][hint_pb]를 통해 구현됩니다.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 외부 데이터 원본에 대해 인증하기 위한 데이터베이스 범위 자격 증명을 지정합니다.
 
@@ -142,19 +142,19 @@ WITH
 
 데이터베이스 범위 지정 자격 증명을 만들려면 [CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)][create_dsc]을 참조하세요.
 
-### <a name="type---hadoop--blobstorage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
 
 구성 중인 외부 데이터 원본의 유형을 지정합니다. 이 매개 변수가 항상 필요한 것은 아닙니다.
 
 - 외부 데이터 원본이 Cloudera, Hortonworks, Azure Blob Storage이면 HADOOP을 사용합니다.
-- [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset]([!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 포함)를 통해 대량 작업을 실행하는 경우 BLOB_STORAGE를 사용합니다.
+- [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]와 함께 [BULK INSERT][bulk_insert] 또는 [OPENROWSET][openrowset]를 통해 대량 작업을 실행하는 경우 BLOB_STORAGE를 사용합니다.
 
 > [!IMPORTANT]
 > 기타 외부 데이터 원본을 사용하는 경우 `TYPE`을 설정하지 마세요.
 
 `TYPE` = `HADOOP`을 사용하여 Azure Blob Storage에서 데이터를 로드하는 예제는 [Azure Blob Storage를 참조하는 외부 데이터 원본 만들기](#e-create-external-data-source-to-reference-azure-blob-storage)를 참조하세요.
 
-### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
+### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
 Hortonworks 또는 Cloudera에 연결할 때 이 선택적 값을 구성합니다.
 
@@ -317,7 +317,7 @@ WITH
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Azure Blob 스토리지에서 데이터를 검색하는 대량 작업을 위한 외부 데이터 원본 만들기
 
 **적용 대상:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]을 참조하세요.
-[BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]를 통해 대량 작업에 대한 다음 데이터 원본을 사용합니다. 자격 증명은 `SHARED ACCESS SIGNATURE`를 ID로 설정해야 하며 SAS 토큰에서 앞에 `?`가 없어야 하며, 적어도 로드할 파일에 대한 읽기 권한이 있어야 하고(예: `srt=o&sp=r`) 만료 기간이 유효해야 합니다(모든 날짜는 UTC 시간임). 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용][sas_token]을 참조하세요.
+[BULK INSERT][bulk_insert] 또는 [OPENROWSET][openrowset]을 사용하여 대량 작업에 대한 다음 데이터 원본을 만듭니다. 자격 증명은 `SHARED ACCESS SIGNATURE`를 ID로 설정해야 하며 SAS 토큰에서 앞에 `?`가 없어야 하며, 적어도 로드할 파일에 대한 읽기 권한이 있어야 하고(예: `srt=o&sp=r`) 만료 기간이 유효해야 합니다(모든 날짜는 UTC 시간임). 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용][sas_token]을 참조하세요.
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -406,7 +406,7 @@ WITH
 
 ## <a name="arguments"></a>인수
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 데이터 원본에 대한 사용자 정의 이름을 지정합니다. 이름은 SQL DB(SQL Database)의 데이터베이스 내에서 반드시 고유해야 합니다.
 
@@ -429,7 +429,7 @@ WITH
 
 - SQL Database 엔진은 개체가 생성될 때 외부 데이터 원본이 존재하는지 확인하지 않습니다. 유효성을 검사하려면 외부 데이터 원본을 사용하여 외부 테이블을 만듭니다.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 외부 데이터 원본에 대해 인증하기 위한 데이터베이스 범위 자격 증명을 지정합니다.
 
@@ -446,18 +446,18 @@ WITH
 
 데이터베이스 범위 지정 자격 증명을 만들려면 [CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)][create_dsc]을 참조하세요.
 
-### <a name="type---blobstorage--rdbms--shardmapmanager"></a>TYPE = *[ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
+### <a name="type---blob_storage--rdbms--shard_map_manager"></a>TYPE = *[ BLOB_STORAGE | RDBMS | SHARD_MAP_MANAGER]*
 
 구성 중인 외부 데이터 원본의 유형을 지정합니다. 이 매개 변수가 항상 필요한 것은 아닙니다.
 
 - SQL Database에서 탄력적 쿼리를 통해 데이터베이스 간 쿼리에 RDBMS를 사용합니다.  
 - 분할된 SQL Database에 연결할 때 외부 데이터 원본을 만드는 경우 SHARD_MAP_MANAGER를 사용합니다.
-- [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset]를 통해 대량 작업을 실행하는 경우 BLOB_STORAGE를 사용합니다.
+- [BULK INSERT][bulk_insert] 또는 [OPENROWSET][openrowset]를 통해 대량 작업을 실행하는 경우 BLOB_STORAGE를 사용합니다.
 
 > [!IMPORTANT]
 > 기타 외부 데이터 원본을 사용하는 경우 `TYPE`을 설정하지 마세요.
 
-### <a name="databasename--databasename"></a>DATABASE_NAME = *database_name*
+### <a name="database_name--database_name"></a>DATABASE_NAME = *database_name*
 
 `TYPE`이 `RDBMS` 또는 `SHARD_MAP_MANAGER`로 설정된 경우 이 인수를 구성합니다.
 
@@ -468,7 +468,7 @@ WITH
 
 `TYPE` = `RDBMS`에서 외부 데이터 원본을 만드는 방법을 보여주는 예제는 [RDBMS 외부 데이터 원본 만들기](#b-create-an-rdbms-external-data-source)를 참조하세요.
 
-### <a name="shardmapname--shardmapname"></a>SHARD_MAP_NAME = *shard_map_name*
+### <a name="shard_map_name--shard_map_name"></a>SHARD_MAP_NAME = *shard_map_name*
 
 `TYPE` 인수가 `SHARD_MAP_MANAGER`로 설정된 경우에만 분할된 맵의 이름을 설정하는 데 사용됩니다.
 
@@ -544,7 +544,7 @@ RDBMS에 대한 단계별 자습서는 [데이터베이스 간 쿼리 시작(수
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. Azure Blob 스토리지에서 데이터를 검색하는 대량 작업을 위한 외부 데이터 원본 만들기
 
-[BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]를 통해 대량 작업에 대한 다음 데이터 원본을 사용합니다. 자격 증명은 `SHARED ACCESS SIGNATURE`를 ID로 설정해야 하며 SAS 토큰에서 앞에 `?`가 없어야 하며, 적어도 로드할 파일에 대한 읽기 권한이 있어야 하고(예: `srt=o&sp=r`) 만료 기간이 유효해야 합니다(모든 날짜는 UTC 시간임). 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용][sas_token]을 참조하세요.
+[BULK INSERT][bulk_insert] 또는 [OPENROWSET][openrowset]을 사용하여 대량 작업에 대한 다음 데이터 원본을 만듭니다. 자격 증명은 `SHARED ACCESS SIGNATURE`를 ID로 설정해야 하며 SAS 토큰에서 앞에 `?`가 없어야 하며, 적어도 로드할 파일에 대한 읽기 권한이 있어야 하고(예: `srt=o&sp=r`) 만료 기간이 유효해야 합니다(모든 날짜는 UTC 시간임). 공유 액세스 서명에 대한 자세한 내용은 [SAS(공유 액세스 서명) 사용][sas_token]을 참조하세요.
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -630,7 +630,7 @@ WITH
 
 ## <a name="arguments"></a>인수
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 데이터 원본에 대한 사용자 정의 이름을 지정합니다. 이름은 SQL DW(SQL Data Warehouse)의 데이터베이스 내에서 반드시 고유해야 합니다.
 
@@ -642,7 +642,7 @@ WITH
 | --------------------------- | --------------- | ----------------------------------------------------- |
 | Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 | Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
-| Azure Data Lake Store Gen 2 | `abfss`         | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Azure Data Lake Store Gen 2 | `abfs[s]`         | `<container>@<storage_account>.dfs.core.windows.net`  |
 
 위치 경로:
 
@@ -651,11 +651,12 @@ WITH
 
 위치 설정 시 추가 참고 사항 및 지침:
 
+- 기본 옵션은 Azure Data Lake Storage 2세대 프로비저닝 시 보안 SSL 연결을 사용하는 것입니다. 이 기능을 사용하도록 설정한 경우 보안 SSL 연결을 선택할 때 `abfss`를 사용해야 합니다. `abfss`는 보안되지 않은 SSL 연결에서도 작동합니다. 
 - SQL Data Warehouse 엔진은 개체가 생성될 때 외부 데이터 원본이 존재하는지 확인하지 않습니다. 유효성을 검사하려면 외부 데이터 원본을 사용하여 외부 테이블을 만듭니다.
 - 일관된 쿼리 의미 체계를 보장하기 위해 Hadoop을 쿼리할 때 모든 테이블에 대해 동일한 외부 데이터 원본을 사용합니다.
 - `wasb`는 Azure Blob 스토리지의 기본 프로토콜입니다. `wasbs`는 선택 사항이지만 보안 SSL 연결을 통해 데이터를 전송하므로 권장됩니다.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 외부 데이터 원본에 대해 인증하기 위한 데이터베이스 범위 자격 증명을 지정합니다.
 
@@ -666,7 +667,7 @@ WITH
 
 데이터베이스 범위 지정 자격 증명을 만들려면 [CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)][create_dsc]을 참조하세요.
 
-### <a name="type---hadoop--blobstorage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
 
 구성 중인 외부 데이터 원본의 유형을 지정합니다. 이 매개 변수가 항상 필요한 것은 아닙니다.
 
@@ -725,9 +726,9 @@ WITH
 ;
 ```
 
-### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1"></a>2\. Azure Data Lake Store Gen 1을 참조하는 외부 데이터 원본 만들기
+### <a name="b-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-a-service-principal"></a>2\. Azure Data Lake Store Gen 1 또는 2를 참조하거나 서비스 주체를 사용하여 외부 데이터 소스를 생성합니다.
 
-Azure Data Lake Store 연결은 ADLS URI 및 Azure Active directory 애플리케이션의 서비스 원칙을 기반으로 합니다. 이 애플리케이션을 만들기 위한 설명서는 [Active Directory를 사용하여 Data Lake 저장소 인증][azure_ad[]에서 찾을 수 있습니다.
+Azure Data Lake Store 연결은 ADLS URI 및 Azure Active directory 애플리케이션의 서비스 원칙을 기반으로할 수 있습니다. 이 애플리케이션을 만들기 위한 설명서는 [Active Directory를 사용하여 Data Lake 저장소 인증][azure_ad[]에서 찾을 수 있습니다.
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -742,6 +743,11 @@ WITH
 --,  SECRET     = '<KEY>'
 ,    SECRET     = 'BjdIlmtKp4Fpyh9hIvr8HJlUida/seM5kQ3EpLAmeDI='
 ;
+
+-- For Gen 1 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 1 account name and URI
+-- CREDENTIAL: Provide the credential created in the previous step
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH
 (    LOCATION       = 'adl://newyorktaxidataset.azuredatalakestore.net'
@@ -749,11 +755,21 @@ WITH
 ,    TYPE           = HADOOP
 )
 ;
+
+-- For Gen 2 - Create an external data source
+-- TYPE: HADOOP - PolyBase uses Hadoop APIs to access data in Azure Data Lake Storage.
+-- LOCATION: Provide Data Lake Storage Gen 2 account name and URI
+-- CREDENTIAL: Provide the credential created in the previous step
+CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
+WITH
+(    LOCATION       = 'abfss://newyorktaxidataset.azuredatalakestore.net' -- Please note the abfss endpoint when your account has secure transfer enabled
+,    CREDENTIAL     = ADLS_credential
+,    TYPE           = HADOOP
+)
+;
 ```
 
-### <a name="c-create-external-data-source-to-reference-azure-data-lake-store-adls-gen-2"></a>C. ADLS(Azure Data Lake Store) Gen 2를 참조하는 외부 데이터 원본 만들기
-
-ADLS Gen 2에 연결하려면 데이터베이스 범위 자격 증명에 대한 비밀로 스토리지 계정 키가 필요합니다. 현재 Oauth2.0 지원은 제공되지 않습니다.
+### <a name="c-create-external-data-source-to-reference-azure-data-lake-store-gen-1-or-2-using-the-storage-account-key"></a>C. Azure Data Lake Store Gen 1 또는 2를 참조하거나 스토리지 계정 키를 사용하여 외부 데이터 소스를 생성합니다.
 
 ```sql
 -- If you do not have a Master Key on your DW you will need to create one.
@@ -769,6 +785,7 @@ WITH
 ,    SECRET     = 'yz5N4+bxSb89McdiysJAzo+9hgEHcJRJuXbF/uC3mhbezES/oe00vXnZEl14U0lN3vxrFKsphKov16C0w6aiTQ=='
 ;
 
+-- Note this example uses a Gen 2 endpoint (abfss)
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION   = 'abfss://2013@newyorktaxidataset.dfs.core.windows.net'
@@ -849,7 +866,7 @@ WITH
 
 ## <a name="arguments"></a>인수
 
-### <a name="datasourcename"></a>data_source_name
+### <a name="data_source_name"></a>data_source_name
 
 데이터 원본에 대한 사용자 정의 이름을 지정합니다. 이름은 Analytics Platform System(병렬 데이터 웨어하우스 또는 PDW)의 서버 내에서 반드시 고유해야 합니다.
 
@@ -876,7 +893,7 @@ WITH
 - `wasb`는 Azure Blob 스토리지의 기본 프로토콜입니다. `wasbs`는 선택 사항이지만 보안 SSL 연결을 통해 데이터를 전송하므로 권장됩니다.
 - Hadoop `Namenode` 장애 조치(failover) 중에 PolyBase 쿼리를 성공적으로 수행하려면 Hadoop 클러스터의 `Namenode`에 대한 가상 IP 주소 사용을 고려하세요. 그렇지 않은 경우 [ALTER EXTERNAL DATA SOURCE][alter_eds] 명령을 실행하여 새 위치를 가리킵니다.
 
-### <a name="credential--credentialname"></a>CREDENTIAL = *credential_name*
+### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
 외부 데이터 원본에 대해 인증하기 위한 데이터베이스 범위 자격 증명을 지정합니다.
 
@@ -896,7 +913,7 @@ WITH
 
 `TYPE` = `HADOOP`을 사용하여 Azure Blob Storage에서 데이터를 로드하는 예제는 [Azure Blob Storage를 참조하는 외부 데이터 원본 만들기](#d-create-external-data-source-to-reference-azure-blob-storage)를 참조하세요.
 
-### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
+### <a name="resource_manager_location--resourcemanager_uriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
 Hortonworks 또는 Cloudera에 연결할 때 이 선택적 값을 구성합니다.
 
@@ -917,7 +934,7 @@ Hortonworks 또는 Cloudera에 연결할 때 이 선택적 값을 구성합니�
 | 7                   | 8050                          |
 
 지원되는 Hadoop 버전의 전체 목록은 [PolyBase 연결 구성(Transact-SQL)][connectivity_pb]을 참조하세요.
-  
+
 > [!IMPORTANT]  
 > 외부 데이터 원본을 만들 때 RESOURCE_MANAGER_LOCATION 값의 유효성이 검사되지 않습니다. 잘못된 값을 입력하면 제공된 값을 확인할 수 없으므로 푸시 다운을 시도할 때마다 실행 시 쿼리 오류가 발생할 수 있습니다.
 
@@ -947,7 +964,7 @@ PolyBase는 대부분의 외부 데이터 원본에 대해 프록시 기반 인�
 ### <a name="a-create-external-data-source-to-reference-hadoop"></a>1\. Hadoop를 참조하는 외부 데이터 원본 만들기
 
 Hortonworks 또는 Cloudera Hadoop 클러스터를 참조하는 외부 데이터 원본을 만들려면 머신 이름 또는 Hadoop `Namenode` 및 포트의 IP 주소를 지정합니다. <!-- Provide the Nameservice ID as the `LOCATION` for highly available configurations. -->
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -960,7 +977,7 @@ WITH
 ### <a name="b-create-external-data-source-to-reference-hadoop-with-push-down-enabled"></a>2\. 푸시 다운이 활성화된 상태에서 Hadoop를 참조하는 외부 데이터 원본 만들기
 
 `RESOURCE_MANAGER_LOCATION` 옵션을 지정하여 PolyBase 쿼리에 대한 Hadoop 계산 푸시 다운을 활성화합니다. 활성화되면 PolyBase는 쿼리 계산을 Hadoop에 푸시해야 하는지 여부를 결정하기 위해 비용 기반 결정을 내립니다.
-  
+
 ```sql  
 CREATE EXTERNAL DATA SOURCE MyHadoopCluster
 WITH
@@ -974,7 +991,7 @@ WITH
 ### <a name="c-create-external-data-source-to-reference-kerberos-secured-hadoop"></a>C. Kerberos 보안 Hadoop를 참조하는 외부 데이터 원본 만들기
 
 Hadoop 클러스터가 Kerberos 보안 방식인지 확인하려면 Hadoop core-site.xml에서 hadoop.security.authentication 속성의 값을 확인합니다. Kerberos 보안 Hadoop 클러스터를 확인하려면 Kerberos 사용자 이름과 암호를 포함한 데이터베이스 범위 자격 증명을 지정해야 합니다. 데이터베이스 범위 자격 증명 비밀을 암호화하는 데에는 데이터베이스 마스터 키가 사용됩니다.
-  
+
 ```sql  
 -- Create a database master key if one does not already exist, using your own password. This key is used to encrypt the credential secret in next step.
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo'

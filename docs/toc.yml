@@ -1,5 +1,7 @@
 - name: SQL Server 시작
   href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
+- name: SQL 문서 버전 관리
+  href: toc/versioning-system-monikers-ui-sql-server.md
 - name: 이전 버전 2014-2005
   href: toc/previous-versions-sql-server.md
 - name: 개요
@@ -2441,7 +2443,7 @@
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: Java jar 파일 만들기
               href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
-    - name: SQL Server Native Client
+    - name: 'SQL Server Native Client '
       href: relational-databases/native-client/sql-server-native-client.md
       items:
         - name: 개요
@@ -10359,7 +10361,7 @@
                       href: linux/sql-server-linux-availability-group-cluster-sles.md
                     - name: Ubuntu에서 구성
                       href: linux/sql-server-linux-availability-group-cluster-ubuntu.md
-                    - name: 장애 조치
+                    - name: '장애 조치 '
                       href: linux/sql-server-linux-availability-group-failover-ha.md
                     - name: 운영
                       href: linux/sql-server-linux-availability-group-operate-ha.md

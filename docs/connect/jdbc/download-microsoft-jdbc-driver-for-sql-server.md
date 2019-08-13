@@ -1,7 +1,7 @@
 ---
 title: SQL Server용 Microsoft JDBC Driver 다운로드 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 451181b8-11e6-4d01-b547-9ac5aada8238
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d6f031be464502acc2604cac3b20fec8e54b793b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b2c516ee03b7f3369d5775a01f9472503e2ee85
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956684"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893941"
 ---
 # <a name="download-microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC Driver for SQL Server 다운로드
 
@@ -27,11 +27,12 @@ POM.xml에서 다음 코드로 JDBC Driver를 종속성으로 추가하여 Maven
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>7.2.2.jre11</version>
+    <version>7.4.1.jre11</version>
 </dependency>
 ```  
 
 ## <a name="available-downloads-of-jdbc-driver-for-sql-server"></a>SQL Server용 JDBC Driver의 사용 가능한 다운로드
+ * [SQL Server용 Microsoft JDBC Driver 7.4](https://go.microsoft.com/fwlink/?linkid=2099962)
  * [SQL Server용 Microsoft JDBC Driver 7.2](https://go.microsoft.com/fwlink/?linkid=2063159)
  * [SQL Server용 Microsoft JDBC Driver 7.0](https://go.microsoft.com/fwlink/?linkid=2005972) 
  * [SQL Server용 Microsoft JDBC Driver 6.4](https://go.microsoft.com/fwlink/?linkid=868290) 
@@ -40,7 +41,7 @@ POM.xml에서 다음 코드로 JDBC Driver를 종속성으로 추가하여 Maven
  * [SQL Server용 Microsoft JDBC Driver 4.2](https://go.microsoft.com/fwlink/?linkid=841534) 
  * [SQL Server용 Microsoft JDBC Driver 4.1](https://go.microsoft.com/fwlink/?linkid=841533) 
   
-## <a name="unsupported-drivers"></a>지원되지 않는 드라이버  
+## <a name="unsupported-drivers"></a>지원되지 않는 드라이버
 지원되지 않는 드라이버 버전은 여기에서 다운로드할 수 없습니다. Java 연결 지원을 지속적으로 개선하고 있습니다. 따라서 최신 버전의 Microsoft JDBC 드라이버를 사용하는 것이 좋습니다.  
   
   

@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
-ms.openlocfilehash: d7755f15e78f29814eee93557286736b849c96c6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7e6864a935a9e1d3f2fcdcb1dbe100a65df3789a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264589"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893522"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
 
@@ -26,7 +26,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 새로�
 
 Power BI Report Server에 대한 정보는 [Power BI Report Server란?](https://docs.microsoft.com/power-bi/report-server/get-started)을 참조하세요.
 
-**다운로드** ![download](../analysis-services/media/download.png "download")
+**다운로드** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
 
 SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=55252)** 로 이동하세요.
 
@@ -34,7 +34,7 @@ SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운�
 
 ## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 Reporting Services 미리 보기
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.1에서는 Reporting Services를 사용할 수 없습니다. 현재 버전, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)를 설치하세요.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.2에서는 Reporting Services를 사용할 수 없습니다. 현재 버전, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)를 설치하세요.
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -161,7 +161,7 @@ Reporting Services 모바일 보고서는 다양한 폼 팩터에 최적화된 �
 2. 항목을 고정할 대시보드를 선택합니다.
 3. 대시보드에서 타일을 업데이트할 빈도를 선택합니다.
 
-![참고](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고") 새로 고침은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독에 의해 관리되며 항목이 고정된 후 구독을 편집하고 다른 새로 고침 일정을 구성할 수 있습니다.
+![참고](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "참고") 새로 고침은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 구독에 의해 관리되며 항목이 고정된 후 구독을 편집하고 다른 새로 고침 일정을 구성할 수 있습니다.
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 

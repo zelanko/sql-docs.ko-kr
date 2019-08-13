@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7808af6be2759b618ec0c57fb9ebb6e97f3b3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9fdc5ee7428aec65c96755eb9a1c0e013de80d01
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048167"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809777"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 
@@ -702,7 +702,7 @@ INSERT INTO t1 VALUES (1, 0);
 - 옵션은 동일한 문에 이전 버전과 호환되는 구문 및 새 구문 모두를 사용하여 지정할 수 없습니다. 예를 들어 WITH (**DROP_EXISTING, ONLINE = ON**)을 지정하면 문이 실패합니다.
 - XML 인덱스를 만들 때 WITH( **_option_name_= ON | OFF**)를 사용하여 옵션을 지정해야 합니다.
 
-## <a name="dropexisting-clause"></a>DROP_EXISTING 절
+## <a name="drop_existing-clause"></a>DROP_EXISTING 절
 DROP_EXISTING 절을 사용하여 인덱스 다시 작성, 열 추가 또는 삭제, 옵션 수정, 열 정렬 순서 수정 또는 파티션 구성표나 파일 그룹 변경 등의 작업을 수행할 수 있습니다.
 
 인덱스가 PRIMARY KEY 또는 UNIQUE 제약 조건을 강제 적용하고 인덱스 정의가 변경되지 않으면 이 인덱스는 삭제되고 기존 제약 조건을 보존한 상태에서 다시 만들어집니다. 그러나 인덱스 정의가 변경되면 이 문은 실패합니다. PRIMARY KEY 또는 UNIQUE 제약 조건의 정의를 변경하려면 제약 조건을 삭제하고 새 정의가 있는 제약 조건을 추가합니다.
@@ -829,7 +829,7 @@ CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerso
 ```
 
 ### <a name="c-create-an-index-on-a-table-in-another-database"></a>C. 다른 데이터베이스의 테이블에 인덱스 만들기
-다음 예제에서는 `Purchasing` 데이터베이스에 있는 `ProductVendor` 테이블의 `VendorID` 열에 비클러스터형 인덱스를 만듭니다.
+다음 예제에서는 `Purchasing` 데이터베이스에 있는 `ProductVendor` 테이블의 `VendorID` 열에 클러스터형 인덱스를 만듭니다.
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (VendorID);
@@ -873,7 +873,7 @@ Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.
 ```
 
-### <a name="f-use-the-ignoredupkey-option"></a>F. IGNORE_DUP_KEY 옵션 사용
+### <a name="f-use-the-ignore_dup_key-option"></a>F. IGNORE_DUP_KEY 옵션 사용
 다음 예에서는 `IGNORE_DUP_KEY` 옵션을 먼저 `ON`으로 설정한 후 다시 `OFF`로 설정한 상태에서 여러 행을 임시 테이블에 삽입했을 때 미치는 영향을 보여 줍니다. 두 번째 여러 행 `#Test` 문이 실행될 때 의도적으로 중복 값을 발생시키는 `INSERT` 테이블에 단일 행을 삽입합니다. 테이블의 행 수가 삽입된 행 수를 반환합니다.
 
 ```sql
@@ -934,7 +934,7 @@ Number of rows
 
 `Production.UnitMeasure` 테이블에서 오직 한 행만 `UNIQUE` 인덱스 제약 조건을 위반했지만 이 테이블에서 어떤 행도 삽입되지 않았습니다.
 
-### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. DROP_EXISTING을 사용하여 인덱스 삭제 및 다시 만들기
+### <a name="g-using-drop_existing-to-drop-and-re-create-an-index"></a>G. DROP_EXISTING을 사용하여 인덱스 삭제 및 다시 만들기
 다음 예에서는 `ProductID` 옵션을 사용하여 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에 있는 `Production.WorkOrder` 테이블의 `DROP_EXISTING` 열에서 기존 인덱스를 삭제하고 다시 만듭니다. `FILLFACTOR` 및 `PAD_INDEX` 옵션도 설정됩니다.
 
 ```sql
@@ -1109,8 +1109,8 @@ ALTER INDEX test_idx on test_table RESUME
 ALTER INDEX test_idx on test_table ABORT
 ```
 
-### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>15. 현재 데이터베이스의 테이블에 비클러스터형 인덱스 만들기
-다음 예제에서는 `ProductVendor` 테이블의 `VendorID` 열에 비클러스터형 인덱스를 만듭니다.
+### <a name="o-create-a-nonclustered-index-on-a-table-in-the-current-database"></a>15. 현재 데이터베이스의 테이블에 비클러스터형 인덱스 만들기
+다음 예에서는 `ProductVendor` 테이블의 `VendorID` 열에 비클러스터형 인덱스를 만듭니다.
 
 ```sql
 CREATE INDEX IX_ProductVendor_VendorID
@@ -1118,7 +1118,7 @@ CREATE INDEX IX_ProductVendor_VendorID
 ```
 
 ### <a name="p-create-a-clustered-index-on-a-table-in-another-database"></a>16. 다른 데이터베이스의 테이블에 클러스터형 인덱스 만들기
-다음 예제에서는 `Purchasing` 데이터베이스에 있는 `ProductVendor` 테이블의 `VendorID` 열에 비클러스터형 인덱스를 만듭니다.
+다음 예에서는 `Purchasing` 데이터베이스에 있는 `ProductVendor` 테이블의 `VendorID` 열에 비클러스터형 인덱스를 만듭니다.
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID

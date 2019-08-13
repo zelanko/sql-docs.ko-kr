@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9df5dab8f3ce74efeb9ba4c1d849e9f633c85004
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132765"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809715"
 ---
 # <a name="dta-utility"></a>dta 유틸리티
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -177,7 +177,7 @@ dta -d AdventureWorks2012 ...
  필터링된 인덱스가 새 제안 사항을 만들 때 고려되도록 지정합니다. 자세한 내용은 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)을(를) 참조하세요.  
   
 **-fc**  
- ColumnStore 인덱스가 새 권장 사항으로 고려되도록 지정합니다. DTA는 클러스터형 columnstore 인덱스와 비클러스터형 columnstore 인덱스를 모두 고려 합니다. 자세한 내용은 다음을 참조하세요.    
+ ColumnStore 인덱스가 새 권장 사항으로 고려되도록 지정합니다. DTA는 클러스터형 columnstore 인덱스와 비클러스터형 columnstore 인덱스를 모두 고려합니다. 자세한 내용은 다음을 참조하세요.    
 [DTA(데이터베이스 엔진 튜닝 관리자)의 Columnstore 인덱스 권장 사항](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)
  ||  
 |-|  

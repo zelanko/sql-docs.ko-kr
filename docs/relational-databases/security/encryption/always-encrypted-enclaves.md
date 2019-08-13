@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 998594a4c0c649a0ad73d36e858cf733fc364aae
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661222"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841575"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -168,7 +168,6 @@ bacpac 파일을 사용하여 데이터베이스를 마이그레이션하는 경
     > [!NOTE]
     > 위의 작업은 binary2 정렬 순서의 데이터 정렬(BIN2 데이터 정렬)을 사용하는 문자열 열에 대해 지원됩니다. BIN2 이외의 데이터 정렬을 사용하는 문자열 열은 임의 암호화 및 Enclave 사용 열 암호화 키로 암호화할 수 있습니다. 그러나 이러한 열에 사용할 수 있는 유일한 새 기능은 바로 암호화입니다.
 - 임의 암호화를 사용하는 Enclave 사용 열에 비클러스터형 인덱스 만들기
-- 임의 암호화를 사용하는 열의 LIKE 조건자 및 비교 연산자를 포함하는 식을 사용하는 계산 열
 
 [기능 정보](always-encrypted-database-engine.md#feature-details)에서 보안 enclave가 없는 Always Encrypted에 대해 나열된 기타 모든 제한 사항(위의 기능 향상으로 해결되지 않음)이 보안 enclave를 사용한 Always Encrypted에도 적용됩니다.
 
@@ -182,6 +181,7 @@ bacpac 파일을 사용하여 데이터베이스를 마이그레이션하는 경
     - char[n], varchar[n], binary[n], varbinary[n]\(n이 7935보다 큰 경우\)
 - 바로 암호화 작업은 동일한 코드 페이지 내의 데이터 정렬 및 null 허용 여부 변경을 제외하고 다른 열 메타데이터 변경과 결합할 수 없습니다. 예를 들어 단일 ALTER TABLE 또는 ALTER COLUMN Transact-SQL 문에서 열 암호화, 다시 암호화 또는 암호 해독을 수행하는 작업과 열의 데이터 형식을 변경하는 작업을 함께 수행할 수 없습니다. 두 개의 개별 문을 사용합니다.
 - 메모리 내 테이블의 열에 대해 enclave 사용 키를 사용할 수 없습니다.
+- 계산 열을 정의하는 식은 임의 암호화를 사용하여 enclave 사용 열에서 계산을 수행할 수 없습니다(계산이 유사하고 범위 비교인 경우에도).
 - Enclave 사용 열 마스터 키를 저장할 수 있는 유일한 키 저장소는 Windows 인증서 저장소 및 Azure Key Vault입니다.
 
 다음과 같은 제한 사항이 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)]에 적용되지만 해결 중입니다.

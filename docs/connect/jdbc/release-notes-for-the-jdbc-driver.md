@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver에 대한 릴리스 정보 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,67 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 45af95d26da9b05b6e8e99dd78936e1f7bb6ed6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002446"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891283"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver에 대한 릴리스 정보
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 이 문서에는 _SQL Server용 Microsoft JDBC Driver_의 릴리스가 나열되어 있습니다. 릴리스 버전별로 변경 내용을 밝히고 설명합니다.
+## <a name="741"></a>7.4.1
+
+### <a name="compliance"></a>호환성
+
+2019 년 8 월 2 일
+
+| 규정 준수 변경 | 세부 정보 |
+| :---------------- | :------ |
+| JDBC Driver 7.4의 최신 업데이트를 다운로드합니다. | &bull; &nbsp; [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?linkid=2099962)<br/>&bull; &nbsp; [GitHub, 7.4.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.4.1)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| JDBC API 사양 4.2를 완벽히 준수합니다. | 7\.4 패키지의 jar는 Java 버전 호환성에 따라 이름이 지정됩니다.<br/><br/>예를 들어 7.4 패키지의 mssql-jdbc-7.4.1.jre11.jar 파일은 Java 11과 함께 사용해야 합니다. |
+| JDK (Java Development Kit) 버전 12.0, 11.0 및 1.8와 호환 됩니다. | SQL Server용 Microsoft JDBC Driver 7.4는 이제 JDK 11.0 및 1.8 외에도 JDK(Java Development Kit) 버전 12.0과도 호환됩니다. |
+| &nbsp; | &nbsp; |
+
+### <a name="support-for-jdk-12"></a>JDK 12 지원
+
+SQL Server용 Microsoft JDBC Driver 7.4는 이제 JDK 11.0 및 1.8 외에도 JDK(Java Development Kit) 버전 12.0과도 호환됩니다.
+
+### <a name="introduces-ntlm-authentication"></a>NTLM 인증 도입
+
+| NTLM 변경 | 세부 정보 |
+| :--------- | :------ |
+| NTLM 인증 모드를 지원 합니다. | 이 인증 모드를 사용 하면 windows 및 비 Windows 클라이언트 모두 Windows 도메인 사용자를 사용 하 여 SQL Server에 대해 인증할 수 있습니다. |
+| 이 인증 모드를 사용하기 위한 자세한 내용 및 애플리케이션 예제 | [NTLM 인증을 사용 하 여 연결](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)을 참조 하세요. |
+| &nbsp; | &nbsp; |
+
+### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>_UseFmtOnly_ 를 통해 parametermetadata 쿼리를 소개 합니다.
+
+| useFmtOnly 변경 | 세부 정보 |
+| :---------- | :------ |
+| **useFmtOnly** 연결 속성이 추가 되었습니다. | 이 기능을 사용 하면 사용자가 필요에 따라 레거시 `SET FMTONLY ON` API를 통해 parametermetadata를 쿼리할 수 있습니다. 이는가 예상 대로 수행 `sp_describe_undeclared_parameters` 되지 않는 시나리오에 유용 합니다. |
+| 추가 정보 및 제한 사항. | [useFmtOnly 사용](../../connect/jdbc/using-usefmtonly.md) 참조 |
+| &nbsp; | &nbsp; |
+
+### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-121"></a>업데이트된 _Java용 Microsoft Azure Key Vault SDK_ 버전: 1.2.1
+
+| Key Vault SDK 변경 | 세부 정보 |
+| :------------------- | :------ |
+| _Java용 Microsoft Azure Key Vault SDK_의 Maven 종속성을 버전 1.2.1로 업데이트했습니다. | &nbsp; |
+| _Key Vault WebKey용 Microsoft Azure SDK_를 Maven 종속성에서 제거합니다. | &nbsp; |
+| 추가 정보 | [SQL Server용 Microsoft JDBC Driver의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)을 참조하세요. |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>알려진 문제
+
+| 알려진 문제 | 세부 정보 |
+| :----------- | :------ |
+| NTLM 인증을 사용하는 경우 | 확장 보호 및 암호화된 연결을 동시에 활성화하는 기능은 현재 지원되지 않습니다. |
+| useFmtOnly를 사용하는 경우 | 이 기능에는 SQL 구문 분석 논리의 결함으로 인해 발생하는 몇 가지 문제가 있습니다. 자세한 내용 및 해결 방법에 대해서는 [UseFmtOnly 사용](../../connect/jdbc/using-usefmtonly.md) 을 참조 하세요. |
+| &nbsp; | &nbsp; |
 
 ## <a name="722"></a>7.2.2
 
@@ -43,7 +92,7 @@ ms.locfileid: "68002446"
 > 
 > 7\.2.2 릴리스 jar를 사용하도록 프로젝트를 업데이트하는 것이 좋습니다. 자세한 내용은 [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) 및 [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2)의 릴리스 정보를 참조하세요.
 
-### <a name="active-directory-managed-service-identity-msi-authentication"></a>Active Directory MSI(관리 서비스 ID)  인증
+### <a name="active-directory-_managed-service-identity_-msi-authentication"></a>Active Directory MSI(관리 서비스 ID)  인증
 
 | MSI 변경 | 세부 정보 |
 | :--------- | :------ |
@@ -51,7 +100,7 @@ ms.locfileid: "68002446"
 | 이 인증 모드를 사용하기 위한 자세한 내용 및 애플리케이션 예제 | [Azure Active Directory 인증을 사용하여 연결](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-open-service-gateway-initiative-osgi-support"></a>_OSGi(Open Service Gateway Initiative)_ 지원 소개
+### <a name="introduces-_open-service-gateway-initiative_-osgi-support"></a>_OSGi(Open Service Gateway Initiative)_ 지원 소개
 
 | OSGi 변경 | 세부 정보 |
 | :---------- | :------ |
@@ -59,7 +108,7 @@ ms.locfileid: "68002446"
 | **Activator** 구현이 추가되었습니다. | &bull; &nbsp; `org.osgi.framework.BundleActivator`<br/>&bull; &nbsp; `com.microsoft.sqlserver.jdbc.osgi.Activator` |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-sqlservererror-apis"></a>_SQLServerError_ API 소개
+### <a name="introduces-_sqlservererror_-apis"></a>_SQLServerError_ API 소개
 
 | 오류 API 변경 | 세부 정보 |
 | :--------------- | :------ |
@@ -67,7 +116,7 @@ ms.locfileid: "68002446"
 | 추가 정보 | [오류 처리](../../connect/jdbc/handling-errors.md)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-active-directory-authentication-library-adal4j-for-java-version-163"></a>업데이트된 _ADAL4J(Java용 Microsoft Azure Active Directory 인증 라이브러리)_ 버전: 1.6.3
+### <a name="updated-_microsoft-azure-active-directory-authentication-library-adal4j-for-java_-version-163"></a>업데이트된 _ADAL4J(Java용 Microsoft Azure Active Directory 인증 라이브러리)_ 버전: 1.6.3
 
 | ADAL4J 변경 | 세부 정보 |
 | :------------ | :------ |
@@ -76,7 +125,7 @@ ms.locfileid: "68002446"
 | 추가 정보 | [SQL Server용 Microsoft JDBC Driver의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
-### <a name="updated-microsoft-azure-key-vault-sdk-for-java-version-120"></a>Java용 Microsoft Azure Key Vault SDK  버전 1.2.0 업데이트
+### <a name="updated-_microsoft-azure-key-vault-sdk-for-java_-version-120"></a>Java용 Microsoft Azure Key Vault SDK  버전 1.2.0 업데이트
 
 | Key Vault SDK 변경 | 세부 정보 |
 | :------------------- | :------ |
@@ -178,7 +227,7 @@ SQL Server용 Microsoft JDBC Driver 6.4는 JDBC API 사양 4.1 및 4.2를 완벽
 
 이제 드라이버에서 TVP(테이블 반환 매개 변수)를 사용할 때 데이터 형식 `datetime` 및 `smallDatetime`을 지원합니다.
 
-### <a name="added-support-for-the-sqlvariant-datatype"></a>sql_variant 데이터 형식에 대한 지원 추가
+### <a name="added-support-for-the-sql_variant-datatype"></a>sql_variant 데이터 형식에 대한 지원 추가
 
 이제 JDBC Driver에서는 `sql_variant` 데이터 형식을 SQL Server와 함께 사용할 수 있습니다. `sql_variant` 데이터 형식도 TVP 및 대량 복사와 같은 기능에서 지원됩니다. 단, 여기에는 다음과 같은 제한 사항이 있습니다.
 

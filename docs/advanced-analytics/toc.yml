@@ -5,9 +5,9 @@
 - name: 개요
   expanded: true
   items:
-    - name: 'Machine Learning Services(R, Python)'
+    - name: Machine Learning Services (Python 및 R)란?
       href: ../advanced-analytics/what-is-sql-server-machine-learning.md
-    - name: R Services
+    - name: R Services란?
       href: ../advanced-analytics/r/sql-server-r-services.md
     - name: 독립 실행형 서버
       href: ../advanced-analytics/r/r-server-standalone.md
@@ -23,7 +23,7 @@
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
     - name: R Services 설치
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: '독립 실행형 서버 설치(R, Python)'
+    - name: '독립 실행형 서버(R, Python) 설치'
       href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
     - name: 미리 학습된 모델 설치
       href: ../advanced-analytics/install/sql-pretrained-models-install.md

@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버에 대한 FAQ(질문과 대답) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 07/31/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 566dfa3fec53878ac565d33af07d405f6f751521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17032e4d1bd6487edc0b0b41b7f808c27ab995ee
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956571"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892370"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 드라이버에 대한 FAQ(질문과 대답)
 
@@ -35,7 +35,15 @@ JDBC Driver는 오픈 소스이며 소스 코드는 [GitHub](https://github.com/
 Microsoft JDBC Driver용 GitHub 리포지토리에서 사용할 수 있는 JDBC Driver 파일은 JDBC Driver의 핵심이며 리포지토리에 나열된 오픈 소스 라이선스가 적용됩니다. Microsoft 다운로드 센터의 드라이버 패키지에는 Windows 통합 인증에 필요하고 JDBC 드라이버에서 XA 트랜잭션을 사용하도록 설정하기 위해 필요한 추가 라이브러리가 포함됩니다. 이러한 추가 라이브러리에는 다운로드 가능한 패키지에 포함되는 라이선스가 적용됩니다.
 
 **내 드라이버를 업그레이드할 때 어떤 정보를 알아야 하나요?**
-Microsoft JDBC Driver 7.2는 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 두 개의 JAR 클래스 라이브러리를 포함합니다.
+Microsoft JDBC Driver 7.4는 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 세 개의 JAR 클래스 라이브러리를 포함합니다.
+
+| JAR                        | JDBC 사양            | JDK 버전 |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-7.4.1. jre12 | JDBC 4.3(부분) 및 4.2 | JDK 12.0    |
+| mssql-jdbc-7.4.1. jre11 | JDBC 4.3(부분) 및 4.2 | JDK 11.0    |
+| mssql-jdbc-7.4.1. jre8  | JDBC 4.2                      | JDK 8.0     |
+
+ Microsoft JDBC Driver 7.2는 JDBC 4.2 및 4.3(부분) 사양을 지원하며 설치 패키지에 다음과 같은 두 개의 JAR 클래스 라이브러리를 포함합니다.
 
 | JAR                        | JDBC 사양            | JDK 버전 |
 | -------------------------- | ----------------------------- | ----------- |
@@ -134,6 +142,6 @@ SAP 제품을 사용하고 있으며 JRE 1.4 지원이 필요한 고객의 경�
 **이 드라이버가 FIPS 유효성 검사 알고리즘을 사용하여 통신할 수 있나요?**  
 Microsoft JDBC Driver에는 암호화 알고리즘이 포함되어 있지 않습니다. 고객이 FIPS(Federal Information Processing Standards)에서 허용될 수 있는 운영 체제, 애플리케이션 및 JVM 알고리즘을 활용하며 해당 알고리즘을 사용하도록 드라이버를 구성하는 경우 해당 드라이버는 지정된 알고리즘만 통신에 사용합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)
