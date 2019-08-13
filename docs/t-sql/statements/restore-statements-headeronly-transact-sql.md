@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b0ee348ec2492ac54c1d8da57dfa95701dd42507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082518"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742968"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 문 - HEADERONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -71,12 +71,14 @@ FROM <backup_device>
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
-   | { DISK | TAPE } = { 'physical_backup_device_name' |  
+   | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
   
 ```  
-  
+> [!NOTE] 
+> URL은 Microsoft Azure Blob Storage의 위치 및 파일 이름을 지정하는 데 사용되는 형식이며 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2부터 지원됩니다. Microsoft Azure 저장소는 서비스이지만, 모든 세 장치에 대해 일관되고 원활한 복원 환경을 가능하게 하는 디스크와 테이프와 구현이 유사합니다.
+
 ## <a name="arguments"></a>인수  
  RESTORE HEADERONLY 인수 설명은 [RESTORE 인수 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)을 참조하세요.  
   
@@ -84,7 +86,7 @@ FROM <backup_device>
  지정한 장치의 각 백업에 대해 서버는 다음 열을 가진 헤더 정보 행을 보냅니다.  
   
 > [!NOTE]
->  RESTORE HEADERONLY는 미디어에 있는 모든 백업 세트를 확인합니다. 따라서 고용량 테이프 드라이브를 사용할 때 이 결과 집합을 생성하면 시간이 오래 걸릴 수 있습니다. 모든 백업 세트에 대한 정보를 가져오지 않고 미디어를 신속하게 확인하려면 RESTORE LABELONLY를 사용하거나 FILE**=** _backup_set_file_number_를 지정합니다.  
+>  RESTORE HEADERONLY는 미디어에 있는 모든 백업 세트를 확인합니다. 따라서 고용량 테이프 드라이브를 사용할 때 이 결과 집합을 생성하면 시간이 오래 걸릴 수 있습니다. 모든 백업 세트에 대한 정보를 가져오지 않고 미디어를 신속하게 확인하려면 RESTORE LABELONLY를 사용하거나 FILE **=** _backup_set_file_number_ 를 지정합니다.  
 > 
 > [!NOTE]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 테이프 형식의 특성 때문에 다른 소프트웨어 프로그램의 백업 세트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 세트와 동일한 크기의 미디어의 공간을 차지할 수 있습니다. RESTORE HEADERONLY에서 반환한 결과 집합에는 각각의 다른 백업 세트에 대한 행이 포함되어 있습니다.  
@@ -149,7 +151,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) ~ 현재 버전).<br /><br /> 사용되는 암호기 유형으로 인증서 또는 비대칭 키를 반환합니다. 백업이 암호화되지 않은 경우이 값은 NULL입니다.|  
   
 > [!NOTE]  
->  백업 세트에 대한 암호를 정의한 경우 RESTORE HEADERONLY는 명령의 지정한 PASSWORD 옵션과 일치하는 암호의 백업 세트에 대한 정보만 모두 표시합니다. RESTORE HEADERONLY는 보호되지 않은 백업 세트에 대한 정보도 모두 표시합니다. 암호로 보호된 미디어의 다른 백업 세트에 대한 **BackupName** 열은 ’**_암호로 보호됨_**’으로 설정되고 다른 열은 모두 NULL이 됩니다.  
+>  백업 세트에 대한 암호를 정의한 경우 RESTORE HEADERONLY는 명령의 지정한 PASSWORD 옵션과 일치하는 암호의 백업 세트에 대한 정보만 모두 표시합니다. RESTORE HEADERONLY는 보호되지 않은 백업 세트에 대한 정보도 모두 표시합니다. 암호로 보호된 미디어의 다른 백업 세트에 대한 **BackupName** 열은 ’ ** _** ’으로 설정되고 다른 열은 모두 NULL이 됩니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
  클라이언트는 RESTORE HEADERONLY를 사용하여 특정 백업 장치의 모든 백업에 대한 백업 헤더 정보를 모두 검색합니다. 서버는 백업 장치의 각 백업에 대한 헤더 정보를 행으로 보냅니다.  

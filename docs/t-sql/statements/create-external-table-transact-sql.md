@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/29/2019
+ms.date: 07/29/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfdbf22c09dcc57025fd0b3820b7e12bd9097bc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c2aa732a98079fd88ebfcafa476f20566e6dc5a
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940101"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68698294"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "67940101"
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL 데이터베이스](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|** _** &nbsp;|[SQL 데이터베이스](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -573,7 +573,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|** _\* SQL Database \*_** &nbsp;|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|** _** &nbsp;|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System(PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -614,6 +614,9 @@ column_name <data_type>
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우 SQL은 Azure SQL Database에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 저장합니다. 실제 데이터가 이동되거나 Azure SQL Database에 저장되지 않습니다.
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+
+> [!NOTE]
+> `Text`, `nText` 및 `XML`은(는) Azure SQL 데이터베이스의 외부 테이블에 있는 열에서 지원되지 않는 데이터 형식입니다.
 
 데이터 형식 및 열 수를 포함한 열 정의는 외부 파일의 데이터와 일치해야 합니다. 불일치가 있는 경우 실제 데이터를 쿼리할 때 파일 행이 거부됩니다.
 
@@ -698,7 +701,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 데이터베이스](create-external-table-transact-sql.md?view=azuresqldb-current)|** _\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System(PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 데이터베이스](create-external-table-transact-sql.md?view=azuresqldb-current)|** _** &nbsp;|[Analytics Platform<br />System(PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -746,6 +749,9 @@ column_name <data_type>
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 만들려는 테이블의 한 부분에서 세 부분으로 이루어진 이름입니다. 외부 테이블의 경우 SQL Data Warehouse는 Azure Data Lake, Hadoop 또는 Azure Blob 스토리지에서 참조되는 파일이나 폴더에 대한 기본 통계와 함께 메타데이터만 저장합니다. 실제 데이터가 이동되거나 SQL Data Warehouse에 저장되지 않습니다.
 
 \<column_definition> [ ,...*n* ] CREATE EXTERNAL TABLE은 열 이름, 데이터 형식, null 허용 여부 및 데이터 정렬을 구성하는 기능을 지원합니다. 외부 테이블에 DEFAULT CONSTRAINT를 사용할 수 없습니다.
+
+> [!NOTE]
+> `Text`, `nText` 및`XML` 은 Azure SQL Warehouse의 외부 테이블에 있는 열에서 지원되는 않는 데이터 형식입니다.
 
 데이터 형식 및 열 수를 포함한 열 정의는 외부 파일의 데이터와 일치해야 합니다. 불일치가 있는 경우 실제 데이터를 쿼리할 때 파일 행이 거부됩니다.
 
@@ -803,7 +809,7 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* 이 특성은 REJECT_TYPE = percenta
 REJECTED_ROW_LOCATION = *디렉터리 위치*
 
 거부된 행과 해당 오류 파일을 작성해야 하는 외부 데이터 원본 내 디렉터리를 지정합니다.
-지정된 경로가 존재하지 않을 경우 PolyBase는 사용자를 대신하여 경로를 만듭니다. "_rejectedrows"라는 이름의 하위 디렉터리가 생성됩니다. "_ " 문자는 위치 매개 변수에 명시적으로 명명되지 않는 한, 다른 데이터 처리를 위해 디렉터리를 이스케이프합니다. 이 디렉터리 내에는 로드 제출 시간을 기준으로 YearMonthDay -HourMinuteSecond 형식에 따라 생성된 폴더가 있습니다(예: 20180330-173205). 이 폴더에서 _reason 파일과 data 파일이라는 두 가지 파일에 데이터가 기록됩니다.
+지정된 경로가 존재하지 않을 경우 PolyBase는 사용자를 대신하여 경로를 만듭니다. " _ " 문자는 위치 매개 변수에 명시적으로 명명되지 않는 한, 다른 데이터 처리를 위해 디렉터리를 이스케이프합니다. 이 디렉터리 내에는 로드 제출 시간을 기준으로 YearMonthDay -HourMinuteSecond 형식에 따라 생성된 폴더가 있습니다(예: 20180330-173205). 이 폴더에서 _reason 파일과 data 파일이라는 두 가지 파일에 데이터가 기록됩니다.
 
 reason 파일과 data 파일에는 모두 CTAS 문과 연결된 queryID가 있습니다. data와 reason은 별도의 파일에 있으므로 해당 파일의 접미사가 일치해야 합니다.
 
@@ -885,10 +891,10 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat
 WITH
 (
     FORMAT_TYPE = DELIMITEDTEXT 
-    , FORMAT_OPTIONS ( FIELDTERMINATOR = '|'
-       , STRINGDELIMITER = ''
-      , DATEFORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
-      , USETYPE_DEFAULT = FALSE
+    , FORMAT_OPTIONS ( FIELD_TERMINATOR = '|'
+       , STRING_DELIMITER = ''
+      , DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
+      , USE_TYPE_DEFAULT = FALSE
       )
 )
 
@@ -923,7 +929,7 @@ AS SELECT * FROM
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 데이터베이스](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System(PDW) \*_** &nbsp;|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL 데이터베이스](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|** _** &nbsp;|
 ||||||
 
 &nbsp;
