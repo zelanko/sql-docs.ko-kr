@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 488394cbf4b52a952ffc46ab2ec6c9a273466bd5
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 0a2891256bd6e45de356d620d3fa75256528b697
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426043"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894012"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
@@ -75,7 +75,7 @@ Kubernetes 네임스페이스에 사용되는 빅 데이터 클러스터 이름�
 #### `--config-profile -c`
 클러스터를 배포하는 데 사용되는 빅 데이터 클러스터 구성 프로필입니다. 예: [’aks-dev-test’, ‘kubeadm-dev-test’, ‘minikube-dev-test’]
 #### `--accept-eula -a`
-사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 이 제품의 사용 조건은 https://aka.ms/azdata-eula 및 https://go.microsoft.com/fwlink/?LinkId=2002534 에서 볼 수 있습니다.
+사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 이 제품에 대 한 사용 조건은에서 [https://go.microsoft.com/fwlink/?LinkId=2002534](https://go.microsoft.com/fwlink/?LinkId=2002534)볼 수 있습니다.
 #### `--node-label -l`
 배포할 노드를 지정하는 데 사용되는 빅 데이터 클러스터 노드 레이블입니다.
 #### `--force -f`

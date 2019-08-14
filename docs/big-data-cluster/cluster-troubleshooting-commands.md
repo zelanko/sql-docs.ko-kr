@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 272249b7bd6c22895b7d10e7fbce4a20cb647a49
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: ccdfe31f7873c44ea09e273d5d9afb2361f9b36b
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419474"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841564"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터 모니터링 및 문제 해결
 
@@ -92,7 +92,7 @@ kubectl describe pod  master-0 -n mssql-cluster
 Pod에서 실행되는 컨테이너의 로그를 검색할 수 있습니다. 다음 명령은 `master-0`이라는 Pod에서 실행되는 모든 컨테이너의 로그를 검색하고 파일 이름 `master-0-pod-logs.txt`로 출력합니다.
 
 ```bash
-kubectl logs master-0 --all-containers=true -n mssql-cluser > master-0-pod-logs.txt
+kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
 ## <a id="services"></a> 서비스 상태 가져오기
@@ -133,36 +133,6 @@ kubectl describe service <service_name> -n <namespace_name>
 
 ```bash
 kubectl describe service master-svc-external -n mssql-cluster
-```
-
-## <a name="run-commands-in-a-container"></a>컨테이너에서 명령 실행
-
-실제로 컨테이너의 컨텍스트에 있지 않으면 기존 도구나 인프라에서 특정 작업을 수행할 수 없는 경우 `kubectl exec` 명령을 사용하여 컨테이너에 로그인할 수 있습니다. 예를 들어 특정 파일이 있는지 확인하거나 컨테이너에서 서비스를 다시 시작해야 할 수 있습니다. 
-
-`kubectl exec` 명령을 사용하려면 다음 구문을 사용합니다.
-
-```bash
-kubectl exec -it <pod_name>  -c <container_name> -n <namespace_name> -- /bin/bash <command name> 
-```
-
-다음 두 섹션에서는 특정 컨테이너에서 명령을 실행하는 두 가지 예제를 제공합니다.
-
-### <a id="restartsql"></a> 특정 컨테이너에 로그인 및 SQL Server 프로세스 다시 시작
-
-다음 예제에서는 `master-0` Pod의 `mssql-server` 컨테이너에서 SQL Server 프로세스를 다시 시작하는 방법을 보여 줍니다.
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl restart mssql
-```
-
-### <a id="restartservices"></a> 특정 컨테이너에 로그인 및 컨테이너에서 서비스 다시 시작
- 
-다음 예제에서는 **supervisord**에서 관리하는 모든 서비스를 다시 시작하는 방법을 보여 줍니다. 
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl -c /opt/supervisor/supervisord.conf reload
 ```
 
 ## <a id="copy"></a> 파일 복사
@@ -236,9 +206,9 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> 다음 오류가 표시되는 경우 ‘포트 8001에서 수신 대기할 수 없습니다. 다음 오류가 발생하여 모든 수신기를 만들지 못했습니다. 수신기를 만들 수 없습니다. 오류 listen tcp4 127.0.0.1:8001: >bind: 각 소켓 주소(프로토콜/네트워크 주소/포트)는 한 가지 사용만 허용됩니다. 수신기를 만들 수 없습니다. 오류 listen tcp6: address [[::1]]:8001: missing port in >address error: 요청된 포트에서 수신 대기할 수 없습니다. [{8001 9090}]’, 다른 창에서 해당 대시보드를 이미 시작하지 않았는지 확인합니다. 
+> 다음 오류가 표시되는 경우 ‘포트 8001에서 수신 대기할 수 없습니다. 다음 오류가 발생하여 모든 수신기를 만들지 못했습니다. 수신기를 만들 수 없습니다. 오류 listen tcp4 127.0.0.1:8001: >bind: 각 소켓 주소(프로토콜/네트워크 주소/포트)는 한 가지 사용만 허용됩니다. 수신기를 만들 수 없습니다. 오류 listen tcp6: address [[::1]]:8001: missing port in >address error: 요청된 포트에서 수신 대기할 수 없습니다. [{8001 9090}]’, 다른 창에서 해당 대시보드를 이미 시작하지 않았는지 확인합니다.*
 
-브라우저에서 대시보드를 시작하면 AKS 클러스터에서 RBAC가 기본적으로 사용하도록 설정되고 대시보드에서 사용되는 서비스 계정에 모든 리소스에 액세스할 수 있는 권한이 없기 때문에 사용 권한 경고가 표시될 수 있습니다. 예를 들어 ‘Pod를 사용할 수 없습니다. 사용자 “system:serviceaccount:kube-system:kubernetes-dashboard”는 “default” 네임 스페이스의 Pod를 나열할 수 없습니다.’가 표시됩니다.  다음 명령을 실행하여 `kubernetes-dashboard`에 필요한 사용 권한을 부여하고 대시보드를 다시 시작합니다.
+브라우저에서 대시보드를 시작하면 AKS 클러스터에서 RBAC가 기본적으로 사용하도록 설정되고 대시보드에서 사용되는 서비스 계정에 모든 리소스에 액세스할 수 있는 권한이 없기 때문에 사용 권한 경고가 표시될 수 있습니다. 예를 들어 ‘Pod를 사용할 수 없습니다. 사용자 “system:serviceaccount:kube-system:kubernetes-dashboard”는 “default” 네임 스페이스의 Pod를 나열할 수 없습니다.’가 표시됩니다.* 다음 명령을 실행하여 `kubernetes-dashboard`에 필요한 사용 권한을 부여하고 대시보드를 다시 시작합니다.
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard
