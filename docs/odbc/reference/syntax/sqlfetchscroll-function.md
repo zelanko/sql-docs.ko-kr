@@ -96,7 +96,7 @@ SQLRETURN SQLFetchScroll(
 |08S01|통신 연결 오류|드라이버가 연결 된 드라이버와 데이터 원본 간의 통신 연결이 함수 처리를 완료 하기 전에 실패 했습니다.|  
 |22001|문자열 데이터, 오른쪽이 잘렸습니다.|열에 대해 반환 된 가변 길이 책갈피가 잘렸습니다.|  
 |22002|표시기 변수가 필요한 데 제공 되지 않았습니다.|**SQLBindCol** 에 의해 설정 된 *StrLen_or_IndPtr* 또는 **SQLSetDescField** 또는 **SQLSetDescRec**에 의해 설정 된 SQL_DESC_INDICATOR_PTR가 null 포인터인 열로 null 데이터가 인출 되었습니다.|  
-|22003|숫자 값이 범위를 벗어났습니다.|하나 이상의 바인딩된 열에 대해 숫자 값 (숫자 또는 문자열)을 반환 하면 잘릴 수 있는 전체 (소수 자릿수가 아닌) 부분이 발생 합니다.<br /><br /> 자세한 내용은 부록 D [의 [SQL에서 C 데이터 형식으로 데이터 변환](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 을 참조 하세요. 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md).|  
+|22003|숫자 값이 범위를 벗어났습니다.|하나 이상의 바인딩된 열에 대해 숫자 값 (숫자 또는 문자열)을 반환 하면 잘릴 수 있는 전체 (소수 자릿수가 아닌) 부분이 발생 합니다.<br /><br /> 자세한 내용은 [SQL에서 C 데이터 형식으로 데이터 변환](../../../odbc/reference/appendixes/converting-data-from-sql-to-c-data-types.md) 부 [록 D 의 데이터 형식](../../../odbc/reference/appendixes/appendix-d-data-types.md).|  
 |22007|날짜/시간 형식이 잘못 되었습니다.|결과 집합의 문자 열이 날짜, 시간 또는 타임 스탬프 C 구조에 바인딩되고 열의 값은 각각 잘못 된 날짜, 시간 또는 타임 스탬프입니다.|  
 |22012|0으로 나누었습니다.|산술 식의 값이 반환 되었으며이로 인해 0으로 나누었습니다.|  
 |22015|간격 필드 오버플로입니다.|정확한 숫자 또는 간격 SQL 형식을 interval C 형식으로 할당 하면 선행 필드에 유효 자릿수가 손실 됩니다.<br /><br /> Interval C 유형에 서 데이터를 인출 하는 경우 간격 C 유형에 서 SQL 유형의 값을 표시 하지 않았습니다.|  
@@ -158,7 +158,7 @@ SQLRETURN SQLFetchScroll(
 |*FetchOffset*|*Fetchoffset* 인수의 값입니다.|  
 |*BookmarkRow*|SQL_ATTR_FETCH_BOOKMARK_PTR statement 특성에 지정 된 책갈피에 해당 하는 행입니다.|  
   
-## <a name="sqlfetchnext"></a>SQL_FETCH_NEXT  
+## <a name="sql_fetch_next"></a>SQL_FETCH_NEXT  
  다음 규칙이 적용 됩니다.  
   
 |조건|새 행 집합의 첫 번째 행|  
@@ -170,7 +170,7 @@ SQLRETURN SQLFetchScroll(
   
  [1] 인출 행에 대 한 이전 호출 이후 행 집합 크기가 변경 된 경우 이전 호출에 사용 된 행 집합 크기입니다.  
   
-## <a name="sqlfetchprior"></a>SQL_FETCH_PRIOR  
+## <a name="sql_fetch_prior"></a>SQL_FETCH_PRIOR  
  다음 규칙이 적용 됩니다.  
   
 |조건|새 행 집합의 첫 번째 행|  
@@ -186,7 +186,7 @@ SQLRETURN SQLFetchScroll(
   
  [2] 인출 행에 대 한 이전 호출 이후 행 집합 크기가 변경 된 경우 새 행 집합 크기입니다.  
   
-## <a name="sqlfetchrelative"></a>SQL_FETCH_RELATIVE  
+## <a name="sql_fetch_relative"></a>SQL_FETCH_RELATIVE  
  다음 규칙이 적용 됩니다.  
   
 |조건|새 행 집합의 첫 번째 행|  
@@ -206,7 +206,7 @@ SQLRETURN SQLFetchScroll(
   
  [3] 인출 행에 대 한 이전 호출 이후 행 집합 크기가 변경 된 경우 새 행 집합 크기입니다.  
   
-## <a name="sqlfetchabsolute"></a>SQL_FETCH_ABSOLUTE  
+## <a name="sql_fetch_absolute"></a>SQL_FETCH_ABSOLUTE  
  다음 규칙이 적용 됩니다.  
   
 |조건|새 행 집합의 첫 번째 행|  
@@ -224,14 +224,14 @@ SQLRETURN SQLFetchScroll(
   
  동적 커서에 대해 수행 되는 절대 페치는 동적 커서의 행 위치가 결정 되지 않으므로 필요한 결과를 제공할 수 없습니다. 이러한 작업은 fetch를 먼저 수행한 다음 fetch를 기준으로 하는 것과 같습니다. 정적 커서의 절대 인출 처럼 원자성 연산이 아닙니다.  
   
-## <a name="sqlfetchfirst"></a>SQL_FETCH_FIRST  
+## <a name="sql_fetch_first"></a>SQL_FETCH_FIRST  
  다음 규칙이 적용 됩니다.  
   
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
 |*일부*|*1*|  
   
-## <a name="sqlfetchlast"></a>SQL_FETCH_LAST  
+## <a name="sql_fetch_last"></a>SQL_FETCH_LAST  
  다음 규칙이 적용 됩니다.  
   
 |조건|새 행 집합의 첫 번째 행|  
@@ -241,7 +241,7 @@ SQLRETURN SQLFetchScroll(
   
  [1] 인출 행에 대 한 이전 호출 이후 행 집합 크기가 변경 된 경우 새 행 집합 크기입니다.  
   
-## <a name="sqlfetchbookmark"></a>SQL_FETCH_BOOKMARK  
+## <a name="sql_fetch_bookmark"></a>SQL_FETCH_BOOKMARK  
  다음 규칙이 적용 됩니다.  
   
 |조건|새 행 집합의 첫 번째 행|  

@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3e2b75282c9babf876d0daec033a435d75c2e2f1
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959384"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731054"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
@@ -137,7 +137,7 @@ ms.locfileid: "67959384"
 **해결 방법:** 다음 릴리스에서 수정될 예정입니다. 
 - [#4458](https://github.com/Microsoft/azuredatastudio/issues/4458): 잘못된 버전을 사용하면 Dacpac Extract와 SqlToolsService가 충돌합니다. <br/>
 **해결 방법:** Azure Data Studio를 다시 시작하고 올바른 버전이 사용되는지 확인합니다.
-- 새 Notebook 및 Notebook 열기 아이콘이 손실됩니다. <br/> 
+- 새 Notebook 및 Notebook 열기 아이콘이 손실됩니다. <br/>
 **해결 방법:** 레거시 연결 형식은 더 이상 사용되지 않습니다. SQL Server 엔드포인트에 연결하는 것이 좋습니다. 그러면 모든 작업(새 Notebook, Spark 작업)이 예상대로 표시됩니다. 
 
 ## <a name="february-2019"></a>2019년 2월
