@@ -20,7 +20,7 @@ ms.locfileid: "66067304"
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>파티션 및 DirectQuery 모드(SSAS 테이블 형식)
   이 섹션에서는 DirectQuery 모델에서 파티션을 사용하는 방법에 대해 설명합니다. 테이블 형식 모델의 파티션에 대한 일반적인 정보는 [파티션&#40;SSAS 테이블 형식&#41;](partitions-ssas-tabular.md)을 참조하세요.  
   
- 파티션에 대 한 정보 보기 및 사용 되는 파티션을 변경 하는 방법에 지침은 [DirectQuery 파티션 변경 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../change-the-directquery-partition-ssas-tabular.md)합니다.  
+ 파티션에 대 한 정보 보기 및 사용 되는 파티션을 변경 하는 방법에 지침은 [DirectQuery 파티션 변경 &#40;&AMP;&#40;SSAS 테이블 형식&#41;](../change-the-directquery-partition-ssas-tabular.md)합니다.  
   
 ## <a name="using-partitions-in-directquery-mode"></a>DirectQuery 모드에서 파티션 사용  
  각 테이블에 대해 DirectQuery 데이터 원본으로 사용할 단일 파티션을 지정해야 합니다.  여러 파티션이 있는 경우에는 DirectQuery 모드를 사용할 수 있도록 모델을 전환하면 기본적으로 테이블에 처음 만들어진 파티션이 DirectQuery 파티션으로 플래그가 지정됩니다. 나중에 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 파티션 관리자를 사용하여 이를 변경할 수 있습니다.  

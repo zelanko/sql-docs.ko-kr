@@ -49,7 +49,7 @@ ms.locfileid: "66066898"
 |항목|Description|  
 |-----------|-----------------|  
 |[작업 영역 데이터베이스에서 파티션 만들기 및 관리&#40;SSAS 테이블 형식&#41;](workspace-database-ssas-tabular.md)|[!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 파티션 관리자를 사용하여 모델 작업 영역 데이터베이스에서 파티션을 만들고 관리하는 방법에 대해 설명합니다.|  
-|[작업 영역 데이터베이스에서 파티션을 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|모델 작업 영역 데이터베이스에서 파티션을 처리(새로 고침)하는 방법을 설명 합니다.|  
+|[작업 영역 데이터베이스에서 파티션을 처리 &#40;&AMP;&#40;SSAS 테이블 형식&#41;](process-partitions-in-the-workspace-database-ssas-tabular.md)|모델 작업 영역 데이터베이스에서 파티션을 처리(새로 고침)하는 방법을 설명 합니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [DirectQuery 모드&#40;SSAS 테이블 형식&#41;](directquery-mode-ssas-tabular.md)   

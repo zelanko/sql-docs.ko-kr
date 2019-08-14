@@ -21,7 +21,7 @@ ms.locfileid: "66067899"
   이 섹션의 각 항목에서는 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]의 테이블 형식 모델 디자이너를 사용하여 테이블 형식 모델을 제작하는 방법을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [테이블 형식 모델 디자이너 &#40;&AMP;#40;SSAS 테이블 형식&#41;](tabular-model-designer-ssas-tabular.md)  
+ [테이블 형식 모델 디자이너 &#40;&AMP;&#40;SSAS 테이블 형식&#41;](tabular-model-designer-ssas-tabular.md)  
   
  [작업 영역 데이터베이스&#40;SSAS 테이블 형식&#41;](tabular-models/workspace-database-ssas-tabular.md)  
   
