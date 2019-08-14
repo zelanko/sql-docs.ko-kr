@@ -1,7 +1,7 @@
 ---
 title: 명령 프롬프트에서 SQL Server 설치 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0ed047f78c316cc5bb6308e2bfe425884a649876
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: db2bb1f0a4c36b84ac4d4200c0651b407fdf144a
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991093"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419328"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
@@ -277,8 +277,9 @@ ms.locfileid: "67991093"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 시작 계정을 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 시작 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 [시작](#Accounts) 모드를 지정합니다.|  
-|Python/Machine Learning Services(데이터베이스 내)|MPYCACHEDIRECTORY|나중에 사용하도록 예약되어 있습니다. 인터넷 연결이 되지 않은 컴퓨터에 설치하기 위한 Python .CAB 파일을 저장하려면 %TEMP%를 사용합니다. |  
-|R/Machine Learning Services(데이터베이스 내)|MRCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server 2017 Machine Learning Services 또는 Machine Learning Server(독립 실행형)에서 Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server(독립 실행형) 또는 R 지원 기능에 대한 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)에서 R 구성 요소를 설치하는 경우에 사용됩니다.|  
+|Python/Machine Learning Services(데이터베이스 내)|/MPYCACHEDIRECTORY|나중에 사용하도록 예약되어 있습니다. 인터넷 연결이 되지 않은 컴퓨터에 설치하기 위한 Python .CAB 파일을 저장하려면 %TEMP%를 사용합니다. |  
+|R/Machine Learning Services(데이터베이스 내)|/MRCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server 2017 Machine Learning Services 또는 Machine Learning Server(독립 실행형)에서 Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server(독립 실행형) 또는 R 지원 기능에 대한 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)에서 R 구성 요소를 설치하는 경우에 사용됩니다.|  
+|Java/Machine Learning Services(데이터베이스 내)| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **선택 사항** | SQL Server 2019부터 Machine Learning Services를 사용하여 Java를 설치하도록 지정합니다. /SQLJAVADIR 매개 변수 없이 /SQL_INST_JAVA를 제공하면 설치 미디어에서 제공되는 Zulu JRE를 설치하려는 것으로 가정합니다. <br /><br /> /SQLJAVADIR의 경로를 제공하면 이미 설치된 JRE 또는 JDK를 사용하려는 것임을 나타냅니다. |
   
 ###### <a name="sample-syntax"></a>예제 구문:  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], 복제 및 전체 텍스트 Search 구성 요소가 포함된 새로운 독립 실행형 인스턴스를 설치하고 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 빠른 파일 초기화를 사용하도록 설정합니다. 

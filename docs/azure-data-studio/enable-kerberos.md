@@ -1,7 +1,7 @@
 ---
-title: Active Directory 인증 사용 (Kerberos)
+title: Active Directory 인증 사용(Kerberos)
 titleSuffix: Azure Data Studio
-description: Azure Data Studio에 대 한 Active Directory 인증을 사용 하는 Kerberos를 사용 하는 방법 알아보기
+description: Kerberos에서 Azure Data Studio에 대해 Active Directory 인증을 사용할 수 있도록 하는 방법을 알아봅니다.
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.prod: sql
@@ -11,35 +11,35 @@ ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
 ms.openlocfilehash: 5c8fae6bf1333742b40e9c8aae4ee575736058cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959660"
 ---
-# <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>연결 [!INCLUDE[name-sos](../includes/name-sos-short.md)] Kerberos Windows 인증을 사용 하 여 SQL server 
+# <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>Windows 인증을 사용하여 SQL Server에 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 연결 - Kerberos 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] Kerberos를 사용 하 여 SQL Server에 연결을 지원 합니다.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서는 Kerberos를 사용하여 SQL Server에 연결할 수 있도록 지원합니다.
 
-MacOS 또는 Linux에서 통합 인증 (Windows 인증)을 사용 하려면 설정 해야는 **Kerberos 티켓** Windows 도메인 계정에 현재 사용자를 연결 합니다. 
+macOS 또는 Linux에서 통합 인증(Windows 인증)을 사용하려면 현재 사용자를 Windows 도메인 계정에 연결하는 **Kerberos 티켓**을 설정해야 합니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- Kerberos 도메인 컨트롤러를 쿼리 하기 위해 Windows 도메인에 가입 된 컴퓨터에 액세스 합니다.
-- SQL Server는 Kerberos 인증을 허용 하도록 구성 되어야 합니다. 클라이언트 드라이버의 Unix에서 실행 되는 경우 통합된 인증 에서만 지원 됩니다 Kerberos를 사용 하 여. Kerberos를 사용 하 여 인증 하도록 Sql Server를 설정 하는 방법은 찾을 수 있습니다 [여기](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server)합니다. 에 연결 하려는 Sql Server의 각 인스턴스에 대해 등록 된 Spn이 있어야 합니다. SQL Server Spn의 형식에 대 한 자세한 내용은 [여기](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- Kerberos 도메인 컨트롤러를 쿼리하기 위해 Windows 도메인에 가입된 머신에 액세스할 수 있어야 합니다.
+- Kerberos 인증을 허용하도록 SQL Server가 구성되어 있어야 합니다. Unix에서 실행되는 클라이언트 드라이버의 경우 Kerberos를 사용한 통합 인증만 지원됩니다. Kerberos를 사용하여 인증하도록 SQL Server를 설정하는 방법에 대한 자세한 내용은 [여기](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server)를 참조하세요. 연결하려는 각 SQL Server 인스턴스에 대해 등록된 SPN이 있어야 합니다. SQL Server SPN 형식에 대한 자세한 내용은 [여기](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)를 참조하세요.
 
 
-## <a name="checking-if-sql-server-has-kerberos-setup"></a>Sql Server가 Kerberos 설정 하는 경우 확인
+## <a name="checking-if-sql-server-has-kerberos-setup"></a>SQL Server에 Kerberos 설정이 있는지 확인
 
-Sql Server의 호스트 컴퓨터에 로그인 합니다. Windows 명령 프롬프트에서 사용 된 `setspn -L %COMPUTERNAME%` 호스트에 대 한 모든 서비스 주체 이름을 나열 합니다. 즉, Sql Server가 SPN을 등록 하 고 Kerberos 인증을 받을 준비가 되었음을 MSSQLSvc/HostName.Domain.com로 시작 하는 항목이 표시 됩니다. 
-- Sql Server의 호스트에 액세스할 수 없는 경우 원하는 다른 Windows OS에서 동일한 Active Directory에 가입 된, 명령을 사용할 수 있습니다 `setspn -L <SQLSERVER_NETBIOS>` 여기서 < SQLSERVER_NETBIOS >은 Sql Server의 호스트의 컴퓨터 이름입니다.
+SQL Server의 호스트 머신에 로그인합니다. Windows 명령 프롬프트에서 `setspn -L %COMPUTERNAME%`을 사용하여 호스트의 서비스 사용자 이름을 모두 나열합니다. MSSQLSvc/HostName.Domain.com으로 시작하는 항목이 표시되어야 합니다. 항목이 표시되면 SQL Server가 SPN을 등록했으며 Kerberos 인증을 수락할 준비가 되었음을 나타냅니다. 
+- SQL Server 호스트에 대한 액세스 권한이 없는 경우 동일한 Active Directory에 가입된 다른 Windows OS에서 `setspn -L <SQLSERVER_NETBIOS>` 명령을 사용할 수 있습니다. 여기서 <SQLSERVER_NETBIOS>는 SQL Server 호스트의 컴퓨터 이름입니다.
 
 
 ## <a name="get-the-kerberos-key-distribution-center"></a>Kerberos 키 배포 센터 가져오기
 
-Kerberos KDC (키 배포 센터) 구성 값을 찾습니다. Active Directory 도메인에 가입 된 Windows 컴퓨터에서 다음 명령을 실행 합니다. 
+Kerberos KDC(키 배포 센터) 구성 값을 찾습니다. Active Directory 도메인에 가입된 Windows 컴퓨터에서 다음 명령을 실행합니다. 
 
-시작 `cmd.exe` 실행 `nltest`합니다.
+`cmd.exe`를 시작하고 `nltest`를 실행합니다.
 
 ```
 nltest /dsgetdc:DOMAIN.COMPANY.COM (where "DOMAIN.COMPANY.COM" maps to your domain's name)
@@ -50,16 +50,16 @@ Address: \\2111:4444:2111:33:1111:ecff:ffff:3333
 ...
 The command completed successfully
 ```
-이 경우 dc 33.domain.company.com에 필요한 KDC 구성 값이 DC 이름을 복사합니다
+필요한 KDC 구성 값인 DC 이름(이 예제에서는 dc-33.domain.company.com)을 복사합니다.
 
-## <a name="join-your-os-to-the-active-directory-domain-controller"></a>Active Directory 도메인 컨트롤러에 OS를 가입
+## <a name="join-your-os-to-the-active-directory-domain-controller"></a>Active Directory 도메인 컨트롤러에 OS 조인
 
 ### <a name="ubuntu"></a>Ubuntu
 ```bash
 sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
 ```
 
-편집 된 `/etc/network/interfaces` 파일에 AD 도메인 컨트롤러의 IP 주소를 dns 이름 서버 목록이 표시 됩니다. 예를 들어: 
+AD 도메인 컨트롤러의 IP 주소가 dns-nameserver로 나열되도록 `/etc/network/interfaces` 파일을 편집합니다. 예를 들어 
 
 ```/etc/network/interfaces
 <...>
@@ -71,15 +71,15 @@ dns-search **<AD domain name>**
 ```
 
 > [!NOTE]
-> 네트워크 인터페이스 (eth0)는 서로 다른 컴퓨터에 대 한 다 수 있습니다. 사용 하는 어떤 것을 알아보려면 ifconfig를 실행 하 고 인터페이스에 IP 주소 및 전송 및 수신 바이트를 복사 합니다.
+> 네트워크 인터페이스(eth0)는 머신마다 다를 수 있습니다. 사용 중인 인터페이스를 확인하려면 ifconfig를 실행하고 IP 주소와 전송 및 수신된 바이트가 있는 인터페이스를 복사합니다.
 
-이 파일을 편집한 후 네트워크 서비스를 다시 시작 합니다.
+이 파일을 편집한 후 네트워크 서비스를 다시 시작합니다.
 
 ```bash
 sudo ifdown eth0 && sudo ifup eth0
 ```
 
-이제 확인 프로그램 `/etc/resolv.conf` 다음과 같은 줄을 포함 하는 파일:  
+이제 `/etc/resolv.conf` 파일에 다음과 같은 줄이 있는지 확인합니다.  
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -96,7 +96,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 sudo yum install realmd krb5-workstation
 ```
 
-편집 된 `/etc/sysconfig/network-scripts/ifcfg-eth0` 파일 (또는 다른 인터페이스 구성 파일을 적절 하 게) AD 도메인 컨트롤러의 IP 주소를 DNS 서버로 나열 됩니다.
+AD 도메인 컨트롤러의 IP 주소가 DNS 서버로 나열되도록 `/etc/sysconfig/network-scripts/ifcfg-eth0` 파일(또는 다른 적절한 인터페이스 구성 파일)을 편집합니다.
 
 ```/etc/sysconfig/network-scripts/ifcfg-eth0
 <...>
@@ -104,13 +104,13 @@ PEERDNS=no
 DNS1=**<AD domain controller IP address>**
 ```
 
-이 파일을 편집한 후 네트워크 서비스를 다시 시작 합니다.
+이 파일을 편집한 후 네트워크 서비스를 다시 시작합니다.
 
 ```bash
 sudo systemctl restart network
 ```
 
-이제 확인 프로그램 `/etc/resolv.conf` 다음과 같은 줄을 포함 하는 파일:  
+이제 `/etc/resolv.conf` 파일에 다음과 같은 줄이 있는지 확인합니다.  
 
 ```Code
 nameserver **<AD domain controller IP address>**
@@ -125,13 +125,13 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 ### <a name="macos"></a>macOS
 
-- 다음이 단계를 수행 하 여 Active Directory 도메인 컨트롤러에 macOS를 참여:
+- 다음 단계를 수행하여 macOS를 Active Directory 도메인 컨트롤러에 조인합니다.
 
 
 
-## <a name="configure-kdc-in-krb5conf"></a>Krb5.conf에서 KDC 구성
+## <a name="configure-kdc-in-krb5conf"></a>krb5.conf에서 KDC 구성
 
-편집 된 `/etc/krb5.conf` 원하는 편집기에서. 다음 키 구성
+선택한 편집기에서 `/etc/krb5.conf`를 편집합니다. 다음 키 구성
 
 ```bash
 sudo vi /etc/krb5.conf
@@ -145,21 +145,21 @@ DOMAIN.COMPANY.COM = {
 }
 ```
 
-그런 다음, krb5.conf 파일 및 종료
+이제 krb5.conf 파일을 저장하고 종료합니다.
 
 > [!NOTE]
-> 도메인은 모두 대문자로에 있어야 합니다.
+> 도메인은 모두 대문자여야 합니다.
 
 
-## <a name="test-the-ticket-granting-ticket-retrieval"></a>티켓 부여 티켓 검색 테스트
+## <a name="test-the-ticket-granting-ticket-retrieval"></a>허용 티켓 검색 테스트
 
-KDC에서 Granting을 Ticket (TGT)을 가져옵니다.
+KDC에서 TGT(허용 티켓)를 가져옵니다.
 
 ```bash
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-Klist를 사용 하 여 사용 가능한 티켓을 봅니다. Kinit를 성공적으로 수행 되었으면 티켓을 표시 됩니다. 
+klist를 사용하여 사용 가능한 티켓을 봅니다. kinit가 성공적으로 완료되면 티켓이 표시됩니다. 
 
 ```bash
 klist
@@ -167,12 +167,12 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>사용 하 여 연결 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## <a name="connect-using-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 연결
 
-* 새 연결 프로필을 만들려면
+* 새 연결 프로필을 만듭니다.
 
-* 선택할 **Windows 인증** 인증 유형으로
+* 인증 유형으로 **Windows 인증**을 선택합니다.
 
-* 연결 프로필을 작성, 클릭 **연결**
+* 연결 프로필을 완료하고 **연결**을 클릭합니다.
 
-성공적으로 연결 되 면 서버에 표시 합니다 *서버* 보충 합니다.
+성공적으로 연결되면 서버가 ‘서버’ 사이드바에 표시됩니다. 

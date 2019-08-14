@@ -2,7 +2,7 @@
 title: Microsoft SQL 데이터베이스의 지능형 쿼리 처리 | Microsoft Docs
 description: SQL Server 및 Azure SQL Database에서 쿼리 성능을 향상시키는 지능형 쿼리 처리 기능입니다.
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,22 +12,22 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57b1cfbafc1ad75db4ca4e0750b8db366b4609d2
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 3f9827a171802f4964f678da5dd4cb3f35fe5d0e
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354618"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388370"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 데이터베이스의 지능형 쿼리 처리
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-지능형 QP(쿼리 처리) 기능 제품군에는 최소한의 구현 노력으로 기존 워크로드의 성능을 개선하는 광범위한 영향을 가진 기능이 포함됩니다. 
+IQP(인텔리전트 쿼리 처리) 기능 제품군에는 최소한의 구현 노력으로 기존 워크로드의 성능을 개선하는 광범위한 영향을 가진 기능이 포함됩니다. 
 
 ![지능형 쿼리 처리](./media/iqp-feature-family.png)
 
-데이터베이스에 대해 적용 가능한 호환성 수준을 활성화하여 워크로드를 자동으로 지능형 쿼리 처리에 적합하게 만들 수 있습니다. Transact-SQL을 사용하여 설정할 수 있습니다. 예를 들어  
+데이터베이스에 대해 적용 가능한 호환성 수준을 활성화하여 워크로드를 자동으로 지능형 쿼리 처리에 적합하게 만들 수 있습니다. [!INCLUDE[tsql](../../includes/tsql-md.md)]을 사용하여 설정할 수 있습니다. 예를 들어  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -37,139 +37,19 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 | **IQP 기능** | **Azure SQL Database에서 지원** | **SQL Server에서 지원** |**설명** |
 | --- | --- | --- |--- |
-| [적응 조인(일괄 처리 모드)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 SQL Server 2017부터|적응형 조인은 실제 입력된 행에 따라 런타임 동안 조인 유형을 동적으로 선택합니다.|
-| [대략적인 Count Distinct](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | 예. 공개 미리 보기| 예. SQL Server 2019 CTP 2.0부터, 공개 미리 보기|고성능 및 낮은 메모리 사용 공간을 통해 빅 데이터 시나리오에 대한 대략적인 COUNT DISTINCT를 제공합니다. |
-| [Rowstore의 일괄 처리 모드](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|columnstore 인덱스를 요구하지 않고 CPU 바인딩된 관계형 DW 워크로드에 대한 일괄 처리 모드를 제공합니다.  | 
-| [인터리브 실행](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 SQL Server 2017부터|고정 추측 대신 첫 번째 컴파일에서 발생한 다중 명령문 테이블 값 함수의 실제 카디널리티를 사용합니다.|
-| [메모리 부여 피드백(일괄 처리 모드)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 SQL Server 2017부터|일괄 처리 모드 쿼리에 디스크로 분산되는 작업이 있는 경우 연속 실행을 위한 메모리를 더 추가합니다. 쿼리가 50%가 넘는 할당된 메모리를 낭비하는 경우 연속 실행을 위한 메모리 부여 측면을 줄입니다.|
-| [메모리 부여 피드백(행 모드)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|행 모드 쿼리에 디스크로 분산되는 작업이 있는 경우 연속 실행을 위한 메모리를 더 추가합니다. 쿼리가 50%가 넘는 할당된 메모리를 낭비하는 경우 연속 실행을 위한 메모리 부여 측면을 줄입니다.|
-| [스칼라 UDF 인라인 처리](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | 아니오 | 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.1부터, 공개 미리 보기|스칼라 UDF는 호출 쿼리로 “인라인”되는 해당 관계형 식으로 변환되어 성능이 크게 향상됩니다.|
-| [테이블 변수 지연 컴파일](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 SQL Server 2019 CTP 2.0부터, 공개 미리 보기|고정 추측 대신 첫 번째 컴파일에서 발생한 테이블의 변수의 실제 카디널리티를 사용합니다.|
+| [적응 조인(일괄 처리 모드)](#batch-mode-adaptive-joins) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터|적응형 조인은 실제 입력된 행에 따라 런타임 동안 조인 유형을 동적으로 선택합니다.|
+| [대략적인 Count Distinct](#approximate-query-processing) | 예. 공개 미리 보기| 예. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0부터|고성능 및 낮은 메모리 사용 공간을 통해 빅 데이터 시나리오에 대한 대략적인 COUNT DISTINCT를 제공합니다. |
+| [Rowstore의 일괄 처리 모드](#batch-mode-on-rowstore) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0부터, 공개 미리 보기|columnstore 인덱스를 요구하지 않고 CPU 바인딩된 관계형 DW 워크로드에 대한 일괄 처리 모드를 제공합니다.  | 
+| [인터리브 실행](#interleaved-execution-for-mstvfs) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터|고정 추측 대신 첫 번째 컴파일에서 발생한 다중 명령문 테이블 값 함수의 실제 카디널리티를 사용합니다.|
+| [메모리 부여 피드백(일괄 처리 모드)](#batch-mode-memory-grant-feedback) | 예. 호환성 수준 140 미만| 예. 호환성 수준 140 미만 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터|일괄 처리 모드 쿼리에 디스크로 분산되는 작업이 있는 경우 연속 실행을 위한 메모리를 더 추가합니다. 쿼리가 50%가 넘는 할당된 메모리를 낭비하는 경우 연속 실행을 위한 메모리 부여 측면을 줄입니다.|
+| [메모리 부여 피드백(행 모드)](#row-mode-memory-grant-feedback) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0부터, 공개 미리 보기|행 모드 쿼리에 디스크로 분산되는 작업이 있는 경우 연속 실행을 위한 메모리를 더 추가합니다. 쿼리가 50%가 넘는 할당된 메모리를 낭비하는 경우 연속 실행을 위한 메모리 부여 측면을 줄입니다.|
+| [스칼라 UDF 인라인 처리](#scalar-udf-inlining) | 아니오 | 예. 호환성 수준 150 미만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1부터, 공개 미리 보기|스칼라 UDF는 호출 쿼리로 “인라인”되는 해당 관계형 식으로 변환되어 성능이 크게 향상됩니다.|
+| [테이블 변수 지연 컴파일](#table-variable-deferred-compilation) | 예. 호환성 수준 150 미만, 공개 미리 보기| 예. 호환성 수준 150 미만 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0부터, 공개 미리 보기|고정 추측 대신 첫 번째 컴파일에서 발생한 테이블의 변수의 실제 카디널리티를 사용합니다.|
 
 ## <a name="batch-mode-adaptive-joins"></a>일괄 처리 모드 적응 조인
+일괄 처리 모드 적응 조인 기능을 사용하면 [해시 조인 또는 중첩된 루프 조인](../../relational-databases/performance/joins.md) 메서드 선택을 단일 캐시 계획을 통해 첫 번째 입력이 검사된 **후**까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 계획이 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다.
 
-이 기능을 사용하면 계획인 단일 캐시된 계획을 사용하여 실행 중에 더 나은 조인 전략으로 동적으로 전환될 수 있습니다.
-
-일괄 처리 모드 적응 조인 기능을 사용하면 [해시 조인 또는 중첩된 루프 조인](../../relational-databases/performance/joins.md) 메서드 선택을 첫 번째 입력이 검사된 **후**까지 지연할 수 있습니다. 적응 조인 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 따라서 계획이 실행 중에 더 나은 조인 전략으로 동적으로 전환할 수 있습니다.
-작동 방식은 다음과 같습니다.
--  중첩된 루프 조인이 해시 조인보다 적합할 만큼 빌드 조인 입력의 행 수가 충분히 작으면 계획이 중첩된 루프 알고리즘으로 전환됩니다.
--  빌드 조인 입력이 특정 행 수 임계값을 초과하면 전환이 발생하지 않으며 계획이 해시 조인을 계속 사용합니다.
-
-다음 쿼리는 적응 조인 예제를 설명하기 위해 사용됩니다.
-
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 360;
-```
-
-이 쿼리는 336개의 행을 반환합니다. [활성 쿼리 통계](../../relational-databases/performance/live-query-statistics.md)를 사용하도록 설정하면 다음 계획이 표시됩니다.
-
-![쿼리 결과 336개 행](./media/4_AQPStats336Rows.png)
-
-계획에 다음이 표시됩니다.
-1. 해시 조인 빌드 단계에 대한 행을 제공하는 데 사용되는 columnstore 인덱스 검색이 있습니다.
-1. 새 적응 조인 연산자가 있습니다. 이 연산자는 중첩된 루프 계획으로 전환할 시기를 결정하는 데 사용되는 임계값을 정의합니다. 이 예제에서 임계값은 78개 행입니다. &gt;= 78개 행이면 모두 해시 조인을 사용합니다. 임계값보다 작으면 중첩된 루프 조인이 사용됩니다.
-1. 336개 행을 반환하기 때문에 임계값을 초과하므로 두 번째 분기가 표준 해시 조인 작업의 프로브 단계를 나타냅니다. 활성 쿼리 통계는 연산자를 통과하는 행(이 경우 "672/672")을 보여줍니다.
-1. 마지막 분기는 임계값을 초과하지 않을 경우 중첩된 루프 조인에서 사용하기 위한 Clustered Index Seek입니다. "0/336"개 행이 표시됩니다(분기가 사용되지 않음).
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- 이제 계획과 동일한 쿼리를 비교합니다. 하지만 이번에는 테이블에 하나의 행만 있는 *Quantity* 값에 대해 쿼리합니다.
- 
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 361;
-```
-쿼리가 하나의 행을 반환합니다. 활성 쿼리 통계를 사용하도록 설정하면 다음 계획이 표시됩니다.
-
-![쿼리 결과 하나의 행](./media/5_AQPStatsOneRow.png)
-
-계획에 다음이 표시됩니다.
-- 하나의 행이 반환되면 이제 Clustered Index Seek에 통과하는 행이 있습니다.
-- 해시 조인 빌드 단계를 계속 진행하지 않았으므로 두 번째 분기를 통해 흐르는 행이 없습니다.
-
-### <a name="adaptive-join-benefits"></a>적응 조인 혜택
-작은 조인 입력 검색과 큰 조인 입력 검색 간에 자주 변동하는 워크로드가 이 기능에서 가장 큰 혜택을 받게 됩니다.
-
-### <a name="adaptive-join-overhead"></a>적응 조인 오버헤드
-적응 조인은 동등한 인덱스 중첩된 루프 조인 계획보다 메모리 요구 사항이 더 높습니다. 중첩된 루프가 해시 조인인 것처럼 추가 메모리가 요청됩니다. 동등한 중첩된 루프 스트리밍 조인에 비해 스탑앤고(stop-and-go) 작업으로서 빌드 단계에 대한 오버헤드도 있습니다. 빌드 입력의 행 수가 변동될 수 있는 시나리오에서 해당 추가 비용과 함께 유연성이 제공됩니다.
-
-### <a name="adaptive-join-caching-and-re-use"></a>적응 조인 캐싱 및 다시 사용
-일괄 처리 모드 적응 조인은 문의 초기 실행에서 작동하며, 컴파일된 후에는 컴파일된 적응 조인 임계값과 외부 입력의 빌드 단계를 통과하는 런타임 행에 따라 연속 실행이 적응 상태로 유지됩니다.
-
-### <a name="tracking-adaptive-join-activity"></a>적응 조인 작업 추적
-적응 조인 연산자에는 다음과 같은 계획 연산자 특성이 있습니다.
-
-| 계획 특성 | 설명 |
-|--- |--- |
-| AdaptiveThresholdRows | 해시 조인에서 중첩된 루프 조인으로 전환하는 데 사용되는 임계값을 보여 줍니다. |
-| EstimatedJoinType | 가능한 조인 형식입니다. |
-| ActualJoinType | 실제 계획에서 임계값에 따라 최종적으로 선택된 조인 알고리즘을 보여 줍니다. |
-
-예상 계획은 정의된 적응 조인 임계값 및 예상 조인 형식과 함께 적응 조인 계획 모양을 보여줍니다.
-
-### <a name="adaptive-join-and-query-store-interoperability"></a>적응 조인 및 쿼리 저장소 상호 운용성
-쿼리 저장소는 일괄 처리 모드 적응 조인 계획을 캡처하고 강제로 적용할 수 있습니다.
-
-### <a name="adaptive-join-eligible-statements"></a>적응 조인 적합한 문
-논리 조인을 일괄 처리 모드 적응 조인에 적합하게 만드는 몇 가지 조건은 다음과 같습니다.
-- 데이터베이스 호환성 수준이 140입니다.
-- 쿼리가 SELECT 문입니다(데이터 수정 문은 현재 적합하지 않음).
-- 인덱싱된 중첩된 루프 조인 또는 해시 조인 실제 알고리즘 둘 다에서 조인을 실행할 수 있습니다.
-- 해시 조인이 쿼리 전체의 Columnstore 인덱스 현재 상태를 통해 또는 조인에서 직접 참조되는 Columnstore 인덱싱된 테이블을 통해 일괄 처리 모드를 사용합니다.
-- 중첩된 루프 조인 및 해시 조인의 생성된 대체 솔루션에 동일한 첫 번째 자식(외부 참조)이 있어야 합니다.
-
-### <a name="adaptive-joins-and-nested-loop-efficiency"></a>적응 조인 및 중첩된 루프 효율성
-적응 조인이 중첩된 루프 작업으로 전환하는 경우 해시 조인 빌드에서 이미 읽은 행이 사용됩니다. 연산자는 외부 참조 행을 다시 읽지 **않습니다**.
-
-### <a name="adaptive-threshold-rows"></a>적응 임계값 행
-다음 차트에서는 해시 조인 비용과 중첩된 루프 조인 대안 비용 간의 교차 예를 보여줍니다. 이 교차 지점에서 결정되는 임계값에 따라 다시 조인 작업에 사용되는 실제 알고리즘이 결정됩니다.
-
-![조인 임계값](./media/6_AQPJoinThreshold.png)
-
-### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>호환성 수준을 변경하지 않고 적응형 조인 비활성화
-
-데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 적응형 조인을 비활성화할 수 있습니다.  
-데이터베이스에서 발생하는 모든 쿼리 실행에 대한 적응형 조인을 비활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
-```
-
-활성화될 경우 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에서 이 설정이 enabled로 표시됩니다.
-데이터베이스에서 발생하는 모든 쿼리 실행에 대한 적응형 조인을 재활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
-```
-
-또한 `DISABLE_BATCH_MODE_ADAPTIVE_JOINS`를 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 적응형 조인을 비활성화할 수 있습니다. 예를 들어
-
-```sql
-SELECT s.CustomerID,
-       s.CustomerName,
-       sc.CustomerCategoryName
-FROM Sales.Customers AS s
-LEFT OUTER JOIN Sales.CustomerCategories AS sc
-       ON s.CustomerCategoryID = sc.CustomerCategoryID
-OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
-```
-
-USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래그 설정보다 우선합니다.
+자세한 내용은 [적응 조인 이해](../../relational-databases/performance/joins.md#adaptive)를 참조하세요.
 
 ## <a name="batch-mode-memory-grant-feedback"></a>일괄 처리 모드 메모리 부여 피드백
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 쿼리 실행 후 계획에는 실행에 필요한 최소 필수 메모리 및 모든 행을 메모리에 포함하기 위한 이상적인 메모리 부여 크기가 포함됩니다. 메모리 부여 크기가 잘못 지정된 경우 성능이 저하됩니다. 과도하게 부여하면 메모리가 낭비되고 동시성이 줄어듭니다. 메모리 부여가 부족하면 디스크로 분산되어 비용이 증가합니다. 반복 워크로드를 처리함으로써 일괄 처리 모드 메모리 부여 피드백은 쿼리에 필요한 실제 메모리를 다시 계산한 후 캐시된 계획에 대한 부여 값을 업데이트합니다. 동일한 쿼리 문을 실행할 경우 쿼리는 수정된 메모리 부여 크기를 사용하여 동시성에 영향을 주는 과도한 메모리 부여를 줄이고 디스크로 분산하여 비용을 늘리는 부족한 메모리 부여를 수정합니다.
@@ -212,7 +92,11 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 메모리 부여 피드백을 비활성화할 수 있습니다. 데이터베이스에서 발생하는 모든 쿼리 실행에 대한 일괄 처리 모드 메모리 부여 피드백을 비활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
 활성화될 경우 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에서 이 설정이 enabled로 표시됩니다.
@@ -220,7 +104,11 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK
 데이터베이스에서 발생하는 모든 쿼리 실행에 대한 일괄 처리 모드 메모리 부여 피드백을 재활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
 또한 `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK`을 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 일괄 처리 모드 메모리 부여 피드백을 비활성화할 수 있습니다. 예를 들어
@@ -354,14 +242,22 @@ USE HINT 쿼리 힌트는 데이터베이스 범위 구성 또는 추적 플래�
 데이터베이스 호환성 수준 140 이상을 유지하면서 데이터베이스 또는 명령문 범위에서 인터리브된 실행을 비활성화할 수 있습니다.  데이터베이스에서 발생하는 모든 쿼리 실행에 대한 인터리브된 실행을 비활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
 활성화될 경우 [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)에서 이 설정이 enabled로 표시됩니다.
 데이터베이스에서 발생하는 모든 쿼리 실행에 대한 인터리브된 실행을 재활성화하려면 해당 데이터베이스의 컨텍스트 내에서 다음을 실행합니다.
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
 또한 `DISABLE_INTERLEAVED_EXECUTION_TVF`를 [USE HINT 쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md#use_hint)로 지정하여 특정 쿼리에 대한 인터리브 실행을 비활성화할 수 있습니다. 예를 들어

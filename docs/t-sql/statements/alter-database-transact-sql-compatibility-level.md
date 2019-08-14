@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bfc0e6a64c9895b4b118ec5c6c27a66657b0829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 750679a41b3178dd587ddbdee2fb33ee491a41b5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065800"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471166"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE(Transact-SQL) 호환성 수준
 
@@ -76,7 +76,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 
 - 사용자 데이터베이스의 호환성 수준이 업그레이드 이전에 100 이상이었다면 업그레이드 후에도 동일하게 유지됩니다.
 - 업그레이드 이전에 사용자데 이터베이스의 호환성 수준이 90이었다면 업그레이드된 데이터베이스에서는 호환성 수준이 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]에서 지원되는 가장 낮은 호환성 수준인 100으로 설정됩니다.
-- 업그레이드 후에는 tempdb, 모델, msdb 및 리소스 데이터베이스의 호환성 수준이 현재 호환성 수준으로 설정됩니다.
+- tempdb, 모델, msdb 및 리소스 데이터베이스의 호환성 수준이 제공된 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 버전의 기본 호환성 수준으로 설정됩니다. 
 - master 시스템 데이터베이스는 업그레이드 이전의 호환성 수준으로 유지됩니다.
 
 데이터베이스의 호환성 수준을 변경하려면 `ALTER DATABASE`를 사용합니다. 데이터베이스에 대한 새로운 호환성 수준 설정은 `USE <database>` 명령이 실행되거나 기본 데이터베이스로 해당 데이터베이스 컨텍스트를 사용하여 새 로그인이 처리될 때 적용됩니다.

@@ -1,6 +1,6 @@
 ---
-title: Linux의 SQL Server 보안 시작
-description: 이 문서에서는 일반적인 보안 동작을 설명 합니다.
+title: Linux에서 SQL Server 보안 시작
+description: 이 문서에서는 일반적인 보안 작업을 설명합니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -9,34 +9,34 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68019504"
 ---
-# <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux의 SQL Server의 보안 기능에 대 한 연습
+# <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>SQL Server on Linux의 보안 기능 연습
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server의 새로운 Linux 사용자 인 경우 다음 작업을 안내 보안 작업의 일부입니다. 이러한 고유한 또는 Linux를 특정 아니지만 추가 조사를 위해 영역의 아이디어를 제공 하는 데 도움이 됩니다. 각 예제에서는 해당 영역에 대 한 자세한 설명서 링크가 제공 됩니다.
+SQL Server를 처음 사용하는 Linux 사용자인 경우 다음 작업에서 몇 가지 보안 작업을 안내합니다. 이 보안 작업은 Linux에 고유하거나 특정하지 않으며 추가로 조사할 영역에 대한 아이디어를 제공하는 데 도움이 됩니다. 각 예제에서는 해당 영역의 자세한 설명서의 링크가 제공됩니다.
 
 > [!NOTE]
->  다음 예에서는 합니다 **AdventureWorks2014** 샘플 데이터베이스. 이 샘플 데이터베이스를 설치 하는 방법에 대 한 자세한 내용은 참조 하세요. [Windows에서 Linux에 SQL Server 데이터베이스를 복원](sql-server-linux-migrate-restore-database.md)합니다.
+>  다음 예제에서는 **AdventureWorks2014** 샘플 데이터베이스를 사용합니다. 이 샘플 데이터베이스를 구하여 설치하는 방법에 대한 지침은 [Windows에서 Linux로 SQL Server 데이터베이스 복원](sql-server-linux-migrate-restore-database.md)을 참조하세요.
 
 
 ## <a name="create-a-login-and-a-database-user"></a>로그인 및 데이터베이스 사용자 만들기 
 
-다른 로그인을 만들고 사용 하 여 master 데이터베이스에서 SQL Server에 대 한 액세스 부여 합니다 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) 문입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+[CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md) 문을 통해 master 데이터베이스에서 로그인을 만들어 SQL Server에 대한 액세스 권한을 다른 사용자에게 부여합니다. 예를 들어
 
 ```
 CREATE LOGIN Larry WITH PASSWORD = '************';  
 ```
 
 > [!NOTE]
->  항상 이전 명령에서 별표 대신 강력한 암호를 사용 합니다.
+>  이전 명령에서 별표 대신 항상 강력한 암호를 사용합니다.
 
-로그인은 SQL Server에 연결 하 고 (제한 된 권한)으로 master 데이터베이스에 액세스할 수 있습니다. 사용자가 사용자 데이터베이스에 연결 하려면 로그인 이라는 데이터베이스 사용자, 데이터베이스 수준에서 해당 id를 해야 합니다. 사용자가 각 데이터베이스에만 적용 되며 액세스 권한을 부여 하려면 각 데이터베이스에 개별적으로 만들어야 합니다. 다음 예제에서는 AdventureWorks2014 데이터베이스를 이동 하 고 사용 하 여는 [CREATE USER](../t-sql/statements/create-user-transact-sql.md) 문을 Larry 라는 로그인과 연결 된 Larry 이라는 사용자를 만듭니다. 로그인 및 사용자 (서로에 매핑됨) 관련 된, 경우에 다른 개체입니다. 로그인이는 서버 수준 보안 주체입니다. 사용자가 데이터베이스 수준 보안 주체입니다.
+로그인은 SQL Server에 연결하고 master 데이터베이스에 대한 액세스 권한을 가질 수 있습니다(제한적 권한). 사용자 데이터베이스에 연결하려면 데이터베이스 사용자라고도 하는 데이터베이스 수준의 해당 ID가 로그인에 필요합니다. 사용자는 각 데이터베이스에 관련되며 각 데이터베이스에서 개별적으로 만들어 액세스 권한을 부여해야 합니다. 다음 예제에서는 AdventureWorks2014 데이터베이스로 이동한 다음, [CREATE USER](../t-sql/statements/create-user-transact-sql.md) 문을 사용하여 Larry라는 로그인과 연결된 Jerry라는 사용자를 만듭니다. 로그인과 사용자는 관련되지만(서로에 매핑됨) 서로 다른 개체입니다. 로그인은 서버 수준 보안 주체입니다. 사용자는 데이터베이스 수준 보안 주체입니다.
 
 ```
 USE AdventureWorks2014;
@@ -45,10 +45,10 @@ CREATE USER Larry;
 GO
 ```
 
-- SQL Server 관리자 계정 데이터베이스에 연결할 수 있으며 자세한 로그인 및 사용자 데이터베이스에서 만들 수 있습니다.  
-- 사용자 데이터베이스를 만들 때 해지기 데이터베이스 소유자는 데이터베이스에 연결할 수 있습니다. 데이터베이스 소유자는 더 많은 사용자를 만들 수 있습니다.
+- SQL Server 관리자 계정은 모든 데이터베이스에 연결할 수 있으며 모든 데이터베이스에서 추가 로그인과 사용자를 만들 수 있습니다.  
+- 사용자가 데이터베이스를 만들면 데이터베이스 소유자가 되며 해당 데이터베이스에 연결할 수 있습니다. 데이터베이스 소유자는 추가 사용자를 만들 수 있습니다.
 
-나중에 권한을 부여할 수 있습니다 부여 하 여 자세한 로그인을 만들려면 다른 로그인을 `ALTER ANY LOGIN` 권한. 데이터베이스 내에서 권한을 부여할 수 있습니다 다른 사용자가 부여 하 여 더 많은 사용자를 만들 수는 `ALTER ANY USER` 권한. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.   
+나중에 다른 로그인에 `ALTER ANY LOGIN` 권한을 부여하여 추가 로그인을 만들 권한을 부여할 수 있습니다. 데이터베이스 내에서 다른 사용자에게 `ALTER ANY USER` 권한을 부여하여 추가 사용자를 만들 권한을 부여할 수 있습니다. 예를 들어   
 
 ```
 GRANT ALTER ANY LOGIN TO Larry;   
@@ -60,14 +60,14 @@ GRANT ALTER ANY USER TO Jerry;
 GO   
 ```
 
-Larry 로그인 자세한 로그인을 만들 수는 이제 만들어 사용자 Jerry 수 더 많은 사용자.
+이제 로그인 Larry는 추가 로그인을 만들 수 있으며 사용자 Jerry는 추가 사용자를 만들 수 있습니다.
 
 
-## <a name="granting-access-with-least-privileges"></a>최소 권한으로 액세스 권한 부여
+## <a name="granting-access-with-least-privileges"></a>최소 권한이 포함된 액세스 권한 부여
 
-사용자-데이터베이스에 연결할 첫 번째 사용자는 관리자 및 데이터베이스 소유자 계정이 됩니다. 그러나 이러한 사용자 데이터베이스에서 사용할 수 있는 모든 권한을 가집니다. 이것은 자세한 사용 권한 보다 대부분의 사용자에 게 있어야 합니다. 
+사용자 데이터베이스에 연결하는 첫 번째 사용자는 관리자 및 데이터베이스 소유자 계정이 됩니다. 그러나 이 사용자는 데이터베이스에서 사용할 수 있는 모든 권한을 가집니다. 이 권한은 대부분의 사용자가 가지는 것보다 많은 권한입니다. 
 
-바로 시작 하는, 하는 경우 기본 제공을 사용 하 여 사용 권한의 몇 가지 일반적인 범주를 할당할 수 있습니다 *고정 데이터베이스 역할*입니다. 예를 들어를 `db_datareader` 고정된 데이터베이스 역할을 데이터베이스의 모든 테이블을 읽을 수 있지만 변경 하지 않습니다. 사용 하 여 고정된 데이터베이스 역할의 멤버 자격을 부여 합니다 [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) 문입니다. 다음 예제에서는 사용자를 추가 `Jerry` 에 `db_datareader` 고정된 데이터베이스 역할.   
+처음 시작하는 경우 기본 제공 ‘고정 데이터베이스 역할’을 사용하여 몇 가지 일반적인 권한 범주를 할당할 수 있습니다.  예를 들어 `db_datareader` 고정 데이터베이스 역할은 데이터베이스의 모든 테이블을 읽을 수 있지만 변경하지는 않습니다. [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md) 문을 사용하여 고정 데이터베이스 역할의 멤버 자격을 부여합니다. 다음 예제에서는 `db_datareader` 고정 데이터베이스 역할에 사용자 `Jerry`를 추가합니다.   
    
 ```   
 USE AdventureWorks2014;   
@@ -76,11 +76,11 @@ GO
 ALTER ROLE db_datareader ADD MEMBER Jerry;   
 ```   
 
-고정된 데이터베이스 역할의 목록을 참조 하세요 [데이터베이스 수준 역할](../relational-databases/security/authentication-access/database-level-roles.md)입니다.
+고정 데이터베이스 역할 목록을 보려면 [데이터베이스 수준 역할](../relational-databases/security/authentication-access/database-level-roles.md)을 참조하세요.
 
-(권장) 데이터를 보다 정밀 하 게 액세스를 구성 하려면 준비가 되었을 때 사용 하 여 고유한 사용자 정의 데이터베이스 역할을 만들려면 나중 [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md) 문입니다. 그런 다음 특정 세부적인 권한을 할당 하면 사용자 지정 역할입니다.
+나중에 데이터에 대한 보다 정확한 액세스를 구성할 준비가 되면(권장됨) [CREATE ROLE](../t-sql/statements/create-role-transact-sql.md) 문을 사용하여 사용자 정의 데이터베이스 역할을 만듭니다. 그런 다음, 사용자 지정 역할에 특정 세분화된 권한을 할당합니다.
 
-예를 들어 다음 문은 라는 데이터베이스 역할을 만듭니다 `Sales`, 부여는 `Sales` 참조, 업데이트 및에서 행을 삭제 하는 기능 그룹을 `Orders` 테이블을 선택한 다음 사용자를 추가 `Jerry` 에 `Sales` 역할.   
+예를 들어 다음 문은 `Sales`라는 데이터베이스 역할을 만들고, `Orders` 테이블의 행을 표시, 업데이트 및 삭제하는 기능을 `Sales` 그룹에 부여하고, 사용자 `Jerry`를 `Sales` 역할에 추가합니다.   
    
 ```   
 CREATE ROLE Sales;   
@@ -135,11 +135,11 @@ WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())
 Create a security policy adding the function as both a filter and a block predicate on the table:  
 
 ```
-보안 정책 SalesFilter 만들기   
-필터 조건자 Security.fn_securitypredicate(SalesPersonID) 추가    
-  Sales.SalesOrderHeader에   
-차단 조건자 Security.fn_securitypredicate(SalesPersonID) 추가    
-  Sales.SalesOrderHeader에   
+CREATE SECURITY POLICY SalesFilter   
+ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+  ON Sales.SalesOrderHeader,   
+ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+  ON Sales.SalesOrderHeader   
 WITH (STATE = ON);   
 ```
 
@@ -148,18 +148,18 @@ Execute the following to query the `SalesOrderHeader` table as each user. Verify
 ```    
 EXECUTE AS USER = 'SalesPerson280';   
 SELECT * FROM Sales.SalesOrderHeader;    
-되돌리기; 
+REVERT; 
  
 EXECUTE AS USER = 'Manager';   
 SELECT * FROM Sales.SalesOrderHeader;   
-되돌리기;   
+REVERT;   
 ```
  
 Alter the security policy to disable the policy.  Now both users can access all rows. 
 
 ```
-보안 정책 SalesFilter ALTER   
-사용 하 여 (상태 = OFF).    
+ALTER SECURITY POLICY SalesFilter   
+WITH (STATE = OFF);    
 ``` 
 
 
@@ -170,19 +170,19 @@ Alter the security policy to disable the policy.  Now both users can access all 
 Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` column in the `Person.EmailAddress` table: 
  
 ```
-사용 하 여 AdventureWorks2014; 이동 ALTER TABLE Person.EmailAddress     ALTER 열 EmailAddress    
+USE AdventureWorks2014; GO ALTER TABLE Person.EmailAddress     ALTER COLUMN EmailAddress    
 ADD MASKED WITH (FUNCTION = 'email()');
 ``` 
  
 Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
-사용자 TestUser 만들 로그인 없이   
-권한 부여 선택 ON Person.EmailAddress TestUser; 하려면    
+CREATE USER TestUser WITHOUT LOGIN;   
+GRANT SELECT ON Person.EmailAddress TO TestUser;    
  
-사용자로 실행 = 'TestUser';   
-선택 EmailAddressID, EmailAddress Person.EmailAddress;에서       
-되돌리기;    
+EXECUTE AS USER = 'TestUser';   
+SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
+REVERT;    
 ```
  
 Verify that the masking function changes the email address in the first record from:
@@ -222,21 +222,21 @@ The following example illustrates encrypting and decrypting the `AdventureWorks2
 USE master;  
 GO  
 
-암호로 암호화 마스터 키 만들기 = ' * ';  
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**********';  
 GO  
 
-만들 인증서 MyServerCert SUBJECT = '내 데이터베이스 암호화 키 인증서';  
+CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-사용 하 여 AdventureWorks2014;   이동
+USE AdventureWorks2014;   GO
   
 CREATE DATABASE ENCRYPTION KEY  
 WITH ALGORITHM = AES_256  
-서버 인증서 MyServerCert; 암호화  
+ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
 GO
   
 ALTER DATABASE AdventureWorks2014  
-입력 시 암호화 설정   
+SET ENCRYPTION ON;   
 ```
 
 To remove TDE, execute `ALTER DATABASE AdventureWorks2014 SET ENCRYPTION OFF;`   
@@ -258,13 +258,13 @@ SQL Server has the ability to encrypt the data while creating a backup. By speci
  
 The following example creates a certificate, and then creates a backup protected by the certificate.
 ```
-사용 하 여 마스터;   이동   인증서 BackupEncryptCert 만들기   SUBJECT = '데이터베이스 백업';   데이터베이스 백업 [AdventureWorks2014] 이동   디스크로 N'/var/opt/mssql/backups/AdventureWorks2014.bak ='  
+USE master;   GO   CREATE CERTIFICATE BackupEncryptCert   WITH SUBJECT = 'Database backups';   GO BACKUP DATABASE [AdventureWorks2014]   TO DISK = N'/var/opt/mssql/backups/AdventureWorks2014.bak'  
 의 모든 멘션을  
-  압축  
+  COMPRESSION,  
   ENCRYPTION   
    (  
    ALGORITHM = AES_256,  
-   서버 인증서 BackupEncryptCert =  
+   SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
 GO  

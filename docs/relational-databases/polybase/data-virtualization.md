@@ -4,17 +4,17 @@ description: 이 페이지에서는 관계형 데이터 원본에 대해 외부 
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-ms.date: 03/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0e0c5ec609670e6ce1483a9bdbdf81f223b3481
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041108"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418770"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>관계형 데이터 원본과 함께 외부 테이블 마법사 사용
 
@@ -22,7 +22,7 @@ SQL Server 2019 CTP 2.0의 주요 시나리오 중 하나는 데이터를 가상
 
 ## <a name="start-the-external-table-wizard"></a>외부 테이블 마법사 시작
 
-[**mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) 명령을 사용하여 얻은 **sql-server-master** 엔드포인트의 IP 주소/포트 번호를 사용하여 마스터 인스턴스에 연결합니다. 개체 탐색기에서 **데이터베이스** 노드를 확장합니다. 그런 다음, 기존 SQL Server 인스턴스에서 데이터를 가상화할 데이터베이스 중 하나를 선택합니다. 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **외부 테이블 만들기**를 선택하여 데이터 가상화 마법사를 시작합니다. 명령 팔레트에서 데이터 가상화 마법사를 시작할 수도 있습니다. Windows에서 Ctrl+Shift+P를 사용하거나 Mac에서 Cmd+Shift+P를 사용합니다.
+[**azdata cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) 명령을 사용하여 얻은 **sql-server-master** 엔드포인트의 IP 주소/포트 번호를 사용하여 마스터 인스턴스에 연결합니다. 개체 탐색기에서 **데이터베이스** 노드를 확장합니다. 그런 다음, 기존 SQL Server 인스턴스에서 데이터를 가상화할 데이터베이스 중 하나를 선택합니다. 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **외부 테이블 만들기**를 선택하여 데이터 가상화 마법사를 시작합니다. 명령 팔레트에서 데이터 가상화 마법사를 시작할 수도 있습니다. Windows에서 Ctrl+Shift+P를 사용하거나 Mac에서 Cmd+Shift+P를 사용합니다.
 
 ![데이터 가상화 마법사](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>데이터 원본 선택

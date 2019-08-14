@@ -1,7 +1,7 @@
 ---
-title: Azure Data Studio의 정보 위젯을 사용 하 여 서버 및 데이터베이스 모니터링
+title: Azure Data Studio에서 인사이트 위젯을 사용하여 서버 및 데이터베이스 모니터링
 titleSuffix: Azure Data Studio
-description: Azure Data Studio에 대 한 정보 위젯 알아보기
+description: Azure Data Studio의 인사이트 위젯에 대해 알아보기
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
 ms.prod: sql
@@ -11,48 +11,48 @@ ms.topic: conceptual
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c1ab90efa97878676b1adc2a62579527407d6ba6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959520"
 ---
-# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>서버 및 데이터베이스에 대 한 정보 위젯 사용 하 여 관리 [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+# <a name="manage-servers-and-databases-with-insight-widgets-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 인사이트 위젯을 사용하여 서버 및 데이터베이스 관리
 
-정보 위젯 서버 및 데이터베이스를 사용 하면 TRANSACT-SQL (T-SQL) 쿼리를 수행할 통찰력 시각화로 전환 하 고 있습니다.
+인사이트 위젯은 서버 및 데이터베이스를 모니터링하는 데 T-SQL(Transact-SQL) 쿼리를 사용하며 이 쿼리를 인사이트를 제공하는 시각화로 변환합니다.
 
-Insights는 사용자 지정 가능한 차트 및 대시보드를 모니터링 하는 데이터베이스 서버를 추가 하는 그래프입니다. 서버 및 데이터베이스에서 요약 정보 보기 하 고 자세한 세부 정보를 정의 하는 관리 작업을 시작 합니다.
+인사이트는 서버 및 데이터베이스 모니터링 대시보드에 추가하는 사용자 지정 가능한 차트 및 그래프입니다. 서버 및 데이터베이스의 인사이트 요약을 보고, 추가 세부 정보를 자세히 살펴보고, 정의한 관리 작업을 시작합니다.
 
-멋진 서버 및 데이터베이스 관리 대시보드는 다음 예제와 비슷한를 빌드할 수 있습니다.
+다음 예제와 비슷한 멋진 서버 및 데이터베이스 관리 대시보드를 빌드할 수 있습니다.
 
 ![데이터베이스 대시보드](media/insight-widgets/database-dashboard.png)
 
 
-시작 하 고 다양 한 유형의 정보 위젯 만들기를 시작 하려면 다음 자습서를 확인해 보세요.
+다양한 유형의 인사이트 위젯 만들기를 시작하려면 다음 자습서를 확인하세요.
 
-- [빌드 사용자 지정 정보 위젯](tutorial-build-custom-insight-sql-server.md)
-- *기본 제공 정보 위젯 사용*
-  - [성능 모니터링 정보를 사용 하도록 설정](tutorial-qds-sql-server.md)
-  - [테이블 공간 사용량 정보를 사용 하도록 설정](tutorial-table-space-sql-server.md)
+- [사용자 지정 인사이트 위젯 빌드](tutorial-build-custom-insight-sql-server.md)
+- *기본 제공 인사이트 위젯 사용*
+  - [성능 모니터링 인사이트 사용](tutorial-qds-sql-server.md)
+  - [테이블 공간 사용량 인사이트 사용](tutorial-table-space-sql-server.md)
 
 
 ## <a name="sql-queries"></a>SQL 쿼리
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] 다른 언어 또는 많은 사용자 인터페이스 최소 JSON 구성을 사용 하 여 최대한 많은 T-SQL을 사용 하려고 하므로 아직 추가 되지 않도록 하려고 합니다. T-SQL을 사용 하 여 정보 위젯 구성 수많은 기존 원본 통찰력 있는 위젯에 설정할 수 있는 유용한 T-SQL 쿼리의 수가 활용 합니다.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]는 다른 언어나 과도하게 사용되는 사용자 인터페이스 도입을 피하려고 하므로 최소한의 JSON 구성을 통해 T-SQL을 최대한 많이 사용하려고 합니다. T-SQL을 사용하여 인사이트 위젯을 구성하면 인사이트를 제공하는 위젯으로 변환할 수 있는 유용한 T-SQL 쿼리의 수많은 기존 원본을 활용할 수 있습니다.
 
-하나 또는 두 개의 T-SQL 쿼리 정보 위젯 구성 되어 있습니다.
-* *정보 위젯 쿼리* 필수 이며 위젯에 표시 되는 데이터를 반환 하는 쿼리.
-* *Insight 세부 정보 쿼리* 는 insight 세부 정보 페이지를 만드는 경우에 필요 합니다.
+인사이트 위젯은 하나 또는 두 개의 T-SQL 쿼리로 구성됩니다.
+* ‘인사이트 위젯 쿼리’는 필수이며 위젯에 표시되는 데이터를 반환하는 쿼리입니다. 
+* ‘인사이트 세부 정보 쿼리’는 인사이트 세부 정보 페이지를 만드는 경우에만 필요합니다. 
 
-정보 위젯 쿼리를 개수, 차트 또는 그래프를 렌더링 하는 데이터 집합을 정의 합니다. Insight 세부 정보 쿼리를 사용 하 여 insight 세부 정보 창에서 테이블 형식으로 정보를 관련 된 정보를 나열 하 합니다. 
+인사이트 위젯 쿼리는 개수, 차트 또는 그래프를 렌더링하는 데이터 세트를 정의합니다. 인사이트 세부 정보 쿼리는 인사이트 세부 정보 패널에서 관련 인사이트 세부 정보를 테이블 형식으로 나열하는 데 사용됩니다. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] insigh 위젯 쿼리를 실행 하 고 차트의 데이터 집합 쿼리 결과 집합 매핑되 렌더링 합니다. 사용자가 정보 활용의 세부 정보를 열면 insight 세부 정보 쿼리를 실행 하 고 대화 상자에서 그리드 보기에서 결과 출력 합니다.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]는 인사이트 위젯 쿼리를 실행하고 쿼리 결과 세트를 차트의 데이터 세트에 매핑한 후 렌더링합니다. 사용자가 인사이트 세부 정보를 열면 인사이트 세부 정보 쿼리가 실행되고 결과가 대화 상자 내의 그리드 보기로 출력됩니다.
 
-기본 개념 수, 차트 및 그래프 위젯의 데이터 집합으로 사용할 수 있도록 방식으로 T-SQL 쿼리를 작성 하는 것입니다. 
+기본 개념은 개수, 차트 및 그래프 위젯의 데이터 세트로 사용할 수 있도록 하는 방식으로 T-SQL 쿼리를 작성하는 것입니다. 
 
 ## <a name="summary"></a>요약
 
-T-SQL 쿼리 및 해당 결과 집합 정보 위젯 동작을 결정 합니다. 차트 종류에 대 한 쿼리를 작성 하거나 기존 쿼리에 대 한 오른쪽 차트 종류를 매핑하기는 효과적인 통찰력 위젯을 빌드할 주요 고려 사항인 경우
+T-SQL 쿼리와 그 결과 세트에 따라 인사이트 위젯 동작이 결정됩니다. 차트 종류에 대한 쿼리를 작성하거나 기존 쿼리에 적합한 차트 종류를 매핑하는 것은 효과적인 인사이트 위젯을 빌드하기 위한 주요 고려 사항입니다.
 
 
 

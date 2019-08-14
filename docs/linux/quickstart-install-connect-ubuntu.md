@@ -1,7 +1,7 @@
 ---
-title: Ubuntu의 SQL Server 시작
+title: Ubuntu에서 SQL Server 시작
 titleSuffix: SQL Server
-description: 이 빠른 시작에는 SQL Server 2017 또는 SQL Server 2019 Ubuntu에 설치 로컬 폴더를 만들고 sqlcmd 사용 하 여 데이터베이스를 쿼리 하는 방법을 보여 줍니다.
+description: 이 빠른 시작에서는 Ubuntu에 SQL Server 2017 또는 SQL Server 2019를 설치한 다음, sqlcmd를 사용하여 데이터베이스를 만들고 쿼리하는 방법을 보여 줍니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 05/28/2019
@@ -11,49 +11,49 @@ ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 23597e4937f279694d7e4286e5aec3d714b54afa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67910460"
 ---
-# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>빠른 시작: SQL Server를 설치 하 고 Ubuntu에서 데이터베이스 만들기
+# <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>빠른 시작: Ubuntu에 SQL Server 설치 및 데이터베이스 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-이 빠른 시작에서는 SQL Server 2017 또는 SQL Server 2019 preview에 설치한 Ubuntu 16.04 합니다. 다음 사용 하 여 연결한 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
+이 빠른 시작에서는 Ubuntu 16.04에 SQL Server 2017 또는 SQL Server 2019 미리 보기를 설치합니다. 그런 다음, **sqlcmd**를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-이 빠른 시작에서는 Ubuntu 16.04에 SQL Server 2019 preview를 설치 합니다. 다음 사용 하 여 연결한 **sqlcmd** 첫 번째 데이터베이스를 만들고 쿼리를 실행 합니다.
+이 빠른 시작에서는 Ubuntu 16.04에 SQL Server 2019 미리 보기를 설치합니다. 그런 다음, **sqlcmd**를 통해 연결하여 첫 번째 데이터베이스를 만들고 쿼리를 실행합니다.
 
 ::: moniker-end
 
 > [!TIP]
-> 이 자습서에는 사용자 입력 및 인터넷 연결이 필요합니다. 참조 무인 또는 오프 라인 설치 절차에 관심이 [Linux의 SQL Server에 대 한 설치 지침은](sql-server-linux-setup.md)합니다.
+> 이 자습서를 사용하려면 사용자 입력과 인터넷 연결이 필요합니다. 무인 또는 오프라인 설치 절차에 관심이 있는 경우 [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-사용 하 여 Ubuntu 16.04 컴퓨터가 있어야 **2GB 이상의** 메모리입니다.
+**최소 2GB**의 메모리를 포함하는 Ubuntu 16.04 머신이 있어야 합니다.
 
-Ubuntu 16.04를 자신의 컴퓨터에 설치 하려면로 이동 [ http://releases.ubuntu.com/xenial/ ](http://releases.ubuntu.com/xenial/)합니다. 또한 Azure에서 Ubuntu 가상 머신을 만들 수도 있습니다. [Azure CLI로 Linux VM을 만들고 관리하기](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)를 참조하십시오.
+사용자의 머신에 Ubuntu 16.04를 설치하려면 [http://releases.ubuntu.com/xenial/](http://releases.ubuntu.com/xenial/)으로 이동합니다. Azure에서 Ubuntu 가상 머신을 만들 수도 있습니다. [Azure CLI를 사용하여 Linux VM 만들기 및 관리](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm)를 참조하세요.
 
 > [!NOTE]
-> 현재 Windows 10의 [Linux용 Windows 하위 시스템](https://msdn.microsoft.com/commandline/wsl/about) 은 지원되지 않는 설치 대상입니다.
+> 현재 Windows 10의 [Linux용 Windows 하위 시스템](https://msdn.microsoft.com/commandline/wsl/about)은 설치 대상으로 지원되지 않습니다.
 
-다른 시스템 요구 사항에 대해서는 [SQL Server on Linux에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)을 참조하십시오.
+기타 시스템 요구 사항은 [SQL Server on Linux에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)을 참조하세요.
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 ## <a id="install"></a>SQL Server 설치
 
-Ubuntu에 SQL Server를 구성하려면, **mssql 서버** 패키지를 설치하는 다음 명령을 터미널에서 실행합니다.
+Ubuntu에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행하여 **mssql-server** 패키지를 설치합니다.
 
 1. 공용 리포지토리 GPG 키를 가져옵니다.
 
@@ -68,32 +68,32 @@ Ubuntu에 SQL Server를 구성하려면, **mssql 서버** 패키지를 설치하
    ```
 
    > [!TIP]
-   > SQL Server 2019 시도 하려는 경우 대신를 등록 해야 합니다 **미리 보기 (2019)** 리포지토리. SQL Server 2019 설치의 경우 다음 명령을 사용 합니다.
+   > SQL Server 2019를 사용해 보려면 **미리 보기(2019)** 리포지토리를 등록해야 합니다. SQL Server 2019 설치에는 다음 명령을 사용합니다.
    >
    > ```bash
    > sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
    > ```
 
-3. SQL Server를 설치하려면 다음 명령을 실행합니다.
+3. 다음 명령을 실행하여 SQL Server를 설치합니다.
 
    ```bash
    sudo apt-get update
    sudo apt-get install -y mssql-server
    ```
 
-4. 패키지 설치가 완료된 후, **mssql-conf setup**을 실행하고 지시에 따라 SA 암호를 설정하고 해당 버전을 선택합니다.
+4. 패키지 설치가 완료되면 **mssql-conf setup**을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!TIP]
-   > 다음 SQL Server 2017 버전 자유롭게 사용이 허가 됩니다. Evaluation, Developer 및 Express입니다.
+   > 다음 SQL Server 2017 버전은 체험용 라이선스인 Evaluation, Developer 및 Express로 제공됩니다.
 
    > [!NOTE]
-   > SA 계정에 대한 강력한 암호를 지정해야 합니다(최소 길이가 8자, 대문자와 소문자를 포함, 10 진수 및/또는 영숫자가 아닌 기호).
+   > SA 계정의 강력한 암호를 지정해야 합니다(대문자 및 소문자, 기본 10자리 숫자 및/또는 영숫자가 아닌 기호를 포함 하여 최소 길이 8자).
 
-5. 구성 작업이 완료되면 서비스가 실행되고 있는지 확인합니다.
+5. 구성이 완료되면 서비스가 실행 중인지 확인합니다.
 
    ```bash
    systemctl status mssql-server --no-pager
@@ -101,7 +101,7 @@ Ubuntu에 SQL Server를 구성하려면, **mssql 서버** 패키지를 설치하
 
 6. 원격으로 연결하려면 방화벽에서 SQL Server TCP 포트(기본값 1433)를 열어야 할 수도 있습니다.
 
-이제 SQL Server가 Ubuntu 컴퓨터에서 실행되고 있으며 사용할 준비가 되었습니다!
+이제 SQL Server는 Ubuntu 머신에서 실행 중이며 사용할 준비가 되었습니다.
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -109,7 +109,7 @@ Ubuntu에 SQL Server를 구성하려면, **mssql 서버** 패키지를 설치하
 
 ## <a id="install"></a>SQL Server 설치
 
-Ubuntu에 SQL Server를 구성하려면, **mssql 서버** 패키지를 설치하는 다음 명령을 터미널에서 실행합니다.
+Ubuntu에서 SQL Server을 구성하려면 터미널에서 다음 명령을 실행하여 **mssql-server** 패키지를 설치합니다.
 
 1. 공용 리포지토리 GPG 키를 가져옵니다.
 
@@ -117,29 +117,29 @@ Ubuntu에 SQL Server를 구성하려면, **mssql 서버** 패키지를 설치하
    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-2. SQL Server 2019 preview 용 Microsoft SQL Server Ubuntu 리포지토리를 등록 합니다.
+2. SQL Server 2019 미기 보기에 대한 Microsoft SQL Server Ubuntu 리포지토리를 등록합니다.
 
    ```bash
    sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
    ```
 
-3. SQL Server를 설치하려면 다음 명령을 실행합니다.
+3. 다음 명령을 실행하여 SQL Server를 설치합니다.
 
    ```bash
    sudo apt-get update
    sudo apt-get install -y mssql-server
    ```
 
-4. 패키지 설치가 완료된 후, **mssql-conf setup**을 실행하고 지시에 따라 SA 암호를 설정하고 해당 버전을 선택합니다.
+4. 패키지 설치가 완료되면 **mssql-conf setup**을 실행하고, 프롬프트에 따라 SA 암호를 설정하고, 버전을 선택합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
    ```
 
    > [!NOTE]
-   > SA 계정에 대한 강력한 암호를 지정해야 합니다(최소 길이가 8자, 대문자와 소문자를 포함, 10 진수 및/또는 영숫자가 아닌 기호).
+   > SA 계정의 강력한 암호를 지정해야 합니다(대문자 및 소문자, 기본 10자리 숫자 및/또는 영숫자가 아닌 기호를 포함 하여 최소 길이 8자).
 
-5. 구성 작업이 완료되면 서비스가 실행되고 있는지 확인합니다.
+5. 구성이 완료되면 서비스가 실행 중인지 확인합니다.
 
    ```bash
    systemctl status mssql-server --no-pager
@@ -147,15 +147,15 @@ Ubuntu에 SQL Server를 구성하려면, **mssql 서버** 패키지를 설치하
 
 6. 원격으로 연결하려면 방화벽에서 SQL Server TCP 포트(기본값 1433)를 열어야 할 수도 있습니다.
 
-이 시점에서 SQL Server 2019 미리 보기 Ubuntu 컴퓨터에서 실행 되 고 사용할 준비가 되었습니다!
+이제 SQL Server 2019 미리 보기는 Ubuntu 머신에서 실행 중이며 사용할 준비가 되었습니다.
 
 ::: moniker-end
 
 ## <a id="tools"></a>SQL Server 명령줄 도구 설치
 
-데이터베이스를 만들려면 Transact-SQL 문을 실행할 수 있는 도구로 SQL Server에 연결해야 합니다. 다음 단계를 수행하여 SQL Server 명령줄 도구([sqlcmd](../tools/sqlcmd-utility.md) 및 [bcp](../tools/bcp-utility.md)) 를 설치합니다.
+데이터베이스를 만들려면 SQL Server에서 Transact-SQL 문을 실행할 수 있는 도구와 연결해야 합니다. 다음 단계에서는 SQL Server 명령줄 도구인 [sqlcmd](../tools/sqlcmd-utility.md) 및 [bcp](../tools/bcp-utility.md)를 설치합니다.
 
-다음 단계를 사용 하 여 설치 합니다 **mssql 도구** ubuntu 합니다. 
+다음 단계에 따라 Ubuntu에 **mssql-tools**를 설치합니다. 
 
 1. 공용 리포지토리 GPG 키를 가져옵니다.
 
@@ -163,13 +163,13 @@ Ubuntu에 SQL Server를 구성하려면, **mssql 서버** 패키지를 설치하
    curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
    ```
 
-1. Microsoft Ubuntu 리포지토리를 등록 합니다.
+1. Microsoft Ubuntu 리포지토리를 등록합니다.
 
    ```bash
    curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list | sudo tee /etc/apt/sources.list.d/msprod.list
    ```
 
-1. 원본 목록을 업데이트 하 고 unixODBC 개발자 패키지를 사용 하 여 설치 명령을 실행 합니다.
+1. 원본 목록을 업데이트하고 unixODBC 개발자 패키지를 사용하여 설치 명령을 실행합니다.
 
    ```bash
    sudo apt-get update 
@@ -177,21 +177,21 @@ Ubuntu에 SQL Server를 구성하려면, **mssql 서버** 패키지를 설치하
    ```
 
    > [!Note] 
-   > 최신 버전으로 업데이트 **mssql 도구** 다음 명령을 실행 합니다.
+   > 최신 버전의 **mssql-tools**로 업데이트하려면 다음 명령을 실행합니다.
    >    ```bash
    >   sudo apt-get update 
    >   sudo apt-get install mssql-tools 
    >   ```
 
-1. **선택적**: 추가 `/opt/mssql-tools/bin/` 에 사용자 **경로** 는 bash 셸에서 환경 변수입니다.
+1. **선택 사항**: Bash 셸에서 **PATH** 환경 변수에 `/opt/mssql-tools/bin/`를 추가합니다.
 
-   되도록 **sqlcmd/bcp** 로그인 세션에 대 한 bash 셸에서 액세스할 수 있는 수정 프로그램 **경로** 에 **~/.bash_profile** 다음 명령 사용 하 여 파일:
+   로그인 세션을 위해 bash 셸에서 **sqlcmd/bcp**에 액세스할 수 있도록 설정하려면 다음 명령을 사용하여 **~/.bash_profile** 파일에서 **PATH**를 수정합니다.
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
    ```
 
-   되도록 **sqlcmd/bcp** 대화형/비-로그인 세션에 대 한 bash 셸에서 액세스할 수 있는 수정 합니다 **경로** 에 **~/.bashrc** 다음 명령 사용 하 여 파일:
+   대화형/비로그인 세션을 위해 bash 셸에서 **sqlcmd/bcp**에 액세스할 수 있도록 설정하려면 다음 명령을 사용하여 **~/.bashrc** 파일에서 **PATH**를 수정합니다.
 
    ```bash
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc

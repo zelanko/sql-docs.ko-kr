@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 080037ec68169c08f7e543504c84118d0d01e4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117003"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419604"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE(Azure SQL Data Warehouse)
 
@@ -167,18 +167,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 클러스터형 columnstore 인덱스는 Azure SQL Data Warehouse에서 테이블을 만들기 위한 기본값입니다.  COMPUND 키는 ORDER 사양의 기본값입니다.  정렬 순서는 항상 오름차순입니다. ORDER 절이 지정되지 않은 경우 columnstore가 정렬되지 않습니다. 주문 프로세스로 인해 주문 클러스터형 열 저장소 인덱스가 있는 테이블은 비주문 클러스터형 열 저장소 인덱스보다 데이터 로드 시간이 더 길어질 수 있습니다. 데이터를 로드하는 동안 tempdb 공간이 더 필요한 경우 삽입당 데이터 크기를 줄일 수 있습니다.
 
-미리 보기 중 이 쿼리를 실행하여 ORDER가 설정된 이 열을 확인할 수 있습니다.
-
-```sql
-SELECT i.name AS index_name  
-    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
-    ,ic.index_column_id  
-    ,ic.key_ordinal  
-,ic.is_included_column  
-FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic
-    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
-```
+사용자는 sys.index_columns의 column_store_order_ordinal 열에서 테이블이 정렬되고 정렬에 순서가 있는 열을 쿼리할 수 있습니다.  
 
 ### <a name="DataTypes"></a> 데이터 형식
 

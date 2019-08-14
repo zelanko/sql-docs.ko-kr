@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a3c6ba5932e440373ae9e08afc1c8483e25ceebc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 167070809d552a40d57761b533fc7954fec76dc1
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014610"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388364"
 ---
 # <a name="perform-a-forced-manual-failover-of-an-always-on-availability-group-sql-server"></a>Always On 가용성 그룹의 강제 수동 장애 조치(failover) 수행(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68014610"
   
 -   가용성 그룹의 강제 장애 조치(failover) 중 데이터가 손실될 수 있습니다. 또한 강제 장애 조치(failover)를 시작할 때 주 복제본이 실행 중인 경우 클라이언트는 여전히 이전의 주 데이터베이스에 연결되어 있을 수 있습니다. 따라서 주 복제본이 더 이상 실행되지 않는 경우와 가용성 그룹의 데이터베이스에 액세스를 복원하기 위해 데이터 손실 위험을 감수할 수 있는 경우에만 강제 장애 조치(failover)를 수행하는 것이 좋습니다.  
   
--   보조 데이터베이스가 REVERTING 또는 INITIALIZING 상태일 때는 강제 장애 조치(failover)를 수행해도 해당 데이터베이스가 주 데이터베이스로 시작되지 않습니다. 데이터베이스가 INTIAILIZGING 상태에 있었다면 데이터베이스 백업에서 누락된 로그 레코드를 적용하거나 처음부터 데이터베이스를 전체 복원해야 합니다. 데이터베이스가 REVERTING 상태에 있었다면 데이터베이스를 백업에서 전체 복원해야 합니다.  
+-   보조 데이터베이스가 REVERTING 또는 INITIALIZING 상태일 때는 강제 장애 조치(failover)를 수행해도 해당 데이터베이스가 주 데이터베이스로 시작되지 않습니다. 데이터베이스가 INTIAILIZGING 상태였다면 데이터베이스 백업에서 누락된 로그 레코드를 적용하거나 처음부터 데이터베이스를 전체 복원해야 합니다. 데이터베이스가 REVERTING 상태에 있었다면 데이터베이스를 백업에서 전체 복원해야 합니다.  
   
 -   장애 조치(failover) 명령은 장애 조치(failover) 대상에서 해당 명령을 수락하는 즉시 반환하지만 데이터베이스 복구는 가용성 그룹의 장애 조치가 끝난 후 비동기로 수행됩니다.  
   

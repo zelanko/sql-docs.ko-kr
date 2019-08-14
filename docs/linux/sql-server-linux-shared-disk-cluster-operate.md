@@ -1,6 +1,6 @@
 ---
 title: 장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
-description: 이 문서에서는 Linux에서 SQL Server 장애 조치 클러스터 인스턴스 (FCI)를 운영 하는 방법을 설명 합니다.
+description: 이 문서에서는 Linux에서 SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)를 작동하는 방법을 설명합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,62 +10,62 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: a29d1d61b628126d03458fced964bde7c92b6d68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032292"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 Linux에서 SQL Server 장애 조치 클러스터 인스턴스 (FCI)를 운영 하는 방법을 설명 합니다. Linux의 SQL Server FCI를 만들지 않은 경우 [구성 장애 조치 클러스터 인스턴스-Linux의 SQL Server](sql-server-linux-shared-disk-cluster-configure.md)합니다. 
+이 문서에서는 Linux에서 SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)를 작동하는 방법을 설명합니다. Linux에서 SQL Server FCI를 만들지 않은 경우 [장애 조치(failover) 클러스터 인스턴스 구성 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)를 참조하세요. 
 
 ## <a name="failover"></a>장애 조치
 
-Fci에 대 한 장애 조치는 Windows Server 장애 조치 클러스터 (WSFC)와 비슷합니다. 일종의 오류가 발생 하는 FCI를 호스팅하는 클러스터 노드의 하는 경우 FCI 자동으로 장애 조치를 다른 노드로 합니다. WSFC와 달리 Pacemaker FCI에 대 한 새 호스트 되는 노드를 선택 하도록 기본 설정된 소유자를 설정 하 방법이 있습니다.
+FCI에 대한 장애 조치(failover)는 WSFC(Windows Server 장애 조치(failover) 클러스터)와 비슷합니다. FCI를 호스트하는 클러스터 노드에서 오류가 발생하면 FCI는 자동으로 다른 노드로 장애 조치(failover)됩니다. WSFC와 달리 기본 설정된 소유자를 설정하는 방법은 없으므로 Pacemaker는 FCI의 새 호스트로 사용할 노드를 선택합니다.
 
-수동으로 다른 노드로 FCI 장애 복구 하려는 경우가 있습니다. 프로세스와 동일 하 게 하는 WSFC의 Fci 아닙니다. Wsfc의 경우 역할 수준에서 리소스에 대 한 실패합니다. Pacemaker에서 리소스를 이동 하려면 선택한 모든 제약 조건을 올바른지 가정 하 고, 기타 등등 이동도 합니다. 
+FCI를 수동으로 다른 노드로 장애 조치(failover)할 수 있는 경우가 있습니다. 이 프로세스는 WSFC의 FCI와 다릅니다. WSFC에서는 역할 수준에서 리소스를 장애 조치(failover)합니다. Pacemaker에서 이동할 리소스를 선택하며 모든 제약 조건이 올바르면 다른 모든 항목도 이동됩니다. 
 
-장애 조치 하는 방법은 Linux 배포판에 따라 달라 집니다. Linux 배포에 대 한 지침을 따릅니다.
+장애 조치(failover) 방법은 Linux 배포에 따라 다릅니다. Linux 배포에 대한 지침을 따릅니다.
 
 - [RHEL 또는 Ubuntu](#-manual-failover-rhel-or-ubuntu)
 - [SLES](#-manual-failover-sles)
 
-## <a name = "#-manual-failover-rhel-or-ubuntu"></a> 수동 장애 조치 (RHEL 또는 Ubuntu)
+## <a name = "#-manual-failover-rhel-or-ubuntu"></a> 수동 장애 조치(failover)(RHEL 또는 Ubuntu)
 
-Red Hat Enterprise Linux (RHEL) 제목을 또는 Ubuntu 서버는 수동 장애 조치를 수행 하려면 다음 단계를 실행 합니다.
-1.  다음 명령을 사용 합니다. 
+수동 장애 조치(failover)를 수행하려면 RHEL(Red Hat Enterprise Linux) 또는 Ubuntu 서버에서 다음 단계를 실행합니다.
+1.  다음 명령을 실행합니다. 
 
    ```bash
    sudo pcs resource move <FCIResourceName> <NewHostNode> 
    ```
 
-   \<FCIResourceName > SQL Server FCI에 대 한 Pacemaker 리소스 이름입니다.
+   \<FCIResourceName>은 SQL Server FCI의 Pacemaker 리소스 이름입니다.
 
-   \<NewHostNode > FCI를 호스팅할 클러스터 노드의 이름입니다. 
+   \<NewHostNode>는 FCI를 호스트하려는 클러스터 노드의 이름입니다. 
 
-   모든 승인을 받지 못합니다.
+   승인이 수신되지 않습니다.
 
-2.  수동 장애 조치 하는 동안 Pacemaker 수동으로 이동 하도록 선택 된 된 리소스에 위치 제약 조건을 만듭니다. 이 제약 조건을 확인 하려면 실행 `sudo pcs constraint`합니다.
+2.  수동 장애 조치(failover) 중 Pacemaker는 수동으로 이동하도록 선택한 리소스에 대한 위치 제약 조건을 만듭니다. 이 제약 조건을 확인하려면 `sudo pcs constraint`를 실행합니다.
 
-3.  장애 조치를 완료 한 후 실행 하 여 제약 조건을 제거 `sudo pcs resource clear <FCIResourceName>`합니다. 
+3.  장애 조치(failover)가 완료되면 `sudo pcs resource clear <FCIResourceName>`을 실행하여 제약 조건을 제거합니다. 
 
-\<FCIResourceName >은 FCI에 대 한 Pacemaker 리소스 이름입니다. 
+\<FCIResourceName>은 FCI의 Pacemaker 리소스 이름입니다. 
 
-## <a name = "#-manual-failover-sles"></a> 수동 장애 조치 (SLES)
+## <a name = "#-manual-failover-sles"></a> 수동 장애 조치(failover)(SLES)
 
 
-Enterprise Server SLES (Suse Linux)를 사용 하 여는 `migrate` SQL Server FCI 수동 장애 조치 하는 명령입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+SLES(Suse Linux Enterprise Server)에서 `migrate` 명령을 사용하여 SQL Server FCI를 수동으로 장애 조치(failover)합니다. 예를 들어
 
 ```bash
 crm resource migrate <FCIResourceName> <NewHostNode>
 ```
 
-\<FCIResourceName > 장애 조치 클러스터 인스턴스에 대 한 리소스 이름입니다. 
+\<FCIResourceName>은 장애 조치(failover) 클러스터 인스턴스의 리소스 이름입니다. 
 
-\<NewHostNode > 새 대상 호스트의 이름입니다. 
+\<NewHostNode>는 새 대상 호스트의 이름입니다. 
 
 
 <!---
@@ -77,8 +77,8 @@ crm resource migrate <FCIResourceName> <NewHostNode>
 
 --->
 
-## <a name="next-steps"></a>다음 단계
+## <a name="next-steps"></a>Next Steps
 
-- [장애 조치 클러스터 인스턴스-Linux의 SQL Server 구성](sql-server-linux-shared-disk-cluster-configure.md)
+- [장애 조치(failover) 클러스터 인스턴스 구성 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->

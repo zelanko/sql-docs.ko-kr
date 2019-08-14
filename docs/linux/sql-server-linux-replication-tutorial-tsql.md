@@ -1,6 +1,6 @@
 ---
 title: Linux에서 SQL Server 복제 구성
-description: 이 자습서에는 Linux에서 SQL Server 스냅숏 복제를 구성 하는 방법을 보여 줍니다.
+description: 이 자습서에서는 Linux에서 SQL Server 스냅샷 복제를 구성하는 방법을 보여 줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,48 +10,48 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 9ac898430bbdc3704e43c62be09884ee1925cb75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68130105"
 ---
-# <a name="configure-replication-with-t-sql"></a>T-SQL을 사용 하 여 복제를 구성 합니다.
+# <a name="configure-replication-with-t-sql"></a>T-SQL을 사용하여 복제 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)] 
 
-이 자습서에서는 TRANSACT-SQL을 사용 하 여 SQL Server의 두 인스턴스를 사용 하 여 Linux에서 SQL Server 스냅숏 복제를 구성 합니다. 게시자 및 배포자 동일한 인스턴스에 되며 구독자는 별도 인스턴스에서 됩니다.
+이 자습서에서는 Transact-SQL을 사용하여 Linux에서 두 개의 SQL Server 인스턴스로 SQL Server 스냅샷 복제를 구성합니다. 게시자와 배포자는 동일한 인스턴스이고, 구독자는 별도의 인스턴스에 있습니다.
 
 > [!div class="checklist"]
-> * Linux의 SQL Server 복제 에이전트를 사용 하도록 설정
+> * Linux에서 SQL Server 복제 에이전트 사용
 > * 예제 데이터베이스 만들기
-> * SQL Server 에이전트 액세스에 대 한 스냅숏 폴더를 구성 합니다.
+> * SQL Server 에이전트 액세스를 위해 스냅샷 폴더 구성
 > * 배포자 구성
 > * 게시자 구성
 > * 게시 및 아티클 구성
-> * 구독자를 구성 합니다. 
+> * 구독자 구성 
 > * 복제 작업 실행
 
-모든 복제 구성을 사용 하 여 구성할 수 있습니다 [복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)합니다.
+모든 복제 구성은 [복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)를 사용하여 구성할 수 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항  
-이 자습서를 완료 하려면 해야 합니다.
+이 자습서를 완료하려면 다음 항목이 필요합니다.
 
-- Linux에서 SQL Server의 최신 버전을 사용 하 여 SQL Server의 두 인스턴스
-- 쿼리를 실행할 T-SQL SQLCMD 또는 SSMS와 같은 복제를 설정 하는 도구
+- 최신 버전의 SQL Server on Linux가 설치된 두 개의 SQL Server 인스턴스
+- 복제를 설정하기 위해 T-SQL 쿼리를 실행하는 도구(예: SQLCMD 또는 SSMS)
 
-  참조 [SSMS를 사용 하 여 Linux의 SQL Server 관리](./sql-server-linux-manage-ssms.md)합니다.
+  [SSMS를 사용하여 SQL Server on Linux 관리](./sql-server-linux-manage-ssms.md)를 참조하세요.
 
 ## <a name="detailed-steps"></a>자세한 단계
 
-1. 복제 에이전트를 사용 하려면 SQL Server 에이전트를 사용 하도록 설정 Linux에서 SQL Server 복제 에이전트를 사용 하도록 설정 합니다. 두 호스트 컴퓨터에서 터미널에서 다음 명령을 실행 합니다. 
+1. Linux에서 SQL Server 복제 에이전트 사용 - SQL Server 에이전트가 복제 에이전트를 사용할 수 있도록 합니다. 두 호스트 머신의 터미널에서 다음 명령을 실행합니다. 
 
   ```bash
   sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
   sudo systemctl restart mssql-server
   ```
 
-1. 예제 데이터베이스 및 테이블 게시자 만들기 예제 데이터베이스 및 게시에 대 한 아티클로 할 테이블을 만듭니다.
+1. 샘플 데이터베이스 및 테이블 만들기 - 게시자에서 게시할 아티클 역할을 하는 샘플 데이터베이스 및 테이블을 만듭니다.
 
   ```sql
   CREATE DATABASE Sales
@@ -63,14 +63,14 @@ ms.locfileid: "68130105"
   INSERT INTO CUSTOMER (CustomerID, SalesAmount) VALUES (1,100),(2,200),(3,300)
   ```
 
-  다른 SQL Server 인스턴스의 구독자 문서를 수신 하도록 데이터베이스를 만듭니다.
+  다른 SQL Server 인스턴스인 구독자에서 아티클을 받을 데이터베이스를 만듭니다.
 
   ```sql
   CREATE DATABASE Sales
   GO
   ```
 
-1. 읽기/쓰기로 배포자에서 스냅숏 폴더를 만들고 'mssql' 사용자에 게 액세스 권한을 부여 하려면 SQL Server 에이전트에 대 한 스냅숏 폴더 만들기 
+1. SQL Server 에이전트가 읽고 쓰는 스냅샷 폴더 만들기 - 배포자에서 스냅샷 폴더를 만들고 ‘mssql’ 사용자에게 액세스 권한을 부여합니다. 
 
   ```bash
   sudo mkdir /var/opt/mssql/data/ReplData/
@@ -78,7 +78,7 @@ ms.locfileid: "68130105"
   sudo chgrp mssql /var/opt/mssql/data/ReplData/
   ```
 
-1. 이 예제에서 배포자를 구성, 배포자는 게시자가 될 수도 있습니다. 도 배포에 대 한 인스턴스를 구성 하려면 게시자에서 다음 명령을 실행 합니다.
+1. 배포자 구성 - 이 예제에서는 게시자가 배포자이기도 합니다. 게시자에서 다음 명령을 실행하여 배포용 인스턴스도 구성합니다.
 
   ```sql
   DECLARE @distributor AS sysname
@@ -111,7 +111,7 @@ ms.locfileid: "68130105"
   GO
   ```
 
-1. 게시자에서 다음 TSQL 명령을 실행 하는 게시자를 구성 합니다.
+1. 게시자 구성 - 게시자에서 다음 TSQL 명령을 실행합니다.
 
   ```sql
   DECLARE @publisher AS sysname
@@ -136,7 +136,7 @@ ms.locfileid: "68130105"
   GO
   ```
 
-1. 게시자에서 게시 작업을 실행한 다음 TSQL 명령의 구성 합니다.
+1. 게시 작업 구성 - 게시자에서 다음 TSQL 명령을 실행합니다.
 
   ```sql
   DECLARE @replicationdb AS sysname
@@ -175,7 +175,7 @@ ms.locfileid: "68130105"
   @publisher_password = @publisherpassword
   ```
 
-1. 문서를 만들 실행 sales 테이블에서 다음 TSQL 명령을 게시자에서.
+1. sales 테이블에서 아티클 만들기 - 게시자에서 다음 TSQL 명령을 실행합니다.
 
   ```sql
   use [Sales]
@@ -195,7 +195,7 @@ ms.locfileid: "68130105"
   @vertical_partition = N'false'
   ```
 
-1. 구독 실행 구성 다음 TSQL 명령을 게시자에서 합니다.
+1. 구독 구성 - 게시자에서 다음 TSQL 명령을 실행합니다.
 
   ```sql
   DECLARE @subscriber AS sysname
@@ -240,13 +240,13 @@ ms.locfileid: "68130105"
 
 1. 복제 에이전트 작업 실행
 
-  작업의 목록을 가져오려면 다음 쿼리를 실행 합니다.
+  다음 쿼리를 실행하여 작업 목록을 가져옵니다.
 
   ```sql
   SELECT name, date_modified FROM msdb.dbo.sysjobs order by date_modified desc
   ```
 
-  스냅숏을 생성 하려면 스냅숏 복제 작업을 실행 합니다.
+  스냅샷 복제 작업을 실행하여 스냅샷을 생성합니다.
 
   ```sql
   USE msdb;  
@@ -255,7 +255,7 @@ ms.locfileid: "68130105"
   GO
   ```
 
-  스냅숏을 생성 하려면 스냅숏 복제 작업을 실행 합니다.
+  스냅샷 복제 작업을 실행하여 스냅샷을 생성합니다.
 
   ```sql
   USE msdb;  
@@ -264,32 +264,32 @@ ms.locfileid: "68130105"
   GO
   ```
 
-1. 구독자를 연결 하 고 복제 된 데이터를 쿼리 합니다. 
+1. 구독자 연결 및 복제된 데이터 쿼리 
 
-  구독자에서 복제는 다음 쿼리를 실행 하 여 작동 하는지 확인 합니다.
+  구독자에서 다음 쿼리를 실행하여 복제가 작동하는지 확인합니다.
 
   ```sql
   SELECT * from [Sales].[dbo].[CUSTOMER]
   ```
 
-이 자습서에서는 TRANSACT-SQL을 사용 하 여 SQL Server의 두 인스턴스를 사용 하 여 Linux에서 SQL Server 스냅숏 복제를 구성 합니다.
+이 자습서에서는 Transact-SQL을 사용하여 Linux에서 두 개의 SQL Server 인스턴스로 SQL Server 스냅샷 복제를 구성합니다.
 
 > [!div class="checklist"]
-> * Linux의 SQL Server 복제 에이전트를 사용 하도록 설정
+> * Linux에서 SQL Server 복제 에이전트 사용
 > * 예제 데이터베이스 만들기
-> * SQL Server 에이전트 액세스에 대 한 스냅숏 폴더를 구성 합니다.
+> * SQL Server 에이전트 액세스를 위해 스냅샷 폴더 구성
 > * 배포자 구성
 > * 게시자 구성
 > * 게시 및 아티클 구성
-> * 구독자를 구성 합니다. 
+> * 구독자 구성 
 > * 복제 작업 실행
 
-## <a name="see-also"></a>참조
+## <a name="see-also"></a>관련 항목:
 
-복제에 대 한 자세한 내용은 [SQL Server 복제 설명서](../relational-databases/replication/sql-server-replication.md)합니다.
+복제에 대한 자세한 내용은 [SQL Server 복제 설명서](../relational-databases/replication/sql-server-replication.md)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 
-[개념: Linux에서 SQL Server 복제](sql-server-linux-replication.md)
+[개념: Linux의 SQL Server 복제](sql-server-linux-replication.md)
 
-[복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)합니다.
+[복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)

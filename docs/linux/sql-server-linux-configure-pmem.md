@@ -1,6 +1,6 @@
 ---
-title: Linux의 SQL Server에 대 한 영구 메모리 (PMEM)를 구성 하는 방법
-description: 이 문서에서는 PMEM linux 구성에 대 한 연습을 제공 합니다.
+title: SQL Server on Linux에 대해 PMEM(영구적 메모리)를 구성하는 방법
+description: 이 문서에서는 Linux에서 PMEM을 구성하기 위한 연습을 제공합니다.
 author: DBArgenis
 ms.author: argenisf
 ms.reviewer: vanto
@@ -10,42 +10,42 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4ed705b1b26193585a6278508ac98666d069418a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077560"
 ---
-# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>Linux의 SQL Server에 대 한 영구 메모리 (PMEM)를 구성 하는 방법
+# <a name="how-to-configure-persistent-memory-pmem-for-sql-server-on-linux"></a>SQL Server on Linux에 대해 PMEM(영구적 메모리)를 구성하는 방법
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 Linux의 SQL Server에 대 한 영구 메모리 (PMEM)를 구성 하는 방법을 설명 합니다. Linux에서 PMEM 지원 SQL Server 2019 미리 보기에서 도입 되었습니다.
+이 문서에서는 SQL Server on Linux에 대해 PMEM(영구적 메모리)를 구성하는 방법을 설명합니다. Linux에서 PMEM 지원은 SQL Server 2019 미리 보기에서 도입되었습니다.
 
 ## <a name="overview"></a>개요
 
-SQL Server 2016에서는 비휘발성 Dimm에 대 한 지원 및 최적화 라는 [NVDIMM의 비상 로그 캐싱의]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)합니다. 이러한 최적화는 영구 저장소에 로그 버퍼를 강화 하는 데 필요한 작업 수가 줄어듭니다. 이 Windows Server 영구 메모리 모드에서 장치에 DAX에 직접 액세스를 활용합니다.
+SQL Server 2016에는 비휘발성 DIMM에 대한 지원 및 [Tail of the Log Caching on NVDIMM]( https://blogs.msdn.microsoft.com/bobsql/2016/11/08/how-it-works-it-just-runs-faster-non-volatile-memory-sql-server-tail-of-log-caching-on-nvdimm/)(NVDIMM의 비상 로그 캐싱)이라는 최적화가 도입되었습니다. 이 최적화는 로그 버퍼를 영구적 스토리지로 강화하는 데 필요한 작업의 수를 줄입니다. 이 최적화는 DAX 모드의 영구적 메모리 디바이스에 대한 Windows Server 직접 액세스를 이용합니다.
 
-SQL Server 2019 미리 보기를 확장 영구 메모리에 대 한 지원 (PMEM) Linux 장치 PMEM에 배치 하는 데이터 및 트랜잭션 로그 파일의 전체 계몽을 제공 합니다. 계몽 메서드를 참조 하는 효율적인 사용자 공간을 사용 하 여 저장소 장치에 대 한 액세스 `memcpy()` 작업 합니다. 파일 시스템 및 저장소 스택을 통해 이동, 대신 SQL Server에 직접 장치에 데이터를 배치 하는 대기 시간을 줄이고 Linux에서 DAX 지원을 활용 하 합니다.
+SQL Server 2019 미리 보기는 PMEM(영구적 메모리) 디바이스 지원을 Linux로 확장하여 PMEM에 배치된 데이터 및 트랜잭션 로그 파일의 전체 향상 기능을 제공합니다. 향상 기능은 효율적인 사용자 공간 `memcpy()` 작업을 사용하여 스토리지 디바이스에 액세스하는 방법을 나타냅니다. SQL Server는 파일 시스템 및 스토리지 스택을 통과하지 않고 Linux에서 DAX 지원을 활용하여 데이터를 디바이스에 직접 배치하여 대기 시간을 줄입니다.
 
-## <a name="enable-enlightenment-of-database-files"></a>계몽 데이터베이스 파일을 사용 하도록 설정
-계몽 Linux에서 SQL Server의 데이터베이스 파일을 사용 하도록 설정 하려면 다음 단계를 수행 합니다.
+## <a name="enable-enlightenment-of-database-files"></a>데이터베이스 파일의 향상 기능 사용
+SQL Server on Linux에서 데이터베이스 파일의 향상 기능을 사용하도록 설정하려면 다음 단계를 수행합니다.
 
-1. 장치를 구성 합니다.
+1. 디바이스를 구성합니다.
 
-  Linux에서 사용 된 `ndctl` 유틸리티입니다.
+  Linux에서 `ndctl` 유틸리티를 사용합니다.
 
-  - 설치 `ndctl` PMEM 장치를 구성 합니다. 찾을 수 있습니다 [여기](https://docs.pmem.io/getting-started-guide/installing-ndctl)합니다.
-  - 네임 스페이스를 만들려면 [ndctl]를 사용 합니다.
+  - `ndctl`을 설치하여 PMEM 디바이스를 구성합니다. [여기](https://docs.pmem.io/getting-started-guide/installing-ndctl)에서 찾을 수 있습니다.
+  - [ndctl]을 사용하여 네임스페이스를 만듭니다.
 
   ```bash 
   ndctl create-namespace -f -e namespace0.0 --mode=fsdax* --map=mem
   ```
 
   >[!NOTE]
-  >사용 중인 경우 `ndctl` 59를 사용 하 여 보다 낮은 버전 `--mode=memory`합니다.
+  >59 이전의 `ndctl` 버전을 사용하는 경우에는 `--mode=memory`를 사용합니다.
 
-  사용 하 여 `ndctl` 네임 스페이스를 확인 합니다. 샘플 출력 다음과 같습니다.
+  `ndctl`을 사용하여 네임스페이스를 확인합니다. 샘플 출력은 다음과 같습니다.
 
 ```bash
 ndctl list
@@ -60,9 +60,9 @@ ndctl list
 ]
 ```
 
-  - 만들고 PMEM 장치를 탑재 합니다.
+  - PMEM 디바이스 만들기 및 탑재
 
-    예를 들어 XFS로
+    예: XFS 사용
 
     ```bash
     mkfs.xfs -f /dev/pmem0
@@ -70,19 +70,19 @@ ndctl list
     xfs_io -c "extsize 2m" /mnt/dax
     ```
 
-    예를 들어 EXT4
+    예: EXT4 사용
 
     ```bash
     mkfs.ext4 -b 4096 -E stride=512 -F /dev/pmem0
     mount -o dax,noatime /dev/pmem0 /mnt/dax
     ```
 
-  장치 ndctl를 사용 하 여 구성, 포맷 되어 탑재를 후에 데이터베이스 파일을 배치할 수 있습니다. 새 데이터베이스를 만들 수도 있습니다. 
+  디바이스가 ndctl을 통해 구성되고, 형식이 지정되고, 탑재된 후 디바이스에 데이터베이스 파일을 배치할 수 있습니다. 새 데이터베이스를 만들 수도 있습니다. 
 
-1. PMEM 장치 O_DIRECT 안전 하 게 되므로 3979 강제 플러시 메커니즘을 사용 하지 않도록 설정 하려면 추적 플래그를 사용 하도록 설정 합니다. 이 추적 플래그 추적 플래그가 시작 이며 따라서 mssql conf 유틸리티를 사용 하는 데 사용할 수 있어야 합니다. 이 서버 차원의 구성 변경 내용, 하 고 데이터 무결성을 보장 하는 강제 플러시 메커니즘을 필요로 하는 모든 O_DIRECT 비준수 장치가 있는 경우이 추적 플래그를 사용 하지 않아야 note 하십시오. 자세한 내용은 https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux 을 참조하십시오.
+1. PMEM 디바이스는 O_DIRECT에 안전하므로 추적 플래그 3979를 사용하도록 설정하면 강제 플러시 메커니즘이 사용되지 않습니다. 이 추적 플래그는 시작 추적 플래그이므로, mssql-conf 유틸리티를 사용하여 사용하도록 설정해야 합니다. 이는 서버 수준 구성 변경이며 데이터 무결성을 보장하기 위해 강제 플러시 메커니즘이 필요한 O_DIRECT 비규격 디바이스가 있는 경우 이 추적 플래그를 사용하면 안 됩니다. 자세한 내용은 https://support.microsoft.com/en-us/help/4131496/enable-forced-flush-mechanism-in-sql-server-2017-on-linux 을 참조하십시오.
 
 1. SQL Server를 다시 시작하십시오.
 
 ## <a name="next-steps"></a>다음 단계
 
-Linux의 SQL Server에 대 한 자세한 내용은 참조 하세요. [Linux의 SQL Server](sql-server-linux-overview.md)합니다.
+SQL Server on Linux에 대한 자세한 내용은 [SQL Server on Linux](sql-server-linux-overview.md)를 참조하세요.

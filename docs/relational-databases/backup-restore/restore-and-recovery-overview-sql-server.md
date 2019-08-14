@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e985c9a6-4230-4087-9fdb-de8571ba5a5f
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 3df2d5cd644fdff3371c2814705a18dbd2dfdfb7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeea69e39184744a25890b1dae85390e00934090
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111170"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471052"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>복원 및 복구 개요(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "68111170"
 
 ## <a name="adr"></a> 가속 데이터베이스 복구
 
-SQL Server 2019 미리 보기 CTP 2.3에는 SQL Server 온-프레미스에 대한 [가속 데이터베이스 복구](/azure/sql-database/sql-database-accelerated-database-recovery/)가 도입되었습니다. 가속 데이터베이스 복구는 특히 장기 실행 트랜잭션이 있는 경우 SQL Server 데이터베이스 엔진 복구 프로세스를 다시 설계하여 데이터베이스 가용성을 크게 향상시킵니다. [데이터베이스 복구](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started)는 SQL Server에서 각 데이터베이스에 대해 트랜잭션 측면에서 일관되거나 깨끗한 상태에서 시작하는 데 사용하는 프로세스입니다. 가속 데이터베이스 복구를 사용하도록 설정된 데이터베이스는 장애 조치 또는 정리되지 않은 다른 종료 후에 복구를 훨씬 더 빨리 수행합니다. 
+SQL Server 2019 미리 보기 CTP 2.3에서는 SQL Server 온-프레미스의 [가속 데이터베이스 복구](/azure/sql-database/sql-database-accelerated-database-recovery/)가 도입되었습니다. 가속 데이터베이스 복구는 특히 장기 실행 트랜잭션이 있는 경우 SQL Server 데이터베이스 엔진 복구 프로세스를 다시 설계하여 데이터베이스 가용성을 크게 향상시킵니다. [데이터베이스 복구](../../relational-databases/logs/the-transaction-log-sql-server.md?#recovery-of-all-incomplete-transactions-when--is-started)는 SQL Server에서 각 데이터베이스에 대해 트랜잭션 측면에서 일관되거나 깨끗한 상태에서 시작하는 데 사용하는 프로세스입니다. 가속 데이터베이스 복구를 사용하도록 설정된 데이터베이스는 장애 조치 또는 정리되지 않은 다른 종료 후에 복구를 훨씬 더 빨리 수행합니다. 
 
 다음 구문을 사용하여 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 이상에서 데이터베이스별로 가속 데이터베이스 복구를 사용하도록 활성화할 수 있습니다.
 

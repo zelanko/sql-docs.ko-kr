@@ -1,7 +1,7 @@
 ---
-title: 만들기 및 바로 가기 키 사용자 지정
+title: 바로 가기 키 만들기 및 사용자 지정
 titleSuffix: Azure Data Studio
-description: 만들기 및 Azure Data Studio의 바로 가기 키 사용자 지정 하는 방법을 알아봅니다
+description: Azure Data Studio에서 바로 가기 키를 만들고 사용자 지정하는 방법을 알아봅니다.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,52 +11,52 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 8e577f50152eb5f86b81caa23cc493b92bbab270
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959478"
 ---
-# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>바로 가기 키 [!INCLUDE[name-sos](../includes/name-sos.md)]
+# <a name="keyboard-shortcuts-in-includename-sosincludesname-sosmd"></a>[!INCLUDE[name-sos](../includes/name-sos.md)]의 바로 가기 키
 
-이 문서에서는 신속 하 게 보기, 편집 및의 바로 가기 키를 만드는 단계 [!INCLUDE[name-sos](../includes/name-sos-short.md)]합니다.
+이 문서에서는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 바로 가기 키를 빠르게 살펴보고 편집하고 만드는 단계를 제공합니다.
 
-때문에 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 에 Visual Studio Code에서 고급 사용자 지정에 대 한 자세한 내용은 다양 한 자판 배열 등을 사용 하 여 해당 키 바인딩 기능을 상속 합니다 [Visual Studio Code에 대 한 키 바인딩을](https://code.visualstudio.com/docs/getstarted/keybindings) 문서입니다. 일부 키 바인딩을 두 기능은 지원 되지 않을 수 있습니다 (예를 들어 키맵 확장에서 지원 되지 않습니다 [!INCLUDE[name-sos](../includes/name-sos-short.md)]).
-
-
-## <a name="open-the-keyboard-shortcuts-editor"></a>바로 가기 키 편집기를 열려면
-
-모든 현재 정의 된 바로 가기 키를 보려면:
-
-엽니다는 **바로 가기 키** 편집기는 **파일** 메뉴: **파일** > **기본 설정** > **키보드 단축키** ( **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  >   **기본 설정** > **바로 가기 키** Mac에서).
-
-현재 키 바인딩, 표시 하는 것 외에도 합니다 **바로 가기 키** 편집기 바로 가기 키를 정의 되지 않은 사용 가능한 명령을 나열 합니다. 합니다 **바로 가기 키** 편집기를 사용 하면 손쉽게 변경, 제거, 다시 설정 및 새 키 바인딩을 정의할 수 있습니다.  
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]는 Visual Studio Code에서 키 바인딩 기능을 상속 받으므로 고급 사용자 지정, 다양한 키보드 레이아웃 사용 등에 대한 자세한 내용은 [Visual Studio Code의 키 바인딩](https://code.visualstudio.com/docs/getstarted/keybindings) 문서를 참조하세요. 일부 키 바인딩 기능은 사용하지 못할 수도 있습니다. 예를 들어 키맵 확장은 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 지원되지 않습니다.
 
 
-## <a name="edit-existing-keyboard-shortcuts"></a>기존 바로 가기 키를 편집 합니다.
+## <a name="open-the-keyboard-shortcuts-editor"></a>바로 가기 키 편집기 열기
 
-변경 하려면 기존 키보드 바로 가기 키 바인딩:
+현재 정의된 바로 가기 키를 모두 보려면 다음을 수행합니다.
 
-1. 검색 상자를 사용 하거나 목록을 스크롤하여 변경 하려는 바로 가기 키를 찾습니다.
+**파일** 메뉴에서 **바로 가기 키** 편집기를 엽니다. **파일** > **기본 설정** > **바로 가기 키**(Mac에서는 **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**  > **기본 설정** > **바로 가기 키**)를 선택하면 됩니다.
+
+**바로 가기 키** 편집기에는 현재 키 바인딩뿐만 아니라 바로 가기 키가 정의되지 않은 사용 가능한 명령도 표시됩니다. **바로 가기 키** 편집기를 사용하여 키 바인딩을 쉽게 변경, 제거, 다시 설정 및 새로 정의할 수 있습니다.  
+
+
+## <a name="edit-existing-keyboard-shortcuts"></a>기존 바로 가기 키 편집
+
+기존 바로 가기 키의 키 바인딩을 변경하려면 다음을 수행합니다.
+
+1. 검색 상자를 사용하거나 목록을 스크롤하여 변경할 바로 가기 키를 찾습니다.
    > [!TIP]
-   > 키, 명령, 모든 관련 바로 가기 키를 반환 하는 등 원본에서 검색 합니다.
+   > 관련된 바로 가기 키를 모두 반환하려면 키, 명령, 원본 등으로 검색합니다.
 
-1. 원하는 항목을 마우스 오른쪽 단추로 클릭 하 고 선택 **변경 키 바인딩**
+1. 원하는 항목을 마우스 오른쪽 단추로 클릭하고 **키 바인딩 변경**을 선택합니다.
 
-   ![바로 가기 키를 편집 합니다.](media/keyboard-shortcuts/change-keybinding.png)
+   ![바로 가기 키 편집](media/keyboard-shortcuts/change-keybinding.png)
 
-1. 원하는 조합을 누릅니다 키를 누릅니다 **Enter** 저장 합니다. 
+1. 원하는 키 조합을 누르고 **Enter** 키를 눌러 저장합니다. 
 
-   ![바로 가기 키를 저장 합니다.](media/keyboard-shortcuts/save-keybinding.png)
+   ![바로 가기 키 저장](media/keyboard-shortcuts/save-keybinding.png)
 
-## <a name="create-new-keyboard-shortcuts"></a>새 바로 가기 키를 만들려면
+## <a name="create-new-keyboard-shortcuts"></a>새 바로 가기 키 만들기
 
-새 바로 가기 키를 만들려면:
+새 바로 가기 키를 만들려면 다음을 수행합니다.
 
-1. 모든 키 바인딩 및 선택 되지 않은 명령을 마우스 오른쪽 단추로 클릭 **추가 키 바인딩**합니다.
+1. 키 바인딩이 없는 명령을 마우스 오른쪽 단추로 클릭하고 **키 바인딩 추가**를 선택합니다.
 
-   ![키보드 바로 가기 만들기](media/keyboard-shortcuts/add-keybinding.png)
+   ![바로 가기 키 만들기](media/keyboard-shortcuts/add-keybinding.png)
 
-1. 원하는 조합을 누릅니다 키를 누릅니다 **Enter** 저장 합니다.
+1. 원하는 키 조합을 누르고 **Enter** 키를 눌러 저장합니다.
 
 
