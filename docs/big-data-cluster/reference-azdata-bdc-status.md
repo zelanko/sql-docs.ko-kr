@@ -1,7 +1,7 @@
 ---
-title: azdata bdc 상태 참조
+title: azdata bdc status 참조
 titleSuffix: SQL Server big data clusters
-description: Azdata bdc status 명령에 대 한 참조 문서입니다.
+description: azdata bdc status 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,44 +10,44 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 15fec084fc6ff5d7b3e62ec0b775047aa9bc59db
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426053"
 ---
-# <a name="azdata-bdc-status"></a>azdata bdc 상태
+# <a name="azdata-bdc-status"></a>azdata bdc status
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-다음 문서에서는 **azdata** 도구의 **bdc 상태** 명령에 대 한 참조를 제공 합니다. 다른 **azdata** 명령에 대 한 자세한 내용은 [azdata reference](reference-azdata.md)를 참조 하세요.
+다음 문서에서는 **azdata** 도구의 **bdc status** 명령에 대한 참조를 제공합니다. 다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
 
 ## <a name="commands"></a>명령
 |     |     |
 | --- | --- |
-[azdata bdc 상태 표시](#azdata-bdc-status-show) | 빅 데이터 클러스터의 상태를 표시 합니다.
-## <a name="azdata-bdc-status-show"></a>azdata bdc 상태 표시
-빅 데이터 클러스터의 상태를 표시 합니다.
+[azdata bdc status show](#azdata-bdc-status-show) | 빅 데이터 클러스터의 상태를 표시합니다.
+## <a name="azdata-bdc-status-show"></a>azdata bdc status show
+빅 데이터 클러스터의 상태를 표시합니다.
 ```bash
 azdata bdc status show 
 ```
 ### <a name="examples"></a>예
-사용자가 로그인 하는 BDC 상태입니다.
+사용자가 로그인한 BDC 상태입니다.
 ```bash
 azdata bdc status show
 ```
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
-로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시 합니다.
+로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.
 #### `--help -h`
-이 도움말 메시지를 표시 하 고 종료 합니다.
+이 도움말 메시지를 표시하고 종료합니다.
 #### `--output -o`
-출력 형식입니다.  허용 되는 값: json, jsonc, table, tsv.  기본값: json.
+출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 [http://jmespath.org/](http://jmespath.org/]) 내용 및 예제는를 참조 하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/])를 참조하세요.
 #### `--verbose`
-로깅의 자세한 정도를 늘립니다. 전체 디버그 로그에--debug를 사용 합니다.
+로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-다른 **azdata** 명령에 대 한 자세한 내용은 [azdata reference](reference-azdata.md)를 참조 하세요. **Azdata** 도구를 설치 하는 방법에 대 한 자세한 내용은 [install azdata to manage SQL Server 2019 빅 data 클러스터](deploy-install-azdata.md)를 참조 하세요.
+다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. **azdata** 도구를 설치하는 방법에 대한 자세한 내용은 [azdata를 설치하여 SQL Server 2019 빅 데이터 클러스터 관리](deploy-install-azdata.md)를 참조하세요.

@@ -1,7 +1,7 @@
 ---
-title: SQL Server 용 Visual Studio Code mssql 확장 사용
+title: SQL Server에 대해 Visual Studio Code mssql 확장 사용
 titleSuffix: SQL Server
-description: Visual Studio Code 용 mssql 확장을 사용 하 여 편집 하 여 Linux에서 SQL Server에 대 한 TRANSACT-SQL 스크립트를 실행 합니다.
+description: Visual Studio Code mssql 확장을 사용하여 SQL Server on Linux용 Transact-SQL 스크립트를 편집하고 실행합니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 12/18/2018
@@ -10,109 +10,109 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 ms.openlocfilehash: 207a542e07f271607e5d2266b8c32e313b1dff13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077316"
 ---
-# <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Visual Studio 코드를 사용 하 여 TRANSACT-SQL 스크립트 만들기 및 실행
+# <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Visual Studio Code를 사용하여 Transact-SQL 스크립트 만들기 및 실행
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 사용 하는 **mssql** SQL Server 데이터베이스를 개발 하려면 Visual Studio Code 용 확장 합니다. Visual Studio Code는 플랫폼 간, 이므로 사용할 수 있습니다 **mssql** Linux, macOS 및 Windows에서 확장 합니다.
+이 문서에서는 Visual Studio Code **mssql** 확장을 사용하여 SQL Server 데이터베이스를 개발하는 방법을 보여 줍니다. Visual Studio Code는 플랫폼 간에 지원되므로 Linux, macOS 및 Windows에서 **mssql** 확장을 사용할 수 있습니다.
 
-## <a name="install-and-start-visual-studio-code"></a>설치 하 고 Visual Studio Code 시작
+## <a name="install-and-start-visual-studio-code"></a>Visual Studio Code 설치 및 시작
 
-Visual Studio Code는 확장을 지 원하는 플랫폼 간, 그래픽 코드 편집기입니다.
+Visual Studio Code는 확장을 지원하는 플랫폼 간 그래픽 코드 편집기입니다.
 
-1. [다운로드 하 여 Visual Studio Code 설치](https://code.visualstudio.com/) 컴퓨터에 있습니다.
+1. 머신에서 [Visual Studio Code를 다운로드하여 설치](https://code.visualstudio.com/)합니다.
 
-1. Visual Studio Code를 시작 합니다.
+1. Visual Studio Code를 시작합니다.
 
    >[!NOTE]
-   >Xrdp 원격 데스크톱 세션을 통해 연결 되어 있는 경우에 Visual Studio Code 시작 되지 않으면, 참조 [XRDP를 사용 하 여 연결 하는 경우 Ubuntu에서 작동 하지 않는 VS Code](https://github.com/Microsoft/vscode/issues/3451)합니다.
+   >xrdp 원격 데스크톱 세션을 통해 연결된 경우 Visual Studio Code가 시작되지 않으면 [XRDP를 사용하여 연결된 경우 Ubuntu에서 VS Code가 작동하지 않음](https://github.com/Microsoft/vscode/issues/3451)을 참조하세요.
 
-## <a name="install-the-mssql-extension"></a>Mssql 확장 설치
+## <a name="install-the-mssql-extension"></a>mssql 확장 설치
 
-합니다 [Visual Studio Code 용 mssql 확장](https://aka.ms/mssql-marketplace) SQL Server에 연결할 수 있도록 TRANSACT-SQL (T-SQL)를 사용 하 여 쿼리 및 결과 확인 합니다.
+[Visual Studio Code mssql 확장](https://aka.ms/mssql-marketplace)을 사용하면 SQL Server에 연결하고 T-SQL(Transact-SQL)을 사용하여 쿼리한 다음, 결과를 볼 수 있습니다.
 
-1. Visual Studio Code에서 선택 **뷰** > **명령 팔레트**를 누르거나 **Ctrl**+**Shift** + **P**를 누르거나 **F1** 열려는 합니다 **명령 팔레트**합니다.
+1. Visual Studio Code에서 **보기** > **명령 팔레트**를 선택하거나, **Ctrl**+**Shift**+**P** 또는 **F1** 키를 눌러 **명령 팔레트**를 엽니다.
 
-1. 에 **명령 팔레트**, 선택 **확장: 확장 설치** 드롭다운 목록에서. 
+1. **명령 팔레트**의 드롭다운에서 **확장: 확장 설치**를 선택합니다. 
 
-1. 에 **Extensions** 창, 형식 *mssql*합니다.
+1. **확장** 창에서 *mssql*을 입력합니다.
 
-1. 선택 된 **SQL Server (mssql)** 확장을 선택한 후 **설치**합니다.
+1. **SQL Server(mssql)** 확장을 선택한 다음, **설치**를 선택합니다.
 
-   ![Mssql 확장 설치](./media/sql-server-linux-develop-use-vscode/vscode-extension.png)
+   ![mssql 확장 설치](./media/sql-server-linux-develop-use-vscode/vscode-extension.png)
 
-1. 설치가 완료 되 면 선택 **다시 로드** 확장을 사용 하도록 합니다.
+1. 설치가 완료되면 **다시 로드**를 선택하여 확장을 사용하도록 설정합니다.
 
 ## <a name="create-or-open-a-sql-file"></a>SQL 파일 만들기 또는 열기
 
-Mssql 확장을 설정 하면 mssql 명령 및 T-SQL IntelliSense 코드 편집기에서 언어 모드 설정 된 경우 **SQL**합니다.
+mssql 확장은 언어 모드가 **SQL**로 설정된 경우 코드 편집기에서 mssql 명령과 T-SQL IntelliSense를 사용하도록 설정합니다.
 
-1. 선택 **파일** > **새 파일** 누르거나 **Ctrl**+**N**합니다. Visual Studio Code는 기본적으로 새 일반 텍스트 파일을 엽니다. 
+1. **파일** > **새 파일**을 선택하거나 **Ctrl**+**N**을 누릅니다. Visual Studio Code는 기본적으로 새 일반 텍스트 파일을 엽니다. 
 
-1. 선택 **일반 텍스트** 아래쪽 상태 표시줄에 키를 눌러 **Ctrl**+**K** > **M**, 선택한 **SQL** 언어 드롭다운 목록에서. 
+1. 아래쪽 상태 표시줄에서 **일반 텍스트**를 선택하거나, **Ctrl**+**K** > **M**을 누르고 언어 드롭다운에서 **SQL**을 선택합니다. 
 
    ![SQL 언어 모드](./media/sql-server-linux-develop-use-vscode/vscode-language-mode.png)
 
    > [!NOTE]
-   > 처음 확장을 사용 하는 경우 확장을 지 원하는 SQL Server 도구를 설치 합니다.
+   > 확장을 처음 사용하는 경우 확장에서 지원하는 SQL Server 도구를 설치합니다.
 
-에 기존 파일을 열면를 *.sql* 파일 확장명을 언어 모드를 SQL로 자동 설정 됩니다.  
+*.sql* 파일 확장명을 가진 기존 파일을 열면 언어 모드가 자동으로 SQL로 설정됩니다.  
 
 ## <a name="connect-to-sql-server"></a>SQL Server에 연결
 
-연결 프로필을 만들고 SQL Server에 연결 하려면 다음이 단계를 따릅니다.
+연결 프로필을 만들고 SQL Server에 연결하려면 다음 단계를 수행합니다.
 
-1. 키를 눌러 **Ctrl**+**Shift**+**P** 나 **F1** 열려는 **명령 팔레트**. 
+1. **Ctrl**+**Shift**+**P** 또는 **F1** 키를 눌러 **명령 팔레트**를 엽니다. 
 
-1. 형식 *sql* mssql 표시할 명령 또는 형식 *sqlcon*를 선택한 후 **MS SQL: 연결** 드롭다운 목록에서.
+1. *sql*을 입력하여 mssql 명령을 표시하거나, *sqlcon*을 입력하고 드롭다운에서 **MS SQL: 연결**을 선택합니다.
 
    ![mssql 명령](./media/sql-server-linux-develop-use-vscode/vscode-commands.png)
 
    >[!NOTE]
-   >SQL 파일을 만든 빈 SQL 파일 같은 있어야 코드 편집기에서 포커스 mssql 명령을 실행할 수 있습니다.
+   >사용자가 만든 빈 SQL 파일 등의 SQL 파일은 코드 편집기에서 포커스가 있어야 mssql 명령을 실행할 수 있습니다.
 
-1. 선택 된 **MS SQL: 연결 프로필을 관리** 명령입니다.
+1. **MS SQL: 연결 프로필 관리** 명령을 선택합니다.
 
-1. 선택한 **만들기** SQL Server에 대 한 새 연결 프로필을 만들려고 합니다.
+1. **만들기**를 선택하여 SQL Server의 새 연결 프로필을 만듭니다.
 
-1. 지시에 따라 새 연결 프로필에 대 한 속성을 지정 합니다. 키를 눌러 각 값을 지정한 후 **Enter** 를 계속 합니다.
+1. 프롬프트에 따라 새 연결 프로필의 속성을 지정합니다. 각 값을 지정한 후 **Enter** 키를 눌러 계속합니다.
 
    | 연결 속성 | 설명 |
    |---|---|
-   | **서버 이름 또는 ADO 연결 문자열** | SQL Server 인스턴스 이름을 지정 합니다. 사용 하 여 *localhost* 로컬 컴퓨터에 SQL Server 인스턴스에 연결 합니다. 원격 SQL Server에 연결 하려면 SQL Server 대상의 이름 또는 IP 주소를 입력 합니다. SQL Server 컨테이너에 연결 하려면 컨테이너의 호스트 컴퓨터의 IP 주소를 지정 합니다. 포트를 지정 하는 경우 이름에서 분리 하려면 쉼표를 사용 합니다. 예를 들어 포트 1401에서 수신 대기 하는 서버에 대 한 입력 `<servername or IP>,1401`합니다.<br/><br/>대신 여기에서 데이터베이스에 대 한 ADO 연결 문자열을 입력할 수 있습니다. |
-   | **데이터베이스 이름** (선택 사항) | 사용 하려는 데이터베이스입니다. 기본 데이터베이스에 연결 하려면 여기에 데이터베이스 이름을 지정 하지 마십시오. |
-   | **인증 유형** | 선택할 **통합** 하거나 **SQL 로그인**합니다. |
-   | **사용자 이름** | 선택한 경우 **SQL 로그인**, 서버에서 데이터베이스에 액세스할 수 있는 사용자의 이름을 입력 합니다. |
+   | **서버 이름 또는 ADO 연결 문자열** | SQL Server 인스턴스 이름을 지정합니다. *localhost*를 사용하여 로컬 머신의 SQL Server 인스턴스에 연결합니다. 원격 SQL Server에 연결하려면 대상 SQL Server의 이름 또는 해당 IP 주소를 입력합니다. SQL Server 컨테이너에 연결하려면 컨테이너 호스트 머신의 IP 주소를 지정합니다. 포트를 지정해야 하는 경우 쉼표를 사용하여 이름과 구분합니다. 예를 들어 포트 1401에서 수신 대기하는 서버의 경우 `<servername or IP>,1401`을 입력합니다.<br/><br/>또는 여기서 데이터베이스의 ADO 연결 문자열을 입력할 수 있습니다. |
+   | **데이터베이스 이름**(선택 사항) | 사용하려는 데이터베이스입니다. 기본 데이터베이스에 연결하려면 여기서 데이터베이스 이름을 지정하지 않습니다. |
+   | **인증 유형** | **통합** 또는 **SQL 로그인**을 선택합니다. |
+   | **User name** | **SQL 로그인**을 선택한 경우 서버의 데이터베이스에 대한 액세스 권한이 있는 사용자의 이름을 입력합니다. |
    | **암호** | 지정된 사용자의 암호를 입력합니다. |
-   | **암호 저장** | 키를 눌러 **Enter** 선택할 **예** 암호를 저장 합니다. 선택 **No** 연결 프로필 사용 될 때마다 암호를 입력 해야 하는 합니다. |
-   | **프로필 이름** (선택 사항) | 같은 연결 프로필에 대 한 이름을 입력 *localhost 프로필*합니다. |
+   | **암호 저장** | **Enter** 키를 눌러 **예**를 선택하고 암호를 저장합니다. 연결 프로필을 사용할 때마다 암호 확인 메시지를 표시하려면 **아니요**를 선택합니다. |
+   | **프로필 이름**(선택 사항) | 연결 프로필의 이름(예: *localhost profile*)을 입력합니다. |
 
-   모든 값을 입력 하 고 선택 후 **Enter**, Visual Studio Code 연결 프로필을 만들고 SQL Server에 연결 합니다.
+   모든 값을 입력하고 **Enter** 키를 선택하면 Visual Studio Code에서 연결 프로필을 만들고 SQL Server에 연결합니다.
 
    > [!TIP]
-   > 연결이 실패 하는 경우의 오류 메시지에서 문제를 진단 하려고 합니다 **출력** Visual Studio Code에서 패널입니다. 열려는 합니다 **출력** 패널에서 **뷰** > **출력**합니다. 또한 검토 해야 합니다 [연결 문제 해결 권장 사항이](./sql-server-linux-troubleshooting-guide.md#connection)합니다.
+   > 연결에 실패하면 Visual Studio Code **출력** 패널의 오류 메시지를 통해 문제를 진단해 봅니다. **출력** 패널을 열려면 **보기** > **출력**을 선택합니다. 또한 [연결 문제 해결 권장 사항](./sql-server-linux-troubleshooting-guide.md#connection)을 검토합니다.
 
-1. 아래쪽 상태 표시줄에 대 한 연결을 확인 합니다.
+1. 아래쪽 상태 표시줄에서 연결을 확인합니다.
 
    ![연결 상태](./media/sql-server-linux-develop-use-vscode/vscode-connection-status.png)
 
-이전 단계를 대신 하도 만들고 편집할 수 있습니다 사용자 설정 파일에서 연결 프로필 (*settings.json*). 설정 파일을 열려면 **파일** > **기본 설정** > **설정**합니다. 자세한 내용은 [연결 프로필을 관리](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles)합니다.
+이전 단계 대신 사용자 설정 파일(*settings.json*)에서 연결 프로필을 만들고 편집할 수도 있습니다. 설정 파일을 열려면 **파일** > **기본 설정** > **설정**을 선택합니다. 자세한 내용은 [연결 프로필 관리](https://github.com/Microsoft/vscode-mssql/wiki/manage-connection-profiles)를 참조하세요.
 
-## <a name="create-a-sql-database"></a>SQL database 만들기
+## <a name="create-a-sql-database"></a>SQL 데이터베이스 만들기
 
-1. 이전에 시작 하는 새 SQL 파일에서 입력 *sql* 편집할 수 있는 코드 조각의 목록을 표시 합니다. 
+1. 앞에서 시작한 새 SQL 파일에서 *sql*을 입력하여 편집 가능한 코드 조각 목록을 표시합니다. 
 
    ![SQL 코드 조각](./media/sql-server-linux-develop-use-vscode/vscode-sql-snippets.png)
 
-1. 선택 **sqlCreateDatabase**합니다.
+1. **sqlCreateDatabase**
 
-1. 코드 조각에서 입력 `TutorialDB` 'DatabaseName'의 이름을 바꾸려면:
+1. 코드 조각에서 `TutorialDB`를 입력하여 ‘DatabaseName’을 바꿉니다.
 
    ```sql
    -- Create a new database called 'TutorialDB'
@@ -128,32 +128,32 @@ Mssql 확장을 설정 하면 mssql 명령 및 T-SQL IntelliSense 코드 편집�
    GO
    ```
 
-1. 키를 눌러 **Ctrl**+**Shift**+**E** TRANSACT-SQL 명령을 실행 합니다. 쿼리 창에서 결과 봅니다.
+1. **Ctrl**+**Shift**+**E**를 눌러 Transact-SQL 명령을 실행합니다. 쿼리 창에서 결과를 확인합니다.
 
    ![데이터베이스 메시지 만들기](./media/sql-server-linux-develop-use-vscode/vscode-create-database-messages.png)
 
    > [!TIP]
-   > Mssql 명령에 대 한 바로 가기 키를 사용자 지정할 수 있습니다. 참조 [바로 가기를 사용자 지정](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts)합니다.
+   > mssql 명령의 바로 가기 키를 사용자 지정할 수 있습니다. [바로 가기 사용자 지정](https://github.com/Microsoft/vscode-mssql/wiki/customize-shortcuts)을 참조하세요.
 
-## <a name="create-a-table"></a>테이블 생성하기
+## <a name="create-a-table"></a>테이블 만들기
 
-1. 코드 편집기 창의 내용을 삭제 합니다.
+1. 코드 편집기 창의 내용을 삭제합니다.
 
-1. 키를 눌러 **Ctrl**+**Shift**+**P** 나 **F1** 열려는 **명령 팔레트**. 
+1. **Ctrl**+**Shift**+**P** 또는 **F1** 키를 눌러 **명령 팔레트**를 엽니다. 
 
-1. 형식 *sql* mssql 표시할 명령 또는 형식 *sqluse*를 선택한 후는 **MS SQL: 데이터베이스를 사용 하 여** 명령입니다.
+1. *sql*을 입력하여 mssql 명령을 표시하거나, *sqluse*를 입력하고 **MS SQL: 데이터베이스 사용** 명령을 선택합니다.
 
-1. 새 선택 **TutorialDB** 데이터베이스입니다. 
+1. 새 **TutorialDB** 데이터베이스를 선택합니다. 
 
    ![데이터베이스 사용](./media/sql-server-linux-develop-use-vscode/vscode-use-database.png)
 
-1. 코드 편집기에서 입력 *sql* 코드를 표시 하려면 선택 **sqlCreateTable**을 누릅니다 **Enter**합니다.
+1. 코드 편집기에서 *sql*을 입력하여 코드 조각을 표시하고 **sqlCreateTable**을 선택한 다음, **Enter** 키를 누릅니다.
 
-1. 코드 조각에서 입력 `Employees` 테이블 이름에 대 한 합니다.
+1. 코드 조각에서 테이블 이름으로 `Employees`를 입력합니다.
 
-1. 키를 눌러 **탭** 다음 필드를 가져오고 입력 `dbo` 스키마 이름에 대 한 합니다.
+1. **Tab** 키를 눌러 다음 필드로 이동한 다음, 스키마 이름으로 `dbo`를 입력합니다.
 
-1. 다음 열이 있는 열 정의 바꿉니다.
+1. 열 정의를 다음 열로 바꿉니다.
 
    ```sql
    EmployeesId INT NOT NULL PRIMARY KEY,
@@ -161,11 +161,11 @@ Mssql 확장을 설정 하면 mssql 명령 및 T-SQL IntelliSense 코드 편집�
    Location [NVARCHAR](50)  NOT NULL
    ```
 
-1. 키를 눌러 **Ctrl**+**Shift**+**E** 테이블을 만듭니다.
+1. **Ctrl**+**Shift**+**E**를 눌러 테이블을 만듭니다.
 
 ## <a name="insert-and-query"></a>삽입 및 쿼리
 
-1. 4 개의 행을 삽입 하려면 다음 문을 추가 합니다 **직원** 테이블입니다.
+1. 다음 문을 추가하여 **Employees** 테이블에 행 4개를 삽입합니다.
 
    ```sql
    -- Insert rows into table 'Employees'
@@ -185,55 +185,55 @@ Mssql 확장을 설정 하면 mssql 명령 및 T-SQL IntelliSense 코드 편집�
    GO
    ```
 
-   입력 하는 동안 T-SQL IntelliSense를 사용 하면 문을 완료할 수 있습니다.
+   입력하는 동안 T-SQL IntelliSense에서 문을 완성할 수 있도록 지원합니다.
 
    ![T-SQL IntelliSense](./media/sql-server-linux-develop-use-vscode/vscode-intellisense.png)
 
    > [!TIP]
-   > Mssql 확장 명령을 INSERT 및 SELECT 문을 만드는 데 있습니다. 이러한 값은 이전 예제에서 사용 되지 않았습니다.
+   > mssql 확장에는 INSERT 및 SELECT 문을 만드는 데 도움이 되는 명령도 있습니다. 이 명령은 앞의 예제에서 사용되지 않았습니다.
 
-1. 키를 눌러 **Ctrl**+**Shift**+**E** 명령을 실행 합니다. 두 결과 집합 표시에는 **결과** 창입니다. 
+1. **Ctrl**+**Shift**+**E**를 눌러 명령을 실행합니다. **결과** 창에 두 개의 결과 집합이 표시됩니다. 
 
    ![결과](./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png)
 
-## <a name="view-and-save-the-result"></a>보기 및 결과 저장 합니다.
+## <a name="view-and-save-the-result"></a>결과 보기 및 저장
 
-1. 선택 **뷰** > **편집기 레이아웃** > **대칭 이동 레이아웃** 수직 또는 수평 분할 레이아웃으로 전환 합니다.
+1. **보기** > **편집기 레이아웃** > **레이아웃 대칭 이동**을 선택하여 세로 또는 가로 분할 레이아웃으로 전환합니다.
 
-1. 선택 합니다 **결과** 하 고 **메시지** 헤더 패널을 확장 및 축소를 패널입니다.
+1. **결과** 및 **메시지** 패널 헤더를 선택하여 패널을 축소하거나 확장합니다.
 
-   ![설정/해제 헤더](./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png)
+   ![헤더 설정/해제](./media/sql-server-linux-develop-use-vscode/vscode-toggle-messages-pannel.png)
 
    > [!TIP]
-   > Mssql 확장의 기본 동작을 사용자 지정할 수 있습니다. 참조 [확장 옵션을 사용자 지정](https://github.com/Microsoft/vscode-mssql/wiki/customize-options)합니다.
+   > mssql 확장의 기본 동작을 사용자 지정할 수 있습니다. [확장 옵션 사용자 지정](https://github.com/Microsoft/vscode-mssql/wiki/customize-options)을 참조하세요.
 
-1. 이러한 결과를 확대 하려면 두 번째 결과 그리드에서 최대화 표 아이콘을 선택 합니다.
+1. 두 번째 결과 그리드에서 그리드 최대화 아이콘을 선택하여 해당 결과를 확대합니다.
 
-   ![표를 최대화 합니다.](./media/sql-server-linux-develop-use-vscode/vscode-maximize-grid.png)
+   ![그리드 최대화](./media/sql-server-linux-develop-use-vscode/vscode-maximize-grid.png)
 
    > [!NOTE]
-   > 최대화 아이콘을 두 개 이상의 결과 표를 생성 하는 T-SQL 스크립트를 표시 합니다.
+   > T-SQL 스크립트에서 두 개 이상의 결과 그리드를 생성하면 최대화 아이콘이 표시됩니다.
 
-1. 눈금을 마우스 오른쪽 단추로 클릭 하 여 그리드 상황에 맞는 메뉴를 엽니다. 
+1. 그리드를 마우스 오른쪽 단추로 클릭하여 그리드 상황에 맞는 메뉴를 엽니다. 
 
    ![상황에 맞는 메뉴](./media/sql-server-linux-develop-use-vscode/vscode-grid-context-menu.png)
 
-1. 선택 **모두 선택**합니다.
+1. **모두 선택**을 선택합니다.
 
-1. 그리드 상황에 맞는 메뉴를 다시 열고 선택 **JSON으로 저장** 결과를 저장 하는 *.json* 파일입니다.
+1. 그리드 상황에 맞는 메뉴를 다시 열고 **JSON으로 저장**을 선택하여 결과를 *.json* 파일에 저장합니다.
 
-1. JSON 파일의 파일 이름을 지정 합니다. 
+1. JSON 파일의 파일 이름을 지정합니다. 
 
-1. JSON 파일을 저장 하 고 Visual Studio Code에서 열립니다를 확인 합니다.
+1. JSON 파일이 저장되고 Visual Studio Code에서 열리는지 확인합니다.
 
    ![JSON으로 저장](./media/sql-server-linux-develop-use-vscode/vscode-save-as-json.png)
 
-저장 하 고 나중에 관리 하거나 대규모 개발 프로젝트에 대 한 SQL 스크립트를 실행 하는 경우에 스크립트를 사용 하 여 저장 된 *.sql* 확장 합니다.
+나중에 관리 또는 대규모 개발 프로젝트를 위해 SQL 스크립트를 저장하고 실행해야 하는 경우 스크립트를 *.sql* 확장명으로 저장합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-T-SQL을 처음 접하는 경우 [자습서: TRANSACT-SQL 문 작성](https://docs.microsoft.com/sql/t-sql/tutorial-writing-transact-sql-statements) 하며 [TRANSACT-SQL 참조 (데이터베이스 엔진)](https://docs.microsoft.com/sql/t-sql/language-reference)합니다.
+T-SQL을 처음 사용하는 경우 [자습서: Transact-SQL 문 작성](https://docs.microsoft.com/sql/t-sql/tutorial-writing-transact-sql-statements) 및 [Transact-SQL 참조(데이터베이스 엔진)](https://docs.microsoft.com/sql/t-sql/language-reference)를 참조하세요.
 
-사용 하 여 mssql 확장에 영향을 주는에 대 한 자세한 내용은 참조는 [mssql 확장 프로젝트 wiki](https://github.com/Microsoft/vscode-mssql/wiki)합니다.
+mssql 확장을 사용하거나 참여하는 방법에 대한 자세한 내용은 [mssql 확장 프로젝트 wiki](https://github.com/Microsoft/vscode-mssql/wiki)를 참조하세요.
 
-Visual Studio Code 사용에 대 한 자세한 내용은 참조는 [Visual Studio Code 설명서](https://code.visualstudio.com/docs)합니다.
+Visual Studio Code 사용 방법에 대한 자세한 내용은 [Visual Studio Code 설명서](https://code.visualstudio.com/docs)를 참조하세요.

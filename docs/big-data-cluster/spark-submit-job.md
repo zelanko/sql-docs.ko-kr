@@ -1,75 +1,80 @@
 ---
-title: Azure Data Studio에서 Spark 작업 실행
+title: Azure Data Studio에서 SQL Server 빅 데이터 클러스터에 대한 Spark 작업 제출
 titleSuffix: SQL Server big data clusters
-description: Azure Data Studio의 SQL Server 빅 데이터 클러스터에 Spark 작업을 제출 합니다.
+description: Azure Data Studio에서 SQL Server 빅 데이터 클러스터에 대한 Spark 작업을 제출합니다.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 12/06/2018
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: db92ab03380bab1d6465fb53821ee6afbb345c54
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6731a753c643512cd05dbc9d7b7de2c9a064576f
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727365"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68470659"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio의 SQL Server 빅 데이터 클러스터에 Spark 작업 제출
+# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio에서 SQL Server 빅 데이터 클러스터에 대한 Spark 작업 제출
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-빅 데이터 클러스터에 대 한 주요 시나리오 중 하나에 SQL Server 2019 미리 보기에 대 한 Spark 작업을 제출 하는 기능입니다. Spark 작업 제출 기능을 사용 하면 SQL Server 2019 빅 데이터 클러스터에 대 한 참조를 사용 하 여 로컬 Jar 또는 Py 파일을 제출할 수 있습니다. 또한 HDFS 파일 시스템에 이미 있는 Jar 또는 Py 파일을 실행할 수 있습니다. 
+빅 데이터 클러스터의 주요 시나리오 중 하나는 SQL Server 2019 미리 보기에 대한 Spark 작업을 제출하는 기능입니다. Spark 작업 제출 기능을 사용하면 SQL Server 2019 빅 데이터 클러스터를 참조하는 로컬 Jar 또는 Py 파일을 제출할 수 있습니다. 또한 HDFS 파일 시스템에 이미 있는 Jar 또는 Py 파일을 실행할 수 있습니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- [SQL Server 2019 빅 데이터 도구도](deploy-big-data-tools.md):
+- [SQL Server 2019 빅 데이터 도구](deploy-big-data-tools.md):
    - **Azure Data Studio**
    - **SQL Server 2019 확장**
    - **kubectl**
 
-- [Azure Data Studio 빅 데이터 클러스터의 HDFS/Spark 게이트웨이에 연결할](connect-to-big-data-cluster.md)합니다.
+- [빅 데이터 클러스터의 HDFS/Spark 게이트웨이에 Azure Data Studio 연결](connect-to-big-data-cluster.md)
 
-## <a name="open-spark-job-submission-dialog"></a>Spark 작업 제출 대화 상자를 엽니다
-여러 가지 방법으로 Spark 작업 제출 대화 상자를 엽니다. 대시보드, 개체 탐색기 및 명령 Palate 상황에 맞는 메뉴를 포함 하는 방법입니다.
+## <a name="open-spark-job-submission-dialog"></a>Spark 작업 제출 대화 상자 열기
 
-+ 클릭 **새 Spark 작업** 대시보드에서 Spark 작업 제출 대화 상자를 엽니다.
+Spark 작업 제출 대화 상자를 여는 방법에는 여러 가지가 있습니다. 대시보드, 개체 탐색기의 상황에 맞는 메뉴, 명령 팔레트 등이 포함됩니다.
 
-    ![대시보드를 클릭 하 여 메뉴를 제출](./media/submit-spark-job/new-spark-job.png)
- 
-+ 개체 탐색기에서 클러스터를 마우스 오른쪽 단추로 클릭 하 고 선택 **Spark 작업 제출** 상황에 맞는 메뉴입니다. Spark 작업 제출 대화 상자가 열립니다.  
- 
-    ![클러스터를 마우스 오른쪽 단추로 클릭 하 여 메뉴를 제출](./media/submit-spark-job/submit-spark-job.png)
+- Spark 작업 제출 대화 상자를 열려면 대시보드에서 **새 Spark 작업**을 클릭합니다.
 
-+ 개체 탐색기에서 Jar/Py 파일을 마우스 오른쪽 단추로 클릭 하 고 선택 **Spark 작업 제출** 상황에 맞는 메뉴입니다. 미리 채워지므로 Jar/Py 필드를 사용 하 여 Spark 작업 제출 대화 상자를 엽니다. 
- 
-    ![마우스 오른쪽 단추로 클릭 파일 메뉴를 제출 합니다.](./media/submit-spark-job/submit-spark-job-2.png)
+    ![대시보드를 클릭하여 표시된 제출 메뉴](./media/submit-spark-job/new-spark-job.png)
 
-+ 명령을 사용 하 여 **Spark 작업 제출** Ctrl + Shift + P (Windows)에서 및 Cmd + Shift + P (Mac)에 입력 하 여 명령 팔레트에서.
+- 또는 개체 탐색기에서 클러스터를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **Spark 작업 제출**을 선택합니다.
 
-    ![창의 메뉴 명령 팔레트를 제출 합니다.](./media/submit-spark-job/submit-spark-job-3.png)
+    ![파일을 마우스 오른쪽 단추로 클릭하여 표시된 제출 메뉴](./media/submit-spark-job/submit-spark-job-1.png)
 
-    ![Mac의 메뉴 명령 팔레트를 제출 합니다.](./media/submit-spark-job/submit-spark-job-4.png)
+
+- Jar/Py 필드가 미리 채워져 있는 Spark 작업 제출 대화 상자를 열려면 개체 탐색기에서 jar/Py 파일을 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **Spark 작업 제출**을 선택합니다.  
+
+    ![클러스터를 마우스 오른쪽 단추로 클릭하여 표시된 제출 메뉴](./media/submit-spark-job/submit-spark-job.png)
+
+- **Ctrl+Shift+P**(Windows) 및 **Cmd+Shift+P**(Mac)를 입력하여 명령 팔레트에서 **Spark 작업 제출**을 사용합니다.
+
+    ![Windows의 제출 메뉴 명령 팔레트](./media/submit-spark-job/submit-spark-job-3.png)
+
+    ![Mac의 제출 메뉴 명령 팔레트](./media/submit-spark-job/submit-spark-job-4.png)
   
  
 ## <a name="submit-spark-job"></a>Spark 작업 제출 
-Spark 작업 제출 대화 상자는 다음과 같이 표시 됩니다. 작업 이름, JAR/Py 파일 경로, 기본 클래스 및 다른 필드를 입력 합니다. Jar / 로컬에서 또는 HDFS에서 Py 파일 원본 일 수 있습니다. 작업에 Spark Jar, Py 파일이 나 추가 파일을 참조 하는 경우 클릭 **고급** 탭 하 고 해당 파일 경로 입력 합니다. 클릭 **제출** Spark 작업을 제출 합니다.
- 
+
+Spark 작업 제출 대화 상자가 다음과 같이 표시됩니다. 작업 이름, JAR/Py 파일 경로, 주 클래스 및 기타 필드를 입력합니다. Jar/Py 파일 원본은 로컬 또는 HDFS에서 가져온 것일 수 있습니다. Spark 작업에 참조 Jar, Py 파일 또는 추가 파일이 있는 경우 **고급** 탭을 클릭하고 해당 파일 경로를 입력합니다. **제출**을 클릭하여 Spark 작업을 제출합니다.
+
 ![새 spark 작업 대화 상자](./media/submit-spark-job/submit-spark-job-section.png)
 
 ![고급 대화 상자](./media/submit-spark-job/submit-spark-job-section-1.png)
 
-## <a name="monitor-spark-job-submission"></a>Spark 작업 제출을 모니터링합니다
-Spark 작업 제출 되 면 Spark 작업 제출 및 실행 상태 정보는 왼쪽의 작업 기록에 표시 됩니다. 진행률 및 로그에서 세부 정보에도 표시 됩니다는 **출력** 창 맨 아래에 있습니다.
-+ Spark 작업이 진행에서 중일 때를 **작업 기록** 패널 및 **출력** 창 진행 상태를 사용 하 여 새로 고침 됩니다.
+## <a name="monitor-spark-job-submission"></a>Spark 작업 제출 모니터링
 
-![진행 중인 spark 작업 모니터](./media/submit-spark-job/monitor-spark-job-submission.png)
+Spark 작업이 제출되면 Spark 작업 제출 및 실행 상태 정보가 왼쪽의 작업 기록에 표시됩니다. 진행률 및 로그 세부 정보도 맨 아래의 **출력** 창에 표시됩니다.
 
-+ Spark 작업의 경우 성공적으로 완료 하면 수 Spark UI 및 Yarn UI에서 링크를 참조 합니다 **출력** 창입니다. 자세한 내용은 링크를 클릭할 수 있습니다.
+- Spark 작업이 진행 중이면 **작업 기록** 패널과 **출력** 창에 진행률이 새로 고쳐집니다.
 
-![출력에서 Spark 작업 링크](./media/submit-spark-job/monitor-spark-job-submission-2.png)
+    ![진행 중인 spark 작업 모니터링](./media/submit-spark-job/monitor-spark-job-submission.png)
+
+- Spark 작업이 성공적으로 완료되면 Spark UI 및 Yarn UI 링크가 **출력** 창에 표시됩니다. 자세한 내용을 보려면 링크를 클릭합니다.
+
+    ![출력의 Spark 작업 링크](./media/submit-spark-job/monitor-spark-job-submission-2.png)
 
 ## <a name="next-steps"></a>다음 단계
-SQL Server 빅 데이터 클러스터 및 관련된 시나리오에 대 한 자세한 내용은 참조 하세요. [SQL Server 빅 데이터 클러스터 란](big-data-cluster-overview.md)?
 
+SQL Server 빅 데이터 클러스터 및 관련 시나리오에 대한 자세한 내용은 [SQL Server 빅 데이터 클러스터란?](big-data-cluster-overview.md)을 참조하세요.

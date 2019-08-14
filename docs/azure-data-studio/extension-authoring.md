@@ -1,7 +1,7 @@
 ---
-title: 확장을 만들려면
+title: 확장 만들기
 titleSuffix: Azure Data Studio
-description: 만들기 및 Azure Data Studio에 확장을 추가 하는 방법에 대 한 설명
+description: 확장을 만들고 Azure Data Studio에 추가하는 방법 알아보기
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,30 +11,30 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: d0c43df8b24a33f3763dc5ff3a80e989b9b85038
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959604"
 ---
-# <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio 확장을 만들어 기능을 확장 합니다.
+# <a name="extend-the-functionality-by-creating-azure-data-studio-extensions"></a>Azure Data Studio 확장을 만들어 기능 확장
 
-확장 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 자료에 기능을 추가 하는 쉬운 방법을 제공 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치 합니다.
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 확장을 사용하면 기본 [!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치에 더 많은 기능을 쉽게 추가할 수 있습니다.
 
-확장 (있습니다!) 타사 당사자 커뮤니티와 Azure Data Studio 팀 (Microsoft)에서 제공 됩니다.
+확장은 Azure Data Studio 팀(Microsoft) 및 타사 커뮤니티(사용자)가 제공합니다.
 
 
 ## <a name="author-an-extension"></a>확장 작성
 
-Azure Data Studio를 확장 하려는 경우 사용자 고유의 확장 만들고 확장 갤러리에 게시할 수 있습니다.
+Azure Data Studio를 확장하는 데 관심이 있는 경우 고유한 확장을 만들어 확장 갤러리에 게시할 수 있습니다.
 
 **확장 작성**
 
 ***필수 구성 요소***
 
-확장을 개발 하려면 설치 하 고 프로그램 $PATH에서 사용할 수 있는 Node.js 필요 합니다. Node.js npm, 확장 생성기를 설치 하는 데 사용할 Node.js 패키지 관리자를 포함 합니다.
+확장을 개발하려면 Node.js를 설치하고 $PATH에서 사용할 수 있어야 합니다. Node.js에는 확장 생성기를 설치하는 데 사용되는 Node.js 패키지 관리자인 npm이 포함되어 있습니다.
 
-새 확장 프로그램을 시작 하려면 Azure 데이터 Studio 확장 생성기를 사용할 수 있습니다. Yeoman [확장 생성기](https://www.npmjs.com/package/generator-azuredatastudio) 매우 쉽게 단순 확장 프로젝트를 만들 수 있도록 합니다. 생성기를 시작 하려면 명령 프롬프트에서 다음을 입력 합니다.
+새 확장을 시작하려면 Azure Data Studio 확장 생성기를 사용할 수 있습니다. Yeoman [확장 생성기](https://www.npmjs.com/package/generator-azuredatastudio)를 사용하면 간단한 확장 프로젝트를 매우 쉽게 만들 수 있습니다. 이 생성기를 시작하려면 명령 프롬프트에 다음을 입력합니다.
 
 `npm install -g yo generator-azuredatastudio`
 
@@ -43,23 +43,23 @@ Azure Data Studio를 확장 하려는 경우 사용자 고유의 확장 만들�
 
 **확장성 참조**
 
-Azure 데이터 Studio 확장성 참조에 대해 자세히 알아보려면 [확장성 개요](extensibility.md)합니다. 또한 기존 API를 사용 하는 방법의 예제를 볼 수 있습니다 [샘플](https://github.com/Microsoft/azuredatastudio/tree/master/samples)합니다.
+Azure Data Studio 확장성에 대해 자세히 알아보려면 [확장성 개요](extensibility.md)를 참조하세요. 기존 [샘플](https://github.com/Microsoft/azuredatastudio/tree/master/samples)에서 API 사용 방법의 예제를 확인할 수도 있습니다.
 
 
 ## <a name="debug-an-extension"></a>확장 디버그
 
-Visual Studio Code 확장을 사용 하 여 새 확장 프로그램을 디버깅할 수 있습니다 [Azure 데이터 Studio 디버그](https://github.com/kevcunnane/sqlops-debug)합니다.
+Visual Studio Code 확장 [Azure Data Studio 디버그](https://github.com/kevcunnane/sqlops-debug)를 사용하여 새 확장을 디버그할 수 있습니다.
 
 단계
-- 사용 하 여 확장 프로그램을 열고 [Visual Studio Code](https://code.visualstudio.com/)
-- Azure 데이터 Studio 디버그 확장 설치
-- 키를 눌러 **F5** 또는 디버그 아이콘을 클릭 하 고 클릭 **시작**합니다.
-- Azure Data Studio의 새 인스턴스를 특수 모드 (확장 개발 호스트)에서 시작 하 고이 새 인스턴스를 확장 프로그램의 인식 이제 키를 누릅니다.
+- [Visual Studio Code](https://code.visualstudio.com/)를 사용하여 확장 열기
+- Azure Data Studio 디버그 확장 설치
+- **F5** 키를 누르거나 디버그 아이콘을 클릭한 이후에 **시작**을 클릭합니다.
+- Azure Data Studio의 새 인스턴스가 특수 모드(확장 개발 호스트)에서 시작되고 이 새 인스턴스가 이제 확장을 인식합니다.
 
 
-## <a name="create-an-extension-package"></a>확장 패키지를 만듭니다
+## <a name="create-an-extension-package"></a>확장 패키지 만들기
 
-확장 프로그램을 작성 한 후 Azure Data Studio에 설치 하려면 VSIX 패키지를 만들 해야 합니다. 사용할 수 있습니다 [vsce](https://github.com/Microsoft/vscode-vsce) VSIX 패키지를 만듭니다.
+확장을 작성한 후 Azure Data Studio에서 설치할 수 있도록 VSIX 패키지를 만들어야 합니다. [vsce](https://github.com/Microsoft/vscode-vsce)를 사용하여 VSIX 패키지를 만들 수 있습니다.
 
 `npm install -g vsce`
 
@@ -68,13 +68,13 @@ Visual Studio Code 확장을 사용 하 여 새 확장 프로그램을 디버깅
 
 ## <a name="publish-an-extension"></a>확장 게시
 
-Azure Data Studio에 새 확장 프로그램을 게시할:
+Azure Data Studio에 새 확장을 게시하려면
 
-1. 사용자 지정 확장을 추가 합니다. https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json
-2. 에서는 현재 없는 호스트 타사 확장을 지원 하므로 확장을 다운로드 하는 대신 Azure Data Studio에 다운로드 페이지로 이동 하는 옵션입니다. 확장 프로그램에 대 한 다운로드 페이지를 설정 하려면 "Microsoft.AzureDataStudio.DownloadPage" 자산의 값을 설정 합니다.
-3. 릴리스/확장 지점에 대 한 PR을 만듭니다.
+1. https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json 에 확장을 추가합니다.
+2. 현재 타사 확장을 호스트하는 기능이 지원되지 않으므로 확장을 다운로드하는 대신, 다운로드 페이지를 검색하는 옵션이 Azure Data Studio에 제공됩니다. 확장의 다운로드 페이지를 설정하려면 “Microsoft.AzureDataStudio.DownloadPage” 자산 값을 설정합니다.
+3. 릴리스/확장 분기에 대한 PR을 만듭니다.
 4. 팀에 검토 요청을 보냅니다.
 
-확장 프로그램을 검토 하 고 확장 갤러리에 추가 됩니다.
+확장이 검토된 후 확장 갤러리에 추가됩니다.
 
-**확장 업데이트를 게시** 업데이트를 게시 하는 프로세스를 확장 게시 비슷합니다. Package.json에서 버전이 업데이트 되 고 있는지 확인 하십시오
+**확장 업데이트 게시** 업데이트를 게시하는 프로세스는 확장을 게시하는 프로세스와 비슷합니다. 버전이 package.json에서 업데이트되었는지 확인하세요.

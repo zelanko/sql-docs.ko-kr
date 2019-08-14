@@ -1,5 +1,5 @@
 ---
-title: 장애 조치 클러스터 인스턴스-Linux (RHEL)에서 SQL Server 구성
+title: 장애 조치(failover) 클러스터 인스턴스 구성 - SQL Server on Linux(RHEL)
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -10,61 +10,61 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ms.openlocfilehash: 83c25db6f0915aae9cf210d2b749df970da40590
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032303"
 ---
-# <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>장애 조치 클러스터 인스턴스-Linux (RHEL)에서 SQL Server 구성
+# <a name="configure-failover-cluster-instance---sql-server-on-linux-rhel"></a>장애 조치(failover) 클러스터 인스턴스 구성 - SQL Server on Linux(RHEL)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server 2 노드 공유 디스크 장애 조치 클러스터 인스턴스는 고가용성에 대 한 서버 수준 중복을 제공합니다. 이 자습서에서는 Linux의 SQL Server의 2 노드 장애 조치 클러스터 인스턴스를 만드는 방법을 알아봅니다. 완료 되는 구체적인 단계는 다음과 같습니다.
+SQL Server 2노드 공유 디스크 장애 조치(failover) 클러스터 인스턴스는 고가용성을 위해 서버 수준 중복성을 제공합니다. 이 자습서에서는 SQL Server on Linux의 2노드 장애 조치(failover) 클러스터 인스턴스를 만드는 방법을 알아봅니다. 수행하는 구체적인 단계는 다음과 같습니다.
 
 > [!div class="checklist"]
-> * 설정 및 Linux 구성
+> * Linux 설정 및 구성
 > * SQL Server 설치 및 구성
-> * 호스트 파일 구성
-> * 공유 저장소를 구성 하 고 데이터베이스 파일 이동
-> * 설치 하 고 각 클러스터 노드에서 Pacemaker 구성
-> * 장애 조치 클러스터 인스턴스 구성
+> * hosts 파일 구성
+> * 공유 스토리지 구성 및 데이터베이스 파일 이동
+> * 각 클러스터 노드에 Pacemaker 설치 및 구성
+> * 장애 조치(failover) 클러스터 인스턴스 구성
 
-이 문서에서는 SQL Server에 대 한 공유 디스크 2 개 노드 장애 조치 클러스터 인스턴스 (FCI)를 만드는 방법을 설명 합니다. 문서 지침 및 스크립트 예제 Red Hat Enterprise Linux (RHEL)에 대 한 포함 됩니다. Ubuntu 배포 되므로 RHEL 비슷합니다 스크립트 예제는 일반적으로 Ubuntu 에서도 작동 합니다. 
+이 문서에서는 SQL Server의 2노드 공유 디스크 FCI(장애 조치(failover) 클러스터 인스턴스)를 만드는 방법을 설명합니다. 이 문서에는 RHEL(Red Hat Enterprise Linux)에 대한 지침과 스크립트 예제가 포함되어 있습니다. Ubuntu 배포는 RHEL과 유사하므로, 이 스크립트 예제는 일반적으로 Ubuntu에서도 작동합니다. 
 
-개념 정보를 참조 하세요 [SQL Server 장애 조치 클러스터 인스턴스 (FCI) linux](sql-server-linux-shared-disk-cluster-concepts.md)합니다.
+개념 정보는 [Linux의 SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)](sql-server-linux-shared-disk-cluster-concepts.md)를 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-다음 종단 간 시나리오를 완료 하려면 두 개의 머신을 두 노드 클러스터와 저장소에 대 한 다른 서버를 배포 해야 합니다. 아래 단계는이 서버를 구성 하는 방법을 간략하게 설명 합니다.
+다음 엔드투엔드 시나리오를 완료하려면 2노드 클러스터를 배포할 머신 2대와 스토리지에 사용할 또 다른 서버가 필요합니다. 아래 단계에서는 이러한 서버를 구성하는 방법을 간략하게 설명합니다.
 
-## <a name="set-up-and-configure-linux"></a>설정 및 Linux 구성
+## <a name="set-up-and-configure-linux"></a>Linux 설정 및 구성
 
-먼저는 클러스터 노드의 운영 체제를 구성 하는 것입니다. 클러스터의 각 노드에서 linux 배포를 구성 합니다. 두 노드에서 모두는 동일한 배포 및 버전을 사용 합니다. 하나 또는 다음 배포판 중 사용 됩니다.
+첫 번째 단계는 클러스터 노드에서 운영 체제를 구성하는 것입니다. 클러스터의 각 노드에서 Linux 배포를 구성합니다. 두 노드에서 동일한 배포와 버전을 사용합니다. 다음 배포 중 하나를 사용합니다.
     
-* HA 추가 기능에 대 한 유효한 구독을 사용 하 여 RHEL
+* HA 추가 기능을 위한 유효한 구독이 있는 RHEL
 
 ## <a name="install-and-configure-sql-server"></a>SQL Server 설치 및 구성
 
-1. 설치 하 고 두 노드에서 모두 SQL Server를 설정 합니다.  자세한 지침은 [Linux의 SQL Server 설치](sql-server-linux-setup.md)합니다.
-1. 기본 및 보조 구성의 목적으로 다른 노드 하나를 지정 합니다. 이러한 용어를 사용 하 여 다음에 대 한이 가이드입니다.  
-1. 보조 노드를 중지 하 고 SQL Server를 사용 하지 않도록 설정 합니다.
-    다음 예에서는 중지 하 고 SQL Server를 사용 하지 않도록 설정 합니다. 
+1. 두 노드에서 SQL Server를 설치하고 설정합니다.  자세한 내용은 [SQL Server on Linux 설치](sql-server-linux-setup.md)를 참조하세요.
+1. 구성의 목적을 위해 노드 하나를 주 노드로 지정하고 다른 노드를 보조 노드로 지정합니다. 이 용어는 가이드 전체에서 사용됩니다.  
+1. 보조 노드에서 SQL Server를 중지하고 사용하지 않도록 설정합니다.
+    다음 예제에서는 SQL Server를 중지하고 사용하지 않도록 설정합니다. 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl disable mssql-server
     ```
 
     > [!NOTE] 
-    > 시간 설정에 있는 서버 마스터 키를 SQL Server 인스턴스에 대해 생성 되며에 배치 `var/opt/mssql/secrets/machine-key`합니다. Linux에서 SQL Server mssql 라는 로컬 계정으로 항상 실행 됩니다. 로컬 계정 이기 때문에 해당 id는 노드 간에 공유 되지 않습니다. 따라서 서버 마스터 키를 해독 하도록 각 로컬 mssql 계정에 액세스할 수 있도록 각 보조 노드에 주 노드에서 암호화 키를 복사 해야 합니다. 
+    > 설정 시 SQL Server 인스턴스의 서버 마스터 키가 생성되어 `var/opt/mssql/secrets/machine-key`에 저장됩니다. Linux에서 SQL Server는 항상 mssql이라는 로컬 계정으로 실행됩니다. 이 계정은 로컬 계정이므로 해당 ID가 노드 간에 공유되지 않습니다. 따라서 각 로컬 mssql 계정이 서버 마스터 키의 암호 해독을 위해 액세스할 수 있도록 주 노드에서 각 보조 노드로 암호화 키를 복사해야 합니다. 
 
-1.  주 노드에서 Pacemaker 용 SQL server 로그인 만들기 및 실행에 로그인 권한을 부여 `sp_server_diagnostics`합니다. Pacemaker는 노드는 SQL Server를 실행 중인지 확인 하려면이 계정을 사용 합니다. 
+1.  주 노드에서 Pacemaker용 SQL Server 로그인을 만들고 `sp_server_diagnostics` 실행 권한을 로그인에 부여합니다. Pacemaker는 이 계정을 사용하여 SQL Server를 실행 중인 노드를 확인합니다. 
 
     ```bash
     sudo systemctl start mssql-server
     ```
    
-   SQL Server에 연결할 `master` sa 계정을 사용 하 여 데이터베이스에 있으며 다음을 실행 합니다.
+   sa 계정을 사용하여 SQL Server `master` 데이터베이스에 연결하고 다음 명령을 실행합니다.
 
    ```sql
    USE [master]
@@ -73,26 +73,26 @@ SQL Server 2 노드 공유 디스크 장애 조치 클러스터 인스턴스는 
    ALTER SERVER ROLE [sysadmin] ADD MEMBER [<loginName>]
    ```
 
-   또는 더 세부적인 수준에서 권한을 설정할 수 있습니다. Pacemaker 로그인에 필요 `VIEW SERVER STATE` sp_server_diagnostics 사용 하 여 상태를 쿼리 하 `setupadmin` 및 `ALTER ANY LINKED SERVER` sp_dropserver 및 sp_addserver 실행 하 여 FCI 인스턴스 이름을 리소스 이름으로 업데이트 합니다. 
+   또는 더 세부적인 수준에서 권한을 설정할 수 있습니다. Pacemaker 로그인은 `VIEW SERVER STATE`를 통해 sp_server_diagnostics에서 성능 상태를 쿼리하고, `setupadmin` 및 `ALTER ANY LINKED SERVER`를 통해 sp_dropserver 및 sp_addserver를 실행하여 FCI 인스턴스 이름을 리소스 이름으로 업데이트해야 합니다. 
 
-1. 주 노드를 중지 하 고 SQL Server를 사용 하지 않도록 설정 합니다. 
+1. 주 노드에서 SQL Server를 중지하고 사용하지 않도록 설정합니다. 
 
-## <a name="configure-the-hosts-file"></a>호스트 파일 구성
+## <a name="configure-the-hosts-file"></a>hosts 파일 구성
 
-각 클러스터 노드에서 호스트 파일을 구성 합니다. 호스트 파일에는 IP 주소 및 모든 클러스터 노드의 이름이 포함 되어야 합니다.
+각 클러스터 노드에서 hosts 파일을 구성합니다. hosts 파일은 모든 클러스터 노드의 IP 주소와 이름을 포함해야 합니다.
 
-1. 각 노드에 대 한 IP 주소를 확인 합니다. 다음 스크립트를 현재 노드의 IP 주소를 보여 줍니다. 
+1. 각 노드의 IP 주소를 확인합니다. 다음 스크립트는 현재 노드의 IP 주소를 보여 줍니다. 
 
     ```bash
     sudo ip addr show
     ```
 
-1. 각 노드의 컴퓨터 이름을 설정 합니다. 각 노드는 고유한 이름을 15 자 이하의 합니다. 컴퓨터 이름을 추가 하 여 설정 `/etc/hosts`합니다. 다음 스크립트를 사용하면 `/etc/hosts`를 `vi`로 편집할 수 있습니다. 
+1. 각 노드에서 컴퓨터 이름을 설정합니다. 각 노드에 15자 이하의 고유 이름을 지정합니다. 컴퓨터 이름을 `/etc/hosts`에 추가하여 설정합니다. 다음 스크립트를 사용하면 `/etc/hosts`를 `vi`로 편집할 수 있습니다. 
 
    ```bash
    sudo vi /etc/hosts
    ```
-   다음 예와 `/etc/hosts` 라는 두 노드에 대 한 추가 기능을 사용 하 여 `sqlfcivm1` 고 `sqlfcivm2`입니다.
+   다음 예제에서는 `sqlfcivm1` 및 `sqlfcivm2`라는 두 노드의 정보가 추가된 `/etc/hosts`를 보여 줍니다.
 
    ```bash
    127.0.0.1   localhost localhost4 localhost4.localdomain4
@@ -101,15 +101,15 @@ SQL Server 2 노드 공유 디스크 장애 조치 클러스터 인스턴스는 
    10.128.16.77 sqlfcivm2
    ```
 
-## <a name="configure-storage--move-database-files"></a>저장소 구성 및 데이터베이스 파일 이동  
+## <a name="configure-storage--move-database-files"></a>스토리지 구성 및 데이터베이스 파일 이동  
 
-두 노드에서 액세스할 수 있는 저장소를 제공 해야 합니다. ISCSI, NFS 또는 SMB를 사용할 수 있습니다. 저장소 구성, 클러스터 노드로 저장소를 제공 하 고 새 저장소로 데이터베이스 파일을 이동 합니다. 다음 문서에서는 각 저장소 형식에 대 한 단계를 설명합니다.
+두 노드에서 모두 액세스할 수 있는 스토리지를 제공해야 합니다. iSCSI, NFS 또는 SMB를 사용할 수 있습니다. 스토리지를 구성하고 클러스터 노드에 스토리지를 제공한 다음, 데이터베이스 파일을 새 스토리지로 이동합니다. 다음 문서에서는 각 스토리지 유형의 단계를 설명합니다.
 
-- [장애 조치 클러스터 인스턴스-iSCSI-Linux의 SQL Server 구성](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-- [장애 조치 클러스터 인스턴스-NFS-Linux의 SQL Server 구성](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-- [장애 조치 클러스터 인스턴스-SMB-Linux의 SQL Server 구성](sql-server-linux-shared-disk-cluster-configure-smb.md)
+- [장애 조치(failover) 클러스터 인스턴스 구성 - iSCSI - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+- [장애 조치(failover) 클러스터 인스턴스 구성 - NFS - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+- [장애 조치(failover) 클러스터 인스턴스 구성 - SMB - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)
 
-## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>설치 하 고 각 클러스터 노드에서 Pacemaker 구성
+## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>각 클러스터 노드에 Pacemaker 설치 및 구성
 
 1. 두 클러스터 노드에서 모두 Pacemaker 로그인을 위한 SQL Server 사용자 이름 및 암호를 저장할 파일을 만듭니다. 
 
@@ -130,9 +130,9 @@ SQL Server 2 노드 공유 디스크 장애 조치 클러스터 인스턴스는 
    sudo firewall-cmd --reload
    ```
 
-   > 다음 포트 pacemaker 클러스터의 다른 노드와 통신할 수를 열어야 할 기본 제공 고가용성 구성 되지 않은 다른 방화벽을 사용 하는 경우
+   > 기본 제공된 고가용성 구성이 없는 또 다른 방화벽을 사용하는 경우 Pacemaker가 클러스터의 다른 노드와 통신할 수 있으려면 다음 포트를 열어야 합니다.
    >
-   > * TCP: 2224 3121, 21064 포트
+   > * TCP: 포트 2224, 3121, 21064
    > * UDP: 포트 5405
 
 1. 각 노드에 Pacemaker 패키지를 설치합니다.
@@ -159,17 +159,17 @@ SQL Server 2 노드 공유 디스크 장애 조치 클러스터 인스턴스는 
    sudo yum install mssql-server-ha
    ```
 
-## <a name="configure-the-failover-cluster-instance"></a>장애 조치 클러스터 인스턴스 구성
+## <a name="configure-the-failover-cluster-instance"></a>장애 조치(failover) 클러스터 인스턴스 구성
 
-FCI는 리소스 그룹에 만들어집니다. 리소스 그룹 제약 조건에 대 한 필요성을 줄여 줍니다 하므로 조금 쉽습니다. 그러나 시작 순서로 리소스 그룹에 리소스를 추가 합니다. 시작 하는 순서는: 
+FCI는 리소스 그룹에 만들어집니다. 리소스 그룹을 사용하면 제약 조건이 덜 필요하므로 구성 작업이 좀 더 간편합니다. 그러나 시작되어야 하는 순서대로 리소스를 리소스 그룹에 추가합니다. 시작되어야 하는 순서는 다음과 같습니다. 
 
-1. 저장소 리소스
+1. 스토리지 리소스
 2. 네트워크 리소스
-3. 응용 프로그램 리소스
+3. 애플리케이션 리소스
 
-이 예제에서는 NewLinFCIGrp 그룹에서 FCI를 만듭니다. 리소스 그룹의 이름을 Pacemaker에서 생성 된 모든 리소스에서 고유 해야 합니다.
+이 예제에서는 NewLinFCIGrp 그룹에 FCI를 만듭니다. 리소스 그룹의 이름은 Pacemaker에 생성된 모든 리소스에서 고유해야 합니다.
 
-1.  디스크 리소스를 만듭니다. 문제가 없는 경우에 다시 응답을 받습니다. 디스크 리소스를 만드는 방법은 저장소 유형에 따라 다릅니다. 다음은 각 저장소 형식에 대 한 예입니다. 클러스터 된 저장소에 대 한 저장소 형식에 적용 되는 예제를 사용 합니다.
+1.  디스크 리소스를 만듭니다. 문제가 없으면 응답이 반환되지 않습니다. 디스크 리소스를 만드는 방법은 스토리지 유형에 따라 다릅니다. 다음은 각 스토리지 유형의 예제입니다. 해당 클러스터형 스토리지의 스토리지 유형에 적용되는 예제를 사용합니다.
 
     **iSCSI**
 
@@ -177,15 +177,15 @@ FCI는 리소스 그룹에 만들어집니다. 리소스 그룹 제약 조건에
     sudo pcs resource create <iSCSIDiskResourceName> Filesystem device="/dev/<VolumeGroupName>/<LogicalVolumeName>" directory="<FolderToMountiSCSIDisk>" fstype="<FileSystemType>" --group RGName
     ```
 
-    \<iSCSIDIskResourceName > iSCSI 디스크에 연결 된 리소스의 이름
+    \<iSCSIDIskResourceName>은 iSCSI 디스크와 연결된 리소스의 이름입니다.
 
-    \<VolumeGroupName > 볼륨 그룹의 이름  
+    \<VolumeGroupName>은 볼륨 그룹의 이름입니다.  
 
-    \<LogicalVolumeName > 만든 논리 볼륨의 이름  
+    \<LogicalVolumeName>은 생성된 논리 볼륨의 이름입니다.  
 
-    \<FolderToMountiSCSIDIsk > 디스크를 탑재 하는 폴더 (기본 위치와 시스템 데이터베이스에 대 한 것 /var/opt/mssql/data)
+    \<FolderToMountiSCSIDIsk>는 디스크를 탑재할 폴더입니다(시스템 데이터베이스와 기본 위치의 경우 /var/opt/mssql/data임).
 
-    \<FileSystemType > 항목 서식 지정 된 방법 및 어떤 배포 지원에 따라 EXT4 또는 XFS 것입니다. 
+    \<FileSystemType>은 항목에 지정된 형식과 배포에서 지원하는 항목에 따라 EXT4 또는 XFS가 됩니다. 
 
     **NFS**
 
@@ -194,13 +194,13 @@ FCI는 리소스 그룹에 만들어집니다. 리소스 그룹 제약 조건에
     mount -t nfs4 IPAddressOfNFSServer:FolderOnNFSServer /var/opt/mssql/data -o 
     ```
 
-    \<NFSDIskResourceName > NFS 공유와 연결 된 리소스의 이름
+    \<NFSDIskResourceName>은 NFS 공유와 연결된 리소스의 이름입니다.
 
-    \<IPAddressOfNFSServer >는 사용 하고자 하는 NFS 서버의 IP 주소
+    \<IPAddressOfNFSServer>는 사용하려는 NFS 서버의 IP 주소입니다.
 
-    \<FolderOnNFSServer > NFS 공유의 이름
+    \<FolderOnNFSServer>는 NFS 공유의 이름입니다.
 
-    \<FolderToMountNFSShare > 디스크를 탑재 하는 폴더 (기본 위치와 시스템 데이터베이스에 대 한 것 /var/opt/mssql/data)
+    \<FolderToMountNFSShare>는 디스크를 탑재할 폴더입니다(시스템 데이터베이스와 기본 위치의 경우 /var/opt/mssql/data임).
 
     예는 다음과 같습니다.
 
@@ -214,61 +214,61 @@ FCI는 리소스 그룹에 만들어집니다. 리소스 그룹 제약 조건에
     sudo pcs resource create SMBDiskResourceName Filesystem device="//<ServerName>/<ShareName>" directory="<FolderName>" fstype=cifs options="vers=3.0,username=<UserName>,password=<Password>,domain=<ADDomain>,uid=<mssqlUID>,gid=<mssqlGID>,file_mode=0777,dir_mode=0777" --group <RGName>
     ```
 
-    \<서버 이름 >은 SMB 공유를 사용 하 여 서버의 이름
+    \<ServerName>은 SMB 공유가 있는 서버의 이름입니다.
 
-    \<공유 이름 >은 공유의 이름
+    \<ShareName>은 공유의 이름입니다.
 
-    \<폴더 이름 >은 마지막 단계에서 만든 폴더의 이름
+    \<FolderName>은 마지막 단계에서 만든 폴더의 이름입니다.
     
-    \<사용자 이름 >은 공유에 액세스 하는 사용자의 이름
+    \<UserName>은 공유에 액세스할 사용자의 이름입니다.
 
-    \<암호 > 사용자에 대 한 암호
+    \<Password>는 사용자의 암호입니다.
 
-    \<ADDomain > (해당 하는 경우 Windows Server 기반 SMB 공유를 사용 하는 경우)은 AD DS 도메인
+    \<ADDomain>은 AD DS 도메인입니다(Windows Server 기반 SMB 공유를 사용할 때 해당되는 경우).
 
-    \<mssqlUID > mssql 사용자 UID가
+    \<mssqlUID>는 mssql 사용자의 UID입니다.
 
-    \<mssqlGID > mssql 사용자의 GID는
+    \<mssqlGID>는 mssql 사용자의 GID입니다.
 
-    \<RGName > 리소스 그룹의 이름
+    \<RGName>은 리소스 그룹의 이름입니다.
  
-2.  FCI에서 사용 될 IP 주소를 만듭니다. 문제가 없는 경우에 다시 응답을 받습니다.
+2.  FCI에서 사용할 IP 주소를 만듭니다. 문제가 없으면 응답이 반환되지 않습니다.
 
     ```bash
     sudo pcs resource create <IPResourceName> ocf:heartbeat:IPaddr2 ip=<IPAddress> nic=<NetworkCard> cidr_netmask=<NetMask> --group <RGName>
     ```
 
-    \<IPResourceName >은 IP 주소를 사용 하 여 연결 된 리소스의 이름
+    \<IPResourceName>은 IP 주소와 연결된 리소스의 이름입니다.
 
-    \<Ip 주소 > fci는 IP 주소
+    \<IPAddress>는 FCI의 IP 주소입니다.
 
-    \<NetworkCard > (예: eth0) 서브넷에 연결 된 네트워크 카드
+    \<NetworkCard>는 서브넷과 연결된 네트워크 카드(즉, eth0)입니다.
 
-    \<네트워크 마스크 >은 서브넷 (예: 24)의 네트워크 마스크
+    \<NetMask>는 서브넷의 네트워크 마스크(즉, 24)입니다.
 
-    \<RGName > 리소스 그룹의 이름
+    \<RGName>은 리소스 그룹의 이름입니다.
  
-3.  FCI 리소스를 만듭니다. 문제가 없는 경우에 다시 응답을 받습니다.
+3.  FCI 리소스를 만듭니다. 문제가 없으면 응답이 반환되지 않습니다.
 
     ```bash
     sudo pcs resource create FCIResourceName ocf:mssql:fci op defaults timeout=60s --group RGName
     ```
 
-    \<FCIResourceName >는 리소스의 이름 뿐만 아니라 FCI와 사용 하 여 연결 된 이름입니다. 이 새로운 사용자가 응용 프로그램 사용 하 여 연결 합니다. 
+    \<FCIResourceName>은 리소스 이름뿐 아니라 FCI와 연결된 이름입니다. 사용자와 애플리케이션은 이 이름을 사용하여 연결합니다. 
 
-    \<RGName > 리소스 그룹의 이름입니다.
+    \<RGName>은 리소스 그룹의 이름입니다.
  
-4.  명령을 실행 하 여 `sudo pcs resource`입니다. FCI는 온라인 상태 여야 합니다.
+4.  `sudo pcs resource` 명령을 실행합니다. FCI가 온라인 상태여야 합니다.
  
-5.  SSMS 또는 FCI의 / dns 이름을 사용 하 여 sqlcmd를 사용 하 여 FCI에 연결 합니다.
+5.  FCI의 DNS/리소스 이름을 사용하여 SSMS 또는 sqlcmd를 통해 FCI에 연결합니다.
 
-6.  문을 `SELECT @@SERVERNAME`합니다. FCI의 이름을 반환 해야 합니다.
+6.  `SELECT @@SERVERNAME` 문을 실행합니다. FCI의 이름이 반환됩니다.
 
-7.  문을 `SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')`합니다. FCI에서 실행 되는 노드의 이름을 반환 해야 합니다.
+7.  `SELECT SERVERPROPERTY('ComputerNamePhysicalNetBIOS')` 문을 실행합니다. FCI를 실행하는 노드의 이름이 반환됩니다.
 
-8.  FCI에 다른 노드를 수동으로 실패 합니다. 아래에 있는 지침을 참조 하세요 [Operate 장애 조치 클러스터 인스턴스-Linux의 SQL Server](sql-server-linux-shared-disk-cluster-operate.md)합니다.
+8.  수동으로 FCI를 다른 노드로 장애 조치(failover)합니다. [장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-operate.md) 아래의 지침을 참조하세요.
 
-9.  마지막으로, FCI를 원래 노드로 다시 실패 하 고 공동 배치 제약 조건을 제거 합니다.
+9.  마지막으로, FCI를 원래 노드로 장애 복구(failback)하고 공동 배치 제약 조건을 제거합니다.
 
 <!---
 
@@ -280,18 +280,18 @@ FCI는 리소스 그룹에 만들어집니다. 리소스 그룹 제약 조건에
 -->
 ## <a name="summary"></a>요약
 
-이 자습서에서는 다음 작업을 완료 했습니다.
+이 자습서에서는 다음 작업을 완료했습니다.
 
 > [!div class="checklist"]
-> * 설정 및 Linux 구성
+> * Linux 설정 및 구성
 > * SQL Server 설치 및 구성
-> * 호스트 파일 구성
-> * 공유 저장소를 구성 하 고 데이터베이스 파일 이동
-> * 설치 하 고 각 클러스터 노드에서 Pacemaker 구성
-> * 장애 조치 클러스터 인스턴스 구성
+> * hosts 파일 구성
+> * 공유 스토리지 구성 및 데이터베이스 파일 이동
+> * 각 클러스터 노드에 Pacemaker 설치 및 구성
+> * 장애 조치(failover) 클러스터 인스턴스 구성
 
 ## <a name="next-steps"></a>다음 단계
 
-- [Linux의 SQL Server 장애 조치 클러스터 인스턴스-작동](sql-server-linux-shared-disk-cluster-operate.md)
+- [장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-operate.md)
 
 <!--Image references-->

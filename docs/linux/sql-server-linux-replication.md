@@ -1,6 +1,6 @@
 ---
-title: Linux에서 SQL Server 복제
-description: 이 문서에서는 Linux의 SQL Server 복제를 설명 합니다.
+title: Linux의 SQL Server 복제
+description: 이 문서에서는 Linux에서 SQL Server 복제에 대해 설명합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -11,52 +11,52 @@ ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b049866d9752485cb1b9eb609404a3bd86f28a41
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68065190"
 ---
-# <a name="sql-server-replication-on-linux"></a>Linux에서 SQL Server 복제
+# <a name="sql-server-replication-on-linux"></a>Linux의 SQL Server 복제
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 에 대 한 SQL Server 복제에서는 Linux의 SQL Server의 인스턴스.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]에서는 LSQL Server on Linux 인스턴스에 SQL Server 복제를 도입했습니다.
 
-SQL Server Management Studio (SSMS) 사용 하 여 Linux에서 복제 구성 [복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)합니다.
+SSMS(SQL Server Management Studio) [복제 저장 프로시저](../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)를 사용하여 Linux에서 복제를 구성합니다.
 
-SQL Server 인스턴스의 모든 복제 역할에 참여할 수 있습니다.
+SQL Server의 인스턴스는 모든 복제 역할에 참여할 수 있습니다.
 
 * 게시자
 * 배포자
 * 구독자
 
-복제 스키마를 혼합 하 고 운영 체제 플랫폼과 일치 수 있습니다. 예를 들어 복제 스키마는 게시자 및 배포자에 대해 Linux의 SQL Server의 인스턴스를 포함할 수 있습니다 및 Windows 뿐만 아니라 Linux의 SQL Server의 인스턴스를 포함 하는 구독자입니다.
+복제 스키마는 운영 체제 플랫폼과 적절히 조합할 수 있습니다. 예를 들어 복제 스키마에는 게시자 및 배포자에 대한 SQL Server on Linux 인스턴스가 포함될 수 있으며, 구독자에는 Windows 및 Linux의 SQL Server 인스턴스가 포함됩니다.
 
-Linux의 SQL Server 인스턴스에서 모든 유형의 복제에 참여할 수 있습니다.
+Linux의 SQL Server 인스턴스는 모든 유형의 복제에 참여할 수 있습니다.
 
 * 트랜잭션
 * 병합
 * 스냅샷
 
-복제에 대 한 자세한 내용은 [SQL Server 복제 설명서](../relational-databases/replication/sql-server-replication.md)합니다.
+복제에 대한 자세한 내용은 [SQL Server 복제 설명서](../relational-databases/replication/sql-server-replication.md)를 참조하세요.
 
 ## <a name="supported-features"></a>지원되는 기능
 
-에 대 한 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 다음 복제 기능이 지원 됩니다.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 경우 다음 복제 기능이 지원됩니다.
 
 * 스냅샷 복제
 * 트랜잭션 복제
 * 병합 복제
 * 피어 투 피어 복제
-* 기본이 아닌 포트를 사용 하 여 복제 <!--Add link to explanation-->
-* AD 인증을 사용 하 여 복제
+* 기본 포트가 아닌 포트를 사용하는 복제 <!--Add link to explanation-->
+* AD 인증을 사용하는 복제
 * Windows 및 Linux에서 복제 구성
-* 트랜잭션 복제에 대 한 즉시 업데이트
+* 트랜잭션 복제에 대한 즉시 업데이트
 
 ## <a name="limitations"></a>제한 사항
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 다음과 같은 기능을 지원 하지 않습니다.
+다음 기능은 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]에서 지원되지 않습니다.
 
 * 즉시 업데이트 구독자
 * Oracle 게시

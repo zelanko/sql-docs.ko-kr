@@ -10,12 +10,12 @@ ms.author: maghan
 ms.custom: seodec18
 ms.date: 07/11/2019
 ms.reviewer: alayu; sstein
-ms.openlocfilehash: a2a4d4e755908d544e79b751d64ee99cad6fc96c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ff212d44fc16ad4a8c6366eda88d92fa78f20d84
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959698"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811225"
 ---
 # <a name="download-and-install-azure-data-studio"></a>Azure Data Studio 다운로드 및 설치
 
@@ -41,7 +41,6 @@ ms.locfileid: "67959698"
 
 ‘사용자 설치 관리자’는 관리자 권한이 필요하지 않기 때문에 설치와 업그레이드가 모두 간소화되므로 권장됩니다.  사용자 설치 관리자는 해당 위치가 사용자 Local AppData(LOCALAPPDATA) 폴더에 있기 때문에 관리자 권한이 필요하지 않습니다. 또한 사용자 설치 관리자는 더 원활한 백그라운드 업데이트 환경을 제공합니다. 자세한 내용은 [Windows용 사용자 설치 프로그램](https://code.visualstudio.com/updates/v1_26#_user-setup-for-windows)을 참조하세요.
 
-
 **사용자 설치 관리자**(권장)
 
 1. [Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ‘사용자’ 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2098449)를 다운로드하여 실행합니다. 
@@ -51,7 +50,6 @@ ms.locfileid: "67959698"
 
 1. [Windows용 [!INCLUDE[name-sos](../includes/name-sos-short.md)] ‘시스템’ 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2098450 )를 다운로드하여 실행합니다. 
 2. [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] 앱을 시작합니다.
-
 
 **zip 파일**
 
@@ -141,6 +139,7 @@ Windows Installer를 사용하여 [!INCLUDE[name-sos-short](../includes/name-sos
 - Windows 8.1(64비트)
 - Windows 8(64비트)
 - Windows 7(SP1)(64비트) - [KB2533623](https://www.microsoft.com/download/details.aspx?id=26767) 필요
+- Windows Server 2019
 - Windows Server 2016
 - Windows Server 2012 R2(64비트)
 - Windows Server 2012(64비트)
@@ -157,8 +156,6 @@ Windows Installer를 사용하여 [!INCLUDE[name-sos-short](../includes/name-sos
 - Ubuntu 16.04
 
 ## <a name="recommended-system-requirements"></a>권장 시스템 요구 사항
-환경을 최적화하려면 권장 시스템 요구 사항을 사용합니다.
-[메모리 수량화를 위한 업데이트 필요]
 
 |             | CPU 코어 수 | 메모리/RAM |
 |:-----------|:---------|:----------|

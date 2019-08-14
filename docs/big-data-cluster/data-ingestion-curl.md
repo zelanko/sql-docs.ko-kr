@@ -1,7 +1,7 @@
 ---
-title: Curl을 사용 하 여 HDFS에서 데이터 로드 | Microsoft Docs
+title: curl을 사용하여 HDFS로 데이터 로드 | Microsoft Docs
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 빅 데이터 클러스터에서 HDFS에 데이터를 로드 하는 데 curl을 사용 합니다.
+description: curl을 사용하여 SQL Server 2019 빅 데이터 클러스터의 HDFS로 데이터를 로드합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,50 +10,50 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: aae991c6dfdade4145f1e5578273e3b6aeb83299
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958639"
 ---
-# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에서 HDFS에 데이터를 로드 하는 데 curl을 사용
+# <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>curl을 사용하여 SQL Server 빅 데이터 클러스터의 HDFS로 데이터 로드
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서를 사용 하는 방법에 설명 **curl** SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 HDFS에 데이터를 로드할 수 있습니다.
+이 문서에서는 **curl**을 사용하여 SQL Server 2019 빅 데이터 클러스터(미리 보기)의 HDFS로 데이터를 로드하는 방법을 설명합니다.
 
 ## <a name="obtain-the-service-external-ip"></a>서비스 외부 IP 가져오기
 
-WebHDFS는 배포가 완료 되 고 액세스 Knox를 통과 하는 경우 시작 됩니다. Knox 끝점을 호출 하는 Kubernetes 서비스를 통해 노출 되 **게이트웨이 svc 외부**합니다.  필요한 파일을 업로드/다운로드 하는 데 필요한 WebHDFS URL을 만들려면 합니다 **게이트웨이 svc 외부** 서비스 외부 IP 주소 및 빅 데이터 클러스터의 이름입니다. 가져올 수 있습니다 합니다 **게이트웨이 svc 외부** 다음 명령을 실행 하 여 외부 IP 주소를 서비스 합니다.
+배포가 완료되면 WebHDFS가 시작되고 해당 액세스가 Knox를 통과합니다. Knox 엔드포인트는 **gateway-svc-external**이라는 Kubernetes 서비스를 통해 공개됩니다.  파일을 업로드/다운로드하는 데 필요한 WebHDFS URL을 만들려면 **gateway-svc-external** 서비스 외부 IP 주소와 빅 데이터 클러스터의 이름이 필요합니다. 다음 명령을 실행하여 **gateway-svc-external** 서비스 외부 IP 주소를 가져올 수 있습니다.
 
 ```bash
 kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
-> `<big data cluster name>` 배포 구성 파일에 지정 된 클러스터의 이름입니다. 기본 이름은 `mssql-cluster`입니다.
+> 여기서 `<big data cluster name>`은 배포 구성 파일에서 지정한 클러스터의 이름입니다. 기본 이름은 `mssql-cluster`입니다.
 
-## <a name="construct-the-url-to-access-webhdfs"></a>WebHDFS를 액세스 하는 URL 생성
+## <a name="construct-the-url-to-access-webhdfs"></a>WebHDFS에 액세스하는 데 사용할 URL 생성
 
-이제는 WebHDFS를 다음과 같이 액세스 하기 위한 URL을 생성할 수 있습니다.
+이제 다음과 같이 WebHDFS에 액세스하는 데 사용할 URL을 생성할 수 있습니다.
 
 `https://<gateway-svc-external service external IP address>:30443/gateway/default/webhdfs/v1/`
 
-이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+예를 들어
 
 `https://13.66.190.205:30443/gateway/default/webhdfs/v1/`
 
-## <a name="list-a-file"></a>파일 목록
+## <a name="list-a-file"></a>파일 나열
 
-목록 파일에 **hdfs: / / / airlinedata**, 다음 curl 명령을 사용 합니다.
+**hdfs:///airlinedata** 아래에 있는 파일을 나열하려면 다음 curl 명령을 사용합니다.
 
 ```bash
 curl -i -k -u root:root-password -X GET 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/?op=liststatus'
 ```
 
-## <a name="put-a-local-file-into-hdfs"></a>HDFS에 로컬 파일을 저장 합니다.
+## <a name="put-a-local-file-into-hdfs"></a>HDFS에 로컬 파일 저장
 
-새 파일을 저장할 **test.csv** airlinedata 디렉터리로 로컬 디렉터리에서 다음 curl 명령을 사용 하 여 (합니다 **Content-type** 매개 변수는 필수):
+로컬 디렉터리의 새 파일 **test.csv**를 airlinedata 디렉터리에 저장하려면 다음 curl 명령을 사용합니다(**Content-Type** 매개 변수가 필요함).
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/airlinedata/test.csv?op=create' -H 'Content-Type: application/octet-stream' -T 'test.csv'
@@ -61,7 +61,7 @@ curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP ext
 
 ## <a name="create-a-directory"></a>디렉터리 만들기
 
-디렉터리를 만들려면 **테스트할** 아래에서 `hdfs:///`, 다음 명령을 사용 하 여:
+`hdfs:///` 아래에 **test** 디렉터리를 만들려면 다음 명령을 사용합니다.
 
 ```bash
 curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP external address>:30443/gateway/default/webhdfs/v1/test?op=MKDIRS'
@@ -69,4 +69,4 @@ curl -i -L -k -u root:root-password -X PUT 'https://<gateway-svc-external IP ext
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 참조 하세요. [빅 데이터 클러스터 SQL Server 란?](big-data-cluster-overview.md)합니다.
+SQL Server 빅 데이터 클러스터에 대한 자세한 내용은 [SQL Server 빅 데이터 클러스터란?](big-data-cluster-overview.md)을 참조하세요.

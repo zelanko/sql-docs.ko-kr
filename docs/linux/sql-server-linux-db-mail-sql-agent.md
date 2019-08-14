@@ -1,6 +1,6 @@
 ---
-title: DB 메일 및 Linux에서 SQL 에이전트를 사용 하 여 전자 메일 경고
-description: 이 문서에서는 Linux의 SQL Server를 사용 하 여 DB 메일 및 전자 메일 경고를 사용 하는 방법 설명
+title: Linux에서 SQL 에이전트와 함께 DB 메일 및 메일 경고 사용
+description: 이 문서에서는 SQL Server on Linux에서 DB 메일 및 메일 경고를 사용하는 방법을 설명합니다.
 author: VanMSFT
 ms.author: vanto
 ms.date: 02/20/2018
@@ -9,19 +9,19 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: tbd
 ms.openlocfilehash: 31f8931f6e0eddc67b2e58ae794631a9ae6555b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077455"
 ---
-# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>DB 메일 및 Linux에서 SQL 에이전트를 사용 하 여 전자 메일 경고
+# <a name="db-mail-and-email-alerts-with-sql-agent-on-linux"></a>Linux에서 SQL 에이전트와 함께 DB 메일 및 메일 경고 사용
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-다음 단계에서는 DB 메일을 설정 하 고 SQL Server 에이전트와 함께 사용 하는 방법을 보여 줍니다. (**mssql server 에이전트**) linux. 
+다음 단계에서는 Linux에서 DB 메일을 설정하고 SQL Server 에이전트(**mssql-server-agent**)와 함께 사용하는 방법을 보여 줍니다. 
 
-## <a name="1-enable-db-mail"></a>1. DB 메일을 사용 하도록 설정
+## <a name="1-enable-db-mail"></a>1. DB 메일 사용
 
 ```sql
 USE master 
@@ -61,7 +61,7 @@ EXECUTE msdb.dbo.sysmail_add_profile_sp
 GO
 ```
 
-## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4. 데이터베이스 메일 프로필을 데이터베이스 메일 계정을 추가합니다
+## <a name="4-add-the-database-mail-account-to-a-database-mail-profile"></a>4. 데이터베이스 메일 프로필에 데이터베이스 메일 계정 추가
 ```sql
 EXECUTE msdb.dbo.sysmail_add_principalprofile_sp 
 @profile_name = 'default', 
@@ -77,9 +77,9 @@ EXECUTE msdb.dbo.sysmail_add_profileaccount_sp
 @sequence_number = 1;  
  ```
  
-## <a name="6-send-test-email"></a>6. 테스트 전자 메일 보내기
+## <a name="6-send-test-email"></a>6. 테스트 메일 보내기
 > [!NOTE]
-> 전자 메일 클라이언트를 이동 하 고는 "하면 덜 안전한 클라이언트 메일을 보낼 수 있습니다.."를 사용 하도록 설정 해야 할 수 있습니다. 일부 클라이언트는 전자 메일 디먼으로 DB 메일을 인식합니다.
+> 메일 클라이언트로 이동하여 “보안 수준이 낮은 클라이언트에서 메일을 보내도록 허용”을 사용하도록 설정해야 할 수도 있습니다. 일부 클라이언트는 DB 메일을 메일 디먼으로 인식하지 않습니다.
 
 ```
 EXECUTE msdb.dbo.sp_send_dbmail 
@@ -90,8 +90,8 @@ EXECUTE msdb.dbo.sp_send_dbmail
 GO
 ```
 
-## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. Mssql conf 또는 환경 변수를 사용 하 여 DB 메일 프로필 설정
-DB 메일 프로필을 등록 하려면 mssql conf 유틸리티 또는 환경 변수를 사용할 수 있습니다. 이 경우 프로필 기본을 부르겠습니다.
+## <a name="7-set-db-mail-profile-using-mssql-conf-or-environment-variable"></a>7. mssql-conf 또는 환경 변수를 사용하여 DB 메일 프로필 설정
+mssql-conf 유틸리티 또는 환경 변수를 사용하여 DB 메일 프로필을 등록할 수 있습니다. 이 예제에서는 프로필 기본값을 호출해 보겠습니다.
 
 ```bash
 # via mssql-conf
@@ -100,7 +100,7 @@ sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile default
 MSSQL_AGENT_EMAIL_PROFILE=default
 ```
 
-## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. SQLAgent 작업 알림에 운영자 설정 
+## <a name="8-set-up-an-operator-for-sqlagent-job-notifications"></a>8. SQLAgent 작업 알림의 운영자 설정 
 
 ```sql
 EXEC msdb.dbo.sp_add_operator 
@@ -111,7 +111,7 @@ EXEC msdb.dbo.sp_add_operator
 GO 
 ```
 
-## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. ' 테스트 에이전트 작업 ' 성공 시 전자 메일 보내기 
+## <a name="9-send-email-when-agent-test-job-succeeds"></a>9. ‘에이전트 테스트 작업’ 성공 시 메일 보내기 
 
 ```
 EXEC msdb.dbo.sp_update_job 
@@ -122,4 +122,4 @@ GO
 ```
 
 ## <a name="next-steps"></a>다음 단계
-SQL Server 에이전트를 사용 하 여 만들기, 예약 하며, 작업을 실행 하는 방법에 대 한 자세한 내용은 참조 하세요. [Linux에서 SQL Server 에이전트 작업을 실행](sql-server-linux-run-sql-server-agent-job.md)합니다.
+SQL Server 에이전트를 사용하여 작업을 만들고 예약 및 실행하는 방법에 대한 자세한 내용은 [Linux에서 SQL Server 에이전트 작업 실행](sql-server-linux-run-sql-server-agent-job.md)을 참조하세요.

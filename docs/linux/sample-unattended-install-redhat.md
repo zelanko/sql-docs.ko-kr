@@ -1,7 +1,7 @@
 ---
-title: Red Hat Enterprise Linux에서 SQL Server의 무인된 설치
+title: Red Hat Enterprise Linux에서 SQL Server 무인 설치
 titleSuffix: SQL Server
-description: SQL Server 스크립트 샘플-Red Hat Enterprise Linux에서 무인된 설치
+description: SQL Server 스크립트 샘플 - Red Hat Enterprise Linux에서 무인 설치
 author: VanMSFT
 ms.author: vanto
 ms.date: 10/02/2017
@@ -9,29 +9,29 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 696ba88a9f2d5f29de8dc3afb45af8c392f2de68
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/30/2019
 ms.locfileid: "67910444"
 ---
-# <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>예제: Red Hat Enterprise Linux에 대 한 SQL Server 설치 스크립트를 무인된
+# <a name="sample-unattended-sql-server-installation-script-for-red-hat-enterprise-linux"></a>예제: Red Hat Enterprise Linux를 위한 무인 SQL Server 설치 스크립트
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 샘플 Bash 스크립트 대화형 입력 하지 않고 SQL Server 2017 Red Hat Enterprise Linux (RHEL)을 설치 합니다. 데이터베이스 엔진, SQL Server 에이전트, SQL Server 명령줄 도구를 설치 하는 예제를 제공 하 고 설치 후 단계를 수행 합니다. 필요에 따라 전체 텍스트 검색을 설치 하 고 관리 사용자를 만들 수 있습니다.
+이 샘플 Bash 스크립트는 대화형 입력 없이 RHEL(Red Hat Enterprise Linux)에 SQL Server 2017을 설치합니다. 이 스크립트는 데이터베이스 엔진, SQL Server 명령줄 도구 및 SQL Server 에이전트를 설치하는 예를 제공하고, 설치 후 단계를 수행합니다. 필요에 따라 전체 텍스트 검색을 설치하고 관리자를 만들 수 있습니다.
 
 > [!TIP]
-> 무인된 설치 스크립트를 사용할 필요가 없습니다, SQL Server를 설치 하는 가장 빠른 방법은 경우에 따라 합니다 [Red Hat에 대 한 빠른 시작](quickstart-install-connect-red-hat.md)합니다. 기타 설정 정보를 참조 하세요 [Linux의 SQL Server에 대 한 설치 지침은](sql-server-linux-setup.md)합니다.
+> 무인 설치 스크립트가 필요하지 않은 경우 SQL Server를 설치하는 가장 빠른 방법은 [Red Hat 빠른 시작](quickstart-install-connect-red-hat.md)을 따르는 것입니다. 다른 설치 정보는 [SQL Server on Linux 설치 지침](sql-server-linux-setup.md)을 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-- 최소 2GB의 메모리 Linux에서 SQL Server를 실행 해야 합니다.
-- 파일 시스템에 있어야 **XFS** 하거나 **EXT4**합니다. 와 같은 다른 파일 시스템 **BTRFS**, 지원 되지 않습니다.
-- 다른 시스템 요구 사항에 대해서는 [SQL Server on Linux에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)을 참조하십시오.
+- SQL Server on Linux를 실행하려면 2GB 이상의 메모리가 필요합니다.
+- 파일 시스템은 **XFS** 또는 **EXT4**여야 합니다. **BTRFS** 등의 다른 파일 시스템은 지원되지 않습니다.
+- 기타 시스템 요구 사항은 [SQL Server on Linux에 대한 시스템 요구 사항](sql-server-linux-setup.md#system)을 참조하세요.
 
 ## <a name="sample-script"></a>샘플 스크립트
-샘플 스크립트를 파일로 저장 한 다음이 사용자 지정 하려면 스크립트의 변수 값을 바꿉니다. 로 선택할 수 있습니다도 스크립팅 변수의 환경 변수를 스크립트 파일에서 제거 하기만 합니다.
+샘플 스크립트를 파일로 저장한 후 사용자 지정하여 스크립트에서 변수 값을 바꿉니다. 스크립트 파일에서 스크립트 변수를 제거하는 경우 스크립팅 변수를 환경 변수로 설정할 수도 있습니다.
 
 ```bash
 #!/bin/bash -e
@@ -153,17 +153,17 @@ echo Done!
 
 스크립트를 실행하려면
 
-1. 샘플에 원하는 텍스트 편집기에 붙여넣고 같은 기억 하기 쉬운 이름으로 저장 `install_sql.sh`합니다.
+1. 샘플을 즐겨 사용하는 텍스트 편집기에 붙여넣고 `install_sql.sh`와 같은 기억하기 쉬운 이름으로 저장합니다.
 
-1. 사용자 지정 `MSSQL_SA_PASSWORD`, `MSSQL_PID`, 및 다른 변수를 변경 하려고 합니다.
+1. `MSSQL_SA_PASSWORD`, `MSSQL_PID` 및 변경하려는 다른 변수를 사용자 지정합니다.
 
-1. 스크립트 실행 가능으로 표시
+1. 스크립트를 실행 파일로 표시
 
    ```bash
    chmod +x install_sql.sh
    ```
 
-1. 스크립트를 실행 합니다.
+1. 스크립트 실행
 
    ```bash
    ./install_sql.sh
@@ -171,39 +171,39 @@ echo Done!
 
 ## <a name="understanding-the-script"></a>스크립트 이해
 
-Bash 스크립트는 먼저 몇 가지 변수를 설정 됩니다.  이 샘플에서는 같은 스크립팅 변수 또는 환경 변수 수 있습니다.  변수의 `MSSQL_SA_PASSWORD` 됩니다 **필요한** 스크립트에 대해 만든 사용자 지정 변수는 다른 SQL Server 설치 합니다.  샘플 스크립트는 다음 단계를 수행합니다.
+Bash 스크립트가 수행하는 첫 번째 작업은 몇 가지 변수를 설정하는 것입니다.  이 변수는 샘플과 같은 스크립팅 변수이거나 환경 변수일 수 있습니다.  `MSSQL_SA_PASSWORD` 변수는 SQL Server 설치에 **필수**이며, 다른 변수는 스크립트용으로 생성된 사용자 지정 변수입니다.  샘플 스크립트는 다음 단계를 수행합니다.
 
 1. 공용 Microsoft GPG 키를 가져옵니다.
 
-1. SQL Server 및 명령줄 도구에 대 한 Microsoft 리포지토리를 등록 합니다.
+1. SQL Server 및 명령줄 도구를 위한 Microsoft 리포지토리를 등록합니다.
 
-1. 로컬 리포지토리를 업데이트 합니다.
+1. 로컬 리포지토리 업데이트
 
 1. SQL Server 설치
 
-1. SQL Server를 구성 합니다 ```MSSQL_SA_PASSWORD``` 자동으로 최종 사용자 사용권 계약에 동의 하 고 있습니다.
+1. ```MSSQL_SA_PASSWORD```를 사용하여 SQL Server를 구성하고 최종 사용자 사용권 계약에 자동으로 동의합니다.
 
-1. 자동으로 SQL Server 명령줄 도구에 대 한 최종 사용자 사용권 계약에 동의 하 고 설치할 unixodbc-dev 패키지를 설치 합니다.
+1. SQL Server 명령줄 도구에 대한 최종 사용자 사용권 계약에 자동으로 동의하고, 설치한 후 xodbc-dev 패키지를 설치합니다.
 
-1. SQL Server 명령줄 도구를 쉽게 사용할 수 있도록 경로에 추가 합니다.
+1. 간편하게 사용할 수 있도록 경로에 SQL Server 명령줄 도구를 추가합니다.
 
-1. 경우에 SQL Server 에이전트를 설치 스크립팅 변수 ```SQL_INSTALL_AGENT``` 에서 기본적으로 설정 됩니다.
+1. 스크립팅 변수 ```SQL_INSTALL_AGENT```가 기본값인 on으로 설정되면 SQL Server 에이전트를 설치합니다.
 
-1. 경우에 필요에 따라 SQL Server 전체 텍스트 검색을 설치 변수의 ```SQL_INSTALL_FULLTEXT``` 설정 됩니다.
+1. 변수 ```SQL_INSTALL_FULLTEXT```가 설정되면 필요에 따라 SQL Server 전체 텍스트 검색을 설치합니다.
 
-1. 다른 시스템에서 SQL Server에 연결 하는 데 필요한 시스템 방화벽에서 포트 1433 TCP에 대 한 차단을 해제 합니다.
+1. 다른 시스템에서 SQL Server에 연결하는 데 필요한 TCP의 포트 1433을 시스템 방화벽에서 차단 해제합니다.
 
-1. 필요에 따라 교착 상태 추적에 대 한 추적 플래그를 설정 합니다. (줄을 주석 처리를 제거 해야 함)
+1. 필요에 따라 교착 상태 추적을 위한 추적 플래그를 설정합니다. (줄의 주석 처리를 제거해야 함)
 
-1. SQL Server가 이제 설치에서 작동 하도록 하려면 프로세스를 다시 시작 합니다.
+1. SQL Server가 이제 설치되었습니다. 작동 가능하게 하려면 프로세스를 다시 시작합니다.
 
-1. SQL Server 오류 메시지를 숨기면 올바르게 설치 되어 있는지 확인 합니다.
+1. 오류 메시지는 숨겨지지만, SQL Server가 제대로 설치되었는지 확인합니다.
 
-1. 경우 서버 관리자가 새 사용자를 만듭니다 ```SQL_INSTALL_USER``` 고 ```SQL_INSTALL_USER_PASSWORD``` 모두 설정 합니다.
+1. ```SQL_INSTALL_USER``` 및 ```SQL_INSTALL_USER_PASSWORD```가 둘 다 설정된 경우 새 서버 관리자 사용자를 만듭니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-여러 무인된 설치를 간소화 하 고 적절 한 환경 변수를 설정 하는 독립 실행형 Bash 스크립트를 만듭니다.  샘플 스크립트를 사용 하 고 자체 Bash 스크립트에서 변수 중 하나를 제거할 수 있습니다.
+여러 무인 설치를 간소화하고 적절한 환경 변수를 설정하는 독립 실행형 Bash 스크립트를 만듭니다.  예제 스크립트에서 사용하는 변수를 제거하고 해당 변수를 자체 Bash 스크립트에 넣을 수 있습니다.
 
 ```bash
 #!/bin/bash
@@ -215,9 +215,9 @@ export SQL_INSTALL_USER_PASSWORD='<YourStrong!Passw0rd>'
 export SQL_INSTALL_AGENT='y'
 ```
 
-다음 Bash 스크립트를 다음과 같이 실행 합니다.
+그런 다음, Bash 스크립트를 다음과 같이 실행합니다.
 ```bash
 . ./my_script_name.sh
 ```
 
-Linux의 SQL Server에 대 한 자세한 내용은 참조 하세요. [의 SQL Server Linux 개요](sql-server-linux-overview.md)합니다.
+SQL Server on Linux에 대한 자세한 내용은 [SQL Server on Linux 개요](sql-server-linux-overview.md)를 참조하세요.

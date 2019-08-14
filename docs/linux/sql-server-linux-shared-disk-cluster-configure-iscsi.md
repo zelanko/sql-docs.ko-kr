@@ -1,5 +1,5 @@
 ---
-title: 장애 조치 클러스터 인스턴스 저장소 iSCSI-Linux의 SQL Server 구성
+title: 장애 조치(failover) 클러스터 인스턴스 스토리지 iSCSI 구성 - SQL Server on Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,49 +9,49 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 0d52038d3e556ecc2202fd1066dc2638bfe14183
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032397"
 ---
-# <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>장애 조치 클러스터 인스턴스-iSCSI-Linux의 SQL Server 구성
+# <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 구성 - iSCSI - SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 Linux에서 장애 조치 클러스터 인스턴스 (FCI)에 대 한 iSCSI 저장소를 구성 하는 방법에 설명 합니다. 
+이 문서에서는 Linux에서 FCI(장애 조치(failover) 클러스터 인스턴스)에 iSCSI 스토리지를 구성하는 방법을 설명합니다. 
 
-## <a name="configure-iscsi"></a>ISCSI를 구성 합니다. 
-iSCSI 서버를 대상으로 알려진 서버에서 디스크를 제공 합니다. 네트워킹을 사용 합니다. ISCSI 대상에 연결 하는 서버는 iSCSI 초기자 구성 되어 있는지 필요 합니다. 대상 디스크에 액세스할 수 있어야 하는 초기자만 작업을 수행할 수 있도록 명시적 권한은 제공 됩니다. 항상 사용 가능 하 고 신뢰할 수 있는 자체 대상이 있어야 합니다.
+## <a name="configure-iscsi"></a>iSCSI 구성 
+iSCSI는 네트워크를 사용하여 대상으로 알려진 서버에서 서버로 디스크를 제공합니다. iSCSI 대상에 연결하는 서버에는 iSCSI 초기자가 구성되어 있어야 합니다. 대상의 디스크에 액세스할 수 있어야 하는 초기자만 액세스할 수 있도록 해당 디스크에 명시적 권한을 부여합니다. 대상 자체는 가용성과 안정성이 높아야 합니다.
 
-### <a name="important-iscsi-target-information"></a>중요 한 iSCSI 대상 정보
-이 섹션에서는 사용 하려는 원본 유형의 관련이 있기 때문에 iSCSI 대상을 구성 하는 방법을 설명 하지, 하는 동안 클러스터 노드에서 사용할 디스크에 대 한 보안 구성 되어 있는지 확인 합니다.  
+### <a name="important-iscsi-target-information"></a>중요한 iSCSI 대상 정보
+사용할 원본 유형과 관련되기 때문에 이 섹션에서는 iSCSI 대상을 구성하는 방법을 설명하지 않지만, 클러스터 노드에서 사용되는 디스크에 대한 보안이 구성되어 있는지 확인하세요.  
 
-Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성할 수 없습니다. 성능 및 가용성에 대 한 iSCSI 네트워크에서 원본 서버와 클라이언트 서버 모두에서 일반 네트워크 트래픽을 사용 하는 구분 되어야 합니다. Iscsi 사용 네트워크는 빨라야 합니다. 해당 네트워크 일부 프로세서 대역폭 소비를 일반 서버를 사용 하는 경우 적절 하 게 계획 해야 합니다.
-되도록 가장 중요 한 점은 FCI에 참여 하는 서버에만 액세스할 수 있도록 만든 디스크를 적절 한 권한이 할당 된 되는 대상에서 완료 합니다. Linuxnodes1 만들어지면 이름이 고 NewFCIDisk1.vhdx에 나타나도록 노드의 IP 주소를 할당 하는 예제의 경우 Microsoft iSCSI 대상의 예는 다음과 같습니다.
+Linux 기반 iSCSI 대상을 사용하는 경우 FCI 노드에서 대상을 구성하면 안 됩니다. 성능 및 가용성을 위해 iSCSI 네트워크는 원본 및 클라이언트 서버 모두에서 일반 네트워크 트래픽에 사용되는 네트워크와 분리되어야 합니다. iSCSI에 사용되는 네트워크는 빨라야 합니다. 네트워크는 일부 프로세서 대역폭을 사용하므로, 일반 서버를 사용하는 경우 이에 따라 계획해야 합니다.
+대상에서 완료되도록 하려면 가장 중요한 작업은 FCI에 참여하는 서버만 액세스할 수 있도록 적절한 권한을 생성되는 디스크에 할당하는 것입니다. linuxnodes1이 생성되는 이름인 Microsoft iSCSI 대상의 예제가 아래에 나와 있으며, 이 경우 노드의 IP 주소가 할당되므로 NewFCIDisk1.vhdx가 노드에 표시됩니다.
 
 ![초기자][1]
 
-### <a name="instructions"></a>지침
+### <a name="instructions"></a>Instructions
 
-이 섹션에서는 FCI에 대 한 노드로 사용할 서버에서 iSCSI 초기자를 구성 하는 방법을 설명 합니다. Ubuntu 및 RHEL 지침 작동 해야 합니다.
+이 섹션에서는 FCI의 노드로 사용할 서버에서 iSCSI 초기자를 구성하는 방법을 설명합니다. 지침은 RHEL 및 Ubuntu와 동일하게 적용됩니다.
 
-지원 되는 배포에 대 한 iSCSI 초기자에 대 한 자세한 내용은 다음 링크를 참조 하세요.
+지원되는 배포의 iSCSI 초기자에 대한 자세한 내용은 다음 링크를 참조하세요.
 - [Red Hat](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Storage_Administration_Guide/iscsi-api.html)
 - [SUSE](https://www.suse.com/documentation/sles11/stor_admin/data/sec_inst_system_iscsi_initiator.html) 
 - [Ubuntu](https://help.ubuntu.com/lts/serverguide/iscsi-initiator.html)
 
-1.  FCI 구성에 참여 하는 서버 중 하나를 선택 합니다. 어떤 것은 중요 하지 않습니다. iSCSI 해야 전용 네트워크에서 인식 하 고 해당 네트워크를 사용 하는 iSCSI를 구성 하므로 합니다. 실행할 `sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new` 여기서 `<iSCSIIfaceName>` 네트워크에 대 한 고유 또는 친숙 한 이름입니다. 다음 예제에서는 `iSCSINIC`:
+1.  FCI 구성에 참여할 서버 중 하나를 선택합니다. 어떤 서버를 선택하든 상관이 없습니다. iSCSI는 전용 네트워크에 있어야 하므로 해당 네트워크를 인식하고 사용하도록 iSCSI를 구성합니다. `sudo iscsiadm -m iface -I <iSCSIIfaceName> -o new`를 실행합니다. 여기서 `<iSCSIIfaceName>`은 네트워크의 고유하거나 친숙한 이름입니다. 다음 예제에서는 `iSCSINIC`를 사용합니다.
    
     ```bash
     sudo iscsiadm -m iface -I iSCSINIC -o new
     ```
     ![7-setiscsinetwork][6]
  
-2.  편집 `/var/lib/iscsi/ifaces/iSCSIIfaceName`합니다. 다음 값을 완전히 작성 되어 있는지 확인 합니다.
+2.  `/var/lib/iscsi/ifaces/iSCSIIfaceName`을 편집합니다. 다음 값이 완전히 입력되었는지 확인합니다.
 
-    - OS에서 볼 수 있듯이 iface.net_ifacename 네트워크 카드의 이름을입니다.
-    - iface.hwaddress는 MAC 주소 아래에이 인터페이스에 대해 생성 될 고유한 이름입니다.
+    - iface.net_ifacename은 OS에 표시된 네트워크 카드의 이름입니다.
+    - iface.hwaddress는 아래에서 이 인터페이스에 대해 만들 고유한 이름의 MAC 주소입니다.
     - iface.ipaddress
     - iface.subnet_Mask 
 
@@ -59,13 +59,13 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
 
     ![iSCSITargetSettings][2]
 
-3.  ISCSI 대상을 찾습니다.
+3.  iSCSI 대상을 찾습니다.
 
     ```bash
     sudo iscsiadm -m discovery -t sendtargets -I <iSCSINetName> -p <TargetIPAddress>:<TargetPort>
     ```
 
-     \<iSCSINetName > 네트워크에 대해 고유한/친숙 한 이름인 \<TargetIPAddress >는 iSCSI 대상의 IP 주소 및 \<TargetPort > iSCSI 대상의 포트입니다. 
+     \<iSCSINetName>은 네트워크의 고유한/친숙한 이름이고, \<TargetIPAddress>는 iSCSI 대상의 IP 주소이고, \<TargetPort>는 iSCSI 대상의 포트입니다. 
 
     ![iSCSITargetResults][3]
 
@@ -76,11 +76,11 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
     sudo iscsiadm -m node -I <iSCSIIfaceName> -p TargetIPAddress -l
     ```
 
-    \<iSCSIIfaceName >은 네트워크에 대 한 고유/친숙 한 이름 및 \<TargetIPAddress >는 iSCSI 대상의 IP 주소입니다.
+    \<iSCSIIfaceName>은 네트워크의 고유한/친숙한 이름이고, \<TargetIPAddress>는 iSCSI 대상의 IP 주소입니다.
 
     ![iSCSITargetLogin][4]
 
-5.  ISCSI 대상에 연결 되어 있는지 확인 합니다.
+5.  iSCSI 대상에 대한 연결이 있는지 확인합니다.
 
     ```bash
     sudo iscsiadm -m session
@@ -89,107 +89,107 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
     ![iSCSIVerify][5]
 
  
-6.  ISCSI 연결 디스크 확인
+6.  iSCSI 연결 디스크를 확인합니다.
 
     ```bash
     sudo grep "Attached SCSI" /var/log/messages
     ```
     ![30-iSCSIattachedDisks][7]
 
-7.  ISCSI 디스크에 실제 볼륨을 만듭니다.
+7.  iSCSI 디스크에서 물리적 볼륨을 만듭니다.
 
     ```bash
     sudo pvcreate /dev/<devicename>
     ```
 
-    \<장치 이름 >은 이전 단계에서 장치의 이름입니다. 
+    \<devicename>은 이전 단계의 디바이스 이름입니다. 
 
  
-8.  ISCSI 디스크에 볼륨 그룹을 만듭니다. 단일 볼륨 그룹에 할당 된 디스크는 풀 또는 컬렉션으로 표시 됩니다. 
+8.  iSCSI 디스크에서 볼륨 그룹을 만듭니다. 단일 볼륨 그룹에 할당된 디스크는 풀 또는 컬렉션으로 표시됩니다. 
 
     ```bash
     sudo vgcreate <VolumeGroupName> /dev/devicename
     ```
 
-    \<VolumeGroupName > 볼륨 그룹의 이름 및 \<devicename > 6 단계에서에서 장치의 이름입니다. 
+    \<VolumeGroupName>은 볼륨 그룹의 이름이고, \<devicename>은 6단계의 디바이스 이름입니다. 
  
-9.  만들고 디스크에 대 한 논리 볼륨을 확인 합니다.
+9.  디스크의 논리 볼륨을 만들고 확인합니다.
 
     ```bash
     sudo lvcreate -Lsize -n <LogicalVolumeName> <VolumeGroupName>
     ```
     
-    \<크기 >을 만들려면 볼륨의 크기가 G (기가바이트), T (테라바이트) 등을 사용 하 여 지정할 수 있습니다\<LogicalVolumeName > 논리 볼륨에 대 한 이름 및 \<VolumeGroupName >에서 볼륨 그룹의 이름인는 이전 단계입니다. 
+    \<size>는 만들려는 볼륨의 크기이며 G(기가바이트), T(테라바이트) 등을 사용하여 지정할 수 있고, \<LogicalVolumeName>은 논리 볼륨의 이름이고, \<VolumeGroupName>은 이전 단계의 볼륨 그룹 이름입니다. 
 
     아래 예제에서는 25GB 볼륨을 만듭니다.
  
     ![Create25GBVol][10]
 
-10. 실행 `sudo lvs` 만들어진 LVM을 확인 합니다.
+10. `sudo lvs`를 실행하여 생성된 LVM을 확인합니다.
  
-11. 지원 되는 파일 시스템을 사용 하 여 논리 볼륨을 포맷 합니다. EXT4, 다음 예제를 사용 합니다.
+11. 지원되는 파일 시스템을 사용하여 논리 볼륨을 포맷합니다. EXT4의 경우 다음 예제를 사용합니다.
 
     ```bash
     sudo mkfs.ext4 /dev/<VolumeGroupName>/<LogicalVolumeName>
     ```
 
-    \<VolumeGroupName > 이전 단계에서 볼륨 그룹의 이름입니다. \<LogicalVolumeName > 이전 단계에서 논리 볼륨의 이름입니다.  
+    \<VolumeGroupName>은 이전 단계의 볼륨 그룹 이름입니다. \<LogicalVolumeName>은 이전 단계의 논리 볼륨 이름입니다.  
 
-12. 시스템 데이터베이스 또는 기본 데이터 위치에 저장 된 모든 것에 대해 다음이 단계를 수행 합니다. 그렇지 않을 경우 13 단계로 건너뜁니다.
+12. 시스템 데이터베이스 또는 기본 데이터 위치에 저장된 항목의 경우 다음 단계를 수행합니다. 그렇지 않으면 13단계로 건너뜁니다.
 
-   *    SQL Server에서 작업 하는 서버에서 중지 되었는지 확인 합니다.
+   *    작업 중인 서버에서 SQL Server가 중지되었는지 확인합니다.
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
 
-   *    Superuser를 완벽 하 게 전환 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    슈퍼 사용자로 완전히 전환합니다. 성공하는 경우 승인이 수신되지 않습니다.
 
     ```bash
     sudo -i
     ```
 
-   *    Mssql 사용자 전환 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    mssql 사용자로 전환합니다. 성공하는 경우 승인이 수신되지 않습니다.
 
     ```bash
     su mssql
     ```
 
-   *    SQL Server 데이터를 저장 하 고 로그 파일을 임시 디렉터리를 만듭니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    SQL Server 데이터와 로그 파일을 저장할 임시 디렉터리를 만듭니다. 성공하는 경우 승인이 수신되지 않습니다.
 
     ```bash
     mkdir <TempDir>
     ```
 
-    \<TempDir > 폴더의 이름입니다. 아래 예제에서는 /var/opt/mssql/TempDir 라는 폴더를 만듭니다.
+    \<TempDir>은 폴더 이름입니다. 아래 예제에서는 /var/opt/mssql/TempDir이라는 폴더를 만듭니다.
 
     ```bash
     mkdir /var/opt/mssql/TempDir
     ```
     
-   *    SQL Server 데이터 및 로그 파일을 임시 디렉터리에 복사 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    SQL Server 데이터와 로그 파일을 임시 디렉터리에 복사합니다. 성공하는 경우 승인이 수신되지 않습니다.
 
     ```bash
     cp /var/opt/mssql/data/* <TempDir>
     ```
 
-    \<TempDir > 이전 단계에서 폴더의 이름입니다.
+    \<TempDir>은 이전 단계의 폴더 이름입니다.
     
-   *    파일 디렉터리 인지 확인 합니다.
+   *    파일이 디렉터리에 있는지 확인합니다.
 
     ```bash
     ls \<TempDir>
     ```
-    \<TempDir > d 단계에 있는 폴더의 이름입니다.
+    \<TempDir>은 d단계의 폴더 이름입니다.
 
-   *    기존 SQL Server 데이터 디렉터리에서 파일을 삭제 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    기존 SQL Server 데이터 디렉터리에서 파일을 삭제합니다. 성공하는 경우 승인이 수신되지 않습니다.
 
     ```bash
     rm - f /var/opt/mssql/data/*
     ```
 
-   *    파일이 삭제 되었는지 확인 합니다. 아래 그림에는 c h ~에서 전체 시퀀스의 예가 나와 있습니다.
+   *    파일이 삭제되었는지 확인합니다. 아래 그림은 전체 시퀀스 c~h의 예제를 보여 줍니다.
 
     ```bash
     ls /var/opt/mssql/data
@@ -197,207 +197,207 @@ Linux 기반 iSCSI 대상을 사용 하는 경우 대상 FCI 노드에서 구성
 
     ![45-CopyMove][8]
  
-   *    형식 `exit` 루트 사용자로 다시 전환 합니다.
+   *    `exit`를 입력하여 다시 루트 사용자로 전환합니다.
 
-   *    SQL Server 데이터 폴더에 iSCSI 논리 볼륨을 탑재 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    SQL Server 데이터 폴더에 iSCSI 논리 볼륨을 탑재합니다. 성공하는 경우 승인이 수신되지 않습니다.
 
     ```bash
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> /var/opt/mssql/data
     ``` 
 
-    \<VolumeGroupName > 볼륨 그룹의 이름 및 \<LogicalVolumeName > 만든 논리 볼륨의 이름입니다. 다음 예에서는 구문을 볼륨 그룹 및 이전 명령에서 논리 볼륨을 찾습니다.
+    \<VolumeGroupName>은 볼륨 그룹 이름이고, \<LogicalVolumeName>은 생성된 논리 볼륨 이름입니다. 다음 예제 구문은 이전 명령의 볼륨 그룹 및 논리 볼륨과 일치 합니다.
 
     ```bash
     mount /dev/FCIDataVG1/FCIDataLV1 /var/opt/mssql/data
     ``` 
 
-   *    Mssql에 탑재의 소유자를 변경 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    탑재의 소유자를 mssql로 변경합니다. 성공하는 경우 승인이 수신되지 않습니다.
 
     ```bash
     chown mssql /var/opt/mssql/data
     ```
 
-   *    Mssql에 탑재 그룹의 소유권을 변경 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    탑재 그룹의 소유권을 mssql로 변경합니다. 성공하는 경우 승인이 수신되지 않습니다.
 
     ```bash
     chgrp mssql /var/opt/mssql/data
     ``` 
 
-   *    Mssql 사용자로 전환 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    mssql 사용자로 전환합니다. 성공하는 경우 승인이 수신되지 않습니다.
 
     ```bash
     su mssql
     ``` 
 
-   *    임시 디렉터리 /var/opt/mssql/data에서 파일을 복사 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    임시 디렉터리 /var/opt/mssql/data에서 파일을 복사합니다. 성공하는 경우 승인이 수신되지 않습니다.
 
     ```bash
     cp /var/opt/mssql/TempDir/* /var/opt/mssql/data
     ``` 
 
-   *    파일 위치에 있는지 확인 합니다.
+   *    파일이 있는지 확인합니다.
 
     ```bash
     ls /var/opt/mssql/data
     ``` 
  
-   *    입력 `exit` mssql 되지 않습니다.
+   *    `exit`를 입력하여 mssql을 종료합니다.
     
-   *    입력 `exit` 루트 되지 않습니다.
+   *    `exit`를 입력하여 루트를 종료합니다.
 
-   *    SQL Server를 시작 합니다. 모든 항목이 올바르게 복사 되었는지 하 고 적용 하는 보안 올바르게 SQL Server 해야 표시 시작 합니다.
+   *    SQL Server를 시작합니다. 모든 항목이 올바르게 복사되고 보안이 올바르게 적용된 경우 SQL Server가 시작됨으로 표시되어야 합니다.
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ``` 
  
-   *    SQL Server를 중지 하 고 종료 하는 것이 것을 확인 합니다.
+   *    SQL Server를 중지하고 종료되었는지 확인합니다.
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ``` 
 
-13. 사용자 데이터베이스 백업 등의 시스템 데이터베이스 이외의 항목에 대 한 다음이 단계를 수행 합니다. 기본 위치를 사용 하는 경우만 14 단계를 건너뜁니다.
+13. 시스템 데이터베이스가 아닌 사용자 데이터베이스 또는 백업과 같은 항목의 경우 다음 단계를 수행합니다. 기본 위치를 사용하는 경우에만 14단계로 건너뜁니다.
 
-   *    Superuser를 스위치입니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    슈퍼 사용자로 전환합니다. 성공하는 경우 승인이 수신되지 않습니다.
 
     ```bash
     sudo -i
     ```
 
-   *    SQL Server에서 사용 될 폴더를 만듭니다. 
+   *    SQL Server에서 사용할 폴더를 만듭니다. 
 
     ```bash
     mkdir <FolderName>
     ```
 
-    \<폴더 이름 > 폴더의 이름입니다. 폴더의 전체 경로 지정 해야 합니다. 올바른 위치에 없는 경우. 아래 예제에서는 /var/opt/mssql/userdata 라는 폴더를 만듭니다.
+    \<FolderName>은 폴더 이름입니다. 올바른 위치에 없으면 폴더의 전체 경로를 지정해야 합니다. 아래 예제에서는 /var/opt/mssql/userdata라는 폴더를 만듭니다.
 
     ```bash
     mkdir /var/opt/mssql/userdata
     ```
 
-   *    이전 단계에서 만든 폴더에 iSCSI 논리 볼륨을 탑재 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    이전 단계에서 만든 폴더에 iSCSI 논리 볼륨을 탑재합니다. 성공하는 경우 승인이 수신되지 않습니다.
     
     ```bash
     mount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
     ```
 
-    \<VolumeGroupName > 볼륨 그룹의 이름인 \<LogicalVolumeName >은 생성 된 논리 볼륨의 이름 및 \<FolderName > 폴더의 이름입니다. 예제 구문은 다음과 같습니다.
+    \<VolumeGroupName>은 볼륨 그룹 이름이고, \<LogicalVolumeName>은 생성된 논리 볼륨 이름이고, \<FolderName>은 폴더 이름입니다. 예제 구문은 다음과 같습니다.
 
     ```bash
     mount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
     ```
 
-   *    Mssql에 만든 폴더의 소유권을 변경 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    생성된 폴더의 소유권을 mssql로 변경합니다. 성공하는 경우 승인이 수신되지 않습니다.
 
     ```bash
     chown mssql <FolderName>
     ```
 
-    \<폴더 이름 > 만든 폴더의 이름입니다. 예제는 다음과 같습니다.
+    \<FolderName>은 생성된 폴더 이름입니다. 아래에 예가 나와 있습니다.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
     ```
   
-   *    Mssql에 만든 폴더의 그룹을 변경 합니다. 성공 하는 경우에 모든 승인을 받지 못합니다.
+   *    생성된 폴더 그룹을 mssql로 변경합니다. 성공하는 경우 승인이 수신되지 않습니다.
 
     ```bash
     chown mssql <FolderName>
     ```
 
-    \<폴더 이름 > 만든 폴더의 이름입니다. 예제는 다음과 같습니다.
+    \<FolderName>은 생성된 폴더 이름입니다. 아래에 예가 나와 있습니다.
 
     ```bash
     chown mssql /var/opt/mssql/userdata
     ```
 
-   *    형식 `exit` superuser를 더 이상 되도록 합니다.
+   *    `exit`를 입력하여 슈퍼 사용자를 종료합니다.
 
-   *    를 테스트 하려면 해당 폴더에 데이터베이스를 만듭니다. 아래 예제에서는 sqlcmd를 사용 하 여 데이터베이스 만들기, 컨텍스트 전환, OS 수준에 있는 파일과 임시 위치를 삭제 한 다음 확인 합니다. SSMS를 사용할 수 있습니다.
+   *    테스트하려면 해당 폴더에 데이터베이스를 만듭니다. 아래 표시된 예제에서는 sqlcmd를 사용하여 데이터베이스를 만들고 컨텍스트를 해당 데이터베이스로 전환한 다음, 파일이 OS 수준에 있는지 확인하고 임시 위치를 삭제합니다. SSMS를 사용할 수 있습니다.
   
     ![50-ExampleCreateSSMS][9]
 
-   *    공유 마운트 해제 
+   *    공유를 분리합니다. 
 
     ```bash
     sudo umount /dev/<VolumeGroupName>/<LogicalVolumeName> <FolderName>
     ```
 
-    \<VolumeGroupName > 볼륨 그룹의 이름인 \<LogicalVolumeName >은 생성 된 논리 볼륨의 이름 및 \<FolderName > 폴더의 이름입니다. 예제 구문은 다음과 같습니다.
+    \<VolumeGroupName>은 볼륨 그룹 이름이고, \<LogicalVolumeName>은 생성된 논리 볼륨 이름이고, \<FolderName>은 폴더 이름입니다. 예제 구문은 다음과 같습니다.
 
     ```bash
     sudo umount /dev/FCIDataVG2/FCIDataLV2 /var/opt/mssql/userdata 
     ```
 
-14. 유일한 Pacemaker 해당 볼륨 그룹을 활성화할 수 있도록 서버를 구성 합니다.
+14. Pacemaker만 볼륨 그룹을 활성화할 수 있도록 서버를 구성합니다.
 
     ```bash
     sudo lvmconf --enable-halvm --services -startstopservices
     ```
  
-15. 서버에서 볼륨 그룹의 목록을 생성 합니다. OS 디스크와 같은 시스템에 의해 사용 됩니다 나열 없는 모든 iSCSI 디스크.
+15. 서버에서 볼륨 그룹 목록을 생성합니다. iSCSI 디스크가 아닌 나열된 항목은 OS 디스크의 경우와 같이 시스템에서 사용됩니다.
 
     ```bash
     sudo vgs
     ```
 
-16. 파일 /etc/lvm/lvm.conf의 활성화 구성 섹션을 수정 합니다. 다음 줄을 구성 합니다.
+16. /etc/lvm/lvm.conf 파일의 활성화 구성 섹션을 수정합니다. 다음 줄을 구성합니다.
 
     ```bash
     volume_list = [ <ListOfVGsNotUsedByPacemaker> ]
     ```
 
-    \<ListOfVGsNotUsedByPacemaker >는 FCI가 사용 되지 것입니다 하는 단계 20의 출력에서 볼륨 그룹의 목록입니다. 쉼표로 따옴표에 별도 각각을 배치 합니다. 예제는 다음과 같습니다.
+    \<ListOfVGsNotUsedByPacemaker>는 FCI에서 사용되지 않을 20단계 출력의 볼륨 그룹 목록입니다. 각 항목을 따옴표로 묶고 쉼표로 구분합니다. 아래에 예가 나와 있습니다.
 
     ![55-ListOfVGs][11]
  
  
-17. Linux 시작 되 면 파일 시스템이 마운트됩니다. Pacemaker만 iSCSI 디스크를 탑재할 수 있도록 루트 파일 시스템 이미지를 다시 작성 합니다. 
+17. Linux가 시작되면 파일 시스템이 탑재됩니다. Pacemaker만 iSCSI 디스크를 탑재할 수 있도록 하려면 루트 파일 시스템 이미지를 다시 빌드합니다. 
 
-    다음 명령을 완료 하려면 몇 분 정도 걸릴 수 있습니다. 메시지가 표시 됩니다 없는 다시 성공 합니다.
+    다음 명령을 실행합니다. 완료하는 데 잠시 시간이 걸릴 수 있습니다. 성공하면 메시지가 다시 표시되지 않습니다.
 
     ```bash
     sudo dracut -H -f /boot/initramfs-$(uname -r).img $(uname -r)
     ```
 
-18. 서버를 다시 부팅 합니다.
+18. 서버를 다시 부팅합니다.
 
-19. FCI는 참여 하는 다른 서버에서 1-6 단계를 수행 합니다. ISCSI 대상을 SQL Server에 나타납니다. 
+19. FCI에 참여할 다른 서버에서 1~6단계를 수행합니다. 이렇게 하면 iSCSI 대상이 SQL Server에 제공됩니다. 
  
-20. 서버에서 볼륨 그룹의 목록을 생성 합니다. 앞에서 만든 볼륨 그룹을 표시 됩니다. 
+20. 서버에서 볼륨 그룹 목록을 생성합니다. 이전에 만든 볼륨 그룹을 표시해야 합니다. 
 
     ```bash
     sudo vgs
     ``` 
-23. SQL Server를 시작 하 고이 서버에서 시작을 확인 합니다.
+23. SQL Server를 시작하고 이 서버에서 시작할 수 있는지 확인합니다.
 
     ```bash
     sudo systemctl start mssql-server
     sudo systemctl status mssql-server
     ```
 
-24. SQL Server를 중지 하 고 종료 될 때를 확인 합니다.
+24. SQL Server를 중지하고 종료되었는지 확인합니다.
 
     ```bash
     sudo systemctl stop mssql-server
     sudo systemctl status mssql-server
     ```
-25. FCI에 참여할 모든 다른 서버에서 1-6 단계를 반복 합니다.
+25. FCI에 참여할 다른 서버에서 1~6단계를 반복합니다.
 
 이제 FCI를 구성할 준비가 되었습니다.
 
 |배포 |항목 
 |----- |-----
-|**HA 추가 기능을 사용 하 여 Red Hat Enterprise Linux** |[구성](sql-server-linux-shared-disk-cluster-configure.md)<br/>[운영](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
-|**HA 추가 기능을 사용 하 여 SUSE Linux Enterprise Server** |[구성](sql-server-linux-shared-disk-cluster-sles-configure.md)
+|**HA 추가 기능이 포함된 Red Hat Enterprise Linux** |[구성](sql-server-linux-shared-disk-cluster-configure.md)<br/>[운영](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
+|**HA 추가 기능이 포함된 SUSE Linux Enterprise Server** |[구성](sql-server-linux-shared-disk-cluster-sles-configure.md)
 
 ## <a name="next-steps"></a>다음 단계
 
-[장애 조치 클러스터 인스턴스-Linux의 SQL Server 구성](sql-server-linux-shared-disk-cluster-configure.md)
+[장애 조치(failover) 클러스터 인스턴스 구성 - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md)
 
 <!--Image references-->
 [1]: ./media/sql-server-linux-shared-disk-cluster-configure-iscsi/05-initiator.png

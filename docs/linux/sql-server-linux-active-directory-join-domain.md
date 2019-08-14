@@ -1,5 +1,5 @@
 ---
-title: Active Directory에는 Linux에서 SQL 서버 연결
+title: SQL Server on Linux를 Active Directory에 가입
 titleSuffix: SQL Server
 description: ''
 author: Dylan-MSFT
@@ -10,28 +10,28 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027344"
 ---
-# <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>SQL Server Linux 호스트는 Active Directory 도메인에 가입
+# <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Linux 호스트의 SQL Server를 Active Directory 도메인에 가입
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 SQL Server Linux 호스트 컴퓨터는 Active Directory (AD) 도메인에 가입 하는 방법은 일반 지침을 제공 합니다. 두 가지 방법이 있습니다: 기본 제공 SSSD 패키지를 사용 하거나 제 3 자 Active Directory 공급자를 사용 합니다. 타사 도메인 조인 제품의 예로 [PowerBroker Identity Services (PBI)](https://www.beyondtrust.com/)를 [하나의 Id](https://www.oneidentity.com/products/authentication-services/), 및 [Centrify](https://www.centrify.com/)합니다. 이 가이드는 Active Directory 구성을 확인 하는 단계를 포함 합니다. 그러나 것은 아닙니다 타사 유틸리티를 사용 하는 경우 컴퓨터를 도메인에 가입 하는 방법에 지침을 제공 합니다.
+이 문서에서는 SQL Server Linux 호스트 머신을 AD(Active Directory) 도메인에 가입시키는 방법에 관한 일반 지침을 제공합니다. 기본 제공 SSSD 패키지를 사용하거나 타사 Active Directory 공급자를 사용하는 두 가지 방법이 있습니다. 타사 도메인 가입 제품의 예로는 [PBIS(PowerBroker Identity Services)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/) 및 [Centrify](https://www.centrify.com/)가 있습니다. 이 가이드에는 Active Directory 구성을 확인하는 단계가 포함되어 있습니다. 그러나 타사 유틸리티를 사용할 때 머신을 도메인에 가입시키는 방법을 설명하지 않습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-Active Directory 인증을 구성 하기 전에 Active Directory 도메인 컨트롤러를, Windows, 네트워크에서 설정 해야 합니다. 그런 다음 SQL Server Linux 호스트는 Active Directory 도메인에 가입.
+Active Directory 인증을 구성하려면 먼저 네트워크에서 Active Directory 도메인 컨트롤러인 Windows를 설정해야 합니다. 그런 다음 SQL Server on Linux 호스트를 Active Directory 도메인에 가입시킵니다.
 
 > [!IMPORTANT]
-> 이 문서에 설명 된 샘플 단계를 참조용 으로만 됩니다. 실제 단계는 환경의 전반적인 환경을 구성 하는 방법에 따라 약간 달라질 수 있습니다. 특정 구성, 사용자 지정 및 문제 해결 하는 데 필요한 모든 환경에 대 한 시스템 이름과 도메인 관리자를 참여 합니다.
+> 이 문서에서 설명하는 샘플 단계는 참조용입니다. 실제 단계는 전체 환경이 구성된 방식에 따라 사용자 환경에서 약간 다를 수 있습니다. 구체적인 구성, 사용자 지정 및 필요한 문제 해결 관련 정보는 환경의 시스템 및 도메인 관리자에게 문의하세요.
 
-## <a name="check-the-connection-to-a-domain-controller"></a>도메인 컨트롤러에 대 한 연결 확인
+## <a name="check-the-connection-to-a-domain-controller"></a>도메인 컨트롤러의 연결 확인
 
-도메인의 단기 및 정규화 된 이름이 있는 도메인 컨트롤러에 연결할 수 있는지 확인 합니다.
+도메인의 약식 이름과 정규화된 이름을 모두 사용하여 도메인 컨트롤러에 연결할 수 있는지 확인합니다.
 
 ```bash
 ping contoso
@@ -39,13 +39,13 @@ ping contoso.com
 ```
 
 > [!TIP]
-> 이 자습서에서는 **contoso.com** 하 고 **CONTOSO.COM** 예제 도메인 및 영역 이름으로 각각. 또한 사용 하 여 **DC1 합니다. CONTOSO.COM** 예제에서는 정규화 된 도메인 컨트롤러의 도메인 이름으로 합니다. 사용자 고유의 값을 사용 하 여 이러한 이름을 바꿔야 합니다.
+> 이 자습서에서는 예제 도메인과 영역 이름으로 각각 **contoso.com** 및 **CONTOSO.COM**을 사용합니다. 또한 **DC1.CONTOSO.COM**을 도메인 컨트롤러의 정규화된 도메인 이름 예제로 사용합니다. 이러한 이름을 사용자 고유의 값으로 바꾸어야 합니다.
 
-이러한 이름 검사 중 실패 하는 경우 도메인 검색 목록을 업데이트 합니다. 다음 섹션에서는 각각 Ubuntu, Red Hat Enterprise Linux (RHEL), 및 SUSE Linux Enterprise Server (SLES)에 대 한 지침을 제공합니다.
+이러한 이름 확인 중 하나라도 실패하면 도메인 검색 목록을 업데이트합니다. 다음 섹션에서는 각각 Ubuntu, RHEL(Red Hat Enterprise Linux) 및 SLES(SUSE Linux Enterprise Server)에 관한 지침을 제공합니다.
 
 ### <a name="ubuntu"></a>Ubuntu
 
-1. 편집 된 **/etc/network/interfaces** Active Directory 도메인은 도메인 검색 목록에 있도록 파일:
+1. Active Directory 도메인이 도메인 검색 목록에 있도록 **/etc/network/interfaces** 파일을 편집합니다.
 
    ```/etc/network/interfaces
    # The primary network interface
@@ -56,15 +56,15 @@ ping contoso.com
    ```
 
    > [!NOTE]
-   > 네트워크 인터페이스 `eth0`, 서로 다른 컴퓨터에 대 한 다를 수 있습니다. 사용 하는 어떤 것을 확인 하려면 실행 **ifconfig**합니다. 인터페이스에 IP 주소 및 전송 및 수신 바이트를 복사 합니다.
+   > 네트워크 인터페이스 `eth0`은 머신마다 다를 수 있습니다. 사용 중인 인터페이스를 확인하려면 **ifconfig**를 실행합니다. 그런 다음 IP 주소와 전송 및 수신된 바이트가 있는 인터페이스를 복사합니다.
 
-1. 이 파일을 편집한 후 네트워크 서비스를 다시 시작 합니다.
+1. 이 파일을 편집한 후 네트워크 서비스를 다시 시작합니다.
 
    ```bash
    sudo ifdown eth0 && sudo ifup eth0
    ```
 
-1. 다음으로 확인 하 **/etc/resolv.conf** 다음과 같이 줄을 포함 하는 파일:
+1. 다음으로 **/etc/resolv.conf** 파일에 다음 예제와 같은 줄이 포함되어 있는지 확인합니다.
 
    ```/etc/resolv.conf
    search contoso.com com  
@@ -73,7 +73,7 @@ ping contoso.com
 
 ### <a name="rhel"></a>RHEL
 
-1. 편집 된 **/etc/sysconfig/network-scripts/ifcfg-eth0** 파일, Active Directory 도메인은 도메인 검색 목록에 있도록 합니다. 또는 적절 하 게 다른 인터페이스 구성 파일을 편집 합니다.
+1. Active Directory 도메인이 도메인 검색 목록에 있도록 **/etc/sysconfig/network-scripts/ifcfg-eth0** 파일을 편집합니다. 또는 다른 인터페이스 구성 파일을 적절하게 편집합니다.
 
    ```/etc/sysconfig/network-scripts/ifcfg-eth0
    PEERDNS=no
@@ -81,20 +81,20 @@ ping contoso.com
    DOMAIN="contoso.com com"
    ```
 
-1. 이 파일을 편집한 후 네트워크 서비스를 다시 시작 합니다.
+1. 이 파일을 편집한 후 네트워크 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart network
    ```
 
-1. 이제 확인 프로그램 **/etc/resolv.conf** 다음과 같이 줄을 포함 하는 파일:
+1. 이제 **/etc/resolv.conf** 파일에 다음 예제와 같은 줄이 포함되어 있는지 확인합니다.
 
    ```/etc/resolv.conf
    search contoso.com com  
    nameserver **<AD domain controller IP address>**
    ```
 
-1. 도메인 컨트롤러를 ping 할 수 없는 경우에 정규화 된 도메인 이름 및 도메인 컨트롤러의 IP 주소를 찾습니다. 예제 도메인 이름은 **DC1 합니다. CONTOSO.COM**합니다. 다음 항목을 추가 **등은 / 호스트**:
+1. 여전히 도메인 컨트롤러를 ping할 수 없으면 도메인 컨트롤러의 정규화된 도메인 이름 및 IP 주소를 찾습니다. 예제 도메인 이름은 **DC1.CONTOSO.COM**입니다. **/etc/hosts**에 다음 항목을 추가합니다.
 
    ```/etc/hosts
    **<IP address>** DC1.CONTOSO.COM CONTOSO.COM CONTOSO
@@ -102,51 +102,51 @@ ping contoso.com
 
 ### <a name="sles"></a>SLES
 
-1. 편집 된 **/etc/sysconfig/network/config** DNS 쿼리에 대 한 Active Directory 도메인 컨트롤러 IP가 사용 되며 Active Directory 도메인 도메인 검색 목록에 있도록 파일:
+1. Active Directory 도메인 컨트롤러 IP가 DNS 쿼리에 사용되고 Active Directory 도메인이 도메인 검색 목록에 있도록 **/etc/sysconfig/network/config** 파일을 편집합니다.
 
    ```/etc/sysconfig/network/config
    NETCONFIG_DNS_STATIC_SEARCHLIST=""
    NETCONFIG_DNS_STATIC_SERVERS="**<AD domain controller IP address>**"
    ```
 
-1. 이 파일을 편집한 후 네트워크 서비스를 다시 시작 합니다.
+1. 이 파일을 편집한 후 네트워크 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart network
    ```
 
-1. 다음으로 확인 하 **/etc/resolv.conf** 다음과 같이 줄을 포함 하는 파일:
+1. 다음으로 **/etc/resolv.conf** 파일에 다음 예제와 같은 줄이 포함되어 있는지 확인합니다.
 
    ```/etc/resolv.conf
    search contoso.com com
    nameserver **<AD domain controller IP address>**
    ```
 
-## <a name="join-to-the-ad-domain"></a>AD 도메인에 가입
+## <a name="join-to-the-ad-domain"></a>AD 도메인에 조인
 
-기본 구성 및 도메인 컨트롤러와의 연결을 확인 한 후 가지 Active Directory 도메인 컨트롤러를 사용 하 여 SQL Server Linux 호스트 컴퓨터를 조인 하는 데 두 가지 옵션이 있습니다.
+기본 구성 및 도메인 컨트롤러와의 연결이 확인된 후에는 두 가지 옵션을 통해 SQL Server Linux 호스트 머신을 Active Directory 도메인 컨트롤러에 조인할 수 있습니다.
 
 - [옵션 1: SSSD 패키지 사용](#option1)
-- [옵션 2: 타사 openldap 공급자 유틸리티를 사용 합니다.](#option2)
+- [옵션 2: 타사 openldap 공급자 유틸리티 사용](#option2)
 
-### <a id="option1"></a> 옵션 1: SSSD 패키지를 사용 하 여 AD 도메인에 가입
+### <a id="option1"></a> 옵션 1: SSSD 패키지를 사용하여 AD 도메인 조인
 
-이 메서드는 SQL Server 호스트를 사용 하 여 AD 도메인 조인 **realmd** 하 고 **sssd** 패키지 있습니다.
+이 방법에서는 **realmd** 및 **sssd** 패키지를 사용하여 SQL Server 호스트를 AD 도메인에 연결합니다.
 
 > [!NOTE]
-> 이 AD 도메인 컨트롤러에 Linux 호스트를 조인 하는 기본 방법입니다.
+> Linux 호스트를 AD 도메인 컨트롤러에 조인할 때 기본적으로 사용하는 방법입니다.
 
-SQL Server 호스트는 Active Directory 도메인에 가입 하려면 다음 단계를 사용 합니다.
+다음 단계에 따라 SQL Server 호스트를 Active Directory 도메인에 조인합니다.
 
-1. 사용 하 여 [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) AD 도메인에 호스트 컴퓨터를 가입 합니다. 둘 다를 먼저 설치 해야 합니다 **realmd** 및 Linux 배포판의 패키지 관리자를 사용 하 여 SQL Server 호스트 컴퓨터에서 Kerberos 클라이언트 패키지:
+1. [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join)를 사용하여 호스트 머신을 AD 도메인에 조인합니다. 먼저 Linux 배포판의 패키지 관리자를 사용하여 SQL Server 호스트 머신에 **realmd** 및 Kerberos 클라이언트 패키지를 모두 설치해야 합니다.
 
-   **RHEL의 경우:**
+   **RHEL:**
 
    ```base
    sudo yum install realmd krb5-workstation
    ```
 
-   **SUSE의 경우:**
+   **SUSE:**
 
    ```bash
    sudo zypper install realmd krb5-client
@@ -158,29 +158,29 @@ SQL Server 호스트는 Active Directory 도메인에 가입 하려면 다음 �
    sudo apt-get install realmd krb5-user software-properties-common python-software-properties packagekit
    ```
 
-1. Kerberos 클라이언트 패키지 설치 요청 영역 이름, 도메인 이름을 대문자로 입력 합니다.
+1. Kerberos 클라이언트 패키지 설치에서 영역 이름을 입력하라는 메시지가 표시되면 도메인 이름을 대문자로 입력합니다.
 
-1. DNS가 올바르게 구성 되었는지 확인 하 고 나면 다음 명령을 실행 하 여 도메인에 가입 합니다. 새 컴퓨터를 도메인에 가입 AD에 충분 한 권한이 있는 AD 계정을 사용 하 여 인증 해야 합니다. 이 명령은 AD에서 새 컴퓨터 계정을 만들고, 만듭니다는 **/etc/krb5.keytab** keytab 파일을 호스트를 도메인에 구성 **/etc/sssd/sssd.conf**, 및 업데이트 **/etc/krb5.conf**.
+1. DNS가 올바르게 구성되어 있는지 확인한 후 다음 명령을 실행하여 도메인을 조인합니다. AD에서 도메인에 새 머신을 조인할 수 있는 권한이 있는 AD 계정을 사용하여 인증해야 합니다. 이 명령은 AD에서 새 컴퓨터 계정을 만들고 **/etc/krb5.keytab** 호스트 keytab 파일을 만들고, **/etc/sssd/sssd.conf**에서 도메인을 구성하고, **/etc/krb5.conf**를 업데이트합니다.
 
    ```bash
    sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
    ```
 
-   메시지를 표시 해야 `Successfully enrolled machine in realm`합니다.
+   `Successfully enrolled machine in realm` 메시지가 표시됩니다.
 
-   다음 표에서 일부 받을 수 있는 오류 메시지 및 해결 하는 방법과 권장 사항을 나열 합니다.
+   다음 표에서는 표시될 수 있는 몇 가지 오류 메시지를 나열하고 해결하는 방법을 제안합니다.
 
-   | 오류 메시지 | 권장 |
+   | 오류 메시지입니다. | 권장 |
    |---|---|
-   | `Necessary packages are not installed` | Linux 배포판의 패키지 관리자를 사용 하 여 영역 조인 명령을 다시 실행 하기 전에 해당 패키지를 설치 합니다. |
-   | `Insufficient permissions to join the domain` | 도메인 관리자를 사용 하 여 Linux 컴퓨터를 도메인에 가입 하면 충분 한 권한이 있는지 확인 합니다. |
-   | `KDC reply did not match expectations` | 사용자에 대 한 올바른 영역 이름의 지정 하지 않을 수 있습니다. 영역 이름 대/소문자 구분 및 대문자로 일반적으로 명령 영역을 사용 하 여 식별할 수 있습니다 contoso.com을 검색 합니다. |
+   | `Necessary packages are not installed` | 영역 조인 명령을 다시 실행하기 전에 Linux 배포판의 패키지 관리자를 사용하여 패키지를 설치합니다. |
+   | `Insufficient permissions to join the domain` | Linux 머신을 도메인에 조인할 수 있는 권한이 있는지 도메인 관리자에게 확인합니다. |
+   | `KDC reply did not match expectations` | 사용자의 올바른 영역 이름을 지정하지 않았을 수 있습니다. 영역 이름은 대/소문자를 구분하고 대개 대문자이며 명령 영역 검색 contoso.com을 사용하여 식별할 수 있습니다. |
 
-   SQL Server 사용자 계정 및 그룹 보안 식별자 (Sid)에 매핑하기 위한 SSSD 및 NSS를 사용 합니다. SSSD 구성 하 고 SQL server 로그인을 만들려면 AD 성공적으로 실행 해야 합니다. **realmd** 일반적으로이 위해 자동으로 경우도 있지만 도메인에 가입 하는 과정에서 변경 해야 할 개별적으로 합니다.
+   SQL Server는 SSSD 및 NSS를 사용하여 사용자 계정 및 그룹을 SID(보안 식별자)에 매핑합니다. SSSD가 구성되어 실행 중이어야 SQL Server가 AD 로그인을 성공적으로 만들 수 있습니다. **realmd** 는 일반적으로 도메인 조인을 하는 중인 이 작업을 자동으로 수행하지만 경우에 따라 이 작업을 별도로 수행해야 합니다.
 
-   자세한 내용은 참조 하는 방법 [SSSD를 수동으로 구성](https://access.redhat.com/articles/3023951), 및 [SSSD 작업할 NSS 구성](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   자세한 내용은 [SSSD를 수동으로 구성](https://access.redhat.com/articles/3023951)하는 방법과 [SSSD를 사용하도록 NSS를 구성](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options)하는 방법을 참조하세요.
 
-1. 도메인에서 사용자에 대 한 정보를 수집할 이제 수 및 해당 사용자로 Kerberos 티켓을 얻을 수 있습니다는 확인 합니다. 다음 예제에서는 **id**를 [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html), 및 [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) 이 대 한 명령입니다.
+1. 이제 도메인에서 사용자에 관한 정보를 수집할 수 있고 해당 사용자로 Kerberos 티켓을 가져올 수 있는지 확인합니다. 다음 예제에서는 이를 위해 **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html) 및 [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) 명령을 사용합니다.
 
    ```bash
    id user@contoso.com
@@ -197,22 +197,22 @@ SQL Server 호스트는 Active Directory 도메인에 가입 하려면 다음 �
    ```
 
    > [!NOTE]
-   > - 하는 경우 **id user@contoso.com**  반환 `No such user`, SSSD 서비스 명령을 실행 하 여 성공적으로 시작 되도록 `sudo systemctl status sssd`합니다. 서비스가 실행 되는 오류가 계속 표시 하 고 SSSD에 대 한 자세한 정보 로깅을 사용 하도록 설정 하십시오. 자세한 내용은 Red Hat 설명서를 참조 [문제 해결 SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)합니다.
+   > - **id user@contoso.com** 에서 `No such user`를 반환하는 경우 `sudo systemctl status sssd` 명령을 실행하여 SSSD 서비스가 시작되었는지 확인하세요. SSSD 서비스가 실행 중인데도 오류가 계속 표시되는 경우에는 SSSD의 자세한 정보 로깅을 사용하도록 설정해 보세요. 자세한 내용은 Red Hat 설명서에서 [Troubleshooting SSSD](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)(SSSD 문제 해결)에 관한 내용을 참조하세요.
    >
-   > - 하는 경우 **kinit user@CONTOSO.COM**  반환 `KDC reply did not match expectations while getting initial credentials`, 대문자로 영역을 지정 했는지 확인 합니다.
+   > - **kinit user@CONTOSO.COM** 에서 `KDC reply did not match expectations while getting initial credentials`를 반환하는 경우 영역을 대문자로 지정했는지 확인하세요.
 
-자세한 내용은 Red Hat 설명서를 참조 [Discovering 및 Id 도메인이 가입](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)합니다.
+자세한 내용은 Red Hat 설명서에서 [Discovering and Joining Identity Domains](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)(ID 도메인 검색 및 조인)에 관한 내용을 참조하세요.
 
-### <a id="option2"></a> 옵션 2: 타사 openldap 공급자 유틸리티를 사용 합니다.
+### <a id="option2"></a> 옵션 2: 타사 openldap 공급자 유틸리티 사용
 
-와 같은 타사 유틸리티를 사용할 수 있습니다 [PBI](https://www.beyondtrust.com/)하십시오 [VAS](https://www.oneidentity.com/products/authentication-services/), 또는 [Centrify](https://www.centrify.com/)합니다. 이 문서는 각 개별 유틸리티에 대 한 단계를 다루지 않습니다. 앞으로 계속 하기 전에 SQL Server에 대 한 Linux 호스트를 도메인에 가입 하려면 다음이 유틸리티 중 하나를 먼저 사용 해야 합니다.  
+[PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) 또는 [Centrify](https://www.centrify.com/)와 같은 타사 유틸리티를 사용할 수 있습니다. 이 문서에서는 각 개별 유틸리티에 관한 단계는 다루지 않습니다. 계속하기 전에 먼저 이러한 유틸리티 중 하나를 사용하여 SQL Server의 Linux 호스트를 도메인에 조인해야 합니다.  
 
-SQL Server AD와 관련 된 모든 쿼리에 대 한 타사 통합자 코드 또는 라이브러리를 사용 하지 않습니다. SQL Server는 항상이 설치 프로그램에서 직접 openldap 라이브러리 호출을 사용 하 여 AD를 쿼리 합니다. 타사 통합은 Linux 호스트에 AD 도메인에 가입 하는 데만 사용 됩니다 하 고 이러한 유틸리티와 직접 통신을 SQL Server에 없습니다.
+SQL Server는 AD 관련 쿼리에 타사 통합자의 코드 또는 라이브러리를 사용하지 않습니다. SQL Server는 항상 이 설치 프로그램에서 직접 openldap library 호출을 사용하여 AD를 쿼리합니다. 타사 통합자는 Linux 호스트를 AD 도메인에 조인하는 데만 사용되며 SQL Server는 이러한 유틸리티와 직접 통신하지 않습니다.
 
 > [!IMPORTANT]
-> 사용에 대 한 권장 사항을 참조 하세요 합니다 **mssql conf** `network.disablesssd` 구성 옵션에는 **추가 구성 옵션** 문서의 섹션 [사용 하 여 활성 Linux의 SQL Server를 사용 하 여 디렉터리 인증](sql-server-linux-active-directory-authentication.md#additionalconfig)합니다.
+> **mssql-conf** `network.disablesssd` 구성 옵션 사용에 관한 권장 사항은 [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md#additionalconfig)(SQL Server on Linux에서 Active Directory 인증 사용) 문서의 **Additional configuration options**(추가 구성 옵션) 섹션을 참조하세요.
 
-확인 프로그램 **/etc/krb5.conf** 올바르게 구성 되어 있습니다. 대부분의 타사 Active Directory 공급자에 대 한이 구성은 자동으로 수행 됩니다. 그러나 체크 **/etc/krb5.conf** 모든 향후 문제를 방지 하기 위해 다음 값에 대 한 합니다.
+**/etc/krb5.conf**가 올바르게 구성되어 있는지 확인합니다. 타사 Active Directory 공급자 대부분의 경우 이 구성이 자동으로 수행됩니다. 그러나 이후 문제를 방지하기 위해 **/etc/krb5.conf**에서 다음 값을 확인하세요.
 
 ```/etc/krb5.conf
 [libdefaults]
@@ -227,16 +227,16 @@ contoso.com = CONTOSO.COM
 .contoso.com = CONTOSO.COM
 ```
 
-## <a name="check-that-the-reverse-dns-is-properly-configured"></a>역방향 DNS가 올바르게 구성 되었는지 확인
+## <a name="check-that-the-reverse-dns-is-properly-configured"></a>역방향 DNS가 제대로 구성되어 있는지 확인합니다.
 
-다음 명령은 SQL Server를 실행 하는 호스트의 정규화 된 도메인 이름 (FQDN)을 반환 해야 합니다. 예로 **SqlHost.contoso.com**합니다.
+다음 명령은 SQL Server를 실행하는 호스트의 FQDN(정규화된 도메인 이름)을 반환해야 합니다. 예를 들어 **SqlHost.contoso.com**을 반환해야 합니다.
 
 ```bash
 host **<IP address of SQL Server host>**
 ```
 
-이 명령의 출력은 같은 형태가 됩니다 `**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`합니다. 이 명령은 호스트의 FQDN을 반환 하지 않는 경우 또는 FQDN 올바르지 않으면 DNS 서버에 Linux 호스트에서 SQL Server에 대 한 역방향 DNS 항목을 추가 합니다.
+이 명령의 출력은 `**<reversed IP address>**.in-addr.arpa domain name pointer SqlHost.contoso.com`과 비슷해야 합니다. 이 명령이 호스트의 FQDN을 반환하지 않거나 FQDN이 잘못된 경우 SQL Server on Linux 호스트의 역방향 DNS 항목을 DNS 서버에 추가합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-이 문서에서는 Active Directory 인증을 사용 하 여 Linux 호스트 컴퓨터에서 SQL Server를 구성 하는 방법의 필수 구성 요소에 설명 합니다. Active Directory 계정을 지원 하기 위해 Linux에서 SQL Server 구성을 완료 하려면의 지침을 따르세요 [Linux의 SQL Server를 사용 하 여 사용 하 여 Active Directory 인증](sql-server-linux-active-directory-authentication.md)합니다.
+이 문서에서는 Active Directory 인증을 사용하여 Linux 호스트 머신에서 SQL Server를 구성하는 방법에 관한 필수 조건을 설명합니다. SQL Server on Linux에서 Active Directory 계정을 지원하도록 구성을 마무리하려면 [Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md)(SQL Server on Linux에서 Active Directory 인증 사용)의 지침을 따르세요.

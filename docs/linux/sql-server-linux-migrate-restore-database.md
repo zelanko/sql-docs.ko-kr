@@ -1,6 +1,6 @@
 ---
-title: Linux에서 Windows SQL Server 데이터베이스 마이그레이션
-description: 이 자습서에서는 Windows에서 SQL Server 데이터베이스 백업을 수행 하 여 SQL Server를 실행 하는 Linux 컴퓨터를 복원 하는 방법을 보여 줍니다.
+title: Windows에서 Linux로 SQL Server 데이터베이스 마이그레이션
+description: 이 자습서에서는 Windows에서 SQL Server 데이터베이스 백업을 수행하고 SQL Server를 실행하는 Linux 머신으로 복원하는 방법을 보여 줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,59 +10,59 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 9ac64d1a-9fe5-446e-93c3-d17b8f55a28f
 ms.openlocfilehash: f5eebdbedb548c28db6a83038a6f6b84c5bad336
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68025928"
 ---
-# <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>백업 및 복원을 사용 하 여 Linux를 Windows에서 SQL Server 데이터베이스 마이그레이션
+# <a name="migrate-a-sql-server-database-from-windows-to-linux-using-backup-and-restore"></a>백업 및 복원을 사용하여 Windows에서 Linux로 SQL Server 데이터베이스 마이그레이션
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server의 백업 및 복원 기능은 Windows의 SQL Server에서 Linux의 SQL Server로 데이터베이스를 마이그레이션하는 것이 좋습니다. 이 자습서에서는 Linux에 백업을 사용 하 여 데이터베이스를 이동 하 고 복원 기술 하는 데 필요한 단계를 안내 합니다.
+SQL Server의 백업 및 복원 기능은 SQL Server on Windows에서 SQL Server on Linux로 데이터베이스를 마이그레이션하는 권장 방법입니다. 이 자습서에서는 백업 및 복원 방법을 사용하여 데이터베이스를 Linux로 이동하는 데 필요한 단계를 안내합니다.
 
 > [!div class="checklist"]
-> * SSMS를 사용 하 여 Windows에서 백업 파일 만들기
-> * Windows에서 Bash 셸을 설치합니다
-> * Bash 셸에서 백업 파일을 Linux로 이동 합니다.
-> * TRANSACT-SQL을 사용 하 여 Linux에서 백업 파일 복원
-> * 마이그레이션을 확인 하려면 쿼리를 실행 합니다.
+> * SSMS를 사용하여 Windows에서 백업 파일 만들기
+> * Windows에 Bash 셸 설치
+> * Bash 셸을 통해 Linux로 백업 파일 이동
+> * Transact-SQL을 사용하여 Linux에서 백업 파일 복원
+> * 쿼리를 실행하여 마이그레이션 확인
 
-SQL Server Always On 가용성 그룹에서 Linux Windows에서 SQL Server 데이터베이스 마이그레이션도 만들 수 있습니다. 참조 [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md)합니다.
+SQL Server Always On 가용성 그룹을 만들어 Windows에서 Linux로 SQL Server 데이터베이스를 마이그레이션할 수도 있습니다. [sql-server-linux-availability-group-cross-platform](sql-server-linux-availability-group-cross-platform.md)을 참조하세요.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 자습서를 완료 하려면 다음 필수 조건이 필요 합니다.
+이 자습서를 완료하려면 다음 필수 조건이 필요합니다.
 
-* 다음을 사용 하 여 Windows 컴퓨터:
-  * [SQL Server](https://www.microsoft.com/sql-server/sql-server-2016-editions) 설치 합니다.
-  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 설치 합니다.
-  * 마이그레이션할 대상 데이터베이스입니다.
+* 다음 조건을 충족하는 Windows 머신:
+  * [SQL Server](https://www.microsoft.com/sql-server/sql-server-2016-editions)가 설치되어 있음
+  * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
+  * 마이그레이션할 대상 데이터베이스
 
-* 다음을 설치를 사용 하 여 Linux 컴퓨터:
-  * SQL Server ([RHEL](quickstart-install-connect-red-hat.md)하십시오 [SLES](quickstart-install-connect-suse.md), 또는 [Ubuntu](quickstart-install-connect-ubuntu.md)) 명령줄 도구를 사용 합니다.
+* 다음 조건을 충족하는 Linux 머신:
+  * 명령줄 도구를 사용하는 SQL Server([RHEL](quickstart-install-connect-red-hat.md), [SLES](quickstart-install-connect-suse.md) 또는 [Ubuntu](quickstart-install-connect-ubuntu.md)).
 
-## <a name="create-a-backup-on-windows"></a>Windows에서 백업을 만들기
+## <a name="create-a-backup-on-windows"></a>Windows에서 백업 만들기
 
-Windows에서 데이터베이스의 백업 파일을 만들려고 하는 방법은 여러 가지가 있습니다. 다음 단계에서는 SQL Server Management Studio (SSMS)를 사용 합니다.
+Windows에서 데이터베이스 백업 파일을 만드는 방법에는 여러 가지가 있습니다. 다음 단계에서는 SSMS(SQL Server Management Studio)를 사용합니다.
 
-1. 시작 **SQL Server Management Studio** Windows 컴퓨터에 있습니다.
+1. Windows 머신에서 **SQL Server Management Studio**를 시작합니다.
 
-1. 연결 대화 상자에서 입력 **localhost**합니다.
+1. 연결 대화 상자에서 **localhost**를 입력합니다.
 
-1. 개체 탐색기에서 확장 **데이터베이스**합니다.
+1. 개체 탐색기에서 **데이터베이스**를 확장합니다.
 
-1. 대상 데이터베이스를 마우스 오른쪽 단추로 클릭 한 다음를 선택 합니다 **태스크**를 클릭 하 고 **백업 하는 중...** .
+1. 대상 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **작업**을 선택한 다음, **백업...** 을 클릭합니다.
 
-   ![SSMS를 사용 하 여 백업 파일을 만들려면](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
+   ![SSMS를 사용하여 백업 파일 만들기](./media/sql-server-linux-migrate-restore-database/ssms-create-backup.png)
 
-1. 에 **데이터베이스 백업** 대화 상자에서 확인 **백업 유형** 은 **전체** 및 **백업할** 는 **디스크**. 노트 이름 및 파일의 위치입니다. 예를 들어, 명명 된 데이터베이스 **YourDB** SQL Server 2016의 기본 백업 경로 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak`입니다.
+1. **데이터베이스 백업** 대화 상자에서 **백업 유형**이 **전체**이고 **백업할 위치**가 **디스크**인지 확인합니다. 파일의 이름과 위치를 적어 둡니다. 예를 들어 SQL Server 2016의 **YourDB** 데이터베이스는 기본 백업 경로가 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\YourDB.bak`입니다.
 
-1. 클릭 **확인** 에 데이터베이스를 백업 합니다.
+1. **확인**을 클릭하여 데이터베이스를 백업합니다.
 
 > [!NOTE]
-> 백업 파일을 만드는 TRANSACT-SQL 쿼리를 실행 하는 방법도 있습니다. 데이터베이스에 대해 이전 단계와 동일한 동작을 수행 하는 다음 TRANSACT-SQL 명령을 호출 **YourDB**:
+> 또 다른 옵션은 Transact-SQL 쿼리를 실행하여 백업 파일을 만드는 것입니다. 다음 Transact-SQL 명령은 **YourDB** 데이터베이스에 대해 이전 단계와 동일한 작업을 수행합니다.
 >
 > ```sql
 > BACKUP DATABASE [YourDB] TO  DISK =
@@ -72,26 +72,26 @@ Windows에서 데이터베이스의 백업 파일을 만들려고 하는 방법�
 > GO
 > ```
 
-## <a name="install-a-bash-shell-on-windows"></a>Windows에서 Bash 셸을 설치합니다
+## <a name="install-a-bash-shell-on-windows"></a>Windows에 Bash 셸 설치
 
-데이터베이스를 복원 하려면 대상 Linux 컴퓨터에 Windows 컴퓨터에서 백업 파일을 먼저 전송 해야 있습니다. 이 자습서에서는 파일을 Linux에서는 Bash 셸 (터미널 창)에서 Windows를 실행 이동 했습니다.
+데이터베이스를 복원하려면 먼저 Windows 머신에서 대상 Linux 머신으로 백업 파일을 전송해야 합니다. 이 자습서에서는 Windows에서 실행되는 Bash 셸(터미널 창)을 통해 파일을 Linux로 이동합니다.
 
-1. Bash 셸을 지 원하는 Windows 컴퓨터에 설치 합니다 **scp** (보안 복사) 및 **ssh** (원격 로그인) 명령입니다. 두 가지 예입니다.
+1. **scp**(보안 복사) 및 **ssh**(원격 로그인) 명령을 지원하는 Windows 머신에 Bash 셸을 설치합니다. 다음 두 가지 예가 있습니다.
 
-   * 합니다 [Linux 용 Windows 하위 시스템](https://msdn.microsoft.com/commandline/wsl/about) (Windows 10)
-   * Git Bash 셸 ([https://git-scm.com/downloads](https://git-scm.com/downloads))
+   * [Linux용 Windows 하위 시스템](https://msdn.microsoft.com/commandline/wsl/about)(Windows 10)
+   * Git Bash 셸([)https://git-scm.com/downloads](https://git-scm.com/downloads)
 
 1. Windows에서 Bash 세션을 엽니다.
 
-## <a id="scp"></a> Linux 백업 파일 복사
+## <a id="scp"></a> Linux에 백업 파일 복사
 
-1. Bash 세션에서 백업 파일이 있는 디렉터리로 이동 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.
+1. Bash 세션에서 백업 파일이 포함된 디렉터리로 이동합니다. 예를 들어
 
    ```bash
    cd 'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\'
    ```
 
-1. 사용 된 **scp** 명령 대상 Linux 컴퓨터에 파일을 전송 합니다. 다음 예제에서는 전송을 **YourDB.bak** 의 홈 디렉터리로 *user1* 의 IP 주소를 사용 하 여 Linux 서버의 *192.0.2.9*:
+1. **scp** 명령을 사용하여 파일을 대상 Linux 머신으로 전송합니다. 다음 예제에서는 IP 주소가 *192.0.2.9*인 Linux 서버에 있는 *user1*의 홈 디렉터리로 **YourDB.bak**를 전송합니다.
 
    ```bash
    scp YourDB.bak user1@192.0.2.9:./
@@ -99,39 +99,39 @@ Windows에서 데이터베이스의 백업 파일을 만들려고 하는 방법�
    ![scp 명령](./media/sql-server-linux-migrate-restore-database/scp-command.png)
 
 > [!TIP]
-> 파일 전송에 대 한 scp를 사용 하는 대안이 있습니다. 하나를 사용 하는 것 [Samba](https://help.ubuntu.com/community/Samba) Windows와 Linux SMB 네트워크 공유를 구성 합니다. Ubuntu의 연습을 참조 하세요 [는 네트워크 공유를 통해 Samba를 만드는 방법](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!)합니다. 설정 되 면 네트워크 파일으로 액세스할 수 있습니다 Windows에서 같이 공유  **\\ \\machinenameorip\\공유**합니다.
+> 파일 전송에 scp 대신 사용할 수 있는 여러 가지 방법이 있습니다. [Samba](https://help.ubuntu.com/community/Samba)를 사용하여 Windows와 Linux 간에 SMB 네트워크 공유를 구성하는 것도 이러한 방법 중 하나입니다. Ubuntu 관련 연습은 [Samba를 통해 네트워크 공유를 만드는 방법](https://help.ubuntu.com/community/How%20to%20Create%20a%20Network%20Share%20Via%20Samba%20Via%20CLI%20%28Command-line%20interface/Linux%20Terminal%29%20-%20Uncomplicated,%20Simple%20and%20Brief%20Way!)을 참조하세요. 설정되고 나면, Windows에서 **\\\\machinenameorip\\share**와 같이 네트워크 파일 공유로 액세스할 수 있습니다.
 
-## <a name="move-the-backup-file-before-restoring"></a>복원 전에 백업 파일을 이동 합니다.
+## <a name="move-the-backup-file-before-restoring"></a>복원 전에 백업 파일 이동
 
-이 시점에서 사용자의 홈 디렉터리에서 Linux 서버에는 백업 파일입니다. 하위 디렉터리에 백업을 배치 해야 하는 SQL server 데이터베이스를 복원 하기 전에 **/var/opt/mssql**합니다.
+이 시점에는 백업 파일이 Linux 서버의 사용자 홈 디렉터리에 있습니다. 데이터베이스를 SQL Server로 복원하기 전에 **/var/opt/mssql** 하위 디렉터리에 백업을 저장해야 합니다.
 
-1. 동일한 Windows Bash 세션에서 사용 하 여 대상 Linux 컴퓨터에 원격으로 연결할 **ssh**합니다. 다음 예제에서는 Linux 컴퓨터에 연결 **192.0.2.9** 사용자로 **user1**합니다.
+1. 동일한 Windows Bash 세션에서 **ssh**를 사용하여 대상 Linux 머신에 원격으로 연결합니다. 다음 예제에서는 사용자 **user1**로 Linux 머신 **192.0.2.9**에 연결합니다.
 
    ```bash
    ssh user1@192.0.2.9
    ```
 
-   이제 원격 Linux 서버에서 명령을 실행 하는 있습니다.
+   이제 원격 Linux 서버에서 명령을 실행하고 있습니다.
 
-1. 슈퍼 사용자 모드를 입력 합니다.
+1. 슈퍼 사용자 모드로 전환합니다.
 
    ```bash
    sudo su
    ```
 
-1. 새 백업 디렉터리를 만듭니다. -P 매개 변수는 아무 효과도 없습니다 디렉터리가 이미 있습니다.
+1. 새 백업 디렉터리를 만듭니다. 디렉터리가 이미 있는 경우에는 -p 매개 변수가 아무 작업도 수행하지 않습니다.
 
    ```bash
    mkdir -p /var/opt/mssql/backup
    ```
 
-1. 해당 디렉터리에 백업 파일을 이동 합니다. 다음 예제에서는 백업 파일의 홈 디렉터리에 상주 *user1*합니다. 백업 파일의 위치 및 파일 이름과 일치 하도록 명령을 변경 합니다.
+1. 백업 파일을 해당 디렉터리로 이동합니다. 다음 예제에서는 백업 파일이 *user1*의 홈 디렉터리에 상주합니다. 백업 파일의 위치 및 파일 이름과 일치하도록 명령을 변경합니다.
 
    ```bash
    mv /home/user1/YourDB.bak /var/opt/mssql/backup/
    ```
 
-1. 슈퍼 사용자 모드를 종료 합니다.
+1. 슈퍼 사용자 모드를 종료합니다.
 
    ```bash
    exit
@@ -139,18 +139,18 @@ Windows에서 데이터베이스의 백업 파일을 만들려고 하는 방법�
 
 ## <a name="restore-your-database-on-linux"></a>Linux에서 데이터베이스 복원
 
-데이터베이스 백업을 복원 하려면 사용 합니다 **RESTORE DATABASE** TRANSACT-SQL (TQL) 명령.
+데이터베이스 백업을 복원하려면 **RESTORE DATABASE** TQL(Transact-SQL) 명령을 사용할 수 있습니다.
 
 > [!NOTE]
-> 다음 단계를 사용 합니다 **sqlcmd** 도구입니다. 설치 하지 않은 경우 SQL Server 도구를 참조 하세요 [Linux의 SQL Server 설치 명령줄 도구](sql-server-linux-setup-tools.md)합니다.
+> 다음 단계에서는 **sqlcmd** 도구를 사용합니다. SQL Server 도구를 설치하지 않은 경우 [Linux에서 SQL Server 명령줄 도구 설치](sql-server-linux-setup-tools.md)를 참조하세요.
 
-1. 동일한 터미널에서 시작 **sqlcmd**합니다. 다음 예제에서는 로컬 SQL Server 인스턴스에 연결 합니다 **SA** 사용자입니다. 메시지가 표시 되 면 암호를 입력 하거나 추가 하 여 암호를 지정 합니다 **-P** 매개 변수입니다.
+1. 동일한 터미널에서 **sqlcmd**를 시작합니다. 다음 예제에서는 **SA** 사용자로 로컬 SQL Server 인스턴스에 연결합니다. 메시지가 표시되면 암호를 입력하거나 **-P** 매개 변수를 추가하여 암호를 지정합니다.
 
    ```bash
    sqlcmd -S localhost -U SA
    ```
 
-1. 에 `>1` 프롬프트에서 다음을 입력 합니다 **RESTORE DATABASE** (있습니다 수 없습니다. 복사 및 붙여넣기 전체 여러 줄 명령을 한 번에) 각 줄 뒤 ENTER 키를 눌러 명령입니다. 모든 항목을 바꿀 `YourDB` 데이터베이스의 이름입니다.
+1. `>1` 프롬프트에 다음 **RESTORE DATABASE** 명령을 입력하고 각 줄 뒤에 Enter 키를 누릅니다. 여러 줄로 이루어진 전체 명령을 한 번에 복사하여 붙여넣을 수는 없습니다. 모든 `YourDB` 항목을 데이터베이스 이름으로 바꿉니다.
 
    ```sql
    RESTORE DATABASE YourDB
@@ -160,9 +160,9 @@ Windows에서 데이터베이스의 백업 파일을 만들려고 하는 방법�
    GO
    ```
 
-   데이터베이스를 복원 했습니다. 메시지를 가져와야 합니다.
+   데이터베이스가 복원되었다는 메시지가 표시되어야 합니다.
 
-   `RESTORE DATABASE` 다음 예제와 같이 오류를 반환할 수 있습니다.
+   `RESTORE DATABASE`에서 다음 예제와 같은 오류가 반환될 수도 있습니다.
 
    ```bash
    File 'YourDB_Product' cannot be restored to 'Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf'. Use WITH MOVE to identify a valid location for the file.
@@ -170,14 +170,14 @@ Windows에서 데이터베이스의 백업 파일을 만들려고 하는 방법�
    Directory lookup for the file "Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Product.ndf" failed with the operating system error 2(The system cannot find the file specified.).
    ```
    
-   이 경우 데이터베이스는 보조 파일을 포함합니다. 이러한 파일에 지정 되지 않은 경우는 `MOVE` 절의 `RESTORE DATABASE`, 복원 절차는 원본 서버와 동일한 경로에 만들려고 시도 합니다. 
+   이 경우에는 데이터베이스에 보조 파일이 포함되어 있습니다. `RESTORE DATABASE`의 `MOVE` 절에 이 파일을 지정하지 않으면 복원 프로시저에서 원래 서버와 동일한 경로에 파일을 만듭니다. 
 
-   백업에 포함 된 모든 파일을 나열할 수 있습니다.
+   다음 명령을 실행하여 백업에 포함된 모든 파일을 나열할 수 있습니다.
    ```sql
    RESTORE FILELISTONLY FROM DISK = '/var/opt/mssql/backup/YourDB.bak'
    GO
    ```
-   (첫 번째 두 개의 열만 나열) 아래와 같은 목록을 얻게 됩니다.
+   아래와 같은 목록(처음 두 개의 열만 나열됨)이 표시됩니다.
    ```sql
    LogicalName         PhysicalName                                                                 ..............
    ----------------------------------------------------------------------------------------------------------------------
@@ -187,7 +187,7 @@ Windows에서 데이터베이스의 백업 파일을 만들려고 하는 방법�
    YourDB_log          Z:\Microsoft SQL Server\MSSQL11.GLOBAL\MSSQL\Data\YourDB\YourDB_Log.ldf      ..............
    ```
    
-   이 목록을 사용 하 여 만들려는 `MOVE` 절 추가 파일에 대 한 합니다. 이 예제에서는 `RESTORE DATABASE` 됩니다.
+   이 목록을 사용하여 추가 파일에 대한 `MOVE` 절을 만들 수 있습니다. 이 예제에서 `RESTORE DATABASE`는 다음과 같습니다.
 
    ```sql
    RESTORE DATABASE YourDB
@@ -200,14 +200,14 @@ Windows에서 데이터베이스의 백업 파일을 만들려고 하는 방법�
    ```
 
 
-1. 모든 서버에서 데이터베이스를 나열 하 여 복원 작업을 확인 합니다. 복원된 된 데이터베이스 나열 되어야 합니다.
+1. 서버에 있는 데이터베이스를 모두 나열하여 복원을 확인합니다. 복원된 데이터베이스가 나열됩니다.
 
    ```sql
    SELECT Name FROM sys.Databases
    GO
    ```
 
-1. 마이그레이션된 데이터베이스에서 다른 쿼리를 실행 합니다. 명령을 컨텍스트를 전환 합니다 **YourDB** 데이터베이스 및 테이블 중 하나에서 행을 선택 합니다.
+1. 마이그레이션된 데이터베이스에서 다른 쿼리를 실행합니다. 다음 명령은 컨텍스트를 **YourDB** 데이터베이스로 전환하고 해당 테이블 중 하나에서 행을 선택합니다.
 
    ```sql
    USE YourDB
@@ -215,24 +215,24 @@ Windows에서 데이터베이스의 백업 파일을 만들려고 하는 방법�
    GO
    ```
 
-1. 완료 되 면 사용 하 여 **sqlcmd**, 형식 `exit`합니다.
+1. **sqlcmd**사용을 마쳤으면 `exit`를 입력합니다.
 
-1. 완료 되 면 원격에서 작업 **ssh** 세션을 입력 `exit` 다시 합니다.
+1. 원격 **ssh** 세션 작업을 마쳤으면 `exit`를 다시 입력합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 Windows에서 데이터베이스를 백업 하 고 SQL Server를 실행 하는 Linux 서버로 이동 하는 방법을 알아보았습니다. 방법을 배웠습니다에:
+이 자습서에서는 Windows에서 데이터베이스를 백업하고 SQL Server를 실행하는 Linux 서버로 이동하는 방법을 알아보았습니다. 구체적으로 다음 작업 방법을 알아보았습니다.
 > [!div class="checklist"]
-> * SSMS 및 TRANSACT-SQL을 사용 하 여 Windows에서 백업 파일을 만들려면
-> * Windows에서 Bash 셸을 설치합니다
-> * 사용 하 여 **scp** 백업 파일을 Windows에서 Linux을 이동 하려면
-> * 사용 하 여 **ssh** Linux 컴퓨터에 원격으로 연결
-> * 백업 파일에 대 한 복원을 준비 재배치
-> * 사용 하 여 **sqlcmd** TRANSACT-SQL 명령을 실행 하려면
-> * 사용 하 여 데이터베이스 백업을 복원 합니다 **RESTORE DATABASE** 명령 
-> * 마이그레이션을 확인 하려면 쿼리를 실행 합니다.
+> * SSMS 및 Transact-SQL을 사용하여 Windows에서 백업 파일 만들기
+> * Windows에 Bash 셸 설치
+> * **scp**를 사용하여 Windows에서 Linux로 백업 파일 이동
+> * **ssh**를 사용하여 Linux 머신에 원격으로 연결
+> * 복원 준비를 위해 백업 파일 재배치
+> * **sqlcmd**를 사용하여 Transact-SQL 명령 실행
+> * **RESTORE DATABASE** 명령을 사용하여 데이터베이스 백업 복원 
+> * 쿼리를 실행하여 마이그레이션 확인
 
-다음으로, Linux의 SQL Server에 대 한 다른 마이그레이션 시나리오를 살펴봅니다. 
+다음에는 SQL Server on Linux의 다른 마이그레이션 시나리오를 살펴보겠습니다. 
 
 > [!div class="nextstepaction"]
->[Linux에서 SQL Server로 데이터베이스 마이그레이션](sql-server-linux-migrate-overview.md)
+>[SQL Server on Linux로 데이터베이스 마이그레이션](sql-server-linux-migrate-overview.md)

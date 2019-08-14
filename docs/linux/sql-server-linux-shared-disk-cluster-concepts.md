@@ -1,5 +1,5 @@
 ---
-title: Linux의 SQL Server 장애 조치 클러스터 인스턴스
+title: 장애 조치(failover) 클러스터 인스턴스 - SQL Server on Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
@@ -9,80 +9,80 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: 81d283ba02ec62a2de8d3c8f0e56be8c55d58190
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68032395"
 ---
-# <a name="failover-cluster-instances---sql-server-on-linux"></a>Linux의 SQL Server 장애 조치 클러스터 인스턴스
+# <a name="failover-cluster-instances---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 - SQL Server on Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 문서에서는 Linux의 SQL Server 장애 조치 클러스터 인스턴스 (FCI)와 관련 된 개념을 설명 합니다. 
+이 문서에서는 Linux의 SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)에 관련된 개념을 설명합니다. 
 
-Linux에서 SQL Server FCI를 만들려면 참조 [Linux에서 SQL Server FCI 구성](sql-server-linux-shared-disk-cluster-configure.md)
+Linux에서 SQL Server FCI를 만들려면 [Linux에서 SQL Server FCI 구성](sql-server-linux-shared-disk-cluster-configure.md)을 참조하세요.
 
 ## <a name="the-clustering-layer"></a>클러스터링 계층
 
-* RHEL에서 클러스터링 계층 Red Hat Enterprise Linux (RHEL) 기반 [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)합니다. 
+* RHEL에서 클러스터링 계층은 RHEL(Red Hat Enterprise Linux) [HA 추가 기능](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf)을 기반으로 합니다. 
 
     > [!NOTE] 
-    > Red Hat HA 추가 기능 및 설명서에 대 한 액세스는 구독이 필요 합니다. 
+    > Red Hat HA 추가 기능 및 설명서에 액세스하려면 구독이 필요합니다. 
 
-* SLES, 클러스터링 계층을 기반으로 하며 SUSE Linux Enterprise [높은 가용성 확장 (HAE)](https://www.suse.com/products/highavailability)합니다.
+* SLES에서 클러스터링 계층은 SUSE Linux Enterprise [HAE(High Availability Extension)](https://www.suse.com/products/highavailability)를 기반으로 합니다.
 
-    클러스터 구성, 리소스 에이전트 옵션, 관리, 모범 사례 및 권장 사항에 대 한 자세한 내용은 참조 하세요. [SUSE Linux Enterprise 높은 가용성 확장 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)합니다.
+    클러스터 구성, 리소스 에이전트 옵션, 관리, 모범 사례 및 권장 사항에 대한 자세한 내용은 [SUSE Linux Enterprise High Availability Extension 12 SP2](https://www.suse.com/documentation/sle-ha-12/index.html)를 참조하세요.
 
-RHEL HA 추가 기능 및 SUSE HAE에서 빌드된 [Pacemaker](https://clusterlabs.org/)합니다.
+RHEL HA 추가 기능과 SUSE HAE는 모두 [Pacemaker](https://clusterlabs.org/)를 기반으로 빌드됩니다.
 
-다음 다이어그램에서 알 수 있듯이, 저장소는 두 서버에 표시 됩니다. -Corosync 및 Pacemaker-클러스터링 구성 요소 통신 및 리소스 관리를 조정합니다. 저장소 리소스 및 SQL Server에 활성 연결이 서버 중 하나입니다. Pacemaker 오류를 발견 하면 클러스터링 구성 요소 관리 리소스를 다른 노드로 이동 합니다.  
+다음 다이어그램에 표시된 대로 스토리지는 두 개의 서버에 제공됩니다. 클러스터링 구성 요소인 Corosync와 Pacemaker는 통신 및 리소스 관리를 조정합니다. 서버 중 하나에는 스토리지 리소스 및 SQL Server에 대한 활성 연결이 있습니다. Pacemaker가 오류를 탐지하면 클러스터링 구성 요소는 리소스를 다른 노드로 이동하는 작업을 관리합니다.  
 
 ![Red Hat Enterprise Linux 7 공유 디스크 SQL 클러스터](./media/sql-server-linux-shared-disk-cluster-red-hat-7-configure/LinuxCluster.png) 
 
 
 > [!NOTE]
-> 이 시점에서 Linux의 Pacemaker 사용 하 여 SQL Server의 통합은 Windows에 WSFC를 사용 하 여으로 결합 없습니다. 내의 SQL에는 클러스터의 현재 상태에 대해 모든 오케스트레이션 외부에서 이며 서비스는 독립 실행형 인스턴스로 Pacemaker에 의해 제어 됩니다. 또한 가상 네트워크 이름은 WSFC 관련, Pacemaker에 동일한 동등한 옵션이 없습니다. 것으로 예상 되는 @@servername 및 sys.servers 클러스터 dmv sys.dm_os_cluster_nodes 및 sys.dm_os_cluster_properties를 레코드가 하는 동안 노드 이름을 반환할 합니다. 문자열 서버 이름으로 가리키는 연결 문자열을 사용 하 고 IP를 사용 하지를 선택한 서버 이름 (다음 섹션에서 설명)으로 가상 IP 리소스를 만드는 데 IP을 해당 DNS 서버에 등록 해야 합니다.
+> 이때 Linux의 Pacemaker와 SQL Server의 통합은 Windows의 WSFC와 같이 결합되지 않습니다. SQL 내에 클러스터의 현재 상태 정보가 없으며, 모든 오케스트레이션이 외부에서 수행되고, 서비스는 Pacemaker에서 독립 실행형 인스턴스로 제어됩니다. 또한 가상 네트워크 이름은 WSFC에만 해당되며, Pacemaker에는 동일한 항목이 없습니다. @@servername 및 sys.servers가 노드 이름을 반환해야 하지만, cluster dmvs sys.dm_os_cluster_nodes 및 sys.dm_os_cluster_properties에 레코드가 없습니다. 문자열 서버 이름을 가리키는 연결 문자열을 사용하고 IP를 사용하지 않으려면 선택된 서버 이름을 사용하여 다음 섹션에 설명된 대로 가상 IP 리소스를 만드는 데 사용된 IP를 DNS 서버에 등록해야 합니다.
 
-## <a name="number-of-instances-and-nodes"></a>인스턴스 수 및 노드
+## <a name="number-of-instances-and-nodes"></a>인스턴스 및 노드 수
 
-Linux의 SQL Server를 사용 하 여 한 가지 주요 차이점은 있을 수 있습니다만 Linux 서버당 하나의 SQL Server 설치 해당 설치 것을 인스턴스라고를 부릅니다. 이 Windows Server 장애 조치 클러스터 (WSFC) 당 최대 25 개의 Fci를 지 원하는 Windows Server와 달리 Linux 기반 FCI만 되어 단일 인스턴스를 의미 합니다. 이 하나의 인스턴스는 또한 기본; Linux의 명명된 된 인스턴스에 대 한 개념이 없습니다 있습니다. 
+SQL Server on Linux의 한 가지 주요 차이는 Linux 서버당 SQL Server 설치가 하나만 있을 수 있다는 것입니다. 해당 설치를 인스턴스라고 합니다. 즉, WSFC(Windows Server 장애 조치(failover) 클러스터)당 최대 25개의 FCI를 지원하는 Windows Server와 달리 Linux 기반 FCIS에는 단일 인스턴스만 있습니다. 이 단일 인스턴스는 기본 인스턴스이기도 합니다. Linux에는 명명된 인스턴스의 개념이 없습니다. 
 
-Pacemaker 클러스터를 하나만 사용할 수 있습니다 최대 16 개의 노드로 Corosync 관련 된 경우 단일 FCI 최대 16 명의 서버에 걸쳐 있을 수 있도록 합니다. SQL Server의 Standard Edition을 사용 하 여 구현 하는 FCI는 Pacemaker 클러스터에 최대 16 개의 노드로 구성 된 경우에 최대 2 개의 클러스터 노드를 지원 합니다.
+Corosync가 관련된 경우 Pacemaker 클러스터에는 최대 16개 노드만 포함될 수 있으므로 단일 FCI는 최대 16개 서버에 걸쳐 있을 수 있습니다. SQL Server Standard Edition으로 구현된 FCI는 Pacemaker 클러스터에 최대 16개 노드가 있는 경우에도 한 클러스터에서 최대 두 개의 노드를 지원합니다.
 
-SQL Server FCI를 SQL Server 인스턴스는 하나의 노드 또는 다른 활성입니다.
+SQL Server FCI에서 SQL Server 인스턴스는 두 노드 중 하나에서 활성화됩니다.
 
 ## <a name="ip-address-and-name"></a>IP 주소 및 이름
-Linux Pacemaker 클러스터에서 각 SQL Server FCI에는 자체 고유 IP 주소 및 이름이 필요합니다. FCI 구성에서 여러 서브넷에 걸쳐 있는 경우 하나의 IP 주소는 서브넷별로 해야 합니다. 응용 프로그램 및 최종 사용자에 게 않아도 Pacemaker 클러스터의 기본 서버는 알 수 있도록 FCI를 액세스 하는 고유한 이름 및 IP 주소 사용 됩니다.
+Linux Pacemaker 클러스터에서 각 SQL Server FCI에는 고유한 IP 주소와 이름이 필요합니다. FCI 구성이 여러 서브넷에 걸쳐 있는 경우 서브넷당 하나의 IP 주소가 필요합니다. FCI에 액세스하는 데 고유 이름 및 IP 주소가 사용되므로 애플리케이션 및 최종 사용자는 Pacemaker 클러스터의 기본 서버를 알 필요가 없습니다.
 
-DNS에서 FCI의 이름을 Pacemaker 클러스터에서 생성 되는 FCI 리소스의 이름과 동일 해야 합니다.
-이름 및 IP 주소가 모두 DNS에 등록 되어야 합니다.
+DNS의 FCI 이름은 Pacemaker 클러스터에서 생성되는 FCI 리소스의 이름과 동일해야 합니다.
+이름 및 IP 주소는 둘 다 DNS에 등록해야 합니다.
 
 ## <a name="shared-storage"></a>공유 스토리지
-Linux 또는 Windows Server에서 되었든 관계 없이 모든 Fci는 일종의 공유 저장소에 필요 합니다. 이 저장소는 FCI를 호스팅할 수 있는 수 있는 모든 서버에 표시 됩니다 있지만 단일 서버에서 언제 든 지 FCI에 대 한 저장소를 사용할 수 있습니다. Linux에서 공유 저장소에 사용 가능한 옵션은 같습니다.
+Linux 또는 Windows Server에 있는지 여부에 관계없이 모든 FCI에는 어떤 형태로든 공유 스토리지가 필요합니다. 이 스토리지는 FCI를 호스트할 수 있는 모든 서버에 제거되지만, 단일 서버에서만 특정 시점에 FCI에 스토리지를 사용할 수 있습니다. Linux에서 공유 스토리지에 사용할 수 있는 옵션은 다음과 같습니다.
 
 - iSCSI
-- 네트워크 파일 시스템 (NFS)
-- 서버 메시지 블록 (SMB)에서 Windows Server는 약간 다른 옵션이 있습니다. 현재 지원 되지 않는 Linux 기반 Fci에 대 한 한 가지 옵션, TempDB는 SQL Server의 임시 작업 영역에 대 한 노드의 로컬 디스크를 사용 하려면 있다는 점입니다.
+- NFS(네트워크 파일 시스템)
+- SMB(서버 메시지 블록) Windows Server에서는 약간 다른 옵션을 사용할 수 있습니다. 현재 Linux 기반 FCI에 지원되지 않는 한 가지 옵션은 SQL Server 임시 작업 영역인 TempDB 노드에 로컬인 디스크를 사용하는 기능입니다.
 
-여러 위치에 걸쳐 있는 구성에서 하나의 데이터 센터에 저장 된 것와 동기화 해야 다른 합니다. 장애 조치 시 FCI를 온라인 상태로 수 및 저장소 동일 하도록 표시 됩니다. 이렇게 해야 일부 외부 메서드의 저장소 복제의 경우 기본 저장소 하드웨어 또는 소프트웨어를 기반으로 일부 유틸리티를 통해 위배 됩니다. 
+여러 위치에 걸쳐 있는 구성에서는 하나의 데이터 센터에 저장된 항목이 다른 데이터 센터와 동기화되어야 합니다. 장애 조치(failover)를 수행할 때 FCI는 온라인 상태가 되고 스토리지는 동일하게 표시됩니다. 기본 스토리지 하드웨어 또는 일부 소프트웨어 기반 유틸리티를 통해 수행되는지 여부에 관계없이 이 작업을 수행하려면 스토리지 복제를 위한 외부 메서드가 필요합니다. 
 
 >[!NOTE]
->SQL Server에 대 한 이러한 서버에 직접 제공 하는 디스크를 사용 하 여 Linux 기반 배포 EXT4 또는 XFS로 포맷 되어야 합니다. 다른 파일 시스템 현재 지원 되지 않습니다. 변경 내용을 여기에 반영 됩니다.
+>SQL Server의 경우 서버에 직접 제공되는 디스크를 사용하는 Linux 기반 배포를 XFS 또는 EXT4로 포맷해야 합니다. 다른 파일 시스템은 현재 지원되지 않습니다. 여기에 변경 내용이 반영됩니다.
 
-공유 저장소를 제공 하기 위한 프로세스는 다양 한 지원 되는 방법에 대 한 같습니다.
+공유 스토리지를 제공하는 프로세스는 지원되는 다양한 메서드에 대해 동일합니다.
 
-- 공유 저장소를 구성 합니다.
-- FCI에 대 한 Pacemaker 클러스터의 노드로 사용할 서버에 폴더를 저장소 탑재
-- 필요한 경우 공유 저장소에 SQL Server 시스템 데이터베이스 이동
-- 공유 저장소에 연결 된 SQL Server는 각 서버에서 작동 하는 테스트
+- 공유 스토리지 구성
+- FCI에 대한 Pacemaker 클러스터의 노드로 사용할 서버에 스토리지를 폴더로 탑재합니다.
+- 필요한 경우 SQL Server 시스템 데이터베이스를 공유 스토리지로 이동합니다.
+- 공유 스토리지에 연결된 각 서버에서 SQL Server가 작동하는지 테스트합니다.
 
-Linux의 SQL Server를 사용 하 여 한 가지 주요 차이점은는 기본 사용자 데이터 및 로그 파일 위치를 구성할 수도 있지만, 시스템 데이터베이스는 항상에 있어야 `/var/opt/mssql/data`합니다. Windows Server에서 TempDB를 비롯 한 시스템 데이터베이스를 이동할 수가 있습니다. 이 팩트 FCI에 대 한 공유 저장소로 재생 구성 됩니다.
+SQL Server on Linux의 한 가지 주요 차이는 기본 사용자 데이터와 로그 파일 위치는 구성 가능하지만 시스템 데이터베이스는 항상 `/var/opt/mssql/data`에 있어야 한다는 것입니다. Windows Server에는 TempDB를 포함하여 시스템 데이터베이스를 이동하는 기능이 있습니다. 이 사실은 FCI에 대해 공유 스토리지를 구성하는 방법의 영향을 받습니다.
 
-비 시스템 데이터베이스에 대 한 기본 경로 사용 하 여 변경할 수 있습니다는 `mssql-conf` 유틸리티입니다. 기본값을 변경 하는 방법에 대 한 내용은 [기본 데이터 또는 로그 디렉터리 위치를 변경할](sql-server-linux-configure-mssql-conf.md#datadir)합니다. 저장할 수도 있습니다. SQL Server 데이터 및 트랜잭션 다른 위치에서 기본 위치입니다; 없는 경우에 적절 한 보안을가지고 있습니다. 위치를 명시 해야 합니다.
+비시스템 데이터베이스의 기본 경로는 `mssql-conf` 유틸리티를 사용하여 변경할 수 있습니다. 기본값을 변경하는 방법에 대한 자세한 내용은 [기본 데이터 또는 로그 디렉터리 위치 변경](sql-server-linux-configure-mssql-conf.md#datadir)을 참조하세요. 또한 기본 위치가 아니더라도 적절한 보안을 유지하는 경우 다른 위치에 SQL Server 데이터와 트랜잭션을 저장할 수 있으며, 위치를 명시해야 합니다.
 
-다음 항목을 Linux 기반 SQL Server FCI에 대 한 지원 되는 저장소 형식을 구성 하는 방법에 설명 합니다.
+다음 항목에서는 Linux 기반 SQL Server FCI에 대해 지원되는 스토리지 유형을 구성하는 방법을 설명합니다.
 
-- [장애 조치 클러스터 인스턴스-iSCSI-Linux의 SQL Server 구성](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
-- [장애 조치 클러스터 인스턴스-NFS-Linux의 SQL Server 구성](sql-server-linux-shared-disk-cluster-configure-nfs.md)
-- [장애 조치 클러스터 인스턴스-SMB-Linux의 SQL Server 구성](sql-server-linux-shared-disk-cluster-configure-smb.md)
+- [장애 조치(failover) 클러스터 인스턴스 구성 - iSCSI - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-iscsi.md)
+- [장애 조치(failover) 클러스터 인스턴스 구성 - NFS - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-nfs.md)
+- [장애 조치(failover) 클러스터 인스턴스 구성 - SMB - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure-smb.md)

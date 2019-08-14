@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b02d7c93ad2858c1463e3283135f1a3e2cc841b8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18aa4d46a82121d2522260f146315f89b36a1803
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909587"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476255"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>인덱스 다시 구성 및 다시 작성
 
@@ -71,11 +71,28 @@ ms.locfileid: "67909587"
 
 <sup>1</sup> 온라인 또는 오프라인으로 인덱스를 다시 작성할 수 있습니다. 인덱스를 다시 구성하는 과정은 항상 온라인으로 실행됩니다. 다시 구성할 때와 비슷한 가용성을 얻으려면 온라인으로 인덱스를 다시 작성해야 합니다.
 
-이러한 값은 `ALTER INDEX REORGANIZE` 및 `ALTER INDEX REBUILD`를 전환해야 하는 시점을 확인하기 위한 대략적인 지침을 제공합니다. 그러나 실제 값은 경우에 따라 달라질 수 있습니다. 실험을 통해 환경에 맞는 임계값을 확인하는 것이 중요합니다.
+> [!TIP]
+> 이러한 값은 `ALTER INDEX REORGANIZE` 및 `ALTER INDEX REBUILD`를 전환해야 하는 시점을 확인하기 위한 대략적인 지침을 제공합니다. 그러나 실제 값은 경우에 따라 달라질 수 있습니다. 실험을 통해 환경에 맞는 임계값을 확인하는 것이 중요합니다. 예를 들어 지정된 인덱스가 주로 스캔 작업에 사용되는 경우 조각화를 제거하면 해당 작업의 성능을 개선할 수 있습니다. 검색 작업에 주로 사용되는 인덱스의 경우 성능상 장점이 그다지 눈에 띄지 않을 수 있습니다. 마찬가지로 힙(클러스터형 인덱스가 없는 테이블)에서 조각화를 제거하는 기능은 비클러스터형 인덱스 검색 작업에 특히 유용하지만 조회 작업에는 거의 영향을 주지 않습니다.
+
 대체로 작은 양의 조각화를 제거할 경우 얻게 되는 이점보다 인덱스를 다시 구성하거나 다시 작성하는 비용이 훨씬 크기 때문에 일반적으로 두 명령 중 하나를 사용하여 매우 낮은 수준의 조각화(5% 미만)를 처리하는 것은 바람직하지 않습니다. `ALTER INDEX REORGANIZE` 및 `ALTER INDEX REBUILD`에 대한 자세한 내용은 [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)를 참조하세요.
 
 > [!NOTE]
 > 작은 인덱스는 다시 작성하거나 다시 구성해도 조각화가 줄어들지 않는 경우가 많습니다. 작은 인덱스의 페이지는 종종 혼합 익스텐트에 저장됩니다. 혼합 익스텐트는 최대 8개의 개체가 공유할 수 있으므로 인덱스를 다시 작성하거나 다시 구성한 후에도 작은 인덱스의 조각화가 줄어들지 않을 수 있습니다.
+
+### <a name="index-defragmentation-considerations"></a>인덱스 조각 모음 고려 사항
+특정 조건에서 클러스터형 인덱스를 다시 작성하면 비클러스터형 인덱스 레코드에 포함된 물리적 또는 논리적 식별자를 변경해야 하는 경우 클러스터링 키를 참조하는 비클러스터형 인덱스가 자동으로 다시 작성됩니다.
+
+테이블에서 모든 비클러스터형 인덱스를 자동으로 다시 작성하도록 하는 시나리오:
+
+-  테이블에서 클러스터형 인덱스 만들기
+-  클러스터형 인덱스를 제거하면 테이블이 힙으로 저장됨
+-  열을 포함하거나 제외하도록 클러스터링 키 변경
+
+테이블에서 모든 비클러스터형 인덱스를 자동으로 다시 작성할 필요가 없는 시나리오:
+
+-  고유한 클러스터형 인덱스 다시 작성
+-  고유하지 않은 클러스터형 인덱스 다시 작성
+-  인덱스 스키마 변경(예: 클러스터형 인덱스에 파티션 구성표 적용 또는 클러스터형 인덱스를 다른 파일 그룹으로 이동)
 
 ### <a name="Restrictions"></a> 제한 사항
 
@@ -96,7 +113,7 @@ ms.locfileid: "67909587"
 
 #### <a name="Permissions"></a> 사용 권한
 
-테이블이나 뷰에 대한 ALTER 권한이 필요합니다. 사용자는 다음 역할 중 하나 이상의 멤버여야 합니다.
+테이블 또는 보기에 대한 `ALTER` 권한이 필요합니다. 사용자는 다음 역할 중 하나 이상의 멤버여야 합니다.
 
 - **db_ddladmin** 데이터베이스 역할 <sup>1</sup>
 - **db_owner** 데이터베이스 역할

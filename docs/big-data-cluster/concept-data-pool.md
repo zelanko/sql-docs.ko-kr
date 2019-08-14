@@ -1,7 +1,7 @@
 ---
 title: 데이터 풀이란?
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터에 데이터 풀을 설명 합니다.
+description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터의 데이터 풀을 설명합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,31 +10,31 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f9355508e4d32dd9a6152781fba325ded2fa7425
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958733"
 ---
-# <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에 데이터 풀이란?
+# <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 데이터 풀이란?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 설명의 역할 *SQL Server 데이터 풀* SQL Server 2019 빅 데이터 클러스터 (미리 보기)에 있습니다. 다음 섹션에서는 아키텍처 및 SQL 데이터 풀의 기능을 설명합니다.
+이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)에서 ‘SQL Server 데이터 풀’의 역할을 설명합니다.  다음 섹션에서는 SQL 데이터 풀의 아키텍처 및 기능을 설명합니다.
 
 ## <a name="data-pool-architecture"></a>데이터 풀 아키텍처
 
-하나 이상의 SQL Server 인스턴스의 데이터 풀 데이터 풀 구성 됩니다. SQL 데이터 풀 인스턴스는 클러스터에 대 한 SQL Server의 영구 저장소를 제공합니다. 데이터 풀은 SQL 쿼리 또는 Spark 작업에서 데이터를 수집 하는 데 사용 됩니다. 큰 데이터 집합에서 더 나은 성능을 제공 하려면 데이터 풀에 데이터 멤버 SQL 데이터 풀 인스턴스를 분할 된 데이터베이스로 분산 됩니다.
+데이터 풀은 하나 이상의 SQL Server 데이터 풀 인스턴스로 구성됩니다. SQL 데이터 풀 인스턴스는 클러스터의 영구적 SQL Server 스토리지를 제공합니다. 데이터 풀은 SQL 쿼리 또는 Spark 작업에서 데이터를 수집하는 데 사용됩니다. 큰 데이터 세트에서 성능을 향상하기 위해 데이터 풀의 데이터가 멤버 SQL 데이터 풀 인스턴스에 분할 배포됩니다.
 
-## <a name="scale-out-data-marts"></a>수평 확장 데이터 마트
+## <a name="scale-out-data-marts"></a>스케일 아웃 데이터 마트
 
-데이터 풀 규모 데이터 마트, 여러 원본에서 외부 데이터는 데이터 풀으로 수집 하는 위치를 만들 수 있게 합니다. 데이터가 데이터 풀 인스턴스에 분산 되어, 때문에 큐 레이트 데이터에 대 한 병렬 쿼리는 더 효율적입니다.
+데이터 풀을 사용하면 여러 원본의 외부 데이터가 데이터 풀로 수집되는 스케일 아웃 데이터 마트를 만들 수 있습니다. 데이터가 데이터 풀 인스턴스에 분산되기 때문에 큐레이팅된 데이터에 대한 병렬 쿼리가 더 효율적입니다.
 
-![수평 확장 데이터 마트](media/concept-data-pool/data-virtualization-improvements.png)
+![스케일 아웃 데이터 마트](media/concept-data-pool/data-virtualization-improvements.png)
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터에 대 한 자세한 내용은 다음 리소스를 참조 합니다.
+SQL Server 빅 데이터 클러스터에 대한 자세한 내용은 다음 리소스를 참조하세요.
 
-- [SQL Server 2019 빅 데이터 클러스터는 무엇 인가요?](big-data-cluster-overview.md)
-- [워크숍: Microsoft SQL Server 빅 데이터 클러스터 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [SQL Server 2019 빅 데이터 클러스터란?](big-data-cluster-overview.md)
+- [워크샵: Microsoft SQL Server 빅 데이터 클러스터 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -9,15 +9,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 59946e45bbb14fb68e2fc28bcc81c2cf2d534758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930641"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476312"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED(Transact-SQL)
 
@@ -33,7 +33,6 @@ Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] 데이터베이스에 대한
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-
 ## <a name="remarks"></a>Remarks
 
 `DBCC SHOWRESULTCACHESPACEUSED` 명령은 매개 변수를 사용하지 않으며 해당 명령이 실행되는 데이터베이스에서 사용하는 공간을 반환합니다.
@@ -49,6 +48,16 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 VIEW SERVER STATE 권한이 필요합니다.
   
+## <a name="result-sets"></a>결과 집합  
+  
+|Column|데이터 형식|설명|  
+|------------|---------------|-----------------|  
+|reserved_space|BIGINT|데이터베이스에 사용된 총 공간(KB)입니다. 이 값은 캐시된 결과 집합이 증가할 때 변경됩니다.|  
+|data_space|BIGINT|데이터에 사용된 공간(KB)입니다.|  
+|index_space|BIGINT|인덱스에 사용된 공간(KB)입니다.|  
+|unused_space|BIGINT|예약된 공간이면서 사용되지 않은 공간(KB)입니다.|  
+
+
 ## <a name="see-also"></a>관련 항목:
 
 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>

@@ -1,7 +1,7 @@
 ---
 title: 배포 구성 파일 참조
 titleSuffix: SQL Server big data clusters
-description: 빅 데이터 클러스터 배포 구성 파일에 대 한 참조입니다.
+description: 빅 데이터 클러스터 배포 구성 파일에 대한 참조입니다.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,24 +10,24 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958242"
 ---
-# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>빅 데이터 클러스터에 대 한 배포 구성 파일 참조
+# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>빅 데이터 클러스터 배포 구성 파일 참조
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 SQL Server 2019 빅 데이터 클러스터 배포 구성 파일의 구조를 설명 하는 JSON 파일을 제공 합니다.
+이 문서에서는 SQL Server 2019 빅 데이터 클러스터 배포 구성 파일의 구조를 설명하는 JSON 파일을 제공합니다.
 
 > [!TIP]
-> 실제 배포 구성 파일을 사용 하지 마세요. 지침에 따라 대신 합니다 [배포 가이드](deployment-guidance.md#configfile) 구성 파일을 사용 하는 방법에 대 한 합니다.
+> 이 파일을 실제 배포 구성 파일로 사용하면 안 됩니다. 대신, 구성 파일을 사용하는 방법은 [배포 지침](deployment-guidance.md#configfile)에 제공된 지침을 따르세요.
 
 ## <a name="deployment-configuration-file"></a>배포 구성 파일
 
-구조 및 빅 데이터 클러스터 배포 구성 파일 설정에 대 한 참조로 다음 JSON 파일을 사용 합니다.
+다음 JSON 파일을 빅 데이터 클러스터 배포 구성 파일의 구조 및 설정에 대한 참조로 사용합니다.
 
 ```json
 {
@@ -453,4 +453,4 @@ ms.locfileid: "67958242"
 
 ## <a name="next-steps"></a>다음 단계
 
-사용 하 여 배포 구성 파일 사용자 지정 하는 방법에 대 한 자세한 내용은 참조 하세요. [빅 데이터를 SQL Server를 배포 하는 방법에서 kubernetes 클러스터](deployment-guidance.md#configfile)합니다.
+배포 구성 파일을 사용하고 사용자 지정하는 방법에 대한 자세한 내용은 [Kubernetes에 SQL Server 빅 데이터 클러스터를 배포하는 방법](deployment-guidance.md#configfile)을 참조하세요.

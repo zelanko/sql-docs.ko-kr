@@ -1,7 +1,7 @@
 ---
 title: 재사용 가능한 코드 조각 만들기
 titleSuffix: Azure Data Studio
-description: 만들기 및 Azure Data Studio에서 SQL 코드 조각을 사용 하는 방법을 알아봅니다
+description: Azure Data Studio에서 SQL 코드 조각을 만들고 사용하는 방법 알아보기
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
@@ -11,58 +11,58 @@ ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
 ms.openlocfilehash: 09a8432d10a70bb8530654d76bce874f735788a6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959709"
 ---
-# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 코드 조각을 만들고 사용해서 TRANSACT-SQL (T-SQL) 스크립트를 빠르게 생성하기
+# <a name="create-and-use-code-snippets-to-quickly-create-transact-sql-t-sql-scripts-in-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 코드 조각을 만들고 사용하여 T-SQL(Transact-SQL) 스크립트를 빠르게 만들 수 있습니다.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 코드 조각은 데이터베이스 및 데이터베이스 개체를 쉽게 만드는 템플릿입니다. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 코드 조각은 데이터베이스 및 데이터베이스 개체를 쉽게 만들 수 있도록 하는 템플릿입니다. 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)]는 적절한 구문을 빠르게 생성하도록 도와주는 여러 개의 T-SQL 코드 조각을 제공합니다. 
+[!INCLUDE[name-sos](../includes/name-sos-short.md)]에서는 올바른 구문을 빠르게 생성하는 데 도움이 되는 여러 T-SQL 코드 조각을 제공합니다. 
 
-사용자 정의 코드 조각 또한 만들 수 있습니다.
+사용자 정의 코드 조각을 만들 수도 있습니다.
 
-## <a name="using-built-in-t-sql-code-snippets"></a>기본 제공 T-SQL 코드 조각 사용하기
+## <a name="using-built-in-t-sql-code-snippets"></a>기본 제공 T-SQL 코드 조각 사용
 
-1. 사용 가능한 코드 조각에 액세스 하려면 입력 *sql* 목록을 열려면 쿼리 편집기에서:
+1. 사용 가능한 코드 조각에 액세스하려면 쿼리 편집기에서 *sql*을 입력하여 목록을 엽니다.
 
    ![코드 조각](media/code-snippets/sql-snippets.png)
 
-1. 를 사용 하려면 조각을 선택 하 고 T-SQL 스크립트를 생성 합니다. 예를 들어 선택할 *sqlCreateTable*:
+1. 사용할 코드 조각을 선택하고 T-SQL 스크립트를 생성합니다. 예를 들어 *sqlCreateTable*을 선택합니다.
 
-   ![테이블 조각 만들기](media/code-snippets/create-table.png)
+   ![테이블 코드 조각 만들기](media/code-snippets/create-table.png)
 
-1. 특정 값을 사용 하 여 강조 표시 된 필드를 업데이트 합니다. 예를 들어 바꿉니다 *TableName* 하 고 *스키마* 데이터베이스에 대 한 값을 사용 하 여:
+1. 강조 표시된 필드를 특정 값으로 업데이트합니다. 예를 들어, *TableName* 및 *Schema*를 데이터베이스의 값으로 바꿉니다.
 
-   ![템플릿 필드를 대체 합니다.](media/code-snippets/table-from-snippet.png)
+   ![템플릿 필드 바꾸기](media/code-snippets/table-from-snippet.png)
 
-   변경 하려는 필드는 더 이상 강조 표시 하는 경우 (이때 편집기를 기준으로 커서를 이동 하는 경우)을 선택 하 고, 변경 하려는 단어를 마우스 오른쪽 단추로 클릭 **모든 항목을 변경**:
+   변경하려는 필드가 더 이상 강조 표시되지 않는 경우(편집기를 중심으로 커서를 이동할 때 이러한 현상이 발생함) 변경할 단어를 마우스 오른쪽 단추로 클릭하고 **모든 항목 변경**을 선택합니다.
 
-   ![템플릿 필드를 대체 합니다.](media/code-snippets/change-all.png)
+   ![템플릿 필드 바꾸기](media/code-snippets/change-all.png)
 
-1. 업데이트 하거나 모든 추가 T-SQL 선택한 코드 조각에 필요한 추가 합니다. 예를 들어 업데이트 *Column1*를 *Column2*, 더 많은 열을 추가 합니다.
+1. 선택한 코드 조각에 필요한 추가 T-SQL을 업데이트하거나 추가합니다. 예를 들어 *Column1*, *Column2*를 업데이트하고 더 많은 열을 추가합니다.
 
 
  
 ## <a name="creating-sql-code-snippets"></a>SQL 코드 조각 만들기 
 
-사용자 고유의 조각을 정의할 수 있습니다. 편집을 위해 SQL 조각 파일을 열려면:
+사용자 고유의 코드 조각을 정의할 수 있습니다. 편집을 위해 SQL 코드 조각 파일을 열려면
 
-1. 엽니다는 *명령 팔레트* (**Shift + Ctrl + P**), 형식과 *캡처*를 선택한 **기본 설정: 사용자 코드 조각 엽니다**:
+1. ‘명령 팔레트’를 열고(**Shift+Ctrl+P**) *snip*를 입력한 후 **기본 설정:  사용자 코드 조각 열기**를 선택합니다.
 
-   ![템플릿 필드를 대체 합니다.](media/code-snippets/user-snippets.png)
+   ![템플릿 필드 바꾸기](media/code-snippets/user-snippets.png)
 
-1. 선택 **SQL**:
+1. **SQL**을 선택합니다.
 
    > [!NOTE]
-   > [!INCLUDE[name-sos](../includes/name-sos-short.md)] 이 문서에서는 SQL 코드 조각을 사용 하 여 구체적으로 설명 하므로 Visual Studio Code에서 해당 코드 조각 기능을 상속 합니다. 자세한 내용은 참조 하세요 [사용자 고유의 코드 조각을 만드는](https://code.visualstudio.com/docs/editor/userdefinedsnippets) Visual Studio Code 설명서에서. 
+   > [!INCLUDE[name-sos](../includes/name-sos-short.md)]는 Visual Studio Code에서 해당 코드 조각 기능을 상속하므로 이 문서에서는 특별히 SQL 코드 조각 사용 방법을 설명합니다. 자세한 내용은 Visual Studio Code 설명서에서 [사용자 고유의 코드 조각 만들기](https://code.visualstudio.com/docs/editor/userdefinedsnippets)를 참조하세요. 
 
-   ![템플릿 필드를 대체 합니다.](media/code-snippets/select-sql.png)
+   ![템플릿 필드 바꾸기](media/code-snippets/select-sql.png)
 
-1. 다음 코드를 붙여 넣습니다 *sql.json*:
+1. 다음 코드를 *sql.json*에 붙여넣습니다.
 
    ```sql
    {
@@ -94,13 +94,13 @@ ms.locfileid: "67959709"
    }
    ```
 
-1. Sql.json 파일을 저장 합니다.
-1. 클릭 하 여 새 쿼리 편집기 창을 열려면 **Ctrl + N**합니다.
-2. 형식 **sql**, 방금 추가한 두 개의 사용자 코드 조각 표시 *sqlCreateTable2* 하 고 *sqlSelectTop5*합니다.
+1. sql.json 파일을 저장합니다.
+1. **Ctrl+N**을 클릭하여 새 쿼리 편집기 창을 엽니다.
+2. **sql**을 입력하면 방금 추가한 두 개의 사용자 코드 조각인 *sqlCreateTable2* 및 *sqlSelectTop5*가 표시됩니다.
 
-새 조각 중 하나를 선택 하 고 테스트 실행을 제공!
+새 코드 조각 중 하나를 선택하고 테스트 실행을 지정합니다.
 
 
 ## <a name="additional-resources"></a>추가 리소스
 
-SQL 편집기에 대 한 정보를 참조 하세요 [코드 편집기 자습서](tutorial-sql-editor.md)합니다.
+SQL 편집기에 대한 내용은 [코드 편집기 자습서](tutorial-sql-editor.md)를 참조하세요.

@@ -1,7 +1,7 @@
 ---
-title: Linux에서 읽기-배율에 대 한 SQL Server 가용성 그룹 구성
+title: Linux에서 읽기 확장에 대한 SQL Server 가용성 그룹 구성
 titleSuffix: SQL Server
-description: Linux에는 SQL Server 항상에서 AG (가용성 그룹) 읽기 규모 워크 로드에 대 한 구성에 대해 알아봅니다.
+description: Linux에서 읽기 확장 워크로드에 대한 SQL Server Always On AG(가용성 그룹)를 구성하는 방법을 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.openlocfilehash: fcfa4510c9f33ee3aa6fc33cafb43cb627b0f53c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027263"
 ---
-# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux에서 읽기-배율에 대 한 SQL Server 가용성 그룹 구성
+# <a name="configure-a-sql-server-availability-group-for-read-scale-on-linux"></a>Linux에서 읽기 확장에 대한 SQL Server 가용성 그룹 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-Linux에는 SQL Server 항상에서 AG (가용성 그룹) 읽기-배율 워크 로드를 구성할 수 있습니다. AG에 대한 두 가지 종류의 아키텍처가 있습니다. 고가용성에 대 한 아키텍처를 향상 된 비즈니스 연속성을 제공 하는 클러스터 관리자를 사용 합니다. 또한이 아키텍처는 읽기-배율 복제본을 포함할 수 있습니다. 고가용성 아키텍처를 참조 하세요 [구성할 SQL Server Always On 가용성 그룹 Linux에서 고가용성을 위해](sql-server-linux-availability-group-configure-ha.md)합니다. 다른 아키텍처는 읽기 배율 작업만을 지원합니다. 이 문서에서는 읽기 배율 작업에 대한 클러스터 관리자 없이 AG를 만드는 방법을 설명합니다. 이 아키텍처는 읽기 배율만을 제공합니다. 고가용성을 제공하지 않습니다.
+Linux에서 읽기 확장 워크로드에 대한 SQL Server Always On AG(가용성 그룹)를 구성할 수 있습니다. AG에 대한 두 가지 종류의 아키텍처가 있습니다. 고가용성을 위한 아키텍처는 클러스터 관리자를 사용하여 향상된 비즈니스 연속성을 제공합니다. 이 아키텍처에는 읽기 확장 복제본도 포함할 수 있습니다. 고가용성 아키텍처를 만들려면 [Linux에서 고가용성을 위한 SQL Server Always On 가용성 그룹 구성](sql-server-linux-availability-group-configure-ha.md)을 참조하세요. 다른 아키텍처는 읽기 배율 작업만을 지원합니다. 이 문서에서는 읽기 배율 작업에 대한 클러스터 관리자 없이 AG를 만드는 방법을 설명합니다. 이 아키텍처는 읽기 배율만을 제공합니다. 고가용성을 제공하지 않습니다.
 
 > [!NOTE]
 > `CLUSTER_TYPE = NONE`인 가용성 그룹은 다른 운영 체제 플랫폼에서 호스팅되는 복제본을 포함할 수 있습니다. 고가용성을 지원할 수 없습니다. 
@@ -67,7 +67,7 @@ ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;
 
 [!INCLUDE [Create post](../includes/ss-linux-cluster-availability-group-create-post.md)]
 
-이 AG는 고가용성 구성이 아닙니다. 고가용성이 필요한 경우의 지침을 따르세요 [Linux의 SQL Server에 대 한 Always On 가용성 그룹 구성](sql-server-linux-availability-group-configure-ha.md)합니다. 특히 사용 하 여 AG를 만들 `CLUSTER_TYPE=WSFC` (Windows)에서 또는 `CLUSTER_TYPE=EXTERNAL` (Linux)에서. 그런 다음 Windows 또는 Linux의 Pacemaker에 클러스터링 하거나 Windows Server 장애 조치를 사용 하 여 클러스터 관리자를 사용 하 여 통합.
+이 AG는 고가용성 구성이 아닙니다. 고가용성이 필요한 경우 [SQL Server on Linux에 대한 Always On 가용성 그룹 구성](sql-server-linux-availability-group-configure-ha.md)의 지침을 따릅니다. 특히 `CLUSTER_TYPE=WSFC`(Windows) 또는 `CLUSTER_TYPE=EXTERNAL`(Linux)을 사용하여 AG를 만듭니다. 그런 다음, Windows의 경우 Windows Server 장애 조치(failover) 클러스터링 또는 Linux의 경우 Pacemaker를 사용하여 클러스터 관리자와 통합합니다.
 
 ## <a name="connect-to-read-only-secondary-replicas"></a>읽기 전용 보조 복제본에 연결
 
