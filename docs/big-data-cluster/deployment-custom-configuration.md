@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cae2c216245fdb6483b3ad07a88b3517c38550bd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 7d04df5bf881f285ab28508443fbf0ce1056fada
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470748"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969499"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>빅 데이터 클러스터의 배포 설정 구성
 
@@ -174,16 +174,16 @@ azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 
 ## <a id="podplacement"></a> Kubernetes 레이블을 사용하여 Pod 배치 구성
 
-다양한 유형의 워크로드 요구 사항에 맞게 특정 리소스가 있는 Kubernetes 노드의 Pod 배치를 제어할 수 있습니다. 예를 들어 스토리지가 더 많은 노드에 스토리지 풀 Pod가 배치되도록 하거나, CPU 및 메모리 리소스가 더 많은 노드에 SQL Server 마스터 인스턴스가 배치되도록 할 수 있습니다. 이 경우에는 먼저 다양한 유형의 하드웨어를 사용하여 다른 유형의 Kubernetes 클러스터를 빌드한 다음, 적절하게 [노드 레이블을 할당](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)합니다. 빅 데이터 클러스터를 배포할 때 클러스터 배포 구성 파일의 풀 수준에서 동일한 레이블을 지정할 수 있습니다. 그러면 Kubernetes가 지정된 레이블과 일치하는 노드의 Pod에 선호도를 지정합니다.
+다양한 유형의 워크로드 요구 사항에 맞게 특정 리소스가 있는 Kubernetes 노드의 Pod 배치를 제어할 수 있습니다. 예를 들어 스토리지가 더 많은 노드에 스토리지 풀 Pod가 배치되도록 하거나, CPU 및 메모리 리소스가 더 많은 노드에 SQL Server 마스터 인스턴스가 배치되도록 할 수 있습니다. 이 경우에는 먼저 다양한 유형의 하드웨어를 사용하여 다른 유형의 Kubernetes 클러스터를 빌드한 다음, 적절하게 [노드 레이블을 할당](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)합니다. 빅 데이터 클러스터를 배포할 때 클러스터 배포 구성 파일의 풀 수준에서 동일한 레이블을 지정할 수 있습니다. 그러면 Kubernetes가 지정된 레이블과 일치하는 노드의 Pod에 선호도를 지정합니다. Kubernetes 클러스터의 노드에 추가 해야 하는 특정 레이블 키는 **mssql 클러스터 전체**에 해당 합니다. 이 레이블 자체의 값은 선택한 문자열일 수 있습니다.
 
-다음 예제에서는 사용자 지정 구성 파일을 편집하여 SQL Server 마스터 인스턴스의 노드 레이블 설정을 포함하는 방법을 보여 줍니다. 기본 제공 구성에는 *nodeLabel* 키가 없으므로 사용자 지정 구성 파일을 수동으로 편집하거나 패치 파일을 만들어 사용자 지정 구성 파일에 적용해야 합니다.
+다음 예제에서는 SQL Server 마스터 인스턴스, 계산 풀, 데이터 풀 & 저장소 풀에 대 한 노드 레이블 설정을 포함 하도록 사용자 지정 구성 파일을 편집 하는 방법을 보여 줍니다. 기본 제공 구성에는 *nodeLabel* 키가 없으므로 사용자 지정 구성 파일을 수동으로 편집하거나 패치 파일을 만들어 사용자 지정 구성 파일에 적용해야 합니다. SQL Server 마스터 인스턴스 pod는 값이 **bdc-마스터**인 **mssql-클러스터 차원의** 레이블을 포함 하는 노드에 배포 됩니다. 계산 풀 및 데이터 풀 pod는 **mssql-클러스터 차원의** 값이 **bdc-sql**인 노드에 배포 됩니다. 저장소 풀 pod는 **mssql-클러스터 전체** 에 값이 포함 된 노드에 배포 됩니다.
 
 다음 내용을 사용하여 현재 디렉터리에 **patch.json**이라는 파일을 만듭니다.
 
 ```json
 {
   "patch": [
-     {
+    {
       "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
       "value": {
@@ -197,8 +197,35 @@ azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
              "port": 31433
             }
           ],
-        "nodeLabel": "<yourNodeLabel>"
-       }
+        "nodeLabel": "bdc-master"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Compute')].spec",
+      "value": {
+    "type": "Compute",
+        "replicas": 1,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Data')].spec",
+      "value": {
+    "type": "Data",
+        "replicas": 2,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+    "type": "Storage",
+        "replicas": 3,
+        "nodeLabel": "bdc-storage"
+      }
     }
   ]
 }

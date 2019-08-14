@@ -1,7 +1,7 @@
 ---
-title: '자습서: Linux의 SQL Server에 대 한 AD 인증을 사용 합니다.'
+title: '자습서: SQL Server on Linux에 AD 인증 사용'
 titleSuffix: SQL Server
-description: 이 자습서에서는 Linux의 SQL Server에 대 한 AD 인증에 대 한 구성 단계를 제공 합니다.
+description: 이 자습서에서는 SQL Server on Linux의 AD 인증에 대한 구성 단계를 제공합니다.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -13,49 +13,49 @@ ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
 ms.openlocfilehash: 69bbeb31f8da4023bd0630ae0d944165407e2dec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68027334"
 ---
-# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>자습서: Linux의 SQL Server를 사용 하 여 Active Directory 인증을 사용 합니다.
+# <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>자습서: SQL Server on Linux와 Active Directory 인증 사용
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-이 자습서를 구성 하는 방법에 설명 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 라고도 통합된 인증, Active Directory (AD) 인증을 지원 하기 위한 linux. 개요를 보려면 [Linux의 SQL Server에 대 한 Active Directory 인증](sql-server-linux-active-directory-auth-overview.md)합니다.
+이 자습서에서는 통합 인증이라고도 하는 AD(Active Directory) 인증을 지원하도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux를 구성하는 방법을 설명합니다. 개요에 대해서는 [Linux의 SQL Server에 대한 Active Directory 인증](sql-server-linux-active-directory-auth-overview.md)을 참조하세요.
 
-이 자습서는 다음 작업으로 이루어집니다.
+이 자습서는 다음 작업으로 구성됩니다.
 
 > [!div class="checklist"]
-> * 조인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 도메인에 호스트
-> * AD 사용자에 대 한 만들기 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SPN 설정
-> * 구성 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 키
-> * Keytab 파일을 보호
-> * Kerberos 인증에 대 한 키 파일을 사용 하도록 SQL Server 구성
-> * TRANSACT-SQL에서 AD 기반 로그인 만들기
-> * 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 인증을 사용 하 여
+> * AD 도메인에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 가입
+> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 AD 사용자 만들기 및 SPN 설정
+> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 keytab 구성
+> * Keytab 파일 보호
+> * Kerberos 인증에 keytab 파일을 사용하도록 SQL Server 구성
+> * Transact-SQL에서 AD 기반 로그인 만들기
+> * AD 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 연결
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-AD 인증을 구성 하기 전에 해야 합니다.
+AD 인증을 구성하기 전에 다음을 수행해야 합니다.
 
-* 네트워크에서 AD 도메인 컨트롤러 (Windows)를 설정  
+* 네트워크에서 AD 도메인 컨트롤러(Windows) 설정  
 * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설치
   * [Red Hat Enterprise Linux(RHEL)](quickstart-install-connect-red-hat.md)
   * [SUSE Linux Enterprise Server(SLES)](quickstart-install-connect-suse.md)
   * [Ubuntu](quickstart-install-connect-ubuntu.md)
 
-## <a id="join"></a> 조인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 도메인에 호스트
+## <a id="join"></a> AD 도메인에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 가입
 
-Active Directory 도메인 컨트롤러를 사용 하 여 SQL Server Linux 호스트를 조인 해야 합니다. Active directory 도메인에 가입 시키는 방법에 대 한 내용은 참조 하세요 [Active Directory 도메인에 Linux 호스트에서 SQL Server 조인](sql-server-linux-active-directory-join-domain.md)합니다.
+SQL Server Linux 호스트를 Active Directory 도메인 컨트롤러에 가입시켜야 합니다. Active Directory 도메인을 가입시키는 방법에 대한 자세한 내용은 [Linux 호스트의 SQL Server를 Active Directory 도메인에 가입](sql-server-linux-active-directory-join-domain.md)을 참조하세요.
 
-## <a id="createuser"></a> AD 사용자 (또는 MSA)에 대 한 만들기 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SPN 설정
+## <a id="createuser"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 AD 사용자(또는 MSA) 만들기 및 SPN 설정
 
 > [!NOTE]
-> 다음 단계를 사용 하 여 사용자 [정규화 된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)합니다. 있는 경우 **Azure**, 해야 **[만드십시오](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 계속 진행 하기 전에 합니다.
+> 다음 단계에서는 [정규화된 도메인 이름](https://en.wikipedia.org/wiki/Fully_qualified_domain_name)을 사용합니다. **Azure**에서 계속하기 전에 **[AD 사용자를 만들어야](https://docs.microsoft.com/azure/virtual-machines/linux/portal-create-fqdn)** 합니다.
 
-1. 도메인 컨트롤러에서 실행 합니다 [New-aduser](https://technet.microsoft.com/library/ee617253.aspx) 만료 되지 않는 암호를 사용 하 여 새 AD 사용자를 만들려면 PowerShell 명령입니다. 다음 예제에서는 계정 이름을 `mssql`, 있지만 계정 이름을 원하는 대로 수 있습니다. 계정의 새 암호를 입력 하 라는 메시지가 표시 됩니다.
+1. 도메인 컨트롤러에서 [New-ADUser](https://technet.microsoft.com/library/ee617253.aspx) PowerShell 명령을 실행하여 만료하지 않는 암호를 사용하여 새 AD 사용자를 만듭니다. 다음 예제에서는 계정의 이름을 `mssql`로 지정하지만 계정 이름은 원하는 대로 지정할 수 있습니다. 계정의 새 암호를 입력하라는 메시지가 표시됩니다.
 
    ```PowerShell
    Import-Module ActiveDirectory
@@ -64,9 +64,9 @@ Active Directory 도메인 컨트롤러를 사용 하 여 SQL Server Linux 호�
    ```
 
    > [!NOTE]
-   > 것이 전용 AD 계정이 SQL Server에 대 한 보안 모범 사례에 동일한 계정을 사용 하 여 다른 서비스를 사용 하 여 SQL Server 자격 증명이 공유 되지 않도록 합니다. 그러나 필요에 따라 다시 사용할 수 있습니다 기존 AD 계정 (다음 단계에서 keytab 파일을 생성 하려면 필요)이 표시 되는 계정의 암호를 알고 있는 경우.
+   > SQL Server의 전용 AD 계정을 사용하는 것이 보안 모범 사례이므로, SQL Server의 자격 증명은 동일한 계정을 사용하는 다른 서비스와 공유되지 않습니다. 그러나 계정 암호(다음 단계에서 keytab 파일을 생성하는 데 필요함)를 알고 있는 경우 필요에 따라 기존 AD 계정을 다시 사용할 수 있습니다.
 
-2. 사용 하 여이 계정에 대 한 ServicePrincipalName (SPN)을 설정 합니다 **setspn.exe** 도구입니다. SPN은 다음 예제에서 지정 된 대로 포맷 되어야 합니다. 정규화 된 도메인 이름을 찾을 수 있습니다 합니다 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 실행 하 여 호스트 컴퓨터 `hostname --all-fqdns` 에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 합니다. 구성 하지 않으면 TCP 포트 1433 해야 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 다른 포트 번호를 사용 하도록 합니다.
+2. **setspn.exe** 도구를 사용하여 이 계정의 SPN(서비스 사용자 이름)을 설정합니다. SPN은 다음 예제에 지정된 대로 정확하게 형식을 지정해야 합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트에서 `hostname --all-fqdns`를 실행하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 머신의 정규화된 도메인 이름을 찾을 수 있습니다. 다른 포트 번호를 사용하도록 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 구성한 경우가 아니면 TCP 포트는 1433이어야 합니다.
 
    ```PowerShell
    setspn -A MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>** mssql
@@ -74,30 +74,30 @@ Active Directory 도메인 컨트롤러를 사용 하 여 SQL Server Linux 호�
    ```
 
    > [!NOTE]
-   > 오류가 나타나면 `Insufficient access rights`, 충분 한 권한이이 계정에 SPN을 설정할 수 있는 도메인 관리자에 게 문의 하십시오.
+   > `Insufficient access rights` 오류가 표시되면 도메인 관리자와 함께 이 계정의 SPN을 설정할 권한이 있는지 확인합니다.
    >
-   > 나중에 TCP 포트를 변경한 경우에 실행 해야 합니다 **setspn** 새 포트 번호를 사용 하 여 다시 명령을 합니다. 다음 섹션의 단계를 수행 하 여 SQL Server 서비스 키를 새 SPN을 추가 해야 합니다.
+   > 나중에 TCP 포트를 변경하는 경우 새 포트 번호를 사용하여 **setspn** 명령을 다시 실행해야 합니다. 다음 섹션의 단계에 따라 SQL Server 서비스 keytab에 새 SPN을 추가해야 합니다.
 
 자세한 내용은 [Kerberos 연결의 서비스 사용자 이름 등록](../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)을 참조하세요.
 
-## <a id="configurekeytab"></a> 구성 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 키
+## <a id="configurekeytab"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 keytab 구성
 
-두 가지 다른 SQL Server 서비스 keytab 파일을 구성 해야 합니다. 첫 번째 옵션 keytab 구성에서 두 번째 옵션을 관리 되는 서비스 계정 (MSA)을 사용 하는 동안 컴퓨터 계정 (UPN)를 사용 하는 것입니다. 두 메커니즘 모두 동일 하 게 작동 되며 사용자 환경에 가장 적합 한 방법을 선택할 수 있습니다.
+SQL Server 서비스 keytab 파일은 두 가지 방법으로 구성할 수 있습니다. 첫 번째 옵션은 UPN(머신 계정)을 사용하는 것이지만, 두 번째 옵션은 keytab 구성에서 MSA(관리 서비스 계정)를 사용하는 것입니다. 두 메커니즘은 모두 동일하게 작동하며 환경에 가장 적합한 방법을 선택할 수 있습니다.
 
-두 경우 모두 이전 단계에서 만든 SPN이 필요 하 고는 keytab에서 SPN을 등록 해야 합니다.
+두 경우에 모두, 이전 단계에서 만든 SPN이 필요하며 SPN을 keytab에 등록해야 합니다.
 
-SQL Server 서비스 keytab 파일을 구성 합니다.
+SQL Server 서비스 keytab 파일을 구성하려면:
 
-1. 구성 합니다 [SPN keytab 항목](#spn) 다음 섹션에 있습니다.
+1. 다음 섹션에서 [SPN keytab 항목](#spn)을 구성합니다.
 
-1. 다음 중 하나 [UPN을 추가](#upn) (옵션 1) 또는 [MSA](#msa) (옵션 2) 항목 keytab 파일에서 각 섹션의 단계를 수행 합니다.
+1. 그런 다음, 각 섹션의 단계에 따라 keytab 파일에서 [UPN](#upn)(옵션 1) 또는 [MSA](#msa)(옵션 2) 항목을 추가합니다.
 
 > [!IMPORTANT]
-> UPN/MSA에 대 한 암호 변경 또는 Spn에 할당 되는 계정의 암호가 변경 된 경우에 새 암호 및 키 버전 번호 (KVNO) 사용 하 여는 keytab를 업데이트 해야 합니다. 일부 서비스는 암호를 자동으로 회전도 않을 수 있습니다. 해당 계정에 대 한 모든 암호 회전 정책을 검토 하 고 예기치 않은 가동 중지 시간을 방지 하려면 예약 된 유지 관리 작업을 사용 하 여 따르도록 합니다.
+> UPN/MSA의 암호가 변경되거나 SPN이 할당된 계정의 암호가 변경된 경우 새 암호 및 KVNO(키 버전 번호)를 사용하여 keytab을 업데이트해야 합니다. 일부 서비스에서는 암호를 자동으로 순환시킬 수도 있습니다. 해당하는 계정에 대한 암호 순환 정책을 검토하고 예기치 않은 가동 중지 시간을 방지하기 위해 예약된 유지 관리 작업에 맞게 조정합니다.
 
 ### <a id="spn"></a> SPN keytab 항목
 
-1. 이전 단계에서 만든 AD 계정에 대 한 키 버전 번호 (KVNO)를 확인 합니다. 일반적으로 2, 있지만 여러 번 계정의 암호를 변경 하는 경우 다른 정수 수 있습니다. SQL Server 호스트 컴퓨터에서 다음 명령을 실행 합니다.
+1. 이전 단계에서 만든 AD 계정의 KVNO(키 버전 번호)를 확인합니다. 일반적으로 2이지만, 계정 암호를 여러 번 변경한 경우에는 다른 정수일 수 있습니다. SQL Server 호스트 머신에서 다음 명령을 실행합니다.
 
    ```bash
    kinit user@CONTOSO.COM
@@ -105,15 +105,15 @@ SQL Server 서비스 keytab 파일을 구성 합니다.
    ```
 
    > [!NOTE]
-   > Spn은 도메인이 큰 경우에 도메인을 통해 전파 되는 데 몇 분 정도 걸릴 수 있습니다. 오류가 표시 되 면 `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM`, 몇 분 정도 기다렸다가 다시 시도 하십시오.  
+   > SPN은 도메인을 통해 전파되는 데 몇 분 정도 걸릴 수 있습니다(특히 도메인이 클 경우). `kvno: Server not found in Kerberos database while getting credentials for MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM` 오류가 표시되면 몇 분 정도 기다린 후 다시 시도하세요.  
 
-1. 시작 **ktutil**:
+1. **ktutil**을 시작합니다.
 
    ```bash
    sudo ktutil
    ```
 
-1. 다음 명령을 사용 하 여 각 SPN에 대 한 키 항목을 추가 합니다.
+1. 다음 명령을 사용하여 각 SPN의 keytab 항목을 추가합니다.
 
    ```bash
    addent -password -p MSSQLSvc/**<fully qualified domain name of host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e aes256-cts-hmac-sha1-96
@@ -122,7 +122,7 @@ SQL Server 서비스 keytab 파일을 구성 합니다.
    addent -password -p MSSQLSvc/**<netbios name of the host machine>**:**<tcp port>**@CONTOSO.COM -k **<kvno from above>** -e rc4-hmac
    ```
 
-1. keytab 파일에 쓸 및 다음 ktutil를 종료 합니다.
+1. Keytab을 파일에 쓴 다음, ktutil를 종료합니다.
 
    ```bash
    wkt /var/opt/mssql/secrets/mssql.keytab
@@ -130,62 +130,62 @@ SQL Server 서비스 keytab 파일을 구성 합니다.
    ```
 
    > [!NOTE]
-   > 합니다 **ktutil** 하므로 반드시 입력 해야 해당 올바르게 메시지가 표시 되 면, 도구는 암호를 확인 하지 않습니다.
+   > **ktutil** 도구는 암호의 유효성을 검사하지 않으므로 메시지가 표시되면 암호를 올바르게 입력했는지 확인합니다.
 
-### <a id="upn"></a> 옵션 1: UPN을 사용 하 여 키를 구성 하려면
+### <a id="upn"></a> 옵션 1: UPN을 사용하여 keytab 구성
 
-컴퓨터 계정을 사용 하 여 키에 추가할 **ktutil**합니다. (UPN) 컴퓨터 계정에 있으면 **/etc/krb5.keytab** 형태로 `<hostname>$@<realm.com>` (예를 들어 `sqlhost$@CONTOSO.COM`). 이러한 항목을 복사할 **/etc/krb5.keytab** 하 **mssql.keytab**합니다.
+**ktutil**을 사용하여 keytab에 머신 계정을 추가합니다. 머신 계정(UPN이라고도 함)은 `<hostname>$@<realm.com>` 형식(예: `sqlhost$@CONTOSO.COM`)으로 **/etc/krb5.keytab**에 있어야 합니다. 이 항목을 **/etc/krb5.keytab**에서 **mssql.keytab**으로 복사합니다.
 
-1. 시작 **ktuil** 다음 명령을 사용 하 여:
+1. 다음 명령을 사용하여 **ktuil**을 시작합니다.
 
    ```bash
    sudo ktutil
    ```
 
-1. 사용 된 **rkt** 모두에서 항목을 읽을 수 명령 **/etc/krb5.keytab**합니다.
+1. **rkt** 명령을 사용하여 **/etc/krb5.keytab**에서 모든 항목을 읽습니다.
 
    ```bash
    rkt /etc/krb5.keytab
    ```
 
-1. 그런 다음 항목을 나열 합니다.
+1. 다음으로, 항목을 나열합니다.
 
    ```bash
    list
    ```
 
-1. 슬롯 번호로 UPN 없는 모든 항목을 삭제 합니다. 다음 명령을 반복 하 여 한 번에이 하나만이 수행 합니다.
+1. UPN이 아닌 슬롯 번호로 모든 항목을 삭제합니다. 다음 명령을 반복하여 한 번에 하나씩 이 항목을 삭제합니다.
 
    ```bash
    delent <slot num>
    ```
 
    > [!IMPORTANT]
-   > 경우 슬롯 1에 해당 위치로 이동 하 여 모든 값 슬라이드를 같은 항목이 삭제 됩니다. 즉, 슬롯 1의 항목이 삭제 될 때 슬롯 1에 슬롯 2에서에서 항목을 이동 합니다.
+   > 슬롯 1과 같은 항목을 삭제하면 모든 값이 1씩 위로 이동하여 배치됩니다. 즉, 슬롯 1의 항목이 삭제되면 슬롯 2의 항목이 슬롯 1로 이동합니다.
 
-1. 항목을 다시까지 나열 UPN 항목만 유지 됩니다.
+1. UPN 항목만 남을 때까지 항목을 다시 나열합니다.
 
    ```bash
    list
    ```
 
-1. UPN 항목만 유지 하는 경우 이러한 값을 추가 **mssql.keytab**:
+1. UPN 항목만 남아 있으면 **mssql.keytab**에 다음 값을 추가합니다.
 
    ```bash
    wkt /var/opt/mssql/secrets/mssql.keytab
    ```
 
-1. Quit **ktutil**합니다.
+1. **ktutil**을 종료합니다.
 
    ```bash
    quit
    ```
 
-### <a id="msa"></a> 옵션 2:  MSA를 사용 하 여 키를 구성 하려면
+### <a id="msa"></a> 옵션 2:  MSA를 사용하여 keytab 구성
 
-MSA 옵션에 대 한 SQL Server의 Kerberos keytab을 만들어야 합니다. 모든 것이 있어야 합니다 [첫 번째 단계에서 등록 된 Spn](#spn) 및 Spn은 등록 되는 MSA에 대 한 자격 증명입니다. 
+MSA 옵션의 경우 SQL Server의 Kerberos keytab을 만들어야 합니다. [첫 번째 단계에서 등록된 SPN](#spn) 및 SPN이 등록된 MSA의 자격 증명을 모두 포함해야 합니다. 
 
-1. SPN keytab 후 다음 명령을 실행 하는 도메인에 가입 되어 있는 Linux 컴퓨터에서 항목이 생성 됩니다.
+1. SPN keytab 항목을 만든 후 도메인에 가입된 Linux 머신에서 다음 명령을 실행합니다.
 
    ```bash
    kinit <AD user>
@@ -193,115 +193,115 @@ MSA 옵션에 대 한 SQL Server의 Kerberos keytab을 만들어야 합니다. �
       <spn>@CONTOSO.COM: kvno = <KVNO>
    ```
 
-   이 단계는 SPN 소유권을 할당 하는 사용자 계정의 KVNO를 표시 합니다. 작동 하려면이 단계에 대 한 SPN 해야에 할당 된 MSA 계정을 만드는 동안. SPN을 MSA를 할당 하지 않은 경우 현재 SPN 소유자 계정의 표시 KVNO 되어 올바른 구성에 사용할 수 없습니다.  
+   이 단계에서는 SPN 소유권이 할당된 사용자 계정의 KVNO를 표시합니다. 이 단계가 작동하려면 SPN이 생성되는 동안 MSA 계정에 할당되었어야 합니다. SPN이 MSA에 할당되지 않은 경우 현재 SPN 소유자 계정의 KVNO가 표시되며 이 KVNO는 구성에 사용할 수 없습니다.  
 
-1. 시작 **ktutil**:
+1. **ktutil**을 시작합니다.
 
    ```bash
    sudo ktutil
    ```
 
-1. 다음 두 명령 사용 하 여 MSA를 추가 합니다.
+1. 다음 두 명령을 사용하여 MSA를 추가합니다.
 
    ```bash
    addent -password -p <MSA> -k <kvno from command above> -e aes256-cts-hmac-sha1-96
    addent -password -p <MSA> -k <kvno from command above> -e rc4-hmac
    ```
 
-1. keytab 파일에 쓸 및 다음 ktutil를 종료 합니다.
+1. Keytab을 파일에 쓴 다음, ktutil를 종료합니다.
 
    ```bash
    wkt /var/opt/mssql/secrets/mssql.keytab
    quit
    ```
 
-1. 구성 옵션을 사용 하 여 설정 해야 MSA 접근 방식을 사용 하는 경우는 **mssql conf** keytab 파일에 액세스 하는 동안 사용할 MSA를 지정 하는 도구입니다. 아래 값은 보장 **/var/opt/mssql/mssql.conf**합니다.
+1. MSA 방법을 사용하는 경우 keytab 파일에 액세스하는 동안 사용할 MSA를 지정하려면 **mssql-conf** 도구를 사용하여 구성 옵션을 설정해야 합니다. 아래 값이 **/var/opt/mssql/mssql.conf**에 있는지 확인합니다.
 
    ```bash
    sudo mssql-conf set network.privilegedadaccount <MSA_Name>
    ```
 
    > [!NOTE]
-   > MSA 이름 및 도메인 \ 계정 이름이 아니라만 포함 됩니다.
+   > MSA 이름만 포함하고 도메인\계정 이름을 포함하지 않습니다.
 
-## <a id="securekeytab"></a> Keytab 파일을 보호
+## <a id="securekeytab"></a> Keytab 파일 보호
 
-이 keytab 파일에 대 한 액세스를 사용 하 여 모든 사용자가 도메인에 대해 SQL Server 가장을 mssql 계정에만 읽기 액세스 권한이 있도록 파일에 액세스를 제한 하 고 있는지 확인:
+이 keytab 파일에 액세스할 수 있는 사용자는 도메인에서 SQL Server를 가장할 수 있으므로 mssql 계정에만 읽기 액세스 권한이 있도록 파일에 대한 액세스를 제한해야 합니다.
 
 ```bash
 sudo chown mssql:mssql /var/opt/mssql/secrets/mssql.keytab
 sudo chmod 400 /var/opt/mssql/secrets/mssql.keytab
 ```
 
-## <a id="keytabkerberos"></a> Kerberos 인증에 대 한 키 파일을 사용 하도록 SQL Server 구성
+## <a id="keytabkerberos"></a> Kerberos 인증에 keytab 파일을 사용하도록 SQL Server 구성
 
-Kerberos 인증에 대 한 키 파일을 사용 하려면 SQL Server를 구성 하려면 다음 단계를 사용 합니다.
+다음 단계를 사용하여 Kerberos 인증에 keytab 파일을 사용하기 시작하도록 SQL Server를 구성합니다.
 
 ```bash
 sudo mssql-conf set network.kerberoskeytabfile /var/opt/mssql/secrets/mssql.keytab
 sudo systemctl restart mssql-server
 ```
 
-필요에 따라 성능 향상을 위해 도메인 컨트롤러에 대 한 UDP 연결을 사용 하지 않도록 합니다. 대부분의 경우에서 UDP 연결 일관 되 게 실패 구성 옵션을 설정할 수 있는 도메인 컨트롤러에 연결할 때 **/etc/krb5.conf** 건너뛸 UDP 호출 합니다. 편집할 **/etc/krb5.conf** 다음 옵션을 설정 합니다.
+필요에 따라 도메인 컨트롤러에 대한 UDP 연결을 사용하지 않도록 설정하여 성능을 향상합니다. 대부분의 경우 도메인 컨트롤러에 연결할 때 UDP 연결이 지속적으로 실패하므로 **/etc/krb5.conf**에서 구성 옵션을 설정하여 UDP 호출을 건너뛸 수 있습니다. **/etc/krb5.conf**를 편집하고 다음 옵션을 설정합니다.
 
 ```/etc/krb5.conf
 [libdefaults]
 udp_preference_limit=0
 ```
 
-이 시점에서 SQL Server에 다음과 같이 AD 기반 로그인을 사용할 준비가 되었습니다.
+이제 다음과 같이 SQL Server에서 AD 기반 로그인을 사용할 수 있습니다.
 
-## <a id="createsqllogins"></a> TRANSACT-SQL에서 AD 기반 로그인 만들기
+## <a id="createsqllogins"></a> Transact-SQL에서 AD 기반 로그인 만들기
 
-1. SQL Server에 연결 하 고 새 AD 기반 로그인을 만듭니다.
+1. SQL Server에 연결하고 새 AD 기반 로그인을 만듭니다.
 
    ```sql
    CREATE LOGIN [CONTOSO\user] FROM WINDOWS;
    ```
 
-1. 로그인에 이제 나열 되어 있는지 확인 합니다 [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 시스템 카탈로그 뷰:
+1. 이제 로그인이 [sys.server_principals](../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) 시스템 카탈로그 뷰에 나열되는지 확인합니다.
 
    ```sql
    SELECT name FROM sys.server_principals;
    ```
 
-## <a id="connect"></a> AD 인증을 사용 하 여 SQL Server에 연결
+## <a id="connect"></a> AD 인증을 사용하여 SQL Server에 연결
 
-도메인 자격 증명을 사용 하 여 클라이언트 컴퓨터에 로그인 합니다. 이제 AD 인증을 사용 하 여 암호를 다시 입력 하지 않고도 SQL Server에 연결할 수 있습니다. AD 그룹에 대 한 로그인을 만들면 해당 그룹의 구성원 인 모든 AD 사용자는 동일한 방식으로 연결할 수 있습니다.
+도메인 자격 증명을 사용하여 클라이언트 머신에 로그인합니다. 이제 AD 인증을 사용하여 암호를 다시 입력하지 않고 SQL Server에 연결할 수 있습니다. AD 그룹에 대한 로그인을 만드는 경우 해당 그룹의 멤버인 모든 AD 사용자는 동일한 방식으로 연결할 수 있습니다.
 
-AD 인증을 사용 하는 클라이언트에 대 한 특정 연결 문자열 매개 변수는 사용 중인 드라이버에 따라 다릅니다. 다음 섹션의 예제를 고려해 야 합니다.
+AD 인증을 사용할 클라이언트의 특정 연결 문자열 매개 변수는 사용 중인 드라이버에 따라 달라집니다. 다음 섹션의 예제를 살펴보세요.
 
-### <a name="sqlcmd-on-a-domain-joined-linux-client"></a>도메인에 가입 된 Linux 클라이언트에서 sqlcmd
+### <a name="sqlcmd-on-a-domain-joined-linux-client"></a>도메인에 가입된 Linux 클라이언트의 sqlcmd
 
-사용 하 여 도메인에 가입 된 Linux 클라이언트에 로그인 **ssh** 및 도메인 자격 증명:
+**ssh** 및 도메인 자격 증명을 사용하여 도메인에 가입된 Linux 클라이언트에 로그인합니다.
 
 ```bash
 ssh -l user@contoso.com client.contoso.com
 ```
 
-이전에 설치한 있는지 확인 합니다 [mssql 도구](sql-server-linux-setup-tools.md) 패키지를 사용 하 여 연결 **sqlcmd** 자격 증명을 지정 하지 않고:
+[mssql-tools](sql-server-linux-setup-tools.md) 패키지를 설치했는지 확인한 다음, 자격 증명을 지정하지 않고 **sqlcmd**를 사용하여 연결합니다.
 
 ```bash
 sqlcmd -S mssql-host.contoso.com
 ```
 
-### <a name="ssms-on-a-domain-joined-windows-client"></a>도메인에 가입 된 Windows 클라이언트에서 SSMS
+### <a name="ssms-on-a-domain-joined-windows-client"></a>도메인에 가입된 Windows 클라이언트의 SSMS
 
-도메인 자격 증명을 사용 하는 도메인에 가입 된 Windows 클라이언트에 로그인 합니다. SQL Server Management Studio가 설치 되었는지 확인 한 다음 SQL Server 인스턴스에 연결할 (예를 들어 `mssql-host.contoso.com`)를 지정 하 여 **Windows 인증** 에 **서버에 연결** 대화 합니다.
+도메인 자격 증명을 사용하여 도메인에 가입된 Windows 클라이언트에 로그인합니다. SQL Server Management Studio가 설치되어 있는지 확인한 다음 **서버에 연결** 대화 상자에서 **Windows 인증**을 지정하여 SQL Server 인스턴스(예: `mssql-host.contoso.com`)에 연결합니다.
 
-### <a name="ad-authentication-using-other-client-drivers"></a>다른 클라이언트 드라이버를 사용 하 여 AD 인증
+### <a name="ad-authentication-using-other-client-drivers"></a>다른 클라이언트 드라이버를 사용하는 AD 인증
 
-다음 표에서 다른 클라이언트 드라이버에 대 한 권장 사항을 설명합니다.
+다음 표에서는 다른 클라이언트 드라이버에 대한 권장 사항을 설명합니다.
 
 | 클라이언트 드라이버 | 권장 |
 |---|---|
-| **JDBC** | SQL Server에 연결할 Kerberos 통합된 인증을 사용 합니다. |
-| **ODBC** | 통합된 인증을 사용 합니다. |
+| **JDBC** | Kerberos 통합 인증을 사용하여 SQL Server 연결 |
+| **ODBC** | 통합 인증을 사용합니다. |
 | **ADO.NET** | 연결 문자열 구문입니다. |
 
 ## <a id="additionalconfig"></a> 추가 구성 옵션
 
-와 같은 타사 유틸리티를 사용 하는 경우 [PBI](https://www.beyondtrust.com/)하십시오 [VAS](https://www.oneidentity.com/products/authentication-services/), 또는 [Centrify](https://www.centrify.com/) AD Linux 호스트에 연결할 도메인을 하려고 합니다 openldap를 사용 하 여 SQL server 요구 라이브러리를 직접 구성할 수 있습니다 합니다 **disablesssd** 옵션을 **mssql conf** 다음과 같습니다.
+[PBIS](https://www.beyondtrust.com/), [VAS](https://www.oneidentity.com/products/authentication-services/) 또는 [Centrify](https://www.centrify.com/)와 같은 타사 유틸리티를 사용하여 Linux 호스트를 AD 도메인에 가입시키며 openldap 라이브러리를 직접 사용할 때 SQL Server를 강제 실행하려는 경우 다음과 같이 **mssql-conf**를 사용하여 **disablesssd** 옵션을 구성할 수 있습니다.
 
 ```bash
 sudo mssql-conf set network.disablesssd true
@@ -309,24 +309,24 @@ systemctl restart mssql-server
 ```
 
 > [!NOTE]
-> 와 같은 유틸리티는 **realmd** 는 SSSD, 다른 도구는 동안 같은 대로 설정 PBI, VAS 및 Centrify SSSD 설치 되지 않습니다. 구성에 권장 되는 AD 도메인에 가입 하는 데 사용 하는 유틸리티 SSSD 설치 하지 않습니다 하는 경우 **disablesssd** 옵션을 `true`입니다. 아니지만 필수 SQL Server는 SSSD openldap 메커니즘으로 대체 하기 전에 AD에 대 한 사용 하려고 하는 대로, 뛰어난 SQL Server 호출 openldap SSSD 메커니즘을 우회 하 여 직접 않도록 구성 됩니다.
+> SSSD를 설정하는 **realmd**와 같은 유틸리티가 있지만, PBIS, VAS 및 Centrify와 같은 다른 도구는 SSSD를 설정하지 않습니다. AD 도메인에 가입하는 데 사용되는 유틸리티가 SSSD를 설정하지 않는 경우 **disablesssd** 옵션을 `true`로 구성하는 것이 좋습니다. SQL Server는 openldap 메커니즘으로 대체되기 전에 AD에 SSSD를 사용하려고 시도하므로 이 구성이 필요하지 않지만, 이와 같이 구성하면 SQL Server가 직접 openldap를 호출하여 SSSD 메커니즘을 무시하므로 성능이 향상됩니다.
 
-도메인 컨트롤러 LDAPS를 지 원하는 경우 LDAPS를 통해 되도록 도메인 컨트롤러에 SQL Server에서 모든 연결을 강제할 수 있습니다. 클라이언트 ldaps의 경우 다음 bash 명령을 실행을 통해 도메인 컨트롤러에 연결할 수를 확인 하려면 `ldapsearch -H ldaps://contoso.com:3269`합니다. SQL Server만 LDAPS를 사용 하도록 설정 하려면 다음을 실행 합니다.
+도메인 컨트롤러에서 LDAPS를 지원하는 경우 SQL Server에서 도메인 컨트롤러로 모든 연결이 LDAPS를 통해 수행되도록 할 수 있습니다. 클라이언트에서 ldaps를 통해 도메인 컨트롤러에 연결할 수 있는지 확인하려면 bash 명령 `ldapsearch -H ldaps://contoso.com:3269`를 실행합니다. LDAPS만 사용하도록 SQL Server를 설정하려면 다음을 실행합니다.
 
 ```bash
 sudo mssql-conf set network.forcesecureldap true
 systemctl restart mssql-server
 ```
 
-이 사용 하 여 LDAPS SSSD AD 도메인에 가입 하는 경우 호스트는 SSSD 패키지가 통해 수행 됨 및 **disablesssd** 설정 되어 있지 않으면 true로 합니다. 하는 경우 **disablesssd** 로 설정 되어 함께 true **forcesecureldap** 을 true로 설정 되 고 SQL Server가 수행한 openldap 라이브러리 호출을 통해 LDAPS 프로토콜을 사용 합니다.
+호스트의 AD 도메인 가입이 SSSD 패키지를 통해 수행되었고 **disablesssd**가 true로 설정되지 않은 경우에는 여기에는 SSSD를 통해 LDAPS가 사용됩니다. **disablesssd**가 true로 설정되고 **forcesecureldap**가 true로 설정된 경우에는 SQL Server에서 수행된 openldap 라이브러리 호출을 통해 LDAPS 프로토콜이 사용됩니다.
 
 ### <a name="post-sql-server-2017-cu14"></a>Post SQL Server 2017 CU14
 
-타사 공급자를 사용 하 여 AD 도메인 컨트롤러에 가입 된 SQL Server 설정 하 여 일반 AD 조회를 위해 openldap 호출을 사용 하도록 구성 된 경우 SQL Server 2017 CU14부터 **disablesssd** 에 true를 이용할 수 있습니다 **enablekdcfromkrb5** KDC 서버에 대 한 역방향 DNS 조회 하는 대신 KDC 조회에 대 한 강화 하려면 krb5 라이브러리를 사용 하도록 SQL Server에 적용할 옵션입니다.
+SQL Server 2017 CU14부터, SQL Server가 타사 공급자를 사용하여 AD 도메인 컨트롤러에 가입되었고 **disablesssd**를 true로 설정하여 일반적인 AD 조회에 openldap 호출을 사용하도록 구성된 경우에는 **enablekdcfromkrb5** 옵션을 사용하여 SQL Server에서 KDC 서버에 대한 역방향 DNS 조회 대신에 krb5 라이브러리를 KDC 조회에 사용하도록 할 수 있습니다.
 
-이 SQL Server와 통신 하려고 하는 도메인 컨트롤러를 수동으로 구성 하려는 시나리오에 유용할 수 있습니다. Openldap 라이브러리 메커니즘을 사용 하 여 KDC 목록을 사용 하 여 **krb5.conf**합니다.
+이 방법은 SQL Server가 통신을 시도하는 도메인 컨트롤러를 수동으로 구성하려는 시나리오에 유용할 수 있습니다. 또한 **krb5.conf**에서 KDC 목록을 사용하여 openldap 라이브러리 메커니즘을 사용합니다.
 
-먼저 설정 **disablessd** 하 고 **enablekdcfromkrb5conf** true 및 다음 SQL Server를 다시 시작 하려면:
+먼저, **disablessd** 및 **enablekdcfromkrb5conf**를 true로 설정한 다음, SQL Server를 다시 시작합니다.
 
 ```bash
 sudo mssql-conf set network.disablesssd true
@@ -334,7 +334,7 @@ sudo mssql-conf set network.enablekdcfromkrb5conf true
 systemctl restart mssql-server
 ```
 
-KDC 목록에서 구성한 **/etc/krb5.conf** 다음과 같습니다.
+그런 다음, **/etc/krb5.conf**에서 다음과 같이 KDC 목록을 구성합니다.
 
 ```/etc/krb5.conf
 [realms]
@@ -345,19 +345,19 @@ CONTOSO.COM = {
 ```
 
 > [!NOTE]
-> 와 같은 유틸리티를 사용할 수 있기 권장 되지는 않지만 **realmd**, SSSD 구성 하는 동안 Linux 호스트를 도메인에 가입 하는 동안 설정 된 **disablesssd** SQL Server 사용 되도록 true openldap 호출 대신 Active Directory에 대 한 SSSD의 관련 호출 합니다.
+> 권장하지는 않지만 SQL Server가 Active Directory 관련 호출에 SSSD 대신에 openldap 호출을 사용하도록 **disablesssd**를 true로 구성하면서 Linux 호스트를 도메인에 가입시키는 동안 SSSD를 설정하는 **realmd**와 같은 유틸리티를 사용할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-이 자습서에서는 Linux의 SQL Server를 사용 하 여 Active Directory 인증을 설정 하는 방법을 단계별로 안내 합니다. 방법을 배웠습니다에:
+이 자습서에서는 SQL Server on Linux를 사용하여 Active Directory 인증을 설정하는 방법을 살펴보았습니다. 구체적으로 다음 작업 방법을 알아보았습니다.
 > [!div class="checklist"]
-> * 조인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 도메인에 호스트
-> * AD 사용자에 대 한 만들기 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] SPN 설정
-> * 구성 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 키
-> * TRANSACT-SQL에서 AD 기반 로그인 만들기
-> * 연결할 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] AD 인증을 사용 하 여
+> * AD 도메인에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 호스트 가입
+> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 AD 사용자 만들기 및 SPN 설정
+> * [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 서비스 keytab 구성
+> * Transact-SQL에서 AD 기반 로그인 만들기
+> * AD 인증을 사용하여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에 연결
 
-다음으로, Linux에서 SQL Server에 대 한 다른 보안 시나리오를 탐색 합니다.
+다음에는 SQL Server on Linux의 다른 보안 시나리오를 살펴보겠습니다.
 
 > [!div class="nextstepaction"]
-> [Linux의 SQL Server에 대 한 연결 암호화](sql-server-linux-encrypted-connections.md)
+> [SQL Server on Linux에 대한 연결 암호화](sql-server-linux-encrypted-connections.md)

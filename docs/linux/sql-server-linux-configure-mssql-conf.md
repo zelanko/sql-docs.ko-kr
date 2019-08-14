@@ -1,108 +1,108 @@
 ---
 title: Linux에서 SQL Server 설정 구성
-description: 이 문서에서는 Linux의 SQL Server 설정을 구성 하려면 mssql-conf 도구를 사용 하는 방법을 설명 합니다.
+description: 이 문서에서는 mssql-conf 도구를 사용하여 Linux에서 SQL Server 설정을 구성하는 방법을 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 02/28/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: ac1f88377b15bf8bd4a92a5dd705716db55deaaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: aaddcbfb9520f2619df82ddbf3695604c2cbee40
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68077597"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661371"
 ---
-# <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Mssql-conf 도구를 사용 하 여 Linux에서 SQL Server 구성
+# <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>mssql-conf 도구를 사용하여 SQL Server on Linux 구성
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-**mssql conf** Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu 용 SQL Server 2017을 사용 하 여 설치 하는 구성 스크립트입니다. 이 유틸리티를 사용 하 여 다음 매개 변수를 설정할 수 있습니다.
+**mssql-conf**는 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu용 SQL Server 2017과 함께 설치되는 구성 스크립트입니다. 이 유틸리티를 사용하여 다음 매개 변수를 설정할 수 있습니다.
 
 |||
 |---|---|
-| [에이전트](#agent) | SQL Server 에이전트를 사용 하도록 설정 합니다. |
-| [데이터 정렬](#collation) | Linux의 SQL Server에 대 한 새 데이터 정렬을 설정 합니다. |
-| [고객 의견](#customerfeedback) | SQL Server Microsoft에 피드백을 전송 여부를 선택 합니다. |
-| [데이터베이스 메일 프로필](#dbmail) | Linux의 SQL Server에 대 한 기본 데이터베이스 메일 프로필을 설정 합니다. |
-| [기본 데이터 디렉터리](#datadir) | 새 SQL Server 데이터베이스 데이터 파일 (.mdf)에 대 한 기본 디렉터리를 변경 합니다. |
-| [기본 로그 디렉터리](#datadir) | 새 SQL Server 데이터베이스 로그 (.ldf) 파일에 대 한 기본 디렉터리를 변경합니다. |
-| [기본 master 데이터베이스 디렉터리](#masterdatabasedir) | Master 데이터베이스 및 로그 파일용 기본 디렉터리를 변경합니다.|
-| [기본 master 데이터베이스 파일 이름](#masterdatabasename) | Master 데이터베이스 파일의 이름을 변경합니다. |
-| [기본 덤프 디렉터리](#dumpdir) | 새 메모리 덤프 및 기타 문제 해결 파일에 대 한 기본 디렉터리를 변경 합니다. |
-| [기본 오류 로그 디렉터리](#errorlogdir) | 새 SQL Server 오류 로그, 기본 Profiler 추적, 시스템 상태 세션 XE를 및 Hekaton 세션 XE 파일용 기본 디렉터리를 변경합니다. |
-| [기본 백업 디렉터리](#backupdir) | 새 백업 파일용 기본 디렉터리를 변경 합니다. |
-| [형식 덤프](#coredump) | 수집 덤프 메모리 덤프 파일의 유형을 선택 합니다. |
-| [고가용성](#hadr) | 가용성 그룹을 사용 하도록 설정 합니다. |
-| [로컬 감사 디렉터리](#localaudit) | 로컬 감사 파일에 추가할 디렉터리를 설정 합니다. |
-| [로캘](#lcid) | 사용 하도록 SQL Server에 대 한 로캘을 설정 합니다. |
-| [메모리 제한](#memorylimit) | SQL Server에 대 한 메모리 한계를 설정 합니다. |
-| [TCP 포트](#tcpport) | SQL Server 연결을 수신 하는 위치는 포트를 변경 합니다. |
-| [TLS](#tls) | 전송 수준 보안을 구성 합니다. |
-| [추적 플래그](#traceflags) | 사용 하려는 서비스는 추적 플래그를 설정 합니다. |
+| [에이전트](#agent) | SQL Server 에이전트를 사용하도록 설정합니다. |
+| [데이터 정렬](#collation) | SQL Server on Linux에 대한 새 데이터 정렬을 설정합니다. |
+| [고객 의견](#customerfeedback) | SQL Server에서 사용자 의견을 Microsoft에 보낼지 여부를 선택합니다. |
+| [데이터베이스 메일 프로필](#dbmail) | SQL Server on Linux의 기본 데이터베이스 메일 프로필을 설정합니다. |
+| [기본 데이터 디렉터리](#datadir) | 새 SQL Server 데이터베이스 데이터 파일(.mdf)의 기본 디렉터리를 변경합니다. |
+| [기본 로그 디렉터리](#datadir) | 새 SQL Server 데이터베이스 로그(.ldf) 파일의 기본 디렉터리를 변경합니다. |
+| [기본 master 데이터베이스 디렉터리](#masterdatabasedir) | master 데이터베이스 및 로그 파일의 기본 디렉터리를 변경합니다.|
+| [기본 master 데이터베이스 파일 이름](#masterdatabasename) | master 데이터베이스 파일의 이름을 변경합니다. |
+| [기본 덤프 디렉터리](#dumpdir) | 새 메모리 덤프 및 기타 문제 해결 파일의 기본 디렉터리를 변경합니다. |
+| [기본 오류 로그 디렉터리](#errorlogdir) | 새 SQL Server 오류 로그, 기본 프로파일러 추적, 시스템 상태 세션 XE 및 Hekaton 세션 XE 파일의 기본 디렉터리를 변경합니다. |
+| [기본 백업 디렉터리](#backupdir) | 새 백업 파일의 기본 디렉터리를 변경합니다. |
+| [덤프 형식](#coredump) | 수집할 덤프 메모리 덤프 파일의 형식을 선택합니다. |
+| [고가용성](#hadr) | 가용성 그룹을 사용하도록 설정합니다. |
+| [로컬 감사 디렉터리](#localaudit) | 로컬 감사 파일을 추가할 디렉터리를 설정합니다. |
+| [로캘](#lcid) | 사용할 SQL Server의 로캘을 설정합니다. |
+| [메모리 제한](#memorylimit) | SQL Server의 메모리 제한을 설정합니다. |
+| [TCP 포트](#tcpport) | SQL Server가 연결을 수신 대기하는 포트를 변경합니다. |
+| [TLS](#tls) | 전송 수준 보안을 구성합니다. |
+| [추적 플래그](#traceflags) | 서비스에서 사용할 추적 플래그를 설정합니다. |
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-**mssql conf** 와 함께 설치 되는 구성 스크립트는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu에 대 한 합니다. 이 유틸리티를 사용 하 여 다음 매개 변수를 설정할 수 있습니다.
+**mssql-conf**는 Red Hat Enterprise Linux, SUSE Linux Enterprise Server 및 Ubuntu용 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]와 함께 설치되는 구성 스크립트입니다. 이 유틸리티를 사용하여 다음 매개 변수를 설정할 수 있습니다.
 
 |||
 |---|---|
-| [에이전트](#agent) | SQL Server 에이전트를 사용 하도록 설정 |
-| [데이터 정렬](#collation) | Linux의 SQL Server에 대 한 새 데이터 정렬을 설정 합니다. |
-| [고객 의견](#customerfeedback) | SQL Server Microsoft에 피드백을 전송 여부를 선택 합니다. |
-| [데이터베이스 메일 프로필](#dbmail) | Linux의 SQL Server에 대 한 기본 데이터베이스 메일 프로필을 설정 합니다. |
-| [기본 데이터 디렉터리](#datadir) | 새 SQL Server 데이터베이스 데이터 파일 (.mdf)에 대 한 기본 디렉터리를 변경 합니다. |
-| [기본 로그 디렉터리](#datadir) | 새 SQL Server 데이터베이스 로그 (.ldf) 파일에 대 한 기본 디렉터리를 변경합니다. |
-| [기본 master 데이터베이스 파일 디렉터리](#masterdatabasedir) | 기존 SQL 설치에서 master 데이터베이스 파일용 기본 디렉터리를 변경합니다.|
-| [기본 master 데이터베이스 파일 이름](#masterdatabasename) | Master 데이터베이스 파일의 이름을 변경합니다. |
-| [기본 덤프 디렉터리](#dumpdir) | 새 메모리 덤프 및 기타 문제 해결 파일에 대 한 기본 디렉터리를 변경 합니다. |
-| [기본 오류 로그 디렉터리](#errorlogdir) | 새 SQL Server 오류 로그, 기본 Profiler 추적, 시스템 상태 세션 XE를 및 Hekaton 세션 XE 파일용 기본 디렉터리를 변경합니다. |
-| [기본 백업 디렉터리](#backupdir) | 새 백업 파일용 기본 디렉터리를 변경 합니다. |
-| [형식 덤프](#coredump) | 수집 덤프 메모리 덤프 파일의 유형을 선택 합니다. |
-| [고가용성](#hadr) | 가용성 그룹을 사용 하도록 설정 합니다. |
-| [로컬 감사 디렉터리](#localaudit) | 로컬 감사 파일에 추가할 디렉터리를 설정 합니다. |
-| [로캘](#lcid) | 사용 하도록 SQL Server에 대 한 로캘을 설정 합니다. |
-| [메모리 제한](#memorylimit) | SQL Server에 대 한 메모리 한계를 설정 합니다. |
-| [Microsoft Distributed Transaction Coordinator](#msdtc) | Linux에서 MSDTC 문제 해결 및 구성 합니다. |
-| [MLServices Eula](#mlservices-eula) | Mlservices 패키지에 대 한 R 및 Python Eula를 수락 합니다. SQL Server 2019 에서만 적용 됩니다.|
-| [outboundnetworkaccess](#mlservices-outbound-access) |에 대 한 아웃 바운드 네트워크 액세스를 사용 하도록 설정 [mlservices](sql-server-linux-setup-machine-learning.md) R, Python 및 Java 확장 합니다.|
-| [TCP 포트](#tcpport) | SQL Server 연결을 수신 하는 위치는 포트를 변경 합니다. |
-| [TLS](#tls) | 전송 수준 보안을 구성 합니다. |
-| [추적 플래그](#traceflags) | 사용 하려는 서비스는 추적 플래그를 설정 합니다. |
+| [에이전트](#agent) | SQL Server 에이전트 사용 |
+| [데이터 정렬](#collation) | SQL Server on Linux에 대한 새 데이터 정렬을 설정합니다. |
+| [고객 의견](#customerfeedback) | SQL Server에서 사용자 의견을 Microsoft에 보낼지 여부를 선택합니다. |
+| [데이터베이스 메일 프로필](#dbmail) | SQL Server on Linux의 기본 데이터베이스 메일 프로필을 설정합니다. |
+| [기본 데이터 디렉터리](#datadir) | 새 SQL Server 데이터베이스 데이터 파일(.mdf)의 기본 디렉터리를 변경합니다. |
+| [기본 로그 디렉터리](#datadir) | 새 SQL Server 데이터베이스 로그(.ldf) 파일의 기본 디렉터리를 변경합니다. |
+| [기본 master 데이터베이스 파일 디렉터리](#masterdatabasedir) | 기존 SQL 설치에서 master 데이터베이스 파일의 기본 디렉터리를 변경합니다.|
+| [기본 master 데이터베이스 파일 이름](#masterdatabasename) | master 데이터베이스 파일의 이름을 변경합니다. |
+| [기본 덤프 디렉터리](#dumpdir) | 새 메모리 덤프 및 기타 문제 해결 파일의 기본 디렉터리를 변경합니다. |
+| [기본 오류 로그 디렉터리](#errorlogdir) | 새 SQL Server 오류 로그, 기본 프로파일러 추적, 시스템 상태 세션 XE 및 Hekaton 세션 XE 파일의 기본 디렉터리를 변경합니다. |
+| [기본 백업 디렉터리](#backupdir) | 새 백업 파일의 기본 디렉터리를 변경합니다. |
+| [덤프 형식](#coredump) | 수집할 덤프 메모리 덤프 파일의 형식을 선택합니다. |
+| [고가용성](#hadr) | 가용성 그룹을 사용하도록 설정합니다. |
+| [로컬 감사 디렉터리](#localaudit) | 로컬 감사 파일을 추가할 디렉터리를 설정합니다. |
+| [로캘](#lcid) | 사용할 SQL Server의 로캘을 설정합니다. |
+| [메모리 제한](#memorylimit) | SQL Server의 메모리 제한을 설정합니다. |
+| [Microsoft Distributed Transaction Coordinator](#msdtc) | Linux에서 MSDTC를 구성하고 문제를 해결합니다. |
+| [MLServices EULA](#mlservices-eula) | mlservices 패키지에 대한 R 및 Python EULA에 동의합니다. SQL Server 2019에만 적용됩니다.|
+| [outboundnetworkaccess](#mlservices-outbound-access) |[mlservices](sql-server-linux-setup-machine-learning.md) R, Python 및 Java 확장의 아웃바운드 네트워크 액세스를 사용하도록 설정합니다.|
+| [TCP 포트](#tcpport) | SQL Server가 연결을 수신 대기하는 포트를 변경합니다. |
+| [TLS](#tls) | 전송 수준 보안을 구성합니다. |
+| [추적 플래그](#traceflags) | 서비스에서 사용할 추적 플래그를 설정합니다. |
 
 ::: moniker-end
 
 > [!TIP]
-> 이러한 설정 중 일부 환경 변수를 사용 하 여 구성할 수도 있습니다. 자세한 내용은 [환경 변수를 사용 하 여 SQL Server 구성 설정](sql-server-linux-configure-environment-variables.md)합니다.
+> 이 설정 중 일부는 환경 변수를 사용하여 구성할 수도 있습니다. 자세한 내용은 [환경 변수를 사용하여 SQL Server 설정 구성](sql-server-linux-configure-environment-variables.md)을 참조하세요.
 
 ## <a name="usage-tips"></a>사용 팁
 
-* Always On 가용성 그룹 및 공유 디스크 클러스터의 경우 항상 각 노드에서 동일한 구성 변경 내용을 확인 합니다.
+* Always On 가용성 그룹 및 공유 디스크 클러스터의 경우 항상 각 노드에서 동일하게 구성을 변경합니다.
 
-* 공유 디스크 클러스터 시나리오의 경우 하지를 다시 시작 합니다 **mssql server** 서비스 변경 내용을 적용 합니다. SQL Server가 응용 프로그램으로 실행 됩니다. 대신 다음 다시 온라인 상태가 오프 라인 리소스를 수행 합니다.
+* 공유 디스크 클러스터 시나리오의 경우 변경 내용을 적용하려면 **mssql-server** 서비스를 다시 시작하지 마세요. SQL Server가 애플리케이션으로 실행되고 있습니다. 대신, 리소스를 오프라인으로 전환한 후 다시 온라인으로 전환합니다.
 
-* 이러한 예제는 전체 경로 지정 하 여 mssql conf를 실행 합니다. **/opt/mssql/bin/mssql-conf**합니다. 대신 해당 경로로 이동 하려는 경우 mssql conf 현재 디렉터리의 컨텍스트에서 실행: **. / mssql conf**합니다.
+* 이 예제에서는 전체 경로: **/opt/mssql/bin/mssql-conf**를 지정하여 mssql-conf를 실행합니다. 해당 경로로 이동하려면 현재 디렉터리 **./mssql-conf**의 컨텍스트에서 mssql-conf를 실행합니다.
 
-## <a id="agent"></a> SQL Server 에이전트를 사용 하도록 설정
+## <a id="agent"></a> SQL Server 에이전트 사용
 
-합니다 **sqlagent.enabled** 수 있습니다 [SQL Server 에이전트](sql-server-linux-run-sql-server-agent-job.md)합니다. SQL Server 에이전트는 기본적으로 사용 하지 않도록 설정 합니다. 하는 경우 **sqlagent.enabled** 없는 mssql.conf 설정 파일에서 SQL Server는 SQL Server 에이전트는 사용 하지 않도록 내부적으로 가정 합니다.
+**sqlagent.enabled** 설정은 [SQL Server 에이전트](sql-server-linux-run-sql-server-agent-job.md)를 사용하도록 설정합니다. 기본적으로 SQL Server 에이전트는 사용하지 않도록 설정됩니다. **sqlagent.enabled**가 mssql.conf 설정 파일에 있는 경우 SQL Server는 내부적으로 SQL Server 에이전트가 사용하지 않도록 설정되었다고 간주합니다.
 
-이 설정을 변경 하려면 다음 단계를 사용 합니다.
+이 설정을 변경하려면 다음 단계를 사용합니다.
 
-1. SQL Server 에이전트를 사용 하도록 설정 합니다.
+1. SQL Server 에이전트를 사용하도록 설정합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set sqlagent.enabled true 
    ```
 
-2. SQL Server 서비스를 다시 시작 합니다.
+2. SQL Server 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart mssql-server
@@ -110,103 +110,103 @@ ms.locfileid: "68077597"
 
 ## <a id="collation"></a> SQL Server 데이터 정렬 변경
 
-합니다 **데이터 정렬 설정** 옵션 지원 되는 데이터 정렬 중에 데이터 정렬 값을 변경 합니다.
+**set-collation** 옵션은 데이터 정렬 값을 지원되는 데이터 정렬로 변경합니다.
 
-1. 첫 번째 [모든 사용자 데이터베이스를 백업](sql-server-linux-backup-and-restore-database.md) 서버의 합니다.
+1. 먼저 서버에서 [모든 사용자 데이터베이스를 백업](sql-server-linux-backup-and-restore-database.md)합니다.
 
-1. 다음 사용 합니다 [sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) 저장 프로시저를 사용자 데이터베이스를 분리 합니다.
+1. 그런 다음, [sp_detach_db](../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md) 저장 프로시저를 사용하여 사용자 데이터베이스를 분리합니다.
 
-1. 실행 합니다 **데이터 정렬 설정** 옵션 및 지시를 따릅니다.
+1. **set-collation** 옵션을 실행하고 다음 프롬프트를 따릅니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set-collation
    ```
 
-1. Mssql conf 유틸리티는 지정 된 데이터 정렬 값으로 변경 하 고 서비스를 다시 시작 하려고 합니다. 모든 오류가 있는 경우 롤백됩니다 데이터 정렬을 이전 값입니다.
+1. mssql-conf 유틸리티는 지정된 데이터 정렬 값으로 변경하고 서비스를 다시 시작하려고 시도합니다. 오류가 있는 경우 데이터 정렬을 이전 값으로 롤백합니다.
 
-1. 사용자 데이터베이스 백업을 복원 합니다.
+1. 사용자 데이터베이스 백업을 복원합니다.
 
-지원 되는 데이터 정렬 목록을 실행 합니다 [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) 함수: `SELECT Name from sys.fn_helpcollations()`합니다.
+지원되는 데이터 정렬 목록을 보려면 [sys.fn_helpcollations](../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md) 함수를 다음과 같이 실행합니다. `SELECT Name from sys.fn_helpcollations()`.
 
-## <a id="customerfeedback"></a> 고객 피드백을 구성 합니다.
+## <a id="customerfeedback"></a> 고객 의견 구성
 
-합니다 **telemetry.customerfeedback** 설정은 SQL Server 또는 Microsoft에 피드백을 전송 하는지 여부를 변경 합니다. 기본적으로이 값 설정할지 **true** 모든 버전에 대 한 합니다. 값을 변경 하려면 다음 명령을 실행 합니다.
+**telemetry.customerfeedback** 설정은 SQL Server에서 사용자 의견을 Microsoft에 보낼지 여부를 변경합니다. 기본적으로 이 값은 모든 버전에 대해 **true**로 설정됩니다. 값을 변경하려면 다음 명령을 실행합니다.
 
 > [!IMPORTANT]
-> 해제할 수 있습니다 하지 고객 의견을 무료로 SQL Server, Express 및 Developer 버전입니다.
+> SQL Server, Express 및 Developer의 체험 버전에 대한 고객 의견은 끌 수 없습니다.
 
-1. 사용 하 여 루트로 mssql conf 스크립트를 실행 합니다 **설정** 에 대 한 명령을 **telemetry.customerfeedback**합니다. 다음 예제에서는 지정 하 여 고객 피드백 해제 **false**합니다.
+1. **telemetry.customerfeedback**에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다. 다음 예제에서는 **false**를 지정하여 고객 의견을 끕니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
    ```
 
-1. SQL Server 서비스를 다시 시작 합니다.
+1. SQL Server 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart mssql-server
    ```
 
-자세한 내용은 [Linux의 SQL Server에 대 한 의견](sql-server-linux-customer-feedback.md) 하며 [SQL Server 개인정보취급방침](https://go.microsoft.com/fwlink/?LinkID=868444)합니다.
+자세한 내용은 [SQL Server on Linux에 대한 고객 의견](sql-server-linux-customer-feedback.md) 및 [SQL Server 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.
 
 ## <a id="datadir"></a> 기본 데이터 또는 로그 디렉터리 위치 변경
 
-합니다 **filelocation.defaultdatadir** 하 고 **filelocation.defaultlogdir** 설정을 새 데이터베이스 및 로그 파일이 만들어지는 위치를 변경 합니다. 기본적으로이 위치는 /var/opt/mssql/data는입니다. 이러한 설정을 변경 하려면 다음 단계를 사용 합니다.
+**filelocation.defaultdatadir** 및 **filelocation.defaultlogdir** 설정은 새 데이터베이스 및 로그 파일이 생성되는 위치를 변경합니다. 기본적으로 이 위치는 /var/opt/mssql/data입니다. 이 설정을 변경하려면 다음 단계를 사용합니다.
 
-1. 새 데이터베이스에 대 한 대상 디렉터리 데이터 및 로그 파일을 만듭니다. 다음 예제에서는 새 **/tmp 데이터** 디렉터리:
+1. 새 데이터베이스 데이터 및 로그 파일의 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/tmp/data** 디렉터리를 만듭니다.
 
    ```bash
    sudo mkdir /tmp/data
    ```
 
-1. 소유자 및 디렉터리의 그룹을 변경 합니다 **mssql** 사용자:
+1. 디렉터리의 소유자 및 그룹을 **mssql** 사용자로 변경합니다.
 
    ```bash
    sudo chown mssql /tmp/data
    sudo chgrp mssql /tmp/data
    ```
 
-1. Mssql conf를 사용 하 여 사용 하 여 기본 데이터 디렉터리를 변경 합니다 **설정** 명령:
+1. mssql-conf를 사용하여 **set** 명령으로 기본 데이터 디렉터리를 변경합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultdatadir /tmp/data
    ```
 
-1. SQL Server 서비스를 다시 시작 합니다.
+1. SQL Server 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart mssql-server
    ```
 
-1. 이제이 새 위치에 생성 된 새 데이터베이스에 대 한 모든 데이터베이스 파일 저장할 됩니다. 새 데이터베이스의 로그 (.ldf) 파일의 위치를 변경 하려는 경우 다음 "set" 명령을 사용할 수 있습니다.
+1. 이제 만들어진 새 데이터베이스의 모든 데이터베이스 파일이 새 위치에 저장됩니다. 새 데이터베이스의 로그(.ldf) 파일 위치를 변경하려는 경우 다음 “set” 명령을 사용할 수 있습니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultlogdir /tmp/log
    ```
 
-1. 이 명령은 또한 가정/tmp 로그 디렉터리가 있는 사용자 및 그룹에 속하는 것 **mssql**합니다.
+1. 또한 이 명령은 /tmp/log 디렉터리가 존재하고 사용자 및 그룹 **mssql**이 사용하고 있다고 간주합니다.
 
 
 ## <a id="masterdatabasedir"></a> 기본 master 데이터베이스 파일 디렉터리 위치 변경
 
-합니다 **filelocation.masterdatafile** 하 고 **filelocation.masterlogfile** 설정 변경 내용을 master 데이터베이스 파일에 대 한 SQL Server 엔진은 여기서 위치 합니다. 기본적으로이 위치는 /var/opt/mssql/data는입니다.
+**filelocation.masterdatafile** 및 **filelocation.masterlogfile** 설정은 SQL Server 엔진이 master 데이터베이스 파일을 검색하는 위치를 변경합니다. 기본적으로 이 위치는 /var/opt/mssql/data입니다.
 
-이러한 설정을 변경 하려면 다음 단계를 사용 합니다.
+이 설정을 변경하려면 다음 단계를 사용합니다.
 
-1. 새 오류 로그 파일에 대 한 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/tmp masterdatabasedir** 디렉터리:
+1. 새 오류 로그 파일의 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/tmp/masterdatabasedir** 디렉터리를 만듭니다.
 
    ```bash
    sudo mkdir /tmp/masterdatabasedir
    ```
 
-1. 소유자 및 디렉터리의 그룹을 변경 합니다 **mssql** 사용자:
+1. 디렉터리의 소유자 및 그룹을 **mssql** 사용자로 변경합니다.
 
    ```bash
    sudo chown mssql /tmp/masterdatabasedir
    sudo chgrp mssql /tmp/masterdatabasedir
    ```
 
-1. Mssql conf를 사용 하 여 사용 하 여 마스터 데이터 및 로그 파일에 대 한 기본 master 데이터베이스 디렉터리를 변경 합니다 **설정** 명령:
+1. mssql-conf를 사용하여 **set** 명령으로 마스터 데이터 및 로그 파일의 기본 master 데이터베이스 디렉터리를 변경합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /tmp/masterdatabasedir/master.mdf
@@ -214,43 +214,43 @@ ms.locfileid: "68077597"
    ```
 
    > [!NOTE]
-   > 마스터 데이터 및 로그 파일을 이동 하는 것 외에도 다른 모든 시스템 데이터베이스의 기본 위치는 이동이 합니다.
+   > 마스터 데이터와 로그 파일을 이동할 뿐 아니라 다른 모든 시스템 데이터베이스의 기본 위치도 이동합니다.
 
-1. SQL Server 서비스를 중지 합니다.
+1. SQL Server 서비스를 중지합니다.
 
    ```bash
    sudo systemctl stop mssql-server
    ```
 
-1. Master.mdf 및 masterlog.ldf를 이동 합니다.
+1. master.mdf 및 masterlog.ldf를 이동합니다.
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /tmp/masterdatabasedir/master.mdf 
    sudo mv /var/opt/mssql/data/mastlog.ldf /tmp/masterdatabasedir/mastlog.ldf
    ```
 
-1. SQL Server 서비스를 시작 합니다.
+1. SQL Server 서비스를 시작합니다.
 
    ```bash
    sudo systemctl start mssql-server
    ```
 
    > [!NOTE]
-   > SQL Server는 지정된 된 디렉터리에서 master.mdf 및 mastlog.ldf 파일을 찾을 수 없으면, 시스템 데이터베이스의 템플릿 복사본이 지정된 된 디렉터리에 자동으로 생성 됩니다 및 SQL Server 성공적으로 시작 됩니다. 그러나 사용자 데이터베이스, 서버 로그인, 서버 인증서, 암호화 키, SQL 에이전트 작업 또는 이전 SA 로그인 암호와 같은 메타 데이터를 새 마스터 데이터베이스에서 업데이트 되지 않습니다. SQL Server를 중지 하 고 지정된 된 새 위치에 이전 master.mdf 및 mastlog.ldf 이동할 기존 메타 데이터를 사용 하 여 계속 하려면 SQL Server를 시작 해야 합니다.
+   > SQL Server가 지정된 디렉터리에서 master.mdf 및 mastlog.ldf 파일을 찾을 수 없으면 시스템 데이터베이스의 템플릿 기반 복사본이 지정된 디렉터리에 자동으로 생성되고 SQL Server가 시작됩니다. 그러나 사용자 데이터베이스, 서버 로그인, 서버 인증서, 암호화 키, SQL 에이전트 작업 또는 이전 SA 로그인 암호와 같은 메타데이터는 새 master 데이터베이스에서 업데이트되지 않습니다. SQL Server를 중지하고, 이전 master.mdf 및 mastlog.ldf를 지정된 새 위치로 이동하고, SQL Server를 시작하여 기존 메타데이터를 계속 사용해야 합니다.
  
-## <a id="masterdatabasename"></a> Master 데이터베이스 파일의 이름 변경
+## <a id="masterdatabasename"></a> master 데이터베이스 파일의 이름 변경
 
-합니다 **filelocation.masterdatafile** 하 고 **filelocation.masterlogfile** 설정 변경 내용을 master 데이터베이스 파일에 대 한 SQL Server 엔진은 여기서 위치 합니다. Master 데이터베이스 및 로그 파일의 이름을 변경 하려면이 사용할 수도 있습니다. 
+**filelocation.masterdatafile** 및 **filelocation.masterlogfile** 설정은 SQL Server 엔진이 master 데이터베이스 파일을 검색하는 위치를 변경합니다. 또한 master 데이터베이스 및 로그 파일의 이름을 변경하는 데 이 설정을 사용할 수 있습니다. 
 
-이러한 설정을 변경 하려면 다음 단계를 사용 합니다.
+이 설정을 변경하려면 다음 단계를 사용합니다.
 
-1. SQL Server 서비스를 중지 합니다.
+1. SQL Server 서비스를 중지합니다.
 
    ```bash
    sudo systemctl stop mssql-server
    ```
 
-1. Mssql conf를 사용 하 여 사용 하 여 마스터 데이터 및 로그 파일에 대 한 예상 되는 마스터 데이터베이스 이름을 변경 합니다 **설정** 명령:
+1. mssql-conf를 사용하여 **set** 명령으로 마스터 데이터 및 로그 파일의 예상 master 데이터베이스 이름을 변경합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.masterdatafile /var/opt/mssql/data/masternew.mdf
@@ -258,16 +258,16 @@ ms.locfileid: "68077597"
    ```
 
    > [!IMPORTANT]
-   > Master 데이터베이스의 이름을 변경 및 SQL Server를 성공적으로 시작 된 후 로그 파일 수 있습니다. 초기 실행 하기 전에 SQL Server에서는 master.mdf 및 mastlog.ldf 이라는 이름으로 파일을 사용 합니다.
+   > SQL Server가 시작된 후 master 데이터베이스 및 로그 파일의 이름만 변경할 수 있습니다. 처음 실행하기 전에 SQL Server는 파일 이름이 master.mdf 및 mastlog.ldf일 것으로 예상합니다.
 
-1. Master 데이터베이스 데이터 및 로그 파일의 이름 변경 
+1. master 데이터베이스 및 로그 파일의 이름 변경 
 
    ```bash
    sudo mv /var/opt/mssql/data/master.mdf /var/opt/mssql/data/masternew.mdf
    sudo mv /var/opt/mssql/data/mastlog.ldf /var/opt/mssql/data/mastlognew.ldf
    ```
 
-1. SQL Server 서비스를 시작 합니다.
+1. SQL Server 서비스를 시작합니다.
 
    ```bash
    sudo systemctl start mssql-server
@@ -275,30 +275,30 @@ ms.locfileid: "68077597"
 
 ## <a id="dumpdir"></a> 기본 덤프 디렉터리 위치 변경
 
-합니다 **filelocation.defaultdumpdir** 변경 하는 메모리 및 SQL 덤프 생성 되는 충돌이 있을 때마다 기본 위치를 설정 합니다. 기본적으로 이러한 파일은 /var/opt/mssql/log에 생성 됩니다.
+**filelocation.defaultdumpdir** 설정은 크래시가 발생할 때마다 메모리 및 SQL 덤프가 생성되는 기본 위치를 변경합니다. 기본적으로 이 파일은 /var/opt/mssql/log에 생성됩니다.
 
-이 새 위치를 설정 하려면 다음 명령을 사용 합니다.
+이 새 위치를 설정하려면 다음 명령을 사용합니다.
 
-1. 새 덤프 파일에 대 한 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/tmp 덤프** 디렉터리:
+1. 새 덤프 파일의 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/tmp/dump** 디렉터리를 만듭니다.
 
    ```bash
    sudo mkdir /tmp/dump
    ```
 
-1. 소유자 및 디렉터리의 그룹을 변경 합니다 **mssql** 사용자:
+1. 디렉터리의 소유자 및 그룹을 **mssql** 사용자로 변경합니다.
 
    ```bash
    sudo chown mssql /tmp/dump
    sudo chgrp mssql /tmp/dump
    ```
 
-1. Mssql conf를 사용 하 여 사용 하 여 기본 데이터 디렉터리를 변경 합니다 **설정** 명령:
+1. mssql-conf를 사용하여 **set** 명령으로 기본 데이터 디렉터리를 변경합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultdumpdir /tmp/dump
    ```
 
-1. SQL Server 서비스를 다시 시작 합니다.
+1. SQL Server 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart mssql-server
@@ -306,30 +306,30 @@ ms.locfileid: "68077597"
 
 ## <a id="errorlogdir"></a> 기본 오류 로그 파일 디렉터리 위치 변경
 
-합니다 **filelocation.errorlogfile** 설정 변경 내용을 새 오류 로그, 기본 프로파일러 추적, 시스템 상태 세션과 XE 및 Hekaton XE 세션 파일 만들어지는 위치입니다. 기본적으로이 위치는 /var/opt/mssql/log은입니다. SQL 오류 로그 파일 설정 되어 있는 디렉터리에는 다른 로그에 대 한 기본 로그 디렉터리를 됩니다.
+**filelocation.errorlogfile** 설정은 새 오류 로그, 기본 프로파일러 추적, 시스템 상태 세션 XE 및 Hekaton 세션 XE 파일이 생성되는 위치를 변경합니다. 기본적으로 이 위치는 /var/opt/mssql/log입니다. SQL 오류 로그 파일이 설정된 디렉터리는 다른 로그의 기본 로그 디렉터리가 됩니다.
 
-이러한 설정을 변경 하려면:
+이 설정을 변경하려면:
 
-1. 새 오류 로그 파일에 대 한 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/tmp 로그** 디렉터리:
+1. 새 오류 로그 파일의 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/tmp/logs** 디렉터리를 만듭니다.
 
    ```bash
    sudo mkdir /tmp/logs
    ```
 
-1. 소유자 및 디렉터리의 그룹을 변경 합니다 **mssql** 사용자:
+1. 디렉터리의 소유자 및 그룹을 **mssql** 사용자로 변경합니다.
 
    ```bash
    sudo chown mssql /tmp/logs
    sudo chgrp mssql /tmp/logs
    ```
 
-1. Mssql conf를 사용 하 여 사용 하 여 기본 오류 로그 파일 이름을 변경 합니다 **설정** 명령:
+1. mssql-conf를 사용하여 **set** 명령으로 기본 오류 로그 파일 이름을 변경합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.errorlogfile /tmp/logs/errorlog
    ```
 
-1. SQL Server 서비스를 다시 시작 합니다.
+1. SQL Server 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart mssql-server
@@ -338,30 +338,30 @@ ms.locfileid: "68077597"
 
 ## <a id="backupdir"></a> 기본 백업 디렉터리 위치 변경
 
-합니다 **filelocation.defaultbackupdir** 변경 내용을 백업 파일이 생성 되는 기본 위치를 설정 합니다. 기본적으로 이러한 파일은 /var/opt/mssql/data에 생성 됩니다.
+**filelocation.defaultbackupdir** 설정은 백업 파일이 생성되는 기본 위치를 변경합니다. 기본적으로 이 파일은 /var/opt/mssql/data에 생성됩니다.
 
-이 새 위치를 설정 하려면 다음 명령을 사용 합니다.
+이 새 위치를 설정하려면 다음 명령을 사용합니다.
 
-1. 새 백업 파일에 대 한 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/tmp/백업** 디렉터리:
+1. 새 백업 파일의 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/tmp/backup** 디렉터리를 만듭니다.
 
    ```bash
    sudo mkdir /tmp/backup
    ```
 
-1. 소유자 및 디렉터리의 그룹을 변경 합니다 **mssql** 사용자:
+1. 디렉터리의 소유자 및 그룹을 **mssql** 사용자로 변경합니다.
 
    ```bash
    sudo chown mssql /tmp/backup
    sudo chgrp mssql /tmp/backup
    ```
 
-1. Mssql conf "집합" 명령 사용 하 여 기본 백업 디렉터리를 변경 하려면 사용 합니다.
+1. mssql-conf를 사용하여 “set” 명령으로 기본 백업 디렉터리를 변경합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set filelocation.defaultbackupdir /tmp/backup
    ```
 
-1. SQL Server 서비스를 다시 시작 합니다.
+1. SQL Server 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart mssql-server
@@ -369,13 +369,13 @@ ms.locfileid: "68077597"
 
 ## <a id="coredump"></a> 코어 덤프 설정 지정
 
-SQL Server 프로세스 중에 예외가 발생 하는 경우 SQL Server 메모리 덤프를 만듭니다.
+SQL Server 프로세스 중 하나에서 예외가 발생하면 SQL Server는 메모리 덤프를 만듭니다.
 
-SQL Server를 수집 한다는 덤프 메모리 형식을 제어에 대 한 두 가지 옵션 사항이: **coredump.coredumptype** 하 고 **coredump.captureminiandfull**합니다. 이러한 코어 덤프 캡처의 두 단계와 관련이 있습니다. 
+SQL Server가 수집하는 메모리 덤프 유형을 제어하는 두 가지 옵션인 **coredump.coredumptype** 및 **coredump.captureminiandfull**이 있습니다. 이 옵션은 코어 덤프 캡처의 두 단계와 관련이 있습니다. 
 
-첫 번째 단계 캡처에 의해 제어 됩니다 합니다 **coredump.coredumptype** 예외 중 생성 된 덤프 파일의 형식을 결정 하는 설정입니다. 두 번째 단계는 경우 사용 하도록 설정 합니다 **coredump.captureminiandfull** 설정 합니다. 경우 **coredump.captureminiandfull** 덤프를 true로 설정 하 여 지정 된 파일 **coredump.coredumptype** 생성 됩니다 및 두 번째 미니 덤프가 생성 됩니다. 설정 **coredump.captureminiandfull** false 사용 하지 않도록 설정 하려면 두 번째 캡처를 시도 합니다.
+첫 번째 단계 캡처는 예외 발생 시 생성된 덤프 파일의 형식을 결정하는 **coredump.coredumptype** 설정을 통해 제어됩니다. **coredump.captureminiandfull** 설정을 사용하여 두 번째 단계를 사용하도록 설정합니다. **coredump.captureminiandfull**가 true로 설정하면 **coredump.coredumptype**을 통해 지정된 덤프 파일이 생성되고 두 번째 미니 덤프도 생성됩니다. **coredump.captureminiandfull**을 false로 설정하면 두 번째 캡처 시도가 사용하지 않도록 설정됩니다.
 
-1. 사용 하 여 미니 및 전체 덤프를 캡처하려면 여부를 결정 합니다 **coredump.captureminiandfull** 설정 합니다.
+1. **coredump.captureminiandfull** 설정을 사용하여 미니 및 전체 덤프를 둘 다 캡처할지 여부를 결정합니다.
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set coredump.captureminiandfull <true or false>
@@ -383,7 +383,7 @@ SQL Server를 수집 한다는 덤프 메모리 형식을 제어에 대 한 두 
 
     기본값: **false**
 
-1. 덤프 파일의 유형을 지정 합니다 **coredump.coredumptype** 설정 합니다.
+1. **coredump.coredumptype** 설정을 사용하여 덤프 파일 형식을 지정합니다.
 
     ```bash
     sudo /opt/mssql/bin/mssql-conf set coredump.coredumptype <dump_type>
@@ -391,79 +391,79 @@ SQL Server를 수집 한다는 덤프 메모리 형식을 제어에 대 한 두 
 
     기본값: **miniplus**
 
-    다음 표에서 가능한 **coredump.coredumptype** 값입니다.
+    다음 표에는 가능한 **coredump.coredumptype** 값이 나와 있습니다.
 
-    | type | 설명 |
+    | 형식 | 설명 |
     |-----|-----|
-    | **mini** | 미니 최소 덤프 파일 형식입니다. 스레드 및 프로세스의 모듈을 확인 하려면 Linux 시스템 정보를 사용 합니다. 덤프는 호스트 환경 스레드 스택 및 모듈을 포함합니다. 간접 메모리 참조 또는 전역 포함 되지 않습니다. |
-    | **miniplus** | Mini, miniPlus 비슷합니다 있지만 추가 메모리를 포함 하는 것입니다. SQLPAL 및 덤프에는 다음과 같은 메모리 영역을 추가 하 고 호스트 환경의 내부 구조를 인식 합니다.</br></br> -다양 한 전역 변수</br> -모든 메모리 64TB 이상</br> -모든 지역에 이름이 지정 **/proc/$ pid/매핑**</br> 스레드 및 스택 간접 메모리</br> 스레드 정보</br> -Teb의 및 Peb의 연결</br> 모듈 정보</br> VMM 및 VAD 트리 |
-    | **filtered** | 빼기 기반 필터링된 사용 하 여 디자인 있는 프로세스의 모든 메모리를 특별히 제외 되지 않은 포함 합니다. 디자인은 SQLPAL 및 호스트 환경에 특정 지역 덤프에서 제외의 내부 구조를 이해 합니다.
-    | **full** | 전체 영역을 모두 포함 하는 전체 프로세스 덤프에 위치한 **/proc/$ pid/매핑**합니다. 이 통해 제어 되지 **coredump.captureminiandfull** 설정 합니다. |
+    | **mini** | Mini는 가장 작은 덤프 파일 형식입니다. Linux 시스템 정보를 사용하여 프로세스의 스레드 및 모듈을 결정합니다. 덤프에는 호스트 환경 스레드 스택 및 모듈만 포함됩니다. 간접 메모리 참조 또는 전역은 포함되지 않습니다. |
+    | **miniplus** | MiniPlus는 mini와 비슷하지만 추가 메모리를 포함합니다. 다음 메모리 영역을 덤프에 추가하여 SQLPAL 및 호스트 환경의 내부를 이해합니다.</br></br> - 다양한 전역</br> - 64TB를 초과하는 모든 메모리</br> - **/proc/$pid/maps**에 있는 모든 명명된 영역</br> - 스레드 및 스택의 간접 메모리</br> - 스레드 정보</br> - 연결된 Teb 및 Peb</br> - 모듈 정보</br> - VMM 및 VAD 트리 |
+    | **filtered** | Filtered는 별도로 제외하는 경우가 아니면 프로세스의 모든 메모리가 포함되는 빼기 기반 디자인을 사용합니다. 이 디자인은 덤프에서 특정 영역을 제외하고 SQLPAL 및 호스트 환경의 내부를 이해합니다.
+    | **full** | Full은 **/proc/$pid/maps**에 있는 모든 영역을 포함하는 전체 프로세스 덤프입니다. **coredump.captureminiandfull** 설정을 통해 제어되지 않습니다. |
 
-## <a id="dbmail"></a> Linux에서 SQL Server에 대 한 기본 데이터베이스 메일 프로필 설정
+## <a id="dbmail"></a> SQL Server on Linux의 기본 데이터베이스 메일 프로필 설정
 
-합니다 **sqlpagent.databasemailprofile** 전자 메일 경고에 대 한 기본 DB 메일 프로필을 설정할 수 있습니다.
+**sqlpagent.databasemailprofile**을 사용하여 메일 경고의 기본 DB 메일 프로필을 설정할 수 있습니다.
 
 ```bash
-sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
 ## <a id="hadr"></a> 고가용성
 
-합니다 **hadr.hadrenabled** 옵션을 사용 하면 SQL Server 인스턴스에서 가용성 그룹입니다. 다음 명령은 가용성 그룹을 설정 하 여 사용 하도록 설정 **hadr.hadrenabled** 1입니다. 설정 적용 하려면 SQL Server를 다시 시작 해야 합니다.
+**hadr.hadrenabled** 옵션은 SQL Server 인스턴스에서 가용성 그룹을 사용하도록 설정합니다. 다음 명령은 **hadr.hadrenabled**를 1로 설정하여 가용성 그룹을 사용하도록 설정합니다. 설정을 적용하려면 SQL Server를 다시 시작해야 합니다.
 
 ```bash
 sudo /opt/mssql/bin/mssql-conf set hadr.hadrenabled  1
 sudo systemctl restart mssql-server
 ```
 
-가용성 그룹을 사용 하 여 사용이 방법에 대 한 자세한 내용은 다음 두 항목을 참조 하세요.
+가용성 그룹에서 이 설정을 사용하는 방법에 대한 자세한 내용은 다음 두 항목을 참조하세요.
 
-- [Linux의 SQL Server에 대 한 Always On 가용성 그룹 구성](sql-server-linux-availability-group-configure-ha.md)
-- [Linux의 SQL Server에 대 한 읽기-배율 가용성 그룹 구성](sql-server-linux-availability-group-configure-rs.md)
+- [SQL Server on Linux에 대해 Always On 가용성 그룹 구성](sql-server-linux-availability-group-configure-ha.md)
+- [SQL Server on Linux에 대해 읽기 확장 가용성 그룹 구성](sql-server-linux-availability-group-configure-rs.md)
 
 
 ## <a id="localaudit"></a> 로컬 감사 디렉터리 설정
 
-합니다 **telemetry.userrequestedlocalauditdirectory** 설정은 로컬 감사를 활성화 하 고 디렉터리를 설정할 수 있는 로컬 감사 로그가 있습니다 만들어집니다.
+**telemetry.userrequestedlocalauditdirectory** 설정은 로컬 감사를 사용하도록 설정하며 이를 통해 로컬 감사 로그가 생성되는 디렉터리를 설정할 수 있습니다.
 
-1. 새 로컬 감사 로그에 대 한 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/tmp/감사** 디렉터리:
+1. 새 로컬 감사 로그의 대상 디렉터리를 만듭니다. 다음 예제에서는 새 **/tmp/audit** 디렉터리를 만듭니다.
 
    ```bash
    sudo mkdir /tmp/audit
    ```
 
-1. 소유자 및 디렉터리의 그룹을 변경 합니다 **mssql** 사용자:
+1. 디렉터리의 소유자 및 그룹을 **mssql** 사용자로 변경합니다.
 
    ```bash
    sudo chown mssql /tmp/audit
    sudo chgrp mssql /tmp/audit
    ```
 
-1. 사용 하 여 루트로 mssql conf 스크립트를 실행 합니다 **설정할** 명령에 **telemetry.userrequestedlocalauditdirectory**:
+1. **telemetry.userrequestedlocalauditdirectory**에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
    ```
 
-1. SQL Server 서비스를 다시 시작 합니다.
+1. SQL Server 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart mssql-server
    ```
 
-자세한 내용은 [Linux의 SQL Server에 대 한 고객 의견](sql-server-linux-customer-feedback.md)합니다.
+자세한 내용은 [SQL Server on Linux에 대한 고객 의견](sql-server-linux-customer-feedback.md)을 참조하세요.
 
-## <a id="lcid"></a> SQL Server 로캘을 변경합니다
+## <a id="lcid"></a> SQL Server 로캘 변경
 
-합니다 **language.lcid** 를 지원 되는 언어 식별자 (LCID) 변경 내용을 SQL Server 로캘을 설정 합니다. 
+**language.lcid** 설정은 SQL Server 로캘을 지원되는 언어 식별자(LCID)로 변경합니다. 
 
-1. 다음 예에서는 프랑스어로 로캘을 변경 (1036):
+1. 다음 예제에서는 로캘을 프랑스어(1036)로 변경합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set language.lcid 1036
    ```
 
-1. 변경 내용을 적용 하려면 SQL Server 서비스를 다시 시작 합니다.
+1. 변경 내용을 적용하려면 SQL Server 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart mssql-server
@@ -471,15 +471,15 @@ sudo systemctl restart mssql-server
 
 ## <a id="memorylimit"></a> 메모리 제한 설정
 
-합니다 **memory.memorylimitmb** SQL Server에 컨트롤의 크기 (MB)의 사용 가능한 실제 메모리를 설정 합니다. 기본값은 실제 메모리의 80%입니다.
+**memory.memorylimitmb** 설정은 SQL Server에 사용 가능한 실제 메모리 크기(MB)를 제어합니다. 기본값은 실제 메모리의 80%입니다.
 
-1. 사용 하 여 루트로 mssql conf 스크립트를 실행 합니다 **설정** 에 대 한 명령을 **memory.memorylimitmb**합니다. 다음 예제에서는 SQL server 3.25 GB (3328 MB)에 사용 가능한 메모리를 변경합니다.
+1. **memory.memorylimitmb**에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다. 다음 예제에서는 SQL Server에 사용할 수 있는 메모리를 3.25GB(3328MB)로 변경합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set memory.memorylimitmb 3328
    ```
 
-1. 변경 내용을 적용 하려면 SQL Server 서비스를 다시 시작 합니다.
+1. 변경 내용을 적용하려면 SQL Server 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart mssql-server
@@ -487,52 +487,52 @@ sudo systemctl restart mssql-server
 
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="msdtc"></a> MSDTC를 구성 합니다.
+## <a id="msdtc"></a> MSDTC 구성
 
-합니다 **network.rpcport** 하 고 **distributedtransaction.servertcpport** 설정은 MSDTC Microsoft Distributed Transaction Coordinator ()를 구성 하는 데 사용 됩니다. 이러한 설정을 변경 하려면 다음 명령을 실행 합니다.
+**network.rpcport** 및 **distributedtransaction.servertcpport** 설정은 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 데 사용됩니다. 이 설정을 변경하려면 다음 명령을 실행합니다.
 
-1. 사용 하 여 루트로 mssql conf 스크립트를 실행 합니다 **설정** "network.rpcport"에 대 한 명령:
+1. “network.rpcport”에 대해 **set** 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.rpcport <rcp_port>
    ```
 
-2. "Distributedtransaction.servertcpport" 설정 합니다.
+2. 그런 다음, “distributedtransaction.servertcpport” 설정을 설정합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set distributedtransaction.servertcpport <servertcpport_port>
    ```
 
-이러한 값을 설정 하는 것 외에도 라우팅을 구성 하 고 방화벽 포트 135에 대 한 업데이트도 해야 합니다. 이 작업을 수행 하는 방법에 대 한 자세한 내용은 참조 하세요. [Linux에서 MSDTC를 구성 하는 방법](sql-server-linux-configure-msdtc.md)합니다.
+이 값을 설정하는 것 외에도 라우팅을 구성하고 포트 135에 대한 방화벽을 업데이트해야 합니다. 이 작업을 수행하는 방법에 대한 자세한 내용은 [Linux에서 MSDTC를 구성하는 방법](sql-server-linux-configure-msdtc.md)을 참조하세요.
 
-가지 mssql-conf 모니터링과 MSDTC 문제 해결에 사용할 수 있는 다른 몇 가지 설정이 있습니다. 다음 테이블에는 이러한 설정이 간략하게 설명합니다. 용도에 대 한 자세한 내용은 Windows 지원 문서에서 세부 정보를 참조 하세요 [MS DTC에 대 한 진단 추적을 사용 하는 방법을](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)합니다.
+MSDTC를 모니터링하고 문제 해결하는 데 사용할 수 있는 mssql-conf에 대한 여러 가지 다른 설정이 있습니다. 다음 표에서는 이 설정에 대해 간략하게 설명합니다. 해당 사용에 대한 자세한 내용은 Windows 지원 문서 [How to enable diagnostic tracing for MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)(MS DTC에 대한 진단 추적을 사용하도록 설정하는 방법)의 세부 정보를 참조하세요.
 
-| mssql conf 설정 | 설명 |
+| mssql-conf 설정 | 설명 |
 |---|---|
-| distributedtransaction.allowonlysecurerpccalls | 분산된 트랜잭션에 대 한 보안만 RPC 호출을 구성 합니다. |
-| distributedtransaction.fallbacktounsecurerpcifnecessary | 배포에 대 한 보안만 RPC 호출 구성 |트랜잭션
-| distributedtransaction.maxlogsize | DTC 트랜잭션 로그 파일 크기 (mb)입니다. 기본값은 64MB |
-| distributedtransaction.memorybuffersize | 추적 저장 되는 순환 버퍼 크기입니다. 이 크기 (mb) 이며 기본값은 10MB |
+| distributedtransaction.allowonlysecurerpccalls | 분산 트랜잭션에 대한 보안 전용 RPC 호출 구성 |
+| distributedtransaction.fallbacktounsecurerpcifnecessary | 분산에 대한 보안 전용 RPC 호출 구성 |트랜잭션
+| distributedtransaction.maxlogsize | DTC 트랜잭션 로그 파일 크기(MB). 기본값은 64MB임 |
+| distributedtransaction.memorybuffersize | 추적이 저장되는 순환 버퍼 크기. 이 크기는 MB단위이며 기본값은 10MB임 |
 | distributedtransaction.servertcpport | MSDTC rpc 서버 포트 |
-| distributedtransaction.trace_cm | 연결 관리자에서 추적 |
-| distributedtransaction.trace_contact | 풀 연락처 및 연락처를 추적합니다. |
-| distributedtransaction.trace_gateway | 추적 게이트웨이 원본 |
+| distributedtransaction.trace_cm | 연결 관리자의 추적 |
+| distributedtransaction.trace_contact | 연락처 풀 및 연락처 추적 |
+| distributedtransaction.trace_gateway | 게이트웨이 원본 추적 |
 | distributedtransaction.trace_log | 로그 추적 |
-| distributedtransaction.trace_misc | 추적을 다른 범주로 분류 될 수 없습니다. |
-| distributedtransaction.trace_proxy | MSDTC 프록시에 생성 되는 추적 |
-| distributedtransaction.trace_svc | 추적 서비스 및.exe 파일 시작 |
-| distributedtransaction.trace_trace | 자체 추적 인프라 |
-| distributedtransaction.trace_util | 여러 위치에서 호출 되는 추적 유틸리티 루틴 |
-| distributedtransaction.trace_xa | XA 트랜잭션 관리자 (XATM) 추적 원본 |
-| distributedtransaction.tracefilepath | 추적 파일을 저장할 폴더 |
-| distributedtransaction.turnoffrpcsecurity | 분산된 트랜잭션에 대 한 RPC 보안을 사용할지 설정 합니다. |
+| distributedtransaction.trace_misc | 다른 범주로 분류할 수 없는 추적. |
+| distributedtransaction.trace_proxy | MSDTC 프록시에서 생성된 추적 |
+| distributedtransaction.trace_svc | 서비스 및 .exe 파일 시작 추적 |
+| distributedtransaction.trace_trace | 추적 인프라 자체 |
+| distributedtransaction.trace_util | 여러 위치에서 호출되는 유틸리티 루틴 추적 |
+| distributedtransaction.trace_xa | XATM(XA 트랜잭션 관리자) 추적 원본 |
+| distributedtransaction.tracefilepath | 추적 파일을 저장해야 하는 폴더 |
+| distributedtransaction.turnoffrpcsecurity | 분산 트랜잭션에 대한 RPC 보안 사용 또는 사용 안 함 |
 
 ::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-eula"></a> MLServices Eula에 동의
+## <a id="mlservices-eula"></a> MLServices EULA 동의
 
-추가 [기계 학습 R 또는 Python 패키지](sql-server-linux-setup-machine-learning.md) 데이터베이스 엔진 R 및 Python의 오픈 소스 배포에 대 한 라이선스 동의 필요 합니다. 다음 표에서 모든 사용 가능한 명령 또는 mlservices Eula 관련 된 옵션을 열거 합니다. 동일한 EULA 매개 변수는 설치 된 기능에 따라 R 및 Python에 사용 됩니다.
+데이터베이스 엔진에 [기계 학습 R 또는 Python 패키지](sql-server-linux-setup-machine-learning.md)를 추가하려면 R 및 Python의 오픈 소스 배포에 대한 사용 조건에 동의해야 합니다. 다음 표에서는 mlservices EULA에 관련된 사용 가능한 모든 명령 또는 옵션을 열거합니다. 동일한 EULA 매개 변수는 설치된 항목에 따라 R 및 Python에 사용됩니다.
 
 ```bash
 # For all packages: database engine and mlservices
@@ -550,7 +550,7 @@ sudo /opt/mssql/bin/mssql-conf set EULA accepteulaml Y
 sudo /opt/mssql/bin/mssql-conf unset EULA accepteulaml
 ```
 
-EULA 동의 직접 추가할 수도 있습니다는 [mssql.conf 파일](#mssql-conf-format):
+[mssql.conf 파일](#mssql-conf-format)에 직접 EULA 동의를 추가할 수도 있습니다.
 
 ```ini
 [EULA]
@@ -560,11 +560,11 @@ accepteulaml = Y
 :::moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="mlservices-outbound-access"></a> 아웃 바운드 네트워크 액세스 사용
+## <a id="mlservices-outbound-access"></a> 아웃바운드 네트워크 액세스 사용
 
-R, Python 및 Java 확장에 대 한 아웃 바운드 네트워크 액세스는 [SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) 기능은 기본적으로 비활성화 됩니다. 아웃 바운드 요청 설정 "outboundnetworkaccess" mssql 구성이 사용 하는 부울 속성입니다.
+[SQL Server Machine Learning Services](sql-server-linux-setup-machine-learning.md) 기능에서 R, Python 및 Java 확장에 대한 아웃바운드 네트워크 액세스는 기본적으로 사용하지 않도록 설정됩니다. 아웃바운드 요청을 사용하도록 설정하려면 mssql-conf를 사용하여 “outboundnetworkaccess” 부울 속성을 설정합니다.
 
-속성을 설정한 후 INI 파일에서 업데이트 된 값을 읽는 SQL Server 실행 패드 서비스를 다시 시작 합니다. 다시 시작 메시지를 알려는 확장성 관련 설정 수정 될 때마다 합니다.
+속성을 설정한 후 SQL Server 실행 패드 서비스를 다시 시작하여 INI 파일에서 업데이트된 값을 읽습니다. 다시 시작 메시지가 확장성 관련 설정이 수정될 때마다 사용자에게 알려줍니다.
 
 ```bash
 # Adds the extensibility section and property.
@@ -579,7 +579,7 @@ sudo /opt/mssql/bin/mssql-conf set extensibility outboundnetworkaccess 1
 sudo /opt/mssql/bin/mssql-conf unset extensibility.outboundnetworkaccess
 ```
 
-"Outboundnetworkaccess"에 직접 추가할 수도 있습니다는 [mssql.conf 파일](#mssql-conf-format):
+[mssql.conf 파일](#mssql-conf-format)에 직접 “outboundnetworkaccess”를 추가할 수도 있습니다.
 
 ```ini
 [extensibility]
@@ -587,23 +587,23 @@ outboundnetworkaccess = 1
 ```
 :::moniker-end
 
-## <a id="tcpport"></a> TCP 포트를 변경 합니다.
+## <a id="tcpport"></a> TCP 포트 변경
 
-합니다 **network.tcpport** 변경 내용을 SQL Server 연결에 대 한 수신 대기 하는 TCP 포트를 설정 합니다. 기본적으로이 포트를 1433으로 설정 됩니다. 포트를 변경 하려면 다음 명령을 실행 합니다.
+**network.tcpport** 설정은 SQL Server가 연결을 수신 대기하는 TCP 포트를 변경합니다. 기본적으로 이 포트는 1433으로 설정됩니다. 포트를 변경하려면 다음 명령을 실행합니다.
 
-1. "Network.tcpport"에 대 한 "set" 명령 사용 하 여 루트로 mssql conf 스크립트를 실행 합니다.
+1. “network.tcpport”에 대해 “set” 명령을 사용하여 mssql-conf 스크립트를 루트 권한으로 실행합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.tcpport <new_tcp_port>
    ```
 
-2. SQL Server 서비스를 다시 시작 합니다.
+2. SQL Server 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart mssql-server
    ```
 
-3. SQL Server에 연결할 때 호스트 이름 또는 IP 주소를 다음 쉼표 (,)를 사용 하 여 사용자 지정 포트를 지정 해야 합니다. 예를 들어, SQLCMD에 연결 하려면 다음 명령을 사용 합니다.
+3. 이제 SQL Server에 연결할 때 호스트 이름 또는 IP 주소 뒤에 쉼표(,)를 사용하여 사용자 지정 포트를 지정해야 합니다. 예를 들어 SQLCMD와 연결하려면 다음 명령을 사용합니다.
 
    ```bash
    sqlcmd -S localhost,<new_tcp_port> -U test -P test
@@ -611,52 +611,52 @@ outboundnetworkaccess = 1
 
 ## <a id="tls"></a> TLS 설정 지정
 
-Linux에서 실행 중인 SQL Server 인스턴스에 대 한 TLS를 구성 하는 다음 옵션입니다.
+다음 옵션은 Linux에서 실행되는 SQL Server 인스턴스에 대해 TLS를 구성합니다.
 
 |옵션 |설명 |
 |--- |--- |
-|**network.forceencryption** |1 인 경우 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 암호화에 대 한 모든 연결을 강제로 수행 합니다. 기본적으로이 옵션은 0입니다. |
-|**network.tlscert** |인증서에 절대 경로 파일 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS를 사용 합니다. 예:   `/etc/ssl/certs/mssql.pem`  인증서 파일 mssql 계정에서 액세스할 수 있어야 합니다. 사용 하 여 파일에 대 한 액세스를 제한 하는 것이 좋습니다 `chown mssql:mssql <file>; chmod 400 <file>`합니다. |
-|**network.tlskey** |개인 키를 절대 경로 파일 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS를 사용 합니다. 예:  `/etc/ssl/private/mssql.key`  인증서 파일 mssql 계정에서 액세스할 수 있어야 합니다. 사용 하 여 파일에 대 한 액세스를 제한 하는 것이 좋습니다 `chown mssql:mssql <file>; chmod 400 <file>`합니다. |
-|**network.tlsprotocols** |tls 프로토콜은 SQL Server에서 허용 하는 쉼표로 구분 된 목록입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 항상 가장 강력한 허용된 프로토콜을 협상 하도록 시도 합니다. 클라이언트가 허용 된 프로토콜을 지원 하지 않는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 연결 시도 거부 합니다.  호환성을 위해 모든 지원 되는 프로토콜 (예: 1.2, 1.1, 1.0) 기본적으로 허용 됩니다.  클라이언트에서 TLS 1.2를 지원 하는 경우 TLS 1.2만을 허용 하는 것이 좋습니다. |
-|**network.tlsciphers** |허용 하는 암호 지정 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] TLS에 대 한 합니다. 이 문자열 당 포맷 되어 있어야 [OpenSSL의 암호화 목록 형식으로](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)입니다. 일반적으로이 옵션을 변경할 필요가 없습니다. <br /> 기본적으로 다음 암호화 허용 됩니다. <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
-| **network.kerberoskeytabfile** |Kerberos keytab 파일의 경로 |
+|**network.forceencryption** |1인 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 모든 연결을 강제로 암호화합니다. 기본적으로 이 옵션은 0입니다. |
+|**network.tlscert** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 TLS에 사용하는 인증서 파일의 절대 경로입니다. 예:   `/etc/ssl/certs/mssql.pem`  인증서 파일은 mssql 계정으로 액세스할 수 있어야 합니다. `chown mssql:mssql <file>; chmod 400 <file>`을 사용하여 파일에 대한 액세스를 제한하는 것이 좋습니다. |
+|**network.tlskey** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]가 TLS에 사용하는 프라이빗 키 파일의 절대 경로입니다. 예:  `/etc/ssl/private/mssql.key`  인증서 파일은 mssql 계정으로 액세스할 수 있어야 합니다. `chown mssql:mssql <file>; chmod 400 <file>`을 사용하여 파일에 대한 액세스를 제한하는 것이 좋습니다. |
+|**network.tlsprotocols** |SQL Server에서 허용하는 TLS 프로토콜의 쉼표로 구분된 목록입니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 항상 가장 강력한 허용 프로토콜을 협상하려고 시도합니다. 클라이언트에서 허용되는 프로토콜을 지원하지 않으면 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 연결 시도를 거부합니다.  호환성을 위해 지원되는 모든 프로토콜이 기본적으로 허용됩니다(1.2, 1.1, 1.0).  클라이언트에서 TLS 1.2을 지원하는 경우 TLS 1.2만 허용하는 것이 좋습니다. |
+|**network.tlsciphers** |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서 TLS에 대해 허용하는 암호화를 지정합니다. 이 문자열은 [OpenSSL의 암호화 목록 형식](https://www.openssl.org/docs/man1.0.2/apps/ciphers.html)에 따라 형식을 지정해야 합니다. 일반적으로 이 옵션을 변경할 필요가 없습니다. <br /> 기본적으로 다음 암호화가 허용됩니다. <br /> `ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES128-SHA256:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES128-SHA:AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA` |
+| **network.kerberoskeytabfile** |Kerberos keytab 파일의 경로입니다. |
 
-TLS 설정을 사용 하 여 예제를 보려면 [Linux의 SQL Server 연결 암호화](sql-server-linux-encrypted-connections.md)합니다.
+TLS 설정 사용에 대한 예제는 [SQL Server on Linux에 대한 연결 암호화](sql-server-linux-encrypted-connections.md)를 참조하세요.
 
 ## <a id="traceflags"></a> 추적 플래그 사용/사용 안 함
 
-이렇게 **traceflag** 옵션을 사용 하거나 SQL Server 서비스의 시작에 대 한 추적 플래그를 사용 하지 않도록 설정 합니다. 설정/해제는 추적 플래그는 다음 명령을 사용 합니다.
+이 **추적 플래그** 옵션은 SQL Server 서비스를 시작하기 위해 추적 플래그를 사용하거나 사용하지 않도록 설정합니다. 추적 플래그를 사용하거나 사용하지 않도록 설정하려면 다음 명령을 사용합니다.
 
-1. 다음 명령을 사용 하 여 추적 플래그를 사용 하도록 설정 합니다. Traceflag 1234 예를 들어:
+1. 다음 명령을 사용하여 추적 플래그를 사용하도록 설정합니다. 예를 들어 추적 플래그 1234의 경우:
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf traceflag 1234 on
    ```
 
-1. 별도로 지정 하 여 여러 추적 플래그를 설정할 수 있습니다.
+1. 여러 추적 플래그를 개별적으로 지정하여 사용하도록 설정할 수 있습니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf traceflag 2345 3456 on
    ```
 
-1. 유사한 방식으로 지정 하 고 추가 하 여 하나 이상의 활성화 된 추적 플래그를 비활성화할 수는 **해제** 매개 변수:
+1. 이와 비슷한 방식으로 하나 이상의 사용하도록 설정된 추적 플래그를 지정하고 **off** 매개 변수를 추가하여 해당 추적 플래그를 사용하지 않도록 설정할 수 있습니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf traceflag 1234 2345 3456 off
    ```
 
-1. 변경 내용을 적용 하려면 SQL Server 서비스를 다시 시작 합니다.
+1. 변경 내용을 적용하려면 SQL Server 서비스를 다시 시작합니다.
 
    ```bash
    sudo systemctl restart mssql-server
    ```
 
-## <a name="remove-a-setting"></a>설정을 제거합니다
+## <a name="remove-a-setting"></a>설정 제거
 
-사용 하 여 만든 설정을 해제할 `mssql-conf set`, 호출 **mssql conf** 사용 하 여는 `unset` 옵션 및 설정의 이름입니다. 이 기본값으로 효과적으로 돌아가기 설정을 지웁니다.
+`mssql-conf set`를 사용하여 지정된 설정을 해제하려면 **mssql-conf**를 `unset` 옵션 및 설정 이름과 함께 호출합니다. 이렇게 하면 설정이 삭제되고 효과적으로 기본값으로 돌아갑니다.
 
-1. 다음 예에서는 삭제 합니다 **network.tcpport** 옵션입니다.
+1. 다음 예제에서는 **network.tcpport** 옵션을 삭제합니다.
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf unset network.tcpport
@@ -670,18 +670,18 @@ TLS 설정을 사용 하 여 예제를 보려면 [Linux의 SQL Server 연결 암
 
 ## <a name="view-current-settings"></a>현재 설정 보기
 
-보려면의 내용을 출력 하려면 다음 명령을 실행 하는 설정을 구성 합니다 **mssql.conf** 파일:
+구성된 설정을 보려면 다음 명령을 실행하여 **mssql.conf** 파일의 콘텐츠를 출력합니다.
 
 ```bash
 sudo cat /var/opt/mssql/mssql.conf
 ```
 
-이 파일에 표시 되지 않은 모든 설정을 기본값으로 사용 하는 참고 합니다. 다음 섹션에서는 샘플을 제공 **mssql.conf** 파일입니다.
+이 파일에 표시되지 않는 모든 설정은 해당 기본값을 사용합니다. 다음 섹션에서는 샘플 **mssql.conf** 파일을 제공합니다.
 
 
 ## <a id="mssql-conf-format"></a> mssql.conf 형식
 
-다음 **/var/opt/mssql/mssql.conf** 파일은 각 설정에 대 한 예제를 제공 합니다. 이 형식을 사용 하 여 수동으로 변경 하는 **mssql.conf** 필요에 따라 파일입니다. 파일을 수동으로 변경한 수행 하는 경우 변경 내용을 적용 하기 전에 SQL Server를 다시 시작 해야 있습니다. 사용 하 여 **mssql.conf** 파일 Docker를 사용 하 여 Docker 있어야 [데이터를 유지](sql-server-linux-configure-docker.md)합니다. 먼저 전체를 추가 **mssql.conf** 호스트 디렉터리에 파일을 다음 컨테이너를 실행 합니다. 이러한 예제가 [의견](sql-server-linux-customer-feedback.md)합니다.
+다음 **/var/opt/mssql/mssql.conf** 파일은 각 설정에 대한 예제를 제공합니다. 이 형식을 사용하여 필요에 따라 **mssql.conf** 파일을 수동으로 변경할 수 있습니다. 수동으로 파일을 변경하는 경우 변경 내용이 적용되기 전에 SQL Server를 다시 시작해야 합니다. Docker와 함께 **mssql.conf** 파일을 사용하려면 Docker가 [데이터를 유지](sql-server-linux-configure-docker.md)하도록 해야 합니다. 먼저 호스트 디렉터리에 전체 **mssql.conf** 파일을 추가한 후 컨테이너를 실행합니다. [고객 의견](sql-server-linux-customer-feedback.md)에 이에 대한 예제가 있습니다.
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -795,6 +795,6 @@ traceflag = 3456
 
 ## <a name="next-steps"></a>다음 단계
 
-대신 환경 변수를 사용 하 여 이러한 구성 변경 내용의 일부를, 참조 [환경 변수를 사용 하 여 SQL Server 구성 설정](sql-server-linux-configure-environment-variables.md)합니다.
+대신 환경 변수를 사용하여 이와 같은 일부 구성을 변경하려면 [환경 변수를 사용하여 SQL Server 설정 구성](sql-server-linux-configure-environment-variables.md)을 참조하세요.
 
-다른 관리 도구 및 시나리오를 참조 하세요 [Linux의 SQL Server 관리](sql-server-linux-management-overview.md)합니다.
+다른 관리 도구 및 시나리오는 [SQL Server on Linux 관리](sql-server-linux-management-overview.md)를 참조하세요.

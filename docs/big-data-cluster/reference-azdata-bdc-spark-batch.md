@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6e242b26f439b49dbf0b3cf5ab50ea46c273f45f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 14703def008b681f9e9c93dc2feaa9b8fd316f17
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426163"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810992"
 ---
 # <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
@@ -53,7 +53,7 @@ azdata bdc spark batch create --file -f
 ### <a name="examples"></a>예
 새 Spark 일괄 처리를 만듭니다.
 ```bash
-azdata spark batch create --code "2+2"
+azdata bdc spark batch create --code "2+2"
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--file -f`
@@ -106,7 +106,7 @@ azdata bdc spark batch list
 ### <a name="examples"></a>예
 활성 일괄 처리를 모두 나열합니다.
 ```bash
-azdata spark batch list
+azdata bdc spark batch list
 ```
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
@@ -128,7 +128,7 @@ azdata bdc spark batch info --batch-id -i
 ### <a name="examples"></a>예
 ID가 0인 일괄 처리의 일괄 처리 정보를 가져옵니다.
 ```bash
-azdata spark batch info --batch-id 0
+azdata bdc spark batch info --batch-id 0
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--batch-id -i`
@@ -153,7 +153,7 @@ azdata bdc spark batch log --batch-id -i
 ### <a name="examples"></a>예
 ID가 0인 일괄 처리의 일괄 처리 로그를 가져옵니다.
 ```bash
-azdata spark batch log --batch-id 0
+azdata bdc spark batch log --batch-id 0
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--batch-id -i`
@@ -178,7 +178,7 @@ azdata bdc spark batch state --batch-id -i
 ### <a name="examples"></a>예
 ID가 0인 일괄 처리의 일괄 처리 상태를 가져옵니다.
 ```bash
-azdata spark batch state --batch-id 0
+azdata bdc spark batch state --batch-id 0
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--batch-id -i`
@@ -203,7 +203,7 @@ azdata bdc spark batch delete --batch-id -i
 ### <a name="examples"></a>예
 일괄 처리를 삭제합니다.
 ```bash
-azdata spark batch delete --batch-id 0
+azdata bdc spark batch delete --batch-id 0
 ```
 ### <a name="required-parameters"></a>필수 매개 변수
 #### `--batch-id -i`

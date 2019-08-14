@@ -9,18 +9,18 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cafc62e12bcecad1ac6bcf389b87c864576c83a3
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: d62b1fe82698ff8722786b42f534afe83cd6c481
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958708"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68822697"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 마스터 인스턴스란?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 SQL Server 2019 빅 데이터 클러스터에서 ‘SQL Server 마스터 인스턴스’의 역할을 설명합니다.  마스터 인스턴스는 SQL Server 빅 데이터 클러스터 [제어 평면](big-data-cluster-overview.md#controlplane)에서 실행되는 SQL Server 인스턴스입니다.
+이 문서에서는 SQL Server 2019에 대 한 빅 데이터 클러스터의 *SQL Server 마스터 인스턴스* 역할에 대해 설명 합니다. 마스터 인스턴스는 연결, 스케일 아웃 쿼리, 메타 데이터 및 사용자 데이터베이스, machine learning 서비스를 관리 하기 위해 빅 데이터 클러스터에서 실행 되는 SQL Server 인스턴스입니다.
 
 SQL Server 마스터 인스턴스는 다음과 같은 기능을 제공합니다.
 
@@ -51,7 +51,7 @@ Machine Learning Services는 SQL Server 빅 데이터 클러스터의 일부로,
 
 ### <a name="advantages-of-machine-learning-services-in-a-big-data-cluster"></a>빅 데이터 클러스터에서 Machine Learning Services의 장점
 
-SQL Server 2019를 사용하면 일반적으로 엔터프라이즈 데이터베이스에 저장된 차원 데이터에 빅 데이터를 쉽게 조인할 수 있습니다. 빅 데이터의 가치는 조직의 일부만 사용하는 것이 아니라 보고서, 대시보드 및 애플리케이션에도 포함될 때 크게 증가합니다. 이와 동시에 데이터 과학자는 Spark/HDFS 에코시스템 도구를 계속 사용하면서 SQL Server 마스터 인스턴스와 SQL Server 마스터 인스턴스를 ‘통해’ 액세스할 수 있는 외부 데이터 원본의 데이터를 실시간으로 쉽게 액세스할 수 있습니다. 
+SQL Server 2019를 사용하면 일반적으로 엔터프라이즈 데이터베이스에 저장된 차원 데이터에 빅 데이터를 쉽게 조인할 수 있습니다. 빅 데이터의 가치는 조직의 일부만 사용하는 것이 아니라 보고서, 대시보드 및 애플리케이션에도 포함될 때 크게 증가합니다. 이와 동시에 데이터 과학자는 Spark/HDFS 에코시스템 도구를 계속 사용하면서 SQL Server 마스터 인스턴스와 SQL Server 마스터 인스턴스를 ‘통해’ 액세스할 수 있는 외부 데이터 원본의 데이터를 실시간으로 쉽게 액세스할 수 있습니다.
 
 SQL Server 2019 빅 데이터 클러스터를 사용하면 엔터프라이즈 데이터 레이크로 더 많은 작업을 수행할 수 있습니다. SQL Server 개발자와 분석가는 다음 작업을 수행할 수 있습니다.
 

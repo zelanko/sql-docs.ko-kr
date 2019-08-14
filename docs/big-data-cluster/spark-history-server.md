@@ -9,12 +9,12 @@ ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aabf68c2f1294dfb3873fdfcbec41827e4f80fec
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
-ms.translationtype: MT
+ms.openlocfilehash: bfdace3eae4b8da1584c529121953cbe2b884e7f
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731074"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68470702"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Spark 기록 서버에서 SQL Server 빅 데이터 클러스터의 Spark 애플리케이션 디버그 및 진단
 
@@ -91,7 +91,7 @@ Spark 기록 서버 웹 UI는 다음과 같습니다.
 
     ![그래프 작업 ID](./media/apache-azure-spark-history-server/sparkui-graph-jobid.png)
 
-+ **진행률**을 기본값으로 유지합니다. 사용자는 **표시**드롭다운 목록에서 **읽기** 또는 **쓰기** 를 선택 하 여 데이터 흐름을 확인할 수 있습니다.
++ **진행률**을 기본값으로 유지합니다. 사용자는 **표시** 드롭다운 목록에서 **읽기** 또는 **작성****을 선택하여 데이터 흐름을 확인할 수 있습니다.
 
     ![그래프 표시](./media/apache-azure-spark-history-server/sparkui-graph-display.png)
 
