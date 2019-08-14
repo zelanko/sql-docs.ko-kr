@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 837c720e115a41f9b41dfb0e0e1117966988040f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138366"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893623"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>빠른 시작: Azure Blob Storage Service로 SQL Server 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,23 +34,22 @@ ms.locfileid: "68138366"
 ## <a name="create-azure-blob-container"></a>Azure Blob 컨테이너 만들기
 컨테이너에서는 그룹화된 blob 집합을 제공합니다. 모든 blob는 컨테이너에 있어야 합니다. 계정에는 개수에 제한 없이 컨테이너를 포함할 수 있지만 적어도 하나 이상 포함해야 합니다. 컨테이너에는 개수에 제한 없이 blob를 저장할 수 있습니다. 
 
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 컨테이너를 만들려면 다음 단계를 수행합니다.
 
 1. Azure Portal을 엽니다. 
 1. 스토리지 계정으로 이동합니다. 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-   1. 스토리지 계정을 선택하고 **Blob Services**로 스크롤합니다.
-   1. **Blob**을 선택하고 +**컨테이너**를 선택하여 새 컨테이너를 추가합니다. 
-   1. 컨테이너의 이름을 입력하고 지정한 컨테이너 이름을 기록해 둡니다. 이 정보는 이 빠른 시작의 뒷부분에 나오는 T-SQL 문의 URL(백업 파일 경로)에 사용됩니다. 
-   1. **확인**을 선택합니다. 
+1. 스토리지 계정을 선택하고 **Blob Services**로 스크롤합니다.
+1. **Blob**을 선택하고 +**컨테이너**를 선택하여 새 컨테이너를 추가합니다. 
+1. 컨테이너의 이름을 입력하고 지정한 컨테이너 이름을 기록해 둡니다. 이 정보는 이 빠른 시작의 뒷부분에 나오는 T-SQL 문의 URL(백업 파일 경로)에 사용됩니다. 
+1. **확인**을 선택합니다. 
     
     ![새 컨테이너](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
 
-  >[!NOTE]
-  >공용 컨테이너를 만들도록 선택한 경우에도 SQL Server 백업 및 복원에 스토리지 계정 인증이 필요합니다. 또한 REST API를 사용하여 프로그래밍 방식으로 컨테이너를 만들 수도 있습니다. 자세한 내용은 [컨테이너 만들기](https://docs.microsoft.com/rest/api/storageservices/Create-Container)를 참조하세요.
+  > [!NOTE]
+  > 공용 컨테이너를 만들도록 선택한 경우에도 SQL Server 백업 및 복원에 스토리지 계정 인증이 필요합니다. 또한 REST API를 사용하여 프로그래밍 방식으로 컨테이너를 만들 수도 있습니다. 자세한 내용은 [컨테이너 만들기](https://docs.microsoft.com/rest/api/storageservices/Create-Container)를 참조하세요.
 
 ## <a name="create-a-test-database"></a>테스트 데이터베이스 만들기 
 
@@ -93,14 +92,14 @@ GO
 ## <a name="create-a-sql-server-credential"></a>SQL Server 자격 증명 만들기
 SQL Server 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다. 여기에서는 SQL Server 백업 및 복원 프로세스에서 자격 증명을 사용하여 Microsoft Azure Blob Storage 서비스의 인증을 받습니다. 자격 증명에는 스토리지 계정 이름과 스토리지 계정 **액세스 키** 값이 저장됩니다. 만든 자격 증명은 BACKUP/RESTORE 문을 실행할 때 WITH CREDENTIAL 옵션에 지정해야 합니다. 자격 증명에 대한 자세한 내용은 [자격 증명](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine)을 참조하세요. 
 
-  >[!IMPORTANT]
-  >아래에 설명된 SQL Server 자격 증명을 만들기 위한 요구 사항은 SQL Server 백업 프로세스([URL에 대한 SQL Server 백업](backup-restore/sql-server-backup-to-url.md)및 [Microsoft Azure에 대한 SQL Server Managed Backup](backup-restore/sql-server-managed-backup-to-microsoft-azure.md))와 관련되어 있습니다. SQL Server는 Azure Storage에 액세스하여 백업을 쓰거나 읽을 때 스토리지 계정 이름 및 액세스 키 정보를 사용합니다.
+  > [!IMPORTANT]
+  > 아래에 설명된 SQL Server 자격 증명을 만들기 위한 요구 사항은 SQL Server 백업 프로세스([URL에 대한 SQL Server 백업](backup-restore/sql-server-backup-to-url.md)및 [Microsoft Azure에 대한 SQL Server Managed Backup](backup-restore/sql-server-managed-backup-to-microsoft-azure.md))와 관련되어 있습니다. SQL Server는 Azure Storage에 액세스하여 백업을 쓰거나 읽을 때 스토리지 계정 이름 및 액세스 키 정보를 사용합니다.
 
 ### <a name="access-keys"></a>액세스 키
-Azure Portal을 열어 둔 상태로, 자격 증명을 만드는 데 필요한 액세스 키를 저장합니다. 
+자격 증명을 만들려면 스토리지 계정에 대한 액세스 키가 필요합니다. 
 
 1. Azure Portal의 **스토리지 계정**으로 이동합니다. 
-1. **설정**으로 스크롤하고 **액세스 키**를 선택합니다. 
+1. **설정**에서 **액세스 키**를 선택합니다. 
 1. 이 빠른 시작의 뒷부분에서 사용하게 되므로 이 키와 연결 문자열을 모두 저장합니다. 
 
    ![액세스 키](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/access-keys.png)

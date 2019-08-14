@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3cdcac17ddc09223d63e7dd923fd561e0a334fc2
-ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
+ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68700056"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941161"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 설명서 탐색 가이드 
 
@@ -65,7 +65,7 @@ SQL Server 기술 설명서에서는 지원되는 여러 SQL Server 버전에 �
 
 ![SQL 설명서 버전 필터](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-**SQL Server** > **Hide nothing(모두 표시)** 을 선택하면 모든 콘텐츠가 표시되고 버전 필터 뒤에 숨겨진 내용이 없습니다. 
+**All SQL** > **Hide nothing(모두 표시)** 을 선택하면 모든 콘텐츠가 표시되고 버전 필터 뒤에 숨겨진 내용이 없습니다. 
 
 ## <a name="breadcrumbs"></a>이동 경로
 

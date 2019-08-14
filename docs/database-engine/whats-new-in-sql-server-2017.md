@@ -10,12 +10,12 @@ ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 4ee8a779ef486246d5f4dd927acf7c57a1261c61
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc752d5653c4483552312c45139996e8a84c39e4
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059031"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811276"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68059031"
 -  [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]는 이제 보다 의미있는 관계 지향 데이터를 모델링하는 그래프 데이터베이스 기능을 제공합니다. 여기에는 노드 및 가장자리 테이블을 만들기 위한 새로운 [CREATE TABLE](../t-sql/statements/create-table-sql-graph.md) 구문과 쿼리에 대한 [MATCH](../t-sql/queries/match-sql-graph.md) 키워드가 포함됩니다. 자세한 내용은 [SQL Server 2017에서 그래프 처리](../relational-databases/graphs/sql-graph-overview.md)를 참조하세요.   
 - 애플리케이션 워크로드의 런타임 조건에 대한 최적화 전략을 적용한 새로운 세대의 향상된 쿼리 처리 기능입니다. **적응 쿼리 처리** 기능 제품군의 첫 번째 버전의 경우 다중 문 테이블 값 함수에 대한 **배치 모드 적응 조인**, **배치 모드 메모리 부여 피드백** 및 **인터리브 실행**과 같은 세 가지 새로운 향상된 기능이 있습니다.  [SQL 데이터베이스의 지능형 쿼리 처리](../relational-databases/performance/intelligent-query-processing.md)를 참조하세요.
 - 자동 튜닝은 잠재적 쿼리 성능 문제에 대한 정보를 제공하고, 솔루션을 권장하며, 식별된 문제를 자동으로 해결하는 데이터베이스 기능입니다. [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]의 자동 튜닝은 잠재적인 성능 문제를 검색할 때마다 알려주고, 정정 작업을 적용하거나 [!INCLUDE[ssde-md](../includes/ssde-md.md)]에서 자동으로 성능 문제를 해결할 수 있도록 합니다. 자세한 내용은 [자동 튜닝](../relational-databases/automatic-tuning/automatic-tuning.md)을 참조하세요.
-- 메모리 최적화 테이블에 대한 비클러스터형 인덱스 작성 성능 향상 - 데이터베이스 복구 중에 MEMORY_OPTIMIZED 테이블에 대한 bwtree(비클러스터형) 인덱스를 다시 작성하는 성능이 상당히 최적화되었습니다. 이에 따라 비클러스터형 인덱스를 사용하는 경우 데이터베이스 복구 시간을 크게 줄여줍니다.  
+- 메모리 최적화 테이블에 대한 비클러스터형 인덱스 작성 성능 향상 - 데이터베이스 복구 중에 MEMORY_OPTIMIZED 테이블에 대한 bwtree(비클러스터형) 인덱스를 다시 빌드하는 성능이 상당히 최적화되었습니다. 이에 따라 비클러스터형 인덱스를 사용하는 경우 데이터베이스 복구 시간을 크게 줄여줍니다.  
 - [sys.dm_os_sys_info](../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)에는 새로운 3개 열, 즉 socket_count, cores_per_socket 및 numa_node_count가 있습니다. NUMA를 초과할 경우 과도하게 커밋된 호스트가 생성될 수 있고 결국 성능 문제로 이어지기 때문에 이 기능은 VM에서 서버를 실행할 때 유용합니다.
 - [sys.dm_db_file_space_usage](../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)에 modified_extent_page_count\, 열이 새로 추가되어 데이터베이스의 각 데이터베이스 파일에 대한 차등 변경 내용을 추적합니다. 새로운 modified_extent_page_count 열을 사용하면 데이터베이스에서 변경된 페이지 백분율이 임계값(예: 70-80 %) 미만인 경우 차등 백업을 수행하고, 그렇지 않은 경우 전체 데이터베이스 백업을 수행하는 스마트 백업 솔루션을 빌드할 수 있습니다.
 - SELECT INTO... ON FileGroup - [SELECT INTO](../t-sql/queries/select-into-clause-transact-sql.md)는 이제 SELECT INTO TSQL 구문에 추가된 **ON** 키워드 지원을 사용하여 사용자의 기본 파일 그룹이 아닌 파일 그룹에 테이블을 로드하도록 지원합니다.
@@ -50,7 +50,7 @@ ms.locfileid: "68059031"
 - 이제 가용성 그룹은 Windows-Linux 간에 원활하게 작동되므로 OS 간 마이그레이션 및 테스트가 가능합니다.
 - 임시 테이블 보존 정책 지원이 추가되었습니다.
 - 새로운 DMV SYS.DM_DB_STATS_HISTOGRAM
-- 온라인 비클러스터형 columnstore 인덱스 작성 및 다시 작성 지원이 추가되었습니다.
+- 온라인 비클러스터형 columnstore 인덱스 빌드 및 다시 빌드 지원이 추가됨
 - [sys.dm_db_stats_histogram(TRANSACT-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-stats-histogram-transact-sql.md) 이 통계 검사를 위해 추가되었습니다.
 - SQL Server Management Studio 버전 16.4와 함께 릴리스된 DTA(데이터베이스 튜닝 관리자)에서는 SQL Server 2016 이상에서 분석을 수행할 때 추가적인 옵션을 제공합니다.    
    - 성능 향상. 자세한 내용은 [DTA(데이터베이스 엔진 튜닝 관리자) 권장 사항을 사용한 성능 향상](../relational-databases/performance/performance-improvements-using-dta-recommendations.md)을 참조하세요.

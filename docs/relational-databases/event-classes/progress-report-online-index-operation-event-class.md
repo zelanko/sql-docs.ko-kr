@@ -12,12 +12,12 @@ ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a9388483151326222dd8fa5e085467b15600eca9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d2965fea796efac9a337580ee32c9de53c976320
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940648"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811137"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>진행률 보고서: Online Index Operation 이벤트 클래스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67940648"
 |EndTime|**datetime**|온라인 인덱스 작업이 완료된 시간입니다.|15|예|  
 |EventClass|**int**|이벤트 유형 = 190|27|아니오|  
 |EventSequence|**int**|요청 내에 지정된 이벤트 시퀀스입니다.|51|아니오|  
-|EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1=시작<br /><br /> 2=단계 1 실행 시작<br /><br /> 3=단계 1 실행 종료<br /><br /> 4=2단계 실행 시작<br /><br /> 5=2단계 실행 종료<br /><br /> 6=삽입된 행 수<br /><br /> 7=완료<br /><br /> 1단계는 기준 개체(클러스터형 인덱스 또는 힙)를 참조하거나 인덱스 작업에 하나의 비클러스터형 인덱스만 포함될 경우 수행됩니다. 2단계는 인덱스 작성 작업에 원래의 다시 작성과 추가 비클러스터형 인덱스가 모두 포함될 경우에 사용됩니다.  예를 들어 개체에 하나의 클러스터형 인덱스와 7개의 비클러스터형 인덱스가 있을 경우 'rebuild all' 명령은 모든 인덱스를 다시 작성합니다. 기준 개체(클러스터형 인덱스)는 1단계에서 다시 작성되며 그런 다음 2단계에서 모든 비클러스터형 인덱스가 다시 작성됩니다.|21|예|  
+|EventSubClass|**int**|이벤트 하위 클래스의 유형입니다.<br /><br /> 1=시작<br /><br /> 2=단계 1 실행 시작<br /><br /> 3=단계 1 실행 종료<br /><br /> 4=2단계 실행 시작<br /><br /> 5=2단계 실행 종료<br /><br /> 6=삽입된 행 수<br /><br /> 7=완료<br /><br /> 1단계는 기준 개체(클러스터형 인덱스 또는 힙)를 참조하거나 인덱스 작업에 하나의 비클러스터형 인덱스만 포함될 경우 수행됩니다. 2단계는 인덱스 빌드 작업에 원래의 다시 빌드과 추가 비클러스터형 인덱스가 모두 포함될 경우에 사용됩니다.  예를 들어 개체에 하나의 클러스터형 인덱스와 7개의 비클러스터형 인덱스가 있을 경우 'rebuild all' 명령은 모든 인덱스를 다시 빌드합니다. 기준 개체(클러스터형 인덱스)는 1단계에서 다시 작성되며 그런 다음 2단계에서 모든 비클러스터형 인덱스가 다시 작성됩니다.|21|예|  
 |GroupID|**int**|SQL 추적 이벤트가 발생한 작업 그룹의 ID입니다.|66|예|  
 |HostName|**nvarchar**|클라이언트를 실행 중인 컴퓨터 이름입니다. 클라이언트가 호스트 이름을 제공할 경우 이 데이터 열이 채워집니다. 호스트 이름을 확인하려면 HOST_NAME 함수를 사용합니다.|8|예|  
 |IndexID|**int**|이벤트에 의해 영향 받는 개체의 인덱스 ID입니다.|24|예|  

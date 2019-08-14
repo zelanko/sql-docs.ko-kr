@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b56627ea415a67016b4009c44556019e6fc20d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52aeeca0dc61f36fbde2ad4a708d359f1dd19567
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061045"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809757"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -73,7 +73,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
     [ ON <on_option> ] 
 [ ; ]  
   
---Create a non-clustered columnstore index on a disk-based table.  
+--Create a nonclustered columnstore index on a disk-based table.  
 CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name   
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
         ( column  [ ,...n ] )  
@@ -139,7 +139,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
   
 #### <a name="with-options"></a>WITH 옵션
 
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON
+##### <a name="drop_existing--off--on"></a>DROP_EXISTING = [OFF] | ON
 
    `DROP_EXISTING = ON`은 기존 인덱스를 삭제하고 새로운 columnstore 인덱스를 생성하도록 지정합니다.  
 ```sql
@@ -148,7 +148,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ```
    기본값인 DROP_EXISTING = OFF는 인덱스 이름이 기존 이름과 동일할 것으로 예상합니다. 지정된 인덱스 이름이 이미 존재하는 경우 오류가 발생합니다.  
   
-##### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
+##### <a name="maxdop--max_degree_of_parallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    인덱스 작업 기간 동안 기존의 최대 병렬 처리 수준 서버 구성을 재정의합니다. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
    *max_degree_of_parallelism* 값은 다음 중 하나일 수 있습니다.  
@@ -163,7 +163,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 및 [병렬 인덱스 작업 구성](../../relational-databases/indexes/configure-parallel-index-operations.md)을 참조하세요.  
  
-###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
    디스크 기반 테이블의 경우 *지연*은 CLOSED 상태의 델타 rowgroup이 SQL Server에서 압축된 rowgroup으로 압축할 수 있게 될 때까지 델타 rowgroup에 남아 있어야 하는 최소 분 수를 지정합니다. 디스크 기반 테이블은 개별 행에 대한 삽입 및 업데이트 시간을 추적하지 않으므로 SQL Server가 CLOSED 상태의 델타 rowgroup에 지연을 적용합니다.  
    기본값은 0분입니다.  
    
@@ -174,7 +174,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    COMPRESSION_DELAY 사용 시기에 관한 권장 사항은 [실시간 운영 분석을 위한 Columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)을 참조하세요.  
   
-##### <a name="datacompression--columnstore--columnstorearchive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
+##### <a name="data_compression--columnstore--columnstore_archive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 다음과 같은 옵션이 있습니다.   
 - `COLUMNSTORE`는 기본값이고 성능이 가장 우수한 columnstore 압축으로 압축하도록 지정합니다. 이는 일반적인 선택입니다.  
 - `COLUMNSTORE_ARCHIVE`는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 이 옵션을 스토리지 크기를 줄여야 하고 스토리지 및 검색에 더 많은 시간을 이용할 수 있는 보관 상황에 사용합니다.  
@@ -224,12 +224,12 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    인덱스를 포함할 테이블의 1, 2 또는 3 부분 이름을 지정합니다.  
 
 #### <a name="with-options"></a>WITH 옵션
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+##### <a name="drop_existing--off--on"></a>DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON 기존 인덱스가 삭제되고 다시 작성됩니다. 지정된 인덱스 이름은 현재 존재하는 인덱스 이름과 같아야 합니다. 그러나 인덱스 정의는 수정할 수 있습니다. 예를 들어, 다른 열 또는 인덱스 옵션을 지정할 수 있습니다.
   
    DROP_EXISTING = OFF 지정된 인덱스 이름이 이미 존재하는 경우 오류가 표시됩니다. 인덱스 유형은 DROP_EXISTING을 사용하여 변경할 수 없습니다. 이전 버전과 호환되는 구문에서 WITH DROP_EXISTING은 WITH DROP_EXISTING = ON과 같습니다.  
 
-###### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
+###### <a name="maxdop--max_degree_of_parallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    인덱스 작업 기간 동안 [max degree of parallelism 서버 구성 옵션 ](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 구성 옵션을 재정의합니다. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.  
   
    *max_degree_of_parallelism* 값은 다음 중 하나일 수 있습니다.  
@@ -250,10 +250,10 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
 ```
 
-##### <a name="compressiondelay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
+##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    압축된 rowgroup으로 마이그레이션할 수 있기 전에 행이 델타 rowgroup에 얼마나 남아 있어야 하는지 하한을 지정합니다. 예를 들어, 고객은 한 행이 120분 동안 변경되지 않은 경우 열 형식 스토리지 형식으로 압축하기에 적합하다고 말할 수 있습니다. 디스크 기반 테이블의 columnstore 인덱스인 경우 행을 삽입하거나 업데이트할 때 시간을 추적하지 않고, 델타 rowgroup 닫힌 시간을 행에 대한 프록시로 대신 사용합니다. 기본 기간은 0분입니다. 델타 rowgroup에 백만 개의 행이 누적되면 행이 열 형식 스토리지에 마이그레이션되고 닫힌 것으로 표시됩니다.  
   
-###### <a name="datacompression"></a>DATA_COMPRESSION  
+###### <a name="data_compression"></a>DATA_COMPRESSION  
    지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. 다음과 같은 옵션이 있습니다.
    
 - `COLUMNSTORE` - 기본값이고 성능이 가장 우수한 columnstore 압축으로 압축하도록 지정합니다. 이는 일반적인 선택입니다.  
@@ -261,7 +261,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
  압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
-##### <a name="where-filterexpression--and-filterexpression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
+##### <a name="where-filter_expression--and-filter_expression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
   
    필터 조건자라고 하며 인덱스에 어떤 열을 포함할지 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 필터링된 인덱스의 데이터 행에 대한 필터링된 통계를 만듭니다.  
   
@@ -487,7 +487,7 @@ GO
 1.  먼저 이 예에서 사용할 작은 테이블을 만듭니다.  
   
     ```sql  
-    --Create a rowstore table with a clustered index and a non-clustered index.  
+    --Create a rowstore table with a clustered index and a nonclustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
         OrderDateKey [int] NOT NULL,  
@@ -498,14 +498,14 @@ GO
         CLUSTERED INDEX ( ProductKey )  
     );  
   
-    --Add a non-clustered index.  
+    --Add a nonclustered index.  
     CREATE INDEX my_index ON MyFactTable ( ProductKey, OrderDateKey );  
     ```  
   
 2.  rowstore 테이블에서 모든 비클러스터형 인덱스를 삭제합니다.  
   
     ```sql  
-    --Drop all non-clustered indexes  
+    --Drop all nonclustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
   

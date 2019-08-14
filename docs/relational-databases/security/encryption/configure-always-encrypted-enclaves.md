@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ab035890dad4e51b6bc3a8d3f1c463e64143ac1
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: 83a13dc043687096a2d2909e4573ebbc3ac4a1ce
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670601"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892712"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted 구성
 
@@ -373,7 +373,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -777,7 +777,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -793,8 +793,8 @@ CEK1은 Enclave 사용 열 암호화 키입니다.
 해당 테이블에 대해 매개 변수화 지침을 준수하는 쿼리 예제는 다음과 같습니다.
 
 ```sql
-DECLARE @SSNPattern CHAR(11) = '%1111%'
-DECLARE @MinSalary INT = 1000
+DECLARE @SSNPattern [char](11) = '%1111%'
+DECLARE @MinSalary [money] = 1000
 SELECT *
 FROM [dbo].[Employees]
 WHERE SSN LIKE @SSNPattern
@@ -857,7 +857,7 @@ enclave 계산이 필요한 쿼리 처리를 위해 클라이언트 애플리케
 
 ### <a name="set-up-your-visual-studio-project"></a>Visual Studio 프로젝트 설정
 
-.NET Framework 애플리케이션에서 보안 Enclave를 사용한 Always Encrypted를 사용하려면 .NET Framework 4.7.2에서 애플리케이션을 빌드하고 Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet에 통합해야 합니다. 또한 열 마스터 키를 Azure Key Vault에 저장하는 경우에도 애플리케이션을 Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet 버전 2.2.0 이상에 통합해야 합니다. 
+.NET Framework 애플리케이션에서 보안 Enclave를 사용한 Always Encrypted를 사용하려면 .NET Framework 4.7.2에서 애플리케이션을 빌드하고 [Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders)에 통합해야 합니다. 또한 열 마스터 키를 Azure Key Vault에 저장하는 경우에도 애플리케이션을 [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider) 버전 2.2.0 이상에 통합해야 합니다. 
 
 1. Visual Studio를 엽니다.
 2. 새 Visual C\# 프로젝트를 만들거나 기존 프로젝트를 엽니다.
@@ -878,13 +878,22 @@ enclave 계산이 필요한 쿼리 처리를 위해 클라이언트 애플리케
 
 6. 프로젝트를 선택하고 설치를 클릭합니다.
 7. 프로젝트에서 구성 파일(예: App.config 또는 Web.config)을 엽니다.
-8. \<구성\> 섹션을 찾습니다. \<구성\> 섹션에서 \<configSections\> 섹션을 찾습니다. \<configSections\> 내에 다음 섹션을 추가합니다.
+8. \<구성\> 섹션을 찾아 \<configsections\> 섹션을 추가하거나 업데이트합니다.
+
+   1\. \<구성\> 섹션에 \<configsections\> 섹션이 포함되어 있지 **않으면** \<구성\> 바로 아래 있는 다음 콘텐츠를 추가합니다.
+   
+      ```xml
+      <configSections>
+         <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      </configSections>
+      ```
+   2\. \<구성\> 섹션에 이미 \<configsections\> 섹션이 있는 경우 \<configsections\> 내에 다음 줄을 추가합니다.
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
    ```
 
-9. 구성 섹션 내의 \<configSections\> 아래에서 Intel SGX Enclave를 증명하고 상호 작용하는 데 사용할 Enclave 공급자를 지정하는 다음 섹션을 추가합니다.
+9. 구성 섹션 내의 \<configSections\> 아래에서 VBS Enclave를 증명하고 상호 작용하는 데 사용할 Enclave 공급자를 지정하는 다음 섹션을 추가합니다.
 
    ```xml
    <SqlColumnEncryptionEnclaveProviders>
@@ -894,6 +903,24 @@ enclave 계산이 필요한 쿼리 처리를 위해 클라이언트 애플리케
    </SqlColumnEncryptionEnclaveProviders>
    ```
 
+다음은 간단한 콘솔 애플리케이션에 대한 app.config 파일의 전체 예제입니다.
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  </configSections>
+  <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+    </startup>
+
+  <SqlColumnEncryptionEnclaveProviders>
+    <providers>
+      <add name="VBS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    </providers>
+  </SqlColumnEncryptionEnclaveProviders>
+</configuration>
+```
 ### <a name="develop-and-test-your-app"></a>앱 개발 및 테스트
 
 Always Encrypted 및 enclave 계산을 사용하려면 애플리케이션이 연결 문자열`Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation`(여기서 xxxx는 ip, 도메인 등일 수 있음)에 다음 두 개의 키워드를 사용해서 데이터베이스에 연결해야 합니다.
@@ -919,7 +946,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -969,7 +996,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
    SqlParameter MinSalary = cmd.CreateParameter();
    
    MinSalary.ParameterName = @"@MinSalary";
-   MinSalary.DbType = DbType.Int32;
+   MinSalary.DbType = DbType.Currency;
    MinSalary.Direction = ParameterDirection.Input;
    MinSalary.Value = 900;
    

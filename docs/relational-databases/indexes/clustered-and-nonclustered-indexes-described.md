@@ -14,12 +14,12 @@ ms.assetid: b7d6b323-728d-4763-a987-92e6292f6f7a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b903668a68752edaad612b4ada31329e7dd80a77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e3b0fdb182b3623f4461544d94347544d7d19bf6
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081756"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811135"
 ---
 # <a name="clustered-and-nonclustered-indexes-described"></a>클러스터형 및 비클러스터형 인덱스 소개
 

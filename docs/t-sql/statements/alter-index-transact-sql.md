@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 382fd4ab40c574fd1a3d9ce2e972e2c6ea07cc31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9228530dcf0204987feda98083ba3a16c946093
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071349"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809799"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -657,7 +657,7 @@ ONLINE, MAXDOP 및 SORT_IN_TEMPDB에 대한 값은 시스템 카탈로그에 저
 > 하지만 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 분할된 인덱스를 만들거나 다시 작성할 때 테이블의 모든 행을 검사하여 통계를 작성하지 않습니다. 대신 쿼리 최적화 프로그램에서 기본 샘플링 알고리즘을 사용하여 이러한 통계를 생성합니다. 테이블의 모든 행을 검사하여 분할된 인덱스에 대한 통계를 얻으려면 FULLSCAN 절에서 CREATE STATISTICS 또는 UPDATE STATISTICS를 사용합니다.  
   
 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 비클러스터형 인덱스를 다시 작성하여 하드웨어 오류로 인한 불일치를 해결할 수 있는 경우도 있습니다.    
-[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서도 비클러스터형 인덱스를 오프라인으로 다시 작성하여 인덱스와 클러스터형 인덱스 간의 불일치를 복구할 수 있습니다. 그러나 인덱스를 온라인으로 다시 작성하는 경우에는 비클러스터형 인덱스 간의 불일치를 해결할 수 없습니다. 온라인으로 다시 작성하는 경우 기존의 비클러스터형 인덱스를 사용하므로 불일치가 계속 남아 있게 됩니다. 경우에 따라 오프라인으로 인덱스를 다시 작성하면 클러스터형 인덱스 검색 또는 힙 검색이 수행되어 불일치가 제거됩니다. 클러스터형된 인덱스에서 다시 작성되도록 하려면 비클러스터형 인덱스를 삭제한 후 다시 만드세요. 이전 버전의 경우처럼 영향을 받은 데이터를 백업한 후 복원하여 불일치를 제거하는 것이 좋습니다. 비클러스터형 인덱스의 경우에는 오프라인으로 인덱스를 다시 작성하여 인덱스 간 불일치를 해결할 수 있습니다. 자세한 내용은 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 참조하세요.  
+[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상에서도 비클러스터형 인덱스를 오프라인으로 다시 작성하여 인덱스와 클러스터형 인덱스 간의 불일치를 복구할 수 있습니다. 그러나 인덱스를 온라인으로 다시 작성하는 경우에는 비클러스터형 인덱스 간의 불일치를 해결할 수 없습니다. 온라인으로 다시 작성하는 경우 기존의 비클러스터형 인덱스를 사용하므로 불일치가 계속 남아 있게 됩니다. 경우에 따라 오프라인으로 인덱스를 다시 작성하면 클러스터형 인덱스 검색 또는 힙 검색이 수행되어 불일치가 제거됩니다. 클러스터형된 인덱스에서 다시 빌드되도록 하려면 비클러스터형 인덱스를 삭제한 후 다시 만드세요. 이전 버전의 경우처럼 영향을 받은 데이터를 백업한 후 복원하여 불일치를 제거하는 것이 좋습니다. 비클러스터형 인덱스의 경우에는 오프라인으로 인덱스를 다시 작성하여 인덱스 간 불일치를 해결할 수 있습니다. 자세한 내용은 [DBCC CHECKDB&#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)를 참조하세요.  
   
 클러스터형 columnstore 인덱스를 다시 작성하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
@@ -754,7 +754,7 @@ ALLOW_ROW_LOCKS = OFF이고 ALLOW_PAGE_LOCK = OFF이면 인덱스에 액세스�
 
  자세한 내용은 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.  
   
- ### <a name="waitatlowpriority-with-online-index-operations"></a>온라인 인덱스 작업에 대한 WAIT_AT_LOW_PRIORITY  
+ ### <a name="wait_at_low_priority-with-online-index-operations"></a>온라인 인덱스 작업에 대한 WAIT_AT_LOW_PRIORITY  
   
  온라인 인덱스 다시 작성을 위해 DDL 문을 실행하려면 특정 테이블에서 실행 중인 모든 활성 차단 트랜잭션이 완료되어야 합니다. 온라인 인덱스 다시 작성이 실행되면 이 테이블에서 실행을 시작할 준비가 되어 있는 모든 새로운 트랜잭션이 차단됩니다. 온라인 인덱스 다시 작성에 대한 잠금 기간은 매우 짧지만 특정 테이블에서 열려 있는 모든 트랜잭션이 완료될 때까지 기다리고 새로운 트랜잭션이 시작되지 않도록 차단하기 위해서는 처리량에 상당한 영향을 주어 작업 속도가 느려지거나 시간 초과가 발생할 수 있으며, 기본 테이블에 대한 액세스가 크게 제한될 수 있습니다. DBA는 **WAIT_AT_LOW_PRIORITY** 옵션을 사용해서 온라인 인덱스 다시 작성에 필요한 S-잠금 및 Sch-M 잠금을 관리할 수 있으며, 3개 옵션 중 하나를 선택할 수 있습니다. 세 가지 경우 모두, 대기 시간((MAX_DURATION = n [minutes])) 중에 차단 활동이 없으면 대기 없이 온라인 인덱스 다시 작성이 즉시 실행되고 DDL 문이 완료됩니다.  
   

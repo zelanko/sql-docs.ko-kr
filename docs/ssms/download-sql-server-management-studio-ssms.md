@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 07/26/2019
-ms.openlocfilehash: d227cbd5910a33f940313fa2e82039240077c280
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: cb379078fe5d8c2436b220871d84d352a8619155
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495425"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68823127"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 다운로드
 
@@ -46,7 +46,7 @@ SSMS는 무료입니다.
 
 **[![다운로드](../ssdt/media/download.png) SQL Server Management Studio 18.2 다운로드](https://go.microsoft.com/fwlink/?linkid=2099720)**
 
-SSMS 18.2는 SSMS의 최신 GA(일반 공급) 버전입니다. SSMS 18.2(GA)가 설치되어 있는 경우 SSMS 18.2를 설치하면 18.2로 업그레이드됩니다. SSMS 18.x의 *미리 보기* 버전이 설치된 경우에는 이것을 제거한 후에 SSMS 18.2를 설치해야 합니다.
+SSMS 18.2는 SSMS의 최신 GA(일반 공급) 버전입니다. 이전 GA 버전의 SSMS 18이 설치된 경우 SSMS 18.2를 설치하면 18.2로 업그레이드됩니다. SSMS 18.x의 *미리 보기* 버전이 설치된 경우에는 이것을 제거한 후에 SSMS 18.2를 설치해야 합니다.
 
 **버전 정보**
 
@@ -81,8 +81,7 @@ SQL Server Management Studio 18.2:
 | 쿼리 실행 또는 결과 | 지정된 쿼리가 실행을 완료한 시간을 추적하기 위해 메시지에 “완료 시간”이 추가되었습니다. |
 | 쿼리 실행 또는 결과  | 추가 데이터를 표시하고(결과를 텍스트로) 셀에 저장할 수 있습니다(결과를 표 형태로). 이제 SSMS에서 최대 2M자(각각 256 및 64K)를 허용합니다. 또한 사용자가 표의 셀에서 43680자를 초과해서 가져올 수 없는 문제가 해결되었습니다. |
 | 실행 계획 | 인라인 스칼라 UDF 기능을 사용하도록 설정하는 경우 QueryPlan에 새 특성이 추가되었습니다(ContainsInlineScalarTsqlUdfs). |
-| SMO | "기능 제한”에 대한 지원이 추가되었습니다. 기능 자체에 대한 자세한 내용은 [기능 제한](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions)을 참조하세요. |
-| SMO  | 평가 확장. <we need a link to something> 항목을 참조하세요. |
+| SMO | "기능 제한”에 대한 지원이 추가되었습니다. 기능 자체에 대한 내용은 [기능 제한](https://docs.microsoft.com/sql/relational-databases/security/feature-restrictions)을 참조하세요. 평가 확장에 대한 내용은 [SQL 평가 API 소개](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-SQL-Assessment-API-Public-Preview/ba-p/778570)를 참조하세요. |
 | Integration Services(SSIS) | Azure에서 SSIS 패키지 스케줄러에 대한 성능 최적화 |
 |  |  |
 

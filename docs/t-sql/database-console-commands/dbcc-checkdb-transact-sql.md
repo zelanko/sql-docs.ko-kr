@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102115"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809895"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ REPAIR_FAST
  이전 버전과의 호환성을 위해서만 구문을 유지 관리합니다. 복구 동작은 수행되지 않습니다.  
     
 REPAIR_REBUILD  
- 데이터 손실 가능성이 없는 복구를 수행합니다. 여기에는 비클러스터형 인덱스의 누락 행 복구와 같은 빠른 복구 작업과 인덱스 다시 작성과 같이 시간이 오래 걸리는 복구가 모두 포함됩니다.  
+ 데이터 손실 가능성이 없는 복구를 수행합니다. 여기에는 비클러스터형 인덱스의 누락 행 복구와 같은 빠른 복구 작업과 인덱스 다시 빌드과 같이 시간이 오래 걸리는 복구가 모두 포함됩니다.  
  이 인수는 FILESTREAM 데이터 관련 오류를 복구하지 않습니다.  
     
 > [!IMPORTANT] 
@@ -258,7 +258,7 @@ DBCC CHECKDB에 의해 오류가 보고되면 REPAIR 옵션 중 하나를 사용
 DBCC CHECKDB 명령이 성공하면 데이터베이스는 물리적으로 일관된 상태가 되며 데이터베이스 상태가 ONLINE으로 설정됩니다. 그러나 데이터베이스에 하나 이상의 트랜잭션 불일치가 포함되어 있을 수 있습니다. [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md)를 실행하여 비즈니스 논리 결함을 식별하고 즉시 데이터베이스를 백업하는 것이 좋습니다.
 DBCC CHECKDB 명령이 실패하면 데이터베이스를 복구할 수 없습니다.
     
-## <a name="running-dbcc-checkdb-with-repairallowdataloss-in-replicated-databases"></a>복제된 데이터베이스에서 REPAIR_ALLOW_DATA_LOSS 옵션으로 DBCC CHECKDB 실행    
+## <a name="running-dbcc-checkdb-with-repair_allow_data_loss-in-replicated-databases"></a>복제된 데이터베이스에서 REPAIR_ALLOW_DATA_LOSS 옵션으로 DBCC CHECKDB 실행    
 REPAIR_ALLOW_DATA_LOSS 옵션으로 DBCC CHECKDB 명령을 실행하면 사용자 데이터베이스(게시 및 구독 데이터베이스)와 복제에 사용되는 배포 데이터베이스에 영향을 줄 수 있습니다. 게시 및 구독 데이터베이스에는 게시된 테이블과 복제 메타데이터 테이블이 포함됩니다. 이러한 데이터베이스에서 발생 가능한 다음 문제에 주의하십시오.
 -   게시된 테이블. 손상된 사용자 데이터를 복구하기 위해 CHECKDB 프로세스에서 수행한 동작이 복제되지 않을 수 있습니다.    
 -   병합 복제는 트리거를 사용하여 게시된 테이블의 변경 내용을 추적합니다. CHECKDB 프로세스에서 행을 삽입, 업데이트 또는 삭제하면 트리거가 발생하지 않으므로 변경 내용이 복제되지 않습니다.

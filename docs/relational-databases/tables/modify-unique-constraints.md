@@ -16,12 +16,12 @@ ms.assetid: fddbdc9e-958b-4614-8e88-6ca205d64a4e
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f3ec5fed63d84ece9a3f54c5c2ae5304dcf8bd6e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61747c9b7e445990bd285061f63c5497b0f51f85
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082624"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811331"
 ---
 # <a name="modify-unique-constraints"></a>UNIQUE 제약 조건 수정
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "68082624"
     |--------|------------------------|  
     |제약 조건이 연결된 열 변경|1) **(일반)** 아래의 표에서 **열** 을 클릭한 다음, 속성 오른쪽에 있는 줄임표 **(…)** 를 클릭합니다.<br /><br /> 2) **인덱스 열** 대화 상자에서 인덱스에 대해 새 열 또는 정렬 순서 또는 두 가지 옵션을 모두 지정합니다.|  
     |제약 조건 이름 바꾸기|**ID**아래의 표에서 **이름** 상자에 새 이름을 입력합니다. 새 이름은 **선택한 기본/고유 키 또는 인덱스** 목록의 다른 이름과 중복되지 않아야 합니다.|  
-    |클러스터형 옵션 설정|**테이블 디자이너**아래의 표에서 **클러스터형으로 만들기** 를 선택한 다음 클러스터형 인덱스를 만들려면 드롭다운에서 예를 선택하고 비클러스터형 인덱스를 만들려면 아니요를 선택합니다. 클러스터형 인덱스는 테이블마다 하나씩만 만들 수 있습니다. 클러스터형 인덱스가 이미 이 테이블에 있는 경우 원본 인덱스에 대해 이 설정을 먼저 해제해야 합니다.|  
+    |클러스터형 옵션 설정|**테이블 디자이너** 아래의 표에서 **클러스터형으로 만들기**를 선택한 다음 클러스터형 인덱스를 만들려면 드롭다운에서 예를 선택하고 비클러스터형 인덱스를 만들려면 아니요를 선택합니다. 클러스터형 인덱스는 테이블마다 하나씩만 만들 수 있습니다. 클러스터형 인덱스가 이미 이 테이블에 있는 경우 원본 인덱스에 대해 이 설정을 먼저 해제해야 합니다.|  
     |채우기 비율 정의|**테이블 디자이너**아래의 표에서 **파일 사양** 범주를 확장하고 0에서 100 사이의 정수를 **채우기 비율** 상자에 입력합니다.|  
   
 5.  **파일** 메뉴에서 **저장**_table name_을 클릭합니다.  

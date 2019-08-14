@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 440855051e0927bf4d660224fdbeba64bace1a4d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2d2ade42e25593911ea25b2a16ad53372ced0438
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059039"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941114"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68059039"
 
 #### <a name="try-it-out"></a>사용해보기
 
-- [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]을 다운로드하려면 **[평가 센터](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![다운로드](../analysis-services/media/download.png "다운로드")로 이동하세요.
+- [SQL Server 2016](https://www.microsoft.com/en-us/evalcenter/evaluate-sql-server-2016) 다운로드.
 
 - Azure 계정이 있으세요?  계정이 있는 경우 **[여기](https://azure.microsoft.com/services/virtual-machines/sql-server/)** 로 이동하여 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]이(가) 이미 설치된 가상 머신을 실행해 보세요.
 

@@ -9,12 +9,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ad5ca749f3862f0d7df3411efd78104052dba91
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 49cc2cbb4ede2326bf774b5f39968ad4b00ed991
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958622"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969482"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>SQL Server 빅 데이터 클러스터 마스터 인스턴스에 데이터베이스 복원
 
@@ -36,19 +36,19 @@ ms.locfileid: "67958622"
 Kubernetes 클러스터의 마스터 인스턴스 Pod에 있는 SQL Server 컨테이너에 백업 파일을 복사합니다.
 
 ```bash
-kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your big data cluster>
+kubectl cp <path to .bak file> master-0:/tmp -c mssql-server -n <name of your big data cluster>
 ```
 
 예:
 
 ```bash
-kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n clustertest
+kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n clustertest
 ```
 
 백업 파일이 Pod 컨테이너에 복사되었는지 확인합니다.
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
+kubectl exec -it master-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
 cd /var/
 ls /tmp
 exit
@@ -57,7 +57,7 @@ exit
 예:
 
 ```bash
-kubectl exec -it mssql-master-pool-0 -n clustertest -c mssql-server -- bin/bash
+kubectl exec -it master-0 -n clustertest -c mssql-server -- bin/bash
 ls /tmp
 exit
 ```

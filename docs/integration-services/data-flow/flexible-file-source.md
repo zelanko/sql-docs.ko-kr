@@ -12,12 +12,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfilesrc.f1
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 277c688b77e74d1dad35b19c279a648e56b8f396
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 694a6c2307983c7003be80be5dc318fc756af392
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316674"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892334"
 ---
 # <a name="flexible-file-source"></a>유연한 파일 원본
 
@@ -38,7 +38,7 @@ Flexible File Source용 편집기를 표시하려면 데이터 흐름 디자이�
 - **파일 연결 관리자 유형:** 원본 연결 관리자 유형을 지정합니다. 그런 다음, 지정된 형식의 기존 항목을 선택하거나 새로 만듭니다.
 - **폴더 경로:** 원본 폴더 경로를 지정합니다.
 - **파일 이름:** 원본 파일 이름을 지정합니다.
-- **파일 형식:** 원본 파일 형식을 지정합니다. 지원 되는 형식은 **텍스트**, **Avro**, **ORC**, **Parquet**입니다.
+- **파일 형식:** 원본 파일 형식을 지정합니다. 지원 되는 형식은 **텍스트**, **Avro**, **ORC**, **Parquet**입니다. ORC/Parquet에는 Java가 필요합니다. 자세한 내용은 [여기](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java)를 참조하세요.
 - **열 구분 기호 문자:** 열 구분 기호로 사용할 문자를 지정합니다(다중 문자 구분 기호 지원 안 함).
 - **첫 행은 열 이름으로:** 첫 번째 행을 열 이름으로 간주할 것인지 여부를 지정합니다.
 - **파일 압축 풀기:** 원본 파일의 압축을 풀지 여부를 지정합니다.
@@ -72,30 +72,3 @@ RBAC 구성에 사용되는 애플리케이션(클라이언트) ID와는 다릅�
 읽기 권한의 경우 읽을 파일에 대한 **읽기** 권한과 함께 원본 파일 시스템부터 최소한 **실행** 권한을 부여합니다.
 또는 RBAC를 사용하여 최소한 **Storage Blob 데이터 읽기 권한자** 역할을 부여합니다.
 자세한 내용은 [이](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control) 문서를 참조하세요.
-
-**ORC/Parquet 파일 형식의 필수 구성 요소**
-
-Java는 ORC/Parquet 파일 형식을 사용해야 합니다.
-Java 빌드의 아키텍처(32/64비트)는 사용할 SSIS 런타임과 일치해야 합니다.
-다음과 같은 Java 빌드가 테스트되었습니다.
-
-- [Zulu OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Oracle Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
-**Zulu OpenJDK 설치**
-
-1. zip 패키지를 다운로드하여 추출합니다.
-2. 명령 프롬프트에서 `sysdm.cpl`을 실행합니다.
-3. **고급** 탭에서 **환경 변수**를 선택합니다.
-4. **시스템 변수** 섹션 아래에서 **새로 만들기**를 선택합니다.
-5. **변수 이름**에 대해 `JAVA_HOME`을 입력합니다.
-6. **디렉터리 찾아보기**를 선택하여 추출된 폴더로 이동하고, `jre` 하위 폴더를 선택합니다.
-   그런 다음, **확인**을 선택하면 **변수 값**이 자동으로 채워집니다.
-7. **확인**을 선택하여 **새 시스템 변수** 대화 상자를 닫습니다.
-8. **확인**을 선택하여 **환경 변수** 대화 상자를 닫습니다.
-9. **확인**을 선택하여 **시스템 속성** 대화 상자를 닫습니다.
-
-**Oracle Java SE Runtime Environment 설치**
-
-1. exe 설치 관리자를 다운로드하여 실행합니다.
-2. 설치 관리자 지침에 따라 설치를 완료합니다.

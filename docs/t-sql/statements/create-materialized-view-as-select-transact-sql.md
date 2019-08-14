@@ -34,15 +34,15 @@ helpviewer_keywords:
 - views [SQL Server], indexed views
 - maximum number of columns per view
 ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 076bf71586baa61e8bb77c093cd274eca898bf00
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2b58102644c596fde248861bb504bf06b932d6e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912619"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893770"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT(Transact-SQL)(미리 보기)
 
@@ -120,11 +120,10 @@ ALTER TABLE SWITCH는 구체화된 뷰에서 참조되는 테이블에서 지원
 
 |시나리오|구체화된 뷰에 추가할 새 열|설명|  
 |-----------------|---------------|-----------------|
-|COUNT_BIG() | 구체화된 뷰 정의의 SELECT 목록에 없습니다. |COUNT_BIG (*) |구체화된 뷰를 만들면 자동으로 추가됩니다.  사용자가 조치할 필요는 없습니다.|
+|COUNT_BIG()이 구체화된 뷰 정의의 SELECT 목록에 없습니다.| COUNT_BIG (*) |구체화된 뷰를 만들면 자동으로 추가됩니다.  사용자가 조치할 필요는 없습니다.|
 |사용자가 구체화된 뷰 정의의 SELECT 목록에서 SUM(a)을 지정하며, 'a'는 null 허용 가능 식입니다. |COUNT_BIG (a) |사용자가 구체화된 뷰 정의에서 수동으로 식 'a'를 추가해야 합니다.|
 |사용자가 구체화된 뷰 정의의 SELECT 목록에서 AVG(a)를 지정합니다. 여기서 'a'는 식입니다.|SUM(a), COUNT_BIG(a)|구체화된 뷰를 만들면 자동으로 추가됩니다.  사용자가 조치할 필요는 없습니다.|
-|사용자가 구체화된 뷰 정의의 SELECT 목록에서 STDEV(a)를 지정합니다. 여기서 'a'는 식입니다.|SUM(a),  
-COUNT_BIG(a) SUM(square(a))|구체화된 뷰를 만들면 자동으로 추가됩니다.  사용자가 조치할 필요는 없습니다. |
+|사용자가 구체화된 뷰 정의의 SELECT 목록에서 STDEV(a)를 지정합니다. 여기서 'a'는 식입니다.|SUM(a), COUNT_BIG(a), SUM(square(a))|구체화된 뷰를 만들면 자동으로 추가됩니다.  사용자가 조치할 필요는 없습니다. |
 | | | |
 
 만들고 나면, 구체화된 뷰는 Azure SQL Data Warehouse 인스턴스의 뷰 폴더 아래에 있는 SQL Server Management Studio 내에 표시됩니다.

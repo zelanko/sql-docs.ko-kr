@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0d6cb620-eb58-4745-8587-4133a1b16994
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: bf9207498575a52c5d9c2c1a6076110260c1f588
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7352a7e2db64da959cbefaacee5c9f3d14a8a579
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102008"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809885"
 ---
 # <a name="dbcc-checktable-transact-sql"></a>DBCC CHECKTABLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ REPAIR_FAST
  이전 버전과의 호환성을 위해서만 구문이 유지됩니다. 복구 동작은 수행되지 않습니다.  
     
 REPAIR_REBUILD  
- 데이터 손실 가능성이 없는 복구를 수행합니다. 여기에는 비클러스터형 인덱스의 누락 행 복구와 같은 빠른 복구 작업과 인덱스 다시 작성과 같이 시간이 오래 걸리는 복구가 모두 포함됩니다.  
+ 데이터 손실 가능성이 없는 복구를 수행합니다. 여기에는 비클러스터형 인덱스의 누락 행 복구와 같은 빠른 복구 작업과 인덱스 다시 빌드과 같이 시간이 오래 걸리는 복구가 모두 포함됩니다.  
  이 인수는 FILESTREAM 데이터 관련 오류를 복구하지 않습니다.  
     
  > [!NOTE]  
