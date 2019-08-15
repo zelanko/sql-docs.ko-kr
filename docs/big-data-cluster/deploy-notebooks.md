@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fb1da50fb84cbfd44aeab50a00be1c8433b3041e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: d68baa615f384dd5afb665f29decb6d72113c5a3
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892453"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028569"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebooks"></a>Azure Data Studio Notebook을 사용하여 SQL Server 빅 데이터 클러스터 배포
 
@@ -22,7 +22,7 @@ ms.locfileid: "68892453"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 배포 Notebook을 포함하는 Azure Data Studio 확장을 제공합니다. 배포 Notebook에는 SQL Server 빅 데이터 클러스터를 만들기 위해 Azure Data Studio에서 사용할 수 있는 코드와 설명서가 포함되어 있습니다.
 
-원래 오픈 소스 프로젝트로 구현된 [Notebook](notebooks-guidance.md)이 [Azure Data Studio](http://docs.microsoft.com/sql/azure-data-studio/download)에 구현되었습니다. 사용 가능한 커널 중 하나와 텍스트 셀에 있는 텍스트의 Markdown을 사용하여 코드 셀에 코드를 작성할 수 있습니다.
+원래 오픈 소스 프로젝트로 구현된 [Notebook](notebooks-guidance.md)이 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download)에 구현되었습니다. 사용 가능한 커널 중 하나와 텍스트 셀에 있는 텍스트의 Markdown을 사용하여 코드 셀에 코드를 작성할 수 있습니다.
 
 Notebook을 사용하여 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 빅 데이터 클러스터를 배포할 수 있습니다.
 

@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1a6156dad127ea2a86e8a6f4dfbdd6f692fd8f6e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7adc5c3d07b47b5310d8a45d00747d6dd6de9952
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893657"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028579"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-with-azure-data-studio-notebooks"></a>Azure Data Studio Notebook으로 SQL Server의 빅 데이터 클러스터 관리
 
@@ -22,9 +22,9 @@ ms.locfileid: "68893657"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서는 Notebook을 포함하는 Azure Data Studio에 대한 확장을 제공합니다. Notebook에는 SQL Server의 빅 데이터 클러스터를 관리하기 위해 Azure Data Studio에서 사용할 수 있는 설명서 및 코드가 포함되어 있습니다.
 
-원래는 오픈 소스 프로젝트로 구현된 [Notebook](notebooks-guidance.md)이 [Azure Data Studio](http://docs.microsoft.com/sql/azure-data-studio/download)로 구현되었습니다. 텍스트 셀 및 사용 가능한 커널 중 하나에서 텍스트에 Markdown를 사용하여 코드 셀에 코드를 작성할 수 있습니다.
+원래는 오픈 소스 프로젝트로 구현된 [Notebook](notebooks-guidance.md)이 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download)로 구현되었습니다. 사용 가능한 커널 중 하나와 텍스트 셀에 있는 텍스트의 Markdown을 사용하여 코드 셀에 코드를 작성할 수 있습니다.
 
-Notebook을 사용하여 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에 대해 빅 데이터 클러스터를 배포할 수 있습니다.
+Notebook을 사용하여 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 빅 데이터 클러스터를 배포할 수 있습니다.
 
 노트북 외에도 사용자는 Jupyter 서적 이라는 노트북 컬렉션을 볼 수 있습니다. Jupyter Book은 사용자가 SQL Server 문제를 해결하거나 클러스터 상태를 확인하기 위해 필요한 Notebook을 쉽게 찾을 수 있도록 Notebook 컬렉션을 탐색하기 위한 목차를 제공합니다.
 
@@ -35,7 +35,7 @@ Notebook을 시작하려면 다음 필수 구성 요소가 필요합니다.
 * 최신 버전의 [Azure Data Studio 참가자 빌드](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
 * Azure Data Studio에 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 확장 설치
 
-이 외에도 SQL Server 2019 빅 데이터 클러스터를 배포하려면 다음이 필요합니다.
+위 항목 외에도 SQL Server 2019 빅 데이터 클러스터를 배포하려면 다음이 필요합니다.
 
 * [azdata](deploy-install-azdata.md)
 * [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management)

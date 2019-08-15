@@ -10,22 +10,22 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: bfdce1925bc4c73894e1ff1a9bb0d69f6da94501
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e380626408a7e50d8940e2cc1b347eac5f32922
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150813"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028603"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
   쿼리 저장소 기능을 통해 DBA는 쿼리 계획 선택 및 성능에 대한 정보를 얻을 수 있습니다. 쿼리 계획 변경으로 인해 발생하는 성능 차이를 신속하게 찾을 수 있도록 하여 성능 문제 해결을 간소화합니다. 이 기능은 쿼리, 계획 및 런타임 통계의 기록을 자동으로 캡처하고 검토할 수 있도록 이 기록을 유지합니다. 데이터를 기간별로 구분하여 데이터베이스 사용 패턴을 파악하고 서버에서 쿼리 계획 변경이 발생한 시기를 이해할 수 있게 해줍니다. 쿼리 저장소는 [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) 옵션을 사용하여 구성할 수 있습니다.  
   
 ||  
 |-|  
-|**적용 대상**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] ([되도록](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
+|**적용 대상**: [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]([가져오기](http://azure.micosoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)).|  
   
 > [!IMPORTANT]  
->  현재 미리 보기 기능입니다. 쿼리 저장소를 사용하려면 쿼리 저장소 구현에는 사용권 계약(예: 기업계약, Microsoft Azure 계약 또는 Microsoft 온라인 정기가입 계약)의 미리 보기 약관과 해당 [Microsoft Azure 미리 보기 추가 사용 약관](http://azure.microsoft.com/en-us/support/legal/preview-supplemental-terms/)이 적용됨을 확인하고 이에 동의해야 합니다.  
+>  현재 미리 보기 기능입니다. 쿼리 저장소를 사용하려면 쿼리 저장소 구현에는 사용권 계약(예: 기업계약, Microsoft Azure 계약 또는 Microsoft 온라인 정기가입 계약)의 미리 보기 약관과 해당 [Microsoft Azure 미리 보기 추가 사용 약관](https://azure.microsoft.com/support/legal/preview-supplemental-terms/)이 적용됨을 확인하고 이에 동의해야 합니다.  
   
 ##  <a name="Enabling"></a> 쿼리 저장소 사용  
  새 데이터베이스에서는 기본적으로 쿼리 저장소가 활성 상태가 아닙니다.  
@@ -205,7 +205,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (INTERVAL_LENGTH_MINUTES = 15);  
 ```  
   
- 임의의 값이 허용 되지-다음 중 하나를 사용 해야 note: 1, 5, 10, 15, 30 및 60입니다.  
+ 임의 값을 사용할 수 없습니다. 다음 중 하나를 사용 해야 합니다. 1, 5, 10, 15, 30 및 60입니다.  
   
  새 간격 값은 `sys.database_query_store_options` 뷰를 통해 노출됩니다.  
   
@@ -277,16 +277,16 @@ DEALLOCATE adhoc_queries_cursor;
   
  위의 예제에서는 필요 없는 데이터를 제거하는 `sp_query_store_remove_query` 확장 저장 프로시저를 사용합니다. 다른 두 프로시저를 사용할 수도 있습니다.  
   
--   `sp_query_store_reset_exec_stats` -지정된 된 계획에 대 한 런타임 통계를 지웁니다.  
+-   `sp_query_store_reset_exec_stats`-지정 된 계획에 대 한 런타임 통계를 지웁니다.  
   
--   `sp_query_store_remove_plan` -단일 계획을 제거 합니다.  
+-   `sp_query_store_remove_plan`-단일 계획을 제거 합니다.  
   
 
   
 ###  <a name="Peformance"></a> 성능 감사 및 문제해결  
  쿼리 저장소에서는 전체 쿼리 실행 중에 컴파일 및 런타임 메트릭에 대한 기록을 유지하므로 작업과 관련된 다양한 질문에 쉽게 답할 수 있습니다.  
   
- **마지막 *n* 쿼리가 데이터베이스에서 실행 합니다.**  
+ **데이터베이스에서 실행 된 마지막 *n* 개의 쿼리**  
   
 ```  
 SELECT TOP 10 qt.query_sql_text, q.query_id,   
@@ -317,7 +317,7 @@ GROUP BY q.query_id, qt.query_text_id, qt.query_sql_text
 ORDER BY total_execution_count DESC;  
 ```  
   
- **지난 1 시간 내에서 가장 긴 평균 실행 시간을 사용 하 여 쿼리의 수입니다.**  
+ **지난 1 시간 내에 평균 실행 시간이 가장 긴 쿼리 수입니다.**  
   
 ```  
 SELECT TOP 10 rs.avg_duration, qt.query_sql_text, q.query_id,  
@@ -334,7 +334,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **해당 평균 행 수 및 실행 수를 사용 하 여 지난 24 시간 동안에서 가장 큰 평균 물리적 io는 쿼리의 수를 읽습니다.**  
+ **지난 24 시간 동안 평균 물리적 IO 읽기가 가장 큰 쿼리 수 및 해당 하는 평균 행 수 및 실행 수**  
   
 ```  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -353,7 +353,7 @@ WHERE rsi.start_time >= DATEADD(hour, -24, GETUTCDATE())
 ORDER BY rs.avg_physical_io_reads DESC;  
 ```  
   
- **여러 계획을 사용 하 여 쿼리 합니다.** 이러한 쿼리는 계획 선택 변경으로 인한 재발을 일으킬 수 있으므로 특히 흥미롭습니다. 다음 쿼리는 이러한 쿼리와 함께 모든 계획을 식별합니다.  
+ **여러 계획을 사용 하는 쿼리** 이러한 쿼리는 계획 선택 변경으로 인한 재발을 일으킬 수 있으므로 특히 흥미롭습니다. 다음 쿼리는 이러한 쿼리와 함께 모든 계획을 식별합니다.  
   
 ```  
 WITH Query_MultPlans  
@@ -382,7 +382,7 @@ JOIN sys.query_store_query_text qt
 ORDER BY query_id, plan_id;  
 ```  
   
- **최근에 성능이 저하 쿼리 (다른 시점과 비교).** 다음 쿼리 예제는 지난 48 시간에 계획 선택 변경으로 인해 실행 시간이 두 배가 된 모든 쿼리를 반환합니다. 쿼리에서는 모든 런타임 통계 간격을 나란히 비교합니다.  
+ **최근에 성능이 저하 된 쿼리 (다른 시점 비교)** 다음 쿼리 예제는 지난 48 시간에 계획 선택 변경으로 인해 실행 시간이 두 배가 된 모든 쿼리를 반환합니다. 쿼리에서는 모든 런타임 통계 간격을 나란히 비교합니다.  
   
 ```  
 SELECT   
@@ -421,7 +421,7 @@ ORDER BY q.query_id, rsi1.start_time, rsi2.start_time;
   
  계획 선택 변경과 관련된 성능 저하뿐 아니라 성능 저하를 모두 확인하려면 이전 쿼리에서 `AND p1.plan_id <> p2.plan_id` 조건을 제거하면 됩니다.  
   
- **최근에 성능이 저하 쿼리 (최근 및 기록 실행 비교).** 다음 쿼리는 실행 기간을 기준으로 쿼리 실행을 비교합니다. 이 특정 예제의 쿼리는 최근 기간(1시간) 및 기록 기간(어제)의 실행을 비교하고 additional_duration_workload를 초래한 쿼리를 식별합니다. 이 메트릭은 최근 평균 실행 기간과 기록 평균 실행 간의 차이에 최근 실행 수를 곱한 값으로 계산됩니다. 이 값은 실제로 기록에 비해 최근 실행으로 초래된 추가 기간을 나타냅니다.  
+ **최근에 성능이 저하 된 쿼리 (최근 및 기록 실행 비교).** 다음 쿼리는 실행 기간을 기준으로 쿼리 실행을 비교합니다. 이 특정 예제의 쿼리는 최근 기간(1시간) 및 기록 기간(어제)의 실행을 비교하고 additional_duration_workload를 초래한 쿼리를 식별합니다. 이 메트릭은 최근 평균 실행 기간과 기록 평균 실행 간의 차이에 최근 실행 수를 곱한 값으로 계산됩니다. 이 값은 실제로 기록에 비해 최근 실행으로 초래된 추가 기간을 나타냅니다.  
   
 ```  
 --- "Recent" workload - last 1 hour  

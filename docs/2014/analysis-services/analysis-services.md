@@ -18,12 +18,12 @@ ms.assetid: 49d186f4-4b4d-4a5a-bb1a-e2699c64a731
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a5117ec8fd1eae9438569289b05f465fe7616d96
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 93a8f9ddab1fe1f78c5af94cae30c8ce7cbf2c37
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887454"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025451"
 ---
 # <a name="sql-server-2014-analysis-services"></a>SQL Server 2014 Analysis Services
 
@@ -36,11 +36,11 @@ ms.locfileid: "68887454"
 - SQL Server 2012 및 이전 버전에 대 한 자세한 내용은 [이전 버전 SQL Server 설명서](https://docs.microsoft.com/previous-versions/sql/)를 참조 하세요.
 - SQL Server 2014에 대 한 자세한 내용은 [SQL Server 2014 온라인 설명서](../2014-toc/books-online-for-sql-server-2014.md) 를 참조 하십시오.
 - SQL Server 2016 이상에 대 한 자세한 내용은 [MICROSOFT SQL 설명서](https://docs.microsoft.com/sql/)를 참조 하세요.
-- Azure Analysis Services에 대 한 자세한 내용은 [Azure Analysis Services 설명서](https://docs.microsoft.com/en-us/azure/analysis-services/)를 참조 하세요.
+- Azure Analysis Services에 대 한 자세한 내용은 [Azure Analysis Services 설명서](https://docs.microsoft.com/azure/analysis-services/)를 참조 하세요.
 
 ## <a name="analysis-services-workflow"></a>Analysis Services 워크플로
 
-일반적인 워크플로에는 OLAP 또는 테이블 형식 데이터 모델 작성, 서버 인스턴스에 데이터베이스로 모델 배포, 데이터베이스를 처리 하 여 데이터를 로드 하 고, 데이터 액세스를 허용 하는 사용 권한을 할당 하는 작업이 포함 됩니다. 이 다목적 데이터 모델은 준비가 되면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 데이터 원본으로 지원하는 클라이언트 응용 프로그램에서 액세스할 수 있습니다.  
+일반적인 워크플로에는 OLAP 또는 테이블 형식 데이터 모델 작성, 서버 인스턴스에 데이터베이스로 모델 배포, 데이터베이스를 처리 하 여 데이터를 로드 하 고, 데이터 액세스를 허용 하는 사용 권한을 할당 하는 작업이 포함 됩니다. 이 다목적 데이터 모델은 준비가 되면 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 데이터 원본으로 지원하는 클라이언트 애플리케이션에서 액세스할 수 있습니다.  
   
  모델을 만들려면 SQL Server Data Tools ( [Analysis Services에 사용 되는 도구 및 응용 프로그램](tools-and-applications-used-in-analysis-services.md)참조)를 사용 하 여 테이블 형식 또는 다차원 및 데이터 마이닝 프로젝트 템플릿을 선택 합니다. 프로젝트 템플릿에는 모델에 필요한 모든 개체에 대한 폴더가 포함되어 있습니다. 마법사를 사용하여 데이터 원본, 데이터 원본 뷰, 차원, 큐브 및 역할과 같은 모든 기본 요소를 만들 수 있습니다.  
   

@@ -1,5 +1,5 @@
 ---
-title: Windows Azure에서 SQL Server 데이터 파일 | Microsoft Docs
+title: Windows Azure의 SQL Server 데이터 파일 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,23 +10,23 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 588e656ca71bc5843e3483879f5a58951373aff5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36d940e71dc6a5816dc08fb79e045f46f783116e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62916585"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028617"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>Windows Azure의 SQL Server 데이터 파일
   Windows Azure에서 SQL Server 데이터 파일을 통해 Windows Azure Blob으로 저장된 SQL Server 데이터베이스 파일이 기본적으로 지원됩니다. 이 기능을 사용하면 온-프레미스로 실행 중인 SQL Server에서 또는 Windows Azure BLOB 저장소에서 사용자의 데이터에 대한 전용 저장소 위치를 갖는 Windows Azure의 가상 컴퓨터에서 데이터베이스를 만들 수 있습니다. 특히, 이 향상된 기능은 분리 및 연결 작업을 사용하여 컴퓨터 간의 데이터 이동을 간소화합니다. 또한 Microsoft Azure Storage를 원본 또는 대상으로 복원하도록 허용하여 데이터베이스 백업 파일에 대한 대체 스토리지 위치를 제공합니다. 따라서 데이터 가상화, 데이터 이동, 보안 및 가용성, 고가용성 및 탄력적인 크기 조정을 위한 쉽고 저렴한 비용 및 유지 관리 등 여러 가지 이점을 제공하여 다양한 하이브리드 솔루션을 사용할 수 있도록 지원합니다.  
   
  이 항목에서는 SQL Server 데이터 파일을 Windows Azure 저장소 서비스에 저장하는 데 중요한 개념 및 고려 사항에 대해 설명합니다.  
   
- 이 새 기능 사용 방법에 대한 실제 실습은 [자습서: Windows Azure Storage 서비스에서 SQL Server 데이터 파일](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)합니다.  
+ 이 새 기능 사용 방법에 대한 실제 실습은 [자습서: Windows Azure Storage 서비스](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 데이터 파일을 SQL Server 합니다.  
   
  다음 다이어그램은 이 향상된 기능을 통해 서버의 위치에 상관없이 SQL Server 데이터베이스 파일을 Microsoft Azure Storage에 Microsoft Azure BLOB으로 저장할 수 있음을 보여 줍니다.  
   
- ![SQL Server Integration Windows 사용 하 여 Azure Storage](../../database-engine/media/sql-server-dbfiles-stored-as-blobs.gif "Windows 사용 하 여 SQL Server Integration Azure Storage")  
+ ![Windows Azure Storage와 SQL Server 통합](../../database-engine/media/sql-server-dbfiles-stored-as-blobs.gif "Windows Azure Storage와 SQL Server 통합")  
   
 ## <a name="benefits-of-using-sql-server-data-files-in-windows-azure"></a>Windows Azure에서 SQL Server 데이터 파일 사용의 이점  
   
@@ -36,17 +36,17 @@ ms.locfileid: "62916585"
   
 -   **고가용성 및 재해 복구 이점:** Windows Azure의 SQL Server 데이터 파일 기능을 사용하면 고가용성 및 재해 복구 솔루션을 간소화할 수 있습니다. 예를 들어 Windows Azure의 가상 컴퓨터 또는 SQL Server 인스턴스가 충돌할 경우 Windows Azure BLOB에 대한 링크를 다시 설정하여 새 컴퓨터에 데이터베이스를 다시 만들 수 있습니다.  
   
--   **보안 이점:** 이 새로운 향상된 기능을 사용하여 컴퓨팅 인스턴스를 저장소 인스턴스와 구분할 수 있습니다. 스토리지 인스턴스가 아닌 컴퓨팅 인스턴스에서만 암호 해독이 포함된 완전히 암호화된 데이터베이스를 설정할 수 있습니다. 즉, 이 새로운 향상된 기능을 사용하면 데이터와 물리적으로 구분되는 TDE(투명한 데이터 암호화) 인증서로 퍼블릭 클라우드의 모든 데이터를 암호화할 수 있습니다. TDE 키를 master 데이터베이스에 저장한 다음 이 master 데이터베이스를 물리적으로 안전한 온-프레미스 컴퓨터에 로컬로 저장하고 로컬로 백업할 수 있습니다. 이러한 로컬 키를 사용하여 Microsoft Azure Storage에 있는 데이터를 암호화할 수 있습니다. 클라우드 스토리지 계정 자격 증명을 도난 당한 경우에도 TDE 인증서가 항상 온-프레미스에 있으므로 데이터는 여전히 안전합니다.  
+-   **보안 이점:** 이 새로운 향상된 기능을 사용하여 컴퓨팅 인스턴스를 저장소 인스턴스와 구분할 수 있습니다. 스토리지 인스턴스가 아닌 컴퓨팅 인스턴스에서만 암호 해독이 포함된 완전히 암호화된 데이터베이스를 설정할 수 있습니다. 즉, 이 새로운 향상된 기능을 사용하면 데이터와 물리적으로 구분되는 TDE(투명한 데이터 암호화) 인증서로 공용 클라우드의 모든 데이터를 암호화할 수 있습니다. TDE 키를 master 데이터베이스에 저장한 다음 이 master 데이터베이스를 물리적으로 안전한 온-프레미스 컴퓨터에 로컬로 저장하고 로컬로 백업할 수 있습니다. 이러한 로컬 키를 사용하여 Microsoft Azure Storage에 있는 데이터를 암호화할 수 있습니다. 클라우드 스토리지 계정 자격 증명을 도난 당한 경우에도 TDE 인증서가 항상 온-프레미스에 있으므로 데이터는 여전히 안전합니다.  
   
 ## <a name="concepts-and-requirements"></a>개념 및 요구 사항  
   
 ### <a name="windows-azure-storage-concepts"></a>Windows Azure Storage 개념  
  Windows Azure의 SQL Server 데이터 파일 기능을 사용할 경우 Windows Azure에서 스토리지 계정과 컨테이너를 만들어야 합니다. 그런 다음 컨테이너에 액세스하는 데 필요한 공유 액세스 서명과 컨테이너 정책에 대한 정보가 들어 있는 SQL Server 자격 증명을 만들어야 합니다.  
   
- Windows Azure에서 스토리지 계정은 BLOB에 액세스하는 데 필요한 가장 높은 수준의 네임스페이스를 나타냅니다. 스토리지 계정에 포함될 수 있는 컨테이너의 개수 제한은 없지만 총 크기가 500TB 미만이어야 합니다. 스토리지 제한에 대한 최신 정보는 [Azure 구독 및 서비스 제한, 할당량 및 제약 조건](http://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/)(영문)을 참조하세요. 컨테이너는 BLOB 집합을 그룹화합니다. 모든 BLOB은 컨테이너에 있어야 합니다. 계정에 포함될 수 있는 컨테이너의 개수 제한은 없습니다. 마찬가지로 컨테이너에 저장될 수 있는 BLOB의 개수도 제한되지 않습니다. Windows Azure Blob 스토리지 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. 이 새로운 기능은 최대 1TB 이하의 페이지 BLOB을 사용하며, 파일의 바이트 범위가 자주 수정될 때 더 효율적입니다. `http://storageaccount.blob.core.windows.net/<container>/<blob>`URL 형식을 사용하여 BLOB에 액세스할 수 있습니다.  
+ Windows Azure에서 스토리지 계정은 BLOB에 액세스하는 데 필요한 가장 높은 수준의 네임스페이스를 나타냅니다. 스토리지 계정에 포함될 수 있는 컨테이너의 개수 제한은 없지만 총 크기가 500TB 미만이어야 합니다. 스토리지 제한에 대한 최신 정보는 [Azure 구독 및 서비스 제한, 할당량 및 제약 조건](https://azure.microsoft.com/documentation/articles/azure-subscription-service-limits/)(영문)을 참조하세요. 컨테이너는 BLOB 집합을 그룹화합니다. 모든 BLOB은 컨테이너에 있어야 합니다. 계정에 포함될 수 있는 컨테이너의 개수 제한은 없습니다. 마찬가지로 컨테이너에 저장될 수 있는 BLOB의 개수도 제한되지 않습니다. Windows Azure Blob 스토리지 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. 이 새로운 기능은 최대 1TB 이하의 페이지 BLOB을 사용하며, 파일의 바이트 범위가 자주 수정될 때 더 효율적입니다. `http://storageaccount.blob.core.windows.net/<container>/<blob>`URL 형식을 사용하여 BLOB에 액세스할 수 있습니다.  
   
 ### <a name="windows-azure-billing-considerations"></a>Windows Azure 청구 고려 사항  
- 의사 결정 및 계획 과정에서 Windows Azure 서비스 사용 비용에 대한 예측은 중요한 사항입니다. Windows Azure Storage에 SQL Server 데이터 파일을 저장할 경우 스토리지 및 트랜잭션과 관련된 비용을 지불해야 합니다. 또한 Windows Azure Storage의 SQL Server 데이터 파일 기능을 구현하려면 45-60초마다 BLOB 임대를 암시적으로 갱신해야 합니다. 또한 데이터베이스 파일(예: .mdf 또는 .ldf)당 트랜잭션 비용이 발생합니다. 현재 가격 모델에 따라 두 데이터베이스 파일(.mdf 및 .ldf)의 임대를 갱신하는 비용은 1개월에 약 2센트로 예상됩니다. Windows Azure 스토리지 및 Windows Azure 가상 컴퓨터의 사용과 관련한 월별 비용을 예측하려면 [Azure 가격](http://azure.microsoft.com/pricing/) 페이지의 정보를 참조하십시오.  
+ 의사 결정 및 계획 과정에서 Windows Azure 서비스 사용 비용에 대한 예측은 중요한 사항입니다. Windows Azure Storage에 SQL Server 데이터 파일을 저장할 경우 스토리지 및 트랜잭션과 관련된 비용을 지불해야 합니다. 또한 Windows Azure Storage의 SQL Server 데이터 파일 기능을 구현하려면 45-60초마다 BLOB 임대를 암시적으로 갱신해야 합니다. 또한 데이터베이스 파일(예: .mdf 또는 .ldf)당 트랜잭션 비용이 발생합니다. 현재 가격 모델에 따라 두 데이터베이스 파일(.mdf 및 .ldf)의 임대를 갱신하는 비용은 1개월에 약 2센트로 예상됩니다. Windows Azure 스토리지 및 Windows Azure 가상 컴퓨터의 사용과 관련한 월별 비용을 예측하려면 [Azure 가격](https://azure.microsoft.com/pricing/) 페이지의 정보를 참조하십시오.  
   
 ### <a name="sql-server-concepts"></a>SQL 서버 개념  
  이 새로운 향상된 기능을 사용할 경우 다음을 수행해야 합니다.  
@@ -57,7 +57,7 @@ ms.locfileid: "62916585"
   
 -   Windows Azure Storage 컨테이너, 연결된 정책 이름 및 SAS 키를 SQL Server 자격 증명 스토리지에 저장해야 합니다.  
   
- 다음 예에서는 Windows Azure Storage 컨테이너를 만들고 읽기, 쓰기 및 나열 권한이 있는 정책을 만들었다고 가정합니다. 컨테이너에 대한 정책을 만들면 메모리에 암호화되지 않은 상태로 유지해도 안전하고 SQL Server에서 컨테이너의 BLOB 파일에 액세스하는 데 필요한 SAS 키가 생성됩니다. 다음 코드 조각에서 `'your SAS key'` 를 `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`와 유사한 항목으로 바꾸십시오. 자세한 내용은 참조 하세요. [만들기 및 공유 액세스 서명을 사용 합니다.](https://msdn.microsoft.com/library/azure/jj721951.aspx)  
+ 다음 예에서는 Windows Azure Storage 컨테이너를 만들고 읽기, 쓰기 및 나열 권한이 있는 정책을 만들었다고 가정합니다. 컨테이너에 대한 정책을 만들면 메모리에 암호화되지 않은 상태로 유지해도 안전하고 SQL Server에서 컨테이너의 BLOB 파일에 액세스하는 데 필요한 SAS 키가 생성됩니다. 다음 코드 조각에서 `'your SAS key'` 를 `'sr=c&si=<MYPOLICYNAME>&sig=<THESHAREDACCESSSIGNATURE>'`와 유사한 항목으로 바꾸십시오. 자세한 내용은 [공유 액세스 서명 만들기 및 사용](https://msdn.microsoft.com/library/azure/jj721951.aspx) 을 참조 하세요.  
   
 ```  
   
@@ -125,7 +125,7 @@ ON
  SQL Server 2014 이상에서는 Windows Azure 스토리지의 SQL Server 데이터 파일 기능에 사용할 새로운 SQL Server 개체를 추가했습니다. 이 새 SQL Server 개체를 [SQL Server, HTTP_STORAGE_OBJECT](../performance-monitor/sql-server-http-storage-object.md)라고 하며, SQL Server를 Microsoft Azure Storage와 함께 실행할 때 시스템 모니터에서 활동을 모니터링하는 데 사용할 수 있습니다.  
   
 ### <a name="sql-server-management-studio-support"></a>SQL Server Management Studio 지원  
- SQL Server Management Studio에서 다양한 대화 상자 창을 통해 이 기능을 사용할 수 있습니다. 예를 들어 스토리지 컨테이너의 URL 경로(예: `https://teststorageaccnt.blob.core.windows.net/testcontainer/` )를 여러 대화 상자 창( **새 데이터베이스** , **데이터베이스 연결**, **데이터베이스 복원**등)에 **경로**로 입력할 수 있습니다. 자세한 내용은 [자습서: Windows Azure Storage 서비스에서 SQL Server 데이터 파일](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)합니다.  
+ SQL Server Management Studio에서 다양한 대화 상자 창을 통해 이 기능을 사용할 수 있습니다. 예를 들어 스토리지 컨테이너의 URL 경로(예: `https://teststorageaccnt.blob.core.windows.net/testcontainer/` )를 여러 대화 상자 창( **새 데이터베이스** , **데이터베이스 연결**, **데이터베이스 복원**등)에 **경로**로 입력할 수 있습니다. 자세한 내용은 [자습서: Windows Azure Storage 서비스](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 데이터 파일을 SQL Server 합니다.  
   
 ### <a name="sql-server-management-objects-support"></a>SQL Server 관리 개체 지원  
  Microsoft Azure의 SQL Server 데이터 파일 기능을 사용할 경우 모든 SMO(SQL Server 관리 개체)가 지원됩니다. SMO 개체에 파일 경로가 필요한 경우 로컬 파일 경로 대신 BLOB URL 형식을 사용합니다(예: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`). SMO(SQL Server 관리 개체)에 대한 자세한 내용은 SQL Server 온라인 설명서의 [SMO&#40;SQL Server 관리 개체&#41; 프로그래밍 가이드](../server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)를 참조하세요.  
@@ -135,7 +135,7 @@ ON
   
 -   **sys.master_files** 시스템 뷰의 새로운 **int**열 **credential_id** . **credential_id** 열은 Azure Storage 사용 데이터 파일이 생성된 자격 증명에 대한 sys.credentials를 다시 상호 참조하도록 설정하는 데 사용됩니다. 이 열을 문제 해결에 사용할 수 있습니다. 예를 들어 이 열을 사용하는 데이터베이스 파일이 있는 경우 자격 증명을 삭제할 수 없습니다.  
   
-##  <a name="bkmk_Troubleshooting"></a> Windows Azure에서 SQL Server 데이터 파일에 대 한 문제 해결  
+##  <a name="bkmk_Troubleshooting"></a>Microsoft Azure의 SQL Server 데이터 파일에 대 한 문제 해결  
  지원되지 않는 기능 또는 제한 때문에 발생하는 오류를 방지하려면 먼저 [Limitations](sql-server-data-files-in-microsoft-azure.md#bkmk_Limitations)을 검토하세요.  
   
  Windows Azure Storage의 SQL Server 데이터 파일 기능을 사용할 때 발생할 수 있는 오류 목록은 다음과 같습니다.  
@@ -146,10 +146,10 @@ ON
     해결 방법: Microsoft Azure Storage에서 활성 데이터베이스 파일이 사용 중인 자격 증명을 삭제하려고 하면 이 오류가 나타날 수 있습니다. 자격 증명을 삭제하려면 이 데이터베이스 파일을 포함하는 연결된 BLOB을 먼저 삭제해야 합니다. 활성 임대가 있는 BLOB을 삭제하려면 먼저 임대를 해제해야 합니다.  
   
 -   *공유 액세스 서명이 컨테이너에서 올바르게 만들어지지 않습니다.*    
-     해결 방법: 컨테이너에서 공유 액세스 서명을 올바르게 만들었는지 확인하세요. [자습서: Windows Azure Storage 서비스에서 SQL Server 데이터 파일](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)합니다.  
+     해결 방법: 컨테이너에서 공유 액세스 서명을 올바르게 만들었는지 확인하세요. [자습서: Windows Azure Storage 서비스](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 데이터 파일을 SQL Server 합니다.  
   
 -   *SQL Server 자격 증명이 올바르게 만들어지지 않았습니다.*    
-    해결 방법: **ID** 필드에서 '공유 액세스 서명'을 사용하고 암호를 올바르게 만들었는지 확인합니다. 3단원에 나오는 지침인 [ Windows Azure Storage 서비스에서 SQL Server 데이터 파일](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)합니다.  
+    해결 방법: **ID** 필드에서 '공유 액세스 서명'을 사용하고 암호를 올바르게 만들었는지 확인합니다. 3단원에 나오는 지침인 [ Windows Azure Storage 서비스](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 데이터 파일을 SQL Server 합니다.  
   
  **임대 BLOB 오류:**  
   
@@ -158,10 +158,10 @@ ON
  **데이터베이스 오류**  
   
 1.  *데이터베이스를 만들 때 발생하는 오류*   
-    해결 방법: 4단원에 나오는 지침인 [ Windows Azure Storage 서비스에서 SQL Server 데이터 파일](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)합니다.  
+    해결 방법: 4단원에 나오는 지침인 [ Windows Azure Storage 서비스](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 데이터 파일을 SQL Server 합니다.  
   
 2.  *Alter 문을 실행할 때 발생하는 오류*   
-    해결 방법: 데이터베이스가 온라인 상태일 때 Alter Database 문을 실행해야 합니다. 데이터 파일을 Windows Azure 스토리지에 복사할 경우 항상 블록 BLOB이 아닌 페이지 BLOB을 만듭니다. 그렇지 않으면 ALTER Database 문이 실패합니다. 7단원에 나오는 지침인 [: Windows Azure Storage 서비스에서 SQL Server 데이터 파일](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)합니다.  
+    해결 방법: 데이터베이스가 온라인 상태일 때 Alter Database 문을 실행해야 합니다. 데이터 파일을 Windows Azure 스토리지에 복사할 경우 항상 블록 BLOB이 아닌 페이지 BLOB을 만듭니다. 그렇지 않으면 ALTER Database 문이 실패합니다. 7단원에 나오는 지침인 [: Windows Azure Storage 서비스](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)에서 데이터 파일을 SQL Server 합니다.  
   
 3.  *오류 코드 5120 물리적 파일 "%.\*ls"을(를) 열 수 없습니다. 운영 체제 오류 %d: "%ls"*    
     해결 방법: 현재 이 새로운 향상된 기능을 사용하여 여러 SQL Server 인스턴스에서 Windows Azure 스토리지의 동일한 데이터베이스 파일에 동시에 액세스할 수 없습니다. 활성 데이터베이스 파일이 있는 서버 A가 온라인 상태인 동안 동일한 데이터 파일을 가리키는 데이터베이스를 포함하는 서버 B를 실수로 시작한 경우, 두 번째 서버에서는 데이터베이스가 시작되지 않고 오류 *코드 5120 물리적 파일 "%.\*ls"를 열 수 없습니다. 운영 체제 오류 %d: "%ls"* .  
@@ -177,6 +177,6 @@ ON
     4.  데이터베이스를 온라인으로 설정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [자습서: Windows Azure Storage 서비스에서 SQL Server 데이터 파일](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ [자습서: Windows Azure Storage 서비스에서 데이터 파일 SQL Server](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
   
   

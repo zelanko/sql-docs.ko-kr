@@ -1,5 +1,5 @@
 ---
-title: '1단원: Windows Azure 저장소 계정 및 컨테이너 만들기 | Microsoft Docs'
+title: '1단원: Windows Azure Storage 계정 및 컨테이너 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 8a1f8cef9f29c856ab0bc02480221e583a0078f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9047c517fe4766ab5c3792d2fa2bf92eb7197965
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62676187"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028500"
 ---
 # <a name="lesson-1-create-windows-azure-storage-account-and-container"></a>1단원: Microsoft Azure Storage 계정 및 컨테이너 만들기
   Windows Azure 스토리지에 SQL Server 데이터 파일을 저장하려면 먼저 Windows Azure 스토리지 계정, BLOB 컨테이너 및 공유 액세스 서명을 만들어야 합니다. 1단원에서는 Windows Azure 관리 포털에 로그인하여 스토리지 계정, BLOB 컨테이너 및 공유 액세스 서명을 만드는 과정을 단계별로 안내합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "62676187"
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-1.gif "SQL 14 CTP2")  
   
-2.  단계별 지침을 사용하여 [스토리지 계정을 만듭니다](http://azure.microsoft.com/documentation/articles/storage-create-storage-account/). Windows Azure의 SQL Server 데이터 파일 기능에 사용할 스토리지 계정을 만들 때는 지리적 복제를 선택 취소하거나 해제해야 합니다. 이는 지리적 복제에 참여하는 여러 BLOB에 대해 쓰기 순서가 보장되지 않기 때문입니다. 스토리지 계정이 지리적으로 복제되고 복구가 필요한 경우 손상이 발생합니다.  
+2.  단계별 지침을 사용하여 [스토리지 계정을 만듭니다](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/). Windows Azure의 SQL Server 데이터 파일 기능에 사용할 스토리지 계정을 만들 때는 지리적 복제를 선택 취소하거나 해제해야 합니다. 이는 지리적 복제에 참여하는 여러 BLOB에 대해 쓰기 순서가 보장되지 않기 때문입니다. 스토리지 계정이 지리적으로 복제되고 복구가 필요한 경우 손상이 발생합니다.  
   
      ![SQL 14 CTP2](../../2014/tutorials/media/ss-was-tutlesson-1-2.gif "SQL 14 CTP2")  
   
@@ -61,6 +61,6 @@ ms.locfileid: "62676187"
   
  **다음 단원:**  
   
- [2단원. 컨테이너에 정책을 만들고 공유 액세스 서명 생성 &#40;SAS&#41; 키](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
+ [2단원. 컨테이너에서 정책을 만들고 공유 액세스 서명 &#40;SAS&#41; 키 생성](../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)  
   
   

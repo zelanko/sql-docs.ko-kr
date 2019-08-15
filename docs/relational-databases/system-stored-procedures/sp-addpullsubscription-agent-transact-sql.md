@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9ab0624abf7a0479ac12f1ab51efd00c7e45a82a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893812"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028950"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @publication = ] 'publication'`게시의 이름입니다. *게시* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @subscriber = ] 'subscriber'`구독자 인스턴스의 이름 또는 구독자 데이터베이스가 가용성 그룹인 경우 AG 수신기의 이름입니다. *구독자* 는 **sysname**이며 기본값은 NULL입니다.  
+`[ @subscriber = ] 'subscriber'`구독자 데이터베이스가 가용성 그룹에 있는 경우 구독자 인스턴스의 이름 또는 AG 수신기의 이름입니다. *구독자* 는 **sysname**이며 기본값은 NULL입니다.  
   
 > [!NOTE]  
 >  이 매개 변수는 더 이상 사용되지 않으며 이전 버전 스크립트와의 호환성을 위해 유지 관리됩니다.  

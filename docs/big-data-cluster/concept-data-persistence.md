@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dcc30e8d86a1a767291b410df7cfd3aa42edf27f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68471001"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028588"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes의 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성
 
@@ -45,7 +45,7 @@ SQL Server 빅 데이터 클러스터는 [스토리지 클래스](https://kubern
     }
 ```
 
-빅 데이터 클러스터 배포는 영구적 스토리지를 사용하여 다양한 구성 요소의 데이터, 메타데이터 및 로그를 저장합니다. 배포 과정에서 생성되는 영구적 볼륨 클레임의 크기를 사용자 지정할 수 있습니다. 모범 사례에 따라 ‘유지’ [회수 정책](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)으로 스토리지 클래스를 사용하는 것이 좋습니다. 
+빅 데이터 클러스터 배포는 영구적 스토리지를 사용하여 다양한 구성 요소의 데이터, 메타데이터 및 로그를 저장합니다. 배포 과정에서 생성되는 영구적 볼륨 클레임의 크기를 사용자 지정할 수 있습니다. 모범 사례에 따라 ‘유지’ [회수 정책](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)으로 스토리지 클래스를 사용하는 것이 좋습니다.
 
 > [!NOTE]
 > CTP 3.2에서는 배포 후에 스토리지 구성 설정을 수정할 수 없습니다. 또한 전체 클러스터에 대한 `ReadWriteOnce` 액세스 모드만 지원됩니다.
@@ -60,7 +60,7 @@ SQL Server 빅 데이터 클러스터는 [스토리지 클래스](https://kubern
 AKS에는 [두 가지 기본 제공 스토리지 클래스](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)인 **default** 및 **managed-premium**과 동적 프로비저닝 프로그램이 포함되어 있습니다. 두 클래스 중 하나를 지정하거나, 영구적 스토리지를 사용하는 빅 데이터 클러스터를 배포하기 위해 고유한 스토리지 클래스를 만들 수 있습니다. 기본적으로 aks *aks-dev-test*의 기본 제공 클러스터 구성 파일에는 **default** 스토리지 클래스를 사용하는 영구적 스토리지 구성이 있습니다.
 
 > [!WARNING]
-> 기본 제공 스토리지 클래스인 **default** 및 **managed-premium**을 사용하여 만든 영구적 볼륨에는 ‘삭제’ 회수 정책이 지정됩니다.  따라서 SQL Server 빅 데이터 클러스터를 삭제할 때 영구적 볼륨 클레임이 삭제된 다음, 영구적 볼륨도 삭제됩니다. [이](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes) 문서에 표시된 대로 ‘유지’ 회수 정책으로 **azure-disk** 프로비저닝 프로그램을 사용하여 사용자 지정 스토리지 클래스를 만들 수 있습니다. 
+> 기본 제공 스토리지 클래스인 **default** 및 **managed-premium**을 사용하여 만든 영구적 볼륨에는 ‘삭제’ 회수 정책이 지정됩니다. 따라서 SQL Server 빅 데이터 클러스터를 삭제할 때 영구적 볼륨 클레임이 삭제된 다음, 영구적 볼륨도 삭제됩니다. [이](https://docs.microsoft.com/azure/aks/concepts-storage#storage-classes) 문서에 표시된 대로 ‘유지’ 회수 정책으로 **azure-disk** 프로비저닝 프로그램을 사용하여 사용자 지정 스토리지 클래스를 만들 수 있습니다.
 
 
 ## <a name="minikube-storage-class"></a>minikube 스토리지 클래스

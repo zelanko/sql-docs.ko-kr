@@ -1,5 +1,5 @@
 ---
-title: 서버 메모리 서버 구성 옵션 | Microsoft Docs
+title: 서버 메모리 구성 옵션 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,20 +21,20 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c366a239ca3459bc8fe4517736a4c0bcc64301cb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68475969"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028694"
 ---
-# <a name="server-memory-server-configuration-options"></a>서버 메모리 서버 구성 옵션
+# <a name="server-memory-configuration-options"></a>서버 메모리 구성 옵션
   **최소 서버 메모리** 및 **최대 서버 메모리**의 두 가지 서버 메모리 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 사용하는 SQL Server 프로세스의 메모리 양(MB)을 다시 구성할 수 있습니다. 이 메모리는 SQL Server Memory Manager가 관리합니다.  
   
  **min server memory** 의 기본 설정은 0이고, **max server memory** 의 기본 설정은 2147483647MB입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경할 수 있습니다.  
   
 > [!NOTE]  
->  **max server memory** 를 최소값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능이 심각하게 손상되며 SQL Server를 시작하지 못할 수도 있습니다. 이 옵션을 변경한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작할 수 없으면 **–f** 시작 옵션을 사용하여 시작하고 **max server memory**를 이전 값으로 다시 설정합니다. 자세한 내용은 [Database Engine Service Startup Options](database-engine-service-startup-options.md)을(를) 참조하세요.  
+> **max server memory** 를 최소값으로 설정하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 성능이 심각하게 손상되며 SQL Server를 시작하지 못할 수도 있습니다. 이 옵션을 변경한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 시작할 수 없으면 **–f** 시작 옵션을 사용하여 시작하고 **max server memory**를 이전 값으로 다시 설정합니다. 자세한 내용은 [Database Engine Service Startup Options](database-engine-service-startup-options.md)을(를) 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 동적으로 메모리를 사용하면 주기적으로 시스템을 쿼리하여 사용할 수 있는 메모리 양을 확인합니다. 사용 가능한 메모리를 이 수준으로 유지 관리하면 OS(운영 체제)에서 페이징을 방지합니다. 사용 가능한 메모리가 이보다 적은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 메모리를 OS로 해제합니다. 사용 가능한 메모리가 이보다 많은 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 더 많은 메모리를 할당할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 작업에 메모리가 더 필요한 경우에만 메모리를 추가합니다. 서버가 유휴 상태이면 가상 주소 공간 크기가 증가하지 않습니다.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68475969"
 
 <sup>2</sup> 현재 호스트에서 선호도가 높은 CPU의 지정된 수에 대해 계산된 기본 작업자 스레드에 대한 내용은 [max worker threads 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) 방법에 대한 설명서 페이지를 참조하세요.
 
-<sup>3</sup> *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)의 설명서 페이지를 참조하세요. 32 비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Aplicable)로만 이동 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]합니다.
+<sup>3</sup> *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014)의 설명서 페이지를 참조하세요. 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]~[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])에만 적용됩니다.
 
 |OS 유형|**최대 서버 메모리** 에 허용 되는 최소 메모리 양|  
 |-------------|----------------------------------------------------------------|  

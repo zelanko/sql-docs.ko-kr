@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: e360ba3a-e96b-4f85-b588-ed1f767fa973
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: cbec8d77386985e7f33863793b86eb2db0b8d6bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30b1f8addacb1c4502a50ab5d00e507aa4ca63cc
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944898"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028799"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>마스터 데이터 관리자 웹 애플리케이션의 보안 설정
 
@@ -61,7 +61,7 @@ ms.locfileid: "67944898"
 
 12. Silverlight 클라이언트에서 발생할 수 있는 문제를 방지하기 위해 `<serviceMetadata httpGetEnable="true" httpsGetEnabled="false">`를 `<serviceMetadata httpGetEnable="false" httpsGetEnabled="true">`로 변경합니다.
 
-13. 파일을 저장하고 닫습니다. 오류가 발생하는 경우 UAC를 사용하기 때문일 수 있습니다. 자세한 내용은 [사용자 계정 컨트롤 해제](http://technet.microsoft.com/library/cc709691\(WS.10\).aspx)를 참조하십시오. 이제 사용자가 HTTPS를 사용하여 사이트에 액세스할 수 있습니다.  
+13. 파일을 저장하고 닫습니다. 오류가 발생하는 경우 UAC를 사용하기 때문일 수 있습니다. 이제 사용자가 HTTPS를 사용하여 사이트에 액세스할 수 있습니다.  
 
   
 ## <a name="see-also"></a>관련 항목  

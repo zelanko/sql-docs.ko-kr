@@ -13,19 +13,19 @@ ms.assetid: a8ec413a-38d3-45df-887e-6f5f4d9f8465
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f41d86d0f757f9ccd0e698ac1bc81423a3118bb9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88ab6a4e91b98a2e6551f6a01cbca29738513b61
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832784"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028627"
 ---
 # <a name="azure-hdinsight-create-cluster-task"></a>Azure HDInsight 클러스터 만들기 태스크
 **Azure HDInsight 클러스터 만들기 태스크** 를 사용하면 SSIS 패키지에서 지정된 Azure 구독 및 리소스 그룹에 Azure HDInsight 클러스터를 만들 수 있습니다.
   
 > [!NOTE]  
 > - 새 HDInsight 클러스터 만들기에는 10~20분이 걸립니다.  
-> - Azure HDInsight 클러스터 만들기 및 실행과 관련하여 비용이 듭니다. 자세한 내용은 [HDInsight 가격 책정](http://azure.microsoft.com/en-us/pricing/details/hdinsight/)을 참조하세요.  
+> - Azure HDInsight 클러스터 만들기 및 실행과 관련하여 비용이 듭니다. 자세한 내용은 [HDInsight 가격 책정](https://azure.microsoft.com/pricing/details/hdinsight/)을 참조하세요.  
   
 **Azure HDInsight 클러스터 만들기 태스크**를 추가하려면 해당 태스크를 SSIS 디자이너로 끌어서 놓고 두 번 클릭하거나 마우스 오른쪽 단추를 클릭하고 **편집** 을 클릭하여 다음과 같은 **Azure HDInsight 클러스터 만들기 태스크 편집기** 대화 상자를 표시합니다.  
   

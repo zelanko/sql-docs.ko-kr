@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9444842081456563f411ad618f32b8dbd59f7513
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: aaccdff9d5debe30eacfddfd8423a0a57b8a37fb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426443"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028560"
 ---
 # <a name="install-azdata-to-manage-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터를 관리하기 위한 azdata 설치
 
@@ -25,7 +25,7 @@ ms.locfileid: "68426443"
 ## <a id="prerequisites"></a> 사전 요구 사항
 
 **azdata**는 Python으로 작성된 명령줄 유틸리티로, 클러스터 관리자가 REST API를 통해 빅 데이터 클러스터를 부트스트랩하고 관리할 수 있도록 합니다. 필요한 최소 Python 버전은 v3.5입니다. **azdata** 도구를 다운로드하고 설치하는 데 사용되는 `pip`도 있어야 합니다. 아래 지침에서는 Windows 및 Ubuntu용 예제를 제공합니다. 다른 플랫폼에서 Python을 설치하는 경우 [Python 설명서](https://wiki.python.org/moin/BeginnersGuide/Download)를 참조하세요.
-또한 최신 버전의 ‘요청’ Python 패키지도 설치 및 업데이트해야 합니다. 
+또한 최신 버전의 ‘요청’ Python 패키지도 설치 및 업데이트해야 합니다.
 ```bash
 pip3 install -U requests
 ```
@@ -71,8 +71,8 @@ Linux에서 Python 3.5를 설치한 다음, pip를 업그레이드해야 합니�
 1. 필요한 Python 패키지를 설치합니다.
 
    ```bash
-   sudo apt-get update && /
-   sudo apt-get install -y python3 && /
+   sudo apt-get update && \
+   sudo apt-get install -y python3 && \
    sudo apt-get install -y python3-pip
    ```
 
