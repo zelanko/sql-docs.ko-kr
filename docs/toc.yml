@@ -95,7 +95,7 @@
                   href: big-data-cluster/deploy-notebooks.md
     - name: 개념
       items:
-        - name: 응용 프로그램 개발
+        - name: 애플리케이션 개발
           href: big-data-cluster/concept-application-deployment.md
         - name: 컨트롤러
           href: big-data-cluster/concept-controller.md
@@ -2942,7 +2942,7 @@
               items:
                 - name: 비동기 모드와 SQLCancel
                   href: relational-databases/native-client/odbc/creating-a-driver-application-asynchronous-mode-and-sqlcancel.md
-                - name: 다중 스레드 응용 프로그램
+                - name: 다중 스레드 애플리케이션
                   href: relational-databases/native-client/odbc/creating-a-driver-application-multithreaded-applications.md
         - name: Native Client용 SQL ODBC API
           items:
@@ -10012,12 +10012,12 @@
           items:
             - name: SSMS 지원 정책
               href: ssms/support-policy.md
-            - name: 피드백 및 도움말
-              href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
             - name: SSMS의 사용자 지원
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: 익명 사용 현황 데이터
               href: ssms/sql-server-management-studio-telemetry-ssms.md
+            - name: 피드백 >
+              href: 'https://aka.ms/sqlfeedback'
     - name: SqlPackage.exe
       items:
         - name: sqlpackage 설치
