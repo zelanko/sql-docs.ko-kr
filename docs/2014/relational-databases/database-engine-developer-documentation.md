@@ -13,12 +13,12 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890811"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530953"
 ---
 # <a name="developer39s-guide-database-engine"></a>개발자&#39;가이드 (데이터베이스 엔진)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 데이터베이스 응용 프로그램 개발, 관리 및 제어를 위한 풍부한 도구 집합을 제공합니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "68890811"
  애플리케이션에서 예외 메시지 상자 프로그래밍 인터페이스를 사용하여 메시징 환경에 대한 추가적인 제어를 제공하고, 사용자에게 나중에 참조할 수 있도록 오류 메시지 내용을 저장하는 옵션을 제공하고, 메시지를 통해 도움을 받을 수 있는 기회를 제공합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [데이터 마이닝 프로그래밍](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [데이터 마이닝 프로그래밍](../analysis-services/dev-guide/data-mining-programming.md)   
  [개발자 가이드 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
  [개발자 가이드 &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
  [개발자 가이드 &#40;복제&#41;](replication/concepts/replication-developer-documentation.md)   

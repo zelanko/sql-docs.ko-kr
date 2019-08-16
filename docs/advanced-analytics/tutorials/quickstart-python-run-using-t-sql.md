@@ -1,24 +1,24 @@
 ---
-title: T-sql에서 "Hello World" 기본 Python 코드 실행에 대 한 빠른 시작
-description: SQL Server의 Python 스크립트에 대 한 빠른 시작입니다. Hello 세계의 sp_execute_external_script 시스템 저장 프로시저를 사용 하 여 Python 스크립트를 호출 하는 기본 사항에 대해 알아봅니다.
+title: '빠른 시작: Python "Hello World"'
+description: 이 빠른 시작에서는 SQL Server Machine Learning Services에서 "Hello World" Python 스크립트를 실행 하 여 주요 개념에 대해 알아봅니다. T-sql sp_execute_external_script 시스템 저장 프로시저를 사용 합니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/10/2019
+ms.date: 08/15/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a170bd2ee3e893a83ebb9d3201ee117321e7562b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1149c7888bc783c9d4f658eed5e8405214d6ffc4
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714819"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530972"
 ---
-# <a name="quickstart-hello-world-python-script-in-sql-server"></a>빠른 시작: SQL Server에서 "Hello 세계" Python 스크립트 
+# <a name="quickstart-run-a-hello-world-python-script-on-sql-server-machine-learning-services"></a>빠른 시작: SQL Server Machine Learning Services에서 "Hello 세계" Python 스크립트를 실행 합니다.
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 빠른 시작에서는 **sp_execute_external_script** 시스템 저장 프로시저를 소개 하 고 "Hello World" Python 스크립트 INT-SQL을 실행 하 여 주요 개념을 알아봅니다. 
+이 빠른 시작에서는 SQL Server Machine Learning Services에서 "Hello World" Python 스크립트를 실행 하 여 주요 개념에 대해 알아봅니다. T-sql **sp_execute_external_script** 시스템 저장 프로시저를 사용 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -85,7 +85,7 @@ GO
 + *@language* 매개 변수는 호출할 언어 확장 (이 경우 Python)을 정의 합니다.
 + *@script* 매개 변수는 Python 런타임으로 전달 되는 명령을 정의 합니다. 전체 Python 스크립트는이 인수에 유니코드 텍스트로 묶어야 합니다. **nvarchar** 형식의 변수에 텍스트를 추가한 다음 변수를 호출할 수도 있습니다.
 + *@input_data_1* 쿼리에서 반환 되는 데이터로, Python 런타임으로 전달 되며 SQL Server 데이터를 데이터 프레임으로 반환 합니다.
-+ WITH RESULT SETS 절은 SQL Server에 대해 반환 된 데이터 테이블의 스키마를 정의 하 고 데이터 형식 **에 대해 열** 이름으로 "Hello World"를 추가 합니다.
++ WITH RESULT SETS 절은 SQL Server에 대해 반환 된 데이터 테이블의 스키마를 정의 하 고 데이터 형식에 대해 열 이름 으로 "Hello World"를 추가 합니다.
 
 **결과**
 

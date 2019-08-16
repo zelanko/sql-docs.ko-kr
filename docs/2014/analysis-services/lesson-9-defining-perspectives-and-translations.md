@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 779d63264280569465ae2c0815caf15ed9b9f8b2
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493753"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530835"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>9단원: 큐브 뷰 및 번역 정의
   이 단원에서는 큐브 뷰 및 번역을 정의하는 방법을 배웁니다. 큐브 뷰를 정의하여 큐브의 복잡성을 줄이고 사용자들이 선택한 언어로 큐브 메타데이터를 볼 수 있도록 하는 번역을 정의할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "69493753"
  [10 단원: 관리 역할 정의](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [Analysis Services 자습서 시나리오](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Analysis Services 자습서 시나리오](analysis-services-tutorial-scenario.md)   
  [다차원 모델링 &#40;놀이 Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [큐브 뷰](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives)   
  [다차원 모델의 큐브 뷰](multidimensional-models/perspectives-in-multidimensional-models.md)   

@@ -1,5 +1,5 @@
 ---
-title: 도구 및 접근 방법 처리 (Analysis Services) | Microsoft Docs
+title: 도구 및 처리 접근 방법 (Analysis Services) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -13,12 +13,12 @@ ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 66696d32b62f29df7a4a1866978d72f5d4a173ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072814"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530945"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>도구 및 처리 접근 방법(Analysis Services)
   처리는 Analysis Services가 관계형 데이터 원본을 쿼리하고 해당 데이터를 사용하여 Analysis Services 개체를 채우는 작업입니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "66072814"
  처리는 다양하게 구성 가능한 작업으로, 개체 수준에서 전체 처리가 발생하는지 증분 처리가 발생하는지 결정하는 일련의 처리 옵션으로 제어됩니다. 처리 옵션 및 개체에 대한 자세한 내용은 [처리 옵션 및 설정&#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md) 및 [Analysis Services 개체 처리](processing-analysis-services-objects.md)를 참조하세요.  
   
 > [!NOTE]  
->  이 항목에서는 다차원 모델을 처리하기 위한 도구와 방법에 대해 설명합니다. 테이블 형식 모델을 처리 하는 방법에 대 한 자세한 내용은 참조 하세요. [Process Database, 테이블 또는 파티션](../tabular-models/process-database-table-or-partition-analysis-services.md) 하 고 [데이터 처리 &#40;&AMP;#40;SSAS 테이블 형식&#41;](../process-data-ssas-tabular.md).  
+>  이 항목에서는 다차원 모델을 처리하기 위한 도구와 방법에 대해 설명합니다. 테이블 형식 모델 처리에 대 한 자세한 내용은 [데이터베이스, 테이블 또는 파티션](../tabular-models/process-database-table-or-partition-analysis-services.md) 처리 및 [데이터 &#40;처리 SSAS 테이블 형식&#41;](../process-data-ssas-tabular.md)을 참조 하세요.  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>SQL Server Management Studio에서 개체 처리  
   
@@ -122,13 +122,13 @@ ms.locfileid: "66072814"
   
 1.  이 SQL Server 릴리스부터는 Analysis Services PowerShell cmdlet을 사용하여 개체를 처리할 수 있습니다. 다음 cmdlet은 대화형으로 실행하거나 스크립트로 실행할 수 있습니다.  
   
-    -   [Invoke-ProcessCube cmdlet](/sql/analysis-services/powershell/invoke-processcube-cmdlet)  
+    -   [Invoke-ProcessCube cmdlet](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Invoke-ProcessDimension cmdlet](/sql/analysis-services/powershell/invoke-processdimension-cmdlet)  
+    -   [Invoke-ProcessDimension cmdlet](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Invoke-ProcessPartition cmdlet](/sql/analysis-services/powershell/invoke-processpartition-cmdlet)  
+    -   [Invoke-ProcessPartition cmdlet](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Invoke-ASCmd cmdlet](/sql/analysis-services/powershell/invoke-ascmd-cmdlet)- 처리 명령을 포함하는 XMLA, MDX 또는 DMX 스크립트를 실행하는 데 사용할 수 있습니다.  
+    -   [Invoke-ASCmd cmdlet](/powershell/module/sqlserver/invoke-ascmd)- 처리 명령을 포함하는 XMLA, MDX 또는 DMX 스크립트를 실행하는 데 사용할 수 있습니다.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>SQL Server 프로파일러를 사용하여 개체 처리 모니터링  
   

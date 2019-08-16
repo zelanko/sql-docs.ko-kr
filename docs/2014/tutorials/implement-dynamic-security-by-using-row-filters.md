@@ -10,12 +10,12 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 49a62fb647b7b1a1579103f96907d0635ecc635f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893598"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530884"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>행 필터를 사용하여 동적 보안 구현
   이 추가 단원에서는 동적 보안을 구현하는 추가 역할을 만들어 봅니다. 동적 보안은 현재 로그온한 사용자의 사용자 이름 또는 로그인 ID를 기반으로 하는 행 수준 보안을 제공합니다. 자세한 내용은 [역할&#40;SSAS 테이블 형식&#41;](https://docs.microsoft.com/analysis-services/tabular-models/roles-ssas-tabular)을 참조하세요.  
@@ -130,7 +130,7 @@ ms.locfileid: "68893598"
  이 태스크에서는 새 사용자 역할을 만듭니다. 이 역할에는 Sales Territory 테이블에서 사용자에게 표시되지 않는 행을 정의하는 행 필터가 포함됩니다. 그러면 이 필터는 일대다 관계 방향으로 Sales Territory에 관련된 다른 모든 테이블에 적용됩니다. 역할의 멤버인 사용자가 전체 Employee Security 테이블을 쿼리할 수 없도록 보호하는 간단한 필터도 적용합니다.  
   
 > [!NOTE]  
->  이 단원에서 만드는 Sales Employees by Territory 역할은 멤버가 자신이 속한 영업 지역에 대한 판매 데이터만 검색(또는 쿼리)할 수 있도록 제한합니다. 다음 12 단원에서 [만든 역할의 멤버로도 존재 하는 사용자를 지역에서 영업 직원 역할에 구성원으로 추가 하는 경우: 역할](https://docs.microsoft.com/analysis-services/lesson-11-create-roles)을 만들면 사용 권한의 조합이 제공 됩니다. 사용자가 여러 역할의 멤버인 경우 각 역할에 대해 정의된 사용 권한과 행 필터는 누적됩니다. 즉, 사용자는 역할의 조합으로 결정되는 더 큰 사용 권한을 갖게 됩니다.  
+>  이 단원에서 만드는 Sales Employees by Territory 역할은 멤버가 자신이 속한 영업 지역에 대한 판매 데이터만 검색(또는 쿼리)할 수 있도록 제한합니다. 다음 12 단원에서 [만든 역할의 멤버로도 존재 하는 사용자를 지역에서 영업 직원 역할에 구성원으로 추가 하는 경우: 역할](../analysis-services/lesson-11-create-roles.md)을 만들면 사용 권한의 조합이 제공 됩니다. 사용자가 여러 역할의 멤버인 경우 각 역할에 대해 정의된 사용 권한과 행 필터는 누적됩니다. 즉, 사용자는 역할의 조합으로 결정되는 더 큰 사용 권한을 갖게 됩니다.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Sales Employees by Territory 사용자 역할을 만들려면  
   

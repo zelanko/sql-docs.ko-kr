@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: fba13ea5d6d91ab83cb2560727ed75c79bc4c48b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715221"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531046"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows에 SQL Server Machine Learning를 설치합니다.
 
@@ -149,7 +149,7 @@ R 기능 통합의 경우에는 **MKL_CBWR** 환경 변수를 설정 하 여 Int
 
 서비스를 다시 시작 하면 관련 [!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)] 서비스도 자동으로 다시 시작 됩니다.
 
-SSMS에서 인스턴스에 대해 마우스 오른쪽 단추 **를 클릭 하거나** 제어판의 **서비스** 패널을 사용 하거나 [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)를 사용 하 여 서비스를 다시 시작할 수 있습니다.
+SSMS에서 인스턴스에 대해 마우스 오른쪽 단추를 클릭 하거나 제어판의 **서비스** 패널을 사용 하거나 [SQL Server 구성 관리자](../../relational-databases/sql-server-configuration-manager.md)를 사용 하 여 서비스를 다시 시작할 수 있습니다.
 
 ## <a name="verify-installation"></a>설치 확인
 
@@ -244,6 +244,10 @@ SSMS에서 인스턴스에 대해 마우스 오른쪽 단추 **를 클릭 하거
 * [SQLRUserGroup에 대 한 로그인 만들기](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 * 디스크 공간을 확보 하는 작업을 실행 하는 외부 스크립트를 방지 하는 [디스크 할당량 관리](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+Windows의 SQL Server 2019에서는 격리 메커니즘이 변경 되었습니다. 이는 **SQLRUserGroup**, 방화벽 규칙, 파일 사용 권한 및 묵시적 인증에 영향을 줍니다. 자세한 내용은 [Machine Learning Services에 대 한 격리 변경 내용](sql-server-machine-learning-services-2019.md)을 참조 하세요.
+::: moniker-end
+
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
@@ -258,9 +262,11 @@ SSMS에서 인스턴스에 대해 마우스 오른쪽 단추 **를 클릭 하거
 
 모든 작업을 수행 했으므로 이제 기계 학습을 지원 하도록 서버를 최적화 하거나 미리 학습 된 모델을 설치할 수도 있습니다.
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### <a name="add-more-worker-accounts"></a>작업자 계정 추가
 
 많은 사용자가 스크립트를 동시에 실행 하는 것으로 간주 되는 경우 실행 패드 서비스에 할당 된 작업자 계정 수를 늘릴 수 있습니다. 자세한 내용은 [SQL Server Machine Learning Services 사용자 계정 풀 수정](../administration/modify-user-account-pool.md)을 참조 하세요.
+::: moniker-end
 
 ### <a name="optimize-the-server-for-script-execution"></a>스크립트 실행을 위해 서버 최적화
 
@@ -286,14 +292,14 @@ R 패키지를 설치 하 고 관리 하려면 사용자 그룹을 설정 하 �
 
 ## <a name="next-steps"></a>다음 단계
 
-R 개발자는 몇 가지 간단한 예제를 시작 하 고 R이 SQL Server와 작동 하는 방식에 대 한 기본 사항을 배울 수 있습니다. 다음 단계는 다음 링크를 참조 하세요.
+R 개발자는 몇 가지 간단한 예제를 시작하고 R이 SQL Server에서 작동하는 방식의 기초를 알아볼 수 있습니다. 다음 단계로 가려면 아래 링크를 참조하세요.
 
-+ [자습서: T-sql에서 R 실행](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [자습서: T-SQL에서 R 사용](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 + [자습서: R 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-Python 개발자는 다음 자습서를 수행 하 여 SQL Server에서 Python을 사용 하는 방법을 배울 수 있습니다.
+Python 개발자는 다음 자습서에 따라 SQL Server에서 Python을 사용하는 방법을 알아볼 수 있습니다.
 
-+ [자습서: T-sql에서 Python 실행](../tutorials/run-python-using-t-sql.md)
++ [자습서: T-SQL에서 Python 실행](../tutorials/run-python-using-t-sql.md)
 + [자습서: Python 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-실제 시나리오를 기반으로 하는 기계 학습의 예를 보려면 [machine learning 자습서](../tutorials/machine-learning-services-tutorials.md)를 참조 하세요.
+실제 시나리오를 기반으로 하는 기계 학습의 예제를 보려면 [기계 학습 자습서](../tutorials/machine-learning-services-tutorials.md)를 참조하세요.

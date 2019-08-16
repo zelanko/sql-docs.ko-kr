@@ -12,12 +12,12 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a18d9d54034ea98cf7a449c8f7147eaa54c65263
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6b29a31acb4e3dad83c760c27a9591cac026e0ea
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889444"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530902"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP 아키텍처 이해
   다음 항목을 통해 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다차원 데이터베이스를 더 잘 이해하고 비즈니스 인텔리전스 솔루션에서 다차원 데이터베이스를 구현하는 방법을 계획할 수 있습니다.  
@@ -46,7 +46,7 @@ ms.locfileid: "68889444"
  [ADOMD.NET을 사용하여 개발](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
  ![작은 파일 폴더 아이콘](../../../integration-services/media/filefolder-small.gif "작은 파일 폴더 아이콘") **국가별 고려 사항**  
- [Analysis Services Multiidimensional에 대 한 세계화 시나리오](https://docs.microsoft.com/analysis-services/globalization-scenarios-for-analysis-services-multiidimensional)  
+ [Analysis Services Multiidimensional에 대 한 세계화 시나리오](../../globalization-scenarios-for-analysis-services-multiidimensional.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [기술 참조 &#40;SSAS&#41;](../../powershell/technical-reference-ssas.md)  

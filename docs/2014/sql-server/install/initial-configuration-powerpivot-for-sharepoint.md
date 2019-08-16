@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ba51a979572bb91b840f41483081464e8cd044e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: e331f25811255569261fb30c2869b428843ebfc5
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891085"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530915"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>초기 구성(SharePoint용 PowerPivot)
   이 항목의 단계에 따라 SharePoint용 PowerPivot의 초기 설치를 구성합니다. 초기 설치를 구성하는 가장 쉬운 방법은 PowerPivot 구성 도구를 사용하는 것입니다. 그러면 아래에 설명한 모든 구성 단계를 자동화할 수 있습니다.  
@@ -195,7 +195,7 @@ ms.locfileid: "68891085"
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>3부: 무인 PowerPivot 데이터 새로 고침 계정 구성  
  데이터 새로 고침 중에 외부 데이터에 액세스하려면 PowerPivot 데이터 액세스용으로 무인 데이터 새로 고침 계정을 만들어야 하는 경우가 많습니다. 예를 들어 Kerberos가 설정되지 않은 경우에는 PowerPivot 서비스가 외부 데이터 원본에 연결하는 데 사용할 수 있는 무인 계정을 만들어야 합니다.  
   
- 무인 PowerPivot 데이터 새로 고침 계정 또는 데이터 새로 고침에 사용 되는 기타 저장 된 자격 증명을 만드는 방법에 대 한 지침은 [PowerPivot 무인 데이터 새로 고침 &#40;계정&#41; 구성](https://docs.microsoft.com/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint) 을 참조 하세요 SharePoint용 PowerPivot [PowerPivot 데이터 새로 고침 &#40;SharePoint용 PowerPivot&#41;에 저장 된 자격 증명을 구성](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)합니다.  
+ 무인 PowerPivot 데이터 새로 고침 계정 또는 데이터 새로 고침에 사용 되는 기타 저장 된 자격 증명을 만드는 방법에 대 한 지침은 [PowerPivot 무인 데이터 새로 고침 &#40;계정&#41; 구성](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) 을 참조 하세요 SharePoint용 PowerPivot [PowerPivot 데이터 새로 고침 &#40;SharePoint용 PowerPivot&#41;에 저장 된 자격 증명을 구성](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)합니다.  
   
 ##  <a name="Usage"></a> 6단계: 사용 데이터 컬렉션 사용  
  SharePoint용 PowerPivot은 SharePoint 사용 데이터 컬렉션 인프라를 사용해 팜 전체의 PowerPivot 사용에 대한 정보를 수집합니다. 사용 현황 데이터는 항상 SharePoint와 함께 설치되지만 우선 활성화해야 사용할 수 있습니다. 자세한 내용은 [SharePoint용 PowerPivot에 대 한 &#40;사용 현황 데이터 수집 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint)을 참조 하세요.  

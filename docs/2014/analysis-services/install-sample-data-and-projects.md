@@ -10,12 +10,12 @@ ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5fed7f199f80f59c1983ec5f17a4f922c836333
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888624"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530823"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Analysis Services 다차원 모델링 자습서에 사용할 예제 데이터 및 프로젝트 설치
   이 항목에 제공된 지침과 링크를 사용하여 Analysis Services 자습서에 사용되는 모든 데이터 및 프로젝트 파일을 설치할 수 있습니다.  
@@ -145,7 +145,7 @@ ms.locfileid: "68888624"
 8.  SQL Server Management Studio를 시작합니다. SQL Server Management Studio에서 Analysis Services에 연결합니다. 서버에서 **Analysis Services 자습서**라는 데이터베이스가 실행되고 있는지 확인합니다.  
   
 ## <a name="next-step"></a>다음 단계  
- 이제 자습서를 사용할 준비가 되었습니다. 시작하는 방법에 대한 자세한 내용은 [다차원 모델링&#40;Adventure Works 자습서&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)을 참조하세요.  
+ 이제 자습서를 사용할 준비가 되었습니다. 시작하는 방법에 대한 자세한 내용은 [다차원 모델링&#40;Adventure Works 자습서&#41;](multidimensional-modeling-adventure-works-tutorial.md)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [설치 마법사 &#40;설치에서 SQL Server 2014 설치&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   

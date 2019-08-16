@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_audit_status (TRANSACT-SQL) | Microsoft Docs
+title: _server_audit_status (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 04/19/2016
 ms.prod: sql
@@ -18,31 +18,31 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 3291edb34087e46739cf984d2412821fa66b7a07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ff565f46b5329515b1ab4424657c45a12720c28b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053225"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530856"
 ---
-# <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status(Transact-SQL)
+# <a name="sysdm_server_audit_status-transact-sql"></a>sys.dm_server_audit_status(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   감사의 현재 상태를 나타내는 각 서버 감사의 행을 반환합니다. 자세한 내용은 [SQL Server Audit&#40;데이터베이스 엔진&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)을 참조하세요.  
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**audit_id**|**int**|감사의 ID입니다. 매핑되는 **audit_id** 필드를 **sys.audits** 카탈로그 뷰.|  
-|**name**|**sysname**|감사의 이름입니다. 동일 합니다 **이름을** 필드를 **sys.server_audits** 카탈로그 뷰.|  
-|**상태**|**smallint**|서버 감사의 숫자 상태입니다.<br /><br /> 0 = 시작 되지 않음<br /><br /> 1 =<br />        시작됨<br /><br /> 2 =<br />      런타임 오류<br /><br /> 3 = target 만들기 실패<br /><br /> 4 = 종료|  
+|**audit_id**|**int**|감사의 ID입니다. Audit_id 카탈로그 뷰의 필드에 매핑합니다 .|  
+|**name**|**sysname**|감사의 이름입니다. **Server_audits** 카탈로그 뷰의 **이름** 필드와 동일 합니다.|  
+|**상태**|**smallint**|서버 감사의 숫자 상태입니다.<br /><br /> 0 = 시작 되지 않음<br /><br /> 1 =<br />        시작됨<br /><br /> 2 =<br />      런타임 실패<br /><br /> 3 = 대상 만들기 실패<br /><br /> 4 = 종료 중|  
 |**status_desc**|**nvarchar(256)**|서버 감사의 상태를 보여 주는 문자열입니다.<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|감사의 마지막 상태 변경에 대한 UTC의 타임스탬프입니다.|  
-|**event_session_address**|**varbinary(8)**|감사와 연결된 확장 이벤트 세션의 주소입니다. 관련 된 **sys.db_xe_sessions.address** 카탈로그 뷰.|  
+|**event_session_address**|**varbinary(8)**|감사와 연결된 확장 이벤트 세션의 주소입니다. **_Xe_sessions** 카탈로그 뷰와 관련 됩니다.|  
 |**audit_file_path**|**nvarchar(256)**|현재 사용되고 있는 감사 파일 대상의 전체 경로 및 파일 이름입니다. 파일 감사에 대해서만 채워집니다.|  
 |**audit_file_size**|**bigint**|감사 파일의 대략적인 크기(바이트)입니다. 파일 감사에 대해서만 채워집니다.|  
   
 ## <a name="permissions"></a>사용 권한  
- 보안 주체에 있어야 **VIEW SERVER STATE** 하 고 **선택** 권한.  
+ 보안 주체에 **VIEW SERVER STATE** 및 **SELECT** 권한이 있어야 합니다.  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   

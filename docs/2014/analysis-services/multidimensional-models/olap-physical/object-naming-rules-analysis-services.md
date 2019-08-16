@@ -12,12 +12,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ba1b1b3b8d8fa3f26af84ef12f95858ac32cdeee
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957319"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530887"
 ---
 # <a name="object-naming-rules-analysis-services"></a>개체 명명 규칙(Analysis Services)
   이 항목에서는 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 코드 또는 스크립트, 개체 이름에 사용할 수 없는 예약어 및 문자뿐만 아니라 개체 명명 규칙에 대해 설명합니다.  
@@ -89,7 +89,7 @@ ms.locfileid: "68957319"
   
 ## <a name="see-also"></a>관련 항목  
  [MDX 예약어](/sql/mdx/mdx-reserved-words)   
- [번역 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/translations-analysis-services)   
+ [번역 &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
  [XML for Analysis 준수 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

@@ -1,22 +1,28 @@
 ---
-title: SQL Server 2019의 차이점
-description: SQL Server 2019 preview 릴리스에서 SQL Server machine learning 확장의 R 및 Python에 대 한 새로운 기능을 알아봅니다.
+title: Windows에 대 한 격리 변경
+description: 이 문서에서는 Windows의 2019 SQL Server에서 Machine Learning Services의 격리 메커니즘에 대 한 변경 내용을 설명 합니다. 이러한 변경 사항은 SQLRUserGroup, 방화벽 규칙, 파일 사용 권한 및 묵시적 인증에 영향을 줍니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 218ae9bd0685370f38942592fd32da75272fbcac
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470306"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531042"
 ---
-# <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019의 SQL Server Machine Learning Services 설치의 차이점  
+# <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows의 SQL Server 2019: Machine Learning Services에 대 한 격리 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+이 문서에서는 Windows의 2019 SQL Server에서 Machine Learning Services의 격리 메커니즘에 대 한 변경 내용을 설명 합니다. 이러한 변경 사항은 **SQLRUserGroup**, 방화벽 규칙, 파일 사용 권한 및 묵시적 인증에 영향을 줍니다.
+
+자세한 내용은 [Windows에서 SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md)를 설치 하는 방법을 참조 하세요.
+
+## <a name="changes-to-isolation-mechanism"></a>격리 메커니즘의 변경 내용
 
 Windows에서 SQL Server 2019 설치 프로그램은 외부 프로세스에 대 한 격리 메커니즘을 변경 합니다. 이 변경 내용은 Windows에서 실행 되는 클라이언트 응용 프로그램에 대 한 격리 기술인 로컬 작업자 계정을 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)으로 바꿉니다. 
 
@@ -63,5 +69,4 @@ AppContainers로 이동 하는 과정의 일환으로, AppContainer Sid를 기�
 ## <a name="see-also"></a>참조
 
 + [Windows에 SQL Server Machine Learning Services 설치](sql-machine-learning-services-windows-install.md)
-
-+ [Linux에 SQL Server 2019 Machine Learning Services 설치](../../linux/sql-server-linux-setup-machine-learning.md)
++ [Linux에 SQL Server Machine Learning Services 설치](../../linux/sql-server-linux-setup-machine-learning.md)
