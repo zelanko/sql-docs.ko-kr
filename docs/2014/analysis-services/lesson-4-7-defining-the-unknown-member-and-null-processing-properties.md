@@ -10,12 +10,12 @@ ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 57a5e09329a992f54287c22cb50a5c9f162c89db
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: d0d97b7fea9557e1ce462fcc540e51a1ee4b0228
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888336"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493927"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>알 수 없는 멤버 및 Null 처리 속성 정의
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 차원을 처리하는 경우 데이터 원본 뷰의 뷰나 테이블의 기본 열에 있는 모든 고유 값이 차원의 특성을 채웁니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 처리 도중에 Null 값이 발생할 경우 기본적으로 이 Null은 숫자 열의 경우 0으로 변환되고 문자열 열의 경우 빈 문자열로 변환됩니다. 기본 관계형 데이터 웨어하우스의 추출, 변환 및 로드 프로세스(있을 경우)에서 이러한 기본 설정을 수정하거나 Null 값을 변환할 수 있습니다. 또한 3개의 속성을 구성하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 Null 값을 지정된 값으로 변환하도록 할 수 있습니다. 이러한 속성은 차원에 대한 **UnknownMember** 및 **UnknownMemberName** 속성과 차원의 키 특성에 대한 **NullProcessing** 속성입니다.  
@@ -178,6 +178,6 @@ ms.locfileid: "68888336"
      ![어셈블리 구성 요소를 보여 주는 제품 이름 수준](../../2014/tutorials/media/l4-assemblycomponents-1.gif "어셈블리 구성 요소를 보여 주는 제품 이름 수준")  
   
 ## <a name="next-lesson"></a>다음 단원  
- [5단원: 차원과 측정값 그룹 간의 관계 정의](https://docs.microsoft.com/analysis-services/lesson-5-defining-relationships-between-dimensions-and-measure-groups)  
+ [5단원: 차원과 측정값 그룹 간의 관계 정의](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   

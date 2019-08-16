@@ -10,12 +10,12 @@ ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9273f35ccca51d92461783f1110890b161a85059
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4d958fa21380272aa770a9880e294a86fede29de
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888467"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493983"
 ---
 # <a name="browsing-the-deployed-cube"></a>배포된 큐브 찾아보기
   다음 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial 큐브를 찾아봅니다. 분석할 때 여러 차원 간에 측정값을 비교하므로 Excel 피벗 테이블을 사용하여 데이터를 찾습니다. 피벗 테이블을 사용하면 Internet Sales가 특정 기간, 고객 인구 통계 및 제품 라인에 표시될 때 어떻게 변경되는지 볼 수 있도록 고객, 날짜 및 제품 정보를 각각 다른 축에 배치할 수 있습니다.  
@@ -45,6 +45,6 @@ ms.locfileid: "68888467"
      ![지역별 인터넷 판매 및 제품 라인](../../2014/tutorials/media/l3-cube-browser-finish.gif "지역별 인터넷 판매 및 제품 라인")  
   
 ## <a name="next-lesson"></a>다음 단원  
- [4단원: 고급 특성 및 차원 속성 정의](https://docs.microsoft.com/analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties)  
+ [4단원: 고급 특성 및 차원 속성 정의](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

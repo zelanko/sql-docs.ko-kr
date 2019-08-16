@@ -10,15 +10,15 @@ ms.assetid: 67dacf68-9ab7-4524-8698-844d0f6e6c6d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db52caa0670af868cd5986c85890c291e5f6aac7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 067348432bc7a460b4dbf39444852e14c7ef2ce5
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888309"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493901"
 ---
 # <a name="sorting-attribute-members-based-on-a-secondary-attribute"></a>보조 특성을 기준으로 특성 멤버 정렬
-  3단원에서는 이름이나 키 값을 기준으로 특성 멤버를 정렬하는 방법과 복합 멤버 키를 사용하여 특성 멤버와 정렬 순서를 조정하는 방법에 대해 배웠습니다. 자세한 내용은 [Date 차원 수정](https://docs.microsoft.com/analysis-services/lesson-3-4-modifying-the-date-dimension)을 참조하세요. 그러나 특성의 키나 이름으로는 원하는 정렬 순서를 얻을 수 없는 경우 보조 특성을 사용하여 필요한 순서에 따라 정렬할 수 있습니다. 특성 간의 관계를 정의함으로써 두 번째 특성을 사용하여 첫 번째 특성의 멤버를 정렬할 수 있습니다.  
+  3단원에서는 이름이나 키 값을 기준으로 특성 멤버를 정렬하는 방법과 복합 멤버 키를 사용하여 특성 멤버와 정렬 순서를 조정하는 방법에 대해 배웠습니다. 자세한 내용은 [Date 차원 수정](lesson-3-4-modifying-the-date-dimension.md)을 참조하세요. 그러나 특성의 키나 이름으로는 원하는 정렬 순서를 얻을 수 없는 경우 보조 특성을 사용하여 필요한 순서에 따라 정렬할 수 있습니다. 특성 간의 관계를 정의함으로써 두 번째 특성을 사용하여 첫 번째 특성의 멤버를 정렬할 수 있습니다.  
   
  특성 관계는 특성 간의 관계나 종속성을 정의합니다. 하나의 관계형 테이블을 기준으로 하는 차원에서는 일반적으로 모든 특성이 키 특성을 통해 서로 연결됩니다. 이는 차원에 대한 모든 특성이 차원의 키 특성으로 각 관련 측정값 그룹의 팩트 테이블에 있는 팩트에 연결된 멤버에 대한 정보를 제공하기 때문입니다. 여러 테이블을 기준으로 하는 차원에서는 일반적으로 특성이 테이블 간의 조인 키를 기준으로 연결됩니다. 기본 데이터에서 지원하는 경우 관련 특성을 사용하여 정렬 순서를 지정할 수 있습니다. 예를 들어, 관련 특성에 대한 정렬 논리를 제공하는 새 특성을 만들 수 있습니다.  
   

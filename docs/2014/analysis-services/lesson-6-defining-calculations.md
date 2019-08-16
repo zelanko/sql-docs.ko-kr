@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888042"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493843"
 ---
 # <a name="lesson-6-defining-calculations"></a>6단원: 계산 정의
   이 단원에서는 MDX(Multidimensional Expressions) 식 또는 스크립트에 해당하는 계산을 정의하는 방법을 배웁니다. 계산을 사용하면 계산 멤버와 명명된 집합을 정의하고 기타 스크립트 명령을 실행하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브의 기능을 확장할 수 있습니다. 예를 들어 스크립트 명령을 실행하여 하위 큐브를 정의한 다음 하위 큐브의 셀에 계산을 할당할 수 있습니다.  
@@ -45,14 +45,14 @@ ms.locfileid: "68888042"
   
  이 단원에서는 다음 태스크를 다룹니다.  
   
- [계산 멤버 정의](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
+ [계산 멤버 정의](lesson-6-1-defining-calculated-members.md)  
  이 태스크에서는 계산 멤버의 정의 방법을 배웁니다.  
   
- [명명된 집합 정의](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [명명된 집합 정의](lesson-6-2-defining-named-sets.md)  
  이 태스크에서는 명명된 집합의 정의 방법을 배웁니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [7단원: 핵심 성과 지표 &#40;kpi 정의&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [7단원: 핵심 성과 지표 &#40;kpi 정의&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [Analysis Services 자습서 시나리오](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   

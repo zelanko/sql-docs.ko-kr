@@ -10,12 +10,12 @@ ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fe6b022300a873ab7e7e747265c96a3abf43ea59
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887467"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493856"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>사용자 정의 계층의 특성 간 특성 관계 지정
   이 자습서에서 이미 설명한 대로 특성 계층을 사용자 계층 안에 수준으로 구성하여 큐브 사용자를 위한 탐색 경로를 제공할 수 있습니다. 사용자 계층은 구/군/시, 시/도 및 국가와 같은 자연 계층을 나타내거나 직원 이름, 직책 및 부서 이름과 같은 탐색 경로를 나타낼 수 있습니다. 계층을 탐색하는 사용자에게는 이 두 가지 유형의 사용자 계층이 동일합니다.  
@@ -181,7 +181,7 @@ ms.locfileid: "68887467"
 14. **의** 빌드 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [알 수 없는 멤버 및 Null 처리 속성 정의](https://docs.microsoft.com/analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties)  
+ [알 수 없는 멤버 및 Null 처리 속성 정의](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [특성 관계 정의](multidimensional-models/attribute-relationships-define.md)   

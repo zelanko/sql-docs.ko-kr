@@ -10,12 +10,12 @@ ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d7f0f0964c2602ef4203c0f14ee71af73f65d46
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888063"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493771"
 ---
 # <a name="defining-and-browsing-perspectives"></a>큐브 뷰 정의 및 찾아보기
   큐브 뷰는 특정 목적을 위해 큐브의 보기를 단순화할 수 있습니다. 기본적으로 사용자들은 사용 권한이 있는 큐브의 모든 요소를 볼 수 있습니다. 사용자가 전체 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 큐브를 볼 때 표시되는 내용은 큐브의 기본 큐브 뷰입니다. 전체 큐브의 보기는 너무 복잡해서 사용자가 탐색하기 어려울 수 있으며, 비즈니스 인텔리전스 및 보고 요구 사항을 만족시키기 위해 큐브의 일부만 사용하면 되는 사용자에게는 더욱 그렇습니다.  
@@ -191,7 +191,7 @@ ms.locfileid: "68888063"
      ![Internet sales 및 대리점 판매 측정값](../../2014/tutorials/media/l9-perspectives-4.gif "Internet sales 및 대리점 판매 측정값")  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [번역 정의 및 찾아보기](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [번역 정의 및 찾아보기](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [큐브 뷰](multidimensional-models-olap-logical-cube-objects/perspectives.md)   

@@ -10,12 +10,12 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1d5afebb0f0bf69990a0e93bca49d95f7a4c6b5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 9d436ab68f2c0045d1cfa127c251575495f831cd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888289"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493928"
 ---
 # <a name="defining-a-referenced-relationship"></a>참조 관계 정의
   이 자습서의 이전 단원에서는 정의한 각 큐브 차원은 기본 키와 외래 키의 관계를 통해 측정값 그룹의 팩트 테이블에 직접 연결된 테이블을 기반으로 하였습니다. 이 항목의 태스크에서는 **Geography** 차원을 **참조 차원** 이라고 하는 *Reseller*차원을 통해 대리점 판매에 대한 팩트 테이블에 연결하는 방법을 설명합니다. 이를 통해 사용자는 지리별로 대리점 판매 차원을 구분할 수 있습니다. 자세한 내용은 [참조 관계 및 참조 관계 속성 정의](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)를 참조하세요.  
@@ -121,7 +121,7 @@ ms.locfileid: "68888289"
      ![관계 정의 대화 상자](../../2014/tutorials/media/l5-referencedrelationship-5.gif "관계 정의 대화 상자")  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [팩트 관계 정의](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)  
+ [팩트 관계 정의](lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [의 차원 디자이너에 있는 차원 구조 뷰의](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   

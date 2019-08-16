@@ -10,12 +10,12 @@ ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 26f92fffadba9ceed03518d07fb3f27339ebff38
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888232"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493861"
 ---
 # <a name="defining-a-fact-relationship"></a>팩트 관계 정의
   사용자는 팩트 테이블에 있는 데이터 항목별로 측정값 차원을 구분하거나 특정 판매 팩트에 관련된 송장 번호나 구매 주문 번호와 같은 특정 추가 관련 정보를 팩트 테이블에서 쿼리할 수 있습니다. 이러한 팩트 테이블 항목을 기반으로 차원을 정의할 경우 이 차원을 *팩트 차원*이라고 합니다. 팩트 차원은 중복 제거 차원이라고도 합니다. 팩트 차원은 특정 송장 번호에 관련된 모든 행과 같은 관련 팩트 테이블 행을 함께 그룹화하는 데 유용합니다. 이 정보를 관계형 데이터베이스에 있는 별도의 차원 테이블에 넣을 수 있는데도 정보에 대한 별도의 차원 테이블을 만들면 차원 테이블이 팩트 테이블과 같은 속도로 커지고 중복 데이터가 발생하며 과도하게 복잡해지기 때문에 좋지 않습니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "68888232"
      ![Internet sales-Sales Amount의 치수화](../../2014/tutorials/media/l5-factrelationship-3.gif "Internet sales-Sales Amount의 치수화")  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [다 대 다 관계 정의](https://docs.microsoft.com/analysis-services/lesson-5-3-defining-a-many-to-many-relationship)  
+ [다 대 다 관계 정의](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
 ## <a name="see-also"></a>관련 항목:  
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

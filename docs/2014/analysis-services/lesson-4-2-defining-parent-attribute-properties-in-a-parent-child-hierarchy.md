@@ -10,12 +10,12 @@ ms.assetid: 2d78fa73-a13b-4e12-bbd0-43e5307f760c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8688e40fc0075bded60069bea24e8114dd51fa0f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ddae9c199f1827d733d0e12f7ff834768aeae937
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888385"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494011"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>부모-자식 계층의 부모 특성 속성 정의
   부모-자식 계층은 두 개의 테이블 열을 기반으로 하는 차원의 계층입니다. 이 두 열은 차원의 멤버 간 계층 관계를 정의합니다. *멤버 키 열*이라는 첫 번째 열은 각 차원 멤버를 식별합니다. *부모 열*이라는 다른 하나의 열은 각 차원 멤버의 부모를 식별합니다. 부모 특성의 **NamingTemplate** 속성은 부모-자식 계층의 각 수준 이름을 지정하고 **MembersWithData** 속성은 부모 멤버의 데이터 표시 여부를 지정합니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "68888385"
      ![수정 된 Employees 계층](../../2014/tutorials/media/l4-employee-2.png "수정 된 Employees 계층")  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [자동으로 특성 멤버 그룹화](https://docs.microsoft.com/analysis-services/lesson-4-3-automatically-grouping-attribute-members)  
+ [자동으로 특성 멤버 그룹화](lesson-4-3-automatically-grouping-attribute-members.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [부모-자식 계층](multidimensional-models/parent-child-dimension.md)   

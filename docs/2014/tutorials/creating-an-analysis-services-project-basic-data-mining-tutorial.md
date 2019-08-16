@@ -10,12 +10,12 @@ ms.assetid: 784c0401-0358-4117-9c85-4e8220ce71d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: bec038ece2971c82315aca9965f0d897e6de1034
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a7fcece285a17e158fcdfe77ef00004afe637541
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893339"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494035"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Analysis Services 프로젝트 만들기(기본 데이터 마이닝 자습서)
   각 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 프로젝트에서는 단일 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 있는 개체를 정의합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에는 여러 다른 유형의 개체가 포함될 수 있습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "68893339"
   
  기본적으로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서는 새 프로젝트에 **localhost** 인스턴스를 사용합니다. 명명된 인스턴스나 다른 서버를 사용할 경우에는 먼저 프로젝트를 만들고 연 다음 인스턴스 이름을 변경해야 합니다.  
   
- 프로젝트에 대 한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 자세한 내용은 [Analysis Services 프로젝트 만들기](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project)를 참조 하세요.  
+ 프로젝트에 대 한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 자세한 내용은 [Analysis Services 프로젝트 만들기](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)를 참조 하세요.  
   
 ### <a name="to-create-an-analysis-services-project"></a>Analysis Services 프로젝트를 만들려면  
   

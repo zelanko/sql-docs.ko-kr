@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fb2918e5fb89d85d7f6fa1cc12622481e585d848
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0b98e2bafd53eaabd606d09b3e0b51dd3d53aceb
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887670"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494059"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>OlapR를 사용 하 여 R에서 MDX 쿼리를 만드는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,11 +76,11 @@ ms.locfileid: "68887670"
 
 + 4 단원까지 Analysis Services 자습서를 수행 하 여 이러한 예제에서 사용 되는 큐브를 만듭니다. [OLAP 큐브 만들기](https://docs.microsoft.com/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
-+ 기존 큐브를 백업으로 다운로드 하 고 Analysis Services 인스턴스로 복원 합니다. 예를 들어이 사이트는 완전히 처리 된 큐브를 압축 형식으로 제공 합니다. [놀이 Works 다차원 모델 SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). 파일의 압축을 풀고 SSAS 인스턴스로 복원 합니다. 자세한 내용은 [Backup and restore](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)또는 [Restore-asdatabase Cmdlet](https://docs.microsoft.com/analysis-services/powershell/restore-asdatabase-cmdlet)을 참조 하세요.
++ 기존 큐브를 백업으로 다운로드 하 고 Analysis Services 인스턴스로 복원 합니다. 예를 들어이 사이트는 완전히 처리 된 큐브를 압축 형식으로 제공 합니다. [놀이 Works 다차원 모델 SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334). 파일의 압축을 풀고 SSAS 인스턴스로 복원 합니다. 자세한 내용은 [Backup and restore](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)또는 [Restore-asdatabase Cmdlet](/powershell/module/sqlserver/restore-asdatabase)을 참조 하세요.
 
 ### <a name="1-basic-mdx-with-slicer"></a>1. 슬라이서가 포함된 기본 MDX
 
-이 MDX 쿼리는 인터넷 판매 개수 및 판매액의 개수 및 금액에 대한 _측정값_ 을 선택하여 열 축에 배치합니다. SalesTerritory 차원의 멤버를 *슬라이서*로 추가하여 오스트레일리아의 판매만 계산에 사용되도록 쿼리를 필터링합니다.
+이 MDX 쿼리는 인터넷 판매 개수 및 판매액의 개수 및 금액에 대한 _측정값_을 선택하여 열 축에 배치합니다. SalesTerritory 차원의 멤버를 *슬라이서*로 추가하여 오스트레일리아의 판매만 계산에 사용되도록 쿼리를 필터링합니다.
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, 
@@ -92,7 +92,7 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 + 열에서 쉼표로 구분된 문자열의 요소로 여러 측정값을 지정할 수 있습니다.
 + 행 축은 "제품군" 차원의 가능한 모든 값(모든 MEMBERS)을 사용합니다. 
 + 이 쿼리는 세 개의 열이 있는 테이블을 반환 합니다 .이 테이블에는 모든 국가의 인터넷 판매에 대 한 _롤업_ 요약이 포함 됩니다.
-+ WHERE 절은 _slicer 축을_ 지정 합니다. 이 예제에서 슬라이서는 **SalesTerritory** 차원의 멤버를 사용 하 여 오스트레일리아의 판매만 계산에 사용 되도록 쿼리를 필터링 합니다.
++ WHERE 절은 _slicer 축을_지정 합니다. 이 예제에서 슬라이서는 **SalesTerritory** 차원의 멤버를 사용 하 여 오스트레일리아의 판매만 계산에 사용 되도록 쿼리를 필터링 합니다.
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>olapR에서 제공하는 함수를 사용하여 이 쿼리를 작성하려면
 

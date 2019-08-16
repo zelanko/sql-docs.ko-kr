@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888111"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493823"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>드릴스루 동작 정의 및 사용
   쿼리가 반환하는 데이터를 올바르게 필터링하지 않고 팩트 차원별로 팩트 데이터의 차원을 지정하면 쿼리 성능이 느려집니다. 이 문제를 방지하려면 반환되는 전체 행 수를 제한하는 드릴스루 동작을 정의하면 됩니다. 이렇게 하면 쿼리 성능이 대폭 향상됩니다.  
@@ -143,13 +143,13 @@ ms.locfileid: "68888111"
      ![Adam Powell에 제공 된 주문](../../2014/tutorials/media/l8-action8.gif "Adam Powell에 제공 된 주문")  
   
 ## <a name="next-lesson"></a>다음 단원  
- [단원 9: 큐브 뷰 및 번역 정의](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
+ [단원 9: 큐브 뷰 및 번역 정의](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [작업 &#40;Analysis Services-다차원 데이터&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [다차원 모델의 동작](multidimensional-models/actions-in-multidimensional-models.md)   
  [차원 관계](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [팩트 관계 정의](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
+ [팩트 관계 정의](lesson-5-2-defining-a-fact-relationship.md)   
  [팩트 관계 및 팩트 관계 속성 정의](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

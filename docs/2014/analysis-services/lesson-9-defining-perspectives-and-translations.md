@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 914140df4460741f8441ce899a8e73a420806169
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 779d63264280569465ae2c0815caf15ed9b9f8b2
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887889"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493753"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>9단원: 큐브 뷰 및 번역 정의
   이 단원에서는 큐브 뷰 및 번역을 정의하는 방법을 배웁니다. 큐브 뷰를 정의하여 큐브의 복잡성을 줄이고 사용자들이 선택한 언어로 큐브 메타데이터를 볼 수 있도록 하는 번역을 정의할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "68887889"
  [큐브 뷰 정의 및 찾아보기](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
  이 태스크에서는 큐브 뷰를 정의하고 검색하여 특정 사용자나 사용에 대해 표시되는 큐브 뷰를 단순화합니다.  
   
- [번역 정의 및 찾아보기](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [번역 정의 및 찾아보기](lesson-9-2-defining-and-browsing-translations.md)  
  이 태스크에서는 특정 언어로의 특정 메타데이터 번역을 정의하고 검색합니다.  
   
 ## <a name="next-lesson"></a>다음 단원  

@@ -10,12 +10,12 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 7fc2d6eebc342de7126ebd3c8c41c12e07107089
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888747"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494021"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>데이터 원본 만들기(기본 데이터 마이닝 자습서)
   *데이터 원본은* 프로젝트에서 저장 및 관리 되 고 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 배포 되는 데이터 연결입니다. 데이터 원본에는 원본 데이터가 있는 서버 및 데이터베이스의 이름뿐만 아니라 필요한 기타 연결 속성이 포함됩니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "68888747"
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 원본 만들기&#40;SSAS 다차원&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [데이터 원본 정의](https://docs.microsoft.com/analysis-services/lesson-1-2-defining-a-data-source)   
+ [데이터 원본 정의](../analysis-services/lesson-1-2-defining-a-data-source.md)   
  [가장 옵션 설정 & #40; SSAS-다차원 데이터 & #41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

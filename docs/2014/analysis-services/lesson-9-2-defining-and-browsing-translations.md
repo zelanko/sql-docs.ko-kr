@@ -10,12 +10,12 @@ ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9b6212bc112768af510bdb4a9dcff25150aa9f5e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f9a254f685f83e97b14c78c7d6c4c21e2737b636
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888023"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493786"
 ---
 # <a name="defining-and-browsing-translations"></a>번역 정의 및 찾아보기
   번역은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체의 이름을 특정 언어로 나타내는 것을 말합니다. 개체에는 측정값 그룹, 측정값, 차원, 특성, 계층, KPI, 동작 및 계산 멤버가 포함됩니다. 번역은 여러 언어를 지원할 수 있는 클라이언트 애플리케이션에 대한 서버 지원을 제공합니다. 클라이언트는 이러한 클라이언트를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]인스턴스에 LCID(로캘 식별자)를 전달합니다. 그러면 해당 Analysis Services 인스턴스는 LCID를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 대한 메타데이터를 제공할 때 사용할 번역 집합을 결정합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 개체에 해당 언어에 대한 번역이나 지정된 개체에 대한 번역이 없을 경우 기본 언어가 개체 메타데이터를 클라이언트에게 다시 반환하는 데 사용됩니다. 예를 들어 프랑스의 비즈니스 사용자가 프랑스어로 로캘이 설정된 워크스테이션에서 큐브에 액세스하는 경우 프랑스어 번역이 있다면 이 비즈니스 사용자에게는 멤버 캡션과 멤버 속성 값이 프랑스어로 표시됩니다. 그러나 독일의 비즈니스 사용자가 독일어로 로캘이 설정된 워크스테이션에서 동일한 큐브에 액세스하면 해당 캡션 이름과 멤버 속성 값이 독일어로 표시됩니다. 자세한 내용은 [차원 번역](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [큐브 번역](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [ &#40;번역 Analysis Services&#41;](translations-analysis-services.md)를 참조 하세요.  
@@ -123,7 +123,7 @@ ms.locfileid: "68888023"
      이제 월 이름과 측정값 이름이 프랑스어로 표시됩니다.  
   
 ## <a name="next-lesson"></a>다음 단원  
- [10 단원: 관리 역할 정의](https://docs.microsoft.com/analysis-services/lesson-10-defining-administrative-roles)  
+ [10 단원: 관리 역할 정의](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [차원 번역](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

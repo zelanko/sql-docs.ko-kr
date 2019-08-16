@@ -10,12 +10,12 @@ ms.assetid: 47254fd3-525f-4c35-b93d-316607652517
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd42fdd888ca8d4b7fc72e20fb3c6a71b9e0170f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888134"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493890"
 ---
 # <a name="defining-named-sets"></a>명명된 집합 정의
   명명된 집합은 차원 멤버 집합을 반환하는 MDX(Multidimensional Expressions) 식입니다. 명명된 집합을 정의한 후 큐브 정의의 일부로 저장할 수 있습니다. 또한 클라이언트 애플리케이션에서도 명명된 집합을 만들 수 있습니다. 큐브 데이터, 산술 연산자, 숫자 및 함수를 조합하여 명명된 집합을 만들 수 있습니다. 명명된 집합을 클라이언트 애플리케이션의 MDX 쿼리에서 사용할 수 있으며 하위 큐브의 집합을 정의하는 데도 사용할 수 있습니다. 하위 큐브는 큐브 공간을 후속 문에 대해 정의된 하위 공간으로 제한하는 크로스 조인된 집합 컬렉션입니다. 제한된 큐브 공간을 정의하는 것은 MDX 스크립팅에 대한 기본 개념에 해당합니다.  
@@ -132,7 +132,7 @@ ms.locfileid: "68888134"
      ![두 개의 명명 된 집합이 포함 된 필터 창](../../2014/tutorials/media/l6-named-set-05.gif "두 개의 명명 된 집합이 포함 된 필터 창")  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [7단원: 핵심 성과 지표 &#40;kpi 정의&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
+ [7단원: 핵심 성과 지표 &#40;kpi 정의&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [계산](multidimensional-models-olap-logical-cube-objects/calculations.md)   

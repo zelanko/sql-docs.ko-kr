@@ -10,12 +10,12 @@ ms.assetid: 0e86b9be-e47d-4bb4-87eb-136ff3a61aef
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1da73bb522aa3fbf825841e637f01b0c455f09c2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888253"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493991"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>4단원: 고급 특성 및 차원 속성 정의
   이 단원에서는 특성의 일부 고급 속성, 특성 계층 및 차원 속성을 사용하는 방법에 대해 설명합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "68888253"
  [자동으로 특성 멤버 그룹화](lesson-4-3-automatically-grouping-attribute-members.md)  
  이 태스크에서는 특성 계층 내에서 멤버의 분포에 따라 특성 멤버 그룹을 자동으로 만듭니다. 자세한 내용은 [특성 멤버 그룹화&#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)를 참조하세요.  
   
- [특성 계층 숨기기 및 비활성화](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
+ [특성 계층 숨기기 및 비활성화](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  이 태스크에서는 특성 계층을 해제하거나 숨기는 방법과 시기에 대해 알아봅니다.  
   
  [보조 특성을 기준으로 특성 멤버 정렬](lesson-4-5-sorting-attribute-members-based-on-a-secondary-attribute.md)  

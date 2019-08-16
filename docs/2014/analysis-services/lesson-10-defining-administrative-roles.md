@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f835defb27410c0c812ac5acf5793cf15accbe60
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 266833abbfa959e39a171eb498701c75c7eb66c8
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888454"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493961"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>10단원: 관리자 역할 정의
   이 단원에서는 관리 태스크에 대한 보안 역할 정의 방법을 배웁니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "68888454"
   
  이 단원에서는 다음 태스크를 다룹니다.  
   
- [데이터베이스 처리 권한 부여](https://docs.microsoft.com/analysis-services/lesson-10-granting-process-database-permissions)  
+ [데이터베이스 처리 권한 부여](lesson-10-granting-process-database-permissions.md)  
  이 태스크에서는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터베이스 처리 권한이 있는 보안 역할을 정의한 후 테스트합니다.  
   
 ## <a name="see-also"></a>관련 항목  

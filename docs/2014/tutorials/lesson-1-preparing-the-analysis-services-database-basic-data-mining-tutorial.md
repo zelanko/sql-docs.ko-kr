@@ -10,12 +10,12 @@ ms.assetid: 2a796977-6568-4705-9d27-86a9b36658c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 15cd000f0bcf61743301d130709be29b327efcdc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 47613c905c492c87215b2759b1ed4fab46694f83
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892545"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494001"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>1단원: Analysis Services 데이터베이스 준비 (기본 데이터 마이닝 자습서)
   [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] 에서 비즈니스 인텔리전스 애플리케이션을 디자인하는 태스크를 수행한 사용자가 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 새 직원이라고 가정합니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 데이터 마이닝 환경을 활용 하 여 자전거를 구매한 사용자에 대 한 흥미롭고 조치 가능한 정보를 검색할 수 있습니다. 그런 다음 앞으로 자전거를 구매할 가능성이 높은 잠재 고객을 예측할 수 있습니다.  
@@ -40,6 +40,6 @@ ms.locfileid: "68892545"
  [다차원 모델의 데이터 원본 뷰](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)   
  [지원 되 &#40;는 데이터 원본 SSAS 다차원&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)   
  [Analysis Services 프로젝트 빌드&#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
- [Analysis Services 프로젝트 만들기](https://docs.microsoft.com/analysis-services/lesson-1-1-creating-an-analysis-services-project)  
+ [Analysis Services 프로젝트 만들기](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md)  
   
   

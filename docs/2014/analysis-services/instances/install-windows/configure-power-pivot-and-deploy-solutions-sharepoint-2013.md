@@ -10,12 +10,12 @@ ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48d96a731724717a398c2170d642c419a1f3e9da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888599"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493977"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configure PowerPivot and Deploy Solutions (SharePoint 2013)
   이 항목에서는 PowerPivot 갤러리, 데이터 새로 고침 예약, 관리 대시보드 및 데이터 공급자를 포함하여 [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)]의 PowerPivot 기능에 대한 중간 계층 향상 배포 및 구성에 대해 설명합니다. **SharePoint 2013용 PowerPivot 구성** 도구를 실행하여 다음을 수행합니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "68888599"
   
     5.  왼쪽 창에서 **사이트 모음 만들기** 를 클릭합니다. 이후 단계에서 참조할 수 있도록 **사이트 URL** 을 기록해 둡니다. SharePoint 서버가 아직 구성되지 않은 경우 구성 마법사가 웹 애플리케이션 및 사이트 모음 URL을 `http://[ServerName]`의 루트로 기본 설정합니다. 기본값을 수정 하려면 왼쪽 창에서 다음 페이지를 검토 합니다. **기본 웹 응용 프로그램 만들기** 및 **웹 응용 프로그램 솔루션 배포**  
   
-5.  필요에 따라 각 동작을 완료하는 데 사용되는 나머지 입력 값을 검토합니다. 동작의 세부 정보를 보고 검토하려면 왼쪽 창에서 각 동작을 클릭하세요. 각 항목에 대 한 자세한 내용은이 항목의 " [구성 또는 복구 SharePoint용 PowerPivot 2010 &#40;PowerPivot 구성 도구&#41; ](https://docs.microsoft.com/analysis-services/configure-repair-powerpivot-sharepoint-2010) 에서 서버를 구성 하는 데 사용 되는 입력 값" 섹션을 참조 하십시오.  
+5.  필요에 따라 각 동작을 완료하는 데 사용되는 나머지 입력 값을 검토합니다. 동작의 세부 정보를 보고 검토하려면 왼쪽 창에서 각 동작을 클릭하세요. 각 항목에 대 한 자세한 내용은이 항목의 " [구성 또는 복구 SharePoint용 PowerPivot 2010 &#40;PowerPivot 구성 도구&#41; ](../../configure-repair-powerpivot-sharepoint-2010.md) 에서 서버를 구성 하는 데 사용 되는 입력 값" 섹션을 참조 하십시오.  
   
 6.  선택적으로 지금 처리하지 않으려는 동작을 제거합니다. 예를 들어, Secure Store Service를 나중에 구성하려는 경우 **Secure Store Service 구성**을 클릭한 다음 **태스크 목록에 이 동작 포함**확인란의 선택을 취소합니다.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68888599"
   
 8.  **실행** 을 클릭하여 태스크 목록에 있는 모든 동작을 처리합니다. 동작의 유효성을 검사한 후에 **실행** 을 사용할 수 있습니다. **실행** 이 활성화되지 않으면 먼저 **유효성 검사** 를 클릭합니다.  
   
- 자세한 내용은 [구성 또는 복구 SharePoint용 PowerPivot 2010 &#40;PowerPivot 구성 도구&#41; ](https://docs.microsoft.com/analysis-services/configure-repair-powerpivot-sharepoint-2010) 를 참조 하세요.  
+ 자세한 내용은 [구성 또는 복구 SharePoint용 PowerPivot 2010 &#40;PowerPivot 구성 도구&#41; ](../../configure-repair-powerpivot-sharepoint-2010.md) 를 참조 하세요.  
   
 ##  <a name="bkmk_verify_powerpivot"></a>PowerPivot 구성 확인  
  **서비스:**  
