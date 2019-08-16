@@ -35,7 +35,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  행 집합을 반환하는 쿼리 구문입니다.  
   
 ## <a name="remarks"></a>설명  
- **OPENQUERY** 는 데이터 원본 사용 권한을 지원 하 여 외부 데이터에 보다 안전 하 게 액세스할 수 있는 방법을 제공 합니다. 연결 문자열은 데이터 원본에 저장되어 있으므로 관리자는 데이터 원본의 속성을 사용하여 데이터에 대한 액세스를 관리할 수 있습니다. 데이터 원본에 대 한 자세한 내용은 참조 하세요. [지원 되는 데이터 원본 &#40;&AMP;#40;SSAS-다차원&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)합니다.  
+ **OPENQUERY** 는 데이터 원본 사용 권한을 지원 하 여 외부 데이터에 보다 안전 하 게 액세스할 수 있는 방법을 제공 합니다. 연결 문자열은 데이터 원본에 저장되어 있으므로 관리자는 데이터 원본의 속성을 사용하여 데이터에 대한 액세스를 관리할 수 있습니다. 데이터 원본에 대 한 자세한 내용은 참조 하세요. [지원 되는 데이터 원본 &#40;&AMP;&#40;SSAS-다차원&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional)합니다.  
   
  **MDSCHEMA_INPUT_DATASOURCES** 스키마 행 집합을 쿼리하여 서버에서 사용할 수 있는 데이터 원본 목록을 가져올 수 있습니다. **MDSCHEMA_INPUT_DATASOURCES**사용에 대 한 자세한 내용은 [MDSCHEMA_INPUT_DATASOURCES 행 집합](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)을 참조 하세요.  
   

@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68053070"
 ---
-# <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor(Transact-SQL)
+# <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   서버 커서의 특성을 보고합니다.  
@@ -82,10 +82,10 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |동시성|**tinyint**|1 = 읽기 전용<br /><br /> 2 = 스크롤 잠금<br /><br /> 3 = 낙관적|  
 |scrollable|**tinyint**|0 = 전진 전용<br /><br /> 1 = 스크롤 가능|  
 |open_status|**tinyint**|0 = 닫힘<br /><br /> 1 = 열림|  
-|cursor_rows|**decimal(10,0)**|결과 집합에서 한정하는 행 수입니다. 자세한 내용은 [@@CURSOR_ROWS&#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)을 참조하세요.|  
-|fetch_status|**smallint**|해당 커서의 마지막 인출 상태입니다. 자세한 내용은 [@@FETCH_STATUS&#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)을 참조하세요.<br /><br /> 0 = 인출 성공입니다.<br /><br /> -1 = 인출이 실패하였거나 커서의 범위 밖입니다.<br /><br /> -2 = 요청된 행이 누락되었습니다.<br /><br /> -9 = 커서에 대한 인출이 없습니다.|  
+|cursor_rows|**decimal(10,0)**|결과 집합에서 한정하는 행 수입니다. 자세한 내용은 [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md)을 참조하세요.|  
+|fetch_status|**smallint**|해당 커서의 마지막 인출 상태입니다. 자세한 내용은 [@@FETCH_STATUS &#40;Transact-SQL&#41;](../../t-sql/functions/fetch-status-transact-sql.md)을 참조하세요.<br /><br /> 0 = 인출 성공입니다.<br /><br /> -1 = 인출이 실패하였거나 커서의 범위 밖입니다.<br /><br /> -2 = 요청된 행이 누락되었습니다.<br /><br /> -9 = 커서에 대한 인출이 없습니다.|  
 |column_count|**smallint**|커서 결과 집합 내의 열 수입니다.|  
-|row_count|**decimal(10,0)**|커서의 마지막 작업에 의해 영향을 받는 행 수입니다. 자세한 내용은 [@@ROWCOUNT&#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.|  
+|row_count|**decimal(10,0)**|커서의 마지막 작업에 의해 영향을 받는 행 수입니다. 자세한 내용은 [@@ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/functions/rowcount-transact-sql.md)을 참조하세요.|  
 |last_operation|**tinyint**|커서에서 수행된 마지막 작업입니다.<br /><br /> 0 = 커서에서 작업이 수행되지 않았습니다.<br /><br /> 1 = OPEN<br /><br /> 2 = 인출<br /><br /> 3 = 삽입<br /><br /> 4 = 업데이트<br /><br /> 5 = 삭제<br /><br /> 6 = 닫기<br /><br /> 7 = 할당 취소|  
 |cursor_handle|**int**|서버 범위에서 고유한 커서의 값입니다.|  
   
