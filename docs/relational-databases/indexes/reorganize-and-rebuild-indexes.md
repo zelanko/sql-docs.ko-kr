@@ -31,12 +31,12 @@ ms.assetid: a28c684a-c4e9-4b24-a7ae-e248808b31e9
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18aa4d46a82121d2522260f146315f89b36a1803
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 02cc19cb28a3141682786ca8192688c9c451fc43
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476255"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811162"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>인덱스 다시 구성 및 다시 작성
 
@@ -80,7 +80,7 @@ ms.locfileid: "68476255"
 > 작은 인덱스는 다시 작성하거나 다시 구성해도 조각화가 줄어들지 않는 경우가 많습니다. 작은 인덱스의 페이지는 종종 혼합 익스텐트에 저장됩니다. 혼합 익스텐트는 최대 8개의 개체가 공유할 수 있으므로 인덱스를 다시 작성하거나 다시 구성한 후에도 작은 인덱스의 조각화가 줄어들지 않을 수 있습니다.
 
 ### <a name="index-defragmentation-considerations"></a>인덱스 조각 모음 고려 사항
-특정 조건에서 클러스터형 인덱스를 다시 작성하면 비클러스터형 인덱스 레코드에 포함된 물리적 또는 논리적 식별자를 변경해야 하는 경우 클러스터링 키를 참조하는 비클러스터형 인덱스가 자동으로 다시 작성됩니다.
+특정 조건에서 클러스터형 인덱스를 다시 빌드하면 비클러스터형 인덱스 레코드에 포함된 물리적 또는 논리적 식별자를 변경해야 하는 경우 클러스터링 키를 참조하는 비클러스터형 인덱스가 자동으로 다시 작성됩니다.
 
 테이블에서 모든 비클러스터형 인덱스를 자동으로 다시 작성하도록 하는 시나리오:
 

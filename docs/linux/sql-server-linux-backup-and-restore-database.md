@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f3e27b283156bb23754a93161fc796e15baec7ea
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077689"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68823117"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux에서 SQL Server 데이터베이스 백업 및 복원
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-다른 플랫폼과 동일한 도구를 사용하여 SQL Server 2017 on Linux에서 데이터베이스 백업을 수행할 수 있습니다. Linux 서버에서 **sqlcmd**를 사용하여 SQL Server에 연결하고 백업을 수행할 수 있습니다. Windows에서 SQL Server on Linux에 연결하고 사용자 인터페이스를 사용하여 백업을 수행할 수 있습니다. 백업 기능은 플랫폼 간에 동일합니다. 예를 들어 데이터베이스를 로컬에서 원격 드라이브 또는 [Microsoft Azure Blob Storage 서비스](../relational-databases/backup-restore/sql-server-backup-to-url.md)로 백업할 수 있습니다.
+다른 옵션을 사용하여 SQL Server 2017 on Linux에서 데이터베이스 백업을 수행할 수 있습니다. Linux 서버에서 **sqlcmd**를 사용하여 SQL Server에 연결하고 백업을 수행할 수 있습니다. Windows에서 SQL Server on Linux에 연결하고 사용자 인터페이스를 사용하여 백업을 수행할 수 있습니다. 백업 기능은 플랫폼 간에 동일합니다. 예를 들어 데이터베이스를 로컬에서 원격 드라이브 또는 [Microsoft Azure Blob Storage 서비스](../relational-databases/backup-restore/sql-server-backup-to-url.md)로 백업할 수 있습니다.
 
 ## <a name="backup-a-database"></a>데이터베이스 백업
 

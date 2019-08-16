@@ -1,7 +1,7 @@
 ---
-title: 서버 메모리 서버 구성 옵션 | Microsoft Docs
+title: 서버 메모리 구성 옵션 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2017
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1f631c7c0d4e1674e5982f0650989583910388e6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 180ef3114513f62f7ea5cded856ec61e06fc64b6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476271"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763166"
 ---
-# <a name="server-memory-server-configuration-options"></a>서버 메모리 서버 구성 옵션
+# <a name="server-memory-configuration-options"></a>서버 메모리 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **최소 서버 메모리** 및 **최대 서버 메모리**의 두 가지 서버 메모리 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 사용하는 SQL Server 프로세스의 메모리 양(MB)을 다시 구성할 수 있습니다. 이 메모리는 SQL Server Memory Manager가 관리합니다.  
@@ -49,19 +49,18 @@ ms.locfileid: "68476271"
 > **min server memory** 및 **max server memory** 는 고급 옵션입니다. **sp_configure** 시스템 저장 프로시저를 사용하여 이러한 설정을 변경할 경우 **고급 옵션 표시** 를 1로 설정해야만 변경할 수 있습니다. 이러한 설정은 서버를 다시 시작하지 않아도 즉시 적용됩니다.  
   
 <a name="min_server_memory"></a> **min_server_memory** 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 사용할 수 있는 최소 메모리 양을 보장할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 시작할 때 **min server memory** 에 지정된 메모리의 양을 즉시 할당하지 않습니다. 그러나 클라이언트 로드 때문에 메모리 사용량이 이 값에 도달하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **값을 줄이기 전에는** 가 메모리를 비울 수 없습니다. 예를 들어 동일한 호스트에 여러 인스턴스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 동시에 존재할 수 있는 경우 인스턴스의 메모리를 예약하기 위해 max_server_memory 대신 min_server_memory 매개 변수를 설정합니다. 또한 가상 환경에서 min_server_memory 값을 설정하여 기본 호스트의 메모리 압력을 가하는 것은 게스트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가상 머신(VM)의 버퍼 풀에서 수용 가능한 성능에 필요한 것 이상으로 메모리를 할당 해제하지 않도록 하는 데 필수적입니다.
- 
-> [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **min server memory**에 지정된 메모리 양을 할당하는 것이 보장되지 않습니다. 서버의 로드 때문에 **min server memory**에 지정된 메모리 양을 할당할 필요가 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 보다 적은 메모리로 실행됩니다.  
-  
-<a name="max_server_memory"></a> OS가 유해 메모리 압력을 겪지 않도록 **max_server_memory**를 사용합니다. 최대 서버 메모리 구성을 설정하려면 메모리 요구 사항을 결정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 전체 소비량을 모니터링합니다. 단일 인스턴스에 대해 이러한 계산을 통해보다 정확한 결과를 얻으려면
- -  전체 OS 메모리에서 1GB-4GB를 OS에 예약합니다.
- -  그런 다음,  **_스택 크기 <sup>1</sup> \* 계산된 최대 작업자 스레드 수 <sup>2</sup> + -g 시작 매개 변수 <sup>3</sup>_** (또는 *-g*가 설정되지 않은 경우 기본적으로 256MB)으로 구성된 **최대 서버 메모리** 컨트롤 외부의 잠재적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 할당량을 뺍니다. 남은 일은 단일 인스턴스 설정을 위한 max_server_memory를 설정하는 것입니다.
- 
+
+>[!NOTE]
+>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **min server memory**에 지정된 메모리 양을 할당하는 것이 보장되지 않습니다. 서버의 로드 때문에 **min server memory**에 지정된 메모리 양을 할당할 필요가 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 보다 적은 메모리로 실행됩니다.
+
+<a name="max_server_memory"></a> OS가 유해 메모리 압력을 겪지 않도록 **max_server_memory**를 사용합니다. 최대 서버 메모리 구성을 설정하려면 메모리 요구 사항을 결정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 전체 소비량을 모니터링합니다.
+
+- 전체 OS 메모리에서 OS에 충분히 예약합니다.
+- 그런 다음, **_스택 크기** <sup>1</sup> **\* 계산된 최대 작업자 스레드 수**<sup>2</sup>로 구성된 **최대 서버 메모리** 컨트롤 외부의 잠재적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 할당량을 뺍니다. 남은 일은 단일 인스턴스 설정을 위한 max_server_memory를 설정하는 것입니다.
+
 <sup>1</sup> 아키텍처당 스레드 스택 크기에 대한 내용은 [ 메모리 관리 아키텍처 가이드 ](../../relational-databases/memory-management-architecture-guide.md#stacksizes)를 참조하세요.
 
 <sup>2</sup> 현재 호스트에서 선호도가 높은 CPU의 지정된 수에 대해 계산된 기본 작업자 스레드에 대한 내용은 [max worker threads 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md) 방법에 대한 설명서 페이지를 참조하세요.
-
-<sup>3</sup> *-g* 시작 매개 변수에 대한 자세한 내용은 [데이터베이스 엔진 서비스 시작 옵션](../../database-engine/configure-windows/database-engine-service-startup-options.md)의 설명서 페이지를 참조하세요. 32비트 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]~[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])에만 적용됩니다.
 
 ## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 메모리 옵션을 구성하는 방법  
 **min server memory** 및 **max server memory**의 두 가지 서버 메모리 옵션을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager가 관리하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 메모리 양(MB)을 다시 구성할 수 있습니다. 기본적으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 사용할 수 있는 시스템 리소스에 따라 메모리 요구 사항을 동적으로 변경할 수 있습니다.  

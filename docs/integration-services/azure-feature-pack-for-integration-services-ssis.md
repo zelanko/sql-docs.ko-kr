@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 0d789ded4aefe7d39d1298777ebd851a6c87e6d9
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: 9241725a9f1da67ef93701b62c5cc4e8d9093a7a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388395"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892737"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)
 
@@ -27,7 +27,7 @@ ms.locfileid: "68388395"
 
 Azure용 SSIS(SQL Server Integration Services) 기능 팩은 Azure 서비스에 연결하고, Azure 및 온-프레미스 데이터 원본 간에 데이터를 전송하고, Azure에 저장된 데이터를 처리하기 위해 SSIS에 이 페이지에 나열된 구성 요소를 제공하는 확장 프로그램입니다.
 
-[![Azure용 SSIS 기능 팩 다운로드](../analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **다운로드**
+[![Azure용 SSIS 기능 팩 다운로드](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **다운로드**
 
 - SQL Server 2017의 경우 - [Azure용 Microsoft SQL Server 2017 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=54798)
 - SQL Server 2016의 경우 - [Azure용 Microsoft SQL Server 2016 Integration Services 기능 팩](https://www.microsoft.com/download/details.aspx?id=49492)
@@ -96,6 +96,60 @@ TLS 1.2를 사용하려면 다음 두 개의 레지스트리 키 아래에 데�
 
 1. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319`
 2. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
+
+## <a name="dependency-on-java"></a>Java에 대한 종속성
+
+Java는 특정 기능을 사용하는 데 필요합니다.
+Java 빌드의 아키텍처(32/64비트)는 사용할 SSIS 런타임과 일치해야 합니다.
+다음과 같은 Java 빌드가 테스트되었습니다.
+
+- [Zulu OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
+- [Oracle Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
+
+### <a name="set-up-zulus-openjdk"></a>Zulu OpenJDK 설치
+
+1. zip 패키지를 다운로드하여 추출합니다.
+2. 명령 프롬프트에서 `sysdm.cpl`을 실행합니다.
+3. **고급** 탭에서 **환경 변수**를 선택합니다.
+4. **시스템 변수** 섹션 아래에서 **새로 만들기**를 선택합니다.
+5. **변수 이름**에 대해 `JAVA_HOME`을 입력합니다.
+6. **디렉터리 찾아보기**를 선택하여 추출된 폴더로 이동하고, `jre` 하위 폴더를 선택합니다.
+   그런 다음, **확인**을 선택하면 **변수 값**이 자동으로 채워집니다.
+7. **확인**을 선택하여 **새 시스템 변수** 대화 상자를 닫습니다.
+8. **확인**을 선택하여 **환경 변수** 대화 상자를 닫습니다.
+9. **확인**을 선택하여 **시스템 속성** 대화 상자를 닫습니다.
+
+### <a name="set-up-zulus-openjdk-on-azure-ssis-integration-runtime"></a>Azure-SSIS Integration Runtime에서 Zulu OpenJDK 설정
+
+이 작업은 Azure-SSIS Integration Runtime에 대한 [사용자 지정 설정 인터페이스](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup)를 통해 수행해야 합니다.
+`zulu8.33.0.1-jdk8.0.192-win_x64.zip`을 사용한다고 가정합니다.
+Blob 컨테이너는 다음과 같이 구성할 수 있습니다.
+
+~~~
+main.cmd
+install_openjdk.ps1
+zulu8.33.0.1-jdk8.0.192-win_x64.zip
+~~~
+
+진입 점으로 `main.cmd` 는 PowerShell 스크립트 `install_openjdk.ps1`의 실행을 트리거하여 `zulu8.33.0.1-jdk8.0.192-win_x64.zip`을 추출하고 이에 따라 `JAVA_HOME`을 설정합니다.
+
+**main.cmd**
+
+~~~
+powershell.exe -file install_openjdk.ps1
+~~~
+
+**install_openjdk.ps1**
+
+~~~
+Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
+[Environment]::SetEnvironmentVariable("JAVA_HOME", "C:\zulu8.33.0.1-jdk8.0.192-win_x64\jre", "Machine")
+~~~
+
+### <a name="set-up-oracles-java-se-runtime-environment"></a>Oracle Java SE Runtime Environment 설치
+
+1. exe 설치 관리자를 다운로드하여 실행합니다.
+2. 설치 관리자 지침에 따라 설치를 완료합니다.
 
 ## <a name="scenario-processing-big-data"></a>시나리오: 빅 데이터 처리
  Azure 커넥터를 사용하여 다음과 같은 빅 데이터 처리 작업을 완료합니다.

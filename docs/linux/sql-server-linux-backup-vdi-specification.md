@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 483173f18bc4a71a482a0e8bc490e7e6684affdb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996434"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810974"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server on Linux VDI 클라이언트 SDK 사양
 
@@ -29,7 +29,7 @@ ms.locfileid: "67996434"
 - SQL Server on Linux는 명명된 인스턴스를 지원하지 않으므로 인스턴스 이름에 대한 참조가 제거되었습니다. 
 - 공유 라이브러리는/opt/mssql/lib/libsqlvdi.so에 설치된 libsqlvdi.so에서 구현됨
 
-이 문서는 Windows VDI 사양을 자세히 설명하는 **vbackup.chm**의 추록입니다. [Windows VDI 사양](https://www.microsoft.com/download/details.aspx?id=17282)을 다운로드합니다.
+이 문서는 Windows MS SQL Server VDI 사양을 자세히 설명하는 **vbackup.chm**의 추록입니다. [Windows SQL VDI 사양](https://www.microsoft.com/download/details.aspx?id=17282)을 다운로드 합니다.
 
 또한 [SQL Server 샘플 GitHub 리포지토리](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux)에서 샘플 VDI 백업 솔루션을 검토합니다.
 

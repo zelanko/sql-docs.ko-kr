@@ -1,7 +1,7 @@
 ---
 title: 설치 마법사에서 SQL Server 2016 설치(설치 프로그램) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9608e61108ad6f13c14816a35f06ca578e55d192
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 86b63bd2ccdb3cb4d8f2c73c2298cce1803e5ee9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419265"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742912"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>설치 마법사에서 SQL Server 설치(설치 프로그램)
 
@@ -280,9 +280,9 @@ SQL Server 2019에는 적용되지 않습니다.
   
      설치의 나머지 부분에 대한 워크플로는 설치에 지정한 기능에 따라 달라집니다. 선택 내용에 따라 일부 페이지는 표시되지 않을 수 있습니다. 
 
-1. Polybase 기능을 설치하도록 선택하면 **인스턴스 구성** 페이지 뒤에 표시되는 SQL Server 설정에 **PolyBase 구성** 페이지가 추가됩니다. PolyBase에는 Oracle JRE 7 업데이트 51 이상이 필요하며, 아직 설치하지 않은 경우 SQL Server 2019부터 SQL Server와 함께 Azul Zulu Open JRE를 설치할 수 있습니다. **PolyBase 구성** 페이지에서 SQL Server를 독립 실행형 PolyBase 사용 인스턴스로 사용하도록 선택하거나, 이 SQL Server를 PolyBase 스케일 아웃 그룹의 일부로 사용할 수 있습니다. 스케일 아웃 그룹을 사용하도록 선택하는 경우 최대 6개 이상의 포트 범위를 지정해야 합니다.  **Java 설치 위치** 페이지에서 SQL Server 2019 설치에 포함된 Azul Zulu Open JRE를 설치하도록 선택하거나, 컴퓨터에 이미 설치된 다른 JRE 또는 JDK의 위치를 제공할 수 있습니다.
+1. SQL Server 2019 부터 기능을 설치하기 전에 Polybase에서 더 이상 Oracle JRE 7 업데이트 51(이상)를 컴퓨터에 미리 설치할 필요가 없습니다. Polybase 기능을 설치하도록 선택하면 **인스턴스 구성** 페이지 뒤에 표시되는 SQL Server 설정에 **Java 설치 구성** 페이지가 추가됩니다. Java 설치 위치 페이지에서 SQL Server 2019 설치에 포함된 Azul Zulu Open JRE를 설치하도록 선택하거나, 컴퓨터에 이미 설치된 다른 JRE 또는 JDK의 위치를 제공할 수 있습니다.
 
-1. SQL Server 2019부터 Java가 R 및 Python과 함께 Machine Learning Services 및 언어 확장 목록에 추가되었습니다. Java 기능을 설치하도록 선택하면 **인스턴스 구성** 페이지 뒤에 표시되는 SQL Server 설정 대화 상자 창에 **Java 설치 위치** 페이지가 추가됩니다. **Java 설치 위치** 페이지에서 SQL Server 2019 설치에 포함된 Azul Zulu Open JRE를 설치하도록 선택하거나, 컴퓨터에 이미 설치된 다른 JRE 또는 JDK의 위치를 제공할 수 있습니다.
+1. SQL Server 2019부터 Java에 언어 확장이 추가되었습니다. Java 기능을 설치하도록 선택하면 **인스턴스 구성** 페이지 뒤에 표시되는 SQL Server 설정 대화 상자 창에 **Java 설치 위치** 페이지가 추가됩니다. **Java 설치 위치** 페이지에서 SQL Server 2019 설치에 포함된 Zulu Open JRE를 설치하도록 선택하거나, 컴퓨터에 이미 설치된 다른 JRE 또는 JDK의 위치를 제공할 수 있습니다.
 
 1. **서버 구성 - 서비스 계정** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 로그온 계정을 지정할 수 있습니다. 이 페이지에서 구성하는 실제 서비스는 설치하도록 선택한 기능에 따라 달라집니다. 구성 설정에 대한 자세한 내용은 [설치 마법사 도움말](../../sql-server/install/instance-configuration.md#serverconfig)을 참조하세요.
   

@@ -1,7 +1,7 @@
 ---
 title: 명령 프롬프트에서 SQL Server 설치 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: db2bb1f0a4c36b84ac4d4200c0651b407fdf144a
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 94169ec75f542c27c47bc9f050b2ac36736d13de
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419328"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893013"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
@@ -227,7 +227,7 @@ ms.locfileid: "68419328"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 구성 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64비트 WOW 모드의 경우: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 기타 모든 설치의 경우: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64비트 WOW 모드의 경우: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> 기타 모든 설치의 경우: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 로그 파일의 디렉터리를 지정합니다. 기본값:<br /><br /> 64비트 WOW 모드의 경우: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 기타 모든 설치의 경우: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 서버 모드를 지정합니다. 유효한 값은 MULTIDIMENSIONAL, POWERPIVOT 또는 TABULAR입니다. **ASSERVERMODE** 는 대/소문자를 구분합니다. 모든 값은 대문자로 표시해야 합니다. 유효한 값에 대한 자세한 내용은 [Analysis Services 설치](../../analysis-services/instances/install-windows/install-analysis-services.md)를 참조하세요.|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 서버 모드를 지정합니다. 유효한 값은 MULTIDIMENSIONAL, POWERPIVOT 또는 TABULAR입니다. **ASSERVERMODE** 는 대/소문자를 구분합니다. 모든 값은 대문자로 표시해야 합니다. 유효한 값에 대한 자세한 내용은 [Analysis Services 설치](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)를 참조하세요.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스 계정을 지정합니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [필수](#Accounts)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 암호를 지정합니다.|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **선택 사항**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 서비스의 [시작](#Accounts) 모드를 지정합니다. 지원되는 값:<br /><br /> **자동**<br /><br /> **사용 안 함**<br /><br /> **수동**|  
@@ -279,7 +279,7 @@ ms.locfileid: "68419328"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **선택 사항**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 [시작](#Accounts) 모드를 지정합니다.|  
 |Python/Machine Learning Services(데이터베이스 내)|/MPYCACHEDIRECTORY|나중에 사용하도록 예약되어 있습니다. 인터넷 연결이 되지 않은 컴퓨터에 설치하기 위한 Python .CAB 파일을 저장하려면 %TEMP%를 사용합니다. |  
 |R/Machine Learning Services(데이터베이스 내)|/MRCACHEDIRECTORY|이 매개 변수를 사용하여 SQL Server 2017 Machine Learning Services 또는 Machine Learning Server(독립 실행형)에서 Microsoft R Open, SQL Server 2016 R Services, SQL Server 2016 R Server(독립 실행형) 또는 R 지원 기능에 대한 캐시 디렉터리를 지정합니다. 일반적으로 이 설정은 [인터넷에 액세스할 수 없는 컴퓨터의 명령줄](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access)에서 R 구성 요소를 설치하는 경우에 사용됩니다.|  
-|Java/Machine Learning Services(데이터베이스 내)| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **선택 사항** | SQL Server 2019부터 Machine Learning Services를 사용하여 Java를 설치하도록 지정합니다. /SQLJAVADIR 매개 변수 없이 /SQL_INST_JAVA를 제공하면 설치 미디어에서 제공되는 Zulu JRE를 설치하려는 것으로 가정합니다. <br /><br /> /SQLJAVADIR의 경로를 제공하면 이미 설치된 JRE 또는 JDK를 사용하려는 것임을 나타냅니다. |
+|Java/언어 확장| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "path"<br /><br /> **선택 사항** | SQL Server 2019부터 언어 확장을 사용하여 Java를 설치하도록 지정합니다. /SQLJAVADIR 매개 변수 없이 /SQL_INST_JAVA를 제공하면 설치 미디어에서 제공되는 Zulu Open JRE를 설치하려는 것으로 가정합니다. <br /><br /> /SQLJAVADIR의 경로를 제공하면 이미 설치된 JRE 또는 JDK를 사용하려는 것임을 나타냅니다. |
   
 ###### <a name="sample-syntax"></a>예제 구문:  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], 복제 및 전체 텍스트 Search 구성 요소가 포함된 새로운 독립 실행형 인스턴스를 설치하고 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 빠른 파일 초기화를 사용하도록 설정합니다. 

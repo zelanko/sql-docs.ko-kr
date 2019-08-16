@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1d6a68ea3bc9954cbab62cee7579db6905a4632f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67967518"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794994"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Linux의 Always On 가용성 그룹
 
@@ -24,8 +24,8 @@ ms.locfileid: "67967518"
 
 개략적으로 Linux의 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]에서 가용성 그룹은 WSFC 기반 구현에 있는 것과 동일합니다. 즉, 모든 제한 사항 및 기능이 동일하며 몇 가지 예외가 있습니다. 주요 차이는 다음과 같습니다.
 
--   Microsoft DTC(Distributed Transaction Coordinator)는 [!INCLUDE[sssql17-md](../includes/sssql17-md.md)]의 Linux에서 지원되지 않습니다. 애플리케이션에 분산 트랜잭션을 사용해야 하고 AG가 필요한 경우 Windows에 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 배포합니다.
--   Linux 기반 배포에는 WSFC 대신 Pacemaker를 사용합니다.
+-   Microsoft DTC(Distributed Transaction Coordinator)는 SQL Server 2017 CU16부터 Linux에서 지원됩니다. 하지만, Linux의 가용성 그룹에서는 지원되지 않습니다. 애플리케이션에 분산 트랜잭션을 사용해야 하고 AG가 필요한 경우 Windows에 [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]를 배포합니다.
+-   고가용성이 필요한 Linux 기반 배포는 WSFC 대신 Pacemaker를 사용하여 클러스터링합니다.
 -   작업 그룹 클러스터 시나리오를 제외하고 Windows에서 AG에 관련된 대부분의 구성과 달리 Pacemaker에는 AD DS(Active Directory Domain Services)가 필요하지 않습니다.
 -   한 노드에서 다른 노드로 AG를 장애 조치(failover)하는 방법은 Linux 및 Windows에서 서로 다릅니다.
 -   `required_synchronized_secondaries_to_commit` 같은 특정 설정은 Linux에서 Pacemaker를 통해 변경할 수 있지만, WSFC 기반 설치에는 Transact-SQL이 사용됩니다.

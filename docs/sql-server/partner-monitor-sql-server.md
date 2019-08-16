@@ -8,12 +8,12 @@ ms.date: 11/02/2017
 ms.prod: sql
 ms.author: mikeray
 author: MikeRayMSFT
-ms.openlocfilehash: bc04c25496b10e76eed70f11a37499d4d2395bf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bbf66098bcc2b091ffd97a3f3aebf73c599fbf17
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049755"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68974461"
 ---
 # <a name="sql-server-monitoring-partners"></a>SQL Server 모니터링 파트너
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,16 +29,16 @@ SQL Server 서비스를 모니터링하려면 다양한 업계 최고의 도구 
 
 | 파트너 | 설명 | 링크 |
 | --- | --- | --- | --- |
-|[![idera][1]][idera_website] |**IDERA**<br>SQL 진단 관리자는 SQL Server 환경 내의 상태, 성능 및 가용성 문제를 중앙 콘솔에서 모두 관리자에게 사전에 알려 주는 강력한 성능 모니터링 및 진단 솔루션입니다.<br><br>[시스템 요구 사항][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[웹 사이트][idera_website]<br>[Twitter][idera_twitter]<br>[동영상][idera_youtube] | |
-|[![quest][3]][quest_website] |**Quest**<br>SQL Server Enterprise의 스포트라이트 - SQL Server의 비교할 수 없는 모니터링, 진단 및 최적화로 24시간 연속 최고 성능을 보장합니다. 스포트라이트는 SQL Server 데이터베이스의 최적 적합도에 필요한 세부 정보에 대한 액세스를 제공합니다. 상태 및 성능, 자동화된 경고 및 동작, 모바일 디바이스 지원에 대한 직관적인 개요를 확인하세요.|[Marketplace][quest_marketplace]<br>[웹 사이트][quest_website]<br>[Video][quest_video] | |
-|[![redgate][4]][redgate_website]| **Redgate**<br>Redgate의 SQL Monitor는 SQL Server를 모니터링하는 팀이 보다 적극적으로 대응할 수 있도록 도와주는 SQL Server 모니터링 도구입니다. SQL Monitor는 현재의 문제에 대해 경고할 뿐만 아니라 앞으로 발생할 문제를 방지하는 데 필요한 정보도 제공합니다. 대규모 SQL Server 자산에 이상적인 SQL Monitor는 성능 관련 질문에 대한 답변을 항상 제공합니다. |[웹 사이트][redgate_website]<br>[Twitter][redgate_twitter]<br>[LinkedIn][redgate_linkedin] <br>[동영상][redgate_video]| |
-|[![sentryone][2]][sentryone_website] |**SentryOne**<br>SentryOne 솔루션은 Microsoft 데이터 전문가가 물리적, 가상 및 클라우드 환경 전반에 걸쳐 획기적인 성능을 달성할 수 있도록 지원합니다. 데이터 전문가는 SentryOne을 사용하여 도구 집합을 통합하고, 인프라 비용을 줄이며, 크기와 복잡성에 관계없이 Microsoft 데이터 플랫폼 환경에서 최고의 성능을 발휘할 수 있도록 데이터베이스 속도와 효율성을 높일 수 있습니다.|<!--[Marketplace][idera_marketplace]<br>-->[웹 사이트][sentryone_website]<br>[Datasheet][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
-|[![solarwinds][5]][solarwinds_website] |**Solarwinds**<br>Database Performance Analyzer는 애플리케이션 요청, SQL 문, 데이터베이스 리소스, 호스트/OS, 네트워크, 가상화 및 스토리지 성능 전반에 대한 가시성을 제공합니다. DPA는 대기 시간 분석을 통합하여 상태뿐만 아니라 데이터베이스가 애플리케이션 요청에 응답하는 속도에 집중하도록 합니다. DPA는 배포 방법에 관계없이 데이터베이스를 완벽하게 제공합니다. 물리적, 가상, 클라우드 또는 DBaaS를 사용하여 하나의 창에서 작업할 수 있습니다.|[Marketplace][solarwinds_marketplace]<br>[웹 사이트][solarwinds_website]<br>[Datasheet][solarwinds_datasheet]<br>[LinkedIn][solarwinds_linkedin]<br>[동영상][solarwinds_video]| |
+|[![idera][1]][idera_website] |**IDERA**<br>SQL 진단 관리자는 SQL Server 환경 내의 상태, 성능 및 가용성 문제를 중앙 콘솔에서 모두 관리자에게 사전에 알려 주는 강력한 성능 모니터링 및 진단 솔루션입니다.<br><br>[시스템 요구 사항][idera_requirements]|<!--[Marketplace][idera_marketplace]<br>-->[웹 사이트][idera_website]<br>[Twitter][idera_twitter]<br>[비디오][idera_youtube] | |
+|[![quest][3]][quest_website] |**Quest**<br>SQL Server Enterprise의 스포트라이트 - SQL Server의 비교할 수 없는 모니터링, 진단 및 최적화로 24시간 연속 최고 성능을 보장합니다. 스포트라이트는 SQL Server 데이터베이스의 최적 적합도에 필요한 세부 정보에 대한 액세스를 제공합니다. 상태 및 성능, 자동화된 경고 및 동작, 모바일 디바이스 지원에 대한 직관적인 개요를 확인하세요.|[Marketplace][quest_marketplace]<br>[웹 사이트][quest_website]<br>[비디오][quest_video] | |
+|[![redgate][4]][redgate_website]| **Redgate**<br>Redgate의 SQL Monitor는 SQL Server를 모니터링하는 팀이 보다 적극적으로 대응할 수 있도록 도와주는 SQL Server 모니터링 도구입니다. SQL Monitor는 현재의 문제에 대해 경고할 뿐만 아니라 앞으로 발생할 문제를 방지하는 데 필요한 정보도 제공합니다. 대규모 SQL Server 자산에 이상적인 SQL Monitor는 성능 관련 질문에 대한 답변을 항상 제공합니다. |[웹 사이트][redgate_website]<br>[Twitter][redgate_twitter]<br>[LinkedIn][redgate_linkedin] <br>[비디오][redgate_video]| |
+|[![sentryone][2]][sentryone_website] |**SentryOne**<br>SentryOne 솔루션은 Microsoft 데이터 전문가가 물리적, 가상 및 클라우드 환경 전반에 걸쳐 획기적인 성능을 달성할 수 있도록 지원합니다. 데이터 전문가는 SentryOne을 사용하여 도구 집합을 통합하고, 인프라 비용을 줄이며, 크기와 복잡성에 관계없이 Microsoft 데이터 플랫폼 환경에서 최고의 성능을 발휘할 수 있도록 데이터베이스 속도와 효율성을 높일 수 있습니다.|<!--[Marketplace][idera_marketplace]<br>-->[웹 사이트][sentryone_website]<br>[데이터시트][sentryone_datasheet]<br>[Twitter][sentryone_twitter]<br>[LinkedIn][sentryone_linkedin] | |
+|[![solarwinds][5]][solarwinds_website] |**Solarwinds**<br>Database Performance Analyzer는 애플리케이션 요청, SQL 문, 데이터베이스 리소스, 호스트/OS, 네트워크, 가상화 및 스토리지 성능 전반에 대한 가시성을 제공합니다. DPA는 대기 시간 분석을 통합하여 상태뿐만 아니라 데이터베이스가 애플리케이션 요청에 응답하는 속도에 집중하도록 합니다. DPA는 배포 방법에 관계없이 데이터베이스를 완벽하게 제공합니다. 물리적, 가상, 클라우드 또는 DBaaS를 사용하여 하나의 창에서 작업할 수 있습니다.|[Marketplace][solarwinds_marketplace]<br>[웹 사이트][solarwinds_website]<br>[데이터시트][solarwinds_datasheet]<br>[LinkedIn][solarwinds_linkedin]<br>[비디오][solarwinds_video]| |
 
 
 
 ## <a name="next-steps"></a>다음 단계
-다른 일부 파트너에 대해 자세히 알아보려면 [고가용성 및 재해 복구 파트너][hadr_partners], [management partners][management_partners] 및 [개발 파트너][dev_partners]를 참조하세요.
+다른 일부 파트너에 대해 자세히 알아보려면 [고가용성 및 재해 복구 파트너][hadr_partners], [관리 파트너][management_partners] 및 [개발 파트너][dev_partners]를 참조하세요.
 
 <!--Image references-->
 [1]: ./media/partner-hadr-sql-server/idera_logo.png
@@ -67,7 +67,9 @@ SQL Server 서비스를 모니터링하려면 다양한 업계 최고의 도구 
 
 <!--Marketplace Links -->
 <!----Not available[idera_marketplace]:https://azure.microsoft.com/marketplace/-->  
-[quest_marketplace]: https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlight-enterprise-12-3 [solarwinds_marketplace]: https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer
+
+[quest_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/quest.spotlight-enterprise-12-3
+[solarwinds_marketplace]:https://azuremarketplace.microsoft.com/marketplace/apps/solarwinds.solarwinds-database-performance-analyzer
 
 <!--Press links-->
 <!--[idera_press]:-->
@@ -81,7 +83,7 @@ SQL Server 서비스를 모니터링하려면 다양한 업계 최고의 도구 
 <!--Twitter links-->
 [idera_twitter]:https://twitter.com/Idera_Software
 [sentryone_twitter]:https://twitter.com/sentryone
-[redgate_twitter]:https://twitter.com/redgate  
+[redgate_twitter]:https://twitter.com/redgate
 
 <!--Supported Systems-->
 [idera_requirements]:https://www.idera.com/productssolutions/sqlserver/sqldiagnosticmanager/systemrequirements

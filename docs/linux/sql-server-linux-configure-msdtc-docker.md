@@ -1,19 +1,18 @@
 ---
 title: Docker의 SQL Server에서 분산 트랜잭션을 사용하는 방법
-description: 이 문서에서는 Linux에서 MSDTC를 구성하기 위한 연습을 제공합니다.
+description: 이 문서에서는 Docker의SQL Server 컨테이너에 있는 분산 트랜잭션에 MSDTC(Microsoft Distributed Transaction Coordinator)를 사용하는 방법을 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 09/25/2018
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8304bc95a15a5a9cf74ab23bc2e8e47bf7cf72d1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e4d9d52541b6f9c9ca87bcbe4dc1db3c4448725c
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476053"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770840"
 ---
 # <a name="how-to-use-distributed-transactions-with-sql-server-on-docker"></a>Docker의 SQL Server에서 분산 트랜잭션을 사용하는 방법
 
@@ -21,7 +20,7 @@ ms.locfileid: "68476053"
 
 이 문서에서는 분산 트랜잭션을 위해 Docker에서 SQL Server Linux 컨테이너를 설정하는 방법을 설명합니다.
 
-SQL Server 2019 미리 보기부터, 컨테이너 이미지는 분산 트랜잭션에 필요한 MSDTC(Microsoft Distributed Transaction Coordinator)를 지원합니다. MSDTC에 대한 통신 요구 사항을 이해하려면 [Linux에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 방법](sql-server-linux-configure-msdtc.md)을 참조하세요. 이 문서에서는 SQL Server Docker 컨테이너와 관련된 특별한 요구 사항 및 시나리오를 설명합니다.
+SQL Server 컨테이너 이미지는 분산 트랜잭션에 필요한 MSDTC(Microsoft Distributed Transaction Coordinator)를 사용할 수 있습니다. MSDTC에 대한 통신 요구 사항을 이해하려면 [Linux에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 방법](sql-server-linux-configure-msdtc.md)을 참조하세요. 이 문서에서는 SQL Server Docker 컨테이너와 관련된 특별한 요구 사항 및 시나리오를 설명합니다.
 
 ## <a name="configuration"></a>Configuration
 
@@ -32,7 +31,32 @@ Docker용 컨테이너에서 MSDTC 트랜잭션을 사용하도록 설정하려�
 
 ### <a name="pull-and-run"></a>풀 및 실행
 
-다음 예제에서는 이 환경 변수를 사용하여 MSDTC에 대해 구성된 단일 SQL Server 컨테이너를 풀하고 실행하는 방법을 보여 줍니다. 이를 통해 호스트의 모든 애플리케이션과 통신할 수 있습니다.
+<!--SQL Server 2017 on Linux -->
+::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+
+다음 예제에서는 이 환경 변수를 사용하여 MSDTC에 대해 구성된 단일 SQL Server 2017 컨테이너를 풀하고 실행하는 방법을 보여 줍니다. 이를 통해 호스트의 모든 애플리케이션과 통신할 수 있습니다.
+
+```bash
+docker run \
+   -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
+   -e 'MSSQL_RPC_PORT=135' -e 'MSSQL_DTC_TCP_PORT=51000' \
+   -p 51433:1433 -p 135:135 -p 51000:51000  \
+   -d mcr.microsoft.com/mssql/server:2017-latest
+```
+
+```PowerShell
+docker run `
+   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
+   -p 51433:1433 -p 135:135 -p 51000:51000  `
+   -d mcr.microsoft.com/mssql/server:2017-latest
+```
+
+::: moniker-end
+<!--SQL Server 2019 on Linux-->
+::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+
+다음 예제에서는 이 환경 변수를 사용하여 MSDTC에 대해 구성된 단일 SQL Server 2019 컨테이너를 풀하고 실행하는 방법을 보여 줍니다. 이를 통해 호스트의 모든 애플리케이션과 통신할 수 있습니다.
 
 ```bash
 docker run \
@@ -41,6 +65,16 @@ docker run \
    -p 51433:1433 -p 135:135 -p 51000:51000  \
    -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
 ```
+
+```PowerShell
+docker run `
+   -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
+   -e "MSSQL_RPC_PORT=135" -e "MSSQL_DTC_TCP_PORT=51000" `
+   -p 51433:1433 -p 135:135 -p 51000:51000  `
+   -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
+```
+
+::: moniker-end
 
 > [!IMPORTANT]
 > 이전 명령은 Linux에서 실행되는 Docker에 대해서만 작동합니다. Windows 기반 Docker의 경우 Windows 호스트는 이미 포트 135에서 수신 대기합니다. Windows 기반 Docker의 `-p 135:135` 매개 변수를 제거할 수 있지만 몇 가지 제한 사항이 있습니다. 생성된 컨테이너는 호스트와 관련된 분산 트랜잭션에 사용할 수 없으며, 호스트에 있는 docker 컨테이너 간의 분산 트랜잭션에만 참여할 수 있습니다.
