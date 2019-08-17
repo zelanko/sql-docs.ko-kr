@@ -20,12 +20,12 @@ ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 29bf4991ce5dd52e9c66c31abade833e4fe319b2
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893541"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561130"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68893541"
  다음 표에서는 종속성 정보가 생성 및 유지되는 엔터티 유형을 보여 줍니다. 종속성 정보는 규칙, 기본값, 임시 테이블, 임시 저장 프로시저 또는 시스템 개체에 대해서는 생성 및 유지되지 않습니다.  
 
 > [!NOTE]
-> Azure SQL data warehouse 및 병렬 데이터 웨어하우스는이 목록에서 테이블, 뷰, 필터링 된 통계 및 Transact-sql 저장 프로시저 엔터티 형식을 지원 합니다.  종속성 정보는 테이블, 뷰 및 필터링 된 통계에 대해서만 생성 및 유지 관리 됩니다.  
+> Azure SQL Data Warehouse 및 병렬 데이터 웨어하우스는이 목록에서 테이블, 뷰, 필터링 된 통계 및 Transact-sql 저장 프로시저 엔터티 형식을 지원 합니다.  종속성 정보는 테이블, 뷰 및 필터링 된 통계에 대해서만 생성 및 유지 관리 됩니다.  
   
 |엔터티 유형|참조 엔터티|참조된 엔터티|  
 |-----------------|------------------------|-----------------------|  
