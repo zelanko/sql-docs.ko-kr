@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2ded17c5baf35949b16c173236f94f8d0d3dd299
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893996"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028908"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -83,7 +83,6 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 
 |새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
-|기능 제한| SQL 삽입에 성공하더라도 SQL 삽입 공격에서 데이터베이스 정보가 유출되지 않도록 합니다. [기능 제한](../relational-databases/security/feature-restrictions.md)을 참조하세요.|
 |인덱스 암호화된 열|임의 암호화 및 enclave- 키를 사용하여 암호화된 열에 인덱스를 생성하여 리치 쿼리(`LIKE` 및 비교 연산자 사용)의 성능을 향상시킵니다. [보안 Enclave를 사용한 Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)를 참조하세요.
 |TDE(투명한 데이터 암호화)의 초기 검색 일시 중단 및 다시 시작|[TDE(투명한 데이터 암호화) 검색 - 일시 중단 및 다시 시작](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)을 참조하세요.|
 |SQL Server 구성 관리자의 인증서 관리|[인증서 관리(SQL Server 구성 관리자)](../database-engine/configure-windows/manage-certificates.md)를 참조하세요.

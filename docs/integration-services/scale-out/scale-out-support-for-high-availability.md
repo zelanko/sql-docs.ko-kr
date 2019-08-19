@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: a7c0e9b1d3315edb314cc95980fec8e18d544d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064558"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028748"
 ---
 # <a name="scale-out-support-for-high-availability"></a>고가용성에 대한 Scale Out 지원
 
@@ -73,7 +73,7 @@ Scale Out 마스터의 보조 노드에 SQL Server 데이터베이스 엔진 서
 
 SSISDB에서 로깅은 **##MS_SSISLogDBWorkerAgentLogin##** 로그인으로 수행되며, 이 로그인의 암호는 자동으로 생성됩니다. 모든 SSISDB 복제본에 대한 로깅을 만들려면 다음을 수행합니다.
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 주 SQL Server에서 **##MS_SSISLogDBWorkerAgentLogin##** 의 암호 변경
+### <a name="61-change-the-password-of-ms_ssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 주 SQL Server에서 **##MS_SSISLogDBWorkerAgentLogin##** 의 암호 변경
 
 ### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2 보조 SQL Server에 로그인 추가
 
@@ -98,7 +98,7 @@ SSISDB에서 로깅은 **##MS_SSISLogDBWorkerAgentLogin##** 로그인으로 수�
 
 Azure 가상 머신에서 이 구성 단계는 추가 단계가 필요합니다. 이러한 개념 및 이러한 단계에 대한 자세한 설명은 이 문서의 범위를 벗어납니다.
 
-1.  Azure 도메인을 설정해야 합니다. Windows Server 장애 조치(failover) 클러스터링은 클러스터의 모든 구성 요소가 동일한 도메인의 구성원이 될 것을 요구합니다. 자세한 내용은 [Azure Portal을 사용하여 Azure Active Directory Domain Services 활성화](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance)를 참조합니다.
+1.  Azure 도메인을 설정해야 합니다. Windows Server 장애 조치(failover) 클러스터링은 클러스터의 모든 구성 요소가 동일한 도메인의 구성원이 될 것을 요구합니다. 자세한 내용은 [Azure Portal을 사용하여 Azure Active Directory Domain Services 활성화](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance)를 참조합니다.
 
 2. Azure 부하 분산 장치를 설정해야 합니다. 가용성 그룹 수신기에 대한 요구 사항입니다. 자세한 내용은 [자습서: Azure Portal을 사용하여 VM에 Basic Load Balancer와 함께 내부 트래픽 부하 분산](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)을 참조합니다.
 

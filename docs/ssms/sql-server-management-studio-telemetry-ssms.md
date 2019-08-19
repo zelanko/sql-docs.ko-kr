@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: c79a2c3da9ee7f877c3d13bf17ca7912117df883
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 82b4af04963c5161cbea300054d19c61b61ec34a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264699"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028826"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS 사용 현황 및 진단 데이터 수집에 대한 로컬 감사
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,4 +64,4 @@ SSMS 사용 현황 데이터 수집에 참여하거나 참여하지 않으려면
 ## <a name="see-also"></a>관련 항목:
 
 - [SQL Server 사용 현황 및 진단 데이터 수집 구성](../sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md)
-- [SQL Server 사용 현황 및 진단 데이터 수집에 대한 로컬 감사](http://msdn.microsoft.com/library/mt743085.aspx)
+- [SQL Server 사용 현황 및 진단 데이터 수집에 대한 로컬 감사](https://msdn.microsoft.com/library/mt743085.aspx)

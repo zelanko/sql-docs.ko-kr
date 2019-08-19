@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 474c365b-c451-4b07-b636-1653439f4b1f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b34746b028f4b7efa884fb7c55e5ce3bf4143b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac0c2a99577638d72c0db252b79b0a40780e0e6b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038841"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028761"
 ---
 # <a name="troubleshoot-connecting-to-the-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진에 대한 연결 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -181,7 +181,7 @@ TCP/IP를 사용하여 SQL Server에 연결하려면 Windows에서 연결을 설
   * SQL Server Browser 서비스를 시작합니다. 지침을 참조하여 [SQL Server 구성 관리자에서 브라우저를 시작하세요](#startbrowser).
   * SQL Server Browser 서비스가 방화벽에 의해 차단되고 있습니다. 방화벽에서 UDP 포트 1434를 엽니다. [방화벽에서 포트 열기](#opening-a-port-in-the-firewall)섹션으로 돌아갑니다. TCP 포트가 아니라 UDP 포트를 열고 있는지 확인하세요.
   * UDP 포트 1434 정보가 라우터에 의해 차단되고 있습니다. UDP 통신(사용자 데이터그램 프로토콜)은 라우터를 통과하도록 설계되지 않았습니다. 이는 우선 순위가 낮은 트래픽이 네트워크를 채우지 않도록 합니다. UDP 트래픽을 전달하도록 라우터를 구성하거나, 연결 시 항상 포트 번호를 제공하도록 결정할 수 있습니다.
-  * 클라이언트 컴퓨터에서 Windows 7 또는 Windows Server 2008(또는 최신 운영 체제)을 사용하는 경우 서버 응답이 쿼리된 IP 주소가 아닌 다른 IP 주소에서 반환되기 때문에 클라이언트 운영 체제에서 UDP 트래픽을 삭제할 수 있습니다. 이는 "느슨한 원본 매핑"을 차단하는 보안 기능입니다. 자세한 내용은 온라인 설명서 항목 [문제 해결의 **여러 항목의 IP 주소** 섹션을 참조하세요. 제한 시간 만료됨](http://msdn.microsoft.com/library/ms190181.aspx). SQL Server 2008 R2의 문서이지만 원칙은 똑같이 적용됩니다. 올바른 IP 주소를 사용하도록 클라이언트를 구성하거나, 연결 시 항상 포트 번호를 제공하도록 결정할 수 있습니다.
+  * 클라이언트 컴퓨터에서 Windows 7 또는 Windows Server 2008(또는 최신 운영 체제)을 사용하는 경우 서버 응답이 쿼리된 IP 주소가 아닌 다른 IP 주소에서 반환되기 때문에 클라이언트 운영 체제에서 UDP 트래픽을 삭제할 수 있습니다. 이는 "느슨한 원본 매핑"을 차단하는 보안 기능입니다. 자세한 내용은 온라인 설명서 항목 [문제 해결의 **여러 항목의 IP 주소** 섹션을 참조하세요. 제한 시간 만료됨](https://msdn.microsoft.com/library/ms190181.aspx). SQL Server 2008 R2의 문서이지만 원칙은 똑같이 적용됩니다. 올바른 IP 주소를 사용하도록 클라이언트를 구성하거나, 연결 시 항상 포트 번호를 제공하도록 결정할 수 있습니다.
 
 3. IP 주소(또는 명명된 인스턴스의 IP 주소 및 인스턴스 이름)를 사용하여 연결할 수 있으면 컴퓨터 이름(또는 명명된 인스턴스의 경우 컴퓨터 이름 및 인스턴스 이름)을 사용하여 연결을 시도합니다. TCP/IP 연결을 강제로 적용하려면 컴퓨터 이름 앞에 `tcp:` 를 넣습니다. 예를 들어 `ACCNT27`컴퓨터에 있는 기본 인스턴스의 경우 `tcp:ACCNT27` 을 사용합니다. 해당 컴퓨터에 있는 `PAYROLL`이라는 명명된 인스턴스의 경우 `tcp:ACCNT27\PAYROLL` 을 사용합니다. IP 주소를 사용하여 연결할 수 있지만 컴퓨터 이름을 사용해서는 연결할 수 없는 경우 이름 확인 문제가 있는 것입니다. 섹션 4, **TCP/IP 연결 테스트**섹션으로 돌아갑니다.
 

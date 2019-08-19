@@ -32,10 +32,10 @@ author: juliemsft
 ms.author: jrasnick
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 22748ad9b34292811c5c133dd02da9a4d734657c
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
+ms.lasthandoff: 08/12/2019
 ms.locfileid: "68122175"
 ---
 # <a name="like-transact-sql"></a>LIKE(Transact-SQL)
@@ -340,7 +340,7 @@ WHERE phone NOT LIKE '612%'
 ORDER by LastName;  
 ```  
   
-### <a name="g-using-like-with-the--wildcard-character"></a>G. LIKE와 _ 와일드 카드 문자 사용  
+### <a name="g-using-like-with-the-_-wildcard-character"></a>G. LIKE와 _ 와일드 카드 문자 사용  
  다음 예제에서는 `DimEmployee` 테이블에서 지역 코드가 `6`으로 시작해 `2`로 끝나는 모든 전화 번호를 찾습니다. 전화 열 값의 모든 후속 문자와 일치하도록 검색 패턴 끝에 % 와일드카드 문자가 포함됩니다.  
   
 ```sql  

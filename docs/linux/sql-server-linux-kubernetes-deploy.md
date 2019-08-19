@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a4811c1f41c4c8b9a566dc13b3de713576b4980d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1e8825336edd4e55812f6037bbb4479a3b225e3f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952623"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028735"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Kubernetes 클러스터에 SQL Server Always On 가용성 그룹 배포
 
@@ -36,7 +36,7 @@ Kubernetes에 대한 배포에는 SQL Server 연산자, SQL Server 컨테이너 
 > [!NOTE]
 > 모든 유형의 Kubernetes 클러스터를 사용할 수 있습니다. AKS(Azure Kubernetes Service)에서 Kubernetes 클러스터를 만들려면 [Create an AKS cluster](https://docs.microsoft.com/azure/aks/create-cluster)(AKS 클러스터 만들기)를 참조하세요.
 >
-> 최신 버전의 Kubernetes를 사용합니다. 특정 버전은 구독 및 지역에 따라 달라집니다. [Supported Kubernetes versions in AKS](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions)(AKS에서 지원되는 Kubernetes 버전)를 참조하세요.  
+> 최신 버전의 Kubernetes를 사용합니다. 특정 버전은 구독 및 지역에 따라 달라집니다. [Supported Kubernetes versions in AKS](https://docs.microsoft.com/azure/aks/supported-kubernetes-versions)(AKS에서 지원되는 Kubernetes 버전)를 참조하세요.  
 >
 > 다음 스크립트는 Azure에서 4노드 Kubernetes 클러스터를 만듭니다. 스크립트를 실행하기 전에 `<latest version>`을 사용 가능한 최신 버전으로 바꿉니다. 예를 들면 `1.12.5`입니다.
 >

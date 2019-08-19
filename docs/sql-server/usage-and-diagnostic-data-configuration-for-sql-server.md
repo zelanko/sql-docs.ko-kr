@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 80b6e7444f77fbd764402643887dcee94eaec7aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091802"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028930"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>SQL Server(CEIP) 사용 현황 및 진단 데이터 수집 구성
 
@@ -144,7 +144,7 @@ SSMS는 자체 크래시 덤프를 수집하지 않습니다. SSMS와 관련된 
  
 - Windows Server 2016 및 Windows 10
 
-    [조직에서 Windows 진단 데이터 구성](https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+    [조직에서 Windows 진단 데이터 구성](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - Windows Server 2008 R2 및 Windows 7
 
     [WER 설정](/windows/desktop/wer/wer-settings)

@@ -1,10 +1,7 @@
 ---
 title: 작업 자동 삭제 | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords:
@@ -17,15 +14,19 @@ helpviewer_keywords:
 ms.assetid: 92dbb6da-5919-4bde-9354-d454e9ea3da0
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: e3a5afe43160ac8ea3c0922514e707694e2f888f
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d5139a6e413a15527439d7a62ba0749cdf022ef7
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68251909"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553352"
 ---
 # <a name="automatically-delete-a-job"></a>Automatically Delete a Job
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
@@ -46,18 +47,6 @@ ms.locfileid: "68251909"
 -   작업을 자동 삭제함  
   
     이 작업을 반환할 필요가 없을 경우에는 이 작업 응답을 사용합니다.  
-  
-**항목 내용**  
-  
--   **시작하기 전 주의 사항:**  
-  
-    [보안](#Security)  
-  
--   **작업 응답을 지정하려면:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [SQL Server 관리 개체](#SMO)  
   
 ## <a name="BeforeYouBegin"></a>시작하기 전 주의 사항  
   

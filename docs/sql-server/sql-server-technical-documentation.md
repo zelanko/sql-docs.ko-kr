@@ -20,12 +20,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 311e4819751fe9a398643e2005bd8480c781ee9f
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 0f4fdc5f81ff01b77f0bb27e5782db6ecd41b004
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941150"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969470"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
 
@@ -35,11 +35,11 @@ ms.locfileid: "68941150"
 > [SQL Docs 허브 페이지에 대한 피드백을 공유하세요!](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
-SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Server는 ODBMS(운영 데이터베이스 관리 시스템)의 선두 주자입니다. 이 설명서를 통해 Windows 및 Linux에 SQL Server를 설치하고, 구성하며, 사용할 수 있습니다. 콘텐츠는 종단 간 예제, 코드 샘플 및 비디오를 포함합니다. SQL Server 언어 항목은 [언어 참조](../t-sql/language-reference.md)를 참조하세요.
+SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Server는 ODBMS(운영 데이터베이스 관리 시스템)의 선두 주자입니다. 이 설명서를 통해 Windows 및 Linux에 SQL Server를 설치하고, 구성하며, 사용할 수 있습니다. 콘텐츠는 엔드투엔드 예제, 코드 샘플 및 비디오를 포함합니다. SQL Server 언어 항목은 [언어 참조](../t-sql/language-reference.md)를 참조하세요.
 ::: moniker-end
 
 ::: moniker range="= sql-server-2016"
-SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Server는 ODBMS(운영 데이터베이스 관리 시스템)의 선두 주자입니다. 이 설명서를 통해 Windows에 SQL Server를 설치하고, 구성하며, 사용할 수 있습니다. 콘텐츠는 종단 간 예제, 코드 샘플 및 비디오를 포함합니다. SQL Server 언어 항목은 [언어 참조](../t-sql/language-reference.md)를 참조하세요.
+SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Server는 ODBMS(운영 데이터베이스 관리 시스템)의 선두 주자입니다. 이 설명서를 통해 Windows에 SQL Server를 설치하고, 구성하며, 사용할 수 있습니다. 콘텐츠는 엔드투엔드 예제, 코드 샘플 및 비디오를 포함합니다. SQL Server 언어 항목은 [언어 참조](../t-sql/language-reference.md)를 참조하세요.
 ::: moniker-end
 
 SQL Server 2014 및 SQL Server 2005를 비롯한 이전 버전의 설명서는 [여기](#previous-versions-gm66)에서 확인할 수 있습니다.
@@ -155,7 +155,7 @@ SQL Server 2014 및 SQL Server 2005를 비롯한 이전 버전의 설명서는 [
 
 이 :::no-loc text="Docs"::: 웹 페이지의 _버전 관리_는 콘텐츠 테이블 위에 있습니다. 버전 관리를 사용하는 방법 및 정확한 기능에 대한 자세한 내용은 다음을 참조하세요.
 
-- [SQL 버전 관리 시스템 설명서](../toc/versioning-system-monikers-ui-sql-server.md)
+- [SQL 버전 관리 시스템 설명서](versioning-system-monikers-ui-sql-server.md)
 
 <!--
 The following includes/ files contain their own H2 headers.

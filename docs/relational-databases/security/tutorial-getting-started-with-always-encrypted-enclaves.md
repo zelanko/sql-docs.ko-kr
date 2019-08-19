@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e70dc6ddf897b34f5ffd0cf3c573ea973a1a36ad
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: de030c3982fb3e3ed64603707b7e6915779fb4d8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888891"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028813"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>자습서: SSMS를 사용하여 보안 Enclave를 사용한 Always Encrypted 시작
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "68888891"
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 이상.
 - Windows 10 Enterprise 버전 1809 또는 Windows Server 2019 Datacenter
-- SQL Server 컴퓨터가 물리적 컴퓨터인 경우 SQL Server 컴퓨터는 [Hyper-V 하드웨어 요구 사항](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)을 충족해야 합니다.
+- SQL Server 컴퓨터가 물리적 컴퓨터인 경우 SQL Server 컴퓨터는 [Hyper-V 하드웨어 요구 사항](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)을 충족해야 합니다.
    - SLAT(두 번째 수준 주소 변환)를 사용하는 64비트 프로세서
    - VM 모니터 모드 확장(Intel CPU의 VT-c)에 대한 CPU 지원
    - 가상화 지원 사용(Intel VT-x 또는 AMD-V)
 - SQL Server 컴퓨터가 가상 머신인 경우에는 가상화 기반 보안을 지원하도록 VM을 구성해야 합니다.
-   - Hyper-v 2016 이상에서 1세대 VM을 사용하고 VM 프로세서에서 [중첩된 가상화 확장을 사용](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)하도록 설정하거나 2세대 VM을 사용합니다. VM 세대에 대한 자세한 내용은 [Hyper-V에서 1세대 또는 2세대 가상 머신을 만들어야 하나요?](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v)를 참조하세요. 
+   - Hyper-v 2016 이상에서 1세대 VM을 사용하고 VM 프로세서에서 [중첩된 가상화 확장을 사용](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)하도록 설정하거나 2세대 VM을 사용합니다. VM 세대에 대한 자세한 내용은 [Hyper-V에서 1세대 또는 2세대 가상 머신을 만들어야 하나요?](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v)를 참조하세요. 
    - Azure에서 다음 중 하나를 지원하는 VM 크기를 실행하고 있는지 확인하세요.
-      - 중첩된 가상화(예: Dv3 및 Ev3 시리즈 VM). [중첩 지원 Azure VM 만들기](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)를 참조하세요.
-      - 2세대 VM(예: Dsv3 또는 Esv3 시리즈 VM). [Azure의 2세대용 VM 지원](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/generation-2)을 참조하세요.
+      - 중첩된 가상화(예: Dv3 및 Ev3 시리즈 VM). [중첩 지원 Azure VM 만들기](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)를 참조하세요.
+      - 2세대 VM(예: Dsv3 또는 Esv3 시리즈 VM). [Azure의 2세대용 VM 지원](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2)을 참조하세요.
    - [VMware 설명서](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)에 설명된 대로 VMWare vSphere 6.7 이상에서 VM에 대한 가상화 기반 보안 지원을 사용합니다.
    - 다른 하이퍼바이저 및 퍼블릭 클라우드는 가상화 확장(중첩된 가상화라고도 함)이 VM에 노출되어 있는 한 VM에서 보안 enclave를 통해 Always Encrypted를 사용하도록 지원할 수 있습니다. 호환성 및 구성 지침은 가상화 솔루션 설명서를 확인하세요.
 - [SSMS(SQL Server Management Studio) 18.0 이상](../../ssms/download-sql-server-management-studio-ssms.md).

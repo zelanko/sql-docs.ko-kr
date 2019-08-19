@@ -9,12 +9,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 40057200c5b8241849f4030e6c418cf080d149f2
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: c92eead00b10c4a26a93234c3bbfeebf254f6aff
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329347"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028839"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server 개인 정보 제공
 
@@ -23,7 +23,7 @@ ms.locfileid: "68329347"
 이 문서에서는 익명 기능 사용 및 진단 데이터를 수집하고 Microsoft에 보낼 수 있는 인터넷 사용 기능을 요약해서 설명합니다. SQL Server는 표준 컴퓨터 정보와 사용 및 성능 데이터를 수집할 수 있습니다. 이 데이터는 Microsoft로 전송되어 제품의 품질, 보안 및 안정성 개선을 위해 분석될 수 있습니다. 이 문서는 전반적인 [Microsoft 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkId=521839)에 대한 추록입니다. 이 문서에서 데이터 분류는 SQL Server 온-프레미스 제품의 버전에만 적용됩니다. 항목에 적용되지 않습니다.
 
 - Azure SQL 데이터베이스
-- [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SSMS(SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SSDT(SQL Server Data Tools)
 - Azure Data Studio
 - Data Migration Assistant
@@ -124,7 +124,7 @@ SQL Server EULA당 인터넷 기반 서비스를 제공하는 데 필요한 데�
 - 데이터베이스 GUID
 - 컴퓨터 이름 해시
 - 인스턴스 이름 해시
-- 응용 프로그램 이름
+- 애플리케이션 이름
 - 동작/사용량 데이터
 - SQLCEIP(SQL 사용자 환경 개선 프로그램 데이터)
 - 서버 구성 데이터(예: sp_configure)

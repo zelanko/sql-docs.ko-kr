@@ -140,7 +140,7 @@ SSMS 18.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 
 | 새 항목 | 세부 정보 |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 손쉬운 사용 | 에이전트 작업 UI의 향상된 내게 필요한 옵션. |
+| 손쉬운 사용 | 에이전트 작업 UI의 향상된 액세스 가능성. |
 | 손쉬운 사용 | *자동 새로 고침* 단추에 액세스 가능한 이름을 추가하고 사용자가 어떤 단추가 있는지뿐만 아니라 단추 누름의 영향을 알 수 있도록 도와주는 지능형 액세스 가능 이름을 추가하여 Stretch 모니터 페이지의 액세스 가능성을 개선했습니다. |
 | ADS 통합| ADS 등록 서버를 사용하려고 할 때 SSMS에서 발생할 수 있는 오류를 해결했습니다.|
 | 데이터베이스 디자이너 | Latin1_General_100_BIN2_UTF8 데이터 정렬에 대한 지원 추가(SQL Server 2019 CTP3.0에서 사용 가능) |
@@ -248,7 +248,7 @@ SSMS 18.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |데이터 계층 애플리케이션 마법사|Graph 테이블을 통한 데이터 계층 애플리케이션 가져오기/내보내기 지원이 추가되었습니다.|
 |플랫 파일 가져오기 마법사|가져오기로 인해 열 이름이 변경되었을 수 있음을 사용자에게 알리는 논리가 추가되었습니다.|
 |Integration Services(SSIS)|고객이 Azure Government 클라우드에 있는 Azure-SSIS IR에서 SSIS 패키지를 예약할 수 있도록 하는 지원이 추가되었습니다.|
-|Integration Services(SSIS)|SSMS를 통해 SQL Managed Instance의 SQL 에이전트를 사용하는 경우 SSIS 에이전트 작업 단계에서 매개 변수 및 연결 관리자를 구성할 수 있습니다.|
+|Integration Services(SSIS)|SSMS를 통해 Azure SQL Managed Instance의 SQL 에이전트를 사용하는 경우 SSIS 에이전트 작업 단계에서 매개 변수 및 연결 관리자를 구성할 수 있습니다.|
 |Integration Services(SSIS)|Azure SQL DB/Managed Instance에 연결할 때 *기본값*을 사용하여 초기 db로 연결할 수 있습니다.|
 |Integration Services(SSIS)|"Integration Services 카탈로그" 노드에 새로운 **Azure Data Factory에서 SSIS 시도** 항목이 추가되었습니다. 이 항목을 사용하면 "Integration Runtime 만들기 마법사"를 시작하고 "Azure-SSIS Integration Runtime"을 빠르게 만들 수 있습니다.
 |Integration Services(SSIS)|"카탈로그 만들기 마법사"에 **SSIS IR 만들기** 단추가 추가되었습니다. 이 단추를 사용하면 "Integration Runtime 만들기 마법사"를 시작하고 "Azure-SSIS Integration Runtime"을 빠르게 만들 수 있습니다.|
@@ -266,7 +266,7 @@ SSMS 18.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |실행 계획|DW ROLLUP 및 CUBE에 대해 LocalCube RelOp에 실행 계획 지원이 추가되었습니다.|
 |실행 계획|Azure SQL Data Warehouse의 새로운 ROLLUP 및 CUBE 집계 기능에 대한 새 LocalCube 연산자입니다.|
 |SMO| 다시 시작 가능한 인덱스 생성을 위한 SMO 지원을 확장합니다.|
-|SMO| SMO 개체에서 새 이벤트(“PropertyMissing”)를 추가하여 애플리케이션 작성자가 SMO 성능 문제를 더 빨리 감지할 수 있도록 했습니다.|
+|SMO| SMO 개체(“PropertyMissing”)에서 새 이벤트를 추가하여 애플리케이션 작성자가 SMO 성능 문제를 더 빨리 감지할 수 있도록 했습니다.|
 |SMO| "백업 체크섬 기본값" 서버 구성에 매핑되는 구성 개체에 대한 새로운 DefaultBackupChecksum 속성이 공개되었습니다.|
 |SMO| 사용 중인 SQL 버전의 서비스 수준(예: CU12, RTM)에 매핑되는 서버 개체에 대한 새 ProductUpdateLevel 속성이 공개되었습니다.|
 |SMO| "lastgoodcheckdbtime" 데이터베이스 속성에 매핑되는 데이터베이스 개체에 대한 새 LastGoodCheckDbTime 속성이 공개되었습니다. 해당 속성을 사용할 수 없는 경우 기본값인 1/1/1900 12:00:00 AM이 반환됩니다.|
@@ -301,7 +301,7 @@ SSMS 18.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 |일반 SSMS|bacpac 파일을 가져오려는 문제를 해결했습니다.|
 |일반 SSMS|데이터베이스 속성(FILEGROWTH > 2048GB 포함)을 표시하려고 할 때 산술 오버플로 오류를 throw하는 문제가 해결되었습니다.|
 |일반 SSMS|성능 대시보드 보고서가 하위 보고서에서 찾을 수 없는 PAGELATCH 및 PAGEIOLATCH 대기를 보고하는 문제가 해결되었습니다.|
-|일반 SSMS|올바른 모니터에서 대화 상자를 열어 SSMS를 추가 다중 모니터로 인식하도록 하는 또 다른 수정 사항.|
+|일반 SSMS|올바른 모니터에서 대화 상자를 열어 SSMS를 추가 다중 모니터로 인식하도록 다시 수정했습니다.|
 |AS(Analysis Services)|AS XEvent UI에 대한 "고급 설정"이 잘리는 문제를 해결했습니다.|
 |AS(Analysis Services)|DAX 구문 분석에서 파일을 찾을 수 없음 예외가 throw되는 문제가 해결되었습니다.|
 |Azure SQL 데이터베이스|마스터 대신 Azure SQL DB에서 사용자 데이터베이스에 연결했을 때 Azure SQL Database 쿼리 창에 대해 데이터베이스 목록이 올바로 채워지지 않는 문제가 해결되었습니다.|

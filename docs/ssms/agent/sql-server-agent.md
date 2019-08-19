@@ -1,7 +1,5 @@
 ---
 title: SQL Server 에이전트 | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -13,31 +11,27 @@ helpviewer_keywords:
 ms.assetid: 8d1dc600-aabb-416f-b3af-fbc9fccfd0ec
 author: markingmyname
 ms.author: maghan
+ms.custom: ''
+ms.date: 01/19/2017
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 5a131153b269d68091e0b76cda4bda5f14e62fd9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: af9045220d860efdf60a4df37c138ac81bf3c05d
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265236"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69552662"
 ---
 # <a name="sql-server-agent"></a>SQL Server 에이전트
+
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 *에서* 작업 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]이라고 하는 일정이 지정된 관리 태스크를 실행하는 Microsoft Windows 서비스입니다.  
-  
-**항목 내용**  
-  
--   [SQL Server 에이전트의 이점](#Benefits)  
-  
--   [SQL Server 에이전트 구성 요소](#Components)  
-  
--   [SQL Server 에이전트 관리 보안](#Security)  
-  
-## <a name="Benefits"></a>SQL Server 에이전트의 이점  
+
+## <a name="Benefits"></a>SQL Server 에이전트의 이점 
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하여 작업 정보를 저장합니다. 작업에는 하나 이상의 작업 단계가 포함됩니다. 각 단계에는 자체 태스크(예: 데이터베이스 백업)가 포함됩니다.  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트는 특정 이벤트에 대한 응답이나 요청에 따라 일정에 있는 작업을 실행할 수 있습니다. 예를 들어 평일 근무 시간 이후에 회사 서버를 모두 백업하려는 경우 이 태스크를 자동화할 수 있습니다. 월요일부터 금요일까지 밤 10시 이후 백업이 실행되도록 일정을 만듭니다. 이 백업에 문제가 발생하면 SQL Server 에이전트가 이 이벤트를 기록하여 사용자에게 알릴 수 있습니다.  
