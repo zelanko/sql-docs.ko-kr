@@ -1,7 +1,7 @@
 ---
 title: 대량 데이터 샘플 업데이트 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 201a5999644c77b4934e47c7f1c9184133488e3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 231125f60ec0c5791e55a10cff56b3b93339fb91
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916597"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027067"
 ---
 # <a name="updating-large-data-sample"></a>큰 데이터 업데이트 샘플
 
@@ -31,7 +31,7 @@ ms.locfileid: "67916597"
 
 ## <a name="requirements"></a>요구 사항
 
-이 샘플 애플리케이션을 실행하려면 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대한 액세스 권한이 필요합니다. 또한 sqljdbc4.jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 클래스 경로에 sqljdbc4.jar 파일에 대한 항목이 없으면 샘플 응용 프로그램에서 일반적인 "클래스를 찾을 수 없습니다." 예외가 발생합니다. 클래스 경로를 설정 하는 방법에 대 한 자세한 내용은 [JDBC 드라이버 사용](../../connect/jdbc/using-the-jdbc-driver.md)을 참조 하세요.
+이 샘플 애플리케이션을 실행하려면 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 대한 액세스 권한이 필요합니다. 또한 sqljdbc4.jar 파일을 포함하도록 클래스 경로를 설정해야 합니다. 클래스 경로에 sqljdbc4.jar 파일에 대한 항목이 없으면 샘플 애플리케이션에서 일반적인 &quot;클래스를 찾을 수 없습니다.&quot; 예외가 발생합니다. 클래스 경로를 설정 하는 방법에 대 한 자세한 내용은 [JDBC 드라이버 사용](../../connect/jdbc/using-the-jdbc-driver.md)을 참조 하세요.
 
 > [!NOTE]  
 > [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 기본 설정된 JRE(Java Runtime Environment)에 따라 사용할 수 있는 sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 클래스 라이브러리 파일을 제공합니다. 이 샘플에서는 JDBC 4.0 API에 도입된 [isWrapperFor](../../connect/jdbc/reference/iswrapperfor-method-sqlserverstatement.md) 및 [unwrap](../../connect/jdbc/reference/unwrap-method-sqlserverstatement.md) 메서드를 사용하여 드라이버 관련 응답 버퍼링 메서드에 액세스합니다. 이 샘플을 컴파일하고 실행하려면 JDBC 4.0을 지원하는 sqljdbc4.jar 클래스 라이브러리가 있어야 합니다. 선택할 JAR 파일에 대한 자세한 내용은 [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)(JDBC Driver 시스템 요구 사항)를 참조하세요.
@@ -50,6 +50,6 @@ ms.locfileid: "67916597"
 
 [!code[JDBC#UsingAdaptiveBuffering3](../../connect/jdbc/codesnippet/Java/updating-large-data-sample_1.java)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [대규모 데이터 작업](../../connect/jdbc/working-with-large-data.md)

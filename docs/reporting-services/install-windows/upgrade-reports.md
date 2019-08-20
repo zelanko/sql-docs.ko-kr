@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: a1a10c67-7462-4562-9b07-a8822188a161
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4516effe7308386def1aa7cca885f9fa48547ec5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: c4d5684850dff9157a56435547e48b5446dd929c
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889734"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494548"
 ---
 # <a name="upgrade-reports-ssrs"></a>보고서 업그레이드(SSRS)
 
@@ -136,8 +136,8 @@ ms.locfileid: "68889734"
 ## <a name="next-steps"></a>다음 단계
 
 [Reporting Services 업그레이드 및 마이그레이션](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)   
-[SQL Server 2016에서 SQL Server Reporting Services의 주요 변경 내용](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
-[SQL Server 2016에서 SQL Server Reporting Services의 동작 변경 내용](https://docs.microsoft.com/analysis-services/behavior-changes-to-analysis-services-features-in-sql-server-2016)   
+[SQL Server 2016에서 SQL Server Reporting Services의 주요 변경 내용](../breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md)   
+[SQL Server 2016에서 SQL Server Reporting Services의 동작 변경 내용](../behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [SQL Server 2016의 SQL Server Reporting Services에서 중단된 기능](../../reporting-services/behavior-changes-to-sql-server-reporting-services-in-sql-server-2016.md)   
 [사용자 지정 보고서 항목](../../reporting-services/custom-report-items/custom-report-items.md)   
 [보고서 서버 데이터베이스 업그레이드](../../reporting-services/install-windows/upgrade-a-report-server-database.md)  

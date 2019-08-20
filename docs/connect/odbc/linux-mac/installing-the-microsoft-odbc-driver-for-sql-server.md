@@ -13,12 +13,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: MightyPen
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: a1cffb5050a548acfd1bbd9ec9d38a8c9b48d63f
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 2c71bdf4628b74bd21346f37534339d8d83497b2
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702731"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68984588"
 ---
 # <a name="installing-the-microsoft-odbc-driver-for-sql-server-on-linux-and-macos"></a>Linux 및 macOS 기반 Microsoft ODBC Driver for SQL Server 설치를 참조하세요
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -96,6 +96,7 @@ sudo su
 #Choose only ONE of the following, corresponding to your OS version
 
 #SUSE Linux Enterprise Server 11 SP4
+#Ensure SUSE Linux Enterprise 11 Security Module has been installed 
 zypper ar https://packages.microsoft.com/config/sles/11/prod.repo
 
 #SUSE Linux Enterprise Server 12
@@ -103,6 +104,7 @@ zypper ar https://packages.microsoft.com/config/sles/12/prod.repo
 
 #SUSE Linux Enterprise Server 15
 zypper ar https://packages.microsoft.com/config/sles/15/prod.repo
+#(Only for driver 17.3 and below)
 SUSEConnect -p sle-module-legacy/15/x86_64
 
 exit

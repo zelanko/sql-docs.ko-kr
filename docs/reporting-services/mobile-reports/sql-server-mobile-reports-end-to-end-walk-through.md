@@ -1,5 +1,5 @@
 ---
-title: 'SQL Server 모바일 보고서: 종단 간 연습'
+title: 'SQL Server 모바일 보고서: 엔드투엔드 연습'
 description: Reporting Services 웹 포털의 SQL Server 모바일 보고서 게시자를 사용하여 모든 화면 크기에 적합한 모바일 보고서를 만들고 Power BI 모바일 앱에 표시하는 방법을 알아봅니다.
 ms.date: 12/07/2018
 ms.prod: reporting-services
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d5ec94bb96832574cec663d38690bec8078db6ff
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502427"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028890"
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 종단 간 연습
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>SQL Server 모바일 보고서: 엔드투엔드 연습
 [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] 웹 포털의 [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] 를 사용하여 모든 화면 크기에 적합한 모바일 보고서를 만들고 Power BI 모바일 앱에 표시하는 방법을 알아봅니다.
 
 조정 가능한 표 행/열이 표시된 디자인 화면에서 유동적인 모바일 보고서 요소를 사용하여 모바일 보고서를 만듭니다. 다양한 온-프레미스 데이터 원본에 연결하거나 Excel 통합 문서를 업로드하여 모바일 보고서를 만듭니다. 그런 다음 보고서를 [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] 웹 포털에 저장하고 브라우저 또는 Power BI 모바일 앱에서 확인합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "62502427"
 *  또는 [Microsoft SQL Server 예제](../../sample/microsoft-sql-server-samples.md) 페이지에서 제공되는 Wide World Importers 예제 데이터베이스
 * 결과를 보려면 
   *   [Power BI 서비스에 등록](https://go.microsoft.com/fwlink/?LinkID=513879) 합니다.
-  *  모바일 디바이스(iOS, Android 휴대폰 또는 Windows 10 디바이스)에[Power BI 모바일 앱을 다운로드](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) 합니다.  
+  *  모바일 디바이스(iOS, Android 휴대폰 또는 Windows 10 디바이스)에[Power BI 모바일 앱을 다운로드](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) 합니다.  
 
   
 ## <a name="create-a-shared-data-source"></a>공유 데이터 원본 만들기  

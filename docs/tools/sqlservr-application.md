@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1778f9b3f6b4662de36e33e3ae7974f4eef4dd82
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1feb0cfe509f4dec4e77076021757045628e2e7a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771021"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028967"
 ---
 # <a name="sqlservr-application"></a>sqlservr 애플리케이션
 
@@ -84,8 +84,8 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 |매개 변수 | 자세한 정보|
 |:-----|:-----|
-|**-h** | 이전 버전 32비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 AWE가 설정된 경우 Hot Add 메모리 메타데이터에 대해 가상 주소 공간을 예약하는 데 사용됩니다. 를 통해 [!INCLUDE[sssql14](../includes/sssql14-md.md)]지원 됩니다. 자세한 내용은 [SQL Server 2016에서 지원되지 않는 SQL Server 기능](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)을 참조하세요.|
-|**-g** | *memory_to_reserve*<br/><br>이전 버전의 32 비트 인스턴스에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]적용 됩니다. 를 통해 [!INCLUDE[sssql14](../includes/sssql14-md.md)]지원 됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스 내, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 풀 외부의 메모리 할당에 사용할 수 있도록 남겨 두는 메모리 양(MB)을 정수로 지정합니다.|
+|**-h** | 이전 버전 32비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에서 AWE가 설정된 경우 Hot Add 메모리 메타데이터에 대해 가상 주소 공간을 예약하는 데 사용됩니다. 를 통해 [!INCLUDE[sssql14](../includes/sssql14-md.md)]지원 됩니다. 자세한 내용은 [SQL Server 2016에서 지원되지 않는 SQL Server 기능](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)을 참조하세요.|
+|**-g** | *memory_to_reserve*<br/><br>이전 버전의 32 비트 인스턴스에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]적용 됩니다. 를 통해 [!INCLUDE[sssql14](../includes/sssql14-md.md)]지원 됩니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 프로세스 내, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 풀 외부의 메모리 할당에 사용할 수 있도록 남겨 두는 메모리 양(MB)을 정수로 지정합니다. 자세한 내용은 [서버 메모리 구성 옵션에 대 한 SQL Server 2014 설명서](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)를 참조 하세요.|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>참고 항목
