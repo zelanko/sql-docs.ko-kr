@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5b35eccece4df47cb483932386cf6a38e45d2dc8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a705e93cd4fce09abb7f8f3615c1ab638f332d60
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419281"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621673"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 데이터 로드
 
@@ -33,7 +33,7 @@ ms.locfileid: "68419281"
    - **kubectl**
    - **sqlcmd**
    - **curl**
-
+ 
 ## <a id="sampledata"></a> 샘플 데이터 로드
 
 다음 단계에서는 부트스트랩 스크립트를 사용하여 SQL Server 데이터베이스 백업을 다운로드하고 빅 데이터 클러스터에 데이터를 로드합니다. 이러한 단계는 간편하게 [Windows](#windows) 및 [Linux](#linux) 섹션으로 구분되어 있습니다.

@@ -1438,6 +1438,17 @@
   href: ../integration-services/azure-feature-pack-for-integration-services-ssis.md
 - name: Integration Services(SSIS)에서 Hadoop 및 HDFS 지원
   href: ../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md
+- name: Microsoft Connector for Oracle
+  href: ../integration-services/data-flow/oracle-connector.md
+  items:
+    - name: Oracle 연결 관리자
+      href: ../integration-services/data-flow/oracle-connection-manager.md
+    - name: Oracle 원본
+      ref: ../integration-services/data-flow/oracle-source.md
+    - name: Oracle 대상
+      href: ../integration-services/data-flow/oracle-destination.md
+    - name: 데이터 형식 지원
+      href: ../integration-services/data-flow/oracle-data-type-support.md
 - name: Attunity의 Oracle 및 Teradata용 Microsoft Connectors
   href: ../integration-services/attunity-connectors.md
 - name: SQL Server 가져오기 및 내보내기 마법사

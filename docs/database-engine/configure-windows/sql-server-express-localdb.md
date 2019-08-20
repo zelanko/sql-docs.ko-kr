@@ -29,7 +29,7 @@ ms.locfileid: "68026044"
 
 Microsoft SQL Server Express LocalDB는 개발자를 대상으로 하는 [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) 기능입니다. SQL Server Express with Advanced Services에서 사용할 수 있습니다.
 
-LocalDB를 설치하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 시작하는 데 필요한 최소한의 파일 집합이 복사됩니다. LocalDB가 설치되면 특수 연결 문자열을 사용하여 연결을 시작할 수 있습니다. 연결할 때, 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라가 자동으로 생성되고 시작되므로 복잡한 구성 태스크 없이 애플리케이션에서 데이터베이스를 사용하도록 할 수 있습니다. 개발자 도구는 개발자가 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 전체 서버 인스턴스를 관리할 필요 없이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 작성하고 테스트할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]을 제공할 수 있습니다. 
+LocalDB를 설치하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 시작하는 데 필요한 최소한의 파일 집합이 복사됩니다. LocalDB가 설치되면 특수 연결 문자열을 사용하여 연결을 시작할 수 있습니다. 연결할 때, 필요한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인프라가 자동으로 생성되고 시작되므로 복잡한 구성 태스크 없이 애플리케이션에서 데이터베이스를 사용하도록 할 수 있습니다. 개발자 도구는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 전체 서버 인스턴스를 관리할 필요 없이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드를 작성하고 테스트할 수 있게 해주는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진을 개발자에게 제공합니다. 
 
 ## <a name="try-it-out"></a>사용해 보세요! 
 
@@ -74,7 +74,7 @@ LocalDB의 인스턴스 데이터 정렬은 `SQL_Latin1_General_CP1_CI_AS`로 �
 
 LocalDB는 자동 인스턴스 및 명명된 인스턴스의 두 가지 인스턴스 유형을 지원합니다.
 
-- LocalDB의 자동 인스턴스는 공용입니다. 이 인스턴스는 자동으로 생성 및 관리되고 모든 애플리케이션에서 사용될 수 있습니다. 사용자의 컴퓨터에 설치되는 모든 버전의 LocalDB에는 LocalDB의 자동 인스턴스가 하나씩 있습니다. LocalDB의 자동 인스턴스는 효율적으로 관리됩니다. 인스턴스를 만들 필요 없이 그대로 작동합니다. 이 기능을 사용하면 애플리케이션을 쉽게 설치할 수 있으며 다른 컴퓨터에 쉽게 마이그레이션할 수 있습니다. 대상 컴퓨터에 특정 버전의 LocalDB가 설치되어 있을 경우 해당 버전에 대한 자동 LocalDB 인스턴스를 대상 컴퓨터에서도 사용할 수 있습니다. 자동 LocalDB 인스턴스는 예약된 네임스페이스에 속하는 특수한 인스턴스 이름 패턴을 사용합니다. 이러한 방식은 명명된 LocalDB 인스턴스와 이름이 충돌하는 것을 방지합니다. 자동 인스턴스의 이름은 **MSSQLLocalDB**입니다.
+- LocalDB의 자동 인스턴스는 공용입니다. 이 인스턴스는 자동으로 생성 및 관리되고 모든 애플리케이션에서 사용될 수 있습니다. 사용자의 컴퓨터에 설치되는 모든 버전의 LocalDB에는 LocalDB의 자동 인스턴스가 하나씩 있습니다. LocalDB의 자동 인스턴스는 효율적으로 관리됩니다. 인스턴스를 만들 필요 없이 그대로 작동합니다. 이 기능을 사용하면 애플리케이션을 쉽게 설치할 수 있으며 다른 컴퓨터에 쉽게 마이그레이션할 수 있습니다. 대상 컴퓨터에 특정 버전의 LocalDB가 설치되어 있을 경우 해당 버전에 대한 자동 LocalDB 인스턴스를 대상 컴퓨터에서도 사용할 수 있습니다. LocalDB의 자동 인스턴스는 예약된 네임스페이스에 속하는 특수한 인스턴스 이름 패턴을 사용합니다. 이러한 방식은 명명된 LocalDB 인스턴스와 이름이 충돌하는 것을 방지합니다. 자동 인스턴스의 이름은 **MSSQLLocalDB**입니다.
 
 - LocalDB의 명명된 인스턴스는 프라이빗입니다. 이 인스턴스는 인스턴스 만들기와 관리를 담당하는 단일 애플리케이션에 의해 소유됩니다. 명명된 인스턴스는 다른 인스턴스로부터의 격리를 제공하고 다른 데이터베이스 사용자와의 리소스 경합을 줄여서 성능을 향상시킬 수 있습니다. 명명된 인스턴스는 사용자가 LocalDB 관리 API를 통해 명시적으로 또는 관리형 애플리케이션에 대한 app.config 파일을 통해 암시적으로(관리형 애플리케이션에서 필요에 따라 해당 API를 사용하더라도) 만들어야 합니다. LocalDB의 각 명명된 인스턴스에는 해당 LocalDB 바이너리 집합을 가리키는 LocalDB 버전이 연결되어 있습니다. LocalDB의 인스턴스 이름은 **sysname** 데이터 형식이며 최대 128자를 포함할 수 있습니다. 이러한 특성은 이름을 16 ASCII 문자의 일반 NetBIOS 이름으로 제한하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 일반적인 명명된 인스턴스와 다릅니다. LocalDB 인스턴스의 이름에는 파일 이름에 사용 가능한 유니코드 문자만 포함될 수 있습니다. 자동 인스턴스 이름을 사용하는 명명된 인스턴스는 자동 인스턴스가 됩니다.
 
@@ -122,7 +122,7 @@ REM Gather information about the instance of LocalDB
 |인스턴스 파이프 이름|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]
->애플리케이션에 .NET 4.0.2 버전이 사용될 경우 LocalDB의 명명된 파이프에 직접 연결해야 합니다. 인스턴스 파이프 이름 값은 LocalDB 인스턴스가 수신 대기 중인 명명된 파이프입니다. LOCALDB# 다음의 인스턴스 파이프 이름 부분은 LocalDB 인스턴스가 시작될 때마다 변경됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 LocalDB 인스턴스에 연결하려면 **에 연결[!INCLUDE[ssDE](../../includes/ssde-md.md)]** 대화 상자의 **서버 이름** 상자에 인스턴스 파이프 이름을 입력합니다. 사용자 지정 프로그램에서 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`와 비슷한 연결 문자열을 사용하여 LocalDB 인스턴스에 연결할 수 있습니다.
+>애플리케이션에 .NET 4.0.2 버전이 사용될 경우 LocalDB의 명명된 파이프에 직접 연결해야 합니다. 인스턴스 파이프 이름 값은 LocalDB 인스턴스가 수신 대기 중인 명명된 파이프입니다. LOCALDB# 다음의 인스턴스 파이프 이름 부분은 LocalDB 인스턴스가 시작될 때마다 변경됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하여 LocalDB 인스턴스에 연결하려면 데이터베이스 엔진에 연결 대화 상자의 서버 이름[!INCLUDE[ssDE](../../includes/ssde-md.md)] 상자에 인스턴스 파이프 이름을 입력합니다. 사용자 지정 프로그램에서 `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`와 비슷한 연결 문자열을 사용하여 LocalDB 인스턴스에 연결할 수 있습니다.
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>LocalDB의 공유 인스턴스에 연결
 

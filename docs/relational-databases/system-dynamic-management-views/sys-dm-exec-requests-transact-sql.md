@@ -1,5 +1,5 @@
 ---
-title: sys.dm_exec_requests (TRANSACT-SQL) | Microsoft Docs
+title: _exec_requests (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -17,17 +17,17 @@ dev_langs:
 helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
-author: stevestein
+author: pmasl
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c4e12ee4d40cb200124748c07bcc3e78a5076a07
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0180d8087b556ea32728ef8924681bb65ec7ea2
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936952"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611439"
 ---
-# <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
+# <a name="sysdm_exec_requests-transact-sql"></a>sys.dm_exec_requests(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
@@ -40,15 +40,15 @@ ms.locfileid: "67936952"
 |start_time|**datetime**|요청이 도착한 타임스탬프입니다. Null을 허용하지 않습니다.|  
 |상태|**nvarchar(30)**|요청의 상태입니다. 다음 중 하나일 수 있습니다.<br /><br /> 배경<br />실행 중<br />실행 가능<br />중지 중<br />Suspended<br /><br /> Null을 허용하지 않습니다.|  
 |command|**nvarchar(32)**|처리되고 있는 명령의 현재 유형을 식별합니다. 일반 명령 유형은 다음과 같습니다.<br /><br /> SELECT<br />INSERT<br />UPDATE<br />DELETE<br />BACKUP LOG<br />BACKUP DATABASE<br />DBCC<br />FOR<br /><br /> 요청 텍스트는 요청에 대한 해당 sql_handle과 함께 sys.dm_exec_sql_text를 사용하여 검색할 수 있습니다. 내부 시스템 프로세스는 수행하는 태스크 유형에 따라 명령을 설정합니다. 태스크는 다음과 같습니다.<br /><br /> LOCK MONITOR<br />CHECKPOINTLAZY<br />WRITER<br /><br /> Null을 허용하지 않습니다.|  
-|sql_handle|**varbinary(64)**|일괄 처리를 고유 하 게 식별 하는 토큰 또는 쿼리가 포함 된 저장된 프로시저입니다. Null을 허용합니다.|  
+|sql_handle|**varbinary(64)**|쿼리가 속하는 일괄 처리 또는 저장 프로시저를 고유 하 게 식별 하는 토큰입니다. Null을 허용합니다.|  
 |statement_start_offset|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 시작되는 위치까지의 문자 수입니다. sql_handle, statement_end_offset 및 sys.dm_exec_sql_text 동적 관리 함수와 함께 사용하여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다. Null을 허용합니다.|  
 |statement_end_offset|**int**|현재 실행 중인 일괄 처리 또는 저장 프로시저에서 현재 실행 중인 문이 종료되는 위치까지의 문자 수입니다. sql_handle, statement_end_offset 및 sys.dm_exec_sql_text 동적 관리 함수와 함께 사용하여 요청에 대해 현재 실행 중인 문을 검색할 수 있습니다. Null을 허용합니다.|  
-|plan_handle|**varbinary(64)**|현재 실행 중인 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰이입니다. Null을 허용합니다.|  
+|plan_handle|**varbinary(64)**|현재 실행 중인 일괄 처리에 대 한 쿼리 실행 계획을 고유 하 게 식별 하는 토큰입니다. Null을 허용합니다.|  
 |database_id|**smallint**|요청을 실행 중인 대상 데이터베이스의 ID입니다. Null을 허용하지 않습니다.|  
 |user_id|**int**|요청을 제출한 사용자의 ID입니다. Null을 허용하지 않습니다.|  
 |connection_id|**uniqueidentifier**|요청이 도착한 연결의 ID입니다. Null을 허용합니다.|  
 |blocking_session_id|**smallint**|요청을 차단하고 있는 세션의 ID입니다. 이 열이 NULL이면 요청이 차단되지 않거나 차단 세션의 세션 정보를 사용할 수 없습니다(또는 식별할 수 없음).<br /><br /> -2 = 분리된 분산 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -3 = 지연된 복구 트랜잭션이 차단 리소스를 소유합니다.<br /><br /> -4 = 내부 래치 상태 전환 때문에 현재 차단 래치 소유자의 세션 ID를 확인할 수 없습니다.|  
-|wait_type|**nvarchar(60)**|요청이 현재 차단된 경우 이 열은 대기 유형을 반환합니다. Null을 허용합니다.<br /><br /> 대기 유형에 대 한 내용은 [sys.dm_os_wait_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)합니다.|  
+|wait_type|**nvarchar(60)**|요청이 현재 차단된 경우 이 열은 대기 유형을 반환합니다. Null을 허용합니다.<br /><br /> 대기 유형에 대 한 자세한 내용은 [_os_wait_stats &#40;&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)를 참조 하세요.|  
 |wait_time|**int**|요청이 현재 차단된 경우 이 열은 현재 대기의 기간(밀리초)을 반환합니다. Null을 허용하지 않습니다.|  
 |last_wait_type|**nvarchar(60)**|이 요청이 이전에 차단된 경우 이 열은 마지막 대기의 유형을 반환합니다. Null을 허용하지 않습니다.|  
 |wait_resource|**nvarchar(256)**|요청이 현재 차단된 경우 이 열은 요청이 현재 대기하고 있는 리소스를 반환합니다. Null을 허용하지 않습니다.|  
@@ -88,22 +88,22 @@ ms.locfileid: "67936952"
 |group_id|**int**|이 쿼리가 속한 작업 그룹의 ID입니다. Null을 허용하지 않습니다.|  
 |query_hash|**binary(8)**|쿼리에서 계산되는 이진 해시 값으로, 비슷한 논리를 가진 쿼리를 식별하는 데 사용됩니다. 쿼리 해시를 사용하여 리터럴 값만 다른 쿼리에 대한 집계 리소스 사용을 확인할 수 있습니다.|  
 |query_plan_hash|**binary(8)**|쿼리 실행 계획에서 계산되는 이진 해시 값으로, 비슷한 쿼리 실행 계획을 식별하는 데 사용됩니다. 쿼리 계획 해시를 사용하여 비슷한 실행 계획을 가진 쿼리의 누적 비용을 찾을 수 있습니다.|  
-|statement_sql_handle|**varbinary(64)**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 개별 쿼리의 SQL 핸들입니다.<br /><br />데이터베이스에 대 한 쿼리 저장소를 사용 하지 않는 경우이 열은 NULL입니다. |  
-|statement_context_id|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> Sys.query_context_settings 선택적 외래 키입니다.<br /><br />데이터베이스에 대 한 쿼리 저장소를 사용 하지 않는 경우이 열은 NULL입니다. |  
-|dop |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 쿼리 병렬 처리 수준입니다. |  
-|parallel_worker_count |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 병렬 쿼리의 경우 예약 된 병렬 작업자 수입니다.  |  
+|statement_sql_handle|**varbinary(64)**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 개별 쿼리의 SQL 핸들입니다.<br /><br />데이터베이스에 대해 쿼리 저장소를 사용 하도록 설정 하지 않은 경우이 열은 NULL입니다. |  
+|statement_context_id|**bigint**|**적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> Query_context_settings에 대 한 선택적 외래 키입니다.<br /><br />데이터베이스에 대해 쿼리 저장소를 사용 하도록 설정 하지 않은 경우이 열은 NULL입니다. |  
+|dop |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 쿼리의 병렬 처리 수준입니다. |  
+|parallel_worker_count |**int** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 병렬 쿼리 인 경우 예약 된 병렬 작업자의 수입니다.  |  
 |external_script_request_id |**uniqueidentifier** |**적용 대상**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 현재 요청과 연결 된 외부 스크립트 요청 ID입니다. |  
-|is_resumable |**bit** |**적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 요청을 다시 시작 가능한 인덱스 작업 인지 여부를 나타냅니다. |  
-|page_resource |**binary(8)** |**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 8 바이트 16 진수 표현 페이지 리소스의 경우는 `wait_resource` 열 페이지를 포함 합니다. |  
-|page_server_reads|**bigint**|**적용 대상**: Azure SQL Database 대규모<br /><br /> 이 요청에서 수행 하는 페이지 서버 읽기 수입니다. Null을 허용하지 않습니다.|  
+|is_resumable |**bit** |**적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> 요청이 다시 시작 가능한 인덱스 작업 인지 여부를 나타냅니다. |  
+|page_resource |**binary(8)** |**적용 대상**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 열이 페이지를 포함 하 `wait_resource` 는 경우 페이지 리소스의 8 바이트 16 진수 표현입니다. 자세한 내용은 [fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)를 참조 하세요. |  
+|page_server_reads|**bigint**|**적용 대상**: Azure SQL Database Hyperscale<br /><br /> 이 요청에서 수행 된 페이지 서버 읽기 수입니다. Null을 허용하지 않습니다.|  
 
 ## <a name="remarks"></a>설명 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 외부의 코드(예: 확장 저장 프로시저 및 분산 쿼리)를 실행하려면 비선점형 스케줄러의 제어를 벗어나서 스레드를 실행해야 합니다. 작업자는 이 작업을 수행하기 위해 선점형 모드로 전환합니다. 이 동적 관리 뷰에서 반환된 시간 값은 선점형 모드에서 사용된 시간을 포함하지 않습니다.
 
-병렬 요청을 실행할 때 [행 모드](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 조정 작업자 스레드를 할당 하는 작업을 완료 하는 일을 담당 하는 작업자 스레드를 할당 합니다. 이 DMV에서 코디네이터 스레드만 요청에 대해 표시 됩니다. 열 **읽습니다**, **씁니다**, **logical_reads**, 및 **row_count** 됩니다 **업데이트 되지** 에 대 한 합니다 코디네이터 스레드입니다. 열 **wait_type**, **wait_time**, **last_wait_type**하십시오 **wait_resource**, 및 **granted_query_memory** 됩니다 **만 업데이트** 코디네이터 스레드입니다. 자세한 내용은 참조는 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)합니다.
+[행 모드](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 병렬 요청을 실행할 경우는 할당 된 작업을 완료 하는 작업을 담당 하는 작업자 스레드를 조정 하는 작업자 스레드를 할당 합니다. 이 DMV에서는 요청에 대해 코디네이터 스레드만 볼 수 있습니다. **읽기**, **쓰기**, **logical_reads**및 **row_count** 열은 코디네이터 스레드에 대해 **업데이트 되지 않습니다** . **Wait_type**, **wait_time**, **last_wait_type**, **wait_resource**및 **granted_query_memory** 열은 코디네이터 스레드에 대해서 **만 업데이트** 됩니다. 자세한 내용은 [스레드 및 태스크 아키텍처 가이드](../../relational-databases/thread-and-task-architecture-guide.md)를 참조 하세요.
 
 ## <a name="permissions"></a>사용 권한
-사용자에 게 `VIEW SERVER STATE` 서버의 권한이 사용자 인스턴스에서 실행 중인 모든 세션에 표시 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]고, 그렇지 않으면 사용자는 현재 세션에만 표시 됩니다. `VIEW SERVER STATE` 부여할 수 없습니다 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 있도록 `sys.dm_exec_requests` 은 항상 현재 연결으로 제한 됩니다.
+사용자 `VIEW SERVER STATE` 에 게 서버에 대 한 권한이 있는 경우 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에서 실행 중인 모든 세션을 볼 수 있습니다. 그렇지 않으면 사용자에 게 현재 세션만 표시 됩니다. `VIEW SERVER STATE`는`sys.dm_exec_requests` 에 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 부여할 수 없으므로 항상 현재 연결로 제한 됩니다.
   
 ## <a name="examples"></a>예  
   
@@ -125,14 +125,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>2\. 실행 중인 일괄 처리에서 보유하고 있는 모든 잠금 찾기
 
-다음 예제에서는 쿼리 **sys.dm_exec_requests** 흥미로운 일괄 처리 및 복사를 찾으려면 해당 `transaction_id` 출력에서 합니다.
+다음 예제에서는 **_exec_requests** 를 쿼리하여 흥미로운 일괄 처리를 찾고 출력에서 해당 `transaction_id` 일괄 처리를 복사 합니다.
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-그런 다음 잠금 정보를 찾기 위해 사용 하 여 복사한 `transaction_id` 시스템 함수를 사용 하 여 **sys.dm_tran_locks**합니다.  
+그런 다음, 잠금 정보 `transaction_id` 를 찾으려면 시스템 함수 **sys. dm _strrrstrstrstrrrrrstrstrr**  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks
@@ -143,7 +143,7 @@ GO
 
 ### <a name="c-finding-all-currently-blocked-requests"></a>3\. 현재 차단된 모든 요청 찾기
 
-다음 예제에서는 쿼리 **sys.dm_exec_requests** 차단 된 요청에 대 한 정보를 찾을 수 있습니다.  
+다음 예제에서는 **_exec_requests** 를 쿼리하여 차단 된 요청에 대 한 정보를 찾습니다.  
 
 ```sql
 SELECT session_id ,status ,blocking_session_id  
@@ -154,7 +154,7 @@ WHERE status = N'suspended';
 GO  
 ```  
 
-### <a name="d-ordering-existing-requests-by-cpu"></a>4\. CPU에서 기존 요청을 순서 지정
+### <a name="d-ordering-existing-requests-by-cpu"></a>4\. CPU를 기준으로 기존 요청 순서 지정
 
 ```sql
 SELECT 
@@ -190,4 +190,4 @@ GO
 - [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
 - [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
 - [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [sys.dm_exec_sql_text & amp;#40;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+- [_exec_sql_text & #40](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
