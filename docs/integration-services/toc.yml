@@ -1,6 +1,6 @@
 - name: SSIS(SQL Server Integration Services)
   href: ../integration-services/sql-server-integration-services.md
-- name: SQL Server 시작 >>
+- name: SQL Server 시작 >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 개요
   items:
@@ -1801,11 +1801,11 @@
               href: ../integration-services/lesson-3-3-testing-the-deployed-packages.md
 - name: 리소스
   items:
-    - name: SSIS 포럼에서 도움말 가져오기 >
+    - name: SSIS 포럼 >>
       href: 'https://social.msdn.microsoft.com/Forums/en-US/home'
-    - name: Stack Overflow에서 도움말 가져오기 >
+    - name: Stack Overflow >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
-    - name: SSIS 팀 블로그 수행 >
+    - name: SSIS 블로그 >>
       href: 'https://blogs.msdn.microsoft.com/ssis/'
-    - name: 문제 보고 및 기능 요청 >
+    - name: 제품 피드백 >>
       href: 'https://feedback.azure.com/forums/908035-sql-server'

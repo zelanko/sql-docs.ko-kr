@@ -85,7 +85,7 @@ ms.locfileid: "68769400"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** = **0**  
   
     -   **-PublisherLogin**  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68769400"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** = **0**  
   
     -   **-PublisherLogin**  
   

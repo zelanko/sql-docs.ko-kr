@@ -1,6 +1,6 @@
 - name: SQL Server Machine Learning Services 설명서
   href: ../advanced-analytics/index.yml
-- name: SQL Server 시작 >>
+- name: SQL Server 시작 >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 개요
   expanded: true
@@ -165,7 +165,7 @@
           href: ../advanced-analytics/tutorials/demo-data-iris-in-sql.md
         - name: NYC 택시 데이터 집합
           href: ../advanced-analytics/tutorials/demo-data-nyctaxi-in-sql.md
-- name: 샘플 >
+- name: 샘플 >>
   href: 'https://github.com/Microsoft/sql-server-samples'
 - name: 솔루션
   href: ../advanced-analytics/tutorials/data-science-scenarios-and-solution-templates.md
@@ -321,7 +321,7 @@
           href: ../advanced-analytics/r/ref-r-sqlrutils.md
 - name: 리소스
   items:
-    - name: 릴리스 정보 >>
+    - name: 릴리스 정보 >
       href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
     - name: 문제 해결
       items:

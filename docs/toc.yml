@@ -4500,7 +4500,7 @@
               href: database-engine/configure-windows/server-properties-advanced-page.md
 - name: 데이터 마이그레이션 및 로드
   items:
-    - name: SSIS(SQL Server Integration Services) >>
+    - name: SSIS(SQL Server Integration Services) >
       href: integration-services/index.md
     - name: 대량 복사 유틸리티(BCP)
       href: tools/bcp-utility.md
@@ -5692,13 +5692,13 @@
                   href: sql-server/stretch-database/extended-events-for-stretch-database.md
         - name: 리소스
           items:
-            - name: 가격 책정 >
+            - name: 가격 책정 >>
               href: 'https://azure.microsoft.com/pricing/details/sql-server-stretch-database/'
-            - name: 블로그 >
+            - name: 블로그 >>
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/'
-            - name: 업데이트 서비스 >
+            - name: 서비스 업데이트 >>
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
-            - name: 비디오 >
+            - name: 동영상 >>
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
     - name: 데이터베이스 실험 마법사
       href: dea/database-experimentation-assistant-overview.md
@@ -7424,13 +7424,13 @@
           items:
             - name: DBA Stack Exchange >
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-            - name: 스택 오버플로 >
+            - name: Stack Overflow >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: MSDN 포럼 >
+            - name: MSDN 포럼 >>
               href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
-            - name: 사용자 의견 보내기 >
+            - name: 사용자 의견 보내기 >>
               href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: Reddit >
+            - name: Reddit >>
               href: 'https://www.reddit.com/r/SQLServer'
     - name: 연결된 서버
       href: relational-databases/linked-servers/linked-servers-database-engine.md
@@ -7528,14 +7528,14 @@
           href: relational-databases/synonyms/create-synonyms.md
 - name: 보고 및 분석
   items:
-    - name: 고급 분석 및 기계 학습 >>
+    - name: 고급 분석 및 기계 학습 >
       href: advanced-analytics/
     - name: 분석 플랫폼 시스템 >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
-    - name: SSAS(SQL Server Analysis Services) >>
+    - name: SSAS(SQL Server Analysis Services) >
       href: 'https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview'
-    - name: SSRS(SQL Server Reporting Services) >>
+    - name: SSRS(SQL Server Reporting Services) >
       href: reporting-services/index.md
     - name: Master  Data  Services
       displayName: MDS
@@ -8282,11 +8282,11 @@
           items:
             - name: FAQ
               href: azure-data-studio/faq.md
-            - name: Azure Data Studio GitHub 리포지토리 >
+            - name: Azure Data Studio GitHub 리포지토리 >>
               href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: SQL Server 블로그 >
+            - name: SQL Server 블로그 >>
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: 문제 보고 및 제안 >
+            - name: 문제 보고 및 제안 >>
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: 명령 프롬프트 유틸리티
       href: tools/command-prompt-utility-reference-database-engine.md
@@ -10016,7 +10016,7 @@
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: 익명 사용 현황 데이터
               href: ssms/sql-server-management-studio-telemetry-ssms.md
-            - name: 피드백 >
+            - name: 피드백 >>
               href: 'https://aka.ms/sqlfeedback'
     - name: SqlPackage.exe
       items:
@@ -10427,17 +10427,17 @@
       items:
         - name: 문제 해결
           href: linux/sql-server-linux-troubleshooting-guide.md
-        - name: 라이선스 사용 방법 >
+        - name: 라이선스 사용 방법 >>
           href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
         - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: 스택 오버플로 >
+        - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 포럼 >
+        - name: MSDN 포럼 >>
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: 사용자 의견 보내기 >
+        - name: 사용자 의견 보내기 >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: Reddit >
+        - name: Reddit >>
           href: 'https://www.reddit.com/r/SQLServer'
 - name: Azure의 SQL
   items:
@@ -10451,9 +10451,9 @@
   items:
     - name: 배우기
       items:
-        - name: Microsoft Virtual Academy >
+        - name: Microsoft Virtual Academy >>
           href: 'https://mva.microsoft.com/product-training/sql-server'
-        - name: Channel 9의 SQL >
+        - name: Channel 9의 SQL >>
           href: 'https://channel9.msdn.com/Search'
     - name: 도움말
       items:
@@ -10463,27 +10463,27 @@
           href: sql-server/versioning-system-monikers-ui-sql-server.md
         - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: 스택 오버플로 >
+        - name: Stack Overflow >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN 포럼 >
+        - name: MSDN 포럼 >>
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: Reddit >
+        - name: Reddit >>
           href: 'https://www.reddit.com/r/SQLServer'
     - name: 블로그
       items:
-        - name: SQL Server >
+        - name: SQL Server >>
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: 데이터베이스 엔진 >
+        - name: 데이터베이스 엔진 >>
           href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: 보안 >
+        - name: 보안 >>
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: Data Tools >
+        - name: Data Tools >>
           href: 'https://blogs.msdn.microsoft.com/ssdt/'
     - name: 피드백
       items:
-        - name: SQL 문서 >
+        - name: SQL 문서 >>
           href: 'https://aka.ms/sqldocsfeedback'
-        - name: SQL Server >
+        - name: SQL Server >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
         - name: SQL 설명서를 편집합니다.
           href: sql-server/sql-server-docs-contribute.md
@@ -10508,7 +10508,7 @@
       items:
         - name: 샘플 개요
           href: samples/sql-samples-where-are.md
-        - name: 모든 Github 샘플 >
+        - name: 모든 Github 샘플 >>
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:
