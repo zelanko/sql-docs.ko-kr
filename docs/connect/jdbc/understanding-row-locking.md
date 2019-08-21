@@ -1,7 +1,7 @@
 ---
 title: 행 잠금 이해 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3a2d4faf6f66942cb8f1053bd7323a77795229d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcd18baf401378605abf0d53e203d0a3745ee887
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916619"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027331"
 ---
-# <a name="understanding-row-locking"></a>행 잠금에 대한 개요
+# <a name="understanding-row-locking"></a>행 잠금 이해
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행 잠금을 사용합니다. 행 잠금은 데이터베이스에서 동시에 수정 작업을 수행하는 여러 사용자 사이의 동시성 제어를 구현합니다. 기본적으로 트랜잭션 및 잠금은 각 연결마다 관리됩니다. 예를 들어 응용 프로그램이 두 개의 JDBC 연결을 열 경우 한 연결에서 설정한 잠금은 다른 연결에서 공유할 수 없습니다. 연결은 다른 연결에서 보유한 잠금과 충돌하는 잠금을 설정할 수 없습니다.
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 행 잠금을 사용합니다. 행 잠금은 데이터베이스에서 동시에 수정 작업을 수행하는 여러 사용자 사이의 동시성 제어를 구현합니다. 기본적으로 트랜잭션 및 잠금은 각 연결마다 관리됩니다. 예를 들어 애플리케이션이 두 개의 JDBC 연결을 열 경우 한 연결에서 설정한 잠금은 다른 연결에서 공유할 수 없습니다. 연결은 다른 연결에서 보유한 잠금과 충돌하는 잠금을 설정할 수 없습니다.
 
 > [!NOTE]  
 > 행 잠금이 사용되면 인출 버퍼의 모든 행에 잠금이 수행되므로 인출 크기에 매우 큰 값을 설정하면 동시성에 영향을 줄 수 있습니다.
@@ -31,6 +31,6 @@ ms.locfileid: "67916619"
 > [!NOTE]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 행 잠금에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "[!INCLUDE[ssDE](../../includes/ssde_md.md)]에서의 잠금"을 참조하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버로 결과 집합 관리](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)

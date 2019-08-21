@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 49fb358520396519b9fb16d78fc5aae67b146928
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1af586f4addfaf5af577b8231cd06cdee4118236
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68205384"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653034"
 ---
-SQL Server 2019 미리 보기
+SQL Server 2019
