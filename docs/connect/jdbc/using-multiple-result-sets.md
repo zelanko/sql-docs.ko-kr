@@ -1,7 +1,7 @@
 ---
 title: 여러 결과 집합 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c471f74fc8e1029cfeaad06b564ea4a9b6641171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 802ade7a34eb5c5174efc35032587f801ef12179
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005965"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026270"
 ---
 # <a name="using-multiple-result-sets"></a>다중 결과 집합 사용
 
@@ -39,6 +39,6 @@ execute 메서드가 **false**를 반환하면 실행한 명령문은 업데이�
 > [!NOTE]  
 > SQLServerStatement 클래스의 getMoreResults 메서드에 대 한 호출을 수행 하면 이전에 반환 된 결과 집합은 암시적으로 닫힙니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버에서 문 사용](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)

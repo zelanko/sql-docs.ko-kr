@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버에 대해 Always Encrypted API 참조 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/06/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a17dc46e2ee60832b51d606c2c7caaf497dfc7c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79cf8ce1b951621d58105d18b847306ff620d114
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957479"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028482"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>JDBC 드라이버에 대해 Always Encrypted API 참조
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "67957479"
   
  ## <a name="always-encrypted-api-references"></a>Always Encrypted API 참조
  
- 상시 암호화를 사용하는 클라이언트 응용 프로그램에서 사용하기 위해 JDBC 드라이버 API에 몇 가지 새로운 기능이 추가되고 수정되었습니다.  
+ 상시 암호화를 사용하는 클라이언트 애플리케이션에서 사용하기 위해 JDBC 드라이버 API에 몇 가지 새로운 기능이 추가되고 수정되었습니다.  
   
  **SQLServerConnection 클래스**  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67957479"
 |`public void setKeyStoreLocation(String keyStoreLocation)`|Java 키 저장소의 파일 이름을 포함 하는 위치를 설정 합니다. **JavaKeyStorePassword**를 사용 하 여 Keyvault 인증을 설정 해야 합니다.|
 |`public String getKeyStoreLocation()`|Java 키 저장소에 대 한 keyStoreLocation를 검색 합니다.|
   
- **SQLServerColumnEncryptionJavaKeyStoreProvider Class**  
+ **SQLServerColumnEncryptionJavaKeyStoreProvider 클래스**  
   
  Java 키 저장소에 대한 키 저장소 공급자의 구현입니다. 이 클래스를 사용하면 Java 키 저장소에 저장된 인증서를 열 마스터 키로 사용할 수 있습니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "67957479"
 |`public void setName (String name)`|이 키 저장소 공급자의 이름을 설정 합니다.|
 |`public String getName ()`|이 키 저장소 공급자의 이름을 가져옵니다.|
   
- **SQLServerColumnEncryptionAzureKeyVaultProvider Class**  
+ **SQLServerColumnEncryptionAzureKeyVaultProvider 클래스**  
   
  Azure Key Vault 저장소에 대한 키 저장소 공급자의 구현입니다. 이 클래스는 Azure Key Vault에 저장 된 키를 열 마스터 키로 사용할 수 있도록 합니다.  
   
@@ -193,7 +193,7 @@ Public enum  SQLServerStatementColumnEncryptionSetting
 >   
 >  쿼리에 대해 Always Encrypted를 사용 하지 않도록 설정 하 고 쿼리가 암호화 된 열에서 결과를 반환 하는 경우 쿼리는 암호화 된 값을 반환 합니다. 암호화 된 값에는 varbinary 데이터 형식이 있습니다.  
   
- ## <a name="see-also"></a>참고 항목  
- [상시 암호화와 JDBC 드라이버 사용](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
+ ## <a name="see-also"></a>관련 항목:  
+ [Always Encrypted와 JDBC 드라이버 사용](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md)  
   
 

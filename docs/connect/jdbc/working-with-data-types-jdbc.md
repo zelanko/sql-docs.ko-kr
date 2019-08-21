@@ -1,7 +1,7 @@
 ---
 title: 데이터 형식 (JDBC) 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6af72a4e9157de72a46ecbb7443c0f58d3b400d7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f45b8fdf1fa0ef03bdb014ee3553d2e8bf23d29a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003847"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025697"
 ---
-# <a name="working-with-data-types-jdbc"></a>데이터 형식(JDBC) 사용
+# <a name="working-with-data-types-jdbc"></a>데이터 형식 사용(JDBC)
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -38,6 +38,6 @@ SQL Server 데이터 형식 작업을 위해 JDBC 드라이버에서는 [SQLServ
 |[SQLXML 데이터 형식 샘플](../../connect/jdbc/sqlxml-data-type-sample.md)|XML 데이터를 관계형 데이터베이스에 저장하는 방법, XML 데이터를 데이터베이스에서 검색하는 방법 및 **SQLXML** Java 데이터 형식으로 XML 데이터를 구문 분석하는 방법을 보여 줍니다.|  
 |[공간 데이터 형식 샘플](../../connect/jdbc/spatial-data-types-sample.md)|Microsoft JDBC Driver에서 정의한 **geometry** 및 **Geography** Java 형식으로 공간 데이터 형식 ' geometry ' 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 ' Geography '를 사용 하 여 데이터를 저장 하 고 검색 하는 방법을 설명 합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [샘플 JDBC 드라이버 애플리케이션](../../connect/jdbc/sample-jdbc-driver-applications.md)  

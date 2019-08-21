@@ -1,7 +1,7 @@
 ---
 title: 사용자 정의 형식 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 19a71b27-b788-43a3-a76d-fe3001a6f016
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ae4ada0ee18b9066df27a130a8f68405b760159d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ed890ee562d3fcc2221877b23ee09bbf9a8ccf9
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004092"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027146"
 ---
 # <a name="user-defined-types"></a>사용자 정의 형식
 
@@ -25,6 +25,6 @@ UDT(사용자 정의 형식)는 [!INCLUDE[ssVersion2005](../../includes/ssversio
 
 8,000바이트보다 작거나 같은 UDT의 동작에는 변경된 사항이 없지만 이보다 큰 UDT도 지원되며 이 경우 크기가 "제한 없음"으로 보고됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

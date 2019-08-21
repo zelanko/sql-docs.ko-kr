@@ -1,7 +1,7 @@
 ---
 title: 동시성 제어 이해 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98b7dabe-9b12-4e1d-adeb-e5b5cb0c96f3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b178b0c38b5891d4a3dc13ef620a217bf3ddb186
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3cbc805ece4cc28a646d93d6607bcc45d65cd563
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004192"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027643"
 ---
 # <a name="understanding-concurrency-control"></a>동시성 제어 이해
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68004192"
 |TYPE_SCROLL_INSENSITIVE를 사용하여 문이 작성되었습니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 정적 스냅샷 커서를 만듭니다. 이 커서는 다른 사용자가 행을 업데이트하지 못하도록 커서를 보호하기 위해 기본 테이블 행과의 연결을 끊습니다.|정적 커서를 만들지 않으려면 TYPE_SCROLL_SENSITIVE, TYPE_SS_SCROLL_KEYSET, TYPE_SS_SCROLL_DYNAMIC 또는 TYPE_FORWARD_ONLY를 CONCUR_UPDATABLE과 함께 사용하십시오.|  
 |테이블 디자인이 KEYSET 또는 DYNAMIC 커서를 방해합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 행을 고유하게 식별할 수 있도록 하는 고유 키가 기본 테이블에 없습니다.|테이블에 고유 키를 추가하여 각 행의 고유 ID를 제공하십시오.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버로 결과 집합 관리](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)  
   
   

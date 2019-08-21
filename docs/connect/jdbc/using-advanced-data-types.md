@@ -1,7 +1,7 @@
 ---
 title: 고급 데이터 형식 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004069"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027014"
 ---
 # <a name="using-advanced-data-types"></a>고급 데이터 형식 사용
 
@@ -158,7 +158,7 @@ JDBC 드라이버의 **xml** 데이터 형식 구현에서는 다음을 지원�
   
 - 다른 XML 프로세서 및 디스크 파일과의 교환을 위해 UTF-16으로 인코딩된 경우 선행 BOM이 있는 바이트 배열로 XML에 액세스합니다.  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 UTF-16으로 인코딩된 XML에 선행 BOM을 사용해야 합니다. 응용 프로그램은 XML 매개 변수 값이 바이트 배열로 제공되는 경우에 이를 제공해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 항상 BOM이나 포함된 인코딩 선언이 없는 UTF-16 문자열로 XML 값을 출력합니다. XML 값을 byte[], BinaryStream 또는 BLOB로 검색하면 UTF-16 BOM이 값 앞에 붙습니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 UTF-16으로 인코딩된 XML에 선행 BOM을 사용해야 합니다. 애플리케이션은 XML 매개 변수 값이 바이트 배열로 제공되는 경우에 이를 제공해야 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 항상 BOM이나 포함된 인코딩 선언이 없는 UTF-16 문자열로 XML 값을 출력합니다. XML 값을 byte[], BinaryStream 또는 BLOB로 검색하면 UTF-16 BOM이 값 앞에 붙습니다.  
   
 **xml** 데이터 형식에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 “xml 데이터 형식”을 참조하세요.  
   
@@ -170,14 +170,14 @@ JDBC 드라이버의 **xml** 데이터 형식 구현에서는 다음을 지원�
   
 사용자 정의 데이터 형식에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 “사용자 정의 형식 인스턴스 사용 및 수정”을 참조하세요.  
   
-## <a name="sqlvariant-data-type"></a>Sql_variant 데이터 형식
+## <a name="sql_variant-data-type"></a>Sql_variant 데이터 형식
 
-Sql_variant 데이터 형식에 대 한 자세한 내용은 [Sql_variant 데이터 형식 사용](../../connect/jdbc/using-sql-variant-datatype.md)을 참조 하세요.  
+Sql_variant 데이터 형식에 대 한 자세한 내용은 [sql_variant 데이터 형식 사용](../../connect/jdbc/using-sql-variant-datatype.md)을 참조 하세요.  
 
 ## <a name="spatial-data-types"></a>공간 데이터 형식
 
 공간 데이터 형식에 대 한 자세한 내용은 [공간](../../connect/jdbc/use-spatial-datatypes.md)데이터 형식 사용을 참조 하세요.  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

@@ -1,7 +1,7 @@
 ---
 title: 매개 변수가 없는 SQL 문 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6161f70455e5f1c947841d0381ba1a1de3a778a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da4342b8640e89a0183a3f80889dd27ecfb1a76e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006011"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026537"
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>매개 변수가 없는 SQL 문 사용
 
@@ -29,6 +29,6 @@ ms.locfileid: "68006011"
 
 결과 집합을 사용 하는 방법에 대 한 자세한 내용은 [JDBC 드라이버를 사용 하 여 결과 집합 관리](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)를 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
-[SQL에 문 사용](../../connect/jdbc/using-statements-with-sql.md)
+[SQL이 있는 문 사용](../../connect/jdbc/using-statements-with-sql.md)

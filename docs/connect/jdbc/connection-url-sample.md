@@ -1,7 +1,7 @@
 ---
 title: 연결 URL 샘플 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 96fabc42-59d1-4cc0-93c5-db00cbe55e95
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 24d4621a66af8d4d7247dff099b084bd331236f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a74757846f14b2cee6f8d68cfdec87a02ded4c5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956762"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028139"
 ---
 # <a name="connection-url-sample"></a>연결 URL 샘플
 
@@ -74,6 +74,6 @@ public class ConnectURL {
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [데이터 연결 및 검색](../../connect/jdbc/connecting-and-retrieving-data.md)

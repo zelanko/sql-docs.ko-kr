@@ -1,7 +1,7 @@
 ---
 title: SSL 지원 이해 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 32820e38a8292068aa95c505a04292fbac2c69af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916616"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027300"
 ---
 # <a name="understanding-ssl-support"></a>SSL 지원 이해
 
@@ -80,7 +80,7 @@ SSL 핸드셰이크 중 서버는 공개 키 인증서를 클라이언트로 보
   
 - DNS 이름은 와일드카드 문자를 포함할 수 있습니다. 그러나 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서는 와일드카드 일치를 지원하지 않습니다. 즉, abc.com은 \*.com과 일치하지 않지만 \*.com은 \*.com과 일치합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [SSL 암호화 사용](../../connect/jdbc/using-ssl-encryption.md)
 

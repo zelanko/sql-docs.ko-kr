@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버 개요 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/18/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 770352acd95fd2fb947e29f79230dedab575602b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8b9fcab3a49f8cac08d35320cbad0f339cd42b2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956233"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027929"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC 드라이버 개요
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -36,12 +36,12 @@ ms.locfileid: "67956233"
 |[JDBC 드라이버 배포](../../connect/jdbc/deploying-the-jdbc-driver.md)|Windows 및 Unix 운영 체제에서 Microsoft JDBC Driver를 배포하는 방법을 설명합니다.|  
 |[Microsoft JDBC 드라이버 재배포](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Microsoft JDBC Driver를 재배포하도록 등록하는 방법을 설명합니다.|  
 |[추가 JDBC 드라이버 정보 찾기](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|외부 리소스 링크를 포함하여 Microsoft JDBC 드라이버에 대한 추가 리소스를 확인할 수 있는 위치를 소개합니다.|  
-|[SQL Server용 Microsoft JDBC 드라이버 지원 매트릭스](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft JDBC Driver for SQL Server에 대한 지원 매트릭스 및 지원 드라이버에 대한 지원 주기 정책입니다.|  
+|[SQL Server용 Microsoft JDBC Driver 지원 매트릭스](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft JDBC Driver for SQL Server에 대한 지원 매트릭스 및 지원 드라이버에 대한 지원 주기 정책입니다.|  
 |[JDBC 드라이버에 &#40;대&#41; 한 faq (질문과 대답)](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC Driver에 대한 질문과 대답입니다.|  
 |[Microsoft JDBC Driver for SQL Server의 기능 종속성](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server의 기능 종속성|
 
-## <a name="see-also"></a>참고 항목  
- [JDBC Driver GitHub Repository](https://github.com/microsoft/mssql-jdbc)(JDBC Driver GitHub 리포지토리)  
+## <a name="see-also"></a>관련 항목:  
+ [JDBC 드라이버 GitHub 리포지토리](https://github.com/microsoft/mssql-jdbc)  
  [JDBC 드라이버 API 참조](../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   
   

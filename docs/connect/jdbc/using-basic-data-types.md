@@ -1,7 +1,7 @@
 ---
 title: 기본 데이터 형식 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: abbd2aa3c277ad36f419de849b02433f17d27403
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916366"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026508"
 ---
 # <a name="using-basic-data-types"></a>기본 데이터 형식 사용
 
@@ -124,8 +124,8 @@ JDBC 기본 데이터 형식에 매핑되는 데이터 원본에서 데이터를
 > [!NOTE]  
 > 반환된 출력 매개 변수 외에도 저장 프로시저 실행 결과가 들어 있는 결과 집합이 반환될 수 있습니다.  
   
-저장 프로시저 및 출력 매개 변수와 함께 JDBC 드라이버를 사용 하는 방법에 대 한 자세한 내용은 [Output 매개 변수가 있는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)을 참조 하세요.  
+저장 프로시저 및 출력 매개 변수와 함께 JDBC 드라이버를 사용 하는 방법에 대 한 자세한 내용은 [output 매개 변수가 있는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)을 참조 하세요.  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

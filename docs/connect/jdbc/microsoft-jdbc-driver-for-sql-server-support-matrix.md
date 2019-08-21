@@ -1,7 +1,7 @@
 ---
 title: SQL Server용 Microsoft JDBC Driver 지원 매트릭스 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,12 +11,12 @@ ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 04d7fe419c8639d9f14c3c3795a1007d947c3998
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 950fa902d2772d131f5ecd626653ad58c97c0fb1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893250"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027890"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>SQL Server용 Microsoft JDBC Driver 지원 매트릭스
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

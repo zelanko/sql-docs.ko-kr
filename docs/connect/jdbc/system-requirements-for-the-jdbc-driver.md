@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver의 시스템 요구 사항 | Microsoft Docs
+title: JDBC 드라이버 시스템 요구 사항 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e5b317b3483d24087df203eb14fdabe7b12f2539
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893970"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027667"
 ---
-# <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 드라이버의 시스템 요구 사항
+# <a name="system-requirements-for-the-jdbc-driver"></a>JDBC 드라이버 시스템 요구 사항
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]의 데이터에 액세스하려면 컴퓨터에 다음 구성 요소를 설치해야 합니다.
@@ -41,7 +41,7 @@ ms.locfileid: "68893970"
   
  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]에서는 JDBC 4.0 API를 포함하도록 JDBC(Java Database Connectivity) 사양 API에 대한 지원이 확장되었습니다. JDBC 4.0 API는 JDK(Java Development Kit) 6.0 및 JRE(Java Runtime Environment) 6.0의 일부로 제공되었습니다. JDBC 4.0은 JDBC 3.0 API를 포함합니다.
   
- Windows 및 UNIX 운영 체제에서 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 배포하는 경우 각각 설치 패키지 *sqljdbc_\<version>_enu.exe* 및 *sqljdbc_\<version>_enu.tar.gz*를 사용해야 합니다. JDBC Driver를 배포하는 방법에 대한 자세한 내용은 [Deploying the JDBC Driver](../../connect/jdbc/deploying-the-jdbc-driver.md)(JDBC Driver 배포) 항목을 참조하세요.  
+ Windows 및 UNIX 운영 체제에서 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]를 배포하는 경우 각각 설치 패키지 *sqljdbc_\<version>_enu.exe* 및 *sqljdbc_\<version>_enu.tar.gz*를 사용해야 합니다. JDBC 드라이버를 배포하는 방법에 대한 자세한 내용은 [JDBC 드라이버 배포](../../connect/jdbc/deploying-the-jdbc-driver.md) 항목을 참조하세요.  
 
 **SQL Server용 Microsoft JDBC Driver 7.4:**  
 
@@ -199,11 +199,11 @@ JDBC Driver 6.4는 Maven 중앙 리포지토리에서도 사용할 수 있고 PO
  JDBC 드라이버는 JVM(Java Virtual Machine)의 사용을 지원하는 모든 운영 체제에서 작동하도록 설계되어 있지만 Sun Solaris, SUSE Linux 및 Windows 운영 체제에서만 공식적으로 테스트가 완료되었습니다.  
   
 ## <a name="supported-languages"></a>지원되는 언어  
- JDBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 열 데이터 정렬을 지원합니다. JDBC Driver에서 지원하는 데이터 정렬에 대한 자세한 내용은 [International Features of the JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md)(JDBC Driver의 국가별 기능)를 참조하세요.  
+ JDBC 드라이버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 모든 열 데이터 정렬을 지원합니다. JDBC 드라이버에서 지원하는 데이터 정렬에 대한 자세한 내용은 [JDBC 드라이버의 국가별 기능](../../connect/jdbc/international-features-of-the-jdbc-driver.md)을 참조하세요.  
   
  데이터 정렬에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 "데이터 정렬 사용"을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

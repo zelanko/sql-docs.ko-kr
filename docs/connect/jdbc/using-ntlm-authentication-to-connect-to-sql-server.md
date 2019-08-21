@@ -1,7 +1,7 @@
 ---
 title: NTLM 인증을 사용 하 여 SQL Server에 연결 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -12,12 +12,12 @@ ms.assetid: ''
 author: lilgreenbird
 ms.author: v-susanh
 manager: kenvh
-ms.openlocfilehash: 11fe35e1dc90e32cac460b61fe8a6078c817b0ca
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2fab4794544ada07e0bf5e690da35b72ad6b7421
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894105"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026098"
 ---
 # <a name="using-ntlm-authentication-to-connect-to-sql-server"></a>NTLM 인증을 사용 하 여 SQL Server에 연결
 
@@ -102,6 +102,6 @@ SSL 암호화를 사용 하 여 연결 하는 방법에 대 한 자세한 내용
 > [!NOTE]
 > 7\.4 릴리스의 경우 확장 된 보호와 암호화를 **모두** 사용 하도록 설정할 수 없습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

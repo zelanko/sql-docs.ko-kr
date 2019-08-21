@@ -1,7 +1,7 @@
 ---
-title: 샘플 JDBC Driver 애플리케이션 | Microsoft Docs
+title: 샘플 JDBC 드라이버 애플리케이션 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7e99e122f1e18c320c6ea6e5b18409ca39780d03
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ef5c2d71d398be52ebed2b69020e87d54818176
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957073"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028310"
 ---
 # <a name="sample-jdbc-driver-applications"></a>샘플 JDBC 드라이버 애플리케이션
 
@@ -23,13 +23,13 @@ ms.locfileid: "67957073"
 
 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 샘플 애플리케이션은 JDBC 드라이버의 다양한 기능을 보여줍니다. 또한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스와 함께 JDBC 드라이버를 사용할 때 참고할 수 있는 바람직한 프로그래밍 방식도 보여줍니다.  
   
-모든 샘플 응용 프로그램은 로컬 컴퓨터에서 컴파일 및 실행된 *.java 코드 파일 형식으로 포함되며 다음 위치에 있는 여러 하위 폴더에 들어 있습니다.  
+모든 샘플 애플리케이션은 로컬 컴퓨터에서 컴파일 및 실행된 *.java 코드 파일 형식으로 포함되며 다음 위치에 있는 여러 하위 폴더에 들어 있습니다.  
 
 ```bash
 \<installation directory>\sqljdbc_<version>\<language>\samples  
 ```
 
- 이 섹션의 항목에서는 샘플 응용 프로그램을 구성 및 실행하는 방법과 함께 샘플 응용 프로그램이 소개하는 내용에 대해 설명합니다.  
+ 이 섹션의 항목에서는 샘플 애플리케이션을 구성 및 실행하는 방법과 함께 샘플 애플리케이션이 소개하는 내용에 대해 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -41,6 +41,6 @@ ms.locfileid: "67957073"
 | [대규모 데이터 작업](../../../connect/jdbc/code-samples/working-with-large-data.md)                                            | 이러한 샘플 애플리케이션은 선택 버퍼링을 사용하여 서버 커서 오버헤드 없이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 큰 값 데이터를 검색하는 방법에 대해 설명합니다.                                                         |
 | [SQL 데이터 검색 및 분류](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | 이 샘플 응용 프로그램은 JDBC 드라이버를 사용 하 여 ResultSet 개체에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 포함 된 데이터 검색 및 분류 정보를 검색 하는 방법을 보여 줍니다.                                            |
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버 개요](../../../connect/jdbc/overview-of-the-jdbc-driver.md)

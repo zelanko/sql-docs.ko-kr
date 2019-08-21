@@ -1,7 +1,7 @@
 ---
 title: 데이터 연결 및 검색 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 2c7e642879c095dd4d9dca4f51a936ab72c523e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd4751fe3d1acb7119c87e39ecd8694a0fa83c19
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956881"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028222"
 ---
 # <a name="connecting-and-retrieving-data"></a>데이터 연결 및 검색
 
@@ -37,7 +37,7 @@ ms.locfileid: "67956881"
 | [연결 URL 샘플](../../connect/jdbc/connection-url-sample.md) | 연결 URL을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결한 다음, SQL 문을 사용하여 데이터를 검색하는 방법을 설명합니다. |
 | [데이터 원본 샘플](../../connect/jdbc/data-source-sample.md)       | 데이터 원본을 사용하여 SQL Server에 연결한 후 저장 프로시저를 사용하여 데이터를 검색하는 방법을 설명합니다.                                                 |
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [샘플 JDBC 드라이버 애플리케이션](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   

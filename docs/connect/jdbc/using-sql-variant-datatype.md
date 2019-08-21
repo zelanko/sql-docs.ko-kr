@@ -1,7 +1,7 @@
 ---
 title: Sql_variant 데이터 형식 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 662362a692742d206902a0cf23aff63a3ba89df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdede5d41d5ad7fc22cfed3f1efa9f95612032ca
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916177"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025837"
 ---
-# <a name="using-sqlvariant-data-type"></a>Sql_variant 데이터 형식 사용
+# <a name="using-sql_variant-data-type"></a>Sql_variant 데이터 형식 사용
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -65,7 +65,7 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 }
 ```
 
-## <a name="using-stored-procedures-with-sqlvariant"></a>Sql_variant와 함께 저장 프로시저 사용:   
+## <a name="using-stored-procedures-with-sql_variant"></a>Sql_variant와 함께 저장 프로시저 사용:   
 다음과 같은 저장 프로시저를 포함 합니다.     
 
 ```java
@@ -81,7 +81,7 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 }
 ```
 
-## <a name="limitations-of-sqlvariant"></a>Sql_variant의 제한 사항:
+## <a name="limitations-of-sql_variant"></a>Sql_variant의 제한 사항:
 - TVP를 사용 하 여 sql_variant에 저장 된 `datetime` `date` 값으로 / `getSmallDateTime()` `getDateTime()` / `smalldatetime` / 테이블을 채울 때를 / 호출`getDate()` 합니다. ResultSet이 작동 하지 않고 다음 예외를 throw 합니다.
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`
@@ -92,6 +92,6 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
     
     `Inserting null value with column type sql_variant in TVP is not supported.`
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

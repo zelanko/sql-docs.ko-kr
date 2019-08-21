@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버에서 Always Encrypted 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f19878f73397b9146765fecd879dad07ebb73dc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f15e490a8d0e803bf0936c07d2e739009e1bf5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916456"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026641"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>상시 암호화와 JDBC 드라이버 사용
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > 이러한 종속성을 Maven 프로젝트에 포함 하는 방법에 대 한 예제는 [Apache Maven를 사용 하 여 ADAL4J 및 AKV 종속성 다운로드](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven) 를 참조 하세요.
 
 ### <a name="using-windows-certificate-store-provider"></a>Windows 인증서 저장소 공급자 사용
-SQLServerColumnEncryptionCertificateStoreProvider는 Windows 인증서 저장소에 열 마스터 키를 저장하는 데 사용될 수 있습니다. SSMS (SQL Server Management Studio) Always Encrypted 마법사나 기타 지원 되는 도구를 사용 하 여 데이터베이스에 열 마스터 키 및 열 암호화 키 정의를 만들 수 있습니다. 동일한 마법사를 사용 하 여 항상 암호화 된 데이터에 대 한 열 마스터 키로 사용할 수 있는 자체 서명 된 인증서를 Windows 인증서 저장소에 생성할 수 있습니다. 열 마스터 키 및 열 암호화 키 T-sql 구문에 대 한 자세한 내용은 [열 마스터 키 만들기](../../t-sql/statements/create-column-master-key-transact-sql.md) 및 열 [암호화 키](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 각각 만들기를 참조 하세요.
+SQLServerColumnEncryptionCertificateStoreProvider는 Windows 인증서 저장소에 열 마스터 키를 저장하는 데 사용될 수 있습니다. SSMS (SQL Server Management Studio) Always Encrypted 마법사나 기타 지원 되는 도구를 사용 하 여 데이터베이스에 열 마스터 키 및 열 암호화 키 정의를 만들 수 있습니다. 동일한 마법사를 사용 하 여 Windows 인증서 저장소에서 Always Encrypted 데이터에 대 한 열 마스터 키로 사용할 수 있는 자체 서명 된 인증서를 생성할 수 있습니다. 열 마스터 키 및 열 암호화 키 T-sql 구문에 대 한 자세한 내용은 [열 마스터 키 만들기](../../t-sql/statements/create-column-master-key-transact-sql.md) 및 열 [암호화 키](../../t-sql/statements/create-column-encryption-key-transact-sql.md) 각각 만들기를 참조 하세요.
 
 SQLServerColumnEncryptionCertificateStoreProvider의 이름은 MSSQL_CERTIFICATE_STORE이 고 공급자 개체의 getName () API를 통해 쿼리할 수 있습니다. 이 파일은 드라이버에 의해 자동으로 등록 되며 응용 프로그램을 변경 하지 않고 원활 하 게 사용할 수 있습니다.
 
@@ -543,7 +543,7 @@ com.microsoft.sqlserver.jdbc.SQLServerException: Operand type clash: varchar is 
 
 이러한 오류를 방지하려면 다음을 확인합니다.
 
-- 암호화된 열(연결 문자열 또는 특정 쿼리)을 대상으로 하는 애플리케이션 쿼리에 대해 상시 암호화가 설정되어 있어야 합니다.
+- 암호화된 열(연결 문자열 또는 특정 쿼리)을 대상으로 하는 애플리케이션 쿼리에 대해 Always Encrypted가 설정되어 있어야 합니다.
 - 준비 된 문 및 매개 변수를 사용 하 여 암호화 된 열을 대상으로 하는 데이터를 보냅니다. 다음 예제에서는 내부 리터럴을 매개 변수로 전달하는 대신 암호화된 열(SSN)에서 리터럴/상수로 잘못 필터링한 쿼리를 보여 줍니다. 이 쿼리는 실패 합니다.
 
 ```java
@@ -649,6 +649,6 @@ SQLServerBulkCopy를 사용하면 데이터의 암호를 해독하지 않고 한
 > [!NOTE]
 > 이 옵션을 AllowEncryptedValueModifications로 지정하면 SQL Server용 Microsoft JDBC Driver는 데이터가 암호화되었는지 여부 또는 동일한 암호화 형식, 알고리즘 및 키를 대상 열로 사용하여 올바르게 암호화되었는지 확인하지 않아 데이터베이스가 손상될 수 있으므로 주의하여 사용합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
-[상시 암호화(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+[Always Encrypted(데이터베이스 엔진)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

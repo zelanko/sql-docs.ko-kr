@@ -1,7 +1,7 @@
 ---
 title: 연결 문제 해결 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7bfb8eee85e9eede4dcf3e47ad4ecbe13a08d2ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6a64589b44de50328aa3384a51e29e0c2cc9a6e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004238"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027626"
 ---
 # <a name="troubleshooting-connectivity"></a>연결 문제 해결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "68004238"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증을 사용하려면 JDBC 드라이버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증과 함께 설치해야 합니다. 이 인증은 기본적으로 설치되지 않습니다. 따라서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 설치하거나 구성할 때 이 옵션을 반드시 포함합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버 관련 문제 진단](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버에 대한 준비된 명령문 메타데이터 캐싱 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a9abd72b366060da2fdffd58c17ace50f01246a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956202"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027840"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC 드라이버에 대한 준비된 명령문 메타데이터 캐싱
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 이 문서에서는 드라이버의 성능을 향상 시키기 위해 구현 된 두 가지 변경 내용에 대 한 정보를 제공 합니다.
 
-## <a name="batching-of-unprepare-for-prepared-statements"></a>준비 된 문의 Unprepare 일괄 처리
+## <a name="batching-of-unprepare-for-prepared-statements"></a>준비 된 문의 unprepare 일괄 처리
 버전 6.1.6-미리 보기에서는 서버 왕복을 SQL Server으로 최소화 하 여 성능 향상이 구현 되었습니다. 이전에는 모든 prepareStatement 쿼리를 위해 unprepare에 대 한 호출도 전송 했습니다. 이제 드라이버는 기본값 10을 포함 하는 임계값 "ServerPreparedStatementDiscardThreshold"까지 unprepare 쿼리를 일괄 처리 합니다.
 
 > [!NOTE]  
@@ -33,7 +33,7 @@ ms.locfileid: "67956202"
 > [!NOTE]  
 >  사용자는 setEnablePrepareOnFirstPreparedStatementCall (부울 값) 메서드를 사용 하 여 enablePrepareOnFirstPreparedStatementCall를 **true** 로 설정 하 여 기본 동작을 항상 호출 하는 sp_prepexec의 이전 버전으로 변경할 수 있습니다. )
 
-### <a name="list-of-the-new-apis-introduced-with-this-change-for-batching-of-unprepare-for-prepared-statements"></a>준비 된 문의 Unprepare 일괄 처리를 위해이 변경 내용으로 도입 된 새 Api 목록
+### <a name="list-of-the-new-apis-introduced-with-this-change-for-batching-of-unprepare-for-prepared-statements"></a>준비 된 문의 unprepare 일괄 처리를 위해이 변경 내용으로 도입 된 새 Api 목록
 
  **SQLServerConnection**
  
@@ -87,7 +87,7 @@ ms.locfileid: "67956202"
 |void setStatementPoolingCacheSize(int statementPoolingCacheSize)|이 연결에 대해 준비 된 문 캐시의 크기를 지정 합니다. 1 보다 작은 값은 캐시가 없음을 의미 합니다.|
 |int getStatementPoolingCacheSize()|이 연결에 대해 준비 된 문 캐시의 크기를 반환 합니다. 1 보다 작은 값은 캐시가 없음을 의미 합니다.|
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버로 성능 및 안정성 개선](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

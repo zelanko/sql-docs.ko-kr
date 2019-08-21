@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버로 SQL Server에 연결 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 1b88d1824564a9b4fdd3d5340575a5afdff5ca3b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8dbf7a415d413e0a9fad431013255ff48417687
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956829"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028186"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>JDBC 드라이버로 SQL Server에 연결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,14 +37,14 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 데 사용할 연결 URL을 형성하는 방법을 설명합니다. 또한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 명명된 인스턴스에 연결하는 방법에 대해 설명합니다.|  
 |[연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)|다양한 연결 속성과 이러한 속성을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결할 때 사용하는 방법을 설명합니다.|  
 |[데이터 원본 속성 설정](../../connect/jdbc/setting-the-data-source-properties.md)|Java Platform, Enterprise Edition(Java EE) 환경에서 데이터 원본을 사용하는 방법에 대해 설명합니다.|  
-|[연결 작업](../../connect/jdbc/working-with-a-connection.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 연결 인스턴스를 만드는 다양한 방법을 설명합니다.|  
+|[연결 사용](../../connect/jdbc/working-with-a-connection.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 대한 연결 인스턴스를 만드는 다양한 방법을 설명합니다.|  
 |[연결 풀링 사용](../../connect/jdbc/using-connection-pooling.md)|JDBC 드라이버에서 연결 풀링의 사용을 지원하는 방법을 설명합니다.|  
 |[데이터베이스 미러링 사용 &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|JDBC 드라이버에서 데이터베이스 미러링 사용을 지원하는 방법을 설명합니다.|  
-|[고가용성, 재해 복구를 위한 JDBC 드라이버 지원](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|AlwaysOn 가용성 그룹에 연결할 응용 프로그램을 개발하는 방법을 설명합니다.|  
+|[고가용성, 재해 복구를 위한 JDBC 드라이브 지원](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|AlwaysOn 가용성 그룹에 연결할 애플리케이션을 개발하는 방법을 설명합니다.|  
 |[Kerberos 통합 인증을 사용하여 SQL Server에 연결](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Kerberos 통합 인증을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 연결하는 애플리케이션을 위한 Java 구현을 설명합니다.|  
 |[Azure SQL 데이터베이스에 연결](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|SQL Azure에서 데이터베이스의 연결 문제를 설명합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

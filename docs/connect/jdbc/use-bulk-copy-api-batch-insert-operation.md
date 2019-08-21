@@ -1,7 +1,7 @@
 ---
 title: MSSQL JDBC Driver에 대 한 일괄 삽입 작업에 대량 복사 API 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 028caf1bf69c7e361ea7e4445c192c1fc1adf437
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004140"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027102"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>일괄 처리 삽입 작업에 대량 복사 API 사용
 
@@ -25,7 +25,7 @@ SQL Server 용 Microsoft JDBC Driver 7.0은 Azure Data Warehouse에 대 한 batc
 
 이 기능은 java.sql.preparedstatement 및 callablestatement의 `executeBatch()`  &  `executeLargeBatch()` api에만 적용 됩니다.
 
-## <a name="pre-requisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>사전 요구 사항
 
 일괄 삽입을 위해 대량 복사 API를 사용 하려면 두 가지 필수 구성 요소가 있습니다.
 
@@ -139,6 +139,6 @@ Starting batch operation using Bulk Copy API.
 Finished. Time taken : 1058 milliseconds.
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버로 성능 및 안정성 개선](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

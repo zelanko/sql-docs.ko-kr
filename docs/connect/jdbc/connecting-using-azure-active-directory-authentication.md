@@ -1,7 +1,7 @@
 ---
 title: Azure Active Directory 인증을 사용하여 연결 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/29/2019
+ms.date: 08/12/2019
 ms.reviewer: ''
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a194338a41e64e18076ad37a4f895180a7d9e448
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b596936010fcdce4eb5c0701c5f0c6631cd9687e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956814"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028119"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Azure Active Directory 인증을 사용하여 연결
 
@@ -175,7 +175,7 @@ JDK는와 `kinit`함께 제공 되며,이를 사용 하 여 Azure Active Directo
 #### <a name="linux-and-mac"></a>Linux 및 Mac
 
 ##### <a name="requirements"></a>요구 사항
-Windows 도메인에 가입 된 컴퓨터에 액세스 하 여 Kerberos 도메인 컨트롤러를 쿼리할 수 있습니다.
+Kerberos 도메인 컨트롤러를 쿼리하기 위해 Windows 도메인에 가입된 머신에 액세스할 수 있어야 합니다.
 
 ##### <a name="step-1-find-kerberos-kdc"></a>1 단계: Kerberos KDC 찾기
 - **실행**위치: Windows 명령줄
@@ -201,12 +201,12 @@ Windows 도메인에 가입 된 컴퓨터에 액세스 하 여 Kerberos 도메�
      kdc = co1-red-dc-28.domain.company.com
   }
   ```
-  그런 다음 krb5.conf 파일을 저장 하 고 종료 합니다.
+  이제 krb5.conf 파일을 저장하고 종료합니다.
 
 > [!NOTE]
->  도메인은 모두 대문자 여야 합니다.
+>  도메인은 모두 대문자여야 합니다.
 
-##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>3 단계: 티켓 허용 티켓 검색 테스트
+##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>3단계: TGS(Ticket-Granting Service) 검색 테스트
 - **실행**위치: Linux/Mac
 - **작업**:
   - 명령을 `kinit username@DOMAIN.COMPANY.COM` 사용 하 여 KDC에서 TGT를 가져온 다음 도메인 암호를 입력 하 라는 메시지가 표시 됩니다.

@@ -1,7 +1,7 @@
 ---
 title: 공간 데이터 형식 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f2290aa8d7ebad7a40b5aea9d37c5a9a53e0d333
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f133fa066ef2c486cf7bb40c5b653c99e077bc46
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916530"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026937"
 ---
 # <a name="using-spatial-datatypes"></a>공간 데이터 형식 사용
 
@@ -23,7 +23,7 @@ ms.locfileid: "67916530"
 
 JDBC Driver preview 릴리스 6.5.0을 시작 하는 공간 데이터 형식 (Geometry 및 Geography)이 지원 됩니다. 공간 데이터 형식은 현재 저장 프로시저, TVP (테이블 반환 매개 변수), 대량 복사 및 Always Encrypted에서 지원 되지 않습니다. 이 페이지에서는 JDBC 드라이버를 사용 하 여 Geometry 및 Geography 데이터 형식의 다양 한 사용 사례를 보여 줍니다. 공간 데이터 형식에 대 한 개요는 [공간 데이터 형식 개요](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview) 페이지를 참조 하세요.
 
-## <a name="creating-a-geometry--geography-object"></a>Geometry/Geography 개체 만들기
+## <a name="creating-a-geometry--geography-object"></a>Geometry/geography 개체 만들기
 
 기 하 도형/지리 개체를 만드는 두 가지 주요 방법은 WKT (잘 알려진 텍스트)에서 변환 하거나 WKB (잘 알려진 이진)로 변환 하는 것입니다.
 
@@ -159,6 +159,6 @@ Geography 열과 **Getgeography ()** 메서드를 사용 하 여 지리에 상�
 
 3. 저장 프로시저, TVP 및 대량 복사 작업은 현재 공간 데이터 형식에서 지원 되지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [공간 데이터 형식 샘플(JDBC)](../../connect/jdbc/spatial-data-types-sample.md)

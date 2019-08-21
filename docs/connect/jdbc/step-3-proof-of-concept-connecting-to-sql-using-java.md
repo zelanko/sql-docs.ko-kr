@@ -1,7 +1,7 @@
 ---
 title: '3단계: Java를 사용하여 SQL에 연결하는 개념 증명 | Microsoft Docs'
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,18 +10,18 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0def25f7fc19344c3548353bbd15ffa27e65caa
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004291"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027514"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>3단계: Java를 사용하여 SQL에 연결하는 개념 증명
   
 이 예는 개념 증명 으로만 간주 해야 합니다. 이 샘플 코드는 명확 하 게 하기 위해 단순화 되었으며 Microsoft에서 권장 하는 모범 사례를 나타내지는 않습니다.  
   
-## <a name="step-1--connect"></a>1 단계: 연결  
+## <a name="step-1-connect"></a>1 단계: 연결  
   
 Connection 클래스를 사용 하 여 SQL Database에 연결 합니다.   
   

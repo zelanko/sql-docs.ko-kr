@@ -1,7 +1,7 @@
 ---
 title: 스파스 열 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 86d230cee4c38b996ee41240a61e6ede53478bac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 328b25b4494ff69368147c9369a0949f3094108f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004418"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027718"
 ---
 # <a name="sparse-columns"></a>스파스 열
 
@@ -158,6 +158,6 @@ public class SparseColumns {
 
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버로 성능 및 안정성 개선](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

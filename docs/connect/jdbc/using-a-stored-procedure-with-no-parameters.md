@@ -1,7 +1,7 @@
 ---
 title: 매개 변수가 없는 저장 프로시저 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 3dade70a033ddf2a9e20ffc09930a27e26d9a579
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 01f59f44d42af1d0880df48b043080525d9821ee
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916503"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027017"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>매개 변수가 없는 저장 프로시저 사용
 
@@ -28,7 +28,7 @@ JDBC 드라이버를 사용하여 매개 변수가 없는 저장 프로시저를
 `{call procedure-name}`
 
 > [!NOTE]  
-> SQL 이스케이프 시퀀스에 대 한 자세한 내용은 [Sql 이스케이프 시퀀스 사용](../../connect/jdbc/using-sql-escape-sequences.md)을 참조 하세요.
+> SQL 이스케이프 시퀀스에 대 한 자세한 내용은 [sql 이스케이프 시퀀스 사용](../../connect/jdbc/using-sql-escape-sequences.md)을 참조 하세요.
 
 이에 대한 예로 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] 샘플 데이터베이스에 다음 저장 프로시저를 만듭니다.
 
@@ -57,6 +57,6 @@ public static void executeSprocNoParams(Connection con) throws SQLException {
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [저장 프로시저가 있는 문 사용](../../connect/jdbc/using-statements-with-stored-procedures.md)

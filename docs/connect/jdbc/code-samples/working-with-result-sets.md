@@ -1,7 +1,7 @@
 ---
 title: 결과 집합 작업 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9d33dbebaad162feb77a4cbea8de33993fc79f14
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44eac2fbcc156b3591bdf02fd00ff0d6bd19366b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956959"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028240"
 ---
-# <a name="working-with-result-sets"></a>결과 집합 사용
+# <a name="working-with-result-sets"></a>결과 집합 작업
 
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
@@ -35,10 +35,10 @@ ms.locfileid: "67956959"
 | 항목                                                                                           | 설명                                                                                                                                                                                             |
 | ----------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [결과 집합 데이터 검색 샘플](../../../connect/jdbc/code-samples/retrieving-result-set-data-sample.md) | 결과 집합을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 검색하고 이를 표시하는 방법을 설명합니다.                                                         |
-| [결과 집합 데이터 샘플 수정](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | 결과 집합을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 삽입, 검색 및 수정하는 방법을 설명합니다.                                                      |
+| [결과 집합 데이터 수정 샘플](../../../connect/jdbc/code-samples/modifying-result-set-data-sample.md)   | 결과 집합을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 데이터를 삽입, 검색 및 수정하는 방법을 설명합니다.                                                      |
 | [결과 집합 데이터 캐싱 샘플](../../../connect/jdbc/code-samples/caching-result-set-data-sample.md)       | 결과 집합을 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에서 대량의 데이터를 검색하고 클라이언트에서 해당 데이터가 캐시되는 방식을 제어하는 방법을 설명합니다. |
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 
 [샘플 JDBC 드라이버 애플리케이션](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

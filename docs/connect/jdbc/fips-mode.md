@@ -1,7 +1,7 @@
 ---
 title: JDBC에서 FIPS 모드 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/26/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: genemi
@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: MikeRayMSFT
 ms.author: mikeray
 manager: kenvh
-ms.openlocfilehash: 482e820d17860b67f46d47f4bb8523e833d0cf5a
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 63681ee474d4993e248bf02dcabd9065317ffa39
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68252208"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028062"
 ---
 # <a name="fips-mode"></a>FIPS 모드
 

@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버에서 대량 복사 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 499504d3cc238b10b62fe9dc554c77ebf72ec4b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 75ee40e0b7ca753efd32e0ab057340f61824acef
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003992"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026408"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>JDBC 드라이버에서 대량 복사 사용
 
@@ -140,7 +140,7 @@ SQL Server 대량 복사 작업을 수행하는 가장 간단한 방법은 데�
   
 ### <a name="example"></a>예제
 
-다음 응용 프로그램에서는 SQLServerBulkCopy 클래스를 사용하여 데이터를 로드하는 방법을 보여 줍니다. 이 예제에서 ResultSet은 SQL Server AdventureWorks 데이터베이스 Production.Product 테이블의 데이터를 동일한 데이터베이스의 유사한 테이블에 복사하는 데 사용됩니다.  
+다음 애플리케이션에서는 SQLServerBulkCopy 클래스를 사용하여 데이터를 로드하는 방법을 보여 줍니다. 이 예제에서 ResultSet은 SQL Server AdventureWorks 데이터베이스 Production.Product 테이블의 데이터를 동일한 데이터베이스의 유사한 테이블에 복사하는 데 사용됩니다.  
   
 > [!IMPORTANT]  
 > 이 샘플은 [테이블 설정](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다. 이 코드는 SQLServerBulkCopy를 사용하는 구문을 보여 주기 위해서만 제공됩니다. 원본 테이블과 대상 테이블이 동일한 SQL Server 인스턴스에 있는 경우에는 Transact-SQL INSERT … SELECT 문을 사용하여 데이터를 복사합니다.  
@@ -359,7 +359,7 @@ public class BulkCopyMultiple {
   
 ### <a name="performing-a-non-transacted-bulk-copy-operation"></a>트랜잭션되지 않은 대량 복사 작업 수행
 
-다음 응용 프로그램에서는 트랜잭션되지 않은 대량 복사 작업 중 오류가 발생할 경우 어떻게 되는지를 보여 줍니다.  
+다음 애플리케이션에서는 트랜잭션되지 않은 대량 복사 작업 중 오류가 발생할 경우 어떻게 되는지를 보여 줍니다.  
   
 예제에서 원본 테이블과 대상 테이블에는 각각 **ProductID**라는 ID 열이 있습니다. 먼저 코드는 모든 행을 삭제한 다음, **ProductID**가 원본 테이블에 있는 것으로 알려진 단일 행을 삽입하여 대상 테이블을 준비합니다. 기본적으로 ID 열에 대한 새 값은 추가된 각 행에 대한 대상 테이블에 생성됩니다. 이 예제에서 옵션은 대량 로드 프로세스에서 원본 테이블의 ID 값을 대신 강제로 사용하도록 하는 연결을 열 때 설정됩니다.  
   
@@ -470,7 +470,7 @@ copyOptions.setUseInternalTransaction(true);
 
 ### <a name="using-existing-transactions"></a>기존 트랜잭션 사용
 
-트랜잭션이 SQLServerBulkCopy 생성자의 매개 변수로 설정된 연결 개체를 전달할 수 있습니다. 이 상황에서는 대량 복사 작업이 기존 트랜잭션에서 수행되며 트랜잭션 상태가 변경되지 않습니다. 즉, 커밋되거나 중단되지 않습니다. 따라서 응용 프로그램이 다른 데이터베이스 작업과 함께 대량 복사 작업을 트랜잭션에 포함할 수 있습니다. 오류가 발생하여 전체 대량 복사 작업을 롤백해야 하는 경우 또는 롤백할 수 있는 더 큰 프로세스의 일부로 대량 복사를 실행해야 하는 경우 대량 복사 작업 후 임의 지점에서 연결 개체에 대한 롤백을 수행할 수 있습니다.  
+트랜잭션이 SQLServerBulkCopy 생성자의 매개 변수로 설정된 연결 개체를 전달할 수 있습니다. 이 상황에서는 대량 복사 작업이 기존 트랜잭션에서 수행되며 트랜잭션 상태가 변경되지 않습니다. 즉, 커밋되거나 중단되지 않습니다. 따라서 애플리케이션이 다른 데이터베이스 작업과 함께 대량 복사 작업을 트랜잭션에 포함할 수 있습니다. 오류가 발생하여 전체 대량 복사 작업을 롤백해야 하는 경우 또는 롤백할 수 있는 더 큰 프로세스의 일부로 대량 복사를 실행해야 하는 경우 대량 복사 작업 후 임의 지점에서 연결 개체에 대한 롤백을 수행할 수 있습니다.  
   
 다음 애플리케이션은 한 가지 예외를 제외하고 **BulkCopyNonTransacted**와 유사합니다. 이 예제에서는 대량 복사 작업이 더 큰 외부 트랜잭션에 포함됩니다. 기본 키 위반 오류가 발생하면 전체 트랜잭션이 롤백되고 행이 대상 테이블에 추가되지 않습니다.
 
@@ -567,7 +567,7 @@ public class BulkCopyExistingTransactions {
 
 ### <a name="bulk-copy-from-a-csv-file"></a>CSV 파일에서 대량 복사  
 
- 다음 응용 프로그램에서는 SQLServerBulkCopy 클래스를 사용하여 데이터를 로드하는 방법을 보여 줍니다. 이 예제에서 CSV 파일은 SQL Server AdventureWorks 데이터베이스의 Production.Product 테이블에서 내보낸 데이터를 데이터베이스의 유사한 테이블에 복사하는 데 사용됩니다.  
+ 다음 애플리케이션에서는 SQLServerBulkCopy 클래스를 사용하여 데이터를 로드하는 방법을 보여 줍니다. 이 예제에서 CSV 파일은 SQL Server AdventureWorks 데이터베이스의 Production.Product 테이블에서 내보낸 데이터를 데이터베이스의 유사한 테이블에 복사하는 데 사용됩니다.  
   
 > [!IMPORTANT]  
 > 이 샘플은 가져올 [테이블 설정](../../ssms/download-sql-server-management-studio-ssms.md)에 설명된 대로 작업 테이블을 만들지 않은 경우 실행되지 않습니다.  
@@ -794,6 +794,6 @@ SQLServerBulkCopy 클래스를 사용하면 SQL Server 테이블에만 데이터
 | Void setTimeWithTimezoneFormat(DateTimeForm atter dateTimeFormatter)                                   | 파일의 시간 데이터를 java.sql.Types.TIME_WITH_TIMEZONE으로 구문 분석하는 형식을 설정합니다.           |
 | Void setTimeWithTimezoneFormat(String timeFormat)                                                      | 파일의 시간 데이터를 java.sql.Types.TIME_WITH_TIMEZONE으로 구문 분석하는 형식을 설정합니다.           |
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 
 [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

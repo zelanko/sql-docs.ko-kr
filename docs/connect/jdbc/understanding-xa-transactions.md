@@ -1,7 +1,7 @@
 ---
 title: XA 트랜잭션 이해 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7caa67e019ce60f955abf60d215b6c049f3dc708
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e7f602107e828ee0bd985345ed5e641d6870558
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004160"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027223"
 ---
 # <a name="understanding-xa-transactions"></a>XA 트랜잭션 이해
 
@@ -152,7 +152,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL<version>.<insta
   
      클라이언트에서 제한 시간을 지정하지 않는 경우 모든 트랜잭션의 제한 시간이 30초(최대값)가 됨을 의미합니다. 클라이언트에서 시간 제한을 지정하면 30초(최댓값)보다 작은 경우에 한해 클라이언트의 시간 제한이 적용됩니다.  
   
-### <a name="upgrading-sqljdbcxadll"></a>sqljdbc_xa.dll 업그레이드
+### <a name="upgrading-sqljdbc_xadll"></a>sqljdbc_xa.dll 업그레이드
 
 새 버전의 JDBC 드라이버를 설치할 때 서버에서 sqljdbc_xa.dll을 업그레이드하기 위해 새 버전의 sqljdbc_xa.dll을 사용해야 합니다.  
   
@@ -347,6 +347,6 @@ class XidImpl implements Xid {
 
 ```
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 
 [JDBC 드라이버로 트랜잭션 수행](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

@@ -1,7 +1,7 @@
 ---
 title: SQL 데이터 검색 및 분류 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b6f9962be0fa138786af425ab24bf9608bf3264f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 206bd656c1300a6436298c426697f6c1d47a9e86
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957241"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028377"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
 
@@ -182,6 +182,6 @@ public class DataDiscoveryAndClassification {
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [샘플 JDBC 드라이버 애플리케이션](../../jdbc/code-samples/sample-jdbc-driver-applications.md)  

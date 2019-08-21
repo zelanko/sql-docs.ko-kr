@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버 데이터 형식 이해 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a78f6049f49c73c728e3de9329cc6b3e533cdc8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8daea8b477be13dd7b267a17ddf5f960868f579
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916606"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027269"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>JDBC 드라이버 데이터 형식 이해
 
@@ -40,6 +40,6 @@ JDBC 유형 시스템은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md
 | [XML 데이터 지원](../../connect/jdbc/supporting-xml-data.md)                                                                                 | SQLXML 인터페이스에 대해 설명합니다. **SQLXML** Java 데이터 형식으로 관계형 데이터베이스에 XML 데이터를 읽고 쓰는 방법에 대해서도 설명합니다.                                                                                                             |
 | [래퍼 및 인터페이스](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드와 상수가 있는 인터페이스에 대해 설명합니다. 애플리케이션 서버는 이 인터페이스를 사용하여 클래스의 프록시를 만들 수 있습니다. 또한 `java.sql.Wrapper` 인터페이스에 대한 지원에 대해서도 설명합니다. |
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

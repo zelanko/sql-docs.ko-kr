@@ -1,7 +1,7 @@
 ---
 title: SQL 이스케이프 시퀀스 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005929"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025887"
 ---
 # <a name="using-sql-escape-sequences"></a>SQL 이스케이프 시퀀스 사용
 
@@ -159,6 +159,6 @@ LIMIT <rows> [OFFSET <row offset>]
 
 이스케이프 구문은 두 가지 요소로 구성되어 있습니다. \<*rows*>는 필수이며 반환할 행 수를 지정합니다. OFFSET 및 \<*row offset*>은 선택 사항이며 행 반환을 시작하기 전에 건너뛸 행 수를 지정합니다. JDBC 드라이버는 LIMIT 대신 TOP를 사용하도록 쿼리를 변환하여 필수 요소만 지원합니다. SQL Server는 LIMIT 절을 지원하지 않습니다. **JDBC 드라이버는 선택적인 \<row offset>을 지원하지 않으며 사용될 경우 드라이버에서 예외가 throw됩니다**.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버에서 문 사용](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

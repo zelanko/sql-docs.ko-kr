@@ -1,7 +1,7 @@
 ---
 title: SSL 암호화를 사용 하 여 연결 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ec91fa8a-ab7e-4c1e-a05a-d7951ddf33b1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 209ced9fbf6d1ceb21ed4e5b6d686dd87eec0de2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ccbd9db2ae39113ca157651bdc6dc1486307419
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956800"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028151"
 ---
 # <a name="connecting-with-ssl-encryption"></a>SSL 암호화를 사용한 연결
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -64,7 +64,7 @@ String connectionUrl =
 >  또는 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스에서 제공하는 적절한 **setter** 메서드를 사용하여 연결 속성의 값을 설정할 수 있습니다.  
   
  **Encrypt** 속성을 **true** 로 설정 하 고 **trustservercertificate** 속성을 **false** 로 설정 하 고 연결 문자열의 서버 이름이 SSL 인증서의 서버 이름과 일치 하지 않는 경우 다음 오류가 발생 합니다. 발급 됨 `The driver couldn't establish a secure connection to SQL Server by using Secure Sockets Layer (SSL) encryption. Error: "java.security.cert.CertificateException: Failed to validate the server name in a certificate during Secure Sockets Layer (SSL) initialization."`: 버전 7.2부터 드라이버는 SSL 인증서에 있는 서버 이름의 맨 왼쪽 레이블에 와일드 카드 패턴 일치를 지원 합니다.
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SSL 암호화 사용](../../connect/jdbc/using-ssl-encryption.md)   
  [JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   

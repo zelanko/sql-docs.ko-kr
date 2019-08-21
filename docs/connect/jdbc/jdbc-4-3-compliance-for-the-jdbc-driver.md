@@ -1,7 +1,7 @@
 ---
 title: Jdbc 드라이버에 대 한 JDBC 4.3 준수 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 20cefb029a126b0a262d86a2dc0a0791959085bd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ed9b10ad9e9a927789505c7d7327c6cf4d1ff3c
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956361"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027940"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>JDBC 드라이버의 JDBC 4.3 준수
 

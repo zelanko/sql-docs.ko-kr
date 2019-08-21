@@ -1,7 +1,7 @@
 ---
 title: SQL 문을 사용 하 여 데이터 수정 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cbcdf01eed0114e1788f23cec3a24cf4a69329e2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9de31bad8ef2980e7322b529a6a2b68a12355c2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004018"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026747"
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>SQL 문을 사용하여 데이터 수정
 
@@ -36,6 +36,6 @@ SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
 >
 > JDBC 드라이버가 발생 가능성이 있는 모든 트리거가 반환한 업데이트 횟수를 포함하여 모든 업데이트 횟수를 반환하게 하려면 lastUpdateCount 연결 문자열 속성을 "false"로 설정합니다. LastUpdateCount 속성에 대 한 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조 하세요.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
-[SQL에 문 사용](../../connect/jdbc/using-statements-with-sql.md)
+[SQL이 있는 문 사용](../../connect/jdbc/using-statements-with-sql.md)

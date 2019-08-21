@@ -1,7 +1,7 @@
 ---
 title: 대량 데이터 샘플 읽기 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dde0c8eb487fed00996b56a684a0e28326750679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 260666488a21b02c0c318d3277b72fc576b0ab08
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956162"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027818"
 ---
-# <a name="reading-large-data-sample"></a>큰 데이터 읽기 샘플
+# <a name="reading-large-data-sample"></a>대규모 데이터 읽기 샘플
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -48,6 +48,6 @@ ms.locfileid: "67956162"
 
 [!code[JDBC#UsingAdaptiveBuffering1](../../connect/jdbc/codesnippet/Java/reading-large-data-sample_1.java)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [대규모 데이터 작업](../../connect/jdbc/working-with-large-data.md)

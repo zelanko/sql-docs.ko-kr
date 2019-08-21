@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버를 사용 하 여 메타 데이터 처리 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7a5ac2591c10bc77ff4e4d1d9dcacd755a442b9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0176e1da9a64e4ed32ba6989496178f5f9741193
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956527"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028020"
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>JDBC 드라이버로 메타데이터 처리
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "67956527"
  이 섹션의 항목에서는 이러한 세 개의 메타데이터 클래스를 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 메타데이터를 사용하는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
->  이 섹션에 설명된 메타데이터 메서드는 대개 응용 프로그램의 성능 측면에서 많은 비용이 소모되므로 신중하게 사용해야 합니다.  
+>  이 섹션에 설명된 메타데이터 메서드는 대개 애플리케이션의 성능 측면에서 많은 비용이 소모되므로 신중하게 사용해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   
@@ -43,7 +43,7 @@ ms.locfileid: "67956527"
 |[결과 집합 메타데이터 사용](../../connect/jdbc/using-result-set-metadata.md)|현재 결과 집합에 관한 메타데이터 정보를 검색하는 방법을 설명합니다.|  
 |[매개 변수 메타데이터 사용](../../connect/jdbc/using-parameter-metadata.md)|준비된 문 및 호출 가능한 문의 매개 변수에 관한 메타데이터 정보를 검색하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -1,7 +1,7 @@
 ---
 title: MSSQL JDBC Driver에 대 한 공간 데이터 형식 샘플 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -9,12 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a92320dc854a31384df87806bf4eca4615c819fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6e0557030bdec7b566a69696a8fd50cb543a7fc1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004400"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027689"
 ---
 # <a name="spatial-data-types-sample"></a>공간 데이터 형식 샘플
 
@@ -95,7 +95,7 @@ public class SpatialDataTypes {
 }
 ```
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 
 [JDBC 데이터 형식 작업](../../connect/jdbc/working-with-data-types-jdbc.md)  
   

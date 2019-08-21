@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver에 대한 릴리스 정보 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891283"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027795"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver에 대한 릴리스 정보
 
@@ -162,7 +162,7 @@ SQL Server용 Microsoft JDBC Driver 7.0은 이제 `java.sql.Connection` 클래�
 
 SQL Server용 Microsoft JDBC Driver 7.0은 SQL 데이터 검색 및 분류 기능을 해당 기능을 지원하는 모든 대상 데이터베이스에서 지원합니다. 이제 드라이버는 `SQLServerResultSet.getSensitivityClassification()` API를 노출하여 가져온 `ResultSet`에서 이 정보를 추출합니다.
 
-JDBC Driver에서 이 기능을 사용하는 방법에 대한 자세한 내용은 [SQL data discovery and classification](../../connect/jdbc/data-discovery-classification-sample.md)(SQL 데이터 검색 및 분류)을 참조하세요.
+JDBC 드라이버에서 이 기능을 사용하는 방법에 대한 자세한 내용은 [SQL 데이터 검색 및 분류](../../connect/jdbc/data-discovery-classification-sample.md)를 참조하세요.
 
 ### <a name="added-connection-property-usebulkcopyforbatchinsert"></a>추가된 연결 속성: useBulkCopyForBatchInsert
 

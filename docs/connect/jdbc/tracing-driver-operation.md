@@ -1,7 +1,7 @@
 ---
 title: 드라이버 작업 추적 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 723aeae7-6504-4585-ba8b-3525115bea8b
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a8e04fe67605c97e12c688e0b05b8c437b6aa182
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18bfd63a8cf3255a62b6aef5c4c31573c60e76b0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916681"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027590"
 ---
 # <a name="tracing-driver-operation"></a>드라이버 작업 추적
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "67916681"
 > [!NOTE]  
 >  프로그램 추적에 여러 로깅 개체를 사용하는 방법에 대한 자세한 내용은 Sun Microsystems 웹 사이트의 Java Logging APIs 설명서(영문)를 참조하십시오.  
   
- 다음 섹션에서는 로깅 수준 및 로깅 가능한 범주를 설명하고 응용 프로그램에서 추적 기능을 활성화하는 방법에 대한 정보를 제공합니다.  
+ 다음 섹션에서는 로깅 수준 및 로깅 가능한 범주를 설명하고 애플리케이션에서 추적 기능을 활성화하는 방법에 대한 정보를 제공합니다.  
   
 ## <a name="logging-levels"></a>로깅 수준  
  작성되는 모든 로그 메시지에는 연관된 로깅 수준이 있습니다. 로깅 수준은 로그 메시지의 중요도를 결정하며 java.util.logging의 **Level** 클래스에 의해 정의됩니다. 한 수준에서 로깅을 설정하면 상위 수준의 로깅도 모두 설정됩니다. 이 섹션에서는 공용 로깅 범주 및 내부 로깅 범주의 로깅 수준에 대해 설명합니다. 로깅 범주에 대한 자세한 내용은 이 문서의 로깅 범주 섹션을 참조하세요.  
@@ -69,39 +69,39 @@ ms.locfileid: "67916681"
   
 |속성|설명|  
 |----------|-----------------|  
-|연결|[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
-|인수를 제거합니다.|[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
-|DataSource|[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
-|ResultSet|[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
-|드라이버|[SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
+|연결|[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
+|인수를 제거합니다.|[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
+|DataSource|[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
+|ResultSet|[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
+|드라이버|[SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
   
  Microsoft JDBC 드라이버 버전 2.0 이상에서는 드라이버가 다음 내부 로깅 범주에 대한 로깅 지원을 포함하는 com.microsoft.sqlserver.jdbc.internals 패키지를 제공합니다.  
   
 |속성|설명|  
 |----------|-----------------|  
-|AuthenticationJNI|Windows 통합 인증 문제에 관한 메시지를 기록 합니다 ( **Authenticationscheme** 연결 속성이 암시적 또는 명시적으로 **NativeAuthentication**로 설정 된 경우).<br /><br /> 응용 프로그램에서는 로깅 수준을 FINEST 및 FINE으로 설정할 수 있습니다.|  
-|SQLServerConnection|[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE 및 FINER로 설정할 수 있습니다.|  
-|SQLServerDataSource|[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 및 [SQLServerPooledConnection](../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 클래스의 메시지를 로깅합니다.<br /><br /> 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
-|InputStream|java.io.InputStream, java.io.Reader 및 varchar, nvarchar, varbinary 데이터 형식 등의 최대값 지정자가 있는 데이터 형식과 관련된 메시지를 로깅합니다.<br /><br /> 응용 프로그램에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
-|SQLServerException|[SQLServerException](../../connect/jdbc/reference/sqlserverexception-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
-|SQLServerResultSet|[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE, FINER 및 FINEST로 설정할 수 있습니다.|  
-|SQLServerStatement|[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE, FINER 및 FINEST로 설정할 수 있습니다.|  
-|XA|[SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스의 모든 XA 트랜잭션에 대한 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE 및 FINER로 설정할 수 있습니다.|  
-|KerbAuthentication|유형 4 Kerberos 인증에 대 한 메시지를 기록 합니다 ( **Authenticationscheme** 연결 속성이 **JavaKerberos**로 설정 된 경우). 응용 프로그램에서는 로깅 수준을 FINE 또는 FINER로 설정할 수 있습니다.|  
+|AuthenticationJNI|Windows 통합 인증 문제에 관한 메시지를 기록 합니다 ( **Authenticationscheme** 연결 속성이 암시적 또는 명시적으로 **NativeAuthentication**로 설정 된 경우).<br /><br /> 애플리케이션에서는 로깅 수준을 FINEST 및 FINE으로 설정할 수 있습니다.|  
+|SQLServerConnection|[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE 및 FINER로 설정할 수 있습니다.|  
+|SQLServerDataSource|[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md), [SQLServerConnectionPoolDataSource](../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) 및 [SQLServerPooledConnection](../../connect/jdbc/reference/sqlserverpooledconnection-class.md) 클래스의 메시지를 로깅합니다.<br /><br /> 애플리케이션에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
+|InputStream|java.io.InputStream, java.io.Reader 및 varchar, nvarchar, varbinary 데이터 형식 등의 최대값 지정자가 있는 데이터 형식과 관련된 메시지를 로깅합니다.<br /><br /> 애플리케이션에서는 로깅 수준을 FINER로 설정할 수 있습니다.|  
+|SQLServerException|[SQLServerException](../../connect/jdbc/reference/sqlserverexception-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
+|SQLServerResultSet|[SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE, FINER 및 FINEST로 설정할 수 있습니다.|  
+|SQLServerStatement|[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE, FINER 및 FINEST로 설정할 수 있습니다.|  
+|XA|[SQLServerXADataSource](../../connect/jdbc/reference/sqlserverxadatasource-class.md) 클래스의 모든 XA 트랜잭션에 대한 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE 및 FINER로 설정할 수 있습니다.|  
+|KerbAuthentication|유형 4 Kerberos 인증에 대 한 메시지를 기록 합니다 ( **Authenticationscheme** 연결 속성이 **JavaKerberos**로 설정 된 경우). 애플리케이션에서는 로깅 수준을 FINE 또는 FINER로 설정할 수 있습니다.|  
 |TDS.DATA|드라이버와 SQL 서버 간 TDS 프로토콜 수준 대화를 포함하는 메시지를 로깅합니다. 주고받는 각 TDS 패킷의 자세한 내용이 ASCII 및 16진수로 로깅됩니다. 로그인 자격 증명(사용자 이름 및 암호)은 로깅되지 않습니다. 다른 모든 데이터는 로깅됩니다.<br /><br /> 이 범주는 매우 자세한 메시지를 작성하기 때문에 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Channel|이 범주는 SQL 서버와의 TCP 통신 채널의 동작을 추적합니다. 로깅된 메시지는 소켓을 열고 닫는 동작과 읽고 쓰는 동작을 포함합니다. 또한 SQL 서버와의 SSL(Secure Sockets Layer) 연결 설정과 관련된 메시지를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINE, FINER 또는 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Writer|이 범주는 TDS 채널에 대한 쓰기 동작을 추적합니다. 내용이 아닌, 쓰기 길이만 추적됩니다. 또한 이 범주에서는 문의 실행을 취소하기 위해 주의 신호가 서버로 전송되는 경우의 문제를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Reader|FINEST 수준에서 이 범주는 TDS 채널의 특정 읽기 동작을 추적합니다. FINEST 수준에서는 추적이 자세할 수 있습니다. WARNING 및 SEVERE 수준에서 이 범주는 드라이버가 연결을 닫기 전 SQL 서버에서 잘못된 TDS 프로토콜을 수신하는 경우 추적을 수행합니다.<br /><br /> 이 범주는 로깅 수준을 FINER 또는 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.Command|이 범주는 낮은 수준의 상태 전환 및 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 실행, ResultSet 커서 인출, 커밋 등 TDS 명령 실행과 관련된 기타 정보를 추적합니다.<br /><br /> 이 범주는 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.|  
 |TDS.TOKEN|이 범주는 TDS 패킷 내의 토큰만 로깅하며 TDS.DATA 범주보다 정보가 덜 자세합니다. 이 범주는 로깅 수준을 FINEST로 설정해야만 사용할 수 있습니다.<br /><br /> FINEST 수준에서 이 범주는 응답에서 처리되는 TDS 토큰을 추적합니다. SEVERE 수준에서 이 범주는 잘못된 TDS 토큰이 발견되는 경우 추적을 수행합니다.|  
-|SQLServerDatabaseMetaData|[SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
-|SQLServerResultSetMetaData|[SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
-|SQLServerParameterMetaData|[SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
-|SQLServerBlob|[SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
-|SQLServerClob|[SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
-|SQLServerSQLXML|내부 SQLServerSQLXML 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
-|SQLServerDriver|[SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
-|SQLServerNClob|[SQLServerNClob](../../connect/jdbc/reference/sqlservernclob-class.md) 클래스의 메시지를 로깅합니다. 응용 프로그램에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
+|SQLServerDatabaseMetaData|[SQLServerDatabaseMetaData](../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
+|SQLServerResultSetMetaData|[SQLServerResultSetMetaData](../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
+|SQLServerParameterMetaData|[SQLServerParameterMetaData](../../connect/jdbc/reference/sqlserverparametermetadata-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
+|SQLServerBlob|[SQLServerBlob](../../connect/jdbc/reference/sqlserverblob-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
+|SQLServerClob|[SQLServerClob](../../connect/jdbc/reference/sqlserverclob-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
+|SQLServerSQLXML|내부 SQLServerSQLXML 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
+|SQLServerDriver|[SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
+|SQLServerNClob|[SQLServerNClob](../../connect/jdbc/reference/sqlservernclob-class.md) 클래스의 메시지를 로깅합니다. 애플리케이션에서는 로깅 수준을 FINE으로 설정할 수 있습니다.|  
   
 ## <a name="enabling-tracing-programmatically"></a>프로그래밍 방식으로 추적 활성화  
  Logger 개체를 만들고 로깅할 범주를 지시하여 프로그래밍 방식으로 추적을 활성화할 수 있습니다. 예를 들어 다음 코드에서는 SQL 문의 로깅을 활성화하는 방법을 보여 줍니다.  
@@ -158,7 +158,7 @@ com.microsoft.sqlserver.jdbc.level=FINEST
 > [!NOTE]  
 >  java.util.logging의 일부인 LogManager 개체를 사용하여 `logging.properties` 파일의 속성을 설정할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버 관련 문제 진단](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)  
   
   

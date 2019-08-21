@@ -1,7 +1,7 @@
 ---
 title: SSL 암호화를 위한 클라이언트 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7098df4d2a38c6a9415504bec6933afc4a4b310f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50c1a24dfbfb925cbda961f8a566e0d1bcd26bdf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956895"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028200"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>SSL 암호화에 대한 클라이언트 구성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "67956895"
   
  서버 인증서의 유효성을 검사하는 방법은 [SSL 지원 이해](../../connect/jdbc/understanding-ssl-support.md)의 서버 SSL 인증서 유효성 검사 섹션을 참조하세요.  
   
-## <a name="configuring-the-client-trust-store"></a>클라이언트 트러스트 저장소 구성  
+## <a name="configuring-the-client-trust-store"></a>클라이언트 트러스트 저장소 구성 
  서버 인증서의 유효성을 검사하려면 명시적으로 **trustStore** 및 **trustStorePassword** 연결 속성을 사용하거나 암시적으로 기본 JVM(Java Virtual Machine)의 기본 트러스트 저장소를 사용하여 연결 시에 트러스트 자료를 제공해야 합니다. 연결 문자열에 **trustStore** 및 **trustStorePassword** 속성을 설정하는 방법은 [SSL 암호화를 사용해 연결](../../connect/jdbc/connecting-with-ssl-encryption.md)을 참조하세요.  
   
  **trustStore** 속성이 지정되지 않았거나 null로 설정된 경우 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 기본 JVM의 보안 공급자인 Java Secure Socket Extension(SunJSSE)을 사용합니다. SunJSSE 공급자는 기본 TrustManager를 제공하는데 이 속성은 트러스트 저장소에 제공된 트러스트 자료에 대해 SQL Server에서 반환한 X.509 인증서의 유효성을 검사하는 데 사용됩니다.  
@@ -48,7 +48,7 @@ java -Djavax.net.ssl.trustStore=C:\MyCertificates\storeName
 java -Djavax.net.ssl.trustStorePassword=storePassword  
 ```  
   
- 이 경우 이 JVM에서 실행 중인 모든 응용 프로그램이 이러한 설정을 기본값으로 사용합니다. 애플리케이션에서 기본 설정을 재정의하려면 연결 문자열 또는 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스의 해당 setter 메서드에서 **trustStore** 및 **trustStorePassword** 연결 속성을 설정해야 합니다.  
+ 이 경우 이 JVM에서 실행 중인 모든 애플리케이션이 이러한 설정을 기본값으로 사용합니다. 애플리케이션에서 기본 설정을 재정의하려면 연결 문자열 또는 [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) 클래스의 해당 setter 메서드에서 **trustStore** 및 **trustStorePassword** 연결 속성을 설정해야 합니다.  
   
  또한 “\<java-home>/lib/security/jssecacerts” 및 “\<java-home>/lib/security/cacerts”와 같은 기본 트러스트 저장소 파일을 구성하고 관리할 수도 있습니다. 이를 위해서는 JRE(Java Runtime Environment)와 함께 설치되는 JAVA "keytool" 유틸리티를 사용하십시오. "keytool" 유틸리티에 대한 자세한 내용은 Sun Microsystems 웹 사이트에서 keytool 설명서를 참조하십시오.  
   
@@ -83,7 +83,7 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
   
 9. 다음을 클릭한 다음 마침을 클릭하여 인증서를 내보냅니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [SSL 암호화 사용](../../connect/jdbc/using-ssl-encryption.md)   
  [JDBC 드라이버 애플리케이션 보안](../../connect/jdbc/securing-jdbc-driver-applications.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버에서 문 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7646903fc9efcbdb838b4a2d585735dc3a105639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ddd61d15e3c363766c7e49b8e9045b60a7be164
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005927"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025790"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>JDBC 드라이버에서 문 사용
 
@@ -37,7 +37,7 @@ JDBC 드라이버는 다음과 같은 세 개의 클래스를 통해 [!INCLUDE[s
 
 | 항목                                                                                                    | 설명                                                                                                                                            |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [SQL에 문 사용](../../connect/jdbc/using-statements-with-sql.md)                             | JDBC 드라이버에서 SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터를 사용하는 방법을 설명합니다.    |
+| [SQL이 있는 문 사용](../../connect/jdbc/using-statements-with-sql.md)                             | JDBC 드라이버에서 SQL 문을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터를 사용하는 방법을 설명합니다.    |
 | [저장 프로시저가 있는 문 사용](../../connect/jdbc/using-statements-with-stored-procedures.md) | JDBC 드라이버에서 저장 프로시저를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 데이터를 사용하는 방법을 설명합니다. |
 | [다중 결과 집합 사용](../../connect/jdbc/using-multiple-result-sets.md)                           | JDBC 드라이버를 사용하여 다중 결과 집합에서 데이터를 검색하는 방법을 설명합니다.                                                                       |
 | [SQL 이스케이프 시퀀스 사용](../../connect/jdbc/using-sql-escape-sequences.md)                           | 날짜/시간 리터럴 및 함수 같은 SQL 이스케이프 시퀀스를 사용하는 방법을 설명합니다.                                                               |
@@ -45,6 +45,6 @@ JDBC 드라이버는 다음과 같은 세 개의 클래스를 통해 [!INCLUDE[s
 | [일괄 처리 작업 수행](../../connect/jdbc/performing-batch-operations.md)                         | JDBC 드라이버를 사용하여 일괄 작업을 수행하는 방법을 설명합니다.                                                                                      |
 | [복잡한 문 처리](../../connect/jdbc/handling-complex-statements.md)                         | JDBC 드라이버를 사용하여 다양한 태스크를 수행하고 서로 다른 데이터 형식을 반환할 수 있는 복잡한 문을 실행하는 방법을 설명합니다.               |
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

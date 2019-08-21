@@ -1,7 +1,7 @@
 ---
 title: 연결 URL 작성 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957370"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028449"
 ---
 # <a name="building-the-connection-url"></a>연결 URL 작성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "67957370"
 -   **property**(옵션)는 하나 이상의 옵션 연결 속성입니다. 자세한 내용은 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요. 목록에 있는 속성은 모두 지정할 수 있습니다. 속성은 세미콜론(';')으로만 구분할 수 있고 중복될 수 없습니다.  
   
 > [!CAUTION]  
->  보안을 위해 사용자 입력을 토대로 연결 URL을 작성하지 않는 것이 좋습니다. URL에는 서버 이름과 드라이버만 지정해야 합니다. 사용자 이름 및 암호 값에는 연결 속성 컬렉션을 사용합니다. JDBC 응용 프로그램의 보안에 대 한 자세한 내용은 [Jdbc 드라이버 응용 프로그램](../../connect/jdbc/securing-jdbc-driver-applications.md)보안을 참조 하세요.  
+>  보안을 위해 사용자 입력을 토대로 연결 URL을 작성하지 않는 것이 좋습니다. URL에는 서버 이름과 드라이버만 지정해야 합니다. 사용자 이름 및 암호 값에는 연결 속성 컬렉션을 사용합니다. JDBC 응용 프로그램의 보안에 대 한 자세한 내용은 [jdbc 드라이버 응용 프로그램](../../connect/jdbc/securing-jdbc-driver-applications.md)보안을 참조 하세요.  
   
 ## <a name="connection-examples"></a>연결 예  
  사용자 이름 및 암호를 사용하여 로컬 컴퓨터에서 기본 데이터베이스에 연결합니다.  
@@ -68,7 +68,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `jdbc:sqlserver://localhost:1433;databaseName=AdventureWorks;integratedSecurity=true;`  
   
- 사용자 지정 응용 프로그램 이름을 지정하여 연결하는 경우:  
+ 사용자 지정 애플리케이션 이름을 지정하여 연결하는 경우:  
   
  `jdbc:sqlserver://localhost;databaseName=AdventureWorks;integratedSecurity=true;applicationName=MyApp;`  
   
@@ -103,7 +103,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
 > [!NOTE]  
 >  32비트 JVM(Java Virtual Machine)을 실행할 경우 운영 체제가 x64 버전이라도 x86 폴더에 있는 sqljdbc_auth.dll 파일을 사용하십시오. x64 프로세서에서 64비트 JVM을 실행할 경우 x64 폴더의 sqljdbc_auth.dll 파일을 사용하십시오.  
   
- 또는 java.library.path 시스템 속성을 설정하여 sqljdbc_auth.dll의 디렉터리를 지정할 수도 있습니다. 예를 들어 JDBC 드라이버가 기본 디렉터리에 설치된 경우 Java 응용 프로그램이 시작될 때 다음과 같은 가상 컴퓨터(VM) 인수를 사용하여 DLL의 위치를 지정할 수 있습니다.  
+ 또는 java.library.path 시스템 속성을 설정하여 sqljdbc_auth.dll의 디렉터리를 지정할 수도 있습니다. 예를 들어 JDBC 드라이버가 기본 디렉터리에 설치된 경우 Java 애플리케이션이 시작될 때 다음과 같은 가상 컴퓨터(VM) 인수를 사용하여 DLL의 위치를 지정할 수 있습니다.  
   
  `-Djava.library.path=C:\Microsoft JDBC Driver 6.4 for SQL Server\sqljdbc_<version>\enu\auth\x86`  
   
@@ -122,7 +122,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  `Connection con = DriverManager.getConnection("jdbc:sqlserver://;integratedSecurity=true;", pro);`  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   
   

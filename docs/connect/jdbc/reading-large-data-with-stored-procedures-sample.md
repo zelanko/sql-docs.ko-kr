@@ -1,7 +1,7 @@
 ---
 title: 저장 프로시저로 대규모 데이터 읽기 샘플 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 58c76635-a117-4661-8781-d6cb231c5809
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cbf339845bd23f1beb4f5cd0f3b3a380689a3120
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7132ddcd254358cd2199145d260f09ed0465adb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956128"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027812"
 ---
-# <a name="reading-large-data-with-stored-procedures-sample"></a>저장 프로시저로 큰 데이터 읽기 샘플
+# <a name="reading-large-data-with-stored-procedures-sample"></a>저장 프로시저에서 대규모 데이터 읽기 샘플
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -46,6 +46,6 @@ ms.locfileid: "67956128"
 
 [!code[JDBC#UsingAdaptiveBuffering2](../../connect/jdbc/codesnippet/Java/reading-large-data-with-_1_1.java)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [대규모 데이터 작업](../../connect/jdbc/working-with-large-data.md)

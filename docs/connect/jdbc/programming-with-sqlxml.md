@@ -1,7 +1,7 @@
 ---
 title: SQLXML을 사용한 프로그래밍 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956170"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027768"
 ---
 # <a name="programming-with-sqlxml"></a>SQLXML을 사용한 프로그래밍
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "67956170"
  애플리케이션이 SQLXML 개체와 함께 소수 자릿수 또는 길이 매개 변수를 지정하여 setObject 메서드를 호출하면 해당 소수 자릿수 또는 길이 매개 변수는 무시됩니다.  
   
 ## <a name="guidelines-and-limitations-when-using-sqlxml-objects"></a>SQLXML 개체 사용과 관련된 지침 및 제한 사항  
- 응용 프로그램은 SQLXML 개체를 사용하여 데이터베이스에 대한 XML 데이터 읽기 및 쓰기 작업을 수행할 수 있습니다. 다음 목록에서는 SQLXML 개체 사용과 관련된 구체적인 제한 사항 및 지침을 보여 줍니다.  
+ 애플리케이션은 SQLXML 개체를 사용하여 데이터베이스에 대한 XML 데이터 읽기 및 쓰기 작업을 수행할 수 있습니다. 다음 목록에서는 SQLXML 개체 사용과 관련된 구체적인 제한 사항 및 지침을 보여 줍니다.  
   
 -   SQLXML 개체는 해당 개체가 생성된 트랜잭션 기간 동안에만 유효합니다.  
   
@@ -72,19 +72,19 @@ ms.locfileid: "67956170"
   
 -   연결 개체에 의해 생성된 SQLXML 개체는 데이터를 쓰는 데만 사용할 수 있습니다.  
   
--   응용 프로그램은 읽기 가능한 SQLXML 개체에서 하나의 getter 메서드만 호출하여 데이터를 읽을 수 있습니다. getter 메서드가 호출되면 동일한 SQLXML 개체에 대한 다른 모든 getter 또는 setter 메서드는 실패합니다.  
+-   애플리케이션은 읽기 가능한 SQLXML 개체에서 하나의 getter 메서드만 호출하여 데이터를 읽을 수 있습니다. getter 메서드가 호출되면 동일한 SQLXML 개체에 대한 다른 모든 getter 또는 setter 메서드는 실패합니다.  
   
 -   애플리케이션은 SQLXML 개체를 읽거나 쓴 후 해당 개체에서 free 메서드만 호출할 수 있습니다. 그러나 기본 열 또는 매개 변수가 활성 상태인 동안에는 반환된 스트림 또는 원본을 처리할 수 있습니다. 기본 열 또는 매개 변수가 비활성 상태가 되면 해당 SQLXML 개체와 연결된 스트림 또는 원본이 닫힙니다. 기본 열 또는 매개 변수가 더 이상 유효하지 않은 경우 해당 기본 데이터를 Stream, SAX(Simple API for XML) 및 StAX(Streaming API for XML) getter에 사용할 수 없습니다.  
   
--   응용 프로그램은 쓰기 가능한 SQLXML 개체에 대해 하나의 setter 메서드만 호출할 수 있습니다. setter 메서드가 호출되면 동일한 SQLXML 개체에 대한 다른 모든 setter 또는 getter 메서드는 실패합니다.  
+-   애플리케이션은 쓰기 가능한 SQLXML 개체에 대해 하나의 setter 메서드만 호출할 수 있습니다. setter 메서드가 호출되면 동일한 SQLXML 개체에 대한 다른 모든 setter 또는 getter 메서드는 실패합니다.  
   
--   SQLXML 개체에 데이터를 설정하려면 응용 프로그램은 반환된 개체에서 적절한 setter 메서드 및 함수를 사용해야 합니다.  
+-   SQLXML 개체에 데이터를 설정하려면 애플리케이션은 반환된 개체에서 적절한 setter 메서드 및 함수를 사용해야 합니다.  
   
 -   [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스 및 [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) 클래스의 getSQLXML 메서드는 기본 열이 **null**인 경우 **null** 데이터를 반환합니다.  
   
 -   setter 개체는 해당 개체가 생성된 연결이 유지되는 동안 유효합니다.  
   
--   애플리케이션은 SQLXML 인터페이스가 제공하는 setter 메서드를 사용하여 **null** 값을 설정할 수 없습니다. 응용 프로그램은 SQLXML 인터페이스가 제공하는 setter 메서드를 사용하여 빈 문자열("")을 설정할 수 있습니다. **null** 값을 설정하려면 응용 프로그램은 다음 중 하나를 호출해야 합니다.  
+-   애플리케이션은 SQLXML 인터페이스가 제공하는 setter 메서드를 사용하여 **null** 값을 설정할 수 없습니다. 애플리케이션은 SQLXML 인터페이스가 제공하는 setter 메서드를 사용하여 빈 문자열(&quot;&quot;)을 설정할 수 있습니다. **null** 값을 설정하려면 애플리케이션은 다음 중 하나를 호출해야 합니다.  
   
     -   [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스 및 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 클래스의 setNull 메서드  
   
@@ -94,12 +94,12 @@ ms.locfileid: "67956170"
   
 -   XML 문서 작업을 수행할 때는 성능 문제 때문에 DOM(문서 개체 모델) 파서보다는 SAX(Simple API for XML) 및 StAX(Streaming API for XML) 파서를 사용하는 것이 좋습니다.  
   
- XML 파서는 빈 값을 처리할 수 없습니다. 그러나 SQL Server에서는 응용 프로그램이 XML 데이터 형식의 데이터베이스 열에서 빈 값을 검색하거나 저장할 수 있도록 허용됩니다. 즉 XML 데이터를 구문 분석할 때 기본 값이 비어 있으면 파서에서 예외가 발생합니다. DOM 출력의 경우에는 JDBC 드라이버가 이 예외를 catch한 다음 오류를 발생시킵니다. SAX 및 Stax 출력의 경우에는 파서에서 직접 오류가 발생합니다.  
+ XML 파서는 빈 값을 처리할 수 없습니다. 그러나 SQL Server에서는 애플리케이션이 XML 데이터 형식의 데이터베이스 열에서 빈 값을 검색하거나 저장할 수 있도록 허용됩니다. 즉 XML 데이터를 구문 분석할 때 기본 값이 비어 있으면 파서에서 예외가 발생합니다. DOM 출력의 경우에는 JDBC 드라이버가 이 예외를 catch한 다음 오류를 발생시킵니다. SAX 및 Stax 출력의 경우에는 파서에서 직접 오류가 발생합니다.  
   
-## <a name="adaptive-buffering-and-sqlxml-support"></a>선택 버퍼링 및 SQLXML 지원  
+## <a name="adaptive-buffering-and-sqlxml-support"></a>적응 버퍼링 및 SQLXML 지원  
  SQLXML 개체가 반환하는 이진 및 문자 스트림은 선택 또는 전체 버퍼링 모드를 따르지만 XML 파서가 스트림이 아닌 경우에는 선택 또는 전체 설정을 따르지 않습니다. 적응 버퍼링 사용에 대한 자세한 내용은 [적응 버퍼링 사용](../../connect/jdbc/using-adaptive-buffering.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [XML 데이터 지원](../../connect/jdbc/supporting-xml-data.md)  
   
   

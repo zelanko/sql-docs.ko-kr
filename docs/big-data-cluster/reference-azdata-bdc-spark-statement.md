@@ -5,16 +5,16 @@ description: azdata bdc spark statement 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6f29c473bdd4b665389e97bc2e0dbff572dc7288
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 57044b75219f4c2827c322c100a5d25d5f0b274a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969393"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653192"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
@@ -138,4 +138,4 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 
 ## <a name="next-steps"></a>다음 단계
 
-다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. **azdata** 도구를 설치하는 방법에 대한 자세한 내용은 [azdata를 설치하여 SQL Server 2019 빅 데이터 클러스터 관리](deploy-install-azdata.md)를 참조하세요.
+다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. **Azdata** 도구를 설치 하는 방법에 대 한 자세한 내용은 [install azdata to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md)항목을 참조 하세요.

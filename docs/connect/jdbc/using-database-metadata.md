@@ -1,7 +1,7 @@
 ---
 title: 데이터베이스 메타 데이터 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b048371-e912-4ed1-afd7-436978f48888
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fbe290c558dd8c64605bad0a977657904582c696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fce2bf9d72136b303ee3bc974f3aede313233a82
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916266"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026426"
 ---
 # <a name="using-database-metadata"></a>데이터베이스 메타데이터 사용
 
@@ -29,6 +29,6 @@ SQLServerDatabaseMetaData 개체를 만들려면 [SQLServerConnection](../../con
 
 [!code[JDBC#UsingDBMetaData1](../../connect/jdbc/codesnippet/Java/using-database-metadata_1.java)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버로 메타데이터 처리](../../connect/jdbc/handling-metadata-with-the-jdbc-driver.md)

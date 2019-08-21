@@ -1,7 +1,7 @@
 ---
 title: 테이블 반환 매개 변수 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cd5f00d551c189f583af4232fe31716b51594df
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98863afb5a47eddfd311563bd03a1c7c7120b161
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003930"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025713"
 ---
 # <a name="using-table-valued-parameters"></a>테이블 반환 매개 변수 사용
 
@@ -312,6 +312,6 @@ pStmt.execute();
 | public final void setStructured 된 (String paratemeterName, String tvpName, ResultSet tvpResultSet)             | 다른 테이블에서 검색 된 결과 집합을 사용 하 여 저장 프로시저에 전달 된 테이블 반환 매개 변수를 채웁니다. paratemeterName은 매개 변수의 이름이 고, tvpName은 TVP 형식의 이름이 고, tvpResultSet은 원본 결과 집합 개체입니다.                                                                              |
 | public final void setStructured 된 (String paratemeterName, String tvpName, ISQLServerDataRecord tvpDataRecord) | ISQLServerDataRecord 개체를 사용 하 여 저장 프로시저에 전달 된 테이블 반환 매개 변수를 채웁니다. ISQLServerDataRecord은 스트리밍 데이터에 사용 되며 사용자는이를 사용 하는 방법을 결정 합니다. paratemeterName은 매개 변수의 이름이 고, tvpName은 TVP 형식의 이름이 고, tvpDataRecord는 ISQLServerDataRecord 개체입니다. |
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

@@ -1,7 +1,7 @@
 ---
 title: 격리 수준 이해 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 6cfbc099d88a96574439fa8c178b12629d92782c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4886b1bd0f4ff62df06334af469a76b64600839
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916647"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027387"
 ---
 # <a name="understanding-isolation-levels"></a>격리 수준 이해
 
@@ -39,7 +39,7 @@ ms.locfileid: "67916647"
 
 트랜잭션 격리 수준을 선택해도 데이터 수정 내용을 보호하기 위해 획득된 잠금에는 영향을 주지 않습니다. 설정된 격리 수준에 관계없이 트랜잭션은 항상 수정하는 데이터에 대해 배타적 잠금을 얻고 해당 트랜잭션이 완료될 때까지 이 잠금을 보유합니다. 읽기 작업의 경우 트랜잭션 격리 수준은 대개 다른 트랜잭션에서 수정한 내용의 영향을 받지 않도록 보호 수준을 정의합니다.  
   
-격리 수준이 낮을수록 데이터에 동시에 액세스할 수 있는 사용자가 많아지지만 동시성 부작용(예: 커밋되지 않은 읽기 또는 업데이트 손실) 횟수도 늘어납니다. 반대로 격리 수준이 높을수록 동시성 부작용 종류가 줄어들지만 시스템 리소스가 더 많이 필요하게 되고 한 트랜잭션이 다른 트랜잭션을 차단하게 될 확률도 높아집니다. 적절한 격리 수준을 선택하려면 응용 프로그램의 데이터 무결성 요구 사항과 각 격리 수준에 의해 야기되는 오버헤드를 신중하게 평가해야 합니다. 최상위 격리 수준인 직렬화 가능의 경우 트랜잭션이 읽기 작업을 반복할 때마다 정확히 동일한 데이터를 검색하지만 다중 사용자 시스템에서 다른 사용자에게 영향을 줄 수 있는 수준의 잠금을 수행함으로써 이를 달성합니다. 최하위 격리 수준인 커밋되지 않은 읽기의 경우 다른 트랜잭션에서 수정했지만 커밋되지 않은 데이터를 검색할 수 있습니다. 커밋되지 않은 읽기에서는 모든 동시성 부작용이 발생할 수 있지만 읽기 잠금이나 버전 관리가 수행되지 않으므로 오버헤드가 최소화됩니다.  
+격리 수준이 낮을수록 데이터에 동시에 액세스할 수 있는 사용자가 많아지지만 동시성 부작용(예: 커밋되지 않은 읽기 또는 업데이트 손실) 횟수도 늘어납니다. 반대로 격리 수준이 높을수록 동시성 부작용 종류가 줄어들지만 시스템 리소스가 더 많이 필요하게 되고 한 트랜잭션이 다른 트랜잭션을 차단하게 될 확률도 높아집니다. 적절한 격리 수준을 선택하려면 애플리케이션의 데이터 무결성 요구 사항과 각 격리 수준에 의해 야기되는 오버헤드를 신중하게 평가해야 합니다. 최상위 격리 수준인 직렬화 가능의 경우 트랜잭션이 읽기 작업을 반복할 때마다 정확히 동일한 데이터를 검색하지만 다중 사용자 시스템에서 다른 사용자에게 영향을 줄 수 있는 수준의 잠금을 수행함으로써 이를 달성합니다. 최하위 격리 수준인 커밋되지 않은 읽기의 경우 다른 트랜잭션에서 수정했지만 커밋되지 않은 데이터를 검색할 수 있습니다. 커밋되지 않은 읽기에서는 모든 동시성 부작용이 발생할 수 있지만 읽기 잠금이나 버전 관리가 수행되지 않으므로 오버헤드가 최소화됩니다.  
 
 ## <a name="remarks"></a>Remarks
 
@@ -75,6 +75,6 @@ con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 격리 수준에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "[!INCLUDE[ssDE](../../includes/ssde_md.md)]의 격리 수준"을 참조하세요.  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버로 트랜잭션 수행](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

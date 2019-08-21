@@ -1,7 +1,7 @@
 ---
 title: SQL에서 문 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe28f48a-e1bc-48ff-a5e7-c24cd6e5ecc7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 082671d3acf2873bb822e6b836599c00f42d6323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 553c0e742b34406b23a68f1403c372dcc7080088
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916160"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025836"
 ---
 # <a name="using-statements-with-sql"></a>SQL이 있는 문 사용
 
@@ -39,6 +39,6 @@ SQL 문에 입력 매개 변수가 없는 경우 [SQLServerStatement](../../conn
 | [SQL 문을 사용하여 데이터베이스 개체 수정](../../connect/jdbc/using-an-sql-statement-to-modify-database-objects.md) | SQL 문을 사용하여 데이터베이스의 개체를 수정하는 방법을 설명합니다.   |
 | [SQL 문을 사용하여 데이터 수정](../../connect/jdbc/using-an-sql-statement-to-modify-data.md)                         | SQL 문을 사용하여 데이터베이스의 데이터를 수정하는 방법을 설명합니다. |
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버에서 문 사용](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

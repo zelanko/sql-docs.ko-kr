@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버에 대한 FAQ(질문과 대답) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 17032e4d1bd6487edc0b0b41b7f808c27ab995ee
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 2860034ae67fc7cc376e84251dbeebc5a123fade
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892370"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028068"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC 드라이버에 대한 FAQ(질문과 대답)
 
@@ -29,7 +29,7 @@ ms.locfileid: "68892370"
 JDBC Driver는 오픈 소스이며 소스 코드는 [GitHub](https://github.com/microsoft/mssql-jdbc)에서 찾을 수 있습니다. 문제를 신고하고 코드베이스에 기여하여 드라이버 향상에 도움을 줄 수 있습니다.
 
 **드라이버가 어떤 버전의 SQL Server 및 Java를 지원하나요?**  
-자세한 내용은 [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)(Microsoft JDBC Driver for SQL Server 지원 매트릭스) 페이지를 참조하세요.
+자세한 내용은 [Microsoft JDBC Driver for SQL Server 지원 매트릭스](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md) 페이지를 참조하세요.
 
 **Microsoft 다운로드 센터에서 사용할 수 있는 JDBC Driver 패키지와 GitHub에서 사용할 수 있는 JDBC Driver의 차이점은 무엇인가요?**  
 Microsoft JDBC Driver용 GitHub 리포지토리에서 사용할 수 있는 JDBC Driver 파일은 JDBC Driver의 핵심이며 리포지토리에 나열된 오픈 소스 라이선스가 적용됩니다. Microsoft 다운로드 센터의 드라이버 패키지에는 Windows 통합 인증에 필요하고 JDBC 드라이버에서 XA 트랜잭션을 사용하도록 설정하기 위해 필요한 추가 라이브러리가 포함됩니다. 이러한 추가 라이브러리에는 다운로드 가능한 패키지에 포함되는 라이선스가 적용됩니다.

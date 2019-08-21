@@ -1,7 +1,7 @@
 ---
 title: 연결 작업 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fa216c6fb20ab5881865e2baf283d233b4abbfca
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 267605b6a89f323570cfacfc66517b028ef716a2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916081"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025467"
 ---
 # <a name="working-with-a-connection"></a>연결 사용
 
@@ -103,9 +103,9 @@ String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integrated
 String url = "jdbc:sqlserver://MyServer;loginTimeout=90;integratedSecurity=true;"
 ```
 
-## <a name="create-a-connection-with-application-level-identity"></a>응용 프로그램 수준 ID가 있는 연결
+## <a name="create-a-connection-with-application-level-identity"></a>애플리케이션 수준 ID가 있는 연결
 
-로깅 및 프로파일링을 사용해야 하는 경우 다음과 같이 연결을 특정 응용 프로그램에서 시작된 것으로 식별해야 합니다.
+로깅 및 프로파일링을 사용해야 하는 경우 다음과 같이 연결을 특정 애플리케이션에서 시작된 것으로 식별해야 합니다.
 
 ```java
 String url = "jdbc:sqlserver://MyServer;applicationName=MYAPP.EXE;integratedSecurity=true;"
@@ -124,6 +124,6 @@ con.close();
 > [!NOTE]  
 > 또한 close 메서드를 호출하면 보류 중인 모든 트랜잭션이 롤백됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

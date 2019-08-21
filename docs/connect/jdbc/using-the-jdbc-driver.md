@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver 사용 | Microsoft Docs
+title: JDBC 드라이버 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b00cd72309fde42ab794d7a365be2a736e3671e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893662"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025768"
 ---
 # <a name="using-the-jdbc-driver"></a>JDBC 드라이버 사용
 
@@ -41,7 +41,7 @@ SQL Server용 Microsoft JDBC Driver 6.0 및 4.2에서는 **sqljdbc41.jar** 및 *
   
 SQL Server용 Microsoft JDBC Driver 4.1에서는 **sqljdbc41.jar** 클래스 라이브러리 파일을 제공합니다.
 
-사용 가능한 기능은 사용자의 선택에 따라서도 결정됩니다. 선택할 JAR 파일에 대한 자세한 내용은 [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)(JDBC Driver 시스템 요구 사항)를 참조하세요.  
+사용 가능한 기능은 사용자의 선택에 따라서도 결정됩니다. 선택할 JAR 파일에 대한 자세한 내용은 [JDBC 드라이버 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)을 참조하세요.  
   
 ## <a name="setting-the-classpath"></a>클래스 경로 설정
 
@@ -192,11 +192,11 @@ CLASSPATH 문에는 sqljdbc.jar, sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.ja
 > [!NOTE]  
 > Windows 시스템의 경우 디렉터리 이름이 8.3 파일 이름 규칙보다 길거나 폴더 이름에 공백이 있으면 클래스 경로에 문제가 발생할 수 있습니다. 이러한 유형의 문제가 있는 것으로 의심되면 sqljdbc.jar 파일, sqljdbc4.jar 파일 또는 sqljdbc41.jar 파일을 `C:\Temp` 같은 단순한 이름의 디렉터리로 일시적으로 이동하고 클래스 경로를 변경한 다음, 문제가 해결되는지 확인합니다.  
   
-### <a name="applications-that-are-run-directly-at-the-command-prompt"></a>명령 프롬프트에서 바로 실행되는 응용 프로그램
+### <a name="applications-that-are-run-directly-at-the-command-prompt"></a>명령 프롬프트에서 바로 실행되는 애플리케이션
 
 클래스 경로는 운영 체제에 구성되어 있습니다. sqljdbc.jar, sqljdbc4.jar 또는 sqljdbc41.jar을 시스템의 클래스 경로에 추가합니다. 애플리케이션을 실행하는 Java 명령줄에서 `java -classpath` 옵션을 사용하여 클래스 경로를 지정할 수도 있습니다.  
   
-### <a name="applications-that-run-in-an-ide"></a>IDE에서 실행되는 응용 프로그램  
+### <a name="applications-that-run-in-an-ide"></a>IDE에서 실행되는 애플리케이션  
 
 IDE 공급업체마다 자체 IDE에 클래스 경로를 설정하기 위한 서로 다른 메서드를 제공합니다. 운영 체제에서 클래스 경로를 설정하는 것만으로는 올바르게 작동하지 않습니다. sqljdbc.jar, sqljdbc4.jar 또는 sqljdbc41.jar을 IDE 클래스 경로에 추가해야 합니다.  
   
@@ -210,7 +210,7 @@ EJB(Enterprise Java Bean)는 EJB 컨테이너에서 실행됩니다. EJB 컨테�
   
 ## <a name="making-a-simple-connection-to-a-database"></a>데이터베이스에 대해 단순한 연결 만들기
 
-응용 프로그램은 sqljdbc.jar 클래스 라이브러리를 사용하여 먼저 다음과 같이 드라이버를 등록해야 합니다.  
+애플리케이션은 sqljdbc.jar 클래스 라이브러리를 사용하여 먼저 다음과 같이 드라이버를 등록해야 합니다.  
   
 `Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");`  
 
@@ -227,10 +227,10 @@ JDBC API 4.0부터는 JDBC Driver를 자동으로 로드할 수 있도록 `Drive
 DriverManager 클래스의 getConnection 메서드가 호출되면 등록된 JDBC 드라이버 집합에서 적합한 드라이버가 검색됩니다. sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 파일에는 "META-INF/services/java.sql.Driver" 파일이 포함되어 있으며, 이 파일에는 **com.microsoft.sqlserver.jdbc.SQLServerDriver**가 등록된 드라이버로 포함되어 있습니다. 현재 Class.forName 메서드를 사용하여 드라이버를 로드하는 기존 애플리케이션은 수정하지 않아도 계속 작동합니다.  
   
 > [!NOTE]  
-> sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 클래스 라이브러리를 이전 버전의 JRE(Java Runtime Environment)와 함께 사용할 수는 없습니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 지원되는 JRE 버전 목록은 [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)(JDBC Driver 시스템 요구 사항)를 참조하세요.  
+> sqljdbc4.jar, sqljdbc41.jar 또는 sqljdbc42.jar 클래스 라이브러리를 이전 버전의 JRE(Java Runtime Environment)와 함께 사용할 수는 없습니다. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]에서 지원되는 JRE 버전 목록은 [JDBC 드라이버 시스템 요구 사항](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md)을 참조하세요.  
 
-데이터 원본에 연결하는 방법 및 연결 URL을 사용하는 방법에 대한 자세한 내용은 [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md)(연결 URL 작성) 및 [Setting the Connection Properties](../../connect/jdbc/setting-the-connection-properties.md)(연결 속성 설정)를 참조하세요.  
+데이터 원본에 연결하는 방법 및 연결 URL을 사용하는 방법에 대한 자세한 내용은 [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md) 및 [연결 속성 설정](../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 
 [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

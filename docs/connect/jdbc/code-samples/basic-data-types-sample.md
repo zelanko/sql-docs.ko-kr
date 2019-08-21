@@ -1,7 +1,7 @@
 ---
 title: 기본 데이터 형식 샘플 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 59ac80cf-fc66-4493-933d-38e479c5f54d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 68e1cbb3a17cd85b95c01446adcd02b493f65c53
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7936f33fd7a831d19e7978681cbb169f3b9aba7b
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957298"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028388"
 ---
 # <a name="basic-data-types-sample"></a>기본 데이터 형식 샘플
 
@@ -154,7 +154,7 @@ public class BasicDataTypes {
 }
 ```
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
 
 [데이터 형식 작업 &#40;JDBC&#41;](../../../connect/jdbc/code-samples/working-with-data-types-jdbc.md)  
   

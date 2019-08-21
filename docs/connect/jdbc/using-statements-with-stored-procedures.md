@@ -1,7 +1,7 @@
 ---
 title: 저장 프로시저에 문 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 774e79b6baa3db1c6356768de4b04226ddbc7688
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fe07352ff1bcda9dd3ff3e77a6b879e592235a6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003934"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025859"
 ---
 # <a name="using-statements-with-stored-procedures"></a>저장 프로시저가 있는 문 사용
 
@@ -56,6 +56,6 @@ JDBC 드라이버를 사용하여 매개 변수가 포함된 저장 프로시저
 |[반환 상태가 있는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|JDBC 드라이버를 사용하여 반환 상태 값이 있는 저장 프로시저를 실행하는 방법을 설명합니다.|  
 |[업데이트 횟수가 있는 저장 프로시저 사용](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|JDBC 드라이버를 사용하여 업데이트 횟수가 있는 저장 프로시저를 실행하는 방법을 설명합니다.|  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버에서 문 사용](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

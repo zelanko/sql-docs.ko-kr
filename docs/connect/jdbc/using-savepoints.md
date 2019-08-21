@@ -1,7 +1,7 @@
 ---
 title: 저장점 사용 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3b48eb13-32ef-4fb3-8e95-dbc9468c9a44
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9212e2de7a093b92c51489bb17623a2120e5ce35
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9d860e368fe66ce926687fd343fe9f23704cfc7d
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916227"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026135"
 ---
 # <a name="using-savepoints"></a>저장점 사용
 
@@ -31,6 +31,6 @@ ms.locfileid: "67916227"
 
 [!code[JDBC#UsingSavepoints1](../../connect/jdbc/codesnippet/Java/using-savepoints_1.java)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버로 트랜잭션 수행](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)
