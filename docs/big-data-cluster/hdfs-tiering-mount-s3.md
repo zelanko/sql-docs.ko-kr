@@ -1,20 +1,20 @@
 ---
 title: HDFS 계층화를 위한 S3 탑재
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)의 HDFS에 외부 S3 파일 시스템을 탑재하도록 HDFS 계층화를 구성하는 방법을 설명합니다.
+description: 이 문서에서는의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Hdfs에 외부 S3 파일 시스템을 탑재 하도록 hdfs 계층화를 구성 하는 방법을 설명 합니다.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/31/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa95fc656a0adb7d88c3728d15cfcb3720266d07
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 653f9a48c03df18fc0591f7bd8060d951567c779
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69611413"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652303"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 HDFS 계층화를 위한 S3를 탑재하는 방법
 
@@ -61,10 +61,10 @@ ms.locfileid: "69611413"
    
 1. 위의 지침에 따라 환경 변수 MOUNT_CREDENTIALS를 설정합니다.
 
-1. **Azdata bdc 저장소 풀 탑재 만들기**를 사용 하 여 S3에 원격 HDFS 저장소를 탑재 합니다. 다음 명령을 실행하기 전에 자리 표시자 값을 바꿉니다.
+1. **Azdata bdc HDFS mount create**를 사용 하 여 Azure에 원격 HDFS 저장소를 탑재 합니다. 다음 명령을 실행하기 전에 자리 표시자 값을 바꿉니다.
 
    ```bash
-   azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
+   azdata bdc hdfs mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -96,7 +96,7 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> 탑재 삭제
 
-탑재를 삭제하려면 **azdata bdc storage-pool mount delete** 명령을 사용하고 HDFS의 탑재 경로를 지정합니다.
+탑재를 삭제 하려면 **azdata bdc hdfs mount delete** 명령을 사용 하 고 hdfs에서 탑재 경로를 지정 합니다.
 
 ```bash
 azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
@@ -104,4 +104,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 2019 빅 데이터 클러스터에 대한 자세한 내용은 [SQL Server 2019 빅 데이터 클러스터란?](big-data-cluster-overview.md)을 참조하세요.
+에 대 한 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]자세한 내용은 [무엇 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]인가요?](big-data-cluster-overview.md)를 참조 하세요.

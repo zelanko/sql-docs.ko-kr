@@ -1,22 +1,22 @@
 ---
 title: 보안 개념
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)의 보안 개념을 설명합니다. 여기에는 클러스터 엔드포인트 및 클러스터 인증 설명이 포함됩니다.
+description: 이 문서에서는의 보안 개념 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]을 설명 합니다. 여기에는 클러스터 엔드포인트 및 클러스터 인증 설명이 포함됩니다.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4e4441f0cc4f19d4784019408bfc5309a5734285
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958661"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652257"
 ---
-# <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터의 보안 개념
+# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>의 보안 개념[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -82,7 +82,7 @@ HDFS/Spark 엔드포인트에 액세스하는 데 사용할 암호:
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터에 대한 자세한 내용은 다음 리소스를 참조하세요.
+에 대해 자세히 알아보려면 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]다음 리소스를 참조 하세요.
 
-- [SQL Server 2019 빅 데이터 클러스터란?](big-data-cluster-overview.md)
-- [워크샵: Microsoft SQL Server 빅 데이터 클러스터 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]무엇 인가요?](big-data-cluster-overview.md)
+- [워크샵: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

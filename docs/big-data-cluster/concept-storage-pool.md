@@ -5,22 +5,22 @@ description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터의 �
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 58e6f16a088d6dc6c1fc6bd32297e7bd698acbbf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ead6c2ceeecbdfb3466bd4475978b139a0d2ddde
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958655"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652243"
 ---
-# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>스토리지 풀(SQL Server 빅 데이터 클러스터)이란?
+# <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>저장소 풀 ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]) 이란?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)에서 ‘SQL Server 스토리지 풀’의 역할을 설명합니다.  다음 섹션에서는 SQL 스토리지 풀의 아키텍처 및 기능을 설명합니다.
+이 문서에서는에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] *SQL Server 저장소 풀* 의 역할을 설명 합니다. 다음 섹션에서는 SQL 스토리지 풀의 아키텍처 및 기능을 설명합니다.
 
 ## <a name="storage-pool-architecture"></a>스토리지 풀 아키텍처
 
@@ -38,7 +38,7 @@ ms.locfileid: "67958655"
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터에 대한 자세한 내용은 다음 리소스를 참조하세요.
+에 대해 자세히 알아보려면 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]다음 리소스를 참조 하세요.
 
-- [SQL Server 2019 빅 데이터 클러스터란?](big-data-cluster-overview.md)
-- [워크샵: Microsoft SQL Server 빅 데이터 클러스터 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]무엇 인가요?](big-data-cluster-overview.md)
+- [워크샵: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

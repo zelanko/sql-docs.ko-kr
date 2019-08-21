@@ -1,22 +1,22 @@
 ---
 title: 새 릴리스로 업그레이드
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 빅 데이터 클러스터(미리 보기)를 새 릴리스로 업그레이드하는 방법을 알아봅니다.
+description: 새 릴리스로 업그레이드 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (미리 보기) 하는 방법에 대해 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 29bdd3996112154b222ffb7d43390050c9af2d02
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: 867729b7d638960a2dbf2cb5f7544fecf698c94d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731085"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652331"
 ---
-# <a name="how-to-upgrade-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터를 업그레이드하는 방법
+# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>업그레이드 하는 방법[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -72,8 +72,8 @@ azdata --version
 
 ## <a name="install-the-new-release"></a>새 릴리스 설치
 
-이전 빅 데이터 클러스터를 제거하고 최신 **azdata**를 설치한 후에는 현재 배포 지침을 사용하여 새로운 빅 데이터 클러스터를 배포합니다. 자세한 내용은 [Kubernetes에 SQL Server 빅 데이터 클러스터를 배포하는 방법](deployment-guidance.md)을 참조하세요. 그런 다음, 필요한 데이터베이스 또는 파일을 모두 복원합니다.
+이전 빅 데이터 클러스터를 제거하고 최신 **azdata**를 설치한 후에는 현재 배포 지침을 사용하여 새로운 빅 데이터 클러스터를 배포합니다. 자세한 내용은 [Kubernetes에서 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법](deployment-guidance.md)을 참조 하세요. 그런 다음, 필요한 데이터베이스 또는 파일을 모두 복원합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터에 대한 자세한 내용은 [SQL Server 빅 데이터 클러스터란?](big-data-cluster-overview.md)을 참조하세요.
+빅 데이터 클러스터에 대 한 자세한 내용은 [항목 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)을 참조 하세요.

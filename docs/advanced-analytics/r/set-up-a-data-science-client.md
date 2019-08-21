@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e87770447c371f46ad384daffa3c7bc40b836904
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 7c81a69181d1bc723e622bac9ffeb5ff67fd0280
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715601"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633632"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server에서 R 개발용 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -199,7 +199,7 @@ IDE에서 로컬 R 라이브러리: 기본 R, RevoScaleR 등을 가리킵니다.
 
 [Rstudio](https://www.rstudio.com/)를 사용 하는 경우 원격 SQL Server에 해당 하는 R 라이브러리 및 실행 파일을 사용 하도록 환경을 구성할 수 있습니다.
 
-1. SQL Server에 설치 된 R 패키지 버전을 확인 합니다. 자세한 내용은 [R 패키지 정보 가져오기](../package-management/installed-package-information.md)를 참조 하세요.
+1. SQL Server에 설치 된 R 패키지 버전을 확인 합니다. 자세한 내용은 [R 패키지 정보 가져오기](../package-management/r-package-information.md)를 참조 하세요.
 
 1. Microsoft R Client 또는 독립 실행형 서버 옵션 중 하나를 설치 하 여 SQL Server 인스턴스에서 사용 하는 기본 R 배포를 비롯 하 여 RevoScaleR 및 기타 R 패키지를 추가 합니다. 서버와 동일한 패키지 버전을 제공 하는 동일한 수준 또는 더 낮은 버전 (패키지가 이전 버전과 호환 됨)을 선택 합니다. 버전 정보는이 문서의 버전 맵을 참조 하세요. [R 및 Python 구성 요소를 업그레이드](../install/upgrade-r-and-python.md)합니다.
 
@@ -245,4 +245,4 @@ R에 대해 선호 하는 IDE가 아직 없는 경우 **Visual Studio용 R 도�
 계산 컨텍스트를 로컬에서 원격 SQL Server 인스턴스로 전환할 수 있는 연습이 포함 된 두 가지 자습서가 있습니다.
 
 + [자습서: SQL Server 데이터에 RevoScaleR R 함수 사용](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [데이터 과학 종단 간 연습](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [데이터 과학 엔드투엔드 연습](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

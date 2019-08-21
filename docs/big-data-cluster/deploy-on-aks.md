@@ -1,26 +1,26 @@
 ---
 title: Azure Container Service 구성
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 빅 데이터 클러스터(미리 보기) 배포에 대해 AKS(Azure Kubernetes Service)를 구성하는 방법을 알아봅니다.
+description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 배포용 AKS (Azure Kubernetes Service)를 구성 하는 방법에 대해 알아봅니다.'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/10/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ba5b4b06d31f391733603ce146a7d05e05aebaf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470810"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652380"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대해 Azure Kubernetes Service 구성
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기) 배포에 대해 AKS(Azure Kubernetes Service)를 구성하는 방법을 설명합니다.
+이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 배포용 AKS (Azure Kubernetes Service)를 구성 하는 방법을 설명 합니다.
 
 AKS를 사용하면 Kubernetes 클러스터로 미리 구성된 가상 머신 클러스터를 간편하게 만들고 구성 및 관리하여 컨테이너화된 애플리케이션을 실행할 수 있습니다. 따라서 기존 기술을 사용하거나 계속 확장되는 대규모 커뮤니티 전문 지식을 활용하여 Microsoft Azure에 컨테이너 기반 애플리케이션을 배포하고 관리할 수 있습니다.
 
@@ -165,4 +165,4 @@ Azure 리소스 그룹은 Azure 리소스가 배포되고 관리되는 논리 �
 
 이 문서의 단계에서는 AKS에서 Kubernetes 클러스터를 구성했습니다. 다음 단계는 AKS Kubernetes 클러스터에 SQL Server 2019 빅 데이터 클러스터를 배포하는 것입니다. 빅 데이터 클러스터를 배포하는 방법에 대한 자세한 내용은 다음 문서를 참조하세요.
 
-[Kubernetes에 SQL Server 빅 데이터 클러스터를 배포하는 방법](deployment-guidance.md)
+[Kubernetes에 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법](deployment-guidance.md)

@@ -1,26 +1,26 @@
 ---
 title: 모니터 및 문제 해결하기
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)를 모니터링하고 문제를 해결하는 데 유용한 명령을 제공합니다.
+description: 이 문서에서는의 모니터링 및 문제 해결 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]을 위한 유용한 명령을 제공 합니다.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ccdfe31f7873c44ea09e273d5d9afb2361f9b36b
-ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.openlocfilehash: 36203552e9070d80179fa88df0a7d1951b09664a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68841564"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653029"
 ---
-# <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터 모니터링 및 문제 해결
+# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>모니터링 및 문제 해결[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)를 모니터링하고 문제를 해결하는 데 사용할 수 있는 몇 가지 유용한 Kubernetes 명령을 설명합니다. 빅 데이터 클러스터에 있는 Pod 또는 다른 Kubernetes 아티팩트에 대한 자세한 정보를 보는 방법을 보여 줍니다. 이 문서에서는 SQL Server 빅 데이터 클러스터 서비스 중 하나를 실행하는 컨테이너에(서) 파일 복사 등의 일반적인 작업에 대해서도 설명합니다.
+이 문서에서는를 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]모니터링 하 고 문제를 해결 하는 데 사용할 수 있는 몇 가지 유용한 Kubernetes 명령을 설명 합니다. 빅 데이터 클러스터에 있는 Pod 또는 다른 Kubernetes 아티팩트에 대한 자세한 정보를 보는 방법을 보여 줍니다. 이 문서에서는 SQL Server 빅 데이터 클러스터 서비스 중 하나를 실행하는 컨테이너에(서) 파일 복사 등의 일반적인 작업에 대해서도 설명합니다.
 
 > [!TIP]
 > Windows(cmd 또는 PS) 또는 Linux(bash) 클라이언트 머신에서 다음 **kubectl** 명령을 실행합니다. 명령이 제대로 실행되려면 클러스터 내의 이전 인증과 명령을 실행할 클러스터 컨텍스트가 필요합니다. 예를 들어 이전에 만든 AKS 클러스터의 경우 `az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>`을 실행하여 Kubernetes 클러스터 구성 파일을 다운로드하고 클러스터 컨텍스트를 설정할 수 있습니다.
@@ -224,4 +224,4 @@ kubectl proxy
 
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터에 대한 자세한 내용은 [SQL Server 빅 데이터 클러스터란?](big-data-cluster-overview.md)을 참조하세요.
+빅 데이터 클러스터에 대 한 자세한 내용은 [항목 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)을 참조 하세요.

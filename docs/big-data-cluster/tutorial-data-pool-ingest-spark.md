@@ -1,28 +1,28 @@
 ---
 title: Spark 작업을 사용하여 데이터 수집
 titleSuffix: SQL Server big data clusters
-description: 이 자습서에서는 Azure Data Studio에서 Spark 작업을 사용하여 SQL Server 2019 빅 데이터 클러스터(미리 보기)의 데이터 풀로 데이터를 수집하는 방법을 보여 줍니다.
+description: 이 자습서에서는 Azure Data Studio에서 Spark 작업을 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 사용 하 여의 데이터 풀에 데이터를 수집 하는 방법을 보여 줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d0ea6d4fb7a3aea9788c089ad68cb3bf523837f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957810"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653291"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>자습서: Spark 작업을 사용하여 SQL Server 데이터 풀로 데이터 수집
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 자습서에서는 Spark 작업을 사용하여 SQL Server 2019 빅 데이터 클러스터(미리 보기)의 [데이터 풀](concept-data-pool.md)로 데이터를 로드하는 방법을 보여 줍니다. 
+이 자습서에서는 Spark 작업을 사용 하 여의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] [데이터 풀](concept-data-pool.md) 에 데이터를 로드 하는 방법을 보여 줍니다. 
 
-이 자습서에서는 다음 작업 방법을 알아봅니다.
+이 자습서에서는 다음 작업을 수행하는 방법을 알아봅니다.
 
 > [!div class="checklist"]
 > * 데이터 풀에 외부 테이블을 만듭니다.

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a37f0eb62ec0483b8c73bd5cc4d6d29221e8082f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 6f40f04d677d5dcfa758a13321009da3e535c5d4
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715181"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634536"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 Python 개발을 위한 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ SSMS는 Python 코드를 포함 하는 저장 프로시저를 포함 하 여 SQL
 
 2. 관리자 권한으로 PowerShell 창을 엽니다 ( **관리자 권한으로 실행**을 마우스 오른쪽 단추로 클릭).
 
-3. 설치 관리자를 다운로드 한 폴더로 이동 하 여 스크립트를 실행 합니다. `-InstallFolder` 명령줄 인수를 추가 하 여 라이브러리의 폴더 위치를 지정 합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다. 
+3. 설치 관리자를 다운로드 한 폴더로 이동 하 여 스크립트를 실행 합니다. `-InstallFolder` 명령줄 인수를 추가 하 여 라이브러리의 폴더 위치를 지정 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다. 
 
    ```python
    cd {{download-directory}}
@@ -107,7 +107,7 @@ Anaconda에는 Jupyter 노트북이 포함 되어 있습니다. 다음 단계로
 
 3. 명령을 `import revoscalepy` 입력 하 고 실행 하 여 Microsoft 전용 라이브러리 중 하나를 로드 합니다.
 
-4. 을 입력 하 `print(revoscalepy.__version__)` 고을 실행 하 여 버전 정보를 반환 합니다. 9\.2.1 또는 9.3.0가 표시 되어야 합니다. [서버에서 revoscalepy](../package-management/installed-package-information.md)를 사용 하 여 이러한 버전 중 하나를 사용할 수 있습니다. 
+4. 을 입력 하 `print(revoscalepy.__version__)` 고을 실행 하 여 버전 정보를 반환 합니다. 9\.2.1 또는 9.3.0가 표시 되어야 합니다. [서버에서 revoscalepy](../package-management/r-package-information.md)를 사용 하 여 이러한 버전 중 하나를 사용할 수 있습니다.
 
 4. 더 복잡 한 일련의 문을 입력 합니다. 이 예에서는 로컬 데이터 집합에 대해 [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) 를 사용 하 여 요약 통계를 생성 합니다. 다른 함수는 샘플 데이터의 위치를 가져오고 로컬 .xdf 파일에 대 한 데이터 원본 개체를 만듭니다.
 

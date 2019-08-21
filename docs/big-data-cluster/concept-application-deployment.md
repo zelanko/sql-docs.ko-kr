@@ -1,20 +1,20 @@
 ---
 title: 애플리케이션 배포란?
-titleSuffix: SQL Server 2019 big data clusters
-description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)의 애플리케이션 배포를 설명합니다.
+titleSuffix: Big Data Clusters for SQL Server 2019
+description: 이 문서에서는 SQL Server 2019에 대 한 빅 데이터 클러스터의 응용 프로그램 배포에 대해 설명 합니다.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d8cc44862af21c54bdbd0e4adbb35db912c3f7c9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419412"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653005"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 빅 데이터 클러스터의 애플리케이션 배포란?
 
@@ -61,12 +61,12 @@ RESTful 웹 서비스를 사용하여 애플리케이션을 실행할 수도 있
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터에서 애플리케이션을 만들고 실행하는 방법에 대한 자세한 내용은 다음을 참조하세요.
+에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]응용 프로그램을 만들고 실행 하는 방법에 대 한 자세한 내용은 다음을 참조 하세요.
 
 - [azdata를 사용하여 애플리케이션 배포](big-data-cluster-create-apps.md)
 - [앱 배포 확장을 사용하여 애플리케이션 배포](app-deployment-extension.md)
 - [빅 데이터 클러스터에서 애플리케이션 사용](big-data-cluster-consume-apps.md)
 
-SQL Server 빅 데이터 클러스터에 대한 자세한 내용은 다음 개요를 참조하세요.
+에 대해 자세히 알아보려면 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]다음 개요를 참조 하세요.
 
-- [SQL Server 2019 빅 데이터 클러스터란?](big-data-cluster-overview.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]무엇 인가요?](big-data-cluster-overview.md)

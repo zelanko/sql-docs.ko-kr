@@ -1,26 +1,26 @@
 ---
 title: 데이터베이스 복원
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)의 마스터 인스턴스에 데이터베이스를 복원하는 방법을 보여 줍니다.
+description: 이 문서에서는의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]마스터 인스턴스에 데이터베이스를 복원 하는 방법을 보여 줍니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49cc2cbb4ede2326bf774b5f39968ad4b00ed991
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: bad1a62752dd75e181d30c28485e1c9b707aa888
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969482"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652235"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>SQL Server 빅 데이터 클러스터 마스터 인스턴스에 데이터베이스 복원
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)의 마스터 인스턴스에 기존 데이터베이스를 복원하는 방법을 설명합니다. 백업, 복사 및 복원 방법을 사용하는 것이 좋습니다.
+이 문서에서는 기존 데이터베이스를의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]마스터 인스턴스로 복원 하는 방법을 설명 합니다. 백업, 복사 및 복원 방법을 사용하는 것이 좋습니다.
 
 ## <a name="backup-your-existing-database"></a>기존 데이터베이스 백업
 
@@ -39,7 +39,7 @@ Kubernetes 클러스터의 마스터 인스턴스 Pod에 있는 SQL Server 컨�
 kubectl cp <path to .bak file> master-0:/tmp -c mssql-server -n <name of your big data cluster>
 ```
 
-예:
+예제:
 
 ```bash
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak master-0:/tmp -c mssql-server -n clustertest
@@ -54,7 +54,7 @@ ls /tmp
 exit
 ```
 
-예:
+예제:
 
 ```bash
 kubectl exec -it master-0 -n clustertest -c mssql-server -- bin/bash
@@ -70,7 +70,7 @@ exit
 RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
 ```
 
-예:
+예제:
 
 ```sql
 RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
@@ -112,6 +112,6 @@ GO
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터에 대한 자세한 내용은 다음 개요를 참조하세요.
+에 대해 자세히 알아보려면 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]다음 개요를 참조 하세요.
 
-- [SQL Server 2019 빅 데이터 클러스터란?](big-data-cluster-overview.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]무엇 인가요?](big-data-cluster-overview.md)

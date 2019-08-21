@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 948ce20bf32aaa2051c4a805a3ca2f131a7c0c8f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715213"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634545"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server 인스턴스에서 machine learning (R 및 Python) 구성 요소 업그레이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -148,7 +148,7 @@ Microsoft Machine Learning 설치 프로그램은 기존 기능 및 SQL Server �
 
     ![설치 단계 구성](media/mls-931-installer-mssql13.png)
 
-1. **사용권 계약** 페이지에서 사용 약관에 동의 함 **을 선택 하** 여 Machine Learning Server에 대 한 사용 조건에 동의 합니다. 
+1. **사용권 계약** 페이지에서 사용 약관에 동의 함을 선택 하 여 Machine Learning Server에 대 한 사용 조건에 동의 합니다. 
 
 1. 연속 된 페이지에서 Microsoft R Open 또는 Python Anaconda 배포와 같이 선택한 모든 오픈 소스 구성 요소에 대 한 추가 라이선스 조건에 동의를 제공 합니다.
 
@@ -274,7 +274,7 @@ SQL Server 설치 프로그램을 실행 하 여 R 및 Python 기능이 있는 �
 
 ### <a name="step-3-add-any-third-party-packages"></a>3단계: 타사 패키지 추가
 
-패키지 라이브러리에 다른 오픈 소스 또는 타사 패키지를 추가 했을 수 있습니다. 바인딩을 반대로 바꾸는 것은 기본 패키지 라이브러리의 위치를 전환 하기 때문에 R 및 Python에서 현재 사용 하 고 있는 라이브러리에 패키지를 다시 설치 해야 합니다. 자세한 내용은 [기본 패키지](../package-management/default-packages.md), [새 R 패키지 설치](../r/install-additional-r-packages-on-sql-server.md)및 [새 Python 패키지 설치](../python/install-additional-python-packages-on-sql-server.md)를 참조 하세요.
+패키지 라이브러리에 다른 오픈 소스 또는 타사 패키지를 추가 했을 수 있습니다. 바인딩을 반대로 바꾸는 것은 기본 패키지 라이브러리의 위치를 전환 하기 때문에 R 및 Python에서 현재 사용 하 고 있는 라이브러리에 패키지를 다시 설치 해야 합니다. 자세한 내용은 [R 패키지 정보](../package-management/r-package-information.md) 및 [설치](../package-management/install-additional-r-packages-on-sql-server.md)및 [Python 패키지 정보](../package-management/python-package-information.md) 및 [설치](../package-management/install-additional-python-packages-on-sql-server.md)를 참조 하세요.
 
 ## <a name="sqlbindrexe-command-syntax"></a>SqlBindR .exe 명령 구문
 
@@ -296,7 +296,7 @@ SQL Server 설치 프로그램을 실행 하 여 R 및 Python 기능이 있는 �
 
 MLS Installer 및 SqlBindR은 모두 다음 오류 코드와 메시지를 반환 합니다.
 
-|오류 코드  | 메시지           | 설명               |
+|오류 코드  | 메시지           | 세부 정보               |
 |------------|-------------------|-----------------------|
 |바인딩 오류 0 | 확인 (성공) | 바인딩이 오류 없이 전달 되었습니다. |
 |바인딩 오류 1 | 잘못 된 인수 | 구문 오류입니다. |

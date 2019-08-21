@@ -5,25 +5,25 @@ description: 이 자습서에서는 SQL Server 빅 데이터 클러스터에 샘
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a705e93cd4fce09abb7f8f3615c1ab638f332d60
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621673"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653283"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에 샘플 데이터 로드
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 자습서에서는 스크립트를 사용하여 SQL Server 2019 빅 데이터 클러스터(미리 보기)에 샘플 데이터를 로드하는 방법을 설명합니다. 설명서의 다른 자습서는 대부분은 이 샘플 데이터를 사용합니다.
+이 자습서에서는 스크립트를 사용 하 여 샘플 데이터 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]를에 로드 하는 방법을 설명 합니다. 설명서의 다른 자습서는 대부분은 이 샘플 데이터를 사용합니다.
 
 > [!TIP]
-> [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub 리포지토리에서 SQL Server 2019 빅 데이터 클러스터(미리 보기)의 추가 샘플을 찾을 수 있습니다. 샘플은 **sql-server-samples/samples/features/sql-big-data-cluster/** 경로에 있습니다.
+> 에 대 한 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 추가 샘플은 [sql server 샘플](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub 리포지토리에서 찾을 수 있습니다. 샘플은 **sql-server-samples/samples/features/sql-big-data-cluster/** 경로에 있습니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 

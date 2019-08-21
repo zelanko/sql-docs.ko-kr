@@ -1,22 +1,22 @@
 ---
 title: Azure Data Studio에서 SQL Server 빅 데이터 클러스터에 대한 Spark 작업 제출
 titleSuffix: SQL Server big data clusters
-description: Azure Data Studio에서 SQL Server 빅 데이터 클러스터에 대한 Spark 작업을 제출합니다.
+description: Azure Data Studio에서 Spark 작업 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 을 제출 합니다.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6731a753c643512cd05dbc9d7b7de2c9a064576f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ccaa9fbb10359791eb1d07ef8392a11977ae31db
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470659"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653333"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-azure-data-studio"></a>Azure Data Studio에서 SQL Server 빅 데이터 클러스터에 대한 Spark 작업 제출
+# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-azure-data-studio"></a>Azure Data Studio [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 에서 Spark 작업 제출
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

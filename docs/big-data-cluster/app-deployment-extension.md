@@ -1,31 +1,31 @@
 ---
 title: 앱 배포 확장
 titleSuffix: SQL Server big data clusters
-description: Python 또는 R 스크립트를 SQL Server 2019 빅 데이터 클러스터(미리 보기)에 애플리케이션으로 배포합니다.
+description: (미리 보기)에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Python 또는 R 스크립트를 응용 프로그램으로 배포 합니다.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1e5ab6364437432c803a364abd50ef5b1af4f8f6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 49a59650c406e3b48394da45ad0eeb4589fc4374
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958919"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653564"
 ---
-# <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>VS Code를 사용하여 SQL Server 빅 데이터 클러스터에 애플리케이션을 배포하는 방법
+# <a name="how-to-use-visual-studio-code-to-deploy-applications-to-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>Visual Studio Code를 사용 하 여 응용 프로그램을 배포 하는 방법[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 앱 배포 확장과 함께 Visual Studio Code를 사용하여 SQL Server 빅 데이터 클러스터에 애플리케이션램을 배포 하는 방법을 설명합니다. 이 기능은 CTP 2.3에서 도입되었습니다. 
+이 문서에서는 앱 배포 확장을 사용 하 여 Microsoft Visual Studio 코드를 사용 하 여 SQL Server 빅 데이터 클러스터에 응용 프로그램을 배포 하는 방법을 설명 합니다. 이 기능은 CTP 2.3에서 도입되었습니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 - [Visual Studio Code](https://code.visualstudio.com/)
-- [SQL Server 빅 데이터 클러스터](big-data-cluster-overview.md) CTP 2.3 이상
+- [빅 데이터 클러스터 SQL Server](big-data-cluster-overview.md) CTP 2.3 이상
 
 ## <a name="capabilities"></a>Capabilities
 
@@ -42,13 +42,13 @@ ms.locfileid: "67958919"
 
 다음 섹션에서는 설치 프로세스를 안내하고 확장 작동 방식을 간략하게 설명합니다. 
 
-### <a name="install"></a>설치
+### <a name="install"></a>Install
 
-먼저 VS Code에 앱 배포 확장을 설치합니다.
+먼저 Visual Studio Code에 앱 배포 확장을 설치 합니다.
 
-1. [앱 배포 확장](https://aka.ms/app-deploy-vscode)을 다운로드하여 VS Code의 일부로 확장을 설치합니다.
+1. [앱 배포 확장](https://aka.ms/app-deploy-vscode) 을 다운로드 하 여 Visual Studio Code의 일부로 확장을 설치 합니다.
 
-1. VS Code를 시작하고 확장 사이드바로 이동합니다.
+1. Visual Studio Code를 시작 하 고 확장 사이드바로 이동 합니다.
 
 1. 사이드바의 맨 위에 있는 `…` 상황에 맞는 메뉴를 클릭하고 `Install from vsix`를 선택합니다.
 
@@ -56,29 +56,48 @@ ms.locfileid: "67958919"
 
 1. 다운로드한 `sqlservbdc-app-deploy.vsix` 파일을 찾아서 선택하여 설치합니다.
 
-SQL Server 빅 데이터 클러스터 앱 배포 확장이 설치된 후에 VS Code를 다시 로드하라는 메시지가 표시됩니다. 이제 VS Code 사이드바에 SQL Server BDC 앱 탐색기가 표시됩니다.
+SQL Server 빅 데이터 클러스터 앱 배포 확장이 설치 된 후에 Visual Studio Code를 다시 로드 하 라는 메시지가 표시 됩니다. 이제 Visual Studio Code 사이드바에 SQL Server BDC 앱 탐색기가 표시 됩니다.
 
 ### <a name="app-explorer"></a>앱 탐색기
 
 사이드바에서 확장을 클릭하여 앱 탐색기가 표시된 사이드 패널을 로드합니다. 앱 탐색기의 다음 샘플 스크린샷에는 사용할 수 있는 앱 또는 앱 사양이 표시되지 않습니다.
 
-<img src="media/vs-extension/app_explorer.png" width=350px></img>
-<!--![App Explorer](media/vs-extension/app_explorer.png)-->
+![앱 탐색기](media/vs-extension/app_explorer.png)
 
-#### <a name="new-connection"></a>새 연결
+#### <a name="connect-to-cluster"></a>클러스터에 연결
 
 클러스터 엔드포인트에 연결하려면 다음 방법 중 하나를 사용합니다.
 
 - 맨 아래에서 `SQL Server BDC Disconnected`로 표시되는 상태 표시줄을 클릭합니다.
-- 또는 맨 위에서 화살표가 출입구를 가리키는 `New Connection` 단추를 클릭합니다.
+- 또는 맨 위에서 화살표가 출입구를 가리키는 `Connect to Cluster` 단추를 클릭합니다.
 
-   ![새 연결](media/vs-extension/connect_to_cluster.png)
+Visual Studio Code은 적절 한 끝점, 사용자 이름 및 암호를 묻는 메시지를 표시 합니다.
 
-VS Code에서 적절한 엔드포인트, 사용자 이름 및 암호를 묻는 메시지가 표시됩니다. 올바른 자격 증명과 앱 엔드포인트를 제공하면 VS Code에서 클러스터에 연결되었다는 알림이 표시되고, 배포된 앱이 사이드바에 모두 채워집니다. 성공적으로 연결되면 엔드포인트와 사용자 이름이 `./sqldbc`에 사용자 프로필의 일부로 저장됩니다. 암호 또는 토큰은 저장되지 않습니다. 다시 로그인하면 프롬프트가 저장된 호스트 및 사용자 이름으로 미리 채워지지만, 암호는 항상 입력해야 합니다. 다른 클러스터 엔드포인트에 연결하려면 `New Connection`을 다시 클릭하면 됩니다. VS Code를 닫거나 다른 작업 영역을 열어서 다시 연결해야 하는 경우 연결이 자동으로 닫힙니다.
+연결할 끝점은 포트 30080를 `Cluster Management Service` 사용 하는 끝점입니다.
+
+또한 명령줄에서 다음을 통해이 끝점을 찾을 수 있습니다. 
+
+```
+azdata bdc endpoint list
+```
+
+이 정보를 가져오는 다른 방법 중 하나는 나열 된 서비스의 끝점을 찾을 수 있는 Azure Data Studio 서버에서 **관리** 를 마우스 오른쪽 단추로 클릭 하는 것입니다.
+
+![광고 끝점](media/vs-extension/ads_end_point.png)
+
+사용할 끝점을 찾았으면 클러스터에 연결 합니다.
+
+![새 연결](media/vs-extension/connect_to_cluster.png)
+
+ 올바른 자격 증명과 앱 Visual Studio Code 끝점이 지정 된 경우 클러스터에 연결 되었다는 알림이 표시 되 고 사이드바에 입력 된 배포 된 앱이 표시 됩니다. 성공적으로 연결되면 엔드포인트와 사용자 이름이 `./sqldbc`에 사용자 프로필의 일부로 저장됩니다. 암호 또는 토큰은 저장되지 않습니다. 다시 로그인하면 프롬프트가 저장된 호스트 및 사용자 이름으로 미리 채워지지만, 암호는 항상 입력해야 합니다. 다른 클러스터 엔드포인트에 연결하려면 `New Connection`을 다시 클릭하면 됩니다. Visual Studio Code를 닫거나 다른 작업 영역을 열고 다시 연결 해야 하는 경우 연결이 자동으로 닫힙니다.
 
 ### <a name="app-template"></a>앱 템플릿
 
-템플릿 중 하나에서 새 앱을 배포하려면 `App Specifications` 창에서 `New App Template` 단추를 클릭합니다. 여기에서 이름, 런타임 및 로컬 머신에서 새 앱을 저장할 위치를 묻는 메시지가 표시됩니다. 확장의 전체 기능을 사용할 수 있도록 현재 VS Code 작업 영역에 저장하는 것이 좋지만 로컬 파일 시스템의 어느 위치에나 저장할 수 있습니다.
+앱의 아티팩트를 저장할 Visual Studio Code *작업 영역을 열어야* 합니다.
+
+템플릿 중 하나에서 새 앱을 배포하려면 `App Specifications` 창에서 `New App Template` 단추를 클릭합니다. 여기에서 이름, 런타임 및 로컬 머신에서 새 앱을 저장할 위치를 묻는 메시지가 표시됩니다. 사용자가 제공 하는 이름 및 버전은 DNS-1035 레이블 이어야 하며 소문자 영숫자 문자 또는 '-'로 구성 되어야 하 고 알파벳 문자로 시작 하 고 영숫자 문자로 끝나야 합니다.
+
+확장의 전체 기능을 사용할 수 있도록 현재 Visual Studio Code 작업 영역에 저장 하는 것이 좋지만 로컬 파일 시스템의 어느 위치에 나 저장할 수 있습니다.
 
 ![새 앱 템플릿](media/vs-extension/new_app_template.png)
 
@@ -86,13 +105,16 @@ VS Code에서 적절한 엔드포인트, 사용자 이름 및 암호를 묻는 �
 
 ![로드된 앱 템플릿](media/vs-extension/loading_app_template.png)
 
-템플릿은 다음과 같이 레이아웃된 간단한 `Hello World` 앱입니다.
+템플릿은 앱 사양 창에서 `helloworld` 다음과 같이 레이아웃 된 간단한 앱입니다.
 
 - **spec.yaml**
    - 클러스터에 앱을 배포하는 방법을 알려줍니다.
 - **run-spec.yaml**
    - 클러스터에 앱을 호출하는 방법을 알려줍니다.
-- **handler.py**
+
+앱의 소스 코드는 작업 영역 폴더에 있습니다.
+
+- **원본 파일 이름**
    - 이 파일은 `spec.yaml`에서 `src`로 지정된 소스 코드 파일입니다.
    - `spec.yaml`에 표시된 것처럼 앱의 `entrypoint`로 간주되는 `handler`라는 함수 1개가 있습니다. 이 함수는 `msg`라는 문자열 입력을 사용하고 `out`이라는 문자열 출력을 반환합니다. 이 설정은 `spec.yaml`의 `inputs` 및 `outputs`에 지정되어 있습니다.
 
@@ -127,9 +149,9 @@ VS Code에서 적절한 엔드포인트, 사용자 이름 및 암호를 묻는 �
 - 출력 매개 변수
 - 링크
   - Swagger
-  - 자세히
+  - details 정보
 
-`Links`를 클릭하면 배포된 앱의 `swagger.json`에 액세스할 수 있으므로, 해당 앱을 호출하는 고유한 클라이언트를 작성할 수 있습니다.
+를 클릭 `Links`하면 앱을 호출 하는 자체 클라이언트를 작성할 `swagger.json` 수 있도록 배포 된 앱의에 액세스할 수 있습니다.
 
 ![Swagger](media/vs-extension/swagger.png)
 
@@ -145,7 +167,7 @@ VS Code에서 적절한 엔드포인트, 사용자 이름 및 암호를 묻는 �
 
 ![실행 사양 가져오기](media/vs-extension/get_run_spec.png)
 
-실행 사양이 있고 원하는 대로 편집했으면 실행합니다. 앱 실행이 완료되면 VS Code에서 적절한 피드백이 반환됩니다.
+실행 사양이 있고 원하는 대로 편집했으면 실행합니다. Visual Studio Code는 앱 실행이 완료 될 때 적절 한 피드백을 반환 합니다.
 
 ![앱 출력](media/vs-extension/app_output.png)
 
@@ -177,9 +199,9 @@ VS Code에서 적절한 엔드포인트, 사용자 이름 및 암호를 묻는 �
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터에 배포된 앱을 고유한 애플리케이션에 통합하는 방법을 살펴봅니다. 자세한 내용은 [빅 데이터 클러스터에서 애플리케이션 사용](big-data-cluster-consume-apps.md)을 참조하세요. 확장을 사용해 보려면 [앱 배포 샘플](https://aka.ms/sql-app-deploy)에서 추가 샘플을 확인할 수도 있습니다.
+자세한 내용은 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] [빅 데이터 클러스터에서 응용 프로그램 사용](big-data-cluster-consume-apps.md) 에서 응용 프로그램에 배포 된 앱을 통합 하는 방법을 알아봅니다. 확장을 사용해 보려면 [앱 배포 샘플](https://aka.ms/sql-app-deploy)에서 추가 샘플을 확인할 수도 있습니다.
 
-SQL Server 빅 데이터 클러스터에 대한 자세한 내용은 [SQL Server 2019 빅 데이터 클러스터란?](big-data-cluster-overview.md)을 참조하세요.
+에 대 한 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]자세한 내용은 [무엇 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]인가요?](big-data-cluster-overview.md)를 참조 하세요.
 
 
 사용자에게 유용한 확장을 만들 수 있도록 피드백을 보내 주시기를 바랍니다. [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 팀](https://aka.ms/sqlfeedback)으로 보내주세요.

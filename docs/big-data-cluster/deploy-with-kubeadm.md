@@ -1,26 +1,26 @@
 ---
 title: Kubeadm을 사용하여 Kubernetes 구성
 titleSuffix: SQL Server big data clusters
-description: 여러 Ubuntu 16.04 또는 18.04 머신(물리적 또는 가상)에서 SQL Server 2019 빅 데이터 클러스터(미리 보기) 배포에 대해 Kubernetes를 구성하는 방법을 알아봅니다.
+description: 배포를 위해 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 여러 Ubuntu 16.04 또는 18.04 컴퓨터 (물리적 또는 가상)에서 Kubernetes를 구성 하는 방법에 대해 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d55a51ac388cfb4af197ce409434a0dc9847bd2d
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 63a3529755267137cb7a1094060499e5db008ec8
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661361"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652372"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>여러 머신에서 SQL Server 빅 데이터 클러스터 배포에 대해 Kubernetes 구성
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 **kubeadm**을 사용하여 여러 머신에서 SQL Server 2019 빅 데이터 클러스터(미리 보기) 배포에 대해 Kubernetes를 구성하는 방법의 예제를 제공합니다. 이 예제에서는 여러 Ubuntu 16.04 또는 18.04 LTS 머신(물리적 또는 가상)이 대상입니다. 다른 Linux 플랫폼에 배포하는 경우 일부 명령을 시스템에 맞게 변경해야 합니다.  
+이 문서에서는 **kubeadm** 를 사용 하 여 배포에 대해 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 여러 컴퓨터에서 Kubernetes를 구성 하는 방법에 대 한 예제를 제공 합니다. 이 예제에서는 여러 Ubuntu 16.04 또는 18.04 LTS 머신(물리적 또는 가상)이 대상입니다. 다른 Linux 플랫폼에 배포하는 경우 일부 명령을 시스템에 맞게 변경해야 합니다.  
 
 > [!TIP] 
 > Kubernetes를 구성하는 샘플 스크립트는 [Ubuntu 16.04 LTS 또는 18.04 LTS에서 Kubeadm을 사용하여 Kubernetes 클러스터 만들기](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)를 참조하세요.

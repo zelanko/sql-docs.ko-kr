@@ -1,26 +1,26 @@
 ---
 title: HDFS 계층화 구성
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)의 HDFS에 외부 Azure Data Lake Storage 파일 시스템을 탑재하도록 HDFS 계층화를 구성하는 방법을 설명합니다.
+description: 이 문서에서는 외부 Azure Data Lake Storage 파일 시스템을의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]hdfs에 탑재 하도록 hdfs 계층화를 구성 하는 방법을 설명 합니다.
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 17eedf9f0797a0adb5eda6ca8ee090fc762e1491
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c7b24af0b0c6a22cbab1a9c280a0ba868ca2cd21
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419379"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652323"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에서 HDFS 계층화 구성
+# <a name="configure-hdfs-tiering-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>HDFS 계층화 구성[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-HDFS 계층화는 HDFS에서 외부 HDFS 호환 파일 시스템을 탑재하는 기능을 제공합니다. 이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)에 대해 HDFS 계층화를 구성하는 방법을 설명합니다. 현재, Azure Data Lake Storage Gen2 및 Amazon S3에 연결하도록 지원됩니다. 
+HDFS 계층화는 HDFS에서 외부 HDFS 호환 파일 시스템을 탑재하는 기능을 제공합니다. 이 문서에서는 (미리 보기)에 대 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 한 HDFS 계층화를 구성 하는 방법을 설명 합니다. 현재, Azure Data Lake Storage Gen2 및 Amazon S3에 연결하도록 지원됩니다. 
 
 ## <a name="hdfs-tiering-overview"></a>HDFS 계층화 개요
 
@@ -54,7 +54,7 @@ Azure Data Lake Storage Gen2 및 Amazon S3에 연결하도록 지원됩니다. �
 
 ## <a id="issues"></a> 알려진 이슈 및 제한 사항
 
-다음 목록은 SQL Server 빅 데이터 클러스터에서 HDFS 계층화를 사용하는 경우의 알려진 이슈 및 현재 제한 사항을 제공합니다.
+다음 목록에서는에서 HDFS 계층화를 사용할 때의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]알려진 문제 및 현재 제한 사항을 제공 합니다.
 
 - 탑재가 장시간 `CREATING` 상태로 중단되면 실패했을 가능성이 가장 높습니다. 이 경우 명령을 취소하고 필요한 경우 탑재를 삭제합니다. 매개 변수와 자격 증명이 올바른지 확인한 후 다시 시도합니다.
 
@@ -76,4 +76,4 @@ Azure Data Lake Storage Gen2 및 Amazon S3에 연결하도록 지원됩니다. �
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 2019 빅 데이터 클러스터에 대한 자세한 내용은 [SQL Server 2019 빅 데이터 클러스터란?](big-data-cluster-overview.md)을 참조하세요.
+에 대 한 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]자세한 내용은 [무엇 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]인가요?](big-data-cluster-overview.md)를 참조 하세요.

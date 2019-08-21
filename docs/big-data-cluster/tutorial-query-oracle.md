@@ -1,20 +1,20 @@
 ---
 title: Oracle에서 외부 데이터 쿼리
 titleSuffix: SQL Server big data clusters
-description: 이 자습서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)에서 Oracle 데이터를 쿼리하는 방법을 보여 줍니다. Oracle에서 데이터에 대해 외부 테이블을 만든 다음, 쿼리를 실행합니다.
+description: 이 자습서에서는에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Oracle 데이터를 쿼리 하는 방법을 보여 줍니다. Oracle에서 데이터에 대해 외부 테이블을 만든 다음, 쿼리를 실행합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
-ms.date: 12/12/2018
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bf0efdc3a9be44a0ffad4efcaaeb351bbdbdf626
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ebad25ed0532ed6ba96dc803fa8e6dc2538977ae
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957719"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653253"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>자습서: SQL Server 빅 데이터 클러스터에서 Oracle 쿼리
 

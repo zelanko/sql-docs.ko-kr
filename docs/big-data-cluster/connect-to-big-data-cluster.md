@@ -1,26 +1,25 @@
 ---
-title: 마스터 및 HDFS에 연결
-titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 빅 데이터 클러스터(미리 보기)의 HDFS/Spark 게이트웨이 및 SQL Server 마스터 인스턴스에 연결하는 방법을 알아봅니다.
+title: Master 및 HDFS 빅 데이터 클러스터에 연결
+description: 의 SQL Server 마스터 인스턴스 및 HDFS/Spark 게이트웨이에 연결 하는 방법에 대해 알아봅니다 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)].
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 05/22/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f09763b210427c84efe75d693fee302d7048db7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb6e1f684a277740c06fbd0a2fdc23dbd77f8e5c
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958640"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652428"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio를 사용하여 SQL Server 빅 데이터 클러스터에 연결
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 Azure Data Studio에서 SQL Server 2019 빅 데이터 클러스터(미리 보기)에 연결하는 방법을 설명합니다.
+이 문서에서는 Azure Data Studio [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 에서에 연결 하는 방법을 설명 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -70,4 +69,4 @@ Azure Data Studio 2019년 2월 릴리스에서는 SQL Server 마스터 인스턴
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 2019 빅 데이터 클러스터에 대한 자세한 내용은 [SQL Server 2019 빅 데이터 클러스터란?](big-data-cluster-overview.md)을 참조하세요.
+에 대 한 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]자세한 내용은 [항목 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md)을 참조 하세요.

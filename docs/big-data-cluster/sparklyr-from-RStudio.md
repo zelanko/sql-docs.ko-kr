@@ -5,22 +5,22 @@ description: RStudio에서 sparklyr를 사용 하 여 빅 데이터 클러스터
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 04/08/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f346fed17e4c79214a7eba43f70767fc80b98a07
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: d23ce447f097d092059f7298ca5478ed6c3f19fc
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67728379"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653328"
 ---
 # <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터에서 sparklyr 사용
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr는 Apache Spark에 대 한 R 인터페이스를 제공 합니다. Sparklyr는 R 개발자가 Spark를 사용 하는 데 널리 사용 되는 방법입니다. 이 문서에서는 RStudio를 사용 하 여 SQL Server 2019 빅 데이터 클러스터 (미리 보기)에서 sparklyr를 사용 하는 방법을 설명 합니다.
+Sparklyr는 Apache Spark에 대 한 R 인터페이스를 제공 합니다. Sparklyr는 R 개발자가 Spark를 사용 하는 데 널리 사용 되는 방법입니다. 이 문서에서는 rstudio를 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 사용 하 여에서 sparklyr를 사용 하는 방법을 설명 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -90,4 +90,4 @@ iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Specie
 
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터에 대 한 자세한 내용은 [SQL Server 2019 빅 데이터 클러스터 란?](big-data-cluster-overview.md)을 참조 하세요.
+빅 데이터 클러스터에 대 한 자세한 내용은 [항목 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md)을 참조 하세요.

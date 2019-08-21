@@ -5,22 +5,22 @@ description: Azure Toolkit for IntelliJ의 SQL Server 빅 데이터 클러스터
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f17544ed4dd37ff43be97d114abb58f4fbbbe319
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470696"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653713"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>IntelliJ의 SQL Server 빅 데이터 클러스터에 Spark 작업 제출
+# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>IntelliJ의에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark 작업 제출
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-SQL Server 빅 데이터 클러스터의 주요 시나리오 중 하나는 Spark 작업을 제출하는 기능입니다. Spark 작업 제출 기능을 사용하면 SQL Server 빅 데이터 클러스터에 대한 참조를 사용하여 로컬 Jar 또는 Py 파일을 제출할 수 있습니다. 또한 HDFS 파일 시스템에 이미 있는 Jar 또는 Py 파일을 실행할 수 있습니다. 
+의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 주요 시나리오 중 하나는 Spark 작업을 제출 하는 기능입니다. Spark 작업 제출 기능을 사용 하면에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]대 한 참조가 있는 로컬 Jar 또는 Py 파일을 제출할 수 있습니다. 또한 HDFS 파일 시스템에 이미 있는 Jar 또는 Py 파일을 실행할 수 있습니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -51,9 +51,9 @@ SQL Server 빅 데이터 클러스터의 주요 시나리오 중 하나는 Spark
 
 1. IntelliJ IDEA를 시작하고 프로젝트를 만듭니다. **새 프로젝트** 대화 상자에서 아래 단계를 수행합니다. 
 
-   1\. **Azure Spark/HDInsight** > **Spark 프로젝트(샘플 포함)(Scala)** 를 선택합니다.
+   a. **Azure Spark/HDInsight** > **Spark 프로젝트(샘플 포함)(Scala)** 를 선택합니다.
 
-   2\. **빌드 도구** 목록에서 필요에 따라 다음 중 하나를 선택합니다.
+   b. **빌드 도구** 목록에서 필요에 따라 다음 중 하나를 선택합니다.
 
       * **Maven**: Scala 프로젝트 만들기 마법사 지원
       * **SBT**: Scala 프로젝트에 대해 종속성 관리 및 빌드 수행
@@ -74,9 +74,9 @@ SQL Server 빅 데이터 클러스터의 주요 시나리오 중 하나는 Spark
 
     ![Spark SDK 선택](./media/spark-submit-job-intellij-tool-plugin/hdi-new-project.png)
 
-   1\. 프로젝트 이름 및 위치를 입력합니다.
+   a. 프로젝트 이름 및 위치를 입력합니다.
 
-   2\. **프로젝트 SDK** 드롭다운 목록에서 Spark 2.x 클러스터에 대해 **Java 1.8**을 선택하거나 Spark 1.x 클러스터에 대해 **Java 1.7**을 선택합니다.
+   b. **프로젝트 SDK** 드롭다운 목록에서 Spark 2.x 클러스터에 대해 **Java 1.8**을 선택하거나 Spark 1.x 클러스터에 대해 **Java 1.7**을 선택합니다.
 
    c. **Spark 버전** 드롭다운 목록에서 Scala 프로젝트 만들기 마법사는 적절한 버전의 Spark SDK 및 Scala SDK를 연결합니다. Spark 클러스터 버전이 2.0 이전인 경우 **Spark 1.x**를 선택합니다. 그렇지 않으면 **Spark2.x**를 선택합니다. 이 예제에서는 **Spark 2.0.2(Scala 2.11.8)** 를 사용합니다.
 
@@ -84,9 +84,9 @@ SQL Server 빅 데이터 클러스터의 주요 시나리오 중 하나는 Spark
 
 7. Spark 프로젝트가 자동으로 아티팩트를 만듭니다. 아티팩트를 보려면 다음 단계를 수행합니다.
 
-   1\. **파일** 메뉴에서 **프로젝트 구조**를 선택합니다.
+   a. **파일** 메뉴에서 **프로젝트 구조**를 선택합니다.
 
-   2\. **프로젝트 구조** 대화 상자에서 **아티팩트**를 선택하여 만든 기본 아티팩트를 봅니다. 더하기 기호( **+** )를 선택하여 사용자 고유의 아티팩트를 만들 수도 있습니다.
+   b. **프로젝트 구조** 대화 상자에서 **아티팩트**를 선택하여 만든 기본 아티팩트를 봅니다. 더하기 기호( **+** )를 선택하여 사용자 고유의 아티팩트를 만들 수도 있습니다.
 
       ![대화 상자의 아티팩트 정보](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -106,13 +106,13 @@ SQL Server 빅 데이터 클러스터에 연결한 후 애플리케이션을 제
 
     * **기본 클래스 이름** 필드: 기본값은 선택한 파일의 기본 클래스입니다. 줄임표( **...** )를 선택하고 다른 클래스를 선택하여 클래스를 변경할 수 있습니다.   
 
-    * **작업 구성** 필드:  기본값은 위에 표시된 그림처럼 설정됩니다. 작업 제출을 위해 값을 변경하거나 새 키/값을 추가할 수 있습니다. 자세한 내용은 다음을 참조하세요. [Apache Livy REST API](http://livy.incubator.apache.org./docs/latest/rest-api.html)
+    * **작업 구성** 필드:  기본값은 위에 표시된 그림처럼 설정됩니다. 작업 제출을 위해 값을 변경하거나 새 키/값을 추가할 수 있습니다. 추가 정보 [Apache Livy REST API](http://livy.incubator.apache.org./docs/latest/rest-api.html)
 
       ![Spark 제출 대화 상자의 작업 구성 의미](./media/spark-submit-job-intellij-tool-plugin/submit-job-configurations.png)
 
     * **명령줄 인수** 필드: 필요한 경우 기본 클래스에 대해 공백으로 분할된 인수 값을 입력할 수 있습니다.
 
-    * **참조되는 Jar** 및 **참조 파일** 필드: 참조되는 Jar 및 파일의 경로를 입력할 수 있습니다(있는 경우). 자세한 내용은 다음을 참조하세요. [Apache Spark 구성](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
+    * **참조되는 Jar** 및 **참조 파일** 필드: 참조되는 Jar 및 파일의 경로를 입력할 수 있습니다(있는 경우). 추가 정보 [Apache Spark 구성](https://spark.apache.org/docs/latest/configuration.html#runtime-environment) 
 
       ![Spark 제출 대화 상자 jar 파일 의미](./media/spark-submit-job-intellij-tool-plugin/jar-files-meaning.png)
 
@@ -195,4 +195,4 @@ Spark Livy 대화형 세션 콘솔(Scala)은 IntelliJ 2018.2 및 2018.3에서만
    ![Spark 콘솔로 선택 내용 보내기](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>다음 단계
-SQL Server 빅 데이터 클러스터 및 관련 시나리오에 대한 자세한 내용은 [SQL Server 2019 빅 데이터 클러스터란?](big-data-cluster-overview.md)을 참조하세요.
+SQL Server 빅 데이터 클러스터 및 관련 시나리오에 대 한 자세한 내용은 [무엇 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md)인가요?를 참조 하세요.

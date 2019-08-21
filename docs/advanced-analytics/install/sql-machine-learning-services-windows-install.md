@@ -1,25 +1,26 @@
 ---
-title: Windows에 SQL Server Machine Learning Services (데이터베이스 내) 설치
-description: SQL Server 또는 Python의 R은 Windows의 SQL Server Machine Learning Services에 대 한 SQL Server 설치 단계를 수행 합니다.
+title: Windows에 SQL Server Machine Learning Services (Python, R) 설치
+titleSuffix: ''
+description: 이 문서에서는 Windows에 SQL Server Machine Learning Services를 설치 하는 방법을 설명 합니다. Machine Learning Services를 사용 하 여 데이터베이스 내에서 Python 및 R 스크립트를 실행할 수 있습니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fba13ea5d6d91ab83cb2560727ed75c79bc4c48b
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 28e4681808348df97e61709745e9b59e0a44d3be
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69531046"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634563"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows에 SQL Server Machine Learning를 설치합니다.
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-이 문서에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 마법사를 실행하고 화면의 지시에 따라 머신 러닝 구성 요소를 설치하는 방법을 설명합니다.
+이 문서에서는 Windows에 SQL Server Machine Learning Services를 설치 하는 방법을 설명 합니다. Machine Learning Services를 사용 하 여 데이터베이스 내에서 Python 및 R 스크립트를 실행할 수 있습니다.
 
 ## <a name="bkmk_prereqs"></a> 사전 설치 검사 목록
 

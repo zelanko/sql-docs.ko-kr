@@ -5,16 +5,16 @@ description: SQL Server 빅 데이터 클러스터에서 Visual Studio Code용 S
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4458666792d7f4629b4e1820e98e2dbb9901c2b6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68425983"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653726"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>Visual Studio Code에서 SQL Server 빅 데이터 클러스터에 대한 Spark 작업 제출
 
@@ -27,11 +27,11 @@ Windows, Linux 및 macOS를 포함하여 Visual Studio Code에서 지원되는 �
 
 이 문서의 단계를 완료하려면 다음 항목이 필요합니다.
 
-- SQL Server 빅 데이터 클러스터. [SQL Server 빅 데이터 클러스터](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)를 참조하세요.
-- [Visual Studio Code](https://code.visualstudio.com/)
+- SQL Server 빅 데이터 클러스터. [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)을 참조하세요.
+- 및[Visual Studio Code](https://code.visualstudio.com/)가 있습니다.
 - [Mono](https://www.mono-project.com/docs/getting-started/install/). Mono는 Linux 및 macOS에만 필요합니다.
 - [Visual Studio Code용 PySpark 대화형 환경 설정](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment)
-- **HDexample**이라는 로컬 디렉터리.  이 문서에서는 **C:\HD\HDexample**을 사용합니다.
+- **SQLBDCexample**라는 로컬 디렉터리입니다.  이 문서에서는 **C:\SQLBDC\SQLBDCexample**를 사용 합니다.
 
 ## <a name="install-spark--hive-tools"></a>Spark & Hive Tools 설치
 
@@ -53,9 +53,9 @@ Windows, Linux 및 macOS를 포함하여 Visual Studio Code에서 지원되는 �
 
 작업 폴더를 열고 Visual Studio Code에서 파일을 만들려면 다음 단계를 완료합니다.
 
-1. 메뉴 모음에서 **파일** > **폴더 열기...**  > **C:\HD\HDexample**로 이동한 다음, **폴더 선택** 단추를 선택합니다. 왼쪽 **탐색기** 뷰에 폴더가 표시됩니다.
+1. 메뉴 모음에서 **파일** > **폴더 열기 ...** 로 이동 합니다. C:\SQLBDC\SQLBDCexample 폴더 **선택** 단추를 선택 합니다.  >  왼쪽 **탐색기** 뷰에 폴더가 표시됩니다.
 
-2. **탐색기** 뷰에서 폴더, **HDexample**을 차례로 선택하고 작업 폴더 옆에 있는 **새 파일** 아이콘을 선택합니다.
+2. **탐색기** 보기에서 **SQLBDCexample**폴더를 선택 하 고 작업 폴더 옆의 **새 파일** 아이콘을 선택 합니다.
 
    ![새 파일](./media/spark-hive-tools-vscode/new-file.png)
 
@@ -116,7 +116,7 @@ Visual Studio Code에서 클러스터로 스크립트를 제출하려면 먼저 
 
 ## <a name="set-default-cluster"></a>기본 클러스터 설정
 
-1. [앞서](#open-work-folder) 만든 **HDexample** 폴더를 닫은 경우 다시 엽니다.  
+1. 폐쇄 된 경우 [이전](#open-work-folder) 에 만든 폴더 **SQLBDCexample** 를 다시 엽니다.  
 
 2. [앞서](#open-work-folder) 만든 **HelloWorld.py** 파일을 선택하면 스크립트 편집기에서 열립니다.
 
@@ -132,7 +132,7 @@ Visual Studio Code에서 클러스터로 스크립트를 제출하려면 먼저 
 
 다음 단계를 수행하여 대화형 PySpark 쿼리를 제출할 수 있습니다.
 
-1. [앞서](#open-work-folder) 만든 **HDexample** 폴더를 닫은 경우 다시 엽니다.  
+1. **SQLBDCexample** [이전](#open-work-folder) 에 만든 폴더를 다시 엽니다.  
 
 2. [앞서](#open-work-folder) 만든 **HelloWorld.py** 파일을 선택하면 스크립트 편집기에서 열립니다.
 
@@ -159,7 +159,7 @@ Visual Studio Code에서 클러스터로 스크립트를 제출하려면 먼저 
 
 ## <a name="submit-pyspark-batch-job"></a>PySpark 일괄 작업 제출
 
-1. [앞서](#open-work-folder) 만든 **HDexample** 폴더를 닫은 경우 다시 엽니다.  
+1. **SQLBDCexample** [이전](#open-work-folder) 에 만든 폴더를 다시 엽니다.  
 
 2. [앞서](#open-work-folder) 만든 **HelloWorld.py** 파일을 선택하면 스크립트 편집기에서 열립니다.
 
@@ -200,7 +200,7 @@ Visual Studio Code에서 클러스터로 스크립트를 제출하려면 먼저 
 
 **요청 본문**
 
-| NAME | description | 유형 |
+| name | description | type |
 | :- | :- | :- |
 | 파일 | 실행할 애플리케이션이 포함된 파일 | path(필수) |
 | proxyUser | 작업을 실행할 때 가장할 사용자 | string |
@@ -210,22 +210,22 @@ Visual Studio Code에서 클러스터로 스크립트를 제출하려면 먼저 
 | pyFiles | 이 세션에서 사용할 Python 파일 | 문자열 목록 |
 | files | 이 세션에서 사용할 파일 | 문자열 목록 |
 | driverMemory | 드라이버 프로세스에 사용할 메모리 크기 | string |
-| driverCores | 드라이버 프로세스에 사용할 코어 수 | int |
+| driverCores | 드라이버 프로세스에 사용할 코어 수 | ssNoversion |
 | executorMemory | 실행기 프로세스당 사용할 메모리 크기 | string |
-| executorCores | 각 실행기에 사용할 코어 수 | int |
-| numExecutors | 이 세션에서 시작할 실행기 수 | int |
+| executorCores | 각 실행기에 사용할 코어 수 | ssNoversion |
+| numExecutors | 이 세션에서 시작할 실행기 수 | ssNoversion |
 | archives | 이 세션에서 사용할 보관 파일 | 문자열 목록 |
 | queue | 제출된 대상 YARN 큐의 이름 | string |
-| NAME | 이 세션의 이름 | string |
+| name | 이 세션의 이름 | string |
 | conf | Spark 구성 속성 | 키=값 맵 |
 
 #### <a name="response-body"></a>응답 본문
 
 만든 일괄 처리 개체입니다.
 
-| NAME | description | 유형 |
+| name | description | type |
 | :- | :- | :- |
-| id | 세션 ID | int |
+| id | 세션 ID | ssNoversion |
 | appId | 이 세션의 애플리케이션 ID | String |
 | appInfo | 자세한 애플리케이션 정보 | 키=값 맵 |
 | log | 로그 줄 | 문자열 목록 |
@@ -255,4 +255,4 @@ Visual Studio Code용 Spark & Hive는 다음과 같은 기능을 지원합니다
 3. 확인을 위해 **출력** 뷰를 검토합니다.  
 
 ## <a name="next-steps"></a>다음 단계
-SQL Server 빅 데이터 클러스터 및 관련 시나리오에 대한 자세한 내용은 [SQL Server 빅 데이터 클러스터](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)를 참조하세요.
+SQL Server 빅 데이터 클러스터 및 관련 시나리오에 대 한 자세한 내용은을 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)참조 하십시오.

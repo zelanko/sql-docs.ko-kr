@@ -5,16 +5,16 @@ description: Spark에서 MSSQL Spark 커넥터를 사용하여 SQL Server를 읽
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5b603e91e2dffae034dd9d66a1bcd3e5f812a308
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3ad3a0e03c75f7961864f70fc52655e47e2b89ea
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957834"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653309"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>MSSQL Spark 커넥터를 사용하여 Spark에서 SQL Server를 읽고 쓰는 방법
 
@@ -39,7 +39,7 @@ SQL Server 2019 미리 보기는 Spark에서 SQL로 쓰기 위해 SQL Server 대
 
 다음 표에서는 변경되었거나 새로 추가된 인터페이스 매개 변수를 설명합니다.
 
-| 속성 이름 | 선택 사항 | 설명 |
+| 속성 이름 | Optional | 설명 |
 |---|---|---|
 | **isolationLevel** | 예 | 연결의 격리 수준을 설명합니다. MSSQL Spark 커넥터의 기본값은 **READ_COMMITTED**입니다. |
 
@@ -49,7 +49,7 @@ SQL Server 2019 미리 보기는 Spark에서 SQL로 쓰기 위해 SQL Server 대
 
 - [SQL Server 빅 데이터 클러스터](deploy-get-started.md)
 
-- [Azure Data Studio](https://aka.ms/azdata-insiders)
+- [Azure Data Studio](https://aka.ms/azdata-insiders).
 
 ## <a name="create-the-target-database"></a>대상 데이터베이스 만들기
 
@@ -90,4 +90,4 @@ SQL Server 2019 미리 보기는 Spark에서 SQL로 쓰기 위해 SQL Server 대
 
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터에 대한 자세한 내용은 [Kubernetes에 SQL Server 빅 데이터 클러스터를 배포하는 방법](deployment-guidance.md)을 참조하세요.
+빅 데이터 클러스터에 대 한 자세한 내용은 [Kubernetes에서 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법](deployment-guidance.md) 을 참조 하세요.

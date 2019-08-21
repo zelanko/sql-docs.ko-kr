@@ -1,38 +1,38 @@
 ---
 title: azdata를 사용하여 애플리케이션 배포
 titleSuffix: SQL Server big data clusters
-description: Python 또는 R 스크립트를 SQL Server 2019 빅 데이터 클러스터(미리 보기)에 애플리케이션으로 배포합니다.
+description: Python 또는 R 스크립트를의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]응용 프로그램으로 배포 합니다.
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 06b76e7eb8eec8db1993ca558a1f57355457c4ad
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 18e97a3567b50982bd2be11dcc3493951dfe8fa9
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419488"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653150"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server 빅 데이터 클러스터(미리 보기)에 앱을 배포하는 방법
+# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>앱을 배포 하는 방법[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기) 내의 애플리케이션으로 R 및 Python 스크립트를 배포하고 관리하는 방법을 설명합니다.
+이 문서에서는 SQL Server 2019 빅 데이터 클러스터 내에서 R 및 Python 스크립트를 응용 프로그램으로 배포 하 고 관리 하는 방법을 설명 합니다.
 
 ## <a name="whats-new-and-improved"></a>새로운 기능 및 향상된 기능
 
 - 클러스터와 앱을 관리하기 위한 단일 명령줄 유틸리티
 - 사양 파일을 통해 세부적인 제어 기능을 제공하는 동시에 간소화된 앱 배포
-- 추가 애플리케이션 유형 호스트 지원 - SSIS 및 MLeap(CTP 2.3의 새로운 기능)
-- 애플리케이션 배포를 관리하기 위한 [VS Code 확장](app-deployment-extension.md)
+- 추가 응용 프로그램 형식 호스팅 지원-SSIS 및 MLeap (CTP 2.3의 새로운 기능)
+- 응용 프로그램 배포를 관리 하기 위한 [확장을 Visual Studio Code](app-deployment-extension.md) 합니다.
 
-애플리케이션은 `azdata` 명령줄 유틸리티를 사용하여 배포 및 관리합니다. 이 문서에서는 명령줄에서 앱을 배포하는 방법의 예제를 제공합니다. Visual Studio Code에서 사용하는 방법에 대한 자세한 내용은 [VS Code 확장](app-deployment-extension.md)을 참조하세요.
+애플리케이션은 `azdata` 명령줄 유틸리티를 사용하여 배포 및 관리합니다. 이 문서에서는 명령줄에서 앱을 배포하는 방법의 예제를 제공합니다. 에서이를 사용 하는 방법에 대 한 자세한 내용은 [Visual Studio Code 확장](app-deployment-extension.md)을 참조 Visual Studio Code.
 
 지원되는 앱 유형은 다음과 같습니다.
-- R 및 Python 앱(함수, 모델, 앱)
+- R 및 Python 앱 (함수, 모델 및 앱)
 - MLeap Serving
 - SSIS(SQL Server Integration Services)
 
@@ -45,7 +45,7 @@ ms.locfileid: "68419488"
 
 SQL Server 2019(미리 보기)에서 애플리케이션을 만들고, 삭제, 설명, 초기화, 나열, 실행 및 업데이트할 수 있습니다. 다음 표에서는 **azdata**와 함께 사용할 수 있는 애플리케이션 배포 명령을 설명합니다.
 
-|Command |설명 |
+|명령 |설명 |
 |:---|:---|
 |`azdata login` | SQL Server 빅 데이터 클러스터에 로그인합니다. |
 |`azdata app create` | 애플리케이션을 만듭니다. |
@@ -74,16 +74,16 @@ azdata login --controller-endpoint https://<ip-address-of-controller-svc-externa
 
 ## <a name="aks"></a>AKS
 
-AKS를 사용하는 경우 bash 또는 cmd 창에서 다음 명령을 실행하여 `mgmtproxy-svc-external` 서비스의 IP 주소를 가져와야 합니다.
+AKS를 사용하는 경우 bash 또는 cmd 창에서 다음 명령을 실행하여 `controller-svc-external` 서비스의 IP 주소를 가져와야 합니다.
 
 
 ```bash
-kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
+kubectl get svc controller-svc-external -n <name of your big data cluster>
 ```
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm 또는 Minikube
 
-Kubeadm 또는 Minikube를 사용하는 경우 다음 명령을 실행하여 클러스터에 로그인하는 데 사용할 IP 주소를 가져옵니다.
+Kubeadm 또는 Minikube를 사용 하는 경우 다음 명령을 실행 하 여 클러스터에 로그인 하는 데 사용할 IP 주소를 가져옵니다.
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -105,19 +105,19 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-이 명령은 애플리케이션이 `addpy` 폴더에 저장되어 있다고 가정합니다. 이 폴더에는 `spec.yaml`이라는 애플리케이션 사양 파일도 들어 있어야 합니다. `spec.yaml` 파일에 대한 자세한 내용은 [애플리케이션 배포 페이지](concept-application-deployment.md)를 참조하세요.
+이 명령은 애플리케이션이 `addpy` 폴더에 저장되어 있다고 가정합니다. 이 폴더에는 `spec.yaml`이라는 애플리케이션 사양 파일도 들어 있어야 합니다. `spec.yaml` 파일에 대 한 자세한 내용은 [응용 프로그램 배포 페이지를](concept-application-deployment.md) 참조 하세요.
 
 이 샘플 앱을 배포하려면 `addpy`라는 디렉터리에 다음 파일을 만듭니다.
 
-- `add.py`입니다. 다음 Python 코드를 이 파일에 복사합니다.
+- `add.py`. 다음 Python 코드를 이 파일에 복사합니다.
    ```py
    #add.py
-   def add(x,y):
-        result = x+y
-        return result
-    result=add(x,y)
+  def add(x, y):
+    result = x+y
+    return result
+  result=add(x,y)
    ```
-- `spec.yaml`입니다. 다음 코드를 이 파일에 복사합니다.
+- `spec.yaml`. 다음 코드를 이 파일에 복사합니다.
    ```yaml
    #spec.yaml
    name: add-app #name of your python script
@@ -218,7 +218,7 @@ azdata app run --name <app_name> --version <app_version> --inputs <inputs_params
 azdata app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
-실행이 성공적으로 완료되면 앱을 만들 때 지정한 대로 출력됩니다. 다음은 이에 대한 예입니다.
+실행이 성공적으로 완료되면 앱을 만들 때 지정한 대로 출력됩니다. 다음은 예제입니다.
 
 ```json
 {
@@ -241,7 +241,7 @@ init 명령은 앱을 배포하는 데 필요한 관련 아티팩트와 함께 �
 azdata app init --name hello --version v1 --template python
 ```
 
-이렇게 하면 hello라는 폴더가 만들어집니다.  디렉터리로 `cd`하고 폴더에 생성된 파일을 검사할 수 있습니다. spec.yaml은 이름, 버전, 소스 코드와 같은 앱을 정의합니다. 사양을 편집하여 이름, 버전, 입력 및 출력을 변경할 수 있습니다.
+이렇게 하면 hello라는 폴더가 만들어집니다.  디렉터리로 `cd`하고 폴더에 생성된 파일을 검사할 수 있습니다. 사양. yaml은 이름, 버전 및 소스 코드와 같은 앱을 정의 합니다. 사양을 편집 하 여 이름, 버전, 입력 및 출력을 변경할 수 있습니다.
 
 다음은 폴더에 표시되는 init 명령의 샘플 출력입니다.
 
@@ -270,8 +270,8 @@ describe 명령은 클러스터의 엔드포인트를 포함하여 앱에 대한
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+    "app": "https://10.1.1.3:30080/api/app/add-app/v1",
+    "swagger": "https://10.1.1.3:30080/api/app/add-app/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -295,6 +295,6 @@ azdata app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터에 배포된 앱을 고유한 애플리케이션에 통합하는 방법을 살펴봅니다. 자세한 내용은 [빅 데이터 클러스터에서 애플리케이션 사용](big-data-cluster-consume-apps.md)을 참조하세요. [앱 배포 샘플](https://aka.ms/sql-app-deploy)에서 추가 샘플을 확인할 수도 있습니다.
+자세한 내용은 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] [빅 데이터 클러스터에서 응용 프로그램 사용](big-data-cluster-consume-apps.md) 에서 응용 프로그램에 배포 된 앱을 통합 하는 방법을 알아봅니다. [앱 배포 샘플](https://aka.ms/sql-app-deploy)에서 추가 샘플을 확인할 수도 있습니다.
 
-SQL Server 빅 데이터 클러스터에 대한 자세한 내용은 [SQL Server 2019 빅 데이터 클러스터란?](big-data-cluster-overview.md)을 참조하세요.
+에 대 한 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]자세한 내용은 [무엇 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]인가요?](big-data-cluster-overview.md)를 참조 하세요.

@@ -1,22 +1,22 @@
 ---
 title: Spark 애플리케이션 디버그/진단
 titleSuffix: SQL Server big data clusters
-description: Spark 기록 서버를 사용하여 SQL Server 2019 빅 데이터 클러스터에서 실행되는 Spark 애플리케이션을 디버그하고 진단할 수 있습니다.
+description: Spark 기록 서버를 사용 하 여에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]실행 중인 spark 응용 프로그램을 디버그 하 고 진단할 수 있습니다.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: abf6b2b3383377a0647f873a8c4a1f6aa9508455
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 9df4f83d319c7d37dd438bcc6a787b4939757e47
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028552"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653670"
 ---
-# <a name="debug-and-diagnose-spark-applications-on-sql-server-big-data-clusters-in-spark-history-server"></a>Spark 기록 서버에서 SQL Server 빅 데이터 클러스터의 Spark 애플리케이션 디버그 및 진단
+# <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Spark 기록 서버 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 에서 spark 응용 프로그램 디버그 및 진단
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -203,5 +203,5 @@ Spark 기록 서버에는 다음과 같은 알려진 문제가 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-* [SQL Server 빅 데이터 클러스터 시작](https://docs.microsoft.com/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
+* [시작 하기[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/en-us/sql/big-data-cluster/deploy-get-started?view=sqlallproducts-allversions)
 * [Spark 설정 구성](https://docs.microsoft.com/azure/hdinsight/spark/apache-spark-settings)

@@ -1,22 +1,22 @@
 ---
 title: 배포 지침
 titleSuffix: SQL Server big data clusters
-description: Kubernetes에 SQL Server 2019 빅 데이터 클러스터(미리 보기)를 배포하는 방법을 알아봅니다.
+description: Kubernetes에서 (미리 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 보기)를 배포 하는 방법에 대해 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 1520254a8a7817db612bf5e42706113495a832de
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995831"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652353"
 ---
-# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes에 SQL Server 빅 데이터 클러스터를 배포하는 방법
+# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Kubernetes에 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -39,7 +39,7 @@ SQL Server 2019 빅 데이터 클러스터를 배포하기 전에 먼저 [빅 �
 
 ## <a id="prereqs"></a> Kubernetes 필수 조건
 
-SQL Server 빅 데이터 클러스터를 사용하려면 서버 및 클라이언트(kubectl)에서 모두, Kubernetes 버전 v 1.10 이상이 필요합니다.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]서버 및 클라이언트 모두에 대해 최소 Kubernetes 버전 (kubectl)이 필요 합니다.
 
 > [!NOTE]
 > 클라이언트 및 서버 Kubernetes 버전은 바로 이전 또는 이후 부 버전 이내여야 합니다. 자세한 내용은 [Kubernetes 릴리스 정보 및 버전 기울이기 SKU 정책](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)을 참조하세요.
@@ -67,7 +67,7 @@ SQL Server 빅 데이터 클러스터를 사용하려면 서버 및 클라이언
 kubectl config view
 ```
 
-Kubernetes 클러스터를 구성한 후에는 새로운 SQL Server 빅 데이터 클러스터의 배포를 진행할 수 있습니다. 이전 릴리스에서 업그레이드하는 경우 [SQL Server 빅 데이터 클러스터를 업그레이드하는 방법](deployment-upgrade.md)을 참조하세요.
+Kubernetes 클러스터를 구성한 후에는 새로운 SQL Server 빅 데이터 클러스터의 배포를 진행할 수 있습니다. 이전 릴리스에서 업그레이드 하는 경우 [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]업그레이드 하는 방법 ](deployment-upgrade.md)을 참조 하세요.
 
 ## <a id="deploy"></a> 배포 개요
 
@@ -201,7 +201,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> 빅 데이터 클러스터 구성 요소의 컨테이너 이미지를 다운로드하는 데 필요한 시간 때문에 전체 배포는 시간이 오래 걸릴 수 있습니다. 그러나 몇 시간이 걸리면 안 됩니다. 배포에서 문제가 발생하는 경우 [SQL Server 빅 데이터 클러스터 모니터링 및 문제 해결](cluster-troubleshooting-commands.md)을 참조하세요.
+> 빅 데이터 클러스터 구성 요소의 컨테이너 이미지를 다운로드하는 데 필요한 시간 때문에 전체 배포는 시간이 오래 걸릴 수 있습니다. 그러나 몇 시간이 걸리면 안 됩니다. 배포에 문제가 발생 하는 경우 [모니터링 및 문제 해결 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)을 참조 하세요.
 
 배포가 완료되면 출력에 성공 알림이 표시됩니다.
 
@@ -314,4 +314,4 @@ Storage  default        Ready
 
 - [빅 데이터 클러스터의 배포 설정 구성](deployment-custom-configuration.md)
 - [SQL Server 빅 데이터 클러스터의 오프라인 배포 수행](deploy-offline.md)
-- [워크샵: Microsoft SQL Server 빅 데이터 클러스터 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [워크샵: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

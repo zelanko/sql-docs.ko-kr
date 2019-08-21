@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 75ef22eb7e06fa1f8d4d2a0d9c754959f1bb1ae4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1f6d828a7267ab2b4b1def17f9d1c6bf4a6018dc
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715018"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633614"
 ---
 # <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>R 패키지 관리자를 사용 하 여 SQL Server에 R 패키지 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68715018"
 
 ## <a name="install-a-package-using-rgui"></a>RGui를 사용 하 여 패키지 설치
 
-1. [인스턴스 라이브러리의 위치를 확인](../package-management/default-packages.md)합니다. R 도구가 설치 된 폴더로 이동 합니다. 예를 들어 SQL Server 2017 기본 인스턴스의 기본 경로는 다음과 같습니다.`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [인스턴스 라이브러리의 위치를 확인](../package-management/r-package-information.md)합니다. R 도구가 설치 된 폴더로 이동 합니다. 예를 들어 SQL Server 2017 기본 인스턴스의 기본 경로는 다음과 같습니다.`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
 1. RGui .exe를 마우스 오른쪽 단추로 클릭 하 고 **관리자 권한으로 실행**을 선택 합니다. 필요한 권한이 없는 경우 데이터베이스 관리자에 게 문의 하 여 필요한 패키지 목록을 제공 합니다.
 

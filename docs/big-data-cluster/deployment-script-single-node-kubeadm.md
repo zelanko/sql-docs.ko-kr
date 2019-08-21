@@ -1,20 +1,20 @@
 ---
 title: bash 스크립트를 사용하여 단일 노드 kubeadm 클러스터에 배포
 titleSuffix: SQL Server big data clusters
-description: bash 배포 스크립트를 사용하여 단일 노드 kubeadm 클러스터에 SQL Server 2019 빅 데이터 클러스터(미리 보기)를 배포합니다.
+description: Bash 배포 스크립트를 사용 하 여 단일 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 노드 kubeadm 클러스터에를 배포 합니다.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 09f1d487e82f1e57762a0949f20bf9d43e40abfc
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715892"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652347"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>bash 스크립트를 사용하여 단일 노드 kubeadm 클러스터에 배포
 

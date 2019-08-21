@@ -1,29 +1,29 @@
 ---
 title: python 스크립트를 사용하여 배포
 titleSuffix: SQL Server big data clusters
-description: 배포 스크립트를 사용하여 AKS(Azure Kubernetes Service)에 SQL Server 2019 빅 데이터 클러스터(미리 보기)를 배포하는 방법을 알아봅니다.
+description: 배포 스크립트 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 를 사용 하 여 Azure Kubernetes 서비스 (AKS)에 배포 (미리 보기) 하는 방법에 대해 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: dee1c8669e6496553c367b4d1078d1e6a7f26497
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1bd3af32448bfce7dc584ac630d503e4cf63b286
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470715"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653234"
 ---
 # <a name="use-a-python-script-to-deploy-a-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>python 스크립트를 사용하여 AKS(Azure Kubernetes Service)에 SQL Server 빅 데이터 클러스터 배포
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 자습서에서는 샘플 python 배포 스크립트를 사용하여 AKS(Azure Kubernetes Service)에 SQL Server 2019 빅 데이터 클러스터(미리 보기)를 배포합니다.
+이 자습서에서는 샘플 python 배포 스크립트를 사용 하 여 Azure Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Service (AKS)에 배포 합니다.
 
 > [!TIP]
-> AKS는 빅 데이터 클러스터를 위해 Kubernetes를 호스트하는 옵션 중 하나일 뿐입니다. 다른 배포 옵션 및 배포 옵션을 사용자 지정하는 방법에 대한 자세한 내용은 [Kubernetes에 SQL Server 빅 데이터 클러스터를 배포하는 방법](deployment-guidance.md)을 참조하세요.
+> AKS는 빅 데이터 클러스터를 위해 Kubernetes를 호스트하는 옵션 중 하나일 뿐입니다. 다른 배포 옵션 및 배포 옵션을 사용자 지정 하는 방법에 대해 알아보려면 [Kubernetes에서 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법](deployment-guidance.md)을 참조 하세요.
 
 여기서 사용하는 기본 빅 데이터 클러스터 배포는 SQL 마스터 인스턴스 1개, 컴퓨팅 풀 인스턴스 1개, 데이터 풀 인스턴스 2개, 스토리지 풀 인스턴스 2개로 구성되어 있습니다. 데이터는 AKS 기본 스토리지 클래스를 사용하는 Kubernetes 영구적 볼륨을 사용하여 유지됩니다. 이 자습서에서 사용하는 기본 구성은 개발/테스트 환경에 적합합니다.
 
@@ -113,7 +113,7 @@ AKS 클러스터를 만든 후에 스크립트는 앞서 지정된 설정을 사
 ```
 
 > [!IMPORTANT]
-> 빅 데이터 클러스터 구성 요소의 컨테이너 이미지를 다운로드하는 데 필요한 시간 때문에 전체 배포는 시간이 오래 걸릴 수 있습니다. 그러나 몇 시간이 걸리면 안 됩니다. 배포에서 문제가 발생하는 경우 [SQL Server 빅 데이터 클러스터 모니터링 및 문제 해결](cluster-troubleshooting-commands.md)을 참조하세요.
+> 빅 데이터 클러스터 구성 요소의 컨테이너 이미지를 다운로드하는 데 필요한 시간 때문에 전체 배포는 시간이 오래 걸릴 수 있습니다. 그러나 몇 시간이 걸리면 안 됩니다. 배포에 문제가 발생 하는 경우 [모니터링 및 문제 해결 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)을 참조 하세요.
 
 ## <a name="inspect-the-cluster"></a>클러스터 검사
 
@@ -151,7 +151,7 @@ AKS 클러스터를 만든 후에 스크립트는 앞서 지정된 설정을 사
    ```
 
 > [!TIP]
-> 배포를 모니터링하고 문제를 해결하는 방법에 대한 자세한 내용은 [SQL Server 빅 데이터 클러스터 모니터링 및 문제 해결](cluster-troubleshooting-commands.md)을 참조하세요.
+> 배포를 모니터링 하 고 문제를 해결 하는 방법에 대 한 자세한 내용은 [모니터링 및 문제 해결 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](cluster-troubleshooting-commands.md)을 참조 하세요.
 
 ## <a name="connect-to-the-cluster"></a>클러스터에 연결
 
@@ -166,7 +166,7 @@ SQL Server 빅 데이터 클러스터가 AKS에 배포되었습니다. 이제 Az
 
 ## <a name="clean-up"></a>정리
 
-Azure에서 SQL Server 빅 데이터 클러스터를 테스트하는 경우 예기치 않은 요금이 청구되지 않도록, 작업이 완료되면 AKS 클러스터를 삭제해야 합니다. 계속 사용하려는 경우에는 클러스터를 제거하지 않습니다.
+Azure에서 테스트 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 경우 예기치 않은 요금을 방지 하기 위해 완료 되 면 AKS 클러스터를 삭제 해야 합니다. 계속 사용하려는 경우에는 클러스터를 제거하지 않습니다.
 
 > [!WARNING]
 > 다음 단계에서는 AKS 클러스터를 삭제하며, 따라서 SQL Server 빅 데이터 클러스터도 제거됩니다. 유지하려는 데이터베이스 또는 HDFS 데이터가 있는 경우 클러스터를 삭제하기 전에 해당 데이터를 백업합니다.
@@ -179,7 +179,7 @@ az group delete -n <resource group name>
 
 ## <a name="next-steps"></a>다음 단계
 
-배포 스크립트는 Azure Kubernetes Service를 구성하고 SQL Server 2019 빅 데이터 클러스터도 배포했습니다. 수동 설치를 통해 이후 배포를 사용자 지정할 수도 있습니다. 빅 데이터 클러스터를 배포하는 방법 및 배포를 사용자 지정하는 방법에 대한 자세한 내용은 [Kubernetes에 SQL Server 빅 데이터 클러스터를 배포하는 방법](deployment-guidance.md)을 참조하세요.
+배포 스크립트는 Azure Kubernetes Service를 구성하고 SQL Server 2019 빅 데이터 클러스터도 배포했습니다. 수동 설치를 통해 이후 배포를 사용자 지정할 수도 있습니다. 빅 데이터 클러스터를 배포 하는 방법 및 배포를 사용자 지정 하는 방법에 대 한 자세한 내용은 [Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 에서 배포 하는 방법](deployment-guidance.md)을 참조 하세요.
 
 이제 SQL Server 빅 데이터 클러스터가 배포되었으므로 샘플 데이터를 로드하고 자습서를 살펴볼 수 있습니다.
 

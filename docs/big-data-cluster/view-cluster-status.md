@@ -5,16 +5,16 @@ description: 이 문서에서는 Azure Data Studio, Notebook 및 azdata 명령�
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c6dca94b8bd7547222394d7809cb003b9e936982
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 028864712658e35913fa04fb1a85e4ca960ad573
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419293"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653278"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>빅 데이터 클러스터의 상태를 보는 방법
 
@@ -164,7 +164,7 @@ Storage  default        Ready
 [azdata bdc pool status show](reference-azdata-bdc-pool-status.md) 명령을 사용하여 클러스터의 풀 상태를 볼 수 있습니다. 이 명령을 사용하려면 `--kind` 매개 변수를 통해 풀 유형을 지정합니다. 풀 유형은 다음과 같습니다.
 
 - compute
-- data
+- 데이터
 - master
 - spark
 - storage
@@ -214,4 +214,4 @@ azdata bdc pool status show --kind storage
 
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터에 대한 자세한 내용은 [SQL Server 빅 데이터 클러스터란?](big-data-cluster-overview.md)을 참조하세요.
+빅 데이터 클러스터에 대 한 자세한 내용은 [항목 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)을 참조 하세요.

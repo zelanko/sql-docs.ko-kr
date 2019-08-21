@@ -1,22 +1,22 @@
 ---
 title: MLeap를 사용 하 여 Spark machine learning 모델 만들기 및 내보내기
 titleSuffix: SQL Server big data clusters
-description: PySpark를 사용 하 여 SQL Server 빅 데이터 클러스터 (미리 보기)에서 Spark를 사용 하 여 기계 학습 모델을 학습 하 고 만들 수 있습니다. MLeap를 사용 하 여 내보낸 다음 SQL Server의 Java를 사용 하 여 모델의 점수를 계산 합니다.
+description: PySpark를 사용 하 여 Spark에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 기계 학습 모델을 학습 하 고 만들 수 있습니다 (미리 보기). MLeap를 사용 하 여 내보낸 다음 SQL Server의 Java를 사용 하 여 모델의 점수를 계산 합니다.
 author: RogPodge
 ms.author: roliu
 ms.reviewer: mikeray
-ms.date: 07/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 91c9dad3c87b9c43a611293a549f782b85beec5c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: bba570a4ac68cf5a4d1405d4152669ed9ed211a0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893962"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653419"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터에서 Spark 기계 학습 모델 만들기, 내보내기 및 점수 매기기
+# <a name="create-export-and-score-spark-machine-learning-models-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>에서 Spark 기계 학습 모델 만들기, 내보내기 및 점수 매기기[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 다음 샘플에서는 [SPARK ML](https://spark.apache.org/docs/latest/ml-guide.html)을 사용 하 여 모델을 작성 하 고, 모델을 [mleap](http://mleap-docs.combust.ml/)로 내보내고, SQL Server에서 모델의 점수를 [Java 언어 확장과](../language-extensions/language-extensions-overview.md)함께 보여 줍니다. SQL Server 2019 빅 데이터 클러스터의 컨텍스트에서 수행 됩니다.
 
@@ -51,7 +51,7 @@ ms.locfileid: "68893962"
 
    이 노트북에는 샘플의이 섹션에 필요한 명령이 포함 된 셀이 포함 되어 있습니다.
 
-1. Azure Data Studio에서 노트북을 열고 각 코드 블록을 실행 합니다. 노트북 작업에 대 한 자세한 내용은 [SQL Server 2019 미리 보기에서 노트북을 사용 하는 방법](notebooks-guidance.md)을 참조 하세요.
+1. Azure Data Studio에서 노트북을 열고 각 코드 블록을 실행 합니다. Notebook 사용 방법에 대한 자세한 내용은 [SQL Server 2019 미리 보기에서 Notebook을 사용하는 방법](notebooks-guidance.md)을 참조하세요.
 
 먼저 데이터를 Spark로 읽어서 학습 및 테스트 데이터 집합으로 분할 합니다. 그런 다음 코드는 학습 데이터를 사용 하 여 파이프라인 모델을 학습 합니다. 마지막으로, 모델을 MLeap 번들로 내보냅니다.
 
@@ -68,4 +68,4 @@ ms.locfileid: "68893962"
 
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터에 대 한 자세한 내용은 [Kubernetes에서 빅 데이터 클러스터 SQL Server 배포 하는 방법](deployment-guidance.md) 을 참조 하세요.
+빅 데이터 클러스터에 대 한 자세한 내용은 [Kubernetes에서 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법](deployment-guidance.md) 을 참조 하세요.

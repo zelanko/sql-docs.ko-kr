@@ -5,20 +5,20 @@ description: SQL Server 빅 데이터 클러스터의 오프라인 배포를 수
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd8b3128fc11037a5ade494813611d473c995f8f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419372"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652364"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 오프라인 배포 수행
 
-이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)의 오프라인 배포를 수행하는 방법을 설명합니다. 빅 데이터 클러스터가 컨테이너 이미지를 끌어올 Docker 리포지토리에 액세스할 수 있어야 합니다. 오프라인 설치는 필요한 이미지가 프라이빗 Docker 리포지토리에 저장되는 설치입니다. 그런 다음, 해당 프라이빗 리포지토리가 새 배포의 이미지 원본으로 사용됩니다.
+이 문서에서는의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]오프 라인 배포를 수행 하는 방법을 설명 합니다. 빅 데이터 클러스터가 컨테이너 이미지를 끌어올 Docker 리포지토리에 액세스할 수 있어야 합니다. 오프라인 설치는 필요한 이미지가 프라이빗 Docker 리포지토리에 저장되는 설치입니다. 그런 다음, 해당 프라이빗 리포지토리가 새 배포의 이미지 원본으로 사용됩니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -171,4 +171,4 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터 배포에 대한 자세한 내용은 [Kubernetes에 SQL Server 빅 데이터 클러스터를 배포하는 방법](deployment-guidance.md)을 참조하세요.
+빅 데이터 클러스터 배포에 대 한 자세한 내용은 [Kubernetes에서 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법](deployment-guidance.md)을 참조 하세요.

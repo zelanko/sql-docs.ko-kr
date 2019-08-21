@@ -1,28 +1,31 @@
 ---
 title: 릴리스 정보
 titleSuffix: SQL Server big data clusters
-description: 이 문서에서는 SQL Server 2019 빅 데이터 클러스터(미리 보기)의 최신 업데이트 및 알려진 문제를 설명합니다.
+description: 이 문서에서는 (미리 보기)의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 최신 업데이트 및 알려진 문제에 대해 설명 합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7951c79fa457ffa47a2c2a7089c71256d870628b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476249"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653433"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server 빅 데이터 클러스터의 릴리스 정보
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에는 SQL Server 빅 데이터 클러스터 최신 릴리스의 업데이트 및 알려진 문제가 나와 있습니다.
+이 문서에서는 최신 버전의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대 한 업데이트 및 알려진 문제를 나열 합니다.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+>[!NOTE]
+>[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a id="ctp32"></a>CTP 3.2(7월)
 
@@ -32,7 +35,7 @@ ms.locfileid: "68476249"
 
 |새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
-|퍼블릭 미리 보기 |CTP 3.2 이전에는 등록한 얼리어답터가 SQL Server 빅 데이터 클러스터를 사용할 수 있었습니다. 이번 릴리스에서는 누구나 빅 데이터 클러스터 SQL Server 기능을 경험할 수 있습니다. <br/><br/> [SQL Server 빅 데이터 클러스터 시작](deploy-get-started.md)을 참조하세요.|
+|퍼블릭 미리 보기 |CTP 3.2 이전에는 등록한 얼리어답터가 SQL Server 빅 데이터 클러스터를 사용할 수 있었습니다. 이번 릴리스에서는 누구나 빅 데이터 클러스터 SQL Server 기능을 경험할 수 있습니다. <br/><br/> [시작 하기를 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md)참조 하세요.|
 |`azdata` |CTP 3.2는 클러스터 관리자가 REST API를 통해 빅 데이터 클러스터를 부트스트랩하고 관리할 수 있도록 하는 Python으로 작성된 `azdata` 명령줄 유틸리티를 도입했습니다. `azdata`는 `mssqlctl`을 대신합니다. [`azdata` 설치](deploy-install-azdata.md)를 참조하세요. |
 |PolyBase |이제 외부 테이블 열 이름이 SQL Server, Oracle, Teradata, MongoDB 및 ODBC 데이터 원본을 쿼리하는 데 사용됩니다. 이전 CTP 릴리스에서는 외부 데이터 원본의 열이 전적으로 서수 위치에 따라 바인딩되고 EXTERNAL TABLE 정의에 지정된 이름이 사용되지 않았습니다. |
 |HDFS 계층화 새로 고침 |원격 데이터의 최신 스냅숏에 대해 기존 탑재를 새로 고칠 수 있도록 HDFS 계층화의 새로 고침 기능을 도입합니다. [HDFS 계층화](hdfs-tiering.md)를 참조하세요. |
@@ -132,7 +135,7 @@ ms.locfileid: "68476249"
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>응용 프로그램 개발
+#### <a name="application-deployment"></a>애플리케이션 배포
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 
@@ -236,7 +239,7 @@ ms.locfileid: "68476249"
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>응용 프로그램 개발
+#### <a name="application-deployment"></a>애플리케이션 배포
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 
@@ -314,7 +317,7 @@ ms.locfileid: "68476249"
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>응용 프로그램 개발
+#### <a name="application-deployment"></a>애플리케이션 배포
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 
@@ -353,7 +356,7 @@ ms.locfileid: "68476249"
 | Spark에서 TensorFlow를 사용하여 딥 러닝을 실행하기 위한 GPU 지원 지침. | [GPU 지원이 포함된 빅 데이터 클러스터를 배포하고 TensorFlow를 실행](spark-gpu-tensorflow.md)합니다. |
 | **SqlDataPool** 및 **SqlStoragePool** 데이터 원본은 더 이상 기본적으로 생성되지 않습니다. | 필요에 따라 수동으로 만듭니다. [알려진 문제](#externaltablesctp24)를 참조하세요. |
 | `INSERT INTO SELECT`가 데이터 풀을 지원합니다. | 예제를 보려면 [ 자습서: Transact-SQL을 사용하여 SQL Server 데이터 풀에 데이터 수집](tutorial-data-pool-ingest-sql.md)을 참조하세요. |
-| `FORCE SCALEOUTEXECUTION` 및 `DISABLE SCALEOUTEXECUTION` 옵션. | 외부 테이블에 대한 쿼리에 컴퓨팅 풀을 강제로 사용하거나 사용하지 않도록 설정합니다. `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`)을 입력합니다. |
+| `FORCE SCALEOUTEXECUTION` 및 `DISABLE SCALEOUTEXECUTION` 옵션. | 외부 테이블에 대한 쿼리에 컴퓨팅 풀을 강제로 사용하거나 사용하지 않도록 설정합니다. `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` )을 입력합니다. |
 | AKS 배포 권장 사항을 업데이트합니다. | AKS에서 빅 데이터 클러스터를 평가할 때 이제 **Standard_L8s** 크기의 단일 노드를 사용하는 것이 좋습니다. |
 | Spark 런타임을 Spark 런타임 2.4로 업그레이드합니다. | |
 
@@ -445,7 +448,7 @@ make: *** [deploy-clean] Error 2
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>응용 프로그램 개발
+#### <a name="application-deployment"></a>애플리케이션 배포
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 
@@ -481,9 +484,9 @@ make: *** [deploy-clean] Error 2
 
 | 새로운 기능 또는 업데이트 | 세부 정보 |
 | :---------- | :------ |
-| IntelliJ의 빅 데이터 클러스터에 Spark 작업을 제출합니다. | [IntelliJ의 SQL Server 빅 데이터 클러스터에 Spark 작업 제출](spark-submit-job-intellij-tool-plugin.md) |
-| 애플리케이션 배포 및 클러스터 관리를 위한 일반 CLI. | [SQL Server 2019 빅 데이터 클러스터에 앱을 배포하는 방법(미리 보기)](big-data-cluster-create-apps.md) |
-| 애플리케이션을 빅 데이터 클러스터에 배포하기 위한 VS Code 확장. | [VS Code를 사용하여 SQL Server 빅 데이터 클러스터에 애플리케이션을 배포하는 방법](app-deployment-extension.md) |
+| IntelliJ의 빅 데이터 클러스터에 Spark 작업을 제출합니다. | [IntelliJ의에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark 작업 제출](spark-submit-job-intellij-tool-plugin.md) |
+| 애플리케이션 배포 및 클러스터 관리를 위한 일반 CLI. | [앱을 배포 하는 방법[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
+| 애플리케이션을 빅 데이터 클러스터에 배포하기 위한 VS Code 확장. | [VS Code를 사용 하 여 응용 프로그램을 배포 하는 방법[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | **azdata** 도구 명령 사용법 변경 | 자세한 내용은 [azdata의 알려진 문제](#azdatactp23)를 참조하세요. |
 | 빅 데이터 클러스터에서 Sparklyr 사용 | [SQL Server 2019 빅 데이터 클러스터에서 Sparklyr 사용](sparklyr-from-RStudio.md) |
 | **HDFS 계층화**를 통해 빅 데이터 클러스터에 외장 HDFS 호환 스토리지를 탑재합니다. | [HDFS 계층화](hdfs-tiering.md)를 참조하세요 |
@@ -567,7 +570,7 @@ kubeadm을 사용하여 여러 머신에 Kubernetes를 배포하는 경우 빅 �
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>응용 프로그램 개발
+#### <a name="application-deployment"></a>애플리케이션 배포
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 
@@ -676,7 +679,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>알려진 문제
 
-다음 섹션에서는 CTP 2.1 SQL Server 빅 데이터 클러스터의 알려진 문제를 제공합니다.
+다음 섹션에서는 CTP 2.1의에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 대 한 알려진 문제를 제공 합니다.
 
 #### <a name="deployment"></a>배포
 
@@ -751,7 +754,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>알려진 문제
 
-다음 섹션에서는 CTP 2.0 SQL Server 빅 데이터 클러스터의 알려진 문제를 제공합니다.
+다음 섹션에서는 CTP 2.0의에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 대 한 알려진 문제를 제공 합니다.
 
 #### <a name="deployment"></a>배포
 
@@ -801,4 +804,4 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ## <a name="next-steps"></a>다음 단계
 
-SQL Server 빅 데이터 클러스터에 대한 자세한 내용은 [SQL Server 2019 빅 데이터 클러스터란?](big-data-cluster-overview.md)을 참조하세요.
+에 대 한 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]자세한 내용은 [무엇 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]인가요?](big-data-cluster-overview.md)를 참조 하세요.

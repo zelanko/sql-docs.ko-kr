@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e15e56dfb4a27f0a99262ff1f105ceb0a1fbc294
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 5b2629a50a73208181cc14fd843cd9ab9c0b05df
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715383"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633603"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>자습서: SQL 개발자를 위한 R 데이터 분석
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ SQL 프로그래머를 위한이 자습서에서는 SQL Server에서 [NYCTaxi_sa
 
 + [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md#verify-installation) 또는 [r을 사용 하는 SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [R 라이브러리](../package-management/installed-package-information.md)
++ [R 라이브러리](../package-management/r-package-information.md)
 
 + [사용 권한](../security/user-permission.md)
 

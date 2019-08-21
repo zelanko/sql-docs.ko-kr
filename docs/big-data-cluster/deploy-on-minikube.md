@@ -1,26 +1,26 @@
 ---
 title: minikube 구성
 titleSuffix: SQL Server big data clusters
-description: 단일 머신에서 SQL Server 2019 빅 데이터 클러스터(미리 보기) 배포에 대해 minikube를 구성하는 방법을 알아봅니다.
+description: 단일 컴퓨터에서 배포에 대해 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] minikube를 구성 하는 방법에 대해 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1991176de132062c46f36f30f4f384e483c069f9
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: b2022fe6ad8a0aa23c4dd7d917e925ae1daba572
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969419"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652402"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대해 minikube 구성
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 단일 머신에서 SQL Server 2019 빅 데이터 클러스터(미리 보기) 배포에 대해 **minikube**를 구성하는 방법을 설명합니다. minikube는 노트북 또는 데스크톱과 같은 단일 머신에서 Kubernetes를 간편하게 실행할 수 있는 도구입니다. minikube는 Kubernetes를 사용해 보거나 일상적인 개발 작업에 이용하려는 사용자를 위해 노트북의 VM 내에서 단일 노드 Kubernetes 클러스터를 실행합니다. 
+이 문서에서는 단일 컴퓨터 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 에서 배포 하도록 **minikube** 를 구성 하는 방법을 설명 합니다. minikube는 노트북 또는 데스크톱과 같은 단일 머신에서 Kubernetes를 간편하게 실행할 수 있는 도구입니다. minikube는 Kubernetes를 사용해 보거나 일상적인 개발 작업에 이용하려는 사용자를 위해 노트북의 VM 내에서 단일 노드 Kubernetes 클러스터를 실행합니다. 
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
@@ -41,7 +41,7 @@ ms.locfileid: "68969419"
 
 ## <a name="install-minikube"></a>minikube 설치
 
-[V 1.3.0 릴리스에](https://github.com/kubernetes/minikube/releases/tag/v1.3.0)대 한 지침에 따라 minikube 릴리스를 설치 합니다. SQL Server 2019 빅 데이터 클러스터 (미리 보기)는 버전 v 1.0.0 이상 에서만 작동 합니다.
+[V 1.3.0 릴리스에](https://github.com/kubernetes/minikube/releases/tag/v1.3.0)대 한 지침에 따라 minikube 릴리스를 설치 합니다. 는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 버전 v 1.0.0 이상 에서만 작동 합니다.
 
 ## <a name="create-a-minikube-cluster"></a>minikube 클러스터 만들기
 
@@ -71,4 +71,4 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 이 문서의 단계에서는 minikube 클러스터를 구성했습니다. 다음 단계는 SQL Server 2019 빅 데이터 클러스터를 배포하는 것입니다. 자세한 내용은 다음 문서를 참조하세요.
 
-[Kubernetes에 SQL Server 2019 빅 데이터 클러스터 배포](deployment-guidance.md#deploy)
+[Kubernetes [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 에 배포](deployment-guidance.md#deploy)
