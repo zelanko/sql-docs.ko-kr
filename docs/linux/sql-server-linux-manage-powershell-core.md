@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
-ms.openlocfilehash: d8d0675bbb7ebbedc9d1efec29fff8854670c10f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e37237224dd9e8a6b44b913914c43d29cbc25d21
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952532"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028719"
 ---
 # <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core를 사용하여 SQL Server on Linux 관리
 
@@ -198,7 +198,7 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 ```
 
 ## <a name="explore-cmdlets-currently-available-in-ps-core"></a>현재 PS Core에서 사용할 수 있는 cmdlet 살펴보기
-SqlServer 모듈에는 현재 Windows PowerShell에서 사용할 수 있는 106개 cmdlet이 있지만 PSCore에서는 106개 중 59개만 사용할 수 있습니다. 현재 사용할 수 있는 59개 cmdlet의 전체 목록은 아래와 같습니다.  Sqlserver 모듈의 모든 cmdlet에 대한 자세한 설명서는 SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/)(cmdlet 참조)를 참조하세요.
+SqlServer 모듈에는 현재 Windows PowerShell에서 사용할 수 있는 109개 cmdlet이 있지만 PSCore에서는 109개 중 62개만 사용할 수 있습니다. 현재 사용할 수 있는 59개 cmdlet의 전체 목록은 아래와 같습니다.  Sqlserver 모듈의 모든 cmdlet에 대한 자세한 설명서는 SqlServer [cmdlet reference](https://docs.microsoft.com/powershell/module/sqlserver/)(cmdlet 참조)를 참조하세요.
 
 다음 명령을 실행하면 사용 중인 PowerShell 버전에서 사용할 수 있는 모든 cmdlet이 표시됩니다.
 
@@ -216,6 +216,8 @@ SELECT Name
 - Get-SqlAgentJobSchedule
 - Get-SqlAgentJobStep
 - Get-SqlAgentSchedule
+- Invoke-SqlAssessment
+- Get-SqlAssessmentItem
 - Remove-SqlAvailabilityDatabase
 - Resume-SqlAvailabilityDatabase
 - Add-SqlAvailabilityDatabase
@@ -266,6 +268,7 @@ SELECT Name
 - Read-SqlTableData
 - Write-SqlTableData
 - Read-SqlViewData
+- Read-SqlXEvent
 - Convert-UrnToPath
 
 ## <a name="see-also"></a>관련 항목:

@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9538ad04a6e9e1e95a1fafc1080d132e218a196d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 770b7d3d9a16adf64134ba6896c7c3a1f46dcc9b
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062206"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561124"
 ---
 # <a name="install-polybase-on-windows"></a>Windows에 PolyBase 설치
 
@@ -72,6 +72,9 @@ PolyBase를 독립 실행형 또는 스케일 아웃 그룹에 설치한 후에�
 3. 기능 선택 페이지에서 **외부 데이터용 PolyBase 쿼리 서비스**를 선택합니다.  
 
    ![PolyBase 서비스](../../relational-databases/polybase/media/install-wizard.png "PolyBase services")  
+   
+   >[!NOTE]
+   >SQL Server 2019 PolyBase에는 추가적인 **HDFS 데이터 원본용 Java 커넥터** 옵션이 포함되어 있습니다. 이 기능에 대한 자세한 내용은 [SQL Server 미리 보기 기능](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/)을 참조하세요.
    
 4. 서버 구성 페이지에서 **SQL Server PolyBase 엔진 서비스** 및 **SQL Server PolyBase 데이터 이동 서비스**를 구성하여 동일한 도메인 계정 하에서 실행합니다.  
 

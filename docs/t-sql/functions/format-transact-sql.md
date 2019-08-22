@@ -17,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: = azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 7b53865a753cb538ebeb42573e473281057d4201
-ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
+ms.openlocfilehash: 33f7c840b69e8101c3452d33884015b52a031212
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67556908"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969421"
 ---
 # <a name="format-transact-sql"></a>FORMAT(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지정된 형식 및 선택적 culture로 서식이 지정된 값을 반환합니다. 날짜/시간 및 숫자 값을 문자열로 지정하는 로캘 인식 서식 지정에 FORMAT 함수를 사용합니다. 일반 데이터 형식 변환의 경우 CAST나 CONVERT를 사용합니다.  
+지정된 형식 및 선택적 문화권으로 서식이 지정된 값을 반환합니다. 날짜/시간 및 숫자 값을 문자열로 지정하는 로캘 인식 서식 지정에 FORMAT 함수를 사용합니다. 일반 데이터 형식 변환의 경우 CAST나 CONVERT를 사용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

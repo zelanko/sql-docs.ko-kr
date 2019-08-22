@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc5daa2f-0159-4bda-9402-c87f1035a96f
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 32b01cce82cd1fd2af018b002a3c551ea480c000
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b3856f1f651db485aa9e54758c2d2a92ebf2ea0a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897985"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028779"
 ---
 # <a name="adonet-connection-manager"></a>ADO.NET 연결 관리자
 
@@ -89,6 +89,9 @@ ms.locfileid: "67897985"
 ### <a name="managed-identities-for-azure-resources-authentication"></a>Azure 리소스 인증을 위한 관리 ID
 [Azure Data Factory의 Azure-SSIS 통합 런타임](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)에 대해 SSIS 패키지를 실행하는 경우 Azure SQL Database(또는 Managed Instance) 인증을 위해 데이터 팩터리와 연결된 [관리 ID](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity)를 사용할 수 있습니다. 지정된 팩터리는 이 ID를 사용하여 데이터베이스에 액세스하고 해당 데이터베이스에 대해 데이터를 복사할 수 있습니다.
 
+> [!NOTE]
+>  Azure AD 인증(관리 ID 인증 포함)을 사용하여 Azure SQL Database(또는 Managed Instance)에 연결하는 경우 패키지 실행 실패 또는 예기치 않은 동작 변경을 야기할 수 있는 알려진 이슈가 발생합니다. 자세한 내용은 [Azure AD 기능 및 제한](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)을 참조하세요.
+
 Azure SQL Database에 대해 관리 ID 인증을 사용하려면 아래 단계를 수행하여 데이터베이스를 구성합니다.
 
 1. **Azure AD에 그룹을 만듭니다.** 관리 ID를 그룹의 멤버로 만듭니다.
@@ -109,7 +112,7 @@ Azure SQL Database에 대해 관리 ID 인증을 사용하려면 아래 단계�
     CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
     ```
 
-1. SQL 사용자 및 다른 사용자에 대해 일반적으로 수행하는 것처럼 **Azure AD에 필요한 사용 권한을 부여**합니다. 예를 들어 다음 코드를 실행합니다.
+1. SQL 사용자 및 다른 사용자에 대해 일반적으로 수행하는 것처럼 **Azure AD에 필요한 사용 권한을 부여**합니다. 해당 역할에 대해서는 [데이터베이스 수준 역할](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)을 참조하세요. 예를 들어 다음 코드를 실행합니다.
 
     ```sql
     ALTER ROLE [role name] ADD MEMBER [your AAD group name];
@@ -134,11 +137,11 @@ Azure SQL Database Managed Instance에 대해 관리 ID 인증을 사용하려�
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
     ```
 
-1. **데이터 팩터리 관리 ID에 필요한 사용 권한을 부여합니다**. 데이터를 복사할 데이터베이스에 대해 다음 T-SQL을 실행합니다.
+1. **데이터 팩터리 관리 ID에 필요한 사용 권한을 부여합니다**. 해당 역할에 대해서는 [데이터베이스 수준 역할](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)을 참조하세요. 데이터를 복사할 데이터베이스에 대해 다음 T-SQL을 실행합니다.
 
     ```sql
     CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE db_owner ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
     ```
 
 끝으로, ADO.NET 연결 관리자에 대해 **관리 ID 인증을 구성**합니다. 이 작업을 수행하는 두 가지 옵션이 있습니다.
@@ -152,7 +155,7 @@ Azure SQL Database Managed Instance에 대해 관리 ID 인증을 사용하려�
     >  Azure-SSIS 통합 런타임에서 ADO.NET 연결 관리자에 미리 구성된 모든 다른 인증 방법(예: 통합 인증, 암호)은 관리 ID 인증을 사용하여 데이터베이스 연결을 설정하는 데 사용되는 경우 **재정의**됩니다.
 
 > [!NOTE]
->  기존 패키지에서 관리 ID 인증을 구성하려면 새 연결 관리자 속성 **ConnectUsingManagedIdentity**가 SSIS 프로젝트의 모든 ADO.NET 연결 관리자에 자동으로 추가되도록 적어도 [최신 SSIS 디자이너](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)를 한 번 이상 사용하여 SSIS 프로젝트를 다시 빌드하고 해당 SSIS 프로젝트를 Azure-SSIS 통합 런타임에 다시 배포해야 합니다.
+>  기존 패키지에서 관리 ID 인증을 구성하려면 새 연결 관리자 속성 **ConnectUsingManagedIdentity**가 SSIS 프로젝트의 모든 ADO.NET 연결 관리자에 자동으로 추가되도록 적어도 [최신 SSIS 디자이너](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)를 한 번 이상 사용하여 SSIS 프로젝트를 다시 빌드하고 해당 SSIS 프로젝트를 Azure-SSIS 통합 런타임에 다시 배포하는 것이 좋습니다. 또 다른 방법은 런타임에 속성 경로 **\Package.Connections[{연결 관리자의 이름}].Properties[ConnectUsingManagedIdentity]** 에 속성 재정의를 직접 사용하는 것입니다.
 
 ## <a name="see-also"></a>참고 항목  
  [Integration Services&#40;SSIS&#41; 연결](../../integration-services/connection-manager/integration-services-ssis-connections.md)  

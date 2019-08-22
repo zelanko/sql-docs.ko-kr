@@ -19,19 +19,19 @@ ms.assetid: f28e3dea-24e6-4a81-877b-02ec4c7e36b9
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0352e9f9c9d9e263e2e1e8ec980ae07d4d33df0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8488462e75a6f836a1b77c49052a9cfdd0c82d2e
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010804"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995848"
 ---
 # <a name="permissions-database-engine"></a>사용 권한(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체에는 보안 주체에 부여될 수 있는 연결된 사용 권한이 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 권한은 로그인 및 서버 역할에 할당된 서버 수준에서 관리되고 데이터베이스 사용자 및 데이터베이스 역할에 할당된 데이터베이스 수준에서 관리됩니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 대한 모델은 데이터베이스 권한에 대하여 동일한 시스템을 갖지만 서버 수준 권한은 사용할 수 없습니다. 이 항목에는 전체 권한 목록이 포함됩니다. 권한에 대한 일반적인 구현은 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하십시오.  
+모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 개체에는 보안 주체에 부여될 수 있는 연결된 사용 권한이 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 의 권한은 로그인 및 서버 역할에 할당된 서버 수준에서 관리되고 데이터베이스 사용자 및 데이터베이스 역할에 할당된 데이터베이스 수준에서 관리됩니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 에 대한 모델은 데이터베이스 권한에 대하여 동일한 시스템을 갖지만 서버 수준 권한은 사용할 수 없습니다. 이 항목에는 전체 권한 목록이 포함됩니다. 권한에 대한 일반적인 구현은 [Getting Started with Database Engine Permissions](../../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md)을(를) 참조하십시오.  
   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]의 총 권한 수는 237개입니다. 대부분의 권한은 모든 플랫폼에 적용되지만 그렇지 않은 경우도 있습니다. 예를 들어 SQL Database에는 서버 수준 권한을 부여할 수 없으며 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]에는 몇 가지 권한만 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 230개의 권한이 있습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 219개의 권한이 있습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 214개의 권한이 있습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 에서는 195개의 권한이 있습니다. [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 항목은 최신 버전의 새로운 항목을 지정합니다.
+[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 총 권한 수는 237개입니다. 대부분의 권한은 모든 플랫폼에 적용되지만 그렇지 않은 경우도 있습니다. 예를 들어, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에는 서버 수준 권한을 부여할 수 없으며 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에는 몇 가지 권한만 적용됩니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 에서는 230개의 권한이 있습니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 에서는 219개의 권한이 있습니다. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 에서는 214개의 권한이 있습니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 에서는 195개의 권한이 있습니다. [sys.fn_builtin_permissions](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md) 항목은 최신 버전의 새로운 항목을 지정합니다.
 
 권한을 이해했으면 [GRANT](../../t-sql/statements/grant-transact-sql.md), [REVOKE](../../t-sql/statements/revoke-transact-sql.md)및 [DENY](../../t-sql/statements/deny-transact-sql.md) 문을 사용하여 로그인 및 데이터베이스 수준 권한 사용자에게 서버 수준 권한을 적용합니다. 예를 들면 다음과 같습니다.   
 ```sql
@@ -119,7 +119,7 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 >  설치 시 시스템 개체에 부여되는 기본 사용 권한은 발생할 수 있는 위협이 있는지 신중하게 평가되며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 보안 강화의 일환으로 변경할 필요는 없습니다. 시스템 개체에 대한 사용 권한을 변경하면 기능이 제한 또는 중단될 수 있으며 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치가 지원되지 않는 상태가 될 수 있습니다.  
   
 ##  <a name="_permissions"></a> SQL Server 사용 권한  
- 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 권한의 전체 목록을 제공합니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 사용 권한은 지원되는 기본 보안 개체에만 사용할 수 있습니다. 서버 수준 사용 권한은 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에서 부여될 수 없지만 일부 경우에 데이터베이스 사용 권한을 대신 사용할 수 있습니다.  
+ 다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 권한의 전체 목록을 제공합니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 사용 권한은 지원되는 기본 보안 개체에만 사용할 수 있습니다. 서버 수준 사용 권한은 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 부여될 수 없지만 일부 경우에 데이터베이스 사용 권한을 대신 사용할 수 있습니다.  
   
 |기본 보안 개체|기본 보안 개체에 대한 세부적 사용 권한|사용 권한 유형 코드|기본 보안 개체를 포함하는 보안 개체|기본 보안 개체의 세부적 사용 권한을 나타내는 컨테이너 보안 개체의 사용 권한|  
 |--------------------|--------------------------------------------|--------------------------|--------------------------------------------|------------------------------------------------------------------------------------------|  
@@ -156,26 +156,26 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|ALTER ANY ASSEMBLY|ALAS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ASYMMETRIC KEY|ALAK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CERTIFICATE|ALCF|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN ENCRYPTION KEY|ALCK<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY COLUMN MASTER KEY|ALCM<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY CONTRACT|ALSC|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE AUDIT|ALDA|SERVER|ALTER ANY SERVER AUDIT|  
 |DATABASE|ALTER ANY DATABASE DDL TRIGGER|ALTG|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATABASE EVENT NOTIFICATION|ALED|SERVER|ALTER ANY EVENT NOTIFICATION|  
-|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 적용됩니다.|SERVER|ALTER ANY EVENT SESSION|  
-|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY DATABASE EVENT SESSION|AADS<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 적용됩니다.|SERVER|ALTER ANY EVENT SESSION|  
+|DATABASE|ALTER ANY DATABASE SCOPED CONFIGURATION|ALDC<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY DATASPACE|ALDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL DATA SOURCE|AEDS|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY EXTERNAL FILE FORMAT|AEFF|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY FULLTEXT CATALOG|ALFT|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY MASK|AAMK<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), SQL Database.|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY MASK|AAMK<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY MESSAGE TYPE|ALMT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY REMOTE SERVICE BINDING|ALSB|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROLE|ALRL|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY ROUTE|ALRT|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SCHEMA|ALSM|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|CONTROL SERVER|  
-|DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|ALSP<br />적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](SQL Server 2019(15.x) ~ 현재 버전), SQL Database.|DATABASE|CONTROL SERVER|
+|DATABASE|ALTER ANY SECURITY POLICY|ALSP<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
+|DATABASE|ALTER ANY SENSITIVITY CLASSIFICATION|ALSP<br />적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](SQL Server 2019(15.x) ~ 현재 버전), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|DATABASE|CONTROL SERVER|
 |DATABASE|ALTER ANY SERVICE|ALSV|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY SYMMETRIC KEY|ALSK|SERVER|CONTROL SERVER|  
 |DATABASE|ALTER ANY USER|ALUS|SERVER|CONTROL SERVER|  
@@ -215,16 +215,16 @@ REVOKE SELECT ON OBJECT::HumanResources.Employee TO Larry;
 |DATABASE|CREATE 문을 실행하기 전에|EX|SERVER|CONTROL SERVER|  
 |DATABASE|EXECUTE ANY EXTERNAL SCRIPT|EAES<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전).|SERVER|CONTROL SERVER|  
 |DATABASE|INSERT|IN|SERVER|CONTROL SERVER|  
-|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에만 적용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ANY CONNECTION을 사용합니다.|SERVER|ALTER ANY CONNECTION|  
+|DATABASE|KILL DATABASE CONNECTION|KIDC<br /><br /> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에만 적용됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 ALTER ANY CONNECTION을 사용합니다.|SERVER|ALTER ANY CONNECTION|  
 |DATABASE|REFERENCES|RF|SERVER|CONTROL SERVER|  
 |DATABASE|SELECT|SL|SERVER|CONTROL SERVER|  
 |DATABASE|SHOWPLAN|SPLN|SERVER|ALTER TRACE|  
 |DATABASE|SUBSCRIBE QUERY NOTIFICATIONS|SUQN|SERVER|CONTROL SERVER|  
 |DATABASE|TAKE OWNERSHIP|TO|SERVER|CONTROL SERVER|  
-|DATABASE|UNMASK|UMSK<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), SQL Database.|SERVER|CONTROL SERVER|  
+|DATABASE|UNMASK|UMSK<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|CONTROL SERVER|  
 |DATABASE|UPDATE|UP|SERVER|CONTROL SERVER|  
-|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
-|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDS](../../includes/sssds-md.md)].|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN ENCRYPTION KEY DEFINITION|VWCK<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|  
+|DATABASE|VIEW ANY COLUMN MASTER KEY DEFINITION|vWCM<br /><br /> 적용 대상: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ 현재 버전), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DATABASE STATE|VWDS|SERVER|VIEW SERVER STATE|  
 |DATABASE|VIEW DEFINITION|VW|SERVER|VIEW ANY DEFINITION|  
 |DATABASE SCOPED CREDENTIAL|ALTER|AL|DATABASE|CONTROL|

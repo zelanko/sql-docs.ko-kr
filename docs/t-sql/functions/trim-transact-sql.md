@@ -18,12 +18,12 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a25a41600aca4d350c7434662de4c25dd51888c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77b8244efda0a1f06e16821d817339feebc9384f
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098787"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561152"
 ---
 # <a name="trim-transact-sql"></a>TRIM(Transact-SQL)
 
@@ -55,7 +55,7 @@ TRIM ( string )
 
 ## <a name="remarks"></a>Remarks
 
-기본적으로 `TRIM` 함수는 양쪽에서 공백 문자 `char(32)`를 제거합니다. 이 동작은 `LTRIM(RTRIM(@string))`과 동일합니다. 지정된 문자가 포함된 `TRIM` 함수의 동작은 시작 또는 끝의 문자가 빈 문자열로 대체되는 `REPLACE` 함수의 동작과 동일합니다.
+기본적으로 `TRIM` 함수는 문자열의 시작과 끝에서 공백 문자를 제거합니다. 이 동작은 `LTRIM(RTRIM(@string))`과 동일합니다.
 
 ## <a name="examples"></a>예
 
@@ -69,18 +69,22 @@ SELECT TRIM( '     test    ') AS Result;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-`test`
+```
+test
+```
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>2\.  문자열의 양쪽에서 지정된 문자를 제거합니다.
 
-다음 예에서는 후행 마침표와 후행 공백을 제거합니다.
+다음 예제에서는 단어 `#`의 앞과 `test`의 뒤에서 후행 마침표와 공백을 제거합니다.
 
 ```sql
-SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
+SELECT TRIM( '.,! ' FROM  '     #     test    .') AS Result;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
-`#     test`
+```
+#     test
+```
 
 ## <a name="see-also"></a>참고 항목
 

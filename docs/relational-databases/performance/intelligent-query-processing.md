@@ -12,12 +12,12 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3f9827a171802f4964f678da5dd4cb3f35fe5d0e
-ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
+ms.openlocfilehash: 65395c9ab5b97d27f38497b64bbab9c7b6a072a3
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68388370"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553285"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL 데이터베이스의 지능형 쿼리 처리
 
@@ -406,10 +406,9 @@ OPTION(RECOMPILE, USE HINT('DISALLOW_BATCH_MODE'));
 ```
 
 ## <a name="see-also"></a>관련 항목:
-
 [SQL Server 데이터베이스 엔진 및 Azure SQL Database에 대한 성능 센터](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [쿼리 처리 아키텍처 가이드](../../relational-databases/query-processing-architecture-guide.md)    
 [실행 계획 논리 및 물리 연산자 참조](../../relational-databases/showplan-logical-and-physical-operators-reference.md)    
 [조인](../../relational-databases/performance/joins.md)    
-[Demonstrating Adaptive Query Processing](https://github.com/joesackmsft/Conferences/blob/master/Data_AMP_Detroit_2017/Demos/AQP_Demo_ReadMe.md)(적응 쿼리 처리 시연)       
-[Demonstrating Intelligent QP](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)(지능형 QP 시연)   
+[Demonstrating Adaptive Query Processing](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)(적응 쿼리 처리 시연)       
+[지능형 쿼리 처리 시연](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/intelligent-query-processing)   

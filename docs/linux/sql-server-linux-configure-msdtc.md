@@ -7,12 +7,12 @@ ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c753e12b17047f397aeb619c758e2160e5d38e09
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a39e0a743053db694efc2d0e8176e659d7e376d1
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892522"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995872"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 방법
 
@@ -21,7 +21,7 @@ ms.locfileid: "68892522"
 이 문서에서는 Linux에서 MSDTC(Microsoft Distributed Transaction Coordinator)를 구성하는 방법을 설명합니다.
 
 > [!NOTE]
-> Linux의 MSDTC는 누적 업데이트 16부터 SQL Server 2019 미리보기 SQL Server 2017에서 지원됩니다.
+> Linux의 MSDTC는 누적 업데이트 16부터 SQL Server 2017에서 지원됩니다.
 
 ## <a name="overview"></a>개요
 

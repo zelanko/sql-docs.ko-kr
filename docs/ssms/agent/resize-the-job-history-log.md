@@ -18,12 +18,12 @@ ms.assetid: ddee1ce8-9d1b-4017-9894-bf7256aed95d
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 1b3a833caee68600ccc2fbf6f92244b5969e7dbb
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 5dea3b0a7eb9076bb778a14a4c8ab1834df0b93e
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68263114"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995845"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md.md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "68263114"
   
 2.  **SQL Server 에이전트**를 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-3.  **기록** 페이지를 선택한 다음 **작업 기록 로그 크기 제한**이 선택되었는지 확인합니다.  
+3.  **기록** 페이지를 선택한 다음, **작업 기록 로그 크기 제한**이 선택되었는지 확인합니다.  
   
 4.  **작업 기록 로그의 최대 크기(행 수)** 입력란에 작업 기록 로그에서 허용할 최대 행 수를 입력합니다.  
   

@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c84ef656fcadee3c66b0155fa587a85ebf453095
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 8661bc871018b542b3388adfcbd63f255c1d32a2
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809835"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553299"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - 추적 플래그(Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
 추적 플래그는 특정 서버 특성을 설정하거나 특정 동작을 변경하는 데 사용됩니다. 예를 들어 추적 플래그 3226은 오류 로그에서 성공적인 백업 메시지를 표시하지 못하게 하는 일반적으로 사용되는 시작 추적 플래그입니다. 추적 플래그는 성능 문제를 진단하거나 저장 프로시저 또는 복잡한 컴퓨터 시스템을 디버그하는 데 자주 사용되지만, 특정 작업에 부정적인 영향을 주는 동작을 해결하기 위해 Microsoft 지원에서 권장할 수도 있습니다.  모든 문서화된 추적 플래그와 Microsoft 추적 플래그를 지시에 따라 사용하는 경우 프로덕션 환경에서 완전히 지원됩니다.  이 목록의 추적 플래그는 특정 용도와 관련하여 추가 고려 사항이 있을 수 있으므로, 본 문서 및/또는 지원 엔지니어가 제공하는 모든 권장 사항을 주의 깊게 검토하는 것이 좋습니다. 또한 SQL Server의 구성 변경과 마찬가지로 배포하기 전에 비프로덕션 환경에서 플래그를 철저히 테스트하는 것이 가장 좋습니다.
 
@@ -51,8 +51,10 @@ ms.locfileid: "68809835"
 
 ## <a name="trace-flags"></a>추적 플래그
 
-  
-다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있는 추적 플래그와 그에 대한 설명을 보여 줍니다.
+다음 표에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있는 추적 플래그와 그에 대한 설명을 보여 줍니다. 
+
+> [!NOTE]
+> Azure SQL Database Managed Instance는 전역 추적 플래그 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389,1 0316 및 11024를 지원합니다. 세션 추적-플래그는 Managed Instance에서 아직 지원되지 않습니다.
  
 > [!NOTE]
 > 일부 추적 플래그는 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 도입되었습니다. 해당 버전에 대한 자세한 내용은 특정 추적 플래그와 관련된 Microsoft 지원 문서를 참조하세요.
@@ -125,7 +127,7 @@ ms.locfileid: "68809835"
 |**4139**|키 열 상태에 관계없이 자동으로 생성되는 빠른 통계를 사용하도록 설정합니다(히스토그램 수정). 4139 추적 플래그가 설정되고 선행 통계 열 상태(오름차순, 내림차순 또는 고정)에 관계없이 카디널리티를 추정하는 데 사용되는 히스토그램이 쿼리 컴파일 시간에 조정됩니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/2952101)를 참조하세요.<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하려면, 이 추적 플래그를 사용하는 대신 USE HINT 'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS' [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.<br /><br />**참고:** 프로덕션 환경에 배포하기 전에 이 옵션을 철저히 테스트하세요.<br /><br />**참고:** 이 추적 플래그는 CE 버전 70에 적용되지 않습니다. 대신 2389 및 2390 추적 플래그를 사용하세요.<br /><br />**범위**: 전역, 세션 또는 쿼리|
 |**4199**|<a name="4199"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 누적 업데이트 및 서비스 팩에서 릴리스된 QO(쿼리 최적화 프로그램) 수정 내용을 사용하도록 설정합니다.<br /><br />[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 릴리스에 대한 QO 변경은 4199 추적 플래그를 사용하지 않고 지정된 제품 릴리스의 최신 데이터베이스 [호환성 수준](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)에서 기본적으로 사용됩니다.<br /><br />다음 표에는 특정 데이터베이스 호환성 수준 및 4199 추적 플래그를 사용할 때의 동작이 요약되어 있습니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/974006)를 참조하세요.<br /><br /><table border="1" frame="void" width="550"><tr valign="middle" align="center"><td>**데이터베이스 호환성 수준**</td><td>**TF 4199**</td><td>**이전 데이터베이스 호환성 수준의 QO 변경 내용**</td><td>**현재 버전 이후의 RTM에 대한 QO 변경 내용**</td></tr><tr valign="middle" align="center"><td rowspan="2">**100~120**</td><td>Off</td><td>사용 안 함</td><td>사용 안 함</td></tr><tr valign="middle" align="center"><td>위치</td><td>설정</td><td>설정</td></tr><tr valign="middle" align="center"><td rowspan="2">**130**</td><td>Off</td><td>설정</td><td>사용 안 함</td></tr><tr valign="middle" align="center"><td>위치</td><td>설정</td><td>설정</td></tr><tr valign="middle" align="center"><td rowspan="2">**140**</td><td>Off</td><td>설정</td><td>사용 안 함</td></tr><tr valign="middle" align="center"><td>위치</td><td>설정</td><td>설정</td></tr><tr valign="middle" align="center"><td rowspan="2">**150**</td><td>Off</td><td>설정</td><td>사용 안 함</td></tr><tr valign="middle" align="center"><td>위치</td><td>설정</td><td>설정</td></tr></table><br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 데이터베이스 수준에서 이를 수행하려면, [ALTER DATABASE SCOPED CONFIGURATION&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)의 QUERY_OPTIMIZER_HOTFIXES 옵션을 참조하세요.<br /><br />[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터 쿼리 수준에서 이 작업을 수행하려면, 이 추적 플래그를 사용하는 대신 USE HINT 'ENABLE_QUERY_OPTIMIZER_HOTFIXES' [쿼리 힌트](../../t-sql/queries/hints-transact-sql-query.md)를 추가합니다.<br /><br />**범위**: 전역, 세션 또는 쿼리|
 |**4610**|캐시 항목을 저장하는 해시 테이블의 크기를 8의 배수로 늘립니다. 4618 추적 플래그와 함께 사용하면 TokenAndPermUserStore 캐시 저장소의 항목 수를 8,192개로 늘립니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/959823)와 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/955644)를 참조하세요.<br /><br />**범위**: 전역만|
-|**4616**|응용 프로그램 역할이 서버 수준 메타데이터를 볼 수 있도록 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 응용 프로그램 역할은 서버 수준의 보안 주체와 연결되어 있지 않으므로 해당 데이터베이스 외부의 메타데이터에 액세스할 수 없습니다. 이 동작은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경되었습니다. 이 전역 플래그를 설정하면 새 제한 사항이 해제되므로 응용 프로그램 역할이 서버 수준 메타데이터에 액세스할 수 있습니다.<br /><br />**범위**: 전역만|
+|**4616**|애플리케이션 역할이 서버 수준 메타데이터를 볼 수 있도록 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 애플리케이션 역할은 서버 수준의 보안 주체와 연결되어 있지 않으므로 해당 데이터베이스 외부의 메타데이터에 액세스할 수 없습니다. 이 동작은 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경되었습니다. 이 전역 플래그를 설정하면 새 제한 사항이 해제되므로 애플리케이션 역할이 서버 수준 메타데이터에 액세스할 수 있습니다.<br /><br />**범위**: 전역만|
 |**4618**|TokenAndPermUserStore 캐시 저장소의 항목 수를 1,024개로 제한합니다. 4610 추적 플래그와 함께 사용하면 TokenAndPermUserStore 캐시 저장소의 항목 수를 8,192개로 늘립니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/959823)를 참조하세요.<br /><br />**범위**: 전역만|
 |**4621**|TokenAndPermUserStore 캐시 저장소의 항목 수를 레지스트리 키에서 사용자가 지정한 개수로 제한합니다. 자세한 내용은 이 [Microsoft 지원 문서](https://support.microsoft.com/kb/959823)를 참조하세요.<br /><br />**범위**: 전역만|
 |**5004**|TDE 암호화 검색을 일시 중지하고, 작업을 수행하지 않고 암호화 검색 작업자를 종료하도록 합니다. 데이터베이스는 계속 암호화 중 상태(진행 중인 암호화)로 있습니다. 재암호화 검색을 다시 시작하려면, 5004 추적 플래그를 사용하지 않도록 설정하고 ALTER DATABASE <database_name> SET ENCRYPTION ON을 실행합니다. <br /><br />**범위**: 전역만|

@@ -1,22 +1,22 @@
 ---
 title: SSDT(SQL Server Data Tools) 릴리스 정보 | Microsoft Docs
-ms.custom: ''
-ms.date: 09/28/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9efb156c64d0e8daf7dcae8849a2e4687773602c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 9af4c8c43dfa3e7153b6ecb9e42301677247845d
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892470"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531033"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SSDT(SQL Server Data Tools) 릴리스 정보
 
@@ -43,6 +43,7 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
 ## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2,&nbsp; VS 2017용 SSDT
 
 _릴리스 날짜:_ &nbsp; 2019년 7월 17일  
@@ -51,16 +52,14 @@ _Visual Studio 2017용 SSDT._
 
 ### <a name="whats-new"></a>새로운 기능
 
-#### <a name="ssis"></a>SSIS
-
 | 새 항목 | 세부 정보 |
-| :------- | :------ |
-| AzureEnabled 기능을 추가합니다. Azure Data Factory의 SSIS PaaS(Platform as a Service)에서 프로젝트 패키지를 실행할 수 있습니다. | &nbsp; |
-| 변수 식에서 Oracle 커넥터 속성을 설정할 수 없는 문제를 해결합니다. | &nbsp; |
-| SQL Server 2019 이전 버전을 대상으로 하는 패키지를 디버깅할 때 Oracle 커넥터에서 VS_NEEDSNEWMETATDATA 오류가 발생하는 문제를 해결합니다. | &nbsp; |
-| 패키지/프로젝트에서 연결 관리자 속성에 식을 사용하는 경우 Oracle 커넥터가 패키지/프로젝트를 업그레이드/다운그레이드하지 못하는 문제를 해결합니다. | &nbsp; |
-| 웹 서비스 작업 편집기의 WSDL 다운로드 단추가 TLS 1.1 및 1.2 프로토콜을 지원하지 않는 문제를 해결합니다(SQL Server 2019 대상) | &nbsp; |
-| DQS 연결 관리자가 포함된 패키지를 저장한 후 다시 로드할 수 없는 문제를 해결합니다. | &nbsp; |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services(SSIS) | AzureEnabled 기능을 추가합니다. Azure Data Factory의 SSIS PaaS(Platform as a Service)에서 프로젝트 패키지를 실행할 수 있습니다. |
+| Integration Services(SSIS) | 변수 식에서 Oracle 커넥터 속성을 설정할 수 없는 문제를 해결합니다. |
+| Integration Services(SSIS) | SQL Server 2019 이전 버전을 대상으로 하는 패키지를 디버깅할 때 Oracle 커넥터에서 VS_NEEDSNEWMETATDATA 오류가 발생하는 문제를 해결합니다. |
+| Integration Services(SSIS) | 패키지/프로젝트에서 연결 관리자 속성에 식을 사용하는 경우 Oracle 커넥터가 패키지/프로젝트를 업그레이드/다운그레이드하지 못하는 문제를 해결합니다. |
+| Integration Services(SSIS) | 웹 서비스 작업 편집기의 WSDL 다운로드 단추가 TLS 1.1 및 1.2 프로토콜을 지원하지 않는 문제를 해결합니다(SQL Server 2019 대상) |
+| Integration Services(SSIS) | DQS 연결 관리자가 포함된 패키지를 저장한 후 다시 로드할 수 없는 문제를 해결합니다. |
 
 ### <a name="known-issues"></a>알려진 문제
 
@@ -82,17 +81,15 @@ _Visual Studio 2017용 SSDT._
 
 ### <a name="whats-new"></a>새로운 기능
 
-#### <a name="ssis"></a>SSIS
-
 | 새 항목 | 세부 정보 |
-| :------- | :------ |
-| 이전 SQL Server 버전을 대상으로 지정할 때 패키지 파트를 올바르게 유지할 수 없는 문제 해결 | &nbsp; |
-| 패키지 파트를 사용할 때 선행 제약 조건에 식을 추가할 수 없는 문제 해결 | &nbsp; |
-| 파워 쿼리 소스 및 연결 관리자의 "도움말" 단추가 올바른 문서에 연결되지 않는 문제 해결 | &nbsp; |
-| SSIS 빌드 버전이 VS 도움말 창에 표시되지 않는 문제 해결 | &nbsp; |
-| Azure SSIS IR에서 자체 호스팅된 IR로 온-프레미스 데이터에 액세스할 수 있는 Ole DB 및 플랫 파일 연결 관리자에 대한 "ConnectByProxy" 속성 추가 | &nbsp; |
-| ODBC 구성 요소가 DT_DBDATE 데이터 형식을 잘못 매핑하는 문제 해결 | &nbsp; |
-| 관리 ID 인증을 사용하여 Azure-SSIS IR의 데이터 원본에 연결할 수 있도록 하는 ADO.NET 및 OLE DB 연결 관리자에 대한 “ConnectUsingManagedIdentity” 속성 추가 | &nbsp; |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services(SSIS) | 이전 SQL Server 버전을 대상으로 지정할 때 패키지 파트를 올바르게 유지할 수 없는 문제를 해결합니다. |
+| Integration Services(SSIS) | 패키지 파트를 사용할 때 선행 제약 조건에 식을 추가할 수 없는 문제를 해결합니다. |
+| Integration Services(SSIS) | 파워 쿼리 소스 및 연결 관리자의 "도움말" 단추가 올바른 문서에 연결되지 않는 문제를 해결합니다. |
+| Integration Services(SSIS) | SSIS 빌드 버전이 VS 도움말 창에 표시되지 않는 문제를 해결합니다. |
+| Integration Services(SSIS) | Azure SSIS IR에서 자체 호스팅된 IR로 온-프레미스 데이터에 액세스할 수 있는 Ole DB 및 플랫 파일 연결 관리자에 대한 "ConnectByProxy" 속성을 추가합니다. |
+| Integration Services(SSIS) | ODBC 구성 요소가 DT_DBDATE 데이터 형식을 잘못 매핑하는 문제를 해결합니다. |
+| Integration Services(SSIS) | 관리 ID 인증을 사용하여 Azure-SSIS IR의 데이터 원본에 연결할 수 있도록 하는 ADO.NET 및 OLE DB 연결 관리자에 대한 “ConnectUsingManagedIdentity” 속성을 추가합니다. |
 
 ### <a name="known-issues"></a>알려진 문제
 
@@ -114,20 +111,19 @@ _Visual Studio 2017용 SSDT._
 
 ### <a name="whats-new"></a>새로운 기능
 
-#### <a name="ssis"></a>SSIS
-
 | 새 항목 | 세부 정보 |
-| :------- | :------ |
-| ADF 2017의 SSIS용 파워 쿼리 원본(미리 보기)을 추가합니다. | &nbsp; |
-| SQL Server 2012에 대한 지원을 다시 추가합니다. | &nbsp; |
-| SQL Server 2019에 대한 Oracle 원본 및 대상을 추가합니다. | SQL Server 2019에 대한 Oracle 원본 및 대상은 SSDT에 의해 이미 설치되어 있습니다.<br/><br/>서버 버전 2017 이하를 대상으로 하는 패키지를 디자인하려면 Microsoft 다운로드 사이트에서 해당 Oracle 커넥터 버전을 다운로드하여 SSDT 머신에 설치하세요. <br/>[SQL Server 2017을 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=55179)<br/>[SQL Server 2016을 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=52950)<br/>[SQL Server 2014를 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=44582)<br/>[SQL Server 2012를 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 2.0](https://www.microsoft.com/en-us/download/details.aspx?id=29283)|
-| 이전 SSIS 버전에서 마이그레이션하면 스크립트 작업/구성 요소를 로드할 수 없음 문제가 해결되었습니다. | &nbsp; |
-| 데이터는 뷰어가 Windows 7 SP1 및 Windows 8.1에서 작동하지 않음 문제가 해결되었습니다. | &nbsp; |
-| 일부 경우에 패키지를 저장하면 Visual Studio에서 충돌이 발생함 문제가 해결되었습니다. | &nbsp; |
-| 일부 경우, 패키지를 실행할 수 없는 문제가 해결되었습니다. | 다음 조건 모두에 해당하는 경우 이 문제가 발생했습니다.<br/><br/>&bull; &nbsp; 보호 수준이 EncryptSensitiveWithPassword입니다.<br/>&bull; &nbsp; 대상 서버 버전이 SQL Server 2017보다 이전입니다. |
-| 기본 글꼴을 사용하는 주석이 SSDT에서 표시되지 않음 문제가 해결되었습니다. | &nbsp; |
-| ISDeploymentWizard는 명령줄 모드에서 SQL 인증, Azure Active Directory 통합 인증 및 Azure Active Directory 암호 인증을 지원합니다. | &nbsp; |
-| &nbsp; | &nbsp; |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services(SSIS) | ADF 2017의 SSIS용 파워 쿼리 원본(미리 보기)을 추가합니다. |
+| Integration Services(SSIS) | SQL Server 2012에 대한 지원을 다시 추가합니다. |
+| Integration Services(SSIS) | SQL Server 2019에 대한 Oracle 원본 및 대상을 추가합니다. |
+| Integration Services(SSIS) | SQL Server 2019에 대한 Oracle 원본 및 대상은 SSDT에 의해 이미 설치되어 있습니다. <br/></br> 서버 버전 2017 이하를 대상으로 하는 패키지를 디자인하려면 Microsoft 다운로드 사이트에서 해당 Oracle 커넥터 버전을 다운로드하여 SSDT 머신에 설치하세요. <br/></br> [SQL Server 2017을 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 5.0](https://www.microsoft.com/en-us/download/details.aspx?id=55179 ) <br/></br> [SQL Server 2016을 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 4.0](https://www.microsoft.com/en-us/download/details.aspx?id=52950 )<br/></br> [SQL Server 2014를 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 3.0](https://www.microsoft.com/en-us/download/details.aspx?id=44582 )<br/></br> [SQL Server 2012를 대상으로 하는 Attunity의 Oracle용 Microsoft Connector 버전 2.0](https://www.microsoft.com/en-us/download/details.aspx?id=29283 ) |
+| Integration Services(SSIS) | 이전 SSIS 버전에서 마이그레이션하면 스크립트 작업/구성 요소를 로드할 수 없음 문제가 해결되었습니다. |
+| Integration Services(SSIS) | 데이터는 뷰어가 Windows 7 SP1 및 Windows 8.1에서 작동하지 않음 문제가 해결되었습니다. |
+| Integration Services(SSIS) | 일부 경우에 패키지를 저장하면 Visual Studio에서 충돌이 발생함 문제가 해결되었습니다. |
+| Integration Services(SSIS) | 일부 경우, 패키지를 실행할 수 없는 문제가 해결되었습니다. |
+| Integration Services(SSIS) | 다음 조건 모두에 해당하는 경우 이 문제가 발생했습니다. < br />< br /> &bull;   보호 수준이 EncryptSensitiveWithPassword입니다.< br /> &bull;   대상 서버 버전이 SQL Server 2017보다 이전입니다.          |
+| Integration Services(SSIS) | 기본 글꼴을 사용하는 주석이 SSDT에서 표시되지 않음 문제가 해결되었습니다. |
+| Integration Services(SSIS) | ISDeploymentWizard는 명령줄 모드에서 SQL 인증, Azure Active Directory 통합 인증 및 Azure Active Directory 암호 인증을 지원합니다. |
 
 ### <a name="known-issues"></a>알려진 문제
 
@@ -258,7 +254,7 @@ _Visual Studio 2017용 SSDT._
 **SSIS:**
 
 - SQLServer2016 및 SQLServer2017을 대상으로 할 때 AS 처리 작업이 처리 단계를 기록하지 않는 문제 해결
-- SSDT에서 매우 긴 영어 외 작업 이름으로 dtsx를 열 때 액세스 위반이 발생하는 문제를 해결합니다.
+- SSDT에서 긴 영어 외 작업 이름으로 dtsx를 열 때 액세스 위반이 발생하는 문제를 해결합니다.
 - 작업 UI에서 간혹 ScriptTask 변수 목록이 사라지는 문제를 해결합니다.
 - 패키지 위치가 SQL Server일 때 기존 패키지 사본 추가가 실패하는 문제 해결
 - 일부 편집기 대화 상자에서 콤보 상자에 액세스할 때 포커스가 멈추는 문제를 해결합니다.
@@ -271,7 +267,7 @@ _Visual Studio 2017용 SSDT._
 **설치 관리자:**
 
 - 개인정보 보호 고지 사항에 "SQL Server Data Tools에 대한 사용자 환경 개선 프로그램" 링크를 추가합니다.
-- "Visual Studio 2017 인스턴스에 대한 새 SQL Server Data Tools 설치"를 선택할 때 VS 설치 관리자 창이 표시되는 문제 해결
+- "Visual Studio 2017 인스턴스에 대한 새 SQL Server Data Tools 설치"를 선택할 때 VS 설치 관리자 창이 표시되는 문제를 해결합니다.
 
 ### <a name="known-issues"></a>알려진 문제:
 - SSIS 패키지 실행 태스크는 ExecuteOutOfProcess가 True로 설정되었을 때 디버깅을 지원하지 않습니다. 이 문제는 디버깅에만 적용됩니다. DTExec.exe 또는 SSIS 카탈로그를 통한 저장, 배포 및 실행은 영향을 받지 않습니다.
@@ -715,7 +711,7 @@ _SQL Server 2017까지 지원._
 **데이터베이스 프로젝트:**
 - SSDT DACPAC 배포에서 IgnoreColumnOrder에 대한 설정 다시 추가. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)
 - STRING_SPLIT를 사용하는 경우 SSDT가 컴파일하지 못함. [Connect 항목](https://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)
-- DeploymentContributors에서 공개 모델에 액세스할 수 있지만 지원 스키마가 초기화되지 않는 문제를 해결함. [Github 문제](https://github.com/Microsoft/DACExtensions/issues/8)
+- DeploymentContributors에서 공개 모델에 액세스할 수 있지만 지원 스키마가 초기화되지 않는 문제를 해결함. [ 문제](https://github.com/Microsoft/DACExtensions/issues/8)
 - 파일 그룹 배치에 대한 DacFx 임시 수정
 - 외부 동의어에 대한 "확인되지 않은 참조" 오류에 대한 수정 
 - 항상 암호화: 온라인 암호화가 취소 시 변경 내용 추적을 사용하지 않도록 설정하지 않으며 암호화 시작 전에 변경 내용 추적이 정리되지 않은 경우 올바로 작동하지 않음

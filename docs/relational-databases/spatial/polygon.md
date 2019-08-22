@@ -13,12 +13,12 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 74e6c8cc19bac4c0428924effda87952642a37dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68081661"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026137"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -49,9 +49,9 @@ ms.locfileid: "68081661"
  허용되는 **Polygon** 인스턴스는 예외를 발생시키지 않고 **geometry** 또는 **geography** 변수에 저장할 수 있는 인스턴스입니다. 다음 **Polygon** 인스턴스가 허용됩니다.  
   
 -   빈 **Polygon** 인스턴스  
--   허용 가능 외부 링 및 0개 이상의 허용 가능 내부 링을 포함하는 **Polygon** 인스턴스  
+-   허용 가능 외부 링(**LineString**) 및 0개 이상의 허용 가능 내부 링(**LineString**s)을 포함하는 **Polygon** 인스턴스  
   
-링이 허용되려면 다음 조건을 충족해야 합니다.  
+링(**LineString**)이 허용되려면 다음 조건을 충족해야 합니다.  
   
 -   **LineString** 인스턴스가 허용되어야 합니다.  
 -   **LineString** 인스턴스에 4개 이상의 점이 있어야 합니다.  

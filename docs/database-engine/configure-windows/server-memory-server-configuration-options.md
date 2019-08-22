@@ -1,7 +1,7 @@
 ---
 title: 서버 메모리 구성 옵션 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/14/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - manual memory options [SQL Server]
 - memory [SQL Server], servers
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
-author: MikeRayMSFT
+author: pmasl
 ms.author: mikeray
-ms.openlocfilehash: 180ef3114513f62f7ea5cded856ec61e06fc64b6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a9e617488ac0543dd7794cce37137518c1422c80
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68763166"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028745"
 ---
 # <a name="server-memory-configuration-options"></a>서버 메모리 구성 옵션
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +53,9 @@ ms.locfileid: "68763166"
 >[!NOTE]
 >[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **min server memory**에 지정된 메모리 양을 할당하는 것이 보장되지 않습니다. 서버의 로드 때문에 **min server memory**에 지정된 메모리 양을 할당할 필요가 없는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 보다 적은 메모리로 실행됩니다.
 
-<a name="max_server_memory"></a> OS가 유해 메모리 압력을 겪지 않도록 **max_server_memory**를 사용합니다. 최대 서버 메모리 구성을 설정하려면 메모리 요구 사항을 결정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 전체 소비량을 모니터링합니다.
-
-- 전체 OS 메모리에서 OS에 충분히 예약합니다.
-- 그런 다음, **_스택 크기** <sup>1</sup> **\* 계산된 최대 작업자 스레드 수**<sup>2</sup>로 구성된 **최대 서버 메모리** 컨트롤 외부의 잠재적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 할당량을 뺍니다. 남은 일은 단일 인스턴스 설정을 위한 max_server_memory를 설정하는 것입니다.
+<a name="max_server_memory"></a> OS가 유해 메모리 압력을 겪지 않도록 **max_server_memory**를 사용합니다. 최대 서버 메모리 구성을 설정하려면 메모리 요구 사항을 결정하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 전체 소비량을 모니터링합니다. 단일 인스턴스에 대해 이러한 계산을 통해보다 정확한 결과를 얻으려면
+- 전체 OS 메모리에서 1GB-4GB를 OS에 예약합니다.
+- 그런 다음, **스택 크기<sup>1</sup> \* 계산된 최대 작업자 스레드 수<sup>2</sup>** 로 구성된 **최대 서버 메모리** 컨트롤 외부의 잠재적 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메모리 할당량을 뺍니다. 남은 일은 단일 인스턴스 설정을 위한 max_server_memory를 설정하는 것입니다.
 
 <sup>1</sup> 아키텍처당 스레드 스택 크기에 대한 내용은 [ 메모리 관리 아키텍처 가이드 ](../../relational-databases/memory-management-architecture-guide.md#stacksizes)를 참조하세요.
 

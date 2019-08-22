@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 6e3a4a360f4a317139908b57421e420e8cd68402
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3831a9244b3e946dcba01b7d8c31825a75f7b39f
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68040600"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553262"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 지정한 추적 플래그를 설정합니다.
   
@@ -48,7 +48,7 @@ DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]
 여러 개의 추적 플래그를 지정할 수 있음을 나타내는 자리 표시자입니다.  
   
 -1  
-지정한 추적 플래그를 전역으로 설정합니다.  
+지정한 추적 플래그를 전역으로 설정합니다. 이 인수는 Azure SQL Managed Instance에 필요합니다. 
   
 WITH NO_INFOMSGS  
 모든 정보 메시지를 표시하지 않습니다.  
@@ -61,7 +61,9 @@ WITH NO_INFOMSGS
 추적 플래그는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 작동하는 방법을 제어하여 특정한 특징을 사용자 지정하는 데 사용됩니다. 설정된 추적 플래그는 DBCC TRACEOFF 문을 실행하여 해제할 때까지 서버에서 설정된 상태로 유지됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 세션 및 전역이라는 두 가지 유형의 추적 플래그가 있습니다. 세션 추적 플래그는 특정 연결에 대해 설정되며 해당 연결에서만 볼 수 있습니다. 전역 추적 플래그는 서버 수준에서 설정되며 서버의 모든 연결에서 볼 수 있습니다. 추적 플래그의 상태를 확인하려면 DBCC TRACESTATUS를 사용하십시오. 추적 플래그를 해제하려면 DBCC TRACEOFF를 사용하십시오.
   
 쿼리 계획에 영향을 주는 추적 플래그를 켠 후, 새 계획에 영향을 주는 동작을 사용하여 캐시된 계획이 다시 컴파일되도록 `DBCC FREEPROCCACHE;`를 실행합니다.
-  
+
+Azure SQL Database Managed Instance는 전역 추적 플래그 460,2301,2389,2390,2453,2467,7471,8207,9389,10316 및 11024를 지원합니다.
+
 ## <a name="result-sets"></a>결과 집합  
  DBCC TRACEON은 다음 결과 집합(메시지)을 반환합니다.  
   

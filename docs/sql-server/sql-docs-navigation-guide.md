@@ -1,6 +1,6 @@
 ---
-title: SQL Server 설명서 탐색 가이드
-description: SQL Server 기술 문서 탐색을 위한 가이드 - 허브 페이지, 목차, 헤더, 이동 경로 사용 방법 및 버전 필터 사용 방법 등을 설명합니다.
+title: SQL Server 설명서 탐색 팁
+description: SQL Server 기술 문서 탐색을 위한 팁과 트릭 - 허브 페이지, 목차, 헤더, 이동 경로 사용 방법 및 버전 필터 사용 방법 등을 설명합니다.
 ms.date: 07/11/2019
 ms.prod: sql
 ms.reviewer: ''
@@ -8,14 +8,13 @@ ms.custom: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: e5a3e33d48b70146b439790e6439ef4f9cac08b5
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941161"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028830"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 설명서 탐색 가이드 
 
@@ -61,11 +60,11 @@ docs.microsoft.com에서 맨 위에 있는 필터 검색 상자를 사용하여 
 ## <a name="version-filter"></a>버전 필터
 SQL Server 기술 설명서에서는 지원되는 여러 SQL Server 버전에 대한 콘텐츠를 제공합니다. 기능은 SQL Server의 버전에 따라 달라질 수 있으며, 경우에 따라 콘텐츠 자체가 달라질 수 있습니다. 
 
-버전 필터를 사용하여 SQL Server의 적절한 버전에 대한 콘텐츠를 볼 수 있습니다. 
+[버전 필터](versioning-system-monikers-ui-sql-server.md)를 사용하여 SQL Server의 적절한 버전에 대한 콘텐츠를 볼 수 있습니다. 
 
 ![SQL 설명서 버전 필터](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-**All SQL** > **Hide nothing(모두 표시)** 을 선택하면 모든 콘텐츠가 표시되고 버전 필터 뒤에 숨겨진 내용이 없습니다. 
+**모든 SQL**\>**모두 표시**를 선택하면 모든 콘텐츠가 표시되고 버전 필터 뒤에 숨겨진 내용이 없습니다. [**모두 표시** 옵션은 일반적인 경우에는 권장되지 않습니다](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
 
 ## <a name="breadcrumbs"></a>이동 경로
 

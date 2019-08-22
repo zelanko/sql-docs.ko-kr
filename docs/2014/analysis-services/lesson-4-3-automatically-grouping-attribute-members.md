@@ -10,12 +10,12 @@ ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 568cb46a17ac29cabe45b79212400fd020be84c3
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
+ms.sourcegitcommit: cbbb210c0315f9e2be2b9cd68db888ac53429814
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888414"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69890834"
 ---
 # <a name="automatically-grouping-attribute-members"></a>자동으로 특성 멤버 그룹화
   큐브를 찾아볼 때 일반적으로 한 특성 계층의 멤버 차원은 다른 특성 계층의 멤버별로 구분합니다. 예를 들어 고객 판매를 도시별, 구매 제품별 또는 성별로 그룹화할 수 있습니다. 그러나 특정 특성 유형의 경우에는 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 특성 계층 내의 멤버 배포에 따라 자동으로 특성 멤버를 그룹화하도록 하는 것이 유용합니다. 예를 들어 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 고객의 연간 소득 값 그룹을 만들도록 할 수 있습니다. 이 작업을 수행하면 특성 계층을 찾아보는 사용자는 멤버 자체가 아니라 그룹의 이름과 값을 보게 됩니다. 이렇게 하면 사용자에게 표시되는 수준 수가 제한되므로 분석하는 데 보다 유용합니다.  
@@ -123,7 +123,7 @@ ms.locfileid: "68888414"
      이제 제품에 대한 판매량 값이 있는 **Vacation Hours** 특성 멤버에는 3개의 그룹이 있습니다. 다른 7개의 그룹에는 판매량 데이터가 없는 멤버가 포함됩니다.  
   
 ## <a name="next-task-in-lesson"></a>단원의 다음 태스크  
- [특성 계층 숨기기 및 비활성화](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
+ [특성 계층 숨기기 및 비활성화](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [특성 멤버 그룹화&#40;불연속화&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)  

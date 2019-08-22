@@ -1,7 +1,7 @@
 ---
 title: DB_ID(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/30/2017
+ms.date: 08/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,14 +23,14 @@ ms.assetid: 7b3aef89-a6fd-4144-b468-bf87ebf381b8
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d2dc84cd224b8ea1863fd67561fdcf20a37c4544
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d9908d99f81094b8b8d3c2afd5c82ad870c2de22
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119019"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995747"
 ---
-# <a name="dbid-transact-sql"></a>DB_ID(Transact-SQL)
+# <a name="db_id-transact-sql"></a>DB_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 이 함수는 지정된 데이터베이스의 데이터베이스 ID 번호를 반환합니다.
@@ -52,6 +52,9 @@ DB_ID ( [ 'database_name' ] )
 
 ## <a name="remarks"></a>Remarks
 `DB_ID`는 Azure SQL Database에서 현재 데이터베이스의 데이터베이스 식별자를 반환하는 데만 사용할 수 있습니다. 지정된 데이터베이스 이름이 현재 데이터베이스가 아닌 경우 NULL이 반환됩니다.
+
+> [!NOTE]
+> Azure SQL Database와 함께 사용하는 경우 `DB_ID`는 **sys.databases**에서 `database_id` 쿼리의 경우와 동일한 결과를 반환하지 않을 수 있습니다. `DB_ID`의 호출자가 결과를 다른 **sys** 뷰와 비교하는 경우 **sys.databases**를 대신 쿼리해야 합니다.
   
 ## <a name="permissions"></a>사용 권한  
 `DB_ID`의 호출자가 특정 비**마스터** 또는 비**tempdb** 데이터베이스를 소유하지 않는 경우 최소한 `ALTER ANY DATABASE` 또는 `VIEW ANY DATABASE` 서버 수준 사용 권한이 해당 `DB_ID` 행을 확인하는 데 필요합니다. **마스터** 데이터베이스의 경우 `DB_ID`는 최소한 `CREATE DATABASE` 사용 권한이 필요합니다. 호출자가 연결하는 데이터베이스는 항상 **sys.databases**에 나타납니다.
@@ -77,7 +80,7 @@ SELECT DB_ID(N'AdventureWorks2008R2') AS [Database ID];
 GO  
 ```  
   
-### <a name="c-using-dbid-to-specify-the-value-of-a-system-function-parameter"></a>C. DB_ID를 사용하여 시스템 함수 매개 변수 값 지정  
+### <a name="c-using-db_id-to-specify-the-value-of-a-system-function-parameter"></a>C. DB_ID를 사용하여 시스템 함수 매개 변수 값 지정  
 이 예에서는 `DB_ID`를 사용하여 시스템 함수 `sys.dm_db_index_operational_stats`에서 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 데이터베이스 ID를 반환합니다. 함수는 데이터베이스 ID를 첫 번째 매개 변수로 사용합니다.
   
 ```sql

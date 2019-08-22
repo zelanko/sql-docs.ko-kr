@@ -20,70 +20,70 @@ helpviewer_keywords:
 ms.assetid: 21517ced-39f5-4cd8-8d9c-0a0b8aff554a
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 428da3c62a4fec178e80400e92997d8cefa3a86a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 619ce91eb47d69298c2b4bc53741f2a8cb7461dd
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024403"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969374"
 ---
-# <a name="identcurrent-transact-sql"></a>IDENT_CURRENT(Transact-SQL)
+# <a name="ident_current-transact-sql"></a>IDENT_CURRENT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  지정된 테이블 또는 뷰에 대해 생성된 마지막 ID 값을 반환합니다. 생성된 마지막 ID 값은 임의의 세션 및 범위에 대한 값일 수 있습니다.  
+지정된 테이블 또는 뷰에 대해 생성된 마지막 ID 값을 반환합니다. 생성된 마지막 ID 값은 임의의 세션 및 범위에 대한 값일 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>구문  
   
 ```  
-  
-IDENT_CURRENT( 'table_name' )  
+IDENT_CURRENT( 'table_or_view' )  
 ```  
   
 ## <a name="arguments"></a>인수  
- *table_name*  
- ID 값을 반환할 테이블의 이름입니다. *table_name*은 **varchar**이며 기본값은 없습니다.  
+*table_or_view*  
+ID 값을 반환할 테이블 또는 뷰의 이름입니다. *table_or_view*는 **varchar**이며 기본값은 없습니다.  
   
 ## <a name="return-types"></a>반환 형식  
- **numeric(38,0)**  
+**numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>예외  
- 오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  
+오류가 발생하거나 호출자가 개체를 볼 수 있는 권한을 갖고 있지 않으면 NULL을 반환합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 IDENT_CURRENT와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용자는 소유하고 있거나 사용 권한을 부여받은 보안 개체의 메타데이터만 볼 수 있습니다. 즉, 사용자가 개체에 대한 사용 권한이 없으면 IDENT_CURRENT와 같은 메타데이터 내보내기 기본 제공 함수가 NULL을 반환합니다. 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.  
   
 ## <a name="remarks"></a>Remarks  
- IDENT_CURRENT는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] IDENTITY 함수 SCOPE_IDENTITY 및 @@IDENTITY와 유사합니다. 이 세 함수는 모두 최근에 생성된 ID 값을 반환합니다. 그러나 각 함수에서 *last*가 정의하는 범위와 세션은 각기 다릅니다.  
-  
+IDENT_CURRENT는 [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] IDENTITY 함수 SCOPE_IDENTITY 및 @@IDENTITY와 유사합니다. 이 세 함수는 모두 최근에 생성된 ID 값을 반환합니다. 그러나 각 함수에서 *last*가 정의하는 범위와 세션은 각기 다릅니다.  
+
 -   IDENT_CURRENT는 임의의 세션과 범위에 있는 특정 테이블에 대해 최근 생성된 ID 값을 반환합니다.  
-  
 -   @@IDENTITY은 현재 세션의 전체 범위에 걸쳐 임의의 테이블에 대해 최근 생성된 ID 값을 반환합니다.  
-  
 -   SCOPE_IDENTITY는 현재 세션 및 현재 범위에 있는 임의의 테이블에 대해 최근 생성된 ID 값을 반환합니다.  
   
- IDENT_CURRENT 값이 NULL인 경우(테이블에 행이 포함된 적이 없거나 테이블이 잘린 경우) IDENT_CURRENT 함수는 초기값을 반환합니다.  
+IDENT_CURRENT 값이 NULL인 경우(테이블에 행이 포함된 적이 없거나 테이블이 잘린 경우) IDENT_CURRENT 함수는 초기값을 반환합니다.  
   
- 문 및 트랜잭션이 실패해도 테이블의 현재 ID가 변경되고 ID 열 값 간에 간격이 생성될 수 있습니다. 테이블에 값을 삽입하려고 시도한 트랜잭션이 커밋되지 않아도 ID 값은 롤백되지 않습니다. 예를 들어 IGNORE_DUP_KEY 위반으로 인해 INSERT 문이 실패해도 테이블의 현재 ID 값은 계속 증가합니다.  
+문 및 트랜잭션이 실패해도 테이블의 현재 ID가 변경되고 ID 열 값 간에 간격이 생성될 수 있습니다. 테이블에 값을 삽입하려고 시도한 트랜잭션이 커밋되지 않아도 ID 값은 롤백되지 않습니다. 예를 들어 IGNORE_DUP_KEY 위반으로 인해 INSERT 문이 실패해도 테이블의 현재 ID 값은 계속 증가합니다.  
+
+조인이 포함된 뷰에서 IDENT_CURRENT를 사용하는 경우 NULL이 반환됩니다. 이러한 결과는 ID 열이 단지 하나의 조인된 테이블에만 있는지 또는 둘 이상의 조인된 테이블에 있는지에 관계 없이 발생합니다. 
   
- IDENT_CURRENT를 사용하여 다음에 생성되는 ID 값을 예측할 때 유의합니다. 다른 세션에서 삽입 작업을 수행하므로 실제로 생성된 값은 IDENT_CURRENT에 IDENT_INCR을 더한 값과 다를 수 있습니다.  
+> [!IMPORTANT]
+> IDENT_CURRENT를 사용하여 다음에 생성되는 ID 값을 예측할 때는 유의하세요. 다른 세션에서 삽입 작업을 수행하므로 실제로 생성된 값은 IDENT_CURRENT에 IDENT_INCR을 더한 값과 다를 수 있습니다.  
   
 ## <a name="examples"></a>예  
   
 ### <a name="a-returning-the-last-identity-value-generated-for-a-specified-table"></a>1\. 지정된 테이블에 대해 마지막으로 생성된 ID 값 반환  
  다음 예에서는 `Person.Address` 데이터베이스의 `AdventureWorks2012` 테이블에 대해 마지막으로 생성된 ID 값을 반환합니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_CURRENT ('Person.Address') AS Current_Identity;  
 GO  
 ```  
   
-### <a name="b-comparing-identity-values-returned-by-identcurrent-identity-and-scopeidentity"></a>2\. IDENT_CURRENT, @@IDENTITY 및 SCOPE_IDENTITY에서 반환된 ID 값 비교  
+### <a name="b-comparing-identity-values-returned-by-ident_current-identity-and-scope_identity"></a>2\. IDENT_CURRENT, @@IDENTITY 및 SCOPE_IDENTITY에서 반환된 ID 값 비교  
  다음 예에서는 `IDENT_CURRENT`, `@@IDENTITY` 및 `SCOPE_IDENTITY`가 반환하는 서로 다른 ID 값을 보여 줍니다.  
   
-```  
+```sql 
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID(N't6', N'U') IS NOT NULL   

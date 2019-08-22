@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 413a77ecb0ad93e64d05f528217597184c03b9a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6290a9b8b8ff71c05d52051ffa02f097575484e
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914722"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957471"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ OPENROWSET
 |ACP|**char**, **varchar** 또는 **text** 데이터 형식의 열을 ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 코드 페이지(ISO 1252)에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환합니다.|  
 |OEM(기본값)|**char**, **varchar** 또는 **text** 데이터 형식의 열을 시스템 OEM 코드 페이지에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 코드 페이지로 변환합니다.|  
 |RAW|코드 페이지 간 변환이 일어나지 않습니다. 가장 빠른 옵션입니다.|  
-|*code_page*|데이터 파일의 문자 데이터가 인코딩된 원본 코드 페이지(예: 850)를 나타냅니다.<br /><br /> **&#42;&#42; 중요 &#42;&#42;** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 버전은 코드 페이지 65001(UTF-8 인코딩)을 지원하지 않습니다.|  
+|*code_page*|데이터 파일의 문자 데이터가 인코딩된 원본 코드 페이지(예: 850)를 나타냅니다.<br /><br /> **중요** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 이전 버전은 코드 페이지 65001(UTF-8 인코딩)을 지원하지 않습니다.|  
   
  ERRORFILE ='*file_name*'  
  형식 오류가 있어 OLE DB 행 집합으로 변환할 수 없는 행을 수집하는 데 사용되는 파일을 지정합니다. 이러한 행은 데이터 파일에서 "있는 그대로" 이 오류 파일에 복사됩니다.  

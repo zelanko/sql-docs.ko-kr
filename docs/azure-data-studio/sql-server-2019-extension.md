@@ -3,19 +3,19 @@ title: SQL Server 2019 확장(미리 보기)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio용 SQL Server 2019 미리 보기 확장
 ms.custom: seodec18
-ms.date: 06/25/2019
+ms.date: 08/15/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9b25fd044b94e21151b687d428c469a12d8c8a5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959211"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494039"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장(미리 보기)
 
@@ -29,9 +29,9 @@ SQL Server 2019 확장(미리 보기)을 설치하려면 연결된 .vsix 파일�
 
    |플랫폼|다운로드|릴리스 날짜|버전 옵션
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|2019년 6월 25일 |0.14.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|2019년 6월 25일 |0.14.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|2019년 6월 25일 |0.14.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|2019년 8월 15일 |0.15.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|2019년 8월 15일 |0.15.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|2019년 8월 15일 |0.15.0
 
 1. Azure Data Studio의 **파일** 메뉴에서 **VSIX 패키지에서 확장 설치**를 선택하고 다운로드한 .vsix 파일을 선택합니다.
 
@@ -42,6 +42,13 @@ SQL Server 2019 확장(미리 보기)을 설치하려면 연결된 .vsix 파일�
 1. 다시 로드하면 확장 기능이 종속성을 설치합니다. 출력 창에서 진행률을 볼 수 있으며 몇 분 정도 걸릴 수 있습니다.
 
 1. 종속성 설치가 끝나면 Azure Data Studio을 닫았다가 다시 엽니다. **SQL Server 빅 데이터 클러스터** 연결 유형은 Azure Data Studio를 다시 시작해야만 사용할 수 있습니다.
+
+## <a name="changes-in-release-015"></a>릴리스 0.15의 변경 내용
+* 외부 테이블 만들기 마법사:
+  * 개체 매핑 페이지에서 테이블 및 열 정보를 로드하는 데 걸리는 시간이 단축되었습니다.
+  * 연결 정보 페이지에서 기존 데이터베이스 범위 자격 증명을 로드할 때의 버그를 수정했습니다.
+* CSV 파일에서 외부 테이블 만들기 마법사:
+  * PROSE 구문 분석에 사용되는 기본 샘플 크기가 커졌습니다.
 
 ## <a name="changes-in-release-0141"></a>릴리스 0.14.1의 변경 내용
 * CTP 3.1 데이터 원본 지원

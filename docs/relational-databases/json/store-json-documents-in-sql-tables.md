@@ -9,15 +9,21 @@ ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-ms.openlocfilehash: 4828f5fd8a655d29837dd661267c73f0082f942e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c389f6b7cb2df2d7f464dcc8fc5eeb110a7f4d5
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059574"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957451"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>SQL Server 또는 SQL 데이터베이스에 JSON 문서 저장
-SQL Server 및 Azure SQL Database에는 표준 SQL 언어를 사용하여 JSON 문서를 구문 분석할 수 있는 네이티브 JSON 함수가 있습니다. 이제 JSON 문서를 SQL Server 또는 SQL Database에 저장하고 JSON 데이터를 NoSQL 데이터베이스에서처럼 쿼리할 수 있습니다. 이 문서에서는 JSON 문서를 SQL Server 또는 SQL Database에 저장하는 옵션에 대해 설명합니다.
+SQL Server 및 Azure SQL Database에는 표준 SQL 언어를 사용하여 JSON 문서를 구문 분석할 수 있는 네이티브 JSON 함수가 있습니다. JSON 문서를 SQL Server 또는 SQL Database에 저장하고 JSON 데이터를 NoSQL 데이터베이스에서처럼 쿼리할 수 있습니다. 이 문서에서는 JSON 문서를 SQL Server 또는 SQL Database에 저장하는 옵션에 대해 설명합니다.
+
+## <a name="json-storage-format"></a>JSON 스토리지 형식
+
+첫 번째 스토리지 디자인 결정은 테이블에 JSON 문서를 저장하는 방법에 대한 것입니다. 다음과 같은 두 가지 옵션을 사용할 수 있습니다.
+- **LOB 스토리지** - JSON 문서를 `NVARCHAR` 열에 있는 그대로 저장할 수 있습니다. 이 방법은 로드 속도가 문자열 열의 로드 속도와 일치하므로 빠른 데이터 로드 및 수집에 가장 적합한 방법입니다. 쿼리가 실행되는 동안 원시 JSON 문서를 구문 분석해야 하기 때문에 이 방법을 사용하면 JSON 값에 대한 인덱싱이 수행되지 않은 경우 추가적인 성능 저하로 인해 쿼리/분석 시간이 느려질 수 있습니다. 
+- **관계형 스토리지** - JSON 문서는 `OPENJSON`, `JSON_VALUE` 또는 `JSON_QUERY` 함수를 사용하여 테이블에 삽입하는 동안 구문 분석할 수 있습니다. 입력 JSON 문서의 조각은 SQL 데이터 형식 열 또는 JSON 하위 요소를 포함하는 NVARCHAR 열에 저장할 수 있습니다. 이 방법을 사용하면 로드 중에 JSON 구문 분석이 수행되기 때문에 로드 시간이 늘어나지만 쿼리 성능은 관계형 데이터에 대한 클래식 쿼리의 성능과 같습니다.
 
 ## <a name="classic-tables"></a>클래식 테이블
 
