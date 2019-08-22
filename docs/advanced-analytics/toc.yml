@@ -183,6 +183,8 @@
   items:
     - name: 연결
       items:
+        - name: 루프백 연결
+          href: ../advanced-analytics/connect/loopback-connection.md
         - name: R에서 OLAP에 연결
           items:
             - name: R에서 OLAP 큐브의 데이터 사용
@@ -225,34 +227,22 @@
           href: ../advanced-analytics/sql-native-scoring.md
     - name: 패키지 관리
       items:
-        - name: 기본 패키지
-          href: ../advanced-analytics/package-management/default-packages.md
-        - name: 패키지 정보 가져오기
-          href: ../advanced-analytics/package-management/installed-package-information.md
+        - name: 새 Python 패키지 설치
+          items:
+            - name: Python 패키지 정보 가져오기
+              href: ../advanced-analytics/package-management/python-package-information.md
+            - name: Python 패키지 설치
+              href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
         - name: 새 R 패키지 설치
           items:
+            - name: R 패키지 정보 가져오기
+              href: ../advanced-analytics/package-management/r-package-information.md
             - name: R 패키지 설치
-              href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
-            - name: T-SQL 사용
-              href: ../advanced-analytics/r/install-r-packages-tsql.md
-            - name: 패키지 관리자 사용
-              href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
-            - name: RevoScaleR 사용
-              items:
-                - name: RevoScaleR을 사용하여 설치
-                  href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
-                - name: 원격 R 패키지 관리 사용
-                  href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
-                - name: R 패키지 동기화
-                  href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
+              href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
             - name: miniCRAN 리포지토리 만들기
               href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
             - name: R 패키지 사용 팁
               href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
-        - name: 새 Python 패키지 설치
-          items:
-            - name: 패키지 관리자 사용
-              href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
     - name: 관리
       items:
         - name: 통합 관리

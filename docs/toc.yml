@@ -10376,17 +10376,8 @@
             - name: 컨테이너에 대한 고가용성
               href: linux/sql-server-linux-container-ha-overview.md
               items:
-                - name: SQL Server 컨테이너의 Always On 가용성 그룹
-                  href: linux/sql-server-ag-kubernetes.md
-                  items:
-                    - name: 배포
-                      href: linux/sql-server-linux-kubernetes-deploy.md
-                    - name: 관리
-                      href: linux/sql-server-linux-kubernetes-manage.md
-                    - name: 연결
-                      href: linux/sql-server-linux-kubernetes-connect.md
-                    - name: 배포 스크립트 만들기
-                      href: linux/sql-server-linux-kubernetes-create-deployment.md
+                - name: Kubernetes에 컨테이너 구성
+                  href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: 보안
           href: linux/sql-server-linux-security-overview.md
           items:
