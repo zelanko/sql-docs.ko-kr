@@ -21,7 +21,7 @@ ms.locfileid: "68267044"
 
 SQL Server Management Studio에 대한 지원 정책은 다음과 같습니다.
 
-## <a name="support-policy-for-ssms"></a>SSMS에 대한 정책 지원
+## <a name="support-policy-for-ssms"></a>SSMS에 대한 지원 정책
 - SSMS 17.0부터는 SQL 도구 팀이 [Microsoft 최신 수명 주기 정책](https://support.microsoft.com/help/30881/modern-lifecycle-policy)을 채택했습니다.
 - 원래 [최신 수명 주기 정책 알림](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)을 읽어 보세요.
 - 추가 정보는 [최신 정책 FAQ](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)를 참조하세요.
