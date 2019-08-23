@@ -33,7 +33,7 @@ ms.locfileid: "68714967"
 
 2. **로그인-새로 만들기** 대화 상자에서 **검색**을 선택 합니다. (상자에 아무것도 입력 하지 마세요.)
     
-     ![검색을 클릭 하 여 machine learning에 대 한 새 로그인을 추가 합니다] . (media/implied-auth-login1.png "검색을 클릭 하 여 machine learning에 대 한 새 로그인을 추가 합니다") .
+     ![검색을 클릭 하 여 machine learning에 대 한 새 로그인을 추가 합니다](media/implied-auth-login1.png "검색을 클릭 하 여 machine learning에 대 한 새 로그인을 추가 합니다") .
 
 3. **사용자 또는 그룹 선택** 상자에서 **개체 유형** 단추를 클릭 합니다.
 
@@ -45,7 +45,7 @@ ms.locfileid: "68714967"
 
 4. **고급**을 클릭 하 고 검색할 위치가 현재 컴퓨터 인지 확인 한 다음 **지금 찾기**를 클릭 합니다.
 
-     ![지금 찾기를 클릭 하 여 그룹 목록을 가져옵니다] . (media/implied-auth-login4.png "지금 찾기를 클릭 하 여 그룹 목록을 가져옵니다") .
+     ![지금 찾기를 클릭 하 여 그룹 목록을 가져옵니다](media/implied-auth-login4.png "지금 찾기를 클릭 하 여 그룹 목록을 가져옵니다") .
 
 5. 로 `SQLRUserGroup`시작 하는 항목을 찾을 때까지 서버의 그룹 계정 목록을 스크롤합니다.
     

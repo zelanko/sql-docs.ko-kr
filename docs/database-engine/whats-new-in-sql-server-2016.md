@@ -168,7 +168,7 @@ SQL Server 2014의 메모리 액세스에 최적화된 테이블에 지원되지
   - 인덱스 추가 및 삭제 해시 인덱스의 bucket_count를 변경합니다.
   - 스키마 변경합니다(열 추가/삭제/변경, 제약 조건 추가/삭제).
 
-- 이제 메모리 액세스에 최적화된 테이블에 결합된 길이가 8060바이트 페이지의 길이보다 긴 여러 개의 열이 있을 수 있습니다. `nvarchar(4000)`형식의 열이&3;개 있는 테이블이 한 예입니다. 이러한 예에서 일부 열은 이제 행 외부에 저장됩니다. 쿼리에서 열이 행 내부 또는 행 외부에 있는지 알지 못합니다.
+- 이제 메모리 액세스에 최적화된 테이블에 결합된 길이가 8060바이트 페이지의 길이보다 긴 여러 개의 열이 있을 수 있습니다. `nvarchar(4000)`형식의 열이3;개 있는 테이블이 한 예입니다. 이러한 예에서 일부 열은 이제 행 외부에 저장됩니다. 쿼리에서 열이 행 내부 또는 행 외부에 있는지 알지 못합니다.
 
 - [LOB(Large Object) 형식](../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md) `varbinary(max)`, `nvarchar(max)`및 `varchar(max)` 는 메모리 액세스에 최적화된 테이블에서 지원되지 않습니다.
 
@@ -371,7 +371,7 @@ SQL Server 2014의 고유하게 컴파일된 모듈에 지원되지 않았던 �
 - [sys.dm_exec_function_stats&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-function-stats-transact-sql.md)는 스칼라 반환 함수에 대한 실행 통계를 제공합니다.
 - [!INCLUDE[ssSQL15](../includes/sssql15-md.md)]부터 [sys.dm_db_index_usage_stats&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)의 항목은 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 이전의 상태로 유지됩니다.
 - [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스에 제출된 문에 대한 정보는 새로운 동적 관리 함수인 [sys.dm_exec_input_buffer&#40;Transact-SQL&#41;](../relational-databases/system-dynamic-management-views/sys-dm-exec-input-buffer-transact-sql.md)를 통해 반환할 수 있습니다.
-- [SQL Server R 서비스](../advanced-analytics/r-services/sql-server-r-services.md)를 지원하는&2;개의 새로운 뷰: [sys.dm_external_script_requests](../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 및 [sys.dm_external_script_execution_stats](../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)가 제공됩니다. 
+- [SQL Server R 서비스](../advanced-analytics/r-services/sql-server-r-services.md)를 지원하는2;개의 새로운 뷰: [sys.dm_external_script_requests](../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) 및 [sys.dm_external_script_execution_stats](../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)가 제공됩니다. 
 
 
 ## <a name="security-enhancements"></a>향상된 보안 기능

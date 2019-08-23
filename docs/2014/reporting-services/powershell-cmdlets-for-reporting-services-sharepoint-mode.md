@@ -74,7 +74,7 @@ ms.locfileid: "68891056"
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
- 자세한 내용은 [Windows PowerShell을 사용 하 여 SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx) ()https://technet.microsoft.com/library/ee806878.aspx) 관리를 참조 하세요.  
+ 자세한 내용은 [Windows PowerShell을 사용 하 여 SharePoint 2013](https://technet.microsoft.com/library/ee806878.aspx) (https://technet.microsoft.com/library/ee806878.aspx) 관리를 참조 하세요.  
   
 #### <a name="to-open-the-sharepoint-management-shell-and-run-cmdlets"></a>SharePoint 관리 셸을 열고 cmdlet을 실행하려면  
   
