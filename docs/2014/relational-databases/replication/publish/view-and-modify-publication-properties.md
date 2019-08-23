@@ -18,12 +18,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5053cc16734cc18c75e163fec4c06b1768e590cc
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68212059"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941062"
 ---
 # <a name="view-and-modify-publication-properties"></a>게시 속성 보기 및 수정
   이 항목에서는 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]또는 RMO(복제 관리 개체)를 사용하여 [!INCLUDE[tsql](../../../includes/tsql-md.md)]에서 게시 속성을 보고 수정하는 방법에 대해 설명합니다.  
@@ -65,19 +65,19 @@ ms.locfileid: "68212059"
   
 -   **행 필터** 페이지는 새 게시 마법사의 **테이블 행 필터** 페이지에 해당합니다. 이 페이지를 사용하여 모든 게시 유형에 대해 정적 행 필터를 추가, 편집 및 삭제하고 병합 게시에 대해 매개 변수가 있는 행 필터 및 조인 필터를 추가, 편집 및 삭제할 수 있습니다.  
   
--   **스냅숏** 페이지를 사용하면 스냅숏의 형식 및 위치, 스냅숏의 압축 여부 및 스냅숏이 적용되기 전과 후에 실행할 스크립트를 지정할 수 있습니다.  
+-   **스냅샷** 페이지를 사용하면 스냅샷의 형식 및 위치, 스냅샷의 압축 여부 및 스냅샷이 적용되기 전과 후에 실행할 스크립트를 지정할 수 있습니다.  
   
--   **FTP 스냅숏** 페이지(SQL Server 2005 이전 버전을 실행하는 게시자에 대한 병합 게시와 스냅숏 및 트랜잭션 게시의 경우)를 사용하면 구독자가 FTP(파일 전송 프로토콜)를 통해 스냅숏 파일을 다운로드할 수 있는지 여부를 지정할 수 있습니다.  
+-   **FTP 스냅샷** 페이지(SQL Server 2005 이전 버전을 실행하는 게시자에 대한 병합 게시와 스냅샷 및 트랜잭션 게시의 경우)를 사용하면 구독자가 FTP(파일 전송 프로토콜)를 통해 스냅샷 파일을 다운로드할 수 있는지 여부를 지정할 수 있습니다.  
   
--   **FTP 스냅숏 및 인터넷** 페이지(SQL Server 2005 이후 버전을 실행하는 게시자에 대한 병합 게시의 경우)를 사용하면 구독자가 FTP를 통해 스냅숏 파일을 다운로드할 수 있는지 여부와 구독자가 HTTPS를 통해 구독을 동기화할 수 있는지 여부를 지정할 수 있습니다.  
+-   **FTP 스냅샷 및 인터넷** 페이지(SQL Server 2005 이후 버전을 실행하는 게시자에 대한 병합 게시의 경우)를 사용하면 구독자가 FTP를 통해 스냅샷 파일을 다운로드할 수 있는지 여부와 구독자가 HTTPS를 통해 구독을 동기화할 수 있는지 여부를 지정할 수 있습니다.  
   
 -   **구독 옵션** 페이지를 사용하면 모든 구독에 적용되는 여러 옵션을 설정할 수 있습니다. 사용할 수 있는 옵션은 게시 유형에 따라 달라집니다.  
   
 -   **게시 액세스 목록** 페이지를 사용하면 게시에 액세스할 수 있는 로그인 및 그룹을 지정할 수 있습니다.  
   
--   **에이전트 보안** 페이지를 사용하여 모든 게시에 대한 스냅숏 에이전트, 모든 트랜잭션 게시에 대한 로그 판독기 에이전트, 지연 업데이트 구독을 허용하는 트랜잭션 게시에 대한 큐 판독기 에이전트 등 실행하고 복제 토폴로지의 컴퓨터에 이러한 에이전트를 연결하는 계정에 대한 설정에 액세스할 수 있습니다.  
+-   **에이전트 보안** 페이지를 사용하여 모든 게시에 대한 스냅샷 에이전트, 모든 트랜잭션 게시에 대한 로그 판독기 에이전트, 지연 업데이트 구독을 허용하는 트랜잭션 게시에 대한 큐 판독기 에이전트 등 실행하고 복제 토폴로지의 컴퓨터에 이러한 에이전트를 연결하는 계정에 대한 설정에 액세스할 수 있습니다.  
   
--   **데이터 파티션** 페이지(SQL Server 2005 이후 버전을 실행하는 게시자의 병합 게시의 경우)를 사용하면 매개 변수가 있는 필터가 있는 게시에 대한 구독자가 스냅숏을 사용할 수 없는 경우 스냅숏을 요청할 수 있는지 여부를 지정할 수 있습니다. 또한 하나 이상의 파티션에 대해 스냅샷을 한 번 또는 되풀이되는 일정에 따라 생성할 수 있습니다.  
+-   **데이터 파티션** 페이지(SQL Server 2005 이후 버전을 실행하는 게시자의 병합 게시의 경우)를 사용하면 매개 변수가 있는 필터가 있는 게시에 대한 구독자가 스냅샷을 사용할 수 없는 경우 스냅샷을 요청할 수 있는지 여부를 지정할 수 있습니다. 또한 하나 이상의 파티션에 대해 스냅샷을 한 번 또는 되풀이되는 일정에 따라 생성할 수 있습니다.  
   
 #### <a name="to-view-and-modify-publication-properties-in-management-studio"></a>Management Studio에서 게시 속성을 보고 수정하려면  
   
@@ -102,29 +102,29 @@ ms.locfileid: "68212059"
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시의 속성을 확인하려면  
   
-1.  적절한 스냅숏 매개 변수에 하나 이상의 새 스냅숏 속성을 지정하여 [@publication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)매개 변수에 게시 이름을 지정하여 **@publication** 을 실행합니다. 이 매개 변수를 지정하지 않으면 게시자에 있는 모든 게시에 대한 정보가 반환됩니다.  
+1.  **\@게시** 매개 변수에 대한 게시의 이름을 지정 하 여 [sp_helppublication](/sql/relational-databases/system-stored-procedures/sp-helppublication-transact-sql)를 실행 합니다. 이 매개 변수를 지정하지 않으면 게시자에 있는 모든 게시에 대한 정보가 반환됩니다.  
   
 #### <a name="to-change-the-properties-of-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시의 속성을 변경하려면  
   
-1.  적절한 스냅숏 매개 변수에 하나 이상의 새 스냅숏 속성을 지정하여 [@property](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)매개 변수에 변경할 게시 속성, **@property** 매개 변수에 이 속성의 새 값을 지정하여 **@value** 을 실행합니다.  
+1.  [Sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)를 실행 하 고  **\@property** 매개 변수에서 변경할 게시 속성을 지정 하 고  **\@value** 매개 변수에이 속성의 새 값을 지정 합니다.  
   
     > [!NOTE]  
-    >  변경 시 새 스냅샷을 생성해야 하는 경우 **@force_invalidate_snapshot** 값도 **@force_invalidate_snapshot** 로 지정해야 합니다. 변경 시 구독자를 초기화해야 하는 경우 **@force_invalidate_snapshot** 값도 **@force_reinit_subscription** 를 참조하세요. 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경 시 새 스냅숏을 생성 해야 하는 경우  **\@force_invalidate_snapshot**에 값 **1** 을 지정 해야 하며, 변경으로 인해 구독자를 다시 초기화 해야 하는 경우 값 1을 지정 해야 합니다.  **\@force_reinit_subscription**의 경우 변경된 경우 새 스냅샷 또는 다시 초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>병합 게시의 속성을 확인하려면  
   
-1.  적절한 스냅숏 매개 변수에 하나 이상의 새 스냅숏 속성을 지정하여 [@publication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)매개 변수에 게시 이름을 지정하여 **@publication** 을 실행합니다. 이 매개 변수를 지정하지 않으면 게시자에 있는 모든 게시에 대한 정보가 반환됩니다.  
+1.  **\@게시** 매개 변수에 대 한 게시의 이름을 지정 하 여 [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)를 실행 합니다. 이 매개 변수를 지정하지 않으면 게시자에 있는 모든 게시에 대한 정보가 반환됩니다.  
   
 #### <a name="to-change-the-properties-of-a-merge-publication"></a>병합 게시의 속성을 변경하려면  
   
-1.  적절한 스냅숏 매개 변수에 하나 이상의 새 스냅숏 속성을 지정하여 [@property](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)매개 변수에 변경할 게시 속성, **@property** 매개 변수에 이 속성의 새 값을 지정하여 **@value** 을 실행합니다.  
+1.  [Sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)을 실행 하 여  **\@property** 매개 변수에 변경 되는 게시 속성을 지정 하 고  **\@value** 매개 변수에이 속성의 새 값을 지정 합니다.  
   
     > [!NOTE]  
-    >  변경 시 새 스냅샷을 생성해야 하는 경우 **@force_invalidate_snapshot** 값도 **1**로 지정해야 합니다. 변경 시 구독자를 초기화해야 하는 경우 **@force_reinit_subscription** 에 값 **1**을 지정해야 합니다. 변경 시 새 스냅샷 또는 재초기화가 필요한 속성에 대한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조하세요.  
+    >  변경 시 새 스냅숏을 생성 해야 하는 경우  **\@force_invalidate_snapshot**에 값 **1** 을 지정 해야 하며, 변경으로 인해 구독자를 다시 초기화 해야 하는 경우 값 1을 지정 해야 합니다.  **force_reinit_subscription\@** 의 경우 변경 시 새 스냅숏 또는 다시 초기화가 필요한 속성에 대 한 자세한 내용은 [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)을 참조 하세요.  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>스냅샷의 속성을 확인하려면  
   
-1.  적절한 스냅샷 매개 변수에 하나 이상의 새 스냅샷 속성을 지정하여 [@publication](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql)매개 변수에 게시 이름을 지정하여 **@publication** 을 실행합니다.  
+1.  **\@게시** 매개 변수에 대 한 게시의 이름을 지정 하 여 [sp_helppublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql)를 실행 합니다.  
   
 #### <a name="to-change-the-properties-of-a-snapshot"></a>스냅샷의 속성을 변경하려면  
   
@@ -192,7 +192,7 @@ ms.locfileid: "68212059"
  [게시 및 아티클 속성 변경](change-publication-and-article-properties.md)   
  [게시 데이터베이스의 스키마 변경](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
- [게시에서 아티클 및 삭제 추가](add-articles-to-and-drop-articles-from-a-publication.md)   
+ [게시에 대 한 아티클 추가 및 삭제](add-articles-to-and-drop-articles-from-a-publication.md)   
  [복제 모니터를 사용하여 정보 보기 및 태스크 수행](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [아티클 속성 보기 및 수정](view-and-modify-article-properties.md)  
   

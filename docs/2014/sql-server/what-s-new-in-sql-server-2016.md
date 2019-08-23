@@ -1,5 +1,5 @@
 ---
-title: 새로운&#39;SQL Server 2014의 새로운 | Microsoft Docs
+title: SQL Server&#39;2014의 새로운 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
@@ -17,68 +17,68 @@ ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 26d0c84194f6f2aafb8bc499ff5404a1438ee577
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f368da503c90595624f476344724719206cdb77c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63295241"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893706"
 ---
-# <a name="what39s-new-in-sql-server-2014"></a>새로운&#39;SQL Server 2014의 새로운
-  이 항목에서는 새로운 기능에 대 한 링크가 요약 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 하 고 서비스 팩에 대 한 요약 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+# <a name="what39s-new-in-sql-server-2014"></a>SQL Server&#39;2014의 새로운 기능
+  이 항목에서는의 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 새로운 기능에 대 한 자세한 링크 및에 대 한 서비스 팩 요약을 요약 합니다.[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  
-**사용해보기:** ![Azure 가상 머신 소형](./media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) Azure 계정이 있으세요?  이동 **[여기](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2014sp1EnterpriseWindowsServer2012R2)** 이미 설치 된 SQL Server 2014 서비스 팩 1 (SP1)를 사용 하 여 가상 머신을 스핀업 하 합니다. 
+**사용해보기:** ![Azure 가상 머신 소형](./media/what-s-new-in-sql-server-2016/azure-virtual-machine-small.png) azure 계정이 있나요?  그런 다음 **[여기](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2014sp1EnterpriseWindowsServer2012R2)** 로 이동 하 여 SQL SERVER 2014 SP1 (서비스 팩 1)이 이미 설치 되어 있는 가상 머신을 실행 합니다. 
   
--   [새로운 &#40;데이터베이스 엔진&#41;](../database-engine/whats-new-in-sql-server-2016.md)  
+-   [새로운 &#40;기능 데이터베이스 엔진&#41;](../database-engine/whats-new-in-sql-server-2016.md)  
   
--   [Analysis Services 및 Business Intelligence의 새로운 기능](../analysis-services/what-s-new-in-analysis-services.md)  
+-   [Analysis Services 및 비즈니스 인텔리전스의 새로운 기능](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)  
   
 -   [SQL Server 설치의 새로운 기능](install/what-s-new-in-sql-server-installation.md)  
   
- **[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 에 다음에 중요 한 새 기능이 도입 하지 않았습니다.**  
+ **[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에는 다음에 대 한 중요 한 새로운 기능이 도입 되지 않았습니다.**  
   
--   [새로운 &#40;Integration Services&#41;](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
+-   [새로운 &#40;기능 Integration Services&#41;](../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)  
   
--   [새로운 &#40;Reporting Services&#41;](../reporting-services/what-s-new-reporting-services.md)  
+-   [새로운 &#40;기능 Reporting Services&#41;](../reporting-services/what-s-new-reporting-services.md)  
   
 ## <a name="includesssql14includessssql14-mdmd-service-pack-1-sp1"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP1(서비스 팩 1)
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP1)는 중요 한 새로운 기능을 제공 하지 않았습니다.
--  [SQL Server 2014 서비스 팩 1 릴리스 정보](https://support.microsoft.com/en-us/kb/3058865)합니다.
--  [![서비스 팩 1 다운로드 microsoft?? SQL Server?? 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) [microsoft Service Pack 1 다운로드?? SQL Server?? 2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)](SP1)에는 중요 한 새로운 기능이 도입 되지 않았습니다.
+-  [2014 서비스 팩 1 릴리스 정보를 SQL Server](https://support.microsoft.com/en-us/kb/3058865)합니다.
+-  [![Microsoft 용 서비스 팩 1 다운로드? SQL Server? ](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=46694) 2014[Microsoft 용 서비스 팩 1 다운로드 SQL Server? 2014](https://www.microsoft.com/en-us/download/details.aspx?id=46694).
 
 
-## <a name="includesssql14includessssql14-mdmd-service-pack-2-sp2"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 서비스 팩 2 (SP2)
-- [SQL Server 2014 서비스 팩 2 릴리스 정보](https://support.microsoft.com/en-us/kb/3171021)합니다.
--  [![서비스 팩 2 다운로드 microsoft?? SQL Server?? 2014](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) [microsoft 서비스 팩 2 다운로드?? SQL Server?? 2014](https://go.microsoft.com/fwlink/?LinkID=821558).
--  [![SQL Server 2014 SP2 기능 팩 다운로드](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=53164) [SQL Server 2014 SP2 기능 팩 다운로드](https://www.microsoft.com/en-us/download/details.aspx?id=53164)합니다.
+## <a name="includesssql14includessssql14-mdmd-service-pack-2-sp2"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]서비스 팩 2 (SP2)
+- [2014 서비스 팩 2 릴리스 정보를 SQL Server](https://support.microsoft.com/en-us/kb/3171021)합니다.
+-  [![Microsoft의 서비스 팩 2를 다운로드 하 시겠습니까? SQL Server? ](./media/what-s-new-in-sql-server-2016/download.png)](https://go.microsoft.com/fwlink/?LinkID=821558) 2014[Microsoft의 서비스 팩 2 다운로드 SQL Server? 2014](https://go.microsoft.com/fwlink/?LinkID=821558).
+-  [![다운로드 SQL Server 2014 sp2 기능 팩](./media/what-s-new-in-sql-server-2016/download.png)](https://www.microsoft.com/en-us/download/details.aspx?id=53164) [SQL Server 2014 SP2 기능 팩](https://www.microsoft.com/en-us/download/details.aspx?id=53164)을 다운로드 합니다.
 
-[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] (SP2) 다음과 같은 개선 사항이 포함 됩니다.
+[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]2 에는 다음과 같은 향상 된 기능이 포함 되어 있습니다.
 
 ### <a name="performance-and-scalability-improvements"></a>성능 및 확장성 향상 
--   **자동 소프트 NUMA 분할 합니다.** 사용 하 여 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2, 자동 소프트 NUMA 인스턴스를 시작 하는 동안 추적 플래그 8079를 켤 때 사용 됩니다. 추적 플래그 8079를 시작 하는 동안 때 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2는 하드웨어 레이아웃을 조사 하 고 자동으로 NUMA 노드당 8 개 이상의 Cpu를 보고 하는 시스템에 소프트 NUMA를 구성 합니다. 자동, 소프트 NUMA 동작은 하이퍼스레드 (h T/논리 프로세서)를 인식 합니다. 추가 노드를 분할하고 생성하면 수신기 수, 크기 조정 및 네트워크와 암호화 기능을 늘려서 후순위 처리를 조정합니다. 것이 좋습니다 첫 번째 테스트 자동 소프트 NUMA를 사용 하 여 성능 워크 로드를 프로덕션 환경에서 설정 하기 전에 합니다. [자세한 내용은 블로그를 참조 하세요.](https://blogs.msdn.microsoft.com/psssql/2016/03/30/sql-2016-it-just-runs-faster-automatic-soft-numa/)합니다. 
--  **동적 메모리 개체 크기 조정:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2 개체 노드 및 최신 하드웨어의 크기를 조정 하는 코어의 수에 따라 메모리를 동적으로 분할 합니다. 동적 승격 목표 병목 현상이 발생 하는 경우 (CMEMTHREAD)는 스레드로부터 안전한 메모리 개체를 자동으로 분할 하는 것입니다. 노드 (파티션 equals 수가 NUMA 노드 수)로 분할 되어야으로 분할 되지 않은 메모리 개체를 동적으로 승격 될 수 있습니다. 및 메모리 노드별로 분할 된 개체에서 작업을 수행할 수 있습니다. 승격 (개수의 파티션 equals CPU 별로 분할할 수 Cpu)입니다. [자세한 내용은 블로그를 참조 하세요.](https://blogs.msdn.microsoft.com/psssql/2016/04/06/sql-2016-it-just-runs-faster-dynamic-memory-object-cmemthread-partitioning/)합니다.
--  **DBCC CHECK에 대 한 MAXDOP 힌트\* 명령:** 이러한 향상 된이 기능을 해결 [connect 피드백 (468694)](https://connect.microsoft.com/SQLServer/feedback/details/468694/maxdop-option-in-dbcc-checkdb)합니다. 이제 사용 하 여 DBCC CHECKDB를 실행할 수 있습니다는 sp_configure 값이 아닌 MAXDOP 설정 합니다. MAXDOP가 Resource Governor로 구성한 값을 초과하면, 데이터베이스 엔진에서 ALTER WORKLOAD GROUP(Transact-SQL)에서 설명한 Resource Governor MAXDOP 값을 사용합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [DBCC CHECKDB (TRANSACT-SQL)](https://msdn.microsoft.com/library/ms176064.aspx)합니다.
--   **설정 > 버퍼 풀에 대 한 8TB:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] SP2에는 버퍼 풀 사용량에 대 한 가상 주소 공간의 128 TB 수 있습니다. 이러한 향상 된이 기능에는 SQL Server 버퍼 풀을 최신 하드웨어에서 8TB 이상으로 확장할 수 있습니다.
--   **SOS_RWLock 스핀 잠금 개선:** SOS_RWLock는 SQL Server 코드 베이스 전체에서 다양 한 위치에서 사용 하는 동기화 기본 형식입니다.  이름에서 알 수 있듯이 여러 공유 (판독기) 또는 단일 (기록기) 소유권 코드가 있을 수 있습니다. SOS_RWLock 스핀 잠금에 대 한 필요를 제거 하 고 대신 메모리 내 OLTP와 유사한 잠금 없는 기술을 사용 하 여 하는 이러한 향상 된이 기능. 이 변경으로 많은 스레드가 서로 차단 하 고 따라서 향상 된 확장성을 제공 하지 않고 병렬로 SOS_RWLock 하 여 보호 된 데이터 구조를 읽을 수 있습니다. 이 변경 전에 spinlock 구현에는 SOS_RWLock 읽기 데이터 구조에도 한 번에 가져오려고 스레드가 하나만 사용할 수 있습니다.  [자세한 내용은 블로그를 참조 하세요.](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)합니다.
--    **공간 네이티브 구현 합니다.** 도입 된 공간 쿼리 성능이 크게 향상 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 네이티브 구현을 통해 SP2. 자세한 내용은 참조는 [기술 자료 문서 KB3107399](https://support.microsoft.com/en-us/kb/3107399)합니다.
+-   **자동 소프트 NUMA 분할:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] S p 2에서는 인스턴스를 시작 하는 동안 추적 플래그 8079가 설정 되 면 자동 소프트 NUMA가 사용 됩니다. 시작 하는 동안 추적 플래그 8079를 사용 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 하도록 설정 하면 s p 2는 하드웨어 레이아웃을 검사 하 고 NUMA 노드당 8 개 이상의 cpu를 보고 하는 시스템에서 소프트 NUMA를 자동으로 구성 합니다. 자동 소프트 NUMA 동작은 하이퍼스레드 제외 (HT/logical processor)를 인식 합니다. 추가 노드를 분할하고 생성하면 수신기 수, 크기 조정 및 네트워크와 암호화 기능을 늘려서 후순위 처리를 조정합니다. 프로덕션 환경으로 전환 하기 전에 먼저 자동 소프트 NUMA를 사용 하 여 성능 작업을 테스트 하는 것이 좋습니다. [자세한 내용은 블로그를 참조](https://blogs.msdn.microsoft.com/psssql/2016/03/30/sql-2016-it-just-runs-faster-automatic-soft-numa/)하세요. 
+-  **동적 메모리 개체 크기 조정:** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]SP2에서는 노드 및 코어 수에 따라 메모리 개체를 동적으로 분할 하 여 최신 하드웨어에서 크기를 조정 합니다. 동적 승격의 목표는 병목 상태가 될 경우 CMEMTHREAD (스레드 안전 메모리 개체)를 자동으로 분할 하는 것입니다. 분할 되지 않은 메모리 개체는 노드에 의해 분할 되도록 동적으로 승격 될 수 있습니다. 파티션 수는 NUMA 노드 수와 동일 하며, 노드당 분할 된 메모리 개체는 CPU (파티션 수는 Cpu). [자세한 내용은 블로그를 참조](https://blogs.msdn.microsoft.com/psssql/2016/04/06/sql-2016-it-just-runs-faster-dynamic-memory-object-cmemthread-partitioning/)하세요.
+-  **DBCC CHECK\* 명령에 대 한 MAXDOP 힌트:** 이 개선 사항은 [연결 피드백 (468694)](https://connect.microsoft.com/SQLServer/feedback/details/468694/maxdop-option-in-dbcc-checkdb)을 해결 합니다. 이제 sp_configure 값이 아닌 MAXDOP 설정을 사용 하 여 DBCC CHECKDB를 실행할 수 있습니다. MAXDOP가 Resource Governor로 구성한 값을 초과하면, 데이터베이스 엔진에서 ALTER WORKLOAD GROUP(Transact-SQL)에서 설명한 Resource Governor MAXDOP 값을 사용합니다. max degree of parallelism 구성 옵션에 사용된 모든 의미 체계 규칙을 MAXDOP 쿼리 힌트 사용 시 적용할 수 있습니다. 자세한 내용은 [DBCC CHECKDB (transact-sql)](https://msdn.microsoft.com/library/ms176064.aspx)를 참조 하세요.
+-   **버퍼 풀에 대해 > 8TB를 사용 하도록 설정 합니다.** [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]S p 2에서는 버퍼 풀 사용을 위해 128TB의 가상 주소 공간을 사용할 수 있습니다. 이러한 향상을 통해 SQL Server 버퍼 풀이 최신 하드웨어에서 8TB 이상으로 확장 될 수 있습니다.
+-   **SOS_RWLock spinlock 개선:** SOS_RWLock는 SQL Server 코드 베이스 전체에서 다양 한 위치에 사용 되는 동기화 기본 형식입니다.  이름에서 알 수 있듯이, 코드에 여러 공유 (판독기) 또는 단일 (작성자) 소유권이 있을 수 있습니다. 이러한 향상 된 기능은 SOS_RWLock에 대 한 spinlock의 필요성을 제거 하 고 대신 메모리 내 OLTP와 유사한 잠금 없는 기술을 사용 합니다. 이러한 변경으로 많은 스레드가 서로를 차단 하지 않고 SOS_RWLock로 보호 되는 데이터 구조를 병렬로 읽을 수 있으므로 확장성이 향상 됩니다. 이러한 변경 전에는 spinlock 구현에서 한 번에 하나의 스레드만 SOS_RWLock 데이터 구조를 읽을 수 있도록 허용 했습니다.  [자세한 내용은 블로그를 참조](https://blogs.msdn.microsoft.com/psssql/2016/04/07/sql-2016-it-just-runs-faster-sos_rwlock-redesign/)하세요.
+-    **공간 네이티브 구현:** 기본 구현을 통해 SP2에서 [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] 공간 쿼리 성능이 크게 향상 되었습니다. 자세한 내용은 [기술 자료 문서 KB3107399](https://support.microsoft.com/en-us/kb/3107399)를 참조 하세요.
 
-### <a name="supportability-and-diagnostics-improvements"></a>지원 가능성 및 진단 기능 개선
--   **데이터베이스 복제:** 복제 데이터베이스에 기존 프로덕션 데이터베이스 스키마 및 데이터 없이 메타 데이터를 복제 하 여 문제 해결 향상 시키는 새 DBCC 명령입니다. 명령을 사용 하 여 복제본 만들어집니다 `DBCC clonedatabase('source_database_name', 'clone_database_name')`합니다.  **참고:** 복제된 데이터베이스는 프로덕션 환경에서 사용할 수 없습니다. 다음 복제 된 데이터베이스에서 데이터베이스를이 생성 되었는지 확인 명령을 사용 하 여: `select DATABASEPROPERTYEX('clonedb', 'isClone')`합니다. 반환 값 **1** 데이터베이스에서 clonedatabase 하는 동안 만들어지는지 나타냅니다 **0** 복제본 아님을 나타냅니다.
--   **Tempdb 지원 가능성:**  Tempdb 파일 수 및 서버 시작 시 있는 tempdb 데이터 파일의 크기/자동 증가 나타내는 새 errorlog 메시지입니다.
--   **데이터베이스 즉시 파일 초기화 로깅:** 새 errorlog 메시지를 서버 statup, 데이터베이스 인스턴트 파일 초기화 (사용/사용 안 함)의 상태를 나타냅니다.
--   **호출 스택에서 모듈 이름:** Xevent 호출 스택의 모듈 이름 + 오프셋 절대 주소 대신에 이제 포함 됩니다.
--   **증분 통계에 대 한 새 DMF:** 이러한 향상 된이 기능을 해결 [connect 피드백 (797156)](https://connect.microsoft.com/SQLServer/feedback/details/797156/display-sys-dm-db-stats-properties-per-partition-for-incremental-statistics) 파티션 수준에서 증분 통계를 추적을 사용 하도록 설정 합니다. 새 DMF sys.dm_db_incremental_stats_properties는 파티션당 정보에 대 한 증분 통계를 노출 하기 위해 도입 되었습니다.
--   **인덱스 사용 DMV 동작을 업데이트 합니다.** 이러한 향상 된이 기능을 해결 [connect 피드백 (739566)](https://connect.microsoft.com/SQLServer/feedback/details/739566/rebuilding-an-index-clears-stats-from-sys-dm-db-index-usage-stats) 위치는 인덱스를 다시 작성 하는 고객 으로부터 *하지* 해당 인덱스에 대 한 sys.dm_db_index_usage_stats에서 기존 행 항목의 선택을 취소 합니다. 동작을 동일 하 게 SQL 2008 및 SQL Server 2016 됩니다. [자세한 내용은 블로그를 참조 하세요.](https://blogs.msdn.microsoft.com/sql_server_team/index-usage-dmv-behavior-updated/)합니다.
--   **진단 XE와 Dmv 간의 향상 된 상관 관계:** 이러한 향상 된이 기능을 해결 [connect 피드백 (1934583)](https://connect.microsoft.com/SQLServer/feedback/details/1934583/extended-events-query-hash-and-query-plan-hash-data-types)합니다. Query_hash와 query_plan_hash는 쿼리를 고유 하 게 식별 하는 데 사용 됩니다. DMV에서는 이를 varbinary(8)으로 정의하는 반면 XEvent에서는 UINT64로 정의합니다. SQL server "unisigned bigint" 없으므로 캐스팅이 항상 작동 하지 않습니다. 이러한 향상 기능은 query_hash와 query_plan_hash에 해당하는 새 XEvent 작업/필터 열을 소개합니다. 단, XE와 DMV 간에 쿼리의 상관 관계를 지정할 수 있는 INT64로 정의된 경우는 제외합니다.
--   **BULK INSERT 및 BCP에서 u t F-8에 대 한 지원:** 이러한 향상 된이 기능을 해결 [connect 피드백 (370419)](https://connect.microsoft.com/SQLServer/feedback/details/370419/bulk-insert-and-bcp-does-not-recognize-codepage-65001) 내보내기 및 u t F-8 문자 집합으로 인코딩된 데이터의 가져오기에 대 한 지원을 BULK INSERT 및 BCP에서 이제는 합니다.
--   **연산자 당 간단한 쿼리 실행 프로 파일링 합니다.** Showplan 계획에서 연산자의 비용 확인 하 고 쿼리 실행 계획에서 많은 정보를 제공 하지만 실제 방법은 제한적 이지만 쿼리 성능, 문제를 해결 하는 동안 런타임 통계 (CPU, I/O 읽기, 스레드별 경과 된 시간)를 선호 합니다. SQL 2014 SP2에서 실행 계획 뿐만 아니라 XEvent (query_thread_profile)를 지원 쿼리 성능 문제를 해결 하기 위해 연산자 당 이러한 추가 런타임 통계를 소개 합니다. [자세한 내용은 블로그를 참조 하세요.](https://blogs.msdn.microsoft.com/sql_server_team/added-per-operator-level-performance-stats-for-query-processing/)합니다.
--   **변경 내용 추적 정리:** 새 저장 프로시저인 `sp_flush_CT_internal_table_on_demand` 정리에서 변경 내용 추적 내부 테이블 요청 하기 위해 도입 되었습니다.
--   **AlwaysON 임대 시간 제한 로깅** 현재 시간 및 예상된 된 갱신 시간이 기록 되도록 임대 시간 제한 메시지에 대 한 새 로깅 기능을 추가 합니다. 또한 새 메시지의 시간 제한에 대 한 SQL Errorlog에 도입 되었습니다. [자세한 내용은 블로그를 참조 하세요.](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)합니다.
--   **SQL Server에서 입력된 버퍼를 검색 하기 위한 새 DMF:** 이제 세션/요청(sys.dm_exec_input_buffer)에 대한 입력 버퍼를 검색하기 위한 새 DMF를 사용할 수 있습니다. 이는 DBCC INPUTBUFFER와 기능적으로 동일합니다. [자세한 내용은 블로그를 참조 하세요.](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/)합니다.
--   **과소 평가 하 고 overestimated 메모리 부여에 대 한 완화 합니다.** 추가 된 새 쿼리 힌트 MIN_GRANT_PERCENT 및 MAX_GRANT_PERCENT를 통해 리소스 관리자에 대 한 합니다. 이 옵션을 사용 하면 메모리 경합을 방지 하도록 해당 메모리 부여를 제한 하 여 쿼리를 실행 하는 동안 이러한 힌트를 활용할 수 있습니다. 자세한 내용은 참조 하세요. [KB310740 기술 자료 문서](https://support.microsoft.com/en-us/kb/3107401)
--   **메모리 부여/사용량 진단 향상:** 새 확장된 이벤트를 요청 하 고 부여 메모리 부여를 추적 하려면 SQL Server (query_memory_grant_usage)에서 추적 기능 목록에 추가 되었습니다. 이 메모리 부여와 관련 된 쿼리 실행 문제 해결을 위한 더 나은 추적 및 분석 기능을 제공 합니다. 자세한 내용은 [기술 자료 문서 KB3107173](https://support.microsoft.com/en-us/kb/3107173)합니다.
--   **쿼리 실행 진단 tempdb 분산에 대 한:** -물리적 I/O 통계, 사용 되는 메모리 및 영향을 받는 행을 추적 하는 추가 열이 이제 Hash Warning 및 Sort Warning입니다. 또한 새 hash_spill_details 확장된 이벤트가 도입 되었습니다. 이제 프로그램 해시 및 정렬 경고에 대 한 더 세부적인 정보를 추적할 수 있습니다 ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). 이러한 향상 기능은 이제 또한 SpillToTempDbType 복합 형식에 새 특성의 형태로 XML 쿼리 계획을 통해 표시 됩니다 ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). 이제 표시 정렬 작업 테이블 통계의 통계를 설정 합니다. 을 선택합니다.
--   **잔여 조건자 푸시 다운을 포함 하는 쿼리 실행 계획에 대 한 향상 된 진단:** 읽은 실제 행 이제 쿼리 성능 문제 해결을 개선 하기 위해 쿼리 실행 계획에서 보고 됩니다. SET STATISTICS IO를 별도로 캡처 필요가 없어질 해야이. 이 구문은 이제를 사용 하면 잔여 조건자 푸시 다운 쿼리 계획에 관련 된 정보를 볼 수 있습니다. 자세한 내용은 [기술 자료 문서 KB3107397](https://support.microsoft.com/en-us/kb/3107397)합니다.
+### <a name="supportability-and-diagnostics-improvements"></a>지원 가능성 및 진단 기능 향상
+-   **데이터베이스 복제:** 데이터베이스 복제는 데이터 없이 스키마 및 메타 데이터를 복제 하 여 기존 프로덕션 데이터베이스의 문제 해결을 개선 하는 새로운 DBCC 명령입니다. 복제본은 명령을 `DBCC clonedatabase('source_database_name', 'clone_database_name')`사용 하 여 만듭니다.  **참고:** 복제된 데이터베이스는 프로덕션 환경에서 사용할 수 없습니다. 다음 명령을 사용 하 여 복제 된 데이터베이스 `select DATABASEPROPERTYEX('clonedb', 'isClone')`에서 데이터베이스가 생성 되었는지 확인 합니다. 반환 값 **1** 은 데이터베이스가 clonedatabase에서 생성 되었음을 나타내며 **0** 은 복제가 아닌 것을 나타냅니다.
+-   **Tempdb 지원 가능성:**  Tempdb 파일 수 및 서버 시작 시 표시 되는 tempdb 데이터 파일의 크기/자동 증가를 나타내는 새 오류 로그 메시지입니다.
+-   **데이터베이스 즉시 파일 초기화 로깅:** 서버 statup 상태, 데이터베이스 즉시 파일 초기화의 상태 (사용/사용 안 함)를 나타내는 새 오류 로그 메시지입니다.
+-   **호출 스택의 모듈 이름:** 이제 Xevent 호출 스택에 절대 주소 대신 모듈 이름 + 오프셋이 포함 됩니다.
+-   **증분 통계에 대 한 새 DMF:** 이 향상 된 기능은 [연결 피드백 (797156)](https://connect.microsoft.com/SQLServer/feedback/details/797156/display-sys-dm-db-stats-properties-per-partition-for-incremental-statistics) 을 처리 하 여 파티션 수준에서 증분 통계를 추적할 수 있도록 합니다. 증분 통계에 대 한 파티션당 정보를 노출 하기 위해 새로운 DMF _db_incremental_stats_properties가 도입 되었습니다.
+-   **인덱스 사용 DMV 동작 업데이트:** 이러한 향상 된 기능을 통해 인덱스를 다시 작성 해도 해당 인덱스에 대해 _db_index_usage_stats의 기존 행 항목이 지워지지 *않는* 고객의 [연결 피드백 (739566)](https://connect.microsoft.com/SQLServer/feedback/details/739566/rebuilding-an-index-clears-stats-from-sys-dm-db-index-usage-stats) 이 해결 됩니다. 이 동작은 이제 SQL 2008 및 SQL Server 2016와 동일 합니다. [자세한 내용은 블로그를 참조](https://blogs.msdn.microsoft.com/sql_server_team/index-usage-dmv-behavior-updated/)하세요.
+-   **진단 XE와 Dmv 간의 상관 관계 향상:** 이 개선 사항은 [연결 피드백 (1934583)](https://connect.microsoft.com/SQLServer/feedback/details/1934583/extended-events-query-hash-and-query-plan-hash-data-types)을 해결 합니다. Query_hash 및 query_plan_hash는 쿼리를 고유 하 게 식별 하는 데 사용 됩니다. DMV에서는 이를 varbinary(8)으로 정의하는 반면 XEvent에서는 UINT64로 정의합니다. SQL server에는 "가 수로 서명 된 bigint"가 없으므로 캐스팅이 항상 작동 하지는 않습니다. 이러한 향상 기능은 query_hash와 query_plan_hash에 해당하는 새 XEvent 작업/필터 열을 소개합니다. 단, XE와 DMV 간에 쿼리의 상관 관계를 지정할 수 있는 INT64로 정의된 경우는 제외합니다.
+-   **BULK INSERT 및 BCP에서 u t f-8에 대 한 지원:** 이 향상 된 기능을 통해 UTF-8 문자 집합으로 인코딩된 데이터 내보내기 및 가져오기에 대 한 지원이 이제 BULK INSERT 및 BCP에서 사용 하도록 설정 된 [연결 피드백 (370419)](https://connect.microsoft.com/SQLServer/feedback/details/370419/bulk-insert-and-bcp-does-not-recognize-codepage-65001) 을 해결할 수 있습니다.
+-   **간단한 연산자 별 쿼리 실행 프로 파일링:** 실행 계획은 쿼리 성능 문제를 해결 하지만 계획의 쿼리 실행 계획 및 비용 연산자에 대해 많은 정보를 제공 하지만 CPU, i/o 읽기, 스레드별 경과 시간 등의 실제 런타임 통계에 대 한 정보는 제한적입니다. SQL 2014 s p 2에서는 쿼리 성능 문제 해결을 지 원하는 XEvent (query_thread_profile) 뿐만 아니라 실행 계획의 연산자 당 이러한 추가 런타임 통계를 소개 합니다. [자세한 내용은 블로그를 참조](https://blogs.msdn.microsoft.com/sql_server_team/added-per-operator-level-performance-stats-for-query-processing/)하세요.
+-   **변경 내용 추적 정리:** 새 저장 프로시저 `sp_flush_CT_internal_table_on_demand` 를 도입 하 여 요청 시 변경 내용 추적 내부 테이블을 정리 합니다.
+-   **AlwaysON 임대 시간 제한 로깅** 현재 시간 및 예상 된 갱신 시간이 기록 될 수 있도록 임대 시간 제한 메시지에 대 한 새 로깅 기능을 추가 했습니다. 또한 시간 제한과 관련 된 SQL 오류 로그에 새 메시지가 도입 되었습니다. [자세한 내용은 블로그를 참조](https://blogs.msdn.microsoft.com/alwaysonpro/2016/02/23/improved-alwayson-availability-group-lease-timeout-diagnostics/)하세요.
+-   **SQL Server에서 입력 버퍼를 검색 하기 위한 새 DMF:** 이제 세션/요청(sys.dm_exec_input_buffer)에 대한 입력 버퍼를 검색하기 위한 새 DMF를 사용할 수 있습니다. 이는 DBCC INPUTBUFFER와 기능적으로 동일합니다. [자세한 내용은 블로그를 참조](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/)하세요.
+-   **과소 예측 및 과도 하 게 예상 되는 메모리 부여에 대 한 완화:** MIN_GRANT_PERCENT 및 MAX_GRANT_PERCENT를 통해 Resource Governor에 대 한 새 쿼리 힌트를 추가 했습니다. 이렇게 하면 메모리 경합을 방지 하기 위해 메모리 부여를 50, 하 여 쿼리를 실행 하는 동안 이러한 힌트를 활용할 수 있습니다. 자세한 내용은 [기술 자료 문서 KB310740](https://support.microsoft.com/en-us/kb/3107401) 를 참조 하세요.
+-   **더 나은 메모리 부여/사용 진단:** 새 확장 이벤트가 SQL Server (query_memory_grant_usage)의 추적 기능 목록에 추가 되어 요청 및 부여 된 메모리 부여를 추적 합니다. 이렇게 하면 메모리 부여와 관련 된 쿼리 실행 문제를 해결 하기 위한 향상 된 추적 및 분석 기능이 제공 됩니다. 자세한 내용은 [기술 자료 문서 KB3107173](https://support.microsoft.com/en-us/kb/3107173)를 참조 하세요.
+-   **Tempdb 분산을 위한 쿼리 실행 진단:** -해시 경고 및 정렬 경고에는 이제 실제 i/o 통계, 사용 된 메모리 및 영향을 받는 행을 추적 하는 추가 열이 있습니다. 또한 새로운 hash_spill_details 확장 이벤트를 도입 했습니다. 이제 해시 및 정렬 경고 ([KB3107172](https://support.microsoft.com/en-us/kb/3107172))에 대 한 더 세부적인 정보를 추적할 수 있습니다. 이러한 향상 된 기능은 이제 새 특성의 형태로 XML 쿼리 계획을 통해 SpillToTempDbType 복합 유형 ([KB3107400](https://support.microsoft.com/en-us/kb/3107400))에도 노출 됩니다. 이제 Set statistics to sort statistics statistics를 표시 합니다. 을 선택합니다.
+-   **잔여 조건자 푸시 다운을 포함 하는 쿼리 실행 계획에 대 한 진단이 향상 되었습니다.** 이제 쿼리 성능 문제 해결을 개선 하는 데 도움이 되는 실제 행 읽기가 쿼리 실행 계획에 보고 됩니다. 이렇게 하면 SET STATISTICS IO를 별도로 캡처할 필요성이 무효화 됩니다. 이제 쿼리 계획의 잔여 조건자 푸시 다운과 관련 된 정보를 볼 수 있습니다. 자세한 내용은 [기술 자료 문서 KB3107397](https://support.microsoft.com/en-us/kb/3107397)를 참조 하세요.
 
 
 ## <a name="additional-information"></a>추가 정보  
@@ -86,8 +86,8 @@ ms.locfileid: "63295241"
   
  [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/p/?linkID=296445)  
   
- [SQL Server 2014 Resource Center](https://msdn.microsoft.com/sqlserver/dn135309)  
+ [SQL Server 2014 리소스 센터](https://msdn.microsoft.com/sqlserver/dn135309)  
   
- [SQLCat Web Site](https://go.microsoft.com/fwlink/p/?linkID=220963)  
+ [SQLCat 웹 사이트](https://go.microsoft.com/fwlink/p/?linkID=220963)  
   
   
