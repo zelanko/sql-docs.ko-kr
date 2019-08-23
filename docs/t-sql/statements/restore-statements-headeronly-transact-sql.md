@@ -33,7 +33,7 @@ ms.locfileid: "68742968"
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE 문 - HEADERONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 백업 장치의 모든 백업 세트에 대한 백업 헤더 정보를 모두 포함하는 결과 집합을 반환합니다. 
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 특정 백업 디바이스의 모든 백업 세트에 대한 백업 헤더 정보를 모두 포함하는 결과 집합을 반환합니다. 
  
 > [!NOTE]  
 >  인수에 대한 자세한 설명은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요.  
@@ -83,10 +83,10 @@ FROM <backup_device>
  RESTORE HEADERONLY 인수 설명은 [RESTORE 인수 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)을 참조하세요.  
   
 ## <a name="result-sets"></a>결과 집합  
- 지정한 장치의 각 백업에 대해 서버는 다음 열을 가진 헤더 정보 행을 보냅니다.  
+ 지정한 디바이스의 각 백업에 대해 서버는 다음 열을 가진 헤더 정보 행을 보냅니다.  
   
 > [!NOTE]
->  RESTORE HEADERONLY는 미디어에 있는 모든 백업 세트를 확인합니다. 따라서 고용량 테이프 드라이브를 사용할 때 이 결과 집합을 생성하면 시간이 오래 걸릴 수 있습니다. 모든 백업 세트에 대한 정보를 가져오지 않고 미디어를 신속하게 확인하려면 RESTORE LABELONLY를 사용하거나 FILE **=** _backup_set_file_number_ 를 지정합니다.  
+>  RESTORE HEADERONLY는 미디어에 있는 모든 백업 세트를 확인합니다. 따라서 고용량 테이프 드라이브를 사용할 때 이 결과 집합을 생성하면 시간이 오래 걸릴 수 있습니다. 모든 백업 세트에 대한 정보를 가져오지 않고 미디어를 신속하게 확인하려면 RESTORE LABELONLY를 사용하거나 FILE **=** _backup_set_file_number_를 지정합니다.  
 > 
 > [!NOTE]
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 테이프 형식의 특성 때문에 다른 소프트웨어 프로그램의 백업 세트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 세트와 동일한 크기의 미디어의 공간을 차지할 수 있습니다. RESTORE HEADERONLY에서 반환한 결과 집합에는 각각의 다른 백업 세트에 대한 행이 포함되어 있습니다.  
@@ -99,7 +99,7 @@ FROM <backup_device>
 |**ExpirationDate**|**datetime**|백업 세트에 대한 만료 일자|  
 |**Compressed**|**BYTE(1)**|소프트웨어 기반 압축을 사용하여 백업 세트를 압축했는지 여부<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
 |**위치**|**smallint**|볼륨에 있는 백업 세트의 위치(FILE = 옵션과 함께 사용)|  
-|**DeviceType**|**tinyint**|백업 작업에 사용된 장치 번호<br /><br /> 디스크:<br /><br /> **2** = 논리적<br /><br /> **102** = 물리적<br /><br /> 테이프<br /><br /> **5** = 논리적<br /><br /> **105** = 물리적<br /><br /> 가상 장치<br /><br /> **7** = 논리적<br /><br /> **107** = 물리적<br /><br /> 논리적 디바이스 이름과 디바이스 번호는 **sys.backup_devices**에 있습니다. 자세한 내용은 [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)을 참조하세요.|  
+|**DeviceType**|**tinyint**|백업 작업에 사용된 디바이스 번호<br /><br /> 디스크:<br /><br /> **2** = 논리적<br /><br /> **102** = 물리적<br /><br /> 테이프<br /><br /> **5** = 논리적<br /><br /> **105** = 물리적<br /><br /> 가상 디바이스<br /><br /> **7** = 논리적<br /><br /> **107** = 물리적<br /><br /> 논리적 디바이스 이름과 디바이스 번호는 **sys.backup_devices**에 있습니다. 자세한 내용은 [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)을 참조하세요.|  
 |**UserName**|**nvarchar(128)**|백업 작업을 수행한 사용자 이름|  
 |**데이터 열이 추적에서 캡처되고 서버를 사용할 수 있으면**|**nvarchar(128)**|백업 세트를 작성한 서버 이름|  
 |**DatabaseName**|**nvarchar(128)**|백업한 데이터베이스 이름|  
@@ -151,10 +151,10 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) ~ 현재 버전).<br /><br /> 사용되는 암호기 유형으로 인증서 또는 비대칭 키를 반환합니다. 백업이 암호화되지 않은 경우이 값은 NULL입니다.|  
   
 > [!NOTE]  
->  백업 세트에 대한 암호를 정의한 경우 RESTORE HEADERONLY는 명령의 지정한 PASSWORD 옵션과 일치하는 암호의 백업 세트에 대한 정보만 모두 표시합니다. RESTORE HEADERONLY는 보호되지 않은 백업 세트에 대한 정보도 모두 표시합니다. 암호로 보호된 미디어의 다른 백업 세트에 대한 **BackupName** 열은 ’ ** _** ’으로 설정되고 다른 열은 모두 NULL이 됩니다.  
+>  백업 세트에 대한 암호를 정의한 경우 RESTORE HEADERONLY는 명령의 지정한 PASSWORD 옵션과 일치하는 암호의 백업 세트에 대한 정보만 모두 표시합니다. RESTORE HEADERONLY는 보호되지 않은 백업 세트에 대한 정보도 모두 표시합니다. 암호로 보호된 미디어의 다른 백업 세트에 대한 **BackupName** 열은 ’ **_암호로 보호됨_** ’으로 설정되고 다른 열은 모두 NULL이 됩니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 클라이언트는 RESTORE HEADERONLY를 사용하여 특정 백업 장치의 모든 백업에 대한 백업 헤더 정보를 모두 검색합니다. 서버는 백업 장치의 각 백업에 대한 헤더 정보를 행으로 보냅니다.  
+ 클라이언트는 RESTORE HEADERONLY를 사용하여 특정 백업 디바이스의 모든 백업에 대한 백업 헤더 정보를 모두 검색합니다. 서버는 백업 디바이스의 각 백업에 대한 헤더 정보를 행으로 보냅니다.  
   
 ## <a name="security"></a>보안  
  필요한 경우 백업 작업에서 미디어 세트, 백업 세트 또는 이 둘 모두에 대해 암호를 지정할 수 있습니다. 미디어 세트나 백업 세트에 암호가 정의되어 있는 경우 RESTORE 문에서 정확한 암호를 지정해야 합니다. 이러한 암호를 지정하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 무단으로 복원 작업을 수행하거나 미디어에 백업 세트를 무단으로 추가하는 작업을 방지할 수 있습니다. 하지만 암호를 사용해도 BACKUP 문의 FORMAT 옵션을 사용하여 미디어를 덮어쓰는 작업은 수행됩니다.  
@@ -163,7 +163,7 @@ FROM <backup_device>
 >  이 암호에 의한 보호 수준은 낮습니다. 권한 유무에 관계없이 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 잘못된 복원을 수행하는 것을 방지합니다. 다른 수단을 사용한 백업 데이터 읽기나 암호 바꾸기를 방지하지는 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]백업을 보호하는 최선의 구현 방법은 백업 테이프를 안전한 장소에 보관하거나 적합한 ACL(액세스 제어 목록)로 보호되는 디스크 파일에 백업하는 것입니다. ACL은 백업이 만들어지는 디렉터리 루트에 설정해야 합니다.  
   
 ### <a name="permissions"></a>사용 권한  
- 백업 세트나 백업 장치에 대한 정보를 얻으려면 CREATE DATABASE 권한이 필요합니다. 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
+ 백업 세트나 백업 디바이스에 대한 정보를 얻으려면 CREATE DATABASE 권한이 필요합니다. 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 디스크 파일 `C:\AdventureWorks-FullBackup.bak`에 대한 헤더 정보를 반환합니다.  

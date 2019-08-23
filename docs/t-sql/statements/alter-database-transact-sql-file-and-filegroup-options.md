@@ -63,7 +63,7 @@ ms.locfileid: "68809793"
 
 |||
 |-|-|-|
-|** _** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -683,7 +683,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* SQL Database<br />관리되는 인스턴스 \*_**<br />&nbsp;|
 
 &nbsp;
 
@@ -840,7 +840,7 @@ READ_ONLY | READONLY 파일 그룹을 읽기 전용으로 지정합니다. 해�
 - 읽기 전용 데이터베이스에서는 잠금이 발생하지 않습니다. 따라서 쿼리 성능은 더 향상될 수 있습니다.
 
 > [!NOTE]
-> READONLY 키워드는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 향후 개발 작업에서는 READONLY를 사용하지 않도록 하고 현재 READONLY를 사용하는 응용 프로그램은 수정하십시오. 대신 READ_ONLY를 사용하십시오.
+> READONLY 키워드는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향후 버전에서 제거될 예정입니다. 향후 개발 작업에서는 READONLY를 사용하지 않도록 하고 현재 READONLY를 사용하는 애플리케이션은 수정하십시오. 대신 READ_ONLY를 사용하십시오.
 
 READ_WRITE | READWRITE 파일 그룹을 READ_WRITE로 지정합니다. 해당 파일 그룹의 개체를 업데이트할 수 있습니다. 이 상태를 변경하려면 데이터베이스에 대해 배타적 액세스 권한이 있어야 합니다. 자세한 내용은 SINGLE_USER 절을 참조하십시오.
 

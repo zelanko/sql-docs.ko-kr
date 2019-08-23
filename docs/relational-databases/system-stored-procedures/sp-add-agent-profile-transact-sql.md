@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68770850"
 ---
-# <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile(Transact-SQL)
+# <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   복제 에이전트용 새 프로필을 작성합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  

@@ -18,7 +18,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68060654"
 ---
-# <a name="mssqlserver10536"></a>MSSQLSERVER_10536
+# <a name="mssqlserver_10536"></a>MSSQLSERVER_10536
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>세부 정보  
