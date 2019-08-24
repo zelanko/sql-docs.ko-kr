@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a0be3f1f9039f30043eb5275c49c5b4db4ccfbca
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 579f4c4e236fcc9ee22067522c47a8286b869d51
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69641190"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000784"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Sqlmlutils를 사용 하 여 새 R 패키지 설치
 
@@ -77,7 +77,7 @@ ms.locfileid: "69641190"
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
+   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -90,7 +90,7 @@ ms.locfileid: "69641190"
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
 
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
+   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/rodbcext"
    pkgs_needed <- "RODBCext"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -156,7 +156,7 @@ SQL Server에 연결 하는 데 사용 하는 클라이언트 컴퓨터에서 �
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
+   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"
    pkgs_needed <- "glue"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);
@@ -169,7 +169,7 @@ SQL Server에 연결 하는 데 사용 하는 클라이언트 컴퓨터에서 �
    ::: moniker range=">=sql-server-linux-ver15||=sqlallproducts-allversions"
 
    ```R
-   CRAN_mirror <- c(CRAN = "https://cran.cnr.berkeley.edu")
+   CRAN_mirror <- c(CRAN = "https://cran.microsoft.com")
    local_repo <- "c:/downloads/glue"
    pkgs_needed <- "glue"
    pkgs_expanded <- pkgDep(pkgs_needed, repos = CRAN_mirror);

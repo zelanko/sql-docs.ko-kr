@@ -4,17 +4,17 @@ description: SQL Server Machine Learning Services에서 버전 및 설치 위치
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/15/2019
+ms.date: 08/22/2019
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: bccfc97fe75a718ce76ea0d1292bfc7ea6cb6564
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 1aa12da4a138ea8f292fa8b64db00456d3c35fe3
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69641180"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000444"
 ---
 # <a name="get-python-package-information"></a>Python 패키지 정보 가져오기
 
@@ -77,19 +77,16 @@ EXECUTE sp_execute_external_script
 
 ## <a name="list-all-installed-python-packages"></a>설치 된 모든 Python 패키지 나열
 
-모듈 `pip` 은 기본적으로 설치 되며, 표준 Python에서 지원 되는 패키지 외에도 설치 된 패키지를 나열 하기 위한 많은 작업을 지원 합니다. Python 명령 프롬프트 `pip` 에서을 실행할 수 있지만에서 `sp_execute_external_script`pip 함수를 호출할 수도 있습니다.
-
 다음 예제 스크립트는 설치 된 패키지와 해당 버전의 목록을 표시 합니다.
 
 ```sql
 EXECUTE sp_execute_external_script 
   @language = N'Python', 
   @script = N'
-import pip
+import pkg_resources
 import pandas as pd
-installed_packages = pip.get_installed_distributions()
-installed_packages_list = sorted(["%s==%s" % (i.key, i.version)
-   for i in installed_packages])
+installed_packages = pkg_resources.working_set
+installed_packages_list = sorted(["%s==%s" % (i.key, i.version) for i in installed_packages])
 df = pd.DataFrame(installed_packages_list)
 OutputDataSet = df
   '
@@ -107,10 +104,9 @@ Python 패키지를 설치 하 고 특정 SQL Server 인스턴스에 사용할 �
 EXECUTE sp_execute_external_script
   @language = N'Python',
   @script = N'
-import pip
 import pkg_resources
 pckg_name = "scikit-learn"
-pckgs = pandas.DataFrame([(i.key) for i in pip.get_installed_distributions()], columns = ["key"])
+pckgs = pandas.DataFrame([(i.key) for i in pkg_resources.working_set], columns = ["key"])
 installed_pckg = pckgs.query(''key == @pckg_name'')
 print("Package", pckg_name, "is", "not" if installed_pckg.empty else "", "installed")
   '

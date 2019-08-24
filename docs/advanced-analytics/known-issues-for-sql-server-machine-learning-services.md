@@ -1,23 +1,23 @@
 ---
-title: R 언어 및 Python 통합의 알려진 문제
+title: Python 및 R에 대 한 알려진 문제
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 93b2871fa60d6a7c7a41fae202e960440b53c11e
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 9a8237887786066a8789cb319fc7de550fa7f535
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715189"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000459"
 ---
-# <a name="known-issues-in-machine-learning-services"></a>Machine Learning Services의 알려진 문제
+# <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 알려진 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 [SQL Server 2016 r Services](r/sql-server-r-services.md) 에서 옵션으로 제공 되는 machine learning 구성 요소에 대 한 알려진 문제 또는 제한 사항 및 [r과 Python을 사용한 SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md)에 대해 설명 합니다.
+이 문서에서는 [SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md) 및 [SQL Server 2016 R Services](r/sql-server-r-services.md)에서 옵션으로 제공 되는 기계 학습 구성 요소에 대 한 알려진 문제 또는 제한 사항을 설명 합니다.
 
 ## <a name="setup-and-configuration-issues"></a>설정 및 구성 문제
 
@@ -43,7 +43,7 @@ R_SERVER는 Intel MKL (Math Kernel Library)을 사용 합니다. MKL을 포함 �
 3. R_SERVER를 다시 시작 합니다. SQL Server에서 SQL Server 실행 패드 서비스를 다시 시작할 수 있습니다.
 
 > [!NOTE]
-> Linux에서 SQL Server 2019 미리 보기를 실행 하는 경우 사용자 홈 디렉터리에서 *bash_profile* 를 편집 하거나 만든 다음 줄 `export MKL_CBWR="AUTO"`을 추가 합니다. Bash 명령 프롬프트에서를 `source .bash_profile` 입력 하 여이 파일을 실행 합니다. R 명령 프롬프트에서 `Sys.getenv()` 를 입력 하 여 R_SERVER를 다시 시작 합니다.
+> Linux에서 SQL Server 2019 미리 보기를 실행 하는 경우 사용자 홈 디렉터리에서 *bash_profile* 를 편집 하거나 만든 다음 줄 `export MKL_CBWR="AUTO"`을 추가 합니다. Bash 명령 프롬프트에서 `source .bash_profile`을 입력하여 이 파일을 실행합니다. R 명령 프롬프트에서 `Sys.getenv()` 를 입력 하 여 R_SERVER를 다시 시작 합니다.
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2. R 스크립트 런타임 오류 (SQL Server 2017 CU5-CU7 회귀)
 
@@ -59,7 +59,7 @@ R 스크립트를 실행할 때 표시 되는 오류 메시지는 다음과 같�
 
 **해결 방법**
 
-CU8를 사용할 수 있게 되 면 적용 합니다. 또는 관리자 권한 명령 프롬프트에서 설치 프로그램을 사용 하 여 **registerrext.exe** **를 다시 만들** 수 있습니다. 
+CU8를 사용할 수 있게 되 면 적용 합니다. 또는 관리자 권한 명령 프롬프트 에서 설치 프로그램을 사용 하 여 **registerrext.exe** 를 다시 만들 수 있습니다. 
 
 ```cmd
 <SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe /uninstall /sqlbinnpath:<SQLInstanceBinnPath> /userpoolsize:0 /instance:<SQLInstanceName>
@@ -238,7 +238,7 @@ API 버전이 동일 하거나 이전 직렬화 함수를 사용 하 여 저장 
 
 즉, serialization 및 deserialization 작업에 동일한 버전의 RevoScaleR를 사용 합니다.
 
-### <a name="3-real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>3. 실시간 점수 매기기는 트리 및 포리스트 모델에서 _learningRate_ 매개 변수를 올바르게 처리 하지 않습니다.
+### <a name="3-real-time-scoring-does-not-correctly-handle-the-_learningrate_-parameter-in-tree-and-forest-models"></a>3. 실시간 점수 매기기는 트리 및 포리스트 모델에서 _learningRate_ 매개 변수를 올바르게 처리 하지 않습니다.
 
 의사 결정 트리 또는 의사 결정 포리스트 방법을 사용 하 여 모델을 만들고 학습 률을 지정 하는 경우를 사용 하는 것 `sp_rxpredict` 과 비교 하 `PREDICT` 여 또는 SQL 함수 `rxPredict`를 사용할 때 일관 되지 않은 결과가 나타날 수 있습니다.
 
@@ -322,7 +322,7 @@ R 스크립트에서는 다음 유형의 쿼리 결과를 사용할 수 없습�
 
 RxDataStep 함수를 사용 하 여 테이블에 결과를 쓸 때는 *Varstokeep* 및 *varstokeep* 을 사용 하 여 작업의 일부로 포함 하거나 제외할 열을 쉽게 지정할 수 있습니다. 그러나 SQL Server 데이터 원본에 대해서는 이러한 인수를 사용할 수 없습니다.
 
-### <a name="11-limited-support-for-sql-data-types-in-spexecuteexternalscript"></a>11. Sp\_execute\_외부스크립트에서SQL데이터형식에대한제한된지원\_
+### <a name="11-limited-support-for-sql-data-types-in-sp_execute_external_script"></a>11. Sp\_execute\_외부스크립트에서SQL데이터형식에대한제한된지원\_
 
 SQL에서 지원 되는 모든 데이터 형식을 R에서 사용할 수 있는 것은 아닙니다. 문제를 해결 하려면 sp\_실행\_외부\_스크립트에 데이터를 전달 하기 전에 지원 되지 않는 데이터 형식을 지원 되는 데이터 형식으로 캐스팅 하는 것이 좋습니다.
 
@@ -334,7 +334,7 @@ SQL에서 지원 되는 모든 데이터 형식을 R에서 사용할 수 있는 
 
 에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] R/Python으로 ASCII가 아닌 문자열 데이터를 전송 하려면 utf-8 인코딩 (에서 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]사용 가능)을 사용 하거나 동일한에 nvarchar 형식을 사용 합니다.
 
-### <a name="13-only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>13. 형식의 `raw` 값은 하나만 반환할 수 있습니다.`sp_execute_external_script`
+### <a name="13-only-one-value-of-type-raw-can-be-returned-from-sp_execute_external_script"></a>13. 형식의 `raw` 값은 하나만 반환할 수 있습니다.`sp_execute_external_script`
 
 R에서 이진 데이터 형식 (R **원시** 데이터 형식)이 반환 되는 경우 해당 값은 출력 데이터 프레임에 전송 되어야 합니다.
 
@@ -502,6 +502,33 @@ SQL Server 2017 CU2부터 Python 코드가 성공적으로 실행 되는 경우�
 
 이 문제는 SQL Server 2017 누적 업데이트 14 (CU14)에서 수정 되었습니다.
 
+### <a name="6-bad-interpreter-error-when-installing-python-packages-with-pip-on-linux"></a>6. Linux에서 pip를 사용 하 여 Python 패키지를 설치할 때 잘못 된 인터프리터 오류 
+
+SQL Server 2019에서 **pip**를 사용 하려고 합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.
+
+```bash
+/opt/mssql/mlservices/runtime/python/bin/pip -h
+```
+
+그러면이 오류가 발생 합니다.
+
+> *bash:/opt/mssql/mlservices/runtime/python/bin/pip:/opt/microsoft/mlserver/9.4.7/bin/python/python: 잘못 된 인터프리터: 해당 파일 또는 디렉터리가 없습니다.*
+
+**해결 방법**
+
+[Python 패키지 기관 (PyPA)](https://www.pypa.io)에서 **pip** 를 설치 합니다.
+
+```bash
+wget 'https://bootstrap.pypa.io/get-pip.py' 
+/opt/mssql/mlservices/bin/python/python ./get-pip.py 
+```
+
+**권장**
+
+[Sqlmlutils](https://github.com/microsoft/sqlmlutils/tree/master/Python) 또는 [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) 를 사용 하 여 Python 패키지를 설치 합니다.
+
+**적용 대상:** Linux에서 2019 SQL Server
+
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise 및 Microsoft R Open
 
 이 섹션에서는 혁명 분석에서 제공 하는 R 연결, 개발 및 성능 도구와 관련 된 문제를 나열 합니다. 이러한 도구는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]이전 시험판 버전에서 제공 되었습니다.
@@ -522,8 +549,6 @@ R Enterprise에 대 한 기존 라이선스가 있는 경우 인스턴스 및 [!
 
 SQLite ODBC 드라이버의 수정 버전 0.92이 RevoScaleR와 호환 되지 않습니다. 0\.88 ~-0.91 및 0.93 이상 버전은 호환 가능한 것으로 알려져 있습니다.
 
-## <a name="see-also"></a>참고자료
-
-[SQL Server 2016의 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)
+## <a name="next-steps"></a>다음 단계
 
 [SQL Server에서 기계 학습 문제 해결](machine-learning-troubleshooting-faq.md)

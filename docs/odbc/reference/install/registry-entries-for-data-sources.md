@@ -16,36 +16,28 @@ helpviewer_keywords:
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 0b9d101395a3276f92f3ccf49e36effc65420f7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1fe76ba3926f2883e2518e255eddf0d567134f4d
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093885"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009350"
 ---
 # <a name="registry-entries-for-data-sources"></a>데이터 원본에 대한 레지스트리 항목
 > [!NOTE]  
->  Windows XP 및 Windows Server 2003부터 ODBC Windows 운영 체제에 포함 됩니다. 이전 버전의 Windows에서 ODBC를 명시적으로 설치 해야 합니다.  
+>  Windows XP 및 Windows Server 2003부터 ODBC는 Windows 운영 체제에 포함 되어 있습니다. ODBC는 이전 버전의 Windows에만 명시적으로 설치 해야 합니다.  
   
- 설치 관리자 DLL 레지스트리에서 각 데이터 원본에 대 한 정보를 유지 관리합니다. Microsoft Windows NT/Windows 2000 및 Microsoft Windows 95/98에서는이 정보는 레지스트리의 다음 두 키 중 하나에서 하위 키에 저장 됩니다.  
-  
- HKEY_LOCAL_MACHINE  
-  
- 소프트웨어  
-  
- ODBC  
-  
- Odbc.ini  
-  
- HKEY_CURRENT_USER  
-  
- 소프트웨어  
-  
- ODBC  
-  
- Odbc.ini  
-  
- 데이터 원본 인지에 따라 달라 집니다는 키를 사용 하는 *시스템 데이터 원본* 모든 사용자에 게 제공 되 또는 *사용자 데이터 원본* 현재 사용자에만 사용할 수 있는 합니다. HKEY_LOCAL_MACHINE 트리에서 저장 된 시스템 데이터 원본 및 HKEY_CURRENT_USER 트리에서 사용자 데이터 원본을 저장 됩니다. 다른 모든 측면에서 시스템 데이터 원본 및 사용자 데이터 원본은 동일합니다.  
+ 설치 관리자 DLL은 각 데이터 원본에 대 한 정보를 레지스트리에 유지 관리 합니다. Microsoft Windows NT/Windows 2000 및 Microsoft Windows 95/98에서이 정보는 레지스트리의 다음 두 키 중 하나에 있는 하위 키에 저장 됩니다.  
+
+ ```console
+ HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\Odbc.ini  
+ ```
+
+ ```console
+ HKEY_CURRENT_USER\SOFTWARE\ODBC\Odbc.ini
+ ```
+
+ 사용 되는 키는 데이터 원본이 *시스템 데이터 원본* (모든 사용자가 사용할 수 있음) 인지 아니면 현재 사용자만 사용할 수 있는 *사용자 데이터* 원본 인지에 따라 달라 집니다. 시스템 데이터 원본은 HKEY_LOCAL_MACHINE 트리에 저장 되 고 사용자 데이터 원본은 HKEY_CURRENT_USER 트리에 저장 됩니다. 다른 모든 측면에서 시스템 데이터 원본 및 사용자 데이터 원본은 동일 합니다.  
   
  이 섹션에서는 다음 항목을 다룹니다.  
   

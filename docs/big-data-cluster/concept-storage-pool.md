@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ead6c2ceeecbdfb3466bd4475978b139a0d2ddde
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 114296d0bad77c3bbbb088feed13bd6a4bd5a074
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652243"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009337"
 ---
 # <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>저장소 풀 ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]) 이란?
 
@@ -33,7 +33,7 @@ ms.locfileid: "69652243"
 스토리지 노드에서 담당하는 작업은 다음과 같습니다.
 
 - Spark를 통한 데이터 수집
-- HDFS의 데이터 스토리지(Parquet 형식). HDFS 데이터가 SQL 빅 데이터 클러스터의 모든 스토리지 노드에 분산되므로 HDFS는 데이터 지속성도 제공합니다.
+- HDFS의 데이터 저장소 (Parquet 및 구분 기호로 분리 된 텍스트 형식). HDFS 데이터가 SQL 빅 데이터 클러스터의 모든 스토리지 노드에 분산되므로 HDFS는 데이터 지속성도 제공합니다.
 - HDFS 및 SQL Server 엔드포인트를 통한 데이터 액세스
 
 ## <a name="next-steps"></a>다음 단계
