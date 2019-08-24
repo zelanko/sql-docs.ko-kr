@@ -23,16 +23,16 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192988"
 ---
 # <a name="choosing-between-url-access-and-soap"></a>URL 액세스와 SOAP 중 선택
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 응용 프로그램에 통합하는 작업은 까다로울 수 있습니다. 하지만 문제는 프로그래밍 모델이나 API의 복잡성이 아니라 통합에 사용할 수 있는 방법이 다양하다는 점입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 처음부터 개발자 플랫폼으로 디자인되었기 때문에 프로그래밍 유연성을 염두에 두고 만들어졌습니다. 이러한 유연성으로 인해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 탐색 및 관리 기능을 기존 비즈니스 응용 프로그램에 통합하는 데 있어서 중요한 결정이 필요합니다.  
+  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 애플리케이션에 통합하는 작업은 까다로울 수 있습니다. 하지만 문제는 프로그래밍 모델이나 API의 복잡성이 아니라 통합에 사용할 수 있는 방법이 다양하다는 점입니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 처음부터 개발자 플랫폼으로 디자인되었기 때문에 프로그래밍 유연성을 염두에 두고 만들어졌습니다. 이러한 유연성으로 인해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 탐색 및 관리 기능을 기존 비즈니스 애플리케이션에 통합하는 데 있어서 중요한 결정이 필요합니다.  
   
  ![Reporting Services 프로그래밍 시나리오](../../../2014/reporting-services/media/bk-ext-04.gif "Reporting Services 프로그래밍 시나리오")  
 Reporting Services 프로그래밍에서는 다양한 시나리오를 지원합니다.  
   
- 통합 하는 방법은 두 가지 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 사용자 지정 응용 프로그램에: URL 액세스와 Reporting Services SOAP API를 제공 합니다. 어느 방법을 사용할지는 여러 요소에 따라 달라집니다. 경우에 따라 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 비즈니스 응용 프로그램에 통합하려면 URL 액세스와 SOAP 두 가지 모두를 사용해야 할 수 있습니다. 다음과 같은 질문을 고려해야 합니다.  
+ 통합 하는 방법은 두 가지 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 사용자 지정 응용 프로그램에: URL 액세스와 Reporting Services SOAP API를 제공 합니다. 어느 방법을 사용할지는 여러 요소에 따라 달라집니다. 경우에 따라 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 사용자 지정 비즈니스 애플리케이션에 통합하려면 URL 액세스와 SOAP 두 가지 모두를 사용해야 할 수 있습니다. 다음과 같은 질문을 고려해야 합니다.  
   
 -   자신 또는 최종 사용자에게 어떤 유형의 엔터프라이즈 보고 기능이 필요합니까? 보고서를 간단하게 시작하고 탐색할 수 있는 방법이 필요합니까 아니면 사용자 지정 비즈니스 솔루션에서 고급 보고서 서버 관리 기능이 필요합니까?  
   
--   사용자들이 일반적으로 어떤 유형의 환경에서 작업합니까? 사용하는 비즈니스 응용 프로그램이 웹 응용 프로그램입니까 아니면 Windows 응용 프로그램입니까? 최종 사용자가 Win32 환경에서 웹 환경으로 얼마나 쉽게 전환할 수 있습니까? 보고서가 실행되고 관리되는 환경에 대해 어떤 유형의 컨트롤이 필요합니까?  
+-   사용자들이 일반적으로 어떤 유형의 환경에서 작업합니까? 사용하는 비즈니스 애플리케이션이 웹 애플리케이션입니까 아니면 Windows 애플리케이션입니까? 최종 사용자가 Win32 환경에서 웹 환경으로 얼마나 쉽게 전환할 수 있습니까? 보고서가 실행되고 관리되는 환경에 대해 어떤 유형의 컨트롤이 필요합니까?  
   
  위의 질문에 대한 대답을 기준으로 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 IT 인프라에 통합할 방법을 결정할 수 있습니다. 일반적으로 URL 액세스는 개별 보고서를 보고 탐색하는 데 사용하는 것이 좋습니다. URL 액세스를 통해 웹 서비스 오버헤드 없이 보고서를 쉽고 빠르게 탐색할 수 있습니다. 또한 URL 액세스는 현재 보고서 도구 모음을 포함하여 보고서 탐색을 위해 전체 HTML 뷰어를 사용하는 유일한 프로그래밍 기술입니다. 그리고 URL 액세스는 서버를 상대로 한 SOAP 요청에 대한 마샬링을 거치지 않으므로 SOAP보다 뛰어난 성능을 제공합니다. 보기 및 탐색용 기본 제공 도구를 사용하여 보고서에 쉽고 빠르게 액세스해야 하는 통합 시나리오에서는 URL 액세스를 선택하는 것이 더 좋습니다.  
   

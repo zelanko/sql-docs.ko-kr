@@ -463,7 +463,7 @@ RESTORE 예에는 다음이 포함됩니다.
 
 ### <a name="restoring_full_db"></a> 1. 전체 데이터베이스 복원
 
-다음 예에서는 `AdventureWorksBackups` 논리적 백업 장치에서 전체 데이터베이스 백업을 복원합니다. 이 디바이스를 만드는 예는 [백업 디바이스](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.
+다음 예에서는 `AdventureWorksBackups` 논리적 백업 디바이스에서 전체 데이터베이스 백업을 복원합니다. 이 디바이스를 만드는 예는 [백업 디바이스](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.
 
 ```sql
 RESTORE DATABASE AdventureWorks2012
@@ -477,7 +477,7 @@ RESTORE DATABASE AdventureWorks2012
 
 ### <a name="restoring_full_n_differential_db_backups"></a> 2. 전체 및 차등 데이터베이스 백업 복원
 
-다음 예에서는 `Z:\SQLServerBackups\AdventureWorks2012.bak` 백업 장치에서 전체 데이터베이스 백업을 복원한 다음 차등 백업을 복원합니다. 이 백업 장치에는 전체 데이터베이스 백업 및 차등 백업이 모두 포함되어 있습니다. 이 백업 장치에는 전체 데이터베이스 백업 및 차등 백업이 모두 포함되어 있습니다. 복원할 전체 데이터베이스 백업은 장치의 6번째 백업 세트(`FILE = 6`)이고 차등 데이터베이스 백업은 장치의 9번째 백업 세트(`FILE = 9`)입니다. 차등 백업이 복구되면 바로 데이터베이스가 복구됩니다.
+다음 예에서는 `Z:\SQLServerBackups\AdventureWorks2012.bak` 백업 디바이스에서 전체 데이터베이스 백업을 복원한 다음 차등 백업을 복원합니다. 이 백업 디바이스에는 전체 데이터베이스 백업 및 차등 백업이 모두 포함되어 있습니다. 이 백업 디바이스에는 전체 데이터베이스 백업 및 차등 백업이 모두 포함되어 있습니다. 복원할 전체 데이터베이스 백업은 디바이스의 6번째 백업 세트(`FILE = 6`)이고 차등 데이터베이스 백업은 디바이스의 9번째 백업 세트(`FILE = 9`)입니다. 차등 백업이 복구되면 바로 데이터베이스가 복구됩니다.
 
 ```sql
 RESTORE DATABASE AdventureWorks2012
@@ -609,7 +609,7 @@ RESTORE LOG AdventureWorks2012
 
 ### <a name="restoring_using_TAPE"></a> H. TAPE 구문을 사용하여 복원
 
-다음 예에서는 `TAPE` 백업 장치에서 전체 데이터베이스 백업을 복원합니다.
+다음 예에서는 `TAPE` 백업 디바이스에서 전체 데이터베이스 백업을 복원합니다.
 
 ```sql
 RESTORE DATABASE AdventureWorks2012
@@ -622,12 +622,12 @@ RESTORE DATABASE AdventureWorks2012
 
 다음 예에서는 하나의 보조 파일 그룹과 하나의 트랜잭션 로그인 두 파일이 있는 `MyDatabase`라는 데이터베이스를 복원합니다. 이 데이터베이스는 전체 복구 모델을 사용합니다.
 
-데이터베이스 백업은 `MyDatabaseBackups`라는 논리적 백업 장치에 있는 미디어 세트의 9번째 백업 세트입니다. 그런 다음 `10` 장치의 다음 3개 백업 세트(`11`, `12` 및 `MyDatabaseBackups`)에 있는 3개 로그 백업이 `WITH NORECOVERY`를 사용하여 복원됩니다. 마지막 로그 백업을 복원한 다음 데이터베이스가 복구됩니다.
+데이터베이스 백업은 `MyDatabaseBackups`라는 논리적 백업 디바이스에 있는 미디어 세트의 9번째 백업 세트입니다. 그런 다음 `10` 디바이스의 다음 3개 백업 세트(`11`, `12` 및 `MyDatabaseBackups`)에 있는 3개 로그 백업이 `WITH NORECOVERY`를 사용하여 복원됩니다. 마지막 로그 백업을 복원한 다음 데이터베이스가 복구됩니다.
 
 > [!NOTE]
 > 모든 로그 백업이 복원되기 전에 너무 빨리 복구하는 경우를 방지하기 위해 복구 작업은 별도의 단계로 수행됩니다.
 
-`RESTORE DATABASE`에는 두 가지 유형의 `FILE` 옵션이 있습니다. 백업 장치 이름 앞에 있는 `FILE` 옵션은 백업 세트에서 복원될 데이터베이스 파일의 논리적 파일 이름을 지정합니다(예: `FILE = 'MyDatabase_data_1'`). 이 백업 세트는 미디어 세트의 첫 번째 데이터베이스 백업이 아니므로 미디어 세트에서의 해당 위치는 `FILE` 절의 `WITH` 옵션인 `FILE=9`를 사용하여 나타냅니다.
+`RESTORE DATABASE`에는 두 가지 유형의 `FILE` 옵션이 있습니다. 백업 디바이스 이름 앞에 있는 `FILE` 옵션은 백업 세트에서 복원될 데이터베이스 파일의 논리적 파일 이름을 지정합니다(예: `FILE = 'MyDatabase_data_1'`). 이 백업 세트는 미디어 세트의 첫 번째 데이터베이스 백업이 아니므로 미디어 세트에서의 해당 위치는 `FILE` 절의 `WITH` 옵션인 `FILE=9`를 사용하여 나타냅니다.
 
 ```sql
 RESTORE DATABASE MyDatabase

@@ -20,7 +20,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109485"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-report-builder"></a>보고서 작성기의 데이터 연결, 데이터 원본 및 연결 문자열
-  보고서에 데이터를 포함하려면 데이터 연결 및 데이터 집합을 만듭니다. 데이터 연결에는 외부 데이터 원본에 액세스하는 방법에 대한 정보가 포함됩니다. 데이터 집합에는 데이터 연결을 사용하여 포함할 데이터를 지정하는 쿼리 명령이 포함됩니다.  
+  보고서에 데이터를 포함하려면 데이터 연결 및 데이터 세트을 만듭니다. 데이터 연결에는 외부 데이터 원본에 액세스하는 방법에 대한 정보가 포함됩니다. 데이터 세트에는 데이터 연결을 사용하여 포함할 데이터를 지정하는 쿼리 명령이 포함됩니다.  
   
 1.  **보고서 데이터 창의 데이터 원본** 포함된 데이터 원본을 만들거나 공유 데이터 원본을 추가하면 데이터 원본이 보고서 데이터 창에 표시됩니다.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66109485"
   
  자세한 내용은 [포함 및 공유 데이터 연결 또는 데이터 원본 &#40;보고서 작성기 및 SSRS&#41; ](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 하 고 [데이터 연결, 데이터 원본 및 Reporting Services의에서연결문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- 데이터는 미리 정의된 공유 데이터 원본, 공유 데이터 집합 및 보고서 파트를 사용하여 보고서에 포함될 수도 있습니다. 이러한 항목에는 이미 필요한 데이터 연결 정보가 있습니다. 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)합니다.  
+ 데이터는 미리 정의된 공유 데이터 원본, 공유 데이터 세트 및 보고서 파트를 사용하여 보고서에 포함될 수도 있습니다. 이러한 항목에는 이미 필요한 데이터 연결 정보가 있습니다. 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)합니다.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]  

@@ -39,7 +39,7 @@ public class SQLServerXAConnection
  [SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md) 개체를 사용하여 SQLServerXAConnection 개체를 분산 트랜잭션에 참여시킬 수 있습니다. 일반적으로 중간 계층 서버에 속한 트랜잭션 관리자는 SQLServerXAResource 개체를 통해 SQLServerXAConnection 개체를 관리 합니다.  
   
 > [!NOTE]  
->  응용 프로그램 프로그래머는 일반적으로 이 인터페이스를 직접 사용하지 않습니다. 이 인터페이스는 중간 계층 서버에서 작업하는 트랜잭션 관리자가 주로 사용합니다.  
+>  애플리케이션 프로그래머는 일반적으로 이 인터페이스를 직접 사용하지 않습니다. 이 인터페이스는 중간 계층 서버에서 작업하는 트랜잭션 관리자가 주로 사용합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerXAConnection 메서드](../../../connect/jdbc/reference/sqlserverxaconnection-members.md)   

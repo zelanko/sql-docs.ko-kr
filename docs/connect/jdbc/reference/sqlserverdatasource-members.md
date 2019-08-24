@@ -39,7 +39,7 @@ ms.locfileid: "67971412"
 |속성|설명|  
 |----------|-----------------|  
 |[getApplicationIntent](../../../connect/jdbc/reference/getapplicationintent-method-sqlserverdatasource.md)|**Applicationintent** 된 연결 속성의 값을 반환 합니다.|  
-|[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|응용 프로그램 이름을 반환합니다.|  
+|[getApplicationName](../../../connect/jdbc/reference/getapplicationname-method-sqlserverdatasource.md)|애플리케이션 이름을 반환합니다.|  
 |[getConnection](../../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md)|이 [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) 개체가 나타내는 데이터 원본과의 연결을 설정합니다.|  
 |[getDatabaseName](../../../connect/jdbc/reference/getdatabasename-method-sqlserverdatasource.md)|데이터베이스 이름을 반환합니다.|  
 |[getDisableStatementPooling](../../../connect/jdbc/reference/getdisablestatementpooling-method-sqlserverdatasource.md)|**Statementpoolingcachesize** connection 속성의 값을 반환 합니다. 이 설정은이 연결에 대해 문 풀링이 사용 되는지 여부를 제어 합니다.|  
@@ -75,8 +75,8 @@ ms.locfileid: "67971412"
 |[getXopenStates](../../../connect/jdbc/reference/getxopenstates-method-sqlserverdatasource.md)|SQL 상태를 XOPEN 규격 상태로 변환할 수 있는지 여부를 나타내는 **Boolean** 값을 반환합니다.|  
 |[isWrapperFor](../../../connect/jdbc/reference/iswrapperfor-method-sqlserverdatasource.md)|이 데이터 원본 개체가 지정된 인터페이스에 대한 래퍼인지 여부를 나타냅니다.|  
 |[setApplicationIntent](../../../connect/jdbc/reference/setapplicationintent-method-sqlserverdatasource.md)|**Applicationintent** 연결 속성의 값을 설정 합니다.|  
-|[setApplicationName](../../../connect/jdbc/reference/setapplicationname-method-sqlserverdatasource.md)|응용 프로그램 이름을 설정합니다.|  
-|[setAuthenticationScheme](../../../connect/jdbc/reference/setauthenticationscheme-sqlserverdatasource.md)|응용 프로그램에서 사용하려는 통합 보안의 종류를 나타냅니다.|  
+|[setApplicationName](../../../connect/jdbc/reference/setapplicationname-method-sqlserverdatasource.md)|애플리케이션 이름을 설정합니다.|  
+|[setAuthenticationScheme](../../../connect/jdbc/reference/setauthenticationscheme-sqlserverdatasource.md)|애플리케이션에서 사용하려는 통합 보안의 종류를 나타냅니다.|  
 |[setDatabaseName](../../../connect/jdbc/reference/setdatabasename-method-sqlserverdatasource.md)|연결할 데이터베이스 이름을 설정합니다.|  
 |[setDescription](../../../connect/jdbc/reference/setdescription-method-sqlserverdatasource.md)|데이터 원본에 대한 설명을 설정합니다.|  
 |[setDisableStatementPooling](../../../connect/jdbc/reference/setdisablestatementpooling-method-sqlserverdatasource.md)|문 풀링을 true 또는 false로 설정 합니다.|  

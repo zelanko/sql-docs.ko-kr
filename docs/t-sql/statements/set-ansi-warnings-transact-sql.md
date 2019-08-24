@@ -30,7 +30,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67948010"
 ---
-# <a name="set-ansiwarnings-transact-sql"></a>SET ANSI_WARNINGS(Transact-SQL)
+# <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   여러 오류 상황에 대한 ISO 표준 동작을 지정합니다.  
@@ -73,7 +73,7 @@ sp_configure의 user options를 사용하여 서버의 모든 연결에 대해 A
 > [!IMPORTANT]
 > 분산 쿼리를 실행할 때는 ANSI_WARNINGS를 ON으로 설정해야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결될 때 자동으로 ANSI_WARNINGS를 ON으로 설정합니다. 이 옵션은 연결하기 전에 응용 프로그램에 설정된 ODBC 데이터 원본과 ODBC 연결 특성에서 구성할 수 있습니다. DB-Library 응용 프로그램으로부터 연결할 때 SET ANSI_WARNINGS의 기본값은 OFF입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결될 때 자동으로 ANSI_WARNINGS를 ON으로 설정합니다. 이 옵션은 연결하기 전에 애플리케이션에 설정된 ODBC 데이터 원본과 ODBC 연결 특성에서 구성할 수 있습니다. DB-Library 애플리케이션으로부터 연결할 때 SET ANSI_WARNINGS의 기본값은 OFF입니다.  
   
 ANSI_DEFAULTS 옵션이 ON이면 ANSI_WARNINGS가 활성화됩니다.  
   
