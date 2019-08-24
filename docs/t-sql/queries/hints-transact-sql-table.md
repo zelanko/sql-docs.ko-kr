@@ -252,7 +252,7 @@ BULK 옵션이 [OPENROWSET](../../t-sql/functions/openrowset-transact-sql.md)와
   
 대량 가져오기 작업에서 테이블에 정의된 모든 트리거를 무시하도록 지정합니다. 기본적으로 INSERT는 트리거를 적용합니다.  
   
-응용 프로그램이 트리거에 의존하지 않으며 성능을 최대화해야 하는 경우에만 IGNORE_TRIGGERS를 사용하세요.  
+애플리케이션이 트리거에 의존하지 않으며 성능을 최대화해야 하는 경우에만 IGNORE_TRIGGERS를 사용하세요.  
   
 NOLOCK  
 READUNCOMMITTED와 동일합니다. 자세한 내용은 이 항목의 뒷부분에 나오는 READUNCOMMITTED를 참조하세요.  
@@ -296,7 +296,7 @@ READUNCOMMITTED 및 NOLOCK 힌트는 데이터 잠금에만 적용됩니다. REA
 삽입, 업데이트 또는 삭제 작업으로 수정된 테이블에 대해서는 READUNCOMMITTED와 NOLOCK을 지정할 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 쿼리 최적화 프로그램은 UPDATE 또는 DELETE 문의 대상 테이블에 적용되는 FROM 절의 READUNCOMMITTED 및 NOLOCK 힌트를 무시합니다.  
   
 > [!NOTE]  
-> UPDATE 또는 DELETE 문의 대상 테이블에 적용되는 FROM 절의 READUNCOMMITTED 및 NOLOCK 힌트 사용 지원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 제거될 예정입니다. 새 개발 작업에서는 이 컨텍스트에서 이러한 힌트를 사용하지 않도록 하고 현재 이 힌트를 사용하는 응용 프로그램은 수정하세요.  
+> UPDATE 또는 DELETE 문의 대상 테이블에 적용되는 FROM 절의 READUNCOMMITTED 및 NOLOCK 힌트 사용 지원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 제거될 예정입니다. 새 개발 작업에서는 이 컨텍스트에서 이러한 힌트를 사용하지 않도록 하고 현재 이 힌트를 사용하는 애플리케이션은 수정하세요.  
   
 다음 중 하나를 사용하여 트랜잭션에서 커밋되지 않은 데이터 수정 내용에 대해 더티 읽기를 수행할 수 없도록 하여 잠금 경합을 최소화할 수도 있습니다.  
 -   READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON으로 설정된 READ COMMITTED 격리 수준  

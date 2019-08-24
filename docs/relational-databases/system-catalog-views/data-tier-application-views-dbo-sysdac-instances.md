@@ -27,10 +27,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68033119"
 ---
-# <a name="data-tier-application-views---dbosysdacinstances"></a>데이터 계층 응용 프로그램 보기-dbo.sysdac_instances
+# <a name="data-tier-application-views---dbosysdac_instances"></a>데이터 계층 응용 프로그램 보기-dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 배포된 DAC(데이터 계층 응용 프로그램) 인스턴스마다 하나의 행을 표시합니다. sysdac_instances는 msdb 데이터베이스의 dbo 스키마에 속합니다. 다음 표에서 sysdac_instances 뷰에서 열을 설명 합니다.  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 배포된 DAC(데이터 계층 애플리케이션) 인스턴스마다 하나의 행을 표시합니다. sysdac_instances는 msdb 데이터베이스의 dbo 스키마에 속합니다. 다음 표에서 sysdac_instances 뷰에서 열을 설명 합니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "68033119"
 |database_name|**sysname**|DAC 인스턴스에 대해 만든 데이터베이스의 이름입니다.|  
   
 ## <a name="remarks"></a>설명  
- DAC는 응용 프로그램에 사용되는 테이블 및 뷰 같은 논리 데이터 계층 개체의 정의인 DAC 유형을 포함합니다. DAC 패키지는 DAC를 배포하는 데 사용되는 파일입니다. DAC 패키지는 DAC 유형에 포함된 모든 논리 개체의 표현을 포함합니다. DAC 패키지를 사용하여 하나 이상의 DAC 복사본 또는 인스턴스를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 배포할 수 있습니다. 동일한 DAC 패키지에서 배포된 각 DAC 인스턴스는 동일한 유형을 공유하지만 고유한 인스턴스 이름 및 식별자가 할당됩니다.  
+ DAC는 애플리케이션에 사용되는 테이블 및 뷰 같은 논리 데이터 계층 개체의 정의인 DAC 유형을 포함합니다. DAC 패키지는 DAC를 배포하는 데 사용되는 파일입니다. DAC 패키지는 DAC 유형에 포함된 모든 논리 개체의 표현을 포함합니다. DAC 패키지를 사용하여 하나 이상의 DAC 복사본 또는 인스턴스를 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 인스턴스에 배포할 수 있습니다. 동일한 DAC 패키지에서 배포된 각 DAC 인스턴스는 동일한 유형을 공유하지만 고유한 인스턴스 이름 및 식별자가 할당됩니다.  
   
 ## <a name="permissions"></a>사용 권한  
  모든 열을 보려면 sysadmin 고정 서버 역할의 멤버 자격이 필요합니다. public 역할의 멤버는 instance_name, description 및 type_version 열을 볼 수 있습니다.  

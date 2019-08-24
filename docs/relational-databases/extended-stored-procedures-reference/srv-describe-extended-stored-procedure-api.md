@@ -21,12 +21,12 @@ author: rothja
 ms.author: jroth
 ms.openlocfilehash: f8904e3c08789eb0cb50b0f5a20b66c851578ac5
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68064119"
 ---
-# <a name="srvdescribe-extended-stored-procedure-api"></a>srv_describe(확장 저장 프로시저 API)
+# <a name="srv_describe-extended-stored-procedure-api"></a>srv_describe(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -70,7 +70,7 @@ srcdata
   
 ## <a name="arguments"></a>인수  
  *srvproc*  
- 특정 클라이언트 연결에 대한 핸들(이 경우 행을 보내는 클라이언트)인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API 라이브러리가 응용 프로그램과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 모든 정보가 들어 있습니다.  
+ 특정 클라이언트 연결에 대한 핸들(이 경우 행을 보내는 클라이언트)인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API 라이브러리가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 모든 정보가 들어 있습니다.  
   
  *colnumber*  
  현재 지원되지 않습니다. 순서대로 열을 설명해야 합니다. **srv_sendrow**가 호출되기 전에 모든 열을 설명해야 합니다.  

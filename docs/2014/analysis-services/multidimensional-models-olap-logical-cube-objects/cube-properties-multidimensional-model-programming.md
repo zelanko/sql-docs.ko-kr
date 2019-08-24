@@ -51,7 +51,7 @@ ms.locfileid: "62727649"
 |`AggregationPrefix`|집계 이름에 사용되는 공통 접두사를 지정합니다.|  
 |`Collation`|LCID(로캘 ID)와 비교 플래그를 밑줄로 구분하여 지정합니다(예: Latin1_General_C1_AS).|  
 |`DefaultMeasure`|큐브의 기본 측정값을 정의하는 MDX(Multidimensional Expressions) 식을 포함합니다.|  
-|`Description`|큐브에 대한 설명을 제공합니다. 이 설명은 클라이언트 응용 프로그램에 노출될 수 있습니다.|  
+|`Description`|큐브에 대한 설명을 제공합니다. 이 설명은 클라이언트 애플리케이션에 노출될 수 있습니다.|  
 |`ErrorConfiguration`|중복 키, 알 수 없는 키, 오류 제한, 오류 감지 시 수행 동작, 오류 로그 파일 및 Null 키 처리 등에 대한 구성 가능한 오류 처리 설정을 포함합니다.|  
 |`EstimatedRows`|큐브의 예상 행 수를 지정합니다.|  
 |`ID`|큐브의 ID(고유 식별자)를 포함합니다.|  
@@ -63,8 +63,8 @@ ms.locfileid: "62727649"
 |`ScriptCacheProcessingMode`|스크립트 캐시를 처리 중에 작성할지, 아니면 처리 후에 작성할지를 나타냅니다. 옵션은 **정기적인** 고 `lazy`입니다.|  
 |`ScriptErrorHandlingMode`|오류 처리를 결정합니다. 사용할 수 있는 옵션은 `IgnoreNone` 또는 `IgnoreAll`입니다.|  
 |`Source`|큐브에 사용된 데이터 원본 뷰를 표시합니다.|  
-|`StorageLocation`|큐브의 파일 시스템 저장소 위치를 지정합니다. 아무 위치도 지정하지 않으면 큐브 개체를 포함하는 데이터베이스에서 위치를 상속받습니다.|  
-|`StorageMode`|큐브의 저장소 모드를 지정합니다. 값은 `MOLAP`, `ROLAP`, 또는 `HOLAP``.`|  
+|`StorageLocation`|큐브의 파일 시스템 스토리지 위치를 지정합니다. 아무 위치도 지정하지 않으면 큐브 개체를 포함하는 데이터베이스에서 위치를 상속받습니다.|  
+|`StorageMode`|큐브의 스토리지 모드를 지정합니다. 값은 `MOLAP`, `ROLAP`, 또는 `HOLAP``.`|  
 |`Visible`|큐브의 표시 여부를 결정합니다.|  
   
 > [!NOTE]  

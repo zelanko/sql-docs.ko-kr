@@ -47,7 +47,7 @@ ms.locfileid: "68050166"
 
 ## <a name="windows-certificate-store-without-role-separation-example"></a>역할 구분이 없는 Windows 인증서 저장소(예)
 
-이 스크립트는 Windows 인증서 저장소의 인증서인 열 마스터 키 생성, 열 암호화 키 생성 및 암호화, SQL Server 데이터베이스에 키 메타데이터 생성 등에 관한 종단 간 예제입니다.
+이 스크립트는 Windows 인증서 스토리지의 인증서인 열 마스터 키 생성, 열 암호화 키 생성 및 암호화, SQL Server 데이터베이스에 키 메타데이터 생성 등에 관한 엔드투엔드 예제입니다.
 
 
 ```
@@ -82,7 +82,7 @@ New-SqlColumnEncryptionKey -Name $cekName  -InputObject $database -ColumnMasterK
 
 ## <a name="azure-key-vault-without-role-separation-example"></a>역할 구분이 없는 Azure 주요 자격 증명 모음(예제)
 
-이 스크립트는 Azure 주요 자격 증명 모음 프로비전 및 구성, 자격 증명 모음에 열 마스터 키 생성, 열 암호화 키 생성 및 암호화, Azure SQL 데이터베이스에 키 메타데이터 생성에 대한 종단 간 예제입니다.
+이 스크립트는 Azure 주요 자격 증명 모음 프로비전 및 구성, 자격 증명 모음에 열 마스터 키 생성, 열 암호화 키 생성 및 암호화, Azure SQL 데이터베이스에 키 메타데이터 생성에 대한 엔드투엔드 예제입니다.
 
 
 ```
@@ -129,7 +129,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 ## <a name="cngksp-without-role-separation-example"></a>역할 구분이 없는 CNG/KSP(예제)
 
-아래 스크립트는 CNG(Cryptography Next Generation) API를 구현하는 키 저장소에 열 마스터 키 생성, 열 암호화 키 생성 및 암호화, SQL Server 데이터베이스에 키 메타데이터 생성에 대한 종단 간 예제입니다.
+아래 스크립트는 CNG(Cryptography Next Generation) API를 구현하는 키 스토리지에 열 마스터 키 생성, 열 암호화 키 생성 및 암호화, SQL Server 데이터베이스에 키 메타데이터 생성에 대한 엔드투엔드 예제입니다.
 
 이 예제는 Microsoft 소프트웨어 키 스토리지 공급자를 사용하는 키 스토리지를 활용합니다. 하드웨어 보안 모듈 등의 다른 저장소를 사용하도록 예제를 수정할 수 있습니다. 그러려면 디바이스에 대한 CNG를 구현하는 KSP(키 저장소 공급자)가 머신에 설치되어 있고 적절하게 작동해야 합니다. “Microsoft 소프트웨어 키 스토리지 공급자”를 디바이스의 KSP 이름으로 바꿔야 합니다.
 

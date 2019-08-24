@@ -18,12 +18,12 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62877132"
 ---
 # <a name="sql-server-managed--backup-to-windows-azure"></a>Windows Azure에 대한 SQL Server 관리되는 백업
-  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]은 Windows Azure BLOB 저장소 서비스에 대한 SQL Server 백업을 관리하고 자동화합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 사용하는 백업 전략은 데이터베이스의 트랜잭션 작업과 보존 기간을 기반으로 합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 보존 기간 동안 지정 시간 복원을 지원합니다.   
+  [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]은 Windows Azure Blob Storage 서비스에 대한 SQL Server 백업을 관리하고 자동화합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 사용하는 백업 전략은 데이터베이스의 트랜잭션 작업과 보존 기간을 기반으로 합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 보존 기간 동안 지정 시간 복원을 지원합니다.   
 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]은 SQL Server 인스턴스의 모든 데이터베이스를 관리하기 위해 인스턴스 수준이나 데이터베이스 수준에서 사용하도록 설정할 수 있습니다. SQL Server는 온-프레미스나 Windows Azure 가상 컴퓨터와 같은 호스팅된 환경에서 실행될 수 있습니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] Windows Azure Virtual Machines에서 실행 중인 SQL Server에 권장 됩니다.  
   
-## <a name="benefits-of-automating-sql-server-backup-using-includesssmartbackupincludesss-smartbackup-mdmd"></a>[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용한 SQL Server 백업 자동화의 이점  
+## <a name="benefits-of-automating-sql-server-backup-using-includess_smartbackupincludesss-smartbackup-mdmd"></a>[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용한 SQL Server 백업 자동화의 이점  
   
--   현재 여러 데이터베이스에 대한 백업을 자동화하려면 백업 전략 개발, 사용자 지정 코드 작성, 백업 예약 등이 필요하지만, [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하는 경우에는 보존 기간 설정과 저장소 위치만 제공하면 됩니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 예약, 수행 및 백업을 관리 합니다.  
+-   현재 여러 데이터베이스에 대한 백업을 자동화하려면 백업 전략 개발, 사용자 지정 코드 작성, 백업 예약 등이 필요하지만, [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하는 경우에는 보존 기간 설정과 스토리지 위치만 제공하면 됩니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 예약, 수행 및 백업을 관리 합니다.  
   
      [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]은 데이터베이스 수준에서 구성하거나 SQL Server 인스턴스의 기본 설정으로 구성할 수 있습니다. 사용 하 여 백업을 자동화 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 다음과 같은 이점이 있습니다.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62877132"
  데이터베이스 백업을 자동화하고 보존 기간에 따라 백업을 관리하는 SQL Server 기능입니다.  
   
  보존 기간  
- 보존 기간은 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 지정한 기간 내 지정 시간에 데이터베이스를 복구하도록 저장소에 보존할 백업 파일을 결정하는 데 사용됩니다.  지원되는 값 범위는 1-30일입니다.  
+ 보존 기간은 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 지정한 기간 내 지정 시간에 데이터베이스를 복구하도록 스토리지에 보존할 백업 파일을 결정하는 데 사용됩니다.  지원되는 값 범위는 1-30일입니다.  
   
  로그 체인  
  로그 백업의 연속된 시퀀스를 로그 체인이라고 합니다. 로그 체인은 데이터베이스의 전체 백업으로 시작합니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "62877132"
   
  **백업 컨테이너 및 파일 명명 규칙:**  
   
- [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]은 가용성 데이터베이스를 제외한 모든 데이터베이스의 SQL Server 인스턴스 이름을 사용하여 Windows Azure 저장소 컨테이너의 이름을 지정합니다.  가용성 데이터베이스의 경우 가용성 그룹 GUID가 Windows Azure 저장소 컨테이너의 이름을 지정하는 데 사용됩니다.  
+ [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]은 가용성 데이터베이스를 제외한 모든 데이터베이스의 SQL Server 인스턴스 이름을 사용하여 Windows Azure Storage 컨테이너의 이름을 지정합니다.  가용성 데이터베이스의 경우 가용성 그룹 GUID가 Windows Azure Storage 컨테이너의 이름을 지정하는 데 사용됩니다.  
   
  비가용성 데이터베이스의 백업 파일은 다음 규칙을 사용하여 이름이 지정됩니다. 이름은 데이터베이스 GUID 데이터베이스 이름의 첫 40 자를 사용 하 여 만들어집니다 없이 '-', 타임 스탬프와 합니다. 밑줄 문자는 구분 기호로 세그먼트 사이에 삽입됩니다. **.bak** 파일 확장명은 전체 백업에 사용되고 **.log** 파일 확장명은 로그 백업에 사용됩니다. 가용성 그룹 데이터베이스의 경우 위에서 설명한 파일 명명 규칙 외에도 가용성 그룹 데이터베이스 GUID가 40자의 데이터베이스 이름 뒤에 추가됩니다. 가용성 그룹 데이터베이스 GUID 값은 sys.databases의 group_database_id 값입니다.  
   
@@ -134,13 +134,13 @@ ms.locfileid: "62877132"
   
 -   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 에이전트는 전체 백업과 로그 백업 등 데이터베이스 백업만 지원합니다.  파일 백업 자동화는 지원되지 않습니다.  
   
--   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 작업은 현재 Transact-SQL을 통해 지원됩니다. 모니터링 및 문제 해결은 확장 이벤트를 사용하여 수행됩니다. PowerShell 및 SMO 지원은 SQL Server 인스턴스의 보존 기간 기본 설정 및 저장소 구성, 그리고 SQL Server 정책 기반 관리 정책을 기반으로 한 백업 상태 및 전체 상태 모니터링으로 제한됩니다.  
+-   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 작업은 현재 Transact-SQL을 통해 지원됩니다. 모니터링 및 문제 해결은 확장 이벤트를 사용하여 수행됩니다. PowerShell 및 SMO 지원은 SQL Server 인스턴스의 보존 기간 기본 설정 및 스토리지 구성, 그리고 SQL Server 정책 기반 관리 정책을 기반으로 한 백업 상태 및 전체 상태 모니터링으로 제한됩니다.  
   
 -   시스템 데이터베이스는 지원되지 않습니다.  
   
 -   Microsoft Azure Blob Storage service는 유일하게 지원되는 백업 스토리지 옵션입니다. 디스크 또는 테이프 백업은 지원되지 않습니다.  
   
--   현재 Microsoft Azure Storage에서 페이지 BLOB에 허용되는 최대 파일 크기는 1TB입니다. 1TB보다 큰 백업 파일은 실패합니다. 이러한 상황을 방지하려면 데이터베이스 크기가 큰 경우 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정하기 전에 압축을 사용하고 백업 파일 크기를 테스트하는 것이 좋습니다. 로컬 디스크에 백업하거나 `BACKUP TO URL` Transact-SQL 문을 사용하여 Windows Azure 저장소에 수동으로 백업하여 테스트할 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](sql-server-backup-to-url.md)을 참조하세요.  
+-   현재 Microsoft Azure Storage에서 페이지 BLOB에 허용되는 최대 파일 크기는 1TB입니다. 1TB보다 큰 백업 파일은 실패합니다. 이러한 상황을 방지하려면 데이터베이스 크기가 큰 경우 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정하기 전에 압축을 사용하고 백업 파일 크기를 테스트하는 것이 좋습니다. 로컬 디스크에 백업하거나 `BACKUP TO URL` Transact-SQL 문을 사용하여 Windows Azure Storage에 수동으로 백업하여 테스트할 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](sql-server-backup-to-url.md)을 참조하세요.  
   
 -   복구 모델: 전체 또는 대량 로그 모델로 설정된 데이터베이스만 지원됩니다.  단순 복구 모델로 설정된 데이터베이스는 지원되지 않습니다.  
   

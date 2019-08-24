@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68078165"
 ---
-# <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn(Transact-SQL)
+# <a name="sp_mergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   병합 게시를 열로 분할합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다.  
@@ -76,7 +76,7 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
  자동 ID 범위 관리가 사용되는 경우 아티클에서 ID 열을 삭제할 수 없습니다. 자세한 내용은 [ID 열 복제](../../relational-databases/replication/publish/replicate-identity-columns.md)를 참조하세요.  
   
- 초기 스냅샷이 생성된 후에 응용 프로그램이 새로운 수직 분할을 설정한 경우 새로운 스냅샷을 생성하여 각 구독에 다시 적용해야 합니다. 스냅샷은 예약된 다음 스냅샷과 배포 또는 병합 에이전트가 실행될 때 적용됩니다.  
+ 초기 스냅샷이 생성된 후에 애플리케이션이 새로운 수직 분할을 설정한 경우 새로운 스냅샷을 생성하여 각 구독에 다시 적용해야 합니다. 스냅샷은 예약된 다음 스냅샷과 배포 또는 병합 에이전트가 실행될 때 적용됩니다.  
   
  충돌 감지에 행 추적을 사용하는 경우(기본값) 기본 테이블에 최대 1,024개의 열을 포함할 수 있지만 아티클에서 열을 필터링해야 하므로 최대 246개의 열이 게시됩니다. 열 추적을 사용하면 기본 테이블은 최대 246개의 열을 포함할 수 있습니다.  
   

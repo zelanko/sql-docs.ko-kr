@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68066807"
 ---
-# <a name="sphelplogshippingsecondarydatabase-transact-sql"></a>sp_help_log_shipping_secondary_database(Transact-SQL)
+# <a name="sp_help_log_shipping_secondary_database-transact-sql"></a>sp_help_log_shipping_secondary_database(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   이 저장 프로시저는 하나 이상의 보조 데이터베이스에 대한 설정을 검색합니다.  
@@ -69,9 +69,9 @@ sp_help_log_shipping_secondary_database
 |**restore_all**|1로 설정될 경우 보조 서버는 복원 작업 실행 시 모든 사용 가능한 트랜잭션 백업을 복원합니다. 그렇지 않으면 파일을 하나 복원한 후 중지합니다.|  
 |**restore_mode**|보조 데이터베이스의 복원 모드입니다.<br /><br /> 0 = NORECOVERY로 로그 복원<br /><br /> 1 = STANDBY로 로그 복원|  
 |**disconnect_users**|1로 설정될 경우 복원 작업 수행 시 보조 데이터베이스에서 사용자 연결이 끊어집니다. 기본값 = 0|  
-|**block_size**|백업 장치의 블록 크기로 사용되는 크기(바이트)입니다.|  
+|**block_size**|백업 디바이스의 블록 크기로 사용되는 크기(바이트)입니다.|  
 |**buffer_count**|백업 또는 복원 작업에 사용되는 버퍼의 총 개수입니다.|  
-|**max_transfer_size**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 장치로 발급하는 최대 입력 또는 출력 요청의 크기(바이트)입니다.|  
+|**max_transfer_size**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 백업 디바이스로 발급하는 최대 입력 또는 출력 요청의 크기(바이트)입니다.|  
 |**restore_threshold**|복원 작업 간 허용되는 시간(분)입니다. 이 시간이 지나면 경고가 발생합니다.|  
 |**threshold_alert**|복원 임계값을 초과할 경우 발생하는 경고입니다.|  
 |**threshold_alert_enabled**|복원 임계값 경고를 설정할지 여부를 결정합니다.<br /><br /> 1 = 사용.<br /><br /> 0 = 사용 안 함.|  

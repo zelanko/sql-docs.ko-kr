@@ -48,7 +48,7 @@ ms.locfileid: "68135384"
  XML 문서 구성을 위한 FOR XML 명령을 비롯하여 클라이언트 쪽 및 서버 쪽 형식 지정을 비교하고 정보를 제공합니다.  
   
  [SQLXML 4.0의 주석이 추가된 XSD 스키마](../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xsd-schemas-in-sqlxml-4-0.md)  
- SQLXML 4.0에서 주석이 추가된 XSD 스키마를 사용하는 방법에 대한 정보를 제공합니다. 또한 레거시 응용 프로그램에서 사용하기 위한 주석이 추가된 XDR 스키마에 대한 정보를 제공합니다.  
+ SQLXML 4.0에서 주석이 추가된 XSD 스키마를 사용하는 방법에 대한 정보를 제공합니다. 또한 레거시 애플리케이션에서 사용하기 위한 주석이 추가된 XDR 스키마에 대한 정보를 제공합니다.  
   
  [SQLXML 4.0의 XPath 쿼리 사용](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/using-xpath-queries-in-sqlxml-4-0.md)  
  XPath 언어의 하위 집합을 사용하여 주석이 추가된 XSD 스키마로 만든 XML 뷰를 쿼리하는 방법에 대해 설명하고 예를 제공합니다.  

@@ -40,7 +40,7 @@ ms.locfileid: "67901869"
 # <a name="output-clause-transact-sql"></a>OUTPUT 절(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  INSERT, UPDATE, DELETE 또는 MERGE 문의 영향을 받는 각 행의 정보 또는 각 행을 기반으로 하는 식을 반환합니다. 이러한 결과를 처리 응용 프로그램에 반환하여 확인 메시지, 보관 및 기타 응용 프로그램 요구 사항을 충족시키는 데 사용할 수 있습니다. 결과를 테이블 또는 테이블 변수에 삽입할 수도 있습니다. 또한 중첩된 INSERT, UPDATE, DELETE 또는 MERGE 문에서 OUTPUT 절의 결과를 캡처하고 그 결과를 대상 테이블이나 뷰에 삽입할 수 있습니다.  
+  INSERT, UPDATE, DELETE 또는 MERGE 문의 영향을 받는 각 행의 정보 또는 각 행을 기반으로 하는 식을 반환합니다. 이러한 결과를 처리 애플리케이션에 반환하여 확인 메시지, 보관 및 기타 애플리케이션 요구 사항을 충족시키는 데 사용할 수 있습니다. 결과를 테이블 또는 테이블 변수에 삽입할 수도 있습니다. 또한 중첩된 INSERT, UPDATE, DELETE 또는 MERGE 문에서 OUTPUT 절의 결과를 캡처하고 그 결과를 대상 테이블이나 뷰에 삽입할 수 있습니다.  
   
 > [!NOTE]  
 >  OUTPUT 절이 있는 UPDATE, INSERT 또는 DELETE 문은 문에 오류가 발생하여 롤백되어도 클라이언트에 행을 반환합니다. 문을 실행할 때 오류가 발생하는 경우에는 해당 결과를 사용하면 안 됩니다.  
@@ -229,7 +229,7 @@ DELETE Sales.ShoppingCartItem
  OUTPUT 절은 큰 개체 데이터 형식, 즉 **nvarchar(max)** , **varchar(max)** , **varbinary(max)** , **text**, **ntext**, **image** 및 **xml**을 지원합니다. UPDATE 문에서 .WRITE 절을 사용하여 **nvarchar(max)** , **varchar(max)** 또는 **varbinary(max)** 열을 수정하는 경우, 값의 이전 및 이후 이미지 전체가 참조되면 해당 이미지가 반환됩니다. TEXTPTR( ) 함수는 OUTPUT 절의 **text**, **ntext**또는 **image** 열에 대한 식의 일부로 나타날 수 없습니다.  
   
 ## <a name="queues"></a>큐  
- 테이블을 큐 또는 중간 결과 집합의 저장을 위해 사용하는 응용 프로그램에서 OUTPUT을 사용할 수 있습니다. 이 경우 응용 프로그램은 지속적으로 테이블에 행을 추가하거나 제거합니다. 다음 예에서는 삭제된 행을 호출하는 응용 프로그램에 반환하기 위해 DELETE 문에 OUTPUT 절을 사용합니다.  
+ 테이블을 큐 또는 중간 결과 집합의 저장을 위해 사용하는 애플리케이션에서 OUTPUT을 사용할 수 있습니다. 이 경우 애플리케이션은 지속적으로 테이블에 행을 추가하거나 제거합니다. 다음 예에서는 삭제된 행을 호출하는 애플리케이션에 반환하기 위해 DELETE 문에 OUTPUT 절을 사용합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -241,7 +241,7 @@ GO
   
 ```  
   
- 이 예에서는 큐로 사용되는 테이블에서 행을 삭제하고 삭제된 값을 처리하는 응용 프로그램에 반환하는 과정을 한 번의 작동으로 수행합니다. 이 밖에도 스택 구현을 위해 테이블을 사용하는 등 다른 응용도 가능합니다. 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 DML 문이 OUTPUT 절을 사용해 처리 및 반환하는 행의 순서 유지를 보장하지 않습니다. 원하는 용도에 맞게 적절한 WHERE 절을 포함하거나 DML 작업에 여러 행을 사용하기 위해 적절히 정규화할 책임은 응용 프로그램의 몫입니다. 다음 예에서는 하위 쿼리를 사용하며 필요한 정렬 구현을 위해 각 `DatabaseLogID` 열이 고유한 특성을 가짐을 가정합니다.  
+ 이 예에서는 큐로 사용되는 테이블에서 행을 삭제하고 삭제된 값을 처리하는 애플리케이션에 반환하는 과정을 한 번의 작동으로 수행합니다. 이 밖에도 스택 구현을 위해 테이블을 사용하는 등 다른 응용도 가능합니다. 하지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 DML 문이 OUTPUT 절을 사용해 처리 및 반환하는 행의 순서 유지를 보장하지 않습니다. 원하는 용도에 맞게 적절한 WHERE 절을 포함하거나 DML 작업에 여러 행을 사용하기 위해 적절히 정규화할 책임은 애플리케이션의 몫입니다. 다음 예에서는 하위 쿼리를 사용하며 필요한 정렬 구현을 위해 각 `DatabaseLogID` 열이 고유한 특성을 가짐을 가정합니다.  
   
 ```  
 USE tempdb;  
@@ -304,7 +304,7 @@ DROP TABLE dbo.table1;
 ```  
   
 > [!NOTE]  
->  여러 개의 응용 프로그램에서 한 테이블에 대해 파괴 읽기를 허용하는 경우 UPDATE 및 DELETE 문에서 READPAST 테이블 힌트를 사용하세요. 이렇게 하면 다른 응용 프로그램이 이미 테이블의 첫 번째 정규화 레코드를 읽고 있는 경우 발생할 수 있는 잠금 문제를 방지합니다.  
+>  여러 개의 애플리케이션에서 한 테이블에 대해 파괴 읽기를 허용하는 경우 UPDATE 및 DELETE 문에서 READPAST 테이블 힌트를 사용하세요. 이렇게 하면 다른 애플리케이션이 이미 테이블의 첫 번째 정규화 레코드를 읽고 있는 경우 발생할 수 있는 잠금 문제를 방지합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  SELECT 권한은 \<dml_select_list>를 통해 검색되거나 \<scalar_expression>에서 사용되는 모든 열에 필요합니다.  
@@ -337,7 +337,7 @@ GO
 ```  
   
 ### <a name="b-using-output-with-a-delete-statement"></a>2\. DELETE 문과 함께 OUTPUT 사용  
- 다음 예에서는 `ShoppingCartItem` 테이블의 모든 행을 삭제합니다. `OUTPUT deleted.*` 절은 `DELETE` 문의 결과로 삭제된 행의 모든 열을 호출하는 응용 프로그램에 반환하도록 지정합니다. 이어지는 `SELECT` 문은 `ShoppingCartItem` 테이블의 삭제 작업 결과를 확인합니다.  
+ 다음 예에서는 `ShoppingCartItem` 테이블의 모든 행을 삭제합니다. `OUTPUT deleted.*` 절은 `DELETE` 문의 결과로 삭제된 행의 모든 열을 호출하는 애플리케이션에 반환하도록 지정합니다. 이어지는 `SELECT` 문은 `ShoppingCartItem` 테이블의 삭제 작업 결과를 확인합니다.  
   
 ```  
 USE AdventureWorks2012;  
@@ -421,7 +421,7 @@ GO
   
 ```  
   
-### <a name="e-using-output-into-with-fromtablename-in-an-update-statement"></a>E. UPDATE 문에 from_table_name과 함께 OUTPUT INTO 사용  
+### <a name="e-using-output-into-with-from_table_name-in-an-update-statement"></a>E. UPDATE 문에 from_table_name과 함께 OUTPUT INTO 사용  
  다음 예제에서는 지정된 `ProductID` 및 `ScrapReasonID`가 있는 모든 작업 순서에 대해 `WorkOrder` 테이블의 `ScrapReasonID` 열을 업데이트합니다. `OUTPUT INTO` 절은 업데이트되는 테이블인 `WorkOrder`의 값과 더불어 `Product` 테이블의 값을 반환합니다. 업데이트할 행을 지정하기 위해 `Product` 테이블이 `FROM` 절에 사용됩니다. `WorkOrder` 테이블에는 `AFTER UPDATE` 트리거가 정의되어 있으므로 `INTO` 키워드가 필요합니다.  
   
 ```  
@@ -455,7 +455,7 @@ GO
   
 ```  
   
-### <a name="f-using-output-into-with-fromtablename-in-a-delete-statement"></a>F. DELETE 문에 from_table_name과 함께 OUTPUT INTO 사용  
+### <a name="f-using-output-into-with-from_table_name-in-a-delete-statement"></a>F. DELETE 문에 from_table_name과 함께 OUTPUT INTO 사용  
  다음 예에서는 `ProductProductPhoto` 문의 `FROM` 절에 정의된 검색 조건에 따라 `DELETE` 테이블의 행을 삭제합니다. `OUTPUT` 절은 삭제되는 테이블인 `deleted.ProductID` 및 `deleted.ProductPhotoID`의 열과 더불어 `Product` 테이블의 열을 반환합니다. 이 테이블은 `FROM` 절에서 삭제할 행을 지정하기 위해 사용됩니다.  
   
 ```  
@@ -597,7 +597,7 @@ GO
 ```  
   
 ### <a name="j-using-output-and-output-into-in-a-single-statement"></a>J. 단일 문에서 OUTPUT 및 OUTPUT INTO 사용  
- 다음 예에서는 `ProductProductPhoto` 문의 `FROM` 절에 정의된 검색 조건에 따라 `DELETE` 테이블의 행을 삭제합니다. `OUTPUT INTO` 절은 삭제되는 테이블(`deleted.ProductID` 및 `deleted.ProductPhotoID`)의 열과 `Product` 테이블의 열을 `@MyTableVar``table` 변수에 반환합니다. `Product` 테이블은 `FROM` 절에서 삭제할 행을 지정하기 위해 사용됩니다. `OUTPUT` 절은 `deleted.ProductID` 및 `deleted.ProductPhotoID` 열, 그리고 `ProductProductPhoto` 테이블에서 행을 삭제한 날짜 및 시간을 호출하는 응용 프로그램에 반환합니다.  
+ 다음 예에서는 `ProductProductPhoto` 문의 `FROM` 절에 정의된 검색 조건에 따라 `DELETE` 테이블의 행을 삭제합니다. `OUTPUT INTO` 절은 삭제되는 테이블(`deleted.ProductID` 및 `deleted.ProductPhotoID`)의 열과 `Product` 테이블의 열을 `@MyTableVar``table` 변수에 반환합니다. `Product` 테이블은 `FROM` 절에서 삭제할 행을 지정하기 위해 사용됩니다. `OUTPUT` 절은 `deleted.ProductID` 및 `deleted.ProductPhotoID` 열, 그리고 `ProductProductPhoto` 테이블에서 행을 삭제한 날짜 및 시간을 호출하는 애플리케이션에 반환합니다.  
   
 ```  
 USE AdventureWorks2012;  

@@ -24,7 +24,7 @@ ms.locfileid: "68129099"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  테이블 반환 매개 변수 지원에는 ODBC APD(응용 프로그램 매개 변수 설명자) 및 IPD(구현 매개 변수 설명자)의 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 필드가 포함되어 있습니다.  
+  테이블 반환 매개 변수 지원에는 ODBC APD(애플리케이션 매개 변수 설명자) 및 IPD(구현 매개 변수 설명자)의 새로운 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 필드가 포함되어 있습니다.  
   
 ## <a name="remarks"></a>설명  
   
@@ -34,7 +34,7 @@ ms.locfileid: "68129099"
 |SQL_CA_SS_TYPE_CATALOG_NAME(읽기 전용)|IPD|SQLTCHAR*|유형이 정의된 카탈로그입니다.|  
 |SQL_CA_SS_TYPE_SCHEMA_NAME|IPD|SQLTCHAR*|유형이 정의된 스키마입니다.|  
   
- 응용 프로그램에서 테이블 반환 매개 변수에 대해 SQL_CA_SS_TYPE_CATALOG_NAME을 설정하면 안 됩니다. 이렇게 하면 SQL_ERROR가 반환되며 SQLSTATE = HY091 및 "잘못된 설명자 필드 식별자입니다"라는 메시지가 포함된 진단 레코드가 기록됩니다.  
+ 애플리케이션에서 테이블 반환 매개 변수에 대해 SQL_CA_SS_TYPE_CATALOG_NAME을 설정하면 안 됩니다. 이렇게 하면 SQL_ERROR가 반환되며 SQLSTATE = HY091 및 "잘못된 설명자 필드 식별자입니다"라는 메시지가 포함된 진단 레코드가 기록됩니다.  
   
  매개 변수 포커스가 테이블 반환 매개 변수로 설정된 경우 다음 문 특성과 설명자 헤더 필드가 테이블 반환 매개 변수에 적용됩니다.  
   

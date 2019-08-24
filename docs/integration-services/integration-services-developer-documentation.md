@@ -36,7 +36,7 @@ ms.locfileid: "67913816"
   
 -   패키지에 사용자 지정 기능을 제공하기 위해 [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너 내에서 사용할 수 있게 되는 구성 요소를 작성하여 패키지를 확장할 수 있습니다.  
   
--   개발자 고유의 응용 프로그램에서 프로그래밍 방식으로 패키지를 만들고 구성하고 실행할 수 있습니다.  
+-   개발자 고유의 애플리케이션에서 프로그래밍 방식으로 패키지를 만들고 구성하고 실행할 수 있습니다.  
   
  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 기본 제공 구성 요소가 개발자의 요구 사항을 충족시키지 못할 경우 개발자 고유의 확장을 코딩하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]의 기능을 확장할 수 있습니다. 이 경우 다음 중 하나를 선택할 수 있습니다.  
   

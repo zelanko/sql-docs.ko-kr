@@ -26,9 +26,9 @@ ms.locfileid: "68073471"
 ---
 # <a name="executing-a-diffgram-by-using-ado-sqlxml-40"></a>ADO를 사용하여 DiffGram 실행(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 응용 프로그램은 ADO를 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 설정하고 DiffGram을 실행합니다. 이 응용 프로그램에서 DiffGram 및 XSD 스키마는 파일에 저장됩니다. 응용 프로그램은 지정된 파일에서 DiffGram을 로드합니다. Diffgram은 (및 연결된 된 XSD 스키마) 중 하나를 사용할 수 있습니다에 설명 된 [DiffGram 예](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
+  이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 애플리케이션은 ADO를 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 설정하고 DiffGram을 실행합니다. 이 애플리케이션에서 DiffGram 및 XSD 스키마는 파일에 저장됩니다. 애플리케이션은 지정된 파일에서 DiffGram을 로드합니다. Diffgram은 (및 연결된 된 XSD 스키마) 중 하나를 사용할 수 있습니다에 설명 된 [DiffGram 예](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
   
- 다음은 예제 응용 프로그램의 프로세스입니다.  
+ 다음은 예제 애플리케이션의 프로세스입니다.  
   
 -   **conn** 개체 (**ADODB. 연결**) 특정 서버에서 실행 중인 SQL Server 인스턴스에 대 한 연결을 설정 합니다.  
   
@@ -44,7 +44,7 @@ ms.locfileid: "68073471"
   
 -   명령(DiffGram)이 실행됩니다.  
   
- 예제 응용 프로그램 코드는 다음과 같습니다.  
+ 예제 애플리케이션 코드는 다음과 같습니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  
@@ -98,11 +98,11 @@ End Sub
   
 4.  도구 상자에서을 클릭 **단추**, 폼에서 단추를 그립니다.  
   
-5.  단추를 두 번 클릭하여 코드를 편집하고 이 항목에서 제공된 응용 프로그램 코드를 추가합니다.  
+5.  단추를 두 번 클릭하여 코드를 편집하고 이 항목에서 제공된 애플리케이션 코드를 추가합니다.  
   
 6.  코드에 DiffGram 및 XSD 파일 이름을 지정합니다. 연결 문자열 역시 적절하게 편집합니다.  
   
-7.  응용 프로그램을 실행합니다. 실행 결과는 사용자가 실행하는 DiffGram에 따라 다릅니다.  
+7.  애플리케이션을 실행합니다. 실행 결과는 사용자가 실행하는 DiffGram에 따라 다릅니다.  
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

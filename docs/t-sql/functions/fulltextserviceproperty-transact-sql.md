@@ -46,7 +46,7 @@ FULLTEXTSERVICEPROPERTY ('property')
  전체 텍스트 서비스 수준 속성의 이름이 포함된 식입니다. 다음은 속성과 반환되는 정보에 대한 설명입니다.  
   
 > [!NOTE]
->  이후 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **ConnectTimeout**, **DataTimeout** 및 **ResourceUsage** 속성이 제거됩니다. 향후 개발 작업에서는 이 속성을 사용하지 않도록 하고 현재 이 속성을 사용하는 응용 프로그램은 수정하십시오.  
+>  이후 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 **ConnectTimeout**, **DataTimeout** 및 **ResourceUsage** 속성이 제거됩니다. 향후 개발 작업에서는 이 속성을 사용하지 않도록 하고 현재 이 속성을 사용하는 애플리케이션은 수정하십시오.  
   
 |속성|값|  
 |--------------|-----------|  

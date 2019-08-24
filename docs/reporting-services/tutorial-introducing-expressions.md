@@ -140,7 +140,7 @@ ms.locfileid: "63295891"
   
 2.  **DataSet1**을 마우스 오른쪽 단추로 클릭하고 **데이터 세트 속성**을 클릭합니다.  
 
-    ![보고서-작성기-식-자습서-데이터 집합-이름 바꾸기](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
+    ![보고서-작성기-식-자습서-데이터 세트-이름 바꾸기](../reporting-services/media/report-builder-expression-tutorial-rename-dataset.png)
   
 3.  **이름** 상자에 **Expressions**를 입력합니다.  
   

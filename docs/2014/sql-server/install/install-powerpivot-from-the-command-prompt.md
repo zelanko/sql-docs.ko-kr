@@ -34,7 +34,7 @@ ms.locfileid: "68890176"
   
 -   `SPI_AS_NewFarm`  
   
- 이 두 역할은 모두 SharePoint용 PowerPivot이 SharePoint 팜에서 실행될 수 있도록 하는 응용 프로그램, 구성 및 배포 파일을 설치합니다. 두 역할 중 하나를 지정하면 설치 프로그램이 SharePoint 통합에 필요한 하드웨어 및 소프트웨어 요구 사항을 확인합니다.  
+ 이 두 역할은 모두 SharePoint용 PowerPivot이 SharePoint 팜에서 실행될 수 있도록 하는 애플리케이션, 구성 및 배포 파일을 설치합니다. 두 역할 중 하나를 지정하면 설치 프로그램이 SharePoint 통합에 필요한 하드웨어 및 소프트웨어 요구 사항을 확인합니다.  
   
  기존 팜 옵션은 SharePoint 팜이 이미 설치되어 있다고 가정합니다. 새 팜 옵션은 새 팜을 만든다고 가정 합니다. 이는 데이터베이스 엔진 인스턴스를 팜의 데이터베이스 서버로 사용할 수 있도록 명령줄 구문에 데이터베이스 엔진 인스턴스를 추가할 수 있도록 지원 합니다.  
   
@@ -102,7 +102,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /ROLE=SPI_AS_NewFarm 
   
 10. 설치를 확인하려면 \Program Files\SQL Server\120\Setup Bootstrap\Log의 summary.txt 파일을 확인하십시오. 서버가 오류 없이 설치된 경우 최종 결과는 "통과"여야 합니다.  
   
-11. 서버를 구성합니다. 최소한 솔루션을 배포하고 서비스 응용 프로그램을 만들고 각 사이트 모음에 대해 기능을 사용하도록 설정해야 합니다. 자세한 내용은 [구성 또는 복구 SharePoint용 PowerPivot 2010 &#40;powerpivot 구성 도구&#41; ](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) 또는 [중앙 관리에서 powerpivot 서버 관리 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)을 참조 하세요.  
+11. 서버를 구성합니다. 최소한 솔루션을 배포하고 서비스 애플리케이션을 만들고 각 사이트 모음에 대해 기능을 사용하도록 설정해야 합니다. 자세한 내용은 [구성 또는 복구 SharePoint용 PowerPivot 2010 &#40;powerpivot 구성 도구&#41; ](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md) 또는 [중앙 관리에서 powerpivot 서버 관리 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)을 참조 하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [PowerPivot 서비스 계정 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts)   

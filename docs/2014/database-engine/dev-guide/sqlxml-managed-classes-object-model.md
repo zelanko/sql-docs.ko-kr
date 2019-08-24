@@ -32,6 +32,6 @@ ms.locfileid: "62781810"
  매개 변수의 이름 및 값을 나타냅니다.  
   
  [SqlXmlAdapter 개체 &#40;SQLXML 관리 되는 클래스&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/sqlxml-managed-classes-sqlxmladapter-object.md)  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework에서 데이터 집합과 상호 작용하기 위한 메서드를 제공합니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework에서 데이터 세트과 상호 작용하기 위한 메서드를 제공합니다.  
   
   

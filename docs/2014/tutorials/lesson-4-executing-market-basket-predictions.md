@@ -28,7 +28,7 @@ ms.locfileid: "63312105"
   
 -   마이닝 모델 열과 원본 데이터 간의 매핑. 열 이름이 일치하는 경우 `NATURAL PREDICTION JOIN` 구문을 사용할 수 있으며 열 매핑을 생략할 수 있습니다.  
   
- 예측 함수를 사용하여 쿼리를 개선할 수 있습니다. 예측 함수는 예측 사항의 발생 확률과 같은 추가 정보를 제공하거나 학습 데이터 집합의 예측에 대한 지원을 제공합니다. 예측 함수에 대 한 자세한 내용은 참조 하세요. [함수 &#40;DMX&#41;](/sql/dmx/functions-dmx)합니다.  
+ 예측 함수를 사용하여 쿼리를 개선할 수 있습니다. 예측 함수는 예측 사항의 발생 확률과 같은 추가 정보를 제공하거나 학습 데이터 세트의 예측에 대한 지원을 제공합니다. 예측 함수에 대 한 자세한 내용은 참조 하세요. [함수 &#40;DMX&#41;](/sql/dmx/functions-dmx)합니다.  
   
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 예측 쿼리 작성기를 사용하여 예측 쿼리를 만들 수도 있습니다.  
   
@@ -74,7 +74,7 @@ SELECT <select list> FROM [<mining model>]
   
 -   시장 바구니에 이미 있는 항목을 기반으로 고객이 구매할 가능성이 높은 다른 항목을 예측하는 쿼리를 만듭니다. 이 쿼리는 다른 모델에 더해서 *MINIMUM_PROBABILITY* 0.01로 설정 되었습니다. 기본값이 있으므로 *MINIMUM_PROBABILITY* 연결 모델의 0.3,이 모델의 쿼리를 기본 모델에서 쿼리보다 더 가능한 항목을 반환 해야 합니다.  
   
-## <a name="create-a-prediction-by-using-a-model-with-the-default-minimumprobability"></a>MINIMUM_PROBABILITY가 기본값인 모델을 사용하여 예측 만들기  
+## <a name="create-a-prediction-by-using-a-model-with-the-default-minimum_probability"></a>MINIMUM_PROBABILITY가 기본값인 모델을 사용하여 예측 만들기  
   
 #### <a name="to-create-an-association-query"></a>연결 쿼리를 만들려면  
   
@@ -148,7 +148,7 @@ SELECT <select list> FROM [<mining model>]
   
      쿼리는 제품이 포함 된 테이블을 반환 합니다. HL Mountain Tire, Fender Set-Mountain 및 ML Mountain Tire 합니다. 테이블에는 반환된 이러한 제품이 확률 순서대로 나열됩니다. 반환된 제품 중 쿼리에 지정된 세 개의 제품과 동일한 시장 바구니에 포함될 가능성이 가장 높은 제품이 테이블 맨 위에 표시됩니다. 그 다음에 오는 두 개의 제품은 시장 바구니에 포함될 가능성이 다음으로 높은 제품입니다. 이 테이블은 예측의 정확도를 설명하는 통계도 포함합니다.  
   
-## <a name="create-a-prediction-by-using-a-model-with-a-minimumprobability-of-001"></a>MINIMUM_PROBABILITY가 0.01인 모델을 사용하여 예측 만들기  
+## <a name="create-a-prediction-by-using-a-model-with-a-minimum_probability-of-001"></a>MINIMUM_PROBABILITY가 0.01인 모델을 사용하여 예측 만들기  
   
 #### <a name="to-create-an-association-query"></a>연결 쿼리를 만들려면  
   

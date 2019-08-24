@@ -26,7 +26,7 @@ ms.locfileid: "66108586"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 는 응용 프로그램 및 보고서에 액세스하고 웹 프런트 엔드 구성 요소를 백 엔드 보고서 서버에 연결하는 데 사용되는 URL을 저장합니다.  
   
 #### <a name="urls-for-application-access"></a>애플리케이션 액세스용 URL  
- URL은 보고서 서버 웹 서비스 및 보고서 관리자에 액세스하는 데 사용됩니다. URL을 구성하려면 Reporting Services 구성 도구를 사용해야 합니다. 이 도구를 통해 HTTP.SYS에 각 응용 프로그램에 대한 URL 예약을 만들고 RSReportServer.config의 `URLReservations` 섹션에 URL에 대한 항목을 추가합니다.  
+ URL은 보고서 서버 웹 서비스 및 보고서 관리자에 액세스하는 데 사용됩니다. URL을 구성하려면 Reporting Services 구성 도구를 사용해야 합니다. 이 도구를 통해 HTTP.SYS에 각 애플리케이션에 대한 URL 예약을 만들고 RSReportServer.config의 `URLReservations` 섹션에 URL에 대한 항목을 추가합니다.  
   
 -   각 요소에 대 한 설명은 합니다 `URLReservations` 섹션을 참조 하십시오 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md) 에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Onl 온라인 설명서.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66108586"
 #### <a name="urls-for-report-access"></a>보고서 액세스용 URL  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 에는 보고서 링크나 첨부 파일을 보낼 때 사용할 수 있는 보고서 서버 전자 메일 배달 확장 프로그램이 포함되어 있습니다. 보고서 링크는 보고서가 배달될 때 생성됩니다. 보고서 서버 전자 메일 배달 확장 프로그램은 구성 파일의 `UrlRoot` 설정을 사용하여 링크를 만듭니다. `UrlRoot`는 무인 보고서 처리를 통해 생성된 렌더링된 보고서의 링크를 확인하는 데에도 사용됩니다.  
   
- `UrlRoot`는 응용 프로그램 액세스를 위한 URL을 구성하면 RSReportServer.config 파일에 자동으로 지정됩니다. 구성 파일에서 이 값을 수정하려면 배달하려는 보고서가 하위 보고서 서버 데이터베이스에 연결된 보고서 서버 웹 서비스에 대한 올바른 URL 주소를 지정해야 합니다. 보고서 서버 인스턴스당 하나의 `UrlRoot`만 지정할 수 있습니다. 따라서 지정된 보고서 서버 인스턴스의 RSReportServer.config 파일에는 하나의 `UrlRoot` 항목만 존재할 수 있습니다. 보고서 서버 웹 서비스에 여러 개의 URL이 예약된 경우 `UrlRoot`에 사용할 하나를 선택해야 합니다.  
+ `UrlRoot`는 애플리케이션 액세스를 위한 URL을 구성하면 RSReportServer.config 파일에 자동으로 지정됩니다. 구성 파일에서 이 값을 수정하려면 배달하려는 보고서가 하위 보고서 서버 데이터베이스에 연결된 보고서 서버 웹 서비스에 대한 올바른 URL 주소를 지정해야 합니다. 보고서 서버 인스턴스당 하나의 `UrlRoot`만 지정할 수 있습니다. 따라서 지정된 보고서 서버 인스턴스의 RSReportServer.config 파일에는 하나의 `UrlRoot` 항목만 존재할 수 있습니다. 보고서 서버 웹 서비스에 여러 개의 URL이 예약된 경우 `UrlRoot`에 사용할 하나를 선택해야 합니다.  
   
  대부분의 경우 `UrlRoot`를 수정할 필요는 없습니다. 그러나 보고서 서버에 정규화 된 URL을 통해 액세스할 수는 정규화 된 사이트 이름으로 호스트 헤더를 사용 하는 URL을 구성 하지 않은 경우 RSReportServer.config를 수동으로 편집 해야 합니다는 `UrlRoot` 정규화 하려면 보고서를 렌더링 하는 데 사용할 된 보고서 서버 URL (예를 들어 https://www.adventure-works.com/mywebapp/reportserver) 합니다.  
   

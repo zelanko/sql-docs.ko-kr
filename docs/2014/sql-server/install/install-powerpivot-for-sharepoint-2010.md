@@ -44,7 +44,7 @@ ms.locfileid: "68890763"
   
 7.  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 인스턴스는 SQL Server 장애 조치(Failover) 클러스터의 일부가 될 수 없습니다. SharePoint 제품의 고가용성 기능 사용 예를 들어, Excel Services는 SharePoint용 PowerPivot 서버의 부하 분산을 관리합니다. 자세한 내용은 [Excel Services 데이터 모델 설정 관리 (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) (https://technet.microsoft.com/library/jj219780.aspx) )를 참조 하세요.  
   
-8.  기존 팜에 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 설치하는 경우 클래식 모드 인증을 사용하도록 구성된 SharePoint 웹 응용 프로그램이 하나 이상 필요합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스는 웹 응용 프로그램에서 클래식 모드 인증이 지원되는 경우에만 작동합니다. 클래식 모드 요구 사항에 대한 자세한 내용은 [PowerPivot Authentication and Authorization](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization)를 참조하십시오.  
+8.  기존 팜에 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]을 설치하는 경우 클래식 모드 인증을 사용하도록 구성된 SharePoint 웹 응용 프로그램이 하나 이상 필요합니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스는 웹 애플리케이션에서 클래식 모드 인증이 지원되는 경우에만 작동합니다. 클래식 모드 요구 사항에 대한 자세한 내용은 [PowerPivot Authentication and Authorization](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-authentication-and-authorization)를 참조하십시오.  
   
 9. 시스템 및 버전 요구 사항을 이해하려면 다음 항목을 검토하십시오.  
   

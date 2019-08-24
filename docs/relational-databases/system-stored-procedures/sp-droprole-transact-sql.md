@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67933814"
 ---
-# <a name="spdroprole-transact-sql"></a>sp_droprole(Transact-SQL)
+# <a name="sp_droprole-transact-sql"></a>sp_droprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스에서 데이터베이스 역할을 제거합니다.  
@@ -54,7 +54,7 @@ sp_droprole [ @rolename= ] 'role'
   
  고정 역할 및 **공용** 역할을 제거할 수 없습니다.  
   
- 역할이 보안 개체를 소유하고 있는 경우에는 해당 역할을 제거할 수 없습니다. 보안 개체를 소유한 응용 프로그램 역할을 삭제하려면 먼저 보안 개체의 소유권을 이전하거나 보안 개체를 삭제해야 합니다. 제거하지 않아야 하는 개체의 소유자를 변경하려면 ALTER AUTHORIZATION을 사용하십시오.  
+ 역할이 보안 개체를 소유하고 있는 경우에는 해당 역할을 제거할 수 없습니다. 보안 개체를 소유한 애플리케이션 역할을 삭제하려면 먼저 보안 개체의 소유권을 이전하거나 보안 개체를 삭제해야 합니다. 제거하지 않아야 하는 개체의 소유자를 변경하려면 ALTER AUTHORIZATION을 사용하십시오.  
   
  **sp_droprole** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
@@ -62,7 +62,7 @@ sp_droprole [ @rolename= ] 'role'
  역할에 대한 CONTROL 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `Sales` 응용 프로그램 역할을 제거합니다.  
+ 다음 예에서는 `Sales` 애플리케이션 역할을 제거합니다.  
   
 ```  
 EXEC sp_droprole 'Sales';  

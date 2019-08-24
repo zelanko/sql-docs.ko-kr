@@ -42,7 +42,7 @@ ms.locfileid: "66109548"
   
 -   `OverrideNames` 요소는 렌더링 확장 프로그램의 표시 이름과 언어를 정의합니다.  
   
--   `DeviceInfo` XML 구조는 렌더링 확장 프로그램에서 사용하는 장치 정보 설정을 정의합니다. 대부분의 렌더링 확장 프로그램 매개 변수는 디바이스 정보 설정으로 지정됩니다.  
+-   `DeviceInfo` XML 구조는 렌더링 확장 프로그램에서 사용하는 디바이스 정보 설정을 정의합니다. 대부분의 렌더링 확장 프로그램 매개 변수는 디바이스 정보 설정으로 지정됩니다.  
   
  이 파일은 텍스트 편집기를 사용하여 수정할 수 있습니다. RSReportServer.config 파일은 \Reporting Services\Report Server\Bin 폴더에 있습니다. 구성 파일을 수정하는 방법에 대한 자세한 내용은 [Reporting Services 구성 파일 수정&#40;RSreportserver.config&#41;](report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)을 참조하세요.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66109548"
 ```  
   
 ## <a name="changing-device-information-settings"></a>디바이스 정보 설정 변경  
- 보고서 서버에 이미 배포된 렌더링 확장 프로그램에서 사용하는 기본 장치 정보 설정을 수정하려면 `DeviceInfo` XML 구조를 구성 파일에 입력해야 합니다. 각 렌더링 확장 프로그램은 해당 확장 프로그램에 고유한 디바이스 정보 설정을 지원합니다. 디바이스 정보 설정의 전체 목록을 보려면 [디바이스 정보 설정을 렌더링 확장 프로그램에 전달](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
+ 보고서 서버에 이미 배포된 렌더링 확장 프로그램에서 사용하는 기본 디바이스 정보 설정을 수정하려면 `DeviceInfo` XML 구조를 구성 파일에 입력해야 합니다. 각 렌더링 확장 프로그램은 해당 확장 프로그램에 고유한 디바이스 정보 설정을 지원합니다. 디바이스 정보 설정의 전체 목록을 보려면 [디바이스 정보 설정을 렌더링 확장 프로그램에 전달](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)을 참조하세요.  
   
  다음 예에서는 이미지 렌더링 확장 프로그램의 기본 설정을 수정하는 XML 구조와 구문을 보여 줍니다.  
   

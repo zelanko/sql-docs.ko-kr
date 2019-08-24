@@ -51,7 +51,7 @@ ms.locfileid: "62711448"
 |외래 키당 바이트 수|900|900|  
 |기본 키당 바이트 수|900|900|  
 |행당 바이트 수<br /><br /> 참고:<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 는 가변 길이 열을 행 외부로 밀어넣을 수 있는 행 오버플로 저장소를 지원합니다. 행 외부로 밀어넣은 가변 길이 열의 주 레코드에는 24바이트의 루트만 저장됩니다. 이 때문에 유효 행 제한은 이전 버전의 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]보다 높습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서의 "8KB를 초과하는 행 오버플로 데이터" 항목을 참조하십시오.|8,060|8,060|  
-|메모리 최적화 테이블의 행당 바이트 수<br /><br /> 참고:<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 내 OLTP는 행-오버플로 저장소를 지원하지 않습니다. 가변 길이 열은 행에 밀어넣어지지 않습니다 이 때문에 메모리 최적화 테이블에서 지정할 수 있는 가변 길이 열의 최대 너비가 최대 행 크기로 제한됩니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)를 참조하세요.|지원되지 않음|8,060|  
+|메모리 최적화 테이블의 행당 바이트 수<br /><br /> 참고:<br />        [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 메모리 내 OLTP는 행-오버플로 스토리지를 지원하지 않습니다. 가변 길이 열은 행에 밀어넣어지지 않습니다 이 때문에 메모리 최적화 테이블에서 지정할 수 있는 가변 길이 열의 최대 너비가 최대 행 크기로 제한됩니다. 자세한 내용은 [메모리 액세스에 최적화된 테이블의 테이블 및 행 크기](../relational-databases/in-memory-oltp/table-and-row-size-in-memory-optimized-tables.md)를 참조하세요.|지원되지 않음|8,060|  
 |저장 프로시저의 원본 텍스트의 바이트 수|일괄 처리 크기 또는 250MB 미만|일괄 처리 크기 또는 250MB 미만|  
 |`varchar(max)`, `varbinary(max)`, `xml`, `text` 또는 `image` 열당 바이트 수|2^31-1|2^31-1|  
 |`ntext` 또는 `nvarchar(max)` 열당 문자 수|2^30-1|2^30-1|  
@@ -119,7 +119,7 @@ ms.locfileid: "62711448"
  \* 관리 되는 인스턴스의 최대 수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 지 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티는 서버의 하드웨어 구성에 따라 달라질 수 있습니다. 시작 정보는 [SQL Server 유틸리티 기능 및 태스크](../relational-databases/manage/sql-server-utility-features-and-tasks.md)를 참조하세요. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 유틸리티 제어 지점은 일부 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 버전에서는 사용할 수 없습니다. 버전에서 지원 되는 기능 목록은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]를 참조 하세요 [SQL Server 2014 버전에서 지 원하는 기능](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)합니다.  
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 계층 응용 프로그램 개체  
- 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC(데이터 계층 응용 프로그램)에서 테스트된 다양한 개체의 최대 크기 및 개수를 보여 줍니다.  
+ 다음 표에서는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC(데이터 계층 애플리케이션)에서 테스트된 다양한 개체의 최대 크기 및 개수를 보여 줍니다.  
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC 개체|최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32 비트)|최대 크기/개수 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64비트)|  
 |------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  

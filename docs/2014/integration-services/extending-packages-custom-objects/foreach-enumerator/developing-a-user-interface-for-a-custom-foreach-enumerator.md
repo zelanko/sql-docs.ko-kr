@@ -34,7 +34,7 @@ ms.locfileid: "62896073"
  <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI.Initialize%2A> 메서드를 재정의하여 호스트 개체에 대한 참조와 패키지에 정의된 연결 관리자 및 변수의 컬렉션에 대한 참조를 캐시할 수 있습니다.  
   
 ### <a name="setting-properties-on-the-user-interface-control"></a>사용자 인터페이스 컨트롤의 속성 설정  
- 사용자 인터페이스 클래스를 파생시키는 기본 UserControl 클래스는 다른 Windows Forms 컨트롤을 호스팅하는 합성 컨트롤로 사용됩니다. 이 클래스는 다른 컨트롤을 호스팅하므로 Windows Forms 응용 프로그램에서와 같이 컨트롤을 끌어 놓은 다음 정렬하고 해당 속성을 설정하고 런타임에 해당 이벤트에 응답하여 사용자 지정 인터페이스를 디자인할 수 있습니다.  
+ 사용자 인터페이스 클래스를 파생시키는 기본 UserControl 클래스는 다른 Windows Forms 컨트롤을 호스팅하는 합성 컨트롤로 사용됩니다. 이 클래스는 다른 컨트롤을 호스팅하므로 Windows Forms 애플리케이션에서와 같이 컨트롤을 끌어 놓은 다음 정렬하고 해당 속성을 설정하고 런타임에 해당 이벤트에 응답하여 사용자 지정 인터페이스를 디자인할 수 있습니다.  
   
 ### <a name="saving-settings"></a>설정 저장  
  <xref:Microsoft.SqlServer.Dts.Runtime.ForEachEnumeratorUI.SaveSettings%2A> 메서드를 재정의하여 사용자가 편집기를 닫을 때 컨트롤에서 선택한 값을 열거자의 속성에 복사할 수 있습니다.  

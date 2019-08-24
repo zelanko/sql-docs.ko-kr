@@ -27,10 +27,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68083750"
 ---
-# <a name="sysspcdcgeneratewrapperfunction-transact-sql"></a>sys.sp_cdc_generate_wrapper_function(Transact-SQL)
+# <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있는 변경 데이터 캡처 쿼리 함수에 대한 래퍼 함수를 만드는 스크립트를 생성합니다. 생성된 래퍼에서 지원되는 API를 사용하면 쿼리 간격을 날짜/시간 간격으로 지정할 수 있습니다. 이렇게 하면 변경 데이터 캡처 기술을 사용하여 증분 로드를 결정하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 디자이너가 개발하는 웨어하우징 응용 프로그램을 비롯한 많은 웨어하우징 응용 프로그램에서 함수 사용이 용이해집니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용할 수 있는 변경 데이터 캡처 쿼리 함수에 대한 래퍼 함수를 만드는 스크립트를 생성합니다. 생성된 래퍼에서 지원되는 API를 사용하면 쿼리 간격을 날짜/시간 간격으로 지정할 수 있습니다. 이렇게 하면 변경 데이터 캡처 기술을 사용하여 증분 로드를 결정하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 디자이너가 개발하는 웨어하우징 애플리케이션을 비롯한 많은 웨어하우징 애플리케이션에서 함수 사용이 용이해집니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

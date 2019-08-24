@@ -42,12 +42,12 @@ ms.locfileid: "63131786"
 |ScriptTable|테이블 삭제 또는 만들기를 스크립팅하는 방법을 설명합니다.|  
 |ServerConnect|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템에 연결하는 방법을 설명합니다.|  
 |ServerInfo|선택한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 서버 및 연결 속성 목록을 표시합니다.|  
-|SMOPing|선택한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하여 선택한 속성을 덤프하는 콘솔 응용 프로그램입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 확인하는 데 사용할 수 있습니다.|  
+|SMOPing|선택한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하여 선택한 속성을 덤프하는 콘솔 애플리케이션입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 연결을 확인하는 데 사용할 수 있습니다.|  
 |SQLServerList|사용 가능한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 목록을 열거합니다.|  
 |SQLService|시작, 중지, 일시 중지 및 재개하는 데 사용할 수 있는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스를 표시합니다.|  
 |Tracer|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 추적 정보를 읽고 표시합니다.|  
 |트리거|데이터베이스 트리거를 표시합니다.|  
 |UtilityConversion|사용한 `LoadRegAssembly`합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 데모용 CLR(공용 언어 런타임) 함수를 포함합니다.|  
-|VerifyBackup|데이터베이스를 복원하는 데 데이터를 사용할 수 있도록 백업 장치에서 백업을 확인합니다.|  
+|VerifyBackup|데이터베이스를 복원하는 데 데이터를 사용할 수 있도록 백업 디바이스에서 백업을 확인합니다.|  
   
   

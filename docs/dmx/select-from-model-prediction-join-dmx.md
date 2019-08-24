@@ -105,7 +105,7 @@ NATURAL PREDICTION JOIN
 ```  
   
 ## <a name="example-2-using-openquery"></a>예제 2: OPENQUERY 사용  
- 다음 예에서는 외부 데이터 집합에 저장된 잠재 고객 목록을 사용하여 일괄 처리 예측 쿼리를 만드는 방법을 보여 줍니다. 테이블의 인스턴스에서 정의 된 데이터 원본 뷰의 일부 이므로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 쿼리에 사용할 수 있습니다 [OPENQUERY](../dmx/source-data-query-openquery.md) 데이터를 검색 합니다. 마이닝 모델에서 테이블의 열 이름을 다르기 때문에 합니다 **ON** 모델의 열을 테이블의 열을 매핑할 절을 사용 해야 합니다.  
+ 다음 예에서는 외부 데이터 세트에 저장된 잠재 고객 목록을 사용하여 일괄 처리 예측 쿼리를 만드는 방법을 보여 줍니다. 테이블의 인스턴스에서 정의 된 데이터 원본 뷰의 일부 이므로 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]를 쿼리에 사용할 수 있습니다 [OPENQUERY](../dmx/source-data-query-openquery.md) 데이터를 검색 합니다. 마이닝 모델에서 테이블의 열 이름을 다르기 때문에 합니다 **ON** 모델의 열을 테이블의 열을 매핑할 절을 사용 해야 합니다.  
   
  쿼리는 테이블에 있는 각 개인의 성과 이름 및 각 개인이 자전거를 구입할 가능성이 있는지 여부를 나타내는 부울 열을 반환합니다. 부울 열에서 0은 "자전거를 구입할 가능성이 낮음"을, 1은 "자전거를 구입할 가능성이 높음"을 나타냅니다. 마지막 열에는 예측된 결과에 대한 확률이 들어 있습니다.  
   

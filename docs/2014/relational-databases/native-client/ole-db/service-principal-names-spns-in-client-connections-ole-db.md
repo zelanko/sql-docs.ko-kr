@@ -18,10 +18,10 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62626856"
 ---
 # <a name="service-principal-names-spns-in-client-connections-ole-db"></a>클라이언트 연결의 SPN(서비스 사용자 이름)(OLE DB)
-  이 항목에서는 클라이언트 응용 프로그램의 SPN(서비스 사용자 이름)을 지원하는 OLE DB 속성 및 멤버 함수에 대해 설명합니다. 클라이언트 애플리케이션에서 SPN에 대한 자세한 내용은 [클라이언트 연결에서 &#40;SPN&#41;(서비스 사용자 이름) 지원](../features/service-principal-name-spn-support-in-client-connections.md)을 참조하세요. 샘플을 보려면 [통합 Kerberos 인증 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)합니다.  
+  이 항목에서는 클라이언트 애플리케이션의 SPN(서비스 사용자 이름)을 지원하는 OLE DB 속성 및 멤버 함수에 대해 설명합니다. 클라이언트 애플리케이션에서 SPN에 대한 자세한 내용은 [클라이언트 연결에서 &#40;SPN&#41;(서비스 사용자 이름) 지원](../features/service-principal-name-spn-support-in-client-connections.md)을 참조하세요. 샘플을 보려면 [통합 Kerberos 인증 &#40;OLE DB&#41;](../../native-client-ole-db-how-to/integrated-kerberos-authentication-ole-db.md)합니다.  
   
 ## <a name="provider-initialization-string-keywords"></a>공급자 초기화 문자열 키워드  
- 다음과 같은 공급자 초기화 문자열 키워드가 OLE DB 응용 프로그램에서 SPN을 지원합니다. 다음 표에서 키워드 열의 값은 IDBInitialize::Initialize의 공급자 문자열에 사용됩니다. 설명 열의 값은 ADO 또는 IDataInitialize::GetDataSource를 사용하여 연결할 때 초기화 문자열에 사용됩니다.  
+ 다음과 같은 공급자 초기화 문자열 키워드가 OLE DB 애플리케이션에서 SPN을 지원합니다. 다음 표에서 키워드 열의 값은 IDBInitialize::Initialize의 공급자 문자열에 사용됩니다. 설명 열의 값은 ADO 또는 IDataInitialize::GetDataSource를 사용하여 연결할 때 초기화 문자열에 사용됩니다.  
   
 |키워드|Description|값|  
 |-------------|-----------------|-----------|  
@@ -29,7 +29,7 @@ ms.locfileid: "62626856"
 |FailoverPartnerSPN|장애 조치(Failover) 파트너 SPN|장애 조치(failover) 파트너의 SPN입니다. 기본값인 빈 문자열을 지정하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 공급자가 생성한 기본 SPN을 사용합니다.|  
   
 ## <a name="data-source-initialization-properties"></a>데이터 원본 초기화 속성  
- `DBPROPSET_SQLSERVERDBINIT` 속성 집합의 다음 속성을 사용하여 응용 프로그램에서 SPN을 지정할 수 있습니다.  
+ `DBPROPSET_SQLSERVERDBINIT` 속성 집합의 다음 속성을 사용하여 애플리케이션에서 SPN을 지정할 수 있습니다.  
   
 |이름|형식|사용법|  
 |----------|----------|-----------|  
@@ -37,7 +37,7 @@ ms.locfileid: "62626856"
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR, 읽기/쓰기|장애 조치(Failover) 파트너의 SPN을 지정합니다. 기본값인 빈 문자열을 지정하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 공급자가 생성한 기본 SPN을 사용합니다.|  
   
 ## <a name="data-source-properties"></a>데이터 원본 속성  
- `DBPROPSET_SQLSERVERDATASOURCEINFO` 속성 집합의 다음 속성을 사용하여 응용 프로그램에서 인증 방법을 검색할 수 있습니다.  
+ `DBPROPSET_SQLSERVERDATASOURCEINFO` 속성 집합의 다음 속성을 사용하여 애플리케이션에서 인증 방법을 검색할 수 있습니다.  
   
 |이름|형식|사용법|  
 |----------|----------|-----------|  

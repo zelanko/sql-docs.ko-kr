@@ -295,7 +295,7 @@
 - name: 개발자 가이드(Reporting Services)
   href: reporting-services-developer-documentation.md
   items:
-    - name: 응용 프로그램에 Reporting Services 통합 +
+    - name: 애플리케이션에 Reporting Services 통합 +
       href: application-integration/integrating-reporting-services-into-applications.md
     - name: 보고서 서버 웹 서비스 +
       href: report-server-web-service/report-server-web-service.md

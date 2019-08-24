@@ -23,7 +23,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68070210"
 ---
-# <a name="alter-table-tableconstraint-transact-sql"></a>ALTER TABLE table_constraint(Transact-SQL)
+# <a name="alter-table-table_constraint-transact-sql"></a>ALTER TABLE table_constraint(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 테이블에 추가한 PRIMARY KEY, UNIQUE, FOREIGN KEY, CHECK 제약 조건이나 DEFAULT 정의의 속성을 지정합니다.  
@@ -94,7 +94,7 @@ ms.locfileid: "68070210"
  ON { _partition\_scheme\_name_ **(** _partition\_column\_name_ **)**  | _filegroup_|  **"** default **"** }  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 제약 조건에 대해 만들어진 인덱스의 저장 위치를 지정합니다. *partition_scheme_name*을 지정하면 인덱스가 분할되고 파티션이 *partition_scheme_name*으로 지정된 파일 그룹에 매핑됩니다. *filegroup*을 지정하면 명명된 파일 그룹에 인덱스가 생성됩니다. **"** default **"** 를 지정하거나, ON을 지정하지 않으면 테이블이 있는 동일한 파일 그룹에 인덱스가 생성됩니다. PRIMARY KEY 또는 UNIQUE 제약 조건에 대해 클러스터형 인덱스를 추가할 때 ON을 지정하면 클러스터형 인덱스가 생성될 때 전체 테이블이 지정한 파일 그룹으로 이동됩니다.  
+ 제약 조건에 대해 만들어진 인덱스의 스토리지 위치를 지정합니다. *partition_scheme_name*을 지정하면 인덱스가 분할되고 파티션이 *partition_scheme_name*으로 지정된 파일 그룹에 매핑됩니다. *filegroup*을 지정하면 명명된 파일 그룹에 인덱스가 생성됩니다. **"** default **"** 를 지정하거나, ON을 지정하지 않으면 테이블이 있는 동일한 파일 그룹에 인덱스가 생성됩니다. PRIMARY KEY 또는 UNIQUE 제약 조건에 대해 클러스터형 인덱스를 추가할 때 ON을 지정하면 클러스터형 인덱스가 생성될 때 전체 테이블이 지정한 파일 그룹으로 이동됩니다.  
   
  이 컨텍스트에서 기본값은 키워드가 아니라 기본 파일 그룹에 대한 식별자이며 ON **"** default **"** 또는 ON **[** default **]** 와 같이 구분해야 합니다. **"** default **"** 를 지정하면 현재 세션의 QUOTED_IDENTIFIER 옵션이 ON이어야 합니다. 이 값은 기본 설정입니다.  
   

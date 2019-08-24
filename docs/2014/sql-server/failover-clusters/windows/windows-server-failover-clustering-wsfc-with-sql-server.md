@@ -109,7 +109,7 @@ ms.locfileid: "63246026"
  항상 단일 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스만 가용성 그룹 데이터베이스의 주 복제본을 호스팅할 수 있고 모든 연결된 보조 복제본은 각각 별도의 인스턴스에 위치해야 하며 각 인스턴스는 별도의 실제 노드에 있어야 합니다.  
   
 > [!NOTE]  
->  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 장애 조치(Failover) 클러스터 인스턴스를 배포하거나 대칭 공유 저장소(SAN 또는 SMB)를 사용할 필요가 없습니다.  
+>  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]은 장애 조치(Failover) 클러스터 인스턴스를 배포하거나 대칭 공유 스토리지(SAN 또는 SMB)를 사용할 필요가 없습니다.  
 >   
 >  FCI(장애 조치(Failover) 클러스터 인스턴스)를 가용성 그룹과 함께 사용하여 가용성 복제본의 가용성을 높일 수 있습니다. 그러나 WSFC 클러스터에서 잠재적 경합 상태를 방지하기 위해 FCI에 호스팅된 가용성 복제본을 원본 또는 대상으로 하는 가용성 그룹 자동 장애 조치(Failover)는 지원되지 않습니다.  
   

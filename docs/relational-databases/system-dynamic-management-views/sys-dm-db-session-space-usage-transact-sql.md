@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68263968"
 ---
-# <a name="sysdmdbsessionspaceusage-transact-sql"></a>sys.dm_db_session_space_usage(Transact-SQL)
+# <a name="sysdm_db_session_space_usage-transact-sql"></a>sys.dm_db_session_space_usage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   데이터베이스의 각 세션에 의해 할당되고 할당 취소된 페이지 수를 반환합니다.  
@@ -81,7 +81,7 @@ ms.locfileid: "68263968"
 ## <a name="internal-objects"></a>내부 개체  
  내부 개체는만 **tempdb**합니다. 내부 개체 페이지 카운터에 포함되는 개체는 다음과 같습니다.  
   
--   커서 또는 스풀 작업에 대한 작업 테이블 및 임시 LOB(Large Object) 저장소  
+-   커서 또는 스풀 작업에 대한 작업 테이블 및 임시 LOB(Large Object) 스토리지  
   
 -   해시 조인과 같은 작업에 대한 작업 파일  
   

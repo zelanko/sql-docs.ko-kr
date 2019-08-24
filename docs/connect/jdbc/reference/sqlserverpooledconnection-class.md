@@ -36,7 +36,7 @@ public final class SQLServerPoolingDataSource
 ```  
   
 ## <a name="remarks"></a>Remarks  
- SQLServerPooledConnection 클래스는 연결 풀 관리자가 연결 풀을 관리 하는 데 사용할 수 있는 메서드를 제공 합니다. 응용 프로그램에서는 일반적으로 이러한 연결을 직접 인스턴스화하지 않습니다.  
+ SQLServerPooledConnection 클래스는 연결 풀 관리자가 연결 풀을 관리 하는 데 사용할 수 있는 메서드를 제공 합니다. 애플리케이션에서는 일반적으로 이러한 연결을 직접 인스턴스화하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerPooledConnection 멤버](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   

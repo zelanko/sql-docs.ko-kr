@@ -27,10 +27,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68077768"
 ---
-# <a name="hostid-transact-sql"></a>HOST_ID(Transact-SQL)
+# <a name="host_id-transact-sql"></a>HOST_ID(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  워크스테이션 ID 번호를 반환합니다. 워크스테이션 ID 번호는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결된 클라이언트 컴퓨터에 있는 응용 프로그램의 PID(프로세스 ID)입니다.  
+  워크스테이션 ID 번호를 반환합니다. 워크스테이션 ID 번호는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결된 클라이언트 컴퓨터에 있는 애플리케이션의 PID(프로세스 ID)입니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

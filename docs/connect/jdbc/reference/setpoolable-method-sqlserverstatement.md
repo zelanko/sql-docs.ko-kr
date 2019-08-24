@@ -40,7 +40,7 @@ public void setPoolable(boolean poolable) throws SQLException
 ## <a name="remarks"></a>Remarks  
  *poolable* 매개 변수에 지정된 값은 문 풀 구현 시 애플리케이션에서 문을 풀링하기를 원하는지 여부를 나타내는 힌트로 사용됩니다. 이 힌트를 사용할지 여부는 문 풀 관리자가 결정합니다.  
   
- 문의 풀 값은 드라이버에 의해 구현된 내부 문 캐시와 응용 프로그램 서버 및 다른 응용 프로그램에 의해 구현된 외부 문 캐시 모두에 적용됩니다.  
+ 문의 풀 값은 드라이버에 의해 구현된 내부 문 캐시와 애플리케이션 서버 및 다른 애플리케이션에 의해 구현된 외부 문 캐시 모두에 적용됩니다.  
   
  기본적으로 SQLServerStatement 개체는 생성 시 poolable 되지 않습니다. SQLServerPreparedStatement 및 SQLServerCallableStatement 개체는 생성 될 때 poolable 됩니다.  
   

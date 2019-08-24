@@ -55,8 +55,8 @@ ms.locfileid: "63225637"
 |OLE DB 응용 프로그램이 주 서버 또는 장애 조치 파트너 서버에 대한 데이터 원본 초기화 속성으로 SPN을 지정합니다.|`SSPROP_INIT_SERVER_SPN` 속성 집합의 `DBPROPSET_SQLSERVERDBINIT` 연결 속성을 사용하여 연결에 대한 SPN을 지정할 수 있습니다.<br /><br /> `SSPROP_INIT_FAILOVER_PARTNER_SPN`의 `DBPROPSET_SQLSERVERDBINIT` 연결 속성을 사용하여 장애 조치 파트너 서버에 대한 SPN을 지정할 수 있습니다.|  
 |사용자가 ODBC DSN(데이터 원본 이름)에 서버 또는 장애 조치 파트너 서버에 대한 SPN을 지정합니다.|DSN 설정 대화 상자를 통해 SPN을 ODBC DSN에 지정할 수 있습니다.|  
 |사용자가 OLE DB **데이터 연결** 또는 **로그인** 대화 상자에 서버 또는 장애 조치 파트너 서버에 대한 SPN을 지정합니다.|SPN은 **데이터 연결** 또는 **로그인** 대화 상자에 지정할 수 있습니다. **로그인** 대화 상자는 ODBC 또는 OLE DB에서 사용할 수 있습니다.|  
-|ODBC 애플리케이션이 연결을 설정하는 데 사용된 인증 방법을 확인합니다.|연결이 성공적으로 열리면 응용 프로그램은 `SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD` 연결 특성을 쿼리하여 사용된 인증 방법을 확인할 수 있습니다. 값에는 `NTLM`, `Kerberos` 등이 포함됩니다.|  
-|OLE DB 응용 프로그램이 연결을 설정하는 데 사용된 인증 방법을 확인합니다.|연결이 성공적으로 열리면 응용 프로그램은 `SSPROP_AUTHENTICATION_METHOD` 속성 집합의 `DBPROPSET_SQLSERVERDATASOURCEINFO` 연결 속성을 쿼리하여 사용된 인증 방법을 확인할 수 있습니다. 값에는 `NTLM`, `Kerberos` 등이 포함됩니다.|  
+|ODBC 애플리케이션이 연결을 설정하는 데 사용된 인증 방법을 확인합니다.|연결이 성공적으로 열리면 애플리케이션은 `SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD` 연결 특성을 쿼리하여 사용된 인증 방법을 확인할 수 있습니다. 값에는 `NTLM`, `Kerberos` 등이 포함됩니다.|  
+|OLE DB 응용 프로그램이 연결을 설정하는 데 사용된 인증 방법을 확인합니다.|연결이 성공적으로 열리면 애플리케이션은 `SSPROP_AUTHENTICATION_METHOD` 속성 집합의 `DBPROPSET_SQLSERVERDATASOURCEINFO` 연결 속성을 쿼리하여 사용된 인증 방법을 확인할 수 있습니다. 값에는 `NTLM`, `Kerberos` 등이 포함됩니다.|  
   
 ## <a name="failover"></a>장애 조치  
  SPN이 장애 조치 캐시에 저장되지 않아 연결 간에 전달될 수 없습니다. 연결 문자열 또는 연결 특성에 SPN이 지정되면 주 서버 및 파트너 서버에 대한 모든 연결 시도에 SPN이 사용됩니다.  
@@ -83,7 +83,7 @@ ms.locfileid: "63225637"
   
 -   안정성:  기본 SPN 사용을 활성화하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 서비스 계정에 KDC의 Active Directory를 업데이트할 수 있는 충분한 권한이 있어야 합니다.  
   
--   편의성 및 위치 투명성:  데이터베이스가 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스로 이동되는 경우 응용 프로그램 SPN은 어떤 영향을 받습니까? 데이터베이스 미러링을 사용하는 경우 이는 주 서버 및 해당 장애 조치 파트너 모두에 적용됩니다. 서버 변경 시 SPN도 변경해야 한다면 애플리케이션은 어떤 영향을 받습니까? 변경 내용은 관리됩니까?  
+-   편의성 및 위치 투명성:  데이터베이스가 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스로 이동되는 경우 애플리케이션 SPN은 어떤 영향을 받습니까? 데이터베이스 미러링을 사용하는 경우 이는 주 서버 및 해당 장애 조치 파트너 모두에 적용됩니다. 서버 변경 시 SPN도 변경해야 한다면 애플리케이션은 어떤 영향을 받습니까? 변경 내용은 관리됩니까?  
   
 ## <a name="specifying-the-spn"></a>SPN 지정  
  대화 상자 또는 코드에서 SPN을 지정할 수 있습니다. 이 섹션에서는 SPN을 지정하는 방법에 대해 설명합니다.  

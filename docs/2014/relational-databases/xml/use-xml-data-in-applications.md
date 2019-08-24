@@ -33,7 +33,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63232424"
 ---
 # <a name="use-xml-data-in-applications"></a>애플리케이션에서 XML 데이터 사용
-  이 항목에서는 응용 프로그램에서 `xml` 데이터 형식을 사용하기 위해 제공되는 옵션에 대해 설명합니다. 이 항목에는 다음에 대한 정보가 포함됩니다.  
+  이 항목에서는 애플리케이션에서 `xml` 데이터 형식을 사용하기 위해 제공되는 옵션에 대해 설명합니다. 이 항목에는 다음에 대한 정보가 포함됩니다.  
   
 -   ADO 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 `xml` 유형의 열에서 XML 처리  
   

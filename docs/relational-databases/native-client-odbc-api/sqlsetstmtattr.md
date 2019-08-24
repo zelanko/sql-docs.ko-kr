@@ -48,7 +48,7 @@ ms.locfileid: "68131057"
 ## <a name="statement-attributes"></a>문 특성  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 다음과 같은 드라이버별 문 특성도 지원합니다.  
   
-### <a name="sqlsoptsscursoroptions"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
+### <a name="sql_sopt_ss_cursor_options"></a>SQL_SOPT_SS_CURSOR_OPTIONS  
  SQL_SOPT_SS_CURSOR 특성은 드라이버가 커서에 드라이버별 성능 옵션을 사용할지 여부를 지정합니다. [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md) 이러한 옵션에 설정 된 경우 허용 되지 않습니다. 기본 설정은 SQL_CO_OFF입니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
 |*ValuePtr* 값|설명|  
@@ -62,7 +62,7 @@ ms.locfileid: "68131057"
   
  Select 목록에 포함 하는 경우는 **텍스트**를 **ntext**, 또는 **이미지** 열에서 빠른 정방향 전용 커서는 동적 커서로 변환 됩니다 및 **SQLGetData** 허용 됩니다.  
   
-### <a name="sqlsoptssdeferprepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
+### <a name="sql_sopt_ss_defer_prepare"></a>SQL_SOPT_SS_DEFER_PREPARE  
  SQL_SOPT_SS_DEFER_PREPARE 특성 문이 될 때까지 지연 즉시 준비 여부를 결정 **SQLExecute**하십시오 [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) 또는 [SQLDescribeParam](../../relational-databases/native-client-odbc-api/sqldescribeparam.md) 실행 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 및 이전 버전에서는 이 속성이 무시됩니다(준비 지연이 지원되지 않음). *ValuePtr* 값은 SQLLEN 유형입니다.  
   
 |*ValuePtr* 값|설명|  
@@ -70,7 +70,7 @@ ms.locfileid: "68131057"
 |SQL_DP_ON|기본. 호출한 후 [SQLPrepare 함수](https://go.microsoft.com/fwlink/?LinkId=59360)를 때까지 문 준비가 지연 됩니다 **SQLExecute** 가 호출 되거나 메타 속성 작업 (**SQLDescribeCol** 또는**SQLDescribeParam**) 실행 됩니다.|  
 |SQL_DP_OFF|문을 준비할 즉시 **SQLPrepare** 실행 됩니다.|  
   
-### <a name="sqlsoptssregionalize"></a>SQL_SOPT_SS_REGIONALIZE  
+### <a name="sql_sopt_ss_regionalize"></a>SQL_SOPT_SS_REGIONALIZE  
  SQL_SOPT_SS_REGIONALIZE 특성은 명령 수준에서 데이터 변환을 결정하는 데 사용됩니다. 이 특성은 드라이버가 날짜, 시간 및 통화 값을 문자열로 변환할 때 클라이언트 로캘 설정을 준수하도록 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 네이티브 데이터 형식에서 문자열로의 변환만 해당됩니다.  
   
  *ValuePtr* 값은 SQLLEN 유형입니다.  
@@ -85,9 +85,9 @@ ms.locfileid: "68131057"
 > [!NOTE]  
 >  문 옵션 SQL_SOPT_SS_REGIONALIZE가 사용되면 드라이버는 현재 사용자의 로캘 레지스트리 설정을 사용합니다. 드라이버 응용 프로그램 설정에서 예를 들어, 호출 하는 경우 현재 스레드의 로캘을 인식 하지 않습니다 **SetThreadLocale**합니다.  
   
- 데이터 원본의 국가별 동작을 변경하면 응용 프로그램에서 오류가 발생할 수 있습니다. 날짜 문자열을 구문 분석하며 날짜 문자열이 ODBC에 정의된 대로 표시될 것으로 예상하는 응용 프로그램에서 이 값을 변경하면 부정적인 영향을 줄 수 있습니다.  
+ 데이터 원본의 국가별 동작을 변경하면 애플리케이션에서 오류가 발생할 수 있습니다. 날짜 문자열을 구문 분석하며 날짜 문자열이 ODBC에 정의된 대로 표시될 것으로 예상하는 애플리케이션에서 이 값을 변경하면 부정적인 영향을 줄 수 있습니다.  
   
-### <a name="sqlsoptsstextptrlogging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
+### <a name="sql_sopt_ss_textptr_logging"></a>SQL_SOPT_SS_TEXTPTR_LOGGING  
  SQL_SOPT_SS_TEXTPTR_LOGGING 특성은 포함 된 열에 대 한 작업 로깅을 설정/해제 **텍스트** 하거나 **이미지** 데이터입니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
 |*ValuePtr* 값|설명|  
@@ -95,7 +95,7 @@ ms.locfileid: "68131057"
 |SQL_TL_OFF|수행 된 작업의 로깅을 사용 하지 않도록 설정 **텍스트** 하 고 **이미지** 데이터입니다.|  
 |SQL_TL_ON|기본. 수행 된 작업의 로깅을 사용 하도록 설정 **텍스트** 하 고 **이미지** 데이터입니다.|  
   
-### <a name="sqlsoptsshiddencolumns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
+### <a name="sql_sopt_ss_hidden_columns"></a>SQL_SOPT_SS_HIDDEN_COLUMNS  
  SQL_SOPT_SS_HIDDEN_COLUMNS 특성은 결과 집합에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SELECT FOR BROWSE 문의 숨겨진 열을 노출합니다. 드라이버는 기본적으로 이러한 열을 노출하지 않습니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
 |*ValuePtr* 값|설명|  
@@ -103,11 +103,11 @@ ms.locfileid: "68131057"
 |SQL_HC_OFF|기본. 결과 집합에서 FOR BROWSE 열을 숨깁니다.|  
 |SQL_HC_ON|FOR BROWSE 열을 공개합니다.|  
   
-### <a name="sqlsoptssquerynotificationmsgtext"></a>SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
+### <a name="sql_sopt_ss_querynotification_msgtext"></a>SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT  
  SQL_SOPT_SS_QUERYNOTIFICATION_MSGTEXT 특성은 쿼리 알림 요청에 대한 메시지 텍스트를 반환합니다.  
   
-### <a name="sqlsoptssquerynotificationoptions"></a>SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS  
- SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS 특성은 쿼리 알림 요청에 사용되는 옵션을 지정합니다. 이러한 옵션은 아래에 지정된 것처럼 `name=value` 구문이 포함된 문자열로 지정됩니다. 응용 프로그램은 서비스를 만들고 큐에서 알림을 읽어야 합니다.  
+### <a name="sql_sopt_ss_querynotification_options"></a>SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS  
+ SQL_SOPT_SS_QUERYNOTIFICATION_OPTIONS 특성은 쿼리 알림 요청에 사용되는 옵션을 지정합니다. 이러한 옵션은 아래에 지정된 것처럼 `name=value` 구문이 포함된 문자열로 지정됩니다. 애플리케이션은 서비스를 만들고 큐에서 알림을 읽어야 합니다.  
   
  쿼리 알림 옵션 문자열의 구문은 다음과 같습니다.  
   
@@ -117,17 +117,17 @@ ms.locfileid: "68131057"
   
  `service=mySSBService;local database=mydb`  
   
-### <a name="sqlsoptssquerynotificationtimeout"></a>SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
+### <a name="sql_sopt_ss_querynotification_timeout"></a>SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT  
  SQL_SOPT_SS_QUERYNOTIFICATION_TIMEOUT 특성은 쿼리 알림을 활성 상태로 유지할 초를 지정합니다. 기본값은 432000초(5일)입니다. *ValuePtr* 값은 SQLLEN 유형입니다.  
   
-### <a name="sqlsoptssparamfocus"></a>SQL_SOPT_SS_PARAM_FOCUS  
+### <a name="sql_sopt_ss_param_focus"></a>SQL_SOPT_SS_PARAM_FOCUS  
  SQL_SOPT_SS_PARAM_FOCUS 특성은 후속 SQLBindParameter, SQLGetDescField, SQLSetDescField SQLGetDescRec, 포커스를 지정 하 고 SQLSetDescRec 호출 합니다.  
   
  SQL_SOPT_SS_PARAM_FOCUS의 형식은 SQLULEN입니다.  
   
  기본값은 0이며 이는 이러한 호출이 SQL 문의 매개 변수 표식에 해당하는 매개 변수의 주소를 지정한다는 의미입니다. 테이블 반환 매개 변수의 매개 변수 번호로 설정하면 이러한 호출이 해당 테이블 반환 매개 변수 열의 주소를 지정합니다. 테이블 반환 매개 변수의 매개 변수 번호가 아닌 값으로 설정 하면 이러한 호출이 오류 IM020를 반환 합니다. "매개 변수 포커스가 테이블 반환 매개 변수는 참조 하지 않습니다".  
   
-### <a name="sqlsoptssnamescope"></a>SQL_SOPT_SS_NAME_SCOPE  
+### <a name="sql_sopt_ss_name_scope"></a>SQL_SOPT_SS_NAME_SCOPE  
  SQL_SOPT_SS_NAME_SCOPE 특성은 후속 카탈로그 함수 호출의 이름 범위를 지정합니다. SQLColumns 반환한 결과 집합은 SQL_SOPT_SS_NAME_SCOPE의 설정에 따라 달라 집니다.  
   
  SQL_SOPT_SS_NAME_SCOPE의 형식은 SQLULEN입니다.  
@@ -135,12 +135,12 @@ ms.locfileid: "68131057"
 |*ValuePtr* 값|설명|  
 |----------------------|-----------------|  
 |SQL_SS_NAME_SCOPE_TABLE|기본.<br /><br /> 테이블 반환 매개 변수를 사용할 때 실제 테이블의 메타데이터가 반환되도록 지정합니다.<br /><br /> 스파스 열 기능을 사용 하면 SQLColumns 스파스의 멤버가 아닌 열만 반환 됩니다 **column_set**합니다.|  
-|SQL_SS_NAME_SCOPE_TABLE_TYPE|응용 프로그램이 실제 테이블이 아니라 테이블 형식의 메타데이터를 요구한다는 것을 나타냅니다. 카탈로그 함수가 테이블 형식의 메타데이터를 반환해야 합니다. 그런 다음 응용 프로그램으로 테이블 반환 매개 변수의 TYPE_NAME을 전달 합니다 *TableName* 매개 변수입니다.|  
+|SQL_SS_NAME_SCOPE_TABLE_TYPE|애플리케이션이 실제 테이블이 아니라 테이블 형식의 메타데이터를 요구한다는 것을 나타냅니다. 카탈로그 함수가 테이블 형식의 메타데이터를 반환해야 합니다. 그런 다음 응용 프로그램으로 테이블 반환 매개 변수의 TYPE_NAME을 전달 합니다 *TableName* 매개 변수입니다.|  
 |SQL_SS_NAME_SCOPE_EXTENDED|SQLColumns에 관계 없이 모든 열을 스파스 열 기능을 사용 하는 경우 반환 하도록 **column_set** 멤버 자격.|  
 |SQL_SS_NAME_SCOPE_SPARSE_COLUMN_SET|SQLColumns 스파스의 멤버인 열만 반환 스파스 열 기능을 사용 하는 경우 **column_set**합니다.|  
 |SQL_SS_NAME_SCOPE_DEFAULT|SQL_SS_NAME_SCOPE_TABLE과 같습니다.|  
   
- SS_TYPE_CATALOG_NAME 및 ss_type_schema_name은 사용 되는 *CatalogName* 하 고 *SchemaName* 매개 변수 각각 카탈로그 및 테이블 반환 매개 변수에 대 한 스키마를 식별 하 합니다. 응용 프로그램이 테이블 반환 매개 변수의 메타데이터 검색을 마치면 SQL_SOPT_SS_NAME_SCOPE가 기본값인 SQL_SS_NAME_SCOPE_TABLE로 다시 설정됩니다.  
+ SS_TYPE_CATALOG_NAME 및 ss_type_schema_name은 사용 되는 *CatalogName* 하 고 *SchemaName* 매개 변수 각각 카탈로그 및 테이블 반환 매개 변수에 대 한 스키마를 식별 하 합니다. 애플리케이션이 테이블 반환 매개 변수의 메타데이터 검색을 마치면 SQL_SOPT_SS_NAME_SCOPE가 기본값인 SQL_SS_NAME_SCOPE_TABLE로 다시 설정됩니다.  
   
  SQL_SOPT_SS_NAME_SCOPE가 SQL_SS_NAME_SCOPE_TABLE로 설정되면 연결된 서버에 대한 쿼리가 실패합니다. 서버 구성 요소를 포함 하는 카탈로그를 사용 하 여 SQLPrimaryKeys SQLColumns를 호출 하지 못합니다.  
   

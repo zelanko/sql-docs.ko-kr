@@ -33,7 +33,7 @@ ms.locfileid: "62990580"
     읽기용으로 구성된 경우 보조 복제본의 메모리 최적화 테이블을 액세스 및 쿼리할 수 있습니다. 자세한 내용은 참조 하세요. [활성 보조: 읽기 가능한 보조 복제본 (AlwaysOn 가용성 그룹)](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)합니다.  
   
 ## <a name="failover-clustering-instance-fci-and-in-memory-oltp-databases"></a>장애 조치 클러스터링 인스턴스(FCI) 및 메모리 내 OLTP 데이터베이스  
- 공유 저장소 구성에서 고가용성을 달성하기 위해, 메모리 최적화 테이블이 포함된 하나 이상의 데이터베이스를 통해 인스턴스에서 장애 조치(failover) 클러스터링을 설정할 수 있습니다. FCI는 설정의 일부로 다음과 같은 요소를 고려해야 합니다.  
+ 공유 스토리지 구성에서 고가용성을 달성하기 위해, 메모리 최적화 테이블이 포함된 하나 이상의 데이터베이스를 통해 인스턴스에서 장애 조치(failover) 클러스터링을 설정할 수 있습니다. FCI는 설정의 일부로 다음과 같은 요소를 고려해야 합니다.  
   
 -   **복구 시간 목표**   
     메모리 최적화 테이블을 메모리에 로드해야 데이터베이스를 사용할 수 있으므로 장애 조치(failover) 시간이 더 길어질 수 있습니다.  

@@ -33,7 +33,7 @@ ms.locfileid: "68005250"
  **중요 한** 새 클라이언트 쪽 FOR XML 기능을 사용 하 여 **xml** 데이터 형식을 클라이언트 항상 사용할지는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQLOLEDB 공급자 대신 Native Client (SQLNCLI11) 데이터 공급자. SQLNCLI11은 최신 버전의 SQL Server 공급자이며 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에 도입된 데이터 형식을 완전히 이해합니다. SQLOLEDB 공급자를 사용 하 여 FOR XML을 처리 하는 클라이언트 쪽 동작은 **xml** 문자열 데이터 형식입니다.  
   
 ## <a name="formatting-xml-documents-on-the-client-side"></a>클라이언트 쪽에서 XML 문서 서식 지정  
- 클라이언트 응용 프로그램에서 다음 쿼리를 실행하는 경우를 살펴보겠습니다.  
+ 클라이언트 애플리케이션에서 다음 쿼리를 실행하는 경우를 살펴보겠습니다.  
   
 ```  
 SELECT FirstName, LastName  
@@ -61,7 +61,7 @@ FROM   Person.Contact
 |EXPLICIT|서버 쪽 FOR XML EXPLICIT 모드와 비슷합니다.|  
   
 > [!NOTE]  
->  AUTO 모드를 지정하고 클라이언트 쪽 XML 서식 지정을 요청하는 경우 전체 쿼리가 서버로 전송됩니다. 즉, XML 서식 지정이 서버에서 실행됩니다. 이는 편의상 수행되는 기능이지만 NESTED 모드는 생성되는 XML 문서의 요소 이름으로 기본 테이블 이름을 반환합니다. 일부 응용 프로그램에는 기본 테이블을 이름이 필요할 수 있습니다. 예를 들어 저장 프로시저를 실행하고 결과 데이터를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework의 데이터 집합에 로드한 후 나중에 DiffGram을 생성하여 테이블의 데이터를 업데이트할 수 있습니다. 이러한 경우 기본 테이블 정보가 필요할 수 있으므로 NESTED 모드를 사용해야 합니다.  
+>  AUTO 모드를 지정하고 클라이언트 쪽 XML 서식 지정을 요청하는 경우 전체 쿼리가 서버로 전송됩니다. 즉, XML 서식 지정이 서버에서 실행됩니다. 이는 편의상 수행되는 기능이지만 NESTED 모드는 생성되는 XML 문서의 요소 이름으로 기본 테이블 이름을 반환합니다. 일부 애플리케이션에는 기본 테이블을 이름이 필요할 수 있습니다. 예를 들어 저장 프로시저를 실행하고 결과 데이터를 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework의 데이터 세트에 로드한 후 나중에 DiffGram을 생성하여 테이블의 데이터를 업데이트할 수 있습니다. 이러한 경우 기본 테이블 정보가 필요할 수 있으므로 NESTED 모드를 사용해야 합니다.  
   
 ## <a name="benefits-of-client-side-xml-formatting"></a>클라이언트 쪽 XML 서식 지정의 이점  
  다음은 클라이언트에서 XML 서식 지정을 할 때의 이점입니다.  

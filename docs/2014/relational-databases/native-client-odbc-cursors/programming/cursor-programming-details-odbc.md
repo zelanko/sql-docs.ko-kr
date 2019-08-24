@@ -23,7 +23,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63207263"
 ---
 # <a name="cursor-programming-details-odbc"></a>커서 프로그래밍 정보(ODBC)
-  올바른 커서 유형을 선택하면 응용 프로그램 성능을 개선할 수 있습니다. 특정 조건에서는 사용자가 요청한 커서 유형이 지원되지 않는 SQL 문을 실행할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 암시적으로 커서 유형을 변환할 수 있습니다.  
+  올바른 커서 유형을 선택하면 애플리케이션 성능을 개선할 수 있습니다. 특정 조건에서는 사용자가 요청한 커서 유형이 지원되지 않는 SQL 문을 실행할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 암시적으로 커서 유형을 변환할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

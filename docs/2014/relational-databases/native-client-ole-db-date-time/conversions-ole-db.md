@@ -24,7 +24,7 @@ ms.locfileid: "62638210"
 # <a name="bindings-and-conversions-ole-db"></a>바인딩 및 변환(OLE DB)
   이 섹션에서는 `datetime` 값과 `datetimeoffset` 값 사이의 변환 방법에 대해 설명합니다. 이 섹션에 설명된 변환은 OLE DB에서 이미 제공하거나 OLE DB의 일관된 확장입니다.  
   
- OLE DB에서 날짜와 시간에 대한 리터럴 및 문자열 형식은 일반적으로 ISO를 따르며 클라이언트 로캘에 종속되지 않습니다. 한 가지 예외는 OLE Automation이 표준인 DBTYPE_DATE이지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서는 클라이언트와의 사이에 데이터가 전송되는 경우에만 형식을 변환하기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 응용 프로그램에 의해 강제로 DBTYPE_DATE와 문자열 형식 사이를 변환하는 경우는 없습니다. 이러한 경우를 제외하면 문자열에는 다음과 같은 형식이 사용됩니다. 여기서 대괄호 안의 텍스트는 선택적 요소를 나타냅니다.  
+ OLE DB에서 날짜와 시간에 대한 리터럴 및 문자열 형식은 일반적으로 ISO를 따르며 클라이언트 로캘에 종속되지 않습니다. 한 가지 예외는 OLE Automation이 표준인 DBTYPE_DATE이지만 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client에서는 클라이언트와의 사이에 데이터가 전송되는 경우에만 형식을 변환하기 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 애플리케이션에 의해 강제로 DBTYPE_DATE와 문자열 형식 사이를 변환하는 경우는 없습니다. 이러한 경우를 제외하면 문자열에는 다음과 같은 형식이 사용됩니다. 여기서 대괄호 안의 텍스트는 선택적 요소를 나타냅니다.  
   
 -   `datetime` 및 `datetimeoffset` 문자열의 형식  
   
@@ -63,10 +63,10 @@ ms.locfileid: "62638210"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [클라이언트에서 서버로 수행되는 변환](conversions-performed-from-client-to-server.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB를 사용하여 작성된 클라이언트 응용 프로그램과 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB를 사용하여 작성된 클라이언트 애플리케이션과 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
   
  [서버에서 클라이언트로 수행되는 변환](conversions-performed-from-server-to-client.md)  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB를 사용하여 작성된 클라이언트 응용 프로그램 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB를 사용하여 작성된 클라이언트 애플리케이션 간에 수행되는 날짜/시간 변환에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [날짜 및 시간 기능 향상&#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  

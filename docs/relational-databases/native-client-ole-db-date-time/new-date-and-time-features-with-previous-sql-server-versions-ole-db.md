@@ -51,7 +51,7 @@ ms.locfileid: "68106909"
   
  다음과 같은 일반적인 스키마 변경 내용만 고려됩니다.  
   
--   논리적으로 응용 프로그램에 날짜 또는 시간 값만 필요한 경우 새 형식을 사용합니다. 그러나 응용 프로그램이 사용 하 여 강제 된 **날짜/시간** 하거나 **smalldatetime** 때문에 별도 날짜 및 시간 형식을 사용할 수 없습니다.  
+-   논리적으로 애플리케이션에 날짜 또는 시간 값만 필요한 경우 새 형식을 사용합니다. 그러나 응용 프로그램이 사용 하 여 강제 된 **날짜/시간** 하거나 **smalldatetime** 때문에 별도 날짜 및 시간 형식을 사용할 수 없습니다.  
   
 -   초 소수 부분 자릿수를 늘리거나 정확도를 높이기 위해 새 형식을 사용합니다.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "68106909"
 |Datetime2|DBTYPE_WSTR|19,21..27|38,42..54|NULL|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|NULL|  
   
-#### <a name="procedureparameters-rowset"></a>PROCEDURE_PARAMETERS 행 집합  
+#### <a name="procedure_parameters-rowset"></a>PROCEDURE_PARAMETERS 행 집합  
  날짜/시간 형식에 대해 다음 열 값이 반환됩니다.  
   
 |열 유형|DATA_TYPE|CHARACTER_MAXIMUM_LENGTH|CHARACTER_OCTET_LENGTH|TYPE_NAME<br /><br /> LOCAL_TYPE_NAME|  
@@ -127,7 +127,7 @@ ms.locfileid: "68106909"
 |Datetime2|DBTYPE_WSTR|19,21..27|38,42..54|Datetime2|  
 |datetimeoffset|DBTYPE_WSTR|26,28..34|52, 56..68|datetimeoffset|  
   
-#### <a name="providertypes-rowset"></a>PROVIDER_TYPES 행 집합  
+#### <a name="provider_types-rowset"></a>PROVIDER_TYPES 행 집합  
  날짜/시간 형식에 대해 다음 행이 반환됩니다.  
   
 |형식 -><br /><br /> Column|date|Time|Smalldatetime|Datetime|Datetime2|datetimeoffset|  
@@ -161,7 +161,7 @@ ms.locfileid: "68106909"
   
  버퍼 유형에서 연결의 서버 버전의 서버 유형으로 지원되는 클라이언트 변환이 있는 경우 모든 클라이언트 버퍼 유형을 사용할 수 있습니다. 이 컨텍스트에서 *서버 유형* icommandwithparameters:: Setparameterinfo에 의해 지정 또는 icommandwithparameters:: Setparameterinfo 호출 되지 않은 경우 버퍼 유형에 의해 암시 된 유형을 의미 합니다. 이는 하위 수준 서버에서, 또는 DataTypeCompatibility=80일 때 지원되는 서버 유형에 대한 클라이언트 변환이 성공할 경우 DBTYPE_DBTIME2 및 DBTYPE_DBTIMESTAMPOFFSET을 사용할 수 있음을 의미합니다. 물론 서버 유형이 잘못된 경우 서버는 실제 서버 유형으로 암시적 변환을 수행하지 못하면 여전히 오류를 보고할 수 있습니다.  
   
-## <a name="sspropinitdatatypecompatibility-behavior"></a>SSPROP_INIT_DATATYPECOMPATIBILITY 동작  
+## <a name="ssprop_init_datatypecompatibility-behavior"></a>SSPROP_INIT_DATATYPECOMPATIBILITY 동작  
  SSPROP_INIT_DATATYPECOMPATIBILITY가 SSPROPVAL_DATATYPECOMPATIBILITY_SQL2000으로 설정 하는 경우 새 날짜/시간 형식 및 관련된 메타 데이터가 클라이언트에 나타나는 대로 나타납니다 하위 수준 클라이언트에 설명 된 대로 [에 대 한 대량 복사 변경 사항 향상 된 날짜 및 시간 형식 &#40;OLE DB 및 ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다.  
   
 ## <a name="comparability-for-irowsetfind"></a>IRowsetFind 비교  

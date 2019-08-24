@@ -23,7 +23,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62920834"
 ---
 # <a name="deploying-clr-database-objects"></a>CLR 데이터베이스 개체 배포
-  배포는 완성된 응용 프로그램이나 모듈을 배포하여 다른 컴퓨터에서 설치하고 실행하는 프로세스입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio를 사용하면 CLR(공용 언어 런타임) 데이터베이스 개체를 개발하고 테스트 서버에 배포할 수 있습니다. 또는 Visual Studio 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 재배포 파일을 사용하여 관리되는 데이터베이스 개체를 컴파일할 수도 있습니다. 컴파일되고 나면 CLR 데이터베이스 개체가 포함된 어셈블리를 Visual Studio 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용하여 테스트 서버에 배포할 수 있습니다. Visual Studio .NET 2003은 CLR 통합 프로그래밍이나 배포에 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 .NET Framework가 미리 설치되어 있으며 Visual Studio .NET 2003에서는 .NET Framework 2.0 어셈블리를 사용할 수 없습니다.  
+  배포는 완성된 애플리케이션이나 모듈을 배포하여 다른 컴퓨터에서 설치하고 실행하는 프로세스입니다. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio를 사용하면 CLR(공용 언어 런타임) 데이터베이스 개체를 개발하고 테스트 서버에 배포할 수 있습니다. 또는 Visual Studio 대신 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework 재배포 파일을 사용하여 관리되는 데이터베이스 개체를 컴파일할 수도 있습니다. 컴파일되고 나면 CLR 데이터베이스 개체가 포함된 어셈블리를 Visual Studio 또는 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용하여 테스트 서버에 배포할 수 있습니다. Visual Studio .NET 2003은 CLR 통합 프로그래밍이나 배포에 사용할 수 없습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에는 .NET Framework가 미리 설치되어 있으며 Visual Studio .NET 2003에서는 .NET Framework 2.0 어셈블리를 사용할 수 없습니다.  
   
  테스트 서버에서 CLR 메서드를 테스트하고 확인하고 나면 개발 스크립트를 사용하여 프로덕션 서버에 배포할 수 있습니다. 개발 스크립트는 수동으로 생성하거나 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]를 사용하여 생성할 수 있습니다. 자세한 내용은 이 항목의 뒷부분에 나오는 절차를 참조하십시오.  
   

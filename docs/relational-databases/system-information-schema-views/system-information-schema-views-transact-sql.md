@@ -29,7 +29,7 @@ ms.locfileid: "68670566"
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-정보 스키마 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 메타데이터를 가져오기 위해 사용할 수 있는 여러 수단 중 하나입니다. 정보 스키마 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타데이터의 내부 시스템 테이블에 종속되지 않는 뷰를 제공합니다. 정보 스키마 뷰는 기본 시스템 테이블이 많이 변경되더라도 응용 프로그램이 제대로 작동할 수 있도록 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 정보 스키마 뷰는 INFORMATION_SCHEMA에 대한 ISO 표준 정의를 준수합니다.
+정보 스키마 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 메타데이터를 가져오기 위해 사용할 수 있는 여러 수단 중 하나입니다. 정보 스키마 뷰는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 메타데이터의 내부 시스템 테이블에 종속되지 않는 뷰를 제공합니다. 정보 스키마 뷰는 기본 시스템 테이블이 많이 변경되더라도 애플리케이션이 제대로 작동할 수 있도록 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함된 정보 스키마 뷰는 INFORMATION_SCHEMA에 대한 ISO 표준 정의를 준수합니다.
 
 > [!IMPORTANT]
 > 정보 스키마 뷰는 일부 변경되어 이전 버전과 호환되지 않습니다. 이러한 변경 내용은 각 뷰에 해당하는 항목에서 설명합니다.

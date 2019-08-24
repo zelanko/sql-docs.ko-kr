@@ -27,12 +27,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67942060"
 ---
-# <a name="managedbackupspbackupmasterswitch-transact-sql"></a>managed_backup.sp_backup_master_switch (Transact SQL)
+# <a name="managed_backupsp_backup_master_switch-transact-sql"></a>managed_backup.sp_backup_master_switch (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 일시 중지하거나 다시 시작합니다.  
   
- 이 저장 프로시저를 사용하여 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 일시 중지하고 다시 시작할 수 있습니다. 이는 작업이 다시 시작될 때 모든 구성 설정이 그대로 보존되도록 합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 일시 중지되면 보존 기간이 적용되지 않습니다. 이는 파일이 저장소에서 삭제되었는지 여부 또는 백업 파일이 손상되었거나 로그 체인이 끊어졌는지를 확인하기 위한 점검이 없음을 의미합니다.  
+ 이 저장 프로시저를 사용하여 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 일시 중지하고 다시 시작할 수 있습니다. 이는 작업이 다시 시작될 때 모든 구성 설정이 그대로 보존되도록 합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 일시 중지되면 보존 기간이 적용되지 않습니다. 이는 파일이 스토리지에서 삭제되었는지 여부 또는 백업 파일이 손상되었거나 로그 체인이 끊어졌는지를 확인하기 위한 점검이 없음을 의미합니다.  
   
 
   

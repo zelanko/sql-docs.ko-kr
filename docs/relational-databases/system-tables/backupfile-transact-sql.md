@@ -40,7 +40,7 @@ ms.locfileid: "68091860"
 |**file_number**|**numeric(10,0)**|데이터베이스 내에서 고유한 파일 id 번호 (해당 **sys.database_files**. **file_id**).|  
 |**backed_up_page_count**|**numeric(10,0)**|백업된 페이지의 수입니다. NULL일 수 있습니다.|  
 |**file_type**|**char(1)**|백업된 파일이며 다음 중 하나입니다.<br /><br /> D = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 파일<br /><br /> L = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 파일<br /><br /> F = 전체 텍스트 카탈로그<br /><br /> NULL일 수 있습니다.|  
-|**source_file_block_size**|**numeric(10,0)**|백업될 때, 원본 데이터 또는 로그 파일이 있는 장치입니다. NULL일 수 있습니다.|  
+|**source_file_block_size**|**numeric(10,0)**|백업될 때, 원본 데이터 또는 로그 파일이 있는 디바이스입니다. NULL일 수 있습니다.|  
 |**file_size**|**numeric(20,0)**|백업된 파일의 길이(바이트)입니다. NULL일 수 있습니다.|  
 |**logical_name**|**nvarchar(128)**|백업된 파일의 논리적 이름입니다. NULL일 수 있습니다.|  
 |**physical_drive**|**nvarchar(260)**|물리적 드라이브 또는 파티션 이름입니다. NULL일 수 있습니다.|  

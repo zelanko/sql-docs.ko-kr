@@ -101,7 +101,7 @@ FROM <backup_device>
 |ReadOnlyLSN|**numeric(25,0) NULL**|해당 파일이 포함된 파일 그룹이 읽기/쓰기에서 읽기 전용으로 변경된 시점(가장 최근 변경)의 로그 시퀀스 번호입니다.|  
 |ReadWriteLSN|**numeric(25,0)** NULL|해당 파일이 포함된 파일 그룹이 읽기 전용에서 읽기/쓰기로 변경된 시점(가장 최근의 변경)의 로그 시퀀스 번호입니다.|  
 |BackupSizeInBytes|**bigint**|이 파일의 백업의 크기(바이트)입니다.|  
-|SourceBlockSize|**int**|백업 장치를 제외한 해당 파일이 포함된 물리적 장치의 블록 크기(바이트)입니다.|  
+|SourceBlockSize|**int**|백업 디바이스를 제외한 해당 파일이 포함된 물리적 디바이스의 블록 크기(바이트)입니다.|  
 |FileGroupID|**int**|파일 그룹의 ID입니다.|  
 |LogGroupGUID|**uniqueidentifier** NULL|NULL|  
 |DifferentialBaseLSN|**numeric(25,0)** NULL|차등 백업의 경우 로그 시퀀스 번호가 **DifferentialBaseLSN**보다 크거나 같은 변경 내용이 포함됩니다.<br /><br /> 다른 백업 유형의 경우 값은 NULL입니다.|  
@@ -118,10 +118,10 @@ FROM <backup_device>
 >  이 암호에 의한 보호 수준은 낮습니다. 권한 유무에 관계없이 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 잘못된 복원을 수행하는 것을 방지합니다. 다른 수단을 사용한 백업 데이터 읽기나 암호 바꾸기를 방지하지는 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 백업을 보호하는 최선의 구현 방법은 백업 테이프를 안전한 장소에 보관하거나 적합한 ACL(액세스 제어 목록)로 보호되는 디스크 파일에 백업하는 것입니다. ACL은 백업이 만들어지는 디렉터리 루트에 설정해야 합니다.  
   
 ### <a name="permissions"></a>사용 권한  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 백업 세트나 백업 장치에 대한 정보를 얻으려면 CREATE DATABASE 권한이 필요합니다. 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 백업 세트나 백업 디바이스에 대한 정보를 얻으려면 CREATE DATABASE 권한이 필요합니다. 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `AdventureWorksBackups`라는 백업 장치에서 정보를 반환합니다. 이 예에서는 `FILE` 옵션을 사용하여 장치에 두 번째 백업 세트를 지정합니다.  
+ 다음 예에서는 `AdventureWorksBackups`라는 백업 디바이스에서 정보를 반환합니다. 이 예에서는 `FILE` 옵션을 사용하여 디바이스에 두 번째 백업 세트를 지정합니다.  
   
 ```  
 RESTORE FILELISTONLY FROM AdventureWorksBackups   

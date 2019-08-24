@@ -34,7 +34,7 @@ ms.locfileid: "68223606"
   현재 데이터베이스에서 하나 이상의 사용자 정의 규칙을 제거합니다.  
   
 > [!IMPORTANT]
->  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 DROP RULE이 제거됩니다. 향후 개발 작업에서는 DROP RULE을 사용하지 않도록 하고 현재 이것을 사용하는 응용 프로그램은 수정하십시오. 대신 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 또는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)의 CHECK 키워드로 만들 수 있는 CHECK 제약 조건을 사용하십시오. 자세한 내용은 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서는 DROP RULE이 제거됩니다. 향후 개발 작업에서는 DROP RULE을 사용하지 않도록 하고 현재 이것을 사용하는 애플리케이션은 수정하십시오. 대신 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 또는 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)의 CHECK 키워드로 만들 수 있는 CHECK 제약 조건을 사용하십시오. 자세한 내용은 [Unique Constraints and Check Constraints](../../relational-databases/tables/unique-constraints-and-check-constraints.md)을 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

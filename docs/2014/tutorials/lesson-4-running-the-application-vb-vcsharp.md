@@ -20,7 +20,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137481"
 ---
 # <a name="lesson-4-running-the-application-vb-vc"></a>4단원: 응용 프로그램을 실행 (VB-VC#)
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서는 다음과 같이 IDE에서 콘솔 응용 프로그램을 작성하고 실행하는 여러 가지 방법을 제공합니다.  
+  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]에서는 다음과 같이 IDE에서 콘솔 애플리케이션을 작성하고 실행하는 여러 가지 방법을 제공합니다.  
   
 -   디버깅으로 시작  
   

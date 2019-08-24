@@ -29,7 +29,7 @@ ms.locfileid: "63140535"
  마이닝 모델은 가상 회사인 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 에 대한 데이터를 저장하는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]예제 데이터베이스에 포함된 데이터에서 만들어집니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]는 규모가 큰 다국적 제조 회사입니다. 이 회사는 금속 및 합성 소재 자전거를 제조하여 북미, 유럽 및 아시아 시장에 판매합니다. 워싱턴 주 보셀에 위치한 본사에는 290명의 직원이 근무하고 있으며 각 지역 시장별로 영업 팀이 배치되어 있습니다.  
   
 ## <a name="tutorial-scenario"></a>자습서 시나리오  
- [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]에서는 데이터 마이닝 기능을 사용하는 사용자 지정 응용 프로그램을 만들어 데이터 분석의 범위를 확장하기로 결정했습니다. 이 사용자 정의 애플리케이션을 만드는 목적은 다음과 같습니다.  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]에서는 데이터 마이닝 기능을 사용하는 사용자 지정 애플리케이션을 만들어 데이터 분석의 범위를 확장하기로 결정했습니다. 이 사용자 정의 애플리케이션을 만드는 목적은 다음과 같습니다.  
   
 -   잠재 고객의 특정 특징을 입력으로 사용하여 해당 고객이 자전거를 구입할 것인지 여부 예측  
   

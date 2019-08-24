@@ -19,7 +19,7 @@ ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7936eaf327f9df3cb0f3d8545d7bf557ef1471ac
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68098044"
@@ -27,7 +27,7 @@ ms.locfileid: "68098044"
 # <a name="files-and-version-numbers"></a>파일 및 버전 번호
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  모든 SQL Server 관리 개체 (SMO) 구성 요소가 Microsoft.SqlServer.SqlManagementObjects NuGet 패키지에 포함 해야 합니다. SMO는 몇 개의 관리되는 어셈블리에 구현됩니다. 클라이언트나 서버에서 SMO 응용 프로그램을 개발할 수 있습니다.  
+  모든 SQL Server 관리 개체 (SMO) 구성 요소가 Microsoft.SqlServer.SqlManagementObjects NuGet 패키지에 포함 해야 합니다. SMO는 몇 개의 관리되는 어셈블리에 구현됩니다. 클라이언트나 서버에서 SMO 애플리케이션을 개발할 수 있습니다.  
 
 > > [!Important]
 > > SMO 어셈블리의 파일 버전은 중요로 표시 됩니다. **0**합니다. Build.Revision 합니다. 하지만 포함 된 어셈블리 버전은 주 버전. **100**합니다. Build.Revision 합니다. 이렇게 하나에 대 한 업데이트에 영향을 주지 다른 되므로 각 응용 프로그램에 사용 되는 SMO의 버전을 별도로 유지 하 합니다.

@@ -26,9 +26,9 @@ ms.locfileid: "66054067"
   
  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 다음 구성 요소와 도구가 포함 됩니다.  
   
--   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] - [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스 및 웹 응용 프로그램을 만들고 구성하는 데 사용하는 도구입니다.  
+-   [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] - [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 데이터베이스 및 웹 애플리케이션을 만들고 구성하는 데 사용하는 도구입니다.  
   
--   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] - 모델 또는 비즈니스 규칙 만들기와 같은 관리 작업을 수행하는 데 사용하며 데이터를 업데이트하기 위해 액세스하는 웹 응용 프로그램입니다.  
+-   [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] - 모델 또는 비즈니스 규칙 만들기와 같은 관리 작업을 수행하는 데 사용하며 데이터를 업데이트하기 위해 액세스하는 웹 애플리케이션입니다.  
   
 -   MDSModelDeploy.exe - 다른 환경에 배포할 모델 개체와 데이터 패키지를 만드는 데 사용하는 도구입니다.  
   

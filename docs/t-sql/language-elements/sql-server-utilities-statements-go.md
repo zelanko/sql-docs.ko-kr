@@ -72,9 +72,9 @@ sp_who
 GO  
 ```  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램에서는 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 일괄 처리로 실행하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 보낼 수 있습니다. 그러면 일괄 처리에 있는 문은 단일 실행 계획으로 컴파일됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 임시 문을 실행하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 유틸리티를 통해 실행되도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문의 스크립트를 작성하는 프로그래머는 GO를 사용하여 일괄 처리의 끝을 알립니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 애플리케이션에서는 여러 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 일괄 처리로 실행하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 보낼 수 있습니다. 그러면 일괄 처리에 있는 문은 단일 실행 계획으로 컴파일됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티에서 임시 문을 실행하거나 [!INCLUDE[tsql](../../includes/tsql-md.md)] 유틸리티를 통해 실행되도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 문의 스크립트를 작성하는 프로그래머는 GO를 사용하여 일괄 처리의 끝을 알립니다.  
   
- ODBC 또는 OLE DB API를 기반으로 하는 응용 프로그램에서 GO 명령을 실행하려고 하면 구문 오류가 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 GO 명령을 서버로 보내지 않습니다.  
+ ODBC 또는 OLE DB API를 기반으로 하는 애플리케이션에서 GO 명령을 실행하려고 하면 구문 오류가 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 유틸리티는 GO 명령을 서버로 보내지 않습니다.  
   
  GO 후에는 문 종결자로 세미콜론을 사용하지 마십시오.
  

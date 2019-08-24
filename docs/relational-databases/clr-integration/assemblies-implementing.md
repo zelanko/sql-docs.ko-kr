@@ -93,7 +93,7 @@ ms.locfileid: "68018852"
   
  구성원만 합니다 **db_owner** 하 고 **db_ddlowner** 고정된 데이터베이스 역할 WITH UNCHECKED DATA 절을 사용 하 여 실행된 ALTER ASSEMBLY를 실행할 수 있습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 어셈블리가 테이블의 검사하지 않은 데이터로 수정되었다는 메시지를 Windows 응용 프로그램 이벤트 로그에 게시합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 어셈블리에 종속된 데이터가 들어 있는 테이블에 검사하지 않은 데이터가 있다고 표시합니다. 합니다 **has_unchecked_assembly_data** 열을 **sys.tables** unchecked data를 및 0 하지 않은 데이터가 없는 테이블을 포함 하는 테이블에 대 한 값 1을 포함 하는 카탈로그 뷰.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 어셈블리가 테이블의 검사하지 않은 데이터로 수정되었다는 메시지를 Windows 애플리케이션 이벤트 로그에 게시합니다. 그러면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 어셈블리에 종속된 데이터가 들어 있는 테이블에 검사하지 않은 데이터가 있다고 표시합니다. 합니다 **has_unchecked_assembly_data** 열을 **sys.tables** unchecked data를 및 0 하지 않은 데이터가 없는 테이블을 포함 하는 테이블에 대 한 값 1을 포함 하는 카탈로그 뷰.  
   
  검사 되지 않은 데이터의 무결성을 해결 하려면 DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS를 실행 된 각 테이블에 대해 확인 되지 않은 데이터입니다. DBCC CHECKDB WITH EXTENDED_LOGICAL_CHECKS 못하면 하거나 유효 하지 않거나 문제를 해결 하는 어셈블리 코드를 수정 하는 테이블 행을 삭제 하며 다음 추가 ALTER ASSEMBLY 문을 실행 합니다.  
   

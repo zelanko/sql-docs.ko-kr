@@ -114,7 +114,7 @@ ms.locfileid: "68141283"
   
  RECEIVE 문에서 반환하는 메시지는 다양한 유형일 수 있습니다. 애플리케이션은 **message_type_name** 열을 사용하여 각 메시지를 연관된 메시지 유형을 처리하는 코드로 라우팅할 수 있습니다. 메시지 유형에는 다음과 같은 두 가지가 있습니다.  
   
--   CREATE MESSAGE TYPE 문을 사용하여 만든 응용 프로그램 정의 메시지 유형. 대화에 사용할 수 있는 응용 프로그램 정의 메시지 유형 집합은 대화에 지정된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 계약을 사용하여 정의됩니다.  
+-   CREATE MESSAGE TYPE 문을 사용하여 만든 애플리케이션 정의 메시지 유형. 대화에 사용할 수 있는 애플리케이션 정의 메시지 유형 집합은 대화에 지정된 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 계약을 사용하여 정의됩니다.  
   
 -   상태 또는 오류 정보를 반환하는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 시스템 메시지.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "68141283"
 |**service_id**|**int**|대화와 연관된 서비스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |**service_contract_name**|**nvarchar(256)**|대화에서 준수하는 계약의 이름입니다.|  
 |**service_contract_id**|**int**|대화에서 준수하는 계약의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
-|**message_type_name**|**nvarchar(256)**|메시지 형식을 설명하는 메시지 유형의 이름입니다. 메시지는 응용 프로그램 메시지 유형이거나 Broker 시스템 메시지일 수 있습니다.|  
+|**message_type_name**|**nvarchar(256)**|메시지 형식을 설명하는 메시지 유형의 이름입니다. 메시지는 애플리케이션 메시지 유형이거나 Broker 시스템 메시지일 수 있습니다.|  
 |**message_type_id**|**int**|메시지를 설명하는 메시지 유형의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 개체 식별자입니다.|  
 |**validation**|**nchar(2)**|메시지에 사용된 유효성 검사입니다.<br /><br /> **E**=Empty**N**=None**X**=XML|  
 |**message_body**|**varbinary(MAX)**|메시지 내용입니다.|  
@@ -177,14 +177,14 @@ ms.locfileid: "68141283"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>1. 대화 그룹의 모든 메시지에 대한 모든 열 받기  
+### <a name="a-receiving-all-columns-for-all-messages-in-a-conversation-group"></a>1\. 대화 그룹의 모든 메시지에 대한 모든 열 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 결과 집합으로 메시지를 반환합니다.  
   
 ```  
 RECEIVE * FROM ExpenseQueue ;  
 ```  
   
-### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>2. 대화 그룹의 모든 메시지에 대해 지정된 열 받기  
+### <a name="b-receiving-specified-columns-for-all-messages-in-a-conversation-group"></a>2\. 대화 그룹의 모든 메시지에 대해 지정된 열 받기  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 문은 `conversation_handle`, `message_type_name` 및 `message_body` 열을 포함하는 결과 집합으로 메시지를 반환합니다.  
   
 ```  
@@ -277,7 +277,7 @@ WAITFOR (
 TIMEOUT 60000 ;  
 ```  
   
-### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>9. 메시지 받기, 열의 유형 수정  
+### <a name="i-receiving-messages-modifying-the-type-of-a-column"></a>9\. 메시지 받기, 열의 유형 수정  
  다음 예에서는 `ExpenseQueue` 큐에서 사용 가능한 다음 대화 그룹에 대한 모든 수신 가능한 메시지를 받습니다. 메시지 유형이 메시지에 XML 문서가 포함되어 있음을 나타내면 문은 메시지 본문을 XML로 변환합니다.  
   
 ```  

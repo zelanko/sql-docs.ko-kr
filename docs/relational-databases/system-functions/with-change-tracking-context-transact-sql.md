@@ -26,10 +26,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67950920"
 ---
-# <a name="with-changetrackingcontext-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT(Transact-SQL)
+# <a name="with-change_tracking_context-transact-sql"></a>WITH CHANGE_TRACKING_CONTEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  데이터가 변경된 경우 주관자 ID와 같은 변경 컨텍스트가 지정되도록 설정합니다. 예를 들어 변경 내용 추적을 사용할 경우 응용 프로그램은 응용 프로그램 자체의 변경 내용과 응용 프로그램 외부 데이터의 변경 내용을 구분할 수 있습니다.  
+  데이터가 변경된 경우 주관자 ID와 같은 변경 컨텍스트가 지정되도록 설정합니다. 예를 들어 변경 내용 추적을 사용할 경우 애플리케이션은 애플리케이션 자체의 변경 내용과 애플리케이션 외부 데이터의 변경 내용을 구분할 수 있습니다.  
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,7 +42,7 @@ WITH CHANGE_TRACKING_CONTEXT ( context )
   
 #### <a name="parameters"></a>매개 변수  
  *context*  
- 호출 응용 프로그램에서 제공되고 변경에 대한 변경 내용 추적 정보와 함께 저장되는 컨텍스트 정보입니다. *상황에 맞는* 됩니다 **varbinary(128)** 합니다.  
+ 호출 애플리케이션에서 제공되고 변경에 대한 변경 내용 추적 정보와 함께 저장되는 컨텍스트 정보입니다. *상황에 맞는* 됩니다 **varbinary(128)** 합니다.  
   
  값은 상수 또는 변수가 될 수 있지만 NULL이 될 수는 없습니다.  
   

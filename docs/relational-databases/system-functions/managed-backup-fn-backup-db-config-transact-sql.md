@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68067785"
 ---
-# <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact SQL)
+# <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup.fn_backup_db_config (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성 설정으로 0개, 1개 또는 그 이상의 행을 반환합니다. 지정된 데이터베이스에 대한 1개 행을 반환하거나 인스턴스에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 사용하여 구성된 모든 데이터베이스에 대한 정보를 반환합니다.  
@@ -54,10 +54,10 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
 |db_guid|UNIQUEIDENTIFIER|데이터베이스를 고유하게 식별하는 식별자입니다.|  
 |is_availability_database|BIT|데이터베이스가 가용성 그룹에 참여 중인지 여부입니다. 값 1은 데이터베이스가 가용성 데이터베이스임을 나타내고 0은 그렇지 않음을 나타냅니다.|  
 |is_dropped|BIT|값 1은 삭제된 데이터베이스임을 나타냅니다.|  
-|credential_name|SYSNAME|저장소 계정 인증에 사용되는 SQL 자격 증명의 이름입니다. NULL 값은 SQL 자격 증명이 설정되지 않았음을 나타냅니다.|  
+|credential_name|SYSNAME|스토리지 계정 인증에 사용되는 SQL 자격 증명의 이름입니다. NULL 값은 SQL 자격 증명이 설정되지 않았음을 나타냅니다.|  
 |retention_days|INT|현재 보존 기간(일)입니다. NULL 값은 이 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 구성되지 않았음을 나타냅니다.|  
 |is_managed_backup_enabled|INT|이 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 현재 사용하도록 설정되었는지 여부를 나타냅니다. 값 1은 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 현재 사용하도록 설정되었음을 나타내고 값 0은 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 이 데이터베이스에 대해 사용하도록 설정되지 않았음을 나타냅니다.|  
-|storage_url|NVARCHAR(1024)|저장소 계정의 URL입니다.|  
+|storage_url|NVARCHAR(1024)|스토리지 계정의 URL입니다.|  
 |Encryption_algorithm|NCHAR(20)|백업을 암호화할 때 사용할 현재 암호화 알고리즘을 반환합니다.|  
 |Encryptor_type|NCHAR(15)|암호기 설정을 반환 합니다. 인증서 또는 비대칭 키를 반환합니다.|  
 |Encryptor_name|NCHAR(max_length_of_cert/asymm_key_name)|인증서 또는 비대칭 키의 이름입니다.|  

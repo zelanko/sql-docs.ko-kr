@@ -35,7 +35,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  (`VariantArray`) 현재 범위에서 평가되고, 조회할 키 또는 이름의 집합을 지정하는 식입니다. 예를 들어 다중값 매개 변수의 경우 `=Parameters!IDs.value`입니다.  
   
  *destination_expression*  
- (`Variant`) 데이터 집합의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`) 을 입력합니다.  
+ (`Variant`) 데이터 세트의 각 행에 대해 평가되고, 일치시킬 키 또는 이름을 지정하는 식입니다. `=Fields!ID.Value`) 을 입력합니다.  
   
  *result_expression*  
  (`Variant`) 데이터 집합의 행에 대해 평가 되는 식을 위치 *source_expression* = *destination_expression*, 검색할 값을 지정 하 고 있습니다. `=Fields!Name.Value`) 을 입력합니다.  
@@ -47,7 +47,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  `VariantArray`를 반환하거나, 일치하는 항목이 없으면 `Nothing`을 반환합니다.  
   
 ## <a name="remarks"></a>Remarks  
- `Multilookup`을 사용하여 일 대 일 관계가 있는 이름-값 쌍의 데이터 집합에서 값 집합을 검색할 수 있습니다. `MultiLookup`은 이름 또는 키 집합에 대해 `Lookup`을 호출하는 것과 동일합니다. 예를 들어 기본 키 식별자를 기반으로 하는 다중값 매개 변수의 경우 테이블의 입력란에 있는 식에 `Multilookup`을 사용하여 매개 변수 또는 테이블에 바인딩되지 않은 데이터 집합에서 연결된 값을 검색할 수 있습니다.  
+ `Multilookup`을 사용하여 일 대 일 관계가 있는 이름-값 쌍의 데이터 세트에서 값 집합을 검색할 수 있습니다. `MultiLookup`은 이름 또는 키 집합에 대해 `Lookup`을 호출하는 것과 동일합니다. 예를 들어 기본 키 식별자를 기반으로 하는 다중값 매개 변수의 경우 테이블의 입력란에 있는 식에 `Multilookup`을 사용하여 매개 변수 또는 테이블에 바인딩되지 않은 데이터 세트에서 연결된 값을 검색할 수 있습니다.  
   
  `Multilookup`에서는 다음을 수행합니다.  
   

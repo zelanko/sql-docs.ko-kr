@@ -101,8 +101,8 @@ sys.dm_db_index_physical_stats (
 |fragment_count|**bigint**|IN_ROW_DATA 할당 단위의 리프 수준에 있는 조각 수입니다. 조각에 대한 자세한 내용은 주의를 참조하세요.<br /><br /> 리프가 아닌 인덱스 수준과 LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위에 대해 NULL입니다.<br /><br /> *Mode* = 샘플링 된 경우 힙의 경우 NULL입니다.|  
 |avg_fragment_size_in_pages|**float**|IN_ROW_DATA 할당 단위의 리프 수준에 있는 조각 하나의 평균 페이지 수입니다.<br /><br /> 리프가 아닌 인덱스 수준과 LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위에 대해 NULL입니다.<br /><br /> *Mode* = 샘플링 된 경우 힙의 경우 NULL입니다.|  
 |page_count|**bigint**|전체 인덱스 또는 데이터 페이지 수입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 있는 총 인덱스 페이지 수입니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 총 데이터 페이지 수입니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위의 경우 할당 단위에서 총 페이지 수입니다.|  
-|avg_page_space_used_in_percent|**float**|모든 페이지에서 사용되는 사용 가능한 데이터 저장 공간의 평균 백분율입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 평균이 적용됩니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 모든 데이터 페이지의 평균입니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW DATA 할당 단위의 경우 할당 단위에서 모든 페이지의 평균입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
-|record_count|**bigint**|총 레코드 수입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 총 레코드 수가 적용됩니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 총 레코드 수입니다.<br /><br /> **참고:** 힙의 경우이 함수에서 반환 된 레코드 수는 힙에 대해 SELECT COUNT (\*)를 실행 하 여 반환 되는 행 수와 일치 하지 않을 수 있습니다. 이것은 한 행에 여러 레코드가 있기 때문입니다. 예를 들어 특정 업데이트 상황에서 업데이트 작업으로 인해 단일 힙 행에 한 개의 전달되고 있는 레코드와 한 개의 전달된 레코드가 있을 수 있습니다. 또한 가장 큰 LOB 행이 LOB_DATA 저장소에서 여러 레코드로 분할됩니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위의 경우 전체 할당 단위에서 총 레코드 수입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
+|avg_page_space_used_in_percent|**float**|모든 페이지에서 사용되는 사용 가능한 데이터 스토리지 공간의 평균 백분율입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 평균이 적용됩니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 모든 데이터 페이지의 평균입니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW DATA 할당 단위의 경우 할당 단위에서 모든 페이지의 평균입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
+|record_count|**bigint**|총 레코드 수입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 총 레코드 수가 적용됩니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 총 레코드 수입니다.<br /><br /> **참고:** 힙의 경우이 함수에서 반환 된 레코드 수는 힙에 대해 SELECT COUNT (\*)를 실행 하 여 반환 되는 행 수와 일치 하지 않을 수 있습니다. 이것은 한 행에 여러 레코드가 있기 때문입니다. 예를 들어 특정 업데이트 상황에서 업데이트 작업으로 인해 단일 힙 행에 한 개의 전달되고 있는 레코드와 한 개의 전달된 레코드가 있을 수 있습니다. 또한 가장 큰 LOB 행이 LOB_DATA 스토리지에서 여러 레코드로 분할됩니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위의 경우 전체 할당 단위에서 총 레코드 수입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
 |ghost_record_count|**bigint**|할당 단위에서 삭제할 레코드 정리 태스크에 의해 제거될 삭제할 레코드 수입니다.<br /><br /> IN_ROW_DATA 할당 단위에서 리프가 아닌 인덱스 수준에 대해 0입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
 |version_ghost_record_count|**bigint**|할당 단위에서 처리 중인 스냅샷 격리 트랜잭션이 보유하고 있는 삭제할 레코드 수입니다.<br /><br /> IN_ROW_DATA 할당 단위에서 리프가 아닌 인덱스 수준에 대해 0입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
 |min_record_size_in_bytes|**int**|최소 레코드 크기(바이트)입니다.<br /><br /> 인덱스의 경우 IN_ROW_DATA 할당 단위에서 B-트리의 현재 수준에 최소 레코드 크기가 적용됩니다.<br /><br /> 힙의 경우 IN_ROW_DATA 할당 단위에서 최소 레코드 크기입니다.<br /><br /> LOB_DATA 또는 ROW_OVERFLOW_DATA 할당 단위의 경우 전체 할당 단위에서 최소 레코드 크기입니다.<br /><br /> *Mode* =가 제한 된 경우 NULL입니다.|  
@@ -173,7 +173,7 @@ GO
 ## <a name="detecting-fragmentation"></a>조각화 검색  
  조각화는 테이블, 즉 테이블에 정의된 인덱스에 대한 데이터 수정 작업(INSERT, UPDATE 및 DELETE 문)을 처리할 때 발생합니다. 이러한 수정 사항은 테이블 및 인덱스의 행에서 균등하게 분산되지 않으므로 각 페이지의 사용률이 시간에 따라 달라지게 됩니다. 테이블의 인덱스 일부 또는 전부를 검색하는 쿼리의 경우 이런 테이블 조각화로 인해 읽어야 하는 페이지의 수가 늘어날 수 있으며 이는 데이터의 병렬 검색에 방해가 됩니다.  
   
- 인덱스 또는 힙의 조각화 수준은 avg_fragmentation_in_percent 열에 표시됩니다. 힙의 경우 이 값은 힙의 익스텐트 조각화를 나타냅니다. 인덱스의 경우 이 값은 인덱스의 논리적 조각화를 나타냅니다. DBCC SHOWCONTIG와는 달리 두 경우 모두 조각화 계산 알고리즘에 따라 여러 파일에 걸쳐 있는 저장소가 고려되므로 결과가 정확합니다.  
+ 인덱스 또는 힙의 조각화 수준은 avg_fragmentation_in_percent 열에 표시됩니다. 힙의 경우 이 값은 힙의 익스텐트 조각화를 나타냅니다. 인덱스의 경우 이 값은 인덱스의 논리적 조각화를 나타냅니다. DBCC SHOWCONTIG와는 달리 두 경우 모두 조각화 계산 알고리즘에 따라 여러 파일에 걸쳐 있는 스토리지가 고려되므로 결과가 정확합니다.  
   
  **논리적 조각화**  
   

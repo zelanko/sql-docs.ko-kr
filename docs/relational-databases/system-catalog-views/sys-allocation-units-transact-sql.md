@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68001293"
 ---
-# <a name="sysallocationunits-transact-sql"></a>sys.allocation_units(Transact-SQL)
+# <a name="sysallocation_units-transact-sql"></a>sys.allocation_units(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   데이터베이스의 각 할당 단위에 대해 한 행씩 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "68001293"
 |allocation_unit_id|**bigint**|할당 단위의 ID입니다. 데이터베이스 내에서 고유합니다.|  
 |type|**tinyint**|할당 단위 형식입니다.<br /><br /> 0 = 삭제됨<br /><br /> 1 = 행 내부 데이터(LOB 데이터 형식을 제외한 모든 데이터 형식)<br /><br /> 2 = LOB (large object) 데이터 (**텍스트**, **ntext**, **이미지**하십시오 **xml**, 큰 값 형식 및 CLR 사용자 정의 형식)<br /><br /> 3 = 행 오버플로 데이터|  
 |type_desc|**nvarchar(60)**|할당 단위 유형에 대한 설명입니다.<br /><br /> **삭제**<br /><br /> **IN_ROW_DATA**<br /><br /> **LOB_DATA**<br /><br /> **ROW_OVERFLOW_DATA**|  
-|container_id|**bigint**|할당 단위와 연결된 저장 컨테이너의 ID입니다.<br /><br /> type이 1 또는 3이면 container_id는 sys.partitions.hobt_id입니다.<br /><br /> type이 2이면 container_id = sys.partitions.partition_id입니다.<br /><br /> 0 = 삭제가 지연된 것으로 표시된 할당 단위|  
+|container_id|**bigint**|할당 단위와 연결된 스토리지 컨테이너의 ID입니다.<br /><br /> type이 1 또는 3이면 container_id는 sys.partitions.hobt_id입니다.<br /><br /> type이 2이면 container_id = sys.partitions.partition_id입니다.<br /><br /> 0 = 삭제가 지연된 것으로 표시된 할당 단위|  
 |data_space_id|**int**|이 할당 단위가 있는 파일 그룹의 ID입니다.|  
 |total_pages|**bigint**|이 할당 단위가 할당하거나 예약한 총 페이지 수입니다.|  
 |used_pages|**bigint**|실제로 사용 중인 총 페이지 수입니다.|  

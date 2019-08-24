@@ -46,7 +46,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ## <a name="remarks"></a>설명  
  **마이닝 모델** 또는 **마이닝 구조**를 지정 하지 않으면에서 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이름을 기준으로 개체 유형을 검색 하 고 올바른 개체를 처리 합니다. 서버에 이름이 서로 동일한 마이닝 구조 및 마이닝 모델이 있는 경우에는 오류가 반환됩니다.  
   
- 두 번째 구문 형식을 사용 하 여 *\<개체 >* 를 삽입 합니다. COLUMN_VALUES 모델을 학습 하지 않고 모델 열에 직접 데이터를 삽입할 수 있습니다. 이렇게 하면 간결하게 정렬된 방식으로 모델에 열 데이터가 제공되므로 계층 구조나 정렬된 열이 포함된 데이터 집합으로 작업할 때 유용합니다.  
+ 두 번째 구문 형식을 사용 하 여 *\<개체 >* 를 삽입 합니다. COLUMN_VALUES 모델을 학습 하지 않고 모델 열에 직접 데이터를 삽입할 수 있습니다. 이렇게 하면 간결하게 정렬된 방식으로 모델에 열 데이터가 제공되므로 계층 구조나 정렬된 열이 포함된 데이터 세트으로 작업할 때 유용합니다.  
   
  마이닝 모델 또는 마이닝 구조와 함께 **INSERT INTO** 를 사용 하 고 \<매핑된 모델 열 > 및 \<원본 데이터 쿼리 > 인수를 그대로 사용 하는 경우 문은 **processdefault**와 같이 동작 합니다. 이미 존재 합니다. 바인딩이 없는 경우에는 오류가 반환됩니다. **Processdefault**에 대 한 자세한 내용은 [처리 옵션 및 설정 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-options-and-settings-analysis-services)을 참조 하세요. 다음 예에서는 구문을 보여 줍니다.  
   

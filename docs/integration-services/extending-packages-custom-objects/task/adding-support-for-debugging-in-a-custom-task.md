@@ -33,7 +33,7 @@ ms.locfileid: "68062901"
 [!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임 엔진에서는 중단점을 사용하여 실행 중 패키지, 태스크 및 기타 유형의 컨테이너를 일시 중지할 수 있습니다. 중단점을 사용하면 응용 프로그램이나 태스크가 올바르게 실행되지 못하도록 하는 오류를 검토하고 수정할 수 있습니다. 중단점 아키텍처를 통해 클라이언트는 태스크 처리가 일시 중지된 동안 정의된 실행 지점에서 패키지에 있는 개체의 런타임 값을 평가할 수 있습니다.  
+  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] 런타임 엔진에서는 중단점을 사용하여 실행 중 패키지, 태스크 및 기타 유형의 컨테이너를 일시 중지할 수 있습니다. 중단점을 사용하면 애플리케이션이나 태스크가 올바르게 실행되지 못하도록 하는 오류를 검토하고 수정할 수 있습니다. 중단점 아키텍처를 통해 클라이언트는 태스크 처리가 일시 중지된 동안 정의된 실행 지점에서 패키지에 있는 개체의 런타임 값을 평가할 수 있습니다.  
   
  사용자 지정 태스크 개발자는 이 아키텍처를 기반으로 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 인터페이스와 해당 부모 인터페이스인 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend>를 사용하여 사용자 지정 중단점 대상을 만들 수 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSBreakpointSite> 인터페이스는 사용자 지정 중단점 위치 또는 대상을 만들고 관리하기 위한 태스크와 런타임 엔진 간의 상호 작용을 정의합니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSSuspend> 인터페이스는 런타임 엔진에서 실행을 일시 중지하거나 다시 시작하도록 태스크에 알리기 위해 호출하는 메서드 및 속성을 제공합니다.  
   

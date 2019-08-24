@@ -18,7 +18,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62775336"
 ---
 # <a name="install-sql-server-with-smb-fileshare-as-a-storage-option"></a>SMB fileshare 기능이 있는 SQL Server를 스토리지 옵션으로 설치
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시스템 데이터베이스(Master, Model, MSDB 및 TempDB) 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스를 SMB(서버 메시지 블록) 파일 서버와 함께 저장소 옵션으로 설치할 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다.  
+  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 시스템 데이터베이스(Master, Model, MSDB 및 TempDB) 및 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 사용자 데이터베이스를 SMB(서버 메시지 블록) 파일 서버와 함께 스토리지 옵션으로 설치할 수 있습니다. 이는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 독립 실행형 설치와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] FCI(장애 조치(Failover) 클러스터 설치) 모두에 적용됩니다.  
   
 > [!NOTE]  
 >  Filestream이 현재 SMB 파일 공유에서 지원되지 않습니다.  
@@ -32,7 +32,7 @@ ms.locfileid: "62775336"
   
 -   \\\ServerName\ShareName  
   
- Universal Naming Convention에 대 한 자세한 내용은 참조 하세요. [UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534)합니다.  
+ Universal Naming Convention에 대 한 자세한 내용은 참조 하세요. [UNC](https://go.microsoft.com/fwlink/?LinkId=245534) (https://go.microsoft.com/fwlink/?LinkId=245534) 합니다.  
   
  루프백 UNC 경로(서버 이름이 localhost, 127.0.0.1또는 로컬 컴퓨터 이름인 UNC 경로)는 지원되지 않습니다. 특별한 경우이기는 하지만 같은 노드 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서 호스팅되는 파일 서버 클러스터를 사용한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 실행도 지원되지 않습니다. 이러한 상황이 발생하지 않게 하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 와 파일 서버 클러스터를 별도의 Windows 클러스터에 만드는 것이 좋습니다.  
   
@@ -87,22 +87,22 @@ ms.locfileid: "62775336"
 |운영 체제|SMB2 프로토콜 버전|이점 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |----------------------|---------------------------|-------------------------------------------|  
 |[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP 2|2.0|이전 SMB 버전보다 성능이 향상되었습니다.<br /><br /> 내구성. 일시적인 네트워크 결함을 복구하는 데 도움이 됩니다.|  
-|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1(Server Core 포함)|2.1|대형 MTU 지원. SQL 백업 및 복원과 같은 대량 데이터 전송에 유용합니다. 이 기능은 사용자가 사용하도록 설정해야 합니다. 이 기능을 사용하는 방법에 대한 자세한 내용은 [SMB의 새로운 기능](https://go.microsoft.com/fwlink/?LinkID=237319)(https://go.microsoft.com/fwlink/?LinkID=237319)을 참조하세요.<br /><br /> 크게 향상된 성능(특히 SQL OLTP 스타일 작업의 경우) 이러한 향상된 성능을 활용하려면 핫픽스를 적용해야 합니다. 핫픽스에 대한 자세한 내용은 [이 항목](https://go.microsoft.com/fwlink/?LinkId=237320)(https://go.microsoft.com/fwlink/?LinkId=237320))을 참조하세요.|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)](Server Core 포함)|3.0|파일 서버 클러스터 구성에서 SQL DBA 또는 파일 서버 관리자에게 필요한 관리자 개입이 없고 작동 중단 시간이 없는 파일 공유의 투명한 장애 조치(failover) 지원<br /><br /> 여러 네트워크 인터페이스를 동시에 사용할 뿐 아니라 네트워크 인터페이스 오류에 대한 허용 오차를 사용하는 IO 지원<br /><br /> RDMA 기능을 사용하는 네트워크 인터페이스 지원<br /><br /> 이러한 기능 및 서버 메시지 블록에 대한 자세한 내용은 [서버 메시지 블록 개요](https://go.microsoft.com/fwlink/?LinkId=253174)(https://go.microsoft.com/fwlink/?LinkId=253174)를 참조하세요.<br /><br /> 지속적인 가용성과 함께 SoFS(Scale Out File Server) 지원.|  
-|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2(Server Core 포함)|3.2|파일 서버 클러스터 구성에서 SQL DBA 또는 파일 서버 관리자에게 필요한 관리자 개입이 없고 작동 중단 시간이 없는 파일 공유의 투명한 장애 조치(failover) 지원<br /><br /> SMB 다중 채널을 사용해서 여러 네트워크 인터페이스를 동시에 사용할 뿐 아니라 네트워크 인터페이스 오류에 대한 허용 오차를 사용하는 IO 지원<br /><br /> SMB 다이렉트를 사용하여 RDMA 기능을 사용하는 네트워크 인터페이스 지원<br /><br /> 이러한 기능 및 서버 메시지 블록에 대한 자세한 내용은 [서버 메시지 블록 개요](https://go.microsoft.com/fwlink/?LinkId=253174)(https://go.microsoft.com/fwlink/?LinkId=253174)를 참조하세요.<br /><br /> 지속적인 가용성과 함께 SoFS(Scale Out File Server) 지원.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP에 일반적인 작은 임의 읽기/쓰기 I/O에 최적화됨.<br /><br /> MTU(최대 전송 단위)는 기본적으로 설정되어 있으며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 웨어하우스 및 데이터베이스 백업 또는 복원과 같은 대규모 순차적 전송에서 성능을 크게 향상시켜 줍니다.|  
+|[!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] SP 1(Server Core 포함)|2.1|대형 MTU 지원. SQL 백업 및 복원과 같은 대량 데이터 전송에 유용합니다. 이 기능은 사용자가 사용하도록 설정해야 합니다. 이 기능을 사용하는 방법에 대한 자세한 내용은 [SMB의 새로운 기능](https://go.microsoft.com/fwlink/?LinkID=237319)(https://go.microsoft.com/fwlink/?LinkID=237319) 을 참조하세요.<br /><br /> 크게 향상된 성능(특히 SQL OLTP 스타일 작업의 경우) 이러한 향상된 성능을 활용하려면 핫픽스를 적용해야 합니다. 핫픽스에 대한 자세한 내용은 [이 항목](https://go.microsoft.com/fwlink/?LinkId=237320)(https://go.microsoft.com/fwlink/?LinkId=237320) )을 참조하세요.|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)](Server Core 포함)|3.0|파일 서버 클러스터 구성에서 SQL DBA 또는 파일 서버 관리자에게 필요한 관리자 개입이 없고 작동 중단 시간이 없는 파일 공유의 투명한 장애 조치(failover) 지원<br /><br /> 여러 네트워크 인터페이스를 동시에 사용할 뿐 아니라 네트워크 인터페이스 오류에 대한 허용 오차를 사용하는 IO 지원<br /><br /> RDMA 기능을 사용하는 네트워크 인터페이스 지원<br /><br /> 이러한 기능 및 서버 메시지 블록에 대한 자세한 내용은 [서버 메시지 블록 개요](https://go.microsoft.com/fwlink/?LinkId=253174)(https://go.microsoft.com/fwlink/?LinkId=253174) 를 참조하세요.<br /><br /> 지속적인 가용성과 함께 SoFS(Scale Out File Server) 지원.|  
+|[!INCLUDE[win8srv](../../includes/win8srv-md.md)] R2(Server Core 포함)|3.2|파일 서버 클러스터 구성에서 SQL DBA 또는 파일 서버 관리자에게 필요한 관리자 개입이 없고 작동 중단 시간이 없는 파일 공유의 투명한 장애 조치(failover) 지원<br /><br /> SMB 다중 채널을 사용해서 여러 네트워크 인터페이스를 동시에 사용할 뿐 아니라 네트워크 인터페이스 오류에 대한 허용 오차를 사용하는 IO 지원<br /><br /> SMB 다이렉트를 사용하여 RDMA 기능을 사용하는 네트워크 인터페이스 지원<br /><br /> 이러한 기능 및 서버 메시지 블록에 대한 자세한 내용은 [서버 메시지 블록 개요](https://go.microsoft.com/fwlink/?LinkId=253174)(https://go.microsoft.com/fwlink/?LinkId=253174) 를 참조하세요.<br /><br /> 지속적인 가용성과 함께 SoFS(Scale Out File Server) 지원.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLTP에 일반적인 작은 임의 읽기/쓰기 I/O에 최적화됨.<br /><br /> MTU(최대 전송 단위)는 기본적으로 설정되어 있으며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 웨어하우스 및 데이터베이스 백업 또는 복원과 같은 대규모 순차적 전송에서 성능을 크게 향상시켜 줍니다.|  
   
 ## <a name="security-considerations"></a>보안 고려 사항  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정은 SMB 공유 폴더에 대해 FULL CONTROL 공유 권한 및 NTFS 권한이 있어야 합니다. SMB 파일 서버가 사용되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정은 도메인 계정 또는 시스템 계정일 수 있습니다. 공유 및 NTFS 권한에 대한 자세한 내용은 [파일 서버의 공유 및 NTFS 권한](https://go.microsoft.com/fwlink/?LinkId=245535)(https://go.microsoft.com/fwlink/?LinkId=245535)을 참조하세요.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정은 SMB 공유 폴더에 대해 FULL CONTROL 공유 권한 및 NTFS 권한이 있어야 합니다. SMB 파일 서버가 사용되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정은 도메인 계정 또는 시스템 계정일 수 있습니다. 공유 및 NTFS 권한에 대한 자세한 내용은 [파일 서버의 공유 및 NTFS 권한](https://go.microsoft.com/fwlink/?LinkId=245535)(https://go.microsoft.com/fwlink/?LinkId=245535) 을 참조하세요.  
   
     > [!NOTE]  
     >  SMB 공유 폴더에 대한 FULL CONTROL 공유 권한 및 NTFS 권한은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 계정 및 관리자 서버 역할이 할당된 Windows 사용자에게만 부여되어야 합니다.  
   
-     도메인 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정으로 사용하는 것이 좋습니다. 시스템 계정을 서비스 계정으로 사용하는 경우에는 _<domain_name>_**\\**_<computer_name>_**$** 형식으로 컴퓨터 계정에 대한 사용 권한을 부여해야 합니다.  
+     도메인 계정을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정으로 사용하는 것이 좋습니다. 시스템 계정을 서비스 계정으로 사용하는 경우에는 _<domain_name>_ **\\** _<computer_name>_ **$** 형식으로 컴퓨터 계정에 대한 사용 권한을 부여해야 합니다.  
   
     > [!NOTE]  
     >  -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 설치할 때 SMB 파일 공유를 스토리지 옵션으로 지정하는 경우 도메인 계정을 서비스 계정으로 지정해야 합니다. SMB 파일 공유를 사용하는 경우 시스템 계정은 서비스 계정 게시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치로만 지정할 수 있습니다.  
-    > -   가상 계정은 원격 위치에 대해 인증할 수 없습니다. 모든 가상 계정에는 시스템 계정의 사용 권한이 사용됩니다. _<domain_name>_**\\**_<computer_name>_**$** 형식으로 시스템 계정을 프로비전합니다.  
+    > -   가상 계정은 원격 위치에 대해 인증할 수 없습니다. 모든 가상 계정에는 시스템 계정의 사용 권한이 사용됩니다. _<domain_name>_ **\\** _<computer_name>_ **$** 형식으로 시스템 계정을 프로비전합니다.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 사용되는 계정에는 클러스터를 설치하는 동안 데이터 디렉터리로 사용되는 SMB 파일 공유 폴더 또는 다른 데이터 폴더(사용자 데이터베이스 디렉터리, 사용자 데이터베이스 로그 디렉터리, TempDB 디렉터리, TempDB 로그 디렉터리, 백업 디렉터리)에 대해 FULL CONTROL NTFS 권한이 있어야 합니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "62775336"
   
 ## <a name="known-issues"></a>알려진 문제  
   
--   네트워크로 연결된 스토리지에 있는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 분리한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 다시 연결하려고 시도하는 동안 데이터베이스 권한 문제가 발생할 수 있습니다. 이 문제는 [이 KB 아티클](https://go.microsoft.com/fwlink/?LinkId=237321)(https://go.microsoft.com/fwlink/?LinkId=237321)에 정의되어 있습니다. 이 문제를 해결하려면 KB 문서의 **자세한 정보** 섹션을 참조하십시오.  
+-   네트워크로 연결된 스토리지에 있는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 데이터베이스를 분리한 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 다시 연결하려고 시도하는 동안 데이터베이스 권한 문제가 발생할 수 있습니다. 이 문제는 [이 KB 아티클](https://go.microsoft.com/fwlink/?LinkId=237321)(https://go.microsoft.com/fwlink/?LinkId=237321) 에 정의되어 있습니다. 이 문제를 해결하려면 KB 문서의 **자세한 정보** 섹션을 참조하십시오.  
   
 -   NetApp 디바이스와 같은 일부 타사 제품은 모든 SQL Server API 호출을 지원하지는 않습니다. 이러한 표시 될 수 있습니다.   
     2015-06-04 경우 spid9s Error: 17053, 심각도: 16, 상태: 1.  

@@ -27,7 +27,7 @@ ms.locfileid: "68093207"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>SQLXML 4.0의 주석이 추가된 XSD 스키마
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 섹션에서는 SQLXML 4.0에서 주석이 추가된 XSD 스키마를 사용하는 방법에 대해 설명합니다. 이전 버전의 SQLXML에서는 XDR(XML-Data Reduced) 스키마를 통해 비슷한 기능이 제공되었습니다. 이 섹션에서는 레거시 응용 프로그램을 위한 XDR 정보도 제공합니다.  
+  이 섹션에서는 SQLXML 4.0에서 주석이 추가된 XSD 스키마를 사용하는 방법에 대해 설명합니다. 이전 버전의 SQLXML에서는 XDR(XML-Data Reduced) 스키마를 통해 비슷한 기능이 제공되었습니다. 이 섹션에서는 레거시 애플리케이션을 위한 XDR 정보도 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [주석이 추가 된 XSD 스키마 소개 &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)  

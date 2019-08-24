@@ -29,7 +29,7 @@ ms.locfileid: "63209790"
   
 -   서버에서 커서 끝을 감지하면 커서를 자동으로 닫습니다. 응용 프로그램 호출 해야 합니다 [SQLCloseCursor](../../native-client-odbc-api/sqlclosecursor.md) 하거나 [SQLFreeStmt](../../native-client-odbc-api/sqlfreestmt.md)(SQL_CLOSE) 하지만 드라이버가 닫기 요청을 서버로 보낼 필요가 없습니다. 따라서 서버로의 네트워크 왕복이 줄어듭니다.  
   
- 응용 프로그램에서는 각 드라이버에 맞는 문 특성 SQL_SOPT_SS_CURSOR_OPTIONS를 사용하여 빠른 정방향 전용 커서를 요청합니다. SQL_CO_FFO로 설정하면 자동 인출 없이 빠른 정방향 전용 커서를 활성화합니다. SQL_CO_FFO_AF로 설정하면 자동 인출 옵션도 활성화됩니다. 자동 인출 하는 방법에 대 한 자세한 내용은 참조 하세요. [ODBC 커서로 자동 인출 사용 하 여](using-autofetch-with-odbc-cursors.md)입니다.  
+ 애플리케이션에서는 각 드라이버에 맞는 문 특성 SQL_SOPT_SS_CURSOR_OPTIONS를 사용하여 빠른 정방향 전용 커서를 요청합니다. SQL_CO_FFO로 설정하면 자동 인출 없이 빠른 정방향 전용 커서를 활성화합니다. SQL_CO_FFO_AF로 설정하면 자동 인출 옵션도 활성화됩니다. 자동 인출 하는 방법에 대 한 자세한 내용은 참조 하세요. [ODBC 커서로 자동 인출 사용 하 여](using-autofetch-with-odbc-cursors.md)입니다.  
   
  자동 인출 기능을 사용하는 빠른 정방향 전용 커서는 서버 왕복을 하나만 포함하는 작은 결과 집합을 검색하는 데 사용할 수 있습니다. 이 단계에서는 *n* 반환할 행 수입니다.  
   

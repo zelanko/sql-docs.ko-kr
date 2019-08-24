@@ -24,10 +24,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68032985"
 ---
-# <a name="spaddapprole-transact-sql"></a>sp_addapprole(Transact-SQL)
+# <a name="sp_addapprole-transact-sql"></a>sp_addapprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  현재 데이터베이스에 응용 프로그램 역할을 추가합니다.  
+  현재 데이터베이스에 애플리케이션 역할을 추가합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하 여 [CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md) 대신 합니다.  
@@ -44,7 +44,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
 ## <a name="arguments"></a>인수  
 `[ @rolename = ] 'role'` 새 응용 프로그램 역할의 이름이입니다. *역할* 됩니다 **sysname**, 기본값은 없습니다. *역할* 유효한 식별자 여야 하며 현재 데이터베이스에 이미 존재할 수 없습니다.  
   
- 응용 프로그램 역할 이름은 문자, 기호 및 숫자를 비롯하여 1자에서 128자까지의 문자를 포함할 수 있습니다. 역할 이름은 백슬래시를 포함할 수 없습니다 (\\) NULL 또는 빈 문자열 (")도 있습니다.  
+ 애플리케이션 역할 이름은 문자, 기호 및 숫자를 비롯하여 1자에서 128자까지의 문자를 포함할 수 있습니다. 역할 이름은 백슬래시를 포함할 수 없습니다 (\\) NULL 또는 빈 문자열 (")도 있습니다.  
   
 `[ @password = ] 'password'` 응용 프로그램 역할을 활성화 하는 데 필요한 암호가입니다. *암호* 됩니다 **sysname**, 기본값은 없습니다. *암호* NULL 일 수 없습니다.  
   
@@ -56,9 +56,9 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
   
  이전 버전의 이전 버전과 호환성을 유지 하기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], **sp_addapprole** 다음을 수행 합니다.  
   
--   응용 프로그램 역할과 이름이 같은 스키마가 아직 없으면 해당 스키마가 생성됩니다. 새 스키마는 응용 프로그램 역할이 소유하고 응용 프로그램 역할의 기본 스키마가 됩니다.  
+-   애플리케이션 역할과 이름이 같은 스키마가 아직 없으면 해당 스키마가 생성됩니다. 새 스키마는 애플리케이션 역할이 소유하고 애플리케이션 역할의 기본 스키마가 됩니다.  
   
--   응용 프로그램 역할과 이름이 같은 스키마가 이미 있으면 프로시저가 실패합니다.  
+-   애플리케이션 역할과 이름이 같은 스키마가 이미 있으면 프로시저가 실패합니다.  
   
 -   암호 복잡성을 확인 하지 않습니다 **sp_addapprole**합니다. CREATE APPLICATION ROLE에서 검사합니다.  
   
@@ -67,7 +67,7 @@ sp_addapprole [ @rolename = ] 'role' , [ @password = ] 'password'
  합니다 **sp_addapprole** 사용자 정의 트랜잭션 내에서 저장된 프로시저를 실행할 수 없습니다.  
   
 > [!IMPORTANT]  
->  Microsoft ODBC **암호화할** 옵션에서 지원 되지 않습니다 **SqlClient**합니다. 가능한 경우 런타임 시 사용자에게 응용 프로그램 역할 자격 증명을 입력하라는 메시지를 표시할 수도 있습니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지해야 할 경우에는 CryptoAPI 함수를 사용하여 암호화합니다.  
+>  Microsoft ODBC **암호화할** 옵션에서 지원 되지 않습니다 **SqlClient**합니다. 가능한 경우 런타임 시 사용자에게 애플리케이션 역할 자격 증명을 입력하라는 메시지를 표시할 수도 있습니다. 자격 증명은 파일에 저장하지 않는 것이 좋습니다. 자격 증명을 유지해야 할 경우에는 CryptoAPI 함수를 사용하여 암호화합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  데이터베이스에 대한 ALTER ANY APPLICATION ROLE 권한이 필요합니다. 새 역할과 이름 및 소유자가 같은 스키마가 아직 없으면 데이터베이스에 대한 CREATE SCHEMA 권한도 필요합니다.  

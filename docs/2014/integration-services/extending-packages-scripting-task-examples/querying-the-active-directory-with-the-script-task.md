@@ -25,7 +25,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62895032"
 ---
 # <a name="querying-the-active-directory-with-the-script-task"></a>스크립트 태스크를 사용하여 Active Directory 쿼리
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지와 같은 엔터프라이즈 데이터 처리 응용 프로그램에서는 Active Directory에 저장된 직원의 직급, 직함 또는 기타 특징에 따라 데이터를 각기 다르게 처리해야 하는 경우가 종종 있습니다. Active Directory는 사용자에 대한 메타데이터뿐 아니라 컴퓨터 및 프린터와 같은 조직의 기타 자산에 대한 메타데이터도 저장하는 중앙 저장소를 제공하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 디렉터리 서비스입니다. Microsoft .NET Framework의 `System.DirectoryServices` 네임스페이스에서는 Active Directory에 저장된 정보에 따라 데이터 처리 워크플로를 제어할 수 있도록 Active Directory 작업을 위한 클래스를 제공합니다.  
+  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지와 같은 엔터프라이즈 데이터 처리 애플리케이션에서는 Active Directory에 저장된 직원의 직급, 직함 또는 기타 특징에 따라 데이터를 각기 다르게 처리해야 하는 경우가 종종 있습니다. Active Directory는 사용자에 대한 메타데이터뿐 아니라 컴퓨터 및 프린터와 같은 조직의 기타 자산에 대한 메타데이터도 저장하는 중앙 저장소를 제공하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 디렉터리 서비스입니다. Microsoft .NET Framework의 `System.DirectoryServices` 네임스페이스에서는 Active Directory에 저장된 정보에 따라 데이터 처리 워크플로를 제어할 수 있도록 Active Directory 작업을 위한 클래스를 제공합니다.  
   
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  

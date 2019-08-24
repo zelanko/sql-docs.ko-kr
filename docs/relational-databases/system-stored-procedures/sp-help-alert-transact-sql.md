@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68055237"
 ---
-# <a name="sphelpalert-transact-sql"></a>sp_help_alert(Transact-SQL)
+# <a name="sp_help_alert-transact-sql"></a>sp_help_alert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   서버에 대해 정의된 경고에 관한 정보를 보고합니다.  
@@ -75,9 +75,9 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**last_response_date**|**int**|으로 응답 한 날짜를 마지막으로 경고는 **SQLServerAgent** 서비스입니다.|  
 |**last_response_time**|**int**|마지막으로 경고 하는 시간으로 응답 합니다 **SQLServerAgent** 서비스.|  
 |**notification_message**|**nvarchar(512)**|전자 메일 또는 호출기 알림의 일부로서 운영자에게 선택적으로 전달되는 추가 메시지입니다.|  
-|**include_event_description**|**tinyint**|Microsoft Windows 응용 프로그램 로그의 SQL Server 오류에 대한 설명을 알림 메시지의 일부로 포함할지 여부입니다.|  
+|**include_event_description**|**tinyint**|Microsoft Windows 애플리케이션 로그의 SQL Server 오류에 대한 설명을 알림 메시지의 일부로 포함할지 여부입니다.|  
 |**database_name**|**sysname**|오류가 있는 경우 경고가 시작되도록 해 놓은 데이터베이스입니다. 데이터베이스 이름이 NULL인 경우에는 오류 발생 위치에 상관 없이 경고가 시작됩니다.|  
-|**event_description_keyword**|**nvarchar(100)**|제공된 문자 시퀀스와 동일해야 하는 Windows 응용 프로그램 로그 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 설명입니다.|  
+|**event_description_keyword**|**nvarchar(100)**|제공된 문자 시퀀스와 동일해야 하는 Windows 애플리케이션 로그 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 설명입니다.|  
 |**occurrence_count**|**int**|경고가 발생한 횟수입니다.|  
 |**count_reset_date**|**int**|날짜를 **occurrence_count** 마지막으로 다시 설정 합니다.|  
 |**count_reset_time**|**int**|시간을 **occurrence_count** 마지막으로 다시 설정 합니다.|  
@@ -109,9 +109,9 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**last_response_date**|**int**|으로 응답 한 날짜를 마지막으로 경고는 **SQLServerAgent** 서비스입니다.|  
 |**last_response_time**|**int**|마지막으로 경고 하는 시간으로 응답 합니다 **SQLServerAgent** 서비스.|  
 |**notification_message**|**nvarchar(512)**|전자 메일 또는 호출기 알림의 일부로서 운영자에게 선택적으로 전달되는 추가 메시지입니다.|  
-|**include_event_description**|**tinyint**|Windows 응용 프로그램 로그의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 설명을 알림 메시지의 일부로 포함할지 여부입니다.|  
+|**include_event_description**|**tinyint**|Windows 애플리케이션 로그의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 설명을 알림 메시지의 일부로 포함할지 여부입니다.|  
 |**database_name**|**sysname**|오류가 있는 경우 경고가 시작되도록 해 놓은 데이터베이스입니다. 데이터베이스 이름이 NULL인 경우에는 오류 발생 위치에 상관 없이 경고가 시작됩니다.|  
-|**event_description_keyword**|**nvarchar(100)**|제공된 문자 시퀀스와 동일해야 하는 Windows 응용 프로그램 로그 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 설명입니다.|  
+|**event_description_keyword**|**nvarchar(100)**|제공된 문자 시퀀스와 동일해야 하는 Windows 애플리케이션 로그 내의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류에 대한 설명입니다.|  
 |**occurrence_count**|**int**|경고가 발생한 횟수입니다.|  
 |**count_reset_date**|**int**|날짜를 **occurrence_count** 마지막으로 다시 설정 합니다.|  
 |**count_reset_time**|**int**|시간을 **occurrence_count** 마지막으로 다시 설정 합니다.|  

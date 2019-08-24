@@ -74,7 +74,7 @@ DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
   
  *Application_role*  
    
- 응용 프로그램 역할을 지정합니다.  
+ 애플리케이션 역할을 지정합니다.  
   
  *Database_user_mapped_to_Windows_User*  
  

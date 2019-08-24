@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68026915"
 ---
-# <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files(Transact-SQL)
+# <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   파일 크기, 물리적 위치 및 트랜잭션 ID를 포함하여 검사점 파일에 대한 정보를 표시합니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "68026915"
 |relative_file_path|**nvarchar(256)**|컨테이너에 상대적인 파일의 경로에 매핑됩니다.|  
 |file_type|**smallint**|무료에 대 한-1<br /><br /> 데이터 파일에 대해 0입니다.<br /><br /> 델타 파일에 대 한 1입니다.<br /><br /> 루트 파일에 대 한 2<br /><br /> 큰 데이터 파일에 대 한 3|  
 |file_type_desc|**nvarchar(60)**|사용 가능한 것으로 유지 관리 하는 무료 모두 파일 할당에 대 한 제공 됩니다. 사용 가능한 파일 시스템에서 예상 된 요구 사항에 따라 크기가 다양할 수 있습니다. 최대 크기는 1GB입니다.<br /><br /> 데이터 요금-데이터 파일 메모리 최적화 테이블에 삽입 된 행을 포함 합니다.<br /><br /> 델타-델타 파일이 삭제 된 데이터 파일의 행에 대 한 참조를 포함 합니다.<br /><br /> 루트-루트 파일 메모리 최적화 테이블과 고유 하 게 컴파일된 개체에 대 한 시스템 메타 데이터를 포함 합니다.<br /><br /> 큰 데이터-대용량 데이터 파일 포함 (n)varchar(max) 및 varbinary (max) 열 뿐만 아니라 메모리 최적화 테이블에서 columnstore 인덱스의 일부인 열 세그먼트 삽입 값.|  
-|internal_storage_slot|**int**|내부 저장소 배열에 있는 파일의 인덱스입니다. 루트 또는 1이 아닌 상태에 대 한 NULL입니다.|  
+|internal_storage_slot|**int**|내부 스토리지 배열에 있는 파일의 인덱스입니다. 루트 또는 1이 아닌 상태에 대 한 NULL입니다.|  
 |checkpoint_pair_file_id|**uniqueidentifier**|해당 데이터 또는 델타 파일입니다. 루트에 대 한 NULL입니다.|  
 |file_size_in_bytes|**bigint**|디스크에 있는 파일의 크기입니다.|  
 |file_size_used_in_bytes|**bigint**|계속 채워지고 있는 검사점 파일 쌍의 경우 다음 검사점 이후 이 열이 업데이트됩니다.|  
@@ -77,7 +77,7 @@ ms.locfileid: "68026915"
 |relative_file_path|**nvarchar(256)**|컨테이너 위치에 상대적인 데이터 또는 델타 파일의 경로입니다.|  
 |file_type|**tinyint**|데이터 파일의 경우 0이고,<br /><br /> 델타 파일의 경우 1입니다.<br /><br /> 상태 열이 7로 설정된 경우 NULL입니다.|  
 |file_type_desc|**nvarchar(60)**|유형 파일입니다. DATA_FILE, DELTA_FILE 또는 상태 열이 7로 설정 하는 경우 NULL입니다.|  
-|internal_storage_slot|**int**|내부 저장소 배열에 있는 파일의 인덱스입니다. 상태 열이 2 또는 3이 아닌 경우 NULL입니다.|  
+|internal_storage_slot|**int**|내부 스토리지 배열에 있는 파일의 인덱스입니다. 상태 열이 2 또는 3이 아닌 경우 NULL입니다.|  
 |checkpoint_pair_file_id|**uniqueidentifier**|해당하는 데이터 또는 델타 파일입니다.|  
 |file_size_in_bytes|**bigint**|사용되는 파일의 크기입니다. 상태 열이 5, 6 또는 7로 설정된 경우 NULL입니다.|  
 |file_size_used_in_bytes|**bigint**|사용되는 파일의 사용된 크기입니다. 상태 열이 5, 6 또는 7로 설정된 경우 NULL입니다.<br /><br /> 계속 채워지고 있는 검사점 파일 쌍의 경우 다음 검사점 이후 이 열이 업데이트됩니다.|  
@@ -85,7 +85,7 @@ ms.locfileid: "68026915"
 |deleted_row_count|**bigint**|델타 파일의 삭제된 행 수입니다.|  
 |drop_table_deleted_row_count|**bigint**|테이블 삭제의 영향을 받는 데이터 파일의 행 수입니다. 상태 열이 1인 경우 데이터 파일에 적용됩니다.<br /><br /> 삭제된 테이블에서 삭제된 행 수를 표시합니다. 삭제된 테이블에서 행의 메모리 가비지 수집이 완료되고 검사점이 확인된 후 drop_table_deleted_row_count 통계가 컴파일됩니다. 테이블 삭제 통계가 이 열에 적용되기 전에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 시작하는 경우 통계가 복구의 일부로 업데이트됩니다. 복구 프로세스는 삭제된 테이블에서 행을 로드하지 않습니다. 삭제된 테이블의 통계는 로드 단계에서 컴파일되고 복구가 완료되면 이 열에서 보고됩니다.|  
 |state|**int**|0-사전 생성 된<br /><br /> 1-UNDER_CONSTRUCTION<br /><br /> 2 - ACTIVE<br /><br /> 3-MERGE TARGET<br /><br /> 4-MERGED SOURCE<br /><br /> 5-필요한 FOR BACKUP/HA<br /><br /> 6-TOMBSTONE로 전환<br /><br /> 7-삭제|  
-|state_desc|**nvarchar(60)**|PRECREATED-소수의 데이터 및 델타 파일 쌍으로 알려진 검사점 파일 쌍 (Cfp)를 최소화 하거나 없애기 트랜잭션이 실행 되는 대로 새 파일을 할당 하기 위한 대기로 미리 할당 유지 됩니다. 전체 크기는 128MB의 데이터 파일 크기와 8MB의 델타 파일 크기를 포함하지만 데이터를 포함하지 않습니다. CFP 수는 최소값이 8개인 논리 프로세서 또는 스케줄러의 수(코어당 1개, 최대값 없음)로 계산됩니다. 메모리 최적화 테이블이 있는 데이터베이스의 고정된 저장소 오버헤드입니다.<br /><br /> 새로 저장 하는 Cfp 집합 UNDER_CONSTRUCTION-삽입 하 고 마지막 검사점 이후 데이터 행을 삭제 되었을 수 있습니다.<br /><br /> ACTIVE - 이전의 닫힌 검사점에서 삽입된 행과 삭제된 행이 포함됩니다. 이러한 CFP에는 데이터베이스를 다시 시작할 때 트랜잭션 로그의 활성 부분을 적용하기 전에 필요한 모든 삽입된 행과 삭제된 행이 포함됩니다. 이러한 CFP의 크기는 병합 작업이 트랜잭션 작업과 동시에 이루어지는 경우 메모리 최적화 테이블에 대한 메모리 내 크기의 두 배 정도입니다.<br /><br /> -MERGE TARGET CFP 병합 정책에 의해 식별 된 CFP의 통합된 데이터 행을 저장 합니다. 병합이 설치되면 MERGE TARGET이 ACTIVE 상태로 전환됩니다.<br /><br /> MERGED SOURCE-병합 작업이 한 번 되어, 원본 cfp가 MERGED SOURCE로 표시 됩니다. 병합 정책 평가기가 여러 병합을 식별할 수 있지만 CFP는 하나의 병합 작업에만 참여할 수 있습니다.<br /><br /> 필요한 FOR BACKUP/HA-병합을 설치 하 고 MERGE TARGET CFP는 영구 검사점을 병합 원본 cfp가이 상태로 전환의 일부입니다. 이 상태의 CFP는 메모리 최적화 테이블이 포함된 데이터베이스의 정확한 작업을 위해 필요합니다.  예를 들어 이전 시점으로 돌아가기 위해 영구 검사점에서 복구할 수 있습니다. 로그 잘림 지점이 트랜잭션 범위를 벗어나는 경우 가비지 수집에 대해 CFP를 표시할 수 있습니다.<br /><br /> IN TRANSITION TO TOMBSTONE-이러한 Cfp는 메모리 내 OLTP 엔진에서 필요 하지 않은 하 고 수 가비지 수집 될 수 있습니다. 이 상태는 이러한 CFP가 백그라운드 스레드에서 다음 상태인 TOMBSTONE으로 전환되기를 기다리고 있음을 나타냅니다.<br /><br /> 삭제 표시-이러한 Cfp는 filestream 가비지 수집기에 의해 가비지 수집 하기 위해 대기 중인 합니다. ([sp_filestream_force_garbage_collection &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
+|state_desc|**nvarchar(60)**|PRECREATED-소수의 데이터 및 델타 파일 쌍으로 알려진 검사점 파일 쌍 (Cfp)를 최소화 하거나 없애기 트랜잭션이 실행 되는 대로 새 파일을 할당 하기 위한 대기로 미리 할당 유지 됩니다. 전체 크기는 128MB의 데이터 파일 크기와 8MB의 델타 파일 크기를 포함하지만 데이터를 포함하지 않습니다. CFP 수는 최소값이 8개인 논리 프로세서 또는 스케줄러의 수(코어당 1개, 최대값 없음)로 계산됩니다. 메모리 최적화 테이블이 있는 데이터베이스의 고정된 스토리지 오버헤드입니다.<br /><br /> 새로 저장 하는 Cfp 집합 UNDER_CONSTRUCTION-삽입 하 고 마지막 검사점 이후 데이터 행을 삭제 되었을 수 있습니다.<br /><br /> ACTIVE - 이전의 닫힌 검사점에서 삽입된 행과 삭제된 행이 포함됩니다. 이러한 CFP에는 데이터베이스를 다시 시작할 때 트랜잭션 로그의 활성 부분을 적용하기 전에 필요한 모든 삽입된 행과 삭제된 행이 포함됩니다. 이러한 CFP의 크기는 병합 작업이 트랜잭션 작업과 동시에 이루어지는 경우 메모리 최적화 테이블에 대한 메모리 내 크기의 두 배 정도입니다.<br /><br /> -MERGE TARGET CFP 병합 정책에 의해 식별 된 CFP의 통합된 데이터 행을 저장 합니다. 병합이 설치되면 MERGE TARGET이 ACTIVE 상태로 전환됩니다.<br /><br /> MERGED SOURCE-병합 작업이 한 번 되어, 원본 cfp가 MERGED SOURCE로 표시 됩니다. 병합 정책 평가기가 여러 병합을 식별할 수 있지만 CFP는 하나의 병합 작업에만 참여할 수 있습니다.<br /><br /> 필요한 FOR BACKUP/HA-병합을 설치 하 고 MERGE TARGET CFP는 영구 검사점을 병합 원본 cfp가이 상태로 전환의 일부입니다. 이 상태의 CFP는 메모리 최적화 테이블이 포함된 데이터베이스의 정확한 작업을 위해 필요합니다.  예를 들어 이전 시점으로 돌아가기 위해 영구 검사점에서 복구할 수 있습니다. 로그 잘림 지점이 트랜잭션 범위를 벗어나는 경우 가비지 수집에 대해 CFP를 표시할 수 있습니다.<br /><br /> IN TRANSITION TO TOMBSTONE-이러한 Cfp는 메모리 내 OLTP 엔진에서 필요 하지 않은 하 고 수 가비지 수집 될 수 있습니다. 이 상태는 이러한 CFP가 백그라운드 스레드에서 다음 상태인 TOMBSTONE으로 전환되기를 기다리고 있음을 나타냅니다.<br /><br /> 삭제 표시-이러한 Cfp는 filestream 가비지 수집기에 의해 가비지 수집 하기 위해 대기 중인 합니다. ([sp_filestream_force_garbage_collection &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection.md))|  
 |lower_bound_tsn|**bigint**|파일에 포함된 트랜잭션의 하한입니다. 상태 열이 2, 3 또는 4가 아닌 경우 Null입니다.|  
 |upper_bound_tsn|**bigint**|파일에 포함된 트랜잭션의 상한입니다. 상태 열이 2, 3 또는 4가 아닌 경우 Null입니다.|  
 |last_backup_page_count|**int**|마지막 백업에서 결정되는 논리 페이지 수입니다. 상태 열이 2, 3, 4 또는 5로 설정된 경우 적용됩니다. 페이지 수를 알 수 없으면 NULL입니다.|  

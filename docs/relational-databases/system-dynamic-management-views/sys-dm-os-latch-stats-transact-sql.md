@@ -25,7 +25,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68265818"
 ---
-# <a name="sysdmoslatchstats-transact-sql"></a>sys.dm_os_latch_stats(Transact-SQL)
+# <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   클래스별로 구성된 모든 래치 대기에 대한 정보를 반환합니다.  
@@ -80,7 +80,7 @@ GO
 |ALLOC_CACHE_MANAGER|내부 일관성 테스트를 동기화하는 데 사용됩니다.|  
 |ALLOC_FREESPACE_CACHE|힙과 BLOB(Binary Large Object)에 대한 사용 가능한 공간이 있는 페이지의 캐시에 대한 액세스를 동기화하는 데 사용됩니다. 이 클래스의 래치에 대한 경합은 동시에 여러 연결이 힙이나 BLOB에 행을 삽입하려고 할 때 발생할 수 있습니다. 개체를 분할하여 이 경합을 줄일 수 있습니다. 각 분할에는 자체 래치가 있습니다. 분할하면 여러 래치에 삽입이 분산됩니다.|  
 |ALLOC_EXTENT_CACHE|할당되지 않는 페이지를 포함하는 익스텐트의 캐시에 대한 액세스를 동기화하는 데 사용됩니다. 이 클래스의 래치에 대한 경합은 동시에 여러 연결이 같은 할당 단위로 데이터 페이지를 할당하려고 할 때 발생할 수 있습니다. 이 할당 단위가 속한 개체를 분할하여 이 경합을 줄일 수 있습니다.|  
-|ACCESS_METHODS_DATASET_PARENT|병렬 작업 동안 상위 데이터 집합에 대한 하위 데이터 집합 액세스를 동기화하는 데 사용됩니다.|  
+|ACCESS_METHODS_DATASET_PARENT|병렬 작업 동안 상위 데이터 세트에 대한 하위 데이터 세트 액세스를 동기화하는 데 사용됩니다.|  
 |ACCESS_METHODS_HOBT_FACTORY|내부 해시 테이블에 대한 액세스를 동기화하는 데 사용됩니다.|  
 |ACCESS_METHODS_HOBT|HoBt의 메모리 내 표현에 대한 액세스를 제어하는 데 사용됩니다.|  
 |ACCESS_METHODS_HOBT_COUNT|HoBt 페이지 및 행 카운터에 대한 액세스를 동기화하는 데 사용됩니다.|  
@@ -89,10 +89,10 @@ GO
 |ACCESS_METHODS_BULK_ALLOC|대량 할당자 내의 액세스를 동기화하는 데 사용됩니다.|  
 |ACCESS_METHODS_SCAN_RANGE_GENERATOR|병렬 검색 동안 범위 생성자에 대한 액세스를 동기화하는 데 사용됩니다.|  
 |ACCESS_METHODS_KEY_RANGE_GENERATOR|키 범위 병렬 검색 동안 미리 읽기 작업에 대한 액세스를 동기화하는 데 사용됩니다.|  
-|APPEND_ONLY_STORAGE_INSERT_POINT|빠른 추가 전용 저장 단위로 삽입을 동기화하는 데 사용됩니다.|  
-|APPEND_ONLY_STORAGE_FIRST_ALLOC|추가 전용 저장 단위의 첫 번째 할당을 동기화하는 데 사용됩니다.|  
-|APPEND_ONLY_STORAGE_UNIT_MANAGER|빠른 추가 전용 저장 단위 관리자 내의 내부 데이터 구조 액세스 동기화에 사용됩니다.|  
-|APPEND_ONLY_STORAGE_MANAGER|빠른 추가 전용 저장 단위 관리자에서 축소 작업을 동기화하는 데 사용됩니다.|  
+|APPEND_ONLY_STORAGE_INSERT_POINT|빠른 추가 전용 스토리지 단위로 삽입을 동기화하는 데 사용됩니다.|  
+|APPEND_ONLY_STORAGE_FIRST_ALLOC|추가 전용 스토리지 단위의 첫 번째 할당을 동기화하는 데 사용됩니다.|  
+|APPEND_ONLY_STORAGE_UNIT_MANAGER|빠른 추가 전용 스토리지 단위 관리자 내의 내부 데이터 구조 액세스 동기화에 사용됩니다.|  
+|APPEND_ONLY_STORAGE_MANAGER|빠른 추가 전용 스토리지 단위 관리자에서 축소 작업을 동기화하는 데 사용됩니다.|  
 |BACKUP_RESULT_SET|병렬 백업 결과 집합을 동기화하는 데 사용됩니다.|  
 |BACKUP_TAPE_POOL|백업 테이프 풀을 동기화하는 데 사용됩니다.|  
 |BACKUP_LOG_REDO|백업 로그 다시 실행 작업을 동기화하는 데 사용됩니다.|  

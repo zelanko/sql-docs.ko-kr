@@ -101,7 +101,7 @@ ms.locfileid: "66108744"
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 암호화 키를 백업합니다.  
   
-2.  SharePoint 중앙 관리 또는 PowerShell을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 백업합니다. 그러면 SharePoint의 서비스 애플리케이션 데이터베이스도 백업됩니다. [Reporting Services SharePoint 서비스 응용 프로그램 백업 및 복원](../../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)항목을 참조하세요.  
+2.  SharePoint 중앙 관리 또는 PowerShell을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션을 백업합니다. 그러면 SharePoint의 서비스 애플리케이션 데이터베이스도 백업됩니다. [Reporting Services SharePoint 서비스 애플리케이션 백업 및 복원](../../../2014/reporting-services/backup-and-restore-reporting-services-sharepoint-service-applications.md)항목을 참조하세요.  
   
 3.  UEA(무인 실행 계정) 및 Windows 인증이 있는 경우 복원 프로세스에 사용할 수 있도록 자격 증명을 기록해 두십시오.  
   

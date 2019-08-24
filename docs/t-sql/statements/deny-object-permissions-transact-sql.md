@@ -94,7 +94,7 @@ PRIVILEGES
  데이터베이스 역할을 지정합니다.  
   
  *Application_role*  
- 응용 프로그램 역할을 지정합니다.  
+ 애플리케이션 역할을 지정합니다.  
   
  *Database_user_mapped_to_Windows_User*  
  Windows 사용자로 매핑된 데이터베이스 사용자를 지정합니다.  
@@ -148,7 +148,7 @@ GO
 ```  
   
 ### <a name="b-denying-execute-permission-on-a-stored-procedure"></a>2\. 저장 프로시저에 대한 EXECUTE 권한 거부  
- 다음 예에서는 `EXECUTE`이라는 응용 프로그램 역할에 대해 저장 프로시저 `HumanResources.uspUpdateEmployeeHireInfo`에 대한 `Recruiting11` 권한을 거부합니다.  
+ 다음 예에서는 `EXECUTE`이라는 애플리케이션 역할에 대해 저장 프로시저 `HumanResources.uspUpdateEmployeeHireInfo`에 대한 `Recruiting11` 권한을 거부합니다.  
   
 ```  
 DENY EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  

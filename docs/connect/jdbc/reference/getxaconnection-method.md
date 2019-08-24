@@ -44,7 +44,7 @@ public javax.sql.XAConnection getXAConnection()
  이 getXAConnection 메서드는 Javax.sql.xadatasource 인터페이스의 getXAConnection 메서드에 의해 지정 됩니다.  
   
 > [!NOTE]  
->  이 메서드는 일반적으로 XA 연결 풀 구현에서 호출되며 일반적인 JDBC 응용 프로그램 코드에서는 호출되지 않습니다.  
+>  이 메서드는 일반적으로 XA 연결 풀 구현에서 호출되며 일반적인 JDBC 애플리케이션 코드에서는 호출되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [getXAConnection 메서드(SQLServerXADataSource)](../../../connect/jdbc/reference/getxaconnection-method-sqlserverxadatasource.md)   

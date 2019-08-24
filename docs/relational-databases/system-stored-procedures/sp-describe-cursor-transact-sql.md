@@ -92,7 +92,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 ## <a name="remarks"></a>설명  
  sp_describe_cursor는 스크롤 및 업데이트 허용 여부 등과 같은 서버 커서에 대한 전역 특성을 설명합니다. 커서가 반환한 결과 집합의 특성 설명을 보려면 sp_describe_cursor_columns를 사용하십시오. 커서가 참조하는 기본 테이블의 보고서를 보려면 sp_describe_cursor_tables를 사용하십시오. 연결 시 표시될 [!INCLUDE[tsql](../../includes/tsql-md.md)] 서버 커서의 보고서를 얻으려면 sp_cursor_list를 사용하십시오.  
   
- DECLARE CURSOR 문에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 DECLARE CURSOR에 포함된 SELECT 문으로 지원할 수 없는 커서 유형을 요청하는 경우가 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 SELECT 문을 사용하여 커서를 지원할 수 있는 형식으로 암시적으로 변환합니다. DECLARE CURSOR 문에 TYPE_WARNING이 지정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 응용 프로그램에 변환이 완료되었다는 정보 메시지를 전송합니다. sp_describe_cursor에 구현 된 커서의 형식을 확인 하려면 다음 호출할 수 있습니다.  
+ DECLARE CURSOR 문에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 DECLARE CURSOR에 포함된 SELECT 문으로 지원할 수 없는 커서 유형을 요청하는 경우가 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 SELECT 문을 사용하여 커서를 지원할 수 있는 형식으로 암시적으로 변환합니다. DECLARE CURSOR 문에 TYPE_WARNING이 지정된 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 애플리케이션에 변환이 완료되었다는 정보 메시지를 전송합니다. sp_describe_cursor에 구현 된 커서의 형식을 확인 하려면 다음 호출할 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
  public 역할의 멤버 자격이 필요합니다.  

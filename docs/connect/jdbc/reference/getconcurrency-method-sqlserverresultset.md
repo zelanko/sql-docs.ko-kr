@@ -49,7 +49,7 @@ public int getConcurrency()
   
  사용되는 동시성은 해당 결과 집합을 만든 [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md) 개체에 의해 결정됩니다.  
   
- 이 메서드는 실제 동시성을 결정하는 데 사용할 수 있습니다. 응용 프로그램에서 CONCUR_READ_ONLY 또는 CONCUR_UPDATABLE을 선택한 경우에는 이러한 동시성이 반환됩니다. 응용 프로그램에서 기본 동시성을 사용한 경우에는 CONCUR_READ_ONLY가 반환됩니다.  
+ 이 메서드는 실제 동시성을 결정하는 데 사용할 수 있습니다. 애플리케이션에서 CONCUR_READ_ONLY 또는 CONCUR_UPDATABLE을 선택한 경우에는 이러한 동시성이 반환됩니다. 애플리케이션에서 기본 동시성을 사용한 경우에는 CONCUR_READ_ONLY가 반환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

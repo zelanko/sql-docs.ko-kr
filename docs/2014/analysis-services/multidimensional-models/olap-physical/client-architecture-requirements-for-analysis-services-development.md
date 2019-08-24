@@ -27,15 +27,15 @@ ms.locfileid: "68889580"
 # <a name="client-architecture-requirements-for-analysis-services-development"></a>Analysis Services 배포의 클라이언트 아키텍처 요구 사항
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 는씬클라이언트[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 아키텍처를 지원 합니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 계산 엔진은 완전히 서버를 기반으로 하므로 모든 쿼리가 서버에서 확인 됩니다. 결과적으로 각 쿼리에는 클라이언트와 서버 간의 단일 왕복만이 필요하여 쿼리가 복잡해짐에 따라 성능이 확장될 수 있습니다.  
   
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 네이티브 프로토콜은 XML/A(XML for Analysis)입니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 클라이언트 응용 프로그램에 여러 데이터 액세스 인터페이스를 제공하지만 이러한 구성 요소는 모두 XML/A를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 통신합니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]의 네이티브 프로토콜은 XML/A(XML for Analysis)입니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 클라이언트 애플리케이션에 여러 데이터 액세스 인터페이스를 제공하지만 이러한 구성 요소는 모두 XML/A를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 통신합니다.  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]는 다른 프로그래밍 언어 지원을 위해 몇 개의 공급자를 제공하고 있습니다. 공급자는 인터넷 정보 서비스(IIS)를 통한 HTTP나 TCP/IP에서 SOAP 패킷으로 XML for Analysis를 보내고 받으며 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]와 통신합니다. HTTP 연결은 IIS에서 인스턴스화되는 COM 개체를 사용합니다. 이러한 개체를 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터의 통로 역할을 하는 데이터 펌프라고 합니다. 데이터 펌프는 HTTP 스트림에 포함된 기본 데이터를 검사하지 않으며 데이터 라이브러리 자체의 코드에 사용할 수 있는 기본 데이터 구조도 아닙니다.  
   
  ![Analysis Services에 대 한 논리 클라이언트 아키텍처](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-clientarch9.gif "Analysis Services에 대 한 논리 클라이언트 아키텍처")  
   
- Win32 클라이언트 응용 프로그램은 Microsoft Visual Basic 과 같은 COM(구성 요소 개체 모델) 자동화 언어용 Microsoft ADO(ActiveX Data Objects) 개체 모델 또는 OLAP용 OLE DB 인터페이스를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에 연결할 수 있습니다. .NET 언어로 코딩된 응용 프로그램은 ADOMD.NET을 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에 연결할 수 있습니다.  
+ Win32 클라이언트 애플리케이션은 Microsoft Visual Basic 과 같은 COM(구성 요소 개체 모델) 자동화 언어용 Microsoft ADO(ActiveX Data Objects) 개체 모델 또는 OLAP용 OLE DB 인터페이스를 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에 연결할 수 있습니다. .NET 언어로 코딩된 애플리케이션은 ADOMD.NET을 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 서버에 연결할 수 있습니다.  
   
- 기존 응용 프로그램은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 공급자 중 하나를 그대로 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]와 통신할 수 있습니다.  
+ 기존 애플리케이션은 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 공급자 중 하나를 그대로 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]와 통신할 수 있습니다.  
   
 |프로그래밍 언어|데이터 액세스 인터페이스|  
 |--------------------------|---------------------------|  
@@ -48,7 +48,7 @@ ms.locfileid: "68889580"
   
  ![중간 계층 아키텍처에 대 한 논리 다이어그램](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-midtierarch9.gif "중간 계층 아키텍처에 대 한 논리 다이어그램")  
   
- 클라이언트 응용 프로그램 및 중간 계층 응용 프로그램 모두는 공급자를 사용하지 않고 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]와 직접 통신할 수 있습니다. 클라이언트 응용 프로그램과 중간 계층 응용 프로그램은 TCP/IP, HTTP 또는 HTTPS에서 SOAP 패킷으로 XML for Analysis를 보낼 수 있습니다. SOAP를 지원하는 언어를 사용하여 클라이언트를 작성할 수 있습니다. 이러한 경우 TCP/IP를 사용하여 서버에 직접 연결하도록 코딩할 수 있지만 HTTP를 사용하여 인터넷 정보 서비스(IIS)로 통신을 관리하는 것이 가장 쉽습니다. 이것이 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 최상의 씬 클라이언트 솔루션입니다.  
+ 클라이언트 애플리케이션 및 중간 계층 애플리케이션 모두는 공급자를 사용하지 않고 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]와 직접 통신할 수 있습니다. 클라이언트 애플리케이션과 중간 계층 애플리케이션은 TCP/IP, HTTP 또는 HTTPS에서 SOAP 패킷으로 XML for Analysis를 보낼 수 있습니다. SOAP를 지원하는 언어를 사용하여 클라이언트를 작성할 수 있습니다. 이러한 경우 TCP/IP를 사용하여 서버에 직접 연결하도록 코딩할 수 있지만 HTTP를 사용하여 인터넷 정보 서비스(IIS)로 통신을 관리하는 것이 가장 쉽습니다. 이것이 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에 대한 최상의 씬 클라이언트 솔루션입니다.  
   
 ## <a name="analysis-services-in-tabular-or-sharepoint-mode"></a>테이블 형식 또는 SharePoint 모드의 Analysis Services  
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에서는 SharePoint 사이트에 게시된 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 통합 문서의 테이블 형식 데이터베이스에 대해 xVelocity 메모리 내 분석 엔진(VertiPaq) 모드로 서버를 시작할 수 있습니다.  

@@ -42,7 +42,7 @@ ms.locfileid: "63192084"
 ## <a name="connection-pooling"></a>연결 풀링  
  일반적으로 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 개체의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 메서드는 호출할 필요가 없습니다. SMO는 필요한 경우 자동으로 연결을 설정하고 작업을 완료한 후에는 연결을 연결 풀로 해제합니다. <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Connect%2A> 메서드를 호출하면 연결이 풀로 해제되지 않습니다. 이 경우 연결을 풀로 해제하려면 <xref:Microsoft.SqlServer.Management.Common.ConnectionManager.Disconnect%2A> 메서드를 명시적으로 호출해야 합니다. 또는 <xref:Microsoft.SqlServer.Management.Common.ConnectionSettings.NonPooledConnection%2A> 개체의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 속성을 설정하여 풀링되지 않은 연결을 요청할 수 있습니다.  
   
-## <a name="multithreaded-applications"></a>다중 스레드 응용 프로그램  
+## <a name="multithreaded-applications"></a>다중 스레드 애플리케이션  
  다중 스레드 애플리케이션의 경우 각 스레드에서 별도의 <xref:Microsoft.SqlServer.Management.Common.ServerConnection> 개체를 사용해야 합니다.  
   
 ## <a name="connecting-to-an-instance-of-sql-server-for-rmo"></a>RMO의 SQL Server 인스턴스 연결  

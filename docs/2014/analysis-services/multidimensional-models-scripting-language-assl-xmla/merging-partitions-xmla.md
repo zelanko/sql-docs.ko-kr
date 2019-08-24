@@ -27,11 +27,11 @@ ms.locfileid: "62702040"
   
  예를 들어, 재무 큐브에서 다음과 같은 파티션 2개를 사용할 수 있습니다.  
   
--   한 파티션은 올해의 재무 데이터를 나타내며 성능을 위해 실시간 ROLAP(관계형 OLAP) 저장소 설정을 사용합니다.  
+-   한 파티션은 올해의 재무 데이터를 나타내며 성능을 위해 실시간 ROLAP(관계형 OLAP) 스토리지 설정을 사용합니다.  
   
--   다른 파티션은 작년의 재무 데이터를 나타내며 저장을 위해 MOLAP(다차원 OLAP) 저장소 설정을 사용합니다.  
+-   다른 파티션은 작년의 재무 데이터를 나타내며 저장을 위해 MOLAP(다차원 OLAP) 스토리지 설정을 사용합니다.  
   
- 두 파티션에 사용된 저장소 설정은 서로 다르지만 집계 디자인은 같습니다. 연말에 기록 데이터를 연도별로 처리하는 방식으로 큐브를 처리하는 대신 `MergePartitions` 명령을 사용하여 올해의 파티션을 작년의 파티션에 병합할 수 있습니다. 이렇게 하면 많은 시간이 소요될 수 있는 전체 큐브 처리 작업을 수행하지 않고도 집계 데이터를 유지할 수 있습니다.  
+ 두 파티션에 사용된 스토리지 설정은 서로 다르지만 집계 디자인은 같습니다. 연말에 기록 데이터를 연도별로 처리하는 방식으로 큐브를 처리하는 대신 `MergePartitions` 명령을 사용하여 올해의 파티션을 작년의 파티션에 병합할 수 있습니다. 이렇게 하면 많은 시간이 소요될 수 있는 전체 큐브 처리 작업을 수행하지 않고도 집계 데이터를 유지할 수 있습니다.  
   
 ## <a name="specifying-partitions-to-merge"></a>병합할 파티션 지정  
  경우는 `MergePartitions` 명령 실행에 지정 된 원본 파티션에 저장 된 집계 데이터를 [소스](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/source-element-xmla) 속성에 지정 된 대상 파티션에 추가 됩니다는 [대상](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/target-element-xmla) 속성입니다.  

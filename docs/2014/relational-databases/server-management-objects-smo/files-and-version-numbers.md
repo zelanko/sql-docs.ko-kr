@@ -24,7 +24,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753415"
 ---
 # <a name="files-and-version-numbers"></a>파일 및 버전 번호
-  필요한 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) 구성 요소 인스턴스의 일부로 설치 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 또는 서버. SMO는 몇 개의 관리되는 어셈블리에 구현됩니다. 클라이언트나 서버에서 SMO 응용 프로그램을 개발할 수 있습니다.  
+  필요한 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) 구성 요소 인스턴스의 일부로 설치 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 클라이언트 또는 서버. SMO는 몇 개의 관리되는 어셈블리에 구현됩니다. 클라이언트나 서버에서 SMO 애플리케이션을 개발할 수 있습니다.  
   
 |디렉터리|파일|Description|  
 |---------------|----------|-----------------|  

@@ -32,7 +32,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68008881"
 ---
-# <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER(Transact-SQL)
+# <a name="set-quoted_identifier-transact-sql"></a>SET QUOTED_IDENTIFIER(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
@@ -68,7 +68,7 @@ SET QUOTED_IDENTIFIER 옵션을 OFF로 설정하면 식의 리터럴 문자열�
 
 XML 데이터 형식 메서드를 호출할 때는 SET QUOTED_IDENTIFIER가 ON이어야 합니다.
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결할 때 QUOTED_IDENTIFIER를 자동으로 ON으로 설정합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는 OLE DB 연결 특성에서 이 옵션을 구성할 수 있습니다. DB-Library 응용 프로그램에서 연결하려면 SET QUOTED_IDENTIFIER의 기본값이 OFF여야 합니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결할 때 QUOTED_IDENTIFIER를 자동으로 ON으로 설정합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는 OLE DB 연결 특성에서 이 옵션을 구성할 수 있습니다. DB-Library 애플리케이션에서 연결하려면 SET QUOTED_IDENTIFIER의 기본값이 OFF여야 합니다.
 
 테이블이 생성될 때 QUOTED IDENTIFIER 옵션이 OFF로 설정되어 있는 경우에도 해당 테이블의 메타데이터에는 항상 ON으로 저장됩니다.
 
