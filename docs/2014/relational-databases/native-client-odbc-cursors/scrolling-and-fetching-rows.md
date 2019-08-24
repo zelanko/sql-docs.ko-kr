@@ -28,7 +28,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63207130"
 ---
 # <a name="scrolling-and-fetching-rows"></a>행 스크롤 및 인출
-  스크롤형 커서를 사용하려면 ODBC 응용 프로그램에서 다음을 수행해야 합니다.  
+  스크롤형 커서를 사용하려면 ODBC 애플리케이션에서 다음을 수행해야 합니다.  
   
 -   사용 하 여 커서 기능을 설정 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)합니다.  
   

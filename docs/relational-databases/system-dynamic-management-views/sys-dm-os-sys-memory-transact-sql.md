@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67899709"
 ---
-# <a name="sysdmossysmemory-transact-sql"></a>sys.dm_os_sys_memory(Transact-SQL)
+# <a name="sysdm_os_sys_memory-transact-sql"></a>sys.dm_os_sys_memory(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   운영 체제의 메모리 정보를 반환합니다.  
@@ -56,7 +56,7 @@ ms.locfileid: "67899709"
 |system_high_memory_signal_state = 1<br /><br /> 및<br /><br /> system_low_memory_signal_state = 0|사용 가능한 실제 메모리가 높은 수준입니다.|  
 |system_high_memory_signal_state = 0<br /><br /> 및<br /><br /> system_low_memory_signal_state = 1|사용 가능한 실제 메모리가 낮은 수준입니다.|  
 |system_high_memory_signal_state = 0<br /><br /> 및<br /><br /> system_low_memory_signal_state = 0|실제 메모리 사용률이 안정적입니다.|  
-|system_high_memory_signal_state = 1<br /><br /> 및<br /><br /> system_low_memory_signal_state = 1|실제 메모리 상태가 전환되는 중입니다.<br /><br /> 높음 신호와 낮음 신호는 동시에 설정될 수 없습니다. 하지만 운영 체제 수준에서 상태가 빠르게 변경되면 사용자 모드 응용 프로그램에 두 값이 동시에 나타날 수 있습니다. 두 신호가 동시에 설정된 것으로 나타나면 전환 상태로 해석됩니다.|  
+|system_high_memory_signal_state = 1<br /><br /> 및<br /><br /> system_low_memory_signal_state = 1|실제 메모리 상태가 전환되는 중입니다.<br /><br /> 높음 신호와 낮음 신호는 동시에 설정될 수 없습니다. 하지만 운영 체제 수준에서 상태가 빠르게 변경되면 사용자 모드 애플리케이션에 두 값이 동시에 나타날 수 있습니다. 두 신호가 동시에 설정된 것으로 나타나면 전환 상태로 해석됩니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  을 실행하려면 서버에 대해 VIEW SERVER STATE 권한이 필요합니다.  

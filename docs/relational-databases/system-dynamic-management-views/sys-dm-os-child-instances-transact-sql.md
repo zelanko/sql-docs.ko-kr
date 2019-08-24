@@ -27,14 +27,14 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67900242"
 ---
-# <a name="sysdmoschildinstances-transact-sql"></a>sys.dm_os_child_instances(Transact-SQL)
+# <a name="sysdm_os_child_instances-transact-sql"></a>sys.dm_os_child_instances(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   부모 서버 인스턴스에서 생성된 각 사용자 인스턴스당 한 개의 행을 반환합니다.  
   
 > **중요!** [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- 반환 된 정보 **sys.dm_os_child_instances** 각 사용자 인스턴스 (heart_beat)의 상태를 확인 하 고 사용자에 대 한 연결을 만드는 데 사용할 수 있는 파이프 이름 (instance_pipe_name) 수 인스턴스에서 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 SQLCmd 합니다. 클라이언트 응용 프로그램과 같은 외부 프로세스에 의해 시작된 다음에만 사용자 인스턴스에 연결할 수 있습니다. SQL 관리 도구에서는 사용자 인스턴스를 시작할 수 없습니다.  
+ 반환 된 정보 **sys.dm_os_child_instances** 각 사용자 인스턴스 (heart_beat)의 상태를 확인 하 고 사용자에 대 한 연결을 만드는 데 사용할 수 있는 파이프 이름 (instance_pipe_name) 수 인스턴스에서 사용 하 여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 또는 SQLCmd 합니다. 클라이언트 애플리케이션과 같은 외부 프로세스에 의해 시작된 다음에만 사용자 인스턴스에 연결할 수 있습니다. SQL 관리 도구에서는 사용자 인스턴스를 시작할 수 없습니다.  
   
 > **참고:** 사용자 인스턴스는의 기능 [!INCLUDE[ssExpressEd11](../../includes/ssexpressed11-md.md)] 만 합니다.  
 > 
@@ -46,7 +46,7 @@ ms.locfileid: "67900242"
 |owning_principal_sid|nvarchar(256)|이 사용자 인스턴스를 소유하는 보안 주체의 SID(보안 ID)입니다. 이는 Windows SID와 일치합니다.|  
 |owning_principal_sid_binary|varbinary(85)|사용자 인스턴스를 소유하는 사용자에 대한 SID 이진 버전입니다.|  
 |**instance_name**|**nvarchar(128)**|사용자 인스턴스의 이름입니다.|  
-|**instance_pipe_name**|**nvarchar(260)**|사용자 인스턴스를 만들 때 응용 프로그램 연결을 위해 명명된 파이프를 만듭니다. 이 이름은 이 사용자 인스턴스에 연결할 연결 문자열에서 사용할 수 있습니다.|  
+|**instance_pipe_name**|**nvarchar(260)**|사용자 인스턴스를 만들 때 애플리케이션 연결을 위해 명명된 파이프를 만듭니다. 이 이름은 이 사용자 인스턴스에 연결할 연결 문자열에서 사용할 수 있습니다.|  
 |**os_process_id**|**정수**|이 사용자 인스턴스에 대한 Windows 프로세스의 프로세스 번호입니다.|  
 |**os_process_creation_date**|**날짜/시간**|이 사용자 인스턴스 프로세스가 마지막으로 시작된 날짜 및 시간입니다.|  
 |**heart_beat**|**nvarchar(5)**|이 사용자 인스턴스의 현재 상태(연결 또는 연결 끊김)입니다.|  

@@ -25,7 +25,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67927824"
 ---
-# <a name="spdropdevice-transact-sql"></a>sp_dropdevice(Transact-SQL)
+# <a name="sp_dropdevice-transact-sql"></a>sp_dropdevice(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   인스턴스에서 데이터베이스 장치 또는 백업 장치를 삭제 합니다 [!INCLUDE[ssDEversion2005](../../includes/ssdeversion2005-md.md)]에서 항목을 삭제할 **master.dbo.sysdevices**합니다.  
@@ -58,7 +58,7 @@ sp_dropdevice [ @logicalname = ] 'device'
  **diskadmin** 고정 서버 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `tapedump1` 테이프 덤프 장치를 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 삭제합니다.  
+ 다음 예에서는 `tapedump1` 테이프 덤프 디바이스를 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 삭제합니다.  
   
 ```  
 EXEC sp_dropdevice 'tapedump1';  

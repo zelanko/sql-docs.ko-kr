@@ -27,7 +27,7 @@ ms.locfileid: "66102128"
   
  다음의 추가 요구 사항도 만족해야 합니다.  
   
--   RSeportServer.config 파일에서 `AuthenticationType`을 `RSWindowsNegotiate`, `RSWindowsKerberos` 또는 `RSWindowsNTLM`으로 설정해야 합니다. 기본적으로 보고서 서버 서비스 계정이 NetworkService 또는 LocalSystem인 경우 RSReportServer.config 파일에는 `RSWindowsNegotiate` 설정이 들어 있습니다. 그렇지 않으면 `RSWindowsNTLM` 설정이 사용됩니다. Kerberos 인증만 사용하는 응용 프로그램이 있는 경우 `RSWindowsKerberos`를 추가할 수 있습니다.  
+-   RSeportServer.config 파일에서 `AuthenticationType`을 `RSWindowsNegotiate`, `RSWindowsKerberos` 또는 `RSWindowsNTLM`으로 설정해야 합니다. 기본적으로 보고서 서버 서비스 계정이 NetworkService 또는 LocalSystem인 경우 RSReportServer.config 파일에는 `RSWindowsNegotiate` 설정이 들어 있습니다. 그렇지 않으면 `RSWindowsNTLM` 설정이 사용됩니다. Kerberos 인증만 사용하는 애플리케이션이 있는 경우 `RSWindowsKerberos`를 추가할 수 있습니다.  
   
     > [!IMPORTANT]  
     >  `RSWindowsNegotiate`를 사용할 경우 보고서 서버 서비스가 도메인 사용자 계정으로 실행되도록 구성하고 해당 계정의 SPN(서비스 사용자 이름)을 등록하지 않으면 Kerberos 인증 오류가 발생합니다. 자세한 내용은 이 항목의 [보고서 서버에 연결할 때 Kerberos 인증 오류 해결](#proxyfirewallRSWindowsNegotiate) 을 참조하십시오.  

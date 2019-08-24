@@ -108,7 +108,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  `ImpersonationMode` 속성은 `ImpersonateCurrentUser` 또는 `ImpersonateAnonymous`로 설정할 수 있습니다. 기본 설정 `ImpersonateCurrentUser`는 현재 사용자의 네트워크 로그인 계정으로 어셈블리를 실행합니다. 경우는 `ImpersonateAnonymous` 설정을 사용 하면 실행 컨텍스트가 Windows 로그인 사용자 계정인 IUSER_ 해당*servername* 서버의 합니다. 이 계정은 서버에 대해 제한된 권한을 갖는 인터넷 게스트 계정입니다. 이 컨텍스트에서 실행되는 어셈블리는 로컬 서버의 제한된 리소스에만 액세스할 수 있습니다.  
   
 ### <a name="application-domains"></a>애플리케이션 도메인  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 응용 프로그램 도메인을 직접 노출시키지 않습니다. 동일한 응용 프로그램 도메인에서 실행되는 어셈블리 집합으로 인해 응용 프로그램 도메인은 .NET Framework의 `System.Reflection` 네임스페이스를 사용하거나 다른 방법으로 실행 시 서로를 검색할 수 있으며 런타임에 바인딩된 방식으로 응용 프로그램을 호출할 수 있습니다. 이러한 호출에 대해서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 권한 부여 기반의 보안 방식에서 사용되는 권한 확인이 수행됩니다.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서는 응용 프로그램 도메인을 직접 노출시키지 않습니다. 동일한 애플리케이션 도메인에서 실행되는 어셈블리 집합으로 인해 애플리케이션 도메인은 .NET Framework의 `System.Reflection` 네임스페이스를 사용하거나 다른 방법으로 실행 시 서로를 검색할 수 있으며 런타임에 바인딩된 방식으로 애플리케이션을 호출할 수 있습니다. 이러한 호출에 대해서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 권한 부여 기반의 보안 방식에서 사용되는 권한 확인이 수행됩니다.  
   
  애플리케이션 도메인 경계와 각 도메인에 속하는 어셈블리는 구현에 따라 달라지므로 동일한 애플리케이션 도메인 내에서 어셈블리를 찾는 방법에만 의존해서는 안 됩니다.  
   

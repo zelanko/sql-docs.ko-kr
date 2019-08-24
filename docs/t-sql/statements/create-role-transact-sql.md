@@ -71,7 +71,7 @@ CREATE ROLE role_name [ AUTHORIZATION owner_name ]
   
 -   다른 역할에 역할의 소유권을 할당하려면 역할을 받는 역할의 멤버 자격이나 해당 역할에 대한 ALTER 권한이 필요합니다.  
   
--   응용 프로그램 역할에 역할의 소유권을 할당하려면 응용 프로그램 역할에 대한 ALTER 권한이 필요합니다.  
+-   애플리케이션 역할에 역할의 소유권을 할당하려면 애플리케이션 역할에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
 다음 예에서는 모두 AdventureWorks 데이터베이스를 사용합니다.   

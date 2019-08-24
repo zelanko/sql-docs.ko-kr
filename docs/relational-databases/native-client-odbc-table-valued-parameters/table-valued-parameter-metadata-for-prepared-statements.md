@@ -26,7 +26,7 @@ ms.locfileid: "68129016"
 
   응용 프로그램 SQLNumParams 및 SQLDescribeParam를 통해 준비 된 프로시저 호출에 대 한 메타 데이터를 가져올 수 있습니다. 테이블 반환 매개 변수의 *DataTypePtr* 이 SQL_SS_TABLE로 설정 합니다. 추가 메타 데이터는 SQL_CA_SS_TYPE_NAME, SQL_CA_SS_CATALOG_NAME 및 SQL_CA_SS_SCHEMA_NAME에 대 한 SQLGetDescField 통해 사용할 수 있습니다.  
   
- SQL_CA_SS_TYPE_NAME, SQL_CA_SS_CATALOG_NAME 및 SQL_CA_SS_SCHEMA_NAME 사용할 수 있습니다 SQLColumns를 사용 하 여 테이블 반환 매개 변수를 사용 하 여 연결 하는 테이블 형식의 열 메타 데이터를 가져옵니다. 이 경우 SQLColumns를 호출 하기 전에 SQL_SOPT_SS_NAME_SCOPE는 sql_ss_name_scope_table_type으로 설정 되어야 합니다. 그리고 응용 프로그램이 테이블 반환 매개 변수 열 메타데이터 검색을 마치면 SQL_SOPT_SS_NAME_SCOPE를 기본값인 SQL_SS_NAME_SCOPE_TABLE로 다시 설정해야 합니다.  
+ SQL_CA_SS_TYPE_NAME, SQL_CA_SS_CATALOG_NAME 및 SQL_CA_SS_SCHEMA_NAME 사용할 수 있습니다 SQLColumns를 사용 하 여 테이블 반환 매개 변수를 사용 하 여 연결 하는 테이블 형식의 열 메타 데이터를 가져옵니다. 이 경우 SQLColumns를 호출 하기 전에 SQL_SOPT_SS_NAME_SCOPE는 sql_ss_name_scope_table_type으로 설정 되어야 합니다. 그리고 애플리케이션이 테이블 반환 매개 변수 열 메타데이터 검색을 마치면 SQL_SOPT_SS_NAME_SCOPE를 기본값인 SQL_SS_NAME_SCOPE_TABLE로 다시 설정해야 합니다.  
   
  SQL_CA_SS_TYPE_NAME , SQL_CA_SS_CATALOG_NAME 및 SQL_CA_SS_SCHEMA_NAME을 CLR 사용자 정의 형식 매개 변수에 사용할 수도 있습니다.  
   

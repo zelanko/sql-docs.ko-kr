@@ -56,7 +56,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
  클라이언트 공급자는 설치 된 모든 버전 및 로드 중에서 최신 버전을 찾아야 합니다는 **SQLUserInstance** DLL 파일에서 연결 된 `InstanceAPIPath` 값입니다.  
   
 ### <a name="wow64-mode-on-64-bit-windows"></a>64비트 Windows의 WOW64 모드  
- 64비트 LocalDB 설치에는 WOW64(Windows-32-on-Windows-64) 모드에서 실행 중인 32비트 응용 프로그램에서 LocalDB를 사용할 수 있도록 해주는 추가 레지스트리 키 집합이 있습니다. 특히 64비트 Windows에서 LocalDB MSI는 다음과 같은 레지스트리 키를 만듭니다.  
+ 64비트 LocalDB 설치에는 WOW64(Windows-32-on-Windows-64) 모드에서 실행 중인 32비트 애플리케이션에서 LocalDB를 사용할 수 있도록 해주는 추가 레지스트리 키 집합이 있습니다. 특히 64비트 Windows에서 LocalDB MSI는 다음과 같은 레지스트리 키를 만듭니다.  
   
 ```  
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Wow6432Node\Microsoft SQL Server Local DB\Installed Versions\12.0]  
@@ -68,7 +68,7 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12E.LOCALDB\ MSS
   
  64 비트 프로그램을 `Installed Versions` 키의 64 비트 버전을 가리키는 값을 표시 합니다 **SQLUserInstance** DLL (64 비트 Windows에서 wow64 이외의 모드로 실행) 하는 32 비트 프로그램 자동으로 리디렉션됩니다 는동안`Installed Versions` 아래에 키를 `Wow6432Node` hive입니다. 이 키는 32 비트 버전을 가리키는 값을 포함 합니다 **SQLUserInstance** DLL입니다.  
   
-## <a name="using-localdbdefineproxyfunctions"></a>LOCALDB_DEFINE_PROXY_FUNCTIONS 사용  
+## <a name="using-localdb_define_proxy_functions"></a>LOCALDB_DEFINE_PROXY_FUNCTIONS 사용  
  LocalDB 인스턴스 API 검색 및 로드를 자동화 하는 localdb_define_proxy_functions 상수를 정의 합니다 **SqlUserInstance** DLL입니다.  
   
  이 상수에 의해 설정되는 코드 섹션은 각 LocalDB API에 대한 프록시 구현을 제공합니다. 프록시 구현은 공통 함수를 사용 하 여 설치 된 최신의 진입점에 바인딩할 **SqlUserInstance** DLL을 선택한 후 요청을 전달 합니다.  

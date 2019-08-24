@@ -24,10 +24,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67902988"
 ---
-# <a name="sphelpdevice-transact-sql"></a>sp_helpdevice(Transact-SQL)
+# <a name="sp_helpdevice-transact-sql"></a>sp_helpdevice(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Microsoft® SQL Server™ 백업 장치에 대한 정보를 보고합니다.  
+  Microsoft® SQL Server™ 백업 디바이스에 대한 정보를 보고합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하는 것이 좋습니다 합니다 [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md) 대신 카탈로그 뷰  
@@ -51,12 +51,12 @@ sp_helpdevice [ [ @devname = ] 'name' ]
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**device_name**|**sysname**|논리적 장치 이름입니다.|  
+|**device_name**|**sysname**|논리적 디바이스 이름입니다.|  
 |**physical_name**|**nvarchar(260)**|물리적 파일 이름입니다.|  
-|**description**|**nvarchar(255)**|장치의 설명입니다.|  
+|**description**|**nvarchar(255)**|디바이스의 설명입니다.|  
 |**상태**|**int**|상태 설명에 해당 하는 숫자를 **설명을** 열입니다.|  
-|**cntrltype**|**smallint**|장치의 컨트롤러 유형입니다.<br /><br /> 2 = 디스크 장치<br /><br /> 5 = 테이프 장치|  
-|**size**|**int**|장치 크기(2KB 페이지)입니다.|  
+|**cntrltype**|**smallint**|디바이스의 컨트롤러 유형입니다.<br /><br /> 2 = 디스크 디바이스<br /><br /> 5 = 테이프 디바이스|  
+|**size**|**int**|디바이스 크기(2KB 페이지)입니다.|  
   
 ## <a name="remarks"></a>설명  
  하는 경우 *이름을* 를 지정 하면 **sp_helpdevice** 지정 된 덤프 장치에 대 한 정보를 표시 합니다. 경우 *이름* 지정 하지 않으면 **sp_helpdevice** 에서 모든 덤프 장치에 대 한 정보를 표시 합니다 **sys.backup_devices** 카탈로그 뷰.  
@@ -67,7 +67,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
  **public** 역할의 멤버 자격이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 덤프 장치에 관한 정보를 보고합니다.  
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 덤프 디바이스에 관한 정보를 보고합니다.  
   
 ```  
 EXEC sp_helpdevice;  

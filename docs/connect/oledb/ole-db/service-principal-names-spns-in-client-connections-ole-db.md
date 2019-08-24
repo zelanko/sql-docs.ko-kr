@@ -23,10 +23,10 @@ ms.locfileid: "68015182"
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 
-  이 항목에서는 클라이언트 응용 프로그램의 SPN(서비스 사용자 이름)을 지원하는 OLE DB 속성 및 멤버 함수에 대해 설명합니다. 클라이언트 애플리케이션에서 SPN에 대한 자세한 내용은 [클라이언트 연결에서 &#40;SPN&#41;(서비스 사용자 이름) 지원](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)을 참조하세요. 샘플은 [OLE DB &#40;&#41;통합 된 Kerberos 인증](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)을 참조 하세요.  
+  이 항목에서는 클라이언트 애플리케이션의 SPN(서비스 사용자 이름)을 지원하는 OLE DB 속성 및 멤버 함수에 대해 설명합니다. 클라이언트 애플리케이션에서 SPN에 대한 자세한 내용은 [클라이언트 연결에서 &#40;SPN&#41;(서비스 사용자 이름) 지원](../../oledb/features/service-principal-name-spn-support-in-client-connections.md)을 참조하세요. 샘플은 [OLE DB &#40;&#41;통합 된 Kerberos 인증](../../oledb/ole-db-how-to/integrated-kerberos-authentication-ole-db.md)을 참조 하세요.  
   
 ## <a name="provider-initialization-string-keywords"></a>공급자 초기화 문자열 키워드  
- 다음과 같은 공급자 초기화 문자열 키워드가 OLE DB 응용 프로그램에서 SPN을 지원합니다. 다음 표에서 키워드 열의 값은 IDBInitialize::Initialize의 공급자 문자열에 사용됩니다. 설명 열의 값은 ADO 또는 IDataInitialize::GetDataSource를 사용하여 연결할 때 초기화 문자열에 사용됩니다.  
+ 다음과 같은 공급자 초기화 문자열 키워드가 OLE DB 애플리케이션에서 SPN을 지원합니다. 다음 표에서 키워드 열의 값은 IDBInitialize::Initialize의 공급자 문자열에 사용됩니다. 설명 열의 값은 ADO 또는 IDataInitialize::GetDataSource를 사용하여 연결할 때 초기화 문자열에 사용됩니다.  
   
 |키워드|설명|값|  
 |-------------|-----------------|-----------|  

@@ -59,13 +59,13 @@ ms.locfileid: "68135295"
 > [!NOTE]  
 >  설치 프로세스의 일부로 SQLXML 4.0에 적합한 모든 레지스트리 설정이 지정됩니다.  
   
- 64비트 Windows 운영 체제의 Windows on Windows(WOW64)에서 32비트 SQLXML 응용 프로그램을 실행하려면 sqlxml4.msi라는 64비트 SQLXML 4.0 SP1 패키지를 실행해야 합니다. 이 패키지는 다운로드 센터에서 찾을 수 있습니다.  
+ 64비트 Windows 운영 체제의 Windows on Windows(WOW64)에서 32비트 SQLXML 애플리케이션을 실행하려면 sqlxml4.msi라는 64비트 SQLXML 4.0 SP1 패키지를 실행해야 합니다. 이 패키지는 다운로드 센터에서 찾을 수 있습니다.  
   
 #### <a name="uninstalling-sqlxml-40-sp1"></a>SQLXML 4.0 SP1 제거  
  SQLXML 3.0 SP3, SQLXML 4.0 및 SQLXML 4.0 SP1 사이에는 공유되는 레지스트리 키가 있습니다. SQLXML 3.0 SP3이 설치되어 있는 컴퓨터에서 이후 버전의 SQLXML을 제거한 경우 SQLXML 3.0 SP3을 다시 설치해야 할 수도 있습니다.  
   
 ## <a name="side-by-side-installation-issues"></a>병렬 설치 문제  
- SQLXML 4.0 설치 프로세스에서는 이전 버전의 SQLXML에 의해 설치된 파일을 제거하지 않습니다. 따라서 버전별 여러 SQLXML 설치에 대한 DLL이 컴퓨터에 있을 수 있습니다. 이러한 함께 설치를 실행할 수 있습니다. SQLXML 4.0에는 버전 독립 및 버전 종속 PROGID가 모두 포함되어 있습니다. 모든 프로덕션 응용 프로그램은 버전 종속 PROGID를 사용해야 합니다.  
+ SQLXML 4.0 설치 프로세스에서는 이전 버전의 SQLXML에 의해 설치된 파일을 제거하지 않습니다. 따라서 버전별 여러 SQLXML 설치에 대한 DLL이 컴퓨터에 있을 수 있습니다. 이러한 함께 설치를 실행할 수 있습니다. SQLXML 4.0에는 버전 독립 및 버전 종속 PROGID가 모두 포함되어 있습니다. 모든 프로덕션 애플리케이션은 버전 종속 PROGID를 사용해야 합니다.  
   
 ## <a name="sqlxml-40-sp1-and-msxml"></a>SQLXML 4.0 SP1 및 MSXML  
  SQLXML 4.0은 MSXML을 설치하지 않습니다. SQLXML 4.0은 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 이후 설치의 일부로 설치되는 MSXML 6.0을 사용합니다.  
@@ -73,25 +73,25 @@ ms.locfileid: "68135295"
 ## <a name="redistributing-sqlxml-40-sp1"></a>SQLXML 4.0 SP1 재배포  
  재배포 가능 설치 관리자 패키지를 사용하여 SQLXML 4.0 SP1을 배포할 수 있습니다. 여러 패키지를 단일 설치인 것처럼 보이게 설치하려는 경우 chainer와 부트스트래퍼 기술을 사용하는 것이 하나의 방법이 될 수 있습니다. 자세한 내용은 Visual Studio 2005용 사용자 지정 부트스트래퍼 패키지 작성 및 사용자 지정 필수 구성 요소 추가를 참조하십시오.  
   
- 응용 프로그램을 처음에 개발된 플랫폼이 아니라 다른 플랫폼에서 사용하려는 경우에는 Microsoft 다운로드 센터에서 x64, Itanium 및 x86용 sqlncli.msi 버전을 다운로드할 수 있습니다.  
+ 애플리케이션을 처음에 개발된 플랫폼이 아니라 다른 플랫폼에서 사용하려는 경우에는 Microsoft 다운로드 센터에서 x64, Itanium 및 x86용 sqlncli.msi 버전을 다운로드할 수 있습니다.  
   
  MSXML 6.0용 개별 재배포 설치 프로그램(msxml6.msi)도 있습니다. 해당 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 CD의 다음 위치에 있습니다.  
   
  `%CD%\Setup\`  
   
- 이러한 설치 파일을 사용하여 CD에서 직접 MSXML 6.0을 설치할 수 있습니다. 사용자 지정 응용 프로그램과 함께 MSXML 6.0 및 SQLXML 4.0 SP1을 자유롭게 재배포하는 데 설치 파일을 사용할 수도 있습니다.  
+ 이러한 설치 파일을 사용하여 CD에서 직접 MSXML 6.0을 설치할 수 있습니다. 사용자 지정 애플리케이션과 함께 MSXML 6.0 및 SQLXML 4.0 SP1을 자유롭게 재배포하는 데 설치 파일을 사용할 수도 있습니다.  
   
- 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 데이터 공급자로 사용하는 경우 이 프로그램도 재배포해야 합니다. 자세한 내용은 [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)(SQL Server Native Client 설치)를 참조하세요.  
+ 애플리케이션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 데이터 공급자로 사용하는 경우 이 프로그램도 재배포해야 합니다. 자세한 내용은 [Installing SQL Server Native Client](../../relational-databases/native-client/applications/installing-sql-server-native-client.md)(SQL Server Native Client 설치)를 참조하세요.  
   
 ## <a name="support-for-sql-server-native-client"></a>SQL Server Native Client 지원  
  SQLXML 4.0에서는 모두 SQLOLEDB 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자입니다. 동일한 버전을 사용 하는 것이 좋습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 때문에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client와 같은 서버에서 제공 되는 모든 새로운 데이터 형식을 지원 하기 위해 개발 된는 **Date, Time**, **DateTime2**, 및 **dateTimeOffset** 의 데이터 형식이 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 고 지 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Native Client입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에 처음 도입된 데이터 액세스 기술입니다. 이 기술은 SQLOLEDB 공급자와 SQLODBC 드라이버를 하나의 네이티브 DLL(동적 링크 라이브러리)로 조합한 것이며 MDAC(Microsoft Data Access Components)와는 분리된 고유한 새 기능을 제공합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 새 응용 프로그램을 만들 수도 있고 MDAC 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows의 SQLOLEDB 및 SQLODBC에서 지원하지 않지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 도입된 기능을 활용해야 하는 기존 응용 프로그램을 향상시킬 수도 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용 하 여 FOR XML과 같은 클라이언트 쪽 SQLXML 기능에 필요 합니다 **xml** 데이터 형식입니다. 자세한 내용은 [클라이언트 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)를 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md), 및 [SQL Server Native Client 프로그래밍](../../relational-databases/native-client/sql-server-native-client-programming.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용하여 새 애플리케이션을 만들 수도 있고 MDAC 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows의 SQLOLEDB 및 SQLODBC에서 지원하지 않지만 [!INCLUDE[msCoName](../../includes/msconame-md.md)]에 도입된 기능을 활용해야 하는 기존 애플리케이션을 향상시킬 수도 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용 하 여 FOR XML과 같은 클라이언트 쪽 SQLXML 기능에 필요 합니다 **xml** 데이터 형식입니다. 자세한 내용은 [클라이언트 쪽 XML 서식 지정 &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml/formatting/client-side-xml-formatting-sqlxml-4-0.md)를 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md), 및 [SQL Server Native Client 프로그래밍](../../relational-databases/native-client/sql-server-native-client-programming.md).  
   
 > [!NOTE]  
->  SQLXML 4.0은 SQLXML 3.0과 완전히 호환되지 않습니다. 일부 버그 수정 및 기타 기능 변경, 특히 SQLXML ISAPI 지원 제거로 인해 SQLXML 4.0에서는 IIS 가상 디렉터리를 사용할 수 없습니다. 대부분의 응용 프로그램은 약간만 수정해도 실행되지만 SQLXML 4.0과 함께 프로덕션에 배치하기 전에 테스트해야 합니다.  
+>  SQLXML 4.0은 SQLXML 3.0과 완전히 호환되지 않습니다. 일부 버그 수정 및 기타 기능 변경, 특히 SQLXML ISAPI 지원 제거로 인해 SQLXML 4.0에서는 IIS 가상 디렉터리를 사용할 수 없습니다. 대부분의 애플리케이션은 약간만 수정해도 실행되지만 SQLXML 4.0과 함께 프로덕션에 배치하기 전에 테스트해야 합니다.  
   
 ## <a name="support-for-data-types-introduced-in-sql-server-2005-and-sql-server-2008"></a>SQL Server 2005 및 SQL Server 2008에 도입된 데이터 형식 지원  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 도입 합니다 **xml** 데이터 형식 및 SQLXML 4.0 지원 합니다 **xml** 데이터 형식. 자세한 내용은 [xml 데이터 형식 지원 SQLXML 4.0에서](../../relational-databases/sqlxml/xml-data-type-support-in-sqlxml-4-0.md)합니다.  
@@ -110,9 +110,9 @@ ms.locfileid: "68135295"
   
 -   SQLXML 4.0에서는 SchemaGen 오버플로 필드는 사용 하 여 생성 된 **xml** 데이터 형식. 자세한 내용은 [SQL Server XML 대량 로드 개체 모델](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/sql-server-xml-bulk-load-object-model-sqlxml-4-0.md)합니다.  
   
--   이전에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 응용 프로그램을 만들었으며 SQLXML 4.0을 사용하려는 경우 Xblkld4.dll을 참조하여 응용 프로그램을 다시 컴파일해야 합니다.  
+-   이전에 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic 애플리케이션을 만들었으며 SQLXML 4.0을 사용하려는 경우 Xblkld4.dll을 참조하여 애플리케이션을 다시 컴파일해야 합니다.  
   
--   Visual Basic Scripting Edition 응용 프로그램의 경우 사용할 DLL을 등록해야 합니다. 다음 예에서 버전 독립 PROGID를 지정하면 응용 프로그램은 마지막으로 등록된 DLL을 사용합니다.  
+-   Visual Basic Scripting Edition 애플리케이션의 경우 사용할 DLL을 등록해야 합니다. 다음 예에서 버전 독립 PROGID를 지정하면 애플리케이션은 마지막으로 등록된 DLL을 사용합니다.  
   
     ```  
     set objBulkLoad = CreateObject("SQLXMLBulkLoad.SQLXMLBulkLoad")   
@@ -189,10 +189,10 @@ ms.locfileid: "68135295"
     ```  
   
 ## <a name="migration-issues"></a>마이그레이션 문제  
- 다음은 SQLXML 4.0로의 레거시 SQLXML 응용 프로그램 마이그레이션에 영향을 줄 수 있는 문제입니다.  
+ 다음은 SQLXML 4.0로의 레거시 SQLXML 애플리케이션 마이그레이션에 영향을 줄 수 있는 문제입니다.  
   
 ### <a name="ado-and-sqlxml-40-queries"></a>ADO 및 SQLXML 4.0 쿼리  
- SQLXML의 이전 버전에서는 IIS 가상 디렉터리와 SQLXML ISAPI 필터를 사용한 URL 기반 쿼리 실행에 대한 지원이 제공되었습니다. SQLXML 4.0을 사용하는 응용 프로그램에서는 더 이상 이 지원을 사용할 수 없습니다.  
+ SQLXML의 이전 버전에서는 IIS 가상 디렉터리와 SQLXML ISAPI 필터를 사용한 URL 기반 쿼리 실행에 대한 지원이 제공되었습니다. SQLXML 4.0을 사용하는 애플리케이션에서는 더 이상 이 지원을 사용할 수 없습니다.  
   
  대신 MDAC(Microsoft Data Access Components) 2.6 이상 버전에서 처음 도입된 ADO(ActiveX Data Objects)에 대한 SQLXML 확장을 사용하여 SQLXML 쿼리, 템플릿 및 Updategram을 실행할 수 있습니다.  
   

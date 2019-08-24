@@ -45,7 +45,7 @@ public final void setMaxRows(int max)
 ## <a name="remarks"></a>Remarks  
  이 setMaxRows 메서드는 setMaxRows 인터페이스의 메서드에 의해 지정 됩니다.  
   
- 이 setMaxRows 메서드는 동적 스크롤 가능 커서에는 아무런 영향을 주지 않습니다. 응용 프로그램에서는 SELECT TOP N SQL 구문을 사용하여 크기가 커질 수 있는 결과 집합에서 반환되는 행 수를 제한해야 합니다.  
+ 이 setMaxRows 메서드는 동적 스크롤 가능 커서에는 아무런 영향을 주지 않습니다. 애플리케이션에서는 SELECT TOP N SQL 구문을 사용하여 크기가 커질 수 있는 결과 집합에서 반환되는 행 수를 제한해야 합니다.  
   
  setMaxRows 메서드가 호출되면 [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)]에서는 애플리케이션의 쿼리를 실행할 때 SET ROWCOUNT SQL 문을 실행합니다. 이로 인해 JDBC 드라이버에서는 해당 쿼리에서 반환되는 행 수뿐만 아니라 해당 쿼리에서 실행되는 모든 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문의 영향을 받는 최대 행 수도 제한하게 됩니다. 애플리케이션에서 최상위 [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) 개체에 대한 제한만 설정해야 하는 경우에는 setMaxRows 메서드 대신 쿼리에 SELECT TOP N SQL 구문을 사용해야 합니다.  
   

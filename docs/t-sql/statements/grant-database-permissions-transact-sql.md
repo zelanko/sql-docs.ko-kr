@@ -76,7 +76,7 @@ WITH GRANT OPTION 지정된 권한을 다른 보안 주체에게 부여할 수 �
 *Application_role*
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
 
-응용 프로그램 역할을 지정합니다.
+애플리케이션 역할을 지정합니다.
 
 *Database_user_mapped_to_Windows_User*
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
@@ -222,9 +222,9 @@ GRANT CREATE TABLE TO MelanieK;
 GO
 ```
 
-### <a name="b-granting-showplan-permission-to-an-application-role"></a>2\. 응용 프로그램 역할에 SHOWPLAN 사용 권한 부여
+### <a name="b-granting-showplan-permission-to-an-application-role"></a>2\. 애플리케이션 역할에 SHOWPLAN 사용 권한 부여
 
- 다음 예에서는 `SHOWPLAN` 응용 프로그램 역할에 `AdventureWorks2012` 데이터베이스에 대한 `AuditMonitor` 권한을 부여합니다.
+ 다음 예에서는 `SHOWPLAN` 애플리케이션 역할에 `AdventureWorks2012` 데이터베이스에 대한 `AuditMonitor` 권한을 부여합니다.
 
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
 

@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68054903"
 ---
-# <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule(Transact-SQL)
+# <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   특정 일정이 연결된 작업에 대한 정보를 반환합니다.  
@@ -61,7 +61,7 @@ sp_help_jobs_in_schedule
 |**start_step_id**|**int**|실행을 시작해야 하는 작업 단계의 ID입니다.|  
 |**category**|**sysname**|작업 범주입니다.|  
 |**owner**|**sysname**|작업 소유자입니다.|  
-|**notify_level_eventlog**|**int**|Microsoft Windows 응용 프로그램 로그에 알림 이벤트를 기록해야 하는 상황을 나타내는 비트 마스크입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 안 함<br /><br /> **1** = 작업이 성공할 경우<br /><br /> **2** = 작업이 실패할 경우<br /><br /> **3** (작업의 결과)에 관계 없이 작업을 완료할 때마다 =|  
+|**notify_level_eventlog**|**int**|Microsoft Windows 애플리케이션 로그에 알림 이벤트를 기록해야 하는 상황을 나타내는 비트 마스크입니다. 다음 값 중 하나일 수 있습니다.<br /><br /> **0** = 안 함<br /><br /> **1** = 작업이 성공할 경우<br /><br /> **2** = 작업이 실패할 경우<br /><br /> **3** (작업의 결과)에 관계 없이 작업을 완료할 때마다 =|  
 |**notify_level_email**|**int**|작업을 완료했을 때, 어떤 상황에서 알림 전자 메일을 전달해야 할지를 지정하는 비트 마스크입니다. 가능한 값은 동일 **notify_level_eventlog**합니다.|  
 |**notify_level_netsend**|**int**|작업을 완료했을 때, 어떤 상황에서 네트워크 메시지를 전달해야 할지를 지정하는 비트 마스크입니다. 가능한 값은 동일 **notify_level_eventlog**합니다.|  
 |**notify_level_page**|**int**|작업을 완료했을 때, 어떤 상황에서 메시지를 보내야 할지를 지정하는 비트 마스크입니다. 가능한 값은 동일 **notify_level_eventlog**합니다.|  

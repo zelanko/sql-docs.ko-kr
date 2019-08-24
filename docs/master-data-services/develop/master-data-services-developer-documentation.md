@@ -42,7 +42,7 @@ ms.locfileid: "68006314"
  <xref:Microsoft.MasterDataServices.ServiceClient> 클래스의 웹 서비스 작업을 범주별로 분류한 목록입니다.  
   
 ## <a name="custom-workflows"></a>사용자 지정 워크플로  
- [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]는 비즈니스 규칙을 사용하여 기본적인 워크플로 솔루션을 만듭니다. 지정 조건에 따라 자동으로 데이터에 대해 업데이트 및 유효성 검사 작업을 수행하고 전자 메일 알림이 전송되게 할 수 있습니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]의 비즈니스 규칙은 가장 일반적인 워크플로 시나리오를 관리하기 위한 것입니다. 워크플로에 다중 계층 승인 또는 복잡한 의사 결정 트리와 같은 보다 CEP(복합 이벤트 처리)가 필요한 경우 사용자가 만드는 사용자 지정 어셈블리로 데이터를 보내도록 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 구성할 수 있습니다. 사용자 지정 워크플로를 처리하려면 웹 응용 프로그램 컴퓨터에서 SQL Server MDS Workflow Integration Service를 구성 및 시작하고 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 인터페이스를 구현하는 어셈블리를 만들어야 합니다.  
+ [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]는 비즈니스 규칙을 사용하여 기본적인 워크플로 솔루션을 만듭니다. 지정 조건에 따라 자동으로 데이터에 대해 업데이트 및 유효성 검사 작업을 수행하고 전자 메일 알림이 전송되게 할 수 있습니다. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]의 비즈니스 규칙은 가장 일반적인 워크플로 시나리오를 관리하기 위한 것입니다. 워크플로에 다중 계층 승인 또는 복잡한 의사 결정 트리와 같은 보다 CEP(복합 이벤트 처리)가 필요한 경우 사용자가 만드는 사용자 지정 어셈블리로 데이터를 보내도록 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]를 구성할 수 있습니다. 사용자 지정 워크플로를 처리하려면 웹 애플리케이션 컴퓨터에서 SQL Server MDS Workflow Integration Service를 구성 및 시작하고 <xref:Microsoft.MasterDataServices.WorkflowTypeExtender.IWorkflowTypeExtender> 인터페이스를 구현하는 어셈블리를 만들어야 합니다.  
   
 ### <a name="custom-workflow-content"></a>사용자 지정 워크플로 콘텐츠  
  [사용자 지정 워크플로 만들기&#40;Master Data Services&#41;](../../master-data-services/develop/create-a-custom-workflow-master-data-services.md)  

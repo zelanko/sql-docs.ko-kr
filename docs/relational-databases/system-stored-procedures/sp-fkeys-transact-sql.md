@@ -25,7 +25,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68124396"
 ---
-# <a name="spfkeys-transact-sql"></a>sp_fkeys(Transact-SQL)
+# <a name="sp_fkeys-transact-sql"></a>sp_fkeys(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   현재 환경에 대한 논리적 외래 키 정보를 반환합니다. 이 프로시저는 사용할 수 없는 외래 키를 포함한 외래 키 관계를 보여 줍니다.  
@@ -90,11 +90,11 @@ sp_fkeys [ @pktable_name = ] 'pktable_name'
  반환 된 결과 FKTABLE_QUALIFIER, FKTABLE_OWNER, FKTABLE_NAME 및 KEY_SEQ로 정렬 됩니다.  
   
 ## <a name="remarks"></a>설명  
- 외래 키를 사용할 수 없는 테이블을 포함하는 응용 프로그램 코딩은 다음과 같은 방법으로 구현됩니다.  
+ 외래 키를 사용할 수 없는 테이블을 포함하는 애플리케이션 코딩은 다음과 같은 방법으로 구현됩니다.  
   
 -   테이블에 관한 작업을 하는 동안 제약 조건 확인(ALTER TABLE NOCHECK 또는 CREATE TABLE NOT FOR REPLICATION)을 일시적으로 사용하지 못하게 한 다음 나중에 다시 사용할 수 있도록 합니다.  
   
--   트리거 또는 응용 프로그램 코드를 사용하여 강제로 연결합니다.  
+-   트리거 또는 애플리케이션 코드를 사용하여 강제로 연결합니다.  
   
 기본 키 테이블 이름은 제공되고 외래 키 테이블 이름이 NULL인 경우 sp_fkeys는 외래 키를 포함한 모든 테이블을 지정된 테이블로 반환합니다. 외래 키 테이블 이름은 제공되고 기본 키 테이블 이름이 NULL인 경우 sp_fkeys는 외래 키 테이블의 외래 키에 기본 키/외래 키 관계로 연관된 모든 테이블을 반환합니다.  
   

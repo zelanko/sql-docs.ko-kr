@@ -179,7 +179,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
   
 3.  보안 저장소 서비스에서 SharePoint용 PowerPivot에 사용되는 저장된 자격 증명이 있는 모든 대상 애플리케이션을 삭제합니다. 보안 저장소 서비스의 일부 항목은 SharePoint용 PowerPivot을 제거할 때 삭제됩니다. PowerPivot 무인 데이터 새로 고침 계정에 대해 만든 대상 애플리케이션 및 데이터 새로 고침을 위해 만든 모든 대상 애플리케이션은 아직 삭제되지 않으므로 수동으로 삭제해야 합니다.  
   
-     반면, PowerPivot 시스템 서비스에 의해 자동 생성된 개별 대상 응용 프로그램은 PowerPivot을 제거할 때 자동으로 삭제됩니다.  
+     반면, PowerPivot 시스템 서비스에 의해 자동 생성된 개별 대상 애플리케이션은 PowerPivot을 제거할 때 자동으로 삭제됩니다.  
   
 4.  제어판에서 **프로그램**, **프로그램 제거** 를 차례로 클릭합니다. 더 이상 사용되지 않는 모든 Analysis Services 클라이언트 라이브러리를 제거합니다. Analysis Services ADOMD.NET 및 Microsoft SQL Server Analysis Management Objects는 SharePoint용 PowerPivot을 제거할 때 제거되지 않습니다. 이러한 라이브러리는 Analysis Services 데이터를 사용하는 다른 프로그램에서 사용할 수 있으므로 SQL Server 설치 프로그램이 자동으로 제거하지 않습니다. 더 이상 필요하지 않은 경우 클라이언트 라이브러리를 개별적으로 제거해야 합니다.  
   

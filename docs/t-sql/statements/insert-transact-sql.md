@@ -175,7 +175,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
  READPAST, NOLOCK 및 READUNCOMMITTED는 허용되지 않습니다. 테이블 힌트에 대한 자세한 내용은 [테이블 힌트&#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)를 참조하세요.  
   
 > [!IMPORTANT]  
->  INSERT 문의 대상 테이블에 HOLDLOCK, SERIALIZABLE, READCOMMITTED, REPEATABLEREAD 또는 UPDLOCK 힌트를 지정하는 기능은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 이러한 힌트는 INSERT 문의 성능에 영향을 주지 않습니다. 향후 개발 작업에서는 이러한 힌트를 사용하지 않도록 하고 현재 이 힌트를 사용하는 응용 프로그램은 수정하세요.  
+>  INSERT 문의 대상 테이블에 HOLDLOCK, SERIALIZABLE, READCOMMITTED, REPEATABLEREAD 또는 UPDLOCK 힌트를 지정하는 기능은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 이러한 힌트는 INSERT 문의 성능에 영향을 주지 않습니다. 향후 개발 작업에서는 이러한 힌트를 사용하지 않도록 하고 현재 이 힌트를 사용하는 애플리케이션은 수정하세요.  
   
  INSERT 문의 대상 테이블에 TABLOCK 힌트를 지정하는 것은 TABLOCKX 힌트를 지정하는 것과 결과가 같습니다. 두 경우 모두 테이블이 배타적으로 잠깁니다.  
   
@@ -197,7 +197,7 @@ INSERT INTO { database_name.schema_name.table_name | schema_name.table_name | ta
 명시적인 값을 ID 열에 삽입할 경우 반드시 *column_list*를 사용해야 하며 테이블에 대해 SET IDENTITY_INSERT 옵션을 ON으로 설정해야 합니다.  
   
 OUTPUT Clause  
- 삽입 작업의 일부로 삽입된 행을 반환합니다. 결과는 처리 중인 응용 프로그램에 반환되거나 다음 처리를 위해 테이블 또는 테이블 변수에 삽입될 수 있습니다.  
+ 삽입 작업의 일부로 삽입된 행을 반환합니다. 결과는 처리 중인 애플리케이션에 반환되거나 다음 처리를 위해 테이블 또는 테이블 변수에 삽입될 수 있습니다.  
   
  로컬 분할 뷰, 분산형 분할 뷰 또는 원격 테이블을 참조하는 DML 문이나 *execute_statement*를 포함하는 INSERT 문에서는 [OUTPUT 절](../../t-sql/queries/output-clause-transact-sql.md)이 지원되지 않습니다. OUTPUT INTO 절은 \<dml_table_source> 절이 포함된 INSERT 문에서 지원되지 않습니다. 
   
@@ -882,7 +882,7 @@ VALUES ( N'Final Inventory', 15.00, 80.00);
 ```  
   
 ###  <a name="CaptureResults"></a> INSERT 문의 결과 캡처  
- 이 섹션의 예에서는 [OUTPUT 절](../../t-sql/queries/output-clause-transact-sql.md)을 사용하여 INSERT 문의 영향을 받는 각 행의 정보 또는 각 행을 기반으로 하는 식을 반환하는 방법을 보여 줍니다. 이러한 결과를 처리 응용 프로그램에 반환하여 확인 메시지, 보관 및 기타 응용 프로그램 요구 사항을 충족시키는 데 사용할 수 있습니다.  
+ 이 섹션의 예에서는 [OUTPUT 절](../../t-sql/queries/output-clause-transact-sql.md)을 사용하여 INSERT 문의 영향을 받는 각 행의 정보 또는 각 행을 기반으로 하는 식을 반환하는 방법을 보여 줍니다. 이러한 결과를 처리 애플리케이션에 반환하여 확인 메시지, 보관 및 기타 애플리케이션 요구 사항을 충족시키는 데 사용할 수 있습니다.  
   
 #### <a name="t-using-output-with-an-insert-statement"></a>20. INSERT 문에 OUTPUT 사용  
  다음 예에서는 `ScrapReason` 테이블에 행을 삽입하고 `OUTPUT` 절을 사용하여 문의 결과를 `@MyTableVar` 테이블 변수에 반환합니다. `ScrapReasonID` 열은 `IDENTITY` 속성으로 정의되었으므로 해당 열에 대한 `INSERT` 문에 값이 지정되지 않습니다. 그러나 해당 열에 대해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 생성한 값은 `OUTPUT` 열의 `INSERTED.ScrapReasonID` 절에서 반환됩니다.  

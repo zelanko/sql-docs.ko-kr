@@ -27,7 +27,7 @@ ms.locfileid: "63137602"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
   
- 이전에 개방형 Data Services의 일부였던 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 확장 저장 프로시저 API는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 확장하기 위한 서버 기반 API(애플리케이션 프로그래밍 인터페이스)를 제공합니다. API는 응용 프로그램을 빌드하는 데 사용되는 C 및 C++ 함수와 매크로로 구성됩니다.  
+ 이전에 개방형 Data Services의 일부였던 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 확장 저장 프로시저 API는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 확장하기 위한 서버 기반 API(애플리케이션 프로그래밍 인터페이스)를 제공합니다. API는 애플리케이션을 빌드하는 데 사용되는 C 및 C++ 함수와 매크로로 구성됩니다.  
   
  CLR 통합과 같은 보다 강력한 최신 기술이 등장하면서 확장 저장 프로시저의 필요성이 크게 바뀌었습니다.  
   

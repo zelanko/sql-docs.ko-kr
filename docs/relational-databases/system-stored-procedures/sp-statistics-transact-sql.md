@@ -25,7 +25,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68032743"
 ---
-# <a name="spstatistics-transact-sql"></a>sp_statistics(Transact-SQL)
+# <a name="sp_statistics-transact-sql"></a>sp_statistics(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   지정된 테이블 또는 인덱싱된 뷰에 대한 모든 인덱스 및 통계 목록을 반환합니다.  
@@ -62,7 +62,7 @@ sp_statistics [ @table_name = ] 'table_name'
   
  값 **E** (SQL_ENSURE)에 통계를 무조건 검색 하도록 드라이버에 요청 합니다.  
   
- 값 **Q** (SQL_QUICK) 카디널리티를 검색 하도록 드라이버에 요청 하 고 서버에서 쉽게 사용할 수 있는 경우에 페이지입니다. 이 경우 드라이버는 값이 최신 값인지 확인하지 않습니다. Open Group 표준으로 작성된 응용 프로그램은 항상 ODBC 3.x 규격 드라이버에서 SQL_QUICK 동작을 가져옵니다.  
+ 값 **Q** (SQL_QUICK) 카디널리티를 검색 하도록 드라이버에 요청 하 고 서버에서 쉽게 사용할 수 있는 경우에 페이지입니다. 이 경우 드라이버는 값이 최신 값인지 확인하지 않습니다. Open Group 표준으로 작성된 애플리케이션은 항상 ODBC 3.x 규격 드라이버에서 SQL_QUICK 동작을 가져옵니다.  
   
 ## <a name="result-sets"></a>결과 집합  
   

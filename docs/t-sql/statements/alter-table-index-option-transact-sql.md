@@ -21,7 +21,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68070219"
 ---
-# <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option(Transact-SQL)
+# <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 만든 제약 조건 정의의 일부인 색인에 적용할 수 있는 옵션 집합을 지정합니다.  
@@ -209,7 +209,7 @@ ms.locfileid: "68070219"
  COLUMNSTORE_ARCHIVE  
  **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
- 클러스터형 columnstore 인덱스로 저장된 테이블인 columnstore 테이블에만 적용됩니다. COLUMNSTORE_ARCHIVE는 지정된 파티션을 보다 작은 크기로 압축합니다. 보관하거나 보다 적은 저장소가 필요한 기타 상황에서 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
+ 클러스터형 columnstore 인덱스로 저장된 테이블인 columnstore 테이블에만 적용됩니다. COLUMNSTORE_ARCHIVE는 지정된 파티션을 보다 작은 크기로 압축합니다. 보관하거나 보다 적은 스토리지가 필요한 기타 상황에서 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
   
  압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   

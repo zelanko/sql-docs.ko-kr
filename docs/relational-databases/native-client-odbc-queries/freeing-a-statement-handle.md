@@ -29,7 +29,7 @@ ms.locfileid: "68058718"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  문 핸들을 다시 사용하는 것이 문 핸들을 삭제한 다음 새로 할당하는 것보다 더 효율적입니다. 따라서 문 핸들에 대해 새 SQL 문을 실행하기 전에 응용 프로그램에서 현재 문 설정이 적절한지 확인해야 합니다. 이러한 설정에는 문 특성, 매개 변수 바인딩 및 결과 집합 바인딩이 포함됩니다. 매개 변수 및 결과 이전 SQL 문을 호출 하 여 바인딩 해제에 대 한 설정 하는 일반적으로 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) SQL_RESET_PARAMS 및 SQL_UNBIND 옵션 및 새 SQL 문에 대 한 다시 바인딩해야 합니다.  
+  문 핸들을 다시 사용하는 것이 문 핸들을 삭제한 다음 새로 할당하는 것보다 더 효율적입니다. 따라서 문 핸들에 대해 새 SQL 문을 실행하기 전에 애플리케이션에서 현재 문 설정이 적절한지 확인해야 합니다. 이러한 설정에는 문 특성, 매개 변수 바인딩 및 결과 집합 바인딩이 포함됩니다. 매개 변수 및 결과 이전 SQL 문을 호출 하 여 바인딩 해제에 대 한 설정 하는 일반적으로 [SQLFreeStmt](../../relational-databases/native-client-odbc-api/sqlfreestmt.md) SQL_RESET_PARAMS 및 SQL_UNBIND 옵션 및 새 SQL 문에 대 한 다시 바인딩해야 합니다.  
   
  호출 응용 프로그램은 문을 사용 하 여 완료 되 면 [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) 에 해당 문을 해제 합니다. 사실은 **SQLDisconnect** 자동으로 연결 된 모든 문을 해제 합니다.  
   

@@ -37,7 +37,7 @@ ms.locfileid: "68043133"
   동적 관리 뷰 및 함수는 서버 인스턴스 상태 모니터링, 문제 진단 및 성능 튜닝에 사용할 수 있는 서버 상태 정보를 반환합니다.  
   
 > [!IMPORTANT]  
->  동적 관리 뷰 및 함수는 내부 구현과 관련된 상태 데이터를 반환합니다. 이렇게 반환되는 스키마와 데이터는 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경될 수 있습니다. 따라서 다음 번 릴리스의 동적 관리 뷰 및 함수는 이번 릴리스의 동적 관리 뷰 및 함수와 호환되지 않을 수 있습니다. 예를 들어 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 Microsoft가 열 목록의 끝에 열을 추가하여 동적 관리 뷰의 정의를 보강할 수 있습니다. 반환된 열 수가 응용 프로그램을 바꾸거나 중단할 수 있으므로 프로덕션 코드에서는 `SELECT * FROM dynamic_management_view_name` 구문을 사용하지 않는 것이 좋습니다.  
+>  동적 관리 뷰 및 함수는 내부 구현과 관련된 상태 데이터를 반환합니다. 이렇게 반환되는 스키마와 데이터는 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 변경될 수 있습니다. 따라서 다음 번 릴리스의 동적 관리 뷰 및 함수는 이번 릴리스의 동적 관리 뷰 및 함수와 호환되지 않을 수 있습니다. 예를 들어 이후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 릴리스에서 Microsoft가 열 목록의 끝에 열을 추가하여 동적 관리 뷰의 정의를 보강할 수 있습니다. 반환된 열 수가 애플리케이션을 바꾸거나 중단할 수 있으므로 프로덕션 코드에서는 `SELECT * FROM dynamic_management_view_name` 구문을 사용하지 않는 것이 좋습니다.  
   
  동적 관리 뷰 및 함수에는 다음과 같은 두 가지 유형이 있습니다.  
   

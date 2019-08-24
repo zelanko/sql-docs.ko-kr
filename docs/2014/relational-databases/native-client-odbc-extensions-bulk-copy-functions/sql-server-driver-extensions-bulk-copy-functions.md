@@ -23,11 +23,11 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63225537"
 ---
 # <a name="bulk-copy-functions"></a>Bulk Copy Functions
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 대량 복사 API 확장을 사용하면 클라이언트 응용 프로그램에서 신속하게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 데이터 행을 추가하거나 추출할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 대량 복사 API 확장을 사용하면 클라이언트 애플리케이션에서 신속하게 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블에 데이터 행을 추가하거나 추출할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client를 사용할 경우 SQLNCLI11.LIB 및 SQLNCLI.H에서 대량 복사 함수(BCP)를 참조할 수 있습니다.  
   
- BCP API 함수 호출을 사용하는 응용 프로그램은 응용 프로그램에서 사용하는 드라이버(.dll)와 함께 제공되는 라이브러리(.lib)와 연결해야 합니다. BCP 응용 프로그램을 두 개 이상의 드라이버 라이브러리와 연결해서는 안 됩니다.  
+ BCP API 함수 호출을 사용하는 애플리케이션은 애플리케이션에서 사용하는 드라이버(.dll)와 함께 제공되는 라이브러리(.lib)와 연결해야 합니다. BCP 애플리케이션을 두 개 이상의 드라이버 라이브러리와 연결해서는 안 됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

@@ -21,17 +21,17 @@ ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: f151d62a03cebf931c58f37b1e126a7331cefae9
 ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/23/2019
 ms.locfileid: "68418872"
 ---
-# <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats(Azure SQL Database)
+# <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Azure SQL Database의 CPU 사용량 및 스토리지 데이터를 반환합니다. 데이터는 5분 간격 이내로 수집 및 집계됩니다. 각 사용자 데이터베이스에 대해 리소스 소비가 변경 된 5 분 마다 하나의 행이 있습니다. 반환 되는 데이터에는 CPU 사용량, 저장소 크기 변경 및 데이터베이스 SKU 수정이 포함 됩니다. 변경 내용이 없는 유휴 데이터베이스는 5 분 간격으로 행을 가질 수 없습니다. 기록 데이터는 약 14일 동안 보존됩니다.  
   
- **Resource_stats** 뷰에는 데이터베이스가 연결 된 Azure SQL Database 서버의 버전에 따라 다른 정의가 있습니다. 이러한 차이점과 새 서버 버전으로 업그레이드할 경우 응용 프로그램에 필요한 모든 수정 사항을 고려하세요.  
+ **Resource_stats** 뷰에는 데이터베이스가 연결 된 Azure SQL Database 서버의 버전에 따라 다른 정의가 있습니다. 이러한 차이점과 새 서버 버전으로 업그레이드할 경우 애플리케이션에 필요한 모든 수정 사항을 고려하세요.  
   
  다음 표에는 v12 서버에서 사용할 수 있는 열이 설명되어 있습니다.  
   

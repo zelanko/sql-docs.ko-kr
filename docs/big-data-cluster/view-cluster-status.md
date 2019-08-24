@@ -167,7 +167,7 @@ Storage  default        Ready
 - 데이터
 - master
 - spark
-- storage
+- 스토리지
 
 예를 들어 다음 명령은 스토리지 풀의 풀 상태를 표시합니다.
 

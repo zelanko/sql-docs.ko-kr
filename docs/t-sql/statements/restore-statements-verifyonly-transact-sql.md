@@ -104,7 +104,7 @@ FROM <backup_device> [ ,...n ]
   
 -   체크섬을 확인합니다(미디어에 있을 경우).  
   
--   대상 장치에 충분한 공간이 있는지 확인합니다.  
+-   대상 디바이스에 충분한 공간이 있는지 확인합니다.  
   
 > [!NOTE]  
 >  RESTORE VERIFYONLY는 데이터베이스 스냅샷에서는 작동하지 않습니다. 되돌리기 작업을 수행하기 전에 데이터베이스 스냅샷을 확인하려면 DBCC CHECKDB를 실행합니다.  
@@ -119,7 +119,7 @@ FROM <backup_device> [ ,...n ]
 >  이 암호에 의한 보호 수준은 낮습니다. 권한 유무에 관계없이 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 잘못된 복원을 수행하는 것을 방지합니다. 다른 수단을 사용한 백업 데이터 읽기나 암호 바꾸기를 방지하지는 않습니다. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]백업을 보호하는 최선의 구현 방법은 백업 테이프를 안전한 장소에 보관하거나 적합한 ACL(액세스 제어 목록)로 보호되는 디스크 파일에 백업하는 것입니다. ACL은 백업이 만들어지는 디렉터리 루트에 설정해야 합니다.  
   
 ### <a name="permissions"></a>사용 권한  
- [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 백업 세트나 백업 장치에 대한 정보를 얻으려면 CREATE DATABASE 권한이 필요합니다. 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
+ [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터는 백업 세트나 백업 디바이스에 대한 정보를 얻으려면 CREATE DATABASE 권한이 필요합니다. 자세한 내용은 [GRANT 데이터베이스 사용 권한&#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md)을 참조하세요.  
  
 ## <a name="examples"></a>예  
  다음 예제에서는 디스크에서 백업을 확인합니다.

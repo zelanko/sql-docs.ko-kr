@@ -38,7 +38,7 @@ ms.locfileid: "67988674"
   
  SQL Server용 OLE DB 드라이버는 **varchar(max)** , **varbinary(max)** 및 **nvarchar(max)** 형식을 각각 DBTYPE_STR, DBTYPE_BYTES 및 DBTYPE_WSTR로 노출합니다.  
   
- 이러한 형식으로 작업하기 위해 응용 프로그램에는 다음 옵션이 있습니다.  
+ 이러한 형식으로 작업하기 위해 애플리케이션에는 다음 옵션이 있습니다.  
   
 -   DBTYPE_STR, DBTYPE_BYTES, DBTYPE_WSTR 형식으로 바인딩합니다. 버퍼 크기가 충분하지 않으면 이전 릴리스에서 이러한 형식을 처리할 때와 마찬가지로 잘림이 발생합니다(새로운 버전에서는 더 큰 값을 사용할 수 있음).  
   

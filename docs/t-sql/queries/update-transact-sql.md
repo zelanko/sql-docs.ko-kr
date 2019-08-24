@@ -312,7 +312,7 @@ GO
 ```  
   
 ## <a name="compatibility-support"></a>호환성 지원  
- UPDATE 또는 DELETE 문의 대상 테이블에 적용되는 FROM 절의 READUNCOMMITTED 및 NOLOCK 힌트 사용 지원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 제거될 예정입니다. 새 개발 작업에서는 이 컨텍스트에서 이러한 힌트를 사용하지 않도록 하고 현재 이 힌트를 사용하는 응용 프로그램은 수정하세요.  
+ UPDATE 또는 DELETE 문의 대상 테이블에 적용되는 FROM 절의 READUNCOMMITTED 및 NOLOCK 힌트 사용 지원은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 제거될 예정입니다. 새 개발 작업에서는 이 컨텍스트에서 이러한 힌트를 사용하지 않도록 하고 현재 이 힌트를 사용하는 애플리케이션은 수정하세요.  
   
 ## <a name="data-types"></a>데이터 형식  
  모든 **char** 및 **nchar** 열은 정의된 길이에 맞도록 오른쪽이 채워집니다.  
@@ -544,7 +544,7 @@ WHERE HumanResources.Employee.BusinessEntityID = th.BusinessEntityID;
 GO  
 ```  
   
-#### <a name="e-using-the-with-commontableexpression-clause"></a>E. WITH common_table_expression 절 사용  
+#### <a name="e-using-the-with-common_table_expression-clause"></a>E. WITH common_table_expression 절 사용  
  다음 예에서는 `PerAssemblyQty`을 만드는 데 직접 또는 간접적으로 사용되는 모든 부분과 구성 요소의 `ProductAssemblyID 800` 값을 업데이트합니다. 공통 테이블 식은 `ProductAssemblyID 800`를 만드는 데 직접 사용되는 부분 및 해당 구성 요소를 만드는 데 사용되는 부분과 같은 식으로 이어지는 계층적 목록을 반환합니다. 이렇게 공통 테이블 식이 반환한 행만 수정됩니다.  
   
 ```sql  
@@ -973,7 +973,7 @@ EXEC Production.uspProductUpdate 'BK-%';
 ```  
   
 ###  <a name="CaptureResults"></a> UPDATE 문의 결과 캡처  
- 이 섹션의 예에서는 [OUTPUT 절](../../t-sql/queries/output-clause-transact-sql.md)을 사용하여 UPDATE 문의 영향을 받는 각 행의 정보 또는 각 행을 기반으로 하는 식을 반환하는 방법을 보여 줍니다. 이러한 결과를 처리 응용 프로그램에 반환하여 확인 메시지, 보관 및 기타 응용 프로그램 요구 사항을 충족시키는 데 사용할 수 있습니다.  
+ 이 섹션의 예에서는 [OUTPUT 절](../../t-sql/queries/output-clause-transact-sql.md)을 사용하여 UPDATE 문의 영향을 받는 각 행의 정보 또는 각 행을 기반으로 하는 식을 반환하는 방법을 보여 줍니다. 이러한 결과를 처리 애플리케이션에 반환하여 확인 메시지, 보관 및 기타 애플리케이션 요구 사항을 충족시키는 데 사용할 수 있습니다.  
   
 #### <a name="aa-using-update-with-the-output-clause"></a>AA. OUTPUT 절과 함께 UPDATE 사용  
  다음 예에서는 `VacationHours` 테이블의 처음 10개 행에 대해 `Employee` 열을 25% 업데이트하고 `ModifiedDate` 열의 값을 현재 날짜로 설정합니다. `OUTPUT` 절은 `deleted.VacationHours` 열에서 `UPDATE` 문을 적용하기 전에 존재했던 `VacationHours`의 값, 그리고 `inserted.VacationHours` 열에서 업데이트된 값을 `@MyTableVar` 테이블 변수에 반환합니다.  

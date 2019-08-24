@@ -45,7 +45,7 @@ ms.locfileid: "63136669"
   
  `<?xml version="1.0" encoding="windows-1252"?><doc/>`  
   
- XML 표준은 XML 프로세서가 문서의 처음 몇 바이트를 검사하여 문서에 사용된 인코딩을 검색하는 방법을 설명합니다. 응용 프로그램에서 지정한 인코딩이 문서에 지정된 인코딩과 충돌하는 경우가 있을 수 있습니다. 바인딩된 매개 변수로 전달된 문서의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 XML을 이진 데이터로 처리하므로 변환이 수행되지 않으며 XML 파서는 문서 내에 지정된 인코딩을 아무런 문제없이 사용할 수 있습니다. 그러나 WSTR로 바인딩된 XML 데이터의 경우 문서가 유니코드로 인코딩되도록 응용 프로그램에서 관련 작업을 수행해야 합니다. 즉, 문서를 DOM으로 로드하고 인코딩을 유니코드로 변경한 다음 문서를 직렬화해야 합니다. 이 작업을 수행하지 않으면 데이터 변환이 일어날 수 있으며 그 결과 XML이 잘못되거나 손상될 수 있습니다.  
+ XML 표준은 XML 프로세서가 문서의 처음 몇 바이트를 검사하여 문서에 사용된 인코딩을 검색하는 방법을 설명합니다. 애플리케이션에서 지정한 인코딩이 문서에 지정된 인코딩과 충돌하는 경우가 있을 수 있습니다. 바인딩된 매개 변수로 전달된 문서의 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 XML을 이진 데이터로 처리하므로 변환이 수행되지 않으며 XML 파서는 문서 내에 지정된 인코딩을 아무런 문제없이 사용할 수 있습니다. 그러나 WSTR로 바인딩된 XML 데이터의 경우 문서가 유니코드로 인코딩되도록 애플리케이션에서 관련 작업을 수행해야 합니다. 즉, 문서를 DOM으로 로드하고 인코딩을 유니코드로 변경한 다음 문서를 직렬화해야 합니다. 이 작업을 수행하지 않으면 데이터 변환이 일어날 수 있으며 그 결과 XML이 잘못되거나 손상될 수 있습니다.  
   
  XML이 리터럴로 지정된 경우에도 충돌이 발생할 가능성이 있습니다. 예를 들어 다음은 잘못된 XML 지정입니다.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63136669"
   
  SQL Server로 전송된 XML 데이터는 서버에서 이진 데이터로 처리됩니다. 따라서 어떠한 변환도 일어나지 않으며 XML 파서는 XML 인코딩을 자동 검색할 수 있습니다. 이를 통해 보다 광범위한 XML 문서(예: UTF-8로 인코딩된 문서)를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 대한 입력으로 사용할 수 있습니다.  
   
- 입력 XML이 DBTYPE_WSTR로 바인딩된 경우 응용 프로그램에서는 XML이 이미 유니코드로 인코딩되었는지 확인하여 원치 않는 데이터 변환으로 인해 데이터가 손상되는 것을 방지해야 합니다.  
+ 입력 XML이 DBTYPE_WSTR로 바인딩된 경우 애플리케이션에서는 XML이 이미 유니코드로 인코딩되었는지 확인하여 원치 않는 데이터 변환으로 인해 데이터가 손상되는 것을 방지해야 합니다.  
   
 ### <a name="data-bindings-and-coercions"></a>데이터 바인딩 및 강제 변환  
  다음 표에서는 표에 나열된 데이터 형식을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **xml** 데이터 형식과 함께 사용할 때 발생하는 바인딩 및 강제 변환에 대해 설명합니다.  
@@ -110,18 +110,18 @@ ms.locfileid: "63136669"
   
  <sup>10</sup>서버로 전송된 데이터에 항상 BOM이 추가됩니다. 데이터의 시작 부분에 이미 BOM이 있는 경우 결과적으로 버퍼 시작 부분에 두 개의 BOM이 오게 됩니다. 서버에서는 첫 번째 BOM을 통해 인코딩을 UTF-16으로 인식한 다음 이 BOM을 삭제합니다. 두 번째 BOM은 너비가 0인 줄 바꿈하지 않는 공백 문자로 해석됩니다.  
   
- <sup>11</sup>형식이 UTF-16이고 인코딩 사양을 포함하지 않으며 서버에서 받은 데이터에 BOM이 추가됩니다. 서버에서 빈 문자열을 반환하더라도 BOM이 응용 프로그램에 반환됩니다. 버퍼 길이가 홀수 바이트이면 데이터가 올바르게 잘립니다. 전체 값이 청크로 반환되면 연결해서 올바른 값으로 다시 구성할 수 있습니다.  
+ <sup>11</sup>형식이 UTF-16이고 인코딩 사양을 포함하지 않으며 서버에서 받은 데이터에 BOM이 추가됩니다. 서버에서 빈 문자열을 반환하더라도 BOM이 애플리케이션에 반환됩니다. 버퍼 길이가 홀수 바이트이면 데이터가 올바르게 잘립니다. 전체 값이 청크로 반환되면 연결해서 올바른 값으로 다시 구성할 수 있습니다.  
   
  <sup>12</sup>버퍼 길이가 2 보다 작은 문자-즉, 즉 null 종결 공간이 충분 하지 않으면 오버플로 오류가 보고 됩니다.  
   
 > [!NOTE]  
 >  NULL XML 값에 대해서는 데이터가 반환되지 않습니다.  
   
- XML 표준을 따르려면 UTF-16로 인코딩된 XML이 BOM(바이트 순서 표시), 즉 UTF-16 문자 코드 0xFEFF로 시작해야 합니다. WSTR 및 BSTR 바인딩을 사용 하 여 작업할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 필요 하지 않거나 인코딩이 바인딩에서 암시적 BOM을 추가 합니다. BYTES, XML 또는 IUNKNOWN 바인딩을 사용하는 경우 BOM을 추가하는 목적은 다른 XML 프로세서 및 저장소 시스템을 간편하게 다룰 수 있도록 하는 데 있습니다. 이 경우 UTF-16으로 인코딩된 XML에 BOM을 제공해야 합니다. SQL Server를 비롯한 대부분의 XML 프로세서는 값의 처음 몇 바이트를 검사하여 인코딩을 추론하기 때문에 응용 프로그램에서는 실제 인코딩을 확인할 필요가 없습니다. 받은 XML 데이터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client BYTES, XML 또는 IUNKNOWN을 사용 하 여 바인딩을 항상 인코딩된 인코딩 선언이 포함된 하지 않고 BOM이 있는 u t F-16입니다.  
+ XML 표준을 따르려면 UTF-16로 인코딩된 XML이 BOM(바이트 순서 표시), 즉 UTF-16 문자 코드 0xFEFF로 시작해야 합니다. WSTR 및 BSTR 바인딩을 사용 하 여 작업할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 필요 하지 않거나 인코딩이 바인딩에서 암시적 BOM을 추가 합니다. BYTES, XML 또는 IUNKNOWN 바인딩을 사용하는 경우 BOM을 추가하는 목적은 다른 XML 프로세서 및 스토리지 시스템을 간편하게 다룰 수 있도록 하는 데 있습니다. 이 경우 UTF-16으로 인코딩된 XML에 BOM을 제공해야 합니다. SQL Server를 비롯한 대부분의 XML 프로세서는 값의 처음 몇 바이트를 검사하여 인코딩을 추론하기 때문에 애플리케이션에서는 실제 인코딩을 확인할 필요가 없습니다. 받은 XML 데이터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client BYTES, XML 또는 IUNKNOWN을 사용 하 여 바인딩을 항상 인코딩된 인코딩 선언이 포함된 하지 않고 BOM이 있는 u t F-16입니다.  
   
  OLE DB 핵심 서비스에서 제공하는 데이터 변환(**IDataConvert**)은 DBTYPE_XML에 적용되지 않습니다.  
   
- 데이터가 서버로 전송되면 유효성 검사가 수행됩니다. 클라이언트 쪽 유효성 검사 및 인코딩 변경은 응용 프로그램에서 처리해야 하므로 XML 데이터를 직접 처리하는 대신 DOM이나 SAX 판독기를 사용하여 처리하는 것이 좋습니다.  
+ 데이터가 서버로 전송되면 유효성 검사가 수행됩니다. 클라이언트 쪽 유효성 검사 및 인코딩 변경은 애플리케이션에서 처리해야 하므로 XML 데이터를 직접 처리하는 대신 DOM이나 SAX 판독기를 사용하여 처리하는 것이 좋습니다.  
   
  DBTYPE_NULL 및 DBTYPE_EMPTY는 입력 매개 변수에 대해서는 바인딩할 수 있지만 출력 매개 변수나 결과에 대해서는 바인딩할 수 없습니다. 입력 매개 변수에 대해 바인딩할 경우 상태를 DBSTATUS_S_ISNULL 또는 DBSTATUS_S_DEFAULT로 설정해야 합니다.  
   
@@ -132,7 +132,7 @@ ms.locfileid: "63136669"
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 행 집합의 추가 내용 및 변경 내용  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 새 값을 추가 하거나 많은 핵심 OLE DB 스키마 행 집합을 변경 합니다.  
   
-#### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>COLUMNS 및 PROCEDURE_PARAMETERS 스키마 행 집합  
+#### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>COLUMNS 및 PROCEDURE_PARAMETERS 스키마 행 집합  
  COLUMNS 및 PROCEDURE_PARAMETERS 스키마 행 집합에 추가된 열은 다음과 같습니다.  
   
 |열 이름|형식|Description|  
@@ -141,10 +141,10 @@ ms.locfileid: "63136669"
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|XML 스키마 컬렉션이 정의된 스키마의 이름입니다. 비XML 열 또는 형식화되지 않은 XML 열에 대해서는 NULL입니다.|  
 |SS_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|XML 스키마 컬렉션의 이름입니다. 비XML 열 또는 형식화되지 않은 XML 열에 대해서는 NULL입니다.|  
   
-#### <a name="the-providertypes-schema-rowset"></a>PROVIDER_TYPES 스키마 행 집합  
+#### <a name="the-provider_types-schema-rowset"></a>PROVIDER_TYPES 스키마 행 집합  
  PROVIDER_TYPES 스키마 행 집합에서는 **xml** 데이터 형식에 대한 COLUMN_SIZE 값이 0이고 DATA_TYPE이 DBTYPE_XML입니다.  
   
-#### <a name="the-ssxmlschema-schema-rowset"></a>SS_XMLSCHEMA 스키마 행 집합  
+#### <a name="the-ss_xmlschema-schema-rowset"></a>SS_XMLSCHEMA 스키마 행 집합  
  새로운 스키마 행 집합인 SS_XMLSCHEMA는 클라이언트가 XML 스키마 정보를 검색할 수 있도록 도입되었습니다. SS_XMLSCHEMA 행 집합에는 다음 열이 포함됩니다.  
   
 |열 이름|형식|Description|  
@@ -164,7 +164,7 @@ ms.locfileid: "63136669"
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB 속성 집합의 추가 내용 및 변경 내용  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에는 많은 핵심 OLE DB 속성 집합 변경 이나 새 값을 추가 합니다.  
   
-#### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
+#### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
  지원 하기 위해 합니다 **xml** OLE DB를 통해 데이터 형식을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 다음 값이 포함 된 새로운 DBPROPSET_SQLSERVERPARAMETER 속성 집합을 구현 합니다.  
   
 |이름|형식|Description|  
@@ -173,7 +173,7 @@ ms.locfileid: "63136669"
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|스키마 컬렉션 내 XML 스키마의 이름입니다. SQL의 세 부분으로 구성된 이름 식별자의 일부입니다.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTIONNAME|DBTYPE_WSTR|카탈로그 내 XML 스키마 컬렉션의 이름입니다. SQL의 세 부분으로 구성된 이름 식별자의 일부입니다.|  
   
-#### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 속성 집합  
+#### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 속성 집합  
  테이블 만들기를 지원 합니다 **ITableDefinition** 인터페이스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 DBPROPSET_SQLSERVERCOLUMN 속성 집합을 3 개의 새 열을 추가 합니다.  
   
 |이름|형식|Description|  
@@ -253,7 +253,7 @@ ms.locfileid: "63136669"
   
 -   SQL_C_WCHAR: 형식이 UTF-16이고 BOM(바이트 순서 표시)이 없으며 null 종결을 포함합니다.  
   
--   SQL_C_BINARY: 형식이 UTF-16이고 null 종결을 포함하지 않습니다. 서버에서 받은 데이터에 BOM이 추가됩니다. 서버에서 빈 문자열을 반환하더라도 BOM이 응용 프로그램에 반환됩니다. 버퍼 길이가 홀수 바이트이면 데이터가 올바르게 잘립니다. 전체 값이 청크로 반환되면 연결해서 올바른 값으로 다시 구성할 수 있습니다.  
+-   SQL_C_BINARY: 형식이 UTF-16이고 null 종결을 포함하지 않습니다. 서버에서 받은 데이터에 BOM이 추가됩니다. 서버에서 빈 문자열을 반환하더라도 BOM이 애플리케이션에 반환됩니다. 버퍼 길이가 홀수 바이트이면 데이터가 올바르게 잘립니다. 전체 값이 청크로 반환되면 연결해서 올바른 값으로 다시 구성할 수 있습니다.  
   
 -   SQL_C_CHAR: 형식이 클라이언트 코드 페이지로 인코딩된 멀티바이트 문자이고 null 종결을 포함합니다. 서버에서 제공하는 UTF-16에서 변환하면 데이터가 손상될 수 있으므로 이 바인딩은 사용하지 않는 것이 좋습니다.  
   
@@ -265,7 +265,7 @@ ms.locfileid: "63136669"
   
 -   SQL_C_CHAR: BOM 추가를 비롯하여 SQL_C_WCHAR와 마찬가지로 데이터가 클라이언트에서 UTF-16으로 변환되어 서버로 전송됩니다. XML이 클라이언트 코드 페이지로 인코딩되지 않은 경우 데이터가 손상될 수 있습니다.  
   
- XML 표준을 따르려면 UTF-16로 인코딩된 XML이 BOM(바이트 순서 표시), 즉 UTF-16 문자 코드 0xFEFF로 시작해야 합니다. SQL_C_BINARY 바인딩을 사용 하 여 작업할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 필요 하지 않거나 인코딩이 바인딩에서 암시적 BOM을 추가 합니다. BOM을 추가하는 목적은 다른 XML 프로세서 및 저장소 시스템을 간편하게 처리할 수 있도록 하기 위한 것입니다. 이 경우 UTF-16으로 인코딩된 XML에 BOM을 제공해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 비롯한 대부분의 XML 프로세서는 값의 처음 몇 바이트를 검사하여 인코딩을 추론하기 때문에 응용 프로그램에서는 실제 인코딩을 확인할 필요가 없습니다. 받은 XML 데이터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client SQL_C_BINARY를 사용 하 여 바인딩을 항상 인코딩됩니다 인코딩 선언이 포함된 하지 않고 BOM이 있는 u t F-16입니다.  
+ XML 표준을 따르려면 UTF-16로 인코딩된 XML이 BOM(바이트 순서 표시), 즉 UTF-16 문자 코드 0xFEFF로 시작해야 합니다. SQL_C_BINARY 바인딩을 사용 하 여 작업할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 필요 하지 않거나 인코딩이 바인딩에서 암시적 BOM을 추가 합니다. BOM을 추가하는 목적은 다른 XML 프로세서 및 스토리지 시스템을 간편하게 처리할 수 있도록 하기 위한 것입니다. 이 경우 UTF-16으로 인코딩된 XML에 BOM을 제공해야 합니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]를 비롯한 대부분의 XML 프로세서는 값의 처음 몇 바이트를 검사하여 인코딩을 추론하기 때문에 애플리케이션에서는 실제 인코딩을 확인할 필요가 없습니다. 받은 XML 데이터 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client SQL_C_BINARY를 사용 하 여 바인딩을 항상 인코딩됩니다 인코딩 선언이 포함된 하지 않고 BOM이 있는 u t F-16입니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server Native Client 기능](sql-server-native-client-features.md)   

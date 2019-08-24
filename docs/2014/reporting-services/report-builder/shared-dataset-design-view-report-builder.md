@@ -18,7 +18,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107592"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>공유 데이터 세트 디자인 뷰(보고서 작성기)
-  공유 데이터 집합 창에서 다른 사용자와 공유할 수 있는 데이터 집합 쿼리를 만들 수 있습니다. 이 창에서 공유 데이터 원본을 선택하고, 공유 데이터 집합에 대한 속성을 지정하고, 쿼리 디자이너에서 쿼리를 만들 수 있습니다.  
+  공유 데이터 세트 창에서 다른 사용자와 공유할 수 있는 데이터 세트 쿼리를 만들 수 있습니다. 이 창에서 공유 데이터 원본을 선택하고, 공유 데이터 세트에 대한 속성을 지정하고, 쿼리 디자이너에서 쿼리를 만들 수 있습니다.  
   
  ![rs_SharedDatasetDesignMode](../media/rs-shareddatasetdesignmode.gif "rs_SharedDatasetDesignMode")  
   

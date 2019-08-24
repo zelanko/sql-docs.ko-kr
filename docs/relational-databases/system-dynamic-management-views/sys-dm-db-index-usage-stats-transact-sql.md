@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68264401"
 ---
-# <a name="sysdmdbindexusagestats-transact-sql"></a>sys.dm_db_index_usage_stats(Transact-SQL)
+# <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   서로 다른 유형의 인덱스 작업 수와 각 유형의 작업이 마지막으로 수행된 시간을 반환합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "68264401"
 ## <a name="remarks"></a>설명  
  한 번의 쿼리 실행으로 지정된 인덱스에 대한 개별적인 검색(Seek), 검색(Scan), 조회 또는 업데이트를 수행하면 해당 인덱스를 사용하는 것으로 계산되어 이 뷰에서 해당 카운터를 증가시킵니다. 통계 수집을 위한 검색과 같이 내부적으로 생성된 쿼리에 의한 작업과 사용자 제공 쿼리에 의한 작업의 경우 모두 정보가 보고됩니다.  
   
- 합니다 **user_updates** 카운터에서 삽입 된 인덱스 유지 관리의 수준을 나타내는, 업데이트 또는 삭제 작업을 기본 테이블 또는 보기에 있습니다. 이 뷰를 사용하여 어떤 인덱스가 사용자 응용 프로그램에서만 조금 사용되는지 또는 유지 관리 오버헤드를 유발하는지를 확인할 수 있습니다. 필요한 경우 유지 관리 오버헤드를 유발하지만 쿼리에 거의 사용되지 않거나 전혀 사용되지 않는 인덱스를 삭제할 수도 있습니다.  
+ 합니다 **user_updates** 카운터에서 삽입 된 인덱스 유지 관리의 수준을 나타내는, 업데이트 또는 삭제 작업을 기본 테이블 또는 보기에 있습니다. 이 뷰를 사용하여 어떤 인덱스가 사용자 애플리케이션에서만 조금 사용되는지 또는 유지 관리 오버헤드를 유발하는지를 확인할 수 있습니다. 필요한 경우 유지 관리 오버헤드를 유발하지만 쿼리에 거의 사용되지 않거나 전혀 사용되지 않는 인덱스를 삭제할 수도 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](MSSQLSERVER) 서비스를 시작할 때마다 카운터는 빈 상태로 초기화됩니다. 또한 데이터베이스가 분리되거나 종료될 때마다(예: AUTO_CLOSE가 ON으로 설정된 경우) 데이터베이스와 관련된 모든 행이 제거됩니다.  
   

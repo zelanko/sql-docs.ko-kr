@@ -28,7 +28,7 @@ ms.locfileid: "62893598"
   
 ## <a name="options"></a>변수  
  **데이터 원본**  
- 원본의 데이터 저장 형식과 일치하는 데이터 공급자를 선택합니다. 데이터 원본에 사용할 수 있는 공급자가 여러 개 있을 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, .Net Framework Data Provider for SQL Server 또는 Microsoft OLE DB Provider for SQL Server를 사용할 수 있습니다.  
+ 원본의 데이터 스토리지 형식과 일치하는 데이터 공급자를 선택합니다. 데이터 원본에 사용할 수 있는 공급자가 여러 개 있을 수 있습니다. 예를 들어 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, .Net Framework Data Provider for SQL Server 또는 Microsoft OLE DB Provider for SQL Server를 사용할 수 있습니다.  
   
  **데이터 원본** 속성의 옵션은 컴퓨터에 설치된 공급자에 따라 달라집니다. 다음 표에서는 자주 사용되는 일부 대상에 대한 옵션을 나열합니다. 다른 공급자에 대한 내용은 공급자 설명서를 참조하십시오.  
   

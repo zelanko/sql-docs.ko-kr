@@ -20,10 +20,10 @@ ms.locfileid: "66088635"
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>SQL Server 2014에서 지원되지 않는 SQL Server 기능
   이 항목에서는 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]로 업그레이드한 후 더 이상 사용할 수 없는 기능에 대해 설명합니다.  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a> [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]에서는 지원되지 않는 기능이 없습니다.  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="discontinued-active-directory-helper-service"></a>지원되지 않는 Active Directory Helper 서비스  
  Active Directory Helper 서비스 및 관련 구성 요소가 제거되었습니다. 다음 표에서는 이와 관련하여 제거된 구성 요소를 보여 줍니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "66088635"
 ## <a name="discontinued-features-in-sql-server-2008"></a>SQL Server 2008에서 지원되지 않는 기능  
   
 ### <a name="discontinued-sql-dmo-from-sql-server-express-installation"></a>SQL Server Express 설치에서 더 이상 제공되지 않는 SQL-DMO  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]용 SQL-DMO가 [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]에서 제거되었습니다. 현재 이 기능을 사용하는 응용 프로그램을 가능한 한 빨리 수정하는 것이 좋습니다. 용 SQL-DMO를 지원 해야 하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express를에서 이전 버전과 호환성 구성 요소를 설치 합니다 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 기능 팩에서의 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=51230)합니다. 새로운 개발 작업에는 SMO([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects)를 사용하십시오.  
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]용 SQL-DMO가 [!INCLUDE[ssExpressEd10](../includes/ssexpressed10-md.md)]에서 제거되었습니다. 현재 이 기능을 사용하는 애플리케이션을 가능한 한 빨리 수정하는 것이 좋습니다. 용 SQL-DMO를 지원 해야 하는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express를에서 이전 버전과 호환성 구성 요소를 설치 합니다 [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] 기능 팩에서의 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=51230)합니다. 새로운 개발 작업에는 SMO([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects)를 사용하십시오.  
   
 ### <a name="discontinued-option-for-web-assistant"></a>더 이상 제공되지 않는 웹 길잡이 옵션  
  웹 길잡이를 사용할 수 있도록 설정하는 `sp_configure` 옵션이 [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]에서 제거되었습니다. 대신 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 을 사용하는 것이 좋습니다.  

@@ -102,7 +102,7 @@ WAITFOR
  WAITFOR 문에서 액세스하는 행 집합에 대한 변경을 방지하는 잠금을 보유한 트랜잭션 내에서 WAITFOR를 사용하여 쿼리를 실행하면 교착 상태가 발생할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 시나리오를 식별하고 이러한 교착 상태가 존재할 가능성이 있는 경우 빈 결과 집합을 반환합니다.  
   
 > [!CAUTION]  
->  WAITFOR를 포함하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 완료 속도가 저하되고 응용 프로그램에서 시간 초과 메시지가 나타날 수 있습니다. 필요할 경우 응용 프로그램 수준에서 연결에 대한 제한 시간 설정을 조정하세요.  
+>  WAITFOR를 포함하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 완료 속도가 저하되고 애플리케이션에서 시간 초과 메시지가 나타날 수 있습니다. 필요할 경우 애플리케이션 수준에서 연결에 대한 제한 시간 설정을 조정하세요.  
   
 ## <a name="examples"></a>예  
   

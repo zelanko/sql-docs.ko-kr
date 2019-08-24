@@ -45,7 +45,7 @@
       href: net-framework/omitting-values-for-optional-web-service-objects.md
     - name: 보안 웹 서비스 메서드 사용
       href: net-framework/using-secure-web-service-methods.md
-    - name: 사용자 지정 응용 프로그램에서 RSClientPrint 컨트롤 사용
+    - name: 사용자 지정 애플리케이션에서 RSClientPrint 컨트롤 사용
       href: net-framework/using-the-rsclientprint-control-in-custom-applications.md
     - name: Reporting Services 속성
       href: net-framework/reporting-services-properties.md

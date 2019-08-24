@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68075731"
 ---
-# <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver(Transact-SQL)
+# <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   병합 복제 동기화 프로세스를 수행하는 동안 호출될 수 있는 비즈니스 논리 처리기 또는 COM 기반 사용자 지정 해결 프로그램을 등록합니다. 이 저장 프로시저는 배포자에서 실행됩니다.  
@@ -47,7 +47,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
   
 `[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` 등록 되는 사용자 지정 비즈니스 논리의 유형을 지정 합니다. *is_dotnet_assembly* 됩니다 **nvarchar (50)** , 기본값은 FALSE입니다. **true** 등록할 사용자 지정 비즈니스 논리가 비즈니스 논리 처리기 어셈블리 임을 나타냅니다 **false** 은 COM 구성 요소임을 나타냅니다.  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` 비즈니스 논리 처리기를 구현 하는 어셈블리의 이름이입니다. *dotnet_assembly_name* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 응용 프로그램과 같은 디렉터리 또는 GAC(전역 어셈블리 캐시)에서 배포되지 않은 경우 어셈블리에 대한 전체 경로를 지정해야 합니다.  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` 비즈니스 논리 처리기를 구현 하는 어셈블리의 이름이입니다. *dotnet_assembly_name* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다. 어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 애플리케이션과 같은 디렉터리 또는 GAC(전역 어셈블리 캐시)에서 배포되지 않은 경우 어셈블리에 대한 전체 경로를 지정해야 합니다.  
   
 `[ @dotnet_class_name = ] 'dotnet_class_name'` 재정의 하는 클래스의 이름인 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule> 비즈니스 논리 처리기를 구현 합니다. 형식 이름을 지정 해야 **Namespace.Classname**합니다. *dotnet_class_name* 됩니다 **nvarchar(255)** , 기본값은 NULL입니다.  
   

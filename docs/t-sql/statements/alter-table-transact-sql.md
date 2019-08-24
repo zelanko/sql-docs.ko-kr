@@ -556,7 +556,7 @@ DROP NOT FOR REPLICATION
 복제 에이전트가 삽입 작업을 수행할 때 ID 열의 값이 증가하도록 지정합니다. *column_name*이 ID 열인 경우에만 이 열을 지정할 수 있습니다.
 
 SPARSE  
-열이 스파스 열임을 나타냅니다. 스파스 열의 저장소는 Null 값에 대해 최적화됩니다. 스파스 열은 NOT NULL로 설정할 수 없습니다. 스파스 열에서 스파스가 아닌 열로 또는 스파스가 아닌 열에서 스파스 열로 열을 변환하면 명령이 실행되는 동안 테이블이 잠깁니다. 공간을 절약하기 위해 REBUILD 절을 사용해야 할 수 있습니다. 추가 제한 사항 및 스파스 열에 대한 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.
+열이 스파스 열임을 나타냅니다. 스파스 열의 스토리지는 Null 값에 대해 최적화됩니다. 스파스 열은 NOT NULL로 설정할 수 없습니다. 스파스 열에서 스파스가 아닌 열로 또는 스파스가 아닌 열에서 스파스 열로 열을 변환하면 명령이 실행되는 동안 테이블이 잠깁니다. 공간을 절약하기 위해 REBUILD 절을 사용해야 할 수 있습니다. 추가 제한 사항 및 스파스 열에 대한 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.
 
 ADD MASKED WITH ( FUNCTION = ' *mask_function* ')  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
@@ -845,7 +845,7 @@ columnstore 테이블에만 적용됩니다. COLUMNSTORE에서는 COLUMNSTORE_AR
 COLUMNSTORE_ARCHIVE  
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
-클러스터형 columnstore 인덱스로 저장된 테이블인 columnstore 테이블에만 적용됩니다. COLUMNSTORE_ARCHIVE는 지정된 파티션을 보다 작은 크기로 압축합니다. 보관을 위해 또는 보다 적은 저장소가 필요하고 저장 및 검색에 더 많은 시간을 이용할 수 있는 기타 상황에 이 옵션을 사용합니다.
+클러스터형 columnstore 인덱스로 저장된 테이블인 columnstore 테이블에만 적용됩니다. COLUMNSTORE_ARCHIVE는 지정된 파티션을 보다 작은 크기로 압축합니다. 보관을 위해 또는 보다 적은 스토리지가 필요하고 저장 및 검색에 더 많은 시간을 이용할 수 있는 기타 상황에 이 옵션을 사용합니다.
 
 여러 파티션을 동시에 다시 작성하려면 [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md)을 참조하세요. 테이블에 클러스터형 인덱스가 없는 경우 데이터 압축을 변경하면 힙과 비클러스터형 인덱스가 다시 작성됩니다. 압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.
 
@@ -1540,7 +1540,7 @@ WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1) ) ;
 
 #### <a name="b-modifying-a-columnstore-table-to-change-archival-compression"></a>2\. columnstore 테이블을 수정하여 보관 압축 변경
 
-다음 예에서는 추가 압축 알고리즘을 적용하여 columnstore 테이블 파티션을 보다 더 압축합니다. 이 압축으로 테이블 크기는 보다 작아지지만 저장 및 검색에 필요한 시간은 증가합니다. 보관하거나 보다 적은 저장소가 필요한 기타 상황에서 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.
+다음 예에서는 추가 압축 알고리즘을 적용하여 columnstore 테이블 파티션을 보다 더 압축합니다. 이 압축으로 테이블 크기는 보다 작아지지만 스토리지 및 검색에 필요한 시간은 증가합니다. 보관하거나 보다 적은 스토리지가 필요한 기타 상황에서 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.
 
 **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]까지
 

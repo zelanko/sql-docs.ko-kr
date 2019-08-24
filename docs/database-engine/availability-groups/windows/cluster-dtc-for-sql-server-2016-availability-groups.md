@@ -35,7 +35,7 @@ ms.locfileid: "67988566"
 
 ||태스크|참조|  
 |------|-----------------|----------|  
-|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|공유 저장소 드라이브입니다.|[공유 저장소 드라이브 구성](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). 드라이브 문자 **M**을 사용하는 것이 좋습니다.|
+|![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|공유 스토리지 드라이브입니다.|[공유 스토리지 드라이브 구성](https://msdn.microsoft.com/library/cc982358(v=bts.10).aspx). 드라이브 문자 **M**을 사용하는 것이 좋습니다.|
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|고유한 DTC 네트워크 이름 리소스입니다.  이름은 Active Directory에서 클러스터 컴퓨터 개체로 등록됩니다.<br /><br />다음 중 하나라도 해당되는지 확인합니다.<br /><br />•  DTC 네트워크 이름 리소스를 만드는 사용자에게는 DTC 네트워크 이름 리소스가 상주할 OU 또는 컨테이너에 대한 컴퓨터 만들기 개체 권한이 있습니다.<br /><br />•  사용자에게 컴퓨터 만들기 개체 권한이 없는 경우 도메인 관리자에게 DTC 네트워크 이름 리소스에 대한 클러스터 컴퓨터 개체를 미리 준비하라고 요청합니다.|[Active Directory Domain Services에서 클러스터 컴퓨터 개체 사전 준비](https://technet.microsoft.com/library/dn466519(v=ws.11).aspx)|
 |![확인란](../../../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "확인란")|사용 가능한 올바른 고정 IP 주소와, 해당 IP 주소에 대해 적절한 서브넷 마스크입니다.||
 

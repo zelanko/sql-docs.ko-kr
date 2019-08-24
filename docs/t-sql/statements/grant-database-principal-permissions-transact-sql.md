@@ -35,7 +35,7 @@ ms.locfileid: "68065501"
 # <a name="grant-database-principal-permissions-transact-sql"></a>GRANT 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 사용자, 데이터베이스 역할 또는 응용 프로그램 역할에 대한 사용 권한을 부여합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 데이터베이스 사용자, 데이터베이스 역할 또는 애플리케이션 역할에 대한 사용 권한을 부여합니다.  
   
 
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -76,7 +76,7 @@ GRANT permission [ ,...n ]
   
  APPLICATION ROLE ::*application_role*  
    
- 사용 권한을 부여할 응용 프로그램 역할의 클래스 및 이름을 지정합니다. 범위 한정자(::)가 필요합니다.  
+ 사용 권한을 부여할 애플리케이션 역할의 클래스 및 이름을 지정합니다. 범위 한정자(::)가 필요합니다.  
   
  WITH GRANT OPTION  
  지정된 사용 권한을 다른 보안 주체에게 부여할 수 있는 권한도 이 보안 주체에 제공됨을 나타냅니다.  
@@ -93,7 +93,7 @@ GRANT permission [ ,...n ]
  *Application_role*  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
   
- 응용 프로그램 역할을 지정합니다.  
+ 애플리케이션 역할을 지정합니다.  
   
  *Database_user_mapped_to_Windows_User*  
  Windows 사용자로 매핑된 데이터베이스 사용자를 지정합니다.  
@@ -136,10 +136,10 @@ GRANT permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="application-role-permissions"></a>응용 프로그램 역할 사용 권한  
- 응용 프로그램 역할은 사용 권한 계층에서 해당 역할의 부모인 데이터베이스에 포함된 데이터베이스 수준 보안 개체입니다. 다음 표에는 데이터베이스 역할에 대해 부여할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
+## <a name="application-role-permissions"></a>애플리케이션 역할 사용 권한  
+ 애플리케이션 역할은 사용 권한 계층에서 해당 역할의 부모인 데이터베이스에 포함된 데이터베이스 수준 보안 개체입니다. 다음 표에는 데이터베이스 역할에 대해 부여할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
   
-|응용 프로그램 역할 사용 권한|응용 프로그램 역할 사용 권한에 포함된 사용 권한|데이터베이스 사용 권한에 포함된 사용 권한|  
+|애플리케이션 역할 사용 권한|애플리케이션 역할 사용 권한에 포함된 사용 권한|데이터베이스 사용 권한에 포함된 사용 권한|  
 |---------------------------------|--------------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
@@ -184,8 +184,8 @@ GRANT VIEW DEFINITION ON ROLE::SammamishParking
 GO  
 ```  
   
-### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. 응용 프로그램 역할에 사용자에 대한 IMPERSONATE 권한 부여  
- 다음 예에서는 `IMPERSONATE` 응용 프로그램 역할 `HamithaL`에 대해 사용자 `AdventureWorks2012`에 대한 `AccountsPayable17` 권한을 부여합니다.  
+### <a name="c-granting-impersonate-permission-on-a-user-to-an-application-role"></a>C. 애플리케이션 역할에 사용자에 대한 IMPERSONATE 권한 부여  
+ 다음 예에서는 `IMPERSONATE` 애플리케이션 역할 `HamithaL`에 대해 사용자 `AdventureWorks2012`에 대한 `AccountsPayable17` 권한을 부여합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지  
   

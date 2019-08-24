@@ -31,7 +31,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67913896"
 ---
-# <a name="set-ansinulldflton-transact-sql"></a>SET ANSI_NULL_DFLT_ON(Transact-SQL)
+# <a name="set-ansi_null_dflt_on-transact-sql"></a>SET ANSI_NULL_DFLT_ON(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   데이터베이스의 **ANSI Null 기본값** 옵션이 **false**로 설정되어 있으면 세션의 동작을 수정하여 새 열의 기본 Null 허용 여부보다 우선 적용됩니다. **ANSI Null 기본값** 설정에 대한 자세한 내용은 [ALTER DATABASE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)를 참조하세요.  
@@ -59,7 +59,7 @@ SET ANSI_NULL_DFLT_ON ON
   
  Null 허용 여부 설정이 서로 다른 데이터베이스에서 사용되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 스크립트로 가장 안정적으로 작업하려면 CREATE TABLE과 ALTER TABLE 문에서 NULL 또는 NOT NULL을 지정하는 것이 좋습니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결할 때 ANSI_NULL_DFLT_ON을 자동으로 ON으로 설정합니다. DB-Library 응용 프로그램에서 연결하는 경우 SET ANSI_NULL_DFLT_ON의 기본값은 OFF입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결할 때 ANSI_NULL_DFLT_ON을 자동으로 ON으로 설정합니다. DB-Library 애플리케이션에서 연결하는 경우 SET ANSI_NULL_DFLT_ON의 기본값은 OFF입니다.  
   
  SET ANSI_DEFAULTS를 ON으로 설정하면 SET ANSI_NULL_DFLT_ON 옵션이 설정됩니다.  
   

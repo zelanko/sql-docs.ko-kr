@@ -30,7 +30,7 @@ ms.locfileid: "68130892"
 
   Db-library 대량 복사 프로그램을 odbc로 변환 되므로 쉽게 대량 복사 함수에서 지 원하는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 Db-library 대량 복사 함수에서 다음과 같은 예외가 비슷합니다.  
   
--   DB-Library 응용 프로그램은 DBPROCESS 구조에 대한 포인터를 대량 복사 함수의 첫 번째 매개 변수로 전달합니다. ODBC 응용 프로그램에서는 DBPROCESS 포인터가 ODBC 연결 핸들로 대체됩니다.  
+-   DB-Library 애플리케이션은 DBPROCESS 구조에 대한 포인터를 대량 복사 함수의 첫 번째 매개 변수로 전달합니다. ODBC 애플리케이션에서는 DBPROCESS 포인터가 ODBC 연결 핸들로 대체됩니다.  
   
 -   Db-library 응용 프로그램 호출 **BCP_SETL** 연결 여 DBPROCESS에서 대량 복사 작업을 사용 하도록 설정 하기 전에 합니다. ODBC 응용 프로그램 대신 호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 연결 연결 핸들에서 대량 작업을 사용 하도록 설정 하기 전에:  
   

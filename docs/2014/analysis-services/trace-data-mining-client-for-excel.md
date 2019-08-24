@@ -68,7 +68,7 @@ ms.locfileid: "66065891"
 > [!NOTE]  
 >  대부분의 DMX 문은 매개 변수화됩니다. 단순 유형의 경우 변수 값이 문 아래에 나열되지만 복합 유형의 경우 매개 변수 유형만 나열됩니다.  
   
- 또한 SQL Server Analysis Services에서는 XMLA(XML for Analysis) 프로토콜을 사용하여 Excel용 데이터 마이닝 클라이언트 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 포함한 클라이언트 응용 프로그램 간의 모든 통신을 처리합니다.  
+ 또한 SQL Server Analysis Services에서는 XMLA(XML for Analysis) 프로토콜을 사용하여 Excel용 데이터 마이닝 클라이언트 및 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 인스턴스를 포함한 클라이언트 애플리케이션 간의 모든 통신을 처리합니다.  
   
  DMX 구문 및 XMLA의 명령과 요소에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 온라인 설명서를 참조하십시오.  
   

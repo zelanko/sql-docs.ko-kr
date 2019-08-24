@@ -46,7 +46,7 @@ ms.locfileid: "65479439"
  [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 준비 프로세스를 사용하여 컬렉션 작업을 할 수 있습니다.  
   
 ### <a name="model-deployment-wizard"></a>모델 배포 마법사  
- 데이터를 포함하는 패키지는 더 이상 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서 마법사를 사용하여 만들고 배포할 수 없습니다. 대신 새로운 명령줄 유틸리티를 사용할 수 있습니다. 자세한 내용은 [모델 배포&#40;Master Data Services&#41;](deploying-models-master-data-services.md)를 참조하세요.  
+ 데이터를 포함하는 패키지는 더 이상 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서 마법사를 사용하여 만들고 배포할 수 없습니다. 대신 새로운 명령줄 유틸리티를 사용할 수 있습니다. 자세한 내용은 [모델 배포&#40;Master Data Services&#41;](deploying-models-master-data-services.md)를 참조하세요.  
   
  데이터를 포함하지 않는 패키지는 계속해서 마법사를 사용하여 만들고 배포할 수 있습니다.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "65479439"
  이 유형의 규칙을 포함하는 [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] 모델 배포 패키지가 있는 경우 데이터베이스를 [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]로 업그레이드할 때 비즈니스 규칙은 제외됩니다.  
   
 ### <a name="bulk-updates-and-exporting"></a>대량 업데이트 및 내보내기  
- [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서는 더 이상 여러 멤버에 대한 특성 값을 대량으로 업데이트할 수 없습니다. 대량 업데이트를 수행 하려면 준비 프로세스를 사용 또는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]합니다.  
+ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서는 더 이상 여러 멤버에 대한 특성 값을 대량으로 업데이트할 수 없습니다. 대량 업데이트를 수행 하려면 준비 프로세스를 사용 또는 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]합니다.  
   
- [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 응용 프로그램에서는 더 이상 멤버를 Excel로 내보낼 수 없습니다. Excel에서 멤버를 사용 하려면 사용 합니다 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]합니다.  
+ [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] 웹 애플리케이션에서는 더 이상 멤버를 Excel로 내보낼 수 없습니다. Excel에서 멤버를 사용 하려면 사용 합니다 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]합니다.  
   
 ### <a name="transactions"></a>의  
  에 **탐색기** 기능 영역에서 더 이상 사용자가 자신의 트랜잭션이 되돌릴 합니다. 사용자 데이터에 변경 내용이 되돌릴 수 이전에 **탐색기**합니다. 관리자의 모든 사용자에 대 한 트랜잭션이 되돌릴 수 있습니다 합니다 **버전 관리** 기능 영역입니다.  

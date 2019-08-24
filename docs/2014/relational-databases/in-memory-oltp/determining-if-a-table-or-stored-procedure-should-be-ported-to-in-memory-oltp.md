@@ -21,7 +21,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63072386"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>메모리 내 OLTP에 테이블 또는 저장 프로시저를 이식해야 하는지 확인
-  트랜잭션 성능 수집기 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 메모리 내 OLTP 데이터베이스 응용 프로그램의 성능이 향상 될를 평가 하는 데 도움이 됩니다. 트랜잭션 성능 분석 보고서에는 응용 프로그램에서 메모리 내 OLTP를 사용하기 위해 얼마나 많은 작업을 수행해야 하는지도 나와 있습니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다.  
+  트랜잭션 성능 수집기 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] 메모리 내 OLTP 데이터베이스 응용 프로그램의 성능이 향상 될를 평가 하는 데 도움이 됩니다. 트랜잭션 성능 분석 보고서에는 애플리케이션에서 메모리 내 OLTP를 사용하기 위해 얼마나 많은 작업을 수행해야 하는지도 나와 있습니다. 메모리 내 OLTP에 이식할 디스크 기반 테이블을 식별한 후 [메모리 최적화 관리자](memory-optimization-advisor.md)를 사용하여 테이블을 마이그레이션할 수 있습니다. 마찬가지로 [Native Compilation Advisor](native-compilation-advisor.md) 를 사용하여 저장 프로시저를 고유하게 컴파일된 저장 프로시저에 이식할 수 있습니다.  
   
  이 항목에서는 다음과 같은 작업을 수행하는 방법에 대해 설명합니다.  
   

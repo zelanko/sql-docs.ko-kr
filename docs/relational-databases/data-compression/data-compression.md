@@ -188,7 +188,7 @@ REBUILD PARTITION = ALL WITH (
 ## <a name="how-compression-affects-other-sql-server-components"></a>압축이 다른 SQL Server 구성 요소에 주는 영향 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
    
- 압축은 저장소 엔진에서 발생하므로 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다른 구성 요소 대부분에 압축되지 않은 상태로 제공됩니다. 따라서 압축이 다른 구성 요소에 주는 영향은 다음으로 제한됩니다.  
+ 압축은 스토리지 엔진에서 발생하므로 데이터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 다른 구성 요소 대부분에 압축되지 않은 상태로 제공됩니다. 따라서 압축이 다른 구성 요소에 주는 영향은 다음으로 제한됩니다.  
 -   대량 가져오기 및 내보내기 작업  
      데이터를 내보낼 때는 네이티브 형식으로 내보내더라도 데이터가 압축되지 않는 행 형식으로 출력됩니다. 따라서 내보낸 데이터 파일의 크기가 원본 데이터보다 훨씬 커질 수 있습니다.  
      데이터를 가져올 때는 대상 테이블이 압축을 사용하도록 설정된 경우 스토리지 엔진에서 데이터를 압축된 행 형식으로 변환합니다. 이로 인해 데이터를 압축되지 않은 테이블로 가져올 때보다 CPU 사용량이 증가할 수 있습니다.  

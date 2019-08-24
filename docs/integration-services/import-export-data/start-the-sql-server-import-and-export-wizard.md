@@ -117,7 +117,7 @@ Visual Studio가 설치되어 있지 않거나 Visual Studio가 있지만 SQL Se
  다음은 몇 가지 다른 기본 작업입니다.
 -   **마법사의 작동 원리에 대한 빠른 예제를 참조하세요.**
 
-    -   **스크린샷을 보려면.** 단일 페이지([가져오기 및 내보내기 마법사의 간단한 예제 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md))에서 간단한 종단 간 예제를 살펴봅니다.
+    -   **스크린샷을 보려면.** 단일 페이지([가져오기 및 내보내기 마법사의 간단한 예제 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md))에서 간단한 엔드투엔드 예제를 살펴봅니다.
 
     -   **비디오를 시청하려면.** 마법사를 보여 주고 Excel로 데이터를 내보내는 방법을 명료하고 간단하게 설명하는 4분 길이의 YouTube 동영상([SQL Server 가져오기 및 내보내기 마법사를 사용하여 Excel로 내보내기](https://go.microsoft.com/fwlink/?linkid=829049))을 시청합니다.
 

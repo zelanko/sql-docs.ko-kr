@@ -35,7 +35,7 @@ ms.locfileid: "68697499"
 -   한 개체의 데이터가 다른 개체의 데이터로 이동하거나 그 데이터와 비교되거나 결합되면 데이터는 그 개체의 데이터 형식에서 다른 개체의 데이터 형식으로 변환되어야 합니다.  
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)] 결과 열, 반환 코드 또는 출력 매개 변수의 데이터가 프로그램 변수로 이동되면 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식에서 변수의 데이터 형식으로 변환해야 합니다.  
   
-응용 프로그램 변수와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 결과 집합 열, 반환 코드, 매개 변수 또는 매개 변수 표식 간에 변환할 때는 데이터베이스 API에 따라 지원되는 데이터 형식 변환이 정의됩니다.
+애플리케이션 변수와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 결과 집합 열, 반환 코드, 매개 변수 또는 매개 변수 표식 간에 변환할 때는 데이터베이스 API에 따라 지원되는 데이터 형식 변환이 정의됩니다.
   
 ## <a name="implicit-and-explicit-conversion"></a>암시적 및 명시적 변환
 데이터 형식은 암시적으로 또는 명시적으로 변환할 수 있습니다.

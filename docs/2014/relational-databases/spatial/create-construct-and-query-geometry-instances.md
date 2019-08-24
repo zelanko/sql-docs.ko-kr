@@ -100,7 +100,7 @@ ms.locfileid: "66014307"
   
   
 ###  <a name="wkb"></a> WKB 입력에서 geometry 인스턴스 구성  
- WKB는 OGC(Open Geospatial Consortium)에서 지정한 이진 형식으로, 클라이언트 응용 프로그램과 SQL 데이터베이스 간에 `geometry` 데이터를 교환하도록 허용합니다. 다음 함수는 WKB 입력을 사용하여 기하 도형을 생성합니다.  
+ WKB는 OGC(Open Geospatial Consortium)에서 지정한 이진 형식으로, 클라이언트 애플리케이션과 SQL 데이터베이스 간에 `geometry` 데이터를 교환하도록 허용합니다. 다음 함수는 WKB 입력을 사용하여 기하 도형을 생성합니다.  
   
  **WKB 입력에서 모든 유형의 geometry 인스턴스를 생성하려면**  
  [STGeomFromWKB&#40;geometry 데이터 형식&#41;](/sql/t-sql/spatial-geometry/stgeomfromwkb-geometry-data-type)  

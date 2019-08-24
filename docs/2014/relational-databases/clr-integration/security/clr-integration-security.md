@@ -55,7 +55,7 @@ ms.locfileid: "62918994"
  관리되는 메서드에서 다른 어셈블리에 포함된 클래스의 메서드를 호출할 때 발생하는 문제를 설명합니다.  
   
  [애플리케이션 도메인 및 CLR 통합 보안](../../../database-engine/dev-guide/application-domains-and-clr-integration-security.md)  
- 응용 프로그램 도메인에 어셈블리를 로드하는 방법에 대해 설명합니다.  
+ 애플리케이션 도메인에 어셈블리를 로드하는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CLR 통합 어셈블리 관리](../assemblies/managing-clr-integration-assemblies.md)  

@@ -140,12 +140,12 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
  *합계* 으로 선언 되는 `int` SQL Server 데이터 형식 및는 *값* 으로 CLR 저장 프로시저에 정의 된 매개 변수를 지정 하는 `SqlInt32` CLR 데이터 형식입니다. 호출 프로그램에서 CLR 저장 프로시저를 실행할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자동으로 변환 합니다 `SqlInt32` CLR 데이터 형식을 `int` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식.  자세한 내용은 CLR에 대 한 데이터 형식 및 변환할 수 없습니다 [CLR 매개 변수 데이터 매핑](../../relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data.md)합니다.  
   
 ### <a name="returning-tabular-results-and-messages"></a>테이블 형식 결과 및 메시지 반환  
- 테이블 형식 결과 및 메시지를 클라이언트에 반환하려면 `SqlPipe` 개체를 사용합니다. 이 개체는 `Pipe` 클래스의 `SqlContext` 속성을 사용하여 가져옵니다. `SqlPipe` 개체에는 `Send` 메서드가 있습니다. `Send` 메서드를 호출하여 데이터를 파이프를 통해 호출 응용 프로그램으로 전송할 수 있습니다.  
+ 테이블 형식 결과 및 메시지를 클라이언트에 반환하려면 `SqlPipe` 개체를 사용합니다. 이 개체는 `Pipe` 클래스의 `SqlContext` 속성을 사용하여 가져옵니다. `SqlPipe` 개체에는 `Send` 메서드가 있습니다. `Send` 메서드를 호출하여 데이터를 파이프를 통해 호출 애플리케이션으로 전송할 수 있습니다.  
   
  `SqlPipe.Send`를 보내는 메서드와 단순히 텍스트 문자열을 보내는 다른 메서드를 포함하여 `SqlDataReader` 메서드의 오버로드가 여러 개 있습니다.  
   
 ###### <a name="returning-messages"></a>메시지 반환  
- `SqlPipe.Send(string)`를 사용하여 메시지를 클라이언트 응용 프로그램에 보낼 수 있습니다. 메시지 텍스트는 8000자로 제한되며 8000자를 초과하면 잘립니다.  
+ `SqlPipe.Send(string)`를 사용하여 메시지를 클라이언트 애플리케이션에 보낼 수 있습니다. 메시지 텍스트는 8000자로 제한되며 8000자를 초과하면 잘립니다.  
   
 ###### <a name="returning-tabular-results"></a>테이블 형식 결과 반환  
  쿼리 결과를 직접 클라이언트로 보내려면 `Execute` 메서드 오버로드 중 하나를 `SqlPipe` 개체에 사용합니다. 이 방법이 결과 집합을 가장 효율적으로 클라이언트에 반환하는 방법입니다. 그 이유는 데이터가 관리되는 메모리에 복사되지 않고 네트워크 버퍼로 전송되기 때문입니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
@@ -370,7 +370,7 @@ End Class
   
  첫 번째 `Send`는 클라이언트에 메시지를 보내고 두 번째 Send는 `SqlDataReader`를 사용하여 테이블 형식 결과를 보냅니다.  
   
- 이러한 예는 이해를 돕기 위한 목적으로만 사용되었습니다. 계산을 많이 수행하는 응용 프로그램의 경우 단순한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문보다 CLR 함수가 적합합니다. 앞의 예와 거의 비슷한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저는 다음과 같습니다.  
+ 이러한 예는 이해를 돕기 위한 목적으로만 사용되었습니다. 계산을 많이 수행하는 애플리케이션의 경우 단순한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문보다 CLR 함수가 적합합니다. 앞의 예와 거의 비슷한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저는 다음과 같습니다.  
   
 ```  
 CREATE PROCEDURE HelloWorld() AS  
@@ -381,7 +381,7 @@ END;
 ```  
   
 > [!NOTE]  
->  클라이언트 응용 프로그램에서는 메시지와 결과 집합이 다른 방식으로 검색됩니다. 예를 들어 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 결과 집합에 표시 합니다 **결과** 뷰에 나타나고 메시지에 표시 합니다 **메시지** 창.  
+>  클라이언트 애플리케이션에서는 메시지와 결과 집합이 다른 방식으로 검색됩니다. 예를 들어 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 결과 집합에 표시 합니다 **결과** 뷰에 나타나고 메시지에 표시 합니다 **메시지** 창.  
   
  위의 Visual C# 코드를 MyFirstUdp.cs 파일에 저장한 경우 다음 코드를 사용하여 컴파일합니다.  
   

@@ -20,7 +20,7 @@ ms.locfileid: "65481341"
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>태스크 1: 마스터 데이터 관리자를 사용하여 공급자 모델 만들기
   이 태스크에서는 명명 된 모델을 만듭니다 **공급 업체** 사용 하 여 MDS **마스터 데이터 관리자**합니다.  
   
-1.  이동할 [ http://localhost/mds ](http://localhost/mds) 시작 하려면 **마스터 데이터 관리자**합니다. 웹 응용 프로그램을 다른 이름으로 구성했거나 다른 웹 사이트에 구성한 경우 URL을 바꿉니다.  
+1.  이동할 [ http://localhost/mds ](http://localhost/mds) 시작 하려면 **마스터 데이터 관리자**합니다. 웹 애플리케이션을 다른 이름으로 구성했거나 다른 웹 사이트에 구성한 경우 URL을 바꿉니다.  
   
      ![마스터 데이터 관리자-시스템 관리](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-01.jpg "마스터 데이터 관리자-시스템 관리")  
   

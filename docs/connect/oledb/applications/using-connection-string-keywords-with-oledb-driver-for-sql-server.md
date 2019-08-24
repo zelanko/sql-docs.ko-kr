@@ -38,7 +38,7 @@ ms.locfileid: "67989225"
 
   
 ## <a name="ole-db-driver-connection-string-keywords"></a>OLE DB 드라이버 연결 문자열 키워드  
- OLE DB 응용 프로그램에서는 데이터 원본 개체를 다음 두 가지 방법으로 초기화할 수 있습니다.  
+ OLE DB 애플리케이션에서는 데이터 원본 개체를 다음 두 가지 방법으로 초기화할 수 있습니다.  
   
 -   **IDBInitialize::Initialize**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "67989225"
 |-------------|-----------------------------|-----------------|  
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|"Address"에 대한 동의어입니다.|  
 |**주소**|SSPROP_INIT_NETWORKADDRESS|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 서버의 네트워크 주소입니다. **Address**는 일반적으로 서버의 네트워크 이름이지만 파이프, IP 주소나 TCP/IP 포트 및 소켓 주소와 같은 다른 이름일 수도 있습니다.<br /><br /> IP 주소를 지정하는 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자에서 TCP/IP 또는 명명된 파이프 프로토콜이 설정되어 있는지 확인합니다.<br /><br /> SQL Server에 대 한 OLE DB 드라이버를 사용 하는 경우 **주소** 값은 연결 문자열의 **서버** 에 전달 된 값 보다 우선 합니다. 또한 `Address=;`이면 **Server** 키워드에 지정된 서버에 연결하지만 `Address= ;, Address=.;`, `Address=localhost;` 및 `Address=(local);`이면 항상 로컬 서버에 연결합니다.<br /><br /> **Address** 키워드에 대한 전체 구문은 다음과 같습니다.<br /><br /> [_protocol_ **:** ]_Address_[ **,** _port &#124;\pipe\pipename_]<br /><br /> _protocol_ 은 **tcp** (TCP/IP), **lpc** (공유 메모리) 또는 **np** (명명된 파이프)일 수 있습니다. 프로토콜에 대 한 자세한 내용은 [클라이언트 프로토콜 구성](../../../database-engine/configure-windows/configure-client-protocols.md)을 참조 하세요.<br /><br /> _프로토콜이_ 나 **Network** 키워드가 모두 지정 되지 않은 경우 SQL Server OLE DB 드라이버는 Configuration Manager에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 지정 된 프로토콜 순서를 사용 합니다.<br /><br /> *port*는 지정한 서버에서 연결할 포트입니다. 기본적으로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]는 포트 1433을 사용합니다.|   
-|**APP**|SSPROP_INIT_APPNAME|응용 프로그램을 식별하는 문자열입니다.|  
+|**APP**|SSPROP_INIT_APPNAME|애플리케이션을 식별하는 문자열입니다.|  
 |**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**입니다. 에 대 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]한 SQL Server 지원 OLE DB 드라이버에 대 한 자세한 내용은 [고가용성, 재해 복구에 대 한 SQL Server 지원을 위한 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)를 참조 하세요.|  
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|연결할 수 있는 데이터베이스의 전체 경로 이름을 포함한 주 파일의 이름입니다. **AttachDBFileName**을 사용하려면 공급자 문자열 Database 키워드에도 데이터베이스 이름을 지정해야 합니다. 데이터베이스가 이전에 연결된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이 데이터베이스를 다시 연결하지 않으며 연결된 데이터베이스를 연결 기본값으로 사용합니다.|  
 |**인증** <a href="#table1_1"> <sup id="table1_authmode"> **1**</sup></a>|SSPROP_AUTH_MODE|사용 되는 SQL 또는 Active Directory 인증을 지정 합니다. 유효한 값은<br/><ul><li>`(not set)`: 다른 키워드에 의해 결정 되는 인증 모드입니다.</li><li>`ActiveDirectoryPassword:`로그인 ID 및 암호를 사용 하 여 인증을 Active Directory 합니다.</li><li>`ActiveDirectoryIntegrated:`현재 로그인 한 사용자의 Windows 계정 자격 증명을 사용 하 여 Active Directory에 대 한 통합 인증.</li><br/>**참고:** (또는 `ActiveDirectoryIntegrated` `Integrated Security` `Authentication`  )인증키워드또는해당속성을사용하는응용프로그램은키워드(또는해당속성)의값을로설정하여새로사용하도록설정`Trusted_Connection`하는 **것이 좋습니다**. 암호화 및 인증서 유효성 검사 동작<br/><br/><li>`SqlPassword:`로그인 ID 및 암호를 사용 하는 인증입니다.</li><br/>**참고:** 인증을 사용 하 `SQL Server` 는 응용 프로그램은 `Authentication` 키워드 (또는 해당 속성)의 값을로 `SqlPassword` 설정 하 여 새 암호화 및 인증서 유효성 검사 동작을 사용 하도록 설정 하는 **것이 좋습니다** .</ul>|
@@ -138,7 +138,7 @@ ms.locfileid: "67989225"
 |키워드|초기화 속성|설명|  
 |-------------|-----------------------------|-----------------|  
 |**액세스 토큰**<a href="#table2_1"><sup id="table2_accesstoken">**1**</sup></a>|SSPROP_AUTH_ACCESS_TOKEN|Azure Active Directory을 인증 하는 데 사용 되는 액세스 토큰입니다. <br/><br/>**참고:** 이 `UID`키워드와 `PWD` ,,`Authentication` 또는 연결 문자열 키워드 또는 해당 속성/키워드를 지정하는것은오류입니다.`Trusted_Connection`|
-|**Application Name**|SSPROP_INIT_APPNAME|응용 프로그램을 식별하는 문자열입니다.|  
+|**Application Name**|SSPROP_INIT_APPNAME|애플리케이션을 식별하는 문자열입니다.|  
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**입니다. 에 대 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]한 SQL Server 지원 OLE DB 드라이버에 대 한 자세한 내용은 [고가용성, 재해 복구에 대 한 SQL Server 지원을 위한 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)를 참조 하세요.|  
 |**인증** <a href="#table2_1"> <sup> **1**</sup></a>|SSPROP_AUTH_MODE|사용 되는 SQL 또는 Active Directory 인증을 지정 합니다. 유효한 값은<br/><ul><li>`(not set)`: 다른 키워드에 의해 결정 되는 인증 모드입니다.</li><li>`ActiveDirectoryPassword:`로그인 ID 및 암호를 사용 하 여 인증을 Active Directory 합니다.</li><li>`ActiveDirectoryIntegrated:`현재 로그인 한 사용자의 Windows 계정 자격 증명을 사용 하 여 Active Directory에 대 한 통합 인증.</li><br/>**참고:** (또는 `ActiveDirectoryIntegrated` `Integrated Security` `Authentication`  )인증키워드또는해당속성을사용하는응용프로그램은키워드(또는해당속성)의값을로설정하여새로사용하도록설정`Trusted_Connection`하는 **것이 좋습니다**. 암호화 및 인증서 유효성 검사 동작<br/><br/><li>`SqlPassword:`로그인 ID 및 암호를 사용 하는 인증입니다.</li><br/>**참고:** 인증을 사용 하 `SQL Server` 는 응용 프로그램은 `Authentication` 키워드 (또는 해당 속성)의 값을로 `SqlPassword` 설정 하 여 새 암호화 및 인증서 유효성 검사 동작을 사용 하도록 설정 하는 **것이 좋습니다** .</ul>|
 |**자동 번역**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate"에 대한 동의어입니다.|  
@@ -174,7 +174,7 @@ ms.locfileid: "67989225"
 ## <a name="activex-data-objects-ado-connection-string-keywords"></a>ADO(ActiveX Data Objects) 연결 문자열 키워드  
  ADO 애플리케이션에서는 **ADODBConnection** 개체의 **ConnectionString** 속성을 설정하거나 **ADODBConnection** 개체의 **Open** 메서드에 대한 매개 변수로 연결 문자열을 제공합니다.  
   
- ADO 애플리케이션에서는 OLE DB **IDBInitialize::Initialize** 메서드에 사용되는 키워드도 사용할 수 있지만 이러한 키워드는 기본값이 없는 속성에만 사용할 수 있습니다. 애플리케이션이 초기화 문자열에 ADO 키워드와 **IDBInitialize::Initialize** 키워드를 모두 사용하는 경우에는 ADO 키워드 설정이 사용됩니다. 응용 프로그램에서 ADO 연결 문자열 키워드만 사용하는 것이 좋습니다.  
+ ADO 애플리케이션에서는 OLE DB **IDBInitialize::Initialize** 메서드에 사용되는 키워드도 사용할 수 있지만 이러한 키워드는 기본값이 없는 속성에만 사용할 수 있습니다. 애플리케이션이 초기화 문자열에 ADO 키워드와 **IDBInitialize::Initialize** 키워드를 모두 사용하는 경우에는 ADO 키워드 설정이 사용됩니다. 애플리케이션에서 ADO 연결 문자열 키워드만 사용하는 것이 좋습니다.  
   
  ADO에서 사용하는 연결 문자열의 구문은 다음과 같습니다.  
   
@@ -196,7 +196,7 @@ ms.locfileid: "67989225"
 |-------------|-----------------------------|-----------------|  
 |**액세스 토큰**<a href="#table3_1"><sup id="table3_accesstoken">**1**</sup></a>|SSPROP_AUTH_ACCESS_TOKEN|Azure Active Directory을 인증 하는 데 사용 되는 액세스 토큰입니다.<br/><br/>**참고:** 이 `UID`키워드와 `PWD` ,,`Authentication` 또는 연결 문자열 키워드 또는 해당 속성/키워드를 지정하는것은오류입니다.`Trusted_Connection`|
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**입니다. 에 대 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]한 SQL Server 지원 OLE DB 드라이버에 대 한 자세한 내용은 [고가용성, 재해 복구에 대 한 SQL Server 지원을 위한 OLE DB 드라이버](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)를 참조 하세요.|  
-|**Application Name**|SSPROP_INIT_APPNAME|응용 프로그램을 식별하는 문자열입니다.|  
+|**Application Name**|SSPROP_INIT_APPNAME|애플리케이션을 식별하는 문자열입니다.|  
 |**인증** <a href="#table3_1"> <sup> **1**</sup></a>|SSPROP_AUTH_MODE|사용 되는 SQL 또는 Active Directory 인증을 지정 합니다. 유효한 값은<br/><ul><li>`(not set)`: 다른 키워드에 의해 결정 되는 인증 모드입니다.</li><li>`ActiveDirectoryPassword:`로그인 ID 및 암호를 사용 하 여 인증을 Active Directory 합니다.</li><li>`ActiveDirectoryIntegrated:`현재 로그인 한 사용자의 Windows 계정 자격 증명을 사용 하 여 Active Directory에 대 한 통합 인증.</li><br/>**참고:** (또는 `ActiveDirectoryIntegrated` `Integrated Security` `Authentication`  )인증키워드또는해당속성을사용하는응용프로그램은키워드(또는해당속성)의값을로설정하여새로사용하도록설정`Trusted_Connection`하는 **것이 좋습니다**. 암호화 및 인증서 유효성 검사 동작<br/><br/><li>`SqlPassword:`로그인 ID 및 암호를 사용 하는 인증입니다.</li><br/>**참고:** 인증을 사용 하 `SQL Server` 는 응용 프로그램은 `Authentication` 키워드 (또는 해당 속성)의 값을로 `SqlPassword` 설정 하 여 새 암호화 및 인증서 유효성 검사 동작을 사용 하도록 설정 하는 **것이 좋습니다** .</ul>|
 |**자동 번역**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate"에 대한 동의어입니다.|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|OEM/ANSI 문자 변환을 구성합니다. 인식되는 값은 "true"와 "false"입니다.|  

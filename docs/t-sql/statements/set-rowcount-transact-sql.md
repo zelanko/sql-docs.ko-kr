@@ -54,7 +54,7 @@ SET ROWCOUNT { number | @number_var }
 ## <a name="remarks"></a>Remarks  
   
 > [!IMPORTANT]  
->  SQL Server의 다음 버전에서는 SET ROWCOUNT 옵션을 사용해도 DELETE, INSERT 및 UPDATE 문에 영향을 주지 않습니다. 새 개발 작업에서는 DELETE, INSERT 및 UPDATE 문에 SET ROWCOUNT 옵션을 사용하지 않도록 하고 현재 이 옵션을 사용하는 응용 프로그램은 수정하세요. 유사한 동작의 경우 TOP 구문을 사용합니다. 자세한 내용은 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)을 참조하세요.  
+>  SQL Server의 다음 버전에서는 SET ROWCOUNT 옵션을 사용해도 DELETE, INSERT 및 UPDATE 문에 영향을 주지 않습니다. 새 개발 작업에서는 DELETE, INSERT 및 UPDATE 문에 SET ROWCOUNT 옵션을 사용하지 않도록 하고 현재 이 옵션을 사용하는 애플리케이션은 수정하세요. 유사한 동작의 경우 TOP 구문을 사용합니다. 자세한 내용은 [TOP&#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md)을 참조하세요.  
   
  모든 행이 반환될 수 있도록 이 옵션을 해제하려면 SET ROWCOUNT 0을 지정하세요.  
   

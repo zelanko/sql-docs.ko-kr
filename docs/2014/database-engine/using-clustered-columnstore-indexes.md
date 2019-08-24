@@ -41,7 +41,7 @@ ms.locfileid: "62773743"
 ##  <a name="create"></a> 클러스터형된 Columnstore 인덱스 만들기  
  클러스터형된 columnstore 인덱스를 만들려면 먼저 rowstore 테이블을 힙 또는 클러스터형된 인덱스를 만들고 사용 하 여 합니다 [CREATE CLUSTERED COLUMNSTORE INDEX &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-columnstore-index-transact-sql) 변환할 테이블을 클러스터형 문 columnstore 인덱스입니다. 클러스터형 columnstore 인덱스의 이름을 클러스터형 인덱스와 동일하게 지정하려면 DROP_EXISTING 옵션을 사용합니다.  
   
- 이 예에서는 테이블을 힙으로 만들고 이를 cci_Simple라는 클러스터형 columnstore 인덱스로 변환합니다. 이렇게 하면 전체 테이블의 저장소가 rowstore에서 columnstore로 변경됩니다.  
+ 이 예에서는 테이블을 힙으로 만들고 이를 cci_Simple라는 클러스터형 columnstore 인덱스로 변환합니다. 이렇게 하면 전체 테이블의 스토리지가 rowstore에서 columnstore로 변경됩니다.  
   
 ```  
 CREATE TABLE T1(  
@@ -104,7 +104,7 @@ SELECT * FROM sys.column_store_row_groups
   
  행을 삭제하려면 [DELETE&#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql) 를 사용합니다.  
   
--   행이 columnstore에 있는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 행을 논리적으로 삭제된 것으로 표시하지만, 인덱스가 다시 작성될 때까지는 행에 대한 물리적 저장소를 회수하지 않습니다.  
+-   행이 columnstore에 있는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 행을 논리적으로 삭제된 것으로 표시하지만, 인덱스가 다시 작성될 때까지는 행에 대한 물리적 스토리지를 회수하지 않습니다.  
   
 -   행이 deltastore에 있는 경우 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]는 행을 논리적 및 물리적으로 삭제합니다.  
   

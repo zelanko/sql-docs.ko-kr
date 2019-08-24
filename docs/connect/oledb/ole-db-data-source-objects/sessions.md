@@ -31,7 +31,7 @@ ms.locfileid: "67995185"
   
  초기화된 데이터 원본에서 만든 첫 번째 세션 개체는 초기화 시 설정된 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결을 받습니다. 세션 개체의 인터페이스에 있는 모든 참조가 해제되면 데이터 원본에서 만든 다른 세션 개체가 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결을 사용할 수 있습니다.  
   
- 데이터 원본에서 만든 추가 세션 개체는 데이터 원본에 지정된 대로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 고유한 연결을 설정합니다. 응용 프로그램이 해당 세션 중에 만들어진 개체 참조를 모두 해제하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결이 삭제됩니다.  
+ 데이터 원본에서 만든 추가 세션 개체는 데이터 원본에 지정된 대로 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 고유한 연결을 설정합니다. 애플리케이션이 해당 세션 중에 만들어진 개체 참조를 모두 해제하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대한 연결이 삭제됩니다.  
   
  다음 예에서는 SQL Server에 대 한 OLE DB 드라이버를 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 데이터베이스에 연결 하는 방법을 보여 줍니다.  
   
@@ -184,10 +184,10 @@ EXIT:
   
  SQL Server용 OLE DB 드라이버 세션 개체를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 인스턴스에 연결하면 지속적으로 세션 개체를 만들고 해제하는 애플리케이션의 경우 상당한 오버헤드가 생성될 수 있습니다. SQL Server 세션 개체에 대 한 OLE DB 드라이버를 효율적으로 관리 하면 오버 헤드를 최소화할 수 있습니다. SQL Server용 OLE DB 드라이버 애플리케이션은 적어도 하나의 개체 인터페이스에 참조를 유지하여 세션 개체의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 연결을 활성 상태로 유지할 수 있습니다.  
   
- 예를 들어 명령 만들기 개체 참조 풀을 유지 관리하면 풀에 포함된 이러한 세션 개체에 대해 활성 연결이 유지됩니다. 세션 개체가 필요하면 풀 유지 관리 코드에서 유효한 **IDBCreateCommand** 인터페이스 포인터를 세션이 필요한 애플리케이션 메서드로 전달합니다. 응용 프로그램 메서드에 더 이상 세션이 필요하지 않으면 메서드에서 명령 만들기 개체에 대한 응용 프로그램 참조를 해제하는 대신 인터페이스 포인터를 다시 풀 유지 관리 코드로 반환합니다.  
+ 예를 들어 명령 만들기 개체 참조 풀을 유지 관리하면 풀에 포함된 이러한 세션 개체에 대해 활성 연결이 유지됩니다. 세션 개체가 필요하면 풀 유지 관리 코드에서 유효한 **IDBCreateCommand** 인터페이스 포인터를 세션이 필요한 애플리케이션 메서드로 전달합니다. 애플리케이션 메서드에 더 이상 세션이 필요하지 않으면 메서드에서 명령 만들기 개체에 대한 애플리케이션 참조를 해제하는 대신 인터페이스 포인터를 다시 풀 유지 관리 코드로 반환합니다.  
   
 > [!NOTE]  
->  앞의 예에서는 **ICommand** 인터페이스가 **GetDBSession** 메서드를 구현하기 때문에 **IDBCreateCommand** 인터페이스가 사용됩니다. 이 메서드는 개체가 만들어진 세션을 확인할 수 있는 명령 또는 행 집합 범위 내의 유일한 메서드입니다. 따라서 명령 개체를 사용해야만 응용 프로그램이 추가 세션을 만들 수 있는 데이터 원본 개체 포인터를 검색할 수 있습니다.  
+>  앞의 예에서는 **ICommand** 인터페이스가 **GetDBSession** 메서드를 구현하기 때문에 **IDBCreateCommand** 인터페이스가 사용됩니다. 이 메서드는 개체가 만들어진 세션을 확인할 수 있는 명령 또는 행 집합 범위 내의 유일한 메서드입니다. 따라서 명령 개체를 사용해야만 애플리케이션이 추가 세션을 만들 수 있는 데이터 원본 개체 포인터를 검색할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [데이터 원본 개체 &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  

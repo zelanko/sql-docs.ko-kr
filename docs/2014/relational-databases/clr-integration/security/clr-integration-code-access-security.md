@@ -42,7 +42,7 @@ ms.locfileid: "62873736"
 ## <a name="sql-server-host-policy-level-permission-sets"></a>SQL Server 호스트 정책 수준 권한 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 호스트 정책 수준에서 어셈블리에 부여하는 코드 액세스 보안 권한 집합은 어셈블리를 만들 때 지정된 권한 집합에 의해 결정됩니다. 세 가지 권한 집합을 가지: `SAFE`, `EXTERNAL_ACCESS` 및 `UNSAFE` (사용 하 여 지정 된 **PERMISSION_SET** 옵션을[CREATE ASSEMBLY &#40;Transact SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)) .  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR 인스턴스를 만들 때 적용되는 기본 응용 프로그램 도메인에는 이 정책이 사용되지 않습니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 분할된 테이블 또는 인덱스를 만들 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 CLR 인스턴스를 만들 때 적용되는 기본 애플리케이션 도메인에는 이 정책이 사용되지 않습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fixedpolicy 시스템 어셈블리 및 사용자 어셈블리에 대 한 사용자 지정 정책에 대 한 합니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62873736"
 |`SecurityPermission`|`Execution:` 관리 코드를 실행하는 데 필요한 권한입니다.|  
 |`SqlClientPermission`|`Context connection = true`, `context connection = yes`: 컨텍스트 연결만 사용할 수 있으며 연결 문자열의 값에만 지정할 수 있습니다만 "컨텍스트 연결 = true" 또는 "컨텍스트 연결 = yes"입니다.<br /><br /> **AllowBlankPassword = false.**  빈 암호는 허용 되지 않습니다.|  
   
-### <a name="externalaccess"></a>EXTERNAL_ACCESS  
+### <a name="external_access"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS 어셈블리와 동일한 권한을 갖습니다 `SAFE` 어셈블리 파일, 네트워크, 환경 변수 및 레지스트리와 같은 외부 시스템 리소스에 액세스 하는 추가 기능이 있습니다.  
   
  또한 `EXTERNAL_ACCESS` 어셈블리는 다음과 같은 사용 권한 및 값을 갖습니다.  

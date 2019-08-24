@@ -20,10 +20,10 @@ ms.locfileid: "62844617"
 # <a name="monitor-sql-server-managed-backup-to-windows-azure"></a>Microsoft Azure에 대한 SQL Server 관리되는 백업 모니터링
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 백업 프로세스 중에 문제 및 오류와 가능한 경우 수정 작업을 포함하는 해결책을 식별하는 기본 제공된 조치를 포함합니다.  그러나 사용자 개입이 필요한 특정 상황이 있습니다. 이 항목에서는 백업의 전체 상태를 확인하고 해결해야 할 오류를 식별하는 데 사용할 수 있는 도구에 대해 설명합니다.  
   
-## <a name="overview-of-includesssmartbackupincludesss-smartbackup-mdmd-built-in-debugging"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 기본 제공 디버깅 개요  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 예약된 백업을 정기적으로 검토하고 실패한 백업을 다시 예약하려고 합니다. 또한 저장소 계정을 정기적으로 폴링하여 데이터베이스의 복구 기능에 영향을 주는 로그 체인이 끊어지는 상황을 식별하고 이에 따라 새 백업을 예약합니다. 또한 Windows Azure 제한 정책을 고려하고 여러 데이터베이스 백업을 관리하는 메커니즘을 제공합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 확장 이벤트를 사용하여 모든 작업을 추적합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 에이전트에서 사용하는 확장 이벤트 채널에는 Admin, Operational, Analytical 및 Debug가 있습니다. Admin 범주 아래에 있는 이벤트는 일반적으로 오류와 관련이 있으며 사용자 개입을 필요로 하고 기본적으로 설정되어 있습니다. Analytical 이벤트도 기본적으로 설정되어 있지만 일반적으로 사용자 개입이 필요한 오류와 관련이 없습니다. Operation 이벤트는 일반적으로 정보 제공용입니다. 예를 들어 operational 이벤트는 백업 예약, 백업 등의 성공적인 완료를 포함 합니다. 디버그는 가장 자세 하 고 내부적으로 사용 됩니다 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 문제 확인 및 필요한 경우 수정 합니다.  
+## <a name="overview-of-includess_smartbackupincludesss-smartbackup-mdmd-built-in-debugging"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 기본 제공 디버깅 개요  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 예약된 백업을 정기적으로 검토하고 실패한 백업을 다시 예약하려고 합니다. 또한 스토리지 계정을 정기적으로 폴링하여 데이터베이스의 복구 기능에 영향을 주는 로그 체인이 끊어지는 상황을 식별하고 이에 따라 새 백업을 예약합니다. 또한 Windows Azure 제한 정책을 고려하고 여러 데이터베이스 백업을 관리하는 메커니즘을 제공합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 확장 이벤트를 사용하여 모든 작업을 추적합니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 에이전트에서 사용하는 확장 이벤트 채널에는 Admin, Operational, Analytical 및 Debug가 있습니다. Admin 범주 아래에 있는 이벤트는 일반적으로 오류와 관련이 있으며 사용자 개입을 필요로 하고 기본적으로 설정되어 있습니다. Analytical 이벤트도 기본적으로 설정되어 있지만 일반적으로 사용자 개입이 필요한 오류와 관련이 없습니다. Operation 이벤트는 일반적으로 정보 제공용입니다. 예를 들어 operational 이벤트는 백업 예약, 백업 등의 성공적인 완료를 포함 합니다. 디버그는 가장 자세 하 고 내부적으로 사용 됩니다 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 문제 확인 및 필요한 경우 수정 합니다.  
   
-### <a name="configure-monitoring-parameters-for-includesssmartbackupincludesss-smartbackup-mdmd"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에 대한 모니터링 매개 변수 구성  
+### <a name="configure-monitoring-parameters-for-includess_smartbackupincludesss-smartbackup-mdmd"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에 대한 모니터링 매개 변수 구성  
  합니다 **smart_admin.sp_set_parameter** 시스템 저장 프로시저를 사용 하면 모니터링 설정을 지정할 수 있습니다. 다음 섹션은 확장 이벤트를 설정하고 오류 및 경고에 대한 전자 메일 알림을 설정하는 프로세스를 안내합니다.  
   
  합니다 **smart_admin.fn_get_parameter** 함수는 특정 매개 변수에 대 한 구성 된 모든 현재 설정을 가져오는 데 사용할 수 있습니다. 매개 변수가 이전에 구성되지 않은 경우 함수가 값을 반환하지 않습니다.  
@@ -250,9 +250,9 @@ smart_backup_files;
   
  다음은 반환된 다른 상태에 대한 자세한 설명입니다.  
   
--   **사용 가능한-a:** 일반 백업 파일입니다. 백업이 완료되었으며 Windows Azure 저장소에서 사용 가능한 것도 확인되었습니다.  
+-   **사용 가능한-a:** 일반 백업 파일입니다. 백업이 완료되었으며 Windows Azure Storage에서 사용 가능한 것도 확인되었습니다.  
   
--   **복사 중-b:** 가용성 그룹 데이터베이스에 대 한 구체적으로이 상태가입니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 백업 로그 체인이 끊어진 것을 검색하는 경우 먼저 그 원인이 될 수 있는 백업을 식별하려고 시도합니다. 백업 파일을 찾으면 Windows Azure 저장소에 파일을 복사하려고 시도하며, 복사 프로세스가 진행 중일 때 이 상태를 표시합니다.  
+-   **복사 중-b:** 가용성 그룹 데이터베이스에 대 한 구체적으로이 상태가입니다. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 백업 로그 체인이 끊어진 것을 검색하는 경우 먼저 그 원인이 될 수 있는 백업을 식별하려고 시도합니다. 백업 파일을 찾으면 Windows Azure Storage에 파일을 복사하려고 시도하며, 복사 프로세스가 진행 중일 때 이 상태를 표시합니다.  
   
 -   **복사 하지 못했습니다.-f:** Copy In Progress와 마찬가지로, 특정 가용성 그룹 데이터베이스입니다. 복사 프로세스가 실패하면 상태가 F로 표시됩니다.  
   

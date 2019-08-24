@@ -24,10 +24,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68022246"
 ---
-# <a name="spunsetapprole-transact-sql"></a>sp_unsetapprole(Transact-SQL)
+# <a name="sp_unsetapprole-transact-sql"></a>sp_unsetapprole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  응용 프로그램 역할을 비활성화하고 이전의 보안 컨텍스트로 되돌립니다.  
+  애플리케이션 역할을 비활성화하고 이전의 보안 컨텍스트로 되돌립니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +40,7 @@ sp_unsetapprole @cookie
   
 ## <a name="arguments"></a>인수  
  **@cookie**  
- 응용 프로그램 역할을 활성화할 때 생성된 쿠키를 지정합니다. 쿠키 만들어집니다 [sp_setapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)합니다. **varbinary(8000)** 합니다.  
+ 애플리케이션 역할을 활성화할 때 생성된 쿠키를 지정합니다. 쿠키 만들어집니다 [sp_setapprole &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)합니다. **varbinary(8000)** 합니다.  
   
 > [!NOTE]  
 >  현재 **sp_setapprole** 에 대한 쿠키 **OUTPUT** 매개 변수는 정확한 최대 길이인 **varbinary(8000)** 로 정의되어 있습니다. 그러나 현재 구현은 **varbinary(50)** 입니다. 애플리케이션은 계속해서 **varbinary(8000)** 를 예약하여 후속 릴리스에서 쿠키 반환 크기가 늘어날 경우에도 애플리케이션이 제대로 작동할 수 있도록 해야 합니다.  
@@ -58,8 +58,8 @@ sp_unsetapprole @cookie
   
 ## <a name="examples"></a>예  
   
-### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>쿠키를 사용하여 응용 프로그램 역할을 활성화한 다음 이전 컨텍스트로 되돌리기  
- 다음 예에서는 `Sales11` 암호로 `fdsd896#gfdbfdkjgh700mM` 응용 프로그램 역할을 활성화하고 쿠키를 만듭니다. 예제에서는 현재 사용자의 이름을 반환 하 고 다음을 실행 하 여 원래 컨텍스트로 되돌아갑니다 **sp_unsetapprole**합니다.  
+### <a name="activating-an-application-role-with-a-cookie-then-reverting-to-the-previous-context"></a>쿠키를 사용하여 애플리케이션 역할을 활성화한 다음 이전 컨텍스트로 되돌리기  
+ 다음 예에서는 `Sales11` 암호로 `fdsd896#gfdbfdkjgh700mM` 애플리케이션 역할을 활성화하고 쿠키를 만듭니다. 예제에서는 현재 사용자의 이름을 반환 하 고 다음을 실행 하 여 원래 컨텍스트로 되돌아갑니다 **sp_unsetapprole**합니다.  
   
 ```  
 DECLARE @cookie varbinary(8000);  

@@ -418,7 +418,7 @@ Windows의 ODBC Driver for SQL Server에는 `MSSQL_CERTIFICATE_STORE`라는 Wind
 
 ### <a name="using-custom-keystore-providers"></a>사용자 지정 키 저장소 공급자 사용
 
-ODBC Driver for SQL Server는 CEKeystoreProvider 인터페이스를 사용하여 사용자 지정 타사 키 저장소 공급자도 지원합니다. 이 기능을 통해 애플리케이션에서 드라이버가 암호화된 열에 액세스하는 데 사용할 수 있도록 키 저장소 공급자를 로드, 쿼리 및 구성할 수 있습니다. 애플리케이션에서 SQL Server에 저장할 CEK를 암호화하고 ODBC를 사용하여 암호화된 열에 액세스하는 이상의 태스크를 수행하기 위해 키 저장소 공급자와 직접 상호 작용할 수도 있습니다. 자세한 내용은 [사용자 지정 키 저장소 공급자](../../connect/odbc/custom-keystore-providers.md)를 참조하세요.
+ODBC Driver for SQL Server는 CEKeystoreProvider 인터페이스를 사용하여 사용자 지정 타사 키 저장소 공급자도 지원합니다. 이 기능을 통해 애플리케이션에서 드라이버가 암호화된 열에 액세스하는 데 사용할 수 있도록 키 저장소 공급자를 로드, 쿼리 및 구성할 수 있습니다. 애플리케이션에서 SQL Server에 저장할 CEK를 암호화하고 ODBC를 사용하여 암호화된 열에 액세스하는 이상의 태스크를 수행하기 위해 키 스토리지 공급자와 직접 상호 작용할 수도 있습니다. 자세한 내용은 [사용자 지정 키 스토리지 공급자](../../connect/odbc/custom-keystore-providers.md)를 참조하세요.
 
 두 개의 연결 특성이 사용자 지정 키 저장소 공급자와 상호 작용하는 데 사용됩니다. 반환할 수 있습니다.
 

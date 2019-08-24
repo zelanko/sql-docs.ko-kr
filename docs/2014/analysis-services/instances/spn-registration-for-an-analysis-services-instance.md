@@ -81,7 +81,7 @@ ms.locfileid: "66079566"
 ##  <a name="bkmk_virtual"></a> 가상 계정에 대한 SPN  등록  
  가상 계정은 SQL  Server  서비스의 기본 계정 유형입니다. 가상 계정은 **NT Service\MSOLAPService** 기본 인스턴스 및 **NT Service\MSOLAP$** \<인스턴스 이름 > 명명 된 인스턴스에 대 한 합니다.  
   
- 이름에서 알 수 있는 것처럼 해당 계정은 Active  Directory에 존재하지 않습니다. 가상 계정은 로컬 컴퓨터에서만 존재합니다. 외부 서비스,  응용 프로그램 또는 디바이스에 연결할 때 연결은 로컬 컴퓨터 계정을 통해 만들어집니다. 이러한 이유로 가상 계정에서 실행되는 Analysis  Services에 대한 SPN  등록은 실제로 시스템 계정에 대한 SPN  등록입니다.  
+ 이름에서 알 수 있는 것처럼 해당 계정은 Active  Directory에 존재하지 않습니다. 가상 계정은 로컬 컴퓨터에서만 존재합니다. 외부 서비스,  애플리케이션 또는 디바이스에 연결할 때 연결은 로컬 컴퓨터 계정을 통해 만들어집니다. 이러한 이유로 가상 계정에서 실행되는 Analysis  Services에 대한 SPN  등록은 실제로 시스템 계정에 대한 SPN  등록입니다.  
   
  **NT  Service\MSOLAPService로 실행 중인 기본 인스턴스에 대한 구문 예**  
   

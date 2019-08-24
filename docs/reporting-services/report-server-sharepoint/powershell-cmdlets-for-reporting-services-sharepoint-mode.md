@@ -87,14 +87,14 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
 |Remove-SPRSServiceApplication|지정된 Reporting Services 서비스 애플리케이션을 삭제합니다. 그러면 연결된 데이터베이스도 제거됩니다.|  
 |Set-SPRSServiceApplication|기존 Reporting Services 서비스 애플리케이션의 속성을 편집합니다.|  
 |New-SPRSServiceApplicationProxy|새 Reporting Services 서비스 애플리케이션 프록시를 만듭니다.|  
-|Get-SPRSServiceApplicationProxy|하나 이상의 Reporting Services 서비스 응용 프로그램 프록시를 가져옵니다.|  
+|Get-SPRSServiceApplicationProxy|하나 이상의 Reporting Services 서비스 애플리케이션 프록시를 가져옵니다.|  
 |Dismount-SPRSDatabase|Reporting Services 서비스 애플리케이션에 대한 서비스 애플리케이션 데이터베이스를 분리합니다.|  
 |Remove-SPRSDatabase|Reporting Services 서비스 애플리케이션에 대한 서비스 애플리케이션 데이터베이스를 제거합니다.|  
 |Set-SPRSDatabase|Reporting Services 서비스 애플리케이션에 연결된 데이터베이스의 속성을 설정합니다.|  
 |Mount-SPRSDatabase|Reporting Services 서비스 애플리케이션에 데이터베이스를 탑재합니다.|  
 |New-SPRSDatabase|지정된 Reporting Services 서비스 애플리케이션에 대해 새 서비스 애플리케이션 데이터베이스를 만듭니다.|  
 |Get-SPRSDatabaseCreationScript|Reporting Services 서비스 애플리케이션의 화면에 데이터베이스 생성 스크립트를 출력합니다. 그런 다음 SQL Server Management Studio에서 스크립트를 실행할 수 있습니다.|  
-|Get-SPRSDatabase|하나 이상의 Reporting Services 서비스 응용 프로그램 데이터베이스를 가져옵니다. 이 명령을 사용하여 서비스 애플리케이션 데이터베이스의 ID를 가져오므로, Set-SPRSDatabase comdlet을 사용하여 속성(예: `querytimeout`)을 수정할 수 있습니다. [보고 서비스 애플리케이션 데이터베이스의 속성 가져오기 및 설정](#get-and-set-properties-of-the-reporting-service-application-database)항목의 예제를 참조하세요.|  
+|Get-SPRSDatabase|하나 이상의 Reporting Services 서비스 애플리케이션 데이터베이스를 가져옵니다. 이 명령을 사용하여 서비스 애플리케이션 데이터베이스의 ID를 가져오므로, Set-SPRSDatabase comdlet을 사용하여 속성(예: `querytimeout`)을 수정할 수 있습니다. [보고 서비스 애플리케이션 데이터베이스의 속성 가져오기 및 설정](#get-and-set-properties-of-the-reporting-service-application-database)항목의 예제를 참조하세요.|  
 |Get-SPRSDatabaseRightsScript|Reporting Services 서비스 애플리케이션의 화면에 데이터베이스 권한 스크립트를 출력합니다. 원하는 사용자에 대한 프롬프트를 표시한 후 데이터베이스에서 사용 권한을 수정하기 위해 실행할 수 있는 Transact-SQL을 반환합니다. 그런 다음 SQL Server Management Studio에서 이 스크립트를 실행할 수 있습니다.|  
 |Get-SPRSDatabaseUpgradeScript|화면에 데이터베이스 업그레이드 스크립트를 출력합니다. 이 스크립트는 Reporting Services 서비스 애플리케이션 데이터베이스를 현재 설치하는 Reporting Services의 데이터베이스 버전으로 업그레이드합니다.|  
   
@@ -109,7 +109,7 @@ SQL Server 2016 Reporting Services SharePoint 모드를 설치하는 경우 Shar
 |New-SPRSExtension|Reporting Services 서비스 애플리케이션의 새 확장 프로그램을 등록합니다.|  
 |Set-SPRSExtension|기존 Reporting Services 확장 프로그램의 속성을 설정합니다.|  
 |Remove-SPRSExtension|Reporting Services 서비스 애플리케이션에서 확장 프로그램을 삭제합니다.|  
-|Get-SPRSExtension|Reporting Services 서비스 응용 프로그램에 대한 하나 이상의 Reporting Services 확장 프로그램을 가져옵니다.<br /><br /> 유효한 값은<br /><br /> <br /><br /> 배달<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> data<br /><br /> 보안<br /><br /> 인증<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> 디자이너<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
+|Get-SPRSExtension|Reporting Services 서비스 애플리케이션에 대한 하나 이상의 Reporting Services 확장 프로그램을 가져옵니다.<br /><br /> 유효한 값은<br /><br /> <br /><br /> 배달<br /><br /> DeliveryUI<br /><br /> Render<br /><br /> data<br /><br /> 보안<br /><br /> 인증<br /><br /> EventProcessing<br /><br /> ReportItems<br /><br /> 디자이너<br /><br /> ReportItemDesigner<br /><br /> ReportItemConverter<br /><br /> ReportDefinitionCustomization|  
 |Get-SPRSSite|"ReportingService" 기능 사용 여부에 따라 SharePoint 사이트를 가져옵니다. 기본적으로 "ReportingService" 기능이 설정되어 있는 사이트가 반환됩니다.|  
   
 ## <a name="basic-samples"></a>기본 샘플

@@ -55,7 +55,7 @@ ms.locfileid: "68109589"
   
  이 스키마에서는 대상 네임스페이스를 정의하므로 스키마에 대한 XPath 쿼리(예: "Employee")에 네임스페이스가 포함되어 있어야 합니다.  
   
- 다음은 앞의 XSD 스키마에 대한 XPath 쿼리(x:Employee)를 실행하는 예제 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 응용 프로그램입니다. 접두사를 해결 하려면 네임 스페이스 속성을 사용 하 여 네임 스페이스 바인딩을 지정 됩니다.  
+ 다음은 앞의 XSD 스키마에 대한 XPath 쿼리(x:Employee)를 실행하는 예제 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 애플리케이션입니다. 접두사를 해결 하려면 네임 스페이스 속성을 사용 하 여 네임 스페이스 바인딩을 지정 됩니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다. 또한 이 예에서는 데이터 공급자에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client(SQLNCLI11)를 사용하도록 지정하는데, 이렇게 하려면 추가 네트워크 클라이언트를 설치해야 합니다. 자세한 내용은 [SQL Server Native Client에 대 한 시스템 요구 사항](../../../relational-databases/native-client/system-requirements-for-sql-server-native-client.md)합니다.  
@@ -82,7 +82,7 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
-### <a name="to-test-this-application"></a>이 응용 프로그램을 테스트하려면  
+### <a name="to-test-this-application"></a>이 애플리케이션을 테스트하려면  
   
 1.  예제 XSD 스키마를 폴더에 저장합니다.  
   
@@ -94,7 +94,7 @@ End Sub
     "Microsoft ActiveX Data Objects 2.8 Library"  
     ```  
   
-4.  응용 프로그램을 실행합니다.  
+4.  애플리케이션을 실행합니다.  
 
 [!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

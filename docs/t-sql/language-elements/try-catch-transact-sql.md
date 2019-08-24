@@ -72,7 +72,7 @@ END CATCH
   
  TRY 블록의 마지막 문 실행을 완료할 때 TRY 블록으로 묶은 코드에 오류가 없는 경우 연결된 END CATCH 문 바로 다음 문으로 제어가 전달됩니다. TRY 블록으로 묶은 코드에 오류가 있는 경우 연결된 CATCH 블록의 첫 번째 문으로 제어가 전달됩니다. END CATCH 문이 저장 프로시저 또는 트리거의 마지막 문인 경우 해당 저장 프로시저를 호출하거나 트리거를 발생시킨 문으로 제어가 전달됩니다.  
   
- CATCH 블록의 코드를 완료하면 END CATCH 문 바로 다음 문으로 제어가 전달됩니다. CATCH 블록이 포착한 오류는 호출 응용 프로그램으로 반환되지 않습니다. 오류 정보를 응용 프로그램으로 반환해야 하는 경우 CATCH 블록의 코드에서 SELECT 결과 집합 또는 RAISERROR 및 PRINT 문과 같은 메커니즘을 사용하세요.  
+ CATCH 블록의 코드를 완료하면 END CATCH 문 바로 다음 문으로 제어가 전달됩니다. CATCH 블록이 포착한 오류는 호출 애플리케이션으로 반환되지 않습니다. 오류 정보를 애플리케이션으로 반환해야 하는 경우 CATCH 블록의 코드에서 SELECT 결과 집합 또는 RAISERROR 및 PRINT 문과 같은 메커니즘을 사용하세요.  
   
  TRY...CATCH 구문은 중첩될 수 있습니다. TRY 블록 또는 CATCH 블록에는 중첩된 TRY...CATCH 구문이 포함될 수 있습니다. 예를 들어 CATCH 블록에 TRY...CATCH 구문이 포함되어 CATCH 코드가 발견하는 오류를 처리할 수 있습니다.  
   
@@ -200,14 +200,14 @@ BEGIN CATCH
 END CATCH;  
 ```  
   
-## <a name="uncommittable-transactions-and-xactstate"></a>커밋 불가능 트랜잭션 및 XACT_STATE  
- TRY 블록에서 생성된 오류로 인해 현재 트랜잭션의 상태가 무효화되는 경우 그 트랜잭션은 커밋 불가능 트랜잭션으로 분류됩니다. 일반적으로 TRY 블록 바깥에서 트랜잭션을 종료하게 만드는 오류가 TRY 블록 내부에서 발생하면 트랜잭션이 커밋 불가능 상태가 됩니다. 커밋 불가능 트랜잭션은 읽기 작업 또는 ROLLBACK TRANSACTION만 수행할 수 있습니다. 커밋할 수 없는 트랜잭션은 쓰기 작업 또는 COMMIT TRANSACTION을 생성하는 어떤 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문도 실행할 수 없습니다. 어떤 트랜잭션이 커밋 불가능 트랜잭션으로 분류된 경우 XACT_STATE 함수는 -1 값을 반환합니다. 일괄 처리가 완료되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 커밋 불가능 활성 트랜잭션을 모두 롤백합니다. 트랜잭션이 커밋할 수 없는 상태가 되었을 때 오류 메시지가 전송되지 않은 경우 일괄 처리가 완료되면 오류 메시지가 클라이언트 응용 프로그램으로 전송됩니다. 이 메시지는 커밋 불가능 트랜잭션이 검색되어 롤백되었음을 보여 줍니다.  
+## <a name="uncommittable-transactions-and-xact_state"></a>커밋 불가능 트랜잭션 및 XACT_STATE  
+ TRY 블록에서 생성된 오류로 인해 현재 트랜잭션의 상태가 무효화되는 경우 그 트랜잭션은 커밋 불가능 트랜잭션으로 분류됩니다. 일반적으로 TRY 블록 바깥에서 트랜잭션을 종료하게 만드는 오류가 TRY 블록 내부에서 발생하면 트랜잭션이 커밋 불가능 상태가 됩니다. 커밋 불가능 트랜잭션은 읽기 작업 또는 ROLLBACK TRANSACTION만 수행할 수 있습니다. 커밋할 수 없는 트랜잭션은 쓰기 작업 또는 COMMIT TRANSACTION을 생성하는 어떤 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문도 실행할 수 없습니다. 어떤 트랜잭션이 커밋 불가능 트랜잭션으로 분류된 경우 XACT_STATE 함수는 -1 값을 반환합니다. 일괄 처리가 완료되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 커밋 불가능 활성 트랜잭션을 모두 롤백합니다. 트랜잭션이 커밋할 수 없는 상태가 되었을 때 오류 메시지가 전송되지 않은 경우 일괄 처리가 완료되면 오류 메시지가 클라이언트 애플리케이션으로 전송됩니다. 이 메시지는 커밋 불가능 트랜잭션이 검색되어 롤백되었음을 보여 줍니다.  
   
  커밋 불가능 트랜잭션과 XACT_STATE 함수에 대한 자세한 내용은 [XACT_STATE &#40;Transact-SQL&#41;](../../t-sql/functions/xact-state-transact-sql.md)을 참조하세요.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-trycatch"></a>1. TRY...CATCH 사용  
+### <a name="a-using-trycatch"></a>1\. TRY...CATCH 사용  
  다음 예에서는 0으로 나누기 오류를 일으키는 `SELECT` 문을 보여 줍니다. 이 오류로 인해 연결된 `CATCH` 블록으로 실행이 이동합니다.  
   
 ```sql  
@@ -227,7 +227,7 @@ END CATCH;
 GO  
 ```  
   
-### <a name="b-using-trycatch-in-a-transaction"></a>2. 트랜잭션에서 TRY...CATCH 사용  
+### <a name="b-using-trycatch-in-a-transaction"></a>2\. 트랜잭션에서 TRY...CATCH 사용  
  다음 예에서는 트랜잭션 내에서 `TRY...CATCH` 블록이 작동하는 방법을 보여 줍니다. `TRY` 블록 내의 문은 제약 조건 위반 오류를 일으킵니다.  
   
 ```sql  
@@ -256,7 +256,7 @@ IF @@TRANCOUNT > 0
 GO  
 ```  
   
-### <a name="c-using-trycatch-with-xactstate"></a>C. XACT_STATE에서 TRY...CATCH 사용  
+### <a name="c-using-trycatch-with-xact_state"></a>C. XACT_STATE에서 TRY...CATCH 사용  
  다음 예에서는 트랜잭션 내부에서 발생하는 오류를 `TRY...CATCH` 구문을 사용하여 처리하는 방법을 보여 줍니다. 트랜잭션을 커밋해야 하는지 또는 롤백해야 하는지는 `XACT_STATE` 함수가 결정합니다. 이 예에서 `SET XACT_ABORT`는 `ON`입니다. 이렇게 하면 제약 조건 위반 오류가 발생할 경우 트랜잭션을 커밋할 수 없습니다.  
   
 ```sql  

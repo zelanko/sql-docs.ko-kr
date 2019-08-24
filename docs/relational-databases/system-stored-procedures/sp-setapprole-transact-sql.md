@@ -24,11 +24,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68104422"
 ---
-# <a name="spsetapprole-transact-sql"></a>sp_setapprole(Transact-SQL)
+# <a name="sp_setapprole-transact-sql"></a>sp_setapprole(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  현재 데이터베이스의 응용 프로그램 역할과 연관된 사용 권한을 활성화합니다.  
+  현재 데이터베이스의 애플리케이션 역할과 연관된 사용 권한을 활성화합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -87,18 +87,18 @@ sp_setapprole [ @rolename = ] 'role',
   
 ## <a name="examples"></a>예  
   
-### <a name="a-activating-an-application-role-without-the-encrypt-option"></a>1\. 암호화 옵션을 사용하지 않고 응용 프로그램 역할 활성화
+### <a name="a-activating-an-application-role-without-the-encrypt-option"></a>1\. 암호화 옵션을 사용하지 않고 애플리케이션 역할 활성화
 
- 다음 예에서는 현재 사용자가 사용하는 응용 프로그램에 대해 특별히 지정한 사용 권한을 부여하도록 만든 일반 텍스트 암호인 `SalesAppRole`를 사용하여 `AsDeF00MbXX`이라는 응용 프로그램 역할을 활성화합니다.
+ 다음 예에서는 현재 사용자가 사용하는 애플리케이션에 대해 특별히 지정한 사용 권한을 부여하도록 만든 일반 텍스트 암호인 `SalesAppRole`를 사용하여 `AsDeF00MbXX`이라는 애플리케이션 역할을 활성화합니다.
 
 ```sql
 EXEC sys.sp_setapprole 'SalesApprole', 'AsDeF00MbXX';  
 GO
 ```
 
-### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>2\. 쿠키를 사용하여 응용 프로그램 역할을 활성화한 다음 원래 컨텍스트로 되돌리기
+### <a name="b-activating-an-application-role-with-a-cookie-and-then-reverting-to-the-original-context"></a>2\. 쿠키를 사용하여 애플리케이션 역할을 활성화한 다음 원래 컨텍스트로 되돌리기
 
- 다음 예에서는 `Sales11` 암호로 `fdsd896#gfdbfdkjgh700mM` 응용 프로그램 역할을 활성화하고 쿠키를 만듭니다. 다음 예에서는 현재 사용자의 이름을 반환한 다음 `sp_unsetapprole`을 실행하여 원래 컨텍스트로 되돌아갑니다.  
+ 다음 예에서는 `Sales11` 암호로 `fdsd896#gfdbfdkjgh700mM` 애플리케이션 역할을 활성화하고 쿠키를 만듭니다. 다음 예에서는 현재 사용자의 이름을 반환한 다음 `sp_unsetapprole`을 실행하여 원래 컨텍스트로 되돌아갑니다.  
 
 ```sql
 DECLARE @cookie varbinary(8000);  

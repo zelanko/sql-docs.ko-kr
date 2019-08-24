@@ -28,7 +28,7 @@ ms.locfileid: "62732269"
   
      [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 데이터 정의, 데이터 조작 및 데이터 제어 지원을 위해 XMLA를 사용하므로 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]에서 제공하는 비주얼 도구를 사용하여 마이닝 구조 및 마이닝 모델을 만든 다음 DMX(Data Mining Extensions) 및 ASSL(Analysis Services Scripting Language) 스크립트를 사용하여 만든 데이터 마이닝 개체를 확장할 수 있습니다.  
   
-     데이터 마이닝 개체를 XMLA 스크립트에서 전적으로 만들고 수정할 수 있으며, 사용자 고유의 응용 프로그램에서 모델에 대한 예측 쿼리를 프로그래밍 방식으로 실행할 수 있습니다.  
+     데이터 마이닝 개체를 XMLA 스크립트에서 전적으로 만들고 수정할 수 있으며, 사용자 고유의 애플리케이션에서 모델에 대한 예측 쿼리를 프로그래밍 방식으로 실행할 수 있습니다.  
   
 -   **AMO (analysis Management Objects)**  
   

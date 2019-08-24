@@ -38,7 +38,7 @@ public int getLoginTimeout()
  대기할 시간(초)을 나타내는 **int** 값입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 응용 프로그램에서 제한 시간 값을 명시적으로 지정하지 않은 경우 이 메서드는 기본값인 15초를 반환합니다.  
+ 애플리케이션에서 제한 시간 값을 명시적으로 지정하지 않은 경우 이 메서드는 기본값인 15초를 반환합니다.  
   
  이 getLoginTimeout 메서드는 javax.sql 인터페이스의 getLoginTimeout 메서드에 의해 지정 됩니다.  
   

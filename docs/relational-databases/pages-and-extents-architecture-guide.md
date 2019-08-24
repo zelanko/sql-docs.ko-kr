@@ -24,11 +24,11 @@ ms.locfileid: "68031673"
 # <a name="pages-and-extents-architecture-guide"></a>페이지 및 익스텐트 아키텍처 가이드
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-페이지는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 데이터 저장 단위입니다. 익스텐트는 물리적인 연속 페이지 8개의 모음입니다. 익스텐트는 효과적인 페이지 관리에 도움이 됩니다. 이 가이드에서는 모든 SQL Server 버전에서 페이지 및 익스텐트를 관리하는 데 사용되는 데이터 구조에 대해 설명합니다. 페이지 및 익스텐트의 아키텍처에 대한 이해는 효율적으로 동작하는 데이터베이스를 디자인하고 개발하는 데 있어 중요합니다.
+페이지는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 데이터 스토리지 단위입니다. 익스텐트는 물리적인 연속 페이지 8개의 모음입니다. 익스텐트는 효과적인 페이지 관리에 도움이 됩니다. 이 가이드에서는 모든 SQL Server 버전에서 페이지 및 익스텐트를 관리하는 데 사용되는 데이터 구조에 대해 설명합니다. 페이지 및 익스텐트의 아키텍처에 대한 이해는 효율적으로 동작하는 데이터베이스를 디자인하고 개발하는 데 있어 중요합니다.
 
 ## <a name="pages-and-extents"></a>페이지 및 익스텐트
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 데이터 저장 단위는 페이지입니다. 데이터베이스에서 데이터 파일(.mdf 또는 .ndf)에 할당되는 디스크 공간은 논리적인 페이지로 나뉘어지며 0에서 n 사이의 숫자가 연속으로 페이지에 매겨집니다. 디스크 I/O 작업은 페이지 수준에서 수행됩니다. 즉, SQL Server가 전체 데이터 페이지를 읽거나 씁니다.
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]의 기본 데이터 스토리지 단위는 페이지입니다. 데이터베이스에서 데이터 파일(.mdf 또는 .ndf)에 할당되는 디스크 공간은 논리적인 페이지로 나뉘어지며 0에서 n 사이의 숫자가 연속으로 페이지에 매겨집니다. 디스크 I/O 작업은 페이지 수준에서 수행됩니다. 즉, SQL Server가 전체 데이터 페이지를 읽거나 씁니다.
 
 익스텐트는 실제로 연속하는 8페이지를 모은 것으로 페이지를 효율적으로 관리하는 데 사용됩니다. 모든 페이지는 익스텐트로 저장됩니다.
 
@@ -73,7 +73,7 @@ ms.locfileid: "68031673"
 -  char 및 nchar 데이터를 비롯하여 다른 데이터 형식 열의 합계에는 8,060바이트의 행 제한이 적용되어야 합니다. 큰 개체 데이터도 8,060바이트의 행 제한에서 제외됩니다. 
 -  클러스터형 인덱스의 인덱스 키는 ROW_OVERFLOW_DATA 할당 단위에 기존 데이터가 있는 varchar 열을 포함할 수 없습니다. varchar 열에 대한 클러스터형 인덱스를 만들고 기존 데이터가 IN_ROW_DATA 할당 단위에 있는 경우에는 데이터를 행 외부로 밀어넣는 열에 대한 후속 삽입 또는 업데이트 동작이 실패합니다. 할당 단위에 대한 자세한 내용은 Table and Index Organization(테이블 및 인덱스 구성)을 참조하세요.
 -  행 오버플로 데이터가 있는 열을 비클러스터형 인덱스의 키 열이나 키가 아닌 열로 포함할 수 있습니다.
--  스파스 열을 사용하는 테이블의 레코드 크기 제한은 8,018바이트입니다. 변환된 데이터와 기존 레코드를 합한 크기가 8,018바이트를 초과하면 [MSSQLSERVER ERROR 576](../relational-databases/errors-events/database-engine-events-and-errors.md)이 반환됩니다. 열이 스파스에서 스파스가 아닌 유형으로 변환되면 데이터베이스 엔진에서 현재 레코드 데이터의 복사본을 보관합니다. 따라서 레코드에 필요한 저장소 크기가 일시적으로 두 배가 됩니다.
+-  스파스 열을 사용하는 테이블의 레코드 크기 제한은 8,018바이트입니다. 변환된 데이터와 기존 레코드를 합한 크기가 8,018바이트를 초과하면 [MSSQLSERVER ERROR 576](../relational-databases/errors-events/database-engine-events-and-errors.md)이 반환됩니다. 열이 스파스에서 스파스가 아닌 유형으로 변환되면 데이터베이스 엔진에서 현재 레코드 데이터의 복사본을 보관합니다. 따라서 레코드에 필요한 스토리지 크기가 일시적으로 두 배가 됩니다.
 -  행 오버플로 데이터가 포함될 수 있는 테이블이나 인덱스에 대한 정보를 얻으려면 [sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) 동적 관리 함수를 사용합니다.
 
 ### <a name="extents"></a>Extents 

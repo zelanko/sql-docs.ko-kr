@@ -71,7 +71,7 @@ End Module
   
  **vbc /target:library /out: \<outputfilename>.dll \<filename>.vb /r:Microsoft.SqlServer.Managed DTS.dll" /r:System.dll**  
   
- 디스크에 저장된 기존 패키지를 파일 시스템이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드하여 패키지를 만들 수도 있습니다. 이때 차이점은 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 개체가 먼저 만들어진 다음 패키지 개체가 응용 프로그램의 오버로드된 메서드인 `LoadPackage`(플랫 파일의 경우), `LoadFromSQLServer`([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지의 경우) 또는 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>(파일 시스템에 저장된 패키지의 경우) 중 하나로 채워진다는 것입니다. 다음 예에서는 디스크에서 기존 패키지를 로드한 다음 패키지의 여러 속성을 확인합니다.  
+ 디스크에 저장된 기존 패키지를 파일 시스템이나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드하여 패키지를 만들 수도 있습니다. 이때 차이점은 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 개체가 먼저 만들어진 다음 패키지 개체가 애플리케이션의 오버로드된 메서드인 `LoadPackage`(플랫 파일의 경우), `LoadFromSQLServer`([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장된 패키지의 경우) 또는 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A>(파일 시스템에 저장된 패키지의 경우) 중 하나로 채워진다는 것입니다. 다음 예에서는 디스크에서 기존 패키지를 로드한 다음 패키지의 여러 속성을 확인합니다.  
   
 ```csharp  
 using System;  

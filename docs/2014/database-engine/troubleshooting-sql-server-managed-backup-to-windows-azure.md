@@ -46,7 +46,7 @@ ms.locfileid: "62842580"
   
 2.  **저장소 액세스 키 값 변경:** Windows Azure 계정에 대해 저장소 키 값이 변경되었지만 SQL 자격 증명이 새 값으로 업데이트되지 않은 경우 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]은 저장소에 인증할 때 실패하고 이 계정을 사용하도록 구성된 데이터베이스를 백업하지 못합니다.  
   
-3.  **Windows Azure 저장소 계정에 변경 내용:** 해당 SQL 자격 증명을 변경하지 않고 저장소 계정을 삭제하거나 이름을 바꾸면 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 실패하고 백업이 수행되지 않습니다. 저장소 계정을 삭제한 경우에는 데이터베이스가 올바른 저장소 계정 정보로 다시 구성되었는지 확인하십시오. 저장소 계정의 이름이 변경되거나 키 값이 변경되면 이러한 변경 사항이 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 사용하는 SQL 자격 증명에도 반영되도록 해야 합니다.  
+3.  **Windows Azure 저장소 계정에 변경 내용:** 해당 SQL 자격 증명을 변경하지 않고 저장소 계정을 삭제하거나 이름을 바꾸면 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 실패하고 백업이 수행되지 않습니다. 스토리지 계정을 삭제한 경우에는 데이터베이스가 올바른 스토리지 계정 정보로 다시 구성되었는지 확인하십시오. 스토리지 계정의 이름이 변경되거나 키 값이 변경되면 이러한 변경 사항이 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 사용하는 SQL 자격 증명에도 반영되도록 해야 합니다.  
   
 4.  **데이터베이스 속성 변경:** 복구 모델을 변경하거나 이름을 변경하면 백업이 실패할 수 있습니다.  
   

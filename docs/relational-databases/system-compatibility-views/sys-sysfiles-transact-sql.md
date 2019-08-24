@@ -45,7 +45,7 @@ ms.locfileid: "68053472"
 |**상태**|**int**|상태에 대 한 비트를 **증가** 값 (mb) 또는 크기 (KB)입니다.<br /><br /> 0x2 = 디스크 파일<br /><br /> 0x40 = 로그 파일<br /><br /> 0x100000 = 증가율 이 값은 백분율이며 페이지 수가 아닙니다.|  
 |**perf**|**int**|예약되어 있습니다.|  
 |**name**|**sysname**|파일의 논리적 이름입니다.|  
-|**filename**|**nvarchar(260)**|물리적 장치의 이름입니다. 여기에는 파일의 전체 경로가 포함됩니다.|  
+|**filename**|**nvarchar(260)**|물리적 디바이스의 이름입니다. 여기에는 파일의 전체 경로가 포함됩니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

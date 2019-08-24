@@ -47,7 +47,7 @@ RETURN [ integer_expression ]
   
 ## <a name="arguments"></a>인수  
  *integer_expression*  
- 반환되는 정수 값입니다. 저장 프로시저는 호출 프로시저나 응용 프로그램에 정수 값을 반환할 수 있습니다.  
+ 반환되는 정수 값입니다. 저장 프로시저는 호출 프로시저나 애플리케이션에 정수 값을 반환할 수 있습니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**를 선택적으로 반환합니다.  

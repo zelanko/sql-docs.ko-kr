@@ -34,7 +34,7 @@ ms.locfileid: "68196715"
   
 3.  [파일 테이블 페이지](#FileTable)  
   
-4.  [저장소 페이지](#Storage)  
+4.  [ 페이지](#Storage)  
   
 ##  <a name="GeneralPage"></a> 일반 페이지  
  **데이터베이스 백업**  

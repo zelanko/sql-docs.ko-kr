@@ -25,12 +25,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68117914"
 ---
-# <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice(Transact-SQL)
+# <a name="sp_addumpdevice-transact-sql"></a>sp_addumpdevice(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 백업 장치를 추가합니다.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에 백업 디바이스를 추가합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -51,19 +51,19 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 |값|설명|  
 |-----------|-----------------|  
-|**disk**|백업 장치로서의 하드 디스크 파일입니다.|  
-|**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에서 지원되는 테이프 장치입니다.<br /><br /> 참고: 테이프 백업 디바이스에 대한 지원은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
+|**disk**|백업 디바이스로서의 하드 디스크 파일입니다.|  
+|**tape**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows에서 지원되는 테이프 디바이스입니다.<br /><br /> 참고: 테이프 백업 디바이스에 대한 지원은 이후 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 제거될 예정입니다. 새 개발 작업에서는 이 기능을 사용하지 않도록 하고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요.|  
   
 `[ @logicalname = ] 'logical_name'` 백업 및 복원 문에 사용 되는 백업 장치의 논리적 이름이입니다. *logical_name* 됩니다 **sysname**, 기본값은 없고 NULL 일 수 없습니다.  
   
-`[ @physicalname = ] 'physical_name'` 백업 장치의 물리적 이름이입니다. 물리적 이름은 운영 체제 파일 이름에 적용되는 규칙 또는 네트워크 장치에 적용되는 UNC(Universal Naming Convention)를 따라야 하며 전체 경로를 포함해야 합니다. *physical_name* 됩니다 **nvarchar(260)** , 기본값은 없습니다 값을 NULL 일 수 없습니다.  
+`[ @physicalname = ] 'physical_name'` 백업 장치의 물리적 이름이입니다. 물리적 이름은 운영 체제 파일 이름에 적용되는 규칙 또는 네트워크 디바이스에 적용되는 UNC(Universal Naming Convention)를 따라야 하며 전체 경로를 포함해야 합니다. *physical_name* 됩니다 **nvarchar(260)** , 기본값은 없습니다 값을 NULL 일 수 없습니다.  
   
- 원격 네트워크 위치에서 백업 장치를 만드는 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작된 해당 이름이 원격 컴퓨터에 대해 적절한 쓰기 기능을 갖고 있어야 합니다.  
+ 원격 네트워크 위치에서 백업 디바이스를 만드는 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작된 해당 이름이 원격 컴퓨터에 대해 적절한 쓰기 기능을 갖고 있어야 합니다.  
   
- 이 매개 변수 Windows;에 의해 로컬 테이프 장치에 할당 된 물리적 이름 이어야 테이프 장치를 추가 하는 경우 예를 들어  **\\ \\. \TAPE0** 컴퓨터의 첫 번째 테이프 장치에 대 한 합니다. 테이프 장치는 원격 방식으로는 사용할 수 없으며 반드시 서버 컴퓨터에 연결되어야 합니다. 숫자 또는 알파벳이 아닌 문자를 포함한 이름은 앞뒤로 따옴표를 사용해야 합니다.  
+ 이 매개 변수 Windows;에 의해 로컬 테이프 장치에 할당 된 물리적 이름 이어야 테이프 장치를 추가 하는 경우 예를 들어  **\\ \\. \TAPE0** 컴퓨터의 첫 번째 테이프 장치에 대 한 합니다. 테이프 디바이스는 원격 방식으로는 사용할 수 없으며 반드시 서버 컴퓨터에 연결되어야 합니다. 숫자 또는 알파벳이 아닌 문자를 포함한 이름은 앞뒤로 따옴표를 사용해야 합니다.  
   
 > [!NOTE]  
->  이 프로시저에서는 지정한 물리적 이름을 카탈로그에 입력합니다. 장치에 액세스하거나 장치를 만들지는 않습니다.  
+>  이 프로시저에서는 지정한 물리적 이름을 카탈로그에 입력합니다. 디바이스에 액세스하거나 디바이스를 만들지는 않습니다.  
   
 `[ @cntrltype = ] 'controller_type'` 사용 되지 않습니다. 지정된 경우 이 매개 변수는 무시됩니다. 이전 버전과의 호환성을 위해서만 지원됩니다. 새 사용 **sp_addumpdevice** 이 매개 변수를 생략 해야 합니다.  
   
@@ -76,11 +76,11 @@ sp_addumpdevice [ @devtype = ] 'device_type'
  없음  
   
 ## <a name="remarks"></a>Remarks  
- **sp_addumpdevice** 백업 장치를 추가 합니다 **sys.backup_devices** 카탈로그 뷰에 있습니다. 그런 다음 BACKUP 및 RESTORE 문에서 해당 장치를 논리적으로 참조할 수 있습니다. **sp_addumpdevice** 물리적 장치에 대 한 액세스를 수행 하지 않습니다. BACKUP 또는 RESTORE 문을 수행하는 경우에만 지정한 장치에 액세스합니다. 논리적 백업 장치를 만들면 "TAPE =" 또는 "DISK =" 절 대신 장치 이름을 사용하여 장치 경로를 지정할 수 있으므로 BACKUP 및 RESTORE 문이 간단해집니다.  
+ **sp_addumpdevice** 백업 장치를 추가 합니다 **sys.backup_devices** 카탈로그 뷰에 있습니다. 그런 다음 BACKUP 및 RESTORE 문에서 해당 디바이스를 논리적으로 참조할 수 있습니다. **sp_addumpdevice** 물리적 장치에 대 한 액세스를 수행 하지 않습니다. BACKUP 또는 RESTORE 문을 수행하는 경우에만 지정한 디바이스에 액세스합니다. 논리적 백업 장치를 만들면 "TAPE =" 또는 "DISK =" 절 대신 장치 이름을 사용하여 장치 경로를 지정할 수 있으므로 BACKUP 및 RESTORE 문이 간단해집니다.  
   
- 소유권 및 사용 권한 문제가 디스크 또는 파일 백업 장치 사용을 방해하는 경우가 있습니다. 따라서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작된 Windows 계정에 대해 적절한 파일 사용 권한을 부여하십시오.  
+ 소유권 및 사용 권한 문제가 디스크 또는 파일 백업 디바이스 사용을 방해하는 경우가 있습니다. 따라서 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작된 Windows 계정에 대해 적절한 파일 사용 권한을 부여하십시오.  
   
- [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 Windows에서 지원되는 테이프 장치에 테이프 백업을 지원합니다. Windows에서 지원되는 테이프 장치에 관한 자세한 내용은 Windows의 하드웨어 호환성 목록을 참조하십시오. 컴퓨터에서 사용 가능한 테이프 장치를 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하십시오.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 Windows에서 지원되는 테이프 디바이스에 테이프 백업을 지원합니다. Windows에서 지원되는 테이프 디바이스에 관한 자세한 내용은 Windows의 하드웨어 호환성 목록을 참조하십시오. 컴퓨터에서 사용 가능한 테이프 디바이스를 보려면 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]를 사용하십시오.  
   
  드라이브 제조업체가 권장하는 특정 테이프 드라이브에 대해서는 권장되는 테이프만 사용하십시오. DAT(디지털 오디오 테이프) 드라이브를 사용하는 경우 컴퓨터 등급 DAT 테이프(DDS: 디지털 데이터 스토리지)를 사용하십시오.  
   
@@ -95,8 +95,8 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 ## <a name="examples"></a>예  
   
-### <a name="a-adding-a-disk-dump-device"></a>1\. 디스크 덤프 장치 추가  
- 다음 예에서는 `mydiskdump`이라는 물리적 이름으로 `c:\dump\dump1.bak`라는 디스크 백업 장치를 추가합니다.  
+### <a name="a-adding-a-disk-dump-device"></a>1\. 디스크 덤프 디바이스 추가  
+ 다음 예에서는 `mydiskdump`이라는 물리적 이름으로 `c:\dump\dump1.bak`라는 디스크 백업 디바이스를 추가합니다.  
   
 ```  
 USE master;  
@@ -104,8 +104,8 @@ GO
 EXEC sp_addumpdevice 'disk', 'mydiskdump', 'c:\dump\dump1.bak';  
 ```  
   
-### <a name="b-adding-a-network-disk-backup-device"></a>2\. 네트워크 디스크 백업 장치 추가  
- 다음 예에서는 `networkdevice`라는 원격 디스크 백업 장치를 추가합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작되는 이름은 반드시 해당 원격 파일(`\\<servername>\<sharename>\<path>\<filename>.bak`)에 대한 사용 권한이 있어야 합니다.  
+### <a name="b-adding-a-network-disk-backup-device"></a>2\. 네트워크 디스크 백업 디바이스 추가  
+ 다음 예에서는 `networkdevice`라는 원격 디스크 백업 디바이스를 추가합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 시작되는 이름은 반드시 해당 원격 파일(`\\<servername>\<sharename>\<path>\<filename>.bak`)에 대한 사용 권한이 있어야 합니다.  
   
 ```  
 USE master;  
@@ -114,8 +114,8 @@ EXEC sp_addumpdevice 'disk', 'networkdevice',
     '\\<servername>\<sharename>\<path>\<filename>.bak';  
 ```  
   
-### <a name="c-adding-a-tape-backup-device"></a>3\. 테이프 백업 장치 추가  
- 다음 예에서는 `tapedump1`이라는 물리적 이름으로 `\\.\tape0` 장치를 추가합니다.  
+### <a name="c-adding-a-tape-backup-device"></a>3\. 테이프 백업 디바이스 추가  
+ 다음 예에서는 `tapedump1`이라는 물리적 이름으로 `\\.\tape0` 디바이스를 추가합니다.  
   
 ```  
 USE master;  
@@ -123,8 +123,8 @@ GO
 EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0';  
 ```  
   
-### <a name="d-backing-up-to-a-logical-backup-device"></a>4\. 논리적 백업 장치에 백업  
- 다음 예에서는 백업 디스크 파일에 대해 논리적 백업 장치인 `AdvWorksData`를 만듭니다. 그런 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 이 논리적 백업 장치에 백업합니다.  
+### <a name="d-backing-up-to-a-logical-backup-device"></a>4\. 논리적 백업 디바이스에 백업  
+ 다음 예에서는 백업 디스크 파일에 대해 논리적 백업 디바이스인 `AdvWorksData`를 만듭니다. 그런 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 이 논리적 백업 디바이스에 백업합니다.  
   
 ```  
 USE master;  

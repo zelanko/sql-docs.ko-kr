@@ -64,7 +64,7 @@ ms.locfileid: "62702296"
  에 대 한 자세한 내용은 합니다 `Create` 명령을 참조 하십시오 [요소 만들기 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)합니다.  
   
 ### <a name="creating-session-objects"></a>세션 개체 만들기  
- 세션 개체는 클라이언트 응용 프로그램에서 사용하는 명시적 또는 암시적 세션에만 사용할 수 있는 임시 개체로, 세션이 종료될 때 삭제됩니다. 설정 하 여 세션 개체를 만들 수 있습니다 합니다 `Scope` 특성을 `Create` 명령을 *세션*합니다.  
+ 세션 개체는 클라이언트 애플리케이션에서 사용하는 명시적 또는 암시적 세션에만 사용할 수 있는 임시 개체로, 세션이 종료될 때 삭제됩니다. 설정 하 여 세션 개체를 만들 수 있습니다 합니다 `Scope` 특성을 `Create` 명령을 *세션*합니다.  
   
 > [!NOTE]  
 >  사용 하는 경우는 *세션* 설정에 `ObjectDefinition` 요소만 포함할 수 있습니다 [차원](https://docs.microsoft.com/bi-reference/assl/objects/dimension-element-assl)를 [큐브](https://docs.microsoft.com/bi-reference/assl/objects/cube-element-assl), 또는 [MiningModel](https://docs.microsoft.com/bi-reference/assl/objects/miningmodel-element-assl) ASSL 요소입니다.  

@@ -39,7 +39,7 @@ ms.locfileid: "68037322"
 |범주|설명|  
 |--------------|-----------------|  
 |[활성 지역 복제 저장 프로시저](https://msdn.microsoft.com/library/81658ee4-4422-4d73-bf7a-86a07422cb0d)|Azure SQL Database에서 활성 지역 복제 구성 관리를 관리 하는 데 사용|  
-|[카탈로그 저장된 프로시저](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|ODBC 데이터 사전 기능을 구현하고 ODBC 응용 프로그램을 원본 시스템 테이블 변경으로부터 격리합니다.|  
+|[카탈로그 저장된 프로시저](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)|ODBC 데이터 사전 기능을 구현하고 ODBC 애플리케이션을 원본 시스템 테이블 변경으로부터 격리합니다.|  
 |[변경 데이터 캡처 저장된 프로시저](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)|변경 데이터 캡처 개체를 사용하도록 설정 또는 해제하거나 해당 개체에 대해 보고합니다.|  
 |[커서 저장 프로시저](../../relational-databases/system-stored-procedures/cursor-stored-procedures-transact-sql.md)|커서 변수 기능을 구현합니다.|  
 |[데이터 수집기 저장 프로시저](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)|데이터 수집기 및 컬렉션 집합, 컬렉션 항목, 컬렉션 유형과 같은 구성 요소 작업에 사용됩니다.|  
@@ -71,7 +71,7 @@ ms.locfileid: "68037322"
 >  특별히 지정되지 않는 한 모든 시스템 저장 프로시저는 성공을 의미하는 값 0을 반환합니다. 실패에 대해서는 0이 아닌 값을 반환합니다.  
   
 ## <a name="api-system-stored-procedures"></a>API 시스템 저장 프로시저  
- ADO, OLE DB 및 ODBC 응용 프로그램에 대해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 실행하는 사용자는 이러한 응용 프로그램이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 참조에서 다루지 않는 시스템 저장 프로시저를 사용한다는 사실을 알 수 있습니다. 이러한 저장된 프로시저에서 사용 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 데이터베이스 API의 기능을 구현 합니다. 이러한 저장 프로시저는 사용자 요청을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 전달하기 위해 공급자 또는 드라이버가 사용하는 메커니즘으로 공급자 또는 드라이버에서 내부적으로만 사용하도록 되어 있습니다. 명시적으로 호출을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-기반된 응용 프로그램 지원 되지 않습니다.  
+ ADO, OLE DB 및 ODBC 애플리케이션에 대해 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]를 실행하는 사용자는 이러한 애플리케이션이 [!INCLUDE[tsql](../../includes/tsql-md.md)] 참조에서 다루지 않는 시스템 저장 프로시저를 사용한다는 사실을 알 수 있습니다. 이러한 저장된 프로시저에서 사용 되는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 데이터베이스 API의 기능을 구현 합니다. 이러한 저장 프로시저는 사용자 요청을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 전달하기 위해 공급자 또는 드라이버가 사용하는 메커니즘으로 공급자 또는 드라이버에서 내부적으로만 사용하도록 되어 있습니다. 명시적으로 호출을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-기반된 응용 프로그램 지원 되지 않습니다.  
   
  Sp_createorphan 및 sp_droporphans 저장 프로시저는 ODBC를 사용 **ntext**를 **텍스트**, 및 **이미지** 처리 합니다.  
   

@@ -24,10 +24,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68084759"
 ---
-# <a name="data-tier-application-tables---sysdachistoryinternal"></a>데이터 계층 애플리케이션 테이블 - sysdac_history_internal
+# <a name="data-tier-application-tables---sysdac_history_internal"></a>데이터 계층 애플리케이션 테이블 - sysdac_history_internal
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  DAC(데이터 계층 응용 프로그램)를 관리하기 위해 수행된 동작에 대한 정보를 포함합니다. 이 테이블에 저장 되는 **dbo** 의 스키마를 **msdb** 데이터베이스입니다.  
+  DAC(데이터 계층 애플리케이션)를 관리하기 위해 수행된 동작에 대한 정보를 포함합니다. 이 테이블에 저장 되는 **dbo** 의 스키마를 **msdb** 데이터베이스입니다.  
   
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  

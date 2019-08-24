@@ -73,7 +73,7 @@ ALTER SEQUENCE [schema_name. ] sequence_name
 >  순환된 후의 다음 값은 시퀀스의 START VALUE가 아니라 최소값 또는 최대값입니다.  
   
  [ CACHE [\<constant> ] | NO CACHE ]  
- 생성된 값을 시스템 테이블에 유지하는 데 필요한 IO 수를 최소화하여 시퀀스 개체를 사용하는 응용 프로그램의 성능을 향상시킵니다.  
+ 생성된 값을 시스템 테이블에 유지하는 데 필요한 IO 수를 최소화하여 시퀀스 개체를 사용하는 애플리케이션의 성능을 향상시킵니다.  
   
  캐시 동작에 대한 자세한 내용은 [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)을 참조하세요.  
   

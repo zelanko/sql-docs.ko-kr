@@ -111,7 +111,7 @@ GO
 |데이터베이스 미러링에 인증서 사용|[데이터베이스 미러링 엔드포인트에 대한 인증서 사용&amp;#40;Transact-SQL&amp;#41;](../../database-engine/database-mirroring/use-certificates-for-a-database-mirroring-endpoint-transact-sql.md)|  
   
 ## <a name="application-security"></a>애플리케이션 보안  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 방법에는 보안 클라이언트 응용 프로그램 작성이 포함됩니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 보안 방법에는 보안 클라이언트 애플리케이션 작성이 포함됩니다.  
   
  네트워킹 계층에서 클라이언트 애플리케이션의 보안을 설정하는 방법은 [Client Network Configuration](../../database-engine/configure-windows/client-network-configuration.md)을 참조하십시오.  
   

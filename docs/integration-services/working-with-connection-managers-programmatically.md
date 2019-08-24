@@ -24,7 +24,7 @@ ms.locfileid: "67945292"
 [!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 관련된 연결 관리자 클래스의 AcquireConnection 메서드는 관리 코드에서 연결 관리자를 사용할 때 가장 자주 호출하는 메서드입니다. 관리 코드를 작성할 때 연결 관리자의 기능을 사용하려면 AcquireConnection 메서드를 호출해야 합니다. 스크립트 태스크, 스크립트 구성 요소, 사용자 지정 개체 또는 사용자 지정 응용 프로그램 중 어느 항목에서 관리 코드를 작성하든 관계없이 이 메서드를 호출해야 합니다.  
+  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]에서 관련된 연결 관리자 클래스의 AcquireConnection 메서드는 관리 코드에서 연결 관리자를 사용할 때 가장 자주 호출하는 메서드입니다. 관리 코드를 작성할 때 연결 관리자의 기능을 사용하려면 AcquireConnection 메서드를 호출해야 합니다. 스크립트 태스크, 스크립트 구성 요소, 사용자 지정 개체 또는 사용자 지정 애플리케이션 중 어느 항목에서 관리 코드를 작성하든 관계없이 이 메서드를 호출해야 합니다.  
   
  AcquireConnection 메서드를 성공적으로 호출하려면 다음 질문에 대한 대답을 알고 있어야 합니다.  
   

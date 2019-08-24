@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68067757"
 ---
-# <a name="managedbackupfnbackupinstanceconfig-transact-sql"></a>managed_backup.fn_backup_instance_config (Transact SQL)
+# <a name="managed_backupfn_backup_instance_config-transact-sql"></a>managed_backup.fn_backup_instance_config (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   SQL Server 인스턴스에 대한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 기본 구성 설정이 포함된 행을 하나 반환합니다.  
@@ -51,9 +51,9 @@ managed_backup.fn_backup_db_config ()
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
 |is_smart_backup_enabled|INT|[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 설정되었으면 1을 표시하고, [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]이 해제되었으면 0을 표시합니다.|  
-|credential_name|SYSNAME|저장소 계정 인증에 사용되는 기본 SQL 자격 증명입니다.|  
+|credential_name|SYSNAME|스토리지 계정 인증에 사용되는 기본 SQL 자격 증명입니다.|  
 |retention_days|INT|인스턴스 수준에서 설정된 기본 보존 기간입니다.|  
-|storage_url|NVARCHAR(1024)|인스턴스 수준에서 설정된 기본 저장소 계정 URL입니다.|  
+|storage_url|NVARCHAR(1024)|인스턴스 수준에서 설정된 기본 스토리지 계정 URL입니다.|  
 |encryption_algorithm|SYSNAME|암호화 알고리즘의 이름입니다. 암호화가 지정되지 않은 경우 NULL로 설정됩니다.|  
 |encryptor_type|NVARCHAR(32)|사용되는 암호기 유형으로 인증서 또는 비대칭 키를 반환합니다. 암호기가 지정되지 않은 경우 NULL로 설정됩니다.|  
 |encryptor_name|SYSNAME|인증서 또는 비대칭 키의 이름입니다. 이름이 지정되지 않은 경우 NULL로 설정됩니다.|  

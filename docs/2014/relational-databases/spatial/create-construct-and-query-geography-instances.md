@@ -76,7 +76,7 @@ ms.locfileid: "66014302"
  [STGeomCollFromText&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stgeomcollfromtext-geography-data-type)  
   
 ###  <a name="wkb"></a> WKB 입력으로부터 지리 인스턴스 구성  
- WKB는 클라이언트 응용 프로그램과 SQL 데이터베이스 간에 `Geography` 데이터를 교환할 수 있도록 OGC에서 지정하는 이진 형식입니다. 다음 함수는 WKB 입력을 사용하여 geography 인스턴스를 생성합니다.  
+ WKB는 클라이언트 애플리케이션과 SQL 데이터베이스 간에 `Geography` 데이터를 교환할 수 있도록 OGC에서 지정하는 이진 형식입니다. 다음 함수는 WKB 입력을 사용하여 geography 인스턴스를 생성합니다.  
   
  **WKB 입력으로부터 지리 인스턴스 유형을 구성하려면**  
  [STGeomFromWKB&#40;geography 데이터 형식&#41;](/sql/t-sql/spatial-geography/stgeomfromwkb-geography-data-type)  

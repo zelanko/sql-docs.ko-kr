@@ -98,7 +98,7 @@ ms.locfileid: "62919666"
 >  UDT 필드를 인덱싱하려면 UDT 필드에 네이티브 직렬화를 사용하거나 필드를 지속형 필드로 만들어야 합니다.  
   
 ## <a name="serialization-attributes"></a>직렬화 특성  
- 특성은 직렬화를 사용하여 UDT의 저장소 표현을 생성하고 UDT를 값으로 클라이언트에 전송하는 방법을 결정합니다. UDT를 만들 때 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`를 지정해야 합니다. `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 특성은 클래스가 UDT임을 나타내며 UDT에 대한 저장소를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 요구 사항은 아니지만 `Serializable` 특성을 지정할 수도 있습니다.  
+ 특성은 직렬화를 사용하여 UDT의 스토리지 표현을 생성하고 UDT를 값으로 클라이언트에 전송하는 방법을 결정합니다. UDT를 만들 때 `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`를 지정해야 합니다. `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 특성은 클래스가 UDT임을 나타내며 UDT에 대한 스토리지를 지정합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 요구 사항은 아니지만 `Serializable` 특성을 지정할 수도 있습니다.  
   
  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`에는 다음 속성이 있습니다.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "62919666"
   
 -   UDT를 사용하여 대량 로드된 XML 데이터를 받습니다.  
   
--   UDT 열이 있는 테이블이 포함된 데이터 집합을 직렬화합니다.  
+-   UDT 열이 있는 테이블이 포함된 데이터 세트을 직렬화합니다.  
   
  FOR XML 쿼리에서는 UDT가 직렬화되지 않습니다. UDT에 대한 XML 직렬화를 표시하는 FOR XML 쿼리를 실행하려면 SELECT 문에서 각 UDT 열을 `xml` 데이터 형식으로 명시적으로 변환합니다. UDT 열을 `varbinary`, `varchar` 또는 `nvarchar`로 명시적으로 변환할 수도 있습니다.  
   

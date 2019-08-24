@@ -26,10 +26,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68104501"
 ---
-# <a name="spsequencegetrange-transact-sql"></a>sp_sequence_get_range(Transact-SQL)
+# <a name="sp_sequence_get_range-transact-sql"></a>sp_sequence_get_range(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-  시퀀스 개체에서 시퀀스 값의 범위를 반환합니다. 시퀀스 개체는 요청한 값의 수를 생성 및 실행하고 범위와 관련된 메타데이터를 응용 프로그램에 제공합니다.  
+  시퀀스 개체에서 시퀀스 값의 범위를 반환합니다. 시퀀스 개체는 요청한 값의 수를 생성 및 실행하고 범위와 관련된 메타데이터를 애플리케이션에 제공합니다.  
   
  시퀀스 번호에 대 한 자세한 내용은 참조 하세요 [시퀀스 번호](../../relational-databases/sequence-numbers/sequence-numbers.md)합니다.  
   

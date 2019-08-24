@@ -30,7 +30,7 @@ ms.locfileid: "68206638"
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover로 연결  
  SQL Server 2012 가용성 그룹 수신기 또는 SQL Server 2012 장애 조치(Failover) 클러스터 인스턴스에 연결할 때는 항상 `MultiSubnetFailover=Yes`를 지정하십시오. `MultiSubnetFailover`를 사용하면 SQL Server 2012에서 모든 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 대한 장애 조치(Failover)를 빠르게 수행하고 단일 및 다중 서브넷 AlwaysOn 토폴로지에 대한 장애 조치(Failover) 시간을 크게 줄일 수 있습니다. 다중 서브넷 장애 조치(Failover) 중에는 클라이언트가 연결을 병렬로 시도합니다. 서브넷 장애 조치(Failover) 중에는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 적극적으로 TCP 연결을 다시 시도합니다.  
   
- `MultiSubnetFailover` 연결 속성은 응용 프로그램을 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 배치하는 중이고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 모든 IP 주소에 연결을 시도하여 주 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결을 시도함을 나타냅니다. 때 `MultiSubnetFailover=Yes` 연결에 대해 지정 된 클라이언트 운영 체제의 기본 TCP 재전송 간격 보다 빠르게 TCP 연결 시도 재시도 합니다. 이렇게 하면 AlwaysOn 가용성 그룹 또는 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스의 장애 조치(Failover) 후 더 빠르게 다시 연결할 수 있습니다. 이 설정은 단일/다중 서브넷 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 모두 적용됩니다.  
+ `MultiSubnetFailover` 연결 속성은 애플리케이션을 가용성 그룹 또는 장애 조치(Failover) 클러스터 인스턴스에 배치하는 중이고 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client가 모든 IP 주소에 연결을 시도하여 주 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 데이터베이스에 연결을 시도함을 나타냅니다. 때 `MultiSubnetFailover=Yes` 연결에 대해 지정 된 클라이언트 운영 체제의 기본 TCP 재전송 간격 보다 빠르게 TCP 연결 시도 재시도 합니다. 이렇게 하면 AlwaysOn 가용성 그룹 또는 AlwaysOn 장애 조치(Failover) 클러스터 인스턴스의 장애 조치(Failover) 후 더 빠르게 다시 연결할 수 있습니다. 이 설정은 단일/다중 서브넷 가용성 그룹 및 장애 조치(Failover) 클러스터 인스턴스에 모두 적용됩니다.  
   
  연결 문자열 키워드에 대한 자세한 내용은 [SQL Server Native Client에서 연결 문자열 키워드 사용](../applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하세요.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68206638"
   
 -   사용 하는 응용 프로그램의 동작을 `MultiSubnetFailover` 연결 속성이 인증의 유형에 따라 영향을 받지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인증, Kerberos 인증 또는 Windows 인증입니다.  
   
--   장애 조치(Failover) 시간을 수용하고 응용 프로그램 연결 재시도 횟수를 줄이기 위해 `loginTimeout` 값을 늘릴 수 있습니다.  
+-   장애 조치(Failover) 시간을 수용하고 애플리케이션 연결 재시도 횟수를 줄이기 위해 `loginTimeout` 값을 늘릴 수 있습니다.  
   
 -   분산 트랜잭션은 지원되지 않습니다.  
   
@@ -54,14 +54,14 @@ ms.locfileid: "68206638"
   
 1.  보조 복제본 위치가 연결을 허용하도록 구성되어 있지 않은 경우  
   
-2.  응용 프로그램에서 `ApplicationIntent=ReadWrite`(아래 설명 참조)를 사용하고 보조 복제본 위치가 읽기 전용 액세스용으로 구성되어 있는 경우  
+2.  애플리케이션에서 `ApplicationIntent=ReadWrite`(아래 설명 참조)를 사용하고 보조 복제본 위치가 읽기 전용 액세스용으로 구성되어 있는 경우  
   
  주 복제본이 읽기 전용 작업을 거부하도록 구성되어 있고 연결 문자열에 `ApplicationIntent=ReadOnly`가 포함되어 있으면 연결이 실패합니다.  
   
 ## <a name="upgrading-to-use-multi-subnet-clusters-from-database-mirroring"></a>데이터베이스 미러링에서 다중 서브넷 클러스터를 사용하도록 업그레이드  
  연결 문자열에 `MultiSubnetFailover` 및 `Failover_Partner` 연결 키워드가 있으면 연결 오류가 발생합니다. `MultiSubnetFailover`가 사용되고[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 데이터베이스 미러링 쌍의 일부임을 나타내는 장애 조치(Failover) 파트너 응답을 반환하는 경우에도 오류가 발생합니다.  
   
- 현재 데이터베이스 미러링을 사용 중인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 응용 프로그램을 다중 서브넷 시나리오로 업그레이드할 경우에는 `Failover_Partner` 연결 속성을 제거하고 이를 `MultiSubnetFailover`로 설정된 `Yes`로 바꾸고, 연결 문자열에서 서버 이름을 가용성 그룹 수신기로 바꿔야 합니다. 연결 문자열에 `Failover_Partner` 및 `MultiSubnetFailover=Yes`가 사용될 경우 드라이버에서 오류가 발생합니다. 하지만 연결 문자열에 `Failover_Partner` 및 `MultiSubnetFailover=No`(또는 `ApplicationIntent=ReadWrite`)가 사용될 경우 응용 프로그램에 데이터베이스 미러링이 사용됩니다.  
+ 현재 데이터베이스 미러링을 사용 중인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 애플리케이션을 다중 서브넷 시나리오로 업그레이드할 경우에는 `Failover_Partner` 연결 속성을 제거하고 이를 `MultiSubnetFailover`로 설정된 `Yes`로 바꾸고, 연결 문자열에서 서버 이름을 가용성 그룹 수신기로 바꿔야 합니다. 연결 문자열에 `Failover_Partner` 및 `MultiSubnetFailover=Yes`가 사용될 경우 드라이버에서 오류가 발생합니다. 하지만 연결 문자열에 `Failover_Partner` 및 `MultiSubnetFailover=No`(또는 `ApplicationIntent=ReadWrite`)가 사용될 경우 애플리케이션에 데이터베이스 미러링이 사용됩니다.  
   
  가용성 그룹의 주 데이터베이스에서 데이터베이스 미러링이 사용되고 가용성 그룹 수신기가 아닌 주 데이터베이스에 연결하는 연결 문자열에 `MultiSubnetFailover=Yes`가 사용될 경우 드라이버에서 오류를 반환합니다.  
   

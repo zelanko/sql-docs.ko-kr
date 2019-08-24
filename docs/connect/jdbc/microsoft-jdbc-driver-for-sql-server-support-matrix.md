@@ -110,7 +110,7 @@ ms.locfileid: "69027890"
   
  JDBC 제품 팀은 Windows, Sun Solaris, SUSE Linux 및 RedHat Linux에서 Microsoft 드라이버를 테스트합니다.  고객 지원 센터는 모든 플랫폼의 고객이 사용할 수 있지만 Windows와 같은 플랫폼에서 문제를 재현하도록 요청될 수 있습니다.  
   
-## <a name="application-server-support"></a>응용 프로그램 서버 지원  
+## <a name="application-server-support"></a>애플리케이션 서버 지원  
  Microsoft JDBC Driver for SQL Server는 다양한 애플리케이션 서버에서 테스트됩니다.  사용 중인 제품과 호환되는 드라이버 버전에 대한 추가 세부 정보를 얻으려면 애플리케이션 서버 공급업체에 문의하세요.
  
  

@@ -11,9 +11,9 @@
       href: integrating-reporting-services-using-url-access-windows-application.md
     - name: SOAP을 사용하여 Reporting Services 통합
       href: integrating-reporting-services-using-soap.md
-    - name: Windows 응용 프로그램에서 SOAP API 사용
+    - name: Windows 애플리케이션에서 SOAP API 사용
       href: integrating-reporting-services-using-soap-windows-application.md
-    - name: 웹 응용 프로그램에서 SOAP API 사용
+    - name: 웹 애플리케이션에서 SOAP API 사용
       href: integrating-reporting-services-using-soap-web-application.md
     - name: ReportViewer 컨트롤을 사용하여 Reporting Services 통합
       href: integrating-reporting-services-using-reportviewer-controls.md

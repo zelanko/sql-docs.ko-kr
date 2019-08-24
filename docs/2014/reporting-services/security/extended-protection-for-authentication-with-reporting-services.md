@@ -74,7 +74,7 @@ ms.locfileid: "66101953"
 |직접 HTTP 통신. 보고서 서버가 클라이언트에서 보고서 서버로의 서비스 바인딩을 적용합니다.|![RS_ExtendedProtection_Direct](../media/rs-extendedprotection-direct.gif "RS_ExtendedProtection_Direct")<br /><br /> 1) 클라이언트 애플리케이션<br /><br /> 2) 보고서 서버|SSL 채널이 없으므로 채널 바인딩 적용이 가능하지 않습니다.<br /><br /> 서비스 바인딩의 유효성을 검사할 수 있지만 채널 바인딩이 없으면 보안이 완전하지 않으며 서비스 바인딩 자체는 기본적인 위협으로부터만 보호합니다.<br /><br /> `RSWindowsExtendedProtectionLevel`을 `Allow` 또는 `Require`로 설정합니다.<br /><br /> `RSWindowsExtendedProtectionScenario`를 `Any`로 설정합니다.|  
   
 ### <a name="proxy-and-network-load-balancing"></a>프록시 및 네트워크 부하 분산  
- 클라이언트 응용 프로그램이 인증을 위해 SSL을 수행하고 서버에 자격 증명을 전달하는 디바이스나 소프트웨어(예: 익스트라넷, 인터넷 또는 보안 인트라넷)에 연결합니다. 클라이언트가 프록시에 연결하거나 모든 클라이언트가 프록시를 사용합니다.  
+ 클라이언트 애플리케이션이 인증을 위해 SSL을 수행하고 서버에 자격 증명을 전달하는 디바이스나 소프트웨어(예: 익스트라넷, 인터넷 또는 보안 인트라넷)에 연결합니다. 클라이언트가 프록시에 연결하거나 모든 클라이언트가 프록시를 사용합니다.  
   
  NLB(네트워크 부하 분산) 디바이스를 사용할 때와 같은 경우입니다.  
   
@@ -85,7 +85,7 @@ ms.locfileid: "66101953"
 |보안 프록시를 사용한 간접 HTTPS 통신. 보고서 서버가 클라이언트에서 프록시로의 채널 바인딩 및 클라이언트에서 보고서 서버로의 서비스 바인딩을 적용합니다.|![RS_ExtendedProtection_IndirectSSLandHTTPS](../media/rs-extendedprotection-indirectsslandhttps.gif "RS_ExtendedProtection_IndirectSSLandHTTPS")<br /><br /> 1) 클라이언트 애플리케이션<br /><br /> 2) 보고서 서버<br /><br /> 3) 프록시|프록시에 대한 SSL 채널을 사용할 수 있으므로 프록시로의 채널 바인딩이 적용될 수 있습니다.<br /><br /> 서비스 바인딩도 적용될 수 있습니다.<br /><br /> 보고서 서버에서 프록시 이름을 알 수 있어야 하므로 보고서 서버 관리자는 호스트 헤더를 사용하여 프록시에 대한 URL 예약을 만들거나 Windows 레지스트리 항목 `BackConnectionHostNames`에서 프록시 이름을 구성해야 합니다.<br /><br /> `RSWindowsExtendedProtectionLevel`을 `Allow` 또는 `Require`로 설정합니다.<br /><br /> `RSWindowsExtendedProtectionScenario`를 `Proxy`로 설정합니다.|  
   
 ### <a name="gateway"></a>게이트웨이  
- 이 시나리오는 SSL을 수행하고 사용자를 인증하는 디바이스나 소프트웨어에 연결하는 클라이언트 응용 프로그램을 설명합니다. 그런 다음 이 디바이스나 소프트웨어는 사용자의 컨텍스트 또는 다른 사용자의 컨텍스트를 가장하여 보고서 서버로 요청을 보냅니다.  
+ 이 시나리오는 SSL을 수행하고 사용자를 인증하는 디바이스나 소프트웨어에 연결하는 클라이언트 애플리케이션을 설명합니다. 그런 다음 이 디바이스나 소프트웨어는 사용자의 컨텍스트 또는 다른 사용자의 컨텍스트를 가장하여 보고서 서버로 요청을 보냅니다.  
   
 |시나리오|시나리오 다이어그램|보안 설정 방법|  
 |--------------|----------------------|-------------------|  

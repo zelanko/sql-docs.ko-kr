@@ -381,7 +381,7 @@ PERSISTED
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 계산된 값을 테이블에 물리적으로 저장하고 계산 열이 종속된 다른 열이 업데이트되면 해당 값을 업데이트하도록 지정합니다. 계산 열을 `PERSISTED`로 표시하면 결정적이지만 정확하지는 않은 계산 열에 인덱스를 만들 수 있습니다. 자세한 내용은 [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md)을 참조하세요. 분할된 테이블의 분할 열로 사용되는 모든 계산 열은 명시적으로 `PERSISTED`로 표시되어야 합니다. `PERSISTED`를 지정할 때 *computed_column_expression*은 결정적이어야 합니다.
 
 ON { *partition_scheme* | *filegroup* |  **"default"** }     
-테이블이 저장된 파티션 구성표 또는 파일 그룹을 지정합니다. *partition_scheme*을 지정하면 해당 테이블은 *partition_scheme*에 지정된 하나 이상의 파일 그룹 집합에 파티션이 저장되는 분할된 테이블이 됩니다. *filegroup*을 지정한 경우에는 테이블이 명명된 파일 그룹에 저장됩니다. 파일 그룹은 데이터베이스 내에 있어야 합니다. **"default"** 를 지정하거나 ON을 전혀 지정하지 않으면 기본 파일 그룹에 테이블이 저장됩니다. CREATE TABLE에 지정된 테이블의 저장 메커니즘은 곧이어 변경할 수 없습니다.
+테이블이 저장된 파티션 구성표 또는 파일 그룹을 지정합니다. *partition_scheme*을 지정하면 해당 테이블은 *partition_scheme*에 지정된 하나 이상의 파일 그룹 집합에 파티션이 저장되는 분할된 테이블이 됩니다. *filegroup*을 지정한 경우에는 테이블이 명명된 파일 그룹에 저장됩니다. 파일 그룹은 데이터베이스 내에 있어야 합니다. **"default"** 를 지정하거나 ON을 전혀 지정하지 않으면 기본 파일 그룹에 테이블이 저장됩니다. CREATE TABLE에 지정된 테이블의 스토리지 메커니즘은 곧이어 변경할 수 없습니다.
 
 ON {*partition_scheme* | *filegroup* |  **"default"** }은 PRIMARY KEY나 UNIQUE 제약 조건에도 지정할 수 있습니다. 이러한 제약 조건은 인덱스를 만듭니다. *filegroup*을 지정한 경우에는 인덱스가 명명된 파일 그룹에 저장됩니다. **"default"** 를 지정하거나 ON을 전혀 지정하지 않으면 테이블과 동일한 파일 그룹에 인덱스가 저장됩니다. `PRIMARY KEY` 또는 `UNIQUE` 제약 조건이 클러스터형 인덱스를 만드는 경우에는 테이블에 대한 데이터 페이지가 인덱스와 동일한 파일 그룹에 저장됩니다. `CLUSTERED`를 지정하거나 아니면 제약 조건이 클러스터형 인덱스를 만들고 테이블 정의의 *partition_scheme* 또는 *filegroup*과는 다르게 *partition_scheme*을 지정하거나 그 반대인 경우에는 제약 조건 정의만 유지하고 나머지는 무시합니다.
 
@@ -566,7 +566,7 @@ ALGORITHM
 기능 제약 조건을 포함한 자세한 내용은 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)를 참조하세요.
 
 SPARSE    
-열이 스파스 열임을 나타냅니다. 스파스 열의 저장소는 Null 값에 대해 최적화됩니다. 스파스 열은 NOT NULL로 지정할 수 없습니다. 추가 제한 사항 및 스파스 열에 대한 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.
+열이 스파스 열임을 나타냅니다. 스파스 열의 스토리지는 Null 값에 대해 최적화됩니다. 스파스 열은 NOT NULL로 지정할 수 없습니다. 추가 제한 사항 및 스파스 열에 대한 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.
 
 MASKED WITH ( FUNCTION = ' *mask_function* ')     
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).
@@ -585,11 +585,11 @@ FILESTREAM
 
 **varbinary(max)** 열에 대해서만 유효합니다. **varbinary(max)** BLOB 데이터에 대한 FILESTREAM 스토리지를 지정합니다.
 
-테이블에는 ROWGUIDCOL 특성을 갖는 **uniqueidentifier** 데이터 형식의 열도 있어야 합니다. 이 열은 Null 값을 허용하지 않으며 UNIQUE 또는 PRIMARY KEY 단일 열 제약 조건을 가져야 합니다. 열의 GUID 값은 응용 프로그램에서 데이터를 삽입할 때 제공하거나 NEWID () 함수를 사용하는 DEFAULT 제약 조건을 통해 제공해야 합니다.
+테이블에는 ROWGUIDCOL 특성을 갖는 **uniqueidentifier** 데이터 형식의 열도 있어야 합니다. 이 열은 Null 값을 허용하지 않으며 UNIQUE 또는 PRIMARY KEY 단일 열 제약 조건을 가져야 합니다. 열의 GUID 값은 애플리케이션에서 데이터를 삽입할 때 제공하거나 NEWID () 함수를 사용하는 DEFAULT 제약 조건을 통해 제공해야 합니다.
 
 테이블에 대해 정의된 FILESTREAM 열이 있는 동안에는 ROWGUIDCOL 열을 삭제하고 관련 제약 조건을 변경할 수 없습니다. ROWGUIDCOL 열은 마지막 FILESTREAM 열이 삭제된 이후에만 삭제될 수 있습니다.
 
-열에 대해 FILESTREAM 저장소 특성이 지정된 경우 해당 열의 모든 값이 파일 시스템에 있는 FILESTREAM 데이터 컨테이너에 저장됩니다.
+열에 대해 FILESTREAM 스토리지 특성이 지정된 경우 해당 열의 모든 값이 파일 시스템에 있는 FILESTREAM 데이터 컨테이너에 저장됩니다.
 
 COLLATE *collation_name*     
 열에 대한 데이터 정렬을 지정합니다. 데이터 정렬 이름으로는 Windows 데이터 정렬 이름 또는 SQL 데이터 정렬 이름을 사용할 수 있습니다. *collation_name*은 **char**, **varchar**, **text**, **nchar**, **nvarchar** 및 **ntext** 데이터 형식의 열에만 적용할 수 있습니다. 지정하지 않은 경우 열이 사용자 정의 데이터 형식이면 사용자 정의 데이터 형식의 데이터 정렬에 열이 할당되고 그렇지 않은 경우에는 데이터베이스의 기본 데이터 정렬에 할당됩니다.
@@ -746,7 +746,7 @@ COLUMNSTORE
 COLUMNSTORE_ARCHIVE     
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. COLUMNSTORE_ARCHIVE는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 보다 적은 저장소 크기가 필요한 기타 상황에서 보관하는 데 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.
+클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. COLUMNSTORE_ARCHIVE는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 보다 적은 스토리지 크기가 필요한 기타 상황에서 보관하는 데 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.
 
 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.
 
@@ -946,7 +946,7 @@ VALUES (1);
 
 임시 테이블을 만들거나 테이블에 액세스할 때 *schema_name*을 포함하면 무시됩니다. 모든 임시 테이블은 dbo 스키마에서 생성됩니다.
 
-여러 사용자가 동시에 실행할 수 있는 저장 프로시저 또는 응용 프로그램에서 로컬 임시 테이블을 만드는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 다른 사용자가 만든 테이블을 구별할 수 있어야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 내부적으로 각 로컬 임시 테이블 이름에 숫자 접미사를 추가하여 구별합니다. **tempdb**의 **sysobjects** 테이블에 저장된 것과 같은 임시 테이블의 전체 이름은 CREATE TABLE 문에서 지정한 테이블 이름과 시스템이 생성한 숫자 접미사로 구성됩니다. 접미사를 추가해야 하므로 로컬 임시 이름으로 지정된 *table_name*은 116자를 초과할 수 없습니다.
+여러 사용자가 동시에 실행할 수 있는 저장 프로시저 또는 애플리케이션에서 로컬 임시 테이블을 만드는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 다른 사용자가 만든 테이블을 구별할 수 있어야 합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 내부적으로 각 로컬 임시 테이블 이름에 숫자 접미사를 추가하여 구별합니다. **tempdb**의 **sysobjects** 테이블에 저장된 것과 같은 임시 테이블의 전체 이름은 CREATE TABLE 문에서 지정한 테이블 이름과 시스템이 생성한 숫자 접미사로 구성됩니다. 접미사를 추가해야 하므로 로컬 임시 이름으로 지정된 *table_name*은 116자를 초과할 수 없습니다.
 
 임시 테이블은 DROP TABLE을 사용하여 명시적으로 삭제하지 않으면 범위를 벗어날 때 자동으로 삭제됩니다.
 
@@ -1047,7 +1047,7 @@ CREATE TABLE을 사용하여 분할된 테이블을 만들기 전에 테이블�
 - CASCADE, SET NULL, SET DEFAULT 및 NO ACTION은 서로 참조 관계를 가진 테이블에서 결합될 수 있습니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 NO ACTION을 발견하면 관련된 CASCADE, SET NULL 및 SET DEFAULT 동작을 멈추고 롤백합니다. DELETE 문으로 CASCADE, SET NULL, SET DEFAULT 및 NO ACTION 동작을 결합하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 이 NO ACTION을 확인하기 전에 모든 CASCADE, SET NULL 및 SET DEFAULT 동작을 적용합니다.
 - [!INCLUDE[ssDE](../../includes/ssde-md.md)] 은 테이블에 포함하여 다른 테이블을 참조하는 FOREIGN KEY 제약 조건의 수나 특정 테이블을 참조하는 다른 테이블 소유의 FOREIGN KEY 제약 조건의 수에 미리 한계를 정의하지 않습니다.
 
-  하지만 실제로 사용할 수 있는 FOREIGN KEY 제약 조건의 수는 하드웨어 구성 및 데이터베이스와 애플리케이션의 디자인에 따라 제한됩니다. 테이블에 포함되거나 이 테이블을 참조하는 FOREIGN KEY 제약 조건의 수가 각각 253개를 넘지 않도록 하는 것이 좋습니다. 유효 한계는 응용 프로그램과 하드웨어에 따라 더 많거나 적을 수 있습니다. 데이터베이스와 응용 프로그램을 디자인할 때는 FOREIGN KEY 제약 조건을 적용하는 비용도 고려하십시오.
+  하지만 실제로 사용할 수 있는 FOREIGN KEY 제약 조건의 수는 하드웨어 구성 및 데이터베이스와 애플리케이션의 디자인에 따라 제한됩니다. 테이블에 포함되거나 이 테이블을 참조하는 FOREIGN KEY 제약 조건의 수가 각각 253개를 넘지 않도록 하는 것이 좋습니다. 유효 한계는 애플리케이션과 하드웨어에 따라 더 많거나 적을 수 있습니다. 데이터베이스와 애플리케이션을 디자인할 때는 FOREIGN KEY 제약 조건을 적용하는 비용도 고려하십시오.
 
 - 임시 테이블에는 FOREIGN KEY 제약 조건이 적용되지 않습니다.
 - FOREIGN KEY 제약 조건은 참조되는 테이블의 PRIMARY KEY 또는 UNIQUE 제약 조건에 있는 열이나 참조되는 테이블의 UNIQUE INDEX에 있는 열만 참조할 수 있습니다.
@@ -1106,7 +1106,7 @@ CREATE TABLE을 사용하여 분할된 테이블을 만들기 전에 테이블�
 열이 계산 열인 경우에는 항상 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 열의 Null 허용 여부를 자동으로 결정합니다. 이런 유형을 가진 열의 Null 허용 여부를 알려면 `COLUMNPROPERTY` 함수에 **AllowsNull** 속성을 사용하세요.
 
 > [!NOTE]
-> SQL Server ODBC 드라이버 및 SQL Server OLE DB 드라이버 모두는 기본적으로 ANSI_NULL_DFLT_ON이 ON으로 설정되어 있습니다. ODBC 및 OLE DB 사용자는 ODBC 데이터 원본에서 이를 구성하거나 응용 프로그램이 설정한 연결 속성 또는 특성을 사용하여 이를 구성할 수 있습니다.
+> SQL Server ODBC 드라이버 및 SQL Server OLE DB 드라이버 모두는 기본적으로 ANSI_NULL_DFLT_ON이 ON으로 설정되어 있습니다. ODBC 및 OLE DB 사용자는 ODBC 데이터 원본에서 이를 구성하거나 애플리케이션이 설정한 연결 속성 또는 특성을 사용하여 이를 구성할 수 있습니다.
 
 ## <a name="data-compression"></a>Data Compression
 
@@ -1290,14 +1290,14 @@ CREATE TABLE dbo.mytable
 ```
 
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>11. 사용자 정의 형식의 열을 기반으로 계산 열 만들기
-다음 예에서는 유형의 어셈블리와 유형 자체를 현재 데이터베이스에 이미 만들었다고 가정하고 사용자 정의 형식 `utf8string`으로 정의된 하나의 열을 가진 테이블을 만드는 방법을 보여 줍니다. 두 번째 열은 `utf8string`을 기반으로 정의되며 **type(class)** `utf8string`의 `ToString()` 메서드를 사용하여 해당 열에 대한 값을 계산합니다.
+다음 예에서는 유형의 어셈블리와 유형 자체를 현재 데이터베이스에 이미 만들었다고 가정하고 사용자 정의 형식 `utf8string`으로 정의된 하나의 열을 가진 테이블을 만드는 방법을 보여 줍니다. 두 번째 열은 `utf8string`을 기반으로 정의되며 **type(class)** `utf8string`의 `ToString()` 메서드를 사용하여 해당 열에 대한 값을 컴퓨팅합니다.
 
 ```sql
 CREATE TABLE UDTypeTable
     ( u utf8string, ustr AS u.ToString() PERSISTED ) ;
 ```
 
-### <a name="l-using-the-username-function-for-a-computed-column"></a>12. 계산 열에 USER_NAME 함수 사용
+### <a name="l-using-the-user_name-function-for-a-computed-column"></a>12. 계산 열에 USER_NAME 함수 사용
 다음 예에서는 `USER_NAME()` 열에 `myuser_name` 함수를 사용하는 방법을 보여 줍니다.
 
 ```sql

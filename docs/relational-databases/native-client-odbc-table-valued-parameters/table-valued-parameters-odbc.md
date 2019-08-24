@@ -25,7 +25,7 @@ ms.locfileid: "68129009"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ODBC의 테이블 반환 매개 변수 지원을 통해 한 번의 호출로 여러 행을 서버로 보냄으로써 클라이언트 응용 프로그램에서 서버로 매개 변수가 있는 데이터를 보다 효율적으로 전송할 수 있습니다.  
+  ODBC의 테이블 반환 매개 변수 지원을 통해 한 번의 호출로 여러 행을 서버로 보냄으로써 클라이언트 애플리케이션에서 서버로 매개 변수가 있는 데이터를 보다 효율적으로 전송할 수 있습니다.  
   
  서버에서 테이블 반환 매개 변수에 관한 정보를 참조 하세요 [테이블 반환 매개 변수 &#40;데이터베이스 엔진&#41;](../../relational-databases/tables/use-table-valued-parameters-database-engine.md)합니다.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "68129009"
   
  첫 번째 옵션을 사용하면 저장 프로시저가 비즈니스 논리를 더 많이 캡슐화할 수 있습니다. 예를 들어 주문 항목이 테이블 반환 매개 변수로 전달된 경우 단일 저장 프로시저가 전체 주문 입력 트랜잭션을 캡슐화할 수 있습니다. 이 옵션은 서버로의 왕복이 한 번만 필요하기 때문에 매우 효율적입니다. 또는 다른 프로시저를 사용하여 주문 헤더와 주문 항목을 각각 별도로 처리할 수도 있습니다. 이 경우 코드가 더 많이 필요하고 클라이언트와 서버 간의 계약이 복잡해집니다.  
   
- 두 번째 방법은 매우 많은 양의 데이터로 대량 작업을 수행할 때 효율적인 메커니즘을 제공합니다. 이 방법을 사용하면 응용 프로그램에서 먼저 메모리에 데이터를 모두 버퍼링하지 않고도 서버로 데이터 행을 스트리밍할 수 있습니다.  
+ 두 번째 방법은 매우 많은 양의 데이터로 대량 작업을 수행할 때 효율적인 메커니즘을 제공합니다. 이 방법을 사용하면 애플리케이션에서 먼저 메모리에 데이터를 모두 버퍼링하지 않고도 서버로 데이터 행을 스트리밍할 수 있습니다.  
   
  테이블 변수를 만들 때 제약 조건과 기본 키를 만들 수 있습니다. 제약 조건은 테이블의 데이터가 특정 요구 사항을 충족하는지 확인하는 데 유용합니다.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68129009"
  테이블 반환 매개 변수를 서버로 전달하는 방법과 매개 변수 바인딩에 대해 설명합니다.  
   
  [준비된 문의 테이블 반환 매개 변수 메타데이터](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameter-metadata-for-prepared-statements.md)  
- 응용 프로그램에서 준비된 프로시저 호출의 메타데이터를 가져오는 방법을 설명합니다.  
+ 애플리케이션에서 준비된 프로시저 호출의 메타데이터를 가져오는 방법을 설명합니다.  
   
  [추가 테이블 반환 매개 변수 메타데이터](../../relational-databases/native-client-odbc-table-valued-parameters/additional-table-valued-parameter-metadata.md)  
  SQLProcedureColumns, SQLTables, 및 SQLColumns를 사용 하 여 테이블 반환 매개 변수에 대 한 메타 데이터를 검색 하는 방법에 설명 합니다.  

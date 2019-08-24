@@ -28,7 +28,7 @@ ms.locfileid: "68135326"
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   SQLXML의 이전 버전에서는 SQLXML IIS 가상 디렉터리와 SQLXML ISAPI 필터를 사용하여 HTTP 기반 쿼리 실행이 지원되었습니다. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]부터 SQLXML IIS 가상 디렉터리 및 SQLXML ISAPI 필터와 유사하고 겹치는 기능이 네이티브 XML 웹 서비스와 함께 제공되므로 SQLXML 4.0에서는 이러한 구성 요소가 제거되었습니다.  
   
- 또는 MDAC(Microsoft Data Access Components) 2.6 이상에서 처음 도입된 ADO(ActiveX Data Objects)에 대한 SQLXML 확장을 이용하여 쿼리를 실행하고 COM 기반 응용 프로그램에서 SQLXML 4.0을 사용할 수 있습니다.  
+ 또는 MDAC(Microsoft Data Access Components) 2.6 이상에서 처음 도입된 ADO(ActiveX Data Objects)에 대한 SQLXML 확장을 이용하여 쿼리를 실행하고 COM 기반 애플리케이션에서 SQLXML 4.0을 사용할 수 있습니다.  
   
  이 항목에서는 Visual Basic Scripting Edition (VBScript) 응용 프로그램 (.vbs 파일 이름 확장명을 사용 하 여 스크립트)의 일부로 SQLXML 및 ADO를 사용 하는 방법을 보여 줍니다. SQLXML 4.0 설명서의 쿼리 예제를 다시 만들고 테스트하는 데 유용한 초기 설치 절차를 제공합니다.  
   

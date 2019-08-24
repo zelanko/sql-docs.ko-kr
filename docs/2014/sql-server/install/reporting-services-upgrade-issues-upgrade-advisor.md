@@ -27,7 +27,7 @@ ms.locfileid: "66092574"
   
  업그레이드 관리자는 보고서 서버 설치를 분석합니다. 보고서 디자이너가 컴퓨터에 설치된 유일한 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 구성 요소인 경우와 같이 클라이언트 구성 요소만 설치된 경우에는 문제가 보고되지 않습니다.  
   
- 설치를 구성한 방법에 따라 업그레이드 관리자가 보고하지 않는 추가적인 문제가 발생할 수도 있습니다. 이러한 문제는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 업그레이드를 방해하지 않지만 업그레이드가 완료된 후 보고서와 응용 프로그램이 실행되는 방법에는 영향을 줄 수 있습니다. 이러한 문제에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "Reporting Services의 이전 버전과의 호환성"을 참조하십시오.  
+ 설치를 구성한 방법에 따라 업그레이드 관리자가 보고하지 않는 추가적인 문제가 발생할 수도 있습니다. 이러한 문제는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 업그레이드를 방해하지 않지만 업그레이드가 완료된 후 보고서와 애플리케이션이 실행되는 방법에는 영향을 줄 수 있습니다. 이러한 문제에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서에서 "Reporting Services의 이전 버전과의 호환성"을 참조하십시오.  
   
  설치 프로그램을 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 설치를 업그레이드할 수 없는 경우에는 새 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 설치하고 기존 설치를 새 인스턴스로 마이그레이션할 수 있습니다. 자세한 내용은 "업그레이드 및 Migrate Reporting Services"를 참조 하세요 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서 [Upgrade and Migrate Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md)합니다.  
   

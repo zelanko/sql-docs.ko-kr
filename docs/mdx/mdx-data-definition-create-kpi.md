@@ -51,19 +51,19 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |-------------------------|-------------|  
 |GOAL|숫자 값을 반환하는 유효한 MDX 식입니다.|  
 |STATUS|숫자 값을 반환하는 유효한 MDX 식입니다.|  
-|STATUS_GRAPHIC|클라이언트 응용 프로그램이 사용하는 그래픽 이미지의 집합을 정의하는 문자열입니다.|  
+|STATUS_GRAPHIC|클라이언트 애플리케이션이 사용하는 그래픽 이미지의 집합을 정의하는 문자열입니다.|  
 |TREND|숫자 값을 반환하는 유효한 MDX 식입니다.|  
-|TREND_GRAPHIC|클라이언트 응용 프로그램이 사용하는 그래픽 이미지의 집합을 정의하는 문자열입니다.|  
+|TREND_GRAPHIC|클라이언트 애플리케이션이 사용하는 그래픽 이미지의 집합을 정의하는 문자열입니다.|  
 |WEIGHT|숫자 값을 반환하는 유효한 MDX 식입니다.|  
 |CURRENT_TIME_MEMBER|시간 차원의 멤버를 반환하는 유효한 MDX 식입니다. CURRENT_TIME_MEMBER는 모든 상대적 시간 함수의 참조 지점을 설정합니다.|  
 |PARENT_KPI|부모 KPI의 이름을 지정하는 문자열입니다.|  
-|CAPTION|클라이언트 응용 프로그램이 KPI에 대한 캡션으로 사용하는 문자열입니다.|  
-|DISPLAY_FOLDER|클라이언트 응용 프로그램이 KPI를 표시하는 표시 폴더의 경로를 지정하는 문자열입니다. 폴더 수준 구분 기호는 클라이언트 응용 프로그램에서 정의합니다. 도구 및 클라이언트에서 제공한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 백슬래시 (\\)가 수준 구분 기호입니다. 정의 멤버에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
+|CAPTION|클라이언트 애플리케이션이 KPI에 대한 캡션으로 사용하는 문자열입니다.|  
+|DISPLAY_FOLDER|클라이언트 애플리케이션이 KPI를 표시하는 표시 폴더의 경로를 지정하는 문자열입니다. 폴더 수준 구분 기호는 클라이언트 애플리케이션에서 정의합니다. 도구 및 클라이언트에서 제공한 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], 백슬래시 (\\)가 수준 구분 기호입니다. 정의 멤버에 대해 여러 표시 폴더를 제공하려면 세미콜론(;)을 사용하여 폴더를 구분하십시오.|  
 |ASSOCIATED_MEASURE_GROUP|모든 MDX 계산에서 참조하는 측정값 그룹의 이름을 지정하는 문자열입니다.|  
   
- GOAL, STATUS 및 TREND 속성의 값은 -1과 1 사이의 값으로 계산되는 MDX 식입니다. 그러나 이러한 속성 값의 실제 범위는 클라이언트 응용 프로그램에서 정의합니다. 사용 하는 경우 클라이언트에서 제공 하 고 도구 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Kpi를 찾아볼-1 보다 작은 값으로 처리할지-1 및 1 보다 큰 값은 1로 처리 됩니다.  
+ GOAL, STATUS 및 TREND 속성의 값은 -1과 1 사이의 값으로 계산되는 MDX 식입니다. 그러나 이러한 속성 값의 실제 범위는 클라이언트 애플리케이션에서 정의합니다. 사용 하는 경우 클라이언트에서 제공 하 고 도구 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Kpi를 찾아볼-1 보다 작은 값으로 처리할지-1 및 1 보다 큰 값은 1로 처리 됩니다.  
   
- STATUS_GRAPHIC 및 TREND_GRAPHIC은 클라이언트 응용 프로그램이 표시할 올바른 이미지 집합을 식별할 때 사용하는 문자열 값입니다. 이 문자열은 표시 함수의 동작도 정의합니다. 이 동작에는 표시할 상태 수(일반적으로 홀수)와 각 상태에 사용할 이미지가 포함됩니다.  
+ STATUS_GRAPHIC 및 TREND_GRAPHIC은 클라이언트 애플리케이션이 표시할 올바른 이미지 집합을 식별할 때 사용하는 문자열 값입니다. 이 문자열은 표시 함수의 동작도 정의합니다. 이 동작에는 표시할 상태 수(일반적으로 홀수)와 각 상태에 사용할 이미지가 포함됩니다.  
   
 ### <a name="kpi-graphics-in-sql-server-data-tools"></a>SQL Server Data Tools의 KPI 그래픽  
  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]에서 KPI 그래픽은 세 가지 또는 다섯 가지 상태로 나타낼 수 있습니다. 다음 표에서 각 상태에 대 한 값을 정의합니다.  

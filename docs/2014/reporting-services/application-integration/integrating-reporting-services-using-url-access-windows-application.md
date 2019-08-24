@@ -24,9 +24,9 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126244"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Windows 애플리케이션에서 URL 액세스 사용
-  보고서 서버에 대한 URL 액세스는 웹 환경에 최적화되어 있지만, URL 액세스를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램에 포함시킬 수도 있습니다. 하지만 Windows Forms와 관련된 URL 액세스의 경우에는 웹 브라우저 기술을 사용해야 합니다. URL 액세스 및 Windows Forms에서 다음과 같은 통합 시나리오를 사용할 수 있습니다.  
+  보고서 서버에 대한 URL 액세스는 웹 환경에 최적화되어 있지만, URL 액세스를 사용하여 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서를 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션에 포함시킬 수도 있습니다. 하지만 Windows Forms와 관련된 URL 액세스의 경우에는 웹 브라우저 기술을 사용해야 합니다. URL 액세스 및 Windows Forms에서 다음과 같은 통합 시나리오를 사용할 수 있습니다.  
   
--   웹 브라우저를 프로그래밍 방식으로 시작하여 Windows Form 응용 프로그램에서 보고서를 표시합니다.  
+-   웹 브라우저를 프로그래밍 방식으로 시작하여 Windows Form 애플리케이션에서 보고서를 표시합니다.  
   
 -   Windows Form에서 <xref:System.Windows.Forms.WebBrowser> 컨트롤을 사용하여 보고서를 표시합니다.  
   

@@ -25,12 +25,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68108610"
 ---
-# <a name="spcreatestats-transact-sql"></a>sp_createstats(Transact-SQL)
+# <a name="sp_createstats-transact-sql"></a>sp_createstats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   호출 된 [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) 이미 통계 개체의 첫 번째 열이 아닌 열에 단일 열 통계를 만들기로 문입니다. 단일 열 통계를 만들면 히스토그램의 수가 늘어나며 이에 따라 카디널리티 예상치, 쿼리 계획 및 쿼리 성능이 향상될 수 있습니다. 히스토그램은 통계 개체의 첫 번째 열에 있으며 다른 열에는 없습니다.  
   
- sp_createstats는 쿼리 실행 시간이 중요하며 쿼리 최적화 프로그램에서 단일 열 통계를 생성할 때까지 기다릴 수 없는 경우, 즉 벤치마킹 등과 같은 응용 프로그램에 유용합니다. 대부분의 경우에서 필요는 없습니다; sp_createstats를 사용 하려면 경우 최적화 프로그램은 쿼리를 개선 하기 위해 필요에 따라 단일 열 통계를 생성 하는 쿼리 계획을 **AUTO_CREATE_STATISTICS** 옵션이 켜져 합니다.  
+ sp_createstats는 쿼리 실행 시간이 중요하며 쿼리 최적화 프로그램에서 단일 열 통계를 생성할 때까지 기다릴 수 없는 경우, 즉 벤치마킹 등과 같은 애플리케이션에 유용합니다. 대부분의 경우에서 필요는 없습니다; sp_createstats를 사용 하려면 경우 최적화 프로그램은 쿼리를 개선 하기 위해 필요에 따라 단일 열 통계를 생성 하는 쿼리 계획을 **AUTO_CREATE_STATISTICS** 옵션이 켜져 합니다.  
   
  통계에 대한 자세한 내용은 [통계](../../relational-databases/statistics/statistics.md)를 참조하세요. 단일 열 통계를 생성 하는 방법에 대 한 자세한 내용은 참조는 **AUTO_CREATE_STATISTICS** 옵션 [ALTER DATABASE SET 옵션 &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   

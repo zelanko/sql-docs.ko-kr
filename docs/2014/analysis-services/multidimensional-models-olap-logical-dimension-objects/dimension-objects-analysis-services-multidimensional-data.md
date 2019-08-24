@@ -20,7 +20,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702457"
 ---
 # <a name="dimension-objects-analysis-services---multidimensional-data"></a>차원 개체(Analysis Services - 다차원 데이터)
-  단순 <xref:Microsoft.AnalysisServices.Dimension> 개체는 기본 정보, 특성 및 계층으로 구성되어 있습니다. 기본 정보에는 차원의 이름, 차원의 유형, 데이터 원본, 저장소 모드 등이 포함됩니다. 특성은 차원의 실제 데이터를 정의합니다. 특성이 반드시 계층에 속할 필요는 없지만 계층은 특성으로 만들어집니다. 계층은 순서가 지정된 수준 목록을 만들고 사용자가 차원을 탐색할 수 있는 방법을 정의합니다.  
+  단순 <xref:Microsoft.AnalysisServices.Dimension> 개체는 기본 정보, 특성 및 계층으로 구성되어 있습니다. 기본 정보에는 차원의 이름, 차원의 유형, 데이터 원본, 스토리지 모드 등이 포함됩니다. 특성은 차원의 실제 데이터를 정의합니다. 특성이 반드시 계층에 속할 필요는 없지만 계층은 특성으로 만들어집니다. 계층은 순서가 지정된 수준 목록을 만들고 사용자가 차원을 탐색할 수 있는 방법을 정의합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  다음 항목에서는 차원 개체를 디자인하고 구현하는 방법에 대해 자세히 설명합니다.  

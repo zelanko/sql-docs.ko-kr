@@ -35,7 +35,7 @@ ms.locfileid: "68134185"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  응용 프로그램은 환경 및 연결 핸들을 할당하고 연결 특성을 설정한 후 데이터 원본이나 드라이버에 연결합니다. 연결에 사용할 수 있는 함수는 다음과 같이 세 가지가 있습니다.  
+  애플리케이션은 환경 및 연결 핸들을 할당하고 연결 특성을 설정한 후 데이터 원본이나 드라이버에 연결합니다. 연결에 사용할 수 있는 함수는 다음과 같이 세 가지가 있습니다.  
   
 -   **SQLConnect**  
   
@@ -63,16 +63,16 @@ ms.locfileid: "68134185"
   
  사용 하는 경우 **SQLDriverConnect**를 통해 필요한 연결 정보에 대 한 사용자에 게 확인 하는 것에 대 한 두 가지가 있습니다.  
   
--   응용 프로그램 대화 상자  
+-   애플리케이션 대화 상자  
   
-     연결 정보를 묻는 메시지가 표시 되 고 호출 하는 응용 프로그램 대화 상자를 만들 수 있습니다 **SQLDriverConnect** NULL 창 핸들을 사용 하 여 및 *DriverCompletion* SQL_DRIVER_NOPROMPT로 설정 합니다. 매개 변수를 이렇게 설정하면 ODBC 드라이버가 자체 대화 상자를 열지 않습니다. 이 방법은 응용 프로그램의 사용자 인터페이스를 제어해야 하는 경우 사용합니다.  
+     연결 정보를 묻는 메시지가 표시 되 고 호출 하는 응용 프로그램 대화 상자를 만들 수 있습니다 **SQLDriverConnect** NULL 창 핸들을 사용 하 여 및 *DriverCompletion* SQL_DRIVER_NOPROMPT로 설정 합니다. 매개 변수를 이렇게 설정하면 ODBC 드라이버가 자체 대화 상자를 열지 않습니다. 이 방법은 애플리케이션의 사용자 인터페이스를 제어해야 하는 경우 사용합니다.  
   
 -   드라이버 대화 상자  
   
-     에 대 한 유효한 창 핸들에 전달할 응용 프로그램을 코딩할 수 있습니다 **SQLDriverConnect** 설정 된 *DriverCompletion* 매개 변수를 SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT 또는 SQL_DRIVER_COMPLETE_ 필수. 그러면 사용자에게 연결 정보를 묻는 대화 상자를 드라이버에서 생성합니다. 이 방법을 사용할 경우 응용 프로그램 코드가 단순해집니다.  
+     에 대 한 유효한 창 핸들에 전달할 응용 프로그램을 코딩할 수 있습니다 **SQLDriverConnect** 설정 된 *DriverCompletion* 매개 변수를 SQL_DRIVER_COMPLETE, SQL_DRIVER_PROMPT 또는 SQL_DRIVER_COMPLETE_ 필수. 그러면 사용자에게 연결 정보를 묻는 대화 상자를 드라이버에서 생성합니다. 이 방법을 사용할 경우 애플리케이션 코드가 단순해집니다.  
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
- **SQLBrowseConnect**과 같이 **SQLDriverConnect**, 연결 문자열을 사용 합니다. 그러나 **SQLBrowseConnect**, 응용 프로그램 실행 시 데이터 소스를 사용 하 여 반복적으로 전체 연결 문자열을 생성할 수 있습니다. 이를 통해 응용 프로그램에서는 다음 두 가지 작업이 가능해집니다.  
+ **SQLBrowseConnect**과 같이 **SQLDriverConnect**, 연결 문자열을 사용 합니다. 그러나 **SQLBrowseConnect**, 응용 프로그램 실행 시 데이터 소스를 사용 하 여 반복적으로 전체 연결 문자열을 생성할 수 있습니다. 이를 통해 애플리케이션에서는 다음 두 가지 작업이 가능해집니다.  
   
 -   해당 정보를 묻는 고유의 대화 상자를 만듭니다. 따라서 해당 사용자 인터페이스에 대한 제어를 유지할 수 있습니다.  
   

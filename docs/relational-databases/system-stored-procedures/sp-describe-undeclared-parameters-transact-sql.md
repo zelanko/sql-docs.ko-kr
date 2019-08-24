@@ -25,7 +25,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68053016"
 ---
-# <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
+# <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   선언 되지 않은 매개 변수에 대 한 메타 데이터가 포함 된 결과 집합 반환을 [!INCLUDE[tsql](../../includes/tsql-md.md)] 일괄 처리 합니다. 에 사용 되는 각 매개 변수를 고려 합니다  **\@tsql** 일괄 처리에서 선언 되지 있지만  **\@params**합니다. 이러한 각 매개 변수에 대한 추론된 형식의 정보와 함께 해당 매개 변수에 대한 하나의 행이 포함된 결과 집합이 반환됩니다. 프로시저가 빈 경우 결과 집합을 반환 합니다  **\@tsql** 입력된 일괄 처리 매개 변수가 없는에 선언 된 항목을 제외한  **\@params**합니다.  
@@ -87,9 +87,9 @@ sp_describe_undeclared_parameters
 ## <a name="remarks"></a>설명  
  **sp_describe_undeclared_parameters** 항상 반환 상태 0 반환 합니다.  
   
- 응용 프로그램에 매개 변수를 포함할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 지정되고 응용 프로그램에서 이러한 문을 어떤 식으로든 처리해야 하는 경우에 가장 일반적으로 사용됩니다. 예로 사용자가 ODBC 매개 변수 구문 사용 하 여 쿼리를 제공 하는 위치 (예: odbctest RowsetViewer) 사용자에 대 한 인터페이스입니다. 응용 프로그램은 매개 변수 수를 동적으로 검색하여 해당 정보를 사용자에게 표시해야 합니다.  
+ 애플리케이션에 매개 변수를 포함할 수 있는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이 지정되고 애플리케이션에서 이러한 문을 어떤 식으로든 처리해야 하는 경우에 가장 일반적으로 사용됩니다. 예로 사용자가 ODBC 매개 변수 구문 사용 하 여 쿼리를 제공 하는 위치 (예: odbctest RowsetViewer) 사용자에 대 한 인터페이스입니다. 애플리케이션은 매개 변수 수를 동적으로 검색하여 해당 정보를 사용자에게 표시해야 합니다.  
   
- 다른 예로, 사용자 입력이 없는 경우를 들 수 있습니다. 응용 프로그램은 매개 변수를 반복하여 테이블과 같은 다른 위치에서 해당 데이터를 가져와야 합니다. 이 경우 응용 프로그램에서 모든 매개 변수 정보를 한 번에 전달할 필요는 없습니다. 대신 모든 매개 변수 정보를 공급자에서 가져오고 데이터 자체는 테이블에서 가져올 수 있습니다. 사용 하 여 코드 **sp_describe_undeclared_parameters** 는 보다 일반적인 이며 나중에 데이터 구조가 변경 하는 경우 수정 해야 할 가능성이 적기입니다.  
+ 다른 예로, 사용자 입력이 없는 경우를 들 수 있습니다. 애플리케이션은 매개 변수를 반복하여 테이블과 같은 다른 위치에서 해당 데이터를 가져와야 합니다. 이 경우 애플리케이션에서 모든 매개 변수 정보를 한 번에 전달할 필요는 없습니다. 대신 모든 매개 변수 정보를 공급자에서 가져오고 데이터 자체는 테이블에서 가져올 수 있습니다. 사용 하 여 코드 **sp_describe_undeclared_parameters** 는 보다 일반적인 이며 나중에 데이터 구조가 변경 하는 경우 수정 해야 할 가능성이 적기입니다.  
   
  **sp_describe_undeclared_parameters** 다음 경우 중 하나에서 오류를 반환 합니다.  
   

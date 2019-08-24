@@ -22,7 +22,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62711458"
 ---
 # <a name="cursor-concurrency-odbc"></a>커서 동시성(ODBC)
-  커서 작업은 커서 유형처럼 응용 프로그램에서 설정한 동시성 옵션의 영향을 받습니다. SQL_ATTR_CONCURRENCY 옵션을 사용 하 여 동시성 옵션 설정이 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)합니다. 동시성 유형은 다음과 같습니다.  
+  커서 작업은 커서 유형처럼 애플리케이션에서 설정한 동시성 옵션의 영향을 받습니다. SQL_ATTR_CONCURRENCY 옵션을 사용 하 여 동시성 옵션 설정이 [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md)합니다. 동시성 유형은 다음과 같습니다.  
   
 -   읽기 전용(SQL_CONCUR_READONLY)  
   

@@ -26,7 +26,7 @@ ms.locfileid: "62920776"
   
  어셈블리는 DLL 파일의 인스턴스 사용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 함수, 저장된 프로시저, 트리거, 사용자 정의 집계 및 호스팅하는 관리 코드 언어 중 하나로 작성 된 사용자 정의 형식을 배포 하는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] CLR (공용 언어 런타임)을 대신 [!INCLUDE[tsql](../../../includes/tsql-md.md)]합니다.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 어셈블리는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 공용 언어 런타임으로 작성된 관리 응용 프로그램 모듈(.dll 파일)을 참조하는 개체입니다. 어셈블리에는 클래스 메타데이터와 관리 코드가 포함되어 있습니다. 어셈블리를 SQL Server 인스턴스에 업로드하는 단계는 다음과 같은 데이터베이스 개체를 만들기 위한 첫 번째 단계입니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 어셈블리는 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 공용 언어 런타임으로 작성된 관리 애플리케이션 모듈(.dll 파일)을 참조하는 개체입니다. 어셈블리에는 클래스 메타데이터와 관리 코드가 포함되어 있습니다. 어셈블리를 SQL Server 인스턴스에 업로드하는 단계는 다음과 같은 데이터베이스 개체를 만들기 위한 첫 번째 단계입니다.  
   
 -   CLR 함수. 자세한 내용은 [CLR 함수 만들기](../user-defined-functions/create-clr-functions.md)합니다.  
   

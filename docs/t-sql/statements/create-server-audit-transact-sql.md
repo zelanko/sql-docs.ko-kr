@@ -74,7 +74,7 @@ CREATE SERVER AUDIT audit_name
 ```  
   
 ## <a name="arguments"></a>인수  
- { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } 감사 대상의 위치를 결정합니다. 이 옵션은 이진 파일, Windows 응용 프로그램 로그 또는 Windows 보안 로그입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Windows 보안 로그에 쓸 수 없습니다. 자세한 내용은 [보안 로그에 SQL Server Audit 이벤트 쓰기](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)를 참조하세요.  
+ { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } 감사 대상의 위치를 결정합니다. 이 옵션은 이진 파일, Windows 애플리케이션 로그 또는 Windows 보안 로그입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 Windows 보안 로그에 쓸 수 없습니다. 자세한 내용은 [보안 로그에 SQL Server Audit 이벤트 쓰기](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md)를 참조하세요.  
 
 > [!IMPORTANT]
 > Azure SQL Database 관리되는 인스턴스에서 SQL Audit은 서버 수준에서 작동합니다. 위치는 `URL` 또는 `EXTERNAL_MONITOR`만 될 수 있습니다.
@@ -165,8 +165,8 @@ CREATE SERVER AUDIT HIPAA_Audit
     TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
 ```  
   
-### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>2\. Windows 응용 프로그램 로그 대상과 옵션을 사용하여 서버 감사 만들기  
- 다음 예에서는 Windows 응용 프로그램 로그에 대한 대상 집합을 사용하여 `HIPAA_Audit`라는 서버 감사를 만듭니다. 큐가 1초마다 기록되고 실패 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진을 종료합니다.  
+### <a name="b-creating-a-server-audit-with-a-windows-application-log-target-with-options"></a>2\. Windows 애플리케이션 로그 대상과 옵션을 사용하여 서버 감사 만들기  
+ 다음 예에서는 Windows 애플리케이션 로그에 대한 대상 집합을 사용하여 `HIPAA_Audit`라는 서버 감사를 만듭니다. 큐가 1초마다 기록되고 실패 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 엔진을 종료합니다.  
   
 ```sql  
 CREATE SERVER AUDIT HIPAA_Audit  

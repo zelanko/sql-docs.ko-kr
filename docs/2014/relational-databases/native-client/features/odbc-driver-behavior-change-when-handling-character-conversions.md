@@ -44,7 +44,7 @@ SQLGetData(hstmt, SQL_W_CHAR, ...., (SQLPOINTER*)pBuffer, iSize, &iSize);   // R
   
  **SQLGetData** 실제 데이터의 청크를 검색할만 호출할 수 있습니다. 사용 하 여 **SQLGetData** 데이터의 크기를 가져오려면은 지원 되지 않습니다.  
   
- 다음은 잘못된 패턴 사용 시 드라이버 변경에 따른 영향을 보여 줍니다. 이 응용 프로그램은 `varchar`열 및 바인딩을 유니코드(SQL_UNICODE/SQL_WCHAR)로 쿼리합니다.  
+ 다음은 잘못된 패턴 사용 시 드라이버 변경에 따른 영향을 보여 줍니다. 이 애플리케이션은 `varchar`열 및 바인딩을 유니코드(SQL_UNICODE/SQL_WCHAR)로 쿼리합니다.  
   
  쿼리:  `select convert(varchar(36), '123')`  
   

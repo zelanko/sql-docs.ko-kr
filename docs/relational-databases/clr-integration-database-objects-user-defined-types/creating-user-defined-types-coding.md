@@ -63,7 +63,7 @@ using Microsoft.SqlServer.Server;
 >  Visual C++ 데이터베이스 개체를 사용 하 여 컴파일된 Udt 등 **/clr: pure** 실행은 지원 되지 않습니다.  
   
 ## <a name="specifying-attributes"></a>특성 지정  
- 특성은 직렬화를 사용하여 UDT의 저장소 표현을 생성하고 UDT를 값으로 클라이언트에 전송하는 방법을 결정합니다.  
+ 특성은 직렬화를 사용하여 UDT의 스토리지 표현을 생성하고 UDT를 값으로 클라이언트에 전송하는 방법을 결정합니다.  
   
  합니다 **Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute** 필요 합니다. 합니다 **Serializable** 특성은 선택 사항입니다. 지정할 수도 있습니다는 **Microsoft.SqlServer.Server.SqlFacetAttribute** UDT의 반환 형식에 대 한 정보를 제공 합니다. 자세한 내용은 [CLR 루틴용 사용자 지정 특성](../../relational-databases/clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)을 참조하세요.  
   

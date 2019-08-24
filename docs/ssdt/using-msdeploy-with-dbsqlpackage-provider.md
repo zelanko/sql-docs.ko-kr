@@ -63,14 +63,14 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
 |매개 변수|Default|설명|  
 |-------------|-----------|---------------|  
 |**Profile**:{ *string*}|해당 사항 없음|DAC 게시 프로필에 대한 파일 경로를 지정합니다. 프로필은 결과 dacpac를 생성할 때 사용할 속성 및 변수 컬렉션을 정의합니다. 게시 프로필은 대상에 전달되고 **Publish**, **Script** 또는 **DeployReport** 작업 중 하나를 수행할 때 기본 옵션으로 사용됩니다.|  
-|**DacApplicationName**={ *string* }|데이터베이스 이름|DACPAC 메타데이터에 저장할 응용 프로그램 이름을 정의합니다. 기본 문자열은 데이터베이스 이름입니다.|  
+|**DacApplicationName**={ *string* }|데이터베이스 이름|DACPAC 메타데이터에 저장할 애플리케이션 이름을 정의합니다. 기본 문자열은 데이터베이스 이름입니다.|  
 |**DacMajorVersion** ={*integer*}|**1**|DACPAC 메타데이터에 저장할 주 버전을 정의합니다.|  
 |**DacMinorVersion**={*integer*}|**0**|DACPAC 메타데이터에 저장할 부 버전을 정의합니다.|  
-|**DacApplicationDescription**={ *string* }|해당 사항 없음|DACPAC 메타데이터에 저장할 응용 프로그램 설명을 정의합니다.|  
+|**DacApplicationDescription**={ *string* }|해당 사항 없음|DACPAC 메타데이터에 저장할 애플리케이션 설명을 정의합니다.|  
 |**ExtractApplicationScopedObjectsOnly={True &#124; False}**|**True**|**True**인 경우 원본에서 애플리케이션 범위의 개체만 추출합니다. **False**인 경우 애플리케이션 범위의 개체 및 애플리케이션 범위 밖의 개체를 모두 추출합니다.|  
 |**ExtractReferencedServerScopedElements={True &#124; False}**|**True**|**True**인 경우 원본 데이터베이스 개체에서 참조하는 로그인, 서버 감사 및 자격 증명 개체를 추출합니다.|  
 |**ExtractIgnorePermissions={True &#124; False}**|**False**|**True**인 경우 추출된 모든 개체에서 추출 권한을 무시하며, **False**인 경우는 그렇지 않습니다.|  
-|**ExtractStorage={File&#124;Memory}**|**최근에 사용한 파일**|추출 중에 사용되는 스키마 모델에 대한 지원 저장소 유형을 지정합니다.|  
+|**ExtractStorage={File&#124;Memory}**|**최근에 사용한 파일**|추출 중에 사용되는 스키마 모델에 대한 지원 스토리지 유형을 지정합니다.|  
 |**ExtractIgnoreExtendedProperties={True&#124;False}**|**False**|확장된 속성을 무시할지 여부를 지정합니다.|  
 |**VerifyExtraction = {True&#124;False}**|**False**|추출된 dacpac를 확인할지 여부를 지정합니다.|  
   
@@ -157,7 +157,7 @@ MS-Deploy 명령줄에서 **–verb** 스위치를 사용하여 MS-Deploy 동사
 |**ScriptNewConstraintValidation= {True &#124; False}**|**True**|작업 중간에 CHECK 또는 외래 키 제약 조건으로 발생하는 데이터 오류를 방지하도록 모든 제약 조건을 게시 마지막에 하나의 집합으로 확인할지 여부를 지정합니다. 이 옵션이 **False**인 경우 해당 데이터를 확인하지 않고 제약 조건이 게시됩니다.|  
 |**ScriptDeployStateChecks={True &#124; False}**|**False**|데이터베이스 및 서버 이름이 데이터베이스 프로젝트에 지정된 이름과 일치하는지 여부를 확인하는 문을 게시 스크립트에 생성할지 여부를 지정합니다.|  
 |**ScriptRefreshModule= {True &#124; False}**|**True**|게시 스크립트의 마지막에 refresh 문을 포함할지 여부를 지정합니다.|  
-|**Storage={File&#124;Memory}**|**메모리**|데이터베이스 모델을 생성할 때 요소의 저장 방법을 지정합니다. 성능상의 이유로 기본값은 **Memory**입니다. 매우 큰 데이터베이스의 경우 파일 지원 저장소가 필요합니다.|  
+|**Storage={File&#124;Memory}**|**메모리**|데이터베이스 모델을 생성할 때 요소의 저장 방법을 지정합니다. 성능상의 이유로 기본값은 **Memory**입니다. 매우 큰 데이터베이스의 경우 파일 지원 스토리지가 필요합니다.|  
 |**TreatVerificationErrorsAsWarnings= {True &#124; False}**|**False**|게시 확인 중 발생한 오류를 경고로 처리할지 여부를 지정합니다. 생성된 배포 계획을 대상 데이터베이스에 대해 실행하기 전에 해당 계획에 대한 확인이 수행됩니다. 계획 확인에서 대상 전용 개체(예: 인덱스)가 없는 등의 문제가 발견되면 해당 계획을 삭제하여 변경해야 합니다. 또한 복합 프로젝트에 대한 참조로 인한 종속성(예: 테이블, 뷰)이 존재하지만 대상 데이터베이스에는 존재하지 않는 상황도 확인됩니다. 첫 번째 오류가 발생할 때 게시 작업을 정지하지 않고 확인 오류를 경고로 처리하여 전체 문제 목록을 얻을 수도 있습니다.|  
 |**UnmodifiableObjectWarnings= {True &#124; False}**|**True**|개체에서 수정할 수 없는 차이(예: 파일의 파일 경로 또는 파일 크기가 다른 경우)가 발견될 경우 경고를 발생할지 여부를 지정합니다.|  
 |**VerifyCollationCompatibility={True &#124; False}**|**True**|데이터 정렬 호환성이 확인되는지 여부를 지정합니다.|  

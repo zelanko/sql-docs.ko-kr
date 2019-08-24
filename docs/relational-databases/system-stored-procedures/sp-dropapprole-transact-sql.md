@@ -24,11 +24,11 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68001036"
 ---
-# <a name="spdropapprole-transact-sql"></a>sp_dropapprole(Transact-SQL)
+# <a name="sp_dropapprole-transact-sql"></a>sp_dropapprole(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  현재 데이터베이스에서 응용 프로그램 역할을 제거합니다.  
+  현재 데이터베이스에서 애플리케이션 역할을 제거합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하 여 [DROP APPLICATION ROLE](../../t-sql/statements/drop-application-role-transact-sql.md) 대신 합니다.  
@@ -48,7 +48,7 @@ sp_dropapprole [@rolename = ] 'role'
  0(성공) 또는 1(실패)  
   
 ## <a name="remarks"></a>설명  
- **sp_dropapprole** 응용 프로그램 역할을 제거 하려면만 사용할 수 있습니다. 보안 개체를 소유하는 역할은 삭제할 수 없습니다. 보안 개체를 소유한 응용 프로그램 역할을 삭제하려면 먼저 보안 개체의 소유권을 이전하거나 보안 개체를 삭제해야 합니다.  
+ **sp_dropapprole** 응용 프로그램 역할을 제거 하려면만 사용할 수 있습니다. 보안 개체를 소유하는 역할은 삭제할 수 없습니다. 보안 개체를 소유한 애플리케이션 역할을 삭제하려면 먼저 보안 개체의 소유권을 이전하거나 보안 개체를 삭제해야 합니다.  
   
  **sp_dropapprole** 사용자 정의 트랜잭션 내에서 실행할 수 없습니다.  
   
@@ -56,7 +56,7 @@ sp_dropapprole [@rolename = ] 'role'
  데이터베이스에 대한 ALTER ANY APPLICATION ROLE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 현재 데이터베이스에서 `SalesApp` 응용 프로그램 역할을 제거합니다.  
+ 다음 예에서는 현재 데이터베이스에서 `SalesApp` 애플리케이션 역할을 제거합니다.  
   
 ```sql
 EXEC sp_dropapprole 'SalesApp';  

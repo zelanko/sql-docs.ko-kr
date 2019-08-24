@@ -32,7 +32,7 @@ ms.locfileid: "68078809"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  스크롤형 커서를 사용하려면 ODBC 응용 프로그램에서 다음을 수행해야 합니다.  
+  스크롤형 커서를 사용하려면 ODBC 애플리케이션에서 다음을 수행해야 합니다.  
   
 -   사용 하 여 커서 기능을 설정 [SQLSetStmtAttr](../../relational-databases/native-client-odbc-api/sqlsetstmtattr.md)합니다.  
   

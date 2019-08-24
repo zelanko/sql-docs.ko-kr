@@ -254,7 +254,7 @@ RECOMPILE은 저장 프로시저를 만드는 유용한 대체 방법입니다. 
 ROBUST PLAN  
 쿼리 최적화 프로그램에서 성능이 저하되더라도 잠재적 최대 행 크기를 정의할 수 있는 계획을 세우도록 합니다. 쿼리가 처리될 때 중간 테이블 및 연산자가 쿼리 처리 시 입력 행보다 큰 행을 저장하고 처리해야 할 수 있습니다. 행이 너무 커서 특정 연산자가 행을 처리하지 못하는 경우도 있습니다. 행이 큰 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 쿼리 실행 중에 오류를 생성합니다. ROBUST PLAN을 사용하면 쿼리 최적화 프로그램에서 이 문제가 발생할 수 있는 쿼리 계획을 고려하지 않도록 할 수 있습니다.  
   
-이 계획이 불가능할 경우 쿼리 최적화 프로그램은 쿼리 실행 시 오류를 검색하도록 지연시키지 않고 오류를 반환합니다. 행에는 가변 길이 열이 포함될 수 있으며 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 처리할 수 있는 범위 이상의 잠재적 최대 크기를 가진 행을 정의하도록 허용합니다. 그러나 대개 응용 프로그램은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 처리할 수 있는 한도 내의 실제 크기를 가진 행을 저장합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 너무 긴 행이 있으면 실행 오류가 반환됩니다.  
+이 계획이 불가능할 경우 쿼리 최적화 프로그램은 쿼리 실행 시 오류를 검색하도록 지연시키지 않고 오류를 반환합니다. 행에는 가변 길이 열이 포함될 수 있으며 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 처리할 수 있는 범위 이상의 잠재적 최대 크기를 가진 행을 정의하도록 허용합니다. 그러나 대개 애플리케이션은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 처리할 수 있는 한도 내의 실제 크기를 가진 행을 저장합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 너무 긴 행이 있으면 실행 오류가 반환됩니다.  
  
 <a name="use_hint"></a> USE HINT ( **'** _hint\_name_ **'** )    
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

@@ -31,7 +31,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68041904"
 ---
-# <a name="set-ansipadding-transact-sql"></a>SET ANSI_PADDING(Transact-SQL)
+# <a name="set-ansi_padding-transact-sql"></a>SET ANSI_PADDING(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   열이 정의된 열 크기보다 짧은 값을 저장하는 방법과 **char**, **varchar**, **binary**및 **varbinary** 데이터에 후행 공백이 있는 값을 저장하는 방법을 제어합니다.  
@@ -72,7 +72,7 @@ SET ANSI_PADDING ON
   
 계산 열이나 인덱싱된 뷰에서 인덱스를 만들거나 변경할 때는 ANSI_PADDING을 ON으로 설정해야 합니다. 인덱싱된 뷰 및 계산 열의 인덱스에 사용되는 필수 SET 옵션 설정에 대한 자세한 내용은 [SET Statements &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)에서 "SET 문 사용 시 고려 사항"을 참조하세요.  
   
-SET ANSI_PADDING의 기본값은 ON입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결될 때 자동으로 ANSI_PADDING을 ON으로 설정합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는, SQL Server에 연결하기 전에 응용 프로그램에 설정된 OLE DB 연결 속성에서 이 옵션을 구성할 수 있습니다. DB-Library 응용 프로그램에서 연결하는 경우 SET ANSI_PADDING의 기본값은 OFF입니다.  
+SET ANSI_PADDING의 기본값은 ON입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결될 때 자동으로 ANSI_PADDING을 ON으로 설정합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는, SQL Server에 연결하기 전에 애플리케이션에 설정된 OLE DB 연결 속성에서 이 옵션을 구성할 수 있습니다. DB-Library 애플리케이션에서 연결하는 경우 SET ANSI_PADDING의 기본값은 OFF입니다.  
   
  SET ANSI_PADDING 설정은 **nchar**, **nvarchar**, **ntext**, **text**, **image**, **varbinary(max)** , **varchar(max)** 및 **nvarchar(max)** 데이터 형식에는 영향을 주지 않습니다. 이 설정은 항상 SET ANSI_PADDING ON 동작을 표시합니다. 즉, 후행 공백과 뒤에 오는 0은 잘리지 않는다는 의미입니다.  
   

@@ -63,12 +63,12 @@ using Microsoft.SqlServer.Server;
 >  `/clr:pure`를 사용하여 컴파일된 UDT 등의 Visual C++ 개체는 실행할 수 없습니다.  
   
 ## <a name="specifying-attributes"></a>특성 지정  
- 특성은 직렬화를 사용하여 UDT의 저장소 표현을 생성하고 UDT를 값으로 클라이언트에 전송하는 방법을 결정합니다.  
+ 특성은 직렬화를 사용하여 UDT의 스토리지 표현을 생성하고 UDT를 값으로 클라이언트에 전송하는 방법을 결정합니다.  
   
  `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` 필요 합니다. `Serializable` 특성은 선택 사항이며 `Microsoft.SqlServer.Server.SqlFacetAttribute`를 지정하여 UDT의 반환 형식에 대한 정보를 제공할 수도 있습니다. 자세한 내용은 [CLR 루틴용 사용자 지정 특성](../clr-integration/database-objects/clr-integration-custom-attributes-for-clr-routines.md)을 참조하세요.  
   
 ### <a name="point-udt-attributes"></a>Point UDT 특성  
- `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`는 `Point` UDT의 저장소 형식을 `Native`로 설정합니다. `IsByteOrdered`는 `true`로 설정되며, 이 경우 비교 결과는 SQL Server에서 동일한 비교가 관리 코드에서 수행된 결과와 같습니다. UDT는 UDT에서 Null을 인식하도록 하는 `System.Data.SqlTypes.INullable` 인터페이스를 구현합니다.  
+ `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`는 `Point` UDT의 스토리지 형식을 `Native`로 설정합니다. `IsByteOrdered`는 `true`로 설정되며, 이 경우 비교 결과는 SQL Server에서 동일한 비교가 관리 코드에서 수행된 결과와 같습니다. UDT는 UDT에서 Null을 인식하도록 하는 `System.Data.SqlTypes.INullable` 인터페이스를 구현합니다.  
   
  다음 코드 조각에서는 `Point` UDT의 특성을 보여 줍니다.  
   

@@ -190,7 +190,7 @@ memory-optimized table DLLs.
   
 **해결 방법:** 해시 인덱스를 사용하는 경우 쿼리와 쿼리 계획을 조사하여 쿼리에서 인덱스 키의 하위 집합이나 같지 않음 조건자에 대한 Index Seek 연산을 활용할 수 있는지 여부를 확인합니다. 인덱스 키의 하위 집합에서 검색해야 하는 경우, 비클러스터형 인덱스를 사용하거나 검색해야 하는 정확한 열에서 해시 인덱스를 사용합니다. 같지 않음 조건자에서 검색해야 하는 경우에는 해시 대신 비클러스터형 인덱스를 사용합니다.  
   
-#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-readcommittedsnapshot-is-set-to-on"></a>READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON으로 설정된 경우 메모리 최적화 테이블과 메모리 최적화 테이블 변수를 동일한 쿼리에서 사용하면 실패함  
+#### <a name="failure-when-using-a-memory-optimized-table-and-memory-optimized-table-variable-in-the-same-query-if-the-database-option-read_committed_snapshot-is-set-to-on"></a>READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON으로 설정된 경우 메모리 최적화 테이블과 메모리 최적화 테이블 변수를 동일한 쿼리에서 사용하면 실패함  
 **문제점:** READ_COMMITTED_SNAPSHOT 데이터베이스 옵션이 ON으로 설정된 경우, 사용자 트랜잭션 컨텍스트 외부의 동일한 문에서 메모리 최적화 테이블과 메모리 최적화 테이블 변수 둘 다에 액세스하면 다음과 같은 오류 메시지가 나타날 수 있습니다.  
   
 ```  
@@ -213,7 +213,7 @@ SET MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT=ON
   
 **해결 방법:** 없음 고유하게 컴파일된 저장 프로시저의 단기 실행 쿼리에 대한 실행 통계 DMV에 보고되는 worker_time에 의존하지 마십시오.  
   
-#### <a name="error-with-showplanxml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>긴 식이 포함된 고유하게 컴파일된 저장 프로시저에 대한 SHOWPLAN_XML의 오류  
+#### <a name="error-with-showplan_xml-for-natively-compiled-stored-procedures-that-contain-long-expressions"></a>긴 식이 포함된 고유하게 컴파일된 저장 프로시저에 대한 SHOWPLAN_XML의 오류  
 **문제점:** 고유하게 컴파일된 저장 프로시저에 긴 식이 포함된 경우, T-SQL 옵션 SET SHOWPLAN_XML ON을 사용하거나 Management Studio의 ‘예상 실행 계획 표시’ 옵션을 사용하여 프로시저에 대한 SHOWPLAN_XML을 가져오면 다음과 같은 오류가 발생할 수 있습니다.  
   
 ```  
@@ -358,7 +358,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **해결 방법:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 애플리케이션 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
   
 2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](https://technet.microsoft.com/library/hh758436.aspx)를 참조하십시오.  
   
@@ -373,7 +373,7 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 **해결 방법:**  
   
-1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 응용 프로그램 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
+1.  [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] 기능 팩에서 MSOLAP.5 공급자를 다운로드합니다. Excel Services를 실행하는 애플리케이션 서버에서 공급자를 설치합니다. 자세한 내용은 [Microsoft SQL Server 2012 SP1 기능 팩](https://www.microsoft.com/download/details.aspx?id=35580)의 "Microsoft SQL Server 2012 SP1용 Microsoft Analysis Services OLE DB Provider" 섹션을 참조하세요.  
   
 2.  SharePoint Excel 서비스에서 신뢰할 수 있는 공급자로 MSOLAP.5를 등록합니다. 자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](https://technet.microsoft.com/library/hh758436.aspx)를 참조하십시오.  
   

@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68096027"
 ---
-# <a name="sptracecreate-transact-sql"></a>sp_trace_create(Transact-SQL)
+# <a name="sp_trace_create-transact-sql"></a>sp_trace_create(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   추적 정의를 만듭니다. 새 추적은 중지된 상태가 됩니다.  
@@ -86,7 +86,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
  예를 들어 경우는 *trace_file* 매개 변수 이름 "c:\mytrace_123.trc" 파일 이름 "c:\mytrace_124.trc" 파일 보다 오래 된 "c:\mytrace"로 지정 됩니다. 하는 경우 *max_rollover_files* 가 2로 설정 "c:\mytrace_123.trc" 파일을 삭제 하는 SQL Server "c:\mytrace_125.trc" 추적 파일을 만들기 전에 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 각 파일을 한 번만 삭제하려고 시도하며 다른 프로세스에서 사용 중인 파일은 삭제할 수 없습니다. 그러므로 추적을 실행하는 동안 다른 응용 프로그램에서 추적 파일을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 추적 파일을 파일 시스템에 유지합니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 각 파일을 한 번만 삭제하려고 시도하며 다른 프로세스에서 사용 중인 파일은 삭제할 수 없습니다. 그러므로 추적을 실행하는 동안 다른 애플리케이션에서 추적 파일을 사용하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 추적 파일을 파일 시스템에 유지합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  아래 표에서는 저장 프로시저가 완료된 후 사용자가 얻을 수 있는 코드 값을 설명합니다.  

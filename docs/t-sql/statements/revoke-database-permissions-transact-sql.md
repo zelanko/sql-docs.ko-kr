@@ -87,7 +87,7 @@ permission | ALL [ PRIVILEGES ]
  *Application_role*  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
   
- 응용 프로그램 역할을 지정합니다.  
+ 애플리케이션 역할을 지정합니다.  
   
  *Database_user_mapped_to_Windows_User*  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
@@ -215,8 +215,8 @@ REVOKE CREATE CERTIFICATE FROM MelanieK;
 GO  
 ```  
   
-### <a name="b-revoking-references-permission-from-an-application-role"></a>2\. 응용 프로그램 역할에서 REFERENCES 사용 권한 취소  
- 다음 예에서는 응용 프로그램 역할 `REFERENCES`에서 `AdventureWorks2012` 데이터베이스에 대한 `AuditMonitor` 사용 권한을 취소합니다.  
+### <a name="b-revoking-references-permission-from-an-application-role"></a>2\. 애플리케이션 역할에서 REFERENCES 사용 권한 취소  
+ 다음 예에서는 애플리케이션 역할 `REFERENCES`에서 `AdventureWorks2012` 데이터베이스에 대한 `AuditMonitor` 사용 권한을 취소합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
   

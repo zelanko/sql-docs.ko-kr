@@ -22,11 +22,11 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "68206786"
 ---
 # <a name="constructing-an-sql-statement-odbc"></a>SQL 문 생성(ODBC)
-  ODBC 응용 프로그램에서는 거의 모든 데이터베이스 액세스를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 수행합니다. 이러한 문의 형식은 응용 프로그램의 요구 사항에 따라 달라집니다. SQL 문은 다음과 같은 방법으로 생성할 수 있습니다.  
+  ODBC 애플리케이션에서는 거의 모든 데이터베이스 액세스를 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 실행하여 수행합니다. 이러한 문의 형식은 애플리케이션의 요구 사항에 따라 달라집니다. SQL 문은 다음과 같은 방법으로 생성할 수 있습니다.  
   
 -   하드 코딩  
   
-     응용 프로그램에서 고정 태스크로 수행한 정적 문  
+     애플리케이션에서 고정 태스크로 수행한 정적 문  
   
 -   런타임에 생성  
   
@@ -40,9 +40,9 @@ ms.locfileid: "68206786"
   
 -   유연성  
   
-     프로그래머가 응용 프로그램의 이식성이 알맞게 조정할 수 있습니다. 여러 데이터베이스에 대한 이식성을 향상하려면 주로 ODBC 및 ISO 구문을 사용합니다. 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향상된 기능을 사용하려면 적절한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 사용합니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] ODBC 기반 응용 프로그램의 모든 기능을 활용할 수 있도록 구문 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+     프로그래머가 애플리케이션의 이식성이 알맞게 조정할 수 있습니다. 여러 데이터베이스에 대한 이식성을 향상하려면 주로 ODBC 및 ISO 구문을 사용합니다. 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 향상된 기능을 사용하려면 적절한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 사용합니다. 합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 전체 [!INCLUDE[tsql](../../includes/tsql-md.md)] ODBC 기반 응용 프로그램의 모든 기능을 활용할 수 있도록 구문 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
- SELECT 문의 열 목록에는 현재 태스크를 수행하는 데 필요한 열만 포함되어 있어야 합니다. 그래야만 네트워크를 통해 보내는 데이터의 양이 줄 뿐 아니라 데이터베이스 변경이 응용 프로그램에 미치는 영향도 줄어듭니다. 응용 프로그램에서 테이블의 열을 참조하지 않는 경우 해당 열이 변경되어도 응용 프로그램에는 영향을 주지 않습니다.  
+ SELECT 문의 열 목록에는 현재 태스크를 수행하는 데 필요한 열만 포함되어 있어야 합니다. 그래야만 네트워크를 통해 보내는 데이터의 양이 줄 뿐 아니라 데이터베이스 변경이 애플리케이션에 미치는 영향도 줄어듭니다. 애플리케이션에서 테이블의 열을 참조하지 않는 경우 해당 열이 변경되어도 애플리케이션에는 영향을 주지 않습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [쿼리 실행 &#40;ODBC&#41;](executing-queries-odbc.md)  

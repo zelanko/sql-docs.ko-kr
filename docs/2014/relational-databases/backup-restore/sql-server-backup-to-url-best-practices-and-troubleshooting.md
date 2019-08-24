@@ -37,7 +37,7 @@ ms.locfileid: "65619591"
   
 -   실패한 백업 작업으로 인해 백업 파일이 잘못될 수 있습니다. 실패한 백업을 주기적으로 확인하고 blob 파일을 삭제하는 것이 좋습니다. 자세한 내용은 [Deleting Backup Blob Files with Active Leases](deleting-backup-blob-files-with-active-leases.md)를 참조하세요.  
   
--   백업 중 `WITH COMPRESSION` 옵션을 사용하면 저장소 비용과 저장소 트랜잭션 비용이 최소화됩니다. 백업 프로세스를 완료하는 데 걸리는 시간도 줄어듭니다.  
+-   백업 중 `WITH COMPRESSION` 옵션을 사용하면 스토리지 비용과 스토리지 트랜잭션 비용이 최소화됩니다. 백업 프로세스를 완료하는 데 걸리는 시간도 줄어듭니다.  
   
 ## <a name="handling-large-files"></a>큰 파일 처리  
   

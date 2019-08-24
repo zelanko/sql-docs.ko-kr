@@ -58,7 +58,7 @@ ms.locfileid: "66071380"
   
  Analysis Services 인스턴스의 시스템 관리자 역할 중 한 멤버만이 `effectiveusername` 매개 변수를 사용하여 연결할 권한을 가지며 서버 인스턴스의 또 다른 사용자를 가장합니다. 따라서 Reporting Services 공유 서비스의 실행 계정은 Analysis Services 인스턴스에 대한 관리 권한을 가져야 합니다.  서비스 계정에 관리 권한을 부여하는 방법에 대한 자세한 내용은 [테이블 형식 model 데이터베이스에 대한 BI 의미 체계 모델 연결 만들기](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)항목을 참조하세요.  
   
- 다음 그림에서는 각 연결에 대해 동일한 Windows 사용자 ID를 사용하는 연결 시퀀스를 보여 줍니다. Analysis Services에 대한 마지막 연결에서 연결은 Reporting Services 서비스 응용 프로그램 ID를 통해 이루어지며 `effectiveusername`를 사용하여 Windows 사용자 ID가 전달됩니다.  
+ 다음 그림에서는 각 연결에 대해 동일한 Windows 사용자 ID를 사용하는 연결 시퀀스를 보여 줍니다. Analysis Services에 대한 마지막 연결에서 연결은 Reporting Services 서비스 애플리케이션 ID를 통해 이루어지며 `effectiveusername`를 사용하여 Windows 사용자 ID가 전달됩니다.  
   
  ![테이블 형식 데이터베이스에 대 한 가장 된 연결](../media/ssas-powerpivotbismconnection-2.gif "테이블 형식 데이터베이스에 대 한 가장 된 연결")  
   

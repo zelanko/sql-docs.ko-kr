@@ -28,7 +28,7 @@ ms.locfileid: "68023626"
 ## <a name="steps-for-importing-and-exporting-data"></a>데이터 가져오기 및 내보내기 단계  
  다음 표에서는 데이터 가져오기 및 내보내기 마법사의 단계와 마법사의 해당 페이지를 나열합니다. 마법사에서 선택한 옵션에 따라 일반적으로 일부 페이지가 표시되지 않을 수 있습니다.  
 
-일반적인 세션에서 볼 수 있는 몇 가지 화면을 간략히 보려면 [가져오기 및 내보내기 마법사의 간단한 예제 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md) 단일 페이지에 있는 간단한 종단 간 예제를 살펴봅니다.
+일반적인 세션에서 볼 수 있는 몇 가지 화면을 간략히 보려면 [가져오기 및 내보내기 마법사의 간단한 예제 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md) 단일 페이지에 있는 간단한 엔드투엔드 예제를 살펴봅니다.
 
 |단계|마법사 페이지|  
 |----------|------------------|  
@@ -47,7 +47,7 @@ ms.locfileid: "68023626"
 다음은 몇 가지 다른 기본 작업입니다.
 -   **마법사의 작동 원리에 대한 빠른 예제를 참조하세요.**
 
-    -   **스크린샷을 보려면.** 단일 페이지([가져오기 및 내보내기 마법사의 간단한 예제 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md))에서 간단한 종단 간 예제를 살펴봅니다.
+    -   **스크린샷을 보려면.** 단일 페이지([가져오기 및 내보내기 마법사의 간단한 예제 시작](../../integration-services/import-export-data/get-started-with-this-simple-example-of-the-import-and-export-wizard.md))에서 간단한 엔드투엔드 예제를 살펴봅니다.
 
     -   **비디오를 시청하려면.** 마법사를 보여 주고 Excel로 데이터를 내보내는 방법을 명료하고 간단하게 설명하는 4분 길이의 YouTube 동영상([SQL Server 가져오기 및 내보내기 마법사를 사용하여 Excel로 내보내기](https://go.microsoft.com/fwlink/?linkid=829049))을 시청합니다.
 

@@ -18,7 +18,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62757943"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI 개념
-  CSDLBI(BI 포함 개념 스키마 정의 언어) 주석은 엔터티 데이터 프레임워크를 기반으로 하며, 별도의 데이터 집합을 프로그래밍 방식으로 액세스, 쿼리 또는 내보낼 수 있도록 하여 데이터를 나타내기 위한 추상화입니다. CSDLBI는 풍부한 데이터 기반 보고 및 응용 프로그램을 지원하기 때문에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 사용하여 만든 데이터 모델을 나타내는 데 사용됩니다.  
+  CSDLBI(BI 포함 개념 스키마 정의 언어) 주석은 엔터티 데이터 프레임워크를 기반으로 하며, 별도의 데이터 집합을 프로그래밍 방식으로 액세스, 쿼리 또는 내보낼 수 있도록 하여 데이터를 나타내기 위한 추상화입니다. CSDLBI는 풍부한 데이터 기반 보고 및 애플리케이션을 지원하기 때문에 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 사용하여 만든 데이터 모델을 나타내는 데 사용됩니다.  
   
  이 단원에서는 CSDLBI 표현이 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터 모델(테이블 형식 및 다차원)에 매핑되는 방법을 설명하고 각 모델 유형의 예를 보여 줍니다.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62757943"
   
 ```  
   
- 생성되는 CSDLBI 문서 크기를 제한하기 위해 엔터티에 두 번 이상 나타나는 속성이 기존 속성에 대한 참조에 의해 지정되므로 `EntityType`에 대해 속성이 한 번만 나열되어야 합니다. 클라이언트 응용 프로그램은 `EntityType`과 일치하는 `OriginEntityType`을 찾아 속성의 값을 가져올 수 있습니다.  
+ 생성되는 CSDLBI 문서 크기를 제한하기 위해 엔터티에 두 번 이상 나타나는 속성이 기존 속성에 대한 참조에 의해 지정되므로 `EntityType`에 대해 속성이 한 번만 나열되어야 합니다. 클라이언트 애플리케이션은 `EntityType`과 일치하는 `OriginEntityType`을 찾아 속성의 값을 가져올 수 있습니다.  
   
 ### <a name="relationships"></a>관계  
  엔터티 데이터 프레임 워크에서 관계로 정의 되며 *연결* 엔터티 간의 합니다.  
@@ -101,14 +101,14 @@ ms.locfileid: "62757943"
 ```  
   
 ### <a name="visualization-and-navigation-properties"></a>시각화 및 탐색 속성  
- CSDLBI 주석의 중요한 부분은 보고 계층에서 프레젠테이션을 정의하고 엔터티 간의 관계를 탐색하기 위한 속성입니다. 대개 데이터 모델을 만들 때는 클라이언트 응용 프로그램이 표시 순서와 그 밖의 세부 정보를 지정한다고 간주하므로 데이터 순서 지정 및 그룹화 방법 제어나 기본값 지정을 중요하게 여기지 않아도 됩니다. 그러나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델은 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고 클라이언트와의 통합을 위해 디자인되었으며 보고서 디자인 화면에서 데이터 모델의 엔터티를 표시하도록 지원하는 속성과 특성을 포함합니다.  
+ CSDLBI 주석의 중요한 부분은 보고 계층에서 프레젠테이션을 정의하고 엔터티 간의 관계를 탐색하기 위한 속성입니다. 대개 데이터 모델을 만들 때는 클라이언트 애플리케이션이 표시 순서와 그 밖의 세부 정보를 지정한다고 간주하므로 데이터 순서 지정 및 그룹화 방법 제어나 기본값 지정을 중요하게 여기지 않아도 됩니다. 그러나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 테이블 형식 모델은 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] 보고 클라이언트와의 통합을 위해 디자인되었으며 보고서 디자인 화면에서 데이터 모델의 엔터티를 표시하도록 지원하는 속성과 특성을 포함합니다.  
   
  시각화를 위한 확장에는 숫자 데이터와 함께 사용할 기본 집계를 지정하거나, 텍스트 필드가 이미지 URL을 가리키도록 지시하거나, 현재 필드를 정렬하는 데 사용되는 필드를 지정하기 위한 특성이 포함됩니다.  
   
 ### <a name="name-properties-and-naming-conventions"></a>이름 속성 및 명명 규칙  
  CSDLBI 스키마는 키로 사용할 수 있는 고유 이름과 식별자를 각 엔터티에 제공합니다. 또한 일부 엔터티는 표시용으로 사용되는 캡션과 엔터티가 사용되는 위치에 따라 달라지는 컨텍스트 이름을 가질 수 있습니다.  
   
- `Documentation` 요소는 보고서 디자이너가 엔터티를 설명할 기회를 제공하여 비즈니스 사용자가 데이터의 의미를 이해하도록 돕습니다. 일부 엔터티는 응용 프로그램이나 클라이언트에서 사용할 추가 메타데이터를 제공하는 `Annotation` 특성을 한 개 이상 허용하기도 합니다.  
+ `Documentation` 요소는 보고서 디자이너가 엔터티를 설명할 기회를 제공하여 비즈니스 사용자가 데이터의 의미를 이해하도록 돕습니다. 일부 엔터티는 애플리케이션이나 클라이언트에서 사용할 추가 메타데이터를 제공하는 `Annotation` 특성을 한 개 이상 허용하기도 합니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 도구로 모델을 생성하는 경우 개체를 위해 만든 이름은 개체 이름 지정과 이름의 고유성을 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 규칙을 따릅니다. 그러나 CSDLBI는 C# 식별자에 대한 명명 규칙을 준수해야 하는 EDF(엔터티 데이터 프레임워크)를 기반으로 하기 때문에 서버에서 모델의 CSDLBI 출력을 만들 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 스키마에서 사용하는 이름을 가져와서 EDF 요구 사항에 맞는 새 개체 이름을 자동으로 만듭니다. 다음 표에서는 새 이름을 생성하기 위한 작업에 대해 설명합니다.  
   

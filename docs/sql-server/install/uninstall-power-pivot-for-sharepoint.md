@@ -86,7 +86,7 @@ ms.locfileid: "68892206"
   
 4.  태스크 목록의 각 동작을 검토하여 각 동작이 수행하는 작업을 이해합니다.  
   
-     **제거 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 응용 프로그램 제거**에는 서비스 응용 프로그램과 관련된 응용 프로그램 데이터를 삭제할 수 있는 옵션이 제공됩니다. 애플리케이션 데이터는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 사용되는 데이터 새로 고침 일정, 데이터베이스 인스턴스 정보, 사용 데이터 및 기타 데이터를 저장하기 위해 서비스 애플리케이션에서 만드는 SQL Server 데이터베이스입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서와 같은 사용자 파일은 저장되지 않습니다. 애플리케이션 데이터를 보관할 특정 이유가 있는 경우(예: 데이터 새로 고침 또는 데이터 액세스와 관련된 데이터 보존 정책이 있는 경우)가 아니면 SharePoint 사용자가 만들거나 저장한 파일을 제거하지 않고 애플리케이션 데이터베이스를 삭제할 수 있습니다.  
+     **제거 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 제거**에는 서비스 애플리케이션과 관련된 애플리케이션 데이터를 삭제할 수 있는 옵션이 제공됩니다. 애플리케이션 데이터는 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 에서 사용되는 데이터 새로 고침 일정, 데이터베이스 인스턴스 정보, 사용 데이터 및 기타 데이터를 저장하기 위해 서비스 애플리케이션에서 만드는 SQL Server 데이터베이스입니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 통합 문서와 같은 사용자 파일은 저장되지 않습니다. 애플리케이션 데이터를 보관할 특정 이유가 있는 경우(예: 데이터 새로 고침 또는 데이터 액세스와 관련된 데이터 보존 정책이 있는 경우)가 아니면 SharePoint 사용자가 만들거나 저장한 파일을 제거하지 않고 애플리케이션 데이터베이스를 삭제할 수 있습니다.  
   
      데이터베이스를 삭제하려면 **제거 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션 제거** 를 선택한 다음 **이 서비스 애플리케이션에 연결된 애플리케이션 데이터를 삭제합니다.** 를 제거하려면 Analysis Services 시스템 관리자 및 로컬 Administrators 그룹의 구성원이어야 합니다.  
   

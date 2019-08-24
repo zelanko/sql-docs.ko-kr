@@ -18,9 +18,9 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63151112"
 ---
 # <a name="best-practices-for-reporting-services-exception-handling"></a>Reporting Services 예외 처리를 위한 최상의 방법
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 응용 프로그램을 개발할 때 예외 발생을 없애거나 줄이기 위해 사용할 수 있는 방법이 다수 있습니다. 예외가 발생하면 사용자에게 간단 명료한 오류 메시지를 제공하고 적절한 예외 처리를 추가하여 응용 프로그램이 갑자기 종료되지 않도록 합니다.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 애플리케이션을 개발할 때 예외 발생을 없애거나 줄이기 위해 사용할 수 있는 방법이 다수 있습니다. 예외가 발생하면 사용자에게 간단 명료한 오류 메시지를 제공하고 적절한 예외 처리를 추가하여 애플리케이션이 갑자기 종료되지 않도록 합니다.  
   
- 보고서 서버 웹 서비스에 요청을 보내는 응용 프로그램은 다음 기능을 수행해야 합니다.  
+ 보고서 서버 웹 서비스에 요청을 보내는 애플리케이션은 다음 기능을 수행해야 합니다.  
   
 -   잘못된 요청을 최대한 방지하여 예외 발생을 막습니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63151112"
 |항목|설명|  
 |-----------|-----------------|  
 |[잘못된 요청 방지](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/preventing-invalid-requests.md)|잘못된 요청이 보고서 서버에 전송되지 않도록 하기 위한 기술에 대해 설명합니다.|  
-|[Try 및 Catch 블록 사용](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md)|try/catch 블록으로 응용 프로그램의 안정성을 향상시킬 수 있는 방법을 설명합니다.|  
+|[Try 및 Catch 블록 사용](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-try-and-catch-blocks.md)|try/catch 블록으로 애플리케이션의 안정성을 향상시킬 수 있는 방법을 설명합니다.|  
 |[예외를 발생하지 않는 경고 및 사례 처리](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/handling-warnings-and-cases-that-do-not-cause-exceptions.md)|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 예외가 throw되지 않는 오류를 처리하는 방법을 설명합니다.|  
 |[Detail 속성을 사용하여 특정 오류 처리](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)|**SoapException** 개체의 **Detail** 속성을 사용하여 특정 오류를 프로그래밍 방식으로 처리하는 방법을 설명합니다.|  
   

@@ -24,7 +24,7 @@ ms.lasthandoff: 08/09/2019
 ms.locfileid: "68890381"
 ---
 # <a name="install-analysis-services-in-multidimensional-and-data-mining-mode"></a>다차원 및 데이터 마이닝 모드에서 Analysis Services 설치
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 비즈니스 인텔리전스 응용 프로그램을 위한 OLAP(온라인 분석 처리) 및 데이터 마이닝 기능을 제공합니다. 이 릴리스에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] *다차원 모드로*를 설치할 때 OLAP 데이터베이스 및 데이터 마이닝 모델에 대 한 지원을 사용할 수 있습니다. 다차원 모드는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 실행되는 세 가지 서버 모드 중 하나이며 기본 모드입니다. 기본값을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 설치하면 다차원 데이터베이스 및 데이터 마이닝 모델을 실행하는 인스턴스를 얻게 됩니다.  
+  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 비즈니스 인텔리전스 애플리케이션을 위한 OLAP(온라인 분석 처리) 및 데이터 마이닝 기능을 제공합니다. 이 릴리스에서는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] *다차원 모드로*를 설치할 때 OLAP 데이터베이스 및 데이터 마이닝 모델에 대 한 지원을 사용할 수 있습니다. 다차원 모드는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]가 실행되는 세 가지 서버 모드 중 하나이며 기본 모드입니다. 기본값을 사용하여 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 설치하면 다차원 데이터베이스 및 데이터 마이닝 모델을 실행하는 인스턴스를 얻게 됩니다.  
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 여러 인스턴스를 지원하므로 한 컴퓨터에 여러 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 설치하거나 새 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스를 이전 버전과 함께 실행할 수 있습니다. 서버 모드는 인스턴스에 적용됩니다. 다른 모드를 사용하려면 서버 인스턴스를 추가로 설치해야 합니다.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "68890381"
   
  [SQL Server 데이터 마이닝 추가 기능](https://go.microsoft.com/fwlink/?LinkId=197091)  
   
- 기본적으로 예제 데이터베이스, 예제 코드 및 클라이언트 응용 프로그램 추가 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 설치되지 않습니다. 예제 데이터베이스와 예제 코드를 설치하려면 [CodePlex 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=87843)를 참조하십시오.  
+ 기본적으로 예제 데이터베이스, 예제 코드 및 클라이언트 애플리케이션 추가 기능은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 때 설치되지 않습니다. 예제 데이터베이스와 예제 코드를 설치하려면 [CodePlex 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=87843)를 참조하십시오.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)   

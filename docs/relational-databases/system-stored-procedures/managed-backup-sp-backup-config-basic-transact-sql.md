@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67942114"
 ---
-# <a name="managedbackupspbackupconfigbasic-transact-sql"></a>managed_backup.sp_backup_config_basic (TRANSACT-SQL)
+# <a name="managed_backupsp_backup_config_basic-transact-sql"></a>managed_backup.sp_backup_config_basic (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   구성 된 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 특정 데이터베이스 또는 인스턴스에 대 한 기본 설정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
@@ -62,7 +62,7 @@ EXEC managed_backup.sp_backup_config_basic
  백업 파일의 보존 기간(일)입니다. @storage_url 정수입니다. 구성 하는 경우 필수 매개 변수를 이것이 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 인스턴스에 처음으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]입니다. 변경 하는 동안는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성에서는이 매개 변수는 선택 사항입니다. 지정하지 않은 경우 기존 구성 값이 유지됩니다.  
   
  @credential_name  
- Windows Azure 저장소 계정 인증에 사용되는 SQL 자격 증명의 이름입니다. @credentail_name 됩니다 **SYSNAME**합니다. 지정 하면 백업 페이지 blob에 저장 됩니다. 이 매개 변수가 NULL 인 경우 백업 블록 blob으로 저장 됩니다. 페이지 blob에 백업 하는 것이 좋습니다 새 블록 blob의 백업 기능을 사용 하므로 사용 되지 않습니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성 변경에 사용하는 경우 이 매개 변수는 선택 사항입니다. 지정 하지 않으면 기존 구성 값이 유지 됩니다.  
+ Windows Azure Storage 계정 인증에 사용되는 SQL 자격 증명의 이름입니다. @credentail_name 됩니다 **SYSNAME**합니다. 지정 하면 백업 페이지 blob에 저장 됩니다. 이 매개 변수가 NULL 인 경우 백업 블록 blob으로 저장 됩니다. 페이지 blob에 백업 하는 것이 좋습니다 새 블록 blob의 백업 기능을 사용 하므로 사용 되지 않습니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 구성 변경에 사용하는 경우 이 매개 변수는 선택 사항입니다. 지정 하지 않으면 기존 구성 값이 유지 됩니다.  
   
 > [!WARNING]
 >  합니다 **@credential_name** 지금은 매개 변수를 사용할 수 없습니다. Null이이 매개 변수를 요구 하는 블록 blob에만 백업이 지원 됩니다.  

@@ -178,7 +178,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 
 텍스트 상자에 날짜 또는 숫자만 있는 경우 텍스트 상자 내에서 `Format` 함수 대신 텍스트 상자의 Format 속성을 사용 하 여 서식을 적용 해야 합니다.  
 
--   , `Right`\\  및 함수`InStr` 는 부분 문자열을 반환 하는 데 유용 합니다. 예를 들어 도메인 사용자 이름만 사용자 이름으로 트리밍할 수 있습니다. `Len` 다음 식에서는\\User *라는 매개 변수에서 백슬래시(* ) 문자의 오른쪽에 있는 문자열 부분을 반환합니다.  
+-   , `Right`\\ 및 함수`InStr` 는 부분 문자열을 반환 하는 데 유용 합니다. 예를 들어 도메인 사용자 이름만 사용자 이름으로 트리밍할 수 있습니다. `Len` 다음 식에서는\\User *라는 매개 변수에서 백슬래시(* ) 문자의 오른쪽에 있는 문자열 부분을 반환합니다.  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -214,7 +214,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 
 #### <a name="lookup"></a>조회  
 
--   키 필드를 지정하면 `Lookup` 함수를 사용하여 키-값 쌍과 같이 일 대 일 관계가 있는 데이터 집합에서 값을 검색할 수 있습니다. 일치시킬 제품 식별자가 제공된 경우 다음 식은 데이터 세트에서 제품 이름("Product")을 표시합니다.  
+-   키 필드를 지정하면 `Lookup` 함수를 사용하여 키-값 쌍과 같이 일 대 일 관계가 있는 데이터 세트에서 값을 검색할 수 있습니다. 일치시킬 제품 식별자가 제공된 경우 다음 식은 데이터 세트에서 제품 이름("Product")을 표시합니다.  
 
 ```  
 =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
@@ -222,7 +222,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 
 #### <a name="lookupset"></a>LookupSet  
 
--   키 필드를 지정하면 `LookupSet` 함수를 사용하여 일 대 다 관계가 있는 데이터 집합에서 값 집합을 검색할 수 있습니다. 예를 들어 한 사람이 전화 번호를 여러 개 가질 수 있습니다. 다음 예에서는 PhoneList 데이터 세트의 각 행에 개인 식별자와 전화 번호가 포함되어 있다고 가정합니다. `LookupSet`은 값 배열을 반환합니다. 다음 식은 반환 값을 단일 문자열로 결합하고 ContactID로 지정된 사람의 전화 번호 목록을 표시합니다.  
+-   키 필드를 지정하면 `LookupSet` 함수를 사용하여 일 대 다 관계가 있는 데이터 세트에서 값 집합을 검색할 수 있습니다. 예를 들어 한 사람이 전화 번호를 여러 개 가질 수 있습니다. 다음 예에서는 PhoneList 데이터 세트의 각 행에 개인 식별자와 전화 번호가 포함되어 있다고 가정합니다. `LookupSet`은 값 배열을 반환합니다. 다음 식은 반환 값을 단일 문자열로 결합하고 ContactID로 지정된 사람의 전화 번호 목록을 표시합니다.  
 
 ```  
 =Join(LookupSet(Fields!ContactID.Value, Fields!PersonID.Value, Fields!PhoneNumber.Value, "PhoneList"),",")  

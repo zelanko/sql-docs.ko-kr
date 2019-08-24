@@ -79,7 +79,7 @@ ms.locfileid: "66010177"
   
 -   FILESTREAM BLOB에 데이터를 업데이트하거나 추가하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하지 마십시오. 이러한 문을 사용하면 BLOB 데이터가 tempdb 데이터베이스에 스풀링된 후 새 물리적 파일에 스풀링됩니다.  
   
--   소규모 BLOB 업데이트를 FILESTREAM BLOB에 추가하지 마십시오. 추가할 때마다 기본 FILESTREAM 파일이 복사됩니다. 응용 프로그램이 소규모 BLOB을 추가해야 하는 경우에는 BLOB을 `varbinary(max)` 열에 쓴 후 BLOB 개수가 미리 지정된 한도에 도달하면 FILESTREAM BLOB에 대한 단일 쓰기 작업을 수행합니다.  
+-   소규모 BLOB 업데이트를 FILESTREAM BLOB에 추가하지 마십시오. 추가할 때마다 기본 FILESTREAM 파일이 복사됩니다. 애플리케이션이 소규모 BLOB을 추가해야 하는 경우에는 BLOB을 `varbinary(max)` 열에 쓴 후 BLOB 개수가 미리 지정된 한도에 도달하면 FILESTREAM BLOB에 대한 단일 쓰기 작업을 수행합니다.  
   
 -   애플리케이션에서 다수의 BLOB 파일의 데이터 길이를 검색하지 마십시오. 데이터 크기는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]에 저장되지 않으므로 이 작업에는 시간이 많이 소요됩니다. BLOB 파일의 길이를 확인해야 한다면 BLOB이 닫혀 있는 경우 [!INCLUDE[tsql](../../includes/tsql-md.md)] DATALENGTH() 함수를 사용하여 그 크기를 검토하세요. DATALENGTH()는 BLOB 파일 크기를 확인하기 위해 파일을 열지 않습니다.  
   

@@ -35,7 +35,7 @@ ms.locfileid: "68195770"
  스크립팅 언어를 사용 하 여 WMI 공급자 구현을 프로그래밍 하는 방법에 대 한 자세한 내용은 참조는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN [웹 사이트](https://go.microsoft.com/fwlink/?linkid=15426)합니다.  
   
 ## <a name="specifying-a-connection-string"></a>연결 문자열 지정  
- 응용 프로그램은 공급자가 정의한 WMI 네임스페이스에 연결하여 구성 관리용 WMI 공급자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 보냅니다. Windows WMI 서비스는 이 네임스페이스를 공급자 DLL에 매핑하여 메모리에 로드합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 단일 WMI 네임스페이스로 나타냅니다. 기본 네임스페이스는 다음과 같습니다.  
+ 애플리케이션은 공급자가 정의한 WMI 네임스페이스에 연결하여 구성 관리용 WMI 공급자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 보냅니다. Windows WMI 서비스는 이 네임스페이스를 공급자 DLL에 매핑하여 메모리에 로드합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 단일 WMI 네임스페이스로 나타냅니다. 기본 네임스페이스는 다음과 같습니다.  
   
 ```  
 \\.\root\Microsoft\SqlServer\ComputerManagement12\instance_name  

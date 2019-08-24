@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68061845"
 ---
-# <a name="spaddmessage-transact-sql"></a>sp_addmessage(Transact-SQL)
+# <a name="sp_addmessage-transact-sql"></a>sp_addmessage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   새 사용자 정의 오류 메시지를 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 인스턴스에 저장합니다. 사용 하 여 저장 된 메시지 **sp_addmessage** 사용 하 여 볼 수 있습니다 합니다 **sys.messages** 카탈로그 뷰.  
@@ -50,10 +50,10 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
   
 `[ \@lang = ] 'language'` 이 메시지의 언어가입니다. *언어* 됩니다 **sysname** 이며 기본값은 NULL입니다. 동일한 서버에서 여러 언어를 설치할 수 있으므로 *언어* 각 메시지가 작성 되는 언어를 지정 합니다. 때 *언어* 는 생략 하면 언어는 기본 언어는 세션에 대 한 합니다.  
   
-`[ \@with_log = ] { 'TRUE' | 'FALSE' }` 발생 하는 경우 Windows 응용 프로그램 로그에 쓸 메시지 인지 됩니다. **\@with_log** 됩니다 **varchar(5)** 이며 기본값은 FALSE입니다. TRUE인 경우 오류가 항상 Windows 응용 프로그램 로그에 기록됩니다. FALSE인 경우 오류가 항상 Windows 응용 프로그램 로그에 기록되지는 않으며 오류가 어떻게 발생했는지에 따라 달라집니다. 멤버를 **sysadmin** 서버 역할이이 옵션을 사용할 수 있습니다.  
+`[ \@with_log = ] { 'TRUE' | 'FALSE' }` 발생 하는 경우 Windows 응용 프로그램 로그에 쓸 메시지 인지 됩니다. **\@with_log** 됩니다 **varchar(5)** 이며 기본값은 FALSE입니다. TRUE인 경우 오류가 항상 Windows 애플리케이션 로그에 기록됩니다. FALSE인 경우 오류가 항상 Windows 애플리케이션 로그에 기록되지는 않으며 오류가 어떻게 발생했는지에 따라 달라집니다. 멤버를 **sysadmin** 서버 역할이이 옵션을 사용할 수 있습니다.  
   
 > [!NOTE]  
->  Windows 응용 프로그램 로그에 메시지가 기록된 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 로그 파일에도 기록됩니다.  
+>  Windows 애플리케이션 로그에 메시지가 기록된 경우에는 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 오류 로그 파일에도 기록됩니다.  
   
 `[ \@replace = ] 'replace'` 문자열로 지정 된 경우 *대체*, 기존의 오류 메시지는 새 메시지 텍스트와 심각도 수준으로 덮어씁니다. *바꿉니다* 됩니다 **varchar(7)** 이며 기본값은 NULL입니다. 하는 경우이 옵션을 지정 해야 *msg_id* 이미 있습니다. 미국을 교체 하는 경우 모든 메시지는 다른 모든 언어의 영어 메시지 심각도 바뀝니다 *msg_id*합니다.  
   

@@ -76,7 +76,7 @@ ALTER SERVER AUDIT audit_name
   
 ## <a name="arguments"></a>인수  
  TO { FILE | APPLICATION_LOG | SECURITY |URL}  
- 감사 대상의 위치를 결정합니다. 이 옵션은 이진 파일, Windows 응용 프로그램 로그 또는 Windows 보안 로그가 될 수 있습니다.  
+ 감사 대상의 위치를 결정합니다. 이 옵션은 이진 파일, Windows 애플리케이션 로그 또는 Windows 보안 로그가 될 수 있습니다.  
 
 > [!IMPORTANT]
 > Azure SQL Database 관리되는 인스턴스에서 SQL Audit은 서버 수준에서 작동하며 Azure Blob Storage에 `.xel` 파일을 저장합니다.

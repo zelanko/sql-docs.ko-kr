@@ -39,7 +39,7 @@ ms.locfileid: "68018082"
 |열 이름|데이터 형식|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|데이터 형식의 이름입니다.|  
-|**xtype**|**tinyint**|물리적 저장소 유형입니다.|  
+|**xtype**|**tinyint**|물리적 스토리지 유형입니다.|  
 |**상태**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|확장 사용자 유형입니다. 데이터 형식 수가 32,767을 초과하면 오버플로되거나 NULL을 반환합니다.|  
 |**length**|**smallint**|데이터 형식의 물리적 길이입니다.|  
@@ -53,7 +53,7 @@ ms.locfileid: "68018082"
 |**usertype**|**smallint**|사용자 유형 ID입니다. 데이터 형식 수가 32,767을 초과하면 오버플로되거나 NULL을 반환합니다.|  
 |**variable**|**bit**|가변 길이 데이터 형식입니다.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**allownulls**|**bit**|해당 데이터 형식의 기본 NULL 허용 여부를 표시합니다. 사용 하 여 null 허용 여부를 지정 하 여이 기본값은 무시 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 하거나 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)합니다.|  
-|**type**|**tinyint**|물리적인 저장소 데이터 형식입니다.|  
+|**type**|**tinyint**|물리적인 스토리지 데이터 형식입니다.|  
 |**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|해당 데이터 형식에 대한 전체 자릿수 수준입니다.<br /><br /> -1 = **xml** 또는 큰 값 형식입니다.|  
 |**scale**|**tinyint**|해당 데이터 형식의 소수 자릿수이며 전체 자릿수를 기반으로 합니다.<br /><br /> NULL = 데이터 형식이 숫자가 아닙니다.|  

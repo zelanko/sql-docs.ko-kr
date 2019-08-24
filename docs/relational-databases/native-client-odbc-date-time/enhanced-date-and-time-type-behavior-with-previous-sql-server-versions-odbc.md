@@ -24,10 +24,10 @@ ms.locfileid: "68030379"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  이 항목에서는 향상된 날짜 및 시간 기능을 사용하는 클라이언트 응용 프로그램이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]와 통신할 경우 및 Microsoft Data Access Components, Windows Data Access Components 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하는 클라이언트 응용 프로그램이 향상된 날짜 및 시간 기능을 지원하는 서버에 명령을 보낼 경우 예상되는 동작에 대해 설명합니다.  
+  이 항목에서는 향상된 날짜 및 시간 기능을 사용하는 클라이언트 애플리케이션이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]와 통신할 경우 및 Microsoft Data Access Components, Windows Data Access Components 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하는 클라이언트 애플리케이션이 향상된 날짜 및 시간 기능을 지원하는 서버에 명령을 보낼 경우 예상되는 동작에 대해 설명합니다.  
   
 ## <a name="down-level-client-behavior"></a>하위 수준 클라이언트 동작  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하여 컴파일된 클라이언트 응용 프로그램에서는 새로운 날짜/시간 형식을 nvarchar 열로 인식합니다. 열 내용이 리터럴 표현에 설명 된 대로 "데이터 형식: 문자열 및 리터럴"섹션 [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)합니다. 열 크기는 열에 지정된 초 소수 부분 자릿수에 대한 최대 리터럴 길이입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]보다 이전 버전의 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Native Client를 사용하여 컴파일된 클라이언트 애플리케이션에서는 새로운 날짜/시간 형식을 nvarchar 열로 인식합니다. 열 내용이 리터럴 표현에 설명 된 대로 "데이터 형식: 문자열 및 리터럴"섹션 [ODBC 날짜 및 시간 기능 향상을 위한 데이터 형식 지원](../../relational-databases/native-client-odbc-date-time/data-type-support-for-odbc-date-and-time-improvements.md)합니다. 열 크기는 열에 지정된 초 소수 부분 자릿수에 대한 최대 리터럴 길이입니다.  
   
  카탈로그 API는 클라이언트에 반환된 하위 수준 데이터 형식 코드(예: nvarchar)와 일관된 메타데이터 및 관련된 하위 수준 표현(예: 적절한 리터럴 형식)을 반환합니다. 그러나 반환되는 데이터 형식의 이름은 실제 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 형식 이름입니다.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "68030379"
 |기호|의미|  
 |------------|-------------|  
 |1|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 동작하는 경우 그보다 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서도 계속 동작합니다.|  
-|2|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동한 응용 프로그램이 그보다 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 작동하지 않을 수 있습니다.|  
+|2|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]에서 작동한 애플리케이션이 그보다 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 작동하지 않을 수 있습니다.|  
   
  여기서는 다음과 같이 일반적인 스키마 변경 사항만 고려되었습니다.  
   
--   논리적으로 응용 프로그램에 날짜 또는 시간 값만 필요한 경우 새 형식을 사용합니다. 그러나 이전에는 개별 날짜 및 시간 형식이 없었으므로 응용 프로그램에서 datetime 또는 smaledatetime을 사용해야 했습니다.  
+-   논리적으로 애플리케이션에 날짜 또는 시간 값만 필요한 경우 새 형식을 사용합니다. 그러나 이전에는 개별 날짜 및 시간 형식이 없었으므로 애플리케이션에서 datetime 또는 smaledatetime을 사용해야 했습니다.  
   
 -   초 소수 부분 자릿수를 늘리거나 정확도를 높이기 위해 새 형식을 사용합니다.  
   

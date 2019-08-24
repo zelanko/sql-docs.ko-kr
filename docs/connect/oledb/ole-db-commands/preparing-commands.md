@@ -41,7 +41,7 @@ ms.locfileid: "68016054"
   
  임시 저장 프로시저가 만들어지면 SQL Server 용 OLE DB 드라이버는 임시 저장 프로시저를 실행하여 문 자체를 실행한 것처럼 결과를 반환합니다.  
   
- 임시 저장 프로시저 생성은 SQL Server 용 OLE DB 드라이버별 초기화 속성 SSPROP_INIT_USEPROCFORPREP에서 제어합니다. 이 속성 값이 SSPROPVAL_USEPROCFORPREP_ON 또는 SSPROPVAL_USEPROCFORPREP_ON_DROP이면 SQL Server 용 OLE DB 드라이버는 명령을 준비할 때 저장 프로시저를 만들려고 합니다. 응용 프로그램 사용자에게 충분한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 권한이 있으면 저장 프로시저가 성공적으로 만들어집니다.  
+ 임시 저장 프로시저 생성은 SQL Server 용 OLE DB 드라이버별 초기화 속성 SSPROP_INIT_USEPROCFORPREP에서 제어합니다. 이 속성 값이 SSPROPVAL_USEPROCFORPREP_ON 또는 SSPROPVAL_USEPROCFORPREP_ON_DROP이면 SQL Server 용 OLE DB 드라이버는 명령을 준비할 때 저장 프로시저를 만들려고 합니다. 애플리케이션 사용자에게 충분한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 권한이 있으면 저장 프로시저가 성공적으로 만들어집니다.  
   
  연결이 자주 끊기지 않는 소비자의 경우 임시 저장 프로시저 생성에는 임시 개체가 만들어지는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 시스템 데이터베이스인 **tempdb**의 리소스가 상당히 필요합니다. SSPROP_INIT_USEPROCFORPREP 값이 SSPROPVAL_USEPROCFORPREP_ ON이면 SQL Server 용 OLE DB 드라이버가 만든 임시 저장 프로시저는 명령을 만든 세션과 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 사이의 연결이 끊기는 경우에만 삭제됩니다. 해당 연결이 데이터 원본 초기화 시 만들어진 기본 연결인 경우 임시 저장 프로시저는 데이터 원본 초기화가 취소되는 경우에만 삭제됩니다.  
   

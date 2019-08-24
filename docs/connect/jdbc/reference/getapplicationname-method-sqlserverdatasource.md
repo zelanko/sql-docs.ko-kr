@@ -25,7 +25,7 @@ ms.locfileid: "67954393"
 # <a name="getapplicationname-method-sqlserverdatasource"></a>getApplicationName 메서드(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  응용 프로그램 이름을 반환합니다.  
+  애플리케이션 이름을 반환합니다.  
   
 ## <a name="syntax"></a>구문  
   

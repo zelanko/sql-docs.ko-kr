@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68262745"
 ---
-# <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
+# <a name="sysdm_os_wait_stats-transact-sql"></a>sys.dm_os_wait_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 실행 중인 스레드로 인해 발생한 모든 대기에 대한 정보를 반환합니다. 이 집계 뷰를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 성능 문제뿐 아니라 특정 쿼리 및 일괄 처리와 관련된 성능 문제도 진단할 수 있습니다. [sys.dm_exec_session_wait_stats &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-session-wait-stats-transact-sql.md) 세션에서와 비슷한 정보를 제공 합니다.  
@@ -452,7 +452,7 @@ GO
 |LCK_M_X_LOW_PRIORITY |태스크가 낮은 우선 순위가 포함된 배타 잠금을 획득하려고 대기하는 경우에 발생합니다. (관련 된 ALTER TABLE 및 ALTER INDEX의 낮은 우선 순위 대기 옵션을.), <br /> **적용 대상**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LOG_POOL_SCAN |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LOG_RATE_GOVERNOR |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|LOGBUFFER |태스크가 로그 버퍼의 공간에 로그 레코드가 저장될 때까지 대기하는 경우에 발생합니다. 값이 계속 높게 나타나면 로그 장치가 서버에서 생성하는 로그의 양을 따라갈 수 없는 것일 수 있습니다.| 
+|LOGBUFFER |태스크가 로그 버퍼의 공간에 로그 레코드가 저장될 때까지 대기하는 경우에 발생합니다. 값이 계속 높게 나타나면 로그 디바이스가 서버에서 생성하는 로그의 양을 따라갈 수 없는 것일 수 있습니다.| 
 |LOGCAPTURE_LOGPOOLTRUNCPOINT |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |LOGGENERATION |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
 |LOGMGR |데이터베이스를 닫는 동안 태스크가 로그 종료 전에 처리 중인 로그 I/O가 완료될 때까지 대기하는 경우에 발생합니다.| 
@@ -476,7 +476,7 @@ GO
 |MIGRATIONBUFFER |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |MISCELLANEOUS |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
 |MISCELLANEOUS |정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.| 
-|MSQL_DQ |분산 쿼리 작업이 완료될 때까지 태스크가 대기하는 경우에 발생합니다. 발생 가능한 MARS(Multiple Active Result Set) 응용 프로그램 교착 상태를 감지하는 데 사용됩니다. 대기는 분산 쿼리 호출이 완료될 때 끝납니다.| 
+|MSQL_DQ |분산 쿼리 작업이 완료될 때까지 태스크가 대기하는 경우에 발생합니다. 발생 가능한 MARS(Multiple Active Result Set) 애플리케이션 교착 상태를 감지하는 데 사용됩니다. 대기는 분산 쿼리 호출이 완료될 때 끝납니다.| 
 |MSQL_XACT_MGR_MUTEX |태스크가 세션 트랜잭션 관리자의 소유권을 획득하여 세션 수준 트랜잭션 작업을 수행하려고 대기하는 경우에 발생합니다.| 
 |MSQL_XACT_MUTEX |트랜잭션 사용 동기화 중에 발생합니다. 요청에서 트랜잭션을 사용하려면 먼저 뮤텍스를 획득해야 합니다.| 
 |MSQL_XP |태스크가 확장 저장 프로시저가 끝날 때까지 대기하는 경우에 발생합니다. 이 대기 상태를 사용 하 여 잠재적 MARS 응용 프로그램 교착 상태를 검색할 SQL Server입니다. 대기는 확장 저장 프로시저 호출이 끝날 때 중지됩니다.| 
@@ -513,8 +513,8 @@ GO
 |PREEMPTIVE_AUDIT_ACCESS_EVENTLOG |Windows 이벤트 로그에 감사 이벤트를 기록하기 위해 SQLOS([!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 운영 체제) 스케줄러가 우선 모드로 전환된 경우에 발생합니다. <br /> **적용 대상**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 만 합니다. |  
 |PREEMPTIVE_AUDIT_ACCESS_SECLOG |Windows 보안 로그에 감사 이벤트를 기록하기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다. <br /> **적용 대상**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] 만 합니다. |  
 |PREEMPTIVE_CLOSEBACKUPMEDIA |백업 미디어를 닫기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.| 
-|PREEMPTIVE_CLOSEBACKUPTAPE |테이프 백업 장치를 닫기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.| 
-|PREEMPTIVE_CLOSEBACKUPVDIDEVICE |가상 백업 장치를 닫기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.| 
+|PREEMPTIVE_CLOSEBACKUPTAPE |테이프 백업 디바이스를 닫기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.| 
+|PREEMPTIVE_CLOSEBACKUPVDIDEVICE |가상 백업 디바이스를 닫기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.| 
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL |Windows 장애 조치(Failover) 클러스터 작업을 수행하기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.| 
 |PREEMPTIVE_COM_COCREATEINSTANCE |COM 개체를 만들기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.| 
 |PREEMPTIVE_COM_COGETCLASSOBJECT |내부적으로만 사용됩니다.| 
@@ -886,7 +886,7 @@ GO
 |SP_SERVER_DIAGNOSTICS_BUFFER_ACCESS |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SP_SERVER_DIAGNOSTICS_INIT_MUTEX |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
 |SP_SERVER_DIAGNOSTICS_SLEEP |내부적으로만 사용됩니다. <br /> **적용 대상**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지| 
-|SQLCLR_APPDOMAIN |CLR이 응용 프로그램 도메인 시작이 완료될 때까지 대기하는 동안 발생합니다.| 
+|SQLCLR_APPDOMAIN |CLR이 애플리케이션 도메인 시작이 완료될 때까지 대기하는 동안 발생합니다.| 
 |SQLCLR_ASSEMBLY |appdomain의 로드된 어셈블리 목록에 대한 액세스를 대기하는 동안 발생합니다.| 
 |SQLCLR_DEADLOCK_DETECTION |CLR이 교착 상태 감지가 완료될 때까지 대기하는 동안 발생합니다.| 
 |SQLCLR_QUANTUM_PUNISHMENT |CLR 태스크가 실행 퀀텀을 초과하여 조절되는 경우에 발생합니다. 이러한 조절은 리소스를 많이 사용하는 이 태스크가 다른 작업에 미치는 영향을 줄이기 위해 수행됩니다.| 

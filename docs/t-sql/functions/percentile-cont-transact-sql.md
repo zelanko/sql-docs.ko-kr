@@ -26,7 +26,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67914370"
 ---
-# <a name="percentilecont-transact-sql"></a>PERCENTILE_CONT(Transact-SQL)
+# <a name="percentile_cont-transact-sql"></a>PERCENTILE_CONT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 열 값의 연속 분포를 기반으로 백분위수를 계산합니다. 결과는 보간되며 열의 특정 값과 같지 않을 수 있습니다.  
@@ -46,7 +46,7 @@ PERCENTILE_CONT ( numeric_literal )
  계산할 백분위수입니다. 값은 0.0에서 1.0 사이여야 합니다.  
   
  WITHIN GROUP **(** ORDER BY *order_by_expression* [ **ASC** | DESC ] **)**  
- 정렬할 숫자 값 목록을 지정하고 백분위수를 계산합니다. *order_by_expression*은 하나만 허용됩니다. 식은 정확하거나 근사치 숫자 형식으로 계산되어야 하며, 다른 데이터 유형은 허용되지 않습니다. 정확한 숫자 형식은 **int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney** 및 **money**입니다. 근사치 숫자 형식은 **float** 및 **real**입니다. 기본 정렬 순서는 오름차순입니다.  
+ 정렬할 숫자 값 목록을 지정하고 백분위수를 컴퓨팅합니다. *order_by_expression*은 하나만 허용됩니다. 식은 정확하거나 근사치 숫자 형식으로 계산되어야 하며, 다른 데이터 유형은 허용되지 않습니다. 정확한 숫자 형식은 **int**, **bigint**, **smallint**, **tinyint**, **numeric**, **bit**, **decimal**, **smallmoney** 및 **money**입니다. 근사치 숫자 형식은 **float** 및 **real**입니다. 기본 정렬 순서는 오름차순입니다.  
   
  OVER **(** \<partition_by_clause> **)**  
  FROM 절이 생성한 결과 집합을 백분위수 함수가 적용되는 파티션으로 나눕니다. 자세한 내용은 [OVER 절&#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)을 참조하세요. OVER 구문의 \<ORDER BY 절> 및 \<rows 또는 range 절>은 PERCENTILE_CONT 함수에 지정할 수 없습니다.  

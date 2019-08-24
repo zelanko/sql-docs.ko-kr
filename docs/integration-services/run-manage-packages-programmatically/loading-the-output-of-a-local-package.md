@@ -28,7 +28,7 @@ ms.locfileid: "68028565"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [!INCLUDE[vstecado](../../includes/vstecado-md.md)]을 사용하여 출력을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에 저장한 경우 또는 **System.IO** 네임스페이스의 클래스를 사용하여 출력을 플랫 파일 대상에 저장한 경우 클라이언트 애플리케이션에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 출력을 읽을 수 있습니다. 하지만 데이터를 지속하기 위한 중간 단계 없이 클라이언트 응용 프로그램이 메모리에서 직접 패키지의 출력을 읽을 수도 있습니다. 이 솔루션의 핵심은 **Microsoft.SqlServer.Dts.DtsClient** 네임스페이스이며 **System.Data** 네임스페이스의 **IDbConnection**, **IDbCommand** 및 **IDbDataParameter** 인터페이스의 특수화된 구현을 포함합니다. Microsoft.SqlServer.Dts.DtsClient.dll 어셈블리는 기본적으로 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다.  
+  [!INCLUDE[vstecado](../../includes/vstecado-md.md)]을 사용하여 출력을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대상에 저장한 경우 또는 **System.IO** 네임스페이스의 클래스를 사용하여 출력을 플랫 파일 대상에 저장한 경우 클라이언트 애플리케이션에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 출력을 읽을 수 있습니다. 하지만 데이터를 지속하기 위한 중간 단계 없이 클라이언트 애플리케이션이 메모리에서 직접 패키지의 출력을 읽을 수도 있습니다. 이 솔루션의 핵심은 **Microsoft.SqlServer.Dts.DtsClient** 네임스페이스이며 **System.Data** 네임스페이스의 **IDbConnection**, **IDbCommand** 및 **IDbDataParameter** 인터페이스의 특수화된 구현을 포함합니다. Microsoft.SqlServer.Dts.DtsClient.dll 어셈블리는 기본적으로 **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다.  
 
 > [!IMPORTANT]
 > `DtsClient` 라이브러리를 사용하는 이 문서에 설명된 절차는 패키지 배포 모델(즉, `/SQL`, `/DTS` 또는 `/File` 옵션)을 사용하여 배포된 패키지에 대해서만 작동합니다. 이 절차는 서버 배포 모델(즉, `/ISServer` 옵션)을 사용하여 배포된 패키지에서는 작동하지 않습니다. 서버 배포 모델(즉, `/ISServer` 옵션)을 통해 배포된 로컬 패키지의 출력을 사용하려면 이 문서의 설명된 절차 대신 [데이터 스트리밍 대상](../data-flow/data-streaming-destination.md)을 사용합니다.
@@ -37,11 +37,11 @@ ms.locfileid: "68028565"
 > 이 항목에서 설명하는 절차를 수행하려면 데이터 흐름 태스크와 부모 개체의 DelayValidation 속성이 기본값인 **False**로 설정되어 있어야 합니다.
   
 ## <a name="description"></a>설명  
- 이 절차에서는 DataReader 대상을 사용하는 패키지의 출력을 메모리에서 직접 로드하는 클라이언트 응용 프로그램을 관리 코드로 개발하는 방법을 보여 줍니다. 여기에 요약된 단계는 뒷부분의 코드 예제에서 자세히 보여 줍니다.  
+ 이 절차에서는 DataReader 대상을 사용하는 패키지의 출력을 메모리에서 직접 로드하는 클라이언트 애플리케이션을 관리 코드로 개발하는 방법을 보여 줍니다. 여기에 요약된 단계는 뒷부분의 코드 예제에서 자세히 보여 줍니다.  
   
-#### <a name="to-load-data-package-output-into-a-client-application"></a>데이터 패키지 출력을 클라이언트 응용 프로그램으로 로드하려면  
+#### <a name="to-load-data-package-output-into-a-client-application"></a>데이터 패키지 출력을 클라이언트 애플리케이션으로 로드하려면  
   
-1.  패키지에서 DataReader 대상이 클라이언트 응용 프로그램으로 읽어 올 출력을 받도록 구성합니다. DataReader 대상 이름은 나중에 클라이언트 응용 프로그램에서 사용되므로 이 대상에 알기 쉬운 이름을 지정합니다. 또한 DataReader 대상의 이름을 적어 두어야 합니다.  
+1.  패키지에서 DataReader 대상이 클라이언트 애플리케이션으로 읽어 올 출력을 받도록 구성합니다. DataReader 대상 이름은 나중에 클라이언트 애플리케이션에서 사용되므로 이 대상에 알기 쉬운 이름을 지정합니다. 또한 DataReader 대상의 이름을 적어 두어야 합니다.  
   
 2.  개발 프로젝트에서 **Microsoft.SqlServer.Dts.DtsClient.dll** 어셈블리를 찾아 **Microsoft.SqlServer.Dts.DtsClient** 네임스페이스에 대한 참조를 설정합니다. 기본적으로 이 어셈블리는 **C:\Program Files\Microsoft SQL Server\100\DTS\Binn**에 설치됩니다. C# **Using** 또는 [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] **Imports** 문을 사용하여 네임스페이스를 코드로 가져옵니다.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68028565"
     command.Parameters.Add(new DtsDataParameter("MyVariable", 1));  
     ```  
   
-6.  DataReader의 **Read** 메서드를 필요한 만큼 반복적으로 호출하여 출력 데이터 행을 반복합니다. 클라이언트 응용 프로그램에서 이 데이터를 사용하거나 나중에 사용할 수 있도록 저장합니다.  
+6.  DataReader의 **Read** 메서드를 필요한 만큼 반복적으로 호출하여 출력 데이터 행을 반복합니다. 클라이언트 애플리케이션에서 이 데이터를 사용하거나 나중에 사용할 수 있도록 저장합니다.  
   
     > [!IMPORTANT]  
     >  이 DataReader 구현의 **Read** 메서드는 마지막 데이터 행을 읽은 후 **true**를 한 번 더 반환합니다. 따라서 **Read**가 **true**를 반환하는 동안 DataReader를 반복하는 일반적인 코드를 사용하기가 어렵습니다. 예상한 개수의 행을 읽은 후 코드에서 **Read** 메서드를 마지막으로 한 번 더 호출하지 않고 DataReader나 연결을 닫으려고 하면 처리되지 않은 예외가 발생합니다. 그러나 **Read**가 여전히 **true**를 반환하지만 마지막 행이 전달된 경우에 코드에서 이 마지막 루프 반복의 데이터를 읽으려고 하면 "SSIS IDataReader가 결과 집합의 끝을 지났습니다."라는 메시지와 함께 처리되지 않은 **ApplicationException**이 발생합니다. 이 동작은 다른 DataReader 구현의 동작과는 다릅니다. 따라서 **Read**가 **true**를 반환하는 동안 DataReader에서 루프를 사용하여 행을 읽으려면 **Read** 메서드를 마지막으로 성공적으로 호출할 때 예상된 이 **ApplicationException**을 catch, 테스트 및 삭제하는 코드를 작성해야 합니다. 예상 행 수를 이미 아는 경우에는 행을 처리한 다음 DataReader와 연결을 닫기 전에 **Read** 메서드를 한 번 이상 호출할 수 있습니다.  
@@ -70,7 +70,7 @@ ms.locfileid: "68028565"
 ## <a name="example"></a>예제  
  다음 예에서는 단일 집계 값을 계산하고 해당 값을 DataReader 대상에 저장하는 패키지를 실행한 다음 DataReader에서 이 값을 읽어 Windows Form의 입력란에 표시합니다.  
   
- 패키지의 출력을 클라이언트 응용 프로그램으로 로드할 때는 매개 변수를 사용할 필요가 없습니다. 매개 변수를 사용하지 않으려면 **DtsClient** 네임스페이스에서 변수 사용을 생략하고 **DtsDataParameter** 개체를 사용하는 코드를 생략하면 됩니다.  
+ 패키지의 출력을 클라이언트 애플리케이션으로 로드할 때는 매개 변수를 사용할 필요가 없습니다. 매개 변수를 사용하지 않으려면 **DtsClient** 네임스페이스에서 변수 사용을 생략하고 **DtsDataParameter** 개체를 사용하는 코드를 생략하면 됩니다.  
   
 #### <a name="to-create-the-test-package"></a>테스트 패키지를 만들려면  
   
@@ -94,11 +94,11 @@ ms.locfileid: "68028565"
   
 8.  데이터 흐름에 DataReader 대상을 추가하고 집계 변환의 출력을 DataReader 대상에 연결합니다. 예제 코드에서는 DataReader 이름으로 "DataReaderDest"를 사용합니다. 대상에 대해 사용 가능한 단일 입력 열인 CustomerCount를 선택합니다.  
   
-9. 패키지를 저장합니다. 다음에 만들 테스트 응용 프로그램에서는 이 패키지를 실행하고 메모리에서 직접 출력을 검색합니다.  
+9. 패키지를 저장합니다. 다음에 만들 테스트 애플리케이션에서는 이 패키지를 실행하고 메모리에서 직접 출력을 검색합니다.  
   
-#### <a name="to-create-the-test-application"></a>테스트 응용 프로그램을 만들려면  
+#### <a name="to-create-the-test-application"></a>테스트 애플리케이션을 만들려면  
   
-1.  새 Windows Forms 응용 프로그램을 만듭니다.  
+1.  새 Windows Forms 애플리케이션을 만듭니다.  
   
 2.  **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**에서 같은 이름의 어셈블리를 찾아 **Microsoft.SqlServer.Dts.DtsClient** 네임스페이스에 대한 참조를 추가합니다.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "68028565"
   
 6.  폼에 단추와 입력란을 추가합니다. 예제 코드에서는 단추 이름으로 **btnRun**을 사용하고 입력란 이름으로 **txtResults**를 사용합니다.  
   
-7.  응용 프로그램을 실행하고 단추를 클릭합니다. 그러면 패키지가 실행되는 동안 잠깐 일시 중지된 후 패키지에서 계산한 집계 값, 즉 캐나다의 고객 수가 폼의 입력란에 표시됩니다.  
+7.  애플리케이션을 실행하고 단추를 클릭합니다. 그러면 패키지가 실행되는 동안 잠깐 일시 중지된 후 패키지에서 계산한 집계 값, 즉 캐나다의 고객 수가 폼의 입력란에 표시됩니다.  
   
 ### <a name="sample-code"></a>예제 코드  
   

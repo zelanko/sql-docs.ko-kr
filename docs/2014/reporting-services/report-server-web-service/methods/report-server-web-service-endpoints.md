@@ -61,14 +61,14 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
  자세한 내용은 [SOAP API 액세스](../accessing-the-soap-api.md)를 참조하세요.  
   
 ## <a name="sharepoint-proxy-endpoints"></a>SharePoint 프록시 엔드포인트  
- 보고서 서버가 SharePoint 통합 모드로 구성되고 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 추가 기능이 설치된 경우 프록시 엔드포인트 집합이 SharePoint 서버에 설치됩니다. 프록시 엔드포인트는 보고서 서버가 SharePoint 통합 모드로 구성된 경우 보고서 솔루션을 개발하기 위한 기본 API입니다. 프록시 엔드포인트에 대해 개발할 때 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 추가 기능은 SharePoint 서버와 트러스트된 계정 인증 모드 보고서 서버 간의 자격 증명 교환을 관리합니다. 보고서 서버 엔드포인트에 대해 개발할 때는 호출하는 응용 프로그램이 트러스트된 계정 인증 모드에서 자격 증명 교환을 관리해야 합니다. 다음 표는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 추가 기능과 함께 설치되는 엔드포인트를 나열합니다.  
+ 보고서 서버가 SharePoint 통합 모드로 구성되고 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 추가 기능이 설치된 경우 프록시 엔드포인트 집합이 SharePoint 서버에 설치됩니다. 프록시 엔드포인트는 보고서 서버가 SharePoint 통합 모드로 구성된 경우 보고서 솔루션을 개발하기 위한 기본 API입니다. 프록시 엔드포인트에 대해 개발할 때 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 추가 기능은 SharePoint 서버와 트러스트된 계정 인증 모드 보고서 서버 간의 자격 증명 교환을 관리합니다. 보고서 서버 엔드포인트에 대해 개발할 때는 호출하는 애플리케이션이 트러스트된 계정 인증 모드에서 자격 증명 교환을 관리해야 합니다. 다음 표는 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 추가 기능과 함께 설치되는 엔드포인트를 나열합니다.  
   
 |프록시 엔드포인트|Description|  
 |--------------------|-----------------|  
 |<xref:ReportService2006>|SharePoint 통합 모드로 구성된 보고서 서버를 관리하기 위한 API를 제공합니다. **참고:**  이 끝점에서 사용 되지 않습니다 [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]합니다.|  
 |<xref:ReportService2010>|기본 모드 또는 SharePoint 통합 모드로 구성된 보고서 서버를 관리하기 위한 API를 제공합니다.|  
 |<xref:ReportExecution2005>|보고서 실행 및 탐색을 위한 API를 제공합니다.|  
-|<xref:ReportServiceAuthentication>|폼 인증을 위해 SharePoint 웹 응용 프로그램이 구성된 경우 보고서 서버에 대해 사용자를 인증하기 위한 API를 제공합니다.|  
+|<xref:ReportServiceAuthentication>|폼 인증을 위해 SharePoint 웹 애플리케이션이 구성된 경우 보고서 서버에 대해 사용자를 인증하기 위한 API를 제공합니다.|  
   
  다음은 SharePoint 사이트에서 프록시 엔드포인트를 참조하기 위한 URL의 예입니다.  
   

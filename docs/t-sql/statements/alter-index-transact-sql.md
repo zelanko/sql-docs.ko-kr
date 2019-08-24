@@ -337,7 +337,7 @@ FILLFACTOR = *fillfactor*
  채우기 비율 설정을 보려면 **sys.indexes**를 사용하세요.  
   
 > [!IMPORTANT]
-> [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 클러스터형 인덱스를 만들 때 데이터를 다시 배포하므로 FILLFACTOR 값으로 클러스터형 인덱스를 만들거나 변경하면 데이터가 차지하는 저장 공간 크기에 영향이 미칩니다.  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서는 클러스터형 인덱스를 만들 때 데이터를 다시 배포하므로 FILLFACTOR 값으로 클러스터형 인덱스를 만들거나 변경하면 데이터가 차지하는 스토리지 공간 크기에 영향이 미칩니다.  
   
  SORT_IN_TEMPDB = { ON | **OFF** }  
  
@@ -531,7 +531,7 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 시작) 및 [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
   
- 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. COLUMNSTORE_ARCHIVE는 지정된 파티션을 보다 작은 크기로 압축합니다. 보다 적은 저장소 크기가 필요한 기타 상황에서 보관하는 데 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
+ 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. COLUMNSTORE_ARCHIVE는 지정된 파티션을 보다 작은 크기로 압축합니다. 보다 적은 스토리지 크기가 필요한 기타 상황에서 보관하는 데 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
   
  압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   

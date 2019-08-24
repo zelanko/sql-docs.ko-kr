@@ -38,7 +38,7 @@ ms.locfileid: "68086752"
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
-**float** [ **(** _n_ **)** ] 여기서 *n*은 과학적 표기법으로 **float** 숫자의 가수를 저장하는 데 사용되는 비트 수로서, 전체 자릿수 및 저장소 크기를 결정합니다. *n*이 지정된 경우 그 값은 **1**에서 **53** 사이여야 합니다. *n*의 기본값은 **53**입니다.
+**float** [ **(** _n_ **)** ] 여기서 *n*은 과학적 표기법으로 **float** 숫자의 가수를 저장하는 데 사용되는 비트 수로서, 전체 자릿수 및 스토리지 크기를 결정합니다. *n*이 지정된 경우 그 값은 **1**에서 **53** 사이여야 합니다. *n*의 기본값은 **53**입니다.
   
 |*n* 값|전체 자릿수|스토리지 크기|  
 |---|---|---|

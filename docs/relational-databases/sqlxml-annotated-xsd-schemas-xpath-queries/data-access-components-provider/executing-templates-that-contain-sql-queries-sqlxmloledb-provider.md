@@ -26,7 +26,7 @@ ms.locfileid: "67995614"
 ---
 # <a name="executing-templates-that-contain-sql-queries-sqlxmloledb-provider"></a>SQL 쿼리를 포함하는 템플릿 실행(SQLXMLOLEDB 공급자)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 예제에서는 ClientSideXML SQLXMLOLEDB 공급자별 속성의 사용을 보여 줍니다. 이 클라이언트 쪽 ADO 예제 응용 프로그램에서는 SQL 쿼리로 구성된 XML 템플릿을 서버에서 실행합니다.  
+  이 예제에서는 ClientSideXML SQLXMLOLEDB 공급자별 속성의 사용을 보여 줍니다. 이 클라이언트 쪽 ADO 예제 애플리케이션에서는 SQL 쿼리로 구성된 XML 템플릿을 서버에서 실행합니다.  
   
  ClientSideXML 속성을 True로 설정 하기 때문에 FOR XML 절이 있는 SELECT 문은 서버에 전송 됩니다. 서버는 쿼리를 실행하고 클라이언트로 행 집합을 반환합니다. 그러면 클라이언트에서는 행 집합에 FOR XML 변환을 적용하여 XML 문서를 생성합니다.  
   

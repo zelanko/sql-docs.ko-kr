@@ -48,7 +48,7 @@ FORMATMESSAGE ( { msg_number  | ' msg_string ' } , [ param_value [ ,...n ] ] )
  *msg_string*  
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ~ [현재 버전](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
- 작은 따옴표로 묶고 매개 변수 값 자리 표시자가 포함된 문자열입니다. 오류 메시지는 최대 2,047자까지 지정할 수 있습니다. 메시지의 문자가 2,048자 이상이면 처음 2,044자만 표시되고 메시지가 잘렸음을 나타내기 위해 줄임표가 추가됩니다. 내부 저장 방식의 특성상 대체 매개 변수는 출력에 표시되는 것보다 더 많은 수의 문자를 사용합니다.  메시지 문자열의 구조 및 문자열의 매개 변수 사용에 대한 자세한 내용은 [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)에서 *msg_str* 인수에 대한 설명을 참조하세요.  
+ 작은 따옴표로 묶고 매개 변수 값 자리 표시자가 포함된 문자열입니다. 오류 메시지는 최대 2,047자까지 지정할 수 있습니다. 메시지의 문자가 2,048자 이상이면 처음 2,044자만 표시되고 메시지가 잘렸음을 나타내기 위해 줄임표가 추가됩니다. 내부 스토리지 방식의 특성상 대체 매개 변수는 출력에 표시되는 것보다 더 많은 수의 문자를 사용합니다.  메시지 문자열의 구조 및 문자열의 매개 변수 사용에 대한 자세한 내용은 [RAISERROR&#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)에서 *msg_str* 인수에 대한 설명을 참조하세요.  
   
  *param_value*  
  메시지에 사용할 매개 변수 값입니다. 둘 이상의 매개 변수 값을 사용할 수 있습니다. 메시지에 자리 표시자 변수가 표시되는 순서대로 값을 지정해야 합니다. 값의 최대 개수는 20개입니다.  

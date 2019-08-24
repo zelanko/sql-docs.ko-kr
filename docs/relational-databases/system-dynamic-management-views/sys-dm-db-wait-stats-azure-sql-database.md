@@ -26,7 +26,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68090872"
 ---
-# <a name="sysdmdbwaitstats-azure-sql-database"></a>sys.dm_db_wait_stats(Azure SQL Database)
+# <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   작업 중 실행 중인 스레드로 인해 발생한 모든 대기에 대한 정보를 반환합니다. 이 집계 뷰를 사용하여 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]와 관련된 성능 문제뿐 아니라 특정 쿼리 및 일괄 처리와 관련된 성능 문제도 진단할 수 있습니다.  
@@ -214,17 +214,17 @@ ms.locfileid: "68090872"
 |LCK_M_UIX|태스크가 의도 배타 업데이트 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
 |LCK_M_X|태스크가 배타 잠금을 획득하려고 대기하는 경우에 발생합니다. 잠금 호환성 행렬을 참조 하세요 [sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)합니다.|  
 |LOG_RATE_GOVERNOR|DB에서 견적을 로그에 작성할 때까지 기다릴 때 발생합니다.|  
-|LOGBUFFER|태스크가 로그 버퍼의 공간에 로그 레코드가 저장될 때까지 대기하는 경우에 발생합니다. 값이 계속 높게 나타나면 로그 장치가 서버에서 생성하는 로그의 양을 따라갈 수 없는 것일 수 있습니다.|  
+|LOGBUFFER|태스크가 로그 버퍼의 공간에 로그 레코드가 저장될 때까지 대기하는 경우에 발생합니다. 값이 계속 높게 나타나면 로그 디바이스가 서버에서 생성하는 로그의 양을 따라갈 수 없는 것일 수 있습니다.|  
 |LOGGENERATION|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |LOGMGR|데이터베이스를 닫는 동안 태스크가 로그 종료 전에 처리 중인 로그 I/O가 완료될 때까지 대기하는 경우에 발생합니다.|  
 |LOGMGR_FLUSH|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |LOGMGR_QUEUE|로그 쓰기 태스크가 작업 요청을 대기하는 동안 발생합니다.|  
 |LOGMGR_RESERVE_APPEND|태스크가 로그 잘림으로 인해 로그 공간이 확보되어 작업이 새 로그 레코드를 쓸 수 있는지 확인하려고 대기하는 경우에 발생합니다. 이 대기를 줄이려면 영향을 받는 데이터베이스의 로그 파일 크기를 늘리세요.|  
 |LOWFAIL_MEMMGR_QUEUE|메모리를 사용할 수 있을 때까지 대기하는 동안 발생합니다.|  
-|MSQL_DQ|분산 쿼리 작업이 완료될 때까지 태스크가 대기하는 경우에 발생합니다. 발생 가능한 MARS(Multiple Active Result Set) 응용 프로그램 교착 상태를 감지하는 데 사용됩니다. 대기는 분산 쿼리 호출이 완료될 때 끝납니다.|  
+|MSQL_DQ|분산 쿼리 작업이 완료될 때까지 태스크가 대기하는 경우에 발생합니다. 발생 가능한 MARS(Multiple Active Result Set) 애플리케이션 교착 상태를 감지하는 데 사용됩니다. 대기는 분산 쿼리 호출이 완료될 때 끝납니다.|  
 |MSQL_XACT_MGR_MUTEX|태스크가 세션 트랜잭션 관리자의 소유권을 획득하여 세션 수준 트랜잭션 작업을 수행하려고 대기하는 경우에 발생합니다.|  
 |MSQL_XACT_MUTEX|트랜잭션 사용 동기화 중에 발생합니다. 요청에서 트랜잭션을 사용하려면 먼저 뮤텍스를 획득해야 합니다.|  
-|MSQL_XP|태스크가 확장 저장 프로시저가 끝날 때까지 대기하는 경우에 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 대기 상태를 사용하여 잠재적 MARS 응용 프로그램 교착 상태를 감지합니다. 대기는 확장 저장 프로시저 호출이 끝날 때 중지됩니다.|  
+|MSQL_XP|태스크가 확장 저장 프로시저가 끝날 때까지 대기하는 경우에 발생합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 이 대기 상태를 사용하여 잠재적 MARS 애플리케이션 교착 상태를 감지합니다. 대기는 확장 저장 프로시저 호출이 끝날 때 중지됩니다.|  
 |MSSEARCH|전체 텍스트 검색 호출 중에 발생합니다. 이 대기는 전체 텍스트 작업이 완료될 때 끝나며 경합이 아니라 전체 텍스트 작업 기간을 나타냅니다.|  
 |NET_WAITFOR_PACKET|네트워크 읽기 중 연결이 네트워크 패킷을 대기하는 경우에 발생합니다.|  
 |OLEDB|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider를 호출할 때 발생합니다. 이 대기 유형은 동기화에 사용되지 않습니다. 대신 OLE DB Provider에 대한 호출 기간을 나타냅니다.|  
@@ -246,8 +246,8 @@ ms.locfileid: "68090872"
 |PREEMPTIVE_AUDIT_ACCESS_EVENTLOG|Windows 이벤트 로그에 감사 이벤트를 기록하기 위해 SQLOS([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 운영 체제) 스케줄러가 우선 모드로 전환된 경우에 발생합니다.|  
 |PREEMPTIVE_AUDIT_ACCESS_SECLOG|Windows 보안 로그에 감사 이벤트를 기록하기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.|  
 |PREEMPTIVE_CLOSEBACKUPMEDIA|백업 미디어를 닫기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.|  
-|PREEMPTIVE_CLOSEBACKUPTAPE|테이프 백업 장치를 닫기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.|  
-|PREEMPTIVE_CLOSEBACKUPVDIDEVICE|가상 백업 장치를 닫기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.|  
+|PREEMPTIVE_CLOSEBACKUPTAPE|테이프 백업 디바이스를 닫기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.|  
+|PREEMPTIVE_CLOSEBACKUPVDIDEVICE|가상 백업 디바이스를 닫기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.|  
 |PREEMPTIVE_CLUSAPI_CLUSTERRESOURCECONTROL|Windows 장애 조치(Failover) 클러스터 작업을 수행하기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.|  
 |PREEMPTIVE_COM_COCREATEINSTANCE|COM 개체를 만들기 위해 SQLOS 스케줄러가 우선 모드로 전환된 경우에 발생합니다.|  
 |PREEMPTIVE_HADR_LEASE_MECHANISM|Always On 가용성 그룹 임대 관리자 CSS 진단에 대 한 일정입니다.|  
@@ -334,7 +334,7 @@ ms.locfileid: "68090872"
 |SOSHOST_SLEEP|일반 이벤트가 발생할 때까지 대기하는 동안 호스팅된 태스크가 중지되는 경우에 발생합니다. 호스팅된 태스크는 CLR과 같은 호스팅된 구성 요소에 사용됩니다.|  
 |SOSHOST_TRACELOCK|추적 스트림에 대한 액세스 동기화 중에 발생합니다.|  
 |SOSHOST_WAITFORDONE|CLR과 같은 호스팅된 구성 요소가 태스크가 완료될 때까지 대기하는 경우에 발생합니다.|  
-|SQLCLR_APPDOMAIN|CLR이 응용 프로그램 도메인 시작이 완료될 때까지 대기하는 동안 발생합니다.|  
+|SQLCLR_APPDOMAIN|CLR이 애플리케이션 도메인 시작이 완료될 때까지 대기하는 동안 발생합니다.|  
 |SQLCLR_ASSEMBLY|appdomain의 로드된 어셈블리 목록에 대한 액세스를 대기하는 동안 발생합니다.|  
 |SQLCLR_DEADLOCK_DETECTION|CLR이 교착 상태 감지가 완료될 때까지 대기하는 동안 발생합니다.|  
 |SQLCLR_QUANTUM_PUNISHMENT|CLR 태스크가 실행 퀀텀을 초과하여 조절되는 경우에 발생합니다. 이러한 조절은 리소스를 많이 사용하는 이 태스크가 다른 작업에 미치는 영향을 줄이기 위해 수행됩니다.|  

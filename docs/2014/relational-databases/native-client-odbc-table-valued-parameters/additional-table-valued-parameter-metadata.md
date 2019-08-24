@@ -46,7 +46,7 @@ ms.locfileid: "63200572"
   
  WVarchar 열은 ODBC 사양에 Varchar로 정의되어 있지만 실제로는 최근의 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC 드라이버에서 WVarchar로 반환됩니다. 이러한 변경 내용은 ODBC 3.5 사양에 유니코드 지원이 추가될 때 적용되었지만 명시적으로 발표되지는 않았습니다.  
   
- 테이블 반환 매개 변수에 대 한 추가 메타 데이터를 가져오려면 응용 프로그램 SQLColumns 및 SQLPrimaryKeys 카탈로그 함수를 사용 합니다. 이러한 함수를 호출하여 테이블 반환 매개 변수를 얻으려면 응용 프로그램에서 문 특성 SQL_SOPT_SS_NAME_SCOPE를 SQL_SS_NAME_SCOPE_TABLE_TYPE으로 설정해야 합니다. 이 값은 응용 프로그램에서 실제 테이블이 아니라 테이블 형식의 메타데이터를 요구한다는 것을 나타냅니다. 그런 다음 응용 프로그램으로 테이블 반환 매개 변수의 TYPE_NAME을 전달 합니다 *TableName* 매개 변수입니다. SS_TYPE_CATALOG_NAME 및 ss_type_schema_name은 사용 되는 *CatalogName* 하 고 *SchemaName* 매개 변수 각각 카탈로그 및 테이블 반환 매개 변수에 대 한 스키마를 식별 하 합니다. 응용 프로그램이 테이블 반환 매개 변수의 메타데이터 검색을 마치면 SQL_SOPT_SS_NAME_SCOPE가 기본값인 SQL_SS_NAME_SCOPE_TABLE로 다시 설정됩니다.  
+ 테이블 반환 매개 변수에 대 한 추가 메타 데이터를 가져오려면 응용 프로그램 SQLColumns 및 SQLPrimaryKeys 카탈로그 함수를 사용 합니다. 이러한 함수를 호출하여 테이블 반환 매개 변수를 얻으려면 애플리케이션에서 문 특성 SQL_SOPT_SS_NAME_SCOPE를 SQL_SS_NAME_SCOPE_TABLE_TYPE으로 설정해야 합니다. 이 값은 애플리케이션에서 실제 테이블이 아니라 테이블 형식의 메타데이터를 요구한다는 것을 나타냅니다. 그런 다음 응용 프로그램으로 테이블 반환 매개 변수의 TYPE_NAME을 전달 합니다 *TableName* 매개 변수입니다. SS_TYPE_CATALOG_NAME 및 ss_type_schema_name은 사용 되는 *CatalogName* 하 고 *SchemaName* 매개 변수 각각 카탈로그 및 테이블 반환 매개 변수에 대 한 스키마를 식별 하 합니다. 애플리케이션이 테이블 반환 매개 변수의 메타데이터 검색을 마치면 SQL_SOPT_SS_NAME_SCOPE가 기본값인 SQL_SS_NAME_SCOPE_TABLE로 다시 설정됩니다.  
   
  SQL_SOPT_SS_NAME_SCOPE가 SQL_SS_NAME_SCOPE_TABLE로 설정되면 연결된 서버에 대한 쿼리가 실패합니다. 서버 구성 요소를 포함 하는 카탈로그를 사용 하 여 SQLPrimaryKeys SQLColumns를 호출 하지 못합니다.  
   

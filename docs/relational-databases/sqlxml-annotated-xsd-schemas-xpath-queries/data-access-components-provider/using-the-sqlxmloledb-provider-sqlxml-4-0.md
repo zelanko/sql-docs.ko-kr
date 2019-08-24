@@ -24,12 +24,12 @@ ms.locfileid: "67895118"
 ---
 # <a name="using-the-sqlxmloledb-provider-sqlxml-40"></a>SQLXMLOLEDB 공급자 사용(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 섹션의 항목에서는 SQLXMLOLEDB 공급자 고유 속성의 사용 방법을 보여 주는 ADO 예제 응용 프로그램에 대해 설명합니다.  
+  이 섹션의 항목에서는 SQLXMLOLEDB 공급자 고유 속성의 사용 방법을 보여 주는 ADO 예제 애플리케이션에 대해 설명합니다.  
   
-## <a name="application-requirements-for-sqlxmloledb-40-provider"></a>SQLXMLOLEDB 4.0 공급자의 응용 프로그램 요구 사항  
+## <a name="application-requirements-for-sqlxmloledb-40-provider"></a>SQLXMLOLEDB 4.0 공급자의 애플리케이션 요구 사항  
  SQLXMLOLEDB 4.0을 사용하는 작업 예제를 만들려면 다음을 수행해야 합니다.  
   
-1.  Microsoft Visual Basic .exe 응용 프로그램을 만들고 다음 참조 중 하나를 추가합니다.  
+1.  Microsoft Visual Basic .exe 애플리케이션을 만들고 다음 참조 중 하나를 추가합니다.  
   
     -   Microsoft ActiveX Data Objects 2.6 라이브러리  
   

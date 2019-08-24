@@ -35,10 +35,10 @@ ms.locfileid: "66107562"
  보고서에 사용되는 이미지 집합을 나타냅니다. 자세한 내용은 [이미지&#40;보고서 작성기 및 SSRS&#41;](report-design/images-report-builder-and-ssrs.md)를 참조하세요.  
   
  **데이터 원본**  
- 포함된 데이터 원본 또는 공유 데이터 원본에 대한 참조를 나타냅니다. 데이터 원본은 보고서의 데이터 원본을 나타냅니다. 데이터 원본은 이를 사용하는 데이터 집합 컬렉션의 부모 노드입니다. 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41; ](report-data/report-datasets-ssrs.md) 하 고 [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
+ 포함된 데이터 원본 또는 공유 데이터 원본에 대한 참조를 나타냅니다. 데이터 원본은 보고서의 데이터 원본을 나타냅니다. 데이터 원본은 이를 사용하는 데이터 세트 컬렉션의 부모 노드입니다. 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41; ](report-data/report-datasets-ssrs.md) 하 고 [데이터 연결, 데이터 원본 및 보고서 작성기에서 연결 문자열](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
  **데이터 집합**  
- [!INCLUDE[tsql](../includes/tsql-md.md)] 데이터베이스에서 데이터를 검색하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리처럼 하나의 명령을 실행하여 데이터 원본에서 검색되는 데이터를 나타냅니다. 데이터 집합은 쿼리로 지정되는 필드 컬렉션의 부모 노드이며 계산된 필드를 포함합니다. 보고서 작성기에서는 쿼리를 지정하는 데 유용한 쿼리 디자이너를 지원합니다. 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)합니다.  
+ [!INCLUDE[tsql](../includes/tsql-md.md)] 데이터베이스에서 데이터를 검색하는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 쿼리처럼 하나의 명령을 실행하여 데이터 원본에서 검색되는 데이터를 나타냅니다. 데이터 세트은 쿼리로 지정되는 필드 컬렉션의 부모 노드이며 계산된 필드를 포함합니다. 보고서 작성기에서는 쿼리를 지정하는 데 유용한 쿼리 디자이너를 지원합니다. 자세한 내용은 [보고서에 데이터 추가 &#40;보고서 작성기 및 SSRS&#41;](report-data/report-datasets-ssrs.md)합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터 집합 필드 컬렉션&#40;보고서 작성기 및 SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)   

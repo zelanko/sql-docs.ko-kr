@@ -96,7 +96,7 @@ UPDATE STATISTICS [ schema_name . ] table_name
  AUTO_CREATE_STATISTICS에 대한 자세한 내용은 [ALTER DATABASE SET 옵션 &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요. 테이블 또는 뷰에 대한 모든 인덱스를 보려면 [sp_helpindex](../../relational-databases/system-stored-procedures/sp-helpindex-transact-sql.md)를 사용하면 됩니다.  
   
  FULLSCAN  
- 테이블 또는 인덱싱된 뷰에 있는 모든 행을 검색하여 통계를 계산합니다. FULLSCAN과 SAMPLE 100 PERCENT의 결과는 같습니다. FULLSCAN은 SAMPLE 옵션과 함께 사용할 수 없습니다.  
+ 테이블 또는 인덱싱된 뷰에 있는 모든 행을 검색하여 통계를 컴퓨팅합니다. FULLSCAN과 SAMPLE 100 PERCENT의 결과는 같습니다. FULLSCAN은 SAMPLE 옵션과 함께 사용할 수 없습니다.  
   
  SAMPLE *number* { PERCENT | ROWS }  
  쿼리 최적화 프로그램에서 통계를 업데이트할 때 사용할 테이블이나 인덱싱된 뷰에 있는 행의 비율이나 개수를 대략적으로 지정합니다. PERCENT의 경우 *number*가 0부터 100까지일 수 있고, ROWS의 경우 *number*가 0부터 총 행 수까지일 수 있습니다. 쿼리 최적화 프로그램에서 샘플링하는 실제 행의 비율이나 개수는 지정된 비율이나 개수와 일치하지 않을 수 있습니다. 예를 들어, 쿼리 최적화 프로그램에서는 데이터 페이지의 모든 행을 검색합니다.  
@@ -190,7 +190,7 @@ MAXDOP = *max_degree_of_parallelism*
 * `MAXDOP` 옵션은 `STATS_STREAM`, `ROWCOUNT` 및 `PAGECOUNT` 옵션과 호환되지 않습니다.
 * `MAXDOP` 옵션은 Resource Governor 워크로드 그룹 `MAX_DOP` 설정으로 제한됩니다(사용된 경우).
 
-### <a name="updating-all-statistics-with-spupdatestats"></a>sp_updatestats를 사용하여 모든 통계 업데이트  
+### <a name="updating-all-statistics-with-sp_updatestats"></a>sp_updatestats를 사용하여 모든 통계 업데이트  
 데이터베이스의 모든 사용자 정의 테이블 및 내부 테이블에 대한 통계를 업데이트하는 방법은 저장 프로시저 [sp_updatestats&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md)를 참조하세요. 예를 들어 다음 명령에서는 sp_updatestats를 호출하여 데이터베이스에 대한 모든 통계를 업데이트합니다.  
   
 ```sql  

@@ -20,15 +20,15 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63239056"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>WinForms ReportViewer 컨트롤 사용
-  보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WinForms ReportViewer 컨트롤을 사용하여 Windows 응용 프로그램에서 렌더링할 수 있습니다.  
+  보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WinForms ReportViewer 컨트롤을 사용하여 Windows 애플리케이션에서 렌더링할 수 있습니다.  
   
-###### <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>ReportViewer 컨트롤을 Windows 응용 프로그램에 추가하려면  
+###### <a name="to-add-the-reportviewer-control-to-a-windows-application"></a>ReportViewer 컨트롤을 Windows 애플리케이션에 추가하려면  
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[csprcs](../../includes/csprcs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]을 사용하여 새 Windows 애플리케이션을 만듭니다.  
   
      \- 또는 -  
   
-     기존 Windows 응용 프로그램 프로젝트를 열고 새 폼을 추가합니다.  
+     기존 Windows 애플리케이션 프로젝트를 열고 새 폼을 추가합니다.  
   
 2.  **도구 상자**에서 ReportViewer 컨트롤을 찾습니다. **도구 상자**가 보이지 않을 경우 **보기** 메뉴에서 **도구 상자**를 선택하여 액세스할 수 있습니다.  
   
@@ -142,9 +142,9 @@ End Class
 ```  
   
 ## <a name="viewing-reports-in-local-processing-mode"></a>로컬 처리 모드로 보고서 보기  
- 다음 예는 Windows 응용 프로그램의 일부이고 보고서 서버에 배포되지 않은 보고서를 렌더링하는 방법을 보여 줍니다.  
+ 다음 예는 Windows 애플리케이션의 일부이고 보고서 서버에 배포되지 않은 보고서를 렌더링하는 방법을 보여 줍니다.  
   
-###### <a name="to-add-the-sales-order-detail-report-to-a-windows-application"></a>Sales Order Detail 보고서를 Windows 응용 프로그램에 추가하려면  
+###### <a name="to-add-the-sales-order-detail-report-to-a-windows-application"></a>Sales Order Detail 보고서를 Windows 애플리케이션에 추가하려면  
   
 1.  보고서를 추가할 Windows 프로젝트를 엽니다.  
   
@@ -173,7 +173,7 @@ End Class
   
      **속성** 창이 보이지 않으면 **보기** 메뉴에서 **속성 창**을 선택하여 열 수 있습니다.  
   
- 다음 코드 예에서는 판매 주문 데이터에 대한 데이터 집합을 만든 다음 Sales Order Detail 보고서를 로컬 모드에서 렌더링합니다.  
+ 다음 코드 예에서는 판매 주문 데이터에 대한 데이터 세트을 만든 다음 Sales Order Detail 보고서를 로컬 모드에서 렌더링합니다.  
   
 ```csharp  
 public partial class Form1 : Form  

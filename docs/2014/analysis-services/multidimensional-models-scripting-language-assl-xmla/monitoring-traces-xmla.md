@@ -61,9 +61,9 @@ ms.locfileid: "62729076"
 |DatabaseName|문자열|이벤트가 발생한 데이터베이스의 이름입니다.|  
 |NTUserName|문자열|이벤트와 연결된 사용자의 Windows 사용자 이름입니다.|  
 |NTDomainName|문자열|이벤트와 연결된 사용자의 Windows 도메인입니다.|  
-|ClientHostName|문자열|클라이언트 응용 프로그램을 실행 중인 컴퓨터의 이름입니다. 이 열은 클라이언트 응용 프로그램에서 전달한 값으로 채워집니다.|  
-|ClientProcessID|정수(Long)|클라이언트 응용 프로그램의 프로세스 식별자입니다.|  
-|ApplicationName|문자열|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 클라이언트 응용 프로그램에서 전달한 값으로 채워집니다.|  
+|ClientHostName|문자열|클라이언트 애플리케이션을 실행 중인 컴퓨터의 이름입니다. 이 열은 클라이언트 애플리케이션에서 전달한 값으로 채워집니다.|  
+|ClientProcessID|정수(Long)|클라이언트 애플리케이션의 프로세스 식별자입니다.|  
+|ApplicationName|문자열|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 연결한 클라이언트 애플리케이션의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 클라이언트 애플리케이션에서 전달한 값으로 채워집니다.|  
 |NTCanonicalUserName|문자열|이벤트와 연결된 사용자의 정식 Windows 사용자 이름입니다.|  
 |SPID|문자열|이벤트가 발생한 세션의 SPID(서버 프로세스 ID)입니다. 이 열의 값은 이벤트가 발생한 XMLA 메시지의 SOAP 헤더에 지정된 세션 ID에 직접 해당합니다.|  
 |TextData|문자열|이벤트와 연결된 텍스트 데이터입니다. 이 열의 내용은 이벤트의 이벤트 클래스 및 하위 클래스에 따라 달라집니다.|  

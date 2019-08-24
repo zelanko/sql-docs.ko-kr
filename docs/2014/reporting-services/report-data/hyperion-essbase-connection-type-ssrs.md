@@ -65,7 +65,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ##  <a name="Extended"></a> 확장 필드 속성  
- [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터 처리 확장 프로그램은 확장 필드 속성을 지원합니다. 확장 필드 속성은 `Value` 및 `IsMissing` 외에 데이터 처리 확장 프로그램에서 데이터 집합 필드에 대해 정의한 속성입니다. 확장 속성에는 미리 정의된 속성과 사용자 지정 속성이 포함됩니다. 미리 정의된 속성은 여러 데이터 원본에 공통된 속성이고 사용자 지정 속성은 각 데이터 원본에 고유한 속성입니다.  
+ [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터 처리 확장 프로그램은 확장 필드 속성을 지원합니다. 확장 필드 속성은 `Value` 및 `IsMissing` 외에 데이터 처리 확장 프로그램에서 데이터 세트 필드에 대해 정의한 속성입니다. 확장 속성에는 미리 정의된 속성과 사용자 지정 속성이 포함됩니다. 미리 정의된 속성은 여러 데이터 원본에 공통된 속성이고 사용자 지정 속성은 각 데이터 원본에 고유한 속성입니다.  
   
  확장 필드 속성은 보고서 데이터 창에 보고서 레이아웃으로 끌 수 있는 항목으로 나타나지 않습니다. 대신 속성의 부모 필드를 보고서로 끈 다음 기본 속성 `Value`를 사용하려는 속성으로 변경합니다.  
   
@@ -76,7 +76,7 @@ Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample
   
   
 ### <a name="predefined-field-properties"></a>미리 정의된 필드 속성  
- 일반적으로 여러 데이터 공급자에 의해 지원되며 보고서 데이터 세트에 대한 기본 MDX 쿼리에 나타나는 미리 정의된 필드 속성. 예를 들어 MDX 차원 속성 MEMBER_UNIQUE_NAME은 미리 정의된 보고서 데이터 집합 필드 속성 `UniqueName`에 매핑됩니다. 입력란에 고유한 이름 값을 포함하려면 `=Fields!` *\<FieldName>* `.UniqueName` 식을 사용합니다.  
+ 일반적으로 여러 데이터 공급자에 의해 지원되며 보고서 데이터 세트에 대한 기본 MDX 쿼리에 나타나는 미리 정의된 필드 속성. 예를 들어 MDX 차원 속성 MEMBER_UNIQUE_NAME은 미리 정의된 보고서 데이터 세트 필드 속성 `UniqueName`에 매핑됩니다. 입력란에 고유한 이름 값을 포함하려면 `=Fields!` *\<FieldName>* `.UniqueName` 식을 사용합니다.  
   
  다음 표에서는 [!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 데이터 원본에 사용할 수 있는 미리 정의된 필드 속성 목록을 제공합니다.  
   

@@ -47,7 +47,7 @@ ms.locfileid: "68887866"
   
  위의 다이어그램에서 **FactResellerSales** 팩트 테이블은 shgeography 차원 테이블과 외래 키 관계가 없습니다. 그러나 **FactResellerSales** 팩트 테이블은 sh재판매인 차원 테이블과 외래 키 관계에 있습니다 . 그러면이 테이블에는 shgeography 차원 테이블과 외래 키 관계가 있습니다. 각 대리점에 대 한 지리 정보를 포함 하는 재판매인 차원을 정의 하려면이 특성을 지 수 **지리** 및 범위 **재판매인** 차원 테이블에서 검색 해야 합니다. 그러나 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서는 별도의 두 차원을 만든 후 두 차원 간에 참조 차원 관계를 정의하여 측정값 그룹 내에서 두 차원을 연결하는 방식으로 동일한 결과를 얻을 수 있습니다. 참조 차원 관계에 대 한 자세한 내용은 [차원 관계](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)를 참조 하세요.  
   
- 이 시나리오에서 참조 차원 관계 사용의 이점은 추가 저장 공간 없이 단일 지리 차원을 만든 후 해당 지리 차원을 기반으로 여러 개의 큐브 차원을 만들 수 있다는 점입니다. 예를 들어 지리 큐브 차원 중 하나를 대리점 차원에 연결하고 또 다른 지리 큐브 차원을 고객 차원에 연결할 수 있습니다. **관련 항목:** [차원 관계](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [참조 관계 및 참조 관계 속성 정의](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
+ 이 시나리오에서 참조 차원 관계 사용의 이점은 추가 스토리지 공간 없이 단일 지리 차원을 만든 후 해당 지리 차원을 기반으로 여러 개의 큐브 차원을 만들 수 있다는 점입니다. 예를 들어 지리 큐브 차원 중 하나를 대리점 차원에 연결하고 또 다른 지리 큐브 차원을 고객 차원에 연결할 수 있습니다. **관련 항목:** [차원 관계](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [참조 관계 및 참조 관계 속성 정의](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
 ## <a name="processing-a-dimension"></a>차원 처리  
  차원을 만든 후에는 차원을 처리해야만 해당 차원의 특성 멤버 및 계층을 볼 수 있습니다. 차원의 구조가 변경되거나 해당 기본 테이블의 정보가 업데이트되면 차원을 다시 처리해야만 변경 내용을 볼 수 있습니다. 구조 변경 후에 차원을 처리할 때 차원을 포함하는 큐브도 처리해야 하며 그렇지 않으면 큐브를 볼 수 없습니다.  

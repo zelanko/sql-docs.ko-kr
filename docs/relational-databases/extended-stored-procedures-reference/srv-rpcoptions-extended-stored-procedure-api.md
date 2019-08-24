@@ -21,7 +21,7 @@ author: rothja
 ms.author: jroth
 ms.openlocfilehash: b3ee9e6d0b56da01d3d8dd1ea16bc3d21eb1ce5d
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68005497"
@@ -55,8 +55,8 @@ srvproc
   
 |런타임 플래그|설명|  
 |--------------------|-----------------|  
-|SRV_NOMETADATA|클라이언트가 메타데이터 정보를 사용하지 않고 결과를 요청했습니다. 이 플래그는 클라이언트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 통신하는 경우에만 사용됩니다. 확장 저장 프로시저 API 응용 프로그램은 메타데이터 정보를 생략할 수 없습니다.|  
-|SRV_RECOMPILE|클라이언트가 원격 저장 프로시저를 실행하기 전에 재컴파일하도록 요청했습니다. 이 플래그는 확장 저장 프로시저 API 응용 프로그램에 적용되지 않을 수 있습니다.|  
+|SRV_NOMETADATA|클라이언트가 메타데이터 정보를 사용하지 않고 결과를 요청했습니다. 이 플래그는 클라이언트가 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스와 통신하는 경우에만 사용됩니다. 확장 저장 프로시저 API 애플리케이션은 메타데이터 정보를 생략할 수 없습니다.|  
+|SRV_RECOMPILE|클라이언트가 원격 저장 프로시저를 실행하기 전에 재컴파일하도록 요청했습니다. 이 플래그는 확장 저장 프로시저 API 애플리케이션에 적용되지 않을 수 있습니다.|  
   
 > [!IMPORTANT]  
 >  확장 저장 프로시저의 원본 코드를 철저히 검토하고 프로덕션 서버에 DLL을 설치하기 전에 컴파일한 DLL을 테스트해야 합니다. 보안 검토 및 테스트에 대한 자세한 내용은 [Microsoft 웹 사이트](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/)를 참조하십시오.  

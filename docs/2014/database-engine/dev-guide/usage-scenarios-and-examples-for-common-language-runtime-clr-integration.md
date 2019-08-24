@@ -25,7 +25,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62780726"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>CLR(공용 언어 런타임) 통합에 대한 사용 시나리오 및 예
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 CLR(공용 언어 런타임) 통합의 프로그래밍 기능을 알아보는 데 사용할 수 있는 예제 응용 프로그램, 패키지 예제 및 여러 코딩 예제가 포함되어 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에는 CLR(공용 언어 런타임) 통합의 프로그래밍 기능을 알아보는 데 사용할 수 있는 예제 애플리케이션, 패키지 예제 및 여러 코딩 예제가 포함되어 있습니다.  
   
  이러한 샘플 및 추가 자료를 구현 합니다. 전체 Visual Studio 프로젝트에 대 한 방문 [Microsoft SQL Server 커뮤니티 프로젝트 및 codeplex 샘플](https://go.microsoft.com/fwlink/?LinkID=193935)합니다.  
   
@@ -42,12 +42,12 @@ ms.locfileid: "62780726"
 |[Hello World 예제](../../../2014/database-engine/dev-guide/hello-world-sample.md)|간단한 CLR 통합 기반 저장 프로시저를 만들고, 배포 및 테스트하는 기본 작업을 보여 줍니다.|  
 |[In-Process 데이터 액세스 예제](../../../2014/database-engine/dev-guide/in-process-data-access-sample.md)|CLR in-process 데이터 액세스 공급자의 다양한 기능을 보여 주는 여러 간단한 함수가 포함되어 있습니다.|  
 |[결과 집합 예제](../../../2014/database-engine/dev-guide/result-set-sample.md)|쿼리 결과를 읽는 동안 새 연결을 열거나 모든 결과를 메모리로 읽어 오지 않고 명령을 실행하는 방법을 보여 줍니다.|  
-|[데이터 세트 보내기 예제](../../../2014/database-engine/dev-guide/send-dataset-sample.md)|서버측 CLR 기반 저장 프로시저 내에서 ADO .NET 기반 데이터 집합을 결과 집합으로 클라이언트에 반환하는 방법을 보여 줍니다.|  
+|[데이터 세트 보내기 예제](../../../2014/database-engine/dev-guide/send-dataset-sample.md)|서버측 CLR 기반 저장 프로시저 내에서 ADO .NET 기반 데이터 세트을 결과 집합으로 클라이언트에 반환하는 방법을 보여 줍니다.|  
 |[문자열 유틸리티 함수 예제](../../../2014/database-engine/dev-guide/string-utility-functions-sample.md)|Visual C# 및 Visual Basic으로 작성되었으며 쉼표로 구분된 문자열을 열이 하나인 테이블로 분리하는 스트리밍 TVF(테이블 반환 함수)가 포함되어 있습니다.|  
 |[보조 문자 인식 문자열 조작 예제](../../../2014/database-engine/dev-guide/supplementary-aware-string-manipulation-sample.md)|유니코드와 서로게이트 문자열을 모두 처리할 수 있는 5개의 보조 문자 인식 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문자열 함수의 구현 방법을 보여 줍니다.|  
 |[UDT 유틸리티](../../../2014/database-engine/dev-guide/udt-utilities.md)|여러 UDT(사용자 정의 데이터 형식) 유틸리티 함수가 포함되어 있습니다.|  
 |[사용하지 않는 어셈블리 정리](../../../2014/database-engine/dev-guide/unused-assembly-cleanup.md)|메타데이터 카탈로그를 쿼리하여 현재 데이터베이스에서 사용되지 않는 어셈블리를 삭제하는 .NET 저장 프로시저가 포함되어 있습니다.|  
-|[사용자 정의 형식](../../../2014/database-engine/dev-guide/user-defined-type.md)|System.Data.SqlClient를 사용하는 클라이언트 응용 프로그램 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 간단한 UDT를 만들고 사용하는 방법을 보여 줍니다.|  
-|[UTF8 문자열 사용자 정의 데이터 형식 &#40;UDT&#41;](../../../2014/database-engine/dev-guide/utf8-string-user-defined-data-type-udt.md)|UTF8로 인코딩된 값을 저장할 수 있도록 데이터베이스의 형식 시스템을 확장하는 UDT의 구현 방법을 보여 줍니다.|  
+|[사용자 정의 형식](../../../2014/database-engine/dev-guide/user-defined-type.md)|System.Data.SqlClient를 사용하는 클라이언트 애플리케이션 및 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 간단한 UDT를 만들고 사용하는 방법을 보여 줍니다.|  
+|[UTF8 문자열 사용자 정의 데이터 형식 &#40;UDT&#41;](../../../2014/database-engine/dev-guide/utf8-string-user-defined-data-type-udt.md)|UTF8로 인코딩된 값을 스토리지할 수 있도록 데이터베이스의 형식 시스템을 확장하는 UDT의 구현 방법을 보여 줍니다.|  
   
   

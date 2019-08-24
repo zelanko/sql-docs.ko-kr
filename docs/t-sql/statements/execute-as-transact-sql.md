@@ -131,7 +131,7 @@ ms.locfileid: "68084438"
   
  WITH NO REVERT COOKIE = @*varbinary_variabl* 절을 지정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 쿠키 값을 @*varbinary_variable*에 전달합니다. 호출하는 REVERT WITH COOKIE = @*varbinary_variable* 문에 동일한 *@varbinary_variable* 값이 포함되어 있는 경우에만 해당 명령문으로 설정된 실행 컨텍스트를 이전 컨텍스트로 되돌릴 수 있습니다.  
   
- 이 옵션은 연결 풀링을 사용하는 환경에서 유용합니다. 연결 풀링은 응용 프로그램 서버의 응용 프로그램이 다시 사용할 수 있도록 데이터베이스 연결 그룹을 유지 관리하는 것입니다. *@varbinary_variable* 에 전달된 값은 EXECUTE AS 문의 호출자에게만 알려지므로 호출자는 자신이 설정한 실행 컨텍스트를 다른 사람이 변경할 수 없도록 할 수 있습니다.  
+ 이 옵션은 연결 풀링을 사용하는 환경에서 유용합니다. 연결 풀링은 애플리케이션 서버의 애플리케이션이 다시 사용할 수 있도록 데이터베이스 연결 그룹을 유지 관리하는 것입니다. *@varbinary_variable* 에 전달된 값은 EXECUTE AS 문의 호출자에게만 알려지므로 호출자는 자신이 설정한 실행 컨텍스트를 다른 사람이 변경할 수 없도록 할 수 있습니다.  
   
 ## <a name="determining-the-original-login"></a>원래 로그인 결정  
  [ORIGINAL_LOGIN](../../t-sql/functions/original-login-transact-sql.md) 함수를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결한 로그인의 이름을 반환할 수 있습니다. 이 함수를 사용하여 명시적 또는 암시적 컨텍스트 전환이 많이 있는 세션의 원래 로그인 ID를 반환할 수 있습니다.  

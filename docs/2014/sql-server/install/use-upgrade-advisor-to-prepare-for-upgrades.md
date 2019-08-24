@@ -48,12 +48,12 @@ ms.locfileid: "66091263"
   
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]  
   
- 분석 작업은 스크립트,  저장 프로시저,  트리거,  추적 파일 등 액세스할 수 있는 개체를 검사합니다. 업그레이드 관리자는 데스크톱 응용 프로그램 또는 암호화된 저장 프로시저를 분석할 수 없습니다.  
+ 분석 작업은 스크립트,  저장 프로시저,  트리거,  추적 파일 등 액세스할 수 있는 개체를 검사합니다. 업그레이드 관리자는 데스크톱 애플리케이션 또는 암호화된 저장 프로시저를 분석할 수 없습니다.  
   
  출력 형식은 XML  보고서입니다. XML  보고서를 보려면 업그레이드 관리자 보고서 뷰어를 사용하십시오.  
   
 > [!NOTE]  
->  보고서에는 "기타 업그레이드 문제"  항목이 들어 있을 수 있습니다. 이 항목은 업그레이드 관리자에 의해 감지되지는 않았지만 서버 또는 응용 프로그램에 있을 수 있는 문제 목록에 대한 링크를 제공합니다. 발견할 수 없는 문제 목록을 검토하고 이런 문제로 인해 서버 또는 응용 프로그램을 변경해야 하는지 여부를 결정해야 합니다.  
+>  보고서에는 "기타 업그레이드 문제"  항목이 들어 있을 수 있습니다. 이 항목은 업그레이드 관리자에 의해 감지되지는 않았지만 서버 또는 애플리케이션에 있을 수 있는 문제 목록에 대한 링크를 제공합니다. 발견할 수 없는 문제 목록을 검토하고 이런 문제로 인해 서버 또는 애플리케이션을 변경해야 하는지 여부를 결정해야 합니다.  
   
 ## <a name="how-to-install-and-run-upgrade-advisor"></a>업그레이드 관리자 설치 및 실행 방법  
  설치 위치 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 업그레이드 관리자는 분석 대상에 따라 달라 집니다. 업그레이드 관리자는 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]를 제외하고 지원되는 모든 구성 요소의 원격 분석을 지원합니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 인스턴스를 검색하지 않는 경우 사용자 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결할 수 있거나 업그레이드 관리자의 필수 구성 요소가 있는 모든 컴퓨터에 업그레이드 관리자를 설치할 수 있습니다. 자세한 내용은 [지원되는 버전 및 에디션 업그레이드](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)를 참조하세요. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]의 인스턴스를 검색하는 경우에는 보고서 서버에 업그레이드 관리자를 설치해야 합니다.  

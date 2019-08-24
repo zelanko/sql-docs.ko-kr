@@ -26,7 +26,7 @@ ms.locfileid: "68134870"
   
 -   Clr 버전 4에 형식 오류가 **System.TimeSpan** 값 생성을 **System.FormatExceptions**합니다. 이전에 형식 오류가 clr 버전 4 **System.TimeSpan** 값 무시 되었습니다. CLR 버전 4 이전의 동작에 의존 하는 데이터베이스 응용 프로그램 데이터베이스 호환성 수준으로 실행 해야 합니다 (**ALTER DATABASE 호환성 수준**)이 100입니다. 자세한 내용은 [< TimeSpan_LegacyFormatMode > 요소](https://go.microsoft.com/fwlink/?LinkId=205109)합니다.  
   
--   CLR 버전 4는 유니코드 5.1을 지원하므로 일부 악센트 표시 및 기호가 관련된 정렬 작업이 개선됩니다. 응용 프로그램이 레거시 정렬 동작에 의존하는 경우에는 호환성 문제가 발생할 수 있습니다. 레거시 정렬을 데이터베이스 호환성 수준을 사용 하도록 설정 하려면 (**ALTER DATABASE 호환성 수준**) 100 이하로 설정 해야 합니다. 이를 지원하기 위해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 .NET Framework 4 디렉터리(C:\Windows\Microsoft.NET\Framework\v4.0.30319)에 sort00001000.dll을 설치합니다. 자세한 내용은 [ \<CompatSortNLSVersion > 요소](https://go.microsoft.com/fwlink/?LinkId=205110)합니다.  
+-   CLR 버전 4는 유니코드 5.1을 지원하므로 일부 악센트 표시 및 기호가 관련된 정렬 작업이 개선됩니다. 애플리케이션이 레거시 정렬 동작에 의존하는 경우에는 호환성 문제가 발생할 수 있습니다. 레거시 정렬을 데이터베이스 호환성 수준을 사용 하도록 설정 하려면 (**ALTER DATABASE 호환성 수준**) 100 이하로 설정 해야 합니다. 이를 지원하기 위해 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]에서는 .NET Framework 4 디렉터리(C:\Windows\Microsoft.NET\Framework\v4.0.30319)에 sort00001000.dll을 설치합니다. 자세한 내용은 [ \<CompatSortNLSVersion > 요소](https://go.microsoft.com/fwlink/?LinkId=205110)합니다.  
   
 -   다음 열에 추가 되었습니다 [sys.dm_clr_appdomains](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md): **total_processor_time_ms**합니다 **total_allocated_memory_kb**, 및 **survived_ memory_kb**합니다.  
   

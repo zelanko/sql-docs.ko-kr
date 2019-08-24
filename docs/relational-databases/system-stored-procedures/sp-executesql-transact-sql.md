@@ -26,13 +26,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/17/2019
 ms.locfileid: "68290351"
 ---
-# <a name="spexecutesql-transact-sql"></a>sp_executesql(Transact-SQL)
+# <a name="sp_executesql-transact-sql"></a>sp_executesql(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   여러 번 사용할 수 있거나 동적으로 빌드된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문이나 일괄 처리를 실행합니다. [!INCLUDE[tsql](../../includes/tsql-md.md)] 문 또는 일괄 처리는 포함 매개 변수를 포함할 수 있습니다.  
   
 > [!IMPORTANT]  
->  런타임 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 악의적인 공격에 응용 프로그램을 노출시킬 수 있습니다.  
+>  런타임 컴파일된 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 악의적인 공격에 애플리케이션을 노출시킬 수 있습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

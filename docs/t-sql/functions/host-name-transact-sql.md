@@ -25,7 +25,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68024409"
 ---
-# <a name="hostname-transact-sql"></a>HOST_NAME(Transact-SQL)
+# <a name="host_name-transact-sql"></a>HOST_NAME(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   워크스테이션 이름을 반환합니다.  
@@ -48,7 +48,7 @@ HOST_NAME ()
  시스템 함수는 선택 목록, WHERE 절 및 식이 허용되는 모든 곳에서 사용될 수 있습니다.  
   
 > [!IMPORTANT]  
->  클라이언트 응용 프로그램에서 워크스테이션 이름을 제공하므로 제공된 데이터가 정확하지 않을 수 있습니다. HOST_NAME을 보안 용도로는 사용하지 마세요.  
+>  클라이언트 애플리케이션에서 워크스테이션 이름을 제공하므로 제공된 데이터가 정확하지 않을 수 있습니다. HOST_NAME을 보안 용도로는 사용하지 마세요.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 `HOST_NAME()` 정의에 `DEFAULT`을 사용하는 테이블을 만들고 주문 기록 테이블에 행을 삽입하는 컴퓨터의 워크스테이션 이름을 새로 만든 테이블에 기록합니다.  

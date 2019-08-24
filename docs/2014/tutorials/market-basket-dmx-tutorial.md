@@ -31,7 +31,7 @@ ms.locfileid: "63185646"
  마이닝 모델은 가상 회사인 [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] 에 대한 데이터를 저장하는 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]예제 데이터베이스에 포함된 데이터에서 만들어집니다. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]는 규모가 큰 다국적 제조 회사입니다. 이 회사는 금속 및 합성 소재 자전거를 제조하여 북미, 유럽 및 아시아 시장에 판매합니다. 워싱턴 주 보셀에 위치한 본사에는 290명의 직원이 근무하고 있으며 각 지역 시장별로 영업 팀이 배치되어 있습니다.  
   
 ## <a name="tutorial-scenario"></a>자습서 시나리오  
- [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]에서는 고객이 동시에 구입하는 경향이 있는 제품 유형을 예측하는 기능인 데이터 마이닝을 사용하는 사용자 지정 응용 프로그램을 만들기로 했습니다. 사용자 지정 응용 프로그램의 목표는 제품 집합을 지정하고 지정한 제품과 함께 구입할 가능성이 있는 추가 제품을 예측할 수 있게 하는 것입니다. 그러면 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]에서 이러한 정보를 사용하여 웹 사이트에 "제안" 기능을 추가하고 고객에게 정보를 제공하는 방식을 더 효과적으로 구성하게 됩니다.  
+ [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]에서는 고객이 동시에 구입하는 경향이 있는 제품 유형을 예측하는 기능인 데이터 마이닝을 사용하는 사용자 지정 애플리케이션을 만들기로 했습니다. 사용자 지정 애플리케이션의 목표는 제품 집합을 지정하고 지정한 제품과 함께 구입할 가능성이 있는 추가 제품을 예측할 수 있게 하는 것입니다. 그러면 [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)]에서 이러한 정보를 사용하여 웹 사이트에 "제안" 기능을 추가하고 고객에게 정보를 제공하는 방식을 더 효과적으로 구성하게 됩니다.  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 이 작업을 수행할 수 있는 여러 가지 도구를 제공 합니다.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63185646"
   
  DMX(Data Mining Extensions)는 마이닝 모델을 만들고 작업할 때 사용할 수 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] 에서 제공하는 쿼리 언어입니다. [!INCLUDE[msCoName](../includes/msconame-md.md)] 연결 알고리즘은 함께 구입할 가능성이 있는 제품을 예측할 수 있는 모델을 만듭니다.  
   
- 이 자습서의 목표는 사용자 지정 응용 프로그램에서 사용할 DMX 쿼리를 제공하는 것입니다.  
+ 이 자습서의 목표는 사용자 지정 애플리케이션에서 사용할 DMX 쿼리를 제공하는 것입니다.  
   
  **자세한 내용은 다음을 참조하세요.** [데이터 마이닝 솔루션](../../2014/analysis-services/data-mining/data-mining-solutions.md)  
   

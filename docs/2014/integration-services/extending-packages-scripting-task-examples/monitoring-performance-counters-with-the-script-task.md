@@ -29,7 +29,7 @@ ms.locfileid: "62768509"
 # <a name="monitoring-performance-counters-with-the-script-task"></a>스크립트 태스크를 사용하여 성능 카운터 모니터링
   관리자는 대량의 데이터에 대해 복잡한 변환을 수행하는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지의 성능을 모니터링하는 경우가 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]의 **System.Diagnostics** 네임스페이스에서는 기존 성능 카운터를 사용하고 개발자 고유의 성능 카운터를 만들기 위한 클래스를 제공합니다.  
   
- 성능 카운터는 시간 경과에 따른 소프트웨어 성능을 분석하는 데 사용할 수 있는 응용 프로그램 성능 정보를 저장합니다. **성능 모니터** 도구를 사용하여 로컬 또는 원격으로 성능 카운터를 모니터링할 수 있습니다. 나중에 패키지에서 제어 흐름을 분기할 수 있도록 성능 카운터의 값을 변수에 저장할 수 있습니다.  
+ 성능 카운터는 시간 경과에 따른 소프트웨어 성능을 분석하는 데 사용할 수 있는 애플리케이션 성능 정보를 저장합니다. **성능 모니터** 도구를 사용하여 로컬 또는 원격으로 성능 카운터를 모니터링할 수 있습니다. 나중에 패키지에서 제어 흐름을 분기할 수 있도록 성능 카운터의 값을 변수에 저장할 수 있습니다.  
   
  성능 카운터를 사용하는 대신 `Dts` 개체의 <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 속성을 통해 <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Events%2A> 이벤트를 발생시킬 수도 있습니다. <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents.FireProgress%2A> 이벤트는 진행률 및 완료율 정보를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 런타임에 반환합니다.  
   

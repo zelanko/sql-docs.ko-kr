@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68044543"
 ---
-# <a name="sysinternaltables-transact-sql"></a>sys.internal_tables(Transact-SQL)
+# <a name="sysinternal_tables-transact-sql"></a>sys.internal_tables(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   내부 테이블인 각 개체당 한 개의 행을 반환합니다. 내부 테이블은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 다양한 기능을 지원하기 위해 자동으로 생성됩니다. 예를 들어 기본 XML 인덱스를 만들면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 자동으로 내부 테이블을 만들어 단편 형태의 XML 문서 데이터를 저장합니다. 내부 테이블에 표시 된 **sys** 모든 데이터베이스의 스키마, 고유한 시스템 생성 이름을 예를 들어, 해당 기능을 나타내는 있고 **xml_index_nodes_2021582240_32001** 또는  **queue_messages_1977058079**  
@@ -53,7 +53,7 @@ ms.locfileid: "68044543"
   
  사용할 수는 [sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md) 시스템 프로시저를 내부 테이블에 대 한 공간 사용 현황 데이터를 반환 합니다. **sp_spaceused** 다음과 같은 방법으로 내부 테이블 공간을 보고 합니다.  
   
--   큐 이름을 지정하면 큐와 연결된 기본 내부 테이블을 참조하여 해당 저장소 사용을 보고합니다.  
+-   큐 이름을 지정하면 큐와 연결된 기본 내부 테이블을 참조하여 해당 스토리지 사용을 보고합니다.  
   
 -   XML 인덱스, 공간 인덱스 및 전체 텍스트 인덱스의 내부 테이블에서 사용 되는 페이지에 포함 되는 **index_size** 열입니다. XML 인덱스, 공간 인덱스 및 해당 개체에 대 한 전체 텍스트 인덱스에 대 한 페이지를 열에 포함 된 테이블 또는 인덱싱된 뷰 이름을 지정 하면 **예약** 하 고 **index_size**합니다.  
   

@@ -56,7 +56,7 @@ ms.locfileid: "67989265"
 
 -   MDAC 연결 문자열에서는 **Trusted_Connection** 키워드에 부울 값 (**true**)을 사용할 수 있습니다. SQL Server 연결 문자열의 OLE DB 드라이버는 **yes** 또는 **no**를 사용 해야 합니다.  
 
--   경고와 오류가 약간 변경되었습니다. 이제 서버에서 반환되는 경고와 오류가 SQL Server용 OLE DB 드라이버로 전달될 때 동일한 심각도를 유지합니다. 특정 경고 및 오류 트래핑을 사용하는 경우 응용 프로그램을 완전히 테스트해야 합니다.  
+-   경고와 오류가 약간 변경되었습니다. 이제 서버에서 반환되는 경고와 오류가 SQL Server용 OLE DB 드라이버로 전달될 때 동일한 심각도를 유지합니다. 특정 경고 및 오류 트래핑을 사용하는 경우 애플리케이션을 완전히 테스트해야 합니다.  
 
 -   SQL Server용 OLE DB 드라이버에는 MDAC보다 엄격한 오류 검사 기능이 있으므로 OLE DB 사양을 엄격하게 준수하지 않는 일부 애플리케이션이 다르게 동작할 수 있습니다. 예를 들어 SQLOLEDB 공급자는 결과 매개 변수의 경우 매개 변수 이름이 '\@'로 시작해야 한다는 규칙을 적용하지 않지만 SQL Server용 OLE DB 드라이버는 이 규칙을 적용합니다.  
 
@@ -88,7 +88,7 @@ ms.locfileid: "67989265"
 
     -   백업  
 
--   MDAC 응용 프로그램이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하면 다음 그림과 같이 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입된 데이터 형식이 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 호환 데이터 형식으로 나타납니다.  
+-   MDAC 애플리케이션이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 연결하면 다음 그림과 같이 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]에서 도입된 데이터 형식이 [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] 호환 데이터 형식으로 나타납니다.  
 
     |SQL Server 2005 형식|SQL Server 2000 형식|  
     |--------------------------|--------------------------|  

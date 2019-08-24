@@ -44,7 +44,7 @@ ms.locfileid: "66098717"
 |*GetImage*|HTML 뷰어 사용자 인터페이스에 대한 특정 아이콘을 가져옵니다.||  
 |*아이콘*|특정 렌더링 확장 프로그램의 아이콘을 가져옵니다.||  
 |*스타일 시트*|HTML 뷰어에 적용할 스타일시트를 지정합니다.||  
-|장치 정보 설정|형식의 장치 정보 설정을 지정 `rc:tag=value`, 여기서 *태그* 장치 정보 현재 사용 되는 렌더링 확장 프로그램별 설정의 이름입니다 (에 대 한 설명을 참조는  *형식* 매개 변수). 예를 들어 이미지 렌더링 확장 프로그램에서 URL 액세스 문자열에 다음 매개 변수를 사용하는 JPEG 이미지에 보고서를 렌더링할 수 있도록 *OutputFormat* 디바이스 정보 설정을 사용할 수 있습니다. `...&rs:Format=IMAGE&rc:OutputFormat=JPEG` 모든 확장 프로그램별 장치 정보 설정에 대한 자세한 내용은 [렌더링 확장 프로그램에 대한 장치 정보 설정&#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하세요.||  
+|디바이스 정보 설정|형식의 장치 정보 설정을 지정 `rc:tag=value`, 여기서 *태그* 장치 정보 현재 사용 되는 렌더링 확장 프로그램별 설정의 이름입니다 (에 대 한 설명을 참조는  *형식* 매개 변수). 예를 들어 이미지 렌더링 확장 프로그램에서 URL 액세스 문자열에 다음 매개 변수를 사용하는 JPEG 이미지에 보고서를 렌더링할 수 있도록 *OutputFormat* 디바이스 정보 설정을 사용할 수 있습니다. `...&rs:Format=IMAGE&rc:OutputFormat=JPEG` 모든 확장 프로그램별 장치 정보 설정에 대한 자세한 내용은 [렌더링 확장 프로그램에 대한 장치 정보 설정&#40;Reporting Services&#41;](device-information-settings-for-rendering-extensions-reporting-services.md)을 참조하세요.||  
   
 ## <a name="report-server-commands-rs"></a>보고서 서버 명령(rs:)  
  다음 표에서 접두사로 사용 하는 URL 액세스 매개 변수를 설명 *rs:* 보고서 서버를 대상 하는 데 사용 됩니다.  
@@ -73,7 +73,7 @@ ms.locfileid: "66098717"
 |매개 변수|작업|  
 |---------------|------------|  
 |*도구 모음*|보고서 뷰어 웹 파트에 대한 도구 모음 표시를 제어합니다. 기본값은 `Full`입니다. 사용할 수 있는 값에는<br /><br /> `Full`: 전체 도구 모음을 표시합니다.<br /><br /> `Navigation`: 도구 모음에 페이지 매김만 표시합니다.<br /><br /> `None`: 도구 모음을 표시하지 않습니다.<br /><br /> <br /><br /> 예를 들어 `SharePoint` 모드에서는 도구 모음에 페이지 매김만 표시합니다.<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:Toolbar=Navigation`|  
-|*HeaderArea*|보고서 뷰어 웹 파트에 대한 머리글 표시를 제어합니다. 기본값은 `Full`입니다. 사용할 수 있는 값에는<br /><br /> `Full`: 전체 머리글을 표시합니다.<br /><br /> `BreadCrumbsOnly`: 응용 프로그램 내 사용자의 위치를 알려주는 bread-crumb 탐색만 머리글에 표시합니다.<br /><br /> `None`: 머리글을 표시하지 않습니다.<br /><br /> <br /><br /> 예를 들어 `SharePoint` 모드에서는 머리글에 bread-crumb 탐색만 표시합니다.<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly`|  
+|*HeaderArea*|보고서 뷰어 웹 파트에 대한 머리글 표시를 제어합니다. 기본값은 `Full`입니다. 사용할 수 있는 값에는<br /><br /> `Full`: 전체 머리글을 표시합니다.<br /><br /> `BreadCrumbsOnly`: 애플리케이션 내 사용자의 위치를 알려주는 bread-crumb 탐색만 머리글에 표시합니다.<br /><br /> `None`: 머리글을 표시하지 않습니다.<br /><br /> <br /><br /> 예를 들어 `SharePoint` 모드에서는 머리글에 bread-crumb 탐색만 표시합니다.<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:HeaderArea=BreadCrumbsOnly`|  
 |*DocMapAreaWidth*|보고서 뷰어 웹 파트에서 매개 변수 영역의 표시 너비(픽셀 단위)를 제어합니다. 기본값은 보고서 뷰어 웹 파트 기본값과 같습니다. 값은 음의 정수가 아니어야 합니다.|  
 |*AsyncRender*|보고서가 비동기적으로 렌더링되는지 여부를 제어합니다. 기본값 `true`는 보고서가 비동기적으로 렌더링됨을 지정합니다. 부울 값 `true` 또는 `false`여야 합니다.|  
 |*ParamMode*|보고서 뷰어 웹 파트의 매개 변수 프롬프트 영역이 전체 페이지 뷰에서 표시 하는 방법을 제어 합니다.  기본값은 `Full`입니다. 유효한 값은<br /><br /> `Full`: 매개 변수 프롬프트 영역을 표시합니다.<br /><br /> `Collapsed`: 매개 변수 프롬프트 영역을 축소합니다.<br /><br /> `Hidden`: 매개 변수 프롬프트 영역을 숨깁니다.<br /><br /> 예를 들어 `SharePoint` 모드에서는 매개 변수 프롬프트 영역을 축소합니다.<br /><br /> `http://myspsite/_vti_bin/reportserver?http://myspsite002%fShared+Documents%2fmyreport.rdl&rv:DocMapMode=Displayed&rv:ParamMode=Collapsed`|  

@@ -21,12 +21,12 @@ author: rothja
 ms.author: jroth
 ms.openlocfilehash: 85efd235861522754cbcdc209d6cf28558907d76
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68058771"
 ---
-# <a name="srvparaminfo-extended-stored-procedure-api"></a>srv_paraminfo(확장 저장 프로시저 API)
+# <a name="srv_paraminfo-extended-stored-procedure-api"></a>srv_paraminfo(확장 저장 프로시저 API)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
@@ -79,7 +79,7 @@ pfNull
  매개 변수의 실제 길이에 대한 포인터입니다. **pfNull*이 FALSE로 설정되어 있으면 0 값(\**pcbActualLen* == 0)은 길이가 0인 데이터를 나타냅니다.  
   
  *pbData*  
- 매개 변수 데이터의 버퍼에 대한 포인터입니다. *pbData*가 NULL이 아닌 경우 확장 저장 프로시저 API는 \**pcbActualLen* 바이트의 데이터를 \**pbData*에 기록합니다. *pbData*가 NULL인 경우 데이터가 \**pbData*에 기록되지 않지만 함수는 \**pbType*, \**pcbMaxLen*, \**pcbActualLen* 및 **pfNull*을 반환합니다. 이 버퍼에 대한 메모리는 응용 프로그램으로 관리해야 합니다.  
+ 매개 변수 데이터의 버퍼에 대한 포인터입니다. *pbData*가 NULL이 아닌 경우 확장 저장 프로시저 API는 \**pcbActualLen* 바이트의 데이터를 \**pbData*에 기록합니다. *pbData*가 NULL인 경우 데이터가 \**pbData*에 기록되지 않지만 함수는 \**pbType*, \**pcbMaxLen*, \**pcbActualLen* 및 **pfNull*을 반환합니다. 이 버퍼에 대한 메모리는 애플리케이션으로 관리해야 합니다.  
   
  *pfNull*  
  NULL 플래그에 대한 포인터입니다.매개 변수 값이 NULL인 경우  **pfNull*이 TRUE로 설정됩니다.  

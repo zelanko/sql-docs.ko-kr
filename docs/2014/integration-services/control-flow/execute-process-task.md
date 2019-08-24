@@ -64,7 +64,7 @@ ms.locfileid: "62831873"
   
  **Arguments** 속성을 사용하여 프로세스 실행 태스크에서 입력을 제공하도록 구성하는 경우 다음 단계 중 하나를 수행하여 인수를 얻습니다.  
   
--   Microsoft Visual Basic을 사용하여 응용 프로그램을 작성하는 경우 `My.Application.CommandLineArgs` 속성을 설정합니다. 다음 예에서는 `My.Application.CommandLineArgs` 속성을 설정하여 두 인수를 검색합니다.  
+-   Microsoft Visual Basic을 사용하여 애플리케이션을 작성하는 경우 `My.Application.CommandLineArgs` 속성을 설정합니다. 다음 예에서는 `My.Application.CommandLineArgs` 속성을 설정하여 두 인수를 검색합니다.  
   
     ```  
     Dim variable1 As String = My.Application.CommandLineArgs.Item(0)  

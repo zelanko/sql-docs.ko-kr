@@ -38,7 +38,7 @@ ms.locfileid: "66071674"
   
 2.  애플리케이션 프록시 그룹에서 **기본값**을 클릭합니다.  
   
-3.  PowerPivot 서비스 응용 프로그램(유형 이름 `PowerPivot Service Application Proxy`로 표시) 옆에 있는 확인란을 선택합니다. 둘 이상의 PowerPivot 서비스 애플리케이션이 있는 경우 하나만 선택합니다.  
+3.  PowerPivot 서비스 애플리케이션(유형 이름 `PowerPivot Service Application Proxy`로 표시) 옆에 있는 확인란을 선택합니다. 둘 이상의 PowerPivot 서비스 애플리케이션이 있는 경우 하나만 선택합니다.  
   
 4.  **확인**을 클릭합니다.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "66071674"
   
 4.  **다음 연결 그룹 편집**에서 **[사용자 지정]** 을 선택합니다.  
   
-5.  사용할 각 서비스 애플리케이션 연결 옆에 있는 확인란을 선택합니다. 여러 PowerPivot 서비스 응용 프로그램이 있는 경우(`PowerPivot Service Application Proxy` 유형 설정으로 표시) 하나만 선택해야 합니다.  
+5.  사용할 각 서비스 애플리케이션 연결 옆에 있는 확인란을 선택합니다. 여러 PowerPivot 서비스 애플리케이션이 있는 경우(`PowerPivot Service Application Proxy` 유형 설정으로 표시) 하나만 선택해야 합니다.  
   
 6.  **확인**을 클릭합니다.  
   

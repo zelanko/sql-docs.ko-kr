@@ -66,7 +66,7 @@ ms.locfileid: "66107126"
   
 1.  **보고서 데이터** 창에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 원본에 연결하는 데이터 원본의 이름을 마우스 오른쪽 단추로 클릭한 다음 **데이터 집합 추가**를 클릭합니다.  
   
-2.  **데이터 집합 속성** 대화 상자에서 **이름** 입력란에 이름을 입력합니다.  
+2.  **데이터 세트 속성** 대화 상자에서 **이름** 입력란에 이름을 입력합니다.  
   
 3.  **데이터 원본**상자에서 이름이 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터 원본에 연결하는 데이터 원본의 이름인지 확인합니다.  
   

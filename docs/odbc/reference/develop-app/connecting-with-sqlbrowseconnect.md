@@ -22,7 +22,7 @@ ms.lasthandoff: 07/15/2019
 ms.locfileid: "68083130"
 ---
 # <a name="connecting-with-sqlbrowseconnect"></a>SQLBrowseConnect로 연결
-**SQLBrowseConnect**과 같이 **SQLDriverConnect**, 연결 문자열을 사용 합니다. 그러나 **SQLBrowseConnect**, 응용 프로그램 런타임 시 전체 연결 문자열을 생성할 수 있습니다. 이를 통해 응용 프로그램에서는 다음 두 가지 작업이 가능해집니다.  
+**SQLBrowseConnect**과 같이 **SQLDriverConnect**, 연결 문자열을 사용 합니다. 그러나 **SQLBrowseConnect**, 응용 프로그램 런타임 시 전체 연결 문자열을 생성할 수 있습니다. 이를 통해 애플리케이션에서는 다음 두 가지 작업이 가능해집니다.  
   
 -   해당 "모양과 느낌"에 대 한 제어를 유지 하므로,이 정보를 묻는 고유의 대화 상자 빌드  
   

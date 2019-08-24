@@ -247,7 +247,7 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- **실행** (**!**) 단추를 클릭합니다. 다음 표에서 예가 `uspGetWhereUsedProductID` 값에서 제공 하는 매개 변수를 **쿼리 매개 변수 정의** 대화 상자.  
+ **실행** ( **!** ) 단추를 클릭합니다. 다음 표에서 예가 `uspGetWhereUsedProductID` 값에서 제공 하는 매개 변수를 **쿼리 매개 변수 정의** 대화 상자.  
   
 |||  
 |-|-|  
@@ -258,7 +258,7 @@ uspGetWhereUsedProductID
  **명령 typeTableDirect**를 선택하면 텍스트 기반 쿼리 디자이너에 쿼리 창 및 결과 창이 제공됩니다. 테이블을 입력하고 **실행** 단추를 클릭할 경우 해당 테이블의 모든 열이 반환됩니다.  
   
 #### <a name="example"></a>예제  
- 데이터 원본 유형이 OLE DB인 경우 다음 데이터 집합 쿼리는 `ContactType` 테이블의 모든 연락처 유형에 대한 결과 집합을 반환합니다.  
+ 데이터 원본 유형이 OLE DB인 경우 다음 데이터 세트 쿼리는 `ContactType` 테이블의 모든 연락처 유형에 대한 결과 집합을 반환합니다.  
   
  `ContactType`  
   

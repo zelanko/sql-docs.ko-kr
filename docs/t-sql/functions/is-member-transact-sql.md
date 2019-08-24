@@ -34,7 +34,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68086719"
 ---
-# <a name="ismember-transact-sql"></a>IS_MEMBER(Transact-SQL)
+# <a name="is_member-transact-sql"></a>IS_MEMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   현재 사용자가 지정된 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 그룹 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 역할의 멤버인지 여부를 표시합니다. Azure Active Directory 그룹에는 IS_MEMBER 함수가 지원되지 않습니다.  
@@ -67,9 +67,9 @@ IS_MEMBER ( { 'group' | 'role' } )
 |------------------|-----------------|  
 |0|현재 사용자가 *그룹* 또는 *역할*의 멤버가 아닙니다.|  
 |1|현재 사용자가 *그룹* 또는 *역할*의 멤버입니다.|  
-|NULL|*그룹* 또는 *역할*이 유효하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 응용 프로그램 역할을 사용하는 로그인에서 쿼리하는 경우 Windows 그룹에 대해 NULL을 반환합니다.|  
+|NULL|*그룹* 또는 *역할*이 유효하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 애플리케이션 역할을 사용하는 로그인에서 쿼리하는 경우 Windows 그룹에 대해 NULL을 반환합니다.|  
   
- IS_MEMBER는 Windows에서 만든 액세스 토큰을 검사하여 Windows 그룹 멤버를 결정합니다. 액세스 토큰은 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결한 후에 변경된 그룹 멤버 변경 내용을 반영하지 않습니다. Windows 그룹 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램 역할에서 쿼리할 수 없습니다.  
+ IS_MEMBER는 Windows에서 만든 액세스 토큰을 검사하여 Windows 그룹 멤버를 결정합니다. 액세스 토큰은 사용자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결한 후에 변경된 그룹 멤버 변경 내용을 반영하지 않습니다. Windows 그룹 멤버는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 애플리케이션 역할에서 쿼리할 수 없습니다.  
   
  데이터베이스 역할에서 멤버를 추가하고 제거하려면 [ALTER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-role-transact-sql.md)를 사용합니다. 모든 서버 역할에서 멤버를 추가하고 제거하려면 [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-role-transact-sql.md)를 사용합니다.  
   

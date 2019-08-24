@@ -28,7 +28,7 @@ ms.locfileid: "67943134"
 # <a name="concat-transact-sql"></a>CONCAT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
-이 함수는 둘 이상의 문자열 값을 종단 간 방식으로 연결하거나 조인한 결과 문자열을 반환합니다. (연결 중 구분 값을 추가하려면 [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)를 참조하세요.)
+이 함수는 둘 이상의 문자열 값을 엔드투엔드 방식으로 연결하거나 조인한 결과 문자열을 반환합니다. (연결 중 구분 값을 추가하려면 [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)를 참조하세요.)
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   

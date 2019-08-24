@@ -22,9 +22,9 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014843"
 ---
 # <a name="executing-an-updategram-by-using-ado-sqlxml-40"></a>ADO를 사용하여 updategram 실행(SQLXML 4.0)
-  이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 응용 프로그램은 ADO를 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 updategram을 실행합니다. 사용되는 updategram은 특정 직원의 성을 업데이트합니다. 이 예에서는 AdventureWorks 예제 데이터베이스를 사용합니다.  
+  이 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic 애플리케이션은 ADO를 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 연결하고 updategram을 실행합니다. 사용되는 updategram은 특정 직원의 성을 업데이트합니다. 이 예에서는 AdventureWorks 예제 데이터베이스를 사용합니다.  
   
- 이 예제 응용 프로그램에서는 다음 작업이 수행됩니다.  
+ 이 예제 애플리케이션에서는 다음 작업이 수행됩니다.  
   
 -   합니다 **conn** 개체 (**ADODB 합니다. 연결**)에 연결 하는 실행 중인 인스턴스 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 특정 서버 컴퓨터입니다.  
   
@@ -182,7 +182,7 @@ End Sub
 ```  
   
 ## <a name="passing-parameters"></a>매개 변수 전달  
- 앞서 살펴보았던 Visual Basic 응용 프로그램에서는 매개 변수가 전달되지 않았습니다. 이 응용 프로그램에는 **ContactID** 하 고 **MiddleName** 값으로 updategram에 매개 변수화 된 입력으로 전달 됩니다.  
+ 앞서 살펴보았던 Visual Basic 애플리케이션에서는 매개 변수가 전달되지 않았습니다. 이 응용 프로그램에는 **ContactID** 하 고 **MiddleName** 값으로 updategram에 매개 변수화 된 입력으로 전달 됩니다.  
   
 ```vb  
 Private Sub Form_Load()  

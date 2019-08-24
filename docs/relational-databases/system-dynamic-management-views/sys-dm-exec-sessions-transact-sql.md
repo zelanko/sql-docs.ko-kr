@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67936901"
 ---
-# <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
+# <a name="sysdm_exec_sessions-transact-sql"></a>sys.dm_exec_sessions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 인증된 세션당 행 하나를 반환합니다. sys.dm_exec_sessions는 모든 활성 사용자 연결 및 내부 태스크에 대한 정보를 표시하는 서버 범위 뷰입니다. 이 정보에는 클라이언트 버전, 클라이언트 프로그램 이름, 클라이언트 로그인 시간, 로그인 사용자, 현재 세션 설정 등이 포함됩니다. sys.dm_exec_sessions를 사용하여 우선 현재 시스템 로드를 보고 원하는 세션을 확인한 다음 다른 동적 관리 뷰 또는 동적 관리 함수를 사용하여 해당 세션에 대한 자세한 내용을 볼 수 있습니다.  
@@ -40,7 +40,7 @@ ms.locfileid: "67936901"
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|각각의 기본 활성 연결과 연결된 세션을 식별합니다. Null을 허용하지 않습니다.|  
 |login_time|**datetime**|세션이 설정된 시간입니다. Null을 허용하지 않습니다.|  
-|host_name|**nvarchar(128)**|세션에 따라 달라지는 클라이언트 워크스테이션의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.<br /><br /> **보안 정보:** 클라이언트 응용 프로그램에서 워크스테이션 이름을 제공하므로 제공된 데이터가 정확하지 않을 수 있습니다. HOST_NAME을 보안 용도로는 사용하지 마세요.|  
+|host_name|**nvarchar(128)**|세션에 따라 달라지는 클라이언트 워크스테이션의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.<br /><br /> **보안 정보:** 클라이언트 애플리케이션에서 워크스테이션 이름을 제공하므로 제공된 데이터가 정확하지 않을 수 있습니다. HOST_NAME을 보안 용도로는 사용하지 마세요.|  
 |program_name|**nvarchar(128)**|세션을 시작한 클라이언트 프로그램의 이름입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |host_process_id|**int**|세션을 시작한 클라이언트 프로그램의 프로세스 ID입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  
 |client_version|**int**|클라이언트가 서버에 연결하는 데 사용하는 TDS 프로토콜 버전의 인터페이스입니다. 내부 세션에 대한 값은 NULL입니다. Null을 허용합니다.|  

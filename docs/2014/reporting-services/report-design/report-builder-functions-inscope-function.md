@@ -31,7 +31,7 @@ InScope(scope)
   
 #### <a name="parameters"></a>매개 변수  
  *범위*  
- (`String`) 범위를 지정하는 데이터 집합, 데이터 영역 또는 그룹의 이름입니다.  
+ (`String`) 범위를 지정하는 데이터 세트, 데이터 영역 또는 그룹의 이름입니다.  
   
 ## <a name="return-type"></a>반환 형식  
  `Boolean`를 반환합니다.  

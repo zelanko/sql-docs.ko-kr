@@ -22,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68770946"
 ---
-# <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher(Transact-SQL)
+# <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   배포자를 사용하여 게시자의 속성을 반환합니다. 이 저장 프로시저는 모든 데이터베이스의 배포자에서 실행됩니다.  
@@ -54,7 +54,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**active**|**bit**|원격 게시자가 배포자로 로컬 서버를 사용하는지 여부를 지정합니다.<br /><br /> **0** = 아니요<br /><br /> **1** = 예|  
 |**working_directory**|**nvarchar(255)**|작업 디렉터리의 이름입니다.|  
 |**신뢰할 수 있는**|**bit**|게시자가 배포자에 연결할 때 암호가 필요한지 여부입니다. 이상 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 버전의 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 경우이는 항상 **0**을 반환 하며,이는 암호가 필요 함을 의미 합니다.|  
-|**thirdparty_flag**|**bit**|게시를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 타사 응용 프로그램에 사용할 수 있는지 여부를 지정합니다.<br /><br /> **0, oracle 또는** = oracle Gateway 게시자입니다.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = 게시자가 타사 응용 프로그램 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 사용 하 여 통합 되었습니다.|  
+|**thirdparty_flag**|**bit**|게시를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 또는 타사 애플리케이션에 사용할 수 있는지 여부를 지정합니다.<br /><br /> **0, oracle 또는** = oracle Gateway 게시자입니다.[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = 게시자가 타사 응용 프로그램 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 을 사용 하 여 통합 되었습니다.|  
 |**publisher_type**|**sysname**|게시자의 유형으로 다음 중 하나일 수 있습니다.<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE 게이트웨이**|  
 |**publisher_data_source**|**nvarchar(4000)**|게시자의 OLE DB 데이터 원본 이름입니다.|  
 |**storage_connection_string**|**nvarchar(4000)**|배포자 또는 게시자 Azure SQL Database의 작업 디렉터리에 대 한 저장소 액세스 키입니다.|  

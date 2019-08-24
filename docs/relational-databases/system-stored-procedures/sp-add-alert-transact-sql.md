@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67942389"
 ---
-# <a name="spaddalert-transact-sql"></a>sp_add_alert(Transact-SQL)
+# <a name="sp_add_alert-transact-sql"></a>sp_add_alert(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   경고를 작성합니다.  
@@ -122,7 +122,7 @@ sp_add_alert [ @name = ] 'name'
 ## <a name="remarks"></a>Remarks  
  **sp_add_alert** 에서 실행 해야 합니다 **msdb** 데이터베이스입니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 응용 프로그램에 의해 생성된 오류 또는 메시지가 Windows 응용 프로그램 로그로 전달되어 경고가 발생하는 상황입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 애플리케이션에 의해 생성된 오류 또는 메시지가 Windows 애플리케이션 로그로 전달되어 경고가 발생하는 상황입니다.  
   
 -   심각도 19 이상인 **sys.messages** 오류  
   
@@ -138,7 +138,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스가 실행 중인지 여부  
   
--   Windows 응용 프로그램 로그에 표시된 이벤트  
+-   Windows 애플리케이션 로그에 표시된 이벤트  
   
 -   경고의 설정 여부  
   

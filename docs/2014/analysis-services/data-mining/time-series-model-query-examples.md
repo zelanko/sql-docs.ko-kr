@@ -201,7 +201,7 @@ AND NODE_TYPE = 15
  쿼리 예제 및 사용에 대 한 구문에 대 한 자세한 내용은 `REPLACE_MODEL_CASES` 하 고 `EXTEND_MODEL_CASES`를 참조 하십시오 [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
 ###  <a name="bkmk_MissingValues"></a> 시계열 모델의 누락된 값 대체  
- `PREDICTION JOIN` 문을 사용하여 시계열 모델에 새 데이터를 추가하는 경우 새 데이터 집합에는 누락되는 값이 있을 수 없습니다. 완전하지 않은 계열이 있는 경우 모델은 null, 숫자 평균, 특정 숫자 평균 또는 예측된 값 중 하나를 사용하여 누락된 값을 제공해야 합니다. `EXTEND_MODEL_CASES`를 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 원래 모델 기반의 예측으로 누락된 값을 대체합니다. 사용 하는 경우 `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 지정 하는 값을 사용 하 여 누락 값을 대체 합니다 *MISSING_VALUE_SUBSTITUTION* 매개 변수입니다.  
+ `PREDICTION JOIN` 문을 사용하여 시계열 모델에 새 데이터를 추가하는 경우 새 데이터 세트에는 누락되는 값이 있을 수 없습니다. 완전하지 않은 계열이 있는 경우 모델은 null, 숫자 평균, 특정 숫자 평균 또는 예측된 값 중 하나를 사용하여 누락된 값을 제공해야 합니다. `EXTEND_MODEL_CASES`를 지정하면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]는 원래 모델 기반의 예측으로 누락된 값을 대체합니다. 사용 하는 경우 `REPLACE_MODEL_CASES`, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 에서 지정 하는 값을 사용 하 여 누락 값을 대체 합니다 *MISSING_VALUE_SUBSTITUTION* 매개 변수입니다.  
   
 ## <a name="list-of-prediction-functions"></a>예측 함수 목록  
  모든 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 알고리즘은 공통 함수 집합을 지원합니다. 그러나 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 시계열 알고리즘은 다음 표에 나열된 함수를 추가로 지원합니다.  

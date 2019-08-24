@@ -167,7 +167,7 @@ ms.locfileid: "66087767"
 |Reporting Services RDL 보고서|보고서 작성기 또는 보고서 디자이너에서 만든 RDL 보고서에는 SharePoint용 PowerPivot에 호스트되는 Excel 데이터 모델은 물론 모든 Analysis Services 모델을 사용할 수 있습니다.|  
 |PerformancePoint 대시보드|SharePoint에서 PerformancePoint 대시보드는 Excel 데이터 모델을 포함하여 모든 Analysis Services 데이터베이스에 연결할 수 있습니다. 자세한 내용은 [데이터 연결 만들기(PerformancePoint Services)](https://go.microsoft.com/fwlink/?linkdID=218155)를 참조하세요.|  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Office 365 또는 Power BI 사이트|테이블 형식 모델에만 해당합니다.|  
-|SharePoint 온-프레미스의 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]|SharePoint의 ClickOnce 응용 프로그램으로 실행되는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]는 Analysis Services 큐브 또는 테이블 형식 모델을 사용할 수 있습니다.|  
+|SharePoint 온-프레미스의 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]|SharePoint의 ClickOnce 애플리케이션으로 실행되는 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]는 Analysis Services 큐브 또는 테이블 형식 모델을 사용할 수 있습니다.|  
   
 ##  <a name="bkmk_deploymentmode"></a> 다차원 및 테이블 형식 솔루션의 서버 배포 모드  
  Analysis Services 인스턴스는 서버의 작업 컨텍스트를 설정하는 세 가지 모드 중 하나로 설치됩니다. 설치하는 서버 모드에 따라 해당 서버에 배포할 수 있는 솔루션 유형이 결정됩니다. 세 모드 간의 가장 큰 차이점은 스토리지 및 메모리 아키텍처이지만 그 밖에 다른 차이점도 있습니다. 다음 표에서는 세 가지 서버 모드에 대해 간단히 설명합니다. 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  

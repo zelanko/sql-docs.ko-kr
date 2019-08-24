@@ -82,7 +82,7 @@ CREATE CONTRACT contract_name
   
  계약은 시작자가 메시지를 보낼 수 있도록 허용해야 합니다. 계약이 하나 이상의 메시지 유형(SENT BY ANY 또는 SENT BY INITIATOR)을 포함하지 않으면 CREATE CONTRACT 문이 실패합니다.  
   
- 계약에 관계없이 서비스는 항상 메시지 유형 `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`, `https://schemas.microsoft.com/SQL/ServiceBroker/Error` 및 `https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`을 수신할 수 있습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 응용 프로그램에 대한 시스템 메시지에 이러한 메시지 유형을 사용합니다.  
+ 계약에 관계없이 서비스는 항상 메시지 유형 `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer`, `https://schemas.microsoft.com/SQL/ServiceBroker/Error` 및 `https://schemas.microsoft.com/SQL/ServiceBroker/EndDialog`을 수신할 수 있습니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 애플리케이션에 대한 시스템 메시지에 이러한 메시지 유형을 사용합니다.  
   
  계약은 임시 개체가 아닐 수 있습니다. #로 시작하는 계약 이름은 허용되지만 영구 개체입니다.  
   

@@ -43,7 +43,7 @@ ms.locfileid: "68057454"
 >  기본적으로 [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]에서 새 프로젝트를 만들 때는 **솔루션 탐색기** 창에 솔루션이 표시되지 않습니다. 이 기본 동작을 변경하려면 **도구** 메뉴에서 **옵션**을 클릭합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장한 다음 **일반**을 선택합니다. **일반** 페이지에서 **솔루션 항상 표시**를 선택합니다.  
 
 ## <a name="solutions-contain-projects"></a>솔루션은 프로젝트를 포함합니다.  
- 솔루션은 종단 간 비즈니스 솔루션을 개발할 때 사용되는 프로젝트를 그룹화 및 관리하는 컨테이너입니다. 솔루션을 사용하면 여러 프로젝트를 하나의 단위로 취급하고 비즈니스 솔루션에 관련된 하나 이상의 관련 프로젝트를 하나로 묶을 수 있습니다.  
+ 솔루션은 엔드투엔드 비즈니스 솔루션을 개발할 때 사용되는 프로젝트를 그룹화 및 관리하는 컨테이너입니다. 솔루션을 사용하면 여러 프로젝트를 하나의 단위로 취급하고 비즈니스 솔루션에 관련된 하나 이상의 관련 프로젝트를 하나로 묶을 수 있습니다.  
   
  솔루션에는 여러 형식의 프로젝트가 포함될 수 있습니다. [!INCLUDE[ssIS](../includes/ssis-md.md)] 디자이너를 사용하여 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 패키지를 만들려면 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 에서 제공하는 솔루션의 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]프로젝트를 사용합니다.  
   

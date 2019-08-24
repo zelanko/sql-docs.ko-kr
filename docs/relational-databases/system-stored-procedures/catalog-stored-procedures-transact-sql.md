@@ -28,7 +28,7 @@ ms.locfileid: "68078338"
 # <a name="catalog-stored-procedures-transact-sql"></a>카탈로그 저장 프로시저(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 ODBC 데이터 사전 기능을 구현하고 기본 시스템 테이블이 변경될 때 ODBC 응용 프로그램이 영향을 받지 않도록 격리하는 다음과 같은 시스템 저장 프로시저를 지원합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 ODBC 데이터 사전 기능을 구현하고 기본 시스템 테이블이 변경될 때 ODBC 애플리케이션이 영향을 받지 않도록 격리하는 다음과 같은 시스템 저장 프로시저를 지원합니다.  
   
 |||  
 |-|-|  

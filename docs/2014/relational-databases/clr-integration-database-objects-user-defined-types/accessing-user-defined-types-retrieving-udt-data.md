@@ -30,7 +30,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62874639"
 ---
 # <a name="retrieving-udt-data"></a>UDT 데이터 검색
-  클라이언트에서 UDT(사용자 정의 형식)를 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 UDT로 등록된 어셈블리를 클라이언트 응용 프로그램에서 사용할 수 있어야 합니다. UDT 어셈블리는 응용 프로그램과 같은 디렉터리나 GAC(전역 어셈블리 캐시)에 넣을 수 있습니다. 사용자의 프로젝트에서 어셈블리에 대한 참조를 설정할 수도 있습니다.  
+  클라이언트에서 UDT(사용자 정의 형식)를 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에서 UDT로 등록된 어셈블리를 클라이언트 애플리케이션에서 사용할 수 있어야 합니다. UDT 어셈블리는 애플리케이션과 같은 디렉터리나 GAC(전역 어셈블리 캐시)에 넣을 수 있습니다. 사용자의 프로젝트에서 어셈블리에 대한 참조를 설정할 수도 있습니다.  
   
 ## <a name="requirements-for-using-udts-in-adonet"></a>ADO.NET에서 UDT 사용을 위한 요구 사항  
  클라이언트에서 UDT를 만들려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 로드된 어셈블리와 클라이언트의 어셈블리가 호환되어야 합니다. `Native` 직렬화 형식으로 정의된 UDT의 경우 어셈블리가 구조적으로 호환되어야 하며, `UserDefined` 형식으로 정의된 어셈블리의 경우 클라이언트에서 어셈블리를 사용할 수 있어야 합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "62874639"
  클라이언트에 UDT 어셈블리의 복사본이 없어도 테이블의 UDT 열에서 원시 데이터를 검색할 수 있습니다.  
   
 > [!NOTE]  
->  **SqlClient** UDT 버전이 일치 하지 또는 다른 문제가 발생할 경우 UDT를 로드 하지 못할 수 있습니다. 이 경우에는 일반적인 문제 해결 메커니즘을 사용하여 호출 응용 프로그램에서 UDT를 포함하는 어셈블리를 찾지 못하는 이유를 확인하십시오. 자세한 내용은 .NET Framework 설명서에서 제목이 "관리 디버깅 도우미를 사용하여 오류 진단"인 항목을 참조하십시오.  
+>  **SqlClient** UDT 버전이 일치 하지 또는 다른 문제가 발생할 경우 UDT를 로드 하지 못할 수 있습니다. 이 경우에는 일반적인 문제 해결 메커니즘을 사용하여 호출 애플리케이션에서 UDT를 포함하는 어셈블리를 찾지 못하는 이유를 확인하십시오. 자세한 내용은 .NET Framework 설명서에서 제목이 "관리 디버깅 도우미를 사용하여 오류 진단"인 항목을 참조하십시오.  
   
 ## <a name="accessing-udts-with-a-sqldatareader"></a>SqlDataReader를 사용하여 UDT 액세스  
  클라이언트 코드에서 `System.Data.SqlClient.SqlDataReader`를 사용하여 UDT 열을 포함하는 결과 집합을 검색할 수 있습니다. 이러한 결과 집합은 개체의 인스턴스로 표시됩니다.  
@@ -59,7 +59,7 @@ ms.locfileid: "62874639"
 6.  콘솔 창에 결과가 표시됩니다.  
   
 > [!NOTE]  
->  응용 프로그램에 이미 UDT 어셈블리에 대한 참조가 있어야 합니다.  
+>  애플리케이션에 이미 UDT 어셈블리에 대한 참조가 있어야 합니다.  
   
 ```vb  
 Option Explicit On  

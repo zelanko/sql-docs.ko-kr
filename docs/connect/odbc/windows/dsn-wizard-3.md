@@ -49,7 +49,7 @@ FROM "Person.Contact"
 WHERE "LastName" = 'O''Brien'
 ```
 
-이 확인란을 선택하지 않으면 Microsoft Excel과 함께 제공되는 Microsoft 쿼리 유틸리티와 같이 따옴표가 붙은 식별자를 사용하는 응용 프로그램에서는 따옴표가 붙은 식별자가 있는 SQL 문을 생성할 때 오류가 발생합니다.
+이 확인란을 선택하지 않으면 Microsoft Excel과 함께 제공되는 Microsoft 쿼리 유틸리티와 같이 따옴표가 붙은 식별자를 사용하는 애플리케이션에서는 따옴표가 붙은 식별자가 있는 SQL 문을 생성할 때 오류가 발생합니다.
 
 ### <a name="use-ansi-nulls-paddings-and-warnings"></a>ANSI 널, 채움 문자 및 경고 사용
 
@@ -61,7 +61,7 @@ ANSI_WARNINGS가 설정되면 SQL Server는 ANSI 규칙은 위반하지만 Trans
 
 ANSI_PADDING이 설정되면 **varchar** 값의 후행 공백과 **varbinary** 값의 후행 0이 자동으로 잘리지 않습니다.
 
-### <a name="application-intent"></a>응용 프로그램 의도
+### <a name="application-intent"></a>애플리케이션 의도
 
 서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.
 

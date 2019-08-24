@@ -54,7 +54,7 @@ WRITETEXT [BULK]
  이진 데이터 스트림을 업로드하기 위해 업로드 도구를 사용합니다. 스트림은 도구가 TDS 프로토콜 수준에서 제공해야 합니다. 데이터 스트림이 없으면 쿼리 프로세서는 BULK 옵션을 무시합니다.  
   
 > [!IMPORTANT]  
->  BULK 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반 응용 프로그램에서 사용하지 않는 것이 좋습니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 버전에서 변경 또는 제거될 수 있습니다.  
+>  BULK 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기반 애플리케이션에서 사용하지 않는 것이 좋습니다. 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다음 버전에서 변경 또는 제거될 수 있습니다.  
   
  *table* **.column**  
  업데이트할 테이블 및 **text**, **ntext** 또는 **image** 열의 이름입니다. 테이블 이름 및 열 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 필요에 따라 데이터베이스 이름과 소유자 이름을 지정할 수 있습니다.  

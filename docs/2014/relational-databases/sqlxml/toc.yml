@@ -131,11 +131,11 @@
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ado-sqlxml-4-0.md
     - name: OLE DB를 사용하여 Updategram 실행(SQLXML 4.0)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/executing-an-updategram-by-using-ole-db-sqlxml-4-0.md
-    - name: 예제 ASP 응용 프로그램에서 Updategram 사용(SQLXML 4.0)
+    - name: 예제 ASP 애플리케이션에서 Updategram 사용(SQLXML 4.0)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-an-updategram-in-a-sample-asp-application-sqlxml-4-0.md
     - name: XML updategram에 대한 지침 및 제한 사항(SQLXML 4.0)
       href: ../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md
-    - name: Updategram 예제 응용 프로그램(SQLXML 4.0)
+    - name: Updategram 예제 애플리케이션(SQLXML 4.0)
       href: ../../database-engine/dev-guide/updategram-sample-applications-sqlxml-4-0.md
 - name: XML 데이터 대량 로드 수행(SQLXML 4.0)
   href: ../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md

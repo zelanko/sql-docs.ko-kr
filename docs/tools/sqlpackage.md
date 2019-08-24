@@ -75,17 +75,17 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server에 대한 쿼리를 실행할 때 명령 시간 제한(초)을 지정합니다.|
 |**/p:**|DacApplicationDescription=(STRING)|DACPAC 메타데이터에 저장할 애플리케이션 설명을 정의합니다.|
-|**/p:**|DacApplicationName=(STRING)|DACPAC 메타데이터에 저장할 응용 프로그램 이름을 정의했습니다. 기본값은 데이터베이스 이름입니다.|
+|**/p:**|DacApplicationName=(STRING)|DACPAC 메타데이터에 저장할 애플리케이션 이름을 정의했습니다. 기본값은 데이터베이스 이름입니다.|
 |**/p:**|DacMajorVersion=(INT32 '1')|DACPAC 메타데이터에 저장할 주 버전을 정의합니다.|
 |**/p:**|DacMinorVersion=(INT32 '0')|DACPAC 메타데이터에 저장할 부 버전을 정의합니다.|
 |**/p:**|ExtractAllTableData=(BOOLEAN)|모든 사용자 테이블의 데이터를 추출 하는지 여부를 나타냅니다. ' T r u e ' 이면 모든 사용자 테이블의 데이터를 추출 하 고 데이터를 추출 하기 위한 개별 사용자 테이블을 지정할 수 없습니다. ' F a l s e ' 이면 데이터를 추출할 사용자 테이블을 하나 이상 지정 합니다.|
-|**/p:**|ExtractApplicationScopedObjectsOnly = (부울 ' True ')|True인 경우 지정된 원본에 대해 응용 프로그램 범위 개체만 추출합니다. False인 경우 지정된 원본에 대해 모든 개체를 추출합니다.|
+|**/p:**|ExtractApplicationScopedObjectsOnly = (부울 ' True ')|True인 경우 지정된 원본에 대해 애플리케이션 범위 개체만 추출합니다. False인 경우 지정된 원본에 대해 모든 개체를 추출합니다.|
 |**/p:**|ExtractReferencedServerScopedElements = (부울 ' True ')|True인 경우 원본 데이터베이스 개체에서 참조하는 로그인, 서버 감사 및 자격 증명 개체를 추출합니다.|
 |**/p:**|ExtractUsageProperties=(BOOLEAN)|테이블 행 개수, 인덱스 크기를 비롯한 사용 속성을 데이터베이스에서 추출할지를 지정합니다.|
 |**/p:**|IgnoreExtendedProperties=(BOOLEAN)|확장된 속성을 무시할지 여부를 지정합니다.|
 |**/p:**|IgnorePermissions = (부울 ' True ')|권한을 무시할지 여부를 지정합니다.|
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|사용자와 로그인 간의 관계를 무시할지 여부를 지정합니다.|
-|**/p:**|Storage=({File&#124;Memory} 'File')|추출 중에 사용되는 스키마 모델에 대한 지원 저장소 유형을 지정합니다.|
+|**/p:**|Storage=({File&#124;Memory} 'File')|추출 중에 사용되는 스키마 모델에 대한 지원 스토리지 유형을 지정합니다.|
 |**/p:**|TableData=(STRING)|데이터가 추출 되는 테이블을 나타냅니다. Schema_name. table_identifier 형식으로 이름 부분을 둘러싼 괄호를 포함 하거나 제외 하 고 테이블 이름을 지정 합니다.|
 |**/p:**|VerifyExtraction=(BOOLEAN)|추출된 dacpac를 확인할지 여부를 지정합니다.|
 
@@ -265,7 +265,7 @@ SqlPackage.exe Export 작업은 SQL Server 또는 Azure SQL Database의 라이�
 |속성|값|설명|
 |---|---|---|
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server에 대한 쿼리를 실행할 때 명령 시간 제한(초)을 지정합니다.|
-|**/p:**|Storage=({File&#124;Memory} 'File')|추출 중에 사용되는 스키마 모델에 대한 지원 저장소 유형을 지정합니다.|
+|**/p:**|Storage=({File&#124;Memory} 'File')|추출 중에 사용되는 스키마 모델에 대한 지원 스토리지 유형을 지정합니다.|
 |**/p:**|TableData=(STRING)|데이터가 추출 되는 테이블을 나타냅니다. Schema_name. table_identifier 형식으로 이름 부분을 둘러싼 괄호를 포함 하거나 제외 하 고 테이블 이름을 지정 합니다.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|필요한 대상 엔진 버전을 지정합니다. 이는 생성 된 bacpac에서 메모리 최적화 테이블과 같은 V12 기능을 사용 하 여 Azure SQL Database 서버에서 지 원하는 개체를 허용할지 여부에 영향을 줍니다.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Microsoft Azure SQL Database v12에 대해 지원되는 전체 텍스트 문서 유형을 확인할지 여부를 지정합니다.|

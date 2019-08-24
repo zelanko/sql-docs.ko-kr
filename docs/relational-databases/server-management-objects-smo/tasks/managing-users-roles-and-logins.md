@@ -17,7 +17,7 @@ ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ae6c07026bbbc12fc526eca1b5079bcc9cf36782
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68030261"
@@ -25,7 +25,7 @@ ms.locfileid: "68030261"
 # <a name="managing-users-roles-and-logins"></a>사용자, 역할 및 로그인 관리
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  SMO에서 로그인은 <xref:Microsoft.SqlServer.Management.Smo.Login> 개체로 표시됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그온이 있으면 서버 역할에 추가할 수 있습니다. 서버 역할은 <xref:Microsoft.SqlServer.Management.Smo.ServerRole> 개체로 표시됩니다. 데이터베이스 역할은 <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> 개체로 표시되고 응용 프로그램 역할은 <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> 개체로 표시됩니다.  
+  SMO에서 로그인은 <xref:Microsoft.SqlServer.Management.Smo.Login> 개체로 표시됩니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 로그온이 있으면 서버 역할에 추가할 수 있습니다. 서버 역할은 <xref:Microsoft.SqlServer.Management.Smo.ServerRole> 개체로 표시됩니다. 데이터베이스 역할은 <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> 개체로 표시되고 애플리케이션 역할은 <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> 개체로 표시됩니다.  
   
  서버 수준과 연관된 권한은 <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> 개체의 속성으로 나열됩니다. 개별 로그온 계정에 대해 서버 수준 권한을 부여, 거부 또는 취소할 수 있습니다.  
   

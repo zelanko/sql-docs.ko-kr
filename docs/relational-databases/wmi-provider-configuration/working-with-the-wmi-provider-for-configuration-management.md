@@ -37,7 +37,7 @@ ms.locfileid: "68139278"
   
 ## <a name="specifying-a-connection-string"></a>연결 문자열 지정
 
-응용 프로그램은 공급자가 정의한 WMI 네임스페이스에 연결하여 구성 관리용 WMI 공급자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 보냅니다. Windows WMI 서비스는이 네임 스페이스를 공급자 DLL 및 메모리에 로드 합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 단일 WMI 네임스페이스로 나타냅니다.
+애플리케이션은 공급자가 정의한 WMI 네임스페이스에 연결하여 구성 관리용 WMI 공급자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스로 보냅니다. Windows WMI 서비스는이 네임 스페이스를 공급자 DLL 및 메모리에 로드 합니다. 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스는 단일 WMI 네임스페이스로 나타냅니다.
 
 네임 스페이스 형식은 기본값으로 사용 됩니다. 형식으로 `VV` SQL Server의 주 버전입니다. 실행 하 여 수를 검색할 수 `SELECT @@VERSION;`입니다.
 

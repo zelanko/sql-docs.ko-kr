@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68111329"
 ---
-# <a name="scopeidentity-transact-sql"></a>SCOPE_IDENTITY(Transact-SQL)
+# <a name="scope_identity-transact-sql"></a>SCOPE_IDENTITY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   같은 범위에서 ID 열에 삽입된 마지막 ID 값을 반환합니다. 범위는 저장 프로시저, 트리거, 함수 또는 일괄 처리와 같은 모듈입니다. 따라서 두 문이 같은 저장 프로시저, 함수 또는 일괄 처리에 있으면 같은 범위에 있는 것입니다.  
@@ -58,7 +58,7 @@ SCOPE_IDENTITY()
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-identity-and-scopeidentity-with-triggers"></a>1\. 트리거에 @@IDENTITY 및 SCOPE_IDENTITY 사용  
+### <a name="a-using-identity-and-scope_identity-with-triggers"></a>1\. 트리거에 @@IDENTITY 및 SCOPE_IDENTITY 사용  
  다음 예에서는 두 개의 테이블 `TZ` 및 `TY`를 만들고 `TZ`에서 INSERT 트리거를 만듭니다. `TZ` 테이블에 행이 삽입될 때 트리거(`Ztrig`)가 발생하고 `TY`에서 행을 삽입합니다.  
   
 ```sql  
@@ -132,7 +132,7 @@ SCOPE_IDENTITY
 115  
 ```  
   
-### <a name="b-using-identity-and-scopeidentity-with-replication"></a>2\. 복제에 @@IDENTITY 및 SCOPE_IDENTITY() 사용  
+### <a name="b-using-identity-and-scope_identity-with-replication"></a>2\. 복제에 @@IDENTITY 및 SCOPE_IDENTITY() 사용  
  다음 예에서는 병합 복제용으로 게시된 데이터베이스에서 삽입을 위해 `@@IDENTITY` 및 `SCOPE_IDENTITY()`를 사용하는 방법을 보여 줍니다. 이 예의 두 테이블은 모두 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스에 있습니다. `Person.ContactType`은 게시되지 않았고 `Sales.Customer`는 게시되었습니다. 병합 복제는 게시된 테이블에 트리거를 추가합니다. 따라서 `@@IDENTITY`는 사용자 테이블에 대한 삽입 대신 복제 시스템 테이블에 대한 삽입에서 값을 반환할 수 있습니다.  
   
  `Person.ContactType` 테이블의 최대 ID 값은 20입니다. 테이블에 행을 삽입하면 `@@IDENTITY` 및 `SCOPE_IDENTITY()`에서 동일한 값을 반환합니다.  
@@ -156,7 +156,7 @@ SCOPE_IDENTITY
 21
 ```  
   
- `Sales.Customer` 테이블의 최대 ID 값은 29483입니다. 테이블에 행을 삽입하면 `@@IDENTITY` 및 `SCOPE_IDENTITY()`에서 서로 다른 값을 반환합니다. `SCOPE_IDENTITY()`는 사용자 테이블에 대한 삽입에서 값을 반환하는 반면 `@@IDENTITY`는 복제 시스템 테이블에 대한 삽입에서 값을 반환합니다. 삽입된 ID 값에 액세스해야 하는 응용 프로그램에 대해 `SCOPE_IDENTITY()`를 사용합니다.  
+ `Sales.Customer` 테이블의 최대 ID 값은 29483입니다. 테이블에 행을 삽입하면 `@@IDENTITY` 및 `SCOPE_IDENTITY()`에서 서로 다른 값을 반환합니다. `SCOPE_IDENTITY()`는 사용자 테이블에 대한 삽입에서 값을 반환하는 반면 `@@IDENTITY`는 복제 시스템 테이블에 대한 삽입에서 값을 반환합니다. 삽입된 ID 값에 액세스해야 하는 애플리케이션에 대해 `SCOPE_IDENTITY()`를 사용합니다.  
   
 ```sql  
 INSERT INTO Sales.Customer ([TerritoryID],[PersonID]) VALUES (8,NULL);  

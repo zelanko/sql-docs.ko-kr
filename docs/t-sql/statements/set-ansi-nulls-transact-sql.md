@@ -32,7 +32,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67929174"
 ---
-# <a name="set-ansinulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
+# <a name="set-ansi_nulls-transact-sql"></a>SET ANSI_NULLS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 Null 값과 함께 사용될 경우 Equals(=)와 Not Equal To(<>) 비교 연산자의 ISO 호환 동작을 지정합니다.  
@@ -89,7 +89,7 @@ ANSI_NULLS 데이터베이스 옵션이나 SET ANSI_NULLS 설정에 관계없이
 > [!NOTE]  
 > ANSI_NULLS는 계산 열이나 인덱싱된 뷰의 인덱스를 처리할 때 필요한 값으로 설정해야 하는 7가지 SET 옵션 중 하나입니다. `ANSI_PADDING`, `ANSI_WARNINGS`, `ARITHABORT`, `QUOTED_IDENTIFIER` 및 `CONCAT_NULL_YIELDS_NULL` 옵션도 ON으로 설정해야 하고 `NUMERIC_ROUNDABORT`를 OFF로 설정해야 합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결될 때 자동으로 ANSI_NULLS를 ON으로 설정합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하기 전에 응용 프로그램에 설정된 OLE DB 연결 속성에서 이 설정을 구성할 수 있습니다. SET ANSI_NULLS의 기본값은 OFF입니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]용 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 연결될 때 자동으로 ANSI_NULLS를 ON으로 설정합니다. ODBC 데이터 원본과 ODBC 연결 특성 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 연결하기 전에 애플리케이션에 설정된 OLE DB 연결 속성에서 이 설정을 구성할 수 있습니다. SET ANSI_NULLS의 기본값은 OFF입니다.  
   
 ANSI_DEFAULTS 옵션이 ON이면 ANSI_NULLS가 활성화됩니다.  
   

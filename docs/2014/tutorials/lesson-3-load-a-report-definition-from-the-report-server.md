@@ -22,7 +22,7 @@ ms.locfileid: "63042519"
   
 ### <a name="to-load-a-report-definition"></a>보고서 정의를 로드하려면  
   
-1.  맨 위에 있는 private 필드를 추가 합니다 `ReportUpdater` 클래스 (사용 하는 경우 모듈 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)])에 대 한는 `Report` 클래스입니다. 이 필드는 응용 프로그램의 수명이 지속되는 동안 보고서 서버에서 로드된 보고서에 대한 참조를 유지 관리하는 데 사용됩니다.  
+1.  맨 위에 있는 private 필드를 추가 합니다 `ReportUpdater` 클래스 (사용 하는 경우 모듈 [!INCLUDE[vbprvb](../includes/vbprvb-md.md)])에 대 한는 `Report` 클래스입니다. 이 필드는 애플리케이션의 수명이 지속되는 동안 보고서 서버에서 로드된 보고서에 대한 참조를 유지 관리하는 데 사용됩니다.  
   
     ```csharp  
     private Report _report;  

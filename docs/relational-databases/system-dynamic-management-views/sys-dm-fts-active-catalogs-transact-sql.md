@@ -27,13 +27,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68265973"
 ---
-# <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs(Transact-SQL)
+# <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   서버에서 일부 채우기 작업이 진행 중인 전체 텍스트 카탈로그에 대한 정보를 반환합니다.  
   
 > [!NOTE]
->  이후 버전에서 다음 열이 제거 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused, previous_status, previous_status_description, row_count_in_thousands, 상태, status_description 및 worker_count 합니다. 향후 개발 작업에서는 이러한 열을 사용하지 않도록 하고 현재 이러한 열을 사용하는 응용 프로그램은 수정하십시오.  
+>  이후 버전에서 다음 열이 제거 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: is_paused, previous_status, previous_status_description, row_count_in_thousands, 상태, status_description 및 worker_count 합니다. 향후 개발 작업에서는 이러한 열을 사용하지 않도록 하고 현재 이러한 열을 사용하는 애플리케이션은 수정하십시오.  
   
  
 |열 이름|데이터 형식|설명|  

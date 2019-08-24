@@ -39,7 +39,7 @@ public java.sql.ResultSet getClientInfoProperties()
  이 getClientInfoProperties 메서드는 java .sql. DatabaseMetaData 인터페이스의 getClientInfoProperties 메서드에 의해 지정 됩니다.  
   
 > [!NOTE]  
->  이 메서드는 빈 결과 집합을 반환합니다. 드라이버는 **applicationname** 만 설정 하 고 연결 시에는 **applicationname** 을 설정 하도록 지원 합니다. SQL Server에서는 연결이 설정된 후 클라이언트 응용 프로그램 정보에 대한 업데이트를 지원하지 않습니다.  
+>  이 메서드는 빈 결과 집합을 반환합니다. 드라이버는 **applicationname** 만 설정 하 고 연결 시에는 **applicationname** 을 설정 하도록 지원 합니다. SQL Server에서는 연결이 설정된 후 클라이언트 애플리케이션 정보에 대한 업데이트를 지원하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerDatabaseMetaData 멤버](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   

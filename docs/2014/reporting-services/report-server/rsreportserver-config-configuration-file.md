@@ -183,7 +183,7 @@ ms.locfileid: "66103225"
 |**EnableAuthPersistence**|인증을 연결 시 수행할지, 아니면 요청마다 수행할지를 결정합니다.<br /><br /> 유효한 값은 `True`(기본값)나 `False`입니다. `True`로 설정하면 같은 연결의 이후 요청이 첫 번째 요청의 가장 컨텍스트를 가정합니다.<br /><br /> ISA 서버와 같은 프록시 서버 소프트웨어를 사용하여 보고서 서버에 액세스하는 경우에는 이 값을 `False`로 설정해야 합니다. 프록시 서버를 사용하면 여러 사용자가 프록시 서버의 단일 연결을 사용할 수 있습니다. 이 시나리오에서는 각 사용자 요청이 별도로 인증되도록 인증 지속성을 사용하지 않아야 합니다. 설정 하지 않은 경우 **EnableAuthPersistence** 에 `False`, 모든 사용자가 첫 번째 요청의 가장 컨텍스트를 사용 하 여 연결 합니다.|N,S|  
   
 ##  <a name="bkmk_service"></a> Service(RSReportServer.config 파일)  
- `Service`는 서비스 전체에 적용되는 응용 프로그램 설정을 지정합니다.  
+ `Service`는 서비스 전체에 적용되는 애플리케이션 설정을 지정합니다.  
   
  다음 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지(N) 또는 SharePoint 모드 보고서 서버에 적용되는지(S) 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "66103225"
 |**IsRdceEnabled**|RDCE(Report Definition Customization Extension) 설정 여부를 지정합니다. 유효한 값은 `True` 및 `False`입니다.|N,S|  
   
 ##  <a name="bkmk_UI"></a> UI(RSReportServer.config 파일)  
- `UI`는 보고서 관리자 응용 프로그램에 적용되는 구성 설정을 지정합니다.  
+ `UI`는 보고서 관리자 애플리케이션에 적용되는 구성 설정을 지정합니다.  
   
  다음 표의 마지막 열은 해당 설정이 기본 모드 보고서 서버에 적용되는지(N) 또는 SharePoint 모드 보고서 서버에 적용되는지(S) 또는 두 가지 서버 모두에 적용되는지를 나타냅니다.  
   

@@ -98,13 +98,13 @@ internal static bool VerifyPassword(string suppliedUserName,
   
  Reporting Services 웹 서비스의 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드는 인증을 위해 자격 증명을 보고서 서버에 제출하는 데 사용됩니다. 웹 서비스에서는 검사된 로그온 요청에 대해 HTTP 헤더를 사용하여 서버에서 클라이언트로 인증 티켓("쿠키"라고 함)을 전달합니다.  
   
- 다음 그림은 사용자 지정 인증 확장 프로그램을 사용하도록 구성된 보고서 서버와 함께 배포된 응용 프로그램의 경우 웹 서비스에 사용자를 인증하는 메서드를 나타냅니다.  
+ 다음 그림은 사용자 지정 인증 확장 프로그램을 사용하도록 구성된 보고서 서버와 함께 배포된 애플리케이션의 경우 웹 서비스에 사용자를 인증하는 메서드를 나타냅니다.  
   
  ![Reporting Services 보안 인증 흐름](../../../reporting-services/extensions/security-extension/media/rosettasecurityextensionauthenticationflow.gif "Reporting Services 보안 인증 흐름")  
   
  그림 2에 나온 대로 인증 프로세스는 다음과 같습니다.  
   
-1.  클라이언트 응용 프로그램에서 사용자를 인증하도록 웹 서비스 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드를 호출합니다.  
+1.  클라이언트 애플리케이션에서 사용자를 인증하도록 웹 서비스 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드를 호출합니다.  
   
 2.  웹 서비스에서 보안 확장 프로그램, 특히 **IAuthenticationExtension2**를 구현하는 클래스의 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 메서드를 호출합니다.  
   
@@ -112,7 +112,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 4.  인증이 성공하면 웹 서비스에서 쿠키를 만들고 세션을 위해 관리합니다.  
   
-5.  웹 서비스는 HTTP 헤더에서 인증 티켓을 호출 응용 프로그램에 반환합니다.  
+5.  웹 서비스는 HTTP 헤더에서 인증 티켓을 호출 애플리케이션에 반환합니다.  
   
  웹 서비스에서 보안 확장 프로그램을 통해 사용자를 성공적으로 인증하면 이후 요청에 사용되는 쿠키를 생성합니다. 보고서 서버에 보안 기관이 포함되어 있지 않으므로 쿠키는 사용자 지정 보안 기관 내에 계속 유지되지 않을 수 있습니다. 쿠키는 <xref:ReportService2010.ReportingService2010.LogonUser%2A> 웹 서비스 메서드에서 반환되고 이후 웹 서비스 메서드 호출 및 URL 액세스에서 사용됩니다.  
   
@@ -128,7 +128,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
  폼 인증은 일반적으로 Windows 이외의 플랫폼에 대한 계정 및 인증을 지원하기 위해 구현됩니다. 보고서 서버 액세스를 요청하는 사용자는 그래픽 인터페이스를 볼 수 있으며, 제공된 자격 증명은 인증을 위해 보안 기관에 제출됩니다.  
   
- 폼 인증에서는 사람이 직접 자격 증명을 입력해야 합니다. Reporting Services 웹 서비스와 직접 통신하는 무인 응용 프로그램의 경우 폼 인증에 사용자 지정 인증 체계를 함께 사용해야 합니다.  
+ 폼 인증에서는 사람이 직접 자격 증명을 입력해야 합니다. Reporting Services 웹 서비스와 직접 통신하는 무인 애플리케이션의 경우 폼 인증에 사용자 지정 인증 체계를 함께 사용해야 합니다.  
   
  폼 인증은 다음의 경우 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에 적합합니다.  
   

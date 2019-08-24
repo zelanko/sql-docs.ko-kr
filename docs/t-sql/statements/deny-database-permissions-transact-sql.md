@@ -73,7 +73,7 @@ AS \<database_principal> 이 쿼리를 실행하는 보안 주체가 권한을 �
 *Application_role*
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]~[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
-응용 프로그램 역할을 지정합니다.
+애플리케이션 역할을 지정합니다.
 
 *Database_user_mapped_to_Windows_User* Windows 사용자로 매핑된 데이터베이스 사용자를 지정합니다.
 
@@ -187,9 +187,9 @@ DENY CREATE CERTIFICATE TO MelanieK;
 GO
 ```
 
-### <a name="b-denying-references-permission-to-an-application-role"></a>2\. 응용 프로그램 역할에 대한 REFERENCES 사용 권한 거부
+### <a name="b-denying-references-permission-to-an-application-role"></a>2\. 애플리케이션 역할에 대한 REFERENCES 사용 권한 거부
 
-다음 예에서는 `REFERENCES` 응용 프로그램 역할에 대해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `AuditMonitor` 사용 권한을 거부합니다.
+다음 예에서는 `REFERENCES` 애플리케이션 역할에 대해 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 `AuditMonitor` 사용 권한을 거부합니다.
 
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
 

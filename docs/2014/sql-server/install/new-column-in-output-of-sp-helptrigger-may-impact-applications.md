@@ -19,7 +19,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093734"
 ---
-# <a name="new-column-in-output-of-sphelptrigger-may-impact-applications"></a>sp_helptrigger의 출력에 나타나는 새 열은 애플리케이션에 영향을 줍니다.
+# <a name="new-column-in-output-of-sp_helptrigger-may-impact-applications"></a>sp_helptrigger의 출력에 나타나는 새 열은 애플리케이션에 영향을 줍니다.
   sp_helptrigger 시스템에서 반환 된 결과 집합의 마지막 열 trigger_schemaias 저장 프로시저입니다.  
   
 > [!IMPORTANT]  
@@ -29,7 +29,7 @@ ms.locfileid: "66093734"
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>수정 동작  
- 응용 프로그램에서 sp_helptrigger의 사용을 검토합니다. 추가 열을 포함하려면 애플리케이션을 수정해야 할 수 있습니다. 또는 sys.triggers 카탈로그 뷰를 대신 사용할 수 있습니다.  
+ 애플리케이션에서 sp_helptrigger의 사용을 검토합니다. 추가 열을 포함하려면 애플리케이션을 수정해야 할 수 있습니다. 또는 sys.triggers 카탈로그 뷰를 대신 사용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

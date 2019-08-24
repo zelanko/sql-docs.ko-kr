@@ -64,7 +64,7 @@ ms.locfileid: "68094823"
 |**excluded_col_count**|**int**|아티클에서 제외된 열의 수입니다.|  
 |**columns**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**deleted_cols**|**varbinary(128)**|아티클에서 삭제된 열을 설명하는 비트맵입니다.|  
-|**resolver_info**|**nvarchar(255)**|사용자 지정 충돌 해결 프로그램에 필요한 추가 정보의 저장소입니다.|  
+|**resolver_info**|**nvarchar(255)**|사용자 지정 충돌 해결 프로그램에 필요한 추가 정보의 스토리지입니다.|  
 |**view_sel_proc**|**nvarchar(290)**|병합 에이전트가 동적으로 필터링된 게시에서 아티클의 초기 채우기를 하기 위해, 그리고 필터링된 게시에서 변경된 행을 열거하기 위해 사용하는 저장 프로시저의 이름입니다.|  
 |**gen_cur**|**bigint**|아티클의 기본 테이블에 대한 로컬 변경 내용의 번호를 생성합니다.|  
 |**vertical_partition**|**int**|테이블 아티클에 열 필터링 사용 여부를 지정합니다. **0** 있음을 세로 필터링을 하지 않고 모든 열을 게시 합니다.|  

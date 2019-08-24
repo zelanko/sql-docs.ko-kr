@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127309"
 ---
-# <a name="srvgetbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken(확장 저장 프로시저 API)
+# <a name="srv_getbindtoken-extended-stored-procedure-api"></a>srv_getbindtoken(확장 저장 프로시저 API)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
@@ -52,7 +52,7 @@ bindtoken
   
 ## <a name="arguments"></a>인수  
  *srvproc*  
- 특정 클라이언트 연결에 대한 핸들인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API 라이브러리가 응용 프로그램과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 모든 정보가 들어 있습니다.  
+ 특정 클라이언트 연결에 대한 핸들인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API 라이브러리가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 모든 정보가 들어 있습니다.  
   
  *bindtoken*  
  바인드 토큰이 복사될 버퍼에 대한 포인터입니다. 바인드 토큰은 null로 끝나는 문자열로 표현됩니다. 지정하는 버퍼의 길이는 255바이트 이상이어야 합니다.  

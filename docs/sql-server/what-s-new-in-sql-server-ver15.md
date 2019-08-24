@@ -38,7 +38,7 @@ CTP(Community Technology Preview) 3.2는 [!INCLUDE[sql-server-2019](../includes/
 |퍼블릭 미리 보기 |CTP 3.2 이전에는 등록한 얼리어답터가 SQL Server 빅 데이터 클러스터를 사용할 수 있었습니다. 이번 릴리스에서는 누구나 빅 데이터 클러스터 SQL Server 기능을 경험할 수 있습니다. <br/><br/> [SQL Server 빅 데이터 클러스터 시작](../big-data-cluster/deploy-get-started.md)을 참조하세요.|
 |`azdata` |CTP 3.2는 클러스터 관리자가 REST API를 통해 빅 데이터 클러스터를 부트스트랩하고 관리할 수 있도록 하는 Python으로 작성된 `azdata` 명령줄 유틸리티를 도입했습니다. `azdata`는 `mssqlctl`을 대신합니다. [`azdata` 설치](../big-data-cluster/deploy-install-azdata.md)를 참조하세요. |
 |PolyBase |이제 외부 테이블 열 이름이 SQL Server, Oracle, Teradata, MongoDB 및 ODBC 데이터 원본을 쿼리하는 데 사용됩니다. 이전 CTP 릴리스에서는 열이 대상의 서수를 기준으로 바인딩되었으며 외부 테이블 정의의 열 이름은 사용되지 않았습니다.|
-|HDFS 계층화 새로 고침 |원격 데이터의 최신 스냅숏에 대해 기존 탑재를 새로 고칠 수 있도록 HDFS 계층화의 새로 고침 기능을 도입합니다. [HDFS 계층화](../big-data-cluster/hdfs-tiering.md)를 참조하세요. |
+|HDFS 계층화 새로 고침 |원격 데이터의 최신 스냅샷에 대해 기존 탑재를 새로 고칠 수 있도록 HDFS 계층화의 새로 고침 기능을 도입합니다. [HDFS 계층화](../big-data-cluster/hdfs-tiering.md)를 참조하세요. |
 |Notebook 기반 문제 해결 |CTP 3.2에는 SQL Server 빅 데이터 클러스터 구성 요소의 [배포](../big-data-cluster/deploy-notebooks.md)와 [검색, 진단 및 문제 해결](../big-data-cluster/manage-notebooks.md)에 도움이 되는 Jupyter Notebook이 도입되었습니다. |
 | &nbsp; | &nbsp; |
 

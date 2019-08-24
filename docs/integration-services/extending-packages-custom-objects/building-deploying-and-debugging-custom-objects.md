@@ -48,7 +48,7 @@ ms.locfileid: "67947733"
  이제 SSDT(SQL Server Data Tools)에서 SSIS 디자이너를 사용하여 다른 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 대상으로 하는 패키지를 만들고, 유지 관리하고, 실행할 수 있습니다. 이러한 개선이 사용자 지정 확장에 미치는 영향에 대한 자세한 내용은 [SQL Server 2016용 SSDT 2015의 다중 버전 지원을 통해 SSIS 사용자 지정 확장 지원](https://blogs.msdn.microsoft.com/ssis/2016/04/19/getting-your-ssis-custom-extensions-to-be-supported-by-the-multi-version-support-of-ssdt-2015-for-sql-server-2016/)을 참조하세요.  
   
 ##  <a name="signing"></a> 어셈블리 서명  
- 공유하려는 어셈블리는 전역 어셈블리 캐시에 설치해야 합니다. 전역 어셈블리 캐시에 추가된 어셈블리는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]와 같은 응용 프로그램에서 사용할 수 있습니다. 전역 어셈블리 캐시에 어셈블리를 추가하려면 어셈블리를 강력한 이름으로 서명하여 해당 어셈블리가 전역적으로 고유함을 보장해야 합니다. 강력한 이름의 어셈블리에는 어셈블리의 이름, culture, 공개 키 및 버전 번호를 포함하는 정규화된 이름이 있습니다. 런타임에서는 이 정보를 사용하여 어셈블리를 찾고 같은 이름의 다른 어셈블리와 구별합니다.  
+ 공유하려는 어셈블리는 전역 어셈블리 캐시에 설치해야 합니다. 전역 어셈블리 캐시에 추가된 어셈블리는 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]와 같은 애플리케이션에서 사용할 수 있습니다. 전역 어셈블리 캐시에 어셈블리를 추가하려면 어셈블리를 강력한 이름으로 서명하여 해당 어셈블리가 전역적으로 고유함을 보장해야 합니다. 강력한 이름의 어셈블리에는 어셈블리의 이름, culture, 공개 키 및 버전 번호를 포함하는 정규화된 이름이 있습니다. 런타임에서는 이 정보를 사용하여 어셈블리를 찾고 같은 이름의 다른 어셈블리와 구별합니다.  
   
  강력한 이름으로 어셈블리를 서명하려면 먼저 퍼블릭/프라이빗 키 쌍이 있어야 하며 이 키 쌍이 없으면 만들어야 합니다. 이 퍼블릭 및 프라이빗 암호화 키 쌍은 빌드할 때 강력한 이름의 어셈블리를 만드는 데 사용합니다.  
   

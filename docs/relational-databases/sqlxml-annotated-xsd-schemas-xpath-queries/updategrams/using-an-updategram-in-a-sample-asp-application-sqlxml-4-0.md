@@ -22,9 +22,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68046542"
 ---
-# <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>예제 ASP 응용 프로그램에서 Updategram 사용(SQLXML 4.0)
+# <a name="using-an-updategram-in-a-sample-asp-application-sqlxml-40"></a>예제 ASP 애플리케이션에서 Updategram 사용(SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  이 ASP(Active Server Pages) 응용 프로그램을 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 AdventureWorks 예제 데이터베이스의 Person.Contact 테이블에 있는 고객 정보를 업데이트할 수 있습니다. 이 응용 프로그램에서는 다음 작업을 수행합니다.  
+  이 ASP(Active Server Pages) 애플리케이션을 사용하여 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 AdventureWorks 예제 데이터베이스의 Person.Contact 테이블에 있는 고객 정보를 업데이트할 수 있습니다. 이 애플리케이션에서는 다음 작업을 수행합니다.  
   
 -   사용자에게 연락처 ID를 입력하도록 요청합니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "68046542"
 </ROOT>  
 ```  
   
- 다음 코드는 ASP 응용 프로그램(SampleASP.asp)입니다. 인터넷 서비스 관리자 유틸리티를 사용하여 만드는 가상 루트에 연결된 디렉터리에 이 응용 프로그램을 저장합니다. IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 ASP 응용 프로그램 식별하거나 액세스할 수 없으므로 이 가상 루트를 만들 때 IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 유틸리티를 사용하지 않습니다.  
+ 다음 코드는 ASP 애플리케이션(SampleASP.asp)입니다. 인터넷 서비스 관리자 유틸리티를 사용하여 만드는 가상 루트에 연결된 디렉터리에 이 응용 프로그램을 저장합니다. IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 ASP 애플리케이션 식별하거나 액세스할 수 없으므로 이 가상 루트를 만들 때 IIS Virtual Directory Management for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 유틸리티를 사용하지 않습니다.  
   
 > [!NOTE]  
 >  코드에서 "ServerName"을 Microsoft 인터넷 정보 서비스(IIS)를 실행 중인 서버의 이름으로 바꾸어야 합니다.  

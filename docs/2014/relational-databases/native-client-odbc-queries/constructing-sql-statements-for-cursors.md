@@ -97,7 +97,7 @@ szErrorMsgString: [Microsoft][SQL Server Native Client][SQL Server]
                procedure.  
 ```  
   
- 이 오류를 수신하는 ODBC 응용 프로그램은 문을 실행하기 전에 모든 커서 문 특성을 기본값으로 다시 설정해야 합니다.  
+ 이 오류를 수신하는 ODBC 애플리케이션은 문을 실행하기 전에 모든 커서 문 특성을 기본값으로 다시 설정해야 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [쿼리 실행 &#40;ODBC&#41;](executing-queries-odbc.md)  

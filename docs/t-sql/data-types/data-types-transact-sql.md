@@ -48,7 +48,7 @@ ms.locfileid: "68113737"
 |날짜 및 시간|기타 데이터 형식|  
 |문자열||  
   
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 일부 데이터 형식은 저장 특징에 따라 다음 그룹에 속하도록 지정됩니다.
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 일부 데이터 형식은 스토리지 특징에 따라 다음 그룹에 속하도록 지정됩니다.
 -   Large value 데이터 형식: **varchar(max)** , **nvarchar(max)**  
 -   Large object 데이터 형식: **text**, **ntext**, **image**, **varbinary(max)** , **xml**  
   

@@ -31,7 +31,7 @@ ms.locfileid: "67898075"
   현재 데이터베이스에서 하나 이상의 사용자 정의 기본값을 제거합니다.  
   
 > [!IMPORTANT]
->  DROP DEFAULT는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 버전에서 제거될 예정입니다. 향후 개발 작업에서는 DROP DEFAULT를 사용하지 않도록 하고 현재 이것을 사용하는 응용 프로그램은 수정하십시오. [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)의 DEFAULT 키워드를 사용하여 만들 수 있는 기본 정의를 대신 사용하십시오.  
+>  DROP DEFAULT는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 다음 버전에서 제거될 예정입니다. 향후 개발 작업에서는 DROP DEFAULT를 사용하지 않도록 하고 현재 이것을 사용하는 애플리케이션은 수정하십시오. [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)의 DEFAULT 키워드를 사용하여 만들 수 있는 기본 정의를 대신 사용하십시오.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

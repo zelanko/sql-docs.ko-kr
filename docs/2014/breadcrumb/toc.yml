@@ -372,7 +372,7 @@
                 - name: 문제 해결
                   tocHref: /sql/reporting-services/troubleshooting/
                   topicHref: /sql/reporting-services/troubleshooting/errors-and-events-reference-reporting-services
-                - name: 응용 프로그램 통합
+                - name: 애플리케이션 통합
                   tocHref: /sql/reporting-services/application-integration/
                   topicHref: /sql/reporting-services/application-integration/integrating-reporting-services-into-applications
                 - name: 보고서 서버 웹 서비스

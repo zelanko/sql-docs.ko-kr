@@ -107,7 +107,7 @@ ms.locfileid: "66100816"
   
 1.  SharePoint 중앙 관리에서 **서비스 애플리케이션 관리**를 클릭합니다.  
   
-2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 응용 프로그램의 이름을 찾아서 클릭하여 응용 프로그램 관리 페이지를 엽니다.  
+2.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 서비스 애플리케이션의 이름을 찾아서 클릭하여 애플리케이션 관리 페이지를 엽니다.  
   
 3.  **작업 관리**를 클릭합니다.  
   

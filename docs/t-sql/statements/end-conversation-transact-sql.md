@@ -65,7 +65,7 @@ END CONVERSATION conversation_handle
 ## <a name="remarks"></a>Remarks  
  대화를 종료하면 제공된 *conversation_handle*이 속하는 대화 그룹이 잠깁니다. 대화가 종료되면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 서비스 큐에서 모든 대화 메시지를 제거합니다.  
   
- 대화가 종료되면 응용 프로그램은 해당 대화의 메시지를 더 이상 보내거나 받을 수 없습니다. 대화 참가자 모두 END CONVERSATION을 호출하여 대화를 완료해야 합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]이 대화의 다른 참가자로부터 대화 종료 메시지나 오류 메시지를 받지 못한 경우에는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 대화의 다른 참가자에게 대화가 종료되었음을 알립니다. 이런 경우 대화 핸들이 더 이상 유효하지 않아도 대화의 엔드포인트는 원격 서비스를 호스팅하는 인스턴스가 메시지를 승인할 때까지 활성 상태로 유지됩니다.  
+ 대화가 종료되면 애플리케이션은 해당 대화의 메시지를 더 이상 보내거나 받을 수 없습니다. 대화 참가자 모두 END CONVERSATION을 호출하여 대화를 완료해야 합니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]이 대화의 다른 참가자로부터 대화 종료 메시지나 오류 메시지를 받지 못한 경우에는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 대화의 다른 참가자에게 대화가 종료되었음을 알립니다. 이런 경우 대화 핸들이 더 이상 유효하지 않아도 대화의 엔드포인트는 원격 서비스를 호스팅하는 인스턴스가 메시지를 승인할 때까지 활성 상태로 유지됩니다.  
   
  [!INCLUDE[ssSB](../../includes/sssb-md.md)]이 대화에 대한 대화 종료 또는 오류 메시지를 아직 처리하지 못한 경우에는 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 원격 대화 상대에게 대화가 종료되었음을 알립니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 원격 서비스로 보내는 메시지는 지정된 옵션에 따라 다릅니다.  
   
@@ -73,7 +73,7 @@ END CONVERSATION conversation_handle
   
 -   오류가 발생하여 대화가 종료되고 원격 서비스에 대한 대화가 아직 활성 상태인 경우 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 원격 서비스로 `https://schemas.microsoft.com/SQL/ServiceBroker/Error` 유형의 메시지를 보냅니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 현재 전송 큐에 있는 이 대화의 다른 모든 메시지를 삭제합니다.  
   
--   WITH CLEANUP 절을 사용하여 데이터베이스 관리자는 정상적으로 완료할 수 없는 대화를 제거할 수 있습니다. 이 옵션은 대화의 모든 메시지와 카탈로그 뷰 항목을 제거합니다. 이런 경우 대화의 원격측은 대화가 종료되었다는 어떠한 표시도 받지 못하며 응용 프로그램에서 보냈지만 네트워크를 통해 아직 전송되지 않은 메시지도 받을 수 없습니다. 따라서 대화를 정상적으로 완료할 수 없는 경우에는 이 옵션을 사용하지 않는 것이 좋습니다.  
+-   WITH CLEANUP 절을 사용하여 데이터베이스 관리자는 정상적으로 완료할 수 없는 대화를 제거할 수 있습니다. 이 옵션은 대화의 모든 메시지와 카탈로그 뷰 항목을 제거합니다. 이런 경우 대화의 원격측은 대화가 종료되었다는 어떠한 표시도 받지 못하며 애플리케이션에서 보냈지만 네트워크를 통해 아직 전송되지 않은 메시지도 받을 수 없습니다. 따라서 대화를 정상적으로 완료할 수 없는 경우에는 이 옵션을 사용하지 않는 것이 좋습니다.  
   
  대화가 종료되면 대화 핸들을 지정하는 [!INCLUDE[tsql](../../includes/tsql-md.md)] SEND 문에서 [!INCLUDE[tsql](../../includes/tsql-md.md)] 오류가 발생합니다. 대화의 다른 쪽에서 이 대화에 대한 메시지가 도착하면 [!INCLUDE[ssSB](../../includes/sssb-md.md)]는 해당 메시지를 무시합니다.  
   
@@ -98,7 +98,7 @@ END CONVERSATION @dialog_handle ;
 ```  
   
 ### <a name="b-ending-a-conversation-with-an-error"></a>2\. 오류가 발생하여 대화 종료  
- 다음 예에서는 처리 문이 오류를 보고할 경우 오류가 발생한 `@dialog_handle` 대화를 종료합니다. 이는 가장 간단한 오류 처리 방법이지만 일부 응용 프로그램에는 적합하지 않을 수 있습니다.  
+ 다음 예에서는 처리 문이 오류를 보고할 경우 오류가 발생한 `@dialog_handle` 대화를 종료합니다. 이는 가장 간단한 오류 처리 방법이지만 일부 애플리케이션에는 적합하지 않을 수 있습니다.  
   
 ```  
 DECLARE @dialog_handle UNIQUEIDENTIFIER,  

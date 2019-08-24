@@ -43,7 +43,7 @@ ms.locfileid: "67913527"
  사용 하는 방법에 설명 합니다 **System.Transactions** API (응용 프로그래밍 인터페이스)에서 관리 되는 응용 프로그램입니다.  
   
  [트랜잭션 수명](../../relational-databases/clr-integration-data-access-transactions/transaction-lifetimes.md)  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저에서 시작된 트랜잭션과 CLR 응용 프로그램에서 시작된 트랜잭션의 수명 차이에 대해 설명합니다.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] 저장 프로시저에서 시작된 트랜잭션과 CLR 애플리케이션에서 시작된 트랜잭션의 수명 차이에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CLR 데이터베이스 개체에서 데이터 액세스](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)  

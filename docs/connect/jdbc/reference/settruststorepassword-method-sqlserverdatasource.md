@@ -46,7 +46,7 @@ public void setTrustStorePassword(java.lang.String trustStorePassword)
   
  trustStore 속성과 trustStorePassword 속성이 모두 지정되어 있지 않는 경우 드라이버에서 JVM(Java Virtual Machine) 시스템 속성 "javax.net.ssl.trustStore" 및 "javax.net.ssl.trustStorePassword"를 사용합니다. "javax.net.ssl.trustStorePassword" 시스템 속성이 지정되어 있지 않는 경우 trustStore의 무결성을 검사하지 않습니다.  
   
- trustStore 속성은 설정되어 있지 않지만 trustStorePassword 속성이 설정되어 있는 경우 JDBC 드라이버에서는 "javax.net.ssl.trustStore"에 지정된 파일을 트러스트 저장소로 사용하여 지정된 trustStorePassword로 트러스트 저장소의 무결성을 검사합니다. 클라이언트 응용 프로그램이 JVM 시스템 속성에 암호를 저장하지 않는 경우 이 방법이 필요할 수 있습니다.  
+ trustStore 속성은 설정되어 있지 않지만 trustStorePassword 속성이 설정되어 있는 경우 JDBC 드라이버에서는 "javax.net.ssl.trustStore"에 지정된 파일을 트러스트 저장소로 사용하여 지정된 trustStorePassword로 트러스트 저장소의 무결성을 검사합니다. 클라이언트 애플리케이션이 JVM 시스템 속성에 암호를 저장하지 않는 경우 이 방법이 필요할 수 있습니다.  
   
  자세한 내용은 [연결 속성 설정](../../../connect/jdbc/setting-the-connection-properties.md)을 참조하세요.  
   

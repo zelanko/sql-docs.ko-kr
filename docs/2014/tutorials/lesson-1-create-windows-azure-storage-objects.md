@@ -29,7 +29,7 @@ ms.locfileid: "68210974"
   
 2.  [여기](https://go.microsoft.com/fwlink/?LinkId=271926)에서 자세한 단계별 지침을 사용하여 저장소 계정을 만드십시오.  
   
-3.  이전 단계에서 만든 스토리지 계정으로 이동합니다. 웹 페이지의 아래쪽 가운데에서 **키 관리**를 클릭합니다. 계정 정보가 표시됩니다. 스토리지 계정 이름과 액세스 키를 복사합니다. 이 정보는 SQL 저장된 자격 증명을 만드는 데 필요합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 이 정보를 사용하여 저장소 계정에 액세스하여 백업을 만들 수 있습니다.  
+3.  이전 단계에서 만든 스토리지 계정으로 이동합니다. 웹 페이지의 아래쪽 가운데에서 **키 관리**를 클릭합니다. 계정 정보가 표시됩니다. 스토리지 계정 이름과 액세스 키를 복사합니다. 이 정보는 SQL 저장된 자격 증명을 만드는 데 필요합니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에서는 이 정보를 사용하여 스토리지 계정에 액세스하여 백업을 만들 수 있습니다.  
   
      ![Windows Azure 저장소 계정 키의 스크린 샷](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Windows Azure 저장소 계정 키의 스크린 샷")  
   

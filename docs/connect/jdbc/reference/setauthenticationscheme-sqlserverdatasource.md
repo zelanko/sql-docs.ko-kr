@@ -20,7 +20,7 @@ ms.locfileid: "67975278"
 # <a name="setauthenticationscheme-sqlserverdatasource"></a>setAuthenticationScheme(SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  응용 프로그램에서 사용하려는 통합 보안의 종류를 나타냅니다.  
+  애플리케이션에서 사용하려는 통합 보안의 종류를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   

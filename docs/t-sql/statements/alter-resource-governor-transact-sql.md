@@ -127,7 +127,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 ```  
   
 ### <a name="c-creating-and-registering-a-classifier-function"></a>C. 분류자 함수 작성 및 등록  
- 다음 예에서는 `dbo.rgclassifier_v1`이라는 분류자 함수를 만듭니다. 이 함수는 사용자 이름이나 응용 프로그램 이름을 기반으로 모든 새 세션을 분류하고 특정 작업 그룹에 세션 요청과 쿼리를 할당합니다. 지정한 사용자 또는 응용 프로그램으로 매핑되지 않는 세션은 기본 작업 그룹에 할당됩니다. 그런 다음 분류자 함수가 등록되고 구성 변경 내용이 적용됩니다.  
+ 다음 예에서는 `dbo.rgclassifier_v1`이라는 분류자 함수를 만듭니다. 이 함수는 사용자 이름이나 애플리케이션 이름을 기반으로 모든 새 세션을 분류하고 특정 작업 그룹에 세션 요청과 쿼리를 할당합니다. 지정한 사용자 또는 애플리케이션으로 매핑되지 않는 세션은 기본 작업 그룹에 할당됩니다. 그런 다음 분류자 함수가 등록되고 구성 변경 내용이 적용됩니다.  
   
 ```  
 -- Store the classifier function in the master database.  
@@ -178,7 +178,7 @@ GO
 ALTER RESOURCE GOVERNOR RESET STATISTICS;  
 ```  
   
-### <a name="e-setting-the-maxoutstandingiopervolume-option"></a>E. MAX_OUTSTANDING_IO_PER_VOLUME 옵션 설정  
+### <a name="e-setting-the-max_outstanding_io_per_volume-option"></a>E. MAX_OUTSTANDING_IO_PER_VOLUME 옵션 설정  
  다음 예에서는 MAX_OUTSTANDING_IO_PER_VOLUME 옵션을 20으로 설정합니다.  
   
 ```  

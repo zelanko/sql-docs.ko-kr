@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68095952"
 ---
-# <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent(Transact-SQL)
+# <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   추적에 이벤트 또는 이벤트 열을 추가하거나 제거합니다. **sp_trace_setevent** 중지 된 기존 추적 에서만 실행할 수 있습니다 (*상태* 됩니다 **0**). 오류가 반환 됩니다이 저장 프로시저 아니거나 존재 하지 않는 추적에서 실행 됩니다 *상태* 아닙니다 **0**합니다.  
@@ -65,7 +65,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |18|Audit Server Starts and Stops|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 상태가 수정되면 발생합니다.|  
 |19|DTCTransaction|둘 이상의 데이터베이스 간에 일어나는 MS DTC([!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator) 통합 트랜잭션을 추적합니다.|  
 |20|Audit Login Failed|클라이언트에서 시도한 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 실패했음을 나타냅니다.|  
-|21|EventLog|이벤트가 Windows 응용 프로그램 로그에 기록되었음을 나타냅니다.|  
+|21|EventLog|이벤트가 Windows 애플리케이션 로그에 기록되었음을 나타냅니다.|  
 |22|ErrorLog|오류 이벤트가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 기록되었음을 나타냅니다.|  
 |23|Lock:Released|페이지 등 리소스 잠금이 해제되었음을 나타냅니다.|  
 |24|Lock:Acquired|데이터 페이지 등 리소스 잠금이 획득되었음을 나타냅니다.|  
@@ -140,7 +140,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |109|Audit Add DB User Event|로그인이 데이터베이스에 데이터베이스 사용자(Windows 또는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])로 추가 또는 제거될 때 발생합니다. **sp_grantdbaccess**, **sp_revokedbaccess**, **sp_adduser** 및 **sp_dropuser** 대상|  
 |110|Audit Add Member to DB Role Event|로그인이 데이터베이스에 데이터베이스 사용자(고정 또는 사용자 정의)로 추가 또는 제거될 때 발생합니다. **sp_addrolemember**, **sp_droprolemember** 및 **sp_changegroup** 대상|  
 |111|Audit Add Role Event|로그인이 데이터베이스에 데이터베이스 사용자로 추가 또는 제거될 때 발생합니다. **sp_addrole** 및 **sp_droprole** 대상|  
-|112|Audit App Role Change Password Event|응용 프로그램 역할의 암호가 변경되면 발생합니다.|  
+|112|Audit App Role Change Password Event|애플리케이션 역할의 암호가 변경되면 발생합니다.|  
 |113|Audit Statement Permission Event|CREATE TABLE 등 문 사용 권한이 사용되면 발생합니다.|  
 |114|Audit Schema Object Access Event|SELECT 등 개체 사용 권한이 성공적으로 사용되거나 성공적으로 사용되지 않은 모든 경우에 발생합니다.|  
 |115|Audit Backup/Restore Event|BACKUP 또는 RESTORE 명령을 실행하면 발생합니다.|  
@@ -250,7 +250,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |6|**NTUserName**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 사용자 이름입니다.|  
 |7|**NTDomainName**|사용자가 속한 Windows 도메인입니다.|  
 |8|**HostName**|요청을 처음에 시작한 클라이언트 컴퓨터의 이름입니다.|  
-|9|**ClientProcessID**|클라이언트 응용 프로그램이 실행 중인 프로세스에 클라이언트 컴퓨터가 할당한 ID입니다.|  
+|9|**ClientProcessID**|클라이언트 애플리케이션이 실행 중인 프로세스에 클라이언트 컴퓨터가 할당한 ID입니다.|  
 |10|**ApplicationName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스에 연결한 클라이언트 응용 프로그램의 이름입니다. 이 열은 프로그램의 표시 이름이 아니라 애플리케이션에서 전달한 값으로 채워집니다.|  
 |11|**LoginName**|클라이언트의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 이름입니다.|  
 |12|**SPID**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 클라이언트와 관련된 프로세스에 할당한 서버 프로세스 ID입니다.|  

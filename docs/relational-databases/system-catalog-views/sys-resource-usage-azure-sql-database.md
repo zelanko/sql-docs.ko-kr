@@ -26,7 +26,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67904429"
 ---
-# <a name="sysresourceusage-azure-sql-database"></a>sys.resource_usage(Azure SQL Database)
+# <a name="sysresource_usage-azure-sql-database"></a>sys.resource_usage(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
     
@@ -48,7 +48,7 @@ ms.locfileid: "67904429"
 |database_name|**nvarchar**|사용자 데이터베이스 이름입니다.|  
 |sku|**nvarchar**|SKU 이름입니다. 가능한 값은 다음과 같습니다.<br /><br /> Web<br /><br /> Business<br /><br /> 기본<br /><br /> 표준<br /><br /> Premium|  
 |usage_in_seconds|**int**|해당 시간에 사용된 CPU 시간의 합계입니다.<br /><br /> 참고: 이 열은 V11에 대 한 않으며 V12에 적용 되지 않습니다. **값은 항상 0으로 설정 됩니다.**|  
-|storage_in_megabytes|**decimal**|데이터베이스 데이터, 인덱스, 저장 프로시저 및 메타데이터를 포함하여 해당 시간에 대한 최대 저장소 크기입니다.|  
+|storage_in_megabytes|**decimal**|데이터베이스 데이터, 인덱스, 저장 프로시저 및 메타데이터를 포함하여 해당 시간에 대한 최대 스토리지 크기입니다.|  
   
 ## <a name="permissions"></a>사용 권한  
  이 보기는 가상으로 연결할 수 있는 권한 가진 모든 사용자 역할에 사용할 수 있습니다 **마스터** 데이터베이스입니다.  

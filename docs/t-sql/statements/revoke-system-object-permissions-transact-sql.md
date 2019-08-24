@@ -52,7 +52,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
  기본 이름 확인은 정규화되지 않은 프로시저 이름을 리소스 데이터베이스로 확인합니다. 따라서 **sys.** 한정자는 카탈로그 뷰 및 동적 관리 뷰를 지정하는 경우에만 필요합니다.  
   
 > [!CAUTION]  
->  시스템 개체에 대한 사용 권한을 취소하면 이러한 개체에 종속된 응용 프로그램이 실패합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 카탈로그 뷰를 사용하며 카탈로그 뷰에 대한 기본 사용 권한을 변경하면 정상적으로 작동하지 않을 수 있습니다.  
+>  시스템 개체에 대한 사용 권한을 취소하면 이러한 개체에 종속된 애플리케이션이 실패합니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]는 카탈로그 뷰를 사용하며 카탈로그 뷰에 대한 기본 사용 권한을 변경하면 정상적으로 작동하지 않을 수 있습니다.  
   
  트리거 및 시스템 개체의 열에 대한 사용 권한은 취소할 수 없습니다.  
   

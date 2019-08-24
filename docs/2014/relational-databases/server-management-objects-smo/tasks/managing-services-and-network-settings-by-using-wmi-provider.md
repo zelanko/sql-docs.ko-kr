@@ -30,7 +30,7 @@ ms.locfileid: "63226208"
 ## <a name="example"></a>예제  
  [!INCLUDE[ssChooseProgEnv](../../../includes/sschooseprogenv-md.md)]  
   
- 사용 하는 프로그램에 대해 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 해야 WMI 공급자는 `Imports` WMI 네임 스페이스를 정규화 하는 문. 다음과 같이 응용 프로그램의 선언 앞에, 다른 `Imports` 문 끝에 구문을 삽입하십시오.  
+ 사용 하는 프로그램에 대해 합니다 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 해야 WMI 공급자는 `Imports` WMI 네임 스페이스를 정규화 하는 문. 다음과 같이 애플리케이션의 선언 앞에, 다른 `Imports` 문 끝에 구문을 삽입하십시오.  
   
  `Imports Microsoft.SqlServer.Management.Smo`  
   

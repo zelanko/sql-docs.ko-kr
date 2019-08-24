@@ -88,7 +88,7 @@ ms.locfileid: "67263232"
   
 1.  **웹 서버** | **보안** 을 열고 인증 방법을 선택합니다.  
   
-2.  **웹 서버** | **응용 프로그램 개발** 을 열고 **CGI** 및 **ISAPI 확장**을 선택합니다.  
+2.  **웹 서버** | **애플리케이션 개발**을 열고 **CGI** 및 **ISAPI 확장**을 선택합니다.  
   
      ![웹 서버 역할의 추가 기능 페이지](../media/ssas-httpaccess-isapicgi.png "웹 서버 역할의 추가 기능 페이지")  
   
@@ -254,7 +254,7 @@ ms.locfileid: "67263232"
 |-|-|  
 |익명|IIS의 **익명 인증 자격 증명 편집** 에서 지정한 계정을 멤버 자격 목록에 추가합니다. 자세한 내용은 [익명 인증](http://www.iis.net/configreference/system.webserver/security/authentication/anonymousauthentication)을 참조하세요.|  
 |Windows 인증|가장 또는 위임을 통해 Analysis Services 데이터를 요청하는 Windows 사용자 또는 그룹 계정을 멤버 자격 목록에 추가합니다.<br /><br /> Kerberos 제한 위임이 사용될 경우 사용 권한이 필요한 유일한 계정은 액세스를 요청하는 Windows 사용자 및 그룹 계정입니다. 애플리케이션 풀 ID에 필요한 권한은 없습니다.|  
-|기본 인증|연결 문자열에서 전달될 Windows 사용자 또는 그룹 계정을 멤버 자격 목록에 추가합니다.<br /><br /> 또한 통해 연결 문자열에 `EffectiveUserName`을 통해 자격 증명을 전달하는 경우 응용 프로그램 풀 ID에 Analysis Services 인스턴스에 대한 관리자 권한이 있어야 합니다. SSMS에서 인스턴스를 마우스 오른쪽 단추로 클릭 &#124; **속성** &#124; **Security** &#124; **추가**. 애플리케이션 풀 ID를 입력합니다. 기본 제공 기본 ID를 사용하는 경우 계정은 **IIS AppPool\DefaultAppPool**로 지정됩니다.<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
+|기본 인증|연결 문자열에서 전달될 Windows 사용자 또는 그룹 계정을 멤버 자격 목록에 추가합니다.<br /><br /> 또한 통해 연결 문자열에 `EffectiveUserName`을 통해 자격 증명을 전달하는 경우 애플리케이션 풀 ID에 Analysis Services 인스턴스에 대한 관리자 권한이 있어야 합니다. SSMS에서 인스턴스를 마우스 오른쪽 단추로 클릭 &#124; **속성** &#124; **Security** &#124; **추가**. 애플리케이션 풀 ID를 입력합니다. 기본 제공 기본 ID를 사용하는 경우 계정은 **IIS AppPool\DefaultAppPool**로 지정됩니다.<br /><br /> ![](../media/ssas-httpaccess-iisapppoolidentity.png)|  
   
  사용 권한 설정에 대한 자세한 내용은 [개체 및 작업에 대한 액세스 승인&#40;Analysis Services&#41;](../multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)(영문)을 참조하세요.  
   

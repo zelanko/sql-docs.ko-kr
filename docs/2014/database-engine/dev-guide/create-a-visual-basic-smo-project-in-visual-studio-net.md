@@ -22,7 +22,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62753350"
 ---
 # <a name="create-a-visual-basic-smo-project-in-visual-studio-net"></a>Visual Studio .NET에서 Visual Basic SMO 프로젝트 만들기
-  이 섹션에서는 간단한 SMO 콘솔 응용 프로그램을 빌드하는 방법을 설명합니다.  
+  이 섹션에서는 간단한 SMO 콘솔 애플리케이션을 빌드하는 방법을 설명합니다.  
   
  이 예에서는 프로그램이 SMO 형식을 참조할 수 있도록 네임스페이스를 가져옵니다. `Agent` 네임스페이스 가져오기는 선택 사항입니다. 이 네임스페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트를 사용하는 프로그램을 작성하는 경우에 필요합니다. `Common` 네임스페이스는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 보안 연결을 설정하는 데 필요합니다. `SqlClient` 네임스페이스는 SQL 예외 오류를 처리하는 데 사용됩니다.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62753350"
   
 6.  **프로젝트** 메뉴에서 **참조 추가**를 선택합니다. **참조 추가** 대화 상자가 나타납니다.  
   
-7.  클릭 **찾아보기**고 C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies 폴더에서 SMO 어셈블리를 찾아서 다음 파일을 선택 합니다. SMO 응용 프로그램을 빌드하려면 최소한 다음 파일이 있어야 합니다.  
+7.  클릭 **찾아보기**고 C:\Program Files\Microsoft SQL Server\120\SDK\Assemblies 폴더에서 SMO 어셈블리를 찾아서 다음 파일을 선택 합니다. SMO 애플리케이션을 빌드하려면 최소한 다음 파일이 있어야 합니다.  
   
      Microsoft.SqlServer.ConnectionInfo.dll  
   

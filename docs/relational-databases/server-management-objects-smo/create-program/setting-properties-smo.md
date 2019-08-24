@@ -17,7 +17,7 @@ ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: cf121a37bf0229ba3366e18c149530f316fcdc56
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68098280"
@@ -55,7 +55,7 @@ ms.locfileid: "68098280"
   
  애플리케이션이 부분적으로 로드됨 상태에서 제공되는 속성 이외의 추가 속성을 인출하는 경우 쿼리를 제출하여 이러한 추가 속성을 검색하고 전체 로드됨 상태로 확장됩니다. 이로 인해 클라이언트와 서버 간에 불필요한 트래픽이 발생할 수 있습니다. <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드를 호출하여 보다 최적화할 수 있습니다. <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드를 사용하면 개체를 초기화할 때 로드되는 속성을 지정할 수 있습니다.  
   
- <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드는 다시 설정될 때까지 또는 나머지 응용 프로그램에 대해 속성 로드 동작을 설정합니다. <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> 메서드를 사용하여 원래 동작을 저장하고 필요한 경우 복원할 수 있습니다.  
+ <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> 메서드는 다시 설정될 때까지 또는 나머지 애플리케이션에 대해 속성 로드 동작을 설정합니다. <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> 메서드를 사용하여 원래 동작을 저장하고 필요한 경우 복원할 수 있습니다.  
   
 ## <a name="examples"></a>예  
 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  

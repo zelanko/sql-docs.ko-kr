@@ -35,7 +35,7 @@ ms.locfileid: "68069191"
 > 정보를 참조 하세요 [OLE DB Driver for SQL Server를 사용 하 여 연결 문자열 키워드를 사용 하 여](../../../connect/oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)입니다.
 
 > [!NOTE]
-> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 이전 버전과의 호환성을 유지하기 위해 연결 문자열에서 모호성을 허용합니다. 예를 들어 일부 키워드를 여러 번 지정할 수 있으며 위치나 우선 순위에 따라 충돌하는 키워드를 해결할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하도록 응용 프로그램을 수정하는 경우 연결 문자열 모호성에 대한 종속성을 제거하는 것이 좋습니다.  
+> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 이전 버전과의 호환성을 유지하기 위해 연결 문자열에서 모호성을 허용합니다. 예를 들어 일부 키워드를 여러 번 지정할 수 있으며 위치나 우선 순위에 따라 충돌하는 키워드를 해결할 수 있습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 사용하도록 애플리케이션을 수정하는 경우 연결 문자열 모호성에 대한 종속성을 제거하는 것이 좋습니다.  
   
  다음 섹션에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client를 데이터 공급자로 사용할 때 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 및 ADO(ActiveX Data Objects)와 함께 사용할 수 있는 키워드를 설명합니다.  
   
@@ -95,16 +95,16 @@ ms.locfileid: "68069191"
 |**TrustServerCertificate**|와 함께 사용할 때 **Encrypt**, 자체 서명 된 서버 인증서를 사용 하 여 암호화를 사용 하도록 설정 합니다.|  
 |**UID**|유효한 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 로그인 계정입니다. Windows 인증을 사용할 경우 UID를 지정할 필요가 없습니다.|  
 |**UseProcForPrepare**|이 키워드는 더 이상 사용되지 않으며 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 이 설정을 무시합니다.|  
-|**WSID**|워크스테이션 ID로, 일반적으로 응용 프로그램이 있는 컴퓨터의 네트워크 이름입니다(옵션). 를 지정 하는 경우이 값은 **master.dbo.sysprocesses** 열 **hostname** 에서 반환 되 고 [sp_who](../../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) 및 [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md)함수입니다.|  
+|**WSID**|워크스테이션 ID로, 일반적으로 애플리케이션이 있는 컴퓨터의 네트워크 이름입니다(옵션). 를 지정 하는 경우이 값은 **master.dbo.sysprocesses** 열 **hostname** 에서 반환 되 고 [sp_who](../../../relational-databases/system-stored-procedures/sp-who-transact-sql.md) 및 [HOST_NAME](../../../t-sql/functions/host-name-transact-sql.md)함수입니다.|  
   
 > **참고:** 국가별 변환 설정이 통화, 숫자, 날짜 및 시간 데이터 형식에 적용됩니다. 변환 설정은 통화, 숫자, 날짜 또는 시간 값을 문자열로 변환한 경우에만 볼 수 있고 출력 변환에 적용할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 현재 사용자의 로캘 레지스트리 설정을 사용합니다. 응용 프로그램 설정에서 연결 이후에 예를 들어, 호출 하는 경우 드라이버는 현재 스레드의 로캘을 인식 하지 않습니다 **SetThreadLocale**합니다.  
   
- 데이터 원본의 국가별 동작을 변경하면 응용 프로그램에서 오류가 발생할 수 있습니다. 날짜 문자열을 구문 분석하며 날짜 문자열이 ODBC에 정의된 대로 표시될 것으로 예상하는 응용 프로그램에서 이 값을 변경하면 부정적인 영향을 줄 수 있습니다.  
+ 데이터 원본의 국가별 동작을 변경하면 애플리케이션에서 오류가 발생할 수 있습니다. 날짜 문자열을 구문 분석하며 날짜 문자열이 ODBC에 정의된 대로 표시될 것으로 예상하는 애플리케이션에서 이 값을 변경하면 부정적인 영향을 줄 수 있습니다.  
   
 ## <a name="ole-db-provider-connection-string-keywords"></a>OLE DB 공급자 연결 문자열 키워드  
- OLE DB 응용 프로그램에서는 데이터 원본 개체를 다음 두 가지 방법으로 초기화할 수 있습니다.  
+ OLE DB 애플리케이션에서는 데이터 원본 개체를 다음 두 가지 방법으로 초기화할 수 있습니다.  
   
 -   **IDBInitialize::Initialize**  
   
@@ -145,7 +145,7 @@ ms.locfileid: "68069191"
 |-------------|-----------------------------|-----------------|  
 |**Addr**|SSPROP_INIT_NETWORKADDRESS|"Address"에 대한 동의어입니다.|  
 |**주소**|SSPROP_INIT_NETWORKADDRESS|조직의 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스 네트워크 주소입니다.<br /><br /> 유효한 주소 구문에 대 한 자세한 내용은 참조에 대 한 설명을 합니다 **주소** ODBC 키워드에이 항목의 뒷부분에 있습니다.|  
-|**APP**|SSPROP_INIT_APPNAME|응용 프로그램을 식별하는 문자열입니다.|  
+|**APP**|SSPROP_INIT_APPNAME|애플리케이션을 식별하는 문자열입니다.|  
 |**ApplicationIntent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 지 원하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하십시오 [SQL Server 네이티브 클라이언트에 대 한 지원 High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)합니다.|  
 |**AttachDBFileName**|SSPROP_INIT_FILENAME|연결할 수 있는 데이터베이스의 전체 경로 이름을 포함한 주 파일의 이름입니다. **AttachDBFileName**을 사용하려면 공급자 문자열 Database 키워드에도 데이터베이스 이름을 지정해야 합니다. 데이터베이스가 이전에 연결된 경우 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 이 데이터베이스를 다시 연결하지 않으며 연결된 데이터베이스를 연결 기본값으로 사용합니다.|  
 |**자동 변환**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate"에 대한 동의어입니다.|  
@@ -198,7 +198,7 @@ ms.locfileid: "68069191"
   
 |키워드|초기화 속성|Description|  
 |-------------|-----------------------------|-----------------|  
-|**Application Name**|SSPROP_INIT_APPNAME|응용 프로그램을 식별하는 문자열입니다.|  
+|**Application Name**|SSPROP_INIT_APPNAME|애플리케이션을 식별하는 문자열입니다.|  
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 지 원하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하십시오 [SQL Server 네이티브 클라이언트에 대 한 지원 High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)합니다.|  
 |**자동 변환**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate"에 대한 동의어입니다.|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|OEM/ANSI 문자 변환을 구성합니다. 인식되는 값은 "true"와 "false"입니다.|  
@@ -229,7 +229,7 @@ ms.locfileid: "68069191"
 ## <a name="activex-data-objects-ado-connection-string-keywords"></a>ADO(ActiveX Data Objects) 연결 문자열 키워드  
  ADO 애플리케이션에서는 **ADODBConnection** 개체의 **ConnectionString** 속성을 설정하거나 **ADODBConnection** 개체의 **Open** 메서드에 대한 매개 변수로 연결 문자열을 제공합니다.  
   
- ADO 애플리케이션에서는 OLE DB **IDBInitialize::Initialize** 메서드에 사용되는 키워드도 사용할 수 있지만 이러한 키워드는 기본값이 없는 속성에만 사용할 수 있습니다. 애플리케이션이 초기화 문자열에 ADO 키워드와 **IDBInitialize::Initialize** 키워드를 모두 사용하는 경우에는 ADO 키워드 설정이 사용됩니다. 응용 프로그램에서 ADO 연결 문자열 키워드만 사용하는 것이 좋습니다.  
+ ADO 애플리케이션에서는 OLE DB **IDBInitialize::Initialize** 메서드에 사용되는 키워드도 사용할 수 있지만 이러한 키워드는 기본값이 없는 속성에만 사용할 수 있습니다. 애플리케이션이 초기화 문자열에 ADO 키워드와 **IDBInitialize::Initialize** 키워드를 모두 사용하는 경우에는 ADO 키워드 설정이 사용됩니다. 애플리케이션에서 ADO 연결 문자열 키워드만 사용하는 것이 좋습니다.  
   
  ADO에서 사용하는 연결 문자열의 구문은 다음과 같습니다.  
   
@@ -250,7 +250,7 @@ ms.locfileid: "68069191"
 |키워드|초기화 속성|Description|  
 |-------------|-----------------------------|-----------------|  
 |**Application Intent**|SSPROP_INIT_APPLICATIONINTENT|서버에 연결할 때 애플리케이션 작업 유형을 선언합니다. 가능한 값은 **ReadOnly** 및 **ReadWrite**입니다.<br /><br /> 기본값은 **ReadWrite**합니다. 에 대 한 자세한 내용은 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에서 지 원하는 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]를 참조 하십시오 [SQL Server 네이티브 클라이언트에 대 한 지원 High Availability, Disaster Recovery](../../../relational-databases/native-client/features/sql-server-native-client-support-for-high-availability-disaster-recovery.md)합니다.|  
-|**Application Name**|SSPROP_INIT_APPNAME|응용 프로그램을 식별하는 문자열입니다.|  
+|**Application Name**|SSPROP_INIT_APPNAME|애플리케이션을 식별하는 문자열입니다.|  
 |**자동 변환**|SSPROP_INIT_AUTOTRANSLATE|"AutoTranslate"에 대한 동의어입니다.|  
 |**AutoTranslate**|SSPROP_INIT_AUTOTRANSLATE|OEM/ANSI 문자 변환을 구성합니다. 인식되는 값은 "true"와 "false"입니다.|  
 |**Connect Timeout**|DBPROP_INIT_TIMEOUT|데이터 원본 초기화가 완료될 때까지 기다릴 시간(초)입니다.|  

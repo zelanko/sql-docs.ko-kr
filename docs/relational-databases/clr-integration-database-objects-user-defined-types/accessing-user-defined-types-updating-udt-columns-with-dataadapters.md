@@ -33,8 +33,8 @@ ms.locfileid: "68028381"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   사용자 정의 형식 (Udt)를 사용 하 여 지원 되는 **System.Data.DataSet** 및 **System.Data.SqlClient.SqlDataAdapter** 검색 하 고 데이터를 수정 합니다.  
   
-## <a name="populating-a-dataset"></a>데이터 집합 채우기  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문을 사용하여 UDT 열 값을 선택하면 데이터 어댑터를 사용하여 데이터 집합을 채울 수 있습니다. 다음 예제에서는 있다고 가정 된 **지점** 다음 구조와 몇 가지 샘플 데이터를 사용 하 여 정의 된 테이블입니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 만듭니다 합니다 **지점** 테이블과 몇 개의 행을 삽입 합니다.  
+## <a name="populating-a-dataset"></a>데이터 세트 채우기  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT 문을 사용하여 UDT 열 값을 선택하면 데이터 어댑터를 사용하여 데이터 세트을 채울 수 있습니다. 다음 예제에서는 있다고 가정 된 **지점** 다음 구조와 몇 가지 샘플 데이터를 사용 하 여 정의 된 테이블입니다. 다음 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문은 만듭니다 합니다 **지점** 테이블과 몇 개의 행을 삽입 합니다.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -62,7 +62,7 @@ DataTable datTable = new DataTable("Points");
 da.Fill(datTable);  
 ```  
   
-## <a name="updating-udt-data-in-a-dataset"></a>데이터 집합의 UDT 데이터 업데이트  
+## <a name="updating-udt-data-in-a-dataset"></a>데이터 세트의 UDT 데이터 업데이트  
  두 메서드를 사용 하 여의 UDT 열을 업데이트 하는 **데이터 집합**:  
   
 -   사용자 지정을 제공 **InsertCommand**를 **UpdateCommand** 하 고 **DeleteCommand** 에 대 한 개체를 **SqlDataAdapter** 개체입니다.  

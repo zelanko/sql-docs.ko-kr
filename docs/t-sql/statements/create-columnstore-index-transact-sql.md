@@ -195,7 +195,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ```
 
 #### <a name="on-options"></a>ON 옵션 
-   ON 옵션으로 파티션 구성표, 특정 파일 그룹, 기본 파일 그룹 등의 데이터 저장소 옵션을 지정할 수 있습니다. ON 옵션을 지정하지 않으면 기존 테이블의 파일 그룹 설정이나 설정 파티션이 인덱스에 사용됩니다.  
+   ON 옵션으로 파티션 구성표, 특정 파일 그룹, 기본 파일 그룹 등의 데이터 스토리지 옵션을 지정할 수 있습니다. ON 옵션을 지정하지 않으면 기존 테이블의 파일 그룹 설정이나 설정 파티션이 인덱스에 사용됩니다.  
   
    *partition_scheme_name* **(** _column_name_ **)**  
    테이블의 파티션 구성표를 지정합니다. 파티션 구성표가 데이터베이스에 이미 있어야 합니다. 파티션 구성표를 만들려면 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)을 참조하세요.  
@@ -257,7 +257,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
    지정된 테이블, 파티션 번호 또는 파티션 범위에 대한 데이터 압축 옵션을 지정합니다. 클러스터형 columnstore 인덱스 및 비클러스터형 columnstore 인덱스를 모두 포함하는 columnstore 인덱스에만 적용됩니다. 다음과 같은 옵션이 있습니다.
    
 - `COLUMNSTORE` - 기본값이고 성능이 가장 우수한 columnstore 압축으로 압축하도록 지정합니다. 이는 일반적인 선택입니다.  
-- `COLUMNSTORE_ARCHIVE` - COLUMNSTORE_ARCHIVE는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 보다 적은 저장소 크기가 필요한 기타 상황에서 보관하는 데 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
+- `COLUMNSTORE_ARCHIVE` - COLUMNSTORE_ARCHIVE는 테이블 또는 파티션을 보다 작은 크기로 더욱 압축합니다. 보다 적은 스토리지 크기가 필요한 기타 상황에서 보관하는 데 사용할 수 있으며 저장 및 검색에 더 많은 시간을 이용할 수 있습니다.  
   
  압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
@@ -299,7 +299,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
  임시 테이블에 대한 columnstore 인덱스를 만들 수 있습니다. 테이블이 삭제되거나 세션이 종료되면 인덱스도 삭제됩니다.  
  
 ## <a name="filtered-indexes"></a>필터링된 인덱스  
-필터링된 인덱스는 테이블에서 적은 비율의 행을 선택하는 쿼리에 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 데이터를 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 쿼리 성능을 개선하고 저장소 비용과 유지 관리 비용을 줄일 수 있습니다.  
+필터링된 인덱스는 테이블에서 적은 비율의 행을 선택하는 쿼리에 적합한 최적화된 비클러스터형 인덱스입니다. 이 인덱스에서는 필터 조건자를 사용하여 테이블의 일부 데이터를 인덱싱합니다. 잘 디자인된 필터링된 인덱스는 쿼리 성능을 개선하고 스토리지 비용과 유지 관리 비용을 줄일 수 있습니다.  
   
 ### <a name="required-set-options-for-filtered-indexes"></a>필터링된 인덱스에 필요한 SET 옵션  
 다음 조건이 발생할 때마다 필요한 값 열에 SET 옵션을 사용해야 합니다.  
@@ -417,7 +417,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 ##  <a name="convert"></a>Rowstore 테이블을 columnstore로 변환하는 예제  
   
 ### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>1\. 클러스터형 columnstore 인덱스로 힙 변환  
- 이 예에서는 테이블을 힙으로 만들고 이를 cci_Simple라는 클러스터형 columnstore 인덱스로 변환합니다. 이렇게 하면 전체 테이블의 저장소가 rowstore에서 columnstore로 변경됩니다.  
+ 이 예에서는 테이블을 힙으로 만들고 이를 cci_Simple라는 클러스터형 columnstore 인덱스로 변환합니다. 이렇게 하면 전체 테이블의 스토리지가 rowstore에서 columnstore로 변경됩니다.  
   
 ```sql  
 CREATE TABLE SimpleTable(  
@@ -431,7 +431,7 @@ GO
 ```  
   
 ### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>2\. 클러스터형 인덱스를 같은 이름의 클러스터형 columnstore 인덱스로 변환합니다.  
- 이 예에서는 클러스터형 인덱스가 있는 테이블을 만든 후 클러스터형 인덱스를 클러스터형 columnstore 인덱스로 변환하는 구문을 보여 줍니다. 이렇게 하면 전체 테이블의 저장소가 rowstore에서 columnstore로 변경됩니다.  
+ 이 예에서는 클러스터형 인덱스가 있는 테이블을 만든 후 클러스터형 인덱스를 클러스터형 columnstore 인덱스로 변환하는 구문을 보여 줍니다. 이렇게 하면 전체 테이블의 스토리지가 rowstore에서 columnstore로 변경됩니다.  
   
 ```sql  
 CREATE TABLE SimpleTable (  

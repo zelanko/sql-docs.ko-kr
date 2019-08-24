@@ -25,10 +25,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68138408"
 ---
-# <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains(Transact-SQL)
+# <a name="sysdm_clr_appdomains-transact-sql"></a>sys.dm_clr_appdomains(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  서버의 각 응용 프로그램 도메인에 대해 행을 반환합니다. 응용 프로그램 도메인 (**AppDomain**)의 구조 이며 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (공용 언어 런타임) 응용 프로그램에 대 한 격리 단위입니다. 이 보기를 사용 하 여 이해 하 고 CLR 통합 개체에서 실행 하는 문제 해결 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
+  서버의 각 애플리케이션 도메인에 대해 행을 반환합니다. 응용 프로그램 도메인 (**AppDomain**)의 구조 이며 합니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR (공용 언어 런타임) 응용 프로그램에 대 한 격리 단위입니다. 이 보기를 사용 하 여 이해 하 고 CLR 통합 개체에서 실행 하는 문제 해결 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다.  
   
  CLR 통합의 관리되는 데이터베이스 개체 유형은 다양합니다. 이러한 개체에 대 한 일반적인 정보를 참조 하세요 [공용 언어 런타임 (CLR) 통합을 사용 하 여 데이터베이스 개체 작성](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)합니다. 이러한 개체가 실행 될 때마다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 만듭니다는 **AppDomain** 있는 로드 고 필요한 코드를 실행 합니다. 에 대 한 격리 수준을 **AppDomain** 하나인 **AppDomain** 소유자 마다 데이터베이스당 합니다. 즉, 사용자가 소유한 모든 CLR 개체는 항상 동일한 실행 **AppDomain** 데이터베이스별 (다른 데이터베이스에 CLR 데이터베이스 개체는 다른 응용 프로그램 도메인에서 실행에 CLR 데이터베이스 개체를 등록 하는 사용자) 경우입니다. **AppDomain** 코드가 실행 완료 된 후 제거 되지 않습니다. 나중에 실행하도록 메모리에 캐시됩니다. 이것은 성능을 향상시킵니다.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "68138408"
 |**weak_refcount**|**int**|이에 대 한 약한 참조 수가 **AppDomain**합니다. 내부 개체 수를 나타냅니다이 **AppDomain** 캐시 됩니다. 관리 되는 데이터베이스 개체를 실행할 때 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 내에서 캐시 합니다 **AppDomain** 나중에 다시 사용에 대 한 합니다. 이것은 성능을 향상시킵니다.|  
 |**cost**|**int**|비용을 **AppDomain**합니다. 비용이 높을수록, 가능성이이 **AppDomain** 언로드될 메모리가 중 됩니다. 비용은 일반적으로이 다시 만들려면 얼마나 많은 메모리가 필요에 따라 달라 집니다 **AppDomain**합니다.|  
 |**value**|**int**|값을 **AppDomain**합니다. 값이 작을수록, 가능성이이 **AppDomain** 언로드될 메모리가 중 됩니다. 값 일반적으로 얼마나 많은 연결 또는 일괄 처리는 사용 하 여이에 따라 달라 집니다 **AppDomain**합니다.|  
-|**total_processor_time_ms**|**bigint**|프로세스가 시작된 후 현재 응용 프로그램 도메인에서 실행되는 동안 모든 스레드에서 사용되는 총 프로세서 시간(밀리초)입니다. 이 설정은 **System.AppDomain.MonitoringTotalProcessorTime**합니다.|  
-|**total_allocated_memory_kb**|**bigint**|응용 프로그램 도메인이 만들어진 후 수집된 메모리를 포함하여 해당 도메인에서 할당한 모든 메모리의 총 크기(KB)입니다. 이 설정은 **System.AppDomain.MonitoringTotalAllocatedMemorySize**합니다.|  
-|**survived_memory_kb**|**bigint**|마지막 전체 차단 수집 후에도 유지되고 현재 응용 프로그램 도메인에서 참조하는 것으로 알려진 KB 수입니다. 이 설정은 **System.AppDomain.MonitoringSurvivedMemorySize**합니다.|  
+|**total_processor_time_ms**|**bigint**|프로세스가 시작된 후 현재 애플리케이션 도메인에서 실행되는 동안 모든 스레드에서 사용되는 총 프로세서 시간(밀리초)입니다. 이 설정은 **System.AppDomain.MonitoringTotalProcessorTime**합니다.|  
+|**total_allocated_memory_kb**|**bigint**|애플리케이션 도메인이 만들어진 후 수집된 메모리를 포함하여 해당 도메인에서 할당한 모든 메모리의 총 크기(KB)입니다. 이 설정은 **System.AppDomain.MonitoringTotalAllocatedMemorySize**합니다.|  
+|**survived_memory_kb**|**bigint**|마지막 전체 차단 수집 후에도 유지되고 현재 애플리케이션 도메인에서 참조하는 것으로 알려진 KB 수입니다. 이 설정은 **System.AppDomain.MonitoringSurvivedMemorySize**합니다.|  
   
 ## <a name="remarks"></a>설명  
  사이는 하나 있습니다 관계가 **dm_clr_appdomains.appdomain_address** 하 고 **dm_clr_loaded_assemblies.appdomain_address**합니다.  

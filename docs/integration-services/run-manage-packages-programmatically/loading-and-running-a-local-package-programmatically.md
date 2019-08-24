@@ -32,7 +32,7 @@ ms.locfileid: "68028577"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  [패키지 실행](../packages/run-integration-services-ssis-packages.md)에 설명된 방법을 사용하여 필요에 따라 또는 미리 지정한 시간에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 그러나 단 몇 줄의 코드로도 Windows Forms 응용 프로그램, 콘솔 응용 프로그램, ASP.NET Web Form 또는 웹 서비스, Windows 서비스 등의 사용자 지정 응용 프로그램에서 패키지를 실행할 수 있습니다.  
+  [패키지 실행](../packages/run-integration-services-ssis-packages.md)에 설명된 방법을 사용하여 필요에 따라 또는 미리 지정한 시간에 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 실행할 수 있습니다. 그러나 단 몇 줄의 코드로도 Windows Forms 애플리케이션, 콘솔 애플리케이션, ASP.NET Web Form 또는 웹 서비스, Windows 서비스 등의 사용자 지정 애플리케이션에서 패키지를 실행할 수 있습니다.  
   
  이 항목에서는 다음과 같은 주제를 다룹니다.  
   
@@ -55,17 +55,17 @@ ms.locfileid: "68028577"
 >  SSIS 패키지 저장소를 사용하기 위한 <xref:Microsoft.SqlServer.Dts.Runtime.Application> 클래스의 메서드는 ".", localhost 또는 로컬 서버의 서버 이름만 지원합니다. "(local)"은 사용할 수 없습니다.  
   
 ## <a name="running-a-package-programmatically"></a>프로그래밍 방식으로 패키지 실행  
- 로컬 컴퓨터에서 패키지를 실행하는 관리 코드로 사용자 지정 응용 프로그램을 개발하려면 다음 방법이 필요합니다. 여기에 요약된 단계는 뒷부분의 예제 콘솔 응용 프로그램에서 자세히 보여 줍니다.  
+ 로컬 컴퓨터에서 패키지를 실행하는 관리 코드로 사용자 지정 애플리케이션을 개발하려면 다음 방법이 필요합니다. 여기에 요약된 단계는 뒷부분의 예제 콘솔 애플리케이션에서 자세히 보여 줍니다.  
   
 #### <a name="to-run-a-package-on-the-local-computer-programmatically"></a>로컬 컴퓨터에서 프로그래밍 방식으로 패키지를 실행하려면  
   
-1.  Visual Studio 개발 환경을 시작하고 원하는 개발 언어로 새 응용 프로그램을 만듭니다. 이 예에서는 콘솔 응용 프로그램을 사용하지만 Windows Forms 응용 프로그램, ASP.NET Web Form 또는 Web 서비스, Windows 서비스 등에서 패키지를 실행할 수도 있습니다.  
+1.  Visual Studio 개발 환경을 시작하고 원하는 개발 언어로 새 애플리케이션을 만듭니다. 이 예에서는 콘솔 애플리케이션을 사용하지만 Windows Forms 애플리케이션, ASP.NET Web Form 또는 Web 서비스, Windows 서비스 등에서 패키지를 실행할 수도 있습니다.  
   
 2.  **프로젝트** 메뉴에서 **참조 추가**를 클릭하고 **Microsoft.SqlServer.ManagedDTS.dll**에 대한 참조를 추가합니다. **확인**을 클릭합니다.  
   
 3.  Visual Basic **Imports** 문 또는 C# **using** 문을 사용하여 **Microsoft.SqlServer.Dts.Runtime** 네임스페이스를 가져옵니다.  
   
-4.  기본 루틴에 다음 코드를 추가합니다. 완성된 콘솔 응용 프로그램은 다음 예와 같습니다.  
+4.  기본 루틴에 다음 코드를 추가합니다. 완성된 콘솔 애플리케이션은 다음 예와 같습니다.  
   
     > [!NOTE]  
     >  예제 코드에서는 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadPackage%2A> 메서드를 사용하여 파일 시스템에서 패키지를 로드하는 방법을 보여 줍니다. 그러나 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromSqlServer%2A> 메서드를 호출하여 MSDB 데이터베이스에서 패키지를 로드하거나 <xref:Microsoft.SqlServer.Dts.Runtime.Application.LoadFromDtsServer%2A> 메서드를 호출하여 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지 저장소에서 패키지를 로드할 수도 있습니다.  
@@ -136,7 +136,7 @@ namespace RunFromClientAppCS
   
 1.  위 예의 단계에 따라 이 예에서 사용할 프로젝트를 만듭니다.  
   
-2.  기본 루틴에 다음 코드를 추가합니다. 완성된 콘솔 응용 프로그램은 다음 예와 같습니다.  
+2.  기본 루틴에 다음 코드를 추가합니다. 완성된 콘솔 애플리케이션은 다음 예와 같습니다.  
   
 3.  프로젝트를 실행합니다. 예제 코드에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 예제와 함께 설치된 CalculatedColumns 예제 패키지를 실행합니다. 패키지 실행 결과는 발생한 오류와 함께 콘솔 창에 표시됩니다.  
   

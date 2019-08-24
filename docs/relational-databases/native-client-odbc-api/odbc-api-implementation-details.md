@@ -27,7 +27,7 @@ ms.locfileid: "68113667"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ODBC(Open Database Connectivity)는 응용 프로그램에서 ODBC 데이터 원본의 데이터에 액세스하는 데 사용하는 Microsoft Win32 응용 프로그래밍 인터페이스입니다.  
+  ODBC(Open Database Connectivity)는 애플리케이션에서 ODBC 데이터 원본의 데이터에 액세스하는 데 사용하는 Microsoft Win32 응용 프로그래밍 인터페이스입니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 참조에는 ODBC 함수 호출이 모두 문서화되어 있지는 않습니다. 드라이버 관련 매개 변수를 가지는 함수나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 함께 사용될 때의 동작에 대해서만 설명합니다.  
   

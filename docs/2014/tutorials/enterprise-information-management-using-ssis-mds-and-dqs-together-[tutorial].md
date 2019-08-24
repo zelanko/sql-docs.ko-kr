@@ -32,7 +32,7 @@ ms.locfileid: "66429038"
   
  SQL Server DQS(Data Quality Services)를 사용하면 비즈니스 인텔리전스, 데이터 웨어하우스 및 트랜잭션 처리 작업을 위해 신뢰할 수 있는 정보를 제공할 수 있도록 데이터를 정리, 일치, 표준화 및 강화할 수 있습니다. 참조 [Data Quality Services 소개](https://msdn.microsoft.com/library/ff877917.aspx) DQS 및 DQS 요구를 해결 하는 방법에 대 한 비즈니스 요구에 대 한 항목입니다.  
   
- SQL Server MDS(Master Data Services)는 정보 무결성 및 데이터 일관성이 여러 응용 프로그램 간에 일관되게 유지되도록 보장하는 중앙 데이터 허브를 제공합니다. 참조 [Master Data Services 개요](../master-data-services/master-data-services-overview-mds.md) 항목에 대 한 간략 한 설명은 MDS의 중요 한 기능입니다.  
+ SQL Server MDS(Master Data Services)는 정보 무결성 및 데이터 일관성이 여러 애플리케이션 간에 일관되게 유지되도록 보장하는 중앙 데이터 허브를 제공합니다. 참조 [Master Data Services 개요](../master-data-services/master-data-services-overview-mds.md) 항목에 대 한 간략 한 설명은 MDS의 중요 한 기능입니다.  
   
  참조 [EIM 기술을 사용 하 여 마스터 데이터 일치 및 정리](https://msdn.microsoft.com/library/hh403491.aspx) 포괄적인 지침을 함께 이러한 Microsoft EIM 기술을 사용 하 여 EIM 솔루션 및 조사식 구현에 대 한 백서 [Enterprise 정보 관리 (EIM): SSIS, DQS 및 MDS를 모아](https://go.microsoft.com/fwlink/?LinkId=258672) EIM 시나리오의 멋진 데모 비디오.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66429038"
   
 2.  [Master Data Services 구성 관리자를 사용 하 여 MDS를 구성 합니다.](https://msdn.microsoft.com/library/ee633884.aspx)  
   
-     구성 관리자를 사용하여 MDS(Master Data Services) 데이터베이스를 만들고 구성할 수 있습니다. MDS 데이터베이스를 만든 후 웹 응용 프로그램을 만들 MDS에 대 한 웹 사이트 (예: [ http://localhost/MDS ](http://localhost/MDS)) MDS 웹 응용 프로그램을 사용 하 여 MDS 데이터베이스에 연결 합니다. MDS 웹 응용 프로그램을 만들려면 컴퓨터에 IIS가 설치되어 있어야 합니다. 참조 [웹 응용 프로그램 요구 사항 (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) 하 고 [데이터베이스 요구 사항 (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) MDS 데이터베이스 및 웹 응용 프로그램을 구성 하기 위한 필수 구성 요소에 대 한 세부 정보에 대 한 합니다.  
+     구성 관리자를 사용하여 MDS(Master Data Services) 데이터베이스를 만들고 구성할 수 있습니다. MDS 데이터베이스를 만든 후 웹 응용 프로그램을 만들 MDS에 대 한 웹 사이트 (예: [ http://localhost/MDS ](http://localhost/MDS)) MDS 웹 응용 프로그램을 사용 하 여 MDS 데이터베이스에 연결 합니다. MDS 웹 애플리케이션을 만들려면 컴퓨터에 IIS가 설치되어 있어야 합니다. 참조 [웹 응용 프로그램 요구 사항 (Master Data Services)](https://msdn.microsoft.com/library/ee633744.aspx) 하 고 [데이터베이스 요구 사항 (Master Data Services)](https://msdn.microsoft.com/library/ee633767.aspx) MDS 데이터베이스 및 웹 응용 프로그램을 구성 하기 위한 필수 구성 요소에 대 한 세부 정보에 대 한 합니다.  
   
 3.  [설치 및 구성 DQS Data Quality Server Installer를 사용 하 여](https://msdn.microsoft.com/library/hh231682.aspx)입니다. 클릭 **시작**, 클릭 **프로그램도**, 클릭 **Microsoft SQL Server 2014**, 클릭 **Data Quality Services**, 클릭및**Data Quality Server Installer**합니다.  
   

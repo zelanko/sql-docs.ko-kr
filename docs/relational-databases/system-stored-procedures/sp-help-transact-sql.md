@@ -25,7 +25,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68085040"
 ---
-# <a name="sphelp-transact-sql"></a>sp_help(Transact-SQL)
+# <a name="sp_help-transact-sql"></a>sp_help(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   데이터베이스 개체에 대 한 정보를 보고 (나열 된 모든 개체를 **sys.sysobjects** 호환성 뷰), 사용자 정의 데이터 형식 또는 데이터 형식입니다.  
@@ -155,7 +155,7 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Parameter_name**|**nvarchar(** 128 **)**|저장 프로시저 매개 변수의 이름입니다.|  
         |**형식**|**nvarchar(** 128 **)**|저장 프로시저 매개 변수의 데이터 형식입니다.|  
-        |**길이**|**smallint**|물리적 저장소의 최대 길이(바이트)입니다.|  
+        |**길이**|**smallint**|물리적 스토리지의 최대 길이(바이트)입니다.|  
         |**prec**|**int**|전체 자릿수 또는 총 자릿수입니다.|  
         |**소수 자릿수**|**int**|소수점 오른쪽 자릿수입니다.|  
         |**Param_order**|**smallint**|매개 변수의 순서입니다.|  

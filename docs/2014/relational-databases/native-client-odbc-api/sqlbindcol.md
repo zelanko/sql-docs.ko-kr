@@ -26,7 +26,7 @@ ms.locfileid: "63067859"
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 단일 문 실행에서 결과 행의 집합이 여러 개 반환될 수 있습니다. 이 경우 각 결과 집합은 개별적으로 바인딩해야 합니다. 여러 결과 집합에 대 한 바인딩에 대 한 자세한 내용은 참조 하세요. [SQLMoreResults](sqlmoreresults.md)합니다.  
   
- 개발자는 열을 바인딩할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-관련 C 데이터 형식을 사용 하는 *TargetType* 값 `SQL_C_BINARY`합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 형식에 바인딩된 열은 이식할 수 없습니다. 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 ODBC C 데이터 형식은 DB-Library의 형식 정의와 일치하므로 응용 프로그램을 이식하는 DB-Library 개발자는 이 기능을 이용할 수 있습니다.  
+ 개발자는 열을 바인딩할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-관련 C 데이터 형식을 사용 하는 *TargetType* 값 `SQL_C_BINARY`합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 형식에 바인딩된 열은 이식할 수 없습니다. 정의된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 관련 ODBC C 데이터 형식은 DB-Library의 형식 정의와 일치하므로 애플리케이션을 이식하는 DB-Library 개발자는 이 기능을 이용할 수 있습니다.  
   
  에 비용이 많이 드는 프로세스는 데이터 잘림 보고는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버. 모든 바인딩된 데이터 버퍼의 너비가 반환되는 데이터를 수용할 만큼 넓으면 잘림을 피할 수 있습니다. 문자 데이터의 경우 문자열 종료에 기본 드라이버 동작이 사용될 때는 문자열 종결자를 수용하기 위한 공간도 너비에 포함해야 합니다. 예를 들어 바인딩를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **char(5)** 인출 하는 모든 값에서 잘림이 5 자 결과 배열에는 열입니다. 그러나 이 열을 6개 문자의 배열에 바인딩하면 Null 종결자를 저장할 문자 요소가 제공되므로 잘림이 발생하지 않습니다. [SQLGetData](sqlgetdata.md) 긴 문자와 이진 데이터를 잘림 없이 효율적으로 검색할 수 있습니다.  
   

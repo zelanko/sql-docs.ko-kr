@@ -212,7 +212,7 @@ GO
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="MirroredMediaSets"></a> 미러된 백업 미디어 세트  
- 백업 미디어 세트를 미러링하면 백업 장치의 오작동에 따른 영향이 줄어듭니다. 데이터 손실을 방지할 수 있는 최후의 수단이 백업이므로 이러한 오작동은 특히 심각합니다. 데이터베이스의 크기가 커지면 백업 디바이스 또는 미디어의 실패로 인해 복원 불가능한 백업을 만들게 될 가능성이 커집니다. 백업 미디어를 미러링하면 물리적 백업 디바이스에 중복을 제공하여 백업의 안정성이 향상됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [미러된 백업 미디어 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다.  
+ 백업 미디어 세트를 미러링하면 백업 디바이스의 오작동에 따른 영향이 줄어듭니다. 데이터 손실을 방지할 수 있는 최후의 수단이 백업이므로 이러한 오작동은 특히 심각합니다. 데이터베이스의 크기가 커지면 백업 디바이스 또는 미디어의 실패로 인해 복원 불가능한 백업을 만들게 될 가능성이 커집니다. 백업 미디어를 미러링하면 물리적 백업 디바이스에 중복을 제공하여 백업의 안정성이 향상됩니다. 자세한 내용은 이 항목의 뒷부분에 나오는 [미러된 백업 미디어 세트&#40;SQL Server&#41;](../../relational-databases/backup-restore/mirrored-backup-media-sets-sql-server.md)백업 및 복원의 기본적인 백업 미디어 관련 용어를 소개합니다.  
   
 > **참고:** 미러된 백업 미디어 세트는 [!INCLUDE[ssEnterpriseEd2005](../../includes/ssenterpriseed2005-md.md)] 이상 버전에서만 지원됩니다.  
   

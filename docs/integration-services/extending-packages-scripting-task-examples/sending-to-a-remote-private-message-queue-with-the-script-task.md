@@ -28,7 +28,7 @@ ms.locfileid: "68116895"
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  개발자는 메시지 큐(MSMQ)를 통해 메시지를 주고 받는 방법으로 신속하고 안전하게 응용 프로그램과 통신할 수 있습니다. 메시지 큐는 로컬 컴퓨터나 원격 컴퓨터에 있을 수 있으며 퍼블릭 큐이거나 프라이빗 큐일 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 MSMQ 연결 관리자와 메시지 큐 태스크에서 원격 컴퓨터의 프라이빗 큐로 메시지를 보낼 수 없습니다. 그러나 스크립트 태스크를 사용하면 원격 프라이빗 메시지 큐에 메시지를 쉽게 보낼 수 있습니다.  
+  개발자는 메시지 큐(MSMQ)를 통해 메시지를 주고 받는 방법으로 신속하고 안전하게 애플리케이션과 통신할 수 있습니다. 메시지 큐는 로컬 컴퓨터나 원격 컴퓨터에 있을 수 있으며 퍼블릭 큐이거나 프라이빗 큐일 수 있습니다. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]에서는 MSMQ 연결 관리자와 메시지 큐 태스크에서 원격 컴퓨터의 프라이빗 큐로 메시지를 보낼 수 없습니다. 그러나 스크립트 태스크를 사용하면 원격 프라이빗 메시지 큐에 메시지를 쉽게 보낼 수 있습니다.  
   
 > [!NOTE]  
 >  여러 패키지에서 쉽게 다시 사용할 수 있는 태스크를 만들려면 이 스크립트 태스크 예제에 있는 코드를 바탕으로 사용자 지정 태스크를 만들어 보십시오. 자세한 내용은 [사용자 지정 태스크 개발](../../integration-services/extending-packages-custom-objects/task/developing-a-custom-task.md)을 참조하세요.  

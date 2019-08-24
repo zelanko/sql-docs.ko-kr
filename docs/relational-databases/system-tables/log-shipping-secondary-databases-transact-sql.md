@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68095781"
 ---
-# <a name="logshippingsecondarydatabases-transact-sql"></a>log_shipping_secondary_databases(Transact-SQL)
+# <a name="log_shipping_secondary_databases-transact-sql"></a>log_shipping_secondary_databases(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   로그 전달 구성에서 보조 데이터베이스마다 하나의 레코드를 저장합니다. 이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "68095781"
 |**restore_all**|**bit**|1로 설정될 경우 보조 서버는 복원 작업 실행 시 모든 사용 가능한 트랜잭션 로그 백업을 복원합니다. 그렇지 않으면 파일을 하나 복원한 후 중지합니다.|  
 |**restore_mode**|**bit**|보조 데이터베이스의 복원 모드입니다.<br /><br /> 0 = NORECOVERY로 로그 복원<br /><br /> 1 = STANDBY로 로그 복원|  
 |**disconnect_users**|**bit**|1로 설정될 경우 복원 작업 수행 시 보조 데이터베이스에서 사용자 연결이 끊어집니다. 기본값은 0입니다.|  
-|**block_size**|**int**|백업 장치의 블록 크기로 사용되는 크기(바이트)입니다.|  
+|**block_size**|**int**|백업 디바이스의 블록 크기로 사용되는 크기(바이트)입니다.|  
 |**buffer_count**|**int**|백업 또는 복원 작업에 사용되는 버퍼의 총 개수입니다.|  
 |**max_transfer_size**|**int**|크기 (바이트), 최대 입력 또는 출력 요청의에서 발급 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 장치에 있습니다.|  
 |**last_restored_file**|**nvarchar(500)**|보조 데이터베이스에 복원된 마지막 백업 파일의 이름입니다.|  

@@ -53,7 +53,7 @@ ms.locfileid: "68008428"
   
      연결 다시 시도 간격 시간을 검색하려면 **SQL_COPT_SS_CONNECT_RETRY_INTERVAL**(읽기 전용) 연결 특성을 사용합니다.  
   
- 응용 프로그램이 SQL_DRIVER_COMPLETE_REQUIRED에 연결하고 나중에 끊어진 연결에 대해 문을 실행하려는 경우 ODBC 드라이버가 대화 상자를 다시 표시하지 않습니다. 복구가 진행 중인 동안  
+ 애플리케이션이 SQL_DRIVER_COMPLETE_REQUIRED에 연결하고 나중에 끊어진 연결에 대해 문을 실행하려는 경우 ODBC 드라이버가 대화 상자를 다시 표시하지 않습니다. 복구가 진행 중인 동안  
   
 -   복구 중에 **SQLGetConnectAttr(SQL_COPT_SS_CONNECTION_DEAD)** 에 대한 호출은 **SQL_CD_FALSE**를 반환해야 합니다.  
   

@@ -137,7 +137,7 @@ Server=123.34.45.56,4724;
 >  초기 파트너 이름만 제공되면 다시 연결 방법에 대한 경우를 제외하고 애플리케이션 개발자가 다른 동작을 수행하거나 코드를 작성할 필요가 없습니다.  
   
 > [!NOTE]  
->  관리 코드 응용 프로그램 개발자는 `ConnectionString` 개체의 `SqlConnection`에 장애 조치(failover) 파트너 이름을 제공합니다. 이러한 연결 문자열을 사용하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK에 포함된 ADO.NET 설명서에서 "Database Mirroring Support in the .NET Framework Data Provider for SQL Server"를 참조하십시오.  
+>  관리 코드 애플리케이션 개발자는 `ConnectionString` 개체의 `SqlConnection`에 장애 조치(failover) 파트너 이름을 제공합니다. 이러한 연결 문자열을 사용하는 방법은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework SDK에 포함된 ADO.NET 설명서에서 "Database Mirroring Support in the .NET Framework Data Provider for SQL Server"를 참조하십시오.  
   
 #### <a name="example-connection-string"></a>연결 문자열 예  
  예를 들어 TCP/IP를 사용하여 Prtner_A 또는 Partner_B의 **AdventureWorks** 데이터베이스에 명시적으로 연결하기 위해 ODBC 드라이버를 사용하는 클라이언트 애플리케이션에서 다음 연결 문자열을 제공할 수 있습니다.  

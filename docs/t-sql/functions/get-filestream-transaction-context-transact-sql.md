@@ -24,10 +24,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67940103"
 ---
-# <a name="getfilestreamtransactioncontext-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT(Transact-SQL)
+# <a name="get_filestream_transaction_context-transact-sql"></a>GET_FILESTREAM_TRANSACTION_CONTEXT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  세션의 현재 트랜잭션 컨텍스트를 나타내는 토큰을 반환합니다. 응용 프로그램은 이 토큰을 사용하여 FILESTREAM 파일 시스템 스트리밍 작업을 트랜잭션에 바인딩합니다. FILESTREAM 토픽의 목록은 [Binary Large Object&#40;Blob&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  
+  세션의 현재 트랜잭션 컨텍스트를 나타내는 토큰을 반환합니다. 애플리케이션은 이 토큰을 사용하여 FILESTREAM 파일 시스템 스트리밍 작업을 트랜잭션에 바인딩합니다. FILESTREAM 토픽의 목록은 [Binary Large Object&#40;Blob&#41; 데이터&#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)를 참조하세요.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

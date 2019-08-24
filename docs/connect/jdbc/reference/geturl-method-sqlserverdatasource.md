@@ -38,7 +38,7 @@ public java.lang.String getURL()
  URL을 포함하는 **문자열**입니다.  
   
 ## <a name="remarks"></a>Remarks  
- 보안을 강화하려면 [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) 메서드에 제공되는 URL에 암호를 포함하지 말아야 합니다. 이는 타사 Java 응용 프로그램 서버가 URL 속성에 설정된 값을 데이터 원본 구성 사용자 인터페이스에 표시하는 경우가 매우 많기 때문입니다. 대신 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) 메서드를 사용하여 암호 값을 설정하세요. 데이터 원본에 설정된 암호는 Java 응용 프로그램 서버가 구성 사용자 인터페이스에 표시하지 않습니다.  
+ 보안을 강화하려면 [setURL](../../../connect/jdbc/reference/seturl-method-sqlserverdatasource.md) 메서드에 제공되는 URL에 암호를 포함하지 말아야 합니다. 이는 타사 Java 애플리케이션 서버가 URL 속성에 설정된 값을 데이터 원본 구성 사용자 인터페이스에 표시하는 경우가 매우 많기 때문입니다. 대신 [setPassword](../../../connect/jdbc/reference/setpassword-method-sqlserverdatasource.md) 메서드를 사용하여 암호 값을 설정하세요. 데이터 원본에 설정된 암호는 Java 애플리케이션 서버가 구성 사용자 인터페이스에 표시하지 않습니다.  
   
 > [!NOTE]  
 >  getURL 메서드를 호출하기 전에 setURL 메서드를 호출하지 않은 경우 getURL은 기본값인 “jdbc:sqlserver://”를 반환합니다.  

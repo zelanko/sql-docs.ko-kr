@@ -47,7 +47,7 @@ ms.locfileid: "62872098"
   
  계정에 `Perform volume maintenance tasks` 권한을 부여하려면  
   
-1.  백업 파일을 생성할 컴퓨터에서 `Local Security Policy` 응용 프로그램(`secpol.msc`)을 엽니다.  
+1.  백업 파일을 생성할 컴퓨터에서 `Local Security Policy` 애플리케이션(`secpol.msc`)을 엽니다.  
   
 2.  왼쪽 창에서 **로컬 정책**을 확장한 다음 **사용자 권한 할당**을 클릭합니다.  
   

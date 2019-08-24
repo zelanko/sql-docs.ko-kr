@@ -31,7 +31,7 @@ ms.locfileid: "67984295"
 # <a name="drop-application-role-transact-sql"></a>DROP APPLICATION ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  현재 데이터베이스에서 응용 프로그램 역할을 제거합니다.  
+  현재 데이터베이스에서 애플리케이션 역할을 제거합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -44,10 +44,10 @@ DROP APPLICATION ROLE rolename
   
 ## <a name="arguments"></a>인수  
  *rolename*  
- 삭제할 응용 프로그램 역할의 이름을 지정합니다.  
+ 삭제할 애플리케이션 역할의 이름을 지정합니다.  
   
 ## <a name="remarks"></a>Remarks  
- 보안 개체를 소유한 응용 프로그램 역할은 삭제할 수 없습니다. 보안 개체를 소유한 응용 프로그램 역할을 삭제하려면 먼저 보안 개체의 소유권을 이전하거나 보안 개체를 삭제해야 합니다.  
+ 보안 개체를 소유한 애플리케이션 역할은 삭제할 수 없습니다. 보안 개체를 소유한 애플리케이션 역할을 삭제하려면 먼저 보안 개체의 소유권을 이전하거나 보안 개체를 삭제해야 합니다.  
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  

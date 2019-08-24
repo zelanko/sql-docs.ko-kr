@@ -53,11 +53,11 @@ ms.locfileid: "68133416"
   
 2.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 성능 데이터 기록을 시작 하려면 SQL_COPT_SS_PERF_DATA 및 SQL_PERF_START를 사용 하 여 합니다.  
   
-3.  필요에 따라 호출할 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 성능 데이터 로그 파일에 성능 데이터의 탭으로 구분 된 레코드를 쓸 SQL_COPT_SS_LOG_NOW 및 NULL입니다. 이 작업은 응용 프로그램 실행 시 여러 번 수행할 수 있습니다.  
+3.  필요에 따라 호출할 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 성능 데이터 로그 파일에 성능 데이터의 탭으로 구분 된 레코드를 쓸 SQL_COPT_SS_LOG_NOW 및 NULL입니다. 이 작업은 애플리케이션 실행 시 여러 번 수행할 수 있습니다.  
   
 4.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 성능 데이터 기록을 중지 하려면 SQL_COPT_SS_PERF_DATA 및 SQL_PERF_STOP을 사용 하 여 합니다.  
   
-### <a name="to-pull-driver-performance-data-into-an-application"></a>드라이버 성능 데이터를 응용 프로그램으로 가져오려면  
+### <a name="to-pull-driver-performance-data-into-an-application"></a>드라이버 성능 데이터를 애플리케이션으로 가져오려면  
   
 1.  호출 [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) 성능 데이터 프로 파일링을 시작 하려면 SQL_COPT_SS_PERF_DATA 및 SQL_PERF_START를 사용 하 여 합니다.  
   

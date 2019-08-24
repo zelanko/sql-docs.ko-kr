@@ -32,7 +32,7 @@ ms.locfileid: "62725497"
  [테이블 형식 (DeploymentMode = 2)](#bkmk_vertipaq)  
   
 ##  <a name="bkmk_OLAP"></a> 다차원 및 데이터 마이닝 (DeploymentMode = 0)  
- 데이터와 메타데이터가 저장되는 MOLAP 저장소 모드에서는 파일 크기에 대한 추가적인 물리적 제한이 있습니다. 기본적으로 문자열 저장소 파일의 최대 크기는 4GB입니다. 더 큰 문자열 저장소 파일이 필요한 경우 다른 문자열 저장소 아키텍처를 지정할 수 있습니다. 자세한 내용은 [차원 및 파티션에 대 한 문자열 저장소 구성](../configure-string-storage-for-dimensions-and-partitions.md)합니다.  
+ 데이터와 메타데이터가 저장되는 MOLAP 스토리지 모드에서는 파일 크기에 대한 추가적인 물리적 제한이 있습니다. 기본적으로 문자열 저장소 파일의 최대 크기는 4GB입니다. 더 큰 문자열 스토리지 파일이 필요한 경우 다른 문자열 스토리지 아키텍처를 지정할 수 있습니다. 자세한 내용은 [차원 및 파티션에 대 한 문자열 저장소 구성](../configure-string-storage-for-dimensions-and-partitions.md)합니다.  
   
 |Object|최대 크기/개수|  
 |------------|----------------------------|  

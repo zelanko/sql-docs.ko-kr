@@ -24,7 +24,7 @@ ms.locfileid: "67908181"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  OLE DB 응용 프로그램에서 결과를 처리하려면 먼저 결과 집합의 특징을 확인한 다음 데이터를 프로그램 변수로 가져와야 합니다. 명령에서 저장 프로시저를 실행하는 경우 저장 프로시저의 반환 코드 및 출력 매개 변수를 처리하는 방법도 알아야 합니다.  
+  OLE DB 애플리케이션에서 결과를 처리하려면 먼저 결과 집합의 특징을 확인한 다음 데이터를 프로그램 변수로 가져와야 합니다. 명령에서 저장 프로시저를 실행하는 경우 저장 프로시저의 반환 코드 및 출력 매개 변수를 처리하는 방법도 알아야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

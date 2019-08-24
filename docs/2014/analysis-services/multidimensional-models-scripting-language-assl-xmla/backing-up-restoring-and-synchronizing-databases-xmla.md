@@ -105,7 +105,7 @@ ms.locfileid: "62702272"
 -   원격 데이터 원본의 원격 파티션을 저장 하는 데 각 원래 폴더를 지정할 수 있습니다는 [폴더](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/folder-element-xmla) 요소 원래 폴더에 저장 된 모든 원격 파티션을 복원할 새 폴더를 나타냅니다. `Folder` 요소를 지정하지 않은 경우 `Restore` 명령에서는 원격 백업 파일에 포함된 원격 파티션에 대해 지정된 원래 폴더를 사용합니다.  
   
 ### <a name="relocating-rolap-objects"></a>ROLAP 개체 재배치  
- ROLAP 저장소를 사용하는 개체에 대한 집계 또는 데이터는 내부 관계형 데이터 원본에서 테이블로 저장되므로 이러한 정보는 `Restore` 명령으로 복원할 수 없습니다. 하지만 ROLAP 개체의 메타데이터는 복원할 수 있습니다. ROLAP 개체의 메타데이터를 복원하기 위해 `Restore` 명령에서는 관계형 데이터 원본의 테이블 구조를 다시 만듭니다.  
+ ROLAP 스토리지를 사용하는 개체에 대한 집계 또는 데이터는 내부 관계형 데이터 원본에서 테이블로 저장되므로 이러한 정보는 `Restore` 명령으로 복원할 수 없습니다. 하지만 ROLAP 개체의 메타데이터는 복원할 수 있습니다. ROLAP 개체의 메타데이터를 복원하기 위해 `Restore` 명령에서는 관계형 데이터 원본의 테이블 구조를 다시 만듭니다.  
   
  `Location` 명령의 `Restore` 요소를 사용하여 ROLAP 개체를 재배치할 수 있습니다. 각 `Location` 데이터 원본을 재배치 하는 데 사용 되는 요소는 `DataSourceType` 속성으로 명시적으로 설정 되어 있어야 *로컬*합니다. 또한 `ConnectionString` 요소의 `Location` 속성을 새 위치의 연결 문자열로 설정해야 합니다. 복원되는 동안 `Restore` 명령에서는 `DataSourceID` 요소의 `Location` 속성으로 식별된 데이터 원본의 연결 문자열을 `ConnectionString` 요소의 `Location` 속성 값으로 바꿉니다.  
   
@@ -141,7 +141,7 @@ ms.locfileid: "62702272"
  원본 데이터베이스에 있는 원격 데이터 원본의 원격 파티션을 저장하는 데 사용된 원래 폴더에 대해 각각 `Folder` 요소의 `Location` 요소를 지정할 수도 있습니다. `Folder` 요소는 원격 데이터 원본의 원래 폴더에 저장된 모든 원격 파티션을 동기화할 대상 데이터베이스의 새 폴더를 나타냅니다. `Folder` 요소가 지정되지 않은 경우 Synchronize 명령에서는 원격 데이터베이스에 포함된 원격 파티션에 대해 지정된 원래 폴더를 사용합니다.  
   
 ### <a name="synchronizing-rolap-objects"></a>ROLAP 개체 동기화  
- ROLAP 저장소를 사용하는 개체에 대한 집계 또는 데이터는 내부 관계형 데이터 원본에서 테이블로 저장되므로 이러한 정보는 `Synchronize` 명령으로 동기화할 수 없습니다. 하지만 ROLAP 개체의 메타데이터는 동기화할 수 있습니다. 메타데이터를 동기화하기 위해 `Synchronize` 명령에서는 관계형 데이터 원본의 테이블 구조를 다시 만듭니다.  
+ ROLAP 스토리지를 사용하는 개체에 대한 집계 또는 데이터는 내부 관계형 데이터 원본에서 테이블로 저장되므로 이러한 정보는 `Synchronize` 명령으로 동기화할 수 없습니다. 하지만 ROLAP 개체의 메타데이터는 동기화할 수 있습니다. 메타데이터를 동기화하기 위해 `Synchronize` 명령에서는 관계형 데이터 원본의 테이블 구조를 다시 만듭니다.  
   
  Synchronize 명령의 `Location` 요소를 사용하여 ROLAP 개체를 동기화할 수 있습니다. 각 `Location` 데이터 원본을 재배치 하는 데 사용 되는 요소는 `DataSourceType` 속성으로 명시적으로 설정 되어 있어야 *로컬*합니다. 을 선택합니다. 또한 `ConnectionString` 요소의 `Location` 속성을 새 위치의 연결 문자열로 설정해야 합니다. 동기화하는 동안 `Synchronize` 명령에서는 `DataSourceID` 요소의 `Location` 속성으로 식별된 데이터 원본의 연결 문자열을 `ConnectionString` 요소의 `Location` 속성 값으로 바꿉니다.  
   

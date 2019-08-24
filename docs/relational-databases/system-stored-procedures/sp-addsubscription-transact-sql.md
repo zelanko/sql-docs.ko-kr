@@ -235,18 +235,18 @@ sp_addsubscription [ @publication = ] 'publication'
 >  게시자에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 게시자를 지정 하면 안 됩니다.  
   
  [ @backupdevicetype= ] '*backupdevicetype*'  
- 백업에서 구독자를 초기화할 때 사용되는 백업 장치의 유형을 지정합니다. *backupdevicetype* 은 **nvarchar (20)** 이며 다음 값 중 하나일 수 있습니다.  
+ 백업에서 구독자를 초기화할 때 사용되는 백업 디바이스의 유형을 지정합니다. *backupdevicetype* 은 **nvarchar (20)** 이며 다음 값 중 하나일 수 있습니다.  
   
 |값|설명|  
 |-----------|-----------------|  
-|logical(기본값)|백업 장치가 논리적 장치입니다.|  
-|disk|백업 장치가 디스크 드라이브입니다.|  
-|tape|백업 장치가 테이프 드라이브입니다.|  
+|logical(기본값)|백업 디바이스가 논리적 디바이스입니다.|  
+|disk|백업 디바이스가 디스크 드라이브입니다.|  
+|tape|백업 디바이스가 테이프 드라이브입니다.|  
   
  *backupdevicetype* 는 *sync_method*가 initialize_with_backup로 설정 된 경우에만 사용 됩니다.  
   
  [ @backupdevicename= ] '*backupdevicename*'  
- 백업에서 구독자를 초기화할 때 사용되는 장치의 이름을 지정합니다. *backupdevicename* 이름은 **nvarchar (1000)** 이며 기본값은 NULL입니다.  
+ 백업에서 구독자를 초기화할 때 사용되는 디바이스의 이름을 지정합니다. *backupdevicename* 이름은 **nvarchar (1000)** 이며 기본값은 NULL입니다.  
   
  [ @mediapassword= ] '*mediapassword*'  
  미디어를 포맷할 때 암호를 설정한 경우 미디어 세트의 암호를 지정합니다. *mediapassword* 는 **sysname**이며 기본값은 NULL입니다.  
@@ -261,7 +261,7 @@ sp_addsubscription [ @publication = ] 'publication'
  복원할 백업 세트의 서수 값을 식별합니다. *fileidhint* 은 **int**이며 기본값은 NULL입니다.  
   
  [ @unload= ] *unload*  
- 백업으로 초기화를 완료한 후 테이프 백업 장치를 언로드할지 여부를 지정합니다. *unload* 는 **bit**이며 기본값은 1입니다. 1은 테이프가 언로드되기 야 함을 나타냅니다. *unload* 는 *backupdevicetype* 가 tape 인 경우에만 사용 됩니다.  
+ 백업으로 초기화를 완료한 후 테이프 백업 디바이스를 언로드할지 여부를 지정합니다. *unload* 는 **bit**이며 기본값은 1입니다. 1은 테이프가 언로드되기 야 함을 나타냅니다. *unload* 는 *backupdevicetype* 가 tape 인 경우에만 사용 됩니다.  
   
  [ @subscriptionlsn= ] *subscriptionlsn*  
  구독에서 피어 투 피어 트랜잭션 복제 토폴로지에 노드 변경 내용을 배달하기 시작할 LSN(로그 시퀀스 번호)을 지정합니다. 모든 관련 트랜잭션이 @sync_type 새 노드에 복제 되도록 하려면 initialize from lsn 값과 함께 사용 합니다. 자세한 내용은 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)을 참조하세요.  

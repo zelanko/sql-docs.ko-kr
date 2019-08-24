@@ -16,7 +16,7 @@ ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d85c412cd5fc3f8a1bda330ba90af1fa562cba6b
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68030243"
@@ -47,7 +47,7 @@ ms.locfileid: "68030243"
 ## <a name="example"></a>예제  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
- 이 코드 예제는 **가져오기** System.Collections.Specialized 네임 스페이스에 대 한 문. 응용 프로그램의 선언 앞에 다른 Imports 문과 함께 삽입하십시오.  
+ 이 코드 예제는 **가져오기** System.Collections.Specialized 네임 스페이스에 대 한 문. 애플리케이션의 선언 앞에 다른 Imports 문과 함께 삽입하십시오.  
   
 ```  
 Imports Microsoft.SqlServer.Management.Smo  

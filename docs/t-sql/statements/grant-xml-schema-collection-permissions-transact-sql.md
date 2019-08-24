@@ -74,7 +74,7 @@ GRANT permission  [ ,...n ] ON
  데이터베이스 역할을 지정합니다.  
   
  *Application_role*  
- 응용 프로그램 역할을 지정합니다.  
+ 애플리케이션 역할을 지정합니다.  
   
  *Database_user_mapped_to_Windows_User*  
  Windows 사용자로 매핑된 데이터베이스 사용자를 지정합니다.  

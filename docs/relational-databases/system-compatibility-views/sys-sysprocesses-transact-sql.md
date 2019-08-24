@@ -56,7 +56,7 @@ ms.locfileid: "67986501"
 |상태|**nchar(30)**|프로세스 ID 상태입니다. 가능한 값은 다음과 같습니다.<br /><br /> **유휴**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 세션 다시 설정 됩니다.<br /><br /> **실행** = 세션이 실행 되는 하나 이상의 일괄 처리 합니다. MARS(Multiple Active Result Sets)를 설정하면 세션에서 여러 개의 일괄 처리를 실행할 수 있습니다. 자세한 내용은 [MARS&#40;Multiple Active Result Sets&#41; 사용](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)을 참조하세요.<br /><br /> **백그라운드** = 세션에서 교착 상태 감지와 같은 백그라운드 태스크를 실행 됩니다.<br /><br /> **롤백** = 세션 트랜잭션 롤백을 진행에서 합니다.<br /><br /> **보류 중인** = 세션이 작업자 스레드를 사용할 수 있게 기다리고 있습니다.<br /><br /> **실행 가능한** = 세션의 태스크는 시간 퀀텀을 얻기 위해 기다리는 동안 스케줄러의 실행 가능한 큐에 있습니다.<br /><br /> **spinloop** = 세션의 태스크가 spinlock을 무료 대기 합니다.<br /><br /> **일시 중단** = 세션이 I/O가 완료와 같은 이벤트를 기다리고 있습니다.|  
 |sid|**binary(86)**|사용자의 GUID(Globally Unique Identifier)입니다.|  
 |hostname|**nchar(128)**|워크스테이션의 이름입니다.|  
-|program_name|**nchar(128)**|응용 프로그램의 이름입니다.|  
+|program_name|**nchar(128)**|애플리케이션의 이름입니다.|  
 |hostprocess|**nchar(10)**|워크스테이션 프로세스 ID입니다.|  
 |cmd|**nchar(16)**|현재 실행 중인 명령입니다.|  
 |nt_domain|**nchar(128)**|클라이언트(Windows 인증을 사용하는 경우) 또는 트러스트된 연결의 Windows 도메인입니다.|  

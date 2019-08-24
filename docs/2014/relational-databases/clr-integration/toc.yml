@@ -198,7 +198,7 @@
       href: ../../database-engine/dev-guide/in-process-data-access-sample.md
     - name: 결과 집합 예제
       href: ../../database-engine/dev-guide/result-set-sample.md
-    - name: 데이터 집합 보내기 예제
+    - name: 데이터 세트 보내기 예제
       href: ../../database-engine/dev-guide/send-dataset-sample.md
     - name: 문자열 유틸리티 함수 예제
       href: ../../database-engine/dev-guide/string-utility-functions-sample.md

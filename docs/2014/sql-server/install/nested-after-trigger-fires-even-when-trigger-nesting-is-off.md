@@ -31,7 +31,7 @@ ms.locfileid: "66093827"
  INSTEAD OF 트리거 내부에 중첩된 첫 번째 AFTER 트리거는 `nested triggers` 서버 구성 옵션이 0으로 설정되어 있는 경우에도 실행됩니다. 그러나 이 설정에서는 이후의 AFTER 트리거는 발생하지 않습니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
- 중첩 트리거에 대한 응용 프로그램을 검토하여 `nested triggers` 서버 구성 옵션이 0으로 설정된 경우 이 새 동작과 관련된 비즈니스 규칙을 응용 프로그램이 여전히 준수하는지 확인한 다음 적절하게 수정합니다.  
+ 중첩 트리거에 대한 애플리케이션을 검토하여 `nested triggers` 서버 구성 옵션이 0으로 설정된 경우 이 새 동작과 관련된 비즈니스 규칙을 애플리케이션이 여전히 준수하는지 확인한 다음 적절하게 수정합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [데이터베이스 엔진 업그레이드 문제](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   

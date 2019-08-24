@@ -26,12 +26,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68133067"
 ---
-# <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database)
+# <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Azure SQL 관리 되는 인스턴스의 CPU 사용량, IO 및 storage 데이터를 반환합니다. 데이터는 5분 간격 이내로 수집 및 집계됩니다. 보고 15 초 마다 한 행씩이 있습니다. 반환 되는 데이터는 CPU 사용량, 저장소 크기, IO 사용률 및 관리 되는 인스턴스 SKU 포함 합니다. 기록 데이터는 약 14일 동안 보존됩니다.
 
-합니다 **sys.server_resource_stats** 보기에는 데이터베이스와 연결 된 Azure SQL 관리 되는 인스턴스의 버전에 따라 다른 정의가 포함 됩니다. 이러한 차이점과 새 서버 버전으로 업그레이드할 경우 응용 프로그램에 필요한 모든 수정 사항을 고려하세요.
+합니다 **sys.server_resource_stats** 보기에는 데이터베이스와 연결 된 Azure SQL 관리 되는 인스턴스의 버전에 따라 다른 정의가 포함 됩니다. 이러한 차이점과 새 서버 버전으로 업그레이드할 경우 애플리케이션에 필요한 모든 수정 사항을 고려하세요.
  
   
  다음 표에는 v12 서버에서 사용할 수 있는 열이 설명되어 있습니다.  

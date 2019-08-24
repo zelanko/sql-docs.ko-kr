@@ -27,7 +27,7 @@ ms.locfileid: "62741746"
 > [!NOTE]  
 >  <xref:ReportService2005> 및 <xref:ReportService2006> 엔드포인트는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]에서 더 이상 사용되지 않습니다. <xref:ReportService2010>엔드포인트에는 두 엔드포인트의 기능이 모두 포함되어 있으며 추가 관리 기능도 포함되어 있습니다.  
   
- 실행 기능은 <xref:ReportExecution2005> 엔드포인트를 통해 표시되며 보고서 서버가 기본 또는 SharePoint 통합 모드로 구성된 경우에 사용됩니다. 다음 항목에서는 이러한 엔드포인트를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, SharePoint 및 웹 응용 프로그램에서 보고 솔루션을 개발하는 방법을 설명합니다.  
+ 실행 기능은 <xref:ReportExecution2005> 엔드포인트를 통해 표시되며 보고서 서버가 기본 또는 SharePoint 통합 모드로 구성된 경우에 사용됩니다. 다음 항목에서는 이러한 엔드포인트를 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, SharePoint 및 웹 애플리케이션에서 보고 솔루션을 개발하는 방법을 설명합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Windows 애플리케이션에서 SOAP API 사용](../../reporting-services/application-integration/integrating-reporting-services-using-soap-windows-application.md)  

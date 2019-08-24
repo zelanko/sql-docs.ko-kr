@@ -41,13 +41,13 @@ ms.locfileid: "66071138"
  SharePoint용 PowerPivot 2010은 SharePoint 2010 팜에서 PowerPivot 데이터의 서버 호스팅을 제공합니다. PowerPivot 데이터는 PowerPivot for Excel 추가 기능을 사용하여 Excel에서 작성하는 분석 데이터 모델입니다. 이 데이터의 서버 호스팅에는 SharePoint 2010, Excel 서비스 및 SharePoint용 PowerPivot 설치가 필요합니다. 데이터는 팜에서 SharePoint용 PowerPivot 인스턴스에 로드되며 여기서 서버가 제공하는 PowerPivot 데이터 새로 고침 기능을 사용하여 예약된 간격으로 데이터를 새로 고칠 수 있습니다.  
   
 ### <a name="components-of-powerpivot-for-sharepoint-2010"></a>SharePoint용 PowerPivot 2010의 구성 요소  
- SharePoint용 PowerPivot은 공유 서비스로 구현되므로 기본 제공 기능과 인프라를 사용하여 PowerPivot 서비스 응용 프로그램을 관리, 보호 및 사용할 수 있습니다. 서버 및 데이터 검색, 리디렉션 및 연결 관리는 모두 팜 수준에서 관리됩니다. 중앙 관리는 서버 ID, 서버 상태 및 구성 속성을 관리하는 데 사용되는 서비스에 관리 인터페이스를 제공합니다.  
+ SharePoint용 PowerPivot은 공유 서비스로 구현되므로 기본 제공 기능과 인프라를 사용하여 PowerPivot 서비스 애플리케이션을 관리, 보호 및 사용할 수 있습니다. 서버 및 데이터 검색, 리디렉션 및 연결 관리는 모두 팜 수준에서 관리됩니다. 중앙 관리는 서버 ID, 서버 상태 및 구성 속성을 관리하는 데 사용되는 서비스에 관리 인터페이스를 제공합니다.  
   
- SharePoint용 PowerPivot의 전체 배포에는 SharePoint 팜에서 Excel 및 Excel 서비스와 통합되는 클라이언트 및 서버 구성 요소가 포함됩니다. Excel 통합 문서 내부의 PowerPivot 데이터는 데이터를 로드하고 쿼리하기 위해 Analysis Services xVelocity 메모리 내 분석 엔진(VertiPaq)이 필요한 Analysis Services 데이터베이스입니다. 클라이언트 워크스테이션에서 xVelocity 엔진은 Excel 내에서 in-process로 실행됩니다. SharePoint 팜에서 Analysis Services는 PowerPivot 데이터에 대한 요청을 처리하는 관련 서비스와 함께 응용 프로그램 서버에서 실행됩니다. 다음 다이어그램에서는 PowerPivot 클라이언트와 서버 구성 요소를 보여 줍니다.  
+ SharePoint용 PowerPivot의 전체 배포에는 SharePoint 팜에서 Excel 및 Excel 서비스와 통합되는 클라이언트 및 서버 구성 요소가 포함됩니다. Excel 통합 문서 내부의 PowerPivot 데이터는 데이터를 로드하고 쿼리하기 위해 Analysis Services xVelocity 메모리 내 분석 엔진(VertiPaq)이 필요한 Analysis Services 데이터베이스입니다. 클라이언트 워크스테이션에서 xVelocity 엔진은 Excel 내에서 in-process로 실행됩니다. SharePoint 팜에서 Analysis Services는 PowerPivot 데이터에 대한 요청을 처리하는 관련 서비스와 함께 애플리케이션 서버에서 실행됩니다. 다음 다이어그램에서는 PowerPivot 클라이언트와 서버 구성 요소를 보여 줍니다.  
   
  ![GMNI_GeminiArch2](../media/gmni-geminiarch2.gif "GMNI_GeminiArch2")  
   
- PowerPivot 웹 서비스는 웹 응용 프로그램 서버에서 실행됩니다. 이 서비스는 웹 응용 프로그램에서 팜의 PowerPivot 시스템 서비스 인스턴스로 요청을 리디렉션합니다.  
+ PowerPivot 웹 서비스는 웹 애플리케이션 서버에서 실행됩니다. 이 서비스는 웹 애플리케이션에서 팜의 PowerPivot 시스템 서비스 인스턴스로 요청을 리디렉션합니다.  
   
  PowerPivot 시스템 서비스는 Analysis Services에 대한 로드 요청을 실행하고 메모리에 이미 로드되어 있는 데이터에 대해 진행 중인 연결을 관리하며 데이터가 더 이상 사용되지 않거나 시스템 리소스에 대한 경합이 있는 경우 데이터를 캐시하거나 언로드합니다. 사용자 작업도 추적합니다. 서버 상태 데이터 및 기타 사용 데이터가 수집되고 보고서에 표시되어 시스템 성능을 파악할 수 있습니다.  
   

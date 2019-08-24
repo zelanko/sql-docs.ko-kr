@@ -29,7 +29,7 @@ ms.locfileid: "67937278"
 
   직접 실행은 가장 기본적인 문 실행 방법입니다. 응용 프로그램 빌드에 포함 된 문자열을 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 문을 사용 하 여 실행에 대 한 전송 및 합니다 **SQLExecDirect** 함수입니다. 서버에서 문이 수신되면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]가 문을 실행 계획으로 컴파일한 다음 실행 계획을 즉시 실행합니다.  
   
- 직접 실행은 런타임에 문을 작성하고 실행하는 응용 프로그램에 많이 사용되며, 한 번 실행되는 문에 가장 효율적인 실행 방법입니다. 반면 실행할 때마다 SQL 문을 구문 분석하고 컴파일해야 하기 때문에 문을 여러 번 실행하는 경우 오버헤드가 증가한다는 점이 많은 데이터베이스에서 단점이 됩니다.  
+ 직접 실행은 런타임에 문을 작성하고 실행하는 애플리케이션에 많이 사용되며, 한 번 실행되는 문에 가장 효율적인 실행 방법입니다. 반면 실행할 때마다 SQL 문을 구문 분석하고 컴파일해야 하기 때문에 문을 여러 번 실행하는 경우 오버헤드가 증가한다는 점이 많은 데이터베이스에서 단점이 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서는 다중 사용자 환경에서 자주 실행되는 문의 직접 실행 성능이 크게 향상되었으며, 자주 실행되는 SQL 문에 대한 매개 변수 표식과 SQLExecDirect를 함께 사용하여 준비된 실행의 효율성을 높일 수 있습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "67937278"
   
 -   정규화된 개체 이름을 사용합니다. 개체 이름이 정규화되어 있지 않으면 실행 계획이 다시 사용되지 않습니다.  
   
--   응용 프로그램 연결에 공통 연결 및 문 옵션을 사용할 수 있도록 합니다. 하나의 옵션 집합(예: ANSI_NULLS)을 사용하는 연결에 대해 생성되는 실행 계획은 다른 옵션 집합이 추가로 사용된 연결에 다시 사용되지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 이러한 옵션에 대한 기본 설정이 동일합니다.  
+-   애플리케이션 연결에 공통 연결 및 문 옵션을 사용할 수 있도록 합니다. 하나의 옵션 집합(예: ANSI_NULLS)을 사용하는 연결에 대해 생성되는 실행 계획은 다른 옵션 집합이 추가로 사용된 연결에 다시 사용되지 않습니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 이러한 옵션에 대한 기본 설정이 동일합니다.  
   
  모든 문을 실행 하는 경우 **SQLExecDirect** 은 이러한 규칙을 사용 하 여 코딩 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에서 기회가 있을 때 실행 계획을 재사용할 수 있습니다.  
   

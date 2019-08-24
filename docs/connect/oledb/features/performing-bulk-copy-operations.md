@@ -31,7 +31,7 @@ ms.locfileid: "67988986"
   
  이 기능을 보여 주는 샘플 응용 프로그램은 [IRowsetFastLoad &#40;OLE DB&#41;를 사용 하 여 대량 데이터 복사](../../oledb/ole-db-how-to/bulk-copy-data-using-irowsetfastload-ole-db.md)를 참조 하세요.  
   
- 응용 프로그램은 보통 다음 두 가지 방법 중 하나로 대량 복사를 사용합니다.  
+ 애플리케이션은 보통 다음 두 가지 방법 중 하나로 대량 복사를 사용합니다.  
   
 -   Transact-SQL 문의 테이블, 뷰 또는 결과 집합에서 데이터가 테이블 또는 뷰와 동일한 형식으로 저장되는 데이터 파일로 대량 복사합니다.  
   
@@ -47,9 +47,9 @@ ms.locfileid: "67988986"
   
 -   데이터를 프로그램 변수로 로드한 다음 한 번에 한 행씩, 대량 복사하기 위한 대량 복사 함수를 사용하여 데이터를 테이블 또는 뷰로 가져옵니다.  
   
- 다른 대량 복사 프로그램에서 대량 복사 함수에 사용되는 데이터 파일을 만들 필요는 없습니다. 대량 복사 정의에 따라 다른 모든 시스템에서 데이터 파일과 형식 파일을 생성할 수 있습니다. 이러한 파일을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대량 복사 프로그램과 함께 사용하여 데이터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 가져올 수 있습니다. 예를 들어 탭으로 구분된 파일의 스프레드시트에서 데이터를 내보내고, 탭으로 구분된 파일을 설명하는 형식 파일을 작성한 다음 대량 복사 프로그램을 사용하여 신속하게 데이터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 가져올 수 있습니다. 대량 복사에서 생성된 데이터 파일을 다른 응용 프로그램으로 가져올 수도 있습니다. 예를 들어 대량 복사 함수를 사용하여 테이블 또는 뷰의 데이터를 탭으로 구분된 파일로 내보낸 다음 스프레드시트에 로드할 수 있습니다.  
+ 다른 대량 복사 프로그램에서 대량 복사 함수에 사용되는 데이터 파일을 만들 필요는 없습니다. 대량 복사 정의에 따라 다른 모든 시스템에서 데이터 파일과 형식 파일을 생성할 수 있습니다. 이러한 파일을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 대량 복사 프로그램과 함께 사용하여 데이터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 가져올 수 있습니다. 예를 들어 탭으로 구분된 파일의 스프레드시트에서 데이터를 내보내고, 탭으로 구분된 파일을 설명하는 형식 파일을 작성한 다음 대량 복사 프로그램을 사용하여 신속하게 데이터를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]로 가져올 수 있습니다. 대량 복사에서 생성된 데이터 파일을 다른 애플리케이션으로 가져올 수도 있습니다. 예를 들어 대량 복사 함수를 사용하여 테이블 또는 뷰의 데이터를 탭으로 구분된 파일로 내보낸 다음 스프레드시트에 로드할 수 있습니다.  
   
- 대량 복사 함수를 사용할 응용 프로그램을 코딩하는 프로그래머가 우수한 대량 복사 성능을 얻으려면 일반 규칙을 따라야 합니다. 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]대량 복사 작업을 지 원하는 방법에 대 한 자세한 내용은 [데이터 &#40;대량 가져오기 및 내보내기 SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)를 참조 하세요.  
+ 대량 복사 함수를 사용할 애플리케이션을 코딩하는 프로그래머가 우수한 대량 복사 성능을 얻으려면 일반 규칙을 따라야 합니다. 에서 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]대량 복사 작업을 지 원하는 방법에 대 한 자세한 내용은 [데이터 &#40;대량 가져오기 및 내보내기 SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)를 참조 하세요.  
   
 ## <a name="limitations-and-restrictions"></a>제한 사항  
  CLR UDT(사용자 정의 형식)를 이진 데이터로 바인딩해야 합니다. 형식 파일에서 SQLCHAR를 대상 UDT 열의 데이터 형식으로 지정하는 경우에도 BCP 유틸리티는 해당 데이터를 이진으로 처리합니다.  

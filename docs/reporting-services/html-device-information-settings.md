@@ -22,7 +22,7 @@ ms.locfileid: "65503098"
 다음 표에서는 HTML 형식으로 렌더링하기 위한 디바이스 정보 설정을 보여 줍니다.  
   
 > [!IMPORTANT]  
->  아래 표에 **(\*)** 와 함께 나열된 디바이스 정보 설정은 더 이상 사용되지 않으므로 새 응용 프로그램에서 사용하지 않아야 합니다. 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 지원되지 않는 기능](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
+>  아래 표에 **(\*)** 와 함께 나열된 디바이스 정보 설정은 더 이상 사용되지 않으므로 새 애플리케이션에서 사용하지 않아야 합니다. 자세한 내용은 [SQL Server 2016의 SQL Server Reporting Services에서 지원되지 않는 기능](../reporting-services/deprecated-features-in-sql-server-reporting-services-ssrs.md)   
   
 |설정|값|  
 |-------------|-----------|  

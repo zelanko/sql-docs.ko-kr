@@ -30,13 +30,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68132820"
 ---
-# <a name="set-remoteproctransactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS(Transact-SQL)
+# <a name="set-remote_proc_transactions-transact-sql"></a>SET REMOTE_PROC_TRANSACTIONS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   로컬 트랜잭션이 활성 트랜잭션일 때 원격 저장 프로시저를 실행하면 MS DTC([!INCLUDE[tsql](../../includes/tsql-md.md)] Distributed Transaction Manager)에서 관리하는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 분산 트랜잭션이 시작되도록 지정합니다.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 이 옵션은 원격 저장 프로시저를 사용하는 응용 프로그램에 대해 이전 버전과의 호환성을 위해 제공됩니다. 원격 저장 프로시저 호출을 실행하는 대신 연결된 서버를 참조하는 분산 쿼리를 사용합니다. 이러한 분산 쿼리는 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 정의됩니다.  
+>  [!INCLUDE[ssNoteDepNextDontUse](../../includes/ssnotedepnextdontuse-md.md)] 이 옵션은 원격 저장 프로시저를 사용하는 애플리케이션에 대해 이전 버전과의 호환성을 위해 제공됩니다. 원격 저장 프로시저 호출을 실행하는 대신 연결된 서버를 참조하는 분산 쿼리를 사용합니다. 이러한 분산 쿼리는 [sp_addlinkedserver](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)를 사용하여 정의됩니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

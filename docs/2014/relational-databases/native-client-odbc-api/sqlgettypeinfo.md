@@ -22,7 +22,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046700"
 ---
 # <a name="sqlgettypeinfo"></a>SQLGetTypeInfo
-  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 보고서 결과에 추가 열 USERTYPE 집합이 `SQLGetTypeInfo`합니다. USERTYPE은 DB-Library 데이터 형식 정의를 보고하며 기존 DB-Library 응용 프로그램을 ODBC에 이식할 때 개발자가 이 기능을 이용할 수 있습니다.  
+  합니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버 보고서 결과에 추가 열 USERTYPE 집합이 `SQLGetTypeInfo`합니다. USERTYPE은 DB-Library 데이터 형식 정의를 보고하며 기존 DB-Library 애플리케이션을 ODBC에 이식할 때 개발자가 이 기능을 이용할 수 있습니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 ID를 특성으로 처리하지만 ODBC에서는 데이터 형식으로 처리합니다. 이러한 불일치를 해결 하려면 `SQLGetTypeInfo` 데이터 형식을 반환 합니다. **intidentity**, **smallintidentity**를 **tinyintidentity**, **decimalidentity** , 및 **numericidentity**합니다. `SQLGetTypeInfo` 결과 집합 열 AUTO_UNIQUE_VALUE는 이러한 데이터 형식에 대해 TRUE 값을 보고 합니다.  
   

@@ -28,7 +28,7 @@ ms.locfileid: "62728505"
 |--------------|-----------------|  
 |`AttributeAllMemberName`|차원의 특성에 대한 All 멤버의 이름을 지정합니다.|  
 |`Collation`|차원에 사용되는 데이터 정렬을 결정합니다.|  
-|`CurrentStorageMode`|차원의 현재 저장소 모드를 포함합니다.|  
+|`CurrentStorageMode`|차원의 현재 스토리지 모드를 포함합니다.|  
 |`DependsOnDimension`|차원이 종속되는 다른 차원이 있는 경우 이 차원의 ID를 포함합니다.|  
 |`Description`|차원에 대한 설명을 포함합니다.|  
 |`ErrorConfiguration`|중복 키, 알 수 없는 키, 오류 제한, 오류 감지 시 수행 동작, 오류 로그 파일 및 Null 키 등에 대한 구성 가능한 오류 처리 설정을 제공합니다.|  

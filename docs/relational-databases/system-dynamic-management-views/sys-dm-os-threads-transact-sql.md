@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68258711"
 ---
-# <a name="sysdmosthreads-transact-sql"></a>sys.dm_os_threads(Transact-SQL)
+# <a name="sysdm_os_threads-transact-sql"></a>sys.dm_os_threads(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스에서 실행되고 있는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 운영 체제 스레드를 목록으로 반환합니다.  
@@ -80,7 +80,7 @@ Linux에서 SQL 엔진 작동 방식으로 인해이 정보 중 일부 Linux 진
  다음 쿼리는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 시작하지 않은 스레드를 실행하는 작업자와 실행 소요 시간을 확인하는 데 사용됩니다.  
   
 > [!NOTE]
->  간단하게 다음 쿼리에서는 `*` 문에 별표(`SELECT`)를 사용합니다. 특히 카탈로그 뷰, 동적 관리 뷰 및 시스템 테이블 반환 함수에 대해서는 별표(*)를 사용하지 않아야 합니다. 향후 업그레이드 및 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 있습니다 열을 추가 하 고 이러한 뷰와 함수 열 순서를 변경 합니다. 그렇게 되면 특정 열 순서 및 열 수를 예상하는 응용 프로그램에서 오류가 발생할 수 있습니다.  
+>  간단하게 다음 쿼리에서는 `*` 문에 별표(`SELECT`)를 사용합니다. 특히 카탈로그 뷰, 동적 관리 뷰 및 시스템 테이블 반환 함수에 대해서는 별표(*)를 사용하지 않아야 합니다. 향후 업그레이드 및 버전의 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 수 있습니다 열을 추가 하 고 이러한 뷰와 함수 열 순서를 변경 합니다. 그렇게 되면 특정 열 순서 및 열 수를 예상하는 애플리케이션에서 오류가 발생할 수 있습니다.  
   
 ```  
 SELECT *  

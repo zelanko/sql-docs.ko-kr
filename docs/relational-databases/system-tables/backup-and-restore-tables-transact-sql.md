@@ -61,6 +61,6 @@ ms.locfileid: "68091889"
  824 오류가 발생하여 실패한 페이지당 하나의 행을 포함합니다(최대 1,000개 행까지).  
   
  [sysopentapes](../../relational-databases/system-tables/sysopentapes-transact-sql.md)  
- 현재 열려 있는 각 테이프 장치에 대해 한 행을 포함합니다.  
+ 현재 열려 있는 각 테이프 디바이스에 대해 한 행을 포함합니다.  
   
   

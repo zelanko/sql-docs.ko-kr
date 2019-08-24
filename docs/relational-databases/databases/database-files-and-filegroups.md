@@ -82,7 +82,7 @@ ms.locfileid: "68037588"
 ### <a name="file-size"></a>파일 크기
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일은 원래 지정된 크기에서 자동으로 증가할 수 있습니다. 파일을 정의할 때 특정 증분을 지정할 수 있습니다. 파일이 가득 찰 때마다 증분에 따라 크기가 늘어납니다. 한 파일 그룹에 여러 파일이 있을 경우 모든 파일이 가득 찰 때까지 파일은 자동으로 증가하지 않습니다. 그런 다음 [비례 채우기](../../relational-databases/pages-and-extents-architecture-guide.md#ProportionalFill)을 사용하여 라운드 로빈 방식으로 증가합니다.
 
-각 파일의 최대 크기를 지정할 수도 있습니다. 최대 크기를 지정하지 않으면 파일은 디스크에서 사용 가능한 공간을 모두 사용할 때까지 계속 증가할 수 있습니다. 이 기능은 사용자가 시스템 관리자에 편리하게 액세스할 수 없는 응용 프로그램에 포함된 데이터베이스로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 때 특히 유용합니다. 사용자는 필요에 따라 파일이 자동으로 증가하게 하여 데이터베이스의 사용 가능한 공간을 모니터링하고 추가 공간을 수동으로 할당하는 관리 작업을 줄일 수 있습니다.  
+각 파일의 최대 크기를 지정할 수도 있습니다. 최대 크기를 지정하지 않으면 파일은 디스크에서 사용 가능한 공간을 모두 사용할 때까지 계속 증가할 수 있습니다. 이 기능은 사용자가 시스템 관리자에 편리하게 액세스할 수 없는 애플리케이션에 포함된 데이터베이스로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 사용할 때 특히 유용합니다. 사용자는 필요에 따라 파일이 자동으로 증가하게 하여 데이터베이스의 사용 가능한 공간을 모니터링하고 추가 공간을 수동으로 할당하는 관리 작업을 줄일 수 있습니다.  
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 [인스턴트 파일 초기화(IFI)](../../relational-databases/databases/database-instant-file-initialization.md)를 사용하는 경우 데이터 파일에 새 공간을 할당할 때 최소한의 오버헤드가 있습니다.
 

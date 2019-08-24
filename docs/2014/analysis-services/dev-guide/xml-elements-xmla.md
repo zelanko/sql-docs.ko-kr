@@ -28,10 +28,10 @@ ms.locfileid: "62731988"
   
 |속성|Description|  
 |--------------|-----------------|  
-|[헤더 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/xml-elements-headers)|프로토콜 수준의 기능을 관리하기 위해 응용 프로그램 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 의해 SOAP Envelope의 SOAP 헤더에서 전송되는 요소를 설명합니다.|  
-|[메서드 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods)|데이터 또는 메타데이터를 검색하거나 인스턴스에 대한 동작을 수행하기 위해 응용 프로그램에 의해 SOAP Envelope에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스로 전송되는 최상위 요소를 설명합니다.|  
+|[헤더 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/xml-elements-headers)|프로토콜 수준의 기능을 관리하기 위해 애플리케이션 또는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스에 의해 SOAP Envelope의 SOAP 헤더에서 전송되는 요소를 설명합니다.|  
+|[메서드 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods)|데이터 또는 메타데이터를 검색하거나 인스턴스에 대한 동작을 수행하기 위해 애플리케이션에 의해 SOAP Envelope에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스로 전송되는 최상위 요소를 설명합니다.|  
 |[명령 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/xml-elements-commands)|특정 동작을 수행하기 위해 XMLA 메서드에서 전송되는 요소를 설명합니다.|  
-|[개체 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)|응용 프로그램이 XMLA 메서드에 대한 응답으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 SOAP Envelope에서 받은 최상위 요소를 설명합니다.|  
+|[개체 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-objects)|애플리케이션이 XMLA 메서드에 대한 응답으로 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 인스턴스의 SOAP Envelope에서 받은 최상위 요소를 설명합니다.|  
 |[속성 &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/xml-elements-properties)|XMLA 헤더, 메서드, 개체 또는 명령에 대한 자식 요소를 설명합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

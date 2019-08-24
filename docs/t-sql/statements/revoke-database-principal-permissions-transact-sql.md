@@ -28,7 +28,7 @@ ms.locfileid: "68082325"
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE 데이터베이스 보안 주체 사용 권한(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  데이터베이스 사용자, 데이터베이스 역할 또는 응용 프로그램 역할에 대해 부여되거나 거부된 사용 권한을 취소합니다.  
+  데이터베이스 사용자, 데이터베이스 역할 또는 애플리케이션 역할에 대해 부여되거나 거부된 사용 권한을 취소합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -70,7 +70,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  APPLICATION ROLE ::*application_role*  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
   
- 사용 권한을 취소할 응용 프로그램 역할의 클래스 및 이름을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
+ 사용 권한을 취소할 애플리케이션 역할의 클래스 및 이름을 지정합니다. 범위 한정자( **::** )가 필요합니다.  
   
  GRANT OPTION  
  지정한 사용 권한을 다른 보안 주체에게 부여할 수 있는 권한이 취소됨을 나타냅니다. 사용 권한 자체는 취소되지 않습니다.  
@@ -95,7 +95,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  *Application_role*  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
   
- 응용 프로그램 역할을 지정합니다.  
+ 애플리케이션 역할을 지정합니다.  
   
  *Database_user_mapped_to_Windows_User*  
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지
@@ -142,10 +142,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 |ALTER|CONTROL|ALTER ANY ROLE|  
 |VIEW DEFINITION|CONTROL|VIEW DEFINITION|  
   
-## <a name="application-role-permissions"></a>응용 프로그램 역할 사용 권한  
- 응용 프로그램 역할은 사용 권한 계층에서 해당 역할의 부모인 데이터베이스에 포함된 데이터베이스 수준 보안 개체입니다. 다음 표에는 응용 프로그램 역할에 대해 취소할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
+## <a name="application-role-permissions"></a>애플리케이션 역할 사용 권한  
+ 애플리케이션 역할은 사용 권한 계층에서 해당 역할의 부모인 데이터베이스에 포함된 데이터베이스 수준 보안 개체입니다. 다음 표에는 애플리케이션 역할에 대해 취소할 수 있는 가장 제한적인 특정 사용 권한이 의미상 이러한 사용 권한을 포함하는 보다 일반적인 사용 권한과 함께 나열되어 있습니다.  
   
-|응용 프로그램 역할 사용 권한|응용 프로그램 역할 사용 권한에 포함된 사용 권한|데이터베이스 사용 권한에 포함된 사용 권한|  
+|애플리케이션 역할 사용 권한|애플리케이션 역할 사용 권한에 포함된 사용 권한|데이터베이스 사용 권한에 포함된 사용 권한|  
 |---------------------------------|--------------------------------------------|------------------------------------|  
 |CONTROL|CONTROL|CONTROL|  
 |ALTER|CONTROL|ALTER ANY APPLICATION ROLE|  
@@ -177,8 +177,8 @@ REVOKE VIEW DEFINITION ON ROLE::SammamishParking
 GO  
 ```  
   
-### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. 응용 프로그램 역할로부터 사용자에 대한 IMPERSONATE 권한 취소  
- 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 응용 프로그램 역할 `IMPERSONATE`로부터 사용자 `HamithaL`에 대한 `AccountsPayable17` 권한을 취소합니다.  
+### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. 애플리케이션 역할로부터 사용자에 대한 IMPERSONATE 권한 취소  
+ 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 애플리케이션 역할 `IMPERSONATE`로부터 사용자 `HamithaL`에 대한 `AccountsPayable17` 권한을 취소합니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]까지
   

@@ -59,7 +59,7 @@ ms.locfileid: "67993864"
 |IDBSchemaRowset::GetSchemas|IDBSchemaRowset::GetSchemas에는 사용 가능한 스키마 행 집합 목록에 있는 새 행 집합, DBSCHEMA_COLUMNS_EXTENDED 및 DBSCHEMA_SPARSE_COLUMN_SET에 대한 GUID가 포함됩니다.|  
 |ICommand::Execute|**선택 \*가**  *테이블*에서 사용될 경우 스파스 **column_set**의 멤버가 아닌 모든 열과 스파스 **column_set**의 멤버인 Null이 아닌 모든 열의 값(있는 경우)이 포함된 XML 열을 반환합니다.|  
 |IOpenRowset::OpenRowset|Iopenrowset:: OpenRowset은 같은 테이블에 대 한 **select \***  쿼리와 함께 ICommand:: Execute와 동일한 열이 있는 행 집합을 반환 합니다.|  
-|ITableDefinition|스파스 열이나 **column_set** 열의 경우 이 인터페이스에 변경 사항이 없습니다. 스키마를 수정해야 하는 응용 프로그램에서는 적절한 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 직접 실행해야 합니다.|  
+|ITableDefinition|스파스 열이나 **column_set** 열의 경우 이 인터페이스에 변경 사항이 없습니다. 스키마를 수정해야 하는 애플리케이션에서는 적절한 [!INCLUDE[tsql](../../../includes/tsql-md.md)]을 직접 실행해야 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [SQL Server 프로그래밍용 OLE DB 드라이버](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  

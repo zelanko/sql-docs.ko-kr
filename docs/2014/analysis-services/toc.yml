@@ -206,7 +206,7 @@
       href: power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md
     - name: PowerPivot 솔루션 배포
       href: power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md
-    - name: PowerPivot 서비스 응용 프로그램 만들기 및 구성
+    - name: PowerPivot 서비스 애플리케이션 만들기 및 구성
       href: power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md
     - name: SharePoint 웹 애플리케이션에 PowerPivot 서비스 애플리케이션 연결
       href: power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md

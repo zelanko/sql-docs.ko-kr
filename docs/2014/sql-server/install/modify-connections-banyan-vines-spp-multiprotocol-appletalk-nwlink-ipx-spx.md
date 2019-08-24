@@ -30,7 +30,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093894"
 ---
 # <a name="modify-connections-that-use-banyan-vines-sequenced-packet-protocol-spp-multiprotocol-appletalk-or-nwlink-ipx-spx-network-protocols"></a>Banyan VINES SPP(Sequenced Packet Protocol), 멀티프로토콜, AppleTalk 또는 NWLink IPX/SPX 네트워크 프로토콜을 사용하는 연결을 수정합니다.
-  업그레이드 관리자가 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되지 않는 클라이언트 서버 연결 프로토콜을 검색했습니다. Banyan VINES SPP(Sequenced Packet Protocol), 멀티프로토콜(RPC), AppleTalk 또는 NWLink IPX/SPX 네트워크 프로토콜을 사용하는 클라이언트 응용 프로그램은 지원되는 프로토콜을 사용하여 연결해야 합니다.  
+  업그레이드 관리자가 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 지원되지 않는 클라이언트 서버 연결 프로토콜을 검색했습니다. Banyan VINES SPP(Sequenced Packet Protocol), 멀티프로토콜(RPC), AppleTalk 또는 NWLink IPX/SPX 네트워크 프로토콜을 사용하는 클라이언트 애플리케이션은 지원되는 프로토콜을 사용하여 연결해야 합니다.  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
@@ -39,7 +39,7 @@ ms.locfileid: "66093894"
  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서는 Banyan VINES SPP(Sequenced Packet Protocol), 멀티프로토콜, AppleTalk 또는 NWLink IPX/SPX 네트워크 프로토콜을 지원하지 않습니다. 이전에 이러한 프로토콜을 사용하여 연결된 클라이언트는 다른 프로토콜을 선택해야 합니다.  
   
 ## <a name="corrective-action"></a>수정 동작  
- 서버에 연결할 때 지원되는 프로토콜을 사용하도록 클라이언트 응용 프로그램을 변경합니다. 지원되지 않는 프로토콜 중 하나를 사용하는 별칭이 설정된 경우 지원되는 프로토콜 중 하나를 사용하도록 해당 별칭을 수정해야 합니다.  
+ 서버에 연결할 때 지원되는 프로토콜을 사용하도록 클라이언트 애플리케이션을 변경합니다. 지원되지 않는 프로토콜 중 하나를 사용하는 별칭이 설정된 경우 지원되는 프로토콜 중 하나를 사용하도록 해당 별칭을 수정해야 합니다.  
   
  응용 프로그램 연결 문자열 로드 중 프로토콜을 지정 하거나 네트워크에서 = DBMSRPCN RPC, 네트워크에 대 한 = DBMSADSN Appletalk 또는 NETWORK = DBMSVINN Banyan VINES 속성에 대 한 또는 같은 명시적 접두사를 사용 하 여 "spx: *서버 \ 인스턴스*"spx," bv:*서버*"Banyan에 대 한 VINES," adsp:*server*"appletalk를 또는" rpc:*server*" 멀티 프로토콜을 수정 해야 지원 되는 프로토콜 중 하나를 사용 하도록 응용 프로그램입니다.  
   

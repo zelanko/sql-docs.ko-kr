@@ -90,7 +90,7 @@ EXTERNAL NAME assembly_name [ .class_name ]
  EXTERNAL NAME 절에 지정된 어셈블리에 대한 REFERENCES 권한과 CREATE AGGREGATE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 StringUtilities.csproj 예제 응용 프로그램이 컴파일된다고 가정합니다. 자세한 내용은 [문자열 유틸리티 함수 예제](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c)를 참조합니다.  
+ 다음 예에서는 StringUtilities.csproj 예제 애플리케이션이 컴파일된다고 가정합니다. 자세한 내용은 [문자열 유틸리티 함수 예제](https://msdn.microsoft.com/library/9623013f-15f1-4614-8dac-1155e57c880c)를 참조합니다.  
   
  이 예에서는 집계 `Concatenate`를 만듭니다. 집계를 만들기 전에 `StringUtilities.dll` 어셈블리가 로컬 데이터베이스에 등록됩니다.  
   

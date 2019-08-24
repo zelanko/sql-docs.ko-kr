@@ -30,7 +30,7 @@ ms.locfileid: "68742956"
 ---
 # <a name="restore-statements---labelonly-transact-sql"></a>RESTORE Statements - LABELONLY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
-  특정 백업 장치로 식별하는 백업 미디어에 대한 정보가 포함된 결과 집합을 반환합니다.  
+  특정 백업 디바이스로 식별하는 백업 미디어에 대한 정보가 포함된 결과 집합을 반환합니다.  
   
 > [!NOTE]  
 >  인수에 대한 자세한 설명은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)를 참조하세요.  
@@ -98,7 +98,7 @@ FROM <backup_device>
 >  미디어 세트에 대한 암호를 정의한 경우 RESTORE LABELONLY는 올바른 미디어 암호를 명령의 MEDIAPASSWORD 옵션에 지정한 경우에만 정보를 반환합니다.  
   
 ## <a name="general-remarks"></a>일반적인 주의 사항  
- 백업 미디어의 내용을 빨리 찾을 수 있는 방법은 RESTORE LABELONLY를 실행하는 것입니다. RESTORE LABELONLY에서는 미디어 헤더만 읽기 때문에 고성능의 테이프 장치를 사용하는 경우에도 이 문은 빨리 완료됩니다.  
+ 백업 미디어의 내용을 빨리 찾을 수 있는 방법은 RESTORE LABELONLY를 실행하는 것입니다. RESTORE LABELONLY에서는 미디어 헤더만 읽기 때문에 고성능의 테이프 디바이스를 사용하는 경우에도 이 문은 빨리 완료됩니다.  
   
 ## <a name="security"></a>보안  
  백업 작업에서는 미디어 세트에 선택적으로 암호를 지정할 수 있습니다. 미디어 세트에 암호가 정의되어 있는 경우에는 RESTORE 문에서 정확한 암호를 지정해야 합니다. 암호를 지정하면 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 도구를 사용하여 무단으로 복원 작업을 수행하거나 미디어에 백업 세트를 무단으로 추가하는 작업을 방지할 수 있습니다. 하지만 암호를 사용해도 BACKUP 문의 FORMAT 옵션을 사용하여 미디어를 덮어쓰는 작업은 수행됩니다.  

@@ -27,13 +27,13 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68265919"
 ---
-# <a name="sysdmftsmemorybuffers-transact-sql"></a>sys.dm_fts_memory_buffers(Transact-SQL)
+# <a name="sysdm_fts_memory_buffers-transact-sql"></a>sys.dm_fts_memory_buffers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   전체 텍스트 탐색이나 전체 텍스트 탐색 범위의 일부로 사용되는 특정 메모리 풀에 속한 메모리 버퍼에 대한 정보를 반환합니다.  
   
 > [!NOTE]
-> 이후 릴리스에서 다음 열이 제거 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **row_count**합니다. 향후 개발 작업에서는 이 열을 사용하지 않도록 하고 현재 이러한 열을 사용하는 응용 프로그램은 수정하십시오.  
+> 이후 릴리스에서 다음 열이 제거 됩니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **row_count**합니다. 향후 개발 작업에서는 이 열을 사용하지 않도록 하고 현재 이러한 열을 사용하는 애플리케이션은 수정하십시오.  
 
   
 |Column|데이터 형식|설명|  

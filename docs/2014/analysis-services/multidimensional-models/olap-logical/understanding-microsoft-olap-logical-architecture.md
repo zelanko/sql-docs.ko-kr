@@ -29,7 +29,7 @@ ms.locfileid: "62725487"
   
 -   다음 언어를 사용 하 여 쿼리 명령은 실행할 수 있습니다. SQL, 다차원 식 (MDX), 분석용 업계 표준 쿼리 언어인 또는 확장 DMX (Data Mining), 데이터 마이닝 지향 업계 표준 쿼리 언어인 합니다. 또한 ASSL(Analysis Services Scripting Language)을 사용하여 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 데이터베이스 개체를 관리할 수도 있습니다.  
   
- 또한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 서로 연결되지 않은 여러 클라이언트의 응용 프로그램이 로컬에 저장된 다차원 데이터를 검색할 수 있도록 하는 로컬 큐브 엔진을 지원합니다. 자세한 내용은 참조 하세요. [Analysis Services 개발을 위한 클라이언트 아키텍처 요구 사항](../olap-physical/client-architecture-requirements-for-analysis-services-development.md)  
+ 또한 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]에서는 서로 연결되지 않은 여러 클라이언트의 애플리케이션이 로컬에 저장된 다차원 데이터를 검색할 수 있도록 하는 로컬 큐브 엔진을 지원합니다. 자세한 내용은 참조 하세요. [Analysis Services 개발을 위한 클라이언트 아키텍처 요구 사항](../olap-physical/client-architecture-requirements-for-analysis-services-development.md)  
   
 ## <a name="in-this-section"></a>섹션 내용  
  **논리적 아키텍처 개요**  

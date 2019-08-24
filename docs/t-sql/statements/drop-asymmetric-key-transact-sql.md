@@ -49,14 +49,14 @@ DROP ASYMMETRIC KEY key_name [ REMOVE PROVIDER KEY ]
  데이터베이스에서 삭제할 비대칭 키의 이름입니다.  
   
  REMOVE PROVIDER KEY  
- EKM(Extensible Key Management) 장치에서 EKM 키를 제거합니다. 외부 키 관리에 대한 자세한 내용은 [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)를 참조하세요.  
+ EKM(Extensible Key Management) 디바이스에서 EKM 키를 제거합니다. 외부 키 관리에 대한 자세한 내용은 [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)를 참조하세요.  
   
 ## <a name="remarks"></a>Remarks  
  데이터베이스의 대칭 키를 암호화하는 데 사용되거나 사용자 또는 로그인이 매핑된 비대칭 키는 삭제할 수 없습니다. 이러한 비대칭 키를 삭제하려면 먼저 이 키에 매핑된 모든 사용자나 로그인을 삭제해야 합니다. 또한 비대칭 키로 암호화된 모든 대칭 키를 삭제하거나 변경해야 합니다. [ALTER SYMMETRIC KEY](../../t-sql/statements/alter-symmetric-key-transact-sql.md)의 DROP ENCRYPTION 옵션을 사용하여 비대칭 키를 사용한 암호화를 제거할 수 있습니다.  
   
  비대칭 키의 메타데이터는 [sys.asymmetric_keys](../../relational-databases/system-catalog-views/sys-asymmetric-keys-transact-sql.md) 카탈로그 뷰를 사용하여 액세스할 수 있습니다. 데이터베이스 내에서 키 자체를 직접 볼 수는 없습니다.  
   
- EKM(Extensible Key Management) 장치의 EKM 키에 비대칭 키를 매핑하고 REMOVE PROVIDER KEY 옵션을 지정하지 않으면 데이터베이스에서는 키가 삭제되지만 장치에서는 삭제되지 않으며 경고가 발생합니다.  
+ EKM(Extensible Key Management) 디바이스의 EKM 키에 비대칭 키를 매핑하고 REMOVE PROVIDER KEY 옵션을 지정하지 않으면 데이터베이스에서는 키가 삭제되지만 디바이스에서는 삭제되지 않으며 경고가 발생합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  비대칭 키에 대한 CONTROL 권한이 필요합니다.  

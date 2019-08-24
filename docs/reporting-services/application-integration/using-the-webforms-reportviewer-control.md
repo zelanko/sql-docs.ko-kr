@@ -18,9 +18,9 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63194794"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>WebForms ReportViewer 컨트롤 사용
-  보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WebForms ReportViewer 컨트롤을 사용하여 웹 응용 프로그램에서 렌더링할 수 있습니다.  
+  보고서 서버에 배포된 보고서 또는 로컬 파일 시스템에 있는 보고서를 보려면 WebForms ReportViewer 컨트롤을 사용하여 웹 애플리케이션에서 렌더링할 수 있습니다.  
   
-## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>웹 응용 프로그램에서 ReportViewer 컨트롤을 사용하려면  
+## <a name="to-use-the-reportviewer-control-in-a-web-application"></a>웹 애플리케이션에서 ReportViewer 컨트롤을 사용하려면  
   
 1.  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]을 사용하여 새 [!INCLUDE[msCoName](../../includes/msconame-md.md)] ASP.NET 웹 사이트를 만듭니다.  
   
@@ -139,7 +139,7 @@ End Class
 ```  
   
 ## <a name="viewing-reports-in-local-processing-mode"></a>로컬 처리 모드로 보고서 보기  
- 다음 예는 Windows 응용 프로그램의 일부이고 보고서 서버에 배포되지 않은 보고서를 렌더링하는 방법을 보여 줍니다.  
+ 다음 예는 Windows 애플리케이션의 일부이고 보고서 서버에 배포되지 않은 보고서를 렌더링하는 방법을 보여 줍니다.  
   
 ###### <a name="to-add-the-sales-order-detail-report-to-a-web-site"></a>Sales Order Detail 보고서를 웹 사이트에 추가하려면  
   
@@ -159,7 +159,7 @@ End Class
   
      솔루션 탐색기가 보이지 않으면 **보기** 메뉴에서 솔루션 탐색기를 선택하여 열 수 있습니다.  
   
- 다음 코드 예에서는 판매 주문 데이터에 대한 데이터 집합을 만든 다음 Sales Order Detail 보고서를 로컬 모드에서 렌더링합니다.  
+ 다음 코드 예에서는 판매 주문 데이터에 대한 데이터 세트을 만든 다음 Sales Order Detail 보고서를 로컬 모드에서 렌더링합니다.  
 
 **C#**
 ```csharp  

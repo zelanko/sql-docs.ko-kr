@@ -26,9 +26,9 @@ ms.locfileid: "68134209"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  인스턴스와 통신 하는 ODBC 응용 프로그램에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 환경 할당 해야 합니다 및 연결 처리 및 데이터 원본에 연결 합니다. 연결이 설정되면 응용 프로그램에서는 서버에 쿼리를 보내고 모든 결과 집합을 처리할 수 있습니다. 데이터 원본 사용을 마치면 응용 프로그램은 데이터 원본에 대한 연결을 끊고 연결 핸들을 해제한 후 연결 핸들이 모두 해제되면 환경 핸들을 해제합니다.  
+  인스턴스와 통신 하는 ODBC 응용 프로그램에 대 한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], 환경 할당 해야 합니다 및 연결 처리 및 데이터 원본에 연결 합니다. 연결이 설정되면 애플리케이션에서는 서버에 쿼리를 보내고 모든 결과 집합을 처리할 수 있습니다. 데이터 원본 사용을 마치면 애플리케이션은 데이터 원본에 대한 연결을 끊고 연결 핸들을 해제한 후 연결 핸들이 모두 해제되면 환경 핸들을 해제합니다.  
   
- 응용 프로그램에서는 개수에 제한 없이 여러 데이터 원본에 연결할 수 있습니다. 응용 프로그램은 여러 드라이버와 여러 데이터 원본의 조합, 단일 드라이버와 여러 데이터 원본 조합 또는 단일 드라이버와 단일 데이터 원본에 대한 여러 개의 연결을 사용할 수 있습니다.  
+ 애플리케이션에서는 개수에 제한 없이 여러 데이터 원본에 연결할 수 있습니다. 애플리케이션은 여러 드라이버와 여러 데이터 원본의 조합, 단일 드라이버와 여러 데이터 원본 조합 또는 단일 드라이버와 단일 데이터 원본에 대한 여러 개의 연결을 사용할 수 있습니다.  
   
  다운로드할 수 있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC에서 샘플 합니다 [SQL Server 다운로드](https://go.microsoft.com/fwlink/?LinkId=62796) MSDN 페이지를 참조 합니다.  
   

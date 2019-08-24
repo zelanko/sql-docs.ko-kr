@@ -57,7 +57,7 @@ ms.locfileid: "68018066"
 |**issqluser**|**int**|1 = 계정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자입니다.|  
 |**isaliased**|**int**|1 = 계정이 다른 사용자의 별칭입니다.|  
 |**issqlrole**|**int**|1 = 계정이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 역할입니다.|  
-|**isapprole**|**int**|1 = 계정이 응용 프로그램 역할입니다.|  
+|**isapprole**|**int**|1 = 계정이 애플리케이션 역할입니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

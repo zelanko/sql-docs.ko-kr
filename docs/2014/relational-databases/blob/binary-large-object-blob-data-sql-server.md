@@ -20,7 +20,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010335"
 ---
 # <a name="binary-large-object-blob-data-sql-server"></a>BLOB(Binary Large Object) 데이터(SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하면 데이터베이스 또는 원격 저장 장치에 파일 및 문서를 저장할 수 있습니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 를 사용하면 데이터베이스 또는 원격 스토리지 디바이스에 파일 및 문서를 스토리지할 수 있습니다.  
   
 ##  <a name="section"></a> 섹션 내용  
  [BLOB 저장 옵션 비교&#40;SQL Server&#41;](compare-options-for-storing-blobs-sql-server.md)  

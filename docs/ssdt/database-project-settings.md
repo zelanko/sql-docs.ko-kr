@@ -88,7 +88,7 @@ ms.locfileid: "67912849"
 |대상 플랫폼|Microsoft SQL Server 2012|이 데이터베이스 프로젝트에서 대상으로 하는 SQL Server의 버전을 지정합니다.|  
 |일반 개체에 대한 확장 Transact\-SQL 확인을 사용하도록 설정합니다.|이 옵션은 새 프로젝트를 만들 때 사용하지 않도록 설정됩니다.<br /><br />이 옵션은 SQL Azure에 연결된 SQL Server 개체 탐색기에서 프로젝트를 만들 때 또는 SQL Azure 데이터베이스를 프로젝트에 가져올 때 또는 프로젝트의 대상 플랫폼을 SQL Azure로 변경할 때 사용하도록 설정됩니다.|이 옵션을 사용하도록 설정되어 있으면 프로젝트에서 실패한 SQL Server 컴파일러 확인이 발견되었다는 오류가 보고됩니다. 대상 플랫폼을 SQL Azure로 변경하면 확장 확인을 사용하도록 설정됩니다. 대상 플랫폼을 변경해도 이 옵션의 선택은 취소되지 않습니다.<br /><br />SQL Server의 다른 버전에 대해서는 이 옵션을 사용하도록 설정할 수 있지만 유효성 검사는 Microsoft SQL Server 2012가 부분적으로 포함된 데이터베이스 및 SQL Azure로 제한됩니다. 모든 SQL Server 버전에서 모든 Transact\-SQL 구문을 지원하는 것은 아닙니다.<br /><br />자세한 내용은 이 항목의 뒷부분에 나오는 [확장 Transact-SQL 확인](#bkmk_evf)을 참조하세요.|  
 |출력 형식|||  
-|데이터 계층 응용 프로그램(.dacpac 파일)|활성화되고 잠겨 있습니다. 데이터베이스 프로젝트의 빌드 출력은 항상 프로젝트를 빌드할 때 .dacpac 패키지를 생성합니다.|“하위 수준 .dacpac 파일(v2.0) 추가로 만들기” 옵션이 있는 SSDT(SQL Server Data Tools) 버전을 사용하는 경우 패키지가 SQL Server Management Studio 또는 SQL Azure Management 포털과 호환되도록 할 것인지 확인합니다. (SSDT)에서 직접 .dacpac 패키지를 배포할 수 있지만 SQL Server Data Tools가 릴리스된 때 SQL Server Management Studio를 통해 버전 2.0 .dacpac 파일만 배포할 수 있습니다.|  
+|데이터 계층 애플리케이션(.dacpac 파일)|활성화되고 잠겨 있습니다. 데이터베이스 프로젝트의 빌드 출력은 항상 프로젝트를 빌드할 때 .dacpac 패키지를 생성합니다.|“하위 수준 .dacpac 파일(v2.0) 추가로 만들기” 옵션이 있는 SSDT(SQL Server Data Tools) 버전을 사용하는 경우 패키지가 SQL Server Management Studio 또는 SQL Azure Management 포털과 호환되도록 할 것인지 확인합니다. (SSDT)에서 직접 .dacpac 패키지를 배포할 수 있지만 SQL Server Data Tools가 릴리스된 때 SQL Server Management Studio를 통해 버전 2.0 .dacpac 파일만 배포할 수 있습니다.|  
 |스크립트 만들기(.sql 파일)||전체 .sql CREATE 스크립트가 프로젝트의 모든 개체에 대해 생성되어 프로젝트가 빌드될 때 bin\debug 폴더에 배치되는지 여부를 지정합니다 **프로젝트 게시** 명령 또는 SQL Compare 유틸리티를 사용하여 증분 업데이트 스크립트를 만들 수 있습니다.|  
 |제네릭|||  
 |기본 스키마|dbo|SQLCLR 및 Transact\-SQL 개체가 만들어지는 기본 스키마를 지정합니다. 개체에 스키마를 직접 지정하여 이 설정을 재정의할 수 있습니다.”|  
@@ -131,7 +131,7 @@ Transact-SQL 컴파일러 서비스는 Microsoft SQL Server 2012 데이터베이
 -   SQL Azure 메타데이터 데이터 정렬(컴파일러 서비스는 SQL Server 2012 부분적으로 포함된 데이터베이스 메타데이터 데이터 정렬 - Latin1_General_100_CI_AS_KS_WS_SC를 사용함)  
   
 ### <a name="enablingdisabling-extended-verification"></a>확장 확인 설정/해제  
-확장 Transact-SQL 확인은 기본적으로 해당 대상 플랫폼이 SQL Azure로 설정된 SQL Azure 데이터베이스 또는 프로젝트에서 직접 만든 데이터베이스 프로젝트에서 사용하도록 설정됩니다. SQL Azure 또는 SQL Server 2012를 대상으로 하는 응용 프로그램 범위의 데이터베이스를 개발할 때 확장 확인을 사용하는 것이 좋습니다. 애플리케이션 범위의 데이터베이스에 대한 자세한 내용은 [부분적으로 포함된 데이터베이스](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)를 참조하십시오.  
+확장 Transact-SQL 확인은 기본적으로 해당 대상 플랫폼이 SQL Azure로 설정된 SQL Azure 데이터베이스 또는 프로젝트에서 직접 만든 데이터베이스 프로젝트에서 사용하도록 설정됩니다. SQL Azure 또는 SQL Server 2012를 대상으로 하는 애플리케이션 범위의 데이터베이스를 개발할 때 확장 확인을 사용하는 것이 좋습니다. 애플리케이션 범위의 데이터베이스에 대한 자세한 내용은 [부분적으로 포함된 데이터베이스](https://msdn.microsoft.com/library/ff929071%28v=SQL.110%29.aspx)를 참조하십시오.  
   
 확장 확인은 Microsoft SQL Server 2012 및 SQL Azure와의 호환성을 얻을 수 있도록 SQL Server 2008/R2용 애플리케이션 범위의 데이터베이스를 개발할 때에도 사용할 수 있습니다.  
   

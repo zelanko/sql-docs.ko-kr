@@ -27,7 +27,7 @@ ms.locfileid: "68419591"
 # <a name="joins-sql-server"></a>조인(SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리 내 정렬 및 해시 조인 기술을 사용하여 정렬, 교집합, 합집합 및 차집합 연산을 수행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 유형의 쿼리 계획을 사용하여 종형 저장이라고 하는 수직 테이블 분할을 지원합니다.   
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 메모리 내 정렬 및 해시 조인 기술을 사용하여 정렬, 교집합, 합집합 및 차집합 연산을 수행합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 이러한 유형의 쿼리 계획을 사용하여 종형 스토리지이라고 하는 수직 테이블 분할을 지원합니다.   
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용되는 네 가지 유형의 조인 연산은 다음과 같습니다.    
 -   중첩 루프 조인     

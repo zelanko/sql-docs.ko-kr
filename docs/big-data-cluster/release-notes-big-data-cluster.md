@@ -38,7 +38,7 @@ ms.locfileid: "69653433"
 |퍼블릭 미리 보기 |CTP 3.2 이전에는 등록한 얼리어답터가 SQL Server 빅 데이터 클러스터를 사용할 수 있었습니다. 이번 릴리스에서는 누구나 빅 데이터 클러스터 SQL Server 기능을 경험할 수 있습니다. <br/><br/> [시작 하기를 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md)참조 하세요.|
 |`azdata` |CTP 3.2는 클러스터 관리자가 REST API를 통해 빅 데이터 클러스터를 부트스트랩하고 관리할 수 있도록 하는 Python으로 작성된 `azdata` 명령줄 유틸리티를 도입했습니다. `azdata`는 `mssqlctl`을 대신합니다. [`azdata` 설치](deploy-install-azdata.md)를 참조하세요. |
 |PolyBase |이제 외부 테이블 열 이름이 SQL Server, Oracle, Teradata, MongoDB 및 ODBC 데이터 원본을 쿼리하는 데 사용됩니다. 이전 CTP 릴리스에서는 외부 데이터 원본의 열이 전적으로 서수 위치에 따라 바인딩되고 EXTERNAL TABLE 정의에 지정된 이름이 사용되지 않았습니다. |
-|HDFS 계층화 새로 고침 |원격 데이터의 최신 스냅숏에 대해 기존 탑재를 새로 고칠 수 있도록 HDFS 계층화의 새로 고침 기능을 도입합니다. [HDFS 계층화](hdfs-tiering.md)를 참조하세요. |
+|HDFS 계층화 새로 고침 |원격 데이터의 최신 스냅샷에 대해 기존 탑재를 새로 고칠 수 있도록 HDFS 계층화의 새로 고침 기능을 도입합니다. [HDFS 계층화](hdfs-tiering.md)를 참조하세요. |
 |Notebook 기반 문제 해결 |CTP 3.2에서는 SQL Server 빅 데이터 클러스터 구성 요소의 [배포](deploy-notebooks.md)와 [검색, 진단 및 문제 해결](manage-notebooks.md)에 도움이 되는 Jupyter Notebook이 도입되었습니다. |
 | &nbsp; | &nbsp; |
 
@@ -135,7 +135,7 @@ ms.locfileid: "69653433"
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>애플리케이션 배포
+#### <a name="application-deployment"></a>애플리케이션 개발
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 
@@ -239,7 +239,7 @@ ms.locfileid: "69653433"
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>애플리케이션 배포
+#### <a name="application-deployment"></a>애플리케이션 개발
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 
@@ -317,7 +317,7 @@ ms.locfileid: "69653433"
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>애플리케이션 배포
+#### <a name="application-deployment"></a>애플리케이션 개발
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 
@@ -448,7 +448,7 @@ make: *** [deploy-clean] Error 2
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>애플리케이션 배포
+#### <a name="application-deployment"></a>애플리케이션 개발
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 
@@ -570,7 +570,7 @@ kubeadm을 사용하여 여러 머신에 Kubernetes를 배포하는 경우 빅 �
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>애플리케이션 배포
+#### <a name="application-deployment"></a>애플리케이션 개발
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 

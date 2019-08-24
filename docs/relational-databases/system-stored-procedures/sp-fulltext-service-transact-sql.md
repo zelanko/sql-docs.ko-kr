@@ -26,7 +26,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68124188"
 ---
-# <a name="spfulltextservice-transact-sql"></a>sp_fulltext_service(Transact-SQL)
+# <a name="sp_fulltext_service-transact-sql"></a>sp_fulltext_service(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 전체 텍스트 검색의 서버 속성을 변경합니다.  
@@ -47,7 +47,7 @@ sp_fulltext_service [ [@action=] 'action'
 `[ @value = ] value` 지정된 된 속성의 값이입니다. *값* 됩니다 **sql_variant**, 기본값은 NULL입니다. 하는 경우 @value 이 null 이면 **sp_fulltext_service** 현재 설정을 반환 합니다. 이 표에서는 동작 속성, 설명 및 설정할 수 있는 값 목록을 보여 줍니다.  
   
 > [!NOTE]  
->  다음 작업의 이후 릴리스에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **clean_up**, **connect_timeout**하십시오 **data_timeout**, 및 **resource_ 사용 현황**합니다. 향후 개발 작업에서는 이러한 동작을 사용하지 않도록 하고 현재 이러한 동작을 사용하는 응용 프로그램은 수정하십시오.  
+>  다음 작업의 이후 릴리스에서 제거 됩니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **clean_up**, **connect_timeout**하십시오 **data_timeout**, 및 **resource_ 사용 현황**합니다. 향후 개발 작업에서는 이러한 동작을 사용하지 않도록 하고 현재 이러한 동작을 사용하는 애플리케이션은 수정하십시오.  
   
 |Action|데이터 형식|설명|  
 |------------|---------------|-----------------|  

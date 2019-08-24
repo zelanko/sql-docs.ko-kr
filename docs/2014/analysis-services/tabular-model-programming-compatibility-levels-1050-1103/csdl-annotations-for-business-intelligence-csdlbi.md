@@ -33,7 +33,7 @@ ms.locfileid: "62757956"
   
 -   [PowerPivot BI 의미 체계 모델 연결 &#40;.bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)  
   
- CSDLBI 스키마는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]와 같은 클라이언트의 모델 정의 요청에 대한 응답으로 Analysis Services 서버에서 생성됩니다. 클라이언트 응용 프로그램에서 모델 데이터를 호스팅하는 Analysis Services 서버에 XML 쿼리를 보냅니다. 서버는 CSDLBI 주석을 사용하여 모델의 엔터티 정의가 포함된 XML 메시지를 응답으로 보냅니다. 그러면 보고 클라이언트는 이 정보를 토대로 모델에서 사용할 수 있는 필드, 집계 및 측정값을 표시합니다. CSDLBI 주석은 데이터의 그룹화, 정렬 및 서식 지정 방법에 대한 정보도 제공합니다.  
+ CSDLBI 스키마는 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]와 같은 클라이언트의 모델 정의 요청에 대한 응답으로 Analysis Services 서버에서 생성됩니다. 클라이언트 애플리케이션에서 모델 데이터를 호스팅하는 Analysis Services 서버에 XML 쿼리를 보냅니다. 서버는 CSDLBI 주석을 사용하여 모델의 엔터티 정의가 포함된 XML 메시지를 응답으로 보냅니다. 그러면 보고 클라이언트는 이 정보를 토대로 모델에서 사용할 수 있는 필드, 집계 및 측정값을 표시합니다. CSDLBI 주석은 데이터의 그룹화, 정렬 및 서식 지정 방법에 대한 정보도 제공합니다.  
   
  CSDLBI에 대 한 일반적인 정보를 참조 하세요 [CSDLBI 개념](https://docs.microsoft.com/bi-reference/csdl/csdlbi-concepts)합니다.  
   

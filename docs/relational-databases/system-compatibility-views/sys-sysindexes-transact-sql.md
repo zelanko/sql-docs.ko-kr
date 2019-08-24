@@ -62,7 +62,7 @@ ms.locfileid: "68053441"
 |**lockflags**|**smallint**|인덱스에 대해 고려된 잠금 세분성을 제약하는 데 사용합니다. 예를 들어 잠금 비용을 최소화하기 위해 일반적으로 읽기 전용인 조회 테이블을 테이블 수준의 잠금만 수행하도록 설정할 수 있습니다.|  
 |**pgmodctr**|**int**|0을 반환합니다.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**keys**|**varbinary(816)**|인덱스 키를 구성하는 열의 열 ID 목록입니다.<br /><br /> NULL을 반환합니다.<br /><br /> 인덱스 키 열을 표시 하려면 사용 하 여 [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md)합니다.|  
-|**name**|**sysname**|인덱스 또는 통계의 이름입니다. NULL을 반환 **indid** = 0. 응용 프로그램을 수정하여 NULL 힙 이름을 찾습니다.|  
+|**name**|**sysname**|인덱스 또는 통계의 이름입니다. NULL을 반환 **indid** = 0. 애플리케이션을 수정하여 NULL 힙 이름을 찾습니다.|  
 |**statblob**|**image**|통계 BLOB(Binary Large Object)입니다.<br /><br /> NULL을 반환합니다.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**rows**|**int**|기준 데이터 수준 행 개수 **indid** = 0 및 **indid** = 1, 및 값에 대해 반복 됩니다 **indid** > 1.|  
@@ -82,7 +82,7 @@ ms.locfileid: "68053441"
   
 -   제한 시간을 사용하여 통계의 업데이트 시기를 결정합니다. 예를 들어 매시간, 매일 또는 매주로 정합니다.  
   
--   응용 프로그램 수준 정보를 사용하여 통계의 업데이트 시기를 결정합니다. 예를 들어, 매번의 최대값은 **identity** 열 여 10,000 개 이상의 변경 또는 대량 삽입 작업이 때마다 수행 됩니다.  
+-   애플리케이션 수준 정보를 사용하여 통계의 업데이트 시기를 결정합니다. 예를 들어, 매번의 최대값은 **identity** 열 여 10,000 개 이상의 변경 또는 대량 삽입 작업이 때마다 수행 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

@@ -40,7 +40,7 @@ ms.locfileid: "66071044"
   
  팜에서 모든 물리적 서비스를 동시에 시작하거나 중지할 수 없습니다. 각 서버를 선택한 다음 특정 서비스를 시작하거나 중지해야 합니다.  
   
- 특정 웹 응용 프로그램에 대해 PowerPivot 시스템 서비스를 시작, 일시 중지 또는 중지할 수 없지만 기본 연결 목록에서 서비스를 제거하여 사용하지 못하도록 할 수 있습니다. 자세한 내용은 [중앙 관리에서 SharePoint 웹 응용 프로그램에 PowerPivot 서비스 응용 프로그램 연결](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)합니다.  
+ 특정 웹 애플리케이션에 대해 PowerPivot 시스템 서비스를 시작, 일시 중지 또는 중지할 수 없지만 기본 연결 목록에서 서비스를 제거하여 사용하지 못하도록 할 수 있습니다. 자세한 내용은 [중앙 관리에서 SharePoint 웹 응용 프로그램에 PowerPivot 서비스 응용 프로그램 연결](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)합니다.  
   
 1.  중앙 관리의 **시스템 설정**에서 **서버의 서비스 관리**를 클릭합니다.  
   

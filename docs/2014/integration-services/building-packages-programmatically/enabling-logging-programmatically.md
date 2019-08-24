@@ -48,7 +48,7 @@ ms.locfileid: "62836511"
 |SQL Server 프로파일러|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로파일러에서 캡처하고 볼 수 있는 SQL 추적을 생성합니다. 이 공급자의 기본 파일 이름 확장명은 .trc입니다.|구성이 필요하지 않습니다.|  
 |SQL Server|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 **sysssislog** 테이블에 이벤트 로그 항목을 기록합니다.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자를 사용하려면 데이터베이스에 대한 연결과 대상 데이터베이스 이름이 지정되어 있어야 합니다.|  
 |텍스트 파일|이벤트 로그 항목을 CSV(쉼표로 구분된 값) 형식으로 ASCII 텍스트 파일에 기록합니다. 이 공급자의 기본 파일 이름 확장명은 .log입니다.|파일 연결 관리자의 이름입니다.|  
-|Windows 이벤트 로그|로컬 컴퓨터의 응용 프로그램 로그에 있는 표준 Windows 이벤트 로그에 로깅합니다.|구성이 필요하지 않습니다.|  
+|Windows 이벤트 로그|로컬 컴퓨터의 애플리케이션 로그에 있는 표준 Windows 이벤트 로그에 로깅합니다.|구성이 필요하지 않습니다.|  
 |XML 파일|이벤트 로그 항목을 XML 형식의 파일에 씁니다. 이 공급자의 기본 파일 이름 확장명은 .xml입니다.|파일 연결 관리자의 이름입니다.|  
   
  컨테이너의 `EventFilterKind` 및 `EventFilter` 속성을 설정하여 이벤트를 이벤트 로그에 포함하거나 이벤트 로그에서 제외할 수 있습니다. `EventFilterKind` 구조에는 `ExclusionFilter`에 추가된 이벤트가 이벤트 로그에 포함되는지 여부를 나타내는 `InclusionFilter` 및 `EventFilter` 값이 들어 있습니다. `EventFilter` 속성에는 필터링 제목에 해당하는 이벤트 이름이 들어 있는 문자열 배열이 할당됩니다.  

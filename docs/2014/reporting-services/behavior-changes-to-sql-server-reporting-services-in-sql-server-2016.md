@@ -47,7 +47,7 @@ ms.locfileid: "66109935"
 ##  <a name="bkmk_rc0"></a> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services 동작 변경 내용  
  이 섹션에서는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드의 동작 변경 내용에 대해 설명합니다.  
   
-### <a name="view-items-permission-will-not-download-shared-datasets-sharepoint-mode"></a>항목 보기 권한으로 공유 데이터 집합 다운로드 불가(SharePoint 모드)  
+### <a name="view-items-permission-will-not-download-shared-datasets-sharepoint-mode"></a>항목 보기 권한으로 공유 데이터 세트 다운로드 불가(SharePoint 모드)  
  **새 동작:** SharePoint "항목 보기" 권한이 있는 사용자는 Reporting Services 공유 데이터 집합의 콘텐츠를 다운로드 더 이상 수 없습니다. 이 동작 변경은 보고서, 데이터 원본 및 모델에 대 한 "항목 보기" 권한이 있는 일치 됩니다. "항목 보기" 권한이 있는 사용자 보기를 업데이트 하 고 보고서, 데이터 원본 및 모델을 실행할 수 있지만 해당 콘텐츠를 다운로드 하지 못하는 합니다.  
   
  **이전 동작:** SharePoint "항목 보기" 권한이 있는 사용자는 Reporting Services 공유 데이터 집합의 콘텐츠를 다운로드 수 없습니다.  

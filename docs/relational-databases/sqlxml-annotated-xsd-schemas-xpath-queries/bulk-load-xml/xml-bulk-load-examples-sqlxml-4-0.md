@@ -742,7 +742,7 @@ MsgBox "Done."
 End Sub  
 ```  
   
- 응용 프로그램을 테스트하려면 파일(SampleData.xml)의 다음 XML 문서와 이 예에 제공된 XSD 스키마를 사용하십시오.  
+ 애플리케이션을 테스트하려면 파일(SampleData.xml)의 다음 XML 문서와 이 예에 제공된 XSD 스키마를 사용하십시오.  
   
  다음은 XML 원본 데이터(SampleData.xml)입니다.  
   
@@ -973,7 +973,7 @@ set objBL=Nothing
 ```  
   
 > [!NOTE]  
->  임시 파일 경로는 대상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 서비스 계정과 대량 로드 응용 프로그램을 실행 중인 계정에서 액세스 가능한 공유 위치여야 합니다. 임시 파일 경로 UNC 경로 여야 합니다 로컬 서버에 대량 로드를 사용 하는 경우가 아니면 (같은 \\\servername\sharename).  
+>  임시 파일 경로는 대상 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 서비스 계정과 대량 로드 애플리케이션을 실행 중인 계정에서 액세스 가능한 공유 위치여야 합니다. 임시 파일 경로 UNC 경로 여야 합니다 로컬 서버에 대량 로드를 사용 하는 경우가 아니면 (같은 \\\servername\sharename).  
   
 #### <a name="to-test-a-working-sample"></a>작업 예제를 테스트하려면  
   
@@ -1197,14 +1197,14 @@ End Sub
     </ROOT>  
     ```  
   
-4.  Visual Basic(표준 EXE) 응용 프로그램과 위의 코드를 만듭니다. 프로젝트에 다음 참조를 추가합니다.  
+4.  Visual Basic(표준 EXE) 애플리케이션과 위의 코드를 만듭니다. 프로젝트에 다음 참조를 추가합니다.  
   
     ```  
     Microsoft XML BulkLoad for SQL Server 4.0 Type Library  
     Microsoft ActiveX Data objects 2.6 Library  
     ```  
   
-5.  응용 프로그램을 실행합니다.  
+5.  애플리케이션을 실행합니다.  
   
  다음은 동등한 XDR 스키마입니다.  
   

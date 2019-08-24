@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68018171"
 ---
-# <a name="sysallcolumns-transact-sql"></a>sys.all_columns(Transact-SQL)
+# <a name="sysall_columns-transact-sql"></a>sys.all_columns(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   사용자 정의 개체 및 시스템 개체에 속하는 모든 열을 보여 줍니다.  
@@ -48,7 +48,7 @@ ms.locfileid: "68018171"
 |is_rowguidcol|**bit**|1 = 선언된 ROWGUIDCOL 열입니다.|  
 |is_identity|**bit**|1 = 열에 ID 값이 있습니다.|  
 |is_computed|**bit**|1 = 열이 계산 열입니다.|  
-|is_filestream|**bit**|1 = 파일 스트림 저장소를 사용하도록 선언된 열입니다.|  
+|is_filestream|**bit**|1 = 파일 스트림 스토리지를 사용하도록 선언된 열입니다.|  
 |is_replicated|**bit**|1 = 복제된 열입니다.|  
 |is_non_sql_subscribed|**bit**|1 = 열에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이외 구독자가 있습니다.|  
 |is_merge_published|**bit**|1 = 병합 게시 열입니다.|  

@@ -48,7 +48,7 @@ ms.locfileid: "66011833"
   
 -   접두사 길이  
   
-     네이티브 형식의 데이터를 데이터 파일로 대량 내보내는 작업에서 가장 압축된 형식으로 파일을 저장하려면 각 필드에 필드 길이를 나타내는 하나 이상의 문자와 함께 `bcp` 명령을 사용합니다. 이러한 문자를 *길이 접두사 문자*라고 합니다. 자세한 내용은 [bcp를 사용하여 데이터 파일에 접두사 길이 지정&#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)을 참조하세요.  
+     네이티브 형식의 데이터를 데이터 파일로 대량 내보내는 작업에서 가장 압축된 형식으로 파일을 스토리지하려면 각 필드에 필드 길이를 나타내는 하나 이상의 문자와 함께 `bcp` 명령을 사용합니다. 이러한 문자를 *길이 접두사 문자*라고 합니다. 자세한 내용은 [bcp를 사용하여 데이터 파일에 접두사 길이 지정&#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)을 참조하세요.  
   
 -   필드 길이  
   
@@ -107,7 +107,7 @@ bcp AdventureWorks.HumanResources.myTeam out myTeam.txt -T
  서식 파일의 기본 이름은 bcp.fmt지만 필요하다면 다른 이름을 지정할 수 있습니다.  
   
 > [!NOTE]  
->  문자 또는 네이티브 형식과 같은 하나의 데이터 형식으로 파일을 저장하는 데이터 파일의 경우 **format** 옵션을 사용하면 데이터를 내보내거나 가져올 필요 없이 즉시 형식 파일을 만들 수 있습니다. 이 방법은 쉽고, XML 서식 파일뿐 아니라 비 XML 서식 파일도 만들 수 있다는 장점이 있습니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)를 참조하세요.  
+>  문자 또는 네이티브 형식과 같은 하나의 데이터 형식으로 파일을 스토리지하는 데이터 파일의 경우 **format** 옵션을 사용하면 데이터를 내보내거나 가져올 필요 없이 즉시 형식 파일을 만들 수 있습니다. 이 방법은 쉽고, XML 서식 파일뿐 아니라 비 XML 서식 파일도 만들 수 있다는 장점이 있습니다. 자세한 내용은 [서식 파일 만들기&#40;SQL Server&#41;](create-a-format-file-sql-server.md)를 참조하세요.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
   

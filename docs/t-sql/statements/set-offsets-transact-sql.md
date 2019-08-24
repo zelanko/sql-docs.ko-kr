@@ -51,7 +51,7 @@ SET OFFSETS keyword_list { ON | OFF }
  SELECT, FROM, ORDER, TABLE, PROCEDURE, STATEMENT, PARAM 및 EXECUTE를 포함한 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문을 쉼표로 구분한 목록입니다.  
   
 ## <a name="remarks"></a>Remarks  
- SET OFFSETS 옵션은 DB-Library 응용 프로그램에서만 사용됩니다.  
+ SET OFFSETS 옵션은 DB-Library 애플리케이션에서만 사용됩니다.  
   
  SET OFFSETS 옵션은 구문 분석 시 설정되며, 실행 시 또는 런타임에는 설정되지 않습니다. 구문 분석 시에 설정되면 코드 실행이 실제로 해당 지점에 이르렀는지에 관계없이 SET 문이 일괄 처리나 저장 프로시저에 있으면 이 설정이 적용되고 문이 실행되기 전에 SET 문이 적용됩니다. 예를 들어, 실행 중 도달한 적이 없는 IF...ELSE 문 블록에 SET 문이 있어도, IF...ELSE 문 블록이 구문 분석되기 때문에 SET 문이 적용됩니다.  
   

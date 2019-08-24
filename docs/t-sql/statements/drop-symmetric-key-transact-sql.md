@@ -49,7 +49,7 @@ DROP SYMMETRIC KEY symmetric_key_name [REMOVE PROVIDER KEY]
  삭제할 대칭 키의 이름입니다.  
   
  REMOVE PROVIDER KEY  
- EKM(Extensible Key Management) 장치에서 EKM 키를 제거합니다. 외부 키 관리에 대한 자세한 내용은 [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)를 참조하세요.  
+ EKM(Extensible Key Management) 디바이스에서 EKM 키를 제거합니다. 외부 키 관리에 대한 자세한 내용은 [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)를 참조하세요.  
   
 ## <a name="remarks"></a>Remarks  
  키가 현재 세션에 열려 있으면 문이 실패합니다.  

@@ -29,7 +29,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67900353"
 ---
-# <a name="sysdmioclustervalidpathnames-transact-sql"></a>sys.dm_io_cluster_valid_path_names(Transact-SQL)
+# <a name="sysdm_io_cluster_valid_path_names-transact-sql"></a>sys.dm_io_cluster_valid_path_names(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   클러스터된 공유 볼륨을 비롯한 모든 유효한 공유 디스크에서 SQL Server 장애 조치(failover) 클러스터 인스턴스에 대한 정보를 반환합니다. 인스턴스가 클러스터되지 않은 경우 빈 행 집합이 반환됩니다.  
@@ -41,7 +41,7 @@ ms.locfileid: "67900353"
 |**is_cluster_shared_volume**|**Bit**|이 경로가 위치한 드라이브가 클러스터 공유 볼륨이면 1을 반환하고, 그렇지 않으면 0을 반환합니다.|  
   
 ## <a name="remarks"></a>설명  
- SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)는 데이터 및 로그 파일 저장을 위해 FCI의 모든 노드 간에 공유 저장소를 사용해야 합니다. 이 뷰에 나열된 디스크는 인스턴스와 연결된 클러스터 리소스 그룹에 있는 디스크이며 데이터 또는 로그 파일 저장에 사용할 수 있는 유일한 디스크입니다.  
+ SQL Server FCI(장애 조치(failover) 클러스터 인스턴스)는 데이터 및 로그 파일 저장을 위해 FCI의 모든 노드 간에 공유 스토리지를 사용해야 합니다. 이 뷰에 나열된 디스크는 인스턴스와 연결된 클러스터 리소스 그룹에 있는 디스크이며 데이터 또는 로그 파일 스토리지에 사용할 수 있는 유일한 디스크입니다.  
   
 > [!NOTE]  
 >  이 보기 바뀝니다 [sys.dm_io_cluster_shared_drives &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-io-cluster-shared-drives-transact-sql.md) 릴리스에서 합니다.  

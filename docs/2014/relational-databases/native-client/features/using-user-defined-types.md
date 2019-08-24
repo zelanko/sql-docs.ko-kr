@@ -70,7 +70,7 @@ ms.locfileid: "68206608"
  DBTYPE_UDT를 DBTYPE_EMPTY와 DBTYPE_NULL로 변환할 수 있지만 DBTYPE_NULL 및 DBTYPE_EMPTY는 DBTYPE_UDT로 변환할 수 없습니다. 이는 DBTYPE_BYTES와 일치합니다.  
   
 > [!NOTE]  
->  새 인터페이스는 UDT를 매개 변수인 **ISSCommandWithParameters**로 처리하는 데 사용됩니다. 이 매개 변수는 **ICommandWithParameters**에서 상속됩니다. 응용 프로그램은 이 인터페이스를 사용하여 UDT 매개 변수에 대해 적어도 DBPROPSET_SQLSERVERPARAMETER 속성 집합의 SSPROP_PARAM_UDT_NAME을 설정해야 합니다. 이 설정을 수행하지 않으면 **ICommand::Execute**가 DB_E_ERRORSOCCURRED를 반환합니다. 이 인터페이스와 속성 집합에 대해서는 이 항목의 뒷부분에서 설명합니다.  
+>  새 인터페이스는 UDT를 매개 변수인 **ISSCommandWithParameters**로 처리하는 데 사용됩니다. 이 매개 변수는 **ICommandWithParameters**에서 상속됩니다. 애플리케이션은 이 인터페이스를 사용하여 UDT 매개 변수에 대해 적어도 DBPROPSET_SQLSERVERPARAMETER 속성 집합의 SSPROP_PARAM_UDT_NAME을 설정해야 합니다. 이 설정을 수행하지 않으면 **ICommand::Execute**가 DB_E_ERRORSOCCURRED를 반환합니다. 이 인터페이스와 속성 집합에 대해서는 이 항목의 뒷부분에서 설명합니다.  
   
  사용자 정의 형식이 크기가 작아 해당 형식의 모든 데이터를 유지할 수 없는 열에 삽입되는 경우 **ICommand::Execute**는 DB_E_ERRORSOCCURRED 상태와 함께 S_OK를 반환합니다.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "68206608"
 ### <a name="ole-db-rowset-additions-and-changes"></a>OLE DB 행 집합의 추가 내용 및 변경 내용  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client 새 값을 추가 하거나 많은 핵심 OLE DB 스키마 행 집합을 변경 합니다.  
   
-#### <a name="the-procedureparameters-schema-rowset"></a>PROCEDURE_PARAMETERS 스키마 행 집합  
+#### <a name="the-procedure_parameters-schema-rowset"></a>PROCEDURE_PARAMETERS 스키마 행 집합  
  PROCEDURE_PARAMETERS 스키마 행 집합에 다음이 추가되었습니다.  
   
 |열 이름|형식|Description|  
@@ -89,7 +89,7 @@ ms.locfileid: "68206608"
 |SS_UDT_NAME|DBTYPE_WSTR|세 부분으로 구성된 이름 식별자입니다.|  
 |SS_UDT_ASSEMBLY_TYPENAME|DBTYPE_WSTR|CLR이 참조하는 데 필요한 형식 이름과 모든 어셈블리 ID를 포함하는 어셈블리의 정규화된 이름입니다.|  
   
-#### <a name="the-sqlassemblies-schema-rowset"></a>SQL_ASSEMBLIES 스키마 행 집합  
+#### <a name="the-sql_assemblies-schema-rowset"></a>SQL_ASSEMBLIES 스키마 행 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 등록된 된 Udt를 설명 하는 새 공급자 특정 스키마 행 집합을 노출 합니다. ASSEMBLY 서버가 DBTYPE_WSTR로 지정되지만 행 집합에는 없을 수 있습니다. 이 속성이 지정되지 않은 경우 행 집합은 기본적으로 현재 서버를 사용합니다. SQL_ASSEMBLIES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
 |열 이름|형식|설명|  
@@ -101,7 +101,7 @@ ms.locfileid: "68206608"
 |PERMISSION_SET|DBTYPE_WSTR|어셈블리의 액세스 범위를 나타내는 값입니다. 값에는 "SAFE", "EXTERNAL_ACCESS" 및 "UNSAFE"가 포함됩니다.|  
 |ASSEMBLY_BINARY|DBTYPE_BYTES|어셈블리의 이진 표현입니다.|  
   
-#### <a name="the-sqlassemblies-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES 스키마 행 집합  
+#### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>SQL_ASSEMBLIES_ DEPENDENCIES 스키마 행 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자는 지정 된 서버의 어셈블리 종속성을 설명 하는 새 공급자별 스키마 행 집합을 제공 합니다. ASSEMBLY_SERVER가 호출자에 의해 DBTYPE_WSTR로 지정되지만 행 집합에는 없을 수 있습니다. 이 속성이 지정되지 않은 경우 행 집합은 기본적으로 현재 서버를 사용합니다. SQL_ASSEMBLY_DEPENDENCIES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
 |열 이름|형식|설명|  
@@ -111,7 +111,7 @@ ms.locfileid: "68206608"
 |ASSEMBLY_ID|DBTYPE_UI4|어셈블리의 개체 ID입니다.|  
 |REFERENCED_ASSEMBLY_ID|DBTYPE_UI4|참조된 어셈블리의 개체 ID입니다.|  
   
-#### <a name="the-sqlusertypes-schema-rowset"></a>SQL_USER_TYPES 스키마 행 집합  
+#### <a name="the-sql_user_types-schema-rowset"></a>SQL_USER_TYPES 스키마 행 집합  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 네이티브 클라이언트 OLE DB 공급자는 새로운 스키마 행 집합, SQL_USER_TYPES 시기를 설명 하는 지정 된 서버의 등록된 된 Udt가 추가 됩니다. UDT_SERVER가 호출자에 의해 DBTYPE_WSTR로 지정되어야 하지만 행 집합에는 없을 수 있습니다. SQL_USER_TYPES 스키마 행 집합은 다음 표에 정의되어 있습니다.  
   
 |열 이름|형식|설명|  
@@ -134,7 +134,7 @@ ms.locfileid: "68206608"
 ### <a name="ole-db-property-set-additions-and-changes"></a>OLE DB 속성 집합의 추가 내용 및 변경 내용  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client에는 많은 핵심 OLE DB 속성 집합 변경 이나 새 값을 추가 합니다.  
   
-#### <a name="the-dbpropsetsqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
+#### <a name="the-dbpropset_sqlserverparameter-property-set"></a>DBPROPSET_SQLSERVERPARAMETER 속성 집합  
  OLE DB를 통해 Udt를 지원 하기 위해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 다음 값이 포함 된 새로운 DBPROPSET_SQLSERVERPARAMETER 속성 집합을 구현 합니다.  
   
 |이름|형식|설명|  
@@ -145,7 +145,7 @@ ms.locfileid: "68206608"
   
  SSPROP_PARAM_UDT_NAME은 필수입니다. SSPROP_PARAM_UDT_CATALOGNAME 및 SSPROP_PARAM_UDT_SCHEMANAME은 옵션입니다. 이러한 속성 중 하나가 잘못 지정되면 DB_E_ERRORSINCOMMAND가 반환됩니다. SSPROP_PARAM_UDT_CATALOGNAME 및 SSPROP_PARAM_UDT_SCHEMANAME이 모두 지정되지 않은 경우 테이블과 동일한 데이터베이스와 스키마에서 UDT를 정의해야 합니다. UDT 정의가 테이블과 동일한 데이터베이스에 속하지만 다른 스키마에 속하는 경우 SSPROP_PARAM_UDT_SCHEMANAME을 지정해야 합니다. UDT 정의가 다른 데이터베이스에 속하는 경우 SSPROP_PARAM_UDT_CATALOGNAME 및 SSPROP_PARAM_UDT_SCHEMANAME을 모두 지정해야 합니다.  
   
-#### <a name="the-dbpropsetsqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 속성 집합  
+#### <a name="the-dbpropset_sqlservercolumn-property-set"></a>DBPROPSET_SQLSERVERCOLUMN 속성 집합  
  테이블 만들기를 지원 합니다 **ITableDefinition** 인터페이스를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client는 DBPROPSET_SQLSERVERCOLUMN 속성 집합을 다음 3 개의 새 열을 추가 합니다.  
   
 |이름|설명|type|설명|  

@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68086709"
 ---
-# <a name="isrolemember-transact-sql"></a>IS_ROLEMEMBER(Transact-SQL)
+# <a name="is_rolemember-transact-sql"></a>IS_ROLEMEMBER(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   지정된 데이터베이스 보안 주체가 지정된 데이터베이스 역할의 멤버인지 여부를 나타냅니다.  
@@ -46,7 +46,7 @@ IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )
  확인할 데이터베이스 역할의 이름입니다. *role*은 **sysname**입니다.  
   
  **'** *database_principal* **'**  
- 확인할 데이터베이스 사용자, 데이터베이스 역할 또는 응용 프로그램 역할의 이름입니다. *database_principal*은 **sysname**이며 기본값은 NULL입니다. 값을 지정하지 않으면 현재의 실행 컨텍스트에 따른 결과를 얻게 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
+ 확인할 데이터베이스 사용자, 데이터베이스 역할 또는 애플리케이션 역할의 이름입니다. *database_principal*은 **sysname**이며 기본값은 NULL입니다. 값을 지정하지 않으면 현재의 실행 컨텍스트에 따른 결과를 얻게 됩니다. 매개 변수에 NULL이라는 단어가 포함되어 있으면 NULL이 반환됩니다.  
   
 ## <a name="return-types"></a>반환 형식  
  **int**  

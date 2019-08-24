@@ -95,7 +95,7 @@ ms.locfileid: "66095001"
   
  ![GMNI_SetupUI_SharePoint2010ServerType](../../../2014/sql-server/install/media/gmni-setupui-sharepoint2010servertype.gif "GMNI_SetupUI_SharePoint2010ServerType")  
   
- 설치 마법사의 마지막 페이지에서는 팜을 구성하고 선택적으로 기본 웹 응용 프로그램 및 루트 사이트 모음을 구성할 수 있습니다. 대부분의 설치 사용자는 이 설치 경로를 따릅니다. 여기에서 팜을 구성하지 않는 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구의 팜 구성 옵션을 사용하여 팜을 구성할 수 있습니다.  
+ 설치 마법사의 마지막 페이지에서는 팜을 구성하고 선택적으로 기본 웹 애플리케이션 및 루트 사이트 모음을 구성할 수 있습니다. 대부분의 설치 사용자는 이 설치 경로를 따릅니다. 여기에서 팜을 구성하지 않는 경우 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구의 팜 구성 옵션을 사용하여 팜을 구성할 수 있습니다.  
   
  이전 릴리스에서는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치의 경우 팜을 구성되지 않은 상태로 두도록 권장되었습니다. 그 이유는 SQL Server 설치 옵션을 사용하여 사용 준비가 완료된 상태로 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]를 설치하는 경우 필요한 단계가 줄어들기 때문입니다. 이번 릴리스에서는 더 이상 이러한 사항을 고려할 필요가 없습니다. [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 구성 도구를 사용하여 SharePoint용 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 설치에 권장되는 설정을 사용하도록 기존 팜을 조정할 수 있습니다.  
   

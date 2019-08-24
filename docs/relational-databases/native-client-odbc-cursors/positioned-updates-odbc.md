@@ -64,9 +64,9 @@ ms.locfileid: "67902450"
   
  응용 프로그램이 드라이버의 업데이트 작업에 대 한 것과 마찬가지로 행 작업 배열을 사용 하 여 특정 행을 삭제 하지 못할 수 있습니다 (RowNumber가 0으로) 행 집합의 모든 행을 삭제 하면 **SQLSetPos**합니다.  
   
- 삭제되는 모든 행은 결과 집합에 있는 행이여야 합니다. 인출로 인해 응용 프로그램 버퍼가 가득 차고 행 상태 배열이 유지되는 경우 이러한 각각의 행 위치에서 값은 SQL_ROW_DELETED, SQL_ROW_ERROR 또는 SQL_ROW_NOROW일 수 없습니다.  
+ 삭제되는 모든 행은 결과 집합에 있는 행이여야 합니다. 인출로 인해 애플리케이션 버퍼가 가득 차고 행 상태 배열이 유지되는 경우 이러한 각각의 행 위치에서 값은 SQL_ROW_DELETED, SQL_ROW_ERROR 또는 SQL_ROW_NOROW일 수 없습니다.  
   
- 위치 지정 업데이트는 UPDATE, DELETE 및 INSERT 문에 WHERE CURRENT OF 절을 사용하여 수행할 수도 있습니다. 생성은 CURRENT OF가 필요로 하는 커서 이름이 해당 ODBC 합니다 [SQLGetCursorName](../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) 함수를 호출 하거나 호출 하 여 지정할 수 있습니다 **SQLSetCursorName**합니다. 다음은 ODBC 응용 프로그램에서 WHERE CURRENT OF 업데이트를 수행하는 일반적인 단계입니다.  
+ 위치 지정 업데이트는 UPDATE, DELETE 및 INSERT 문에 WHERE CURRENT OF 절을 사용하여 수행할 수도 있습니다. 생성은 CURRENT OF가 필요로 하는 커서 이름이 해당 ODBC 합니다 [SQLGetCursorName](../../relational-databases/native-client-odbc-api/sqlgetcursorname.md) 함수를 호출 하거나 호출 하 여 지정할 수 있습니다 **SQLSetCursorName**합니다. 다음은 ODBC 애플리케이션에서 WHERE CURRENT OF 업데이트를 수행하는 일반적인 단계입니다.  
   
 -   호출 **SQLSetCursorName** 문 핸들 커서 이름을 설정 합니다.  
   

@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68262621"
 ---
-# <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks(Transact-SQL)
+# <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 현재 활성 상태인 잠금 관리자 리소스에 대한 정보를 반환합니다. 각 행 잠금 관리자 권한이 나 부여할 하려고 대기 하는 잠금에 대 한 현재 활성 요청을 나타냅니다.  
@@ -102,7 +102,7 @@ ms.locfileid: "68262621"
 |KEY|인덱스의 행을 나타냅니다.|HoBt ID입니다. 이 값은 **sys.partitions.hobt_id**합니다.|  
 |EXTENT|데이터 파일 익스텐트를 나타냅니다. 익스텐트는 8개의 연속 페이지 그룹입니다.|해당 사항 없음|  
 |RID|힙의 물리적 행을 나타냅니다.|HoBt ID입니다. 이 값은 **sys.partitions.hobt_id**합니다. HoBt ID는 호출자가 제공할 수 있는 추가 정보이지만 모든 호출자가 이 정보를 제공할 수 있는 것은 아니기 때문에 RID 리소스에 대해 항상 HoBt ID를 사용할 수 있는 것은 아닙니다.|  
-|APPLICATION|응용 프로그램이 지정한 리소스를 나타냅니다.|해당 사항 없음|  
+|APPLICATION|애플리케이션이 지정한 리소스를 나타냅니다.|해당 사항 없음|  
 |METADATA|메타데이터 정보를 나타냅니다.|해당 사항 없음|  
 |HOBT|힙 또는 B-트리를 나타냅니다. 기본 액세스 경로 구조입니다.|HoBt ID입니다. 이 값은 **sys.partitions.hobt_id**합니다.|  
 |ALLOCATION_UNIT|인덱스 파티션과 같은 관련 페이지의 집합을 나타냅니다. 각 할당 단위는 단일 IAM(Index Allocation Map) 체인을 처리합니다.|할당 단위 ID입니다. 이 값은 **sys.allocation_units.allocation_unit_id**합니다.|  
@@ -204,7 +204,7 @@ ms.locfileid: "68262621"
 |KEY|<hash_value>|이 리소스가 나타내는 행에서 키 열의 해시를 나타냅니다.|  
 |EXTENT|< file_id >: < page_in_files >|이 리소스가 나타내는 익스텐트의 파일 및 페이지 ID를 나타냅니다. 익스텐트 ID는 익스텐트에서 첫 페이지의 페이지 ID와 같습니다.|  
 |RID|< file_id >: < page_in_file >: < row_on_page >|이 리소스가 나타내는 행의 페이지 ID와 행 ID를 나타냅니다. 연결된 개체 ID가 99인 경우 이 리소스는 IAM 체인의 첫 IAM 페이지에 있는 8개의 혼합 페이지 슬롯 중 하나를 나타냅니다.|  
-|APPLICATION|\<DbPrincipalId >:\<최대 32 자 >:(< hash_value >)|이 응용 프로그램 잠금 리소스의 범위를 한정하는 데 사용된 데이터베이스 보안 주체의 ID를 나타냅니다. 또한 이 응용 프로그램 잠금 리소스에 해당하는 리소스 문자열에서 최대 32자까지 포함합니다. 전체 문자열을 사용할 수 없어 두 문자만 표시되는 경우도 있습니다. 이 동작은 복구 과정에서 다시 획득한 응용 프로그램 잠금에 대한 데이터베이스 복구 시에만 수행됩니다. 해시 값은 이 응용 프로그램 잠금 리소스에 해당하는 전체 리소스 문자열의 해시를 나타냅니다.|  
+|APPLICATION|\<DbPrincipalId >:\<최대 32 자 >:(< hash_value >)|이 애플리케이션 잠금 리소스의 범위를 한정하는 데 사용된 데이터베이스 보안 주체의 ID를 나타냅니다. 또한 이 애플리케이션 잠금 리소스에 해당하는 리소스 문자열에서 최대 32자까지 포함합니다. 전체 문자열을 사용할 수 없어 두 문자만 표시되는 경우도 있습니다. 이 동작은 복구 과정에서 다시 획득한 애플리케이션 잠금에 대한 데이터베이스 복구 시에만 수행됩니다. 해시 값은 이 애플리케이션 잠금 리소스에 해당하는 전체 리소스 문자열의 해시를 나타냅니다.|  
 |HOBT|해당 사항 없음|HoBt ID가 포함 된 **resource_associated_entity_id**합니다.|  
 |ALLOCATION_UNIT|해당 사항 없음|할당 단위 ID가 포함 된 **resource_associated_entity_id**합니다.|  
 |METADATA.ASSEMBLY|assembly_id = A|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -285,7 +285,7 @@ ms.locfileid: "68262621"
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-sysdmtranlocks-with-other-tools"></a>A. 다른 도구와 함께 sys.dm_tran_locks 사용  
+### <a name="a-using-sysdm_tran_locks-with-other-tools"></a>A. 다른 도구와 함께 sys.dm_tran_locks 사용  
  다음 예에는 다른 트랜잭션에 의해 업데이트 작업이 차단되는 시나리오에서 실행됩니다. 사용 하 여 **sys.dm_tran_locks** 및 다른 도구를 리소스 잠금에 대 한 정보를 제공 합니다.  
   
 ```sql  

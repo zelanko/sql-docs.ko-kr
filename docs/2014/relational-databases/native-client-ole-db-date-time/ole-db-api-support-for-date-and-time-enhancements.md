@@ -24,7 +24,7 @@ ms.locfileid: "63237842"
   
 |기능|Description|  
 |--------------|-----------------|  
-|IAccessor::CreateAccessor|응용 프로그램에서 `datetime`, `datetime2` 및 `smalldatetime` 값을 구분할 수 있도록 DBBINDING 구조체에 플래그가 추가됩니다. 자세한 내용은 [매개 변수 및 행 집합 메타 데이터](metadata-parameter-and-rowset.md)입니다.|  
+|IAccessor::CreateAccessor|애플리케이션에서 `datetime`, `datetime2` 및 `smalldatetime` 값을 구분할 수 있도록 DBBINDING 구조체에 플래그가 추가됩니다. 자세한 내용은 [매개 변수 및 행 집합 메타 데이터](metadata-parameter-and-rowset.md)입니다.|  
 |IBCPSession::BCPColFmt|자세한 내용은 [향상 된 날짜 및 시간 형식에 대 한 대량 복사 변경 사항 &#40;OLE DB 및 ODBC&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)합니다.|  
 |ICommandWithParameters::GetParameterInfo|자세한 내용은[매개 변수 및 행 집합 메타 데이터](metadata-parameter-and-rowset.md)입니다.|  
 |ICommandWithParameters::SetParameterinfo|자세한 내용은[매개 변수 및 행 집합 메타 데이터](metadata-parameter-and-rowset.md)입니다.|  

@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68040362"
 ---
-# <a name="applockmode-transact-sql"></a>APPLOCK_MODE(Transact-SQL)
+# <a name="applock_mode-transact-sql"></a>APPLOCK_MODE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 이 기능은 특정 애플리케이션 리소스에 대해 잠금 소유자가 보유한 잠금 모드를 반환합니다. 애플리케이션 잠금 함수로 APPLOCK_MODE는 현재 데이터베이스에서 작동합니다. 데이터베이스는 애플리케이션 잠금의 범위입니다.
@@ -54,7 +54,7 @@ APPLOCK_MODE( 'database_principal' , 'resource_name' , 'lock_owner' )
 **nvarchar(32)**
   
 ## <a name="return-value"></a>반환 값
-특정 응용 프로그램 리소스에 대해 잠금 소유자가 보유한 잠금 모드를 반환합니다. 잠금 모드는 다음 값 중 하나일 수 있습니다.
+특정 애플리케이션 리소스에 대해 잠금 소유자가 보유한 잠금 모드를 반환합니다. 잠금 모드는 다음 값 중 하나일 수 있습니다.
   
 ||||  
 |-|-|-|  

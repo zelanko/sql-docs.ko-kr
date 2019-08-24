@@ -56,7 +56,7 @@ ms.locfileid: "67934156"
   
  이 스키마에서는 대상 네임스페이스를 정의하므로 이 스키마에 대한 XPath 쿼리(예: "Employee")에는 네임스페이스가 포함되어야 합니다.  
   
- 다음 C# 예제 응용 프로그램은 위의 XSD 스키마(MySchema.xml)에 대해 XPath 쿼리를 실행합니다. 접두사를 해결 하려면 SqlXmlCommand 개체의 네임 스페이스 속성을 사용 하 여 네임 스페이스 바인딩을 지정 합니다.  
+ 다음 C# 예제 애플리케이션은 위의 XSD 스키마(MySchema.xml)에 대해 XPath 쿼리를 실행합니다. 접두사를 해결 하려면 SqlXmlCommand 개체의 네임 스페이스 속성을 사용 하 여 네임 스페이스 바인딩을 지정 합니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  

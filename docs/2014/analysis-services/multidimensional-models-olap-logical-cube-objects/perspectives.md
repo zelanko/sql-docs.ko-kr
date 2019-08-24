@@ -34,7 +34,7 @@ ms.locfileid: "62702632"
   
  큐브를 탐색 하는 사용자에 대 한 매우 복잡 한 일 수 있습니다 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 하나의 큐브는 완전한 데이터 웨어하우스의 내용을 나타낼 수 있으며 다수의 차원 테이블을 기반으로 하는 여러 개의 차원과 팩트 테이블을 나타내는 다양한 측정값 그룹을 포함할 수 있습니다. 이러한 큐브는 매우 복잡하고 강력할 수 있지만 주로 비즈니스 인텔리전스 및 보고 요구 사항을 충족하기 위해 큐브의 일부만 사용하는 사용자에게는 부담이 될 수 있습니다.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 큐브 뷰를 사용 하 여에서 큐브의 복잡성을 줄이기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 큐브 뷰는 특정 큐브에서 비즈니스 또는 응용 프로그램의 특정 요구 사항에 맞춰 보기를 제공하는 큐브 하위 집합을 정의합니다. 큐브에 포함된 개체의 표시 유형은 큐브 뷰에 따라 달라집니다. 큐브 뷰에서 다음 개체를 표시하거나 숨길 수 있습니다.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], 큐브 뷰를 사용 하 여에서 큐브의 복잡성을 줄이기 위해 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 큐브 뷰는 특정 큐브에서 비즈니스 또는 애플리케이션의 특정 요구 사항에 맞춰 보기를 제공하는 큐브 하위 집합을 정의합니다. 큐브에 포함된 개체의 표시 유형은 큐브 뷰에 따라 달라집니다. 큐브 뷰에서 다음 개체를 표시하거나 숨길 수 있습니다.  
   
 -   차원  
   
@@ -52,13 +52,13 @@ ms.locfileid: "62702632"
   
 -   동작  
   
- 예를 들어 합니다 **Adventure Works** 큐브를 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 샘플 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 11 개의 측정값 그룹과 21 개의 서로 다른 큐브 차원이 나타내는 판매, 판매 예측 및 재무 데이터를 포함 합니다. 클라이언트 응용 프로그램에서 전체 큐브를 직접 참조할 수 있지만 기본 판매 예측 정보만 추출하려는 사용자에게 이러한 직접 참조는 너무 과도한 작업입니다. 동일한 사용자 대신 사용할 수는 **목표 판매량** 큐브 뷰를 제한 하는 **Adventure Works** 큐브를 판매 예측과 관련 된 개체만를 합니다.  
+ 예를 들어 합니다 **Adventure Works** 큐브를 [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] 샘플 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 데이터베이스 11 개의 측정값 그룹과 21 개의 서로 다른 큐브 차원이 나타내는 판매, 판매 예측 및 재무 데이터를 포함 합니다. 클라이언트 애플리케이션에서 전체 큐브를 직접 참조할 수 있지만 기본 판매 예측 정보만 추출하려는 사용자에게 이러한 직접 참조는 너무 과도한 작업입니다. 동일한 사용자 대신 사용할 수는 **목표 판매량** 큐브 뷰를 제한 하는 **Adventure Works** 큐브를 판매 예측과 관련 된 개체만를 합니다.  
   
  큐브 뷰를 통해 사용자에게 표시되지 않는 큐브의 개체도 XMLA(XML for Analysis), MDX(Multidimensional Expressions) 또는 DMX(Data Mining Extensions) 문을 사용하여 직접 참조하거나 검색할 수 있습니다. 큐브 뷰는 큐브의 개체에 대한 액세스를 제한하지 않으며 액세스를 제한할 목적으로 사용해서도 안 됩니다. 큐브에 액세스하는 사용자에게 더 나은 환경을 제공하는 용도로 큐브 뷰를 사용하십시오.  
   
  큐브 뷰는 큐브의 읽기 전용 뷰이므로 큐브 뷰를 사용하여 큐브의 개체를 변경하거나 이름을 바꿀 수 없습니다. 마찬가지로 큐브 뷰를 사용하여 보이는 값 합계 사용과 같은 큐브의 동작이나 기능을 변경할 수 없습니다.  
   
 ## <a name="security"></a>보안  
- 큐브 뷰는 보안 수단이 아니라 비즈니스 인텔리전스 응용 프로그램에 보다 나은 사용자 환경을 제공하기 위한 도구입니다. 특정 큐브 뷰에 대한 모든 보안은 기본 큐브에서 상속됩니다. 예를 들어 큐브 뷰에서 사용자에게 액세스 권한이 없는 큐브의 개체에 대한 액세스 권한을 부여할 수는 없습니다. 큐브 뷰를 통해 큐브의 개체에 대한 액세스를 제공하려면 먼저 큐브에 대한 보안을 해결해야 합니다.  
+ 큐브 뷰는 보안 수단이 아니라 비즈니스 인텔리전스 애플리케이션에 보다 나은 사용자 환경을 제공하기 위한 도구입니다. 특정 큐브 뷰에 대한 모든 보안은 기본 큐브에서 상속됩니다. 예를 들어 큐브 뷰에서 사용자에게 액세스 권한이 없는 큐브의 개체에 대한 액세스 권한을 부여할 수는 없습니다. 큐브 뷰를 통해 큐브의 개체에 대한 액세스를 제공하려면 먼저 큐브에 대한 보안을 해결해야 합니다.  
   
   

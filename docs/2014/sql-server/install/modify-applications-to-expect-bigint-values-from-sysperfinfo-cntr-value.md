@@ -20,14 +20,14 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "66093957"
 ---
-# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntrvalue"></a>sysperfinfo.cntr_value에서 bigint 값을 예상할 수 있도록 응용 프로그램을 수정합니다.
+# <a name="modify-applications-to-expect-bigint-values-from-sysperfinfocntr_value"></a>sysperfinfo.cntr_value에서 bigint 값을 예상할 수 있도록 애플리케이션을 수정합니다.
   sysperfinfo 반환을 `bigint` cntr_value 열의 값입니다.  
   
 ## <a name="component"></a>구성 요소  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ## <a name="corrective-action"></a>수정 동작  
- cntr_value 열의 `bigint` 값을 처리할 수 있도록 sysperfinfo를 사용하는 응용 프로그램을 수정합니다.  
+ cntr_value 열의 `bigint` 값을 처리할 수 있도록 sysperfinfo를 사용하는 애플리케이션을 수정합니다.  
   
 > [!NOTE]  
 >  sysperfinfo가 호환성 뷰이므로 합니다. sys.dm_os_performance_counter 동적 관리 뷰를 대신 사용해야 합니다.  

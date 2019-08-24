@@ -25,10 +25,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68075336"
 ---
-# <a name="concatws-transact-sql"></a>CONCAT_WS(Transact-SQL)
+# <a name="concat_ws-transact-sql"></a>CONCAT_WS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-이 함수는 둘 이상의 문자열 값을 종단 간 방식으로 연결하거나 조인한 결과 문자열을 반환합니다. 첫 번째 함수 인수에 지정된 구분 기호와 연결된 해당 문자열 값을 구분합니다. (`CONCAT_WS`는 *구분 기호를 이용한 연결*을 나타냅니다.)
+이 함수는 둘 이상의 문자열 값을 엔드투엔드 방식으로 연결하거나 조인한 결과 문자열을 반환합니다. 첫 번째 함수 인수에 지정된 구분 기호와 연결된 해당 문자열 값을 구분합니다. (`CONCAT_WS`는 *구분 기호를 이용한 연결*을 나타냅니다.)
 
 ##  <a name="syntax"></a>구문   
 ```sql

@@ -68,7 +68,7 @@ ms.locfileid: "66103964"
   
 |요소|Description|  
 |-------------|-----------------|  
-|`WorkingSetMaximum`|값 초과 시 보고서 서버 애플리케이션에 대한 새 메모리 할당 요청이 더 이상 허가되지 않는 메모리 임계값을 지정합니다.<br /><br /> 기본적으로 보고서 서버는 `WorkingSetMaximum`을 컴퓨터에서 사용 가능한 메모리 양으로 설정합니다. 이 값은 서비스가 시작될 때 검색됩니다.<br /><br /> 이 설정을 직접 추가하지 않으면 RSReportServer.config 파일에 나타나지 않습니다. 보고서 서버가 메모리를 더 적게 사용하도록 하려면 RSReportServer.config 파일을 수정하고 요소와 값을 추가합니다. 유효한 값은 0에서 최대 정수 사이입니다. 이 값은 KB로 표시됩니다.<br /><br /> `WorkingSetMaximum`의 값에 도달하면 보고서 서버가 새 요청을 받아들이지 않습니다. 현재 진행 중인 요청은 완료되도록 허용됩니다. 새 요청은 메모리 사용이 `WorkingSetMaximum`을 통해 지정된 값 아래로 떨어질 때만 받아들여집니다.<br /><br /> `WorkingSetMaximum` 값에 도달한 후에도 기존 요청이 추가 메모리를 계속 사용하는 경우 모든 보고서 서버 응용 프로그램 도메인이 재활용됩니다. 자세한 내용은 [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md)을 참조하세요.|  
+|`WorkingSetMaximum`|값 초과 시 보고서 서버 애플리케이션에 대한 새 메모리 할당 요청이 더 이상 허가되지 않는 메모리 임계값을 지정합니다.<br /><br /> 기본적으로 보고서 서버는 `WorkingSetMaximum`을 컴퓨터에서 사용 가능한 메모리 양으로 설정합니다. 이 값은 서비스가 시작될 때 검색됩니다.<br /><br /> 이 설정을 직접 추가하지 않으면 RSReportServer.config 파일에 나타나지 않습니다. 보고서 서버가 메모리를 더 적게 사용하도록 하려면 RSReportServer.config 파일을 수정하고 요소와 값을 추가합니다. 유효한 값은 0에서 최대 정수 사이입니다. 이 값은 KB로 표시됩니다.<br /><br /> `WorkingSetMaximum`의 값에 도달하면 보고서 서버가 새 요청을 받아들이지 않습니다. 현재 진행 중인 요청은 완료되도록 허용됩니다. 새 요청은 메모리 사용이 `WorkingSetMaximum`을 통해 지정된 값 아래로 떨어질 때만 받아들여집니다.<br /><br /> `WorkingSetMaximum` 값에 도달한 후에도 기존 요청이 추가 메모리를 계속 사용하는 경우 모든 보고서 서버 애플리케이션 도메인이 재활용됩니다. 자세한 내용은 [Application Domains for Report Server Applications](application-domains-for-report-server-applications.md)을 참조하세요.|  
 |`WorkingSetMinimum`|리소스 소비량에 대한 하한값을 지정합니다. 보고서 서버는 전체 메모리 사용이 이 값 미만인 경우 메모리를 해제하지 않습니다.<br /><br /> 기본적으로 이 값은 서비스 시작 시 계산됩니다. 계산 시 초기 메모리 할당 요청은 `WorkingSetMaximum`의 60%입니다.<br /><br /> 이 설정을 직접 추가하지 않으면 RSReportServer.config 파일에 나타나지 않습니다. 이 값을 사용자 지정하려는 경우 RSReportServer.config 파일에 `WorkingSetMinimum` 요소를 추가해야 합니다. 유효한 값은 0에서 최대 정수 사이입니다. 이 값은 KB로 표시됩니다.|  
 |`MemoryThreshold`|높음 및 보통 가중 시나리오 간 경계를 정의하는 `WorkingSetMaximum`의 비율을 지정합니다. 보고서 서버 메모리 사용이 이 값에 도달하는 경우 보고서 서버는 요청 처리 속도를 낮추고 다른 서버 애플리케이션에 할당된 메모리 양을 변경합니다. 기본값은 90입니다. 이 값은 `MemorySafetyMargin`에 설정된 값보다 커야 합니다.|  
 |`MemorySafetyMargin`|보통 및 낮음 가중 시나리오 간 경계를 정의하는 `WorkingSetMaximum`의 비율을 지정합니다. 이 값은 시스템용으로 예약된 사용 가능한 메모리 비율이며 보고서 서버 작업에 사용할 수 없습니다. 기본값은 80입니다.|  
@@ -87,7 +87,7 @@ ms.locfileid: "66103964"
 ```  
   
 #### <a name="about-aspnet-memory-configuration-settings"></a>ASP.NET 메모리 구성 설정 정보  
- 보고서 서버 웹 서비스와 보고서 관리자는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램이지만 이 중 어떤 응용 프로그램도 IIS 5.0 호환성 모드에서 실행되는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 응용 프로그램에 대한 machine.config의 `processModel` 섹션에 지정하는 메모리 구성 설정에 응답하지 않습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 RSReportServer.config 파일에서만 메모리 구성 설정을 읽습니다.  
+ 보고서 서버 웹 서비스와 보고서 관리자는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 애플리케이션이지만 이 중 어떤 애플리케이션도 IIS 5.0 호환성 모드에서 실행되는 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 애플리케이션에 대한 machine.config의 `processModel` 섹션에 지정하는 메모리 구성 설정에 응답하지 않습니다. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 는 RSReportServer.config 파일에서만 메모리 구성 설정을 읽습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [RSReportServer 구성 파일](rsreportserver-config-configuration-file.md)   

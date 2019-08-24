@@ -32,7 +32,7 @@ ms.locfileid: "67989228"
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  SQL Server 헤더 및 라이브러리 파일에 대 한 OLE DB 드라이버는 설치 프로세스 중에 SQL Server SDK 용 OLE DB 드라이버 옵션을 선택 하면 설치 됩니다. 응용 프로그램을 개발할 때는 개발에 필요한 모든 파일을 사용자의 개발 환경으로 복사하고 설치해야 합니다. SQL Server 용 OLE DB 드라이버를 설치 하 고 재배포 하는 방법에 대 한 자세한 내용은 [SQL Server에 대 한 OLE DB 드라이버 설치](../../oledb/applications/installing-oledb-driver-for-sql-server.md)를 참조 하세요.  
+  SQL Server 헤더 및 라이브러리 파일에 대 한 OLE DB 드라이버는 설치 프로세스 중에 SQL Server SDK 용 OLE DB 드라이버 옵션을 선택 하면 설치 됩니다. 애플리케이션을 개발할 때는 개발에 필요한 모든 파일을 사용자의 개발 환경으로 복사하고 설치해야 합니다. SQL Server 용 OLE DB 드라이버를 설치 하 고 재배포 하는 방법에 대 한 자세한 내용은 [SQL Server에 대 한 OLE DB 드라이버 설치](../../oledb/applications/installing-oledb-driver-for-sql-server.md)를 참조 하세요.  
   
  SQL Server 헤더 및 라이브러리 파일에 대 한 OLE DB 드라이버는 다음 위치에 설치 됩니다.  
   
@@ -75,7 +75,7 @@ include "msoledbsql.h";
   
   
 ## <a name="static-linking-and-bcp-functions"></a>정적 연결 및 BCP 함수  
- 응용 프로그램에서 BCP 함수를 사용하는 경우 응용 프로그램의 연결 문자열에 응용 프로그램을 컴파일하는 데 사용된 헤더 파일 및 라이브러리가 함께 제공되는 동일한 버전의 드라이버를 지정해야 합니다.  
+ 애플리케이션에서 BCP 함수를 사용하는 경우 애플리케이션의 연결 문자열에 애플리케이션을 컴파일하는 데 사용된 헤더 파일 및 라이브러리가 함께 제공되는 동일한 버전의 드라이버를 지정해야 합니다.  
   
  자세한 내용은 [대량 복사 작업](../../oledb/features/performing-bulk-copy-operations.md)수행을 참조 하세요.  
   

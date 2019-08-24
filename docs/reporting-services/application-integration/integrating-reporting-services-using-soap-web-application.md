@@ -22,12 +22,12 @@ ms.lasthandoff: 07/01/2019
 ms.locfileid: "67492772"
 ---
 # <a name="integrating-reporting-services-using-soap---web-application"></a>SOAP를 사용하여 Reporting Services 통합 - 웹 애플리케이션
-  Reporting Services SOAP API를 통해 보고서 서버의 전체 기능에 액세스할 수 있습니다. SOAP API는 웹 서비스이므로 쉽게 액세스하여 사용자 지정 비즈니스 응용 프로그램에 엔터프라이즈 보고 기능을 제공할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 응용 프로그램에서 SOAP API에 액세스하는 것과 동일한 방법으로 웹 응용 프로그램에서 보고서 서버 웹 서비스에 액세스합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 보고서 서버 웹 서비스의 속성 및 메서드를 표시하는 프록시 클래스를 생성할 수 있으며 친숙한 인프라와 도구를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기술 기반의 비즈니스 애플리케이션을 빌드할 수도 있습니다.  
+  Reporting Services SOAP API를 통해 보고서 서버의 전체 기능에 액세스할 수 있습니다. SOAP API는 웹 서비스이므로 쉽게 액세스하여 사용자 지정 비즈니스 애플리케이션에 엔터프라이즈 보고 기능을 제공할 수 있습니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 애플리케이션에서 SOAP API에 액세스하는 것과 동일한 방법으로 웹 애플리케이션에서 보고서 서버 웹 서비스에 액세스합니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]를 사용하여 보고서 서버 웹 서비스의 속성 및 메서드를 표시하는 프록시 클래스를 생성할 수 있으며 친숙한 인프라와 도구를 통해 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 기술 기반의 비즈니스 애플리케이션을 빌드할 수도 있습니다.  
   
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 관리 기능은 Windows 응용 프로그램에서 액세스하는 것과 마찬가지로 웹 응용 프로그램에서도 쉽게 액세스할 수 있습니다. 웹 응용 프로그램에서는 보고서 서버 데이터베이스에서 항목 추가 및 제거, 항목 보안 설정, 보고서 서버 데이터베이스 항목 수정, 일정 예약 및 배달 관리 등을 수행할 수 있습니다.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 관리 기능은 Windows 애플리케이션에서 액세스하는 것과 마찬가지로 웹 애플리케이션에서도 쉽게 액세스할 수 있습니다. 웹 애플리케이션에서는 보고서 서버 데이터베이스에서 항목 추가 및 제거, 항목 보안 설정, 보고서 서버 데이터베이스 항목 수정, 일정 예약 및 배달 관리 등을 수행할 수 있습니다.  
   
 ## <a name="enabling-impersonation"></a>가장 활성화  
- 웹 응용 프로그램 구성의 첫 단계는 웹 서비스 클라이언트에서 가장을 사용하도록 하는 것입니다. 가장을 사용하면 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램은 대신 작업할 다른 클라이언트의 ID로 실행할 수 있습니다. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS(인터넷 정보 서비스)에 의존하여 사용자를 인증하고 인증된 토큰을 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램에 전달하거나 사용자를 인증할 수 없는 경우 인증되지 않은 토큰을 전달합니다. 가장을 사용한다면 두 경우 모두 어떤 토큰이 수신되든지 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 응용 프로그램은 이 토큰을 가장합니다. 클라이언트 응용 프로그램의 Web.config 파일을 다음과 같이 수정하여 클라이언트에서 가장을 사용하도록 설정할 수 있습니다.  
+ 웹 애플리케이션 구성의 첫 단계는 웹 서비스 클라이언트에서 가장을 사용하도록 하는 것입니다. 가장을 사용하면 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션은 대신 작업할 다른 클라이언트의 ID로 실행할 수 있습니다. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]은 [!INCLUDE[msCoName](../../includes/msconame-md.md)] IIS(인터넷 정보 서비스)에 의존하여 사용자를 인증하고 인증된 토큰을 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션에 전달하거나 사용자를 인증할 수 없는 경우 인증되지 않은 토큰을 전달합니다. 가장을 사용한다면 두 경우 모두 어떤 토큰이 수신되든지 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 애플리케이션은 이 토큰을 가장합니다. 클라이언트 애플리케이션의 Web.config 파일을 다음과 같이 수정하여 클라이언트에서 가장을 사용하도록 설정할 수 있습니다.  
   
 ```asp.net  
 <!-- Web.config file. -->  
@@ -43,13 +43,13 @@ ms.locfileid: "67492772"
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
- 웹 응용 프로그램을 사용하여 보고서 서버 및 콘텐츠를 관리할 수도 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함된 보고서 관리자는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 및 Reporting Services SOAP API를 사용하여 작성된 웹 응용 프로그램의 예입니다. 보고서 관리자의 보고서 관리 기능을 사용자 지정 웹 응용 프로그램에 추가할 수 있습니다. 예를 들어 보고서 서버 데이터베이스에서 사용 가능한 보고서 목록을 반환하여 이를 사용자가 선택할 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** 컨트롤에 표시해야 할 수 있습니다. 다음 코드는 보고서 서버 데이터베이스에 연결하고 보고서 서버 데이터베이스의 항목 목록을 반환합니다. 그러면 사용 가능한 보고서가 Listbox 컨트롤에 추가되고 각 보고서의 경로가 표시됩니다.  
+ 웹 애플리케이션을 사용하여 보고서 서버 및 콘텐츠를 관리할 수도 있습니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]에 포함된 보고서 관리자는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] 및 Reporting Services SOAP API를 사용하여 작성된 웹 애플리케이션의 예입니다. 보고서 관리자의 보고서 관리 기능을 사용자 지정 웹 애플리케이션에 추가할 수 있습니다. 예를 들어 보고서 서버 데이터베이스에서 사용 가능한 보고서 목록을 반환하여 이를 사용자가 선택할 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** 컨트롤에 표시해야 할 수 있습니다. 다음 코드는 보고서 서버 데이터베이스에 연결하고 보고서 서버 데이터베이스의 항목 목록을 반환합니다. 그러면 사용 가능한 보고서가 Listbox 컨트롤에 추가되고 각 보고서의 경로가 표시됩니다.  
 
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 
- 웹 응용 프로그램을 사용하여 보고서 서버 및 콘텐츠를 관리할 수도 있습니다. 웹 포털을 사용 하 여 포함된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]은 Reporting Services를 사용 하 여 일반적으로 수행 하는 작업의 대부분을 관리 하는 웹 응용 프로그램의 예입니다. 웹 포털의 보고서 관리 기능을 사용자 지정 웹 애플리케이션에 추가할 수 있습니다. 예를 들어 보고서 서버 데이터베이스에서 사용 가능한 보고서 목록을 반환하여 이를 사용자가 선택할 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** 컨트롤에 표시해야 할 수 있습니다. 다음 코드는 보고서 서버 데이터베이스에 연결하고 보고서 서버 데이터베이스의 항목 목록을 반환합니다. 그러면 사용 가능한 보고서가 Listbox 컨트롤에 추가되고 각 보고서의 경로가 표시됩니다.  
+ 웹 애플리케이션을 사용하여 보고서 서버 및 콘텐츠를 관리할 수도 있습니다. 웹 포털을 사용 하 여 포함된 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]은 Reporting Services를 사용 하 여 일반적으로 수행 하는 작업의 대부분을 관리 하는 웹 응용 프로그램의 예입니다. 웹 포털의 보고서 관리 기능을 사용자 지정 웹 애플리케이션에 추가할 수 있습니다. 예를 들어 보고서 서버 데이터베이스에서 사용 가능한 보고서 목록을 반환하여 이를 사용자가 선택할 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] **Listbox** 컨트롤에 표시해야 할 수 있습니다. 다음 코드는 보고서 서버 데이터베이스에 연결하고 보고서 서버 데이터베이스의 항목 목록을 반환합니다. 그러면 사용 가능한 보고서가 Listbox 컨트롤에 추가되고 각 보고서의 경로가 표시됩니다.  
 
 ::: moniker-end
   

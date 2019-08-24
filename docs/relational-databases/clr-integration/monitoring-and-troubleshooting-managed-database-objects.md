@@ -42,7 +42,7 @@ ms.locfileid: "68118525"
 |[SQL Server, CLR 개체](../../relational-databases/performance-monitor/sql-server-clr-object.md)|CLR 실행에 소요된 총 시간입니다.|  
   
 ## <a name="windows-system-monitor-perfmonexe-counters"></a>Windows 시스템 모니터(PERFMON.EXE) 카운터  
- Windows 시스템 모니터(PERFMON.EXE) 도구에는 CLR 통합 응용 프로그램을 모니터링하는 데 사용할 수 있는 여러 개의 성능 카운터가 포함되어 있습니다. .NET CLR 성능 카운터를 "sqlservr" 프로세스 이름으로 필터링하여 현재 실행 중인 CLR 통합 응용 프로그램을 추적할 수 있습니다.  
+ Windows 시스템 모니터(PERFMON.EXE) 도구에는 CLR 통합 애플리케이션을 모니터링하는 데 사용할 수 있는 여러 개의 성능 카운터가 포함되어 있습니다. .NET CLR 성능 카운터를 "sqlservr" 프로세스 이름으로 필터링하여 현재 실행 중인 CLR 통합 응용 프로그램을 추적할 수 있습니다.  
   
 |성능 개체|설명|  
 |------------------------|-----------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "68118525"
   
 |DMV|설명|  
 |---------|-----------------|  
-|[sys.dm_clr_appdomains &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|서버의 각 응용 프로그램 도메인에 대한 정보를 제공합니다.|  
+|[sys.dm_clr_appdomains &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|서버의 각 애플리케이션 도메인에 대한 정보를 제공합니다.|  
 |[sys.dm_clr_loaded_assemblies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|서버에 등록된 각 관리되는 어셈블리를 식별합니다.|  
 |[sys.dm_clr_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|호스팅된 CLR에 대한 정보를 반환합니다.|  
 |[sys.dm_clr_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|현재 실행 중인 모든 CLR 태스크를 식별합니다.|  

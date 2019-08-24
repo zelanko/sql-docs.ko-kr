@@ -28,9 +28,9 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "63200257"
 ---
 # <a name="allocating-a-statement-handle"></a>문 핸들 할당
-  응용 프로그램에서 문을 실행하려면 먼저 문 핸들을 할당해야 합니다. 호출 하는 것 **SQLAllocHandle** 사용 하 여는 *HandleType* 매개 변수 호출으로 설정 하 고 *InputHandle* 연결 핸들을 가리키는 합니다.  
+  애플리케이션에서 문을 실행하려면 먼저 문 핸들을 할당해야 합니다. 호출 하는 것 **SQLAllocHandle** 사용 하 여는 *HandleType* 매개 변수 호출으로 설정 하 고 *InputHandle* 연결 핸들을 가리키는 합니다.  
   
- 문 특성은 문 핸들의 특성입니다. 문 특성의 예로는 책갈피 사용 여부 및 문의 결과 집합에 사용할 커서의 종류를 들 수 있습니다. 사용 하 여 문 특성 설정 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)에 현재 설정을 사용 하 여 검색 됩니다 [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md)합니다. 응용 프로그램에서 반드시 문 특성을 설정할 필요는 없습니다. 모든 문 특성에는 기본값이 있으며 일부 문 특성은 드라이버에 고유합니다.  
+ 문 특성은 문 핸들의 특성입니다. 문 특성의 예로는 책갈피 사용 여부 및 문의 결과 집합에 사용할 커서의 종류를 들 수 있습니다. 사용 하 여 문 특성 설정 [SQLSetStmtAttr](../native-client-odbc-api/sqlsetstmtattr.md)에 현재 설정을 사용 하 여 검색 됩니다 [SQLGetStmtAttr](../native-client-odbc-api/sqlgetstmtattr.md)합니다. 애플리케이션에서 반드시 문 특성을 설정할 필요는 없습니다. 모든 문 특성에는 기본값이 있으며 일부 문 특성은 드라이버에 고유합니다.  
   
  몇 가지 ODBC 문 및 연결 옵션을 사용할 때는 주의를 기울여야 합니다. 호출 [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) 사용 하 여 *fOption* SQL_ATTR_LOGIN_TIMEOUT 컨트롤에 연결 (0을 설정 하기 위해 기다리는 동안 제한 시간에 대 한 연결 시도 대 한 응용 프로그램 대기 시간을 설정 이면 무기한 대기). 응답 시간이 느린 사이트의 경우 이 값을 높게 설정하여 연결을 완료하는 데 충분한 시간을 제공할 수 있습니다. 그러나 드라이버에서 연결할 수 없는 경우 사용자에게 적절한 시간 내에 응답되도록 간격을 항상 적절하게 설정해야 합니다.  
   

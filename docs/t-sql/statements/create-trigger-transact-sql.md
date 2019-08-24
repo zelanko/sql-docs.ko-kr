@@ -262,7 +262,7 @@ DDL 및 LOGON 트리거는 [EVENTDATA&#40;Transact-SQL&#41;](../../t-sql/functio
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 테이블 또는 뷰에 대한 INSTEAD OF 트리거를 통해 **text**, **ntext** 또는 **image** 열을 업데이트할 수 있습니다.  
   
 > [!IMPORTANT]
->  **ntext**, **text** 및 **image** 데이터 형식은 이후 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 **varchar(MAX)**, **nvarchar(MAX)** 및 **varbinary(MAX)** 데이터를 지원합니다.  
+>  **ntext**, **text** 및 **image** 데이터 형식은 이후 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 제거됩니다. 향후 개발 작업에서는 이 데이터 형식을 사용하지 않도록 하고 현재 이 데이터 형식을 사용하는 애플리케이션은 수정하세요. 대신 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md), [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)및 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) 를 사용합니다. AFTER 및 INSTEAD OF 트리거는 모두 inserted 및 deleted 테이블에서 **varchar(MAX)** , **nvarchar(MAX)** 및 **varbinary(MAX)** 데이터를 지원합니다.  
   
 메모리 최적화 테이블의 트리거의 경우, 최상위 수준에서 허용되는 *sql_statement*는 ATOMIC 블록뿐입니다. ATOMIC 블록 내에서 허용되는 T-SQL은 네이티브 프로시저 내에서 허용되는 T-SQL로 제한됩니다.  
   
@@ -304,7 +304,7 @@ CREATE TRIGGER는 일괄 처리의 첫 번째 문이어야 하며 한 테이블�
   
 트리거 내부에서 SET 문을 지정할 수 있습니다. 선택된 SET 옵션은 트리거 실행 중에만 적용되며 실행이 끝나면 이전 설정으로 돌아갑니다.  
   
-트리거가 실행되면 저장 프로시저와 마찬가지로 호출하는 응용 프로그램에 결과가 반환됩니다. 트리거 실행으로 인해 애플리케이션에 결과가 반환되는 것을 방지하려면 결과를 반환하는 SELECT 문이나 트리거에서 변수 할당을 수행하는 문을 포함하지 마세요. 사용자에게 결과를 반환하는 SELECT 문이나 변수 할당을 수행하는 문을 포함하는 트리거는 특수하게 처리해야 합니다. 트리거 테이블을 수정할 수 있는 모든 애플리케이션에 반환된 결과를 기록해야 합니다. 트리거에서 변수를 할당해야 하는 경우에는 트리거 시작 부분에 SET NOCOUNT 문을 사용하여 모든 결과 집합이 반환되지 않게 하세요.  
+트리거가 실행되면 저장 프로시저와 마찬가지로 호출하는 애플리케이션에 결과가 반환됩니다. 트리거 실행으로 인해 애플리케이션에 결과가 반환되는 것을 방지하려면 결과를 반환하는 SELECT 문이나 트리거에서 변수 할당을 수행하는 문을 포함하지 마세요. 사용자에게 결과를 반환하는 SELECT 문이나 변수 할당을 수행하는 문을 포함하는 트리거는 특수하게 처리해야 합니다. 트리거 테이블을 수정할 수 있는 모든 애플리케이션에 반환된 결과를 기록해야 합니다. 트리거에서 변수를 할당해야 하는 경우에는 트리거 시작 부분에 SET NOCOUNT 문을 사용하여 모든 결과 집합이 반환되지 않게 하세요.  
   
 TRUNCATE TABLE 문은 사실상 DELETE 문과 같지만 이 작업은 개별 행 삭제를 기록하지 않으므로 트리거를 실행하지 않습니다. 하지만 TRUNCATE TABLE 문 실행 권한이 있는 사용자 외에는 이 문이 DELETE 트리거를 실수로 방해하는 것을 염려할 필요가 없습니다.  
   
@@ -383,7 +383,7 @@ ALTER DATABASE를 사용하여 RECURSIVE_TRIGGERS를 사용하도록 설정한 �
   
 -   간접 재귀  
   
-     간접 재귀에서는 응용 프로그램이 T1 테이블을 업데이트하면 TR1 트리거가 실행되어 T2 테이블을 업데이트합니다. 그런 다음, T2 트리거가 실행되어 T1 테이블을 업데이트합니다.  
+     간접 재귀에서는 애플리케이션이 T1 테이블을 업데이트하면 TR1 트리거가 실행되어 T2 테이블을 업데이트합니다. 그런 다음, T2 트리거가 실행되어 T1 테이블을 업데이트합니다.  
   
 -   직접 재귀  
   
@@ -415,7 +415,7 @@ DML 트리거를 만들려면 트리거를 만들 테이블이나 뷰에 대한 
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>1. 미리 알림 메시지로 DML 트리거 사용  
+### <a name="a-using-a-dml-trigger-with-a-reminder-message"></a>1\. 미리 알림 메시지로 DML 트리거 사용  
 다음 DML 트리거는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스의 `Customer` 테이블에 데이터를 추가하거나 변경하려고 할 때 클라이언트에 메시지를 출력합니다.  
   
 ```sql  
@@ -426,7 +426,7 @@ AS RAISERROR ('Notify Customer Relations', 16, 10);
 GO  
 ```  
   
-### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>2. 미리 알림 전자 메일 메시지로 DML 트리거 사용  
+### <a name="b-using-a-dml-trigger-with-a-reminder-e-mail-message"></a>2\. 미리 알림 전자 메일 메시지로 DML 트리거 사용  
 다음 예에서는 `MaryM` 테이블이 변경될 때 지정한 사람(`Customer`)에게 전자 메일 메시지를 보냅니다.  
   
 ```sql  

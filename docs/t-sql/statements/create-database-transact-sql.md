@@ -270,7 +270,7 @@ CONTAINMENT가 PARTIAL로 설정된 경우에만 다음 옵션을 사용할 수 
 
 - **PERSISTENT_LOG_BUFFER=ON ( DIRECTORY_NAME='' )**
 
-  이 옵션을 지정하면 트랜잭션 로그 버퍼는 저장소 클래스 메모리(NVDIMM-N 비휘발성 저장소)로 지원되는 디스크 디바이스에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [스토리지 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
+  이 옵션을 지정하면 트랜잭션 로그 버퍼는 스토리지 클래스 메모리(NVDIMM-N 비휘발성 스토리지)로 지원되는 디스크 디바이스에 있는 볼륨에서 생성되며 영구적 로그 버퍼라고도 합니다. 자세한 내용은 [스토리지 클래스 메모리를 사용하는 트랜잭션 커밋 대기 시간 가속화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/12/02/transaction-commit-latency-acceleration-using-storage-class-memory-in-windows-server-2016sql-server-2016-sp1/) 를 참조하세요. **적용 대상**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상.
 
 FOR ATTACH [ WITH \< attach_database_option > ]     
 기존 운영 체제 파일 세트를 [연결](../../relational-databases/databases/database-detach-and-attach-sql-server.md)하여 데이터베이스를 만들도록 지정합니다. 여기에는 주 파일을 지정하는 \<filespec> 항목이 반드시 필요합니다. 또한 데이터베이스를 처음 만들었거나 마지막으로 연결했을 때 경로가 다른 파일에 대한 \<filespec> 항목이 필요합니다. 이러한 파일에는 반드시 \<filespec> 항목을 지정해야 합니다.
@@ -314,7 +314,7 @@ ERROR_BROKER_CONVERSATIONS
 - 데이터베이스를 버전에 관계없이 다른 서버 인스턴스에 연결하는 경우에는 연결 작업이 완료된 다음, [sp_removedbreplication](../../relational-databases/system-stored-procedures/sp-removedbreplication-transact-sql.md)을 실행하여 복제를 제거해야 합니다.
 
 > [!NOTE]
-> **vardecimal** 스토리지 형식으로 연결 작업을 수행할 수는 있지만 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2 이상으로 업그레이드해야 합니다. vardecimal 저장소 형식을 사용하는 데이터베이스는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없습니다. **vardecimal** 스토리지 형식에 대한 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하십시오.
+> **vardecimal** 스토리지 형식으로 연결 작업을 수행할 수는 있지만 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]을 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 서비스 팩 2 이상으로 업그레이드해야 합니다. vardecimal 스토리지 형식을 사용하는 데이터베이스는 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 연결할 수 없습니다. **vardecimal** 스토리지 형식에 대한 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하십시오.
 
 데이터베이스가 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스로 처음으로 연결되거나 복원될 때 데이터베이스 마스터 키(서비스 마스터 키로 암호화됨)의 복사본은 서버에 아직 저장되지 않은 상태입니다. 데이터베이스 마스터 키를 암호 해독하려면 **OPEN MASTER KEY** 문을 사용해야 합니다. DMK를 암호 해독한 후에는 **ALTER MASTER KEY REGENERATE** 문을 사용하여 SMK(서비스 마스터 키)로 암호화된 DMK의 복사본을 서버에 프로비전함으로써 앞으로 자동 암호 해독을 사용하도록 설정할 수 있습니다. 데이터베이스가 이전 버전에서 업그레이드되지 않은 경우에는 DMK를 다시 생성해야 최신 AES 알고리즘을 사용할 수 있습니다. DMK를 다시 생성하는 방법은 [ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md)를 참조하세요. AES로 업그레이드하기 위해 DMK 키를 다시 생성하는 데 소요되는 시간은 DMK에서 보호하는 개체 수에 따라 달라집니다. AES로 업그레이드하기 위해 DMK 키를 다시 생성하는 작업은 한 번만 필요하며 키 회전 전략의 일부로 이후에 수행하는 다시 생성 작업에 영향을 주지 않습니다. 연결을 사용하여 데이터베이스를 업그레이드하는 방법은 [분리 및 연결을 사용하여 데이터베이스 업그레이드](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md)를 참조하세요.
 
@@ -353,11 +353,11 @@ NAME *logical_file_name*
 *logical_file_name*     
 파일 참조 시 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 논리적 이름입니다. *Logical_file_name*은 데이터베이스에서 고유해야 하며 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 따라야 합니다. 이 이름은 문자 상수, 유니코드 상수, 일반 식별자 또는 구분 식별자가 될 수 있습니다.
 
-FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }      
+FILENAME { **'** _os\_file\_name_ **'**  |  **'** _filestream\_path_ **'** }      
 운영 체제(물리적) 파일 이름을 지정합니다.
 
-**'** *os_file_name* **'**     
-파일을 만들 때 운영 체제에서 사용한 경로와 파일 이름입니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치된 로컬 서버, SAN(저장 영역 네트워크) 또는 iSCSI 기반 네트워크 중 하나의 디바이스에 있어야 합니다. 지정한 경로는 CREATE DATABASE 문을 실행하기 전에 반드시 존재해야 합니다. 자세한 내용은 주의 사항 섹션의 "데이터베이스 파일 및 파일 그룹"을 참조하십시오.
+**'** *os_file_name* **'**      
+파일을 만들 때 운영 체제에서 사용한 경로와 파일 이름입니다. 파일은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 설치된 로컬 서버, SAN(스토리지 영역 네트워크) 또는 iSCSI 기반 네트워크 중 하나의 디바이스에 있어야 합니다. 지정한 경로는 CREATE DATABASE 문을 실행하기 전에 반드시 존재해야 합니다. 자세한 내용은 주의 사항 섹션의 "데이터베이스 파일 및 파일 그룹"을 참조하십시오.
 
 파일에 UNC 경로가 지정되면 SIZE, MAXSIZE 및 FILEGROWTH 매개 변수를 설정할 수 있습니다.
 
@@ -365,7 +365,7 @@ FILENAME { **'**_os\_file\_name_**'** | **'**_filestream\_path_**'** }
 
 파일이 읽기 전용 보조 파일이 아니거나 데이터베이스가 읽기 전용이 아니면 데이터 파일을 압축 파일 시스템에 저장하지 마십시오. 또한 로그 파일을 압축 파일 시스템에 저장하면 안 됩니다.
 
-**'** *filestream_path* **'**      
+**'** *filestream_path* **'**       
 FILENAME 파일 그룹의 경우 FILENAME은 FILESTREAM 데이터가 저장될 경로를 참조합니다. 따라서 마지막 폴더 바로 위의 경로까지 있어야 하고 마지막 폴더 자체는 있으면 안 됩니다. 예를 들어 C:\MyFiles\MyFilestreamData 경로를 지정하는 경우 ALTER DATABASE를 실행하기 전에 C:\MyFiles 경로가 있어야 하지만 MyFilestreamData 폴더는 있으면 안 됩니다.
 
 파일 그룹과 파일(`<filespec>`)은 같은 문으로 만들어야 합니다.
@@ -438,7 +438,7 @@ DEFAULT
 *database_snapshot_name*    
 새 데이터베이스 스냅샷의 이름입니다. 데이터베이스 스냅샷 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스 내에서 고유해야 하며 식별자에 대한 규칙을 따라야 합니다. *database_snapshot_name*은 최대 128자까지 가능합니다.
 
-ON **(** NAME **=**_logical\_file\_name_**,** FILENAME **='**_os\_file\_name_**')** [ **,**... *n* ]    
+ON **(** NAME **=** _logical\_file\_name_ **,** FILENAME **='** _os\_file\_name_ **')** [ **,** ... *n* ]    
 데이터베이스 스냅샷을 만들기 위해 원본 데이터베이스의 파일 목록을 지정합니다. 스냅샷이 동작하려면 모든 데이터 파일을 개별적으로 지정해야 합니다. 그러나 데이터베이스 스냅샷에는 로그 파일이 허용되지 않습니다. FILESTREAM 파일 그룹은 데이터베이스 스냅샷에서 지원되지 않습니다. FILESTREAM 데이터 파일이 CREATE DATABASE ON 절에 포함되어 있으면 문이 실패하고 오류가 발생합니다.
 
 NAME, FILENAME 및 각 값에 대한 내용은 해당하는 \<filespec> 값의 설명을 참조하십시오.
@@ -535,7 +535,7 @@ GO
 > [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssExpressEd2005](../../includes/ssexpressed2005-md.md)]에서는 데이터 및 로그 파일 사용 권한을 설정하지 않습니다.
 
 ## <a name="examples"></a>예
-### <a name="a-creating-a-database-without-specifying-files"></a>1. 파일을 지정하지 않고 데이터베이스 만들기
+### <a name="a-creating-a-database-without-specifying-files"></a>1\. 파일을 지정하지 않고 데이터베이스 만들기
 다음 예에서는 `mytest` 데이터베이스를 만들고 해당 주 파일 및 트랜잭션 로그 파일을 만듭니다. 문에 \<filespec> 항목이 없으므로 주 데이터베이스 파일의 크기는 model 데이터베이스 주 파일의 크기와 같습니다. 트랜잭션 로그는 주 데이터 파일의 25% 크기 또는 512KB 중 큰 값으로 설정됩니다. MAXSIZE를 지정하지 않았으므로 사용 가능한 디스크 공간을 모두 채울 때까지 파일 크기가 증가할 수 있습니다. 이 예에서는 `mytest` 데이터베이스를 만들기 전에 `mytest`라는 데이터베이스(있는 경우)를 삭제하는 방법도 보여 줍니다.
 
 ```sql
@@ -553,7 +553,7 @@ WHERE name = N'mytest';
 GO
 ```
 
-### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>2. 데이터 파일 및 트랜잭션 로그 파일을 지정하는 데이터베이스 만들기
+### <a name="b-creating-a-database-that-specifies-the-data-and-transaction-log-files"></a>2\. 데이터 파일 및 트랜잭션 로그 파일을 지정하는 데이터베이스 만들기
 다음 예에서는 `Sales` 데이터베이스를 만듭니다. 주 키워드를 사용하지 않았으므로 첫 번째 파일(`Sales_dat`)이 주 파일이 됩니다. `Sales_dat` 파일의 SIZE 매개 변수에 MB 또는 KB를 지정하지 않았으므로 기본값 MB를 사용하여 할당됩니다. 사용자 데이터베이스를 생성, 수정 또는 삭제할 때마다 `Sales_log` 파일은 `MB` 매개 변수에 명시적으로 `SIZE` 접미사를 지정했으므로 메가바이트(MB)로 공간이 할당됩니다.
 
 ```sql
@@ -740,7 +740,7 @@ FOR ATTACH;
 GO
 ```
 
-### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>9. 행 파일 그룹 하나와 FILESTREAM 파일 그룹 두 개를 지정하는 데이터베이스 만들기
+### <a name="i-creating-a-database-that-specifies-a-row-filegroup-and-two-filestream-filegroups"></a>9\. 행 파일 그룹 하나와 FILESTREAM 파일 그룹 두 개를 지정하는 데이터베이스 만들기
 다음 예에서는 `FileStreamDB` 데이터베이스를 만듭니다. 이 데이터베이스에는 행 파일 그룹 하나와 FILESTREAM 파일 그룹 두 개가 있습니다. 각 파일 그룹에는 다음과 같이 하나의 파일이 포함됩니다.
 
 - `FileStreamDB_data`는 행 데이터를 포함합니다. 여기에는 기본 경로가 지정된 `FileStreamDB_data.mdf` 파일 하나가 포함됩니다.
@@ -940,7 +940,7 @@ CREATE DATABASE database_name
 Windows 및 SQL 데이터 정렬 이름에 대한 자세한 내용은 [COLLATE(Transact-SQL)](../../t-sql/statements/collations.md)를 참조하세요.
 
 CATALOG_COLLATION      
-메타데이터 카탈로그의 기본 데이터 정렬을 지정합니다. *DATABASE_DEFAULT*는 시스템 뷰와 시스템 테이블에 사용된 메타데이터 카탈로그가 데이터베이스의 기본 데이터 정렬과 일치하게 데이터를 정렬하도록 지정합니다.  이것은 SQL Server에서 발견되는 동작입니다.
+메타데이터 카탈로그의 기본 데이터 정렬을 지정합니다. *DATABASE_DEFAULT*는 시스템 뷰와 시스템 테이블에 사용된 메타데이터 카탈로그가 데이터베이스의 기본 데이터 정렬과 일치하게 데이터를 정렬하도록 지정합니다. 이것은 SQL Server에서 발견되는 동작입니다.
 
 *SQL_Latin1_General_CP1_CI_AS*는 시스템 뷰와 테이블에 사용된 메타데이터 카탈로그가 고정된 SQL_Latin1_General_CP1_CI_AS 데이터 정렬로 정렬되도록 지정합니다. 이것이 지정되지 않은 경우 Azure SQL Database의 기본 설정입니다.
 
@@ -1331,7 +1331,7 @@ SQL Data Warehouse가 COMPATIBILITY_LEVEL 130으로 설정되어 있으며 변�
 
 ## <a name="error-handling"></a>오류 처리
 
-데이터베이스 크기가 MAXSIZE에 도달하면 40544 오류 코드가 나타납니다. 이 경우, 데이터를 삽입 및 업데이트하거나 새 개체(예: 테이블, 저장된 프로시저, 뷰 및 함수)를 만들 수 없습니다. 데이터 읽기 및 삭제, 테이블 자르기, 테이블 및 인덱스 삭제 및 인덱스 다시 작성은 여전히 가능합니다. 그런 다음 MAXSIZE를 현재 데이터베이스 크기보다 큰 값으로 업데이트하거나 일부 데이터를 삭제하여 저장소 공간을 비울 수 있습니다. 새 데이터 삽입까지 최대 15분을 지연시킬 수 있습니다.
+데이터베이스 크기가 MAXSIZE에 도달하면 40544 오류 코드가 나타납니다. 이 경우, 데이터를 삽입 및 업데이트하거나 새 개체(예: 테이블, 저장된 프로시저, 뷰 및 함수)를 만들 수 없습니다. 데이터 읽기 및 삭제, 테이블 자르기, 테이블 및 인덱스 삭제 및 인덱스 다시 작성은 여전히 가능합니다. 그런 다음 MAXSIZE를 현재 데이터베이스 크기보다 큰 값으로 업데이트하거나 일부 데이터를 삭제하여 스토리지 공간을 비울 수 있습니다. 새 데이터 삽입까지 최대 15분을 지연시킬 수 있습니다.
 
 ## <a name="limitations-and-restrictions"></a>제한 사항
 
@@ -1341,9 +1341,9 @@ SQL Data Warehouse가 COMPATIBILITY_LEVEL 130으로 설정되어 있으며 변�
 
 데이터베이스를 만든 후에는 데이터베이스 데이터 정렬을 변경할 수 없습니다.
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]
 
-### <a name="a-simple-example"></a>1. 간단한 예
+### <a name="a-simple-example"></a>1\. 간단한 예
 데이터 웨어하우스 데이터베이스를 만드는 간단한 예 그러면 10240 GB의 가장 작은 최대 크기, SQL_Latin1_General_CP1_CI_AS의 기본 데이터 정렬 및 DW100인 가장 작은 컴퓨팅 능력을 가진 데이터베이스가 생성됩니다.
 
 ```sql
@@ -1351,7 +1351,7 @@ CREATE DATABASE TestDW
 (EDITION = 'datawarehouse', SERVICE_OBJECTIVE='DW100');
 ```
 
-### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>2. 모든 옵션을 사용하여 데이터 웨어하우스 데이터베이스 만들기
+### <a name="b-create-a-data-warehouse-database-with-all-the-options"></a>2\. 모든 옵션을 사용하여 데이터 웨어하우스 데이터베이스 만들기
 모든 옵션을 사용하여 10테라바이트 데이터 웨어하우스를 생성하는 예입니다.
 
 ```sql
@@ -1460,9 +1460,9 @@ DATABASE 개체에 대한 공유 잠금을 사용합니다.
 ## <a name="metadata"></a>메타데이터
 이 작업이 성공한 후 이 데이터베이스에 대한 항목이 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 및 [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) 메타데이터 보기에 표시됩니다.
 
-## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+## <a name="examples-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-### <a name="a-basic-database-creation-examples"></a>1. 기본 데이터베이스 만들기 예제
+### <a name="a-basic-database-creation-examples"></a>1\. 기본 데이터베이스 만들기 예제
 다음 예제에서는 복제된 테이블에 대해 컴퓨팅 노드당 100GB, 분산된 테이블에 대해 어플라이언스당 500GB, 트랜잭션 로그에 대해 어플라이언스당 100GB의 스토리지 용량이 있는 `mytest` 데이터베이스를 만듭니다. 이 예제에서는 AUTOGROW가 기본으로 Off로 설정돼 있습니다.
 
 ```sql
@@ -1484,7 +1484,7 @@ CREATE DATABASE mytest
     LOG_SIZE = 100 GB);
 ```
 
-### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>2. 부분 기가바이트 크기를 사용하여 데이터베이스 만들기
+### <a name="b-creating-a-database-with-partial-gigabyte-sizes"></a>2\. 부분 기가바이트 크기를 사용하여 데이터베이스 만들기
 다음 예제에서는 복제된 테이블에 대해 컴퓨팅 노드당 1.5GB, 분산된 테이블에 대해 어플라이언스당 5.25GB, 트랜잭션 로그에 대해 어플라이언스당 10GB의 스토리지 용량을 가진 그리고 AUTOGROW가 Off로 설정된 `mytest` 데이터베이스를 만듭니다.
 
 ```sql

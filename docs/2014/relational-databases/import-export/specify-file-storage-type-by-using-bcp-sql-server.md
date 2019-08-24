@@ -35,7 +35,7 @@ ms.locfileid: "66011817"
   
 -   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 데이터를 최대한 압축된 저장 유형(원시 데이터 형식)의 데이터 파일로 대량으로 내보내려면 **bcp**에서 제공되는 기본 파일 저장 유형을 적용합니다. 네이티브 스토리지 저장 유형 목록은 이 항목 뒷부분에 있는 "네이티브 파일 스토리지 유형"을 참조하십시오.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터를 문자 형식으로 데이터 파일에 대량으로 내보내려면 `char`를 테이블의 모든 열에 대한 파일 저장 유형으로 지정합니다.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 데이터를 문자 형식으로 데이터 파일에 대량으로 내보내려면 `char`를 테이블의 모든 열에 대한 파일 스토리지 유형으로 지정합니다.  
   
 -   데이터 파일에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스로 데이터를 대량으로 가져오려면 문자 형식으로 저장된 유형에 대해 `char`를 파일 저장 유형으로 지정하고 네이티브 데이터 형식으로 저장된 데이터의 경우 적절한 파일 저장 유형을 지정합니다.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "66011817"
 ## <a name="additional-considerations-for-file-storage-types"></a>파일 스토리지 유형에 대한 추가 고려 사항  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 인스턴스에서 데이터 파일로 데이터를 대량으로 내보내는 경우 다음을 고려하십시오.  
   
--   `char`를 항상 파일 저장 유형으로 지정할 수 있습니다.  
+-   `char`를 항상 파일 스토리지 유형으로 지정할 수 있습니다.  
   
 -   잘못 된 암시적 변환을 나타내는 파일 저장 유형을 입력 하면 **bcp** 실패; 예를 들어 지정할 수 있지만 `int` 에 대 한 `smallint` 데이터를 지정 하는 경우 `smallint` 에 대 한 `int` 데이터 오버플로 오류가 발생 합니다.  
   

@@ -28,11 +28,11 @@ ms.locfileid: "68134274"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
-  ODBC 표준에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 직접 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전의 인스턴스에 연결되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 수행하는 DB-Library 함수를 지원합니다. 이 드라이버 관련 확장은 대량 복사 함수를 사용하는 기존 DB-Library 응용 프로그램에 대해 편리한 업그레이드 경로를 제공합니다. 특별한 대량 복사 지원은 다음 파일에 포함되어 있습니다.  
+  ODBC 표준에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 직접 지원하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 이상 버전의 인스턴스에 연결되어 있으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 작업을 수행하는 DB-Library 함수를 지원합니다. 이 드라이버 관련 확장은 대량 복사 함수를 사용하는 기존 DB-Library 애플리케이션에 대해 편리한 업그레이드 경로를 제공합니다. 특별한 대량 복사 지원은 다음 파일에 포함되어 있습니다.  
   
 -   sqlncli.h  
   
-     대량 복사 함수를 위한 함수 프로토타입 및 상수 정의를 포함합니다. sqlncli.h는 대량 복사 작업을 수행하는 ODBC 응용 프로그램에 포함되어야 하며 응용 프로그램을 컴파일할 때 응용 프로그램의 포함 경로에 있어야 합니다.  
+     대량 복사 함수를 위한 함수 프로토타입 및 상수 정의를 포함합니다. sqlncli.h는 대량 복사 작업을 수행하는 ODBC 애플리케이션에 포함되어야 하며 애플리케이션을 컴파일할 때 애플리케이션의 포함 경로에 있어야 합니다.  
   
 -   sqlncli11.lib  
   
@@ -43,7 +43,7 @@ ms.locfileid: "68134274"
      실행 단계에 있어야 합니다. sqlncli11.dll은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버와 함께 배포됩니다.  
   
 > [!NOTE]  
->  ODBC **SQLBulkOperations** 함수에 관계가 없음을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 함수입니다. 응용 프로그램은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 대량 복사 함수를 사용하여 대량 복사 작업을 수행해야 합니다.  
+>  ODBC **SQLBulkOperations** 함수에 관계가 없음을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대량 복사 함수입니다. 애플리케이션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]와 관련된 대량 복사 함수를 사용하여 대량 복사 작업을 수행해야 합니다.  
   
 ## <a name="minimally-logging-bulk-copies"></a>최소로 기록된 대량 복사  
  전체 복구 모델을 사용하면 대량 로드로 수행되는 모든 행 삽입 작업이 트랜잭션 로그에 기록됩니다. 많은 양의 데이터를 로드하는 경우 트랜잭션 로그가 빠르게 채워질 수 있습니다. 특정 조건에서 최소 로깅을 사용할 수 있습니다. 최소 로깅은 대량 로드 작업으로 인해 로그 공간이 채워질 가능성을 줄이며 전체 로깅보다 효율적입니다.  

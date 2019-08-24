@@ -22,7 +22,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62780844"
 ---
 # <a name="sql-server-driver-extensions"></a>SQL Server 드라이버 확장
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 ODBC 응용 프로그램에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 액세스하는 데 사용할 수 있는 드라이버별 함수를 구현합니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC 드라이버는 ODBC 애플리케이션에서 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능에 액세스하는 데 사용할 수 있는 드라이버별 함수를 구현합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

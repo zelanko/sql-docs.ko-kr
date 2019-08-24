@@ -29,12 +29,12 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62518653"
 ---
 # <a name="passing-device-information-settings-to-rendering-extensions"></a>디바이스 정보 설정을 렌더링 확장 프로그램에 전달
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 장치 정보 설정을 사용하여 렌더링 매개 변수를 렌더링 확장 프로그램으로 전달할 수 있습니다. 보고서 서버 웹 서비스의 설정이 **DeviceInfo** XML 요소로 전달되고 보고서 서버에서 처리됩니다. 장치 정보 설정은 기본값을 가지므로 렌더링 프로세스에서 선택적 인수로 간주됩니다. 그러나 장치 정보 설정을 사용하여 렌더링을 사용자 지정하고 서버에서 공급한 기본값을 무효화할 수 있습니다.  
+  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]에서 장치 정보 설정을 사용하여 렌더링 매개 변수를 렌더링 확장 프로그램으로 전달할 수 있습니다. 보고서 서버 웹 서비스의 설정이 **DeviceInfo** XML 요소로 전달되고 보고서 서버에서 처리됩니다. 디바이스 정보 설정은 기본값을 가지므로 렌더링 프로세스에서 선택적 인수로 간주됩니다. 그러나 디바이스 정보 설정을 사용하여 렌더링을 사용자 지정하고 서버에서 공급한 기본값을 무효화할 수 있습니다.  
   
- 다양한 방법으로 장치 정보 설정을 지정할 수 있습니다. 프로그래밍 방식에서는 Render 메서드를 사용할 수 있습니다. URL을 통해 보고서에 액세스하는 경우 장치 정보를 URL 매개 변수로 지정할 수 있습니다. 또한 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일에서 디바이스 정보 설정을 편집하여 렌더링 매개 변수를 전역으로 지정할 수 있습니다. 렌더링 매개 변수를 전역으로 지정하는 방법에 대한 자세한 내용은 [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)을 참조하세요.  
+ 다양한 방법으로 디바이스 정보 설정을 지정할 수 있습니다. 프로그래밍 방식에서는 Render 메서드를 사용할 수 있습니다. URL을 통해 보고서에 액세스하는 경우 디바이스 정보를 URL 매개 변수로 지정할 수 있습니다. 또한 [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] 구성 파일에서 디바이스 정보 설정을 편집하여 렌더링 매개 변수를 전역으로 지정할 수 있습니다. 렌더링 매개 변수를 전역으로 지정하는 방법에 대한 자세한 내용은 [RSReportServer.Config의 렌더링 확장 프로그램 매개 변수 사용자 지정](../../customize-rendering-extension-parameters-in-rsreportserver-config.md)을 참조하세요.  
   
 ## <a name="passing-device-information-using-the-render-method"></a>Render 메서드를 사용하여 디바이스 정보 전달  
- 장치 정보 설정을 렌더링 확장 프로그램으로 전달하려면 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 메서드를 사용합니다. 예를 들어, 다음 XML 문자열을 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 메서드로 전달하여 HTML에 렌더링할 때 HTML 조각을 만들 수 있습니다.  
+ 디바이스 정보 설정을 렌더링 확장 프로그램으로 전달하려면 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 메서드를 사용합니다. 예를 들어, 다음 XML 문자열을 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 메서드로 전달하여 HTML에 렌더링할 때 HTML 조각을 만들 수 있습니다.  
   
 ```  
 <DeviceInfo>  
@@ -44,8 +44,8 @@ ms.locfileid: "62518653"
   
  보고서가 HTML 조각으로 렌더링되면 HTML 또는 BODY 요소를 사용하지 않고 TABLE 요소 안에 보고서의 내용이 포함됩니다. HTML 조각을 사용하여 보고서를 기존 HTML 문서로 통합할 수 있습니다. HTML 출력용 디바이스 정보 설정에 대한 자세한 내용은 [HTML Device Information Settings](../../html-device-information-settings.md)을 참조하십시오.  
   
-## <a name="passing-device-information-using-url-access"></a>URL 액세스를 사용하여 장치 정보 전달  
- URL 액세스를 통해서도 장치 정보 설정을 전달할 수 있습니다. 장치 정보 설정이 URL 매개 변수로 전달됩니다. 다음 URL 액세스 문자열을 보고서 서버로 전달하여 HTML 뷰어 도구 모음 없이 렌더링된 보고서를 생성할 수 있습니다.  
+## <a name="passing-device-information-using-url-access"></a>URL 액세스를 사용하여 디바이스 정보 전달  
+ URL 액세스를 통해서도 디바이스 정보 설정을 전달할 수 있습니다. 디바이스 정보 설정이 URL 매개 변수로 전달됩니다. 다음 URL 액세스 문자열을 보고서 서버로 전달하여 HTML 뷰어 도구 모음 없이 렌더링된 보고서를 생성할 수 있습니다.  
   
 ```  
 http://<Server Name>/reportserver?/SampleReports/Sales Order Detail&rs:Command=Render&rs:Format=HTML4.0&rc:Toolbar=False  

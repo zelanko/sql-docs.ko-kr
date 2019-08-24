@@ -33,7 +33,7 @@ ms.locfileid: "68141117"
 # <a name="create-application-role-transact-sql"></a>CREATE APPLICATION ROLE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  현재 데이터베이스에 응용 프로그램 역할을 추가합니다.  
+  현재 데이터베이스에 애플리케이션 역할을 추가합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,13 +47,13 @@ CREATE APPLICATION ROLE application_role_name
   
 ## <a name="arguments"></a>인수  
  *application_role_name*  
- 응용 프로그램 역할의 이름을 지정합니다. 이 이름은 데이터베이스의 다른 보안 주체를 참조하는 데 사용된 이름이 아니어야 합니다.  
+ 애플리케이션 역할의 이름을 지정합니다. 이 이름은 데이터베이스의 다른 보안 주체를 참조하는 데 사용된 이름이 아니어야 합니다.  
   
  PASSWORD **='** _password_ **'**  
- 데이터베이스 사용자가 응용 프로그램 역할을 활성화하는 데 사용할 암호를 지정합니다. 항상 강력한 암호를 사용해야 합니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다.  
+ 데이터베이스 사용자가 애플리케이션 역할을 활성화하는 데 사용할 암호를 지정합니다. 항상 강력한 암호를 사용해야 합니다. *password*는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 실행하는 컴퓨터의 Windows 암호 정책 요구 사항을 충족해야 합니다.  
   
  DEFAULT_SCHEMA **=** _schema\_name_  
- 서버가 이 역할에 대한 개체의 이름을 확인할 때 검색할 첫 번째 스키마를 지정합니다. DEFAULT_SCHEMA를 정의하지 않으면 응용 프로그램 역할이 기본 스키마로 DBO를 사용합니다. *schema_name*은 데이터베이스에 존재하지 않는 스키마일 수 있습니다.  
+ 서버가 이 역할에 대한 개체의 이름을 확인할 때 검색할 첫 번째 스키마를 지정합니다. DEFAULT_SCHEMA를 정의하지 않으면 애플리케이션 역할이 기본 스키마로 DBO를 사용합니다. *schema_name*은 데이터베이스에 존재하지 않는 스키마일 수 있습니다.  
   
 ## <a name="remarks"></a>Remarks  
   
@@ -71,7 +71,7 @@ CREATE APPLICATION ROLE application_role_name
  데이터베이스에 대한 ALTER ANY APPLICATION ROLE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 암호 `weekly_receipts` 및 기본 스키마로 `987Gbv876sPYY5m23`가 있는 `Sales`라는 응용 프로그램 역할을 만듭니다.  
+ 다음 예에서는 암호 `weekly_receipts` 및 기본 스키마로 `987Gbv876sPYY5m23`가 있는 `Sales`라는 애플리케이션 역할을 만듭니다.  
   
 ```  
 CREATE APPLICATION ROLE weekly_receipts   

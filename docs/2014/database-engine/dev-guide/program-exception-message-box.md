@@ -21,7 +21,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62780701"
 ---
 # <a name="program-exception-message-box"></a>프로그램 예외 메시지 상자
-  응용 프로그램에서 예외 메시지 상자를 사용하면 <xref:System.Windows.Forms.MessageBox> 클래스에 비해 메시징 환경을 보다 강력하게 제어할 수 있습니다. 자세한 내용은 [예외 메시지 상자 프로그래밍](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)합니다. 예외 메시지 상자 .dll 가져오기 및 배포에 대한 자세한 내용은 [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)를 참조하십시오.  
+  애플리케이션에서 예외 메시지 상자를 사용하면 <xref:System.Windows.Forms.MessageBox> 클래스에 비해 메시징 환경을 보다 강력하게 제어할 수 있습니다. 자세한 내용은 [예외 메시지 상자 프로그래밍](../../../2014/database-engine/dev-guide/exception-message-box-programming.md)합니다. 예외 메시지 상자 .dll 가져오기 및 배포에 대한 자세한 내용은 [Deploying an Exception Message Box Application](../../../2014/database-engine/dev-guide/deploying-an-exception-message-box-application.md)를 참조하십시오.  
   
 ## <a name="procedure"></a>프로시저  
   
@@ -123,11 +123,11 @@ ms.locfileid: "62780701"
   
 5.  (옵션) 예외 메시지 상자를 다시 표시할지 여부를 사용자에게 묻는 텍스트를 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A>에 지정합니다. 기본 텍스트는 "이 메시지를 다시 표시 안 함"입니다.  
   
-6.  사용자가 선택한 내용을 응용 프로그램의 실행 기간 동안에만 유지하려면 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.IsCheckboxChecked%2A> 값을 전역 <xref:System.Boolean> 변수로 설정합니다. 예외 메시지 상자의 인스턴스를 만들기 전에 이 값을 확인하십시오.  
+6.  사용자가 선택한 내용을 애플리케이션의 실행 기간 동안에만 유지하려면 <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.IsCheckboxChecked%2A> 값을 전역 <xref:System.Boolean> 변수로 설정합니다. 예외 메시지 상자의 인스턴스를 만들기 전에 이 값을 확인하십시오.  
   
 7.  사용자가 선택한 내용을 영구적으로 저장하려면 다음과 같이 합니다.  
   
-    1.  CreateSubKey 메서드를 호출하여 응용 프로그램에서 사용하는 사용자 지정 레지스트리 키를 열고, <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryKey%2A>를 반환되는 CreateSubKey 개체로 설정합니다.  
+    1.  CreateSubKey 메서드를 호출하여 애플리케이션에서 사용하는 사용자 지정 레지스트리 키를 열고, <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryKey%2A>를 반환되는 CreateSubKey 개체로 설정합니다.  
   
     2.  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryValue%2A>를 사용되는 레지스트리 값의 이름으로 설정합니다.  
   

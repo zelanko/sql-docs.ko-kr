@@ -24,7 +24,7 @@ ms.locfileid: "67898551"
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  커서를 사용하려면 먼저 ODBC 커서 동작을 제어하는 연결 및 문 특성을 설정해야 합니다. 커서를 사용하면 응용 프로그램에서 각 인출 시 여러 행을 검색하고 커서의 현재 위치에서 UPDATE, INSERT 또는 DELETE 문을 실행할 수 있습니다.  
+  커서를 사용하려면 먼저 ODBC 커서 동작을 제어하는 연결 및 문 특성을 설정해야 합니다. 커서를 사용하면 애플리케이션에서 각 인출 시 여러 행을 검색하고 커서의 현재 위치에서 UPDATE, INSERT 또는 DELETE 문을 실행할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

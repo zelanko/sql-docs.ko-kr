@@ -126,6 +126,6 @@ ms.locfileid: "62721811"
   
 5.  이러한 요구 사항을 고려했을 때 이 애플리케이션에 필요한 모든 복제 기능은 RMO(복제 관리 개체) 관리 인터페이스를 사용하여 구현할 수 있습니다.  
   
- 이 시나리오 예는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 포함된 예제 응용 프로그램에서 구현되었습니다.  
+ 이 시나리오 예는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에 포함된 예제 애플리케이션에서 구현되었습니다.  
   
   

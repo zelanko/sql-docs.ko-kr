@@ -149,7 +149,7 @@ CREATE STATISTICS statistics_name
  필터 조건자에 대한 자세한 내용은 [필터링된 인덱스 만들기](../../relational-databases/indexes/create-filtered-indexes.md)를 참조하세요.  
   
  FULLSCAN  
- 모든 행을 검사하여 통계를 계산합니다. FULLSCAN과 SAMPLE 100 PERCENT의 결과는 같습니다. FULLSCAN은 SAMPLE 옵션과 함께 사용할 수 없습니다.  
+ 모든 행을 검사하여 통계를 컴퓨팅합니다. FULLSCAN과 SAMPLE 100 PERCENT의 결과는 같습니다. FULLSCAN은 SAMPLE 옵션과 함께 사용할 수 없습니다.  
   
  생략하면 SQL Server는 샘플링을 사용하여 통계를 만들고 고품질의 쿼리 계획을 만드는 데 필요한 샘플 크기를 결정합니다.  
   
@@ -287,7 +287,7 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
 
-### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. FULLSCAN 및 PERSIST_SAMPLE_PERCENT와 함께 CREATE STATISTICS 사용  
+### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. FULLSCAN 및 PERSIST_SAMPLE_PERCENT와 함께 CREATE STATISTICS 사용  
  다음 예제에서는 `Person` 테이블의 `BusinessEntityID` 및 `EmailPromotion` 열에 있는 모든 행에 대한 `NamePurchase` 통계를 만들고 샘플링 비율을 명시적으로 지정하지 않은 모든 이후 업데이트에 대해 100% 샘플링 비율을 설정합니다.  
   
 ```sql  

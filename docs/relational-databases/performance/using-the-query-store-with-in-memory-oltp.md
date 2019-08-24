@@ -54,7 +54,7 @@ ms.locfileid: "67986660"
 -   [sys.query_store_runtime_stats&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md) 내의 메모리 부여 메트릭은 기본적으로 컴파일된 쿼리에 대해 채워지지 않습니다. 해당 값은 항상 0입니다. 메모리 부여 열은 avg_query_max_used_memory, last_query_max_used_memory, min_query_max_used_memory, max_query_max_used_memory, 및 stdev_query_max_used_memory입니다.  
   
 ## <a name="enabling-and-using-query-store-with-in-memory-oltp"></a>쿼리 저장소와 메모리 내 OLTP 활성화 및 사용  
- 다음의 간단한 예제는 종단 간 사용자 시나리오에서 쿼리 저장소와 메모리 내 OLTP를 사용하는 방법을 보여줍니다. 이 예제에서는 메모리 내 OLTP용으로 데이터베이스(`MemoryOLTP`)가 활성화된 것으로 가정되었습니다.  
+ 다음의 간단한 예제는 엔드투엔드 사용자 시나리오에서 쿼리 스토리지와 메모리 내 OLTP를 사용하는 방법을 보여줍니다. 이 예제에서는 메모리 내 OLTP용으로 데이터베이스(`MemoryOLTP`)가 활성화된 것으로 가정되었습니다.  
     메모리 최적화 테이블의 필수 구성 요소에 대한 자세한 내용은 [메모리 최적화 테이블 및 고유하게 컴파일된 저장 프로시저 만들기](../../relational-databases/in-memory-oltp/creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)를 참조하세요.  
   
 ```  

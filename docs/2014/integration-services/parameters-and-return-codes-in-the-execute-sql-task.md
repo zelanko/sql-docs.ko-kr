@@ -97,7 +97,7 @@ ms.locfileid: "66056784"
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 형식 및 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 데이터 형식에 매핑하는 방법에 대한 자세한 내용은 [데이터 형식&#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql) 및 [Integration Services 데이터 형식](data-flow/integration-services-data-types.md)을 참조하세요.  
   
 ### <a name="using-date-and-time-parameters-with-ole-db-connection-managers"></a>OLE DB 연결 관리자의 날짜 및 시간 매개 변수 사용  
- OLE DB 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 형식인 `date`, `time`, `datetime`, `datetime2` 및 `datetimeoffset` 데이터를 저장할 때 특수한 요구 사항이 적용됩니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
+ OLE DB 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 형식인 `date`, `time`, `datetime`, `datetime2` 및 `datetimeoffset` 데이터를 스토리지할 때 특수한 요구 사항이 적용됩니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
   
 -   NVARCHAR 데이터 형식의 입력 매개 변수  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66056784"
  적절한 입력 또는 출력 매개 변수에 데이터가 저장되지 않으면 패키지가 실패합니다.  
   
 ### <a name="using-date-and-time-parameters-with-odbc-connection-managers"></a>ODBC 연결 관리자의 날짜 및 시간 매개 변수 사용  
- ODBC 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 형식인 `date`, `time`, `datetime`, `datetime2` 또는 `datetimeoffset` 데이터를 저장할 때 특수한 요구 사항이 적용됩니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
+ ODBC 연결 관리자를 사용하는 경우 SQL 실행 태스크에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터 형식인 `date`, `time`, `datetime`, `datetime2` 또는 `datetimeoffset` 데이터를 스토리지할 때 특수한 요구 사항이 적용됩니다. 이러한 데이터를 다음과 같은 매개 변수 유형 중 하나에 저장해야 합니다.  
   
 -   SQL_WVARCHAR 데이터 형식의 `input` 매개 변수  
   

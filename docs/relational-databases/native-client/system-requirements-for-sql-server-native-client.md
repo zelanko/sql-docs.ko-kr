@@ -61,13 +61,13 @@ ms.locfileid: "68031765"
 ## <a name="data-type-compatibility-for-client-versions"></a>클라이언트 버전별 데이터 형식 호환성  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client는 아래 표에서와 같이 새 데이터 형식을 하위 클라이언트와 호환되는 이전 데이터 형식으로 매핑합니다.  
   
- OLE DB 및 ADO 응용 프로그램에서 사용할 수는 **DataTypeCompatibility** 연결 문자열 키워드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 이전 데이터 형식에서 작동 합니다. **DataTypeCompatibility=80**이면 OLE DB 클라이언트는 TDS 버전이 아닌, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] TDS(Tabular Data Stream) 버전을 사용하여 연결합니다. 이는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 데이터 형식의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 아닌 서버에 의해 하위 변환이 수행된다는 의미입니다. 또한 연결에서 사용할 수 있는 기능이 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 기능 집합으로 제한됩니다. 새 데이터 형식이나 기능을 사용하려고 시도하면, 잘못된 요청을 서버에 전달하는 것이 아니라 API 호출에서 최대한 일찍 시도를 감지하여 호출 응용 프로그램으로 오류를 반환합니다.  
+ OLE DB 및 ADO 응용 프로그램에서 사용할 수는 **DataTypeCompatibility** 연결 문자열 키워드를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client의 이전 데이터 형식에서 작동 합니다. **DataTypeCompatibility=80**이면 OLE DB 클라이언트는 TDS 버전이 아닌, [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] TDS(Tabular Data Stream) 버전을 사용하여 연결합니다. 이는 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 데이터 형식의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client가 아닌 서버에 의해 하위 변환이 수행된다는 의미입니다. 또한 연결에서 사용할 수 있는 기능이 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 기능 집합으로 제한됩니다. 새 데이터 형식이나 기능을 사용하려고 시도하면, 잘못된 요청을 서버에 전달하는 것이 아니라 API 호출에서 최대한 일찍 시도를 감지하여 호출 애플리케이션으로 오류를 반환합니다.  
   
  방법이 없는 **DataTypeCompatibility** ODBC에 대 한 제어 합니다.  
   
  IDBInfo::GetKeywords는 항상 해당 서버 버전에 연결 하 고 영향을 받지는 키워드 목록을 반환 **DataTypeCompatibility**합니다.  
   
-|데이터 형식|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC 및<br /><br /> SQL Server Native Client OLE DB 응용 프로그램에서 DataTypeCompatibility=80 설정|  
+|데이터 형식|SQL Server Native Client<br /><br /> SQL Server 2005|SQL Server Native Client 11.0<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|Windows Data Access Components, MDAC 및<br /><br /> SQL Server Native Client OLE DB 애플리케이션에서 DataTypeCompatibility=80 설정|  
 |---------------|--------------------------------------------------|-------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------|  
 |CLR UDT(\<= 8Kb)|udt|Udt|Varbinary|  
 |varbinary(max)|varbinary|varbinary|Image|  

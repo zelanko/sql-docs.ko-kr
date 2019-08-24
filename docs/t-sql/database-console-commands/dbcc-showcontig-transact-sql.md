@@ -118,7 +118,7 @@ TABLERESULTS를 지정하면 DBCC SHOWCONTIG가 다음 열을 반환하고 이�
 |**IndexId**|인덱스의 ID입니다. 힙의 경우 0입니다.|  
 |**Level**|인덱스 수준입니다. 수준 0은 인덱스의 리프 또는 데이터 수준입니다.<br /><br /> 힙의 경우 수준은 0입니다.|  
 |**페이지**|인덱스 또는 전체 힙의 해당 수준을 구성하는 페이지의 수입니다.|  
-|**행**|인덱스의 해당 수준에 있는 데이터 또는 인덱스 레코드의 수입니다. 힙의 경우 이 값은 전체 힙에 있는 데이터 레코드 수입니다.<br /><br /> 힙의 경우 이 함수에서 반환된 레코드 수는 힙에 대해 SELECT COUNT(*)를 실행하여 반환된 행 수와 다릅니다. 이것은 한 행에 여러 레코드가 있기 때문입니다. 예를 들어 특정 업데이트 상황에서 업데이트 작업으로 인해 단일 힙 행에 한 개의 전달되고 있는 레코드와 한 개의 전달된 레코드가 있을 수 있습니다. 또한 가장 큰 LOB 행이 LOB_DATA 저장소에서 여러 레코드로 분할됩니다.|  
+|**행**|인덱스의 해당 수준에 있는 데이터 또는 인덱스 레코드의 수입니다. 힙의 경우 이 값은 전체 힙에 있는 데이터 레코드 수입니다.<br /><br /> 힙의 경우 이 함수에서 반환된 레코드 수는 힙에 대해 SELECT COUNT(*)를 실행하여 반환된 행 수와 다릅니다. 이것은 한 행에 여러 레코드가 있기 때문입니다. 예를 들어 특정 업데이트 상황에서 업데이트 작업으로 인해 단일 힙 행에 한 개의 전달되고 있는 레코드와 한 개의 전달된 레코드가 있을 수 있습니다. 또한 가장 큰 LOB 행이 LOB_DATA 스토리지에서 여러 레코드로 분할됩니다.|  
 |**MinimumRecordSize**|인덱스 또는 전체 힙의 해당 수준에 있는 최소 레코드 크기입니다.|  
 |**MaximumRecordSize**|인덱스 또는 전체 힙의 해당 수준에 있는 최대 레코드 크기입니다.|  
 |**AverageRecordSize**|인덱스 또는 전체 힙의 해당 수준에 있는 평균 레코드 크기입니다.|  
@@ -198,7 +198,7 @@ DBCC SHOWCONTIG ('HumanResources.Employee');
 GO  
 ```  
   
-### <a name="b-using-objectid-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>2\. OBJECT_ID를 사용한 테이블 ID 가져오기 및 sys.indexes를 사용한 인덱스 ID 가져오기  
+### <a name="b-using-object_id-to-obtain-the-table-id-and-sysindexes-to-obtain-the-index-id"></a>2\. OBJECT_ID를 사용한 테이블 ID 가져오기 및 sys.indexes를 사용한 인덱스 ID 가져오기  
 다음 예에서는 `OBJECT_ID` 및 `sys.indexes` 카탈로그 뷰를 사용하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]데이터베이스의 `Production.Product`테이블에서 `AK_Product_Name` 인덱스의 테이블 ID 및 인덱스 ID를 가져옵니다.
   
 ```sql  

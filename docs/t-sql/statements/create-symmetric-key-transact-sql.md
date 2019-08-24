@@ -73,10 +73,10 @@ CREATE SYMMETRIC KEY key_name
  데이터베이스에서 대칭 키를 식별하는 고유한 이름을 지정합니다. _key_name_이 하나의 숫자(#) 기호로 시작하면 임시 키가 지정됩니다. 예를 들면 **#temporaryKey900007**과 같습니다. 2개 이상의 #으로 시작하는 이름이 포함된 대칭 키는 만들 수 없습니다. 임시 대칭 키는 EKM 공급자를 사용하여 만들 수 없습니다.  
   
  AUTHORIZATION *owner_name*  
- 이 키를 소유하는 데이터베이스 사용자 또는 응용 프로그램 역할의 이름을 지정합니다.  
+ 이 키를 소유하는 데이터베이스 사용자 또는 애플리케이션 역할의 이름을 지정합니다.  
   
  FROM PROVIDER *provider_name*  
- EKM(확장 가능 키 관리) 공급자와 이름을 지정합니다. 키는 EKM 장치에서 내보내지 않았습니다. 먼저 CREATE PROVIDER 문을 사용하여 공급자를 정의해야 합니다. 외부 키 공급자 만들기에 대한 자세한 내용은 [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)을 참조하세요.  
+ EKM(확장 가능 키 관리) 공급자와 이름을 지정합니다. 키는 EKM 디바이스에서 내보내지 않았습니다. 먼저 CREATE PROVIDER 문을 사용하여 공급자를 정의해야 합니다. 외부 키 공급자 만들기에 대한 자세한 내용은 [확장 가능 키 관리 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)을 참조하세요.  
   
 > [!NOTE]  
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
@@ -94,7 +94,7 @@ CREATE SYMMETRIC KEY key_name
 >  포함된 데이터베이스에서는 이 옵션을 사용할 수 없습니다.  
   
  CREATION_DISPOSITION **=** CREATE_NEW  
- 확장 가능 키 관리 장치에 새 키를 만듭니다.  키가 이미 장치에 있는 경우 문이 오류와 함께 실패합니다.  
+ 확장 가능 키 관리 디바이스에 새 키를 만듭니다.  키가 이미 디바이스에 있는 경우 문이 오류와 함께 실패합니다.  
   
  CREATION_DISPOSITION **=** OPEN_EXISTING  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대칭 키를 기존 EKM(확장 가능 키 관리) 키에 매핑합니다. CREATION_DISPOSITION = OPEN_EXISTING을 지정하지 않으면 기본값은 CREATE_NEW입니다.  
@@ -179,7 +179,7 @@ ENCRYPTION BY CERTIFICATE Marketing25;
 GO  
 ```  
   
-### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. EKM(확장 가능 키 관리) 장치를 사용하여 대칭 키 만들기  
+### <a name="c-creating-a-symmetric-key-using-an-extensible-key-management-ekm-device"></a>C. EKM(확장 가능 키 관리) 디바이스를 사용하여 대칭 키 만들기  
  다음 예에서는 `MySymKey`라는 공급자와 `MyEKMProvider`의 키 이름을 사용하여 `KeyForSensitiveData`라는 대칭 키를 만듭니다. `User1`에 인증을 할당하고 시스템 관리자가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 `MyEKMProvider`라는 공급자를 이미 등록했다고 가정합니다.  
   
 ```  

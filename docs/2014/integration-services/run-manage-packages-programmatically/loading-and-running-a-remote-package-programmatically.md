@@ -146,7 +146,7 @@ namespace LaunchSSISPackageAgent_CS
  
   
 ###  <a name="service"></a> 웹 서비스 또는 원격 구성 요소를 사용하여 프로그래밍 방식으로 원격 패키지 실행  
- 서버에서 프로그래밍 방식으로 패키지를 실행하기 위한 이전 솔루션의 경우 서버에서 사용자 지정 코드가 필요하지 않습니다. 그러나 SQL Server 에이전트를 사용하지 않고 패키지를 실행할 수 있는 솔루션이 필요한 경우가 있습니다. 다음 예에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 로컬로 시작하기 위해 서버에 만들 수 있는 웹 서비스와 클라이언트 컴퓨터에서 웹 서비스를 호출하는 데 사용할 수 있는 테스트 응용 프로그램을 보여 줍니다. 웹 서비스 대신 원격 구성 요소를 만들려면 원격 구성 요소를 거의 변경하지 않는 동일한 코드 논리를 사용할 수 있습니다. 그러나 원격 구성 요소를 만들 경우에는 웹 서비스를 만들 때보다 더욱 광범위한 구성이 필요할 수 있습니다.  
+ 서버에서 프로그래밍 방식으로 패키지를 실행하기 위한 이전 솔루션의 경우 서버에서 사용자 지정 코드가 필요하지 않습니다. 그러나 SQL Server 에이전트를 사용하지 않고 패키지를 실행할 수 있는 솔루션이 필요한 경우가 있습니다. 다음 예에서는 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지를 로컬로 시작하기 위해 서버에 만들 수 있는 웹 서비스와 클라이언트 컴퓨터에서 웹 서비스를 호출하는 데 사용할 수 있는 테스트 애플리케이션을 보여 줍니다. 웹 서비스 대신 원격 구성 요소를 만들려면 원격 구성 요소를 거의 변경하지 않는 동일한 코드 논리를 사용할 수 있습니다. 그러나 원격 구성 요소를 만들 경우에는 웹 서비스를 만들 때보다 더욱 광범위한 구성이 필요할 수 있습니다.  
   
 > [!IMPORTANT]  
 >  인증 및 권한 부여에 기본 설정을 사용할 경우 웹 서비스에는 일반적으로 SQL Server 또는 파일 시스템에 액세스하여 패키지를 로드하고 실행할 수 있는 충분한 권한이 없습니다. **web.config** 파일에서 인증 및 권한 부여 설정을 구성하고 데이터베이스 및 파일 시스템 권한을 적절하게 할당하여 웹 서비스에 적절한 권한을 할당해야 할 수 있습니다. 웹, 데이터베이스 및 파일 시스템 사용 권한에 대한 자세한 설명은 이 항목에서 다루지 않습니다.  
@@ -158,7 +158,7 @@ namespace LaunchSSISPackageAgent_CS
  다음 코드 예제에서는 웹 서비스를 만들고 테스트하는 방법을 보여 줍니다.  
   
 #### <a name="creating-the-web-service"></a>웹 서비스 만들기  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 파일 또는 SQL Server에서 직접 로드하거나 SQL Server와 특수한 파일 시스템 폴더 모두의 패키지 저장소를 관리하는 SSIS 패키지 저장소에서 로드할 수 있습니다. 이 예제에서는 `Select Case` 또는 `switch` 구문을 사용하여 패키지를 시작하기 위한 적절한 구문을 선택하고 입력 인수를 적절하게 연결함으로써 사용 가능한 모든 옵션을 지원합니다. LaunchPackage 웹 서비스 메서드는 클라이언트 컴퓨터에서 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 어셈블리에 대한 참조가 필요하지 않도록 패키지 실행 결과를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 값 대신 정수로 반환합니다.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 패키지는 파일 또는 SQL Server에서 직접 로드하거나 SQL Server와 특수한 파일 시스템 폴더 모두의 패키지 스토리지를 관리하는 SSIS 패키지 스토리지에서 로드할 수 있습니다. 이 예제에서는 `Select Case` 또는 `switch` 구문을 사용하여 패키지를 시작하기 위한 적절한 구문을 선택하고 입력 인수를 적절하게 연결함으로써 사용 가능한 모든 옵션을 지원합니다. LaunchPackage 웹 서비스 메서드는 클라이언트 컴퓨터에서 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 어셈블리에 대한 참조가 필요하지 않도록 패키지 실행 결과를 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 값 대신 정수로 반환합니다.  
   
 ###### <a name="to-create-a-web-service-to-run-packages-on-the-server-programmatically"></a>웹 서비스를 만들어 서버에서 프로그래밍 방식으로 패키지를 실행하려면  
   
@@ -331,13 +331,13 @@ public class LaunchSSISPackageServiceCS : System.Web.Services.WebService
 ```  
   
 #### <a name="testing-the-web-service"></a>웹 서비스 테스트  
- 다음 예제 콘솔 응용 프로그램에서는 웹 서비스를 사용하여 패키지를 실행합니다. 웹 서비스의 LaunchPackage 메서드는 클라이언트 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리에 대한 참조가 필요하지 않도록 패키지 실행 결과를 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값 대신 정수로 반환합니다. 이 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값을 미러링하는 값을 포함하는 프라이빗 열거형을 만들어 실행 결과를 보고합니다.  
+ 다음 예제 콘솔 애플리케이션에서는 웹 서비스를 사용하여 패키지를 실행합니다. 웹 서비스의 LaunchPackage 메서드는 클라이언트 컴퓨터에서 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 어셈블리에 대한 참조가 필요하지 않도록 패키지 실행 결과를 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값 대신 정수로 반환합니다. 이 예제에서는 <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> 값을 미러링하는 값을 포함하는 프라이빗 열거형을 만들어 실행 결과를 보고합니다.  
   
-###### <a name="to-create-a-console-application-to-test-the-web-service"></a>콘솔 응용 프로그램을 만들어 웹 서비스를 테스트하려면  
+###### <a name="to-create-a-console-application-to-test-the-web-service"></a>콘솔 애플리케이션을 만들어 웹 서비스를 테스트하려면  
   
-1.  Visual Studio에서 원하는 프로그래밍 언어를 사용하여 웹 서비스 프로젝트가 들어 있는 솔루션에 새 콘솔 응용 프로그램을 추가합니다. 예제 코드에서는 프로젝트 이름으로 LaunchSSISPackageTest를 사용합니다.  
+1.  Visual Studio에서 원하는 프로그래밍 언어를 사용하여 웹 서비스 프로젝트가 들어 있는 솔루션에 새 콘솔 애플리케이션을 추가합니다. 예제 코드에서는 프로젝트 이름으로 LaunchSSISPackageTest를 사용합니다.  
   
-2.  새 콘솔 응용 프로그램을 솔루션의 시작 프로젝트로 설정합니다.  
+2.  새 콘솔 애플리케이션을 솔루션의 시작 프로젝트로 설정합니다.  
   
 3.  웹 서비스 프로젝트에 대한 웹 참조를 추가합니다. 필요할 경우 예제 코드에서 웹 서비스 프록시 개체에 지정한 이름에 대한 변수 선언을 조정합니다.  
   

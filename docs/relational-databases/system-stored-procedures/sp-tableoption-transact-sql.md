@@ -25,7 +25,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68096065"
 ---
-# <a name="sptableoption-transact-sql"></a>sp_tableoption(Transact-SQL)
+# <a name="sp_tableoption-transact-sql"></a>sp_tableoption(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   사용자 정의 테이블의 옵션 값을 설정합니다. sp_tableoption을 사용 하 여 테이블의 행 내부 동작을 제어 하려면 사용할 수 **varchar (max)** , **nvarchar (max)** 하십시오 **varbinary (max)** , **xml**, **텍스트**합니다 **ntext**를 **이미지**, 또는 큰 사용자 정의 형식 열입니다.  
@@ -58,7 +58,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
 |insert row lock|더 이상 지원되지 않습니다.<br /><br /> 이 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 잠금 동작에 영향을 주지 않으며 기존 스크립트 및 프로시저와의 호환성을 위해 포함됩니다.|  
 |text in row|OFF 또는 0(해제, 기본값)이면 현재 동작을 바꾸지 않으며 행에 BLOB이 없습니다.<br /><br /> 지정 된 경우 및 @OptionValue 가 ON (설정) 또는 24에서 7000 새 까지의 정수 값 **텍스트**, **ntext**, 또는 **이미지** 문자열이 데이터 행에 직접 저장 됩니다. 기존의 모든 BLOB (이진 대형 개체: **텍스트**를 **ntext**, 또는 **이미지** 데이터)는 BLOB 값이 업데이트 될 때 text in row 형식으로 변경 됩니다. 자세한 내용은 설명 부분을 참조하세요.|  
 |large value types out of row|1 = **varchar (max)** , **nvarchar (max)** , **varbinary (max)** 하십시오 **xml** 테이블의 큰 사용자 정의 형식 (UDT) 열에 저장 됩니다 와 함께 행 외부 루트에 대 한 16 바이트 포인터입니다.<br /><br /> 0 = **varchar (max)** , **nvarchar (max)** 를 **varbinary (max)** 하십시오 **xml** 및 큰 UDT 값 한계까지 데이터 행에 직접 저장 됩니다 8000 바이트 한 정하는 값 레코드에 맞출 수 있습니다. 값이 레코드에 맞지 않으면 포인터는 행 내부에 저장되고 나머지는 행 외부 LOB 저장 공간에 저장됩니다. 0이 기본값입니다.<br /><br /> 큰 사용자 정의 형식 (UDT)에 적용 됩니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 를 통해 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]합니다. <br /><br /> Textimage_on 다음 옵션을 사용 [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) 큰 데이터 형식의 저장소 위치를 지정 합니다. |  
-|vardecimal storage format|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> TRUE, ON 또는 1이면 지정된 테이블을 VarDecimal 저장소 형식에 사용할 수 있습니다. FALSE, OFF 또는 0이면 지정된 테이블을 VarDecimal 저장소 형식에 사용할 수 없습니다. Vardecimal 저장소 형식을 사용 하 여 데이터베이스에 vardecimal 저장소 형식을 지원 된 경우에 사용할 수 있습니다 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 **vardecimal** 저장소 형식이 사용 되지 않습니다. 대신 ROW 압축을 사용하세요. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요. 0이 기본값입니다.|  
+|vardecimal storage format|**적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지<br /><br /> TRUE, ON 또는 1이면 지정된 테이블을 VarDecimal 스토리지 형식에 사용할 수 있습니다. FALSE, OFF 또는 0이면 지정된 테이블을 VarDecimal 스토리지 형식에 사용할 수 없습니다. Vardecimal 저장소 형식을 사용 하 여 데이터베이스에 vardecimal 저장소 형식을 지원 된 경우에 사용할 수 있습니다 [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)합니다. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서는 **vardecimal** 저장소 형식이 사용 되지 않습니다. 대신 ROW 압축을 사용하세요. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요. 0이 기본값입니다.|  
   
  [ @OptionValue =] '*값*'  
  가 있는지 여부를 합니다 *option_name* 사용 가능 (TRUE, ON 또는 1) 또는 해제 (FALSE, OFF 또는 0). *값* 됩니다 **varchar(12)** , 기본값은 없습니다. *값* 대/소문자를 구분 합니다.  
@@ -98,9 +98,9 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
  Text in row 옵션은 TEXTPTR, WRITETEXT, UPDATETEXT 및 READTEXT 함수를 지원합니다. SUBSTRING() 함수를 사용하여 BLOB을 부분적으로 읽을 수 있지만 행 내부 텍스트 포인터에는 다른 텍스트 포인터와는 다른 기간 및 숫자 제한이 있습니다.  
   
- 테이블의 VarDecimal 저장소 형식을 일반 Decimal 저장소 형식으로 변경하려면 데이터베이스는 단순 복구 모드이어야 합니다. 복구 모드를 변경하면 백업 목적의 로그 체인이 끊어지므로 테이블에서 VarDecimal 저장소 형식을 제거한 후 전체 데이터베이스 백업을 만들어야 합니다.  
+ 테이블의 VarDecimal 스토리지 형식을 일반 Decimal 스토리지 형식으로 변경하려면 데이터베이스는 단순 복구 모드이어야 합니다. 복구 모드를 변경하면 백업 목적의 로그 체인이 끊어지므로 테이블에서 VarDecimal 스토리지 형식을 제거한 후 전체 데이터베이스 백업을 만들어야 합니다.  
   
- 기존 LOB 데이터 형식 열 (text, ntext 또는 image) (varchar (max), nvarchar (max), varbinary 및 대부분의 문 수행 하지 환경의 큰 값 유형 열을 참조 하십시오 소규모 및 중간 큰 값 형식에 변환 하는 경우 변경 **large_value_types_out_of_row** 하 **1** 최적의 성능을 위해. 경우는 **large_value_types_out_of_row** varchar (max), nvarchar (max), varbinary (max), 기존 옵션 값을 변경 하 고 xml 값이 즉시 변환 되지는 않습니다. 문자열의 저장소는 이후에 업데이트될 때 변경됩니다. 테이블에 삽입되는 새 값은 적용된 테이블 옵션에 따라 저장됩니다. 즉각적인 결과 대 한 데이터의 복사본 하나 및이 다시 변경한 후 테이블을 채워야 합니다 **large_value_types_out_of_row** 설정 또는 자신에 게 각 중간 작은 큰 값 유형 열을 업데이트 있도록의 저장소를 문자열은 테이블 옵션을 사용 하 여 실제로 변경 됩니다. 테이블을 압축하려면 업데이트 또는 다시 채우기 후 테이블에 대한 인덱스를 다시 빌드하세요. 
+ 기존 LOB 데이터 형식 열 (text, ntext 또는 image) (varchar (max), nvarchar (max), varbinary 및 대부분의 문 수행 하지 환경의 큰 값 유형 열을 참조 하십시오 소규모 및 중간 큰 값 형식에 변환 하는 경우 변경 **large_value_types_out_of_row** 하 **1** 최적의 성능을 위해. 경우는 **large_value_types_out_of_row** varchar (max), nvarchar (max), varbinary (max), 기존 옵션 값을 변경 하 고 xml 값이 즉시 변환 되지는 않습니다. 문자열의 스토리지는 이후에 업데이트될 때 변경됩니다. 테이블에 삽입되는 새 값은 적용된 테이블 옵션에 따라 저장됩니다. 즉각적인 결과 대 한 데이터의 복사본 하나 및이 다시 변경한 후 테이블을 채워야 합니다 **large_value_types_out_of_row** 설정 또는 자신에 게 각 중간 작은 큰 값 유형 열을 업데이트 있도록의 저장소를 문자열은 테이블 옵션을 사용 하 여 실제로 변경 됩니다. 테이블을 압축하려면 업데이트 또는 다시 채우기 후 테이블에 대한 인덱스를 다시 빌드하세요. 
     
   
 ## <a name="permissions"></a>사용 권한  
@@ -117,7 +117,7 @@ GO
 EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row', 1;  
 ```  
   
-### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>2\. 테이블에 VarDecimal 저장소 형식 사용  
+### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>2\. 테이블에 VarDecimal 스토리지 형식 사용  
  다음 예제를 수정 합니다 `Production.WorkOrderRouting` 저장할 테이블을를 `decimal` 데이터 형식에 `vardecimal` 저장소 형식.  
 
 ```sql  

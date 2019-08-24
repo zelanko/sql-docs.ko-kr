@@ -28,7 +28,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084005"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering Algorithm
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 세그먼트화 알고리즘입니다. 이 알고리즘은 반복 기술을 사용하여 비슷한 특징을 가진 클러스터로 데이터 집합의 사례를 그룹화합니다. 이러한 그룹화는 데이터 탐색, 데이터 내 잘못된 부분 식별, 예측 만들기 등에 유용합니다.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 클러스터링 알고리즘은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에서 제공하는 세그먼트화 알고리즘입니다. 이 알고리즘은 반복 기술을 사용하여 비슷한 특징을 가진 클러스터로 데이터 세트의 사례를 그룹화합니다. 이러한 그룹화는 데이터 탐색, 데이터 내 잘못된 부분 식별, 예측 만들기 등에 유용합니다.  
   
  클러스터링 모델은 관찰만 가지고는 논리적으로 이끌어 낼 수 없을 수 있는 데이터 세트 내 관계를 식별합니다. 예를 들어 자전거로 통근하는 사람은 일반적으로 회사에서 먼 곳에 살지 않는다는 사실을 논리적으로 인식할 수 있습니다. 그러나 알고리즘은 자전거 통근자에 대해 확연하게 드러나지 않는 다른 특징을 찾아낼 수 있습니다. 다음 다이어그램에서 클러스터 A는 자가용으로 통근하는 사람에 대한 데이터를 나타내고 클러스터 B는 자전거로 통근하는 사람에 대한 데이터를 나타냅니다.  
   

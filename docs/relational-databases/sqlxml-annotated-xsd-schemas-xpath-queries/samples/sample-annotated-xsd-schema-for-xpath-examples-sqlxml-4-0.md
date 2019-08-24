@@ -30,7 +30,7 @@ ms.locfileid: "68119508"
   
 -   XPath 쿼리가 포함된 템플릿을 만듭니다. 이 템플릿에서 XPath 쿼리를 실행할 대상 매핑 스키마를 지정합니다. 매핑 스키마를 디렉터리에 저장 해야 하는 예제의 경우 (또는 상대 경로 값으로 지정 되어 있는 하위 디렉터리 중 하나는 **매핑 스키마** 템플릿에서 특성) 템플릿 파일을 사용 하 여 연결 합니다.  
   
--   쿼리를 실행하는 데 ADO에 대한 SQLXML 확장을 사용하는 테스트 응용 프로그램을 만듭니다. 자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
+-   쿼리를 실행하는 데 ADO에 대한 SQLXML 확장을 사용하는 테스트 애플리케이션을 만듭니다. 자세한 내용은 [SQLXML 4.0 쿼리 실행을 사용 하 여 ADO](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)합니다.  
   
  이 섹션의 모든 예에서는 이해를 돕기 위해 템플릿에 XPath 쿼리를 지정하고 ADO를 사용하여 템플릿을 실행합니다. 따라서 SampleSchema1.xml이라는 다음 매핑 스키마 파일을 사용해야 합니다. 이 파일을 템플릿이 저장된 디렉터리에 저장합니다.  
   

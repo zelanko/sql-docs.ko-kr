@@ -27,14 +27,14 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68043167"
 ---
-# <a name="sysdmdbxtpobjectstats-transact-sql"></a>sys.dm_db_xtp_object_stats(Transact-SQL)
+# <a name="sysdm_db_xtp_object_stats-transact-sql"></a>sys.dm_db_xtp_object_stats(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   마지막 데이터베이스 다시 시작 이후 각 [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 개체에서 수행된 작업의 영향을 받는 행 수를 보고합니다. 트랜잭션이 커밋되거나 롤백되는지 여부에 관계없이 작업이 실행될 때 통계가 업데이트됩니다.  
   
  sys.dm_db_xtp_object_stats를 사용하면 가장 많이 변경되는 메모리 최적화 테이블을 식별할 수 있습니다. 각 인덱스가 성능에 영향을 미치므로, 사용되지 않는 또는 거의 사용되지 않는 인덱스를 제거하도록 결정할 수 있습니다. 해시 인덱스가 있으면 버킷 수를 주기적으로 다시 평가해야 합니다. 자세한 내용은 [해시 인덱스에 대 한 올바른 버킷 수를 결정](https://msdn.microsoft.com/library/6d1ac280-87db-4bd8-ad43-54353647d8b5)합니다.  
   
- sys.dm_db_xtp_object_stats를 사용하면 응용 프로그램 성능에 영향을 줄 수 있는 쓰기-쓰기 충돌이 발생하는 메모리 최적화 테이블을 식별할 수 있습니다. 예를 들어 트랜잭션 다시 시도 논리가 있을 경우 동일한 문을 두 번 이상 실행해야 할 수 있습니다. 또한 이 정보를 사용해서 쓰기-쓰기 오류 처리가 필요한 테이블(및 비즈니스 논리)을 식별할 수 있습니다.  
+ sys.dm_db_xtp_object_stats를 사용하면 애플리케이션 성능에 영향을 줄 수 있는 쓰기-쓰기 충돌이 발생하는 메모리 최적화 테이블을 식별할 수 있습니다. 예를 들어 트랜잭션 다시 시도 논리가 있을 경우 동일한 문을 두 번 이상 실행해야 할 수 있습니다. 또한 이 정보를 사용해서 쓰기-쓰기 오류 처리가 필요한 테이블(및 비즈니스 논리)을 식별할 수 있습니다.  
   
  이 뷰에는 데이터베이스에 있는 각 메모리 액세스에 최적화된 테이블의 열이 포함됩니다.  
   

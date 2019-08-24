@@ -25,7 +25,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67895525"
 ---
-# <a name="bcpinit"></a>bcp_init
+# <a name="bcp_init"></a>bcp_init
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -104,7 +104,7 @@ RETCODE bcp_init (
     CREATE TABLE BCPDate (cola int, colb datetime);  
     ```  
   
--   응용 프로그램을 실행할 디렉터리에 Bcpfmt.fmt라는 파일을 추가하고 이 파일에 다음 코드를 추가합니다.  
+-   애플리케이션을 실행할 디렉터리에 Bcpfmt.fmt라는 파일을 추가하고 이 파일에 다음 코드를 추가합니다.  
   
     ```  
     8.0  
@@ -113,7 +113,7 @@ RETCODE bcp_init (
     2SQLCHAR08"\r\n"2colbSQL_Latin1_General_Cp437_Bin  
     ```  
   
--   응용 프로그램을 실행할 디렉터리에 Bcpodbc.bcp라는 파일을 추가하고 이 파일에 다음 코드를 추가합니다.  
+-   애플리케이션을 실행할 디렉터리에 Bcpodbc.bcp라는 파일을 추가하고 이 파일에 다음 코드를 추가합니다.  
   
     ```  
     1  

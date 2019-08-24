@@ -35,7 +35,7 @@ ms.locfileid: "66094892"
   
     -   **업그레이드 이전 문제**합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 업그레이드하기 전에 해결해야 하는 모든 문제를 표시합니다.  
   
-    -   **모든 마이그레이션 문제**합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 데이터 또는 응용 프로그램을 마이그레이션하는 것과 관련된 모든 문제를 표시합니다.  
+    -   **모든 마이그레이션 문제**합니다. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 데이터 또는 애플리케이션을 마이그레이션하는 것과 관련된 모든 문제를 표시합니다.  
   
     -   **문제를 해결 한**합니다. 해결된 것으로 표시된 모든 문제를 표시합니다.  
   

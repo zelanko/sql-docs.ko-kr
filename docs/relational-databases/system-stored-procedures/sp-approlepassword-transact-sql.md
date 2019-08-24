@@ -24,10 +24,10 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68117755"
 ---
-# <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
+# <a name="sp_approlepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  현재 데이터베이스에 있는 응용 프로그램 역할의 암호를 변경합니다.  
+  현재 데이터베이스에 있는 애플리케이션 역할의 암호를 변경합니다.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 사용 하 여 [ALTER APPLICATION ROLE](../../t-sql/statements/alter-application-role-transact-sql.md) 대신 합니다.  
@@ -59,7 +59,7 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
  데이터베이스에 대한 ALTER ANY APPLICATION ROLE 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예는 `PayrollAppRole` 응용 프로그램 역할의 암호를 `B3r12-36`으로 설정합니다.  
+ 다음 예는 `PayrollAppRole` 애플리케이션 역할의 암호를 `B3r12-36`으로 설정합니다.  
   
 ```  
 EXEC sp_approlepassword 'PayrollAppRole', '''B3r12-36';  

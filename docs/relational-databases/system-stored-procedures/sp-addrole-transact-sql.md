@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68030925"
 ---
-# <a name="spaddrole-transact-sql"></a>sp_addrole(Transact-SQL)
+# <a name="sp_addrole-transact-sql"></a>sp_addrole(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   현재 데이터베이스에 새 데이터베이스 역할을 만듭니다.  
@@ -60,7 +60,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
  **sp_addrole** 사용자 정의 트랜잭션 내에서 사용할 수 없습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 데이터베이스에 대한 CREATE ROLE 권한이 필요합니다. 스키마를 만드는 경우에는 데이터베이스에 대한 CREATE SCHEMA 권한이 필요합니다. 하는 경우 *소유자* 사용자 또는 그룹으로 지정 된 경우 해당 사용자 또는 그룹에 대 한 IMPERSONATE이 필요 합니다. 하는 경우 *소유자* 역할로 지정 된 경우 해당 역할의 멤버 또는 해당 역할에 대 한 ALTER 권한이 필요 합니다. owner를 응용 프로그램 역할로 지정한 경우에는 해당 응용 프로그램 역할에 대한 ALTER 권한이 필요합니다.  
+ 데이터베이스에 대한 CREATE ROLE 권한이 필요합니다. 스키마를 만드는 경우에는 데이터베이스에 대한 CREATE SCHEMA 권한이 필요합니다. 하는 경우 *소유자* 사용자 또는 그룹으로 지정 된 경우 해당 사용자 또는 그룹에 대 한 IMPERSONATE이 필요 합니다. 하는 경우 *소유자* 역할로 지정 된 경우 해당 역할의 멤버 또는 해당 역할에 대 한 ALTER 권한이 필요 합니다. owner를 애플리케이션 역할로 지정한 경우에는 해당 애플리케이션 역할에 대한 ALTER 권한이 필요합니다.  
   
 ## <a name="examples"></a>예  
  다음 예에서는 현재 데이터베이스에 `Managers`라는 새 역할을 추가합니다.  

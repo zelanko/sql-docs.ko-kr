@@ -46,7 +46,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  (선택 사항) 스칼라 값을 반환하는 식입니다.  
   
 ## <a name="remarks"></a>설명  
- **SELECT**  _FROM\<model >_ **입니다. CONTENT** 문은 각 알고리즘과 관련 된 콘텐츠를 반환 합니다. 예를 들어 사용자 지정 응용 프로그램에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 **SELECT FROM \<model >를 사용할 수 있습니다.** 모델의 NODE_RULE 열에 있는 값을 반환 하는 내용 문입니다.  
+ **SELECT**  _FROM\<model >_ **입니다. CONTENT** 문은 각 알고리즘과 관련 된 콘텐츠를 반환 합니다. 예를 들어 사용자 지정 애플리케이션에서 연결 규칙 모델의 모든 규칙 설명을 사용하려는 경우 **SELECT FROM \<model >를 사용할 수 있습니다.** 모델의 NODE_RULE 열에 있는 값을 반환 하는 내용 문입니다.  
   
  다음 표에서는 마이닝 모델 콘텐츠에 포함된 열을 나열합니다.  
   

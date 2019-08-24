@@ -28,7 +28,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68232150"
 ---
-# <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition(Transact-SQL)
+# <a name="alter-table-column_definition-transact-sql"></a>ALTER TABLE column_definition(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용하여 테이블에 추가된 열의 속성을 지정합니다.  
@@ -126,11 +126,11 @@ DOCUMENT
 FILESTREAM  
  선택적으로 **varbinary(max)** 의 *type_name*인 열에 대해 FILESTREAM 스토리지 특성을 지정합니다.  
   
- 열에 대해 FILESTREAM이 지정된 경우 ROWGUIDCOL 특성을 갖는 **uniqueidentifier** 데이터 형식의 열도 테이블에 있어야 합니다. 이 열은 Null 값을 허용하지 않으며 UNIQUE 또는 PRIMARY KEY 단일 열 제약 조건을 가져야 합니다. 열의 GUID 값은 응용 프로그램(데이터가 삽입되는 경우)에 의해 또는 NEWID () 함수를 사용하는 DEFAULT 제약 조건에 의해 제공되어야 합니다.  
+ 열에 대해 FILESTREAM이 지정된 경우 ROWGUIDCOL 특성을 갖는 **uniqueidentifier** 데이터 형식의 열도 테이블에 있어야 합니다. 이 열은 Null 값을 허용하지 않으며 UNIQUE 또는 PRIMARY KEY 단일 열 제약 조건을 가져야 합니다. 열의 GUID 값은 애플리케이션(데이터가 삽입되는 경우)에 의해 또는 NEWID () 함수를 사용하는 DEFAULT 제약 조건에 의해 제공되어야 합니다.  
   
  테이블에 대해 정의된 FILESTREAM 열이 있는 동안에는 ROWGUIDCOL 열을 삭제하고 관련 제약 조건을 변경할 수 없습니다. ROWGUIDCOL 열은 마지막 FILESTREAM 열이 삭제된 이후에만 삭제될 수 있습니다.  
   
- 열에 대해 FILESTREAM 저장소 특성이 지정된 경우 해당 열의 모든 값이 파일 시스템에 있는 FILESTREAM 데이터 컨테이너에 저장됩니다.  
+ 열에 대해 FILESTREAM 스토리지 특성이 지정된 경우 해당 열의 모든 값이 파일 시스템에 있는 FILESTREAM 데이터 컨테이너에 저장됩니다.  
   
  열 정의 사용 방법을 보여 주는 예는 [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)를 참조하세요.  
   
@@ -190,7 +190,7 @@ ROWGUIDCOL
  ROWGUIDCOL로 인해 열에 저장된 값이 고유하도록 설정되거나 테이블에 삽입된 새 행에 대한 값을 자동으로 생성하지 않습니다. 각 열에 대해 고유한 값을 생성하려면 INSERT 문에 NEWID 함수를 사용하거나 NEWID 함수를 열의 기본값으로 지정합니다. 자세한 내용은 [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md) 및 [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)를 참조하세요.  
   
 SPARSE  
- 열이 스파스 열임을 나타냅니다. 스파스 열의 저장소는 Null 값에 대해 최적화됩니다. 스파스 열은 NOT NULL로 지정할 수 없습니다. 추가 제한 사항 및 스파스 열에 대한 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.  
+ 열이 스파스 열임을 나타냅니다. 스파스 열의 스토리지는 Null 값에 대해 최적화됩니다. 스파스 열은 NOT NULL로 지정할 수 없습니다. 추가 제한 사항 및 스파스 열에 대한 자세한 내용은 [스파스 열 사용](../../relational-databases/tables/use-sparse-columns.md)을 참조하세요.  
   
 \<column_constraint>  
  열 제약 조건 인수에 대한 정의는 [column_constraint &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-column-constraint-transact-sql.md)을 참조하세요.  

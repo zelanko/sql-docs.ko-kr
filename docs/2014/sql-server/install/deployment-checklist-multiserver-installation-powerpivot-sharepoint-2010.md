@@ -18,7 +18,7 @@ ms.lasthandoff: 08/09/2019
 ms.locfileid: "68890734"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>배포 검사 목록: SharePoint 2010용 PowerPivot의 다중 서버 설치
-  이 검사 목록에서는 처음부터 작성 하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 3 계층 sharepoint 2010 팜에 sharepoint 용을 추가 하는 단계를 안내 합니다. 3계층 팜에는 데이터베이스, 응용 프로그램 및 웹 계층이 포함되어 있습니다. 이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 토폴로지에를 추가 하려면 SQL Server 설치 프로그램을 실행 하 여 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 응용 프로그램 계층에를 설치 해야 합니다. PowerPivot 프로그램 파일은 웹 계층에 추가 되지만 웹 응용 프로그램을 배포할 때 설치 후 작업 으로만 추가 됩니다. 웹 계층이나 데이터 계층에는 배포 단계는 있지만 별도로 수행해야 하는 설치 단계는 없습니다. 응용 프로그램 서버에를 설치 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 하는 경우에만 수행 해야 하는 설치 단계가 있습니다.  
+  이 검사 목록에서는 처음부터 작성 하는 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 3 계층 sharepoint 2010 팜에 sharepoint 용을 추가 하는 단계를 안내 합니다. 3계층 팜에는 데이터베이스, 애플리케이션 및 웹 계층이 포함되어 있습니다. 이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 토폴로지에를 추가 하려면 SQL Server 설치 프로그램을 실행 하 여 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 응용 프로그램 계층에를 설치 해야 합니다. PowerPivot 프로그램 파일은 웹 계층에 추가 되지만 웹 응용 프로그램을 배포할 때 설치 후 작업 으로만 추가 됩니다. 웹 계층이나 데이터 계층에는 배포 단계는 있지만 별도로 수행해야 하는 설치 단계는 없습니다. 응용 프로그램 서버에를 설치 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 하는 경우에만 수행 해야 하는 설치 단계가 있습니다.  
   
 ||  
 |-|  
@@ -127,7 +127,7 @@ ms.locfileid: "68890734"
 ##  <a name="installsp"></a>3 계층 SharePoint 2010 팜 설치 및 구성  
  SharePoint 서버로 사용할 컴퓨터 각각에서 SharePoint 필수 구성 요소 설치 관리자 프로그램을 실행한 다음 SharePoint Server 설치 프로그램을 실행합니다.  
   
- SharePoint 2010 설명서의 다음 지침을 사용하여 두 개의 웹 서버와 한 개의 응용 프로그램 서버가 포함된 SharePoint 2010 팜을 설치하고 구성합니다.  
+ SharePoint 2010 설명서의 다음 지침을 사용하여 두 개의 웹 서버와 한 개의 애플리케이션 서버가 포함된 SharePoint 2010 팜을 설치하고 구성합니다.  
   
  [3 계층 팜을 위한 다중 서버 (SharePoint Server 2010)](https://go.microsoft.com/fwlink/?LinkId=182771)  
   
@@ -137,27 +137,27 @@ ms.locfileid: "68890734"
   
 -   Excel 서비스, 검색 서비스 및 Secure Store Service  
   
--   웹 응용 프로그램 및 사이트 컬렉션  
+-   웹 애플리케이션 및 사이트 컬렉션  
   
 -   사용 현황 및 상태 데이터 수집  
   
 -   진단 로깅  
   
 ##  <a name="installppapp"></a>응용 프로그램 서버에 SharePoint용 PowerPivot 설치  
- SQL Server 설치 프로그램을 실행하여 SharePoint 팜에 SharePoint용 PowerPivot을 추가합니다. 팜이 여러 SharePoint 서버로 구성된 경우에는 이미 팜에 조인된 응용 프로그램 서버에서 SQL Server 설치 프로그램을 실행해야 합니다.  
+ SQL Server 설치 프로그램을 실행하여 SharePoint 팜에 SharePoint용 PowerPivot을 추가합니다. 팜이 여러 SharePoint 서버로 구성된 경우에는 이미 팜에 조인된 애플리케이션 서버에서 SQL Server 설치 프로그램을 실행해야 합니다.  
   
- 항상 응용 프로그램 서버에 SharePoint용 PowerPivot을 설치합니다. 또한 웹 프런트 엔드 서버도 SharePoint용 PowerPivot 서버 구성 요소를 실행하지만 웹 프런트 엔드에서 실행되는 구성 요소는 팜에 솔루션 배포 시 SharePoint용 PowerPivot 구성 단계 동안 설치됩니다. 설치에 대 한 자세한 내용은 [SharePoint용 PowerPivot 2010 설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)를 참조 하세요.  
+ 항상 애플리케이션 서버에 SharePoint용 PowerPivot을 설치합니다. 또한 웹 프런트 엔드 서버도 SharePoint용 PowerPivot 서버 구성 요소를 실행하지만 웹 프런트 엔드에서 실행되는 구성 요소는 팜에 솔루션 배포 시 SharePoint용 PowerPivot 구성 단계 동안 설치됩니다. 설치에 대 한 자세한 내용은 [SharePoint용 PowerPivot 2010 설치](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)를 참조 하세요.  
   
- 배포 토폴로지가 2개의 SharePoint용 PowerPivot 인스턴스를 호출할 경우 각 응용 프로그램 서버에서 SQL Server 설치를 실행합니다. 하나의 컴퓨터에서 SharePoint용 PowerPivot 인스턴스를 하나만 사용할 수 있습니다. 여러 인스턴스가 필요하면 추가 서버를 사용해야 합니다. 동일한 팜에 [여러 SharePoint용 PowerPivot 서버를 추가 하는 방법에 대 한 자세한 내용은 배포 검사 목록: SharePoint 2010 팜에](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)PowerPivot 서버를 추가 하 여 확장 합니다.  
+ 배포 토폴로지가 2개의 SharePoint용 PowerPivot 인스턴스를 호출할 경우 각 애플리케이션 서버에서 SQL Server 설치를 실행합니다. 하나의 컴퓨터에서 SharePoint용 PowerPivot 인스턴스를 하나만 사용할 수 있습니다. 여러 인스턴스가 필요하면 추가 서버를 사용해야 합니다. 동일한 팜에 [여러 SharePoint용 PowerPivot 서버를 추가 하는 방법에 대 한 자세한 내용은 배포 검사 목록: SharePoint 2010 팜에](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)PowerPivot 서버를 추가 하 여 확장 합니다.  
   
 ##  <a name="installclientlib"></a>SharePoint용 PowerPivot가 설치 되지 않은 SharePoint 응용 프로그램 서버에 Analysis Services 클라이언트 라이브러리를 설치 합니다.  
- 동일 컴퓨터에 SharePoint용 PowerPivot을 설치하지 않은 상태로 다음 응용 프로그램을 실행하는 웹 프런트 또는 응용 프로그램 서버를 포함하는 팜 토폴로지에는 PowerPivot 데이터 액세스 및 기능을 지원하기 위해 추가 소프트웨어가 필요합니다.  
+ 동일 컴퓨터에 SharePoint용 PowerPivot을 설치하지 않은 상태로 다음 애플리케이션을 실행하는 웹 프런트 또는 애플리케이션 서버를 포함하는 팜 토폴로지에는 PowerPivot 데이터 액세스 및 기능을 지원하기 위해 추가 소프트웨어가 필요합니다.  
   
 -   Excel 서비스 또는 PerformancePoint 서비스  
   
--   고유 서버에서 독립 실행형 응용 프로그램으로 실행되는 중앙 관리  
+-   고유 서버에서 독립 실행형 애플리케이션으로 실행되는 중앙 관리  
   
- PowerPivot 데이터 액세스를 지원하기 위해서는 Excel Services 및 PerformancePoint Services 모두 새 버전의 Analysis Services OLE DB Provider가 필요합니다. 최신 OLE DB Provider가 없는 컴퓨터에서 응용 프로그램을 실행할 경우 공급자를 수동으로 설치해야 합니다. 자세한 내용은 [SharePoint 서버에 Analysis Services OLE DB Provider 설치](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 를 참조 하세요.  
+ PowerPivot 데이터 액세스를 지원하기 위해서는 Excel Services 및 PerformancePoint Services 모두 새 버전의 Analysis Services OLE DB Provider가 필요합니다. 최신 OLE DB Provider가 없는 컴퓨터에서 애플리케이션을 실행할 경우 공급자를 수동으로 설치해야 합니다. 자세한 내용은 [SharePoint 서버에 Analysis Services OLE DB Provider 설치](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) 를 참조 하세요.  
   
  마찬가지로 동일 컴퓨터에 SharePoint용 PowerPivot 없이 중앙 관리만 있는 컴퓨터에는 ADOMD.NET 클라이언트 라이브러리가 필요합니다. 이 라이브러리는 대시보드를 채우기 위해 사용하는 내부 데이터에 액세스하기 위해 PowerPivot 관리 대시보드에서 사용됩니다. 자세한 내용은 [중앙 관리를 실행하는 웹 프런트 엔드 서버에 ADOMD.NET 설치](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)를 참조하세요.  
   
@@ -167,7 +167,7 @@ ms.locfileid: "68890734"
  자세한 내용은 [구성 또는 복구 SharePoint용 PowerPivot 2010 &#40;PowerPivot 구성 도구&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)를 참조 하세요.  
   
 ##  <a name="AAM"></a>웹 프런트 엔드 서버에 대 한 대체 액세스 매핑 구성  
- PowerPivot 데이터 액세스 또는 데이터 새로 고침에 대한 요청을 각 웹 프런트 엔드 서버에서 처리하도록 하려면 각 서버의 서로 다른 URL을 동일한 웹 응용 프로그램에 매핑해야 합니다.  
+ PowerPivot 데이터 액세스 또는 데이터 새로 고침에 대한 요청을 각 웹 프런트 엔드 서버에서 처리하도록 하려면 각 서버의 서로 다른 URL을 동일한 웹 애플리케이션에 매핑해야 합니다.  
   
 1.  중앙 관리의 응용 프로그램 관리에서 **대체 액세스 매핑 구성**을 클릭 합니다.  
   

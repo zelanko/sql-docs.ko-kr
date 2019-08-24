@@ -24,7 +24,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68095944"
 ---
-# <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter(Transact-SQL)
+# <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   추적에 필터를 적용합니다. **sp_trace_setfilter** 중지 된 기존 추적 에서만 실행할 수 있습니다 (*상태* 됩니다 **0**). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이 저장된 프로시저는 아니거나 존재 하지 않는 추적에서 실행 되는 경우에 오류를 반환 합니다 *상태* 아닙니다 **0**합니다.  
@@ -94,7 +94,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="remarks"></a>설명  
  **sp_trace_setfilter** 되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 대부분의 이전 버전에서 사용할 수 있는 확장된 저장된 프로시저가 실행 하 던 작업을 수행 하는 프로시저 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]합니다. 사용 하 여 **sp_trace_setfilter** 대신 합니다 **xp_trace_set\*필터** 적용, 제거 또는 추적에 대 한 필터를 조작 합니다. 확장 저장된 프로시저를 만듭니다. 자세한 내용은 [추적 필터링](../../relational-databases/sql-trace/filter-a-trace.md)합니다.  
   
- 한 번 실행에서 특정 열에 대 한 모든 필터를 함께 설정 되어야 합니다 **sp_trace_setfilter**합니다. 예를 들어 필터 두 개를 응용 프로그램 이름 열에, 그리고 필터 하나를 사용자 이름 열에 적용하려면 응용 프로그램 이름에 필터를 차례로 지정해야 합니다. 한 번의 저장 프로시저 호출에서 응용 프로그램 이름에 필터 하나를 지정한 다음 사용자 이름에 필터를 지정하고 응용 프로그램 이름에 나머지 필터 하나를 지정하려고 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류를 반환합니다.  
+ 한 번 실행에서 특정 열에 대 한 모든 필터를 함께 설정 되어야 합니다 **sp_trace_setfilter**합니다. 예를 들어 필터 두 개를 애플리케이션 이름 열에, 그리고 필터 하나를 사용자 이름 열에 적용하려면 애플리케이션 이름에 필터를 차례로 지정해야 합니다. 한 번의 저장 프로시저 호출에서 애플리케이션 이름에 필터 하나를 지정한 다음 사용자 이름에 필터를 지정하고 애플리케이션 이름에 나머지 필터 하나를 지정하려고 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류를 반환합니다.  
   
  모든 SQL Trace 저장 프로시저(**sp_trace_xx**)의 매개 변수는 엄격하게 형식이 지정되어 있습니다. 이러한 매개 변수를 인수 설명에 지정된 올바른 입력 매개 변수 데이터 형식으로 호출하지 않으면 저장 프로시저가 오류를 반환합니다.  
   

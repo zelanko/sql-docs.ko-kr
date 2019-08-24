@@ -29,7 +29,7 @@ ms.locfileid: "66012572"
   
 -   .NET Framework 환경에서 생성된 DiffGram이 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 테이블에 데이터 업데이트를 적용하는 방법  
   
- 이 응용 프로그램에서는 XSD 스키마에 대해 XPath 쿼리를 실행합니다. 연락처 데이터를 XML 문서를 반환 하는 XPath 쿼리 실행 (**FirstName**하십시오 **LastName**). 응용 프로그램은 .NET Framework 환경의 데이터 집합에 XML 문서를 로드합니다. 그런 다음 데이터 집합에 있는 첫 번째 연락처에서 이름을 "Susan"으로 변경합니다. 그리고 해당 데이터 집합에서 DiffGram을 생성하며, 이 DiffGram에 지정된 업데이트(직원 이름에 대한 변경 내용)를 Person.Contact 테이블에 적용합니다.  
+ 이 애플리케이션에서는 XSD 스키마에 대해 XPath 쿼리를 실행합니다. 연락처 데이터를 XML 문서를 반환 하는 XPath 쿼리 실행 (**FirstName**하십시오 **LastName**). 애플리케이션은 .NET Framework 환경의 데이터 세트에 XML 문서를 로드합니다. 그런 다음 데이터 집합에 있는 첫 번째 연락처에서 이름을 "Susan"으로 변경합니다. 그리고 해당 데이터 세트에서 DiffGram을 생성하며, 이 DiffGram에 지정된 업데이트(직원 이름에 대한 변경 내용)를 Person.Contact 테이블에 적용합니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  

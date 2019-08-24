@@ -28,7 +28,7 @@ ms.locfileid: "66100007"
   
 ## <a name="options"></a>변수  
  **이름**  
- 보고서 관리자에 표시될 응용 프로그램 이름을 입력합니다. 기본적으로 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다. 지정한 이름은 보고서 관리자에만 나타납니다.  
+ 보고서 관리자에 표시될 애플리케이션 이름을 입력합니다. 기본적으로 이 값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]입니다. 지정한 이름은 보고서 관리자에만 나타납니다.  
   
  **버전(Version)**  
  이 속성은 읽기 전용입니다. 사용 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 의 버전을 지정합니다.  

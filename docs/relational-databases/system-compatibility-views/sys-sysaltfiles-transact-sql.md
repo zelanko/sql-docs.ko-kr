@@ -46,7 +46,7 @@ ms.locfileid: "68006968"
 |**perf**|**int**|예약되어 있습니다.|  
 |**dbid**|**smallint**|해당 파일이 속한 데이터베이스의 데이터베이스 ID입니다.|  
 |**name**|**sysname**|파일의 논리적 이름입니다.|  
-|**filename**|**nvarchar(260)**|물리적 장치의 이름입니다. 여기에는 파일의 전체 경로가 포함됩니다.|  
+|**filename**|**nvarchar(260)**|물리적 디바이스의 이름입니다. 여기에는 파일의 전체 경로가 포함됩니다.|  
   
 ## <a name="see-also"></a>관련 항목  
  [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

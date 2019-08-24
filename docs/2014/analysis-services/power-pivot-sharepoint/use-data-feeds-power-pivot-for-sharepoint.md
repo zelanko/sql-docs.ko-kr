@@ -42,7 +42,7 @@ ms.locfileid: "66070911"
  SharePoint 목록을 데이터 피드로 내보낼 수 있으려면 SharePoint 서버에 ADO.NET Data Services를 설치해야 합니다. 자세한 내용은 [ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)을 참조하세요.  
   
 ##  <a name="sharepointlist"></a> SharePoint 목록에서 데이터 피드 만들기  
- SharePoint 2010 팜에서 SharePoint 목록의 목록 리본에는 데이터 피드로 내보내기 단추가 있습니다. 이 단추를 클릭하여 목록을 피드로 내보낼 수 있습니다. 최상의 결과를 얻으려면 Excel 2010과 PowerPivot 클라이언트 응용 프로그램이 워크스테이션에 설치되어 있어야 합니다. 데이터 피드 내보내기에 응답하여 PowerPivot 클라이언트 응용 프로그램이 시작되고 목록을 포함하는 새 PowerPivot 테이블을 만듭니다.  
+ SharePoint 2010 팜에서 SharePoint 목록의 목록 리본에는 데이터 피드로 내보내기 단추가 있습니다. 이 단추를 클릭하여 목록을 피드로 내보낼 수 있습니다. 최상의 결과를 얻으려면 Excel 2010과 PowerPivot 클라이언트 애플리케이션이 워크스테이션에 설치되어 있어야 합니다. 데이터 피드 내보내기에 응답하여 PowerPivot 클라이언트 애플리케이션이 시작되고 목록을 포함하는 새 PowerPivot 테이블을 만듭니다.  
   
 1.  SharePoint 사이트에서 목록을 엽니다.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "66070911"
  ADO.NET Data Services 3.5.1이 SharePoint 서버에 설치되어 있지 않으면 오류가 발생합니다. 오류 및 오류 해결 방법에 대한 자세한 내용은 [ADO.NET Data Services를 설치하여 SharePoint 목록의 데이터 피드 내보내기 지원](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md)을 참조하세요.  
   
 ##  <a name="rsreport"></a> Reporting Services 보고서에서 데이터 피드 만들기  
- SQL Server 2008 R2 Reporting Services가 배포되어 있는 경우 새로운 Atom 렌더링 확장을 사용하여 기존 보고서에서 데이터 피드를 생성할 수 있습니다. 최상의 결과를 얻으려면 Excel 2010과 PowerPivot for Excel이 워크스테이션에 설치되어 있어야 합니다. 데이터 피드 내보내기에 응답하여 PowerPivot 클라이언트 응용 프로그램이 시작되고 테이블과 열이 스트리밍될 때 자동으로 이를 추가하고 연결합니다.  
+ SQL Server 2008 R2 Reporting Services가 배포되어 있는 경우 새로운 Atom 렌더링 확장을 사용하여 기존 보고서에서 데이터 피드를 생성할 수 있습니다. 최상의 결과를 얻으려면 Excel 2010과 PowerPivot for Excel이 워크스테이션에 설치되어 있어야 합니다. 데이터 피드 내보내기에 응답하여 PowerPivot 클라이언트 애플리케이션이 시작되고 테이블과 열이 스트리밍될 때 자동으로 이를 추가하고 연결합니다.  
   
  보고서에서 데이터 피드를 내보내는 방법에 대한 자세한 내용은 [보고서 작성기 도움말 파일](https://go.microsoft.com/fwlink/?LinkId=154494)에서 [보고서에서 데이터 피드 생성&#40;보고서 작성기 및 SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md)을 참조하세요.  
   

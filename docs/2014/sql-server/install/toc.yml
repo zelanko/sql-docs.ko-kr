@@ -102,7 +102,7 @@
           href: large-constants-typed-as-large-value-types-90-later-compatibility-mode.md
         - name: 업그레이드한 후에 로그 전달이 실행되지 않습니다.
           href: log-shipping-will-not-run-after-upgrading.md
-        - name: sysperfinfo.cntr_value에서 bigint 값을 예상할 수 있도록 응용 프로그램을 수정합니다.
+        - name: sysperfinfo.cntr_value에서 bigint 값을 예상할 수 있도록 애플리케이션을 수정합니다.
           href: modify-applications-to-expect-bigint-values-from-sysperfinfo-cntr-value.md
         - name: 'Banyan VINES SPP(Sequenced Packet Protocol), 멀티프로토콜, AppleTalk 또는 NWLink IPX/SPX 네트워크 프로토콜을 사용하는 연결을 수정합니다.'
           href: modify-connections-banyan-vines-spp-multiprotocol-appletalk-nwlink-ipx-spx.md

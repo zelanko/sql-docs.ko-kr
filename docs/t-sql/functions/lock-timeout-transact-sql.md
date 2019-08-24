@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68059902"
 ---
-# <a name="x40x40locktimeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
+# <a name="x40x40lock_timeout-transact-sql"></a>&#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   현재 세션의 현재 잠금 시간 제한 설정(밀리초)을 반환합니다.  
@@ -44,7 +44,7 @@ ms.locfileid: "68059902"
  **integer**  
   
 ## <a name="remarks"></a>Remarks  
- SET LOCK_TIMEOUT을 통해 응용 프로그램은 문이 차단된 리소스를 기다리는 최대 시간을 설정할 수 있습니다. 문이 LOCK_TIMEOUT 설정보다 오래 대기한 경우 차단된 문은 자동으로 취소되고 오류 메시지가 응용 프로그램으로 반환됩니다.  
+ SET LOCK_TIMEOUT을 통해 애플리케이션은 문이 차단된 리소스를 기다리는 최대 시간을 설정할 수 있습니다. 문이 LOCK_TIMEOUT 설정보다 오래 대기한 경우 차단된 문은 자동으로 취소되고 오류 메시지가 애플리케이션으로 반환됩니다.  
   
  SET LOCK_TIMEOUT이 현재 세션에서 아직 실행되지 않은 경우 @@LOCK_TIMEOUT은 -1을 반환합니다.  
   

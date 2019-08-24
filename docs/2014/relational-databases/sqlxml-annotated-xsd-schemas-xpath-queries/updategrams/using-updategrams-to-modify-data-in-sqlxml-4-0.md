@@ -62,7 +62,7 @@ ms.locfileid: "66014599"
  Updategram에서 동시성 문제를 처리하는 데 사용할 수 있는 다양한 수준의 보호에 대해 설명하고 이에 대한 예를 제공합니다.  
   
  [Updategram 예제 응용 프로그램 &#40;SQLXML 4.0&#41;](../../../database-engine/dev-guide/updategram-sample-applications-sqlxml-4-0.md)  
- Updategram을 사용하는 예제 응용 프로그램을 제공합니다.  
+ Updategram을 사용하는 예제 애플리케이션을 제공합니다.  
   
  [XML Updategram에 대 한 제한 사항 및 지침 &#40;SQLXML 4.0&#41;](guidelines-and-limitations-of-xml-updategrams-sqlxml-4-0.md)  
  Updategram 사용 시 주의해야 할 사항에 대해 설명합니다.  

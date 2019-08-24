@@ -43,18 +43,18 @@ ms.locfileid: "66071657"
   
  BI 의미 체계 모델 연결을 설정할 서버 및 데이터베이스 이름을 알아야 합니다. Analysis Services를 테이블 형식 모드에 대해 구성해야 합니다. 서버에서 실행 중인 데이터베이스는 테이블 형식 model 데이터베이스여야 합니다. 서버 모드를 확인하는 방법에 대한 자세한 내용은 [Analysis Services 인스턴스의 서버 모드 확인](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)을 참조하세요.  
   
- 특정 시나리오에서 SharePoint 환경의 공유 서비스는 Analysis Services 인스턴스에 대한 관리 권한이 있어야 합니다. 이러한 서비스에는 PowerPivot 서비스 응용 프로그램, Reporting Services 서비스 응용 프로그램 및 PerformancePoint 서비스 응용 프로그램이 포함됩니다. 관리 권한을 부여하기 전에 이러한 서비스 애플리케이션의 ID를 알고 있어야 합니다. 중앙 관리를 사용하여 ID를 확인할 수 있습니다.  
+ 특정 시나리오에서 SharePoint 환경의 공유 서비스는 Analysis Services 인스턴스에 대한 관리 권한이 있어야 합니다. 이러한 서비스에는 PowerPivot 서비스 애플리케이션, Reporting Services 서비스 애플리케이션 및 PerformancePoint 서비스 애플리케이션이 포함됩니다. 관리 권한을 부여하기 전에 이러한 서비스 애플리케이션의 ID를 알고 있어야 합니다. 중앙 관리를 사용하여 ID를 확인할 수 있습니다.  
   
  중앙 관리에서 보안 정보를 보려면 SharePoint 서비스 관리자여야 합니다.  
   
  Management Studio에 대한 관리 권한을 부여하려면 Analysis Services 시스템 관리자여야 합니다.  
   
- SharePoint용 PowerPivot은 클래식 인증 모드를 사용하는 웹 응용 프로그램을 통해 액세스해야 합니다. 외부 데이터 원본에 대한 BI 의미 체계 모델 연결은 클래식 모드 로그인에 종속됩니다. 자세한 내용은 [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md)합니다.  
+ SharePoint용 PowerPivot은 클래식 인증 모드를 사용하는 웹 애플리케이션을 통해 액세스해야 합니다. 외부 데이터 원본에 대한 BI 의미 체계 모델 연결은 클래식 모드 로그인에 종속됩니다. 자세한 내용은 [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md)합니다.  
   
  연결 시퀀스에 참가하는 모든 컴퓨터 및 사용자는 동일한 도메인이나 트러스트된 도메인(양방향 신뢰)에 있어야 합니다.  
   
 ##  <a name="bkmk_ssas"></a> 공유 서비스 응용 프로그램에 Analysis Services 관리 권한 부여  
- 공유 서비스에서는 데이터를 요청하는 사용자를 대신하여 SharePoint에서 Analysis Services 서버의 테이블 형식 model 데이터베이스로 연결하기도 합니다. 요청하는 서비스는 PowerPivot 서비스 응용 프로그램, Reporting Services 서비스 응용 프로그램 또는 PerformancePoint 서비스 응용 프로그램일 수 있습니다. 연결이 성공하려면 서비스에 Analysis Services 서버에 대한 관리 권한이 있어야 합니다. Analysis Services에서는 관리자만 다른 사용자를 대신하여 가장 연결을 만들 수 있습니다.  
+ 공유 서비스에서는 데이터를 요청하는 사용자를 대신하여 SharePoint에서 Analysis Services 서버의 테이블 형식 model 데이터베이스로 연결하기도 합니다. 요청하는 서비스는 PowerPivot 서비스 애플리케이션, Reporting Services 서비스 애플리케이션 또는 PerformancePoint 서비스 애플리케이션일 수 있습니다. 연결이 성공하려면 서비스에 Analysis Services 서버에 대한 관리 권한이 있어야 합니다. Analysis Services에서는 관리자만 다른 사용자를 대신하여 가장 연결을 만들 수 있습니다.  
   
  다음과 같은 상황에서 연결을 사용할 경우 관리 권한이 필요합니다.  
   
@@ -102,9 +102,9 @@ ms.locfileid: "66071657"
   
      **데이터베이스** 는 서버에서 현재 사용할 수 있는 테이블 형식 데이터베이스여야 합니다. 다른 BI 의미 체계 모델 연결 파일, Office 데이터 연결(.odc) 파일, Analysis Services OLAP 데이터베이스 또는 PowerPivot 통합 문서를 지정하지 마십시오. 데이터베이스 이름을 가져오려면 Management Studio를 사용하여 서버에 연결하고 사용 가능한 데이터베이스 목록을 볼 수 있습니다. 데이터베이스의 속성 페이지를 사용하여 이름이 올바른지 확인합니다.  
   
-4.  **확인** 을 클릭하여 페이지를 저장합니다. 이 시점에서 PowerPivot 서비스 응용 프로그램은 연결을 확인합니다.  
+4.  **확인** 을 클릭하여 페이지를 저장합니다. 이 시점에서 PowerPivot 서비스 애플리케이션은 연결을 확인합니다.  
   
-     연결 정보가 정확하고 PowerPivot 서비스 응용 프로그램에 관리 권한을 부여하여 Analysis Services에 현재 사용자로 연결할 수 있으면 확인이 성공합니다.  
+     연결 정보가 정확하고 PowerPivot 서비스 애플리케이션에 관리 권한을 부여하여 Analysis Services에 현재 사용자로 연결할 수 있으면 확인이 성공합니다.  
   
      연결 정보가 잘못되었거나 서비스 애플리케이션에 권한이 부족하면 확인이 실패합니다. 유효성 검사 메시지는 파일 저장 여부를 묻는 페이지에 표시됩니다. 연결이 유효함을 알고 있을 경우 연결 정보가 잘못되어서가 아니라 권한이 없어서 오류가 발생한 것이므로 파일을 저장해야 합니다.  
   

@@ -49,7 +49,7 @@ ms.locfileid: "63046009"
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]의 버전입니다. 최대 길이는 15자입니다. 버전 번호의 형식은 다음과 같아야 합니다. 8.00.0xxx.00.  
   
  **ProductLocaleId**  
- 응용 프로그램 INTL DLL의 로캘 ID 또는 언어 ID입니다(예: 0x41A).  
+ 애플리케이션 INTL DLL의 로캘 ID 또는 언어 ID입니다(예: 0x41A).  
   
  **OperatingSystem**  
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]가 설치된 운영 체제입니다. 유효한 값은 운영 체제에 대해 독립적인 경우 **0**, [!INCLUDE[win2kfamily](../../../includes/win2kfamily-md.md)]의 경우 **1**, Windows XP의 경우 **16**입니다.  

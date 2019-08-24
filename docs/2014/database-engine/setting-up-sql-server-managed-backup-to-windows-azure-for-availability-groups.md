@@ -27,7 +27,7 @@ ms.locfileid: "62843569"
   
 -   네트워크 대역폭: 이 복제본 위치 서로 다른 물리적 위치와 같은 하이브리드 클라우드에서 또는 클라우드 전용 구성에서 다른 Windows Azure 지역에 걸쳐 구현에 적용 됩니다. 네트워크 대역폭은 보조 복제본의 대기 시간에 영향을 미칠 수 있으며, 보조 복제본이 동기 복제로 설정된 경우 이로 인해 주 복제본에서 로그가 증가할 수 있습니다. 보조 복제본이 동기 복제로 설정된 경우, 보조 복제본이 네트워크 대기 시간 때문에 동기화 상태를 유지하지 못할 수 있으며 이로 인해 보조 복제본으로 장애 조치(failover) 시 데이터 손실이 발생할 수 있습니다.  
   
-### <a name="configuring-includesssmartbackupincludesss-smartbackup-mdmd-for-availability-databases"></a>가용성 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 구성  
+### <a name="configuring-includess_smartbackupincludesss-smartbackup-mdmd-for-availability-databases"></a>가용성 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 구성  
  **사용 권한:**  
   
 -   멤버 자격이 필요 **db_backupoperator** 사용 하 여 데이터베이스 역할 **ALTER ANY CREDENTIAL** 권한 및 `EXECUTE` 에 대 한 권한을 **sp_delete_backuphistory**저장 프로시저입니다.  
@@ -59,16 +59,16 @@ ms.locfileid: "62843569"
   
 -   보조 복제본이 기본 설정 복제본으로 구성된 경우 최소한 읽기 전용 연결 액세스를 보유하도록 구성해야 합니다. 보조 데이터베이스에 대한 연결 액세스가 없는 가용성 그룹은 지원되지 않습니다.  자세한 내용은 [가용성 복제본에 대한 읽기 전용 액세스 구성&#40;SQL Server&#41;](availability-groups/windows/configure-read-only-access-on-an-availability-replica-sql-server.md)가 있어야 합니다.  
   
--   가용성 그룹을 구성한 후 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 구성하면 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 기존의 모든 기본 백업을 저장소 컨테이너에 복사하려고 합니다.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 기존 백업을 찾거나 액세스할 수 없으면 전체 데이터베이스 백업이 예약됩니다. 이 작업은 특히 가용성 그룹 데이터베이스에 대한 백업 작업을 최적화하기 위해 수행됩니다.  
+-   가용성 그룹을 구성한 후 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 구성하면 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]이 기존의 모든 기본 백업을 스토리지 컨테이너에 복사하려고 합니다.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 기존 백업을 찾거나 액세스할 수 없으면 전체 데이터베이스 백업이 예약됩니다. 이 작업은 특히 가용성 그룹 데이터베이스에 대한 백업 작업을 최적화하기 위해 수행됩니다.  
   
 -   새로운 가용성 데이터베이스를 만들려는 데이터베이스에 인스턴스 수준 설정을 적용 하지 않으려는 경우 인스턴스 수준 설정을 사용 하지 않도록 설정 하려는 경우  
   
 -   암호화를 사용하는 경우 모든 복제본에서 동일한 인증서를 사용합니다. 이렇게 하면 다른 복제본으로 장애 조치(failover)하거나 복원하는 경우 중단 없이 연속적으로 백업 작업을 수행하는 데 도움이 됩니다.  
   
-#### <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>가용성 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 설정 및 구성  
+#### <a name="enable-and-configure-includess_smartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>가용성 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 설정 및 구성  
  이 자습서에서는 Node1 및 Node2 컴퓨터에서 데이터베이스(AGTestDB)에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 설정 및 구성하고 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 상태에 대한 모니터링을 설정하는 단계에 대해 설명합니다.  
   
-1.  **Windows Azure 저장소 계정을 만듭니다.** 백업은은 Windows Azure Blob storage 서비스에 저장 됩니다. Windows Azure 저장소 계정이 없는 경우 먼저 계정을 만들어야 합니다. 자세한 내용은 [Windows Azure 저장소 계정을 만들고](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)합니다. 저장소 계정 이름, 액세스 키 및 저장소 계정의 URL을 기록합니다. 저장소 계정 이름 및 액세스 키 정보는 SQL 자격 증명을 만드는 데 사용됩니다. SQL 자격 증명은 백업 작업 중 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 저장소 계정을 인증하는 데 사용됩니다.  
+1.  **Windows Azure 저장소 계정을 만듭니다.** 백업은은 Windows Azure Blob storage 서비스에 저장 됩니다. Windows Azure Storage 계정이 없는 경우 먼저 계정을 만들어야 합니다. 자세한 내용은 [Windows Azure 저장소 계정을 만들고](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)합니다. 스토리지 계정 이름, 액세스 키 및 스토리지 계정의 URL을 기록합니다. 스토리지 계정 이름 및 액세스 키 정보는 SQL 자격 증명을 만드는 데 사용됩니다. SQL 자격 증명은 백업 작업 중 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 스토리지 계정을 인증하는 데 사용됩니다.  
   
 2.  **SQL 자격 증명을 만듭니다.** 저장소 계정의 이름을 Id로, 저장소 액세스 키를 암호로 사용 하 여 SQL 자격 증명을 만듭니다.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62843569"
   
 5.  **백업 중에 암호화에 사용할 인증서 또는 비대칭 키를 만듭니다.** 첫 번째 노드 Node1에서 인증서 만들기 및 사용 하 여 파일을 내보내야 [BACKUP CERTIFICATE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/backup-certificate-transact-sql)... Node1에서 내보낸 파일을 사용하여 Node2에서 인증서를 만듭니다. 파일에서 인증서를 만들기에 대 한 자세한 내용은 예제를 참조 하세요 [CREATE CERTIFICATE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql)합니다.  
   
-6.  **설정 및 구성 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Node1의 AGTestDB에 대해:** SQL Server Management Studio를 시작 하 고 가용성 데이터베이스가 설치 된 Node1의 인스턴스에 연결 합니다. 필요에 따라 데이터베이스 이름, 저장소 URL, SQL 자격 증명 및 보존 기간 값을 수정한 후 쿼리 창에서 다음 문을 실행합니다.  
+6.  **설정 및 구성 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Node1의 AGTestDB에 대해:** SQL Server Management Studio를 시작 하 고 가용성 데이터베이스가 설치 된 Node1의 인스턴스에 연결 합니다. 필요에 따라 데이터베이스 이름, 스토리지 URL, SQL 자격 증명 및 보존 기간 값을 수정한 후 쿼리 창에서 다음 문을 실행합니다.  
   
     ```  
     Use msdb;  
@@ -97,7 +97,7 @@ ms.locfileid: "62843569"
   
      암호화 용 인증서를 만드는 방법에 대 한 자세한 내용은 참조는 **백업 인증서를 만듭니다** 단계 [Create an Encrypted Backup](../relational-databases/backup-restore/create-an-encrypted-backup.md)합니다.  
   
-7.  **설정 및 구성 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Node2의 AGTestDB에 대해:** SQL Server Management Studio를 시작 하 고 가용성 데이터베이스가 설치 된 Node2의 인스턴스에 연결 합니다. 필요에 따라 데이터베이스 이름, 저장소 URL, SQL 자격 증명 및 보존 기간 값을 수정한 후 쿼리 창에서 다음 문을 실행합니다.  
+7.  **설정 및 구성 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Node2의 AGTestDB에 대해:** SQL Server Management Studio를 시작 하 고 가용성 데이터베이스가 설치 된 Node2의 인스턴스에 연결 합니다. 필요에 따라 데이터베이스 이름, 스토리지 URL, SQL 자격 증명 및 보존 기간 값을 수정한 후 쿼리 창에서 다음 문을 실행합니다.  
   
     ```  
     Use msdb;  

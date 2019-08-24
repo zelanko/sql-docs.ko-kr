@@ -83,7 +83,7 @@ ms.locfileid: "68893311"
   
 -   안정성:  기본 SPN 사용을 활성화하려면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스가 실행되는 서비스 계정에 KDC의 Active Directory를 업데이트할 수 있는 충분한 권한이 있어야 합니다.  
   
--   편의성 및 위치 투명성:  데이터베이스가 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스로 이동되는 경우 응용 프로그램 SPN은 어떤 영향을 받습니까? 데이터베이스 미러링을 사용하는 경우 이는 주 서버 및 해당 장애 조치 파트너 모두에 적용됩니다. 서버 변경 시 SPN도 변경해야 한다면 애플리케이션은 어떤 영향을 받습니까? 변경 내용은 관리됩니까?  
+-   편의성 및 위치 투명성:  데이터베이스가 다른 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스로 이동되는 경우 애플리케이션 SPN은 어떤 영향을 받습니까? 데이터베이스 미러링을 사용하는 경우 이는 주 서버 및 해당 장애 조치 파트너 모두에 적용됩니다. 서버 변경 시 SPN도 변경해야 한다면 애플리케이션은 어떤 영향을 받습니까? 변경 내용은 관리됩니까?  
   
 ## <a name="specifying-the-spn"></a>SPN 지정  
  대화 상자 또는 코드에서 SPN을 지정할 수 있습니다. 이 섹션에서는 SPN을 지정하는 방법에 대해 설명합니다.  

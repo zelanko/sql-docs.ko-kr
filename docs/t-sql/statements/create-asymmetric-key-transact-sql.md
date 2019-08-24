@@ -106,7 +106,7 @@ CREATE ASYMMETRIC KEY asym_key_name
  외부 공급자의 키 이름을 지정합니다.  
   
  CREATION_DISPOSITION = CREATE_NEW  
- 확장 가능 키 관리 장치에 새 키를 만듭니다. PROVIDER_KEY_NAME을 사용하여 디바이스에 키 이름을 지정해야 합니다. 키가 이미 장치에 있는 경우 문이 오류와 함께 실패합니다.  
+ 확장 가능 키 관리 디바이스에 새 키를 만듭니다. PROVIDER_KEY_NAME을 사용하여 디바이스에 키 이름을 지정해야 합니다. 키가 이미 디바이스에 있는 경우 문이 오류와 함께 실패합니다.  
   
  CREATION_DISPOSITION = OPEN_EXISTING  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 비대칭 키를 기존 확장 가능 키 관리 키에 매핑합니다. PROVIDER_KEY_NAME을 사용하여 디바이스에 키 이름을 지정해야 합니다. CREATION_DISPOSITION = OPEN_EXISTING을 지정하지 않은 경우 기본값은 CREATE_NEW입니다.  
@@ -122,7 +122,7 @@ CREATE ASYMMETRIC KEY asym_key_name
  프라이빗 키의 길이는 512, 1024 또는 2048비트일 수 있습니다.  
   
 ## <a name="permissions"></a>사용 권한  
- 데이터베이스에 대한 CREATE ASYMMETRIC KEY 권한이 필요합니다. AUTHORIZATION 절이 지정된 경우 데이터베이스 보안 주체에 대한 IMPERSONATE 권한 또는 응용 프로그램 역할에 대한 ALTER 권한이 필요합니다. Windows 로그인, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 애플리케이션 역할만 비대칭 키를 소유할 수 있습니다. 그룹 및 역할은 비대칭 키를 소유할 수 없습니다.  
+ 데이터베이스에 대한 CREATE ASYMMETRIC KEY 권한이 필요합니다. AUTHORIZATION 절이 지정된 경우 데이터베이스 보안 주체에 대한 IMPERSONATE 권한 또는 애플리케이션 역할에 대한 ALTER 권한이 필요합니다. Windows 로그인, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인 및 애플리케이션 역할만 비대칭 키를 소유할 수 있습니다. 그룹 및 역할은 비대칭 키를 소유할 수 없습니다.  
   
 ## <a name="examples"></a>예  
   

@@ -67,7 +67,7 @@ ms.locfileid: "62922094"
   
 2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-3.  다음 예를 복사하여 쿼리에 붙여 넣습니다. 이 예에서는 [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) 를 사용하여 백업 디바이스를 삭제하는 방법에 대해 설명합니다. `mybackupdisk` 백업 장치와 실제 이름 `c:\backup\backup1.bak`를 만들려면 첫 번째 예를 실행합니다. `mybackupdisk` 백업 장치를 삭제하려면 `sp_dropdevice`를 실행합니다. `delfile` 매개 변수는 물리적 이름을 삭제합니다.  
+3.  다음 예를 복사하여 쿼리에 붙여 넣습니다. 이 예에서는 [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) 를 사용하여 백업 디바이스를 삭제하는 방법에 대해 설명합니다. `mybackupdisk` 백업 장치와 실제 이름 `c:\backup\backup1.bak`를 만들려면 첫 번째 예를 실행합니다. `mybackupdisk` 백업 디바이스를 삭제하려면 `sp_dropdevice`를 실행합니다. `delfile` 매개 변수는 물리적 이름을 삭제합니다.  
   
 ```sql  
 --Define a backup device and physical name.   

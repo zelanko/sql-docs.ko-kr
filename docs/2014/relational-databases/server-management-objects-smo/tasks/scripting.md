@@ -42,7 +42,7 @@ ms.locfileid: "63158785"
 ## <a name="example"></a>예제  
  제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio.NET에서 Visual Basic SMO 프로젝트 만들기](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) 또는 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
   
- 이 코드 예제에는 System.Collections.Specialized 네임스페이스에 대한 `Imports` 문이 필요합니다. 응용 프로그램의 선언 앞에 다른 Imports 문과 함께 삽입하십시오.  
+ 이 코드 예제에는 System.Collections.Specialized 네임스페이스에 대한 `Imports` 문이 필요합니다. 애플리케이션의 선언 앞에 다른 Imports 문과 함께 삽입하십시오.  
   
 ```  
 Imports Microsoft.SqlServer.Management.Smo  

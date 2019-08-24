@@ -26,7 +26,7 @@ ms.locfileid: "68889605"
  이 항목에서는 다차원 및 데이터 마이닝 모드에서 작업할 때의 기본 Analysis Services 아키텍처에 대해 설명합니다. 다른 모드에 대 한 자세한 내용은 [테이블 형식 모델링 &#40;ssas 테이블&#41; ](../../tabular-models/tabular-models-ssas.md) 형식 및 [테이블 형식 및 다차원 &#40;솔루션&#41;비교 ssas](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas)를 참조 하세요.  
   
 ## <a name="basic-architecture"></a>기본 아키텍처  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에는 여러 데이터베이스가 있을 수 있으며, 데이터베이스에는 OLAP 개체와 데이터 마이닝 개체가 동시에 있을 수 있습니다. 응용 프로그램은 지정된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 지정된 데이터베이스에 연결합니다. 서버 컴퓨터는 여러 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 호스팅할 수 있습니다. 인스턴스는 "\<ServerName >\\< InstanceName\>"으로 이름이 지정 됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 그림에서는 개체 간에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 언급 된 모든 관계를 보여 줍니다.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스에는 여러 데이터베이스가 있을 수 있으며, 데이터베이스에는 OLAP 개체와 데이터 마이닝 개체가 동시에 있을 수 있습니다. 애플리케이션은 지정된 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스와 지정된 데이터베이스에 연결합니다. 서버 컴퓨터는 여러 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 인스턴스를 호스팅할 수 있습니다. 인스턴스는 "\<ServerName >\\< InstanceName\>"으로 이름이 지정 됩니다. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 다음 그림에서는 개체 간에 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 언급 된 모든 관계를 보여 줍니다.  
   
  ![AMO 실행 개체 관계](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO 실행 개체 관계")  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68889605"
   
  ![시간 차원에 따라 구성 된 측정값의 다이어그램](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "시간 차원에 따라 구성 된 측정값의 다이어그램")  
   
- 단일 차원을 사용하여 측정값을 집계하는 것 외에도 다른 차원의 멤버를 조합하여 측정값을 집계할 수 있습니다. 이렇게 하면 비즈니스 사용자가 동시에 여러 차원에서 측정값을 평가할 수 있습니다. 예를 들어 비즈니스 사용자가 Eastern Hemisphere와 Western Hemisphere에서 항공편으로 도착한 분기별 수입품을 분석하려는 경우 큐브에 대해 쿼리를 실행하여 다음과 같은 데이터 집합을 검색할 수 있습니다.  
+ 단일 차원을 사용하여 측정값을 집계하는 것 외에도 다른 차원의 멤버를 조합하여 측정값을 집계할 수 있습니다. 이렇게 하면 비즈니스 사용자가 동시에 여러 차원에서 측정값을 평가할 수 있습니다. 예를 들어 비즈니스 사용자가 Eastern Hemisphere와 Western Hemisphere에서 항공편으로 도착한 분기별 수입품을 분석하려는 경우 큐브에 대해 쿼리를 실행하여 다음과 같은 데이터 세트을 검색할 수 있습니다.  
   
 ||||패키지|||마지막|||  
 |-|-|-|--------------|-|-|----------|-|-|  

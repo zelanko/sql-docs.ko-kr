@@ -18,7 +18,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62757748"
 ---
 # <a name="perspective-representation-tabular"></a>큐브 뷰 표현(테이블 형식)
-  큐브 뷰는 클라이언트 응용 프로그램을 위해 모델을 더 작은 부분으로 간소화하거나 집중시키는 메커니즘입니다.  
+  큐브 뷰는 클라이언트 애플리케이션을 위해 모델을 더 작은 부분으로 간소화하거나 집중시키는 메커니즘입니다.  
   
  참조 [큐브 뷰 표현 (테이블 형식)](perspective-representation-tabular.md) 큐브 뷰 표현을 만들고 조작 하는 방법에 대해서는 설명에 대 한 합니다.  
   

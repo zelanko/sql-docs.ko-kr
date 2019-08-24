@@ -39,7 +39,7 @@ ms.locfileid: "66071512"
  [PowerPivot 솔루션 정보](#intro)  
   
 ##  <a name="bkmk_classic"></a> 필수 구성 요소: 웹 응용 프로그램에서 클래식 모드 인증을 사용 하는지 확인  
- SharePoint용 PowerPivot은 Windows 클래식 모드 인증을 사용하는 웹 응용 프로그램에서만 지원됩니다. 응용 프로그램에서 클래식 모드가 사용 되는지 확인 하려면에서 다음 PowerShell cmdlet을 실행 합니다 **SharePoint 2010 관리 셸**대체, `http://<top-level site name>` SharePoint 사이트의 이름:  
+ SharePoint용 PowerPivot은 Windows 클래식 모드 인증을 사용하는 웹 애플리케이션에서만 지원됩니다. 응용 프로그램에서 클래식 모드가 사용 되는지 확인 하려면에서 다음 PowerShell cmdlet을 실행 합니다 **SharePoint 2010 관리 셸**대체, `http://<top-level site name>` SharePoint 사이트의 이름:  
   
 ```  
 Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthentication  
@@ -96,7 +96,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
  이제 중앙 관리에 웹 애플리케이션 솔루션이 배포되었으므로 중앙 관리를 사용하여 모든 나머지 구성 단계를 완료할 수 있습니다.  
   
 ##  <a name="deployUI"></a> 3단계: 다른 웹 응용 프로그램에 PowerPivot 웹 응용 프로그램 솔루션 배포  
- 앞에서는 Powerpivotwebapp.wsp를 중앙 관리로 배포했습니다. 이 섹션에서는 PowerPivot 데이터 액세스를 지원하는 각각의 기존 웹 응용 프로그램에 powerpivotwebapp.wsp를 배포합니다. 나중에 웹 애플리케이션을 더 많이 추가하는 경우 추가 웹 애플리케이션에 대해 이 단계를 반복해야 합니다.  
+ 앞에서는 Powerpivotwebapp.wsp를 중앙 관리로 배포했습니다. 이 섹션에서는 PowerPivot 데이터 액세스를 지원하는 각각의 기존 웹 애플리케이션에 powerpivotwebapp.wsp를 배포합니다. 나중에 웹 애플리케이션을 더 많이 추가하는 경우 추가 웹 애플리케이션에 대해 이 단계를 반복해야 합니다.  
   
 1.  중앙 관리의 시스템 설정에서 **팜 솔루션 관리**를 클릭합니다.  
   
@@ -123,16 +123,16 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  모든 솔루션을 다시 배포하려는 경우에는 다음 순서로 작업을 수행합니다.  
   
-1.  PowerPivot 웹 응용 프로그램 솔루션을 사용하는 모든 SharePoint 웹 응용 프로그램에서 PowerPivot 웹 응용 프로그램 솔루션을 취소합니다.  
+1.  PowerPivot 웹 애플리케이션 솔루션을 사용하는 모든 SharePoint 웹 애플리케이션에서 PowerPivot 웹 애플리케이션 솔루션을 취소합니다.  
   
 2.  PowerPivot 팜 솔루션을 취소합니다.  
   
 3.  PowerPivot 팜 솔루션을 다시 배포합니다.  
   
-4.  모든 SharePoint 웹 응용 프로그램에 PowerPivot 웹 응용 프로그램 솔루션을 다시 배포합니다.  
+4.  모든 SharePoint 웹 애플리케이션에 PowerPivot 웹 애플리케이션 솔루션을 다시 배포합니다.  
   
 ##  <a name="intro"></a> PowerPivot 솔루션 정보  
- SharePoint용 PowerPivot에서는 두 가지 솔루션 패키지를 사용하여 해당 응용 프로그램 페이지 및 프로그램 파일을 팜과 개별 웹 응용 프로그램에 배포합니다.  
+ SharePoint용 PowerPivot에서는 두 가지 솔루션 패키지를 사용하여 해당 애플리케이션 페이지 및 프로그램 파일을 팜과 개별 웹 애플리케이션에 배포합니다.  
   
 -   팜 솔루션은 전역적으로 사용됩니다. 이 솔루션은 한 번 배포되고 나면 나중에 팜에 추가하는 모든 새 SharePoint용 PowerPivot 서버에서 자동으로 사용할 수 있습니다.  
   
@@ -140,11 +140,11 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  각 솔루션은 다른 방식으로 배포됩니다.  팜 솔루션은 첫 번째 SharePoint용 PowerPivot 인스턴스가 설치된 후 한 번 배포됩니다. 팜 솔루션을 배포하려면 PowerPivot 구성 도구 또는 PowerShell cmdlet을 사용합니다.  
   
- 웹 응용 프로그램 솔루션은 처음 중앙 관리에 배포된 다음 PowerPivot 데이터에 대한 요청을 지원하는 모든 추가 웹 응용 프로그램에 배포됩니다. 중앙 관리에 웹 응용 프로그램 솔루션을 배포하려면 PowerPivot 구성 도구 또는 PowerShell cmdlet을 사용해야 합니다. 다른 모든 웹 애플리케이션의 경우 중앙 관리 또는 PowerShell을 사용하여 수동으로 웹 애플리케이션 솔루션을 배포할 수 있습니다.  
+ 웹 애플리케이션 솔루션은 처음 중앙 관리에 배포된 다음 PowerPivot 데이터에 대한 요청을 지원하는 모든 추가 웹 애플리케이션에 배포됩니다. 중앙 관리에 웹 애플리케이션 솔루션을 배포하려면 PowerPivot 구성 도구 또는 PowerShell cmdlet을 사용해야 합니다. 다른 모든 웹 애플리케이션의 경우 중앙 관리 또는 PowerShell을 사용하여 수동으로 웹 애플리케이션 솔루션을 배포할 수 있습니다.  
   
 |해결 방법|Description|  
 |--------------|-----------------|  
-|Powerpivotfarm.wsp|Microsoft.AnalysisServices.SharePoint.Integration.dll을 전역 어셈블리에 추가합니다.<br /><br /> Microsoft.AnalysisServices.ChannelTransport.dll을 전역 어셈블리에 추가합니다.<br /><br /> 기능 및 리소스 파일을 설치하고 내용 유형을 등록합니다.<br /><br /> PowerPivot 갤러리 및 데이터 피드 라이브러리용 라이브러리 템플릿을 추가합니다.<br /><br /> 서비스 응용 프로그램 구성, PowerPivot 관리 대시보드, 데이터 새로 고침, PowerPivot 갤러리를 위한 응용 프로그램 페이지를 추가합니다.|  
+|Powerpivotfarm.wsp|Microsoft.AnalysisServices.SharePoint.Integration.dll을 전역 어셈블리에 추가합니다.<br /><br /> Microsoft.AnalysisServices.ChannelTransport.dll을 전역 어셈블리에 추가합니다.<br /><br /> 기능 및 리소스 파일을 설치하고 내용 유형을 등록합니다.<br /><br /> PowerPivot 갤러리 및 데이터 피드 라이브러리용 라이브러리 템플릿을 추가합니다.<br /><br /> 서비스 애플리케이션 구성, PowerPivot 관리 대시보드, 데이터 새로 고침, PowerPivot 갤러리를 위한 애플리케이션 페이지를 추가합니다.|  
 |powerpivotwebapp.wsp|Microsoft.AnalysisServices.SharePoint.Integration.dll 리소스 파일을 웹 프런트 엔드의 웹 서버 확장 폴더에 추가합니다.<br /><br /> PowerPivot 웹 서비스를 웹 프런트 엔드에 추가합니다.<br /><br /> PowerPivot 갤러리용 축소판 이미지 생성 기능을 추가합니다.|  
   
 ## <a name="see-also"></a>관련 항목  

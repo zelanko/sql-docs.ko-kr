@@ -27,13 +27,13 @@ ms.locfileid: "62991576"
   
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]는 [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]에서 표시하는 것과 같이 세션 상태의 전체적 개념을 표시하지 않습니다. 하지만 보고서를 실행할 때 보고서 서버에서는 **실행**의 형태로 메서드 호출 간의 상태를 유지 관리합니다. 실행을 통해 사용자는 보고서 서버에서 보고서 로드, 보고서에 대한 자격 증명 및 매개 변수 설정, 보고서 렌더링 등을 포함하여 보고서에 여러 작업을 수행할 수 있습니다.  
   
- 보고서 서버와 통신하는 동안 클라이언트에서는 실행을 사용하여 보고서 보기, 보고서의 다른 페이지로 사용자 이동 등을 관리하며 보고서의 섹션을 표시하거나 숨깁니다. 클라이언트 응용 프로그램에서 실행 중인 각 보고서별로 고유한 실행이 존재합니다.  
+ 보고서 서버와 통신하는 동안 클라이언트에서는 실행을 사용하여 보고서 보기, 보고서의 다른 페이지로 사용자 이동 등을 관리하며 보고서의 섹션을 표시하거나 숨깁니다. 클라이언트 애플리케이션에서 실행 중인 각 보고서별로 고유한 실행이 존재합니다.  
   
  일반적으로 실행의 수명은 사용자가 브라우저나 클라이언트 애플리케이션으로 이동하여 보려는 보고서를 선택할 때 시작됩니다. 마지막 실행 요청이 수신된 후 짧은 제한 시간이 지나면 실행은 폐기됩니다(기본 제한 시간은 20분).  
   
  웹 서비스 측면에서 수명은 보고서 서버 웹 서비스 <xref:ReportExecution2005.ReportExecutionService.LoadReport%2A>, <xref:ReportExecution2005.ReportExecutionService.LoadReportDefinition%2A> 또는 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 메서드가 호출될 때 시작됩니다. 애플리케이션에서는 다른 메서드를 사용하여 활성 실행을 조작할 수 있습니다(예: 매개 변수 설정 및 데이터 원본 설정). 마지막 실행 요청이 수신된 후 짧은 제한 시간이 지나면 실행은 폐기됩니다(기본 제한 시간은 20분).  
   
- 응용 프로그램에서는 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 및 <xref:ReportExecution2005.ReportExecutionService.RenderStream%2A> 메서드에서 SOAP 헤더로 반환되는 <xref:ReportExecution2005.ExecutionHeader.ExecutionID%2A>를 저장하여 웹 서비스 <xref:ReportExecution2005.ReportExecutionService.LoadReport%2A> 및 <xref:ReportExecution2005.ReportExecutionService.LoadReportDefinition%2A> 메서드 호출 간의 여러 활성 실행을 추적합니다.  
+ 애플리케이션에서는 <xref:ReportExecution2005.ReportExecutionService.Render%2A> 및 <xref:ReportExecution2005.ReportExecutionService.RenderStream%2A> 메서드에서 SOAP 헤더로 반환되는 <xref:ReportExecution2005.ExecutionHeader.ExecutionID%2A>를 저장하여 웹 서비스 <xref:ReportExecution2005.ReportExecutionService.LoadReport%2A> 및 <xref:ReportExecution2005.ReportExecutionService.LoadReportDefinition%2A> 메서드 호출 간의 여러 활성 실행을 추적합니다.  
   
  다음 다이어그램은 보고서에 대한 처리 및 렌더링 경로를 보여 줍니다.  
   

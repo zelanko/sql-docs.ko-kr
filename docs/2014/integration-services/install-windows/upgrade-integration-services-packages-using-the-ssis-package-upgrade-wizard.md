@@ -53,7 +53,7 @@ ms.locfileid: "62767893"
 -   명령 프롬프트에서 SSISUpgrade.exe 파일을 실행 합니다 **C:\Program Files\Microsoft SQL Server\120\DTS\Binn** 폴더입니다.  
   
 ## <a name="backing-up-the-original-packages"></a>원래 패키지 백업  
- 원래 패키지를 백업하려면 원래 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장되어 있어야 합니다. 마법사를 실행하는 방법에 따라 이 저장 위치는 자동으로 선택될 수 있습니다.  
+ 원래 패키지를 백업하려면 원래 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장되어 있어야 합니다. 마법사를 실행하는 방법에 따라 이 스토리지 위치는 자동으로 선택될 수 있습니다.  
   
 -   [!INCLUDE[ssIS](../../includes/ssis-md.md)] 에서 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]패키지 업그레이드 마법사를 실행하면 자동으로 원래 패키지와 업그레이드된 패키지가 파일 시스템의 같은 폴더에 저장됩니다.  
   

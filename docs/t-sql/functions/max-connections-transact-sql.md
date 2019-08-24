@@ -28,7 +28,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68130334"
 ---
-# <a name="x40x40maxconnections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS(Transact-SQL)
+# <a name="x40x40max_connections-transact-sql"></a>&#x40;&#x40;MAX_CONNECTIONS(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인스턴스에서 허용되는 최대 동시 사용자 연결 수를 반환합니다. 반환된 연결 수는 반드시 현재 구성된 연결 수가 아니어도 됩니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "68130334"
  **integer**  
   
 ## <a name="remarks"></a>Remarks  
- 허용되는 실제 사용자 연결 수는 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과 응용 프로그램 및 하드웨어의 제한에 따라 달라집니다.  
+ 허용되는 실제 사용자 연결 수는 설치된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전과 애플리케이션 및 하드웨어의 제한에 따라 달라집니다.  
   
  연결 수를 줄이기 위해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 다시 구성하려면 **sp_configure**를 사용합니다.  
   

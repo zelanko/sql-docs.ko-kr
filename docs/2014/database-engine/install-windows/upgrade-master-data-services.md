@@ -38,7 +38,7 @@ ms.locfileid: "62774663"
 ##  <a name="noengine"></a> 데이터베이스 엔진 업그레이드 없이 업그레이드  
  이 시나리오 간주 될 수 있습니다-나란히 설치 되므로 둘 다 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 고 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 동일한 컴퓨터 또는 별도 컴퓨터에서 병렬로 설치 됩니다.  
   
- 이 시나리오에서는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 계속 사용하여 MDS 데이터베이스를 호스팅합니다. 그러나 MDS 데이터베이스의 스키마를 업그레이드한 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만들어 MDS 데이터베이스에 액세스해야 합니다. MDS 데이터베이스는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 웹 응용 프로그램에서 더 이상 액세스할 수 없습니다.  
+ 이 시나리오에서는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 계속 사용하여 MDS 데이터베이스를 호스팅합니다. 그러나 MDS 데이터베이스의 스키마를 업그레이드한 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만들어 MDS 데이터베이스에 액세스해야 합니다. MDS 데이터베이스는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 웹 애플리케이션에서 더 이상 액세스할 수 없습니다.  
   
  설치 하려는 경우 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 및 이전 버전의 SQL Server ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]/[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 동일한 컴퓨터에서 하면 파일이 다른 위치에 설치 되기 때문입니다.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62774663"
   
     4.  **데이터베이스 업그레이드** 를 클릭하여 **데이터베이스 업그레이드 마법사**를 시작합니다. 자세한 내용은 [데이터베이스 업그레이드 마법사&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)를 참조하세요.  
   
-3.  업그레이드가 완료되면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 응용 프로그램을 만듭니다.  
+3.  업그레이드가 완료되면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만듭니다.  
   
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   
@@ -88,11 +88,11 @@ ms.locfileid: "62774663"
         -   **새 사이트 만들기**를 선택합니다. 새 웹 사이트를 만들면 새 웹 애플리케이션이 자동으로 만들어집니다.  
   
         > [!IMPORTANT]  
-        >  이전 버전의 SQL Server([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])에 있는 기존 MDS 웹 응용 프로그램을 SQL Server 2014 버전의 Master Data Services 구성 관리자에서 선택할 수 있습니다. 기존 웹 애플리케이션을 선택하는 대신 MDS용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만들어야 합니다. 이렇게 하지 않으면 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결하려고 할 때 요청된 페이지의 관련 구성 데이터가 잘못되었기 때문에 해당 페이지에 액세스할 수 없다는 오류 메시지가 나타납니다.  
+        >  이전 버전의 SQL Server([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])에 있는 기존 MDS 웹 애플리케이션을 SQL Server 2014 버전의 Master Data Services 구성 관리자에서 선택할 수 있습니다. 기존 웹 애플리케이션을 선택하는 대신 MDS용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만들어야 합니다. 이렇게 하지 않으면 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결하려고 할 때 요청된 페이지의 관련 구성 데이터가 잘못되었기 때문에 해당 페이지에 액세스할 수 없다는 오류 메시지가 나타납니다.  
         >   
-        >  MDS 웹 응용 프로그램에 기존([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 웹 응용 프로그램과 동일한 이름(별칭)을 사용하려면 먼저 웹 응용 프로그램과 관련 응용 프로그램 풀을 IIS에서 삭제한 다음 SQL Server 2014 버전의 Master Data Services 구성 관리자를 사용하여 동일한 이름의 웹 응용 프로그램을 만들어야 합니다. 웹 애플리케이션과 애플리케이션 풀을 IIS에서 제거하는 방법은 [애플리케이션 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 및 [애플리케이션 풀 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)를 참조하세요.  
+        >  MDS 웹 애플리케이션에 기존([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 웹 애플리케이션과 동일한 이름(별칭)을 사용하려면 먼저 웹 애플리케이션과 관련 애플리케이션 풀을 IIS에서 삭제한 다음 SQL Server 2014 버전의 Master Data Services 구성 관리자를 사용하여 동일한 이름의 웹 애플리케이션을 만들어야 합니다. 웹 애플리케이션과 애플리케이션 풀을 IIS에서 제거하는 방법은 [애플리케이션 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 및 [애플리케이션 풀 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)를 참조하세요.  
   
-4.  이제 새 웹 응용 프로그램을 업그레이드된 MDS 데이터베이스와 연결합니다.  
+4.  이제 새 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결합니다.  
   
     1.  **응용 프로그램을 데이터베이스에 연결** 섹션에서 **선택**을 클릭합니다.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62774663"
     3.  **적용**을 클릭합니다.  
   
 ##  <a name="engine"></a> 데이터베이스 엔진 업그레이드를 사용해서 업그레이드  
- 이 시나리오에서는 데이터베이스 엔진과 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 응용 프로그램을 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 SQL Server 2012에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 모두 업그레이드합니다.  
+ 이 시나리오에서는 데이터베이스 엔진과 [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] 애플리케이션을 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 SQL Server 2012에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]로 모두 업그레이드합니다.  
   
  이 태스크를 수행하려면 다음 단계를 완료합니다.  
   
@@ -146,7 +146,7 @@ ms.locfileid: "62774663"
   
     5.  **적용**을 클릭합니다.  
   
-5.  업그레이드가 완료되면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 응용 프로그램을 만듭니다.  
+5.  업그레이드가 완료되면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만듭니다.  
   
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   
@@ -159,11 +159,11 @@ ms.locfileid: "62774663"
         -   **새 사이트 만들기**를 선택합니다. 새 웹 사이트를 만들면 새 웹 애플리케이션이 자동으로 만들어집니다.  
   
         > [!IMPORTANT]  
-        >  이전 버전의 SQL Server([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])에 있는 기존 MDS 웹 응용 프로그램을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 Master Data Services 구성 관리자에서 선택할 수 있습니다. 기존 웹 애플리케이션을 선택하는 대신 MDS용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만들어야 합니다. 이렇게 하지 않으면 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결하려고 할 때 요청된 페이지의 관련 구성 데이터가 잘못되었기 때문에 해당 페이지에 액세스할 수 없다는 오류 메시지가 나타납니다.  
+        >  이전 버전의 SQL Server([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])에 있는 기존 MDS 웹 애플리케이션을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 Master Data Services 구성 관리자에서 선택할 수 있습니다. 기존 웹 애플리케이션을 선택하는 대신 MDS용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만들어야 합니다. 이렇게 하지 않으면 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결하려고 할 때 요청된 페이지의 관련 구성 데이터가 잘못되었기 때문에 해당 페이지에 액세스할 수 없다는 오류 메시지가 나타납니다.  
         >   
-        >  MDS 웹 응용 프로그램에 기존([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 웹 응용 프로그램과 동일한 이름(별칭)을 사용하려면 먼저 웹 응용 프로그램과 관련 응용 프로그램 풀을 IIS에서 삭제한 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 Master Data Services 구성 관리자를 사용하여 동일한 이름의 웹 응용 프로그램을 만들어야 합니다. 웹 애플리케이션과 애플리케이션 풀을 IIS에서 제거하는 방법은 [애플리케이션 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 및 [애플리케이션 풀 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)를 참조하세요.  
+        >  MDS 웹 애플리케이션에 기존([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 웹 애플리케이션과 동일한 이름(별칭)을 사용하려면 먼저 웹 애플리케이션과 관련 애플리케이션 풀을 IIS에서 삭제한 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 Master Data Services 구성 관리자를 사용하여 동일한 이름의 웹 애플리케이션을 만들어야 합니다. 웹 애플리케이션과 애플리케이션 풀을 IIS에서 제거하는 방법은 [애플리케이션 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 및 [애플리케이션 풀 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)를 참조하세요.  
   
-6.  이제 새 웹 응용 프로그램을 업그레이드된 MDS 데이터베이스와 연결합니다.  
+6.  이제 새 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결합니다.  
   
     1.  **응용 프로그램을 데이터베이스에 연결** 섹션에서 **선택**을 클릭합니다.  
   
@@ -174,7 +174,7 @@ ms.locfileid: "62774663"
 ##  <a name="twocomputer"></a> 두 컴퓨터에서의 업그레이드 시나리오  
  이 시나리오에서는 두 컴퓨터에서 SQL Server가 설치 하는 시스템 업그레이드: 개 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]와 SQL Server 2008 R2 또는 SQL Server 2012를 사용 합니다.  
   
- [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]가 설치된 경우 계속 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 각각 사용하여 한 컴퓨터에서 MDS 데이터베이스를 호스팅합니다. 그러나 MDS 데이터베이스의 스키마를 업그레이드한 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 사용하여 MDS 데이터베이스에 액세스해야 합니다. MDS 데이터베이스는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 웹 응용 프로그램에서 더 이상 액세스할 수 없습니다.  
+ [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]가 설치된 경우 계속 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]를 각각 사용하여 한 컴퓨터에서 MDS 데이터베이스를 호스팅합니다. 그러나 MDS 데이터베이스의 스키마를 업그레이드한 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 사용하여 MDS 데이터베이스에 액세스해야 합니다. MDS 데이터베이스는 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 웹 애플리케이션에서 더 이상 액세스할 수 없습니다.  
   
 -   기본적으로 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]의 경우 파일은 *드라이브*:\Program Files\Microsoft SQL Server\120\Master Data Services에 설치됩니다.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "62774663"
   
     4.  **데이터베이스 업그레이드** 를 클릭하여 **데이터베이스 업그레이드 마법사**를 시작합니다. 자세한 내용은 [데이터베이스 업그레이드 마법사&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)를 참조하세요.  
   
-3.  업그레이드가 완료되면 SQL Server 2014 웹 응용 프로그램을 만듭니다.  
+3.  업그레이드가 완료되면 SQL Server 2014 웹 애플리케이션을 만듭니다.  
   
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   
@@ -222,11 +222,11 @@ ms.locfileid: "62774663"
         -   **새 사이트 만들기**를 선택합니다. 새 웹 사이트를 만들면 새 웹 애플리케이션이 자동으로 만들어집니다.  
   
         > [!IMPORTANT]  
-        >  이전 버전의 SQL Server([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])에 있는 기존 MDS 웹 응용 프로그램을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 Master Data Services 구성 관리자에서 선택할 수 있습니다. 기존 웹 애플리케이션을 선택하는 대신 MDS용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만들어야 합니다. 이렇게 하지 않으면 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결하려고 할 때 요청된 페이지의 관련 구성 데이터가 잘못되었기 때문에 해당 페이지에 액세스할 수 없다는 오류 메시지가 나타납니다.  
+        >  이전 버전의 SQL Server([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])에 있는 기존 MDS 웹 애플리케이션을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 Master Data Services 구성 관리자에서 선택할 수 있습니다. 기존 웹 애플리케이션을 선택하는 대신 MDS용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만들어야 합니다. 이렇게 하지 않으면 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결하려고 할 때 요청된 페이지의 관련 구성 데이터가 잘못되었기 때문에 해당 페이지에 액세스할 수 없다는 오류 메시지가 나타납니다.  
         >   
-        >  MDS 웹 응용 프로그램에 기존([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 웹 응용 프로그램과 동일한 이름(별칭)을 사용하려면 먼저 웹 응용 프로그램과 관련 응용 프로그램 풀을 IIS에서 삭제한 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 Master Data Services 구성 관리자를 사용하여 동일한 이름의 웹 응용 프로그램을 만들어야 합니다. 웹 애플리케이션과 애플리케이션 풀을 IIS에서 제거하는 방법은 [애플리케이션 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 및 [애플리케이션 풀 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)를 참조하세요.  
+        >  MDS 웹 애플리케이션에 기존([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 웹 애플리케이션과 동일한 이름(별칭)을 사용하려면 먼저 웹 애플리케이션과 관련 애플리케이션 풀을 IIS에서 삭제한 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 Master Data Services 구성 관리자를 사용하여 동일한 이름의 웹 애플리케이션을 만들어야 합니다. 웹 애플리케이션과 애플리케이션 풀을 IIS에서 제거하는 방법은 [애플리케이션 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 및 [애플리케이션 풀 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)를 참조하세요.  
   
-4.  이제 웹 응용 프로그램을 업그레이드된 MDS 데이터베이스와 연결합니다.  
+4.  이제 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결합니다.  
   
     1.  **응용 프로그램을 데이터베이스에 연결** 섹션에서 **선택**을 클릭합니다.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "62774663"
   
     4.  **데이터베이스 업그레이드** 를 클릭하여 **데이터베이스 업그레이드 마법사**를 시작합니다. 자세한 내용은 [데이터베이스 업그레이드 마법사&#40;Master Data Services 구성 관리자&#41;](../../master-data-services/upgrade-database-wizard-master-data-services-configuration-manager.md)를 참조하세요.  
   
-4.  업그레이드가 완료되면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 응용 프로그램을 만듭니다.  
+4.  업그레이드가 완료되면 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만듭니다.  
   
     1.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]를 엽니다.  
   
@@ -285,11 +285,11 @@ ms.locfileid: "62774663"
         -   **새 사이트 만들기**를 선택합니다. 새 웹 사이트를 만들면 새 웹 애플리케이션이 자동으로 만들어집니다.  
   
         > [!IMPORTANT]  
-        >  이전 버전의 SQL Server([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])에 있는 기존 MDS 웹 응용 프로그램을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 Master Data Services 구성 관리자에서 선택할 수 있습니다. 기존 웹 애플리케이션을 선택하는 대신 MDS용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만들어야 합니다. 이렇게 하지 않으면 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결하려고 할 때 요청된 페이지의 관련 구성 데이터가 잘못되었기 때문에 해당 페이지에 액세스할 수 없다는 오류 메시지가 나타납니다.  
+        >  이전 버전의 SQL Server([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])에 있는 기존 MDS 웹 애플리케이션을 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 Master Data Services 구성 관리자에서 선택할 수 있습니다. 기존 웹 애플리케이션을 선택하는 대신 MDS용 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 웹 애플리케이션을 만들어야 합니다. 이렇게 하지 않으면 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결하려고 할 때 요청된 페이지의 관련 구성 데이터가 잘못되었기 때문에 해당 페이지에 액세스할 수 없다는 오류 메시지가 나타납니다.  
         >   
-        >  MDS 웹 응용 프로그램에 기존([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 웹 응용 프로그램과 동일한 이름(별칭)을 사용하려면 먼저 웹 응용 프로그램과 관련 응용 프로그램 풀을 IIS에서 삭제한 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 Master Data Services 구성 관리자를 사용하여 동일한 이름의 웹 응용 프로그램을 만들어야 합니다. 웹 애플리케이션과 애플리케이션 풀을 IIS에서 제거하는 방법은 [애플리케이션 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 및 [애플리케이션 풀 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)를 참조하세요.  
+        >  MDS 웹 애플리케이션에 기존([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 또는 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) 웹 애플리케이션과 동일한 이름(별칭)을 사용하려면 먼저 웹 애플리케이션과 관련 애플리케이션 풀을 IIS에서 삭제한 다음 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전의 Master Data Services 구성 관리자를 사용하여 동일한 이름의 웹 애플리케이션을 만들어야 합니다. 웹 애플리케이션과 애플리케이션 풀을 IIS에서 제거하는 방법은 [애플리케이션 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323537) 및 [애플리케이션 풀 제거(IIS)](https://go.microsoft.com/fwlink/?LinkId=323538)를 참조하세요.  
   
-5.  이제 새 웹 응용 프로그램을 업그레이드된 MDS 데이터베이스와 연결합니다.  
+5.  이제 새 웹 애플리케이션을 업그레이드된 MDS 데이터베이스와 연결합니다.  
   
     1.  **응용 프로그램을 데이터베이스에 연결** 섹션에서 **선택**을 클릭합니다.  
   

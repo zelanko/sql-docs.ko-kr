@@ -57,11 +57,11 @@ ms.locfileid: "66088087"
   
 -   *분류 알고리즘*합니다.  
   
-     데이터 집합의 다른 특성을 기반으로 하나 이상의 불연속 변수를 예측합니다.  
+     데이터 세트의 다른 특성을 기반으로 하나 이상의 불연속 변수를 예측합니다.  
   
 -   *회귀 알고리즘*  
   
-     데이터 집합의 다른 특성을 기반으로 수익 또는 손실과 같은 하나 이상의 연속 변수를 예측합니다.  
+     데이터 세트의 다른 특성을 기반으로 수익 또는 손실과 같은 하나 이상의 연속 변수를 예측합니다.  
   
 -   *세그먼트화 알고리즘*  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66088087"
   
 -   *연결 알고리즘*  
   
-     데이터 집합에 있는 여러 특성 사이의 상관 관계를 찾습니다. 이러한 종류의 알고리즘은 연결 규칙을 만드는 데 가장 일반적으로 사용됩니다. 연결 규칙은 시장 바구니 분석에 사용할 수 있습니다.  
+     데이터 세트에 있는 여러 특성 사이의 상관 관계를 찾습니다. 이러한 종류의 알고리즘은 연결 규칙을 만드는 데 가장 일반적으로 사용됩니다. 연결 규칙은 시장 바구니 분석에 사용할 수 있습니다.  
   
 -   *시퀀스 분석 알고리즘*  
   
@@ -107,8 +107,8 @@ ms.locfileid: "66088087"
 |알고리즘 이름|Description|사용 대상|  
 |--------------------|-----------------|-------------|  
 |Microsoft 연결 규칙|트랜잭션 내에 함께 나타날 가능성이 높은 항목을 설명하는 규칙을 작성합니다.|[연결 마법사 &#40;Excel 용 데이터 마이닝 클라이언트&#41;](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [시장 바구니 분석 &#40;Excel 테이블 분석 도구&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)|  
-|Microsoft 클러스터링|일시적인 관찰만으로는 논리적으로 이끌어 내지 못할 수 있는 데이터 집합 내 관계를 식별합니다. 반복 기술을 사용하여 비슷한 특징을 가진 클러스터로 레코드를 그룹화합니다.|[범주 검색 &#40;Excel 용 테이블 분석 도구&#41;](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [클러스터 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  
-|Microsoft 의사 결정 트리|데이터 집합에 있는 열 간의 관계를 기반으로 예측을 수행하고 관계를 특정 값에 대한 트리와 비슷한 분할 집합으로 모델링합니다.<br /><br /> 불연속 및 연속 특성에 대한 예측을 모두 지원합니다.|[분류 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](classify-wizard-data-mining-add-ins-for-excel.md)<br /><br /> [추정 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)|  
+|Microsoft 클러스터링|일시적인 관찰만으로는 논리적으로 이끌어 내지 못할 수 있는 데이터 세트 내 관계를 식별합니다. 반복 기술을 사용하여 비슷한 특징을 가진 클러스터로 레코드를 그룹화합니다.|[범주 검색 &#40;Excel 용 테이블 분석 도구&#41;](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [클러스터 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  
+|Microsoft 의사 결정 트리|데이터 세트에 있는 열 간의 관계를 기반으로 예측을 수행하고 관계를 특정 값에 대한 트리와 비슷한 분할 집합으로 모델링합니다.<br /><br /> 불연속 및 연속 특성에 대한 예측을 모두 지원합니다.|[분류 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](classify-wizard-data-mining-add-ins-for-excel.md)<br /><br /> [추정 마법사 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](estimate-wizard-data-mining-add-ins-for-excel.md)|  
 |Microsoft 선형 회귀|대상 변수 및 검사하는 변수 간에 선형 종속성이 있는 경우 대상 및 해당 입력 간의 가장 효과적인 관계를 찾습니다.<br /><br /> 연속 특성 예측을 지원합니다.|이 알고리즘은 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]에서 사용할 수 있습니다. Office용 데이터 마이닝 추가 기능에서 구조를 만든 후 직접 모델을 추가하여 이 알고리즘을 사용하는 모델을 만들 수 있습니다.<br /><br /> 자세한 내용은 [고급 모델링 &#40;Excel 용 데이터 마이닝 추가 기능&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)합니다.|  
 |Microsoft 로지스틱 회귀|결과에 영향을 주는 요인을 분석합니다. 여기에서 결과는 일반적으로 이벤트가 발생함 또는 발생하지 않음의 두 값으로 제한됩니다.<br /><br /> 불연속 및 연속 특성에 대한 예측을 모두 지원합니다.|[예제에서 입력 &#40;Excel 용 테이블 분석 도구&#41;](fill-from-example-table-analysis-tools-for-excel.md)<br /><br /> [목표 검색 시나리오 &#40;Excel 용 테이블 분석 도구&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md)<br /><br /> [가상 시나리오 &#40;Excel 용 테이블 분석 도구&#41;](what-if-scenario-table-analysis-tools-for-excel.md)<br /><br /> [예측 계산기 &#40;Excel 용 테이블 분석 도구&#41;](prediction-calculator-table-analysis-tools-for-excel.md)|  
 |Microsoft Naïve Bayes|모든 입력 및 예측 가능 열 간의 관계에 대한 확률을 찾습니다. 이 알고리즘은 관계를 검색하는 마이닝 모델을 신속하게 생성하는 데 유용합니다.<br /><br /> 불연속 또는 불연속화 특성만 지원합니다.<br /><br /> 모든 입력 특성을 독립적인 것으로 취급합니다.|[주요 영향 요인 분석 &#40;Excel 용 테이블 분석 도구&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)|  

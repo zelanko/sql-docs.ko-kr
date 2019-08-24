@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127118"
 ---
-# <a name="srvpfield-extended-stored-procedure-api"></a>srv_pfield(확장 저장 프로시저 API)
+# <a name="srv_pfield-extended-stored-procedure-api"></a>srv_pfield(확장 저장 프로시저 API)
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] 대신 CLR 통합을 사용하세요.  
@@ -60,7 +60,7 @@ len
   
 |값|반환 값|  
 |-----------|-------------|  
-|SRV_APPLNAME|연결을 설정할 때 클라이언트가 제공한 응용 프로그램 이름입니다.|  
+|SRV_APPLNAME|연결을 설정할 때 클라이언트가 제공한 애플리케이션 이름입니다.|  
 |SRV_BCPFLAG|플래그로, 클라이언트가 대량 복사 작업을 준비 중이면 TRUE이고, 그렇지 않으면 FALSE입니다.|  
 |SRV_CLIB|클라이언트에서 서버로의 통신을 가능하게 하는 라이브러리의 이름입니다.|  
 |SRV_CPID|클라이언트 원본 컴퓨터의 클라이언트 프로세스 ID입니다.|  

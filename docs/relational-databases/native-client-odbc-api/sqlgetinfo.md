@@ -35,7 +35,7 @@ ms.locfileid: "68131442"
 |SQL_ACCESSIBLE_TABLES|"Y"|  
 |SQL_ACTIVE_CONNECTIONS|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 연결 수가 제한됩니다. 이 0을 반환 하는 드라이버가 **SQLGetInfo** 요청 합니다.|  
 |SQL_ACTIVE_ENVIRONMENTS|환경 수는 드라이버에서 제한되지 않습니다. 이 0을 반환 하는 드라이버가 **SQLGetInfo** 요청 합니다.|  
-|SQL_ACTIVE_STATEMENTS|이 대 한 1을 반환 하는 드라이버가 **SQLGetInfo** 요청 합니다. 응용 프로그램에 사용할 수 있는 문 핸들 수는 드라이버에서 제한되지 않지만 문 핸들이 기본 실행될 때는 다른 핸들의 실행이 차단됩니다.|  
+|SQL_ACTIVE_STATEMENTS|이 대 한 1을 반환 하는 드라이버가 **SQLGetInfo** 요청 합니다. 애플리케이션에 사용할 수 있는 문 핸들 수는 드라이버에서 제한되지 않지만 문 핸들이 기본 실행될 때는 다른 핸들의 실행이 차단됩니다.|  
 |SQL_ALTER_DOMAIN|FALSE|  
 |SQL_ALTER_TABLE|SQL_AT_ADD_COLUMN SQL_AT_ADD_COLUMN_DEFAULT SQL_AT_ADD_COLUMN_SINGLE SQL_AT_ADD_CONSTRAINT SQL_AT_ADD_TABLE_CONSTRAINTSQL_AT_CONSTRAINT_NAME_DEFINITION SQL_AT_DROP_COLUMN_RESTRICT|  
 |SQL_SQL_CONFORMANCE|SQL_SC_SQL92_ENTRY|  

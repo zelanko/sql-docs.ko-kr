@@ -52,7 +52,7 @@ ms.locfileid: "68030295"
   
  SQL_CA_SS_VARIANT_SQL_TYPE은 새 설명자 필드입니다. 이 필드와 연결 된 값 유형을 지정 하는 응용 프로그램을 사용 하도록 설정 하려면 IRD 및 IPD에 추가 된 **sqlvariant** (SQL_SSVARIANT) 열 및 매개 변수  
   
- SQL_CA_SS_SERVER_TYPE은 새로운 IPD 전용 필드로, 응용 프로그램에서 SQL_TYPE_TYPETIMESTAMP나 C 형식의 SQL_C_TYPE_TIMESTAMP를 갖는 SQL_SS_VARIANT로 바인딩된 매개 변수 값을 서버로 전송하는 방법을 제어하는 데 사용할 수 있습니다. SQL_DESC_CONCISE_TYPE이 SQL_TYPE_TIMESTAMP (또는 sql_ss_variant 및 C 형식은 SQL_C_TYPE_TIMESTAMP) sql_ca_ss_server_type 값 tabular data stream (TDS) 형식의 매개 변수 값을 결정 SQLExecute 또는 SQLExecDirect 호출 되 면 을 다음과 같이 합니다.  
+ SQL_CA_SS_SERVER_TYPE은 새로운 IPD 전용 필드로, 애플리케이션에서 SQL_TYPE_TYPETIMESTAMP나 C 형식의 SQL_C_TYPE_TIMESTAMP를 갖는 SQL_SS_VARIANT로 바인딩된 매개 변수 값을 서버로 전송하는 방법을 제어하는 데 사용할 수 있습니다. SQL_DESC_CONCISE_TYPE이 SQL_TYPE_TIMESTAMP (또는 sql_ss_variant 및 C 형식은 SQL_C_TYPE_TIMESTAMP) sql_ca_ss_server_type 값 tabular data stream (TDS) 형식의 매개 변수 값을 결정 SQLExecute 또는 SQLExecDirect 호출 되 면 을 다음과 같이 합니다.  
   
 |SQL_CA_SS_SERVER_TYPE 값|SQL_DESC_PRECISION에 대한 유효한 값|SQL_DESC_LENGTH에 대한 유효한 값|TDS 유형|  
 |----------------------------------------|-------------------------------------------|----------------------------------------|--------------|  
@@ -70,7 +70,7 @@ ms.locfileid: "68030295"
   
  SQL_CA_SS_SERVER_TYPE SQLSetDescField 호출 하 여 설정 되 면 해당 값은 SQL_SS_TYPE_DEFAULT, SQL_SS_TYPE_SMALLDATETIME 또는 SQL_SS_TYPE_DATETIME 이어야 합니다. 그렇지 않으면 SQL_ERROR가 반환되고 SQLState HY092 및 "잘못된 특성/옵션 식별자입니다"라는 메시지가 포함된 진단 레코드가 기록됩니다.  
   
- SQL_CA_SS_SERVER_TYPE 특성에서 지 원하는 기능에 종속 된 응용 프로그램에서 사용할 수 **날짜/시간** 하 고 **smalldatetime**, 있지만 **datetime2**합니다. 예를 들어 **datetime2** 를 사용 해야 합니다 **dateadd** 및 **datediif** 반면 함수 **datetime** 및  **smalldatetime** 도 산술 연산자를 허용 합니다. 이 속성은 대부분의 응용 프로그램에서 사용할 필요가 없으며 사용해서는 안 됩니다.  
+ SQL_CA_SS_SERVER_TYPE 특성에서 지 원하는 기능에 종속 된 응용 프로그램에서 사용할 수 **날짜/시간** 하 고 **smalldatetime**, 있지만 **datetime2**합니다. 예를 들어 **datetime2** 를 사용 해야 합니다 **dateadd** 및 **datediif** 반면 함수 **datetime** 및  **smalldatetime** 도 산술 연산자를 허용 합니다. 이 속성은 대부분의 애플리케이션에서 사용할 필요가 없으며 사용해서는 안 됩니다.  
   
 ## <a name="information-returned-in-ird-fields"></a>IRD 필드에서 반환되는 정보  
  다음은 IRD 필드에서 반환되는 정보입니다.  

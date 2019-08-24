@@ -26,7 +26,7 @@ ms.locfileid: "66012505"
 # <a name="executing-template-files-by-using-the-commandtext-property"></a>CommandText 속성을 사용하여 템플릿 파일 실행
   이 예제는 CommandTextproperty를 사용 하 여 SQL 또는 XPath 쿼리로 이루어진 템플릿 파일을 지정할 수 있습니다 하는 방법을 보여 줍니다. CommandText 값으로 SQL 또는 XPath 쿼리를 지정 하지 않고 값으로 파일 이름을 지정할 수 있습니다. 다음 예제에서는 CommandType 속성 SqlXmlCommandType.TemplateFile로 지정 됩니다.  
   
- 예제 응용 프로그램에서 이 템플릿을 실행합니다.  
+ 예제 애플리케이션에서 이 템플릿을 실행합니다.  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  
@@ -38,7 +38,7 @@ ms.locfileid: "66012505"
 </ROOT>  
 ```  
   
- 이 응용 프로그램은 C# 예제 응용 프로그램입니다. 따라서 응용 프로그램을 테스트하려면 템플릿(TemplateFile.xml)을 저장한 다음 응용 프로그램을 실행해야 합니다.  
+ 이 애플리케이션은 C# 예제 애플리케이션입니다. 따라서 애플리케이션을 테스트하려면 템플릿(TemplateFile.xml)을 저장한 다음 애플리케이션을 실행해야 합니다.  
   
 > [!NOTE]  
 >  코드에서 연결 문자열에 Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스의 이름을 지정해야 합니다.  

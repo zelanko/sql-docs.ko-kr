@@ -35,7 +35,7 @@ RECONFIGURE;
 GO  
 ```  
   
- CLR 통합을 사용 하지 않도록 설정 하 여 수를 **clr** 옵션을 0입니다. CLR 통합 기능을 해제하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 모든 CLR 루틴 실행을 중지하고 모든 응용 프로그램 도메인을 언로드합니다.  
+ CLR 통합을 사용 하지 않도록 설정 하 여 수를 **clr** 옵션을 0입니다. CLR 통합 기능을 해제하면 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 모든 CLR 루틴 실행을 중지하고 모든 애플리케이션 도메인을 언로드합니다.  
   
 > [!NOTE]  
 >  CLR 통합을 사용 하려면 ALTER SETTINGS 서버 수준 사용 권한은의 멤버에 의해 암시적 보유 하 고 있어야 합니다 **sysadmin** 하 고 **serveradmin** 고정 서버 역할입니다.  

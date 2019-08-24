@@ -21,7 +21,7 @@ author: rothja
 ms.author: jroth
 ms.openlocfilehash: b6ba4c356411800dc7c5e52907b0baccd5682f09
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68064139"
@@ -64,7 +64,7 @@ destlen
   
 ## <a name="arguments"></a>인수  
  *srvproc*  
- 특정 클라이언트 연결에 대한 핸들인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API가 응용 프로그램과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 모든 제어 정보가 들어 있습니다. *srvproc* 핸들을 제공하면 오류가 발생할 경우 확장 저장 프로시저 API 오류 처리기로 해당 핸들이 전달됩니다.  
+ 특정 클라이언트 연결에 대한 핸들인 SRV_PROC 구조에 대한 포인터입니다. 이 구조에는 확장 저장 프로시저 API가 애플리케이션과 클라이언트 간 통신 및 데이터를 관리하는 데 사용하는 모든 제어 정보가 들어 있습니다. *srvproc* 핸들을 제공하면 오류가 발생할 경우 확장 저장 프로시저 API 오류 처리기로 해당 핸들이 전달됩니다.  
   
  *srctype*  
  변환할 데이터의 데이터 형식을 지정합니다. 이 매개 변수는 임의의 확장 저장 프로시저 API 데이터 형식일 수 있습니다.  

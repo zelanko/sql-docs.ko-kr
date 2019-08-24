@@ -30,7 +30,7 @@ ms.locfileid: "68119327"
 # <a name="backupset-transact-sql"></a>backupset(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
-  각 백업 세트마다 하나의 행을 포함합니다. *백업 세트*에는 하나의 성공한 백업 작업의 백업이 포함됩니다. RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY 및 RESTORE VERIFYONLY 문은 지정한 백업 장치의 미디어 세트 내에 있는 단일 백업 세트에서 작동합니다.  
+  각 백업 세트마다 하나의 행을 포함합니다. *백업 세트*에는 하나의 성공한 백업 작업의 백업이 포함됩니다. RESTORE, RESTORE FILELISTONLY, RESTORE HEADERONLY 및 RESTORE VERIFYONLY 문은 지정한 백업 디바이스의 미디어 세트 내에 있는 단일 백업 세트에서 작동합니다.  
   
  이 테이블에 저장 되는 **msdb** 데이터베이스입니다.  
 

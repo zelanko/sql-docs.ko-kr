@@ -26,7 +26,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/19/2019
 ms.locfileid: "68345071"
 ---
-# <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features(Transact-SQL)
+# <a name="sysdm_db_persisted_sku_features-transact-sql"></a>sys.dm_db_persisted_sku_features(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]의 일부 기능 중 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 데이터베이스 파일의 정보를 저장하는 방법이 변경되었습니다. 이러한 기능은 특정 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전으로 제한됩니다. 이러한 기능을 포함하는 데이터베이스는 이러한 기능이 지원되지 않는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전으로 이동할 수 없습니다. 현재 데이터베이스에서 사용 하도록 설정 된 버전 관련 기능을 나열 하려면 mm_db_persisted_ku_features 동적 관리 뷰를 사용 합니다.
@@ -52,7 +52,7 @@ ms.locfileid: "68345071"
   
     **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
   
--   **압축**: 하나 이상의 테이블 또는 인덱스에서 데이터 압축 또는 vardecimal 저장소 형식을 사용 함을 나타냅니다. 이 기능을 지원 하지 않는 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 데이터베이스를 이동할 수 있도록 하려면 [alter TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [alter INDEX](../../t-sql/statements/alter-index-transact-sql.md) 문을 사용 하 여 데이터 압축을 제거 합니다. vardecimal 저장소 형식을 제거하려면 sp_tableoption 문을 사용합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
+-   **압축**: 하나 이상의 테이블 또는 인덱스에서 데이터 압축 또는 vardecimal 저장소 형식을 사용 함을 나타냅니다. 이 기능을 지원 하지 않는 버전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 으로 데이터베이스를 이동할 수 있도록 하려면 [alter TABLE](../../t-sql/statements/alter-table-transact-sql.md) 또는 [alter INDEX](../../t-sql/statements/alter-index-transact-sql.md) 문을 사용 하 여 데이터 압축을 제거 합니다. vardecimal 스토리지 형식을 제거하려면 sp_tableoption 문을 사용합니다. 자세한 내용은 [Data Compression](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
 -   **MultipleFSContainers**: 데이터베이스에서 여러 FILESTREAM 컨테이너를 사용 함을 나타냅니다. 데이터베이스에 여러 컨테이너 (파일)가 있는 FILESTREAM 파일 그룹이 있습니다. 자세한 내용은 [FILESTREAM&#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)을 참조하세요.  
   

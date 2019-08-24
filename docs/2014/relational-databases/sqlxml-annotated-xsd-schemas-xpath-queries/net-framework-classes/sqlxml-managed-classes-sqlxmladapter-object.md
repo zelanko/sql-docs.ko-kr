@@ -24,15 +24,15 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014927"
 ---
 # <a name="sqlxmladapter-object-sqlxml-managed-classes"></a>SqlXmlAdapter 개체(SQLXML 관리되는 클래스)
-  이 개체는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework에서 데이터 집합과의 상호 작용을 돕는 메서드를 제공합니다. 작업 샘플을 보려면 [.NET 환경에서 SQLXML 기능 액세스](accessing-sqlxml-functionality-in-the-net-environment.md)합니다.  
+  이 개체는 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework에서 데이터 세트과의 상호 작용을 돕는 메서드를 제공합니다. 작업 샘플을 보려면 [.NET 환경에서 SQLXML 기능 액세스](accessing-sqlxml-functionality-in-the-net-environment.md)합니다.  
   
  SqlXmlAdapter 개체는 이러한 메서드를 지원합니다.  
   
  void Fill (DataSet ds)  
- .NET Framework의 데이터 집합을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 검색한 XML 데이터로 채웁니다.  
+ .NET Framework의 데이터 세트을 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 검색한 XML 데이터로 채웁니다.  
   
  void Update (DataSet ds)  
- 데이터 집합의 데이터에서 업데이트를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 레코드에 적용합니다.  
+ 데이터 세트의 데이터에서 업데이트를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]의 레코드에 적용합니다.  
   
  SqlXmlAdapter 개체는 이러한 생성자를 지원합니다.  
   

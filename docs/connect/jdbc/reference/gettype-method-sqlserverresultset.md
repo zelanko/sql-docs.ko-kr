@@ -49,7 +49,7 @@ public int getType()
 ## <a name="remarks"></a>Remarks  
  이 getType 메서드는 java.sql.ResultSet 인터페이스의 getType 메서드에 의해 지정됩니다.  
   
- 이 메서드는 실제 커서 유형을 결정하는 데 사용할 수 있습니다. 응용 프로그램에서 TYPE_FORWARD_ONLY를 선택하거나 기본 커서 유형을 사용한 경우에는 TYPE_FORWARD_ONLY가 반환됩니다.  
+ 이 메서드는 실제 커서 유형을 결정하는 데 사용할 수 있습니다. 애플리케이션에서 TYPE_FORWARD_ONLY를 선택하거나 기본 커서 유형을 사용한 경우에는 TYPE_FORWARD_ONLY가 반환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SQLServerResultSet 멤버](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68140655"
 ---
-# <a name="managedbackupfngethealthstatus-transact-sql"></a>managed_backup.fn_get_health_status (Transact SQL)
+# <a name="managed_backupfn_get_health_status-transact-sql"></a>managed_backup.fn_get_health_status (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   지정된 기간 동안 확장 이벤트에서 보고한 집계된 오류 수의 행을 0개, 1개 또는 그 이상 포함하는 테이블을 반환합니다.  
@@ -54,7 +54,7 @@ managed_backup.fn_get_health_status([@begin_time = ] 'time_1' , [ @end_time = ] 
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|number_of_storage_connectivity_errors|ssNoversion|프로그램에서 Windows Azure 저장소 계정에 연결할 때의 연결 오류 수입니다.|  
+|number_of_storage_connectivity_errors|ssNoversion|프로그램에서 Windows Azure Storage 계정에 연결할 때의 연결 오류 수입니다.|  
 |number_of_sql_errors|ssNoversion|프로그램에서 SQL Server 엔진에 연결할 때 반환되는 오류 수입니다.|  
 |number_of_invalid_credential_errors|ssNoversion|프로그램에서 SQL 자격 증명을 사용하여 인증하려고 할 때 반환되는 오류 수입니다.|  
 |number_of_other_errors|ssNoversion|연결, SQL 또는 자격 증명 이외의 다른 범주에 속하는 오류 수입니다.|  

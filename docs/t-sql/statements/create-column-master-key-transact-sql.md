@@ -141,7 +141,7 @@ key_path
     각 항목이 나타내는 의미는 다음과 같습니다.  
   
     *ProviderName*  
-    열 마스터 키 저장소에 대한 CNG(Cryptography: Next Generation) API를 구현하는 KSP(키 저장소 공급자)의 이름입니다. 키 저장소로 HSM을 사용하는 경우 공급자 이름은 HSM 공급업체가 제공하는 KSP 이름이어야 합니다. 클라이언트 컴퓨터에 공급자를 설치해야 합니다.  
+    열 마스터 키 스토리지에 대한 CNG(Cryptography: Next Generation) API를 구현하는 KSP(키 저장소 공급자)의 이름입니다. 키 저장소로 HSM을 사용하는 경우 공급자 이름은 HSM 공급업체가 제공하는 KSP 이름이어야 합니다. 클라이언트 컴퓨터에 공급자를 설치해야 합니다.  
   
     *KeyIdentifier*  
     키의 식별자가 키 저장소에서 열 마스터 키로 사용됩니다.  

@@ -43,7 +43,7 @@ ms.locfileid: "63266817"
 |Power View 시트가 있는 Excel 2013 통합 문서|**SharePoint 서버:** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel 서비스에서.<br /><br /> **SharePoint Online (Office 365):** [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] Excel Web App의 합니다.|참조 [뷰는 Excel services 또는 SharePoint의 Excel Web App을 온라인 Power](#bkmk_powerview_on_ExcelServices)합니다.|  
   
 ###  <a name="bkmk_powerview_on_SSRS"></a> SharePoint Server 및 Reporting Services SharePoint 통합된 모드의 power View  
- 다음 표에는 사용자가 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 서비스 응용 프로그램 및 설치 및 구성된 SharePoint의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능이 있는 SharePoint 팜에서 Power View 보고서(.RDLX)를 여는 경우 지원되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 브라우저 버전이 요약되어 있습니다.  
+ 다음 표에는 사용자가 [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] 서비스 애플리케이션 및 설치 및 구성된 SharePoint의 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 추가 기능이 있는 SharePoint 팜에서 Power View 보고서(.RDLX)를 여는 경우 지원되는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 브라우저 버전이 요약되어 있습니다.  
   
 - 표는 SharePoint 2010 및 SharePoint 2013에 적용됩니다.  
   

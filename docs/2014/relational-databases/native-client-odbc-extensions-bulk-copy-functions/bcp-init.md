@@ -25,7 +25,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689071"
 ---
-# <a name="bcpinit"></a>bcp_init
+# <a name="bcp_init"></a>bcp_init
   대량 복사 작업을 초기화합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -112,7 +112,7 @@ eDirection
     CREATE TABLE BCPDate (cola int, colb datetime);  
     ```  
   
--   응용 프로그램을 실행할 디렉터리에 Bcpfmt.fmt라는 파일을 추가하고 이 파일에 다음 코드를 추가합니다.  
+-   애플리케이션을 실행할 디렉터리에 Bcpfmt.fmt라는 파일을 추가하고 이 파일에 다음 코드를 추가합니다.  
   
     ```  
     8.0  
@@ -121,7 +121,7 @@ eDirection
     2SQLCHAR08"\r\n"2colbSQL_Latin1_General_Cp437_Bin  
     ```  
   
--   응용 프로그램을 실행할 디렉터리에 Bcpodbc.bcp라는 파일을 추가하고 이 파일에 다음 코드를 추가합니다.  
+-   애플리케이션을 실행할 디렉터리에 Bcpodbc.bcp라는 파일을 추가하고 이 파일에 다음 코드를 추가합니다.  
   
     ```  
     1  

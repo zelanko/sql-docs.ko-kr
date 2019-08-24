@@ -7,7 +7,7 @@
   items:
     - name: 비동기 모드와 SQLCancel
       href: creating-a-driver-application-asynchronous-mode-and-sqlcancel.md
-    - name: 다중 스레드 응용 프로그램
+    - name: 다중 스레드 애플리케이션
       href: creating-a-driver-application-multithreaded-applications.md
 - name: SQL Server와 통신(ODBC)
   href: ../../native-client-odbc-communication/communicating-with-sql-server-odbc.md

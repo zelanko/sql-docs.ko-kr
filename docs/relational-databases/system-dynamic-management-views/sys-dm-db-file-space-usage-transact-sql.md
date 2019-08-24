@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68264473"
 ---
-# <a name="sysdmdbfilespaceusage-transact-sql"></a>sys.dm_db_file_space_usage(Transact-SQL)
+# <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   데이터베이스의 각 파일에 대한 공간 사용량 정보를 반환합니다.  
@@ -76,7 +76,7 @@ ms.locfileid: "68264473"
 ## <a name="internal-objects"></a>내부 개체  
  내부 개체는 tempdb에만 있습니다. 내부 개체 페이지 카운터에 포함되는 개체는 다음과 같습니다.  
   
--   커서 또는 스풀 작업에 대한 작업 테이블 및 임시 LOB(Large Object) 저장소  
+-   커서 또는 스풀 작업에 대한 작업 테이블 및 임시 LOB(Large Object) 스토리지  
   
 -   해시 조인과 같은 작업에 대한 작업 파일  
   

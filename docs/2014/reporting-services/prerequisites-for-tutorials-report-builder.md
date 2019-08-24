@@ -37,7 +37,7 @@ ms.locfileid: "66108066"
   
 -   지도가 포함된 자습서의 경우 Bing Maps를 배경으로 지원하도록 보고서 서버를 구성해야 합니다. 자세한 내용은 [지도 보고서 지원 계획](plan-for-map-report-support.md) 에 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설명서에서 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [온라인](https://go.microsoft.com/fwlink/?LinkId=154888) msdn.microsoft.com 합니다.  
   
--   자습서 [자습서: 드릴스루 보고서 및 주 보고서 만들기 &#40;보고서 작성기&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), Contoso 비즈니스 인텔리전스 데모 데이터 집합을 사용 합니다. 이 데이터 집합은 ContosoDW 데이터 웨어하우스와 Contoso_Retail OLAP(온라인 분석 처리) 데이터베이스로 구성되어 있습니다. 이 자습서에서 만들 보고서는 Contoso Sales 큐브에서 보고서 데이터를 검색합니다. Contoso_Retail OLAP 데이터베이스는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=191575)에서 다운로드할 수 있습니다. ContosoBIdemoABF.exe 파일만 다운로드하면 됩니다. 이 파일에 OLAP 데이터베이스가 포함되어 있습니다.  
+-   자습서 [자습서: 드릴스루 보고서 및 주 보고서 만들기 &#40;보고서 작성기&#41;](tutorial-creating-drillthrough-and-main-reports-report-builder.md), Contoso 비즈니스 인텔리전스 데모 데이터 집합을 사용 합니다. 이 데이터 세트은 ContosoDW 데이터 웨어하우스와 Contoso_Retail OLAP(온라인 분석 처리) 데이터베이스로 구성되어 있습니다. 이 자습서에서 만들 보고서는 Contoso Sales 큐브에서 보고서 데이터를 검색합니다. Contoso_Retail OLAP 데이터베이스는 [Microsoft 다운로드 센터](https://go.microsoft.com/fwlink/?LinkID=191575)에서 다운로드할 수 있습니다. ContosoBIdemoABF.exe 파일만 다운로드하면 됩니다. 이 파일에 OLAP 데이터베이스가 포함되어 있습니다.  
   
      다른 파일인 ContosoBIdemoBAK.exe는 ContosoDW 데이터 웨어하우스를 위한 것으로, 이 자습서에서는 사용되지 않습니다.  
   

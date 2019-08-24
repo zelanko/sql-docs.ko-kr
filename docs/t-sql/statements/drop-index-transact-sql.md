@@ -47,7 +47,7 @@ ms.locfileid: "68044141"
  DROP INDEX 문은 PRIMARY KEY 또는 UNIQUE 제약 조건을 정의함으로써 생성된 인덱스에는 적용되지 않습니다. 제약 조건과 해당 인덱스를 제거하려면 DROP CONSTRAINT 절과 함께 [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)을 사용합니다.  
   
 > [!IMPORTANT]
->  `<drop_backward_compatible_index>`에 정의된 구문은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 제거될 예정입니다. 새 개발 작업에서는 이 구문을 사용하지 말고, 현재 이 기능을 사용하는 응용 프로그램은 수정하세요. 대신 `<drop_relational_or_xml_index>`에 지정된 구문을 사용하세요. XML 인덱스는 이전 버전과의 호환을 위한 구문을 사용하여 삭제할 수 없습니다.  
+>  `<drop_backward_compatible_index>`에 정의된 구문은 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이후 버전에서 제거될 예정입니다. 새 개발 작업에서는 이 구문을 사용하지 말고, 현재 이 기능을 사용하는 애플리케이션은 수정하세요. 대신 `<drop_relational_or_xml_index>`에 지정된 구문을 사용하세요. XML 인덱스는 이전 버전과의 호환을 위한 구문을 사용하여 삭제할 수 없습니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -173,7 +173,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]  
 >  온라인 인덱스 작업은 일부 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.  
   
- MOVE TO { _partition\_scheme\_name_**(**_column\_name_**)** | _filegroup\_name_ | **"** default **"**  
+ MOVE TO { _partition\_scheme\_name_ **(** _column\_name_ **)**  | _filegroup\_name_ |  **"** default **"**  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서는 파일 그룹 이름으로 "default"를 지원합니다.  
   
  현재 클러스터형 인덱스의 리프 수준에 있는 데이터 행을 옮길 위치를 지정합니다. 데이터는 힙 형태로 새 위치로 옮겨집니다. 파티션 구성표 또는 파일 그룹을 새 위치로 지정할 수도 있지만 이미 존재하는 파티션 구성표 또는 파일 그룹이어야 합니다. 인덱싱된 뷰나 비클러스터형 인덱스에는 MOVE TO를 사용할 수 없습니다. 파티션 구성표 또는 파일 그룹을 지정하지 않으면 결과 테이블은 클러스터형 인덱스와 동일한 파티션 구성표 또는 파일 그룹에 위치합니다.  
@@ -198,7 +198,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 > [!NOTE]
 >  이 컨텍스트에서 default는 키워드가 아니라 기본 파일 그룹에 대한 식별자이므로 MOVE TO **"** default **"** 또는 MOVE TO **[** default **]** 와 같이 구분되어야 합니다. **"** default **"** 를 지정하면 현재 세션에 대한 QUOTED_IDENTIFIER 옵션이 ON으로 설정되어야 합니다. 이 값은 기본 설정입니다. 자세한 내용은 [SET QUOTED_IDENTIFIER&#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md)를 참조하세요.  
   
- FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* | **"** default **"** }  
+ FILESTREAM_ON { *partition_scheme_name* | *filestream_filegroup_name* |  **"** default **"** }  
  **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  
   
  현재 클러스터형 인덱스의 리프 수준에 있는 FILESTREAM 테이블을 옮길 위치를 지정합니다. 데이터는 힙 형태로 새 위치로 옮겨집니다. 파티션 구성표 또는 파일 그룹을 새 위치로 지정할 수도 있지만 이미 존재하는 파티션 구성표 또는 파일 그룹이어야 합니다. FILESTREAM ON은 인덱싱된 뷰나 비클러스터형 인덱스에는 사용할 수 없습니다. 파티션 구성표를 지정하지 않으면 데이터가 클러스터형 인덱스에 대해 정의된 것과 동일한 파티션 구성표에 위치하게 됩니다.  
@@ -224,7 +224,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  인덱싱된 뷰의 클러스터형 인덱스를 삭제하면 해당 뷰의 모든 비클러스터형 인덱스와 자동 생성된 통계가 자동으로 삭제됩니다. 수동으로 생성된 통계는 삭제되지 않습니다.  
   
- _table\_or\_view\_name_**.**_index\_name_ 구문은 이전 버전과의 호환성을 위해 유지 관리됩니다. XML 인덱스 또는 공간 인덱스는 이전 버전과 호환되는 구문을 사용하여 삭제할 수 없습니다.  
+ _table\_or\_view\_name_ **.** _index\_name_ 구문은 이전 버전과의 호환성을 위해 유지 관리됩니다. XML 인덱스 또는 공간 인덱스는 이전 버전과 호환되는 구문을 사용하여 삭제할 수 없습니다.  
   
  128개 이상의 익스텐트를 가진 인덱스가 삭제되면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 트랜잭션이 커밋될 때까지 실제 페이지 할당 취소 및 관련 잠금을 연기합니다.  
   
@@ -237,7 +237,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
  ONLINE = ON으로 지정하면 기본 데이터 및 연결된 비클러스터형 인덱스에 대한 쿼리 및 수정 사항은 DROP INDEX 트랜잭션에 의해 차단되지 않습니다. 클러스터형 인덱스는 한 번에 한 개씩만 온라인으로 삭제할 수 있습니다. ONLINE 옵션에 대한 자세한 내용은 [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)를 참조하세요.  
   
- 뷰에서 인덱스가 비활성화되어 있거나 리프 수준 데이터 행에 **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** 또는 **xml** 열이 포함되어 있으면 클러스터형 인덱스를 온라인으로 삭제할 수 없습니다.  
+ 뷰에서 인덱스가 비활성화되어 있거나 리프 수준 데이터 행에 **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** 또는 **xml** 열이 포함되어 있으면 클러스터형 인덱스를 온라인으로 삭제할 수 없습니다.  
   
  ONLINE = ON 및 MOVE TO 옵션을 사용하려면 임시 디스크 공간이 더 필요합니다.  
   
@@ -254,10 +254,10 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
 클러스터형 인덱스가 OFFLINE으로 삭제되면 클러스터형 인덱스의 상위 수준만 제거되므로 작업이 상당히 빠르게 수행됩니다. 클러스터형 인덱스를 ONLINE으로 삭제하는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 1단계와 2단계에서 한 번씩, 총 두 번에 걸쳐 힙을 다시 작성합니다. 데이터 압축에 대한 자세한 내용은 [데이터 압축](../../relational-databases/data-compression/data-compression.md)을 참조하세요.  
   
 ## <a name="xml-indexes"></a>XML 인덱스  
- XML 인덱스를 삭제할 때는 옵션을 지정할 수 없습니다. 또한 _table\_or\_view\_name_**.**_index\_name_ 구문을 사용할 수 없습니다. 기본 XML 인덱스가 삭제되면 연결된 모든 보조 XML 인덱스는 자동으로 삭제됩니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)를 참조하세요.  
+ XML 인덱스를 삭제할 때는 옵션을 지정할 수 없습니다. 또한 _table\_or\_view\_name_ **.** _index\_name_ 구문을 사용할 수 없습니다. 기본 XML 인덱스가 삭제되면 연결된 모든 보조 XML 인덱스는 자동으로 삭제됩니다. 자세한 내용은 [XML 인덱스&#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)를 참조하세요.  
   
 ## <a name="spatial-indexes"></a>공간 인덱스  
- 공간 인덱스는 테이블에서만 지원됩니다. 공간 인덱스를 삭제하는 경우 옵션을 지정하거나 **.**_index\_name_을 사용할 수 없습니다. 올바른 구문은 다음과 같습니다.  
+ 공간 인덱스는 테이블에서만 지원됩니다. 공간 인덱스를 삭제하는 경우 옵션을 지정하거나 **.** _index\_name_을 사용할 수 없습니다. 올바른 구문은 다음과 같습니다.  
   
  DROP INDEX *spatial_index_name* ON *spatial_table_name*;  
   
@@ -268,7 +268,7 @@ DROP INDEX index_name ON { database_name.schema_name.table_name | schema_name.ta
   
 ## <a name="examples"></a>예  
   
-### <a name="a-dropping-an-index"></a>1. 인덱스 삭제  
+### <a name="a-dropping-an-index"></a>1\. 인덱스 삭제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 `ProductVendor` 테이블의 `IX_ProductVendor_VendorID` 인덱스를 삭제합니다.  
   
 ```  
@@ -277,7 +277,7 @@ DROP INDEX IX_ProductVendor_BusinessEntityID
 GO  
 ```  
   
-### <a name="b-dropping-multiple-indexes"></a>2. 여러 인덱스 삭제  
+### <a name="b-dropping-multiple-indexes"></a>2\. 여러 인덱스 삭제  
  다음 예에서는 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 데이터베이스에서 하나의 트랜잭션으로 두 개의 인덱스를 삭제합니다.  
   
 ```  

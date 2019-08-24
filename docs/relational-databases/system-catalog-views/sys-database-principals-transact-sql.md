@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68022681"
 ---
-# <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals(Transact-SQL)
+# <a name="sysdatabase_principals-transact-sql"></a>sys.database_principals(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 각 주체에 대해 행을 반환합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "68022681"
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|데이터베이스 내에서 고유한 보안 주체의 이름입니다.|  
 |**principal_id**|**int**|데이터베이스 내에서 고유한 보안 주체의 ID입니다.|  
-|**type**|**char(1)**|보안 주체 유형입니다.<br /><br /> A = 응용 프로그램 역할<br /><br /> C = 인증서로 매핑된 사용자<br /><br /> E = Azure Active Directory에서 외부 사용자<br /><br /> G = Windows 그룹<br /><br /> K = 비대칭 키로 매핑된 사용자<br /><br /> R = 데이터베이스 역할<br /><br /> S = SQL 사용자<br /><br /> U = Windows 사용자<br /><br /> X = Azure Active Directory 그룹 또는 응용 프로그램에서 외부 그룹|  
+|**type**|**char(1)**|보안 주체 유형입니다.<br /><br /> A = 애플리케이션 역할<br /><br /> C = 인증서로 매핑된 사용자<br /><br /> E = Azure Active Directory에서 외부 사용자<br /><br /> G = Windows 그룹<br /><br /> K = 비대칭 키로 매핑된 사용자<br /><br /> R = 데이터베이스 역할<br /><br /> S = SQL 사용자<br /><br /> U = Windows 사용자<br /><br /> X = Azure Active Directory 그룹 또는 응용 프로그램에서 외부 그룹|  
 |**type_desc**|**nvarchar(60)**|보안 주체 유형에 대한 설명입니다.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|SQL 이름이 스키마를 지정하지 않을 때 사용되는 이름입니다. S, U 또는 A 유형의 보안 주체의 경우 Null입니다.|  
 |**create_date**|**datetime**|보안 주체가 생성된 시간입니다.|  
