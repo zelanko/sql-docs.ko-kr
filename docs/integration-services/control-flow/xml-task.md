@@ -534,6 +534,6 @@ ms.locfileid: "68057741"
   
 ## <a name="related-content"></a>관련 내용  
 
--   www.codeplex.com의 CodePlex 예제 - [프로세스 XML 데이터 패키지 예제](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
+-   [www.codeplex.com](www.codeplex.com) 의 CodePlex 예제 - [프로세스 XML 데이터 패키지 예제](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples)  
   
   
