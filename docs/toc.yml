@@ -2443,7 +2443,7 @@
               href: language-extensions/how-to/java-to-sql-data-types.md
             - name: Java jar 파일 만들기
               href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
-    - name: SQL Server Native Client
+    - name: 'SQL Server Native Client '
       href: relational-databases/native-client/sql-server-native-client.md
       items:
         - name: 개요
@@ -10361,7 +10361,7 @@
                       href: linux/sql-server-linux-availability-group-cluster-sles.md
                     - name: Ubuntu에서 구성
                       href: linux/sql-server-linux-availability-group-cluster-ubuntu.md
-                    - name: 장애 조치
+                    - name: '장애 조치 '
                       href: linux/sql-server-linux-availability-group-failover-ha.md
                     - name: 운영
                       href: linux/sql-server-linux-availability-group-operate-ha.md
