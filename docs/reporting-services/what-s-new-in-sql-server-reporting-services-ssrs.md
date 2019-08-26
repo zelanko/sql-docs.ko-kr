@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
-ms.openlocfilehash: 7e6864a935a9e1d3f2fcdcb1dbe100a65df3789a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: be255547163bb37d1222e1c9b21e123f35d2888e
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893522"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000284"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
 
@@ -34,7 +34,8 @@ SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운�
 
 ## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 Reporting Services 미리 보기
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.2에서는 Reporting Services를 사용할 수 없습니다. 현재 버전, [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md)를 설치하세요.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]preview Reporting Services은 사용할 수 있으며 **[Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=100122)** 에서 다운로드할 수 있습니다.
+
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
