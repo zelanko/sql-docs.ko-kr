@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 CTP 알림 보관 | Microsoft Docs
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f881367442cfa2e24921300ba7595bdbf28ce27
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 8c34126f84987f0255d815b972e87118f184d070
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028875"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653783"
 ---
 # <a name="sql-server-2019-ctp-announcement-archive"></a>SQL Server 2019 CTP 알림 보관
 
@@ -25,6 +25,39 @@ ms.locfileid: "69028875"
 이 문서는 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]가 프로덕션 환경에 릴리스되면 제거될 예정입니다.
 
 최신 정보는 [SQL Server 2019의 새로운 기능](what-s-new-in-sql-server-ver15.md)을 참조하세요.
+
+## <a name="ctp-32-july-2019"></a>CTP 3.2 2019년 7월
+
+### <a name="new-in-big-data-clusters"></a>빅 데이터 클러스터의 새로운 기능
+
+|새로운 기능 또는 업데이트 | 세부 정보 |
+|:---|:---|
+|퍼블릭 미리 보기 |CTP 3.2 이전에는 등록한 얼리어답터가 SQL Server 빅 데이터 클러스터를 사용할 수 있었습니다. 이번 릴리스에서는 누구나 빅 데이터 클러스터 SQL Server 기능을 경험할 수 있습니다. <br/><br/> [SQL Server 빅 데이터 클러스터 시작](../big-data-cluster/deploy-get-started.md)을 참조하세요.|
+|`azdata` |CTP 3.2는 클러스터 관리자가 REST API를 통해 빅 데이터 클러스터를 부트스트랩하고 관리할 수 있도록 하는 Python으로 작성된 `azdata` 명령줄 유틸리티를 도입했습니다. `azdata`는 `mssqlctl`을 대신합니다. [`azdata` 설치](../big-data-cluster/deploy-install-azdata.md)를 참조하세요. |
+|PolyBase |이제 외부 테이블 열 이름이 SQL Server, Oracle, Teradata, MongoDB 및 ODBC 데이터 원본을 쿼리하는 데 사용됩니다. 이전 CTP 릴리스에서는 열이 대상의 서수를 기준으로 바인딩되었으며 외부 테이블 정의의 열 이름은 사용되지 않았습니다.|
+|HDFS 계층화 새로 고침 |원격 데이터의 최신 스냅숏에 대해 기존 탑재를 새로 고칠 수 있도록 HDFS 계층화의 새로 고침 기능을 도입합니다. [HDFS 계층화](../big-data-cluster/hdfs-tiering.md)를 참조하세요. |
+|Notebook 기반 문제 해결 |CTP 3.2에는 SQL Server 빅 데이터 클러스터 구성 요소의 [배포](../big-data-cluster/deploy-notebooks.md)와 [검색, 진단 및 문제 해결](../big-data-cluster/manage-notebooks.md)에 도움이 되는 Jupyter Notebook이 도입되었습니다. |
+| &nbsp; | &nbsp; |
+
+### <a name="new-in-analysis-services"></a>Analysis Services의 새로운 기능
+
+| 새로운 기능 또는 업데이트 | 세부 정보 |
+|:---|:---| 
+| Power BI 캐시 새로 고침에 대한 거버넌스 설정.  | Power BI 서비스는 라이브 연결 보고서의 초기 로드에 대한 대시보드 타일 데이터 및 보고서 데이터를 캐시하여 많은 수의 캐시 쿼리가 SSAS로 전송되도록 하며, 극단적인 경우 서버에 과부하를 발생하기도 합니다. 이 릴리스에는 **ClientCacheRefreshPolicy** 속성이 도입되었습니다. 이 속성을 사용하여 서버 수준에서 이 동작을 재정의할 수 있습니다. 자세히 알아보려면 [일반 속성](https://docs.microsoft.com/analysis-services/server-properties/general-properties)을 참조하세요. |
+| 온라인 연결  | 이 기능은 테이블 형식 모델을 온라인 작업으로 연결하는 기능을 제공합니다. 온라인 연결 기능은 온-프레미스 쿼리 스케일 아웃 환경에서 읽기 전용 복제본을 동기화하는 데 사용할 수 있습니다. 자세히 알아보려면 [온라인 연결](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32)을 참조하세요. |
+| &nbsp; | &nbsp; |
+
+### <a name="new-in-language-extensions"></a>언어 확장의 새로운 기능
+
+|새로운 기능 또는 업데이트 | 세부 정보 |
+|:---|:---|
+| 새 기본 Java 런타임  | 이제 SQL Server에는 제품 전체의 Java 지원을 위한 Azul System의 Zulu Embedded가 포함되어 있습니다. 자세한 내용은 [SQL Server 2019에서 체험할 수 있는 Java 사용 가능](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/)을 참조하세요. |
+
+### <a name="new-in-sql-server-on-linux"></a>Linux SQL Server의 새로운 기능
+
+|새로운 기능 또는 업데이트 | 세부 정보 |
+|:---|:---|
+| CDC(변경 데이터 캡처) 지원 | CDC(변경 데이터 캡처)는 이제 SQL Server 2019용 Linux에서 지원됩니다. |
 
 ## <a name="ctp-31-june-2019"></a>CTP 3.1 2019년 6월
 

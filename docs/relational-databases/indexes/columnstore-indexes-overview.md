@@ -18,12 +18,12 @@ ms.assetid: f98af4a5-4523-43b1-be8d-1b03c3217839
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ae39d06d96232b27d58020d5f6e6184a57001e6f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d48ff63d5ea5ab7ed805eb7db092fa35682bbc9b
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912088"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009400"
 ---
 # <a name="columnstore-indexes-overview"></a>columnstore 인덱스: 개요
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -152,7 +152,7 @@ columnstore 인덱스에 있는 모든 열이 메타데이터에 포괄 열로 �
 |Columnstore 인덱스에서 행을 삭제합니다.|[DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|행을 삭제하려면 [DELETE&#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md) 를 사용합니다.<br /><br /> **columnstore 행**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 행을 논리적으로 삭제된 것으로 표시하지만, 인덱스가 다시 작성될 때까지는 행에 대한 실제 스토리지를 회수하지 않습니다.<br /><br /> **deltastore** 행: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 행을 논리적 및 물리적으로 삭제합니다.|  
 |Columnstore 인덱스의 행을 업데이트합니다.|[UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)|행을 삭제하려면 [UPDATE&#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md) 를 사용합니다.<br /><br /> **columnstore 행**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 행을 논리적으로 삭제됨으로 표시한 다음 업데이트된 행을 deltastore에 삽입합니다.<br /><br /> **deltastore 행**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 deltastore에 있는 행을 업데이트합니다.|  
 |데이터를 columnstore 인덱스로 로드합니다.|[Columnstore 인덱스 데이터 로드](~/relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)||  
-|deltastore의 모든 행을 강제로 columnstore로 이동합니다.|[ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [Columnstore 인덱스 조각 모음](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)|`REBUILD` 옵션과 함께 `ALTER INDEX`를 사용하면 모든 행이 강제로 columnstore로 이동합니다.|  
+|deltastore의 모든 행을 강제로 columnstore로 이동합니다.|[ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md) ... `REBUILD`<br /><br /> [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)|`REBUILD` 옵션과 함께 `ALTER INDEX`를 사용하면 모든 행이 강제로 columnstore로 이동합니다.|  
 |Columnstore 인덱스를 조각 모음합니다.|[ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)|`ALTER INDEX ... REORGANIZE`는 columnstore 인덱스를 온라인으로 조각 모음합니다.|  
 |테이블을 columnstore 인덱스와 병합합니다.|[MERGE&#40;Transact-SQL&#41;](../../t-sql/statements/merge-transact-sql.md)||  
   

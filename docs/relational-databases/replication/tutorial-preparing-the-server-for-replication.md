@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: beb0c68b86521ce9a5b3463e8c959970297519fe
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742939"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653828"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>자습서: 복제를 위한 SQL Server 준비(게시자, 배포자, 구독자)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -234,8 +234,6 @@ SQL Server Management Studio 인스턴스를 관리자 권한으로 실행 중�
 
    ![개체 탐색기에서 4개 계정 모두 보기](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
    
- 6. 배포 에이전트 및 병합 에이전트의 구독자에서 1~4단계를 반복하여 머신 이름을 구독자의 이름으로 변경합니다. 
-  
   
 참조 항목:
 - [배포 구성](../../relational-databases/replication/configure-distribution.md) 

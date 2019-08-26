@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: eac39b0cbc4cdb09b6f20f68517d258a34a38155
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: cc4eeb8c4e3d462d6df3aa76d972404ffe3120c1
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893867"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608396"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>빠른 시작: Docker에서 SQL Server 컨테이너 이미지 실행
 
@@ -295,7 +295,7 @@ SELECT @@SERVERNAME,
 
 <!-- This section was pasted in from includes/sql-server-linux-change-docker-password.md, to better support zone pivots. 2019/02/11 -->
 
-**SA** 계정은 설치 중에 생성되는 SQL Server 인스턴스의 시스템 관리자입니다. SQL Server 컨테이너를 만든 후 컨테이너에서 `echo $MSSQL_SA_PASSWORD`를 실행하여 지정한 `MSSQL_SA_PASSWORD` 환경 변수를 검색할 수 있습니다. 보안을 위해 SA 암호를 변경합니다.
+**SA** 계정은 설치 중에 생성되는 SQL Server 인스턴스의 시스템 관리자입니다. SQL Server 컨테이너를 만든 후 컨테이너에서 `echo $SA_PASSWORD`를 실행하여 지정한 `SA_PASSWORD` 환경 변수를 검색할 수 있습니다. 보안을 위해 SA 암호를 변경합니다.
 
 1. SA 사용자에게 사용할 강력한 암호를 선택합니다.
 

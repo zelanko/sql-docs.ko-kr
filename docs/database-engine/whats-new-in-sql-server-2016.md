@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 2d2ade42e25593911ea25b2a16ad53372ced0438
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: e7eb7457723470056e60758c4ac560d5eb49dd74
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941114"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009361"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "68941114"
 
 - [데이터 웨어하우스용 Columnstore 인덱스](~/relational-databases/indexes/columnstore-indexes-data-warehouse.md)
 
-- [Columnstore 인덱스 조각 모음](~/relational-databases/indexes/columnstore-indexes-defragmentation.md)
+- [인덱스 다시 구성 및 다시 작성](~/relational-databases/indexes/reorganize-and-rebuild-indexes.md)
 
 
 ## <a name="database-scoped-configurations"></a>데이터베이스 범위 구성
