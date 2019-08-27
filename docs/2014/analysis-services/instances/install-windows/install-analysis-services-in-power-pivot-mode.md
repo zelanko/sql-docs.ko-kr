@@ -65,12 +65,12 @@ ms.locfileid: "68888662"
   
 5.  [SharePoint &#40;모드의 Analysis Services 서버에 대 한 하드웨어 및 소프트웨어 요구 사항을&#41;검토 SQL Server 2014](../../../sql-server/install/hardware-software-requirements-analysis-services-server-sharepoint-mode.md)합니다.  
   
-6.  [SQL Server 2012 서비스 팩 1 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=248389) ()https://go.microsoft.com/fwlink/?LinkID=248389) 에서 릴리스 정보를 검토 합니다.  
+6.  [SQL Server 2012 서비스 팩 1 릴리스 정보](https://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389) 에서 릴리스 정보를 검토 합니다.  
   
 ###  <a name="bkmk_sqleditions"></a> SQL Server 버전 요구 사항  
  비즈니스 인텔리전스 기능은 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]의 일부 버전에서만 사용할 수 있습니다. 자세한 내용은 [SQL Server 2012 https://go.microsoft.com/fwlink/?linkid=232473) 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473) , [SQL Server 2014의 버전 및 구성 요소](../../../sql-server/editions-and-components-of-sql-server-2016.md)를 참조 하세요.  
   
- 현재 릴리스 정보는 [SQL Server 2012 SP1 릴리스 정보](ttp://go.microsoft.com/fwlink/?LinkID=248389) ()https://go.microsoft.com/fwlink/?LinkID=248389) 에서 찾을 수 있습니다.  
+ 현재 릴리스 정보는 [SQL Server 2012 SP1 릴리스 정보](ttp://go.microsoft.com/fwlink/?LinkID=248389) (https://go.microsoft.com/fwlink/?LinkID=248389) 에서 찾을 수 있습니다.  
   
  [Microsoft SQL Server 2012 릴리스 정보 (https://go.microsoft.com/fwlink/?LinkId=236893)](https://go.microsoft.com/fwlink/?LinkId=236893).  
   
