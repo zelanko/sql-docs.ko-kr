@@ -72,7 +72,7 @@ ms.locfileid: "68888515"
 5.  **데이터베이스를 읽기/쓰기로 설정:** **데이터베이스 읽기** 전용을 **False**로 설정 합니다.  
   
 ##  <a name="bkmk_prepare_mount_databases"></a> 3) 웹 응용 프로그램 준비 및 콘텐츠 데이터베이스 탑재  
- 다음 절차에 대 한 자세한 설명은 [sharepoint 2010에서 sharepoint 2013으로 데이터베이스 업그레이드](https://go.microsoft.com/fwlink/p/?LinkId=256690) ()https://go.microsoft.com/fwlink/p/?LinkId=256690) 를 참조 하세요.  
+ 다음 절차에 대 한 자세한 설명은 [sharepoint 2010에서 sharepoint 2013으로 데이터베이스 업그레이드](https://go.microsoft.com/fwlink/p/?LinkId=256690) (https://go.microsoft.com/fwlink/p/?LinkId=256690) 를 참조 하세요.  
   
 1.  **데이터베이스를 오프라인 상태로 만들기:**  
   
