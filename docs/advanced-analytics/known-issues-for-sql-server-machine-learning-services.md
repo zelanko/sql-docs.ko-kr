@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9a8237887786066a8789cb319fc7de550fa7f535
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: d56e3109c0820b800bbd72c9cc86bed9b7a09eea
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000459"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030299"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 알려진 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -525,7 +525,7 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 
 **권장**
 
-[Sqlmlutils](https://github.com/microsoft/sqlmlutils/tree/master/Python) 또는 [CREATE EXTERNAL LIBRARY](../t-sql/statements/create-external-library-transact-sql.md) 를 사용 하 여 Python 패키지를 설치 합니다.
+[Sqlmlutils를 사용 하 여 Python 패키지 설치](package-management/install-additional-python-packages-on-sql-server.md)를 참조 하세요.
 
 **적용 대상:** Linux에서 2019 SQL Server
 
