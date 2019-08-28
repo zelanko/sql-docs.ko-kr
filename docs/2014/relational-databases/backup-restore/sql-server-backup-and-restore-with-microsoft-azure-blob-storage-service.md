@@ -39,7 +39,7 @@ ms.locfileid: "62920698"
   
 -   현재 Windows Azure 가상 컴퓨터를 실행 중인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 경우 연결된 디스크를 만들어서 Windows Azure Blob Storage 서비스로 백업할 수 있습니다. 그러나 Windows Azure 가상 컴퓨터에 연결할 수 있는 디스크 수에 제한이 있습니다. 초대형 인스턴스의 경우 16개이며, 그보다 작은 인스턴스의 경우 더 적습니다. Microsoft Azure Blob Storage에 직접 백업하면 16개의 디스크 제한을 무시할 수 있습니다.  
   
-     또한 데이터베이스를 연결하고 분리하거나 VHD를 다운로드하고 연결할 필요 없이 온-프레미스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]나 Windows Azure 가상 컴퓨터에서 실행 중인 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 Windows Azure Blob 저장소 서비스에 저장되는 백업 파일을 바로 사용할 수 있습니다  
+     또한 데이터베이스를 연결하고 분리하거나 VHD를 다운로드하고 연결할 필요 없이 온-프레미스 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]나 Windows Azure 가상 컴퓨터에서 실행 중인 다른 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 Windows Azure Blob Storage 서비스에 저장되는 백업 파일을 바로 사용할 수 있습니다  
   
 -   비용상의 이점: 사용되는 서비스에 대한 비용만 지불합니다. 오프사이트 및 백업 보관 옵션만큼 비용 효율적일 수 있습니다. 참조 된 [Windows Azure 청구 고려 사항](#Billing) 자세한 내용 및 링크에 대 한 섹션입니다.  
   

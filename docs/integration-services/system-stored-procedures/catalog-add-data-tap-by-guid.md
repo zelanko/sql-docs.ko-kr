@@ -17,7 +17,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68068697"
 ---
-# <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid 
+# <a name="catalogadd_data_tap_by_guid"></a>catalog.add_data_tap_by_guid 
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -77,7 +77,7 @@ exec catalog.add_data_tap_by_guid   @execution_id,
   
 -   추가한 데이터 탭은 패키지 실행 전에는 유효성이 검사되지 않습니다.  
   
--   데이터 탭 도중에 캡처되는 행 수를 제한하여 대용량 데이터 파일이 생성되지 않도록 하는 것이 좋습니다. 저장 프로시저가 실행되는 컴퓨터에 데이터 파일에 대한 저장 공간이 부족한 경우 저장 프로시저 실행이 중지됩니다.  
+-   데이터 탭 도중에 캡처되는 행 수를 제한하여 대용량 데이터 파일이 생성되지 않도록 하는 것이 좋습니다. 저장 프로시저가 실행되는 컴퓨터에 데이터 파일에 대한 스토리지 공간이 부족한 경우 저장 프로시저 실행이 중지됩니다.  
   
 -   add_data_tap_by_guid 저장 프로시저를 실행하면 패키지의 성능에 영향을 미칩니다. 이 저장 프로시저는 데이터 문제 해결을 위해서만 실행하는 것이 좋습니다.  
   

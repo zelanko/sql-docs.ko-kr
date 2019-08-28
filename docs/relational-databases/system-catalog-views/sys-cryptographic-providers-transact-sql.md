@@ -27,7 +27,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67940294"
 ---
-# <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers(Transact-SQL)
+# <a name="syscryptographic_providers-transact-sql"></a>sys.cryptographic_providers(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   등록된 각 암호화 공급자에 대해 하나의 행을 반환합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "67940294"
 |**name**|**sysname**|암호화 공급자의 이름입니다.|  
 |**guid**|**uniqueidentifier**|고유한 공급자 GUID입니다.|  
 |**version**|**nvarchar(50)**|형식에서 공급자의 버전 '*aa.bb.cccc.dd*'.|  
-|**dll_path**|**nvarchar(512)**|EKM(Extensible Key Management) API(응용 프로그래밍 인터페이스)를 구현하는 DLL의 경로입니다.|  
+|**dll_path**|**nvarchar(512)**|EKM(Extensible Key Management) API(애플리케이션 프로그래밍 인터페이스)를 구현하는 DLL의 경로입니다.|  
 |**is_enabled**|**bit**|공급자가 서버에서 설정되어 있는지 여부입니다.<br /><br /> 0 = 설정 안 함(기본값)<br /><br /> 1 = 사용|  
   
 ## <a name="remarks"></a>설명  

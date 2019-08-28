@@ -27,12 +27,12 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67942059"
 ---
-# <a name="managedbackupspbackupondemand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact SQL)
+# <a name="managed_backupsp_backup_on_demand-transact-sql"></a>managed_backup.sp_backup_on_demand (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   지정된 데이터베이스 백업을 수행하려면 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 요청합니다.  
   
- 이 저장 프로시저를 사용하면 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]으로 구성된 데이터베이스에 대한 임시 백업을 수행할 수 있습니다. 이렇게 하면 백업 체인이 끊어지는 것을 방지하고 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 프로세스를 인지할 수 있으며, 백업이 동일한 Windows Azure Blob 저장소 컨테이너에 저장됩니다.  
+ 이 저장 프로시저를 사용하면 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]으로 구성된 데이터베이스에 대한 임시 백업을 수행할 수 있습니다. 이렇게 하면 백업 체인이 끊어지는 것을 방지하고 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 프로세스를 인지할 수 있으며, 백업이 동일한 Windows Azure Blob Storage 컨테이너에 저장됩니다.  
   
  백업이 성공적으로 완료된 다음에는 전체 백업 파일 경로가 반환됩니다. 여기에는 백업 작업으로 발생하는 새 백업 파일의 이름 및 위치가 포함됩니다.  
   

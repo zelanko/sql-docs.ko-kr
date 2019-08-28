@@ -25,7 +25,7 @@ ms.locfileid: "66011571"
   
  확장 또는 DBCS 문자를 포함하는 데이터 파일을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 여러 인스턴트 사이에 대량의 데이터를 전송하는 경우 유니코드 네이티브 형식을 사용하는 것이 좋습니다. 비문자 데이터의 경우 유니코드 네이티브 형식은 네이티브(데이터베이스) 데이터 형식을 사용합니다. `char`, `nchar`, `varchar`, `nvarchar`, `text`, `varchar(max)`, `nvarchar(max)` 및 `ntext`와 같은 문자 데이터의 경우 유니코드 네이티브 형식은 유니코드 문자 데이터 형식을 사용합니다.  
   
- 유니코드 네이티브 형식의 데이터 파일에 SQLVARIANT로 저장된 `sql_variant` 데이터는 `char` 및 `varchar` 값이 `nchar` 및 `nvarchar`로 변환되어 영향을 받은 열에 두 배의 저장 공간이 필요하다는 점을 제외하고 네이티브 형식의 데이터 파일과 같은 방법으로 작동합니다. 테이블 열로 대량 가져오기를 수행하면 원래의 메타데이터는 유지되고 값은 원래의 `char` 및 `varchar` 데이터 형식으로 다시 변환됩니다.  
+ 유니코드 네이티브 형식의 데이터 파일에 SQLVARIANT로 저장된 `sql_variant` 데이터는 `char` 및 `varchar` 값이 `nchar` 및 `nvarchar`로 변환되어 영향을 받은 열에 두 배의 스토리지 공간이 필요하다는 점을 제외하고 네이티브 형식의 데이터 파일과 같은 방법으로 작동합니다. 테이블 열로 대량 가져오기를 수행하면 원래의 메타데이터는 유지되고 값은 원래의 `char` 및 `varchar` 데이터 형식으로 다시 변환됩니다.  
   
 ## <a name="command-options-for-unicode-native-format"></a>유니코드 네이티브 형식의 명령 옵션  
  **bcp**, BULK INSERT 또는 INSERT ... SELECT \* FROM OPENROWSET(BULK...)를 사용하여 테이블로 유니코드 원시 형식 데이터를 가져올 수 있습니다. **bcp** 명령 또는 BULK INSERT 문의 경우 명령줄에서 데이터 형식을 지정할 수 있습니다. INSERT ... SELECT * FROM OPENROWSET(BULK...) 문의 경우 서식 파일에서 데이터 형식을 지정해야 합니다.  

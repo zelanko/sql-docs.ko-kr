@@ -780,7 +780,7 @@ FROM URL
 
 ## <a name="general-remarks"></a>일반적인 주의 사항
 
-전제 조건으로 BLOB 스토리지 계정 URL과 일치하는 이름으로 자격 증명을 만들고, 공유 액세스 서명을 암호로 배치해야 합니다. RESTORE 명령은 BLOB 저장소 URL을 사용하여 자격 증명을 조회하고 백업 디바이스를 읽는 데 필요한 정보를 찾습니다.
+전제 조건으로 BLOB 스토리지 계정 URL과 일치하는 이름으로 자격 증명을 만들고, 공유 액세스 서명을 암호로 배치해야 합니다. RESTORE 명령은 BLOB Storage URL을 사용하여 자격 증명을 조회하고 백업 디바이스를 읽는 데 필요한 정보를 찾습니다.
 
 RESTORE 작업은 비동기식으로, 클라이언트 연결을 중단하는 경우에도 복원은 계속됩니다. 사용자 연결을 드롭하는 경우 복원 작업의 상태에 대한 [sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) 보기를 확인할 수 있습니다(데이터베이스의 CREATE 및 DROP 경우 포함).
 
