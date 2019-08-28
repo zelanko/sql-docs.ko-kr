@@ -1,7 +1,7 @@
 ---
 title: 래퍼 및 인터페이스 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 27fc9b72-9f21-4728-abcb-5c015f28a6ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7be51a27364107afe6b79ebcce5de109909b1836
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3a74f5ccd8a36527dd7c37fc02150d11be632ba9
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916061"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025578"
 ---
 # <a name="wrappers-and-interfaces"></a>래퍼 및 인터페이스
 
@@ -27,7 +27,7 @@ ms.locfileid: "67916061"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]는 java.sql.Wrapper 인터페이스를 지원합니다. 이 인터페이스는 프록시 인터페이스를 통해 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]와 관련된 JDBC API에 대한 확장에 액세스할 수 있는 메커니즘을 제공합니다.
 
-**isWrapperFor** 인터페이스는 두 메서드인  및 **래핑**해제를 정의 합니다. **isWrapperFor** 메서드는 지정된 입력 개체가 이 인터페이스를 구현하는지 확인합니다. **unwrap** 메서드는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드에 액세스할 수 있도록 이 인터페이스를 구현하는 개체를 반환합니다.
+**IsWrapperFor** 인터페이스는 두 메서드인 및 **래핑**해제를 정의 합니다. **isWrapperFor** 메서드는 지정된 입력 개체가 이 인터페이스를 구현하는지 확인합니다. **unwrap** 메서드는 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] 관련 메서드에 액세스할 수 있도록 이 인터페이스를 구현하는 개체를 반환합니다.
 
 **isWrapperFor** 및 **래핑** 해제 메서드는 다음과 같이 노출 됩니다.
 
@@ -111,6 +111,6 @@ public class UnWrapTest {
 }  
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)

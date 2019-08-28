@@ -1,7 +1,7 @@
 ---
 title: Azure SQL database에 연결 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f62ca071f091fb812550315a81accff723422f09
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73c7713a013f03879b63ec2a073cc24fd9bdabe1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956850"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028159"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Azure SQL 데이터베이스에 연결
 
@@ -32,13 +32,13 @@ ms.locfileid: "67956850"
 ## <a name="details"></a>세부 정보
 
 에 연결할 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]때 **SQLServerDatabaseMetaData**를 호출 하려면 master 데이터베이스에 연결 해야 합니다.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData** 뷰를 사용 하 여 카탈로그를 가져옵니다. **SQLServerDatabaseMetaData** [(transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 의 사용 권한에 대 한 설명을 참조 하 여의  [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]동작을 이해 하십시오.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)]는 사용자 데이터베이스에서 전체 카탈로그 집합을 반환하는 기능을 지원하지 않습니다. **SQLServerDatabaseMetaData** 뷰를 사용 하 여 카탈로그를 가져옵니다. **SQLServerDatabaseMetaData** [(transact-sql)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 의 사용 권한에 대 한 설명을 참조 하 여의 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]동작을 이해 하십시오.  
   
 ## <a name="connections-dropped"></a>연결이 삭제됨
 
 [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]에 연결할 때 비활성 기간 후 방화벽과 같은 네트워크 구성 요소에서 유휴 연결을 종료할 수 있습니다. 유휴 연결에는  
 
-- 네트워크 장치에서 연결을 삭제할 수 있는 TCP 계층에서 유휴 연결(Idle at the TCP layer) 및  
+- 네트워크 디바이스에서 연결을 삭제할 수 있는 TCP 계층에서 유휴 연결(Idle at the TCP layer) 및  
 
 - TCP **keepalive** 메시지가 발생할 수 있으나(TCP 쪽에서 유휴 상태가 아닌 연결하기) 30분간 활성 쿼리가 없는 SQL Azure 게이트웨이에서 유휴 연결(Idle by the SQL Azure Gateway)의 두 가지 종류가 있습니다. 이 시나리오에서 게이트웨이가 TDS 연결이 30분간 유휴 상태이고 연결을 종료됨을 결정합니다.  
   
@@ -88,6 +88,6 @@ shutdown /r /t 1
 jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

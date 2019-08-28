@@ -1,7 +1,7 @@
 ---
 title: java.sql.Time 값을 서버에 보내는 방식 구성 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 07eb00dd-621a-46f9-a5a5-8cab4d6058b5
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f22382db2ab6cd9c6f055b8143500e2062721df1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fe6969d51834d0798a530b9cc9926af1b27fec2
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956931"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028231"
 ---
 # <a name="configuring-how-javasqltime-values-are-sent-to-the-server"></a>java.sql.Time 값을 서버에 보내는 방식 구성
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "67956931"
   
  [SQLServerDataSource.setSendTimeAsDatetime](../../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md)을 사용하여 **sendTimeAsDatetime** 연결 속성의 값을 프로그래밍 방식으로 수정할 수 있습니다.  
   
- 이전의 버전은 **time**데이터형식을지원하지않으므로java.시간을사용하는응용프로그램은일반적으로날짜/시간값을**datetime**또는 [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **smalldatetime** 데이터 형식[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai_md.md)] 이전의 버전은 **time** 데이터 형식을 지원 하지 않으므로 java. 시간을 사용 하는 응용 프로그램은 일반적으로 **datetime** 또는 **smalldatetime** 데이터 형식으로 java. 시간 값을 저장 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
- **SendTimeAsDatetime값** 으로 작업할[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 때 **datetime** 및 **smalldatetime** 데이터 형식을 사용 하려면 다음을 설정 해야 합니다. **true**로 연결 되는 속성입니다. **SendTimeAsDatetime** 연결 속성을 **false**로 설정 해야 하는 경우에는 **time** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용 해야 합니다.  
+ **SendTimeAsDatetime** 값으로 작업할 때 **datetime** 및 **smalldatetime** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용 하려는 경우에는 connection 속성을 **true**로 설정 해야 합니다. **SendTimeAsDatetime** 연결 속성을 **false**로 설정 해야 하는 경우에는 **time** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터 형식을 사용 해야 합니다.  
   
  날짜도 저장할 수 있는 데이터 형식의 매개 변수에 java.sql.Time 값을 보낼 시 java.sql.Time 값을 **datetime**(1/1/1970) 값으로 보내는지 아니면 **time**(1/1/1900) 값으로 보내는지에 따라 기본 날짜가 달라지므로 주의해야 합니다. 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]로 보낼 때의 데이터 변환에 대한 자세한 내용은 [날짜 및 시간 데이터 사용](https://go.microsoft.com/fwlink/?LinkID=145211)을 참조하세요.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "67956931"
   public void setSendTimeAsDatetime(boolean sendTimeAsDateTimeValue)
 ```
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:
  [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
   
   

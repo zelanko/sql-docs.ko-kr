@@ -1,7 +1,7 @@
 ---
 title: Kerberos 통합 인증을 사용하여 SQL Server에 연결 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 894da21c079b776524c07cab8b8f223bae769aee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2215e9f6b6c8cd0e19c220d16ebc7a1520550a42
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916228"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026188"
 ---
 # <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Kerberos 통합 인증을 사용하여 SQL Server에 연결
 
@@ -37,13 +37,13 @@ Java **Krb5LoginModule**과 함께 통합 인증을 사용하면 [Class Krb5Logi
 
 ## <a name="remarks"></a>Remarks
 
-이전 버전에서는 응용 프로그램이 다음을 참조 하 여 통합 인증 (사용할 수 있는 경우에 따라 Kerberos 또는 NTLM을 **사용 하는** )을 지정할 수 있습니다. [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 연결 URL [작성에설명 된 **sqljdbc_auth**.](../../connect/jdbc/building-the-connection-url.md)
+이전 버전에서는 응용 프로그램 **** 에서다음을수행하여통합인증(사용할수있는경우에따라Kerberos또는NTLM을사용하는)을지정할수있습니다.sqljdbc_auth를참조[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]하 여 **** [연결 URL 작성](../../connect/jdbc/building-the-connection-url.md)에 설명 되어 있습니다.
 
 [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]부터 애플리케이션에서는 순수한 Java Kerberos 구현을 사용하는 Kerberos 통합 인증을 사용하여 데이터베이스에 연결한다는 것을 나타내기 위해 **authenticationScheme** 연결 속성을 사용할 수 있습니다.
 
-- **Krb5LoginModule**를 사용 하 여 통합 인증을 사용 하려는 경우에는 **계속 연결 속성** 을 지정 해야 합니다. 그런 다음 **Authenticationscheme = JavaKerberos** connection 속성도 지정 합니다.
+- **Krb5LoginModule**를 사용 하 여 통합 인증을 사용 하려는 경우에는 **** 계속 연결 속성을 지정 해야 합니다. 그런 다음 **Authenticationscheme = JavaKerberos** connection 속성도 지정 합니다.
 
-- **Sqljdbc_auth**와 함께 통합 인증을 계속 사용 **하려면 연결 속성** (및 선택적으로 **authenticationscheme = NativeAuthentication**)을 지정 하면 됩니다.
+- **Sqljdbc_auth**와 함께 통합 인증을 계속 사용 하려면 연결 속성 ( **** 및 선택적으로 **authenticationscheme = NativeAuthentication**)을 지정 하면 됩니다.
 
 - **Authenticationscheme = JavaKerberos** 을 지정 하지만 지 속성 **atedsecurity = true**를 지정 하지 않으면 드라이버는 **authenticationscheme** 연결 속성을 무시 하 고 사용자 이름 및 암호를 찾을 것으로 간주 됩니다. 연결 문자열의 자격 증명입니다.
 
@@ -99,7 +99,7 @@ IBM JVM
 };  
 ```
 
-로그인 구성 파일은 하나 이상의 항목으로 구성되며, 각 항목은 특정 응용 프로그램에 사용해야 하는 기본 인증 기술을 지정합니다. 예:
+로그인 구성 파일은 하나 이상의 항목으로 구성되며, 각 항목은 특정 애플리케이션에 사용해야 하는 기본 인증 기술을 지정합니다. 예:
 
 ```java
 SQLJDBCDriver {  
@@ -219,6 +219,6 @@ try (Connection c = ds.getConnection(); Statement s = c.createStatement();
 5. Via `klist` 에서 티켓의 자격 증명을 확인 하 고 자격 증명을 인증에 사용 하려는 자격 증명 인지 확인 합니다.
 6. 위의 샘플 코드를 실행 하 고 Kerberos 인증에 성공 했는지 확인 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버로 SQL Server에 연결](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

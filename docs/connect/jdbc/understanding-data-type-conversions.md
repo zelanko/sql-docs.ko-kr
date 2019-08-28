@@ -1,7 +1,7 @@
 ---
 title: 데이터 형식 변환 이해 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 98fa7488-aac3-45b4-8aa4-83ed6ab638b4
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: d7029faf333c00fc18e4f35743706a012b76c1e7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5ed91f1b38f68715cd174a96cb2f0364fc060482
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004177"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027480"
 ---
 # <a name="understanding-data-type-conversions"></a>데이터 형식 변환 이해
 
@@ -71,7 +71,7 @@ XML 문자가 특정 문자 인코딩을 사용하는 경우에는 BOM(바이트
 
 서버는 변환을 시도하고 실패하면 오류를 반환합니다.
 
-**문자열** 데이터 형식의 경우 값이 **VARCHAR**의 길이를 초과 하는 경우에는이 값이 값이 (가) **(으)** 로 매핑됩니다. 마찬가지로 값이 지원 되는 **nvarchar**의 길이를 초과 하는 경우 **nvarchar** 는 **LONGNVARCHAR** 에 매핑됩니다. **byte[]** 의 경우도 마찬가지입니다. **VARBINARY** 보다 긴 값은 고가 **됩니다.**
+**문자열** 데이터 형식의 경우 값이 **VARCHAR**의 길이를 초과 하는 경우에는이 값이 값이 **LONGVARCHAR** (가) (으)로 매핑됩니다. 마찬가지로 값이 지원 되는 **nvarchar**의 길이를 초과 하는 경우 **nvarchar** 는 **LONGNVARCHAR** 에 매핑됩니다. **byte[]** 의 경우도 마찬가지입니다. **VARBINARY** 보다 긴 값은 **LONGVARBINARY** 고가 됩니다.
 
 다음은 JDBC 드라이버의 setter 메서드에서 지원하는 두 가지 변환 범주입니다.
 
@@ -100,7 +100,7 @@ XML 문자가 특정 문자 인코딩을 사용하는 경우에는 BOM(바이트
 
 ![JDBCSetObjectConversions](../../connect/jdbc/media/jdbc_jdbcsetobjectconversions.gif "JDBCSetObjectConversions")
 
-대상 유형을 지정하지 않은 setObject 메서드는 기본 매핑을 사용합니다. **문자열** 데이터 형식의 경우 값이 **VARCHAR**의 길이를 초과 하는 경우에는이 값이 값이 (가) **(으)** 로 매핑됩니다. 마찬가지로 값이 지원 되는 **nvarchar**의 길이를 초과 하는 경우 **nvarchar** 는 **LONGNVARCHAR** 에 매핑됩니다. **byte[]** 의 경우도 마찬가지입니다. **VARBINARY** 보다 긴 값은 고가 **됩니다.**
+대상 유형을 지정하지 않은 setObject 메서드는 기본 매핑을 사용합니다. **문자열** 데이터 형식의 경우 값이 **VARCHAR**의 길이를 초과 하는 경우에는이 값이 값이 **LONGVARCHAR** (가) (으)로 매핑됩니다. 마찬가지로 값이 지원 되는 **nvarchar**의 길이를 초과 하는 경우 **nvarchar** 는 **LONGNVARCHAR** 에 매핑됩니다. **byte[]** 의 경우도 마찬가지입니다. **VARBINARY** 보다 긴 값은 **LONGVARBINARY** 고가 됩니다.
 
 다음은 JDBC 드라이버의 setObject 메서드에서 지원하는 세 가지 변환 범주입니다.
 
@@ -120,6 +120,6 @@ XML 문자가 특정 문자 인코딩을 사용하는 경우에는 BOM(바이트
 
 XML 문자가 특정 문자 인코딩을 사용하는 경우에는 BOM(바이트 순서 표시)이 필요합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>관련 항목:
 
 [JDBC 드라이버 데이터 형식 이해](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)
