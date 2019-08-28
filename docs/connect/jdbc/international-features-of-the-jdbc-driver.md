@@ -1,7 +1,7 @@
 ---
 title: JDBC 드라이버의 국가별 기능 | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f5e9d6902733ea8a9cca91b4bd33adcb66708672
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64c046ade18bfdf8789ce9fec221f3d33517fcbb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956470"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028013"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC 드라이버의 국가별 기능
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "67956470"
  반면 [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) 및 [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) 클래스의 setString, setCharacterStream 및 setClob 메서드와 같은 비국가별 문자 API 메서드는 **sendStringParametersAsUnicode** 속성이 “true”로 설정(기본값)된 경우에만 해당 값을 유니코드로 서버에 전송합니다.  
   
 ## <a name="non-unicode-parameters"></a>유니코드가 아닌 매개 변수  
- 유니코드가 아닌 매개 변수의 **CHAR**, **VARCHAR** 또는 **sendStringParametersAsUnicode** 속성을 사용 하는 최적의 성능을 위해, 연결 문자열 속성을 "false"로 설정 하 고 국가별 문자 메서드가 아닌 메서드를 사용 합니다 **.**  
+ 유니코드가 아닌 매개 변수의 **CHAR**, **VARCHAR** 또는 **LONGVARCHAR** **sendStringParametersAsUnicode** 속성을 사용 하는 최적의 성능을 위해, 연결 문자열 속성을 "false"로 설정 하 고 국가별 문자 메서드가 아닌 메서드를 사용 합니다.  
   
 ## <a name="formatting-issues"></a>서식 지정 문제  
  날짜, 시간 및 통화의 경우 지역화된 데이터에 관한 모든 서식 지정은 Locale 개체와 **Date**, **Calendar** 및 **Number** 데이터 형식의 다양한 서식 지정 메서드를 사용하여 Java 언어 수준에서 수행됩니다. 드문 경우이기는 하지만 JDBC 드라이버가 지역화된 형식으로 로캘 구분 데이터를 함께 전달해야 하는 경우 기본 JVM 로캘과 함께 적절한 포맷터가 사용됩니다.  
@@ -62,7 +62,7 @@ ms.locfileid: "67956470"
 > [!NOTE]  
 >  Windows 이외의 플랫폼용으로 작성된 대부분의 확인 프로그램 소프트웨어는 인터넷 DSN 표준 기반이므로 IDN에 대해 Punycode 형식을 사용할 가능성이 높은 반면 프라이빗 네트워크의 Windows 기반 DNS 서버는 서버 단위로 UTF-8 문자 사용을 허용하도록 구성될 수 있습니다.  자세한 내용은 [유니코드 문자 지원](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>관련 항목:  
  [JDBC 드라이버 개요](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   
