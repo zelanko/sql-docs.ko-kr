@@ -4153,6 +4153,8 @@
     - name: SQL Server 업그레이드
       href: database-engine/install-windows/upgrade-sql-server.md
       items:
+        - name: 호환성 인증
+          href: database-engine/install-windows/compatibility-certification.md
         - name: 지원되는 버전 업그레이드 - SQL Server 2017
           href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
         - name: 지원되는 버전 업그레이드 - SQL Server 2016
@@ -4190,6 +4192,8 @@
               href: database-engine/install-windows/complete-the-database-engine-upgrade.md
             - name: 데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용
               href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
+            - name: 쿼리 튜닝 도우미를 사용 하 여 데이터베이스 호환성 모드 변경
+              href: relational-databases/performance/upgrade-dbcompat-using-qta.md
     - name: Configuration
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -5700,7 +5704,7 @@
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
             - name: 동영상 >>
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
-    - name: 데이터베이스 실험 마법사
+    - name: DEA(데이터베이스 실험 도우미)
       href: dea/database-experimentation-assistant-overview.md
       items:
         - name: 시작
@@ -6555,7 +6559,7 @@
               items:
                 - name: 비대칭 키 암호화의 강도
                   href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
-                - name: 디스크 입/출력 하위 시스템에서 IO 지연 문제 확인
+                - name: 디스크 입/출력 하위 시스템에서 I/O 지연 문제 확인
                   href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
                 - name: 읽기 다시 시도 문제에 대한 디스크 입력-출력 하위 시스템 검사
                   href: relational-databases/policy-based-management/check-disk-input-output-subsystem-for-read-retry-problems.md
@@ -6925,7 +6929,7 @@
                       href: relational-databases/performance-monitor/sql-server-xtp-databases.md
                     - name: 가비지 수집
                       href: relational-databases/performance-monitor/sql-server-xtp-garbage-collection.md
-                    - name: IO 관리자
+                    - name: I/O 관리자
                       href: relational-databases/performance-monitor/sql-server-xtp-io-governor.md
                     - name: 가상 프로세서
                       href: relational-databases/performance-monitor/sql-server-xtp-phantom-processor.md
@@ -7293,6 +7297,8 @@
               href: relational-databases/performance/use-sql-server-profiler-to-create-and-test-plan-guides.md
             - name: 업그레이드 후 계획 지침의 유효성 검사
               href: relational-databases/performance/validate-plan-guides-after-upgrade.md
+        - name: 쿼리 튜닝 길잡이
+          href: relational-databases/performance/upgrade-dbcompat-using-qta.md
         - name: 리소스 관리자
           href: relational-databases/resource-governor/resource-governor.md
           items:
