@@ -70,7 +70,7 @@ Visual Studio Code 확장 [Azure Data Studio 디버그](https://github.com/kevcu
 
 Azure Data Studio에 새 확장을 게시하려면
 
-1. https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json 에 확장을 추가합니다.
+1. [https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json ) 에 확장을 추가합니다.
 2. 현재 타사 확장을 호스트하는 기능이 지원되지 않으므로 확장을 다운로드하는 대신, 다운로드 페이지를 검색하는 옵션이 Azure Data Studio에 제공됩니다. 확장의 다운로드 페이지를 설정하려면 “Microsoft.AzureDataStudio.DownloadPage” 자산 값을 설정합니다.
 3. 릴리스/확장 분기에 대한 PR을 만듭니다.
 4. 팀에 검토 요청을 보냅니다.
