@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -51,15 +51,15 @@ helpviewer_keywords:
 - secondary indexes [SQL Server]
 - XML indexes [SQL Server], creating
 ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
-author: CarlRabeler
+author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fdc5ee7428aec65c96755eb9a1c0e013de80d01
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a2e6a20ac4fb319119692ce41eeef80b1912de33
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809777"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009321"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX(Transact-SQL)
 
@@ -272,7 +272,8 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 
 필터링된 인덱스는 XML 인덱스 및 전체 텍스트 인덱스에는 적용되지 않습니다. UNIQUE 인덱스의 경우에는 선택한 행만 고유 인덱스 값을 가져야 합니다. 필터링된 인덱스에서는 IGNORE_DUP_KEY 옵션이 허용되지 않습니다.
 
-ON *partition_scheme_name* **( _column_name_ )**       
+ON *partition_scheme_name* **( _column_name_ )**      
+
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 분할된 인덱스의 파티션이 매핑될 파일 그룹을 정의하는 파티션 구성표를 지정합니다. 파티션 구성표는 [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) 또는 [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md)의 실행을 통해 데이터베이스 내에 있어야 합니다. *column_name*은 분할된 인덱스가 분할되는 기준으로 사용할 열을 지정합니다. 이 열은 *partition_scheme_name*에서 사용하는 파티션 함수의 인수와 데이터 형식, 길이 및 전체 자릿수가 일치해야 합니다. *column_name*은 인덱스 정의의 열만 사용할 필요는 없으며 기본 테이블의 모든 열을 지정할 수 있습니다. 단, UNIQUE 인덱스를 분할할 때 고유 키로 사용되는 열 중에서 *column_name*을 선택해야 하는 경우는 제외합니다. 이 제한 사항으로 인해 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 단일 파티션 내에서만 키 값의 고유성을 확인할 수 있습니다.
@@ -288,11 +289,13 @@ _partition_scheme_name_ 또는 _filegroup_이 지정되지 않고 테이블이 �
 분할 인덱스에 대한 자세한 내용은 [분할된 테이블 및 인덱스](../../relational-databases/partitions/partitioned-tables-and-indexes.md)를 참조하세요.
 
 ON _filegroup_name_      
+
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
 
 주어진 파일 그룹에 지정된 인덱스를 만듭니다. 지정된 위치가 없고 테이블 또는 뷰가 분할되지 않은 경우 인덱스는 동일한 파일 그룹을 기본 테이블 또는 뷰로 사용합니다. 파일 그룹은 이미 존재해야 합니다.
 
-ON **"** default **"**       
+ON **"** default **"**      
+
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 테이블 또는 보기와 동일한 파일 그룹 또는 파티션 구성표에 지정된 인덱스를 만듭니다.
@@ -303,6 +306,7 @@ ON **"** default **"**
 > "default"는 CREATE INDEX의 컨텍스트에서 데이터베이스 기본 파일 그룹을 나타내지 않습니다. 이는 CREATE TABLE과 다르며, 여기서 "default"는 데이터베이스 기본 파일 그룹에서 테이블을 찾습니다.
 
 [ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]      
+
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
 
 클러스터형 인덱스를 만들 때 테이블에 대한 FILESTREAM 데이터의 위치를 지정합니다. FILESTREAM_ON 절에서 FILESTREAM 데이터를 다른 FILESTREAM 파일 그룹 또는 파티션 구성표로 이동할 수 있습니다.
@@ -340,6 +344,7 @@ _database_name_
 인덱스를 만들 때 사용할 옵션을 지정합니다.
 
 PAD_INDEX = { ON | **OFF** }      
+
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 인덱스 패딩을 지정합니다. 기본값은 OFF입니다.
@@ -355,6 +360,7 @@ PAD_INDEX는 FILLFACTOR에 지정된 비율을 사용하므로 FILLFACTOR가 지
 이전 버전과 호환되는 구문에서 WITH PAD_INDEX는 WITH PAD_INDEX = ON과 같습니다.
 
 FILLFACTOR **=** _fillfactor_      
+
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 인덱스를 만들거나 다시 작성할 때 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 각 인덱스 페이지의 리프 수준을 채우는 비율을 지정합니다. *fillfactor*는 1에서 100 사이의 정수 값이어야 하며 *fillfactor*가 100이면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]는 리프 페이지가 꽉 찬 인덱스를 만듭니다.
@@ -367,6 +373,7 @@ FILLFACTOR 설정은 인덱스를 만들거나 다시 작성하는 경우에만 
 자세한 내용은 [인덱스의 채우기 비율 지정](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)을 참조하세요.
 
 SORT_IN_TEMPDB = { ON | **OFF** }      
+
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 **tempdb**에 임시 정렬 결과를 저장할지 여부를 지정합니다. 기본값은 OFF입니다.
@@ -412,7 +419,10 @@ OFF
 
 이전 버전과 호환되는 구문에서 WITH STATISTICS_NORECOMPUTE는 WITH STATISTICS_NORECOMPUTE = ON과 같습니다.
 
-STATISTICS_INCREMENTAL = { ON | **OFF** }      
+STATISTICS_INCREMENTAL = { ON | **OFF** }     
+
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+
 **ON**으로 설정된 경우 파티션 통계별로 통계가 작성됩니다. **OFF**로 설정된 경우 통계 트리가 삭제되고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 통계를 다시 계산합니다. 기본값은 **OFF**입니다.
 
 파티션별 통계가 지원되지 않는 경우에는 이 옵션이 무시되고 경고가 생성됩니다. 다음 통계 유형에 대해서는 증분 통계가 지원되지 않습니다.
@@ -448,7 +458,7 @@ DROP_EXISTING을 사용하여 다음을 변경할 수 없습니다.
 ONLINE = { ON | **OFF** }      
 인덱스 작업 중 쿼리 및 데이터 수정에 기본 테이블과 관련 인덱스를 사용할 수 있는지 여부를 지정합니다. 기본값은 OFF입니다.
 
-> [!NOTE]
+> [!IMPORTANT]
 > 온라인 인덱스 작업은 일부 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 사용할 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 버전에서 지원되는 기능 목록은 [SQL Server 2016 버전에 대한 버전 및 지원하는 기능](../../sql-server/editions-and-supported-features-for-sql-server-2016.md)을 참조하세요.
 
 ON      
@@ -456,6 +466,18 @@ ON
 
 OFF      
 인덱스 작업 중에 테이블 잠금이 적용됩니다. 클러스터형 인덱스를 생성, 다시 작성 또는 삭제하거나 비클러스터형 인덱스를 다시 작성 또는 삭제하는 오프라인 인덱스 작업을 통해 테이블의 SCH-M(스키마 수정) 잠금을 획득합니다. 이 경우 작업 중에 모든 사용자가 기본 테이블에 액세스할 수 없게 됩니다. 비클러스터형 인덱스를 만드는 오프라인 인덱스 작업을 통해 테이블의 S(공유) 잠금을 획득합니다. 따라서 기본 테이블을 업데이트할 수 없지만 SELECT 문과 같은 읽기 작업은 허용됩니다.
+
+자세한 내용은 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.  
+
+전역 임시 테이블의 인덱스를 비롯한 인덱스를 온라인으로 만들 수 있습니다. 단, 다음 사례는 예외입니다.
+
+- XML 인덱스
+- 로컬 임시 테이블의 인덱스
+- 뷰의 초기 고유 클러스터형 인덱스
+- 사용하지 않도록 설정된 클러스터형 인덱스
+- columnstore 인덱스
+- 기본 테이블이 LOB 데이터 형식(**image**, **ntext**, **text**) 및 공간 데이터 형식을 포함하는 경우 클러스터형 인덱스입니다.
+- **varchar(max)** 및 **varbinary(max)** 열은 인덱스의 일부일 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 테이블에 **varchar(최대)** 또는 **varbinary(최대)** 열이 포함된 경우 **ONLINE** 옵션을 사용하여 다른 열을 포함하는 클러스터형 인덱스를 빌드하거나 다시 빌드할 수 있습니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]는 기본 테이블에 **varchar(최대)** 또는 **varbinary(최대)** 열이 포함된 경우 **ONLINE** 옵션을 허용하지 않습니다.
 
 자세한 내용은 [온라인 인덱스 작업의 작동 원리](../../relational-databases/indexes/how-online-index-operations-work.md)를 참조하세요.
 
@@ -471,25 +493,17 @@ RESUMABLE **=** { ON | **OFF**}
  OFF      
 인덱스 작업이 다시 시작될 수 없습니다.
 
-MAX_DURATION **=** *time* [**MINUTES**]는 **RESUMABLE = ON** 상태에서 사용됩니다(**ONLINE = ON** 필요).      
+MAX_DURATION **=** *time* [**MINUTES**]는 **RESUMABLE = ON** 상태에서 사용됩니다(**ONLINE = ON** 필요).   
 
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](공개 미리 보기)
 
 다시 시작할 수 있는 온라인 인덱스 작업이 일시 중지하기 전에 실행된 시간을 나타냅니다(분 단위로 지정된 정수 값).
 
-> [!WARNING]
+> [!IMPORTANT]
 > 온라인으로 수행할 수 있는 인덱스 작업에 대한 자세한 내용은 [온라인 인덱스 작업 지침](../../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요.
 
- 전역 임시 테이블의 인덱스를 포함한 인덱스는 다음 예외의 경우를 제외하고 온라인 상태로 만들 수 있습니다.
-
-- XML 인덱스
-- 로컬 임시 테이블의 인덱스
-- 뷰의 초기 고유 클러스터형 인덱스
-- 해제된 클러스터형 인덱스
-- 기본 테이블이 LOB 데이터 형식 **image**, **ntext**, **text** 및 공간 유형을 포함하는 경우 클러스터형 인덱스입니다.
-- **varchar(max)** 및 **varbinary(max)** 열은 인덱스의 일부일 수 없습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터) 및 [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]에서 테이블에 **varchar(max)** 또는 **varbinary(max)** 열이 포함된 경우 **ONLINE** 옵션을 사용하여 다른 열을 포함하는 클러스터형 인덱스를 작성하거나 다시 작성할 수 있습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 기본 테이블에 **varchar(max)** 또는 **varbinary(max)** 열이 포함된 경우 **ONLINE** 옵션을 허용하지 않습니다.
-
-자세한 내용은 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요.
+> [!NOTE] 
+> columnstore 인덱스에서는 다시 시작 가능한 온라인 인덱스 다시 빌드가 지원되지 않습니다.
 
 ALLOW_ROW_LOCKS = { **ON** | OFF }      
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
@@ -513,18 +527,17 @@ ON
 OFF      
 페이지 잠금이 사용되지 않습니다.
 
-
 OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
 
 마지막 페이지 삽입 경합에 최적화할지 여부를 지정합니다. 기본값은 OFF입니다. 자세한 내용은 [순차 키](#sequential-keys) 섹션을 참조하세요.
 
-MAXDOP = _max_degree_of_parallelism_      
+MAXDOP = *max_degree_of_parallelism*      
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 인덱스 작업 기간 동안 **max degree of parallelism** 구성 옵션을 재정의합니다. 자세한 내용은 [max degree of parallelism 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요. MAXDOP를 사용하여 병렬 계획 실행에 사용되는 프로세서 수를 제한할 수 있습니다. 최대값은 64개입니다.
 
-_max_degree_of_parallelism_은 다음 중 하나일 수 있습니다.
+*max_degree_of_parallelism*은 다음 중 하나일 수 있습니다.
 
 1      
 병렬 계획이 생성되지 않습니다.
@@ -1127,6 +1140,7 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
 
 ## <a name="see-also"></a>참고 항목
 [SQL Server 인덱스 아키텍처 및 디자인 가이드](../../relational-databases/sql-server-index-design-guide.md)     
+[온라인으로 인덱스 작업 수행](../../relational-databases/indexes/perform-index-operations-online.md)  
 [인덱스 및 ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)     
 [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)     
 [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)     

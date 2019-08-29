@@ -10,19 +10,24 @@ ms.topic: conceptual
 ms.assetid: 6e005de0-3a77-4b91-b497-14cc0f9f6605
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3d4c7f50e791324d7e0a0a13164875c5095eb5d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: af9f37bb0cc3508d1a421c75de4297b3f015f6a7
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915281"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634572"
 ---
 # <a name="configuring-storage-for-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블 스토리지 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   스토리지 용량 및 IOPS(초당 입력/출력 작업)를 구성해야 합니다.  
   
 ## <a name="storage-capacity"></a>스토리지 용량  
- 데이터베이스의 메모리 최적화 내구성 있는 테이블의 메모리 내 크기를 측정하려면 [메모리 최적화 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 의 정보를 사용합니다. 인덱스가 메모리 최적화 테이블에 유지되지 않으므로 인덱스 크기를 포함하지 마세요. 크기를 결정했으면 내구성이 있는 메모리 내 테이블 크기의 4배에 해당하는 디스크 공간을 제공해야 합니다.  
+
+데이터베이스의 메모리 최적화 내구성 있는 테이블의 메모리 내 크기를 측정하려면 [메모리 최적화 테이블에 필요한 메모리 예측](../../relational-databases/in-memory-oltp/estimate-memory-requirements-for-memory-optimized-tables.md) 의 정보를 사용합니다. 인덱스가 메모리 최적화 테이블에 유지되지 않으므로 인덱스 크기를 포함하지 마세요. 
+ 
+크기를 확인한 후에는 새로 변경된 데이터를 저장하는 데 사용되는 검사점 파일을 충분히 저장할 수 있는 디스크 공간을 제공해야 합니다. 저장된 데이터는 메모리 내 테이블에 추가되는 새 행의 콘텐츠뿐만 아니라 기존 행의 새 버전에도 포함합니다. 이 스토리지는 행이 삽입되거나 업데이트될 때 증가합니다. 로그 잘림이 발생하면 행 버전이 병합되고 스토리지가 회수됩니다. 어떤 이유로든 로그 잘림이 지연되면 메모리 내 OLTP 저장소가 늘어납니다.
+
+이 영역에 대한 스토리지 크기를 조정하는 좋은 시작점은 내구성이 있는 메모리 내 테이블 크기의 4배를 예약하는 것입니다. 공간 사용량을 모니터링하고 필요한 경우 사용 가능한 스토리지를 확장할 수 있도록 준비합니다.
   
 ## <a name="storage-iops"></a>스토리지 IOPS  
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] 는 작업 처리량을 크게 증가시킬 수 있습니다. 따라서 IO가 병목 상태가 아니어야 합니다.  

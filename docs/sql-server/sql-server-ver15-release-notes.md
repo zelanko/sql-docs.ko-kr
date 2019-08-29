@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 릴리스 정보 | Microsoft Docs
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,26 +9,30 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 40040948b56190a3ce94d9484e09a3386548bd31
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: d9d6f1f0bdf1a0e38bf26fdc18bc91c5825ca412
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028849"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653033"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 미리 보기 릴리스 정보
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP(Community Technology Preview) 릴리스의 제한 사항 및 알려진 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
-- [SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md)
+이 문서에서는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 관련 제한 사항 및 알려진 문제에 대해 설명합니다. 관련 내용은 다음을 참조하세요.
 
-## <a name="ctp-32"></a>CTP 3.2
+>[SQL Server 2019의 새로운 기능](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 최신 퍼블릭 릴리스입니다.
+>[!NOTE]
+>콘텐츠는 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 릴리스 후보에 게시됩니다. 릴리스 후보는 시험판 소프트웨어입니다. 정보는 변경될 수 있습니다. 지원 시나리오에 대한 자세한 내용은 [지원](#support)을 참조하세요.
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2는 Evaluation Edition으로만 사용 가능합니다. 다른 에디션은 사용할 수 없습니다.
+## <a name="includesql-server-2019includessssqlv15-mdmd-release-candidate-rc"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] RC(릴리스 후보)
 
-CTP 릴리스의 지원 및 라이선스에 관한 전체 세부 정보는 설치 미디어가 포함된 `license_Eval.rtf` 내에 있습니다.
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC는 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]의 최신 공개 릴리스입니다.
+
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC는 Evaluation Edition으로만 사용 가능합니다. 다른 에디션은 사용할 수 없습니다.
+
+릴리스 후보 소프트웨어의 지원 및 라이선스에 관한 전체 세부 정보는 설치 미디어가 포함된 `license_Eval.rtf` 내에 있습니다.
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
@@ -58,42 +62,43 @@ CTP 릴리스의 지원 및 라이선스에 관한 전체 세부 정보는 설�
   - SQL Server Analysis Services
   - SQL Server Reporting Services
   - Kubernetes에 대한 Always On 가용성 그룹
-  - 가속 데이터베이스 복구
 
 - **해결 방법**: 없음 제외는 SQL 얼리어답터 프로그램 참가자를 포함하여 모든 고객에게 적용됩니다.
 
-- **적용 대상**: 모든 CTP 릴리스
+- **적용 대상**: 릴리스 후보
 
 ## <a name="updated-compiler"></a>컴파일러 업데이트
 
-- **문제 및 고객에게 미치는 영향**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]는 업데이트 컴파일러를 사용하여 빌드됩니다. CTP 2.1에서는 부동 소수점 및 다른 변환 시나리오가 업데이트된 컴파일러 때문에 이전 버전과 다른 값을 반환할 수 있다는 알려진 문제가 발생했습니다. CTP 2.2에는 영향을 받는 시나리오가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]라는 이전 버전과 동일한 결과를 반환하는지 확인하는 작업이 포함됩니다. CTP 3.2 릴리스부터는 다른 문제가 발생하지 않았습니다. [!INCLUDE[ss2017](../includes/sssqlv14-md.md)]와 비교하여 비정상적인 결과를 즉시 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 팀](https://aka.ms/sqlfeedback)에게 보고해주세요.
+- **문제 및 고객에게 미치는 영향**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]는 업데이트 컴파일러를 사용하여 빌드됩니다. CTP 2.1에서는 부동 소수점 및 다른 변환 시나리오가 업데이트된 컴파일러 때문에 이전 버전과 다른 값을 반환할 수 있다는 알려진 문제가 발생했습니다. CTP 2.2에는 영향을 받는 시나리오가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]라는 이전 버전과 동일한 결과를 반환하는지 확인하는 작업이 포함됩니다. 릴리스 후보 릴리스부터는 다른 문제가 발생하지 않았습니다. [!INCLUDE[ss2017](../includes/sssqlv14-md.md)]와 비교하여 비정상적인 결과를 즉시 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 팀](https://aka.ms/sqlfeedback)에게 보고해주세요.
 
 - **해결 방법**: 해당 사항 없음
 
-- **적용 대상**: 모든 CTP 릴리스
+- **적용 대상**: 릴리스 후보
 
 ## <a name="installation-wizard-may-wait-between-eula-pages"></a>EULA 페이지가 넘어갈 때마다 설치 마법사가 잠시 멈출 수 있습니다.
 
-- **문제 및 고객에게 미치는 영향**: 설치 마법사를 사용하여 설치하는 동안 R Services에 대한 EULA(최종 사용자 사용권 계약)와 Python에 대한 EULA 사이에 너무 많은 시간 동안 멈출 수 있습니다.
+- **문제 및 고객에게 미치는 영향**: 설치 마법사를 사용하여 설치하는 동안 R Services에 대한 EULA(최종 사용자 사용권 계약)와 Python에 대한 EULA 사이에 오랜 시간 동안 멈출 수 있습니다.
 
 - **해결 방법**: 설치 마법사가 다시 계속될 때까지 기다립니다. 기다리는 시간은 30분을 초과할 수 있습니다.
 
-- **적용 대상**: SQL Server 2019 CTP 3.0
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0
 
 ## <a name="utf-8-collations"></a>UTF-8 데이터 정렬
 
 - **문제 및 고객에게 미치는 영향**: UTF-8 사용 데이터 정렬을 다른 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능과 함께 사용할 수 없습니다. UTF-8은 다음 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능이 사용 중일 때 지원되지 않습니다.
 
   - 메모리 내 OLTP
-  - PolyBase용 외부 테이블
-  - Always Encrypted
+  - PolyBase용 외부 테이블([!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC 1)
+  - Always Encrypted(최대 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] RC 1)
+  - 연결된 서버(최대 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2)
 
   > [!Note]
   > 현재 Azure Data Studio 또는 SSDT(SQL Server Data Tools)에서 UTF-8 사용 데이터 정렬을 선택하도록 UI를 지원하지 않습니다. 최신 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)](SSMS) 버전 18은 UI의 다양한 UTF-8 사용 데이터 정렬 선택을 지원합니다.
  
 - **해결 방법**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP에 대한 해결 방법은 없습니다.
 
-- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.2, CTP 3.1, CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
+
+- **적용 대상**: 모든 CTP 릴리스.
 
 ## <a name="always-encrypted-with-secure-enclaves"></a>보안 Enclave를 사용한 Always Encrypted
 
@@ -107,9 +112,8 @@ CTP 릴리스의 지원 및 라이선스에 관한 전체 세부 정보는 설�
 
 - **문제 및 고객에게 미치는 영향**: VCRuntime 140이 없는 시스템에서는 SSCM(SQL Server Configuration Manager)이 시작되지 않습니다. SSCM을 시작할 때 다음 대화 상자가 표시될 수 있습니다. 
 
-  `
-  MMC could not create the snap-in. The snap-in might not have been installed correctly.
-  `
+
+  `MMC could not create the snap-in. The snap-in might not have been installed correctly.`
 
 - **해결 방법**:  최신 VC 런타임 2013(x86)를 설치하세요.
 
@@ -117,6 +121,14 @@ CTP 릴리스의 지원 및 라이선스에 관한 전체 세부 정보는 설�
   - [수동으로 설치](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
 
 - **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1, CTP 3.0, CTP 2.5.
+
+## <a name="always-on-availability-group-kubernetes-operator-not-supported"></a>Always On 가용성 그룹 Kubernetes 연산자는 지원되지 않음
+
+- **문제 및 고객에게 미치는 영향**: Always On 가용성 그룹에 대한 Kubernetes 연산자는 이 릴리스 후보에서 지원되지 않으며 RTM에서 사용할 수 없습니다. 
+
+- **해결 방법**: 없음
+
+- **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 릴리스 후보
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

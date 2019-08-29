@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7dfcb362-1904-4578-8274-da16681a960e
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 558923684f88688a4b364157341957cbce7b6013
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2eb827cbb971195a89a2cd5bdd26dad1bd9f196b
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006117"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621793"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>변경 데이터 캡처 및 기타 SQL Server 기능
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "68006117"
   
 -   데이터베이스가 분리된 후 다시 동일한 서버 또는 다른 서버에 연결될 경우 변경 데이터 캡처는 설정된 상태를 유지합니다.  
   
--   데이터베이스가 **KEEP_CDC** 옵션을 사용하여 Enterprise 이외의 다른 버전에 연결 또는 복원된 경우 변경 데이터 캡처에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise가 필요하기 때문에 작업이 차단됩니다. 오류 메시지 934가 표시됩니다.  
+-   데이터베이스가 **KEEP_CDC** 옵션을 사용하여 Standard 또는 Enterprise 이외의 다른 버전에 연결 또는 복원된 경우 변경 데이터 캡처에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 또는 Enterprise 버전이 필요하기 때문에 작업이 차단됩니다. 오류 메시지 934가 표시됩니다.  
   
      `SQL Server cannot load database '%.*ls' because Change Data Capture is enabled. The currently installed edition of SQL Server does not support Change Data Capture. Either restore database without KEEP_CDC option, or upgrade the instance to one that supports Change Data Capture.`  
   

@@ -1,7 +1,7 @@
 ---
 title: 설치 마법사 도움말 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 08/16/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
-ms.openlocfilehash: edd2c17b106e536f1a2694fe0cb25e34b10d1138
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: b32ad209651c30f810f239b0c14689be497c4378
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68894060"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69609296"
 ---
 # <a name="installation-wizard-help"></a>설치 마법사 도움말
 
@@ -399,7 +399,7 @@ SMB 파일 서버에는 다음과 같은 권장 사항이 적용됩니다.
   
 * SMB 파일 서버가 사용되는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 계정은 도메인 계정이어야 합니다.  
   
-* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 사용되는 계정은 데이터 디렉터리로 사용되는 SMB 파일 공유 폴더에 대해 모든 권한 NTFS 권한이 있어야 합니다.  
+* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 사용되는 계정은 데이터 디렉터리로 사용되는 SMB 파일 공유 폴더에 대해 **모든 권한** NTFS 권한이 있어야 합니다.  
   
 * [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치에 사용되는 계정에는 SMB 파일 서버에 대한 SeSecurityPrivilege 권한이 부여되어야 합니다. 이 권한을 부여하려면 파일 서버의 로컬 보안 정책 콘솔을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 설치 계정을 **감사 및 보안 로그 관리** 정책에 추가합니다. 이 설정은 로컬 보안 정책 콘솔에서 **로컬 정책** 아래의 **사용자 권한 할당** 섹션에 있습니다.  
   
@@ -417,11 +417,35 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="database-engine-configuration---maxdop-page"></a>데이터베이스 엔진 구성 - MaxDOP 페이지
+## <a name="a-namemaxdopa-database-engine-configuration---maxdop-page"></a><a name="maxdop"><a/> 데이터베이스 엔진 구성 - MaxDOP 페이지
 
-**MaxDOP(최대 병렬 처리 수준)** 는 단일 문이 사용할 수 있는 최대 프로세서 수를 결정합니다. SQL Server 2019에서는 설치 중에 이 옵션을 구성하는 기능이 도입되었습니다. 또한 SQL Server 2019에서는 코어 수에 따라 서버에 권장되는 MaxDOP 설정을 자동으로 검색합니다. 기본 최댓값은 8입니다.  
+**MaxDOP(최대 병렬 처리 수준)** 는 단일 문이 사용할 수 있는 최대 프로세서 수를 결정합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 설치 중에 이 옵션을 구성하는 기능이 도입되었습니다. 또한 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 코어 수에 따라 서버에 권장되는 MaxDOP 설정을 자동으로 검색합니다.  
 
-이 페이지에서 이 설정을 수동으로 구성할 수 있으며, 설치 후에 이 설정을 수정할 수 있습니다. 자세한 내용은 [최대 병렬 처리 수준](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)을 참조하세요.
+설치하는 동안 이 페이지를 건너뛰면 기본 MaxDOP 값은 이전 버전 (0)의 기본 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 대신 이 페이지에 표시되는 권장 값입니다. 이 페이지에서는 이 설정을 수동으로 구성할 수도 있으며, 설치 후에 이 설정을 수정할 수 있습니다. 
+
+### <a name="uielement-list"></a>UIElement 목록
+
+* **MaxDOP(최대 병렬 처리 수준)** 는 단일 문을 병렬로 실행하는 동안 사용할 최대 프로세서 수에 대 한 값입니다. 기본값은 [최대 병렬 처리 수준 서버 구성 옵션 구성](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)의 최대 병렬 처리 수준 지침에 따라 정렬됩니다.
+
+## <a name="a-namememorya-database-engine-configuration---memory-page"></a><a name="memory"><a/> 데이터베이스 엔진 구성 - 메모리 페이지
+
+**최소 서버 메모리**는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]가 버퍼 풀 및 기타 캐시에 대해 사용할 낮은 메모리 제한을 결정합니다. 기본값과 및 권장되는 값은 모두 0입니다. **최소 서버 메모리**의 효과에 대한 자세한 내용은 [메모리 관리 아키텍처 가이드](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)를 참조하세요.
+
+**최소 서버 메모리**는 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]가 버퍼 풀 및 기타 캐시에 대해 사용할 높은 메모리 제한을 결정합니다. 기본값은 2,147,483,647MB(메가바이트)이며 계산 된 권장값은 기존 시스템 메모리를 기반으로 독립 실행형 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대한 [서버 메모리 구성 옵션](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)의 메모리 구성 지침에 따라 정렬됩니다. **최대 서버 메모리**의 효과에 대한 자세한 내용은 [메모리 관리 아키텍처 가이드](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory)를 참조하세요.
+
+설치하는 동안이 페이지를 건너뛰면 사용된 기본 **최대 서버 메모리** 값이 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 기본값(2,147,483,647메가바이트)입니다. **권장** 라디오 단추를 선택하면 이 페이지에서 이러한 설정을 수동으로 구성할 수 있으며 설치 후에 수정할 수 있습니다. 자세한 내용은 [Server Memory Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md)(서버 메모리 구성 옵션)를 참고하세요.
+
+### <a name="uielement-list"></a>UIElement 목록
+  
+**기본값**: 이 라디오 단추는 기본적으로 선택되어 있으며 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] 기본값에 대한 **최소 서버 메모리** 및 **최대 서버 메모리** 설정으로 설정되어 있습니다. 
+
+**권장**: 계산된 권장 값을 수락하거나 계산된 값을 사용자 구성 값으로 변경하려면 이 라디오 단추를 선택해야 합니다.  
+  
+**최소 서버 메모리(MB)** : 계산된 권장 값에서 사용자 구성 값으로 변경하는 경우 **최소 서버 메모리**에 대한 값을 입력합니다.  
+  
+**최대 서버 메모리(MB)** : 계산된 권장 값에서 사용자 구성 값으로 변경하는 경우 **최대 서버 메모리**에 대한 값을 입력합니다.  
+
+**SQL Server Database Engine에 권장되는 메모리 구성을 적용하려면 여기 클릭**: 이 서버에서 계산된 권장 메모리 구성을 적용하려면 이 확인란을 선택합니다. **권장** 라디오 단추를 선택한 경우 이 확인란을 선택하지 않으면 설치를 계속할 수 없습니다.
 
 ::: moniker-end
 

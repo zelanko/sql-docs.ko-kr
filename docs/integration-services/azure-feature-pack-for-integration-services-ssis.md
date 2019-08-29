@@ -1,7 +1,7 @@
 ---
 title: Integration Services(SSIS)에 대한 Azure 기능 팩 | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 08/17/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 9241725a9f1da67ef93701b62c5cc4e8d9093a7a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: abe8c731a066ed764c2fc55da42bd630e46f3ae8
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892737"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69610757"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services에 대한 Azure 기능 팩(SSIS)
 
@@ -99,7 +99,7 @@ TLS 1.2를 사용하려면 다음 두 개의 레지스트리 키 아래에 데�
 
 ## <a name="dependency-on-java"></a>Java에 대한 종속성
 
-Java는 특정 기능을 사용하는 데 필요합니다.
+Java는 Azure Data Lake Store/플랫 파일 커넥터와 함께 ORC/Parquet 파일 형식을 사용해야 합니다.  
 Java 빌드의 아키텍처(32/64비트)는 사용할 SSIS 런타임과 일치해야 합니다.
 다음과 같은 Java 빌드가 테스트되었습니다.
 

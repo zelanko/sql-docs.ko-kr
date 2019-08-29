@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 50463f27f37f9da410d1598002989f7cea6d8158
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: dc5addca9c9bbf01408cea89f85676813b97506c
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000780"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70109755"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Sqlmlutils를 사용 하 여 Python 패키지 설치
 
@@ -92,7 +92,7 @@ SQL Server에 연결 하는 데 사용 하는 클라이언트 컴퓨터에서 �
 
 1. **명령 프롬프트** 를 열고 다음 명령을 실행 하 여 **텍스트 도구** 패키지가 포함 된 로컬 폴더를 만듭니다. 이 예제에서는 폴더 `c:\temp\text-tools`를 만듭니다.
 
-   ```command
+   ```console
    pip download text-tools -d c:\temp\text-tools
    ```
 

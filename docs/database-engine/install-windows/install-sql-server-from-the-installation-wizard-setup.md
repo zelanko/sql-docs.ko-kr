@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 86b63bd2ccdb3cb4d8f2c73c2298cce1803e5ee9
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742912"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009380"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>설치 마법사에서 SQL Server 설치(설치 프로그램)
 
@@ -54,8 +54,7 @@ ms.locfileid: "68742912"
 
 Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는 Microsoft Visual C++ 2013 런타임 이진 파일의 문제를 확인했습니다. 업데이트로 이 문제를 해결할 수 있습니다. Visual C++ 런타임 이진 파일에 대한 이 업데이트가 없으면 SQL Server의 특정 시나리오에서 안정성 문제가 발생할 수 있습니다. SQL Server를 설치하기 전에 [SQL Server 릴리스 정보](../../sql-server/sql-server-2016-release-notes.md#bkmk_ga_instalpatch)의 지침에 따라 해당 컴퓨터에 Visual C++ 런타임 이진 파일에 대한 패치가 필요한지 확인합니다. 
 
-SQL Server 2019에는 적용되지 않습니다.  
-  
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에는 적용되지 않습니다.
 
 ## <a name="to-install-sql-server-2016-and-2017"></a>SQL Server 2016 및 2017을 설치하려면  
 
@@ -280,9 +279,9 @@ SQL Server 2019에는 적용되지 않습니다.
   
      설치의 나머지 부분에 대한 워크플로는 설치에 지정한 기능에 따라 달라집니다. 선택 내용에 따라 일부 페이지는 표시되지 않을 수 있습니다. 
 
-1. SQL Server 2019 부터 기능을 설치하기 전에 Polybase에서 더 이상 Oracle JRE 7 업데이트 51(이상)를 컴퓨터에 미리 설치할 필요가 없습니다. Polybase 기능을 설치하도록 선택하면 **인스턴스 구성** 페이지 뒤에 표시되는 SQL Server 설정에 **Java 설치 구성** 페이지가 추가됩니다. Java 설치 위치 페이지에서 SQL Server 2019 설치에 포함된 Azul Zulu Open JRE를 설치하도록 선택하거나, 컴퓨터에 이미 설치된 다른 JRE 또는 JDK의 위치를 제공할 수 있습니다.
+1. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 부터는 기능을 설치하기 전에 Polybase에서 더 이상 Oracle JRE 7 업데이트 51(이상)을 컴퓨터에 미리 설치할 필요가 없습니다. Polybase 기능을 설치하도록 선택하면 **인스턴스 구성** 페이지 뒤에 표시되는 SQL Server 설정에 **Java 설치 구성** 페이지가 추가됩니다. Java 설치 위치 페이지에서 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 설치에 포함된 Azul Zulu Open JRE를 설치하도록 선택하거나, 컴퓨터에 이미 설치된 다른 JRE 또는 JDK의 위치를 제공할 수 있습니다.
 
-1. SQL Server 2019부터 Java에 언어 확장이 추가되었습니다. Java 기능을 설치하도록 선택하면 **인스턴스 구성** 페이지 뒤에 표시되는 SQL Server 설정 대화 상자 창에 **Java 설치 위치** 페이지가 추가됩니다. **Java 설치 위치** 페이지에서 SQL Server 2019 설치에 포함된 Zulu Open JRE를 설치하도록 선택하거나, 컴퓨터에 이미 설치된 다른 JRE 또는 JDK의 위치를 제공할 수 있습니다.
+1. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 Java에 언어 확장이 추가되었습니다. Java 기능을 설치하도록 선택하면 **인스턴스 구성** 페이지 뒤에 표시되는 SQL Server 설정 대화 상자 창에 **Java 설치 위치** 페이지가 추가됩니다. **Java 설치 위치** 페이지에서 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 설치에 포함된 Zulu Open JRE를 설치하도록 선택하거나, 컴퓨터에 이미 설치된 다른 JRE 또는 JDK의 위치를 제공할 수 있습니다.
 
 1. **서버 구성 - 서비스 계정** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 로그온 계정을 지정할 수 있습니다. 이 페이지에서 구성하는 실제 서비스는 설치하도록 선택한 기능에 따라 달라집니다. 구성 설정에 대한 자세한 내용은 [설치 마법사 도움말](../../sql-server/install/instance-configuration.md#serverconfig)을 참조하세요.
   
@@ -314,13 +313,29 @@ SQL Server 2019에는 적용되지 않습니다.
      자세한 내용은 [데이터베이스 엔진 구성 - 데이터 디렉터리 페이지](../../sql-server/install/instance-configuration.md#datadir)를 참조하세요.
 
      **데이터베이스 엔진 구성 - TempDB** 페이지를 사용하여 **tempdb**의 파일 크기, 파일 수, 기본값이 아닌 설치 디렉터리, 파일 증가 설정을 구성할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 구성 - TempDB 페이지](../../sql-server/install/instance-configuration.md#tempdb)를 참조하세요.
-
+<<<<<<< 헤드
   
-     **[!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - MaxDOP**을 사용하여 최대 병렬 처리 수준을 지정합니다. 이 설정은 단일 문이 실행 중에 사용할 수 있는 프로세서 수를 결정합니다. 권장 값은 설치 중에 자동으로 계산됩니다. 자세한 내용은 [최대 병렬 처리 수준 지침](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)을 참조하세요. 이 옵션은 SQL Server 2019부터 사용할 수 있습니다. 
+     **[!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - MaxDOP** 페이지를 사용하여 최대 병렬 처리 수준을 지정합니다. 이 설정은 단일 문이 실행 중에 사용할 수 있는 프로세서 수를 결정합니다. 권장 값은 설치 중에 자동으로 계산됩니다. 이 페이지는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작하는 설치에서만 사용할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 구성 - MaxDOP 페이지](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)를 참조하세요. 
 
-     **데이터베이스 엔진 구성 - 메모리** 탭을 사용하여 시작 후에 이 SQL Server 인스턴스에서 사용할 MIN 및 MAX 메모리 값을 지정합니다. **권장** 옵션을 선택한 후 기본값 또는 계산된 권장 값을 사용하거나 사용자 고유의 값을 수동으로 지정할 수 있습니다. 이 기능은 SQL Server 2019부터 설치 프로그램 내에서 사용할 수 있습니다. 
+     **데이터베이스 엔진 구성 - 메모리** 페이지를 사용하여 시작 후에 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용할 **최소 서버 메모리** 및 **최대 서버 메모리** 값을 지정합니다. **권장** 옵션을 선택한 후 기본값 또는 계산된 권장 값을 사용하거나 사용자 고유의 값을 수동으로 지정할 수 있습니다. 이 페이지는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작하는 설치에서만 사용할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 구성 - 메모리 페이지](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)를 참조하세요. 
+=======
 
-     **데이터베이스 엔진 구성 - FILESTREAM** 페이지를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 FILESTREAM을 사용하도록 설정할 수 있습니다. 자세한 내용은 [데이터베이스 엔진 구성 - FILESTREAM 페이지](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page)를 참조하세요.  
+     **[!INCLUDE[ssDE](../../includes/ssde-md.md)] 구성 - MaxDOP** 페이지를 사용하여 최대 병렬 처리 수준을 지정합니다. 이 설정은 단일 문이 실행 중에 사용할 수 있는 프로세서 수를 결정합니다. 권장 값은 설치 중에 자동으로 계산됩니다. 
+     
+    > [!NOTE]  
+    > 이 페이지는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작하는 설치에서만 사용할 수 있습니다. 
+    
+    자세한 내용은 [데이터베이스 엔진 구성 - MaxDOP 페이지](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)를 참조하세요. 
+
+     **데이터베이스 엔진 구성 - 메모리** 페이지를 사용하여 시작 후에 이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 사용할 **최소 서버 메모리** 및 **최대 서버 메모리** 값을 지정합니다. **권장** 옵션을 선택한 후 기본값 또는 계산된 권장 값을 사용하거나 사용자 고유의 값을 수동으로 지정할 수 있습니다.
+     
+    > [!NOTE]  
+    > 이 페이지는 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]로 시작하는 설치에서만 사용할 수 있습니다. 
+    
+    자세한 내용은 [데이터베이스 엔진 구성 - 메모리 페이지](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)를 참조하세요. 
+>>>>>>> 1d82c7efe18f86136247fb366df5030843199c19
+
+     Use the **Database Engine Configuration - FILESTREAM** page to enable FILESTREAM for your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Database Engine Configuration - FILESTREAM page](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream-page).  
   
 1. **Analysis Services 구성 - 계정 프로비저닝** 페이지를 사용하여 서버 모드와 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]의 관리자 권한이 있는 사용자 또는 계정을 지정할 수 있습니다. 서버 모드에 따라 해당 서버에서 사용되는 메모리 및 스토리지 하위 시스템이 결정됩니다. 각 솔루션 유형은 서로 다른 서버 모드로 실행됩니다. 서버에서 다차원 큐브 데이터베이스를 실행하려는 경우, 기본 서버 모드 옵션인 **다차원 및 데이터 마이닝**을 선택합니다.
 

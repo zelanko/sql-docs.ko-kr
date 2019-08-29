@@ -5,17 +5,17 @@ author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: de5ca4f46513999c1473eed77503b59cc94c3a22
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3f4f4bad8bbe72681b699af25b87eb4a533b7002
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476018"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653529"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Linux에 SQL Server 2019 언어 확장(Java) 설치
 
@@ -29,9 +29,9 @@ Java 확장의 패키지 위치는 SQL Server Linux 원본 리포지토리에 �
 
 언어 확장은 Linux 컨테이너에서도 지원됩니다. 언어 확장을 사용하는 미리 빌드된 컨테이너는 제공하지 않지만 [GitHub에서 이용 가능한 예제 템플릿](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)을 사용하여 SQL Server 컨테이너에서 만들 수 있습니다.
 
-## <a name="uninstall-previous-ctp"></a>이전 CTP 제거
+## <a name="uninstall-previous-ctp-version"></a>이전 CTP 버전 제거
 
-패키지 목록이 마지막 몇 개의 CTP 릴리스에 걸쳐 변경되어 패키지 개수가 줄어들게 됩니다. CTP 3.2를 설치하기 전에 CTP 2.x를 제거하여 이전 패키지를 모두 제거하는 것이 좋습니다. 여러 버전의 병렬 설치는 지원되지 않습니다.
+패키지 목록이 마지막 몇 개의 CTP 릴리스에 걸쳐 변경되어 패키지 개수가 줄어들게 됩니다. RC 1을 설치하기 전에 CTP 버전을 제거하여 이전 패키지를 모두 제거하는 것이 좋습니다. 여러 버전의 병렬 설치는 지원되지 않습니다.
 
 ### <a name="1-confirm-package-installation"></a>1. 패키지 설치 확인
 
@@ -41,7 +41,7 @@ Java 확장의 패키지 위치는 SQL Server Linux 원본 리포지토리에 �
 ls /opt/microsoft/mssql/bin
 ```
 
-### <a name="2-uninstall-previous-ctp-2x-packages"></a>2. 이전 CTP 2.x 패키지 제거
+### <a name="2-uninstall-previous-ctp-packages"></a>2. 이전 CTP 패키지 제거
 
 가장 낮은 패키지 수준에서 제거합니다. 하위 수준 패키지에 종속된 모든 업스트림 패키지는 자동으로 제거됩니다.
 
@@ -55,7 +55,7 @@ ls /opt/microsoft/mssql/bin
 | SLES  | `sudo zypper remove msssql-server-extensibility-java` |
 | Ubuntu    | `sudo apt-get remove msssql-server-extensibility-java`|
 
-### <a name="3-proceed-with-ctp-32-install"></a>3. CTP 3.2 설치 진행
+### <a name="3-install-release-candidate-1-rc-1"></a>3. RC 1(릴리스 후보 1) 설치
 
 운영 체제에 맞는 문서의 지침을 사용하여 가장 높은 패키지 수준에서 설치합니다.
 
@@ -85,14 +85,14 @@ ls /opt/microsoft/mssql/bin
 
 | 패키지 이름 | 적용 대상 | 설명 |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | 모든 언어 | Java 코드를 실행하는 데 사용되는 확장성 프레임워크입니다. |
-|mssql-server-extensibility-java | Java | Java 실행 환경을 로드하기 위한 java 확장입니다. Java용 추가 라이브러리 또는 패키지는 없습니다. |
+|mssql-server-extensibility  | 모든 언어 | Java 언어 확장에 사용되는 확장성 프레임워크 |
+|mssql-server-extensibility-java | Java | Java 언어 확장에 사용되고 지원되는 Java 런타임을 포함하는 확장성 프레임워크 |
 
 <a name="RHEL"></a>
 
 ## <a name="install-language-extensions"></a>언어 확장 설치
 
-**mssql-server-extensibility-java**를 설치하여 Linux에 언어 확장 및 Java를 설치할 수 있습니다. **mssql-server-extensibility-java**를 설치할 때 JRE 8이 아직 설치되지 않은 경우 패키지가 자동으로 설치합니다. 또한 JRE_HOME이라는 환경 변수에 JVM 경로를 추가합니다.
+**mssql-server-extensibility-java**를 설치하여 Linux에 언어 확장 및 Java를 설치할 수 있습니다. **mssql-server-extensibility-java**를 설치할 때 JRE 11이 아직 설치되지 않은 경우 패키지가 자동으로 설치합니다. 또한 JRE_HOME이라는 환경 변수에 JVM 경로를 추가합니다.
 
 > [!Note]
 > 인터넷에 연결된 서버에서 패키지 종속성이 다운로드되고 주 패키지 설치의 일부로 설치됩니다. 서버가 인터넷에 연결되어 있지 않은 경우 [오프라인 설정](#offline-install)에서 자세한 정보를 참조하세요.
@@ -286,7 +286,7 @@ mssql-server-extensibility-15.0.1000
 mssql-server-extensibility-java-15.0.1000
 ```
 
-## <a name="limitations-in-ctp-releases"></a>CTP 릴리스의 제한 사항
+## <a name="limitations-in-the-rc-1-release"></a>RC 1 릴리스의 제한 사항
 
 Linux의 언어 확장 및 Java 확장성은 아직 개발 중입니다. 미리 보기 버전에서 다음 기능은 아직 사용할 수 없습니다.
 
@@ -295,7 +295,7 @@ Linux의 언어 확장 및 Java 확장성은 아직 개발 중입니다. 미리 
 
 ### <a name="resource-governance"></a>리소스 거버넌스
 
-외부 리소스 풀에 대한 [리소스 거버넌스](../t-sql/statements/create-external-resource-pool-transact-sql.md)에서 Linux와 Windows 사이에 패리티가 있지만, [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)에 대한 통계는 현재 Linux에서 다른 단위를 사용합니다 단위는 향후 CTP에 맞춰집니다.
+외부 리소스 풀에 대한 [리소스 거버넌스](../t-sql/statements/create-external-resource-pool-transact-sql.md)에서 Linux와 Windows 사이에 패리티가 있지만, [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)에 대한 통계는 현재 Linux에서 다른 단위를 사용합니다 
  
 | 열 이름   | 설명 | Linux의 값 | 
 |---------------|--------------|---------------|

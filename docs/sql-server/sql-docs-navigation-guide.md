@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 31bdddab8dce33d8bf0e59d3abf7384231a13e53
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028830"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621755"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server 설명서 탐색 가이드 
 
@@ -39,12 +39,11 @@ PDF를 만들려는 경우 모든 목차의 맨 아래에 있는 **PDF 다운로
 
 ## <a name="toc-navigation-hints"></a>목차 탐색 힌트
 
-끝에 `>` 표시가 있는 목차(TOC)의 항목은 사용자가 docs.microsoft.com에서 제거된다는 의미입니다. 
+항목 끝에 `>` 표시가 있는 TOC(목차)의 항목은 사용자가 다른 목차가 있는 기술 설명서로 이동하게 된다는 의미입니다. 
 
 ![목차의 단일 표시](media/sql-server-docs-navigation-guide/single-carrots-in-sql-docs-toc.png)
 
-
-`>>` 표시가 있는 목차의 항목은 사용자가 다른 목차가 있는 기술 설명서로 이동하게 된다는 의미입니다. 
+`>>` 표시가 있는 TOC의 항목은 사용자가 docs.microsoft.com에서 제거된다는 의미입니다. 
 
 ![목차 탐색 마커](media/sql-server-docs-navigation-guide/double-carrots-in-sql-docs-toc.png)
 
@@ -64,7 +63,7 @@ SQL Server 기술 설명서에서는 지원되는 여러 SQL Server 버전에 �
 
 ![SQL 설명서 버전 필터](media/sql-server-docs-navigation-guide/sql-docs-version-filter.gif)
 
-**모든 SQL**\>**모두 표시**를 선택하면 모든 콘텐츠가 표시되고 버전 필터 뒤에 숨겨진 내용이 없습니다. [**모두 표시** 옵션은 일반적인 경우에는 권장되지 않습니다](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing).
+**모든 SQL**\>**모두 표시**를 선택하면 모든 콘텐츠가 표시되고 버전 필터 뒤에 숨겨진 내용이 없습니다. **모두 표시** 옵션은 같은 문서 내에 여러 다른 버전의 SQL Server와 관련된 콘텐츠를 표시할 수 있으며 이는 모순되거나 명확하지 않거나 혼동될 수 있습니다. 이러한 [**모두 표시** 옵션은 일반적인 경우에는 권장되지 않습니다](versioning-system-monikers-ui-sql-server.md#anchor-allsql-hidenothing). 
 
 ## <a name="breadcrumbs"></a>이동 경로
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 62521d308c361b8ea6dc8abdabedd8386d07b933
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 6285426e0503433157632dddeb71b57a9452154f
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316653"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621689"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
 
@@ -52,7 +52,7 @@ ms.locfileid: "68316653"
   
 -   Foreach ADO.NET 스키마 행 집합 열거자는 데이터 원본에 대한 스키마 정보를 열거합니다. 예를 들어 [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스의 테이블 목록을 열거하고 가져올 수 있습니다.  
   
--   Foreach File 열거자는 폴더의 파일을 열거합니다. 열거자는 하위 폴더를 포함할 수 있습니다. 예를 들어 Windows 폴더 및 하위 폴더에서 파일 이름 확장명이 *.log인 모든 파일을 읽을 수 있습니다.  
+-   Foreach File 열거자는 폴더의 파일을 열거합니다. 열거자는 하위 폴더를 포함할 수 있습니다. 예를 들어 Windows 폴더 및 하위 폴더에서 파일 이름 확장명이 *.log인 모든 파일을 읽을 수 있습니다. 파일이 검색되는 순서는 지정할 수 없습니다.  
   
 -   Foreach From Variable 열거자는 지정한 변수에 포함된 열거 가능 개체를 열거합니다. 열거 가능 개체는 배열, ADO.NET **DataTable**, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 열거자 등이 될 수 있습니다. 예를 들어 서버 이름을 포함하는 배열 값을 열거할 수 있습니다.  
   

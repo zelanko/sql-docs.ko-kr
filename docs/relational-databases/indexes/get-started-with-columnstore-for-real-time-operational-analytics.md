@@ -1,5 +1,5 @@
 ---
-title: 실시간 운영 분석을 위한 Columnstore 시작 | Microsoft 문서
+title: 실시간 운영 분석을 위한 Columnstore 시작 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/08/2016
 ms.prod: sql
@@ -11,17 +11,17 @@ ms.assetid: e1328615-6b59-4473-8a8d-4f360f73187d
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f3ce558bb9e5856e0cd5828f8facce28dc2c729
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f44e5c43a3abbf9338d74c04be98a9d5d8902034
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107078"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009497"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>실시간 운영 분석을 위한 Columnstore 시작
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  SQL Server 2016에는 분석 워크로드와 OLTP 워크로드를 같은 데이터베이스 테이블에서 동시에 실행하는 기능인 실시간 운영 분석이 도입되었습니다. 분석을 실시간으로 실행하는 것 외에 ETL 및 데이터 웨어하우스에 대한 필요성도 제거할 수 있습니다.  
+  SQL Server 2016에는 분석 워크로드와 OLTP 워크로드를 같은 데이터베이스 테이블에서 동시에 실행하는 기능인 실시간 운영 분석이 도입되었습니다. 분석을 실시간으로 실행하는 것 외에 ETL 및 데이터 웨어하우스가 필요하지 않습니다.  
   
 ## <a name="real-time-operational-analytics-explained"></a>실시간 운영 분석 설명  
  기존에는 운영 워크로드(즉, OLTP)와 분석 워크로드에 사용되는 별도의 시스템이 있었습니다. 이러한 시스템에서는 ETL(추출, 변환 및 로드) 작업이 운영 저장소에서 분석 저장소로 데이터를 정기적으로 이동합니다. 분석 데이터는 일반적으로 데이터 웨어하우스나 분석 쿼리 실행 전용 데이터 마트에 저장됩니다. 이 솔루션은 표준이었지만 다음 세 가지 주요 문제가 있었습니다.  
@@ -107,12 +107,10 @@ ms.locfileid: "68107078"
   
 -   [메모리 최적화 테이블을 사용한 실시간 운영 분석](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/real-time-operational-analytics-memory-optimized-table-and-columnstore-index/)  
   
--   [Columnstore 인덱스에서 인덱스 조각화 최소화](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/07/columnstore-index-defragmentation-using-reorganize-command/)  
-  
 -   [Columnstore 인덱스와 행 그룹에 대한 병합 정책](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/03/08/columnstore-index-merge-policy-for-reorganize/)  
   
 ## <a name="performance-tip-1-use-filtered-indexes-to-improve-query-performance"></a>성능 팁 1: 필터링된 인덱스를 사용하여 쿼리 성능 향상  
- 실시간 운영 분석을 실행하면 OLTP 워크로드의 성능이 영향을 받을 수 있습니다.  이 영향을 최소화해야 합니다. 아래 예제에서는 실시간 분석을 제공하면서 필터링된 인덱스를 사용하여 비클러스터형 columnstore 인덱스가 트랜잭션 워크로드에 미치는 영향을 최소화하는 방법을 보여 줍니다.  
+ 실시간 운영 분석을 실행하면 OLTP 워크로드의 성능이 영향을 받을 수 있습니다.  이 영향을 최소화해야 합니다. 아래 예에서는 실시간 분석을 제공하면서 필터링된 인덱스를 사용하여 비클러스터형 columnstore 인덱스가 트랜잭션 워크로드에 미치는 영향을 최소화하는 방법을 보여줍니다.  
   
  운영 워크로드에서 비클러스터형 columnstore 인덱스 유지 관리 오버헤드를 최소화하려면 필터링된 조건을 사용하여 *웜* 또는 느린 변경 데이터에만 비클러스터형 columnstore 인덱스를 만들면 됩니다. 예를 들어 주문 관리 애플리케이션에서 이미 배송된 주문에 대한 비클러스터형 columnstore 인덱스를 만들 수 있습니다. 주문이 배송된 후에는 변경 내용이 거의 없으므로 웜 데이터로 간주할 수 있습니다. 필터링된 인덱스를 사용하는 경우 비클러스터형 columnstore 인덱스의 데이터에 필요한 업데이트가 적으므로 트랜잭션 워크로드에 대한 영향을 감소합니다.  
   
@@ -226,6 +224,5 @@ ORDER BY created_time DESC
  [Columnstore 인덱스 데이터 로드](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [Columnstore 인덱스 쿼리 성능](../../relational-databases/indexes/columnstore-indexes-query-performance.md)   
  [데이터 웨어하우스용 Columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Columnstore 인덱스 조각 모음](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)  
-  
+ [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)
   

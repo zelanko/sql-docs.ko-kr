@@ -29,12 +29,12 @@ ms.assetid: e8bf8850-8da5-4a4f-a399-64232b4e476d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 765eec058514f7a5e0c38a81c66fe214c9f19f00
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 482991f4faad8fff3747556c47166096ae4974ec
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68767629"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633500"
 ---
 # <a name="programmatically-monitor-replication"></a>프로그래밍 방식으로 복제 모니터링
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -60,51 +60,51 @@ ms.locfileid: "68767629"
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>배포자에서 게시자, 게시 및 구독을 모니터링하려면  
   
-1.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelppublisher](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)를 실행합니다. 이렇게 하면 이 배포자를 사용하는 모든 게시자에 대한 모니터링 정보가 반환됩니다. 결과 집합을 단일 게시자로 제한하려면 **@publisher** 를 실행합니다.  
+1.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelppublisher](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)를 실행합니다. 이렇게 하면 이 배포자를 사용하는 모든 게시자에 대한 모니터링 정보가 반환됩니다. 결과 집합을 단일 게시자로 제한하려면 **\@publisher**를 지정합니다.  
   
-2.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelppublication](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md)을 실행합니다. 이렇게 하면 이 배포자를 사용하는 모든 게시에 대한 모니터링 정보가 반환됩니다. 결과 집합을 단일 게시자, 게시 또는 게시된 데이터베이스로 제한하려면 각각 **@publisher** , **@publication** 또는 **@publisher_db** 를 지정합니다.  
+2.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelppublication](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md)을 실행합니다. 이렇게 하면 이 배포자를 사용하는 모든 게시에 대한 모니터링 정보가 반환됩니다. 결과 집합을 단일 게시자, 게시 또는 게시된 데이터베이스로 제한하려면 각각 **\@publisher**, **\@publication** 또는 **\@publisher_db**를 지정합니다.  
   
-3.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelpsubscription](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)을 실행합니다. 이렇게 하면 이 배포자를 사용하는 모든 구독에 대한 모니터링 정보가 반환됩니다. 결과 집합을 단일 게시자, 게시 또는 게시된 데이터베이스에 속하는 구독으로 제한하려면 각각 **@publisher** , **@publication** 또는 **@publisher_db** 를 지정합니다.  
+3.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelpsubscription](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)을 실행합니다. 이렇게 하면 이 배포자를 사용하는 모든 구독에 대한 모니터링 정보가 반환됩니다. 결과 집합을 단일 게시자, 게시 또는 게시된 데이터베이스에 속하는 구독으로 제한하려면 각각 **\@publisher**, **\@publication** 또는 **\@publisher_db**를 지정합니다.  
   
 #### <a name="to-monitor-transactional-commands-waiting-to-be-applied-at-the-subscriber"></a>구독자에서 적용 대기 중인 트랜잭션 명령을 모니터링하려면  
   
-1.  배포 데이터베이스의 배포자에서 [sp_replmonitorsubscriptionpendingcmds](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md)를 실행합니다. 이렇게 하면 이 배포자를 사용하는 모든 구독에 대해 보류 중인 모든 명령의 모니터링 정보가 반환됩니다. 결과 집합을 단일 게시자, 구독자, 게시 또는 게시된 데이터베이스에 속하는 구독에 대해 보류 중인 명령으로 제한하려면 각각 **@publisher** , **@subscriber** , **@publication** 또는 **@publisher_db** 를 지정합니다.  
+1.  배포 데이터베이스의 배포자에서 [sp_replmonitorsubscriptionpendingcmds](../../../relational-databases/system-stored-procedures/sp-replmonitorsubscriptionpendingcmds-transact-sql.md)를 실행합니다. 이렇게 하면 이 배포자를 사용하는 모든 구독에 대해 보류 중인 모든 명령의 모니터링 정보가 반환됩니다. 결과 집합을 단일 게시자, 구독자, 게시 또는 게시된 데이터베이스에 속하는 구독에 대해 보류 중인 명령으로 제한하려면 각각 **\@publisher**, **\@subscriber**, **\@publication** 또는 **\@publisher_db**를 지정합니다.  
   
 #### <a name="to-monitor-merge-changes-waiting-to-be-uploaded-or-downloaded"></a>업로드 또는 다운로드 대기 중인 병합 변경 내용을 모니터링하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)를 실행합니다. 이렇게 하면 구독자에 대해 복제 대기 중인 변경 내용에 대한 정보를 보여 주는 결과 집합이 반환됩니다. 결과 집합을 단일 게시 또는 아티클에 속하는 변경 내용으로 제한하려면 각각 **@publication** 또는 **@article** 를 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)를 실행합니다. 이렇게 하면 구독자에 대해 복제 대기 중인 변경 내용에 대한 정보를 보여 주는 결과 집합이 반환됩니다. 결과 집합을 단일 게시 또는 아티클에 속하는 변경 내용으로 제한하려면 각각 **\@publication** 또는 **\@article**을 지정합니다.  
   
-2.  구독 데이터베이스의 구독자에서 [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)를 실행합니다. 이렇게 하면 게시자에 대해 복제 대기 중인 변경 내용에 대한 정보를 보여 주는 결과 집합이 반환됩니다. 결과 집합을 단일 게시 또는 아티클에 속하는 변경 내용으로 제한하려면 각각 **@publication** 또는 **@article** 를 지정합니다.  
+2.  구독 데이터베이스의 구독자에서 [sp_showpendingchanges](../../../relational-databases/system-stored-procedures/sp-showpendingchanges-transact-sql.md)를 실행합니다. 이렇게 하면 게시자에 대해 복제 대기 중인 변경 내용에 대한 정보를 보여 주는 결과 집합이 반환됩니다. 결과 집합을 단일 게시 또는 아티클에 속하는 변경 내용으로 제한하려면 각각 **\@publication** 또는 **\@article**을 지정합니다.  
   
 #### <a name="to-monitor-merge-agent-sessions"></a>병합 에이전트 세션을 모니터링하려면  
   
 1.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)을 실행합니다. 이렇게 하면 이 배포자를 사용하는 모든 구독의 모든 병합 에이전트 세션에 대해 **Session_id**를 포함한 모니터링 정보가 반환됩니다. **MSmerge_sessions** 시스템 테이블을 쿼리하여 [Session_id](../../../relational-databases/system-tables/msmerge-sessions-transact-sql.md) 를 얻을 수도 있습니다.  
   
-2.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)을 실행합니다. **@session_id** 에 1단계에서 얻은 **Session_id** 값을 지정합니다. 이렇게 하면 해당 세션에 대한 세부 모니터링 정보가 표시됩니다.  
+2.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)을 실행합니다. **\@session_id**에 1단계에서 얻은 **Session_id** 값을 지정합니다. 이렇게 하면 해당 세션에 대한 세부 모니터링 정보가 표시됩니다.  
   
 3.  각 관심 세션에 대해 2단계를 반복합니다.  
   
 #### <a name="to-monitor-merge-agent-sessions-for-pull-subscriptions-from-the-subscriber"></a>구독자에서 끌어오기 구독에 대한 병합 에이전트 세션을 모니터링하려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)을 실행합니다. 지정된 구독에 대해 **@publisher** , **@publication** 을 지정하고 **@publisher_db** 를 실행합니다. 이렇게 하면 이 구독의 마지막 다섯 개 병합 에이전트 세션에 대한 모니터링 정보가 반환됩니다. 결과 집합에 있는 관심 세션의 **Session_id** 값을 확인합니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_replmonitorhelpmergesession](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)을 실행합니다. 지정된 구독에 대해 **\@publisher**, **\@publication**을 지정하고 **\@publisher_db**에 게시 데이터베이스의 이름을 지정합니다. 이렇게 하면 이 구독의 마지막 다섯 개 병합 에이전트 세션에 대한 모니터링 정보가 반환됩니다. 결과 집합에 있는 관심 세션의 **Session_id** 값을 확인합니다.  
   
-2.  구독 데이터베이스의 구독자에서 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)을 실행합니다. **@session_id** 에 1단계에서 얻은 **Session_id** 값을 지정합니다. 이렇게 하면 해당 세션에 대한 세부 모니터링 정보가 표시됩니다.  
+2.  구독 데이터베이스의 구독자에서 [sp_replmonitorhelpmergesessiondetail](../../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)을 실행합니다. **\@session_id**에 1단계에서 얻은 **Session_id** 값을 지정합니다. 이렇게 하면 해당 세션에 대한 세부 모니터링 정보가 표시됩니다.  
   
 3.  각 관심 세션에 대해 2단계를 반복합니다.  
   
 #### <a name="to-view-and-modify-the-monitor-threshold-metrics-for-a-publication"></a>게시에 대한 모니터 임계값 메트릭을 보거나 수정하려면  
   
-1.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelppublicationthresholds](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)를 실행합니다. 이렇게 하면 이 배포자를 사용하는 모든 게시의 모니터링 임계값 집합이 반환됩니다. 결과 집합을 단일 게시자 또는 게시된 데이터베이스에 속하는 게시에 대한 모니터 임계값으로 제한하거나 단일 게시로 제한하려면 각각 **@publisher** , **@publisher_db** 또는 **@publication** 를 지정합니다. 변경해야 하는 임계값에 대한 **Metric_id** 값을 확인합니다. 자세한 내용은 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요.  
+1.  배포 데이터베이스의 배포자에서 [sp_replmonitorhelppublicationthresholds](../../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)를 실행합니다. 이렇게 하면 이 배포자를 사용하는 모든 게시의 모니터링 임계값 집합이 반환됩니다. 결과 집합을 단일 게시자 또는 게시된 데이터베이스에 속하는 게시에 대한 모니터 임계값으로 제한하거나 단일 게시로 제한하려면 각각 **\@publisher**, **\@publisher_db** 또는 **\@publication**을 지정합니다. 변경해야 하는 임계값에 대한 **Metric_id** 값을 확인합니다. 자세한 내용은 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)를 참조하세요.  
   
 2.  배포 데이터베이스의 배포자에서 [sp_replmonitorchangepublicationthreshold](../../../relational-databases/system-stored-procedures/sp-replmonitorchangepublicationthreshold-transact-sql.md)를 실행합니다. 다음을 필요한 대로 지정합니다.  
   
-    -   **@metric_id** 에 1단계에서 얻은 **Metric_id** 값을 지정합니다.  
+    -   **\@metric_id**에 1단계에서 얻은 **Metric_id** 값을 지정합니다.  
   
-    -   **@value** 에 모니터 임계값 메트릭의 새 값을 지정합니다.  
+    -   **\@value**에 모니터 임계값 메트릭의 새 값을 지정합니다.  
   
-    -   이 임계값에 도달할 때 경고를 기록하려면 **@shouldalert** 에 값 **@shouldalert** 을 지정하고, 경고가 필요하지 않은 경우 값 **0** 을 지정합니다.  
+    -   이 임계값에 도달할 때 경고를 기록하려면 **\@shouldalert**에 값 **1**을 지정하고, 경고가 필요하지 않은 경우 값 **0**을 지정합니다.  
   
-    -   이 임계값에 도달할 때 경고를 기록하려면 **@shouldalert** 에 값 **@mode** 을 지정하고 모니터 임계값 메트릭을 사용하지 않으려면 값 **2** 를 지정합니다.  
+    -   모니터 임계값 메트릭을 사용하도록 설정하려면 **\@mode**에 값 **1**을 지정하고 모니터 임계값 메트릭을 사용하지 않도록 설정하려면 값 **2**를 지정합니다.  
   
 ##  <a name="RMO"></a> RMO(복제 관리 개체)  
   

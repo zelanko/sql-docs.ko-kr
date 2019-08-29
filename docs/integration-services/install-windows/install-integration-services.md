@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: bd20fd3a-414b-4581-959d-ebba4ddf5a55
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 143bba36c1f85877fd3a0504dd8345c754ec055d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9cbb85bafae51929676de93e4de285472bc5443
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023593"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621702"
 ---
 # <a name="install-integration-services"></a>Integration Services 설치
 
@@ -44,9 +44,9 @@ ms.locfileid: "68023593"
 -   [SQL Server 설치에 대한 보안 고려 사항](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)    
     
 ## <a name="install-standalone-or-side-by-side"></a>독립 실행형 또는 나란히 설치    
-다음과 같은 구성으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 를 설치할 수 있습니다.    
+다음과 같은 구성으로 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치할 수 있습니다.    
     
--   이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] 인스턴스가 없는 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]를 설치할 수 있습니다.    
+-   이전 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스가 없는 컴퓨터에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]를 설치할 수 있습니다.    
     
 -   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]의 기존 인스턴스와 함께 [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)]를 설치할 수 있습니다.    
     
@@ -122,6 +122,6 @@ ETL(추출, 변환 및 로드) 프로세스에 전용 서버를 사용하려면 
 
 -   **선택적 추가 구성 요소**. 필요에 따라 SQL Server 기능 패키지에서 추가 타사 구성 요소를 다운로드할 수 있습니다.
 
-    -   MicrosoftÂ® Connector for SAP BW for Microsoft SQL ServerÂ®. 이러한 구성 요소를 얻는 방법은 [MicrosoftÂ® SQL ServerÂ® 2017 기능 팩](https://www.microsoft.com/download/details.aspx?id=55992)을 참조하세요.
+    -   Microsoft® Connector for SAP BW for Microsoft SQL Server®. 이러한 구성 요소를 얻는 방법은 [Microsoft® SQL Server® 2017 기능 팩](https://www.microsoft.com/download/details.aspx?id=55992)을 참조하세요.
 
     -   Microsoft Connector Version 5.0 for Oracle by Attunity 및 Microsoft Connector Version 5.0 for Teradata by Attunity. 이러한 구성 요소를 얻는 방법은 [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179)를 참조하세요.

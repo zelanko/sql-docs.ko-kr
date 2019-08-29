@@ -1,7 +1,7 @@
 ---
 title: DATALENGTH(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/29/2017
+ms.date: 08/20/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,26 +19,29 @@ helpviewer_keywords:
 - expressions [SQL Server], length
 - lengths [SQL Server], data
 ms.assetid: 00f377f1-cc3e-4eac-be47-b3e3f80267c9
-author: MikeRayMSFT
+author: pmasl
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a62aa2b5249384405372afe662a84a73055f4a67
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cca069fe3bb0aa0f489c13c022aeeebbd08db053
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026212"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653799"
 ---
 # <a name="datalength-transact-sql"></a>DATALENGTH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
 이 함수에서는 식을 표시하는 데 사용된 바이트 수를 반환합니다.
+
+> [!NOTE]
+> 문자열 식의 문자 수를 반환하려면 [LEN](../../t-sql/functions/len-transact-sql.md) 함수를 사용합니다.
   
 ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## <a name="syntax"></a>구문  
   
-```sql
+```
 DATALENGTH ( expression )   
 ```  
   
@@ -50,28 +53,28 @@ DATALENGTH ( expression )
 *expression*의 데이터 형식이 **nvarchar(max)** , **varbinary(max)** 또는 **varchar(max)** 이면 **bigint**이고, 그렇지 않으면 **int**입니다.
   
 ## <a name="remarks"></a>Remarks  
-`DATALENGTH`는 다음과 함께 사용할 경우 매우 유용해집니다.
-
+`DATALENGTH`는 다음과 같이 가변 길이 데이터를 저장할 수 있는 데이터 형식과 함께 사용할 때 매우 유용합니다.
 - **image**
 - **ntext**
 - **nvarchar**
 - **text**
 - **varbinary**
 - **varchar**
-
-데이터 형식과 함께 사용할 경우 정말 유용합니다.
   
 `DATALENGTH`는 NULL 값에 대해 NULL을 반환합니다.
   
 > [!NOTE]  
->  반환되는 값은 호환성 수준에 따라 달라질 수 있습니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
-  
+> 반환되는 값은 호환성 수준에 따라 달라질 수 있습니다. 호환성 수준에 대한 자세한 내용은 [ALTER DATABASE 호환성 수준&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)을 참조하세요.  
+
+> [!NOTE]
+> 지정된 문자열 식으로 인코딩된 문자 수를 반환하려면 [LEN](../../t-sql/functions/len-transact-sql.md)을 사용하고, 지정된 문자열 식의 크기(바이트)를 반환하려면 [DATALENGTH](../../t-sql/functions/datalength-transact-sql.md)를 사용합니다. 이러한 출력은 열에 사용되는 인코딩 유형 및 데이터 형식에 따라 다를 수 있습니다. 서로 다른 인코딩 유형의 스토리지 차이점에 대해 자세히 알아보려면 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.
+
 ## <a name="examples"></a>예  
 이 예에서는 `Name` 테이블에서 `Product` 열의 길이를 찾아냅니다.
   
 ```sql
--- Uses AdventureWorks  
-  
+USE AdventureWorks2016  
+GO
 SELECT length = DATALENGTH(EnglishProductName), EnglishProductName  
 FROM dbo.DimProduct  
 ORDER BY EnglishProductName;  
@@ -83,6 +86,3 @@ GO
 [CAST 및 CONVERT&#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
 [데이터 형식&#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
 [시스템 함수&#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)
-  
-  
-

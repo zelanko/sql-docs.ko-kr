@@ -11,12 +11,12 @@ ms.assetid: 83acbcc4-c51e-439e-ac48-6d4048eba189
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c1e2d8f01370978074a07eaa0e5f784927bef511
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2786ebcf87f5af0ed9abcb9adaf0a85253327fa
+ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024969"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70009372"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Columnstore 인덱스 쿼리 성능
 
@@ -110,7 +110,7 @@ ms.locfileid: "68024969"
 |위쪽 정렬||아니요|아니요|예||    
 |창 집계||NA|NA|예|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 새 연산자.|    
     
-<sup>1</sup>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층, 표준 계층 - S3 이상 및 모든 vCore 계층 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 적용    
+<sup>1</sup> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 프리미엄 계층, 표준 계층 - S3 이상 및 모든 vCore 계층 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]에 적용    
     
 ### <a name="aggregate-pushdown"></a>집계 푸시 다운    
  SCAN 노드에서 조건에 맞는 행을 가져와 일괄 처리 모드에서 값을 집계하는 집계 계산을 위한 일반 실행 경로입니다. 이러한 실행으로 좋은 성능이 제공되긴 하지만 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에서 집계 작업은 SCAN 노드로 푸시되어 다음 조건이 충족되면 일괄 처리 모드 실행 시 크기 순서대로 정렬되므로 집계 계산 성능을 향상시킬 수 있습니다. 
@@ -166,7 +166,7 @@ columnstore 인덱스는 숫자 또는 정수를 기반으로 하는 키가 포�
  [Columnstore 인덱스 데이터 로드 지침](../../relational-databases/indexes/columnstore-indexes-data-loading-guidance.md)   
  [실시간 운영 분석을 위한 Columnstore 시작](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)     
  [데이터 웨어하우스용 Columnstore 인덱스](../../relational-databases/indexes/columnstore-indexes-data-warehouse.md)   
- [Columnstore 인덱스 조각 모음](../../relational-databases/indexes/columnstore-indexes-defragmentation.md)    
+ [인덱스 다시 구성 및 다시 작성](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)    
  [Columnstore 인덱스 아키텍처](../../relational-databases/sql-server-index-design-guide.md#columnstore_index)   
  [CREATE INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    
  [ALTER INDEX&#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)     

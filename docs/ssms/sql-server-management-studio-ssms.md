@@ -16,12 +16,12 @@ helpviewer_keywords:
 - SQL Server Management Studio for Analysis Services
 ms.custom: ''
 ms.date: 05/29/2019
-ms.openlocfilehash: 8632bd86a19bdce57114e36247f0b805da6804e7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3def38b576103a7343816d0dc1c472d3bd64e1a1
+ms.sourcegitcommit: 7e63c612047f2bb1779c872b5180a3ea9afe7e80
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893258"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69976124"
 ---
 # <a name="what-is-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)란? 
 
@@ -84,11 +84,11 @@ SQL Server Management Studio를 사용하여 Reporting Services 기능을 활성
 
 이전 버전의 다른 로캘에 대한 자세한 내용은 [SSMS의 영어 이외의 언어 버전 설치](install-other-languages.md)를 참조하세요.
 
-## <a name="support-policy-for-ssms"></a>SSMS에 대한 정책 지원
+## <a name="support-policy-for-ssms"></a>SSMS에 대한 지원 정책
 
 - SSMS 17.0부터는 SQL 도구 팀이 [Microsoft 최신 수명 주기 정책](https://support.microsoft.com/help/30881/modern-lifecycle-policy)을 채택했습니다.
-- 원래 [최신 수명 주기 정책 알림](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)을 읽어 보세요.
-- 자세한 내용은 [최신 정책 FAQ](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)를 참조하세요.
+- 원래 [최신 수명 주기 정책 알림](https://support.microsoft.com/help/447912/announcing-microsoft-modern-lifecycle-policy)을 읽어 보세요. 자세한 내용은 [최신 정책 FAQ](https://support.microsoft.com/help/30882/modern-lifecycle-policy-faq)를 참조하세요.
+- 진단 데이터 수집 및 기능 사용에 대한 자세한 내용은 [SQL Server 개인 정보 보완](https://docs.microsoft.com/sql/sql-server/sql-server-privacy)을 참조하세요.
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]
 

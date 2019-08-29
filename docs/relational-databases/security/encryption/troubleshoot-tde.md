@@ -10,35 +10,32 @@ ms.prod: sql
 ms.technology: security
 ms.reviewer: vanto
 ms.topic: conceptual
-ms.date: 04/26/2019
+ms.date: 08/20/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f67d1ed9bf809baaa4d934947e86d3fd1b7ed0b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f60f95f3fdd9ca31574e4e0052c83ae72bd8a9b4
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111531"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903620"
 ---
 # <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Azure Key Vault의 고객 관리 키를 통한 투명한 데이터 암호화의 일반적인 오류
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-이 문서에서는 Azure Key Vault의 고객 관리 키를 통한 TDE(투명한 데이터 암호화)를 사용하기 위한 요구 사항과 일반적인 오류를 식별하고 해결하는 방법을 설명합니다.
+이 문서에서는 [Azure Key Vault에서 고객 관리 키와 함께 TDE(투명한 데이터 암호화)](https://docs.microsoft.com/en-us/azure/sql-database/transparent-data-encryption-byok-azure-sql)를 사용하도록 구성된 데이터베이스에 액세스할 수 없는 Azure Key Vault 키 액세스 문제를 파악하고 해결하는 방법을 설명합니다.
 
-## <a name="requirements"></a>요구 사항
+## <a name="introduction"></a>소개
+TDE가 Azure Key Vault에서 고객 관리 키를 사용하도록 구성된 경우 데이터베이스를 온라인 상태로 유지하려면 이 TDE 보호기에 지속적으로 액세스할 수 있어야 합니다.  논리 SQL Server가 Azure Key Vault의 고객 관리 TDE 보호기에 대한 액세스 권한을 잃게 되면 데이터베이스는 모든 연결을 거부하고 Azure Portal에서 액세스할 수 없는 것으로 나타납니다.
 
-Key Vault의 고객 관리 TDE 보호기로 TDE 문제를 해결하려면 다음 요구 사항을 충족해야 합니다.
+처음 48시간 동안 기본 Azure Key Vault 키 액세스 문제가 해결되면 데이터베이스가 자동으로 복구되고 온라인 상태가 됩니다.  즉, 일시적인 모든 네트워크 중단 시나리오의 경우 사용자 작업이 필요하지 않으며 데이터베이스는 자동으로 온라인 상태가 됩니다.  대부분의 경우 기본 Key Vault 키 액세스 문제를 해결하려면 사용자 작업이 필요합니다. 
 
-- 논리 SQL Server 인스턴스와 Key Vault가 동일한 지역에 있어야 합니다.
-- Azure Active Directory (Azure AD)에서 제공되는 논리 SQL Sever 인스턴스 ID, 즉 Azure Key Vault의 APPID는 원래 구독의 테넌트여야 합니다. 서버가 원래 구독에서 다른 구독으로 이동된 경우 서버 ID(APPID)를 다시 만들어야 합니다.
-- Key Vault를 사용할 수 있어야 합니다. Key Vault 상태를 확인하는 방법은 [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview)를 참조하세요. 알림에 등록하려면 [작업 그룹](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)을 확인하세요.
-- 지리적 재해 복구 시나리오에서는 두 Key Vault에 동일한 키 자료가 포함되어 있어야만 장애 조치(failover)가 작동합니다.
-- 논리 서버는 Azure AD ID(APPID)가 있어야 Key Vault에 인증됩니다.
-- APPID는 Key Vault에 액세스할 수 있어야 하며 TDE 보호기로 선택된 키에 대한 가져오기, 래핑 및 래핑 해제 권한을 가져야 합니다.
+액세스할 수 없는 데이터베이스가 더 이상 필요 하지 않은 경우 즉시 삭제하여 비용 발생을 중지할 수 있습니다.  Azure Key Vault 키에 대한 액세스가 복원되고 데이터베이스가 다시 온라인 상태가 될 때까지 데이터베이스에 대한 기타 모든 작업은 허용되지 않습니다.   고객 관리 키로 암호화된 데이터베이스에 액세스할 수 없는 경우에도 고객 관리 키에서 서버 관리 키로 TDE 옵션을 변경하는 것은 지원되지 않습니다. 이 기능은 TDE 보호기에 대한 권한이 해지된 상태에서 무단 액세스로부터 데이터를 보호하는 데 필요합니다. 
 
-자세한 내용은 [Guidelines for configuring TDE with Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault)합니다.
+데이터베이스가 48시간 넘게 액세스할 수 없게 된 후에는 더 이상 자동으로 복구되지 않습니다.  필요한 Azure Key Vault 키 액세스가 복원된 경우 데이터베이스를 다시 온라인 상태로 전환하려면 수동으로 액세스의 유효성을 다시 검사해야 합니다.  48시간 넘게 액세스할 수 없는 경우 데이터베이스를 다시 온라인 상태로 만들면 데이터베이스 크기에 따라 상당한 시간이 소요될 수 있으며 현재 지원 티켓이 필요합니다. 데이터베이스가 다시 온라인 상태가 되면 Geo-DR(지역 재해 복구)을 구성한 경우 지역 링크와 같은 이전에 구성된 설정, PITR 기록 및 태그가 손실됩니다.  따라서 48시간 이내에 기본 Key Vault 문제를 해결할 수 있는 [작업 그룹](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)을 사용하여 알림 시스템을 구현하는 것이 좋습니다. 
 
-## <a name="common-misconfigurations"></a>일반적인 구성 오류
+
+## <a name="common-errors-causing-databases-to-become-inaccessible"></a>데이터베이스에 액세스할 수 없는 일반적인 오류
 
 Key Vault로 TDE를 사용할 때 발생하는 문제는 대부분 다음 구성 오류 중 하나 때문에 발생합니다.
 
@@ -46,10 +43,11 @@ Key Vault로 TDE를 사용할 때 발생하는 문제는 대부분 다음 구성
 
 - Key Vault를 실수로 삭제되었습니다.
 - Azure Key Vault에 대해 방화벽이 구성되었지만 이 방화벽에서 Microsoft 서비스에 대한 액세스를 허용하지 않습니다.
+- 일시적인 네트워크 오류로 인해 Key Vault를 사용할 수 없습니다.
 
 ### <a name="no-permissions-to-access-the-key-vault-or-the-key-doesnt-exist"></a>Key Vault 또는 키에 액세스할 수 있는 권한이 없습니다.
 
-- 키를 실수로 삭제했습니다.
+- 키가 실수로 삭제되었거나, 사용하지 않도록 설정되었거나, 키가 만료되었습니다.
 - 논리 SQL Server 인스턴스 APPID를 실수로 삭제했습니다.
 - 논리 SQL Server 인스턴스를 다른 구독으로 이동했습니다. 논리 서버를 다른 구독으로 이동했으면 새 APPID를 만들어야 합니다.
 - 키의 APPID에 부여된 권한이 부족합니다(가져오기, 래핑 및 래핑 해제를 포함하지 않음).
@@ -89,7 +87,7 @@ Azure Portal에서 Key Vault로 이동한 다음 **액세스 정책**으로 이�
 자세한 내용은 [Assign an Azure AD identity to your server](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)(서버에 Azure AD ID 할당)를 참조하세요.
 
 > [!IMPORTANT]
-> Key Vault로 TDE의 초기 구성 후에 논리 SQL Server 인스턴스를 새 구독으로 이동한 경우 Azure AD ID를 구성하는 단계를 반복하여 새 APPID를 만듭니다. 그런 다음 Key Vault에 APPID를 추가하고 키에 올바른 권한을 할당합니다. 
+> Key Vault로 TDE의 초기 구성 후에 논리 SQL Server 인스턴스를 새 테넌트로 이동한 경우 Azure AD ID를 구성하는 단계를 반복하여 새 APPID를 만듭니다. 그런 다음 Key Vault에 APPID를 추가하고 키에 올바른 권한을 할당합니다. 
 >
 
 ### <a name="missing-key-vault"></a>누락된 Key Vault
@@ -164,8 +162,82 @@ _401 AzureKeyVaultMissingPermissions - 서버에서 Azure Key Vault에 필요한
 - APPID가 있는 경우 APPID에 다음 키 사용 권한이 있는지 확인합니다. Get, 래핑 및 래핑 해제.
 - APPID가 없는 경우 **새로 추가** 단추를 사용하여 추가합니다. 
 
+## <a name="getting-tde-status-from-the-activity-log"></a>활동 로그에서 TDE 상태 가져오기
+
+Azure Key Vault 키 액세스 문제로 인한 데이터베이스 상태를 모니터링할 수 있도록 하려면 Azure Resource Manager URL 및 Subscription+Resourcegroup+ServerName+DatabseName을 기반으로 하는 리소스 ID에 대한 [활동 로그](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications)에 다음 이벤트가 기록됩니다. 
+
+**서비스가 Azure Key Vault 키에 대한 액세스 권한을 잃은 경우 발생하는 이벤트**
+
+EventName: MakeDatabaseInaccessible 
+
+상태: 시작됨 
+
+설명: 데이터베이스에서 Azure Key Vault 키에 대한 액세스 권한을 잃어 현재 액세스할 수 없음: <error message>   
+
+ 
+
+**자동 복구를 위한 48시간 대기 시간이 시작되는 경우 발생하는 이벤트** 
+
+EventName: MakeDatabaseInaccessible 
+
+상태: InProgress 
+
+설명: 데이터베이스에서 Azure Key Vault 키 액세스 권한이 48시간 이내에 사용자에 의해 다시 설정될 때까지 대기 중입니다.   
+
+ 
+
+**데이터베이스가 자동으로 다시 온라인 상태가 되는 경우 발생하는 이벤트**
+
+EventName: MakeDatabaseAccessible 
+
+상태: 성공 
+
+설명: Azure Key Vault 키에 대한 데이터베이스 액세스 권한이 다시 설정되었으며 현재 데이터베이스가 온라인 상태입니다. 
+
+ 
+
+**48시간 이내에 문제가 해결되지 않고 Azure Key Vault 키 액세스의 유효성을 수동으로 검사해야 하는 경우 발생하는 이벤트** 
+
+EventName: MakeDatabaseInaccessible 
+
+상태: 성공 
+
+설명: 데이터베이스에 액세스할 수 없으므로 사용자가 Azure Key Vault 오류를 확인하고 키 유효성 검사를 다시 사용하여 Azure Key Vault 키에 대한 액세스를 다시 설정해야 합니다. 
+
+ 
+
+**키 유효성 검사를 수동으로 수행한 후 db가 온라인 상태가 되는 경우 발생하는 이벤트**
+
+EventName: MakeDatabaseAccessible 
+
+상태: 성공 
+
+설명: Azure Key Vault 키에 대한 데이터베이스 액세스 권한이 다시 설정되었으며 현재 데이터베이스가 온라인 상태입니다. 
+
+ 
+
+**Azure Key Vault 키 액세스의 유효성 다시 검사가 성공하고 db를 다시 온라인 상태로 전환하는 경우 발생하는 이벤트**
+
+EventName: MakeDatabaseAccessible 
+
+상태: 시작됨 
+
+설명: Azure Key Vault 키에 대한 데이터베이스 액세스 권한을 복원하는 중입니다. 
+
+ 
+
+**Azure Key Vault 키 액세스의 유효성을 다시 검사하지 못한 경우 발생하는 이벤트**
+
+EventName: MakeDatabaseAccessible 
+
+상태: 실패 
+
+설명: Azure Key Vault 키에 대한 데이터베이스 액세스 권한을 복원하지 못했습니다. 
+
+
 ## <a name="next-steps"></a>다음 단계
 
-- [guidelines for configuring TDE with Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault)(Azure Key Vault로 TDE 구성 지침)를 참조하세요.
 - [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview)를 확인하세요.
-- [서버에 Azure AD ID를 할당](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)하는 방법에 관한 최신 정보를 확인하세요.
+- 이메일/SMS/푸시/음성, 논리 앱, 웹후크, ITSM 또는 Automation Runbook과 같은 기본 설정에 따라 알림 및 경고를 받도록 [작업 그룹](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups)을 설정합니다. 
+
+

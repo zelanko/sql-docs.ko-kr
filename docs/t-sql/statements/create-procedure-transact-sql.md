@@ -46,12 +46,12 @@ ms.assetid: afe3d86d-c9ab-44e4-b74d-4e3dbd9cc58c
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14597122e586aca0290a4823f07dbb17e5cccda2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4004ba36ffbcaf5cf96a6e4d9c95761b054e9abc
+ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006532"
+ms.lasthandoff: 08/23/2019
+ms.locfileid: "70000825"
 ---
 # <a name="create-procedure-transact-sql"></a>CREATE PROCEDURE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -356,7 +356,7 @@ SELECT DB_NAME(@ID) AS ThatDB;
 ## <a name="best-practices"></a>최선의 구현 방법  
  여기에 제시된 최선의 구현 방법은 일부에 불과하지만 이를 적절히 참고하면 프로시저 성능을 개선하는 데 도움이 됩니다.  
   
--   프로시저 본문에서 SET NOCOUNT ON 문을 첫 번째 문으로 사용합니다. 즉, 이 문을 AS 키워드 바로 다음에 배치합니다. 이렇게 하면 SELECT, INSERT, UPDATE, MERGE 및 DELETE 문이 실행된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트로 보내는 메시지가 해제됩니다. 따라서 필요 없는 네트워크 오버헤드가 사라져 데이터베이스와 애플리케이션의 전반적인 성능이 개선됩니다. 자세한 내용은 [SET NOCOUNT&#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)를 참조하세요.  
+-   프로시저 본문에서 SET NOCOUNT ON 문을 첫 번째 문으로 사용합니다. 즉, 이 문을 AS 키워드 바로 다음에 배치합니다. 이렇게 하면 SELECT, INSERT, UPDATE, MERGE 및 DELETE 문이 실행된 후 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 클라이언트로 보내는 메시지가 해제됩니다. 그러면 투명도를 위해 생성된 출력이 최소 수준으로 유지됩니다. 그러나 현재의 하드웨어에서는 측정 가능한 성능 혜택이 없습니다. 자세한 내용은 [SET NOCOUNT&#40;Transact-SQL&#41;](../../t-sql/statements/set-nocount-transact-sql.md)를 참조하세요.  
   
 -   프로시저에서 데이터베이스 개체를 만들거나 참조할 때 스키마 이름을 사용합니다. 여러 스키마를 검색할 필요가 없는 경우 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 개체 이름을 확인하기 위한 처리 시간이 줄어듭니다. 또한 스키마를 지정하지 않고 개체를 만들 경우 사용자의 기본 스키마 할당으로 인해 발생하는 권한 및 액세스 문제도 방지됩니다.  
   

@@ -19,12 +19,12 @@ ms.assetid: 7a34be46-15b4-4b6b-8497-cfd8f9f14234
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3299d13c2ff371f0194c501f34d5615486decc84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88cfc841f3e8cdf2a04cccdc76eb3bbf7f5e2147
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006105"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621776"
 ---
 # <a name="track-data-changes-sql-server"></a>데이터 변경 내용 추적(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ ms.locfileid: "68006105"
   
 -   데이터베이스가 분리된 후 다시 동일한 서버 또는 다른 서버에 연결될 경우 변경 데이터 캡처는 설정된 상태를 유지합니다.  
   
--   데이터베이스가 **KEEP_CDC** 옵션을 사용하여 Enterprise 이외의 다른 버전에 연결 또는 복원된 경우 변경 데이터 캡처에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise가 필요하기 때문에 작업이 차단됩니다. 오류 메시지 932가 표시됩니다.  
+-   데이터베이스가 **KEEP_CDC** 옵션을 사용하여 Standard 또는 Enterprise 이외의 다른 버전에 연결 또는 복원된 경우 변경 데이터 캡처에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard 또는 Enterprise 버전이 필요하기 때문에 작업이 차단됩니다. 오류 메시지 932가 표시됩니다.  
   
      `SQL Server cannot load database '%.*ls' because change data capture is enabled. The currently installed edition of SQL Server does not support change data capture. Either disable change data capture in the database by using a supported edition of SQL Server, or upgrade the instance to one that supports change data capture.`  
   

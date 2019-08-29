@@ -24,12 +24,12 @@ ms.assetid: 282cd982-f4fb-4b22-b2df-9e8478f13f6a
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7e625e1d532f42f2e72e57590943de7e5834dbf
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8162c14620143aa70ea2e87f582ec99e613f234c
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354615"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "69653665"
 ---
 # <a name="char-and-varchar-transact-sql"></a>char 및 varchar(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "68354615"
 ## <a name="arguments"></a>인수  
 **char** [ ( *n* ) ] 고정 크기 문자열 데이터입니다. *n*은 바이트로 문자열 크기를 정의하며 1에서 8,000 사이의 값이어야 합니다. ‘라틴 문자’처럼 싱글바이트 인코딩 문자 집합의 경우 스토리지 크기는 *n*바이트이고 저장할 수 있는 문자 수도 *n*입니다.  멀티바이트 인코딩 문자 집합의 경우 스토리지 크기는 여전히 *n*바이트이지만 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. ISO에서 정의한 **char**의 동의어는 **character**입니다. 문자 집합에 대한 자세한 내용은 [싱글바이트 및 멀티바이트 문자 집합](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)을 참조하세요.
 
-**varchar** [ ( *n* | **max** ) ] 가변 크기의 문자열 데이터입니다. *n*은 바이트로 문자열 크기를 정의하며 1에서 8,000 사이의 값일 수 있습니다. **max**는 최대 스토리지 크기가 2^31-1바이트(2GB)임을 나타냅니다. ‘라틴 문자’처럼 싱글바이트 인코딩 문자 집합의 경우 스토리지 크기는 *n*바이트 +2바이트이고 저장할 수 있는 문자 수도 *n*입니다.  멀티바이트 인코딩 문자 집합의 경우 스토리지 크기는 여전히 *n*바이트 + 2바이트지만 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. ISO에서 정의한 **varchar**의 동의어는 **charvarying** 또는 **charactervarying**입니다. 문자 집합에 대한 자세한 내용은 [싱글바이트 및 멀티바이트 문자 집합](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)을 참조하세요.
+**varchar** [ ( *n* | **max** ) ] 가변 크기의 문자열 데이터입니다. *n*을 사용하여 문자열 크기(바이트)를 정의할 수 있으며 1~8,000 사이의 값이거나 **최대**를 사용하여 2^31-1바이트(2GB)의 최대 저장소 크기로 열 제약 조건을 나타낼 수 있습니다. ‘라틴 문자’처럼 싱글바이트 인코딩 문자 집합의 경우 스토리지 크기는 *n*바이트 +2바이트이고 저장할 수 있는 문자 수도 *n*입니다.  멀티바이트 인코딩 문자 집합의 경우 스토리지 크기는 여전히 *n*바이트 + 2바이트지만 저장할 수 있는 문자 수는 *n*보다 작을 수 있습니다. ISO에서 정의한 **varchar**의 동의어는 **charvarying** 또는 **charactervarying**입니다. 문자 집합에 대한 자세한 내용은 [싱글바이트 및 멀티바이트 문자 집합](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)을 참조하세요.
 
 ## <a name="remarks"></a>Remarks  
 [CHAR(*n*) 및 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)에서 *n*이 문자 수를 정의한다고 잘못 생각하는 경우가 많습니다. 그러나 [CHAR(*n*) 및 VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)에서 *n*은 **바이트**의 문자열 길이(0~8,000)를 정의합니다. *n*은 저장할 수 있는 문자 수를 정의하지 않습니다. [NCHAR(*n*) 및 NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) 정의와 비슷합니다.    

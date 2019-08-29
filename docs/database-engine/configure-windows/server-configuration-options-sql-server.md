@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 9f38eba6-39b1-4f1d-ba24-ee4f7e2bc969
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 7d0e379cf9d3bc6391e6c2c921824c7162b88def
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 985f5fb80f9879470f0f9a1740bd7a4b7bee2b2a
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025619"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69609634"
 ---
 # <a name="server-configuration-options-sql-server"></a>서버 구성 옵션(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "68025619"
   
 일부 옵션은 서버를 다시 시작해야 새 구성 값이 적용됩니다. 새 값을 설정하고 sp_configure를 실행해도 서버를 다시 시작하지 않으면 구성 옵션 **value** 열에만 새 값이 나타나고 **value_in_use** 열에는 나타나지 않습니다. 서버를 다시 시작하면 **value_in_use** 열에도 새 값이 나타납니다.  
   
-자체 구성 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시스템의 필요에 따라 조정하는 옵션입니다. 대부분의 경우 이 값을 수동으로 설정할 필요가 없습니다. 자체 구성 옵션의 예로는 **min server memory** , **max server memory** 및 user connections가 있습니다.  
+자체 구성 옵션은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 시스템의 필요에 따라 조정하는 옵션입니다. 대부분의 경우 이 값을 수동으로 설정할 필요가 없습니다. 예를 들면 **최대 작업자 스레드** 옵션 및 사용자 연결 옵션이 있습니다.  
   
 ## <a name="configuration-options-table"></a>구성 옵션 표  
  다음 표에서는 사용할 수 있는 모든 구성 옵션, 가능한 설정 범위 및 기본값을 보여 줍니다. 구성 옵션은 다음과 같은 문자 코드로 표시됩니다.  

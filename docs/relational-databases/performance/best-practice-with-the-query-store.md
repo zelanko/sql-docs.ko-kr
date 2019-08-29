@@ -1,7 +1,7 @@
 ---
 title: 쿼리 저장소에 대한 모범 사례 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/22/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 917a471183d31fab92aa871b6f71a5835c7999d1
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: fc407a8b76665b39837b5c278f2ce5942be45e51
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495386"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903608"
 ---
 # <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -135,7 +135,7 @@ SET QUERY_STORE = ON
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
       QUERY_CAPTURE_MODE = AUTO,
-      MAX_STORAGE_SIZE_MB = 1024,
+      MAX_STORAGE_SIZE_MB = 1000,
       INTERVAL_LENGTH_MINUTES = 60
     );
 ```  
@@ -149,7 +149,8 @@ SET QUERY_STORE = ON
       OPERATION_MODE = READ_WRITE, 
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
-      MAX_STORAGE_SIZE_MB = 1024, 
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1000, 
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO, 
       MAX_PLANS_PER_QUERY = 200,
@@ -157,7 +158,7 @@ SET QUERY_STORE = ON
     );
 ```
 
-다음 예제에서는 쿼리 캡처 모드를 자동으로 설정하고, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]의 다른 권장 옵션을 설정하고, 선택적으로 사용자 지정 캡처 정책을 기본값으로 설정합니다.  
+다음 예에서는 쿼리 캡처 모드를 자동으로 설정하고, [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]의 다른 권장 옵션을 설정하고, **선택적으로** 새로운 기본 자동 캡처 모드 대신에 사용자 지정 캡처 정책을 기본값으로 설정합니다.  
 
 ```sql
 ALTER DATABASE [QueryStoreDB]  
@@ -166,7 +167,7 @@ SET QUERY_STORE = ON
       OPERATION_MODE = READ_WRITE, 
       CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
       DATA_FLUSH_INTERVAL_SECONDS = 900,
-      MAX_STORAGE_SIZE_MB = 1024, 
+      MAX_STORAGE_SIZE_MB = 1000, 
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO, 
       MAX_PLANS_PER_QUERY = 200,

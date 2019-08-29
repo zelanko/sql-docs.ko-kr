@@ -1,25 +1,25 @@
 ---
-ms.openlocfilehash: b51f93b12c51bd7bc9659ee1661a7fdc068dd2bd
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: ffd608faf64818a7acd9e38d9c502f575be6716a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028856"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653051"
 ---
 ## <a name="enabled-deployment-scenarios"></a>사용할 수 있는 배포 시나리오
 
-CTP 3.2에서는 다음과 같은 시나리오를 사용할 수 있습니다.
+SQL Server 2019 RC(릴리스 후보)를 사용하면 다음과 같은 시나리오가 가능합니다.
 
-- 병렬 설치. SQL Server 2017을 통한 SQL Server 2012 인스턴스 또는 다른 SQL Server 2019 CTP 3.0 이상 인스턴스와 함께 SQL Server 2019 CTP 3.2 인스턴스를 설치합니다.
+- 병렬 설치. SQL Server 2017을 통한 SQL Server 2012 인스턴스 또는 다른 SQL Server 2019 CTP 3.0 이상 인스턴스와 함께 SQL Server 2019 RC 인스턴스를 설치합니다.
    >[!NOTE]
    >SQL Server 2008 및 2008 R2에서 병렬이 차단되지는 않지만, 일반적으로 해당 버전과 SQL Server 2019간에는 지원되는 Windows 운영 체제 버전이 없습니다.
-- 현재 위치 업그레이드. SQL Server 2017을 통한 SQL Server 2012 인스턴스 및 SQL Server CTP 3.0 인스턴스에서 SQL Server 2019 CTP 3.2 인스턴스로 업그레이드합니다. SQL Server 2019 CTP 3.0 이전 버전에서 업그레이드할 수는 없으며 새로 설치해야 합니다.
+- 현재 위치 업그레이드. SQL Server 2017을 통한 SQL Server 2012 인스턴스 및 SQL Server CTP 3.0 인스턴스에서 SQL Server 2019 RC 인스턴스로 업그레이드합니다. SQL Server 2019 CTP 3.0 이전 버전에서 업그레이드할 수는 없으며 새로 설치해야 합니다.
    >[!NOTE]
    >SQL Server 2008 및 2008 R2에서 현재 위치 업그레이드가 차단되지는 않지만, 일반적으로 해당 버전과 SQL Server 2019간에는 지원되는 Windows 운영 체제 버전이 없습니다.
 
 ## <a name="support"></a>지원
 
-SQL Server 2019 CTP 3.2는 미리 보기 소프트웨어입니다. 작업에 대해 공개적으로 지원되지 않습니다. [SQL 얼리어답터 프로그램](https://aka.ms/sqleap)에 등록한 고객은 Microsoft에 문의하여 특별 계약으로 SQL Server 2019 CTP 3.2를 실행할 수 있습니다.
+SQL Server 2019 RC는 미리 보기 소프트웨어입니다. 작업에 대해 공개적으로 지원되지 않습니다. [SQL 얼리어답터 프로그램](http://aka.ms/sqleap)에 등록한 고객은 Microsoft에 문의하여 특별 계약으로 SQL Server 2019 CTP RC를 실행할 수 있습니다.
 
 얼리어답터 프로그램에 등록하지 않은 고객을 위한 제한적인 지원은 다음 위치 중 하나에서 확인할 수 있습니다.
 

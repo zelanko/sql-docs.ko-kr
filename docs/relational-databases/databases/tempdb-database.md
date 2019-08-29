@@ -2,7 +2,7 @@
 title: tempdb 데이터베이스 | Microsoft 문서
 description: 이 항목에서는 SQL Server 및 Azure SQL Database의 구성과 사용에 대한 세부 정보를 제공합니다.
 ms.custom: P360
-ms.date: 05/22/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e921c5b95a3d7fd4eb1e8c5b0cb9010c7d2344c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127136"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653779"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 
@@ -217,7 +217,7 @@ tempdb의 성능 향상에 대한 자세한 내용은 다음 블로그 문서를
 
 ## <a name="memory-optimized-tempdb-metadata"></a>메모리 최적화 tempdb 메타데이터
 
-tempdb 메타데이터 경합은 역사적으로 SQL Server에서 실행하는 많은 워크로드의 확장성에 대한 병목 현상이었습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]는 [IMDB](../in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 tempdb 메타데이터를 도입하여 해당 병목 현상을 효과적으로 제거하고 tempdb 리소스 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다. 해당 새 기능으로 옵트인하려면 다음 스크립트를 사용합니다.
+tempdb 메타데이터 경합은 역사적으로 SQL Server에서 실행하는 많은 워크로드의 확장성에 대한 병목 현상이었습니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]는 [IMDB](../in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 tempdb 메타데이터를 도입하여 해당 병목 현상을 효과적으로 제거하고 tempdb 리소스 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다.  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]는 [IMDB](../in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 tempdb 메타데이터를 도입하여 해당 병목 현상을 효과적으로 제거하고 tempdb 리소스 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다. 이 새로운 기능을 옵트인하려면 다음 스크립트를 사용하세요,
 
 ```sql
 ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
@@ -319,7 +319,3 @@ GROUP BY R2.session_id, R1.internal_objects_alloc_page_count,
 - [sys.master_files](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
 - [데이터베이스 파일 이동](../../relational-databases/databases/move-database-files.md)  
   
-## <a name="see-also"></a>참고 항목
-
-- [SQL Server 2005에서의 tempdb 사용](https://technet.microsoft.com/library/cc966545.aspx)  
-- [tempdb의 디스크 공간 부족 문제 해결](https://msdn.microsoft.com/library/ms176029.aspx)
