@@ -3,7 +3,7 @@ title: TRY_CONVERT(Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 3e6e7825-6482-4cb2-a8c2-9abc99e265a6
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 02e4b66b1f215e513b005c770aebf9afc256ea8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 73f0b159230f89503aac00b4cc0b4ec5d0da5e39
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098763"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123173"
 ---
-# <a name="tryconvert-transact-sql"></a>TRY_CONVERT(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+# <a name="try_convert-transact-sql"></a>TRY_CONVERT(Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   캐스트에 성공하면 지정한 데이터 형식으로 캐스팅된 값을 반환합니다. 그렇지 않으면 Null을 반환합니다.  
   
@@ -64,7 +64,7 @@ TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-tryconvert-returns-null"></a>1\. TRY_CONVERT가 Null 반환  
+### <a name="a-try_convert-returns-null"></a>1\. TRY_CONVERT가 Null 반환  
  다음 예에서는 캐스팅을 실패할 때 TRY_CONVERT가 null을 반환하는 것을 보여 줍니다.  
   
 ```sql  
@@ -104,7 +104,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-tryconvert-fails-with-an-error"></a>2\. TRY_CONVERT가 오류와 함께 실패  
+### <a name="b-try_convert-fails-with-an-error"></a>2\. TRY_CONVERT가 오류와 함께 실패  
  다음 예에서는 캐스팅이 명시적으로 허용되지 않은 경우 TRY_CONVERT가 오류를 반환하는 것을 보여 줍니다.  
   
 ```sql  
@@ -118,7 +118,7 @@ GO
 Explicit conversion from data type int to xml is not allowed.  
 ```  
   
-### <a name="c-tryconvert-succeeds"></a>C. TRY_CONVERT가 성공  
+### <a name="c-try_convert-succeeds"></a>C. TRY_CONVERT가 성공  
  이 예에서는 식이 해당 형식에 맞아야 한다는 것을 보여 줍니다.  
   
 ```  

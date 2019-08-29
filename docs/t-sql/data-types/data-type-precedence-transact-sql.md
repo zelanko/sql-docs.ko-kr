@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: f4c804ab-ed3f-43b1-a024-c9ac6944b66b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a1421c43f050e438898289a34e86ec4b87185a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcf14745af6da26cc625e928d75f510e0da9a2e8
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020875"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030359"
 ---
 # <a name="data-type-precedence-transact-sql"></a>데이터 형식 우선 순위(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-all-md.md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
 연산자가 데이터 형식이 다른 두 식을 결합할 경우 우선순위가 낮은 데이터 형식이 먼저 우선순위가 높은 데이터 형식으로 변환됩니다. 변환이 지원되는 암시적 변환이 아닌 경우 오류가 반환됩니다. 동일한 데이터 형식을 갖는 피연산자 식을 결합하는 연산자의 경우 연산 결과는 해당 데이터 형식이 됩니다.
   

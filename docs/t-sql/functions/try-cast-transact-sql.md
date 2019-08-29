@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: ea3a16de-995b-415c-b5f0-9355cf7bb401
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 313f1bd13cf1b12a0685eeb101998792e0586767
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 79ad225fd74b4c8fd136295f69f26d48c061692a
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098776"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123142"
 ---
-# <a name="trycast-transact-sql"></a>TRY_CAST(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+# <a name="try_cast-transact-sql"></a>TRY_CAST(Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   캐스트에 성공하면 지정한 데이터 형식으로 캐스팅된 값을 반환합니다. 그렇지 않으면 Null을 반환합니다.  
   
@@ -60,7 +60,7 @@ TRY_CAST ( expression AS data_type [ ( length ) ] )
   
 ## <a name="examples"></a>예  
   
-### <a name="a-trycast-returns-null"></a>1\. TRY_CAST가 null을 반환  
+### <a name="a-try_cast-returns-null"></a>1\. TRY_CAST가 null을 반환  
  다음 예에서는 캐스팅을 실패할 때 TRY_CAST가 null을 반환하는 것을 보여 줍니다.  
   
 ```sql  
@@ -100,7 +100,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-trycast-fails-with-an-error"></a>2\. TRY_CAST가 오류와 함께 실패  
+### <a name="b-try_cast-fails-with-an-error"></a>2\. TRY_CAST가 오류와 함께 실패  
  다음 예에서는 캐스팅이 명시적으로 허용되지 않은 경우 TRY_CAST가 오류를 반환하는 것을 보여 줍니다.  
   
 ```sql  
@@ -114,7 +114,7 @@ GO
 Explicit conversion from data type int to xml is not allowed.  
 ```  
   
-### <a name="c-trycast-succeeds"></a>C. TRY_CAST 성공  
+### <a name="c-try_cast-succeeds"></a>C. TRY_CAST 성공  
  이 예에서는 식이 해당 형식에 맞아야 한다는 것을 보여 줍니다.  
   
 ```  
