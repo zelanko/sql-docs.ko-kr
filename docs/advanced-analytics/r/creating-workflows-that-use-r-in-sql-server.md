@@ -91,7 +91,7 @@ insert into ssis_iris("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Widt
 exec dbo.load_iris;
 ```
 
-![데이터 삽입](../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "데이터 삽입")
+![데이터 삽입] (../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "데이터 삽입")
 
 ### <a name="generate-a-model"></a>모델 생성
 
@@ -135,7 +135,7 @@ exec generate_iris_rx_model;
 update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default model';
 ```
 
-![선형 모델을 생성 합니다] . (../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "선형 모델을 생성 합니다") .
+![선형 모델을 생성 합니다](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "선형 모델을 생성 합니다") .
 
 검사점으로이 작업이 완료 되 면 ssis_iris_models를 쿼리하여 이진 모델이 하나 포함 되어 있는지 확인할 수 있습니다.
 
@@ -177,7 +177,7 @@ SSIS 디자이너에서 **predict_species_length** 저장 프로시저를 실행
 exec predict_species_length 'rxLinMod';
 ```
 
-![예측 생성](../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "예측 생성")
+![예측 생성] (../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "예측 생성")
 
 ### <a name="run-the-solution"></a>솔루션 실행
 
