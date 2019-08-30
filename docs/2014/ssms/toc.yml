@@ -249,7 +249,7 @@
       href: ../database-engine/connection-properties-dialog-box.md
     - name: 암호 만료
       href: ../database-engine/password-expired.md
-    - name: Windows Azure 스토리지에 연결
+    - name: Azure Storage에 연결
       href: ../database-engine/connect-to-windows-azure-storage.md
 - name: Visual Database Tools +
   href: visual-db-tools/visual-database-tools.md
