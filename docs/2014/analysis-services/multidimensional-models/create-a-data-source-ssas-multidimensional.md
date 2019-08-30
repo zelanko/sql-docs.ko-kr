@@ -1,5 +1,5 @@
 ---
-title: 데이터 원본 (SSAS 다차원) 만들기 | Microsoft Docs
+title: 데이터 원본 만들기 (SSAS 다차원) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,12 +18,12 @@ ms.assetid: 9fab8298-10dc-45a9-9a91-0c8e6d947468
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db9a94bf47071692b4ecf85e6bdb850132b8a417
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d224c58651601bd18baf8e4aa79ece34a653d8c4
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66076514"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152893"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>데이터 원본 만들기(SSAS 다차원)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 다차원 모델에서 데이터 원본 개체는 데이터를 처리하거나 가져올 데이터 원본에 대한 연결을 나타냅니다. 다차원 모델은 적어도 하나 이상의 데이터 원본 개체를 포함해야 하지만 더 추가하여 여러 데이터 웨어하우스의 데이터를 결합할 수 있습니다. 이 항목의 지침에 따라 모델에 대한 데이터 원본 개체를 만들 수 있습니다. 이 개체의 속성 설정에 대한 자세한 내용은 [데이터 원본 속성 설정&#40;SSAS 다차원&#41;](set-data-source-properties-ssas-multidimensional.md)을 참조하세요.  
@@ -54,7 +54,7 @@ ms.locfileid: "66076514"
  Windows 인증을 사용하는 연결은 데이터 원본 디자이너의 **가장 정보** 탭에 지정됩니다. 이 탭을 사용하여 외부 데이터 원본에 연결할 때 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 가 실행되는 계정 이름을 지정하는 가장 옵션을 선택합니다. 모든 시나리오에서 모든 옵션을 사용할 수 있지는 않습니다. 이러한 옵션 및 사용 시기에 대한 자세한 내용은 [가장 옵션 설정&#40;SSAS - 다차원&#41;](set-impersonation-options-ssas-multidimensional.md)을 참조하세요.  
   
 ### <a name="database-authentication"></a>데이터베이스 인증  
- Windows 인증 대신 데이터베이스 관리 시스템에서 제공되는 인증 서비스를 사용하는 연결을 지정할 수 있습니다. 경우에 따라 데이터베이스 인증을 사용해야 합니다. 데이터베이스 인증을 사용하기 위한 시나리오에는 Windows Azure SQL Database 연결 시 SQL Server 인증 사용 또는 다른 운영 체제 또는 트러스트되지 않은 도메인에서 실행되는 관계형 데이터 원본 액세스가 포함됩니다.  
+ Windows 인증 대신 데이터베이스 관리 시스템에서 제공되는 인증 서비스를 사용하는 연결을 지정할 수 있습니다. 경우에 따라 데이터베이스 인증을 사용해야 합니다. 데이터베이스 인증을 사용 하기 위해를 호출 하는 시나리오에는 SQL Server 인증을 사용 하 여 Azure SQL Database에 연결 하거나 다른 운영 체제 또는 트러스트 되지 않은 도메인에서 실행 되는 관계형 데이터 원본에 액세스 하는 작업이 포함 됩니다.  
   
  데이터베이스 인증을 사용하는 데이터 원본의 경우 데이터베이스 로그인의 사용자 이름 및 암호가 연결 문자열에 지정됩니다. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 모델에 데이터 원본 연결 설정 시 연결 관리자에 사용자 이름과 암호를 입력하면 연결 문자열에 자격 증명이 추가됩니다. 데이터 읽기 권한이 있는 사용자 ID를 지정해야 합니다.  
   
@@ -82,13 +82,13 @@ ms.locfileid: "66076514"
   
      새 연결의 기본 공급자는 네이티브 OLE DB\\[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 공급자입니다. 이 공급자는 OLE DB를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스 엔진 인스턴스에 연결하는 데 사용됩니다. SQL Server 관계형 데이터베이스에 대한 연결의 경우 네이티브 OLE DB\SQL Server Native Client 11.0을 사용하면 다른 공급자를 사용할 때보다 더 빠른 경우가 많습니다.  
   
-     다른 공급자를 선택하여 다른 데이터 원본에 액세스할 수 있습니다. 공급자 및 관계형 데이터베이스에서 지원 되는 목록은 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]를 참조 하세요 [지 원하는 데이터 원본 &#40;SSAS 다차원&#41;](supported-data-sources-ssas-multidimensional.md)합니다.  
+     다른 공급자를 선택하여 다른 데이터 원본에 액세스할 수 있습니다. 에서 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]지 원하는 공급자 및 관계형 데이터베이스의 목록은 [데이터 원본에서 SSAS 다차원 &#40;&#41;지원](supported-data-sources-ssas-multidimensional.md)을 참조 하세요.  
   
 5.  기본 데이터 원본에 연결하기 위해 선택한 공급자가 요청한 정보를 입력합니다. **네이티브 OLE DB\SQL Server Native Client** 공급자를 선택한 경우 다음 정보를 입력합니다.  
   
-    1.  **서버 이름** 은 데이터베이스 엔진 인스턴스의 네트워크 이름입니다. IP 주소, 컴퓨터의 NETBIOS 이름 또는 정규화된 도메인 이름으로 지정할 수 있습니다. 서버가 명명 된 인스턴스로 설치 된, 인스턴스 이름을 포함 해야 합니다 (예를 들어 \<컴퓨터 이름 >\\< n a m e\>).  
+    1.  **서버 이름** 은 데이터베이스 엔진 인스턴스의 네트워크 이름입니다. IP 주소, 컴퓨터의 NETBIOS 이름 또는 정규화된 도메인 이름으로 지정할 수 있습니다. 서버가 명명 된 인스턴스로 설치 된 경우 인스턴스 이름 (예: computername > \<\\< instancename\>)을 포함 해야 합니다.  
   
-    2.  **서버에 로그온** 은 연결이 인증이 되는 방식을 지정합니다. **Windows 인증 사용** 은 Windows 인증을 사용합니다. **SQL Server 인증 사용** 은 혼합 모드 인증을 지원하는 Windows Azure SQL Database 또는 SQL Server 인스턴스의 데이터베이스 사용자 로그인을 지정합니다.  
+    2.  **서버에 로그온** 은 연결이 인증이 되는 방식을 지정합니다. **Windows 인증 사용** 은 Windows 인증을 사용합니다. **SQL Server 인증 사용** 은 혼합 모드 인증을 지 원하는 Azure SQL 데이터베이스 또는 SQL Server 인스턴스에 대해 데이터베이스 사용자 로그인을 지정 합니다.  
   
         > [!IMPORTANT]  
         >  SQL Server 인증을 사용하는 연결의 경우 연결 관리자에 **암호 저장** 확인란이 포함됩니다. 이 확인란은 항상 표시되지만 항상 사용되지는 않습니다.  
@@ -172,7 +172,7 @@ ms.locfileid: "66076514"
 5.  추가한 테이블을 찾아 선택합니다. 테이블을 마우스 오른쪽 단추로 클릭하고 **새 관계**를 선택합니다. 일치하는 데이터가 들어 있는 원본 열과 대상 열을 선택합니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [지원 되는 데이터 원본 &#40;SSAS 다차원&#41;](supported-data-sources-ssas-multidimensional.md)   
+ [지원 되 &#40;는 데이터 원본 SSAS 다차원&#41;](supported-data-sources-ssas-multidimensional.md)   
  [다차원 모델의 데이터 원본 뷰](data-source-views-in-multidimensional-models.md)  
   
   

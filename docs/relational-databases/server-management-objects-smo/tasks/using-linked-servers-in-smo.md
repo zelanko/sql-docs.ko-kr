@@ -1,5 +1,5 @@
 ---
-title: SMO에서 연결 된 서버를 사용 하 여 | Microsoft Docs
+title: SMO에서 연결 된 서버 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -10,15 +10,15 @@ ms.topic: reference
 helpviewer_keywords:
 - linked servers [SQL Server], SMO
 ms.assetid: 0ea8837b-2596-4df1-b065-3bb717c9f22c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a48f7a2baf9ab59a2f08040ebc1df8b058631829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c55ef4914c02aca954a15930e754194e5b3419cc
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030015"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148387"
 ---
 # <a name="using-linked-servers-in-smo"></a>SMO에서 연결된 서버 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68030015"
  SMO에서 설치된 OLE-DB 공급자는 <xref:Microsoft.SqlServer.Management.Smo.OleDbProviderSettings> 개체 모음으로 표시됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="creating-a-link-to-an-ole-db-provider-server-in-visual-c"></a>Visual C#에서 OLE-DB 공급자 서버에 대한 링크 만들기  
  코드 예제는 <xref:Microsoft.SqlServer.Management.Smo.LinkedServer> 개체를 사용하여 다른 유형의 데이터 원본에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] OLE DB에 대한 링크를 만드는 방법을 보여 줍니다. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 를 제품 이름으로 지정하면 공식 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 용 OLE DB 공급자인 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Client OLE DB 공급자를 사용하여 연결된 서버에서 데이터에 액세스할 수 있습니다.  

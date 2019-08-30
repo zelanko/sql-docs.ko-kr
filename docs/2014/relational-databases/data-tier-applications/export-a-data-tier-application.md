@@ -24,12 +24,12 @@ ms.assetid: 61915bc5-0f5f-45ac-8cfe-3452bc185558
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4db43d34960de38343db3552cd83ea1147ffdf2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918042"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154630"
 ---
 # <a name="export-a-data-tier-application"></a>데이터 계층 애플리케이션 내보내기
   DAC(데이터 계층 애플리케이션) 또는 데이터베이스를 내보내면 데이터베이스의 개체 정의와 테이블에 포함된 모든 데이터를 포함하는 내보내기 파일이 만들어집니다. 이 내보내기 파일을 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 다른 인스턴스 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]로 가져올 수 있습니다. 내보내기-가져오기 작업을 결합하여 인스턴스 간에 DAC를 마이그레이션하거나 논리 백업을 만들거나 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
@@ -93,7 +93,7 @@ ms.locfileid: "62918042"
   
 -   **로컬 디스크에 저장** - 로컬 컴퓨터의 디렉터리에 BACPAC 파일을 만듭니다. **찾아보기...** 를 클릭하여 로컬 컴퓨터로 이동하거나 제공된 공간에 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
   
--   **Microsoft Azure에 저장** - - Microsoft Azure 컨테이너에 BACPAC 파일을 만듭니다. 이 옵션의 유효성을 검사하려면 Windows Azure 컨테이너에 연결해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료된 후에도 해당 위치에 유지됩니다.  
+-   **Azure에 저장** -azure 컨테이너에 BACPAC 파일을 만듭니다. 이 옵션의 유효성을 검사 하려면 Azure 컨테이너에 연결 해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료된 후에도 해당 위치에 유지됩니다.  
   
  내보낼 테이블 하위 집합을 지정하려면 **고급** 옵션을 사용합니다.  
   

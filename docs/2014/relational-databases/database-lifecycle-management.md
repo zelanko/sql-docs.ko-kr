@@ -9,7 +9,7 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data sync
 - SQL Database
-- Windows Azure Training Kit
+- Azure Training Kit
 - Database development
 - Database backup
 - Database connection management
@@ -17,7 +17,7 @@ helpviewer_keywords:
 - Backup and restore
 - Database import and export
 - SQL Data Sync
-- Windows Azure Service Dashboard
+- Azure Service Dashboard
 - SQL Server Management Studio
 - Database management
 - Database export
@@ -30,12 +30,12 @@ ms.assetid: 91da13a4-0eea-4e88-b608-dada881ff5f2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 07710fbf649037843479de94057f2efcf2a8f558
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1a82d94e1a2dbf3f2155a93c8a3e8c46383dbde
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872173"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154550"
 ---
 # <a name="database-lifecycle-management"></a>데이터베이스 수명 주기 관리
   DLM(데이터베이스 수명 주기 관리)은 정책을 기반으로 하는 데이터베이스 및 데이터 자산 관리 방법입니다. DLM은 제품이 아니지만 데이터베이스 애플리케이션의 데이터베이스 스키마, 데이터 및 메타데이터를 관리하는 포괄적인 접근 방식입니다. DLM에 대한 신중한 사전 접근 방식을 통해 조직에서는 적절한 수준의 성능, 보고, 가용성 및 비용에 따라 데이터 리소스를 관리할 수 있습니다.  
@@ -45,10 +45,10 @@ ms.locfileid: "62872173"
  전체 항목을 읽으려면 [DLM(데이터베이스 수명 주기 관리)](https://go.microsoft.com/fwlink/?LinkId=276949)을 참조하세요.  
   
 ## <a name="see-also"></a>관련 항목  
- [Windows Azure 홈 페이지](http://www.windowsazure.com/)   
- [Windows Azure 개발자 센터](http://www.windowsazure.com/develop/overview/)   
- [Windows Azure 관리 센터](http://www.windowsazure.com/manage/overview/)   
- [Windows Azure 팀 블로그](http://www.windowsazure.com/community/blog/)   
- [Windows Azure 지원 옵션](http://www.windowsazure.com/support/contact/)  
+ [Azure 홈 페이지](http://www.windowsazure.com/)   
+ [Azure 개발자 센터](http://www.windowsazure.com/develop/overview/)   
+ [Azure 관리 센터](http://www.windowsazure.com/manage/overview/)   
+ [Azure 팀 블로그](http://www.windowsazure.com/community/blog/)   
+ [Azure 지원 옵션](http://www.windowsazure.com/support/contact/)  
   
   

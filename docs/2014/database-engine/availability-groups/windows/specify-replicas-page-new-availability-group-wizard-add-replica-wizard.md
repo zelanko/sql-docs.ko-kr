@@ -14,19 +14,19 @@ ms.assetid: 2d90fc12-a67b-4bd0-b0ab-899b73017196
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: be6ddc45dd2f37b5a4a29f0e3fee4a9c44f723ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 806c8ad1023c10c0176d1608841138a7380a8def
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62788356"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154461"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>복제본 페이지 지정(새 가용성 그룹 마법사: 복제본 추가 마법사)
   이 항목에서는 **복제본 선택** 페이지의 옵션에 대해 설명합니다. 이 페이지는 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] 의 [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] 및 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]에 적용됩니다. **복제본 선택** 페이지에서 하나 이상의 가용성을 지정하고 구성하여 가용성 그룹을 추가합니다. 이 페이지에 포함된 4개의 탭은 다음 표에 설명되어 있습니다. 표에서 탭 이름을 클릭하면 이 항목 뒷부분의 해당 섹션으로 이동할 수 있습니다.  
   
 |탭|간단한 설명|  
 |---------|-----------------------|  
-|[복제본](#ReplicasTab)|보조 복제본을 호스팅할 예정이거나 현재 호스팅하고 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 각 인스턴스를 지정하려면 이 탭을 사용합니다. 현재 연결된 서버 인스턴스가 주 복제본을 호스팅해야 합니다.<br /><br /> 팁:  다른 탭을 시작하기 전에 **복제본** 탭에서 모든 복제본의 지정을 마칩니다.|  
+|[복제본](#ReplicasTab)|보조 복제본을 호스팅할 예정이거나 현재 호스팅하고 있는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 의 각 인스턴스를 지정하려면 이 탭을 사용합니다. 현재 연결된 서버 인스턴스가 주 복제본을 호스팅해야 합니다.<br /><br /> 팁: 다른 탭을 시작하기 전에 **복제본** 탭에서 모든 복제본의 지정을 마칩니다.|  
 |[엔드포인트](#EndpointsTab)|기존 데이터베이스 미러링 엔드포인트를 확인하고, 서비스 계정에서 Windows 인증을 사용하는 서버 인스턴스에 이 엔드포인트가 없는 경우 엔드포인트를 자동으로 만들려면 이 탭을 사용합니다.|  
 |[백업 기본 설정](#BackupPreferencesTab)|가용성 그룹 전체에 대한 백업 기본 설정과 개별 가용성 복제본에 대한 백업 우선 순위를 지정하려면 이 탭을 사용합니다.|  
 |[수신기](#Listener)|가능한 경우 가용성 그룹 수신기를 만들려면 이 탭을 사용합니다. 기본적으로 수신기는 만들어지지 않습니다.<br /><br /> 참고: 이 탭은 [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]를 실행하는 경우에만 사용할 수 있습니다.|  
@@ -35,20 +35,20 @@ ms.locfileid: "62788356"
  **서버 인스턴스**  
  가용성 복제본을 호스팅할 서버 인스턴스의 이름을 표시합니다.  
   
- 보조 복제본을 호스팅하는 데 사용하는 서버 인스턴스가 **가용성 복제본** 표에 나열되지 않는 경우 **복제본 추가** 단추를 클릭합니다. 하이브리드 IT 환경에서 가용성 그룹을 구성하는 경우( [Microsoft Azure 가상 컴퓨터에서 SQL Server에 대한 고가용성 및 재해 복구](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)참조) **Azure 복제본 추가** 단추를 클릭하여 Microsoft Azure에서 보조 복제본을 사용하는 가상 컴퓨터를 만들 수 있습니다.  
+ 보조 복제본을 호스팅하는 데 사용하는 서버 인스턴스가 **가용성 복제본** 표에 나열되지 않는 경우 **복제본 추가** 단추를 클릭합니다. 하이브리드 IT 환경에서 가용성 그룹을 구성 하는 경우 ( [azure Virtual Machines에서 SQL Server에 대 한 고가용성 및 재해 복구](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)참조) **azure 복제본 추가** 단추를 클릭 하 여 보조 데이터베이스에 대 한 가상 머신을 만들 수 있습니다. Azure의 복제본.  
   
  **초기 역할**  
  새 복제본이 처음에 수행할 역할(**주** 또는 **보조**)을 나타냅니다.  
   
- **자동 장애 조치 (최대 2 개)**  
+ **자동 장애 조치 (Failover) (최대 2 개)**  
  이 가용성 복제본을 자동 장애 조치(failover) 파트너로 사용하려는 경우에만 이 확인란을 선택합니다. 자동 장애(failover) 조치를 구성하려면 초기 주 복제본 및 보조 복제본 하나에 대해 이 옵션을 선택해야 합니다. 이러한 복제본은 모두 동기-커밋 가용성 모드를 사용합니다. 두 개의 복제본만 자동 장애 조치(failover)를 지원할 수 있습니다.  
   
- 동기-커밋 가용성 모드에 대 한 정보를 참조 하세요 [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)합니다. 자동 장애 조치(failover)에 대한 자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
+ 동기-커밋 가용성 모드에 대 한 자세한 내용은 [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)를 참조 하세요. 자동 장애 조치(failover)에 대한 자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
   
  **동기 커밋(최대 3개)**  
  복제본에 대해 **자동 장애 조치(Failover)(최대 2개)** 를 선택한 경우 **동기 커밋(최대 3개)** 도 선택됩니다. 확인란이 비어 있으면 이 복제본에서 계획 수동 장애 조치와 함께 동기-커밋을 사용하려는 경우에만 이 확인란을 선택합니다. 3개의 복제본만 동기-커밋 모드를 사용할 수 있습니다.  
   
- 이 복제본에서 비동기-커밋 가용성 모드를 사용하려는 경우 이 확인란을 비워 둡니다. 복제본은 강제 수동 장애 조치(데이터 손실 가능)만 지원합니다. 비동기-커밋 가용성 모드에 대 한 자세한 내용은 [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)합니다. 계획 수동 장애 조치(failover) 및 강제 수동 장애 조치(failover)에 대한 자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
+ 이 복제본에서 비동기-커밋 가용성 모드를 사용하려는 경우 이 확인란을 비워 둡니다. 복제본은 강제 수동 장애 조치(데이터 손실 가능)만 지원합니다. 비동기-커밋 가용성 모드에 대 한 자세한 내용은 [가용성 모드 (AlwaysOn 가용성 그룹)](availability-modes-always-on-availability-groups.md)를 참조 하세요. 계획 수동 장애 조치(failover) 및 강제 수동 장애 조치(failover)에 대한 자세한 내용은 [장애 조치(Failover) 및 장애 조치(Failover) 모드&#40;AlwaysOn 가용성 그룹&#41;](failover-and-failover-modes-always-on-availability-groups.md)를 참조하세요.  
   
  **읽기 가능 보조 역할**  
  다음과 같이 **읽기용 보조** 드롭 목록에서 값을 선택합니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "62788356"
  가용성 그룹에 보조 복제본을 추가하려면 클릭합니다.  
   
  **Azure 복제본 추가**  
- 가용성 그룹에서 보조 복제본을 실행하는 Microsoft Azure 가상 머신을 만들려면 클릭합니다. 이 옵션은 하이브리드 IT에서 온-프레미스 복제본이 포함된 가용성 그룹에만 적용할 수 있습니다. 자세한 내용은 [Windows Azure 가상 컴퓨터에서 SQL Server에 대한 고가용성 및 재해 복구](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)를 참조하세요.  
+ 가용성 그룹에서 보조 복제본을 실행 하는 Azure 가상 머신을 만들려면 클릭 합니다. 이 옵션은 하이브리드 IT에서 온-프레미스 복제본이 포함된 가용성 그룹에만 적용할 수 있습니다. 자세한 내용은 [Azure Virtual Machines에서 SQL Server에 대 한 고가용성 및 재해 복구](https://msdn.microsoft.com/library/windowsazure/jj870962.aspx)를 참조 하세요.  
   
  **복제본 제거**  
  선택한 보조 복제본을 가용성 그룹에서 제거하려면 클릭합니다.  
@@ -98,7 +98,7 @@ ms.locfileid: "62788356"
   
 -   모든 서버 인스턴스가 도메인 서비스 계정으로 실행 중인 경우, 즉 **SQL Server 서비스 계정** 열에 각 서버 인스턴스의 도메인 서비스 계정이 표시되는 경우 **다음**을 클릭합니다.  
   
--   서버 인스턴스가 도메인 서비스 계정이 아닌 계정으로 실행 중인 경우 마법사를 계속하려면 먼저 서버 인스턴스를 수동으로 변경해야 합니다. 이 경우 **다음** 을 클릭하면 경고 대화 상자가 나타납니다. **아니요**를 클릭하여**엔드포인트** 탭으로 돌아가야 합니다. 마법사의 **복제본 선택** 페이지가 열려 있는 상태에서 **SQL Server 서비스 계정** 열에 도메인 서비스 계정이 아닌 계정이 표시된 각 서버 인스턴스에 대해 다음 변경 작업 중 하나를 수행합니다.  
+-   서버 인스턴스가 도메인 서비스 계정이 아닌 계정으로 실행 중인 경우 마법사를 계속하려면 먼저 서버 인스턴스를 수동으로 변경해야 합니다. 이 경우 **다음** 을 클릭하면 경고 대화 상자가 나타납니다. **아니요**를 클릭하여**끝점** 탭으로 돌아가야 합니다. 마법사의 **복제본 선택** 페이지가 열려 있는 상태에서 **SQL Server 서비스 계정** 열에 도메인 서비스 계정이 아닌 계정이 표시된 각 서버 인스턴스에 대해 다음 변경 작업 중 하나를 수행합니다.  
   
     -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 구성 관리자를 사용하여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 계정을 도메인 계정으로 변경합니다. 자세한 내용은 [SQL Server의 서비스 시작 계정 변경&#40;SQL Server 구성 관리자&#41;](../../configure-windows/scm-services-change-the-service-startup-account.md)을 참조하세요.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62788356"
  백업을 수행할 복제본을 선택할 때 백업 작업에서 가용성 복제본의 역할을 무시하도록 지정합니다. 백업 작업에서는 각 가용성 복제본의 작동 상태 및 연결 상태와 함께 백업 우선 순위 등의 기타 요인을 평가할 수 있습니다.  
   
 > [!IMPORTANT]  
->  백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자세한 내용은 [활성 보조 복제본: 보조 복제본 (AlwaysOn 가용성 그룹)에 백업](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)합니다.  
+>  백업 기본 설정은 적용되지 않습니다. 이 기본 설정의 해석은 지정된 가용성 그룹의 데이터베이스에 대한 백업 작업으로 스크립팅하는 논리(있는 경우)에 따라 달라집니다. 자세한 내용은 [활성 보조 복제본: 보조 복제본에 백업 합니다 (AlwaysOn 가용성 그룹](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)).  
   
 ### <a name="replica-backup-priorities-grid"></a>복제본 백업 우선 순위 표  
  가용성 그룹의 각 복제본에 대한 백업 우선 순위를 지정하려면 **복제 백업 우선 순위** 표를 사용합니다. 이 표에는 다음 열이 있습니다.  
@@ -206,11 +206,11 @@ ms.locfileid: "62788356"
   
 -   [CREATE ENDPOINT&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql)  
   
--   [데이터베이스 미러링 끝점의 AlwaysOn 가용성 그룹 만들기 &#40;SQL Server PowerShell&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
+-   [AlwaysOn 가용성 그룹 &#40;SQL Server PowerShell에 대 한 데이터베이스 미러링 끝점 만들기&#41;](database-mirroring-always-on-availability-groups-powershell.md)  
   
 ## <a name="see-also"></a>관련 항목  
- [AlwaysOn 가용성 그룹 개요 &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
+ [AlwaysOn 가용성 그룹 &#40;SQL Server 개요&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-availability-group-transact-sql)   
- [필수 구성 요소, 제한 사항 및 AlwaysOn 가용성 그룹에 대 한 권장 사항 &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
+ [AlwaysOn 가용성 그룹 &#40;에 대 한 사전 요구 사항, 제한 사항 및 권장 사항 SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)  
   
   

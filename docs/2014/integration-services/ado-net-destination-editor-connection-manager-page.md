@@ -12,12 +12,12 @@ ms.assetid: a3b11286-32c8-40e1-8ae7-090e2590345a
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ae5cc8303fa09eae7a4af6ef9ae6d589f43bcb2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: faeb72f875fd5427536ddd72db03ca71a25b293e
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061736"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154025"
 ---
 # <a name="ado-net-destination-editor-connection-manager-page"></a>ADO NET 대상 편집기(연결 관리자 페이지)
   **ADO NET 대상 편집기** 대화 상자의 **연결 관리자** 페이지를 사용하여 대상에 대한 [!INCLUDE[vstecado](../includes/vstecado-md.md)] 연결을 선택할 수 있습니다. 이 페이지를 사용하면 데이터베이스에서 테이블이나 뷰를 선택할 수도 있습니다.  
@@ -66,7 +66,7 @@ ms.locfileid: "66061736"
 >  자세한 내용은 [SET IDENTITY_INSERT&#40;Transact-SQL&#41;](/sql/t-sql/statements/set-identity-insert-transact-sql) 및 [IDENTITY&#40;속성&#41;&#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)를 참조하세요.  
   
 ## <a name="external-resources"></a>외부 리소스  
- sqlcat.com의 기술 문서 - [Windows Azure SQL Database에 빨리 데이터 로드](https://go.microsoft.com/fwlink/?LinkId=244333)  
+ Sqlcat.com의 기술 문서 [-빠른 방법으로 Azure SQL Database에 데이터 로드](https://go.microsoft.com/fwlink/?LinkId=244333)  
   
 ## <a name="see-also"></a>관련 항목  
  [ADO NET 대상 편집기&#40;매핑 페이지&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)   

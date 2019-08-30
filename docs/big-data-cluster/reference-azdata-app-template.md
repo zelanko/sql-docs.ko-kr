@@ -5,22 +5,22 @@ description: azdata app template 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 265f8be659594ee549bf0aa2c5ffcf19263a2294
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 07911616659a29df7f7fa6ce4d356a9c82789ae2
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653202"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153222"
 ---
 # <a name="azdata-app-template"></a>azdata app template
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)] 
 
-다음 문서에서는 **azdata** 도구의 **app template** 명령에 대한 참조를 제공합니다. 다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+이 문서는 **azdata**에 대 한 참조 문서입니다. 
 
 ## <a name="commands"></a>명령
 |     |     |
@@ -30,8 +30,7 @@ ms.locfileid: "69653202"
 ## <a name="azdata-app-template-list"></a>azdata app template list
 지정된 [URL] github 리포지토리에서 지원되는 템플릿을 가져옵니다.
 ```bash
-azdata app template list [--url -u] 
-                         
+azdata app template list 
 ```
 ### <a name="examples"></a>예
 기본 템플릿 리포지토리 위치에 있는 템플릿을 모두 가져옵니다.
@@ -42,9 +41,6 @@ azdata app template list
 ```bash
 azdata app template list --url https://github.com/diffrent/templates.git
 ```
-### <a name="optional-parameters"></a>선택적 매개 변수
-#### `--url -u`
-다른 템플릿 리포지토리 위치를 지정합니다. 기본값: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
 로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.
@@ -59,9 +55,7 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 ## <a name="azdata-app-template-pull"></a>azdata app template pull
 지정된 [URL] github 리포지토리에서 지원되는 템플릿을 다운로드합니다.
 ```bash
-azdata app template pull [--name -n] 
-                         [--url -u]  
-                         [--destination -d]
+azdata app template pull 
 ```
 ### <a name="examples"></a>예
 기본 템플릿 리포지토리 위치에 있는 템플릿을 모두 다운로드합니다.
@@ -74,16 +68,8 @@ azdata app template list --url https://github.com/diffrent/templates.git
 ```
 이름을 기준으로 개별 템플릿을 다운로드합니다.
 ```bash
-azdata app template pull --name ssis            
+azdata app template pull --name ssis
 ```
-### <a name="optional-parameters"></a>선택적 매개 변수
-#### `--name -n`
-템플릿 이름입니다. 지원되는 템플릿 이름의 전체 목록을 보려면 `azdata app template list`를 실행합니다.
-#### `--url -u`
-다른 템플릿 리포지토리 위치를 지정합니다. 기본값: https://github.com/Microsoft/SQLBDC-AppDeploy.git
-#### `--destination -d`
-애플리케이션 구조 템플릿을 저장할 위치입니다.
-`./templates`
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
 로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.
@@ -98,4 +84,6 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 
 ## <a name="next-steps"></a>다음 단계
 
-다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. **Azdata** 도구를 설치 하는 방법에 대 한 자세한 내용은 [install azdata to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md)항목을 참조 하세요.
+- 다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. 
+
+- **azdata** 도구를 설치하는 방법에 대한 자세한 내용은 [azdata를 설치하여 SQL Server 2019 빅 데이터 클러스터 관리](deploy-install-azdata.md)를 참조하세요.

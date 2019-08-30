@@ -1,5 +1,5 @@
 ---
-title: SMO 구문 표기 규칙 | Microsoft 문서
+title: SMO 구문 표기 규칙 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,20 +13,20 @@ helpviewer_keywords:
 - syntax [SMO]
 - SQL Server Management Objects, syntax conventions
 ms.assetid: 27aa179a-f3ee-4c70-9e7b-e26dba28bc3c
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7c61e53366e05e57e768c55e73f70a76b648f597
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e6e5c8f9d87fe511964d5657c57c70fe4379225e
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092822"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148572"
 ---
 # <a name="smo-syntax-conventions"></a>SMO 구문 표기 규칙
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) 표기 규칙에 사용 되는 기반한 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual STUDIO.NET 참조 자료입니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SMO (Management Objects) 표기 규칙은 Visual Studio .net 참조 자료 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 에서 사용 되는 규칙을 기반으로 합니다.  
   
 |규칙|사용 대상|  
 |----------------|--------------|  

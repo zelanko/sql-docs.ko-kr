@@ -5,39 +5,42 @@ description: azdata bdc 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 44b0f8daafec86714bb8161c1d30130eed3d480d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 408b3c2d55d5e2515a2df979cd54b380a0d54704
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653440"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155136"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
-다음 문서에서는 **azdata** 도구의 **bdc** 명령에 대한 참조를 제공합니다. 다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요.
+이 문서는 **azdata**에 대 한 참조 문서입니다. 
 
 ## <a name="commands"></a>명령
-
 |     |     |
 | --- | --- |
 [azdata bdc create](#azdata-bdc-create) | 빅 데이터 클러스터를 만듭니다.
 [azdata bdc delete](#azdata-bdc-delete) | 빅 데이터 클러스터를 삭제합니다.
 [azdata bdc config](reference-azdata-bdc-config.md) | 구성 명령입니다.
 [azdata bdc endpoint](reference-azdata-bdc-endpoint.md) | 엔드포인트 명령입니다.
-[azdata bdc status](reference-azdata-bdc-status.md) | 상태 명령입니다.
 [azdata bdc debug](reference-azdata-bdc-debug.md) | 디버그 명령입니다.
-[azdata bdc control](reference-azdata-bdc-control.md) | 제어 명령입니다.
-[azdata bdc pool](reference-azdata-bdc-pool.md) | 풀 명령입니다.
+[azdata bdc status](reference-azdata-bdc-status.md) | BDC 상태 명령입니다.
+[azdata bdc control](reference-azdata-bdc-control.md) | 제어 서비스 명령입니다.
+[azdata bdc sql](reference-azdata-bdc-sql.md) | Sql 서비스 명령입니다.
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | Hdfs 서비스 명령입니다.
+[azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 서비스 명령입니다.
+[azdata bdc 게이트웨이](reference-azdata-bdc-gateway.md) | 게이트웨이 서비스 명령입니다.
+[azdata bdc 앱](reference-azdata-bdc-app.md) | App service 명령입니다.
 [azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS 모듈은 HDFS 파일 시스템에 액세스하기 위한 명령을 제공합니다.
 [azdata bdc spark](reference-azdata-bdc-spark.md) | Spark 명령을 통해 사용자가 세션, 문, 일괄 처리를 만들고 관리하여 Spark 시스템을 조작할 수 있습니다.
 ## <a name="azdata-bdc-create"></a>azdata bdc create
-SQL Server 빅 데이터 클러스터를 만듭니다. [‘CONTROLLER_USERNAME’, ‘CONTROLLER_PASSWORD’, ‘MSSQL_SA_PASSWORD’, ‘KNOX_PASSWORD’] 등의 환경 변수와 함께 시스템에 kube 구성이 있어야 합니다.
+SQL Server 빅 데이터 클러스터 만들기-다음 환경 변수 [' CONTROLLER_USERNAME ', ' CONTROLLER_PASSWORD ', ' MSSQL_SA_PASSWORD ', ' KNOX_PASSWORD ']와 함께 시스템에 Kubernetes 구성이 필요 합니다.
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
@@ -46,15 +49,11 @@ azdata bdc create [--name -n]
                   [--force -f]
 ```
 ### <a name="examples"></a>예
-
 안내에 따른 BDC 배포 환경 - 필요한 값에 대한 프롬프트가 표시됩니다.
-
 ```bash
 azdata bdc create
 ```
-
 인수를 사용하는 BDC 배포
-
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test
 ```
@@ -62,20 +61,17 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test
 ```bash
 azdata bdc create --name <cluster_name> --accept-eula yes --config-profile aks-dev-test --force
 ```
-
 인수를 사용하는 BDC 배포 - --force 플래그를 사용하므로 프롬프트가 제공되지 않습니다.
-
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 ```
-
 ### <a name="optional-parameters"></a>선택적 매개 변수
 #### `--name -n`
 Kubernetes 네임스페이스에 사용되는 빅 데이터 클러스터 이름입니다.
 #### `--config-profile -c`
-클러스터를 배포하는 데 사용되는 빅 데이터 클러스터 구성 프로필입니다. 예: [’aks-dev-test’, ‘kubeadm-dev-test’, ‘minikube-dev-test’]
+클러스터를 배포 하는 데 사용 되는 빅 데이터 클러스터 구성 프로필: [' aks ', ' kubeadm ', ' minikube ', ' kubeadm ']
 #### `--accept-eula -a`
-사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 이 제품에 대 한 사용 조건은에서 [https://go.microsoft.com/fwlink/?LinkId=2002534](https://go.microsoft.com/fwlink/?LinkId=2002534)볼 수 있습니다.
+사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 이 제품의 사용 조건은 https://aka.ms/azdata-eula 및 https://go.microsoft.com/fwlink/?LinkId=2002534 에서 볼 수 있습니다.
 #### `--node-label -l`
 배포할 노드를 지정하는 데 사용되는 빅 데이터 클러스터 노드 레이블입니다.
 #### `--force -f`
@@ -92,13 +88,13 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-bdc-delete"></a>azdata bdc delete
-SQL Server 빅 데이터 클러스터를 삭제합니다. [‘CONTROLLER_USERNAME’, ‘CONTROLLER_PASSWORD’] 등의 환경 변수와 함께 시스템에 kube 구성이 있어야 합니다.
+SQL Server 빅 데이터 클러스터를 삭제 합니다. Kubernetes 구성은 시스템에 필요 합니다.
 ```bash
 azdata bdc delete --name -n 
                   [--force -f]
 ```
 ### <a name="examples"></a>예
-시스템 환경에 컨트롤러 사용자 이름 및 암호가 이미 설정되어 있는 경우의 BDC 삭제
+BDC 삭제.
 ```bash
 azdata bdc delete --name <cluster_name>
 ```
@@ -122,4 +118,6 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 
 ## <a name="next-steps"></a>다음 단계
 
-다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. **Azdata** 도구를 설치 하는 방법에 대 한 자세한 내용은 [install azdata to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md)항목을 참조 하세요.
+- 다른 **azdata** 명령에 대한 자세한 내용은 [azdata 참조](reference-azdata.md)를 참조하세요. 
+
+- **azdata** 도구를 설치하는 방법에 대한 자세한 내용은 [azdata를 설치하여 SQL Server 2019 빅 데이터 클러스터 관리](deploy-install-azdata.md)를 참조하세요.

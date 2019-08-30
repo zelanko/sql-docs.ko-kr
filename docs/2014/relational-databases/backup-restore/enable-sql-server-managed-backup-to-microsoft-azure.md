@@ -1,5 +1,5 @@
 ---
-title: Windows Azure에 대 한 SQL Server Managed Backup 설정 | Microsoft Docs
+title: Azure에 대 한 SQL Server Managed Backup 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/04/2016
 ms.prod: sql-server-2014
@@ -10,14 +10,14 @@ ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4b72fcf0a067838651d9c41205c3604750fecc6d
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: b69439226b55965e37f24f2131c77340ae833590
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028640"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154719"
 ---
-# <a name="setting-up-sql-server-managed-backup-to-windows-azure"></a>Microsoft Azure에 대한 SQL Server 관리되는 백업 설정
+# <a name="setting-up-sql-server-managed-backup-to-azure"></a>Azure에 대 한 SQL Server Managed Backup 설정
   이 항목에는 다음 두 자습서가 포함됩니다.  
   
  데이터베이스 수준에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 설정, 전자 메일 알림 설정 및 백업 작업 모니터링  

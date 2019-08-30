@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 5e2a949511eea455c20880e053b64659b8f9c15f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 76bb6ec47b0cfce0fb8e5f5e98f9e208f3b678b3
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992352"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152730"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>참조 데이터(외부) 기술 자료를 사용하여 데이터 정리
 
@@ -41,7 +41,7 @@ ms.locfileid: "67992352"
     > [!NOTE]  
     >  참조 데이터 서비스에서 기술 자료를 사용하여 데이터를 정리하는 동안 도메인을 참조 데이터 서비스에 매핑하는 도중 지정한 임계값이 적용되며 **구성** 섹션의 **일반 설정** 탭에서 지정한 임계값은 적용되지 않습니다. 참조 데이터 정리의 임계값 지정에 대한 자세한 내용은 [참조 데이터에 도메인 또는 복합 도메인 연결](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)의 9단계를 참조하십시오.  
   
--   도메인 값은 다음으로 분류 됩니다. **제안**, **새로 만들기**, **잘못됨**, **수정됨** 및 **수정**으로 분류됩니다.  
+-   도메인 값은 다음과 같이 분류 됩니다. **제안**, **새로 만들기**, **잘못됨**, **수정됨** 및 **수정**으로 분류됩니다.  
   
 -   추가 데이터가 원본에 연결되고 정보를 정리된 데이터와 함께 내보내기에 사용할 수 있습니다.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "67992352"
  데이터 정리를 수행하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_kb_operator 역할이 있어야 합니다.  
   
 ##  <a name="Cleanse"></a> 참조 데이터 기술 자료를 사용하여 데이터 정리  
- 이전 항목 [참조 데이터에 도메인 또는 복합 도메인 연결](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)에서 매핑한 것과 동일한 예를 Windows Azure Marketplace의 Melissa Data에 계속 사용합니다. 이제 같은 도메인을 사용하여 샘플 US 주소 몇 개를 정리합니다. 데이터를 정리하는 단계는 [DQS&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)에 설명된 것과 동일합니다. 그러나 프로세스를 진행하는 동안 필요할 때마다 다시 설명하겠습니다.  
+ Melissa 데이터 Azure Marketplace 서비스를 사용 하 여 이전 항목인 [도메인 또는 복합 도메인을 참조 데이터에 연결](../data-quality-services/attach-domain-or-composite-domain-to-reference-data.md)하는 것과 동일한 예를 사용 하 여 작업을 계속 합니다. 이제 같은 도메인을 사용하여 샘플 US 주소 몇 개를 정리합니다. 데이터를 정리하는 단계는 [DQS&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)에 설명된 것과 동일합니다. 그러나 프로세스를 진행하는 동안 필요할 때마다 다시 설명하겠습니다.  
   
 1.  데이터 품질 프로젝트를 만들고 **정리** 작업을 선택합니다. [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md)을 참조하세요.  
   

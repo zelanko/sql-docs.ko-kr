@@ -10,22 +10,22 @@ ms.assetid: 29e57ebd-828f-4dff-b473-c10ab0b1c597
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 85e60c359df2a209742b5b10693fcb72ac9cb37a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61a25d1f4e86204d05b3be6bf2a5dbc8cd0474b9
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090849"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153829"
 ---
 # <a name="lesson-3-create-a-sql-server-credential"></a>3단원: SQL Server 자격 증명 만들기
-  이 단원에서는 Windows Azure 스토리지 계정에 액세스하는 데 사용하는 보안 정보를 저장하는 자격 증명을 만듭니다.  
+  이 단원에서는 Azure 저장소 계정에 액세스 하는 데 사용 되는 보안 정보를 저장 하는 자격 증명을 만듭니다.  
   
  SQL Server 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다. 자격 증명에는 스토리지 컨테이너의 URI 경로와 공유 액세스 서명 키 값이 저장됩니다. 데이터 또는 로그 파일에서 사용하는 각 스토리지 컨테이너에 대해 컨테이너 경로와 일치하는 이름의 SQL Server 자격 증명을 만들어야 합니다.  
   
- 자격 증명에 대 한 일반적인 정보를 참조 하세요 [자격 증명 &#40;데이터베이스 엔진&#41;](security/authentication-access/credentials-database-engine.md)합니다.  
+ 자격 증명에 대 한 일반 정보 [는 &#40;자격&#41;증명 데이터베이스 엔진](security/authentication-access/credentials-database-engine.md)를 참조 하세요.  
   
 > [!IMPORTANT]  
->  아래에 설명 된 SQL Server 자격 증명을 만들기 위한 요구 사항은 합니다 [Windows Azure의 SQL Server 데이터 파일](databases/sql-server-data-files-in-microsoft-azure.md) 기능입니다. Azure storage에 백업 프로세스에 대 한 자격 증명을 만드는 방법에 대 한 정보를 참조 하세요. [단원 2: SQL Server 자격 증명 만들기](../tutorials/lesson-2-create-a-sql-server-credential.md)합니다.  
+>  아래에 설명 된 SQL Server 자격 증명을 만들기 위한 요구 사항은 [Azure의 SQL Server 데이터 파일](databases/sql-server-data-files-in-microsoft-azure.md) 기능에만 적용 됩니다. Azure storage [의 백업 프로세스에 대 한 자격 증명을 만드는 방법에 대 한 자세한 내용은 2 단원: SQL Server 자격 증명](../tutorials/lesson-2-create-a-sql-server-credential.md)을 만듭니다.  
   
  SQL Server 자격 증명을 만들려면 다음 단계를 수행합니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66090849"
   
 3.  표준 도구 모음에서 새 쿼리를 클릭합니다.  
   
-4.  다음 예를 복사하여 쿼리 창에 붙여 넣고 필요한 대로 수정합니다. 다음 문은 저장소 컨테이너의 공유 액세스 인증서를 저장할 SQL Server 자격 증명을 만듭니다.  
+4.  다음 예를 복사하여 쿼리 창에 붙여 넣고 필요한 대로 수정합니다. 다음 명령문은 저장소 컨테이너의 공유 액세스 인증서를 저장 하는 SQL Server 자격 증명을 만듭니다.  
   
     ```sql  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66090849"
   
     ```  
   
-     자세한 내용은 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/create-credential-transact-sql) SQL Server 온라인 설명서의 합니다.  
+     자세한 내용은 SQL Server 온라인 설명서에서 [자격 증명 &#40;transact-sql&#41; 만들기](/sql/t-sql/statements/create-credential-transact-sql) 를 참조 하세요.  
   
 5.  사용할 수 있는 모든 자격 증명을 보려면 쿼리 창에서 다음 문을 실행합니다.  
   
@@ -55,10 +55,10 @@ ms.locfileid: "66090849"
     SELECT * from sys.credentials  
     ```  
   
-     Sys.credentials에 대 한 자세한 내용은 참조 하세요. [sys.credentials &#40;TRANSACT-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) SQL Server 온라인 설명서의 합니다.  
+     Sys. 자격 증명에 대 한 자세한 내용은 SQL Server 온라인 설명서의 [sys &#40;. 자격 증명&#41; transact-sql](/sql/relational-databases/system-catalog-views/sys-credentials-transact-sql) 을 참조 하세요.  
   
  **다음 단원:**  
   
- [4단원: Windows Azure Storage에서 데이터베이스 만들기](lesson-3-database-backup-to-url.md)  
+ [4단원: Azure Storage에서 데이터베이스 만들기](lesson-3-database-backup-to-url.md)  
   
   

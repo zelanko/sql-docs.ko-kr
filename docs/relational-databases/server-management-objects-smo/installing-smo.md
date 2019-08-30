@@ -12,36 +12,36 @@ helpviewer_keywords:
 - SMO [SQL Server], installing
 - SQL Server Management Objects, installing
 ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f57fc3ea1a677a2655f5358a1d5c4b27045ea6ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2785054fa9cc445b6ff03c46f7f145b4f422cb60
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098017"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148635"
 ---
 # <a name="installing-smo"></a>SMO 설치
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-이 페이지에서는 사용에 대 한 응용 프로그램 및 시스템 요구 사항을 SMO를 사용 하 여 SMO를 설치 하는 방법을 설명 합니다.
+이 페이지에서는 응용 프로그램에서 사용할 SMO를 설치 하 고 SMO를 사용 하기 위한 시스템 요구 사항에 대 한 정보를 제공 합니다.
 
 ## <a name="smo-nuget-package"></a>SMO NuGet 패키지
 
-부터는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 SMO로 배포 되는 [Microsoft.SqlServer.SqlManagementObjects](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) SMO 사용 하 여 응용 프로그램을 개발할 수 있도록 NuGet 패키지.
+2017 smo부터 smo를 사용 하 여 응용 프로그램을 개발할 수 있도록 [Microsoft sql server](https://www.nuget.org/packages/Microsoft.SqlServer.SqlManagementObjects) NuGet 패키지로 배포 됩니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-이 SQL Server의 각 릴리스에 대 한 SQL 기능 팩의 일부로 이전에 릴리스된 SharedManagementObjects.msi 대체 합니다. SMO를 사용 하는 응용 프로그램 대신 NuGet 패키지를 사용 하도록 업데이트 해야 하 고 개발 중인 응용 프로그램을 사용 하 여 이진 파일은 설치 하도록 할 책임이 됩니다.
+이는 SQL Server의 각 릴리스에 대 한 SQL 기능 팩의 일부로 이전에 릴리스된 SharedManagementObjects에 대 한 대체입니다. SMO를 사용 하는 응용 프로그램은 NuGet 패키지를 대신 사용 하도록 업데이트 되어야 하며, 개발 중인 응용 프로그램과 함께 이진 파일이 설치 되도록 해야 합니다.
 
 >>[!Important]
->>설명 했 듯이 합니다 [파일 및 버전 번호](files-and-version-numbers.md) 페이지에서 SMO 어셈블리를 GAC에 설치 하지 않아야 합니다. 이렇게도 SMO의 버전을 사용 하는 다른 응용 프로그램을 사용 하 여 문제가 발생할 수 있습니다 (같은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio).
+>>[파일 및 버전 번호](files-and-version-numbers.md) 페이지에 설명 된 대로 SMO 어셈블리를 GAC에 설치 하면 안 됩니다. 이렇게 하면 해당 버전의 SMO (예: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio)도 사용 하는 다른 응용 프로그램에서 문제가 발생할 수 있습니다.
 
-## <a name="installing-the-package"></a>패키지를 설치합니다.
+## <a name="installing-the-package"></a>패키지 설치
 
-참조 [NuGet 빠른 시작-패키지를 사용 하 여](https://docs.microsoft.com/nuget/quickstart/use-a-package) 지침과 예는 NuGet 패키지를 사용 하 여 설치 합니다. 
+Nuget 패키지 설치 및 사용에 대 한 지침과 예제는 [nuget 빠른 시작-패키지 사용](https://docs.microsoft.com/nuget/quickstart/use-a-package) 을 참조 하세요. 
   
 ## <a name="system-requirements"></a>시스템 요구 사항
   
- SMO 필요 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.0을 사용 하 여 응용 프로그램 클라이언트 컴퓨터는 버전이 또는 이상이 설치 되어 있는지 확인 해야 하므로 실행 합니다. NetFx SMO 라이브러리를 사용 하 여 설치 된 일부 네이티브 이진 파일에는 또한 설치할; VC 2013 런타임이 필요 런타임 패키지에 포함 되지 않습니다. 대상 아키텍처에 적합 한 재배포 가능 패키지를 다운로드할 수 있습니다. https://www.microsoft.com/download/details.aspx?id=40784
+ SMO를 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 실행 하려면 4.0이 필요 하므로이를 사용 하는 응용 프로그램은 클라이언트 컴퓨터에 해당 버전 이상이 설치 되어 있는지 확인 해야 합니다. NetFx SMO 라이브러리와 함께 설치 되는 일부 네이티브 이진 파일에는 VC 2013 runtime도 설치 해야 합니다. 해당 런타임은 패키지에 포함 되지 않습니다. 다음에서 대상 아키텍처에 적절 한 재배포 가능 패키지를 다운로드할 수 있습니다. https://www.microsoft.com/download/details.aspx?id=40784
   

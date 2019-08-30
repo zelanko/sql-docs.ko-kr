@@ -1,5 +1,5 @@
 ---
-title: '5단원: (선택 사항) TDE를 사용 하 여 데이터베이스 암호화 | Microsoft Docs'
+title: '5단원: 필드 TDE를 사용 하 여 데이터베이스 암호화 | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.assetid: ba793c8f-665a-4c46-b68d-f558a37906b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 7e78a787a67c430ec82bea4788fd1c92c4c72c4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4eda59ac47444eb589e17d6e1aab2428c77a991f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090670"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154525"
 ---
 # <a name="lesson-5-optional-encrypt-your-database-using-tde"></a>5단원: (선택 사항) TDE를 사용하여 데이터베이스 암호화
-  선택적 단계로, 새로 만든 데이터베이스를 암호화할 수 있습니다. TDE(투명한 데이터 암호화)를 통해 데이터 및 로그 파일의 실시간 I/O 암호화 및 암호 해독을 수행합니다. 이러한 종류의 암호화에서는 DEK(데이터베이스 암호화 키)를 사용하며 이 키는 복구하는 동안 사용할 수 있도록 데이터베이스 부트 레코드에 저장됩니다. 자세한 내용은 [투명 한 데이터 암호화 &#40;TDE&#41; ](security/encryption/transparent-data-encryption.md) 하 고 [다른 SQL Server로 TDE 보호 데이터베이스 이동](security/encryption/move-a-tde-protected-database-to-another-sql-server.md).  
+  선택적 단계로, 새로 만든 데이터베이스를 암호화할 수 있습니다. TDE(투명한 데이터 암호화)를 통해 데이터 및 로그 파일의 실시간 I/O 암호화 및 암호 해독을 수행합니다. 이러한 종류의 암호화에서는 DEK(데이터베이스 암호화 키)를 사용하며 이 키는 복구하는 동안 사용할 수 있도록 데이터베이스 부트 레코드에 저장됩니다. 자세한 내용은 [tde &#40;&#41; 를 투명한 데이터 암호화](security/encryption/transparent-data-encryption.md) tde [로 보호 되는 데이터베이스를 다른 SQL Server으로 이동](security/encryption/move-a-tde-protected-database-to-another-sql-server.md)을 참조 하세요.  
   
  이 단원에서는 다음 단계를 이미 완료했다고 가정합니다.  
   
--   Microsoft Azure Storage 계정이 있습니다.  
+-   Azure Storage 계정이 있습니다.  
   
--   Microsoft Azure Storage 계정에서 컨테이너를 만들었습니다.  
+-   Azure Storage 계정으로 컨테이너를 만들었습니다.  
   
 -   읽기, 쓰기 및 나열 권한이 있는 컨테이너에 정책을 만들었습니다. SAS 키도 생성했습니다.  
   
@@ -87,10 +87,10 @@ GO
   
 ```  
   
- 이 단원에서 사용 된 자세한 내용은 TRANSACT-SQL 문을 참조 하세요 [CREATE DATABASE &#40;SQL Server TRANSACT-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)하십시오 [ALTER DATABASE &#40;TRANSACT-SQL&#41; ](/sql/t-sql/statements/alter-database-transact-sql), [CREATE MASTER KEY &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql)에 [CREATE CERTIFICATE &#40;TRANSACT-SQL&#41;](/sql/t-sql/statements/create-certificate-transact-sql), 및 [sys.dm_database_ encryption_keys &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)합니다.  
+ 이 단원에서 사용 된 transact-sql 문에 대 한 자세한 내용은 [create &#40;database SQL Server transact-sql&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [ALTER database &#40;transact-sql&#41;](/sql/t-sql/statements/alter-database-transact-sql), [create MASTER KEY &#40; 를 참조 하세요. Transact-sql&#41;](/sql/t-sql/statements/create-master-key-transact-sql), [CREATE CERTIFICATE &#40;transact-sql&#41;](/sql/t-sql/statements/create-certificate-transact-sql)및 [sys. &#40;&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql)m e m. m m m.  
   
  **다음 단원:**  
   
- [6단원: 원본에서 데이터베이스를 마이그레이션할 컴퓨터 온-프레미스를 대상 컴퓨터에 Windows Azure](lesson-5-backup-database-using-file-snapshot-backup.md)  
+ [6단원: 온-프레미스의 원본 컴퓨터에서 Azure의 대상 컴퓨터로 데이터베이스 마이그레이션](lesson-5-backup-database-using-file-snapshot-backup.md)  
   
   

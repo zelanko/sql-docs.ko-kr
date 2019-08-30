@@ -22,12 +22,12 @@ ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2b3b550ec7eb42597862c5b20e557aabdc909f13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d159b6c0496d99956e17f1607f71cf7df86e4dea
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922124"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155010"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 구성 요소에 대해 소개합니다. 데이터를 보호하려면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스를 백업해야 합니다. 여기서는 백업 유형과 백업 제한 사항에 대해 설명합니다. 또한 이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 디바이스와 백업 미디어를 소개합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "62922124"
   
 -   [백업 압축](#BackupCompression)  
   
--   [SQL Server에서 백업 작업에 대 한 제한](#Restrictions)  
+-   [SQL Server의 백업 작업에 대 한 제한 사항](#Restrictions)  
   
 -   [관련 작업](#RelatedTasks)  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62922124"
   
  **백업 유형**  
   
- [copy-only backup](copy-only-backups-sql-server.md)  
+ [복사 전용 백업](copy-only-backups-sql-server.md)  
  정기적인 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업 시퀀스와 독립적인 특수 백업입니다.  
   
  데이터 백업(data backup)  
@@ -86,7 +86,7 @@ ms.locfileid: "62922124"
  **백업 미디어 용어 및 정의**  
   
  [백업 장치](backup-devices-sql-server.md)  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 장치입니다. SQL Server 백업은 Windows Azure Blob 스토리지 서비스에 기록할 수도 있으며 백업 파일의 대상과 이름을 지정하기 위해 **URL** 형식이 사용됩니다. 자세한 내용은 [Windows Azure Blob Storage 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업이 기록되는 대상이자 백업을 복원하는 원본이 되는 디스크 또는 테이프 장치입니다. SQL Server 백업은 Azure Blob 저장소 서비스에 기록할 수도 있으며, **URL** 형식을 사용 하 여 백업 파일의 대상 및 이름을 지정 합니다. 자세한 내용은 [Azure Blob Storage 서비스를 사용 하 여 백업 및 복원 SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)를 참조 하세요.  
   
  [백업 미디어](media-sets-media-families-and-backup-sets-sql-server.md)  
  하나 이상의 백업이 기록된 하나 이상의 테이프 또는 디스크 파일입니다.  
@@ -103,10 +103,10 @@ ms.locfileid: "62922124"
  [미러된 미디어 세트](mirrored-backup-media-sets-sql-server.md)  
  미디어 세트의 여러 복사본(미러)입니다.  
   
-##  <a name="BackupCompression"></a> 백업 압축  
+##  <a name="BackupCompression"></a>백업 압축  
  [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] 이상 버전에서 압축 백업을 지원하며, [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상 버전에서 압축된 백업을 복원할 수 있습니다. 자세한 내용은 [백업 압축&#40;SQL Server&#41;](backup-compression-sql-server.md)을 참조하세요.  
   
-##  <a name="Restrictions"></a> SQL Server에서 백업 작업에 대 한 제한  
+##  <a name="Restrictions"></a>SQL Server의 백업 작업에 대 한 제한 사항  
  백업은 데이터베이스가 온라인 상태이며 사용 중인 경우 발생할 수 있습니다. 그러나 다음과 같은 제한 사항이 있습니다.  
   
 ### <a name="offline-data-cannot-be-backed-up"></a>오프라인 데이터는 백업할 수 없음  
@@ -136,7 +136,7 @@ ms.locfileid: "62922124"
  백업 작업이 파일 관리 작업 또는 축소 작업과 겹치면 충돌이 발생합니다. 충돌하는 작업 중 어떤 작업이 먼저 시작되었는지에 관계없이 두 번째 작업은 첫 번째 작업에서 설정한 잠금 제한 시간이 초과될 때까지 대기합니다. 제한 시간은 세션 제한 시간 설정에서 제어합니다. 제한 시간 동안에 잠금이 해제되면 두 번째 작업이 계속됩니다. 잠금 제한 시간이 초과되면 두 번째 작업이 실패합니다.  
   
 ##  <a name="RelatedTasks"></a> 관련 태스크  
- **백업 장치와 백업 미디어를 사용 하려면**  
+ **백업 장치 및 백업 미디어를 사용 하 여 작업 하려면**  
   
 -   [디스크 파일에 대한 논리적 백업 장치 정의&#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)  
   
@@ -156,7 +156,7 @@ ms.locfileid: "62922124"
   
 -   [장치에서 백업 복원&#40;SQL Server&#41;](restore-a-backup-from-a-device-sql-server.md)  
   
--   [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [자습서: Azure Blob Storage 서비스로 백업 및 복원 SQL Server](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
  **백업을 만들려면**  
   
@@ -179,7 +179,7 @@ ms.locfileid: "62922124"
   
 -   [Resource GovernoR을 사용하여 백업 압축을 통해 CPU 사용량 제한&#40;Transact-SQL&#41;](use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)  
   
--   [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+-   [자습서: Azure Blob Storage 서비스로 백업 및 복원 SQL Server](../tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 데이터베이스 백업 및 복원](back-up-and-restore-of-sql-server-databases.md)   

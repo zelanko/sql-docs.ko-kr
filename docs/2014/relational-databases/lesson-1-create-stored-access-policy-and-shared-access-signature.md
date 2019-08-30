@@ -1,5 +1,5 @@
 ---
-title: 2단원. 컨테이너에서 정책 만들기 및 공유 액세스 서명 (SAS) 키 생성 | Microsoft Docs
+title: 2단원. 컨테이너에서 정책을 만들고 SAS (공유 액세스 서명) 키를 생성 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 23e80a2bf02ee6b97449ea3acff38a3937d37000
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c9efb23d15b4f72375077f4bbf1450d8c47fddf4
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046729"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153843"
 ---
 # <a name="lesson-2-create-a-policy-on-container-and-generate-a-shared-access-signature-sas-key"></a>2단원. 컨테이너에 정책 만들기 및 SAS(공유 액세스 서명) 키 생성
   이 단원에서는 Blob 컨테이너에서 정책을 만들고 SAS키를 생성하는 방법을 배웁니다.  
@@ -24,9 +24,9 @@ ms.locfileid: "67046729"
   
  다음 방법 중 하나를 사용하여 정책과 공유 액세스 서명을 만들 수 있습니다.  
   
--   Windows Azure REST API 작업: [컨테이너를 만듭니다](https://msdn.microsoft.com/library/azure/dd179468.aspx), [컨테이너 ACL 설정](https://msdn.microsoft.com/library/azure/dd179391.aspx), 및 [컨테이너 ACL 가져오기](https://msdn.microsoft.com/library/azure/dd179469.aspx)합니다.  
+-   Azure REST API 작업: 컨테이너 [만들기](https://msdn.microsoft.com/library/azure/dd179468.aspx), [컨테이너 Acl 설정](https://msdn.microsoft.com/library/azure/dd179391.aspx)및 [컨테이너 acl 가져오기](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
--   Windows Azure SDK의[CloudBlobContainer.GetSharedAccessSignature 메서드](https://docs.microsoft.com/dotnet/api/microsoft.azure.storage.blob.cloudblobcontainer.getsharedaccesssignature) .  
+-   Azure SDK의 [CloudBlobContainer. GetSharedAccessSignature 메서드](https://docs.microsoft.com/dotnet/api/microsoft.azure.storage.blob.cloudblobcontainer.getsharedaccesssignature)  
   
     ```  
   
@@ -40,7 +40,7 @@ ms.locfileid: "67046729"
   
     ```  
   
--   [Azure Storage Explorer](http://azurestorageexplorer.codeplex.com/)등의 타사 Windows Azure 탐색기 도구.  
+-   [Azure Storage 탐색기](http://azurestorageexplorer.codeplex.com/)와 같은 타사 Azure 탐색기 도구입니다.  
   
  **다음 단원:**  
   

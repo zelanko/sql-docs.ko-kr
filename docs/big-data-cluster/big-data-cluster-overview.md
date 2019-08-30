@@ -1,27 +1,24 @@
 ---
-title: 빅 데이터 클러스터란?
-titleSuffix: SQL Server big data clusters
+title: 빅 데이터 클러스터 란?
+titleSuffix: SQL Server Big Data Clusters
 description: Kubernetes에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 실행 되며 관계형 및 HDFS 데이터 모두에 대 한 스케일 아웃 옵션을 제공 하는 (미리 보기)에 대해 알아봅니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 15002f9d5633336fb61474a834c913a0d7dbf1c5
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: c75005c35e743a87ff742352946c4fdde5fcf0b8
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653187"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153656"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]무엇 인가요?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 부터는 Kubernetes에서 실행 되는 SQL Server, Spark 및 HDFS 컨테이너의 확장 가능한 클러스터를 배포할 수있습니다.[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 이러한 구성 요소는 동시에 실행되므로 Transact-SQL 또는 Spark에서 빅 데이터 읽기, 쓰기 및 처리할 수 있으며, 대용량의 빅 데이터를 사용하여 가치 높은 관계형 데이터를 쉽게 조합하고 분석할 수 있습니다.
 
