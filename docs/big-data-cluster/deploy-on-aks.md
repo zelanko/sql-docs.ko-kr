@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bc9879236fa50f19f443b2d6086980842ce0b3f1
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652380"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160697"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server 빅 데이터 클러스터 배포에 대해 Azure Kubernetes Service 구성
 
@@ -37,7 +37,7 @@ AKS를 사용하면 Kubernetes 클러스터로 미리 구성된 가상 머신 �
    - **SQL Server 2019 확장**
    - **Azure CLI**
 
-- Kubernetes 서버 버전 1.10 이상. AKS의 경우 `--kubernetes-version` 매개 변수를 사용하여 기본값과 다른 버전을 지정해야 합니다.
+- Kubernetes 서버에 대 한 최소 1.13 버전입니다. AKS의 경우 `--kubernetes-version` 매개 변수를 사용하여 기본값과 다른 버전을 지정해야 합니다.
 
 - AKS에서 기본 시나리오의 유효성을 검사하는 환경을 최적화하려면 다음을 사용합니다.
    - 모든 노드에서 vCPU 8개

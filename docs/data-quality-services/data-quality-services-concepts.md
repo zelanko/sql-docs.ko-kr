@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 837c71ee-48fa-4044-8744-2be9119aaa04
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e085506e1c427a856202514f29a8f51d5859c881
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5996eea620d61eb9ca6ccd0f499398492bad591
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935391"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152533"
 ---
 # <a name="data-quality-services-concepts"></a>Data Quality Services 개념
 
@@ -40,7 +40,7 @@ ms.locfileid: "67935391"
   
  **참조 데이터 서비스**  
   
- 참조 데이터를 사용하면 참조 데이터 품질을 보장하는 회사의 서비스를 이용하여 데이터의 유효성을 검사하고 데이터를 수정 및 보강할 수 있습니다. Windows Azure Marketplace의 서비스를 사용하여 참조 데이터 공급자에 연결하거나 공급자에 대한 직접 연결을 사용할 수 있습니다. 자세한 내용은 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
+ 참조 데이터를 사용하면 참조 데이터 품질을 보장하는 회사의 서비스를 이용하여 데이터의 유효성을 검사하고 데이터를 수정 및 보강할 수 있습니다. Azure Marketplace 서비스를 사용 하 여 참조 데이터 공급자에 연결 하거나 공급자에 대 한 직접 연결을 사용할 수 있습니다. 자세한 내용은 [Reference Data Services in DQS](../data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
   
  DQS의 기술 자료 관리에 대한 자세한 내용은 [DQS Knowledge Bases and Domains](../data-quality-services/dqs-knowledge-bases-and-domains.md)을 참조하세요.  
   
@@ -51,9 +51,9 @@ ms.locfileid: "67935391"
   
  DQS의 데이터 정리 작업은 DQS 기술 자료의 지식을 기반으로 수행됩니다. DQS의 데이터 정리 작업은 2단계 프로세스입니다.  
   
--   **컴퓨터 기반 정리**: DQS 정리 프로젝트에 대해 선택한 기술 자료에서 기술 자료를 사용 하 여 데이터 원본에 값을 수정/제안 사항을 제공.  
+-   **컴퓨터 기반 정리**: DQS에서는 정리 프로젝트에 대해 선택한 기술 자료의 정보를 사용 하 여 데이터 원본의 값에 대 한 수정/제안을 제안 합니다.  
   
--   **대화형 정리**: 데이터 관리자는 대화형 정리 프로세스는 컴퓨터 기반 데이터 정리 프로세스에서 제안한 데이터 수정 변경 하거나 보강할를 수행할 수 있습니다. 데이터 관리자는 데이터 정리 프로세스에서 식별된 신뢰 수준과 통계를 사용하거나 변경 사항을 프로젝트에 수동으로 입력하여 이 작업을 수행합니다.  
+-   **대화형 정리**: 데이터 관리자는 대화형 정리 프로세스를 수행 하 여 컴퓨터 기반 데이터 정리 프로세스에서 제안한 데이터 수정 사항을 변경 하거나 확대할 수 있습니다. 데이터 관리자는 데이터 정리 프로세스에서 식별된 신뢰 수준과 통계를 사용하거나 변경 사항을 프로젝트에 수동으로 입력하여 이 작업을 수행합니다.  
   
  데이터 관리자는 데이터를 정리한 후 처리된 데이터를 SQL Server 데이터베이스, .csv 파일 또는 Excel 파일로 내보낼 수 있습니다. 자세한 내용은 [Data Cleansing](../data-quality-services/data-cleansing.md)을 참조하세요.  
   

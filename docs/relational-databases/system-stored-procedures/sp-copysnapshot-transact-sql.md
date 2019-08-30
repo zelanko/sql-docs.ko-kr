@@ -15,17 +15,17 @@ helpviewer_keywords:
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 30e96ad145abdb123e5bc5540f74f23251d1a69e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d8b34915371b164a4167058729d2720d9e60cdcd
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768893"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154602"
 ---
-# <a name="spcopysnapshot-transact-sql"></a>sp_copysnapshot(Transact-SQL)
+# <a name="sp_copysnapshot-transact-sql"></a>sp_copysnapshot(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  지정 된 게시의 스냅숏 폴더를에 나열 **@destination_folder** 된 폴더로 복사 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. 이 저장 프로시저는 스냅샷을 CD-ROM과 같은 이동식 미디어에 복사할 경우 유용합니다.  
+  지정 된 게시의 스냅숏 폴더를  **\@destination_folder**에 나열 된 폴더로 복사 합니다. 이 저장 프로시저는 게시 데이터베이스의 게시자에서 실행됩니다. 이 저장 프로시저는 스냅샷을 CD-ROM과 같은 이동식 미디어에 복사할 경우 유용합니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

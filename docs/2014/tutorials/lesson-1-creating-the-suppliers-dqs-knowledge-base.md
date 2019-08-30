@@ -1,5 +1,5 @@
 ---
-title: '1단원: 공급자 DQS 기술 자료 만들기 | Microsoft Docs'
+title: '1단원: Suppliers DQS 기술 자료 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 6e25b57bce84876de1119ec52ad068602cd5cf13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26759a68274cfbc520e5e176d0dd3e1fab07e720
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485587"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154971"
 ---
 # <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>1단원: 공급자 DQS 기술 자료 만들기
   이 단원에서는 공급자 데이터에 대한 지식(메타데이터)이 포함된 **Suppliers** 라는 DQS 기술 자료를 만듭니다. 이 기술 자료는 입력 공급자 데이터에 대해 정리 및 일치 작업을 수행하는 데 사용됩니다. 정리 작업은 잘못된/올바르지 않은 데이터를 식별하고, 잘못된 데이터를 수정하고, 수정/제안을 제공하고, 데이터를 표준화하고, 자세한 정보를 사용해서 데이터를 강화합니다. 일치 작업은 데이터를 비교하고 데이터에서 중복 항목을 제거하는 데 도움이 될 수 있도록 데이터에서 비슷하지만 약간 다른 레코드를 식별합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "65485587"
   
 -   Address line, City, State 및 Zip 도메인으로 구성되는 Address Validation이라는 복합 도메인을 만듭니다. 복합 도메인은 하나 이상의 단일 도메인으로 구성된 도메인입니다. 복합 도메인을 사용하면 여러 도메인에 관련된 규칙을 만들 수 있습니다. 예를 들어 City 및 State가 두 개의 개별 도메인이라고 가정할 때 City가 Los Angeles이면 State가 CA여야 하는 규칙을 정의할 수 있습니다.  
   
--   참조 데이터 서비스를 구성하고 사용합니다. DQS(Data Quality Services)의 참조 데이터 서비스 기능을 사용하면 타사 참조 데이터 공급자를 구독하고 고품질 데이터를 기준으로 비즈니스 데이터의 유효성을 검사하여 비즈니스 데이터를 정리하고 강화할 수 있습니다. 정리 프로세스가 진행되는 동안 DQS 내에서 유명 DQS 공급자의 서비스를 사용하여 데이터를 표준화, 수정 또는 강화할 수 있습니다. 이 자습서에서는 Windows Azure 마켓플레이스에서 참조 데이터 서비스를 사용하도록 DQS 환경을 구성하고 Address Validation 복합 도메인과 연관된 서비스를 사용해서 주소 데이터를 정리하는 방법에 대해 알아봅니다.  
+-   참조 데이터 서비스를 구성하고 사용합니다. DQS(Data Quality Services)의 참조 데이터 서비스 기능을 사용하면 타사 참조 데이터 공급자를 구독하고 고품질 데이터를 기준으로 비즈니스 데이터의 유효성을 검사하여 비즈니스 데이터를 정리하고 강화할 수 있습니다. 정리 프로세스가 진행되는 동안 DQS 내에서 유명 DQS 공급자의 서비스를 사용하여 데이터를 표준화, 수정 또는 강화할 수 있습니다. 이 자습서에서는 Azure Marketplace에서 참조 데이터 서비스를 사용 하도록 DQS 환경을 구성 하 고 address Validation 복합 도메인과 연결 된 서비스를 사용 하 여 주소 데이터를 정리 하는 방법에 대해 알아봅니다.  
   
 -   정리 및 일치 작업에서 기술 자료를 사용할 수 있도록 기술 자료를 게시합니다.  
   

@@ -14,12 +14,12 @@ ms.assetid: 316eea58-81b8-4bf3-a1fc-801946740e94
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 366a09bce079023f59f38682b51a7a5858671fcc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7de13f529dc0aab0c897ebe3dc1cb19220b13fd7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917096"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154580"
 ---
 # <a name="databases"></a>데이터베이스
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 데이터베이스는 구조화된 데이터의 특정 집합이 저장되는 테이블 모음으로 구성됩니다. 테이블에는 행과 열의 모음이 들어 있습니다. 행은 레코드나 튜플이라고도 하고 열은 특성이라고도 합니다. 테이블의 각 열에는 날짜, 이름, 달러 금액 및 숫자와 같은 특정 유형의 정보가 저장됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "62917096"
 |-|-|  
 |[시스템 데이터베이스](system-databases.md)|[데이터베이스에서 데이터 또는 로그 파일 삭제](delete-data-or-log-files-from-a-database.md)|  
 |[Contained Databases](contained-databases.md)|[데이터베이스의 데이터 및 로그 공간 정보 표시](display-data-and-log-space-information-for-a-database.md)|  
-|[Windows Azure의 SQL Server 데이터 파일](sql-server-data-files-in-microsoft-azure.md)|[데이터베이스의 크기 늘리기](increase-the-size-of-a-database.md)|  
+|[Azure에서 데이터 파일 SQL Server](sql-server-data-files-in-microsoft-azure.md)|[데이터베이스의 크기 늘리기](increase-the-size-of-a-database.md)|  
 |[데이터베이스 파일 및 파일 그룹](database-files-and-filegroups.md)|[데이터베이스 이름 바꾸기](rename-a-database.md)|  
 |[데이터베이스 상태](database-states.md)|[단일 사용자 모드로 데이터베이스 설정](set-a-database-to-single-user-mode.md)|  
 |[파일 상태](file-states.md)|[데이터베이스 축소](shrink-a-database.md)|  
@@ -52,7 +52,7 @@ ms.locfileid: "62917096"
 |[데이터베이스에 데이터 또는 로그 파일 추가](add-data-or-log-files-to-a-database.md)|[데이터베이스의 호환성 수준 보기 또는 변경](view-or-change-the-compatibility-level-of-a-database.md)|  
 |[데이터베이스 메일의 구성 설정 변경](change-the-configuration-settings-for-a-database.md)|[유지 관리 계획 마법사 사용](../maintenance-plans/use-the-maintenance-plan-wizard.md)|  
 |[데이터베이스 만들기](create-a-database.md)|[사용자 정의 데이터 형식 별칭 만들기](create-a-user-defined-data-type-alias.md)|  
-|[데이터베이스 삭제](delete-a-database.md)|[데이터베이스 스냅숏&#40;SQL Server&#41;](database-snapshots-sql-server.md)|  
+|[데이터베이스 삭제](delete-a-database.md)|[데이터베이스 스냅샷&amp;#40;SQL Server&amp;#41;](database-snapshots-sql-server.md)|  
   
 ## <a name="related-content"></a>관련 내용  
  [인덱스](../indexes/indexes.md)  

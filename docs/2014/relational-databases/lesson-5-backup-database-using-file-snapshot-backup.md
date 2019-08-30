@@ -1,5 +1,5 @@
 ---
-title: '6단원: 원본에서 데이터베이스를 마이그레이션할 온-프레미스를 대상 컴퓨터에 Windows Azure 기계 | Microsoft Docs'
+title: '6단원: 온-프레미스의 원본 컴퓨터에서 Azure의 대상 컴퓨터로 데이터베이스 마이그레이션 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,29 +10,29 @@ ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1a5787a3f5aecd746ac9aafd5850e6109ebcd999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59c063b0aca4a373671efc28c9b0d45baced836a
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090689"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153736"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>6단원: 온-프레미스의 원본 컴퓨터에서 Windows Azure의 대상 컴퓨터로 데이터베이스 마이그레이션
-  이 단원에서는 이미 다른 SQL Server가 있다고 가정합니다. 이 SQL Server는 다른 온-프레미스 컴퓨터나 Microsoft Azure의 가상 머신에 있을 수 있습니다. Microsoft Azure에서 SQL Server 가상 머신을 만드는 방법은 [Microsoft Azure에서 SQL Server 가상 머신 프로비전](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)을 참조하세요. Microsoft Azure에서 SQL Server 가상 머신을 프로비전한 후 다른 컴퓨터에서 SQL Server Management Studio를 통해 이 가상 머신의 SQL Server 인스턴스에 연결할 수 있는지 확인합니다.  
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-azure"></a>6단원: 온-프레미스의 원본 컴퓨터에서 Azure의 대상 컴퓨터로 데이터베이스 마이그레이션
+  이 단원에서는 다른 온-프레미스 컴퓨터 또는 Azure의 가상 컴퓨터에 있을 수 있는 다른 SQL Server 이미 있다고 가정 합니다. Azure에서 SQL Server 가상 머신을 만드는 방법에 대 한 자세한 내용은 [azure에서 SQL Server 가상 머신 프로 비전](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/)을 참조 하세요. Azure에서 SQL Server 가상 컴퓨터를 프로 비전 한 후 다른 컴퓨터의 SQL Server Management Studio을 통해이 가상 컴퓨터의 SQL Server 인스턴스에 연결할 수 있는지 확인 합니다.  
   
  이 단원에서는 다음 단계를 이미 완료했다고 가정합니다.  
   
--   Microsoft Azure Storage 계정이 있습니다.  
+-   Azure Storage 계정이 있습니다.  
   
--   Microsoft Azure Storage 계정에서 컨테이너를 만들었습니다.  
+-   Azure Storage 계정으로 컨테이너를 만들었습니다.  
   
 -   읽기, 쓰기 및 나열 권한이 있는 컨테이너에 정책을 만들었습니다. SAS 키도 생성했습니다.  
   
 -   원본 컴퓨터에서 SQL Server 자격 증명을 만들었습니다.  
   
--   Microsoft Azure에서 대상 SQL Server 가상 머신을 이미 만들었습니다. SQL Server 2014를 포함하는 플랫폼 이미지를 선택하여 만드는 것이 좋습니다.  
+-   Azure에서 대상 SQL Server 가상 머신을 이미 만들었습니다. SQL Server 2014를 포함하는 플랫폼 이미지를 선택하여 만드는 것이 좋습니다.  
   
- 데이터베이스를 SQL Server 온-프레미스에서 Microsoft Azure의 다른 가상 머신으로 마이그레이션하려면 다음 단계를 수행합니다.  
+ SQL Server 온-프레미스에서 Azure의 다른 가상 머신으로 데이터베이스를 마이그레이션하려면 다음 단계를 수행 하면 됩니다.  
   
 1.  원본 컴퓨터(이 자습서의 경우 온-프레미스 컴퓨터)의 SQL Server Management Studio에서 쿼리 창을 엽니다. 다음 문을 실행하여 데이터베이스를 분리하고 다른 컴퓨터로 이동합니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66090689"
   
         2.  표준 도구 모음에서 **새 쿼리**를 클릭합니다.  
   
-        3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 필요한 대로 수정합니다. 다음 문은 저장소 컨테이너의 공유 액세스 인증서를 저장할 SQL Server 자격 증명을 만듭니다.  
+        3.  다음 예를 복사하여 쿼리 창에 붙여 넣고 필요한 대로 수정합니다. 다음 문은 저장소 컨테이너의 공유 액세스 인증서를 저장 하는 SQL Server 자격 증명을 만듭니다.  
   
             ```sql  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66090689"
   
              이 단계의 끝에서 대상 컴퓨터는 원본 컴퓨터에서 백업된 암호화 인증서를 가져왔습니다. 다음 작업으로, 대상 컴퓨터에서 데이터 파일을 연결할 수 있습니다.  
   
-    2.  FOR ATTACH 옵션을 사용하여 Microsoft Azure Storage의 기존 파일을 가리키는 데이터 및 로그 파일이 포함된 데이터베이스를 만듭니다. 쿼리 창에서 다음 문을 실행합니다.  
+    2.  그런 다음 FOR ATTACH 옵션을 사용 하 여 Azure Storage에 있는 기존 파일을 가리키는 데이터 및 로그 파일이 포함 된 데이터베이스를 만듭니다. 쿼리 창에서 다음 문을 실행합니다.  
   
         ```sql  
   
@@ -124,7 +124,7 @@ ms.locfileid: "66090689"
   
  암호화된 데이터베이스가 데이터 이동 없이 다른 컴퓨팅 인스턴스로 전송되었습니다.  
   
- SQL Server Management Studio 사용자 인터페이스를 사용하여 Microsoft Azure Storage의 기존 파일을 가리키는 데이터 및 로그 파일이 포함된 데이터베이스를 만들려면 다음 단계를 수행합니다.  
+ SQL Server Management Studio 사용자 인터페이스를 사용 하 여 Azure Storage에 있는 기존 파일을 가리키는 데이터 및 로그 파일이 포함 된 데이터베이스를 만들려면 다음 단계를 수행 합니다.  
   
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
   
@@ -136,9 +136,9 @@ ms.locfileid: "66090689"
   
 5.  **데이터베이스 연결** 대화 상자에서 연결할 데이터베이스를 지정하려면 **추가**를 클릭합니다. **데이터베이스 파일 찾기** 대화 상자에서 다음을 수행합니다.  
   
-     데이터베이스 데이터 파일 위치에 대 한 입력: `https://teststorageaccnt.blob.core.windows.net/testcontainer/`합니다.  
+     데이터베이스 데이터 파일 위치에 대해를 입력 `https://teststorageaccnt.blob.core.windows.net/testcontainer/`합니다.  
   
-     파일 이름 입력: `TestDB1Data.mdf`합니다.  
+     파일 이름에을 입력 `TestDB1Data.mdf`합니다.  
   
 6.  **확인**을 클릭합니다.  
   
@@ -146,6 +146,6 @@ ms.locfileid: "66090689"
   
  **다음 단원:**  
   
- [7단원: Windows Azure Storage로 데이터 파일 이동](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
+ [7단원: Azure Storage으로 데이터 파일 이동](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)  
   
   

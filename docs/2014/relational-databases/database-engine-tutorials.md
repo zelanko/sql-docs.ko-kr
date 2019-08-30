@@ -10,12 +10,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b1a6158dca30d6419be59cf5eb68dff9892cc2dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872669"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154608"
 ---
 # <a name="database-engine-tutorials"></a>데이터베이스 엔진 자습서
   이 섹션에는 [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)]에 대한 자습서가 포함되어 있습니다.  
@@ -47,14 +47,14 @@ ms.locfileid: "62872669"
  [자습서: 정책 기반 관리를 사용 하 여 최선의 구현 방법 평가](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  이 자습서에서는 알려진 문제에 대해 [!INCLUDE[ssDE](../includes/ssde-md.md)] 인스턴스를 분석하는 데 사용할 수 있는 정책을 만드는 방법을 설명합니다.  
   
- [자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
- 이 자습서에서는 SQL Server 백업 및 Windows Azure BLOB 스토리지 서비스로 복원하는 방법에 대해 설명합니다.  
+ [자습서: Azure Blob Storage 서비스로 백업 및 복원 SQL Server](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+ 이 자습서에서는 SQL Server 백업 및 Azure Blob Storage 서비스로 복원 하는 방법을 보여 줍니다.  
   
- [자습서: Windows Azure Storage 서비스에서 SQL Server 데이터 파일](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
- 이 자습서는 Windows Azure BLOB 스토리지 서비스에서 SQL Server 데이터 파일을 저장하는 방법을 이해하도록 도와 줍니다.  
+ [자습서: Azure Storage 서비스에서 데이터 파일 SQL Server](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
+ 이 자습서는 Azure Blob 저장소 서비스에 SQL Server 데이터 파일을 직접 저장 하는 방법을 이해 하는 데 도움이 됩니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 2014 자습서](../tutorials/tutorials-for-sql-server-2014.md)   
+ [SQL Server 2014에 대 한 자습서](../tutorials/tutorials-for-sql-server-2014.md)   
  [TechNet WIKI: SQL Server 2012 샘플](https://go.microsoft.com/fwlink/?linkID=220734)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: SQL Server 에이전트에서 자동 관리 태스크 예약 | Microsoft Docs
+title: SQL Server 에이전트에서 자동 관리 작업 예약 Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -12,15 +12,15 @@ helpviewer_keywords:
 - SQL Server Agent [SMO]
 - automatic administrative SMO tasks
 ms.assetid: 900242ad-d6a2-48e9-8a1b-f0eea4413c16
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 64de081adef73e1480fd0bc4ca6b9bf3aacded7f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b388074f569b5797eeac700bdd647477f56faeb2
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030179"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148325"
 ---
 # <a name="scheduling-automatic-administrative-tasks-in-sql-server-agent"></a>SQL Server 에이전트에서 자동 관리 태스크 예약
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "68030179"
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에이전트 개체는 <xref:Microsoft.SqlServer.Management.Smo.Agent> 네임스페이스에 있습니다.  
   
 ## <a name="examples"></a>예  
- 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
-사용 하는 프로그램에 대해 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 포함 해야 에이전트에는 **사용 하 여** 에이전트 네임 스페이스를 정규화 하는 문입니다. 다른 문을 삽입 **를 사용 하 여** 응용 프로그램의 모든 선언 앞의 문을 같은:
+에이전트를 사용 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 하는 프로그램의 경우 **using** 문을 포함 하 여 에이전트 네임 스페이스를 정규화 해야 합니다. 다음과 같이 응용 프로그램의 선언 앞에 다른 **using** 문 뒤에 문을 삽입 합니다.
   
  ```
 using Microsoft.SqlServer.Management.Smo;
@@ -168,7 +168,7 @@ $jbsch.Create();
   
  **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
- 경고 알림을 위해 운영자가 필요합니다. 합니다 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 있으므로 대괄호로 묶어야 **연산자** 가 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드입니다.  
+ 경고 알림을 위해 운영자가 필요합니다. **연산자가** <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 키워드이기때문에형식에는대괄호가필요합니다.[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
   
 ```csharp  
 {  
@@ -201,7 +201,7 @@ $jbsch.Create();
   
  **ObjectName|CounterName|Instance|ComparisionOp|CompValue**  
   
- 경고 알림을 위해 운영자가 필요합니다. 합니다 <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 형식을 있으므로 대괄호로 묶어야 **연산자** 가 [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] 키워드입니다.  
+ 경고 알림을 위해 운영자가 필요합니다. **연산자가** <xref:Microsoft.SqlServer.Management.Smo.Agent.Operator> 키워드이기때문에형식에는대괄호가필요합니다.[!INCLUDE[csprcs](../../../includes/csprcs-md.md)]  
   
 ```powershell  
 #Get a server object which corresponds to the default instance  

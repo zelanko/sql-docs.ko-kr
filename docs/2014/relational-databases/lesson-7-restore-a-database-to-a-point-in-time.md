@@ -1,5 +1,5 @@
 ---
-title: '8단원: Windows Azure Storage에 데이터베이스를 복원 합니다. | Microsoft Docs'
+title: '8단원: 데이터베이스를 Azure Storage로 복원 | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,21 +10,21 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: f7da373509d875057f4d1ff50884ec446feb6cd2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f17384b979e960995a3522a81c4f0611287cb15
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090704"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153739"
 ---
-# <a name="lesson-8-restore-a-database-to-windows-azure-storage"></a>8단원: Microsoft Azure Storage에 데이터베이스 복원
-  이 단원에서는 로컬로 백업 파일을 만들고 Microsoft Azure Storage에 복원하는 방법을 배웁니다. 온-프레미스나 Windows Azure의 가상 컴퓨터에 데이터베이스가 있을 수 있습니다. 이 단원을 수행하기 위해 4, 5, 6, 7단원을 완료할 필요는 없습니다.  
+# <a name="lesson-8-restore-a-database-to-azure-storage"></a>8단원: Azure Storage로 데이터베이스 복원
+  이 단원에서는 로컬로 백업 파일을 만들고 Azure Storage 복원 하는 방법을 배웁니다. 온-프레미스 또는 Azure의 가상 머신에서 데이터베이스를 사용할 수 있습니다. 이 단원을 수행하기 위해 4, 5, 6, 7단원을 완료할 필요는 없습니다.  
   
  이 단원에서는 다음 단계를 이미 완료했다고 가정합니다.  
   
--   Microsoft Azure Storage 계정이 있습니다.  
+-   Azure Storage 계정이 있습니다.  
   
--   Microsoft Azure Storage 계정에서 컨테이너를 만들었습니다.  
+-   Azure Storage 계정으로 컨테이너를 만들었습니다.  
   
 -   읽기, 쓰기 및 나열 권한이 있는 컨테이너에 정책을 만들었습니다. SAS 키도 생성했습니다.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66090704"
   
 -   원본 컴퓨터에서 데이터베이스를 만들었습니다.  
   
- Microsoft Azure Storage에 데이터베이스를 복원하려면 다음 단계를 수행합니다.  
+ Azure Storage로 데이터베이스를 복원 하려면 다음 단계를 수행 합니다.  
   
 1.  원본 컴퓨터에서 SQL Server Management Studio를 시작합니다.  
   
@@ -67,25 +67,25 @@ ms.locfileid: "66090704"
   
      이 단계가 끝나면 컨테이너에 관리 포털의 데이터 파일(.mdf 및 .ldf)이 나열됩니다.  
   
- SQL Server Management Studio 사용자 인터페이스를 사용하여 Microsoft Azure Storage를 가리키는 데이터 및 로그 파일이 포함된 데이터베이스를 복원하려면 다음 단계를 수행합니다.  
+ SQL Server Management Studio 사용자 인터페이스를 사용 하 여 Azure Storage을 가리키는 데이터 및 로그 파일이 포함 된 데이터베이스를 복원 하려면 다음 단계를 수행 합니다.  
   
-1.  **개체 탐색기**, 서버 트리를 확장 하려면 서버 이름을 클릭 합니다.  
+1.  **개체 탐색기**에서 서버 이름을 클릭 하 여 서버 트리를 확장 합니다.  
   
-2.  확장 **데이터베이스**, 데이터베이스를 선택 합니다.  
+2.  **데이터베이스**를 확장 하 고 데이터베이스를 선택 합니다.  
   
 3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **복원**을 클릭합니다.  
   
-4.  에 **일반적인** 페이지를 **복원** 원본 섹션을 클릭 **원본** 장치입니다.  
+4.  **일반** 페이지의 **복원** 원본 섹션에서 **원본** 장치를 클릭 합니다.  
   
-5.  찾아보기 단추를 클릭 합니다 **소스** 열리는 장치 입력란 합니다 **백업 장치 선택** 대화 상자.  
+5.  **원본** 장치 텍스트 상자에 대 한 찾아보기 단추를 클릭 하 여 **백업 장치 선택** 대화 상자를 엽니다.  
   
-6.  백업 미디어 입력란에서 선택 **파일**를 클릭 합니다 **추가** 를 백업 (.bak) 파일을 찾습니다. **확인**을 클릭합니다.  
+6.  백업 미디어 텍스트 상자에서 **파일**을 선택 하 고 **추가** 단추를 클릭 하 여 백업 파일 (.bak)을 찾습니다. **확인**을 클릭합니다.  
   
-7.  클릭 **파일** 첫 페이지에 있습니다.  
+7.  첫 번째 페이지에서 **파일** 을 클릭 합니다.  
   
-8.  에 **데이터베이스 파일 복원** 섹션 **으로 복원** 필드에 다음을 입력 합니다.  
+8.  **데이터베이스 파일** 을 다음으로 복원 섹션의 다음 **으로 복원** 필드에 다음을 입력 합니다.  
   
-     데이터 파일에 대 한 입력: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`합니다. 로그 파일에 대 한 입력: `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`합니다.  
+     데이터 파일에 대해을 입력 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS.mdf`합니다. 로그 파일에 대해을 입력 `https://teststorageaccnt.blob.core.windows.net/testrestoressms/TestRESSMS_log.ldf`합니다.  
   
      ![SQL 14 CTP2](../tutorials/media/ss-was-tutlesson-8-8.gif "SQL 14 CTP2")  
   
@@ -97,6 +97,6 @@ ms.locfileid: "66090704"
   
  **다음 단원:**  
   
- [9단원. Microsoft Azure Storage에서 데이터베이스 복원](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
+ [9단원. Azure Storage에서 데이터베이스 복원](../relational-databases/lesson-8-restore-as-new-database-from-log-backup.md)  
   
   

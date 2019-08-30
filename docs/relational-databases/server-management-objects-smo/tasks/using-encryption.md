@@ -1,5 +1,5 @@
 ---
-title: 암호화를 사용 하 여 | Microsoft Docs
+title: 암호화 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ helpviewer_keywords:
 - certificates [SMO]
 - service master key [SMO]
 ms.assetid: 405e0ed7-50a9-430e-a343-471f54b4af76
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d9c08c7eaeb6d29a9c9fe5c3fc7ea42fd55025f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fceb0baa62b7998534a5b7620d2c99fd1afc1f8f
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030065"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148322"
 ---
 # <a name="using-encryption"></a>암호화 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68030065"
  SMO에서 인증서는 <xref:Microsoft.SqlServer.Management.Smo.Certificate> 개체로 표시됩니다. <xref:Microsoft.SqlServer.Management.Smo.Certificate> 개체에는 공개 키, 주체 이름, 유효 기간 및 발급자 정보를 지정하는 속성이 있습니다. 인증서에 대한 액세스 권한은 **Grant**, **Revoke** 및 **Deny** 메서드를 사용하여 제어합니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="adding-a-certificate-in-visual-c"></a>Visual C#에서 인증서 추가  
  코드 예제는 암호화된 암호를 사용하여 간단한 인증서를 만듭니다. 다른 개체와 달리 <xref:Microsoft.SqlServer.Management.Smo.Certificate.Create%2A> 메서드에는 몇 가지 오버로드가 있습니다. 이 예에 사용된 오버로드는 암호화된 암호를 사용하여 새 인증서를 만듭니다.  
@@ -94,6 +94,6 @@ $c.Create("pGFD4bb925DGvbd2439587y")
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [암호화 키를 사용 하 여](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)  
+ [암호화 키 사용](../../../relational-databases/server-management-objects-smo/tasks/using-encryption.md)  
   
   

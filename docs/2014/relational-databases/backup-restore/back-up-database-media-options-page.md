@@ -13,12 +13,12 @@ ms.assetid: eff36228-710c-4ed5-9af5-95859575dc0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 712ea68c3e0405399e3868e3f7fce375c351f4c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1995ca52507a3027438cac21677517059d3d219
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62876820"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154835"
 ---
 # <a name="back-up-database-media-options-page"></a>데이터베이스 백업(미디어 옵션 페이지)
   **데이터베이스 백업** 대화 상자의 **미디어 옵션** 페이지를 사용하여 데이터베이스 미디어 옵션을 확인하거나 수정할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "62876820"
 ## <a name="options"></a>변수  
   
 ### <a name="overwrite-media"></a>미디어 덮어쓰기  
- **미디어 덮어쓰기** 패널의 옵션은 백업이 미디어에 쓰여지는 방법을 제어합니다. URL(Microsoft Azure Storage)을 데이터베이스 백업 대화 상자의 일반 페이지에 있는 백업 대상으로 선택한 경우 미디어 덮어쓰기 섹션의 옵션을 사용할 수 없습니다. `BACKUP TO URL.. WITH FORMAT` Transact-SQL 문을 사용하여 백업을 덮어쓸 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](sql-server-backup-to-url.md)을 참조하세요.  
+ **미디어 덮어쓰기** 패널의 옵션은 백업이 미디어에 쓰여지는 방법을 제어합니다. 데이터베이스 백업 대화 상자의 일반 페이지에서 URL (Azure Storage)을 백업 대상으로 선택한 경우 미디어 덮어쓰기 섹션의 옵션을 사용할 수 없습니다. `BACKUP TO URL.. WITH FORMAT` Transact-SQL 문을 사용하여 백업을 덮어쓸 수 있습니다. 자세한 내용은 [SQL Server Backup to URL](sql-server-backup-to-url.md)을 참조하세요.  
   
  **새 미디어에 백업하고 기존 백업 세트 모두 지우기** 옵션만 암호화 옵션과 함께 지원됩니다. **기존 미디어에 백업** 섹션의 옵션을 선택하는 경우 **백업 옵션** 페이지의 암호화 옵션을 사용할 수 없게 됩니다.  
   

@@ -5,33 +5,33 @@ description: azdata 명령에 대한 참조 문서입니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 33cc3070647c58e6ae57c8bff3d587a76ae0a28d
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 6d737b8e8b353100d5585a625fe9a53232c78f75
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653094"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155126"
 ---
 # <a name="azdata"></a>azdata
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
-
-다음 문서는 [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (미리 보기)](big-data-cluster-overview.md)에 대 한 **azdata** 도구에 대 한 참조를 제공 합니다. **Azdata** 도구를 설치 하는 방법에 대 한 자세한 내용은 [install azdata to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md)항목을 참조 하세요.
+[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
 
 ## <a name="commands"></a>명령
 |     |     |
 | --- | --- |
+|[azdata notebook](reference-azdata-notebook.md) | 터미널에서 Notebook을 보고, 실행, 관리하기 위한 명령입니다. |
+|[azdata sql](reference-azdata-sql.md) | SQL DB CLI를 사용하여 사용자가 T-SQL을 통해 SQL Server를 조작할 수 있습니다. |
 |[azdata app](reference-azdata-app.md) | 애플리케이션을 만들고, 삭제, 실행, 관리합니다. |
 |[azdata bdc](reference-azdata-bdc.md) | SQL Server 빅 데이터 클러스터를 선택, 관리, 운영합니다. |
-|[azdata login](#azdata-login) | 클러스터의 컨트롤러 엔드포인트에 로그인합니다.
-|[azdata logout](#azdata-logout) | 클러스터에서 로그아웃합니다.
-
+|[azdata 컨트롤](reference-azdata-control.md) | 제어 평면을 만들고, 삭제 하 고, 관리 합니다. |
+[azdata login](#azdata-login) | 클러스터의 컨트롤러 엔드포인트에 로그인합니다.
+[azdata logout](#azdata-logout) | 클러스터에서 로그아웃합니다.
 ## <a name="azdata-login"></a>azdata login
-클러스터가 배포 되 면 배포 중에 컨트롤러 끝점이 나열 됩니다 .이 끝점은 로그인 하는 데 사용 해야 합니다.  컨트롤러 끝점을 알 수 없는 경우 시스템에서/.kube/config의 <user home>기본 위치에 클러스터의 kube config를 사용 하거나 KUBECONFIG env var, 즉 export KUBECONFIG = path/to/kube/config를 사용 하 여 로그인 할 수 있습니다.
+클러스터가 배포된 경우 배포 중에 컨트롤러 엔드포인트가 나열됩니다. 이 엔드포인트를 사용하여 로그인해야 합니다.  컨트롤러 엔드포인트를 모르는 경우 시스템의 기본 위치인 <user home>/.kube/config에 클러스터의 kube 구성을 저장하여 로그인하거나, KUBECONFIG 환경 변수를 사용할 수 있습니다(즉, export KUBECONFIG=path/to/.kube/config).
 ```bash
 azdata login [--cluster-name -n] 
              [--controller-username -u]  
@@ -43,7 +43,7 @@ azdata login [--cluster-name -n]
 ```bash
 azdata login
 ```
-비대화형으로 로그인합니다. 클러스터 이름, 컨트롤러 사용자 이름, 컨트롤러 엔드포인트 및 EULA 동의를 인수로 설정하여 로그인합니다. CONTROLLER_PASSWORD 환경 변수를 설정해야 합니다.  컨트롤러 끝점을 지정 하지 않으려면 컴퓨터의 기본 위치 <user home>/.kube/config에 kube config를 사용 하거나 KUBECONFIG env var, 즉 export KUBECONFIG = path/to/kube/config를 사용 합니다.
+비대화형으로 로그인합니다. 클러스터 이름, 컨트롤러 사용자 이름, 컨트롤러 엔드포인트 및 EULA 동의를 인수로 설정하여 로그인합니다. CONTROLLER_PASSWORD 환경 변수를 설정해야 합니다.  컨트롤러 엔드포인트를 지정하지 않으려면 해당 머신의 기본 위치인 <user home>/.kube/config에 kube 구성을 저장하거나, KUBECONFIG 환경 변수를 사용합니다(즉, export KUBECONFIG=path/to/.kube/config).
 ```bash
 azdata login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
 ```
@@ -57,9 +57,9 @@ azdata login -n ClusterName
 #### `--controller-username -u`
 계정 사용자입니다. 이 인수를 사용하지 않으려면 CONTROLLER_USERNAME 환경 변수를 설정하면 됩니다.
 #### `--controller-endpoint -e`
-클러스터 컨트롤러 엔드포인트 “https://host:port”입니다. 이 인수를 사용하지 않으려면 해당 머신의 kube 구성을 사용할 수 있습니다. 구성이/.kube/config의 <user home>기본 위치에 있는지 확인 하거나 KUBECONFIG env var을 사용 합니다.
+클러스터 컨트롤러 엔드포인트 “https://host:port ”입니다. 이 인수를 사용하지 않으려면 해당 머신의 kube 구성을 사용할 수 있습니다. 구성이 기본 위치인 <user home>/.kube/config에 있는지 확인하거나, KUBECONFIG 환경 변수를 사용합니다.
 #### `--accept-eula -a`
-사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 
+사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 이 제품의 사용 조건은 https://aka.ms/azdata-eula 에서 볼 수 있습니다.
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
 로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.
@@ -68,7 +68,7 @@ azdata login -n ClusterName
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/]) 를 참조 하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/])를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-logout"></a>azdata logout
@@ -89,10 +89,10 @@ azdata logout
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/]) 를 참조 하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/])를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-**Azdata** 도구를 설치 하는 방법에 대 한 자세한 내용은 [install azdata to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](deploy-install-azdata.md)항목을 참조 하세요.
+- **azdata** 도구를 설치하는 방법에 대한 자세한 내용은 [azdata를 설치하여 SQL Server 2019 빅 데이터 클러스터 관리](deploy-install-azdata.md)를 참조하세요.

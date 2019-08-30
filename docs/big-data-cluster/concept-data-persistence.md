@@ -5,16 +5,16 @@ description: SQL Server 2019 빅 데이터 클러스터에서 데이터 지속�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ad5efd9c6d7a3750dcf3e35ae4d651e646060ed5
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028588"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155348"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes의 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성
 
@@ -83,7 +83,7 @@ kubeadm에는 기본 제공 스토리지 클래스가 없습니다. 로컬 스�
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-이렇게 하면 **cluster.json** 및 **control.json**이라는 두 파일이 생성됩니다. 수동으로 편집하여 파일을 사용자 지정하거나, **azdata bdc config** 명령을 사용할 수 있습니다. jsonpath 및 jsonpatch 라이브러리의 조합을 사용하여 구성 파일을 편집하는 방법을 제공할 수 있습니다.
+이렇게 하면 파일을 수동으로 편집 하거나 **azdata bdc config** 명령을 사용 하 여 사용자 지정할 수 있는 두 개의 파일, 즉, 두 파일을 만듭니다. jsonpath 및 jsonpatch 라이브러리의 조합을 사용하여 구성 파일을 편집하는 방법을 제공할 수 있습니다.
 
 
 ### <a id="config-samples"></a> 스토리지 클래스 이름 및/또는 클레임 크기 구성
@@ -109,7 +109,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
   "patch": [
     {
       "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "path": "$.spec.resources.storage-0.spec",
       "value": {
         "type":"Storage",
         "replicas":2,
@@ -134,7 +134,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 패치 파일을 적용합니다. **azdata bdc config patch** 명령을 사용하여 JSON 패치 파일의 변경 내용을 적용합니다. 다음 예제에서는 patch.json 파일을 대상 배포 구성 파일 custom.json에 적용합니다.
 
 ```bash
-azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
+azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
 ```
 
 ## <a name="next-steps"></a>다음 단계

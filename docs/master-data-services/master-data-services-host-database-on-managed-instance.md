@@ -13,12 +13,12 @@ author: v-redu
 ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4ca791a1a0ce46929f4d409d234f8dbc7efdec3
-ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
+ms.openlocfilehash: 0081ea193452e4e92938051bc7b4a40bc8631eaa
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/05/2019
-ms.locfileid: "68794898"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155377"
 ---
 # <a name="host-database-on-managed-instance"></a>관리 되는 인스턴스의 호스트 데이터베이스
 
@@ -108,7 +108,7 @@ SQL Server 설치 설치 마법사 또는 명령 프롬프트를 사용 하 여�
 
 **데이터베이스 및 웹 사이트 설정**
 
-1. Microsoft Azure Virtual Network를 연결 하 여 관리 되는 인스턴스에 연결할 수 있는지 확인 합니다.
+1. Azure Virtual Network을 연결 하 여 관리 되는 인스턴스에 연결할 수 있는지 확인 합니다.
 
     ![SQLServer2019-MI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "SQLServer2019-MI_P2SVPNConnect")  
 

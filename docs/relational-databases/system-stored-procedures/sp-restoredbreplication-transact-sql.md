@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0aeb3d94bf1b67674b59f756f330e1d460f0cde7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 92d0b6390e630e3dea33c603bab11e8649444ab1
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771119"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160712"
 ---
-# <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication(Transact-SQL)
+# <a name="sp_restoredbreplication-transact-sql"></a>sp_restoredbreplication(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   원본이 아닌 서버, 데이터베이스 또는 이렇게 하지 않으면 복제를 실행할 수 없는 시스템으로 데이터베이스를 복원할 때 복제 설정을 제거합니다. 복제된 데이터베이스를 백업을 실행했던 곳이 아닌 다른 서버 또는 데이터베이스로 복원할 때는 복제 설정을 보존할 수 없습니다. 복원 시 서버는 **sp_restoredbreplication** 을 직접 호출 하 여 복원 된 데이터베이스에서 복제 메타 데이터를 자동으로 제거 합니다.  
@@ -40,13 +40,17 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @srv_orig = ] 'original_server_name'`백업이 생성 된 서버의 이름입니다. *original_server_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @srv_orig = ] 'original_server_name'`  
+ 백업이 생성된 서버의 이름입니다. *original_server_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @db_orig = ] 'original_database_name'`백업 된 데이터베이스의 이름입니다. *original_database_name* 는 **sysname**이며 기본값은 없습니다.  
+`[ @db_orig = ] 'original_database_name'`  
+ 백업한 데이터베이스 이름입니다. *original_database_name* 는 **sysname**이며 기본값은 없습니다.  
   
-`[ @keep_replication = ] keep_replication` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @keep_replication = ] keep_replication`  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @perform_upgrade = ] perform_upgrade` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
+`[ @perform_upgrade = ] perform_upgrade`  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  **0** (성공) 또는 **1** (실패)  

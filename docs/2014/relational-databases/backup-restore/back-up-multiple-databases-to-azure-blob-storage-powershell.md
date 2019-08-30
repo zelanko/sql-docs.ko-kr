@@ -1,5 +1,5 @@
 ---
-title: PowerShell을 사용 하 여 Windows Azure Blob 저장소 서비스에 여러 데이터베이스를 백업 하려면 | Microsoft Docs
+title: PowerShell을 사용 하 여 Azure Blob Storage 서비스에 여러 데이터베이스 백업 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,18 +10,18 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 03a747825c20b1183977b6c5b8e7f46ef2aa034f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1be1f05ff09d85d29903e4e3be7f1f11600a7b1
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922577"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155027"
 ---
-# <a name="use-powershell-to-backup-multiple-databases-to-windows-azure-blob-storage-service"></a>PowerShell을 사용하여 여러 데이터베이스를 Windows Azure Blob Storage 서비스에 백업
-  이 항목에서는 PowerShell cmdlet을 사용하여 Windows Azure Blob 스토리지 서비스에 대한 백업을 자동화하는 데 사용할 수 있는 예제 스크립트를 제공합니다.  
+# <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>PowerShell을 사용 하 여 Azure Blob Storage 서비스에 여러 데이터베이스 백업
+  이 항목에서는 PowerShell cmdlet을 사용 하 여 Azure Blob storage 서비스에 대 한 백업을 자동화 하는 데 사용할 수 있는 샘플 스크립트를 제공 합니다.  
   
 ## <a name="overview-of-powershell-cmdlets-for-backup-and-restore"></a>백업 및 복원에 대한 PowerShell cmdlet 개요  
- `Backup-SqlDatabase` 및 `Restore-SqlDatabase`는 백업 및 복원 작업을 수행하는 데 사용할 수 있는 두 가지 주요 cmdlet입니다. 또한 **SqlCredential** cmdlet 집합과 같이 Windows Azure Blob 스토리지에 대한 백업을 자동화하는 데 필요할 수 있는 다른 cmdlet도 있습니다. 백업 및 복원 작업에서 사용되는, [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서 사용할 수 있는 PowerShell cmdlet의 목록은 다음과 같습니다.  
+ `Backup-SqlDatabase` 및 `Restore-SqlDatabase`는 백업 및 복원 작업을 수행하는 데 사용할 수 있는 두 가지 주요 cmdlet입니다. 또한 **sqlcredential** cmdlet 집합과 같이 Azure Blob 저장소에 대 한 백업을 자동화 하는 데 필요할 수 있는 다른 cmdlet도 있습니다. 백업 및 복원 작업에 사용 되는에서 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 사용할 수 있는 PowerShell cmdlet의 목록은 다음과 같습니다.  
   
  Backup-SqlDatabase  
  이 cmdlet은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 만드는 데 사용됩니다.  
@@ -30,7 +30,7 @@ ms.locfileid: "62922577"
  데이터베이스를 복원하는 데 사용됩니다.  
   
  New-SqlCredential  
- 이 cmdlet은 Microsoft Azure Storage에 대한 SQL Server 백업에 사용할 SQL 자격 증명을 만드는 데 사용됩니다. 자격 증명과 SQL Server 백업 및 복원에서 자격 증명의 사용에 대한 자세한 내용은 [Windows Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하십시오.  
+ 이 cmdlet은 Azure Storage SQL Server 백업에 사용할 SQL 자격 증명을 만드는 데 사용 됩니다. 자격 증명과 SQL Server 백업 및 복원에서 자격 증명에 대 한 자세한 내용은 [Azure Blob Storage 서비스를 사용 하 여 백업 및 복원 SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조 하세요.  
   
  Get-SqlCredential  
  이 cmdlet은 자격 증명 개체와 해당 속성을 검색하는 데 사용됩니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "62922577"
  이 cmdlet은 SQL 자격 증명 개체의 속성을 변경하거나 설정하는 데 사용됩니다.  
   
 > [!TIP]  
->  Credential cmdlet은 Windows Blob Storage에 대한 백업 및 복원 시나리오에서 사용됩니다.  
+>  자격 증명 cmdlet은 Azure Blob 저장소에 대 한 백업 및 복원 시나리오에서 사용 됩니다.  
   
 ### <a name="powershell-for-multi-database-multi-instance-backup-operations"></a>다중 데이터베이스, 다중 인스턴스 백업 작업에 대한 PowerShell  
  아래의 섹션들에는 여러 SQL Server 인스턴스에서 SQL 자격 증명을 만들고, 한 SQL Server 인스턴스의 모든 사용자 데이터베이스를 백업하는 등의 다양한 작업에 대한 스크립트가 포함되어 있습니다. 이러한 스크립트를 사용하여 사용자 환경의 요구 사항에 따라 백업 작업을 자동화하거나 예약할 수 있습니다. 여기에 있는 스크립트는 예로 제공되었으며 사용자 환경에 맞게 수정하거나 확장할 수 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "62922577"
   
      자세한 내용은 [Navigate SQL Server PowerShell Paths](../../powershell/navigate-sql-server-powershell-paths.md)을 참조하세요.  
   
-3.  변수 값을 변경하여 각 코드 예제를 독립적으로 시도할 수 있지만, Microsoft Azure Storage 계정과 SQL 자격 증명을 만드는 것은 사전 전제 조건이며 Microsoft Azure Blob Storage service에 대한 모든 백업 및 복원 작업에 필요합니다.  
+3.  변수 값을 변경 하 여 각 코드 예제를 독립적으로 시도할 수 있지만, Azure Storage 계정 및 SQL 자격 증명 만들기는 필수 구성 요소 이며 Azure Blob Storage 서비스에 대 한 모든 백업 및 복원 작업에 필요 합니다.  
   
 ### <a name="create-a-sql-credential-on-all-the-instances-of-sql-server"></a>모든 SQL Server 인스턴스에서 SQL 자격 증명 만들기  
  두 가지 예제 스크립트가 있으며 둘 모두 컴퓨터의 모든 SQL Server 인스턴스에서 SQL 자격 증명 “mybackupToURL”을 만듭니다. 간단한 첫 번째 예에서는 자격 증명을 만들고 예외를 트래핑하지 않습니다.  예를 들어 컴퓨터의 인스턴스 중 하나에 동일한 이름의 기존 자격 증명이 이미 있는 경우 스크립트가 실패합니다. 두 번째 예에서는 오류를 트래핑하여 스크립트가 계속 실행될 수 있도록 합니다.  
@@ -265,7 +265,7 @@ Backup-SqlDatabase -Database $s -BackupContainer $backupUrlContainer -SqlCredent
 ```  
   
 ## <a name="see-also"></a>관련 항목  
- [Windows Azure Blob Storage Service로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
+ [Azure Blob Storage 서비스를 사용 하 여 백업 및 복원 SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)   
  [URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결](sql-server-backup-to-url-best-practices-and-troubleshooting.md)  
   
   

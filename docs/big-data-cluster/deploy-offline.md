@@ -5,16 +5,16 @@ description: SQL Server 빅 데이터 클러스터의 오프라인 배포를 수
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 243771141bbd255e045ef0a1667235f1c414777b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652364"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155265"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>SQL Server 빅 데이터 클러스터의 오프라인 배포 수행
 
@@ -33,7 +33,7 @@ ms.locfileid: "69652364"
 > [!TIP]
 > 다음 단계는 프로세스를 설명한 것입니다. 그러나 작업을 간소화하기 위해 이러한 명령을 수동으로 실행하는 대신 [자동화된 스크립트](#automated)를 사용할 수 있습니다.
 
-1. 다음 명령을 반복하여 빅 데이터 클러스터 컨테이너 이미지를 끌어옵니다. `<SOURCE_IMAGE_NAME>`을 각 [이미지 이름](#images)으로 바꿉니다. `<SOURCE_DOCKER_TAG>`를 **2019-CTP3.2-ubuntu**와 같은 빅 데이터 클러스터 릴리스의 태그로 바꿉니다.  
+1. 다음 명령을 반복하여 빅 데이터 클러스터 컨테이너 이미지를 끌어옵니다. `<SOURCE_IMAGE_NAME>`을 각 [이미지 이름](#images)으로 바꿉니다. 를 `<SOURCE_DOCKER_TAG>` **2019-RC1-ubuntu**와 같은 빅 데이터 클러스터 릴리스에 대 한 태그로 바꿉니다.  
 
    ```PowerShell
    docker pull mcr.microsoft.com/mssql/bdc/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -60,27 +60,31 @@ ms.locfileid: "69652364"
 ### <a id="images"></a> 빅 데이터 클러스터 컨테이너 이미지
 
 오프라인 설치에는 다음과 같은 빅 데이터 클러스터 컨테이너 이미지가 필요합니다.
+- **mssql-app-service-proxy**
+- **mssql-제어-watchdog**
+- **mssql-controller**
+- **mssql-dns**
+- **mssql-hadoop**
+- **mssql-mleap-serving-runtime**
+- **mssql-mlserver-py-runtime**
+- **mssql-mlserver-r-runtime**
+- **mssql-monitor-collectd**
+- **mssql-monitor-elasticsearch**
+- **mssql-monitor-fluentbit**
+- **mssql-monitor-grafana**
+- **mssql-monitor-influxdb**
+- **mssql-monitor-kibana**
+- **mssql-monitor-telegraf**
+- **mssql-보안-domainctl**
+- **mssql-security-knox**
+- **mssql-security-support**
+- **mssql-server**
+- **mssql-server-controller**
+- **mssql-server-data**
+- **mssql-서버-ha**
+- **mssql-service-proxy**
+- **mssql-ssis-app-runtime**
 
- - **mssql-appdeploy-init**
- - **mssql-monitor-fluentbit**
- - **mssql-monitor-collectd**
- - **mssql-server-data**
- - **mssql-hadoop**
- - **mssql-monitor-elasticsearch**
- - **mssql-monitor-influxdb**
- - **mssql-security-knox**
- - **mssql-mlserver-r-runtime**
- - **mssql-mlserver-py-runtime**
- - **mssql-controller**
- - **mssql-server-controller**
- - **mssql-monitor-grafana**
- - **mssql-monitor-kibana**
- - **mssql-service-proxy**
- - **mssql-app-service-proxy**
- - **mssql-ssis-app-runtime**
- - **mssql-monitor-telegraf**
- - **mssql-mleap-serving-runtime**
- - **mssql-security-support**
 
 ## <a id="automated"></a> 자동화된 스크립트
 
@@ -113,7 +117,7 @@ ms.locfileid: "69652364"
 
 ## <a name="install-tools-offline"></a>도구 오프라인 설치
 
-빅 데이터 클러스터 배포를 사용하려면 **Python**, **azdata** 및 **kubectl**을 비롯한 여러 가지 도구가 필요합니다. 다음 단계를 사용하여 이러한 도구를 오프라인 서버에 설치합니다.
+빅 데이터 클러스터 배포에는 **Python**, `azdata`및 **kubectl**를 비롯 한 여러 도구가 필요 합니다. 다음 단계를 사용하여 이러한 도구를 오프라인 서버에 설치합니다.
 
 ### <a id="python"></a> python 오프라인 설치
 
@@ -135,13 +139,13 @@ ms.locfileid: "69652364"
 
 ### <a id="azdata"></a> azdata 오프라인 설치
 
-1. 인터넷에 액세스할 수 있고 [Python](https://wiki.python.org/moin/BeginnersGuide/Download)이 설치된 머신에서 다음 명령을 실행하여 **azdata** 패키지를 현재 폴더로 모두 다운로드합니다.
+1. 인터넷에 연결 된 컴퓨터와 [Python](https://wiki.python.org/moin/BeginnersGuide/Download)에서 다음 명령을 실행 하 여 현재 폴더에 `azdata` 패키지를 모두 다운로드 합니다.
 
    ```PowerShell
    pip download -r https://aka.ms/azdata
    ```
 
-1. 다운로드한 패키지와 **requirements.txt** 파일을 대상 머신에 복사합니다.
+1. 다운로드 한 패키지와 `requirements.txt` 파일을 대상 컴퓨터에 복사 합니다.
 
 1. 대상 머신에서 다음 명령을 실행하고 이전 파일을 복사한 폴더를 지정합니다.
 
@@ -159,7 +163,7 @@ ms.locfileid: "69652364"
 
 ## <a name="deploy-from-private-repository"></a>프라이빗 리포지토리에서 배포
 
-프라이빗 리포지토리에서 배포하려면 [배포 가이드](deployment-guidance.md)에 설명된 단계를 사용하되, 프라이빗 Docker 리포지토리 정보를 지정하는 사용자 지정 배포 구성 파일을 사용합니다. 다음 **azdata** 명령은 **control.json**이라는 사용자 지정 배포 구성 파일의 Docker 설정을 변경하는 방법을 보여 줍니다.
+프라이빗 리포지토리에서 배포하려면 [배포 가이드](deployment-guidance.md)에 설명된 단계를 사용하되, 프라이빗 Docker 리포지토리 정보를 지정하는 사용자 지정 배포 구성 파일을 사용합니다. 다음 `azdata` 명령은 이라는 `control.json`사용자 지정 배포 구성 파일에서 Docker 설정을 변경 하는 방법을 보여 줍니다.
 
 ```bash
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.repository=<your-docker-repository>"
@@ -167,7 +171,7 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 azdata bdc config replace --config-file custom/control.json --json-values "$.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
-배포에서 docker 사용자 이름 및 암호를 묻는 메시지가 표시되거나, **DOCKER_USERNAME** 및 **DOCKER_PASSWORD** 환경 변수에 지정할 수 있습니다.
+배포에서 docker 사용자 이름 및 암호를 묻는 메시지를 표시 하거나 `DOCKER_USERNAME` 및 `DOCKER_PASSWORD` 환경 변수에 지정할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 

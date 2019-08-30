@@ -5,27 +5,39 @@ description: 이 문서에서는 (미리 보기)의 [!INCLUDE[big-data-clusters-
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653433"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70160691"
 ---
-# <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server 빅 데이터 클러스터의 릴리스 정보
+# <a name="release-notes-for-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터의 릴리스 정보
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 이 문서에서는 최신 버전의 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]에 대 한 업데이트 및 알려진 문제를 나열 합니다.
 
-[!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+## <a id="rc"></a>릴리스 후보 (8 월)
 
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
+다음 섹션에서는 SQL Server 2019 릴리스 후보에 있는 빅 데이터 클러스터의 새로운 기능 및 알려진 문제에 대해 설명 합니다.
+
+### <a name="whats-new"></a>What's New
+
+|새로운 기능 또는 업데이트 | 설명 |
+|:---|:---|
+|Always On 가용성 그룹 SQL Server |SQL Server 빅 데이터 클러스터를 배포 하는 경우 다음을 제공 하는 가용성 그룹을 만들도록 배포를 구성할 수 있습니다.<br/><br/>-고가용성 <br/><br/>-읽기-축소 <br/><br/>-데이터 풀에 데이터를 삽입 하는 스케일 아웃<br/><br>[고가용성을 사용 하 여 배포를](../big-data-cluster/deployment-high-availability.md)참조 하세요. |
+|`azdata` |[설치 관리자](./deploy-install-azdata-linux-package.md) 를 사용 하는 도구에 대 한 간단한 설치<br/><br/>[`azdata notebook`명령](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`명령](./reference-azdata-bdc-status.md) |
+|Azure Data Studio|[Azure Data Studio의 릴리스 후보 빌드를 다운로드](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc)합니다.<br/><br/>SQL Server 2019 가이드 Jupyter 책을 통해 전자 필기장 문제 해결을 추가 했습니다.<br/><br/>컨트롤러 로그인 환경이 추가 되었습니다.<br/><br/>서비스 끝점을 확인 하 고, 클러스터 상태를 보고, 노트북 문제 해결을 위한 컨트롤러 대시보드가 추가 되었습니다.<br/><br/>향상 된 노트북 셀 출력/편집 성능.|
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>알려진 문제
+
+SQL Server 2019 빅 데이터 클러스터 릴리스 후보 새로 고침 빌드 번호 `15.0.1900.47`는입니다.
 
 ## <a id="ctp32"></a>CTP 3.2(7월)
 
@@ -33,12 +45,12 @@ ms.locfileid: "69653433"
 
 ### <a name="whats-new"></a>What's New
 
-|새로운 기능 또는 업데이트 | 세부 정보 |
+|새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
 |퍼블릭 미리 보기 |CTP 3.2 이전에는 등록한 얼리어답터가 SQL Server 빅 데이터 클러스터를 사용할 수 있었습니다. 이번 릴리스에서는 누구나 빅 데이터 클러스터 SQL Server 기능을 경험할 수 있습니다. <br/><br/> [시작 하기를 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](deploy-get-started.md)참조 하세요.|
 |`azdata` |CTP 3.2는 클러스터 관리자가 REST API를 통해 빅 데이터 클러스터를 부트스트랩하고 관리할 수 있도록 하는 Python으로 작성된 `azdata` 명령줄 유틸리티를 도입했습니다. `azdata`는 `mssqlctl`을 대신합니다. [`azdata` 설치](deploy-install-azdata.md)를 참조하세요. |
 |PolyBase |이제 외부 테이블 열 이름이 SQL Server, Oracle, Teradata, MongoDB 및 ODBC 데이터 원본을 쿼리하는 데 사용됩니다. 이전 CTP 릴리스에서는 외부 데이터 원본의 열이 전적으로 서수 위치에 따라 바인딩되고 EXTERNAL TABLE 정의에 지정된 이름이 사용되지 않았습니다. |
-|HDFS 계층화 새로 고침 |원격 데이터의 최신 스냅샷에 대해 기존 탑재를 새로 고칠 수 있도록 HDFS 계층화의 새로 고침 기능을 도입합니다. [HDFS 계층화](hdfs-tiering.md)를 참조하세요. |
+|HDFS 계층화 새로 고침 |원격 데이터의 최신 스냅숏에 대해 기존 탑재를 새로 고칠 수 있도록 HDFS 계층화의 새로 고침 기능을 도입합니다. [HDFS 계층화](hdfs-tiering.md)를 참조하세요. |
 |Notebook 기반 문제 해결 |CTP 3.2에서는 SQL Server 빅 데이터 클러스터 구성 요소의 [배포](deploy-notebooks.md)와 [검색, 진단 및 문제 해결](manage-notebooks.md)에 도움이 되는 Jupyter Notebook이 도입되었습니다. |
 | &nbsp; | &nbsp; |
 
@@ -48,13 +60,13 @@ ms.locfileid: "69653433"
 
 #### <a name="polybase"></a>PolyBase
 
-- 이 릴리스에서는 개수가 1000개를 초과할 경우 TOP 절의 푸시다운이 지원되지 않습니다. 이 경우 원격 데이터 원본의 모든 행을 읽습니다.
+- 이 릴리스에서는 개수가 1000개를 초과할 경우 TOP 절의 푸시다운이 지원되지 않습니다. 이 경우 원격 데이터 원본의 모든 행을 읽습니다. (릴리스 후보에서 수정 됨)
 
 - 이 릴리스에서는 외부 데이터 원본에 대한 공동 배치 조인의 푸시다운이 지원되지 않습니다. 예를 들어 ROUND_ROBIN 배포 유형의 데이터 풀 테이블 2개를 푸시다운하면 조인 작업을 수행하기 위해 SQL 마스터 인스턴스 또는 컴퓨팅 풀 인스턴스로 데이터를 가져옵니다.
 
 #### <a name="compute-pool"></a>컴퓨팅 풀
 
-- 빅 데이터 클러스터 배포는 인스턴스 1개가 포함된 컴퓨팅 풀만 지원합니다.
+- 빅 데이터 클러스터 배포는 인스턴스 1개가 포함된 컴퓨팅 풀만 지원합니다. (릴리스 후보에서 수정 됨)
 
 #### <a name="storage-pool"></a>스토리지 풀
 
@@ -70,7 +82,7 @@ ms.locfileid: "69653433"
 
 ### <a name="whats-new"></a>What's New
 
-| 새로운 기능 또는 업데이트 | 세부 정보 |
+| 새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
 | `mssqlctl` 명령 변경 내용 | `mssqlctl cluster` 명령이 `mssqlctl bdc`로 변경되었습니다. 자세한 내용은 [`mssqlctl`참조](reference-azdata.md)를 참조하세요. |
 | 새로운 `mssqlctl` 상태 명령 및 클러스터 관리 포털 제거 | 이 릴리스에서는 클러스터 관리 포털이 제거 되었습니다. 기존의 모니터링 명령을 보완하는 새로운 상태 명령이 `mssqlctl`에 추가되었습니다. |
@@ -135,7 +147,7 @@ ms.locfileid: "69653433"
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>애플리케이션 개발
+#### <a name="application-deployment"></a>애플리케이션 배포
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 
@@ -164,7 +176,7 @@ ms.locfileid: "69653433"
 
 ### <a name="whats-new"></a>What's New
 
-| 새로운 기능 또는 업데이트 | 세부 정보 |
+| 새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
 | **mssqlctl** 업데이트 | 여러 **mssqlctl** [명령 및 매개 변수가 업데이트되었습니다](reference-azdata.md). 예를 들어 **mssqlctl login** 명령은 이제 컨트롤러 사용자 이름 및 엔드포인트를 대상으로 하도록 업데이트되었습니다. |
 | 스트리지 향상 | 로그 및 데이터에 대해 서로 다른 스토리지 구성을 지원합니다. 또한 빅 데이터 클러스터에 대한 영구적 볼륨 클레임 수가 감소했습니다. |
@@ -239,7 +251,7 @@ ms.locfileid: "69653433"
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>애플리케이션 개발
+#### <a name="application-deployment"></a>애플리케이션 배포
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 
@@ -263,7 +275,7 @@ ms.locfileid: "69653433"
 
 ### <a name="whats-new"></a>What's New
 
-| 새로운 기능 또는 업데이트 | 세부 정보 |
+| 새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
 | 배포 프로필 | 환경 변수 대신 빅 데이터 클러스터 배포를 위해 기본 및 사용자 지정된 [배포 구성 JSON 파일](deployment-guidance.md#configfile)을 사용합니다. |
 | 프롬프트된 배포 | `azdata cluster create`는 이제 기본 배포에 필요한 설정을 묻는 메시지를 표시합니다. |
@@ -317,7 +329,7 @@ ms.locfileid: "69653433"
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>애플리케이션 개발
+#### <a name="application-deployment"></a>애플리케이션 배포
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 
@@ -351,7 +363,7 @@ ms.locfileid: "69653433"
 
 ### <a name="whats-new"></a>What's New
 
-| 새로운 기능 또는 업데이트 | 세부 정보 |
+| 새로운 기능 또는 업데이트 | 설명 |
 |:---|:---|
 | Spark에서 TensorFlow를 사용하여 딥 러닝을 실행하기 위한 GPU 지원 지침. | [GPU 지원이 포함된 빅 데이터 클러스터를 배포하고 TensorFlow를 실행](spark-gpu-tensorflow.md)합니다. |
 | **SqlDataPool** 및 **SqlStoragePool** 데이터 원본은 더 이상 기본적으로 생성되지 않습니다. | 필요에 따라 수동으로 만듭니다. [알려진 문제](#externaltablesctp24)를 참조하세요. |
@@ -448,7 +460,7 @@ make: *** [deploy-clean] Error 2
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>애플리케이션 개발
+#### <a name="application-deployment"></a>애플리케이션 배포
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 
@@ -482,7 +494,7 @@ make: *** [deploy-clean] Error 2
 
 ### <a name="whats-new"></a>What's New
 
-| 새로운 기능 또는 업데이트 | 세부 정보 |
+| 새로운 기능 또는 업데이트 | 설명 |
 | :---------- | :------ |
 | IntelliJ의 빅 데이터 클러스터에 Spark 작업을 제출합니다. | [IntelliJ의에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Spark 작업 제출](spark-submit-job-intellij-tool-plugin.md) |
 | 애플리케이션 배포 및 클러스터 관리를 위한 일반 CLI. | [앱을 배포 하는 방법[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
@@ -570,7 +582,7 @@ kubeadm을 사용하여 여러 머신에 Kubernetes를 배포하는 경우 빅 �
 
 - 문자 데이터 형식을 사용하는 외부 테이블을 Oracle에 만드는 경우 Azure Data Studio 가상화 마법사는 외부 테이블 정의에서 해당 열을 VARCHAR로 해석합니다. 이로 인해 외부 테이블 DDL에서 오류가 발생합니다. NVARCHAR2 형식을 사용하도록 Oracle 스키마를 수정하거나, 마법사를 사용하는 대신 수동으로 EXTERNAL TABLE 문을 만들고 NVARCHAR를 지정합니다.
 
-#### <a name="application-deployment"></a>애플리케이션 개발
+#### <a name="application-deployment"></a>애플리케이션 배포
 
 - RESTful API에서 R, Python 또는 MLeap 애플리케이션을 호출하는 경우 5분 후에 호출이 시간 초과됩니다.
 

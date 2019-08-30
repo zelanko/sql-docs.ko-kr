@@ -15,18 +15,18 @@ ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c43fbe12b8449fb231ee9a2f479ff17ac0281493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec94f8387d7b833a80cd4df09f7d4208974d40a7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62922277"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154828"
 ---
 # <a name="create-a-full-database-backup-sql-server"></a>전체 데이터베이스 백업 만들기(SQL Server)
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]또는 PowerShell을 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)]에서 전체 데이터베이스 백업을 만드는 방법에 대해 설명합니다.  
   
 > [!NOTE]  
->  Windows Azure Blob 저장소 서비스로 SQL Server 백업하는 방법에 대한 자세한 내용은 [Windows Azure Blob 저장소 서비스로 SQL Server 백업 및 복원](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조하십시오.  
+>  Azure Blob storage 서비스에 대 한 SQL Server 백업에 대 한 자세한 내용은 [Azure Blob Storage 서비스로 백업 및 복원 SQL Server](sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)을 참조 하세요.  
   
  **항목 내용**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "62922277"
   
      [보안](#Security)  
   
--   **전체 데이터베이스를 만들려면 사용 하 여 백업:**  
+-   **다음을 사용 하 여 전체 데이터베이스 백업을 만듭니다.**  
   
      다른 도구는 [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -89,7 +89,7 @@ ms.locfileid: "62922277"
   
 3.  데이터베이스를 마우스 오른쪽 단추로 클릭하고 **태스크**를 가리킨 다음 **백업**을 클릭합니다. **데이터베이스 백업** 대화 상자가 나타납니다.  
   
-4.  에 `Database` 목록 상자에서 데이터베이스 이름을 확인 합니다. 필요에 따라 목록에서 다른 데이터베이스를 선택할 수 있습니다.  
+4.  `Database` 목록 상자에서 데이터베이스 이름을 확인 합니다. 필요에 따라 목록에서 다른 데이터베이스를 선택할 수 있습니다.  
   
 5.  모든 복구 모델(**전체**, **대량 로그** 또는 **단순**)에서 데이터베이스 백업을 수행할 수 있습니다.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62922277"
     > [!NOTE]  
     >  **차등** 옵션을 선택하는 경우 복사 전용 백업을 만들 수 없습니다.  
   
-8.  에 대 한 **Backup 구성 요소**, 클릭 `Database`합니다.  
+8.  **백업 구성 요소**에 대해 `Database`를 클릭 합니다.  
   
 9. **이름** 입력란에 제시된 기본 백업 세트 이름을 사용하거나 다른 이름을 입력합니다.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "62922277"
          이 옵션에는 **새 미디어 세트 이름** 입력란에 이름을 입력하고 필요에 따라 **새 미디어 세트 설명** 입력란에 미디어 세트에 대한 설명을 입력합니다.  
   
         > [!IMPORTANT]  
-        >  **일반** 페이지에서 **URL** 을 선택한 경우 이 옵션을 사용할 수 없습니다. 이러한 작업은 Windows Azure 스토리지에 백업하는 경우 지원되지 않습니다.  
+        >  **일반** 페이지에서 **URL** 을 선택한 경우 이 옵션을 사용할 수 없습니다. 이러한 작업은 Azure storage로 백업할 때 지원 되지 않습니다.  
   
 14. **안정성** 섹션에서 필요에 따라 다음을 선택합니다.  
   
@@ -161,7 +161,7 @@ ms.locfileid: "62922277"
   
 18. [!INCLUDE[ssEnterpriseEd10](../../../includes/ssenterpriseed10-md.md)] 이상에서는 [백업 압축](backup-compression-sql-server.md)을 지원합니다. 기본적으로 백업은 **백업-압축 기본값** 서버 구성 옵션의 값에 따라 압축됩니다. 그러나 현재 서버 수준 기본값에 관계없이 **백업 압축**을 선택하여 백업을 압축하고, **백업 압축 안 함**을 선택하여 압축을 방지할 수 있습니다.  
   
-     **확인 하거나 현재 백업 압축 기본값을 변경 하려면**  
+     **현재 백업 압축 기본값을 보거나 변경 하려면**  
   
     -   [backup compression default 서버 구성 옵션 보기 또는 구성](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)  
   
@@ -204,7 +204,7 @@ ms.locfileid: "62922277"
          ENCRYPTION (ALGORITHM, SERVER CERTIFICATE |ASYMMETRIC KEY)  
          SQL Server 2014 이상에서만 사용할 암호화 알고리즘과 암호화 보안에 사용할 인증서 또는 비대칭 키를 지정합니다.  
   
-         설명을 **=** {0} **' *`text`* '**  |  **@** _text_ 변수_ }  
+         설명 **=** { ***'`text`*** text_variable | } **@**  
          백업 세트를 설명하는 자유 형식의 텍스트를 지정합니다. 문자열을 최대 255자까지 지정할 수 있습니다.  
   
          NAME **=** { *backup_set_name* |  **@** _backup_set_name_var_ }  
@@ -272,7 +272,7 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> PowerShell 사용  
   
-1.  `Backup-SqlDatabase` cmdlet을 사용합니다. 명시적으로 전체 데이터베이스 백업 임을 나타내기 위해를 지정 합니다 **-BackupAction** 매개 변수는 기본값을 사용 하 여 `Database`. 전체 데이터베이스 백업의 경우 이 매개 변수는 선택 사항입니다.  
+1.  `Backup-SqlDatabase` cmdlet을 사용합니다. 전체 데이터베이스 백업 임을 명시적으로 나타내기 위해 **-backupaction** 매개 변수를 기본값인 `Database`로 지정 합니다. 전체 데이터베이스 백업의 경우 이 매개 변수는 선택 사항입니다.  
   
      다음 예에서는 서버 인스턴스 `MyDB` 의 기본 백업 위치에 `Computer\Instance`데이터베이스의 전체 데이터베이스 백업을 만듭니다. 선택 사항으로, 이 예에서는 `-BackupAction Database`를 지정합니다.  
   
@@ -291,7 +291,7 @@ GO
   
 -   [차등 데이터베이스 백업 만들기&#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   
--   [데이터베이스 백업 복원 &#40;SQL Server Management Studio&#41;](restore-a-database-backup-using-ssms.md)  
+-   [데이터베이스 백업 &#40;SQL Server Management Studio 복원&#41;](restore-a-database-backup-using-ssms.md)  
   
 -   [단순 복구 모델에서 데이터베이스 백업 복원&#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   

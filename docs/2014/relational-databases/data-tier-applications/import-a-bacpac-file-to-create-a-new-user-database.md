@@ -26,12 +26,12 @@ ms.assetid: 736d8d9a-39f1-4bf8-b81f-2e56c134d12e
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 12e5d699615018c2d9e20a8fd49953931850a106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 140f3da91af4179302a17604eb6c85b533dcfc2b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62918188"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154645"
 ---
 # <a name="import-a-bacpac-file-to-create-a-new-user-database"></a>BACPAC 파일을 가져와 새 사용자 데이터베이스 만들기
   DAC(데이터 계층 애플리케이션) 파일(.bacpac 파일)을 가져와 [!INCLUDE[ssDE](../../includes/ssde-md.md)]의 새 인스턴스에서 또는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 데이터를 사용하여 원본 데이터베이스의 복제본을 만듭니다. 내보내기 및 가져오기 작업을 결합하여 인스턴스 간에 DAC나 데이터베이스를 마이그레이션하거나 논리 백업을 만들 수 있습니다. 예를 들어 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 배포된 데이터베이스의 온-프레미스 복사본을 만들 수 있습니다.  
@@ -101,9 +101,9 @@ ms.locfileid: "62918188"
   
 -   **로컬 디스크에서 가져오기** - **찾아보기...** 를 클릭하고 로컬 컴퓨터로 이동하거나 제공된 공간에서 경로를 지정합니다. 경로 이름에 파일 이름과 .bacpac 확장명을 모두 포함해야 합니다.  
   
--   **Windows Azure에서 가져오기** -Windows Azure 컨테이너에서 BACPAC 파일을 가져옵니다. 이 옵션의 유효성을 검사하려면 Windows Azure 컨테이너에 연결해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료될 때까지 해당 위치에 유지됩니다.  
+-   **Azure에서 가져오기** -azure 컨테이너에서 BACPAC 파일을 가져옵니다. 이 옵션의 유효성을 검사 하려면 Azure 컨테이너에 연결 해야 합니다. 또한 이 옵션을 사용하려면 임시 파일을 보관할 로컬 디렉터리를 지정해야 합니다. 지정된 위치에 임시 파일이 만들어지고 작업이 완료될 때까지 해당 위치에 유지됩니다.  
   
-     Windows Azure를 검색할 때 단일 계정으로 컨테이너 간을 전환할 수 있습니다. 가져오기 작업을 계속하려면 단일 .bacpac 파일을 지정해야 합니다. **이름**, **크기**또는 **수정한 날짜**별로 열을 정렬할 수 있습니다.  
+     Azure를 검색할 때 단일 계정으로 컨테이너 간을 전환할 수 있습니다. 가져오기 작업을 계속하려면 단일 .bacpac 파일을 지정해야 합니다. **이름**, **크기**또는 **수정한 날짜**별로 열을 정렬할 수 있습니다.  
   
      계속하려면 가져올 .bacpac 파일을 지정하고 **열기**를 클릭합니다.  
   
@@ -120,13 +120,13 @@ ms.locfileid: "62918188"
   
  계속하려면 **다음**을 클릭합니다.  
   
- **SQL database:**  
+ **SQL Database:**  
   
 -   **새 데이터베이스 이름** – 가져온 데이터베이스의 이름을 지정합니다.  
   
--   **에디션의 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**  -지정할 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 비즈니스 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 웹입니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]버전에 대한 자세한 내용은 이 [SQL 데이터베이스](http://www.windowsazure.com/home/tour/database/) 웹 사이트를 참조하세요.  
+-   버전-비즈니스 또는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 웹[!INCLUDE[ssSDS](../../includes/sssds-md.md)] 을 지정 합니다. **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** [!INCLUDE[ssSDS](../../includes/sssds-md.md)]버전에 대한 자세한 내용은 이 [SQL 데이터베이스](http://www.windowsazure.com/home/tour/database/) 웹 사이트를 참조하세요.  
   
--   **최대 데이터베이스 크기 (GB)** -드롭 다운 메뉴를 사용 하 여 데이터베이스의 최대 크기를 지정 합니다.  
+-   **최대 데이터베이스 크기 (GB)** -드롭다운 메뉴를 사용 하 여 데이터베이스의 최대 크기를 지정 합니다.  
   
  계속하려면 **다음**을 클릭합니다.  
   

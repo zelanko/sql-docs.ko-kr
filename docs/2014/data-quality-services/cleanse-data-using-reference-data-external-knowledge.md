@@ -10,12 +10,12 @@ ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 7d7ab8fee8dfb9aabd32922d297f61ae493a5bd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d96dd4d1daadd829c89e142738008b93f4ec9b3b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480912"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154504"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>참조 데이터(외부) 기술 자료를 사용하여 데이터 정리
   이 항목에서는 참조 데이터 공급자의 기술 자료를 사용하여 데이터를 정리하는 방법에 대해 설명합니다. [DQS &#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)에서 설명한 대로 정리 작업을 실행하는 모든 단계는 참조 데이터 공급자의 기술 자료를 사용하여 데이터를 정리하는 경우와 같지만 이 항목에서는 DQS([!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)])에서 참조 데이터 서비스를 사용하여 데이터를 정리하는 방법을 설명합니다.  
@@ -33,16 +33,16 @@ ms.locfileid: "65480912"
 -   도메인을 참조 데이터 서비스와 매핑하는 동안 지정한 **자동 수정 임계값** 및 **최소 신뢰도** 값을 기반으로 신뢰도 수준에 따라 도메인 값이 자동으로 수정되거나 제안됩니다.  
   
     > [!NOTE]  
-    >  참조 데이터 서비스에서 기술 자료를 사용하여 데이터를 정리하는 동안 도메인을 참조 데이터 서비스에 매핑하는 도중 지정한 임계값이 적용되며 **구성** 섹션의 **일반 설정** 탭에서 지정한 임계값은 적용되지 않습니다. 참조 데이터 정리에 대 한 임계값을 지정 하는 방법에 대 한 내용은의 9 단계를 참조 하세요 [참조 데이터에 도메인 또는 복합 도메인 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)합니다.  
+    >  참조 데이터 서비스에서 기술 자료를 사용하여 데이터를 정리하는 동안 도메인을 참조 데이터 서비스에 매핑하는 도중 지정한 임계값이 적용되며 **구성** 섹션의 **일반 설정** 탭에서 지정한 임계값은 적용되지 않습니다. 참조 데이터 정리에 대 한 임계값을 지정 하는 방법에 대 한 자세한 내용은 [참조 데이터에 도메인 또는 복합 도메인 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)의 9 단계를 참조 하세요.  
   
--   도메인 값은 다음으로 분류 됩니다. **제안**, **새로 만들기**, **잘못됨**, **수정됨** 및 **수정**으로 분류됩니다.  
+-   도메인 값은 다음과 같이 분류 됩니다. **제안**, **새로 만들기**, **잘못됨**, **수정됨** 및 **수정**으로 분류됩니다.  
   
 -   추가 데이터가 원본에 연결되고 정보를 정리된 데이터와 함께 내보내기에 사용할 수 있습니다.  
   
 ## <a name="before-you-begin"></a>시작하기 전에  
   
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
- DQS 기술 자료의 필수 도메인이 알맞은 참조 데이터 서비스에 매핑되어 있어야 합니다. 또한 정리할 데이터 유형에 대한 정보가 기술 자료에 포함되어 있어야 합니다. 예를 들어 미국 주소가 포함된 원본 데이터를 정리하려면 미국 주소의 "고품질" 데이터를 제공하는 참조 데이터 서비스 공급자로 도메인을 매핑해야 합니다. 자세한 내용은 [참조 데이터에 도메인 또는 복합 도메인 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)합니다.  
+ DQS 기술 자료의 필수 도메인이 알맞은 참조 데이터 서비스에 매핑되어 있어야 합니다. 또한 정리할 데이터 유형에 대한 정보가 기술 자료에 포함되어 있어야 합니다. 예를 들어 미국 주소가 포함된 원본 데이터를 정리하려면 미국 주소의 "고품질" 데이터를 제공하는 참조 데이터 서비스 공급자로 도메인을 매핑해야 합니다. 자세한 내용은 [참조 데이터에 도메인 또는 복합 도메인 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)을 참조 하세요.  
   
 ###  <a name="Security"></a> 보안  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65480912"
  데이터 정리를 수행하려면 DQS_MAIN 데이터베이스에 대한 dqs_kb_editor 또는 dqs_kb_operator 역할이 있어야 합니다.  
   
 ##  <a name="Cleanse"></a> 참조 데이터 기술 자료를 사용하여 데이터 정리  
- 이전 항목에서 매핑한 것 도메인을 사용 하 여 동일한 예제를 사용 하 여 계속 예정 [참조 데이터에 도메인 또는 복합 도메인 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md), Windows Azure Marketplace의 Melissa Data service를 사용 하 여 합니다. 이제 같은 도메인을 사용하여 샘플 US 주소 몇 개를 정리합니다. 데이터를 정리하는 단계는 [DQS&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)에 설명된 것과 동일합니다. 그러나 프로세스를 진행하는 동안 필요할 때마다 다시 설명하겠습니다.  
+ 이전 항목에서 매핑한 도메인을 사용 하는 것과 동일한 예제를 사용 하 여 [참조 데이터에 도메인 또는 복합 도메인을 연결](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)하 고 Melissa 데이터 서비스를 사용 하 여 Azure Marketplace 합니다. 이제 같은 도메인을 사용하여 샘플 US 주소 몇 개를 정리합니다. 데이터를 정리하는 단계는 [DQS&#40;내부&#41; 기술 자료를 사용하여 데이터 정리](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md)에 설명된 것과 동일합니다. 그러나 프로세스를 진행하는 동안 필요할 때마다 다시 설명하겠습니다.  
   
 1.  데이터 품질 프로젝트를 만들고 **정리** 작업을 선택합니다. [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md)을 참조하세요.  
   

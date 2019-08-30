@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d56e3109c0820b800bbd72c9cc86bed9b7a09eea
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: e762354a2f391ba4c52f8bc0aa5fece537c79288
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030299"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155367"
 ---
 # <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 알려진 문제
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -166,7 +166,7 @@ SQL Server 2016 계산 컨텍스트에서 R 코드를 실행 하면 다음과 �
 
 ### <a name="9-remote-compute-contexts-are-blocked-by-a-firewall-in-sql-server-instances-that-are-running-on-azure-virtual-machines"></a>9. 원격 계산 컨텍스트는 Azure virtual machines에서 실행 되는 SQL Server 인스턴스의 방화벽에 의해 차단 됩니다.
 
-Microsoft Azure 가상 컴퓨터 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 에를 설치한 경우 가상 컴퓨터의 작업 영역을 사용 해야 하는 계산 컨텍스트를 사용 하지 못할 수 있습니다. 이는 기본적으로 Azure 가상 컴퓨터의 방화벽에 로컬 R 사용자 계정에 대 한 네트워크 액세스를 차단 하는 규칙이 포함 되어 있기 때문입니다.
+Azure 가상 컴퓨터에 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 를 설치한 경우 가상 컴퓨터의 작업 영역을 사용 해야 하는 계산 컨텍스트를 사용 하지 못할 수 있습니다. 이는 기본적으로 Azure 가상 컴퓨터의 방화벽에 로컬 R 사용자 계정에 대 한 네트워크 액세스를 차단 하는 규칙이 포함 되어 있기 때문입니다.
 
 해결 방법으로, Azure VM에서 **고급 보안이 포함 된 Windows 방화벽**을 열고 **아웃 바운드 규칙**을 선택한 후 다음 규칙을 사용 하지 않도록 설정 합니다. **SQL Server 인스턴스 MSSQLSERVER의 R 로컬 사용자 계정에 대 한 네트워크 액세스를 차단**합니다. 규칙을 사용 하도록 설정 된 상태로 둘 수도 있지만 보안 속성은 보안을 **허용**하도록 변경 합니다.
 

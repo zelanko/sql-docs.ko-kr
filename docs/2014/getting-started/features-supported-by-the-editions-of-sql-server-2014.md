@@ -10,25 +10,25 @@ ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f23c3ff4d5bf55609e1dab2462b19a5fa273986f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e50da40b080b6b6a45fb7a0cccb6c5cedc7841e7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62843502"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154201"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>SQL Server 2014 버전에서 지원하는 기능
 
 
   이 항목은 다른 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]버전에서 지원되는 기능의 세부 정보를 제공합니다. 
 
- > **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 180 일 평가 기간 동안 평가 버전에서 사용할 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [평가판 소프트웨어 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=190955)를 참조하세요.  
+ > **참고:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 은 (는) 180 일 평가판 기간 동안 평가 버전에서 사용할 수 있습니다. 자세한 내용은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [평가판 소프트웨어 웹 사이트](https://go.microsoft.com/fwlink/?LinkId=190955)를 참조하세요.  
 > 
 > **참고:** Evaluation 및 Developer 버전에서 지원하는 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 기능 집합을 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기술과 관련된 표로 이동하려면 해당 링크를 클릭합니다.  
   
- [교차 상자 확장 제한](#CrossBoxScale)  
+ [교차 상자 크기 제한](#CrossBoxScale)  
   
  [고가용성](#High_availability)  
   
@@ -40,11 +40,11 @@ ms.locfileid: "62843502"
   
  [관리 도구](#Mgmt_Tools)  
   
- [RDBMS 관리 효율성](#RDBMS_mgmt)  
+ [RDBMS 관리 효율](#RDBMS_mgmt)  
   
  [개발 도구](#Dev_tools)  
   
- [프로그래밍 기능](#Programmability)  
+ [프로그래밍](#Programmability)  
   
  [Integration Services](#SSIS)  
   
@@ -74,20 +74,20 @@ ms.locfileid: "62843502"
   
  [추가 데이터베이스 서비스](#Add_DBServices)  
   
- [다른 구성 요소](#Other_Components)  
+ [기타 구성 요소](#Other_Components)  
   
 ##  <a name="CrossBoxScale"></a> 교차 상자 확장 제한  
   
 |기능 이름|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |단일 인스턴스에서 사용 되는 최대 계산 용량 ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진)<sup>1</sup>|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
-|(Analysis Services, Reporting Services) 단일 인스턴스에서 사용 되는 최대 계산 용량 <sup>1</sup>|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
+|단일 인스턴스에서 사용 되는 최대 계산 용량 (Analysis Services, Reporting Services) <sup>1</sup>|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 4개 또는 코어 16개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|소켓 1개 또는 코어 4개 미만으로 제한됨|  
 |최대 메모리 사용량([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 엔진의 인스턴스당)|운영 체제가 지원하는 최대 크기|128GB|128GB|64GB|1GB|1GB|1GB|  
 |최대 메모리 사용량([!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]의 인스턴스당)|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|64GB|해당 사항 없음|해당 사항 없음|해당 사항 없음|해당 사항 없음|  
 |최대 메모리 사용량([!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]의 인스턴스당)|운영 체제가 지원하는 최대 크기|운영 체제가 지원하는 최대 크기|64GB|64GB|4GB|해당 사항 없음|해당 사항 없음|  
 |최대 관계형 데이터베이스 크기|524PB|524PB|524PB|524PB|10GB|10GB|10GB|  
   
- <sup>1</sup> Server + 클라이언트 액세스 라이선스 (CAL) 기반 라이선스가 (새 계약에 사용할 수 없음)를 사용 하 여 Enterprise Edition은 최대 20 개의 코어로 제한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)를 참조하세요.  
+ <sup>1</sup> Server + CAL (클라이언트 액세스 라이선스) 기반 라이선스가 포함 된 Enterprise Edition (새 계약에 사용할 수 없음)은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 인스턴스당 최대 20 개의 코어로 제한 됩니다. 코어 기반 서버 라이선스 모델에서는 제한이 없습니다. 자세한 내용은 [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md)를 참조하세요.  
   
 ##  <a name="High_availability"></a> 고가용성  
   
@@ -97,7 +97,7 @@ ms.locfileid: "62843502"
 |로그 전달|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
 |데이터베이스 미러링|사용자 계정 컨트롤|지원(Safety Full만)|지원(Safety Full만)|미러링 모니터만|미러링 모니터만|미러링 모니터만|미러링 모니터만|  
 |백업 압축|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
-|데이터베이스 스냅샷|사용자 계정 컨트롤|||||||  
+|데이터베이스 스냅숏|사용자 계정 컨트롤|||||||  
 |AlwaysOn 장애 조치(failover) 클러스터 인스턴스|지원(노드 지원: 운영 체제가 지원하는 최대 크기|지원(노드 지원: 2)|지원(노드 지원: 2)|||||  
 |AlwaysOn 가용성 그룹|예(2개의 동기 보조 복제본을 포함하여 최대 8개까지 보조 복제본 지원)|||||||  
 |Connection Director|사용자 계정 컨트롤|||||||  
@@ -111,11 +111,11 @@ ms.locfileid: "62843502"
 |암호화된 백업|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |스마트 백업|사용자 계정 컨트롤|예|예|아니요||||  
   
- <sup>1</sup>를 설치 하는 방법은 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Server core에서 참조 [Server Core에 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-on-server-core.md)합니다.  
+ <sup>1</sup> Server core에 설치 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] 하는 방법에 대 한 자세한 내용은 [server core에 SQL Server 2014 설치](../database-engine/install-windows/install-sql-server-on-server-core.md)를 참조 하세요.  
   
- <sup>2</sup>이 기능은 에서만 사용할 수에 대 한 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
+ <sup>2</sup> 이 기능은 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에만 사용할 수 있습니다.  
   
-##  <a name="Scalability"></a> 확장성 및 성능  
+##  <a name="Scalability"></a>확장성 및 성능  
   
 |기능 이름|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -131,7 +131,7 @@ ms.locfileid: "62843502"
 |메모리 내 OLTP <sup>1</sup>|사용자 계정 컨트롤|||||||  
 |지연된 내구성|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
   
- <sup>1</sup> 이 기능은 에서만 사용할 수에 대 한 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
+ <sup>1</sup> 이 기능은 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에만 사용할 수 있습니다.  
   
 ##  <a name="Enterprise_security"></a> 보안  
   
@@ -152,7 +152,7 @@ ms.locfileid: "62843502"
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 변경 내용 추적|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
 |병합 복제|사용자 계정 컨트롤|예|사용자 계정 컨트롤|예(구독자만)|예(구독자만)|예(구독자만)|예(구독자만)|  
 |트랜잭션 복제|사용자 계정 컨트롤|예|사용자 계정 컨트롤|예(구독자만)|예(구독자만)|예(구독자만)|예(구독자만)|  
-|스냅샷 복제|사용자 계정 컨트롤|예|사용자 계정 컨트롤|예(구독자만)|예(구독자만)|예(구독자만)|예(구독자만)|  
+|스냅숏 복제|사용자 계정 컨트롤|예|사용자 계정 컨트롤|예(구독자만)|예(구독자만)|예(구독자만)|예(구독자만)|  
 |다른 유형의 구독자|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |Oracle 게시|사용자 계정 컨트롤|||||||  
 |피어 투 피어 트랜잭션 복제|사용자 계정 컨트롤|||||||  
@@ -168,16 +168,16 @@ ms.locfileid: "62843502"
 |Distributed Replay - 관리 도구|사용자 계정 컨트롤|예|예|예|예|사용자 계정 컨트롤||  
 |Distributed Replay - 클라이언트|사용자 계정 컨트롤|아니요|예|사용자 계정 컨트롤||||  
 |Distributed Replay - 컨트롤러|예(Enterprise는 최대 16 클라이언트 지원, Developer는 1 클라이언트만 지원)|아니요|예(1 클라이언트만 지원)|예(1 클라이언트만 지원)||||  
-|SQL 프로파일러|사용자 계정 컨트롤|예|사용자 계정 컨트롤|이상<sup>2</sup>|이상<sup>2</sup>|이상<sup>2</sup>|이상<sup>2</sup>|  
+|SQL 프로파일러|사용자 계정 컨트롤|예|사용자 계정 컨트롤|아니요<sup>2</sup>|아니요<sup>2</sup>|아니요<sup>2</sup>|아니요<sup>2</sup>|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 에이전트|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
 |Microsoft System Center Operations Manager 관리 팩|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
 |DTA(데이터베이스 튜닝 관리자)|사용자 계정 컨트롤|사용자 계정 컨트롤|예<sup>3</sup>|예<sup>3</sup>||||  
-|Windows Azure VM 마법사에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 데이터베이스 배포|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Windows Azure의 데이터 파일|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
+|Azure VM에 데이터베이스 배포 마법사 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]|예|예|예|예|예|예|예|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Azure의 데이터 파일|예|예|예|예|예|예|사용자 계정 컨트롤|  
   
- <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 웹 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]합니다 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools 및 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Advanced Services를 사용 하 여 프로 파일링 할 수를 사용 하 여 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 표준 및 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise edition.  
+ <sup>2</sup> [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Standard및[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Enterpriseedition 을 사용 하 여 Web,, with Tools 및 with Advanced Services를 프로 파일링 할 수 있습니다. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
- <sup>3</sup> 튜닝은 Standard edition 기능 에서만 활성화 됩니다.  
+ <sup>3</sup> 튜닝은 Standard edition 기능 에서만 사용할 수 있습니다.  
   
 ##  <a name="RDBMS_mgmt"></a> RDBMS Manageability  
   
@@ -188,7 +188,7 @@ ms.locfileid: "62843502"
 |관리자 전용 연결|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤|지원(추적 플래그 사용)|지원(추적 플래그 사용)|지원(추적 플래그 사용)|  
 |PowerShell 스크립팅 지원|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
 |SysPrep 지원<sup>1</sup>|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
-|지원 데이터 계층 응용 프로그램 구성 요소 작업-추출, 배포, 업그레이드, 삭제|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
+|데이터 계층 응용 프로그램 구성 요소 작업 지원-추출, 배포, 업그레이드, 삭제|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
 |정책 자동화(일정 및 변경 내용 검사)|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
 |성능 데이터 수집기|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
 |다중 인스턴스 관리에서 관리되는 인스턴스로 등록 가능|사용자 계정 컨트롤|예|예|사용자 계정 컨트롤||||  
@@ -206,7 +206,7 @@ ms.locfileid: "62843502"
   
  <sup>1</sup> 자세한 내용은 [SysPrep을 사용하여 SQL Server 설치 시 고려 사항](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md)을 참조하세요.  
   
- <sup>2</sup> 이 기능은 에서만 사용할 수에 대 한 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다.  
+ <sup>2</sup> 이 기능은 64 비트 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]에만 사용할 수 있습니다.  
   
 ##  <a name="Dev_tools"></a> Development Tools  
   
@@ -215,11 +215,11 @@ ms.locfileid: "62843502"
 |[!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio 통합|사용자 계정 컨트롤|예|예|예|예|예|사용자 계정 컨트롤|  
 |Intellisense([!INCLUDE[tsql](../includes/tsql-md.md)] 및 MDX)|사용자 계정 컨트롤|예|예|예|예|예|예|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|예|예|예|예|사용자 계정 컨트롤|||  
-|SQL 쿼리, 편집 및 디자인 도구<sup>1</sup>|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
+|SQL 쿼리 편집 및 디자인 도구<sup>1</sup>|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |버전 제어 지원<sup>1</sup>|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |MDX 편집, 디버그 및 디자인 도구<sup>1</sup>|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
   
- <sup>1</sup> 이 기능은 64 비트 버전의 Standard edition에 제공 됩니다. 합니다.  
+ <sup>1</sup> 이 기능은 Standard edition의 64 비트 버전에는 사용할 수 없습니다.  
   
 ##  <a name="Programmability"></a> Programmability  
   
@@ -305,11 +305,11 @@ ms.locfileid: "62843502"
 |고가용성|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |프로그래밍 기능(AMO, ADOMD.Net, OLEDB, XML/A, ASSL)|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
   
-###  <a name="BISemModel_multi"></a> BI 의미 체계 모델 (다차원)  
+###  <a name="BISemModel_multi"></a>BI 의미 체계 모델 (다차원)  
   
 |기능 이름|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|반가산적 측정값|사용자 계정 컨트롤|사용자 계정 컨트롤|No<sup>1</sup>|||||  
+|반가산적 측정값|사용자 계정 컨트롤|사용자 계정 컨트롤|아니요<sup>1</sup>|||||  
 |계층 구조|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |KPI|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |큐브 뷰|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
@@ -340,7 +340,7 @@ ms.locfileid: "62843502"
 |직접 쓰기 저장(writeback)|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
 |측정값 식|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
   
- <sup>1</sup>standard edition에서 LastChild 반 가산적 측정값은 지원 되지만 None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren 및 ByAccount와 같은 다른 반 가산적 측정값 없습니다. Sum, Count, Min, Max와 같은 가산적 측정값과 비가산적 측정값(DistinctCount)은 모든 버전에서 지원됩니다.  
+ <sup>1</sup> LastChild 반 가산적 측정값은 standard edition에서 지원 되지만 None, FirstChild, FirstNonEmpty 있지 않음, LastNonEmpty 있지 않음, AverageOfChildren 및 ByAccount와 같은 다른 반 가산적 측정값은 지원 되지 않습니다. Sum, Count, Min, Max와 같은 가산적 측정값과 비가산적 측정값(DistinctCount)은 모든 버전에서 지원됩니다.  
   
 ###  <a name="BISemModel_tabular"></a> BI Semantic Model (Tabular)  
   
@@ -355,7 +355,7 @@ ms.locfileid: "62843502"
 |파티션|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
 |메모리 내 및 DirectQuery 스토리지 모드(테이블 형식만 해당)|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
   
-###  <a name="PowerPivot"></a> SharePoint 용 PowerPivot  
+###  <a name="PowerPivot"></a>SharePoint용 PowerPivot  
   
 |기능 이름|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -387,7 +387,7 @@ ms.locfileid: "62843502"
   
 ##  <a name="Reporting"></a> Reporting  Services  
   
-###  <a name="Reporting_features"></a> Reporting Services 기능  
+###  <a name="Reporting_features"></a>Reporting Services 기능  
   
 |기능 이름|Enterprise|Business Intelligence|Standard|Web|Express with Advanced Services|Express with Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -408,7 +408,7 @@ ms.locfileid: "62843502"
 |무한 클릭 광고|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |공유 구성 요소 라이브러리|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |전자 메일 및 파일 공유 구독/일정 예약|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
-|보고서 기록, 스냅샷 실행 및 캐싱|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
+|보고서 기록, 스냅숏 실행 및 캐싱|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |SharePoint 통합|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |원격 및 비 SQL 데이터 원본 지원<sup>1</sup>|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
 |데이터 원본, 배달 및 렌더링, RDCE 확장성|사용자 계정 컨트롤|예|사용자 계정 컨트롤|||||  
@@ -417,9 +417,9 @@ ms.locfileid: "62843502"
 |경고<sup>2</sup>|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
 |[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
   
- <sup>1</sup>지원 되는 데이터 원본에 대 한 자세한 내용은 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]를 참조 하십시오 [Data Sources Supported by Reporting Services &#40;SSRS&#41;](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
+ <sup>1</sup> 에서 [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]지원 되는 데이터 원본에 대 한 자세한 내용은 [Reporting Services &#40;SSRS&#41;에서 지 원하는 데이터 원본](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)을 참조 하세요.  
   
- <sup>2</sup>필요 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 모드에서. 자세한 내용은 [Reporting Services SharePoint 모드 설치 &#40;SharePoint 2010 및 SharePoint 2013&#41;](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)합니다.  
+ <sup>2</sup> SharePoint [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 모드의가 필요 합니다. 자세한 내용은 sharepoint [모드 설치 &#40;SharePoint 2010 및 sharepoint&#41;2013 Reporting Services](../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)를 참조 하세요.  
   
 ### <a name="report-server-database-server-edition-requirements"></a>보고서 서버 데이터베이스 서버 버전 요구 사항  
  보고서 서버 데이터베이스를 만들 때 일부 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전은 데이터베이스 호스팅에 사용할 수 없습니다. 다음 표에서는 [!INCLUDE[ssDE](../includes/ssde-md.md)] 의 특정 버전에 사용할 수 있는 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]버전을 보여 줍니다.  
@@ -444,7 +444,7 @@ ms.locfileid: "62843502"
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|사용자 계정 컨트롤|사용자 계정 컨트롤||||||  
   
 > [!NOTE]
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] Excel 추가 기능 및 종속 되지 않는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]합니다. 그러나 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]은 SharePoint에서 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]통합 문서를 공유하고 공동 작업하는 데 필요하며 이 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 및 Business Intelligence 버전의 일부로 사용할 수 있습니다.  
+>  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]는 Excel 추가 기능이 며에 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]종속 되지 않습니다. 그러나 [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)]은 SharePoint에서 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]통합 문서를 공유하고 공동 작업하는 데 필요하며 이 기능은 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise 및 Business Intelligence 버전의 일부로 사용할 수 있습니다.  
 > 2.  위의 표는 이러한 클라이언트 도구를 활성화하는 데 필요한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 버전을 식별하지만 이러한 기능은 모든 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]버전에서 호스팅되는 데이터에 액세스할 수 있습니다.  
   
 ##  <a name="Spatial"></a> Spatial and Location Services  
@@ -472,7 +472,7 @@ ms.locfileid: "62843502"
 |StreamInsight HA|StreamInsight Premium Edition|||||||  
   
 ## <a name="see-also"></a>관련 항목  
- [SQL Server 2014 제품 사양](../../2014/getting-started/sql-server-2014-product-specifications.md)   
+ [SQL Server 2014에 대 한 제품 사양](../../2014/getting-started/sql-server-2014-product-specifications.md)   
  [SQL Server 2014 설치](../database-engine/install-windows/installation-for-sql-server.md)   
  [SQL Server 2014 빠른 시작 설치](../../2014/getting-started/quick-start-installation-of-sql-server-2014.md)  
   

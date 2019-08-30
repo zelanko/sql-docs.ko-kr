@@ -12,12 +12,12 @@ ms.assetid: 5350214c-7333-41d0-ae83-1b7d8454ebec
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 3c5898910a5280e797080c99fde978bb3da1c3c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19ef3eacc2fc1dbe6408ea1b51c5135ba37740e5
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484210"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154467"
 ---
 # <a name="introduction-to-data-quality-services"></a>Data Quality Services 소개
   DQS( [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] )에서 제공되는 데이터 품질 솔루션을 통해 데이터 관리자 또는 IT 전문가는 데이터의 품질을 유지 관리하고 데이터가 비즈니스 용도에 적합한지 보장할 수 있습니다. DQS는 컴퓨터 기반 방식과 대화형 방식 모두를 사용하여 데이터 원본의 무결성과 품질을 관리할 수 있게 해주는 지식 기반 솔루션입니다. DQS를 사용하면 데이터에 대한 지식을 검색, 구축 및 관리할 수 있습니다. 그런 후 이러한 지식을 사용하여 데이터 정리, 일치 및 프로파일링을 수행할 수 있습니다. 또한 DQS 데이터 품질 프로젝트에서 참조 데이터 공급자의 클라우드 기반 서비스를 활용할 수도 있습니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "65484210"
   
  DQS를 사용하면 데이터베이스 전문가 또는 프로그래머가 아니어도 비즈니스 사용자, 정보 근로자 또는 IT 전문가가 최소한의 설정 및 준비 시간만으로 조직의 데이터 품질 작업을 만들고, 유지 관리 및 실행할 수 있습니다.  
   
-##  <a name="Answer"></a> DQS의 요구 사항 답변  
+##  <a name="Answer"></a>DQS의 요구에 대 한 응답  
  데이터 품질이란 절대적인 가치를 갖는 특정 용어로 정의되지 않습니다. 데이터 품질은 해당 데이터가 의도한 목적에 대해 적합한지 여부에 따라 달라집니다. DQS는 잠재적으로 잘못된 데이터를 식별하고 해당 데이터가 실제로 잘못되었을 가능성에 대한 평가 결과를 사용자에게 제공합니다. DQS는 사용자가 데이터의 적합성을 결정할 수 있도록 해당 데이터에 대한 체계적인 이해를 돕습니다. DQS를 사용하면 불완전성, 준수성 부족, 비일관성, 부정확성, 부적합성 및 데이터 중복성과 관련된 문제를 해결할 수 있습니다.  
   
  DQS는 데이터 품질 문제 해결을 위해 다음과 같은 기능을 제공합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "65484210"
   
 -   **일치:** 규칙 기반 프로세스의 의미적인 중복 항목의 식별을 통해 일치 항목을 확인하고 중복 제거를 수행할 수 있습니다. 자세한 내용은 [Data Matching](../../2014/data-quality-services/data-matching.md)을 참조하세요.  
   
--   **참조 데이터 서비스:** 참조 데이터 공급자의 서비스를 사용하여 데이터의 품질을 확인합니다. Windows Azure Marketplace DataMarket에서 참조 데이터 서비스를 사용하여 데이터를 쉽게 정리, 유효성 검사, 일치 및 강화할 수 있습니다. 자세한 내용은 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
+-   **참조 데이터 서비스:** 참조 데이터 공급자의 서비스를 사용하여 데이터의 품질을 확인합니다. Azure Marketplace DataMarket의 참조 데이터 서비스를 사용 하 여 데이터를 쉽게 정리, 유효성 검사, 일치 및 보강할 수 있습니다. 자세한 내용은 [Reference Data Services in DQS](../../2014/data-quality-services/reference-data-services-in-dqs.md)을 참조하세요.  
   
 -   **프로파일링:** 데이터 원본의 분석을 통해 기술 자료 검색, 도메인 관리, 일치 및 데이터 정리 프로세스의 모든 단계에서 데이터의 품질에 대한 이해력을 제공합니다. 프로파일링은 DQS 데이터 품질 솔루션의 강력한 도구입니다. 프로파일링이 지식 관리, 일치 또는 데이터 정리만큼 중요한 데이터 품질 솔루션을 만들 수 있습니다. 자세한 내용은 [Data Profiling and Notifications in DQS](../../2014/data-quality-services/data-profiling-and-notifications-in-dqs.md)을 참조하세요.  
   

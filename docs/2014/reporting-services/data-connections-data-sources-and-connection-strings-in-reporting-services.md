@@ -19,12 +19,12 @@ ms.assetid: 4d8f0ae1-102b-4b3d-9155-fa584c962c9e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8147471dc662b651ac9c99cc9290a383cc235ee8
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fc918b390cedbca9016e4d14f72dea8c9ce8d148
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891571"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154588"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Data Connections, Data Sources, and Connection Strings in Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서에 데이터를 포함하려면 먼저 *데이터 원본* 및 *데이터 집합*을 만들어야 합니다. 이 항목에서는 데이터 원본의 유형, 데이터 원본을 만드는 방법 및 데이터 원본 자격 증명과 관련된 중요 정보를 설명합니다. 데이터 원본에는 데이터 원본 유형, 연결 정보 및 사용할 자격 증명의 유형이 포함됩니다. 데이터 원본에는 포함된 데이터 원본과 공유 데이터 원본의 두 가지 유형이 있습니다. 포함된 데이터 원본은 보고서에서 정의되고 해당 보고서에서만 사용됩니다. 공유 데이터 원본은 보고서와 독립적으로 정의되며 여러 보고서에서 사용될 수 있습니다. 자세한 내용은 [포함된 데이터 연결 및 공유 데이터 연결 또는 데이터 원본&#40;보고서 작성기 및 SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) 및 [포함된 데이터 집합 및 공유 데이터 집합&#40;보고서 작성기 및 SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)을 참조하세요.  
@@ -130,7 +130,7 @@ ms.locfileid: "68891571"
 |로컬 서버의 SQL Server 데이터베이스|`data source="(local)";initial catalog=AdventureWorks`|데이터 원본 유형을 `Microsoft SQL Server`로 설정합니다.|  
 |SQL Server 인스턴스<br /><br /> database|`Data Source=localhost\MSSQL10_50.InstanceName; Initial Catalog=AdventureWorks`|데이터 원본 유형을 `Microsoft SQL Server`로 설정합니다.|  
 |SQL Server Express 데이터베이스|`Data Source=localhost\MSSQL10_50.SQLEXPRESS; Initial Catalog=AdventureWorks`|데이터 원본 유형을 `Microsoft SQL Server`로 설정합니다.|  
-|클라우드의 [!INCLUDE[ssSDS](../includes/sssds-md.md)]|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|데이터 원본 유형을 `Windows Azure SQL Database`로 설정합니다. 자세한 내용은 [SQL Azure 연결 형식&#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md)을 참조하세요.|  
+|클라우드의 [!INCLUDE[ssSDS](../includes/sssds-md.md)]|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|데이터 원본 유형을 `Azure SQL Database`로 설정합니다. 자세한 내용은 [SQL Azure 연결 형식&#40;SSRS&#41;](report-data/sql-azure-connection-type-ssrs.md)을 참조하세요.|  
 |SQL Server 병렬 데이터 웨어하우스|`HOST=<IP address>;database= AdventureWorks; port=<port>`|데이터 원본 유형을 `Microsoft SQL Server Parallel Data Warehouse`로 설정합니다. 자세한 내용은 [SQL Server 병렬 데이터 웨어하우스 연결 형식&#40;SSRS&#41;](report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)을 참조하세요.|  
 |로컬 서버의 Analysis Services 데이터베이스|`data source=localhost;initial catalog=Adventure Works DW`|데이터 원본 유형을 `Microsoft SQL Server Analysis Services`로 설정합니다. 자세한 내용은 [MDX용 Analysis Services 연결 형식&#40;SSRS&#41;](report-data/analysis-services-connection-type-for-mdx-ssrs.md) 또는 [DMX용 Analysis Services 연결 형식&#40;SSRS&#41;](report-data/analysis-services-connection-type-for-dmx-ssrs.md)을 참조하세요.|  
 |Sales 큐브 뷰가 있는 Analysis Services 테이블 형식 model 데이터베이스|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|데이터 원본 유형을 `Microsoft SQL Server Analysis Services`로 설정합니다. cube= 설정에 큐브 뷰 이름을 지정합니다. 자세한 내용은 [큐브 뷰&#40;SSAS 테이블 형식&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular)를 참조하세요.|  

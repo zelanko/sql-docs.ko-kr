@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 7c6ec469-bc7d-4d19-8e21-11dcf8ade108
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 2ee3474d5fedd467170c601a7807117c23e37096
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 660c48540bb7d7763eb149c0882f5b37f2cc0d1e
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935404"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152574"
 ---
 # <a name="data-quality-client-home-screen"></a>데이터 품질 클라이언트 홈 화면
 
@@ -60,7 +60,7 @@ ms.locfileid: "67935404"
  연결된 [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]서버와 관련된 현재 및 과거의 모든 작업 상태에 대한 뷰를 표시합니다. 모니터링되는 작업 유형에는 기술 자료 관리, 데이터 품질 프로젝트 및 SSIS 기반 데이터 수정이 포함됩니다.  
   
  **Configuration**  
- 참조 데이터 서비스 계정(Windows Azure Marketplace 및 참조 데이터 서비스 직접 사용)에 대한 구성 속성, 일반 설정(대화형 정리, 일치 및 프로파일링) 및 로그 심각도 설정을 표시합니다.  
+ 참조 데이터 서비스 계정에 대 한 구성 속성 (Azure Marketplace 및 참조 데이터 서비스에 직접), 일반 설정 (대화형 정리, 일치 및 프로 파일링) 및 로그 심각도 설정을 표시 합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [DQS 기술 자료 및 도메인](../data-quality-services/dqs-knowledge-bases-and-domains.md)   

@@ -1,5 +1,5 @@
 ---
-title: 프로그래밍 관련 태스크 | Microsoft Docs
+title: 특정 작업 프로그래밍 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,15 +16,15 @@ helpviewer_keywords:
 - SMO [SQL Server], programming
 - SMO [SQL Server], tasks
 ms.assetid: a15949ef-88d9-4205-892e-0b66588b4fcc
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c2da3cb344573731c70839612381aeb07485850f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f23b7844bcff234594db87875e89a89f0f073be9
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030236"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70148394"
 ---
 # <a name="programming-specific-tasks"></a>프로그래밍 관련 태스크
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -54,6 +54,6 @@ ms.locfileid: "68030236"
 |[전체 텍스트 검색 구현](../../../relational-databases/server-management-objects-smo/tasks/implementing-full-text-search.md)|SMO에서 전체 텍스트 검색 카탈로그와 인덱스를 구현하는 방법에 대해 설명합니다.|  
 |[엔드포인트 구현](../../../relational-databases/server-management-objects-smo/tasks/implementing-endpoints.md)|데이터베이스 미러링, SOAP 요청 및 Service Broker에 대한 페이로드를 처리하는 엔드포인트를 만드는 방법에 대해 설명합니다.|  
 |[통계 생성 및 업데이트](../../../relational-databases/server-management-objects-smo/tasks/creating-and-updating-statistics.md)|SMO에서 데이터베이스에 통계를 설정하고 이를 모니터링하는 방법에 대해 설명합니다.|  
-|[이벤트 추적 및 재생](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|사용 하는 방법에 설명 합니다 **추적** 및 **재생** smo에서 개체를 추적 및 재생 이벤트를 합니다.|  
+|[이벤트 추적 및 재생](../../../relational-databases/server-management-objects-smo/tasks/tracing-and-replaying-events.md)|SMO에서 **추적** 및 **재생** 개체를 사용 하 여 이벤트를 추적 하 고 재생 하는 방법을 설명 합니다.|  
   
   

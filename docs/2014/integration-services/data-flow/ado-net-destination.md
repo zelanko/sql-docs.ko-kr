@@ -15,17 +15,17 @@ ms.assetid: cb883990-d875-4d8b-b868-45f9f15ebeae
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 52dde5231a3b08bd92cf3b1d88ebfd56ce4d9c6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6126a352377e988c08a11211d12bb8bc77e93f7
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832546"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153969"
 ---
 # <a name="ado-net-destination"></a>ADO.NET 대상
   ADO.NET 대상은 데이터베이스 테이블이나 뷰를 사용하는 다양한 [!INCLUDE[vstecado](../../includes/vstecado-md.md)]호환 데이터베이스로 데이터를 로드합니다. 이 데이터를 기존 테이블이나 뷰에 로드하는 옵션이 제공되거나 새 테이블을 만들고 데이터를 새 테이블에 로드할 수 있습니다.  
   
- ADO NET 대상을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 연결할 수 있습니다. OLE DB를 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결할 수는 없습니다. [!INCLUDE[ssSDS](../../includes/sssds-md.md)]에 대한 자세한 내용은 [일반 보안 지침 및 제한 사항(Microsoft Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228)을 참조하세요.  
+ ADO NET 대상을 사용하여 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에 연결할 수 있습니다. OLE DB를 사용하여 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 에 연결할 수는 없습니다. 에 대 한 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]자세한 내용은 [일반 지침 및 제한 사항 (Azure SQL Database)](https://go.microsoft.com/fwlink/?LinkId=248228)을 참조 하세요.  
   
 ## <a name="troubleshooting-the-ado-net-destination"></a>ADO.NET 대상 문제 해결  
  ADO.NET 대상이 외부 데이터 공급자에 대해 수행하는 호출을 로깅할 수 있습니다. 이 로깅 기능을 사용하여 ADO.NET 대상이 수행하는 외부 데이터 원본에 대한 데이터 저장 문제를 해결할 수 있습니다. ADO.NET 대상이 외부 데이터 공급자에 대해 수행하는 호출을 로깅하려면 패키지 로깅을 설정하고 패키지 수준에서 **Diagnostic** 이벤트를 선택합니다. 자세한 내용은 [패키지 실행 문제 해결 도구](../troubleshooting/troubleshooting-tools-for-package-execution.md)를 참조하세요.  
