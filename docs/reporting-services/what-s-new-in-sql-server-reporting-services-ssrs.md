@@ -8,13 +8,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
-ms.date: 05/08/2019
-ms.openlocfilehash: be255547163bb37d1222e1c9b21e123f35d2888e
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.date: 08/27/2019
+ms.openlocfilehash: 81c9af6b8d4b711c8e8511b94364bbe498470007
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000284"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123110"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SSRS(SQL Server Reporting Services)의 새로운 기능
 
@@ -32,9 +32,21 @@ SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운�
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
 
-## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 Reporting Services 미리 보기
+## <a name="sql-server-2019-reporting-services-preview"></a>SQL Server 2019 Reporting Services 미리 보기
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]preview Reporting Services은 사용할 수 있으며 **[Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=100122)** 에서 다운로드할 수 있습니다.
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]Reporting Services 미리 보기는 [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=100122)에서 다운로드할 수 있습니다.
+
+### <a name="azure-sql-managed-instance-support"></a>Azure SQL Managed Instance 지원
+
+이제 VM 또는 데이터 센터에서 호스트 되는 Azure SQL Managed Instance (MI)에서 SQL Server Reporting Services (SSRS)에 사용 되는 데이터베이스 카탈로그를 호스트할 수 있습니다. SQL server에 대 한 연결에는 데이터베이스 자격 증명을 사용 하는 것으로 제한 됩니다.
+
+### <a name="power-bi-premium-dataset-support"></a>Power BI Premium 데이터 집합 지원
+
+Microsoft 보고서 작성기 또는 SQL Server Data Tools (SSDT) 중 하나를 사용 하 여 Power BI 데이터 집합에 연결할 수 있습니다. 그런 다음 SQL Server Analysis Services 연결을 사용 하 여 이러한 보고서를 SSRS 2019에 게시할 수 있습니다. 사용자는 저장 된 Windows 사용자 이름 및 암호를 사용 하 여 시나리오를 사용 하도록 설정 해야 합니다.
+
+### <a name="alttext-alternative-text-support-for-report-elements"></a>보고서 요소에 대 한 AltText (대체 텍스트) 지원
+
+보고서를 작성할 때 도구 설명을 사용 하 여 보고서의 각 요소에 대 한 텍스트를 지정할 수 있습니다. 화면 판독기 기술은 이러한 도구 설명을 올바르게 식별 합니다.
 
 ::: moniker-end
 
@@ -67,7 +79,8 @@ SQL Server 2017 Reporting Services를 다운로드하려면 **[Microsoft 다운�
 * [SQL Server 보고서 작성기](https://go.microsoft.com/fwlink/?LinkId=734968)를 다운로드합니다.
 * [SQL Server Data Tools - 릴리스 후보](https://docs.microsoft.com/sql/ssdt/sql-server-data-tools-ssdt-release-candidate)를 다운로드합니다.
 
-> **참고**: SSAS 테이블 형식 데이터 원본 기본 제공 SQL Server 2016+에서만 DAX에 대한 쿼리 디자이너를 사용할 수 있습니다.
+> [!NOTE]
+> SSAS 테이블 형식 데이터 원본 기본 제공 SQL Server 2016+에서만 DAX에 대한 쿼리 디자이너를 사용할 수 있습니다.
 ::: moniker-end
 
 ## <a name="ssrs-2016"></a>SSRS 2016
