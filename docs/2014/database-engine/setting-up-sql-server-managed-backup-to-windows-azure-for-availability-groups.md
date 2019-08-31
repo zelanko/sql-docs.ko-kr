@@ -10,12 +10,12 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76b19ace362d147520b9f39cecae3ce1cc65d53b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: aa2cbce81827c9085f87112b366d532077915f58
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154103"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176092"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>가용성 그룹에 대해 Azure에 SQL Server 관리 되는 백업 설정
   이 항목은 AlwaysOn 가용성 그룹에 참여하는 데이터베이스를 위해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 구성하는 방법에 대한 자습서입니다.  
@@ -68,7 +68,7 @@ ms.locfileid: "70154103"
 #### <a name="enable-and-configure-includess_smartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>가용성 데이터베이스에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 설정 및 구성  
  이 자습서에서는 Node1 및 Node2 컴퓨터에서 데이터베이스(AGTestDB)에 대해 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]을 설정 및 구성하고 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 상태에 대한 모니터링을 설정하는 단계에 대해 설명합니다.  
   
-1.  **Azure 저장소 계정 만들기:** 백업은 Azure Blob 저장소 서비스에 저장 됩니다. 아직 없는 경우 먼저 Azure storage 계정을 만들어야 합니다. 자세한 내용은 [Azure Storage 계정 만들기](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)를 참조 하세요. 스토리지 계정 이름, 액세스 키 및 스토리지 계정의 URL을 기록합니다. 스토리지 계정 이름 및 액세스 키 정보는 SQL 자격 증명을 만드는 데 사용됩니다. SQL 자격 증명은 백업 작업 중 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 스토리지 계정을 인증하는 데 사용됩니다.  
+1.  **Azure 스토리지 계정 만들기:** 백업은 Azure Blob 저장소 서비스에 저장 됩니다. 아직 없는 경우 먼저 Azure storage 계정을 만들어야 합니다. 자세한 내용은 [Azure Storage 계정 만들기](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)를 참조 하세요. 스토리지 계정 이름, 액세스 키 및 스토리지 계정의 URL을 기록합니다. 스토리지 계정 이름 및 액세스 키 정보는 SQL 자격 증명을 만드는 데 사용됩니다. SQL 자격 증명은 백업 작업 중 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]에서 스토리지 계정을 인증하는 데 사용됩니다.  
   
 2.  **SQL 자격 증명 만들기:** 저장소 계정의 이름을 Id로 사용 하 고 저장소 액세스 키를 암호로 사용 하 여 SQL 자격 증명을 만듭니다.  
   

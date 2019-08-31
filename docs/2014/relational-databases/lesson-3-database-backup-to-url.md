@@ -10,12 +10,12 @@ ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 45cce2278e17fcb95f11920c2426caf580385518
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153760"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175634"
 ---
 # <a name="lesson-4-create-a-database-in-azure-storage"></a>4단원: Azure Storage에서 데이터베이스 만들기
   이 단원에서는 Azure의 SQL Server 데이터 파일 기능을 사용 하 여 데이터베이스를 만드는 방법을 배웁니다. 이 단원 전에 1, 2, 3단원을 완료해야 합니다. 3 단원에서는 Azure storage 컨테이너에 대 한 정보와 관련 정책 이름 및 SAS 키를 4 단원 이전 SQL Server 자격 증명 저장소에 저장 해야 하기 때문에 매우 중요 한 단계입니다.  

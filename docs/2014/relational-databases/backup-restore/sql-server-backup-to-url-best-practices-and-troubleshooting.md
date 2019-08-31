@@ -10,12 +10,12 @@ ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 6eb2d66203de226cd7ab414c97ecc219717573a0
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154670"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175969"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>URL에 대한 SQL Server 백업 - 최상의 방법 및 문제 해결
   이 항목에는 Azure Blob service에 SQL Server 백업 및 복원에 대 한 모범 사례 및 문제 해결 팁이 포함 되어 있습니다.  

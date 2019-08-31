@@ -10,12 +10,12 @@ ms.assetid: f7008339-e69d-4e20-9265-d649da670460
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b1be1f05ff09d85d29903e4e3be7f1f11600a7b1
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: f8d1917798137ed8aa96ddf106392ffd311ed9b1
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155027"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176003"
 ---
 # <a name="use-powershell-to-backup-multiple-databases-to-azure-blob-storage-service"></a>PowerShell을 사용 하 여 Azure Blob Storage 서비스에 여러 데이터베이스 백업
   이 항목에서는 PowerShell cmdlet을 사용 하 여 Azure Blob storage 서비스에 대 한 백업을 자동화 하는 데 사용할 수 있는 샘플 스크립트를 제공 합니다.  

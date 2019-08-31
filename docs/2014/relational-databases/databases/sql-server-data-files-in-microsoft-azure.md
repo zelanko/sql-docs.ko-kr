@@ -10,12 +10,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 55f0ab0cf2f1d4a29c0fca252c45f9e92740851c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 445a43d54dc4578f8e93a18d4a13d31912b8494c
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154545"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175698"
 ---
 # <a name="sql-server-data-files-in-azure"></a>Azure에서 데이터 파일 SQL Server
   Azure에서 SQL Server 데이터 파일은 Azure Blob으로 저장 된 SQL Server 데이터베이스 파일에 대 한 기본 지원을 지원 합니다. 이를 통해 온-프레미스 또는 Azure의 가상 머신에서 실행 되는 SQL Server에서 데이터베이스를 Azure Blob Storage 데이터에 대 한 전용 저장소 위치로 만들 수 있습니다. 특히, 이 향상된 기능은 분리 및 연결 작업을 사용하여 컴퓨터 간의 데이터 이동을 간소화합니다. 또한 데이터베이스 백업 파일에 대 한 대체 저장소 위치를 제공 합니다 .이를 통해 또는 Azure Storage에서 복원할 수 있습니다. 따라서 데이터 가상화, 데이터 이동, 보안 및 가용성, 고가용성 및 탄력적인 크기 조정을 위한 쉽고 저렴한 비용 및 유지 관리 등 여러 가지 이점을 제공하여 다양한 하이브리드 솔루션을 사용할 수 있도록 지원합니다.  
@@ -93,7 +93,7 @@ ON
   
 -   **SQL Server 온-프레미스:** SQL Server 2014 버전에 이 기능이 포함됩니다. SQL Server 2014를 다운로드하는 방법을 알아보려면 [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)를 참조하세요.  
   
--   Azure 가상 머신에서 실행 되는 SQL Server: Azure 가상 컴퓨터에 SQL Server을 설치 하는 경우 SQL Server 2014를 설치 하거나 기존 인스턴스를 업데이트 합니다. 마찬가지로 SQL Server 2014 플랫폼 이미지를 사용 하 여 Azure에서 새 가상 컴퓨터를 만들 수도 있습니다. SQL Server 2014를 다운로드하는 방법을 알아보려면 [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)를 참조하세요.  
+-   Azure 가상 머신에서 실행 중인 SQL Server: Azure 가상 컴퓨터에 SQL Server을 설치 하는 경우 SQL Server 2014를 설치 하거나 기존 인스턴스를 업데이트 합니다. 마찬가지로 SQL Server 2014 플랫폼 이미지를 사용 하 여 Azure에서 새 가상 컴퓨터를 만들 수도 있습니다. SQL Server 2014를 다운로드하는 방법을 알아보려면 [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)를 참조하세요.  
   
 ###  <a name="bkmk_Limitations"></a> 제한 사항  
   

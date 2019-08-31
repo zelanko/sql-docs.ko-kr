@@ -10,12 +10,12 @@ ms.assetid: afa01165-39e0-4efe-ac0e-664edb8599fd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ec5e3eeb9158363e34f708d1f36355ffcb06c6c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: ab44323dfabd389113351e413751b7a230c176e6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154660"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175758"
 ---
 # <a name="sql-server-managed--backup-to-azure"></a>Azure에 대 한 관리 되는 백업 SQL Server
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]Azure Blob storage 서비스에 대 한 SQL Server 백업을 관리 하 고 자동화 합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]에서 사용하는 백업 전략은 데이터베이스의 트랜잭션 작업과 보존 기간을 기반으로 합니다. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 은 지정한 보존 기간 동안 지정 시간 복원을 지원합니다.   

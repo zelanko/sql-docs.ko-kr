@@ -10,12 +10,12 @@ ms.assetid: ebba12c7-3d13-4c9d-8540-ad410a08356d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c1a58b7c233c3b49cf85ba34bedcd74121047564
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 464961600f69f14a2b66515a75906c0fd4af3f82
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154983"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175360"
 ---
 # <a name="lesson-9-restore-a-database-from-azure-storage"></a>9단원: Azure Storage에서 데이터베이스 복원
   이 단원에서는 Azure Storage에서 데이터베이스 백업 파일을 온-프레미스 또는 Azure의 가상 머신에 있는 데이터베이스로 복원 하는 방법에 대해 설명 합니다. 이 단원을 수행하기 위해 4, 5, 6, 7, 8단원을 완료할 필요는 없습니다.  

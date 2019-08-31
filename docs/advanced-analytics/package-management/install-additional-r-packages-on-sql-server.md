@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 579f4c4e236fcc9ee22067522c47a8286b869d51
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: 2c6fd8a9339756c6c22870e4eca6203064dc27f4
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000784"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190358"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Sqlmlutils를 사용 하 여 새 R 패키지 설치
 
@@ -64,13 +64,13 @@ ms.locfileid: "70000784"
 클라이언트 컴퓨터가 인터넷에 연결 되어 있지 않은 경우 인터넷에 액세스할 수 있는 컴퓨터를 사용 하 여 **sqlmlutils** 및 **Rodbcext** 패키지를 미리 다운로드 해야 합니다. 그런 다음 클라이언트 컴퓨터의 폴더에 파일을 복사 하 고 오프 라인으로 패키지를 설치할 수 있습니다.
 
 **Rodbcext** 패키지에는 많은 종속 패키지가 있으며 패키지에 대 한 모든 종속성을 식별 하는 것은 복잡 합니다. [**MiniCRAN**](https://andrie.github.io/miniCRAN/) 를 사용 하 여 모든 종속 패키지를 포함 하는 패키지에 대 한 로컬 리포지토리 폴더를 만드는 것이 좋습니다.
-자세한 내용은 [miniCRAN를 사용 하 여 로컬 R 패키지 리포지토리 만들기](../r/create-a-local-package-repository-using-minicran.md)를 참조 하세요.
+자세한 내용은 [miniCRAN를 사용 하 여 로컬 R 패키지 리포지토리 만들기](create-a-local-package-repository-using-minicran.md)를 참조 하세요.
 
 **Sqlmlutils** 패키지는 클라이언트 컴퓨터에 복사 하 여 설치할 수 있는 단일 zip 파일로 구성 되어 있습니다.
 
 인터넷에 액세스할 때 사용 되는 컴퓨터:
 
-1. **MiniCRAN**를 설치 합니다. 자세한 내용은 [Install miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) 를 참조 하세요.
+1. **MiniCRAN**를 설치 합니다. 자세한 내용은 [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 를 참조 하세요.
 
 1. RStudio에서 다음 R 스크립트를 실행 하 여 **Rodbcext**패키지의 로컬 리포지토리를 만듭니다. 이 예제에서는 폴더 `c:\downloads\rodbcext`에 리포지토리를 만듭니다.
 
@@ -147,7 +147,7 @@ SQL Server에 연결 하는 데 사용 하는 클라이언트 컴퓨터에서 �
 ### <a name="add-the-package-offline"></a>오프 라인으로 패키지 추가
 
 클라이언트 컴퓨터가 인터넷에 연결 되어 있지 않은 경우 **miniCRAN** 를 사용 하 여 인터넷에 액세스할 수 있는 컴퓨터를 사용 하 여 **glue** 패키지를 다운로드할 수 있습니다. 그런 다음 패키지를 오프 라인으로 설치할 수 있는 클라이언트 컴퓨터에 복사 합니다.
-**MiniCRAN**설치에 대 한 자세한 내용은 [Install miniCRAN](../r/create-a-local-package-repository-using-minicran.md#install-minicran) 를 참조 하세요.
+**MiniCRAN**설치에 대 한 자세한 내용은 [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 를 참조 하세요.
 
 인터넷에 액세스할 때 사용 되는 컴퓨터:
 
@@ -249,6 +249,6 @@ sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLI
 ## <a name="next-steps"></a>다음 단계
 
 - 설치 된 R 패키지에 대 한 자세한 내용은 [r 패키지 정보 가져오기](r-package-information.md) 를 참조 하세요.
-- R 패키지 사용에 [대 한 도움말은 r 패키지 사용을 위한 팁](../r/packages-installed-in-user-libraries.md) 을 참조 하세요.
+- R 패키지 사용에 [대 한 도움말은 r 패키지 사용을 위한 팁](tips-for-using-r-packages.md) 을 참조 하세요.
 - Python 패키지 설치에 대 한 자세한 내용은 [pip를 사용 하 여 python 패키지 설치](install-additional-python-packages-on-sql-server.md) 를 참조 하세요.
 - Machine Learning Services SQL Server에 대 한 자세한 내용은 [SQL Server Machine Learning Services (Python 및 R)](../what-is-sql-server-machine-learning.md) 를 참조 하세요.

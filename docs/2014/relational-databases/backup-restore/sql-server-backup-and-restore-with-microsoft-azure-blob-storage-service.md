@@ -10,12 +10,12 @@ ms.assetid: 6a0c9b6a-cf71-4311-82f2-12c445f63935
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 26a2bd478c219f78376a1588ca5a772e42b92421
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 82220ab3649cb3af858e5a61e4c3ddfc5116d661
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154690"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175808"
 ---
 # <a name="sql-server-backup-and-restore-with-azure-blob-storage-service"></a>Azure Blob Storage 서비스를 사용 하 여 백업 및 복원 SQL Server
   이 항목에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Azure Blob 저장소 서비스](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/)에 대 한 백업 및 복원에 대해 소개 합니다. 또한 Azure Blob service를 사용 하 여 백업을 저장 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 하는 이점에 대 한 요약을 제공 합니다.  

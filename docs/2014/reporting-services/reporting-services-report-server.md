@@ -24,12 +24,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7650f579a42453486a1d8483b9537496d454a036
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 42ede73866c45662cf653d538f59be48684c5a45
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155015"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176189"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services 보고서 서버
   이 항목은 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 설치의 중앙 구성 요소인 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버의 개요입니다. 인증, 데이터 처리, 렌더링 및 배달 작업을 처리하는 특수 용도의 확장 프로그램 모음과 처리 엔진 쌍으로 구성됩니다. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 보고서 서버는 기본 모드 또는 SharePoint 모드 중 하나의 배포 모드에서 실행됩니다. 기능 비교는 [SharePoint와 기본 모드의 기능 비교](#bkmk_featuresupport) 섹션을 참조하세요.  
@@ -44,7 +44,7 @@ ms.locfileid: "70155015"
   
 -   [Azure Virtual Machines에서 비즈니스 인텔리전스를 SQL Server](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx)합니다.  
   
--   [PowerShell을 사용 하 여 기본 모드 보고서 서버로 AZURE VM을 만듭니다](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx).  
+-   [PowerShell을 사용하여 기본 모드 보고서 서버로 Azure VM 만들기](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx)  
   
 ##  <a name="bkmk_top"></a> 항목 내용  
   

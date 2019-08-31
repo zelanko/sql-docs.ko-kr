@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: e3d9346d301357fff052566cf66b7ce133b5e4ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6c1fc5dd3dd59ccde2a1d95ab0940cfdadde7198
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985287"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176299"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Master Data Services 설치 및 구성
 
@@ -45,8 +45,8 @@ ms.locfileid: "67985287"
 - Windows Server 2012 컴퓨터에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]를 설치하는 경우 웹 애플리케이션 사이트에 대한 스크립팅을 허용하도록 Internet Explorer 보안 강화를 구성해야 할 수 있습니다. 그렇게 하지 않으면 서버 컴퓨터에서 해당 사이트로의 이동에 실패합니다.
 - 웹 애플리케이션에서 작업하려면 클라이언트 컴퓨터에 Silverlight 5가 설치되어 있어야 합니다. 필요한 Silverlight 버전이 설치되어 있지 않으면 Silverlight이 필요한 웹 애플리케이션 영역으로 이동할 때 Silverlight를 설치하라는 메시지가 표시됩니다. Silverlight 5는 **[여기](https://www.microsoft.com/silverlight/)** 에서 설치할 수 있습니다.
 
-## <a name="includessmdsshortmdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>Azure 가상 머신의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
-기본적으로 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)]이 설치된 Azure 가상 머신을 설치하면 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]도 설치됩니다. 
+## <a name="includessmdsshort_mdincludesssmdsshort-mdmd-on-an-azure-virtual-machine"></a>Azure 가상 머신의 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+기본적으로, [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 가 이미 설치 된 Azure 가상 컴퓨터를 실행 하면도 설치 됩니다. 
 
 다음 단계는 IIS(인터넷 정보 서비스)를 설치하는 것입니다. [IIS 설치 및 구성](#InstallIIS) 섹션을 참조하세요. 
 
@@ -127,18 +127,18 @@ ms.locfileid: "67985287"
   
 2.  **데이터베이스 만들기**를 클릭한 다음 **데이터베이스 만들기 마법사** 에서 **다음**을 클릭합니다.  
   
-3.  에 **데이터베이스 서버** 페이지에서 SQL Server 인스턴스를 지정 합니다. 
+3.  **데이터베이스 서버** 페이지에서 SQL Server 인스턴스를 지정 합니다. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] SQL Server 관리 되는 인스턴스에 대 한 지원을 추가합니다. 값을 설정할 **SQL Server 인스턴스** Azure SQL Database의 호스트 인스턴스를 관리 합니다. `xxxxxx.xxxxxx.database.windows.net` )을 입력합니다.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]Managed Instance SQL Server에 대 한 지원을 추가 합니다. **SQL Server 인스턴스** 값을 Azure SQL Database 관리 되는 인스턴스의 호스트로 설정 합니다. `xxxxxx.xxxxxx.database.windows.net` )을 입력합니다.
 
-4. 선택 합니다 **인증 유형** 클릭 하 고 **연결 테스트** 선택한 인증 유형에 대 한 자격 증명을 사용 하 여 데이터베이스에 연결할 수 있는지 확인 합니다. **다음**을 클릭합니다.
+4. **인증 유형을** 선택한 다음 **연결 테스트** 를 클릭 하 여 선택한 인증 유형에 대 한 자격 증명을 사용 하 여 데이터베이스에 연결할 수 있는지 확인 합니다. **다음**을 클릭합니다.
 
-    >에 대 한 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], Azure SQL Database에 연결할 관리 되는 인스턴스, 다음 인증 유형 중 하나를 사용 합니다.
+    >의 [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)]경우 관리 되는 인스턴스에 Azure SQL Database 연결 하려면 다음 인증 유형 중 하나를 사용 합니다.
     >
-    >- Azure Active Directory 통합된 인증: **현재 사용자 – Active Directory 통합**
-    >- SQL Server 인증: **SQL Server 계정**합니다.
+    >- Azure Active Directory 통합 인증: **현재 사용자-Active Directory 통합**
+    >- SQL Server 인증: **SQL Server 계정**.
     >
-    >Azure SQL Database 관리 되는 경우에서 사용자의 구성원 이어야는 `sysadmin` 고정된 서버 역할입니다.
+    >Azure SQL Database 관리 되는 인스턴스에서 사용자는 `sysadmin` 고정 서버 역할의 멤버 여야 합니다.
 
     > [!NOTE]  
     >  인증 유형으로 **현재 사용자 – 통합 보안**을 선택할 경우 **사용자 이름** 상자는 읽기 전용이며 컴퓨터에 로그온된 Windows 사용자 계정의 이름이 표시됩니다. Azure Virtual Machine(VM)에서 [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)][!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)](을)를 실행하는 경우 **사용자 이름** 상자에 VM 이름과 VM의 로컬 관리자 계정에 대한 사용자 이름이 표시됩니다. 

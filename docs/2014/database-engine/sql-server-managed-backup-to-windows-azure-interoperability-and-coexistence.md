@@ -10,12 +10,12 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f5a35fe9e2df55dd6b1f76c52503c5d4cad50bf
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 70d941786fd06e48bf071b8448b84c8f4857f8c8
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154069"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176069"
 ---
 # <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Azure에 대 한 관리 되는 백업 SQL Server: 상호 운용성 및 공존성
   이 항목에서는 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 의 몇 가지 기능에 대한 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]의 상호 운용성 및 공존성에 대해 설명합니다. 이러한 기능에는 AlwaysOn 가용성 그룹, 데이터베이스 미러링, 백업 유지 관리 계획, 로그 전달, 임시 백업, 데이터베이스 분리 및 데이터베이스 삭제가 있습니다.  

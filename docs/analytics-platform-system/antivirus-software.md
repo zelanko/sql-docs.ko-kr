@@ -1,6 +1,6 @@
 ---
-title: Analytics Platform System 바이러스 백신 소프트웨어 | Microsoft Docs
-description: 데이터 센터에서 바이러스 백신 소프트웨어에 필요한 경우 분석 플랫폼 시스템에 바이러스 백신 소프트웨어를 설치 하려면 이러한 지침을 따르세요. 데이터 센터의 요구 사항 확실 하지 않은 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.
+title: 바이러스 백신 소프트웨어-APS (분석 플랫폼 시스템) | Microsoft Docs
+description: 데이터 센터에 바이러스 백신 소프트웨어가 필요한 경우 다음 지침을 사용 하 여 AP (Analytics Platform System)에 바이러스 백신 소프트웨어를 설치 합니다. 데이터 센터의 기업 요구 사항이 아닌 경우에는 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,42 +8,42 @@ ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1e52841ebe96d8aab84e4d09c91b590e8e4d7e2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92a34405e75c37cd0347b15aa445b98d84ebcc2a
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961601"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176059"
 ---
-# <a name="antivirus-software-for-analytics-platform-system"></a>Analytics Platform System에 대 한 바이러스 백신 소프트웨어
-데이터 센터에서 바이러스 백신 소프트웨어에 필요한 경우 분석 플랫폼 시스템에 바이러스 백신 소프트웨어를 설치 하려면 이러한 지침을 따르세요. 데이터 센터의 요구 사항 확실 하지 않은 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.  
+# <a name="antivirus-software-for-analytics-platform-system-aps"></a>Analytics Platform System (APS)의 바이러스 백신 소프트웨어
+데이터 센터에 바이러스 백신 소프트웨어가 필요한 경우 다음 지침을 사용 하 여 분석 플랫폼 시스템에 바이러스 백신 소프트웨어를 설치 합니다. 데이터 센터의 기업 요구 사항이 아닌 경우에는 바이러스 백신 소프트웨어를 설치 하지 않는 것이 좋습니다.  
   
 > [!WARNING]  
-> 각 컴퓨터에 대 한 및 Analytics Platform System 전체에 대 한 보안 위험을 개별적으로 평가 하는 선택한 각 컴퓨터의 보안 위험 수준에 대 한 적합 한 도구는 것이 좋습니다. 또한 바이러스 프로젝트 롤아웃하기 전에 내용을 안정성 및 성능을 측정 하는 전체 부하 상태에서 전체 시스템을 테스트 하는 것이 좋습니다.  
+> 각 컴퓨터와 분석 플랫폼 시스템에 대해 개별적으로 보안 위험을 평가 하 고 각 컴퓨터의 보안 위험 수준에 적절 한 도구를 선택 하는 것이 좋습니다. 또한 바이러스 방지 프로젝트를 배포 하기 전에 전체 부하에서 전체 시스템을 테스트 하 여 안정성 및 성능의 변화를 측정 하는 것이 좋습니다.  
 >   
-> 바이러스 백신 소프트웨어 실행 하려면 일부 시스템 리소스가 필요 합니다. Analytics Platform System에 성능 영향을 주지 되는지 확인 하려면 바이러스 백신 소프트웨어를 설치한 후 테스트를 수행 해야 합니다.  
+> 바이러스 방지 소프트웨어를 실행 하려면 일부 시스템 리소스가 필요 합니다. 분석 플랫폼 시스템에 성능 영향이 있는지 확인 하려면 바이러스 백신 소프트웨어를 설치 하기 전후에 테스트를 수행 해야 합니다.  
   
-이 항목의 지침에 따라 됩니다 [SQL Server를 실행 하는 컴퓨터에서 실행 하도록 바이러스 백신 소프트웨어를 선택 하는 방법](https://support.microsoft.com/kb/309422) 하 고 [KB 문서 961804](https://support.microsoft.com/kb/961804/en-us)합니다.  
+이 항목은 SQL Server를 실행 하는 [컴퓨터에서 실행 하는 바이러스 백신 소프트웨어를 선택 하는 방법](https://support.microsoft.com/kb/309422) 에 대 한 지침과 [KB 문서 961804](https://support.microsoft.com/kb/961804/en-us)을 기반으로 합니다.  
   
-## <a name="exclusion-list-for-physical-hosts"></a>실제 호스트에 대 한 제외 목록  
-실제 호스트에서 바이러스 백신 소프트웨어를 설치 하려면 다음과 같은 디렉터리 및 프로세스를 제외 합니다. 이러한는 바이러스 백신 소프트웨어가 검색 되지 않습니다.  
+## <a name="exclusion-list-for-physical-hosts"></a>실제 호스트의 제외 목록  
+실제 호스트에 바이러스 백신 소프트웨어를 설치 하려면 다음 디렉터리 및 프로세스 목록을 제외 합니다. 이는 바이러스 백신 소프트웨어에서 검사 하면 안 됩니다.  
   
-**이러한 디렉터리를 제외 합니다.**  
+**다음 디렉터리를 제외 합니다.**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V-가상 컴퓨터 구성 디렉터리  
+-   C:\ProgramData\Microsoft\Windows\Hyper-V-가상 머신 구성 디렉터리  
   
--   기본 가상 하드 디스크 드라이브 디렉터리 C:\Users\Public\Documents\Hyper-V\Virtual 하드 디스크  
+-   C:\Users\Public\Documents\Hyper-V\Virtual 하드 디스크-기본 가상 하드 디스크 드라이브 디렉터리  
   
 -   C:\clusterStorage-가상 하드 디스크 드라이브 디렉터리  
   
-**이러한 프로세스를 제외 합니다.**  
+**다음 프로세스를 제외 합니다.**  
   
--   가상 컴퓨터 관리 (Vmms.exe)  
+-   가상 컴퓨터 관리 (Vmms)  
   
--   가상 컴퓨터 작업 프로세스 (Vmwp.exe)  
+-   가상 컴퓨터 작업 프로세스 (Vmwp .exe)  
   
-## <a name="exclusion-list-for-virtual-machines-vms"></a>Virtual Machines (Vm)에 대 한 제외 목록  
-Vm에서 바이러스 백신 소프트웨어를 설치 하려면 다음 목록을 디렉터리 및 파일을 제외 합니다. 이러한는 바이러스 백신 소프트웨어가 검색 되지 않습니다.  
+## <a name="exclusion-list-for-virtual-machines-vms"></a>Vm (Virtual Machines)에 대 한 제외 목록  
+Vm에 바이러스 백신 소프트웨어를 설치 하려면 다음 디렉터리와 파일 목록을 제외 합니다. 이는 바이러스 백신 소프트웨어에서 검사 하면 안 됩니다.  
   
 **_PDW_region_-CTL01**  
   
@@ -51,7 +51,7 @@ Vm에서 바이러스 백신 소프트웨어를 설치 하려면 다음 목록�
   
 -   G:\  
   
-**_appliance_domain_-AD01** 하 고  **_appliance_domain_-AD02**  
+**_appliance_domain_-AD01** 및  **_appliance_domain_-AD02**  
   
 -   제한 없음  
   
@@ -74,5 +74,5 @@ Vm에서 바이러스 백신 소프트웨어를 설치 하려면 다음 목록�
 -   C:\iscsitarget  
   
 ## <a name="see-also"></a>관련 항목  
-[어플라이언스 관리 작업 &#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
+[어플라이언스 관리 작업 &#40;분석 플랫폼 시스템&#41;](appliance-management-tasks.md)  
   

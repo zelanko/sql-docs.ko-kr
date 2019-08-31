@@ -10,14 +10,14 @@ ms.assetid: 0dc20bb6-b142-4259-b87b-427d2ba798af
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8df1db964dc62e416260589b45dec2d85254550a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: f154e32b5a7782a083db73de1deef327f44e3ee2
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152859"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175402"
 ---
-# <a name="connecting-to-a-azure-sql-database-using-sql-server-native-client"></a>SQL Server Native Client를 사용하여 Azure SQL 데이터베이스에 연결
+# <a name="connecting-to-an-azure-sql-database-using-sql-server-native-client"></a>SQL Server Native Client를 사용 하 여 Azure SQL Database에 연결
   Native Client를 [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] 사용 하 여 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 에 연결 하는 방법을 보여 주는 샘플을 [보려면 개발: 방법 도움말 항목 (Azure SQL Database)](https://msdn.microsoft.com/library/ee621787.aspx)  
   
 ## <a name="known-issues-when-connecting-to-a-sql-database"></a>SQL Database에 연결할 때 알려진 문제  
