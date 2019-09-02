@@ -240,9 +240,9 @@
             - name: R 패키지 설치
               href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
             - name: miniCRAN 리포지토리 만들기
-              href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
+              href: ../advanced-analytics/package-management/create-a-local-package-repository-using-minicran.md
             - name: R 패키지 사용 팁
-              href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
+              href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
     - name: 관리
       items:
         - name: 통합 관리
