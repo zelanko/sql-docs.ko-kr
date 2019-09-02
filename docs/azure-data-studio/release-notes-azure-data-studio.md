@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 08/15/2019
-ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553110"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059259"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
@@ -33,7 +33,7 @@ ms.locfileid: "69553110"
 | Notebook 기능 개선 | &bull; &nbsp; 인라인으로 코드 또는 텍스트 셀 추가 <br/>&bull; &nbsp; SQL 결과 표를 마우스 오른쪽 단추로 클릭하여 결과를 CSV, JSON 등으로 저장하는 기능을 추가했습니다. <br/> &bull; &nbsp; JSON을 더 빠르게 로드할 수 있게 Notebook 로드 성능이 개선되었습니다. <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed)에서 확인할 수 있음 |
 | SQL Server 2019 지원 |  이 릴리스에서는 다음을 포함하여 추가 SQL Server 2019 빅 데이터 클러스터 기능을 지원합니다. <br/> &bull; &nbsp; 개체 매핑 페이지에서 테이블 및 열 정보를 로드하는 데 걸리는 시간이 단축되었습니다. <br/> &bull; &nbsp; 연결 정보 페이지에서 기존 데이터베이스 범위 자격 증명을 로드할 때의 버그를 수정했습니다. <br/> &bull; &nbsp; PROSE 구문 분석에 사용되는 기본 샘플 크기가 커졌습니다. | 
 | Dacpac 확장이 이제 AAD를 지원합니다. | 
-| Visual Studio Code 5월 릴리스 병합 1.37 | 최신 개선 사항은 [여기](https://code.visualstudio.com/updates/v1_37)에서 확인할 수 있습니다. |
+| Visual Studio Code 7월 릴리스 병합 1.37 | 최신 개선 사항은 [여기](https://code.visualstudio.com/updates/v1_37)에서 확인할 수 있습니다. |
 | 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
@@ -69,7 +69,7 @@ ms.locfileid: "69553110"
 | 스키마 비교 기능 개선 | &bull; &nbsp; 제외/포함 옵션이 추가됨 <br/>&bull; &nbsp; 스크립트 생성을 실행하면 생성된 스크립트가 열림 <br/>&bull; &nbsp; 이중 스크롤 막대가 제거됨  <br/>&bull; &nbsp; 서식 및 레이아웃 향상 <br/>&bull; &nbsp; 전체 변경 내용은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)에서 확인할 수 있습니다.|
 | 메시지 섹션이 고유한 탭으로 이동됨 | 사용자가 SQL 쿼리를 실행하면 결과 및 메시지가 누적된 패널에 표시되었습니다. 이제 SSMS와 같이 한 패널의 개별 탭으로 표시됩니다. |
 | SQL Notebook 기능 개선 | &bull; &nbsp; 이제 사용자가 Notebook에서 고유한 Python 3 또는 Anaconda 설치를 사용하도록 선택할 수 있음 <br/>&bull; &nbsp; 여러 가지 안정성 + 맞춤/완료 수정 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)에서 확인할 수 있음|
-| Visual Studio Code 5월 릴리스 병합 1.34 | 최신 개선 사항은 [여기](https://code.visualstudio.com/updates/v1_34)에서 확인할 수 있습니다. |
+| Visual Studio Code 4월 릴리스 병합 1.34 | 최신 개선 사항은 [여기](https://code.visualstudio.com/updates/v1_34)에서 확인할 수 있습니다. |
 | 버그 및 이슈 해결 | [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1)를 참조하세요. |
 | &nbsp; | &nbsp; |
 
