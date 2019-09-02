@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9e60c376e0bced63241674b82d05700281a06ad3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c0f9d73dace4e17d87e1c93da703786fc920b2fb
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68008491"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176164"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>ODBC 드라이버에서 Azure Active Directory 사용
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -99,7 +99,7 @@ SQLDriverConnect에서 연결을 완료 하는 데 필요한 정보를 요청할
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
 6. _Windows 드라이버만_해당 됩니다. 교환를 사용 하는 Windows 계정 자격 Azure SQL Database 증명을 사용 하는 Windows 통합 인증을 사용 합니다. 가로 `TrustServerCertificate` `true`설정 되지 않은 경우 암호화 설정에 관계 없이 서버 인증서의 유효성을 검사 합니다. 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
-7. _Windows 드라이버만_해당 됩니다. AAD 대화형 인증은 Azure Multi-factor Authentication 기술을 사용 하 여 연결을 설정 합니다. 이 모드에서 로그인 ID를 제공 하면 Windows Azure 인증 대화 상자가 트리거되고 사용자가 암호를 입력 하 여 연결을 완료할 수 있습니다. 사용자 이름은 연결 문자열에 전달 됩니다.
+7. _Windows 드라이버만_해당 됩니다. AAD 대화형 인증은 Azure Multi-factor Authentication 기술을 사용 하 여 연결을 설정 합니다. 이 모드에서 로그인 ID를 제공 하면 Azure 인증 대화 상자가 트리거되고 사용자가 암호를 입력 하 여 연결을 완료할 수 있습니다. 사용자 이름은 연결 문자열에 전달 됩니다.
 `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
@@ -163,7 +163,7 @@ typedef struct AccessToken
     ...
     free(pAccToken);
 ~~~
-다음은 Azure Active Directory 대화형 인증에 사용할 수 있는 샘플 연결 문자열입니다. Windows Azure 인증 화면을 사용 하 여 암호를 입력 하므로 PWD 필드는 포함 되지 않습니다.
+다음은 Azure Active Directory 대화형 인증에 사용할 수 있는 샘플 연결 문자열입니다. Azure 인증 화면을 사용 하 여 암호를 입력 하므로 PWD 필드는 포함 되지 않습니다.
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~

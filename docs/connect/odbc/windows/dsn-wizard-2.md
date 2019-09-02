@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-ms.openlocfilehash: c997dd30b6d1e9844843ff4fa626c46b42fed463
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4ab8be02351a23c78251a99ca707e946ee8944c8
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67936579"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70152564"
 ---
 # <a name="data-source-wizard-screen-2"></a>데이터 원본 마법사 화면 2
 
@@ -43,7 +43,7 @@ ms.locfileid: "67936579"
 
 ### <a name="with-active-directory-interactive-authentication"></a>Active Directory 대화형 인증 사용
 
-드라이버가 로그인 ID를 제공 하 여 Azure Active Directory 대화형 모드를 사용 하 여 SQL Server를 인증 하도록 지정 합니다. 그러면 Windows Azure 인증 프롬프트 대화 상자가 트리거됩니다.
+드라이버가 로그인 ID를 제공 하 여 Azure Active Directory 대화형 모드를 사용 하 여 SQL Server를 인증 하도록 지정 합니다. 그러면 Azure 인증 프롬프트 대화 상자가 트리거됩니다.
 
 ### <a name="login-id"></a>로그인 ID
 

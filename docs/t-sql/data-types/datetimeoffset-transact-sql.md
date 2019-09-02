@@ -23,12 +23,12 @@ ms.assetid: a0455b71-ca25-476e-a7a8-0770f1860bb7
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66d10ee997949d8415ebe3ed582f63b1994840cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 699d7779c3409a69d4389a96b93feab1cae3f9e0
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086766"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148829"
 ---
 # <a name="datetimeoffset-transact-sql"></a>datetimeoffset(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "68086766"
 |사용법|DECLARE \@MyDatetimeoffset **datetimeoffset(7)**<br /><br /> CREATE TABLE Table1( Column1 **datetimeoffset(7)** )|  
 |하위 클라이언트에 대해 사용되는 기본 문자열 리터럴 형식|YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+&#124;-}hh:mm]<br /><br /> 자세한 내용은 뒷부분에 나오는 "하위 클라이언트에 대한 이전 버전과의 호환성" 섹션을 참조하세요.|  
 |날짜 범위|0001-01-01부터 31.12.99까지<br /><br /> CE 1년 1월 1일부터 CE 9999년 12월 31일까지|  
-|시간 범위|00:00:00부터 23:59:59.9999999까지(Informatica에서는 초 소수 부분이 지원되지 않음)|  
-|표준 시간대 오프셋 범위|-14:00부터 +14:00(Informatica에서는 표준 시간대 오프셋이 무시됨)|  
-|요소 범위|YYYY는 0001에서 9999 사이에 속하는 4자리 숫자로, 연도를 나타냅니다.<br /><br /> MM은 01에서 12 사이에 속하는 두 자리 숫자로, 지정한 연도의 월을 나타냅니다.<br /><br /> DD는 월에 따라 01에서 31 사이에 속하는 두 자리 숫자로, 지정한 월의 일을 나타냅니다.<br /><br /> hh는 00에서 23 사이에 속하는 두 자리 숫자로, 시를 나타냅니다.<br /><br /> mm은 00에서 59 사이에 속하는 두 자리 숫자로, 분을 나타냅니다.<br /><br /> ss는 00에서 59 사이에 속하는 두 자리 숫자로, 초를 나타냅니다.<br /><br /> n*은 0에서 9999999 사이에 속하는 0부터 7 자리의 숫자로, 소수 자릿수 초를 나타냅니다. Informatica에서는 초 소수 부분이 지원되지 않습니다.<br /><br /> hh는 -14에서 14 사이에 속하는 두 자리 숫자입니다. Informatica에서는 표준 시간대 오프셋이 무시됩니다.<br /><br /> mm은 00에서 59 사이에 속하는 두 자리 숫자입니다. Informatica에서는 표준 시간대 오프셋이 무시됩니다.|  
+|시간 범위|00:00:00부터 23:59:59.9999999까지|  
+|표준 시간대 오프셋 범위|-14:00부터 +14:00까지|  
+|요소 범위|YYYY는 0001에서 9999 사이에 속하는 4자리 숫자로, 연도를 나타냅니다.<br /><br /> MM은 01에서 12 사이에 속하는 두 자리 숫자로, 지정한 연도의 월을 나타냅니다.<br /><br /> DD는 월에 따라 01에서 31 사이에 속하는 두 자리 숫자로, 지정한 월의 일을 나타냅니다.<br /><br /> hh는 00에서 23 사이에 속하는 두 자리 숫자로, 시를 나타냅니다.<br /><br /> mm은 00에서 59 사이에 속하는 두 자리 숫자로, 분을 나타냅니다.<br /><br /> ss는 00에서 59 사이에 속하는 두 자리 숫자로, 초를 나타냅니다.<br /><br /> n*은 0에서 9999999 사이에 속하는 0부터 7 자리의 숫자로, 소수 자릿수 초를 나타냅니다.<br /><br /> hh는 -14에서 14 사이에 속하는 두 자리 숫자입니다. <br /><br /> mm은 00에서 59 사이에 속하는 두 자리 숫자입니다.|  
 |문자 길이|최소 26자리(YYYY-MM-DD hh:mm:ss {+&#124;-}hh:mm)부터 최대 34자리(YYYY-MM-DD hh:mm:ss.nnnnnnn {+&#124;-}hh:mm)까지|  
 |전체 자릿수, 소수 자릿수|아래 표를 참조하세요.|  
 |스토리지 크기|초 소수 부분 자릿수 기본값 100ns를 기준으로 10바이트(고정)가 기본값입니다.|  

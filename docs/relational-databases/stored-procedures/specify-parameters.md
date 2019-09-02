@@ -15,12 +15,12 @@ ms.assetid: 902314fe-5f9c-4d0d-a0b7-27e67c9c70ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2997665339c2326b1fd99f8d2e09ba48089b9f2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b2ac27ecf2ca02acde1cefba87aaf828f8a3317
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136650"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110268"
 ---
 # <a name="specify-parameters"></a>매개 변수 지정
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,6 +83,9 @@ GO
   
 > [!NOTE]  
 >  기본값이 공백 또는 문장 부호가 포함된 문자열이거나 6xxx와 같이 숫자로 시작하면 기본값을 곧은 작은 따옴표로 묶어야 합니다.  
+
+> [!NOTE] 
+> 기본 매개 변수는 Azure SQL Data Warehouse 또는 병렬 데이터 웨어하우스에서 지원되지 않습니다. 
   
  매개 변수에 적당한 기본값을 지정할 수 없을 때는 NULL을 기본값으로 지정합니다. 프로시저가 매개 변수 값이 없이 실행되는 경우 프로시저에서 사용자 지정 메시지를 반환하는 것이 좋습니다.  
   

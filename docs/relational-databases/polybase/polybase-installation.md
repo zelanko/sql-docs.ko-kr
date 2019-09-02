@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 770b7d3d9a16adf64134ba6896c7c3a1f46dcc9b
-ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
+ms.openlocfilehash: 6229d1df654aba2c83e10ee7b692464ed8e46897
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69561124"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175554"
 ---
 # <a name="install-polybase-on-windows"></a>Windows에 PolyBase 설치
 
@@ -28,8 +28,6 @@ SQL Server 평가판을 설치하려면 [SQL Server 평가](https://www.microsof
 - 64비트 SQL Server 평가 버전.  
    
 - Microsoft .NET Framework 4.5  
-
-- Oracle JRE(Java SE Runtime Environment) 버전 7(7.51부터 시작) 및 8이 지원됩니다. [JRE](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html) 및 [Server JRE](https://www.oracle.com/technetwork/java/javase/downloads/server-jre8-downloads-2133154.html)가 모두 작동합니다. [Java SE 다운로드](https://www.oracle.com/technetwork/java/javase/downloads/index.html)로 이동합니다. JRE가 없으면 설치 관리자가 실패합니다. JRE9 및 JRE10은 지원되지 않습니다.
 
 - 최소 메모리: 4GB. 
    

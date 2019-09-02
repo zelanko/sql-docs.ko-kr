@@ -26,7 +26,7 @@
       href: security-best-practices-with-contained-databases.md
     - name: Migrate to a Partially Contained Database
       href: migrate-to-a-partially-contained-database.md
-- name: Windows Azure의 SQL Server 데이터 파일
+- name: Azure의 SQL Server 데이터 파일
   href: sql-server-data-files-in-microsoft-azure.md
 - name: 데이터베이스 파일 및 파일 그룹
   href: database-files-and-filegroups.md

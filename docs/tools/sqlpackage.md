@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 52d3a6f14042a5208803c84557d6b3b7e4e4f37e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 89f6139861b971eb6c1f5771bd4ee77cf379f56f
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986226"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190378"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -219,7 +219,8 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |**/p:**|ScriptNewConstraintValidation=(BOOLEAN 'True')|게시 중간에 check 또는 foreign key 제약 조건으로 인해 발생 하는 데이터 오류를 방지 하기 위해 모든 제약 조건이 게시의 끝에서 하나의 집합으로 확인 됩니다. False로 설정하면 해당 데이터를 확인하지 않고 제약 조건이 게시됩니다.|
 |**/p:**|ScriptRefreshModule = (부울 ' True ')|게시 스크립트의 끝에 새로 고침 문을 포함합니다.|
 |**/p:**|Storage=({File&#124;Memory})|데이터베이스 모델을 생성할 때 요소의 저장 방법을 지정합니다. 성능상의 이유로 기본값은 InMemory입니다. 큰 데이터베이스의 경우 파일 지원 스토리지가 필요합니다.|
-|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|확인을 경고로 처리해야 하는 동안 발생한 오류를 게시하는지 여부를 지정합니다. 생성된 배포 계획을 대상 데이터베이스에 대해 실행하기 전에 해당 계획에 대한 확인이 수행됩니다. 계획 확인에서 대상 전용 개체(예: 인덱스)가 없는 등의 문제가 발견되면 해당 계획을 삭제하여 변경해야 합니다. 또한 복합 프로젝트에 대한 참조로 인한 종속성(예: 테이블, 뷰)이 존재하지만 대상 데이터베이스에는 존재하지 않는 상황도 확인됩니다. 첫 번째 오류 발생 시 게시 작업을 중지 하는 대신 모든 문제에 대 한 전체 목록을 가져오려면이 작업을 수행 하도록 선택할 수 있습니다.|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|개체에서 수정할 수 없는 차이가 발견될 경우(예: 파일 경로 또는 파일 크기가 특정 파일에서 다른 경우) 경고를 생성할지 여부를 지정합니다.|
+|**/p:**|TreatVerificationErrorsAsWarnings=(BOOLEAN)|확인을 경고로 처리해야 하는 동안 발생한 오류를 게시하는지 여부를 지정합니다. 생성된 배포 계획을 대상 데이터베이스에 대해 실행하기 전에 해당 계획에 대한 확인이 수행됩니다. 계획 확인에서 대상 전용 개체(예: 인덱스)가 없는 등의 문제가 발견되면 해당 계획을 삭제하여 변경해야 합니다. 또한 복합 프로젝트에 대한 참조로 인한 종속성(예: 테이블, 뷰)이 존재하지만 대상 데이터베이스에는 존재하지 않는 상황도 확인됩니다. 첫 번째 오류 발생 시 게시 작업을 중지 하는 대신 모든 문제에 대 한 전체 목록을 가져오려면이 작업을 수행 하도록 선택할 수 있습니다.
+|**/p:**|UnmodifiableObjectWarnings=(BOOLEAN 'True')|개체에서 수정할 수 없는 차이가 발견될 경우(예: 파일 경로 또는 파일 크기가 특정 파일에서 다른 경우) 경고를 생성할지 여부를 지정합니다.|
 |**/p:**|VerifyCollationCompatibility = (부울 ' True ')|데이터 정렬 호환성이 확인되는지 여부를 지정합니다.|
 |**/p:**|VerifyDeployment = (부울 ' True ')|성공적인 게시를 차단할 수 있는 문제가 존재할 경우 게시 작업을 중단하는 검사를 게시 전에 수행할지 여부를 지정합니다. 예를 들어 데이터베이스 프로젝트에 존재하지 않고 게시할 때 오류를 일으키는 외래 키를 대상 데이터베이스에 설정한 경우 게시 작업이 중단될 수 있습니다.|
 |

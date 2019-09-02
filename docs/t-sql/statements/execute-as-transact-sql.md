@@ -1,9 +1,9 @@
 ---
 title: EXECUTE AS(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 08/27/2019
 ms.prod: sql
-ms.prod_service: database-engine, sql-database
+ms.prod_service: database-engine, sql-database, sql-data-warehouse
 ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
@@ -20,17 +20,19 @@ helpviewer_keywords:
 - execution context [SQL Server]
 - switching execution context
 ms.assetid: 613b8271-7f7d-4378-b7a2-5a7698551dbd
-author: VanMSFT
-ms.author: vanto
-ms.openlocfilehash: 1908228b12db7256351945b474016a707db56b3c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: CarlRabeler
+ms.author: carlrab
+manager: craigg
+monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
+ms.openlocfilehash: d9ec87979d0f91653d5f287749ccfb5b7f806dc4
+ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084438"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70161337"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   세션의 실행 컨텍스트를 설정합니다.  
   
@@ -59,7 +61,7 @@ ms.locfileid: "68084438"
  가장할 실행 컨텍스트를 로그인으로 지정합니다. 가장의 범위는 서버 수준입니다.  
   
 > [!NOTE]  
->  이 옵션은 포함된 데이터베이스 또는 SQL 데이터베이스에서 사용할 수 없습니다.  
+>  이 옵션은 포함된 데이터베이스 또는 SQL Database 또는 SQL Data Warehouse에서 사용할 수 없습니다.  
   
  User  
  가장할 컨텍스트를 현재 데이터베이스의 사용자로 지정합니다. 가장의 범위는 현재 데이터베이스로 제한됩니다. 데이터베이스 사용자로 컨텍스트 전환 시 해당 사용자의 서버 수준 사용 권한은 상속되지 않습니다.  
@@ -67,7 +69,7 @@ ms.locfileid: "68084438"
 > [!IMPORTANT]  
 >  데이터베이스 사용자로의 컨텍스트 전환이 활성화되어 있는 동안 해당 데이터베이스 외부의 리소스에 액세스하려고 하면 문이 실패합니다. USE *database* 문, 분산 쿼리, 식별자가 3-4부분으로 구성된 다른 데이터베이스를 참조하는 쿼리 등이 여기에 해당됩니다.  
   
- **'** _name_ **'**  
+ **'** *name* **'**  
  유효한 사용자 또는 로그인 이름입니다. *name*은 **sysadmin** 고정 서버 역할의 멤버이거나 [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) 또는 [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)에서 각각 보안 주체여야 합니다.  
   
  *name*에 지역 변수를 지정할 수 있습니다.  
@@ -77,22 +79,23 @@ ms.locfileid: "68084438"
  자세한 내용은 이 항목의 뒤에 나오는 [사용자 또는 로그인 이름 지정](#_user)을 참조하세요.  
   
  NO REVERT  
- 컨텍스트 전환을 이전 컨텍스트로 되돌릴 수 없도록 지정합니다. **NO REVERT** 옵션은 임시 수준에서만 사용할 수 있습니다.
+ 컨텍스트 전환을 이전 컨텍스트로 되돌릴 수 없도록 지정합니다. **NO REVERT** 옵션은 임시 수준에서만 사용할 수 있습니다.  
   
  이전 컨텍스트로 되돌리는 방법은 [REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)를 참조하세요.  
   
- COOKIE INTO **@** _varbinary_variable_  
- 호출 REVERT WITH COOKIE 문에 올바른 **@** _varbinary_variable_값이 포함되어 있는 경우에만 실행 컨텍스트를 이전 컨텍스트로 되돌릴 수 있도록 지정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 쿠키를 **@** _varbinary_variable_로 전달합니다. **COOKIE INTO** 옵션은 임시 수준에서만 사용할 수 있습니다.  
+ COOKIE INTO * *@***varbinary_variable*  
+ 호출 REVERT WITH COOKIE 문에 올바른 correct * *@***varbinary_variable* 값이 포함되어 있는 경우에만 실행 컨텍스트를 이전 컨텍스트로 되돌릴 수 있도록 지정합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 쿠키를 * *@***varbinary_variable*로 전달합니다. **COOKIE INTO** 옵션은 임시 수준에서만 사용할 수 있습니다.  
   
- **@** _varbinary_variable_은 **varbinary(8000)** 입니다.  
+ **@** *varbinary_variable*은 **varbinary(8000)** 입니다.  
   
 > [!NOTE]  
 >  현재 쿠키 **OUTPUT** 매개 변수는 정확한 최대 길이인 **varbinary(8000)** 로 정의되어 있습니다. 그러나 현재 구현은 **varbinary(100)** 입니다. 애플리케이션은 **varbinary(8000)** 를 예약하여 후속 릴리스에서 쿠키 반환 크기가 늘어날 경우에도 애플리케이션이 제대로 작동할 수 있도록 해야 합니다.  
   
  CALLER  
- 모듈 내에서 사용된 경우 모듈 내의 문이 모듈 호출자의 컨텍스트에서 실행되도록 지정합니다.  
-  
- 모듈 외부에서 사용된 경우에는 문이 아무런 동작도 수행하지 않습니다.  
+ 모듈 내에서 사용된 경우 모듈 내의 문이 모듈 호출자의 컨텍스트에서 실행되도록 지정합니다.
+모듈 외부에서 사용된 경우에는 문이 아무런 동작도 수행하지 않습니다.
+ > [!NOTE]  
+>  SQL Datawarehouse에서는 이 옵션을 사용할 수 없습니다.  
   
 ## <a name="remarks"></a>Remarks  
  실행 컨텍스트의 변경은 다음 조건 중 하나가 발생할 때까지 유효합니다.  
@@ -125,11 +128,9 @@ ms.locfileid: "68084438"
 >  [!INCLUDE[ssDE](../../includes/ssde-md.md)]가 이름을 확인할 수 있는 한 EXECUTE AS 문은 성공할 수 있습니다. 도메인 사용자가 있는 경우 Windows 사용자에게 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 대한 액세스 권한이 없어도 Windows는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용자를 확인할 수 있습니다. 가장된 로그인은 공용 또는 게스트 사용 권한만 부여하더라도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 액세스 권한이 없는 로그인이 로그인된 것으로 나타날 수 있습니다.  
   
 ## <a name="using-with-no-revert"></a>WITH NO REVERT 사용  
- EXECUTE AS 문에 선택적 WITH NO REVERT 절이 포함되어 있으면 REVERT를 사용하거나 다른 EXECUTE AS 문을 실행하여 세션의 실행 컨텍스트를 다시 설정할 수 없습니다. 해당 문으로 설정한 컨텍스트는 세션이 삭제될 때까지 유효합니다.   연결 풀링을 사용하면 `sp_reset_connection`이 실패하고 연결이 끊어집니다.  이벤트 로그의 오류 메시지는 다음과 같습니다.
- 
-> 연결을 연 보안 주체가 새 보안 컨텍스트를 가정한 후 가장된 보안 컨텍스트에서 연결을 다시 설정하려고 했기 때문에 연결이 삭제되었습니다. 이 시나리오는 지원되지 않습니다. 온라인 설명서의 "가장 개요"를 참조하십시오.
+ EXECUTE AS 문에 선택적 WITH NO REVERT 절이 포함되어 있으면 REVERT를 사용하거나 다른 EXECUTE AS 문을 실행하여 세션의 실행 컨텍스트를 다시 설정할 수 없습니다. 해당 문으로 설정한 컨텍스트는 세션이 삭제될 때까지 유효합니다.  
   
- WITH NO REVERT COOKIE = @*varbinary_variabl* 절을 지정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 쿠키 값을 @*varbinary_variable*에 전달합니다. 호출하는 REVERT WITH COOKIE = @*varbinary_variable* 문에 동일한 *@varbinary_variable* 값이 포함되어 있는 경우에만 해당 명령문으로 설정된 실행 컨텍스트를 이전 컨텍스트로 되돌릴 수 있습니다.  
+ WITH NO REVERT COOKIE = @*varbinary_variabl* 절을 지정하면 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]이 쿠키 값을 @*varbinary_variabl*e에 전달합니다. 호출하는 REVERT WITH COOKIE = @*varbinary_variable* 문에 동일한 *@varbinary_variable* 값이 포함되어 있는 경우에만 해당 명령문으로 설정된 실행 컨텍스트를 이전 컨텍스트로 되돌릴 수 있습니다.  
   
  이 옵션은 연결 풀링을 사용하는 환경에서 유용합니다. 연결 풀링은 애플리케이션 서버의 애플리케이션이 다시 사용할 수 있도록 데이터베이스 연결 그룹을 유지 관리하는 것입니다. *@varbinary_variable* 에 전달된 값은 EXECUTE AS 문의 호출자에게만 알려지므로 호출자는 자신이 설정한 실행 컨텍스트를 다른 사람이 변경할 수 없도록 할 수 있습니다.  
   
@@ -186,7 +187,7 @@ GO
 ```  
   
 ### <a name="b-using-the-with-cookie-clause"></a>2\. WITH COOKIE 절 사용  
- 다음 예에서는 세션 실행 컨텍스트를 지정한 사용자로 설정하고 WITH NO REVERT COOKIE = @*varbinary_variable* 절을 지정합니다. 컨텍스트를 호출자로 되돌리려면 `REVERT` 문에 `@cookie` 문의 `EXECUTE AS` 변수로 전달되는 값을 지정해야 합니다. 이 예를 실행하려면 예 1에서 생성된 `login1` 로그인 및 `user1` 사용자가 있어야 합니다.  
+ 다음 예에서는 세션 실행 컨텍스트를 지정한 사용자로 설정하고 WITH NO REVERT COOKIE = @*varbinary_variabl*e 절을 지정합니다. 컨텍스트를 호출자로 되돌리려면 `REVERT` 문에 `@cookie` 문의 `EXECUTE AS` 변수로 전달되는 값을 지정해야 합니다. 이 예를 실행하려면 예 1에서 생성된 `login1` 로그인 및 `user1` 사용자가 있어야 합니다.  
   
 ```  
 DECLARE @cookie varbinary(8000);  

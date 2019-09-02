@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 275ef0ef83c073726cebf80b63e1d8f9640eca81
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
+ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903638"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70026239"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -91,7 +91,7 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 
 |새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
-|UTF-8 문자 인코딩 지원 |가져오기 및 내보내기 인코딩에는 UTF-8 문자를 지원하고, 문자열 데이터의 경우 데이터베이스 수준 또는 열 수준 데이터 정렬로 지원합니다. 이는 글로벌 규모로 확장되는 애플리케이션을 지원합니다. 글로벌 다국어 데이터베이스 애플리케이션 및 서비스를 제공하는 요구 사항은 고객 수요 및 특정 시장 규정을 충족하는 데 매우 중요합니다. [데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.<br/><br/>[[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 릴리스 후보를 사용하면 Polybase 외부 테이블 및 Always Encrypted에 대한 UTF-8 지원이 가능합니다.|
+|UTF-8 문자 인코딩 지원 |가져오기 및 내보내기 인코딩에는 UTF-8 문자를 지원하고, 문자열 데이터의 경우 데이터베이스 수준 또는 열 수준 데이터 정렬로 지원합니다. 이는 글로벌 규모로 확장되는 애플리케이션을 지원합니다. 글로벌 다국어 데이터베이스 애플리케이션 및 서비스를 제공하는 요구 사항은 고객 수요 및 특정 시장 규정을 충족하는 데 매우 중요합니다. [데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 릴리스 후보를 사용하면 Polybase 외부 테이블 및 Always Encrypted에 대한 UTF-8 지원이 가능합니다.|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase
@@ -147,6 +147,7 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 |:---|:---|
 |가속 데이터베이스 복구 | 데이터베이스별로 가속 데이터베이스 복구를 사용하도록 설정합니다. [가속 데이터베이스 복구](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)를 참조하세요.|
 |빠른 전달 및 정적 커서 강제 적용 | 쿼리 저장소 계획에서 빠른 전달 및 정적 커서에 대한 지원을 강제 적용합니다. [계획에서 빠른 전달 및 정적 커서에 대한 강제 적용 지원](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23)을 참조하세요.|
+|리소스 거버넌스| `CREATE WORKLOAD GROUP` 및 `ALTER WORKLOAD GROUP`의 `REQUEST_MAX_MEMORY_GRANT_PERCENT` 옵션에 대해 구성 가능한 값이 정수에서 부동 소수점 수 데이터 유형으로 변경되어 메모리 제한의 더 세분화된 제어가 가능합니다. [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) 및 [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md)을 참조하세요.|
 |워크로드에 대한 다시 컴파일 감소| 여러 범위에서 임시 테이블을 사용하는 기능이 개선되었습니다. [워크로드에 대한 다시 컴파일 감소](../relational-databases/tables/tables.md#ctp23)를 참조하세요. |
 |간접 검사점 확장성 |[향상된 간접 검사점 확장성](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)을 참조하세요.|
 |메모리 최적화 `tempdb` 메타데이터| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 [메모리 내 데이터베이스](../relational-databases/in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 `tempdb` 메타데이터를 도입하여 해당 병목 현상을 효과적으로 제거하고 `tempdb` 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다. [메모리 최적화 `tempdb` 메타데이터](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)를 참조하세요.|
@@ -155,7 +156,7 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 |테이블 변수 지연 컴파일|테이블 변수를 참조하는 쿼리의 계획 품질 및 전체 성능을 개선합니다. 최적화 및 초기 컴파일 중에 이 기능은 실제 테이블 변수 행 수를 기반으로 하는 카디널리티 예측을 전파합니다. 이 정확한 행 수 정보는 다운스트림 계획 작업을 최적화합니다. [테이블 변수 지연 컴파일](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)을 참조하세요. |
 |`APPROX_COUNT_DISTINCT `|절대 정밀도가 중요하지 않지만 응답성이 중요한 시나리오의 경우 `APPROX_COUNT_DISTINCT`는 뛰어난 동시성을 위해 `COUNT(DISTINCT())`보다 적은 리소스를 사용하여 대규모 데이터 세트에서 집계합니다. [대략적인 쿼리 처리](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)를 참조하세요.|
 |rowstore의 일괄 처리 모드|rowstore의 일괄 처리 모드는 columnstore 인덱스를 요구하지 않고도 일괄 처리 모드를 실행할 수 있습니다. 일괄 처리 모드 실행은 분석 워크로드 중에 CPU를 더욱 효율적으로 사용하지만 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]까지는 쿼리에 columnstore 인덱스를 사용하는 작업이 포함된 경우에만 사용되었습니다. 그러나 일부 애플리케이션은 columnstore 인덱스에서 지원되지 않는 기능을 사용할 수 있으므로 일괄 처리 모드를 활용할 수 없습니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]부터는 쿼리에 모든 유형의 인덱스(rowstore 또는 columnstore)를 사용하여 작업을 포함하는 적격 분석 워크로드에서 일괄 처리 모드를 사용할 수 있습니다. [rowstore의 일괄 처리 모드](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)를 참조하세요. |
-|스칼라 UDF 인라인 처리|자동으로 스칼라 UDF를 관계식으로 변환하고 이를 호출 SQL 쿼리에 포함합니다. 이 변환은 스칼라 UDF를 활용하는 워크로드의 성능을 개선합니다. [스칼라 UDF 인라인 처리](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining).|
+|스칼라 UDF 인라인 처리|자동으로 스칼라 UDF를 관계식으로 변환하고 이를 호출 SQL 쿼리에 포함합니다. 이 변환은 스칼라 UDF를 활용하는 워크로드의 성능을 개선합니다. [스칼라 UDF 인라인 처리](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)를 참조하세요.|
 | &nbsp; | &nbsp; |
 
 ### <a name="availability-groups"></a>가용성 그룹
@@ -193,14 +194,6 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 |`tempdb` 개선 사항 | 기본적으로 Linux에 SQL Server를 새로 설치하면 논리적 코어 수(최대 8개 데이터 파일 포함)에 따라 여러 `tempdb` 데이터 파일이 생성됩니다. 이 위치에서 부 버전 또는 주 버전 업그레이드에는 적용되지 않습니다. 각 `tempdb` 파일은 자동 증가 속도가 64MB인 8MB입니다. 이 동작은 Windows의 기본 SQL Server 설치와 유사합니다. |
 | Linux의 PolyBase. | Hadoop이 아닌 커넥터에 대한 Linux에 [PolyBase를 설치](../relational-databases/polybase/polybase-linux-setup.md)합니다.<br/><br/>[PolyBase 형식 매핑](../relational-databases/polybase/polybase-type-mapping.md). |
 | CDC(변경 데이터 캡처) 지원 | CDC(변경 데이터 캡처)는 이제 SQL Server 2019용 Linux에서 지원됩니다. |
-| &nbsp; | &nbsp; |
-
-### <a name="setup"></a>설치 프로그램
-
-|새로운 기능 또는 업데이트 | 세부 정보 |
-|:---|:---|
-|새 메모리 설정 옵션 | 설치 중에 *최소 서버 메모리(MB)* 및 *최대 서버 메모리(MB)* 서버 구성을 설정합니다. 자세한 내용은 [명령 프롬플트에서 SQL Server 설치](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)의 `USESQLRECOMMENDEDMEMORYLIMITS`, `SQLMINMEMORY` 및 `SQLMAXMEMORY` 매개 변수를 참조하세요. 제안된 값은 [서버 메모리 구성 옵션](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)의 메모리 구성 지침에 따라 정렬됩니다.|
-|새 병렬 처리 설정 옵션 | 설치 중에 *최대 병렬 처리 수준* 서버 구성을 설정합니다. 자세한 내용은 [명령 프롬플트에서 SQL Server 설치](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)의 `SQLMAXDOP` 매개 변수를 참조하세요. 기본값은 [최대 병렬 처리 수준 서버 구성 옵션 구성](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)의 최대 병렬 처리 수준 지침에 따라 정렬됩니다.|
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> SQL Server Machine Learning Services
@@ -247,7 +240,7 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 
 ## <a name="next-steps"></a>다음 단계
 
-- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 릴리스 정보](sql-server-ver15-release-notes.md).
+- [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 릴리스 정보](sql-server-ver15-release-notes.md).
 
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]: 기술 백서](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />2018년 9월에 게시되었습니다. Windows, Linux 및 Docker 컨테이너용 Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0에 적용됩니다.
 

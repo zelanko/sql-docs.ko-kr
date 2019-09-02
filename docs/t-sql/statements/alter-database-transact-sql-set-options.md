@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
+ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495456"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70110280"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -854,7 +854,7 @@ TORN_PAGE_DETECTION
 값이 일치하지 않으면 페이지의 일부분만 디스크에 쓰여졌음을 의미합니다. 이 경우 조각난 페이지 오류를 나타내는 824 오류 메시지가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그와 Windows 이벤트 로그에 보고됩니다. 조각난 페이지가 실제로 쓰기가 완료되지 않은 페이지인 경우 조각난 페이지는 보통 데이터베이스 복구에서 검색됩니다. 그러나 다른 I/O 경로 오류도 언제든 조각난 페이지의 원인이 될 수 있습니다.
 
 없음         
-데이터베이스 페이지 쓰기에서 CHECKSUM 또는 TORN_PAGE_DETECTION 값을 생성하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 페이지 헤더에 CHECKSUM 또는 TORN_PAGE_DETECTION 값이 있는 경우에도 읽기 중에 체크섬이나 조각난 페이지를 확인하지 않습니다.
+데이터베이스 페이지 쓰기에서 CHECKSUM 또는 TORN_PAGE_DETECTION 값을 생성하지 않습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 페이지 헤더에 CHECKSUM 또는 TORN_PAGE_DETECTION 값이 있는 경우에도 읽기 중 체크섬이나 조각난 페이지를 확인하지 않습니다.
 
 PAGE_VERIFY 옵션을 사용하는 경우 다음 중요 사항을 고려하십시오.
 
@@ -1785,7 +1785,7 @@ FORCED
 **\<query_store_options> ::=**
 
 ON | OFF | CLEAR [ ALL ]         
-이 데이터베이스에서 쿼리 저장소를 사용하는지 여부를 제어하고 쿼리 저장소의 내용 제거도 제어합니다.
+이 데이터베이스에서 쿼리 저장소를 사용 여부를 제어하고 쿼리 저장소의 내용 제거를 제어합니다.
 
 ON         
 쿼리 저장소를 사용하도록 설정합니다.
@@ -2053,7 +2053,7 @@ MINUTES
 > 모든 데이터베이스 옵션에서 WITH \<termination> 절을 사용하는 것은 아닙니다. 자세한 내용은 이 문서에 있는 “주의” 섹션의 “[옵션 설정](#SettingOptions)” 아래에 있는 표를 참조하세요.
 
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE         
-지정한 시간(초)이 경과한 후 롤백할 것인지 아니면 즉시 롤백할 것인지를 지정합니다.
+지정한 시간(초)이 경과한 후 롤백할 것인지 또는 즉시 롤백할 것인지를 지정합니다.
 
 NO_WAIT         
 요청된 데이터베이스 상태 또는 옵션 변경을 즉시 완료할 수 없는 경우 요청이 실패하도록 지정합니다. 즉시 완료는 트랜잭션이 자체적으로 커밋되거나 롤백되기를 기다리지 않음을 의미합니다.
@@ -2518,7 +2518,7 @@ FORCED
 **\<query_store_options> ::=**         
 
 ON | OFF | CLEAR [ ALL ]         
-이 데이터베이스에서 쿼리 저장소를 사용하는지 여부를 제어하고 쿼리 저장소의 내용 제거도 제어합니다.
+이 데이터베이스에서 쿼리 저장소를 사용 여부를 제어하고 쿼리 저장소의 내용 제거를 제어합니다.
 
 ON         
 쿼리 저장소를 사용하도록 설정합니다.
@@ -2779,7 +2779,7 @@ MINUTES
 간접 검사점에 대한 자세한 내용은 [데이터베이스 검사점](../../relational-databases/logs/database-checkpoints-sql-server.md)을 참조하세요.
 
 ROLLBACK AFTER *integer* [SECONDS] | ROLLBACK IMMEDIATE         
-지정한 시간(초)이 경과한 후 롤백할 것인지 아니면 즉시 롤백할 것인지를 지정합니다.
+지정한 시간(초)이 경과한 후 롤백할 것인지 또는 즉시 롤백할 것인지를 지정합니다.
 
 NO_WAIT         
 요청된 데이터베이스 상태 또는 옵션 변경을 즉시 완료할 수 없는 경우 요청이 실패하도록 지정합니다. 즉시 완료는 트랜잭션이 자체적으로 커밋되거나 롤백되기를 기다리지 않음을 의미합니다.
@@ -2913,6 +2913,7 @@ SET
 <option_spec>::=
 {
 <RESULT_SET_CACHING>
+|<snapshot_option>
 }
 ;
 
@@ -2920,6 +2921,12 @@ SET
 {
 RESULT_SET_CACHING {ON | OFF}
 }
+
+<snapshot_option>::=
+{
+READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 ```
 
@@ -2930,7 +2937,7 @@ RESULT_SET_CACHING {ON | OFF}
 수정할 데이터베이스의 이름입니다.
 
 <a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-적용 대상: Azure SQL Data Warehouse(미리 보기)
+Azure SQL Data Warehouse(미리 보기)**에 적용**
 
 이 명령은 `master` 데이터베이스에 연결되어 있는 동안 실행되어야 합니다.  이 데이터베이스 설정 변경이 즉시 적용됩니다.  쿼리 집합 캐싱으로 스토리지 비용이 발생합니다. 데이터베이스의 결과 캐싱을 사용하지 않도록 설정하면 영구 결과 캐시가 즉시 Microsoft Azure SQL Data Warehouse 스토리지에서 삭제됩니다. 데이터베이스의 결과 캐싱을 표시하기 위해 `sys.databases`에 새 열 is_result_set_caching_on이 도입되었습니다.  
 
@@ -2948,6 +2955,21 @@ OFF
 command|Like|%DWResultCacheDb%|
 | | |
 
+
+<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+Azure SQL Data Warehouse(미리 보기)**에 적용**
+
+ON은 데이터베이스 수준에서 READ_COMMITTED_SNAPSHOT 옵션을 사용하도록 설정합니다.
+
+OFF는 데이터베이스 수준에서 READ_COMMITTED_SNAPSHOT 옵션을 끕니다.
+
+데이터베이스에 대해 READ_COMMITTED_SNAPSHOT을 설정하거나 해제하면 이 데이터베이스에 대해 열린 모든 연결이 중지됩니다.  데이터베이스 유지 관리 기간 동안 이 변경을 수행하거나 ALTER DATABSE 명령을 실행하는 연결을 제외하고 데이터베이스에 대한 활성 연결이 없을 때까지 기다릴 수 있습니다.  데이터베이스가 단일 사용자 모드에 있을 필요는 없습니다.  세션 수준에서 READ_COMMITTED_SNAPSHOT 설정을 변경하는 것은 지원되지 않습니다.  데이터베이스에 대한이 설정을 확인하려면 is_read_committed_snapshot_on의 열을 확인합니다.
+
+READ_COMMITTED_SNAPSHOT이 설정된 데이터베이스에서 여러 데이터 버전이 있는 경우 버전의 검사로 인해 쿼리 성능이 저하될 수 있습니다. 또한 장기간 열린 트랜잭션은 버전 정리를 차단하는 이러한 트랜잭션에 의한 데이터 변경 사항이 있는 경우 데이터베이스 크기를 늘릴 수 있습니다.  
+
+
+
+
 ## <a name="remarks"></a>Remarks
 
 캐시된 결과 집합은 다음 요구 사항이 모두 충족되는 경우 쿼리에 다시 사용됩니다.
@@ -2960,12 +2982,9 @@ command|Like|%DWResultCacheDb%|
 
 ## <a name="permissions"></a>사용 권한
 
-다음과 같은 사용 권한이 필요합니다.
+RESULT_SET_CACHING 옵션을 설정하려면 사용자는 서버 수준 보안 주체 로그인(프로비저닝 프로세스에서 만든 로그인)가 있거나 `dbmanager` 데이터베이스 역할의 멤버여야 합니다.  
 
-- 서버 수준 보안 주체 로그인(프로비전 프로세스에 의해 생성됨) 또는
-- `dbmanager` 데이터 베이스 역할의 멤버
-
-데이터베이스의 소유자가 dbmanager 역할의 구성원이 아니면 데이터베이스를 변경할 수 있습니다.
+READ_COMMITTED_SNAPSHOT 옵션을 설정하려면 사용자에게 데이터베이스에 대한 ALTER 권한이 있어야 합니다.
 
 ## <a name="examples"></a>예
 
@@ -3028,6 +3047,12 @@ SELECT 0 as is_cache_hit;
 SELECT *  
 FROM sys.dm_pdw_request_steps  
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
+```
+
+### <a name="enable-read_committed_snapshot-option-for-a-database"></a>데이터베이스용 Read_Committed_Snapshot 옵션 사용
+```sql
+ALTER DATABASE MyDatabase  
+SET READ_COMMITTED_SNAPSHOT ON
 ```
 
 ## <a name="see-also"></a>관련 항목:

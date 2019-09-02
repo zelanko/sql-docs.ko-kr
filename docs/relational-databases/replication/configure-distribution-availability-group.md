@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 94d52169-384e-4885-84eb-2304e967d9f7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 20c6b4a4235e384f9a5c32ee6cef28d0f136f106
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5a2475de5c318a937c1290d9f235f074909a7954
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768691"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030326"
 ---
 # <a name="set-up-replication-distribution-database-in-always-on-availability-group"></a>Always On 가용성 그룹에서 복제 배포 데이터베이스 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +54,13 @@ SQL Server 2017 CU6 및 SQL Server 2016 SP2-CU3에서는 다음 메커니즘을 
 
 ## <a name="limitations-or-exclusions"></a>제한 및 배제
 
-- 로컬 배포자는 지원되지 않습니다. 예를 들어 게시자와 배포자는 다른 SQL Server 인스턴스여야 합니다. 스스로를 배포자로 사용하는 게시자(즉 로컬 배포자)는 AG의 배포 데이터베이스를 지원할 수 없습니다.
+- 로컬 배포자는 지원되지 않습니다. 예를 들어 게시자와 배포자는 다른 SQL Server 인스턴스여야 합니다. 이러한 인스턴스는 동일한 노드 집합에서 호스팅될 수 있습니다.  스스로를 배포자로 사용하는 게시자(즉 로컬 배포자)는 AG의 배포 데이터베이스를 지원할 수 없습니다.
 - Oracle 게시자는 지원되지 않습니다.
 - 병합 복제는 지원되지 않습니다.
 - 즉시 또는 업데이트 큐에 있는 구독자가 있는 트랜잭션 복제는 지원되지 않습니다.
 - 피어 투 피어 복제는 지원되지 않습니다.
-- 배포 데이터베이스 복제본을 호스팅하는 모든 SQL Server 인스턴스는 SQL Server 2017 CU 6 이상이어야 합니다. 
+- 배포 데이터베이스 복제본을 호스팅하는 모든 SQL Server 2017 인스턴스는 SQL Server 2017 CU 6 이상이어야 합니다. 
+- 배포 데이터베이스 복제본을 호스팅하는 모든 SQL Server 2016 인스턴스는 SQL Server 2016 SP2-CU3 이상이어야 합니다.
 - 배포 데이터베이스 복제본을 호스팅하는 모든 SQL Server 인스턴스는 업데이트를 수행하는 시간 범위가 적은 경우를 제외하고 같은 버전이어야 합니다.
 - 배포 데이터베이스는 전체 복구 모드여야 합니다.
 - 복구와, 트랜잭션 로그 잘림을 허용하기 위해 전체 및 트랜잭션 로그 백업을 구성합니다.

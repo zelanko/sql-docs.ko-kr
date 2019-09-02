@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f1f8f4937efa5db9de76d6e111d5a0abf0223d23
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: b6448718ce9e9cea380c352a57c3e824709de848
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715291"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059284"
 ---
 # <a name="overview-and-usage-scenarios"></a>개요 및 사용 시나리오
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "68715291"
 
 - [Quorum은 Azure SQL Database에서 메모리 내 OLTP를 활용하여 사용률을 70%로 낮추는 동시에 주요 데이터베이스의 워크로드를 두 배로 늘림](https://customers.microsoft.com/story/quorum-doubles-key-databases-workload-while-lowering-dtu-with-sql-database)
 - EdgeNet은 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]의 메모리 내 OLTP를 사용하여 일괄 처리 데이터 로드 성능을 개선하고 다중 계층 캐시를 유지 관리해야 하는 필요성을 제거했습니다. [데이터 서비스 회사에서 메모리 내 기술을 사용하여 제품 데이터에 실시간으로 액세스](https://customers.microsoft.com/story/data-services-firm-gains-real-time-access-to-product-d)
-- Beth Israel Deaconess Medical Center는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 도메인 컨트롤러에서 데이터 수집률을 획기적으로 개선하고 워크로드의 급증을 처리할 수 있었습니다[https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for ].
+- Beth Israel Deaconess Medical Center는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에서 메모리 내 OLTP를 사용하여 도메인 컨트롤러에서 데이터 수집률을 획기적으로 개선하고 워크로드의 급증을 처리할 수 있었습니다 https://customers.microsoft.com/story/strengthening-data-security-and-creating-more-time-for.
 
 ### <a name="caching-and-session-state"></a>캐싱 및 세션 상태
 

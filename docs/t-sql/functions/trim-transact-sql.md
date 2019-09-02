@@ -18,18 +18,18 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 77b8244efda0a1f06e16821d817339feebc9384f
-ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
+ms.openlocfilehash: 9707f0b23d9461418536c2b9f9015623124d5436
+ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69561152"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70059842"
 ---
 # <a name="trim-transact-sql"></a>TRIM(Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
 
-문자열의 시작 또는 끝에서 공백 문자 `char(32)` 또는 기타 지정되지 않은 문자를 제거합니다.  
+문자열의 시작 또는 끝에서 공백 문자 `char(32)` 및 기타 지정되지 않은 문자를 제거합니다.  
 
 ## <a name="syntax"></a>구문
 

@@ -43,12 +43,12 @@ ms.assetid: 5ee520ba-ec7e-4199-a441-189e9e264b37
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05d3dab8585dd62716a9846ab591c7d70479e1c3
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 0671a283261a6c0867e4349f8cd0f2baadf0cbd7
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265494"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123007"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>스크립트 생성 및 게시 마법사
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "68265494"
   
 -   **파일에 추가** - **True**이면 **스크립팅 옵션 설정** 페이지에서 지정한 기존 스크립트의 아래쪽에 이 스크립트가 추가되고, **False**이면 새 스크립트가 이전 스크립트를 덮어씁니다. 기본값은 **False**입니다.  
   
--   **오류 발생 시 스크립팅 계속** - **True**이면 오류 발생 시 스크립팅이 중지됩니다. **False**이면 스크립팅을 계속합니다. 기본값은 **False**입니다.  
+-   **오류 발생 시 스크립팅 계속** - **False**이면 오류 발생 시 스크립팅이 중지됩니다. **True**이면 스크립팅이 계속됩니다. 기본값은 **False**입니다.  
   
 -   **UDDT를 기본 형식으로 변환** - **True**이면 UDDT(사용자 정의 데이터 형식)가 이 형식을 만드는 데 사용된 기본 데이터 형식으로 변환됩니다. 스크립트가 실행될 데이터베이스에 UDDT가 없으면 **True** 를 사용합니다. **False**이면 UDDT가 사용됩니다. 기본값은 **False**입니다.  
   

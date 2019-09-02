@@ -5,17 +5,17 @@ description: Linux에서 고가용성을 위한 SQL Server Always On AG(가용�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 02/14/2018
+ms.date: 08/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: e97708fc227cbbcadfeb6fe961fce2ad9ee41765
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 364ed5298c83319ab0915ffc04a393c9a9097bf0
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027253"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030306"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Linux에서 고가용성을 위한 SQL Server Always On 가용성 그룹 구성
 
@@ -135,7 +135,7 @@ Linux에서 고가용성을 위한 AG를 만듭니다. [CREATE AVAILABILITY GROU
 - 동기 복제본 2개와 구성 복제본 1개가 포함된 AG 만들기
 
    >[!IMPORTANT]
-   >이 아키텍처에서는 모든 버전의 SQL Server에서 세 번째 복제본을 호스트할 수 있습니다. 예를 들어 SQL Server Enterprise Edition에서 세 번째 복제본을 호스트할 수 있습니다. Enterprise Edition에서 유효한 엔드포인트 유형은 `WITNESS`뿐입니다. 
+   >이 아키텍처에서는 모든 버전의 SQL Server에서 세 번째 복제본을 호스트할 수 있습니다. 예를 들어 SQL Server Express Edition에서 세 번째 복제본을 호스트할 수 있습니다. Express Edition에서 유효한 엔드포인트 유형은 `WITNESS`뿐입니다. 
 
    ```SQL
    CREATE AVAILABILITY GROUP [ag1] 
@@ -193,16 +193,16 @@ SQL Server Management Studio 또는 PowerShell을 사용하여 `CLUSTER_TYPE=EXT
 
 ### <a name="join-secondary-replicas-to-the-ag"></a>AG에 보조 복제본 조인
 
-pacemaker 사용자에게 모든 복제본의 가용성 그룹에 대한 `ALTER`, `CONTROL` 및 `VIEW DEFINITION` 권한이 필요합니다. 사용 권한을 부여하려면 가용성 그룹이 생성된 후의 주 복제본과 보조 복제본이 가용성 그룹에 추가된 직후의 각 보조 복제본에서 다음 Transact-SQL을 실행합니다. 스크립트를 실행하기 전에 `<pacemakerLogin>`을 pacemaker 사용자 계정 이름으로 바꿉니다.
+pacemaker 사용자에게 모든 복제본의 가용성 그룹에 대한 `ALTER`, `CONTROL` 및 `VIEW DEFINITION` 권한이 필요합니다. 사용 권한을 부여하려면 가용성 그룹이 생성된 후의 주 복제본과 보조 복제본이 가용성 그룹에 추가된 직후의 각 보조 복제본에서 다음 Transact-SQL을 실행합니다. 스크립트를 실행하기 전에 `<pacemakerLogin>`을 pacemaker 사용자 계정 이름으로 바꿉니다. Pacemaker용 로그인이 없는 경우 [Pacemaker용 SQL 서버 로그인을 만듭니다](sql-server-linux-availability-group-cluster-ubuntu.md#create-a-sql-server-login-for-pacemaker).
 
-```Transact-SQL
+```sql
 GRANT ALTER, CONTROL, VIEW DEFINITION ON AVAILABILITY GROUP::ag1 TO <pacemakerLogin>
 GRANT VIEW SERVER STATE TO <pacemakerLogin>
 ```
 
 다음 Transact-SQL 스크립트는 `ag1`이라는 AG에 SQL Server 인스턴스를 조인합니다. 사용자 환경에 대해 스크립트를 업데이트합니다. 보조 복제본을 호스트하는 각 SQL Server 인스턴스에서 다음 Transact-SQL을 실행하여 AG에 참가합니다.
 
-```Transact-SQL
+```sql
 ALTER AVAILABILITY GROUP [ag1] JOIN WITH (CLUSTER_TYPE = EXTERNAL);
          
 ALTER AVAILABILITY GROUP [ag1] GRANT CREATE ANY DATABASE;

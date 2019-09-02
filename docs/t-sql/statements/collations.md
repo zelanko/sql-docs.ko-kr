@@ -1,7 +1,7 @@
 ---
 title: COLLATE(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 08/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -19,12 +19,12 @@ ms.assetid: 76763ac8-3e0d-4bbb-aa53-f5e7da021daa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 77b3b6a7987e4d02640bc1daadfd4cffe77b3354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fbf588e3c9922f9b76363db64e9d4afade040b7f
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141138"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190390"
 ---
 # <a name="collate-transact-sql"></a>COLLATE(Transact-SQL)
 
@@ -97,8 +97,6 @@ FROM fn_helpcollations();
 - 데이터베이스를 복원하거나 연결할 때 데이터베이스의 기본 데이터 정렬과 데이터베이스 내의 모든 **char**, **varchar** 및 **text** 열 또는 매개 변수의 데이터 정렬은 반드시 운영 체제에서 지원되는 것이어야 합니다.
 
 > [!NOTE]
-> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관리되는 인스턴스 서버 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**이며 변경될 수 없습니다.
->
 > **char** 및 **varchar** 데이터 형식에 대해서는 코드 페이지 변환이 지원되지만 **text** 데이터 형식에 대해서는 지원되지 않습니다. 코드 페이지 변환 중 데이터가 손실되어도 보고되지 않습니다.
 >
 > 지정된 데이터 정렬 또는 참조된 개체가 사용하는 데이터 정렬에서 Windows가 지원하지 않는 코드 페이지를 사용하는 경우에는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 오류가 나타납니다.

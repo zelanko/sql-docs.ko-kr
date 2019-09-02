@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05742e279d65d828fcbd9a7917033fcf8df2825d
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 17fad67ff8eb050b191d22cf2638dd992ba2e6b3
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984579"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190411"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE(Transact-SQL)
 
@@ -89,13 +89,13 @@ WITH
 | Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server(2019+)                          |
 | Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server(2019+)                          |
 | MongoDB 또는 CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server(2019+)                          |
-| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server(2019+) - Windows에만           |
+| ODBC                        | `odbc`          | `<server_name>[:port]`                                | SQL Server(2019+) - Windows에만           |
 | 대량 작업             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server(2017+)                  |
 
 위치 경로:
 
 - `<`Namenode`>` = Hadoop 클러스터에 있는 `Namenode`의 머신 이름, 이름서비스 URI 또는 IP 주소입니다. PolyBase는 Hadoop 클러스터에서 사용하는 모든 DNS 이름을 확인해야 합니다. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
-- `port` = 외부 데이터 원본이 수신 대기 중인 포트입니다. Hadoop에서는 `fs.default.name` 구성 매개 변수를 사용하여 포트를 찾을 수 있습니다. 기본값은 8020입니다.
+- `port` = 외부 데이터 원본이 수신 대기 중인 포트입니다. Hadoop에서는 `fs.defaultFS` 구성 매개 변수를 사용하여 포트를 찾을 수 있습니다. 기본값은 8020입니다.
 - `<container>` = 데이터를 보관하는 스토리지 계정의 컨테이너입니다. 루트 컨테이너는 읽기 전용이므로 데이터를 컨테이너에 다시 쓸 수 없습니다.
 - `<storage_account>` = Azure 리소스의 스토리지 계정 이름입니다.
 - `<server_name>` = 호스트 이름입니다.
@@ -794,6 +794,24 @@ WITH
 [;]
 ```
 
+### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2"></a>D. Azure Data Lake Store Gen 2에 대한 Polybase 연결을 참조하는 외부 데이터 원본 만들기
+
+[관리 ID](/azure/active-directory/managed-identities-azure-resources/overview
+) 메커니즘으로 Azure Data Lake Store Gen2 계정에 연결할 경우 SECRET을 지정할 필요가 없습니다.
+
+```sql
+-- If you do not have a Master Key on your DW you will need to create one
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+
+--Create database scoped credential with **IDENTITY = 'Managed Service Identity'**
+
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
+
+--Create external data source with abfss:// scheme for connecting to your Azure Data Lake Store Gen2 account
+
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
+```
+
 ## <a name="see-also"></a>참고 항목
 
 - [CREATE DATABASE SCOPED CREDENTIAL(Transact-SQL)][create_dsc]
@@ -881,7 +899,7 @@ WITH
 위치 경로:
 
 - `<`Namenode`>` = Hadoop 클러스터에 있는 `Namenode`의 머신 이름, 이름서비스 URI 또는 IP 주소입니다. PolyBase는 Hadoop 클러스터에서 사용하는 모든 DNS 이름을 확인해야 합니다. <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
-- `port` = 외부 데이터 원본이 수신 대기 중인 포트입니다. Hadoop에서는 `fs.default.name` 구성 매개 변수를 사용하여 포트를 찾을 수 있습니다. 기본값은 8020입니다.
+- `port` = 외부 데이터 원본이 수신 대기 중인 포트입니다. Hadoop에서는 `fs.defaultFS` 구성 매개 변수를 사용하여 포트를 찾을 수 있습니다. 기본값은 8020입니다.
 - `<container>` = 데이터를 보관하는 스토리지 계정의 컨테이너입니다. 루트 컨테이너는 읽기 전용이므로 데이터를 컨테이너에 다시 쓸 수 없습니다.
 - `<storage_account>` = Azure 리소스의 스토리지 계정 이름입니다.
 

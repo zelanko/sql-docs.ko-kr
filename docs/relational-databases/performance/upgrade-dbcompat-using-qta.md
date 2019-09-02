@@ -18,19 +18,19 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4af50c6df7ef8ea451f38a038d19e39491604308
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28390d824e04287264b328878f888dbcfac1cdb1
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68231682"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123123"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>쿼리 튜닝 길잡이를 사용하여 데이터베이스 업그레이드
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 이전 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 이상 버전으로 마이그레이션할 때, 그리고 사용 가능한 최신 상태로 [데이터베이스 호환성 수준을 업그레이드](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md)할 때는 워크로드가 성능 저하 위험에 노출될 수 있습니다. 또한 이는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]와 최신 버전 간에 업그레이드하는 경우에도 발생할 수 있습니다.
 
-[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 새 버전을 사용할 때마다 쿼리 최적화 프로그램의 모든 변경 내용이 최신 데이터베이스 호환성 수준에 연결되므로 실행 계획이 업그레이드 시점에 즉시 변경되지 않고 사용자가 `COMPATIBILITY_LEVEL` 데이터베이스 옵션을 최신 상태로 변경할 때 변경됩니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에 도입된 쿼리 최적화 프로그램 변경 사항에 대한 자세한 내용은 [카디널리티 평가기](../../relational-databases/performance/cardinality-estimation-sql-server.md)를 참조하세요. 호환성 수준 및 업그레이드에 미치는 영향에 대한 자세한 내용은 [호환성 수준 및 SQL Server 업그레이드](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)를 참조하세요.
+[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 새 버전을 사용할 때마다 쿼리 최적화 프로그램의 모든 변경 내용이 최신 데이터베이스 호환성 수준에 연결되므로 실행 계획이 업그레이드 시점에 즉시 변경되지 않고 사용자가 `COMPATIBILITY_LEVEL` 데이터베이스 옵션을 최신 상태로 변경할 때 변경됩니다. [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]에 도입된 쿼리 최적화 프로그램 변경 사항에 대한 자세한 내용은 [카디널리티 평가기](../../relational-databases/performance/cardinality-estimation-sql-server.md)를 참조하세요. 호환성 수준 및 업그레이드에 미치는 영향에 대한 자세한 내용은 [호환성 수준 및 데이터베이스 엔진 업그레이드](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)를 참조하세요.
 
 데이터베이스 호환성 수준에서 제공되는 이 제한 기능은 쿼리 저장소와 함께 업그레이드가 아래에 나와 있는 권장 워크플로를 따를 경우 업그레이드 프로세스의 쿼리 성능에 대한 상당한 수준의 제어를 제공합니다. 호환성 수준 업그레이드를 위해 권장되는 워크플로에 대한 자세한 내용은 [데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)을 참조하세요. 
 
@@ -210,7 +210,7 @@ QTA는 세션이 처음으로 만들어진 사용자 데이터베이스의 `msqt
 **db_owner** 역할의 멤버 자격이 필요합니다.
   
 ## <a name="see-also"></a>참고 항목  
- [호환성 수준 및 SQL Server 업그레이드](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-sql-server-upgrades)    
+ [호환성 수준 및 업그레이드 데이터베이스 엔진](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#compatibility-levels-and-database-engine-upgrades)    
  [성능 모니터링 및 튜닝 도구](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
  [관련된 뷰, 함수 및 프로시저](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)     
  [데이터베이스 호환성 모드 변경 및 쿼리 저장소 사용](../../database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md)       

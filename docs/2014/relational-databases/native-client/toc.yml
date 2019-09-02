@@ -73,7 +73,7 @@
       href: applications/using-ado-with-sql-server-native-client.md
     - name: SQL Server Native Client에 대한 지원 정책
       href: applications/support-policies-for-sql-server-native-client.md
-    - name: SQL Server Native Client를 사용하여 Azure SQL 데이터베이스에 연결
+    - name: SQL Server Native Client를 사용하여 Azure SQL Database에 연결
       href: applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
 - name: SQL Server Native Client의 시스템 요구 사항
   href: system-requirements-for-sql-server-native-client.md

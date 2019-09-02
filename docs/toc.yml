@@ -64,7 +64,11 @@
             - name: 빅 데이터 도구 설치
               href: big-data-cluster/deploy-big-data-tools.md
             - name: Azdata 설치
-              href: big-data-cluster/deploy-install-azdata.md
+              items:
+                - name: Linux 패키지 관리자 사용
+                  href: big-data-cluster/deploy-install-azdata-linux-package.md
+                - name: pip 사용
+                  href: big-data-cluster/deploy-install-azdata.md
         - name: 배포
           items:
             - name: 배포 지침
@@ -77,6 +81,8 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: 오프라인 배포
               href: big-data-cluster/deploy-offline.md
+            - name: 고가용성으로 배포
+              href: big-data-cluster/deployment-high-availability.md
             - name: Kubernetes 클러스터
               items:
                 - name: Azure Kubernetes Service
@@ -169,6 +175,8 @@
               href: big-data-cluster/cluster-troubleshooting-commands.md
             - name: Notebook으로 관리
               href: big-data-cluster/manage-notebooks.md
+            - name: 컨트롤러 대시보드로 관리
+              href: big-data-cluster/manage-with-controller-dashboard.md
         - name: 전자 필기장
           items:
             - name: 전자 필기장 개요
@@ -196,7 +204,15 @@
         - name: azdata 참조
           items:
             - name: azdata
-              href: big-data-cluster/reference-azdata.md
+              items:
+                - name: azdata
+                  href: big-data-cluster/reference-azdata.md
+                - name: 컨트롤
+                  href: big-data-cluster/reference-azdata-control.md
+                - name: Notebook
+                  href: big-data-cluster/reference-azdata-notebook.md
+                - name: sql
+                  href: big-data-cluster/reference-azdata-sql.md
             - name: 앱 배포
               items:
                 - name: 앱
@@ -207,6 +223,10 @@
               items:
                 - name: bdc
                   href: big-data-cluster/reference-azdata-bdc.md
+                - name: bdc 앱
+                  href: big-data-cluster/reference-azdata-bdc-app.md
+                - name: bdc 앱 상태
+                  href: big-data-cluster/reference-azdata-bdc-app-status.md
                 - name: bdc 구성
                   href: big-data-cluster/reference-azdata-bdc-config.md
                 - name: bdc 컨트롤
@@ -217,10 +237,16 @@
                   href: big-data-cluster/reference-azdata-bdc-debug.md
                 - name: bdc 엔드포인트
                   href: big-data-cluster/reference-azdata-bdc-endpoint.md
+                - name: bdc 게이트웨이
+                  href: big-data-cluster/reference-azdata-bdc-gateway.md
+                - name: bdc 게이트웨이 상태
+                  href: big-data-cluster/reference-azdata-bdc-gateway-status.md
                 - name: bdc hdfs
                   href: big-data-cluster/reference-azdata-bdc-hdfs.md
                 - name: bdc hdfs 탑재
                   href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
+                - name: bdc hdfs 상태
+                  href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
                 - name: bdc 풀
                   href: big-data-cluster/reference-azdata-bdc-pool.md
                 - name: bdc 풀 상태
@@ -233,6 +259,10 @@
                   href: big-data-cluster/reference-azdata-bdc-spark-session.md
                 - name: bdc spark 문
                   href: big-data-cluster/reference-azdata-bdc-spark-statement.md
+                - name: bdc spark 상태
+                  href: big-data-cluster/reference-azdata-bdc-spark-status.md
+                - name: bdc sql
+                  href: big-data-cluster/reference-azdata-bdc-sql.md
                 - name: bdc 상태
                   href: big-data-cluster/reference-azdata-bdc-status.md
 - name: 비즈니스 연속성
@@ -2510,7 +2540,7 @@
           items:
             - name: 구성 요소
               href: relational-databases/native-client/applications/components-of-sql-server-native-client.md
-            - name: Microsoft Azure에 연결
+            - name: 네이티브 클라이언트를 사용하여 Azure SQL에 연결
               href: relational-databases/native-client/applications/connecting-to-a-windows-azure-sql-database-using-sql-server-native-client.md
             - name: dbmslpcn.dll 공유 메모리의 ConnectionValidSharedMemory 함수
               href: relational-databases/native-client/applications/connectionvalidsharedmemory-function-in-dbmslpcn-dll-shared-memory.md
