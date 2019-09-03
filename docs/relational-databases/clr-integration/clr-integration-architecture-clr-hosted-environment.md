@@ -26,15 +26,15 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: a2bbb7465b3d012d5aa786a0e8c614a9d4689074
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 69d548d6d6682a1bdd999bf2b9a4fdba4cefd669
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329331"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212449"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 통합 아키텍처 - CLR 호스팅 환경
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   .NET Framework CLR(공용 언어 런타임)과 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 통합을 사용하면 데이터베이스 프로그래머가 Visual C#, Visual Basic .NET, 및 Visual C++와 같은 언어를 사용할 수 있습니다. 프로그래머가 이러한 언어를 사용하여 작성할 수 있는 비즈니스 논리의 종류에는 함수, 저장 프로시저, 트리거, 데이터 형식, 집계 등이 포함됩니다.  
   
   CLR은 가비지 수집 메모리, 선점형 스레딩, 메타 데이터 서비스 (형식 리플렉션), 코드 안정성 및 코드 액세스 보안 기능을 제공 합니다. CLR에서는 메타데이터를 사용하여 클래스를 찾아 로드하고, 메모리에 인스턴스를 배치하고, 메서드 호출을 확인하고, 네이티브 코드를 생성하고, 보안을 강화하며, 런타임 컨텍스트 경계를 설정합니다.  
@@ -170,7 +170,7 @@ Thread.EndThreadAffinity();
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 호스트 수준의 CAS 정책 계층을 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 카탈로그에 저장되어 있는 권한 집합에 기초하여 세 가지 권한 집합 중 하나를 부여하는 호스트 정책을 설정합니다. 데이터베이스 내에서 실행되는 관리 코드는 항상 이러한 코드 액세스 권한 집합 중 하나를 가져옵니다.  
   
 ### <a name="programming-model-restrictions"></a>프로그래밍 모델 제한  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리 코드에 대한 프로그래밍 모델에서는 여러 호출에 걸쳐 유지되는 상태를 사용하거나 여러 사용자 세션에서 상태를 공유할 필요가 없는 함수, 프로시저 및 형식을 작성해야 합니다. 또한 앞서 설명한 것과 같이 공유된 상태가 있으면 해당 애플리케이션의 확장성과 안정성에 영향을 주는 중대한 예외가 발생할 수 있습니다.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 관리 코드에 대한 프로그래밍 모델에서는 여러 호출에 걸쳐 유지되는 상태를 사용하거나 여러 사용자 세션에서 상태를 공유할 필요가 없는 함수, 프로시저 및 형식을 작성해야 합니다. 또한 앞에서 설명한 것처럼 공유 상태가 있을 경우 애플리케이션의 안정성 및 확장성에 영향을 주는 중대한 예외가 발생할 수 있습니다.  
   
  이러한 점을 고려하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 클래스의 정적 변수와 정적 데이터 멤버는 사용하지 않는 것이 좋습니다. SAFE 및 EXTERNAL_ACCESS 어셈블리의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CREATE ASSEMBLY 시간에 해당 어셈블리의 메타데이터를 검사하고 정적 데이터 멤버와 변수가 사용된 경우 어셈블리를 만드는 데 오류가 발생합니다.  
   
