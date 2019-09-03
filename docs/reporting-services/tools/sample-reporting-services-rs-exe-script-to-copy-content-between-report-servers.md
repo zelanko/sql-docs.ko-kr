@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 716768027c855b86a0cffdee4bf64c5d1c66badd
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 18d10f94696f901efd4f3938bf9b5e06d1c7078d
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67686702"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176282"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>보고서 서버 간 콘텐츠 복사를 위한 예제 Reporting Services rs.exe 스크립트
 
@@ -253,26 +253,26 @@ rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/_vti_bin/reportserver -v st="sites/bi" -v f="Shared Documents" -u Domain\User1 -p Password -v ts="https://TargetServer/sites/bi/_vti_bin/reportserver" -v tst="sites/bi" -v tf="Shared Documents" -v tu="Domain\User" -v tp="Password"  
 ```  
   
-###  <a name="bkmk_native_to_native_Azure_vm"></a> 기본 모드에서 기본 모드로 – Microsoft Azure Virtual Machine  
+###  <a name="bkmk_native_to_native_Azure_vm"></a> 기본 모드에서 기본 모드로 – Azure 가상 머신  
  다음 예제는 다음과 같이 콘텐츠를 마이그레이션합니다.  
   
 -   기본 모드 보고서 서버 **SourceServer**에서  
   
--   Microsoft Azure 가상 머신에서 실행 중인 **TargetServer** 기본 모드 보고서 서버로 **TargetServer**는 **SourceServer**의 도메인에 가입하지 않으며, **User2**는 Windows Azure 가상 머신 **TargetServer**의 관리자입니다.  
+-   Azure 가상 머신에서 실행 중인 **TargetServer** 기본 모드 보고서 서버로 **TargetServer**는 **SourceServer**의 도메인에 가입하지 않으며, **User2**는 Azure 가상 머신 **TargetServer**의 관리자입니다.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://SourceServer/ReportServer -u Domain\user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Password2"  
 ```  
   
 > [!TIP]  
-> Microsoft Azure 가상 컴퓨터에서 Windows PowerShell을 사용해서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 만드는 방법에 대한 자세한 내용은 [PowerShell을 사용해서 기본 모드 보고서 서버로 Microsoft Azure VM 만들기](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report)를 참조하세요.  
+> Azure 가상 머신에서 Windows PowerShell을 사용해서 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 서버를 만드는 방법에 대한 자세한 내용은 [PowerShell을 사용해서 기본 모드 보고서 서버로 Azure VM 만들기](https://docs.microsoft.com/azure/virtual-machines/windows/sqlclassic/virtual-machines-windows-classic-ps-sql-report)를 참조하세요.  
   
-##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint 모드 – ‘bi’ 사이트 컬렉션에서 Microsoft Azure Virtual Machine의 기본 모드 서버로 
+##  <a name="bkmk_sharepoint_site_to_native_Azure_vm"></a> SharePoint 모드 – ‘bi’ 사이트 모음에서 Azure 가상 머신의 기본 모드 서버로 
  다음 예제는 다음과 같이 콘텐츠를 마이그레이션합니다.  
   
 -   "sites/bi" 사이트 모음 및 공유 라이브러리가 포함된 SharePoint 모드 보고서 서버 **SourceServer** 에서  
   
--   Microsoft Azure 가상 머신에서 실행 중인 **TargetServer** 기본 모드 보고서 서버로 **TargetServer**는 **SourceServer**의 도메인에 가입하지 않으며, **User2**는 Windows Azure 가상 머신 **TargetServer**의 관리자입니다.  
+-   Azure 가상 머신에서 실행 중인 **TargetServer** 기본 모드 보고서 서버로 **TargetServer**는 **SourceServer**의 도메인에 가입하지 않으며, **User2**는 Azure 가상 머신 **TargetServer**의 관리자입니다.  
   
 ```  
 rs.exe -i ssrs_migration.rss -e Mgmt2010 -s https://uetesta02/_vti_bin/reportserver -u user1 -p Password -v ts="https://ssrsnativeazure.cloudapp.net/ReportServer" -v tu="user2" -v tp="Passowrd2"  
