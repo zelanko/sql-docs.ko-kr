@@ -50,7 +50,7 @@ SQLRETURN SQLFetch(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR 또는 SQL_INVALID_HANDLE입니다.  
   
 ## <a name="diagnostics"></a>진단  
- **Sqlfetch** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환할 때 *HandleType* SQL_HANDLE_STMT 및 StatementHandle *핸들* 을 사용 하 여 [SQLGetDiagRec 함수](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. . 다음 표에서는 일반적으로 **Sqlfetch** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR입니다. 단일 열에서 오류가 발생 하는 경우 *DiagIdentifier* 의 SQL_DIAG_COLUMN_NUMBER를 사용 하 여 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 를 호출 하 여 오류가 발생 한 열을 확인할 수 있습니다. and **SQLGetDiagField** 는 *DiagIdentifier* of SQL_DIAG_ROW_NUMBER를 호출 하 여 해당 열이 포함 된 행을 확인할 수 있습니다.  
+ **Sqlfetch** 가 SQL_ERROR 또는 SQL_SUCCESS_WITH_INFO를 반환할 때 *HandleType* SQL_HANDLE_STMT 및 StatementHandle *핸들* 을 사용 하 여 [SQLGetDiagRec 함수](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) 를 호출 하 여 연결 된 SQLSTATE 값을 얻을 수 있습니다. 다음 표에서는 일반적으로 **Sqlfetch** 에서 반환 하는 SQLSTATE 값을 나열 하 고이 함수의 컨텍스트에서 각 값에 대해 설명 합니다. "(DM)" 표기법은 드라이버 관리자에서 반환 된 SQLSTATEs의 설명 보다 앞에 나옵니다. 다른 설명이 없는 한 각 SQLSTATE 값과 연결 된 반환 코드는 SQL_ERROR입니다. 단일 열에서 오류가 발생 하는 경우 *DiagIdentifier* 의 SQL_DIAG_COLUMN_NUMBER를 사용 하 여 [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) 를 호출 하 여 오류가 발생 한 열을 확인할 수 있습니다. and **SQLGetDiagField** 는 *DiagIdentifier* of SQL_DIAG_ROW_NUMBER를 호출 하 여 해당 열이 포함 된 행을 확인할 수 있습니다.  
   
  SQL_SUCCESS_WITH_INFO 또는 SQL_ERROR (01xxx SQLSTATEs 제외)를 반환할 수 있는 모든 SQLSTATEs의 경우에는 한 개 이상의 행 작업에 오류가 발생 하는 경우 SQL_SUCCESS_WITH_INFO가 반환 되 고, 다음에 오류가 발생 하면 SQL_ERROR가 반환 됩니다. 단일 행 작업  
   
@@ -89,7 +89,7 @@ SQLRETURN SQLFetch(
 |IM018|이 핸들에서 이전 비동기 작업을 완료 하기 위해 **SQLCompleteAsync** 가 호출 되지 않았습니다.|핸들에 대 한 이전 함수 호출에서 SQL_STILL_EXECUTING를 반환 하 고 알림 모드가 설정 된 경우에는 핸들에 대해 **SQLCompleteAsync** 를 호출 하 여 사후 처리를 수행 하 고 작업을 완료 해야 합니다.|  
   
 ## <a name="comments"></a>주석  
- **Sqlfetch** 는 결과 집합에서 다음 행 집합을 반환 합니다. 결과 집합이 있는 동안에만 호출할 수 있습니다. 즉, 결과 집합을 생성 하는 호출 후와 해당 결과 집합 위에 커서가 닫히도록 합니다. 바인딩된 열이 있으면 해당 열에 있는 데이터를 반환 합니다. 응용 프로그램에서 행 상태 배열 또는 인출 된 행 수를 반환할 버퍼에 대 한 포인터를 지정한 경우 **Sqlfetch** 도이 정보를 반환 합니다. Sqlfetch  에 대 한 호출은 **sqlfetchscroll** 에 대 한 호출과 혼합할 수 있지만 **sqlextendedfetch**호출로 혼합할 수 없습니다. 자세한 내용은 [데이터 행 페치](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)를 참조 하세요.  
+ **Sqlfetch** 는 결과 집합에서 다음 행 집합을 반환 합니다. 결과 집합이 있는 동안에만 호출할 수 있습니다. 즉, 결과 집합을 생성 하는 호출 후와 해당 결과 집합 위에 커서가 닫히도록 합니다. 바인딩된 열이 있으면 해당 열에 있는 데이터를 반환 합니다. 응용 프로그램에서 행 상태 배열 또는 인출 된 행 수를 반환할 버퍼에 대 한 포인터를 지정한 경우 **Sqlfetch** 도이 정보를 반환 합니다. Sqlfetch 에 대 한 호출은 **sqlfetchscroll** 에 대 한 호출과 혼합할 수 있지만 **sqlextendedfetch**호출로 혼합할 수 없습니다. 자세한 내용은 [데이터 행 페치](../../../odbc/reference/develop-app/fetching-a-row-of-data.md)를 참조 하세요.  
   
  Odbc*2.x 응용 프로그램이* odbc*2.x 드라이버를* 사용 하 여 작동 하는 경우, 드라이버 관리자는 sqlextendedfetch **를 지 원하는**odbc*2.X 드라이버에* 대 한 **sqlextendedfetch** 에 sqlfetch 호출을 매핑합니다. ODBC*2.x 드라이버가* **sqlextendedfetch**를 지원 하지 않는 경우 드라이버 관리자는 단일 행만 인출할 수 있도록 odbc 2.x 드라이버에서 Sqlfetch **호출을** **sqlfetch** 에 매핑합니다 *.*  
   
@@ -107,7 +107,7 @@ SQLRETURN SQLFetch(
 |조건|새 행 집합의 첫 번째 행|  
 |---------------|-----------------------------|  
 |시작 하기 전|1|  
-|*CurrRowsetStart* Lastresultrow-RowsetSize [1]  \< = |*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* Lastresultrow-RowsetSize [1] \< = |*CurrRowsetStart* + *RowsetSize*[2]|  
 |CurrRowsetStart > *lastresultrow-RowsetSize*[1]|종료 후|  
 |종료 후|종료 후|  
   
@@ -171,7 +171,7 @@ SQLRETURN SQLFetch(
  **Sqlfetch** 또는 **SQLFETCHSCROLL** 이 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO를 반환 하지 않는 경우에는 바인딩된 데이터 버퍼 및 길이/표시기 버퍼의 내용이 정의 되지 않습니다.  
   
 ## <a name="row-status-array"></a>행 상태 배열  
- 행 상태 배열은 행 집합에 있는 각 행의 상태를 반환 하는 데 사용 됩니다. 이 배열의 주소는 SQL_ATTR_ROW_STATUS_PTR statement 특성으로 지정 됩니다. 배열은 응용 프로그램에 의해 할당 되며 SQL_ATTR_ROW_ARRAY_SIZE statement 특성에 지정 된 것과 같은 수의 요소를 포함 해야 합니다. 해당 값은 Sqlfetch , **Sqlfetchscroll**및 **SQLBulkOperations** 또는 **SQLSetPos** 로 설정 됩니다 (커서가 **sqlextendedfetch**로 배치 된 후에 호출 된 경우 제외). SQL_ATTR_ROW_STATUS_PTR statement 특성의 값이 null 포인터인 경우 이러한 함수는 행 상태를 반환 하지 않습니다.  
+ 행 상태 배열은 행 집합에 있는 각 행의 상태를 반환 하는 데 사용 됩니다. 이 배열의 주소는 SQL_ATTR_ROW_STATUS_PTR statement 특성으로 지정 됩니다. 배열은 응용 프로그램에 의해 할당 되며 SQL_ATTR_ROW_ARRAY_SIZE statement 특성에 지정 된 것과 같은 수의 요소를 포함 해야 합니다. 해당 값은 Sqlfetch, **Sqlfetchscroll**및 **SQLBulkOperations** 또는 **SQLSetPos** 로 설정 됩니다 (커서가 **sqlextendedfetch**로 배치 된 후에 호출 된 경우 제외). SQL_ATTR_ROW_STATUS_PTR statement 특성의 값이 null 포인터인 경우 이러한 함수는 행 상태를 반환 하지 않습니다.  
   
  **Sqlfetch** 또는 **SQLFETCHSCROLL** 이 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO을 반환 하지 않는 경우 행 상태 배열 버퍼의 내용이 정의 되지 않습니다.  
   
