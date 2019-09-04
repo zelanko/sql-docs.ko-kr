@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 402c417de43637f810366423fb4e66b9cb3c507c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f7a42e7885e2c985cd8d0b65e336b912014c40f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115709"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155565"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -366,12 +366,12 @@ ms.locfileid: "68115709"
      자동으로 생성된 데이터베이스 파일을 포함할 폴더를 지정합니다. URL을 백업 대상으로 선택한 경우 이 옵션을 사용할 수 없습니다.  
   
      **SQL 자격 증명**  
-     Windows Azure Storage에 인증하는 데 사용되는 SQL 자격 증명을 선택합니다. 사용할 수 있는 기존 SQL 자격 증명이 없는 경우 **만들기** 단추를 클릭하여 새 SQL 자격 증명을 만듭니다.  
+     Azure Storage에 인증하는 데 사용되는 SQL 자격 증명을 선택합니다. 사용할 수 있는 기존 SQL 자격 증명이 없는 경우 **만들기** 단추를 클릭하여 새 SQL 자격 증명을 만듭니다.  
   
     > **중요!** **만들기** 를 클릭하면 열리는 대화 상자에서는 관리 인증서나 구독용 게시 프로필이 필요합니다. 관리 인증서나 게시 프로필에 액세스할 수 없는 경우 Transact-SQL이나 SQL Server Management Studio를 사용하여 스토리지 계정 이름을 지정하고 키 정보에 액세스하여 SQL 자격 증명을 만들 수 있습니다. [자격 증명 만들기](../../relational-databases/backup-restore/sql-server-backup-to-url.md#credential) 항목의 예제 코드를 보고 Transact-SQL을 사용하여 자격 증명을 만듭니다. 또는 SQL Server Management Studio를 사용하여 데이터베이스 엔진 인스턴스에서 **보안**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **자격 증명**을 차례로 선택합니다. **ID** 에 대한 스토리지 계정 이름을 지정하고 **암호** 필드에 액세스 키를 지정합니다.  
   
      **Azure Storage 컨테이너**  
-     Windows Azure 스토리지 컨테이너의 이름을 지정합니다.  
+     Azure Storage 컨테이너의 이름을 지정합니다.  
   
      **URL 접두사:**  
      이는 지정된 Azure 스토리지 컨테이너 이름 및 SQL 자격 증명에 저장된 스토리지 계정 정보를 기반으로 자동 생성됩니다. **\<storage account>.blob.core.windows.net** 이외의 형식을 사용하는 도메인을 사용하지 않는 경우 이 필드의 정보를 편집하지 않는 것이 좋습니다.  
