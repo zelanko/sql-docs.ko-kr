@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ae4d9cd9333e8dd42582f972a0d19260b2c9a3ee
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893623"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155707"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>빠른 시작: Azure Blob Storage Service로 SQL Server 백업 및 복원
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ GO
 
 
 ## <a name="create-a-sql-server-credential"></a>SQL Server 자격 증명 만들기
-SQL Server 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다. 여기에서는 SQL Server 백업 및 복원 프로세스에서 자격 증명을 사용하여 Microsoft Azure Blob Storage 서비스의 인증을 받습니다. 자격 증명에는 스토리지 계정 이름과 스토리지 계정 **액세스 키** 값이 저장됩니다. 만든 자격 증명은 BACKUP/RESTORE 문을 실행할 때 WITH CREDENTIAL 옵션에 지정해야 합니다. 자격 증명에 대한 자세한 내용은 [자격 증명](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine)을 참조하세요. 
+SQL Server 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 필요한 인증 정보를 저장하는 데 사용되는 개체입니다. 여기서 SQL Server 백업 및 복원 프로세스는 자격 증명을 사용하여 Azure Blob Storage 서비스에 인증합니다. 자격 증명에는 스토리지 계정 이름과 스토리지 계정 **액세스 키** 값이 저장됩니다. 만든 자격 증명은 BACKUP/RESTORE 문을 실행할 때 WITH CREDENTIAL 옵션에 지정해야 합니다. 자격 증명에 대한 자세한 내용은 [자격 증명](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine)을 참조하세요. 
 
   > [!IMPORTANT]
   > 아래에 설명된 SQL Server 자격 증명을 만들기 위한 요구 사항은 SQL Server 백업 프로세스([URL에 대한 SQL Server 백업](backup-restore/sql-server-backup-to-url.md)및 [Microsoft Azure에 대한 SQL Server Managed Backup](backup-restore/sql-server-managed-backup-to-microsoft-azure.md))와 관련되어 있습니다. SQL Server는 Azure Storage에 액세스하여 백업을 쓰거나 읽을 때 스토리지 계정 이름 및 액세스 키 정보를 사용합니다.
@@ -119,8 +119,8 @@ SQL Server 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 �
 
 1. 자격 증명을 만들기 위한 문을 실행합니다. 
 
-## <a name="back-up-database-to-the-windows-azure-blob-storage-service"></a>Microsoft Azure Blob Storage 서비스로 데이터베이스 백업
-이 섹션에서는 T-SQL 문을 사용하여 Microsoft Azure Blob Storage 서비스에 대한 전체 데이터베이스 백업을 수행합니다. 
+## <a name="back-up-database-to-the-azure-blob-storage-service"></a>Azure Blob Storage 서비스로 데이터베이스 백업
+이 섹션에서는 T-SQL 문을 사용하여 Azure Blob Storage 서비스로 전체 데이터베이스 백업을 수행합니다. 
 
 1. SQL Server Management Studio를 사용하여 SQL Server에 연결합니다. 
 1. **SQLTestDB** 데이터베이스를 선택하고 **새 쿼리** 창을 엽니다. 
@@ -138,7 +138,7 @@ SQL Server 자격 증명은 SQL Server 외부의 리소스에 연결하는 데 �
 1. SQLTestDB 데이터베이스를 URL에 백업하는 명령문을 실행합니다. 
 
  
-## <a name="restore-database-from-windows-azure-blob-storage-service"></a>Microsoft Azure Blob Storage 서비스에서 데이터베이스 복원
+## <a name="restore-database-from-azure-blob-storage-service"></a>Azure Blob Storage 서비스에서 데이터베이스 복원
 이 섹션에서는 T-SQL 문을 사용하여 전체 데이터베이스 백업을 복원합니다. 
 
 1. SQL Server Management Studio를 사용하여 SQL Server에 연결합니다. 

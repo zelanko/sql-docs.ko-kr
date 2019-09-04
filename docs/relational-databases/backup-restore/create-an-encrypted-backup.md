@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 90dd03d9db824204bc4904e90af4e74055f6fa79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 19556dc84e916598e63f6df7b101f4f495ac3855
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68076028"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155392"
 ---
 # <a name="create-an-encrypted-backup"></a>암호화된 백업 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,12 +74,12 @@ ms.locfileid: "68076028"
   
  EKM에 의해 보호되는 백업을 암호화하는 예제를 보려면 [Azure 키 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 참조하세요.  
   
-### <a name="backup-to-windows-azure-storage-with-encryption"></a>암호화하여 Microsoft Azure Storage에 백업  
- **URL에 대한 SQL Server 백업** 옵션을 사용하여 Windows Azure 스토리지에 백업을 만드는 경우 암호화 단계는 동일하지만 URL을 대상으로 사용하고 SQL 자격 증명을 사용하여 Windows Azure 스토리지에 인증해야 합니다. 암호화 옵션을 사용하여 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 구성하려면 [Microsoft Azure로의 SQL Server 관리되는 백업 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
+### <a name="backup-to-azure-storage-with-encryption"></a>암호화하여 Azure Storage에 백업  
+ **URL에 대한 SQL Server 백업** 옵션을 사용하여 Azure Storage에 백업을 만드는 경우 암호화 단계는 동일하지만 URL을 대상으로 사용하고 SQL 자격 증명을 사용하여 Azure Storage에 인증해야 합니다. 암호화 옵션을 사용하여 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 구성하려면 [Microsoft Azure로의 SQL Server 관리되는 백업 사용](../../relational-databases/backup-restore/enable-sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
   
  **사전 요구 사항:**  
   
--   Windows 스토리지 계정 및 컨테이너. 자세한 내용은 다음을 참조하십시오. [1단원: Microsoft Azure Storage 개체 만들기](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
+-   Windows 스토리지 계정 및 컨테이너. 자세한 내용은 다음을 참조하십시오. [1단원: Azure Storage 개체 만들기](https://msdn.microsoft.com/library/74edd1fd-ab00-46f7-9e29-7ba3f1a446c5).  
   
 -   master 데이터베이스의 데이터베이스 마스터 키 및 SQL Server 인스턴스에 대한 인증서 또는 비대칭 키. 암호화 요구 사항과 사용 권한에 대한 자세한 내용은 [Backup Encryption](../../relational-databases/backup-restore/backup-encryption.md)를 참조하십시오.  
   

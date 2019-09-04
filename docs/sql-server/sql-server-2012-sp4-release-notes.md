@@ -10,12 +10,12 @@ ms.assetid: 67cb8b3e-3d82-47f4-840d-0f12a3bff565
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1198933f5dd996b2cf050ea0fbb7960410095869
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 67c7ab63fcc152778add51725e5962028651345b
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136523"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155702"
 ---
 # <a name="sql-server-2012-service-pack-release-notes"></a>SQL Server 2012 서비스 팩 릴리스 정보
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -225,11 +225,11 @@ SQL Server 2012 SP1에는 높아진 성능과 효율성으로 XML 열 데이터�
   
 **SqlPackage.exe(DACFx 명령줄 도구) 업데이트**  
   
--   데이터가 있는 DACPAC 추출 – 데이터베이스 스키마와 함께 사용자 테이블의 데이터를 포함하는 라이브 SQL Server 또는 Microsoft Azure SQL Database부터 데이터베이스 스냅샷 파일(.dacpac)을 만듭니다. 이러한 패키지는 SqlPackage.exe 게시 작업을 사용하여 새로운 또는 기존의 SQL Server 또는 Microsoft Azure SQL 데이터베이스에 게시할 수 있습니다. 패키지에 포함된 데이터는 대상 데이터베이스의 기존 데이터를 대체합니다.  
+-   데이터가 있는 DACPAC 추출 – 데이터베이스 스키마와 함께 사용자 테이블의 데이터를 포함하는 라이브 SQL Server 또는 Azure SQL Database로부터 데이터베이스 스냅샷 파일(.dacpac)을 만듭니다. 이러한 패키지는 SqlPackage.exe 게시 작업을 사용하여 새로운 또는 기존의 SQL Server 또는 Azure SQL Database에 게시할 수 있습니다. 패키지에 포함된 데이터는 대상 데이터베이스의 기존 데이터를 대체합니다.  
   
--   BACPAC 내보내기 - 온-프레미스 SQL Server의 데이터베이스를 Microsoft Azure SQL 데이터베이스로 마이그레이션하는 데 사용할 수 있는 데이터베이스 스키마 및 사용자 데이터를 포함하는 라이브 SQL Server 또는 Microsoft Azure SQL 데이터베이스의 논리적 백업 파일(.bacpac)을 만듭니다. Azure와 호환되는 데이터베이스를 내보낸 다음 나중에 지원되는 버전의 SQL  Server 간에 가져올 수 있습니다.  
+-   BACPAC 내보내기 - 온-프레미스 SQL Server에서 Azure SQL Database로 데이터베이스를 마이그레이션하는 데 사용할 수 있는 데이터베이스 스키마 및 사용자 데이터를 포함하는 라이브 SQL Server 또는 Azure SQL Database의 논리적 백업 파일(.bacpac)을 만듭니다. Azure와 호환되는 데이터베이스를 내보낸 다음 나중에 지원되는 버전의 SQL  Server 간에 가져올 수 있습니다.  
   
--   BACPAC 내보내기 – .bacpac 파일을 가져와서 새로 만들거나 빈 SQL Server 또는 Microsoft Azure SQL Database를 채웁니다.  
+-   BACPAC 가져오기 – .bacpac 파일을 가져와서 새로 만들거나 빈 SQL Server 또는 Azure SQL Database를 채웁니다.  
   
 MSDN의 전체 SqlPackage.exe 설명서는 [여기](https://msdn.microsoft.com/library/hh550080%28v=vs.103%29.aspx)에 있습니다.  
   

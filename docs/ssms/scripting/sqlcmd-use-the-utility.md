@@ -17,12 +17,12 @@ ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bbdb412284c67fdccce8c3628aed41b6be0cae04
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: de9d2f1c06704e7bedc4592aa7062dbc8a4b8569
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68267631"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155752"
 ---
 # <a name="sqlcmd---use-the-utility"></a>sqlcmd - 유틸리티 사용
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -473,7 +473,7 @@ ms.locfileid: "68267631"
   
  `SQLCMD returned 100 to the command shell`  
   
-### <a name="g-using-sqlcmd-to-set-encryption-on-windows-azure-sql-database"></a>G. sqlcmd를 사용하여 Windows Azure SQL 데이터베이스에 암호화 설정  
+### <a name="g-using-sqlcmd-to-set-encryption-on-azure-sql-database"></a>G. sqlcmd를 사용하여 Azure SQL Database에서 암호화 설정  
  **sqlcmd**는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 데이터에 대한 연결에서 암호화 및 인증서 신뢰를 지정하기 위해 실행할 수 있습니다. 2가지 **sqlcmd**``옵션을 사용할 수 있습니다.  
   
 -   -N 스위치는 클라이언트에서 암호화된 연결을 요청하는 데 사용됩니다. 이 옵션은 ADO.net 옵션 `ENCRYPT = true`와 동일합니다.  

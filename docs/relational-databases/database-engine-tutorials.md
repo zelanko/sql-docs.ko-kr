@@ -11,12 +11,12 @@ ms.assetid: 32bd8af8-a832-4dc8-afff-01668e6b2b51
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bf9d15a7816f7e51691146fc0ba927e45b7250f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e78b5e1efbcc082c49cd80737b35d76cd1aeddb
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134608"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155496"
 ---
 # <a name="database-engine-tutorials"></a>데이터베이스 엔진 자습서
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,11 +46,11 @@ ms.locfileid: "68134608"
 [자습서: 정책 기반 관리를 사용하여 서버 관리](../relational-databases/policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
 이 자습서에서는 사이트 관리 표준을 강화하는 정책을 만드는 방법에 대해 설명합니다.  
   
-[자습서: Microsoft Azure Blob Storage Service로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
-이 자습서에서는 SQL Server 백업 및 Windows Azure BLOB 스토리지 서비스로 복원하는 방법에 대해 설명합니다.  
+[자습서: Azure Blob Storage 서비스로 SQL Server 백업 및 복원](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  
+이 자습서에서는 Azure Blob Storage 서비스로 SQL Server를 백업하고 복원하는 방법에 대해 설명합니다.  
   
 [자습서: SQL Server 2016 데이터베이스와 함께 Microsoft Azure Blob 스토리지 서비스 사용](tutorial-use-azure-blob-storage-service-with-sql-server-2016.md)  
-이 자습서는 Windows Azure BLOB 스토리지 서비스에서 SQL Server 데이터 파일을 저장하는 방법을 이해하도록 도와 줍니다.  
+이 자습서는 Azure Blob Storage 서비스에서 SQL Server 데이터 파일을 직접 저장하는 방법을 이해하는 데 도움이 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
 [SQL Server 2016 자습서](../sql-server/tutorials-for-sql-server-2016.md)  

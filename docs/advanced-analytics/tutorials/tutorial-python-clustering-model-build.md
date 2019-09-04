@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ce7f6cbd580afbdbf71065803af8d394323e5dc3
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: e768f213edf27528e38b2f18d719869fbf089f21
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211977"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238712"
 ---
 # <a name="tutorial-build-a-clustering-model-in-python-with-sql-server-machine-learning-services"></a>자습서: SQL Server Machine Learning Services를 사용 하 여 Python에서 클러스터링 모델 빌드
 

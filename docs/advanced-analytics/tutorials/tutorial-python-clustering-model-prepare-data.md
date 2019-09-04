@@ -9,13 +9,13 @@ ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a71d92023c76b7eafb25efba0bb13b1d1da1f695
-ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 16291c059efc34f270f6705fb17fa538e55e7459
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70211967"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238672"
 ---
 # <a name="tutorial-prepare-data-to-perform-clustering-in-python-with-sql-server-machine-learning-services"></a>자습서: SQL Server Machine Learning Services를 사용 하 여 Python에서 클러스터링을 수행 하기 위해 데이터 준비
 

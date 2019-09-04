@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6be8d736294df50a5ca3d288b77e4b0daac556b8
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941119"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176358"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -41,22 +41,22 @@ ms.locfileid: "68941119"
   
 -   [유지 관리 계획 마법사를 사용하여 URL로 SQL Server 백업](../../relational-databases/backup-restore/sql-server-backup-to-url.md#MaintenanceWiz)  
   
--   [SQL Server Management Studio를 사용하여 Windows Azure Storage에서 복원](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
+-   [SQL Server Management Studio를 사용하여 Azure Storage에서 복원](../../relational-databases/backup-restore/sql-server-backup-to-url.md#RestoreSSMS)  
   
 ###  <a name="security"></a> 보안  
  다음은 Microsoft Azure Blob Storage 서비스로 백업하거나 복원하는 경우 보안 고려 사항과 요구 사항입니다.  
   
--   Microsoft Azure Blob Storage 서비스의 컨테이너를 만들 때 액세스 권한을 **프라이빗**으로 설정하는 것이 좋습니다. 액세스 권한을 프라이빗으로 설정하면 사용자나 계정에 대한 액세스 시 필요한 정보를 제공해야 Windows Azure 계정 인증을 받을 수 있도록 제한됩니다.  
+-   Microsoft Azure Blob Storage 서비스의 컨테이너를 만들 때 액세스 권한을 **프라이빗**으로 설정하는 것이 좋습니다. 액세스 권한을 프라이빗으로 설정하면 Azure 계정에 인증하는 데 필요한 정보를 제공할 수 있는 사용자 또는 계정으로 액세스가 제한됩니다.  
   
     > [!IMPORTANT]  
-    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 Microsoft Azure 계정 이름 및 액세스 키 인증 또는 공유 액세스 서명 및 액세스 토큰을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명에 저장해야 합니다. 이 정보는 백업 또는 복원 작업을 수행할 때 Microsoft Azure 계정 인증을 받는 데 사용됩니다.  
+    >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 Azure 계정 이름 및 액세스 키 인증 또는 공유 액세스 서명 및 액세스 토큰을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명에 저장해야 합니다. 이 정보는 백업 또는 복원 작업을 수행할 때 Azure 계정에 인증하는 데 사용됩니다.  
   
 -   BACKUP 또는 RESTORE 명령을 실행하는 데 사용되는 사용자 계정은 **모든 자격 증명 변경** 권한이 있는 **db_backup operator** 데이터베이스 역할에 있어야 합니다.  
   
 ###  <a name="intorkeyconcepts"></a> 주요 구성 요소 및 개념 소개  
  다음 두 섹션에서는 Microsoft Azure Blob Storage 서비스와 Microsoft Azure Blob Storage 서비스로 백업하거나 복원하는 데 사용되는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 요소를 소개합니다. 구성 요소와 Microsoft Azure Blob Storage 서비스로 백업하거나 복원할 때 구성 요소 간의 상호 작용을 이해하는 것이 중요합니다.  
   
- 이 프로세스의 첫 번째 단계에서는 Azure 구독 내에 Microsoft Azure Storage 계정을 만듭니다. 이 스토리지 계정은 스토리지 계정을 사용하여 만든 모든 컨테이너 및 개체에 대한 모든 관리 권한이 있는 관리자 계정입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에서는 Microsoft Azure Storage 계정 이름 및 해당 액세스 키 값을 사용하여 Microsoft Azure Blob Storage 서비스에 인증하고 blob을 읽고 쓰거나, 읽기 및 쓰기 권한을 부여하는 특정 컨테이너에서 생성된 공유 액세스 서명 토큰을 사용할 수 있습니다. Azure Storage 계정에 대한 자세한 내용은 [Azure Storage 계정 정보](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)를 참조하고, 공유 액세스 서명에 대한 자세한 내용은 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 이 인증 정보를 저장하며 백업 또는 복원 작업 중에 사용됩니다.  
+ 이 프로세스의 첫 번째 단계에서는 Azure 구독 내에 Azure Storage 계정을 만듭니다. 이 스토리지 계정은 스토리지 계정을 사용하여 만든 모든 컨테이너 및 개체에 대한 모든 관리 권한이 있는 관리자 계정입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 Azure Storage 계정 이름 및 해당 액세스 키 값을 사용하여 Microsoft Azure Blob Storage 서비스에 인증하고 blob을 읽고 쓰거나, 읽기 및 쓰기 권한을 부여하는 특정 컨테이너에서 생성된 공유 액세스 서명 토큰을 사용할 수 있습니다. Azure Storage 계정에 대한 자세한 내용은 [Azure Storage 계정 정보](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)를 참조하고, 공유 액세스 서명에 대한 자세한 내용은 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 자격 증명은 이 인증 정보를 저장하며 백업 또는 복원 작업 중에 사용됩니다.  
   
 ###  <a name="blockbloborpageblob"></a> 블록 Blob 및 페이지 Blob으로 백업 
  Microsoft Azure Blob Storage 서비스에는 블록 Blob과 페이지 Blob이라는 두 가지 유형의 Blob을 저장할 수 있습니다. SQL Server 백업에서는 사용되는 Transact-SQL 구문에 따라 Blob 유형 중 하나를 사용할 수 있습니다. 스토리지 키를 자격 증명에 사용하는 경우 페이지 Blob이 사용되고, 공유 액세스 서명을 사용하는 경우 블록 Blob이 사용됩니다.
@@ -71,7 +71,7 @@ ms.locfileid: "68941119"
 - 여러 블록 Blob에 백업
 
 ###  <a name="Blob"></a> Microsoft Azure Blob Storage 서비스  
- **스토리지 계정:** 스토리지 계정은 모든 스토리지 서비스의 시작 지점입니다. Microsoft Azure Blob Storage 서비스에 액세스하려면 먼저 Microsoft Azure Storage 계정을 만듭니다. 자세한 내용은 [스토리지 계정 만들기](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)를 참조하세요.  
+ **스토리지 계정:** 스토리지 계정은 모든 스토리지 서비스의 시작 지점입니다. Microsoft Azure Blob Storage 서비스에 액세스하려면 먼저 Azure Storage 계정을 만듭니다. 자세한 내용은 [스토리지 계정 만들기](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)를 참조하세요.  
   
  **컨테이너:** 컨테이너에서는 그룹화된 Blob 집합을 제공하며 Blob을 무제한으로 저장할 수 있습니다. Microsoft Azure Blob Storage 서비스에 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 백업을 쓰려면 적어도 루트 컨테이너가 만들어져 있어야 합니다. 컨테이너에서 공유 액세스 서명 토큰을 생성하고 특정 컨테이너의 개체에 대한 액세스 권한만 부여할 수 있습니다.  
   
@@ -211,7 +211,7 @@ SQL Server 자격 증명을 사용하여 SQL Server Management Studio의 백업 
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅샷 백업을 만들거나 기존 미디어 세트를 덮어쓰려면 SQL Server Management Studio의 백업 태스크 대신 TRANSACT-SQL, Powershell 또는 C#을 사용해야 합니다.  
   
- 다음 단계에서는 Microsoft Azure Storage로 백업할 수 있도록 SQL Server Management Studio에서 변경된 데이터베이스 백업 태스크에 대해 설명합니다.  
+ 다음 단계에서는 Azure Storage로 백업할 수 있도록 SQL Server Management Studio에서 변경된 데이터베이스 백업 작업에 대해 설명합니다.  
   
 1.  **개체 탐색기**에서 SQL Server 데이터베이스 엔진의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.
 
@@ -242,7 +242,7 @@ SQL Server 자격 증명을 사용하여 SQL Server Management Studio의 백업 
  [자격 증명 만들기 - Azure Storage 인증](../../relational-databases/backup-restore/create-credential-authenticate-to-azure-storage.md)  
   
 ##  <a name="MaintenanceWiz"></a> 유지 관리 계획 마법사를 사용하여 URL로 SQL Server 백업  
- 이전에 설명한 백업 작업과 마찬가지로, SQL Server Management Studio의 유지 관리 계획 마법사는 대상 옵션 중 하나로 **URL** 을 포함하고 Microsoft Azure 스토리지로 백업하는 데 필요한 다른 지원 개체(예: SQL 자격 증명)를 포함합니다. 자세한 내용은 **Using Maintenance Plan Wizard** 의 [백업 작업 정의](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)섹션을 참조하세요.  
+ 이전에 설명한 백업 작업과 마찬가지로 SQL Server Management Studio의 유지 관리 계획 마법사는 대상 옵션 중 하나로 **URL**을 포함하고 Azure Storage로 백업하는 데 필요한 다른 지원 개체(예: SQL 자격 증명)를 포함합니다. 자세한 내용은 **Using Maintenance Plan Wizard** 의 [백업 작업 정의](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure)섹션을 참조하세요.  
   
 > [!NOTE]  
 >  공유 액세스 토큰을 사용하여 스트라이프 백업 집합, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 파일-스냅샷 백업 또는 SQL 자격 증명을 을 만들려면 유지 관리 계획 마법사의 백업 작업 대신 TRANSACT-SQL, Powershell 또는 C#을 사용해야 합니다.  

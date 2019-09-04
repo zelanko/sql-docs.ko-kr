@@ -10,12 +10,12 @@ ms.assetid: bf4c4922-80b3-4be3-bf71-228247f97004
 author: craigg-msft
 ms.author: craigg
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 1fb7e3e0a261c0cf518dda93610b721af14a3472
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 94175594fe2539320941b5a83c1a7aa4b127783f
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136487"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155684"
 ---
 # <a name="sql-server-2014-release-notes"></a>SQL Server 2014 Release Notes
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -334,10 +334,10 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 자세한 내용은 [SQL Server 2014 Reporting Services 팁, 요령 및 문제 해결](https://go.microsoft.com/fwlink/?LinkID=391254)을 참조하십시오.  
   
-### <a name="AzureVM"></a>Microsoft Azure Virtual Machines의 SQL Server 2014 RTM  
+### <a name="AzureVM"></a>Azure Virtual Machines의 SQL Server 2014 RTM  
   
-#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-windows-azure"></a>Microsoft Azure에서 가용성 그룹 수신기를 구성하면 Azure 복제본 추가 마법사에서 오류를 반환함  
-**문제점:** 가용성 그룹에 수신기가 있는 경우 Microsoft Azure에서 수신기를 구성하려고 하면 Azure 복제본 추가 마법사에서 오류를 반환합니다.  
+#### <a name="the-add-azure-replica-wizard-returns-an-error-when-configuring-an-availability-group-listener-in-azure"></a>Azure에서 가용성 그룹 수신기를 구성하면 Azure 복제본 추가 마법사에서 오류를 반환함  
+**문제점:** 가용성 그룹에 수신기가 있는 경우 Azure에서 수신기를 구성하려고 하면 Azure 복제본 추가 마법사에서 오류를 반환합니다.  
   
 이 문제는 가용성 그룹 수신기가 Azure 서브넷을 포함하여 가용성 그룹 복제본을 호스팅하는 모든 서브넷에서 IP 주소를 하나씩 할당해야 하기 때문입니다.  
   
@@ -345,9 +345,9 @@ Description:   Report Server (DENALI) cannot connect to the report server databa
   
 1.  수신기 페이지에서 가용성 그룹 복제본을 호스팅할 Azure 서브넷의 사용 가능한 고정 IP 주소를 가용성 그룹 수신기에 할당합니다.  
   
-    이렇게 하면 마법사가 Microsoft Azure에서 복제본을 추가하는 작업을 완료할 수 있습니다.  
+    이렇게 하면 마법사가 Azure에서 복제본을 추가하는 작업을 완료할 수 있습니다.  
   
-2.  마법사가 완료된 후 [Microsoft Azure에서 AlwaysOn 가용성 그룹을 위한 수신기 구성](https://msdn.microsoft.com/library/dn376546.aspx)에 설명된 대로 Microsoft Azure에서 수신기의 구성을 완료해야 합니다.  
+2.  마법사가 완료된 후 [Azure에서 AlwaysOn 가용성 그룹을 위한 수신기 구성](https://msdn.microsoft.com/library/dn376546.aspx)에 설명된 대로 Azure에서 수신기의 구성을 완료해야 합니다.  
   
 ### <a name="SSAS"></a>Analysis Services(RTM)
   

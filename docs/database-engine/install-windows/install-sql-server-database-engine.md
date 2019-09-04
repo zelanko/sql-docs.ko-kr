@@ -1,7 +1,7 @@
 ---
 title: SQL Server 데이터베이스 엔진 설치 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -12,12 +12,12 @@ ms.assetid: d0876e7f-aa52-4dd7-bd5c-029e2ffded5f
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 787c6b96d9f4bad7372a559a1282fa1252e5e97a
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: e50fd6037b10008029d5373348605d11726b6199
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419362"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148043"
 ---
 # <a name="install-sql-server-database-engine"></a>SQL Server 데이터베이스 엔진 설치
 
@@ -39,11 +39,15 @@ ms.locfileid: "68419362"
 -   [SQL Server 복제](../../relational-databases/replication/sql-server-replication.md) - 선택적 구성 요소입니다.  
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
--   [R, Python 및 Java를 사용하는 Machine Learning Services(데이터베이스 내)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - 선택적 구성 요소입니다.
+-   [Machine Learning Services](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md)(R 및 Python)와 [언어 확장](../..//language-extensions/install/install-sql-server-language-extensions-on-windows.md)(Java) - 선택적 구성 요소입니다.
 ::: moniker-end
 
-::: monikerRange=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
--   [R 및 Python을 사용하는 Machine Learning Services(데이터베이스 내)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md) - 선택적 구성 요소입니다.
+::: monikerRange=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
+-   [Machine Learning Services(데이터베이스 내)](../../advanced-analytics/install/sql-machine-learning-services-windows-install.md)(R 및 Python) - 선택적 구성 요소입니다.
+::: moniker-end
+
+::: monikerRange=">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
+-   [R Services(데이터베이스 내)](../../advanced-analytics/install/sql-r-services-windows-install.md) - 선택적 구성 요소입니다.
 ::: moniker-end
 
 -   전체 텍스트 검색 - 선택적 구성 요소입니다.  

@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 84c7181bfd7c0ee014b382052bb6493d68251331
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: afd036dfe33ab538d3d845e73f45e804052a9903
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153608"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238699"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
 
@@ -40,7 +40,7 @@ ms.locfileid: "70153608"
 | **sqlcmd** | 일부 스크립트의 경우 | SQL Server를 쿼리하기 위한 레거시 명령줄 도구입니다([자세한 정보](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | 일부 스크립트의 경우 | URL을 사용하여 데이터를 전송하기 위한 명령줄 도구입니다. | [Windows](https://curl.haxx.se/windows/) \| Linux: curl 패키지 설치 |
 
-<sup>1</sup> kubectl 버전 1.10 이상을 사용해야 합니다. 또한 kubectl 버전은 Kubernetes 클러스터의 바로 이전 또는 이후 부 버전이어야 합니다. kubectl 클라이언트에서 특정 버전을 설치하려는 경우 [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)(curl을 통해 kubectl 이진 설치)를 참조하세요(Windows 10에서는 Windows PowerShell이 아닌 cmd.exe를 사용하여 curl 실행).
+<sup>1</sup> kubectl 버전 1.13 이상을 사용 해야 합니다. 또한 kubectl 버전은 Kubernetes 클러스터의 바로 이전 또는 이후 부 버전이어야 합니다. kubectl 클라이언트에서 특정 버전을 설치하려는 경우 [Install kubectl binary via curl](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-curl)(curl을 통해 kubectl 이진 설치)를 참조하세요(Windows 10에서는 Windows PowerShell이 아닌 cmd.exe를 사용하여 curl 실행).
 
 > [!TIP]
 > AKS(Azure Kubernetes Service)에서 이전에 배포한 클러스터와 함께 kubectl을 사용하려면 다음 Azure CLI 명령을 사용하여 클러스터 컨텍스트를 설정해야 합니다.

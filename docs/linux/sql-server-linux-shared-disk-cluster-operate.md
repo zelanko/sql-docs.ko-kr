@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a29d1d61b628126d03458fced964bde7c92b6d68
-ms.sourcegitcommit: 71b9ebb511c68e0c9cb32a860a443803d2cb58f5
+ms.openlocfilehash: 0da3a3225e3ef47bd4a38d1ccbcc2d074d543a55
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "68032292"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154570"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>장애 조치(failover) 클러스터 인스턴스 작동 - SQL Server on Linux
 
@@ -30,10 +30,10 @@ FCI를 수동으로 다른 노드로 장애 조치(failover)할 수 있는 경�
 
 장애 조치(failover) 방법은 Linux 배포에 따라 다릅니다. Linux 배포에 대한 지침을 따릅니다.
 
-- [RHEL 또는 Ubuntu](#-manual-failover-rhel-or-ubuntu)
-- [SLES](#-manual-failover-sles)
+- [RHEL 또는 Ubuntu](#manual-failover-rhel-or-ubuntu)
+- [SLES](#manual-failover-sles)
 
-## <a name = "#-manual-failover-rhel-or-ubuntu"></a> 수동 장애 조치(failover)(RHEL 또는 Ubuntu)
+## <a name="manual-failover-rhel-or-ubuntu"></a>수동 장애 조치(failover)(RHEL 또는 Ubuntu)
 
 수동 장애 조치(failover)를 수행하려면 RHEL(Red Hat Enterprise Linux) 또는 Ubuntu 서버에서 다음 단계를 실행합니다.
 1.  다음 명령을 실행합니다. 
@@ -54,7 +54,7 @@ FCI를 수동으로 다른 노드로 장애 조치(failover)할 수 있는 경�
 
 \<FCIResourceName>은 FCI의 Pacemaker 리소스 이름입니다. 
 
-## <a name = "#-manual-failover-sles"></a> 수동 장애 조치(failover)(SLES)
+## <a name="manual-failover-sles"></a>수동 장애 조치(failover)(SLES)
 
 
 SLES(Suse Linux Enterprise Server)에서 `migrate` 명령을 사용하여 SQL Server FCI를 수동으로 장애 조치(failover)합니다. 예를 들어

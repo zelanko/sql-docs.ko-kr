@@ -24,12 +24,12 @@ helpviewer_keywords:
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.openlocfilehash: 249fb623945c1e086a677268d857f3bb16362a2e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 110348981ad756b489afcbdb5c098a4c0f290c30
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811192"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154651"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux의 SQL Server 2017 버전 및 지원되는 기능
 
@@ -110,7 +110,7 @@ Developer Edition은 [SQL Server Distributed Replay](../tools/distributed-replay
 |미러된 백업|예|아니오|아니오|아니오|
 |Hot Add 메모리 및 CPU|예|아니오|아니오|아니오|
 |암호화된 백업|예|예|아니오|아니오|
-|Microsoft Azure에 하이브리드 백업(URL에 백업)|예|예|아니오|아니오|
+|Azure에 하이브리드 백업(URL에 백업)|예|예|아니오|아니오|
   
 <sup>1</sup> Enterprise 버전에서 노드 수는 운영 체제 최댓값입니다. Standard 버전에서는 두 개의 노드가 지원됩니다. 
 

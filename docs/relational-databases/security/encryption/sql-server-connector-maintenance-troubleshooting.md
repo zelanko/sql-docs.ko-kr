@@ -1,7 +1,7 @@
 ---
 title: SQL Server 커넥터 유지 관리 &amp; 문제 해결 | Microsoft 문서
 ms.custom: ''
-ms.date: 04/05/2017
+ms.date: 07/25/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: f06a2fd1b8734701fe261cba42d66ca1652e06fc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24f4e86f59e91537886480b26248c683665850a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140699"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148783"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server 커넥터 유지 관리 &amp; 문제 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -138,11 +138,12 @@ ms.locfileid: "68140699"
 8.  업데이트가 작동하는지 확인한 후, 3단계에서 제거하는 대신 이름을 변경하기로 선택한 경우 이전 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 커넥터 폴더를 삭제할 수 있습니다.  
   
 ### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 서비스 사용자 롤링  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure Active Directory에서 만든 서비스 사용자를 자격 증명으로 사용하여 주요 자격 증명 모음에 액세스합니다.  서비스 사용자에게는 클라이언트 ID 및 인증 키가 있습니다.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 자격 증명은 **VaultName**, **클라이언트 ID**및 **인증 키**를 사용하여 설정됩니다.  **인증 키** 는 특정 기간(1년 또는 2년) 동안 유효합니다.   기간이 만료되기 전에 서비스 사용자에 대해 Azure AD에서 새 키를 생성해야 합니다.  그런 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 자격 증명을 변경해야 합니다.    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 현재 세션에서 자격 증명에 대한 캐시를 유지 관리하므로 자격 증명이 변경되면 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 을(를) 다시 시작해야 합니다.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Azure Active Directory에서 만든 서비스 사용자를 자격 증명으로 사용하여 주요 자격 증명 모음에 액세스합니다.  서비스 사용자에게는 클라이언트 ID 및 인증 키가 있습니다.  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 자격 증명은 **VaultName**, **클라이언트 ID**및 **인증 키**를 사용하여 설정됩니다.  **인증 키**는 특정 기간(1년 또는 2년) 동안 유효합니다.   기간이 만료되기 전에 서비스 사용자에 대해 Azure AD에서 새 키를 생성해야 합니다.  그런 다음 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 자격 증명을 변경해야 합니다.    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 현재 세션에서 자격 증명에 대한 캐시를 유지 관리하므로 자격 증명이 변경되면 [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] 을(를) 다시 시작해야 합니다.  
   
 ### <a name="key-backup-and-recovery"></a>키 백업 및 복구  
 주요 자격 증명 모음은 정기적으로 백업해야 합니다. 자격 증명 모음에 있는 비대칭 키를 분실한 경우 백업에서 복원할 수 있습니다. 키는 이전과 동일한 이름을 사용하여 복원되어야 하며, Restore PowerShell 명령으로 복원할 수 있습니다(아래 단계 참조).  
-자격 증명 모음이 손실된 경우에는 자격 증명 모음을 다시 만들고 이전과 동일한 이름을 사용하여 자격 증명 모음에 비대칭 키를 복원해야 합니다. 자격 증명 모음 이름은 이전과 동일하거나, 달라질 수 있습니다. 또한 SQL Server 서비스 사용자에게 SQL Server 암호화 시나리오에 필요한 액세스 권한을 부여할 수 있도록 새 자격 증명 모음에 액세스 권한을 설정하고 새 자격 증명 모음 이름이 반영되도록 SQL Server 자격 증명을 조정해야 합니다.  
+자격 증명 모음이 손실된 경우에는 자격 증명 모음을 다시 만들고 이전과 동일한 이름을 사용하여 자격 증명 모음에 비대칭 키를 복원해야 합니다. 자격 증명 모음 이름은 이전과 동일하거나, 달라질 수 있습니다. 또한 SQL Server 서비스 사용자에게 SQL Server 암호화 시나리오에 필요한 액세스 권한을 부여할 수 있도록 새 자격 증명 모음에 액세스 권한을 설정하고 새 자격 증명 모음 이름이 반영되도록 SQL Server 자격 증명을 조정해야 합니다.
+
 요약하면 다음 단계와 같습니다.  
   
 * 자격 증명 모음 키를 백업합니다(Backup-AzureKeyVaultKey Powershell cmdlet 사용).  
@@ -206,7 +207,7 @@ Active Directory에 대한 자세한 내용을 보려면 [Azure Active Directory
 0 | scp_err_Success | 작업이 성공했습니다.    
 1 | scp_err_Failure | 작업이 실패했습니다.    
 2 | scp_err_InsufficientBuffer | 이 오류는 엔진에 버퍼에 대해 더 많은 메모리를 할당하라고 알립니다.    
-3 | scp_err_NotSupported | 이 작업은 지원되지 않습니다. 예를 들어, 지정된 키 유형 또는 알고리즘을 EKM 공급자가 지원하지 않습니다.    
+3 | scp_err_NotSupported | 이 작업은 지원되지 않습니다. 예를 들어 지정된 키 유형 또는 알고리즘을 EKM 공급자가 지원하지 않습니다.    
 4 | scp_err_NotFound | EKM 공급자가 지정된 키 또는 알고리즘을 찾을 수 없습니다.    
 5 | scp_err_AuthFailure | EKM 공급자가 인증에 실패했습니다.    
 6 | scp_err_InvalidArgument | 제공된 인수가 잘못되었습니다.    
@@ -292,9 +293,9 @@ SQL Server 버전  |재배포 가능 설치 링크
   
 -   PowerShell [Azure 주요 자격 증명 모음 Cmdlet](/powershell/module/azurerm.keyvault/) 참조  
   
-## <a name="see-also"></a>참고 항목  
- [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   
- [EKM provider enabled 서버 구성 옵션](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)   
- [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)  
-  
-  
+## <a name="see-also"></a>참고 항목
+
+ [Azure Key Vault를 사용한 확장 가능 키 관리](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
+ [SQL 암호화 기능을 통해 SQL Server 커넥터 사용](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)  
+ [EKM provider enabled 서버 구성 옵션](../../../database-engine/configure-windows/ekm-provider-enabled-server-configuration-option.md)  
+ [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)

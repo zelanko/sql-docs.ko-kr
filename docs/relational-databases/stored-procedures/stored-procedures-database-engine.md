@@ -13,12 +13,12 @@ ms.assetid: cc6daf62-9663-4c3e-950a-ab42e2830427
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f41eb44b026c78a3d99814b231f52b518c18a177
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e64a097fb4d2eed917155fb3881d233231c413bc
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136578"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70148302"
 ---
 # <a name="stored-procedures-database-engine"></a>저장 프로시저(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,18 +59,19 @@ ms.locfileid: "68136578"
  프로시저에서 참조하는 테이블이나 데이터가 크게 변경된 경우에는 미리 컴파일된 계획으로 인해 실제로 프로시저 실행 속도가 느려질 수 있습니다. 이 경우 프로시저를 다시 컴파일하고 새 실행 계획을 강제 적용하면 성능을 향상시킬 수 있습니다.  
   
 ## <a name="types-of-stored-procedures"></a>저장 프로시저 유형  
- 사용자 정의  
+
+ **사용자 정의**  
  **Resource** 데이터베이스를 제외한 모든 시스템 데이터베이스 또는 사용자 정의 데이터베이스에서 사용자 정의 프로시저를 만들 수 있습니다. 이 프로시저는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 또는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR(공용 언어 런타임) 메서드에 대한 참조로 개발될 수 있습니다.  
   
- 임시  
+ **임시**  
  임시 프로시저는 사용자 정의 프로시저에 속합니다. 임시 프로시저는 **tempdb**에 저장된다는 점을 제외하고는 영구 프로시저와 유사합니다. 임시 프로시저에는 로컬 및 전역의 두 가지 유형이 있습니다. 이 두 유형은 이름, 표시 여부 및 가용성 면에서 서로 다릅니다. 로컬 임시 프로시저는 이름이 하나의 숫자 기호(#)로 시작하며 현재 사용자 연결에만 표시되고 연결이 닫히면 삭제됩니다. 전역 임시 프로시저는 이름이 두 개의 숫자 기호(##)로 시작하며 생성된 후 모든 사용자에게 표시되고 해당 프로시저를 사용하는 마지막 세션이 끝나면 삭제됩니다.  
   
- 시스템  
+ **시스템**  
  시스템 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 포함됩니다. 이러한 프로시저는 물리적으로 **Resource** 데이터베이스에 저장되지만 논리적으로는 모든 시스템 정의 데이터베이스와 사용자 정의 데이터베이스의 **sys** 스키마에 표시됩니다. 또한 **msdb** 데이터베이스에도 **dbo** 스키마에 경고 및 작업을 예약하는 데 사용되는 시스템 저장 프로시저가 있습니다. 시스템 프로시저는 **sp_** 접두사로 시작하므로 사용자 정의 프로시저의 이름을 지정할 때 이 접두사를 사용하지 않는 것이 좋습니다. 시스템 저장 프로시저의 전체 목록은 [시스템 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)를 참조하세요.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서는 다양한 유지 관리 작업을 수행할 수 있도록 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 인터페이스를 외부 프로그램에 제공하는 시스템 프로시저를 지원합니다. 이러한 확장 프로시저에는 xp_ 접두사가 사용됩니다. 확장 저장 프로시저의 전체 목록은 [일반 확장 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)를 참조하세요.  
   
- 확장 사용자 정의  
+ **확장 사용자 정의**  
  확장 프로시저를 사용하면 C와 같은 프로그래밍 언어로 외부 루틴을 작성할 수 있습니다. 이러한 프로시저는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 동적으로 로드 및 실행할 수 있는 DLL입니다.  
   
 > [!NOTE]  
@@ -94,6 +95,6 @@ ms.locfileid: "68136578"
 |저장 프로시저에서 매개 변수를 사용하는 방법을 설명합니다.|[매개 변수](../../relational-databases/stored-procedures/parameters.md)|  
   
 ## <a name="related-content"></a>관련 내용  
- [CLR 저장 프로시저](https://msdn.microsoft.com/library/bbdd51b2-a9b4-4916-ba6f-7957ac6c3f33)  
-  
+ [CLR 저장 프로시저](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/clr-stored-procedures)  
+ [지연된 이름 확인](../../t-sql/statements/create-trigger-transact-sql.md#deferred-name-resolution)
   

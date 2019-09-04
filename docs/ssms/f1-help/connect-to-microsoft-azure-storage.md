@@ -13,19 +13,19 @@ f1_keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 3e7f3a8d7168e9e1b9e321a83e7e1d7143b5bcf1
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8f4b05cc0ebd3c3d230b5f42bb46b74885e8e1e6
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265084"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155677"
 ---
 # <a name="connect-to-microsoft-azure-storage"></a>Microsoft Azure Storage에 연결
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-**Windows Azure 스토리지 연결** 대화 상자를 사용하여 스토리지 계정을 지정하고 Windows Azure 연결의 유효성을 검사할 수 있습니다.  
+**Azure Storage 연결** 대화 상자를 사용하여 스토리지 계정을 지정하고 Azure 연결의 유효성을 검사할 수 있습니다.  
   
 ## <a name="options"></a>옵션  
-Windows Azure 계정에 대해 다음 정보를 지정한 후 **다음** 을 클릭하여 계속합니다.  
+Azure 계정에 대해 다음 정보를 지정한 후 **다음**을 클릭하여 계속합니다.  
   
 1.  **스토리지 계정** - 스토리지 계정 이름을 지정합니다.
 

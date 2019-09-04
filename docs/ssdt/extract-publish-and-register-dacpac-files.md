@@ -16,12 +16,12 @@ f1_keywords:
 ms.assetid: ed900f93-d3df-40f5-8e62-4d722595e041
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 2e113ccb9b94c6bae953cb330072c8a6f7bfea9d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2aee0f145c2ef2b82b929a8f6358a764a10050f5
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912798"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70154806"
 ---
 # <a name="extract-publish-and-register-dacpac-files"></a>.dacpac 파일 추출, 게시 및 등록
 이 항목에서는 SQL Server 개체 탐색기에서 연결된 데이터베이스를 마우스 오른쪽 단추로 클릭하여 수행할 수 있는 네 가지 절차에 대해 설명합니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "67912798"
 **고급** 단추를 클릭하여 액세스할 수 있는 **고급 게시 설정** 대화 상자에서 추가 게시 구성을 사용할 수 있습니다.  
   
 ## <a name="extract-data-tier-application"></a>데이터 계층 애플리케이션 추출  
-데이터베이스에서 .dacpac를 추출할 수 있습니다. 추출을 수행하면 데이터베이스 스키마와 함께 사용자 테이블의 데이터가 포함되어 있을 수 있는 라이브 SQL Server 또는 Microsoft Azure SQL Database에서 데이터베이스 스냅샷 파일(.dacpac)이 만들어집니다.  
+데이터베이스에서 .dacpac를 추출할 수 있습니다. 추출을 수행하면 데이터베이스 스키마와 함께 사용자 테이블의 데이터가 포함되어 있을 수 있는 라이브 SQL Server 또는 Azure SQL Database에서 데이터베이스 스냅샷 파일(.dacpac)이 만들어집니다.  
   
 만들 .dacpac 파일을 지정합니다. **DAC 속성** 단추를 누르면 .dacpac 파일의 속성을 지정할 수 있는 **DAC 속성** 대화 상자가 표시됩니다.  
   
