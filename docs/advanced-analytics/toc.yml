@@ -79,9 +79,17 @@
       items:
         - name: Python 자습서
           href: ../advanced-analytics/tutorials/sql-server-python-tutorials.md
-        - name: revoscalepy를 사용하여 Python 모델 만들기
-          href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
-        - name: 고객 클러스터링(K-평균)
+        - name: 스키 대여(선형 회귀)
+          items:
+            - name: 1 - 소개
+              href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression.md
+            - name: 2 - 데이터 준비
+              href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-prepare-data.md
+            - name: 3 - 모델 학습
+              href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-train-model.md
+            - name: 4 - 모델 배포
+              href: ../advanced-analytics/tutorials/python-ski-rental-linear-regression-deploy-model.md
+        - name: 고객 분류(K-Means 클러스터링)
           items:
             - name: 1 - 소개
               href: ../advanced-analytics/tutorials/tutorial-python-clustering-model.md
@@ -91,6 +99,8 @@
               href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-build.md
             - name: 4 - 모델 배포
               href: ../advanced-analytics/tutorials/tutorial-python-clustering-model-deploy.md
+        - name: revoscalepy를 사용하여 Python 모델 만들기
+          href: ../advanced-analytics/tutorials/use-python-revoscalepy-to-create-model.md
         - name: SQL 개발자를 위한 Python
           items:
             - name: 1 - 소개
