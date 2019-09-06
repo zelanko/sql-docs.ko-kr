@@ -34,12 +34,12 @@ ms.assetid: db65c726-9892-480c-873b-3af29afcee44
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 81e6b5b53f2cf12489ae199051ef837ae75d3875
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62806405"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70153818"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사 사용
   이 항목에서는 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]에서 유지 관리 계획 마법사를 사용하여 단일 서버 또는 다중 서버 유지 관리 계획을 만드는 방법에 대해 설명합니다. 유지 관리 계획 마법사는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 정기적으로 실행할 수 있는 유지 관리 계획을 만듭니다. 이를 통해 백업, 데이터베이스 무결성 확인 또는 지정된 간격으로 데이터베이스 통계 업데이트와 같은 다양한 데이터베이스 관리 태스크를 수행할 수 있습니다.  
@@ -52,7 +52,7 @@ ms.locfileid: "62806405"
   
      [보안](#Security)  
   
--   [SQL Server Management Studio의 유지 관리 계획 마법사를 사용 하 여 유지 관리 계획 만들기](#SSMSProcedure)  
+-   [SQL Server Management Studio에서 유지 관리 계획 마법사를 사용 하 여 유지 관리 계획 만들기](#SSMSProcedure)  
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62806405"
 ####  <a name="Permissions"></a> Permissions  
  유지 관리 계획을 만들거나 관리하려면 **sysadmin** 고정 서버 역할의 멤버여야 합니다. 개체 탐색기에 **sysadmin** 고정 서버 역할의 멤버인 사용자에 대한 **유지 관리 계획** 노드만 표시됩니다.  
   
-##  <a name="SSMSProcedure"></a> 유지 관리 계획 마법사를 사용 하 여  
+##  <a name="SSMSProcedure"></a>유지 관리 계획 마법사 사용  
   
 #### <a name="to-start-the-maintenance-plan-wizard"></a>유지 관리 계획 마법사를 시작하려면  
   
@@ -120,7 +120,7 @@ ms.locfileid: "62806405"
   
                     -   **매(Day)** 를 선택한 경우 작업 일정을 실행할 날짜와 작업 일정을 반복할 월 수를 모두 입력합니다. 예를 들어 작업 일정을 격월로 15일에 실행하려면 **매(Day)** 를 선택하고 첫 번째 상자에 "15", 두 번째 상자에 "2"를 입력합니다. 두 번째 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
-                    -   **매(The)** 를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매(Day)** 를 선택하고 첫 번째 목록에서 **마지막**, 두 번째 목록에서 **평일**을 선택한 다음, 마지막 상자에 "2"를 입력합니다. **첫 번째**, **두 번째**, **세 번째** 또는 **네 번째**(예: 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
+                    -   **매(The)** 를 선택한 경우 작업 일정을 실행할 요일 및 작업 일정을 반복할 월 수를 입력합니다. 예를 들어 작업 일정을 격월로 마지막 평일에 실행하려면 **매(Day)** 를 선택하고 첫 번째 목록에서 **마지막**, 두 번째 목록에서 **평일**을 선택한 다음, 마지막 상자에 "2"를 입력합니다. **첫 번째**, **두 번째**, **세 번째** 또는 **네 번째** 또는 특정 평일(예: 특정 평일(예: 일요일 또는 수요일)을 선택할 수도 있습니다. 마지막 상자에 허용되는 가장 큰 숫자는 "99"입니다.  
   
             2.  **일별 빈도**에서 작업 일정이 실행되는 날에 작업 일정을 반복하는 빈도를 지정합니다.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "62806405"
      인덱스를 만드는 동안 생성된 중간 정렬 결과가 임시로 저장되는 위치를 결정하려면 `SORT_IN_TEMPDB` 옵션을 사용합니다. 정렬 작업이 필요하지 않거나 메모리에서 정렬을 수행할 수 있으면 `SORT_IN_TEMPDB` 옵션이 무시됩니다.  
   
      **인덱스를 다시 만드는 동안 인덱스를 온라인으로 유지** 확인란  
-     사용자가 인덱스 작업을 수행하는 동안 기본 테이블이나 클러스터형 인덱스 데이터 및 연관된 모든 비클러스터형 인덱스에 액세스할 수 있는 `ONLINE` 옵션을 사용합니다. 이 옵션을 선택하면 온라인 다시 작성에 허용되지 않는 인덱스를 다시 작성하기 위한 추가 옵션인 **인덱스 다시 작성 되지 않습니다** 하 고 **오프 라인 인덱스 다시 작성**합니다.  
+     사용자가 인덱스 작업을 수행하는 동안 기본 테이블이나 클러스터형 인덱스 데이터 및 연관된 모든 비클러스터형 인덱스에 액세스할 수 있는 `ONLINE` 옵션을 사용합니다. 이 옵션을 선택하면 온라인 다시 작성에 허용되지 않는 인덱스를 다시 작성하기 위한 추가 옵션인 **인덱스 다시 작성 안 함** 및 **오프라인 인덱스 다시 작성**이 활성화됩니다.  
   
     > [!NOTE]  
     >  온라인 인덱스 작업은 일부 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]버전에서 사용할 수 있습니다. 자세한 내용은 [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)을 참조하세요.  
@@ -364,13 +364,13 @@ ms.locfileid: "62806405"
      자동으로 생성된 데이터베이스 파일을 포함할 폴더를 지정합니다. URL을 백업 대상으로 선택한 경우 이 옵션을 사용할 수 없습니다.  
   
      **SQL 자격 증명**  
-     Windows Azure Storage에 인증하는 데 사용되는 SQL 자격 증명을 선택합니다. 사용할 수 있는 기존 SQL 자격 증명이 없는 경우 **만들기** 단추를 클릭하여 새 SQL 자격 증명을 만듭니다.  
+     Azure Storage에 인증 하는 데 사용 되는 SQL 자격 증명을 선택 합니다. 사용할 수 있는 기존 SQL 자격 증명이 없는 경우 **만들기** 단추를 클릭하여 새 SQL 자격 증명을 만듭니다.  
   
     > [!IMPORTANT]  
-    >  **만들기** 를 클릭하면 열리는 대화 상자에서는 관리 인증서나 구독용 게시 프로필이 필요합니다. 관리 인증서나 게시 프로필에 액세스할 수 없는 경우 Transact-SQL이나 SQL Server Management Studio를 사용하여 스토리지 계정 이름을 지정하고 키 정보에 액세스하여 SQL 자격 증명을 만들 수 있습니다. 샘플 코드를 참조 합니다 [자격 증명을 만드는](../security/authentication-access/create-a-credential.md#Credential) TRANSACT-SQL을 사용 하 여 자격 증명을 만드는 항목입니다. 또는 SQL Server Management Studio를 사용하여 데이터베이스 엔진 인스턴스에서 **보안**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **자격 증명**을 차례로 선택합니다. **ID** 에 대한 저장소 계정 이름을 지정하고 **암호** 필드에 액세스 키를 지정합니다.  
+    >  **만들기** 를 클릭하면 열리는 대화 상자에서는 관리 인증서나 구독용 게시 프로필이 필요합니다. 관리 인증서나 게시 프로필에 액세스할 수 없는 경우 Transact-SQL이나 SQL Server Management Studio를 사용하여 스토리지 계정 이름을 지정하고 키 정보에 액세스하여 SQL 자격 증명을 만들 수 있습니다. Transact-sql을 사용 하 여 [자격 증명을 만들려면](../security/authentication-access/create-a-credential.md#Credential)이 항목의 샘플 코드를 참조 하세요. 또는 SQL Server Management Studio를 사용하여 데이터베이스 엔진 인스턴스에서 **보안**을 마우스 오른쪽 단추로 클릭하고 **새로 만들기**, **자격 증명**을 차례로 선택합니다. **ID** 에 대한 저장소 계정 이름을 지정하고 **암호** 필드에 액세스 키를 지정합니다.  
   
      **Azure 저장소 컨테이너**  
-     Windows Azure 스토리지 컨테이너의 이름을 지정합니다.  
+     Azure 저장소 컨테이너의 이름을 지정 합니다.  
   
      **URL 접두사:**  
      이는 지정된 Azure 스토리지 컨테이너 이름 및 SQL 자격 증명에 저장된 스토리지 계정 정보를 기반으로 자동 생성됩니다. **\<storage account>.blob.core.windows.net** 이외의 형식을 사용하는 도메인을 사용하지 않는 경우 이 필드의 정보를 편집하지 않는 것이 좋습니다.  
