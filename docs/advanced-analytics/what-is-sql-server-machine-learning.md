@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a1a9a3b0f712458466051ce2c67c0a725ef0a76
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: d60445d52a8a78fb7924d82338162e4719f45681
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957433"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70276673"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services (Python 및 R)는 무엇 인가요?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Azure SQL Database [Machine Learning Services](https://docs.microsoft.com/azure/
 
 SQL Server Machine Learning Services를 사용 하 여 데이터베이스 내에서 Python 및 R 스크립트를 실행할 수 있습니다. 이를 사용 하 여 데이터를 준비 하 고 정리 하며, 기능 엔지니어링을 수행 하 고, 데이터베이스 내에서 기계 학습 모델을 학습, 평가 및 배포할 수 있습니다. 이 기능은 데이터가 상주 하는 스크립트를 실행 하 고 네트워크를 통해 다른 서버에 데이터를 전송 하는 것을 제거 합니다.
 
-Python 및 R의 기본 배포는 Machine Learning Services에 포함 되어 있습니다. PyTorch, TensorFlow 및 scikit와 같은 오픈 소스 패키지 및 프레임 워크를 사용할 수 있습니다. 여기에는 Python 용 Microsoft 패키지 [revoscalepy](python/ref-py-revoscalepy.md) 및 [microsoftml](python/ref-py-microsoftml.md) 와 [RevoScaleR](r/ref-r-revoscaler.md), [microsoftml](r/ref-r-microsoftml.md), [olapr](r/ref-r-olapr.md) 등이 있습니다. 및 R에 대 한 [sqlrutils](r/ref-r-sqlrutils.md) .
+Python 및 R의 기본 배포는 Machine Learning Services에 포함 되어 있습니다. PyTorch, TensorFlow 및 scikit와 같은 오픈 소스 패키지 및 프레임 워크를 설치 하 고 사용할 수 있습니다. 여기에는 Python 용 Microsoft 패키지 [revoscalepy](python/ref-py-revoscalepy.md) and [microsoftml](python/ref-py-microsoftml.md) 및 [RevoScaleR](r/ref-r-revoscaler.md), [microsoftml](r/ref-r-microsoftml.md), [Olapr](r/ref-r-olapr.md)및 R에 대 한 [sqlrutils](r/ref-r-sqlrutils.md) .
 
 Machine Learning Services는 확장성 프레임 워크를 사용 하 여 SQL Server에서 Python 및 R 스크립트를 실행 합니다. 이 작업을 수행 하는 방법에 대해 자세히 알아보세요.
 
@@ -76,6 +76,13 @@ Microsoft의 엔터프라이즈 패키지 외에도 오픈 소스 패키지 및 
 | R | [olapR](r/ref-r-olapr.md) | R 함수는 SQL Server Analysis Services OLAP 큐브에 대 한 MDX 쿼리에 사용 됩니다. |
 | R | [sqlrutils](r/ref-r-sqlrutils.md) | T-sql 저장 프로시저에서 R 스크립트를 사용 하 고, 해당 저장 프로시저를 데이터베이스에 등록 하 고, [r 개발 환경](r/set-up-a-data-science-client.md)에서 저장 프로시저를 실행 하는 메커니즘입니다. |
 | R | [Microsoft R Open](https://mran.microsoft.com/rro) | MRO (microsoft R Open)은 Microsoft에서 R의 향상 된 배포입니다. 통계 분석 및 데이터 과학을 위한 완전 한 오픈 소스 플랫폼입니다. 이는 R과 100%의 호환성을 기반으로 하며 향상 된 성능 및 재현 가능성을 위한 추가 기능을 포함 합니다. |
+
+Machine Learning Services와 함께 설치 되는 패키지와 기타 패키지를 설치 하는 방법에 대 한 자세한 내용은 다음을 참조 하세요.
+
++ [Python 패키지 정보 가져오기](package-management/python-package-information.md)
++ [Sqlmlutils를 사용 하 여 Python 패키지 설치](package-management/install-additional-python-packages-on-sql-server.md)
++ [R 패키지 정보 가져오기](package-management/r-package-information.md)
++ [Sqlmlutils를 사용 하 여 새 R 패키지를 설치](package-management/install-additional-r-packages-on-sql-server.md)합니다.
 
 ## <a name="how-do-i-get-started-with-machine-learning-services"></a>Machine Learning Services을 시작 어떻게 할까요??
 

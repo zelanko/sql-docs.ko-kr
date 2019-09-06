@@ -9,18 +9,18 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 2c6fd8a9339756c6c22870e4eca6203064dc27f4
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 3b5a55ec16c7dfa2f16dbae62674a475fb39c5d7
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190358"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70275673"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Sqlmlutils를 사용 하 여 새 R 패키지 설치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 패키지의 함수를 사용 하 여 SQL Server Machine Learning Services 또는 SQL Server R Services 인스턴스에 새 R 패키지를 설치 하는 방법을 설명 합니다. 설치 하는 패키지는 T-sql [sp-s q s](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) -transact-sql 문을 사용 하 여 데이터베이스 내에서 실행 되는 R 스크립트에서 사용할 수 있습니다.
+이 문서에서는 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 패키지의 함수를 사용 하 여 SQL Server Machine Learning Services 또는 SQL Server R Services 인스턴스에 새 R 패키지를 설치 하는 방법을 설명 합니다. [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) t-sql 문을 사용 하 여 데이터베이스 내에서 실행 되는 R 스크립트에서 설치 패키지를 사용할 수 있습니다.
 
 > [!NOTE]
 > SQL Server에서 r `install.packages` 패키지를 추가 하는 데는 표준 r 명령이 권장 되지 않습니다. 대신이 문서에 설명 된 대로 **sqlmlutils** 를 사용 합니다.

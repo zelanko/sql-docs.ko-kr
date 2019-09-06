@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6fceea54c6ea7d5c904cc27c87033c4a40cff59f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 2ce02ef0b212070b4a52944e055404137c78c98b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158218"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304729"
 ---
 # <a name="azdata-control"></a>azdata 컨트롤
 
@@ -47,7 +47,7 @@ Kubernetes 네임 스페이스에 사용 되는 제어 평면 이름입니다.
 #### `--config-profile -c`
 클러스터를 배포 하는 데 사용 되는 클러스터 구성 프로필: [' aks ', ' kubeadm ', ' minikube ', ' kubeadm ']
 #### `--accept-eula -a`
-사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 이 제품의 사용 조건은 https://aka.ms/azdata-eula 에서 볼 수 있습니다.
+사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 
 #### `--node-label -l`
 노드 레이블-배포할 노드를 지정 하는 데 사용 됩니다.
 #### `--force -f`

@@ -9,18 +9,18 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: dc5addca9c9bbf01408cea89f85676813b97506c
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: 90bc0d33b00f77f942dd736ff1e1904f5d2e7396
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70109755"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70276457"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Sqlmlutils를 사용 하 여 Python 패키지 설치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-이 문서에서는 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 패키지의 함수를 사용 하 여 SQL Server Machine Learning Services 인스턴스에 새 Python 패키지를 설치 하는 방법을 설명 합니다. 설치 하는 패키지는 T-sql [sp-s q s](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) -transact-sql 문을 사용 하 여 데이터베이스 내에서 실행 되는 Python 스크립트에서 사용할 수 있습니다.
+이 문서에서는 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils) 패키지의 함수를 사용 하 여 SQL Server Machine Learning Services 인스턴스에 새 Python 패키지를 설치 하는 방법을 설명 합니다. [Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) t-sql 문을 사용 하 여 데이터베이스 내에서 실행 되는 Python 스크립트에서 설치 패키지를 사용할 수 있습니다.
 
 패키지 위치 및 설치 경로에 대 한 자세한 내용은 [Python 패키지 정보 가져오기](../package-management/python-package-information.md)를 참조 하세요.
 

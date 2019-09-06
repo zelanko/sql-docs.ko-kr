@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7b77a1fd3a0d2575f0add7badb1c5bf632d29d70
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: ebc5ccef3130a490a6563531dd61e66a0218083d
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715828"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304818"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>데이터베이스 내 분석 인스턴스 SQL Server의 누적 업데이트에 대 한 CAB 다운로드
 
@@ -40,7 +40,7 @@ CAB 파일은 역순 시간 순서로 나열 됩니다. CAB 파일을 다운로�
 
 |릴리스  |구성 요소 | 다운로드 링크  | 해결 된 문제 | 
 |---------|----------|----------------|------------------|
-|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)** |  |  |  |
+|**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)-[CU16](https://support.microsoft.com/help/4508218/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| 패키지 내의 이진 파일은 이제 서명 됩니다. |
 | | R Server      |[SRS_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2069739&clcid=1033)| 패키지 내의 이진 파일은 이제 서명 됩니다. |
 | | Microsoft Python Open     | [SPO_9.2.0.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073897&clcid=1033)| 패키지 내의 이진 파일은 이제 서명 됩니다. |

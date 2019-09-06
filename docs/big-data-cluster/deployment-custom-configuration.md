@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 230ec2300bff55cefbb176c69d677b4e04d6ad30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a0da84d60a9513b0ca81a0256218928372882e72
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155317"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304825"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>클러스터 리소스 및 서비스에 대 한 배포 설정 구성
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Azdata 관리 도구에서 기본 제공 되는 미리 정의 된 구성 프로필 집합에서 시작 하 여 BDC 워크 로드 요구 사항에 더 적합 하도록 기본 설정을 쉽게 수정할 수 있습니다. 릴리스 후보 릴리스부터 구성 파일의 구조가 업데이트 되어 리소스의 각 서비스 마다 업데이트 설정을 세부적으로 수 있습니다. 
+Azdata 관리 도구에 기본 제공 되는 미리 정의 된 구성 프로필 집합에서 시작 하 여 BDC 워크 로드 요구 사항에 더 적합 하도록 기본 설정을 쉽게 수정할 수 있습니다. 릴리스 후보 릴리스부터 구성 파일의 구조가 업데이트 되어 리소스의 각 서비스 마다 업데이트 설정을 세부적으로 수 있습니다. 
 
 리소스 수준 구성을 설정 하거나 리소스의 모든 서비스에 대 한 구성을 업데이트할 수도 있습니다. 다음은 bdc의 구조에 대 한 요약입니다 **.**
 
@@ -99,7 +99,7 @@ Azdata 관리 도구에서 기본 제공 되는 미리 정의 된 구성 프로�
 }
 ``` 
 
-특정 리소스 내에서 single 서비스의 설정을 변경 하는 경우에도 마찬가지입니다. 예를 들어 저장소 풀의 Spark 구성 요소에 대 한 Spark 메모리 설정을 변경 하려면 udpate 구성 파일에서 **spark** 서비스에 대 한 설정 섹션을 사용 하 여 **저장소-0** 리소스를 **설정** 합니다 **.** .
+마찬가지로 특정 리소스 내에서 단일 서비스의 설정을 변경 하는 경우에도 마찬가지입니다. 예를 들어 저장소 풀의 Spark 구성 요소에 대 한 Spark 메모리 설정을 변경 하려는 경우에는 **저장소-0** 리소스를 **bdc. json** 구성 파일의 **spark** 서비스에 대 한 **설정** 섹션으로 업데이트 합니다. .
 ```json
 "resources":{
     ...
@@ -243,7 +243,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 ## <a id="storage"></a> 스토리지 구성
 
-각 풀에 사용되는 특성 및 스토리지 클래스를 변경할 수도 있습니다. 다음 예제에서는 스토리지 풀에 사용자 지정 스토리지 클래스를 할당하고 데이터를 저장하기 위한 영구적 볼륨 클레임 크기를 100Gb로 업데이트합니다. 먼저 *type* 및 *replicas* 외에 새 *storage* 섹션을 포함하는 patch.json 파일을 아래와 같이 만듭니다.
+각 풀에 사용되는 특성 및 스토리지 클래스를 변경할 수도 있습니다. 다음 예제에서는 저장소 및 데이터 풀에 사용자 지정 저장소 클래스를 할당 하 고 데이터 풀의 HDFS (저장소 풀) 및 100 Gb에 대 한 데이터를 500으로 저장 하기 위한 영구 볼륨 클레임의 크기를 업데이트 합니다. 먼저 *type* 및 *replicas* 외에 새 *storage* 섹션을 포함하는 patch.json 파일을 아래와 같이 만듭니다.
 
 ```json
 {
@@ -256,13 +256,33 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
         "replicas": 2,
         "storage": {
           "data": {
-            "size": "100Gi",
-            "className": "myStorageClass",
+            "size": "500Gi",
+            "className": "myHDFSStorageClass",
             "accessMode": "ReadWriteOnce"
           },
           "logs": {
             "size": "32Gi",
-            "className": "myStorageClass",
+            "className": "myHDFSStorageClass",
+            "accessMode": "ReadWriteOnce"
+          }
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "path": "spec.resources.data-0.spec",
+      "value": {
+        "type": "Data",
+        "replicas": 2,
+        "storage": {
+          "data": {
+            "size": "100Gi",
+            "className": "myDataStorageClass",
+            "accessMode": "ReadWriteOnce"
+          },
+          "logs": {
+            "size": "32Gi",
+            "className": "myDataStorageClass",
             "accessMode": "ReadWriteOnce"
           }
         }
@@ -297,7 +317,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 다양한 유형의 워크로드 요구 사항에 맞게 특정 리소스가 있는 Kubernetes 노드의 Pod 배치를 제어할 수 있습니다. 예를 들어 저장소 풀 리소스 pod가 더 많은 저장소가 있는 노드에 배치 되도록 하거나, SQL Server 마스터 인스턴스가 더 높은 CPU 및 메모리 리소스가 있는 노드에 배치 되도록 할 수 있습니다. 이 경우에는 먼저 다양한 유형의 하드웨어를 사용하여 다른 유형의 Kubernetes 클러스터를 빌드한 다음, 적절하게 [노드 레이블을 할당](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)합니다. 빅 데이터 클러스터를 배포할 때 클러스터 배포 구성 파일의 풀 수준에서 동일한 레이블을 지정할 수 있습니다. 그러면 Kubernetes가 지정된 레이블과 일치하는 노드의 Pod에 선호도를 지정합니다. Kubernetes 클러스터의 노드에 추가 해야 하는 특정 레이블 키는 **mssql 클러스터 전체**에 해당 합니다. 이 레이블 자체의 값은 선택한 문자열일 수 있습니다.
 
-다음 예제에서는 SQL Server 마스터 인스턴스, 계산 풀, 데이터 풀 & 저장소 풀에 대 한 노드 레이블 설정을 포함 하도록 사용자 지정 구성 파일을 편집 하는 방법을 보여 줍니다. 기본 제공 구성에는 *nodeLabel* 키가 없으므로 사용자 지정 구성 파일을 수동으로 편집하거나 패치 파일을 만들어 사용자 지정 구성 파일에 적용해야 합니다. SQL Server 마스터 인스턴스 pod는 값이 **bdc-마스터**인 **mssql-클러스터 차원의** 레이블을 포함 하는 노드에 배포 됩니다. 계산 풀 및 데이터 풀 pod는 **mssql-클러스터 차원의** 값이 **bdc-sql**인 노드에 배포 됩니다. 저장소 풀 pod는 **mssql-클러스터 전체** 에 값이 포함 된 노드에 배포 됩니다.
+다음 예제에서는 SQL Server 마스터 인스턴스, 계산 풀, 데이터 풀 & 저장소 풀에 대 한 노드 레이블 설정을 포함 하도록 사용자 지정 구성 파일을 편집 하는 방법을 보여 줍니다. 기본 제공 구성에는 *nodeLabel* 키가 없으므로 사용자 지정 구성 파일을 수동으로 편집 하거나 패치 파일을 만들고 사용자 지정 구성 파일에 적용 해야 합니다. SQL Server 마스터 인스턴스 pod는 값이 **bdc-마스터**인 **mssql-클러스터 전체** 를 포함 하는 노드에 배포 됩니다. 계산 풀 및 데이터 풀 pod는 **mssql-클러스터 차원의** 값이 **bdc-sql**인 노드에 배포 됩니다. 저장소 풀 pod는 **mssql-클러스터 전체** **에 값이**포함 된 노드에 배포 됩니다.
 
 다음 내용을 사용하여 현재 디렉터리에 **patch.json**이라는 파일을 만듭니다.
 
@@ -492,7 +512,7 @@ JSON 패치 파일은 한 번에 여러 설정을 구성합니다. JSON 패치�
 }
 ```
 
-- 두 개의 인스턴스를 사용 하 여 두개의 spark 풀을 만듭니다.
+- 두 개의 인스턴스를 사용 하 여 두 개의 spark 풀을 **만듭니다.**
 ```json
 {
   "patch": [
@@ -538,7 +558,7 @@ JSON 패치 파일은 한 번에 여러 설정을 구성합니다. JSON 패치�
 > [!TIP]
 > 배포 구성 파일을 변경하기 위한 구조 및 옵션에 대한 자세한 내용은 [빅 데이터 클러스터의 배포 구성 파일 참조](reference-deployment-config.md)를 참조하세요.
 
-**azdata bdc config** 명령을 사용하여 JSON 패치 파일의 변경 내용을 적용합니다. 다음 예제에서는 **사용자 지정/** a s c. json 파일을 대상 배포 구성 파일에 적용 합니다.
+**azdata bdc config** 명령을 사용하여 JSON 패치 파일의 변경 내용을 적용합니다. 다음 예제에서는 **사용자 지정/** a s c. **json 파일을** 대상 배포 구성 파일에 적용 합니다.
 
 ```bash
 azdata bdc config patch --config-file custom/bdc.json --patch-file ./patch.json
@@ -556,7 +576,7 @@ ElasticSearch를 실행 하는 컨테이너를 사용 하지 않도록 설정 �
 }
 ```
 
-수동으로를 편집 하 고 위의 섹션을 **사양**에 추가 하거나, 아래와 같이 패치 파일 **elasticsearch** 를 만들고 **azdata** CLI를 사용 하 여 **config.xml** 파일을 패치할 수 있습니다.
+수동으로 **를 편집 하 고 위의** 섹션을 **사양**에 추가 하거나, 아래와 같이 패치 파일 **elasticsearch** 를 만들고 **azdata** CLI를 사용 하 여 **config.xml** 파일을 패치할 수 있습니다.
 
 ```json
 {

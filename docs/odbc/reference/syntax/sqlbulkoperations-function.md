@@ -102,7 +102,7 @@ SQLRETURN SQLBulkOperations(
 ## <a name="comments"></a>주석  
   
 > [!CAUTION]  
->  에서 **SQLBulkOperations** 을 호출할 수 있는 문 및 ODBC 2와의 호환성을 위해 수행 해야 하는 작업에 대 한 자세한 내용은을 (를) 확인 하십시오. *x* 응용 프로그램에 대 [](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 한 자세한 내용은 부록 G: 이전 버전과의 호환성을 위한 드라이버 지침  
+>  에서 **SQLBulkOperations** 을 호출할 수 있는 문 및 ODBC 2와의 호환성을 위해 수행 해야 하는 작업에 대 한 자세한 내용은을 (를) 확인 하십시오. *x* 응용 프로그램에 대 [블록 커서, 스크롤 가능 커서 및 이전 버전과의 호환성](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) 한 자세한 내용은 부록 G: 이전 버전과의 호환성을 위한 드라이버 지침  
   
  응용 프로그램은 **SQLBulkOperations** 를 사용 하 여 현재 쿼리에 해당 하는 기본 테이블 또는 뷰에서 다음 작업을 수행 합니다.  
   
@@ -146,7 +146,7 @@ SQLRETURN SQLBulkOperations(
   
  SQLParamData 및 Sqlparamdata에 대 한 호출을 사용 하 여 SQLBulkOperations에 의해 긴 데이터를 추가할 수 있습니다. 자세한 내용은이 함수 참조의 뒷부분에 나오는 "대량 삽입 및 업데이트를 위한 긴 데이터 제공"을 참조 하세요.  
   
- 응용 프로그램에서 SQLBulkOperations를 호출 하기 전에 **Sqlfetch** 또는 **sqlfetchscroll** 을 호출 하는  것은 필요 하지 않습니다 (ODBC 2로 이동 하는 경우 제외). *x* 드라이버 [이전 버전과의 호환성 및 표준 준수를](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)참조 하세요.)  
+ 응용 프로그램에서 SQLBulkOperations를 호출 하기 전에 **SQLFetch** 또는 **SQLFetchScroll** 을 호출 하는 **SQLBulkOperations** 것은 필요 하지 않습니다 (ODBC 2로 이동 하는 경우 제외). *x* 드라이버 [이전 버전과의 호환성 및 표준 준수를](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md)참조 하세요.)  
   
  SQL_ADD의 *작업* 인수를 사용 하 여 **SQLBulkOperations**가 중복 된 열이 포함 된 커서에 대해 호출 되는 경우이 동작은 드라이버에 정의 됩니다. 드라이버는 드라이버 정의 SQLSTATE를 반환 하거나, 결과 집합에 표시 되는 첫 번째 열에 데이터를 추가 하거나, 다른 드라이버 정의 동작을 수행할 수 있습니다.  
   
@@ -251,7 +251,7 @@ SQLRETURN SQLBulkOperations(
   
     -   실행 시 데이터 열이 더 이상 없으면 프로세스가 완료 된 것입니다. 문이 성공적으로 실행 된 경우 **Sqlparamdata** 는 SQL_SUCCESS 또는 SQL_SUCCESS_WITH_INFO을 반환 합니다. 실행에 실패 한 경우 SQL_ERROR를 반환 합니다. 이 시점에서 **Sqlparamdata** 는 **SQLBulkOperations**에서 반환 될 수 있는 모든 SQLSTATE를 반환할 수 있습니다.  
   
- **SQLBulkOperations** 이 SQL_NEED_DATA를 반환 하 고 모든 실행 시 데이터 열에 대해 데이터가 전송 되기 전에 작업이 취소 되거나 sqlparamdata 또는 **sqlparamdata** **에서 오류가** 발생 하는 경우 응용 프로그램은 sqlcancel만 호출할 수 있습니다. , **SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions**, **Sqlparamdata**또는 문에 대 한 **sqlparamdata** 또는 문과 연결 된 연결입니다. 문에 대 한 다른 함수 또는 문과 연결 된 연결을 호출 하는 경우 함수는 SQL_ERROR 및 SQLSTATE HY010 (함수 시퀀스 오류)를 반환 합니다.  
+ **SQLBulkOperations** 이 SQL_NEED_DATA를 반환 하 고 모든 실행 시 데이터 열에 대해 데이터가 전송 되기 전에 작업이 취소 되거나 sqlparamdata 또는 **sqlparamdata** **에서 오류가** 발생 하는 경우 응용 프로그램은 sqlcancel만 호출할 수 있습니다. **SQLCancel**, **SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions**, **Sqlparamdata**또는 문에 대 한 **sqlparamdata** 또는 문과 연결 된 연결입니다. 문에 대 한 다른 함수 또는 문과 연결 된 연결을 호출 하는 경우 함수는 SQL_ERROR 및 SQLSTATE HY010 (함수 시퀀스 오류)를 반환 합니다.  
   
  드라이버가 실행 시 데이터 열에 대 한 데이터를 필요로 하는 동안 **Sqlcancel** 을 호출 하면 드라이버에서 작업을 취소 합니다. 그러면 응용 프로그램은 **SQLBulkOperations** 를 다시 호출할 수 있습니다. 취소 해도 커서 상태나 현재 커서 위치에는 영향을 주지 않습니다.  
   

@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb999ede4516f903b7d2f409e53940adc79b4f9a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b24a552bcfaae45fa4c8644d590d2573909a03ce
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155275"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304834"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -57,7 +57,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--force -f`
 대상 파일을 강제로 덮어씁니다.
 #### `--accept-eula -a`
-사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 이 제품의 사용 조건은 https://aka.ms/azdata-eula 에서 볼 수 있습니다.
+사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
 로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.
@@ -92,7 +92,7 @@ azdata bdc config list --config-profile aks-dev-test
 확인하려는 구성 유형입니다.
 `cluster`
 #### `--accept-eula -a`
-사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 이 제품의 사용 조건은 https://aka.ms/azdata-eula 에서 볼 수 있습니다.
+사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
 로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.
