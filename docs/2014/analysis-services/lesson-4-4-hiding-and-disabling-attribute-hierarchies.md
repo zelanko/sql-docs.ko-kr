@@ -77,7 +77,7 @@ ms.locfileid: "69530849"
   
      다음 이미지에서는 선택한 특성에 대해 False로 설정된 **AttributeHierarchyEnabled** 속성을 보여 줍니다.  
   
-     ![AttributeHierarchyEnabled 속성을 False로 설정 합니다] . (../../2014/tutorials/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled 속성을 False로 설정 합니다") .  
+     ![AttributeHierarchyEnabled 속성을 False로 설정 합니다](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled 속성을 False로 설정 합니다") .  
   
 5.  **빌드** 메뉴에서 **Analysis Services Tutorial 배포**를 클릭합니다.  
   
