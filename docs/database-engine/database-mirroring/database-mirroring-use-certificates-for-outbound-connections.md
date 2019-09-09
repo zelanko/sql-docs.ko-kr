@@ -44,7 +44,7 @@ ms.locfileid: "68044574"
   
 ## <a name="procedure"></a>절차  
   
-#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-hosta"></a>아웃바운드 미러링 연결을 위한 서버 인스턴스를 구성하려면(HOST_A)  
+#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-host_a"></a>아웃바운드 미러링 연결을 위한 서버 인스턴스를 구성하려면(HOST_A)  
   
 1.  **master** 데이터베이스에 데이터베이스 마스터 키가 없으면 새로 만듭니다. 데이터베이스의 기존 키를 보려면 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) 카탈로그 뷰를 사용합니다.  
   
