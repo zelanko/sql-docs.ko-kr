@@ -26,7 +26,7 @@ ms.locfileid: "68887967"
 > [!NOTE]  
 >  `Microsoft.AnalysisServices.AdomdServer` 네임스페이스 및 이러한 개체를 사용하려면 msmgdsrv.dll에 대한 참조를 UDF 프로젝트 또는 저장 프로시저에 추가해야 합니다.  
   
- ![ADOMD.NET 서버에서 개체 관계를 표시 합니다] . (https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "ADOMD.NET 서버에서 개체 관계를 표시 합니다") .  
+ ![ADOMD.NET 서버에서 개체 관계를 표시 합니다](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "ADOMD.NET 서버에서 개체 관계를 표시 합니다")  
 ADOMD.NET 개체 모델  
   
  ADOMD.NET 개체 계층 구조와의 상호 작용은 일반적으로 다음 표에 설명된 최상위 레이어에 있는 하나 이상의 개체에서 시작됩니다.  
