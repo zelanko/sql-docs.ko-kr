@@ -39,7 +39,7 @@ ms.locfileid: "70176091"
  **[4 단원: Azure Storage에서 데이터베이스 만들기](../relational-databases/lesson-3-database-backup-to-url.md)**  
  이 단원에서는 CREATE Database FILENAME 옵션을 사용 하 여 Azure Storage에서 데이터베이스를 만듭니다.  
   
- **5 단원. &#40;Tde를 사용 하 여 데이터베이스 암호화 (옵션)&#41;**  
+ **[5 단원. &#40;Tde를 사용 하 여 데이터베이스 암호화 (옵션)&#41;](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
  이 단원에서는 TDE(투명한 데이터 암호화)와 서버 인증서를 사용하여 데이터베이스를 암호화합니다.  
   
  **[6 단원: 온-프레미스의 원본 컴퓨터에서 Azure의 대상 컴퓨터로 데이터베이스 마이그레이션](lesson-5-backup-database-using-file-snapshot-backup.md)**  
