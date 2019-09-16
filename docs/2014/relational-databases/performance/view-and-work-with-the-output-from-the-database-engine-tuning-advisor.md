@@ -113,7 +113,7 @@ ms.locfileid: "68811022"
     dta -E -D DatabaseName -if WorkloadFile -s SessionName -a  
     ```  
   
-     여기서 **-E** 는 로그인 ID와 암호 대신 트러스트된 연결이 튜닝 세션에 사용되도록 지정하고, **-D** 는 튜닝할 데이터베이스의 이름이나 작업에 사용되는 여러 데이터베이스의 쉼표로 구분된 목록을 지정하며, **-if** 는 작업 파일의 이름과 경로를 지정합니다. 또한 **-s** 는 튜닝 세션의 이름을 지정하고, **-a** 는 작업이 분석된 후 **dta** 명령 프롬프트 유틸리티에서 사용자에게 확인하지 않고 자동으로 튜닝 권장 구성을 적용하도록 지정합니다. **dta** 명령 프롬프트 유틸리티를 사용하여 데이터베이스를 튜닝하는 방법에 대한 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md)을 참조하세요.  
+     여기서 **-E** 는 로그인 ID와 암호 대신 트러스트된 연결이 튜닝 세션에 사용되도록 지정하고, **-D** 는 튜닝할 데이터베이스의 이름이나 작업에 사용되는 여러 데이터베이스의 쉼표로 구분된 목록을 지정하며, **-if** 는 작업 파일의 이름과 경로를 지정합니다. 또한 **-s** 는 튜닝 세션의 이름을 지정하고, **-a** 는 작업이 분석된 후 **dta** 명령 프롬프트 유틸리티에서 사용자에게 확인하지 않고 자동으로 튜닝 권장 구성을 적용하도록 지정합니다. **dta** 명령 프롬프트 유틸리티를 사용하여 데이터베이스를 튜닝하는 방법에 대한 자세한 내용은 [데이터베이스 엔진 튜닝 관리자](database-engine-tuning-advisor.md)을 참조하세요.  
   
 3.  Enter 키를 누릅니다.  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68811022"
   
 ##### <a name="to-export-tuning-session-results-from-the-database-engine-tuning-advisor-gui-for-what-if-analysis-with-the-dta-command-line-utility"></a>dta 명령줄 유틸리티로 "가정(what-if)" 분석을 하기 위해 데이터베이스 엔진 튜닝 관리자 GUI의 튜닝 세션 결과를 내보내려면  
   
-1.  데이터베이스 엔진 튜닝 관리자 GUI를 사용하여 데이터베이스를 튜닝합니다. 자세한 내용은 [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션을 평가하려면 **세션 모니터**를 두 번 클릭합니다.  
+1.  데이터베이스 엔진 튜닝 관리자 GUI를 사용하여 데이터베이스를 튜닝합니다. 자세한 내용은 [데이터베이스 엔진 튜닝 관리자](database-engine-tuning-advisor.md)을 참조하세요. 기존 튜닝 세션을 평가하려면 **세션 모니터**를 두 번 클릭합니다.  
   
 2.  **파일** 메뉴에서 **세션 결과 내보내기** 를 클릭한 다음 XML 파일로 저장합니다.  
   
@@ -152,14 +152,15 @@ ms.locfileid: "68811022"
   
 4.  3단계에서 새로 만든 XML 입력 파일에서 원하는 튜닝 옵션을 `TuningOptions` 요소에 지정하고 `Configuration` 요소 섹션을 편집하고(분석에 적합하도록 물리적 디자인 구조를 추가 또는 삭제) 파일을 저장한 다음 데이터베이스 엔진 튜닝 관리자 XML 스키마에 대해 유효성을 검사합니다. 이 XML 파일을 편집하는 방법은 [XML 입력 파일 참조&#40;데이터베이스 엔진 튜닝 관리자&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)를 참조하세요.  
   
-5.  4단계에서 만든 XML 파일을 **dta** 명령줄 유틸리티에 대한 입력으로 사용합니다. 이 도구에서 XML 입력 파일을 사용하는 방법은 [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md)의 "dta 유틸리티를 사용하여 데이터베이스 튜닝" 섹션을 참조하세요.  
+5.  4단계에서 만든 XML 파일을 **dta** 명령줄 유틸리티에 대한 입력으로 사용합니다. 이 도구에서 XML 입력 파일을 사용하는 방법은 [데이터베이스 엔진 튜닝 관리자](database-engine-tuning-advisor.md)의 "dta 유틸리티를 사용하여 데이터베이스 튜닝" 섹션을 참조하세요.  
   
 ### <a name="using-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>사용자 지정 구성 기능과 dta 명령줄 유틸리티 사용  
  숙련된 XML 개발자인 경우 작업 및 물리적 데이터베이스 디자인 구조의 가상 구성(예: 인덱스, 인덱싱된 뷰 또는 분할)을 지정할 데이터베이스 엔진 튜닝 관리자 XML 입력 파일을 만들 수 있습니다. 그런 다음 **dta** 명령줄 유틸리티를 사용하여 이 가상 구성이 데이터베이스 쿼리 성능에 미치는 영향을 분석할 수 있습니다. 다음 절차에서는 이 과정을 단계별로 설명합니다.  
   
 ##### <a name="to-use-the-user-specified-configuration-feature-with-the-dta-command-line-utility"></a>사용자 지정 구성 기능과 dta 명령줄 유틸리티를 사용하려면  
   
-1.  튜닝 작업을 만듭니다. 이 태스크를 수행하는 방법은 [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md)를 참조하세요.  
+1.  튜닝 작업을 만듭니다. 데이터베이스 엔진 튜닝 관리자
+](database-engine-tuning-advisor.md)를 참조하세요.  
   
 2.  [사용자 정의 구성이 포함된 XML 입력 파일 샘플&#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md)을 복사하여 XML 편집기 또는 텍스트 편집기에 붙여넣습니다. 이 예제를 사용하여 튜닝 세션용 XML 입력 파일을 만듭니다. 이 태스크를 수행하는 방법은 [데이터베이스 엔진 튜닝 관리자 시작 및 사용](database-engine-tuning-advisor.md)의 "XML 입력 파일 만들기" 섹션을 참조하세요.  
   
@@ -387,7 +388,7 @@ ms.locfileid: "68811022"
  선택한 보고서에 대한 자세한 정보를 볼 수 있습니다. 표의 열은 보고서마다 다릅니다.  
   
 ## <a name="see-also"></a>관련 항목  
- [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md)   
+ [데이터베이스 엔진 튜닝 관리자](database-engine-tuning-advisor.md)   
  [dta 유틸리티](../../tools/dta/dta-utility.md)  
   
   

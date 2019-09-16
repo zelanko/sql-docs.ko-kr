@@ -299,7 +299,7 @@ Get-PowerPivotSystemService
   
 3.  **신뢰할 수 있는 데이터 공급자**를 클릭합니다. MSOLAP.5(OLAP Services 11.0용 Microsoft OLE DB 공급자)가 나타납니다. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 설치를 업그레이드한 경우에는 이전 버전의 MSOLAP.4도 나타납니다.  
   
-4.  자세한 내용은 [Add MSOLAP.5 as a Trusted Data Provider in Excel Services](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services)을 참조하세요.  
+4.  자세한 내용은 [MSOLAP.5를 Excel 서비스에서 신뢰할 수 있는 데이터 공급자로 추가](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services)를 참조하십시오.  
   
  MSOLAP.4는 OLAP Services 10.0의 Microsoft OLE DB 공급자로 설명되어 있습니다. 이 버전은 Excel 서비스로 설치된 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 의 기본 버전이어야 하며, [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전일 수도 있습니다. SharePoint 설치의 기본 버전은 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 데이터 액세스를 지원하지 않습니다. SharePoint에서 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 통합 문서에 연결하려면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 버전 이상이 있어야 합니다. [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] 버전이 있는지 확인하려면 파일 속성을 보고 버전을 확인하는 방법이 설명된 이전 섹션의 지침을 따르십시오.  
   
