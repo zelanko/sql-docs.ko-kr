@@ -107,7 +107,7 @@ ms.locfileid: "69530849"
   
      다음 이미지에서는 False로 설정된 **AttributeHierarchyVisible** 속성을 보여 줍니다.  
   
-     ![AttributeHierarchyVisible 속성을 False로 설정 합니다] . (../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible 속성을 False로 설정 합니다") .  
+     ![AttributeHierarchyVisible 속성을 False로 설정 합니다](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible 속성을 False로 설정 합니다") .  
   
 5.  **특성** 창의 **우편 번호** 특성을 **계층 및 수준** 창에 있는 **고객 지리** 사용자 계층의 **구/군/시** 수준 바로 아래로 끌어 놓습니다.  
   
