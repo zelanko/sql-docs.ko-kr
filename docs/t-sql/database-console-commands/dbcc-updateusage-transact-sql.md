@@ -59,7 +59,7 @@ DBCC UPDATEUSAGE
   
 ## <a name="arguments"></a>인수  
 *database_name* | *database_id* | 0  
-공간 사용 통계를 보고하고 수정할 데이터베이스의 이름 또는 ID입니다. 0을 지정하면 현재 데이터베이스가 사용됩니다. 데이터베이스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 준수해야 합니다.  
+공간 사용량 통계를 보고하고 수정할 데이터베이스의 이름 또는 ID입니다. 0을 지정하면 현재 데이터베이스가 사용됩니다. 데이터베이스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 대한 규칙을 준수해야 합니다.  
   
 *table_name* | *table_id* | *view_name* | *view_id*  
 공간 사용 통계를 보고하고 수정할 테이블이나 인덱싱된 뷰의 이름 또는 ID입니다. 테이블 및 뷰 이름은 식별자 규칙을 따라야 합니다.  

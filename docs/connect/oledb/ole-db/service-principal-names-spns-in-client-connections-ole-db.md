@@ -36,7 +36,7 @@ ms.locfileid: "68015182"
 ## <a name="data-source-initialization-properties"></a>데이터 원본 초기화 속성  
  **DBPROPSET_SQLSERVERDBINIT** 속성 집합의 다음 속성을 사용 하 여 응용 프로그램에서 spn을 지정할 수 있습니다.  
   
-|속성|형식|사용법|  
+|속성|형식|사용|  
 |----------|----------|-----------|  
 |SSPROP_INIT_SERVERSPN|VT_BSTR, 읽기/쓰기|서버의 SPN을 지정합니다. 기본값은 빈 문자열입니다 .이 문자열을 사용 하면 OLE DB 드라이버가 SQL Server 공급자가 생성 한 기본 SPN을 사용 합니다.|  
 |SSPROP_INIT_FAILOVERPARTNERSPN|VT_BSTR, 읽기/쓰기|장애 조치(Failover) 파트너의 SPN을 지정합니다. 기본값은 빈 문자열입니다 .이 문자열을 사용 하면 OLE DB 드라이버가 SQL Server 공급자가 생성 한 기본 SPN을 사용 합니다.|  
@@ -44,7 +44,7 @@ ms.locfileid: "68015182"
 ## <a name="data-source-properties"></a>데이터 원본 속성  
  **DBPROPSET_SQLSERVERDATASOURCEINFO** 속성 집합의 다음 속성을 사용 하 여 응용 프로그램에서 인증 방법을 검색할 수 있습니다.  
   
-|속성|형식|사용법|  
+|속성|형식|사용|  
 |----------|----------|-----------|  
 |SSPROP_INTEGRATEDAUTHENTICATIONMETHOD|VT_BSTR, 읽기 전용|연결에 사용된 인증 방법을 반환합니다. 응용 프로그램에 반환 되는 값은 Windows에서 SQL Server의 OLE DB 드라이버로 반환 하는 값입니다. 다음은 가능한 값입니다. <br />NTLM 인증을 사용하여 연결을 열 때 반환되는 "NTLM"<br />Kerberos 인증을 사용하여 연결을 열 때 반환되는 "Kerberos"<br /><br /> 연결이 열려 있지만 인증 방법을 확인할 수 없는 경우에는 VT_EMPTY가 반환됩니다.<br /><br /> 이 속성은 데이터 원본이 초기화된 경우에만 읽을 수 있습니다. 데이터 원본이 초기화되기 전에 이 속성을 읽으려고 하면 IDBProperties::GetProperies에서 DB_S_ERRORSOCCURRED 또는 DB_E_ERRORSOCCURRED가 반환되고 이 속성의 DBPROPSET_PROPERTIESINERROR에 DBPROPSTATUS_NOTSUPPORTED가 설정됩니다. 이 동작은 OLE DB 핵심 사양을 따르는 것입니다.|  
 |SSPROP_MUTUALLYAUTHENICATED|VT_BOOL, 읽기 전용|연결의 서버가 상호 인증되었으면 VARIANT_TRUE가 반환되고, 그렇지 않으면 VARIANT_FALSE가 반환됩니다.<br /><br /> 이 속성은 데이터 원본이 초기화된 경우에만 읽을 수 있습니다. 데이터 원본이 초기화되기 전에 이 속성을 읽으려고 하면 IDBProperties::GetProperies에서 DB_S_ERRORSOCCURRED 또는 DB_E_ERRORSOCCURRED가 반환되고 이 속성의 DBPROPSET_PROPERTIESINERROR에 DBPROPSTATUS_NOTSUPPORTED가 설정됩니다. 이 동작은 OLE DB 핵심 사양을 따르는 것입니다.<br /><br /> Windows 인증을 사용하지 않은 연결에 대해 이 특성을 쿼리하면 VARIANT_FALSE가 반환됩니다.|  

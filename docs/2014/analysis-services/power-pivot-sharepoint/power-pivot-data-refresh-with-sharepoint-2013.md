@@ -188,7 +188,7 @@ ms.locfileid: "66071232"
 >  PowerPivot 시스템 서비스는 이제 PowerPivot 모델을 로드하거나 저장하지 않기 때문에 애플리케이션 서버에 모델을 캐시하는 대부분의 설정이 SharePoint 2013 팜에 적용되지 않습니다.  
   
 ## <a name="data-refresh-log-data"></a>데이터 새로 고침 로그 데이터  
- **사용 현황 데이터:** PowerPivot 관리 대시보드에서 데이터 새로 고침 사용 현황 데이터를 볼 수 있습니다. 사용 현황 데이터를 보려면  
+ **사용 현황 데이터:** PowerPivot 관리 대시보드에서 데이터 새로 고침 사용 현황 데이터를 볼 수 있습니다. 사용량 현황 데이터를 보려면  
   
 1.  SharePoint 중앙 관리의 **일반 애플리케이션 설정** 그룹에서 **PowerPivot 관리 대시보드** 를 클릭합니다.  
   
@@ -227,7 +227,7 @@ ms.locfileid: "66071232"
   
  ![excel services authentication settings](../media/as-authentication-settings-4-ecs-in-excel2013.gif "excel services authentication settings")  
   
- 데이터 새로 고침 인증 및 자격 증명 사용에 대한 자세한 내용은 [SharePoint 2013에서 PowerPivot 데이터 새로 고침](https://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx)을 참조하십시오.  
+ 데이터 새로 고침 인증 및 자격 증명 사용에 대한 자세한 내용은 [SharePoint 2013에서 PowerPivot 데이터 새로 고침](https://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx)을 참조하세요.  
   
 ##  <a name="bkmk_moreinformation"></a> 자세한 정보  
  [PowerPivot 데이터 새로고침 문제해결](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  

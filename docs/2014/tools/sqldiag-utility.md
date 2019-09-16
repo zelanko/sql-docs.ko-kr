@@ -82,7 +82,7 @@ ms.locfileid: "63035422"
   
 ## <a name="arguments"></a>인수  
  **/?**  
- 사용법 정보를 표시합니다.  
+ 사용 정보를 표시합니다.  
   
  **/I** _configuration_file_  
  **SQLdiag** 에서 사용할 구성 파일을 설정합니다. 기본적으로 **/I** 는 SQLDiag.Xml로 설정되어 있습니다.  

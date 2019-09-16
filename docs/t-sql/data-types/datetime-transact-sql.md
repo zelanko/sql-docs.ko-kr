@@ -42,7 +42,7 @@ ms.locfileid: "68113720"
 |속성|값|  
 |---|---|
 |구문|**datetime**|  
-|사용법|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1(Column1 **datetime**)|  
+|사용|DECLARE \@MyDatetime **datetime**<br /><br /> CREATE TABLE Table1(Column1 **datetime**)|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|해당 사항 없음|  
 |날짜 범위|01.01.53부터 31.12.99까지|  
 |시간 범위|00:00:00부터 23:59:59.997까지|  

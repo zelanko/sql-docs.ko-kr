@@ -367,7 +367,7 @@ COMMIT ;
   
     ```  
   
--   다음 예제에서는 BETWEEN 및 NOT BETWEEN 연산자를 사용합니다. 이는 BETWEEN 및 NOT BETWEEN 연산자를 동등한 AND 및 OR 식으로 바꾼 후 결과 함수가 여기에 설명된 규칙을 준수하기 때문에 사용할 수 있습니다.  
+-   다음 예제에서는 BETWEEN 및 NOT BETWEEN 연산자를 사용합니다. BETWEEN과 NOT BETWEEN을 동등한 AND와 OR 식으로 대체한 후 결과 함수가 여기에 설명된 규칙을 준수하기 때문에 이렇게 사용하는 것은 올바릅니다.  
   
     ```sql  
     CREATE FUNCTION dbo.fn_stretchpredicate_example3(@column1 int, @column2 int)  

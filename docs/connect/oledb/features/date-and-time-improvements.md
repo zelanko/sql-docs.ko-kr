@@ -28,7 +28,7 @@ ms.locfileid: "67989117"
   
  이 기능을 보여 주는 예제 애플리케이션에 대한 자세한 내용은 [SQL Server 데이터 프로그래밍 예제](https://msftdpprodsamples.codeplex.com/)를 참조하십시오.  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용  
  다음 섹션에서는 새 date 및 time 형식을 사용하는 다양한 방법에 대해 설명합니다.  
   
 ### <a name="use-date-as-a-distinct-data-type"></a>고유 데이터 형식으로 Date 사용  

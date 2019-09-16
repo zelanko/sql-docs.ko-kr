@@ -44,7 +44,7 @@ ms.locfileid: "68893311"
   
 -   [Microsoft Kerberos](https://go.microsoft.com/fwlink/?LinkID=100758)  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용  
  다음 표에서는 클라이언트 애플리케이션이 보안 인증을 사용할 수 있는 가장 일반적인 시나리오에 대해 설명합니다.  
   
 |시나리오|Description|  

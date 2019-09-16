@@ -215,7 +215,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
  시퀀스 클러스터링 모델에 대한 예측 쿼리에서는 다른 클러스터링 모델에서 사용되는 예측 함수를 상당수 사용할 수 있습니다. 또한 특수한 예측 함수인 [PredictSequence&#40;DMX&#41;](/sql/dmx/predictsequence-dmx)를 사용하여 권장 구성을 생성하거나 다음 상태를 예측할 수 있습니다.  
   
 ###  <a name="bkmk_Query4"></a> 예제 쿼리 4: 다음 상태 예측  
-  [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 함수를 사용하여 특정 값에 대해 다음으로 가능성이 높은 상태를 예측할 수 있습니다. 여러 개의 다음 상태를 예측할 수도 있습니다. 예를 들어 고객이 구입할 가능성이 가장 높은 세 가지 제품의 목록을 반환하여 권장 제품 목록을 표시할 수 있습니다.  
+ [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) 함수를 사용하여 특정 값에 대해 다음으로 가능성이 높은 상태를 예측할 수 있습니다. 여러 개의 다음 상태를 예측할 수도 있습니다. 예를 들어 고객이 구입할 가능성이 가장 높은 세 가지 제품의 목록을 반환하여 권장 제품 목록을 표시할 수 있습니다.  
   
  다음 예제 쿼리는 상위 5개의 예측과 해당 확률을 반환하는 단일 예측 쿼리입니다. 해당 모델에는 중첩 테이블이 포함되어 있으므로 예측을 만들 때는 중첩 테이블 `[v Assoc Seq Line Items]`를 열 참조로 사용해야 합니다. 또한 입력 값을 지정할 때는 중첩된 SELECT 문에 표시된 것과 같이 사례 테이블 및 중첩 테이블 열을 모두 조인해야 합니다.  
   
@@ -253,7 +253,7 @@ AS t
   
 |||  
 |-|-|  
-|예측 함수|사용법|  
+|예측 함수|사용|  
 |[Cluster&#40;DMX&#41;](/sql/dmx/cluster-dmx)|입력 사례가 포함되었을 가능성이 가장 높은 클러스터를 반환합니다.|  
 |[ClusterDistance&#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|입력 사례와 지정된 클러스터 사이의 거리를 반환합니다. 클러스터가 지정되지 않은 경우에는 입력 사례와 가장 가능성 있는 클러스터 사이의 거리를 반환합니다.<br /><br /> 이 함수는 EM과 K-Means를 비롯한 모든 종류의 클러스터링 모델과 함께 사용할 수 있지만 알고리즘에 따라 결과가 달라집니다.|  
 |[ClusterProbability&#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|입력 사례가 지정한 클러스터에 속할 확률을 반환합니다.|  

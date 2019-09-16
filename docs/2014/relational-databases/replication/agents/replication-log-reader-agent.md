@@ -66,7 +66,7 @@ ms.locfileid: "63127012"
   
 ## <a name="arguments"></a>인수  
  **-?**  
- 사용법 정보를 표시합니다.  
+ 사용 정보를 표시합니다.  
   
  **-Publisher** _server_name_[ **\\** _instance_name_]  
  게시자의 이름입니다. 해당 서버에 있는 기본 *server_name* 인스턴스에 대해 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 을 지정합니다. 해당 서버에 있는 명명된 _server_name_ **\\** _instance_name_ instance_name [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 인스턴스에 대해 server_name을 지정하고,  

@@ -35,7 +35,7 @@ ms.locfileid: "67919227"
   
  **DataMember** 속성으로 지정 된 개체를 결정 합니다 **DataSource** 속성으로 표현 되는 **레코드 집합** 개체입니다. 합니다 **레코드 집합** 이 속성을 설정 하기 전에 개체를 닫아야 합니다. 경우 오류가 생성 됩니다는 **DataMember** 전에 속성이 설정 되어 있지는 **DataSource** 속성을 또는 경우에는 **DataMember** 이름에 지정 된 개체에서 인식 되지 않습니다는 **DataSource** 속성입니다.  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용  
   
 ```  
 Dim rs as New ADODB.Recordset  

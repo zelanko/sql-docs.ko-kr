@@ -278,7 +278,7 @@ SQL Server 설치 프로그램을 실행 하 여 R 및 Python 기능이 있는 �
 
 ## <a name="sqlbindrexe-command-syntax"></a>SqlBindR .exe 명령 구문
 
-### <a name="usage"></a>사용법
+### <a name="usage"></a>사용
 
 `sqlbindr [/list] [/bind <SQL_instance_ID>] [/unbind <SQL_instance_ID>]`
 

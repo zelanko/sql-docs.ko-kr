@@ -42,7 +42,7 @@ ms.locfileid: "68000556"
 |||  
 |-|-|  
 |구문|**smalldatetime**|  
-|사용법|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1(Column1 **smalldatetime**)|  
+|사용|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1(Column1 **smalldatetime**)|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|해당 사항 없음|  
 |날짜 범위|1900-01-01부터 2079-06-06까지<br /><br /> 1900년 1월 1일부터 2079년 6월 6일까지|  
 |시간 범위|00:00:00부터 23:59:59까지<br /><br /> 2007-05-09 23:59:59 다음 시간은 다음과 같음<br /><br /> 2007-05-10 00:00:00|  

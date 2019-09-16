@@ -210,7 +210,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|예측 함수|사용법|  
+|예측 함수|사용|  
 |[IsDescendant & #40; DMX & #41;](/sql/dmx/isdescendant-dmx)|한 노드가 신경망 그래프에서 다른 노드의 자식인지 여부를 확인합니다.|  
 |[PredictAdjustedProbability & #40; DMX & #41;](/sql/dmx/predictadjustedprobability-dmx)|가중치 확률을 반환합니다.|  
 |[PredictHistogram & #40; DMX & #41;](/sql/dmx/predicthistogram-dmx)|현재 예측된 값과 관련 된 값의 테이블을 반환 합니다.|  

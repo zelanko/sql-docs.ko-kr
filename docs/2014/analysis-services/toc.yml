@@ -245,12 +245,12 @@
       href: power-pivot-sharepoint/configure-power-pivot-health-rules.md
     - name: 상태 규칙 참조
       href: power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md
-    - name: PowerPivot 관리 대시보드 및 사용 데이터
+    - name: PowerPivot 관리 대시보드 및 사용량 현황 데이터
       href: power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md
     - name: PowerPivot 사용 데이터 컬렉션
       href: power-pivot-sharepoint/power-pivot-usage-data-collection.md
       items:
-        - name: 사용 현황 데이터 수집 구성(SharePoint용 PowerPivot)
+        - name: 사용량 현황 데이터 수집 구성(SharePoint용 PowerPivot)
           href: power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md
     - name: PowerPivot 갤러리 만들기 및 사용자 지정
       href: power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md

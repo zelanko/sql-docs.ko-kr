@@ -1,5 +1,5 @@
 ---
-title: 사용 현황 데이터 수집 및 충돌 보고 사용 또는 사용 안 함
+title: 사용량 현황 데이터 수집 및 충돌 보고 사용 또는 사용 안 함
 titleSuffix: Azure Data Studio
 description: 이 문서에서는 사용량 및 충돌 보고 데이터를 수집하여 Microsoft로 보낼지 여부를 제어하는 방법을 설명합니다.
 ms.prod: sql
@@ -23,7 +23,7 @@ ms.locfileid: "67958943"
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서는 사용 현황 데이터를 수집한 후 Microsoft로 보내 제품 및 서비스를 개선합니다. 자세히 알아보려면 [개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=528096&clcid=0x409)을 읽어보세요.
 
-사용 현황 데이터를 Microsoft로 보내지 않으려는 경우 *telemetry.enableTelemetry* 설정을 *false*로 지정할 수 있습니다.
+사용량 현황 데이터를 Microsoft로 보내지 않으려는 경우 *telemetry.enableTelemetry* 설정을 *false*로 지정할 수 있습니다.
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 모든 원격 분석 이벤트를 대기하도록 하려면 **파일** > **기본 설정** > **설정**에서 다음 옵션을 추가합니다.
 

@@ -65,7 +65,7 @@ ms.locfileid: "68889328"
 ##  <a name="bkmk_Mdx"></a> MDX Compatibility를 설정하여 자리 표시자가 클라이언트 응용 프로그램에서 표현되는 방법 결정  
  계층 수준에서 `HideMemberIf`를 설정한 후 클라이언트 애플리케이션에서 전송된 연결 문자열에 `MDX Compatibility` 속성도 설정해야 합니다. `MDX Compatibility` 설정은 `HideMemberIf` 가 사용되는지 여부를 결정합니다.  
   
-|MDX 호환성 설정|Description|사용법|  
+|MDX 호환성 설정|Description|사용|  
 |-------------------------------|-----------------|-----------|  
 |**1**|자리 표시자 값을 표시합니다.|이 값은 Excel, SSDT 및 SSMS에서 사용되는 기본값입니다. 비정형 계층에서 빈 수준을 드릴다운할 때 서버에서 자리 표시자 값을 반환하도록 지시합니다. 자리 표시자 값을 클릭하면 자식(리프) 노드로 계속 드릴다운할 수 있습니다.<br /><br /> Excel은 Analysis Services에 연결하는 데 사용되는 연결 문자열을 소유하고 각 새 연결에 대해 `MDX Compatibility`을 항상 1로 설정합니다. 이 동작은 이전 버전과의 호환성을 유지됩니다.|  
 |**2**|자리 표시자 값(부모 수준의 null 값 또는 중복)을 숨기지만 관련 값을 가진 다른 수준 및 노드는 표시합니다.|`MDX Compatibility`=2는 일반적으로 비정형 계층의 개념으로 기본 설정으로 표시됩니다. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 보고서 및 일부 타사 클라이언트 응용 프로그램에서는 이 설정을 유지할 수 있습니다.|  

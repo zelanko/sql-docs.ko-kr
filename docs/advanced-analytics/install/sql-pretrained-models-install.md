@@ -24,7 +24,7 @@ ms.locfileid: "68715165"
 
 사전 학습 된 모델을 사용 하려면 다음 표에 나열 된 함수를 호출 합니다.
 
-| R 함수 (MicrosoftML) | Python 함수 (microsoftml) | 사용법 |
+| R 함수 (MicrosoftML) | Python 함수 (microsoftml) | 사용 |
 |--------------------------|-------------------------------|-------|
 | [getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | [get_sentiment](https://docs.microsoft.com//machine-learning-server/python-reference/microsoftml/get-sentiment) | 텍스트 입력에 대해 긍정 네거티브 감정 점수를 생성 합니다. |
 | [featurizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizeimage) | [featurize_image](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/featurize-image) | 이미지 파일 입력에서 텍스트 정보를 추출 합니다. |

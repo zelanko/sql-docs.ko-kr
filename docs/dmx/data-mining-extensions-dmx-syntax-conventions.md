@@ -20,7 +20,7 @@ ms.locfileid: "68070876"
 
   Data Mining Extensions (DMX) 참조 설명서 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] DMX 언어를 설명 하기 위해 다음 규칙을 사용 합니다.  
   
-|규칙|사용법|  
+|규칙|사용|  
 |----------------|-----------|  
 |**굵게**|표시된 대로 입력해야 하는 DMX 키워드 및 텍스트|  
 |*기울임꼴*|사용자가 제공하는 DMX 구문의 인수|  

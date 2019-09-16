@@ -39,7 +39,7 @@ ms.locfileid: "68086770"
 |속성|값|  
 |--------------|-----------|  
 |구문|**datetime2** [ (*초 소수 부분 자릿수*) ]|  
-|사용법|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
+|사용|DECLARE \@MyDatetime2 **datetime2(7)**<br /><br /> CREATE TABLE Table1 ( Column1 **datetime2(7)** )|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|YYYY-MM-DD hh:mm:ss[.소수 자릿수 초]<br /><br /> 자세한 내용은 뒷부분에 나오는 "하위 클라이언트에 대한 이전 버전과의 호환성" 섹션을 참조하세요.|  
 |날짜 범위|0001-01-01부터 31.12.99까지<br /><br /> CE 1년 1월 1일부터 CE 9999년 12월 31일까지|  
 |시간 범위|00:00:00부터 23:59:59.9999999까지|  

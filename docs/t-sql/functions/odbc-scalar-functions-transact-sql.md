@@ -64,7 +64,7 @@ ms.locfileid: "67914746"
 
   [ 문에서 ](https://go.microsoft.com/fwlink/?LinkID=88579)ODBC 스칼라 함수[!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용할 수 있습니다. 이러한 문은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 해석되고, 저장 프로시저 및 사용자 정의 함수에 사용될 수 있습니다. 여기에는 문자열, 숫자, 시간, 날짜, 간격, 시스템 함수가 포함됩니다.  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용  
  `SELECT {fn <function_name> [ (<argument>,....n) ] }`  
   
 ## <a name="functions"></a>함수  

@@ -8279,7 +8279,7 @@
               href: azure-data-studio/settings.md
             - name: Windows 인증(Kerberos)
               href: azure-data-studio/enable-kerberos.md
-            - name: 사용 데이터 수집
+            - name: 사용량 현황 데이터 수집
               href: azure-data-studio/usage-data-collection.md
         - name: 확장 프로그램
           href: azure-data-studio/extensions.md
@@ -10050,7 +10050,7 @@
               href: ssms/support-policy.md
             - name: SSMS의 사용자 지원
               href: ssms/user-assistance-in-sql-server-management-studio.md
-            - name: 익명 사용 현황 데이터
+            - name: 익명 사용량 현황 데이터
               href: ssms/sql-server-management-studio-telemetry-ssms.md
             - name: 피드백 >>
               href: 'https://aka.ms/sqlfeedback'

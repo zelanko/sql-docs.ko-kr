@@ -65,7 +65,7 @@ ms.locfileid: "66071347"
 ||2010 도구에는 페이지 **등록할 SQL Server Analysis Services (PowerPivot) 로컬 서버의** 의 로컬 인스턴스를 구성 하려면 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]합니다. 이 페이지는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]로컬 인스턴스가 없기 때문에 2013 도구에 포함되지 않습니다.<br /><br /> ![이전 구성 도구에서 서비스 계정과](../media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "이전 구성 도구의 서비스 계정으로")|  
 ||**PowerPivot 서비스 응용 프로그램 만들기** 페이지에는 **데이터 새로 고침을 사용하려면 통합 문서를 업그레이드하세요.** 에 대한 다른 옵션이 있습니다. 2013 도구에는 이 옵션이 제공되지 않습니다.<br /><br /> ![이전 구성 도구에서 통합 문서 업그레이드](../media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "이전 구성 도구에서 통합 문서 업그레이드")|  
 |2013 도구에는 새로운 **PowerPivot 서버 구성**페이지가 있습니다. SharePoint 팜 외부에서 실행되는 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 의 새로운 아키텍처를 지원하는 페이지입니다. 기본적으로 주 페이지의 **Excel Services용 PowerPivot 서버**입력란에 입력한 서버 이름이 **PowerPivot 서버 구성**에도 표시됩니다.<br /><br /> ![PowerPivot 서버 새 구성 도구 등록](../media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "등록 PowerPivot 서버 새 구성 도구")||  
-|2013 도구에는 새로운 **PowerPivot 추가 기능을 Excel Services 사용 추적기로 등록**페이지가 있습니다. SharePoint 2010 Excel Services는 PowerPivot에 대한 사용 현황 데이터를 추적하지 않습니다.||  
+|2013 도구에는 새로운 **PowerPivot 추가 기능을 Excel Services 사용 추적기로 등록**페이지가 있습니다. SharePoint 2010 Excel Services는 PowerPivot에 대한 사용량 현황 데이터를 추적하지 않습니다.||  
 ||2010 도구에는 SharePoint 2010의 Excel Services가 PowerPivot 모델을 로드할 수 있도록 MSOLAP을 등록하는 **MSOLAP.5를 신뢰할 수 있는 공급자로 추가** 페이지가 있습니다. 이 페이지는 2013 도구에 포함되지 않습니다. SharePoint 2013 Excel Services에서는 모델을 로드하는 데 MSOLAP 공급자를 사용하지 않습니다.|  
   
 ##  <a name="bkmk_overview"></a> PowerPivot 구성 도구를 사용 하 여 개요  

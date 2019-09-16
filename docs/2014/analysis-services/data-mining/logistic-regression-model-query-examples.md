@@ -95,7 +95,7 @@ FROM [TM_Logistic Regression].CONTENT
 |나이|45.43491192|17484|1|126.9544114|3|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
-|Bike Buyer|1.|8615|0.492736216|0|4|  
+|Bike Buyer|1\.|8615|0.492736216|0|4|  
 |Commute Distance|Missing|0|0|0|1|  
 |Commute Distance|5-10 Miles|3033|0.173472889|0|4|  
   
@@ -193,7 +193,7 @@ NATURAL PREDICTION JOIN
   
 |||  
 |-|-|  
-|예측 함수|사용법|  
+|예측 함수|사용|  
 |[IsDescendant & #40; DMX & #41;](/sql/dmx/isdescendant-dmx)|한 노드가 모델에서 다른 노드의 자식인지 여부를 확인합니다.|  
 |[PredictAdjustedProbability & #40; DMX & #41;](/sql/dmx/predictadjustedprobability-dmx)|지정한 상태에 대한 조정된 확률을 반환합니다.|  
 |[PredictHistogram & #40; DMX & #41;](/sql/dmx/predicthistogram-dmx)|지정한 열에 대한 예측 값을 반환합니다.|  

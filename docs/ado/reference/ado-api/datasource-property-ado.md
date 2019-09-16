@@ -32,7 +32,7 @@ ms.locfileid: "67933243"
   
  참조 된 개체를 구현 해야 합니다 **IDataSource** 인터페이스를 포함 해야 합니다는 **IRowset** 인터페이스입니다.  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용  
   
 ```  
 Dim rs as New ADODB.Recordset  

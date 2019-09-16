@@ -42,7 +42,7 @@ ms.locfileid: "68000459"
 |속성|값|  
 |--------------|-----------|  
 |구문|**time** [ (*소수 자릿수 초*) ]|  
-|사용법|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1( Column1 **time(7)** )|  
+|사용|DECLARE \@MyTime **time(7)**<br /><br /> CREATE TABLE Table1( Column1 **time(7)** )|  
 |*소수 자릿수 초*|초의 소수 부분 자릿수를 지정합니다.<br /><br /> 0에서 7 사이의 정수를 지정할 수 있습니다. Informatica의 경우 0에서 3 사이의 정수를 지정할 수 있습니다.<br /><br /> 기본 소수 자릿수는 7(100ns)입니다.|  
 |기본 문자열 리터럴 형식<br /><br /> (하위 클라이언트에 대해 사용됨)|Informatica의 경우 hh:mm:ss[.nnnnnnn])<br /><br /> 자세한 내용은 [하위 클라이언트에 대한 이전 버전과의 호환성](#BackwardCompatibilityforDownlevelClients) 섹션을 참조하세요.|  
 |범위|00:00:00.0000000부터 23:59:59.9999999까지(Informatica의 경우 00:00:00.000부터 23:59:59.999까지)|  

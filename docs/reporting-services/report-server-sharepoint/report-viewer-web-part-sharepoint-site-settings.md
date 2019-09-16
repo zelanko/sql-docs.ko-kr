@@ -37,5 +37,5 @@ ms.locfileid: "65580584"
 
 |설정|주석|  
 |-------------|--------------|  
-|사용 데이터 수집|제품 개선을 돕기 위해 오류 및 사용 정보를 Microsoft로 전송할 수 있습니다. Microsoft 오류 보고 데이터 수집 정책의 경우 [Microsoft SQL Server 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.|  
+|사용량 현황 데이터 수집|제품 개선을 돕기 위해 오류 및 사용 정보를 Microsoft로 전송할 수 있습니다. Microsoft 오류 보고 데이터 수집 정책의 경우 [Microsoft SQL Server 개인정보처리방침](https://go.microsoft.com/fwlink/?LinkID=868444)을 참조하세요.|  
 |보고서에 내게 필요한 옵션 메타데이터 사용|렌더링된 보고서에 대한 [`AccessibleTablix` 디바이스 정보](../html-device-information-settings.md)를 설정합니다.| 

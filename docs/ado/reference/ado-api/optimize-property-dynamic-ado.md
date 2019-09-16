@@ -33,7 +33,7 @@ ms.locfileid: "67931857"
   
  **최적화** 에 추가 하는 동적 속성을 [필드](../../../ado/reference/ado-api/field-object.md) 개체 [속성](../../../ado/reference/ado-api/properties-collection-ado.md) 컬렉션 때 합니다 [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) 속성이**adUseClient**합니다.  
   
-## <a name="usage"></a>사용법  
+## <a name="usage"></a>사용  
   
 ```  
 Dim rs As New Recordset  

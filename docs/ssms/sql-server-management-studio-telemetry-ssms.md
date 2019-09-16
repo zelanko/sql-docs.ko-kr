@@ -34,7 +34,7 @@ SSMS를 통해 데이터베이스와 상호 작용할 경우 **출력** 창에 �
 
 ## <a name="enable-or-disable-usage-and-diagnostic-data-collection-in-ssms"></a>SSMS에서 사용 현황 및 진단 데이터 수집 사용 또는 사용 안 함
 
-SSMS 사용 현황 데이터 수집에 참여하거나 참여하지 않으려면 다음을 수행합니다.
+SSMS 사용량 현황 데이터 수집에 참여하거나 참여하지 않으려면 다음을 수행합니다.
 
 - SQL Server Management Studio 17:
 

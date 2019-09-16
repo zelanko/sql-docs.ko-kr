@@ -2,7 +2,7 @@
 title: FILESTREAM 지원 | Microsoft Docs
 description: SQL Server용 OLE DB 드라이버에서 FILESTREAM 지원
 ms.custom: ''
-ms.date: 06/12/2018
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server [FILESTREAM support]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c4f8b047a18d2bfc3aea33c72a29efcde1869c3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a548cfda44d40ba7ac37aaf4465c589c7256ffe7
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67989085"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978055"
 ---
 # <a name="filestream-support"></a>FILESTREAM 지원
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

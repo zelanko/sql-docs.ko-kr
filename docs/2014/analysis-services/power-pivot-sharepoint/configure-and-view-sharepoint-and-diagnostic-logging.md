@@ -118,7 +118,7 @@ ms.locfileid: "66071848"
   
 |처리|영역|범주|Level|메시지|설명|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|PowerPivot 서비스|사용|자세히|로그는 물론이고 현재 요청 통계도 없습니다.|미리 정해진 간격에 따라 서비스에서는 사용 데이터 컬렉션 시스템에 쿼리 응답 통계를 사용 이벤트로 보고합니다. 이 메시지는 보고할 쿼리 통계가 없다는 것을 나타냅니다.|  
+|w3wp.exe|PowerPivot 서비스|사용|자세히|로그는 물론이고 현재 요청 통계도 없습니다.|미리 정해진 간격에 따라 서비스에서는 사용량 현황 데이터 컬렉션 시스템에 쿼리 응답 통계를 사용 이벤트로 보고합니다. 이 메시지는 보고할 쿼리 통계가 없다는 것을 나타냅니다.|  
 |w3wp.exe|PowerPivot 서비스|웹 프런트 엔드|자세히|데이터 원본에 대 한 응용 프로그램 서버 찾기 시작 =\<*경로*>|연결 요청이 수신되면 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스에서는 요청을 처리하는 데 사용할 수 있는 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] 를 식별합니다. 팜에 서버가 하나만 있는 경우 로컬 서버에서 모든 경우의 요청을 수락합니다.|  
 |w3wp.exe|PowerPivot 서비스|웹 프런트 엔드|자세히|애플리케이션 서버를 찾았습니다.|요청이 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 서비스 애플리케이션에 할당되었습니다.|  
 |w3wp.exe|PowerPivot 서비스|웹 프런트 엔드|자세히|에 대 한 요청을 \< *PowerPivotdata 원본*>에 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)].|요청이 [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]에 전달되었습니다.|  
