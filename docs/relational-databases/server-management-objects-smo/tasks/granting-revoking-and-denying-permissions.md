@@ -1,5 +1,5 @@
 ---
-title: 권한을 부여, 취소 및 사용 권한 거부 | Microsoft Docs
+title: 권한 부여, 취소 및 거부 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -13,15 +13,15 @@ helpviewer_keywords:
 - permissions [SMO]
 - revoking permissions [SMO]
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8db1acd2f2ef408f1e9bed70949444bda5a1ef3d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03b8a6f9750973cb86aaa1af3915ccfc0f172370
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111477"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911248"
 ---
 # <a name="granting-revoking-and-denying-permissions"></a>권한 부여, 취소 및 거부
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "68111477"
  <xref:Microsoft.SqlServer.Management.Smo.DatabasePermissionSet> 개체 및 <xref:Microsoft.SqlServer.Management.Smo.ObjectPermissionSet> 개체를 사용하여 비슷한 방법으로 데이터베이스 권한 및 데이터베이스 개체 권한을 할당할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 제공된 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="granting-server-permissions-in-visual-basic"></a>Visual Basic에서 서버 권한 부여  
  이 코드 예제는 지정된 로그인에 Create Endpoint 및 Alter Any Endpoint 권한을 부여한 다음, 권한을 열거하고 표시합니다. 권한 중 하나를 취소하고 나서 권한을 다시 열거합니다. 이 예에서는 지정된 로그인에 지정된 시작 권한이 있다고 가정합니다.  

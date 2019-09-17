@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a0da84d60a9513b0ca81a0256218928372882e72
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304825"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745449"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>클러스터 리소스 및 서비스에 대 한 배포 설정 구성
 
@@ -126,7 +126,7 @@ Azdata 관리 도구에 기본 제공 되는 미리 정의 된 구성 프로필 
 }
 ```
 
-여러 리소스와 연결 된 서비스에 동일한 구성을 적용 하려는 경우에는 **서비스** 섹션에서 해당 **설정을** 업데이트 합니다. 예를 들어 저장소 풀과 Spark 풀 모두에서 Spark에 대해 동일한 설정을 동일 하 게 설정 하려는 경우에는,이를 통해 " **json** 구성 파일의 **spark** 서비스" 섹션에서 **설정** 섹션을 업데이트 합니다.
+여러 리소스와 연결 된 서비스에 동일한 구성을 적용 하려는 경우에는 **서비스** 섹션에서 해당 **설정을** 업데이트 합니다. 예를 들어, 저장소 풀과 Spark 풀 모두에서 Spark에 대해 동일한 설정을 설정 하려는 경우 **에는 해당** **설정** 섹션을 업데이트 **합니다.**
 
 ```json
 "services": {

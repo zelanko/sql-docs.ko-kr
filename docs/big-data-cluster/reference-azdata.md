@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d737b8e8b353100d5585a625fe9a53232c78f75
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 66b5d00e8f920aca9435fca7f05037184f75f130
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155126"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70391945"
 ---
 # <a name="azdata"></a>azdata
 
@@ -57,9 +57,9 @@ azdata login -n ClusterName
 #### `--controller-username -u`
 계정 사용자입니다. 이 인수를 사용하지 않으려면 CONTROLLER_USERNAME 환경 변수를 설정하면 됩니다.
 #### `--controller-endpoint -e`
-클러스터 컨트롤러 엔드포인트 “https://host:port ”입니다. 이 인수를 사용하지 않으려면 해당 머신의 kube 구성을 사용할 수 있습니다. 구성이 기본 위치인 <user home>/.kube/config에 있는지 확인하거나, KUBECONFIG 환경 변수를 사용합니다.
+클러스터 컨트롤러 엔드포인트 “https://host:port”입니다. 이 인수를 사용하지 않으려면 해당 머신의 kube 구성을 사용할 수 있습니다. 구성이 기본 위치인 <user home>/.kube/config에 있는지 확인하거나, KUBECONFIG 환경 변수를 사용합니다.
 #### `--accept-eula -a`
-사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 이 제품의 사용 조건은 https://aka.ms/azdata-eula 에서 볼 수 있습니다.
+사용 조건에 동의하시겠습니까? [예/아니요]. 이 인수를 사용하지 않으려면 ACCEPT_EULA 환경 변수를 ‘yes’로 설정하면 됩니다. 
 ### <a name="global-arguments"></a>전역 인수
 #### `--debug`
 로깅의 자세한 정도를 늘려 모든 디버그 로그를 표시합니다.
@@ -89,7 +89,7 @@ azdata logout
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/])를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 

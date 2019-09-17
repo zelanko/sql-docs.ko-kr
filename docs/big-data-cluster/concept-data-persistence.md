@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bb6d87803c0a3839afd8dbd1333b52c3abcc4518
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155348"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878742"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes의 SQL Server 빅 데이터 클러스터를 사용한 데이터 지속성
 
@@ -28,7 +28,7 @@ SQL Server 빅 데이터 클러스터는 [스토리지 클래스](https://kubern
 
 ## <a name="configure-big-data-cluster-storage-settings"></a>빅 데이터 클러스터 스토리지 설정 구성
 
-다른 사용자 지정과 마찬가지로, 배포 시 각 풀과 제어 평면에 맞게 클러스터 구성 파일의 스토리지 설정을 지정할 수 있습니다. 풀 사양에 스토리지 구성 설정이 없으면 제어 평면 스토리지 설정이 사용됩니다. 다음은 사양에 포함할 수 있는 스토리지 구성 섹션의 샘플입니다.
+다른 사용자 지정과 마찬가지로, **bdc. json** 구성 파일 및 **컨트롤 json** 파일의 컨트롤 서비스에서 각 풀에 대 한 배포 시 클러스터 구성 파일에서 저장소 설정을 지정할 수 있습니다. 풀 사양에 저장소 구성 설정이 없는 경우 SQL Server 마스터 (**마스터** 리소스), HDFS (**저장소-0** 리소스) 또는 데이터를 포함 하 여 **다른 모든 구성 요소에 대 한**제어 저장소 설정이 사용 됩니다. pool. 다음은 사양에 포함할 수 있는 스토리지 구성 섹션의 샘플입니다.
 
 ```json
     "storage": 
@@ -83,7 +83,7 @@ kubeadm에는 기본 제공 스토리지 클래스가 없습니다. 로컬 스�
 azdata bdc config init --source aks-dev-test --target custom
 ```
 
-이렇게 하면 파일을 수동으로 편집 하거나 **azdata bdc config** 명령을 사용 하 여 사용자 지정할 수 있는 두 개의 파일, 즉, 두 파일을 만듭니다. jsonpath 및 jsonpatch 라이브러리의 조합을 사용하여 구성 파일을 편집하는 방법을 제공할 수 있습니다.
+이렇게 하면 파일을 수동으로 편집 하거나 **azdata bdc config** 명령을 사용 하 여 사용자 지정할 **수 있는 두** 개의 파일, **즉, 두** 파일을 만듭니다. jsonpath 및 jsonpatch 라이브러리의 조합을 사용하여 구성 파일을 편집하는 방법을 제공할 수 있습니다.
 
 
 ### <a id="config-samples"></a> 스토리지 클래스 이름 및/또는 클레임 크기 구성

@@ -12,14 +12,14 @@ ms.assetid: 67208b7c-bd8d-48a1-9f70-a6488e0f5f9b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6bd85b72fc786d4aa807d73e57a69193b515067d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f69e72bda33f361f168c3964411c969adffaa0e
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62762803"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874544"
 ---
-# <a name="mssqlserver847"></a>MSSQLSERVER_847
+# <a name="mssqlserver_847"></a>MSSQLSERVER_847
     
 ## <a name="details"></a>설명  
   
@@ -33,7 +33,7 @@ ms.locfileid: "62762803"
 |메시지 텍스트|래치를 기다리는 동안 시간이 초과되었습니다. 클래스 '%ls', ID %p, 유형 %d, 태스크 0x%p : %d, 대기 시간 %d, 플래그 0x%I64x, 소유 태스크 0x%p. 계속 대기합니다.|  
   
 ## <a name="explanation"></a>설명  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 버퍼 래치 오류를 쓸 때 컴퓨터가 응답하지 않거나(중지), 시간이 초과되거나, 일반 작업의 다른 장애가 발생할 수 있습니다.  
+ 컴퓨터에서 응답을 중지 하거나, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 버퍼 래치 오류를 기록 하는 동시에 시간 제한이 발생 하거나, 일반 작업의 다른 중단이 발생 했을 수 있습니다.  
   
  메시지의 상태 필드에 값 0x04가 설정되어 있는 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 I/O 작업을 기다리고 있는 것입니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 오류 로그에 [MSSQLSERVER_833](mssqlserver-833-database-engine-error.md) 메시지가 표시될 수도 있습니다.  
   

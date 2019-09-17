@@ -19,19 +19,19 @@ ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: f151d62a03cebf931c58f37b1e126a7331cefae9
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: HT
+ms.openlocfilehash: 0c39d57e84e27f7449ebc8464691d2d8ad887848
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418872"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70911101"
 ---
 # <a name="sysresource_stats-azure-sql-database"></a>sys.resource_stats(Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
   Azure SQL Database의 CPU 사용량 및 스토리지 데이터를 반환합니다. 데이터는 5분 간격 이내로 수집 및 집계됩니다. 각 사용자 데이터베이스에 대해 리소스 소비가 변경 된 5 분 마다 하나의 행이 있습니다. 반환 되는 데이터에는 CPU 사용량, 저장소 크기 변경 및 데이터베이스 SKU 수정이 포함 됩니다. 변경 내용이 없는 유휴 데이터베이스는 5 분 간격으로 행을 가질 수 없습니다. 기록 데이터는 약 14일 동안 보존됩니다.  
   
- **Resource_stats** 뷰에는 데이터베이스가 연결 된 Azure SQL Database 서버의 버전에 따라 다른 정의가 있습니다. 이러한 차이점과 새 서버 버전으로 업그레이드할 경우 애플리케이션에 필요한 모든 수정 사항을 고려하세요.  
+ **Resource_stats** 뷰에는 데이터베이스가 연결 된 Azure SQL Database 서버의 버전에 따라 다른 정의가 있습니다. 이러한 차이점과 새 서버 버전으로 업그레이드할 경우 응용 프로그램에 필요한 모든 수정 사항을 고려하세요.  
   
  다음 표에는 v12 서버에서 사용할 수 있는 열이 설명되어 있습니다.  
   
@@ -47,7 +47,12 @@ ms.locfileid: "68418872"
 |avg_log_write_percent|**decimal(5,2)**|서비스 계층 한도의 비율로 계산된 평균 쓰기 리소스 활용률입니다.|  
 |max_worker_percent|**decimal(5,2)**|데이터베이스의 서비스 계층 한도에 따라 최대 동시 작업자 (요청)의 백분율입니다.<br /><br /> 현재 최대 개수는 동시 작업자 수의 15 초 샘플을 기반으로 5 분 간격으로 계산 됩니다.|  
 |max_session_percent|**decimal(5,2)**|데이터베이스의 서비스 계층 한도를 기준으로 하는 최대 동시 세션 (백분율)입니다.<br /><br /> 현재 최대는 동시 세션 수의 15 초 샘플을 기준으로 5 분 간격으로 계산 됩니다.|  
-|dtu_limit|**int**|이 간격 동안이 데이터베이스에 대 한 현재 최대 데이터베이스 DTU 설정입니다. |   
+|dtu_limit|**int**|이 간격 동안이 데이터베이스에 대 한 현재 최대 데이터베이스 DTU 설정입니다. |
+|xtp_storage_percent|**decimal (5, 2)**|메모리 내 OLTP에 대 한 저장소 사용률 (보고 간격의 끝에 있는 서비스 계층의 제한 백분율) 여기에는 메모리 내 OLTP 개체를 저장 하는 데 사용 되는 메모리 (메모리 최적화 테이블, 인덱스 및 테이블 변수)가 포함 됩니다. 또한 ALTER TABLE 작업을 처리 하는 데 사용 되는 메모리가 포함 됩니다.<br /><br /> 데이터베이스에서 메모리 내 OLTP를 사용 하지 않는 경우 0을 반환 합니다.|
+|avg_login_rate_percent|**decimal (5, 2)**|정보를 제공하기 위해서만 확인됩니다. 지원되지 않습니다. 향후 호환성은 보장되지 않습니다.|
+|avg_instance_cpu_percent|**decimal (5, 2)**|SQL DB 프로세스의 백분율로 나타낸 평균 데이터베이스 CPU 사용량입니다.|
+|avg_instance_memory_percent|**decimal (5, 2)**|SQL DB 프로세스의 백분율로 나타낸 평균 데이터베이스 메모리 사용량입니다.|
+|cpu_limit|**decimal (5, 2)**|이 간격 동안의이 데이터베이스에 대 한 vCores 수입니다. DTU 기반 모델을 사용 하는 데이터베이스의 경우이 열은 NULL입니다.|
 |allocated_storage_in_megabytes|**float**|데이터베이스 데이터를 저장 하는 데 사용할 수 있는 서식 있는 파일 공간의 크기 (MB)입니다. 형식이 지정 된 파일 공간을 할당 된 데이터 공간이 라고도 합니다.  참조 항목: [SQL DB의 파일 공간 관리](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
@@ -61,7 +66,7 @@ ms.locfileid: "68418872"
   
  데이터베이스가 탄력적 풀의 구성원이 면 백분율 값으로 표시 되는 리소스 통계가 탄력적 풀 구성에 설정 된 데이터베이스에 대 한 최대 한도의 백분율로 표시 됩니다.  
   
- 이 데이터에 대 한 보다 세부적인 보기를 보려면 사용자 데이터베이스에서 **sys. dm _db_resource_stats** 동적 관리 뷰를 사용 합니다. 이 뷰는 15초마다 데이터를 캡처하고 1시간 동안 기록 데이터를 유지합니다.  자세한 내용은 [sys. dm &#40;_db_l _source_stats Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)를 참조 하세요.  
+ 이 데이터에 대 한 보다 세부적인 보기를 보려면 사용자 데이터베이스에서 **sys. dm _db_resource_stats** 동적 관리 뷰를 사용 합니다. 이 뷰는 15초마다 데이터를 캡처하고 1시간 동안 기록 데이터를 유지합니다.  자세한 내용은 [sys. dm _db_l _source_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-resource-stats-azure-sql-database.md)를 참조 하세요.  
 
 ## <a name="examples"></a>예  
  다음 예에서는 지난 1주일 동안 평균적으로 컴퓨팅 활용률의 80% 이상을 사용한 모든 데이터베이스를 반환합니다.  

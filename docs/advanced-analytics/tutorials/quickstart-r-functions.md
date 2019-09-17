@@ -8,14 +8,14 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f81b4f755441a5129892ed321d74bb8c6427ee4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: c8c8f69391db2e1028a0da33dbaf77fd60eafd8f
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714840"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70909206"
 ---
-# <a name="quickstart-using-r-functions"></a>빠른 시작: R 함수 사용
+# <a name="quickstart-use-r-functions"></a>빠른 시작: R 함수 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 이전 빠른 시작을 완료 한 경우에는 기본 작업에 대해 잘 알고 있으며 통계 함수 등의 더 복잡 한 작업을 수행할 수 있습니다. T-sql에서 구현 하기에 복잡 한 고급 통계 함수는 단 한 줄의 코드를 사용 하 여 R에서 수행할 수 있습니다.

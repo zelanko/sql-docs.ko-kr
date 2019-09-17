@@ -10,12 +10,12 @@ ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e8b4442d8d7f6e8838d9c5bb56e4c545b6f931c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011086"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874727"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>검색에 사용된 단어 분리기를 이전 버전으로 되돌리기
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 에서는 한국어를 제외하고 전체 텍스트 검색에서 지원되는 모든 언어에 대해 단어 분리기 및 형태소 분석기의 버전을 설치하고 활성화합니다. 이 항목에서는 이러한 버전의 구성 요소에서 이전 버전으로 전환하거나 이전 버전에서 다시 새 버전으로 전환하는 방법에 대해 설명합니다.  
@@ -79,8 +79,8 @@ ms.locfileid: "66011086"
 |중립|중립|0000|  
 |노르웨이어(복말)|nor|1044|  
 |펀잡어|pan|1094|  
-|포르투갈어(브라질)|ptb|1046|  
 |포르투갈어|ptg|2070|  
+|포르투갈어(브라질) |ptb|1046|  
 |루마니아어|rom|1048|  
 |슬로바키아어|sky|1051|  
 |슬로베니아어|slv|1060|  
@@ -152,7 +152,7 @@ ms.locfileid: "66011086"
     > [!WARNING]  
     >  이 변경 사항은 현재 버전과 이전 버전의 NaturalLanguage6.dll을 사용하는 모든 언어에 적용됩니다.  
   
-5.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
+5.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
   
 6.  다음 단계에 따라 선택한 언어의 이전 단어 분리기 및 형태소 분석기 인터페이스에 대한 COM ClassID의 새 키를 추가합니다.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "66011086"
   
     4.  선택한 언어가 형태소 분리기를 사용하는 경우 키 값 데이터(기본값)를 표에 나오는 이전 형태소 분석기의 파일 이름으로 업데이트합니다.  
   
-7.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* 는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
+7.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* 는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
   
 8.  **WBreakerClass** 키 값을 현재 단어 분리기에 대한 표 값으로 업데이트합니다.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "66011086"
     > [!WARNING]  
     >  이 변경 사항은 현재 버전과 이전 버전의 NaturalLanguage6.dll을 사용하는 모든 언어에 적용됩니다.  
   
-3.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
+3.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
   
 4.  다음 키가 없으면 다음 단계에 따라 선택한 언어의 현재 단어 분리기 및 형태소 분석기 인터페이스에 대한 COM ClassID의 새 키를 추가합니다.  
   
@@ -193,7 +193,7 @@ ms.locfileid: "66011086"
   
     4.  선택한 언어가 형태소 분리기를 사용하는 경우 키 값 데이터(기본값)를 표에 나오는 현재 형태소 분석기의 파일 이름으로 업데이트합니다.  
   
-5.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* 는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
+5.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* 는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
   
 6.  **WBreakerClass** 키 값을 이전 단어 분리기에 대한 표 값으로 업데이트합니다.  
   
@@ -273,7 +273,7 @@ ms.locfileid: "66011086"
   
 1.  현재 버전의 구성 요소에 대한 파일을 Binn 폴더에서 제거하지 마세요.  
   
-2.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
+2.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
   
 3.  다음 단계에 따라 선택한 언어의 이전 단어 분리기 및 형태소 분석기 인터페이스에 대한 COM ClassID의 새 키를 추가합니다.  
   
@@ -285,7 +285,7 @@ ms.locfileid: "66011086"
   
     4.  선택한 언어가 형태소 분리기를 사용하는 경우 키 값 데이터(기본값)를 표에 나오는 이전 형태소 분석기의 파일 이름으로 업데이트합니다.  
   
-4.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* 는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
+4.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* 는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
   
 5.  **WBreakerClass** 키 값을 현재 단어 분리기에 대한 표 값으로 업데이트합니다.  
   
@@ -297,7 +297,7 @@ ms.locfileid: "66011086"
   
 1.  이전 버전의 구성 요소에 대한 파일을 Binn 폴더에서 제거하지 마세요.  
   
-2.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
+2.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\CLSID** 노드로 이동합니다.  
   
 3.  다음 키가 없으면 다음 단계에 따라 선택한 언어의 현재 단어 분리기 및 형태소 분석기 인터페이스에 대한 COM ClassID의 새 키를 추가합니다.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66011086"
   
     4.  선택한 언어가 형태소 분리기를 사용하는 경우 키 값 데이터(기본값)를 표에 나오는 현재 형태소 분석기의 파일 이름으로 업데이트합니다.  
   
-4.  레지스트리에서 다음 노드로 이동 합니다. **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* 는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
+4.  레지스트리에서 **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<InstanceRoot\>\MSSearch\Language\\<language_key>** . *<language_key>* 는 레지스트리에서 사용되는 언어에 대한 약어(예: 프랑스어 "fra", 스페인어 "esn")를 나타냅니다.  
   
 5.  **WBreakerClass** 키 값을 이전 단어 분리기에 대한 표 값으로 업데이트합니다.  
   

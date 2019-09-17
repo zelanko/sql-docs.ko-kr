@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobschedule (TRANSACT-SQL) | Microsoft Docs
+title: sp_add_jobschedule (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 07/28/2016
 ms.prod: sql
@@ -17,20 +17,23 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fb19fc3dc6b97e6381e9839c22a05ee71a93bfb8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078195"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810500"
 ---
-# <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule(Transact-SQL)
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
-  작업의 일정을 만듭니다.  
+  SQL 에이전트 작업에 대 한 일정을 만듭니다.  
   
  ![항목 링크 아이콘](../../database-engine/configure-windows/media/topic-link.gif "항목 링크 아이콘") [Transact-SQL 구문 규칙](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
+  > [!IMPORTANT]  
+  > 현재 [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance)에서 일부 SQL Server 에이전트 기능이 지원됩니다. 자세한 내용은 [SQL Server에서 Azure SQL Database Managed Instance T-SQL 차이점](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)을 참조하세요.
+
 ## <a name="syntax"></a>구문  
   
 ```  
@@ -51,18 +54,18 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ```  
   
 ## <a name="arguments"></a>인수  
-`[ @job_id = ] job_id` 작업 일정을 추가한 작업의 id. *job_id* 됩니다 **uniqueidentifier**, 기본값은 없습니다.  
+`[ @job_id = ] job_id`일정이 추가 된 작업의 작업 id 번호입니다. *job_id* 는 **uniqueidentifier**이며 기본값은 없습니다.  
   
-`[ @job_name = ] 'job_name'` 일정을 추가할 작업의 이름입니다. *job_name* 됩니다 **nvarchar (128)** , 기본값은 없습니다.  
+`[ @job_name = ] 'job_name'`일정을 추가할 작업의 이름입니다. *job_name* 는 **nvarchar (128)** 이며 기본값은 없습니다.  
   
 > [!NOTE]  
->  어느 *job_id* 또는 *job_name* 지정 해야 하지만 둘 다 지정할 수 없습니다.  
+>  *Job_id* 또는 *job_name* 중 하나를 지정 해야 하지만 둘 다 지정할 수는 없습니다.  
   
-`[ @name = ] 'name'` 일정의 이름입니다. *이름을* 됩니다 **nvarchar (128)** , 기본값은 없습니다.  
+`[ @name = ] 'name'`일정의 이름입니다. *name* 은 **nvarchar (128)** 이며 기본값은 없습니다.  
   
-`[ @enabled = ] enabled_flag` 일정의 현재 상태를 나타냅니다. *enabled_flag* 됩니다 **tinyint**, 기본값은 **1** (사용). 하는 경우 **0**, 일정은 사용할 수 없습니다. 일정을 사용하지 않으면 작업이 실행되지 않습니다.  
+`[ @enabled = ] enabled_flag`일정의 현재 상태를 나타냅니다. *enabled_flag* 은 **tinyint**이며 기본값은 **1** (사용)입니다. **0**인 경우 일정을 사용할 수 없습니다. 일정을 사용하지 않으면 작업이 실행되지 않습니다.  
   
-`[ @freq_type = ] frequency_type` 작업이 실행 되는 경우를 나타내는 값입니다. *frequency_type* 됩니다 **int**, 기본값은 **0**, 이며 다음 값 중 하나일 수 있습니다.  
+`[ @freq_type = ] frequency_type`작업이 실행 될 시기를 나타내는 값입니다. *frequency_type* 은 **int**이며 기본값은 **0**이 고 다음 값 중 하나일 수 있습니다.  
   
 |값|Description|  
 |-----------|-----------------|  
@@ -70,23 +73,23 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**4**|일별|  
 |**8**|매주|  
 |**16**|매월|  
-|**32**|기준으로 월별 *frequency_interval 합니다.*|  
+|**32**|매월 ( *frequency_interval* 기준)|  
 |**64**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스를 시작할 때 실행됩니다.|  
 |**128**|컴퓨터가 유휴 상태일 때 실행됩니다.|  
   
-`[ @freq_interval = ] frequency_interval` 작업이 실행 되는 날짜입니다. *frequency_interval* 됩니다 **int**, 기본값은 0 사용 하 여 값에 따라 달라 집니다 *frequency_type* 다음 표와 같이:  
+`[ @freq_interval = ] frequency_interval`작업이 실행 되는 날짜입니다. *frequency_interval* 은 **int**이며 기본값은 0이 고, 다음 표에 표시 된 것 처럼 *frequency_type* 의 값에 따라 달라 집니다.  
   
 |값|영향|  
 |-----------|------------|  
-|**1** (한 번)|*frequency_interval* 사용 되지 않습니다.|  
-|**4** (매일)|모든 *frequency_interval* 일입니다.|  
-|**8** (매주)|*frequency_interval* (OR 논리 연산자와 결합) 다음 중 하나 이상입니다.<br /><br /> 1 = 일요일<br /><br /> 2 = 월요일<br /><br /> 4 = 화요일<br /><br /> 8 = 수요일<br /><br /> 16 = 목요일<br /><br /> 32 = 금요일<br /><br /> 64 = 토요일|  
-|**16** (매월)|에 *frequency_interval* 월의 일입니다.|  
-|**32** (매월 상대적)|*frequency_interval* 다음 중 하나입니다.<br /><br /> 1 = 일요일<br /><br /> 2 = 월요일<br /><br /> 3 = 화요일<br /><br /> 4 = 수요일<br /><br /> 5 = 목요일<br /><br /> 6 = 금요일<br /><br /> 7 = 토요일<br /><br /> 8 = 일<br /><br /> 9 = 평일<br /><br /> 10 = 주말|  
-|**64** (때는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 서비스 시작)|*frequency_interval* 사용 되지 않습니다.|  
-|**128**|*frequency_interval* 사용 되지 않습니다.|  
+|**1** (한 번)|*frequency_interval* 가 사용 되지 않습니다.|  
+|**4** (매일)|*Frequency_interval* 일 마다|  
+|**8** (매주)|*frequency_interval* 는 or 논리 연산자와 결합 된 다음 중 하나 이상입니다.<br /><br /> 1 = 일요일<br /><br /> 2 = 월요일<br /><br /> 4 = 화요일<br /><br /> 8 = 수요일<br /><br /> 16 = 목요일<br /><br /> 32 = 금요일<br /><br /> 64 = 토요일|  
+|**16** (매월)|월의 *frequency_interval* 일|  
+|**32** (매월 상대적)|*frequency_interval* 은 다음 중 하나입니다.<br /><br /> 1 = 일요일<br /><br /> 2 = 월요일<br /><br /> 3 = 화요일<br /><br /> 4 = 수요일<br /><br /> 5 = 목요일<br /><br /> 6 = 금요일<br /><br /> 7 = 토요일<br /><br /> 8 = 일<br /><br /> 9 = 평일<br /><br /> 10 = 주말|  
+|**64** (에이전트 서비스가 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시작 되는 경우)|*frequency_interval* 가 사용 되지 않습니다.|  
+|**128**|*frequency_interval* 가 사용 되지 않습니다.|  
   
-`[ @freq_subday_type = ] frequency_subday_type` 단위를 지정 *frequency_subday_interval*합니다. *frequency_subday_type* 됩니다 **int**기본값은 없고 수 이며 다음 값 중 하나일 수:  
+`[ @freq_subday_type = ] frequency_subday_type`*Frequency_subday_interval*의 단위를 지정 합니다. *frequency_subday_type* 은 **int**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
 |값|설명(단위)|  
 |-----------|--------------------------|  
@@ -94,11 +97,11 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**0x4**|분|  
 |**0x8**|시간|  
   
-`[ @freq_subday_interval = ] frequency_subday_interval` 수가 *frequency_subday_type* 작업의 각 실행 간에 발생 하는 기간. *frequency_subday_interval* 됩니다 **int**, 기본값은 0입니다.  
+`[ @freq_subday_interval = ] frequency_subday_interval`각 작업 실행 사이에 발생 하는 *frequency_subday_type* 기간 수입니다. *frequency_subday_interval* 은 **int**이며 기본값은 0입니다.  
   
-`[ @freq_relative_interval = ] frequency_relative_interval` 추가 정의 *frequency_interval* 때 *frequency_type* 로 설정 되어 **32** (매월 상대적)입니다.  
+`[ @freq_relative_interval = ] frequency_relative_interval`*Frequency_type* 가 **32** (매월 상대적)로 설정 된 경우 *frequency_interval* 을 추가로 정의 합니다.  
   
- *frequency_relative_interval* 됩니다 **int**기본값은 없고 수 이며 다음 값 중 하나일 수:  
+ *frequency_relative_interval* 은 **int**이며 기본값은 없고 다음 값 중 하나일 수 있습니다.  
   
 |값|설명(단위)|  
 |-----------|--------------------------|  
@@ -108,23 +111,23 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |**8**|넷째|  
 |**16**|마지막|  
   
- *frequency_relative_interval* 간격의 발생 빈도 나타냅니다. 예를 들어 경우 *frequency_relative_interval* 로 설정 된 **2**에 *frequency_type* 로 설정 되어 **32**, 및 *frequency_ 간격* 로 설정 된 **3**, 예약된 된 작업을 매월 두 번째 화요일에 발생 합니다.  
+ *frequency_relative_interval* 는 간격 발생을 나타냅니다. 예를 들어 *frequency_relative_interval* 가 **2**로 설정 되 고 *frequency_type* 가 **32**로 설정 되 고 *frequency_interval* 가 **3**으로 설정 된 경우 예약 된 작업은 매월 두 번째 화요일에 발생 합니다.  
   
-`[ @freq_recurrence_factor = ] frequency_recurrence_factor` 예약된 된 작업 실행 간의 주 또는 월 수입니다. *frequency_recurrence_factor* 경우에 사용 됩니다 *frequency_type* 로 설정 되어 **8**를 **16**, 또는 **32**합니다. *frequency_recurrence_factor* 됩니다 **int**, 기본값은 0입니다.  
+`[ @freq_recurrence_factor = ] frequency_recurrence_factor`예약 된 작업 실행 사이에 발생 하는 주 또는 월 수입니다. *frequency_recurrence_factor* 는 *frequency_type* 이 **8**, **16**또는 **32**로 설정 된 경우에만 사용 됩니다. *frequency_recurrence_factor* 은 **int**이며 기본값은 0입니다.  
   
-`[ @active_start_date = ] active_start_date` 날짜는 작업 실행을 시작할 수 있습니다. *active_start_date* 됩니다 **int**, 기본값은 없습니다. 날짜 형식은 YYYYMMDD입니다. 하는 경우 *active_start_date* 설정 날짜 보다 크거나 19900101 이어야 합니다.  
+`[ @active_start_date = ] active_start_date`작업 실행을 시작할 수 있는 날짜입니다. *active_start_date* 는 **int**이며 기본값은 없습니다. 날짜 형식은 YYYYMMDD입니다. *Active_start_date* 가 설정 된 경우 날짜는 19900101 보다 크거나 같아야 합니다.  
   
- 일정을 만든 다음 시작 날짜를 검토하여 날짜가 제대로 되어 있는지 확인하십시오. 자세한 내용은 "시작 날짜 예약" 섹션을 참조 [만들기 및 작업에 일정 연결](../../ssms/agent/create-and-attach-schedules-to-jobs.md)합니다.  
+ 일정을 만든 다음 시작 날짜를 검토하여 날짜가 제대로 되어 있는지 확인하십시오. 자세한 내용은 [작업에 대 한 일정 만들기 및 연결](../../ssms/agent/create-and-attach-schedules-to-jobs.md)의 "시작 날짜 예약" 섹션을 참조 하세요.  
   
-`[ @active_end_date = ] active_end_date` 날짜는 작업 실행이 중지 수 있습니다. *active_end_date* 됩니다 **int**, 기본값은 없습니다. 날짜 형식은 YYYYMMDD입니다.  
+`[ @active_end_date = ] active_end_date`작업 실행을 중지할 수 있는 날짜입니다. *active_end_date* 는 **int**이며 기본값은 없습니다. 날짜 형식은 YYYYMMDD입니다.  
   
-`[ @active_start_time = ] active_start_time` 사이의 임의의 날짜에서 시간 *active_start_date* 하 고 *active_end_date* 작업 실행을 시작 합니다. *active_start_time* 됩니다 **int**, 기본값은 없습니다. 시간 형식은 HHMMSS이며 24시간제를 사용합니다.  
+`[ @active_start_time = ] active_start_time`*Active_start_date* 와 *active_end_date* 사이의 모든 날짜에서 작업 실행을 시작 하는 시간입니다. *active_start_time* 는 **int**이며 기본값은 없습니다. 시간 형식은 HHMMSS이며 24시간제를 사용합니다.  
   
-`[ @active_end_time = active_end_time_` 사이의 임의의 날짜에서 시간 *active_start_date* 하 고 *active_end_date* 작업 실행을 종료 합니다. *active_end_time* 됩니다 **int**, 기본값은 없습니다. 시간 형식은 HHMMSS이며 24시간제를 사용합니다.  
+`[ @active_end_time = active_end_time_`*Active_start_date* 와 *active_end_date* 사이의 모든 날짜에서 작업 실행이 종료 되는 시간입니다. *active_end_time* 는 **int**이며 기본값은 없습니다. 시간 형식은 HHMMSS이며 24시간제를 사용합니다.  
   
-`[ @schedule_id = schedule_idOUTPUT` 성공적으로 만들어진 경우 일정에 할당 된 id 번호를 예약 합니다. *schedule_id* 는 형식의 출력 변수 **int**, 기본값은 없습니다.  
+`[ @schedule_id = schedule_idOUTPUT`성공적으로 만들어진 일정 id 번호를 일정에 할당 합니다. *schedule_id* 는 **int**형식의 output 변수 이며 기본값은 없습니다.  
   
-`[ @schedule_uid = ] _schedule_uidOUTPUT` 일정에 대 한 고유 식별자입니다. *schedule_uid* 형식의 변수가 **uniqueidentifier**합니다.  
+`[ @schedule_uid = ] _schedule_uidOUTPUT`일정의 고유 식별자입니다. *schedule_uid* 은 **uniqueidentifier**형식의 변수입니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
  0(성공) 또는 1(실패)  
@@ -133,7 +136,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  없음  
   
 ## <a name="remarks"></a>설명  
- 이제 작업 일정을 작업과 독립적으로 관리할 수 있습니다. 작업에 일정을 추가 하려면 사용 **sp_add_schedule** 일정을 만들 및 **sp_attach_schedule** 작업에 일정을 연결 합니다.  
+ 이제 작업 일정을 작업과 독립적으로 관리할 수 있습니다. 작업에 일정을 추가 하려면 **sp_add_schedule** 을 사용 하 여 schedule 및 **sp_attach_schedule** 를 만들어 일정을 작업에 연결 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  기본적으로 **sysadmin** 고정 서버 역할의 멤버는 이 저장 프로시저를 실행할 수 있습니다. 다른 사용자는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] msdb **데이터베이스의 다음** 에이전트 고정 데이터베이스 역할 중 하나를 부여 받아야 합니다.  
@@ -147,7 +150,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
  이러한 역할의 사용 권한에 대한 자세한 내용은 [SQL Server 에이전트 고정 데이터베이스 역할](../../ssms/agent/sql-server-agent-fixed-database-roles.md)을 참조하세요.  
  
  ## <a name="example"></a>예제
- 다음 예제에서는 할당 하는 작업 일정 `SaturdayReports` 는 매주 토요일 오전 2 시에 실행 됩니다.
+ 다음 예에서는 매주 토요일 오전 2:00 시 `SaturdayReports` 에 실행 되는 작업 일정을 할당 합니다.
 ```sql  
 EXEC msdb.dbo.sp_add_jobschedule 
         @job_name = N'SaturdayReports', -- Job name
@@ -159,14 +162,14 @@ EXEC msdb.dbo.sp_add_jobschedule
 ```
   
 ## <a name="see-also"></a>관련 항목  
- [만들기 및 작업에 일정 연결](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
+ [일정을 만들고 작업에 연결](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [작업 예약](../../ssms/agent/schedule-a-job.md)   
  [일정 만들기](../../ssms/agent/create-a-schedule.md)   
- [SQL Server 에이전트 저장 프로시저 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
- [sp_add_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
- [sp_update_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
- [sp_delete_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
- [sp_help_schedule &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
+ [Transact-sql 저장 프로시저 &#40;SQL Server 에이전트&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
+ [sp_add_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-schedule-transact-sql.md)   
+ [sp_update_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
+ [sp_delete_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
+ [sp_help_schedule &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
  [sp_attach_schedule&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

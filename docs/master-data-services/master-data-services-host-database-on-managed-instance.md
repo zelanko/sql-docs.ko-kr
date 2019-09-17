@@ -1,6 +1,6 @@
 ---
-title: 관리 되는 인스턴스의 호스트 데이터베이스 | Microsoft Docs
-description: 관리 되는 인스턴스에서 MDS 데이터베이스를 구성 하는 방법을 설명 합니다.
+title: 관리 되는 인스턴스에서 MDS(Master Data Services) 데이터베이스 호스팅 | Microsoft Docs
+description: 이 문서에서는 관리 되는 인스턴스에서 MDS (Master Data Service) 데이터베이스를 구성 하는 방법을 설명 합니다.
 ms.custom: ''
 ms.date: 07/01/2019
 ms.prod: sql
@@ -13,223 +13,225 @@ author: v-redu
 ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0081ea193452e4e92938051bc7b4a40bc8631eaa
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 747711159c92c7194c0ca622a8e734cff2e6fa2b
+ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155377"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958384"
 ---
-# <a name="host-database-on-managed-instance"></a>관리 되는 인스턴스의 호스트 데이터베이스
+# <a name="host-an-mds-database-on-a-managed-instance"></a>관리 되는 인스턴스에서 MDS 데이터베이스를 호스팅합니다.
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  이 문서에서는 관리 되는 인스턴스에서 MDS 데이터베이스를 구성 하는 방법을 설명 합니다.
+  이 문서에서는 관리 되는 인스턴스에서 MDS (MDS(Master Data Services)) 데이터베이스를 구성 하는 방법을 설명 합니다.
   
 ## <a name="preparation"></a>준비
 
-준비 단계를 완료 하려면 다음 단계를 완료 해야 합니다.
-- 관리 되는 인스턴스 만들기 및 구성을 완료 합니다. 가상 네트워크 및 지점 및 사이트 간 VPN을 포함 합니다.
-- 웹 응용 프로그램 컴퓨터 구성을 완료 합니다.
-  - 지점 및 사이트 간 VPN 설치를 포함 합니다.
-  - 역할 및 기능을 설치 합니다.
+준비 하려면 Azure SQL Database 관리 되는 인스턴스를 만들고 구성 하 고 웹 응용 프로그램 컴퓨터를 구성 해야 합니다.
 
-**데이터베이스 쪽:**
+### <a name="create-and-configure-the-database"></a>데이터베이스 만들기 및 구성
 
-1. 가상 네트워크를 포함 하 Azure SQL Database 관리 되는 인스턴스를 만듭니다. [빠른 시작: Azure SQL Database 관리 되는 인스턴스 만들기](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started)
-2. 지점 및 사이트 간 연결을 구성 합니다. [네이티브 Azure 인증서 인증을 사용 하 여 VNet에 지점 및 사이트 간 연결 구성: Azure Portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)
-3. SQL Database 관리 되는 인스턴스를 사용 하 여 Azure Active Directory 인증을 구성 합니다. [SQL을 사용 하 여 Azure Active Directory 인증 구성 및 관리](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)
+1. 가상 네트워크를 사용 하 여 관리 되는 Azure SQL Database 인스턴스를 만듭니다. [빠른 시작: 자세한 내용은 관리 되는](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) Azure SQL Database 인스턴스를 만듭니다.
 
-**웹 응용 프로그램 컴퓨터 쪽:**
+1. 지점 및 사이트 간 연결을 구성 합니다. 네이티브 [Azure 인증서 인증을 사용 하 여 VNet에 지점 및 사이트 간 연결 구성을 참조 하세요. 지침](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) 을 Azure Portal 합니다.
 
-1. 컴퓨터에서 관리 되는 인스턴스에 SQL Database 액세스할 수 있도록 지점 및 사이트 간 연결 인증서와 VPN을 설치 합니다. [네이티브 Azure 인증서 인증을 사용 하 여 VNet에 지점 및 사이트 간 연결 구성: Azure Portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal)
-2. 역할 및 기능을 설치 합니다. 다음 기능이 필요 합니다.
+1. SQL Database 관리 되는 인스턴스를 사용 하 여 Azure Active Directory 인증을 구성 합니다. 자세한 내용은 [SQL을 사용 하 여 Azure Active Directory 인증 구성 및 관리](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) 를 참조 하세요.
 
-- 역할
+### <a name="configure-web-application-machine"></a>웹 응용 프로그램 컴퓨터 구성
 
-      Internet Information Services
-      Web Management Tools
-      IIS Management Console
-      World Wide Web Services
-      Application Development
-      .NET Extensibility 3.5
-      .NET Extensibility 4.5
-      ASP.NET 3.5
-      ASP.NET 4.5
-      ISAPI Extensions
-      ISAPI Filters
-      Common HTTP Features
-      Default Document
-      Directory Browsing
-      HTTP Errors
-      Static Content
-      [Note: Do not install WebDAV Publishing]
-      Health and Diagnostics
-      HTTP Logging
-      Request Monitor
-      Performance
-      Static Content Compression
-      Security
-      Request Filtering
-      Windows Authentication
+1. 지점 및 사이트 간 연결 인증서와 VPN을 설치 하 여 컴퓨터가 관리 되는 SQL Database 인스턴스에 액세스할 수 있도록 합니다. 네이티브 Azure [인증서 인증을 사용 하 여 VNet에 지점 및 사이트 간 연결 구성을 참조 하세요. 지침](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) 을 Azure Portal 합니다.
 
-- 기능:
+1. 다음 역할 및 기능을 설치 합니다.
+   - 역할
+     - 인터넷 정보 서비스
+     - 웹 관리 도구
+     - IIS 관리 콘솔
+     - World Wide Web 서비스
+     - 애플리케이션 개발
+     - .NET 확장성 3.5
+     - .NET 확장성 4.5
+     - ASP.NET 3.5
+     - ASP.NET 4.5
+     - ISAPI 확장
+     - ISAPI 필터
+     - 일반 HTTP 기능
+     - 기본 문서
+     - 디렉터리 검색
+     - HTTP 오류
+     - 정적 콘텐츠
+     - 상태 및 진단
+     - HTTP 로깅
+     - 요청 모니터
+     - 성능
+     - 정적 콘텐츠 압축
+     - 보안
+     - 요청 필터링
+     - Windows 인증
+       > [!NOTE]
+       > WebDAV 게시를 설치 하지 않음
 
-      .NET Framework 3.5 (includes .NET 2.0 and 3.0)
-      .NET Framework 4.5 Advanced Services
-      ASP.NET 4.5
-      WCF Services
-      HTTP Activation [Note: This is required.]
-      TCP Port Sharing
-      Windows Process Activation Service
-      Process Model
-      .NET Environment
-      Configuration APIs
-      Dynamic Content Compression
+   - 기능:
+     - .NET framework 3.5(.NET 2.0 및 3.0 포함)
+     - .NET Framework 4.5 Advanced Services
+     - ASP.NET 4.5
+     - WCF Services
+     - HTTP 활성화 (필수)
+     - TCP 포트 공유
+     - Windows Process Activation Service
+     - 프로세스 모델
+     - .NET 환경
+     - 구성 API
+     - 동적 콘텐츠 압축
 
-## <a name="install-and-configure-includessmdsshort_mdincludesssmdsshort-mdmd-web-application"></a>웹 응용 프로그램 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 설치 및 구성
+## <a name="install-and-configure-an-mds-web-application"></a>MDS 웹 응용 프로그램 설치 및 구성
 
-을 설치 하 고 구성 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]하려면 다음 단계를 완료 해야 합니다.
+다음으로를 설치 하 고 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]구성 합니다.
 
-1. SQL Server 2019 포함 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 기능을 설치 합니다.
-2. 관리 인스턴스에 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 데이터베이스를 만듭니다.
-3. 용 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]웹 응용 프로그램을 만들고 구성 합니다.
-  
-**SQL Server 2019 설치**
+### <a name="install-sql-server-2019"></a>SQL Server 2019 설치
 
-SQL Server 설치 설치 마법사 또는 명령 프롬프트를 사용 하 여를 설치 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]합니다.
+설치 SQL Server 설치 마법사 또는 명령 프롬프트를 사용 하 여를 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]설치 합니다.
 
-1. Setup.exe를 두 번 클릭하고 설치 마법사의 단계를 따릅니다.
+1. 을 `Setup.exe`열고 설치 마법사의 단계를 따릅니다.
 
-2. 기능 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 선택 페이지의 공유 기능에서를 선택 합니다.
-[!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)], 어셈블리, Windows PowerShell 스냅인, 웹 애플리케이션과 서비스의 폴더 및 파일이 설치됩니다.
+2. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 기능 선택 **페이지의** 공유 기능 **에서**를 선택합니다.
+이 작업은 다음을 설치 합니다.
+   - [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]
+   - 어셈블리
+   - Windows PowerShell 스냅인
+   - 웹 응용 프로그램 및 서비스에 대 한 폴더 및 파일입니다.
 
-    ![mds-SQLServer2019-MI-SQLFeatureSelection](../master-data-services/media/mds-sqlserver2019-config-mi-sqlfeatureselection.png "SQLServer2019-MI_SQLFeatureSelection")  
+   ![mds-SQLServer2019-MI-SQLFeatureSelection](../master-data-services/media/mds-sqlserver2019-config-mi-sqlfeatureselection.png "SQLServer2019-MI_SQLFeatureSelection")  
 
-**데이터베이스 및 웹 사이트 설정**
+### <a name="set-up-the-database-and-website"></a>데이터베이스 및 웹 사이트 설정
 
 1. Azure Virtual Network을 연결 하 여 관리 되는 인스턴스에 연결할 수 있는지 확인 합니다.
 
-    ![SQLServer2019-MI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "SQLServer2019-MI_P2SVPNConnect")  
+   ![SQLServer2019-MI-P2SVPNConnect](../master-data-services/media/mds-sqlserver2019-config-mi-p2svpnconnect.png "SQLServer2019-MI_P2SVPNConnect")
 
-2. 를 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]시작 합니다. 왼쪽 창에서 **데이터베이스 구성** 을 클릭 합니다.
+1. 를 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] 연 다음 왼쪽 창에서 **데이터베이스 구성** 을 선택 합니다.
 
-3. **데이터베이스 만들기**를 클릭 한 다음 **데이터베이스 만들기** 마법사에서 다음을 클릭 합니다.
+1. 데이터베이스 **만들기** 를 선택 하 여 **데이터베이스 만들기 마법사**를 엽니다. **다음**을 선택합니다.
 
-4. **데이터베이스 서버** 페이지에서 **SQL Server 인스턴스** 를 채우고 **인증 유형을** 선택한 다음 **연결 테스트** 를 클릭 하 여 인증 유형에 대 한 자격 증명을 사용 하 여 데이터베이스에 연결할 수 있는지 확인 합니다. 선택. 다음을 클릭합니다.
-
-   > [!NOTE]
-   > - "Xxxxxxx.xxxxxxx.database.windows.net"과 같은 관리 되는 인스턴스의 SQL Server 인스턴스
-   > - 관리 되는 인스턴스의 경우 **"SQL Server 계정"** 및 **"현재 사용자-Active Directory 통합"** 인증 유형을 지원 합니다.
-   > - **현재 사용자 –** 인증 유형으로 통합 Active Directory 선택 하는 경우 **사용자 이름** 상자는 읽기 전용 이며 컴퓨터에 로그온 된 Windows 사용자 계정의 이름을 표시 합니다. Azure vm (가상 머신) [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 에서 SQL Server 2019를 실행 하는 경우 **사용자 이름** 상자에 vm의 로컬 관리자 계정에 대 한 vm 이름 및 사용자 이름이 표시 됩니다.
-
-    인증에 관리 되는 인스턴스에 대 한 **"sysadmin"** 규칙이 포함 되어 있는지 확인 하세요.
-![SQLServer2019-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "SQLServer2019-MI_CreateDBConnect")  
-
-5. **데이터베이스 이름** 필드에 이름을 입력합니다. 필요에 따라 Windows 데이터 정렬을 선택하려면 **SQL Server 기본 데이터 정렬** 확인란의 선택을 취소하고 **대/소문자 구분**과 같은 사용 가능한 옵션 중 하나 이상을 클릭합니다. **다음**을 클릭합니다.
-
-    ![SQLServer2019-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "SQLServer2019-MI_CreatedDBName")  
-
-6. **사용자 이름** 필드에서에 대 한 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]기본 슈퍼 사용자가 될 사용자의 Windows 계정을 지정 합니다. 슈퍼 사용자는 모든 기능 영역에 액세스할 수 있으며 모든 모델을 추가, 삭제 및 업데이트할 수 있습니다.
-
-    ![SQLServer2019-MI-CreateDBUserName](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "SQLServer2019-MI_createDBUserName")
-
-7. **다음** 을 클릭하여 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 데이터베이스에 대한 설정 요약을 본 후에 다시 **다음** 을 클릭하여 데이터베이스를 만듭니다. **진행 후 마침** 페이지가 표시됩니다.
-
-8. 데이터베이스가 생성되고 구성되면 **마침**을 클릭합니다.
-
-    **데이터베이스 만들기 마법사**의 설정에 대 한 자세한 내용은 [ &#40; [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 데이터베이스 만들기 마법사 Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)를 참조 하세요.
-
-9. 의 **데이터베이스 구성** 페이지 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서 **데이터베이스 선택**을 클릭 합니다.
-
-10. **연결**을 클릭 하 고 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 8 단계에서 만든 데이터베이스를 선택한 다음 **확인**을 클릭 합니다.
-
-    ![SQLServer2019-MI-connectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "SQLServer2019-MI_connectDBName")
-
-11. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]의 왼쪽 창에서 **웹 구성** 을 클릭합니다.
-
-12. **웹 사이트** 목록 상자에서 **기본 웹 사이트**를 클릭한 다음 **만들기** 를 클릭하여 웹 애플리케이션을 만듭니다.
-![SQLServer2019-MI 구성](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "SQLServer2019-MI_WebConfiguration")
-
-   > [!NOTE] 
-   > **기본 웹 사이트**를 선택할 경우 웹 애플리케이션을 만들어야 합니다. 목록 상자에서 **새 웹 사이트 만들기** 를 선택하면 애플리케이션이 자동으로 만들어집니다.
-
-    
-
-13. **응용 프로그램 풀** 섹션에서 다른 사용자 이름을 입력 하 고 암호를 입력 한 다음 확인을 클릭 합니다.
-![mds-SQLServer2019-MI-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "SQLServer2019-MI_CreateWebApplication")
+1. **데이터베이스 서버** 페이지에서 **SQL Server 인스턴스** 필드를 완성 한 다음 **인증 유형을**선택 합니다. **연결 테스트** 를 선택 하 여 선택한 인증 유형을 통해 데이터베이스에 연결 하는 데 자격 증명을 사용할 수 있는지 확인 합니다. **다음**을 선택합니다.
 
    > [!NOTE]
-   > 사용자가 방금 만든 Active Directory 통합 인증을 사용 하 여 데이터베이스에 액세스할 수 있는지 확인 해야 합니다. 또는 나중에 web.config에서 연결을 변경 해야 합니다.
+   > - SQL Server 인스턴스는와 `xxxxxxx.xxxxxxx.database.windows.net`같습니다.
+   > - 관리 되는 인스턴스의 경우 **"SQL Server 계정"** 및 **"현재 사용자-Active Directory 통합"** 인증 유형을 선택 합니다.
+   > - **현재 사용자 –** 인증 유형으로 통합 Active Directory 선택 하는 경우 **사용자 이름** 필드는 읽기 전용 이며 현재 로그온 한 Windows 사용자 계정을 표시 합니다. Azure vm (가상 머신) [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 에서 SQL Server 2019를 실행 하는 경우 **사용자 이름** 필드에 vm의 로컬 관리자 계정에 대 한 vm 이름 및 사용자 이름이 표시 됩니다.
 
-    
+   인증에 관리 되는 인스턴스에 대 한 **"sysadmin"** 규칙이 포함 되어 있어야 합니다.
 
-14. **웹 응용 프로그램 만들기** 대화 상자에 대 한 자세한 내용은 [Configuration Manager &#40; [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] &#41;웹 응용 프로그램 만들기 대화 상자](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)를 참조 하세요.
+   ![SQLServer2019-MI-CreateDBConnect](../master-data-services/media/mds-sqlserver2019-config-mi-createdbconnect.png "SQLServer2019-MI_CreateDBConnect")  
 
-15. 웹 **응용** 프로그램 상자의 **웹 구성** 페이지에서 사용자가 만든 응용 프로그램을 클릭 한 다음 **데이터베이스와 응용 프로그램 연결** 섹션에서 **선택** 을 클릭 합니다.
+1. **데이터베이스 이름** 필드에 이름을 입력합니다. 필요에 따라 Windows 데이터 정렬을 선택 하려면 **기본 데이터 정렬 SQL Server** 확인란의 선택을 취소 하 고 사용 가능한 옵션 중 하나 이상을 선택 합니다. 예를 들어 대 **/소문자를 구분**합니다. **다음**을 선택합니다.
 
-16. **연결**을 클릭하고 웹 애플리케이션에 연결할 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 데이터베이스를 선택한 다음 **확인**을 클릭합니다.
+   ![SQLServer2019-MI-CreatedDBName](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "SQLServer2019-MI_CreatedDBName")
 
-    웹 사이트 설정을 마쳤습니다. 이제 **웹 구성** 페이지에 선택한 웹 사이트, 만든 웹 응용 프로그램 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 응용 프로그램과 관련 된 데이터베이스가 표시 됩니다.
+1. **사용자 이름** 필드에서에 대 한 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]기본 슈퍼 사용자의 Windows 계정을 지정 합니다. 슈퍼 사용자는 모든 기능 영역에 액세스할 수 있으며 모든 모델을 추가, 삭제 및 업데이트할 수 있습니다.
 
-    ![SQLServer2019-MI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "SQLServer2019-MI_WebConfigSelectDB")
+   ![SQLServer2019-MI-CreateDBUserName](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "SQLServer2019-MI_createDBUserName")
 
-17. **적용**을 클릭합니다. **구성 완료** 메시지 상자가 표시됩니다. 메시지 상자에서 **확인**을 클릭하고 웹 애플리케이션을 시작합니다. 웹 사이트 주소 http://server 는 이름/웹 응용 프로그램/입니다.
+1. **다음** 을 선택 하 여 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 데이터베이스의 설정에 대 한 요약을 확인 합니다. **다음** 을 다시 선택 하 여 데이터베이스를 만듭니다. **진행률 및 마침** 페이지가 표시 됩니다.
 
-## <a name="other-authentication-type-to-connect-managed-instance-database-on-web-application"></a>웹 응용 프로그램에서 관리 되는 인스턴스 데이터베이스를 연결 하는 기타 인증 유형
+1. 데이터베이스를 만들고 구성한 후 **마침**을 선택 합니다.
 
-C:\Program Files\Microsoft SQL Server\150\Master Data Services\webapplication입니다. 아래에 web.config 파일을 가져올 수 있습니다 **.** 다른 인증 유형을 변경 하 여 관리 되는 인스턴스 데이터베이스에 연결 하도록 connectionString을 수정할 수 있습니다.
+   **데이터베이스 만들기 마법사**의 설정에 대 한 자세한 내용은 [ &#40; [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 데이터베이스 만들기 마법사 Configuration Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)를 참조 하세요.
 
-기본 인증 유형은 "**Active Directory Integrated**" 이며, 다음은 샘플 연결 문자열입니다.
+1. 의 **데이터베이스 구성** 페이지 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서 **데이터베이스 선택**을 선택 합니다.
 
-```xml
-<add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;Authentication=&quot;Active Directory Integrated&quot;" />
-```
+1. **연결**을 선택 하 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 고 데이터베이스를 선택한 다음 **확인**을 선택 합니다.
 
-Active Directory 암호 인증 및 SQL Server 인증도 지원 합니다. 다음은 샘플 연결 문자열입니다.
+   ![SQLServer2019-MI-connectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "SQLServer2019-MI_connectDBName")
 
-암호 인증 Active Directory
+1. 의 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]왼쪽 창에서 **웹 구성** 을 선택 합니다.
 
-```xml
-<add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;Authentication=&quot;Active Directory Password&quot; ; UID=bob@contoso.onmicrosoft.com; PWD=MyPassWord!" />
-```
+1. **웹 사이트 목록 상자** 에서 **기본 웹 사이트**를 선택한 다음 **만들기** 를 선택 하 여 웹 응용 프로그램을 만듭니다.
 
-SQL Server 인증(SQL Server Authentication)
+   ![SQLServer2019-MI 구성](../master-data-services/media/mds-sqlserver2019-config-mi-webconfiguration.png "SQLServer2019-MI_WebConfiguration")
 
-```xml
-<add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
-```
+   > [!NOTE]
+   > **기본 웹 사이트**를 선택 하는 경우 웹 응용 프로그램을 별도로 만들어야 합니다. 목록 상자에서 **새 웹 사이트 만들기** 를 선택 하면 응용 프로그램이 자동으로 만들어집니다.
 
-## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-database-version"></a>업그레이드 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 및 데이터베이스 버전
+1. **응용 프로그램 풀** 섹션에서 다른 사용자 이름을 입력 하 고 암호를 입력 한 다음 **확인**을 선택 합니다.
 
-**업그레이드할[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]**
+   ![mds-SQLServer2019-MI-CreateWebApplication](../master-data-services/media/mds-sqlserver2019-config-mi-createwebapplication.png "SQLServer2019-MI_CreateWebApplication")
 
-SQL Server 2019 **누적 업데이트**를 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 설치 하면이 자동으로 업데이트 됩니다.
+   > [!NOTE]
+   > 사용자가 최근에 만든 Active Directory 통합 인증을 사용 하 여 데이터베이스에 액세스할 수 있는지 확인 합니다. 또는 나중에에서 `web.config` 연결을 변경할 수 있습니다.
 
-**데이터베이스 버전 업그레이드**
+   **웹 응용 프로그램 만들기** 대화 상자에 대 한 자세한 내용은 [Configuration Manager &#40; [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] &#41;웹 응용 프로그램 만들기 대화 상자](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md)를 참조 하세요.
 
-2019 **누적 업데이트**SQL Server 설치 후 "클라이언트 버전이 데이터베이스 버전과 호환 되지 않습니다." 문제가 발생 하면 데이터베이스 버전을 업그레이드 해야 합니다.
+1. 웹 **응용 프로그램** 창의 **웹 구성** 창에서 사용자가 만든 응용 프로그램을 선택 하 고 **데이터베이스에 응용 프로그램 연결** 섹션에서 **선택** 을 선택 합니다.
 
+1. **연결** 을 선택 하 고 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 웹 응용 프로그램과 연결할 데이터베이스를 선택 합니다. **확인**을 선택합니다.
+
+   웹 사이트 설정을 완료 했습니다. 이제 **웹 구성** 페이지에 선택한 웹 사이트, 만든 웹 응용 프로그램 및 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 응용 프로그램과 관련 된 데이터베이스가 표시 됩니다.
+
+   ![SQLServer2019-MI-WebConfigSelectDB](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "SQLServer2019-MI_WebConfigSelectDB")
+
+1. **적용**을 선택합니다. **구성 완료** 메시지가 표시 됩니다. 메시지 상자에서 **확인** 을 선택 하 여 웹 응용 프로그램을 시작 합니다. 웹 사이트 주소 `http://server name/web application/`는입니다.
+
+## <a name="configure-authentication"></a>인증 구성
+
+관리 되는 인스턴스 데이터베이스를 웹 응용 프로그램에 연결 하려면 다른 인증 유형을 변경 해야 합니다.
+
+`web.config` 에서`C:\Program Files\Microsoft SQL Server\150\Master Data Services\WebApplication`파일을 찾습니다. 다른 인증 유형을 변경 하 여 관리 되는 인스턴스 데이터베이스에 연결 하려면 connectionString을 수정 합니다.
+
+기본 인증 형식은 `Active Directory Integrated` 다음 샘플 연결 문자열에 표시 된 것과 같습니다.
+
+   ```xml
+   <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;Authentication=&quot;Active Directory Integrated&quot;" />
+   ```
+
+MDS는 다음 샘플 연결 문자열에 표시 된 것 처럼 Active Directory 암호 인증 및 SQL Server 인증도 지원 합니다.
+
+- 암호 인증 Active Directory
+
+   ```xml
+   <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;Authentication=&quot;Active Directory Password&quot; ; UID=bob@contoso.onmicrosoft.com; PWD=MyPassWord!" />
+   ```
+
+- SQL Server 인증
+
+   ```xml
+   <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
+   ```
+
+## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-sql-database-version"></a>업그레이드 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 및 SQL Database 버전
+
+### <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd"></a>업그레이드할[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+
+**SQL Server 2019 누적 업데이트**를 설치 합니다. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]자동으로 업데이트 됩니다.
+
+### <a name="upgrade-sql-server"></a>SQL Server 업그레이드
+
+**SQL Server 2019 누적 업데이트**를 설치한 `The client version is incompatible with the database version` 후 오류가 발생할 수 있습니다.
 ![SQLServer2019-MI-UpgradeDBPage](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbpage.png "SQLServer2019-MI_UpgradeDBPage")
 
-1. 를 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]시작 합니다. 왼쪽 창에서 **데이터베이스 구성** 을 클릭 합니다.
+이 문제를 해결 하려면 데이터베이스 버전을 업그레이드 해야 합니다.
 
-2. 의 **데이터베이스 구성** 페이지 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서 **데이터베이스 선택**을 클릭 합니다.
+1. 를 연 다음 왼쪽 창에서 **데이터베이스 구성** 을 선택 합니다. [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]
 
-3. **연결**을 클릭 하 고 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 웹 응용 프로그램에 연결 된 데이터베이스를 선택한 다음 **확인**을 클릭 합니다.
+1. 의 **데이터베이스 구성** 페이지 [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)]에서 **데이터베이스 선택**을 선택 합니다.
 
-    ![SQLServer2019-MI-ConnectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "SQLServer2019-MI_ConnectDBName")
+1. 웹 응용 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] 프로그램과 연결 된 데이터베이스를 선택 합니다. **연결**을 선택한 다음 **확인**을 선택 합니다.
 
-4. **데이터베이스 업그레이드** ...를 클릭 합니다. 단추
+   ![SQLServer2019-MI-ConnectDBName](../master-data-services/media/mds-sqlserver2019-config-mi-connectdbname.png "SQLServer2019-MI_ConnectDBName")
 
-    ![mds-SQLServer2019-MI-SelectUpgradeDB](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "SQLServer2019-MI_SelectUpgradeDB")
+1. **데이터베이스 업그레이드** ...를 선택 합니다. 을 선택합니다.
 
-5. 데이터베이스 업그레이드 마법사의 **시작** 페이지 및 **업그레이드 검토** 페이지에서 **다음** 단추를 클릭 합니다.
+   ![mds-SQLServer2019-MI-SelectUpgradeDB](../master-data-services/media/mds-sqlserver2019-config-mi-selectupgradedb.png "SQLServer2019-MI_SelectUpgradeDB")
 
-    ![mds-SQLServer2019-MI-UpgradeDBWizard](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "SQLServer2019-MI_UpgradeDBWizard")
+1. 데이터베이스 업그레이드 마법사의 **시작** 페이지에서 **다음** 을 선택 하 고 **업그레이드 검토** 페이지에서 다음을 선택 합니다.
 
-6. 모든 작업이 완료 되 면 **마침** 단추를 클릭 합니다.
+   ![mds-SQLServer2019-MI-UpgradeDBWizard](../master-data-services/media/mds-sqlserver2019-config-mi-upgradedbwizard.png "SQLServer2019-MI_UpgradeDBWizard")
 
-## <a name="see-also"></a>관련 항목
+1. 모든 작업이 완료 되 면 **마침** 을 선택 합니다.
 
- [MDS(Master Data Services) 데이터베이스](../master-data-services/master-data-services-database.md) [웹 응용 프로그램 마스터 데이터 관리자](../master-data-services/master-data-manager-web-application.md) [데이터베이스 구성 페이지 &#40;Master Data Services 구성 관리자&#41; ](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md) [ &#40;MDS&#41; MDS(Master Data Services)의 새로운 기능](../master-data-services/what-s-new-in-master-data-services-mds.md)
+## <a name="see-also"></a>참조
+
+- [Master Data Services 데이터베이스](../master-data-services/master-data-services-database.md)
+- [마스터 데이터 관리자 웹 응용 프로그램](../master-data-services/master-data-manager-web-application.md)
+- [데이터베이스 구성 페이지&#40;Master Data Services 구성 관리자&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
+- [MDS&#40;Master Data Services&#41;의 새로운 기능](../master-data-services/what-s-new-in-master-data-services-mds.md)

@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2c0e5f5a5f194045b5d1b48a383f9d4dfd282649
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 307697f43fc1c2615f212ae5f433485814dd62d0
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158168"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874699"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>고가용성을 사용 하 여 빅 데이터 클러스터 SQL Server 배포
 
@@ -31,6 +31,7 @@ ms.locfileid: "70158168"
 1. 외부 끝점은 AG 데이터베이스에 연결 하기 위해 자동으로 프로 비전 됩니다. 이 끝점 `master-svc-external` 은 AG 수신기의 역할을 수행 합니다.
 1. 보조 복제본에 대 한 읽기 전용 연결에 대해 두 번째 외부 끝점이 프로 비전 됩니다. 
 
+
 # <a name="deploy"></a>배포
 
 가용성 그룹에 SQL Server 마스터를 배포 하려면 다음을 수행 합니다.
@@ -39,9 +40,9 @@ ms.locfileid: "70158168"
 1. AG에 대 한 복제본 수를 지정 합니다 (최소 3).
 1. 읽기 전용 보조 복제본에 대 한 연결에 대해 만든 두 번째 외부 끝점의 세부 정보를 구성 합니다.
 
-다음 단계는 이러한 설정을 포함 하는 패치 파일을 만드는 방법과 `aks-dev-test` 또는 `kubeadm-dev-test` 구성 프로필에 적용 하는 방법을 보여 줍니다. 이러한 단계는 HA 특성을 추가 하기 위해 `aks-dev-test` 프로필을 패치 하는 방법에 대 한 예제를 안내 합니다.
+다음 단계는 이러한 설정을 포함 하는 패치 파일을 만드는 방법과 `aks-dev-test` 또는 `kubeadm-dev-test` 구성 프로필에 적용 하는 방법을 보여 줍니다. 이러한 단계는 HA 특성을 추가 하기 위해 `aks-dev-test` 프로필을 패치 하는 방법에 대 한 예제를 안내 합니다. Kubeadm 클러스터에 대 한 배포의 경우 비슷한 패치가 적용 되지만, **끝점** 섹션에서 **ServiceType** 에 대해 *nodeport* 를 사용 하 고 있는지 확인 합니다.
 
-1. `ha-patch.json` 파일 만들기
+1. `patch.json` 파일 만들기
 
     ```json
     {
@@ -78,7 +79,7 @@ ms.locfileid: "70158168"
 1. 대상 프로필 복제
 
     ```bash
-    azdata config init --source aks-dev-test --target custom-aks
+    azdata bdc config init --source aks-dev-test --target custom-aks
     ```
 
 1. 사용자 지정 프로필에 패치 파일을 적용 합니다.
@@ -102,6 +103,10 @@ azdata bdc endpoint list -e sql-server-master -o table
 `Description                           Endpoint             Name               Protocol`
 `------------------------------------  -------------------  -----------------  ----------`
 `SQL Server Master Instance Front-End  13.64.235.192,31433  sql-server-master  tds`
+
+> [!NOTE]
+> 장애 조치 (Failover) 이벤트는 HDFS 또는 데이터 풀과 같은 원격 데이터 원본에서 데이터에 액세스 하는 분산 쿼리를 실행 하는 동안 발생할 수 있습니다. 응용 프로그램은 장애 조치 (failover)로 인해 연결이 끊어지는 경우 연결 다시 시도 논리를 갖도록 디자인 해야 합니다.  
+>
 
 ### <a name="connect-to-databases-on-the-secondary-replicas"></a>보조 복제본의 데이터베이스에 연결
 

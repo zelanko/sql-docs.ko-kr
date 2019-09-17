@@ -2,23 +2,30 @@
 title: Access 용 SSMA의 새로운 기능 (AccessToSQL) | Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 39f8d7da95fc8e2102d1208216a2eb43bb038fea
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 608f7c8b2de7ae43bdd44e72da25f864f985efeb
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632063"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745434"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Access 용 SSMA의 새로운 기능 (AccessToSQL)
 
 이 문서에서는 각 릴리스의 액세스 변경에 대 한 SSMA (SQL Server Migration Assistant)를 나열 합니다.  
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+Access 용 SSMA의 v 8.4 릴리스는 SQL Server 2016 이상 버전에 대 한 액세스 가능성 문제를 해결 하 고 max index 열 (16 대신 32을 허용 하도록)과 관련 된 버그를 수정 하기 위해 설계 된 대상 수정 기능을 사용 하 여 향상 되었습니다.
+
+> [!IMPORTANT]
+> SSMA v 7.4 이상 버전을 사용 하는 경우 .Net 4.5.2는 설치 필수 구성 요소입니다.
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -27,18 +34,12 @@ Access 용 SSMA의 v2.0 릴리스는 품질 및 변환 메트릭을 향상 시 �
 * 접근성 문제 해결
 * SQL Server에서 ' hierarchyid ' 형식에 대 한 기본 지원 추가
 
-> [!IMPORTANT]
-> SSMA v 7.4 이상 버전을 사용 하는 경우 .Net 4.5.2는 설치 필수 구성 요소입니다.
-
 ## <a name="ssma-v82"></a>SSMA v8.2
 
 액세스용 SSMA 릴리스는 품질 및 변환 메트릭을 향상 시 키도 록 설계 된 대상 수정 기능으로 향상 되었습니다.
 
 > [!NOTE]
 > 자동 업데이트의 알려진 문제로 인해 SSMA v 8.1에서 v 8.2로 업데이트 하지 못할 수 있습니다. 이 오류가 발생 하는 경우 새 버전을 다운로드 하 고 수동으로 설치 하세요.
-
-> [!IMPORTANT]
-> SSMA v 7.4 이상 버전을 사용 하는 경우 .Net 4.5.2는 설치 필수 구성 요소입니다.
 
 ## <a name="ssma-v81"></a>SSMA v8.1
 

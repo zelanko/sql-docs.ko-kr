@@ -1,5 +1,5 @@
 ---
-title: 개체 속성, 메서드 및 이벤트를 기록 합니다. | Microsoft Docs
+title: Record 개체 속성, 메서드 및 이벤트 | Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,25 +12,24 @@ helpviewer_keywords:
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ecb09e15a0d54573cf921a5b2a7633c9d1e61704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712298"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70737663"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Record 개체 속성, 메서드 및 이벤트
 ## <a name="propertiescollections"></a>속성/컬렉션  
  [ActiveConnection 속성](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
   
- [필드 컬렉션](../../../ado/reference/ado-api/fields-collection-ado.md)  
+ [Fields 컬렉션](../../../ado/reference/ado-api/fields-collection-ado.md)  
   
- [모드 속성](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode 속성](../../../ado/reference/ado-api/mode-property-ado.md)  
   
  [ParentURL 속성](../../../ado/reference/ado-api/parenturl-property-ado.md)  
   
- [속성 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties 컬렉션](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [RecordType 속성](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   

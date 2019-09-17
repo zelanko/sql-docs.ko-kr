@@ -26,12 +26,12 @@ ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205109"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874695"
 ---
 # <a name="examples-using-openxml"></a>예를 들면 다음과 같습니다. OPENXML 사용
   이 항목의 예제에서는 XML 문서의 행 집합 뷰를 만들 때 OPENXML을 사용하는 방법을 설명합니다. OPENXML 구문에 대한 자세한 내용은 [OPENXML&#40;Transact-SQL&#41;](/sql/t-sql/functions/openxml-transact-sql)을 참조하세요. 다음 예에서는 OPENXML의 메타 속성 지정을 제외한 OPENXML의 모든 측면을 보여 줍니다. OPENXML에서 메타 속성을 지정하는 방법은 [OPENXML에 메타 속성 지정](specify-metaproperties-in-openxml.md)을 참조하세요.  
@@ -41,7 +41,7 @@ ms.locfileid: "63205109"
   
  *flags* 값은 기본 매핑을 제공합니다. *ColPattern* 이 *SchemaDeclaration*에 지정되지 않은 경우 *flags* 에 지정된 매핑이 간주됩니다. *ColPattern* 이 *SchemaDeclaration* 에 지정된 경우에는 *flags*값이 무시됩니다. 지정된 *ColPattern* 은 매핑(특성 중심 또는 요소 중심)은 물론, 오버플로와 소비되지 않은 데이터를 처리할 때의 동작도 결정합니다.  
   
-### <a name="a-executing-a-simple-select-statement-with-openxml"></a>1\. OPENXML에서 단순 SELECT 문 실행  
+### <a name="a-executing-a-simple-select-statement-with-openxml"></a>A. OPENXML에서 단순 SELECT 문 실행  
  이 예의 XML 문서는 <`Customer`>, <`Order`> 및 <`OrderDetail`> 요소로 이루어져 있습니다. OPENXML 문은 XML 문서로부터 두 열(**CustomerID** 및 **ContactName**)로 구성된 행 집합의 고객 정보를 검색합니다.  
   
  먼저 **sp_xml_preparedocument** 저장 프로시저가 문서 핸들을 얻기 위해 호출됩니다. 이 문서 핸들은 OPENXML에 전달됩니다.  
@@ -442,7 +442,7 @@ FROM OPENXML (@docHandle, '/ROOT/Customer')
 EXEC sp_xml_removedocument @docHandle  
 ```  
   
- 결과는 Edge 테이블로 반환됩니다. Edge 테이블에 대해 쿼리를 작성하여 다음과 같은 정보를 얻을 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 결과는 Edge 테이블로 반환됩니다. Edge 테이블에 대해 쿼리를 작성하여 다음과 같은 정보를 얻을 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 -   다음은 문서의 **Customer** 노드 수를 반환하는 쿼리입니다. WITH 절이 지정되지 않았으므로 OPENXML은 Edge 테이블을 반환합니다. SELECT 문은 Edge 테이블을 쿼리합니다.  
   
@@ -523,7 +523,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>8\. 여러 개의 텍스트 노드가 있는 XML 문서 지정  
- XML 문서에 텍스트 노드가 여러 개 있는 경우 *text()* **ColPattern**을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ XML 문서에 텍스트 노드가 여러 개 있는 경우 *text()* **ColPattern**을 포함한 SELECT 문은 전체가 아닌 첫 번째 텍스트 노드만 반환합니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
 ```  
 DECLARE @h int  
@@ -603,7 +603,7 @@ id  lname   xmlname                   OverFlow
   
 -   WITH 절에 있는 열이 형식화된 XML 열이고 XML 인스턴스가 스키마에 맞지 않는 경우 오류가 반환됩니다.  
   
-### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>10\. 다중 값 특성에서 개별 값 검색  
+### <a name="j-retrieving-individual-values-from-multivalued-attributes"></a>10. 다중 값 특성에서 개별 값 검색  
  XML 문서는 다중 값 특성을 가질 수 있습니다. 예를 들어 **IDREFS** 특성은 다중 값일 수 있습니다. XML 문서에서 다중 값 특성 값은 공간으로 값이 구별되는 문자열로 지정됩니다. 다음 XML 문서에서 \<Student> 요소의 **attends** 특성과 \<Class>의 **attendedBy** 특성은 다중 값을 갖고 있습니다. 다중 값 XML 특성에서 개별 값을 검색하고 데이터베이스의 독립된 행에서 각각의 값을 저장하려면 추가 작업이 필요합니다. 다음 예제에서는 처리 과정을 보여 줍니다.  
   
  이 예제 XML 문서는 다음 요소로 구성됩니다.  
@@ -691,7 +691,7 @@ AS
 DECLARE @t varchar(500)  
 DECLARE @id varchar(5)  
   
-/* Temporary Edge table */  
+/* Temporary edge table */  
 SELECT *   
 INTO #TempEdge   
 FROM OPENXML(@xmldoc, @xpath)  
@@ -757,7 +757,7 @@ SELECT * FROM CourseAttendance
 EXECUTE sp_xml_removedocument @h  
 ```  
   
-### <a name="k-retrieving-binary-from-base64-encoded-data-in-xml"></a>11\. XML의 base64로 인코딩된 데이터에서 이진 검색  
+### <a name="k-retrieving-binary-from-base64-encoded-data-in-xml"></a>11. XML의 base64로 인코딩된 데이터에서 이진 검색  
  이진 데이터는 주로 base64 인코딩을 사용하여 XML에 포함됩니다. OPENXML을 사용하여 이 XML을 조각으로 나누면 base64로 인코딩된 데이터를 얻습니다. 이 예에서는 base64로 인코딩된 데이터를 다시 이진으로 변환하는 방법에 대해 설명합니다.  
   
 -   예제 이진 데이터가 포함된 테이블을 만듭니다.  

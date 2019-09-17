@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 0681e82f9e36fd2a2f66bb8b7d3faa2f07a72f13
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8333e805c50f4b8084f8463877c361917097b547
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770940"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745389"
 ---
-# <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor(Transact-SQL)
+# <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   배포자, 배포 데이터베이스, 작업 디렉터리 및 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트 사용자 계정에 대 한 정보를 나열 합니다. 이 저장 프로시저는 게시 데이터베이스를 포함한 모든 데이터베이스의 게시자에서 실행됩니다.  
@@ -105,13 +105,13 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |결과 집합 열|출력 매개 변수|  
 |-----------------------|----------------------|  
-|account|**@account**|  
-|min distrib retention|**@min_distretention**|  
-|max distrib retention|**@max_distretention**|  
-|history retention|**@history_retention**|  
-|history cleanup agent|**@history_cleanupagent**|  
-|distribution cleanup agent|**@distrib_cleanupagent**|  
-|rpc login name|none|  
+|account|**\@계정일**|  
+|min distrib retention|**\@min_distretention**|  
+|max distrib retention|**\@max_distretention**|  
+|history retention|**\@history_retention**|  
+|history cleanup agent|**\@history_cleanupagent**|  
+|distribution cleanup agent|**\@distrib_cleanupagent**|  
+|rpc login name|없음|  
   
  다음 결과 집합 열은 배포자에서 게시가 허용된 게시 액세스 목록에 있는 사용자에게 반환됩니다.  
   
@@ -121,10 +121,10 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |결과 집합 열|출력 매개 변수|  
 |-----------------------|----------------------|  
-|distributor|**@distributor**|  
-|distribution database|**@distribdb**|  
-|rpc server name|**@rpcsrvname**|  
-|publisher type|**@publisher_type**|  
+|distributor|**\@총판**|  
+|distribution database|**\@distribdb**|  
+|rpc server name|**\@rpcsrvname**|  
+|publisher type|**\@publisher_type**|  
   
 ## <a name="see-also"></a>관련 항목  
  [배포자 및 게시자 속성 보기 및 수정](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   

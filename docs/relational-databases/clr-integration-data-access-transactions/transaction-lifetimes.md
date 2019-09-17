@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb076fda-6488-4959-a6a4-7adaccf3f25c
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 759af22d445bb3c67db1f39ecf69dbeee1b666fe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa57b82d0e3f18e4ee1c3d0147935fa00cd5c06a
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902484"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874857"
 ---
 # <a name="transaction-lifetimes"></a>트랜잭션 수명
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "67902484"
   
 -   다른 프로시저에서 시작된 트랜잭션을 커밋하려고 하면 런타임 오류가 발생합니다.  
   
--   다른 프로시저에서 시작된 트랜잭션을 롤백하려고 하면 트랜잭션이 중단되어 다른 파생 작업이 수행되지 않습니다. 트랜잭션은 CLR 코드가 범위를 벗어날 때까지 중단됩니다. 프로시저 내에 오류가 있어 전체 트랜잭션을 종료하려는 경우에는 이 동작이 유용할 수 있습니다.  
+-   같은 프로시저에서 시작 되지 않은 트랜잭션을 롤백하려고 하면 트랜잭션이 응답을 중지 하 게 됩니다. 다른 모든 주는 작업이 발생 하지 않도록 합니다. 트랜잭션은 CLR 코드가 범위를 벗어날 때까지 중단됩니다. 프로시저 내에 오류가 있어 전체 트랜잭션을 종료하려는 경우에는 이 동작이 유용할 수 있습니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [CLR 통합 및 트랜잭션](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  

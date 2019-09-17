@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 27919edee71f55d6d035f81e92cc12aa298b74e5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 14746f5d18db9fbdac3dc6f80d885a8e07e8216a
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811423"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810404"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   경고 및 작업과 함께 사용할 운영자(알림 수신자)를 만듭니다.  
   
@@ -58,7 +58,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @email_address = ] 'email_address'`운영자의 전자 메일 주소입니다. 이 문자열은 전자 메일 시스템으로 직접 전달됩니다. *email_address* 은 **nvarchar (100)** 이며 기본값은 NULL입니다.  
   
- 실제 전자 메일 주소 또는 *email_address*에 대 한 별칭을 지정할 수 있습니다. 이는 아래와 같이 함수의 반환값을 데이터 프레임으로 바로 변환하는 데 사용할 수 있음을 나타냅니다.  
+ 실제 전자 메일 주소 또는 *email_address*에 대 한 별칭을 지정할 수 있습니다. 예를 들어 다음과 같은 가치를 제공해야 합니다.  
   
  '**jdoe**' 또는 ' **jdoe@xyz.com** '  
   

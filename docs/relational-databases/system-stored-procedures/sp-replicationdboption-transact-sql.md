@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac51409db23f4b8eefb3616d5daf5ca43b3ab0f6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b45da78b0a79130cbbbd6c39bee07f237de2ef89
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771249"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878732"
 ---
-# <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption(Transact-SQL)
+# <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption(Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   지정된 데이터베이스에 대한 복제 데이터베이스 옵션을 설정합니다. 이 저장 프로시저는 모든 데이터베이스의 게시자 또는 구독자에서 실행됩니다.  
@@ -66,7 +66,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="remarks"></a>설명  
  **sp_replicationdboption** 는 스냅숏 복제, 트랜잭션 복제 및 병합 복제에 사용 됩니다.  
   
- 이 프로시저는 지정된 옵션에 따라 특정 복제 시스템 테이블, 보안 계정 등을 만들거나 삭제합니다. **Sysdatabases** 시스템 테이블에서 해당 하는 범주 비트를 설정 하 고 필요한 시스템 테이블을 만듭니다.  
+ 이 프로시저는 지정된 옵션에 따라 특정 복제 시스템 테이블, 보안 계정 등을 만들거나 삭제합니다. Is_published 시스템 테이블에서 해당 하는 (transacational 또는 스냅숏 복제), **is_merge_published** (병합 복제) 또는 **is_distributor** 비트를 설정 하 고 **필요한 시스템을** 만듭니다. 표의.  
   
  게시를 해제하려면 게시 데이터베이스가 온라인 상태여야 합니다. 게시 데이터베이스용으로 데이터베이스 스냅샷이 있으면 게시를 해제하기 전에 이 데이터베이스 스냅샷을 먼저 삭제해야 합니다. 데이터베이스 스냅샷은 데이터베이스의 읽기 전용 오프라인 사본이며 복제 스냅샷과 연관되어 있지 않습니다. 자세한 내용은 [데이터베이스 스냅숏&#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)을 참조하세요.  
   
@@ -78,7 +78,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [게시 삭제](../../relational-databases/replication/publish/delete-a-publication.md)   
  [게시 및 배포 해제](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sysdatabases &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.databases&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [복제 저장 프로시저&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

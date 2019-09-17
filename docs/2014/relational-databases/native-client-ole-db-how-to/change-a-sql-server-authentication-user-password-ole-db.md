@@ -10,12 +10,12 @@ ms.assetid: 1ed37ded-5671-46a4-b609-eea886dfae20
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 9bef75196b2106fd72e3f1f4989e70b994508723
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 351ce45247fcc4fb76228ab792a97f4e1f915989
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233066"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874587"
 ---
 # <a name="change-a-sql-server-authentication-user-password-ole-db"></a>SQL Server 인증 사용자 암호 변경(OLE DB)
   이 예제에서는 OLE DB를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인증이 적용되는 사용자 계정의 암호를 변경하는 방법을 보여 줍니다.  
@@ -205,7 +205,7 @@ void DumpErrorInfo (IUnknown* pObjectWithError, REFIID IID_InterfaceWithError, B
    SSERRORINFO * pSSErrorInfo = NULL;  
    OLECHAR * pSSErrorStrings = NULL;  
   
-   // Hard-code an American English locale for the example.  
+   // Hard-code an English (United States) locale for the example.  
    DWORD MYLOCALEID = 0x0409;  
   
    has_sql_errors = 0;  

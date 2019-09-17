@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a1953ecb17dba3894afe15e88690fbb150fb5a3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153446"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878722"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Kubernetes에 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법
 
@@ -120,7 +120,7 @@ azdata bdc create --accept-eula=yes
 1. 배포 구성 프로필의 설정을 사용자 지정하려면 JSON 파일을 편집하는 데 적합한 VS Code 등의 도구에서 배포 구성 파일을 편집할 수 있습니다. 스크립팅된 자동화를 위해 **azdata bdc config** 명령을 사용하여 사용자 지정 배포 프로필을 편집할 수도 있습니다. 예를 들어 다음 명령은 사용자 지정 배포 프로필을 변경하여 배포된 클러스터의 이름을 기본값(**mssql-cluster**)에서 **test-cluster**로 변경합니다.  
 
    ```bash
-   azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
+   azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
    ```
    
    > [!TIP]
@@ -147,7 +147,7 @@ azdata bdc create --accept-eula=yes
 | **CONTROLLER_USERNAME** | 필수 |클러스터 관리자의 사용자 이름입니다. |
 | **CONTROLLER_PASSWORD** | 필수 |클러스터 관리자의 암호입니다. |
 | **MSSQL_SA_PASSWORD** | 필수 |SQL 마스터 인스턴스의 SA 사용자 암호입니다. |
-| **KNOX_PASSWORD** | 필수 |Knox 사용자의 암호입니다. |
+| **KNOX_PASSWORD** | 필수 |Knox **루트** 사용자에 대 한 암호입니다. 참고 기본 인증 설정에서 Knox에 대해 지원 되는 사용자만 **root**입니다.|
 | **ACCEPT_EULA**| `azdata`를 처음 사용하는 경우 필수| 값이 필요하지 않습니다. 환경 변수로 설정하면 SQL Server와 `azdata`에 모두 EULA가 적용됩니다. 환경 변수로 설정하지 않을 경우 `azdata`를 처음 사용할 때 `--accept-eula`를 포함할 수 있습니다.|
 | **DOCKER_USERNAME** | Optional | 프라이빗 리포지토리에 저장된 컨테이너 이미지에 액세스하는 데 사용할 사용자 이름입니다. 빅 데이터 클러스터 배포에서 프라이빗 Docker 리포지토리를 사용하는 방법에 대한 자세한 내용은 [오프라인 배포](deploy-offline.md) 항목을 참조하세요.|
 | **DOCKER_PASSWORD** | Optional |위 프라이빗 리포지토리에 액세스하는 데 사용할 암호입니다. |
@@ -169,6 +169,10 @@ SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
 ```
+
+> [!NOTE]
+> 위의 암호를 사용 하 여 Knox gateway에 **루트** 사용자를 사용 해야 합니다. **root** 는이 기본 인증 (사용자 이름/암호) 설정에서에 대해 지원 되는 유일한 사용자입니다. SQL Server 마스터의 경우 위의 암호와 함께 사용 하도록 프로 비전 된 사용자 이름은 **sa**입니다.
+
 
 환경 변수를 설정한 후에는 `azdata bdc create`를 실행하여 배포를 트리거해야 합니다. 이 예제에서는 위에서 만든 클러스터 구성 프로필을 사용합니다.
 

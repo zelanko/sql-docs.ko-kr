@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9df4f83d319c7d37dd438bcc6a787b4939757e47
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: f5c237910c087131a10660c4793954c850b7791b
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653670"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878694"
 ---
 # <a name="debug-and-diagnose-spark-applications-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-spark-history-server"></a>Spark 기록 서버 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 에서 spark 응용 프로그램 디버그 및 진단
 
@@ -27,7 +27,7 @@ ms.locfileid: "69653670"
 오픈 소스의 Spark 기록 서버 사용자 환경이 작업 그래프의 작업별 데이터 및 대화형 시각화와 빅 데이터 클러스터의 데이터 흐름을 포함하는 정보를 사용하여 향상되었습니다. 
 
 ### <a name="open-the-spark-history-server-web-ui-by-url"></a>URL을 통해 Spark 기록 서버 웹 UI 열기
-다음 URL로 이동하여 Spark 기록 서버를 엽니다. `<Ipaddress>` 및 `<Port>`를 빅 데이터 클러스터 관련 정보로 바꿉니다. 자세한 내용은 다음을 참조하세요. [SQL Server 빅 데이터 클러스터 배포](quickstart-big-data-cluster-deploy.md)
+다음 URL로 이동하여 Spark 기록 서버를 엽니다. `<Ipaddress>` 및 `<Port>`를 빅 데이터 클러스터 관련 정보로 바꿉니다. 기본 인증 (사용자 이름/암호) 빅 데이터 클러스터 설정에서 게이트웨이 (Knox) 끝점에 로그인 하 라는 메시지가 표시 되 면 사용자 **루트** 를 제공 해야 합니다. 자세한 내용은 다음을 참조하세요. [SQL Server 빅 데이터 클러스터 배포](quickstart-big-data-cluster-deploy.md)
 
 ```
 https://<Ipaddress>:<Port>/gateway/default/sparkhistory

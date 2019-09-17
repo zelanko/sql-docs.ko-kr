@@ -1,70 +1,109 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
 title: SQL Server Machine Learning Services (Python 및 R) 설명서
+summary: SQL Server Machine Learning Services를 사용 하 여 관계형 데이터에서 Python 및 R 스크립트를 실행 하는 방법에 대해 알아봅니다. 자습서, 코드 예제, 설치 가이드 및 기타 설명서에서는 방법을 보여 줍니다.
 metadata:
-  title: 'SQL Server Machine Learning Services (Python, R) 설명서-자습서, 빠른 시작 및 설치 가이드 | Microsoft Docs'
-  titleSuffix: ''
-  description: 'SQL Server Machine Learning Services를 사용 하 여 관계형 데이터에서 Python 및 R 스크립트를 실행 하는 방법에 대해 알아봅니다. 자습서, 코드 예제, 설치 가이드 및 기타 설명서에서는 방법을 보여 줍니다.'
+  title: SQL Server Machine Learning Services (Python, R) 설명서-자습서, 빠른 시작 및 설치 가이드
+  description: SQL Server Machine Learning Services를 사용 하 여 관계형 데이터에서 Python 및 R 스크립트를 실행 하는 방법에 대해 알아봅니다. 자습서, 코드 예제, 설치 가이드 및 기타 설명서에서는 방법을 보여 줍니다.
   ms.prod: sql
   ms.technology: machine-learning
   ms.topic: landing-page
   author: dphansen
   ms.author: davidph
-  ms.date: 08/01/2019
-abstract:
-  description: '관계형 데이터에서 Python 및 R 스크립트를 실행 하는 데 SQL Server Machine Learning Services를 사용 하는 방법에 대해 알아봅니다. 자습서, 코드 예제, 설치 가이드 및 기타 설명서에서는 방법을 보여 줍니다.'
-  aside:
-    image:
-      alt: null
-      height: 124
-      src: media/index/video.png
-      width: 250
-    title: '비디오 보기 (3:00)'
-    href: 'https://www.youtube.com/watch?v=ACejZ9optCQ'
-    width: 250
-sections:
-  - title: 5분 빠른 시작
-    items:
-      - type: paragraph
-        text: <a href="install/sql-machine-learning-services-windows-install">Machine Learning Services SQL Server를 설치한</a>후에는 빠른 시작을 사용 하 여 시작할 수 있습니다.
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="tutorials/quickstart-python-run-using-t-sql">Python</a> 또는 <a href="tutorials/quickstart-r-run-using-tsql">R</a> 에서 "Hello 세계" 스크립트를 실행 합니다.
-          - html: <a href="tutorials/quickstart-python-train-score-in-tsql">Python</a> 또는 <a href="tutorials/quickstart-r-create-predictive-model">R</a> 에서 예측 모델 만들기
-  - title: 단계별 자습서
-    items:
-      - type: paragraph
-        text: '데이터를 탐색 하 고, 기능 엔지니어링을 수행 하 고, 모델을 학습 및 배포 하 고, 예측을 수행 하는 방법을 알아봅니다.'
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">T-sql에서 Python 사용</a>: 데이터 탐색, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 만들기 (5 부 시리즈)'
-          - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">T-sql에서 R 사용</a>: 데이터 탐색, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 만들기 (5 부 시리즈)'
-          - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">R 도구에서 Machine Learning Services 사용</a>: 데이터 탐색, 그래프 및 플롯 만들기, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 만들기 (6 부 시리즈)'
-  - title: 솔루션
-    items:
-      - type: paragraph
-        text: SQL Server에서 <a href="tutorials/data-science-scenarios-and-solution-templates">기계 학습 솔루션을 빌드하는 데 도움이</a> 되는 템플릿을 찾아보세요.
-  - title: 참조
-    items:
-      - type: paragraph
-        text: 'SQL Server Machine Learning Services에서 오픈 소스 패키지와 프레임 워크, Microsoft Python 및 R 패키지를 모두 사용 합니다.'
-      - type: list
-        style: unordered
-        items:
-          - html: '<a href="python/ref-py-revoscalepy">Python의 revoscalepy</a>: Python 작업에 대 한 분산 및 병렬 처리: 데이터 변환, 탐색, 시각화, 통계 및 예측 분석'
-          - html: '<a href="python/ref-py-microsoftml">Python의 microsoftml</a>: Python 용 Microsoft AI 알고리즘을 기반으로 하는 함수'
-          - html: '<a href="r/ref-r-revoscaler">R의 RevoScaleR</a>: R 작업에 대 한 분산 및 병렬 처리: 데이터 변환, 탐색, 시각화, 통계 및 예측 분석'
-          - html: '<a href="r/ref-r-microsoftml">R의 MicrosoftML</a>: R에 대 한 Microsoft AI 알고리즘을 기반으로 하는 함수'
-          - html: '<a href="r/ref-r-olapr">R의 Olapr</a>: OLAP 큐브에서 데이터를 가져옵니다.'
-          - html: '<a href="r/ref-r-sqlrutils">R의 sqlRUtils</a>: R 및 T-sql을 캡슐화 하기 위한 도우미 함수'
-  - title: 기타 Machine Learning 기술
-    items:
-      - type: list
-        style: unordered
-        items:
-          - html: <a href="/azure/sql-database/sql-database-machine-learning-services-overview">Azure SQL Database Machine Learning Services<a>
-          - html: <a href="/azure/machine-learning/">Azure Machine Learning</a>
-          - html: <a href="/dotnet/machine-learning/">ML.NET</a>
-          - html: <a href="/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning">Microsoft의 기계 학습 제품은 무엇 인가요?</a>
+  ms.date: 09/12/2019
+  ms.openlocfilehash: e1851799ee4c46c8b639a2f50bce129e672aecfa
+  ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+  ms.translationtype: MT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 09/12/2019
+  ms.locfileid: "70929546"
+landingContent:
+- title: Machine Learning Services 정보
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: SQL Server Machine Learning Services (Python 및 R)는 무엇 인가요?
+      url: what-is-sql-server-machine-learning.md
+  - linkListType: whats-new
+    links:
+    - text: Machine Learning Services의 새로운 기능
+      url: what-s-new-in-sql-server-machine-learning-services.md
+  - linkListType: video
+    links:
+    - text: Machine Learning Services를 사용 하 여 SQL Server에서 R/Python을 실행 하는 방법
+      url: https://www.youtube.com/watch?v=ACejZ9optCQ
+- title: Python 시작
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: SQL Server에서 "Hello 세계" Python 스크립트를 실행 합니다.
+      url: tutorials/quickstart-python-run-using-t-sql.md
+    - text: 입력 및 출력 처리
+      url: tutorials/quickstart-python-inputs-and-outputs.md
+    - text: SQL Server의 Python 데이터 구조
+      url: tutorials/quickstart-python-data-structures.md
+    - text: 첫 번째 모델 학습 및 사용
+      url: tutorials/quickstart-python-train-score-in-tsql.md
+  - linkListType: tutorial
+    links:
+    - text: 선형 회귀를 사용 하 여 ski 임대 예측
+      url: tutorials/python-ski-rental-linear-regression.md
+    - text: K를 사용 하 여 고객 분류 클러스터링 이란 클러스터링
+      url: tutorials/python-clustering-model.md
+- title: R 시작
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: SQL Server에서 "Hello 세계" R 스크립트를 실행 합니다.
+      url: tutorials/quickstart-r-run-using-tsql.md
+    - text: 입력 및 출력 처리
+      url: tutorials/quickstart-r-inputs-and-outputs.md
+    - text: SQL Server의 R 데이터 구조
+      url: tutorials/quickstart-r-data-types-and-objects.md
+    - text: 예측 모델 만들기
+      url: tutorials/quickstart-r-create-predictive-model.md
+  - linkListType: tutorial
+    links:
+    - text: T-SQL에서 R 사용
+      url: tutorials/sqldev-in-database-r-for-sql-developers.md
+    - text: R 도구에서 Machine Learning Services 사용
+      url: tutorials/walkthrough-data-science-end-to-end-walkthrough.md
+- title: Machine Learning Services 설치
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Windows에 Machine Learning Services 설치
+      url: install/sql-machine-learning-services-windows-install.md
+    - text: Linux에 Machine Learning Services 설치
+      url: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
+  - linkListType: how-to-guide
+    links:
+    - text: Python 클라이언트 설정
+      url: python/setup-python-client-tools-sql.md
+    - text: R 클라이언트 설정
+      url: r/set-up-a-data-science-client.md
+- title: 아키텍처 및 보안
+  linkLists:
+  - linkListType: architecture
+    links:
+    - text: 확장성 프레임워크
+      url: concepts/extensibility-framework.md
+    - text: Python 확장
+      url: concepts/extension-python.md
+    - text: R 확장
+      url: concepts/extension-r.md
+  - linkListType: concept
+    links:
+    - text: Externsibility framework의 보안
+      url: /concepts/security.md
+- title: Python 및 R 패키지 관리
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: Python 패키지 정보 가져오기
+      url: package-management/python-package-information.md
+    - text: Sqlmlutils를 사용 하 여 Python 패키지 설치
+      url: package-management/install-additional-python-packages-on-sql-server.md
+    - text: R 패키지 정보 가져오기
+      url: package-management/r-package-information.md
+    - text: Sqlmlutils를 사용 하 여 새 R 패키지 설치
+      url: package-management/install-additional-r-packages-on-sql-server.md

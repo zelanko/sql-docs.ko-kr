@@ -1,5 +1,5 @@
 ---
-title: sys.syslanguages (TRANSACT-SQL) | Microsoft Docs
+title: sys.syslanguages (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68053394"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874874"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "68053394"
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|고유한 언어 ID입니다.|  
 |dateformat|**nchar(3)**|날짜 순서입니다(예: DMY).|  
-|datefirst|**tinyint**|첫 번째 요일을: 1은 월요일, 화요일, 7은 일요일까지 2입니다.|  
+|datefirst|**tinyint**|첫 번째 요일: 월요일의 경우 1, 화요일의 경우 2, 일요일의 경우 7부터 까지입니다.|  
 |upgrade|**int**|시스템에서 사용하도록 예약됩니다.|  
-|name|**sysname**|예를 들어 Français 공식 언어 이름입니다.|  
+|name|**sysname**|공식 언어 이름 (예: Français)입니다.|  
 |alias|**sysname**|대체 언어 이름입니다(예: 프랑스어).|  
 |months|**nvarchar(372)**|1월에서 12월까지의 순서로 쉼표로 구분된 전체 길이의 월 이름 목록이며 각 이름은 20자까지 사용할 수 있습니다.|  
 |shortmonths|**nvarchar(132)**|1월에서 12월까지의 순서로 쉼표로 구분된 짧은 길이의 월 이름 목록이며 각 이름은 9자까지 사용할 수 있습니다.|  
@@ -78,7 +78,7 @@ ms.locfileid: "68053394"
 |에스토니아어|1061|1061|  
 |라트비아어|1062|1062|  
 |리투아니아어|1063|1063|  
-|브라질어|1046|1046|  
+|포르투갈어(브라질)|1046|1046|  
 |중국어(번체)|1028|1028|  
 |한국어|1042|1042|  
 |중국어(간체)|2052|2052|  
@@ -86,7 +86,7 @@ ms.locfileid: "68053394"
 |태국어|1054|1054|  
   
 ## <a name="see-also"></a>관련 항목  
- [호환성 뷰 &#40;TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
- [시스템 테이블을 시스템 뷰로 매핑 &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
+ [호환성 뷰 &#40;transact-sql&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
+ [시스템 테이블을 시스템 뷰로 &#40;매핑 transact-sql&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   
   

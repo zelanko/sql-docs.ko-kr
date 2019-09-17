@@ -5,16 +5,16 @@ description: 이 문서에서는 외부 Azure Data Lake Storage 파일 시스템
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 822c10ad41232d213302e4bb5e328449d9f5f764
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 679fbd63d77e21a84db315cf05adf112d122ad63
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652315"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774213"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 HDFS 계층화를 위한 ADLS Gen2를 탑재하는 방법
 
@@ -33,33 +33,35 @@ ms.locfileid: "69652315"
 
 1. [Data Lake Storage Gen2 기능을 사용하여 스토리지 계정을 만듭니다](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account).
 
-1. 이 스토리지 계정에서 외부 데이터에 사용할 [Blob 컨테이너를 만듭니다](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal).
+1. 외부 데이터에 대 한이 저장소 계정에 [blob 컨테이너/파일 시스템을 만듭니다](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal) .
 
 1. CSV 또는 Parquet 파일을 컨테이너에 업로드합니다. 이 파일이 빅 데이터 클러스터의 HDFS에 탑재되는 외부 HDFS 데이터입니다.
 
 ## <a name="credentials-for-mounting"></a>탑재를 위한 자격 증명
 
-## <a name="use-oauth-credentials-to-mount"></a>OAuth 자격 증명을 사용하여 탑재
+### <a name="use-oauth-credentials-to-mount"></a>OAuth 자격 증명을 사용하여 탑재
 
 OAuth 자격 증명을 사용하여 탑재하려면 아래 단계를 수행해야 합니다.
 
 1. [Azure Portal](https://portal.azure.com)로 이동합니다.
-1. 왼쪽 탐색 창에서 “서비스”로 이동하고 “Azure Active Directory”를 클릭합니다.
-1. 메뉴의 “앱 등록”을 사용하여 “웹 애플리케이션”을 만들고 마법사를 따릅니다. **여기서 만든 이름을 기억해 두세요**. 이 이름을 권한 있는 사용자로 ADLS 계정에 추가해야 합니다.
-1. 웹 애플리케이션을 만든 후에 앱 “설정” 아래의 “키”로 이동합니다.
-1. 키 기간을 선택하고 저장을 클릭합니다. **생성된 키를 저장합니다.**
-1.  앱 등록 페이지로 돌아가서 맨 위의 “엔드포인트” 단추를 클릭합니다. **“토큰 엔드포인트” URL을 적어 둡니다.**
+1. "Azure Active Directory"로 이동 합니다. 왼쪽 탐색 모음에이 서비스가 표시 됩니다.
+1. 오른쪽 탐색 모음에서 "앱 등록"를 선택 하 고 새 등록을 만듭니다.
+1. "웹 응용 프로그램을 만들고 마법사를 따릅니다. **여기에서 만든 앱의 이름을 명심**하세요. 이 이름을 권한 있는 사용자로 ADLS 계정에 추가해야 합니다. 또한 앱을 선택 하는 경우 개요에서 응용 프로그램 클라이언트 ID를 확인 합니다.
+1. 웹 응용 프로그램을 만든 후 "인증서 & 암호"로 이동 하 여 **새 클라이언트 암호** 를 만들고 키 기간을 선택 합니다. 비밀을 **추가** 합니다.
+1.  앱 등록 페이지로 돌아가서 위쪽의 "끝점"을 클릭 합니다. **"OAuth 토큰 끝점 (v2)을 적어둡니다** . URL
 1. 이제 OAuth에 대해 적어 둔 다음 정보를 보유하고 있습니다.
 
-    - 3단계에서 만든 웹앱의 “애플리케이션 ID”
-    - 5단계에서 방금 생성한 키
-    - 6단계의 토큰 엔드포인트
+    - 웹 응용 프로그램의 "응용 프로그램 클라이언트 ID"
+    - 클라이언트 암호
+    - 토큰 끝점
 
 ### <a name="adding-the-service-principal-to-your-adls-account"></a>ADLS 계정에 서비스 주체 추가
 
-1. 포털로 다시 이동하여 ADLS 계정을 열고 왼쪽 메뉴에서 액세스 제어(IAM)를 선택합니다.
-1. “역할 할당 추가”를 선택하고, 위의 3단계에서 만든 이름을 검색합니다. 목록에는 표시되지 않지만 전체 이름을 검색하면 찾을 수 있습니다.
-1. 이제 “Storage Blob 데이터 기여자(미리 보기)” 역할을 추가합니다.
+1. 포털로 다시 이동 하 여 ADLS storage 계정 파일 시스템으로 이동 하 고 왼쪽 메뉴에서 액세스 제어 (IAM)를 선택 합니다.
+1. "역할 할당 추가"를 선택 합니다. 
+1. "저장소 Blob 데이터 참여자" 역할을 선택 합니다.
+1. 위에서 만든 이름을 검색 합니다. 목록에는 표시 되지 않지만 전체 이름을 검색 하는 경우에는 찾을 수 있습니다.
+1. 역할을 저장 합니다.
 
 탑재를 위해 자격 증명을 사용하기 전에 5~10분간 기다립니다.
 
@@ -70,9 +72,9 @@ OAuth 자격 증명을 사용하여 탑재하려면 아래 단계를 수행해�
    ```text
     set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
     fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
-    fs.azure.account.oauth2.client.secret=[<key> from step5 above]
+    fs.azure.account.oauth2.client.endpoint=[token endpoint],
+    fs.azure.account.oauth2.client.id=[Application client ID],
+    fs.azure.account.oauth2.client.secret=[client secret]
    ```
 
 ## <a name="use-access-keys-to-mount"></a>액세스 키를 사용하여 탑재
@@ -137,7 +139,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 
 ## <a name="refresh-a-mount"></a>탑재 새로 고침
 
-다음 예제에서는 탑재를 새로 고칩니다.
+다음 예제에서는 탑재를 새로 고칩니다. 이렇게 새로 고치면 탑재 캐시도 지워집니다.
 
 ```bash
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>

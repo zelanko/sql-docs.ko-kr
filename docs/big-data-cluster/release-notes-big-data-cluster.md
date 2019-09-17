@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160691"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988102"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>SQL Server 빅 데이터 클러스터의 릴리스 정보
 
@@ -37,7 +37,9 @@ ms.locfileid: "70160691"
 
 ### <a name="known-issues"></a>알려진 문제
 
-SQL Server 2019 빅 데이터 클러스터 릴리스 후보 새로 고침 빌드 번호 `15.0.1900.47`는입니다.
+* SQL Server 2019 빅 데이터 클러스터 릴리스 후보 새로 고침 빌드 번호 `15.0.1900.47`는입니다.
+
+* "Kubeadm" 배포 프로필은 위의 빌드 번호를 사용 하는 SQL Server 2019 빅 데이터 클러스터 릴리스 후보에서 지원 되지 않습니다. 대신, Kubeadm 배포에 대해 "kubeadm" 프로필을 사용 합니다.
 
 ## <a id="ctp32"></a>CTP 3.2(7월)
 
@@ -167,7 +169,7 @@ SQL Server 2019 빅 데이터 클러스터 릴리스 후보 새로 고침 빌드
 
 #### <a name="kibana-logs-dashboards"></a>Kibana 로그 대시보드
 
-- Aris CTP 3.0과 3.1 사이에서 Kibana 버전이 6.3.1에서 7.0.1로 업그레이드되었습니다.  이로 인해 Edge 브라우저가 Kibana와 호환되지 않습니다. Edge에서 최신 버전의 Kibana 대시보드를 로드하는 경우 사용자에게 빈 페이지가 표시됩니다. Kibana.rs에 대해 지원되는 브라우저를 보려면 [여기]( https://www.elastic.co/support/matrix#matrix_browse)를 참조하세요. 
+- Aris CTP 3.0과 3.1 사이에서 Kibana 버전이 6.3.1에서 7.0.1로 업그레이드되었습니다.  그러면 Microsoft Edge 브라우저가 Kibana와 호환 되지 않습니다. 사용자는 Microsoft Edge에서 Kibana 대시보드의 현재 버전을 로드할 때 빈 페이지를 표시 합니다. Kibana.rs에 대해 지원되는 브라우저를 보려면 [여기]( https://www.elastic.co/support/matrix#matrix_browse)를 참조하세요. 
 
 
 ## <a id="ctp30"></a> CTP 3.0(5월)
@@ -368,7 +370,7 @@ SQL Server 2019 빅 데이터 클러스터 릴리스 후보 새로 고침 빌드
 | Spark에서 TensorFlow를 사용하여 딥 러닝을 실행하기 위한 GPU 지원 지침. | [GPU 지원이 포함된 빅 데이터 클러스터를 배포하고 TensorFlow를 실행](spark-gpu-tensorflow.md)합니다. |
 | **SqlDataPool** 및 **SqlStoragePool** 데이터 원본은 더 이상 기본적으로 생성되지 않습니다. | 필요에 따라 수동으로 만듭니다. [알려진 문제](#externaltablesctp24)를 참조하세요. |
 | `INSERT INTO SELECT`가 데이터 풀을 지원합니다. | 예제를 보려면 [ 자습서: Transact-SQL을 사용하여 SQL Server 데이터 풀에 데이터 수집](tutorial-data-pool-ingest-sql.md)을 참조하세요. |
-| `FORCE SCALEOUTEXECUTION` 및 `DISABLE SCALEOUTEXECUTION` 옵션. | 외부 테이블에 대한 쿼리에 컴퓨팅 풀을 강제로 사용하거나 사용하지 않도록 설정합니다. `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` )을 입력합니다. |
+| `FORCE SCALEOUTEXECUTION` 및 `DISABLE SCALEOUTEXECUTION` 옵션. | 외부 테이블에 대한 쿼리에 컴퓨팅 풀을 강제로 사용하거나 사용하지 않도록 설정합니다. 예를 들어, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`을 입력합니다. |
 | AKS 배포 권장 사항을 업데이트합니다. | AKS에서 빅 데이터 클러스터를 평가할 때 이제 **Standard_L8s** 크기의 단일 노드를 사용하는 것이 좋습니다. |
 | Spark 런타임을 Spark 런타임 2.4로 업그레이드합니다. | |
 

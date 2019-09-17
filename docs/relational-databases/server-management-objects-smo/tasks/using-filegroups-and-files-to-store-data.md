@@ -1,5 +1,5 @@
 ---
-title: 파일 그룹 및 데이터를 저장할 파일을 사용 하 여 | Microsoft Docs
+title: 파일 그룹 및 파일을 사용 하 여 데이터 저장 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/06/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ helpviewer_keywords:
 - files [SMO], about files
 - storage [SMO]
 ms.assetid: 7e2327ce-e1a6-4904-83d1-0944b24a7b43
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 82c248d89e89838e93d46940804cb145636a13fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5fefe8f2a129d92b10c685e81a89079128c8c0a6
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68030035"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70911234"
 ---
 # <a name="using-filegroups-and-files-to-store-data"></a>파일 그룹 및 파일을 사용하여 데이터 저장
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68030035"
  자동으로 생성된 모든 데이터베이스에는 "Primary"라는 파일 그룹과 데이터베이스와 같은 이름의 데이터 파일이 있습니다. 추가 파일과 그룹을 컬렉션에 추가할 수 있습니다.  
   
 ## <a name="examples"></a>예  
- 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual C 만들기&#35; Visual Studio.NET에서 SMO 프로젝트](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)합니다.  
+ 다음 코드 예제를 사용하려면 애플리케이션을 만들 프로그래밍 환경, 프로그래밍 템플릿 및 프로그래밍 언어를 선택해야 합니다. 자세한 내용은 [Visual Studio .net에서 Visual C&#35; SMO 프로젝트 만들기](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md)를 참조 하세요.  
   
 ## <a name="adding-filegroups-and-datafiles-to-a-database-in-visual-basic"></a>Visual Basic에서 데이터베이스에 파일 그룹 및 데이터 파일 추가  
  주 파일 그룹 및 데이터 파일이 기본 속성 값으로 자동으로 생성됩니다. 코드 예제는 사용자가 사용할 수 있는 몇 가지 속성 값을 지정합니다. 그렇지 않으면 기본 속성 값이 사용됩니다.  
