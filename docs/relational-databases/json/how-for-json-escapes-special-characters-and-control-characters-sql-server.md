@@ -12,14 +12,15 @@ ms.assetid: 4ba90025-5a09-4f0a-836a-54c886324530
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac718603c639fcbc8af7cb168b2aa131840c75ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 508a50443e039fa77f1190c5a00b6ffdbf93379a
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909382"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910819"
 ---
 # <a name="how-for-json-escapes-special-characters-and-control-characters-sql-server"></a>FOR JSON이 특수 문자 및 제어 문자를 이스케이프 처리하는 방법(SQL Server)
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   이 항목에서는 SQL Server **SELECT**의 **FOR JSON** 절이 특수 문자를 이스케이프 처리하고 JSON 출력에서 제어 문자를 표시하는 방법에 대해 설명합니다.  
@@ -33,7 +34,7 @@ ms.locfileid: "67909382"
 |**특수 문자**|**이스케이프 처리된 출력**|  
 |---------------------------|--------------------------|  
 |따옴표(")|\\"|  
-|백슬래시(\\)|\\\|  
+|백슬래시(\\)|\\\\|  
 |슬래시(/)|\\/|  
 |백스페이스|\b|  
 |용지 공급|\f|  

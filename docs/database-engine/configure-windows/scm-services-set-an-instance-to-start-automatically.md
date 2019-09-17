@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aa2b6bde-e76d-4fea-a560-54a63745d9b1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 28c13ad423cb8ba01e91c7d8810723538ec41eae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fa56e918238d3f6b5309e923f899ce00b2ab5749
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68025653"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212423"
 ---
 # <a name="scm-services---set-an-instance-to-start-automatically"></a>SCM 서비스 - 인스턴스 자동 시작 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "68025653"
   
 3.  세부 정보 창에서 자동으로 시작할 인스턴스의 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **SQL Server \<***instancename***> 속성** 대화 상자에서 **시작 모드**를 **자동**으로 설정합니다.  
+4.  **SQL Server \<** _instancename_ **> 속성** 대화 상자에서 **시작 모드**를 **자동**으로 설정합니다.  
   
 5.  **확인**을 클릭한 다음 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 구성 관리자를 닫습니다.  
   

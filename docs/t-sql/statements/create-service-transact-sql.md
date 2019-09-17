@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91ad9771c9133dc3194f25fa530bd3ba458f865a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 761a04baca38ee1301c8f51d8b69564f409fac1e
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117118"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745392"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   새 서비스를 만듭니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)] 서비스는 특정 태스크나 작업 집합의 이름입니다. [!INCLUDE[ssSB](../../includes/sssb-md.md)]에서는 이 서비스 이름을 사용하여 메시지를 라우팅하고 데이터베이스 내의 올바른 큐에 메시지를 전달하고 대화에 대한 계약을 적용합니다.  
   
@@ -55,7 +55,7 @@ CREATE SERVICE service_name
  AUTHORIZATION *owner_name*  
  서비스 소유자를 지정된 데이터베이스 사용자 또는 역할로 설정합니다. 현재 사용자가 **dbo** 또는 **sa**일 경우 *owner_name*은 유효한 사용자 또는 역할의 이름일 수 있습니다. 그렇지 않으면 *owner_name*은 현재 사용자 이름, 현재 사용자가 권한을 가장한 사용자의 이름, 현재 사용자가 속해 있는 역할 이름 중 하나여야 합니다.  
   
- ON QUEUE [ _schema_name_ **.** ] *queue_name*  
+ ON QUEUE [ _schema_name_**.** ] *queue_name*  
  서비스에 대한 메시지를 받는 큐를 지정합니다. 이 큐는 서비스와 같은 데이터베이스에 있어야 합니다. *schema_name*을 지정하지 않으면 스키마는 문을 실행하는 사용자의 기본 스키마가 됩니다.  
   
  *contract_name*  
@@ -80,7 +80,7 @@ CREATE SERVICE service_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-service-with-one-contract"></a>1\. 하나의 계약이 있는 서비스 만들기  
+### <a name="a-creating-a-service-with-one-contract"></a>1. 하나의 계약이 있는 서비스 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 스키마의 `ExpenseQueue` 큐에 `dbo` 서비스를 만듭니다. 이 서비스를 대상으로 하는 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 계약을 준수해야 합니다.  
   
 ```sql  
@@ -89,7 +89,7 @@ CREATE SERVICE [//Adventure-Works.com/Expenses]
     ([//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-### <a name="b-creating-a-service-with-multiple-contracts"></a>2\. 여러 계약이 있는 서비스 만들기  
+### <a name="b-creating-a-service-with-multiple-contracts"></a>2. 여러 계약이 있는 서비스 만들기  
  다음 예에서는 `//Adventure-Works.com/Expenses` 큐에 `ExpenseQueue` 서비스를 만듭니다. 이 서비스를 대상으로 하는 대화는 `//Adventure-Works.com/Expenses/ExpenseSubmission` 또는 `//Adventure-Works.com/Expenses/ExpenseProcessing` 계약을 준수해야 합니다.  
   
 ```sql  

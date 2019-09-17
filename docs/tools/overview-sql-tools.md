@@ -1,7 +1,8 @@
 ---
-title: SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse에 대 한 SQL 도구 및 유틸리티 | Microsoft Docs
+title: SQL Server, Azure SQL (Azure sql 데이터베이스, Azure SQL 관리 되는 인스턴스, SQL 가상 컴퓨터) 및 Azure SQL data warehouse 용 SQL 쿼리 및 관리 도구 | Microsoft Docs
+description: SQL Server, Azure SQL (azure sql database, Azure SQL 관리 되는 인스턴스, SQL 가상 컴퓨터) 및 Azure SQL data warehouse 용 SQL 쿼리 및 관리 도구
 ms.custom: ''
-ms.date: 11/19/2018
+ms.date: 09/11/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,27 +12,29 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe249e4df9c33fcbb292fc93f218e16ae111b0bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 56ed7a0cf53a026b470c90c36b37da95f02ac5bc
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105664"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913573"
 ---
-# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse에 대 한 SQL 도구 및 유틸리티
+# <a name="sql-query-and-management-tools-for-sql-server-azure-sql-azure-sql-database-azure-sql-managed-instance-sql-virtual-machines-and-azure-sql-data-warehouse"></a>SQL Server, Azure SQL (azure sql database, Azure SQL 관리 되는 인스턴스, SQL 가상 컴퓨터) 및 Azure SQL data warehouse 용 SQL 쿼리 및 관리 도구
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 데이터베이스를 관리 (쿼리, 모니터링 등) 하려면 도구가 필요 합니다. 데이터베이스가 클라우드, Windows 또는 [Linux](../linux/sql-server-linux-overview.md)에서 실행 될 수 있는 동안에는 도구를 데이터베이스와 동일한 플랫폼에서 실행할 필요가 없습니다. 
 
 사용할 수 있는 많은 데이터베이스 도구가 있으므로이 문서에서는 SQL 데이터베이스 작업에 사용할 수 있는 몇 가지 도구에 대 한 설명과 포인터를 제공 합니다. 필요한 도구를 결정 하는 데 도움이 필요한 경우 [어떤 도구를 사용 해야 하나요?](#which-tool-should-i-choose)를 참조 하세요.
 
+추가 정보를 제공 하 고 도구를 다운로드 하려면 다음 표의 도구 열에서 링크를 선택 합니다. SQL Server를 다운로드 하려면 [SQL Server 설치](../database-engine/install-windows/install-sql-server.md)를 참조 하세요. 
+
 ## <a name="gui-tools-to-manage-databases"></a>데이터베이스를 관리 하는 GUI 도구  
 
-다음은 주 GUI (그래픽 사용자 인터페이스) 도구입니다.
+다음 도구는 GUI (그래픽 사용자 인터페이스)를 제공 합니다.
 
 | 도구 | 설명 | 실행 |
 |:--|:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]는 실행 되는 모든 데이터베이스를 관리 하는 데 사용 되는 무료 경량 도구입니다. 이 미리 보기 릴리스는 확장 된 Transact-sql 편집기를 비롯 한 데이터베이스 관리 기능과 데이터베이스의 작동 상태에 대 한 사용자 지정 가능한 정보를 제공 합니다. | **Windows, macos 및 Linux에서 실행 됩니다. [!INCLUDE[name-sos](../includes/name-sos-short.md)]**|
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]는 실행 되는 모든 데이터베이스를 관리 하는 데 사용 되는 무료 경량 도구입니다. 이 미리 보기 릴리스는 확장 된 Transact-sql 편집기를 비롯 한 데이터베이스 관리 기능과 데이터베이스의 작동 상태에 대 한 사용자 지정 가능한 정보를 제공 합니다. | **[!INCLUDE[name-sos](../includes/name-sos-short.md)]은(는) Windows, macOS 및 Linux에서 실행됩니다.** .|
 | [SSMS(SQL Server Management Studio)](../ssms/download-sql-server-management-studio-ssms.md) | SSMS (SQL Server Management Studio)를 사용 하 여 SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse를 쿼리, 디자인 및 관리할 수 있습니다. | **SSMS는 Windows에서 실행됩니다.**|
 | [SSDT(SQL Server Data Tools)](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse를 위한 강력한 개발 환경으로 Visual Studio를 전환 합니다.| **SSDT는 Windows에서 실행됩니다**.|
 | [Visual Studio Code](https://code.visualstudio.com/)| Visual Studio Code를 설치한 후 Microsoft SQL Server, Azure SQL Database 및 SQL Data Warehouse를 개발 하기 위한 [mssql 확장](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql) 을 설치 합니다.| **Visual Studio Code는 Windows, macOS 및 Linux에서 실행**됩니다.|

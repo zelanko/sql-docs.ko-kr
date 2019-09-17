@@ -13,19 +13,19 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6a8a5955d56d635a56899653b7cd2bd98b4924ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee5e7fd6511a624b05b4d6c7d03c1f2dcd288054
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134437"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228436"
 ---
 # <a name="common-errors-with-database-mail"></a>일반적인 데이터베이스 메일 오류 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 이 문서에서는 데이터베이스 메일에서 발생하는 몇 가지 일반적인 오류와 그 솔루션에 대해 설명합니다.
 
-## <a name="could-not-find-stored-procedure-spsenddbmail"></a>'sp_send_dbmail' 저장 프로시저를 찾을 수 없음
+## <a name="could-not-find-stored-procedure-sp_send_dbmail"></a>'sp_send_dbmail' 저장 프로시저를 찾을 수 없음
 [sp_send_dbmail](../system-stored-procedures/sp-send-dbmail-transact-sql.md) 저장 프로시저는 msdb 데이터베이스에 설치됩니다. msdb 데이터베이스에서 **sp_send_dbmail**을 실행하거나 저장 프로시저 이름의 세 부분을 모두 지정해야 합니다.
 
 예:
@@ -48,7 +48,7 @@ EXEC dbo.sp_send_dbmail ...
 
 프로필에 대한 권한을 확인하려면 프로필 이름으로 저장 프로시저 [sysmail_help_principalprofile_sp(Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md)를 실행합니다. 저장 프로시저 [sysmail_add_principalprofile_sp(Transact-SQL)](../system-stored-procedures/sysmail-help-principalprofile-sp-transact-sql.md) 또는 [데이터베이스 메일 구성 마법사](configure-database-mail.md)를 사용하여 msdb 사용자 또는 그룹에 프로필 액세스 권한을 부여합니다.
 
-## <a name="permission-denied-on-spsenddbmail"></a>sp_send_dbmail에 대해 권한 거부됨
+## <a name="permission-denied-on-sp_send_dbmail"></a>sp_send_dbmail에 대해 권한 거부됨
 
 이 항목에서는 데이터베이스 메일 보내기를 시도하는 사용자가 sp_send_dbmail을 실행할 권한이 없음을 나타내는 오류 메시지를 받은 경우의 문제 해결 방법을 설명합니다.
 
@@ -68,7 +68,7 @@ GO
 ```
 자세한 내용은 [sp_addrolemember](../system-stored-procedures/sp-addrolemember-transact-sql.md) 및 [sp_droprolemember](../system-stored-procedures/sp-droprolemember-transact-sql.md)를 참조하세요.
 
-## <a name="database-mail-queued-no-entries-in-sysmaileventlog-or-windows-application-event-log"></a>데이터베이스 메일이 큐에서 대기하고 sysmail_event_log 또는 Windows 애플리케이션 이벤트 로그에 항목이 없음 
+## <a name="database-mail-queued-no-entries-in-sysmail_event_log-or-windows-application-event-log"></a>데이터베이스 메일이 큐에서 대기하고 sysmail_event_log 또는 Windows 애플리케이션 이벤트 로그에 항목이 없음 
 
 데이터베이스 메일은 Service Broker를 사용하여 이메일 메시지를 큐에 보냅니다. 데이터베이스 메일이 중지되었거나 **msdb** 데이터베이스에서 Service Broker 메시지 배달이 활성화되지 않은 경우, 데이터베이스 메일은 데이터베이스 큐에 메시지를 보내기는 하지만 배달할 수는 없습니다. 이 경우 Service Broker 메시지는 Service Broker 메일 큐에 남아 있습니다. Service Broker가 외부 프로그램을 활성화하지 않으므로 **sysmail_event_log**에 로그 항목이 없으며 **sysmail_allitems** 및 관련 뷰의 항목 상태도 업데이트되지 않습니다.
 

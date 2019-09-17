@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: df489ecd-deee-465c-a26a-6d1bef6d7b66
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 13306a16233195f4af686a5d9f8b68b6d1ccb2f9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a3aa589de707e6f2edaac83db40ba908bf7177ae
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997877"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212350"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>예: 인증서를 사용하여 데이터베이스 미러링 설정(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -262,7 +262,7 @@ ms.locfileid: "67997877"
     ```  
   
     > [!NOTE]  
-    >  자동 장애 조치를 지원하는 보호 우선 모드에서 실행하려면 트랜잭션 보안을 FULL(기본 설정)로 설정한 채로 두고 두 번째 SET PARTNER **'***partner_server***'** 문을 실행한 후 즉시 미러링 모니터를 추가합니다. 먼저 아웃바운드 및 인바운드 연결에 대한 미러링 모니터를 구성해야 합니다.  
+    >  자동 장애 조치를 지원하는 보호 우선 모드에서 실행하려면 트랜잭션 보안을 FULL(기본 설정)로 설정한 채로 두고 두 번째 SET PARTNER **'** _partner_server_ **'** 문을 실행한 후 즉시 미러링 모니터를 추가합니다. 먼저 아웃바운드 및 인바운드 연결에 대한 미러링 모니터를 구성해야 합니다.  
   
  [&#91;주요 예제&#93;](#ExampleH2)  
   

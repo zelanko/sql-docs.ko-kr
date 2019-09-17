@@ -24,15 +24,15 @@ helpviewer_keywords:
 ms.assetid: 4da8a855-33c0-43b2-a49d-527487cb3b5c
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: bec815372c77e8433fdfdaeedc2cc95a41901738
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6cb2cf4bae18604d77c8644f18efd32702b8197
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084411"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211299"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   다음에 받을 메시지에 대한 대화 그룹 식별자를 반환하고 해당 메시지를 포함하는 대화에 대한 대화 그룹을 잠급니다. 대화 그룹 식별자는 메시지 자체를 받기 전에 대화 상태 정보를 검색하는 데 사용할 수 있습니다.  
   

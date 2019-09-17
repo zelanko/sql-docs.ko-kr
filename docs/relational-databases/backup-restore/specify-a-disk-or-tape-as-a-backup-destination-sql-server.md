@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e4eca65f3a5bde99adc49e8019080e6a59b496b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3119e81a462ff163f1ee3d0df0ee334a718ddba5
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041424"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280947"
 ---
 # <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>디스크 또는 테이프를 백업 대상으로 지정(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +68,7 @@ ms.locfileid: "68041424"
   
 4.  **일반** 페이지의 **대상** 섹션에서 **디스크** 또는 **테이프**를 선택합니다. **추가**를 클릭하면 단일 미디어 세트를 포함하는 디스크나 테이프 드라이브에 대한 경로를 64개까지 선택할 수 있습니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     To remove a backup destination, select it and click **Remove**. To view the contents of a backup destination, select it and click **Contents**.  
+   백업 대상을 제거하려면 해당 대상을 선택한 다음 **제거**를 클릭합니다. 백업 대상의 내용을 보려면 선택한 다음 **내용**을 클릭합니다.  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

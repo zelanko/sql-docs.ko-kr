@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: dd5d5003970f87d39148a058ca02befaf006775c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027300"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874635"
 ---
 # <a name="understanding-ssl-support"></a>SSL 지원 이해
 
@@ -28,7 +28,7 @@ ms.locfileid: "69027300"
 > [!NOTE]  
 > SSL 연결이 성공하려면 **serverName**에 전달된 값이 서버 인증서의 SAN(주체 대체 이름)에 있는 CN(일반 이름) 또는 DNS 이름과 정확히 일치하는지 확인합니다.  
 >
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대해 SSL을 구성하는 방법에 대한 자세한 내용은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 온라인 설명서의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 연결 암호화 항목을 참조하세요.  
+> 에 대해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSL을 구성 하는 방법에 대 한 자세한 내용은 [데이터베이스 엔진에 암호화 연결 사용](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조 하세요.  
   
 ## <a name="remarks"></a>Remarks
 

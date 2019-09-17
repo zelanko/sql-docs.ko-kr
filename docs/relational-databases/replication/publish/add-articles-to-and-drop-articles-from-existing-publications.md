@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: b47a6c5822cb52e29c7d6f486b75aa2d6be4a63a
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: c81a1c6c99a9756cfeb7c52bdef89aa907150e1b
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764769"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846620"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>기존 게시에 대한 아티클 추가 및 삭제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68764769"
  아티클을 추가하려면 아티클을 게시에 추가하고, 게시에 대한 새 스냅샷을 만들고, 구독을 동기화하여 새 아티클에 대한 스키마 및 데이터를 적용해야 합니다.  
   
 > [!NOTE]
->  병합 게시에 아티클을 추가하고 기존 아티클이 새 아티클에 종속된 경우 **@processing_order** 및 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 의 [@processing_order](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)매개 변수를 사용하여 두 아티클의 처리 순서를 지정해야 합니다. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가할 경우에는 **sp_addmergearticle** 의 **@processing_order** 의 **sp_changemergearticle**을 지정하고 **sp_changemergearticle** 의 **@processing_order** 의 **@processing_order**를 지정하며 **@article** 을 참조하십시오. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
+>  병합 게시에 아티클을 추가하고 기존 아티클이 새 아티클에 종속된 경우 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 및 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)의 **\@processing_order** 매개 변수를 사용하여 두 아티클의 처리 순서를 지정해야 합니다. 다음과 같은 시나리오를 고려해 보십시오. 테이블을 게시하지만 테이블이 참조하는 함수는 게시하지 않는 경우가 있습니다. 함수를 게시하지 않을 경우 구독자에서 테이블을 만들 수 없습니다. 게시에 함수를 추가할 경우에는 **sp_addmergearticle**의 **\@processing_order** 매개 변수에 값 **1**을 지정하고 **sp_changemergearticle**의 **\@processing_order** 매개 변수에 값 **2**를 지정하며 **\@article** 매개 변수에는 테이블 이름을 지정합니다. 이 처리 순서를 사용하면 함수에 종속된 테이블이 생성되기 전에 해당 함수가 구독자에서 생성됩니다. 함수 번호가 테이블 번호보다 낮은 경우 각 아티클에 다른 번호를 사용할 수 있습니다.  
   
 1.  다음 방법 중 하나를 사용하여 하나 이상의 아티클을 추가합니다.  
   

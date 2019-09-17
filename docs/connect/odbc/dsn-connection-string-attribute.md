@@ -10,10 +10,10 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/02/2019
 ms.locfileid: "68702788"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN 및 연결 문자열 키워드 및 특성
@@ -124,7 +124,7 @@ ms.locfileid: "68702788"
 
 데이터 원본을 설명하는 데 사용됩니다.
 
-### <a name="sqlcoptssansioem"></a>SQL_COPT_SS_ANSI_OEM
+### <a name="sql_copt_ss_ansi_oem"></a>SQL_COPT_SS_ANSI_OEM
 
 ANSI에서 OEM으로 데이터 변환을 제어합니다. 
 
@@ -133,7 +133,7 @@ ANSI에서 OEM으로 데이터 변환을 제어합니다.
 | SQL_AO_OFF | (기본값) 변환이 수행되지 않습니다. |
 | SQL_AO_ON | 변환이 수행됩니다. |
 
-### <a name="sqlcoptssfallbackconnect"></a>SQL_COPT_SS_FALLBACK_CONNECT
+### <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
 SQL Server 대체 연결의 사용을 제어합니다. 이 값은 더 이상 지원되지 않습니다.
 
@@ -146,7 +146,7 @@ SQL Server 대체 연결의 사용을 제어합니다. 이 값은 더 이상 지
 
 ## <a name="new-connection-string-keywords-and-connection-attributes"></a>새 연결 문자열 키워드 및 연결 특성
 
-###  <a name="authentication---sqlcoptssauthentication"></a>Authentication - SQL_COPT_SS_AUTHENTICATION
+###  <a name="authentication---sql_copt_ss_authentication"></a>Authentication - SQL_COPT_SS_AUTHENTICATION
 
 SQL Server에 연결할 때 사용할 인증 모드를 설정합니다. 자세한 내용은 [Azure Active Directory 사용](using-azure-active-directory.md)을 참조하세요.
 
@@ -163,7 +163,7 @@ SQL Server에 연결할 때 사용할 인증 모드를 설정합니다. 자세�
 > [!NOTE]
 > `Authentication` 키워드 또는 특성을 사용하는 경우 명시적으로 `Encrypt` 설정을 연결 문자열 / DSN / 연결 특성의 원하는 값으로 설정합니다. 자세한 내용은 [SQL Server Native Client에서 연결 문자열 키워드 사용](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)을 참조하세요.
 
-### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
+### <a name="columnencryption---sql_copt_ss_column_encryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
 투명한 열 암호화(Always Encrypted)를 제어합니다. 자세한 내용은 [Always Encrypted 사용(ODBC)](using-always-encrypted-with-the-odbc-driver.md)을 참조하세요.
 
@@ -173,7 +173,7 @@ SQL Server에 연결할 때 사용할 인증 모드를 설정합니다. 자세�
 |사용 안 함|SQL_CE_DISABLED|(기본값) Always Encrypted를 사용하지 않도록 설정합니다.|
 | |SQL_CE_RESULTSETONLY|암호 해독만 사용하도록 설정합니다(결과 및 반환 값).|
 
-### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
+### <a name="transparentnetworkipresolution---sql_copt_ss_tnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
 
 다시 연결 시도가 더 빨리 실행될 수 있도록 MultiSubnetFailover와 상호 작용하는 투명한 네트워크 IP 확인 기능을 제어합니다. 자세한 내용은 [투명한 네트워크 IP 확인 사용](using-transparent-network-ip-resolution.md)을 참조하세요.
 
@@ -191,7 +191,7 @@ SQL Server 2012 이상에 연결할 때 메타데이터에 대한 SET FMTONLY �
 |아니오|(기본값) 사용 가능한 경우 메타데이터에 sp_describe_first_result_set을 사용합니다. |
 |예| 메타데이터에 SET FMTONLY를 사용합니다. |
 
-### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
+### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
 인증에 Azure Active Directory 액세스 토큰을 사용하도록 허용합니다. 자세한 내용은 [Azure Active Directory 사용](using-azure-active-directory.md)을 참조하세요.
 
@@ -200,7 +200,7 @@ SQL Server 2012 이상에 연결할 때 메타데이터에 대한 SET FMTONLY �
 | NULL | (기본값) 액세스 토큰을 제공하지 않습니다. |
 | ACCESSTOKEN* | 액세스 토큰 포인터입니다. |
 
-### <a name="sqlcoptsscekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
+### <a name="sql_copt_ss_cekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
 로드된 키 저장소 공급자 라이브러리와 통신합니다. 투명한 열 암호화(Always Encrypted) 제어를 참조하세요. 이 특성에는 기본값이 없습니다. 자세한 내용은 [사용자 지정 키 저장소 공급자](custom-keystore-providers.md)을 참조하세요.
 
@@ -208,7 +208,7 @@ SQL Server 2012 이상에 연결할 때 메타데이터에 대한 SET FMTONLY �
 |-|-|
 | CEKEYSTOREDATA * | 키 저장소 라이브러리에 대한 통신 데이터 구조 |
 
-### <a name="sqlcoptsscekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
+### <a name="sql_copt_ss_cekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
 Always Encrypted용 키 저장소 공급자 라이브러리를 로드하거나 로드된 키 저장소 공급자 라이브러리의 이름을 검색합니다. 자세한 내용은 [사용자 지정 키 저장소 공급자](custom-keystore-providers.md)을 참조하세요. 이 특성에는 기본값이 없습니다.
 
@@ -216,7 +216,7 @@ Always Encrypted용 키 저장소 공급자 라이브러리를 로드하거나 �
 |-|-|
 | char * | 키 저장소 공급자 라이브러리에 대한 경로 |
 
-### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
+### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
 XA 규정 준수 TP(트랜잭션 프로세서)에서 XA 트랜잭션을 사용하도록 설정하려면 애플리케이션에서 SQL_COPT_SS_ENLIST_IN_XA 및 `XACALLPARAM` 개체 포인터를 사용하여 **SQLSetConnectAttr**을 호출해야 합니다. 이 옵션은 Windows, Linux(17.3 이상) 및 Mac에서 지원됩니다.
 ```

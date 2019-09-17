@@ -11,12 +11,12 @@ ms.assetid: 21e6d74f-711f-40e6-a8b7-85f832c5d4b3
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7031157b993fbe1605e7ee2aee7d479a848f21bd
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 679260f7c8a7f50eb9a3f638f3547c82ac488cef
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903592"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238747"
 ---
 # <a name="creating-a-system-versioned-temporal-table"></a>시스템 버전 임시 테이블 만들기
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -34,18 +34,17 @@ ms.locfileid: "69903592"
   
 ```  
 CREATE TABLE Department   
-(    
-     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
-   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)     
+(
+    DeptID INT NOT NULL PRIMARY KEY CLUSTERED  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL  
+  , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)     
 )    
-WITH (SYSTEM_VERSIONING = ON)   
-;  
-```  
+WITH (SYSTEM_VERSIONING = ON);
+```
   
 ### <a name="important-remarks"></a>중요한 주의 사항  
   
@@ -57,7 +56,7 @@ WITH (SYSTEM_VERSIONING = ON)
   
 -   익명 기록 테이블은 자동으로 현재 또는 temporal 테이블과 같은 스키마에 생성됩니다.  
   
--   익명 기록 테이블 이름의 형식은 다음과 같습니다. *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]* . 접미사는 선택 사항이며 테이블 이름의 첫 번째 부분이 고유하지 않은 경우에만 추가됩니다.  
+-   익명 기록 테이블 이름의 형식은 다음과 같습니다. *MSSQL_TemporalHistoryFor_<current_temporal_table_object_id>_[suffix]*. 접미사는 선택 사항이며 테이블 이름의 첫 번째 부분이 고유하지 않은 경우에만 추가됩니다.  
   
 -   기록 테이블은 rowstore 테이블로 생성됩니다. 페이지 압축은 가능하면 적용되며, 그렇지 않으면 기록 테이블을 압축하지 않습니다. 예를 들어 스파스 열과 같은 일부 테이블 구성은 압축을 허용하지 않습니다.  
   
@@ -68,22 +67,18 @@ WITH (SYSTEM_VERSIONING = ON)
 ## <a name="creating-a-temporal-table-with-a-default-history-table"></a>기본 기록 테이블이 포함된 temporal 테이블 만들기  
  이름 지정은 제어하면서 시스템이 기본 구성을 사용하여 기록 테이블을 만들도록 하려는 경우 기본 기록 테이블이 포함된 temporal 테이블을 만들면 편리합니다. 아래 예제에서는 기록 테이블의 이름을 명시적으로 정의하고 시스템 버전 관리를 사용하도록 설정한 상태에서 새 테이블을 만듭니다.  
   
-```  
+```
 CREATE TABLE Department   
-(    
-     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL  
-   , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)     
-)   
-WITH    
-   (   
-      SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory)   
-   )   
-;  
+(
+    DeptID INT NOT NULL PRIMARY KEY CLUSTERED
+  , DeptName VARCHAR(50) NOT NULL
+  , ManagerID INT NULL
+  , ParentDeptID INT NULL
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL
+  , PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
+)
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
 ```  
   
 ### <a name="important-remarks"></a>중요한 주의 사항  
@@ -99,34 +94,35 @@ WITH
  사용자 정의 기록 테이블이 포함된 temporal 테이블 만들기는 특정 스토리지 옵션 및 추가 인덱스를 가진 기록 테이블을 지정하려는 경우에 편리한 옵션입니다. 아래 예제에서는 생성될 temporal 테이블과 정렬된 스키마를 가진 사용자 정의 기록 테이블을 만듭니다. 이 사용자 정의 기록 테이블에 대해 포인트 조회를 위해 클러스터형 columnstore 인덱스 및 추가 비클러스터형 rowstore(Btree) 인덱스를 만듭니다. 이 사용자 정의 기록 테이블이 생성된 후 사용자 정의 기록 테이블을 기본 기록 테이블로 지정하는 시스템 버전 temporal 테이블이 생성됩니다.  
   
 ```  
-CREATE TABLE DepartmentHistory   
-(    
-     DeptID int NOT NULL  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 NOT NULL  
-   , SysEndTime datetime2 NOT NULL   
-);   
-GO   
-CREATE CLUSTERED COLUMNSTORE INDEX IX_DepartmentHistory   
-   ON DepartmentHistory;   
-CREATE NONCLUSTERED INDEX IX_DepartmentHistory_ID_PERIOD_COLUMNS   
-   ON DepartmentHistory (SysEndTime, SysStartTime, DeptID);   
-GO   
+CREATE TABLE DepartmentHistory
+(
+    DeptID INT NOT NULL
+  , DeptName VARCHAR(50) NOT NULL
+  , ManagerID INT NULL
+  , ParentDeptID INT NULL
+  , SysStartTime DATETIME2 NOT NULL
+  , SysEndTime DATETIME2 NOT NULL
+);
+GO
+
+CREATE CLUSTERED COLUMNSTORE INDEX IX_DepartmentHistory
+    ON DepartmentHistory;
+CREATE NONCLUSTERED INDEX IX_DepartmentHistory_ID_PERIOD_COLUMNS
+    ON DepartmentHistory (SysEndTime, SysStartTime, DeptID);
+GO
+
 CREATE TABLE Department   
-(    
+(
     DeptID int NOT NULL PRIMARY KEY CLUSTERED  
-   , DeptName varchar(50) NOT NULL  
-   , ManagerID INT  NULL  
-   , ParentDeptID int NULL  
-   , SysStartTime datetime2 GENERATED ALWAYS AS ROW START NOT NULL  
-   , SysEndTime datetime2 GENERATED ALWAYS AS ROW END NOT NULL     
-   , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)      
-)    
-WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))   
-;  
-```  
+  , DeptName VARCHAR(50) NOT NULL  
+  , ManagerID INT NULL  
+  , ParentDeptID INT NULL  
+  , SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START NOT NULL  
+  , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END NOT NULL     
+  , PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)      
+)
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory));
+```
   
 ### <a name="important-remarks"></a>중요한 주의 사항  
   
@@ -155,18 +151,19 @@ WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.DepartmentHistory))
   
 ```  
 CREATE SCHEMA History;   
-GO   
+GO
+
+ALTER TABLE InsurancePolicy
+    ADD   
+        SysStartTime DATETIME2(0) GENERATED ALWAYS AS ROW START HIDDEN
+            CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()
+      , SysEndTime DATETIME2(0) GENERATED ALWAYS AS ROW END HIDDEN
+            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2 (0), '9999-12-31 23:59:59'),
+        PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);
+GO
+
 ALTER TABLE InsurancePolicy   
-   ADD   
-      SysStartTime datetime2(0) GENERATED ALWAYS AS ROW START HIDDEN    
-           CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()  
-      , SysEndTime datetime2(0) GENERATED ALWAYS AS ROW END HIDDEN    
-           CONSTRAINT DF_SysEnd DEFAULT CONVERT(datetime2 (0), '9999-12-31 23:59:59'),   
-      PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);   
-GO   
-ALTER TABLE InsurancePolicy   
-   SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.InsurancePolicy))   
-;  
+    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.InsurancePolicy));
 ```  
   
 #### <a name="important-remarks"></a>중요한 주의 사항  
@@ -195,10 +192,9 @@ ALTER TABLE ProjectTaskCurrent ALTER COLUMN [ValidTo] datetime2 NOT NULL;
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [ValidFrom] datetime2 NOT NULL;   
 ALTER TABLE ProjectTaskHistory ALTER COLUMN [ValidTo] datetime2 NOT NULL;   
 ALTER TABLE ProjectTaskCurrent   
-   ADD PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])   
+    ADD PERIOD FOR SYSTEM_TIME ([ValidFrom], [ValidTo])   
 ALTER TABLE ProjectTaskCurrent   
-   SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON))   
-;  
+    SET (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.ProjectTaskHistory, DATA_CONSISTENCY_CHECK = ON));
 ```  
   
 #### <a name="important-remarks"></a>중요한 주의 사항  
@@ -222,5 +218,3 @@ ALTER TABLE ProjectTaskCurrent
  [시스템 버전 임시 테이블의 데이터 쿼리](../../relational-databases/tables/querying-data-in-a-system-versioned-temporal-table.md)   
  [시스템 버전 임시 테이블의 스키마 변경](../../relational-databases/tables/changing-the-schema-of-a-system-versioned-temporal-table.md)   
  [시스템 버전 임시 테이블에서 시스템 버전 관리 중지](../../relational-databases/tables/stopping-system-versioning-on-a-system-versioned-temporal-table.md)  
-  
-  

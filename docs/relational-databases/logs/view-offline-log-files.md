@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edd83dd3b96b80052c9920bd2cd6486273b4a1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 39a5ab4ab7159c0915994e555271ba0246f3f896
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083912"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212311"
 ---
 # <a name="view-offline-log-files"></a>오프라인 로그 파일 보기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ ms.locfileid: "68083912"
   
     3.  원격 컴퓨터 이름을 입력하고 **확인**을 클릭합니다.  
   
-3.  **WMI 컨트롤(로컬)** 또는 **WMI 컨트롤(***RemoteComputerName***)** 을 마우스 오른쪽 단추로 클릭한 다음, **속성**을 클릭합니다.  
+3.  **WMI 컨트롤(로컬)** 또는 **WMI 컨트롤(** _RemoteComputerName_ **)** 을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
 4.  **WMI 컨트롤 속성** 대화 상자에서 **보안** 탭을 클릭합니다.  
   

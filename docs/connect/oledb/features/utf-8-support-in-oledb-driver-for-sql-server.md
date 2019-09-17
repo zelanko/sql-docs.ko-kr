@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: d092a534d973de246d3e3c61e67bce9d87d45fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb596365f284a141b5e57bfc8601427fe603d73d
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775174"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70392015"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>SQL Server용 OLE DB 드라이버에서 UTF-8 지원
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "64775174"
 SQL Server용 Microsoft OLE DB 드라이버(버전 18.2.1)에서 UTF-8 인코딩을 위한 지원을 추가합니다. SQL Server UTF-8 지원에 대한 자세한 내용은 다음을 참조하세요.
 - [데이터 정렬 및 유니코드 지원](../../../relational-databases/collations/collation-and-unicode-support.md)
 - [UTF-8 지원](#ctp23)
+
+> [!IMPORTANT]
+> Microsoft OLE DB Driver for SQL Server는 [Getacp](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp) 함수를 사용 하 여 DBTYPE_STR 입력 버퍼의 인코딩을 확인 합니다. GetACP가 UTF-8 인코딩을 반환 하는 시나리오는 지원 되지 않습니다. 버퍼가 유니코드 데이터를 저장 해야 하는 경우에는 버퍼 데이터 형식을 DBTYPE_WSTR (UTF-16 인코딩)로 설정 해야 합니다.
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>UTF-8로 인코딩된 CHAR 또는 VARCHAR 열로의 데이터 삽입
 삽입하기 위해 입력 매개 변수 버퍼를 만들 때 버퍼는 [DBBINDING 구조체](https://go.microsoft.com/fwlink/?linkid=2071182)의 배열을 사용하여 설명합니다. 각 DBBINDING 구조체는 단일 매개 변수를 소비자의 버퍼에 연결하고 데이터 값의 길이 및 형식과 같은 정보를 포함합니다. CHAR 형식의 입력 매개 변수 버퍼는 DBBINDING 구조체의 *wType*을 DBTYPE_STR로 설정해야 합니다. WCHAR 형식의 입력 매개 변수 버퍼는 DBBINDING 구조체의 *wType*을 DBTYPE_WSTR로 설정해야 합니다.

@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a035483534ec11e2c26c8a35b654d4ee55a025cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8396b30122a393ea3532113e261a908d8079432a
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134458"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228487"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>데이터베이스 메일 메시지 및 이벤트 로그 보관을 처리하는 SQL Server 에이전트 작업 만들기
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   데이터베이스 메일 및 첨부 파일의 복사본은 데이터베이스 메일 이벤트 로그와 함께 **msdb** 테이블에 보관됩니다. 정기적으로 테이블의 크기를 축소하고 더 이상 필요하지 않은 메시지와 이벤트를 보관할 수 있습니다. 다음 절차에서는 SQL Server 에이전트 작업을 만들어 이 프로세스를 자동화합니다.  
   
 -   **시작하기 전에:**  , [필수 구성 요소](#Prerequisites), [권장 사항](#Recommendations), [권한](#Permissions)  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: fc461f1653c0d135df49384c0ad8706082fdff8d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cd893c9556b1dd45e2206ce73740e253af98ed3
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937621"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278765"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 
 ## <a name="examples"></a>예
     
-### <a name="a-restore-a-full-database-backup"></a>1\. 전체 데이터베이스 백업 복원   
+### <a name="a-restore-a-full-database-backup"></a>1. 전체 데이터베이스 백업 복원   
     
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
     
@@ -65,7 +65,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
     
     -   **디바이스**    
     
-         찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. 
+         찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. 
          
         -   **백업 디바이스 선택** 대화 상자  
         
@@ -108,39 +108,39 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
     
 8. 고급 옵션을 보거나 선택하려면 상황에 따라 **옵션** 페이지의 **복원 옵션** 패널에서 다음 옵션 중 하나를 선택할 수 있습니다.    
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    1.  **WITH** 옵션(필요 없음):    
+   1. **WITH** 옵션(필요 없음):    
     
-        -   **기존 데이터베이스 덮어쓰기(WITH REPLACE)**    
+     - **기존 데이터베이스 덮어쓰기(WITH REPLACE)**    
     
-        -   **복제 설정 유지(WITH KEEP_REPLICATION)**    
+     - **복제 설정 유지(WITH KEEP_REPLICATION)**    
     
-        -   **복원된 데이터베이스에 대한 액세스 제한(WITH RESTRICTED_USER)**    
+     - **복원된 데이터베이스에 대한 액세스 제한(WITH RESTRICTED_USER)**    
     
-    2.  **복구 상태** 상자에 대한 옵션을 선택합니다. 이 상자에서 복원 작업 후 데이터베이스의 상태를 확인합니다.    
+   2. **복구 상태** 상자에 대한 옵션을 선택합니다. 이 상자에서 복원 작업 후 데이터베이스의 상태를 확인합니다.    
     
-        -   **RESTORE WITH RECOVERY** 는 커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용 준비가 된 상태로 유지하는 기본 동작입니다. 추가 트랜잭션 로그를 복원할 수 없습니다. 필요한 모든 백업을 지금 복원하는 경우 이 옵션을 선택합니다.    
+     - **RESTORE WITH RECOVERY** 는 커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용 준비가 된 상태로 유지하는 기본 동작입니다. 추가 트랜잭션 로그를 복원할 수 없습니다. 필요한 모든 백업을 지금 복원하는 경우 이 옵션을 선택합니다.    
     
-        -   **RESTORE WITH NORECOVERY** 는 데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 데이터베이스는 복구할 때까지 사용할 수 없습니다.    
+     - **RESTORE WITH NORECOVERY** 는 데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 데이터베이스는 복구할 때까지 사용할 수 없습니다.    
     
-        -   **RESTORE WITH STANDBY** 는 읽기 전용 모드로 데이터베이스를 유지합니다. 이 옵션은 커밋되지 않은 트랜잭션의 실행을 취소하지만, 복구 결과를 되돌릴 수 있도록 실행 취소 동작을 대기 파일에 저장합니다.    
+     - **RESTORE WITH STANDBY** 는 읽기 전용 모드로 데이터베이스를 유지합니다. 이 옵션은 커밋되지 않은 트랜잭션의 실행을 취소하지만, 복구 결과를 되돌릴 수 있도록 실행 취소 동작을 대기 파일에 저장합니다.    
     
-    3.  **복원 전에 비상 로그 백업을 수행합니다.** 모든 복원 시나리오에서 비상 로그 백업이 필요한 것은 아닙니다.  자세한 내용은 **비상 로그 백업(SQL Server)** 에서 [비상 로그 백업이 필요한 시나리오](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)를 참조하세요.
-    4.  데이터베이스에 대한 활성 연결이 있으면 복원 작업이 실패할 수 있습니다. **기존 연결 닫기** 옵션을 선택하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 와 데이터베이스 간의 모든 활성 연결을 닫습니다. 이 확인란을 선택하면 복원 작업을 수행하기 전에 데이터베이스가 단일 사용자 모드로 설정되고 복원 작업이 완료될 때 데이터베이스가 다중 사용자 모드로 설정됩니다.    
-    5.  각 복원 작업 사이에 확인 메시지를 표시하려면 **각 백업 복원 전에 확인** 을 선택합니다. 데이터베이스가 크고 복원 작업의 상태를 모니터링하려는 경우가 아니면 이 옵션은 일반적으로 필요하지 않습니다.    
+   3. **복원 전에 비상 로그 백업을 수행합니다.** 모든 복원 시나리오에서 비상 로그 백업이 필요한 것은 아닙니다.  자세한 내용은 **비상 로그 백업(SQL Server)** 에서 [비상 로그 백업이 필요한 시나리오](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)를 참조하세요.
+  
+   4. 데이터베이스에 대한 활성 연결이 있으면 복원 작업이 실패할 수 있습니다. **기존 연결 닫기** 옵션을 선택하여 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 와 데이터베이스 간의 모든 활성 연결을 닫습니다. 이 확인란을 선택하면 복원 작업을 수행하기 전에 데이터베이스가 단일 사용자 모드로 설정되고 복원 작업이 완료될 때 데이터베이스가 다중 사용자 모드로 설정됩니다.    
+  
+   5. 각 복원 작업 사이에 확인 메시지를 표시하려면 **각 백업 복원 전에 확인** 을 선택합니다. 데이터베이스가 크고 복원 작업의 상태를 모니터링하려는 경우가 아니면 이 옵션은 일반적으로 필요하지 않습니다.    
     
 이러한 복원 옵션에 대한 자세한 내용은 [데이터베이스 복원&#40;옵션 페이지&#41;](../../relational-databases/backup-restore/restore-database-options-page.md)을 참조하세요.    
     
 9. [!INCLUDE[clickOK](../../includes/clickok-md.md)] 
 
-### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>2\. 기존 데이터베이스에 이전 디스크 백업 복원
+### <a name="b-restore-an-earlier-disk-backup-over-an-existing-database"></a>2. 기존 데이터베이스에 이전 디스크 백업 복원
 다음 예제에서는 `Sales`의 이전 디스크 백업을 복원하고 기존 `Sales` 데이터베이스를 덮어씁니다.
 
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
 2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
 3.  **일반** 페이지의 **원본** 섹션에서 **디바이스** 를 선택합니다.
-4.  찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 백업으로 이동합니다. 디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
+4.  찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 백업으로 이동합니다. 디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
 5.  **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
 6.  **페이지 선택** 창에서 **옵션** 을 클릭합니다.
 7.  **복원 옵션** 섹션에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)** 를 선택합니다.
@@ -168,7 +168,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
 2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
 3.  **일반** 페이지의 **원본** 섹션에서 **디바이스** 를 선택합니다.
-4.  찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 백업으로 이동합니다. 디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
+4.  찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 백업으로 이동합니다. 디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
 5.  **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
 6.  **대상** 섹션의 **데이터베이스** 상자에는 복원할 데이터베이스의 이름이 자동으로 채워집니다. 데이터베이스의 이름을 변경하려면 **데이터베이스** 상자에 새 이름을 입력합니다.
 7.  **페이지 선택** 창에서 **옵션** 을 클릭합니다.
@@ -190,7 +190,7 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 1.  **개체 탐색기**에서 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 의 인스턴스에 연결한 다음 해당 인스턴스를 확장합니다.  
 2.  **데이터베이스** 를 마우스 오른쪽 단추로 클릭하고 **데이터베이스 복원...** 을 선택합니다.  
 3.  **일반** 페이지의 **원본** 섹션에서 **디바이스** 를 선택합니다.
-4.  찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 전체 백업 및 관련된 모든 트랜잭션 로그 백업으로 이동합니다.  디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
+4.  찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **추가** 를 클릭하고 전체 백업 및 관련된 모든 트랜잭션 로그 백업으로 이동합니다.  디스크 백업 파일을 선택한 후 **확인** 을 클릭합니다.
 5.  **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
 6.  **대상** 섹션에서 **시간대** 를 클릭하여 **백업 시간대** 대화 상자에 액세스하고 복구 동작을 중지할 특정 시점을 수동으로 선택합니다.
 7.  **특정 날짜 및 시간**을 선택합니다.  
@@ -212,29 +212,29 @@ Microsoft Azure Blob Storage 서비스에서 SQL Server 복원 방법에 대한 
 
 #### <a name="e1---restore-a-striped-backup-over-an-existing-database-and-a-shared-access-signature-exists"></a>E1.   기존 데이터베이스에 스트라이프 백업을 복원하고 공유 액세스 서명이 있습니다.
 읽기, 쓰기, 삭제 및 나열 권한이 있는 저장된 액세스 정책을 만들었습니다.  저장된 액세스 정책과 연결된 공유 액세스 서명을 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`컨테이너에 대해 만들었습니다.  SQL Server 자격 증명이 이미 있는 경우 단계는 대부분 동일합니다.  `Sales` 데이터베이스가 현재 서버에 있습니다.  백업 파일은 `Sales_stripe1of2_20160601.bak` 및 `Sales_stripe2of2_20160601.bak`입니다.  
-*  
-7.  SQL Server 자격 증명이 이미 있으면 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` Azure Storage 컨테이너: **드롭다운 목록에서** 를 선택하고, 없으면 컨테이너 이름 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 수동으로 입력합니다. 
-8.  **공유 액세스 서명:** 서식 있는 텍스트 상자에 공유 액세스 서명을 입력합니다.
-9.  **확인** 을 클릭하면 **Microsoft Azure에서 백업 파일 찾기** 대화 상자가 열립니다.
-10. **컨테이너** 를 확장하고 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`로 이동합니다.
-11. Ctrl 키를 누른 채 `Sales_stripe1of2_20160601.bak` 및 `Sales_stripe2of2_20160601.bak`파일을 선택합니다.
-12. **확인**을 클릭합니다.
-13. **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
-14. **페이지 선택** 창에서 **옵션** 을 클릭합니다.
-15. **복원 옵션** 섹션에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)** 를 선택합니다.
-16. **비상 로그 백업** 섹션에서 **복원 전 비상 로그 백업 수행**의 선택을 취소합니다.
-17. **서버 연결** 섹션에서 **대상 데이터베이스에 대한 기존 연결 닫기**를 선택합니다.
-18. **확인**을 클릭합니다.
+
+1.  SQL Server 자격 증명이 이미 있으면 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` Azure Storage 컨테이너: **드롭다운 목록에서** 를 선택하고, 없으면 컨테이너 이름 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`를 수동으로 입력합니다. 
+1. **공유 액세스 서명:** 서식 있는 텍스트 상자에 공유 액세스 서명을 입력합니다.
+1. **확인** 을 클릭하면 **Microsoft Azure에서 백업 파일 찾기** 대화 상자가 열립니다.
+1. **컨테이너** 를 확장하고 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`로 이동합니다.
+1. Ctrl 키를 누른 채 `Sales_stripe1of2_20160601.bak` 및 `Sales_stripe2of2_20160601.bak`파일을 선택합니다.
+1. **확인**을 클릭합니다.
+1. **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
+1. **페이지 선택** 창에서 **옵션** 을 클릭합니다.
+1. **복원 옵션** 섹션에서 **기존 데이터베이스 덮어쓰기(WITH REPLACE)** 를 선택합니다.
+1. **비상 로그 백업** 섹션에서 **복원 전 비상 로그 백업 수행**의 선택을 취소합니다.
+1. **서버 연결** 섹션에서 **대상 데이터베이스에 대한 기존 연결 닫기**를 선택합니다.
+1. **확인**을 클릭합니다.
 
 #### <a name="e2---a-shared-access-signature-does-not-exist"></a>E2.   공유 액세스 서명이 없는 경우
 이 예제에서는 `Sales` 데이터베이스가 현재 서버에 없습니다.
-7.  **추가** 를 클릭하면 **Microsoft 구독에 연결** 대화 상자가 열립니다.  
-8.  **Microsoft 구독에 연결** 대화 상자를 완성하고 **확인** 을 클릭하여 **백업 파일 위치 선택** 대화 상자로 돌아갑니다.  자세한 내용은 [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) 을 참조하세요.
-9.  **백업 파일 위치 선택** 대화 상자에서 **확인** 을 클릭하면 **Microsoft Azure에서 백업 파일 찾기** 대화 상자가 열립니다.
-10. **컨테이너** 를 확장하고 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`로 이동합니다.
-11. 백업 파일을 선택한 다음 **확인**을 클릭합니다.
-12. **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
-13. **확인**을 클릭합니다.
+1. **추가** 를 클릭하면 **Microsoft 구독에 연결** 대화 상자가 열립니다.  
+1. **Microsoft 구독에 연결** 대화 상자를 완성하고 **확인** 을 클릭하여 **백업 파일 위치 선택** 대화 상자로 돌아갑니다.  자세한 내용은 [Microsoft Azure 구독에 연결](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md) 을 참조하세요.
+1. **백업 파일 위치 선택** 대화 상자에서 **확인** 을 클릭하면 **Microsoft Azure에서 백업 파일 찾기** 대화 상자가 열립니다.
+1. **컨테이너** 를 확장하고 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`로 이동합니다.
+1. 백업 파일을 선택한 다음 **확인**을 클릭합니다.
+1. **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.
+1. **확인**을 클릭합니다.
 
 #### <a name="f-restore-local-backup-to-microsoft-azure-storage-url"></a>F. Microsoft Azure Storage(URL)에 로컬 백업 복원
 `Sales` 데이터베이스가 `https://mystorageaccount.blob.core.windows.net/myfirstcontainer` 에 있는 백업에서 Microsoft Azure Storage 컨테이너 `E:\MSSQL\BAK`로 복원됩니다.  Azure 컨테이너에 대한 SQL Server 자격 증명이 이미 생성되었습니다.  **복원** 태스크를 통해 만들 수 없으므로 대상 컨테이너에 대한 SQL Server 자격 증명이 이미 있어야 합니다.  `Sales` 데이터베이스가 현재 서버에 없습니다.

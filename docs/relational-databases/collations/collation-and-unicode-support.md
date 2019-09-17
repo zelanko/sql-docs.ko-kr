@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5807b8ae9c3b074068d0422a91b1dc1711c4067a
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 1bda35d5c393eaa1e4503cb487ed19b281686364
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68471040"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908413"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -105,7 +105,11 @@ Windows 데이터 정렬은 관련 Windows 시스템 로캘을 기반으로 문�
 서버에 대한 데이터 정렬을 변경하는 경우를 제외하고는 시스템 데이터베이스의 데이터 정렬을 변경할 수 없습니다.    
     
 데이터베이스 데이터 정렬은 데이터베이스의 모든 메타데이터에 사용되며 데이터베이스에 사용되는 모든 문자열 열, 임시 개체, 변수 이름 및 기타 모든 문자열의 기본값이 됩니다. 사용자 데이터베이스의 데이터 정렬을 변경할 경우 데이터베이스 액세스 임시 테이블에서 쿼리할 때 데이터 정렬 충돌이 발생할 수 있습니다. 임시 테이블은 항상 **tempdb** 시스템 데이터베이스에 저장되므로, 인스턴스에 대한 데이터 정렬을 사용합니다. 사용자 데이터베이스와 **tempdb** 간의 문자 데이터를 비교하는 쿼리를 실행할 경우 문자 데이터를 평가할 때 데이터 정렬이 충돌하면 쿼리가 실패할 수 있습니다. 쿼리에 COLLATE 절을 지정하여 이 문제를 해결할 수 있습니다. 자세한 내용은 [COLLATE&#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)를 참조하세요.    
-    
+
+> [!NOTE]
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 데이터베이스를 만든 후에는 데이터 정렬을 변경할 수 없습니다.
+
+
 #### <a name="column-level-collations"></a>열 수준 데이터 정렬    
 테이블을 만들거나 변경할 때 COLLATE 절을 사용하여 각 문자열 열에 대한 데이터 정렬을 지정할 수 있습니다. 데이터 정렬을 지정하지 않으면 열에 데이터베이스의 기본 데이터 정렬이 할당됩니다.    
     

@@ -1,10 +1,7 @@
 ---
 title: 쿼리 및 텍스트 편집기(SQL Server Management Studio) | Microsoft 문서
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.technology: scripting
-ms.reviewer: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - Query Editor [SQL Server Management Studio]
@@ -24,23 +21,29 @@ helpviewer_keywords:
 ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 03/14/2017
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e83ad20b181e96320bc051db7b719ae4827dde9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d8958849239c730aa7f687cd12a559de158d5e1
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266027"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988155"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>쿼리 및 텍스트 편집기(SQL Server Management Studio)
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 편집기 중 하나를 사용하여 [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX 또는 XML/A 스크립트를 대화식으로 편집 및 테스트하거나 XML 또는 일반 텍스트 파일을 편집할 수 있습니다. 각 편집기에서는 키워드에 색을 지정하고 구문 및 사용법 오류를 검사하는 언어 관련 서비스가 지원됩니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기에는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 코드 문제를 수정하는 데 도움이 되는 [!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거가 포함되어 있습니다.  
   
-## <a name="sql-server-management-studio-editors"></a>SQL Server Management Studio 편집기  
+## <a name="sql-server-management-studio-editors"></a>SQL Server Management Studio 편집기
+
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 의 네 가지 편집기는 공통 아키텍처를 공유합니다. 텍스트 편집기는 기본 수준의 기능을 구현하며 텍스트 파일의 기본 편집기로 사용될 수 있습니다. 다른 세 개의 편집기인 쿼리 편집기는 SQL Server에서 지원되는 언어 중 하나의 구문을 정의하는 언어 서비스를 포함하여 이 기본 기능을 확장합니다. 또한 쿼리 편집기는 IntelliSense 및 디버깅 같은 편집기 기능을 다양한 수준으로 지원합니다. 쿼리 편집기에는 Transact-SQL 및 XQuery 문을 포함하는 스크립트를 작성하는 데 사용되는 데이터베이스 엔진 쿼리 편집기, MDX 언어용 MDX 편집기, DMX 언어용 DMX 편집기 및 XML for Analysis 언어용 XML/A 편집기가 포함됩니다.  
   
-## <a name="common-components"></a>공통 구성 요소  
+## <a name="common-components"></a>공통 구성 요소
+
  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] 의 모든 편집기는 다음 구성 요소를 공유합니다.  
   
  **코드 창**  
@@ -60,7 +63,8 @@ ms.locfileid: "68266027"
  **자동 줄 바꿈**  
  긴 줄의 텍스트나 코드를 여러 줄로 표시하여 해당 줄의 모든 텍스트를 볼 수 있게 합니다. 자동 줄 바꿈은 텍스트가 실행 또는 출력 시에 표시되는 방법에는 영향을 주지 않습니다. **도구 옵션**, **옵션** 대화 상자의 텍스트 편집기, 모든 언어, 일반 페이지나 특정 편집기 페이지에서 자동 줄 바꿈을 설정할 수 있습니다.  
   
-## <a name="code-editor-components"></a>코드 편집기 구성 요소  
+## <a name="code-editor-components"></a>코드 편집기 구성 요소
+
  코드 편집기에는 텍스트 편집기 및 XML 편집기와 공유되는 기능 이외에 다음과 같은 기능이 포함되어 있습니다.  
   
  **결과**  
@@ -84,7 +88,8 @@ ms.locfileid: "68266027"
  **상태 표시줄**  
  쿼리 편집기가 연결되는 인스턴스와 같이 쿼리 편집기 창과 관련된 시스템 정보를 표시합니다.  
   
-## <a name="database-engine-query-editor-components"></a>데이터베이스 엔진 쿼리 편집기 구성 요소  
+## <a name="database-engine-query-editor-components"></a>데이터베이스 엔진 쿼리 편집기 구성 요소
+
  다음은 데이터베이스 엔진 쿼리 편집기에서만 사용할 수 있는 구성 요소입니다.  
   
  **디버거**  
@@ -130,7 +135,6 @@ ms.locfileid: "68266027"
 |[!INCLUDE[tsql](../../includes/tsql-md.md)] 디버거를 사용하여 코드를 단계별로 처리하고 변수 및 매개 변수 값과 같은 디버깅 정보를 보는 방법에 대해 설명합니다.|[Transact-SQL 디버거](../../relational-databases/scripting/transact-sql-debugger.md)|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)]인스턴스별로 사용자 지정 색을 설정하고 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 쿼리 편집기 창에서 상태 표시줄의 배경색을 설정하는 방법에 대해 설명합니다.|[상태 표시줄&#40;데이터베이스 엔진 쿼리 편집기&#41;](../../relational-databases/scripting/status-bar-database-engine-query-editor.md)|  
   
-## <a name="see-also"></a>참고 항목  
- [SQL Server Management Studio 바로 가기 키](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
-  
-  
+## <a name="next-steps"></a>다음 단계
+
+ [SQL Server Management Studio 바로 가기 키](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)

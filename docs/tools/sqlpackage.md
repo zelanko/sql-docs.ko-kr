@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 89f6139861b971eb6c1f5771bd4ee77cf379f56f
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: a144a3c2eea75a90445ca5a3b13d756f4be4c503
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190378"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774201"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -87,6 +87,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreUserLoginMappings=(BOOLEAN)|사용자와 로그인 간의 관계를 무시할지 여부를 지정합니다.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|추출 중에 사용되는 스키마 모델에 대한 지원 스토리지 유형을 지정합니다.|
 |**/p:**|TableData=(STRING)|데이터가 추출 되는 테이블을 나타냅니다. Schema_name. table_identifier 형식으로 이름 부분을 둘러싼 괄호를 포함 하거나 제외 하 고 테이블 이름을 지정 합니다.|
+|**/p:**| TempDirectoryForTableData = (STRING)|패키지 파일에 기록 되기 전에 테이블 데이터를 버퍼링 하는 데 사용 되는 임시 디렉터리를 지정 합니다.|
 |**/p:**|VerifyExtraction=(BOOLEAN)|추출된 dacpac를 확인할지 여부를 지정합니다.|
 
 ## <a name="publish-parameters-properties-and-sqlcmd-variables"></a>매개 변수, 속성 및 SQLCMD 변수 게시
@@ -149,6 +150,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |**/p:**|CompareUsingTargetCollation=(BOOLEAN)|이 설정은 배포 중 데이터베이스의 데이터 정렬 처리 방법을 지정합니다.기본적으로 원본에서 지정하는 데이터 정렬과 일치하지 않을 경우 대상 데이터베이스의 데이터 정렬이 업데이트됩니다. 이 옵션을 설정하면 대상 데이터베이스(또는 서버)의 데이터 정렬이 사용됩니다.|
 |**/p:**|CreateNewDatabase = (부울)|데이터베이스에 게시할 때 대상 데이터베이스를 업데이트할지 또는 삭제 후 다시 만들지 여부를 지정합니다.|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database 버전을 정의 합니다.|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')|SQLServer에 대해 쿼리를 실행할 때의 데이터베이스 잠금 시간 제한(초)를 지정합니다. 무기한 대기 하려면-1을 사용 합니다.|
 |**/p:**|DatabaseMaximumSize=(INT32)|Azure SQL Database의 최대 크기(GB)를 정의합니다.|
 |**/p:**|DatabaseServiceObjective=(STRING)|“P0” 또는 “S1”과 같은 Azure SQL Database의 성능 수준을 정의합니다.|
 |**/p:**|DeployDatabaseInSingleUserMode=(BOOLEAN)|True인 경우 배포 전에 데이터베이스가 단일 사용자 모드로 설정됩니다.|
@@ -207,6 +209,7 @@ SqlPackage.exe 게시 작업은 원본 데이터베이스의 구조와 일치하
 |**/p:**|IgnoreWithNocheckOnForeignKeys=(BOOLEAN)|데이터베이스에 게시할 때 외래 키의 WITH NOCHECK 절에 대한 값의 차이를 무시할지 또는 업데이트할지를 지정합니다.|
 |**/p:**|IncludeCompositeObjects=(BOOLEAN)|모든 복합 요소를 단일 게시 작업의 일부로 포함합니다.|
 |**/p:**|IncludeTransactionalScripts=(BOOLEAN)|데이터베이스에 게시할 때 가능한 위치에 트랜잭션 문을 사용할지 여부를 지정합니다.|
+|**/p:**|LongRunningCommandTimeout = (INT32)|SQL Server에 대한 쿼리를 실행할 때 장기 명령 시간 제한(초)을 지정합니다. 무기한 대기 하려면 0을 사용 합니다.|
 |**/p:**|NoAlterStatementsToChangeClrTypes=(BOOLEAN)|차이가 있을 경우 ALTER ASSEMBLY 문을 실행하는 대신 게시에서 항상 어셈블리를 삭제하고 다시 만들지를 지정합니다.|
 |**/p:**|PopulateFilesOnFileGroups = (부울 ' True ')|대상 데이터베이스에 새 FileGroup이 만들어질 때 새 파일도 만들어지는지 여부를 지정합니다.|
 |**/p:**|RegisterDataTierApplication=(BOOLEAN)|스키마가 데이터베이스 서버에 등록되었는지 여부를 지정합니다.|
@@ -268,6 +271,7 @@ SqlPackage.exe Export 작업은 SQL Server 또는 Azure SQL Database의 라이�
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server에 대한 쿼리를 실행할 때 명령 시간 제한(초)을 지정합니다.|
 |**/p:**|Storage=({File&#124;Memory} 'File')|추출 중에 사용되는 스키마 모델에 대한 지원 스토리지 유형을 지정합니다.|
 |**/p:**|TableData=(STRING)|데이터가 추출 되는 테이블을 나타냅니다. Schema_name. table_identifier 형식으로 이름 부분을 둘러싼 괄호를 포함 하거나 제외 하 고 테이블 이름을 지정 합니다.|
+|**/p:**|TempDirectoryForTableData = (STRING)|패키지 파일에 기록 되기 전에 테이블 데이터를 버퍼링 하는 데 사용 되는 임시 디렉터리를 지정 합니다.|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|필요한 대상 엔진 버전을 지정합니다. 이는 생성 된 bacpac에서 메모리 최적화 테이블과 같은 V12 기능을 사용 하 여 Azure SQL Database 서버에서 지 원하는 개체를 허용할지 여부에 영향을 줍니다.|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Microsoft Azure SQL Database v12에 대해 지원되는 전체 텍스트 문서 유형을 확인할지 여부를 지정합니다.|
   

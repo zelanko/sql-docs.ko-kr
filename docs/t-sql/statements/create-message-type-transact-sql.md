@@ -28,15 +28,15 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 834a5ba4ee456ad7e9dfd538468b66fe3472cd1f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de98dffe77940c6b8a6b66d0ce1a8b3b7565349d
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006533"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745470"
 ---
 # <a name="create-message-type-transact-sql"></a>CREATE MESSAGE TYPE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   새 메시지 유형을 만듭니다. 메시지 유형은 메시지의 이름과 [!INCLUDE[ssSB](../../includes/sssb-md.md)]가 해당 이름을 가진 메시지에서 수행하는 유효성 검사를 정의합니다. 대화의 양 측면에 동일한 메시지 유형을 정의해야 합니다.  
   
@@ -93,7 +93,7 @@ CREATE MESSAGE TYPE message_type_name
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>1\. 올바른 형식의 XML을 포함하는 메시지 유형 만들기  
+### <a name="a-creating-a-message-type-containing-well-formed-xml"></a>1. 올바른 형식의 XML을 포함하는 메시지 유형 만들기  
  다음 예에서는 올바른 형식의 XML을 포함하는 새로운 메시지 유형을 만듭니다.  
   
 ```  
@@ -102,7 +102,7 @@ CREATE MESSAGE TYPE
   VALIDATION = WELL_FORMED_XML ;     
 ```  
   
-### <a name="b-creating-a-message-type-containing-typed-xml"></a>2\. XML 유형을 포함하는 메시지 유형 만들기  
+### <a name="b-creating-a-message-type-containing-typed-xml"></a>2. XML 유형을 포함하는 메시지 유형 만들기  
  다음 예에서는 XML로 인코딩된 경비 보고서에 대한 메시지 유형을 만듭니다. 이 예에서는 간단한 경비 보고서에 대한 스키마를 보유하는 XML 스키마 컬렉션을 만듭니다. 그런 다음 스키마에 대해 메시지의 유효성을 검사하는 새로운 메시지 유형을 만듭니다.  
   
 ```  

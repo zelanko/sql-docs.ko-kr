@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f578ae9dbc60b255959de406999feb8b68171389
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 91bacc4ab4c8876ac49a09b58d1821f1c2853a3c
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476199"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913559"
 ---
-# <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Linux에 SQL Server 2019 Machine Learning Services(R, Python) 설치
+# <a name="install-sql-server-machine-learning-services-r-python-on-linux"></a>Linux에 SQL Server Machine Learning Services(R, Python) 설치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 

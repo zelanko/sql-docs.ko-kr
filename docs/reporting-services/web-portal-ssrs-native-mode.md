@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 58d70878051df627e8dc788e414dc2ab1e88e839
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 42844a8783f5d1e1066667ed828906c0549f84c2
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68221383"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874917"
 ---
 # <a name="the-web-portal-of-a-report-server-ssrs-native-mode"></a>보고서 서버의 웹 포털(SSRS 기본 모드)
 
@@ -51,7 +51,7 @@ Reporting Services 보고서 서버의 웹 포털은 웹 기반 환경입니다.
 새로 설치하는 경우 로컬 관리자에게만 내용 및 설정을 사용할 수 있는 권한이 부여됩니다. 다른 사용자에게 사용 권한을 부여하려면 로컬 관리자가 보고서 서버에 대한 액세스 권한을 제공하는 역할 할당을 만들어야 합니다. 사용자가 이후에 액세스할 수 있는 애플리케이션 페이지 및 태스크는 해당 사용자에 대한 역할 할당에 따라 달라집니다. 자세한 내용은 [사용자에게 보고서 서버에 대한 액세스 권한 부여](security/grant-user-access-to-a-report-server-report-manager.md)를 참조하세요.
 
 > [!NOTE]
-> 서버가 실행 중인 로컬 컴퓨터에서 웹 포털을 탐색하는 경우 이 폴더를 볼 수 없다는 메시지가 표시될 수 있습니다. 이유는 UAC(Universal Access Control) 때문이거나 브라우저를 관리자로 실행하고 있지 않기 때문일 수 있습니다. Edge는 관리자 자격으로 실행할 수 없습니다. Internet Explorer를 사용해야 합니다. 서버를 원격으로 탐색하거나 Internet Explorer를 관리자 자격으로 시작하고 웹 포털을 탐색할 수 있습니다. 웹 포털을 원격에서 사용하려는 경우 계정 내용 관리자에게 폴더에 권한을 부여해야 합니다.  
+> 서버가 실행 중인 로컬 컴퓨터에서 웹 포털을 탐색하는 경우 이 폴더를 볼 수 없다는 메시지가 표시될 수 있습니다. 이유는 UAC(Universal Access Control) 때문이거나 브라우저를 관리자로 실행하고 있지 않기 때문일 수 있습니다. Microsoft Edge를 관리자로 실행할 수 없습니다. Internet Explorer를 사용해야 합니다. 서버를 원격으로 탐색하거나 Internet Explorer를 관리자 자격으로 시작하고 웹 포털을 탐색할 수 있습니다. 웹 포털을 원격에서 사용하려는 경우 계정 내용 관리자에게 폴더에 권한을 부여해야 합니다.  
 
 ## <a name="start-and-use-the-web-portal"></a>웹 포털 시작 및 사용
 

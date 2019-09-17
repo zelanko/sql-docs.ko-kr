@@ -14,12 +14,12 @@ ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e158860b786a7612a31acd629a7b5d5deff203f3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 427367994418ea7e82288541c89b47cc8bb7ea75
+ms.sourcegitcommit: d1bc0dd1ac626ee7034a36b81554258994d72c15
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769481"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70958348"
 ---
 # <a name="sql-server-replication"></a>SQL  Server  복제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ ms.locfileid: "68769481"
   
  트랜잭션 복제는 일반적으로 확장성 및 가용성 향상, 데이터 웨어하우징 및 보고, 여러 사이트의 데이터 통합, 다른 유형의 데이터 통합, 일괄 처리 작업 오프로드 등을 포함하여 높은 처리량이 필요한 서버 간 시나리오에서 사용됩니다. 병합 복제는 주로 데이터 충돌 가능성이 있는 모바일 애플리케이션이나 분산 서버 애플리케이션에 사용됩니다. 일반적인 시나리오에는 모바일 사용자와 데이터 교환, 소비자 POS(Point of Sale) 애플리케이션, 여러 사이트의 데이터 통합 등이 있습니다. 스냅샷 복제는 트랜잭션 및 병합 복제에 초기 데이터 집합을 제공하는 데 사용되며 전체 데이터 새로 고침이 적합한 경우에도 사용할 수 있습니다. 이러한 3가지 복제 유형을 통해 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 는 엔터프라이즈 데이터를 동기화하는 강력하고 유연성 있는 시스템을 제공합니다. SQLCE 3.5 및 SQLCE 4.0에 대한 복제는 [!INCLUDE[win8srv](../../includes/win8srv-md.md)] 및 [!INCLUDE[win8](../../includes/win8-md.md)]에서 지원됩니다.  
 
- 복제 대신 Microsoft Sync Framework를 사용하여 데이터베이스를 동기화할 수도 있습니다. Sync Framework에는 구성 요소뿐 아니라 SQL Server, SQL Server Express, SQL Server Compact, SQL Azure 데이터베이스 간의 동기화를 용이하게 하는 유연하고 직관적인 API를 포함하고 있습니다. 또한 Sync Framework는 SQL Server 데이터베이스와 ADO.NET 호환 기타 데이터베이스 간에 동기화하도록 조정할 수 있는 클래스를 포함합니다. Sync Framework 데이터베이스 동기화 구성 요소에 대한 자세한 설명서는 [데이터베이스 동기화](https://go.microsoft.com/fwlink/?LinkId=209079)를 참조하십시오. Sync Framework에 대한 개요는 [Microsoft Sync Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=209078)를 참조하십시오. Sync Framework와 병합 복제 간의 비교는 [데이터베이스 동기화 개요](https://msdn.microsoft.com/library/bb902818\(SQL.110\).aspx)를 참조하십시오.  
-  
 
 ## <a name="whats-new"></a>새로운 기능 
 - SQL Server 2017은 중요한 새로운 기능을 SQL Server 복제에 도입하지 않았습니다. 

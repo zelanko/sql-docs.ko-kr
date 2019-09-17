@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b5363ab8fe37e67b7efa1aa193e269585064f07e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8412a87703577595f0408de3b9cf26520160fdf
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137444"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228458"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>데이터베이스 메일로 테스트 이메일 보내기  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 테스트 이메일 보내기 대화 상자를 사용하여 특정 프로필을 사용한 메일 보내기 기능을 테스트할 수 있습니다.
 

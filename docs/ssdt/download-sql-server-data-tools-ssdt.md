@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d8e964830e56066ef75a0a2caacbdbc081cdac2
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 7fc8925b4257631561b6b68ed144becbadece639
+ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028940"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383783"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio용 SSDT(SQL Server Data Tools) 다운로드 및 설치
 
@@ -36,7 +36,7 @@ Visual Studio 2019에 대한 라이선스가 이미 있으면 다음을 수행�
 
 Visual Studio 2019에 대한 라이선스가 아직 없으면 다음을 수행합니다.
 
-- [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_content=sqlssdt)를 설치합니다.
+- [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/)를 설치합니다.
 - 필요에 따라 Analysis Services, Integration Services 또는 Reporting Services 확장명을 설치합니다.
 
 ## <a name="changes-in-ssdt-for-visual-studio-2017"></a>Visual Studio 2017용 SSDT의 변경 내용

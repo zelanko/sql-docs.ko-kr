@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d721c796-0397-46a7-901b-1a9a3c3fb385
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: ecc222a9f2c57aa92535d6f2e0c85586a6714108
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b0b681ffb0b045ab5ba59c1a9fd28b3b295431f
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024699"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212315"
 ---
 # <a name="scm-services---change-the-service-startup-account"></a>SCM 서비스 - 서비스 시작 계정 변경
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "68024699"
   
 3.  세부 정보 창에서 서비스 시작 계정을 변경할 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  
   
-4.  **SQL Server \<***instancename***> 속성** 대화 상자에서 **로그온** 탭을 클릭하고 **다음 계정으로 로그온** 계정 유형을 선택합니다.  
+4.  **SQL Server \<** _instancename_ **> 속성** 대화 상자에서 **로그온** 탭을 클릭하고 **다음 계정으로 로그온** 계정 유형을 선택합니다.  
   
 5.  새 서비스 시작 계정을 선택한 다음 **확인**을 클릭합니다.  
   

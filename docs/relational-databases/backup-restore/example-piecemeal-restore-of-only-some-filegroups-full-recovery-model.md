@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: bced4b54-e819-472b-b784-c72e14e72a0b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 643ffbb29267a9e26a66e1b35cc55f3a88ca8789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ec01941d4e8b333f3c29a38fd701b051acf04721
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089649"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70279482"
 ---
 # <a name="example-piecemeal-restore-of-only-some-filegroups-full-recovery-model"></a>예: 일부 파일 그룹만 증분 복원(전체 복구 모델)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,18 +72,16 @@ ms.locfileid: "68089649"
   
 4.  파일 그룹 `B`를 온라인 복원합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Files in filegroup `B` are restored any time thereafter.  
+   파일 그룹 `B` 의 파일은 이후 언제든지 복원할 수 있습니다.  
   
-    > [!NOTE]  
-    >  The backup of filegroup `B` was taken after the filegroup became read-only; therefore, these files do not have to be rolled forward.  
+   > [!NOTE]  
+   >  파일 그룹 `B` 는 파일 그룹이 읽기 전용이 된 후 백업했으므로 이러한 파일을 롤포워드할 필요가 없습니다.  
   
-    ```  
-    RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
-    ```  
+   ```sql  
+   RESTORE DATABASE adb FILEGROUP='B' FROM backup WITH RECOVERY  
+   ```  
   
-     All filegroups are now online.  
+   이제 모든 파일 그룹이 온라인입니다.  
   
 ## <a name="additional-examples"></a>추가 예  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81a832b4372dc2b35893c329d0b7ca909224fb9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31f28bf80d03516051206f6e88de6f32de614bed
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041513"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278754"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>파일 및 파일 그룹 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,21 +140,21 @@ ms.locfileid: "68041513"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-     **Leave the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. (RESTORE WITH RECOVERY)**  
-     Recovers the database. This is the default behavior. Choose this option only if you are restoring all of the necessary backups now. This option is equivalent to specifying WITH RECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **커밋되지 않은 트랜잭션을 롤백하여 데이터베이스를 사용할 수 있는 상태로 유지합니다. 추가 트랜잭션 로그를 복원할 수 없습니다. (RESTORE WITH RECOVERY)**  
+  데이터베이스를 복구합니다. 이것이 기본 동작입니다. 필요한 모든 백업을 지금 복원하는 경우에만 이 옵션을 선택합니다. 이 옵션은 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 문에서 WITH RECOVERY를 지정하는 것과 같습니다.  
   
-     **Leave the database non-operational, and don't roll back the uncommitted transactions. Additional transaction logs can be restored. (RESTORE WITH NORECOVERY)**  
-     Leaves the database in the restoring state. To recover the database, you will need to perform another restore using the preceding RESTORE WITH RECOVERY option (see above). This option is equivalent to specifying WITH NORECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **데이터베이스를 비작동 상태로 유지하고 커밋되지 않은 트랜잭션을 롤백하지 않습니다. 추가 트랜잭션 로그를 복원할 수 (RESTORE WITH NORECOVERY)**  
+  데이터베이스를 복원 상태로 유지합니다. 데이터베이스를 복구하려면 앞의 RESTORE WITH RECOVERY 옵션을 사용하여 다른 복원을 수행해야 합니다(위의 내용 참조). 이 옵션은 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 문에서 WITH NORECOVERY를 지정하는 것과 같습니다.  
   
-     If you select this option, the **Preserve replication settings** option is unavailable.  
+  이 옵션을 선택하면 **복제 설정 유지** 옵션을 사용할 수 없습니다.  
   
-     **Leave the database in read-only mode. Roll back the uncommitted transactions, but save the rollback operation in a file so the recovery effects can be undone. (RESTORE WITH STANDBY)**  
-     Leaves the database in a standby state. This option is equivalent to specifying WITH STANDBY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **데이터베이스를 읽기 전용 모드로 유지합니다. 커밋되지 않은 트랜잭션을 롤백하지만 복구 결과를 실행 취소할 수 있도록 롤백 작업을 파일에 (RESTORE WITH STANDBY)**  
+  데이터베이스를 대기 모드로 유지합니다. 이 옵션은 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE 문에서 WITH STANDBY를 지정하는 것과 같습니다.  
   
-     Choosing this option requires that you specify a standby file.  
+  이 옵션을 선택하려면 대기 파일을 지정해야 합니다.  
   
-     **Rollback undo file**  
-     Specify a standby file name in the **Rollback undo file** text box. This option is required if you leave the database in read-only mode (RESTORE WITH STANDBY).  
+  **롤백 실행 취소 파일**  
+  **롤백 실행 취소 파일** 입력란에 대기 파일 이름을 지정합니다. 데이터베이스를 읽기 전용 모드로 유지하는 경우 이 옵션이 필요합니다(RESTORE WITH STANDBY).  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL 사용  
   

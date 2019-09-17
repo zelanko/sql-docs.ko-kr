@@ -1,35 +1,35 @@
 ---
-title: Dmv (동적 관리 뷰)를 사용 하 여 R 및 Python 스크립트 실행 모니터링
-description: Dmv (동적 관리 뷰)를 사용 하 여 SQL Server Machine Learning Services에서 R 및 Python 외부 스크립트 실행을 모니터링할 수 있습니다.
+title: Dmv를 사용 하 여 Python 및 R 스크립트 실행 모니터링
+description: Dmv (동적 관리 뷰)를 사용 하 여 SQL Server Machine Learning Services에서 Python 및 R 외부 스크립트 실행을 모니터링할 수 있습니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 09/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ade3714459ebc0457b6afea2600cc0547c9940a1
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715326"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978400"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Dmv (동적 관리 뷰)를 사용 하 여 SQL Server Machine Learning Services 모니터링
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Dmv (동적 관리 뷰)를 사용 하 여 외부 스크립트 (R 및 Python)의 실행을 모니터링 하 고, 사용 되는 리소스를 모니터링 하 고, 문제를 진단 하 고, SQL Server Machine Learning Services에서 성능을 조정 합니다.
+Dmv (동적 관리 뷰)를 사용 하 여 외부 스크립트 (Python 및 R)의 실행을 모니터링 하 고, 사용 되는 리소스를 모니터링 하 고, 문제를 진단 하 고, SQL Server Machine Learning Services에서 성능을 조정 합니다.
 
 이 문서에서는 SQL Server Machine Learning Services와 관련 된 Dmv를 찾을 수 있습니다. 또한 다음을 보여 주는 예제 쿼리를 찾을 수 있습니다.
 
 + 기계 학습에 대 한 설정 및 구성 옵션
-+ 외부 R 또는 Python 스크립트를 실행 하는 활성 세션
-+ R 및 Python의 외부 런타임에 대 한 실행 통계
++ 외부 Python 또는 스크립트를 실행 하는 활성 세션
++ Python 및 R에 대 한 외부 런타임에 대 한 실행 통계
 + 외부 스크립트에 대 한 성능 카운터
 + OS, SQL Server 및 외부 리소스 풀의 메모리 사용량
 + SQL Server 및 외부 리소스 풀에 대 한 메모리 구성
 + 외부 리소스 풀을 포함 하 여 리소스 풀 Resource Governor
-+ R 및 Python 용 설치 된 패키지
++ Python 및 R에 대 한 설치 된 패키지
 
 Dmv에 대 한 일반적인 정보는 [시스템 동적 관리 뷰](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)를 참조 하세요.
 
@@ -91,7 +91,7 @@ WHERE name = 'external scripts enabled';
 
 ![활성 설정 쿼리의 출력](media/dmv-active-sessions.png "활성 설정 쿼리의 출력")
 
-이 출력을 가져오려면 아래 쿼리를 실행 합니다. 사용 되는 동적 관리 뷰에 대 한 자세한 내용은 [_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) [,](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)_exec_sessions 및 [sys. dm](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)를 참조 하세요.
+이 출력을 가져오려면 아래 쿼리를 실행 합니다. 사용 되는 동적 관리 뷰에 대 한 자세한 내용은 [_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md), [_exec_sessions 및 sys. dm](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md) [를 참조](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)하세요.
 
 ```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
@@ -131,7 +131,7 @@ R 및 Python에 대 한 외부 런타임에 대 한 실행 통계를 확인 합�
 
 ![실행 통계 쿼리의 출력](media/dmv-execution-statistics.png "실행 통계 쿼리의 출력")
 
-이 출력을 가져오려면 아래 쿼리를 실행 합니다. 사용 되는 동적 관리 뷰에 대 한 자세한 [내용은 참조 하십시오](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md). 이 쿼리는 두 번 이상 실행 된 함수만 반환 합니다.
+이 출력을 가져오려면 아래 쿼리를 실행 합니다. 사용 되는 동적 관리 뷰에 대 한 자세한 [내용은 참조 하십시오.](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) 이 쿼리는 두 번 이상 실행 된 함수만 반환 합니다.
 
 ```sql
 SELECT language, counter_name, counter_value
@@ -167,7 +167,7 @@ WHERE object_name LIKE '%External Scripts%'
 | 카운터 | 설명 |
 |---------|-------------|
 | 모든 실행 | 로컬 또는 원격 호출로 시작 되는 외부 프로세스의 수입니다. |
-| 병렬 실행 | 스크립트 _@parallel_ 에 지정 된 사양 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 및 병렬 쿼리 계획을 생성 하 고 사용할 수 있는 횟수입니다. |
+| 병렬 실행 | 스크립트가  _\@병렬_ 쿼리 계획을 생성 하 고 사용할 수 있는 병렬 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 사양을 포함 하는 횟수입니다. |
 | 스트림 실행 | 스트리밍 기능이 호출 된 횟수입니다. |
 | SQL CC 실행 | 호출이 원격으로 인스턴스화되어 SQL Server 계산 컨텍스트로 사용 된 외부 스크립트 실행 수입니다. |
 | 묵시적 인증 로그인 | 암시적 인증을 사용 하 여 ODBC 루프백 호출을 수행한 횟수 즉,는 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 스크립트 요청을 보내는 사용자를 대신 하 여 호출을 실행 했습니다. |

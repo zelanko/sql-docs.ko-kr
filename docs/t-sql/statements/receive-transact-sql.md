@@ -21,15 +21,15 @@ helpviewer_keywords:
 ms.assetid: 878c6c14-37ab-4b87-9854-7f8f42bac7dd
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fe629bc5d165489f733d0250b0f60bea8a3a677a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e555a51cc4ab7c628dc75469aa1cfe4d7c01edcc
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141283"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211433"
 ---
 # <a name="receive-transact-sql"></a>RECEIVE(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   큐에서 하나 이상의 메시지를 검색합니다. 큐의 보존 기간 설정에 따라 큐에서 메시지를 제거하거나 큐에 있는 메시지의 상태를 업데이트합니다.  
   

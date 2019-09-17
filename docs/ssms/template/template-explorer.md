@@ -1,10 +1,7 @@
 ---
 title: 템플릿 탐색기 | Microsoft 문서
-ms.custom: ''
-ms.date: 01/19/2017
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords:
@@ -19,14 +16,18 @@ helpviewer_keywords:
 ms.assetid: b9ee55c5-bb44-4f76-90ac-792d8d83b4c8
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: ff1ca6ab0c454dd56c93413aca2252e9452c4c4b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 01/19/2017
+ms.openlocfilehash: 67a1ba1d5f94703004a4a90d380cf7dd7c795a79
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68266750"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988084"
 ---
 # <a name="template-explorer"></a>Template Explorer
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 다양한 템플릿을 제공합니다. 템플릿은 데이터베이스에서 개체를 만드는 데 유용한 SQL 스크립트를 포함하는 상용구 파일입니다. 템플릿 탐색기를 처음으로 열면 템플릿 복사본이 C:\Users 사용자 폴더의 AppData\Roaming\Microsoft\SQL Server Management Studio\130\Templates 아래에 배치됩니다.  
   

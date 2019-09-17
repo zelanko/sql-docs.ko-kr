@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c776fd176379e8a65bdc70f6bf4c56fd370bef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92ff867d98b83f1934972a576df8295c3f9ca79d
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134382"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228416"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>데이터베이스 메일: 메일이 지연되고 배달되지 않음 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 이 항목은 이메일 메시지가 정상적으로 큐에 들어가지만 메시지가 배달되지 않는 문제의 해결 방법을 설명합니다.
 

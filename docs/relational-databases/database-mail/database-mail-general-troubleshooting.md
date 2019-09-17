@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 01b58ac9ebbcb7cdfba9ac8c8fe3f58b67278547
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4ea44a55a7c58e64f327a97943481dfd63289324
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134409"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228425"
 ---
 # <a name="general-database-mail-troubleshooting-steps"></a>일반 데이터베이스 메일 문제 해결 단계 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 데이터베이스 메일의 문제 해결 과정은 데이터베이스 메일 시스템의 다음과 같은 일반적인 영역에 대한 확인이 포함됩니다. 이 절차는 논리적 순서로 나열했으나 어떤 순서로도 검사할 수 있습니다.
 

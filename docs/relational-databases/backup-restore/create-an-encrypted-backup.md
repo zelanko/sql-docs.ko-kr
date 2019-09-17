@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e29061d3-c2ab-4d98-b9be-8e90a11d17fe
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 19556dc84e916598e63f6df7b101f4f495ac3855
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: e8f0c38d7dd712c5727fc5e9f7f62a35c1b886e1
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155392"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280814"
 ---
 # <a name="create-an-encrypted-backup"></a>암호화된 백업 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,9 +55,7 @@ ms.locfileid: "70155392"
   
 3.  **데이터베이스 백업:** 사용할 암호화 알고리즘과 인증서를 지정합니다. 다음 예를 복사하여 쿼리 창에 붙여 넣고 **실행**을 클릭합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-    ```  
+    ```
     BACKUP DATABASE [MyTestDB]  
     TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
     WITH  
@@ -68,8 +66,7 @@ ms.locfileid: "70155392"
        SERVER CERTIFICATE = MyTestDBBackupEncryptCert  
        ),  
       STATS = 10  
-    GO  
-  
+    GO
     ```  
   
  EKM에 의해 보호되는 백업을 암호화하는 예제를 보려면 [Azure 키 자격 증명 모음을 사용한 확장 가능 키 관리&#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)를 참조하세요.  

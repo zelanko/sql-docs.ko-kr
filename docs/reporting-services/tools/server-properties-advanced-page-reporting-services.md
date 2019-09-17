@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
-ms.openlocfilehash: 2560c752dd55741e1718ba60f942288093d027bb
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 079565c813e0b66f09881039ea3d6509bdf6cf54
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463590"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908259"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>서버 속성(고급 페이지) - Reporting Services
 
@@ -63,7 +63,7 @@ ms.locfileid: "67463590"
 **ExternalImagesTimeout**  
 외부 이미지 파일을 검색해야 하는 시간을 지정합니다. 이 시간을 넘기면 연결 시간이 초과된 것으로 처리됩니다. 기본값은 **600** 초입니다.  
 
-**SnapshotCompression** 해당 시점의 보고서 서버의 스냅숏입니다.
+**SnapshotCompression** 해당 시점의 보고서 서버의 스냅샷입니다.
 
 **SnapshotCompression**  
 스냅샷의 압축 방식을 정의합니다. 기본값은 **SQL**입니다. 유효한 값은 다음과 같습니다.
@@ -93,9 +93,9 @@ ms.locfileid: "67463590"
 
 **AccessControlMaxAge** 실행 전 요청 결과를 캐시할 수 있는 시간(초)을 지정합니다. 기본값은 600초(10분)입니다.
 
-**AllowedResourceExtensionsForUpload** 보고서 서버에 업로드할 수 있는 리소스 확장의 집합입니다. &ast;.rdl 및 &ast;.pbix와 같은 기본 제공 파일 형식에 대한 확장 기능을 포함할 필요가 없습니다. 기본값은 “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”입니다.
+**AllowedResourceExtensionsForUpload (Power BI Report Server 및 Reporting Services 2017이상 전용)** 보고서 서버에 업로드할 수 있는 리소스의 확장 기능을 설정합니다. &ast;.rdl 및 &ast;.pbix와 같은 기본 제공 파일 형식에 대한 확장 기능을 포함할 필요가 없습니다. 기본값은 “&ast;, &ast;.xml, &ast;.xsd, &ast;.xsl, &ast;.png, &ast;.gif, &ast;.jpg, &ast;.tif, &ast;.jpeg, &ast;.tiff, &ast;.bmp, &ast;.pdf, &ast;.svg, &ast;.rtf, &ast;.txt, &ast;.doc, &ast;.docx, &ast;.pps, &ast;.ppt, &ast;.pptx”입니다.
 
-**RestrictedResourceMimeTypeForUpload** mime 형식 사용자 집합을 사용 하 여 콘텐츠를 업로드 하려면 허용 되지 않습니다. 만 제한 된 mime 형식을 사용 하 여 이미 저장 되어 있는 모든 리소스는 브라우저에서는 응용 프로그램/옥텟 스트림 열/실행 되는 대신으로 다운로드할 수 있습니다.  기본적으로이 목록에 제한 된 항목이 없습니다 있지만 조직 채우는 가장 안전한 환경을 제공 하기 위해이 하는 것이 좋습니다.
+**RestrictedResourceMimeTypeForUpload** 사용자가를 사용 하 여 콘텐츠를 업로드할 수 없는 mime 형식 집합입니다. 제한 된 mime 형식으로 이미 저장 된 모든 리소스는 브라우저에서 열거나 실행 하는 대신 응용 프로그램/8 진수 스트림으로만 다운로드할 수 있습니다.  기본적으로이 목록에는 제한 된 항목이 없지만 조직은이를 채워 가장 안전한 환경을 제공 하는 것이 좋습니다.
 
 **EditSessionCacheLimit**  
 보고서 편집 세션에서 활성화될 수 있는 데이터 캐시 항목 수를 지정합니다. 기본값은 5입니다.  

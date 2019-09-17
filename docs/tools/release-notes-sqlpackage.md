@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 590ca8048d45d9832ff53775512f991268843872
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
-ms.translationtype: MTE75
+ms.openlocfilehash: 7fb220f8a5a33d33e2ee9177efd9fe2f713b7439
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809457"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774174"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe에 대한 릴리스 정보
 
@@ -35,10 +35,49 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## <a name="183-sqlpackage"></a>18.3 sqlpackage
+
+|플랫폼|다운로드|릴리스 날짜|버전 옵션|빌드
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2102893)|2019 년 9 월 6 일|18.3|15.0.4532.1|
+|macOS .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102894)|2019 년 9 월 6 일| 18.3|15.0.4532.1|
+|Linux .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102978)|2019 년 9 월 6 일| 18.3|15.0.4532.1|
+|Windows .NET Core (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102979)|2019 년 9 월 6 일| 18.3|15.0.4532.1|
+
+### <a name="features"></a>기능
+
+| 기능 | 세부 정보 |
+| :------ | :------ |
+| Azure SQL Data Warehouse(미리 보기) | Azure SQL Data Warehouse 배포에 대 한 지원을 추가 합니다. | 
+| 배포 | Sqlpackage에/p: DatabaseLockTimeout = (INT32 ' 60 ') 매개 변수를 추가 합니다. | 
+| 배포 | Sqlpackage에/p: LongRunningCommandTimeout = (INT32) 매개 변수를 추가 합니다. |
+| 내보내기/추출 | Sqlpackage에/p: TempDirectoryForTableData = (STRING) 매개 변수를 추가 합니다. |
+| 배포 | 배포 참가자가 추가 위치에서 로드 될 수 있도록 허용 합니다. 배포 참가자는 배포 되는 대상으로 동일한 디렉터리에서 로드 되며, sqlpackage 바이너리에 상대적인 확장 디렉터리와 sqlpackage에 추가 된/p: AdditionalDeploymentContributorPaths = (STRING) 매개 변수입니다. 추가 디렉터리 위치를 지정할 수 있습니다. |
+| 배포 | OPTIMIZE_FOR_SEQUENTIAL_KEY에 대 한 지원을 추가 합니다. |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>수정 프로그램
+
+| Fix | 세부 정보 |
+| :-- | :------ |
+| 배포 | 자동 인덱스를 무시 하 여 배포 시 삭제 되지 않도록 수정 합니다. | 
+| Always Encrypted | Always Encrypted varchar 열 처리를 수정 합니다. | 
+| 빌드/배포 | Xml 열 집합에 대 한 nodes () 메서드를 해결 하려면 수정 합니다.| 
+| ScriptDom | ' URL ' 문자열이 최상위 토큰으로 해석 된 추가 사례를 수정 합니다. | 
+| 그래프 | 제약 조건에서 의사 열 참조에 대해 생성 된 TSQL을 수정 합니다.  | 
+| 내보내기 | 복잡성 요구 사항을 충족 하는 임의의 암호를 생성 합니다. | 
+| 배포 | 제약 조건을 검색할 때 명령 시간 제한을 적용 하도록 수정 합니다. | 
+| .NET Core (미리 보기) | 파일에 대 한 진단 로깅을 수정 합니다. | 
+| .NET Core (미리 보기) | 스트림을 사용 하 여 테이블 데이터를 내보내 많은 테이블을 지원 합니다. | 
+| &nbsp; | &nbsp; |
+
 ## <a name="182-sqlpackage"></a>18.2 sqlpackage
 
-릴리스 날짜: &nbsp; 2019년 4월 15일  
-빌드: &nbsp; 15.0.4384.2 
+|플랫폼|다운로드|릴리스 날짜|버전 옵션|빌드
+|:---|:---|:---|:---|:---|
+|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2087429)|2019년 4월 15일|18.2|15.0.4384.2|
+|macOS .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2087247)|2019년 4월 15일 | 18.2 |15.0.4384.2|
+|Linux .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2087431)|2019년 4월 15일 | 18.2 |15.0.4384.2|
 
 ### <a name="features"></a>기능
 

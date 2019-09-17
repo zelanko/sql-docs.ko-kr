@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 449633953c0561191471733fa3a3dcba0fb24b83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 293b58adde0ccbfe6394cd3917d2671f23f3b290
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006398"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212356"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>데이터베이스 미러링 모니터(상태 페이지)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -94,7 +94,7 @@ ms.locfileid: "68006398"
 -   **자동 장애 조치(Failover)가 있는 보호 우선(동기)**  
   
 ## <a name="remarks"></a>Remarks  
- **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 이러한 사용자는 **데이터베이스 미러링 모니터 작업**에 따라 상태 테이블을 정기적으로 업데이트합니다. 표시된 상태의 기간을 알아보려면 사용자가 **보안 주체 로그(***\<time>***)** 및 **미러 로그(***\<time>***)** 레이블의 시간을 확인하면 됩니다.  
+ **dbm_monitor** 고정 데이터베이스 역할의 멤버는 데이터베이스 미러링 모니터 또는 **sp_dbmmonitorresults** 저장 프로시저를 사용하여 기존 미러링 상태를 볼 수 있습니다. 그러나 이러한 사용자는 상태 테이블을 업데이트할 수 없습니다. 이러한 사용자는 **데이터베이스 미러링 모니터 작업**에 따라 상태 테이블을 정기적으로 업데이트합니다. 표시된 상태의 기간을 알아보려면 사용자가 **주 로그(**_\<시간>_**)** 및 **미러 로그(**_\<시간>_**)** 레이블의 시간을 확인하면 됩니다.  
   
  이 작업이 존재하지 않거나 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 에이전트가 중지된 경우 상태는 점점 더 오래되어 미러링 세션의 구성을 더 이상 반영하지 않을 수 있습니다. 예를 들어 장애 조치(failover) 후에 파트너가 동일한 역할(주 서버 또는 미러 서버)을 공유하는 것으로 표시되거나 현재 주 서버가 미러 서버로 표시되고 현재 미러 서버가 주 서버로 표시될 수 있습니다.  
   

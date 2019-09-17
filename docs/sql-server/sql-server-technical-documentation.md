@@ -20,19 +20,16 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f4fdc5f81ff01b77f0bb27e5782db6ecd41b004
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 580b54e761e3d728496d4fede2c758c378bcedd7
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969470"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70284600"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [SQL Docs 허브 페이지에 대한 피드백을 공유하세요!](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Server는 ODBMS(운영 데이터베이스 관리 시스템)의 선두 주자입니다. 이 설명서를 통해 Windows 및 Linux에 SQL Server를 설치하고, 구성하며, 사용할 수 있습니다. 콘텐츠는 엔드투엔드 예제, 코드 샘플 및 비디오를 포함합니다. SQL Server 언어 항목은 [언어 참조](../t-sql/language-reference.md)를 참조하세요.

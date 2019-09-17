@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307642"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910838"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>Prerequisites for Minimal Logging in Bulk Import
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "68307642"
   
 -   테이블이 복제되고 있지 않아야 합니다.  
   
--   테이블 잠금이 지정되어야 합니다(TABLOCK 사용). 클러스터형 columnstore 인덱스가 포함된 테이블의 경우에는 최소 로깅에 TABLOCK을 사용할 필요가 없습니다.  또한 압축된 행 그룹으로 로드된 데이터만 최소 로깅되므로 일괄 처리 크기가 102400 이상이어야 합니다.  
+-   테이블 잠금이 지정되어야 합니다(TABLOCK 사용). 
   
     > [!NOTE]  
-    >  대량 가져오기 작업을 최소 로깅으로 수행하는 동안 데이터 삽입은 트랜잭션 로그에 기록되지 않지만 새 익스텐트를 테이블에 할당할 때마다 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 에서 익스텐트 할당을 기록합니다.  
+    >  대량 가져오기 작업을 최소 로깅으로 수행하는 동안 데이터 삽입은 트랜잭션 로그에 기록되지 않지만 새 익스텐트를 테이블에 할당할 때마다 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 익스텐트 할당을 기록합니다.  
   
 -   메모리 최적화 테이블이 아닙니다.  
   

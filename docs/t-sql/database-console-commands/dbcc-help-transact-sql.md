@@ -18,15 +18,15 @@ helpviewer_keywords:
 ms.assetid: 306092c6-4354-4e47-928b-606124fbdc6e
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: da8c23819a2f47caf087ab44cd654b795a9a044d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a2b4899d3485af4a499c5018a8889a6ec37bbbbb
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039108"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211389"
 ---
 # <a name="dbcc-help-transact-sql"></a>DBCC HELP(Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
 지정한 DBCC 명령의 구문 정보를 반환합니다.
   
