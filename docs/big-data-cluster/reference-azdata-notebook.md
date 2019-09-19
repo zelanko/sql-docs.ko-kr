@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f147e2b4ec785c3723d09cac6eb3548511946780
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 97b8cbae68e16dbdde6e9662b18e37f222a1af80
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158238"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118158"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
@@ -61,6 +61,10 @@ JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmesp
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 ## <a name="azdata-notebook-run"></a>azdata notebook run
 이 명령은 임시 디렉터리를 만들고 이 디렉터리를 작업 디렉터리로 사용하여 지정된 Notebook을 실행합니다.
+
+>[!NOTE]
+>Azdata v 15.0.1900에 대해 확인 됨: Python 3 노트북용 으로만 지원 되는 명령을 실행 합니다.
+
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
@@ -81,7 +85,7 @@ azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 #### `--output-path`
 Notebook 출력에 사용할 디렉터리 경로입니다.  출력 데이터가 포함된 Notebook 및 Notebook에서 생성된 모든 파일은 이 디렉터리를 기준으로 생성됩니다.
 #### `--output-html`
-출력 Notebook을 HTML 형식으로 추가 변환할지 여부를 나타내는 선택적 플래그입니다.  두 번째 출력 파일을 만듭니다.
+출력 전자 필기장을 HTML 형식으로 추가로 변환할지 여부를 나타내는 선택적 플래그입니다.  두 번째 출력 파일을 만듭니다.
 #### `--arguments -a`
 노트북 실행에 삽입할 수 있는 선택적 노트북 인수 목록입니다.  JSON 사전으로 인코딩됩니다.  예: ' {"name": "value", "name2": "value2"} '
 #### `--interactive -i`
@@ -96,7 +100,7 @@ Notebook 출력에 사용할 디렉터리 경로입니다.  출력 데이터가 
 #### `--output -o`
 출력 형식입니다.  허용되는 값: json, jsonc, table, tsv  기본값: json
 #### `--query -q`
-JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/])를 참조하세요.
+JMESPath 쿼리 문자열입니다. 자세한 내용 및 예제는 [http://jmespath.org/](http://jmespath.org/)를 참조하세요.
 #### `--verbose`
 로깅의 자세한 정도를 늘립니다. 전체 디버그 로그를 표시하려면 --debug를 사용합니다.
 

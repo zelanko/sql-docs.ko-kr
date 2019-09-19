@@ -9,12 +9,12 @@ ms.date: 08/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 679fbd63d77e21a84db315cf05adf112d122ad63
-ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.openlocfilehash: f209d249fb0e289258aa20bbfafd8a715dc463d6
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70774213"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118112"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>빅 데이터 클러스터에 HDFS 계층화를 위한 ADLS Gen2를 탑재하는 방법
 
@@ -108,7 +108,7 @@ Azure Portal에서 ADLS 계정에 대해 얻을 수 있는 액세스 키를 사�
 1. 클러스터 사용자 이름 및 암호와 함께 컨트롤러 엔드포인트의 외부 IP 주소를 사용하여 **azdata**로 로그인합니다.
 
    ```bash
-   azdata login -e https://<IP-of-controller-svc-external>:30080/
+   azdata login -e https://<IP-of-controller-svc-external>:30080
    ```
 1. 환경 변수 MOUNT_CREDENTIALS를 설정합니다(지침을 보려면 위로 스크롤).
 

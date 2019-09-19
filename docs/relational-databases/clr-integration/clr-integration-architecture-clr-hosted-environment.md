@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69d548d6d6682a1bdd999bf2b9a4fdba4cefd669
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.openlocfilehash: 016d8af878a75a0a4e72b17fc9fa09f8791b242b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212449"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096921"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 통합 아키텍처 - CLR 호스팅 환경
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ Thread.EndThreadAffinity();
   
  이러한 점을 고려하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 사용하는 클래스의 정적 변수와 정적 데이터 멤버는 사용하지 않는 것이 좋습니다. SAFE 및 EXTERNAL_ACCESS 어셈블리의 경우 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에서 CREATE ASSEMBLY 시간에 해당 어셈블리의 메타데이터를 검사하고 정적 데이터 멤버와 변수가 사용된 경우 어셈블리를 만드는 데 오류가 발생합니다.  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]또한는 **Sharedstate**, * * Synchronization 및 **externalprocessmgmt** 호스트 보호 특성으로 주석이 지정 된 .NET Framework api에 대 한 호출을 허용 하지 않습니다. 이로 인해 SAFE 및 EXTERNAL_ACCESS 어셈블리에서는 상태를 공유하고, 동기화를 수행하며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성에 영향을 주는 API를 호출하지 못합니다. 자세한 내용은 [CLR 통합 프로그래밍 모델 제한](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)을 참조 하세요.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]또한 **Sharedstate**, **Synchronization**및 **externalprocessmgmt** 호스트 보호 특성으로 주석이 지정 된 .NET Framework api에 대 한 호출을 허용 하지 않습니다. 이로 인해 SAFE 및 EXTERNAL_ACCESS 어셈블리에서는 상태를 공유하고, 동기화를 수행하며, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 프로세스의 무결성에 영향을 주는 API를 호출하지 못합니다. 자세한 내용은 [CLR 통합 프로그래밍 모델 제한](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)을 참조 하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [CLR 통합 보안](../../relational-databases/clr-integration/security/clr-integration-security.md)   
