@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adcac48bc7d90aae5f05a9b671f05e34cc8cf554
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 248a2e12199466cfaf686bcfcf10341a75981ef7
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715681"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149895"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services의 저장 프로시저를 사용 하 여 R 코드 운영
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,14 +24,14 @@ SQL Server Machine Learning Services에서 R 및 Python 기능을 사용 하는 
 
 일반적으로 데이터 과학 솔루션의 통합은 성능 및 통합을 지원 하기 위해 광범위 한 기록이 포함 되어 있습니다. R 및 Python 코드를 SQL Server에서 실행 하 고 저장 프로시저를 사용 하 여 호출할 수 있으므로 SQL Server Machine Learning Services는이 작업을 단순화 합니다. 저장 프로시저에 코드를 포함 하는 방법에 대 한 자세한 내용은 다음을 참조 하세요.
 
-+ [빠른 시작: SQL Server에서 "Hello 세계" R 스크립트](../../advanced-analytics/tutorials//quickstart-r-run-using-tsql.md)
++ [SQL Server에서 간단한 R 스크립트를 만들고 실행 합니다.](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
 저장 프로시저를 사용 하 여 프로덕션에 R 코드를 배포 하는 보다 포괄적인 예는 [자습서에서 찾을 수 있습니다. SQL 개발자를 위한 R 데이터 분석](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ## <a name="guidelines-for-optimizing-r-code-for-sql"></a>SQl 용 R 코드 최적화에 대 한 지침
 
-R 또는 Python 코드에서 약간의 최적화가 수행 되 면 SQL에서 R 코드를 쉽게 변환할 수 있습니다. 여기에는 문제를 야기 하는 데이터 형식을 방지 하 고 불필요 한 데이터 변환을 방지 하 고 쉽게 매개 변수화 할 수 있는 단일 함수 호출로 R 코드를 다시 작성 하는 작업이 포함 됩니다. 참조 항목:
+R 또는 Python 코드에서 약간의 최적화가 수행 되 면 SQL에서 R 코드를 쉽게 변환할 수 있습니다. 여기에는 문제를 야기 하는 데이터 형식을 방지 하 고 불필요 한 데이터 변환을 방지 하 고 쉽게 매개 변수화 할 수 있는 단일 함수 호출로 R 코드를 다시 작성 하는 작업이 포함 됩니다. 자세한 내용은 다음을 참조하세요.
 
 + [R 라이브러리 및 데이터 형식](r-libraries-and-data-types.md)
 + [R Services에서 사용할 R 코드 변환](converting-r-code-for-use-in-sql-server.md)

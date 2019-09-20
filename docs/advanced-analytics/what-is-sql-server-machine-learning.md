@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d60445d52a8a78fb7924d82338162e4719f45681
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 634f9f62a3ff1de70be84fd5a7721d8efed891bf
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276673"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149936"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services (Python 및 R)는 무엇 인가요?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,8 +95,8 @@ Machine Learning Services와 함께 설치 되는 패키지와 기타 패키지�
 
 1. 첫 번째 Python 또는 R 스크립트 작성
 
-    + 빠른 시작: [Python](tutorials/quickstart-python-run-using-t-sql.md) 또는 [R](tutorials/quickstart-r-run-using-tsql.md) 에서 "Hello 세계" 스크립트를 실행 합니다.
-    + 빠른 시작: [Python](tutorials/quickstart-python-train-score-in-tsql.md) 또는 [R](tutorials/quickstart-r-create-predictive-model.md) 에서 예측 모델 만들기
+    + 빠른 시작: [SQL에서 간단한 R 스크립트 만들기 및 실행](tutorials/quickstart-r-create-script.md)
+    + 빠른 시작: [R에서 예측 모델 만들기 및 학습](tutorials/quickstart-r-train-score-model.md)
     + 자습서: [T-sql에서 Python 사용](tutorials/sqldev-in-database-python-for-sql-developers.md): 데이터 탐색, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 만들기 (5 부 시리즈)
     + 자습서: [T-sql에서 R 사용](tutorials/sqldev-in-database-r-for-sql-developers.md): 데이터 탐색, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 만들기 (5 부 시리즈)
     + 자습서: [R 도구에서 Machine Learning Services 사용](tutorials/walkthrough-data-science-end-to-end-walkthrough.md): 데이터 탐색, 그래프 및 플롯 만들기, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 만들기 (6 부 시리즈)

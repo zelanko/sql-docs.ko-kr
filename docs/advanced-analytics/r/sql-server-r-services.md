@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 973c09be9cff6e66043b056e1a772ab8974cebb4
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957488"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149931"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>SQL Server 2016 R Services 란?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ R Services는 관계형 데이터를 사용 하 여 R 스크립트를 실행 하
 > [!Note]
 > R Services가 2017 이상 버전 SQL Server에서 [Machine Learning Services](../what-is-sql-server-machine-learning.md) 으로 이름이 변경 되었으며 Python과 r을 모두 지원 합니다.
 
-## <a name="what-is-r-services"></a>R Services 란?
+## <a name="what-is-r-services"></a>R Services란?
 
 SQL Server R Services를 사용 하 여 데이터베이스 내에서 R 스크립트를 실행할 수 있습니다. 이를 사용 하 여 데이터를 준비 하 고 정리 하며, 기능 엔지니어링을 수행 하 고, 데이터베이스 내에서 기계 학습 모델을 학습, 평가 및 배포할 수 있습니다. 이 기능은 데이터가 상주 하는 스크립트를 실행 하 고 네트워크를 통해 다른 서버에 데이터를 전송 하는 것을 제거 합니다.
 
@@ -81,8 +81,8 @@ Microsoft의 엔터프라이즈 패키지 외에도 오픈 소스 패키지 및 
 
 1. 첫 번째 R 스크립트 작성
 
-    + 빠른 시작: [R에서 "Hello 세계" 스크립트 실행](../tutorials/quickstart-r-run-using-tsql.md)
-    + 빠른 시작: [R에서 예측 모델 만들기](../tutorials/quickstart-r-create-predictive-model.md)
+    + 빠른 시작: [SQL Server에서 간단한 R 스크립트를 만들고 실행 합니다.](../tutorials/quickstart-r-create-script.md)
+    + 빠른 시작: [R에서 예측 모델 만들기 및 학습](../tutorials/quickstart-r-train-score-model.md)
     + 자습서: [T-sql에서 R 사용](../tutorials/sqldev-in-database-r-for-sql-developers.md): 데이터 탐색, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 만들기 (5 부 시리즈)
     + 자습서: [R 도구에서 r Services 사용](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md): 데이터 탐색, 그래프 및 플롯 만들기, 기능 엔지니어링 수행, 모델 학습 및 배포, 예측 만들기 (6 부 시리즈)
 
