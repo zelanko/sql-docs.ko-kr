@@ -18,7 +18,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071739"
 ---
 # <a name="configure-usage-data-collection-for-powerpivot-for-sharepoint"></a>사용량 현황 데이터 수집 구성(SharePoint용 PowerPivot)
-  사용 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. SharePoint용 PowerPivot은 이 시스템을 사용하고 확장하여 PowerPivot 관리 대시보드에서 PowerPivot 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 PowerPivot 관리 대시보드에 표시되는 사용 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
+  사용량 현황 데이터 컬렉션은 팜 수준의 SharePoint 기능입니다. SharePoint용 PowerPivot은 이 시스템을 사용하고 확장하여 PowerPivot 관리 대시보드에서 PowerPivot 데이터 및 서비스 사용 상태를 보여 주는 보고서를 제공합니다. SharePoint를 구성한 방법에 따라 팜에 대해 사용량 현황 데이터 컬렉션이 해제될 수 있습니다. 팜 관리자는 PowerPivot 관리 대시보드에 표시되는 사용량 현황 데이터를 만들기 위해 사용 현황 로깅을 설정해야 합니다.  
   
  PowerPivot 관리 대시보드의 사용 데이터에 대한 자세한 내용을 [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md)를 참조하십시오.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "66071739"
 4.  **동작**에서 **서비스 응용 프로그램 설정 구성**을 클릭합니다. PowerPivot 서비스 애플리케이션 설정 페이지가 열립니다.  
   
 ##  <a name="defaultconfig"></a> PowerPivot 사용 현황 데이터 수집에 대 한 기본 구성  
- PowerPivot 서비스에 대한 사용 데이터 컬렉션 작업을 기본 설정으로 활성화하여 Analysis Services 통합 기능을 지원하는 애플리케이션에서 바로 사용할 수 있습니다. 기본 설정에는 사용 데이터 컬렉션을 트리거하는 이벤트, 사용량 현황 데이터 저장 기간 제한 및 쿼리 응답 시간 범주화를 위한 임계값이 포함됩니다.  
+ PowerPivot 서비스에 대한 사용량 현황 데이터 컬렉션 작업을 기본 설정으로 활성화하여 Analysis Services 통합 기능을 지원하는 애플리케이션에서 바로 사용할 수 있습니다. 기본 설정에는 사용 데이터 컬렉션을 트리거하는 이벤트, 사용량 현황 데이터 저장 기간 제한 및 쿼리 응답 시간 범주화를 위한 임계값이 포함됩니다.  
   
  다음 표에서는 사용량 현황 데이터 컬렉션 구성의 기본값을 보여 줍니다.  
   

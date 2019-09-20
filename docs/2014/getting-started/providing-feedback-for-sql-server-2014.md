@@ -30,7 +30,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "62772280"
 ---
 # <a name="providing-feedback-for-sql-server-2014"></a>SQL Server 2014에 대한 사용자 의견 제공
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] 할애해 시간 개선을 위해을 내어 주셔서 감사는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 제품과 설명서. 제품 기능과 사용자 인터페이스에 대한 제안 사항 및 버그 보고서를 제공하거나 설명서 사용자 의견을 제출하거나 분석을 위해 오류 보고서와 사용자 데이터를 자동으로 [!INCLUDE[msCoName](../includes/msconame-md.md)]에 보낼 수 있습니다. 다음 항목에서는 이러한 세 가지 사용자 의견 옵션 각각에 대해 설명합니다.  
+  [!INCLUDE[msCoName](../includes/msconame-md.md)] 할애해 시간 개선을 위해을 내어 주셔서 감사는 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 제품과 설명서. 제품 기능과 사용자 인터페이스에 대한 제안 사항 및 버그 보고서를 제공하거나 설명서 사용자 의견을 제출하거나 분석을 위해 오류 보고서와 사용량 현황 데이터를 자동으로 [!INCLUDE[msCoName](../includes/msconame-md.md)]에 보낼 수 있습니다. 다음 항목에서는 이러한 세 가지 사용자 의견 옵션 각각에 대해 설명합니다.  
   
 ## <a name="submitting-feedback-about-the-product"></a>제품에 대한 사용자 의견 보내기  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Connect의 [!INCLUDE[msCoName](../includes/msconame-md.md)] 사용자 의견 페이지를 통해 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 기능에 대한 제안 사항 및 버그 보고서를 보낼 수 있습니다. 이러한 기능에는 도구와 유틸리티, 언어 및 프로그래밍 인터페이스가 포함됩니다.  

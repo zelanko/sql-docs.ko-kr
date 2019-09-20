@@ -24,7 +24,7 @@ SSMS(SQL Server Management Studio)에는 익명 기능 사용 현황 및 진단 
 
 ## <a name="audit-feature-usage-and-diagnostic-data"></a>감사 기능 사용 및 진단 데이터
 
-SSMS를 통해 수집된 기능 사용 현황 데이터를 확인하려면 다음 단계를 수행합니다.
+SSMS를 통해 수집된 기능 사용량 현황 데이터를 확인하려면 다음 단계를 수행합니다.
 
 1.  SSMS를 시작합니다.
 2.  **보기**를 클릭하고 기본 메뉴에서 **출력**을 클릭하여 **출력** 창을 표시합니다. 

@@ -55,7 +55,7 @@ ms.locfileid: "66071110"
 |[Excel 서비스에서 MSOLAP.5를 신뢰할 수 있는 데이터 공급자로 추가](add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|필수|이 단계에서는 Analysis Services OLE DB 공급자를 Excel 서비스에 신뢰할 수 있는 공급자로 추가합니다.|  
 |[SharePoint 2010에서 PowerPivot 데이터 새로 고침](../powerpivot-data-refresh-with-sharepoint-2010.md)|권장|데이터 새로 고침은 선택 사항이지만 사용하는 것이 좋습니다. 게시한 Excel 통합 문서 내의 PowerPivot 데이터에 대한 무인 업데이트를 예약할 수 있습니다.|  
 |[구성 PowerPivot 무인된 데이터 새로 고침 계정 &#40;SharePoint 용 PowerPivot&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)|권장|이 단계에서는 서버에서 데이터 새로 고침 작업을 실행하는 데 사용할 수 있는 특수 용도 계정을 프로비전합니다.|  
-|[사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|선택 사항|사용 데이터 컬렉션은 기본적으로 구성되어 있습니다. 이 단계를 사용하여 기본 설정을 수정할 수 있습니다.|  
+|[사용 현황 데이터 수집 구성 &#40;SharePoint 용 PowerPivot](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|선택 사항|사용량 현황 데이터 컬렉션은 기본적으로 구성되어 있습니다. 이 단계를 사용하여 기본 설정을 수정할 수 있습니다.|  
 |[전용된 데이터 새로 고침 또는 쿼리만 처리 구성 &#40;SharePoint 용 PowerPivot&#41;](../configure-dedicated-data-refresh-query-only-processing-powerpivot-sharepoint.md)|선택 사항|PowerPivot 인스턴스를 데이터 새로 고침 또는 쿼리 전용으로 사용할 수 있습니다. 또한 병렬 데이터 새로 고침 작업에 대한 기본 설정을 수정할 수 있습니다.|  
 |[PowerPivot 서비스 계정 구성](configure-power-pivot-service-accounts.md)|선택 사항|암호를 업데이트하거나 서비스 계정을 변경하는 방법에 대해 설명합니다.|  
 |[중앙 관리에서 SharePoint 웹 응용 프로그램에 PowerPivot 서비스 응용 프로그램 연결](connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|선택 사항|서비스 연결을 수정하는 방법에 대해 설명합니다.|  

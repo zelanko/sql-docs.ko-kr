@@ -198,7 +198,7 @@ ms.locfileid: "69530915"
  무인 PowerPivot 데이터 새로 고침 계정 또는 데이터 새로 고침에 사용 되는 기타 저장 된 자격 증명을 만드는 방법에 대 한 지침은 [PowerPivot 무인 데이터 새로 고침 &#40;계정&#41; 구성](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) 을 참조 하세요 SharePoint용 PowerPivot [PowerPivot 데이터 새로 고침 &#40;SharePoint용 PowerPivot&#41;에 저장 된 자격 증명을 구성](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)합니다.  
   
 ##  <a name="Usage"></a> 6단계: 사용 데이터 컬렉션 사용  
- SharePoint용 PowerPivot은 SharePoint 사용 데이터 컬렉션 인프라를 사용해 팜 전체의 PowerPivot 사용에 대한 정보를 수집합니다. 사용 현황 데이터는 항상 SharePoint와 함께 설치되지만 우선 활성화해야 사용할 수 있습니다. 자세한 내용은 [SharePoint용 PowerPivot에 대 한 &#40;사용 현황 데이터 수집 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint)을 참조 하세요.  
+ SharePoint용 PowerPivot은 SharePoint 사용량 현황 데이터 컬렉션 인프라를 사용해 팜 전체의 PowerPivot 사용에 대한 정보를 수집합니다. 사용 현황 데이터는 항상 SharePoint와 함께 설치되지만 우선 활성화해야 사용할 수 있습니다. 자세한 내용은 [SharePoint용 PowerPivot에 대 한 &#40;사용 현황 데이터 수집 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint)을 참조 하세요.  
   
 ##  <a name="Upload"></a>7 단계: SharePoint 웹 응용 프로그램 및 Excel 서비스의 최대 업로드 크기 늘리기  
  PowerPivot 통합 문서는 대규모일 수 있으므로 최대 파일 크기를 늘려야 할 수 있습니다. 웹 응용 프로그램에 대한 최대 업로드 크기와 Excel 서비스의 최대 통합 문서 크기 등 두 가지 파일 크기 설정을 구성할 수 있습니다. 최대 파일 크기는 두 애플리케이션에서 같은 값으로 설정해야 합니다. 자세한 내용은 [SharePoint용 PowerPivot &#40;&#41;최대 파일 업로드 크기 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-maximum-file-upload-size-power-pivot-for-sharepoint)을 참조 하세요.  
@@ -280,7 +280,7 @@ ms.locfileid: "69530915"
  신뢰할 수 있는 사이트를 Excel 서비스에 추가하여 Excel 통합 문서 및 PowerPivot 데이터를 제공하는 사이트에 대한 권한 및 구성 설정을 다양하게 구성할 수 있습니다. 자세한 내용은 [Create a trusted location for PowerPivot sites in Central Administration](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration)을 참조하세요.  
   
 ### <a name="tune-configuration-settings"></a>구성 설정 조정  
- PowerPivot 서비스 애플리케이션은 기본 속성 및 값을 사용하여 만들어집니다. 개별 서비스 애플리케이션에 대한 구성 설정을 수정하여 요청을 할당하는 방법을 변경하거나, 서버 제한 시간을 설정하거나, 쿼리 응답 보고서 이벤트의 임계값을 변경하거나, 사용 데이터 보관 기간을 지정할 수 있습니다. 중앙 관리의 구성 또는 SharePoint 웹 응용 프로그램에서 PowerPivot 기능을 사용 하는 방법에 대 한 자세한 내용은 [중앙 관리에서 Powerpivot 서버 관리 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)을 참조 하세요.  
+ PowerPivot 서비스 애플리케이션은 기본 속성 및 값을 사용하여 만들어집니다. 개별 서비스 애플리케이션에 대한 구성 설정을 수정하여 요청을 할당하는 방법을 변경하거나, 서버 제한 시간을 설정하거나, 쿼리 응답 보고서 이벤트의 임계값을 변경하거나, 사용량 현황 데이터 보관 기간을 지정할 수 있습니다. 중앙 관리의 구성 또는 SharePoint 웹 응용 프로그램에서 PowerPivot 기능을 사용 하는 방법에 대 한 자세한 내용은 [중앙 관리에서 Powerpivot 서버 관리 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)을 참조 하세요.  
   
 ### <a name="install-powerpivot-for-excel-and-build-a-powerpivot-workbook"></a>PowerPivot for Excel 설치 및 PowerPivot 통합 문서 작성  
  팜에 서버 구성 요소를 설치한 후에는 포함된 PowerPivot 데이터를 사용하는 첫 번째 Excel 2010 통합 문서를 만들어 웹 애플리케이션에서 SharePoint 라이브러리에 게시할 수 있습니다. PowerPivot 데이터를 포함하는 Excel 통합 문서를 작성하기 전에 먼저 Excel 2010을 설치한 다음 Excel이 PowerPivot 데이터 가져오기와 향상된 기능을 지원하도록 확장하는 PowerPivot for Excel 추가 기능을 설치해야 합니다.  

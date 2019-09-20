@@ -37,7 +37,7 @@ ms.locfileid: "62837706"
  장애가 있는 사용자가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 를 보다 편리하게 사용할 수 있도록 지원하는 제품, 기능 및 서비스에 대해 설명합니다.  
   
  [SQL Server 2014에 대한 사용자 의견 제공](../../2014/getting-started/providing-feedback-for-sql-server-2014.md)  
- 제품 기능과 사용자 인터페이스에 대한 제안 사항 및 버그 보고서를 제공하거나 설명서 사용자 의견을 제출하거나 분석을 위해 오류 보고서와 사용자 데이터를 자동으로 [!INCLUDE[msCoName](../includes/msconame-md.md)] 에 보내는 방법에 대해 설명합니다.  
+ 제품 기능과 사용자 인터페이스에 대한 제안 사항 및 버그 보고서를 제공하거나 설명서 사용자 의견을 제출하거나 분석을 위해 오류 보고서와 사용량 현황 데이터를 자동으로 [!INCLUDE[msCoName](../includes/msconame-md.md)] 에 보내는 방법에 대해 설명합니다.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2014의에서 새로운 기능](../sql-server/what-s-new-in-sql-server-2016.md)   

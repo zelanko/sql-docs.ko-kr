@@ -247,7 +247,7 @@
       href: power-pivot-sharepoint/health-rules-reference-power-pivot-for-sharepoint.md
     - name: PowerPivot 관리 대시보드 및 사용량 현황 데이터
       href: power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md
-    - name: PowerPivot 사용 데이터 컬렉션
+    - name: PowerPivot 사용량 현황 데이터 컬렉션
       href: power-pivot-sharepoint/power-pivot-usage-data-collection.md
       items:
         - name: 사용량 현황 데이터 수집 구성(SharePoint용 PowerPivot)

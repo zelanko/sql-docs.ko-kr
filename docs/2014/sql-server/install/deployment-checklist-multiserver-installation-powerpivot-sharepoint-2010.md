@@ -261,7 +261,7 @@ ms.locfileid: "68890734"
  PowerPivot 갤러리는 SharePoint 사이트에서 PowerPivot 통합 문서를 보는 데 사용되는 미리 보기 및 프레젠테이션 옵션을 포함하는 라이브러리입니다. 해당 미리 보기 기능을 사용하려면 PowerPivot 갤러리를 사용하여 PowerPivot 통합 문서를 게시하고 보는 것이 좋습니다. 또한 같은 SharePoint 서버에 Reporting Services도 배포하는 경우 PowerPivot 갤러리를 사용하여 보고서를 쉽게 만들 수 있습니다. PowerPivot 갤러리에서 보고서 작성기를 시작하여 게시된 PowerPivot 통합 문서를 기반으로 새 보고서를 만들 수 있습니다. 라이브러리를 만들고 사용 하는 방법에 대 한 자세한 내용은 [Powerpivot 갤러리 만들기 및 사용자 지정](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery) 및 [powerpivot 갤러리 사용](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/use-power-pivot-gallery)을 참조 하세요.  
   
 #### <a name="tune-configuration-settings"></a>구성 설정 조정  
- PowerPivot 서비스 애플리케이션은 기본 속성 및 값을 사용하여 만들어집니다. 개별 서비스 애플리케이션에 대한 구성 설정을 수정하여 요청을 할당하는 방법을 변경하거나, 서버 제한 시간을 설정하거나, 쿼리 응답 보고서 이벤트의 임계값을 변경하거나, 사용 데이터 보관 기간을 지정할 수 있습니다. 중앙 관리의 구성 또는 SharePoint 웹 응용 프로그램에서 PowerPivot 기능을 사용 하는 방법에 대 한 자세한 내용은 [중앙 관리에서 Powerpivot 서버 관리 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)을 참조 하세요.  
+ PowerPivot 서비스 애플리케이션은 기본 속성 및 값을 사용하여 만들어집니다. 개별 서비스 애플리케이션에 대한 구성 설정을 수정하여 요청을 할당하는 방법을 변경하거나, 서버 제한 시간을 설정하거나, 쿼리 응답 보고서 이벤트의 임계값을 변경하거나, 사용량 현황 데이터 보관 기간을 지정할 수 있습니다. 중앙 관리의 구성 또는 SharePoint 웹 응용 프로그램에서 PowerPivot 기능을 사용 하는 방법에 대 한 자세한 내용은 [중앙 관리에서 Powerpivot 서버 관리 및 구성](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration)을 참조 하세요.  
   
 ## <a name="see-also"></a>관련 항목  
  [SQL Server 2012 버전에서 지 원하는 기능](https://go.microsoft.com/fwlink/?linkid=232473)   
