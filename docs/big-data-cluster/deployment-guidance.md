@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878722"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174272"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Kubernetes에 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법
 
@@ -148,9 +148,9 @@ azdata bdc create --accept-eula=yes
 | **CONTROLLER_PASSWORD** | 필수 |클러스터 관리자의 암호입니다. |
 | **MSSQL_SA_PASSWORD** | 필수 |SQL 마스터 인스턴스의 SA 사용자 암호입니다. |
 | **KNOX_PASSWORD** | 필수 |Knox **루트** 사용자에 대 한 암호입니다. 참고 기본 인증 설정에서 Knox에 대해 지원 되는 사용자만 **root**입니다.|
-| **ACCEPT_EULA**| `azdata`를 처음 사용하는 경우 필수| 값이 필요하지 않습니다. 환경 변수로 설정하면 SQL Server와 `azdata`에 모두 EULA가 적용됩니다. 환경 변수로 설정하지 않을 경우 `azdata`를 처음 사용할 때 `--accept-eula`를 포함할 수 있습니다.|
-| **DOCKER_USERNAME** | Optional | 프라이빗 리포지토리에 저장된 컨테이너 이미지에 액세스하는 데 사용할 사용자 이름입니다. 빅 데이터 클러스터 배포에서 프라이빗 Docker 리포지토리를 사용하는 방법에 대한 자세한 내용은 [오프라인 배포](deploy-offline.md) 항목을 참조하세요.|
-| **DOCKER_PASSWORD** | Optional |위 프라이빗 리포지토리에 액세스하는 데 사용할 암호입니다. |
+| **ACCEPT_EULA**| `azdata`를 처음 사용하는 경우 필수| "예"로 설정 합니다. 환경 변수로 설정하면 SQL Server와 `azdata`에 모두 EULA가 적용됩니다. 환경 변수로 설정하지 않을 경우 `azdata`를 처음 사용할 때 `--accept-eula=yes`를 포함할 수 있습니다.|
+| **DOCKER_USERNAME** | 선택 사항 | 프라이빗 리포지토리에 저장된 컨테이너 이미지에 액세스하는 데 사용할 사용자 이름입니다. 빅 데이터 클러스터 배포에서 프라이빗 Docker 리포지토리를 사용하는 방법에 대한 자세한 내용은 [오프라인 배포](deploy-offline.md) 항목을 참조하세요.|
+| **DOCKER_PASSWORD** | 선택 사항 |위 프라이빗 리포지토리에 액세스하는 데 사용할 암호입니다. |
 
 **azdata bdc create**를 호출하기 전에 이러한 환경 변수를 설정해야 합니다. 변수를 설정하지 않으면 변수를 입력하라는 메시지가 표시됩니다.
 
@@ -161,6 +161,7 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export ACCEPT_EULA=yes
 ```
 
 ```PowerShell

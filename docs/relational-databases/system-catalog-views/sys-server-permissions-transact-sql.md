@@ -1,7 +1,7 @@
 ---
-title: sys.server_permissions (TRANSACT-SQL) | Microsoft Docs
+title: server_permissions (Transact-sql) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 09/20/2019
 ms.prod: sql
 ms.prod_service: database-engine, pdw
 ms.reviewer: ''
@@ -20,14 +20,14 @@ ms.assetid: 7d78bf17-6c64-4166-bd0b-9e9e20992136
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d3b34cebe15155cf590cec5008ef8f8eaf5ba117
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cbfa717aa70bb057734a285e2b6d84fdc6f4961a
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68133095"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163928"
 ---
-# <a name="sysserverpermissions-transact-sql"></a>sys.server_permissions(Transact-SQL)
+# <a name="sysserver_permissions-transact-sql"></a>sys.server_permissions(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
 
   각 서버 수준 사용 권한에 대해 행을 반환합니다.  
@@ -47,8 +47,11 @@ ms.locfileid: "68133095"
   
 |사용 권한 유형|사용 권한 이름|보안 개체에 적용되는 항목|  
 |---------------------|---------------------|--------------------------|  
+|AAES|ALTER ANY EVENT SESSION|SERVER|
 |ADBO|ADMINISTER BULK OPERATIONS|SERVER|  
 |AL|ALTER|ENDPOINT, LOGIN|  
+|ALAA|ALTER ANY SERVER AUDIT|SERVER|
+|ALAG|ALTER ANY AVAILABILITY GROUP|SERVER|
 |ALCD|ALTER ANY CREDENTIAL|SERVER|  
 |ALCO|ALTER ANY CONNECTION|SERVER|  
 |ALDB|ALTER ANY DATABASE|SERVER|  
@@ -56,27 +59,34 @@ ms.locfileid: "68133095"
 |ALHE|ALTER ANY ENDPOINT|SERVER|  
 |ALLG|ALTER ANY LOGIN|SERVER|  
 |ALLS|ALTER ANY LINKED SERVER|SERVER|  
-|ALRS|ALTER RESOURCES|SERVER|  
+|ALRS|ALTER RESOURCES|SERVER|
+|ALSR|ALTER ANY SERVER ROLE|SERVER|  
 |ALSS|ALTER SERVER STATE|SERVER|  
 |ALST|ALTER SETTINGS|SERVER|  
 |ALTR|ALTER TRACE|SERVER|  
-|AUTH|AUTHENTICATE SERVER|SERVER|  
+|AUTH|AUTHENTICATE SERVER|SERVER|
+|CADB|CONNECT ANY DATABASE|SERVER|  
 |CL|CONTROL|ENDPOINT, LOGIN|  
 |CL|CONTROL SERVER|SERVER|  
 |CO|CONNECT|엔드포인트|  
-|COSQ|CONNECT SQL|SERVER|  
+|COSQ|CONNECT SQL|SERVER|
+|CRAC|CREATE AVAILABILITY GROUP|SERVER|  
 |CRDB|CREATE ANY DATABASE|SERVER|  
 |CRDE|CREATE DDL EVENT NOTIFICATION|SERVER|  
-|CRHE|CREATE ENDPOINT|SERVER|  
-|CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|  
+|CRHE|CREATE ENDPOINT|SERVER|
+|CRSR|CREATE SERVER ROLE|SERVER|  
+|CRTE|CREATE TRACE EVENT NOTIFICATION|SERVER|
+|IAL|IMPERSONATE ANY LOGIN|SERVER|  
 |IM|IMPERSONATE|LOGIN|  
-|SHDN|SHUTDOWN|SERVER|  
+|SHDN|SHUTDOWN|SERVER|
+|SUS|SELECT ALL USER SECURABLES|SERVER|
 |TO|TAKE OWNERSHIP|엔드포인트|  
 |VW|VIEW DEFINITION|ENDPOINT, LOGIN|  
 |VWAD|VIEW ANY DEFINITION|SERVER|  
 |VWDB|VIEW ANY DATABASE|SERVER|  
 |VWSS|VIEW SERVER STATE|SERVER|  
-|XA|EXTERNAL ACCESS|SERVER|  
+|XA|EXTERNAL ACCESS|SERVER|
+|XU|UNSAFE ASSEMBLY|SERVER|
   
 ## <a name="permissions"></a>사용 권한  
  모든 사용자는 자산의 권한을 볼 수 있습니다. 다른 로그인에 대한 사용 권한을 보려면 로그인할 때 VIEW DEFINITION, ALTER ANY LOGIN 또는 사용 권한이 필요합니다. 사용자 정의 서버 역할을 보려면 ANY SERVER ROLE 또는 역할의 멤버 자격이 필요합니다.  
@@ -87,7 +97,7 @@ ms.locfileid: "68133095"
  다음 쿼리는 서버 보안 주체에 대해 명시적으로 부여되거나 거부된 사용 권한을 나열합니다.  
   
 > [!IMPORTANT]  
->  고정 서버 역할의 사용 권한은 sys.server_permissions에 나타나지 않습니다. 따라서 서버 보안 주체가 여기에 나열되지 않은 추가 사용 권한을 가질 수 있습니다.  
+> 고정 서버 역할의 사용 권한은 sys.server_permissions에 나타나지 않습니다. 따라서 서버 보안 주체가 여기에 나열되지 않은 추가 사용 권한을 가질 수 있습니다.  
   
 ```  
 SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -103,5 +113,3 @@ JOIN sys.server_permissions AS pe
  [카탈로그 뷰&#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [사용 권한&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [사용 권한 계층&#40;데이터베이스 엔진&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)  
-  
-  
