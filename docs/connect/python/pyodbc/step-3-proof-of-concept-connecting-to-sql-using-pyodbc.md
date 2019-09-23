@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 87faa60456dd6d03f23d45346ab0dd103dc07c82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30ba3db5e23d95128aecbb5cc8974faeb6d58d75
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67992511"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016838"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>3단계: pyodbc를 사용하여 SQL에 연결하는 개념 증명
 
@@ -62,13 +62,14 @@ while row:
   
 ## <a name="step-3--insert-a-row"></a>3 단계: 행 삽입  
   
-이 예제에서는 [SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) [삽입](../../../t-sql/statements/insert-transact-sql.md) 값 으로부터 응용 프로그램을 보호 하는 매개 변수를 안전 하 게 실행 하는 방법을 확인 합니다.    
+이 예제에서는 [SQL](../../../relational-databases/tables/primary-and-foreign-key-constraints.md) 삽입 값 으로부터 응용 프로그[램을](../../../t-sql/statements/insert-transact-sql.md) 보호 하는 매개 변수를 안전 하 게 실행 하는 방법을 확인 합니다.    
   
   
 ```python
 
 #Sample insert query
 cursor.execute("INSERT SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate) OUTPUT INSERTED.ProductID VALUES ('SQL Server Express New 20', 'SQLEXPRESS New 20', 0, 0, CURRENT_TIMESTAMP )") 
+cnxn.commit()
 row = cursor.fetchone()
 
 while row: 

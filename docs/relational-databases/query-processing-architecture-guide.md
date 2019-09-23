@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 309d97c52130eeb3477952cb70446c20787351cb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4f0af105de85eded29b7cf4bd58d6c392a7dbd4
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67929808"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096934"
 ---
 # <a name="query-processing-architecture-guide"></a>쿼리 처리 아키텍처 가이드
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -728,7 +728,7 @@ WHERE ProductID = 63;
 -  sp_executesql을 통해 제출된 쿼리 
 -  준비된 쿼리
 
-잘못된 매개 변수 스니핑 문제 해결에 대한 자세한 내용은 [매개 변수가 중요한 쿼리 실행 계획 문제로 쿼리 문제 해결](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues)을 참조하세요.
+잘못된 매개 변수 스니핑 문제 해결에 대한 자세한 내용은 [매개 변수가 중요한 쿼리 실행 계획 문제로 쿼리 문제 해결](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-problems)을 참조하세요.
 
 > [!NOTE]
 > `RECOMPILE` 힌트를 사용하는 쿼리는 매개 변수 값과 지역 변수의 현재 값을 모두 검사합니다. 검사되는 매개 변수 및 지역 변수 값은 `RECOMPILE` 힌트가 포함된 문 바로 앞에 있는 일괄 처리 위치의 값입니다. 특히 매개 변수의 경우 일괄 처리 호출과 함께 사용된 값은 검사하지 않습니다.

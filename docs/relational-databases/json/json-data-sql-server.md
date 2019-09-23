@@ -13,12 +13,12 @@ ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f97c2e52c92a4ad6313ca6b18ed17fa89d831e93
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 3a18105727079997710ece9047ef87788d57b8d7
+ms.sourcegitcommit: b4962530f90234017073b3fdd2248936b2de4e69
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190403"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71077522"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server의 JSON 데이터
 [!INCLUDE[appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -60,10 +60,10 @@ SQL Server 기본 제공 함수 및 연산자를 사용하여 JSON 텍스트로 
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>JSON 텍스트에서 값을 추출하여 쿼리에서 사용
 데이터베이스 테이블에 저장된 JSON 텍스트가 있는 경우 다음과 같은 기본 제공 함수를 사용하여 JSON 텍스트의 값을 읽거나 수정할 수 있습니다.  
     
--   [ISJSON(Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md)은 문자열에 유효한 JSON이 포함되어 있는지 여부를 테스트합니다.
--   [JSON_VALUE(Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)는 JSON 문자열에서 스칼라 값을 추출합니다.
--   [JSON_QUERY(Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)는 JSON 문자열에서 개체 또는 배열을 추출합니다.
--   [JSON_MODIFY(Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)는 JSON 문자열에 있는 값을 변경합니다.
+- [ISJSON(Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md)은 문자열에 유효한 JSON이 포함되어 있는지 여부를 테스트합니다.
+- [JSON_VALUE(Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md)는 JSON 문자열에서 스칼라 값을 추출합니다.
+- [JSON_QUERY(Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md)는 JSON 문자열에서 개체 또는 배열을 추출합니다.
+- [JSON_MODIFY(Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md)는 JSON 문자열에 있는 값을 변경합니다.
 
 
 **예제**

@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 3f658ba8723b142f37763ea8b4f0c8f7b0c5d0e1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077295"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016858"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>SQL Server on Linux에 대한 연결 암호화
 
@@ -69,7 +69,7 @@ TLS는 클라이언트 애플리케이션에서 [!INCLUDE[ssNoVersion](../includ
         - **Windows**:  [현재 사용자] -> [신뢰할 수 있는 루트 인증 기관] -> [인증서]에서 .pem 파일을 인증서로 가져옵니다.
         - **macOS**: 
            - 인증서를 ```/usr/local/etc/openssl/certs```에 복사합니다.
-           - 다음 명령을 실행하여 해시 값 ```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```를 가져옵니다.
+           - 다음 명령을 실행하여 해시 값 ```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```를 가져옵니다.
            - 인증서의 이름을 value로 바꿉니다. 예를 들어 ```mv mssql.pem dc2dd900.0```을 참조하십시오. dc2dd900.0이 ```/usr/local/etc/openssl/certs```에 있는지 확인합니다.
     
 -   **연결 문자열 예** 
