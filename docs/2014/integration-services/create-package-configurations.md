@@ -112,7 +112,7 @@ ms.locfileid: "66060173"
   
 -   msdn.microsoft.com의 기술 문서 - [Integration Services 패키지 구성 이해](https://go.microsoft.com/fwlink/?LinkId=165643)  
   
--   블로그 항목 [패키지 구성을 코드에서 패키지를 만드는](https://go.microsoft.com/fwlink/?LinkId=217663), www.sqlis.com에 있습니다.  
+-   블로그 항목 [패키지 구성을 코드에서 패키지를 만드는](https://go.microsoft.com/fwlink/?LinkId=217663), www.sqlis.com 에 있습니다.  
   
 -   블로그 항목 [API 샘플-패키지 구성 파일을 프로그래밍 방식으로 추가](https://go.microsoft.com/fwlink/?LinkId=217664)을 보려면 blogs.msdn.com에서.  
   
