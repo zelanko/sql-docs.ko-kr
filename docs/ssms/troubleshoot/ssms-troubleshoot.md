@@ -9,17 +9,17 @@ ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 07/01/2019
-ms.openlocfilehash: e73e3d8cc0b54f0251530327dbcea941546471d5
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.date: 09/18/2019
+ms.openlocfilehash: 2bfe5606c55fd0f242650e5fffdb8cc20dc9f726
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212442"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127254"
 ---
 # <a name="get-diagnostic-data-after-a-sql-server-management-studio-ssms-crash"></a>SSMS(SQL Server Management Studio) 충돌이 발생한 후 진단 데이터 가져오기
 
-[!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)
+[!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 ## <a name="get-full-memory-dump-after-a-hang-or-crash"></a>중단 또는 충돌 후 전체 메모리 덤프 가져오기
 
