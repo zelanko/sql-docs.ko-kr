@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a19d934fcc8b6d190b762b170117722fe4e29b6e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 7d1425b23b98ac0a81aaa0e6e848b405f06cc086
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190418"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929815"
 ---
 # <a name="spatial-indexes-overview"></a>공간 인덱스 개요
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -172,7 +172,7 @@ ms.locfileid: "70190418"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- 다음 그림에서는 3단계의 분해 프로세스를 도식 보기로 보여 줍니다. 피라미드에서 점선은 각 피라미드에서 네 면의 경계를 나타냅니다. 1단계와 2단계는 측지 타원면에 대해 설명하며 녹색 가로선을 사용하여 적도 지역 경도 선을 나타내고 녹색 세로선을 사용하여 여러 위도 선을 나타냅니다. 1단계에서는 양쪽 반구로 표시되는 피라미드를 보여 줍니다. 2단계에서는 평평해지는 피라미드를 보여 줍니다. 3단계에서는 평평해진 피라미드가 평면을 구성하도록 결합된 후의 모양을 보여 줍니다. 여기에는 표시된 경도가 많이 나타납니다. 이렇게 표시된 선은 직선이며 피라미드에 놓이는 위치에 따라 길이가 다양합니다.  
+ 다음 그림에서는 3단계의 분해 프로세스를 도식 보기로 보여 줍니다. 피라미드에서 점선은 각 피라미드에서 네 면의 경계를 나타냅니다. 1단계와 2단계는 측지 타원면에 대해 설명하며 녹색 가로선을 사용하여 적도 지역 위도선을 나타내고 녹색 세로선을 사용하여 여러 경도선을 나타냅니다. 1단계에서는 양쪽 반구로 표시되는 피라미드를 보여 줍니다. 2단계에서는 평평해지는 피라미드를 보여 줍니다. 3단계에서는 평평해진 피라미드가 평면을 구성하도록 결합된 후의 모양을 보여 줍니다. 여기에는 표시된 경도가 많이 나타납니다. 이렇게 표시된 선은 직선이며 피라미드에 놓이는 위치에 따라 길이가 다양합니다.  
   
  ![타원면을 평면에 표시](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "Projection of the ellipsoid onto a plane")  
   

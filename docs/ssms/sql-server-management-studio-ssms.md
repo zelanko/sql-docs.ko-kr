@@ -15,15 +15,15 @@ helpviewer_keywords:
 - SQL Server Management Studio for Reporting Services
 - SQL Server Management Studio for Analysis Services
 ms.custom: ''
-ms.date: 05/29/2019
-ms.openlocfilehash: 3def38b576103a7343816d0dc1c472d3bd64e1a1
-ms.sourcegitcommit: 7e63c612047f2bb1779c872b5180a3ea9afe7e80
+ms.date: 09/11/2019
+ms.openlocfilehash: 2d4dd0491d7328250f73047d64233dd6df84fb2b
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69976124"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988114"
 ---
-# <a name="what-is-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)란? 
+# <a name="what-is-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio)란?
 
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
@@ -33,6 +33,8 @@ ms.locfileid: "69976124"
 - [**SQL Server Developer 다운로드**](https://my.visualstudio.com/Downloads?q=SQL%20Server%20Developer)
 - [**Visual Studio 다운로드**](https://www.visualstudio.com/downloads/)
 
+![SSMS 소개 화면](media/download-sql-server-management-studio-ssms/what-is-ssms.png)
+
 ## <a name="sql-server-management-studio-components"></a>SQL Server Management Studio 구성 요소  
   
 |설명|구성 요소|  
@@ -41,19 +43,19 @@ ms.locfileid: "69976124"
 |**템플릿 탐색기**를 사용하여 쿼리 및 스크립트 개발 속도를 높이는 데 사용하는 상용구 텍스트 파일을 작성 및 관리하는 방법입니다.|[템플릿 탐색기](../ssms/template/template-explorer.md)|  
 |사용되지 않는 **솔루션 탐색기** 를 사용하여 쿼리 및 스크립트와 같은 관리 항목을 관리하는 데 사용되는 프로젝트를 작성하는 방법입니다.|[솔루션 탐색기](../ssms/solution/solution-explorer.md)|  
 |[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]에 포함된 비주얼 디자인 도구를 사용하는 방법입니다.|[Visual Database Tools](../ssms/visual-db-tools/visual-database-tools.md)|  
-|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 언어 편집기를 사용하여 쿼리와 스크립트를 대화식으로 작성 및 디버깅하는 방법입니다.|[쿼리 및 텍스트 편집기(SQL Server Management Studio)](../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)|
+|[!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] 언어 편집기를 사용하여 쿼리와 스크립트를 대화식으로 작성 및 디버깅하는 방법입니다.|[쿼리 및 텍스트 편집기](scripting/query-and-text-editors-sql-server-management-studio.md)
 
 ## <a name="sql-server-management-studio-for-business-intelligence"></a>비즈니스 인텔리전스용 SQL Server Management Studio
 
 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 및 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]를 액세스, 구성 및 관리하려면 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용합니다. 3가지 비즈니스 인텔리전스 기술 모두 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]에 의존하지만 각 기술과 관련된 관리 태스크는 약간씩 다릅니다.
-  
+
 > [!NOTE]
 > [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]및 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] 솔루션은 [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)]가 아닌 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하여 만들고 수정합니다. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull_md.md)][!INCLUDE[msCoName](../includes/msconame_md.md)][!INCLUDE[vsprvs](../includes/vsprvs-md.md)]기반의 개발 환경입니다.
-  
+
 ### <a name="managing-analysis-services-solutions-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 Analysis Services 솔루션 관리
 
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 개체를 관리할 수 있습니다. 예를 들어 백업을 수행하고 개체를 처리할 수 있습니다.
-  
+
 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] MDX(Multidimensional Expressions), DMX(Data Mining Extensions) 및 XMLA(XML for Analysis)로 작성된 스크립트를 개발 및 저장할 수 있는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 스크립트 프로젝트를 제공합니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 스크립트 프로젝트를 사용하여 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 인스턴스에서 관리 태스크를 수행하거나 데이터베이스 및 큐브와 같은 개체를 다시 만들 수 있습니다. 예를 들어 기존 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 인스턴스에 직접 새 개체를 만드는 [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 스크립트 프로젝트에서 XMLA 스크립트를 개발할 수 있습니다. [!INCLUDE[ssASnoversion](../includes/ssasnoversion_md.md)] 스크립트 프로젝트는 솔루션의 일부로 저장되어 원본 코드 제어와 함께 통합될 수 있습니다.
   
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]를 사용하는 방법에 대한 자세한 내용은 [SQL Server Management Studio를 사용한 개발 및 구현](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio)을 참조하세요.
@@ -66,17 +68,17 @@ ms.locfileid: "69976124"
 
 SQL Server Management Studio를 사용하여 Reporting Services 기능을 활성화하고 서버 및 데이터베이스를 관리하고 역할 및 작업을 관리할 수 있습니다.
 
-공유 일정 폴더를 사용하여 공유 일정을 관리하고 보고서 서버 데이터베이스(ReportServer, ReportServerTempdb)를 관리할 수 있습니다. 또한 보고서 서버 데이터베이스를 새로운 또는 다른 SQL Server 데이터베이스 엔진([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)])으로 이동할 때 Master 시스템 데이터베이스에서 RSExecRole을 만듭니다. 이러한 태스크에 대한 자세한 내용은 다음 항목을 참조하십시오.  
+공유 일정 폴더를 사용하여 공유 일정을 관리하고 보고서 서버 데이터베이스(ReportServer, ReportServerTempdb)를 관리할 수 있습니다. 또한 보고서 서버 데이터베이스를 새로운 또는 다른 SQL Server 데이터베이스 엔진([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde_md.md)])으로 이동할 때 Master 시스템 데이터베이스에서 RSExecRole을 만듭니다. 이러한 문서에 관한 자세한 내용은 다음 항목을 참조하세요.  
 
-- [Management Studio 방법 도움말 항목](https://msdn.microsoft.com/60685458-9108-47bf-820a-5e7db454d408)
+- [SSMS의 Reporting Services](../reporting-services/tools/reporting-services-in-sql-server-management-studio-ssrs.md)
 - [보고서 서버 데이터베이스 관리](../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)
-- [방법: RSExecRole 만들기](../reporting-services/security/create-the-rsexecrole.md)
-  
-다양한 기능을 설정 및 구성하고 서버 기본값을 설정하고 역할 및 작업을 관리함으로써 서버를 관리할 수도 있습니다. 이러한 태스크에 대한 자세한 내용은 다음 항목을 참조하십시오.
+- [RSExecRole 만들기](../reporting-services/security/create-the-rsexecrole.md)
 
-- [방법: 보고서 서버 속성 설정(Management Studio)](https://msdn.microsoft.com/1ed0f84b-b12a-4e49-b65c-a11a99f9093f)
-- [방법: 역할 만들기, 삭제 또는 수정(Management Studio)](https://msdn.microsoft.com/3d1d56e6-a283-44a7-8417-36cb4d2c74d1)
-- [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](https://msdn.microsoft.com/0e709c96-7517-4547-8ef6-5632f8118524)
+다양한 기능을 설정 및 구성하고 서버 기본값을 설정하고 역할 및 작업을 관리함으로써 서버를 관리할 수도 있습니다. 이러한 문서에 관한 자세한 내용은 다음 항목을 참조하세요.
+
+- [보고서 서버 속성 설정](../reporting-services/tools/set-report-server-properties-management-studio.md)
+- [역할 만들기, 삭제 또는 수정](../reporting-services/security/role-definitions-create-delete-or-modify.md)
+- [Reporting Services에 대한 클라이언트 쪽 인쇄 기능 설정 및 해제](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)
 
 ## <a name="non-english-language-versions-of-sql-server-management-studio-ssms"></a>영어가 아닌 언어 버전의 SSMS(SQL Server Management Studio)
 
@@ -94,11 +96,9 @@ SQL Server Management Studio를 사용하여 Reporting Services 기능을 활성
 
 ## <a name="next-steps"></a>다음 단계
 
-- [영어가 아닌 언어 버전의 SSMS(SQL Server Management Studio) 설치](install-other-languages.md)
-- [자습서: SQL Server Management Studio](tutorials/tutorial-sql-server-management-studio.md)
-- [자습서: Transact-SQL 문 작성](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
-- [SQL Server Data Tools를 사용한 개발 및 구현](https://docs.microsoft.com/analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt)
-- [SQL Server Data Tools의 Reporting Services](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)
-- [자습서: SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/tutorials/tutorial-sql-server-management-studio)
+- [비영어 SSMS 버전 설치](install-other-languages.md)
+- [SQL Server 인스턴스에 연결 및 쿼리](tutorials/connect-query-sql-server.md)
+- [Transact-SQL 문 작성](https://msdn.microsoft.com/2addc9be-67d0-423d-a457-192fe9d7d058)
+- [Azure Data Studio](../azure-data-studio/what-is.md)
 
 [!INCLUDE[contribute-to-content](../includes/paragraph-content/contribute-to-content.md)]

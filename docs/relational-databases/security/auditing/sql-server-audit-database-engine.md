@@ -16,12 +16,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 439294b36c03d36a2747c17ab53b630d39c8caea
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 46fb32fcd6f3aa0d78f748f1ef1e8ec419084f46
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742882"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878689"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit(데이터베이스 엔진)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -129,7 +129,7 @@ ms.locfileid: "68742882"
 ### <a name="database-mirroring-and-sql-server-audit"></a>데이터베이스 미러링 및 SQL Server Audit  
  데이터베이스 감사 사양이 정의되어 있고 데이터베이스 미러링을 사용하는 데이터베이스는 데이터베이스 감사 사양을 포함합니다. 미러링된 SQL 인스턴스에서 올바르게 작동하려면 다음 항목을 구성해야 합니다.  
   
--   데이터베이스 감사 사양을 활성화하여 감사 레코드를 작성할 수 있도록 하려면 미러 서버에 동일한 GUID를 가진 감사가 있어야 합니다. 이는 CREATE AUDIT WITH GUID **=** _\<원본 서버 감사의 GUID_> 명령을 사용하여 구성할 수 있습니다.  
+-   데이터베이스 감사 사양을 활성화하여 감사 레코드를 작성할 수 있도록 하려면 미러 서버에 동일한 GUID를 가진 감사가 있어야 합니다. 이는 CREATE AUDIT WITH GUID **=**_\<원본 서버 감사의 GUID_> 명령을 사용하여 구성할 수 있습니다.  
   
 -   이진 파일 대상의 경우 미러 서버 서비스 계정에 감사 내역이 작성될 위치에 대한 적절한 권한이 있어야 합니다.  
   
@@ -144,13 +144,18 @@ ms.locfileid: "68742882"
 ### <a name="data-definition-language-statements"></a>데이터 정의 언어 문  
  다음 DDL 문을 사용하여 감사 사양을 생성, 변경 및 삭제할 수 있습니다.  
   
-|||  
+|DDL 문|설명| 
 |-|-|  
-|[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|[CREATE SERVER AUDIT](../../../t-sql/statements/create-server-audit-transact-sql.md)|  
-|[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|[CREATE SERVER AUDIT SPECIFICATION](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)|  
-|[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|[DROP DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/drop-database-audit-specification-transact-sql.md)|  
-|[ALTER SERVER AUDIT SPECIFICATION](../../../t-sql/statements/alter-server-audit-specification-transact-sql.md)|[DROP SERVER AUDIT](../../../t-sql/statements/drop-server-audit-transact-sql.md)|  
-|[CREATE DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/create-database-audit-specification-transact-sql.md)|[DROP SERVER AUDIT SPECIFICATION](../../../t-sql/statements/drop-server-audit-specification-transact-sql.md)|  
+|[ALTER AUTHORIZATION](../../../t-sql/statements/alter-authorization-transact-sql.md)|보안 개체의 소유권을 변경합니다.|  
+|[ALTER DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/alter-database-audit-specification-transact-sql.md)|SQL Server Audit 기능을 사용하여 데이터베이스 감사 사양 개체를 변경합니다.|  
+|[ALTER SERVER AUDIT](../../../t-sql/statements/alter-server-audit-transact-sql.md)|SQL Server Audit 기능을 사용하여 서버 감사 개체를 변경합니다.|  
+|[ALTER SERVER AUDIT SPECIFICATION](../../../t-sql/statements/alter-server-audit-specification-transact-sql.md)|SQL Server Audit 기능을 사용하여 서버 감사 사양 개체를 변경합니다.|  
+|[CREATE DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/create-database-audit-specification-transact-sql.md)|SQL Server Audit 기능을 사용하여 데이터베이스 감사 사양 개체를 만듭니다.|  
+|[CREATE SERVER AUDIT](../../../t-sql/statements/create-server-audit-transact-sql.md)|SQL Server Audit를 사용하여 서버 감사 개체를 만듭니다.|  
+|[CREATE SERVER AUDIT SPECIFICATION](../../../t-sql/statements/create-server-audit-specification-transact-sql.md)|SQL Server Audit 기능을 사용하여 서버 감사 사양 개체를 만듭니다.|  
+|[DROP DATABASE AUDIT SPECIFICATION](../../../t-sql/statements/drop-database-audit-specification-transact-sql.md)|SQL Server Audit 기능을 사용하여 데이터베이스 감사 사양 개체를 삭제합니다.|  
+|[DROP SERVER AUDIT](../../../t-sql/statements/drop-server-audit-transact-sql.md)|SQL Server Audit 기능을 사용하여 서버 감사 개체를 삭제합니다.|  
+|[DROP SERVER AUDIT SPECIFICATION](../../../t-sql/statements/drop-server-audit-specification-transact-sql.md)|SQL Server Audit 기능을 사용하여 서버 감사 사양 개체를 삭제합니다.|  
   
 ### <a name="dynamic-views-and-functions"></a>동적 뷰 및 함수  
  다음 표에서는 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit에 사용할 수 있는 동적 뷰 및 함수를 나열합니다.  

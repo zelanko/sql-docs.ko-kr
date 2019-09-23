@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: 6e1291537495f6c59295d607203ff4c8a450008b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70110280"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304806"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -394,7 +394,7 @@ sys.databases 카탈로그 뷰의 is_auto_update_stats_async_on 열을 검사하
 
 동기 통계 업데이트를 사용하는 경우 또는 비동기 통계 업데이트를 사용하는 경우에 대한 자세한 설명은 [통계 ](../../relational-databases/statistics/statistics.md)에서 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조하세요.
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]부터 시작)
 
 `FORCE_LAST_GOOD_PLAN` [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md) 옵션을 사용하거나 사용하지 않도록 설정합니다.
@@ -408,7 +408,7 @@ ON
 OFF         
 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]은 [sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) 뷰에서 SQL 계획 변경으로 인한 잠재적인 쿼리 성능 저하를 보고합니다. 하지만 이러한 권장 사항은 자동으로 적용되지 않습니다. 사용자는 보기에 표시된 [!INCLUDE[tsql-md](../../includes/tsql-md.md)] 스크립트를 적용하여 활성 권장 사항을 모니터링하고 확인된 문제를 해결할 수 있습니다. 이것은 기본값입니다.
 
-**\<change_tracking_option> ::=**          
+**\<change_tracking_option> ::=**         
 **적용 대상:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
 
 변경 내용 추적 옵션을 제어합니다. 변경 내용 추적을 설정 또는 해제하고 옵션을 설정 또는 변경할 수 있습니다. 예를 보려면 이 문서의 뒷부분에 나오는 예 섹션을 참조하세요.
@@ -434,7 +434,7 @@ CHANGE_RETENTION =*retention_period* { DAYS | HOURS | MINUTES }
 OFF         
 데이터베이스에서 변경 내용 추적을 해제합니다. 데이터베이스에서 변경 내용 추적을 사용 중지하려면 모든 테이블에서 변경 내용 추적을 사용하지 않도록 설정해야 합니다.
 
-**\<containment_option> ::=**          
+**\<containment_option> ::=**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
 
 데이터베이스 포함 옵션을 제어합니다.
@@ -478,12 +478,12 @@ GLOBAL을 지정하고 커서를 만들 때 LOCAL로 정의하지 않으면 커�
 
 sys.databases 카탈로그 뷰의 is_local_cursor_default 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsLocalCursorsDefault 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-**\<database_mirroring>**          
+**\<database_mirroring>**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 인수에 대한 설명은 [ALTER DATABASE 데이터베이스 미러링](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)을 참조하세요.
 
-**\<date_correlation_optimization_option> ::=**         
+**\<date_correlation_optimization_option> ::=**        
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 date_correlation_optimization 옵션을 제어합니다.
@@ -524,7 +524,7 @@ RESUME
 
 [sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 동적 관리 뷰를 사용하여 데이터베이스의 암호화 상태와 암호화 검사 상태를 확인할 수 있습니다.
 
-**\<db_state_option> ::=**          
+**\<db_state_option> ::=**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 데이터베이스의 상태를 제어합니다.
@@ -590,7 +590,7 @@ MULTI_USER
 
 sys.databases 카탈로그 뷰의 user_access 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 UserAccess 속성을 검사하여 상태를 확인할 수도 있습니다.
 
-**\<delayed_durability_option> ::=**          
+**\<delayed_durability_option> ::=**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
 
 트랜잭션이 완전한 내구성이 있게 커밋될지 아니면 지연된 내구성이 있게 커밋될지 제어합니다.
@@ -604,7 +604,7 @@ SET ALLOWED 다음의 모든 트랜잭션은 ATOMIC 블록이나 COMMIT 문에 �
 FORCED         
 SET FORCED 다음의 모든 트랜잭션은 지연된 내구성이 있습니다. ATOMIC 블록이나 COMMIT 문에 설정된 내구성 옵션은 무시됩니다.
 
-**\<external_access_option> ::=**          
+**\<external_access_option> ::=**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 다른 데이터베이스의 개체와 같은 외부 리소스에서 데이터베이스에 액세스할 수 있는지 여부를 제어합니다.
@@ -668,7 +668,7 @@ TWO_DIGIT_YEAR_CUTOFF
 
 두 자리 연도를 네 자리 연도로 해석하기 위한 구분 연도를 나타내는 1753에서 9999까지의 정수를 지정합니다. 이 옵션은 CONTAINMENT가 PARTIAL로 설정된 경우에만 사용할 수 있습니다. CONTAINMENT가 NONE으로 설정되어 있으면 오류가 발생합니다.
 
-**\<FILESTREAM_option> ::=**          
+**\<FILESTREAM_option> ::=**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ~ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 FileTable에 대한 설정을 제어합니다.
@@ -683,15 +683,15 @@ READ_ONLY
 FULL         
 FileTable의 FILESTREAM 데이터에 대한 전체 비트랜잭션 액세스를 사용하도록 설정합니다.
 
-DIRECTORY_NAME = *\<directory_name>*          
+DIRECTORY_NAME = *\<directory_name>*         
 Windows 호환 디렉터리 이름입니다. 이 이름은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스의 모든 데이터베이스 수준 디렉터리 이름 중에서 고유해야 합니다. 고유성을 비교할 때는 데이터 정렬 설정과 관계없이 대/소문자가 구분되지 않습니다. 데이터베이스에 FileTable을 만들기 전에 이 옵션을 설정해야 합니다.
 
-**\<HADR_options> ::=**          
+**\<HADR_options> ::=**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 [ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)을 참조하세요.
 
-**\<mixed_page_allocation_option> ::=**          
+**\<mixed_page_allocation_option> ::=**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
 
 데이터베이스가 테이블이나 인덱스의 첫 8페이지에 대해 혼합 익스텐트를 사용하여 초기 페이지를 만들 수 있는지 여부를 제어합니다.
@@ -718,7 +718,7 @@ FORCED
 
 이 옵션의 현재 설정은 sys.databases 카탈로그 뷰의 is_parameterization_forced 열을 검사하여 확인할 수 있습니다.
 
-**\<query_store_options> ::=**          
+**\<query_store_options> ::=**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
 
 ON | OFF | CLEAR [ ALL ]         
@@ -732,9 +732,6 @@ OFF
 
 CLEAR         
 쿼리 저장소의 내용을 제거합니다.
-
-> [!NOTE]
-> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 사용자 데이터베이스에서 `ALTER DATABASE SET QUERY_STORE`를 실행해야 합니다. 다른 데이터 웨어하우스 인스턴스에서는 문을 실행할 수 없습니다.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }         
 쿼리 저장소의 작업 모드를 설명합니다. 
@@ -793,7 +790,7 @@ QUERY_CAPTURE_MODE는 **nvarchar** 형식입니다.
 max_plans_per_query         
 각 쿼리에 대해 유지 관리되는 최대 계획 수를 정의합니다. 기본값은 200입니다. MAX_PLANS_PER_QUERY는 **int** 형식입니다.
 
-**\<query_capture_policy_option_list> :: =**          
+**\<query_capture_policy_option_list> :: =**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 3.0 시작)
 
 쿼리 저장소 캡처 정책 옵션을 제어합니다. STALE_CAPTURE_POLICY_THRESHOLD를 제외하고 이 옵션은 정의된 부실 캡처 정책 임계값에 캡처해야 할 쿼리에 대해 수행해야 할 OR 조건을 정의합니다.
@@ -811,7 +808,7 @@ TOTAL_COMPILE_CPU_TIME_MS
 TOTAL_EXECUTION_CPU_TIME_MS         
 평가 기간 동안 쿼리에 사용하는 총 경과 실행 CPU 시간을 정의합니다. 기본값은 100이며, 이 값은 기본 부실 캡처 정책 임계값의 경우 1일의 실행 중에 총 100 ms 이상의 CPU 시간을 소비하여 쿼리를 수행하고 쿼리 저장소에 유지해야 함을 의미합니다. TOTAL_EXECUTION_CPU_TIME_MS는 **int** 형식입니다.
 
-**\<recovery_option> ::=**          
+**\<recovery_option> ::=**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 데이터베이스 복구 옵션과 디스크 I/O 오류 검사를 제어합니다.
@@ -880,7 +877,7 @@ PAGE_VERIFY 옵션을 사용하는 경우 다음 중요 사항을 고려하십�
 
 이 옵션의 현재 설정은 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) 카탈로그 뷰의 *page_verify_option* 열 또는 [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 함수의 *IsTornPageDetectionEnabled* 속성을 검사하여 확인할 수 있습니다.
 
-**\<remote_data_archive_option> ::=**          
+**\<remote_data_archive_option> ::=**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
 
 데이터베이스에 Stretch Database를 사용하거나 사용하지 않도록 설정합니다. 자세한 내용은 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)를 참조하십시오.
@@ -914,7 +911,7 @@ Stretch Database를 사용하도록 설정된 테이블이 데이터베이스에
 
 Stretch를 사용하지 않도록 설정해도 원격 데이터베이스는 제거되지 않습니다. 원격 데이터베이스를 삭제하려면 Azure Portal을 사용하여 삭제해야 합니다.
  
-**\<service_broker_option> ::=**          
+**\<service_broker_option> ::=**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 메시지 배달을 사용 또는 사용하지 않도록 설정하거나, 새 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 식별자를 설정하거나, 대화 우선 순위를 ON 또는 OFF로 설정하는 [!INCLUDE[ssSB](../../includes/sssb-md.md)] 옵션을 제어합니다.
@@ -1138,7 +1135,7 @@ sys.databases 카탈로그 뷰의 is_recursive_triggers_on 열을 검사하여 �
 
 이 옵션의 상태는 sys.databases 카탈로그 뷰의 is_recursive_triggers_on 열 또는 DATABASEPROPERTYEX 함수의 IsRecursiveTriggersEnabled 속성을 검사하여 확인할 수 있습니다.
 
-**\<target_recovery_time_option> ::=**          
+**\<target_recovery_time_option> ::=**         
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)
 
 데이터베이스 단위로 간접 검사점의 빈도를 지정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 데이터베이스의 기본값은 1분이며, 이 값은 데이터베이스에서 간접 검사점을 사용한다는 것을 나타냅니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 대부분의 시스템에 1분을 권장합니다.
@@ -1223,7 +1220,7 @@ NO_WAIT
 
 ## <a name="examples"></a>예
 
-### <a name="a-setting-options-on-a-database"></a>1\. 데이터베이스 옵션 설정
+### <a name="a-setting-options-on-a-database"></a>1. 데이터베이스 옵션 설정
 
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 예제 데이터베이스에 대해 복구 모델 및 데이터 페이지 확인 옵션을 설정합니다.
 
@@ -1236,7 +1233,7 @@ GO
 
 ```
 
-### <a name="b-setting-the-database-to-read_only"></a>2\. 데이터베이스를 READ_ONLY로 설정
+### <a name="b-setting-the-database-to-read_only"></a>2. 데이터베이스를 READ_ONLY로 설정
 
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예에서는 데이터베이스를 `SINGLE_USER` 모드로 설정하여 배타적 액세스 권한을 확보한 다음 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
 
@@ -1399,7 +1396,7 @@ SET QUERY_STORE = ON
 
 > ||||
 > |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_** &nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\*SQL Database<br />단일 데이터베이스/탄력적 풀\*_**&nbsp;|[SQL Database<br />관리되는 인스턴스](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[SQL Data<br />Warehouse](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
 
 &nbsp;
 
@@ -1626,7 +1623,7 @@ sys.databases 카탈로그 뷰의 is_auto_update_stats_async_on 열을 검사하
 
 동기 통계 업데이트를 사용하는 경우 또는 비동기 통계 업데이트를 사용하는 경우에 대한 자세한 설명은 [통계 ](../../relational-databases/statistics/statistics.md)에서 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조하세요.
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
 **적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
 
 [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md)에 대한 자동 옵션을 제어합니다.
@@ -2033,7 +2030,7 @@ sys.databases 카탈로그 뷰의 is_recursive_triggers_on 열을 검사하여 �
 
 데이터베이스 단위로 간접 검사점의 빈도를 지정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 데이터베이스의 기본값은 1분이며 데이터베이스에서 간접 검사점을 사용한다는 것을 나타냅니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 대부분의 시스템에 1분을 권장합니다.
 
-TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }         
 *target_recovery_time*         
 충돌 시 지정된 데이터베이스를 복구하는 데 걸리는 최대 시간을 지정합니다.
 
@@ -2087,7 +2084,7 @@ NO_WAIT
 
 ## <a name="examples"></a>예
 
-### <a name="a-setting-the-database-to-read_only"></a>1\. 데이터베이스를 READ_ONLY로 설정
+### <a name="a-setting-the-database-to-read_only"></a>1. 데이터베이스를 READ_ONLY로 설정
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
 
 ```sql
@@ -2105,7 +2102,7 @@ GO
 
 ```
 
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>2\. 데이터베이스에서 스냅샷 격리 활성화
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>2. 데이터베이스에서 스냅샷 격리 활성화
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 스냅샷 격리 프레임워크 옵션을 활성화합니다.
 
 ```sql
@@ -2400,7 +2397,7 @@ sys.databases 카탈로그 뷰의 is_auto_update_stats_async_on 열을 검사하
 
 동기 통계 업데이트를 사용하는 경우 또는 비동기 통계 업데이트를 사용하는 경우에 대한 자세한 설명은 [통계 ](../../relational-databases/statistics/statistics.md)에서 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조하세요.
 
-<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**          
+<a name="auto_tuning"></a> **\<automatic_tuning_option> ::=**         
 **적용 대상**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)].
 
 `FORCE_LAST_GOOD_PLAN` [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md) 옵션을 사용하거나 사용하지 않도록 설정합니다.
@@ -2766,7 +2763,7 @@ sys.databases 카탈로그 뷰의 is_recursive_triggers_on 열을 검사하여 �
 
 데이터베이스 단위로 간접 검사점의 빈도를 지정합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 새 데이터베이스의 기본값은 1분이며 데이터베이스에서 간접 검사점을 사용한다는 것을 나타냅니다. 이전 버전의 기본값 0은 데이터베이스가 자동 검사점을 사용함을 나타내며, 빈도는 서버 인스턴스의 복구 간격 설정에 따라 달라집니다. [!INCLUDE[msCoName](../../includes/msconame-md.md)]에서는 대부분의 시스템에 1분을 권장합니다.
 
-TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS | MINUTES }         
+TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS | MINUTES }         
 *target_recovery_time*         
 충돌 시 지정된 데이터베이스를 복구하는 데 걸리는 최대 시간을 지정합니다.
 
@@ -2793,7 +2790,7 @@ NO_WAIT
 
 ## <a name="examples"></a>예
 
-### <a name="a-setting-the-database-to-read_only"></a>1\. 데이터베이스를 READ_ONLY로 설정
+### <a name="a-setting-the-database-to-read_only"></a>1. 데이터베이스를 READ_ONLY로 설정
 데이터베이스 또는 파일 그룹의 상태를 READ_ONLY 또는 READ_WRITE로 변경하려면 데이터베이스에 대한 배타적 액세스가 필요합니다. 다음 예제에서는 데이터베이스를 `RESTRICTED_USER` 모드로 설정하여 액세스를 제한합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스의 상태를 `READ_ONLY` 로 설정한 후 데이터베이스 액세스를 모든 사용자에게 반환합니다.
 
 ```sql
@@ -2811,7 +2808,7 @@ GO
 
 ```
 
-### <a name="b-enabling-snapshot-isolation-on-a-database"></a>2\. 데이터베이스에서 스냅샷 격리 활성화
+### <a name="b-enabling-snapshot-isolation-on-a-database"></a>2. 데이터베이스에서 스냅샷 격리 활성화
 다음 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스에 대해 스냅샷 격리 프레임워크 옵션을 활성화합니다.
 
 ```sql
@@ -2912,20 +2909,43 @@ SET
 
 <option_spec>::=
 {
-<RESULT_SET_CACHING>
-|<snapshot_option>
+    <auto_option>
+  | <db_encryption_option>
+  | <query_store_options>
+  | <result_set_caching>
+  | <snapshot_option>
 }
 ;
 
-<RESULT_SET_CACHING>::=
+<auto_option> ::=
 {
-RESULT_SET_CACHING {ON | OFF}
+    AUTO_CREATE_STATISTICS { OFF | ON }
 }
 
-<snapshot_option>::=
+<db_encryption_option> ::=
 {
-READ_COMMITTED_SNAPSHOT {ON | OFF }
+    ENCRYPTION { ON | OFF }
 }
+
+<query_store_option> ::=
+{
+    QUERY_STORE
+    {
+          = OFF
+        | = ON
+    }
+}
+
+<result_set_caching_option> ::=
+{
+    RESULT_SET_CACHING { ON | OFF }
+}
+
+<snapshot_option> ::=
+{
+    READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 
 ```
@@ -2936,8 +2956,47 @@ READ_COMMITTED_SNAPSHOT {ON | OFF }
 
 수정할 데이터베이스의 이름입니다.
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-Azure SQL Data Warehouse(미리 보기)**에 적용**
+**<auto_option> ::=**
+
+자동 옵션을 제어합니다.
+
+AUTO_CREATE_STATISTICS { ON | OFF } ON 쿼리 최적화 프로그램에서 필요에 따라 쿼리 조건자의 단일 열에 대한 통계를 생성하여 쿼리 계획 및 쿼리 성능을 향상시킵니다. 쿼리 최적화 프로그램에서 쿼리를 컴파일할 때 이러한 단일 열 통계가 생성됩니다. 단일 열 통계는 기존 통계 개체의 첫 번째 열이 아닌 열에 대해서만 생성됩니다.
+
+기본값은 ON입니다. 대부분의 데이터베이스의 경우 기본 설정을 사용하는 것이 좋습니다.
+
+OFF 쿼리 최적화 프로그램에서 쿼리를 컴파일할 때 쿼리 조건자의 단일 열에 대한 통계를 생성하지 않습니다. 이 옵션을 OFF로 설정하면 최적이 아닌 쿼리 계획을 사용하므로 쿼리 성능이 저하됩니다.
+sys.databases 카탈로그 뷰의 is_auto_create_stats_on 열을 검사하여 이 옵션의 상태를 확인할 수 있습니다. DATABASEPROPERTYEX 함수의 IsAutoCreateStatistics 속성을 검사하여 상태를 확인할 수도 있습니다.
+자세한 내용은 통계의 "데이터베이스 차원의 통계 옵션 사용" 섹션을 참조하세요.
+
+**<db_encryption_option> ::=**
+
+데이터베이스 암호화 상태를 제어합니다.
+
+ENCRYPTION { ON | OFF } ON 데이터베이스를 암호화하도록 설정합니다.
+
+OFF 데이터베이스를 암호화하지 않도록 설정합니다.
+
+데이터베이스 암호화에 대한 자세한 내용은 투명한 데이터 암호화 및 Azure SQL Database를 사용한 투명한 데이터 암호화를 참조하세요.
+
+데이터베이스 수준에서 암호화를 사용할 수 있으면 모든 파일 그룹이 암호화됩니다. 새로운 파일 그룹은 암호화된 속성을 상속합니다. 데이터베이스의 파일 그룹이 READ ONLY로 설정되면 데이터베이스 암호화 작업이 실패합니다.
+sys.dm_database_encryption_keys 동적 관리 뷰를 사용하여 데이터베이스의 암호화 상태와 암호화 검사 상태를 확인할 수 있습니다.
+
+**\<query_store_option> ::=**
+
+ON | OFF   
+이 데이터 웨어하우스에서 쿼리 저장소를 사용할 수 있는지를 제어합니다.     
+
+ON         
+쿼리 저장소를 사용하도록 설정합니다.
+
+OFF         
+쿼리 저장소를 사용하지 않도록 합니다. OFF가 기본값입니다.
+
+> [!NOTE]
+> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]의 경우 사용자 데이터베이스에서 `ALTER DATABASE SET QUERY_STORE`를 실행해야 합니다. 다른 데이터 웨어하우스 인스턴스에서는 문을 실행할 수 없습니다.
+
+**\<result_set_caching_option> ::=**   
+**적용 대상**: Azure SQL Data Warehouse(미리 보기)
 
 이 명령은 `master` 데이터베이스에 연결되어 있는 동안 실행되어야 합니다.  이 데이터베이스 설정 변경이 즉시 적용됩니다.  쿼리 집합 캐싱으로 스토리지 비용이 발생합니다. 데이터베이스의 결과 캐싱을 사용하지 않도록 설정하면 영구 결과 캐시가 즉시 Microsoft Azure SQL Data Warehouse 스토리지에서 삭제됩니다. 데이터베이스의 결과 캐싱을 표시하기 위해 `sys.databases`에 새 열 is_result_set_caching_on이 도입되었습니다.  
 
@@ -2955,22 +3014,7 @@ OFF
 command|Like|%DWResultCacheDb%|
 | | |
 
-
-<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
-Azure SQL Data Warehouse(미리 보기)**에 적용**
-
-ON은 데이터베이스 수준에서 READ_COMMITTED_SNAPSHOT 옵션을 사용하도록 설정합니다.
-
-OFF는 데이터베이스 수준에서 READ_COMMITTED_SNAPSHOT 옵션을 끕니다.
-
-데이터베이스에 대해 READ_COMMITTED_SNAPSHOT을 설정하거나 해제하면 이 데이터베이스에 대해 열린 모든 연결이 중지됩니다.  데이터베이스 유지 관리 기간 동안 이 변경을 수행하거나 ALTER DATABSE 명령을 실행하는 연결을 제외하고 데이터베이스에 대한 활성 연결이 없을 때까지 기다릴 수 있습니다.  데이터베이스가 단일 사용자 모드에 있을 필요는 없습니다.  세션 수준에서 READ_COMMITTED_SNAPSHOT 설정을 변경하는 것은 지원되지 않습니다.  데이터베이스에 대한이 설정을 확인하려면 is_read_committed_snapshot_on의 열을 확인합니다.
-
-READ_COMMITTED_SNAPSHOT이 설정된 데이터베이스에서 여러 데이터 버전이 있는 경우 버전의 검사로 인해 쿼리 성능이 저하될 수 있습니다. 또한 장기간 열린 트랜잭션은 버전 정리를 차단하는 이러한 트랜잭션에 의한 데이터 변경 사항이 있는 경우 데이터베이스 크기를 늘릴 수 있습니다.  
-
-
-
-
-## <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Remarks
 
 캐시된 결과 집합은 다음 요구 사항이 모두 충족되는 경우 쿼리에 다시 사용됩니다.
 
@@ -2980,6 +3024,21 @@ READ_COMMITTED_SNAPSHOT이 설정된 데이터베이스에서 여러 데이터 �
 
 데이터베이스에 대해 결과 집합 캐싱을 설정하면 DateTime.Now()와 같은 비결정적 함수가 있는 쿼리를 제외하고 캐시가 가득 찰 때까지 모든 쿼리에 대해 결과가 캐시됩니다.   큰 결과 집합(예: > 1 백만 행)이 있는 쿼리는 결과 캐시가 생성될 때 첫 번째 실행 중에 성능이 저하될 수 있습니다.
 
+**<snapshot_option> ::=**
+
+트랜잭션 격리 수준을 계산합니다.
+
+READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**적용 대상**: Azure SQL Data Warehouse(미리 보기)
+
+ON은 데이터베이스 수준에서 READ_COMMITTED_SNAPSHOT 옵션을 사용하도록 설정합니다.
+
+OFF는 데이터베이스 수준에서 READ_COMMITTED_SNAPSHOT 옵션을 끕니다.
+
+데이터베이스에 대해 READ_COMMITTED_SNAPSHOT을 설정하거나 해제하면 이 데이터베이스에 대해 열린 모든 연결이 중지됩니다.  데이터베이스 유지 관리 기간 동안 이 변경을 수행하거나 ALTER DATABSE 명령을 실행하는 연결을 제외하고 데이터베이스에 대한 활성 연결이 없을 때까지 기다릴 수 있습니다.  데이터베이스가 단일 사용자 모드에 있을 필요는 없습니다.  세션 수준에서 READ_COMMITTED_SNAPSHOT 설정을 변경하는 것은 지원되지 않습니다.  데이터베이스에 대한이 설정을 확인하려면 is_read_committed_snapshot_on의 열을 확인합니다.
+
+READ_COMMITTED_SNAPSHOT이 설정된 데이터베이스에서 여러 데이터 버전이 있는 경우 버전의 검사로 인해 쿼리 성능이 저하될 수 있습니다. 또한 장기간 열린 트랜잭션은 버전 정리를 차단하는 이러한 트랜잭션에 의한 데이터 변경 사항이 있는 경우 데이터베이스 크기를 늘릴 수 있습니다.  
+
 ## <a name="permissions"></a>사용 권한
 
 RESULT_SET_CACHING 옵션을 설정하려면 사용자는 서버 수준 보안 주체 로그인(프로비저닝 프로세스에서 만든 로그인)가 있거나 `dbmanager` 데이터베이스 역할의 멤버여야 합니다.  
@@ -2988,28 +3047,90 @@ READ_COMMITTED_SNAPSHOT 옵션을 설정하려면 사용자에게 데이터베�
 
 ## <a name="examples"></a>예
 
-### <a name="enable-result-set-caching-for-a-database"></a>데이터베이스의 결과 집합 캐싱 사용 설정
+### <a name="a-enabling-the-query-store"></a>1. 쿼리 저장소를 사용하도록 설정
+
+다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소 매개 변수를 구성합니다.
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="b-enabling-the-query-store-with-wait-statistics"></a>2. 대기 통계가 포함된 쿼리 저장소를 사용하도록 설정
+
+다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소 매개 변수를 구성합니다.
+
+```sql
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="c-enabling-the-query-store-with-custom-capture-policy-options"></a>C. 사용자 지정 캡처 정책 옵션이 포함된 쿼리 저장소를 사용하도록 설정
+
+다음 예제에서는 쿼리 저장소를 사용하도록 설정하고 쿼리 저장소 매개 변수를 구성합니다.
+
+```sql
+ALTER DATABASE AdventureWorksDW 
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
+### <a name="d-enable-result-set-caching-for-a-database"></a>D. 데이터베이스의 결과 집합 캐싱 사용 설정
+
+```sql
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING ON;
 ```
 
-### <a name="disable-result-set-caching-for-a-database"></a>데이터베이스의 결과 집합 캐싱 사용 설정 안 함
+### <a name="d-disable-result-set-caching-for-a-database"></a>D. 데이터베이스의 결과 집합 캐싱 사용 설정 안 함
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING OFF;
 ```
 
-### <a name="check-result-set-caching-setting-for-a-database"></a>데이터베이스의 결과 집합 캐싱 설정 확인
+### <a name="d-check-result-set-caching-setting-for-a-database"></a>D. 데이터베이스의 결과 집합 캐싱 설정 확인
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>결과 집합 캐시 적중 및 캐시 누락으로 쿼리 수 확인
+### <a name="d-check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>D. 결과 집합 캐시 적중 및 캐시 누락으로 쿼리 수 확인
 
 ```sql
 SELECT  
@@ -3029,7 +3150,7 @@ s.request_id else null end)
      ON s.request_id = r.request_id) A;
 ```
 
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>쿼리의 결과 집합 캐시 적중 또는 캐시 누락 확인
+### <a name="d-check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>D. 쿼리의 결과 집합 캐시 적중 또는 캐시 누락 확인
 
 ```sql
 If
@@ -3041,7 +3162,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>결과 집합 캐시 적중으로 모든 쿼리 확인
+### <a name="d-check-for-all-queries-with-result-set-cache-hits"></a>D. 결과 집합 캐시 적중으로 모든 쿼리 확인
 
 ```sql
 SELECT *  
@@ -3050,6 +3171,7 @@ WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
 ### <a name="enable-read_committed_snapshot-option-for-a-database"></a>데이터베이스용 Read_Committed_Snapshot 옵션 사용
+
 ```sql
 ALTER DATABASE MyDatabase  
 SET READ_COMMITTED_SNAPSHOT ON
@@ -3065,3 +3187,4 @@ SET READ_COMMITTED_SNAPSHOT ON
 - [SQL Data Warehouse 언어 요소](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
+

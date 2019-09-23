@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: ffd608faf64818a7acd9e38d9c502f575be6716a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: ccc96ecf7dccede236616e4680243116b8492d6b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653051"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70309911"
 ---
 ## <a name="enabled-deployment-scenarios"></a>사용할 수 있는 배포 시나리오
 
@@ -13,7 +13,7 @@ SQL Server 2019 RC(릴리스 후보)를 사용하면 다음과 같은 시나리�
 - 병렬 설치. SQL Server 2017을 통한 SQL Server 2012 인스턴스 또는 다른 SQL Server 2019 CTP 3.0 이상 인스턴스와 함께 SQL Server 2019 RC 인스턴스를 설치합니다.
    >[!NOTE]
    >SQL Server 2008 및 2008 R2에서 병렬이 차단되지는 않지만, 일반적으로 해당 버전과 SQL Server 2019간에는 지원되는 Windows 운영 체제 버전이 없습니다.
-- 현재 위치 업그레이드. SQL Server 2017을 통한 SQL Server 2012 인스턴스 및 SQL Server CTP 3.0 인스턴스에서 SQL Server 2019 RC 인스턴스로 업그레이드합니다. SQL Server 2019 CTP 3.0 이전 버전에서 업그레이드할 수는 없으며 새로 설치해야 합니다.
+- 현재 위치 업그레이드. SQL Server 2017을 통한 SQL Server 2012 인스턴스 및 SQL Server CTP 3.0 인스턴스에서 SQL Server 2019 RC로 업그레이드합니다. SQL Server 2019 CTP 3.0 이전 버전에서 업그레이드할 수는 없으며 새로 설치해야 합니다.
    >[!NOTE]
    >SQL Server 2008 및 2008 R2에서 현재 위치 업그레이드가 차단되지는 않지만, 일반적으로 해당 버전과 SQL Server 2019간에는 지원되는 Windows 운영 체제 버전이 없습니다.
 

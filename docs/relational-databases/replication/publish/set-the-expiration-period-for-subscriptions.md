@@ -16,12 +16,12 @@ ms.assetid: 542f0613-5817-42d0-b841-fb2c94010665
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 558a2217f833c2c9016de2cde051baab3620bad7
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9f7948fa600f68b23f5279de8a286044c8f6b245
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769768"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846546"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>구독에 대한 만료 기간 설정
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -65,11 +65,11 @@ ms.locfileid: "68769768"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 구독 만료 기간을 설정하려면  
   
-1.  게시자에서 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. 이때 **@retention** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다. 기본 만료 기간은 336시간입니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
+1.  게시자에서 [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)을 실행합니다. 이때 **\@retention**에 원하는 구독 만료 기간(시간)을 지정합니다. 기본 만료 기간은 336시간입니다. 자세한 내용은 [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>병합 게시에 대한 구독 만료 기간을 설정하려면  
   
-1.  게시자에서 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. 이때 **@retention** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다. **@retention_period_unit** 에 다음과 같은 만료 기간 표현 단위 중 하나를 지정합니다.  
+1.  게시자에서 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)을 실행합니다. 이때 **\@retention**에 원하는 구독 만료 기간 값을 지정하고 **\@retention_period_unit**에 다음과 같은 만료 기간 표현 단위 중 하나를 지정합니다.  
   
     -   **1** = 주  
   
@@ -81,11 +81,11 @@ ms.locfileid: "68769768"
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 구독 만료 기간을 변경하려면  
   
-1.  게시자에서 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. 이때 **@property** 에 **@property** , **@value** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다.  
+1.  게시자에서 [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)을 실행합니다. 이때 **\@property**에 **retention** , **\@value**에 새 구독 만료 기간(시간)을 지정합니다.  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>병합 게시에 대한 구독의 만료 기간을 변경하려면  
   
-1.  게시자에서 [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)을 실행하고 **@publication** 및 **@publisher** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다. 결과 집합의 **retention_period_unit** 값은 다음 중 하나일 수 있습니다.  
+1.  게시자에서 [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)을 실행하고 **\@publication** 및 **\@publisher**를 지정합니다. 결과 집합의 **retention_period_unit** 값은 다음 중 하나일 수 있습니다.  
   
     -   **0** = 일  
   
@@ -95,9 +95,9 @@ ms.locfileid: "68769768"
   
     -   **3** = 년  
   
-2.  게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. 이때 **@property** 에 **@property** 을 지정하고 **@value** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다.  
+2.  게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. 이때 **\@property**에 **retention**을 지정하고 **\@value**에 1단계에서 만든 보존 기간 단위에 따라 텍스트로 새 구독 만료 기간을 지정합니다.  
   
-3.  (옵션) 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. 이때 **retention_period_unit** 에 **@property** 을 지정하고 **@value** 에서 구독 만료 기간을 설정하는 방법에 대해 설명합니다.  
+3.  (옵션) 게시자에서 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)을 실행합니다. 이때 **\@property**에 **retention_period_unit**을 지정하고 **\@value**에 구독 만료 기간의 새 단위를 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   

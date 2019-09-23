@@ -14,12 +14,12 @@ ms.assetid: 742727a1-5189-44ec-b3ae-6fd7aa1f5347
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 65d0b89dfc2862c63d9fbb8f81d4145aba9d391f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7b55822e011b03044d9fafad4ff2b30884ea5ec2
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768638"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846715"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Create and Apply the Initial Snapshot
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -90,13 +90,13 @@ ms.locfileid: "68768638"
 
 1.  스냅샷, 트랜잭션 또는 병합 게시를 만듭니다. 자세한 내용은 [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)를 참조하세요.  
   
-2.  [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. 이때 **@publication** 및 다음 매개 변수를 지정합니다.  
+2.  [sp_addpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)을 실행합니다. **\@publication** 및 다음 매개 변수를 지정합니다.  
   
-    -   배포자에서 스냅샷 에이전트를 실행하는 Windows 인증 자격 증명을 지정하는 **@job_login** .  
+    -   **\@job_login** - 배포자에서 스냅샷 에이전트를 실행하는 Windows 인증 자격 증명 지정  
   
-    -   제공된 Windows 자격 증명의 암호인 **@job_password** .  
+    -   **\@job_password** - 제공된 Windows 자격 증명의 암호  
   
-    -   (옵션) 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **@publisher_security_mode** 에 값 **@publisher_security_mode** . 이 경우 **@publisher_login** 및 **@publisher_password** 을 참조하세요.  
+    -   (옵션) 게시자에 연결할 때 에이전트가 SQL Server 인증을 사용하면 **\@publisher_security_mode**에 값 **0** . 이 경우 **\@publisher_login** 및 **\@publisher_password**에 SQL Server 인증 로그인 정보도 지정해야 합니다.  
   
     -   (옵션) 스냅샷 에이전트 작업에 대한 동기화 일정. 자세한 내용은 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)을 참조하세요.  
   
@@ -105,7 +105,7 @@ ms.locfileid: "68768638"
   
 3.  아티클을 게시에 추가합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
-4.  게시 데이터베이스의 게시자에서 1단계의 **@publication** 값을 지정하여 [sp_startpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)을 실행합니다.  
+4.  게시 데이터베이스의 게시자에서 1단계의 **\@publication** 값을 지정하여 [sp_startpublication_snapshot&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-startpublication-snapshot-transact-sql.md)을 실행합니다.  
   
 ## <a name="apply-a-snapshot"></a>스냅샷 적용  
 
@@ -136,7 +136,7 @@ ms.locfileid: "68768638"
   
     -   **-DistributorLogin**    
     -   **-DistributorPassword**   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**    
+    -   **-DistributorSecurityMode** = **0**    
     -   **-PublisherLogin**    
     -   **-PublisherPassword**    
     -   **-PublisherSecurityMode** =  **@publisher_security_mode**  

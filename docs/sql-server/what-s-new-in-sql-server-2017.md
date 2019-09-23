@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c2950e677537ee6a6bc35d930e124f285bc24df
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494303"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874818"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017의 새로운 기능
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ SQL Server 2017에서는 SQL Server의 기능을 Linux, Linux 기반 Docker 컨�
 ## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 데이터베이스 엔진
 
 SQL Server 2017은 새로운 많은 데이터베이스 엔진 기능과 기능 개선 및 성능 개선 사항을 포함하고 있습니다. 
-- CTP 2.0에 설명된 `clr strict security` 기능에 대한 해결 방법으로 이제 **CLR 어셈블리**를 허용 목록에 추가할 수 있습니다. 신뢰할 수 있는 어셈블리의 허용 목록을 지원하기 위해 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 및 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)가 추가되었습니다(RC1).  
+- CTP 2.0에 설명된 `clr strict security` 기능에 대한 해결 방법으로 이제 **CLR 어셈블리**를 신뢰할 수 있는 어셈블리 목록에 추가할 수 있습니다. 신뢰할 수 있는 어셈블리 목록을 지원하기 위해 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 및 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)가 추가되었습니다(RC1).  
 - **다시 시작 가능한 온라인 인덱스 다시 작성**은 오류(예: 복제본으로 장애 조치(failover) 또는 디스크 공간 부족) 발생 후 중지된 위치에서 온라인 인덱스 다시 작성을 재개하거나 일시 중지하고 나중에 온라인 인덱스 다시 작성 작업을 다시 시작합니다. [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 및 [온라인 인덱스 작업에 대한 지침](../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요. (CTP 2.0)
 - ALTER DATABASE SCOPED CONFIGURATION의 **IDENTITY_CACHE** 옵션을 사용하면 서버가 예기치 않게 다시 시작하거나 보조 서버로 장애 조치(failover)된 후 ID 열의 값이 차이 나지 않도록 할 수 있습니다. [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요. (CTP 2.0)
 - 애플리케이션 워크로드의 런타임 조건에 대한 최적화 전략을 적용한 새로운 세대의 향상된 쿼리 처리 기능입니다. **적응 쿼리 처리** 기능 제품군의 첫 번째 버전의 경우 다중 문 테이블 값 함수에 대한 **배치 모드 적응 조인**, **배치 모드 메모리 부여 피드백** 및 **인터리브 실행**과 같은 세 가지 새로운 향상된 기능이 있습니다.  [SQL 데이터베이스의 지능형 쿼리 처리](../relational-databases/performance/intelligent-query-processing.md)를 참조하세요.

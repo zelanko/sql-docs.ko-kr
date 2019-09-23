@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 063d3d9c-ccb5-4fab-9d0c-c675997428b4
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ae61bdd59202db73b404bf2c639c2f1cee98e81f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08379ce20bfc58c0d6c17256ff8810421334cf1c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058107"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874865"
 ---
 # <a name="advanced-merge-replication---conflict-detection-and-resolution"></a>고급 병합 복제 - 충돌 감지 및 해결
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,8 @@ ms.locfileid: "68058107"
 ## <a name="conflict-resolution"></a>충돌 해결  
  충돌이 감지되면 병합 에이전트는 선택한 충돌 해결 프로그램을 시작하고 해결 프로그램을 사용하여 충돌 시 적용되는 내용을 확인합니다. 적용되는 행이 게시자 및 구독자에서 적용되며 무시되는 행의 데이터는 충돌 테이블에 기록됩니다. 대화형으로 충돌을 해결하도록 선택하지 않으면 해결 프로그램이 실행된 후 즉시 충돌이 해결됩니다.  
 
-병합 복제 충돌 해결 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+병합 복제 충돌 해결  
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]  
   게시자와 구독자가 연결되고 동기화가 이루어지면 병합 에이전트는 충돌이 있는지 감지합니다. 충돌이 감지되면 병합 에이전트는 충돌 해결 프로그램을 사용해서 다른 사이트로 수락 및 전파할 데이터를 확인합니다.  
   
 > [!NOTE]  

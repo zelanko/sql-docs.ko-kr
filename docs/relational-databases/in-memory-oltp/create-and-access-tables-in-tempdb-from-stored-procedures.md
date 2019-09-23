@@ -11,12 +11,12 @@ ms.assetid: 12be8011-b76c-45c1-8f55-7f46e0e374e9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0db885db7e3138b4a863dc93a022950a8a30a5ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 14f1d7712973c2c51812a8606b1fc4c1ba15264d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915322"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846793"
 ---
 # <a name="create-and-access-tables-in-tempdb-from-stored-procedures"></a>저장 프로시저에서 TempDB에 테이블 만들기 및 액세스
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "67915322"
 
 임시 테이블 및 테이블 변수 시나리오의 메모리 최적화에 대한 자세한 내용은 [메모리 최적화를 사용하여 임시 테이블 및 테이블 변수 성능 향상](../../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)을 참조하세요.
   
-  다음 예제에서는 세 개의 열(id, ProductID, Quantity)로 임시 테이블 사용을 **@OrderQuantityByProduct** 형식의 **@OrderQuantityByProduct**테이블 변수를 사용하여 변경할 수 있는 방법을 보여 줍니다.  
+  다음 예제에서는 세 개의 열(id, ProductID, Quantity)로 임시 테이블 사용을 **dbo.OrderQuantityByProduct** 형식의 **\@OrderQuantityByProduct** 테이블 변수를 사용하여 변경할 수 있는 방법을 보여 줍니다.  
   
 ```sql  
 CREATE TYPE dbo.OrderQuantityByProduct   

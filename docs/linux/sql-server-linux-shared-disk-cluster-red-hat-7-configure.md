@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: dd320079291199b512bb9d9e8334e7ec8c2803a7
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810985"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809783"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server용 Red Hat Enterprise Linux 공유 디스크 클러스터 구성
 
@@ -108,7 +108,7 @@ ms.locfileid: "68810985"
 
 ## <a name="configure-shared-storage-and-move-database-files"></a>공유 스토리지 구성 및 데이터베이스 파일 이동 
 
-공유 스토리지를 제공하는 다양한 솔루션이 있습니다. 이 연습에서는 NFS를 사용하여 공유 스토리지를 구성하는 방법을 보여 줍니다. 모범 사례를 따르고 Kerberos를 사용하여 NFS를 보호하는 것이 좋습니다(예제는 https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/) 에서 확인할 수 있음). 
+공유 스토리지를 제공하는 다양한 솔루션이 있습니다. 이 연습에서는 NFS를 사용하여 공유 스토리지를 구성하는 방법을 보여 줍니다. 모범 사례를 따르고 Kerberos를 사용하여 NFS를 보호하는 것이 좋습니다(예제는 https://www.certdepot.net/rhel7-use-kerberos-control-access-nfs-network-shares/)에서 확인할 수 있음). 
 
 >[!Warning]
 >NFS의 보안을 유지하지 않으면 네트워크에 액세스하고 SQL 노드의 IP 주소를 스푸핑할 수 있는 누구든지 데이터 파일에 액세스할 수 있습니다. 언제나와 마찬가지로, 프로덕션 환경에서 사용하기 전에 시스템의 위협을 모델링해야 합니다. 또 다른 스토리지 옵션은 다음과 같이 SMB 파일 공유를 사용하는 것입니다.
@@ -308,6 +308,10 @@ NFS 사용 방법에 대한 자세한 내용은 다음 리소스를 참조하세
    sudo yum install mssql-server-ha
    ```
 
+## <a name="configure-fencing-agent"></a>펜싱 에이전트 구성
+
+STONITH 디바이스는 펜싱 에이전트를 제공합니다. [Azure의 Red Hat Enterprise Linux에서 Pacemaker 설정](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices)에서는 Azure의 이 클러스터에 대해 STONITH 디바이스를 만드는 방법을 보여 줍니다. 작업 환경에 맞게 지침을 수정하세요.
+
 ## <a name="create-the-cluster"></a>클러스터 만들기 
 
 1. 노드 중 하나에서 클러스터를 만듭니다.
@@ -316,15 +320,6 @@ NFS 사용 방법에 대한 자세한 내용은 다음 리소스를 참조하세
    sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
    sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
-   ```
-
-   > RHEL HA 추가 기능에는 VMWare 및 KVM용 펜싱 에이전트가 있습니다. 다른 모든 하이퍼바이저에서 펜싱을 사용하지 않도록 설정해야 합니다. 프로덕션 환경에서는 펜싱 에이전트를 사용 상태로 유지하는 것이 좋습니다. 일정 기간 동안 HyperV 또는 클라우드 환경에 사용할 수 있는 펜싱 에이전트는 없습니다. 이러한 구성 중 하나를 실행하는 경우 펜싱을 사용하지 않도록 설정해야 합니다. ‘*프로덕션 시스템에서는 권장되지 않습니다.* ’\**
-
-   다음 명령은 펜싱 에이전트를 사용하지 않도록 설정합니다.
-
-   ```bash
-   sudo pcs property set stonith-enabled=false
-   sudo pcs property set start-failure-is-fatal=false
    ```
 
 2. SQL Server, 파일 시스템 및 가상 IP 리소스에 대해 클러스터 리소스를 구성하고 클러스터에 구성을 밀어넣습니다. 다음 정보가 필요합니다.

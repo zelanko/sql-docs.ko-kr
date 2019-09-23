@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: eab23cafc4e73efd16dd2feb096db12495d8f354
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8fe226c5d419d7214fe20968525ec64ce44bbee6
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014536"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874535"
 ---
 # <a name="determine-possible-reason-for-connectivity-failures-between-availability-replicas"></a>"가용성 복제본 간의 연결 실패에 대한 가능한 원인 확인
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "68014536"
   
 -   TCP 연결 제한 시간 초과, 삭제되거나 손상된 패킷, 잘못된 순서의 패킷 등의 네트워크 오류  
   
--   운영 체제나 서버 또는 데이터베이스의 보류 상태  
+-   응답하지 않는 운영 체제, 서버 또는 데이터베이스  
   
 -   Windows 서버 제한 시간 초과  
   

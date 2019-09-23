@@ -16,12 +16,12 @@ ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2229119fd5f6b8b2482c8bb201ac8bade8366596
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 74183916a438ea19536a7cac1abeb8d6cf7cc18a
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768120"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846694"
 ---
 # <a name="delete-a-pull-subscription"></a>끌어오기 구독 삭제
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,15 +67,15 @@ ms.locfileid: "68768120"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>스냅샷 또는 트랜잭션 게시에 대한 끌어오기 구독을 삭제하려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_droppullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)을 실행합니다. **@publication** , **@publisher** 및 **@publisher_db** 를 지정합니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_droppullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)을 실행합니다. **\@publication**, **\@publisher** 및 **\@publisher_db**를 지정합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_dropsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)을 실행합니다. 이때 **@publication** 및 **@subscriber** 에서 사용 가능합니다. **@article** 에 **all** 값을 지정합니다. (옵션) 배포자에 액세스할 수 없으면 **@ignore_distributor** 에 **@ignore_distributor** 을 지정하여 배포자에서 관련 개체를 제거하지 않고 구독을 삭제합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_dropsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)을 실행합니다. **\@publication** 및 **\@subscriber**를 지정합니다. **\@article**에 **all** 값을 지정합니다. (옵션) 배포자에 액세스할 수 없으면 **\@ignore_distributor**에 대해 값 **1**을 지정하여 배포자에서 관련 개체를 제거하지 않고 구독을 삭제합니다.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>병합 게시에 대한 끌어오기 구독을 삭제하려면  
   
-1.  구독 데이터베이스의 구독자에서 [sp_dropmergepullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)을 실행합니다. **@publication** , **@publisher** 및 **@publisher_db** 를 지정합니다.  
+1.  구독 데이터베이스의 구독자에서 [sp_dropmergepullsubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)을 실행합니다. **\@publication**, **\@publisher** 및 **\@publisher_db**를 지정합니다.  
   
-2.  게시 데이터베이스의 게시자에서 [sp_dropmergesubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)을 실행합니다. **@publication** , **@subscriber** 및 **@subscriber_db** 를 지정합니다. **@subscription_type** 에 **pull** 값을 지정합니다. (옵션) 배포자에 액세스할 수 없으면 **@ignore_distributor** 에 **@ignore_distributor** 을 지정하여 배포자에서 관련 개체를 제거하지 않고 구독을 삭제합니다.  
+2.  게시 데이터베이스의 게시자에서 [sp_dropmergesubscription&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)을 실행합니다. **\@publication**, **\@subscriber** 및 **\@subscriber_db**를 지정합니다. **\@subscription_type**의 값을 **pull**로 지정합니다. (옵션) 배포자에 액세스할 수 없으면 **\@ignore_distributor**에 대해 값 **1**을 지정하여 배포자에서 관련 개체를 제거하지 않고 구독을 삭제합니다.  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  다음은 트랜잭션 게시에 대한 끌어오기 구독을 삭제하는 예입니다. 첫 번째 일괄 처리는 구독자에서 실행되고 두 번째 일괄 처리는 게시자에서 실행됩니다.  

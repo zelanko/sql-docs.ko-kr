@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 056110966ece8e344320b73890dbead9d513230b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c10b97116cfde197a332d873fba5a807a2eb4ce9
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68085720"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910798"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux에서 SQL Server 명령줄 도구 sqlcmd 및 bcp 설치
 
@@ -180,7 +180,7 @@ ms.locfileid: "68085720"
 
 이제 macOS에서 **sqlcmd** 및 **bcp** 미리 보기를 사용할 수 있습니다. 자세한 내용은 [공지](https://blogs.technet.microsoft.com/dataplatforminsider/2017/05/16/sql-server-command-line-tools-for-macos-released/)를 참조하세요.
 
-‘아직 설치하지 않은 경우 [Homebrew](https://brew.sh)를 설치합니다.’ 
+‘아직 설치하지 않은 경우 [Homebrew](https://brew.sh)를 설치합니다.’
 
         /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -197,7 +197,7 @@ brew install mssql-tools
 
 ## <a id="docker"></a> Docker
 
-SQL Server 명령줄 도구는 Docker 이미지에 포함되어 있습니다. 대화형 명령 프롬프트를 사용하여 이미지에 연결하는 경우 로컬에서 도구를 실행할 수 있습니다.
+[Docker 컨테이너에서 SQL Server를 실행](quickstart-install-connect-docker.md)하는 경우 SQL Server 명령줄 도구가 SQL Server Linux 컨테이너 이미지에 이미 포함되어 있어야 합니다. 대화형 bash 셸을 사용하여 실행 중인 컨테이너에 연결하는 경우 도구를 로컬로 실행할 수 있습니다.
 
 ## <a name="offline-installation"></a>오프라인 설치
 

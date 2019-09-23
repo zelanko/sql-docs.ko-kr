@@ -1,7 +1,7 @@
 ---
 title: Azure Key Vault를 사용한 SQL Server TDE 확장 가능 키 관리 - 설정 단계 | Microsoft 문서
 ms.custom: ''
-ms.date: 08/24/2018
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 3d9b28b1723b5c984446be09336b24ff5e2d2bb0
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 5d767f8257395368cf3ceeba45b9b9d7cadcfa80
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316644"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929716"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault를 사용한 SQL Server TDE 확장 가능 키 관리 - 설정 단계
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -342,7 +342,7 @@ SQL Server 버전  |재배포 가능 설치 링크
   
 5.  **Azure 주요 자격 증명 모음 키 열기 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
-     2부에 설명한 대로 비대칭 키를 가져온 경우 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트에서 키 이름을 제공하여 키를 엽니다.  
+     2부에 설명된 대로 새 키를 만들었거나 비대칭 키를 가져온 경우 키를 열어야 합니다. 다음 [!INCLUDE[tsql](../../../includes/tsql-md.md)] 스크립트에서 키 이름을 제공하여 키를 엽니다.  
   
     -   `CONTOSO_KEY`를 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]에서 사용하려는 키 이름으로 바꿉니다.  
   

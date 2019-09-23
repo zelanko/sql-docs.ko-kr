@@ -1,5 +1,5 @@
 ---
-title: Microsoft Azure에 대한 SQL Server Managed Backup 설정 | Microsoft 문서
+title: Azure에 관해 SQL Server Managed Backup 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 10/03/2016
 ms.prod: sql
@@ -10,74 +10,103 @@ ms.topic: conceptual
 ms.assetid: 68ebb53e-d5ad-4622-af68-1e150b94516e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 281f1144fc9698fcb39d974167d02ce36602b4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0b778c458852adc2c26d62eb9d7ef8066b9fbb89
+ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68089825"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70238740"
 ---
-# <a name="enable-sql-server-managed-backup-to-microsoft-azure"></a>Microsoft Azure에 대한 SQL Server Managed Backup 설정
+# <a name="enable-sql-server-managed-backup-to-azure"></a>Azure에 관해 SQL Server Managed Backup 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   이 항목은 데이터베이스 및 인스턴스 수준에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 기본 설정으로 사용하는 방법에 대해 설명합니다. 또한 전자 메일 알림을 설정하고 백업 활동을 모니터링하는 방법에 대해서도 설명합니다.  
   
  이 자습서는 Azure PowerShell을 사용합니다. 자습서를 시작하기 전에 [Azure PowerShell을 다운로드 및 설치](https://azure.microsoft.com/documentation/articles/powershell-install-configure/)하십시오.  
   
 > [!IMPORTANT]  
->  고급 옵션도 설정하거나 사용자 지정 일정을 사용하려는 경우에는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정하기 전에 해당 설정을 구성하십시오. 자세한 내용은 [Configure Advanced Options for SQL Server Managed Backup to Microsoft Azure](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
+>  고급 옵션도 설정하거나 사용자 지정 일정을 사용하려는 경우에는 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]을 설정하기 전에 해당 설정을 구성하십시오. 자세한 내용은 [Azure에 관한 SQL Server Managed Backup용 고급 옵션 구성](../../relational-databases/backup-restore/configure-advanced-options-for-sql-server-managed-backup-to-microsoft-azure.md)을 참조하세요.  
   
-## <a name="enable-and-configure-includesssmartbackupincludesss-smartbackup-mdmd-with-default-settings"></a>기본 설정으로 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 설정 및 구성  
-  
-#### <a name="create-the-azure-blob-container"></a>Azure Blob 컨테이너 만들기  
-  
-1.  **Azure에 등록:** 이미 Azure 구독이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [무료 평가판](https://azure.microsoft.com/pricing/free-trial/) 으로 시작한 후에 [구매 옵션](https://azure.microsoft.com/pricing/purchase-options/)을 살펴볼 수 있습니다.  
-  
-2.  **Azure 스토리지 계정 만들기:** 이미 스토리지 계정이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [Azure 관리 포털](https://manage.windowsazure.com/) 또는 Azure PowerShell을 사용하여 스토리지 계정을 만들 수 있습니다. 다음 `New-AzureStorageAccount` 명령은 미국 동부 지역에 `managedbackupstorage` 라는 스토리지 계정을 만듭니다.  
-  
-    ```powershell  
-    New-AzureStorageAccount -StorageAccountName "managedbackupstorage" -Location "EAST US"  
-    ```  
-  
-     스토리지 계정에 대한 자세한 내용은 [Azure Storage 계정](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)을 참조하세요.  
-  
-3.  **백업 파일에 대한 Blob 컨테이너 만들기:** Azure Management Portal 포털에서 또는 Azure PowerShell을 사용하여 Blob 컨테이너를 만들 수 있습니다. 다음 `New-AzureStorageContainer` 명령은 `backupcontainer` 스토리지 계정에 `managedbackupstorage` 라는 Blob 컨테이너를 만듭니다.  
-  
-    ```powershell  
-    $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary  
-    New-AzureStorageContainer -Name backupcontainer -Context $context  
-    ```  
-  
-4.  **SAS(공유 액세스 서명) 생성:** 컨테이너에 액세스하려면 SAS를 만들어야 합니다. 이 작업은 몇 가지 도구, 코드 및 Azure PowerShell에서 수행할 수 있습니다. 다음 `New-AzureStorageContainerSASToken` 명령은 1년 후에 만료되는 `backupcontainer` Blob 컨테이너에 대한 SAS 토큰을 만듭니다.  
-  
-  ```powershell  
-  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey (Get-AzureStorageKey -StorageAccountName managedbackupstorage).Primary   
-  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context  
-  ```  
+## <a name="create-the-azure-blob-container"></a>Azure Blob 컨테이너 만들기
 
-Azure에서 다음 명령을 사용합니다.
-  ```powershell
-  Connect-AzAccount
-  Set-AzContext -SubscriptionId "YOURSUBSCRIPTIONID"
-  $StorageAccountKey = (Get-AzStorageAccountKey -ResourceGroupName YOURRESOURCEGROUPFORTHESTORAGE -Name managedbackupstorage)[0].Value
-  $context = New-AzureStorageContext -StorageAccountName managedbackupstorage -StorageAccountKey $StorageAccountKey 
-  New-AzureStorageContainerSASToken -Name backupcontainer -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context
-  ```  
+이 프로세스에는 Azure 계정이 필요합니다. 이미 계정이 있는 경우 다음 단계로 이동합니다. 그렇지 않을 경우 [무료 평가판](https://azure.microsoft.com/pricing/free-trial/) 으로 시작한 후에 [구매 옵션](https://azure.microsoft.com/pricing/purchase-options/)을 살펴볼 수 있습니다.
+
+스토리지 계정에 대한 자세한 내용은 [Azure Storage 계정](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/)을 참조하세요. 
+
+#### <a name="azure-clitabazure-cli"></a>[Azure CLI](#tab/azure-cli)
+
+1. Azure 계정에 로그인합니다.
+
+    ```azurecli-interactive
+    az login
+    ```
   
-이 명령의 출력에는 컨테이너와 SAS 토큰에 대한 URL이 포함됩니다. 다음은 이에 대한 예입니다.  
+1. Azure Storage 계정을 만듭니다. 이미 스토리지 계정이 있는 경우 다음 단계로 이동합니다. 다음 명령을 실행하면 미국 동부 지역에 `<backupStorage>`라는 스토리지 계정이 생성됩니다.  
+  
+    ```azurecli-interactive
+    az storage account create -n <backupStorage> -l "eastus" --resource-group <resourceGroup>
+    ```  
+    
+1. 백업 파일에 대해 `<backupContainer>`라는 Blob 컨테이너를 만듭니다.
+  
+    ```azurecli-interactive
+    $keys = az storage account keys list --account-name <backupStorage> --resource-group <resourceGroup> | ConvertFrom-Json
+    az storage container create --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value 
+    ```  
+  
+1. SAS(공유 액세스 서명)를 생성하여 컨테이너에 액세스합니다. 다음 명령을 실행하면 1년 후에 만료되는 `<backupContainer>` Blob 컨테이너에 관한 SAS 토큰이 생성됩니다.  
+  
+    ```azurecli-interactive 
+    az storage container generate-sas --name <backupContainer> --account-name <backupStorage> --account-key $keys[0].value
+    ```
+
+#### <a name="powershelltabazure-powershell"></a>[PowerShell](#tab/azure-powershell)
+
+1. 다음 명령을 실행하면 Azure 계정에 로그인됩니다.
+
+    ```azurepowershell-interactive
+    Connect-AzAccount
+    Set-AzContext -SubscriptionId "<subscriptionId>"
+    ```
+  
+1. Azure Storage 계정을 만듭니다. 이미 스토리지 계정이 있는 경우 다음 단계로 이동합니다. 다음 명령을 실행하면 미국 동부 지역에 `<backupStorage>`라는 스토리지 계정이 생성됩니다.  
+  
+    ```azurepowershell-interactive
+    New-AzStorageAccount -StorageAccountName <backupStorage> -Location "EAST US" -ResourceGroupName <resourceGroup> -SkuName Standard_GRS
+    ```   
+  
+1. 백업 파일에 대해 `<backupContainer>`라는 Blob 컨테이너를 만듭니다.  
+  
+    ```azurepowershell-interactive
+    $context = New-AzStorageContext -StorageAccountName <backupStorage> -StorageAccountKey (Get-AzStorageAccountKey -Name <backupStorage> -ResourceGroupName <resourceGroup>).Value[0]  
+    New-AzStorageContainer -Name <backupContainer> -Context $context  
+    ```  
+  
+1. SAS(공유 액세스 서명)를 생성하여 컨테이너에 액세스합니다. 다음 명령을 실행하면 1년 후에 만료되는 `<backupContainer>` Blob 컨테이너에 관한 SAS 토큰이 생성됩니다.
+  
+    ```azurepowershell-interactive 
+    New-AzStorageContainerSASToken -Name <backupContainer> -Permission rwdl -ExpiryTime (Get-Date).AddYears(1) -FullUri -Context $context 
+    ```
+
+* * *
+
+> [!NOTE]
+> [Azure Portal](https://portal.azure.com/)을 사용하여 이러한 단계를 수행할 수도 있습니다.
+
+출력에는 컨테이너 및/또는 SAS 토큰에 대한 URL이 포함됩니다. 다음은 이에 대한 예입니다.  
   
   `https://managedbackupstorage.blob.core.windows.net/backupcontainer?sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl`
   
-위 예의 물음표 위치에서 SAS 토큰과 컨테이너 URL을 분리합니다(물음표는 포함하지 않음). 예를 들어 위의 출력은 다음과 같은 두 값이 됩니다.  
+URL이 포함된 경우 물음표 위치에서 SAS 토큰과 URL을 분리합니다(물음표는 포함하지 않음). 예를 들어 위의 출력은 다음과 같은 두 값이 됩니다.  
   
 |||  
 |-|-|  
-|**컨테이너 URL:**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
-|**SAS 토큰:**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
+|**컨테이너 URL**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
+|**SAS 토큰**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  
 |||
   
 SQL 자격 증명을 만드는 데 사용할 컨테이너 URL과 SAS를 기록합니다. SAS에 대한 자세한 내용은 [공유 액세스 서명, 1부: SAS 모델 이해](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)를 참조하세요.  
   
-#### <a name="enable-includesssmartbackupincludesss-smartbackup-mdmd"></a>사용 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]  
+## <a name="enable-managed-backup-to-azure"></a>Azure에 대한 Managed Backup 사용
   
 1.  **SAS URL에 대한 SQL 자격 증명 만들기:** SAS 토큰을 사용하여 Blob 컨테이너 URL에 대한 SQL 자격 증명을 만듭니다. 다음 예제를 기준으로 SQL Server Management Studio에서 다음 Transact-SQL 쿼리를 사용하여 Blob 컨테이너 URL의 자격 증명을 만듭니다.  
   
@@ -97,7 +126,7 @@ SQL 자격 증명을 만드는 데 사용할 컨테이너 URL과 SAS를 기록�
     >  인스턴스 수준에서 Managed Backup을 사용하려면 `NULL` 매개 변수에 대해 `database_name` 을 지정합니다.  
   
     ```sql  
-    Use msdb;  
+    USE msdb;  
     GO  
     EXEC msdb.managed_backup.sp_backup_config_basic   
      @enable_backup = 1,   
@@ -111,7 +140,7 @@ SQL 자격 증명을 만드는 데 사용할 컨테이너 URL과 SAS를 기록�
   
 5.  **확장 이벤트 기본 구성 검토:** 다음 Transact-SQL 문을 실행하여 확장 이벤트 설정을 검토합니다.  
   
-    ```  
+    ```sql
     SELECT * FROM msdb.managed_backup.fn_get_current_xevent_settings()  
     ```  
   
@@ -125,21 +154,20 @@ SQL 자격 증명을 만드는 데 사용할 컨테이너 URL과 SAS를 기록�
   
     3.  **백업 오류 및 경고를 수신하도록 이메일 알림 설정:** 쿼리 창에서 다음 Transact-SQL 문을 실행합니다.  
   
-        ```  
+        ```sql
         EXEC msdb.managed_backup.sp_set_parameter  
         @parameter_name = 'SSMBackup2WANotificationEmailIds',  
         @parameter_value = '<email1;email2>'  
-  
         ```  
   
-7.  **Microsoft Azure Storage 계정의 백업 파일 보기:** SQL Server Management Studio 또는 Azure 관리 포털에서 스토리지 계정에 연결합니다. 지정한 컨테이너에 백업 파일이 표시됩니다. 데이터베이스에 대한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 설정한 후 5분 이내에 데이터베이스 및 로그 백업이 표시될 수 있습니다.  
+7.  **Azure Storage 계정의 백업 파일 보기:** SQL Server Management Studio 또는 Azure Portal에서 스토리지 계정에 연결합니다. 지정한 컨테이너에 백업 파일이 표시됩니다. 데이터베이스에 대한 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 설정한 후 5분 이내에 데이터베이스 및 로그 백업이 표시될 수 있습니다.  
   
 8.  **상태 모니터링:**  이전에 구성한 메일 알림을 통해 모니터링하거나 기록된 이벤트를 적극적으로 모니터링할 수 있습니다. 다음은 이벤트를 표시하는 데 사용하는 예제 Transact-SQL 문입니다.  
   
     ```sql  
     --  view all admin events  
-    Use msdb;  
-    Go  
+    USE msdb;  
+    GO  
     DECLARE @startofweek datetime  
     DECLARE @endofweek datetime  
     SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
@@ -157,21 +185,19 @@ SQL 자격 증명을 만드는 데 사용할 컨테이너 URL과 SAS를 기록�
   
     SELECT * from @eventresult  
     WHERE event_type LIKE '%admin%'  
-  
     ```  
   
     ```sql  
     -- to enable debug events  
-    Use msdb;  
-    Go  
-             EXEC managed_backup.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    USE msdb;  
+    GO  
+    EXEC managed_backup.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
     ```sql  
     --  View all events in the current week  
-    Use msdb;  
-    Go  
+    USE msdb;  
+    GO  
     DECLARE @startofweek datetime  
     DECLARE @endofweek datetime  
     SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
@@ -180,7 +206,7 @@ SQL 자격 증명을 만드는 데 사용할 컨테이너 URL과 SAS를 기록�
     EXEC managed_backup.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
     ```
   
- 이 섹션에서는 데이터베이스에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 처음 구성하는 단계에 대해 설명합니다. 동일한 시스템 저장 프로시저를 사용하여 기존 구성을 수정하고 새 값을 제공할 수 있습니다.  
+이 섹션에서는 데이터베이스에서 [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] 을 처음 구성하는 단계에 대해 설명합니다. 동일한 시스템 저장 프로시저를 사용하여 기존 구성을 수정하고 새 값을 제공할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Microsoft Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  
+## <a name="see-also"></a>관련 항목:  
+ [Azure에 대한 SQL Server Managed Backup](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md)  

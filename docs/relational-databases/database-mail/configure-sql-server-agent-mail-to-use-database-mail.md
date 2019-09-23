@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b8b61bd-4bd1-43cd-b6e5-c6ed2e101dce
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 81dbaedcb67b7e641e00c37ebb27e35fb2fceca5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2e174785891c30b7a4c6df240f446fe630a21e0c
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134569"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211256"
 ---
 # <a name="configure-sql-server-agent-mail-to-use-database-mail"></a>데이터베이스 메일을 사용하도록 SQL Server 에이전트 메일 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,13 +36,16 @@ ms.locfileid: "68134569"
   
 ##  <a name="BeforeYouBegin"></a> 시작하기 전에  
   
+  > [!NOTE]
+  > Managed Instance의 SQL 에이전트는 항상 데이터베이스 메일을 사용하도록 구성되므로 Managed Instance에는 이 내용이 적용되지 않습니다. Managed Instance에서 데이터베이스 메일에 SQL 에이전트를 바인딩하려면 **[AzureManagedInstance_dbmail_profile](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)** 이라는 프로필이 있어야 합니다. 
+  
 ###  <a name="Prerequisites"></a> 사전 요구 사항  
   
 -   [데이터베이스 메일을 활성화합니다](../../relational-databases/database-mail/configure-database-mail.md).  
   
 -    [에이전트 서비스 계정이 사용할](../../relational-databases/database-mail/create-a-database-mail-account.md) 데이터베이스 메일 계정을 만듭니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   [에이전트 서비스 계정에서 사용할](../../relational-databases/database-mail/create-a-database-mail-profile.md) 데이터베이스 메일 프로필을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** 데이터베이스의 **DatabaseMailUserRole** 에 사용자를 추가합니다.  
+-   [에이전트 서비스 계정에서 사용할](../../relational-databases/database-mail/create-a-database-mail-profile.md) 데이터베이스 메일 프로필을 만들고 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **msdb** 데이터베이스의 **DatabaseMailUserRole** 에 사용자를 추가합니다.
   
 -   프로필을 **msdb** 데이터베이스의 기본 프로필로 설정합니다.  
   
@@ -64,7 +67,7 @@ ms.locfileid: "68134569"
   
 -   **메일 시스템** 목록에서 **데이터베이스 메일**을 선택합니다.  
   
--   **메일 프로필**목록에서 데이터베이스 메일에 대한 메일 프로필을 선택합니다.  
+-   **메일 프로필**목록에서 데이터베이스 메일에 대한 메일 프로필을 선택합니다. 
   
 -   SQL Server 에이전트를 다시 시작합니다.  
   

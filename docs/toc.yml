@@ -1643,7 +1643,7 @@
               href: relational-databases/tables/use-column-sets.md
             - name: 테이블 반환 매개 변수
               href: relational-databases/tables/use-table-valued-parameters-database-engine.md
-        - name: Microsoft Edge 제약 조건
+        - name: 에지 제약 조건
           href: relational-databases/tables/graph-edge-constraints.md
           items:
             - name: 만들기
@@ -4183,8 +4183,12 @@
           href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
         - name: 사용량 및 진단 데이터 수집
           items:
-            - name: 개인 정보 제공
-              href: sql-server/sql-server-privacy.md
+            - name: SQL Server 개인 정보 제공
+              items:
+                - name: SQL Server 2017 이전
+                  href: sql-server/sql-server-privacy.md
+                - name: SQL Server 2019
+                  href: sql-server/sql-server-privacy-ver15.md
             - name: SQL Server 사용량 및 진단 데이터 구성
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: 도구 사용량 및 진단 데이터 구성
@@ -6495,6 +6499,12 @@
   items:
     - name: 관리
       items:
+        - name: 가속 데이터베이스 복구
+          items:
+            - name: 개요
+              href: relational-databases/accelerated-database-recovery-concepts.md
+            - name: 관리
+              href: relational-databases/accelerated-database-recovery-management.md
         - name: 중앙 관리 서버
           href: relational-databases/administer-multiple-servers-using-central-management-servers.md
         - name: 구성 관리자

@@ -8,15 +8,15 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 06/25/2019
+ms.date: 09/12/2019
 ms.author: mibar
 author: barmichal
-ms.openlocfilehash: c3d3d0b2a6a2410b4f49e52a77a42d76e87868f7
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: ef05b068c016cdea00e813f5dbff174494440a19
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670579"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929792"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL 데이터 검색 및 분류
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "68670579"
 
 확장 속성 카탈로그 뷰[sys.extended_properties](https://docs.microsoft.com/sql/relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties)를 사용하여 메타데이터에 액세스할 수 있습니다.
 
-다음 코드 예제는 해당 분류를 사용하여 모든 분류된 열을 반환합니다.
+SQL Server 2017의 경우 다음 코드 예제는 해당 분류를 사용하여 모든 분류된 열을 반환합니다.
 
 ```sql
 SELECT
@@ -141,7 +141,7 @@ FROM
     ON  EP.major_id = C.object_id AND EP.minor_id = C.column_id
 ```
 
-또는 SQL Server 2019:
+SQL Server 2019:
 ```sql
 SELECT 
     schema_name(O.schema_id) AS schema_name,

@@ -21,12 +21,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c1a4e90dfaa5f513e3d197619afd26e8ec0898d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075219"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978594"
 ---
 # <a name="expressions-transact-sql"></a>식(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,7 +128,27 @@ GO
 ```  
   
  `1+2` 식은 결과 집합의 각 행에서 `3`으로 평가됩니다. `ProductID` 식이 각 결과 집합 행에서 고유한 값을 생성하더라도 각 행은 `ProductID`에 대해 단 하나의 값을 가집니다.  
-  
+ 
+- Azure SQL Data Warehouse는 각 스레드에 고정된 최대 메모리 양을 할당하므로 스레드가 모든 메모리를 소비할 수는 없습니다.  이 메모리 중 일부는 쿼리 식을 저장하는 데 사용됩니다.  쿼리에 너무 많은 식이 있고 필요한 메모리가 내부 제한을 초과하는 경우 엔진이 이 쿼리를 실행하지 않습니다.  이러한 문제를 방지하기 위해 사용자는 각각에 적은 수의 식을 포함하는 여러 쿼리로 변경할 수 있습니다. 예를 들어, WHERE 절에 긴 식 목록을 포함하는 쿼리가 있습니다. 
+
+```sql
+DELETE FROM dbo.MyTable 
+WHERE
+(c1 = '0000001' AND c2 = 'A000001') or
+(c1 = '0000002' AND c2 = 'A000002') or
+(c1 = '0000003' AND c2 = 'A000003') or
+...
+
+```
+이 쿼리를 다음과 같이 변경합니다.
+
+```sql
+DELETE FROM dbo.MyTable WHERE (c1 = '0000001' AND c2 = 'A000001');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000002' AND c2 = 'A000002');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000003' AND c2 = 'A000003');
+...
+```
+
 ## <a name="see-also"></a>참고 항목  
  [AT TIME ZONE&#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [CASE&#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: ed477595-6d46-4fa2-b0d3-a5358903ec05
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 8285b4de85be5ce6f6fe79b60afe68650634a2b9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17a7c0e27dbb6cb80cb0069a2ea76036654280e3
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68128079"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846677"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>병합 아티클에 대한 비즈니스 논리 처리기 구현
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,18 +100,18 @@ ms.locfileid: "68128079"
   
 1.  게시자에서 [sp_enumcustomresolvers&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md)를 실행하여 어셈블리가 이미 비즈니스 논리 처리기로 등록되어 있지 않은지 확인합니다.  
   
-2.  **@article_resolver** 에 비즈니스 논리 처리기의 이름, **@is_dotnet_assembly** 에 **true** 값, **@dotnet_assembly_name** 에 어셈블리 이름, **@dotnet_class_name** 에 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>을 재정의하는 클래스의 정규화된 이름을 지정하여 [sp_registercustomresolver&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)를 실행합니다.  
+2.  배포자에서 [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)을 실행하고 **\@article_resolver**에 비즈니스 논리 처리기의 이름을, **\@is_dotnet_assembly**에 **true** 값을, **\@dotnet_assembly_name**에 어셈블리의 이름을, **\@dotnet_class_name**에 <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>을 덮어쓰는 클래스의 정규화된 이름을 지정합니다.  
   
     > [!NOTE]  
-    >  어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 애플리케이션과 같은 디렉터리, 또는 GAC(전역 어셈블리 캐시)에 배포되지 않은 경우 **@dotnet_assembly_name** 을 참조하세요. 웹 동기화를 사용하는 경우 웹 서버에서 어셈블리의 위치를 지정해야 합니다.  
+    >  어셈블리가 병합 에이전트 실행 파일과 같은 디렉터리, 병합 에이전트를 동기적으로 시작하는 애플리케이션과 같은 디렉터리, 또는 GAC(전역 어셈블리 캐시)에 배포되지 않은 경우 **\@dotnet_assembly_name**에 어셈블리 이름을 포함하는 전체 경로를 지정해야 합니다. 웹 동기화를 사용하는 경우 웹 서버에서 어셈블리의 위치를 지정해야 합니다.  
   
 #### <a name="to-use-a-business-logic-handler-with-a-new-table-article"></a>새 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
   
-1.  **@article_resolver** 에 비즈니스 논리 처리기의 이름을 지정하여 [sp_addmergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
+1.  **\@article_resolver**에 비즈니스 논리 처리기의 이름을 지정하고 [sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행하여 아티클을 정의합니다. 자세한 내용은 [아티클을 정의](../../relational-databases/replication/publish/define-an-article.md)을 참조하세요.  
   
 #### <a name="to-use-a-business-logic-handler-with-an-existing-table-article"></a>기존 테이블 아티클에서 비즈니스 논리 처리기를 사용하려면  
   
-1.  **@publication** , **@article** , **@property** 에 **article_resolver** 값, **@value** 에 비즈니스 논리 처리기의 이름을 지정하여 [sp_changemergearticle&#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
+1.  **\@publication**, **\@article**을 지정하고 **\@property**에 **article_resolver** 값, **\@value**에 비즈니스 논리 처리기의 이름을 지정하여 [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행합니다.  
   
 ###  <a name="TsqlExample"></a> 예(복제 프로그래밍)  
  이 예에서는 감사 로그를 만드는 비즈니스 논리 처리기를 보여 줍니다.  

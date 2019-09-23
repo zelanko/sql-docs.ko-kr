@@ -10,12 +10,12 @@ ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bc752d5653c4483552312c45139996e8a84c39e4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 6c0889349631a543e970b11eff9bb24a6f2da208
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811276"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874457"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>데이터베이스 엔진의 새로운 기능 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68811276"
 
 **개선 사항**  
 
-- CLR은 더 이상 보안 경계로 지원되지 않는 .NET Framework의 CAS(코드 액세스 보안)를 사용합니다. `PERMISSION_SET = SAFE`로 만든 CLR 어셈블리에서 외부 시스템 리소스에 액세스하고, 비관리 코드를 호출하고, sysadmin 권한을 얻을 수 있습니다. [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]부터 CLR 어셈블리의 보안을 강화하기 위해 `clr strict security`라는 `sp_configure` 옵션이 도입되었습니다. `clr strict security`는 기본적으로 사용되며 `SAFE` 및 `EXTERNAL_ACCESS` 어셈블리가 `UNSAFE`로 표시된 것처럼 처리됩니다. `clr strict security` 옵션은 이전 버전과의 호환성을 위해 사용하지 않도록 설정할 수 있지만 권장하지는 않습니다. 모든 어셈블리는 master 데이터베이스에서 `UNSAFE ASSEMBLY` 권한이 부여된 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명하는 것이 좋습니다. `clr strict security` 기능에 대한 해결 방법으로 CLR 어셈블리를 허용 목록에 추가할 수 있습니다. 신뢰할 수 있는 어셈블리의 허용 목록을 지원하기 위해 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 및 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)가 추가되었습니다. 자세한 내용은 [CLR strict security](configure-windows/clr-strict-security.md)를 참조하세요.  
+- CLR은 더 이상 보안 경계로 지원되지 않는 .NET Framework의 CAS(코드 액세스 보안)를 사용합니다. `PERMISSION_SET = SAFE`로 만든 CLR 어셈블리에서 외부 시스템 리소스에 액세스하고, 비관리 코드를 호출하고, sysadmin 권한을 얻을 수 있습니다. [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]부터 CLR 어셈블리의 보안을 강화하기 위해 `clr strict security`라는 `sp_configure` 옵션이 도입되었습니다. `clr strict security`는 기본적으로 사용되며 `SAFE` 및 `EXTERNAL_ACCESS` 어셈블리가 `UNSAFE`로 표시된 것처럼 처리됩니다. `clr strict security` 옵션은 이전 버전과의 호환성을 위해 사용하지 않도록 설정할 수 있지만 권장하지는 않습니다. 모든 어셈블리는 master 데이터베이스에서 `UNSAFE ASSEMBLY` 권한이 부여된 해당 로그인이 포함된 인증서 또는 비대칭 키로 서명하는 것이 좋습니다. `clr strict security` 기능에 관한 해결 방법으로 CLR 어셈블리를 허용 목록에 추가할 수 있습니다. 신뢰할 수 있는 어셈블리의 허용 목록을 지원하기 위해 [sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md), [sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md) 및 [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md)가 추가되었습니다. 자세한 내용은 [CLR strict security](configure-windows/clr-strict-security.md)를 참조하세요.  
 - [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) DMF가 트랜잭션 로그 파일에 대한 요약 수준 특성 및 정보를 표시하기 위해 새로 도입되었으며, 트랜잭션 로그의 상태를 모니터링하는 데 유용합니다.  
 - 다시 시작 가능한 온라인 인덱스 다시 작성 - 다시 시작 가능한 온라인 인덱스 다시 작성을 사용하면 오류(예: 복제본으로 장애 조치 또는 디스크 공간 부족)가 발생한 후 중지된 위치에서 온라인 인덱스 다시 작성 작업을 다시 시작할 수 있습니다. 또한 온라인 인덱스 다시 작성 작업을 일시 중지했다가 나중에 다시 시작할 수도 있습니다. 예를 들어 우선 순위가 높은 작업을 실행하기 위해 시스템 리소스를 일시적으로 비우거나, 사용 가능한 유지 관리 시간이 큰 테이블에 비해 너무 짧은 경우 또 다른 유지 관리 기간에서 인덱스 다시 작성하여 완료해야 할 수 있습니다. 마지막으로 다시 시작 가능한 온라인 인덱스 다시 작성에는 상당한 로그 공간이 필요하지 않으므로 이 작업이 실행되는 동안 로그 잘림을 수행할 수 있습니다. [ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md) 및 [온라인 인덱스 작업에 대한 지침](../relational-databases/indexes/guidelines-for-online-index-operations.md)을 참조하세요.
 - **ALTER DATABASE SCOPED CONFIGURATION에 대한 IDENTITY_CACHE 옵션** - IDENTITY_CACHE 옵션이 `ALTER DATABASE SCOPED CONFIGURATION` T-SQL 문에 새로 추가되었습니다. 이 옵션을 `OFF`로 설정하면 서버가 예기치 않게 다시 시작되거나 보조 서버로 장애 조치되는 경우 데이터베이스 엔진에서 ID 열 값 차이가 발생하지 않도록 방지할 수 있습니다. [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요.   

@@ -18,24 +18,25 @@ ms.assetid: f0b10fee-27f7-45fe-aece-ccc3f63bdcdb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4eb6cf7d397bc8fdc8ab37d17e830ad2b373882e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4cbc237ad0df16dbb854fb5bd062d7d37375294f
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140824"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913555"
 ---
 # <a name="write-international-transact-sql-statements"></a>국가별 Transact-SQL 문 작성
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
   다음 지침에 따라 [!INCLUDE[tsql](../../includes/tsql-md.md)] 문을 사용하는 데이터베이스 및 데이터베이스 애플리케이션을 특정 언어에서 다른 언어로 이식하거나 여러 언어를 지원하도록 할 수 있습니다.  
 
--   [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 다음 중 하나를 사용합니다.
-    -   [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 사용 데이터 정렬을 사용하는 **char**, **varchar** 및 **varchar(max)** 데이터 형식.
-    -   [보조 문자](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 사용 데이터 정렬을 사용하는 **char**, **varchar** 및 **varchar(max)** 데이터 형식.      
+-   [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터, 그리고 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서 다음을 사용합니다.
+    -   [UTF-8](../../relational-databases/collations/collation-and-unicode-support.md#utf8) 사용 데이터 정렬을 사용하는 **char**, **varchar** 및 **varchar(max)** 데이터 형식. 데이터는 UTF-8을 사용하여 인코딩됩니다.
+    -   [SC(보조 문자)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 사용 데이터 정렬을 사용하는 **nchar**, **nvarchar** 및 **nvarchar(max)** 데이터 형식. 데이터는 UTF-16을 사용하여 인코딩됩니다. 비 SC 데이터 정렬을 사용하면 데이터는 UCS-2를 사용하여 인코딩됩니다.      
 
     이렇게 하면 코드 페이지 변환 문제가 발생하지 않습니다. 다른 고려 사항은 [UTF-8과 UTF-16 간의 스토리지 차이점](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences)을 참조하세요.  
 
--   [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]까지 **char**, **varchar** 및 **varchar(max)** 데이터 형식을 사용하는 경우 모두 **nchar**, **nvarchar** 및 **nvarchar(max)** 로 대체합니다. 이렇게 하면 코드 페이지 변환 문제가 발생하지 않습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. 
+-   [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]까지 **char**, **varchar** 및 **varchar(max)** 데이터 형식을 사용하는 경우 모두 **nchar**, **nvarchar** 및 **nvarchar(max)** 로 대체합니다. [SC( 보조 문자)](../../relational-databases/collations/collation-and-unicode-support.md#Supplementary_Characters) 사용 데이터 정렬을 사용하는 경우 데이터는 UTF-16을 사용하여 인코딩됩니다. 비 SC 데이터 정렬을 사용하면 데이터는 UCS-2를 사용하여 인코딩됩니다. 이렇게 하면 코드 페이지 변환 문제가 발생하지 않습니다. 자세한 내용은 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요. 
+
     > [!IMPORTANT]
     > **텍스트** 데이터 형식은 더 이상 사용되지 않으며 새로운 개발 작업에 사용하면 안됩니다. **텍스트** 데이터를 **varchar(max)** 로 변환하도록 계획합니다.
   
@@ -45,7 +46,7 @@ ms.locfileid: "68140824"
   
     -   ADO, OLE DB 및 ODBC 애플리케이션은 다음과 같은 ODBC용 타임스탬프, 날짜 및 시간 이스케이프 절을 사용해야 합니다.  
   
-         **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **'}** 예: **{ ts'1998-09-24 10:02:20'}**  
+         **{ ts'** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [**.**_fff_] **'}** 예: **{ ts'1998-09-24 10:02:20'}**  
   
          **{ d'** _yyyy_ **-** _mm_ **-** _dd_ **'}** 예: **{ d'1998-09-24'}**
   

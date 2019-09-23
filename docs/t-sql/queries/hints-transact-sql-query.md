@@ -1,7 +1,7 @@
 ---
 title: 쿼리 힌트(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 09/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e319fb56760f78df56105873f26a9bbec004dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902010"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228405"
 ---
 # <a name="hints-transact-sql---query"></a>힌트(Transact-SQL) - 쿼리
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -152,7 +152,7 @@ EXPAND VIEWS
   
 이 쿼리 힌트는 쿼리 계획에서 인덱싱된 뷰와 인덱싱된 뷰의 인덱스를 직접 사용하도록 허용하지 않습니다.  
   
-인덱싱된 뷰는 쿼리의 SELECT 부분에서 뷰를 직접 참조하는 경우 축소되어 있습니다. WITH (NOEXPAND) 또는 WITH (NOEXPAND, INDEX(index\_value_ [ **,** _...n_ ] ) )를 지정하는 경우에도 뷰는 축소되어 있습니다. 쿼리 힌트 NOEXPAND에 대한 자세한 내용은 [NOEXPAND 사용](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand)을 참조하세요.  
+인덱싱된 뷰는 쿼리의 SELECT 부분에서 뷰를 직접 참조하는 경우 축소되어 있습니다. WITH (NOEXPAND) 또는 WITH (NOEXPAND, INDEX(index\_value_ [ **,**_...n_ ] ) )를 지정하는 경우에도 뷰는 축소되어 있습니다. 쿼리 힌트 NOEXPAND에 대한 자세한 내용은 [NOEXPAND 사용](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand)을 참조하세요.  
   
 힌트는 INSERT, UPDATE, MERGE 및 DELETE 문에 해당 뷰를 포함하여 문의 SELECT 부분에서만 뷰에 영향을 줍니다.  
   
@@ -218,17 +218,17 @@ NO_PERFORMANCE_SPOOL
   
 스풀 연산자가 쿼리 계획에 추가되지 않게 합니다(유효한 업데이트 의미 체계를 보증하기 위해 스풀이 필요한 계획 제외). 일부 시나리오에서는 스풀 연산자로 인해 성능이 저하될 수 있습니다. 예를 들어 스풀 연산과 함께 여러 쿼리가 동시에 실행되는 경우 스풀이 사용하는 tempdb 및 tempdb 경합이 발생할 수 있습니다.  
   
-OPTIMIZE FOR ( _@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
+OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
 쿼리가 컴파일되고 최적화될 때 쿼리 최적화 프로그램이 지역 변수에 대해 특정 값을 사용하도록 지시합니다. 해당 값은 쿼리 최적화 중에만 사용되고 쿼리 실행 중에는 사용되지 않습니다.  
   
-_@variable\_name_  
+_\@variable\_name_  
 쿼리에서 사용된 지역 변수의 이름이며 OPTIMIZE FOR 쿼리 힌트와 함께 사용하도록 값을 할당할 수 있습니다.  
   
 _UNKNOWN_  
 쿼리 최적화 프로그램이 쿼리 최적화 동안 초기 값 대신 통계 데이터를 사용하여 지역 변수 값을 결정하도록 지정합니다.  
   
 _literal\_constant_  
-OPTIMIZE FOR 쿼리 힌트와 함께 사용하도록 _@variable\_name_을 할당할 리터럴 상수 값입니다. _literal\_constant_는 쿼리 최적화 중에만 사용되며 쿼리 실행 중에는 _@variable\_name_의 값으로 사용되지 않습니다. _literal\_constant_는 리터럴 상수로 표현할 수 있는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식이 될 수 있습니다. _literal\_constant_의 데이터 형식은 쿼리에서 _@variable\_name_이 참조하는 데이터 형식으로 암시적으로 변환될 수 있어야 합니다.  
+OPTIMIZE FOR 쿼리 힌트와 함께 사용하도록 _\@variable\_name_을 할당할 리터럴 상수 값입니다. _literal\_constant_는 쿼리 최적화 중에만 사용되며 쿼리 실행 중에는 _\@variable\_name_의 값으로 사용되지 않습니다. _literal\_constant_는 리터럴 상수로 표현할 수 있는 모든 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 시스템 데이터 형식이 될 수 있습니다. _literal\_constant_의 데이터 형식은 쿼리에서 _\@variable\_name_이 참조하는 데이터 형식으로 암시적으로 변환될 수 있어야 합니다.  
   
 OPTIMIZE FOR는 최적화 프로그램의 기본 매개 변수 검색 동작을 무효로 만들 수 있습니다. 계획 지침을 만들 경우에도 OPTIMIZE FOR를 사용합니다. 자세한 내용은 [저장 프로시저 다시 컴파일](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)을 참조하십시오.  
   
@@ -256,7 +256,7 @@ ROBUST PLAN
   
 이 계획이 불가능할 경우 쿼리 최적화 프로그램은 쿼리 실행 시 오류를 검색하도록 지연시키지 않고 오류를 반환합니다. 행에는 가변 길이 열이 포함될 수 있으며 [!INCLUDE[ssDE](../../includes/ssde-md.md)]은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 처리할 수 있는 범위 이상의 잠재적 최대 크기를 가진 행을 정의하도록 허용합니다. 그러나 대개 애플리케이션은 [!INCLUDE[ssDE](../../includes/ssde-md.md)]이 처리할 수 있는 한도 내의 실제 크기를 가진 행을 저장합니다. [!INCLUDE[ssDE](../../includes/ssde-md.md)]에 너무 긴 행이 있으면 실행 오류가 반환됩니다.  
  
-<a name="use_hint"></a> USE HINT ( **'** _hint\_name_ **'** )    
+<a name="use_hint"></a> USE HINT ( **'**_hint\_name_**'** )    
  **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1부터) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
  
 쿼리 프로세서에 하나 이상의 추가 힌트를 제공합니다. 추가 힌트는 **작은따옴표 안**의 힌트 이름으로 지정됩니다.   
@@ -327,10 +327,10 @@ ROBUST PLAN
 > [!IMPORTANT] 
 > 일부 USE HINT 힌트는 전역 또는 세션 수준에서 사용하는 추적 플래그나 데이터베이스 범위 구성 설정과 충돌할 수 있습니다. 이 경우 쿼리 수준 힌트(USE HINT)가 항상 우선합니다. USE HINT가 쿼리 수준에서 사용하는 다른 쿼리 힌트나 추적 플래그와 충돌하는 경우(예: QUERYTRACEON) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 쿼리를 실행할 때 오류를 생성합니다. 
 
- USE PLAN N **'** _xml\_plan_ **'**      
- 쿼리 최적화 프로그램이 **'** _xml\_plan_ **'** 에 의해 지정된 쿼리에 대해 기존의 쿼리 계획을 사용하도록 합니다. USE PLAN은 INSERT, UPDATE, MERGE 또는 DELETE 문에서 지정할 수 없습니다.  
+USE PLAN N'_xml\_plan_'  
+ 쿼리 최적화 프로그램이 **'**_xml\_plan_**'** 에 의해 지정된 쿼리에 대해 기존의 쿼리 계획을 사용하도록 합니다. USE PLAN은 INSERT, UPDATE, MERGE 또는 DELETE 문에서 지정할 수 없습니다.  
   
-TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** 지정된 테이블 힌트를 _exposed\_object\_name_에 해당하는 테이블 또는 뷰에 적용합니다. 테이블 힌트는 [계획 지침](../../relational-databases/performance/plan-guides.md)의 컨텍스트에서 쿼리 힌트로만 사용하는 것이 좋습니다.  
+TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ] ] **)** 지정된 테이블 힌트를 _exposed\_object\_name_에 해당하는 테이블 또는 뷰에 적용합니다. 테이블 힌트는 [계획 지침](../../relational-databases/performance/plan-guides.md)의 컨텍스트에서 쿼리 힌트로만 사용하는 것이 좋습니다.  
   
  _exposed\_object\_name_은 다음 참조 중 하나일 수 있습니다.  
   
@@ -340,7 +340,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
  테이블 힌트를 지정하지 않고 _exposed\_object\_name_을 지정하면 개체에 대한 테이블 힌트의 일부로 쿼리에서 지정한 인덱스가 모두 무시됩니다. 쿼리 최적화 프로그램에서 인덱스 사용 여부를 결정합니다. 이 방법은 원래 쿼리를 수정할 수 없을 때 INDEX 테이블 힌트의 효과를 제거하는 데 이용할 수 있습니다. 자세한 내용은 예 10을 참조하세요.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } *exposed_object_name*에 해당하는 테이블 또는 뷰에 쿼리 힌트로 적용할 테이블 힌트입니다. 이러한 힌트에 대한 설명은 [테이블 힌트 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)을 참조하세요.  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } *exposed_object_name*에 해당하는 테이블 또는 뷰에 쿼리 힌트로 적용할 테이블 힌트입니다. 이러한 힌트에 대한 설명은 [테이블 힌트 &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)을 참조하세요.  
   
  쿼리에 테이블 힌트를 지정하는 WITH 절이 없다면 INDEX, FORCESCAN 및 FORCESEEK 이외의 테이블 힌트를 쿼리 힌트로 사용할 수 없습니다. 자세한 내용은 설명 부분을 참조하세요.  
   
@@ -366,13 +366,13 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_
   
 기존 테이블 힌트가 없는 쿼리에 대한 쿼리 힌트로 INDEX, FORCESCAN 및 FORCESEEK 테이블 힌트를 지정할 수 있습니다. 이 테이블 힌트를 사용하여 각각 쿼리에 있는 기존 INDEX, FORCESCAN 또는 FORCESEEK 힌트를 바꿀 수도 있습니다. 
 
-쿼리에 테이블 힌트를 지정하는 WITH 절이 없다면 INDEX, FORCESCAN 및 FORCESEEK 이외의 테이블 힌트를 쿼리 힌트로 사용할 수 없습니다. 이 경우 일치하는 힌트를 쿼리 힌트로 지정해야 합니다. OPTION 절에 TABLE HINT를 사용하여 일치하는 힌트를 쿼리 힌트로 지정합니다. 이렇게 지정하면 쿼리의 의미 체계가 유지됩니다. 예를 들어 쿼리에 테이블 힌트 NOLOCK이 있는 경우 계획 지침의 **@hints** 매개 변수에 있는 OPTION 절에도 NOLOCK 힌트가 있어야 합니다. 예 11을 참조하세요. 
+쿼리에 테이블 힌트를 지정하는 WITH 절이 없다면 INDEX, FORCESCAN 및 FORCESEEK 이외의 테이블 힌트를 쿼리 힌트로 사용할 수 없습니다. 이 경우 일치하는 힌트를 쿼리 힌트로 지정해야 합니다. OPTION 절에 TABLE HINT를 사용하여 일치하는 힌트를 쿼리 힌트로 지정합니다. 이렇게 지정하면 쿼리의 의미 체계가 유지됩니다. 예를 들어 쿼리에 테이블 힌트 NOLOCK이 있는 경우 계획 지침의 **\@hints** 매개 변수에 있는 OPTION 절에도 NOLOCK 힌트가 있어야 합니다. 예 11을 참조하세요. 
 
 몇 가지 시나리오에서는 오류 8072가 발생합니다. 한 가지 시나리오는 일치하는 쿼리 힌트 없이 OPTION 절에 TABLE HINT를 사용하여 INDEX, FORCESCAN 또는 FORCESEEK 이외의 테이블 힌트를 지정하는 경우입니다. 두 번째 시나리오는 그 반대의 경우입니다. 이 오류는 OPTION 절로 인해 쿼리의 의미 체계가 변경되고 쿼리가 실패할 수 있음을 나타냅니다.  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-merge-join"></a>1\. MERGE JOIN 사용  
+### <a name="a-using-merge-join"></a>1. MERGE JOIN 사용  
  다음 예에서는 MERGE JOIN이 쿼리에서 조인 작업을 실행하도록 지정합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -384,7 +384,7 @@ OPTION (MERGE JOIN);
 GO    
 ```  
   
-### <a name="b-using-optimize-for"></a>2\. OPTIMIZE FOR 사용  
+### <a name="b-using-optimize-for"></a>2. OPTIMIZE FOR 사용  
  다음 예에서는 쿼리를 최적화할 때 쿼리 최적화 프로그램이 지역 변수 `'Seattle'`에 `@city_name` 값을 사용하고 통계 데이터를 사용하여 지역 변수 `@postal_code`의 값을 결정하도록 지시합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  
@@ -510,7 +510,7 @@ EXEC sp_create_plan_guide
 GO    
 ```  
   
-### <a name="i-using-multiple-table-hints"></a>9\. 여러 테이블 힌트 사용  
+### <a name="i-using-multiple-table-hints"></a>9. 여러 테이블 힌트 사용  
  다음 예에서는 한 테이블에 INDEX 힌트를 적용하고 다른 테이블에 FORCESEEK 힌트를 적용합니다. 이 예에서는 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스를 사용합니다.  
   
 ```sql  

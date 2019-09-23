@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: bef38ae0b93eb43d508192c6f748a36320143689
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 42cd70465f890e1da1f40076da5e41f0b4b40884
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937534"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278920"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>데이터베이스를 새 위치로 복원(SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "67937534"
   
     1.  **디바이스**  
   
-         찾아보기( **...** ) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 디바이스 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 디바이스를 선택하려면 **추가**를 클릭합니다.  
+         찾아보기(**...**) 단추를 클릭하여 **백업 디바이스 선택** 대화 상자를 엽니다. **백업 미디어 유형** 상자에서 나열된 디바이스 유형 중 하나를 선택합니다. **백업 미디어** 상자에 대해 하나 이상의 디바이스를 선택하려면 **추가**를 클릭합니다.  
   
          원하는 디바이스를 **백업 미디어** 목록 상자에 추가한 후 **확인** 을 클릭하여 **일반** 페이지로 돌아갑니다.  
   
@@ -107,64 +107,64 @@ ms.locfileid: "67937534"
   
 2.  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) 문을 사용하여 전체 데이터베이스 백업을 복원합니다. 기본적으로 데이터 및 로그 파일은 원래 위치로 복원됩니다. 데이터베이스의 위치를 다시 지정하려면 MOVE 옵션을 사용하여 각 데이터베이스 파일 위치를 옮기고 기존 파일과의 충돌을 피합니다.  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for restoring the database to a new location and a new name is:  
+  데이터베이스를 새 위치 및 새 이름으로 복원하는 데 사용되는 기본 [!INCLUDE[tsql](../../includes/tsql-md.md)] 구문은 다음과 같습니다.  
   
-     RESTORE DATABASE *new_database_name*  
+  RESTORE DATABASE *new_database_name*  
   
-     FROM *backup_device* [ ,...*n* ]  
+  FROM *backup_device* [ ,...*n* ]  
   
-     [ WITH  
+  [ WITH  
   
-     {  
+  {  
   
-     [ **RECOVERY** | NORECOVERY ]  
+  [ **RECOVERY** | NORECOVERY ]  
   
-     [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
+  [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-     [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+  [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
-     }  
+  }  
   
-     ;  
+  ;  
   
-    > **NOTE!** When preparing to relocate a database on a different disk, you should verify that sufficient space is available and identify any potential collisions with existing files. This involves using a [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) statement that specifies the same MOVE parameters that you plan to use in your RESTORE DATABASE statement.  
+  > [!NOTE] 
+  > 데이터베이스 위치를 다른 디스크에 다시 지정할 때는 공간이 충분한지 확인하고 기존 파일과의 충돌 가능성이 있는지 확인합니다. 그러려면 RESTORE DATABASE 문에 사용하려는 것과 동일한 MOVE 매개 변수를 지정하는 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) 문을 사용해야 합니다.  
   
-     The following table describes arguments of this RESTORE statement in terms of restoring a database to a new location. For more information about these arguments, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+  다음 표에서는 새 위치로의 데이터베이스 복원과 관련된 이 RESTORE 문 인수에 대해 설명합니다. 이러한 인수에 대한 자세한 내용은 [RESTORE&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)데이터베이스를 새 위치로 복원하고 선택적으로 데이터베이스 이름을 바꾸는 방법을 설명합니다.  
   
-     *new_database_name*  
-     The new name for the database.  
+  *new_database_name*  
+  데이터베이스의 새 이름입니다.  
   
-    >**NOTE:** If you are restoring the database to a different server instance, you can use the original database name instead of a new name.  
+  > [!NOTE]
+  > 데이터베이스를 다른 서버 인스턴스로 복원하는 경우 새 이름 대신 원래 데이터베이스 이름을 사용할 수 있습니다.  
   
-     *backup_device* [ **,**...*n* ]  
-     Specifies a comma-separated list of from 1 to 64 backup devices from which the database backup is to be restored. You can specify a physical backup device, or you can specify a corresponding logical backup device, if defined. To specify a physical backup device, use the DISK or TAPE option:  
+  *backup_device* [ **,**...*n* ]  
+  데이터베이스 백업 복원에 사용할 1-64개의 백업 디바이스 목록(쉼표로 구분됨)을 지정합니다. 물리적 백업 디바이스를 지정하거나, 정의된 경우 해당 논리적 백업 디바이스를 지정할 수 있습니다. 물리적 백업 디바이스를 지정하려면 다음 DISK 또는 TAPE 옵션을 사용합니다.  
   
-     { DISK | TAPE } **=**_physical_backup_device_name_  
+  { DISK | TAPE } **=**_physical_backup_device_name_  
   
-     For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+  자세한 내용은 [백업 디바이스&#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)를 참조하세요.  
   
-     { **RECOVERY** | NORECOVERY }  
-     If the database uses the full recovery model, you might need to apply transaction log backups after you restore the database. In this case, specify the NORECOVERY option.  
+  { **RECOVERY** | NORECOVERY }  
+  전체 복구 모델을 사용하는 데이터베이스의 경우, 데이터베이스를 복원한 후 트랜잭션 로그 백업을 적용해야 할 수도 있습니다. 이 경우 NORECOVERY 옵션을 지정하세요.  
   
-     Otherwise, use the RECOVERY option, which is the default.  
+  그렇지 않은 경우에는 기본값인 RECOVERY 옵션을 사용하세요.  
   
-     FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
+  FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
+  복원할 백업 세트를 나타냅니다. 예를 들어 *backup_set_file_number* 가 **1** 인 경우는 백업 미디어의 첫 번째 백업 세트를 나타내고 *backup_set_file_number* 가 **2** 인 경우는 두 번째 백업 세트를 나타냅니다. 백업 세트의 *backup_set_file_number* 는 [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) 문을 사용하여 가져올 수 없습니다.  
   
-     When this option is not specified, the default is to use the first backup set on the backup device.  
+  이 옵션이 지정되지 않은 경우에는 기본적으로 백업 디바이스의 첫 번째 백업 세트가 사용됩니다.  
   
-     For more information, see "Specifying a Backup Set," in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+  자세한 내용은 [RESTORE 인수&#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)에서 "백업 세트 지정"을 참조하세요.  
   
-     MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
-     Specifies that the data or log file specified by *logical_file_name_in_backup* is to be restored to the location specified by *operating_system_file_name*. Specify a MOVE statement for every logical file you want to restore from the backup set to a new location.  
+  MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
+  *logical_file_name_in_backup* 에 지정된 데이터 또는 로그 파일을 *operating_system_file_name*에 지정된 위치로 복원하도록 지정합니다. 백업 세트에서 새 위치로 복원할 모든 논리적 파일에 대해 MOVE 문을 지정합니다.  
   
-    |옵션|설명|  
-    |------------|-----------------|  
-    |*logical_file_name_in_backup*|백업 세트에 있는 데이터 또는 로그 파일의 논리적 이름을 지정합니다. 백업 세트에 있는 데이터 또는 로그 파일의 논리적 파일 이름은 백업 세트 생성 시 데이터베이스의 해당 논리적 이름과 일치합니다.<br /><br /> <br /><br /> 참고: 백업 세트에서 논리적 파일 목록을 가져오려면 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)를 사용합니다.|  
-    |*operating_system_file_name*|*logical_file_name_in_backup*에 지정된 파일의 새 위치를 지정합니다. 파일이 이 위치로 복원됩니다.<br /><br /> *operating_system_file_name* 에서 복원 파일의 새 파일 이름을 지정합니다(선택 사항). 이 작업은 동일한 서버 인스턴스에 기존 데이터베이스의 복사본을 만들려는 경우에 필요합니다.|  
-    |*n*|추가 MOVE 문을 지정할 수 있음을 나타내는 자리 표시자입니다.|  
+  |옵션|설명|  
+  |------------|-----------------|  
+  |*logical_file_name_in_backup*|백업 세트에 있는 데이터 또는 로그 파일의 논리적 이름을 지정합니다. 백업 세트에 있는 데이터 또는 로그 파일의 논리적 파일 이름은 백업 세트 생성 시 데이터베이스의 해당 논리적 이름과 일치합니다.<br /><br /> <br /><br /> 참고: 백업 세트에서 논리적 파일 목록을 가져오려면 [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)를 사용합니다.|  
+  |*operating_system_file_name*|*logical_file_name_in_backup*에 지정된 파일의 새 위치를 지정합니다. 파일이 이 위치로 복원됩니다.<br /><br /> *operating_system_file_name* 에서 복원 파일의 새 파일 이름을 지정합니다(선택 사항). 이 작업은 동일한 서버 인스턴스에 기존 데이터베이스의 복사본을 만들려는 경우에 필요합니다.|  
+  |*n*|추가 MOVE 문을 지정할 수 있음을 나타내는 자리 표시자입니다.|  
   
 ###  <a name="TsqlExample"></a> 예(Transact-SQL)  
  이 예제에서는 `MyAdvWorks` 샘플 데이터베이스의 백업을 복원하여 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 라는 새 데이터베이스를 만듭니다. 여기에는 두 개의 파일 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Data 및 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]_Log가 포함되어 있습니다. 이 데이터베이스는 단순 복구 모델을 사용합니다. [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] 데이터베이스가 이미 서버 인스턴스에 있으므로 백업에 들어 있는 파일을 새 위치로 복원해야 합니다. RESTORE FILELISTONLY 문은 복원할 데이터베이스에 있는 파일의 수와 이름을 확인하는 데 사용합니다. 데이터베이스 백업은 백업 디바이스에 있는 첫 번째 백업 세트입니다.  

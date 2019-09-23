@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78dd9533a33d3b28f4fffcb2bb0ff4cd6604713f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 4e8476ef7fafde1d891736938e1cdedd6933f697
+ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155820"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383830"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +102,10 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  함수 기본 개체의 네 부분으로 된 이름은 지원되지 않습니다.  
   
- 동의어는 동적 SQL에서 생성, 삭제 및 참조할 수 있습니다.  
+ 동의어는 동적 SQL에서 생성, 삭제 및 참조할 수 있습니다.
+ 
+ > [!NOTE]
+ > 동의어는 데이터베이스에 따라 달라지며 다른 데이터베이스에서 액세스할 수 없습니다.
   
 ## <a name="permissions"></a>사용 권한  
  지정된 스키마에서 동의어를 만들려면 사용자에게 CREATE SYNONYM 권한이 있어야 하며 스키마를 소유하거나 ALTER SCHEMA 권한이 있어야 합니다.  
@@ -114,7 +117,7 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
 ## <a name="examples"></a>예  
   
-### <a name="a-creating-a-synonym-for-a-local-object"></a>1\. 로컬 개체의 동의어 만들기  
+### <a name="a-creating-a-synonym-for-a-local-object"></a>1. 로컬 개체의 동의어 만들기  
  다음 예에서는 먼저 `Product` 데이터베이스의 기준 개체인 `AdventureWorks2012`에 대한 동의어를 만든 다음 동의어를 사용하여 쿼리합니다.  
   
 ```  
@@ -144,7 +147,7 @@ GO
  (4 row(s) affected)
 ``` 
   
-### <a name="b-creating-a-synonym-to-remote-object"></a>2\. 원격 개체의 동의어 만들기  
+### <a name="b-creating-a-synonym-to-remote-object"></a>2. 원격 개체의 동의어 만들기  
  다음 예에서 기준 개체인 `Contact`는 원격 서버인 `Server_Remote`에 있습니다.  
   
 **적용 대상**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지  

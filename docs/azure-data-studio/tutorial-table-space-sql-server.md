@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: 6ec653eac10da8c28f727277fc130722c3badef7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.date: 09/10/2019
+ms.openlocfilehash: 4b44fc9dbee773e7bc88daecf9142c1f826d65a0
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958982"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878669"
 ---
 # <a name="tutorial-enable-the-table-space-usage-sample-insight-widget-using-includename-sosincludesname-sos-shortmd"></a>자습서: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 테이블 공간 사용량 샘플 인사이트 위젯 사용
 
@@ -30,20 +30,26 @@ ms.locfileid: "67958982"
 
 이 자습서를 완료하려면 SQL Server 또는 Azure SQL Database *TutorialDB*가 필요합니다. *TutorialDB* 데이터베이스를 만들려면 다음 빠른 시작 중 하나를 완료합니다.
 
-- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]를 사용하여 SQL Server 연결 및 쿼리](quickstart-sql-server.md)
-- [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]를 사용하여 Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
-
+* [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]를 사용하여 SQL Server 연결 및 쿼리](quickstart-sql-server.md)
+* [[!INCLUDE[name-sos-short](../includes/name-sos-short.md)]를 사용하여 Azure SQL Database 연결 및 쿼리](quickstart-sql-database.md)
 
 ## <a name="turn-on-a-management-insight-on-includename-sosincludesname-sos-shortmds-database-dashboard"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)]의 데이터베이스 대시보드에서 관리 인사이트 켜기
+
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에는 데이터베이스 테이블에서 사용되는 공간을 모니터링하는 기본 제공 샘플 위젯이 있습니다.
 
-1. **Ctrl+Shift+P**를 눌러 ‘명령 팔레트’를 열고 ‘사용자 설정’을 엽니다.  
-2. 검색 상자에 ‘설정’을 입력하고 **기본 설정:  사용자 설정 열기**를 선택합니다.
-2. 설정 검색 입력 상자에 ‘대시보드’를 입력하고 **dashboard.database.widgets**를 찾습니다. 
+1. **Ctrl+Shift+P**를 눌러 ‘명령 팔레트’를 열고 ‘사용자 설정’을 엽니다.
 
-3. **dashboard.database.widgets** 설정을 사용자 지정하려면 **사용자 설정** 섹션(오른쪽의 열)에서 **dashboard.database.widgets** 항목을 편집해야 합니다. **사용자 설정** 섹션에 **dashboard.database.widgets**가 없으면 기본 설정 열의 **dashboard.database.widgets** 텍스트를 마우스로 가리킨 다음, 텍스트 왼쪽에 나타나는 연필 아이콘을 클릭하고 **설정으로 복사**를 클릭합니다. 팝업에 **설정에서 바꾸기**가 표시되면 클릭하지 않습니다. 오른쪽의 **사용자 설정** 열로 이동하여 **dashboard.database.widgets** 섹션을 찾고 다음 단계를 진행합니다.
+2. 검색 상자에 ‘설정’을 입력하고 **기본 설정: 사용자 설정 열기**를 선택합니다.
 
-4. **dashboard.database.widgets** 섹션에서 다음을 추가합니다.
+3. 설정 검색 입력 상자에 ‘대시보드’를 입력하고 **dashboard.database.widgets**를 찾습니다.
+
+4. **dashboard.database.widgets** 설정을 사용자 지정하려면 **사용자 설정** 섹션에서 **dashboard.database.widgets** 항목을 편집해야 합니다.
+
+   ![설정 검색](media/tutorial-table-space-sql-server/search-settings.png)
+
+   **사용자 설정** 섹션에 **dashboard.database.widgets**가 없으면 기본 설정 열의 **dashboard.database.widgets** 텍스트를 마우스로 가리킨 다음, 텍스트 왼쪽에 나타나는 *톱니* 아이콘을 클릭하고 **JSON 설정으로 복사**를 클릭합니다. 팝업에 **설정에서 바꾸기**가 표시되면 클릭하지 않습니다. 오른쪽의 **사용자 설정** 열로 이동하여 **dashboard.database.widgets** 섹션을 찾고 다음 단계를 진행합니다.
+
+5. **dashboard.database.widgets** 섹션에서 다음 줄을 추가합니다.
 
    ```json
         {
@@ -57,31 +63,31 @@ ms.locfileid: "67958982"
             }
         },
     ```
-**dashboard.database.widgets** 섹션이 다음 그림과 같이 표시됩니다.
 
-   ![설정 검색](./media/tutorial-table-space-sql-server/insight-table-space.png)
+   **dashboard.database.widgets** 섹션이 다음 그림과 같이 표시됩니다.
 
-5. **Ctrl+S**를 눌러 설정을 저장합니다.
+    ![설정 검색](./media/tutorial-table-space-sql-server/insight-table-space.png)
 
-6. **TutorialDB**를 마우스 오른쪽 단추로 클릭하고 **관리**를 클릭하여 데이터베이스 대시보드를 엽니다.
+6. **Ctrl+S**를 눌러 설정을 저장합니다.
 
-7. 다음 그림과 같이 ‘테이블 공간’ 인사이트 위젯을 봅니다.  
+7. **TutorialDB**를 마우스 오른쪽 단추로 클릭하고 **관리**를 클릭하여 데이터베이스 대시보드를 엽니다.
+
+8. 다음 그림과 같이 ‘테이블 공간’ 인사이트 위젯을 봅니다.
 
    ![위젯](./media/tutorial-table-space-sql-server/insight-table-space-result.png)
-
 
 ## <a name="working-with-the-insight-chart"></a>인사이트 차트 작업
 
 [!INCLUDE[name-sos](../includes/name-sos-short.md)]의 인사이트 차트는 필터링 및 마우스 가리키기 세부 정보를 제공합니다. 다음 단계를 수행합니다.
 
 1. 차트에서 *row_count* 범례를 클릭하고 토글합니다. 범례를 켜거나 끄면 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 데이터 계열을 표시하거나 숨깁니다.
-    
+
 2. 차트를 마우스 포인터로 가리킵니다. 다음 스크린샷과 같이 [!INCLUDE[name-sos](../includes/name-sos-short.md)]에서 데이터 계열 레이블 및 해당 값에 대한 자세한 정보를 표시합니다.
 
    ![차트 토글 및 범례](./media/tutorial-table-space-sql-server/insight-table-space-toggle.png)
 
-
 ## <a name="next-steps"></a>다음 단계
+
 이 자습서에서는 다음 작업 방법을 알아보았습니다.
 > [!div class="checklist"]
 > * 기본 제공 인사이트 위젯 샘플을 사용하여 인사이트 위젯 빠르게 켜기

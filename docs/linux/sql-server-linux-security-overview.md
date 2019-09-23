@@ -3,17 +3,17 @@ title: SQL Server on Linux에 대한 보안 제한 사항
 description: 이 문서에서는 SQL Server on Linux 제한 사항을 설명합니다.
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/30/2018
+ms.date: 09/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.openlocfilehash: 9f54197c8613293b36c1eb1ec362a8ed4db835e4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 8a9094977597fd7c2d76f2c80a1773c176b9c6dc
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68065122"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929806"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>SQL Server on Linux에 대한 보안 제한 사항
 
@@ -21,7 +21,7 @@ ms.locfileid: "68065122"
 
 현재 SQL Server on Linux에는 다음과 같은 제한 사항이 있습니다.
 
-* 표준 암호 정책이 제공됩니다. MUST_CHANGE는 구성할 수 있는 유일한 옵션입니다.  
+* 표준 암호 정책이 제공됩니다. MUST_CHANGE는 구성할 수 있는 유일한 옵션입니다. CHECK_POLICY 옵션은 지원되지 않습니다.
 * 확장 가능 키 관리는 지원되지 않습니다. 
 * Azure Key Vault에 저장된 키를 사용하는 기능은 지원되지 않습니다.
 * SQL Server는 연결을 암호화하기 위해 자체 서명된 인증서를 생성합니다. TLS에 사용자 제공 인증서를 사용하도록 SQL Server를 구성할 수 있습니다. 

@@ -1,7 +1,7 @@
 ---
 title: SQL 암호화 기능을 통해 SQL Server 커넥터 사용 | Microsoft 문서
 ms.custom: ''
-ms.date: 07/18/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329258"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929739"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 암호화 기능을 통해 SQL Server 커넥터 사용
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,10 +32,12 @@ ms.locfileid: "68329258"
  이 항목의 단계를 수행하기 전에 [Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md)항목의 1 ~ 4부를 완료합니다.  
  
 > [!NOTE]  
->  1\.0.0.440 및 이전 버전은 대체되었으며 프로덕션 환경에서 더 이상 지원되지 않습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=45344)를 방문하고 "SQL Server 커넥터 업그레이드" 아래의 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 페이지에 있는 지침을 사용하여 1.0.1.0 이상 버전으로 업그레이드하세요.  
+>  1.0.0.440 및 이전 버전은 대체되었으며 프로덕션 환경에서 더 이상 지원되지 않습니다. [Microsoft 다운로드 센터](https://www.microsoft.com/download/details.aspx?id=45344)를 방문하고 "SQL Server 커넥터 업그레이드" 아래의 [SQL Server 커넥터 유지 관리 및 문제 해결](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) 페이지에 있는 지침을 사용하여 1.0.1.0 이상 버전으로 업그레이드하세요.  
   
-## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Azure 주요 자격 증명 모음에서 비대칭 키를 사용한 투명한 데이터 암호화  
- Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계 항목의 1~4부를 완료한 후, Azure 주요 자격 증명 모음 키를 사용하여 TDE를 사용하는 데이터베이스 암호화 키를 암호화합니다.  
+## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Azure 주요 자격 증명 모음에서 비대칭 키를 사용한 투명한 데이터 암호화
+
+Azure 주요 자격 증명 모음을 사용한 확장 가능 키 관리 설정 단계 항목의 1~4부를 완료한 후, Azure 주요 자격 증명 모음 키를 사용하여 TDE를 사용하는 데이터베이스 암호화 키를 암호화합니다. Powershell을 사용하여 키를 순환하는 방법에 대한 자세한 내용은 [PowerShell을 사용하여 TDE(투명한 데이터 암호화) 보호기 순환](/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation)을 참조하세요.
+ 
 자격 증명 및 로그인을 만들고 데이터베이스의 데이터 및 로그를 암호화할 데이터베이스 암호화 키를 만듭니다. 데이터베이스를 암호화하려면 데이터베이스에 대한 **CONTROL** 권한이 필요합니다. 다음 그래픽에서는 Azure 주요 자격 증명 모음을 사용하는 경우 암호화 키의 계층 구조를 보여 줍니다.  
   
  ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  

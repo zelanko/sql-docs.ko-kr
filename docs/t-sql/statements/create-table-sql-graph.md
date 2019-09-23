@@ -1,7 +1,7 @@
 ---
 title: CREATE TABLE(SQL Graph) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/04/2017
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -32,12 +32,12 @@ ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cc76bc81bc1f8573430bec9cdeba62b04e25167f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 37e374d44fc6013c1cdf6b9594d709ff4282f7aa
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116950"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846717"
 ---
 # <a name="create-table-sql-graph"></a>CREATE TABLE(SQL Server)
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -54,9 +54,44 @@ ms.locfileid: "68116950"
 ```  
 CREATE TABLE   
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
-    ( { <column_definition> } [ ,...n ] )   
+    ( { <column_definition> } 
+       | <computed_column_definition>
+       | <column_set_definition>
+       | [ <table_constraint> ] [ ,... n ]
+       | [ <table_index> ] }
+          [ ,...n ]
+    )   
     AS [ NODE | EDGE ]
-[ ; ]  
+    [ ON { partition_scheme_name ( partition_column_name )
+           | filegroup
+           | "default" } ]
+[ ; ] 
+
+< table_constraint > ::=
+[ CONSTRAINT constraint_name ]
+{
+    { PRIMARY KEY | UNIQUE }
+        [ CLUSTERED | NONCLUSTERED ]
+        (column [ ASC | DESC ] [ ,...n ] )
+        [
+            WITH FILLFACTOR = fillfactor
+           |WITH ( <index_option> [ , ...n ] )
+        ]
+        [ ON { partition_scheme_name (partition_column_name)
+            | filegroup | "default" } ]
+    | FOREIGN KEY
+        ( column [ ,...n ] )
+        REFERENCES referenced_table_name [ ( ref_column [ ,...n ] ) ]
+        [ ON DELETE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
+        [ ON UPDATE { NO ACTION | CASCADE | SET NULL | SET DEFAULT } ]
+        [ NOT FOR REPLICATION ]
+    | CONNECTION
+        ( { node_table TO node_table } 
+          [ , {node_table TO node_table }]
+          [ , ...n ]
+        )
+        [ ON DELETE { NO ACTION | CASCADE } ]
+    | CHECK [ NOT FOR REPLICATION ] ( logical_expression )
 ```  
   
   
@@ -69,7 +104,7 @@ CREATE TABLE
  *schema_name*    
  새 테이블이 속한 스키마의 이름입니다.  
   
- *table_name*    
+ *table_name*      
  노드 또는 에지 테이블의 이름입니다. 테이블 이름은 [식별자](../../relational-databases/databases/database-identifiers.md)에 적용되는 규칙을 따라야 합니다. 로컬 임시 테이블 이름(단일 숫자 기호(#)가 접두사로 붙은 이름이며 최대 116자)을 제외하면 *table_name*은 최대 128자가 될 수 있습니다.  
   
  NODE   
@@ -77,6 +112,15 @@ CREATE TABLE
 
  EDGE  
  에지 테이블을 만듭니다.  
+ 
+ *table_constraint*   
+ 테이블에 추가한 PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION 제약 조건, CHECK 제약 조건이나 DEFAULT 정의의 속성을 지정합니다.
+ 
+ ON { partition_scheme | filegroup | "default" }    
+ 테이블이 저장된 파티션 구성표 또는 파일 그룹을 지정합니다. partition_scheme을 지정하면 해당 테이블은 partition_scheme에 지정된 하나 이상의 파일 그룹 세트에 파티션이 저장되는 분할된 테이블이 됩니다. filegroup을 지정한 경우에는 테이블이 명명된 파일 그룹에 저장됩니다. 파일 그룹은 데이터베이스 내에 있어야 합니다. "default"를 지정하거나 ON을 전혀 지정하지 않으면 기본 파일 그룹에 테이블이 저장됩니다. CREATE TABLE에 지정된 테이블의 스토리지 메커니즘은 곧이어 변경할 수 없습니다.
+
+ ON {partition_scheme | filegroup | "default"}    
+ PRIMARY KEY나 UNIQUE 제약 조건에도 지정할 수 있습니다. 이러한 제약 조건은 인덱스를 만듭니다. filegroup을 지정한 경우에는 인덱스가 명명된 파일 그룹에 저장됩니다. "default"를 지정하거나 ON을 전혀 지정하지 않으면 테이블과 동일한 파일 그룹에 인덱스가 저장됩니다. PRIMARY KEY 또는 UNIQUE 제약 조건이 클러스터형 인덱스를 만드는 경우에는 테이블에 대한 데이터 페이지가 인덱스와 동일한 파일 그룹에 저장됩니다. CLUSTERED를 지정하거나 아니면 제약 조건이 클러스터형 인덱스를 만들고 테이블 정의의 partition_scheme 또는 filegroup과는 다르게 partition_scheme을 지정하거나 그 반대인 경우에는 제약 조건 정의만 유지하고 나머지는 무시합니다.
   
 ## <a name="remarks"></a>Remarks  
 임시 테이블을 노드 또는 에지 테이블로 만드는 것은 지원되지 않습니다.  
@@ -86,11 +130,13 @@ CREATE TABLE
 Stretch Database는 노드 또는 에지 테이블에서 지원되지 않습니다.
 
 노드 또는 에지 테이블은 외부 테이블(그래프 테이블에 대한 PolyBase 지원 없음)이 될 수 없습니다. 
+
+분할되지 않은 그래프 노드/에지 테이블은 분할된 그래프 노드/에지 테이블로 변경할 수 없습니다. 
   
  
 ## <a name="examples"></a>예  
   
-### <a name="a-create-a-node-table"></a>1\. `NODE` 테이블 만들기
+### <a name="a-create-a-node-table"></a>1. `NODE` 테이블 만들기
  다음 예에서는 `NODE` 테이블을 만드는 방법을 보여 줍니다.
 
 ```
@@ -101,7 +147,7 @@ Stretch Database는 노드 또는 에지 테이블에서 지원되지 않습니�
  ) AS NODE;
 ```
 
-### <a name="b-create-an-edge-table"></a>2\. `EDGE` 테이블 만들기
+### <a name="b-create-an-edge-table"></a>2. `EDGE` 테이블 만들기
 다음 예에서는 `EDGE` 테이블을 만드는 방법을 보여 줍니다.
 
 ```
@@ -119,7 +165,8 @@ Stretch Database는 노드 또는 에지 테이블에서 지원되지 않습니�
 ```
 
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목 
+ [ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)   
  [ALTER TABLE&#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)   
  [INSERT(SQL Graph)](../../t-sql/statements/insert-sql-graph.md)]  
  [SQL Server 2017에서 그래프 처리](../../relational-databases/graphs/sql-graph-overview.md)

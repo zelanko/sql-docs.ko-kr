@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 07/31/2019
-ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 09/04/2019
+ms.openlocfilehash: 7f9195b2ec4cfd80d16f37884ce27e920580463c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122991"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874556"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
 
@@ -109,7 +109,11 @@ SSMS 18.2는 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 
 - SSMS 결과에서 표시되는 데이터의 크기에는 그리드, 텍스트 또는 파일로 표시되는 제한 사항이 있습니다.
 
-다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [UserVoice](https://feedback.azure.com/forums/908035-sql-server)를 참조할 수 있습니다. 
+- 개체 탐색기에서 Azure SQL Database를 삭제하는 동안 오류를 발생하는 이슈가 문제가 있지만 실제로는 성공합니다. 작업은 부정확한 오류 메시지를 표시합니다.
+
+- SQL 로그인에 대한 기본 언어는 로그인에 설정된 실제 기본 언어에 관계없이 로그인 속성 대화 상자에서 아랍어로 표시될 수 있습니다. 지정된 로그인에 대한 실제 기본 언어를 보려면 T-SQL을 사용하여 **master.sys.server_principles**에서 로그인의 **default_language_name**을 선택합니다.
+
+다른 알려진 문제를 확인하고 제품 팀에 피드백을 제공하려면 [UserVoice](https://feedback.azure.com/forums/908035-sql-server)를 참조할 수 있습니다.
 
 ## <a name="previous-ssms-releases"></a>이전 SSMS 릴리스
 

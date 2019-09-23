@@ -14,12 +14,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ade7deb2fd86f5dfd0f89aa1f13d5352e6e5fc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1da717e212e03fce4550e7af1a8810980f1b8321
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127288"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810131"
 ---
 # <a name="rename-a-database"></a>데이터베이스 이름 바꾸기
 
@@ -63,6 +63,7 @@ ms.locfileid: "68127288"
 ## <a name="rename-a-database-using-sql-server-management-studio"></a>SQL Server Management Studio를 사용하여 데이터베이스 이름 바꾸기
 
 다음 단계를 수행하면 SQL Server Management Studio를 사용하여 SQL Server 또는 Azure SQL Database의 이름을 바꿀 수 있습니다.
+
   
 1. **개체 탐색기**에서 SQL 인스턴스에 연결합니다.  
   
@@ -71,6 +72,8 @@ ms.locfileid: "68127288"
 3. 개체 탐색기에서 **데이터베이스**를 확장하고, 이름을 바꿀 데이터베이스를 마우스 오른쪽 단추로 클릭한 다음, **이름 바꾸기**를 클릭합니다.  
   
 4. 새 데이터베이스 이름을 입력하고 **확인**을 클릭합니다.  
+  
+5. 경우에 따라 데이터베이스가 기본 데이터베이스인 경우 [이름을 바꾼 후 기본 데이터베이스 다시 설정](#reset-your-default-database-after-rename)을 참조하세요.
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -95,6 +98,8 @@ ms.locfileid: "68127288"
    GO
    ```  
 
+4. 경우에 따라 데이터베이스가 기본 데이터베이스인 경우 [이름을 바꾼 후 기본 데이터베이스 다시 설정](#reset-your-default-database-after-rename)을 참조하세요.
+
 ### <a name="to-rename-an-azure-sql-database-database"></a>Azure SQL Database 데이터베이스의 이름을 바꾸려면
 
 다음 단계를 수행하여 SQL Server Management Studio에서 T-SQL을 사용하여 Azure SQL Database의 이름을 바꿉니다.
@@ -112,6 +117,19 @@ ms.locfileid: "68127288"
 
 SQL Server에서 데이터베이스의 이름을 바꾼 후 `master` 데이터베이스를 백업합니다. Azure SQL Database에서는 백업이 자동으로 발생하므로 수동으로 백업할 필요가 없습니다.  
   
+## <a name="reset-your-default-database-after-rename"></a>이름을 바꾼 후 기본 데이터베이스 다시 설정
+
+이름을 바꿀 데이터베이스가 기본 데이터베이스로 설정되어 있으면 다음 명령을 사용하여 기본값을 이름이 바뀐 데이터베이스로 다시 설정합니다.
+
+
+```sql
+USE [master]
+GO
+ALTER LOGIN [your-login] WITH DEFAULT_DATABASE=[new-database-name]
+GO
+```
+
+
 ## <a name="see-also"></a>참고 항목
 
 - [ALTER DATABASE(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)

@@ -1,7 +1,7 @@
 ---
 title: 메모리 액세스에 최적화된 테이블의 인덱스 | Microsoft 문서
 ms.custom: ''
-ms.date: 06/02/2019
+ms.date: 09/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f283868f180764f5b3276cce9678de075f3d0483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050207"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929693"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>메모리 액세스에 최적화된 테이블의 인덱스
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-행을 함께 연결하는 인덱스이므로 모든 메모리 최적화 테이블에는 하나 이상의 인덱스가 있어야 합니다. 메모리 최적화 테이블에서는 모든 인덱스 또한 메모리 최적화되어 있습니다. 메모리 최적화 테이블의 인덱스와 디스크 기반 테이블의 인덱스는 여러 방식에서 다릅니다.  
+행을 함께 연결하는 인덱스이므로 모든 메모리 최적화 테이블에는 하나 이상의 인덱스가 있어야 합니다. 메모리 최적화 테이블에서는 모든 인덱스 또한 메모리 최적화되어 있습니다. 메모리 최적화 테이블의 인덱스와 디스크 기반 테이블의 기존 인덱스는 여러 방식에서 다릅니다.  
 
 - 데이터 행은 페이지에 저장되지 않으므로 테이블의 모든 페이지를 가져오기 위해 참조할 수 있는 페이지 또는 익스텐트의 모음과 파티션 또는 할당 단위가 없습니다. 사용 가능한 인덱스 형식 중 하나에 대한 인덱스 페이지 개념이 있지만 디스크 기반 테이블의 인덱스와 다르게 저장됩니다. fillfactor가 없으므로 페이지 내에서 기존 유형의 조각화가 발생하지 않습니다.
 - 데이터 조작 중에 메모리 최적화 테이블의 인덱스에 대한 변경 내용은 디스크에 기록되지 않습니다. 데이터 행 및 데이터 변경 내용만 트랜잭션 로그에 기록됩니다. 
@@ -59,6 +59,7 @@ ms.locfileid: "68050207"
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
     ```
+
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 및 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]에는 메모리 최적화 테이블 또는 테이블 형식당 8개의 인덱스 제한이 있습니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 이상 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]에서는 메모리 최적화 테이블 및 테이블 형식에 해당하는 인덱스 수 제한이 없어집니다.
   

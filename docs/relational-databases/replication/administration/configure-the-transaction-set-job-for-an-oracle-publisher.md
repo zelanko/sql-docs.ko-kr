@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: beea1a5c-0053-4971-a68f-0da53063fcbb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6ba894550e67896a08e14894c9ab9950f315c3f4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2a38f122dd4a0f184ab4fd3e564c143d0e24a924
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939280"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70275750"
 ---
 # <a name="configure-the-transaction-set-job-for-an-oracle-publisher"></a>Oracle 게시자에 대한 트랜잭션 집합 작업 구성
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,27 +30,27 @@ ms.locfileid: "67939280"
   
 1.  Oracle 게시자에서 **job_queue_processes** 초기화 매개 변수를 Xactset 작업을 실행하기에 충분한 값으로 설정합니다. 이 매개 변수에 대한 자세한 내용은 Oracle 게시자의 데이터베이스 설명서를 참조하십시오.  
   
-2.  배포자에서 [sp_publisherproperty&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)를 실행합니다. **@publisher** 에 Oracle 게시자 이름을, **@propertyname** 에 **xactsetbatching** 값을, **@propertyvalue** 에 **enabled** 값을 지정합니다.  
+2.  배포자에서 [sp_publisherproperty&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)를 실행합니다. **\@publisher**에 대해 Oracle 게시자의 이름, **\@propertyname**에 대해 값 **xactsetbatching**, **\@propertyvalue**에 대해 값 **enabled**를 지정합니다.  
   
-3.  배포자에서 [sp_publisherproperty&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)를 실행합니다. **@publisher** 에 Oracle 게시자의 이름을, **@propertyname** 에 **xactsetjobinterval** 값을, **@propertyvalue** 에 작업 간격(분)을 지정합니다.  
+3.  배포자에서 [sp_publisherproperty&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)를 실행합니다. **\@publisher**에 대해 Oracle 게시자의 이름, **\@propertyname**에 대해 값 **xactsetjobinterval**, **\@propertyvalue**에 대해 작업 간격(분)을 지정합니다.  
   
-4.  배포자에서 [sp_publisherproperty&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)를 실행합니다. **@publisher** 에 Oracle 게시자의 이름을, **@propertyname** 에 **xactsetjob** 값을, **@propertyvalue** 에 **enabled** 값을 지정합니다.  
+4.  배포자에서 [sp_publisherproperty&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)를 실행합니다. **\@publisher**에 대해 Oracle 게시자의 이름, **\@propertyname**에 대해 값 **xactsetjob**, **\@propertyvalue**에 대해 값 **enabled**를 지정합니다.  
   
 ### <a name="to-configure-the-transaction-set-job"></a>트랜잭션 세트 작업을 구성하려면  
   
-1.  (선택 사항) 배포자에서 [sp_publisherproperty&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)를 실행합니다. **@publisher** 에 Oracle 게시자의 이름을 지정합니다. 이렇게 하면 게시자에서 **Xactset** 작업의 속성이 반환됩니다.  
+1.  (선택 사항) 배포자에서 [sp_publisherproperty&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)를 실행합니다. **\@publisher**에 대해 Oracle 게시자의 이름을 지정합니다. 이렇게 하면 게시자에서 **Xactset** 작업의 속성이 반환됩니다.  
   
-2.  배포자에서 [sp_publisherproperty&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)를 실행합니다. **@publisher** 에 Oracle 게시자의 이름을, **@propertyname** 에 설정되는 Xactset 작업 속성의 이름을, **@propertyvalue** 에 새 설정을 지정합니다.  
+2.  배포자에서 [sp_publisherproperty&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)를 실행합니다. **\@publisher**에 대해 Oracle 게시자의 이름, **\@propertyname**에 대해 설정할 Xactset 작업 속성의 이름, **\@propertyvalue**에 대해 새 설정을 지정합니다.  
   
 3.  (옵션) 설정할 각 Xactset 작업 속성에 대해 2단계를 반복합니다. **xactsetjobinterval** 속성을 변경하는 경우 Oracle 게시자의 작업을 다시 시작해야 새 간격이 적용됩니다.  
   
 ### <a name="to-view-properties-of-the-transaction-set-job"></a>트랜잭션 세트 작업의 속성을 보려면  
   
-1.  배포자에서 [sp_helpxactsetjob](../../../relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql.md)을 실행합니다. **@publisher** 에 Oracle 게시자의 이름을 지정합니다.  
+1.  배포자에서 [sp_helpxactsetjob](../../../relational-databases/system-stored-procedures/sp-helpxactsetjob-transact-sql.md)을 실행합니다. **\@publisher**에 대해 Oracle 게시자의 이름을 지정합니다.  
   
 ### <a name="to-disable-the-transaction-set-job"></a>트랜잭션 세트 작업을 사용하지 않도록 설정하려면  
   
-1.  배포자에서 [sp_publisherproperty&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)를 실행합니다. **@publisher** 에 Oracle 게시자의 이름을, **@propertyname** 에 **xactsetjob** 값을, **@propertyvalue** 에 **disabled** 값을 지정합니다.  
+1.  배포자에서 [sp_publisherproperty&#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)를 실행합니다. **\@publisher**에 대해 Oracle 게시자의 이름, **\@propertyname**에 대해 값 **xactsetjob**, **\@propertyvalue**에 대해 값 **disabled**를 지정합니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `Xactset` 작업을 사용하도록 설정하고 실행 간격을 3분으로 설정합니다.  

@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: d9d6f1f0bdf1a0e38bf26fdc18bc91c5825ca412
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 65438f911246038cee272763e19be12b5860b463
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653033"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70911192"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 미리 보기 릴리스 정보
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -43,6 +43,10 @@ ms.locfileid: "69653033"
 - **문제 및 고객에게 미치는 영향**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 설명서는 버전별로 필터링할 수 있습니다. 각 설명서 페이지의 왼쪽 맨 위에 있는 컨트롤을 사용하여 요구 사항에 맞게 필터링합니다.
 
 - **문제 및 고객에게 미치는 영향**: SQL Server 2019(15.x) 관련 오프라인 콘텐츠는 제공되지 않습니다.
+
+## <a name="build-number"></a>빌드 번호
+
+Windows, Linux 및 컨테이너에서 SQL Server 2019 RC의 빌드 번호는 `15.0.1900.25`입니다.  빅 데이터 클러스터에서 사용되는 SQL Server 2019 RC의 빌드 번호는 `15.0.1900.47`입니다.
 
 ## <a name="hardware-and-software-requirements"></a>하드웨어 및 소프트웨어 요구 사항
 
@@ -129,6 +133,16 @@ ms.locfileid: "69653033"
 - **해결 방법**: 없음
 
 - **적용 대상**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 릴리스 후보
+
+## <a name="master-data-service-notification-email-contains-broken-link"></a>Master Data Service 알림 메일에 끊어진 링크가 포함됨
+
+- **문제 및 고객에게 미치는 영향**: MDS(Master Data Services)의 알림 메일에 끊어진 링크가 있습니다. 링크를 클릭하면 다음 메시지와 같은 오류를 반환하는 페이지로 이동됩니다.
+
+   `The view 'Index' or its master was not found or no view engine supports the searched locations.`
+
+- **해결 방법**: MDS 포털을 열고 리소스로 직접 이동합니다.
+
+- **적용 대상**: SQL Server 2019 릴리스 후보
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

@@ -17,12 +17,12 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 635cdf4b698659ca85c343331425500c88c74759
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b7418f2f38bd853d462727c2fac65d08e0bd1e8d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769854"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846673"
 ---
 # <a name="manage-identity-columns"></a>ID 열 관리
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,27 +97,27 @@ ms.locfileid: "68769854"
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>트랜잭션 게시에 대한 아티클을 정의할 때 자동 ID 범위 관리를 설정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. 게시되는 원본 테이블에 하나의 ID 열이 있는 경우 **@identityrangemanagementoption** 에 **@identityrangemanagementoption** 값, **@pub_identity_range** 에 게시자에 할당된 ID 값의 범위, **@identity_range** 에 각 구독자에 할당된 ID 값의 범위, **@threshold** 에서 ID 열을 관리하는 방법에 대해 설명합니다. 아티클을 정의하는 방법은 [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)를 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. 게시되는 원본 테이블에 하나의 ID 열이 있는 경우 **\@identityrangemanagementoption**에 **auto** 값, **\@pub_identity_range**에 게시자에 할당된 ID 값의 범위, **\@identity_range**에 각 구독자에 할당된 ID 값의 범위, **\@threshold**에 새 ID 범위가 할당되기 전까지 사용되는 전체 ID 값의 비율을 지정합니다. 아티클을 정의하는 방법은 [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)를 참조하세요.  
   
     > [!NOTE]  
     >  ID 열의 데이터 형식은 모든 구독자에 할당되는 ID의 전체 범위를 지원하기에 충분할 만큼 커야 합니다.  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>트랜잭션 게시에 대한 아티클을 정의할 때 자동 ID 범위 관리를 해제하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **@identityrangemanagementoption** 값을 **manual**로 지정합니다. 아티클을 정의하는 방법은 [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)를 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)을 실행합니다. **\@identityrangemanagementoption**에 **manual** 값을 지정합니다. 아티클을 정의하는 방법은 [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)를 참조하세요.  
   
 2.  구독자 업데이트에 대한 충돌 발생을 방지하려면 구독자에서 ID 아티클 열에 범위를 할당합니다. 자세한 내용은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md) 항목에서 ID 범위 수동 관리를 위한 범위 할당 섹션을 참조하세요.  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>병합 게시에 대한 아티클을 정의할 때 자동 ID 범위 관리를 설정하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. 게시되는 원본 테이블에 하나의 ID 열이 있는 경우 **@identityrangemanagementoption** 에 **@identityrangemanagementoption** 값, **@pub_identity_range** 에 서버 구독에 할당된 ID 값의 범위, **@identity_range** 에 각 구독자에 할당된 ID 값의 범위, **@threshold** 에서 ID 열을 관리하는 방법에 대해 설명합니다. 새 ID 범위가 할당되는 시점에 대한 자세한 내용은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md) 항목에서 ID 범위 할당을 참조하세요. 아티클을 정의하는 방법은 [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)를 참조하세요.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. 게시되는 원본 테이블에 하나의 ID 열이 있는 경우 **\@identityrangemanagementoption**에 **auto** 값, **\@pub_identity_range**에 서버 구독에 할당된 ID 값의 범위, **\@identity_range**에 게시자 및 각 클라이언트 구독에 할당된 ID 값의 범위, **\@threshold**에 새 ID 범위가 할당되기 전까지 사용되는 전체 ID 값의 비율을 지정합니다. 새 ID 범위가 할당되는 시점에 대한 자세한 내용은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md) 항목에서 ID 범위 할당을 참조하세요. 아티클을 정의하는 방법은 [아티클 정의](../../../relational-databases/replication/publish/define-an-article.md)를 참조하세요.  
   
     > [!NOTE]  
     >  특히 서버 구독이 있는 구독자의 경우 ID 열의 데이터 형식은 모든 구독자에 할당되는 ID의 전체 범위를 지원하기에 충분할 만큼 커야 합니다.  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>병합 게시에 대한 아티클을 정의할 때 자동 ID 범위 관리를 해제하려면  
   
-1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. **@identityrangemanagementoption** 에 다음 값 중 하나를 지정합니다.  
+1.  게시 데이터베이스의 게시자에서 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)을 실행합니다. **\@identityrangemanagementoption**에 다음 값 중 하나를 지정합니다.  
   
     -   **manual** - 구독자를 업데이트하려면 ID 범위를 수동으로 할당해야 합니다.  
   
@@ -133,9 +133,9 @@ ms.locfileid: "68769854"
   
 2.  결과 집합의 **identityrangemanagementoption** 값이 **1**이면 다음과 같이 설정을 변경합니다.  
   
-    -   할당된 ID 범위를 변경하려면 게시 데이터베이스의 게시자에서 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 을 실행합니다. **@property** 에 **identity_range** 또는 **pub_identity_range** 값을 지정하고 **@value** 에 새 범위 값을 지정합니다.  
+    -   할당된 ID 범위를 변경하려면 게시 데이터베이스의 게시자에서 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 을 실행합니다. **\@property**에 **identity_range** 또는 **pub_identity_range** 값을 지정하고 **\@value**에 새 범위 값을 지정합니다.  
   
-    -   새 범위가 할당되는 임계값을 변경하려면 게시 데이터베이스의 게시자에서 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 을 실행합니다. **@property** 에 **threshold** 값을 지정하고 **@value** 에 새 임계값을 지정합니다.  
+    -   새 범위가 할당되는 임계값을 변경하려면 게시 데이터베이스의 게시자에서 [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 을 실행합니다. **\@property**에 **threshold** 값, **\@value**에 새 임계값을 지정합니다.  
   
 #### <a name="to-change-automatic-identity-range-management-settings-for-an-existing-article-in-a-merge-publication"></a>병합 게시의 기존 아티클에 대한 자동 ID 범위 관리 설정을 변경하려면  
   
@@ -143,11 +143,11 @@ ms.locfileid: "68769854"
   
 2.  결과 집합의 **identity_support** 값이 **1**이면 다음과 같이 설정을 변경합니다.  
   
-    -   할당된 ID 범위를 변경하려면 게시 데이터베이스의 게시자에서 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 을 실행합니다. **@property** 에 **identity_range** 또는 **pub_identity_range** 값을 지정하고 **@value** 에 새 범위 값을 지정합니다.  
+    -   할당된 ID 범위를 변경하려면 게시 데이터베이스의 게시자에서 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 을 실행합니다. **\@property**에 **identity_range** 또는 **pub_identity_range** 값을 지정하고 **\@value**에 새 범위 값을 지정합니다.  
   
-    -   새 범위가 할당되는 임계값을 변경하려면 게시 데이터베이스의 게시자에서 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 을 실행합니다. **@property** 에 **threshold** 값을 지정하고 **@value** 에 새 임계값을 지정합니다. 새 ID 범위가 할당되는 시점에 대한 자세한 내용은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md) 항목에서 ID 범위 할당을 참조하세요.  
+    -   새 범위가 할당되는 임계값을 변경하려면 게시 데이터베이스의 게시자에서 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 을 실행합니다. **\@property**에 **threshold** 값, **\@value**에 새 임계값을 지정합니다. 새 ID 범위가 할당되는 시점에 대한 자세한 내용은 [ID 열 복제](../../../relational-databases/replication/publish/replicate-identity-columns.md) 항목에서 ID 범위 할당을 참조하세요.  
   
-    -   자동 ID 범위 관리를 해제하려면 게시 데이터베이스의 게시자에서 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 을 실행합니다. **@property** 에 **identityrangemanagementoption** 값을 지정하고 **@value** 에 **manual** 또는 **none**을 지정합니다.  
+    -   자동 ID 범위 관리를 해제하려면 게시 데이터베이스의 게시자에서 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) 을 실행합니다. **\@property**에 **identityrangemanagementoption** 값을 지정하고 **\@value**에 **manual** 또는 **none**을 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   

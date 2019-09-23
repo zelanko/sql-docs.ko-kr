@@ -10,18 +10,18 @@ ms.assetid: 0e908ec0-7173-4cd2-8f48-2700757b53a5
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2b04e7ffb9a1f1a00035b04994869c55d8173ad2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ba47ee7f719763cce2d2ac4502d8c2c9bd8693d3
+ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909286"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "70910828"
 ---
 # <a name="import-json-documents-into-sql-server"></a>SQL Server에 JSON 문서 가져오기
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-이 항목에서는 SQL Server에 JSON 파일을 가져오는 방법을 설명합니다. 현재 많은 JSON 문서가 파일로 저장됩니다. JSON 파일의 애플리케이션 로그 정보, JSON 파일에 저장된 센서 생성 정보 등을 예로 들 수 있습니다. 파일에 저장된 JSON 데이터를 읽고, 데이터를 SQL Server에 로드하여 분석할 수 있어야 합니다.
+이 문서에서는 SQL Server에 JSON 파일을 가져오는 방법을 설명합니다. 현재 많은 JSON 문서가 파일로 저장됩니다. JSON 파일의 애플리케이션 로그 정보, JSON 파일에 저장된 센서 생성 정보 등을 예로 들 수 있습니다. 파일에 저장된 JSON 데이터를 읽고, 데이터를 SQL Server에 로드하여 분석할 수 있어야 합니다.
 
 ## <a name="import-a-json-document-into-a-single-column"></a>단일 열에 JSON 문서 가져오기
 
@@ -139,9 +139,7 @@ SELECT value
  CROSS APPLY OPENJSON(BulkColumn)
 ```
 
-### <a name="example-2"></a>예제 2
-
-OPENROWSET는 파일에서 단일 텍스트 값을 읽어 BulkColumn으로 반환하고 OPENJSON 함수에 전달합니다. OPENJSON은 BulkColumn 배열에서 JSON 개체의 배열을 반복하고 각 행에 JSON으로 형식이 지정된 한 권의 책을 반환합니다.
+위의 OPENROWSET은 파일에서 단일 텍스트 값을 읽습니다. OPENROWSET은 값을 BulkColumn으로 반환하고 OPENJSON 함수에 BulkColumn을 제공합니다. OPENJSON은 BulkColumn 배열에서 JSON 개체의 배열을 반복하고 각 행에 한 권의 책을 반환합니다. 각 행은 다음에 표시된 것처럼 JSON으로 서식이 지정됩니다.
 
 ```json
 {"id":"978-0641723445", "cat":["book","hardcover"], "name":"The Lightning Thief", ... }
@@ -150,7 +148,7 @@ OPENROWSET는 파일에서 단일 텍스트 값을 읽어 BulkColumn으로 반�
 {"id":"978-1933988177", "cat":["book","paperback"], "name":"Lucene in Action, Second", ... }
 ```
 
-### <a name="example-3"></a>예제 3
+### <a name="example-2"></a>예제 2
 
 OPENJSON 함수는 JSON 콘텐츠를 구문 분석하여 테이블 또는 결과 집합으로 변환할 수 있습니다. 다음 예제에서는 콘텐츠를 로드하고 로드된 JSON을 구문 분석하여 5개의 필드를 열로 반환합니다.
 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 063adf4f1f180138150484e4ac9fc397ef886f5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a14ad2d77b21dba2fd14ea7856aa7199bc081bbe
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68003563"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809823"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 가용성 그룹에 대해 SLES 클러스터 구성
 
@@ -118,9 +118,9 @@ Linux 서버에서 가용성 그룹을 구성한 다음, 클러스터 리소스�
 
 3. 클러스터 통신 계층(Corosync)을 구성합니다. 
 
-   1\. 바인딩할 네트워크 주소를 입력합니다. 기본적으로 스크립트는 네트워크 주소 eth0을 제안합니다. 또는 다른 네트워크 주소(예: 주소 bond0)를 입력합니다. 
+   1. 바인딩할 네트워크 주소를 입력합니다. 기본적으로 스크립트는 네트워크 주소 eth0을 제안합니다. 또는 다른 네트워크 주소(예: 주소 bond0)를 입력합니다. 
 
-   2\. 멀티캐스트 주소를 입력합니다. 스크립트에서 사용할 수 있는 임의 주소를 기본값으로 제안합니다. 
+   2. 멀티캐스트 주소를 입력합니다. 스크립트에서 사용할 수 있는 임의 주소를 기본값으로 제안합니다. 
 
    c. 멀티캐스트 포트를 입력합니다. 스크립트는 5405를 기본값으로 제안합니다. 
 
@@ -220,7 +220,11 @@ Pacemaker 클러스터 공급업체는 STONITH를 사용하도록 설정하고 �
 
 노드 수준 펜싱은 노드가 리소스를 실행하지 않도록 합니다. 노드를 다시 설정하여 이 작업을 수행하며, 해당 Pacemaker 구현을 STONITH(“shoot the other node in the head”의 약어)라고 합니다. Pacemaker는 서버에 대해 무정전 전원 공급 디바이스 또는 관리 인터페이스 카드와 같은 다양한 펜싱 디바이스를 지원합니다.
 
-자세한 내용은 [Pacemaker 클러스터 기초](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/), [펜싱 및 Stonith](https://clusterlabs.org/doc/crm_fencing.html) 및 [SUSE HA 설명서: 펜싱 및 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)를 참조하세요.
+참조 항목:
+
+- [Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)(처음부터 Pacemaker 클러스터)
+- [펜싱 및 STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+- [SUSE HA 설명서: 펜싱 및 STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)
 
 클러스터 초기화 시 구성이 검색되지 않으면 STONITH가 사용하지 않도록 설정됩니다. 나중에 다음 명령을 실행하여 사용하도록 설정할 수 있습니다.
 
@@ -230,7 +234,6 @@ sudo crm configure property stonith-enabled=true
   
 >[!IMPORTANT]
 >STONITH를 사용하지 않도록 설정하는 기능은 테스트 목적으로만 제공됩니다. 프로덕션 환경에서 Pacemaker를 사용하려는 경우 해당 환경에 따라 STONITH 구현을 계획하고 사용 상태로 유지해야 합니다. SUSE는 클라우드 환경(Azure 포함) 또는 Hyper-V용 펜싱 에이전트를 제공하지 않습니다. 따라서 클러스터 공급업체도 이러한 환경에서 프로덕션 클러스터를 실행하기 위한 지원을 제공하지 않습니다. 이 문제의 해결 방법을 개발 중이며, 이후 릴리스에서 제공될 예정입니다.
-
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>SQL Server의 클러스터 리소스 구성
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a5e737f230ce7462aa59c0bfbcbfe19be55b66a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b989d4958da67a0959c0d3686a1d207c4353e302
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044574"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846665"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>데이터베이스 미러링 - 아웃바운드 연결에 대한 인증서 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68044574"
      예를 들어 HOST_A 시스템의 인증서를 만들려면 다음 코드를 사용합니다.  
   
     > [!IMPORTANT]  
-    >  인증서를 1년 이상 사용하려는 경우 CREATE CERTIFICATE 문에 EXPIRY_DATE 옵션을 사용하여 UTC 시간으로 만료 날짜를 지정합니다. 또한 SQL Server Management Studio를 사용하여 인증서 만료 시 경고를 표시하는 정책 기반 관리 규칙을 만드는 것이 좋습니다. 정책 관리의 **새 조건 만들기** 대화 상자를 사용하여 **@ExpirationDate** 패싯의 **@ExpirationDate** 필드에 이 규칙을 만듭니다. 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 및 [SQL Server 보안 설정](../../relational-databases/security/securing-sql-server.md)을 참조하세요.  
+    >  인증서를 1년 이상 사용하려는 경우 CREATE CERTIFICATE 문에 EXPIRY_DATE 옵션을 사용하여 UTC 시간으로 만료 날짜를 지정합니다. 또한 SQL Server Management Studio를 사용하여 인증서 만료 시 경고를 표시하는 정책 기반 관리 규칙을 만드는 것이 좋습니다. 정책 관리의 **새 조건 만들기** 대화 상자를 사용하여 **인증서** 패싯의 **\@ExpirationDate** 필드에 이 규칙을 만듭니다. 자세한 내용은 [정책 기반 관리를 사용하여 서버 관리](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 및 [SQL Server 보안 설정](../../relational-databases/security/securing-sql-server.md)을 참조하세요.  
   
     ```  
     USE master;  

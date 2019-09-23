@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 52aeeca0dc61f36fbde2ad4a708d359f1dd19567
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 3c3a4b8956be43328bba679eef2d1fb4304cc4b4
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809757"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929683"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -216,7 +216,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 *index_name*  
    인덱스의 이름을 지정합니다. *index_name*은 테이블에서 고유해야 하지만 데이터베이스에서 고유할 필요는 없습니다. 인덱스 이름은 [식별자](../../relational-databases/databases/database-identifiers.md) 규칙을 따라야 합니다.  
   
- **(** _column_  [ **,** ...*n* ] **)**  
+ **(** _column_  [ **,**...*n* ] **)**  
     저장할 열을 지정합니다. 비클러스터형 columnstore 인덱스는 1024개 열로 제한됩니다.  
    각 열은 columnstore 인덱스에 대해 지원되는 데이터 형식이어야 합니다. 지원되는 데이터 형식 목록은 [제한 사항](../../t-sql/statements/create-columnstore-index-transact-sql.md#LimitRest)을 참조하세요.  
 
@@ -416,7 +416,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 
 ##  <a name="convert"></a>Rowstore 테이블을 columnstore로 변환하는 예제  
   
-### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>1\. 클러스터형 columnstore 인덱스로 힙 변환  
+### <a name="a-convert-a-heap-to-a-clustered-columnstore-index"></a>1. 클러스터형 columnstore 인덱스로 힙 변환  
  이 예에서는 테이블을 힙으로 만들고 이를 cci_Simple라는 클러스터형 columnstore 인덱스로 변환합니다. 이렇게 하면 전체 테이블의 스토리지가 rowstore에서 columnstore로 변경됩니다.  
   
 ```sql  
@@ -430,7 +430,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;
 GO  
 ```  
   
-### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>2\. 클러스터형 인덱스를 같은 이름의 클러스터형 columnstore 인덱스로 변환합니다.  
+### <a name="b-convert-a-clustered-index-to-a-clustered-columnstore-index-with-the-same-name"></a>2. 클러스터형 인덱스를 같은 이름의 클러스터형 columnstore 인덱스로 변환합니다.  
  이 예에서는 클러스터형 인덱스가 있는 테이블을 만든 후 클러스터형 인덱스를 클러스터형 columnstore 인덱스로 변환하는 구문을 보여 줍니다. 이렇게 하면 전체 테이블의 스토리지가 rowstore에서 columnstore로 변경됩니다.  
   
 ```sql  
@@ -601,7 +601,7 @@ WITH ( DROP_EXISTING = ON );
   
 ##  <a name="nonclustered"></a> 비클러스터형 columnstore 인덱스 사용  
   
-### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>1\. Rowstore 테이블에서 columnstore 인덱스를 보조 인덱스로 만들기  
+### <a name="a-create-a-columnstore-index-as-a-secondary-index-on-a-rowstore-table"></a>1. Rowstore 테이블에서 columnstore 인덱스를 보조 인덱스로 만들기  
  이 예에서는 rowstore 테이블에 비클러스터형 columnstore 인덱스를 만듭니다. 이 경우 columnstore 인덱스는 하나만 만들 수 있습니다. Columnstore 인덱스는 rowstore 테이블에 데이터 복사본을 포함하고 있으므로 추가 스토리지가 필요합니다. 이 예에서는 간단한 테이블 및 클러스터형 인덱스를 만든 다음, 비클러스터형 columnstore 인덱스를 만드는 구문을 보여 줍니다.  
   
 ```sql  
@@ -619,7 +619,7 @@ ON SimpleTable
 GO  
 ```  
   
-### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>2\. 모든 옵션을 사용하여 단순 비클러스터형 columnstore 인덱스 만들기  
+### <a name="b-create-a-simple-nonclustered-columnstore-index-using-all-options"></a>2. 모든 옵션을 사용하여 단순 비클러스터형 columnstore 인덱스 만들기  
  다음 예에서는 모든 옵션을 사용하여 비클러스터형 columnstore 인덱스를 만드는 구문을 보여 줍니다.  
   
 ```sql  
@@ -668,7 +668,7 @@ CREATE NONCLUSTERED COLUMNSTORE INDEX "FIBillOfMaterialsWithEndDate"
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>예제: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] 및 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>1\. 클러스터형 인덱스를 클러스터형 columnstore 인덱스로 변환합니다.  
+### <a name="a-change-a-clustered-index-to-a-clustered-columnstore-index"></a>1. 클러스터형 인덱스를 클러스터형 columnstore 인덱스로 변환합니다.  
  DROP_EXISTING = ON과 함께 CREATE CLUSTERED COLUMNSTORE INDEX 문을 사용하면 다음을 수행할 수 있습니다.  
   
 -   클러스터형 인덱스를 클러스터형 columnstore 인덱스로 변환합니다.  
@@ -699,7 +699,7 @@ ON xdimProduct
 WITH ( DROP_EXISTING = ON );  
 ```  
   
-### <a name="b-rebuild-a-clustered-columnstore-index"></a>2\. 클러스터형 Columnstore 인덱스 다시 작성  
+### <a name="b-rebuild-a-clustered-columnstore-index"></a>2. 클러스터형 Columnstore 인덱스 다시 작성  
  앞의 예를 기반으로 이 예에서는 CREATE CLUSTERED COLUMNSTORE INDEX를 사용하여 cci_xDimProduct라는 기존 클러스터형 columnstore 인덱스를 다시 작성합니다.  
   
 ```sql  
@@ -747,11 +747,35 @@ WITH ( DROP_EXISTING = ON);
 DROP INDEX cci_xdimProduct ON xdimProduct;  
 ```  
 
-### <a name="f-create-an-ordered-clustered-columnstore-index"></a>F. 순서가 지정된 클러스터형 columnstore 인덱스 만들기
-
-SHIPDATE에서 순서가 지정된 클러스터형 columnstore 인덱스를 만듭니다.
+### <a name="f-create-an-ordered-clustered-columnstore-index-on-a-table-with-no-index"></a>F. 인덱스가 없는 테이블에 순서가 지정된 클러스터형 columnstore 인덱스 만들기
 
 ```sql
 CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ORDER ( SHIPDATE );
 ```
+
+### <a name="g-convert-a-clustered-columnstore-index-to-an-ordered-clustered-columnstore-index"></a>G. 클러스터형 columnstore 인덱스를 순서가 지정된 클러스터형 columnstore 인덱스로 변환
+
+```sql  
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE );
+WITH (DROP_EXISTING = ON)
+```
+
+### <a name="h-add-a-column-to-the-ordering-of-an-ordered-clustered-columnstore-index"></a>H. 순서가 지정된 클러스터형 columnstore 인덱스의 순서에 열 추가
+
+```sql
+-- The original ordered clustered columnstore index was ordered on SHIPDATE column only.  Add PRODUCTKEY column to the ordering.
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( SHIPDATE, PRODUCTKEY );
+WITH (DROP_EXISTING = ON)
+```
+### <a name="i-change-the-ordinal-of-ordered-columns"></a>9. 정렬된 열의 서수 변경  
+```sql
+-- The original ordered clustered columnstore index was ordered on SHIPDATE, PRODUCTKEY.  Change the ordering to PRODUCTKEY, SHIPDATE.  
+CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
+ORDER ( PRODUCTKEY,SHIPDATE );
+WITH (DROP_EXISTING = ON)
+```
+
+

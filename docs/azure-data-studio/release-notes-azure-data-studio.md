@@ -9,17 +9,37 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 08/15/2019
-ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.date: 09/11/2019
+ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059259"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878630"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio의 릴리스 정보
 
 **[최신 릴리스 다운로드 및 설치](download.md)**
+
+## <a name="september-2019"></a>2019년 9월
+
+2019년 9월 10일 &nbsp; / &nbsp; 버전: 1.11.0 
+
+&nbsp;
+
+| 변경 | 세부 정보 |
+| :----- | :------ |
+| SQLCMD 모드 사용 | 이제 쿼리 편집기는 쿼리를 SQLCMD 스크립트로 작성 및 편집하기 위한 SQLCMD 모드 토글을 지원합니다. |
+| 커뮤니티 확장: Query Editor Boost | Query Editor Boost는 쿼리를 자주 작성하는 사용자를 위해 Azure Data Studio 쿼리 편집기를 개선하는 데 초점을 맞춘 오픈 소스 확장입니다. &bull; &nbsp; 현재 쿼리를 코드 조각으로 저장 <br/>&bull; &nbsp; Ctrl+U를 사용하여 데이터베이스 전환 <br/> &bull; &nbsp; 템플릿의 새 쿼리 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/dzsquared/query-editor-boost)에서 확인할 수 있음 |
+| Notebook 기능 개선 | &bull; &nbsp; 더 Notebook 파일 지원을 위한 성능 향상 <br/> &bull; &nbsp; 전체 개선 사항 목록은 [여기](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed)에서 확인할 수 있음 |
+| Visual Studio Code 8월 릴리스 병합 1.38 | 최신 개선 사항은 [여기](https://code.visualstudio.com/updates/v1_38)에서 확인할 수 있습니다. |
+| 버그 및 이슈 해결 | 전체 수정 목록은 [GitHub의 버그 및 이슈](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)를 참조하세요. |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>알려진 문제
+- 전자 필기장
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook을 잘못 직렬화할 때 드물게 발생
+
 
 ## <a name="august-2019"></a>2019년 8월
 

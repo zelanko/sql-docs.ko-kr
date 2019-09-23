@@ -18,12 +18,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80c777fad7bbe9e6680b8baa826bc5acdf65730a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051436"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874458"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 데이터 정렬 이름(Transact-SQL)
 
@@ -139,9 +139,9 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |암하라어(에티오피아)|Latin1_General_100_|사용할 수 없음|
 |아르메니아어(아르메니아)|Cyrillic_General_100_|사용할 수 없음|
 |아삼어(인도)|Assamese_100_ <sup>1</sup>|사용할 수 없음|
+|벵골어(방글라데시)|Bengali_100_<sup>1</sup>|사용할 수 없음|
 |바슈키르어(러시아)|Bashkir_100_|사용할 수 없음|
 |바스크어(바스크)|Latin1_General_100_|사용할 수 없음|
-|벵골어(방글라데시)|Bengali_100_<sup>1</sup>|사용할 수 없음|
 |벵골어(인도)|Bengali_100_<sup>1</sup>|사용할 수 없음|
 |보스니아어(보스니아 및 헤르체고비나, 키릴 자모)|Bosnian_Cyrillic_100_|사용할 수 없음|
 |보스니아어(보스니아 및 헤르체고비나, 라틴 문자)|Bosnian_Latin_100_|사용할 수 없음|
@@ -226,7 +226,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |웨일스어(영국)|Welsh_100_|사용할 수 없음|
 |월로프어(세네갈)|French_100_|사용할 수 없음|
 |코사어(남아프리카)|Latin1_General_100_|사용할 수 없음|
-|야쿠트어(러시아)|Yakut_100_|사용할 수 없음|
+|사하어(러시아)|Yakut_100_|사용할 수 없음|
 |이 문자(중국)|Latin1_General_100_|사용할 수 없음|
 |요루바어(나이지리아)|Latin1_General_100_|사용할 수 없음|
 |줄루어(남아프리카)|Latin1_General_100_|사용할 수 없음|
@@ -235,9 +235,9 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 서버 수준에서 더 이상 사용할 수 없음|Lithuanian_Classic|Lithuanian_Classic|
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 이상의 서버 수준에서 더 이상 사용할 수 없음|마케도니아어|마케도니아어|
 
-<sup>1</sup>Windows 유니코드 전용 데이터 정렬은 열 수준 또는 식 수준 데이터에만 적용할 수 있으며 서버 또는 데이터베이스 데이터 정렬로 사용할 수 없습니다.
+<sup>1</sup> Windows 유니코드 전용 데이터 정렬은 열 수준 또는 식 수준 데이터에만 적용할 수 있으며 서버 또는 데이터베이스 데이터 정렬로 사용할 수 없습니다.
 
-<sup>2</sup>중국어(마카오)는 중국어(대만) 데이터 정렬과 마찬가지로 중국어 간체의 규칙을 사용합니다. 하지만 중국어(대만)와 달리 코드 페이지 950을 사용합니다.
+<sup>2</sup> 중국어(마카오)는 중국어(대만) 데이터 정렬과 마찬가지로 중국어 간체의 규칙을 사용합니다. 하지만 중국어(대만)와 달리 코드 페이지 950을 사용합니다.
 
 ## <a name="see-also"></a>참고 항목
 

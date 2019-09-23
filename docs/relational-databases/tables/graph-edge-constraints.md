@@ -1,7 +1,7 @@
 ---
 title: 그래프 에지 제약 조건 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 5c0f7ea57a36c4d264bec5c70e745b36a319bbc8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731056"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70873887"
 ---
 # <a name="edge-constraints"></a>에지 제약 조건
 
@@ -48,6 +48,14 @@ ms.locfileid: "67731056"
 ### <a name="indexes-on-edge-constraints"></a>에지 제약 조건의 인덱스
 
 에지 제약 조건을 만들어도 에지 테이블의 `$from_id` 및 `$to_id` 열에 해당 인덱스가 자동으로 생성되지 않습니다. `$from_id`에서 인덱스를 수동으로 만들 경우 지점 조회 쿼리 또는 OLTP 워크로드가 있으면 `$to_id` 쌍이 권장됩니다.
+
+### <a name="on-delete-referential-actions-on-edge-constraints"></a>에지 제약 조건에 대한 ON DELETE 참조 동작
+에지 제약 조건에 연속 동작을 사용하면 사용자는 지정된 에지가 연결되는 노드를 삭제할 때 데이터베이스 엔진이 수행하는 동작을 정의할 수 있습니다. 다음 참조 동작을 정의할 수 있습니다.  
+*NO ACTION*   
+연결된 에지가 있는 노드를 삭제하려고 하면 데이터베이스 엔진에서 오류를 발생시킵니다.  
+
+*CASCADE*   
+데이터베이스에서 노드를 삭제하면 연결하는 에지가 삭제됩니다.  
 
 ## <a name="working-with-edge-constraints"></a>에지 제약 조건 작업
 
@@ -80,7 +88,35 @@ GO
 CREATE TABLE bought
    (
       PurchaseCount INT
-         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE NO ACTION
+   )
+   AS EDGE;
+   ```
+
+#### <a name="defining-referential-actions-on-a-new-edge-table"></a>새 에지 테이블에 대한 참조 동작 정의 
+
+다음 예제에서는 **bought** 에지 테이블에 대해 에지 제약 조건을 만들고 ON DELETE CASCADE 참조 동작을 정의합니다. 
+
+```sql
+-- CREATE node and edge tables
+CREATE TABLE Customer
+   (
+      ID INTEGER PRIMARY KEY
+      ,CustomerName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE Product
+   (
+      ID INTEGER PRIMARY KEY
+      ,ProductName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE bought
+   (
+      PurchaseCount INT
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE CASCADE
    )
    AS EDGE;
    ```
@@ -248,6 +284,7 @@ DROP CONSTRAINT EC_BOUGHT;
 
 Transact-SQL을 사용하여 에지 제약 조건을 수정하려면 먼저 기존 에지 제약 조건을 삭제하고 새로운 정의를 사용하여 다시 만들어야 합니다.
 
+
 ### <a name="view-edge-constraints"></a>에지 제약 조건 보기
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 자세한 내용은 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)을 참조하세요.
@@ -302,4 +339,8 @@ WHERE EC.parent_object_id = object_id('bought');
 
 ## <a name="related-tasks"></a>관련 작업
 
+[CREATE TABLE(SQL 그래프)](../../t-sql/statements/create-table-sql-graph.md)  
+[ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
+
 SQL Server의 그래프 기술에 대한 자세한 내용은 [SQL Server 및 Azure SQL Database를 사용한 Graph 처리](../graphs/sql-graph-overview.md?view=sql-server-2017)를 참조하세요.
+

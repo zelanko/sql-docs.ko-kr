@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027223"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304848"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux의 Always On 가용성 그룹 장애 조치(failover)
 
@@ -43,7 +43,7 @@ AG(가용성 그룹)의 컨텍스트 내에서는 일반적으로 가용성 복�
 
    두 번째로, [위치 제약 조건을 제거](#removeLocConstraint)합니다.
 
-#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">1단계. 가용성 그룹 리소스를 이동하여 수동으로 장애 조치(failover)
+#### <a name="manualMove"></a> 1단계. 가용성 그룹 리소스를 이동하여 수동으로 장애 조치(failover)
 
 *ag_cluster*라는 AG 리소스를 *nodeName2*라는 클러스터 노드로 수동으로 장애 조치(failover)하려면 사용 중인 배포에 해당하는 명령을 실행합니다.
 
@@ -62,7 +62,7 @@ AG(가용성 그룹)의 컨텍스트 내에서는 일반적으로 가용성 복�
 >[!IMPORTANT]
 >리소스를 수동으로 장애 조치(failover)한 후 자동으로 추가되는 위치 제약 조건을 제거해야 합니다.
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint"> 2단계. 위치 제약 조건 제거
+#### <a name="removeLocConstraint"> </a> 2단계. 위치 제약 조건 제거
 
 수동으로 장애 조치(failover)하는 동안 `pcs` 명령 `move` 또는 `crm` 명령 `migrate`는 새 대상 노드에 배치될 리소스에 대한 위치 제약 조건을 추가합니다. 새 제약 조건을 확인하려면 리소스를 수동으로 이동한 후 다음 명령을 실행합니다.
 
@@ -162,7 +162,7 @@ AG(가용성 그룹)의 컨텍스트 내에서는 일반적으로 가용성 복�
 
 ## <a name="database-level-monitoring-and-failover-trigger"></a>데이터베이스 수준 모니터링 및 장애 조치(failover) 트리거
 
-`CLUSTER_TYPE=EXTERNAL`의 경우 장애 조치(failover) 트리거 의미 체계는 WSFC와 다릅니다. AG가 WSFC의 SQL Server 인스턴스에 있는 경우 데이터베이스의 `ONLINE` 상태에서 전환하면 AG 상태에서 오류가 보고됩니다. 이에 대한 응답으로 클러스터 관리자가 장애 조치(failover) 작업을 트리거합니다. Linux에서 SQL Server 인스턴스는 클러스터와 통신할 수 없습니다. 데이터베이스 상태 모니터링은 ‘외부에서’ 수행됩니다.  사용자가 AG를 만들 때 `DB_FAILOVER=ON` 옵션을 설정하여 데이터베이스 수준 장애 조치(failover) 모니터링 및 장애 조치(failover)를 설정한 경우 클러스터는 모니터링 작업을 실행할 때마다 데이터베이스 상태가 `ONLINE`인지 확인합니다. 클러스터는 `sys.databases`에서 상태를 쿼리합니다. 상태가 `ONLINE`과 다른 경우에는 자동으로 장애 조치(failover)를 트리거합니다(자동 장애 조치(failover) 조건이 충족되는 경우). 실제 장애 조치(failover) 시간은 sys.databases에서 업데이트되는 데이터베이스 상태뿐 아니라 모니터링 작업 빈도에 따라 달라집니다.
+`CLUSTER_TYPE=EXTERNAL`의 경우 장애 조치(failover) 트리거 의미 체계는 WSFC와 다릅니다. AG가 WSFC의 SQL Server 인스턴스에 있는 경우 데이터베이스의 `ONLINE` 상태에서 전환하면 AG 상태에서 오류가 보고됩니다. 이에 대한 응답으로 클러스터 관리자가 장애 조치(failover) 작업을 트리거합니다. Linux에서 SQL Server 인스턴스는 클러스터와 통신할 수 없습니다. 데이터베이스 상태 모니터링은 ‘외부에서’ 수행됩니다. 사용자가 AG를 만들 때 `DB_FAILOVER=ON` 옵션을 설정하여 데이터베이스 수준 장애 조치(failover) 모니터링 및 장애 조치(failover)를 설정한 경우 클러스터는 모니터링 작업을 실행할 때마다 데이터베이스 상태가 `ONLINE`인지 확인합니다. 클러스터는 `sys.databases`에서 상태를 쿼리합니다. 상태가 `ONLINE`과 다른 경우에는 자동으로 장애 조치(failover)를 트리거합니다(자동 장애 조치(failover) 조건이 충족되는 경우). 실제 장애 조치(failover) 시간은 sys.databases에서 업데이트되는 데이터베이스 상태뿐 아니라 모니터링 작업 빈도에 따라 달라집니다.
 
 자동 장애 조치(failover)에는 하나 이상의 동기 복제본이 필요합니다.
 

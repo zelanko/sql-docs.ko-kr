@@ -24,6 +24,7 @@ helpviewer_keywords:
 - user instance timeout
 - sp_dropalias
 - COMPUTE
+- SSL
 - WITH APPEND
 - sys.database_principal_aliases
 - sp_dboption
@@ -33,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 99a7b94a45b1baf0ffbf1a491a0387ef11108ebd
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: c93aa484caf1ae6a2b7582c00f8fd6223fcf35e5
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494079"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874189"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2016"></a>SQL Server 2016에서 지원되지 않는 데이터베이스 엔진 기능
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -54,6 +55,8 @@ ms.locfileid: "69494079"
 - ActiveX 하위 시스템이 중단되었습니다. 명령줄 또는 PowerShell 스크립트를 대신 사용 합니다.
 
 - 시작 매개 변수 **-h** 및 **-g**. 자세한 내용은 [Database Engine Service Startup Options](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014)을(를) 참조하세요.
+
+- SSL(Secure Sockets Layer) 암호화가 더 이상 사용되지 않습니다. 대신 TLS(전송 계층 보안)를 사용해야 합니다. 자세한 내용은 [데이터베이스 엔진에 대해 암호화 연결 사용](../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)을 참조하세요.
   
 ## <a name="previous-versions"></a>이전 버전  
   

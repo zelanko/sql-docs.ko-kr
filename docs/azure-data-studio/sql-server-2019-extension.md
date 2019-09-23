@@ -3,19 +3,19 @@ title: SQL Server 2019 확장(미리 보기)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio용 SQL Server 2019 미리 보기 확장
 ms.custom: seodec18
-ms.date: 08/15/2019
+ms.date: 09/11/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494039"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878619"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장(미리 보기)
 
@@ -29,9 +29,9 @@ SQL Server 2019 확장(미리 보기)을 설치하려면 연결된 .vsix 파일�
 
    |플랫폼|다운로드|릴리스 날짜|버전 옵션
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|2019년 8월 15일 |0.15.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|2019년 8월 15일 |0.15.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|2019년 8월 15일 |0.15.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|2019년 9월 11일 |0.16.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|2019년 9월 11일 |0.16.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|2019년 9월 11일 |0.16.0
 
 1. Azure Data Studio의 **파일** 메뉴에서 **VSIX 패키지에서 확장 설치**를 선택하고 다운로드한 .vsix 파일을 선택합니다.
 
@@ -41,7 +41,11 @@ SQL Server 2019 확장(미리 보기)을 설치하려면 연결된 .vsix 파일�
 
 1. 다시 로드하면 확장 기능이 종속성을 설치합니다. 출력 창에서 진행률을 볼 수 있으며 몇 분 정도 걸릴 수 있습니다.
 
-1. 종속성 설치가 끝나면 Azure Data Studio을 닫았다가 다시 엽니다. **SQL Server 빅 데이터 클러스터** 연결 유형은 Azure Data Studio를 다시 시작해야만 사용할 수 있습니다.
+1. 종속성 설치가 끝나면 Azure Data Studio을 닫았다가 다시 엽니다. **SQL Server 빅 데이터 클러스터** 연결 유형은 Azure Data Studio를 다시 시작해야만 사용할 수 있습니다. 
+
+## <a name="changes-in-release-016"></a>릴리스 0.16의 변경 내용
+* 외부 테이블 만들기 마법사:
+  * 개체 매핑 페이지에서 테이블 및 뷰를 로드할 때 발생하는 오류 처리가 개선되었습니다.
 
 ## <a name="changes-in-release-015"></a>릴리스 0.15의 변경 내용
 * 외부 테이블 만들기 마법사:
@@ -96,7 +100,7 @@ SQL Server 2019에 대한 지원이 업데이트되었습니다. SQL Server 빅 
 
 #### <a name="known-issues"></a>알려진 문제
 * Notebook을 열면 python 설치 대화 상자가 표시됩니다. 이 설치를 취소하면 커널 및 연결 대상 드롭다운에 예상되는 값이 표시되지 않습니다. 해결 방법은 Python 설치를 완료하는 것입니다.
-* 지원되지 않는 커널을 사용하여 Notebook을 열면 커널 및 _연결 대상_ 드롭다운에서 Azure Data Studio가 중단됩니다. Azure Data Studio를 닫고 지원되는 커널을 사용하고 있는지 확인해야 합니다(Python3, Spark | R, Spark | Scala, PySpark, PySpark3).
+* 지원되지 않는 커널을 사용하여 Notebook을 열면 커널 및 _연결 대상_ 드롭다운에서 Azure Data Studio가 더 이상 응답하지 않습니다. Azure Data Studio를 닫고 지원되는 커널을 사용하고 있는지 확인해야 합니다(Python3, Spark | R, Spark | Scala, PySpark, PySpark3).
 * SQL Server 엔드포인트에 대해 PySpark3 또는 기타 Spark 커널을 사용하는 경우 Spark UI 링크가 실패합니다. 해결 방법으로 대시보드에서 Spark UI를 클릭하거나 SQL Server 빅 데이터 클러스터 연결 유형을 사용하여 연결합니다. 이 연결 유형은 올바른 Spark UI 하이퍼링크를 사용합니다.
 
 ### <a name="extensibility-improvements"></a>확장성 향상
@@ -163,7 +167,7 @@ Extender를 지원하는 다양한 개선 기능이 이 릴리스에 추가되�
   * SQL Server 2019 빅 데이터 클러스터에 대한 HDFS 개체 탐색기 트리를 열고 다음 중 하나를 수행합니다.
     * 서버 노드를 마우스 오른쪽 단추로 클릭하고 **새 Jupyter Notebook**을 선택합니다.
     * CSV 파일을 마우스 오른쪽 단추로 클릭하고 **Notebook에서 분석**을 선택합니다.
-  * **파일** 메뉴 또는 파일 탐색기에서 기존 .ipverb 파일을 엽니다 *(.ipverb 파일을 제대로 로드하려면 버전 4 이상으로 업그레이드해야 함)* .
+  * **파일** 메뉴 또는 파일 탐색기에서 기존 .ipverb 파일을 엽니다 *(.ipverb 파일을 제대로 로드하려면 버전 4 이상으로 업그레이드해야 함)*.
 * 커널을 선택합니다. 로컬 Notebook 실행의 경우 Python 3을 선택합니다. 원격 실행의 경우 PySpark 또는 Spark | Scala를 선택합니다.
 * 원격으로 실행하는 경우 연결할 SQL Server 빅 데이터 클러스터 엔드포인트를 선택합니다(Python 3를 사용한 로컬 개발에는 필요하지 않음).
 * Notebook 헤더의 단추를 통해 코드 또는 Markdown 셀을 추가합니다. 각 셀의 왼쪽에 있는 휴지통 아이콘을 사용하여 셀을 제거합니다.

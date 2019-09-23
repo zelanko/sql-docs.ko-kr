@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e90fcec386868a87ccca9faaf349dcb1a4064aff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997855"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874184"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>역할 전환 중 서비스 중단 예측(데이터베이스 미러링)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67997855"
 -   수동 장애 조치의 경우 장애 조치 명령이 실행된 후 데이터베이스를 장애 조치하는 데 필요한 시간만 고려됩니다.  
   
 ## <a name="error-detection"></a>오류 검색  
- 시스템에서 오류를 검색하는 데 걸리는 시간은 오류 유형에 따라 달라집니다. 예를 들어 네트워크 오류는 즉시 검색되지만 서버 중지는 기본적으로 검색하는 데 기본 제한 시간인 10초가 걸립니다.  
+ 시스템에서 오류를 검색하는 데 걸리는 시간은 오류 유형에 따라 달라집니다. 예를 들어 네트워크 오류는 즉시 검색되지만 응답하지 않는 서버를 파악하는 데는 10초가 걸립니다(기본 제한 시간을 사용하는 경우).  
   
  데이터베이스 미러링 세션 중에 실패를 발생시킬 수 있는 오류와 자동 장애 조치를 지원하는 보호 우선 모드에서의 제한 시간 검색에 대한 자세한 내용은 [데이터베이스 미러링 중에 발생 가능한 오류](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)를 참조하세요.  
   
