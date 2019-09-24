@@ -10,12 +10,12 @@ author: markingmyname
 ms.author: maghan
 ms.custom: ''
 ms.date: 09/04/2019
-ms.openlocfilehash: 7f9195b2ec4cfd80d16f37884ce27e920580463c
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: 10f5290275a921e923ca49492eab78e4fb019475
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874556"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149875"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SSMS(SQL Server Management Studio) 릴리스 정보
 
@@ -156,7 +156,7 @@ SSMS 18.1은 SSMS의 최신 GA(일반 공급) 릴리스입니다. 이전 버전�
 | 일반 SSMS | SSMS가 SQL 편집기 창의 *도구/옵션*에서 Intellisense 설정을 준수하지 않는 문제가 해결되었습니다. |
 | 일반 SSMS | SSMS가 도움말 설정을 준수하지 않은 문제가 해결되었습니다(온라인 및 오프라인). |
 | 높은 DPI | 지원되지 않는 쿼리 옵션에 대한 오류 대화 상자의 컨트롤 레이아웃이 수정되었습니다. |
-| 높은 DPI | 일부 지역화 버전의 SSMS에 있는 *새 가용성 그룹* 페이지의 컨트롤 레이아웃이 수정되었습니다. |
+| 높은 DPI | 일부 지역화 버전의 SSMS에 있는 ‘새 가용성 그룹’ 페이지의 컨트롤 레이아웃이 수정되었습니다.  |
 | 높은 DPI | *새 작업 일정* 페이지의 레이아웃이 수정되었습니다. 자세한 내용은 [UserVoice](https://feedback.azure.com/forums/908035/suggestions/37632094)를 참조하세요. |
 | 플랫 파일 가져오기 | 가져오기 중에 행이 자동으로 손실될 수 있는 문제가 해결되었습니다.|
 | Intellisense/편집기 | Intellisense용 Azure SQL 데이터베이스에 대한 SMO 기반 쿼리 트래픽이 줄어듭니다. |
