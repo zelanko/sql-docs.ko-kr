@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd458727fad637414d7c71865b2633f3caf80175
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 80f714810acd8c04c80fe0b8abe5214a456f6dd6
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383554"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199403"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에 대 한 Python 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,9 @@ SQL Server Machine Learning Services를 처음 접하는 경우 Python 빠른 �
 
 | 빠른 시작 | 설명 |
 |-|-|
-| [Python 및 SQL Server에서 Hello World](quickstart-python-run-using-t-sql.md) | T-sql에서 Python을 호출 하는 방법에 대 한 기본 사항을 알아봅니다. |
-| [SQL Server에서 Python을 사용 하 여 입력 및 출력 처리](quickstart-python-inputs-and-outputs.md) | [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)에서 Python에 대 한 입력 및 출력을 처리 하는 방법을 알아봅니다. |
-| [SQL Server의 Python 데이터 구조](quickstart-python-data-structures.md) | SQL Server Python pandas 패키지를 사용 하 여 데이터 구조를 처리 하는 방법을 보여 줍니다. |
-| [첫 번째 모델 학습 및 사용](quickstart-python-train-score-in-tsql.md) | Python 모델을 만들고 학습 하 고 사용 하 여 새 데이터를 예측 하는 방법을 설명 합니다. |
+| [Python 및 SQL Server에서 Hello World](quickstart-python-create-script.md) | [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)를 사용 하 여 T-sql에서 Python을 호출 하는 방법에 대 한 기본 사항을 알아봅니다. |
+| [SQL Server에서 Python을 사용 하 여 데이터 형식 및 개체 처리](quickstart-python-data-structures.md) | SQL Server Python pandas 패키지를 사용 하 여 데이터 구조를 처리 하는 방법을 보여 줍니다. |
+| [Python에서 예측 모델 만들기 및 점수 매기기](quickstart-python-train-score-model.md) | Python 모델을 만들고 학습 하 고 사용 하 여 새 데이터에서 예측 하는 방법을 설명 합니다. |
 
 ## <a name="next-steps"></a>다음 단계
 

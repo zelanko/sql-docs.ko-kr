@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f40f04d677d5dcfa758a13321009da3e535c5d4
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 87c05fafb122e292c45033bb019548c84df44de0
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634536"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199472"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services에서 Python 개발을 위한 데이터 과학 클라이언트 설정
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ SQL에 대 한 Python 개발자 이거나 Python 및 데이터베이스 내 분�
 
 Python 개발의 경우 SQL Server에 의해 설치 된 Anaconda 배포에 번들로 제공 되는 Jupyter 노트북을 사용할 수 있습니다. 이 문서에서는 Python 코드를 로컬로 실행 하 고 SQL Server에서 원격으로 실행할 수 있도록 Jupyter 노트북을 시작 하는 방법을 설명 합니다.
 
-SSMS는 Python 코드를 포함 하는 저장 프로시저를 포함 하 여 SQL Server에서 저장 프로시저를 만들고 실행 하는 데 도움이 되는 별도의 다운로드입니다. Jupyter 노트북에서 작성 하는 거의 모든 Python 코드는 저장 프로시저에 포함 될 수 있습니다. 다른 빠른 시작을 단계별로 실행 하 여 [SSMS 및 포함 된 Python](../tutorials/quickstart-python-verify.md)에 대해 알아볼 수 있습니다.
+SSMS는 Python 코드를 포함 하는 저장 프로시저를 포함 하 여 SQL Server에서 저장 프로시저를 만들고 실행 하는 데 도움이 되는 별도의 다운로드입니다. Jupyter 노트북에서 작성 하는 거의 모든 Python 코드는 저장 프로시저에 포함 될 수 있습니다. 다른 빠른 시작을 단계별로 실행 하 여 [SSMS 및 포함 된 Python](../tutorials/quickstart-python-create-script.md)에 대해 알아볼 수 있습니다.
 
 ## <a name="1---install-python-packages"></a>1-Python 패키지 설치
 
@@ -282,7 +282,7 @@ C:\Program Files\Microsoft\PyForMLS 부모 폴더에는 Anaconda와 Microsoft �
 
 [Visual Studio에서 python](https://code.visualstudio.com/docs/languages/python)을 사용 하는 경우 다음 구성 옵션을 사용 하 여 Microsoft python 패키지를 포함 하는 python 환경을 만듭니다.
 
-| 구성 설정 | value |
+| 구성 설정 | 값 |
 |-----------------------|-------|
 | **접두사 경로** | C:\Program Files\Microsoft\PyForMLS |
 | **인터프리터 경로** | C:\Program Files\Microsoft\PyForMLS\python.exe |
@@ -305,4 +305,4 @@ PyCharm에서 인터프리터를 Machine Learning Server에 의해 설치 된 Py
 SQL Server에 대 한 도구 및 작업 연결이 있으므로 [SSMS (SQL Server Management Studio)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)를 사용 하 여 Python 빠른 시작을 통해 실행 하 여 기술을 확장 합니다.
 
 > [!div class="nextstepaction"]
-> [빠른 시작: SQL Server에 Python이 있는지 확인](../tutorials/quickstart-python-verify.md)
+> [빠른 시작: SQL Server Machine Learning Services를 사용 하 여 간단한 Python 스크립트 만들기 및 실행](../tutorials/quickstart-python-create-script.md)

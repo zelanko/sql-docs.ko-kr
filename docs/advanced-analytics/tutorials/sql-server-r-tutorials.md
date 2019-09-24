@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ff1027a3a791ef0151e61982445cafff7be40329
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: fc0cde616bc03be4a984d8de518770b490e4a89a
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715418"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199347"
 ---
 # <a name="sql-server-r-language-tutorials"></a>SQL Server R 언어 자습서
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +31,8 @@ ms.locfileid: "68715418"
 
 | 링크 | 설명 |
 |------|-------------|
-| [빠른 시작: T-sql에서 R 사용](rtsql-using-r-code-in-transact-sql-quickstart.md) | 몇 가지 빠른 시작에서 첫 번째는 SQL Server Management Studio와 같은 T-sql 쿼리 편집기를 사용 하 여 R 함수를 호출 하는 기본 구문을 보여 주는 것입니다. |
-| [자습서: 데이터 과학자에 대 한 데이터베이스 내 R 분석 학습](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | SQL Server를 처음 접하는 R 개발자를 위한이 자습서에서는 SQL Server에서 일반적인 데이터 과학 작업을 설명 하는 방법을 설명 합니다. 데이터를 로드 및 시각화 하 고, 모델을 학습 하 고 SQL Server에 저장 하 고, 예측 분석에 모델을 사용 합니다. |
+| [빠른 시작: 간단한 R 스크립트 만들기 및 실행](quickstart-r-create-script.md) | 몇 가지 빠른 시작에서 첫 번째는 SQL Server Management Studio와 같은 T-sql 쿼리 편집기를 사용 하 여 R 함수를 호출 하는 기본 구문을 보여 주는 것입니다. |
+| [자습서: 데이터 과학자에 대 한 데이터베이스 내 R 분석 학습](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md) | SQL Server를 처음 접하는 R 개발자를 위한이 자습서에서는 SQL Server에서 일반적인 데이터 과학 작업을 수행 하는 방법을 설명 합니다. 데이터를 로드 및 시각화 하 고, 모델을 학습 하 고 SQL Server에 저장 하 고, 예측 분석에 모델을 사용 합니다. |
 | [자습서: SQL 개발자를 위한 데이터베이스 내 R 분석에 대해 알아보기](../tutorials/sqldev-in-database-r-for-sql-developers.md) | [!INCLUDE[tsql](../../includes/tsql-md.md)]를 사용해서 R 솔루션을 빌드하고 배포하세요. 솔루션을 프로덕션 환경으로 전환 하는 데 중점을 둔 것입니다. R 코드를 저장 프로시저에 래핑하고, R 모델을 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터베이스에 저장하고, 예측을 위해 매개 변수가 있는 R 모델 호출을 수행하는 방법을 알아봅니다. |
 | [자습서: RevoScalepR 심층 살펴보기](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) | RevoScaleR 패키지에서 함수를 사용하는 방법을 알아봅니다. R 및 SQL Server 및 스위치 간 데이터 이동에 맞게 특정 작업 컨텍스트를 계산합니다. 모델 및 플롯을 만들고 개발 환경의 데이터베이스 서버 간에 이동합니다. |
 

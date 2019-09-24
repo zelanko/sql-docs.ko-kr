@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 00ce4893cfe96fcf115227cc5a7fd38085584dda
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: eef8a0f0f11e6d9085a1685145e4c6815979470d
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70294378"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199358"
 ---
 # <a name="tutorial-deploy-a-model-in-python-to-categorize-customers-with-sql-server-machine-learning-services"></a>자습서: SQL Server Machine Learning Services를 사용 하 여 고객을 범주화 하는 모델을 Python에 배포
 
@@ -186,7 +186,7 @@ SELECT customer.[c_email_address], customer.c_customer_sk
 
 SQL Server Machine Learning Services에서 Python을 사용 하는 방법에 대 한 자세한 내용은 다음을 참조 하세요.
 
-* [빠른 시작: SQL Server Machine Learning Services에서 "Hello 세계" Python 스크립트를 실행 합니다.](quickstart-python-run-using-t-sql.md)
+* [빠른 시작: SQL Server Machine Learning Services를 사용 하 여 간단한 Python 스크립트 만들기 및 실행](quickstart-python-create-script.md)
 * [SQL Server Machine Learning Services에 대 한 다른 Python 자습서](sql-server-python-tutorials.md)
 * [Sqlmlutils를 사용 하 여 Python 패키지 설치](../package-management/install-additional-python-packages-on-sql-server.md)
 
