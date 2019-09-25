@@ -1,6 +1,6 @@
 ---
 title: Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성 | Microsoft Docs
-description: 외부 Hadoop 연결할 Parallel Data Warehouse에서 PolyBase를 구성 하는 방법을 설명 합니다.
+description: 외부 Hadoop에 연결 하도록 병렬 데이터 웨어하우스에서 PolyBase를 구성 하는 방법을 설명 합니다.
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2e675b87c3c4f01f63e21bafd5d071cebb4ae4c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ceaa1cbe04148443dd7a60b8d2b7936dc0a2cf55
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960279"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227132"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop의 외부 데이터에 액세스하도록 PolyBase 구성
 
-이 문서는 PolyBase를 사용 하 여 Hadoop에서 외부 데이터를 쿼리 하는 APS 어플라이언스 방법을 설명 합니다.
+이 문서에서는 APS 어플라이언스에서 PolyBase를 사용 하 여 Hadoop의 외부 데이터를 쿼리 하는 방법을 설명 합니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
 PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)의 두 가지 Hadoop 공급자를 지원합니다. Hadoop은 새 릴리스의 "Major.Minor.Version" 패턴을 따르며, 지원되는 주/부 릴리스 내의 모든 버전이 지원됩니다. 다음 Hadoop 공급자가 지원됩니다.
  - Linux/Windows Server에서 Hortonworks HDP 1.3  
  - Linux에서 Hortonworks HDP 2.1-2.6
- - Linux에서 Hortonworks HDP 3.1 3.0
+ - Linux에서 Hortonworks HDP 3.0-3.1
  - Windows Server에서 Hortonworks HDP 2.1 - 2.3  
  - Linux에서 Cloudera CDH 4.3  
- - Cloudera CDH 5.1 5.5, 5.9-5.13 linux
+ - Linux에서 Cloudera CDH 5.1-5.5, 5.9-5.13, 5.15 & 5.16
 
 ### <a name="configure-hadoop-connectivity"></a>Hadoop 연결 구성
 
-먼저 특정 Hadoop 공급자를 사용 하는 AP를 구성 합니다.
+먼저 특정 Hadoop 공급자를 사용 하도록 AP를 구성 합니다.
 
 1. ‘hadoop connectivity’를 사용하여 [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)를 실행하고 사용 중인 공급자에 적합한 값을 설정합니다. 공급자의 값을 찾으려면 [PolyBase 연결 구성](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)을 참조하세요. 
 
@@ -46,7 +46,7 @@ PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)�
    GO
    ```  
 
-2. AP 지역에서 서비스 상태 페이지를 사용 하 여 다시 시작 [구성 관리자 어플라이언스](launch-the-configuration-manager.md)합니다.
+2. [어플라이언스 Configuration Manager](launch-the-configuration-manager.md)의 서비스 상태 페이지를 사용 하 여 APS 영역을 다시 시작 합니다.
   
 ## <a id="pushdown"></a> 푸시다운 계산 사용  
 
@@ -54,7 +54,7 @@ PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)�
   
 1. PDW 제어 노드에 대 한 원격 데스크톱 연결을 엽니다.
 
-2. 파일을 찾을 **yarn-site.xml** 제어 노드에 있습니다. 일반적인 경로는 다음과 같습니다.  
+2. 컨트롤 노드에서 **yarn-site.xml** 파일을 찾습니다. 일반적인 경로는 다음과 같습니다.  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -62,11 +62,11 @@ PolyBase는 HDP(Hortonworks Data Platform) 및 CDH(Cloudera Distributed Hadoop)�
 
 3. Hadoop 컴퓨터의 Hadoop 구성 디렉터리에서 동일한 파일을 찾습니다. 이 파일에서 구성 키 yarn.application.classpath의 값을 찾아서 복사합니다.  
   
-4. 제어 노드에서는 **yarn.site.xml 파일** 찾을 합니다 **yarn.application.classpath** 속성. Hadoop 컴퓨터의 값을 value 요소에 붙여넣습니다.  
+4. Control 노드의 yarn 파일에서 **yarn** 속성을 찾습니다. **이 파일** 은 Hadoop 컴퓨터의 값을 value 요소에 붙여넣습니다.  
   
 5. 모든 CDH 5.X 버전에서 mapreduce.application.classpath 구성 매개 변수를 yarn.site.xml 파일의 끝이나 mapred-site.xml 파일에 추가해야 합니다. HortonWorks는 yarn.application.classpath 구성 내에 이러한 구성을 포함하고 있습니다. 예제는 [PolyBase 구성](../relational-databases/polybase/polybase-configuration.md)을 참조하세요.
 
-## <a name="example-xml-files-for-cdh-5x-cluster-default-values"></a>예제 XML 파일 cdh 5.X 클러스터 기본값
+## <a name="example-xml-files-for-cdh-5x-cluster-default-values"></a>CDH 5.x 클러스터 기본값에 대 한 예제 XML 파일
 
 yarn.application.classpath 및 mapreduce.application.classpath 구성이 포함된 Yarn-site.xml입니다.
 
@@ -101,7 +101,7 @@ yarn.application.classpath 및 mapreduce.application.classpath 구성이 포함�
 </configuration>
 ```
 
-Mapred-site.xml 및 yarn-site.xml로 두 가지 구성 설정을 중단 하려는 경우 파일은 다음과 같을 것.
+두 구성 설정을 mapred-site.xml 및 yarn-site.xml로 분할 하도록 선택 하는 경우 파일은 다음과 같습니다.
 
 **yarn-site.xml**
 
@@ -138,7 +138,7 @@ Mapred-site.xml 및 yarn-site.xml로 두 가지 구성 설정을 중단 하려�
 
 **mapred-site.xml**
 
-mapreduce.application.classpath 속성이 추가되었습니다. CDH 5.x에서 Ambari에서 동일한 명명 규칙에서 구성 값을 확인할 수 있습니다.
+mapreduce.application.classpath 속성이 추가되었습니다. CDH 5.x에서 Ambari의 동일한 명명 규칙에 따라 구성 값을 찾을 수 있습니다.
 
 ```xml
 <?xml version="1.0"?>
@@ -172,7 +172,7 @@ mapreduce.application.classpath 속성이 추가되었습니다. CDH 5.x에서 A
 </configuration>
 ```
 
-## <a name="example-xml-files-for-hdp-3x-cluster-default-values"></a>HDP에 대 한 예제 XML 파일 3.X 클러스터 기본값
+## <a name="example-xml-files-for-hdp-3x-cluster-default-values"></a>HDP 1.x 클러스터 기본값에 대 한 예제 XML 파일
 
 **yarn-site.xml**
 
@@ -211,7 +211,7 @@ mapreduce.application.classpath 속성이 추가되었습니다. CDH 5.x에서 A
 
 Hadoop 데이터 원본에서 데이터를 쿼리하려면 Transact-SQL 쿼리에 사용할 외부 테이블을 정의해야 합니다. 다음 단계에서는 외부 테이블을 구성하는 방법을 설명합니다.
 
-1. 데이터베이스에 마스터 키를 만듭니다. 자격 증명 비밀을 암호화 해야 합니다.
+1. 데이터베이스에 마스터 키를 만듭니다. 자격 증명 암호를 암호화 해야 합니다.
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -277,7 +277,7 @@ Hadoop 데이터 원본에서 데이터를 쿼리하려면 Transact-SQL 쿼리�
 
 세 가지 함수가 PolyBase에 적합합니다.  
   
-- 외부 테이블에 대 한 임시 쿼리 합니다.  
+- 외부 테이블에 대 한 임시 쿼리  
 - 데이터 가져오기  
 - 데이터 내보내기  
 
@@ -285,7 +285,7 @@ Hadoop 데이터 원본에서 데이터를 쿼리하려면 Transact-SQL 쿼리�
 
 ### <a name="ad-hoc-queries"></a>임시 쿼리  
 
-다음 임시 쿼리에 Hadoop 데이터를 사용 하 여 관계형 조인합니다. 35 속도로, Hadoop에 저장 된 차량 센서 데이터를 사용 하 여 AP에 저장 된 구조화 된 고객 데이터를 조인 보다 더 빠르게 드라이브 고객을 선택 합니다.  
+다음 임시 쿼리는 Hadoop 데이터와의 관계를 조인 합니다. 35입니다 보다 빠르게 구동 되는 고객을 선택 하 고, APS에 저장 된 구조적 고객 데이터를 Hadoop에 저장 된 자동차 센서 데이터로 조인 합니다.  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -298,7 +298,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)
 
 ### <a name="importing-data"></a>데이터 가져오기  
 
-다음 쿼리는 AP에 외부 데이터를 가져옵니다. 이 예제에서는 자세한 심층 분석을 위해 AP에 빠른 드라이버에 대 한 데이터를 가져옵니다. 성능 향상을 위해 AP의 Columnstore 기술을 활용 합니다.  
+다음 쿼리는 외부 데이터를 APS로 가져옵니다. 이 예제에서는 fast driver에 대 한 데이터를 AP로 가져와서 심층 분석을 수행 합니다. 성능 향상을 위해 AP의 Columnstore 기술을 활용 합니다.  
 
 ```sql
 CREATE TABLE Fast_Customers
@@ -317,7 +317,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### <a name="exporting-data"></a>데이터 내보내기  
 
-다음 쿼리는 Hadoop에 AP에서 데이터를 내보냅니다. Hadoop에 관계형 데이터를 보관할 수는 수를 쿼리할 수 있습니다.
+다음 쿼리는 APS에서 Hadoop으로 데이터를 내보냅니다. 관계형 데이터를 계속 쿼리할 수 있지만 Hadoop에 보관 하는 데 사용할 수 있습니다.
 
 ```sql
 -- Export data: Move old data to Hadoop while keeping it query-able via an external table.  
@@ -333,14 +333,14 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
-## <a name="view-polybase-objects-in-ssdt"></a>SSDT에서 PolyBase 개체를 보려면  
+## <a name="view-polybase-objects-in-ssdt"></a>SSDT에서 PolyBase 개체 보기  
 
-SQL Server Data Tools, 외부 테이블을 별도 폴더에 표시 됩니다 **외부 테이블**합니다. 외부 데이터 원본 및 외부 파일 형식은 **외부 리소스**의 하위 폴더에 있습니다.  
+SQL Server Data Tools에서 외부 테이블은 별도의 폴더 **외부 테이블**에 표시 됩니다. 외부 데이터 원본 및 외부 파일 형식은 **외부 리소스**의 하위 폴더에 있습니다.  
   
-![SSDT에서 PolyBase 개체](media/polybase/external-tables-datasource.png)  
+![SSDT의 PolyBase 개체](media/polybase/external-tables-datasource.png)  
 
 ## <a name="next-steps"></a>다음 단계
 
-Hadoop 보안 설정 참조 하세요 [Hadoop 보안 구성](polybase-configure-hadoop-security.md)합니다.<br>
+Hadoop 보안 설정의 경우 [hadoop 보안 구성](polybase-configure-hadoop-security.md)을 참조 하세요.<br>
 PolyBase에 대한 자세한 내용은 [PolyBase란?](../relational-databases/polybase/polybase-guide.md)을 참조하세요. 
  

@@ -1,5 +1,5 @@
 ---
-title: sys.index_resumable_operations (TRANSACT-SQL) | Microsoft Docs
+title: index_resumable_operations (Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/14/2019
 ms.prod: sql
@@ -19,34 +19,34 @@ ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c934c2fe8357cb4d37484984998edfcb7219c649
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d4f79da2af2630fa54a06dc26b32cf22287f7c1d
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68122660"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227195"
 ---
-# <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (Transact SQL)
+# <a name="sysindex_resumable_operations-transact-sql"></a>index_resumable_operations (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
-**sys.index_resumable_operations** 모니터링 하 고 다시 시작 가능한 인덱스 다시 작성에 대 한 현재 실행 상태를 확인 하는 시스템 뷰입니다.  
+**index_resumable_operations** 은 다시 시작 가능한 인덱스 다시 작성에 대 한 현재 실행 상태를 모니터링 하 고 확인 하는 시스템 뷰입니다.  
 **적용 대상**: SQL Server 2017 및 Azure SQL Database
   
 |열 이름|데이터 형식|설명|  
 |-----------------|---------------|-----------------|  
-|**object_id**|**int**|이 인덱스 (null 허용 안 함) 속한 개체의 ID입니다.|  
-|**index_id**|**int**|인덱스의 ID입니다 (null 허용 안 함)입니다. **index_id** 는 개체 내 에서만 고유 합니다.|
-|**name**|**sysname**|인덱스의 이름입니다. **이름** 는 개체 내 에서만 고유 합니다.|  
-|**sql_text**|**nvarchar(max)**|T-SQL DDL 문 텍스트|
-|**last_max_dop**|**smallint**|마지막 MAX_DOP 사용 (기본값 = 0)|
-|**partition_number**|**int**|내 소유 하는 인덱스 또는 힙의 파티션 번호입니다. 대/소문자 또는 분할 되지 않은 테이블 및 인덱스에 대 한 모든 파티션을 다시 값이이 열은 NULL 되는 합니다.|
-|**state**|**tinyint**|다시 시작 가능한 인덱스에 대 한 작업 상태:<br /><br />0 = 실행 중<br /><br />1=Pause|
-|**state_desc**|**nvarchar(60)**|작업 상태 (실행 중 또는 일시 중지) 다시 시작 가능한 인덱스에 대 한 설명|  
+|**object_id**|**int**|이 인덱스가 속한 개체의 ID입니다. null을 허용 하지 않습니다.|  
+|**index_id**|**int**|인덱스의 ID입니다. null을 허용 하지 않습니다. **index_id** 는 개체 내 에서만 고유 합니다.|
+|**name**|**sysname**|인덱스의 이름입니다. **이름은** 개체 내 에서만 고유 합니다.|  
+|**sql_text**|**nvarchar(max)**|DDL T-sql 문 텍스트|
+|**last_max_dop**|**smallint**|마지막 MAX_DOP 사용 됨 (기본값 = 0)|
+|**partition_number**|**int**|소유 인덱스 또는 힙 내의 파티션 번호입니다. 분할 되지 않은 테이블 및 인덱스의 경우 또는 모든 파티션이 다시 작성 되는 경우이 열의 값은 NULL입니다.|
+|**state**|**tinyint**|다시 시작 가능한 인덱스의 작동 상태:<br /><br />0 = 실행 중<br /><br />1=Pause|
+|**state_desc**|**nvarchar(60)**|다시 시작 가능한 인덱스의 작동 상태 (실행 중 또는 일시 중지 됨)에 대 한 설명입니다.|  
 |**start_time**|**datetime**|인덱스 작업 시작 시간 (null 허용 안 함)|
-|**last_pause_time**|**datatime**| 인덱스 작업 (nullable) 마지막으로 일시 중지 시간입니다. 작업 실행을 일시 중지 된 경우 NULL입니다.|
-|**total_execution_time**|**int**|시작 시간 (분) (null 허용 안 함)에서 총 실행 시간|
-|**percent_complete**|**real**|% (Null 허용 안 함)에 인덱스 작업의 진행률 완료 합니다.|
-|**page_count**|**bigint**|매핑 인덱스 (null 허용 안 함) 새 인덱스 작성 작업을 할당 하는 인덱스 페이지의 총 수입니다.
+|**last_pause_time**|**datatime**| 인덱스 작업 마지막 일시 중지 시간 (nullable)입니다. 작업이 실행 중이 고 일시 중지 되지 않은 경우 NULL입니다.|
+|**total_execution_time**|**int**|시작 시간의 총 실행 시간 (분) (null 허용 안 함)|
+|**percent_complete**|**real**|인덱스 작업 진행률이% (null을 허용 하지 않음)에 완료 되었습니다.|
+|**page_count**|**bigint**|새 인덱스 및 매핑 인덱스에 대 한 인덱스 작성 작업에 의해 할당 된 인덱스 페이지의 총 수입니다 (null 허용 안 함).
 
 ## <a name="permissions"></a>사용 권한
 
@@ -54,7 +54,7 @@ ms.locfileid: "68122660"
 
 ## <a name="example"></a>예제
 
- 일시 중지 상태에 있는 모든 다시 시작 가능한 인덱스 다시 작성 작업을 나열 합니다.
+ 일시 중지 상태의 다시 시작 가능한 인덱스 다시 작성 작업을 모두 나열 합니다.
 
 ```sql
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
