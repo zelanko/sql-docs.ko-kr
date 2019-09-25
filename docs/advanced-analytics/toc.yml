@@ -47,26 +47,22 @@
   items:
     - name: Python
       items:
-        - name: SQL Server에 Python이 있는지 확인
-          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-        - name: Python 및 SQL의 Hello World
-          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-        - name: 입력 및 출력 처리
-          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-        - name: Python 데이터 구조 및 SQL
+        - name: Python 스크립트 만들기
+          href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
+        - name: 데이터 형식 및 개체 처리
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: 첫 번째 모델 학습 및 사용
-          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
+        - name: 모델 학습 및 점수 매기기
+          href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
         - name: R 스크립트 만들기
           href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
-        - name: 모델 학습 및 점수 매기기
-          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
         - name: 데이터 형식 및 개체 처리
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
         - name: R 함수 작성
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
+        - name: 모델 학습 및 점수 매기기
+          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
 - name: 자습서
   items:
     - name: Python
