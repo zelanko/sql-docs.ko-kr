@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68715168"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server에서 R을 사용 하 여 SSIS 및 SSRS 워크플로 만들기
@@ -91,7 +91,7 @@ insert into ssis_iris("Sepal.Length", "Sepal.Width", "Petal.Length", "Petal.Widt
 exec dbo.load_iris;
 ```
 
-![데이터 삽입] (../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "데이터 삽입")
+![데이터 삽입](../media/create-workflows-using-r-in-sql-server/ssis-exec-sql-insert-data.png "데이터 삽입")
 
 ### <a name="generate-a-model"></a>모델 생성
 
@@ -177,7 +177,7 @@ SSIS 디자이너에서 **predict_species_length** 저장 프로시저를 실행
 exec predict_species_length 'rxLinMod';
 ```
 
-![예측 생성] (../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "예측 생성")
+![예측 생성](../media/create-workflows-using-r-in-sql-server/ssis-exec-predictions.png "예측 생성")
 
 ### <a name="run-the-solution"></a>솔루션 실행
 

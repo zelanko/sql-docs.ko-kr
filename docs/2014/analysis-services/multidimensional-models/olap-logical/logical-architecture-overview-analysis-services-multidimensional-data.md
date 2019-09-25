@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68889605"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>논리 아키텍처 개요(Analysis Services - 다차원 데이터)
@@ -94,7 +94,7 @@ ms.locfileid: "68889605"
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>측정값, 특성 및 계층 매핑  
  이 예제 큐브의 측정값, 특성 및 계층은 큐브의 팩트 및 차원 테이블의 다음 열에서 파생됩니다.  
   
-|측정값 또는 특성(수준)|Members|원본 테이블|원본 열|열 값의 예|  
+|측정값 또는 특성(수준)|멤버|원본 테이블|원본 열|열 값의 예|  
 |------------------------------------|-------------|------------------|-------------------|-------------------------|  
 |Packages 측정값|해당 사항 없음|ImportsFactTable|패키지|12|  
 |Last 측정값|해당 사항 없음|ImportsFactTable|마지막|May-03-99|  

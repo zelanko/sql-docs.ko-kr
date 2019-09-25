@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e1fe1521f2eebaa4413b49c315f17a6b1b6a5914
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/09/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68887935"
 ---
 # <a name="dimension-relationships"></a>차원 관계
@@ -38,11 +38,11 @@ ms.locfileid: "68887935"
 ## <a name="reference-dimension-relationships"></a>참조 차원 관계  
  큐브 차원과 측정값 그룹 간 참조 차원 관계는 다음 그림에 표시된 것처럼 차원의 키 열이 다른 차원 테이블의 키를 통해 팩트 테이블에 간접적으로 조인될 때 존재하게 됩니다.  
   
- ![논리적 다이어그램, 참조 된 차원 관계] (https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension1.gif "논리적 다이어그램, 참조 된 차원 관계")  
+ ![논리적 다이어그램, 참조 된 차원 관계](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension1.gif "논리적 다이어그램, 참조 된 차원 관계")  
   
  참조 차원 관계는 눈송이 스키마 디자인에서 차원 테이블과 팩트 테이블 간 관계를 나타냅니다. 차원 테이블이 눈송이 스키마에 연결되어 있으면 여러 테이블의 열을 사용하여 단일 차원을 정의하거나 별도의 차원 테이블을 기반으로 별도의 차원을 정의한 후 참조 차원 관계 설정을 사용하여 차원 간에 연결을 정의할 수 있습니다. 다음 그림은 눈송이 스키마에서 **Internetsales**라는 팩트 테이블 한 개와 **Customer** 및 **Geography**라는 두 개의 차원 테이블을 보여 줍니다.  
   
- ![논리적 스키마, 참조 된 차원 관계] (https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdim-schema1.gif "논리적 스키마, 참조 된 차원 관계")  
+ ![논리적 스키마, 참조 된 차원 관계](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdim-schema1.gif "논리적 스키마, 참조 된 차원 관계")  
   
  **Customer** 테이블을 차원 기본 테이블로 사용 하 고 **Geography** 테이블을 관련 테이블로 포함 하는 차원을 만들 수 있습니다. 그런 다음 차원과 InternetSales 측정값 그룹 간에 일반 관계가 정의됩니다.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "68887935"
   
  다음 그림과 같이 함께 연결할 수 있는 참조 차원 수에는 제한이 없습니다.  
   
- ![논리적 다이어그램, 참조 된 차원 관계] (https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension2.gif "논리적 다이어그램, 참조 된 차원 관계")  
+ ![논리적 다이어그램, 참조 된 차원 관계](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-refdimension2.gif "논리적 다이어그램, 참조 된 차원 관계")  
   
  참조 관계에 대 한 자세한 내용은 참조 [관계 및 참조 관계 속성 정의](../multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)를 참조 하세요.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68887935"
 ## <a name="many-to-many-dimension-relationships"></a>다 대 다 차원 관계  
  대부분의 차원에서 각 팩트는 하나의 차원 멤버에만 조인되고 단일 차원 멤버는 여러 팩트와 연결될 수 있습니다. 관계형 데이터베이스 용어에서 이 관계를 일 대 다 관계라고 합니다. 그러나 단일 팩트를 여러 차원 멤버에 조인하는 것이 유용한 경우가 종종 있습니다. 예를 들어 은행 고객이 당좌 예금 계정, 저축 예금 계정, 신용 카드 계정 및 투자 계정 등의 여러 계정을 가질 수 있으며 한 계정에 공동 예금주나 여러 예금주가 있을 수도 있습니다. 따라서 이러한 관계로 구성된 Customer 차원에는 단일 계정 트랜잭션과 관련된 여러 멤버가 포함됩니다.  
   
- ![논리적 스키마/다 대 다 차원 관계] (https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-many-dimension1.gif "논리적 스키마/다 대 다 차원 관계")  
+ ![논리적 스키마/다 대 다 차원 관계](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-many-dimension1.gif "논리적 스키마/다 대 다 차원 관계")  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 차원과 팩트 테이블 간에 다 대 다 관계를 정의할 수 있습니다.  
   
