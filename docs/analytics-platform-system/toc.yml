@@ -1,10 +1,12 @@
-- name: APS 개요(PDW)
+- name: SQL Server >>
+  href: ../sql-server/sql-server-technical-documentation.md?&view=sql-server-2017&toc=../toc/toc.json
+- name: APS 개요
   href: ../analytics-platform-system/home-analytics-platform-system-aps-pdw.md
-- name: SQL Server 시작 >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: APS의 새로운 기능
   href: ../analytics-platform-system/whats-new-analytics-platform-system.md
   items:
+    - name: APS CU7.5
+      href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.5'
     - name: APS CU7.4
       href: '../analytics-platform-system/whats-new-analytics-platform-system.md#h2-aps-cu7.4'
     - name: APS CU7.3
