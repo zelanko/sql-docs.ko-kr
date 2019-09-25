@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 01654df047d2dc78014c6e8c41edbb370d15da60
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: HT
+ms.openlocfilehash: d8422146e3569ff991ef16179e54f0f78961fc79
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874394"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016874"
 ---
 # <a name="download-and-install-sqlpackage"></a>sqlpackage 다운로드 및 설치
 
@@ -24,10 +24,10 @@ sqlpackage는 Windows, macOS 및 Linux에서 실행됩니다.
 
 |플랫폼|다운로드|릴리스 날짜|버전 옵션|빌드
 |:---|:---|:---|:---|:---|
-|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2102893)|2019 년 9 월 6 일|18.3|15.0.4532.1|
-|macOS .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102894)|2019 년 9 월 6 일| 18.3|15.0.4532.1|
-|Linux .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102978)|2019 년 9 월 6 일| 18.3|15.0.4532.1|
-|Windows .NET Core (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102979)|2019 년 9 월 6 일| 18.3|15.0.4532.1|
+|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2102893)|2019년 9월 13일|18.3.1|15.0.4538.1|
+|macOS .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102894)|2019년 9월 13일| 18.3.1|15.0.4538.1|
+|Linux .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102978)|2019년 9월 13일| 18.3.1|15.0.4538.1|
+|Windows .NET Core (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102979)|2019년 9월 13일| 18.3.1|15.0.4538.1|
 
 최신 릴리스에 대한 자세한 내용은 [릴리스 정보](release-notes-sqlpackage.md)를 참조하세요.
 
@@ -46,7 +46,7 @@ sqlpackage의 릴리스는 표준 Windows 설치 관리자 환경 및 .zip을 �
 
 1. [Windows용 sqlpackage](https://go.microsoft.com/fwlink/?linkid=2102979)를 다운로드합니다.
 2. Windows 탐색기에서 파일을 마우스 오른쪽 단추로 클릭 하 고 ' 모두 추출 ... '을 선택 하 여 파일을 추출 하 고 대상 디렉터리를 선택 합니다.
-3. 새 터미널 창을 열고 sqlpackage가 exracted가 수행 된 위치에 cd를 넣을 수 있습니다.
+3. 새 터미널 창 및 cd를 열고 sqlpackage가 추출 된 위치로 이동 합니다.
 
    **.zip 설치:**
 

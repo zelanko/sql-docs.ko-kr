@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 7fb220f8a5a33d33e2ee9177efd9fe2f713b7439
-ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
-ms.translationtype: HT
+ms.openlocfilehash: ad2f4eaadfb2140facc5bebd8d1f70cf163d1380
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70774174"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016882"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe에 대한 릴리스 정보
 
@@ -35,14 +35,14 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
-## <a name="183-sqlpackage"></a>18.3 sqlpackage
+## <a name="1831-sqlpackage"></a>18.3.1 sqlpackage
 
 |플랫폼|다운로드|릴리스 날짜|버전 옵션|빌드
 |:---|:---|:---|:---|:---|
-|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2102893)|2019 년 9 월 6 일|18.3|15.0.4532.1|
-|macOS .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102894)|2019 년 9 월 6 일| 18.3|15.0.4532.1|
-|Linux .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102978)|2019 년 9 월 6 일| 18.3|15.0.4532.1|
-|Windows .NET Core (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102979)|2019 년 9 월 6 일| 18.3|15.0.4532.1|
+|Windows|[MSI 설치 관리자](https://go.microsoft.com/fwlink/?linkid=2102893)|2019년 9월 13일|18.3.1|15.0.4538.1|
+|macOS .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102894)|2019년 9월 13일| 18.3.1|15.0.4538.1|
+|Linux .NET Core(미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102978)|2019년 9월 13일| 18.3.1|15.0.4538.1|
+|Windows .NET Core (미리 보기)|[zip 파일](https://go.microsoft.com/fwlink/?linkid=2102979)|2019년 9월 13일| 18.13.1|15.0.4538.1|
 
 ### <a name="features"></a>기능
 
