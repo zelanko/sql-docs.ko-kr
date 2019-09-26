@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 61dd49191e85d9fd4685904ae01b72d754d43318
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a255b70b71f29f9cc28e4022ecfdf2741f9a838d
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715817"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271880"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -255,9 +255,9 @@ R 패키지를 설치 하 고 관리 하는 프로세스는 SQL Server 2016 및 
 
 ## <a name="next-steps"></a>다음 단계
 
-R 개발자는 몇 가지 간단한 예제를 시작 하 고 R이 SQL Server와 작동 하는 방식에 대 한 기본 사항을 배울 수 있습니다. 다음 단계는 다음 링크를 참조 하세요.
+R 개발자는 몇 가지 간단한 예제를 시작하고 R이 SQL Server에서 작동하는 방식의 기초를 알아볼 수 있습니다. 다음 단계로 가려면 아래 링크를 참조하세요.
 
-+ [자습서: T-sql에서 R 실행](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [자습서: T-SQL에서 R 사용](../tutorials/quickstart-r-create-script.md)
 + [자습서: R 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-실제 시나리오를 기반으로 하는 기계 학습의 예를 보려면 [machine learning 자습서](../tutorials/machine-learning-services-tutorials.md)를 참조 하세요.
+실제 시나리오를 기반으로 하는 기계 학습의 예제를 보려면 [기계 학습 자습서](../tutorials/machine-learning-services-tutorials.md)를 참조하세요.

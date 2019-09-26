@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 94ca7b3646b9005e11b3ee4968cbfaaa65d42264
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f9835bae00aab15ee902dfe77dcf211eb412bc96
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715844"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271950"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>SQL Server 설치를 사용 하 여 Machine Learning Server (독립 실행형) 또는 R Server (독립 실행형) 설치
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -214,16 +214,16 @@ R 및 Python 개발의 경우 동일한 컴퓨터에 여러 버전을 포함 하
 
 ## <a name="next-steps"></a>다음 단계
 
-R 개발자는 몇 가지 간단한 예제를 시작 하 고 R이 SQL Server와 작동 하는 방식에 대 한 기본 사항을 배울 수 있습니다. 다음 단계는 다음 링크를 참조 하세요.
+R 개발자는 몇 가지 간단한 예제를 시작하고 R이 SQL Server에서 작동하는 방식의 기초를 알아볼 수 있습니다. 다음 단계로 가려면 아래 링크를 참조하세요.
 
-+ [자습서: T-sql에서 R 실행](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [자습서: T-SQL에서 R 사용](../tutorials/quickstart-r-create-script.md)
 + [자습서: R 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
-Python 개발자는 다음 자습서를 수행 하 여 SQL Server에서 Python을 사용 하는 방법을 배울 수 있습니다.
+Python 개발자는 다음 자습서에 따라 SQL Server에서 Python을 사용하는 방법을 알아볼 수 있습니다.
 
-+ [자습서: T-sql에서 Python 실행](../tutorials/run-python-using-t-sql.md)
++ [자습서: T-SQL에서 Python 실행](../tutorials/run-python-using-t-sql.md)
 + [자습서: Python 개발자를 위한 데이터베이스 내 분석](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 ::: moniker-end
 
-실제 시나리오를 기반으로 하는 기계 학습의 예를 보려면 [machine learning 자습서](../tutorials/machine-learning-services-tutorials.md)를 참조 하세요.
+실제 시나리오를 기반으로 하는 기계 학습의 예제를 보려면 [기계 학습 자습서](../tutorials/machine-learning-services-tutorials.md)를 참조하세요.

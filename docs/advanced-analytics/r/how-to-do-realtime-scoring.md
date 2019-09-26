@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d01be0f7d7a18091b965ad73b9bf035558b34864
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 14ccd4beb2186213cb3d94b10031ac732224f4d9
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715693"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271897"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>SQL Server에서 기계 학습 모델을 사용 하 여 예측 및 예측을 생성 하는 방법
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ PREDICT 함수를 사용 하는 기본 점수 매기기를 사용 하는 것이 
 
 **SQL 사용**
 
-SQL 코드에서 [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)를 사용 하 여 모델을 학습 하 고, **varbinary (max)** 형식의 열에 학습 된 모델을 테이블에 직접 삽입할 수 있습니다. 간단한 예제는 [R에서 preditive 모델 만들기](../tutorials/rtsql-create-a-predictive-model-r.md) 를 참조 하세요.
+SQL 코드에서 [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)를 사용 하 여 모델을 학습 하 고, **varbinary (max)** 형식의 열에 학습 된 모델을 테이블에 직접 삽입할 수 있습니다. 간단한 예제는 [R에서 preditive 모델 만들기](../tutorials/quickstart-r-train-score-model.md) 를 참조 하세요.
 
 **R 사용**
 

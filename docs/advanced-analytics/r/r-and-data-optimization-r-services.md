@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a65afba9455fb475b760439e92ad8d4d38a70be8
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a8143bae69e85ecf0056dcb9433707a681a69077
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715652"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271888"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services에 대 한 성능-데이터 최적화
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ SQL Server에서 R을 사용 하 여 병렬화 하는 방법에는 두 가지가
 
     R 스크립트를 병렬화 할 수 있고 SQL 쿼리를 병렬화 할 수 있는 경우 데이터베이스 엔진은 여러 병렬 프로세스를 만듭니다. 만들 수 있는 최대 프로세스 수는 인스턴스의 최대 **병렬 처리 수준** (MAXDOP) 설정과 같습니다. 그러면 모든 프로세스가 동일한 스크립트를 실행 하지만 데이터의 일부만 수신 합니다.
     
-    따라서이 방법은 모델을 학습 하는 경우와 같이 모든 데이터를 확인 해야 하는 스크립트에는 유용 하지 않습니다. 하지만 병렬로 일괄 처리 예측과 같은 태스크를 수행할 경우 이 방법이 유용합니다. 에서 병렬 처리 `sp_execute_external_script`를 사용 하는 방법에 대 한 자세한 내용은 [transact-sql에서 R 코드 사용](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)의 **고급 팁: 병렬 처리** 섹션을 참조 하세요.
+    따라서이 방법은 모델을 학습 하는 경우와 같이 모든 데이터를 확인 해야 하는 스크립트에는 유용 하지 않습니다. 하지만 병렬로 일괄 처리 예측과 같은 태스크를 수행할 경우 이 방법이 유용합니다. 에서 병렬 처리 `sp_execute_external_script`를 사용 하는 방법에 대 한 자세한 내용은 [transact-sql에서 R 코드 사용](../tutorials/quickstart-r-create-script.md)의 **고급 팁: 병렬 처리** 섹션을 참조 하세요.
 
 -   **NumTasks = 1을 사용 합니다.** SQL Server 계산 컨텍스트에서 **rx** 함수를 사용 하는 경우 _numtasks_ 매개 변수의 값을 만들려는 프로세스 수로 설정 합니다. 만든 프로세스 수는 **MAXDOP**보다 많을 수 없습니다. 그러나 생성 되는 실제 프로세스 수는 데이터베이스 엔진에 의해 결정 되며, 요청 된 수보다 적을 수 있습니다.
 
