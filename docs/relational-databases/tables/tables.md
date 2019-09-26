@@ -1,7 +1,7 @@
 ---
 title: 테이블 | Microsoft 문서
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.prod_service: table-view-index, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 82d7819c-b801-4309-a849-baa63083e83f
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2cf1a6cbb774640099a7465180fc879dcc75c77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2c705c60504dd6de0b143fd129d6660db9457b48
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68016255"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127370"
 ---
 # <a name="tables"></a>테이블
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "68016255"
 
 #### <a name="ctp23"></a> 여러 범위에서 임시 테이블을 사용하여 워크로드에 대한 재컴파일 감소
 
-[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)는 여러 범위에서 임시 테이블을 사용하여 워크로드에 대한 재컴파일을 줄입니다. 이 기능을 사용하기 전에 DML(데이터 조작 언어) 문(`SELECT`, `INSERT`, `UPDATE`, `DELETE`)을 사용하여 임시 테이블을 참조할 때 임시 테이블이 외부 범위 일괄 처리에서 만들어지면 DML 문이 실행될 때마다 다시 컴파일됩니다. 이 향상된 기능을 사용하면 SQL Server에서 불필요한 재컴파일을 방지하기 위해 다음과 같은 간단한 검사를 추가로 수행합니다.
+[!INCLUDE[ss2019](../../includes/sssqlv15-md.md)]는 여러 범위에서 임시 테이블을 사용하여 워크로드에 대한 재컴파일을 줄였습니다. 이 기능을 사용하기 전에 DML(데이터 조작 언어) 문(`SELECT`, `INSERT`, `UPDATE`, `DELETE`)을 사용하여 임시 테이블을 참조할 때 임시 테이블이 외부 범위 일괄 처리에서 만들어지면 DML 문이 실행될 때마다 다시 컴파일됩니다. 이 향상된 기능을 사용하면 SQL Server에서 불필요한 재컴파일을 방지하기 위해 다음과 같은 간단한 검사를 추가로 수행합니다.
 
 - 컴파일 시간에 임시 테이블을 만드는 데 사용되는 외부 범위 모듈이 연속 실행에 사용되는 것과 동일한지 확인합니다. 
 - 초기 컴파일에서 변경된 DDL(데이터 정의 언어) 변경 내용을 추적하고 이를 연속 실행에 대한 DDL 작업과 비교합니다.

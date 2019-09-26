@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e4ad8e1ec6d70f6155afd49712fdd8b2b3d1626b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8641b1466a4f836c32259ac4f46022d43f8fe216
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770819"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174248"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>복제 관리자를 위한 질문과 대답
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "68770819"
   
 -   구독을 다시 초기화할 때 해당 개체를 삭제하지 않도록 지정합니다. 다시 초기화하기 전에 다음 중 하나를 수행합니다.  
   
-    -   [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 또는 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행할 때 **@property** 매개 변수에 'pre_creation_cmd'(**sp_changearticle**) 또는 'pre_creation_command'(**sp_changemergearticle**)를 지정하고 **@value** 매개 변수에 'none', 'delete' 또는 'truncate' 값을 지정합니다.  
+    -   [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) 또는 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)을 실행할 때 **\@property** 매개 변수에 ‘pre_creation_cmd’(**sp_changearticle**) 또는 ‘pre_creation_command’(**sp_changemergearticle**)를 지정하고 **\@value** 매개 변수에 ‘none’, ‘delete’ 또는 ‘truncate’ 값을 지정합니다.  
   
     -   **아티클 속성 - \<Article>** 대화 상자의 **대상 개체** 섹션에서 **기존 개체를 변경하지 않고 유지**, **데이터를 삭제합니다. 아티클에 행 필터가 있으면 필터에 대응하는 데이터만 삭제합니다.** 또는 **기존 개체의 모든 데이터를 잘라냅니다.** 값을 **이름이 사용 중일 때 수행할 동작**를 참조하세요. 이 대화 상자에 액세스하는 방법은 [게시 속성 보기 및 수정](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)을 참조하세요.  
   

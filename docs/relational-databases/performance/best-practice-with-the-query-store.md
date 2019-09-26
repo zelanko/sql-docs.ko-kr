@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: julieMSFT
+author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc407a8b76665b39837b5c278f2ce5942be45e51
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 4627118daa91305dc905eb5f306e6bd2fcc1b91c
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903608"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163894"
 ---
 # <a name="best-practice-with-the-query-store"></a>쿼리 저장소에 대한 모범 사례
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -229,11 +229,13 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 
 > [!NOTE]
 > 위의 그림에서는 쿼리 계획에 따라 셰이프가 다를 수 있으며, 셰이프는 다음과 같이 가능한 각 상태를 의미합니다.<br />  
+> 
 > |셰이프|의미|  
 > |-------------------|-------------|
 > |Circle|쿼리 완료됨(정상 실행이 완료됨)|
 > |Square|취소됨(클라이언트 시작으로 실행이 중단됨)|
 > |Triangle|실패(예외로 실행이 중단됨)|
+> 
 > 또한 셰이프 크기는 지정된 시간 간격 내의 쿼리 실행 수를 나타내며, 크기가 크면 실행 수가 많은 것입니다.  
 
 -   쿼리에 최적의 실행을 위한 인덱스가 없다는 결론을 내릴 수도 있습니다. 이 정보는 쿼리 실행 계획 내에 표시됩니다. 누락된 인덱스를 만들고 쿼리 저장소를 사용하여 쿼리 성능을 확인합니다.  
@@ -306,9 +308,9 @@ FROM sys.database_query_store_options;
   
  문제가 지속되면 쿼리 저장소 데이터의 손상이 디스크에서 지속되고 있음을 나타냅니다.
  
- [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터, 영향을 받는 데이터베이스 내에서 **sp_query_store_consistency_check** 저장 프로시저를 실행하여 쿼리 저장소를 복구할 수 있습니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 경우 아래 표시된 바와 같이 쿼리 저장소에서 데이터를 정리해야 합니다.
+ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터, 영향을 받는 데이터베이스 내에서 **sp_query_store_consistency_check** 저장 프로시저를 실행하여 쿼리 저장소를 복구할 수 있습니다. 복구 작업을 시도하기 전에 쿼리 저장소를 사용하지 않도록 설정해야 합니다. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]의 경우 아래 표시된 바와 같이 쿼리 저장소에서 데이터를 정리해야 합니다.
  
- 그래도 해결되지 않으면 읽기-쓰기 모드를 요청하기 전에 쿼리 저장소를 정리할 수 있습니다.  
+ 복구에 실패한 경우 읽기/쓰기 모드를 설정하기 전에 쿼리 저장소 지우기를 시도할 수 있습니다.  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -337,7 +339,7 @@ FROM sys.database_query_store_options;
 |사용자 지정|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]에서는 `ALTER DATABASE SET QUERY_STORE` 명령 아래에 사용자 지정 캡처 모드를 도입했습니다. 사용하도록 설정된 경우 특정 서버의 데이터 컬렉션을 정밀 조정하기 위해 새로운 쿼리 저장소 캡처 정책 설정 아래에서 추가 쿼리 저장소 구성을 사용할 수 있습니다.<br /><br />새 사용자 지정 설정은 내부 캡처 정책 시간 임계값 동안 수행되는 작업을 정의합니다. 이 임계값은 구성 가능한 조건을 평가하는 시간 범위로, 조건이 참이면 쿼리 저장소에서 쿼리를 캡처할 수 있습니다. 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.|  
 
 > [!NOTE]
-> 쿼리 캡처 모드를 모두, 자동 또는 사용자 지정으로 설정하면 커서, 저장 프로시저 내부 쿼리 및 고유하게 컴파일된 쿼리가 항상 캡처됩니다.
+> 쿼리 캡처 모드를 모두, 자동 또는 사용자 지정으로 설정하면 커서, 저장 프로시저 내부 쿼리 및 고유하게 컴파일된 쿼리가 항상 캡처됩니다. 고유하게 컴파일된 쿼리를 캡처하려면 [sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)를 사용하여 쿼리별 통계 수집을 사용하도록 설정합니다. 
 
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>쿼리 저장소에 가장 관련성이 높은 데이터 보관  
  관련된 데이터만 포함하도록 쿼리 저장소를 구성하면 정기 작업에 미치는 영향을 최소화하면서 유용한 문제 해결 경험을 제공하면서 계속 실행됩니다.  

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d8c31adb0dff16b84e4c606dc3b5479a43a1092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aa0ec88e64c317c2106a4a6a2a4d204e7192f114
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075210"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174291"
 ---
 # <a name="fetch-transact-sql"></a>FETCH(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ FETCH
  LAST  
  커서의 마지막 행을 반환하며 그 행을 현재 행으로 만듭니다.  
   
- ABSOLUTE { *n*| @*nvar*}  
- *n* 또는 @*nvar*가 양수인 경우 커서 맨 앞에서 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 @*nvar*가 음수인 경우에는 커서 맨 뒤에서 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 @*nvar*가 0이면 행이 반환되지 않습니다. *n*은 정수 상수여야 하며 @*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
+ ABSOLUTE { *n*| \@*nvar*}  
+ *n* 또는 \@*nvar*가 양수인 경우 커서 맨 앞에서 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 음수인 경우에는 커서 맨 뒤에서 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 0이면 행이 반환되지 않습니다. *n*은 정수 상수여야 하며 \@*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
   
- RELATIVE { *n*| @*nvar*}  
- *n* 또는 @*nvar*이 양수인 경우에는 현재 행에서 위로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 @*nvar*이 음수인 경우에는 현재 행에서 앞으로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 @*nvar*가 0인 경우에는 현재 행을 반환합니다. *n* 또는 @*nvar*가 음수로 설정되거나 첫 번째 인출에 있는 0이 커서에 대해 수행되도록 `FETCH RELATIVE`가 지정된 경우 행은 반환되지 않습니다. *n*은 정수 상수여야 하며 @*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
+ RELATIVE { *n*| \@*nvar*}  
+ *n* 또는 \@*nvar*이 양수인 경우에는 현재 행에서 위로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*이 음수인 경우에는 현재 행에서 앞으로 *n*번째 행을 반환하며 반환되는 행을 새 현재 행으로 만듭니다. *n* 또는 \@*nvar*가 0인 경우에는 현재 행을 반환합니다. *n* 또는 \@*nvar*가 음수로 설정되거나 첫 번째 인출에 있는 0이 커서에 대해 수행되도록 `FETCH RELATIVE`가 지정된 경우 행은 반환되지 않습니다. *n*은 정수 상수여야 하며 \@*nvar*는 **smallint**, **tinyint** 또는 **int**이어야 합니다.  
   
  GLOBAL  
  *cursor_name*이 전역 커서를 참조하도록 지정합니다.  

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 86ef1638fc37fd70d8438c173b5972fa2fc8f551
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176358"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118189"
 ---
 # <a name="sql-server-backup-to-url"></a>URL에 대한 SQL Server 백업
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,8 +66,10 @@ ms.locfileid: "70176358"
 - 여러 블록 Blob으로 백업하면 더 나은 백업 및 복원 성능을 얻을 수 있으며 더 큰 데이터베이스 백업을 지원할 수 있습니다.
 - [블록 Blob](https://azure.microsoft.com/pricing/details/storage/blobs/)이 [페이지 Blob](https://azure.microsoft.com/pricing/details/storage/page-blobs/)보다 저렴합니다. 
 
-블록 Blob으로 백업할 경우 지정할 수 있는 최대 블록 크기는 4MB입니다. 단일 블록 Blob 파일의 최대 크기는 4MB * 50000 = 195GB입니다. 데이터베이스가 195GB보다 크면 다음을 수행하는 것이 좋습니다.
-- 백업 압축 사용
+Blob Storage에 대용량 데이터베이스를 백업하는 경우에는 [관리되는 인스턴스 T-SQL 차이점, 제한 사항 및 알려진 문제](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup)에 나열된 제한 사항이 적용됩니다.
+
+ 데이터베이스가 너무 크면 다음 중 하나를 수행합니다.
+- 백업 압축 사용 또는
 - 여러 블록 Blob에 백업
 
 ###  <a name="Blob"></a> Microsoft Azure Blob Storage 서비스  

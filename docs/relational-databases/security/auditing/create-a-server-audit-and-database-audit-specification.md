@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 26ee85de-6e97-4318-b526-900924d96e62
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5199849b0f3dced34ced0ec7a102f03cb054d789
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da064aa2e8cd8c32a96f52ad06ef29ed4e835997
+ms.sourcegitcommit: 5a03dc2bba481c2e2f03d67f6ee9486fc9f8ba95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095206"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71066885"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>서버 감사 및 데이터베이스 감사 사양 만들기
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "68095206"
      데이터베이스 감사 사양의 이름입니다. 새 서버 감사 사양을 만들 때 자동 생성되지만 편집할 수 있습니다.  
   
      **감사**  
-     기존 데이터베이스 감사의 이름입니다. 감사 이름을 입력하거나 목록에서 선택합니다.  
+     기존 서버 감사 개체의 이름입니다. 감사 이름을 입력하거나 목록에서 선택합니다.  
   
      **감사 동작 유형**  
      캡처할 데이터베이스 수준 감사 동작 그룹 및 감사 동작을 지정합니다. 데이터베이스 수준 감사 동작 그룹 및 감사 동작의 목록과 여기에 포함된 이벤트에 대한 설명은 [SQL Server Audit 동작 그룹 및 동작](../../../relational-databases/security/auditing/sql-server-audit-action-groups-and-actions.md)을 참조하세요.  

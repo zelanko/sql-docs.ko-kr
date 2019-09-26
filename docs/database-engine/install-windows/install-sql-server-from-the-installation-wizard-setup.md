@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bb521f3c71dc1f72a6225cb10a375c91f476b07d
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 16d90e031f6892a132a2a64ad52aedfc34d39a08
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009380"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149979"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>설치 마법사에서 SQL Server 설치(설치 프로그램)
 
@@ -132,7 +132,11 @@ Microsoft는 SQL Server 2016 및 2017에서 필수 구성 요소로 설치되는
     > [!NOTE]
     > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터, **SQL Server 데이터베이스 엔진 서비스에 볼륨 유지 관리 작업 권한 부여** 확인란을 선택하여 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 서비스 계정으로 [데이터베이스 인스턴트 파일 초기화](../../relational-databases/databases/database-instant-file-initialization.md)를 사용할 수 있도록 합니다.
   
-     **서버 구성 - 데이터 정렬** 페이지를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 기본값이 아닌 데이터 정렬을 지정할 수 있습니다. 자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
+1. **서버 구성 - 데이터 정렬** 페이지를 사용하여 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 및 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]에 기본이 아닌 데이터 정렬을 지정합니다.    
+
+   기본 설치 설정은 OS(운영 체제) 로캘에 의해 결정됩니다. 설치 도중 서버 수준 데이터 정렬을 변경할 수도 있고, 설치하기 전에 OS 로캘을 변경할 수도 있습니다. 기본 데이터 정렬은 각 특정 로캘에 연결된 사용 가능 버전 중 가장 오래된 버전으로 설정됩니다. 이는 이전 버전과의 호환성을 유지하기 위함이므로 권장되는 데이터 정렬이 아닐 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 활용하려면 Windows 데이터 정렬을 사용하기 위한 기본 설치 설정을 변경하세요. 예를 들어 OS 로캘 **영어(미국)** (코드 페이지 1252)의 경우 설치 중의 기본 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**이고 가장 가까운 Windows 데이터 정렬인 **Latin1_General_100_CI_AS_SC**로 변경될 수 있습니다.
+
+   자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.  
   
 1. **데이터베이스 엔진 구성 – 서버 구성** 페이지를 사용하여 다음 옵션을 지정할 수 있습니다.  
   

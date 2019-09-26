@@ -1,7 +1,7 @@
 ---
 title: 쿼리 저장소를 사용하여 성능 모니터링 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 09/19/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: e06344a4-22a5-4c67-b6c6-a7060deb5de6
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e0b0fc97b52f6c79ef14944b3d807ac259dd6727
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e72ba4eed90fbd8218b9f0ed3942744fd75fcd90
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68018759"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163909"
 ---
 # <a name="monitoring-performance-by-using-the-query-store"></a>쿼리 저장소를 사용하여 성능 모니터링
 [!INCLUDE[appliesto-ss-asdb-xxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,8 @@ ms.locfileid: "68018759"
 **ALTER DATABASE** 문을 사용하여 쿼리 저장소를 사용하도록 설정합니다. 예를 들어  
   
 ```sql  
-ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE); 
+ALTER DATABASE AdventureWorks2012 
+SET QUERY_STORE = ON (OPERATION_MODE = READ_WRITE); 
 ```  
   
 쿼리 저장소와 관련된 구문 옵션에 대한 자세한 내용은 [ALTER DATABASE SET 옵션&#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.  
@@ -71,9 +72,17 @@ ALTER DATABASE AdventureWorks2012 SET QUERY_STORE (OPERATION_MODE = READ_WRITE);
 > [!NOTE]
 > 쿼리 저장소는 SELECT, INSERT, UPDATE, DELETE, MERGE, BULK INSERT 같은 DML 문에 대한 계획을 수집합니다.
 
- **대기 통계**는 SQL Server의 성능 문제 해결에 도움이 되는 다른 정보 소스입니다. 오랫동안 인스턴스 수준에서만 대기 통계를 사용할 수 있었기 때문에 실제 쿼리로 역추적하기 어려웠습니다. SQL Server 2017 및 Azure SQL Database에서는 쿼리 저장소에 대기 통계를 추적하는 다른 차원이 추가되었습니다. 
+> [!NOTE]  
+> 쿼리 저장소는 기본적으로 고유하게 컴파일된 저장 프로시저에 대한 데이터를 수집하지 않습니다. [Sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md)를 사용하여 고유하게 컴파일된 저장 프로시저에 대한 데이터 수집을 사용하도록 설정합니다.
 
- 쿼리 저장소 기능을 사용하는 일반적인 시나리오는 다음과 같습니다.  
+**대기 통계**는 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]의 성능 문제 해결에 도움이 되는 다른 정보 소스입니다. 오랫동안 인스턴스 수준에서만 대기 통계를 사용할 수 있었기 때문에 특정 쿼리로 역추적하기 어려웠습니다. [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]부터 쿼리 저장소는 대기 통계를 추적하는 차원을 포함합니다. 다음 예에서는 쿼리 저장소가 대기 통계를 수집하도록 설정합니다.
+
+```sql
+ALTER DATABASE AdventureWorks2012 
+SET QUERY_STORE = ON ( WAIT_STATS_CAPTURE_MODE = ON );
+```
+
+쿼리 저장소 기능을 사용하는 일반적인 시나리오는 다음과 같습니다.  
   
 -   이전 쿼리 계획을 적용하여 계획 성능 저하를 빠르게 찾고 해결합니다. 실행 계획 변경으로 최근에 성능이 저하된 쿼리를 수정합니다.  
 -   지정된 기간 내에 쿼리가 실행된 횟수를 확인하여 DBA의 성능 리소스 문제 해결을 지원합니다.  
@@ -113,9 +122,10 @@ INNER JOIN sys.query_store_query_text AS Txt
   
 계획을 강제 적용하려면 쿼리 및 계획을 선택한 다음 **계획 강제 적용**을 클릭합니다. 쿼리 계획 기능으로 저장하고 쿼리 계획 캐시에 아직 보존되어 있는 계획만 강제 적용할 수 있습니다.
 
-##  <a name="Waiting"></a> 대기 쿼리 찾기
+##  <a name="Waiting"></a> 대기 중인 쿼리 찾기
+[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]부터 시간에 따라 쿼리당 대기 통계는 쿼리 저장소에서 제공됩니다. 
 
-[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CTP 2.0 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]부터 시간에 따라 쿼리당 대기 통계는 쿼리 저장소에서 제공됩니다. 쿼리 저장소에서 대기 유형이 **대기 범주**에 결합됩니다. 대기 범주를 대기 형식에 매핑하는 작업은 [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table)에서 제공됩니다.
+쿼리 저장소에서 대기 유형이 **대기 범주**에 결합됩니다. 대기 범주를 대기 형식에 매핑하는 작업은 [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md#wait-categories-mapping-table)에서 제공됩니다.
 
 **쿼리 대기 통계**를 선택하여 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 이상에서 **쿼리 대기 통계** 창을 엽니다. 쿼리 대기 통계 창에는 쿼리 저장소의 상위 대기 범주가 포함된 가로 막대형 차트가 표시됩니다. 맨 위에 있는 드롭다운 상자를 사용하여 대기 시간의 집계 조건을 평균, 최대, 최소, 표준 편차, **합계**(기본값) 중에 선택합니다.
 
@@ -152,7 +162,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 쿼리 저장소에 기록된 데이터가 디스크에 유지되는 빈도를 결정합니다. 성능 최적화를 위해 쿼리 저장소에서 수집한 데이터는 디스크에 비동기적으로 기록됩니다. 이 비동기 전송이 발생되는 빈도가 `DATA_FLUSH_INTERVAL_SECONDS`를 통해 구성됩니다. 기본값은 **900**(15분)입니다.  
   
 *MAX_STORAGE_SIZE_MB*  
-쿼리 저장소의 최대 크기를 구성합니다. 쿼리 저장소의 데이터가 `MAX_STORAGE_SIZE_MB` 제한에 도달하는 경우 쿼리 저장소에서는 자동으로 상태를 읽기/쓰기에서 읽기 전용으로 변경하고 새 데이터 수집을 중지합니다.  기본값은 100MB입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition의 경우 기본값은 **1GB**이고, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition의 경우 기본값은 **10MB**입니다.
+쿼리 저장소의 최대 크기를 구성합니다. 쿼리 저장소의 데이터가 `MAX_STORAGE_SIZE_MB` 제한에 도달하는 경우 쿼리 저장소에서는 자동으로 상태를 읽기/쓰기에서 읽기 전용으로 변경하고 새 데이터 수집을 중지합니다. 기본값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 **100MB**입니다([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]까지). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 기본값은 **1GB**입니다. [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium Edition의 경우 기본값은 **1GB**이고, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic Edition의 경우 기본값은 **10MB**입니다.
   
 *INTERVAL_LENGTH_MINUTES*  
 런타임 실행 통계 데이터가 쿼리 저장소로 집계되는 간격을 결정합니다. 공간 사용을 최적화하기 위해 런타임 통계 저장소의 런타임 실행 통계는 고정된 기간 동안 집계됩니다. 이 고정된 기간은 `INTERVAL_LENGTH_MINUTES`를 통해 구성됩니다. 기본값은 **60**입니다. 
@@ -161,7 +171,7 @@ INNER JOIN sys.query_store_query_text AS Txt
 총 데이터 양이 최대 크기에 가까워졌을 때 정리 프로세스를 자동으로 활성화할지의 여부를 제어합니다. **AUTO**(기본값) 또는 OFF일 수 있습니다.  
   
 *QUERY_CAPTURE_MODE*  
-쿼리 저장소가 모든 쿼리 또는 실행 횟수 및 리소스 소비량에 따른 관련 쿼리를 캡처하거나 새 쿼리 추가 및 현재 쿼리 추적을 중지할지의 여부를 지정합니다. **ALL**(모든 쿼리 캡처), AUTO(자주 발생하지 않은 쿼리 및 컴파일/실행 기간이 의미 없는 쿼리 무시) 또는 NONE(새 쿼리 캡처 중지)일 수 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 기본값([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]까지)은 ALL인 반면 Azure에서 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]는 AUTO입니다.
+쿼리 저장소가 모든 쿼리 또는 실행 횟수 및 리소스 소비량에 따른 관련 쿼리를 캡처하거나 새 쿼리 추가 및 현재 쿼리 추적을 중지할지의 여부를 지정합니다. **ALL**(모든 쿼리 캡처), AUTO(자주 발생하지 않은 쿼리 및 컴파일/실행 기간이 의미 없는 쿼리 무시), CUSTOM(사용자 정의된 캡처 정책) 또는 NONE(새 쿼리 캡처 중지)일 수 있습니다. 기본값은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 경우 **ALL**입니다([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]까지). [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 기본값은 **AUTO**입니다. [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]의 기본값은 **AUTO**입니다.
   
 *MAX_PLANS_PER_QUERY*  
 각 쿼리에 대하여 유지되는 계획의 수를 나타내는 정수입니다. 기본값은 **200**입니다.  
@@ -261,7 +271,7 @@ ALTER DATABASE <database_name>
 SET QUERY_STORE (MAX_STORAGE_SIZE_MB = <new_size>);  
 ```  
   
- **모든 쿼리 저장소 옵션 설정**  
+ **쿼리 저장소 옵션 설정**  
   
  단일 ALTER DATABASE 문 사용하여 여러 쿼리 저장소 옵션을 한 번에 설정할 수 있습니다.  
   
@@ -279,6 +289,8 @@ SET QUERY_STORE (
     WAIT_STATS_CAPTURE_MODE = ON 
 );  
 ```  
+
+  구성 옵션의 전체 목록은 [ALTER DATABASE SET 옵션(Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md)을 참조하세요.
   
  **공간 정리**  
   
@@ -290,7 +302,9 @@ ALTER DATABASE <db_name> SET QUERY_STORE CLEAR;
   
  또는 임시 쿼리 데이터는 쿼리 최적화 및 계획 분석과 관련성이 적고 공간만 많이 차지하므로 임시 쿼리 데이터만 지울 수도 있습니다.  
   
- **임시 쿼리 삭제** 한번만 실행되고 24시간 이상 지난 쿼리를 삭제합니다.  
+ **임시 쿼리 삭제** 
+ 
+ 한 번만 실행되고 24시간 이상 지난 쿼리를 삭제합니다.  
   
 ```sql  
 DECLARE @id int  
@@ -328,7 +342,6 @@ DEALLOCATE adhoc_queries_cursor;
 -   **sp_query_store_reset_exec_stats**는 지정된 계획에 대한 런타임 통계를 지웁니다.  
 -   **sp_query_store_remove_plan**은 단일 계획을 제거합니다.  
  
-  
 ###  <a name="Peformance"></a> 성능 감사 및 문제해결  
  쿼리 저장소는 쿼리 실행 전반에서 컴파일 및 런타임 메트릭 기록을 유지하여 사용자가 작업에 대한 질문을 할 수 있습니다.  
   
@@ -380,7 +393,7 @@ WHERE rs.last_execution_time > DATEADD(hour, -1, GETUTCDATE())
 ORDER BY rs.avg_duration DESC;  
 ```  
   
- **지난 24시간 동안 평균 물리적 IO 읽기가 가장 큰 쿼리 수 및 해당하는 평균 행 수 및 실행 수는 몇 개입니까?**  
+ **지난 24시간 동안 평균 물리적 I/O 읽기가 가장 큰 쿼리 수 및 해당하는 평균 행 수 및 실행 수는 몇 개입니까?**  
   
 ```sql  
 SELECT TOP 10 rs.avg_physical_io_reads, qt.query_sql_text,   
@@ -584,7 +597,7 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 
 #### <a name="a-namectp23a-plan-forcing-support-for-fast-forward-and-static-cursors"></a><a name="ctp23">계획에서 빠른 전달 및 정적 커서에 대한 강제 적용 지원<a/>
   
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3 쿼리 저장소는 빠른 전달과 정적 T-SQL 및 API 커서에 대한 쿼리 실행 계획을 강제로 적용하는 기능을 지원합니다. 강제 적용은 이제 `sp_query_store_force_plan` 또는 SQL Server Management Studio 쿼리 저장소 보고서를 통해 지원됩니다.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.3부터 쿼리 저장소는 빠른 전달과 정적 [!INCLUDE[tsql](../../includes/tsql-md.md)] 및 API 커서에 대한 쿼리 실행 계획을 강제로 적용하는 기능을 지원합니다. 강제 적용은 `sp_query_store_force_plan` 또는 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 쿼리 저장소 보고서를 통해 지원됩니다.
 
 ### <a name="remove-plan-forcing-for-a-query"></a>쿼리에 대한 계획 강제 적용 제거
 
@@ -593,8 +606,6 @@ EXEC sp_query_store_force_plan @query_id = 48, @plan_id = 49;
 ```sql  
 EXEC sp_query_store_unforce_plan @query_id = 48, @plan_id = 49;  
 ```  
-
-
 
 ## <a name="see-also"></a>참고 항목  
  [쿼리 저장소에 대한 모범 사례](../../relational-databases/performance/best-practice-with-the-query-store.md)   

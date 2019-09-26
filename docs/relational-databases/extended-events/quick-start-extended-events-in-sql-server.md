@@ -11,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a378daeb4307b9f99e055edafd5cb21d95c30977
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18a70b5ec95c382bc37d4bec894f9953389a664a
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009411"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016849"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>빠른 시작: SQL Server의 확장 이벤트
 
@@ -120,7 +120,7 @@ SSMS.exe는 확장 이벤트에 대한 최상의 UI(사용자 인터페이스)�
 
 9. 왼쪽 위에서 **데이터 스토리지** 페이지를 클릭합니다.
 
-10. **대상** 영역에서 **대상을 지정하려면 여기를 클릭하세요.** 를 클릭합니다.
+10. **대상** 영역에서 **대상을 추가하려면 여기를 클릭하세요.** 를 클릭합니다.
     - **형식** 드롭다운 목록에서 **event_file**을 선택합니다.
     - 즉, 사용자가 볼 수 있는 파일에 이벤트 데이터가 저장됩니다.
 
@@ -623,7 +623,7 @@ SELECT
 ```
 
 
-#### <a name="haspermsbyname-function"></a>HAS_PERMS_BY_NAME 함수
+#### <a name="has_perms_by_name-function"></a>HAS_PERMS_BY_NAME 함수
 
 
 다음 SELECT는 사용 권한을 보고합니다. 기본 제공 함수 [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)을 사용합니다.

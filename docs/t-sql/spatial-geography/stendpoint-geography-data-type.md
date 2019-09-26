@@ -1,5 +1,5 @@
 ---
-title: STEndpoint(geography 데이터 형식) | Miciosoft Docs
+title: STEndPoint(geography 데이터 형식) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,23 +8,23 @@ ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
-- STEndpoint (geography Data Type)
-- STEndpoint_TSQL
+- STEndPoint (geography Data Type)
+- STEndPoint_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- STEndpoint method
+- STEndPoint method
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: efdc5658997bf0cf19637900c96c8f06d4a2e3ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb5d28712e5d4132cd8be07ab1e5014d5cb26567
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042282"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118137"
 ---
-# <a name="stendpoint-geography-data-type"></a>STEndpoint(geography 데이터 형식)
+# <a name="stendpoint-geography-data-type"></a>STEndPoint(geography 데이터 형식)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   **geography** 인스턴스의 엔드포인트를 반환합니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "68042282"
  이 메서드는 비어 있는 **geography** 인스턴스에서 호출되면 Null을 반환합니다.  
   
 ## <a name="examples"></a>예  
- 다음 예에서는 `LineString`를 사용하여 `STGeomFromText()` 인스턴스를 만들고 `STEndpoint()`를 사용하여 `LineString`의 끝점을 검색합니다.  
+ 다음 예에서는 `LineString`를 사용하여 `STGeomFromText()` 인스턴스를 만들고 `STEndPoint()`를 사용하여 `LineString`의 끝점을 검색합니다.  
   
 ```  
 DECLARE @g geography;  

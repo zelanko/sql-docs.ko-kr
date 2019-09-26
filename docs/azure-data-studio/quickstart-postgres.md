@@ -3,28 +3,28 @@ title: '빠른 시작: PostgreSQL 연결 및 쿼리'
 titleSuffix: Azure Data Studio
 description: 이 빠른 시작에서는 Azure Data Studio를 사용하여 PostgreSQL에 연결하고 쿼리를 실행하는 방법을 보여 줍니다.
 ms.custom: seodec18
-ms.date: 03/19/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959462"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127247"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>빠른 시작: [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 PostgreSQL 연결 및 쿼리
 이 빠른 시작에서는 [!INCLUDE[name-sos](../includes/name-sos-short.md)]를 사용하여 Postgres에 연결한 다음 SQL 문을 사용하여 데이터베이스 *tutorialdb*를 만들고 쿼리하는 방법을 보여 줍니다.
 
 ## <a name="prerequisites"></a>사전 요구 사항
 
-이 빠른 시작을 완료하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)], [!INCLUDE[name-sos](../includes/name-sos-short.md)용 PostgreSQL 확장 및 PostgreSQL 서버에 대한 액세스 권한이 필요합니다.
+이 빠른 시작을 완료하려면 [!INCLUDE[name-sos](../includes/name-sos-short.md)], [!INCLUDE[name-sos](../includes/name-sos-short.md)]용 PostgreSQL 확장 및 PostgreSQL 서버에 대한 액세스 권한이 필요합니다.
 
-- [[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)를 설치합니다.
+- [[!INCLUDE[name-sos](../includes/name-sos-short.md)] 설치](download.md)
 - [Azure Data Studio용 PostgreSQL 확장을 설치합니다](postgres-extension.md).
 - [PostgreSQL을 설치합니다](https://www.postgresql.org/download/). (또는 [az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli)을 사용하여 클라우드에서 Postgres 데이터베이스를 만들 수 있습니다). 
 

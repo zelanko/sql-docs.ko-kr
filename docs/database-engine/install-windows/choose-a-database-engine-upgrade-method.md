@@ -10,12 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 309ef92b105ae022cfc543ce0e73107af6870331
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054238"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149983"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>데이터베이스 엔진 업그레이드 방법 선택
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "68054238"
      ![SAN 스토리지에 대한 분리 및 연결을 사용한 새 설치 업그레이드 방법](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN 스토리지에 대한 분리 및 연결을 사용한 새 설치 업그레이드 방법")  
   
 ## <a name="rolling-upgrade"></a>롤링 업그레이드  
- 롤링 업그레이드는 가동 시간을 극대화하고 위험을 최소화하며 기능을 보존하기 위해 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 특정 순서로 업그레이드해야 하는 SQL Server 솔루션 환경에 필요합니다. 롤링 업그레이드는 업그레이드 프로젝트에서 하드웨어 및/또는 운영 체제를 더욱 쉽게 업그레이드하기 위해 각각의 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 현재 위치 업그레이드를 수행하거나 새 설치 업그레이드를 수행하여 기본적으로 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]인스턴스를 특정 순서로 업그레이드하는 것입니다. 롤링 업그레이드 방식을 사용해야 하는 여러 시나리오가 있습니다. 이러한 방식에 대해서는 다음 문서에서 설명합니다.  
+ 롤링 업그레이드는 가동 시간을 극대화하고 위험을 최소화하며 기능을 보존하기 위해 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 특정 순서로 업그레이드해야 하는 SQL Server 솔루션 환경에 필요합니다. 롤링 업그레이드는 업그레이드 프로젝트에서 하드웨어 및/또는 운영 체제를 더욱 쉽게 업그레이드하기 위해 각각의 기존 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에서 현재 위치 업그레이드를 수행하거나 새 설치 업그레이드를 수행하여 기본적으로 여러 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스를 특정 순서로 업그레이드하는 것입니다. 롤링 업그레이드 방식을 사용해야 하는 여러 시나리오가 있습니다. 이러한 방식에 대해서는 다음 문서에서 설명합니다.  
   
 -   Always On 가용성 그룹: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [Always On 가용성 그룹 복제본 인스턴스 업그레이드](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)를 참조하세요.    
 -   장애 조치(Failover) 클러스터 인스턴스: 이 환경에서 롤링 업그레이드를 수행하는 자세한 단계는 [SQL Server 장애 조치(failover) 클러스터 인스턴스 업그레이드](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)를 참조하세요.    

@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 3249d8ffddeec75ae576cc2bbdd9478982029758
-ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
+ms.openlocfilehash: 1b9411f3b8740d1e70f668d903b0b18b7016653d
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69609084"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149998"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>방법: 명령 프롬프트에서 SQL Server 2008 R2 설치
 
@@ -244,7 +244,7 @@ ms.locfileid: "69609084"
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SAPWD<br /><br /> **/SECURITYMODE=SQL인 경우에 필수입니다.**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **SA** 계정의 암호를 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SECURITYMODE<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 보안 모드를 지정합니다.<br /><br /> 이 매개 변수가 제공되지 않은 경우 Windows 전용 인증 모드가 지원됩니다.<br /><br /> 지원되는 값: **SQL**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLBACKUPDIR<br /><br /> **선택 사항**|백업 파일의 디렉터리를 지정합니다.<br /><br /> 기본값: `<InstallSQLDataDir>\<SQLInstanceID>\MSSQL\Backup`|  
-|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 데이터 정렬 설정을 지정합니다.<br /><br /> 기본값은 Windows 운영 체제의 로캘을 기반으로 합니다. 자세한 내용은 [설치 프로그램에서 데이터 정렬 설정](https://msdn.microsoft.com/library/ms143508%28v=sql.105%29.aspx)을 참조하십시오.|  
+|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLCOLLATION<br /><br /> **선택 사항**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 대한 데이터 정렬 설정을 지정합니다.<br /><br /> 기본 설치 설정은 OS(운영 체제) 로캘에 의해 결정됩니다. 설치 도중 서버 수준 데이터 정렬을 변경할 수도 있고, 설치하기 전에 OS 로캘을 변경할 수도 있습니다. 기본 데이터 정렬은 각 특정 로캘에 연결된 사용 가능 버전 중 가장 오래된 버전으로 설정됩니다. 이는 이전 버전과의 호환성을 유지하기 위함이므로 권장되는 데이터 정렬이 아닐 수도 있습니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 기능을 활용하려면 Windows 데이터 정렬을 사용하기 위한 기본 설치 설정을 변경하세요. 예를 들어 OS 로캘 **영어(미국)** (코드 페이지 1252)의 경우 설치 중의 기본 데이터 정렬은 **SQL_Latin1_General_CP1_CI_AS**이고 가장 가까운 Windows 데이터 정렬인 **Latin1_General_100_CI_AS_SC**로 변경될 수 있습니다. <br /><br />자세한 내용은 [데이터 정렬 및 유니코드 지원](../../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/ADDCURRENTUSERASSQLADMIN<br /><br /> **선택 사항**|현재 사용자를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **sysadmin** 고정 서버 역할에 추가합니다. /ADDCURRENTUSERASSQLADMIN 매개 변수는 /Role=ALLFeatures_WithDefaults를 사용하거나 Expression 버전을 설치할 때 사용할 수 있습니다. 자세한 내용은 아래의 /ROLE을 참조하세요.<br /><br /> /ADDCURRENTUSERASSQLADMIN은 원하는 경우 사용할 수 있지만 /ADDCURRENTUSERASSQLADMIN 또는 /SQLSYSADMINACCOUNTS는 반드시 사용해야 합니다. 기본값:<br /><br /> [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] 버전의 경우 **True**<br /><br /> 기타 모든 버전의 경우 **False**|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCACCOUNT<br /><br /> **필수**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스의 시작 계정을 지정합니다.|  
 |[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|/SQLSVCPASSWORD<br /><br /> [필수](#Accounts)|SQLSVCACCOUNT의 암호를 지정합니다.|  

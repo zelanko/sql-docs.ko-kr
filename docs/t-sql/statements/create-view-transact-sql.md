@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80f97354c60d26cff6a10c29712b23bc1f6dfd84
+ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938889"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038870"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +165,7 @@ OR ALTER
   
  뷰가 삭제된 테이블이나 뷰에 종속된 경우 뷰를 사용하려고 하면 [!INCLUDE[ssDE](../../includes/ssde-md.md)]에서 오류 메시지를 표시합니다. 새 테이블이나 뷰가 만들어지고 삭제된 테이블을 대체하기 위해 테이블 구조가 이전의 기본 테이블과 달라지지 않은 경우 뷰를 다시 사용할 수 있게 됩니다. 새 테이블이나 뷰 구조가 변경된 경우에는 뷰를 삭제하고 다시 만들어야 합니다.  
   
- SCHEMABINDING 절을 사용하여 뷰를 만들지 않은 경우 뷰의 기반이 되는 개체에 대한 변경 내용이 뷰의 정의에 영향을 주면 [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)를 실행해야 합니다. 그렇지 않으면 뷰를 쿼리할 때 예기치 않은 결과가 발생할 수 있습니다.  
+ SCHEMABINDING 절을 사용하여 뷰를 만들지 않은 경우 뷰의 기반이 되는 개체에 대한 변경 내용이 뷰의 정의에 영향을 주면 [sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md)를 실행합니다. 그렇지 않으면 뷰를 쿼리할 때 예기치 않은 결과가 발생할 수 있습니다.  
   
  뷰를 만들면 뷰에 대한 정보가 [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md), [sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md) 및 [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) 카탈로그 뷰에 저장됩니다. CREATE VIEW 문의 텍스트는 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) 카탈로그 뷰에 저장됩니다.  
   
@@ -245,11 +245,11 @@ FROM Tn;
   
 1.  SELECT `list`  
   
-    -   멤버 테이블의 모든 열이 뷰 정의의 열 목록에서 선택되어야 합니다.  
+    -   뷰 정의의 열 목록에서 멤버 테이블의 모든 열을 선택합니다.  
   
     -   각 `select list`의 같은 서수 위치에 있는 열은 데이터 정렬 등의 형식이 같아야 합니다. UNION의 경우와 같이 일반적으로 열이 암시적으로 변환할 수 있는 형식인 것으로는 충분하지 않습니다.  
   
-         또한 적어도 하나 이상의 열(예: `<col>`)이 같은 서수 위치에 있는 모든 SELECT 목록에 표시되어야 합니다. 이 `<col>`은 멤버 테이블 `T1, ..., Tn`에서 CHECK 제약 조건 `C1, ..., Cn`이 각각 `<col>`에 정의되는 것과 같이 정의되어야 합니다.  
+         또한 적어도 하나 이상의 열(예: `<col>`)이 같은 서수 위치에 있는 모든 SELECT 목록에 표시되어야 합니다. 멤버 테이블 `T1, ..., Tn`에서 CHECK 제약 조건 `C1, ..., Cn`이 각각 `<col>`에 정의되는 것과 같이 `<col>`을 정의합니다.  
   
          `C1` 테이블에 정의되는 `T1` 제약 조건은 다음 형식을 따라야 합니다.  
   
@@ -294,16 +294,16 @@ FROM Tn;
   
     -   멤버 테이블은 테이블의 계산 열에 대해 만들어진 인덱스를 가질 수 없습니다.  
   
-    -   멤버 테이블은 같은 수의 열에 모두 PRIMARY KEY 제약 조건이 있어야 합니다.  
+    -   멤버 테이블은 같은 수의 열에 모두 PRIMARY KEY 제약 조건이 있습니다.  
   
-    -   뷰에 있는 모든 멤버 테이블의 ANSI 패딩 설정이 같아야 합니다. **sp_configure**에 **user options** 옵션을 사용하거나 SET 문을 사용하여 설정할 수 있습니다.  
+    -   뷰에 있는 모든 멤버 테이블의 ANSI 패딩 설정이 같습니다. **sp_configure**에 **user options** 옵션을 사용하거나 SET 문을 사용하여 설정할 수 있습니다.  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>분할된 뷰의 데이터를 수정하기 위한 조건  
  분할된 뷰의 데이터를 수정하는 문에는 다음 제한이 적용됩니다.  
   
--   기본 멤버 테이블에 이러한 열에 대한 DEFAULT 제약 조건이 있거나 Null 값을 허용해도 INSERT 문은 뷰의 모든 열에 대해 값을 제공해야 합니다. DEFAULT 정의가 있는 멤버 테이블 열의 경우에는 문에 DEFAULT 키워드를 명시적으로 사용할 수 없습니다.  
+-   기본 멤버 테이블에 이러한 열에 대한 DEFAULT 제약 조건이 있거나 Null 값을 허용해도 INSERT 문은 뷰의 모든 열에 대해 값을 제공합니다. DEFAULT 정의가 있는 멤버 테이블 열의 경우에는 문에 DEFAULT 키워드를 명시적으로 사용할 수 없습니다.  
   
--   분할 열에 삽입되는 값은 적어도 하나 이상의 기본 제약 조건을 만족해야 합니다. 그렇지 않으면 제약 조건을 위반하여 INSERT 동작이 실패합니다.  
+-   분할 열에 삽입되는 값은 적어도 하나 이상의 기본 제약 조건을 만족합니다. 그렇지 않으면 제약 조건을 위반하여 INSERT 동작이 실패합니다.  
   
 -   해당 멤버 테이블에 정의된 DEFAULT 값이 열에 포함되어 있어도 UPDATE 문은 SET 절에서 DEFAULT 키워드를 값으로 지정할 수 없습니다.  
   
@@ -325,7 +325,7 @@ FROM Tn;
   
 -   업데이트의 영향을 받는 모든 노드에서 원자성을 보장하기 위해 분산 트랜잭션이 시작됩니다.  
   
--   작업할 INSERT, UPDATE 또는 DELETE 문에 대해 XACT_ABORT SET 옵션이 ON으로 설정되어야 합니다.  
+-   작업할 INSERT, UPDATE 또는 DELETE 문에 대해 XACT_ABORT SET 옵션을 ON으로 설정합니다.  
   
 -   분할 뷰에서 참조되는 **smallmoney** 형식의 원격 테이블 열은 **money**로 매핑됩니다. 따라서 로컬 테이블의 해당 열(SELECT 목록의 동일한 서수 위치에 있는 열)도 **money** 형식이어야 합니다.  
   
@@ -340,7 +340,7 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>복제 고려 사항  
  복제와 관련된 멤버 테이블에 분할 뷰를 만들려면 다음을 고려해야 합니다.  
   
--   기본 테이블이 업데이트 구독이 있는 트랜잭션 복제 또는 병합 복제와 관련된 경우에는 **uniqueidentifier** 열도 SELECT 목록에 포함되어야 합니다.  
+-   기본 테이블이 업데이트 구독이 있는 트랜잭션 복제 또는 병합 복제와 관련된 경우에는 **uniqueidentifier** 열도 SELECT 목록에 포함되어야 합니다. 
   
      분할 뷰에 대한 INSERT 동작은 **uniqueidentifier** 열에 대해 NEWID() 값을 제공해야 합니다. **uniqueidentifier** 열에 대한 UPDATE 동작은 DEFAULT 키워드를 사용할 수 없으므로 NEWID()를 값으로 제공해야 합니다.  
   
