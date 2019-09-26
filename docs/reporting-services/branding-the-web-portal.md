@@ -8,12 +8,12 @@ description: 이 문서에서는 브랜드 패키지를 통해 비즈니스로 �
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2303ae2f21f9bbdc9c15c2d60f62d10f65b5a624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65429cd58796d27025a929e95c6682449e456425
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MTE75
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68221704"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199419"
 ---
 # <a name="branding-the-web-portal"></a>웹 포털 브랜딩
 
@@ -27,7 +27,7 @@ ms.locfileid: "68221704"
   
 Reporting Services의 브랜드 패키지는 3개 항목으로 구성되어 있으며 zip 파일로 패키지화되어 있습니다.   
   
-- color.json  
+- colors.json  
 - metadata.xml  
 - logo.png(옵션)  
   
