@@ -36,7 +36,7 @@ ms.locfileid: "70846815"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 는 전체 경고 시스템을 간편하게 그래픽 방식으로 관리할 수 있도록 해 줄 뿐만 아니라 경고 인프라를 구성하는 데 있어서도 권장되는 방법입니다.  
   
--   master 데이터베이스에서 **xp_logevent** 로 생성된 이벤트가 발생합니다. 따라서 경고에 대한**\@database_name**이 **'master'** 또는 NULL이 아닌 경우 **xp_logevent**는 경고를 트리거하지 않습니다.  
+-   master 데이터베이스에서 **xp_logevent** 로 생성된 이벤트가 발생합니다. 따라서 경고에 대한 **\@database_name** 이 **'master'** 또는 NULL이 아닌 경우 **xp_logevent**는 경고를 트리거하지 않습니다.  
   
 ### <a name="Security"></a>보안  
   
