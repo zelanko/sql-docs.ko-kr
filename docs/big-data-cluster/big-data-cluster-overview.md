@@ -1,7 +1,7 @@
 ---
 title: 빅 데이터 클러스터 란?
 titleSuffix: SQL Server Big Data Clusters
-description: Kubernetes에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 실행 되며 관계형 및 HDFS 데이터 모두에 대 한 스케일 아웃 옵션을 제공 하는 (미리 보기)에 대해 알아봅니다.
+description: Kubernetes에서 실행 되는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (미리 보기)에 대해 알아보고 관계형 및 HDFS 데이터 모두에 대 한 확장 옵션을 제공 합니다.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c75005c35e743a87ff742352946c4fdde5fcf0b8
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: f7790c133ae9f686f2551de8744c6836ffc8ae25
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153656"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342032"
 ---
-# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]무엇 인가요?
+# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>@No__t-0 이란?
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-부터는 Kubernetes에서 실행 되는 SQL Server, Spark 및 HDFS 컨테이너의 확장 가능한 클러스터를 배포할 수있습니다.[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 이러한 구성 요소는 동시에 실행되므로 Transact-SQL 또는 Spark에서 빅 데이터 읽기, 쓰기 및 처리할 수 있으며, 대용량의 빅 데이터를 사용하여 가치 높은 관계형 데이터를 쉽게 조합하고 분석할 수 있습니다.
+@No__t-0부터 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]을 사용 하 여 Kubernetes에서 실행 되는 SQL Server, Spark 및 HDFS 컨테이너의 확장 가능한 클러스터를 배포할 수 있습니다. 이러한 구성 요소는 동시에 실행되므로 Transact-SQL 또는 Spark에서 빅 데이터 읽기, 쓰기 및 처리할 수 있으며, 대용량의 빅 데이터를 사용하여 가치 높은 관계형 데이터를 쉽게 조합하고 분석할 수 있습니다.
 
 최신 릴리스의 새로운 기능 및 알려진 문제에 대한 자세한 내용은 [릴리스 정보](release-notes-big-data-cluster.md)를 참조하세요.
 
@@ -28,11 +28,11 @@ ms.locfileid: "70153656"
 
 ## <a name="scenarios"></a>시나리오
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]빅 데이터와 상호 작용 하는 방법에 유연성을 제공 합니다. 외부 데이터 원본을 쿼리하거나, SQL Server에서 관리하는 HDFS에 빅 데이터를 저장하거나, 클러스터를 통해 여러 외부 데이터 원본에서 데이터를 쿼리할 수 있습니다. 그런 후 AI, Machine Learning 및 기타 분석 작업에 데이터를 사용할 수 있습니다. 다음 섹션에서는 이러한 시나리오에 대해 자세히 설명합니다.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]은 빅 데이터와 상호 작용 하는 방법에 유연성을 제공 합니다. 외부 데이터 원본을 쿼리하거나, SQL Server에서 관리하는 HDFS에 빅 데이터를 저장하거나, 클러스터를 통해 여러 외부 데이터 원본에서 데이터를 쿼리할 수 있습니다. 그런 후 AI, Machine Learning 및 기타 분석 작업에 데이터를 사용할 수 있습니다. 다음 섹션에서는 이러한 시나리오에 대해 자세히 설명합니다.
 
 ### <a name="data-virtualization"></a>데이터 가상화
 
-[SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md)를 활용 하면 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 에서 데이터를 이동 하거나 복사 하지 않고도 외부 데이터 원본을 쿼리할 수 있습니다. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]에서는 데이터 원본에 대한 새 커넥터를 도입했습니다.
+[SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md)를 활용 하 여 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]은 데이터를 이동 하거나 복사 하지 않고 외부 데이터 원본을 쿼리할 수 있습니다. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]에서는 데이터 원본에 대한 새 커넥터를 도입했습니다.
 
 ![데이터 가상화](media/big-data-cluster-overview/data-virtualization.png)
 
@@ -44,13 +44,13 @@ SQL Server 빅 데이터 클러스터에는 확장 가능한 HDFS *스토리지 
 
 ### <a name="scale-out-data-mart"></a>스케일 아웃 데이터 마트
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]규모 확장 계산 및 저장소를 제공 하 여 데이터 분석 성능을 향상 시킵니다. 추가 분석을 위해 다양한 원본의 데이터를 수집하고 *데이터 풀* 노드 간에 캐시로 분산할 수 있습니다.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]은 확장 계산 및 저장소를 제공 하 여 데이터 분석 성능을 향상 시킵니다. 추가 분석을 위해 다양한 원본의 데이터를 수집하고 *데이터 풀* 노드 간에 캐시로 분산할 수 있습니다.
 
 ![데이터 마트](media/big-data-cluster-overview/data-mart.png)
 
 ### <a name="integrated-ai-and-machine-learning"></a>통합 AI 및 Machine Learning
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]HDFS 저장소 풀 및 데이터 풀에 저장 된 데이터에서 AI 및 machine learning 작업을 사용 하도록 설정 합니다. R, Python, Scala 또는 Java를 사용하여 SQL Server의 기본 제공 AI 도구 뿐만 아니라 Spark도 사용할 수 있습니다.
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]은 HDFS 저장소 풀 및 데이터 풀에 저장 된 데이터에 대 한 AI 및 machine learning 작업을 가능 하 게 합니다. R, Python, Scala 또는 Java를 사용하여 SQL Server의 기본 제공 AI 도구 뿐만 아니라 Spark도 사용할 수 있습니다.
 
 ![AI 및 ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
@@ -80,7 +80,7 @@ Kubernetes는 컨테이너 배포를 필요에 따라 확장할 수 있는 오�
 | **Pod** | Pod는 Kubernetes의 원자성 배포 단위입니다. Pod는 애플리케이션을 실행하는 데 필요한 하나 이상의 컨테이너 및 연결된 리소스의 논리적 그룹입니다. 각 pod는 하나의 노드에서 실행되고 하나의 노드는 하나 이상의 pod를 실행할 수 있습니다. Kubernetes 마스터는 클러스터의 노드에 pod을 자동으로 할당합니다. |
 | &nbsp; ||
 
-에서 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]Kubernetes는의 상태 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]를 담당 합니다. Kubernetes는 클러스터 노드를 작성 및 구성 하 고, pod를 노드에 할당 하 고, 클러스터의 상태를 모니터링 합니다.
+@No__t-0에서 Kubernetes는-1 @no__t의 상태를 담당 합니다. Kubernetes는 클러스터 노드를 작성 및 구성 하 고, pod를 노드에 할당 하 고, 클러스터의 상태를 모니터링 합니다.
 
 ### <a name="big-data-clusters-architecture"></a>빅 데이터 클러스터 아키텍처
 
@@ -105,8 +105,8 @@ Kubernetes는 컨테이너 배포를 필요에 따라 확장할 수 있는 오�
 스토리지 풀은 Linux의 SQL Server, Spark 및 HDFS로 이루어진 스토리지 풀 pod로 구성됩니다. SQL Server 빅 데이터 클러스터의 모든 스토리지 노드는 HDFS 클러스터의 멤버입니다.
 
 > [!TIP]
-> 빅 데이터 클러스터 아키텍처 및 설치를 자세히 알아보려면 [워크숍: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 아키텍처](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
+> 빅 데이터 클러스터 아키텍처 및 설치를 자세히 알아보려면 [워크숍: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 아키텍처 @ no__t-1.
 
 ## <a name="next-steps"></a>다음 단계
 
-[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]는 SQL Server 2019 초기 도입 프로그램을 통해 제한 된 공개 미리 보기로 제공 됩니다. 액세스를 요청하려면 [여기](https://aka.ms/eapsignup)에서 등록하고 빅 데이터 클러스터 체험을 신청하세요. Microsoft에서는 모든 요청을 심사하고 가능한 한 빨리 답변해 드립니다.
+빅 데이터 클러스터 SQL Server를 배포 하는 방법에 대 한 자세한 내용은 [빅 데이터 클러스터 SQL Server 시작](deploy-get-started.md)을 참조 하세요.

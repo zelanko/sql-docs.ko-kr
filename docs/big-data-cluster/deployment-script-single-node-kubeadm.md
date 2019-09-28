@@ -1,7 +1,7 @@
 ---
 title: bash 스크립트를 사용하여 단일 노드 kubeadm 클러스터에 배포
 titleSuffix: SQL Server big data clusters
-description: Bash 배포 스크립트를 사용 하 여 단일 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 노드 kubeadm 클러스터에를 배포 합니다.
+description: Bash 배포 스크립트를 사용 하 여 단일 노드 kubeadm 클러스터에 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]을 배포 합니다.
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652347"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341843"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>bash 스크립트를 사용하여 단일 노드 kubeadm 클러스터에 배포
 
@@ -34,7 +34,7 @@ ms.locfileid: "69652347"
 - 다음 명령을 사용 하 여 기존 패키지를 업데이트 하 여 OS 이미지가 최신 상태 인지 확인 합니다.
 
    ``` bash
-   sudo apt update&&apt upgrade -y
+   sudo apt update && sudo apt upgrade -y
    sudo systemctl reboot
    ```
 
@@ -85,4 +85,4 @@ ms.locfileid: "69652347"
 
 ## <a name="next-steps"></a>다음 단계
 
-빅 데이터 클러스터 [사용을 시작 하려면 자습서: SQL Server 빅 데이터 클러스터](tutorial-load-sample-data.md)에 샘플 데이터를 로드 합니다.
+빅 데이터 클러스터 사용을 시작 하려면 [ 자습서를 참조 하세요. SQL Server 빅 데이터 클러스터에 샘플 데이터를 로드 @ no__t-0.

@@ -1,7 +1,7 @@
 ---
 title: 빅 데이터 도구 설치
 titleSuffix: SQL Server big data clusters
-description: (미리 보기)와 함께 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 사용 되는 도구를 설치 하는 방법을 알아봅니다.
+description: '@No__t-0 (미리 보기)과 함께 사용 되는 도구를 설치 하는 방법에 대해 알아봅니다.'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: afd036dfe33ab538d3d845e73f45e804052a9903
-ms.sourcegitcommit: ecb19d0be87c38a283014dbc330adc2f1819a697
+ms.openlocfilehash: cbb34d5cd209281a5c97d819c7741503d234ad2d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70238699"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342017"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 빅 데이터 도구 설치
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-이 문서에서는 (미리 보기)를 만들고 관리 하 고 사용 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 하기 위해 설치 해야 하는 클라이언트 도구에 대해 설명 합니다. 다음 섹션에서는 도구 목록 및 설치 지침 링크를 제공합니다. 빅 데이터 클러스터를 배포하기 전에 Windows 또는 Linux에서 필수로 표시된 도구를 구성합니다.
+이 문서에서는 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (미리 보기)을 만들고, 관리 하 고, 사용 하기 위해 설치 해야 하는 클라이언트 도구에 대해 설명 합니다. 다음 섹션에서는 도구 목록 및 설치 지침 링크를 제공합니다. 빅 데이터 클러스터를 배포하기 전에 Windows 또는 Linux에서 필수로 표시된 도구를 구성합니다.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -32,11 +32,11 @@ ms.locfileid: "70238699"
 |---|---|---|---|
 | **python** | 예 | python은 동적 의미 체계를 사용하는 해석된 개체 지향 고급 프로그래밍 언어입니다. SQL Server 빅 데이터 클러스터의 대부분은 python을 사용합니다. | [python 설치](#python).|
 | **azdata** | 예 | 빅 데이터 클러스터를 설치하고 관리하기 위한 명령줄 도구입니다. | [설치](deploy-install-azdata.md) |
-| **kubectl**<sup>1</sup> | 예 | 기본 Kuberentes 클러스터를 모니터링하기 위한 명령줄 도구입니다([자세한 정보](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl-binary-using-native-package-management) |
+| **kubectl**<sup>1</sup> | 예 | 기본 Kuberentes 클러스터를 모니터링하기 위한 명령줄 도구입니다([자세한 정보](https://kubernetes.io/docs/tasks/tools/install-kubectl/)). | [Windows](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-with-powershell-from-psgallery) \| [Linux](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-using-native-package-management) |
 | **Azure Data Studio-SQL Server 2019 RC (릴리스 후보)** | 예 | SQL Server 쿼리를 위한 플랫폼 간 그래픽 도구입니다. | [설치](#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc) |
 | **SQL Server 2019 확장** | 예 | 빅 데이터 클러스터에 대한 연결을 지원하는 Azure Data Studio 확장입니다. 데이터 가상화 마법사도 제공합니다. | [설치](../azure-data-studio/sql-server-2019-extension.md) |
 | **Azure CLI**<sup>2</sup> | AKS의 경우 | Azure 서비스를 관리하기 위한 최신 명령줄 인터페이스입니다. AKS 빅 데이터 클러스터 배포와 함께 사용됩니다([자세한 정보](https://docs.microsoft.com/cli/azure/?view=azure-cli-latest)). | [설치](https://docs.microsoft.com/cli/azure/install-azure-cli?view=azure-cli-latest) |
-| **mssql-cli** | Optional | SQL Server를 쿼리하기 위한 최신 명령줄 인터페이스입니다([자세한 정보](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
+| **mssql-cli** | 선택 사항 | SQL Server를 쿼리하기 위한 최신 명령줄 인터페이스입니다([자세한 정보](https://github.com/dbcli/mssql-cli/blob/master/README.rst)). | [Windows](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/windows.md) \| [Linux](https://github.com/dbcli/mssql-cli/blob/master/doc/installation/linux.md) |
 | **sqlcmd** | 일부 스크립트의 경우 | SQL Server를 쿼리하기 위한 레거시 명령줄 도구입니다([자세한 정보](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-ver15)). | [Windows](https://www.microsoft.com/download/details.aspx?id=36433) \| [Linux](../linux/sql-server-linux-setup-tools.md) |
 | **curl** <sup>3</sup> | 일부 스크립트의 경우 | URL을 사용하여 데이터를 전송하기 위한 명령줄 도구입니다. | [Windows](https://curl.haxx.se/windows/) \| Linux: curl 패키지 설치 |
 
@@ -216,4 +216,4 @@ Azure Data Studio 프로덕션 릴리스의 일반적인 경우 [Azure Data Stud
 - [빠른 시작: AKS(Azure Kubernetes Service)에 SQL Server 빅 데이터 클러스터 배포](quickstart-big-data-cluster-deploy.md)
 - [Kubernetes에 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법](deployment-guidance.md)
 
-빅 데이터 클러스터에 대 한 자세한 내용은 [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)을 참조 하세요.
+빅 데이터 클러스터에 대 한 자세한 내용은 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)을 참조 하세요.
