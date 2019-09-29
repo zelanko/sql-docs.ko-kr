@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3ef386d6643be7742c0bc042a2b2a16f1877f2e2
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 0d54f307ce71418af0b43ebae5353d2c6200e677
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314506"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341981"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,22 +43,28 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>인수  
-[ @server =] *서버\'\'*           
+[@server =] *\'server @ no__t*          
 만들려고 하는 연결된 서버의 이름입니다. *server* 은 **sysname**이며 기본값은 없습니다.  
   
-[ @srvproduct  *\'=\' ]을* (를)          
+[@srvproduct =] *@no__t 2product_name @ no__t*          
 연결된 서버로 추가할 OLE DB 데이터 원본의 제품 이름입니다. 는 **nvarchar (** 128 **)** 이며 *기본값은 NULL* 입니다. **SQL Server** *provider_name*, *data_source*, *location*, *provider_string*및 *catalog* 를 지정할 필요가 없습니다.  
   
-[ @provider =] *provider_name\'\'*           
-이 데이터 원본에 해당하는 OLE DB 공급자의 고유 PROGID(프로그래밍 ID)입니다. *provider_name* 는 현재 컴퓨터에 설치 된 지정 된 OLE DB 공급자에 대해 고유 해야 합니다. *provider_name* 은 **nvarchar (** 128 **)** 이며 기본값은 NULL입니다. 그러나 *provider_name* 을 생략 하면 SQLNCLI가 사용 됩니다. SQLNCLI를 사용하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]가 최신 버전의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자로 리디렉션됩니다. OLE DB 공급자는 레지스트리에 지정 된 PROGID를 사용 하 여 등록 해야 합니다.  
+[@provider =] *@no__t 2provider_name @ no__t*          
+이 데이터 원본에 해당하는 OLE DB 공급자의 고유 PROGID(프로그래밍 ID)입니다. *provider_name* 는 현재 컴퓨터에 설치 된 지정 된 OLE DB 공급자에 대해 고유 해야 합니다. *provider_name* 는 **nvarchar (128)** 이며 기본값은 NULL입니다. 그러나 *provider_name* 을 생략 하면 SQLNCLI가 사용 됩니다. 
+
+> [!NOTE]
+> SQLNCLI를 사용 하면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]이 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자의 최신 버전으로 리디렉션됩니다. OLE DB 공급자는 레지스트리에 지정 된 PROGID를 사용 하 여 등록 해야 합니다.
+
+> [!IMPORTANT] 
+> 이전 SQLOLEDB (OLE DB Provider for SQL Server (SQLOLEDB) 및 SQL Server Native Client OLE DB 공급자 (SQLNCLI)는 더 이상 사용 되지 않으며 새로운 개발 작업에 사용 하지 않는 것이 좋습니다. 대신 최신 서버 기능으로 업데이트 될 새 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL)를 사용 합니다.
   
-[ @datasrc =] *data_source\'\'*           
+[@datasrc =] *@no__t 2data_source @ no__t*          
  OLE DB 공급자가 해석하는 데이터 원본의 이름입니다. *data_source* 은 **nvarchar (** 4000 **)** 입니다. *data_source* 는 OLE DB 공급자를 초기화 하는 DBPROP_INIT_DATASOURCE 속성으로 전달 됩니다.  
   
-[ @location =] *위치\'\'*           
+[@location =] *\'location @ no__t*          
  OLE DB 공급자에 의해 해석된 데이터베이스의 위치입니다. *location* 은 **nvarchar (** 4000 **)** 이며 기본값은 NULL입니다. *location* 은 DBPROP_INIT_LOCATION 속성으로 전달 되어 OLE DB 공급자를 초기화 합니다.  
   
-[ @provstr =] *provider_string\'\'*           
+[@provstr =] *\'provider_string @ no__t-3*          
  고유한 데이터 원본을 나타내는 OLE DB 공급자의 연결 문자열입니다. *provider_string* 은 **nvarchar (** 4000 **)** 이며 기본값은 NULL입니다. *provstr* 는 IDataInitialize에 전달 되거나 OLE DB 공급자를 초기화 하기 위해 DBPROP_INIT_PROVIDERSTRING 속성으로 설정 됩니다.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB 공급자에 대해 연결 된 서버를 만든 경우 server 키워드 as server =*servername*\\*instancename* 을 사용 하 여 인스턴스를 지정 하 여의 특정인스턴스를지정할수있습니다 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *servername* 은 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 실행 되는 컴퓨터의 이름이 고 *instancename* 은 사용자가 연결 될 특정 인스턴스의 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 이름입니다.  
@@ -66,7 +72,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 > [!NOTE]
 > 미러된 데이터베이스에 액세스하려면 연결 문자열이 데이터베이스 이름을 포함해야 합니다. 이 이름은 데이터 액세스 공급자의 장애 조치(Failover) 시도를 지원하는 데 필요합니다. 데이터베이스는 **@provstr** 또는 **@catalog** 매개 변수에 지정할 수 있습니다. 필요에 따라 연결 문자열이 장애 조치(Failover) 파트너 이름을 제공할 수도 있습니다.  
   
-[ @catalog =] *카탈로그\'\'*        
+[@catalog =] *\'catalog @ no__t*       
  OLE DB 공급자에 연결할 때 사용되는 카탈로그입니다. *catalog* 는 **sysname**이며 기본값은 NULL입니다. *카탈로그* 는 DBPROP_INIT_CATALOG 속성으로 전달 되어 OLE DB 공급자를 초기화 합니다. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 인스턴스에 대해 연결된 서버를 정의한 경우 카탈로그는 연결된 서버가 매핑된 기본 데이터베이스를 참조합니다.  
   
 ## <a name="return-code-values"></a>반환 코드 값  
@@ -104,14 +110,14 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
  사용자 정의 트랜잭션 내에서는 **sp_addlinkedserver** 를 실행할 수 없습니다.  
   
 > [!IMPORTANT]
->  **Sp_addlinkedserver**를 사용 하 여 연결 된 서버를 만들면 모든 로컬 로그인에 대 한 기본 자체 매핑이 추가 됩니다. 비 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자의 경우 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 서비스 계정으로 공급자에 대 한 액세스 권한을 얻을 수 있습니다. 이와 같은 경우 관리자는 `sp_droplinkedsrvlogin <linkedserver_name>, NULL`을 사용하여 전역 매핑을 제거해야 합니다.  
+> **Sp_addlinkedserver**를 사용 하 여 연결 된 서버를 만들면 모든 로컬 로그인에 대 한 기본 자체 매핑이 추가 됩니다. 비 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 공급자의 경우 인증 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그인이 서비스 계정으로 공급자에 대 한 액세스 권한을 얻을 수 있습니다. 이와 같은 경우 관리자는 `sp_droplinkedsrvlogin <linkedserver_name>, NULL`을 사용하여 전역 매핑을 제거해야 합니다.  
   
 ## <a name="permissions"></a>사용 권한  
  `sp_addlinkedserver` 문에 권한이`ALTER ANY LINKED SERVER` 필요 합니다. 새 연결 된 **서버** 대화 상자는 `sysadmin` 고정 서버 역할의 멤버 자격이 필요한 방식으로 구현 됩니다. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
 ## <a name="examples"></a>예  
   
-### <a name="a-using-the-microsoft-sql-server-native-client-ole-db-provider"></a>A. Microsoft SQL Server Native Client OLE DB 공급자 사용  
+### <a name="a-using-the-microsoft-sql-server-ole-db-provider"></a>A. Microsoft SQL Server OLE DB 공급자 사용  
  다음 예에서는 `SEATTLESales`라는 연결된 서버를 만듭니다. 제품 이름은 `SQL Server`이고 공급자 이름은 사용하지 않았습니다.  
   
 ```sql  
@@ -122,8 +128,21 @@ EXEC sp_addlinkedserver
    N'SQL Server';  
 GO  
 ```  
-  
+
+ 다음 예에서는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB 드라이버를 사용 하 여-1 @no__t 인스턴스에서-0 @no__t 연결 된 서버를 만듭니다.  
+
+```sql  
+EXEC sp_addlinkedserver     
+   @server=N'S1_instance1',   
+   @srvproduct=N'',  
+   @provider=N'MSOLEDBSQL',   
+   @datasrc=N'S1\instance1';  
+```  
+
  다음 예에서는 Native Client OLE DB 공급자 `S1_instance1` 를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 사용 하 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 여 인스턴스에 연결 된 서버를 만듭니다.  
+ 
+> [!IMPORTANT] 
+> SQLNCLI (SQL Server Native Client OLE DB 공급자)는 더 이상 사용 되지 않으며 새로운 개발 작업에 사용 하지 않는 것이 좋습니다. 대신 최신 서버 기능으로 업데이트 될 새 [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL)를 사용 합니다.
   
 ```sql  
 EXEC sp_addlinkedserver     
@@ -163,7 +182,7 @@ GO
 ```  
   
 ### <a name="c-using-the-microsoft-ole-db-provider-for-odbc-with-the-data_source-parameter"></a>3\. data_source 매개 변수와 함께 Microsoft OLE DB Provider for ODBC 사용  
- 다음 예에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC ( `SEATTLE Payroll` `MSDASQL`) 및 *data_source* 매개 변수를 사용 하는 라는 연결 된 서버를 만듭니다.  
+ 다음 예에서는 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC (`MSDASQL`) 및 *data_source* 매개 변수를 사용 하는 `SEATTLE Payroll` 이라는 연결 된 서버를 만듭니다.  
   
 > [!NOTE]  
 > 연결된 서버를 사용하려면 지정한 ODBC 데이터 원본 이름이 서버에서 시스템 DSN으로 정의되어 있어야 합니다.  
