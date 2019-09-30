@@ -14,14 +14,14 @@ helpviewer_keywords:
 - XML [Integration Services]
 - XML task [Integration Services]
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5eeba11501703a9c64c3e883b87899c7262ececa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ca59166f994a0bd982c2f00c5c60c39207e9e02a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057741"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293658"
 ---
 # <a name="xml-task"></a>XML 태스크
 

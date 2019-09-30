@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.hadoopconn.f1
 ms.assetid: 8bb15b97-9827-46bc-aca6-068534ab18c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bfb7f0e9f1c9f10412c27ccd9fd68982cebf158c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aff15237e3763818123e0f74febf8523cb6174d3
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904748"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298534"
 ---
 # <a name="hadoop-connection-manager"></a>Hadoop 연결 관리자
 
