@@ -16,14 +16,14 @@ helpviewer_keywords:
 - data flow [Integration Services], Data Flow task
 - Integration Services, performance
 ms.assetid: c27555c4-208c-43c8-b511-a4de2a8a3344
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 072fc285fa5470aa5fa589f028e3e5aba7e3f5fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6683cec953daf6146371d62e8db2e4add2bd42df
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101560"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298343"
 ---
 # <a name="data-flow-task"></a>데이터 흐름 태스크
 

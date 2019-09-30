@@ -11,14 +11,14 @@ helpviewer_keywords:
 - custom user interface [Integration Services], custom foreach enumerators
 - custom foreach enumerators [Integration Services], developing custom user interface
 ms.assetid: 8aa4aa80-c9ba-42b3-ba87-ae5ea5d3cac3
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 050e5419bdfd15db65ebe71b97c03229dec02fa2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 07bd14be05b07fab0ba383da928e2fd384bbdfe5
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951908"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297164"
 ---
 # <a name="developing-a-user-interface-for-a-custom-foreach-enumerator"></a>사용자 지정 ForEach 열거자의 사용자 인터페이스 개발
 

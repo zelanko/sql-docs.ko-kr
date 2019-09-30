@@ -13,14 +13,14 @@ helpviewer_keywords:
 - expressions [Integration Services], examples
 - examples [Integration Services]
 ms.assetid: c7794ba3-0de5-466b-ae8a-9ddd27360049
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 11cef86218092a0cdbe39a2141f2368cd05bf16e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f5643e4e1d900b0c4152a422927a29302f40f952
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080975"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297625"
 ---
 # <a name="examples-of-advanced-integration-services-expressions"></a>고급 Integration Services 식의 예
 

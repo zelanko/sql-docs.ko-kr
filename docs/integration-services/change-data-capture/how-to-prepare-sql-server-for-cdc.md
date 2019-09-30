@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: a327fa18-58f4-4e69-bb87-44faf47e20ef
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 5c5409f63971fe626e1692e2086af1b2557ae9fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f13e8eae235eb040e92baa15247b6094e9aa1075
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68101729"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294695"
 ---
 # <a name="how-to-prepare-sql-server-for-cdc"></a>CDC를 위해 SQL Server를 준비하는 방법
 

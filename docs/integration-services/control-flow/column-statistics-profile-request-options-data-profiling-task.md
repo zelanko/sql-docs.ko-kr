@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Data Profiling Task Editor
 ms.assetid: 87205984-507a-49f3-b27c-36a0075c234d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 02ed7296f1ad5a83dd005973c210c5cb34d7ee97
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4c533cb10f1d51c2e1e74e51978e720f764bf4e6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043878"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298365"
 ---
 # <a name="column-statistics-profile-request-options-data-profiling-task"></a>열 통계 프로필 요청 옵션(데이터 프로파일링 태스크)
 

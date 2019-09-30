@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.loaddimwizard.scdsupport.f1
 ms.assetid: 36de99d5-5368-48e0-b876-17e9c6862c6c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dcf11c5ebb6372ecea9e056577524de50a169747
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 945a9b23fd9f5850489184d89d99d4ae24350652
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943995"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291210"
 ---
 # <a name="slowly-changing-dimension-columns-slowly-changing-dimension-wizard"></a>느린 변경 차원 열(느린 변경 차원 마법사)
 

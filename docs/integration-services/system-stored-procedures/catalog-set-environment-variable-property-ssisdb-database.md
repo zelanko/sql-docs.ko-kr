@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: c1deb31e-b8d1-44ca-b355-570959bc6478
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c10eb9291ff25f0d3b8c22dea27cd88a3924e605
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aefbbc8f1b2286eb43378cf0cf5fe92e5741e610
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064536"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295326"
 ---
-# <a name="catalogsetenvironmentvariableproperty-ssisdb-database"></a>catalog.set_environment_variable_property(SSISDB 데이터베이스)
+# <a name="catalogset_environment_variable_property-ssisdb-database"></a>catalog.set_environment_variable_property(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

@@ -16,14 +16,14 @@ helpviewer_keywords:
 - security [Integration Services], certificates
 - signing policies [Integration Services]
 ms.assetid: a433fbef-1853-4740-9d5e-8a32bc4ffbb2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 978e85814e403ea6fe0a510b1791b0b4d1cf9bf0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: fd8b17acb904ae0d33b06e85531e531792f1d60e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125309"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295699"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>디지털 서명을 사용하여 패키지 원본 확인
 

@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - incremental load [Integration Services],applying changes
 ms.assetid: 338a56db-cb14-4784-a692-468eabd30f41
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f6f16706c12ad40a8d5720e8cb868c279dbefc30
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: a4df2ce8bc53694c74142f843c4656e254e748d4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031345"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298986"
 ---
 # <a name="apply-the-changes-to-the-destination"></a>대상에 변경 내용 적용
 

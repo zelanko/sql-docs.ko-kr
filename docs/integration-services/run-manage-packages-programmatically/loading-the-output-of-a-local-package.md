@@ -14,14 +14,14 @@ helpviewer_keywords:
 - data flow [Integration Services], loading results
 - loading data flow results
 ms.assetid: aba8ecb7-0dcf-40d0-a2a8-64da0da94b93
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: e50ca7e1942444c81a70553b0635a2e5ff67cb81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: dc35bb8b31c88cea2d903981e709f4075929ea7a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68028565"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295745"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>로컬 패키지의 출력 로드
 

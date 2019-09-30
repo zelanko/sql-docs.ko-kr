@@ -13,14 +13,14 @@ helpviewer_keywords:
 - lookups [Integration Services]
 - exact matches [Integration Services]
 ms.assetid: 01b7fbca-5181-4d47-9f75-7f25af6b40d2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c0b4286836f3ed7060eceee1b1201670574123cc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: c0f04255feb2eec4b7cc8fc2fd9df0eed67ef25f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67944283"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297896"
 ---
 # <a name="implement-a-lookup-in-no-cache-or-partial-cache-mode"></a>캐시 없음 또는 부분 캐시 모드로 조회 구현
 

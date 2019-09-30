@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Add Analysis Services Connection Manager
 ms.assetid: 9d5e1bb1-adda-4985-80f6-56e14d5d295c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 114bf1f77c6b55099a60a18e89d54e4ac8d51a3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 0de4fe433a1f34b49dbfb12082759c954e87a7a4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67898925"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298565"
 ---
 # <a name="add-analysis-services-connection-manager-dialog-box-ui-reference"></a>Analysis Services 연결 관리자 추가 대화 상자 UI 참조
 

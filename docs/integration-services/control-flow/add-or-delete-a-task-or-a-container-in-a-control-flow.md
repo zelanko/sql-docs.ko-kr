@@ -13,14 +13,14 @@ helpviewer_keywords:
 - adding containers
 - tasks [Integration Services], adding
 ms.assetid: 653084c6-87a3-45d5-b458-914ecf24d56a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b92660ac902061aabe0c8f19eb1a17891529d93b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 76e7db001469b141df5633228927135c6d01af53
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904166"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298435"
 ---
 # <a name="add-or-delete-a-task-or-a-container-in-a-control-flow"></a>제어 흐름에서 태스크 또는 컨테이너 추가 또는 삭제
 

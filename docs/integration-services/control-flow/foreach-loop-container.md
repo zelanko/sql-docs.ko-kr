@@ -28,14 +28,14 @@ helpviewer_keywords:
 - foreach enumerators [Integration Services]
 - containers [Integration Services], Foreach Loop
 ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6285426e0503433157632dddeb71b57a9452154f
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2266b837ce7822a6b03b3f6a26d4d1d818aade72
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621689"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298296"
 ---
 # <a name="foreach-loop-container"></a>Foreach 루프 컨테이너
 

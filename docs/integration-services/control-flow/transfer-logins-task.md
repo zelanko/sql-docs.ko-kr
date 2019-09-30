@@ -14,14 +14,14 @@ f1_keywords:
 helpviewer_keywords:
 - Transfer Logins task [Integration Services]
 ms.assetid: 1df60fd6-c019-405d-8155-c330dbac2cc1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 12287fec6e5d25a1cf62f5e4652178c1a138d295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 9d82f3ef27525ad918ef01e9cb2e0600ef85ae0a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105570"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293857"
 ---
 # <a name="transfer-logins-task"></a>로그인 전송 태스크
 

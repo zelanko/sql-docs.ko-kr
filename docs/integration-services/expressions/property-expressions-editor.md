@@ -12,14 +12,14 @@ f1_keywords:
 helpviewer_keywords:
 - Property Expressions Editor dialog box
 ms.assetid: 4c8b1681-d8fe-4f92-b76f-a396eb921c0c
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4f4d2fbf448dc34d687359724e3ec19d3023262a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 8b1f4f85fbd4806c164faef0c8bcac7a982cc4fe
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67967871"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71288491"
 ---
 # <a name="property-expressions-editor"></a>속성 식 편집기
 

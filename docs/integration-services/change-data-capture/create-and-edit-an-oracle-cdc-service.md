@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - createSrv
 ms.assetid: 10cd612e-d8f1-4af2-97d3-a0c22e1e2326
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c00da27f5e4e6502bb431854ef0105e3b20954a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f9298d2ff1dc79d14fa5de943d2d7cfccf8bcbd4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060845"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298833"
 ---
 # <a name="create-and-edit-an-oracle-cdc-service"></a>Oracle CDC Service 만들기 및 편집
 

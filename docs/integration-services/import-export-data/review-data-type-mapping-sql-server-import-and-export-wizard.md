@@ -9,14 +9,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.impexpwizard.reviewissues.f1
 ms.assetid: 0625c4f9-b8ff-4593-b884-39398b9d43af
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 91f45e228c2dd1142c8bc08387ba2309eac318fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f0bd7fe34b1945c3f0f2255e256ead38a6d15e3a
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67901762"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296263"
 ---
 # <a name="review-data-type-mapping-sql-server-import-and-export-wizard"></a>데이터 형식 매핑 검토(SQL Server 가져오기 및 내보내기 마법사)
 

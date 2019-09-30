@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 1f68f157-c4e9-412c-92b3-53a2faaba29b
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 615a176e915e709fd8d2b70944dbac4179049bcc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 69a0a462f4c265e6992f27286377f7bcaa3b2dad
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023416"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281155"
 ---
-# <a name="catalogdeleteenvironmentreference-ssisdb-database"></a>catalog.delete_environment_reference(SSISDB 데이터베이스)
+# <a name="catalogdelete_environment_reference-ssisdb-database"></a>catalog.delete_environment_reference(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

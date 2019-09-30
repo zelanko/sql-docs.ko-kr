@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: b44c159a-c33d-4f3c-bdb8-9832f35317c8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: dca8a4f49a8c7ffbef251a90d72bdd13395185e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 67a361446c69425f6b05bef913ded568a7dcfd75
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114598"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296301"
 ---
 # <a name="connect-to-an-access-data-source-sql-server-import-and-export-wizard"></a>Access 데이터 원본에 연결(SQL Server 가져오기 및 내보내기 마법사)
 

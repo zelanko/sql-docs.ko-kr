@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - addTabs
 ms.assetid: ad260e19-c021-4035-9311-c02fc96ceaea
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: ce06937840fc70d77d190915e200b9783fce34e6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa9bf38512b2ba817156f216161d21bc1d27c129
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68074666"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294857"
 ---
 # <a name="add-tables-to-a-cdc-instance"></a>CDC 인스턴스에 테이블 추가
 

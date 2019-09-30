@@ -15,14 +15,14 @@ helpviewer_keywords:
 - data sources [Integration Services], connections
 - connection managers [Integration Services], ODBC
 ms.assetid: e8c77aa7-6772-485e-918e-cef9eeb18c58
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 4a9b8fa4b316c34bb2cfc4b51c0fcb6ba310367e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b0d115753447a337cc9846942e2c39da54f3658f
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68104032"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298493"
 ---
 # <a name="odbc-connection-manager"></a>ODBC 연결 관리자
 

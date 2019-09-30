@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - oraIns
 ms.assetid: 4f79c24a-e99a-4a06-8637-51eeec406259
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: c933da5a54e5f5f447679862d52c0a641a3cde52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: f53fe9d295fdd5cd34c6391332af12b9f6788668
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060826"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294760"
 ---
 # <a name="create-the-sql-server-change-database"></a>SQL Server 변경 데이터베이스 만들기
 

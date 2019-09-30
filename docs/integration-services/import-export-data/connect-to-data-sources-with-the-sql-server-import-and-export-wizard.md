@@ -7,14 +7,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: fd726506-54b7-433b-bf70-3642235b7b31
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 0caaa512c365853eb2c6eb6149cc3fbdf0bf6fb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: cd76d5aa66567dde3c5dc7b5ce4c2c6d787d2136
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68114511"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296328"
 ---
 # <a name="connect-to-data-sources-with-the-sql-server-import-and-export-wizard"></a>SQL Server 가져오기 및 내보내기 마법사를 사용하여 데이터 원본에 연결
 

@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.dts.designer.sapbwsource.connection.f1
 ms.assetid: 2a6dc531-85ca-43c5-a65f-3ad3f7d537c4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: af093b4d46e658e0673352201c9499be77da6b5f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 7b4fa1d2dd8219c28a1fd9c8f3f403c6098d96e4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023627"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298077"
 ---
 # <a name="sap-bw-source-editor-connection-manager-page"></a>SAP BW 원본 편집기(연결 관리자 페이지)
 

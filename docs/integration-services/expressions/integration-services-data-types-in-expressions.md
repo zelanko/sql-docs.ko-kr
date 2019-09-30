@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [Integration Services], data types
 - data types [Integration Services], expressions
 ms.assetid: c296ad10-4080-4988-8c2c-2c250f7a1884
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eef95663a1f5b26209b1081d6481e7ca3fdd2a94
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2e2c8c8f77fd0643c503f5b817b050ff64529751
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68080749"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297544"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>식에서의 Integration Services 데이터 형식
 

@@ -19,14 +19,14 @@ helpviewer_keywords:
 - output columns [Integration Services]
 - data flow components [Integration Services], transformation components
 ms.assetid: b694d21f-9919-402d-9192-666c6449b0b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: cadfd56afae90de873552a52c40bd359d9b83d3e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 973b20bbe86e0aaff8cf4732efd95e1f3b10c423
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68026026"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71297298"
 ---
 # <a name="developing-a-custom-transformation-component-with-synchronous-outputs"></a>동기 출력을 사용하여 사용자 지정 변환 구성 요소 개발
 

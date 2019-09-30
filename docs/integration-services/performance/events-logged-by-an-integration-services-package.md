@@ -11,14 +11,14 @@ helpviewer_keywords:
 - package [Integration Services], events
 - events [Integration Services], package
 ms.assetid: 55a0951a-46f3-4f0f-9972-74cec9cc26b7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bebbaeb547039af49cff158939741c35164e0df1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4ed4722261ca83d95345c8d8fc5024f1076be839
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913672"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282504"
 ---
 # <a name="events-logged-by-an-integration-services-package"></a>통합 서비스 패키지에 의해 기록된 이벤트
 

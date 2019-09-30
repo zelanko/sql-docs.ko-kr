@@ -11,14 +11,14 @@ f1_keywords:
 - sql13.ssis.ssms.isoperations.executions.f1
 - sql13.ssis.ssms.isoperations.general.f1
 ms.assetid: cbbcd79f-ab9b-46ec-84cb-4821c1d16b99
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 847f3fccdca31f62ecaebe9451426283fa741b04
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: d7fd62f4f2f82e6dcc3921db7099b4f052db27b3
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120579"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295796"
 ---
 # <a name="monitor-running-packages-and-other-operations"></a>실행 중인 패키지 및 기타 작업 모니터링
 

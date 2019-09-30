@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - supLog
 ms.assetid: 6e940d93-12c6-4cda-9333-5489b245f0e4
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 6f38161514e1ccd505140c0fba7e8a8e28df411e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ebf080b38e618a807ff9b3b48711ee89f0e56028
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011413"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71298742"
 ---
 # <a name="generate-and-run-the-supplemental-logging-script"></a>보완 로깅 스크립트 생성 및 실행
 
