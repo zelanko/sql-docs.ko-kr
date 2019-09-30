@@ -183,7 +183,7 @@ ms.locfileid: "70846677"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> - 비즈니스 논리 처리기에 액세스할 때 사용하는 이름  
   
-    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - **@is_dotnet_assembly**을 참조하세요.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> - **\@is_dotnet_assembly**을 참조하세요.  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>비즈니스 논리 처리기를 배포하려면  
   
