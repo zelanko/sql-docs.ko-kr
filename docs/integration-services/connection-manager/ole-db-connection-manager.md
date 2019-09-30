@@ -16,14 +16,14 @@ helpviewer_keywords:
 - connection managers [Integration Services], OLE DB
 - connections [Integration Services], OLE DB
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a1a7c3d0e1648bb2c05e20c78ed293e33a34fe47
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: ffc7da76c7291bbf8e0d4dd6003c572cd9610e92
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155168"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294379"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 연결 관리자
 

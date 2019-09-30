@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 9700f663-53f2-49b6-b1ef-92c7b752d6a1
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a7b6ebfd668f4a6d4449d8dc2fed27c07b8983b6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2f46acb401bf04e9b0445c452e26d69de42a2d94
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941620"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292832"
 ---
 # <a name="dimension-processing-destination-custom-properies"></a>차원 처리 대상 사용자 지정 속성
 

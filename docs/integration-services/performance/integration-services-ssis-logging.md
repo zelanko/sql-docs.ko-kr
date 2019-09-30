@@ -27,14 +27,14 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2782537178c00055e1db7cb7c653fb863ead8724
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913628"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282570"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services(SSIS) 로깅
 

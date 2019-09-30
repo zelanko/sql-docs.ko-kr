@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 8aa7d690-4649-4c0a-ac6f-9504637ee426
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f4145d46016175ce16755d238fd805a0d3613249
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 17a72f7d11a2ed743bbede2852b6336ce808a75d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68055755"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295926"
 ---
 # <a name="lesson-5-1-copy-the-lesson-4-package"></a>5-1단원: 4단원 패키지 복사
 

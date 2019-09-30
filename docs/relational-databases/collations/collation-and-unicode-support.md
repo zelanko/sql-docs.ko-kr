@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 515e0501e86d81a34cd9e0f14d720ba3024b241c
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149921"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251086"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "71149921"
 |이진 코드 포인트(\_BIN2) <sup>1</sup> | 유니코드 데이터에 대한 유니코드 코드 포인트를 사용하여 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 테이블의 데이터를 정렬하고 비교합니다. 비유니코드 데이터의 경우 이진 코드 포인트에서는 이진 정렬과 동일한 비교를 사용합니다.<br/><br/> 이진 코드 포인트 정렬 순서 사용 시의 이점은 정렬된 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 데이터를 비교하는 애플리케이션에서 데이터를 재정렬할 필요가 없다는 점입니다. 결과적으로 이진 코드 포인트 정렬 순서를 사용하면 애플리케이션을 더 간단하게 개발할 수 있으며 성능이 향상될 수 있습니다. 자세한 내용은 이 페이지의 [이진 데이터 정렬](#Binary-collations) 섹션을 참조하세요.|
 |UTF-8(\_UTF8)|UTF-8 인코딩 데이터를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]에 저장할 수 있습니다. 이 옵션을 선택하지 않으면 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]는 해당 데이터 형식에 기본 비유니코드 인코딩 형식을 사용합니다. 자세한 내용은 이 페이지의 [UTF-8 지원](#utf8) 섹션을 참조하세요.| 
 
-<sup>1</sup> Binary 또는 이진 코드 포인트를 선택하면 대/소문자 구분(\_CS), 악센트 구분(\_AS), 일본어 가나 구분(\_KS) 및 전자/반자 구분(\WS) 옵션을 사용할 수 없습니다.      
+<sup>1</sup> BIN 또는 이진 코드 포인트를 선택하면 대/소문자 구분(\_CS), 악센트 구분(\_AS), 일본어 가나 구분(\_KS) 및 전자/반자 구분(\_WS) 옵션을 사용할 수 없습니다.      
 
 #### <a name="examples-of-collation-options"></a>데이터 정렬 옵션의 예
 각 데이터 정렬은 일련의 접미사를 조합하여 대/소문자, 악센트, 일본어 가나, 전자/반자 구분 여부를 정의합니다. 다음 예에서는 다양한 접미사 조합에 대한 정렬 순서 동작에 대해 설명합니다.

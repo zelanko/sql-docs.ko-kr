@@ -8,17 +8,17 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: d587cedd-6402-4d5c-9526-7cd25627a037
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 5dc8e4283a8443c41be994745310114587712e3a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c5c53af690df29c17012e19267debfe2273b4193
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68110549"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71281383"
 ---
-# <a name="catalogaddexecutionworker-ssisdb-database"></a>catalog.add_execution_worker(SSISDB 데이터베이스)
+# <a name="catalogadd_execution_worker-ssisdb-database"></a>catalog.add_execution_worker(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

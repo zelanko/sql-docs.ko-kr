@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 07508c40-6c08-4359-96cd-8ff17671244d
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a5413191366792a64bb3988eb9feb25991bd11c3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: efeed5fe9390a9e498e225138522bdc1769a22d6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031291"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292227"
 ---
 # <a name="odbc-destination-custom-properties"></a>ODBC Destination Custom Properties
 

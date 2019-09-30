@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: daa98eea8582d65ae0653d9de407d9908cc11ac9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 1a48cb51b363d036f57dfd4f175ab862645ebca1
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007934"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296784"
 ---
-# <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project(SSISDB 데이터베이스)
+# <a name="catalogdelete_project-ssisdb-database"></a>catalog.delete_project(SSISDB 데이터베이스)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 

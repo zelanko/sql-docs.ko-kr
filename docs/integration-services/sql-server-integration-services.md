@@ -18,14 +18,14 @@ helpviewer_keywords:
 - DTS [Integration Services], about Integration Services
 - data integration [Integration Services]
 - Data Transformation Services
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 782f1fb04ae8167c342bbe39f1f640f090c8c434
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2fbf040bd24ce3da81497001213e953f7436d863
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912500"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71296871"
 ---
 # <a name="sql-server-integration-services"></a>SQL Server Integration Services
 
@@ -45,7 +45,7 @@ ms.locfileid: "67912500"
 
 SQL Server에 SQL Server Integration Services를 설치하는 방법과 추가 다운로드에 대한 자세한 내용은 [Integration Services 설치](install-windows/install-integration-services.md)를 참조하세요.
 
-##  <a name="infotipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) 리소스
+##  <a name="info_tipsql-servermediainfo-tippng-resources"></a>![info_tip](../sql-server/media/info-tip.png) 리소스
 -   [SSIS 포럼에서 도움말 보기](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlintegrationservices)
 -   [Stack Overflow에서 도움말 보기](https://stackoverflow.com/questions/tagged/ssis)  
 -   [SSIS 팀 블로그 수행](https://blogs.msdn.microsoft.com/ssis/)

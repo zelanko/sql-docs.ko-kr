@@ -14,14 +14,14 @@ helpviewer_keywords:
 - copying packages
 - regenerating package GUID
 ms.assetid: 08f723bf-15b5-44bd-9a46-04e8781bfbfb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: b4ee7d711514ae032532fa57d9e8b8c65c3f5f75
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 18252987543528f41b4c0f64c2954138b7a5d13c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121467"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282499"
 ---
 # <a name="reuse-of-package-objects"></a>패키지 개체 다시 사용
 

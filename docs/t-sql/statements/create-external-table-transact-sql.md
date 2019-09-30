@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 51464e85f1d9eaabb377caf851e6bdcef46a014d
-ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
+ms.openlocfilehash: 0ca20922eb99354aa5f2a6bc97f238daf93724ff
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70391962"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227146"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE(Transact-SQL)
 
@@ -222,7 +222,7 @@ SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>1. 텍스트로 구분된 형식의 데이터를 사용하여 외부 테이블 만들기
+### <a name="a-create-an-external-table-with-data-in-text-delimited-format"></a>1\. 텍스트로 구분된 형식의 데이터를 사용하여 외부 테이블 만들기
 
 이 예제에서는 텍스트로 구분된 파일 형식의 데이터를 가진 외부 테이블을 만드는 데 필요한 모든 단계를 보여 줍니다. 즉, 외부 데이터 원본 *mydatasource* 및 외부 파일 형식 *myfileformat*을 만듭니다. 이러한 데이터베이스 수준 개체는 나중에 CREATE EXTERNAL TABLE 문에 참조됩니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)을 참조하세요.
 
@@ -252,7 +252,7 @@ WITH (
 ;
 ```
 
-### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>2. RCFile 형식의 데이터를 사용하여 외부 테이블 만들기
+### <a name="b-create-an-external-table-with-data-in-rcfile-format"></a>2\. RCFile 형식의 데이터를 사용하여 외부 테이블 만들기
 
 이 예제에서는 RCFile 형식의 데이터를 가진 외부 테이블을 만드는 데 필요한 모든 단계를 보여 줍니다. 즉, 외부 데이터 원본 *mydatasource_rc* 및 외부 파일 형식 *myfileformat_rc*를 만듭니다. 이러한 데이터베이스 수준 개체는 나중에 CREATE EXTERNAL TABLE 문에 참조됩니다. 자세한 내용은 [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md) 및 [CREATE EXTERNAL FILE FORMAT](../../t-sql/statements/create-external-file-format-transact-sql.md)을 참조하세요.
 
@@ -344,7 +344,7 @@ SELECT DISTINCT user.FirstName, user.LastName
 INTO ms_user
 FROM user INNER JOIN (
     SELECT * FROM ClickStream WHERE cs.url = 'www.microsoft.com'
-    ) AS ms_user
+    ) AS ms
 ON user.user_ip = ms.user_ip
 ;
 ```
@@ -420,7 +420,7 @@ WITH
      );
  ```
 
-### <a name="i-create-an-external-table-for-oracle"></a>9. Oracle용 외부 테이블 만들기
+### <a name="i-create-an-external-table-for-oracle"></a>9\. Oracle용 외부 테이블 만들기
 
 ```sql
   -- Create a Master Key
@@ -681,7 +681,7 @@ SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-create-external-table-for-azure-sql-database"></a>1. Azure SQL Database용 외부 테이블 만들기
+### <a name="a-create-external-table-for-azure-sql-database"></a>1\. Azure SQL Database용 외부 테이블 만들기
 
 ```sql
 CREATE EXTERNAL TABLE [dbo].[CustomerInformation]
@@ -809,7 +809,7 @@ REJECT_SAMPLE_VALUE = *reject_sample_value* 이 특성은 REJECT_TYPE = percenta
 REJECTED_ROW_LOCATION = *디렉터리 위치*
 
 거부된 행과 해당 오류 파일을 작성해야 하는 외부 데이터 원본 내 디렉터리를 지정합니다.
-지정된 경로가 존재하지 않을 경우 PolyBase는 사용자를 대신하여 경로를 만듭니다. "_rejectedrows"라는 이름의 하위 디렉터리가 생성됩니다. "_" 문자는 위치 매개 변수에 명시적으로 명명되지 않는 한, 다른 데이터 처리를 위해 디렉터리를 이스케이프합니다. 이 디렉터리 내에는 로드 제출 시간을 기준으로 YearMonthDay -HourMinuteSecond 형식에 따라 생성된 폴더가 있습니다(예: 20180330-173205). 이 폴더에서 _reason 파일과 data 파일이라는 두 가지 파일에 데이터가 기록됩니다.
+지정된 경로가 존재하지 않을 경우 PolyBase는 사용자를 대신하여 경로를 만듭니다. "_rejectedrows"라는 이름의 하위 디렉터리가 생성됩니다. "_ " 문자는 위치 매개 변수에 명시적으로 명명되지 않는 한, 다른 데이터 처리를 위해 디렉터리를 이스케이프합니다. 이 디렉터리 내에는 로드 제출 시간을 기준으로 YearMonthDay -HourMinuteSecond 형식에 따라 생성된 폴더가 있습니다(예: 20180330-173205). 이 폴더에서 _reason 파일과 data 파일이라는 두 가지 파일에 데이터가 기록됩니다.
 
 reason 파일과 data 파일에는 모두 CTAS 문과 연결된 queryID가 있습니다. data와 reason은 별도의 파일에 있으므로 해당 파일의 접미사가 일치해야 합니다.
 
@@ -873,7 +873,7 @@ SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>1. Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]로 ADLS의 데이터 가져오기
+### <a name="a-importing-data-from-adls-into-azure-includessdwincludesssdw-mdmd"></a>1\. Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]로 ADLS의 데이터 가져오기
 
 ```sql
 
@@ -1097,7 +1097,7 @@ SCHEMARESOLUTION 개체에 대한 공유 잠금입니다.
 
 ## <a name="examples"></a>예
 
-### <a name="a-join-hdfs-data-with-analytics-platform-system-data"></a>1. Analytics Platform System 데이터로 HDFS 데이터 조인
+### <a name="a-join-hdfs-data-with-analytics-platform-system-data"></a>1\. Analytics Platform System 데이터로 HDFS 데이터 조인
 
 ```sql
 SELECT cs.user_ip FROM ClickStream cs
@@ -1106,7 +1106,7 @@ WHERE cs.url = 'www.microsoft.com'
 ;
 ```
 
-### <a name="b-import-row-data-from-hdfs-into-a-distributed-analytics-platform-system-table"></a>2. HDFS에서 분산된 Analytics Platform System 테이블로 행 데이터 가져오기
+### <a name="b-import-row-data-from-hdfs-into-a-distributed-analytics-platform-system-table"></a>2\. HDFS에서 분산된 Analytics Platform System 테이블로 행 데이터 가져오기
 
 ```sql
 CREATE TABLE ClickStream_PDW

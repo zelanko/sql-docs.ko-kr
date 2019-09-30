@@ -14,14 +14,14 @@ helpviewer_keywords:
 - removing files
 - Maintenance Cleanup task
 ms.assetid: 73ad3cd6-9a6d-44cf-905f-c56aa658bf42
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: a15c685d6bd7bbd6d215f0a9187d5adbdb28af79
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 333ccd783a1ef55a3c2ddc79936011330cf79b9d
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68107706"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294105"
 ---
 # <a name="maintenance-cleanup-task"></a>유지 관리 정리 태스크
 

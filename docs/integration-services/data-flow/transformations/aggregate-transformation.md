@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Aggregate transformation [Integration Services]
 - large data, SSIS transformations
 ms.assetid: 2871cf2a-fbd3-41ba-807d-26ffff960e81
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 53008c12ead3f9450edd6fbe26c08728a0b47558
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: aa922a5a850a6cee9b782d894994835d8e1d9a1c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68070150"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291761"
 ---
 # <a name="aggregate-transformation"></a>집계 변환
 

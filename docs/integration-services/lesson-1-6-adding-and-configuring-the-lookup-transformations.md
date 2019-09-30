@@ -6,15 +6,15 @@ ms.prod: sql
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: 5c59f723-9707-4407-80ae-f05f483cf65f
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ms.reviewer: ''
-ms.openlocfilehash: 581c664b32fae7a79d4eaa49a872ca6b33f1351b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ac10ace82a38110d2038f95c3514aa8271d5b88c
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902628"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283742"
 ---
 # <a name="lesson-1-6-add-and-configure-the-lookup-transformations"></a>1-6단원: 조회 변환 추가 및 구성
 

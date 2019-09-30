@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eab2401dc3cb85dfeaedc22b406f1da73c112127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941464"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292414"
 ---
 # <a name="integration-services-data-types"></a>Integration Services 데이터 형식
 
@@ -109,7 +109,7 @@ ms.locfileid: "67941464"
 ### <a name="converting-datetime-data-types"></a>날짜/시간 데이터 형식 변환  
  날짜/시간 데이터가 포함된 열의 데이터 형식을 변경하여 데이터의 날짜 또는 시간 부분을 추출할 수 있습니다. 다음 표에서는 한 날짜/시간 데이터 형식을 다른 날짜/시간 데이터 형식으로 변경한 결과를 나열합니다.  
   
-#### <a name="converting-from-dtfiletime"></a>DT_FILETIME에서 변환  
+#### <a name="converting-from-dt_filetime"></a>DT_FILETIME에서 변환  
   
 |DT_FILETIME 변환 대상|결과|  
 |-----------------------------|------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "67941464"
 |DT_DBTIMESTAMP2|소수 자릿수가 DT_DBTIMESTAMP2 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 표준 시간대 필드를 0으로 설정합니다.<br /><br /> 소수 자릿수가 DT_DBTIMESTAMPOFFSET 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
   
-#### <a name="converting-from-dtdate"></a>DT_DATE에서 변환  
+#### <a name="converting-from-dt_date"></a>DT_DATE에서 변환  
   
 |DT_DATE 변환 대상|결과|  
 |-------------------------|------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "67941464"
 |DT_DBTIMESTAMP2|데이터 형식을 변환합니다.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 표준 시간대 필드를 0으로 설정합니다.|  
   
-#### <a name="converting-from-dtdbdate"></a>DT_DBDATE에서 변환  
+#### <a name="converting-from-dt_dbdate"></a>DT_DBDATE에서 변환  
   
 |DT_DBDATE 변환 대상|결과|  
 |---------------------------|------------|  
@@ -148,7 +148,7 @@ ms.locfileid: "67941464"
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP 데이터 형식의 시간 필드를 0으로 설정합니다.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 시간 필드와 표준 시간대 필드를 0으로 설정합니다.|  
   
-#### <a name="converting-from-dtdbtime"></a>DT_DBTIME에서 변환  
+#### <a name="converting-from-dt_dbtime"></a>DT_DBTIME에서 변환  
   
 |DT_DBTIME 변환 대상|결과|  
 |---------------------------|------------|  
@@ -161,7 +161,7 @@ ms.locfileid: "67941464"
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 날짜 필드와 표준 시간대 필드를 각각 현재 날짜와 0으로 설정합니다.|  
   
-#### <a name="converting-from-dtdbtime2"></a>DT_DBTIME2에서 변환  
+#### <a name="converting-from-dt_dbtime2"></a>DT_DBTIME2에서 변환  
   
 |DT_DBTIME2 변환 대상|결과|  
 |----------------------------|------------|  
@@ -174,7 +174,7 @@ ms.locfileid: "67941464"
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 데이터 형식의 날짜 필드를 현재 날짜로 설정합니다.<br /><br /> 소수 자릿수가 DT_DBTIMESTAMP2 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 날짜 필드와 표준 시간대 필드를 각각 현재 날짜와 0으로 설정합니다.<br /><br /> 소수 자릿수가 DT_DBTIMESTAMPOFFSET 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>DT_DBTIMESTAMP에서 변환  
+#### <a name="converting-from-dt_dbtimestamp"></a>DT_DBTIMESTAMP에서 변환  
   
 |DT_DBTIMESTAMP 변환 대상|결과|  
 |--------------------------------|------------|  
@@ -187,7 +187,7 @@ ms.locfileid: "67941464"
 |DT_DBTIMESTAMP2|소수 자릿수가 DT_DBTIMESTAMP2 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 표준 시간대 필드를 0으로 설정합니다.<br /><br /> 소수 자릿수가 DT_DBTIMESTAMPOFFSET 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>DT_DBTIMESTAMP2에서 변환  
+#### <a name="converting-from-dt_dbtimestamp2"></a>DT_DBTIMESTAMP2에서 변환  
   
 |DT_DBTIMESTAMP2 변환 대상|결과|  
 |---------------------------------|------------|  
@@ -200,7 +200,7 @@ ms.locfileid: "67941464"
 |DT_DBTIMESTAMP2|소수 자릿수가 대상 DT_DBTIMESTAMP2 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET 데이터 형식의 표준 시간대 필드를 0으로 설정합니다.<br /><br /> 소수 자릿수가 DT_DBTIMESTAMPOFFSET 데이터 형식이 포함할 수 있는 소수 자릿수 초의 자릿수를 초과할 경우 소수 자릿수 초 값을 제거합니다. 소수 자릿수 초 값을 제거한 후 이 데이터 잘림에 대한 보고서를 생성합니다. 자세한 내용은 [데이터 오류 처리](../../integration-services/data-flow/error-handling-in-data.md)를 참조하세요.|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>DT_DBTIMESTAMPOFFSET에서 변환  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>DT_DBTIMESTAMPOFFSET에서 변환  
   
 |DT_DBTIMESTAMPOFFSET 변환 대상|결과|  
 |--------------------------------------|------------|  

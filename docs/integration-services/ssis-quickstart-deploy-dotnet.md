@@ -6,14 +6,14 @@ ms.prod: sql
 ms.prod_service: integration-services
 ms.custom: ''
 ms.technology: integration-services
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 406355b1209d707c7ccf624a739e1297632ccb88
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b943d8e169b589f45c612dccc710e174759ca0ca
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100840"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295643"
 ---
 # <a name="deploy-an-ssis-project-with-c-code-in-a-net-app"></a>.NET 앱에 C# 코드가 있는 SSIS 프로젝트 배포
 

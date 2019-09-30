@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 744e9357-94a9-4202-abe8-1d3d202697e9
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: adfe75aa70a4bd46a0c3e7aac6a1ea6b45473335
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: b47e4f57101e05eb70dbdb464d6a4b36498dd3f7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045394"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293247"
 ---
 # <a name="cdc-source-custom-properties"></a>CDC 원본 사용자 지정 속성
 

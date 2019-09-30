@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: b613cef7-7993-4d89-a429-a8251d74d435
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7d6e2115c42fb5fa7e0abb71e12db0c8c28569a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 2a16cd38eef12584f8d876e610bfda5d602c3076
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082176"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283020"
 ---
 # <a name="lesson-6-4-deploy-the-lesson-6-package"></a>6-4단원: 6단원 패키지 배포
 

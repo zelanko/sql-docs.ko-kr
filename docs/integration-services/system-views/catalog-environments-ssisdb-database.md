@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: language-reference
 ms.assetid: 7014c0e3-65dc-4a46-842e-4decf3737748
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2bc933212c4e8f7dfe6f29aeb386b65874e3d91b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 6b2aa0ce2b9fe4d61d9a2fc2f81b2a41e23ab488
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68038377"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295218"
 ---
 # <a name="catalogenvironments-ssisdb-database"></a>catalog.environments(SSISDB 데이터베이스)
 

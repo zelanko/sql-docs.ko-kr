@@ -13,14 +13,14 @@ helpviewer_keywords:
 - containers [Integration Services], Task Host
 - Task Host container
 ms.assetid: 7394a2c2-1b07-427d-b94a-9792e7783d35
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: bd17e43afa06ba954b092c6f6a5f95a74d21faaf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: e6286bb35855d0bf775925c93003ae59996ab447
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011204"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293890"
 ---
 # <a name="task-host-container"></a>태스크 호스트 컨테이너
 
