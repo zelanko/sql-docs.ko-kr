@@ -3,17 +3,17 @@ title: Python 프로그래밍 언어 확장
 description: SQL Server Machine Learning Services에서 Python 코드 실행 및 기본 제공 Python 라이브러리에 대해 알아봅니다.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 09/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 61a1a5629d4f0488b5f75a08578c39f2e68f2c7d
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f3825a2b5085bf5a6e144a602c36cb20ccaca430
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715869"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688279"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server의 Python 언어 확장
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,9 +92,11 @@ Python "내부" SQL Server를 실행 하는 경우 특수 저장 프로시저 [s
 8. SQL 위성은 관련 작업 개체의 SQL Server 및 정리와의 통신을 관리 합니다.
 9. SQL Server은 클라이언트에 결과를 다시 전달 합니다.
 
-## <a name="see-also"></a>참조
+## <a name="next-steps"></a>다음 단계
 
 + [SQL Server의 revoscalepy 모듈](../python/ref-py-revoscalepy.md)
 + [revoscalepy 함수 참조](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server의 확장성 프레임 워크](extensibility-framework.md)
 + [SQL Server의 R 및 machine learning 확장](extension-r.md)
++ [Python 패키지 정보 가져오기](../package-management/python-package-information.md)
++ [Sqlmlutils를 사용 하 여 Python 패키지 설치](../package-management/install-additional-python-packages-on-sql-server.md)

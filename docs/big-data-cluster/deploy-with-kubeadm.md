@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7036a88ddb2940a16593806cfe1ec679653e30d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71295002"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688307"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>여러 머신에서 SQL Server 빅 데이터 클러스터 배포에 대해 Kubernetes 구성
 
@@ -33,6 +33,9 @@ ms.locfileid: "71295002"
    - CPU 8개
    - 64GB 메모리
    - 100GB 스토리지
+ 
+> [!Important] 
+> 빅 데이터 클러스터 배포를 시작 하기 전에 배포가 대상으로 하는 모든 Kubernetes 노드에서 시계가 동기화 되도록 합니다. 빅 데이터 클러스터에는 시간이 중요 하 고 클록 기울어집니다으로 인해 잘못 된 상태가 될 수 있는 다양 한 서비스에 대 한 기본 제공 상태 속성이 있습니다.
 
 ## <a name="prepare-the-machines"></a>머신 준비
 

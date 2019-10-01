@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 66aeb6b6e13de8cc076d2ff1b4c77d4fadf2b94a
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174272"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688309"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Kubernetes에 배포 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 하는 방법
 
@@ -66,6 +66,9 @@ SQL Server 2019 빅 데이터 클러스터를 배포하기 전에 먼저 [빅 �
 ```bash
 kubectl config view
 ```
+
+> [!Important] 
+> Kubeadm를 사용 하 여 부트스트랩 한 다중 노드 Kuberntes 클러스터에 배포 하는 경우 빅 데이터 클러스터 배포를 시작 하기 전에 배포가 대상으로 하는 모든 Kubernetes 노드에서 시계가 동기화 되도록 합니다. 빅 데이터 클러스터에는 시간이 중요 하 고 클록 기울어집니다으로 인해 잘못 된 상태가 될 수 있는 다양 한 서비스에 대 한 기본 제공 상태 속성이 있습니다.
 
 Kubernetes 클러스터를 구성한 후에는 새로운 SQL Server 빅 데이터 클러스터의 배포를 진행할 수 있습니다. 이전 릴리스에서 업그레이드 하는 경우 [ [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]업그레이드 하는 방법 ](deployment-upgrade.md)을 참조 하세요.
 

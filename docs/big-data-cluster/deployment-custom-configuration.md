@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
-ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
+ms.openlocfilehash: 699e4260368d3467e68df9ba6b86e961959a8192
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70745449"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682033"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>클러스터 리소스 및 서비스에 대 한 배포 설정 구성
 
@@ -576,7 +576,7 @@ ElasticSearch를 실행 하는 컨테이너를 사용 하지 않도록 설정 �
 }
 ```
 
-수동으로 **를 편집 하 고 위의** 섹션을 **사양**에 추가 하거나, 아래와 같이 패치 파일 **elasticsearch** 를 만들고 **azdata** CLI를 사용 하 여 **config.xml** 파일을 패치할 수 있습니다.
+수동으로 **를 편집 하 고 위의** 섹션을 **사양**에 추가 하거나, 아래와 같이 패치 파일 **elasticsearch** 를 만들고 **azdata** CLI를 사용 하 여 컨트롤을 패치할 수 있습니다 **. json** 파일:
 
 ```json
 {
