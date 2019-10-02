@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a2e4fd4583b7e43c04e03e6450c1fb958cf064b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874324"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314505"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>데이터베이스 엔진에 암호화된 연결 사용
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,10 @@ TLS 암호화를 사용하면 네트워크에서 [!INCLUDE[ssNoVersion](../../in
   
 2. 편리한 위치에 인증서 파일을 저장하여 **인증서 내보내기 마법사**를 완료합니다.  
   
-## <a name="to-configure-the-server-to-force-encrypted-connections"></a>암호화된 연결을 강제하도록 서버를 구성하려면  
+## <a name="to-configure-the-server-to-force-encrypted-connections"></a>암호화된 연결을 강제하도록 서버를 구성하려면
+
+> [!IMPORTANT]
+> SQL Server 서비스 계정에는 SQL Server에서 암호화를 강제하는 데 사용되는 인증서에 대한 읽기 권한이 있어야 합니다. 권한이 없는 서비스 계정의 경우 인증서에 읽기 권한을 추가해야 합니다. 그렇게 하지 않으면 SQL Server 서비스를 다시 시작하지 못할 수 있습니다.
   
 1. **SQL Server 구성 관리자**에서 **SQL Server 네트워크 구성**을 펼치고 _\<서버 인스턴스>_ **에 대한 프로토콜**을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 선택합니다.  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ab66441f-e2d2-4e3a-bcae-bcc09e12f3c1
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: f6f6d60553fe8eff418dfb5cfb42f35dea37632d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1548aa3b7b436f89ad4dee73b7c1ed7034e0f87
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135897"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314586"
 ---
 # <a name="encryptbycert-transact-sql"></a>ENCRYPTBYCERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ _certificate\_ID_
 _cleartext_  
 인증서로 암호화될 데이터 문자열입니다.  
   
-**@cleartext**  
+**\@일반 텍스트(cleartext)**  
 인증서의 공개 키로 암호화될 데이터가 들어 있는 다음 형식 중 하나의 변수입니다.
 
 * **nvarchar** 

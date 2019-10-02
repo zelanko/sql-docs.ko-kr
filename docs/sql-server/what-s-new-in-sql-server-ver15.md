@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: 4ef11893ca08e32c7aed177f53ea63305add4d14
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096886"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326181"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]의 새로운 기능
 
@@ -77,11 +77,12 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 |다시 시작 가능한 온라인 rowstore 인덱스 빌드 | [온라인으로 인덱스 작업 수행](../relational-databases/indexes/perform-index-operations-online.md)을 참조하세요. |
 | &nbsp; | &nbsp; |
 
-### <a name="in-memory-databases"></a>메모리 내 데이터베이스
+### <a name="in-memory-database"></a>메모리 내 데이터베이스
 
 |새로운 기능 또는 업데이트 | 세부 정보 |
 |:---|:---|
-|하이브리드 버퍼 풀에 대한 DDL 컨트롤 |[하이브리드 버퍼 풀](../database-engine/configure-windows/hybrid-buffer-pool.md)을 사용하여 영구 메모리(PMEM) 디바이스의 데이터베이스 파일에 있는 데이터베이스 페이지를 필요 시 곧바로 액세스합니다.|
+|하이브리드 버퍼 풀| [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 새 기능으로, PMEM(영구 메모리) 디바이스의 데이터베이스 파일에 있는 데이터베이스 페이지를 필요 시 바로 액세스합니다. [하이브리드 버퍼 풀](../database-engine/configure-windows/hybrid-buffer-pool.md)을 참조하세요.|
+|메모리 최적화 `tempdb` 메타데이터| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 [메모리 내 데이터베이스](../relational-databases/in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 `tempdb` 메타데이터를 도입하여 해당 병목 현상을 효과적으로 제거하고 `tempdb` 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다. [메모리 최적화 `tempdb` 메타데이터](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)를 참조하세요.|
 | &nbsp; | &nbsp; |
 
 ### <a name="unicode-support"></a>유니코드 지원
@@ -99,13 +100,6 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 |UTF-8 문자 인코딩 지원|외부 테이블을 사용하여 UTF-8 문자를 지원합니다. [데이터 정렬 및 유니코드 지원](../relational-databases/collations/collation-and-unicode-support.md)을 참조하세요.|
 | &nbsp; | &nbsp; |
 
-### <a name="server-settings"></a>서버 설정
-
-|새로운 기능 또는 업데이트 | 세부 정보 |
-|:---|:---|
-|하이브리드 버퍼 풀| [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]의 새 기능으로, PMEM(영구 메모리) 디바이스의 데이터베이스 파일에 있는 데이터베이스 페이지를 필요 시 바로 액세스합니다. [하이브리드 버퍼 풀](../database-engine/configure-windows/hybrid-buffer-pool.md)을 참조하세요.|
-| &nbsp; | &nbsp; |
-
 ### <a name="performance-monitoring"></a>성능 모니터링
 
 |새로운 기능 또는 업데이트 | 세부 정보 |
@@ -117,6 +111,7 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 |`sys.dm_exec_query_plan_stats` |새 DMF는 대부분의 쿼리에 대해 마지막으로 알려진 실제 실행 계획과 동일한 것을 반환합니다. [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)를 참조하세요.|
 |`LAST_QUERY_PLAN_STATS` | `sys.dm_exec_query_plan_stats`를 사용하도록 설정하는 새 데이터베이스 범위 지정 구성입니다. [ALTER DATABASE SCOPED CONFIGURATION](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)을 참조하세요.|
 |`query_post_execution_plan_profile` | 확장 이벤트는 표준 프로파일링을 사용하는 `query_post_execution_showplan`과 달리 경량 프로파일링을 기반으로한 실제 계획과 동등한 것을 수집합니다. [쿼리 프로파일링 인프라](../relational-databases/performance/query-profiling-infrastructure.md)를 참조하세요.|
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | New DMF는 데이터베이스의 페이지에 대한 정보를 반환합니다. [sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)를 참조하세요.|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>언어 확장
@@ -147,7 +142,6 @@ CTP([[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) 알림 보관](wha
 |리소스 거버넌스| `CREATE WORKLOAD GROUP` 및 `ALTER WORKLOAD GROUP`의 `REQUEST_MAX_MEMORY_GRANT_PERCENT` 옵션에 대해 구성 가능한 값이 정수에서 부동 소수점 수 데이터 유형으로 변경되어 메모리 제한의 더 세분화된 제어가 가능합니다. [ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md) 및 [CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md)을 참조하세요.|
 |워크로드에 대한 다시 컴파일 감소| 여러 범위에서 임시 테이블을 사용하는 기능이 개선되었습니다. [워크로드에 대한 다시 컴파일 감소](../relational-databases/tables/tables.md#ctp23)를 참조하세요. |
 |간접 검사점 확장성 |[향상된 간접 검사점 확장성](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)을 참조하세요.|
-|메모리 최적화 `tempdb` 메타데이터| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]는 [메모리 내 데이터베이스](../relational-databases/in-memory-database.md) 기능군의 일부인 새로운 기능 메모리 최적화 `tempdb` 메타데이터를 도입하여 해당 병목 현상을 효과적으로 제거하고 `tempdb` 사용량이 많은 워크로드를 위한 새로운 수준의 확장성을 구현합니다. [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]에서 임시 테이블 메타데이터 관리에 필요한 시스템 테이블은 래치가 없는 비내구성 메모리 최적화 테이블로 이동될 수 있습니다. [메모리 최적화 `tempdb` 메타데이터](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)를 참조하세요.|
 |동시 PFS 업데이트|[PFS 페이지](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)는 SQL Server가 개체 공간을 할당할 때 여유 공간을 찾는 데 사용하는 데이터베이스 파일 내의 특수 페이지입니다. PFS 페이지에서 페이지 래치 경합은 일반적으로 [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d)와 관련이 있지만 동시 개체 할당 스레드가 많은 경우 사용자 데이터베이스에서도 발생할 수 있습니다. 이 개선 사항은 PFS 업데이트로 동시성을 관리하는 방식을 변경하여 단독 래치가 아닌 공유 래치에서 업데이트할 수 있도록 합니다. 이 동작은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]부터 모든 데이터베이스(`tempdb` 포함)에서 기본적으로 설정되어 있습니다.|
 |행 모드 메모리 부여 피드백 |일괄 처리 및 행 모드 연산자의 메모리 부여 크기를 둘 다 조정하여 일괄 처리 모드 메모리 부여 피드백 기능을 확장합니다. 이렇게 하면 과도한 권한 부여를 자동으로 수정하여 메모리 낭비와 동시성을 줄일 수 있으며, 디스크에 많은 비용이 들 수 있는 부족한 메모리 부여를 수정할 수 있습니다. [행 모드 메모리 부여 피드백](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)을 참조하세요. |
 |테이블 변수 지연 컴파일|테이블 변수를 참조하는 쿼리의 계획 품질 및 전체 성능을 개선합니다. 최적화 및 초기 컴파일 중에 이 기능은 실제 테이블 변수 행 수를 기반으로 하는 카디널리티 예측을 전파합니다. 이 정확한 행 수 정보는 다운스트림 계획 작업을 최적화합니다. [테이블 변수 지연 컴파일](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)을 참조하세요. |

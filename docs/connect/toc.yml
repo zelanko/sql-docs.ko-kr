@@ -2406,14 +2406,14 @@
           href: ../connect/jdbc/validating-user-input.md
         - name: 애플리케이션 보안
           href: ../connect/jdbc/application-security.md
-        - name: SSL 암호화 사용
+        - name: 암호화 사용
           href: ../connect/jdbc/using-ssl-encryption.md
           items:
-            - name: SSL 지원 이해
+            - name: 암호화 지원 이해
               href: ../connect/jdbc/understanding-ssl-support.md
-            - name: SSL 암호화를 사용한 연결
+            - name: 암호화를 사용하여 연결
               href: ../connect/jdbc/connecting-with-ssl-encryption.md
-            - name: SSL 암호화에 대한 클라이언트 구성
+            - name: 암호화에 대한 클라이언트 구성
               href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
         - name: FIPS 모드
           href: ../connect/jdbc/fips-mode.md

@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 56d4af001c84fd4f175c0c2504bef39a12015e7d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 039e6b776240121aa66559cfb637c11f0ac70a9d
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139138"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314578"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  *certificate_ID*  
  현재 데이터베이스에 있는 인증서 ID입니다. *certificate*_ID는 **int**입니다.  
   
- *@cleartext*  
+ *\@일반 텍스트(cleartext)*  
  서명될 데이터가 들어 있는 **nvarchar**, **char**, **varchar** 또는 **nchar** 형식의 변수입니다.  
   
  **'** *password* **'**  

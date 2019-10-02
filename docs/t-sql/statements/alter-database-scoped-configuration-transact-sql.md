@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cdd652c18af72c73566afac978c4dc00e2867a8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: decb69879ca80e599fa90f1eb1aa150ccf7f49a5
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065855"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227186"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION(Transact-SQL)
 
@@ -44,8 +44,9 @@ ms.locfileid: "68065855"
 - 고유하게 컴파일된 T-SQL 모듈에 대한 실행 통계의 수집을 활성화하거나 비활성화합니다.
 - `ONLINE =` 구문을 지원하는 DDL 문에 기본적으로 온라인 옵션을 활성화 또는 비활성화합니다.
 - `RESUMABLE =` 구문을 지원하는 DDL 문에 기본적으로 다시 시작 가능 옵션을 활성화 또는 비활성화합니다.
-- 글로벌 임시 테이블의 자동 삭제 기능을 활성화하거나 비활성화합니다.
 - [지능형 쿼리 처리](../../relational-databases/performance/intelligent-query-processing.md) 기능을 활성화하거나 비활성화합니다.
+- 가속 계획 강제를 활성화하거나 비활성화합니다.
+- 글로벌 임시 테이블의 자동 삭제 기능을 활성화하거나 비활성화합니다.
 - [간단한 쿼리 프로파일링 인프라](../../relational-databases/performance/query-profiling-infrastructure.md)를 활성화하거나 비활성화합니다.
 - 새 `String or binary data would be truncated` 오류 메시지를 활성화하거나 비활성화합니다.
 - [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)에서 마지막 실제 실행 계획의 수집을 활성화하거나 비활성화합니다.
@@ -82,6 +83,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | ACCELERATED_PLAN_FORCING = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
@@ -287,11 +289,20 @@ DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
 > [!NOTE]
 > 데이터베이스 호환성 수준 140 이하의 경우, 이 데이터베이스 범위 구성에 아무런 영향이 없습니다.
 
+ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
+
+**적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]부터 시작)
+
+[쿼리 저장소 계획 강제 적용](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed), [자동 튜닝](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction) 또는 [USE PLAN](../../t-sql/queries/hints-transact-sql-query.md#use-plan) 쿼리 힌트 등 모든 형식의 계획 강제에 적용할 수 있는 쿼리 계획 강제 적용에 최적화된 메커니즘을 활성화합니다. 기본값은 ON입니다.
+
+> [!NOTE]
+> 가속화된 계획 강제 적용을 비활성화하는 것은 권장하지 않습니다.
+
 GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
-[전역 임시 테이블](create-table-transact-sql.md)에 대한 자동 삭제 기능을 설정할 수 있습니다. 기본값은 ON입니다. 이는 전역 임시 테이블이 세션에서 사용되지 않을 때 자동으로 삭제됨을 의미합니다. OFF로 설정하면 DROP TABLE 문을 사용하여 전역 임시 테이블을 명시적으로 삭제하거나 서버를 다시 시작할 때 자동으로 삭제됩니다.
+[전역 임시 테이블](../../t-sql/statements/create-table-transact-sql.md#temporary-tables)에 대한 자동 삭제 기능을 설정할 수 있습니다. 기본값은 ON입니다. 이는 전역 임시 테이블이 세션에서 사용되지 않을 때 자동으로 삭제됨을 의미합니다. OFF로 설정하면 DROP TABLE 문을 사용하여 전역 임시 테이블을 명시적으로 삭제하거나 서버를 다시 시작할 때 자동으로 삭제됩니다.
 
 - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 단일 데이터베이스와 탄력적 풀을 사용하면 SQL Database 서버의 개별 사용자 데이터베이스에서 이 옵션을 설정할 수 있습니다.
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 관리되는 인스턴스에서 이 옵션은 `TempDB`에 설정되며 개별 사용자 데이터베이스의 설정은 영향을 미치지 않습니다.
@@ -356,7 +367,7 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 - `sp_configure` 설정은 리소스 관리자(resource governor) 설정에 의해 재정의됩니다.
 
-### <a name="queryoptimizerhotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
+### <a name="query_optimizer_hotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
 
 `QUERYTRACEON` 힌트가 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 버전 또는 쿼리 최적화 프로그램 또는 쿼리 SQL Server 7.0의 기본 쿼리 프로그램을 활성화하는 데 사용되는 경우 쿼리 힌트와 데이터베이스 범위 구성 설정 간의 OR 조건이 됩니다. 즉, 둘 중 하나가 활성화되면 데이터베이스 범위 구성이 적용됩니다.
 
@@ -368,11 +379,11 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 `ALTER DATABASE SCOPED CONFIGURATION`은 데이터베이스 스키마에 영향을 주는 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]부터 시작)의 새 기능이므로 스키마(데이터 유무에 상관없이)를 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]의 이전 버전(예: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 또는 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])으로 내보낼 수 없습니다. 예를 들어 이 새로운 기능이 사용되는 [!INCLUDE[ssSDS](../../includes/sssds-md.md)] 또는 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 데이터베이스에서 [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) 또는 [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4)로 내보내기를 하위 수준 서버로 가져올 수 없게 됩니다.
 
-### <a name="elevateonline"></a>ELEVATE_ONLINE
+### <a name="elevate_online"></a>ELEVATE_ONLINE
 
 이 옵션은 `WITH (ONLINE = <syntax>)`를 지원하는 DDL 문에만 적용됩니다. XML 인덱스는 영향을 받지 않습니다.
 
-### <a name="elevateresumable"></a>ELEVATE_RESUMABLE
+### <a name="elevate_resumable"></a>ELEVATE_RESUMABLE
 
 이 옵션은 `WITH (RESUMABLE = <syntax>)`를 지원하는 DDL 문에만 적용됩니다. XML 인덱스는 영향을 받지 않습니다.
 
@@ -404,7 +415,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = 4 ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
-### <a name="c-set-legacycardinalityestimation"></a>C. LEGACY_CARDINALITY_ESTIMATION 설정
+### <a name="c-set-legacy_cardinality_estimation"></a>C. LEGACY_CARDINALITY_ESTIMATION 설정
 이 예제는 지역에서 복제 시나리오에서 보조 데이터베이스에 대해 LEGACY_CARDINALITY_ESTIMATION을 ON으로 설정합니다.
 
 ```sql
@@ -417,7 +428,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = PRIMARY ;
 ```
 
-### <a name="d-set-parametersniffing"></a>D. PARAMETER_SNIFFING 설정
+### <a name="d-set-parameter_sniffing"></a>D. PARAMETER_SNIFFING 설정
 이 예제는 지역에서 복제 시나리오에서 기본 데이터베이스에 대해 PARAMETER_SNIFFING을 OFF로 설정합니다.
 
 ```sql
@@ -436,7 +447,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMARY ;
 ```
 
-### <a name="e-set-queryoptimizerhotfixes"></a>E. QUERY_OPTIMIZER_HOTFIXES 설정
+### <a name="e-set-query_optimizer_hotfixes"></a>E. QUERY_OPTIMIZER_HOTFIXES 설정
 지역에서 복제 시나리오에서 기본 데이터베이스에 대해 QUERY_OPTIMIZER_HOTFIXES를 ON으로 설정합니다.
 
 ```sql
@@ -450,7 +461,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON ;
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
-### <a name="g-set-identitycache"></a>G. IDENTITY_CACHE 설정
+### <a name="g-set-identity_cache"></a>G. IDENTITY_CACHE 설정
 **적용 대상**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]부터 시작) 및 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
 이 예제는 ID 캐시를 비활성화합니다.
@@ -459,7 +470,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
-### <a name="h-set-optimizeforadhocworkloads"></a>H. OPTIMIZE_FOR_AD_HOC_WORKLOADS 설정
+### <a name="h-set-optimize_for_ad_hoc_workloads"></a>H. OPTIMIZE_FOR_AD_HOC_WORKLOADS 설정
 **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 이 예제는 일괄 처리가 처음으로 컴파일될 때 캐시에 저장될 컴파일된 계획 스텁을 활성화합니다.
@@ -468,7 +479,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
-### <a name="i-set-elevateonline"></a>9\. ELEVATE_ONLINE 설정
+### <a name="i-set-elevate_online"></a>9\. ELEVATE_ONLINE 설정
 **적용 대상**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)](기능은 공개 미리 보기 상태)
 
 이 예에서는 ELEVATE_ONLINE을 FAIL_UNSUPPORTED로 설정합니다.
@@ -477,7 +488,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
-### <a name="j-set-elevateresumable"></a>J. ELEVATE_RESUMABLE 설정
+### <a name="j-set-elevate_resumable"></a>J. ELEVATE_RESUMABLE 설정
 **적용 대상**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 및 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)](기능은 공개 미리 보기 상태)
 
 이 예에서는 ELEVATE_RESUMABLE을 WHEN_SUPPORTED로 설정합니다.
@@ -502,26 +513,26 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 - [병렬 처리 수준](../../relational-databases/query-processing-architecture-guide.md#DOP)
 - [SQL Server의 "max degree of parallelism" 구성 옵션에 대한 권장 사항 및 지침(영문)](https://support.microsoft.com/kb/2806535)
 
-### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 리소스
+### <a name="legacy_cardinality_estimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION 리소스
 
 - [카디널리티 추정(SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 - [SQL Server 2014 카디널리티 추정기로 쿼리 계획 최적화](https://msdn.microsoft.com/library/dn673537.aspx)
 
-### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING 리소스
+### <a name="parameter_sniffing-resources"></a>PARAMETER_SNIFFING 리소스
 
 - [매개 변수 검색](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 - ["매개 변수를 찾았습니다!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/)
 
-### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 리소스
+### <a name="query_optimizer_hotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES 리소스
 
 - [추적 플래그](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [SQL Server 쿼리 최적화 프로그램 핫픽스 추적 플래그 4199 서비스 모델](https://support.microsoft.com/kb/974006)
 
-### <a name="elevateonline-resources"></a>ELEVATE_ONLINE 리소스
+### <a name="elevate_online-resources"></a>ELEVATE_ONLINE 리소스
 
 [온라인 인덱스 작업에 대한 지침](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-### <a name="elevateresumable-resources"></a>ELEVATE_RESUMABLE 리소스
+### <a name="elevate_resumable-resources"></a>ELEVATE_RESUMABLE 리소스
 
 [온라인 인덱스 작업에 대한 지침](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 

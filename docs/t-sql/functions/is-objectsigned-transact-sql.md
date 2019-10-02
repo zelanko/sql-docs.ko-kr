@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1891180d7fa3b1a064cf0cdebc5295303ecf7b5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 274e6128ba57a92f6f2e1e84e160424571742787
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086706"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314608"
 ---
-# <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED(Transact-SQL)
+# <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   개체가 지정된 인증서 또는 비대칭 키로 서명되었는지를 나타냅니다.  
@@ -44,20 +44,20 @@ IS_OBJECTSIGNED (
  **'OBJECT'**  
  보안 개체 클래스의 유형입니다.  
   
- *@object_id*  
- 테스트 중인 개체의 object_id입니다. *@object_id* 는 **int** 형식입니다.  
+ *\@object_id*  
+ 테스트 중인 개체의 object_id입니다. *\@object_id*는 **int** 형식입니다.  
   
- *@class*  
+ *\@클래스*  
  개체의 클래스입니다.  
   
 -   '인증서'  
   
 -   '비대칭 키'  
   
- *@class* 는 **sysname**입니다.  
+ *\@클래스*는 **sysname**입니다.  
   
- *@thumbprint*  
- 개체의 SHA 지문입니다. *@thumbprint* 는 **varbinart(32)** 형식입니다.  
+ *\@지문*  
+ 개체의 SHA 지문입니다. *\@지문*은 **varbinary(32)** 형식입니다.  
   
 ## <a name="returned-types"></a>반환 형식  
  **int**  

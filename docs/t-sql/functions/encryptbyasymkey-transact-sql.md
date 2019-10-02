@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 86bb2588-ab13-4db2-8f3c-42c9f572a67b
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: a9c0128fab05a83720bd7f4eedd8d2e200c62450
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1de142260dc0724656ca4cfdf286370d16def4b5
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68135887"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314598"
 ---
 # <a name="encryptbyasymkey-transact-sql"></a>ENCRYPTBYASYMKEY(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,8 +58,8 @@ EncryptByAsymKey ( Asym_Key_ID , { 'plaintext' | @plaintext } )
  
 데이터 형식입니다.  
   
-**@plaintext**  
-`ENCRYPTBYASYMKEY`는 비대칭 키로 암호화할 값을 보유하는 변수입니다. **@plaintext** 에는 다음이 있을 수 있습니다
+**\@일반 텍스트(plaintext)**  
+`ENCRYPTBYASYMKEY`는 비대칭 키로 암호화할 값을 보유하는 변수입니다. **\@일반 텍스트(plaintext)** 에는 다음이 있을 수 있습니다.
   
 + **binary**
 + **char**

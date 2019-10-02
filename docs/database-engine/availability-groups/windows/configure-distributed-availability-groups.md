@@ -1,6 +1,6 @@
 ---
 title: 분산 가용성 그룹 구성
-description: '분산 Always On 가용성 그룹을 만들고 구성하는 방법을 설명합니다. '
+description: 'Always On 분산 가용성 그룹을 만들고 구성하는 방법을 설명합니다. '
 ms.custom: seodec18
 ms.date: 08/17/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8b9e1151d5a757f42420c90519c79c3793cfef16
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354606"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250961"
 ---
-# <a name="configure-a-distributed-always-on-availability-group"></a>분산 Always On 가용성 그룹 구성  
+# <a name="configure-an-always-on-distributed-availability-group"></a>Always On 분산 가용성 그룹 구성  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 분산형 가용성 그룹을 만들려면 각각의 자체 수신기를 사용하여 두 개의 가용성 그룹을 만들어야 합니다. 그런 다음 이러한 가용성 그룹을 분산 가용성 그룹으로 결합해야 합니다. 다음 단계는 TRANSACT-SQL에서의 기본 예제를 제공합니다. 이 예제에서는 가용성 그룹 및 수신기를 만드는 데 관련된 자세한 내용을 다루지 않는 대신 주요 요구 사항을 집중적으로 다루고 있습니다.
@@ -178,6 +178,19 @@ GO
   
 > [!NOTE]  
 >  **LISTENER_URL** 은 가용성 그룹의 데이터베이스 미러링 엔드포인트와 함께 각 가용성 그룹에 대한 수신기를 지정합니다. 이 예제에서 수신기는 `5022` 포트(수신기를 만드는 데 사용된 `60173` 포트 아님)입니다. Azure의 인스턴스 등, 부하 분산 장치를 사용할 경우 [가용성 그룹 포트에 대해 부하 분산 규칙을 추가합니다](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group). SQL Server 인스턴스 포트 외에도 수신기 포트에 대한 규칙을 추가합니다. 
+
+### <a name="cancel-automatic-seeding-to-forwarder"></a>전달자에 대한 자동 시드 취소
+두 가용성 그룹이 동기화되기 전에 전달자의 초기화를 취소해야 하는 경우 전달자의 SEEDING_MODE 매개 변수를 MANUAL로 설정하여 분산 가용성 그룹을 ALTER하고 즉시 시드를 취소합니다. 전역 기본에서 명령을 실행합니다. 
+
+```sql
+-- Cancel automatic seeding.  Connect to global primary but specify DAG AG2
+ALTER AVAILABILITY GROUP [distributedag]   
+   MODIFY  
+   AVAILABILITY GROUP ON  
+   'ag2' WITH  
+   (  SEEDING_MODE = MANUAL  );   
+```
+
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>두 번째 클러스터에 분산 가용성 그룹 조인  
  그런 다음 두 번째 WSFC에 분산형 가용성 그룹을 조인합니다.  

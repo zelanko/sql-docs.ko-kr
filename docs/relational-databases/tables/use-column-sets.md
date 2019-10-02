@@ -14,12 +14,12 @@ ms.assetid: a4f9de95-dc8f-4ad8-b957-137e32bfa500
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: efc1a13d0ed05560558e0386ea051d3a9aaa85f2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1877f653244100126226b85b29a24ca458c1cf74
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140374"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326134"
 ---
 # <a name="use-column-sets"></a>열 집합 사용
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -91,14 +91,14 @@ ms.locfileid: "68140374"
 -   Null 값을 포함하는 스파스 열은 열 집합에 대한 XML 표현에서 생략됩니다.  
   
 > [!WARNING]  
->  열 집합을 추가하면 SELECT * 쿼리 동작이 변경됩니다. 쿼리는 열 집합을 XML 열로 반환하며 개별 스파스 열을 반환하지 않습니다. 스키마 디자이너 및 소프트웨어 개발자는 기존 애플리케이션에서 오류가 발생하지 않도록 주의해야 합니다.  
+>  열 집합을 추가하면 `SELECT *` 쿼리 동작이 변경됩니다. 쿼리는 열 집합을 XML 열로 반환하며 개별 스파스 열을 반환하지 않습니다. 스키마 디자이너 및 소프트웨어 개발자는 기존 애플리케이션에서 오류가 발생하지 않도록 주의해야 합니다.  
   
 ## <a name="inserting-or-modifying-data-in-a-column-set"></a>열 집합에서 데이터 삽입 또는 수정  
  개별 열 이름을 사용하거나 열 집합의 XML 형식을 통해 열 집합의 이름을 참조하고 열 집합의 값을 지정하여 스파스 열의 데이터 조작 작업을 수행할 수 있습니다. 스파스 열은 XML 열에서 어떤 순서로도 표시될 수 있습니다.  
   
  XML 열 집합을 사용하여 스파스 열 값을 삽입하거나 업데이트하는 경우 기본 스파스 열에 삽입된 값은 **xml** 데이터 형식에서 암시적으로 변환됩니다. 숫자 열의 경우 XML 숫자 열에 있는 빈 값이 빈 문자열로 변환됩니다. 이로 인해 다음 예에서처럼 0이 숫자 열에 삽입됩니다.  
   
-```  
+```sql  
 CREATE TABLE t (i int SPARSE, cs xml column_set FOR ALL_SPARSE_COLUMNS);  
 GO  
 INSERT t(cs) VALUES ('<i/>');  
@@ -109,7 +109,7 @@ GO
   
  이 예에서는 열 `i`에 값이 지정되지 않았지만 값 `0` 이 삽입되었습니다.  
   
-## <a name="using-the-sqlvariant-data-type"></a>sql_variant 데이터 형식 사용  
+## <a name="using-the-sql_variant-data-type"></a>sql_variant 데이터 형식 사용  
  **sql_variant** 데이터 형식은 **int**, **char**및 **date**와 같은 여러 다른 데이터 형식을 저장할 수 있습니다. 열 집합은 **sql_variant** 값에 연결된 소수 자릿수, 전체 자릿수 및 로캘 정보와 같은 데이터 형식 정보를 생성된 XML 열에서 특성으로 출력합니다. 사용자 지정하여 생성된 XML 문에 있는 이러한 특성을 열 집합의 삽입 또는 업데이트 작업에 대한 입력으로 제공하려는 경우에는 이 특성 중 일부가 필요하여 이러한 일부 특성에 기본값이 할당됩니다. 다음 표에서는 데이터 형식과 값이 제공되지 않은 경우 서버에서 생성하는 기본값을 나열합니다.  
   
 |데이터 형식|localeID*|sqlCompareOptions|sqlCollationVersion|SqlSortId|최대 길이|전체 자릿수|소수 자릿수|  
@@ -148,7 +148,7 @@ GO
 > [!NOTE]  
 >  이 테이블에는 테이블을 보다 잘 표시하고 읽을 수 있도록 열이 5개만 있습니다.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -166,7 +166,7 @@ GO
 ### <a name="b-inserting-data-to-a-table-by-using-the-names-of-the-sparse-columns"></a>2\. 스파스 열 이름을 사용하여 테이블에 데이터 삽입  
  다음 예에서는 예 1에서 만든 테이블에 두 개의 행을 삽입합니다. 이 예에서는 스파스 열 이름을 사용하고 열 집합을 참조하지 않습니다.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, ProductionSpecification, ProductionLocation)  
 VALUES (1, 'Tire Spec 1', 'AXZZ217', 27);  
 GO  
@@ -179,7 +179,7 @@ GO
 ### <a name="c-inserting-data-to-a-table-by-using-the-name-of-the-column-set"></a>C. 열 집합 이름을 사용하여 테이블에 데이터 삽입  
  다음 예에서는 예 1에서 만든 테이블에 세 번째 행을 삽입합니다. 이 예에서는 스파스 열 이름이 사용되지 않습니다. 대신 열 집합 이름이 사용되고 삽입 작업으로 인해 XML 형식의 스파스 열 4개 중 2개에 대한 값이 제공됩니다.  
   
-```  
+```sql  
 INSERT DocumentStoreWithColumnSet (DocID, Title, SpecialPurposeColumns)  
 VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>');  
 GO  
@@ -188,24 +188,23 @@ GO
 ### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. SELECT *가 사용되는 경우의 열 집합 결과 관찰  
  다음 예에서는 열 집합을 포함하는 테이블의 모든 열을 선택합니다. 이 예에서는 스파스 열의 조합 값과 함께 XML 열을 반환하며 스파스 열을 개별적으로 반환하지 않습니다.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns FROM DocumentStoreWithColumnSet ;  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>`  
-  
- `3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 2      Survey 2142  <MarketingSurveyGroup>Men 25 - 35</MarketingSurveyGroup>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation> 
+ ```
   
 ### <a name="e-observing-the-results-of-selecting-the-column-set-by-name"></a>E. 이름별로 열 집합을 선택한 결과 관찰  
  Production 부서는 마케팅 데이터에 관심이 없으므로 이 예에서는 `WHERE` 절을 추가하여 출력을 제한합니다. 이 예에서는 열 집합 이름을 사용합니다.  
   
-```  
+```sql  
 SELECT DocID, Title, SpecialPurposeColumns  
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -213,16 +212,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        SpecialPurposeColumns`  
-  
- `1     Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>`  
-  
- `3     Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>`  
-  
+ ```
+ DocID  Title        SpecialPurposeColumns  
+ 1      Tire Spec 1  <ProductionSpecification>AXZZ217</ProductionSpecification><ProductionLocation>27</ProductionLocation>  
+ 3      Tire Spec 2  <ProductionSpecification>AXW9R411</ProductionSpecification><ProductionLocation>38</ProductionLocation>  
+ ```
+ 
 ### <a name="f-observing-the-results-of-selecting-sparse-columns-by-name"></a>F. 이름별로 스파스 열을 선택한 결과 관찰  
  테이블에 열 집합이 포함되어 있으면 다음 예에서처럼 개별 열 이름을 사용하여 테이블을 쿼리할 수 있습니다.  
   
-```  
+```sql  
 SELECT DocID, Title, ProductionSpecification, ProductionLocation   
 FROM DocumentStoreWithColumnSet  
 WHERE ProductionSpecification IS NOT NULL ;  
@@ -230,16 +229,16 @@ WHERE ProductionSpecification IS NOT NULL ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- `DocID Title        ProductionSpecification ProductionLocation`  
-  
- `1     Tire Spec 1  AXZZ217                 27`  
-  
- `3     Tire Spec 2  AXW9R411                38`  
-  
+ ```
+ DocID  Title        ProductionSpecification ProductionLocation`  
+ 1      Tire Spec 1  AXZZ217                 27`  
+ 3      Tire Spec 2  AXW9R411                38`  
+ ```
+ 
 ### <a name="g-updating-a-table-by-using-a-column-set"></a>G. 열 집합을 사용하여 테이블 업데이트  
  다음 예에서는 해당 행에서 사용하는 스파스 열 모두에 대해 세 번째 레코드를 새 값으로 업데이트합니다.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification><ProductionLocation>38</ProductionLocation>'  
 WHERE DocID = 3 ;  
@@ -251,7 +250,7 @@ GO
   
  다음 예에서는 세 번째 레코드를 업데이트하지만 채워진 두 열 중 하나의 값만 지정합니다. 세 번째 열 `ProductionLocation` 은 `UPDATE` 문에 포함되지 않으며 NULL로 업데이트됩니다.  
   
-```  
+```sql  
 UPDATE DocumentStoreWithColumnSet  
 SET SpecialPurposeColumns = '<ProductionSpecification>ZZ285W</ProductionSpecification>'  
 WHERE DocID = 3 ;  

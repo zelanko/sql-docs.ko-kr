@@ -24,12 +24,12 @@ ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 564edb184c5b9d56159c6b931557daf85beeb295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117724"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341996"
 ---
 # <a name="stuff-transact-sql"></a>STUFF(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  삭제 및 삽입 시작 위치를 지정하는 정수 값입니다. *start*가 음수 또는 0이면 Null 문자열이 반환됩니다. *start*가 첫 번째 *character_expression*보다 긴 경우 null 문자열이 반환됩니다. *start*는 **bigint** 형식일 수 있습니다.  
   
  *length*  
- 삭제할 문자 수를 지정하는 정수입니다. *length*가 음수이면 null 문자열이 반환됩니다. *length*가 첫 번째 *character_expression*보다 긴 경우 마지막 *character_expression*의 마지막 문자까지 삭제됩니다.  *length*가 0인 경우 문자열의 첫 번째 문자 앞에서 삽입됩니다. *length*는 **bigint** 형식일 수 있습니다.
+ 삭제할 문자 수를 지정하는 정수입니다. *length*가 음수이면 null 문자열이 반환됩니다. *length*가 첫 번째 *character_expression*보다 긴 경우 마지막 *character_expression*의 마지막 문자까지 삭제됩니다.  *길이*가 0인 경우, *시작* 위치에 삽입이 발생하고 어떤 문자도 삭제되지 않습니다. *length*는 **bigint** 형식일 수 있습니다.
 
  *replaceWith_expression*  
  문자 데이터의 [식](../../t-sql/language-elements/expressions-transact-sql.md)입니다. *character_expression*은 문자나 이진 데이터의 상수, 변수 또는 열일 수 있습니다. 이 식은 *character_expression*에서 *start*부터 *length*문자를 바꿉니다. `NULL`를 *replaceWith_expression*으로 제공할 경우 아무 것도 삽입하지 않고 문제를 제거합니다.   

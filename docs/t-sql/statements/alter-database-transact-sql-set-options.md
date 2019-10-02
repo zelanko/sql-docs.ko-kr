@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1214bde9a4c36a928f21c43b63c067cbb7bd0340
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: dc330893a5857062161c45fc6775d6f26140ee11
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163918"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227175"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE SET 옵션(Transact-SQL)
 
@@ -3042,7 +3042,9 @@ command|Like|%DWResultCacheDb%|
 1. 새 쿼리와 결과 집합 캐시를 생성한 이전 쿼리가 정확히 일치합니다.
 1. 캐시된 결과 집합이 생성된 테이블에는 데이터 또는 스키마 변경 내용이 없습니다.  
 
-데이터베이스에 대해 결과 집합 캐싱을 설정하면 DateTime.Now()와 같은 비결정적 함수가 있는 쿼리를 제외하고 캐시가 가득 찰 때까지 모든 쿼리에 대해 결과가 캐시됩니다.   큰 결과 집합(예: > 1 백만 행)이 있는 쿼리는 결과 캐시가 생성될 때 첫 번째 실행 중에 성능이 저하될 수 있습니다.
+데이터베이스에 대해 결과 집합 캐싱을 설정하면 DateTime.Now()와 같은 비결정적 함수가 있는 쿼리 및 64KB보다 크기가 큰 행을 가진 데이터를 반환하는 쿼리를 제외하고 캐시가 가득 찰 때까지 모든 쿼리에 대해 결과가 캐시됩니다.   
+
+큰 결과 집합(예: > 1 백만 행)이 있는 쿼리는 결과 캐시가 생성될 때 첫 번째 실행 중에 성능이 저하될 수 있습니다.
 
 **<snapshot_option> ::=**        
 

@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 65438f911246038cee272763e19be12b5860b463
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: c7efb49870e148b6a854547d39d4a01139829a89
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70911192"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326124"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 미리 보기 릴리스 정보
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -60,17 +60,6 @@ Windows, Linux 및 컨테이너에서 SQL Server 2019 RC의 빌드 번호는 `15
     - Microsoft .NET Framework 4.6.2. [다운로드 센터](https://www.microsoft.com/download/details.aspx?id=53344)에서 제공됩니다.
     - Linux의 경우 [Linux - 지원되는 플랫폼](../linux/sql-server-linux-setup.md#supportedplatforms)을 참조하세요.
 
-## <a name = "release-notes"></a>지원에서 제외되는 기능
-
-- **문제 및 고객 영향**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]는 다음과 같은 구성 요소, 기능 및 시나리오에 대한 지원을 제외합니다.
-  - SQL Server Analysis Services
-  - SQL Server Reporting Services
-  - Kubernetes에 대한 Always On 가용성 그룹
-
-- **해결 방법**: 없음 제외는 SQL 얼리어답터 프로그램 참가자를 포함하여 모든 고객에게 적용됩니다.
-
-- **적용 대상**: 릴리스 후보
-
 ## <a name="updated-compiler"></a>컴파일러 업데이트
 
 - **문제 및 고객에게 미치는 영향**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]는 업데이트 컴파일러를 사용하여 빌드됩니다. CTP 2.1에서는 부동 소수점 및 다른 변환 시나리오가 업데이트된 컴파일러 때문에 이전 버전과 다른 값을 반환할 수 있다는 알려진 문제가 발생했습니다. CTP 2.2에는 영향을 받는 시나리오가 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]라는 이전 버전과 동일한 결과를 반환하는지 확인하는 작업이 포함됩니다. 릴리스 후보 릴리스부터는 다른 문제가 발생하지 않았습니다. [!INCLUDE[ss2017](../includes/sssqlv14-md.md)]와 비교하여 비정상적인 결과를 즉시 [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 팀](https://aka.ms/sqlfeedback)에게 보고해주세요.
@@ -114,7 +103,7 @@ Windows, Linux 및 컨테이너에서 SQL Server 2019 RC의 빌드 번호는 `15
 
 ## <a name="sql-server-configuration-manager-may-not-start"></a>SQL Server 구성 관리자가 시작하지 않을 수도 있습니다.
 
-- **문제 및 고객에게 미치는 영향**: VCRuntime 140이 없는 시스템에서는 SSCM(SQL Server Configuration Manager)이 시작되지 않습니다. SSCM을 시작할 때 다음 대화 상자가 표시될 수 있습니다. 
+- **문제 및 고객에게 미치는 영향**: VCRuntime 140(VCRUNTIME140.dll) 파일이 없는 머신에서는 SSCM(SQL Server 구성 관리자)이 시작되지 않습니다. SSCM을 시작할 때 다음 대화 상자가 표시될 수 있습니다. 
 
 
   `MMC could not create the snap-in. The snap-in might not have been installed correctly.`

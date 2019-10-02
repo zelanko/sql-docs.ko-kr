@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 47ab25b42800eaf668f2b258cf51608e6d66e580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15f8ca09a12e90db4c9493b9283793f6e9677934
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014480"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250980"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 가용성 그룹에 대한 필수 조건, 제한 사항 및 권장 사항
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +268,7 @@ ms.locfileid: "68014480"
   
 -   **가용성 그룹 및 컴퓨터당 가용성 데이터베이스의 최대 수:** 컴퓨터(가상 머신 또는 물리적 컴퓨터)에 만들 수 있는 데이터베이스와 가용성 그룹의 실제 수는 하드웨어 및 작업에 따라 다르며 정해진 제한은 없습니다. Microsoft는 물리적 컴퓨터당 최대 10개의 AG와 100개의 DB를 테스트했으며, 하지만 이것이 바인딩 제한은 아닙니다. 서버의 하드웨어 사양 및 워크로드에 따라 더 많은 수의 데이터베이스와 가용성 그룹을 SQL Server 인스턴스에 배치할 수 있습니다. 오버로드된 시스템 징후에는 작업자 스레드 소진, 가용성 그룹 시스템 뷰와 DMV에 대한 느린 응답 시간 및/또는 대기된 디스패처 시스템 덤프 및 기타 징후가 포함될 수 있습니다. 해당 애플리케이션 SLA 내에서 최대 작업량을 처리할 수 있도록 하기 위해 프로덕션 환경과 유사한 작업으로 환경을 철저히 테스트하세요. SLA를 고려할 경우 예상 응답 시간뿐 아니라 오류 상태에서의 로드를 검토해야 합니다.  
   
--   **장애 조치(Failover) 클러스터 관리자를 사용하여 가용성 그룹을 조작하지 마세요.**  
+-   **장애 조치(Failover) 클러스터 관리자를 사용하여 가용성 그룹을 조작하지 마세요**. SQL Server 장애 조치(Failover) 클러스터 인스턴스(FCI)의 상태는 SQL Server와 WSFC(Windows 장애 조치(failover) 클러스터) 간에 공유되며, SQL Server 클러스터에 관해 클러스터에 보다 더 자세한 상태 정보를 유지합니다. 관리 모델은 SQL Server가 트랜잭션을 구동해야 하며, 상태에 대한 클러스터의 보기를 SQL Server의 상태 뷰와 동기화 상태로 유지할 책임을 집니다. 클러스터의 상태가 SQL Server 외부에서 변경되는 경우 WSFC와 SQL Server 간에 상태가 동기화되지 않을 수 있으며 이로 인해 예기치 않은 동작이 발생할 수 있습니다.
   
      예를 들어  
   

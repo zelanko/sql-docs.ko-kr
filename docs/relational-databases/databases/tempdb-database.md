@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653779"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326113"
 ---
 # <a name="tempdb-database"></a>tempdb 데이터베이스
 
@@ -47,7 +47,9 @@ ms.locfileid: "69653779"
   - 온라인 인덱스 작업, MARS(Multiple Active Result Sets) 및 AFTER 트리거 같은 기능에 대한 데이터 수정 트랜잭션에서 생성된 행 버전  
   
 트랜잭션을 롤백할 수 있도록 **tempdb** 내의 작업은 최소한으로 로깅됩니다. 시스템이 항상 깨끗한 데이터베이스 복사본으로 시작되도록**를 시작할 때마다** tempdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 가 다시 생성됩니다. 연결이 끊길 때 임시 테이블 및 저장 프로시저는 자동으로 제거되고 시스템이 종료될 때 활성 상태인 연결이 없습니다. 따라서 **tempdb** 에 있는 어떠한 내용도 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 의 한 세션에서 다른 세션으로 저장되지 않습니다. **tempdb**에서는 백업 및 복원 작업이 허용되지 않습니다.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server에서 tempdb의 물리적 속성
 
 다음 표에는 Model 데이터베이스에 대한 기본값을 기반으로 하는 SQL Server의 **tempdb** 데이터 및 로그 파일의 초기 구성 값이 나열되어 있습니다. 이러한 파일의 크기는 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]버전에 따라 조금씩 다를 수 있습니다.  
@@ -242,9 +244,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     COMMIT TRAN
     ```
 3. 메모리 최적화 테이블에 대한 쿼리는 잠금 및 분리 힌트를 지원하지 않으므로 메모리 최적화 tempdb 카탈로그 보기에 대한 쿼리는 잠금 및 분리 힌트를 유지하지 않습니다. SQL Server의 다른 시스템 카탈로그 보기와 마찬가지로 시스템 보기에 대한 모든 트랜잭션은 READ COMMITTED(또는 이 경우 READ COMMITTED SNAPSHOT) 분리 내에 있습니다.
-4. 메모리 최적화 tempdb 메타데이터가 활성화된 경우 임시 테이블에 대한 columnstore 인덱스에 일부 문제가 있을 수 있습니다. 이 미리 보기 릴리스에서는 메모리 최적화 tempdb 메타데이터를 사용하는 경우 임시 테이블에 대한 columnstore 인덱스를 사용하지 않는 것이 좋습니다.
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4. 메모리 최적화 tempdb 메타데이터가 활성화된 경우 임시 테이블에 대한 [columnstore 인덱스](../indexes/columnstore-indexes-overview.md)를 생성할 수 없습니다.
 
 > [!NOTE] 
 > 이 제한 사항은 tempdb 시스템 보기를 참조하는 경우에만 적용되며 원하는 경우 사용자 데이터베이스의 메모리 최적화 테이블을 액세스할 때 동일한 트랜잭션에서 임시 테이블을 만들 수 있습니다.
@@ -253,6 +253,8 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 ```
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
+
+메모리 최적화 TempDB 메타데이터를 사용하도록 설정한 후 어떤 이유로든 서버를 시작할 수 없는 경우 **-f** 시작 옵션을 사용하여 [minimal 구성](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)으로 SQL Server를 시작하여 기능을 무시할 수 있습니다. 이렇게 하면 기능을 사용하지 않도록 설정한 다음 표준 모드로 SQL Server를 다시 시작할 수 있습니다.
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server의 tempdb 용량 계획
 

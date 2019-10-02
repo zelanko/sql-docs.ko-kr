@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4950d787-40fa-4e26-bce8-2cb2ceca12fb
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: febf3a874ba0632c90117d52e74ce31926bfbbc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9653e799a543dd95a7d6fb033e0a8d5b9a4484a8
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118945"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314528"
 ---
 # <a name="decryptbycert-transact-sql"></a>DECRYPTBYCERT(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
 인증서의 프라이빗 키를 암호화하는 데 사용되는 암호입니다. *cert_password*는 유니코드 데이터 형식을 가져야 합니다.  
   
  @cert_password  
-인증서의 프라이빗 키를 암호화하는 데 사용되는 암호를 포함하는 **nchar** 또는 **nvarchar** 형식의 변수입니다. *@cert_password* 는 유니코드 데이터 형식을 가져야 합니다.  
+인증서의 프라이빗 키를 암호화하는 데 사용되는 암호를 포함하는 **nchar** 또는 **nvarchar** 형식의 변수입니다. *\@cert_password*는 유니코드 데이터 형식을 가져야 합니다.  
 
 ## <a name="return-types"></a>반환 형식  
 최대 크기가 8,000바이트인 **varbinary**입니다.  

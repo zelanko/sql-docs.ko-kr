@@ -1,31 +1,37 @@
 ---
-title: Linux에 SQL Server Machine Learning Services(R, Python) 설치
-description: Red Hat, Ubuntu 및 SUSE에 SQL Server Machine Learning Services(R, Python)를 설치하는 방법을 알아봅니다.
+title: Linux에 SQL Server Machine Learning Services(Python, R) 설치
+description: Linux에 SQL Server Machine Learning Services(Python 및 R) 설치하는 방법에 대해 알아보세요. Red Hat, Ubuntu 및 SUSE.
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 91bacc4ab4c8876ac49a09b58d1821f1c2853a3c
-ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
+ms.openlocfilehash: b3d2fb6c05a078e222a68e8de8998d4edff3c1a8
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913559"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271972"
 ---
-# <a name="install-sql-server-machine-learning-services-r-python-on-linux"></a>Linux에 SQL Server Machine Learning Services(R, Python) 설치
+# <a name="install-sql-server-machine-learning-services-python-and-r-on-linux"></a>Linux에 SQL Server Machine Learning Services(Python 및 R) 설치
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-[SQL Server Machine Learning Services](../advanced-analytics/index.yml)는 SQL Server 2019의 이 미리 보기 릴리스부터 Linux 운영 체제에서 실행됩니다. 이 문서의 단계를 따라 R 및 Python용 기계 학습 확장을 설치합니다.
+이 문서에서는 Linux에서 [SQL Server Machine Learning Services](../advanced-analytics/index.yml)를 설치하는 방법을 설명합니다. Machine Learning Services를 사용하여 데이터베이스에서 R 또는 Python 스크립트를 실행할 수 있습니다.
 
-기계 학습 및 프로그래밍 확장은 데이터베이스 엔진의 추가 기능입니다. [데이터베이스 엔진과 Machine Learning Services를 동시에 설치](#install-all)할 수 있지만, 더 많은 구성 요소를 추가하기 전에 문제를 해결할 수 있도록 먼저 SQL Server 데이터베이스 엔진을 설치하고 구성하는 것이 좋습니다. 
+지원되는 Linux 배포판은 다음과 같습니다.
 
-R 및 Python 확장의 패키지 위치는 SQL Server Linux 원본 리포지토리에 있습니다. 데이터베이스 엔진 설치에 대한 원본 리포지토리를 이미 구성한 경우 동일한 리포지토리 등록을 사용하여 **mssql-mlservices** 패키지 설치 명령을 실행할 수 있습니다.
+- RHEL(Red Hat Enterprise Linux)
+- SLES(SUSE Linux Enterprise Server)
+- Ubuntu
+
+Machine Learning Services는 데이터베이스 엔진에 대한 기능 추가 기능입니다. [데이터베이스 엔진과 Machine Learning Services를 동시에 설치](#install-all)할 수 있지만, 더 많은 구성 요소를 추가하기 전에 문제를 해결할 수 있도록 먼저 SQL Server 데이터베이스 엔진을 설치하고 구성하는 것이 좋습니다. 
+
+Python 및 R 확장의 패키지 위치는 SQL Server Linux 원본 리포지토리에 있습니다. 데이터베이스 엔진 설치에 대한 원본 리포지토리를 이미 구성한 경우 동일한 리포지토리 등록을 사용하여 **mssql-mlservices** 패키지 설치 명령을 실행할 수 있습니다.
 
 Machine Learning Services는 Linux 컨테이너에서도 지원됩니다. Machine Learning Services는 사용하는 미리 빌드된 컨테이너는 제공하지 않지만 [GitHub에서 이용 가능한 예제 템플릿](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices)을 사용하여 SQL Server 컨테이너에서 만들 수 있습니다.
 
@@ -52,8 +58,8 @@ ls /opt/microsoft/mssql/bin
 
 | 플랫폼  | 패키지 제거 명령 | 
 |-----------|----------------------------|
-| RHEL  | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
-| SLES  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
+| Red Hat   | `sudo yum remove microsoft-r-open-mro-3.4.4`<br/>`sudo yum remove msssql-mlservices-python` |
+| SUSE  | `sudo zypper remove microsoft-r-open-mro-3.4.4`<br/>`sudo zypper remove msssql-mlservices-python` |
 | Ubuntu    | `sudo apt-get remove microsoft-r-open-mro-3.4.4`<br/>`sudo apt-get remove msssql-mlservices-python`|
 
 > [!Note]
@@ -74,7 +80,7 @@ ls /opt/microsoft/mssql/bin
 
 2. 운영 체제에 대한 패키지 관리자 및 구문을 사용하여 설치 명령을 실행합니다. 
 
-   + [RedHat](#RHEL)
+   + [Red Hat](#RHEL)
    + [Ubuntu](#ubuntu)
    + [SUSE](#suse)
 
@@ -128,7 +134,7 @@ dpkg -i packages-microsoft-prod.deb
 sudo apt-get update
 ```
 
-#### <a name="mro-on-rhel"></a>RHEL의 MRO
+#### <a name="mro-on-red-hat"></a>Red Hat의 MRO
 
 ```bash
 # Import the Microsoft repository key
@@ -143,6 +149,7 @@ rpm -Uvh https://packages.microsoft.com/config/rhel/7/packages-microsoft-prod.rp
 # Update packages on your system (optional)
 yum update
 ```
+
 #### <a name="mro-on-suse"></a>SUSE의 MRO
 
 ```bash
@@ -531,7 +538,7 @@ Linux의 R 및 Python 통합은 아직 개발 중입니다. 미리 보기 버전
 
 R 개발자는 몇 가지 간단한 예제를 시작하고 R이 SQL Server에서 작동하는 방식의 기초를 알아볼 수 있습니다. 다음 단계로 가려면 아래 링크를 참조하세요.
 
-+ [자습서: T-SQL에서 R 사용](../advanced-analytics/tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [자습서: T-SQL에서 R 사용](../advanced-analytics/tutorials/quickstart-r-create-script.md)
 + [자습서: R 개발자를 위한 데이터베이스 내 분석](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python 개발자는 다음 자습서에 따라 SQL Server에서 Python을 사용하는 방법을 알아볼 수 있습니다.

@@ -1,6 +1,6 @@
 ---
 title: SQL Server 설명서 | Microsoft Docs
-ms.date: 08/08/2019
+ms.date: 09/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
-monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 580b54e761e3d728496d4fede2c758c378bcedd7
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>= aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sql-server-previousversions||=sqlallproducts-allversions
+ms.openlocfilehash: 098f27712b99fd5606aeb367b284f3f5201b68e7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284600"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299126"
 ---
 # <a name="sql-server-documentation"></a>SQL Server 설명서
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server는 Microsoft 데이터 플랫폼의 핵심 요소입니다. SQL Server는 ODBMS(운영 데이터베이스 관리 시스템)의 선두 주자입니다. 이 설명서를 통해 Windows 및 Linux에 SQL Server를 설치하고, 구성하며, 사용할 수 있습니다. 콘텐츠는 엔드투엔드 예제, 코드 샘플 및 비디오를 포함합니다. SQL Server 언어 항목은 [언어 참조](../t-sql/language-reference.md)를 참조하세요.
@@ -113,6 +113,27 @@ SQL Server 2014 및 SQL Server 2005를 비롯한 이전 버전의 설명서는 [
 |![Replication Services](../sql-server/media/replication-services.png "Replication Services")|**[복제](../relational-databases/replication/sql-server-replication.md)**<br /><br /> 복제는 한 데이터베이스에서 다른 데이터베이스로 데이터 및 데이터베이스 개체를 복사 및 배포한 다음 데이터베이스 간에 동기화를 수행하여 일관성을 유지하는 일련의 기술입니다. 복제를 사용하면 LAN 및 WAN, 전화 접속 연결, 무선 연결 및 인터넷을 통해 데이터를 여러 다른 위치로 배포하고 원격 또는 모바일 사용자에게 배포할 수 있습니다.|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server DQS(Data Quality Services)는 기술 자료 기반 데이터 정리 솔루션을 제공합니다. DQS를 사용하면 기술 자료를 작성한 다음 해당 기술 자료를 사용하여 컴퓨터 기반 및 대화형 방법을 통해 데이터에 대한 데이터 수정 및 중복 제거를 수행할 수 있습니다. 클라우드 기반 참조 데이터 서비스를 사용할 수 있으며, SQL Server Integration Services 및 Master Data Services와 DQS를 통합하는 데이터 관리 솔루션을 작성할 수 있습니다.|
 |![Master  Data  Services](../sql-server/media/master-data-services.png)|**[Master Data Services](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 는 마스터 데이터 관리를 위한 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 솔루션입니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 에서 작성된 솔루션을 사용하면 정확한 정보를 기반으로 보고와 분석을 수행할 수 있습니다. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]를 사용하여 마스터 데이터에 대한 중앙 리포지토리를 만들고 시간 경과에 따라 변경되는 데이터의 감사 가능 및 보안 가능 레코드를 유지 관리합니다.|
+| &nbsp; | &nbsp; |
+
+## <a name="other-members-of-the-sql-server-family"></a>SQL Server 제품군의 기타 제품
+
+| 속성 | Https URL 루트 |
+| :--- | :------------- |
+| Azure SQL Database 단일 데이터베이스 | [https://docs.microsoft.com/azure/sql-database/](/azure/sql-database/) |
+| Azure SQL Database 관리되는 인스턴스 | [https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance](/azure/sql-database/sql-database-managed-instance) |
+| VM(가상 머신)의 SQL Server | [https://docs.microsoft.com/azure/virtual-machines/windows/sql/](/azure/virtual-machines/windows/sql/) |
+| SQL Data Warehouse | [https://docs.microsoft.com/azure/sql-data-warehouse/](/azure/sql-data-warehouse/) |
+| APS(분석 플랫폼 시스템) | [https://docs.microsoft.com/sql/analytics-platform-system/](../analytics-platform-system/index.md) <br/><br/> _참고:_ APS는 MPP(대량 병렬 처리) 데이터 웨어하우스를 실행하는 소프트웨어인 SQL Server [PDW(병렬 데이터 웨어하우스)](../analytics-platform-system/parallel-data-warehouse-overview.md)를 호스트합니다. |
+| SQL Server on Linux | [https://docs.microsoft.com/sql/linux/](../linux/index.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="cousins-of-sql-server"></a>SQL Server Cousins
+
+| 속성 | Https URL 루트 |
+| :--- | :------------- |
+| PostgreSQL 데이터베이스 | [https://docs.microsoft.com/azure/postgresql/](/azure/postgresql/) |
+| MySQL 데이터베이스 | [https://docs.microsoft.com/azure/mysql/](/azure/mysql/) |
+| NoSQL: &nbsp; Azure Cosmos DB | [https://docs.microsoft.com/azure/cosmos-db/](/azure/cosmos-db/) |
 | &nbsp; | &nbsp; |
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"

@@ -2,7 +2,7 @@
 title: Microsoft SQL 데이터베이스의 스칼라 UDF 인라인 처리 | Microsoft Docs
 description: 스칼라 UDF 인라인 처리 기능은 SQL Server(2018 이상) 및 Azure SQL Database에서 스칼라 UDF를 호출하는 쿼리의 성능 향상을 위한 것입니다.
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 6492c08242e927ac7f5356f96f4da02465ece547
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030332"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299134"
 ---
 # <a name="scalar-udf-inlining"></a>스칼라 UDF 인라인 처리
 
@@ -154,7 +154,8 @@ UDF의 논리 복잡성에 따라 결과적인 쿼리 계획이 더 크고 복�
 - UDF는 `EXECUTE AS CALLER` 절을 사용합니다(`EXECUTE AS` 절을 지정하지 않은 경우 기본 동작).
 - UDF는 테이블 변수나 테이블 값 매개 변수를 참조하지 않습니다.
 - 스칼라 UDF를 호출하는 쿼리는 `GROUP BY` 절에서 스칼라 UDF 호출을 참조하지 않습니다.
-- `DISTINCT` 절을 사용한 선택 목록에서 스칼라 UDF를 호출하는 쿼리는 `ORDER BY` 절에서 스칼라 UDF 호출을 참조하지 않습니다.
+- `DISTINCT` 절을 사용한 선택 목록에서 스칼라 UDF를 호출하는 쿼리는 `ORDER BY` 절이 없습니다.
+- UDF는 `ORDER BY` 절에서 사용되지 않습니다.
 - UDF는 원시적으로 컴파일됩니다(호환성 지원).
 - UDF는 계산된 열 또는 제약 조건 확인 정의에서 사용되지 않습니다.
 - UDF는 사용자 정의 형식을 참조하지 않습니다.

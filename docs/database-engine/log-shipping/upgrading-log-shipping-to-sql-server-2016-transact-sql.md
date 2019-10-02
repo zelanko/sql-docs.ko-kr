@@ -11,16 +11,16 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1006e7cb677ec6d06af633191b10ab1f341ef1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8608d91495ca255a0205247a557687ad32ac46df
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020792"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227141"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>SQL Server 2016으로 로그 전달 업그레이드(Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달 구성에서 새 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전, 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]서비스 팩, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]누적 업데이트로 업그레이드할 경우 적적한 순서로 로그 전달 서버를 업그레이드하면 로그 전달 재해 복구 솔루션이 보존됩니다.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 로그 전달 구성에서 새 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 버전, 새 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 서비스 팩, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 누적 업데이트로 업그레이드할 경우 적적한 순서로 로그 전달 서버를 업그레이드하면 로그 전달 재해 복구 솔루션이 보존됩니다.  
   
 > [!NOTE]  
 >  [백업 압축](../../relational-databases/backup-restore/backup-compression-sql-server.md) 은 [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)]에서 도입되었습니다. 업그레이드된 로그 전달 구성은 **백업 압축 기본값** 서버 수준 구성 옵션을 사용하여 백업 압축을 트랜잭션 로그 백업 파일에 사용할지 여부를 제어합니다. 로그 백업에 대한 백업 압축 동작은 각 로그 전달 구성에 지정할 수 있습니다. 자세한 내용은 [로그 전달 구성&#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)에서 도입되었습니다.  

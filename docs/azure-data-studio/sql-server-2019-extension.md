@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878619"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326025"
 ---
-# <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 확장(미리 보기)
+# <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>Azure Data Studio용 SQL Server 2019 확장(미리 보기)
 
-SQL Server 2019 확장(미리 보기)은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 지원에 제공되는 새로운 기능 및 지원 기능에 대한 미리 보기 지원을 제공합니다. 여기에는 [SQL Server 2019 빅 데이터 클러스터](../big-data-cluster/big-data-cluster-overview.md), 통합 [Notebook 환경](../big-data-cluster/notebooks-guidance.md) 및 PolyBase [외부 테이블 만들기 마법사](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)에 대 한 미리 보기 지원이 포함됩니다.
+Azure Data Studio용 SQL Server 2019 확장(미리 보기)은 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 지원에 제공되는 새로운 기능 및 지원 기능에 대한 미리 보기 지원을 제공합니다. 여기에는 [SQL Server 2019 빅 데이터 클러스터](../big-data-cluster/big-data-cluster-overview.md), 통합 [Notebook 환경](../big-data-cluster/notebooks-guidance.md) 및 PolyBase [외부 테이블 만들기 마법사](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)에 대 한 미리 보기 지원이 포함됩니다.
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>SQL Server 2019 확장(미리 보기) 설치
 
@@ -41,7 +41,7 @@ SQL Server 2019 확장(미리 보기)을 설치하려면 연결된 .vsix 파일�
 
 1. 다시 로드하면 확장 기능이 종속성을 설치합니다. 출력 창에서 진행률을 볼 수 있으며 몇 분 정도 걸릴 수 있습니다.
 
-1. 종속성 설치가 끝나면 Azure Data Studio을 닫았다가 다시 엽니다. **SQL Server 빅 데이터 클러스터** 연결 유형은 Azure Data Studio를 다시 시작해야만 사용할 수 있습니다. 
+1. 종속성 설치가 끝나면 Azure Data Studio을 닫았다가 다시 엽니다. **SQL Server 빅 데이터 클러스터** 연결 유형은 Azure Data Studio를 다시 시작해야만 사용할 수 있습니다.
 
 ## <a name="changes-in-release-016"></a>릴리스 0.16의 변경 내용
 * 외부 테이블 만들기 마법사:
@@ -143,58 +143,3 @@ Extender를 지원하는 다양한 개선 기능이 이 릴리스에 추가되�
 * 대상 서버에서 PolyBase를 사용하도록 설정하지 않았거나 실행하고 있지 않은 경우에는 외부 데이터 만들기 마법사의 사용을 차단합니다.
 * SQL Server 2019 및 외부 데이터 만들기와 관련해서 철자 및 이름이 수정되었습니다.
 * Azure Data Studio 디버그 콘솔에서 다수의 오류가 제거되었습니다.
-
-##  <a name="sql-server-2019-big-data-cluster-support"></a>SQL Server 2019 빅 데이터 클러스터 지원
-
-* *개체 탐색기*에서 **연결 추가**를 클릭하고 연결 형식응로 **SQL Server 빅 데이터 클러스터**를 선택합니다.
-
-   > [!TIP]
-   > **SQL Server 빅 데이터 클러스터** 연결 형식이 표시되지 않으면 Azure Data Studio를 다시 시작합니다.
-
-* 클러스터 엔드포인트의 호스트 이름 또는 IP 주소와 연결에 사용되는 사용자 이름 및 암호를 입력합니다.
-* 필요에 따라 **이름** 필드에 표시 이름을 포함합니다.
-* **연결**을 클릭하고 대시보드에서 일반 작업을 시작한 후 개체 탐색기에서 **HDFS**를 찾습니다. 여기에서 컨텍스트 내 작업을 실행할 수 있습니다.
-* 클러스터에 대해 Spark 작업을 제출하려면 작업 *개체 탐색기*에서 서버 노드를 마우스 오른쪽 단추로 클릭하고 **Spark 작업 제출**을 선택하여 제출 대화 상자를 표시합니다.
-* Notebook을 열려면 다음 섹션을 참조하세요.
-
-자세한 내용은 [빅 데이터 클러스터](../big-data-cluster/big-data-cluster-overview.md)를 참조하세요.
-
-
-## <a name="azure-data-studio-notebooks"></a>Azure Data Studio Notebook
-
-* 다음 방법 중 하나로 Notebook을 엽니다.
-  * *명령 팔레트*에서 새 Notebook을 엽니다.
-  * SQL Server 2019 빅 데이터 클러스터에 대한 HDFS 개체 탐색기 트리를 열고 다음 중 하나를 수행합니다.
-    * 서버 노드를 마우스 오른쪽 단추로 클릭하고 **새 Jupyter Notebook**을 선택합니다.
-    * CSV 파일을 마우스 오른쪽 단추로 클릭하고 **Notebook에서 분석**을 선택합니다.
-  * **파일** 메뉴 또는 파일 탐색기에서 기존 .ipverb 파일을 엽니다 *(.ipverb 파일을 제대로 로드하려면 버전 4 이상으로 업그레이드해야 함)*.
-* 커널을 선택합니다. 로컬 Notebook 실행의 경우 Python 3을 선택합니다. 원격 실행의 경우 PySpark 또는 Spark | Scala를 선택합니다.
-* 원격으로 실행하는 경우 연결할 SQL Server 빅 데이터 클러스터 엔드포인트를 선택합니다(Python 3를 사용한 로컬 개발에는 필요하지 않음).
-* Notebook 헤더의 단추를 통해 코드 또는 Markdown 셀을 추가합니다. 각 셀의 왼쪽에 있는 휴지통 아이콘을 사용하여 셀을 제거합니다.
-* 코드 셀에 대해 재생 단추를 사용하여 셀을 실행하고 눈 모양 아이콘으로 Markdown 편집 및 미리 보기를 설정/해제합니다.
-
-## <a name="polybase-create-external-table-wizard"></a>PolyBase 외부 테이블 만들기 마법사
-
-* SQL Server 2019 인스턴스에서 *외부 테이블 만들기 마법사*를 다음과 같은 세 가지 방법으로 열 수 있습니다.
-  * 서버를 마우스 오른쪽 단추로 클릭하고 **관리**를 선택한 다음, SQL Server 2019(미리 보기) 탭을 클릭하고 **외부 테이블 만들기**를 선택합니다.
-  * *개체 탐색기*에서 SQL Server 2019 인스턴스를 선택한 상태로 *명령 팔레트*를 통해 *외부 만들기 마법사*를 엽니다.
-  * *개체 탐색기*에서 SQL Server 2019 데이터베이스를 마우스 오른쪽 단추로 클릭하고 **외부 테이블 만들기**를 선택합니다.
-* 이 확장 버전에서는 원격 SQL Server 및 Oracle 테이블에 액세스하기 위해 외부 테이블을 만들 수 있습니다.
-
-  > [!NOTE]
-  > 외부 테이블 기능은 SQL 2019 기능이며, 원격 SQL Server는 이전 버전의 SQL Server를 실행할 수 있습니다.
-
-* 마법사의 첫 번째 페이지에서 SQL Server에 액세스할지 또는 Oracle에 액세스할지를 선택하고 계속합니다.
-* 데이터베이스 마스터 키가 아직 만들지 않은 경우 만들라는 메시지가 표시됩니다(복잡성이 부족한 암호는 차단됨).
-* 원격 서버에 대해 데이터 원본 연결 및 명명된 자격 증명을 만듭니다.
-* 새 외부 테이블에 매핑할 개체를 선택합니다.
-* **스크립트 생성** 또는 **만들기**를 선택하여 마법사를 완료합니다.
-* 외부 테이블을 만들면 해당 테이블이 만들어진 데이터베이스의 개체 트리에 바로 표시됩니다.
-
-
-## <a name="known-issues"></a>알려진 문제
-
-* 연결을 만들 때 암호를 저장하지 않으면 Spark 작업 제출 등의 일부 작업이 실패할 수 있습니다.
-* 뷰어에서 콘텐츠를 로드하려면 기존 .ipynb Notebook을 버전 4 이상으로 업그레이드해야 합니다.
-* **Notebook 종속성 다시 설치** 명령을 실행하면 작업 보기에 2개의 작업이 표시될 수 있으며, 그 중 하나는 실패합니다. 이로 인해 설치가 실패하는 것은 아닙니다.
-* Notebook에서 **새 연결 추가**를 선택하고 취소를 클릭하면 이미 연결된 경우에도 **연결 선택**이 표시됩니다.

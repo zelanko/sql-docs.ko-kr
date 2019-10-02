@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2019 CTP 2.0에서 외부 데이터 가상화 | Microsoft Docs
+title: SQL Server 2019에서 외부 데이터 가상화 | Microsoft Docs
 description: 이 페이지에서는 관계형 데이터 원본에 대해 외부 테이블 만들기 마법사를 사용하는 단계를 자세히 설명합니다.
 author: Abiola
 ms.author: aboke
@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 7d2abf18c7442a8f57448532e5211fc5c60e1ea7
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418770"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341826"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>관계형 데이터 원본과 함께 외부 테이블 마법사 사용
 
-SQL Server 2019 CTP 2.0의 주요 시나리오 중 하나는 데이터를 가상화하는 기능입니다. 이 프로세스를 통해 데이터를 원래 위치에 유지할 수 있습니다. SQL Server의 데이터를 *가상화*하여 SQL Server의 다른 테이블처럼 쿼리할 수 있습니다. 이 프로세스는 ETL 프로세스의 필요성을 최소화합니다. 이 프로세스는 PolyBase 커넥터를 사용하여 수행할 수 있습니다. 데이터 가상화에 대한 자세한 내용은 [PolyBase 시작](polybase-guide.md)을 참조하세요.
+SQL Server 2019의 주요 시나리오 중 하나는 데이터를 가상화하는 기능입니다. 이 프로세스를 통해 데이터를 원래 위치에 유지할 수 있습니다. SQL Server의 데이터를 *가상화*하여 SQL Server의 다른 테이블처럼 쿼리할 수 있습니다. 이 프로세스는 ETL 프로세스의 필요성을 최소화합니다. 이 프로세스는 PolyBase 커넥터를 사용하여 수행할 수 있습니다. 데이터 가상화에 대한 자세한 내용은 [PolyBase 시작](polybase-guide.md)을 참조하세요.
 
 ## <a name="start-the-external-table-wizard"></a>외부 테이블 마법사 시작
 
@@ -44,10 +44,7 @@ SQL Server 2019 CTP 2.0의 주요 시나리오 중 하나는 데이터를 가상
 ![데이터베이스 마스터 키 만들기](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> 데이터베이스 마스터 키가 이미 있는 경우 입력 필드가 제한되므로 이 단계를 건너뛸 수 있습니다. 계속 진행하려면 **다음**을 선택합니다.
-
-> [!NOTE]
-> 강력한 암호를 선택하지 않으면 마법사는 마지막 단계에서 이를 수행합니다. 이것은 알려진 문제이며
+> 데이터베이스 마스터 키가 이미 있는 경우 이 단계는 자동으로 무시됩니다.
 
 ## <a name="enter-external-data-source-credentials"></a>외부 데이터 원본 자격 증명 입력
 

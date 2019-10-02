@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4d24a636e47c6e969b339350caba0f8609a86d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079935"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314519"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE(Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,19 +64,19 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 키로 암호화된 데이터 문자열입니다. *ciphertext*는 **varbinary** 데이터 형식을 갖습니다.  
  
 @ciphertext  
-키로 암호화된 데이터를 포함하는 **varbinary** 형식의 변수입니다. *@ciphertext* 변수의 최대 크기는 8,000바이트입니다.  
+키로 암호화된 데이터를 포함하는 **varbinary** 형식의 변수입니다. *\@ciphertext* 변수의 최대 크기는 8,000바이트입니다.  
   
 *add_authenticator*  
 원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타냅니다. *add_authenticator*는 암호화 프로세스가 인증자를 사용한 경우 1의 값을 갖습니다. *add_authenticator*는 **int** 데이터 형식을 갖습니다.  
   
 @add_authenticator  
-원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타내는 변수입니다. *@add_authenticator*는 암호화 프로세스가 인증자를 사용한 경우 1의 값을 갖습니다. *@add_authenticator*는 **int** 데이터 형식을 갖습니다.  
+원래 암호화 프로세스가 포함되고 암호화된 인증자가 일반 텍스트를 사용하는지 여부를 나타내는 변수입니다. *\@add_authenticator*는 암호화 프로세스가 인증자를 사용한 경우 1의 값을 갖습니다. *\@add_authenticator*는 **int** 데이터 형식을 갖습니다.  
 
 *authenticator*  
 인증자의 생성에 대한 기준으로 사용되는 데이터입니다. *authenticator*는 **sysname** 데이터 형식을 갖습니다.  
   
 @authenticator  
-인증자의 생성에 대한 기준으로 사용된 데이터를 포함하는 변수입니다. *@authenticator*는 **sysname** 데이터 형식을 갖습니다.  
+인증자의 생성에 대한 기준으로 사용된 데이터를 포함하는 변수입니다. *\@authenticator*는 **sysname** 데이터 형식을 갖습니다.  
   
 ## <a name="return-types"></a>반환 형식  
 최대 크기가 8,000바이트인 **varbinary**입니다.  
